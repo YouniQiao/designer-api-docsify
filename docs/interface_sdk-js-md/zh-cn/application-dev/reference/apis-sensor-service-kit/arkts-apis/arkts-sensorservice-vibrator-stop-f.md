@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## stop
@@ -19,8 +19,6 @@ function stop(stopMode: VibratorStopMode): Promise<void>
 > [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -42,50 +40,6 @@ function stop(stopMode: VibratorStopMode): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 按照effectId类型启动振动
-vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in vibrating');
-  }
-})
-// 使用VIBRATOR_STOP_MODE_PRESET模式停止振动
-vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET).then(() => {
-  console.info('Succeed in stopping');
-}, (error: BusinessError) => {
-  console.error(`Failed to stop. Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 按照effectId类型启动振动
-vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in vibrating');
-  }
-})
-// 使用VIBRATOR_STOP_MODE_PRESET模式停止振动
-vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to stop. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in stopping');
-  }
-})
-```
-
 
 ## stop
 
@@ -102,8 +56,6 @@ function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)(stopMode: VibratorStopMode, callback: AsyncCallback&lt;void&gt;)
@@ -118,7 +70,3 @@ function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 | --- | --- | --- |
 | [stopMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
-
-**示例**
-
-参见 [stop](#stop)

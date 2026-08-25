@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN
 表示电池健康状态未知。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -32,8 +28,6 @@ GOOD
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## OVERHEAT
@@ -45,8 +39,6 @@ OVERHEAT
 表示电池健康状态为过热。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -60,8 +52,6 @@ OVERVOLTAGE
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## COLD
@@ -74,8 +64,6 @@ COLD
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## DEAD
@@ -87,7 +75,5 @@ DEAD
 表示电池健康状态为失效，即电池已无法正常使用。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core

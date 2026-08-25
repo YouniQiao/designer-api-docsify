@@ -15,8 +15,6 @@ function unlockMission(missionId: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md)
@@ -34,46 +32,6 @@ function unlockMission(missionId: number, callback: AsyncCallback<void>): void
 | missionId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 解锁指定任务
-  missionManager.unlockMission(testMissionId, (err, data) => {
-    if (err) {
-      console.error(`unlockMission failed. Code: ${err.code}, message: ${err.message}.`);
-    } else {
-      console.info(`unlockMission successfully. Data: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`unlockMission sync failed. Code: ${error.code}, message: ${error.message}.`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 解锁指定任务
-  missionManager.unlockMission(testMissionId).then((data) => {
-    console.info(`unlockMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`unlockMission failed. Code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`unlockMission sync failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 
 ## unlockMission
 
@@ -84,8 +42,6 @@ function unlockMission(missionId: number): Promise<void>
 解锁指定任务id的任务。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -108,7 +64,3 @@ function unlockMission(missionId: number): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [unlockMission](#unlockmission)

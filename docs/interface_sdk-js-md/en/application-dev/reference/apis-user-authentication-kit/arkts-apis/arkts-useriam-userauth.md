@@ -1,18 +1,19 @@
 # @ohos.userIAM.userAuth(User Authentication)
 
 The **userAuth** module is the core module for user authentication in OpenHarmony. It provides authentication capabilities in scenarios such as device unlocking, payment verification, and application login.This module supports multiple biometric authentication methods (face, fingerprint) and password authentication (PIN), and provides various security trust levels. Since API version 26.0.0, the companion device authentication mode is added.This module applies to the following scenarios:  
-- Device unlocking authentication. - Financial payment verification. - Application login protection. - Confirmation for sensitive operations.
+- Device unlocking authentication.  
+- Financial payment verification.  
+- Application login protection.  
+- Confirmation for sensitive operations.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## Summary
@@ -108,7 +109,6 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [AuthCallbackOnResultFunc(User Authentication)](arkts-userauthentication-userauth-authcallbackonresultfunc-t.md) |
 | [AuthEventKey(User Authentication)](arkts-userauthentication-userauth-autheventkey-t.md) |
 | [AuthTipCallback(User Authentication)](arkts-userauthentication-userauth-authtipcallback-t.md) |
 | [AuthType(User Authentication)](arkts-userauthentication-userauth-authtype-t.md) |
@@ -120,7 +120,6 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [AuthWidgetCallbackSendCommandFunc(User Authentication)](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md) |
 | [ResultCallback(User Authentication)](arkts-userauthentication-userauth-resultcallback-t-sys.md) |
 | [WidgetParamCallback(User Authentication)](arkts-userauthentication-userauth-widgetparamcallback-t-sys.md) |
 <!--DelEnd-->

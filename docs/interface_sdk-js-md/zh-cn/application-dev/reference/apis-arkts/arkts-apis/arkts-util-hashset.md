@@ -15,8 +15,8 @@ HashSet是一种非线性容器，用于存储不重复的元素集合，支持�
 ## 导入模块
 
 ```TypeScript
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
+import { HashSet } from 'kits/@kit.ArkTS';
+import { HashSetCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -26,9 +26,3 @@ import { HashSetCbFn } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [HashSet](arkts-arkts-util-hashset-hashset-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [HashSetCbFn](arkts-arkts-hashsetcbfn-t.md) |

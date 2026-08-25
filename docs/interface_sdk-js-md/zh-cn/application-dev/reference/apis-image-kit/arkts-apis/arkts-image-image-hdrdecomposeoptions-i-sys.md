@@ -4,8 +4,6 @@ HDR PixelMap分解为Picture的配置选项，分解后的Picture包含一张SDR
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ HDR PixelMap分解为Picture的配置选项，分解后的Picture包含一张SDR
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## desiredPixelFormat
@@ -27,8 +25,6 @@ desiredPixelFormat?: PixelMapFormat
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,8 +43,6 @@ isFullSizeGainmap?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

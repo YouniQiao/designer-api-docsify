@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 ```
 
 ## offSystemPrivateCommand
@@ -15,8 +15,6 @@ function offSystemPrivateCommand(callback?: Callback<Record<string, CommandDataT
 Unsubscribes from events that the system-default input method application sends a private data command.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

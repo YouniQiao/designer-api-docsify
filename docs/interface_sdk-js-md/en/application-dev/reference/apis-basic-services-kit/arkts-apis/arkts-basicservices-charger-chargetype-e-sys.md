@@ -4,8 +4,6 @@ Enumerates charging types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ NONE
 Unknown charging type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -36,8 +32,6 @@ Wired normal charging.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ WIRED_QUICK
 Wired fast charging.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -68,8 +60,6 @@ Wired super fast charging.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ WIRELESS_NORMAL
 Wireless normal charging.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -100,8 +88,6 @@ Wireless fast charging.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ WIRELESS_SUPER_QUICK
 Wireless super fast charging.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 

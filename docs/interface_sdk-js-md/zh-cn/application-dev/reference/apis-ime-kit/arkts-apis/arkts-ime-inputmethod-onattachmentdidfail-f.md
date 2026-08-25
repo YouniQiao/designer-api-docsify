@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## onAttachmentDidFail
@@ -16,8 +16,6 @@ function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -25,18 +23,3 @@ function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let attachmentDidFailCallback: Callback<inputMethod.AttachFailureReason> = 
-  (reason: inputMethod.AttachFailureReason): void => {
-    console.info(`Attachment failed with reason: ${reason}.`);
-  if (reason === inputMethod.AttachFailureReason.CALLER_NOT_FOCUSED) {
-    console.info(`Failure reason is CALLER_NOT_FOCUSED.`);
-  }
-  };
-inputMethod.onAttachmentDidFail(attachmentDidFailCallback);
-```

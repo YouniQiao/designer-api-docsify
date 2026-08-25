@@ -1,7 +1,5 @@
 # ReferenceErrorConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (message?: string): ReferenceError
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@
 ```TypeScript
 new(message?: string): ReferenceError
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -50,5 +44,3 @@ readonly prototype: ReferenceError
 ```
 
 **Type:** [ReferenceError](arkts-lib-es5-referenceerror-i.md)
-
-**ArkTS mode:** 

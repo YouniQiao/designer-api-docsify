@@ -17,8 +17,6 @@ function construct<A extends readonly any[], R>(
 
 Constructs the target with the elements of specified array as the arguments and the specified constructor as the `new.target` value.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -37,8 +35,6 @@ Constructs the target with the elements of specified array as the arguments and 
 ```TypeScript
 function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: Function): any
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setMuted
@@ -15,8 +15,6 @@ function setMuted(callback: AsyncCallback<void>): void
 设置通话中的静音。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -39,30 +37,6 @@ function setMuted(callback: AsyncCallback<void>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setMuted((err: BusinessError) => {
-    if (err) {
-        console.error(`setMuted fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`setMuted success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setMuted().then(() => {
-    console.info(`setMuted success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setMuted fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setMuted
 
@@ -73,8 +47,6 @@ function setMuted(): Promise<void>
 设置通话中的静音。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -94,7 +66,3 @@ function setMuted(): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [setMuted](#setmuted)

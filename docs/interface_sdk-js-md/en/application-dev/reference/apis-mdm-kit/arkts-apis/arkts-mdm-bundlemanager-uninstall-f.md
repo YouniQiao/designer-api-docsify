@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## uninstall
@@ -20,8 +20,6 @@ Uninstalls a specified bundle of the current or specified user. The **isKeepData
 > [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -52,100 +50,3 @@ Uninstalls a specified bundle of the current or specified user. The **isKeepData
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-bundleManager.uninstall(wantTemp, 'bundleName', 100, true).then(() => {
-  console.info('Succeeded in uninstalling bundles.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```

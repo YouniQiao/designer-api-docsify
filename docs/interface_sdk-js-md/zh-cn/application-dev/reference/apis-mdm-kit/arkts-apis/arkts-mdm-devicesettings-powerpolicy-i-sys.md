@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## delayTime
@@ -27,8 +25,6 @@ delayTime: number
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,8 +43,6 @@ powerPolicyAction: PowerPolicyAction
 **类型：** [PowerPolicyAction](arkts-mdm-devicesettings-powerpolicyaction-e-sys.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

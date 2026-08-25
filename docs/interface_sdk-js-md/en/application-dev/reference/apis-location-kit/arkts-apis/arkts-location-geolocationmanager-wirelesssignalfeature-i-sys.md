@@ -4,8 +4,6 @@ Indicates wireless signal feature.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Indicates wireless signal feature.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## mac
@@ -28,8 +26,6 @@ Indicates MAC array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -39,16 +35,14 @@ Indicates MAC array.
 ## rssiAvg
 
 ```TypeScript
-rssiAvg: int
+rssiAvg: number
 ```
 
 Indicates average RSSI value. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,16 +53,14 @@ Indicates average RSSI value. The value range is all integers.
 ## rssiStandardDeviation
 
 ```TypeScript
-rssiStandardDeviation: double
+rssiStandardDeviation: number
 ```
 
 Indicates RSSI standard deviation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

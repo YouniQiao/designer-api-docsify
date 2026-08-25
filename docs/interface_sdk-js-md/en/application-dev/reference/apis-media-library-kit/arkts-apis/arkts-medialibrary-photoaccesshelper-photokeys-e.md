@@ -4,8 +4,6 @@ Defines the key information about an image or video file.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## URI
@@ -18,8 +16,6 @@ URI of the file.
 **Note：**:Only the [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalto) predicate can be used for this field during photo query.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -35,8 +31,6 @@ Type of the file.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -48,11 +42,11 @@ DISPLAY_NAME = 'display_name'
 ```
 
 File name displayed. The file name must meet the following requirements:  
-- A valid file name must include a base name and a supported image or video extension. - The file name length ranges from 1 to 255. - The base name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- A valid file name must include a base name and a supported image or video extension.  
+- The file name length ranges from 1 to 255.  
+- The base name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -68,8 +62,6 @@ File size, in bytes. The size of a moving photo includes the total size of the i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -83,8 +75,6 @@ DATE_ADDED = 'date_added'
 Unix timestamp when the file was created, in seconds.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -100,8 +90,6 @@ Unix timestamp when the file content (not the file name) was last modified, in s
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -115,8 +103,6 @@ DURATION = 'duration'
 Duration, in ms.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -132,8 +118,6 @@ Image width, in pixels.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -147,8 +131,6 @@ HEIGHT = 'height'
 Image height, in pixels.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -164,8 +146,6 @@ Unix timestamp when the photo was taken, in seconds.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -179,8 +159,6 @@ ORIENTATION = 'orientation'
 Orientation of the file, in degrees.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -196,8 +174,6 @@ Whether the file is marked as favorites.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -212,8 +188,6 @@ Title of the file.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -227,8 +201,6 @@ POSITION = 'position'
 File location type.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -245,8 +217,6 @@ Unix timestamp when the file was created, in milliseconds.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -262,8 +232,6 @@ Unix timestamp when the file was modified, in milliseconds. This value is update
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -277,8 +245,6 @@ PHOTO_SUBTYPE = 'subtype'
 Subtype of the media file.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -294,8 +260,6 @@ Dynamic range type of the media asset.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -309,8 +273,6 @@ COVER_POSITION = 'cover_position'
 Position of the moving photo cover, which is the video timestamp (in μs) corresponding to the cover frame.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -326,8 +288,6 @@ Unique ID of a group of burst photos.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -341,8 +301,6 @@ LCD_SIZE = 'lcd_size'
 Width and height of an LCD image, in the format of a **width:height** string.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -358,8 +316,6 @@ Width and height of a thumbnail image, in the format of a **width:height** strin
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -373,8 +329,6 @@ DETAIL_TIME = 'detail_time'
 Detailed time. The value is a string of time when the image or video was taken in the time zone and does not change with the time zone.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -390,8 +344,6 @@ Unix timestamp when the image was captured, in milliseconds.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -406,8 +358,6 @@ ID of the album to which the photo belongs.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## MEDIA_SUFFIX
@@ -420,8 +370,6 @@ File name extension.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## ASPECT_RATIO
@@ -433,8 +381,6 @@ ASPECT_RATIO = 'aspect_ratio'
 Aspect ratio of the image or video.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -450,8 +396,6 @@ Time when the photo is changed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## LOCAL_ASSET_SIZE
@@ -463,8 +407,6 @@ LOCAL_ASSET_SIZE = 'local_asset_size'
 Size of local asset, which well matched the content read by the application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

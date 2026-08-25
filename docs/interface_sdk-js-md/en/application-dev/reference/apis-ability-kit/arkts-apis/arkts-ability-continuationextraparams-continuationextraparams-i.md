@@ -4,8 +4,6 @@ The ContinuationExtraParams module provides the filter parameters required by th
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
@@ -21,8 +19,6 @@ Authentication information.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 
@@ -44,8 +40,6 @@ Continuation mode.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -65,8 +59,6 @@ Device filtering description.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 
@@ -88,8 +80,6 @@ Device type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -110,8 +100,6 @@ Device filtering parameter.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -131,8 +119,6 @@ Name of the target bundle.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 

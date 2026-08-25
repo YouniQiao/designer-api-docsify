@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## checkPermissionInUse
@@ -15,8 +15,6 @@ function checkPermissionInUse(permissionName: Permissions): boolean
 查询指定敏感权限是否正在被使用，可用于权限管理界面展示权限实时使用状态场景。 判断依据为当前是否存在通过[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) 标记开始使用且尚未通过[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)标记停止使用的活跃调用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -47,19 +45,3 @@ function checkPermissionInUse(permissionName: Permissions): boolean
 | [12100001](../errorcode-access-token.md#12100001-入参错误) |
 | [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 查询指定权限是否正在被使用
-  let isPermissionInUse = privacyManager.checkPermissionInUse('ohos.permission.CAMERA');
-  console.info('checkPermissionInUse success, result: ' + isPermissionInUse);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`checkPermissionInUse fail, code: ${error.code}, message: ${error.message}`);
-}
-```

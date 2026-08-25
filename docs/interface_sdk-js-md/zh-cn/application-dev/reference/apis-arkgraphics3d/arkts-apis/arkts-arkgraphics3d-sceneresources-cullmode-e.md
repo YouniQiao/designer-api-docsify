@@ -1,10 +1,8 @@
 # CullMode
 
-用于设置基于物理渲染（PBR）材质的剔除模式枚举。通过控制剔除物体的正面或背面几何面片，提升渲染性能和视觉效果。@enum { int }
+用于设置基于物理渲染（PBR）材质的剔除模式枚举。通过控制剔除物体的正面或背面几何面片，提升渲染性能和视觉效果。@enum { number }
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ NONE = 0
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## FRONT
@@ -32,8 +28,6 @@ FRONT = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## BACK
@@ -45,7 +39,5 @@ BACK = 2
 剔除背面几何面片。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

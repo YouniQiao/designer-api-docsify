@@ -4,8 +4,6 @@ The enum of profile id.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [ProfileId](arkts-connectivity-constant-profileid-e.md)
@@ -21,8 +19,6 @@ PROFILE_A2DP_SOURCE = 1
 A2DP profile.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -40,8 +36,6 @@ HFP profile.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PROFILE_HANDSFREE_AUDIO_GATEWAY](arkts-connectivity-constant-profileid-e.md#profile_handsfree_audio_gateway)
@@ -58,8 +52,6 @@ Human Interface Device (HID) profile.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PROFILE_HID_HOST](arkts-connectivity-constant-profileid-e.md#profile_hid_host)
@@ -75,8 +67,6 @@ PROFILE_PAN_NETWORK = 7
 PAN profile.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

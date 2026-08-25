@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getAppVMObjectUsedSize
@@ -16,8 +16,6 @@ function getAppVMObjectUsedSize(): bigint
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
@@ -25,11 +23,3 @@ function getAppVMObjectUsedSize(): bigint
 | 类型 |
 | --- |
 | bigint |
-
-**示例**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-
-console.info(`getAppVMObjectUsedSize = ${hidebug.getAppVMObjectUsedSize()}`);
-```

@@ -21,3 +21,12 @@
 | [WeakMapConstructor](arkts-lib-es2015-collection-weakmapconstructor-i.md) |
 | [WeakSet](arkts-lib-es2015-collection-weakset-i.md) |
 | [WeakSetConstructor](arkts-lib-es2015-collection-weaksetconstructor-i.md) |
+
+### Properties
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Map](arkts-libes2015collection-p.md) |
+| [Set](arkts-libes2015collection-p.md) |
+| [WeakMap](arkts-libes2015collection-p.md) |
+| [WeakSet](arkts-libes2015collection-p.md) |

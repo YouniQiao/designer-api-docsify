@@ -3,7 +3,7 @@
 Describes the parameters of the date picker.
 
 > **NOTE：**&gt;
-> - For details about how to use **Date**, see TimePickerOptions.&gt;
+> - For details about how to use **Date**, see [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).&gt;
 > - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take
 > effect.
 
@@ -11,8 +11,6 @@ Describes the parameters of the date picker.
 > Handle exceptions for the start and end dates first, followed by exceptions for the selected date.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,8 +33,6 @@ End date of the picker.Default value: **Date('2100-12-31')**Value range: [Date('
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -51,11 +47,10 @@ Date display mode.Default value: **DatePickerMode.DATE**, which means to display
 
 **Type:** [DatePickerMode](arkts-arkui-datepickermode-e.md)
 
-**Default:** DatePickerMode.DATE - which means to display three columns: year, month, and day. <br>Decimal values are rounded off.
+**Default:** DatePickerMode.DATE - which means to display three columns: year, month, and day. 
+Decimal values are rounded off.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,8 +72,6 @@ Date of the selected item.Default value: current system date.Value range: [Date(
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -96,8 +89,6 @@ Start date of the picker.Default value: **Date('1970-1-1')**Value range: [Date('
 **Default:** Date('1970-1-1') [since 11]
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

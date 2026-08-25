@@ -4,8 +4,6 @@ Enum for effect suggestion.
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ EFFECT_SUGGESTION_NONE = 0
 None.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -36,8 +32,6 @@ Portrait.
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ EFFECT_SUGGESTION_FOOD = 2
 Food.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -68,8 +60,6 @@ Sky.
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -84,8 +74,6 @@ Sunrise and sunset.
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +87,6 @@ EFFECT_SUGGESTION_STAGE = 5
 Stage.
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

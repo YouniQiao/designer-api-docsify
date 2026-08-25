@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## constructTLSSocketServerInstance
@@ -16,8 +16,6 @@ function constructTLSSocketServerInstance(): TLSSocketServer
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -25,12 +23,3 @@ function constructTLSSocketServerInstance(): TLSSocketServer
 | 类型 |
 | --- |
 | [TLSSocketServer](arkts-network-socket-tlssocketserver-i.md) |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
-```

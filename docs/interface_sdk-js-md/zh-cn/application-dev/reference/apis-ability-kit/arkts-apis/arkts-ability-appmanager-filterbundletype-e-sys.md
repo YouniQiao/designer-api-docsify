@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ APP = 1 << 0
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ ATOMIC_SERVICE = 1 << 1
 原子化服务。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

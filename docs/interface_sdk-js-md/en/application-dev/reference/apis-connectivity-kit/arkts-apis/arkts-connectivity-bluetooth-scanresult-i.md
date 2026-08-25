@@ -4,8 +4,6 @@ Describes the contents of the scan results.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ScanResult](arkts-connectivity-bluetoothmanager-scanresult-i.md)
@@ -15,7 +13,7 @@ Describes the contents of the scan results.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## data
@@ -29,8 +27,6 @@ The raw data of broadcast packet
 **Type:** ArrayBuffer
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Address of the scanned device
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-scanresult-i.md#deviceid)
@@ -69,8 +63,6 @@ RSSI of the remote device
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

@@ -4,8 +4,6 @@ Path2D@interface Path2D
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## addPath
@@ -17,8 +15,6 @@ addPath(path: Path2D): void
 Add another path to current path.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -39,8 +35,6 @@ arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, 
 Draws an arc on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -67,8 +61,6 @@ Draws an arc based on the radius and points on the arc.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -92,8 +84,6 @@ bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number,
 Draws a cubic bezier curve on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -120,8 +110,6 @@ Draws a closed path.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -144,8 +132,6 @@ ellipse(
 Draws an ellipse based on the coordinate and radius.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -174,8 +160,6 @@ Connects the current point to a target position using a straight line.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -197,8 +181,6 @@ Moves a drawing path to a target position on the canvas.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -219,8 +201,6 @@ quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void
 Draws a quadratic curve on the canvas.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -244,8 +224,6 @@ rect(x: number, y: number, width: number, height: number): void
 Creates a rectangular.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -276,8 +254,6 @@ setTransform(
 Uses same parameters as the transform() function to reset the existing transformation matrix and create a new transformation matrix.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

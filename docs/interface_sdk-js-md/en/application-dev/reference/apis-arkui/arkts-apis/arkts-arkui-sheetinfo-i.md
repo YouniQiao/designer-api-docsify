@@ -4,8 +4,6 @@ Defines the option content in the dialog box. You can configure the text, icon, 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Callback when the sheet is selected.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -41,8 +37,6 @@ Sheet icon. By default, no icon is displayed.The string type can be used to load
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -53,13 +47,11 @@ Sheet icon. By default, no icon is displayed.The string type can be used to load
 title: string | Resource
 ```
 
-Sheet text.If the text is too long to display, a scrollbar is displayed.
+Sheet text.If the text is too number to display, a scrollbar is displayed.
 
 **Type:** string \| Resource
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

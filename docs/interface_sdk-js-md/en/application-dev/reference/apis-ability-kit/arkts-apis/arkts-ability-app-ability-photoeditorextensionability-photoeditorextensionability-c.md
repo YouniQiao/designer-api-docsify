@@ -6,14 +6,12 @@ Class of the photo editor ExtensionAbility, which provides APIs for you to edit 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
 ## Modules to Import
 
 ```TypeScript
-import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
+import { PhotoEditorExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -26,25 +24,9 @@ Called back when the state of an UI extension changes to background.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-```TypeScript
-import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ExamplePhotoEditorAbility';
-
-export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbility {
-  onBackground() {
-    console.info(TAG, `onBackground`);
-  }
-}
-```
 
 ## onCreate
 
@@ -56,25 +38,9 @@ Called back when an UI extension is started for initialization.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
-
-**Examples**
-
-```TypeScript
-import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ExamplePhotoEditorAbility';
-
-export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbility {
-  onCreate() {
-    console.info(TAG, `onCreate`);
-  }
-}
-```
 
 ## onDestroy
 
@@ -86,69 +52,9 @@ Called back before an UI extension is destroyed.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
-
-**Examples**
-
-A synchronous callback example is as follows:
-
-```TypeScript
-import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ExamplePhotoEditorAbility';
-
-export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbility {
-  onDestroy() {
-    console.info(TAG, `onDestroy`);
-    // Call the synchronous function.
-  }
-}
-```
-
-A promise asynchronous callback example is as follows:
-
-```TypeScript
-import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ExamplePhotoEditorAbility';
-
-export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbility {
-  async onDestroy() {
-    console.info(TAG, `onDestroy`);
-    // Call the asynchronous function.
-  }
-}
-```
-
-## onDestroy
-
-```TypeScript
-onDestroy(): Promise<void> | undefined
-```
-
-Called back before an UI extension is destroyed.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; \ | undefined |
-
-**Examples**
-
-See [onDestroy](#ondestroy)
 
 ## onForeground
 
@@ -160,25 +66,9 @@ Called back when the state of an UI extension changes to foreground.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-```TypeScript
-import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ExamplePhotoEditorAbility';
-
-export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbility {
-  onForeground() {
-    console.info(TAG, `onForeground`);
-  }
-}
-```
 
 ## onStartContentEditing
 
@@ -189,8 +79,6 @@ onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSessio
 Called back when an UI extension session is created and original image is ready.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,20 +92,6 @@ Called back when an UI extension session is created and original image is ready.
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
 
-**Examples**
-
-```TypeScript
-import { PhotoEditorExtensionAbility, Want, UIExtensionContentSession } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ExamplePhotoEditorAbility';
-
-export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbility {
-  onStartContentEditing(uri: string, want: Want, session: UIExtensionContentSession) {
-    console.info(TAG, `onStartContentEditing want: ${JSON.stringify(want)}, uri: ${uri}`);
-  }
-}
-```
-
 ## context
 
 ```TypeScript
@@ -229,8 +103,6 @@ Indicates configuration information about an Photo editor extension ability cont
 **Type:** [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

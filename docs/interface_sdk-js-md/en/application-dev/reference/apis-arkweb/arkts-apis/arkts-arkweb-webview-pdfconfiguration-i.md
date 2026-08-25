@@ -7,14 +7,12 @@ Input parameter of the [createPdf](arkts-arkweb-webview-webviewcontroller-c.md#c
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## height
@@ -28,8 +26,6 @@ Page Height.Value range: greater than or equal to 0. If the value is out of rang
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -47,8 +43,6 @@ Bottom margin.The value range is [0.0, half of the page height). If the value is
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -64,8 +58,6 @@ Left margin.The value range is [0.0, half of the page width). If the value is no
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -83,8 +75,6 @@ Right margin.The value range is [0.0, half of the page width). If the value is n
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -100,8 +90,6 @@ Top margin.The value range is [0.0, half of the page height). If the value is no
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -119,8 +107,6 @@ Scale multiple.The value range is [0.0, 2.0]. If the value is less than 0.0, set
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -137,8 +123,6 @@ Whether to print the background color. The value **true** means to print the bac
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -154,8 +138,6 @@ Page Width.Value range: greater than or equal to 0. If the value is out of range
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

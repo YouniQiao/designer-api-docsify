@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('streamChange')
@@ -15,8 +15,6 @@ function on(type: 'streamChange', callback: Callback<number>): void
 注册WLAN流量改变事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -52,8 +50,6 @@ function on(type: 'deviceConfigChange', callback: Callback<number>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
@@ -88,8 +84,6 @@ function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
@@ -123,8 +117,6 @@ function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 注册热点STA离开事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_WIFI_HOTSPOT
 

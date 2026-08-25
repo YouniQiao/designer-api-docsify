@@ -4,8 +4,6 @@ Describes the codec bits per sample.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BITS_PER_SAMPLE_NONE
@@ -17,8 +15,6 @@ CODEC_BITS_PER_SAMPLE_NONE = 0
 Codec bits per sample none.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,8 +28,6 @@ Codec 16 bits per sample.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BITS_PER_SAMPLE_24
@@ -46,8 +40,6 @@ Codec 24 bits per sample.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BITS_PER_SAMPLE_32
@@ -59,7 +51,5 @@ CODEC_BITS_PER_SAMPLE_32 = 3
 Codec 32 bits per sample.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

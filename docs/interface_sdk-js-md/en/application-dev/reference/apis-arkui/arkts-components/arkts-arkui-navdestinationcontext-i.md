@@ -4,8 +4,6 @@ Defines the context information for the **NavDestination** component.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ getConfigInRouteMap(): RouteMapConfig | undefined
 Obtains the routing configuration of the current **NavDestination** component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Type of the current **NavDestination**. Default value: NavDestinationMode.Standa
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -69,8 +63,6 @@ Unique ID of the current navigation destination page, which is automatically gen
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,11 +77,9 @@ pathInfo: NavPathInfo
 
 Path information of the navigation destination page.
 
-**Type:** NavPathInfo
+**Type:** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,11 +95,9 @@ pathStack: NavPathStack
 
 Navigation controller of the current **NavDestination** component.
 
-**Type:** NavPathStack
+**Type:** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

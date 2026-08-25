@@ -10,8 +10,6 @@ ISO-DEP (ISO 14443-4).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -25,8 +23,6 @@ const MIFARE_CLASSIC = 8
 MIFARE Classic.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,8 +38,6 @@ MIFARE Ultralight.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -57,8 +51,6 @@ const NDEF = 6
 NDEF.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,8 +66,6 @@ NDEF formattable.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -89,8 +79,6 @@ const NFC_A = 1
 NFC-A (ISO 14443-3A).
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,8 +94,6 @@ NFC-B (ISO 14443-3B).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -121,8 +107,6 @@ const NFC_BARCODE = 10
 BARCODE technology.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -138,8 +122,6 @@ NFC-F (JIS 6319-4).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -154,8 +136,6 @@ NFC-V (ISO 15693).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -163,14 +143,12 @@ NFC-V (ISO 15693).
 ## RTD_TEXT
 
 ```TypeScript
-const RTD_TEXT: int[]
+const RTD_TEXT: number[]
 ```
 
 NDEF record of the text type. For details, see **NFCForum-TS-NDEF_1.0**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -179,14 +157,12 @@ NDEF record of the text type. For details, see **NFCForum-TS-NDEF_1.0**.
 ## RTD_URI
 
 ```TypeScript
-const RTD_URI: int[]
+const RTD_URI: number[]
 ```
 
 NDEF record of the URI type. For details, see **NFCForum-TS-NDEF_1.0**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -201,8 +177,6 @@ const SKIP_NDEF = 11
 Method used to skip the NDEF check.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

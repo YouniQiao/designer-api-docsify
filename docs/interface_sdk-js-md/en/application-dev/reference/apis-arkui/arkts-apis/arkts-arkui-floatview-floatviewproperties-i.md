@@ -4,14 +4,12 @@ Provides the properties of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## avoidArea
@@ -26,8 +24,6 @@ Avoid area for the content of the float view.Note:On the page loaded by [setUICo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -35,16 +31,14 @@ Avoid area for the content of the float view.Note:On the page loaded by [setUICo
 ## displayId
 
 ```TypeScript
-displayId: int
+displayId: number
 ```
 
 ID of the display where the float view is located.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +56,6 @@ Whether the float view is in the sidebar. **true**: in the sidebar; **false**: n
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -80,8 +72,6 @@ Template type of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -89,16 +79,14 @@ Template type of the float view.
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 Float view ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +104,6 @@ Rectangle area of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -125,16 +111,14 @@ Rectangle area of the float view.
 ## windowScale
 
 ```TypeScript
-windowScale: double
+windowScale: number
 ```
 
 Scale factor of the float view.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

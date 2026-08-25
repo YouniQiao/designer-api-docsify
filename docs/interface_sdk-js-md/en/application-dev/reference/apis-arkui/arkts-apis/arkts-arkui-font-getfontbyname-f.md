@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from '@kit.ArkUI';
+import { font } from 'kits/@kit.ArkUI';
 ```
 
 ## getFontByName
@@ -21,8 +21,6 @@ Obtains information about a system font based on the font name.
 > the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 

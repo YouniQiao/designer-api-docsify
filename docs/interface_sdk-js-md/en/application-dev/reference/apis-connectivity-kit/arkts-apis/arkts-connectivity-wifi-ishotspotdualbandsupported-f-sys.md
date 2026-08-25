@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isHotspotDualBandSupported
@@ -15,8 +15,6 @@ function isHotspotDualBandSupported(): boolean
 Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and 5 GHz Wi-Fi.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -33,16 +31,3 @@ Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let ret = wifi.isHotspotDualBandSupported();
-    console.info("result:" + ret);        
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

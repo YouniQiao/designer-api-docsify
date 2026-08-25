@@ -4,8 +4,6 @@ Enumerates the ability states.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md)
@@ -23,8 +21,6 @@ INITIAL = 0
 The ability is in the initial state.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ The ability is running in the foreground.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FOREGROUND](arkts-ability-abilitymanager-abilitystate-e.md#foreground)
@@ -63,8 +57,6 @@ BACKGROUND = 10
 The ability is running in the background.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -84,8 +76,6 @@ The ability is being switched to the foreground.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FOREGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#foregrounding)
@@ -103,8 +93,6 @@ BACKGROUNDING = 12
 The ability is being switched to the background.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

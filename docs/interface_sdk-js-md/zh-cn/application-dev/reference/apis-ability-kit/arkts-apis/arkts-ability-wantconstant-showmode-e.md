@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## WINDOW
@@ -17,8 +15,6 @@ WINDOW = 0
 表示独立窗口拉起模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ EMBEDDED_FULL = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -49,8 +43,6 @@ EMBEDDED_HALF = 2
 表示嵌入式半屏拉起模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryAppGroupSync
 
 ```TypeScript
-function queryAppGroupSync(): int
+function queryAppGroupSync(): number
 ```
 
 查询当前应用的优先级分组，使用同步方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -28,7 +26,7 @@ function queryAppGroupSync(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -45,32 +43,16 @@ function queryAppGroupSync(): int
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) |
 
-**示例**
-
-```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-let priorityGroup: number = usageStatistics.queryAppGroupSync();
-```
-
-```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-let priorityGroup: number = usageStatistics.queryAppGroupSync('com.ohos.camera');
-```
-
 
 ## queryAppGroupSync
 
 ```TypeScript
-function queryAppGroupSync(bundleName: string): int
+function queryAppGroupSync(bundleName: string): number
 ```
 
 查询指定bundleName应用的优先级分组，使用同步方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -88,7 +70,7 @@ function queryAppGroupSync(bundleName: string): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -105,7 +87,3 @@ function queryAppGroupSync(bundleName: string): int
 | [10000005](../errorcode-DeviceUsageStatistics.md#10000005-应用未安装) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) |
-
-**示例**
-
-参见 [queryAppGroupSync](#queryappgroupsync)

@@ -4,14 +4,12 @@ Defines TLS connection options.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## address
@@ -25,8 +23,6 @@ Gateway address.
 **Type:** NetAddress
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,8 +38,6 @@ ALPN protocol. The value range is ["spdy/1", "http/1.1"]. The default value is *
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## proxy
@@ -57,8 +51,6 @@ Proxy option. By default, no proxy is used.
 **Type:** [ProxyOptions](arkts-network-socket-proxyoptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -74,8 +66,6 @@ TLS security options.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## skipRemoteValidation
@@ -90,8 +80,6 @@ Whether to skip certificate authentication on the server. The default value is *
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## timeout
@@ -105,7 +93,5 @@ Connection timeout interval, in milliseconds. The default value is **0**. The in
 **Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetStack

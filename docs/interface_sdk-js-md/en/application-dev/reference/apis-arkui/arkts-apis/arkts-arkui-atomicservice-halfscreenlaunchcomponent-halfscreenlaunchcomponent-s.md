@@ -9,14 +9,12 @@
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { HalfScreenLaunchComponent } from '@kit.ArkUI';
+import { HalfScreenLaunchComponent } from 'kits/@kit.ArkUI';
 ```
 
 ## appId
@@ -30,8 +28,6 @@ Application ID for the atomic service.
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -49,8 +45,6 @@ Content displayed in the component.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -66,8 +60,6 @@ Invoked when an error occurs during the running of the atomic service.
 **Type:** [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -85,8 +77,6 @@ Callback triggered when an embedded atomic service calls [@ohos.window (window)]
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -103,8 +93,6 @@ Callback triggered when an embedded atomic service exits normally. Exit scenario
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -120,8 +108,6 @@ Parameters for starting the atomic service. The default value is empty.
 **Type:** [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

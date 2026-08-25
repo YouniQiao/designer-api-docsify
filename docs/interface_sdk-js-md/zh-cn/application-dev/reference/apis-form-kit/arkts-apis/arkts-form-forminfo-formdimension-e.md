@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## Dimension_1_2
@@ -17,8 +15,6 @@ Dimension_1_2 = 1
 1 x 2 form。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ Dimension_2_2 = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
@@ -49,8 +43,6 @@ Dimension_2_4 = 3
 2 x 4 form。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ Dimension_4_4 = 4
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
@@ -82,8 +72,6 @@ Dimension_2_1
 **说明：** 该字段从API version 9开始支持，从API version 20开始废弃。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -102,8 +90,6 @@ DIMENSION_1_1 = 6
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
@@ -117,8 +103,6 @@ DIMENSION_6_4 = 7
 6 x 4 form。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -134,8 +118,6 @@ DIMENSION_2_3 = 8
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.Form
@@ -149,8 +131,6 @@ DIMENSION_3_3 = 9
 3 x 3 form。该字段仅在Wearable上生效，在其他设备类型中无效果。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

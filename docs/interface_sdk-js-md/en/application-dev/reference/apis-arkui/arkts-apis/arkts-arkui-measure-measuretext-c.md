@@ -4,14 +4,12 @@ Defines the Measure interface.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { MeasureText, MeasureOptions } from '@kit.ArkUI';
+import { MeasureText, MeasureOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## measureText
@@ -33,8 +31,6 @@ Measures the single-line display width of the specified text. For multi-line tex
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Deprecated since:** 18
 
 **Substitutes:** measureText
@@ -55,32 +51,6 @@ Measures the single-line display width of the specified text. For multi-line tex
 | --- |
 | number |
 
-**Examples**
-
-```TypeScript
-import { MeasureText } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State textWidth: number = MeasureText.measureText({
-    // You are advised to use this.getUIContext().getMeasureUtils().measureText().
-    textContent: "Hello World",
-    fontSize: '50px'
-  });
-
-  build() {
-    Row() {
-      Column() {
-        Text(`The width of 'Hello World': ${this.textWidth}`)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## measureTextSize
 
 ```TypeScript
@@ -96,8 +66,6 @@ Measures the width and height of the given text.
 > associated with the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Deprecated since:** 18
 
@@ -119,31 +87,4 @@ Measures the width and height of the given text.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [SizeOptions](arkts-arkui-units-sizeoptions-i.md) |
-
-**Examples**
-
-```TypeScript
-import { MeasureText } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  textSize: SizeOptions = MeasureText.measureTextSize({
-    // You are advised to use this.getUIContext().getMeasureUtils().measureTextSize().
-    textContent: "Hello World",
-    fontSize: '50px'
-  });
-
-  build() {
-    Row() {
-      Column() {
-        Text(`The width of 'Hello World': ${this.textSize.width}`)
-        Text(`The height of 'Hello World': ${this.textSize.height}`)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) |

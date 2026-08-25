@@ -4,14 +4,12 @@ Rectangular area of the text, indicating the rectangular space occupied by the t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## direction
@@ -25,8 +23,6 @@ Text direction.
 **Type:** TextDirection
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -43,8 +39,6 @@ Rectangular area information, in physical pixels (px).
 **Type:** common2D.Rect
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

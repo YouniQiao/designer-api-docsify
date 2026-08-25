@@ -1,10 +1,8 @@
 # SceneResourceType
 
-Enumerates the scene resource types, which are used to classify resources in a scene.@enum { int }
+Enumerates the scene resource types, which are used to classify resources in a scene.@enum { number }
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ Unknown.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## NODE
@@ -31,8 +27,6 @@ NODE = 1
 Node type.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -46,8 +40,6 @@ Environment resource.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## MATERIAL
@@ -59,8 +51,6 @@ MATERIAL = 3
 Material type.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -74,8 +64,6 @@ Mesh resource.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## ANIMATION
@@ -87,8 +75,6 @@ ANIMATION = 5
 Animation resource.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -102,8 +88,6 @@ Shader resource.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## IMAGE
@@ -115,8 +99,6 @@ IMAGE = 7
 Image resource.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -130,8 +112,6 @@ Mesh resource.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## EFFECT
@@ -143,7 +123,5 @@ EFFECT = 9
 Post-processing effect resource.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

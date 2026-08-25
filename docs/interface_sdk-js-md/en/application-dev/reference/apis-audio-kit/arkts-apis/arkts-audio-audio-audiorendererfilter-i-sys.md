@@ -4,8 +4,6 @@ Describes audio renderer filter.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Describes audio renderer filter.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## rendererId
 
 ```TypeScript
-rendererId?: int
+rendererId?: number
 ```
 
 AudioRenderer id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -46,8 +42,6 @@ Renderer information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **System API:** This is a system API.
@@ -55,32 +49,15 @@ Renderer information.
 ## uid
 
 ```TypeScript
-uid?: int
+uid?: number
 ```
 
 Application uid.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let outputAudioRendererFilter: audio.AudioRendererFilter = {
-  uid : 20010041,
-  rendererInfo : {
-    usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-    rendererFlags : 0
-  },
-  rendererId : 0
-};
-```

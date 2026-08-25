@@ -4,14 +4,12 @@ Configuring parameters in single location requests.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## locatingPriority
@@ -26,8 +24,6 @@ Priority of the location request.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -35,16 +31,14 @@ Priority of the location request.
 ## locatingTimeoutMs
 
 ```TypeScript
-locatingTimeoutMs: int
+locatingTimeoutMs: number
 ```
 
 Timeout of a single location request, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -61,8 +55,6 @@ Indicates whether to obtain POI information near the current location.
 **Type:** boolean
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

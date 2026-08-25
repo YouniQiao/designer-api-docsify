@@ -6,8 +6,6 @@ You must customize this class to implement the ContentModifier interface. For de
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Name of the check box group.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -47,8 +43,6 @@ Selected status of the check box group.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -66,8 +60,6 @@ Triggers a change in the selection state of the check box group. The value true 
 **Type:** Callback&lt;boolean&gt;
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Model restriction:** This API can be used only in the stage model.
 

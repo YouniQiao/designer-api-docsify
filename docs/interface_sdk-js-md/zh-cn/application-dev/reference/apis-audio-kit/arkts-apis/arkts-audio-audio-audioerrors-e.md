@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## ERROR_INVALID_PARAM
@@ -17,8 +15,6 @@ ERROR_INVALID_PARAM = 6800101
 无效入参。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ ERROR_NO_MEMORY = 6800102
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## ERROR_ILLEGAL_STATE
@@ -45,8 +39,6 @@ ERROR_ILLEGAL_STATE = 6800103
 状态不支持。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -60,8 +52,6 @@ ERROR_UNSUPPORTED = 6800104
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## ERROR_TIMEOUT
@@ -73,8 +63,6 @@ ERROR_TIMEOUT       = 6800105
 处理超时。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -88,8 +76,6 @@ ERROR_STREAM_LIMIT  = 6800201
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## ERROR_SYSTEM
@@ -101,7 +87,5 @@ ERROR_SYSTEM = 6800301
 系统处理异常。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

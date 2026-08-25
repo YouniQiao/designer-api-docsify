@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## INPUT
@@ -17,8 +15,6 @@ INPUT = 0
 输入链。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,8 +30,6 @@ OUTPUT = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -49,8 +43,6 @@ FORWARD = 2
 转发链。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

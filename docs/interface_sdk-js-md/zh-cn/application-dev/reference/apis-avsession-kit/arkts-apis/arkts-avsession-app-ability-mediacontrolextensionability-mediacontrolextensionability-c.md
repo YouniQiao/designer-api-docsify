@@ -6,8 +6,6 @@ MediaControlExtensionAbility模块提供播放控制的扩展能力，继承自 
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -17,5 +15,5 @@ MediaControlExtensionAbility模块提供播放控制的扩展能力，继承自 
 ## 导入模块
 
 ```TypeScript
-import { MediaControlExtensionAbility } from '@kit.AVSessionKit';
+import { MediaControlExtensionAbility } from 'kits/@kit.AVSessionKit';
 ```

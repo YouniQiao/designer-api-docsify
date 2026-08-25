@@ -17,8 +17,6 @@ function get<T extends object, P extends PropertyKey>(
 
 Gets the property of target, equivalent to `target[propertyKey]` when `receiver === target`.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |

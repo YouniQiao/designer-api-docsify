@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getMinHeightSync
 
 ```TypeScript
-function getMinHeightSync(): int
+function getMinHeightSync(): number
 ```
 
 Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -26,21 +24,10 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-try {
-  let minHeight = wallpaper.getMinHeightSync();
-  console.info(`success to getMinHeightSync: ${JSON.stringify(minHeight)}`);
-} catch (error) {
-  console.error(`failed to getMinHeightSync. Code: ${error.code}, Message: ${error.message}`);
-}
-```

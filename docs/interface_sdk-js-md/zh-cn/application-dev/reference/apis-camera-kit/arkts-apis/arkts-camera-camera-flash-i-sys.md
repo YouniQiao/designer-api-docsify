@@ -6,14 +6,12 @@ Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。闪光灯类�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableLcdFlash
@@ -25,8 +23,6 @@ enableLcdFlash(enabled: boolean): void
 Enables or disables the LCD flash.Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,19 +40,3 @@ Enables or disables the LCD flash.Before the setting, call [isLcdFlashSupported]
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableLcdFlash(session: camera.PhotoSessionForSys | camera.VideoSessionForSys | camera.NightPhotoSession): void {
-  try {
-    session.enableLcdFlash(true);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setFlashMode call failed. error code: ${err.code}`);
-  }
-}
-```

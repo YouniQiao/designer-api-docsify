@@ -10,8 +10,6 @@ Returns the numeric valid group ID of the process
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -25,8 +23,6 @@ const euid: number
 Return the numeric valid user identity of the process
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -42,8 +38,6 @@ Returns the numeric group id of the process
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -58,8 +52,6 @@ Return an array with supplementary group id
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -73,8 +65,6 @@ const ppid: number
 Return ppid is The pid of the current child process
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 

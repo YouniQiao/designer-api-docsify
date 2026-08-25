@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## enableHiLinkHandshake
@@ -15,8 +15,6 @@ function enableHiLinkHandshake(isHiLinkEnable: boolean, bssid: string, config: W
 Enable hiLink handshake.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -42,23 +40,3 @@ Enable hiLink handshake.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-// You can obtain config data by using getScanInfoList, which can be used only when WifiScanInfo.isHiLinkNetwork is true.
-let config:wifiManager.WifiDeviceConfig = {
-  ssid : "****",
-  preSharedKey : "****",
-  securityType : 0,
-  bssid : "38:37:8b:80:bf:cc",
-  bssidType : 1,
-  isHiddenSsid : false
-}  
-try {
-  wifiManager.enableHiLinkHandshake(true, config.bssid, config);
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

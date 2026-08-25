@@ -1,7 +1,5 @@
 # SharedArrayBuffer
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ slice(begin: number, end?: number): SharedArrayBuffer
 ```
 
 Returns a section of an SharedArrayBuffer.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -36,8 +32,6 @@ readonly [Symbol.species]: SharedArrayBuffer
 
 **Type:** SharedArrayBuffer
 
-**ArkTS mode:** 
-
 ## [Symbol.toStringTag]
 
 ```TypeScript
@@ -45,8 +39,6 @@ readonly [Symbol.toStringTag]: "SharedArrayBuffer"
 ```
 
 **Type:** "SharedArrayBuffer"
-
-**ArkTS mode:** 
 
 ## byteLength
 
@@ -57,5 +49,3 @@ readonly byteLength: number
 Read-only. The length of the ArrayBuffer (in bytes).
 
 **Type:** number
-
-**ArkTS mode:** 

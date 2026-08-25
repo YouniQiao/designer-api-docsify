@@ -4,8 +4,6 @@ Enum for the role of device.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ DEVICE_ROLE_PERIPHERAL_ONLY = 0
 Only peripheral supported.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ Only central supported.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -56,8 +50,6 @@ Central & peripheral supported, peripheral preferred.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -73,8 +65,6 @@ DEVICE_ROLE_BOTH_PREFER_CENTRAL = 3
 Central & peripheral supported, central preferred.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

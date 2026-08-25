@@ -4,8 +4,6 @@ Provides the shadow attributes, including the blur radius, color, and offset alo
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,11 +20,9 @@ color?: Color | string | Resource | ColoringStrategy
 Color of the shadow.The default color is black.  
 **NOTE：**Since API version 11, this API supports **ColoringStrategy**, which cannot be used with ArkTS widgets or the textShadow attribute.With **ColoringStrategy**, the average color or primary color can be obtained, and the obtained color is applied to the shadow drawing area.The **'average'** string can be used to trigger the mode for obtaining the average color, and the **'primary'** string for obtaining the primary color.
 
-**Type:** Color \| string \| Resource \| ColoringStrategy
+**Type:** Color \| string \| Resource \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,8 +46,6 @@ Whether to fill the inside of the component with shadow. **true**: Fill the insi
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -70,8 +64,6 @@ Offset of the shadow along the x-axis.Default value: **0**Unit: px
 **Type:** number \| Resource
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -92,8 +84,6 @@ Offset of the shadow along the y-axis.Default value: **0**Unit: px
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -112,8 +102,6 @@ Blur radius of the shadow.Value range: [0, +∞)Unit: px
 **Type:** number \| Resource
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -134,8 +122,6 @@ Shadow type.Default value: **COLOR**
 **Default:** ShadowType.COLOR
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

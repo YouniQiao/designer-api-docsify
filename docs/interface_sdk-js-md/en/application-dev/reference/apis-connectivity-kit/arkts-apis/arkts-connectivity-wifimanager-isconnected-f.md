@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isConnected
@@ -15,8 +15,6 @@ function isConnected(): boolean
 Check whether the Wi-Fi connection has been set up.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -37,16 +35,3 @@ Check whether the Wi-Fi connection has been set up.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let ret = wifiManager.isConnected();
-    console.info("isConnected:" + ret);
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

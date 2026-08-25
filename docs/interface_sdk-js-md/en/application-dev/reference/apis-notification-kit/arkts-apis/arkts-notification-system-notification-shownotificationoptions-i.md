@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
@@ -11,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Notification, ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
+import { Notification, ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit';
 ```
 
 ## clickAction
@@ -25,8 +23,6 @@ Action triggered when the notification is clicked.This API is deprecated since A
 **Type:** [ActionResult](arkts-notification-system-notification-actionresult-i.md)
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 
@@ -44,8 +40,6 @@ Notification content.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
@@ -61,8 +55,6 @@ Notification title.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 

@@ -4,8 +4,6 @@ Enumerates call states.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## TEL_CALL_STATE_UNKNOWN
@@ -17,8 +15,6 @@ TEL_CALL_STATE_UNKNOWN = -1
 The call status fails to be obtained and is unknown.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -32,8 +28,6 @@ No call is in progress.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## TEL_CALL_STATE_RINGING
@@ -45,8 +39,6 @@ TEL_CALL_STATE_RINGING = 1
 The call is in the ringing or waiting state.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -60,8 +52,6 @@ At least one call is being dialed, and no new incoming call is in the ringing or
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## TEL_CALL_STATE_ANSWERED
@@ -74,8 +64,6 @@ The incoming call is answered.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## TEL_CALL_STATE_CONNECTED
@@ -87,7 +75,5 @@ TEL_CALL_STATE_CONNECTED = 4
 The call is being connected or placed on hold.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager

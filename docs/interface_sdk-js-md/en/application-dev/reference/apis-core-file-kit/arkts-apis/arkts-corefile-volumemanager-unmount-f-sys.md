@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## unmount
@@ -15,8 +15,6 @@ function unmount(volumeId: string, callback: AsyncCallback<void>): void
 Unmounts a volume. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -45,26 +43,6 @@ Unmounts a volume. This API uses an asynchronous callback to return the result.
 | 13600008 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-volumeManager.unmount(volumeId).then(() => {
-  // Do something.
-}).catch((error: BusinessError) => {
-  console.error("mount failed");
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-volumeManager.unmount(volumeId, (error: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## unmount
 
@@ -75,8 +53,6 @@ function unmount(volumeId: string): Promise<void>
 Unmounts a volume. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -109,7 +85,3 @@ Unmounts a volume. This API uses a promise to return the result.
 | 13600005 |
 | 13600008 |
 | 13900042 |
-
-**Examples**
-
-See [unmount](#unmount)

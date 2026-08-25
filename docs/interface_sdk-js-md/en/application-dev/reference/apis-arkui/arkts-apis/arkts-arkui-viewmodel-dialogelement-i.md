@@ -6,8 +6,6 @@ The &lt;dialog&gt; component is a custom pop-up container.@extends Element @inte
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## close
@@ -19,8 +17,6 @@ close(): void
 Closes a dialog box.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -35,8 +31,6 @@ show(): void
 Shows a dialog box.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

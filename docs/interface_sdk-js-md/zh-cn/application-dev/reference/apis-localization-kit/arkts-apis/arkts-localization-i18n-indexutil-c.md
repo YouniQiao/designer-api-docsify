@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## addLocale
@@ -24,8 +22,6 @@ addLocale(locale: string): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -36,15 +32,6 @@ addLocale(locale: string): void
 | --- | --- | --- |
 | locale | string | 是 |
 
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
-indexUtil.addLocale('en-US');
-```
-
 ## getIndex
 
 ```TypeScript
@@ -54,8 +41,6 @@ getIndex(text: string): string
 获取输入文本对应的索引值。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -73,15 +58,6 @@ getIndex(text: string): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
-let index: string = indexUtil.getIndex('hi'); // index = 'H'
-```
-
 ## getIndexList
 
 ```TypeScript
@@ -92,8 +68,6 @@ getIndexList(): Array<string>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -103,14 +77,3 @@ getIndexList(): Array<string>
 | 类型 |
 | --- |
 | Array & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
-// indexList = [ '...', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
-// 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '...' ]
-let indexList: Array<string> = indexUtil.getIndexList();
-```

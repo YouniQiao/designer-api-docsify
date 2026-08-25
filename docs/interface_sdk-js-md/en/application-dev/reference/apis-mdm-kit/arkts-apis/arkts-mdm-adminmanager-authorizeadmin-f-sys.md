@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## authorizeAdmin
@@ -15,8 +15,6 @@ function authorizeAdmin(admin: Want, bundleName: string, callback: AsyncCallback
 Authorizes the administrator permission to a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -45,48 +43,6 @@ Authorizes the administrator permission to a specified application. This API use
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = "com.example.application";
-
-adminManager.authorizeAdmin(wantTemp, bundleName, (err) => {
-  if (err) {
-    console.error(`Failed to authorize permission to the application. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Successfully authorized permission to the application');
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = "com.example.application";
-
-adminManager.authorizeAdmin(wantTemp, bundleName).then(() => {
-}).catch((err: BusinessError) => {
-  console.error(`Failed to authorize permission to the application. Code: ${err.code}, message: ${err.message}`);
-})
-```
-
 
 ## authorizeAdmin
 
@@ -97,8 +53,6 @@ function authorizeAdmin(admin: Want, bundleName: string): Promise<void>
 Authorizes the administrator permission to a specified application. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -131,7 +85,3 @@ Authorizes the administrator permission to a specified application. This API use
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [authorizeAdmin](#authorizeadmin)

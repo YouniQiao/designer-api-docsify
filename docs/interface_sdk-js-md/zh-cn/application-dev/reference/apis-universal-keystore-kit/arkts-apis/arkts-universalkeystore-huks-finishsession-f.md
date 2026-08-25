@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## finishSession
@@ -15,8 +15,6 @@ function finishSession(handle: number, options: HuksOptions, callback: AsyncCall
 finishSession操作密钥接口。使用callback异步回调。huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -72,8 +70,6 @@ Finishes the key operation. This API uses an asynchronous callback to return the
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -119,8 +115,6 @@ function finishSession(handle: number, options: HuksOptions, token?: Uint8Array)
 finishSession操作密钥接口。使用Promise异步回调。huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

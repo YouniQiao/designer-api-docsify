@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## mode
@@ -27,8 +25,6 @@ mode: CallRestrictionMode
 **类型：** [CallRestrictionMode](arkts-telephony-call-callrestrictionmode-e-sys.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -46,8 +42,6 @@ password: string
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ type: CallRestrictionType
 **类型：** [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

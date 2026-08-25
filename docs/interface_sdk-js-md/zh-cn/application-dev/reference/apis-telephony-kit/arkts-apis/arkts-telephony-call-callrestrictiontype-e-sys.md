@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ RESTRICTION_TYPE_ALL_INCOMING = 0
 限制所有呼入。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -36,8 +32,6 @@ RESTRICTION_TYPE_ALL_OUTGOING = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ RESTRICTION_TYPE_INTERNATIONAL = 2
 限制国际通话。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -68,8 +60,6 @@ RESTRICTION_TYPE_INTERNATIONAL_EXCLUDING_HOME = 3
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ RESTRICTION_TYPE_ROAMING_INCOMING = 4
 限制漫游呼入。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -100,8 +88,6 @@ RESTRICTION_TYPE_ALL_CALLS = 5
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -116,8 +102,6 @@ RESTRICTION_TYPE_OUTGOING_SERVICES = 6
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -131,8 +115,6 @@ RESTRICTION_TYPE_INCOMING_SERVICES = 7
 限制呼入业务。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

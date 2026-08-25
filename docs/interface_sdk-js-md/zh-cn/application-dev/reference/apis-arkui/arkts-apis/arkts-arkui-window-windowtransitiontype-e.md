@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## DESTROY
@@ -17,8 +15,6 @@ DESTROY = 0
 表示窗口销毁时的转场动画。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

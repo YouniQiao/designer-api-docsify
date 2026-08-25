@@ -2,18 +2,16 @@
 
 Implements a navigation stack of the **MultiNavigation** component. Currently, this stack can be created only by the user and cannot be obtained through callbacks. Do not use events or APIs such as **onReady** of **NavDestination** to obtain the navigation stack and perform stack operations, as this may lead to unpredictable issues.
 
-**Inheritance/Implementation:** MultiNavPathStack extends NavPathStack
+**Inheritance/Implementation:** MultiNavPathStack extends [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
+import { SplitPolicy, MultiNavigation, MultiNavPathStack } from 'kits/@kit.ArkUI';
 ```
 
 ## clear
@@ -30,8 +28,6 @@ Clears the navigation stack.
 > navigation stack is retained.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,8 +51,6 @@ Creates an instance of MultiNavPathStack.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -72,8 +66,6 @@ disableAnimation(disable: boolean): void
 Disables or enables the transition animation in the **MultiNavigation** component.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +89,6 @@ Obtains the names of all navigation destination pages in the navigation stack.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -120,8 +110,6 @@ getIndexByName(name: string): Array<number>
 Obtains the indexes of all the navigation destination pages that match **name**.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,8 +139,6 @@ Obtains the parameter information of the navigation destination page specified b
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -180,8 +166,6 @@ getParamByName(name: string): Array<Object>
 Obtains the parameter information of all the navigation destination pages that match **name**.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,8 +203,6 @@ Sets whether to retain the bottom page when the **pop** or **clear** APIs is cal
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -246,8 +228,6 @@ Moves the navigation destination page specified by **index** to the top of the n
 > Depending on the type of page found, **MultiNavigation** performs different actions:
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -275,8 +255,6 @@ Moves the first navigation destination page that matches **name** from the botto
 > Depending on the type of page found, **MultiNavigation** performs different actions:
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,8 +290,6 @@ Pops the top element out of the navigation stack.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -330,7 +306,7 @@ Pops the top element out of the navigation stack.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| NavPathInfo \| undefined |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| undefined |
 
 ## pop
 
@@ -346,8 +322,6 @@ Pops the top element out of the navigation stack and invokes the **onPop** callb
 > navigation stack is retained.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -366,7 +340,7 @@ Pops the top element out of the navigation stack and invokes the **onPop** callb
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| NavPathInfo \| undefined |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| undefined |
 
 ## popToIndex
 
@@ -377,8 +351,6 @@ popToIndex(index: number, animated?: boolean): void
 Returns the navigation stack to the page specified by **index**.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -403,8 +375,6 @@ Returns the navigation stack to the page specified by **index** and invokes the 
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -428,8 +398,6 @@ popToName(name: string, animated?: boolean): number
 Pops pages until the first navigation destination page that matches **name** from the bottom of the navigation stack is at the top of the stack.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -459,8 +427,6 @@ popToName(name: string, result: Object, animated?: boolean): number
 Pops pages until the first navigation destination page that matches **name** from the bottom of the navigation stack is at the top of the stack. This API uses the **onPop** callback to pass in the page processing result.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -492,8 +458,6 @@ Pushes the specified navigation destination page to the navigation stack.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -518,8 +482,6 @@ Pushes the specified navigation destination page to the navigation stack, with s
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -531,7 +493,7 @@ Pushes the specified navigation destination page to the navigation stack, with s
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No |
 
 ## pushPathByName
@@ -543,8 +505,6 @@ pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPo
 Pushes the navigation destination page specified by **name** to the navigation stack, passing the data specified by **param**.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -572,8 +532,6 @@ Pushes the navigation destination page specified by **name** to the navigation s
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -586,7 +544,7 @@ Pushes the navigation destination page specified by **name** to the navigation s
 | --- | --- | --- |
 | name | string | Yes |
 | param | Object | Yes |
-| onPop | base.Callback & lt;PopInfo & gt; | No |
+| [onPop](../arkts-components/arkts-arkui-navpathinfo-c.md) | base.Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | No |
 | animated | boolean | No |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No |
 
@@ -599,8 +557,6 @@ removeByIndexes(indexes: Array<number>): number
 Removes the navigation destination pages specified by **indexes** from the navigation stack.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -630,8 +586,6 @@ Removes the navigation destination page specified by **name** from the navigatio
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -660,8 +614,6 @@ Replaces the current top page on the stack with the specified navigation destina
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -685,8 +637,6 @@ Replaces the current top page on the stack with the specified navigation destina
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -698,7 +648,7 @@ Replaces the current top page on the stack with the specified navigation destina
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes |
-| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No |
 
 ## replacePathByName
 
@@ -709,8 +659,6 @@ replacePathByName(name: string, param: Object, animated?: boolean): void
 Replaces the current top page on the stack with the navigation destination page specified by **name**. The new page inherits the split policy of the original top page.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -735,8 +683,6 @@ setHomeWidthRange(minPercent: number, maxPercent: number): void
 Sets the draggable range for the home page width. If not set, the width defaults to 50% and is not draggable.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -775,8 +721,6 @@ Sets a placeholder page.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -799,8 +743,6 @@ Obtains the stack size.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -822,8 +764,6 @@ switchFullScreenState(isFullScreen?: boolean): boolean
 Switches the display mode of the current top detail page in the stack.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

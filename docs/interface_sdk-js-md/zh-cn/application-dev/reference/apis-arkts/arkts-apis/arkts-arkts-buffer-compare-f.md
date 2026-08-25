@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
+import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## compare
@@ -15,8 +15,6 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 |
 返回两个Buffer或Uint8Array对象的比较结果，通常用于对Buffer或Uint8Array对象数组进行排序。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,89 +32,3 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 |
 | 类型 |
 | --- |
 | -1 \| 0 \| 1 |
-
-**示例**
-
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.from('1234');
-let buf2 = buffer.from('0123');
-let res = buffer.compare(buf1, buf2);
-
-console.info(Number(res).toString());
-// 输出结果：1
-```
-
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.from('1234');
-let buf2 = buffer.from('0123');
-let res = buffer.compare(buf1, buf2);
-
-console.info(Number(res).toString());
-// 输出结果：1
-```
-
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
-
-console.info(buf1.compare(buf2, 5, 9, 0, 4).toString());
-// 输出结果：0
-console.info(buf1.compare(buf2, 0, 6, 4).toString());
-// 输出结果：-1
-console.info(buf1.compare(buf2, 5, 6, 5).toString());
-// 输出结果：1
-```
-
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
-
-console.info(buf1.compare(buf2, 5, 9, 0, 4).toString());
-// 输出结果：0
-console.info(buf1.compare(buf2, 0, 6, 4).toString());
-// 输出结果：-1
-console.info(buf1.compare(buf2, 5, 6, 5).toString());
-// 输出结果：1
-```
-
-
-## compare
-
-```TypeScript
-function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): int
-```
-
-返回两个Buffer或Uint8Array对象的比较结果，通常用于对Buffer或Uint8Array对象数组进行排序。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| buf1 | Buffer \| Uint8Array | 是 |
-| buf2 | Buffer \| Uint8Array | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| int |
-
-**示例**
-
-参见 [compare](#compare)

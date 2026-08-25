@@ -4,8 +4,6 @@ Enumerates update commands.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ DOWNLOAD = 1
 Download. This command is applicable to the scenario where only the upgrade package is downloaded.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -36,8 +32,6 @@ Install. This command is applicable to the scenario where the downloaded upgrade
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ DOWNLOAD_AND_INSTALL = 3
 Download and install. This command is applicable to the scenario where the upgrade package is downloaded and installed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -68,8 +60,6 @@ Apply. This command is applicable only to the scenario where the installed upgra
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ INSTALL_AND_APPLY = 6
 Install and apply. After the installation, the device restarts to apply the new version. This command is applicable to the scenario where the system upgrade needs to be completed quickly and take effect immediately.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

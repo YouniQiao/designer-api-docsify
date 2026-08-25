@@ -10,8 +10,6 @@ List of routing parameters.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** params

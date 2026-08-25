@@ -4,14 +4,12 @@ Defines the rectangular region for capturing the component snapshot.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## bottom
@@ -25,8 +23,6 @@ Y-coordinate of the lower right corner of the rectangular region.Unit: px.Value 
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ X-coordinate of the upper left corner of the rectangular region.Unit: px.Value r
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -66,8 +60,6 @@ X-coordinate of the lower right corner of the rectangular region.Unit: px.Value 
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -85,8 +77,6 @@ Y-coordinate of the upper left corner of the rectangular region.Unit: px.Value r
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

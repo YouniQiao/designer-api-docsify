@@ -4,14 +4,12 @@ Describes a font variation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## axis
@@ -25,8 +23,6 @@ Keyword identifier in the variable font property key-value pair, such as 'wght' 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -44,8 +40,6 @@ Whether to normalize. If the value is **true**, the value range of the value fie
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -53,16 +47,14 @@ Whether to normalize. If the value is **true**, the value range of the value fie
 ## value
 
 ```TypeScript
-value: double
+value: number
 ```
 
 Value in the font variation key-value pair.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

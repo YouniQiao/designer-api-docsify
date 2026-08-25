@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ SMALL2MEDIUM_RECV = 0
 手机碰2in1设备（接收端）。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -36,8 +32,6 @@ SMALL2MEDIUM_SEND = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ SMALL2SMALL = 2
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ MINI_RECV = 3
 2in1设备与其它设备共享（键鼠共享场景）。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

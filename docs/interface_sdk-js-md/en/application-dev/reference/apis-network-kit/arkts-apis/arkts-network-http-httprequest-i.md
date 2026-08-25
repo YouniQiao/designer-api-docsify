@@ -4,14 +4,12 @@ Defines an HTTP request task. Before invoking APIs provided by **HttpRequest**, 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## destroy
@@ -24,27 +22,9 @@ Stops an HTTP request task and releases system resources.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
-
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-let httpRequest = http.createHttp();
-
-httpRequest.destroy();
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-let httpRequest = http.createHttp();
-
-httpRequest.destroy();
-```
 
 ## enableAutoCookie
 
@@ -64,8 +44,6 @@ Sets whether to automatically carry and share cookies. That is, whether to autom
 > instance is cleared.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,8 +65,6 @@ Unregisters the observer for HTTP Response Header events.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [off_headersReceive](#offheadersreceive)
@@ -102,22 +78,6 @@ Unregisters the observer for HTTP Response Header events.
 | type | "headerReceive" | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.off("headerReceive");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.off("headerReceive");
-```
-
 ## off("headersReceive")
 
 ```TypeScript
@@ -127,8 +87,6 @@ off(type: "headersReceive", callback?: Callback<Object>): void
 Unregisters the observer for HTTP Response Header events.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -141,28 +99,6 @@ Unregisters the observer for HTTP Response Header events.
 | type | "headersReceive" | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | No |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
-
 ## off("dataReceive")
 
 ```TypeScript
@@ -172,8 +108,6 @@ off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
 Unregisters the observer for events indicating receiving of HTTP streaming responses.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -186,28 +120,6 @@ Unregisters the observer for events indicating receiving of HTTP streaming respo
 | type | "dataReceive" | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
 ## off("dataEnd")
 
 ```TypeScript
@@ -217,8 +129,6 @@ off(type: "dataEnd", callback?: Callback<void>): void
 Unregisters the observer for events indicating completion of receiving HTTP streaming responses.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -231,28 +141,6 @@ Unregisters the observer for events indicating completion of receiving HTTP stre
 | type | "dataEnd" | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
 ## off('dataReceiveProgress')
 
 ```TypeScript
@@ -262,8 +150,6 @@ off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): 
 Unregisters the observer for events indicating progress of receiving HTTP streaming responses.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -276,28 +162,6 @@ Unregisters the observer for events indicating progress of receiving HTTP stream
 | type | 'dataReceiveProgress' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
 ## off('dataSendProgress')
 
 ```TypeScript
@@ -307,8 +171,6 @@ off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
 Unregisters the observer for events indicating progress of sending HTTP requests.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -321,28 +183,6 @@ Unregisters the observer for events indicating progress of sending HTTP requests
 | type | 'dataSendProgress' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
 ## on("headerReceive")
 
 ```TypeScript
@@ -352,8 +192,6 @@ on(type: "headerReceive", callback: AsyncCallback<Object>): void
 Registers an observer for HTTP Response Header events.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -368,28 +206,6 @@ Registers an observer for HTTP Response Header events.
 | type | "headerReceive" | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headerReceive", (data: BusinessError) => {
-  console.error("error:" + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headerReceive", (data: BusinessError) => {
-  console.error("error:" + JSON.stringify(data));
-});
-```
-
 ## on("headersReceive")
 
 ```TypeScript
@@ -399,8 +215,6 @@ on(type: "headersReceive", callback: Callback<Object>): void
 Registers an observer for HTTP Response Header events.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -413,28 +227,6 @@ Registers an observer for HTTP Response Header events.
 | type | "headersReceive" | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
-
 ## on("dataReceive")
 
 ```TypeScript
@@ -444,8 +236,6 @@ on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
 Registers an observer for events indicating receiving of HTTP streaming responses.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -458,28 +248,6 @@ Registers an observer for events indicating receiving of HTTP streaming response
 | type | "dataReceive" | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
 ## on("dataEnd")
 
 ```TypeScript
@@ -489,8 +257,6 @@ on(type: "dataEnd", callback: Callback<void>): void
 Registers an observer for events indicating completion of receiving HTTP streaming responses.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -503,28 +269,6 @@ Registers an observer for events indicating completion of receiving HTTP streami
 | type | "dataEnd" | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
 ## on('dataReceiveProgress')
 
 ```TypeScript
@@ -534,8 +278,6 @@ on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): vo
 Registers an observer for events indicating progress of receiving HTTP streaming responses.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -548,28 +290,6 @@ Registers an observer for events indicating progress of receiving HTTP streaming
 | type | 'dataReceiveProgress' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
 ## on('dataSendProgress')
 
 ```TypeScript
@@ -579,8 +299,6 @@ on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
 Registers an observer for events indicating progress of sending HTTP requests.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -593,28 +311,6 @@ Registers an observer for events indicating progress of sending HTTP requests.
 | type | 'dataSendProgress' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
 ## once("headersReceive")
 
 ```TypeScript
@@ -624,8 +320,6 @@ once(type: "headersReceive", callback: Callback<Object>): void
 Registers a one-time observer for HTTP Response Header events. Once triggered, the observer will be removed. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -637,26 +331,6 @@ Registers a one-time observer for HTTP Response Header events. Once triggered, t
 | --- | --- | --- |
 | type | "headersReceive" | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.once("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.once("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-```
 
 ## request
 
@@ -680,8 +354,6 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 > HTTP request.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -735,184 +407,6 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
-  if (!err) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
-  if (!err) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
-    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
-    usingCache: true, // Optional. The default value is true.
-    priority: 1, // Optional. The default value is 1.
-    // You can add header fields based on service requirements.
-    header: new Header('application/json'),
-    readTimeout: 60000, // Optional. The default value is 60000, in ms.
-    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
-    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
-    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
-};
-
-httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
-  if (!err) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
-    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
-    usingCache: true, // Optional. The default value is true.
-    priority: 1, // Optional. The default value is 1.
-    // You can add header fields based on service requirements.
-    header: new Header('application/json'),
-    readTimeout: 60000, // Optional. The default value is 60000, in ms.
-    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
-    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
-    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
-};
-
-httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
-  if (!err) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.request("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data:http.HttpResponse) => {
-  console.info('Result:' + data.result);
-  console.info('code:' + data.responseCode);
-  console.info('type:' + JSON.stringify(data.resultType));
-  console.info('header:' + JSON.stringify(data.header));
-  console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  console.info('header.content-Type:' + data.header);
-  console.info('header.Status-Line:' + data.header);
-}).catch((err:Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.request("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data:http.HttpResponse) => {
-  console.info('Result:' + data.result);
-  console.info('code:' + data.responseCode);
-  console.info('type:' + JSON.stringify(data.resultType));
-  console.info('header:' + JSON.stringify(data.header));
-  console.info('cookies:' + data.cookies); // Cookies are supported since API version 8.
-  console.info('header.content-Type:' + data.header);
-  console.info('header.Status-Line:' + data.header);
-}).catch((err:Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
-
 ## request
 
 ```TypeScript
@@ -935,8 +429,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 > HTTP request.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -991,10 +483,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
 
-**Examples**
-
-See [request](#request)
-
 ## request
 
 ```TypeScript
@@ -1017,8 +505,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 > HTTP request.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1078,21 +564,15 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
 
-**Examples**
-
-See [request](#request)
-
 ## requestInStream
 
 ```TypeScript
-requestInStream(url: string, callback: AsyncCallback<int>): void
+requestInStream(url: string, callback: AsyncCallback<number>): void
 ```
 
 Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1146,169 +626,15 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
 
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) => {
-  if (!err) {
-    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
-  } else {
-    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-  }
-})
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) => {
-  if (!err) {
-    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
-  } else {
-    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-  }
-})
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
-    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
-    usingCache: true, // Optional. The default value is true.
-    priority: 1, // Optional. The default value is 1.
-    // You can add header fields based on service requirements.
-    header: new Header('application/json'),
-    readTimeout: 60000, // Optional. The default value is 60000, in ms.
-    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
-    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
-    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
-};
-httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
-  if (!err) {
-    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
-  } else {
-    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-  }
-})
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // Optional. The default value is http.RequestMethod.GET.
-    // This field is used to transfer the request body when a POST request is used. Its format needs to be negotiated with the server.
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // Optional. This parameter specifies the type of the return data.
-    usingCache: true, // Optional. The default value is true.
-    priority: 1, // Optional. The default value is 1.
-    // You can add header fields based on service requirements.
-    header: new Header('application/json'),
-    readTimeout: 60000, // Optional. The default value is 60000, in ms.
-    connectTimeout: 60000 // Optional. The default value is 60000, in ms.
-    usingProtocol: http.HttpProtocol.HTTP1_1, // Optional. The default protocol type is automatically specified by the system.
-    usingProxy: false, // Optional. By default, network proxy is not used. This field is supported since API version 10.
-};
-httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
-  if (!err) {
-    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
-  } else {
-    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-  }
-})
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.requestInStream("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data: number) => {
-  console.info("requestInStream OK!" + data);
-}).catch((err: Error) => {
-  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.requestInStream("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data: number) => {
-  console.info("requestInStream OK!" + data);
-}).catch((err: Error) => {
-  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-});
-```
-
 ## requestInStream
 
 ```TypeScript
-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void
+requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
 ```
 
 Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result, which is a streaming response.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1363,21 +689,15 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
 
-**Examples**
-
-See [requestInStream](#requestinstream)
-
 ## requestInStream
 
 ```TypeScript
-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>
+requestInStream(url: string, options?: HttpRequestOptions): Promise<number>
 ```
 
 Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result, which is a streaming response.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1437,10 +757,6 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
 
-**Examples**
-
-See [requestInStream](#requestinstream)
-
 ## requestSync
 
 ```TypeScript
@@ -1462,8 +778,6 @@ Initiates an HTTP network request based on the URL and related configuration opt
 **Required permission**: ohos.permission.INTERNET
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.INTERNET
 

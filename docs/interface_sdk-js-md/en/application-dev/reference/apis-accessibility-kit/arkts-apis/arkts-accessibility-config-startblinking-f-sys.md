@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## startBlinking
@@ -15,8 +15,6 @@ function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkRes
 Enables the flash or screen for blinking reminders.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 

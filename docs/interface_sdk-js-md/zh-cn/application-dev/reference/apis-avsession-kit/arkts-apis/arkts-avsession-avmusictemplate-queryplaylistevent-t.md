@@ -1,14 +1,12 @@
 # QueryPlaylistEvent
 
 ```TypeScript
-type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntity>
+type QueryPlaylistEvent = (pageIndex: number, sort: Sort) => Promise<PageMediaEntity>
 ```
 
 播放列表查询事件。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -18,7 +16,7 @@ type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntit
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| pageIndex | number | 是 |
 | sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | 是 |
 
 **返回值：**

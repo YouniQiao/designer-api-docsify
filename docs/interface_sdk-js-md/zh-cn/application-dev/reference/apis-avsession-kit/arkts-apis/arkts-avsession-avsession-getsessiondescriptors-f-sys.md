@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getSessionDescriptors
@@ -15,8 +15,6 @@ function getSessionDescriptors(category: SessionCategory): Promise<Array<Readonl
 根据不同的会话类别获取对应的会话描述。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 

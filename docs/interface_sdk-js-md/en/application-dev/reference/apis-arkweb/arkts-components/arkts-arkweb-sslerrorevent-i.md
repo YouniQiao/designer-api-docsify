@@ -4,8 +4,6 @@ Callback details triggered when an SSL error occurs during resource loading by t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Certificate chain data.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## error
@@ -40,8 +36,6 @@ Error code.
 **Type:** [SslError](arkts-arkweb-sslerror-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -59,8 +53,6 @@ User operation.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -76,8 +68,6 @@ Whether the error is a fatal error. A fatal error prevents the page from loading
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -95,8 +85,6 @@ Whether the resource is a main resource.The value **true** indicates a main reso
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -112,8 +100,6 @@ Original URL of the request.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -131,8 +117,6 @@ Referrer URL.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -148,8 +132,6 @@ URL.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

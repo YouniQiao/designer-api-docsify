@@ -6,28 +6,18 @@ NfcATag 提供 NFC-A(ISO 14443-3A)技术的属性和I/O操作的访问，继承�
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getAtqa
 
-ArkTS-Dyn:
 ```TypeScript
 getAtqa(): number[]
-```
-
-ArkTS-Sta:
-```TypeScript
-getAtqa(): int[]
 ```
 
 获取NFC-A标签的Atqa值。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -36,36 +26,18 @@ getAtqa(): int[]
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcA
-let atqa : number[] = nfcA.getAtqa();
-console.info("nfcA atqa: " + atqa);
-```
+| number[] |
 
 ## getSak
 
-ArkTS-Dyn:
 ```TypeScript
 getSak(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getSak(): int
 ```
 
 获取NFC-A标签的SAK值。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -74,14 +46,4 @@ getSak(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcA
-let sak : number = nfcA.getSak();
-console.info("nfcA sak: " + sak);
-```
+| number |

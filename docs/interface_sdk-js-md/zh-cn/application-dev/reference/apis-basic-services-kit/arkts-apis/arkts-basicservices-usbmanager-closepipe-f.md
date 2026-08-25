@@ -3,13 +3,13 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## closePipe
 
 ```TypeScript
-function closePipe(pipe: USBDevicePipe): int
+function closePipe(pipe: USBDevicePipe): number
 ```
 
 关闭设备连接通道。
@@ -18,8 +18,6 @@ function closePipe(pipe: USBDevicePipe): int
 3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)得到devicepipe作为参数。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -33,7 +31,7 @@ function closePipe(pipe: USBDevicePipe): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -41,28 +39,3 @@ function closePipe(pipe: USBDevicePipe): int
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-async function closePipe() {
-  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-  if (!devicesList || devicesList.length == 0) {
-    console.info(`device list is empty`);
-    return;
-  }
-
-  let rightResult = await usbManager.requestRight(devicesList?.[0]?.name);
-  if (!rightResult) {
-    console.error(`request right failed`);
-    return;
-  }
-  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  if (devicePipe == undefined) {
-    console.error(`connect device failed`);
-    return;
-  }
-  let ret: int = usbManager.closePipe(devicePipe);
-  console.info(`closePipe = ${ret}`);
-}
-```

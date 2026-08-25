@@ -4,8 +4,6 @@ Defines the options to be passed when constructing **SecurityUIExtensionComponen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -29,8 +27,6 @@ Resolution following strategy for **SecurityUIExtensionComponent**, used to cont
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -51,8 +47,6 @@ Whether the **UIExtensionComponent** forwards the upper-level caller information
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -70,8 +64,6 @@ Placeholder to be displayed before the **SecurityUIExtensionComponent** establis
 **Type:** ComponentContent
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

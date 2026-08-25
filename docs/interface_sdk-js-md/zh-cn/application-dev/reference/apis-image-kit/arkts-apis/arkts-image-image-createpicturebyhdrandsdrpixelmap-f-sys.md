@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createPictureByHdrAndSdrPixelMap
@@ -15,8 +15,6 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个增益图（gainmap），返回的Picture对象将包含SDR PixelMap和生成的gainmap PixelMap，像素格式为RGBA8888。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -41,84 +39,6 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 | --- |
 | [7600201](../errorcode-image.md#7600201-不支持的操作) |
 
-**示例**
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePictureTest(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("test.jpg"); // SDR
-  let imageSource: image.ImageSource = image.createImageSource(rawFile);
-  let options1: image.DecodingOptions = {
-    desiredDynamicRange : image.DecodingDynamicRange.SDR,
-  }
-  let options2: image.DecodingOptions = {
-    desiredDynamicRange : image.DecodingDynamicRange.HDR, // 通过AIHDR将SDR解码为HDR。
-  }
-  let sdrPixelMap = await imageSource.createPixelMap(options1);
-  let hdrPixelMap = await imageSource.createPixelMap(options2);
-
-  // 获取计算生成的gainmap并编码。
-  let picture: image.Picture = await image.createPictureByHdrAndSdrPixelMap(hdrPixelMap, sdrPixelMap);
-  if (picture != null) {
-    console.info('Create picture succeeded');
-  } else {
-    console.error('Create picture failed');
-  }
-  const imagePackerObj = image.createImagePacker();
-  let packOpts : image.PackingOption = { format : "image/jpeg", quality: 98};
-  packOpts.desiredDynamicRange = image.PackingDynamicRange.AUTO;
-  const path: string = context.filesDir + "/hdr-test.jpg";
-  let file = fileIo.openSync(path, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-  imagePackerObj.packToFile(picture, file.fd, packOpts).then(() => {
-  }).catch((error : BusinessError) => {
-    console.error('Failed to pack the image. And the error is: ' + error);
-  })
-}
-```
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function CreatePictureTest(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("test.jpg"); // 获取SDR图片。
-  let imageSource: image.ImageSource = image.createImageSource(rawFile);
-  let decodingOptionsForSDR: image.DecodingOptions = {
-    desiredDynamicRange : image.DecodingDynamicRange.SDR,
-  }
-  let decodingOptionsForHDR: image.DecodingOptions = {
-    desiredDynamicRange : image.DecodingDynamicRange.HDR, // 通过AIHDR将SDR解码为HDR。
-  }
-  let sdrPixelMap = await imageSource.createPixelMap(decodingOptionsForSDR);
-  let hdrPixelMap = await imageSource.createPixelMap(decodingOptionsForHDR);
-  let params : image.GainmapParams = {
-    isFullSizeGainmap: true
-  }
-
-  // 获取计算生成的gainmap并编码。
-  let picture: image.Picture = await image.createPictureByHdrAndSdrPixelMap(hdrPixelMap, sdrPixelMap, params);
-  if (picture != null) {
-    console.info('Succeeded in creating picture');
-  } else {
-    console.error('Create picture failed');
-  }
-  const imagePackerObj = image.createImagePacker();
-  let packOpts : image.PackingOption = { format : "image/jpeg", quality: 98};
-  packOpts.desiredDynamicRange = image.PackingDynamicRange.AUTO;
-  const path: string = context.filesDir + "/hdr-test.jpg";
-  let file = fileIo.openSync(path, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-  imagePackerObj.packToFile(picture, file.fd, packOpts).then(() => {
-  }).catch((error : BusinessError) => {
-    console.error('Failed to pack the image. And the error is: ' + error);
-  })
-}
-```
-
 
 ## createPictureByHdrAndSdrPixelMap
 
@@ -130,8 +50,6 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个Gainmap（增益图），返回的Picture对象将包含SDR PixelMap和生成的Gainmap PixelMap，像素格式为RGBA8888。Gainmap PixelMap的尺寸可以通过设置params进行选择。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -159,7 +77,3 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7600201](../errorcode-image.md#7600201-不支持的操作) |
-
-**示例**
-
-参见 [createPictureByHdrAndSdrPixelMap](#createpicturebyhdrandsdrpixelmap)

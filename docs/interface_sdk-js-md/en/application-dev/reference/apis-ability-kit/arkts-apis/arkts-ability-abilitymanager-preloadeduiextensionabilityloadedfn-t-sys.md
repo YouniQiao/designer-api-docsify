@@ -1,14 +1,12 @@
 # PreloadedUIExtensionAbilityLoadedFn (System API)
 
 ```TypeScript
-export type PreloadedUIExtensionAbilityLoadedFn = (preloadId: int) => void
+export type PreloadedUIExtensionAbilityLoadedFn = (preloadId: number) => void
 ```
 
 Defines the callback function when the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance is loaded.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,4 +18,4 @@ Defines the callback function when the preloaded [UIExtensionAbility](arkts-abil
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| preloadId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| preloadId | number | Yes |

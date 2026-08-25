@@ -4,14 +4,12 @@ Describes information about the automatic synchronization trigger mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## mode
@@ -25,8 +23,6 @@ Describes the automatic synchronization triggering mode.
 **Type:** [AutoSyncTriggerMode](arkts-arkdata-clouddata-autosynctriggermode-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

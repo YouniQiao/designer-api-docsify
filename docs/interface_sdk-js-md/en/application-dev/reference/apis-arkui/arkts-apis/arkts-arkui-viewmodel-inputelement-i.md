@@ -6,8 +6,6 @@ The &lt;input&gt; component provides an interactive interface to receive user in
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## delete
@@ -19,8 +17,6 @@ delete(): void
 Deletes the previous character at the cursor position.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -35,8 +31,6 @@ focus(param: { focus: boolean }): void
 Obtains or loses the focus of a component. When the component type is set to text, email, date, time, number, or password, the input method can be displayed or collapsed.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -57,8 +51,6 @@ showError(param: { error: string }): void
 Displays the error message. This attribute is available when the component type is set to text, email, date, time, number, or password.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

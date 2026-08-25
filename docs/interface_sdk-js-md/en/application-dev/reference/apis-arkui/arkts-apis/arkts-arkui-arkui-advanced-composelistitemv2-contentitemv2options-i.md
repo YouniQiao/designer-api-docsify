@@ -4,14 +4,12 @@ Declare interface ContentItemV2Options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUI';
+import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from 'kits/@kit.ArkUI';
 ```
 
 ## description
@@ -22,11 +20,9 @@ description?: ResourceStr
 
 Sets the description.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ icon?: ResourceStr
 
 Sets the icon
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +60,6 @@ The type of icon
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -82,11 +74,9 @@ primaryText?: ResourceStr
 
 Sets the primaryText.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,11 +92,9 @@ secondaryText?: ResourceStr
 
 Sets the secondaryText.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +113,6 @@ Sets the symbol
 **Type:** SymbolGlyphModifier
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

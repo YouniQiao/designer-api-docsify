@@ -15,8 +15,6 @@ function getStorage(path: string, callback: AsyncCallback<Storage>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** getPreferences
@@ -28,47 +26,6 @@ function getStorage(path: string, callback: AsyncCallback<Storage>): void
 | path | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Storage&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-  path = filePath;
-  console.info("======================>getFilesDirPromise====================>");
-
-  data_storage.getStorage(path + '/mystore', function (err, storage) {
-    if (err) {
-      console.info("Failed to get the storage. path: " + path + '/mystore');
-      return;
-    }
-    storage.putSync('startup', 'auto');
-    storage.flushSync();
-  })
-});
-```
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-  path = filePath;
-  console.info("======================>getFilesDirPromise====================>");
-
-  let getPromise = data_storage.getStorage(path + '/mystore');
-  getPromise.then((storage) => {
-    storage.putSync('startup', 'auto');
-    storage.flushSync();
-  }).catch((err) => {
-    console.info("Failed to get the storage. path: " + path + '/mystore');
-  })
-});
-```
-
 
 ## getStorage
 
@@ -79,8 +36,6 @@ function getStorage(path: string): Promise<Storage>
 读取指定文件，将数据加载到Storage实例，用于数据操作，使用Promise方式返回结果，此方法为异步方法。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -97,7 +52,3 @@ function getStorage(path: string): Promise<Storage>
 | 类型 |
 | --- |
 | Promise & lt;Storage & gt; |
-
-**示例**
-
-参见 [getStorage](#getstorage)

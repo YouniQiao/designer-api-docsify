@@ -4,14 +4,12 @@ Describes the window transition animation.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## config
@@ -26,8 +24,6 @@ Transition animation configuration.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -35,16 +31,14 @@ Transition animation configuration.
 ## opacity
 
 ```TypeScript
-opacity?: double
+opacity?: number
 ```
 
 Opacity of the window during the transition animation. If this parameter is set to **0**, the window is completely transparent. The default value is **1.0**. When the animation type is **WindowTransitionType.DESTROY**, this represents the opacity at the end of the animation. The value ranges from 0 to 1.0. The value is reset to **1.0** when the animation ends.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

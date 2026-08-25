@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ FINGERPRINT_TIP_GOOD = 0
 表示采集的图像良好。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -36,8 +32,6 @@ FINGERPRINT_TIP_IMAGER_DIRTY = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ FINGERPRINT_TIP_INSUFFICIENT = 2
 表示由于检测到的情况，指纹图像噪声太大，无法处理。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -68,8 +60,6 @@ FINGERPRINT_TIP_PARTIAL = 3
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ FINGERPRINT_TIP_TOO_FAST = 4
 表示指纹图像由于快速运动而不完整。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -100,8 +88,6 @@ FINGERPRINT_TIP_TOO_SLOW = 5
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -116,8 +102,6 @@ FINGERPRINT_TIP_FINGER_DOWN = 6
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -131,8 +115,6 @@ FINGERPRINT_TIP_FINGER_UP = 7
 表示手指抬起。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

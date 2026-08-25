@@ -4,8 +4,6 @@ Partition creation options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Partition creation options.
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## endSector
 
 ```TypeScript
-endSector: long
+endSector: number
 ```
 
 End sector of the partition.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,16 +35,14 @@ End sector of the partition.
 ## partitionNum
 
 ```TypeScript
-partitionNum: int
+partitionNum: number
 ```
 
 Partition number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,16 +53,14 @@ Partition number.
 ## startSector
 
 ```TypeScript
-startSector: long
+startSector: number
 ```
 
 Start sector of the partition.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,8 +79,6 @@ The code of file system. Common file systems are **ext4**, **vfat**, **exfat**, 
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

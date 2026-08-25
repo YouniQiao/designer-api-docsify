@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from '@kit.ArkUI';
+import { font } from 'kits/@kit.ArkUI';
 ```
 
 ## getSystemFontList
@@ -22,8 +22,6 @@ Obtains this system font list.This API only takes effect on PCs/2-in-1 devices a
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 18
 
 **Substitutes:** getSystemFontList
@@ -39,27 +37,3 @@ Obtains this system font list.This API only takes effect on PCs/2-in-1 devices a
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Array & lt;string & gt; |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct FontExample {
-  fontList: Array<string> = new Array<string>();
-
-  build() {
-    Column() {
-      Button("getSystemFontList")
-        .width('60%')
-        .height('6%')
-        .onClick(() => {
-          this.fontList = font.getSystemFontList(); // You are advised to use the this.getUIContext().getFont().getSystemFontList() API.
-        })
-    }.width('100%')
-  }
-}
-```

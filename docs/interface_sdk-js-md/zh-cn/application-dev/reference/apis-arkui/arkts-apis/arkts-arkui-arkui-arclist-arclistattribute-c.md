@@ -1,46 +1,18 @@
 # ArcListAttribute
 
-除支持通用属性外，还支持以下属性（不支持 滚动组件通用属性）：
+除支持通用属性外，还支持以下属性（不支持 [滚动组件通用属性](../arkts-components/arkts-arkui-scrollablecommonmethod-c.md)）：
 
 **继承/实现关系：** ArcListAttribute extends CommonMethod<ArcListAttribute>
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## 导入模块
 
 ```TypeScript
-import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from 'kits/@kit.ArkUI';
 ```
-
-## attributeModifier
-
-```TypeScript
-default attributeModifier(modifier: AttributeModifier<ArcListAttribute> | AttributeModifier<CommonMethod> | undefined): this
-```
-
-设置属性修改器。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | AttributeModifier&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md)&gt; \| AttributeModifier & lt;CommonMethod & gt; \ | undefined | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| this |
 
 ## cachedCount
 
@@ -52,8 +24,6 @@ cachedCount(count: Optional<number>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -62,7 +32,7 @@ cachedCount(count: Optional<number>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| count | Optional & lt;number & gt; | 是 |
+| count | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 **返回值：**
 
@@ -80,8 +50,6 @@ chainAnimation(enable: Optional<boolean>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -90,7 +58,7 @@ chainAnimation(enable: Optional<boolean>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | 是 |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 **返回值：**
 
@@ -108,8 +76,6 @@ childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -118,7 +84,7 @@ childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| size | Optional & lt;ChildrenMainSize & gt; | 是 |
+| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | 是 |
 
 **返回值：**
 
@@ -136,8 +102,6 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribu
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -146,7 +110,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribu
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | 是 |
+| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
 
 **返回值：**
 
@@ -164,8 +128,6 @@ enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -174,7 +136,7 @@ enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | 是 |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 **返回值：**
 
@@ -192,8 +154,6 @@ fadingEdge(enable: Optional<boolean>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -202,7 +162,7 @@ fadingEdge(enable: Optional<boolean>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | 是 |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 **返回值：**
 
@@ -220,8 +180,6 @@ flingSpeedLimit(speed: Optional<number>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -230,7 +188,7 @@ flingSpeedLimit(speed: Optional<number>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| speed | Optional & lt;number & gt; | 是 |
+| speed | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 **返回值：**
 
@@ -248,8 +206,6 @@ friction(friction: Optional<number>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -258,7 +214,7 @@ friction(friction: Optional<number>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [friction](#friction) | Optional & lt;number & gt; | 是 |
+| [friction](#friction) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 **返回值：**
 
@@ -276,8 +232,6 @@ onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -286,7 +240,7 @@ onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional & lt;OnScrollCallback & gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -304,8 +258,6 @@ onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -314,7 +266,7 @@ onReachEnd(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional & lt;VoidCallback & gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -332,8 +284,6 @@ onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -342,7 +292,7 @@ onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional & lt;VoidCallback & gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -360,8 +310,6 @@ onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -370,7 +318,7 @@ onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional&lt;[ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md)&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -384,11 +332,9 @@ onScrollIndex(handler: Optional<ArcScrollIndexHandler>): ArcListAttribute
 onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-列表滑动开始时触发。手指拖动列表或列表的滚动条触发的滑动开始时，会触发该事件。使用Scroller滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
+列表滑动开始时触发。手指拖动列表或列表的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](../arkts-components/arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -398,7 +344,7 @@ onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional & lt;VoidCallback & gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -412,11 +358,9 @@ onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute
 onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-列表滑动停止时触发。手指拖动列表或列表的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用Scroller滑动控制器触发的带动画的滑动，动画停止会触发该事件。
+列表滑动停止时触发。手指拖动列表或列表的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用[Scroller](../arkts-components/arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -426,7 +370,7 @@ onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional & lt;VoidCallback & gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -444,8 +388,6 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -454,7 +396,7 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional & lt;OnWillScrollCallback & gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -472,8 +414,6 @@ scrollBar(status: Optional<BarState>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -482,7 +422,7 @@ scrollBar(status: Optional<BarState>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| status | Optional & lt;BarState & gt; | 是 |
+| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | 是 |
 
 **返回值：**
 
@@ -500,8 +440,6 @@ scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -510,7 +448,7 @@ scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | Optional&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | 是 |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
 
 **返回值：**
 
@@ -528,8 +466,6 @@ scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -538,35 +474,7 @@ scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| width | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
-
-## setArcListOptions
-
-```TypeScript
-default setArcListOptions(options?: ArkListOptions): this
-```
-
-设置ArcList选项。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | 否 |
+| width | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 |
 
 **返回值：**
 
@@ -584,8 +492,6 @@ space(space: Optional<LengthMetrics>): ArcListAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -594,7 +500,7 @@ space(space: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [space](#space) | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 是 |
+| [space](#space) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 |
 
 **返回值：**
 

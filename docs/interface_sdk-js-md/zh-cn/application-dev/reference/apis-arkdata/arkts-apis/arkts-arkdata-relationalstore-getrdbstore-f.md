@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## getRdbStore
@@ -16,8 +16,6 @@ function getRdbStore(context: Context, config: StoreConfig, callback: AsyncCallb
 | 当前打开数据库时配置的加密类型 | 本设备上创建该数据库时的加密类型 | 结果 | | ------- | -------------------------------- | ---- | | 非加密 | 加密 | 使用加密配置（encrypt=true）打开数据库。 | | 加密 | 非加密 | 使用非加密配置（encrypt=false）打开数据库。 |getRdbStore支持多线程并发操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -49,112 +47,6 @@ function getRdbStore(context: Context, config: StoreConfig, callback: AsyncCallb
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 | [14800020](../errorcode-data-rdb.md#14800020-密钥损坏或丢失) |
 
-**示例**
-
-FA模型示例：
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-let context = featureAbility.getContext();
-
-const STORE_CONFIG: relationalStore.StoreConfig = {
-  name: "RdbTest.db",
-  securityLevel: relationalStore.SecurityLevel.S3
-};
-
-relationalStore.getRdbStore(context, STORE_CONFIG, (err, rdbStore) => {
-  if (err) {
-    console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info('Get RdbStore successfully.');
-  store = rdbStore;
-  // 成功获取到 rdbStore 后执行后续操作
-});
-```
-
-Stage模型示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-
-    relationalStore.getRdbStore(this.context, STORE_CONFIG, (err, rdbStore) => {
-      if (err) {
-        console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-        return;
-      }
-      console.info('Get RdbStore successfully.');
-      store = rdbStore;
-      // 成功获取到 rdbStore 后执行后续操作
-    });
-  }
-}
-```
-
-FA模型示例：
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-let context = featureAbility.getContext();
-
-const STORE_CONFIG: relationalStore.StoreConfig = {
-  name: "RdbTest.db",
-  securityLevel: relationalStore.SecurityLevel.S3
-};
-
-relationalStore.getRdbStore(context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-  store = rdbStore;
-  console.info('Get RdbStore successfully.');
-}).catch((err: Error) => {
-  let businessError = err as BusinessError;
-  console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
-});
-```
-
-Stage模型示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-
-    relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-      store = rdbStore;
-      console.info('Get RdbStore successfully.');
-    }).catch((err: Error) => {
-      let businessError = err as BusinessError;
-      console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
-    });
-  }
-}
-```
-
 
 ## getRdbStore
 
@@ -166,8 +58,6 @@ function getRdbStore(context: Context, config: StoreConfig): Promise<RdbStore>
 | 当前打开数据库时配置的加密类型 | 本设备上创建该数据库时的加密类型 | 结果 | | ------- | -------------------------------- | ---- | | 非加密 | 加密 | 使用加密配置（encrypt=true）打开数据库。 | | 加密 | 非加密 | 使用非加密配置（encrypt=false）打开数据库。 |getRdbStore支持多线程并发操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -203,7 +93,3 @@ function getRdbStore(context: Context, config: StoreConfig): Promise<RdbStore>
 | [14800020](../errorcode-data-rdb.md#14800020-密钥损坏或丢失) |
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-
-**示例**
-
-参见 [getRdbStore](#getrdbstore)

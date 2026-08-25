@@ -8,8 +8,6 @@ type EventInfo = AuthResultInfo | TipInfo
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **替代接口：** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## enableAbility
@@ -15,8 +15,6 @@ function enableAbility(name: string, capability: Array<accessibility.Capability>
 启用辅助扩展，需与[config.disableAbility](arkts-accessibility-config-disableability-f-sys.md)配对使用。使用Promise异步回调。与[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)相比，本接口仅启用辅助扩展，不监听辅助扩展的连接状态变化；若需要监听辅助扩展断开 连接事件，请使用[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -47,58 +45,6 @@ function enableAbility(name: string, capability: Array<accessibility.Capability>
 | [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) |
 | [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) |
 
-**示例**
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability).then(() => {
-  console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`); 
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability, (err: BusinessError | null) => {
-  if (err?.code) {
-    console.error(`failed to enable ability, Code is ${err?.code}, message is ${err?.message}`);
-    return;
-  }
-  console.info(`Succeeded in enable ability, name is ${name}, capability is ${capability}`); 
-});
-```
-
 
 ## enableAbility
 
@@ -113,8 +59,6 @@ function enableAbility(
 启用辅助扩展，需与[config.disableAbility](arkts-accessibility-config-disableability-f-sys.md)配对使用。使用callback异步回调。与[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)相比，本接口仅启用辅助扩展，不监听辅助扩展的连接状态变化；若需要监听辅助扩展断开 连接事件，请使用[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -139,7 +83,3 @@ function enableAbility(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) |
 | [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) |
-
-**示例**
-
-参见 [enableAbility](#enableability)

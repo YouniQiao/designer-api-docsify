@@ -4,8 +4,6 @@ Enumerates the layout directions of the icon and text on a security component.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HORIZONTAL
@@ -17,8 +15,6 @@ HORIZONTAL = 0
 The icon and text on the security component are arranged horizontally.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ VERTICAL = 1
 The icon and text on the security component are arranged vertically.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

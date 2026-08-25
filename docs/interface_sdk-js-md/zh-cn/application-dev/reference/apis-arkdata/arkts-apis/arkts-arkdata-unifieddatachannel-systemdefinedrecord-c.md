@@ -6,20 +6,18 @@ SystemDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedre
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## details
 
 ```TypeScript
-details?: Record<string, int | long | double | string | Uint8Array>
+details?: Record<string, number | number | number | string | Uint8Array>
 ```
 
 是一个字典类型对象，key是string类型，value可以写入number（数值类型）、string（字符串类型）、Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
@@ -28,38 +26,8 @@ details?: Record<string, int | long | double | string | Uint8Array>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let sdr = new unifiedDataChannel.SystemDefinedRecord();
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-sdr.details = {
-  title: 'recordTitle',
-  version: 1,
-  content: u8Array
-};
-let unifiedData = new unifiedDataChannel.UnifiedData(sdr);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let sdr = new unifiedDataChannel.SystemDefinedRecord();
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-sdr.details = {
-  "title": 'recordTitle',
-  "version": 1,
-  "content": u8Array
-};
-let unifiedData = new unifiedDataChannel.UnifiedData(sdr);
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## restrictBluetooth
@@ -15,8 +15,6 @@ function restrictBluetooth(): Promise<void>
 Restrict Bluetooth BR/EDR ability on a device.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -39,16 +37,3 @@ Restrict Bluetooth BR/EDR ability on a device.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900001 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    access.restrictBluetooth().then(() => {
-        console.info("restrictBluetooth");
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

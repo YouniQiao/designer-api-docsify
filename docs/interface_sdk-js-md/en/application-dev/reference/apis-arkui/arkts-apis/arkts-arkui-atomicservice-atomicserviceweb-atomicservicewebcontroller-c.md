@@ -4,14 +4,12 @@ Implements an **AtomicServiceWebController** object for controlling the behavior
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorReceiveEvent, OnPageBeginEvent, OnPageEndEvent, AtomicServiceWebController, OnLoadInterceptEvent, OnProgressChangeEvent, OnLoadInterceptCallback, WebHeader } from '@kit.ArkUI';
+import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorReceiveEvent, OnPageBeginEvent, OnPageEndEvent, AtomicServiceWebController, OnLoadInterceptEvent, OnProgressChangeEvent, OnLoadInterceptCallback, WebHeader } from 'kits/@kit.ArkUI';
 ```
 
 ## accessBackward
@@ -23,8 +21,6 @@ accessBackward(): boolean
 Checks whether going to the previous page can be performed on this page.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,8 +48,6 @@ Checks whether going to the next page can be performed on this page.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -79,8 +73,6 @@ accessStep(step: number): boolean
 Checks whether this page can navigate forward or backward by the specified number of steps.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -115,8 +107,6 @@ Moves to the previous page based on the history stack. This API is generally use
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -137,8 +127,6 @@ Moves to the next page based on the history stack. This API is generally used to
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -158,8 +146,6 @@ getCustomUserAgent(): string
 Obtains a custom user agent.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -187,8 +173,6 @@ Obtains the default user agent of this web page.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -214,8 +198,6 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 Loads a specified URL.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -247,8 +229,6 @@ Refreshes the web page.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -273,8 +253,6 @@ Sets a custom user agent, which will override the default user agent.Set the use
 > agent.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

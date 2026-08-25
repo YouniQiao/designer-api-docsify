@@ -4,8 +4,6 @@ Enumerates the widget parameters.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FormParam](arkts-form-forminfo-formparam-e.md)
@@ -21,8 +19,6 @@ DIMENSION_KEY = 'ohos.extra.param.key.form_dimension'
 Widget dimension.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Widget name.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [NAME_KEY](arkts-form-forminfo-formparam-e.md#name_key)
@@ -57,8 +51,6 @@ MODULE_NAME_KEY = 'ohos.extra.param.key.module_name'
 Name of the module to which the widget belongs.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ Widget width.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WIDTH_KEY](arkts-form-forminfo-formparam-e.md#width_key)
@@ -94,8 +84,6 @@ Widget height.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [HEIGHT_KEY](arkts-form-forminfo-formparam-e.md#height_key)
@@ -111,8 +99,6 @@ TEMPORARY_KEY = 'ohos.extra.param.key.form_temporary'
 Temporary widget.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

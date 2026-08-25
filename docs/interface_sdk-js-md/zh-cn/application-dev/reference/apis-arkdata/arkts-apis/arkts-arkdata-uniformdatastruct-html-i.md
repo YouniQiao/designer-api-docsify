@@ -4,14 +4,12 @@ HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## details
@@ -25,8 +23,6 @@ details?: Record<string, string>
 **类型：** Record&lt;string, string&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ HTML格式的内容文本，支持标准HTML标签。可以是完整的HTML文�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -61,8 +55,6 @@ plainContent?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,8 +72,6 @@ readonly uniformDataType: 'general.html'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -89,40 +79,15 @@ readonly uniformDataType: 'general.html'
 ## uriAuthorizationPolicies
 
 ```TypeScript
-uriAuthorizationPolicies?: Array<int>
+uriAuthorizationPolicies?: Array<number>
 ```
 
 用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见 [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**示例**
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-
-let htmlObjDetails: Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2'
-};
-let htmlObj: uniformDataStruct.HTML = {
-  uniformDataType: 'general.html',
-  htmlContent: '<div><p>标题</p></div>',
-  plainContent: 'this is plainContent',
-  details: htmlObjDetails,
-  // 从API 26.0.0版本开始，支持uri授权策略
-  uriAuthorizationPolicies: [
-    unifiedDataChannel.UriPermission.WRITE
-  ]
-};
-console.info('htmlObj.uniformDataType: ' + htmlObj.uniformDataType);
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HTML, htmlObj);
-```

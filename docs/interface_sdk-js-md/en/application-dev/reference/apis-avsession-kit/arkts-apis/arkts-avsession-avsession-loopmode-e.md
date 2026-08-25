@@ -4,8 +4,6 @@ Loop Play Mode Definition
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## LOOP_MODE_SEQUENCE
@@ -17,8 +15,6 @@ LOOP_MODE_SEQUENCE = 0
 The default mode is sequential playback
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Single loop mode
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -49,8 +43,6 @@ LOOP_MODE_LIST = 2
 List loop mode
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ Shuffle playback mode
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -81,8 +71,6 @@ LOOP_MODE_CUSTOM = 4
 Custom playback mode supported by application
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

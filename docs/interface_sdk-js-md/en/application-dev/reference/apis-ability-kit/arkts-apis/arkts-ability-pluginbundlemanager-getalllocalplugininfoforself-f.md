@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pluginBundleManager } from '@kit.AbilityKit';
+import { pluginBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllLocalPluginInfoForSelf
@@ -15,8 +15,6 @@ function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>
 Obtains information about all local plugins installed on the current application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN
 

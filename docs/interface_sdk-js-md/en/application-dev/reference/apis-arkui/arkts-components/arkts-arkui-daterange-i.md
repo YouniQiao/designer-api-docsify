@@ -4,8 +4,6 @@ Defines a range of dates.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Defines the end date of the date range.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -44,8 +40,6 @@ Defines the start date of the date range.
 **Type:** Date
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

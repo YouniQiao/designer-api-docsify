@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addApn
@@ -15,8 +15,6 @@ function addApn(admin: Want, apnInfo: Record<string, string>): void
 Adds an access point name (APN).
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APN
 
@@ -38,29 +36,3 @@ Adds an access point name (APN).
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { networkManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility',
-};
-let apnInfo: Record<string, string> = {
-  // Replace with actual values.
-  "apnName": "CTNET",
-  "apn": "CTNET",
-  "mnc": "11",
-  "mcc": "460",
-};
-try {
-  networkManager.addApn(wantTemp, apnInfo);
-  console.info(`Succeeded in adding apn.`);
-} catch (err) {
-  console.error(`Failed to add apn. Code: ${err.code}, message: ${err.message}`);
-}
-```

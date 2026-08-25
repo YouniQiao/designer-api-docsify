@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Sets whether to enable cyclic scrolling.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -37,7 +33,7 @@ Sets whether to enable cyclic scrolling.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isLoop | Optional & lt;boolean & gt; | Yes |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## digitalCrownSensitivity
 
@@ -49,8 +45,6 @@ Sets the sensitivity to the digital crown rotation.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -61,7 +55,7 @@ Sets the sensitivity to the digital crown rotation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | Yes |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
 
 ## disappearTextStyle
 
@@ -72,8 +66,6 @@ disappearTextStyle(value: PickerTextStyle)
 Sets the text style for edge items (the second item above or below the selected item).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +89,6 @@ Sets the text style for edge items (the second item above or below the selected 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -109,7 +99,7 @@ Sets the text style for edge items (the second item above or below the selected 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
 
 ## enableHapticFeedback
 
@@ -121,8 +111,6 @@ Sets whether to enable haptic feedback.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -133,7 +121,7 @@ Sets whether to enable haptic feedback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## lunar
 
@@ -144,8 +132,6 @@ lunar(value: boolean)
 Sets whether to display dates in lunar calendar format.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -167,8 +153,6 @@ Sets whether to display dates in lunar calendar format. Compared to [lunar](#lun
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -179,7 +163,7 @@ Sets whether to display dates in lunar calendar format. Compared to [lunar](#lun
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [isLunar](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-event-i.md) | Optional & lt;boolean & gt; | Yes |
+| [isLunar](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-event-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## onChange
 
@@ -190,8 +174,6 @@ onChange(callback: (value: DatePickerResult) => void)
 Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.This API is supported since API version 8 and deprecated since API version 10. You are advised to use [onDateChange](#ondatechange) instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -214,8 +196,6 @@ onDateChange(callback: Callback<Date>)
 Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,8 +222,6 @@ Triggered when the date picker snaps to the selected item. This event cannot be 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -254,7 +232,7 @@ Triggered when the date picker snaps to the selected item. This event cannot be 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional & lt;Callback & lt;Date & gt; & gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | Yes |
 
 ## selectedTextStyle
 
@@ -265,8 +243,6 @@ selectedTextStyle(value: PickerTextStyle)
 Sets the text style for the selected item.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,8 +266,6 @@ Sets the text style for the selected item. Compared to [selectedTextStyle&lt;sup
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -302,7 +276,7 @@ Sets the text style for the selected item. Compared to [selectedTextStyle&lt;sup
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
 
 ## textStyle
 
@@ -313,8 +287,6 @@ textStyle(value: PickerTextStyle)
 Sets the text style for candidate items (the first item immediately above or below the selected item).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,8 +310,6 @@ Sets the text style for candidate items (the first item immediately above or bel
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -350,4 +320,4 @@ Sets the text style for candidate items (the first item immediately above or bel
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |

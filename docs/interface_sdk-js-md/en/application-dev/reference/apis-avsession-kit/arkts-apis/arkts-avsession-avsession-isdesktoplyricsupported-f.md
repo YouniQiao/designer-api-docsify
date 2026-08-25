@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## isDesktopLyricSupported
@@ -15,8 +15,6 @@ function isDesktopLyricSupported(): Promise<boolean>
 Whether desktop lyric feature is supported.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

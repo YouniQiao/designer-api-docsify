@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ disable?: ResourceColor | undefined
 
 禁用时下划线颜色。不填写、undefined、null、无效值时恢复默认，默认为主题配置的下划线颜色。
 
-**类型：** ResourceColor \| undefined
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,11 +37,9 @@ error?: ResourceColor | undefined
 
 错误时下划线颜色。不填写、undefined、null、无效值时恢复默认，默认为主题配置的下划线颜色。此选项会修改showCounter属性中达到最大字符数时的颜色。
 
-**类型：** ResourceColor \| undefined
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,11 +55,9 @@ normal?: ResourceColor | undefined
 
 非特殊状态时下划线颜色。不填写、undefined、null、无效值时恢复默认，默认为主题配置的下划线颜色。
 
-**类型：** ResourceColor \| undefined
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,11 +73,9 @@ typing?: ResourceColor | undefined
 
 键入时下划线颜色。不填写、undefined、null、无效值时恢复默认，默认为主题配置的下划线颜色。
 
-**类型：** ResourceColor \| undefined
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

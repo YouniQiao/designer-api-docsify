@@ -4,14 +4,12 @@ Enumerates SIM card types and states.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## reason
@@ -25,8 +23,6 @@ SIM card lock type.
 **Type:** [LockReason](arkts-telephony-observer-lockreason-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -42,8 +38,6 @@ SIM card state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## type
@@ -57,7 +51,5 @@ SIM card type.
 **Type:** CardType
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry

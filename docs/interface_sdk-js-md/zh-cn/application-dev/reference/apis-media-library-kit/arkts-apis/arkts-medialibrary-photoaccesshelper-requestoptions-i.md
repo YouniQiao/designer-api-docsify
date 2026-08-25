@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## compatibleMode
@@ -25,8 +23,6 @@ compatibleMode?: CompatibleMode
 **类型：** [CompatibleMode](arkts-medialibrary-photoaccesshelper-compatiblemode-e.md)
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -42,8 +38,6 @@ deliveryMode: DeliveryMode
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## mediaAssetProgressHandler
@@ -57,7 +51,5 @@ mediaAssetProgressHandler?: MediaAssetProgressHandler
 **类型：** [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md)
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -4,8 +4,6 @@ Represents information about the recent file list.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -15,7 +13,7 @@ Represents information about the recent file list.
 ## Modules to Import
 
 ```TypeScript
-import { recent } from '@kit.CoreFileKit';
+import { recent } from 'kits/@kit.CoreFileKit';
 ```
 
 ## ctime
@@ -24,13 +22,11 @@ import { recent } from '@kit.CoreFileKit';
 readonly ctime: number
 ```
 
-Time when the file was created. <br>Unit: second.
+Time when the file was created. Unit: second.
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -52,8 +48,6 @@ File name.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -74,8 +68,6 @@ readonly mode: number
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -90,13 +82,11 @@ readonly mode: number
 readonly mtime: number
 ```
 
-Time when the file was last modified. <br>Unit: ms.
+Time when the file was last modified. Unit: ms.
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -118,8 +108,6 @@ File size, in bytes.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -140,8 +128,6 @@ File path.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -161,8 +147,6 @@ File URI.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 

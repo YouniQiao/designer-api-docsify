@@ -4,14 +4,12 @@ Declare ToolBarV2Modifier used in ToolBar
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
+import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -23,8 +21,6 @@ backgroundColor(backgroundColor: ColorMetrics): ToolBarV2Modifier
 Sets the backgroundColor of the toolBarV2.
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +50,6 @@ Sets the height of the toolBarV2.
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -66,7 +60,7 @@ Sets the height of the toolBarV2.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [height](#height) | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 是 |
+| [height](#height) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 |
 
 **返回值：**
 
@@ -84,8 +78,6 @@ Sets the left and right padding of the toolbarV2.
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -96,7 +88,7 @@ Sets the left and right padding of the toolbarV2.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [padding](#padding) | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 是 |
+| [padding](#padding) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 |
 
 **返回值：**
 
@@ -113,8 +105,6 @@ stateEffect(stateEffect: boolean): ToolBarV2Modifier
 Sets whether or not to display the press status effect.
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

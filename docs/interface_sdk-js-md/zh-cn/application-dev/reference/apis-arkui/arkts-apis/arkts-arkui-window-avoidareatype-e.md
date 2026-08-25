@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_SYSTEM
@@ -17,8 +15,6 @@ TYPE_SYSTEM = 0
 表示系统默认区域。<!--RP11-->包含状态栏和三键导航栏区域。<!--RP11End-->
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ TYPE_CUTOUT = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -49,8 +43,6 @@ TYPE_SYSTEM_GESTURE = 2
 表示侧边返回手势区域。当前所有设备均无此类型避让区域。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ TYPE_KEYBOARD = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -82,8 +72,6 @@ TYPE_NAVIGATION_INDICATOR = 4
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -97,8 +85,6 @@ TYPE_FLOAT_NAVIGATION = 5
 表示三键导航区域。<!--RP12-->OpenHarmony各设备不支持此能力。<!--RP12End-->
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

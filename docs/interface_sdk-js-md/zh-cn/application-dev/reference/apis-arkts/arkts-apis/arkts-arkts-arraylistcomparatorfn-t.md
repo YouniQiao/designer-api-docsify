@@ -1,14 +1,12 @@
 # ArrayListComparatorFn
 
 ```TypeScript
-export type ArrayListComparatorFn<T> = (firstValue: T, secondValue: T) => double
+export type ArrayListComparatorFn<T> = (firstValue: T, secondValue: T) => number
 ```
 
 ArrayList中sort方法的比较器类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -27,4 +25,4 @@ ArrayList中sort方法的比较器类型。
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |

@@ -4,8 +4,6 @@ Defines the subscription type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md)
@@ -23,8 +21,6 @@ SUBSCRIBE_TYPE_REMOTE = 0
 Subscribe to remote data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

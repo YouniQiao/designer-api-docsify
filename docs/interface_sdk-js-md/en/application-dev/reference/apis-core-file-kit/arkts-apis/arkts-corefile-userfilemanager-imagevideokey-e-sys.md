@@ -4,8 +4,6 @@ Defines the key information about an image or video file.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [PhotoKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md)
@@ -23,8 +21,6 @@ URI = 0
 URI of the file.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -44,8 +40,6 @@ Type of the file.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [PHOTO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#photo_type)
@@ -63,8 +57,6 @@ DISPLAY_NAME = 2
 File name displayed.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -84,8 +76,6 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DATE_ADDED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#date_added)
@@ -103,8 +93,6 @@ DATE_MODIFIED = 4
 Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -124,8 +112,6 @@ Title of the file.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [TITLE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#title)
@@ -143,8 +129,6 @@ DURATION = 6
 Duration, in ms.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -164,8 +148,6 @@ Image width, in pixels.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [WIDTH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#width)
@@ -183,8 +165,6 @@ HEIGHT = 8
 Image height, in pixels.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -204,8 +184,6 @@ Date when the file (photo) was taken. The value is the number of seconds elapsed
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DATE_TAKEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#date_taken)
@@ -223,8 +201,6 @@ ORIENTATION = 10
 Orientation of the image file.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -244,8 +220,6 @@ Whether the file is added to favorites.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#favorite)
@@ -263,8 +237,6 @@ POSITION = 12
 File location type.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -284,8 +256,6 @@ Date when the file was deleted. The value is the number of seconds elapsed since
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DATE_TRASHED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#date_trashed)
@@ -303,8 +273,6 @@ HIDDEN = 14
 Whether the file is hidden.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -324,8 +292,6 @@ User comment information.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [USER_COMMENT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#user_comment)
@@ -343,8 +309,6 @@ CAMERA_SHOT_KEY = 16
 Key for the Ultra Snapshot feature.This parameter is available only for the system camera, and the key value is defined by the system camera.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 

@@ -4,8 +4,6 @@ Enumerates the PiP template types.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## VIDEO_PLAY
@@ -17,8 +15,6 @@ VIDEO_PLAY = 0
 Video playback template. A PiP window will be started during video playback, and the video playback template will be loaded. The template contains the play/pause component by default.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Video call template. A PiP window will be started during a video call, and the v
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -50,8 +44,6 @@ Video meeting template. A PiP window will be started during a video meeting, and
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -65,8 +57,6 @@ VIDEO_LIVE = 3
 Live template. A PiP window will be started during a live, and the live template is loaded.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

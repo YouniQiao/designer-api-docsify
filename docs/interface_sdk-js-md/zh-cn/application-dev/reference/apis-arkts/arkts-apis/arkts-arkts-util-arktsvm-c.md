@@ -4,14 +4,12 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## enableLocalHandleDetection
@@ -24,86 +22,9 @@ static enableLocalHandleDetection(): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-```TypeScript
-// napi_init.cpp C++侧示例代码
-#include "napi/native_api.h"
-#include "uv.h"
-
-static napi_value CreateObject(napi_env env, napi_callback_info info)
-{
-    uv_loop_s* loop = nullptr;
-    napi_status status = napi_get_uv_event_loop(env, &loop);
-    if (status != napi_ok) {
-        napi_throw_error(env, nullptr, "napi_get_uv_event_loop fail");
-        return nullptr;
-    }
-    uv_work_t* work = new uv_work_t;
-    work->data = env;
-    int ret = uv_queue_work(loop, work,
-        [](uv_work_t* work){},
-        [](uv_work_t* work, int status){
-            napi_env env = static_cast<napi_env>(work->data);
-            for (int i = 0; i < 1000; i++) {
-                napi_value obj = nullptr;
-                // 在libuv提供的异步机制中没有加scope会导致内存泄漏
-                napi_create_object(env, &obj);
-            }
-            delete work;
-        }
-    );
-    if (ret != 0) {
-        delete work;
-    }
-    return nullptr;
-}
-```
-
-在CMakeLists.txt中添加以下动态链接库：
-
-```TypeScript
-libuv.so
-```
-
-```TypeScript
-// index.d.ts 接口声明
-export const createObject: () => void;
-```
-
-```TypeScript
-// Index.ets ArkTS侧示例代码
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import testNapi from 'libentry.so';
-import { util } from '@kit.ArkTS';
-
-try {
-  // 若不开启LocalHandle内存泄漏兜底机制，可能导致内存溢出。启用该机制后，系统将自动回收EventHandler和libuv异步任务中创建的napi_value
-  util.ArkTSVM.enableLocalHandleDetection();
-  testNapi.createObject();
-  hilog.info(0x0000, 'testTag', 'Test Node-API createObject success');
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'Test Node-API createObject failed error: %{public}s', error.message);
-}
-```
-
-如果之前内存泄漏的对象被继续使用，使用enableLocalHandleDetection接口后，系统会回收内存泄漏对象。继续使用该对象会导致内存泄漏问题转变为稳定性问题。
-
-```TypeScript
-napi_value global_js_object;
-napi_value dangerous_function(napi_env env, napi_callback_info info) {
-    napi_value js_obj;
-    napi_create_object(env, &js_obj);
-    global_js_object = js_obj; // 直接存储到全局变量，开启LocalHandle内存泄漏兜底机制后被释放
-    return nullptr;
-}
-```
 
 ## getAllVMHeapMemoryInfo
 
@@ -118,8 +39,6 @@ static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -129,23 +48,6 @@ static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 | 类型 |
 | --- |
 | Promise&lt;[HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md)[]&gt; |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-util.ArkTSVM.getAllVMHeapMemoryInfo().then(
-  result => {
-    result.forEach(info => {
-      console.info(info.threadId?.toString());
-      console.info(info.threadName);
-      console.info(info.heapType);
-      console.info(info.heapObjectSize.toString());
-    })
-  }
-);
-```
 
 ## offVMHeapMemoryPressure
 
@@ -157,19 +59,9 @@ static offVMHeapMemoryPressure(): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-util.ArkTSVM.offVMHeapMemoryPressure();
-```
 
 ## onVMHeapMemoryPressure
 
@@ -180,8 +72,6 @@ static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: H
 注册一个回调函数，在 GC（垃圾回收）后堆内存超过临界预警阈值时触发。 必须在主线程上调用，且仅能注册一个回调。NOTE: 无法保证在 OOM（内存溢出）前一定会触发该回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,25 +90,6 @@ static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: H
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let callback = (event: string) => {
-  console.info('Memory pressure event: ' + event);
-};
-
-let threshold: util.HeapMemoryThreshold = {
-  localHeapThreshold: 75,
-  sharedHeapThreshold: 80,
-  processHeapThreshold: 85
-};
-
-let result : boolean = util.ArkTSVM.onVMHeapMemoryPressure(callback, threshold);
-console.info('Registration result: ' + result);
-```
-
 ## setMultithreadingDetectionEnabled
 
 ```TypeScript
@@ -228,8 +99,6 @@ static setMultithreadingDetectionEnabled(enabled: boolean, options?: Multithread
 设置是否开启多线程安全检测。当 **enabled** 设置为 **true** 时开启检测，多线程问题的 cppcrash 文件中将包含多线程相关的 详细信息。当 **enabled** 设置为 **false** 时关闭检测，相应的 cppcrash 文件中将不包含此类详细信息。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -242,29 +111,6 @@ static setMultithreadingDetectionEnabled(enabled: boolean, options?: Multithread
 | enabled | boolean | 是 |
 | options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | 否 |
 
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-// 打开多线程安全检测开关
-util.ArkTSVM.setMultithreadingDetectionEnabled(true);
-// 关闭多线程安全检测开关
-util.ArkTSVM.setMultithreadingDetectionEnabled(false);
-// 设置崩溃行为
-util.ArkTSVM.setMultithreadingDetectionEnabled(true, { abort: false });
-// 调整检测粒度
-util.ArkTSVM.setMultithreadingDetectionEnabled(true, { frequency: 200 });
-// 调整上报间隔
-util.ArkTSVM.setMultithreadingDetectionEnabled(true, { interval: 10 });
-// 同时设置三个参数
-util.ArkTSVM.setMultithreadingDetectionEnabled(true, {
-  abort: false,
-  frequency: 500,
-  interval: 60
-});
-```
-
 ## setTrackGlobalRef
 
 ```TypeScript
@@ -275,8 +121,6 @@ static setTrackGlobalRef(enable: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -286,42 +130,3 @@ static setTrackGlobalRef(enable: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | enable | boolean | 是 |
-
-**示例**
-
-```TypeScript
-// napi_init.cpp C++侧示例代码
-#include "napi/native_api.h"
-
-static napi_value CreateGlobalRef(napi_env env, napi_callback_info info)
-{
-    napi_value js_obj = nullptr;
-    napi_create_object(env, &js_obj);
-    // 创建napi_ref，与全局handle建立关联
-    napi_ref ref = nullptr;
-    napi_create_reference(env, js_obj, 1, &ref);
-    // 开启setTrackGlobalRef后，堆快照中将包含该ref对应的native引用地址信息
-    return nullptr;
-}
-```
-
-```TypeScript
-// Index.d.ts 接口声明
-export const createGlobalRef: () => void;
-```
-
-```TypeScript
-// Index.ets ArkTS侧示例代码
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import testNapi from 'libentry.so';
-import { util } from '@kit.ArkTS';
-
-try {
-  // 开启napi_ref与全局handle的关联追踪，开启后堆快照中将包含native引用地址信息
-  util.ArkTSVM.setTrackGlobalRef(true);
-  testNapi.createGlobalRef();
-  hilog.info(0x0000, 'testTag', 'Test Node-API createGlobalRef success');
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'Test Node-API createGlobalRef failed error: %{public}s', error.message);
-}
-```

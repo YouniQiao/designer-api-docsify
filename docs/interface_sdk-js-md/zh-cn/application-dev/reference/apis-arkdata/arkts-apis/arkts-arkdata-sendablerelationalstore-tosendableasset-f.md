@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableRelationalStore } from '@kit.ArkData';
+import { sendableRelationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## toSendableAsset
@@ -15,8 +15,6 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 将不可跨线程传递的附件数据，转换为可跨线程传递的附件数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -30,7 +28,7 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 
 | 类型 |
 | --- |
-| [Asset](arkts-arkdata-commontype-asset-i.md) |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) |
 
 **错误码：**
 
@@ -38,17 +36,3 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-
-**示例**
-
-```TypeScript
-const asset1: sendableRelationalStore.NonSendableAsset = {
-  name: 'hangman',
-  uri: '//path/example',
-  path: '//path/example',
-  createTime: 'createTime1',
-  modifyTime: 'modifyTime1',
-  size: 'size1'
-};
-const sendableAsset = sendableRelationalStore.toSendableAsset(asset1);
-```

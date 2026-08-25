@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## allowedAccounts
@@ -25,8 +23,6 @@ allowedAccounts?: Array<AppAccountInfo>
 **类型：** Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -42,8 +38,6 @@ allowedOwners?: Array<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## requiredLabels
@@ -57,7 +51,5 @@ requiredLabels?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount

@@ -4,8 +4,6 @@ Enumerates the reference sizes of the available layout area when the preview ima
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SAFE_AREA
@@ -17,8 +15,6 @@ SAFE_AREA = 0
 The reference size of the available layout area is the window size minus the safe margins on all sides.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

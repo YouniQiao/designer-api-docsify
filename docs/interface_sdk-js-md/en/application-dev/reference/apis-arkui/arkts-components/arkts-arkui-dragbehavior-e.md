@@ -4,8 +4,6 @@ Describes the drag behavior. When [DragResult](arkts-arkui-dragresult-e.md) is s
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## COPY
@@ -17,8 +15,6 @@ COPY = 0
 The data is handled as a copy operation.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ MOVE = 1
 The data is handled as a move operation, effectively cutting it from its original location.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

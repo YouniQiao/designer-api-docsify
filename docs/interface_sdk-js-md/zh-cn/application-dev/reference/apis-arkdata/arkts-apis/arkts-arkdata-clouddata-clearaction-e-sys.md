@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ CLEAR_CLOUD_INFO = 0
 清除从云端下载的数据的云标识（即数据来源于云端的标记信息），相关数据作为本地数据保存。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -36,8 +32,6 @@ CLEAR_CLOUD_DATA_AND_INFO = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ CLEAR_CLOUD_NONE = 2
 不执行任何清除操作。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

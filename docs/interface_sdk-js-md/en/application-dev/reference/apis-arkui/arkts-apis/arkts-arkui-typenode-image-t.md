@@ -8,12 +8,10 @@ Represents a FrameNode of the **Image** type. This type of node does not allow c
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ImageInterface, ImageAttribute&gt;
+**Property type:** [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)&lt;ImageInterface, [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md)&gt;

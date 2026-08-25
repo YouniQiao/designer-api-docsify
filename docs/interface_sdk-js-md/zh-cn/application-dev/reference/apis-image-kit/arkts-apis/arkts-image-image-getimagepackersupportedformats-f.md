@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## getImagePackerSupportedFormats
@@ -16,8 +16,6 @@ function getImagePackerSupportedFormats(): string[]
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 **返回值：**
@@ -25,12 +23,3 @@ function getImagePackerSupportedFormats(): string[]
 | 类型 |
 | --- |
 | string[] |
-
-**示例**
-
-```TypeScript
-async function GetImagePackerSupportedFormats() {
-    let formats = image.getImagePackerSupportedFormats();
-    console.info('formats:', formats);
-}
-```

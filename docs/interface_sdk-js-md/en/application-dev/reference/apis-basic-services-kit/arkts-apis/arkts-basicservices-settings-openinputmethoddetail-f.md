@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## openInputMethodDetail
@@ -15,8 +15,6 @@ function openInputMethodDetail(context: Context, bundleName: string, inputMethod
 Open the input method detail page.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,17 +33,3 @@ Open the input method detail page.
 | Error Code ID |
 | --- |
 | [16900010](../errorcode-settings.md#16900010-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Go to the input method details page.
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let bundleName: string = "target inputMethod bundle name";
-let inputMethodId: string = "target inputMethod id";
-settings.openInputMethodDetail(context, bundleName, inputMethodId);
-```

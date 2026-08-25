@@ -4,8 +4,6 @@ Enum for location priority.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## UNSET
@@ -17,8 +15,6 @@ UNSET = 0x200
 Default priority.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ Preferentially ensure the locating accuracy.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -50,8 +44,6 @@ Preferentially ensure low power consumption for locating.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -65,8 +57,6 @@ FIRST_FIX = 0x203
 Preferentially ensure that the first location is time-consuming.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,8 +4,6 @@ Defines a custom transition animation for the **NavDestination** component.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Curve type of the animation.Default value: Curve.EaseInOut](ts-appendix-enums.md
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -44,8 +40,6 @@ Delay of the transition animation.Default value: **0** (in milliseconds)
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ Duration of the transition animation.Default value: **1000** (in milliseconds)
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -85,8 +77,6 @@ Closure function specifying the transition animation. The system generates the c
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -104,8 +94,6 @@ Callback triggered when the transition animation ends.
 **Type:** Callback&lt;void&gt;
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

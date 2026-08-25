@@ -4,14 +4,12 @@ Gzip header information passed to and from zlib routines.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## comment
@@ -25,8 +23,6 @@ Comment.
 **Type:** ArrayBuffer
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Returns **True** after reading the gzip file header.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -62,8 +56,6 @@ Extra field.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -71,16 +63,14 @@ Extra field.
 ## extraLen
 
 ```TypeScript
-extraLen?: int
+extraLen?: number
 ```
 
 Length of the extra field.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +88,6 @@ Returns **True** if the **crc** header exists.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -115,8 +103,6 @@ Returns **True** if the compressed data is considered text.
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -134,8 +120,6 @@ File name.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.Zlib
@@ -143,16 +127,14 @@ File name.
 ## os
 
 ```TypeScript
-os?: int
+os?: number
 ```
 
 Operating system.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -161,16 +143,14 @@ Operating system.
 ## time
 
 ```TypeScript
-time?: long
+time?: number
 ```
 
 Modification time.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -179,16 +159,14 @@ Modification time.
 ## xflags
 
 ```TypeScript
-xflags?: int
+xflags?: number
 ```
 
 Extra flag.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

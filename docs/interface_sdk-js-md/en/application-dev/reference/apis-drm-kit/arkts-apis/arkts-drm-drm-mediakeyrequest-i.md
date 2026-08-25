@@ -4,14 +4,12 @@ Defines a media key request.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'kits/@kit.DrmKit';
 ```
 
 ## data
@@ -25,8 +23,6 @@ Binary data of the media key request.
 **Type:** Uint8Array
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ URL of the license server.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
@@ -61,8 +55,6 @@ Type of the media key request.
 **Type:** [MediaKeyRequestType](arkts-drm-drm-mediakeyrequesttype-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

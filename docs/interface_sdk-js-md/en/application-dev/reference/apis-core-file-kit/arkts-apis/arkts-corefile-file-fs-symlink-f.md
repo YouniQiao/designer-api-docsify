@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## symlink
@@ -20,8 +20,6 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -57,32 +55,6 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/test";
-fs.symlink(srcFile, dstFile).then(() => {
-  console.info("symlink succeed");
-}).catch((err: BusinessError) => {
-  console.error("symlink failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/test";
-fs.symlink(srcFile, dstFile, (err: BusinessError) => {
-  if (err) {
-    console.error("symlink failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("symlink succeed");
-  }
-});
-```
-
 
 ## symlink
 
@@ -96,8 +68,6 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 > Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -127,7 +97,3 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 | 13900030 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [symlink](#symlink)

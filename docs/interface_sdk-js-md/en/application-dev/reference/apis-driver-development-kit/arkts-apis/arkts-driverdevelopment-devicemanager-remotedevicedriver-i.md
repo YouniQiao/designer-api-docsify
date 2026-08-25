@@ -4,29 +4,25 @@ Represents information about a remote device driver.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## deviceId
 
 ```TypeScript
-deviceId: long
+deviceId: number
 ```
 
 ID of the peripheral device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -41,7 +37,5 @@ Remote driver object.
 **Type:** rpc.IRemoteObject
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice

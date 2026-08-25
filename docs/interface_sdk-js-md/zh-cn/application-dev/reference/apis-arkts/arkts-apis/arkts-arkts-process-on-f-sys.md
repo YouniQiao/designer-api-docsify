@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## on
@@ -16,8 +16,6 @@ function on(type: string, listener: EventListener): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
@@ -27,4 +25,4 @@ function on(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 |
+| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | 是 |

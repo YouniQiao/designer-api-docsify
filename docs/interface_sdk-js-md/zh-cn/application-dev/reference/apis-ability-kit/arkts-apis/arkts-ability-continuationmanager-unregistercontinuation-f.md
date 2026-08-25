@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## unregisterContinuation
@@ -15,8 +15,6 @@ function unregisterContinuation(token: number, callback: AsyncCallback<void>): v
 解注册流转管理服务，传入注册时获取的token进行解注册，使用AsyncCallback方式作为异步方法。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 22
 
@@ -44,41 +42,6 @@ function unregisterContinuation(token: number, callback: AsyncCallback<void>): v
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) |
 
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-try {
-  continuationManager.unregisterContinuation(token, (err) => {
-    if (err.code != 0) {
-      console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('unregisterContinuation finished. ');
-  });
-} catch (err) {
-  console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-try {
-  continuationManager.unregisterContinuation(token).then(() => {
-      console.info('unregisterContinuation finished. ');
-    }).catch((err: BusinessError) => {
-      console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## unregisterContinuation
 
@@ -89,8 +52,6 @@ function unregisterContinuation(token: number): Promise<void>
 解注册流转管理服务，传入注册时获取的token进行解注册，使用Promise方式作为异步方法。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 22
 
@@ -122,7 +83,3 @@ function unregisterContinuation(token: number): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) |
-
-**示例**
-
-参见 [unregisterContinuation](#unregistercontinuation)

@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## dlpFileAccess
@@ -26,8 +24,6 @@ dlpFileAccess: DLPFileAccess
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## flags
@@ -41,7 +37,5 @@ flags: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

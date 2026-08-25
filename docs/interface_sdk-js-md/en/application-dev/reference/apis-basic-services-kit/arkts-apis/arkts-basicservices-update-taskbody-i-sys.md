@@ -4,8 +4,6 @@ Represents task data.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents task data.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## errorMessages
@@ -28,8 +26,6 @@ Error message.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Error message.
 ## installMode
 
 ```TypeScript
-installMode: int
+installMode: number
 ```
 
 Install mode. The value range is [0, 2]. The value **0** indicates the regular upgrade, which is applicable to scenarios where users proactively trigger the upgrade. **1** indicates the upgrade at night, which is applicable to scenarios where automatic upgrade is performed at night. **2** indicates the automatic upgrade, which is applicable to scenarios where the system automatically detects and performs the upgrade. Select a value based on the upgrade policy and user experience requirements. An exception is thrown if the value is out of range.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -55,16 +49,14 @@ Install mode. The value range is [0, 2]. The value **0** indicates the regular u
 ## progress
 
 ```TypeScript
-progress: int
+progress: number
 ```
 
 Progress, in percentage. The value range is [0, 100]. If the value is out of the range, an exception is thrown.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -82,8 +74,6 @@ Upgrade status, which indicates the current execution phase of the upgrade task.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -91,16 +81,14 @@ Upgrade status, which indicates the current execution phase of the upgrade task.
 ## subStatus
 
 ```TypeScript
-subStatus: int
+subStatus: number
 ```
 
 Sub-status. For details about the value range, see [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -118,8 +106,6 @@ Version components.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -135,8 +121,6 @@ Version digest information.
 **Type:** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

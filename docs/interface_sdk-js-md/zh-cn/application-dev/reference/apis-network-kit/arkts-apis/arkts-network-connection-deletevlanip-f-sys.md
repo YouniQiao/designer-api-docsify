@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## deleteVlanIp
@@ -19,8 +19,6 @@ function deleteVlanIp(ifName: string, vlanId: number, address: LinkAddress): Pro
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -35,7 +33,7 @@ function deleteVlanIp(ifName: string, vlanId: number, address: LinkAddress): Pro
 | --- | --- | --- |
 | ifName | string | 是 |
 | vlanId | number | 是 |
-| address | [LinkAddress](arkts-network-vpn-linkaddress-t.md) | 是 |
+| address | [LinkAddress](arkts-network-vpnextension-linkaddress-t.md) | 是 |
 
 **返回值：**
 
@@ -53,26 +51,3 @@ function deleteVlanIp(ifName: string, vlanId: number, address: LinkAddress): Pro
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [2100400](../errorcode-net-connection.md#2100400-传入网卡名不正确非以太网) |
 | [2100401](../errorcode-net-connection.md#2100401-未找到vlan上配置的ip地址) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let ifName = "eth0";
-let vlanId = 1;
-let netAddress: connection.NetAddress = {
-  address: '192.168.1.1',
-  family: 1,
-  port: 8080
-}
-let address: connection.LinkAddress = {
-  address: netAddress,
-  prefixLength: 24
-}
-connection.deleteVlanIp(ifName, vlanId, address).then(() => {
-  console.info(`Delete vlan ip success`);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to delete vlan ip. Code:${error.code}, message:${error.message}`);
-});
-```

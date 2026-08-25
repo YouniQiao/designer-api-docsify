@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## copyDirSync
@@ -17,8 +17,6 @@ declare function copyDirSync(src: string, dest: string, mode?: number): void
 Copies the source directory to the destination path. This API returns the result synchronously.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -53,19 +51,3 @@ Copies the source directory to the destination path. This API returns the result
 | 13900038 |
 | 13900042 |
 | 13900044 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Copy srcPath to destPath.
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-try {
-  fs.copyDirSync(srcPath, destPath, 0);
-  console.info("copy directory succeed");
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error("copy directory failed with error message: " + err.message + ", error code: " + err.code);
-}
-```

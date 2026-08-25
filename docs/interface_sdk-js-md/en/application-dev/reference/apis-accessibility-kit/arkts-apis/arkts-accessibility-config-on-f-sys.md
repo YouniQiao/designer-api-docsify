@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## on('enabledAccessibilityExtensionListChange')
@@ -15,8 +15,6 @@ function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<
 Adds a listener for changes in the list of enabled accessibility extensions. This API uses an asynchronous callback to return the result.This API must be used together with config.off('enabledAccessibilityExtensionListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -39,16 +37,6 @@ Adds a listener for changes in the list of enabled accessibility extensions. Thi
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-config.highContrastText.on((data: boolean) => {
-  console.info(`subscribe highContrastText success, result: ${JSON.stringify(data)}`);
-});
-```
-
 
 ## on('installedAccessibilityListChange')
 
@@ -59,8 +47,6 @@ function on(type: 'installedAccessibilityListChange', callback: Callback<void>):
 Adds a listener for changes in the list of installed accessibility extensions. This API uses an asynchronous callback to return the result.This API must be used together with config.off('installedAccessibilityListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -82,7 +68,3 @@ Adds a listener for changes in the list of installed accessibility extensions. T
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See on

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getActiveNotifications
@@ -15,8 +15,6 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 Obtains the active notifications of this application. This API uses an asynchronous callback to return the result.This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -39,31 +37,6 @@ setBadgeNumber sets the notification
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getActiveNotificationsCallback = (err: BusinessError, data: Array<notificationManager.NotificationRequest>): void => {
-  if (err) {
-    console.error(`Failed to get active notifications. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
-  }
-}
-notificationManager.getActiveNotifications(getActiveNotificationsCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-  console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get active notifications. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getActiveNotifications
 
@@ -74,8 +47,6 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 Obtains the active notifications of this application. This API uses a promise to return the result.This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -96,7 +67,3 @@ setBadgeNumber sets the notification
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-See [getActiveNotifications](#getactivenotifications)

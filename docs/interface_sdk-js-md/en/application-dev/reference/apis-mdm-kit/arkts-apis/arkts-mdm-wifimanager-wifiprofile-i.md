@@ -4,14 +4,12 @@ Represents the Wi-Fi configuration information.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## bssid
@@ -27,8 +25,6 @@ MAC address of the Wi-Fi hotspot, with a length of 6 bytes. For example, **00:11
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ ID of the user who creates the network. The default value is **-1**.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -63,8 +57,6 @@ Disabling reason. The default value is **0**.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +74,6 @@ Extensible Authentication Protocol (EAP) configuration. This field is mandatory 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -99,8 +89,6 @@ IP address type. The default value is **DHCP**.
 **Type:** IpType
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,8 +106,6 @@ Whether the network is hidden. The value **true** indicates yes, and the value *
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -135,8 +121,6 @@ Allocated network ID. The default value is **-1**.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,8 +138,6 @@ Key of the hotspot, which is used for Wi-Fi connection authentication. The maxim
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -171,8 +153,6 @@ MAC address. This field is mandatory when **randomMacType** is set to device MAC
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,8 +170,6 @@ Random MAC. The value **0** indicates random MAC address, and the value **1** in
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -207,8 +185,6 @@ Security type.
 **Type:** WifiSecurityType
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,8 +202,6 @@ Wi-Fi hotspot name. The maximum length is 32 bytes, and the encoding format is U
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -243,8 +217,6 @@ Static IP address information. This field is mandatory when **ipType** is set to
 **Type:** [IpProfile](arkts-mdm-wifimanager-ipprofile-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createParallelSoundPool
 
 ```TypeScript
-function createParallelSoundPool(maxStreams: int, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>
+function createParallelSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>
 ```
 
-Creates a **SoundPool** instance. This API uses a promise to return the result.If a **SoundPool** instance created using [createSoundPool](arkts-media-media-createsoundpool-f.md) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using **createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
+创建音频池实例。使用Promise异步回调。使用[createSoundPool](arkts-media-media-createsoundpool-f.md)创建的音频池实例，在重复播放相同音频时，会停止之前的播放并重新开始；而使用 createParallelSoundPool创建的实例，在重复播放相同音频时，不会停止之前的音频，而是并行播放。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -26,7 +24,7 @@ Creates a **SoundPool** instance. This API uses a promise to return the result.I
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| maxStreams | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| maxStreams | number | 是 |
 | audioRenderInfo | audio.AudioRendererInfo | 是 |
 
 **返回值：**
@@ -41,27 +39,3 @@ Creates a **SoundPool** instance. This API uses a promise to return the result.I
 | --- |
 | [5400101](../errorcode-media.md#5400101-内存分配失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let soundPool: media.SoundPool;
-let audioRendererInfo: audio.AudioRendererInfo = {
-  usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-  rendererFlags : 0
-}
-
-media.createParallelSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) => {
-  if (soundpool_ != null) {
-    soundPool = soundpool_;
-    console.info('Succeeded in creating SoundPool');
-  } else {
-    console.error('Failed to create SoundPool');
-  }
-}, (error: BusinessError) => {
-  console.error(`soundpool catchCallback, error message:${error.message}`);
-});
-```

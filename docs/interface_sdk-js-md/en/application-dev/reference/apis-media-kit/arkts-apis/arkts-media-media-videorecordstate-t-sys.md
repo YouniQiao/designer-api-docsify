@@ -8,8 +8,6 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.

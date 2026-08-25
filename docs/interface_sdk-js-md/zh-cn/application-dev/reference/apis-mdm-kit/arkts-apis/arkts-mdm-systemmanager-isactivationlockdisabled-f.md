@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isActivationLockDisabled
@@ -15,8 +15,6 @@ function isActivationLockDisabled(admin: Want): Promise<boolean>
 获取设备激活锁禁用状态。适用于需要验证设备激活锁功能状态的场景，帮助企业管理员确认设备的安全配置，特别是在设备转让或回收时需要了解激活锁状态。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -45,23 +43,3 @@ function isActivationLockDisabled(admin: Want): Promise<boolean>
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-systemManager.isActivationLockDisabled(wantTemp).then(result => {
-  console.info(`Succeeded in getting activation lock status: ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set activation lock status. Code: ${err.code}, message: ${err.message}`);
-});
-```

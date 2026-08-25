@@ -4,8 +4,6 @@ Enum for custom content display area.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,8 +17,6 @@ WRAP_CONTENT = 'wrapContent'
 The Panel adapts to the content height.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 12
 

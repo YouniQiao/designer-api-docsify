@@ -4,8 +4,6 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ getText(range?: TextRange): string
 Obtains the text content within a specified range.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

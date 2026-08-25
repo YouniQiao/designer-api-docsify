@@ -8,14 +8,12 @@ Defines parameters of subscription filtering conditions of a [Watcher](arkts-per
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## domain
@@ -29,8 +27,6 @@ Event domain, which can be the system event domain (**hiAppEvent.domain.OS**) or
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,8 +44,6 @@ Event types. If this parameter is not set, events are not filtered by default.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -65,8 +59,6 @@ Names of the events to be subscribed. If this parameter is not set, events are n
 **Type:** string[]
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

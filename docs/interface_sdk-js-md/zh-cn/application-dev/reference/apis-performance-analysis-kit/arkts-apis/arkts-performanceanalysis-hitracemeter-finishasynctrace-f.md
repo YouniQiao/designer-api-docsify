@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## finishAsyncTrace
 
 ```TypeScript
-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void
+function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: number): void
 ```
 
 标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md)对应参数值一致。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -28,43 +26,4 @@ function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int):
 | --- | --- | --- |
 | level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | 是 |
 | name | string | 是 |
-| taskId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-```TypeScript
-const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-hiTraceMeter.finishAsyncTrace(COMMERCIAL, "myTestFunc", 1);
-```
-
-```TypeScript
-const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-// 跟踪并行执行的同名任务
-// 第一个跟踪的任务开始
-hiTraceMeter.startAsyncTrace(COMMERCIAL, "myTestFunc", 1, "categoryTest", "key=value");
-// 业务流程......
-// 第二个跟踪的任务开始，同时第一个跟踪的同名任务还没结束，出现了并行执行，对应接口的taskId需要不同
-hiTraceMeter.startAsyncTrace(COMMERCIAL, "myTestFunc", 2, "categoryTest", "key=value");
-// 业务流程......
-// 第一个跟踪的任务结束
-hiTraceMeter.finishAsyncTrace(COMMERCIAL, "myTestFunc", 1);
-// 业务流程......
-// 第二个跟踪的任务结束
-hiTraceMeter.finishAsyncTrace(COMMERCIAL, "myTestFunc", 2);
-```
-
-```TypeScript
-const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-// 跟踪串行执行的同名任务
-// 第一个跟踪的任务开始
-hiTraceMeter.startAsyncTrace(COMMERCIAL, "myTestFunc", 1, "categoryTest", "key=value");
-// 业务流程......
-// 第一个跟踪的任务结束
-hiTraceMeter.finishAsyncTrace(COMMERCIAL, "myTestFunc", 1);
-// 业务流程......
-// 第二个跟踪的同名任务开始，同名的待跟踪任务串行执行
-hiTraceMeter.startAsyncTrace(COMMERCIAL, "myTestFunc", 1, "categoryTest", "key=value");
-// 业务流程......
-// 第二个跟踪的同名任务结束
-hiTraceMeter.finishAsyncTrace(COMMERCIAL, "myTestFunc", 1);
-```
+| taskId | number | 是 |

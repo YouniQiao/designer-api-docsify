@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## 汇总
@@ -26,12 +24,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md) |
 | [off](arkts-mechanic-mechanicmanager-off-f.md#offattachstatechange) |
 | [off](arkts-mechanic-mechanicmanager-off-f.md#offtrackingstatechange) |
-| [offAttachStateChange](arkts-mechanic-mechanicmanager-offattachstatechange-f.md) |
-| [offTrackingStateChange](arkts-mechanic-mechanicmanager-offtrackingstatechange-f.md) |
 | [on](arkts-mechanic-mechanicmanager-on-f.md#onattachstatechange) |
 | [on](arkts-mechanic-mechanicmanager-on-f.md#ontrackingstatechange) |
-| [onAttachStateChange](arkts-mechanic-mechanicmanager-onattachstatechange-f.md) |
-| [onTrackingStateChange](arkts-mechanic-mechanicmanager-ontrackingstatechange-f.md) |
 | [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md) |
 
 <!--Del-->
@@ -50,10 +44,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md) |
 | [move](arkts-mechanic-mechanicmanager-move-f-sys.md) |
 | [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md) |
-| [off](arkts-mechanic-mechanicmanager-off-f-sys.md#offrotationaxesstatuschange) |
-| [offRotationAxesStatusChange](arkts-mechanic-mechanicmanager-offrotationaxesstatuschange-f-sys.md) |
-| [on](arkts-mechanic-mechanicmanager-on-f-sys.md#onrotationaxesstatuschange) |
-| [onRotationAxesStatusChange](arkts-mechanic-mechanicmanager-onrotationaxesstatuschange-f-sys.md) |
+| off |
+| on |
 | [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md) |
 | [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md) |
 | [rotateToEulerAngles](arkts-mechanic-mechanicmanager-rotatetoeulerangles-f-sys.md) |

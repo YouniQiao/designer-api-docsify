@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## Default
@@ -17,8 +15,6 @@ Default = 0
 优先使用未过期cache加载资源，无效或无cache时从网络获取。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ None = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -50,8 +44,6 @@ Online = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -65,8 +57,6 @@ Only = 3
 仅使用本地cache加载资源。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

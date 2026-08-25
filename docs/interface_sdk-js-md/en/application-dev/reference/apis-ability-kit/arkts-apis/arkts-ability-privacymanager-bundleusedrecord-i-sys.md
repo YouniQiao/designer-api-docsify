@@ -4,8 +4,6 @@ Represents the access records of an application or device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the access records of an application or device.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ Bundle name of the application using the permission. In local scenarios, it can 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -46,8 +42,6 @@ ID of the device where the application using the permission is located. Mainly u
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Name of the device where the application using the permission is located, used o
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -82,8 +74,6 @@ Whether it is an access record in a distributed scenario. false indicates a loca
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -100,8 +90,6 @@ Collection of permission usage records under the current application or device. 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -109,16 +97,14 @@ Collection of permission usage records under the current application or device. 
 ## tokenId
 
 ```TypeScript
-tokenId: int
+tokenId: number
 ```
 
 Application identity identifier for using the permission. This field is invalid in distributed scenarios; the source device must be identified using deviceId and deviceName.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 

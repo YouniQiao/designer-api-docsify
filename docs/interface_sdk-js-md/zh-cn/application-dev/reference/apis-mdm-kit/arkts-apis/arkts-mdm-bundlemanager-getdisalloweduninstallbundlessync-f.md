@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedUninstallBundlesSync
@@ -15,8 +15,6 @@ function getDisallowedUninstallBundlesSync(admin: Want, accountId?: number): Arr
 获取当前/指定用户下包卸载禁止名单。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -46,40 +44,6 @@ function getDisallowedUninstallBundlesSync(admin: Want, accountId?: number): Arr
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: Array<string> = bundleManager.getDisallowedUninstallBundlesSync(wantTemp, 100);
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  // 参数需根据实际情况进行替换
-  let result: Array<string> = bundleManager.getDisallowedUninstallBundlesSync(null, 100);
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getDisallowedUninstallBundlesSync
 
@@ -90,8 +54,6 @@ function getDisallowedUninstallBundlesSync(admin: Want | null, accountId?: numbe
 获取当前/指定用户下包卸载禁止名单。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -120,7 +82,3 @@ function getDisallowedUninstallBundlesSync(admin: Want | null, accountId?: numbe
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getDisallowedUninstallBundlesSync](#getdisalloweduninstallbundlessync)

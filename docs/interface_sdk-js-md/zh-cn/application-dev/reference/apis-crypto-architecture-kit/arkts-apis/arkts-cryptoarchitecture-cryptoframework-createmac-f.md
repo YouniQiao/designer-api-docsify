@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createMac
@@ -12,11 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createMac(algName: string): Mac
 ```
 
-创建消息认证码实例。<br>支持的规格详见[HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+创建消息认证码实例。
+
+支持的规格详见[HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -43,38 +43,6 @@ function createMac(algName: string): Mac
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // Set algName based on the algorithm supported.
-  let mac = cryptoFramework.createMac('SHA256');
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // Set algName based on the algorithm supported.
-  let spec: cryptoFramework.HmacSpec = {
-    algName: 'HMAC',
-    mdName: 'SHA256',
-  };
-  let mac = cryptoFramework.createMac(spec);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`sync failed: errCode: ${error.code}, errMsg: ${error.message}`);
-}
-```
-
 
 ## createMac
 
@@ -82,11 +50,11 @@ try {
 function createMac(macSpec: MacSpec): Mac
 ```
 
-创建消息认证码实例。<br>支持的规格详见[MAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+创建消息认证码实例。
+
+支持的规格详见[MAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -112,7 +80,3 @@ function createMac(macSpec: MacSpec): Mac
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-
-**示例**
-
-参见 [createMac](#createmac)

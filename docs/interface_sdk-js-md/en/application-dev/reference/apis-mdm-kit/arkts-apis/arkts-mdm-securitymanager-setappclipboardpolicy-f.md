@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setAppClipboardPolicy
@@ -15,8 +15,6 @@ function setAppClipboardPolicy(admin: Want, tokenId: number, policy: ClipboardPo
 Sets the device clipboard policy. After the policy is set, applications will be restricted in their clipboard usage according to the configured policy. This API is applicable to enterprise data leakage prevention scenarios, such as restricting clipboard usage for sensitive applications (such as enterprise email and financial systems) to prevent sensitive data from being copied to unauthorized applications, thereby reducing the risk of data leakage. Enterprises can use this API to control application clipboard usage permissions, preventing sensitive data from being leaked to unauthorized applications via the clipboard, and enhancing enterprise data security protection capabilities.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -41,47 +39,6 @@ Sets the device clipboard policy. After the policy is set, applications will be 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let tokenId: number = 586874394;
-try {
-    securityManager.setAppClipboardPolicy(wantTemp, tokenId, securityManager.ClipboardPolicy.IN_APP);
-    console.info(`Succeeded in setting clipboard policy.`);
-} catch(err) {
-    console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-    securityManager.setAppClipboardPolicy(wantTemp, bundleName, accountId, securityManager.ClipboardPolicy.IN_APP);
-    console.info(`Succeeded in setting clipboard policy.`);
-} catch(err) {
-    console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## setAppClipboardPolicy
 
@@ -92,8 +49,6 @@ function setAppClipboardPolicy(admin: Want, bundleName: string, accountId: numbe
 Sets the device clipboard policy of a specified application for a specified user. After the policy is set, the clipboard of the specified application will be restricted in its usage scope according to the configured policy. Enterprises can configure differentiated clipboard usage permissions for different applications across different users, enabling fine-grained data access control and meeting the security management requirements in multi-user, multi-application scenarios.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -117,7 +72,3 @@ Sets the device clipboard policy of a specified application for a specified user
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [setAppClipboardPolicy](#setappclipboardpolicy)

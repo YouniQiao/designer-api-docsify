@@ -4,8 +4,6 @@ Enumerates the types of ExtensionAbility components.<!--RP2--><!--RP2End-->
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## FORM
@@ -17,8 +15,6 @@ FORM = 0
 [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md): provides APIs for widget development.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ WORK_SCHEDULER = 1
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## INPUT_METHOD
@@ -47,8 +41,6 @@ INPUT_METHOD = 2
 [InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md): provides extended capabilities related to input method applications.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -62,8 +54,6 @@ SERVICE = 3
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## ACCESSIBILITY
@@ -75,8 +65,6 @@ ACCESSIBILITY = 4
 AccessibilityExtensionAbility: provides extended capabilities related to accessibility services, supporting access and operation of the foreground UI.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -90,8 +78,6 @@ DATA_SHARE = 5
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## FILE_SHARE
@@ -103,8 +89,6 @@ FILE_SHARE = 6
 FileShareExtensionAbility: provides extended capabilities related to file sharing between applications. This ability is reserved and supported only by system applications.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -118,8 +102,6 @@ STATIC_SUBSCRIBER = 7
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## WALLPAPER
@@ -131,8 +113,6 @@ WALLPAPER = 8
 WallpaperExtensionAbility: provides extended capabilities to implement wallpapers displayed on home screen. This ability is reserved and supported only by system applications.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -146,8 +126,6 @@ BACKUP = 9
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## WINDOW
@@ -159,8 +137,6 @@ WINDOW = 10
 [WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md): provides extended capabilities that allow system applications to pull up and embed UIs of other applications.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -174,8 +150,6 @@ ENTERPRISE_ADMIN = 11
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## THUMBNAIL
@@ -187,8 +161,6 @@ THUMBNAIL = 13
 ThumbnailExtensionAbility: provides extended capabilities for offering thumbnails for files. This ability is reserved and supported only by system applications.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -202,8 +174,6 @@ PreviewExtensionAbility: provides extended capabilities for file preview so that
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## PRINT
@@ -215,8 +185,6 @@ PRINT = 15
 PrintExtensionAbility: provides extended capabilities for printing photos and documents in office scenarios. This ability is supported only by system applications.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -230,8 +198,6 @@ SHARE = 16
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## PUSH
@@ -243,8 +209,6 @@ PUSH = 17
 PushExtensionAbility: provides extended capabilities for pushing scenario-specific messages. This ability is reserved and supported only by system applications.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -258,8 +222,6 @@ DRIVER = 18
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## ACTION
@@ -271,8 +233,6 @@ ACTION = 19
 [ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md): provides custom action service templates based on the UIExtensionAbility.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -286,8 +246,6 @@ AdsServiceExtensionAbility: provides background customized ad services for exter
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## EMBEDDED_UI
@@ -299,8 +257,6 @@ EMBEDDED_UI = 21
 [EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md): provides extended capabilities for the embeddable UI across process.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -314,8 +270,6 @@ InsightIntentUIExtensionAbility: provides extended capabilities that enable appl
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## FENCE
@@ -327,8 +281,6 @@ FENCE = 24
 [FenceExtensionAbility](../../apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability-fenceextensionability-c.md): provides geofence- related capabilities. It inherits from ExtensionAbility.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -342,8 +294,6 @@ CallerInfoQueryExtensionAbility: provides the capability of querying incoming an
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## ASSET_ACCELERATION
@@ -355,8 +305,6 @@ ASSET_ACCELERATION = 26
 AssetAccelerationExtensionAbility: provides extended capabilities of pre-downloading background resources when the device is idle.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -370,8 +318,6 @@ FORM_EDIT = 27
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## DISTRIBUTED
@@ -383,8 +329,6 @@ DISTRIBUTED = 28
 [DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md): provides extended capabilities for distributed services and lifecycle callbacks for creation, destruction, and connection of the DistributedExtensionAbility.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -398,8 +342,6 @@ APP_SERVICE = 29
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## LIVE_FORM
@@ -411,8 +353,6 @@ LIVE_FORM = 30
 [LiveFormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-liveformextensionability-liveformextensionability-c.md): provides extended capabilities for interactive widgets, and provides lifecycle callbacks for creating and destroying interactive widgets.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -428,8 +368,6 @@ SelectionExtensionAbility: provides extended capabilities for text selection pop
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -444,8 +382,6 @@ WEB_NATIVE_MESSAGING = 32
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## FAULT_LOG
@@ -457,8 +393,6 @@ FAULT_LOG = 33
 [FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md): provides extended capabilities for delayed fault notifications.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -472,8 +406,6 @@ NOTIFICATION_SUBSCRIBER = 34
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## CRYPTO
@@ -486,8 +418,6 @@ CRYPTO = 35
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## PARTNER_AGENT
@@ -499,8 +429,6 @@ PARTNER_AGENT = 36
 [PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md): provides the device discovery and device offline notification functions based on Bluetooth.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -516,8 +444,6 @@ AgentExtensionAbility: provides extended capabilities for agents, including life
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -531,8 +457,6 @@ AGENT_UI = 38
 AgentUIExtensionAbility: provides the Agent UI display capability on the access device.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -548,8 +472,6 @@ Indicates extension info with type of the modular object extension.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -563,7 +485,5 @@ UNSPECIFIED = 255
 The ability type is not specified. <!--Del-->It can be used in [queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md) to obtain ExtensionAbility components of all types.<!--DelEnd-->
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## off('netUidPolicyChange')
@@ -15,8 +15,6 @@ function off(type: 'netUidPolicyChange', callback?: Callback<NetUidPolicyInfo>):
 Unsubscribes from **policy** changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -53,8 +51,6 @@ Unsubscribes from **rule** changes. This API uses an asynchronous callback to re
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -89,8 +85,6 @@ function off(type: 'netMeteredIfacesChange', callback?: Callback<Array<string>>)
 Unsubscribes from the changes of the metering interface. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -127,8 +121,6 @@ Unsubscribes from the changes of the metering network policy. This API uses an a
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -163,8 +155,6 @@ function off(type: 'netBackgroundPolicyChange', callback?: Callback<boolean>): v
 Unsubscribes from background network policy changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 

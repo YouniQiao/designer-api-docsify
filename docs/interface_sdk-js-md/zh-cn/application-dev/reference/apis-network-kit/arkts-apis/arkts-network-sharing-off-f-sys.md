@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## off('sharingStateChange')
@@ -15,8 +15,6 @@ function off(type: 'sharingStateChange', callback?: Callback<boolean>): void
 注销网络共享状态变化事件，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -39,16 +37,6 @@ function off(type: 'sharingStateChange', callback?: Callback<boolean>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-
-sharing.off('sharingStateChange', (data: boolean) => {
-  console.info(JSON.stringify(data));
-});
-```
-
 
 ## off('interfaceSharingStateChange')
 
@@ -59,8 +47,6 @@ function off(type: 'interfaceSharingStateChange', callback?: Callback<InterfaceS
 注销网卡网络共享状态变化事件，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -83,16 +69,6 @@ function off(type: 'interfaceSharingStateChange', callback?: Callback<InterfaceS
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-
-sharing.off('interfaceSharingStateChange', (data: object) => {
-  console.info(JSON.stringify(data));
-});
-```
-
 
 ## off('sharingUpstreamChange')
 
@@ -103,8 +79,6 @@ function off(type: 'sharingUpstreamChange', callback?: Callback<NetHandle>): voi
 注销上行网络变化事件，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -126,13 +100,3 @@ function off(type: 'sharingUpstreamChange', callback?: Callback<NetHandle>): voi
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-
-sharing.off('sharingUpstreamChange', (data: object) => {
-  console.info(JSON.stringify(data));
-});
-```

@@ -6,8 +6,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,8 +27,6 @@ strokeRadius?: PX | VP | LPX | Resource
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -45,11 +41,9 @@ strokeWidth?: Length
 
 设置进度条宽度。默认值：4.0vp取值范围：大于0的数值，不支持百分比设置。超出取值范围或设置非法值时按默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ Enumerates USB port roles.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Enumerates USB port roles.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## currentDataRole
 
 ```TypeScript
-currentDataRole: int
+currentDataRole: number
 ```
 
 Current data role.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -37,16 +33,14 @@ Current data role.
 ## currentMode
 
 ```TypeScript
-currentMode: int
+currentMode: number
 ```
 
 Current USB mode.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -55,16 +49,14 @@ Current USB mode.
 ## currentPowerRole
 
 ```TypeScript
-currentPowerRole: int
+currentPowerRole: number
 ```
 
 Current power role.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 

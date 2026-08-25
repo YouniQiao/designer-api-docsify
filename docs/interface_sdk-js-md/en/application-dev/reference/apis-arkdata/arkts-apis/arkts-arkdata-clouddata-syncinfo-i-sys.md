@@ -4,8 +4,6 @@ Represents information about the last device-cloud sync.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents information about the last device-cloud sync.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## code
@@ -27,8 +25,6 @@ Result of the last device-cloud sync.
 **Type:** relationalStore.ProgressCode
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -46,8 +42,6 @@ End time of the last device-cloud sync.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Start time of the last device-cloud sync.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ Status of the last device-cloud sync. The default value is **cloudData.SyncStatu
 **Type:** [SyncStatus](arkts-arkdata-clouddata-syncstatus-e-sys.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 

@@ -4,8 +4,6 @@ Parameters corresponding to mission.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Device ID.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -44,8 +40,6 @@ Whether a version conflict exists. **true** if yes, **false** otherwise.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -57,16 +51,14 @@ Whether a version conflict exists. **true** if yes, **false** otherwise.
 ## tag
 
 ```TypeScript
-tag: int
+tag: number
 ```
 
 Tag of the mission. The value **0** means the default tag.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

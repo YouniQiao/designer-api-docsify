@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -21,8 +19,6 @@ LOW = 0
 低频率。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -40,8 +36,6 @@ MID = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -58,8 +52,6 @@ HIGH = 2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -75,8 +67,6 @@ SUPER_HIGH = 3
 超高频率。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 

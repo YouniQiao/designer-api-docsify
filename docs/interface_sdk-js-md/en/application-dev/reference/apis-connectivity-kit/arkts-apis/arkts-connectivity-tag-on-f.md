@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('readerMode')
@@ -15,8 +15,6 @@ function on(type: 'readerMode', elementName: ElementName, discTech: number[], ca
 Subscribes to the NFC tag read event to implement dispatch of the tag to a foreground application preferentially. The device enters the reader mode and disables card emulation. You can set the supported NFC tag technologies in **discTech**. The [TagInfo](arkts-connectivity-tag-taginfo-i.md) read is returned through a callback. This API must be used with tag.off in pairs. If the NFC reader mode is enabled by **tag.on**, tag.off must be called when the application page exits the foreground or is destroyed. This API uses an asynchronous callback to return the result. This API and tag.on are mutually exclusive.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -57,11 +55,15 @@ function on(
 ```
 
 Subscribes to the NFC tag read event so that the tag can be preferentially dispatched to a foreground application. You can also set the interval for detecting whether a card is present. This API uses an asynchronous callback to return the result.  
-- The device enters the reader mode and disables card emulation. - You can set the supported NFC tag technologies in **discTech** and set the interval for detecting whether a card is present. The callback returns [TagInfo](arkts-connectivity-tag-taginfo-i.md) read. - This API must be used with tag.off in pairs. If the NFC reader mode is enabled by **tag.on**, tag.off must be called when the application page exits the foreground or is destroyed. - This API and tag.on are mutually exclusive.
+- The device enters the reader mode and disables card emulation.  
+- You can set the supported NFC tag technologies in **discTech** and set the interval for detecting whether a card  
+is present. The callback returns [TagInfo](arkts-connectivity-tag-taginfo-i.md) read.  
+- This API must be used with  
+tag.off in pairs. If the NFC reader mode is enabled by **tag.on**, tag.off must be called when the application page exits the foreground or is destroyed.  
+- This API and  
+tag.on are mutually exclusive.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 

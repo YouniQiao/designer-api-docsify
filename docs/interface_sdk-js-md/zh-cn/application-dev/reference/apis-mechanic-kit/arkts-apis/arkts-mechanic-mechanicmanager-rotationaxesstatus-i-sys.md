@@ -4,8 +4,6 @@ Rotation axes status
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ Rotation axes status
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## pitchEnabled
@@ -27,8 +25,6 @@ pitchEnabled: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -46,8 +42,6 @@ Whether the pitch axis is limited.
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ rollEnabled: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -82,8 +74,6 @@ Whether the roll axis is limited.
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -100,8 +90,6 @@ yawEnabled: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -117,8 +105,6 @@ yawLimited?: RotationAxisLimited
 **类型：** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 

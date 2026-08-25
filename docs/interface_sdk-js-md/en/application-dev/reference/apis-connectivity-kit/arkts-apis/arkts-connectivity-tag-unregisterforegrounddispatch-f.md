@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## unregisterForegroundDispatch
@@ -15,8 +15,6 @@ function unregisterForegroundDispatch(elementName: ElementName): void
 Unregisters the listener for the NFC tag read event. If the listener is unregistered, the NFC tag discovered will not be dispatched to foreground applications. The registered callback must be unregistered before the tag reading page exits the foreground or is destroyed.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -38,63 +36,3 @@ Unregisters the listener for the NFC tag read event. If the listener is unregist
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want, bundleManager } from '@kit.AbilityKit';
-
-let discTech : number[] = [tag.NFC_A, tag.NFC_B]; // Specify the technology required for foreground ability.
-let elementName : bundleManager.ElementName;
-function foregroundCb(err : BusinessError, tagInfo : tag.TagInfo) {
-    if (!err) {
-        console.info("foreground callback: tag found tagInfo = ", JSON.stringify(tagInfo));
-    } else {
-        console.error("foreground callback err: " + err.message);
-        return;
-    }
-  // Other operations on taginfo
-}
-
-export default class MainAbility extends UIAbility {
-    OnCreate(want : Want, launchParam : AbilityConstant.LaunchParam) {
-        console.info("OnCreate");
-        elementName = {
-            bundleName: want.bundleName as string,
-            abilityName: want.abilityName as string,
-            moduleName: want.moduleName as string
-        }
-    }
-
-    onForeground() {
-        console.info("onForeground");
-        try {
-            tag.registerForegroundDispatch(elementName, discTech, foregroundCb);
-        } catch (e) {
-            console.error("registerForegroundDispatch error: " + (e as BusinessError).message);
-        }
-    }
-
-    onBackground() {
-        console.info("onBackground");
-        try {
-            tag.unregisterForegroundDispatch(elementName);
-        } catch (e) {
-            console.error("unregisterForegroundDispatch error: " + (e as BusinessError).message);
-        }
-    }
-
-    onWindowStageDestroy() {
-        console.info("onWindowStageDestroy");
-        try {
-            tag.unregisterForegroundDispatch(elementName);
-        } catch (e) {
-            console.error("unregisterForegroundDispatch error: " + (e as BusinessError).message);
-        }
-    }
-
-  // Other functions in the ability lifecycle
-}
-```

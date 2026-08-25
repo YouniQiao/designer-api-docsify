@@ -4,8 +4,6 @@ Element@interface Element
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getInspector
@@ -17,8 +15,6 @@ getInspector(): string
 Obtains attributes of the element.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Model restriction:** This API can be used only in the FA model.
 

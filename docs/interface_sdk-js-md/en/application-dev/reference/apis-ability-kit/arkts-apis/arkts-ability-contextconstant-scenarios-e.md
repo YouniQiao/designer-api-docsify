@@ -4,8 +4,6 @@ Enumerates the scenarios where the [onNewWant](arkts-ability-app-ability-uiabili
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## SCENARIO_MOVE_MISSION_TO_FRONT
@@ -17,8 +15,6 @@ SCENARIO_MOVE_MISSION_TO_FRONT = 0x00000001
 <!--RP1-->A scenario where the system API missionManager.moveMissionToFront is called to move the UIAbility to the foreground.<!--RP1End-->
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ A scenario where the [showAbility](arkts-ability-uiabilitycontext-c.md#showabili
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -54,40 +48,8 @@ A scenario where the [backToCallerAbilityWithResult](arkts-ability-uiabilitycont
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, contextConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    let scenarios: number = contextConstant.Scenarios.SCENARIO_MOVE_MISSION_TO_FRONT |
-      contextConstant.Scenarios.SCENARIO_SHOW_ABILITY |
-      contextConstant.Scenarios.SCENARIO_BACK_TO_CALLER_ABILITY_WITH_RESULT;
-
-    try {
-      this.context.setOnNewWantSkipScenarios(scenarios).then(() => {
-        // Carry out normal service processing.
-        console.info('setOnNewWantSkipScenarios succeed');
-      }).catch((err: BusinessError) => {
-        // Process service logic errors.
-        console.error(`setOnNewWantSkipScenarios failed, code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`setOnNewWantSkipScenarios failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```

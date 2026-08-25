@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createAsyKeyGenerator
@@ -12,11 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 ```
 
-Creates an **AsyKeyGenerator** instance based on the specified algorithm.<br>For details about the supported specifications, see Asymmetric Key Generation and Conversion Specifications.
+Creates an **AsyKeyGenerator** instance based on the specified algorithm.
+
+For details about the supported specifications, see Asymmetric Key Generation and Conversion Specifications.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,11 +43,3 @@ Creates an **AsyKeyGenerator** instance based on the specified algorithm.<br>For
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-```

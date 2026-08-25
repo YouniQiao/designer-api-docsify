@@ -15,8 +15,6 @@ function notifyVisibleForms(formIds: Array<string>, callback: AsyncCallback<void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md)
@@ -34,30 +32,6 @@ function notifyVisibleForms(formIds: Array<string>, callback: AsyncCallback<void
 | formIds | Array & lt;string & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formIds: string[] = ['12400633174999288'];
-formHost.notifyVisibleForms(formIds, (error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost notifyVisibleForms, error: ${JSON.stringify(error)}`);
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formIds: string[] = ['12400633174999288'];
-formHost.notifyVisibleForms(formIds).then(() => {
-  console.info('formHost notifyVisibleForms success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost notifyVisibleForms, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## notifyVisibleForms
 
@@ -68,8 +42,6 @@ function notifyVisibleForms(formIds: Array<string>): Promise<void>
 向卡片框架发送通知以使指定的卡片可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -92,7 +64,3 @@ function notifyVisibleForms(formIds: Array<string>): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [notifyVisibleForms](#notifyvisibleforms)

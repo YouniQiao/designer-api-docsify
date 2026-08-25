@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isSimDisabled
@@ -15,8 +15,6 @@ function isSimDisabled(admin: Want, slotId: number): boolean
 Checks whether the SIM card in a specified slot is disabled. This API is applicable in scenarios where enterprise administrators need to check whether the SIM card disablement policy has taken effect. It helps administrators confirm the policy enforcement status and ensure that call control policies are correctly implemented.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -45,23 +43,3 @@ Checks whether the SIM card in a specified slot is disabled. This API is applica
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let slotId: number = 0;
-  let result: boolean = telephonyManager.isSimDisabled(wantTemp, slotId);
-  console.info(`Succeeded in querying slotId: ${slotId} is disabled or not, result: ${result}`);
-} catch (err) {
-  console.error(`Failed to query sim is disabled or not. Code: ${err.code}, message: ${err.message}`);
-}
-```

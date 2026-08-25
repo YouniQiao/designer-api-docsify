@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## NEED_SYNC
@@ -18,8 +16,6 @@ NEED_SYNC = 0
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## NEED_LOGOUT
@@ -31,7 +27,5 @@ NEED_LOGOUT = 1
 需要进行登出操作。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.Asset

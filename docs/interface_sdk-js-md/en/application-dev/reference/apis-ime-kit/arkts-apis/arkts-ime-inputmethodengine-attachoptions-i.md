@@ -4,14 +4,12 @@ Defines additional options for binding an input method.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## isSimpleKeyboardEnabled
@@ -26,8 +24,6 @@ Whether to enable the simple keyboard. This attribute is set by the edit box app
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## requestKeyboardReason
@@ -41,7 +37,5 @@ Reason for requesting the keyboard. This attribute is set by the edit box applic
 **Type:** RequestKeyboardReason
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

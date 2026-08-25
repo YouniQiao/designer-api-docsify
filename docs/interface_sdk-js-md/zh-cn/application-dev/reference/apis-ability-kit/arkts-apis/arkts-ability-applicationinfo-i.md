@@ -4,23 +4,19 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## accessTokenId
 
 ```TypeScript
-readonly accessTokenId: long
+readonly accessTokenId: number
 ```
 
 应用程序的accessTokenId，应用的身份标识，在 [程序访问控制校验接口](../../../reference/apis-ability-kit/js-apis-abilityAccessCtrl.md#checkaccesstoken9)中使用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,8 +34,6 @@ readonly appDistributionType: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -47,16 +41,14 @@ readonly appDistributionType: string
 ## appIndex
 
 ```TypeScript
-readonly appIndex: int
+readonly appIndex: number
 ```
 
 应用包的分身索引标识，仅在分身应用中生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -71,8 +63,6 @@ readonly appProvisionType: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,8 +80,6 @@ readonly bundleType: bundleManager.BundleType
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -107,8 +95,6 @@ readonly cloudFileSyncEnabled: boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -126,8 +112,6 @@ readonly cloudStructuredDataSyncEnabled?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -143,8 +127,6 @@ readonly codePath: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -162,8 +144,6 @@ readonly dataUnclearable: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -179,8 +159,6 @@ readonly debug: boolean
 **类型：** boolean
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -198,8 +176,6 @@ readonly description: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -207,16 +183,14 @@ readonly description: string
 ## descriptionId
 
 ```TypeScript
-readonly descriptionId: long
+readonly descriptionId: number
 ```
 
 标识应用的描述信息的资源id，是编译构建时根据应用配置的description自动生成的资源id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -234,8 +208,6 @@ readonly descriptionResource: Resource
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -251,8 +223,6 @@ readonly enabled: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -270,8 +240,6 @@ readonly icon: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -279,16 +247,14 @@ readonly icon: string
 ## iconId
 
 ```TypeScript
-readonly iconId: long
+readonly iconId: number
 ```
 
 应用程序图标的资源id，是编译构建时根据应用配置的icon自动生成的资源id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -306,8 +272,6 @@ readonly iconResource: Resource
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -319,13 +283,15 @@ readonly installSource: string
 ```
 
 标识应用程序的安装来源，支持的取值如下：  
-- pre-installed：表示首次开机时已安装的预置应用。 - ota：表示系统升级时新增的预置应用。 - recovery：表示用户卸载后又手动恢复的预置应用。 - bundleName：表示由此包名对应的应用安装。该bundleName代表变量，以实际值为准。 - unknown：表示应用安装来源未知。
+- pre-installed：表示首次开机时已安装的预置应用。  
+- ota：表示系统升级时新增的预置应用。  
+- recovery：表示用户卸载后又手动恢复的预置应用。  
+- bundleName：表示由此包名对应的应用安装。该bundleName代表变量，以实际值为准。  
+- unknown：表示应用安装来源未知。
 
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -343,8 +309,6 @@ readonly label: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -352,16 +316,14 @@ readonly label: string
 ## labelId
 
 ```TypeScript
-readonly labelId: long
+readonly labelId: number
 ```
 
 标识应用名称的资源id，是编译构建时根据应用配置的label自动生成的资源id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -379,8 +341,6 @@ readonly labelResource: Resource
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -397,8 +357,6 @@ readonly metadata: Map<string, Array<Metadata>>
 **类型：** Map&lt;string, Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -418,8 +376,6 @@ readonly metadataArray: Array<ModuleMetadata>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -436,8 +392,6 @@ readonly multiAppMode: MultiAppMode
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## name
@@ -451,8 +405,6 @@ readonly name: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -470,8 +422,6 @@ readonly nativeLibraryPath: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## permissions
@@ -486,8 +436,6 @@ readonly permissions: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -505,8 +453,6 @@ readonly process: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -522,8 +468,6 @@ readonly releaseType: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -541,8 +485,6 @@ readonly removable: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -559,8 +501,6 @@ readonly systemApp: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -568,16 +508,14 @@ readonly systemApp: boolean
 ## uid
 
 ```TypeScript
-readonly uid: int
+readonly uid: number
 ```
 
 应用程序的UID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

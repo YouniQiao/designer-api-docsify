@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## FORCE
@@ -18,8 +16,6 @@ FORCE = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## LAZY
@@ -31,7 +27,5 @@ LAZY = 1
 延迟更新缓存，只有当缓存不存在时才会更新。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

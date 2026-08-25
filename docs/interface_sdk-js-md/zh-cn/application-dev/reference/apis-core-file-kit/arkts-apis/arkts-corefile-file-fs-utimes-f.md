@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## utimes
@@ -17,8 +17,6 @@ declare function utimes(path: string, mtime: number): void
 更改文件的上次修改时间。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -39,13 +37,3 @@ declare function utimes(path: string, mtime: number): void
 | 13900020 |
 | 13900027 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-fileIo.writeSync(file.fd, 'test data');
-fileIo.closeSync(file);
-fileIo.utimes(filePath, new Date().getTime());
-```

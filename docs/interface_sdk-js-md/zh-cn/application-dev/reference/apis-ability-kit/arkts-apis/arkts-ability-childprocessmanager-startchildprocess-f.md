@@ -3,13 +3,13 @@
 ## 导入模块
 
 ```TypeScript
-import { childProcessManager } from '@kit.AbilityKit';
+import { childProcessManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## startChildProcess
 
 ```TypeScript
-function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>
+function startChildProcess(srcEntry: string, startMode: StartMode): Promise<number>
 ```
 
 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用Promise异步回调。
@@ -21,8 +21,6 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>
 **设备行为差异**：该接口在Tablet、PC/2in1中可正常调用，在其他设备类型中返回16000061错误码。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,7 +37,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -50,295 +48,11 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>
 | [16000061](../errorcode-ability.md#16000061-不支持的操作) |
 | [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类:
-// entry/src/main/ets/process/DemoProcess.ets
-import { ChildProcess } from '@kit.AbilityKit';
-
-export default class DemoProcess extends ChildProcess {
-  onStart(): void {
-    console.info('DemoProcess OnStart() called');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// 在entry模块的src/main/ets/process下创建StaticDemoProcess.ets子进程类:
-// entry/src/main/ets/process/StaticDemoProcess.ets
-import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
-
-export default class StaticDemoProcess extends ChildProcess {
-  onStart(args?: ChildProcessArgs): void {
-    console.info('StaticDemoProcess OnStart() called');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 使用childProcessManager.startChildProcess方法启动子进程:
-// entry/src/main/ets/pages/Index.ets
-import { childProcessManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import DemoProcess from '../process/DemoProcess';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button('拉起ArkTS-Dyn类型子进程')
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            try {
-              DemoProcess.toString(); // 这里要调用下DemoProcess类的任意方法，防止没有引用到而被构建工具优化掉
-              childProcessManager.startChildProcess('./ets/process/DemoProcess.ets',
-                childProcessManager.StartMode.SELF_FORK)
-                .then((data) => {
-                  console.info(`startChildProcess success, pid: ${data}`);
-                })
-                .catch((err: BusinessError) => {
-                  console.error(`startChildProcess error, errorCode: ${err.code}`);
-                })
-            } catch (err: BusinessError) {
-              console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
-            }
-          });
-
-        Button('拉起ArkTS-Sta类型子进程')
-        .onClick(() => {
-            try {
-              //拉起ArkTS-Sta类型的子进程示例
-              childProcessManager.startChildProcess('entry/src/main/ets/process/StaticDemoProcess',
-                childProcessManager.StartMode.SELF_FORK)
-                .then((data) => {
-                  console.info(`startChildProcess success, pid: ${data}`);
-                })
-                .catch((err: BusinessError) => {
-                  console.error(`startChildProcess error, errorCode: ${err.code}`);
-                })
-            } catch (err: BusinessError) {
-              console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
-            }
-        })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// 使用childProcessManager.startChildProcess方法启动子进程:
-// entry/src/main/ets/pages/Index.ets
-import { Entry, Text, Column, Component, Button } from '@ohos.arkui.component';
-import { childProcessManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import DemoProcess from '../process/DemoProcess';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('拉起ArkTS-Dyn类型子进程')
-        .onClick(() => {
-          try {
-            childProcessManager.startChildProcess('./ets/process/DemoProcess.ets',
-              childProcessManager.StartMode.SELF_FORK)
-              .then((data) => {
-                console.info(`startChildProcess success, pid: ${data}`);
-              })
-              .catch((err: BusinessError) => {
-                console.error(`startChildProcess error, errorCode: ${err.code}`);
-              })
-          } catch (err: BusinessError) {
-            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
-          }
-        });
-
-      Button('拉起ArkTS-Sta类型子进程')
-      .onClick(() => {
-          try {
-            //拉起ArkTS-Sta类型的子进程示例
-            childProcessManager.startChildProcess('entry/src/main/ets/process/StaticDemoProcess',
-              childProcessManager.StartMode.SELF_FORK)
-              .then((data) => {
-                console.info(`startChildProcess success, pid: ${data}`);
-              })
-              .catch((err: BusinessError) => {
-                console.error(`startChildProcess error, errorCode: ${err.code}`);
-              })
-          } catch (err: BusinessError) {
-            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
-          }
-      })
-    }
-    .width('100%')
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类:
-// entry/src/main/ets/process/DemoProcess.ets
-import { ChildProcess } from '@kit.AbilityKit';
-
-export default class DemoProcess extends ChildProcess {
-  onStart(): void {
-    console.info('DemoProcess OnStart() called');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// 在entry模块的src/main/ets/process下创建StaticDemoProcess.ets子进程类:
-// entry/src/main/ets/process/StaticDemoProcess.ets
-import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
-
-export default class StaticDemoProcess extends ChildProcess {
-  onStart(args?: ChildProcessArgs): void {
-    console.info('StaticDemoProcess OnStart() called');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 使用childProcessManager.startChildProcess方法启动子进程:
-// entry/src/main/ets/pages/Index.ets
-import { childProcessManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import DemoProcess from '../process/DemoProcess';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button('拉起ArkTS-Dyn类型子进程')
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            try {
-              DemoProcess.toString(); // 这里要调用下DemoProcess类的任意方法，防止没有引用到而被构建工具优化掉
-              childProcessManager.startChildProcess('./ets/process/DemoProcess.ets',
-                childProcessManager.StartMode.SELF_FORK,
-                (err, data) => {
-                  if (err?.code != 0) {
-                    console.error(`startChildProcess error, errorCode: ${err?.code}`);
-                  }
-                  console.info(`startChildProcess success, pid: ${data}`);
-              });
-            } catch (err: BusinessError) {
-              console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
-            }
-          });
-
-        Button('拉起ArkTS-Sta类型子进程')
-        .onClick(() => {
-            try {
-              //拉起ArkTS-Sta类型的子进程示例
-              childProcessManager.startChildProcess('entry/src/main/ets/process/StaticDemoProcess',
-                childProcessManager.StartMode.SELF_FORK,
-                (err, data) => {
-                  if (err?.code != 0) {
-                    console.error(`startChildProcess error, errorCode: ${err?.code}`);
-                  }
-                  console.info(`startChildProcess success, pid: ${data}`);
-              });
-            } catch (err: BusinessError) {
-              console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
-            }
-        })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// 使用childProcessManager.startChildProcess方法启动子进程:
-// entry/src/main/ets/pages/Index.ets
-import { Entry, Text, Column, Component, Button} from '@ohos.arkui.component';
-import { childProcessManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import DemoProcess from '../process/DemoProcess';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('拉起ArkTS-Dyn类型子进程')
-        .onClick(() => {
-          try {
-            childProcessManager.startChildProcess('./ets/process/DemoProcess.ets',
-              childProcessManager.StartMode.SELF_FORK,
-              (err, data) => {
-                if (err?.code != 0) {
-                  console.error(`startChildProcess error, errorCode: ${err?.code}`);
-                }
-                console.info(`startChildProcess success, pid: ${data}`);
-            });
-          } catch (err: BusinessError) {
-            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
-          }
-        });
-
-      Button('拉起ArkTS-Sta类型子进程')
-      .onClick(() => {
-          try {
-            //拉起ArkTS-Sta类型的子进程示例
-            childProcessManager.startChildProcess('entry/src/main/ets/process/StaticDemoProcess',
-              childProcessManager.StartMode.SELF_FORK,
-              (err, data) => {
-                if (err?.code != 0) {
-                  console.error(`startChildProcess error, errorCode: ${err?.code}`);
-                }
-                console.info(`startChildProcess success, pid: ${data}`);
-            });
-          } catch (err: BusinessError) {
-            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
-          }
-      })
-    }
-    .width('100%')
-  }
-}
-```
-
 
 ## startChildProcess
 
 ```TypeScript
-function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<int>): void
+function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<number>): void
 ```
 
 启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用callback异步回调。
@@ -351,8 +65,6 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -363,7 +75,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 | --- | --- | --- |
 | [srcEntry](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | 是 |
 | startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 是 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -373,7 +85,3 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 | [16000061](../errorcode-ability.md#16000061-不支持的操作) |
 | [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) |
-
-**示例**
-
-参见 [startChildProcess](#startchildprocess)

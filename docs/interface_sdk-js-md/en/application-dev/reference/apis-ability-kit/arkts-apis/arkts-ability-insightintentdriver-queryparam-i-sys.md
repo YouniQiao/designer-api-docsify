@@ -4,8 +4,6 @@ Param when query insight intent entity.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Param when query insight intent entity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ Indicates the bundle name.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Indicates the entity class name.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -67,8 +61,6 @@ Indicates the intent name.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Indicates the module name.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -108,8 +98,6 @@ Indicates the param for query entity.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -119,16 +107,14 @@ Indicates the param for query entity.
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 Indicates the target user ID.If the user ID of the caller application is different from the target user ID, you need to apply for permission: ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

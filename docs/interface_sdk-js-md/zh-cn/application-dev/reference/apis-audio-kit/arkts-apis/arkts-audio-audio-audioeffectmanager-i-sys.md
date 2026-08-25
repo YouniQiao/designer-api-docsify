@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## getAudioEffectProperty
@@ -25,8 +23,6 @@ getAudioEffectProperty(): Array<AudioEffectProperty>
 获取当前音效模式，同步返回结果。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -48,37 +44,15 @@ getAudioEffectProperty(): Array<AudioEffectProperty>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let propertyArray: Array<audio.AudioEffectProperty> = audioStreamManager.getAudioEffectProperty();
-  console.info(`The effect modes are: ${propertyArray}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getAudioEffectProperty ERROR: ${error}`);
-}
-```
-
 ## getNoiseReductionMode
 
-ArkTS-Dyn:
 ```TypeScript
 getNoiseReductionMode(clientUid: number, device: AudioDeviceDescriptor): NoiseReductionMode
-```
-
-ArkTS-Sta:
-```TypeScript
-getNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor): NoiseReductionMode
 ```
 
 获取当前设备的降噪模式设置信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -92,7 +66,7 @@ getNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor): NoiseReduc
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| clientUid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| clientUid | number | 是 |
 | device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 |
 
 **返回值：**
@@ -109,13 +83,6 @@ getNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor): NoiseReduc
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-**示例**
-
-```TypeScript
-let noiseReductionMode: audio.NoiseReductionMode = audioCapturer.getNoiseReductionMode();
-console.info(`getNoiseReductionMode success: ${noiseReductionMode}`);
-```
-
 ## getSupportedAudioEffectProperty
 
 ```TypeScript
@@ -125,8 +92,6 @@ getSupportedAudioEffectProperty(): Array<AudioEffectProperty>
 获取支持的下行音效模式，同步返回结果。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -148,20 +113,6 @@ getSupportedAudioEffectProperty(): Array<AudioEffectProperty>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let propertyArray: Array<audio.AudioEffectProperty> = audioStreamManager.getSupportedAudioEffectProperty();
-  console.info(`The effect modes are: ${propertyArray}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getSupportedAudioEffectProperty ERROR: ${error}`);
-}
-```
-
 ## getSupportedNoiseReductionModes
 
 ```TypeScript
@@ -171,8 +122,6 @@ getSupportedNoiseReductionModes(device: AudioDeviceDescriptor): Array<NoiseReduc
 获取当前设备上所有支持的降噪模式。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -202,20 +151,6 @@ getSupportedNoiseReductionModes(device: AudioDeviceDescriptor): Array<NoiseReduc
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let supportedModes: Array<audio.NoiseReductionMode> = audioCapturer.getSupportedNoiseReductionModes();
-  console.info(`getSupportedNoiseReductionModes success: ${supportedModes}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getSupportedNoiseReductionModes failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## isAudioSeparationEffectSupported
 
 ```TypeScript
@@ -228,8 +163,6 @@ isAudioSeparationEffectSupported(): boolean
 > 应用在使用音频分离效果相关接口前，应先调用本接口确认设备是否支持。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -249,15 +182,6 @@ isAudioSeparationEffectSupported(): boolean
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let isSupported: boolean = audioEffectManager.isAudioSeparationEffectSupported();
-console.info(`Audio separation effect is supported: ${isSupported}`);
-```
-
 ## offAudioSeparationEffectEnabledChange
 
 ```TypeScript
@@ -267,8 +191,6 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 取消订阅系统音频分离效果使能状态变更事件。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -289,14 +211,6 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioEffectManager.offAudioSeparationEffectEnabledChange();
-```
-
 ## offNoiseReductionSettingChange
 
 ```TypeScript
@@ -307,8 +221,6 @@ offNoiseReductionSettingChange(device: AudioDeviceDescriptor,
 取消订阅降噪模式设置事件回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -340,8 +252,6 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
@@ -360,16 +270,6 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioEffectManager.onAudioSeparationEffectEnabledChange((isEnabled: boolean) => {
-  console.info(`Audio separation effect enabled state changed: ${isEnabled}`);
-});
-```
-
 ## onNoiseReductionSettingChange
 
 ```TypeScript
@@ -379,8 +279,6 @@ onNoiseReductionSettingChange(device: AudioDeviceDescriptor, callback: Callback<
 订阅降噪模式设置事件回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -412,8 +310,6 @@ setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -435,31 +331,10 @@ setAudioEffectProperty(propertyArray: Array<AudioEffectProperty>): void
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let propertyArray: Array<audio.AudioEffectProperty> = audioEffectManager.getAudioEffectProperty();
-  console.info(`The effect modes are: ${propertyArray}`);
-  audioEffectManager.setAudioEffectProperty(propertyArray);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`setAudioEffectProperty ERROR: ${error}`);
-}
-```
-
 ## setAudioSeparationEffectEnabled
 
-ArkTS-Dyn:
 ```TypeScript
 setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Promise<void>
 ```
 
 为指定应用进程或音频播放流设置音频分离效果的启用状态。使用Promise异步回调。
@@ -474,8 +349,6 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Pr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -489,8 +362,8 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Pr
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | enabled | boolean | 是 |
-| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| streamId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 否 |
+| uid | number | 是 |
+| streamId | number | 否 |
 
 **返回值：**
 
@@ -508,36 +381,15 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Pr
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioEffectManager.setAudioSeparationEffectEnabled(true, 10001).then(() => {
-  console.info('Succeeded in setting audio separation effect enabled.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set audio separation effect enabled. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setAudioSeparationEffectVolume
 
-ArkTS-Dyn:
 ```TypeScript
 setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double): Promise<void>
 ```
 
 设置指定音量类型的音频分离效果音量。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -552,7 +404,7 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | 是 |
-| volume | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| volume | number | 是 |
 
 **返回值：**
 
@@ -570,36 +422,15 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double):
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioEffectManager.setAudioSeparationEffectVolume(audio.AudioSeparationVolumeType.VOLUME_TYPE_VOCAL, 0.5).then(() => {
-  console.info('Succeeded in setting audio separation effect volume.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set audio separation effect volume. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setNoiseReductionMode
 
-ArkTS-Dyn:
 ```TypeScript
 setNoiseReductionMode(clientUid: number, device: AudioDeviceDescriptor, noiseReductionMode: NoiseReductionMode): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor, noiseReductionMode: NoiseReductionMode): void
 ```
 
 设置当前设备的降噪模式。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -613,7 +444,7 @@ setNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor, noiseReduct
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| clientUid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| clientUid | number | 是 |
 | device | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 是 |
 | [noiseReductionMode](arkts-audio-audio-noisereductionconfigaction-i-sys.md) | [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | 是 |
 
@@ -626,25 +457,6 @@ setNoiseReductionMode(clientUid: int, device: AudioDeviceDescriptor, noiseReduct
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let supportedModes: Array<audio.NoiseReductionMode> = audioCapturer.getSupportedNoiseReductionModes();
-  if (supportedModes.includes(audio.NoiseReductionMode.PURE_VOCALS)) {
-    audioCapturer.setNoiseReductionMode(audio.NoiseReductionMode.PURE_VOCALS);
-  } else {
-    audioCapturer.setNoiseReductionMode(audio.NoiseReductionMode.FIDELITY);
-  }
-  console.info(`setNoiseReductionMode success: ${audioCapturer.getNoiseReductionMode()}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`setNoiseReductionMode failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## updateDeviceNoiseReductionCapability
 
 ```TypeScript
@@ -654,8 +466,6 @@ updateDeviceNoiseReductionCapability(capability: NoiseReductionCapability): void
 在连接外部设备时，将降噪模式能力更新到音频框架。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 

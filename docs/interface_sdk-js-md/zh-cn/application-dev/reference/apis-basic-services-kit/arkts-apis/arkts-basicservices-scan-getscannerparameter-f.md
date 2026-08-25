@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getScannerParameter
@@ -15,8 +15,6 @@ function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 获取扫描仪参数。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRINT
 
@@ -39,17 +37,3 @@ function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 | 错误码ID |
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let scannerId: string = 'scanner_001';
-scan.getScannerParameter(scannerId).then((parameters: scan.ScannerParameter[]) => {
-    console.info('get scanner parameters success: ' + JSON.stringify(parameters));
-}).catch((error: BusinessError) => {
-    console.error('get scanner parameters failed: ' + JSON.stringify(error));
-})
-```

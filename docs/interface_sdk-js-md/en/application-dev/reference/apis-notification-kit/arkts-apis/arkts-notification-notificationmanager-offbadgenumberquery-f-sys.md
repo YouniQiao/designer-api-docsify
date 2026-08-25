@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## offBadgeNumberQuery
@@ -15,8 +15,6 @@ function offBadgeNumberQuery(): void
 Unregisters the callback for querying the number of application badges.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -33,13 +31,3 @@ Unregisters the callback for querying the number of application badges.
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-```TypeScript
-try{
-    notificationManager.offBadgeNumberQuery();
-} catch (err) {
-    console.error(`OffBadgeNumberQuery failed, code is ${err.code}, message is ${err.message}`);
-}
-```

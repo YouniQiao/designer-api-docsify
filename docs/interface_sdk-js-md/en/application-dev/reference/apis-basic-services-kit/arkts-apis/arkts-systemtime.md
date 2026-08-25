@@ -4,8 +4,6 @@ The **systemTime** module provides system time and time zone features. You can u
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [systemDateTime](arkts-systemdatetime.md)
@@ -15,7 +13,7 @@ The **systemTime** module provides system time and time zone features. You can u
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

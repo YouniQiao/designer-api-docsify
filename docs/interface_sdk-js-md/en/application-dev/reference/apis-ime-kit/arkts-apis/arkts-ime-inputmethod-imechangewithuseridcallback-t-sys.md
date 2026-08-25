@@ -2,14 +2,12 @@
 
 ```TypeScript
 export type ImeChangeWithUserIdCallback =
-      (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: int) => void
+      (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: number) => void
 ```
 
 The callback of the inputmethod change event which carries the user ID whose inputmethod is changed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -23,4 +21,4 @@ The callback of the inputmethod change event which carries the user ID whose inp
 | --- | --- | --- |
 | inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes |
 | inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |

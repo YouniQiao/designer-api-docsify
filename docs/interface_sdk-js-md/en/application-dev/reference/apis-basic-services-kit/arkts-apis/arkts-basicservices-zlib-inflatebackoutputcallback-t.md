@@ -1,14 +1,12 @@
 # InflateBackOutputCallback
 
 ```TypeScript
-type InflateBackOutputCallback = (outDesc: object, buf: ArrayBuffer, length: int) => int
+type InflateBackOutputCallback = (outDesc: object, buf: ArrayBuffer, length: number) => number
 ```
 
 The output data provided by the user is written into the callback function. Whenever decompressed data is ready for output, zlib calls this function to write the data from the buffer to the target location.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

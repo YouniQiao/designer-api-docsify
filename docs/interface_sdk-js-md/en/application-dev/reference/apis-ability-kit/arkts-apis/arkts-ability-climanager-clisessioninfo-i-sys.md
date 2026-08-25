@@ -4,8 +4,6 @@ Session information of a tool execution.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Session information of a tool execution.
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## result
@@ -27,8 +25,6 @@ Indicates the execution result, has a value when status is completed or failed.
 **Type:** [ExecResult](arkts-ability-climanager-execresult-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Indicates id of this session.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -68,8 +62,6 @@ Indicates status of session.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -87,8 +79,6 @@ Indicates name of tool.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

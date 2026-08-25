@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## attestKeyItem
@@ -17,8 +17,6 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 > 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。 <!--RP6End-->
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ATTEST_KEY
 
@@ -48,196 +46,6 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 
-**示例**
-
-```TypeScript
-/* 以获取RSA密钥证书为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-function stringToUint8Array(str: string) {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  let tmpUint8Array = new Uint8Array(arr);
-  return tmpUint8Array;
-}
-
-let securityLevel = stringToUint8Array('sec_level');
-let challenge = stringToUint8Array('challenge_data');
-let versionInfo = stringToUint8Array('version_info');
-let keyAliasString = "key attest";
-
-async function generateKeyThenAttestKey() {
-  let aliasString = keyAliasString;
-  let aliasUint8 = stringToUint8Array(aliasString);
-  /* 1. 配置密钥生成参数 */
-  let generateProperties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-      value: huks.HuksKeyAlg.HUKS_ALG_RSA
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-      value: huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-      value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_DIGEST,
-      value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PADDING,
-      value: huks.HuksKeyPadding.HUKS_PADDING_PSS
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_GENERATE_TYPE,
-      value: huks.HuksKeyGenerateType.HUKS_KEY_GENERATE_TYPE_DEFAULT
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
-      value: huks.HuksCipherMode.HUKS_MODE_ECB
-    }
-  ];
-  let generateOptions: huks.HuksOptions = {
-    properties: generateProperties
-  };
-  /* 2. 配置密钥证明参数 */
-  let attestProperties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO,
-      value: securityLevel
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE,
-      value: challenge
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_VERSION_INFO,
-      value: versionInfo
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_ALIAS,
-      value: aliasUint8
-    }
-  ];
-  let attestOptions: huks.HuksOptions = {
-    properties: attestProperties
-  };
-  /* 3. 生成密钥并获取密钥证明 */
-  huks.generateKeyItem(aliasString, generateOptions, (error) => {
-    if (error) {
-      console.error(`callback: generateKeyItem failed`);
-    } else {
-      console.info(`callback: generateKeyItem success`);
-      huks.attestKeyItem(aliasString, attestOptions, (error) => {
-        if (error) {
-          console.error(`callback: attestKeyItem failed`);
-        } else {
-          console.info(`callback: attestKeyItem success`);
-        }
-      });
-    }
-  });
-}
-```
-
-```TypeScript
-/* 以获取RSA密钥证书为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-function stringToUint8Array(str: string) {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  let tmpUint8Array = new Uint8Array(arr);
-  return tmpUint8Array;
-}
-
-let securityLevel = stringToUint8Array('sec_level');
-let challenge = stringToUint8Array('challenge_data');
-let versionInfo = stringToUint8Array('version_info');
-let keyAliasString = "key attest";
-
-/* 1. 生成密钥 */
-async function generateKey(alias: string) {
-  let properties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-      value: huks.HuksKeyAlg.HUKS_ALG_RSA
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-      value: huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-      value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_DIGEST,
-      value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PADDING,
-      value: huks.HuksKeyPadding.HUKS_PADDING_PSS
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_GENERATE_TYPE,
-      value: huks.HuksKeyGenerateType.HUKS_KEY_GENERATE_TYPE_DEFAULT
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
-      value: huks.HuksCipherMode.HUKS_MODE_ECB
-    }
-  ];
-  let options: huks.HuksOptions = {
-    properties: properties
-  };
-  await huks.generateKeyItem(alias, options)
-    .then(() => {
-      console.info(`promise: generateKeyItem success`);
-    });
-}
-
-/* 2. 获取密钥证书 */
-async function attestKey() {
-  let aliasString = keyAliasString;
-  let aliasUint8 = stringToUint8Array(aliasString);
-  /* 配置密钥证明参数 */
-  let properties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO,
-      value: securityLevel
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE,
-      value: challenge
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_VERSION_INFO,
-      value: versionInfo
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_ALIAS,
-      value: aliasUint8
-    }
-  ];
-  let options: huks.HuksOptions = {
-    properties: properties
-  };
-  await generateKey(aliasString);
-  await huks.attestKeyItem(aliasString, options)
-    .then(() => {
-      console.info(`promise: attestKeyItem success`);
-    });
-}
-```
-
 
 ## attestKeyItem
 
@@ -250,8 +58,6 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 > 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。 <!--RP6End-->
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ATTEST_KEY
 
@@ -285,7 +91,3 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 | [12000012](../errorcode-huks.md#12000012-外部错误) |
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
-
-**示例**
-
-参见 [attestKeyItem](#attestkeyitem)

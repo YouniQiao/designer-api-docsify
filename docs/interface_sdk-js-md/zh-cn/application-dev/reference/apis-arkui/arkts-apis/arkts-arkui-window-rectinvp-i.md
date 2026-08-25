@@ -4,29 +4,25 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
 矩形区域的高度，单位为vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,16 +31,14 @@ height: double
 ## left
 
 ```TypeScript
-left: double
+left: number
 ```
 
 矩形区域的左边界值，单位为vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,16 +47,14 @@ left: double
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
 矩形区域的上边界值，单位为vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,16 +63,14 @@ top: double
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
 矩形区域的宽度，单位为vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

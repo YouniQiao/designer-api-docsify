@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_COMMON
@@ -17,8 +15,6 @@ ERR_COMMON = 1
 A common internal error occurs during form processing.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -32,8 +28,6 @@ The application does not have permission to use forms. Ensure that the applicati
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_GET_INFO_FAILED
@@ -45,8 +39,6 @@ ERR_GET_INFO_FAILED = 4
 Failed to obtain the configuration information about the form specified by the request parameters. Ensure that the parameters of the form to be added are consistent with those provided by the form provider.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -60,8 +52,6 @@ Failed to obtain the bundle to which the form belongs based on the request param
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_GET_LAYOUT_FAILED
@@ -73,8 +63,6 @@ ERR_GET_LAYOUT_FAILED = 6
 Failed to initialize the form layout based on the request parameters. Ensure that the grid style of the form is supported by the form provider.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -88,8 +76,6 @@ Invalid input parameter during form operation. Ensure that all input parameters 
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_CFG_NOT_MATCH_ID
@@ -101,8 +87,6 @@ ERR_CFG_NOT_MATCH_ID = 8
 The form configuration to be obtained using an existing form ID is different from that obtained for the first time.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -116,8 +100,6 @@ The ID of the form to be operated does not exist in the Form Manager Service.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_BIND_PROVIDER_FAILED
@@ -129,8 +111,6 @@ ERR_BIND_PROVIDER_FAILED = 10
 Failed to bind the Form Manager Service to the provider service.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -144,8 +124,6 @@ The total number of added forms exceeds the maximum allowed by the system.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_MAX_INSTANCES_PER_FORM
@@ -157,8 +135,6 @@ ERR_MAX_INSTANCES_PER_FORM = 12
 The number of form instances generated using the same form configuration exceeds the maximum allowed by the system.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -172,8 +148,6 @@ The form being requested was added by other applications and cannot be operated 
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_PROVIDER_DEL_FAIL
@@ -185,8 +159,6 @@ ERR_PROVIDER_DEL_FAIL = 14
 The Form Manager Service failed to instruct the form provider to delete the form.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -200,8 +172,6 @@ The total number of added forms exceeds the maximum per client.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_MAX_SYSTEM_TEMP_FORMS
@@ -213,8 +183,6 @@ ERR_MAX_SYSTEM_TEMP_FORMS = 16
 The total number of added temp forms exceeds the maximum in system.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -228,8 +196,6 @@ The module can not be find in system.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_FORM_NO_SUCH_ABILITY
@@ -241,8 +207,6 @@ ERR_FORM_NO_SUCH_ABILITY = 18
 The ability can not be find in system.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -256,8 +220,6 @@ The dimension is not exist in the form.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_FORM_FA_NOT_INSTALLED
@@ -269,8 +231,6 @@ ERR_FORM_FA_NOT_INSTALLED = 20
 The ability is not installed.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -284,8 +244,6 @@ Failed to obtain the RPC object of the Form Manager Service because the service 
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_FORM_DUPLICATE_ADDED
@@ -298,8 +256,6 @@ Failed to obtain the form requested by the client because another form with the 
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_IN_RECOVERY
@@ -311,7 +267,5 @@ ERR_IN_RECOVERY = 36
 The form is being restored. Perform operations on the form only after the restoration is complete.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form

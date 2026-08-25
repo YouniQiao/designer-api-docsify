@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +50,6 @@ Creates a content modifier.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -66,7 +60,7 @@ Creates a content modifier.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | Yes |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | Yes |
 
 ## controlSize
 
@@ -80,8 +74,6 @@ Sets the size for the button.
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,8 +99,6 @@ Sets the font color for the button.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -130,8 +120,6 @@ fontFamily(value: string | Resource)
 Sets the font family.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -155,8 +143,6 @@ Sets the font size for the button.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -178,8 +164,6 @@ fontStyle(value: FontStyle)
 Sets the font style for the button.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -203,8 +187,6 @@ Sets the font weight for the button.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -226,8 +208,6 @@ labelStyle(value: LabelStyle)
 Sets the label style for the button.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,8 +231,6 @@ Sets the maximum font scale factor for text.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -275,8 +253,6 @@ Sets the minimum font scale factor for text.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -298,8 +274,6 @@ role(value: ButtonRole)
 Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the backgroundColor, [fontColor](#fontcolor), and [buttonStyle](#buttonstyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -325,8 +299,6 @@ Specifies whether to enable the pressed state effect when the button is clicked.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -348,8 +320,6 @@ type(value: ButtonType)
 Sets the button type.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

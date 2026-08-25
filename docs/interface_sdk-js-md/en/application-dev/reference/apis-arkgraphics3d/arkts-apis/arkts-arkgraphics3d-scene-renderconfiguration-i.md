@@ -4,8 +4,6 @@ Describes the rendering configuration.@interface RenderConfiguration
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## shadowResolution
@@ -22,8 +20,6 @@ Global shadow map resolution, in pixels (px). The default value is undefined, in
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## softShadowConfig
@@ -39,8 +35,6 @@ param config for soft shadow, control the algorithm type and its configuration.
 **Default:** undefined
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

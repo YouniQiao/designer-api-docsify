@@ -21,14 +21,12 @@ Defines the type and style parameters of the chip.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
+import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## onClose
@@ -40,8 +38,6 @@ onClose?: () => void
 Event triggered when the close icon is clicked.If the value is **undefined**, clicking the close icon will not trigger any event.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,11 +53,9 @@ accessibilityDescription?: ResourceStr
 
 Accessible description of the chip. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.The default value is an empty string.If the value is **undefined**, the default value is used.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,8 +81,6 @@ Accessibility level of the chip. It determines whether the component can be reco
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -106,8 +98,6 @@ Type of selected state for the chip.Default value:If the **activated** property 
 **Type:** [AccessibilitySelectedType](arkts-arkui-arkui-advanced-chip-accessibilityselectedtype-e.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,8 +119,6 @@ Whether the chip is activated.Default value: **false**
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -145,11 +133,9 @@ activatedBackgroundColor?: ResourceColor
 
 Background color of the chip when it is activated.Default value: **\$r('sys.color.ohos_id_color_emphasize')**If the value is **undefined**, the default value is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -169,8 +155,6 @@ Set system-styled materials for the component which is activated. Different mate
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -189,8 +173,6 @@ Whether to display the close icon.Default value: **true**The value **true** mean
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -205,11 +187,9 @@ backgroundColor?: ResourceColor
 
 Chip background color.Default value: **\$r('sys.color.ohos_id_color_button_normal')**If the value is **undefined**, the default value is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -229,8 +209,6 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -245,11 +223,9 @@ borderRadius?: Dimension
 
 Radius of the rounded corner of the chip background. Percentage is not supported.Default value: **\$r('sys.float.ohos_id_corner_radius_button')**If the value is **undefined**, the default value is used.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -269,8 +245,6 @@ Accessibility settings of the default close icon.If the value is **undefined**, 
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -288,8 +262,6 @@ Layout direction.Default value: **Direction.Auto**If the value is **undefined**,
 **Type:** Direction
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -311,8 +283,6 @@ Whether the chip can be selected.Default value: **true**
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -326,14 +296,14 @@ fontSize?: Dimension
 ```
 
 Uniform font size for both text and icons in the chip. Percentage values are not supported.The priority of **fontSize** is lower than the **fontSize** property in **prefixSymbol**, **label**, **suffixSymbol**, and **closeOptions**.Default value:  
-- When **size** is **ChipSize.SMALL**: **\$r('sys.float.chip_small_font_size')** for text and **\$r('sys.float.chip_small_icon_size')** for icons. - Other cases: **\$r('sys.float.chip_normal_font_size')** for text and **\$r('sys.float.chip_normal_icon_size')** for icons.  
-If the value is **undefined**, the default value is used.
+- When **size** is **ChipSize.SMALL**: **\$r('sys.float.chip_small_font_size')** for text and  
+**\$r('sys.float.chip_small_icon_size')** for icons.  
+- Other cases: **\$r('sys.float.chip_normal_font_size')** for text and **\$r('sys.float.chip_normal_icon_size')** for  
+icons.If the value is **undefined**, the default value is used.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -353,8 +323,6 @@ Text of the chip.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -372,8 +340,6 @@ Maximum font scale factor for the text and icon of the chip. Value range: [1, +â
 **Type:** number \| Resource
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -393,8 +359,6 @@ Minimum font scale factor for the text and icon of the chip. Value range: [0, 1]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -413,29 +377,9 @@ Chip click event.If the value is **undefined**, the chip cannot be clicked.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onClose
-
-```TypeScript
-onClose?: VoidCallback
-```
-
-On close action.
-
-**Type:** VoidCallback
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -446,14 +390,18 @@ padding?: LocalizedPadding
 ```
 
 Padding of the chip.Default value:  
-- When **size** is **ChipSize.SMALL** and **activated** is **true**: **{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**. - When **size** is **ChipSize.SMALL** and **activated** is **false**: **{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**. - When **size** is not **ChipSize.SMALL** and **activated** is **true**: **{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**. - When **size** is not **ChipSize.SMALL** and **activated** is **false**: **{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
-If the value is **undefined**, the default value is used.
+- When **size** is **ChipSize.SMALL** and **activated** is **true**:  
+**{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
+- When **size** is **ChipSize.SMALL** and **activated** is **false**:  
+**{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
+- When **size** is not **ChipSize.SMALL** and **activated** is **true**:  
+**{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
+- When **size** is not **ChipSize.SMALL** and **activated** is **false**:  
+**{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.If the value is **undefined**, the default value is used.
 
-**Type:** LocalizedPadding
+**Type:** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -473,8 +421,6 @@ Prefix icon of the chip.Default value: The prefix icon is not displayed.If the v
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -493,8 +439,6 @@ Symbol-type prefix icon of the chip.Default value: The prefix icon is not displa
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -509,11 +453,9 @@ size?: ChipSize | SizeOptions
 
 Chip size.Default value: **ChipSize.NORMAL**The SizeOptions type parameter does not support percentage values. If an invalid value is provided, the system will use the default value instead.Note: [Aging-friendly design implementation](../../../ui/arkui-support-for-aging-adaptation.md) does not take effect when size specifies specific width and height, except when size is set to { height: 0, width: 0 }.
 
-**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
+**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -533,8 +475,6 @@ Suffix icon of the chip.Default value: The suffix icon is not displayed.If the v
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -553,8 +493,6 @@ Symbol-type suffix icon of the chip.Default value: The suffix icon is not displa
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -572,8 +510,6 @@ Accessibility settings of the symbol-type suffix icon.Default value: The suffix 
 **Type:** [ChipSuffixSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

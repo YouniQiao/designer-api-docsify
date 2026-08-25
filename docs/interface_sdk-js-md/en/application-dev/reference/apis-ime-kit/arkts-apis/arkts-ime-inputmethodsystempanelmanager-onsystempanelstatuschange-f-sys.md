@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 ```
 
 ## onSystemPanelStatusChange
@@ -15,8 +15,6 @@ function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void
 Subscribes to system panel state change events.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

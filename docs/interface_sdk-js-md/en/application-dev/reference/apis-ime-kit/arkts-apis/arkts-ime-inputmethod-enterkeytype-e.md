@@ -4,8 +4,6 @@ Enumerates the function types represented by the Enter key of the input method.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## UNSPECIFIED
@@ -17,8 +15,6 @@ UNSPECIFIED = 0
 Not specified.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -32,8 +28,6 @@ None.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## GO
@@ -45,8 +39,6 @@ GO
 Go.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -60,8 +52,6 @@ Search.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## SEND
@@ -73,8 +63,6 @@ SEND
 Send.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -88,8 +76,6 @@ Next.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## DONE
@@ -101,8 +87,6 @@ DONE
 Done.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -116,8 +100,6 @@ Previous.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## NEWLINE
@@ -129,7 +111,5 @@ NEWLINE
 Line break.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

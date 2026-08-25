@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## download
@@ -26,8 +24,6 @@ download: Statistic
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## upload
@@ -41,7 +37,5 @@ upload: Statistic
 **类型：** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

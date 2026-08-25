@@ -4,14 +4,12 @@ Provides methods for enabling/disabling bluetooth or monitoring bluetooth state.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -32,9 +30,7 @@ import { access } from '@kit.ConnectivityKit';
 | [isBluetoothSupported](arkts-connectivity-access-isbluetoothsupported-f.md) |
 | [isValidRandomDeviceId](arkts-connectivity-access-isvalidrandomdeviceid-f.md) |
 | [off](arkts-connectivity-access-off-f.md#offstatechange) |
-| [offStateChange](arkts-connectivity-access-offstatechange-f.md) |
 | [on](arkts-connectivity-access-on-f.md#onstatechange) |
-| [onStateChange](arkts-connectivity-access-onstatechange-f.md) |
 
 <!--Del-->
 ### Functions(System API)

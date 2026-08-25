@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getAllActiveNotifications
@@ -15,8 +15,6 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 获取当前未删除的所有通知。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,65 +39,6 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getAllActiveNotificationsCallback = (err: BusinessError, data: Array<notificationManager.NotificationRequest>): void => {
-    if (err) {
-        console.error(`getAllActiveNotifications failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getAllActiveNotifications success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-notificationManager.getAllActiveNotifications(getAllActiveNotificationsCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getAllActiveNotificationsCallback = (err: BusinessError | null, data: Array<notificationManager.NotificationRequest> | undefined | null): void => {
-    if (err) {
-        console.error(`getAllActiveNotifications failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getAllActiveNotifications success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-notificationManager.getAllActiveNotifications(getAllActiveNotificationsCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getAllActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-    console.info(`getAllActiveNotifications success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getAllActiveNotifications failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getAllActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-    console.info(`getAllActiveNotifications success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getAllActiveNotifications failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## getAllActiveNotifications
 
@@ -110,8 +49,6 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 获取当前未删除的所有通知。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -134,7 +71,3 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-参见 [getAllActiveNotifications](#getallactivenotifications)

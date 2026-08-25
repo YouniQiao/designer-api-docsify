@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryPrintJobList
@@ -15,8 +15,6 @@ function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void
 Queries all print jobs. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -37,32 +35,6 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryPrintJobList((err: BusinessError, printJobs : print.PrintJob[]) => {
-    if (err) {
-        console.error('queryPrintJobList failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
-    console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
-}).catch((error: BusinessError) => {
-    console.error('queryPrintJobList failed, error : ' + JSON.stringify(error));
-})
-```
-
 
 ## queryPrintJobList
 
@@ -73,8 +45,6 @@ function queryPrintJobList(): Promise<Array<PrintJob>>
 Queries all print jobs. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -94,7 +64,3 @@ Queries all print jobs. This API uses a promise to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [queryPrintJobList](#queryprintjoblist)

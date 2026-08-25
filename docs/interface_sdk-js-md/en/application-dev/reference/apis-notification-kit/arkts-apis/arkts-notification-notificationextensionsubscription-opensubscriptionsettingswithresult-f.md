@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 ```
 
 ## openSubscriptionSettingsWithResult
@@ -15,8 +15,6 @@ function openSubscriptionSettingsWithResult(context: UIAbilityContext): Promise<
 Opens the settings screen of notification extension subscription in a semi-modal dialog box. On this screen, the user can toggle on the **Allow access to notifications on this device** switch and grant access to notifications for specified applications. This API uses a promise to return the result. When the semi-modal window is closed, the user-defined authorization result is returned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -44,22 +42,3 @@ Opens the settings screen of notification extension subscription in a semi-modal
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
 | [1600023](../errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-try {
-  // Obtain the context from the component and ensure that the return value of this.getuIContext().getHostContext() is UIAbilityContext.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  notificationExtensionSubscription.openSubscriptionSettingsWithResult(context).then((data) => {
-    console.info(`openSubscriptionSettingsWithResult success, data: ${JSON.stringify(data)}`);
-  }).catch((e:Error) => {
-    let error = e as BusinessError
-    console.error(`failed to call openSubscriptionSettingsWithResult ${JSON.stringify(error)}`)
-  });
-} catch (error) {
-  console.error(`failed to call openSubscriptionSettingsWithResult ${JSON.stringify(error)}`)
-}
-```

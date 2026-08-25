@@ -8,8 +8,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,8 +27,6 @@ onDataAdd(index: number): void
 > 该接口不能与onDatasetChange接口混用。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -54,8 +50,6 @@ onDataAdded(index: number): void
 > 从API version 7开始支持，从API version 8开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 8
 
@@ -82,8 +76,6 @@ onDataChange(index: number): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -106,8 +98,6 @@ onDataChanged(index: number): void
 > 从API version 7开始支持，从API version 8开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 8
 
@@ -135,8 +125,6 @@ onDataDelete(index: number): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -159,8 +147,6 @@ onDataDeleted(index: number): void
 > - 从API version 7开始支持，从API version 8开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 8
 
@@ -188,8 +174,6 @@ onDataMove(from: number, to: number): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -214,8 +198,6 @@ onDataMoved(from: number, to: number): void
 > - 数据移动前后键值要保持不变，如果键值有变化，应使用删除数据和新增数据接口。数据移动起始位置与数据移动目标位置交换完成后调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 8
 
@@ -243,8 +225,6 @@ onDataReloaded(): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -258,8 +238,6 @@ onDataReloaded(reuseImmediately: boolean): void
 通知组件重新加载所有数据，并配置是否允许在更新过程中复用旧的子组件。需要和@Reusable/@ReusableV2配合使用。重新加载数据完成后调用。配置允许在更新过程中复用旧的子组件，并和[@Reusable](../../../ui/state-management/arkts-reusable.md)/ [@ReusableV2](../../../ui/state-management/arkts-new-reusableV2.md)配合使用时，优先使用复用池中的组件，若复用池中无可复用的组件，而LazyForEach的旧子组 件中有可复用的组件，该组件将被回收，并复用为新的子组件。当LazyForEach的旧子组件中也没有可复用的组件时，将创建新的子组件。配置允许在更新过程中复用旧的子组件，未使用@Reusable/@ReusableV2时，键值没有变化的数据项会使用原先的子组件，键值发生变化的会重建子组件。配置不允许在更新过程中复用旧的子组件，键值没有变化的数据项会使用原先的子组件，键值发生变化的数据项，若使用了@Reusable/@ReusableV2且复用池中有可用的组件，将复用旧组件，否则将创建新的子组件。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -287,8 +265,6 @@ onDatasetChange(dataOperations: DataOperation[]): void
 > index，只有第一个DataOperation生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,14 +6,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## completeButtonText
@@ -27,8 +25,6 @@ completeButtonText?: CompleteButtonText
 **类型：** [CompleteButtonText](arkts-medialibrary-photoaccesshelper-completebuttontext-e.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -46,8 +42,6 @@ contextRecoveryInfo?: ContextRecoveryInfo
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -64,8 +58,6 @@ isDestroyedWithNavigation?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,8 +77,6 @@ isEditSupported?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -102,8 +92,6 @@ isOriginalSupported?: boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -123,8 +111,6 @@ isReturnToPhotoBrowserEnabled?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -142,8 +128,6 @@ isSelectionNumberVisible?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -163,8 +147,6 @@ isSelectionOrderAdjustable?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -174,16 +156,14 @@ isSelectionOrderAdjustable?: boolean
 ## maxPhotoSelectNumber
 
 ```TypeScript
-maxPhotoSelectNumber?: int
+maxPhotoSelectNumber?: number
 ```
 
 支持设置的图片最大的选择数量。单位：个。受到最大选择总数的限制，最大值为500。默认为500。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -194,16 +174,14 @@ maxPhotoSelectNumber?: int
 ## maxVideoSelectNumber
 
 ```TypeScript
-maxVideoSelectNumber?: int
+maxVideoSelectNumber?: number
 ```
 
 支持设置的视频最大的选择数量。单位：个。受到系统中所有媒体文件最大选择总数的限制，最大值为500。默认为500。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -223,8 +201,6 @@ pickerColorMode?: PickerColorMode
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -243,19 +219,6 @@ subWindowName?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**示例**
-
-```TypeScript
-async function photoPicker() {
-    let picker = new photoAccessHelper.PhotoViewPicker();
-    let option = new photoAccessHelper.PhotoSelectOptions();
-    option.userId = 101;
-    picker.select(option);
-  }
-```

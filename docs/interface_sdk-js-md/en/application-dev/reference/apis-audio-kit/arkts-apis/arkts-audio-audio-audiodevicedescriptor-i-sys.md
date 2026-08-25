@@ -4,14 +4,12 @@ Describes an audio device.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## dmDeviceInfo
@@ -26,8 +24,6 @@ Extended information for distributed device, includes whether the device support
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -37,16 +33,14 @@ Extended information for distributed device, includes whether the device support
 ## dmDeviceType
 
 ```TypeScript
-readonly dmDeviceType?: int
+readonly dmDeviceType?: number
 ```
 
 Only [SPEAKER](arkts-audio-audio-devicetype-e.md#speaker) with networkId、[REMOTE_CAST](arkts-audio-audio-devicetype-e.md#remote_cast) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#remote_daudio) has dmDeviceType which indicated deviceTypeId.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -64,8 +58,6 @@ whether supports high-quality recording.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ whether supports high-quality recording.
 ## interruptGroupId
 
 ```TypeScript
-readonly interruptGroupId: int
+readonly interruptGroupId: number
 ```
 
 Interrupt group id
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -100,8 +90,6 @@ Device network id
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -109,16 +97,14 @@ Device network id
 ## volumeGroupId
 
 ```TypeScript
-readonly volumeGroupId: int
+readonly volumeGroupId: number
 ```
 
 Volume group id
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 

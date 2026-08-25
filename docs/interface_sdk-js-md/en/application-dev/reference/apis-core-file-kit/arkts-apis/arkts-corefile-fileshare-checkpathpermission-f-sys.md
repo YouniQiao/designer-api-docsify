@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## checkPathPermission
 
 ```TypeScript
-function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>
+function checkPathPermission(tokenID: number, policies: Array<PathPolicyInfo>, policyType: PolicyType): Promise<Array<boolean>>
 ```
 
 Check permissions for the path.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CHECK_SANDBOX_POLICY
 
@@ -28,9 +26,9 @@ Check permissions for the path.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| tokenID | number | Yes |
 | policies | Array&lt;[PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)&gt; | Yes |
-| [policyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-otaupdatepolicy-i.md) | [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Yes |
+| [policyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-otaupdatepolicy-i.md) | [PolicyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-policytype-e.md) | Yes |
 
 **Return value:**
 
@@ -47,36 +45,3 @@ Check permissions for the path.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
-
-async function checkPersistentPermissionExample() {
-  try {
-    let pathPolicyInfo1: fileShare.PathPolicyInfo = {
-      path: "/storage/Users/currentUser/Documents/1.txt",
-      operationMode: fileShare.OperationMode.READ_MODE,
-    }
-    let pathPolicyInfo2: fileShare.PathPolicyInfo = {
-      path: "/storage/Users/currentUser/Desktop/2.txt",
-      operationMode: fileShare.OperationMode.READ_MODE,
-    }
-
-    let policies: Array<fileShare.PathPolicyInfo> = [pathPolicyInfo1, pathPolicyInfo2];
-    let policyType: fileShare.PolicyType = fileShare.PolicyType.PERSISTENT_TYPE;
-    let tokenid = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system application.
-
-    fileShare.checkPathPermission(tokenid, policies, policyType).then((result:Array<boolean>) => {
-      for (let x of result) {
-        console.info('check permission result is', x);
-      }
-    })
-    console.info("checkPathPermission finish");
-  }
-  catch (error) {
-    console.info(error.code + 'checkPathPermission error' + error.message);
-  }
-}
-```

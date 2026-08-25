@@ -6,8 +6,6 @@ The **StaticSubscriberExtensionContext** module, inherited from **ExtensionConte
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -15,7 +13,7 @@ The **StaticSubscriberExtensionContext** module, inherited from **ExtensionConte
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionContext } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## startAbility
@@ -27,8 +25,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 Starts an ability that belongs to the same application as this **StaticSubscriberExtensionAbility**. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
@@ -66,73 +62,6 @@ Starts an ability that belongs to the same application as this **StaticSubscribe
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
 | [16300003](../../apis-ability-kit/errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) |
 
-**Examples**
-
-```TypeScript
-import { commonEventManager, BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let want: Want = {
-  bundleName: "com.example.myapp",
-  abilityName: "MyAbility"
-};
-
-class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
-  onReceiveEvent(event: commonEventManager.CommonEventData) {
-    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-
-    try {
-      this.context.startAbility(want, (error: BusinessError) => {
-        if (error) {
-          // Process service logic errors.
-          console.error(`startAbility failed, error.code: ${JSON.stringify(error.code)}, error.message: ${JSON.stringify(error.message)}.`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbility succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`startAbility failed, error.code: ${JSON.stringify(code)}, error.message: ${JSON.stringify(message)}.`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { commonEventManager, BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let want: Want = {
-  bundleName: "com.example.myapp",
-  abilityName: "MyAbility"
-};
-
-class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
-  onReceiveEvent(event: commonEventManager.CommonEventData) {
-    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-    try {
-      this.context.startAbility(want)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startAbility failed, error.code: ${JSON.stringify(error.code)}, error.message: ${JSON.stringify(error.message)}.`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`startAbility failed, error.code: ${JSON.stringify(code)}, error.message: ${JSON.stringify(message)}.`);
-    }
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -142,8 +71,6 @@ startAbility(want: Want): Promise<void>
 Starts an ability that belongs to the same application as this **StaticSubscriberExtensionAbility**. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
@@ -185,7 +112,3 @@ Starts an ability that belongs to the same application as this **StaticSubscribe
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
 | [16300003](../../apis-ability-kit/errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) |
-
-**Examples**
-
-See [startAbility](#startability)

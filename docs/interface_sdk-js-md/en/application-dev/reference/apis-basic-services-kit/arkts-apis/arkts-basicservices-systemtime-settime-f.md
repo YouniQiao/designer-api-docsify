@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setTime
@@ -15,8 +15,6 @@ function setTime(time: number, callback: AsyncCallback<void>): void
 Sets the system time. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -39,44 +37,6 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 | --- |
 | -1 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set the system time to 2021-01-20 02:36:25.
-let time = 1611081385000;
-try {
-  systemTime.setTime(time, (error: BusinessError) => {
-    if (error) {
-      console.info(`Failed to setting time. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in setting time`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set the system time to 2021-01-20 02:36:25.
-let time = 1611081385000;
-try {
-  systemTime.setTime(time).then(() => {
-    console.info(`Succeeded in setting time.`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to setting time. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## setTime
 
@@ -87,8 +47,6 @@ function setTime(time: number): Promise<void>
 Sets the system time. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -115,7 +73,3 @@ Sets the system time. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | -1 |
-
-**Examples**
-
-See [setTime](#settime)

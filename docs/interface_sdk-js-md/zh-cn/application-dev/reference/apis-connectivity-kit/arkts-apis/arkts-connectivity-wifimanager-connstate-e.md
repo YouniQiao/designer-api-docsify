@@ -1,10 +1,8 @@
 # ConnState
 
-WLAN连接状态枚举。@enum { int }
+WLAN连接状态枚举。@enum { number }
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -18,8 +16,6 @@ SCANNING
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## CONNECTING
@@ -31,8 +27,6 @@ CONNECTING
 正在建立WLAN连接。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -46,8 +40,6 @@ WLAN连接正在认证中。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## OBTAINING_IPADDR
@@ -59,8 +51,6 @@ OBTAINING_IPADDR
 正在获取WLAN连接的IP地址。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -74,8 +64,6 @@ WLAN连接已建立。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## DISCONNECTING
@@ -87,8 +75,6 @@ DISCONNECTING
 WLAN连接正在断开。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -102,8 +88,6 @@ WLAN连接已断开。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## UNKNOWN
@@ -115,7 +99,5 @@ UNKNOWN
 WLAN连接建立失败。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

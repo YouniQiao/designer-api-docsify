@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## querySelfFaultLog
@@ -15,8 +15,6 @@ function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<F
 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -31,57 +29,6 @@ function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<F
 | faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function queryFaultLogCallback(error: BusinessError, value: Array<FaultLogger.FaultLogInfo>) {
-  if (error) {
-    console.error(`error code:${error.code}, error msg:${error.message}`);
-  } else {
-    console.info(`value length: ${value.length}`);
-    let len: number = value.length;
-    for (let i = 0; i < len; i++) {
-      console.info(`log: ${i}`);
-      console.info(`Log pid: ${value[i].pid}`);
-      console.info(`Log uid: ${value[i].uid}`);
-      console.info(`Log type: ${value[i].type}`);
-      console.info(`Log timestamp: ${value[i].timestamp}`);
-      console.info(`Log reason: ${value[i].reason}`);
-      console.info(`Log module: ${value[i].module}`);
-      console.info(`Log summary: ${value[i].summary}`);
-      console.info(`Log text: ${value[i].fullLog}`);
-    }
-  }
-}
-FaultLogger.querySelfFaultLog(FaultLogger.FaultType.JS_CRASH, queryFaultLogCallback);
-```
-
-```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
-
-async function getLog() {
-  let value: Array<FaultLogger.FaultLogInfo> = await FaultLogger.querySelfFaultLog(FaultLogger.FaultType.JS_CRASH);
-  if (value) {
-    console.info(`value length: ${value.length}`);
-    let len: number = value.length;
-    for (let i = 0; i < len; i++) {
-      console.info(`log: ${i}`);
-      console.info(`Log pid: ${value[i].pid}`);
-      console.info(`Log uid: ${value[i].uid}`);
-      console.info(`Log type: ${value[i].type}`);
-      console.info(`Log timestamp: ${value[i].timestamp}`);
-      console.info(`Log reason: ${value[i].reason}`);
-      console.info(`Log module: ${value[i].module}`);
-      console.info(`Log summary: ${value[i].summary}`);
-      console.info(`Log text: ${value[i].fullLog}`);
-    }
-  }
-}
-```
-
 
 ## querySelfFaultLog
 
@@ -92,8 +39,6 @@ function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>
 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -112,7 +57,3 @@ function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; |
-
-**示例**
-
-参见 [querySelfFaultLog](#queryselffaultlog)

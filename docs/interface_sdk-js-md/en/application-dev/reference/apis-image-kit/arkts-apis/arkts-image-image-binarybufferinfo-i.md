@@ -4,29 +4,25 @@ Describes binary buffer info.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## bytesPerRow
 
 ```TypeScript
-bytesPerRow?: int
+bytesPerRow?: number
 ```
 
 Bytes per row.If it is not specified, it will be calculated as (width + 7) / 8. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Describes binary buffer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -61,8 +55,6 @@ Describes binary buffer size.
 **Type:** Size
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

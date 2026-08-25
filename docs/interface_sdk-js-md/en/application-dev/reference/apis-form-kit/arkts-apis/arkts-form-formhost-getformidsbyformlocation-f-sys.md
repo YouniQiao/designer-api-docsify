@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## getFormIdsByFormLocation
@@ -15,8 +15,6 @@ function getFormIdsByFormLocation(location: formInfo.FormLocation): Promise<Arra
 Obtains the list of widget IDs at a specified location on the device. This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -46,20 +44,3 @@ Obtains the list of widget IDs at a specified location on the device. This API u
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16501016](../errorcode-form.md#16501016-invalid-widget-location-information) |
-
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.getFormIdsByFormLocation(formInfo.FormLocation.DESKTOP).then((formIds: Array<string>) => {
-    console.info('formHost getFormIdsByFormLocation success.');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```

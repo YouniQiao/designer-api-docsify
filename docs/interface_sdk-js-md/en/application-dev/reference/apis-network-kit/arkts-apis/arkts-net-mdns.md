@@ -4,14 +4,12 @@ Multicast DNS (MDNS) provides functions such as adding, removing, discovering, a
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from '@kit.NetworkKit';
+import { mdns } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary

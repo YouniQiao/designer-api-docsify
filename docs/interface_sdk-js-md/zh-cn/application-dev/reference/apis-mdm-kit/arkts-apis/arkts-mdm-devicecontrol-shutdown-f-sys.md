@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceControl } from '@kit.MDMKit';
+import { deviceControl } from 'kits/@kit.MDMKit';
 ```
 
 ## shutdown
@@ -15,8 +15,6 @@ function shutdown(admin: Want): void
 使设备关机。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -45,22 +43,3 @@ function shutdown(admin: Want): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { deviceControl } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  deviceControl.shutdown(wantTemp);
-} catch (err) {
-  console.error(`Failed to shutdown device. Code is ${err.code}, message is ${err.message}`);
-}
-```

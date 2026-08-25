@@ -4,45 +4,39 @@ Describes the full download progress.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## downloadedSize
 
 ```TypeScript
-downloadedSize: long
+downloadedSize: number
 ```
 
 Size of the downloaded data, in bytes. The value range is [0, INT64_MAX). If the progress is abnormal, **INT64_MAX** is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## failedCount
 
 ```TypeScript
-failedCount: int
+failedCount: number
 ```
 
 Number of files that fail to be downloaded. The value range is [0, INT32_MAX]. If the progress is abnormal, **-1** is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -58,8 +52,6 @@ Download state.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## stopReason
@@ -74,54 +66,46 @@ Reason why the download stops.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## successfulCount
 
 ```TypeScript
-successfulCount: int
+successfulCount: number
 ```
 
 Number of downloaded files. The value range is [0, INT32_MAX]. If the progress is abnormal, **-1** is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## totalCount
 
 ```TypeScript
-totalCount: int
+totalCount: number
 ```
 
 Total number of files to be downloaded. The value range is [0, INT32_MAX]. If the progress is abnormal, **-1** is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## totalSize
 
 ```TypeScript
-totalSize: long
+totalSize: number
 ```
 
 Total size of the files to be downloaded, in bytes. The value range is [0, INT64_MAX). If the progress is abnormal, **INT64_MAX** is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager

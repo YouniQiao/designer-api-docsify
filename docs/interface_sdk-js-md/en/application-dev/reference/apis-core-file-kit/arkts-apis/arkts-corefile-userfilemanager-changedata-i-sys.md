@@ -4,8 +4,6 @@ Defines the return value of the listener callback.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md)
@@ -17,7 +15,7 @@ Defines the return value of the listener callback.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@kit.CoreFileKit';
+import { userFileManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## subUris
@@ -31,8 +29,6 @@ URIs of the changed files in the album. The value may be undefined. Check whethe
 **Type:** Array&lt;string&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -51,8 +47,6 @@ Notification type.
 **Type:** NotifyType
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -73,8 +67,6 @@ Array of all file asset or album URIs with the same [NotifyType](arkts-corefile-
 **Type:** Array&lt;string&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 

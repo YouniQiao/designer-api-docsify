@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isAdminEnabled
@@ -15,8 +15,6 @@ function isAdminEnabled(admin: Want, callback: AsyncCallback<boolean>): void
 Checks whether a device administrator application of the current user is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,66 +36,6 @@ Checks whether a device administrator application of the current user is enabled
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.isAdminEnabled(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to query admin is enabled or not. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-adminManager.isAdminEnabled(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to query admin is enabled. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-adminManager.isAdminEnabled(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query admin is enabled or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## isAdminEnabled
 
@@ -108,8 +46,6 @@ function isAdminEnabled(admin: Want, userId: number, callback: AsyncCallback<boo
 Checks whether a device administrator application of the specified user is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,10 +68,6 @@ Checks whether a device administrator application of the specified user is enabl
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [isAdminEnabled](#isadminenabled)
-
 
 ## isAdminEnabled
 
@@ -146,8 +78,6 @@ function isAdminEnabled(admin: Want, userId?: number): Promise<boolean>
 Checks whether a device administrator application of the current or specified user is enabled. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,7 +104,3 @@ Checks whether a device administrator application of the current or specified us
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [isAdminEnabled](#isadminenabled)

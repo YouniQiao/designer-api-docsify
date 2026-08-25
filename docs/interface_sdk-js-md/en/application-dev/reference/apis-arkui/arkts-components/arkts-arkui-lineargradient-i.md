@@ -4,8 +4,6 @@ Linear Gradient Interface@interface LinearGradient
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Linear Gradient Angle
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -43,8 +39,6 @@ Linear Gradient Colors
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -57,11 +51,9 @@ direction?: GradientDirection
 
 Linear Gradient Direction
 
-**Type:** GradientDirection
+**Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,8 +70,6 @@ Linear Gradient Repeating
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

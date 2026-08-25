@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## DOCUMENT_FORMAT_AUTO
@@ -17,8 +15,6 @@ DOCUMENT_FORMAT_AUTO = 0
 表示自动检测格式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,8 +30,6 @@ DOCUMENT_FORMAT_JPEG = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -49,8 +43,6 @@ DOCUMENT_FORMAT_PDF = 2
 表示PDF格式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +58,6 @@ DOCUMENT_FORMAT_POSTSCRIPT = 3
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -82,8 +72,6 @@ DOCUMENT_FORMAT_TEXT = 4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -97,8 +85,6 @@ DOCUMENT_FORMAT_RAW = 5
 表示RAW格式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

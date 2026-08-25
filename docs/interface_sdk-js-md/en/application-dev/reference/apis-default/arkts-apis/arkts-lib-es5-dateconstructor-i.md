@@ -1,7 +1,5 @@
 # DateConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -13,8 +11,6 @@
 (): string
 ```
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -25,8 +21,6 @@
 new(): Date
 ```
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -36,8 +30,6 @@ new(): Date
 ```TypeScript
 new(value: number | string): Date
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -56,8 +48,6 @@ new(year: number, monthIndex: number, date?: number, hours?: number, minutes?: n
 ```
 
 Creates a new Date.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -83,8 +73,6 @@ now(): number
 
 Returns the number of milliseconds elapsed since midnight, January 1, 1970 Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -96,8 +84,6 @@ parse(s: string): number
 ```
 
 Parses a string containing a date, and returns the number of milliseconds between that date and midnight, January 1, 1970.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -116,8 +102,6 @@ UTC(year: number, monthIndex: number, date?: number, hours?: number, minutes?: n
 ```
 
 Returns the number of milliseconds between midnight, January 1, 1970 Universal Coordinated Time (UTC) (or GMT) and the specified date.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -142,5 +126,3 @@ readonly prototype: Date
 ```
 
 **Type:** Date
-
-**ArkTS mode:** 

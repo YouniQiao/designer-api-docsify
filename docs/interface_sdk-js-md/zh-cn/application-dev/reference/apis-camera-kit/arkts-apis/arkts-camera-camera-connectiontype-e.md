@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_CONNECTION_BUILT_IN
@@ -17,8 +15,6 @@ CAMERA_CONNECTION_BUILT_IN = 0
 内置相机。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ USB连接的相机。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -49,8 +43,6 @@ CAMERA_CONNECTION_REMOTE = 2
 远程连接的相机。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

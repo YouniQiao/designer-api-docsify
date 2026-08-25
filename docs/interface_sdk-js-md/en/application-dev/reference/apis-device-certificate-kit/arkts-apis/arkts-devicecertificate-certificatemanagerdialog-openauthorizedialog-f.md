@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## openAuthorizeDialog
@@ -15,8 +15,6 @@ function openAuthorizeDialog(context: common.Context): Promise<string>
 Opens the authorization page of the certificate management dialog box to grant a credential to the application. After the API is successfully called, the app can use the URI of the authorization certificate returned by the API to sign, verify the signature, and query details. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -46,56 +44,6 @@ Opens the authorization page of the certificate management dialog box to grant a
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) |
 
-**Examples**
-
-```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-
-/* context is application context information, which is obtained by the caller. The context here is only an example. */
-let context: common.Context = new UIContext().getHostContext() as common.Context;
-try {
-    certificateManagerDialog.openAuthorizeDialog(context).then((uri: string) => {
-        console.info(`Success to authorize certificate, uri: ${uri}`)
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to authorize certificate. Code: ${err.code}, message: ${err.message}`);
-    });
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Failed to authorize certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { certificateManagerDialog, certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-
-/* context is application context information, which is obtained by the caller. The context here is only an example. */
-let context: common.Context = new UIContext().getHostContext() as common.Context;
-let certTypes: Array<certificateManagerDialog.CertificateType> = [
-  certificateManagerDialog.CertificateType.CREDENTIAL_USER,
-  certificateManagerDialog.CertificateType.CREDENTIAL_APP,
-  certificateManagerDialog.CertificateType.CREDENTIAL_UKEY
-];
-let certPurpose: certificateManager.CertificatePurpose = certificateManager.CertificatePurpose.PURPOSE_DEFAULT;
-let authorizeRequest: certificateManagerDialog.AuthorizeRequest = { certTypes: certTypes, certPurpose: certPurpose };
-try {
-    certificateManagerDialog.openAuthorizeDialog(context, authorizeRequest).then((certReference: certificateManagerDialog.CertReference) => {
-      let reference = certReference;
-      console.info(`Success to open authorize dialog.`)
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to open authorize dialog. Code: ${err.code}, message: ${err.message}`);
-    });
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Failed to open authorize dialog. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## openAuthorizeDialog
 
@@ -106,8 +54,6 @@ function openAuthorizeDialog(context: common.Context, authorizeRequest: Authoriz
 Opens the Certificate Credential Authorization page of the Certificate Management dialog box. On the page that is displayed, you can authorize the application to use certificate credentials. After the API is called successfully, the app can use the URI of the authorization certificate returned by the API to sign, verify the signature, and query details. The types of certificates that can be authorized include application certificate credentials, user certificate credentials, and USB Key certificate credentials. Using Promise Asynchronous Callbacks.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -138,7 +84,3 @@ Opens the Certificate Credential Authorization page of the Certificate Managemen
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) |
 | [29700006](../errorcode-certManagerDialog.md#29700006-failed-to-validate-the-input-parameter) |
 | [29700007](../errorcode-certManagerDialog.md#29700007-no-available-authorization-certificate) |
-
-**Examples**
-
-See [openAuthorizeDialog](#openauthorizedialog)

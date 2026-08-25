@@ -4,8 +4,6 @@ The **NotificationExtensionContent** module describes the notification extension
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## text
@@ -20,8 +18,6 @@ Notification body content. It cannot be an empty string. The size cannot exceed 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## title
@@ -35,7 +31,5 @@ Notification title. It cannot be an empty string. The size cannot exceed 1024 by
 **Type:** string
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

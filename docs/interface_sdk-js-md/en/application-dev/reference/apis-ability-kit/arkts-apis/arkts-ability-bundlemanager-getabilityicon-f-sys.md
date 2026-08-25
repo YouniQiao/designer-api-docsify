@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAbilityIcon
@@ -15,8 +15,6 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -60,8 +58,6 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

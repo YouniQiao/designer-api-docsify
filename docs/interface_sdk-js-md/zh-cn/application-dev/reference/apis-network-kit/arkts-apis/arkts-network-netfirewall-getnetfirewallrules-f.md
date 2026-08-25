@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## getNetFirewallRules
@@ -15,8 +15,6 @@ function getNetFirewallRules(userId: number, requestParam: RequestParam): Promis
 按用户ID获取防火墙规则，需要指定分页查询参数。目前支持根据防火墙规则名排序。使用Promise异步回调。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** ohos.permission.GET_NET_FIREWALL
 
@@ -45,22 +43,3 @@ function getNetFirewallRules(userId: number, requestParam: RequestParam): Promis
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [29400000](../errorcode-net-netfirewall.md#29400000-指定用户不存在) |
-
-**示例**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ruleParam: netFirewall.RequestParam = {
-  page: 1,
-  pageSize: 10,
-  orderField: netFirewall.NetFirewallOrderField.ORDER_BY_RULE_NAME,
-  orderType: netFirewall.NetFirewallOrderType.ORDER_ASC
-};
-netFirewall.getNetFirewallRules(100, ruleParam).then((result: netFirewall.FirewallRulePage) => {
-  console.info("result:", JSON.stringify(result));
-}, (error: BusinessError) => {
-  console.error("get firewall rules failed: " + JSON.stringify(error));
-});
-```

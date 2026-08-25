@@ -4,8 +4,6 @@ Describes the filter for application lifecycle change events. It can be used as 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,23 +11,24 @@ Describes the filter for application lifecycle change events. It can be used as 
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## abilityStateTypes
 
 ```TypeScript
-abilityStateTypes?: int
+abilityStateTypes?: number
 ```
 
 Type of ability state to filter. The options are as follows:  
-- **0**: Do not listen for any ability state. - A bitwise OR combination of the enumerated values of [FilterAbilityStateType](arkts-ability-appmanager-filterabilitystatetype-e-sys.md), for example, "appManager.FilterAbilityStateType.CREATE | appManager.FilterAbilityStateType.FOREGROUND" listens for both the creating and foreground states of ability components. - If this parameter is not set, all ability state types are listened for by default.
+- **0**: Do not listen for any ability state.  
+- A bitwise OR combination of the enumerated values of [FilterAbilityStateType](arkts-ability-appmanager-filterabilitystatetype-e-sys.md), for  
+example, "appManager.FilterAbilityStateType.CREATE | appManager.FilterAbilityStateType.FOREGROUND" listens for both the creating and foreground states of ability components.  
+- If this parameter is not set, all ability state types are listened for by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -38,17 +37,18 @@ Type of ability state to filter. The options are as follows:
 ## appStateTypes
 
 ```TypeScript
-appStateTypes?: int
+appStateTypes?: number
 ```
 
 Type of application state to filter. The options are as follows:  
-- **0**: Do not listen for any application state. - A bitwise OR combination of the enumerated values of [FilterAppStateType](arkts-ability-appmanager-filterappstatetype-e-sys.md), for example,"appManager.FilterAppStateType.CREATE | appManager.FilterAppStateType.FOREGROUND" listens for both the creating and foreground states of applications. - If this parameter is not set, all application state types are listened for by default.
+- **0**: Do not listen for any application state.  
+- A bitwise OR combination of the enumerated values of [FilterAppStateType](arkts-ability-appmanager-filterappstatetype-e-sys.md), for example,  
+"appManager.FilterAppStateType.CREATE | appManager.FilterAppStateType.FOREGROUND" listens for both the creating and foreground states of applications.  
+- If this parameter is not set, all application state types are listened for by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -57,17 +57,18 @@ Type of application state to filter. The options are as follows:
 ## bundleTypes
 
 ```TypeScript
-bundleTypes?: int
+bundleTypes?: number
 ```
 
 Type of application to filter. The options are as follows:  
-- **0**: Do not listen for any application type. - A bitwise OR combination of the enumerated values of [FilterBundleType](arkts-ability-appmanager-filterbundletype-e-sys.md), for example, "appManager.FilterBundleType.APP | appManager.FilterBundleType.ATOMIC_SERVICE" listens for lifecycle change events for both applications and atomic services. - If this parameter is not set, all application types are listened for by default.
+- **0**: Do not listen for any application type.  
+- A bitwise OR combination of the enumerated values of [FilterBundleType](arkts-ability-appmanager-filterbundletype-e-sys.md), for example, "  
+appManager.FilterBundleType.APP | appManager.FilterBundleType.ATOMIC_SERVICE" listens for lifecycle change events for both applications and atomic services.  
+- If this parameter is not set, all application types are listened for by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -76,17 +77,19 @@ Type of application to filter. The options are as follows:
 ## callbacks
 
 ```TypeScript
-callbacks?: int
+callbacks?: number
 ```
 
 Callback to filter. The options are as follows:  
-- **0**: Do not listen for any callback. - A bitwise OR combination of the enumerated values of [FilterCallback](arkts-ability-appmanager-filtercallback-e-sys.md), for example, "appManager.FilterCallback.ON_ABILITY_STATE_CHANGED | appManager.FilterCallback.ON_PROCESS_STATE_CHANGED" listens for both ApplicationStateObserver.onAbilityStateChanged and ApplicationStateObserver.onProcessStateChanged. - If this parameter is not set, all callbacks enumerated in [FilterCallback](arkts-ability-appmanager-filtercallback-e-sys.md) are listened for by default.
+- **0**: Do not listen for any callback.  
+- A bitwise OR combination of the enumerated values of [FilterCallback](arkts-ability-appmanager-filtercallback-e-sys.md), for example, "  
+appManager.FilterCallback.ON_ABILITY_STATE_CHANGED | appManager.FilterCallback.ON_PROCESS_STATE_CHANGED" listens for both [ApplicationStateObserver.onAbilityStateChanged](arkts-ability-applicationstateobserver-c.md#onabilitystatechanged) and [ApplicationStateObserver.onProcessStateChanged](arkts-ability-applicationstateobserver-c.md#onprocessstatechanged).  
+- If this parameter is not set, all callbacks enumerated in [FilterCallback](arkts-ability-appmanager-filtercallback-e-sys.md) are listened for  
+by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -95,17 +98,18 @@ Callback to filter. The options are as follows:
 ## processStateTypes
 
 ```TypeScript
-processStateTypes?: int
+processStateTypes?: number
 ```
 
 Type of process state to filter. The options are as follows:  
-- **0**: Do not listen for any process state. - A bitwise OR combination of the enumerated values of [FilterProcessStateType](arkts-ability-appmanager-filterprocessstatetype-e-sys.md), for example, "appManager.FilterProcessStateType.CREATE | appManager.FilterProcessStateType.FOREGROUND" listens for both the creating and foreground states of processes. - If this parameter is not set, all process state types are listened for by default.
+- **0**: Do not listen for any process state.  
+- A bitwise OR combination of the enumerated values of [FilterProcessStateType](arkts-ability-appmanager-filterprocessstatetype-e-sys.md), for  
+example, "appManager.FilterProcessStateType.CREATE | appManager.FilterProcessStateType.FOREGROUND" listens for both the creating and foreground states of processes.  
+- If this parameter is not set, all process state types are listened for by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

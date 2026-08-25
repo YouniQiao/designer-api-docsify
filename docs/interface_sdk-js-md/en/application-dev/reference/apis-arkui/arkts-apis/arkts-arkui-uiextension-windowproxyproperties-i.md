@@ -4,14 +4,12 @@ Provides information about a component.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from '@kit.ArkUI';
+import { uiExtension } from 'kits/@kit.ArkUI';
 ```
 
 ## uiExtensionHostWindowProxyRect
@@ -25,8 +23,6 @@ Position and size of the component (**EmbeddedComponent** or **UIExtensionCompon
 **Type:** window.Rect
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

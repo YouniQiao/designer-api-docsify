@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## animationForHidden
@@ -26,8 +24,6 @@ animationForHidden(context: TransitionContext): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -44,84 +40,6 @@ animationForHidden(context: TransitionContext): void
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// xxx.ts
-export class AnimationConfig {
-  private animationForHiddenCallFunc_: ((context : window.TransitionContext) => void) | undefined = undefined;
-  HideWindowWithCustomAnimation(windowClass: window.Window, callback: (context : window.TransitionContext) => void) {
-    if (!windowClass) {
-      console.error('windowClass is undefined');
-      return false;
-    }
-    this.animationForHiddenCallFunc_ = callback;
-    let controller: window.TransitionController = windowClass.getTransitionController();
-    controller.animationForHidden = (context : window.TransitionContext)=> {
-      this.animationForHiddenCallFunc_(context);
-    };
-    windowClass.hideWithAnimation(()=>{
-      console.info('hide with animation success');
-    });
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-let animationConfig = new AnimationConfig();
-let systemTypeWindow = window.findWindow("systemTypeWindow"); // 此处需要获取一个系统类型窗口。
-try {
-  animationConfig?.HideWindowWithCustomAnimation(systemTypeWindow, (context : window.TransitionContext)=>{
-    console.info('complete transition end');
-    let toWindow = context.toWindow;
-    this.getUIContext()?.animateTo({
-      duration: 1000, // 动画时长
-      tempo: 0.5, // 播放速率
-      curve: Curve.EaseInOut, // 动画曲线
-      delay: 0, // 动画延迟
-      iterations: 1, // 播放次数
-      playMode: PlayMode.Normal, // 动画模式
-      onFinish: () => {
-        console.info('onFinish in animation');
-        context.completeTransition(true)
-      }
-    }, () => {
-      let obj : window.TranslateOptions = {
-        x : 100.0,
-        y : 0.0,
-        z : 0.0
-      };
-      toWindow?.translate(obj); // 设置动画过程中的属性转换
-      console.info('toWindow translate end in animation');
-    });
-    console.info('complete transition end');
-  });
-} catch (error) {
-  console.error(`HideWindowWithCustomAnimation error code: ${error.code}, message: ${error.message}` );
-}
-```
-
-## animationForHidden
-
-```TypeScript
-animationForHidden?: TransitionControllerCallback
-```
-
-窗口隐藏时的自定义动画配置。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [animationForHidden](#animationforhidden)
 
 ## animationForShown
 
@@ -133,8 +51,6 @@ animationForShown(context: TransitionContext): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -151,101 +67,3 @@ animationForShown(context: TransitionContext): void
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// xxx.ts
-export class AnimationConfig {
-  private animationForShownCallFunc_: ((context : window.TransitionContext) => void) | undefined = undefined;
-  ShowWindowWithCustomAnimation(windowClass: window.Window, callback: (context : window.TransitionContext) => void) {
-    if (!windowClass) {
-      console.error('windowClass is undefined');
-      return false;
-    }
-    this.animationForShownCallFunc_ = callback;
-    let controller: window.TransitionController = windowClass.getTransitionController();
-    controller.animationForShown = (context : window.TransitionContext)=> {
-      this.animationForShownCallFunc_(context);
-    };
-    windowClass.showWithAnimation(()=>{
-      console.info('Show with animation success');
-    });
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-let animationConfig = new AnimationConfig();
-let systemTypeWindow = window.findWindow("systemTypeWindow"); // 此处需要获取一个系统类型窗口。
-try {
-  animationConfig?.ShowWindowWithCustomAnimation(systemTypeWindow, (context : window.TransitionContext)=>{
-    console.info('complete transition end');
-    let toWindow = context.toWindow;
-    this.getUIContext()?.animateTo({
-      duration: 1000, // 动画时长
-      tempo: 0.5, // 播放速率
-      curve: Curve.EaseInOut, // 动画曲线
-      delay: 0, // 动画延迟
-      iterations: 1, // 播放次数
-      playMode: PlayMode.Normal, // 动画模式
-      onFinish: () => {
-        console.info('onFinish in animation');
-        context.completeTransition(true)
-      }
-    }, () => {
-      let obj : window.TranslateOptions = {
-        x : 100.0,
-        y : 0.0,
-        z : 0.0
-      };
-      toWindow?.translate(obj); // 设置动画过程中的属性转换
-      console.info('toWindow translate end in animation');
-    });
-    console.info('complete transition end');
-  });
-} catch (error) {
-  console.error(`ShowWindowWithCustomAnimation error code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## animationForShown
-
-```TypeScript
-animationForShown?: TransitionControllerCallback
-```
-
-窗口显示时的自定义动画配置。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [animationForShown](#animationforshown)
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let config: window.Configuration = {
-  name: "systemTypeWindow",
-  windowType: window.WindowType.TYPE_PANEL, // 根据需要自选系统窗口类型
-  ctx: this.context
-};
-let promise = window.createWindow(config);
-promise.then((data) => {
-  windowClass = data;
-  console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## createController
@@ -15,8 +15,6 @@ function createController(sessionId: string): Promise<AVSessionController>
 根据会话ID创建会话控制器。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本23+：ohos.permission.MANAGE_MEDIA_RESOURCES or ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
@@ -44,49 +42,3 @@ function createController(sessionId: string): Promise<AVSessionController>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-
-**示例**
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.getAllSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
-              console.info(`Succeeded in getting all session descriptors, length: ${descriptors.length}`);
-              if (descriptors.length > 0 ) {
-                avSession.createController(descriptors[0]?.sessionId).then((avcontroller: avSession.AVSessionController) => {
-                  console.info('Succeeded in creating controller.');
-                });
-              }
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-let currentAVcontroller: avSession.AVSessionController | undefined = undefined;
-avSession.createController(sessionId).then((avcontroller: avSession.AVSessionController) => {
-  currentAVcontroller = avcontroller;
-  console.info('Succeeded in creating controller.');
-});
-```
-
-```TypeScript
-let currentAVcontroller: avSession.AVSessionController | undefined = undefined;
-avSession.createController(sessionId, (err, avcontroller: avSession.AVSessionController) => {
-  currentAVcontroller = avcontroller;
-    console.info('Succeeded in creating controller.');
-});
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
+import { dialogSession } from 'kits/@kit.AbilityKit';
 ```
 
 ## sendDialogResult
@@ -15,8 +15,6 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 Sends a request for a dialog box. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,76 +46,6 @@ Sends a request for a dialog box. This API uses a promise to return the result.
 | [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { dialogSession, Want, UIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    // want is specified by the system. dialogSessionId is a built-in parameter.
-    let dialogSessionId = want?.parameters?.dialogSessionId.toString();
-
-    // Obtain DialogSessionInfo.
-    let dialogSessionInfo: dialogSession.DialogSessionInfo =
-      dialogSession.getDialogSessionInfo(dialogSessionId);
-
-    let isAllow: boolean = true;
-
-    let targetWant: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    try {
-      dialogSession.sendDialogResult(dialogSessionId, targetWant, isAllow, (err, data) => {
-        if (err) {
-          console.error(`sendDialogResult error, errorCode: ${err.code}`);
-        } else {
-          console.info(`sendDialogResult success`);
-        }
-      });
-    } catch (err) {
-      console.error(`sendDialogResult error, errorCode: ${(err as BusinessError).code}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dialogSession, Want, UIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    // want is specified by the system. dialogSessionId is a built-in parameter.
-    let dialogSessionId = want?.parameters?.dialogSessionId.toString();
-
-    // Obtain DialogSessionInfo.
-    let dialogSessionInfo: dialogSession.DialogSessionInfo = dialogSession.getDialogSessionInfo(dialogSessionId);
-
-    let isAllow: boolean = true;
-
-    let targetWant: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    try {
-      dialogSession.sendDialogResult(dialogSessionId, targetWant, isAllow)
-        .then((data) => {
-          console.info(`sendDialogResult success, pid: ${data}`);
-        }, (err: BusinessError) => {
-          console.error(`sendDialogResult error, errorCode: ${err.code}`);
-        });
-    } catch (err) {
-      console.error(`sendDialogResult error, errorCode: ${(err as BusinessError).code}`);
-    }
-  }
-}
-```
-
 
 ## sendDialogResult
 
@@ -128,8 +56,6 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 Sends a request for a dialog box. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -155,7 +81,3 @@ Sends a request for a dialog box. This API uses an asynchronous callback to retu
 | [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
 | [16000006](../errorcode-ability.md#16000006-cross-user-operation-is-not-allowed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [sendDialogResult](#senddialogresult)

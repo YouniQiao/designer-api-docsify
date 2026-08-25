@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createSymKeyGenerator
@@ -12,11 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createSymKeyGenerator(algName: string): SymKeyGenerator
 ```
 
-Creates a symmetric key generator instance with the specified algorithm.<br>For details about the supported specifications, see Symmetric Key Generation and Conversion Specifications.
+Creates a symmetric key generator instance with the specified algorithm.
+
+For details about the supported specifications, see Symmetric Key Generation and Conversion Specifications.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,11 +42,3 @@ Creates a symmetric key generator instance with the specified algorithm.<br>For 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
-```

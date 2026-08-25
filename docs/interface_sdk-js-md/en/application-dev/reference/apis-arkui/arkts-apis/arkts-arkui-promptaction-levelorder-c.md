@@ -4,14 +4,12 @@ Defines the display order of a dialog box.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## clamp
@@ -23,8 +21,6 @@ static clamp(order: number): LevelOrder
 Creates a dialog box level with the specified order.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,8 +49,6 @@ getOrder(): number
 Obtains the display order of this dialog box.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

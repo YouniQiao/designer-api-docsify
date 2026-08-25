@@ -4,8 +4,6 @@ Describes the class of a bluetooth device.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md)
@@ -15,7 +13,7 @@ Describes the class of a bluetooth device.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -29,8 +27,6 @@ Address of a Bluetooth device.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -49,8 +45,6 @@ Profile connection state of the device.
 **Type:** BondState
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

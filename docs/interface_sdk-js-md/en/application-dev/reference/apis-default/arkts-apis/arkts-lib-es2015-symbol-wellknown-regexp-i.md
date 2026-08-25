@@ -1,7 +1,5 @@
 # RegExp
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@
 ```
 
 Matches a string with this regular expression, and returns an array containing the results of that search.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,8 +30,6 @@ Matches a string with this regular expression, and returns an array containing t
 ```
 
 Replaces text in a string, using this regular expression.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -56,8 +50,6 @@ Replaces text in a string, using this regular expression.
 
 Replaces text in a string, using this regular expression.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -77,8 +69,6 @@ Replaces text in a string, using this regular expression.
 
 Finds the position beginning first substring match in a regular expression search using this regular expression.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -96,8 +86,6 @@ Finds the position beginning first substring match in a regular expression searc
 ```
 
 Returns an array of substrings that were delimited by strings in the original input that match against this regular expression.If the regular expression contains capturing parentheses, then each time this regular expression matches, the results (including any undefined results) of the capturing parentheses are spliced.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

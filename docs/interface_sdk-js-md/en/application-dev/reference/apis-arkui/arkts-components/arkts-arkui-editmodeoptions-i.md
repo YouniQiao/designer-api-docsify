@@ -4,8 +4,6 @@ Define edit mode options.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Called to return whether to display the number badge or the number displayed on 
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -37,15 +33,13 @@ Called to return whether to display the number badge or the number displayed on 
 enableGatherSelectedItemsAnimation?: boolean
 ```
 
-Define whether to gather selected items in grid or list when item is long pressed for context menu.
+Define whether to gather selected items in grid or list when item is number pressed for context menu.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +61,6 @@ Enable two-finger swipe multi-selection. {@code true} indicates that two-finger 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -88,8 +80,6 @@ Use default multi-select style. {@code true} indicates that the check box is dis
 **Default:** true
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

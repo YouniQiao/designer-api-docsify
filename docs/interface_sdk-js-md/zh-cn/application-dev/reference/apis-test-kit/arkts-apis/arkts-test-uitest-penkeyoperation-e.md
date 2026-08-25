@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Test.UiTest
 
 ## CLICK
@@ -17,8 +15,6 @@ CLICK = 0
 单击。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -33,8 +29,6 @@ DOUBLE_CLICK = 1
 双击。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

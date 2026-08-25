@@ -4,8 +4,6 @@ Enum for geofence transition status.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_ENTER
@@ -17,8 +15,6 @@ GEOFENCE_TRANSITION_EVENT_ENTER = 1
 The device is within the geofence.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -32,8 +28,6 @@ The device is out of the geofence.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_DWELL
@@ -45,7 +39,5 @@ GEOFENCE_TRANSITION_EVENT_DWELL = 4
 The device is in the geographical fence for a period of time.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence

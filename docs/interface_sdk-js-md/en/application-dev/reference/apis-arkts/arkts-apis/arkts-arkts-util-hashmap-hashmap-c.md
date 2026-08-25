@@ -4,38 +4,14 @@ HashMap is a map implemented based on the array, linked list, and red-black tree
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
+import { HashMap } from 'kits/@kit.ArkTS';
+import { HashMapCbFn } from 'kits/@kit.ArkTS';
 ```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<[K, V]>
-```
-
-Obtains an iterator, each item of which is a JavaScript object.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| IterableIterator & lt;[K, V] & gt; |
 
 ## [Symbol.iterator]
 
@@ -47,8 +23,6 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -57,56 +31,13 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[K, V] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-
-// Method 1:
-for (let item of hashMap) {
-  console.info("key:", item[0]);
-  console.info("value:", item[1]);
-}
-// key: squirrel
-// value: 123
-// key: sparrow
-// value: 356
-
-// Method 2:
-let iter = hashMap[Symbol.iterator]();
-let temp: IteratorResult<Object[]> = iter.next();
-while(!temp.done) {
-  console.info("key:", temp.value[0]);
-  console.info("value:", temp.value[1]);
-  temp = iter.next();
-}
-// key: squirrel
-// value: 123
-// key: sparrow
-// value: 356
-```
-
-```TypeScript
-// You are not advised to use the set or remove APIs in Symbol.iterator because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
-let hashMap = new HashMap<string, number>();
-for(let i = 0; i < 10; i++) {
-  hashMap.set("sparrow" + i, 123);
-}
-
-for(let i = 0; i < 10; i++) {
-  hashMap.remove("sparrow" + i);
-}
-```
 
 ## clear
 
@@ -118,8 +49,6 @@ Clears this HashMap and sets its length to **0**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -129,17 +58,6 @@ Clears this HashMap and sets its length to **0**.
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-hashMap.clear();
-let result = hashMap.isEmpty();
-console.info("result:", result);  // result: true
-```
 
 ## constructor
 
@@ -151,8 +69,6 @@ A constructor used to create a **HashMap** instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -162,12 +78,6 @@ A constructor used to create a **HashMap** instance.
 | Error Code ID |
 | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
-
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-```
 
 ## entries
 
@@ -179,8 +89,6 @@ Returns an iterator that contains all the elements in this HashMap.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -189,40 +97,13 @@ Returns an iterator that contains all the elements in this HashMap.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[K, V] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let iter = hashMap.entries();
-let temp: IteratorResult<Object[]> = iter.next();
-while(!temp.done) {
-  console.info("key:" + temp.value[0]);
-  console.info("value:" + temp.value[1]);
-  temp = iter.next();
-}
-```
-
-```TypeScript
-// You are not advised to use the set or remove APIs in entries because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
-let hashMap = new HashMap<string, number>();
-for(let i = 0; i < 10; i++) {
-  hashMap.set("sparrow" + i, 123);
-}
-
-for(let i = 0; i < 10; i++) {
-  hashMap.remove("sparrow" + i);
-}
-```
 
 ## forEach
 
@@ -233,8 +114,6 @@ forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?:
 Uses a callback to traverse each element.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -253,57 +132,6 @@ Uses a callback to traverse each element.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-hashMap.set("sparrow", 123);
-hashMap.set("gull", 357);
-hashMap.forEach((value: number, key: string) => {
-  console.info("value: " + value, "key: " + key);
-});
-// value: 123 key: sparrow
-// value: 357 key: gull
-```
-
-```TypeScript
-// You are not advised to use the set or remove APIs in forEach because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
-let hashMap = new HashMap<string, number>();
-for(let i = 0; i < 10; i++) {
-  hashMap.set("sparrow" + i, 123);
-}
-
-for(let i = 0; i < 10; i++) {
-  hashMap.remove("sparrow" + i);
-}
-```
-
-## forEach
-
-```TypeScript
-forEach(callbackFn: HashMapCbFn<K, V>): void
-```
-
-Uses a callback to traverse the elements in this container and obtain their position indexes.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackFn | [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md)&lt;K, V&gt; | Yes |
-
-**Examples**
-
-See [forEach](#foreach)
-
 ## get
 
 ```TypeScript
@@ -313,8 +141,6 @@ get(key: K): V
 Obtains the value of the specified key in this HashMap. If nothing is obtained, **undefined** is returned.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -338,48 +164,6 @@ Obtains the value of the specified key in this HashMap. If nothing is obtained, 
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-const hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let result = hashMap.get("sparrow");
-console.info("result:", result);  // result: 356
-```
-
-## get
-
-```TypeScript
-get(key: K): V | undefined
-```
-
-Obtains the value of the specified key in this container. If nothing is obtained, undefined is returned.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V \| undefined |
-
-**Examples**
-
-See [get](#get)
-
 ## hasKey
 
 ```TypeScript
@@ -389,8 +173,6 @@ hasKey(key: K): boolean
 Checks whether this HashMap has the specified key.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -414,15 +196,6 @@ Checks whether this HashMap has the specified key.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-const hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-let result = hashMap.hasKey("squirrel");
-console.info("result:", result);  // result: true
-```
-
 ## hasValue
 
 ```TypeScript
@@ -432,8 +205,6 @@ hasValue(value: V): boolean
 Checks whether this HashMap has the specified value.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -457,15 +228,6 @@ Checks whether this HashMap has the specified value.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-const hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-let result = hashMap.hasValue(123);
-console.info("result:", result);  // result: true
-```
-
 ## isEmpty
 
 ```TypeScript
@@ -475,8 +237,6 @@ isEmpty(): boolean
 Checks whether this HashMap is empty (contains no element).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -494,14 +254,6 @@ Checks whether this HashMap is empty (contains no element).
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-const hashMap = new HashMap<string, number>();
-let result = hashMap.isEmpty();
-console.info("result = ", result) // result = true
-```
-
 ## keys
 
 ```TypeScript
@@ -512,8 +264,6 @@ Returns an iterator that contains all the keys in this HashMap.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -522,27 +272,13 @@ Returns an iterator that contains all the keys in this HashMap.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;K & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let keys = hashMap.keys();
-for (let key of keys) {
-  console.info("key:" + key);
-}
-// key:squirrel
-// key:sparrow
-```
 
 ## remove
 
@@ -553,8 +289,6 @@ remove(key: K): V
 Removes an element with the specified key from this HashMap.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -578,48 +312,6 @@ Removes an element with the specified key from this HashMap.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let result = hashMap.remove("sparrow");
-console.info("result:", result);  // result: 356
-```
-
-## remove
-
-```TypeScript
-remove(key: K): V | undefined
-```
-
-Removes an element with the specified key from this container.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V \| undefined |
-
-**Examples**
-
-See [remove](#remove)
-
 ## replace
 
 ```TypeScript
@@ -629,8 +321,6 @@ replace(key: K, newValue: V): boolean
 Replaces the value of a specified key.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -655,15 +345,6 @@ Replaces the value of a specified key.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-hashMap.set("sparrow", 123);
-let result = hashMap.replace("sparrow", 357);
-console.info("result:", result);  // result: true
-```
-
 ## set
 
 ```TypeScript
@@ -673,8 +354,6 @@ set(key: K, value: V): Object
 Adds or updates an element in this HashMap.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -699,14 +378,6 @@ Adds or updates an element in this HashMap.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123)
-console.info("result:", hashMap.get("squirrel"));  // result: 123
-```
-
 ## setAll
 
 ```TypeScript
@@ -716,8 +387,6 @@ setAll(map: HashMap<K, V>): void
 Adds all elements in a **HashMap** instance to this HashMap.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -735,19 +404,6 @@ Adds all elements in a **HashMap** instance to this HashMap.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-const hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let newHashMap = new HashMap<string, number>();
-newHashMap.set("newMap", 99);
-hashMap.setAll(newHashMap);
-let result = hashMap.hasKey("newMap");
-console.info("result:", result);  // result: true
-```
-
 ## values
 
 ```TypeScript
@@ -758,8 +414,6 @@ Returns an iterator that contains all the values in this HashMap.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -768,27 +422,13 @@ Returns an iterator that contains all the values in this HashMap.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;V & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashMap = new HashMap<string, number>();
-hashMap.set("squirrel", 123);
-hashMap.set("sparrow", 356);
-let values = hashMap.values();
-for (let value of values) {
-  console.info("value:", value)
-}
-// value: 123
-// value: 356
-```
 
 ## length
 
@@ -801,8 +441,6 @@ Number of elements in a HashMap.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

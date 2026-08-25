@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -19,13 +17,11 @@
 componentHeight: number
 ```
 
-组件的高。单位：px
+组件的高。单位：[px](../arkts-apis/arkts-arkui-length-t.md)
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,13 +35,11 @@ componentHeight: number
 componentWidth: number
 ```
 
-组件的宽。单位：px
+组件的宽。单位：[px](../arkts-apis/arkts-arkui-length-t.md)
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,14 +53,12 @@ componentWidth: number
 contentHeight: number
 ```
 
-图片实际绘制的高度。单位：px  
+图片实际绘制的高度。单位：[px](../arkts-apis/arkts-arkui-length-t.md)  
 **说明：**仅在loadingStatus返回1时有效。
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,14 +72,12 @@ contentHeight: number
 contentOffsetX: number
 ```
 
-实际绘制内容相对于组件自身的x轴偏移。单位：px  
+实际绘制内容相对于组件自身的x轴偏移。单位：[px](../arkts-apis/arkts-arkui-length-t.md)  
 **说明：**仅在loadingStatus返回1时有效。
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,14 +91,12 @@ contentOffsetX: number
 contentOffsetY: number
 ```
 
-实际绘制内容相对于组件自身的y轴偏移。单位：px  
+实际绘制内容相对于组件自身的y轴偏移。单位：[px](../arkts-apis/arkts-arkui-length-t.md)  
 **说明：**仅在loadingStatus返回1时有效。
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,14 +110,12 @@ contentOffsetY: number
 contentWidth: number
 ```
 
-图片实际绘制的宽度。单位：px  
+图片实际绘制的宽度。单位：[px](../arkts-apis/arkts-arkui-length-t.md)  
 **说明：**仅在loadingStatus返回1时有效。
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -143,13 +129,11 @@ contentWidth: number
 height: number
 ```
 
-图片的高。单位：px
+图片的高。单位：[px](../arkts-apis/arkts-arkui-length-t.md)
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,8 +154,6 @@ loadingStatus: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -184,13 +166,11 @@ loadingStatus: number
 width: number
 ```
 
-图片的宽。单位：px
+图片的宽。单位：[px](../arkts-apis/arkts-arkui-length-t.md)
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

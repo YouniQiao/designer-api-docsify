@@ -4,8 +4,6 @@ Provides information about geographic locations@interface Location
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md)
@@ -17,7 +15,7 @@ Provides information about geographic locations@interface Location
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## accuracy
@@ -31,8 +29,6 @@ Indicates location accuracy, in meters.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -54,8 +50,6 @@ Indicates additional information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [additions](arkts-location-geolocationmanager-location-i.md#additions)
@@ -75,8 +69,6 @@ Indicates the amount of additional descriptive information.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -98,8 +90,6 @@ Indicates location altitude, in meters.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [altitude](arkts-location-geolocationmanager-location-i.md#altitude)
@@ -119,8 +109,6 @@ Indicates direction information.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -142,8 +130,6 @@ Indicates latitude information. A positive value indicates north latitude, and a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [latitude](arkts-location-geolocationmanager-location-i.md#latitude)
@@ -163,8 +149,6 @@ Indicates Longitude information. A positive value indicates east longitude , and
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -186,8 +170,6 @@ Indicates speed, in m/s.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [speed](arkts-location-geolocationmanager-location-i.md#speed)
@@ -208,8 +190,6 @@ Indicates location timestamp since boot.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [timeSinceBoot](arkts-location-geolocationmanager-location-i.md#timesinceboot)
@@ -229,8 +209,6 @@ Indicates location timestamp in the UTC format.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

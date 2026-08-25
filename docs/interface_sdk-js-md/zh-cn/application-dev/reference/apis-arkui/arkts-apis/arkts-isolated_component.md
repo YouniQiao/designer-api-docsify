@@ -39,6 +39,6 @@
 
 | 名称 |
 | --- |
-| [IsolatedComponent(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponent) |
+| [IsolatedComponent(System API)](arkts-arkui-isolatedcomponent-con-sys.md) |
 | [IsolatedComponentInstance(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponentinstance) |
 <!--DelEnd-->

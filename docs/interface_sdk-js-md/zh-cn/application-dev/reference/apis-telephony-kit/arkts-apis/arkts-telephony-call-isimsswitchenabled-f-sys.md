@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isImsSwitchEnabled
 
 ```TypeScript
-function isImsSwitchEnabled(slotId: int, callback: AsyncCallback<boolean>): void
+function isImsSwitchEnabled(slotId: number, callback: AsyncCallback<boolean>): void
 ```
 
 判断Ims开关是否启用。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -26,7 +24,7 @@ function isImsSwitchEnabled(slotId: int, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
@@ -40,42 +38,16 @@ function isImsSwitchEnabled(slotId: int, callback: AsyncCallback<boolean>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isImsSwitchEnabled(0, (err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isImsSwitchEnabled fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`isImsSwitchEnabled success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isImsSwitchEnabled(0).then((data: boolean) => {
-    console.info(`isImsSwitchEnabled success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isImsSwitchEnabled fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## isImsSwitchEnabled
 
 ```TypeScript
-function isImsSwitchEnabled(slotId: int): Promise<boolean>
+function isImsSwitchEnabled(slotId: number): Promise<boolean>
 ```
 
 判断Ims开关是否启用。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -85,7 +57,7 @@ function isImsSwitchEnabled(slotId: int): Promise<boolean>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -103,7 +75,3 @@ function isImsSwitchEnabled(slotId: int): Promise<boolean>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [isImsSwitchEnabled](#isimsswitchenabled)

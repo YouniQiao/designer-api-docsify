@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startDiscoverDevices
@@ -15,8 +15,6 @@ function startDiscoverDevices(): boolean
 Discover Wi-Fi P2P devices.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -31,15 +29,3 @@ Discover Wi-Fi P2P devices.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-	wifi.startDiscoverDevices();	
-}catch(error){
-	console.error("failed:" + JSON.stringify(error));
-}
-```

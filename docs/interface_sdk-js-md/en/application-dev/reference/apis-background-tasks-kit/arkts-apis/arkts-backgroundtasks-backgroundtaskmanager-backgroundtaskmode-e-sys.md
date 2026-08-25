@@ -4,8 +4,6 @@ Main type of a continuous task. It is usually used together with the subtype [Ba
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MODE_ALLOW_WIFI_AWARE
@@ -17,8 +15,6 @@ MODE_ALLOW_WIFI_AWARE = 7
 WLAN-related services.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

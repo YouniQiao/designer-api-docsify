@@ -4,14 +4,12 @@ Defines the configuration options of the **SelectionMenu** component.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from '@kit.ArkUI';
+import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## onCopy
@@ -25,8 +23,6 @@ Event callback to take the place of the preset copy menu option.It is effective 
 **event** indicates the returned information.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,6 @@ Event callback to take the place of the preset cut menu option.It is effective o
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -77,8 +71,6 @@ Event callback to take the place of the preset paste menu option.It is effective
 **event** indicates the returned information.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +96,6 @@ Event callback to take the place of the preset select-all menu option.It is effe
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -130,8 +120,6 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -146,11 +134,9 @@ controller?: RichEditorController
 
 Expanded drop-down menu options.If this parameter is left empty, the expanded drop-down menu is not displayed.The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
 
-**Type:** RichEditorController
+**Type:** [RichEditorController](../arkts-components/arkts-arkui-richeditorcontroller-c.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,8 +156,6 @@ Edit menu.If **editorMenuOptions** is not set, the edit menu is not displayed.Wh
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -189,8 +173,6 @@ Expanded drop-down menu options.If this parameter is left empty, the expanded dr
 **Type:** Array&lt;[ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

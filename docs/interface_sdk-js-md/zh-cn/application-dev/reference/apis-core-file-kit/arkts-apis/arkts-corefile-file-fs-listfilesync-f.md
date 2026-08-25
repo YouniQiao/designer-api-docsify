@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## listFileSync
@@ -20,8 +20,6 @@ declare function listFileSync(
 默认以同步方式列出当前目录下所有文件名和目录名，返回文件名数组，支持按后缀、文件名等条件过滤。可通过配置ListFileOptions中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,24 +47,3 @@ declare function listFileSync(
 | 13900011 |
 | 13900018 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-import { Filter, ListFileOptions} from '@kit.CoreFileKit';
-
-let listFileOption: ListFileOptions = {
-  recursion: false,
-  listNum: 0,
-  filter: {
-    suffix: [".png", ".jpg", ".jpeg"],
-    displayName: ["*abc", "efg*"],
-    fileSizeOver: 1024
-  }
-};
-let filenames = fileIo.listFileSync(pathDir, listFileOption);
-console.info(`Succeeded in listing file.`);
-for (let i = 0; i < filenames.length; i++) {
-  console.info(`Succeeded in listing file, file name: ${filenames[i]}`);
-}
-```

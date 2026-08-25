@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## setControlledAppLists
@@ -15,8 +15,6 @@ function setControlledAppLists(appLists: Array<string>, userId?: number): Promis
 设置受企业DLP控制的应用程序列表。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.DLP_POLICY_MANAGER
 
@@ -47,20 +45,3 @@ function setControlledAppLists(appLists: Array<string>, userId?: number): Promis
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 | [19100023](../errorcode-dlp.md#19100023-指定的用户id与当前用户id不一致) |
 | [19100024](../errorcode-dlp.md#19100024-个人空间用户不支持设置受控应用) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appList: Array<string> = ['appId1', 'appId2'];
-let userId: number = 100;
-dlpPermission.setControlledAppLists(appList, userId).then(() => {
-  console.info("Successfully set controlled appLists.");
-}).catch((error: BusinessError) => {
-  console.error(error.message);
-}).finally(() => {
-  console.info("Completed set controlled appLists operation.");
-});
-```

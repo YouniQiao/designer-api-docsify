@@ -4,14 +4,12 @@ USB配件信息。
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## description
@@ -25,8 +23,6 @@ description: string
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -42,8 +38,6 @@ manufacturer: string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## product
@@ -57,8 +51,6 @@ product: string
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -74,8 +66,6 @@ serialNumber: string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## version
@@ -89,7 +79,5 @@ version: string
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager

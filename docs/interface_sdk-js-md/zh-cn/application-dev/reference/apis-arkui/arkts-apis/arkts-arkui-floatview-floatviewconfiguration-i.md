@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## context
@@ -25,8 +23,6 @@ context: BaseContext
 **类型：** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ isConfirmOnClose?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -61,8 +55,6 @@ templateType: FloatViewTemplateType
 **类型：** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

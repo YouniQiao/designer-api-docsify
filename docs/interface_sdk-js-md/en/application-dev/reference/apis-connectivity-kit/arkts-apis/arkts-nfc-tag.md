@@ -16,7 +16,7 @@ The **tag** module provides APIs for operating and managing NFC tags. The follow
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

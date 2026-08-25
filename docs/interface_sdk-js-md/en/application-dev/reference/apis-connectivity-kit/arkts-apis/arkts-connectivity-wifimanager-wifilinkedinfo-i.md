@@ -4,29 +4,25 @@ Wi-Fi connection information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## band
 
 ```TypeScript
-band: int
+band: number
 ```
 
 The frequency band of a Wi-Fi access point.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -41,8 +37,6 @@ The BSSID of the Wi-Fi hotspot
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,8 +54,6 @@ Channel width of the connected hotspot.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## connState
@@ -76,23 +68,19 @@ The state of this Wi-Fi connection.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## frequency
 
 ```TypeScript
-frequency: int
+frequency: number
 ```
 
 The frequency of a Wi-Fi access point.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -101,16 +89,14 @@ The frequency of a Wi-Fi access point.
 ## ipAddress
 
 ```TypeScript
-ipAddress: int
+ipAddress: number
 ```
 
 The IP address of this Wi-Fi connection.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -126,8 +112,6 @@ Whether the SSID of the access point (AP) of this Wi-Fi connection is hidden.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## isHiLinkNetwork
@@ -141,8 +125,6 @@ Whether the Wi-Fi hotspot is HiLink network.
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -158,23 +140,19 @@ Whether this Wi-Fi connection restricts the data volume.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## linkSpeed
 
 ```TypeScript
-linkSpeed: int
+linkSpeed: number
 ```
 
 The speed of a Wi-Fi access point.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -190,71 +168,61 @@ The Wi-Fi MAC address of a device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## macType
 
 ```TypeScript
-macType: int
+macType: number
 ```
 
 Type of macAddress: 0 - real mac, 1 - random mac.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## maxSupportedRxLinkSpeed
 
 ```TypeScript
-maxSupportedRxLinkSpeed: int
+maxSupportedRxLinkSpeed: number
 ```
 
 Max rx speed of a Wi-Fi access point.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## maxSupportedTxLinkSpeed
 
 ```TypeScript
-maxSupportedTxLinkSpeed: int
+maxSupportedTxLinkSpeed: number
 ```
 
 Max tx speed of a Wi-Fi access point.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## rssi
 
 ```TypeScript
-rssi: int
+rssi: number
 ```
 
 The RSSI(dBm) of a Wi-Fi access point.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -263,16 +231,14 @@ The RSSI(dBm) of a Wi-Fi access point.
 ## rxLinkSpeed
 
 ```TypeScript
-rxLinkSpeed: int
+rxLinkSpeed: number
 ```
 
 The rx speed of a Wi-Fi access point.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -287,8 +253,6 @@ The SSID of the Wi-Fi hotspot
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -306,8 +270,6 @@ Supported wifi category
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## wifiLinkType
@@ -322,8 +284,6 @@ Wi-Fi link type
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## wifiStandard
@@ -337,7 +297,5 @@ Wifi standard of current connection.
 **Type:** [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA

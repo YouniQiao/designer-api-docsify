@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getShortcutInfoByAbility
 
 ```TypeScript
-function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilityName: string, userId?: int, appIndex?: int): Array<ShortcutInfo>
+function getShortcutInfoByAbility(bundleName: string, moduleName: string, abilityName: string, userId?: number, appIndex?: number): Array<ShortcutInfo>
 ```
 
 Obtains shortcut info by bundleName, moduleName, abilityName, userId and appIndex. If you need to obtains shortcut info under the current user, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED needs to be applied for. If you need to obtains shortcut info under other users, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS need to be applied for.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -33,8 +31,8 @@ Obtains shortcut info by bundleName, moduleName, abilityName, userId and appInde
 | bundleName | string | Yes |
 | moduleName | string | Yes |
 | abilityName | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| userId | number | No |
+| appIndex | number | No |
 
 **Return value:**
 

@@ -7,8 +7,6 @@ Describes the notification capsule, which is used to display the capsule form in
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## backgroundColor
@@ -22,8 +20,6 @@ Capsule background color. Colors in rgb, rgba, or argb format are supported. Exa
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -39,8 +35,6 @@ Capsule icon. The total bytes of the icon pixel does not exceed 192 KB (the tota
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## title
@@ -54,7 +48,5 @@ Capsule title. The size does not exceed 202 bytes, and the excess part will be t
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

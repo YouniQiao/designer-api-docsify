@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## uninstallEnterpriseReSignatureCertificate
@@ -27,8 +27,6 @@ Uninstalls the enterprise application re-signing certificate. After the enterpri
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -41,7 +39,7 @@ Uninstalls the enterprise application re-signing certificate. After the enterpri
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 | certificateAlias | string | Yes |
-| accountId | int | Yes |
+| accountId | number | Yes |
 
 **Error codes:**
 
@@ -52,28 +50,3 @@ Uninstalls the enterprise application re-signing certificate. After the enterpri
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [9201008](../errorcode-enterpriseDeviceManager.md#9201008-enterprise-re-signing-certificate-not-exist) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let certificateAlias: string = 'test.cer';
-// Replace with actual values.
-let accountId: number = 100;
-try {
-  securityManager.uninstallEnterpriseReSignatureCertificate(
-    wantTemp, certificateAlias, accountId);
-  console.info('Success to uninstall enterprise re signature certificate.');
-} catch (err) {
-  console.error(`Failed to uninstall enterprise re signature certificate.
-    Code: ${err.code}, message: ${err.message}`);
-};
-```

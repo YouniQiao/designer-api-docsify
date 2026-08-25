@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md)
@@ -17,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## latitude
@@ -31,8 +29,6 @@ latitude: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -52,8 +48,6 @@ locale?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [locale](arkts-location-geolocationmanager-reversegeocoderequest-i.md#locale)
@@ -72,8 +66,6 @@ longitude: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [longitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#longitude)
@@ -91,8 +83,6 @@ maxItems?: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

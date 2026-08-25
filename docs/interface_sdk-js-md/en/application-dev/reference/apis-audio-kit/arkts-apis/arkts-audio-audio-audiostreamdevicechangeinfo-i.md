@@ -4,14 +4,12 @@ Describes the event received by the application when the audio stream device is 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## changeReason
@@ -25,8 +23,6 @@ Audio stream device change reason.
 **Type:** [AudioStreamDeviceChangeReason](arkts-audio-audio-audiostreamdevicechangereason-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Audio device descriptors after change.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -61,8 +55,6 @@ Audio device descriptors before change.
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

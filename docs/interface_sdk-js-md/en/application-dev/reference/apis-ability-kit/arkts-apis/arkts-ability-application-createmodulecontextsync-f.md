@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
+import { application } from 'kits/@kit.AbilityKit';
 ```
 
 ## createModuleContextSync
@@ -20,8 +20,6 @@ Creates the context for a module. The [resourceManager.Configuration](../../apis
 > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

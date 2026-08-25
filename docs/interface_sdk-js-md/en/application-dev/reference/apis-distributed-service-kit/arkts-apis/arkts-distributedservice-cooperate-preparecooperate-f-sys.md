@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## prepareCooperate
@@ -15,8 +15,6 @@ function prepareCooperate(callback: AsyncCallback<void>): void
 Prepares for screen hopping. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
@@ -38,42 +36,6 @@ Prepares for screen hopping. This API uses an asynchronous callback to return th
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.prepareCooperate((error: BusinessError) => {
-    if (error) {
-      console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-        [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Keyboard mouse crossing prepareCooperate success.`);
-  });
-} catch (error) {
-  console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-    [`code`, `message`])}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.prepareCooperate().then(() => {
-    console.info(`Keyboard mouse crossing prepareCooperate success.`);
-  }, (error: BusinessError) => {
-    console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-      [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-    [`code`, `message`])}`);
-}
-```
-
 
 ## prepareCooperate
 
@@ -84,8 +46,6 @@ function prepareCooperate(): Promise<void>
 Prepares for screen hopping. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
@@ -106,7 +66,3 @@ Prepares for screen hopping. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [prepareCooperate](#preparecooperate)

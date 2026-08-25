@@ -6,8 +6,6 @@ Context是Stage模型的上下文基类，主要用于访问特定应用程序�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## createBundleContext
@@ -23,8 +21,6 @@ createBundleContext(bundleName: string): Context
 > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md)替代。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -58,25 +54,6 @@ createBundleContext(bundleName: string): Context
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let bundleContext: common.Context;
-    try {
-      bundleContext = this.context.createBundleContext('com.example.test');
-    } catch (error) {
-      console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## createModuleContext
 
 ```TypeScript
@@ -86,8 +63,6 @@ createModuleContext(bundleName: string, moduleName: string): Context
 根据Bundle名称和模块名称创建上下文。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -118,43 +93,6 @@ createModuleContext(bundleName: string, moduleName: string): Context
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let moduleContext: common.Context;
-    try {
-      // 根据模块名创建上下文
-      moduleContext = this.context.createModuleContext('entry');
-    } catch (error) {
-      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { common, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let moduleContext: common.Context;
-    try {
-      moduleContext = this.context.createModuleContext('com.example.test', 'entry');
-    } catch (error) {
-      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## createModuleResourceManager
 
 ```TypeScript
@@ -164,8 +102,6 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 为指定Module创建资源管理对象。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -196,26 +132,6 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    let ModuleResourceManager: resourceManager.ResourceManager;
-    try {
-      ModuleResourceManager = this.context.createModuleResourceManager('com.example.test', 'entry');
-    } catch (error) {
-      console.error(`createModuleResourceManager failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## createSystemHspModuleResourceManager
 
 ```TypeScript
@@ -225,8 +141,6 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 该接口用于OEM厂商预置的[系统级HSP](../../../quick-start/application-package-glossary.md#系统级hsp)创建自己的 [ResourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -253,16 +167,3 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16400001](../errorcode-ability.md#16400001-目标应用类型不是系统级hsp) |
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info('MyAbility onCreate');
-    this.context.createSystemHspModuleResourceManager("com.example.myapplication", "library");
-  }
-}
-```

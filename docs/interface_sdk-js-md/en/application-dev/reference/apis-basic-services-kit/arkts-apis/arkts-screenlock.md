@@ -4,14 +4,12 @@ systemScreenLock@namespace screenLock
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

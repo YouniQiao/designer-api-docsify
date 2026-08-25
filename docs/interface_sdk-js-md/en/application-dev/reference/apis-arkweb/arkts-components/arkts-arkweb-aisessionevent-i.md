@@ -4,8 +4,6 @@ Custom AI session configuration object, used to define the lifecycle callbacks o
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Callback function triggered when an AI session is created. Returns **true** to s
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -39,8 +35,6 @@ Callback function triggered when an AI session is destroyed, used to clean up re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -54,8 +48,6 @@ onExecuteAIAction: OnExecuteAIAction
 Callback function triggered when an AI session executes an action.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +64,6 @@ AI session type.
 **Type:** [AISessionType](arkts-arkweb-aisessiontype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

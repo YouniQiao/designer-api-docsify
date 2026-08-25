@@ -7,8 +7,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,11 +23,9 @@ alignContent?: Alignment
 设置子组件在容器内的对齐方式。该属性与接口的构造入参同时设置时，以属性设置的值为准。默认值：Alignment.Center非法值：按默认值处理。  
 **说明：** 该参数与align同时设置时，后设置的属性值会覆盖先设置的属性值。
 
-**类型：** Alignment
+**类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

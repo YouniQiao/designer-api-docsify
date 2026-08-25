@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## ORDER_ASC
@@ -18,8 +16,6 @@ ORDER_ASC = 1
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## ORDER_DESC
@@ -31,7 +27,5 @@ ORDER_DESC = 100
 按防火墙规则排序类型降序排序。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

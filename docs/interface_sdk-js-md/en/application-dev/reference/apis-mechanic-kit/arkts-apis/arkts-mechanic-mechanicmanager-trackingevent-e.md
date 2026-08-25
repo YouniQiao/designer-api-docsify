@@ -1,10 +1,8 @@
 # TrackingEvent
 
-Enumerates the tracking events. @enum { int }
+Enumerates the tracking events. @enum { number }
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -18,8 +16,6 @@ Camera tracking enabled by user.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 ## CAMERA_TRACKING_USER_DISABLED
@@ -32,8 +28,6 @@ Camera tracking disabled by user.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 ## CAMERA_TRACKING_LAYOUT_CHANGED
@@ -45,7 +39,5 @@ CAMERA_TRACKING_LAYOUT_CHANGED = 2
 Camera tracking layout changed. You can call getCameraTrackingLayout to obtain the new layout.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core

@@ -4,8 +4,6 @@ Represents a listener object used to listen for background task state changes.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents a listener object used to listen for background task state changes.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## onContinuousTaskStart
@@ -26,8 +24,6 @@ Called when a continuous task starts.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -39,24 +35,6 @@ Called when a continuous task starts.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
-    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-    }
-}
-```
 
 ## onContinuousTaskStop
 
@@ -68,8 +46,6 @@ Called when a continuous task stops.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -81,24 +57,6 @@ Called when a continuous task stops.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
-    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-    }
-}
-```
 
 ## onContinuousTaskUpdate
 
@@ -110,8 +68,6 @@ Called when a continuous task is updated.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -123,21 +79,3 @@ Called when a continuous task is updated.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-private backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
-    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-    }
-}
-```

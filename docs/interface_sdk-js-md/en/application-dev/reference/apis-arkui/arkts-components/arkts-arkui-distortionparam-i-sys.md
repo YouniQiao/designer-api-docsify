@@ -13,8 +13,6 @@ Defines the spatial distortion parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -36,8 +34,6 @@ Barrel distortion degree of the four edges.The four values in **Vector4** are as
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -55,8 +51,6 @@ Coordinates of the bottom-left corner.
 **Type:** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +70,6 @@ Coordinates of the bottom-right corner.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -96,8 +88,6 @@ Coordinates of the top-left corner.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -115,8 +105,6 @@ Coordinates of the top-right corner.
 **Type:** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

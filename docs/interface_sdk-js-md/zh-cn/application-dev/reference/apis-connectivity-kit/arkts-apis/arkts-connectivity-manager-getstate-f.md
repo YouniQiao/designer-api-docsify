@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { manager } from '@kit.ConnectivityKit';
+import { manager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getState
@@ -15,8 +15,6 @@ function getState(): NearlinkState
 查询星闪开关状态。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

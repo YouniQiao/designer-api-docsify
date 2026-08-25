@@ -4,8 +4,6 @@ LazyForEach的数据源，开发者需要实现该接口以提供数据访问和
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ getData(index: number): any
 获取索引值index对应的数据。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -51,8 +47,6 @@ registerDataChangeListener(listener: DataChangeListener): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -73,8 +67,6 @@ totalCount(): number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -94,8 +86,6 @@ unregisterDataChangeListener(listener: DataChangeListener): void
 注销数据改变的监听器。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

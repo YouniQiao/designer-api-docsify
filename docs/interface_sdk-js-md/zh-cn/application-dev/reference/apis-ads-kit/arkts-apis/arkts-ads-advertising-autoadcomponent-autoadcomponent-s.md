@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
 
 ```TypeScript
-import { AutoAdComponent } from '@kit.AdsKit';
+import { AutoAdComponent } from 'kits/@kit.AdsKit';
 ```
 
 ## build
@@ -23,8 +21,6 @@ build(): void
 用于创建AutoAdComponent对象的构造函数。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,8 +38,6 @@ adOptions: advertising.AdOptions
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -59,8 +53,6 @@ adParam: advertising.AdRequestParams
 **类型：** advertising.AdRequestParams
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -78,8 +70,6 @@ displayOptions: advertising.AdDisplayOptions
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -95,8 +85,6 @@ interactionListener: advertising.AdInteractionListener
 **类型：** advertising.AdInteractionListener
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

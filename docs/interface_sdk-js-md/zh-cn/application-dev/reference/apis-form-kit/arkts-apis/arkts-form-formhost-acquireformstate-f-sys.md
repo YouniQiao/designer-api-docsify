@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## acquireFormState
@@ -15,8 +15,6 @@ function acquireFormState(want: Want, callback: AsyncCallback<formInfo.FormState
 获取卡片状态。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -43,126 +41,6 @@ function acquireFormState(want: Want, callback: AsyncCallback<formInfo.FormState
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  'deviceId': '',
-  'bundleName': 'ohos.samples.FormApplication',
-  'abilityName': 'FormAbility',
-  'parameters': {
-    'ohos.extra.param.key.module_name': 'entry',
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.form_dimension': 2
-  }
-};
-try {
-  formHost.acquireFormState(want, (error: BusinessError, data: formInfo.FormStateInfo) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info(`formHost acquireFormState, data: ${data.formState}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost, formInfo } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  'deviceId': '',
-  'bundleName': 'ohos.samples.FormApplication',
-  'abilityName': 'FormAbility',
-  'parameters': {
-    'ohos.extra.param.key.module_name': 'entry',
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.form_dimension': 2
-  }
-};
-try {
-  formHost.acquireFormState(want, (error, data) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info(`formHost acquireFormState`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  'deviceId': '',
-  'bundleName': 'ohos.samples.FormApplication',
-  'abilityName': 'FormAbility',
-  'parameters': {
-    'ohos.extra.param.key.module_name': 'entry',
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.form_dimension': 2
-  }
-};
-try {
-  formHost.acquireFormState(want).then((data: formInfo.FormStateInfo) => {
-    console.info(`formHost acquireFormState, data: ${data.formState}`);
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost, formInfo } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  'deviceId': '',
-  'bundleName': 'ohos.samples.FormApplication',
-  'abilityName': 'FormAbility',
-  'parameters': {
-    'ohos.extra.param.key.module_name': 'entry',
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.form_dimension': 2
-  }
-};
-try {
-  formHost.acquireFormState(want).then((data) => {
-    console.info(`formHost acquireFormState`);
-  }).catch((error) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch(error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## acquireFormState
 
@@ -173,8 +51,6 @@ function acquireFormState(want: Want): Promise<formInfo.FormStateInfo>
 获取卡片状态。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -205,7 +81,3 @@ function acquireFormState(want: Want): Promise<formInfo.FormStateInfo>
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
-
-**示例**
-
-参见 [acquireFormState](#acquireformstate)

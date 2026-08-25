@@ -4,14 +4,12 @@ Information about a lock.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@kit.ArkTS';
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
 ```
 
 ## contextId
@@ -25,8 +23,6 @@ lockAsync caller's execution context identifier.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Lock operation mode.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -61,8 +55,6 @@ Name of the lock.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

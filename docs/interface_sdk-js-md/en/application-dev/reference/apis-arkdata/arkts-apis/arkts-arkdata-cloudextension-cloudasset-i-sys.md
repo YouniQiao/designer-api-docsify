@@ -6,8 +6,6 @@ Represents the cloud asset information.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -15,7 +13,7 @@ Represents the cloud asset information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'kits/@kit.ArkData';
 ```
 
 ## assetId
@@ -29,8 +27,6 @@ Asset ID.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -47,8 +43,6 @@ Hashed value of the asset modification time and size.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

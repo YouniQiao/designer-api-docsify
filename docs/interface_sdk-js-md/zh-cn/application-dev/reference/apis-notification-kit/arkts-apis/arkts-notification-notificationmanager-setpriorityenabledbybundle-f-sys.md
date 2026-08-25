@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setPriorityEnabledByBundle
@@ -16,8 +16,6 @@ function setPriorityEnabledByBundle(bundle: BundleOption, enableStatus: Priority
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function setPriorityEnabledByBundle(bundle: BundleOption, enableStatus: Priority
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enableStatus | [PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md) | 是 |
 
 **返回值：**
@@ -47,33 +45,3 @@ function setPriorityEnabledByBundle(bundle: BundleOption, enableStatus: Priority
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const bundleOption : notificationManager.BundleOption = { bundle: 'bundleName', uid: 0 };
-notificationManager.setPriorityEnabledByBundle(bundleOption, notificationManager.PriorityEnableStatus.ENABLE).then(() => {
-  hilog.info(0x0000, 'testTag', `setPriorityEnabledByBundle success`);
-}).catch((err: BusinessError) => {
-  hilog.error(0x0000, 'testTag', `setPriorityEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const bundleOption : notificationManager.BundleOption = { bundle: 'bundleName', uid: 0 };
-notificationManager.setPriorityEnabledByBundle(bundleOption, notificationManager.PriorityEnableStatus.ENABLE).then(() => {
-  console.info(`setPriorityEnabledByBundle success`);
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setPriorityEnabledByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```

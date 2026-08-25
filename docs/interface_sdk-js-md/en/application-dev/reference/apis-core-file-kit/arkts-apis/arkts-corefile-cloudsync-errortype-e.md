@@ -1,11 +1,16 @@
 # ErrorType
 
 Enumerates the device-cloud sync errors.  
-- In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are unavailable. If the mobile data network is available, the synchronization can be performed normally. - During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW** will be return when the current upload is complete. - When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not allowed. - If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in the cloud.
+- In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are  
+unavailable. If the mobile data network is available, the synchronization can be performed normally.  
+- During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW**  
+will be return when the current upload is complete.  
+- When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not  
+allowed.  
+- If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in  
+the cloud.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -19,8 +24,6 @@ No error.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NETWORK_UNAVAILABLE
@@ -32,8 +35,6 @@ NETWORK_UNAVAILABLE = 1
 No network is available.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -47,8 +48,6 @@ Wi-Fi is unavailable.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## BATTERY_LEVEL_LOW
@@ -60,8 +59,6 @@ BATTERY_LEVEL_LOW = 3
 The battery level is lower than 10%.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -75,8 +72,6 @@ The battery level is lower than 15%.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## CLOUD_STORAGE_FULL
@@ -88,8 +83,6 @@ CLOUD_STORAGE_FULL = 5
 The cloud space is insufficient.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -103,8 +96,6 @@ The local space is insufficient.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## DEVICE_TEMPERATURE_TOO_HIGH
@@ -117,8 +108,6 @@ The device temperature is too high.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## REMOTE_SERVER_ABNORMAL
@@ -130,7 +119,5 @@ REMOTE_SERVER_ABNORMAL = 8
 The remote service is unavailable.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

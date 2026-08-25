@@ -4,14 +4,12 @@ Defines a contact's note.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## noteContent
@@ -26,18 +24,6 @@ Notes of the contact.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Create contact data in JSON format:
-
-```TypeScript
-let note: contact.Note = {
-    noteContent: "noteContent"
-};
-```

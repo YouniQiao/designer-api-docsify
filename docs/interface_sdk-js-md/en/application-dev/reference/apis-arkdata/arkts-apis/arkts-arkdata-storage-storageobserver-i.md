@@ -4,8 +4,6 @@ Define the change data information object.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -26,7 +24,5 @@ Data changed.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9

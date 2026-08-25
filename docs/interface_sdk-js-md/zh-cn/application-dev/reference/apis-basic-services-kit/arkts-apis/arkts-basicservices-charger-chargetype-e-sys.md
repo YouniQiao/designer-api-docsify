@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ NONE
 表示未知类型。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -36,8 +32,6 @@ WIRED_NORMAL
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ WIRED_QUICK
 表示有线快速充电类型。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -68,8 +60,6 @@ WIRED_SUPER_QUICK
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ WIRELESS_NORMAL
 表示无线正常充电类型。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -100,8 +88,6 @@ WIRELESS_QUICK
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +101,6 @@ WIRELESS_SUPER_QUICK
 表示无线超级快速充电类型。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 

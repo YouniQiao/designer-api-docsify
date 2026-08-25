@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 ```
 
 ## sendPrivateCommand
@@ -15,8 +15,6 @@ function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promi
 Sends a private command to the system-default input method application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

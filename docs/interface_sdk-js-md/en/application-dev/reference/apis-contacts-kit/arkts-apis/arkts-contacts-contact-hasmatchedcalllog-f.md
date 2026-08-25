@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## hasMatchedCallLog
@@ -15,8 +15,6 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: n
 Checks whether there are call records that meet the specified conditions. By default, call records within the last 6 hours are queried. This API applies only to carrier calls. This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Required permissions:** ohos.permission.CHECK_CALL_LOG
 
@@ -32,7 +30,7 @@ Checks whether there are call records that meet the specified conditions. By def
 | --- | --- | --- |
 | context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | phoneNumber | string | Yes |
-| minDuration | int | Yes |
+| minDuration | number | Yes |
 
 **Return value:**
 
@@ -59,8 +57,6 @@ Checks whether there are call records that meet the specified conditions. This A
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Required permissions:** ohos.permission.CHECK_CALL_LOG
 
 **Model restriction:** This API can be used only in the stage model.
@@ -75,8 +71,8 @@ Checks whether there are call records that meet the specified conditions. This A
 | --- | --- | --- |
 | context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | phoneNumber | string | Yes |
-| minDuration | int | Yes |
-| withinTime | int | Yes |
+| minDuration | number | Yes |
+| withinTime | number | Yes |
 
 **Return value:**
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## MOVE
@@ -17,8 +15,6 @@ MOVE = 0
 设置起始点。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ LINE = 1
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## QUAD
@@ -45,8 +39,6 @@ QUAD = 2
 添加二阶贝塞尔圆滑曲线。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,8 +52,6 @@ CONIC = 3
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## CUBIC
@@ -73,8 +63,6 @@ CUBIC = 4
 添加三阶贝塞尔圆滑曲线。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -88,8 +76,6 @@ CLOSE = 5
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DONE
@@ -101,7 +87,5 @@ DONE = CLOSE + 1
 路径设置完成。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing

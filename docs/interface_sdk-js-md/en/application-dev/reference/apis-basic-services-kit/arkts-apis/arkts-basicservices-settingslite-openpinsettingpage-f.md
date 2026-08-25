@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from '@kit.BasicServicesKit';
+import { settingsLite } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## openPinSettingPage
@@ -15,8 +15,6 @@ function openPinSettingPage(): void
 Opens the password settings page.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the FA model.
 

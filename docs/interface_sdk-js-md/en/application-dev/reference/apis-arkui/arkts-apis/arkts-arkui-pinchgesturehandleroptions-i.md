@@ -6,8 +6,6 @@ Provides the parameters of the pinch gesture handler. Inherits from [BaseHandler
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,8 +26,6 @@ Minimum recognition distance, in vp.Default value: **5**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -47,8 +43,6 @@ Minimum number of fingers required to trigger the pinch gesture. The value range
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

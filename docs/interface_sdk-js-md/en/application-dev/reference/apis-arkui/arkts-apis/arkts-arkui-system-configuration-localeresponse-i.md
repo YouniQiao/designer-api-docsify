@@ -4,14 +4,12 @@
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## Modules to Import
 
 ```TypeScript
-import { Configuration, LocaleResponse } from '@kit.ArkUI';
+import { Configuration, LocaleResponse } from 'kits/@kit.ArkUI';
 ```
 
 ## countryOrRegion
@@ -25,8 +23,6 @@ Country or region. Example: CN.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Text layout direction. Available values are as follows: ltr: The text direction 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -61,8 +55,6 @@ Current language of the application. Example: zh.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

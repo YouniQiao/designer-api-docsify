@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
+import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isLoggable
 
 ```TypeScript
-function isLoggable(domain: int, tag: string, level: LogLevel): boolean
+function isLoggable(domain: number, tag: string, level: LogLevel): boolean
 ```
 
 在打印日志前调用该接口，用于检查指定领域标识、日志标识和级别的日志是否可以打印。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -26,7 +24,7 @@ function isLoggable(domain: int, tag: string, level: LogLevel): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domain | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| domain | number | 是 |
 | tag | string | 是 |
 | level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | 是 |
 
@@ -35,9 +33,3 @@ function isLoggable(domain: int, tag: string, level: LogLevel): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-hilog.isLoggable(0x0001, "testTag", hilog.LogLevel.INFO);
-```

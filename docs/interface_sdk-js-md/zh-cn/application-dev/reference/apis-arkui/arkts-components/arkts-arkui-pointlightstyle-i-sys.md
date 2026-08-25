@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -29,8 +27,6 @@ bloom?: number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -45,13 +41,11 @@ illuminated?: IlluminatedType
 
 设置当前组件是否可以被光源照亮，以及被照亮的类型。默认值：IlluminatedType.NONE
 
-**类型：** IlluminatedType
+**类型：** [IlluminatedType](../arkts-apis/arkts-arkui-illuminatedtype-e-sys.md)
 
 **默认值：** IlluminatedType.NONE
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,8 +66,6 @@ lightSource?: LightSource
 **默认值：** undefined
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,31 +4,13 @@ Declaration of the composable title bar. Composable title bar represents a commo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItemParams } from '@kit.ArkUI';
+import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItemParams } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## item
 
@@ -41,8 +23,6 @@ A single menu item for the profile picture on the left.
 **Type:** [ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +42,6 @@ Menu items on the right side.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -78,11 +56,9 @@ subtitle?: ResourceStr
 
 Sub-title of this title bar.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,11 +74,9 @@ title: ResourceStr
 
 Title of this title bar.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

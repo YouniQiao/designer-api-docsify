@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## CUSTOM_LABEL
@@ -25,8 +23,6 @@ static readonly CUSTOM_LABEL: -1
 **类型：** -1
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ AIM即时消息类型，默认值为0。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -61,8 +55,6 @@ ICQ即时消息类型，默认值为6。
 **类型：** 6
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -80,8 +72,6 @@ JABBER即时消息类型，默认值为7。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -97,8 +87,6 @@ MSN即时消息类型，默认值为1。
 **类型：** 1
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -116,8 +104,6 @@ QQ即时消息类型，默认值为4。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -133,8 +119,6 @@ SKYPE即时消息类型，默认值为3。
 **类型：** 3
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -152,8 +136,6 @@ YAHOO即时消息类型，默认值为2。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -169,8 +151,6 @@ imAddress: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -188,8 +168,6 @@ static readonly INVALID_LABEL_ID: -2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -205,8 +183,6 @@ labelId?: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -224,28 +200,6 @@ labelName?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
-
-**示例**
-
-使用JSON格式创建数据。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let imAddress: contact.ImAddress = {
-    imAddress: 'imAddress',
-    labelName: 'labelName'
-};
-```
-
-或使用new一个ImAddress对象的方式创建数据。
-
-```TypeScript
-let imAddress = new contact.ImAddress();
-imAddress.imAddress = 'imAddress';
-```

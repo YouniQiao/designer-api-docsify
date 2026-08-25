@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## query
@@ -15,8 +15,6 @@ function query(id: string, callback: AsyncCallback<TaskInfo>): void
 Queries specified task details. Creates a group based on GroupConfig
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.DOWNLOAD_SESSION_MANAGER or ohos.permission.UPLOAD_SESSION_MANAGER
 
@@ -41,26 +39,6 @@ Queries specified task details. Creates a group based on GroupConfig
 | [13400003](../errorcode-request.md#13400003-服务异常) |
 | [21900006](../errorcode-request.md#21900006-操作不存在的任务错误) |
 
-**示例**
-
-```TypeScript
-downloadTask.query().then((downloadInfo) => {    
-  console.info('Succeeded in querying the download task.')
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
-});
-```
-
-```TypeScript
-downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
-  if(err) {
-    console.error(`Failed to query the download mimeType. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in querying the download task.');
-  }
-});
-```
-
 
 ## query
 
@@ -71,8 +49,6 @@ function query(id: string): Promise<TaskInfo>
 Queries specified task details.
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.DOWNLOAD_SESSION_MANAGER or ohos.permission.UPLOAD_SESSION_MANAGER
 
@@ -101,7 +77,3 @@ Queries specified task details.
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [13400003](../errorcode-request.md#13400003-服务异常) |
 | [21900006](../errorcode-request.md#21900006-操作不存在的任务错误) |
-
-**示例**
-
-参见 [query](#query)

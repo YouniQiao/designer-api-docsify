@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## createRandomAccessFile
@@ -19,8 +19,6 @@ Creates a **RandomAccessFile** instance based on the specified file path or file
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -28,7 +26,7 @@ Creates a **RandomAccessFile** instance based on the specified file path or file
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes |
-| mode | number | No | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:<br>- **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.<br>- **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode. <br>- **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.<br>You can also specify the following options, separated by a bitwise OR operator (\|
+| mode | number | No | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:   - **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.   - **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode.    - **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.   You can also specify the following options, separated by a bitwise OR operator (\|
 | options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | No |
 
 **Return value:**
@@ -69,52 +67,6 @@ Creates a **RandomAccessFile** instance based on the specified file path or file
 | 13900042 |
 | 13900044 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-fs.createRandomAccessFile(file).then((randomAccessFile: fs.RandomAccessFile) => {
-  console.info("randomAccessFile fd: " + randomAccessFile.fd);
-  randomAccessFile.close();
-}).catch((err: BusinessError) => {
-  console.error("create randomAccessFile failed with error message: " + err.message + ", error code: " + err.code);
-}).finally(() => {
-  fs.closeSync(file);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-fs.createRandomAccessFile(file, (err: BusinessError, randomAccessFile: fs.RandomAccessFile) => {
-  if (err) {
-    console.error("create randomAccessFile failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("randomAccessFile fd: " + randomAccessFile.fd);
-    randomAccessFile.close();
-  }
-  fs.closeSync(file);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-fs.createRandomAccessFile(file, fs.OpenMode.READ_ONLY, (err: BusinessError, randomAccessFile: fs.RandomAccessFile) => {
-  if (err) {
-    console.error("create randomAccessFile failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("randomAccessFile fd: " + randomAccessFile.fd);
-    randomAccessFile.close();
-  }
-  fs.closeSync(file);
-});
-```
-
 
 ## createRandomAccessFile
 
@@ -125,8 +77,6 @@ declare function createRandomAccessFile(file: string | File, callback: AsyncCall
 Creates a **RandomAccessFile** object in read-only mode based on a file path or file object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -167,10 +117,6 @@ Creates a **RandomAccessFile** object in read-only mode based on a file path or 
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [createRandomAccessFile](#createrandomaccessfile)
 
 
 ## createRandomAccessFile
@@ -183,8 +129,6 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -192,7 +136,7 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes |
-| mode | number | Yes | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:<br>- **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.<br>- **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode. <br>- **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.<br>You can also specify the following options, separated by a bitwise OR operator (\|
+| mode | number | Yes | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:   - **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.   - **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode.    - **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.   You can also specify the following options, separated by a bitwise OR operator (\|
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; | Yes |
 
 **Error codes:**
@@ -225,7 +169,3 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [createRandomAccessFile](#createrandomaccessfile)

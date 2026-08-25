@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## action
@@ -25,8 +23,6 @@ action?: Action
 **类型：** Action
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ appUid?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -61,8 +55,6 @@ direction?: Direction
 **类型：** Direction
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,8 +72,6 @@ domainName?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -98,8 +88,6 @@ IP协议版本。支持取值为1或2，取值为1表示IPv4，取值为2表示I
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -115,8 +103,6 @@ logType?: LogType
 **类型：** [LogType](arkts-mdm-networkmanager-logtype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

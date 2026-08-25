@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## deletePrinterFromCups
@@ -15,8 +15,6 @@ function deletePrinterFromCups(printerName: string): Promise<void>
 Delete a printer from cups.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -44,18 +42,3 @@ Delete a printer from cups.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerName : string = "testPrinterName";
-
-print.deletePrinterFromCups(printerName).then(() => {
-    console.info('deletePrinterFromCups success');
-}).catch((error: BusinessError) => {
-    console.error('deletePrinterFromCups error : ' + JSON.stringify(error));
-})
-```

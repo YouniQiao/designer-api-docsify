@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## 汇总
@@ -93,12 +91,12 @@ import { wifi } from '@kit.ConnectivityKit';
 | [getSupportedFeatures](arkts-connectivity-wifi-getsupportedfeatures-f-sys.md) |
 | [isHotspotActive](arkts-connectivity-wifi-ishotspotactive-f-sys.md) |
 | [isHotspotDualBandSupported](arkts-connectivity-wifi-ishotspotdualbandsupported-f-sys.md) |
-| [off](arkts-connectivity-wifi-off-f-sys.md#offstreamchange) |
-| [off](arkts-connectivity-wifi-off-f-sys.md#offhotspotstajoin) |
-| [off](arkts-connectivity-wifi-off-f-sys.md#offhotspotstaleave) |
-| [on](arkts-connectivity-wifi-on-f-sys.md#onstreamchange) |
-| [on](arkts-connectivity-wifi-on-f-sys.md#onhotspotstajoin) |
-| [on](arkts-connectivity-wifi-on-f-sys.md#onhotspotstaleave) |
+| off |
+| off |
+| off |
+| on |
+| on |
+| on |
 | [reassociate](arkts-connectivity-wifi-reassociate-f-sys.md) |
 | [reconnect](arkts-connectivity-wifi-reconnect-f-sys.md) |
 | [removeAllNetwork](arkts-connectivity-wifi-removeallnetwork-f-sys.md) |

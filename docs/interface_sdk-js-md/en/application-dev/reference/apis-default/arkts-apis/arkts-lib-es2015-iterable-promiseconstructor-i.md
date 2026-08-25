@@ -1,7 +1,5 @@
 # PromiseConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ all<T>(values: Iterable<T | PromiseLike<T>>): Promise<Awaited<T>[]>
 ```
 
 Creates a Promise that is resolved with an array of results when all of the provided Promises resolve, or rejected when any Promise is rejected.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,8 +30,6 @@ race<T>(values: Iterable<T | PromiseLike<T>>): Promise<Awaited<T>>
 ```
 
 Creates a Promise that is resolved or rejected when any of the provided Promises are resolved or rejected.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

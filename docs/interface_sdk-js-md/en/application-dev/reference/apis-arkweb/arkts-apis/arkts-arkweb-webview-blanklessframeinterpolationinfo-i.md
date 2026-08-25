@@ -4,14 +4,12 @@ White-Screen-Free Loading frame interpolation status information, which is used 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## key
@@ -25,8 +23,6 @@ Key value that uniquely identifies the page where the frame is interpolated. The
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Reason for the frame interpolation failure.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -62,8 +56,6 @@ Current frame interpolation state.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -79,8 +71,6 @@ Time when the frame interpolation is successful, fails, or removed, in ms (UTC t
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

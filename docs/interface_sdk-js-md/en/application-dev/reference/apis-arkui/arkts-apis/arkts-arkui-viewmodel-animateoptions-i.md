@@ -4,8 +4,6 @@ AnimateOptions@interface AnimateOptions
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## delay
@@ -19,8 +17,6 @@ Delay for the animation start. The default value indicates no delay. The default
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -38,8 +34,6 @@ The animation playback mode. The default value is "normal".
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -55,8 +49,6 @@ Duration of the animation, in milliseconds. The default value is 0.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -74,8 +66,6 @@ Time curve of the animation. For details about the supported types. linear The a
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -92,8 +82,6 @@ Whether to resume to the initial state after the animation is executed. none: Th
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -109,8 +97,6 @@ Number of times the animation will be played. number indicates a fixed number of
 **Type:** number \| string
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

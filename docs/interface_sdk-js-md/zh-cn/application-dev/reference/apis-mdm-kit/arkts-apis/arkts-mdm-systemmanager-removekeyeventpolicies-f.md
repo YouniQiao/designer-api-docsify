@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeKeyEventPolicies
@@ -15,8 +15,6 @@ function removeKeyEventPolicies(admin: Want, keyCodes: Array<KeyCode>): void
 删除按键事件处理策略。删除成功后，系统将恢复对指定按键事件的默认处理行为。适用于需要恢复按键默认行为的场景，帮助企业管理员灵活调整设备按键响应策略，满足不同业务场景的需求。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -40,27 +38,3 @@ function removeKeyEventPolicies(admin: Want, keyCodes: Array<KeyCode>): void
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let keyCodes: Array<systemManager.KeyCode> = [
-  systemManager.KeyCode.POWER, systemManager.KeyCode.VOLUME_UP
-];
-
-try {
-  systemManager.removeKeyEventPolicies(wantTemp, keyCodes);
-  console.info('Succeeded in removing key event policies.');
-} catch (err) {
-  console.error(`Failed to remove key event policies. Code is ${err.code}, message is ${err.message}`);
-}
-```

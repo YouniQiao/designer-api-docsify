@@ -4,8 +4,6 @@ Provides historical touch point information.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Touch pressure value of the historical point.Default value: **0**Value range: [0
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -44,8 +40,6 @@ Size of the contact area size between the finger and screen in the touch event c
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ Timestamp of the touch event corresponding to the historical point, representing
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -84,8 +76,6 @@ Basic touch event information for the historical point.
 **Type:** [TouchObject](arkts-arkui-touchobject-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Enumerates the navigation bar background themes.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DARK
@@ -17,8 +15,6 @@ DARK = 1
 Dark theme.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -34,8 +30,6 @@ Light theme.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -49,8 +43,6 @@ DEFAULT = 3
 Light gray theme, with the color value of #F1F3F5.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

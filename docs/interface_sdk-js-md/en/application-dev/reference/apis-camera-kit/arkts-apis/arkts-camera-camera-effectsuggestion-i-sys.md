@@ -4,8 +4,6 @@ EffectSuggestion object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ EffectSuggestion object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableEffectSuggestion
@@ -25,8 +23,6 @@ enableEffectSuggestion(enabled: boolean): void
 Enable effect suggestion for session.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -56,8 +52,6 @@ Gets supported effect suggestion types.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -84,8 +78,6 @@ isEffectSuggestionSupported(): boolean
 Checks whether effect suggestion is supported.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -114,8 +106,6 @@ Set the range of effect suggestion type and enable status. The application shoul
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -143,8 +133,6 @@ updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void
 Update the enable status of the effect suggestion type.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

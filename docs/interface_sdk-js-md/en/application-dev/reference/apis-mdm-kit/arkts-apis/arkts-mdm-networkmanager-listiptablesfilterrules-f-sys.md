@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## listIptablesFilterRules
@@ -15,8 +15,6 @@ function listIptablesFilterRules(admin: Want, callback: AsyncCallback<string>): 
 Obtains the network packet filtering rule. Only IPv4 is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -43,45 +41,6 @@ Obtains the network packet filtering rule. Only IPv4 is supported. This API uses
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.listIptablesFilterRules(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting iptables filter rule, result : ${result}`);
-});
-```
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.listIptablesFilterRules(wantTemp).then((result) => {
-  console.info(`Succeeded in getting iptables filter rule, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## listIptablesFilterRules
 
@@ -92,8 +51,6 @@ function listIptablesFilterRules(admin: Want): Promise<string>
 Obtains the network packet filtering rule. Only IPv4 is supported. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -124,7 +81,3 @@ Obtains the network packet filtering rule. Only IPv4 is supported. This API uses
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [listIptablesFilterRules](#listiptablesfilterrules)

@@ -10,8 +10,6 @@ The **dateTimeManager** module provides APIs for system time management.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -19,7 +17,7 @@ The **dateTimeManager** module provides APIs for system time management.
 ## Modules to Import
 
 ```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
+import { dateTimeManager } from 'kits/@kit.MDMKit';
 ```
 
 ## Summary

@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## data
@@ -27,8 +25,6 @@ data: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ ecData?: ArrayBuffer
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
@@ -67,8 +61,6 @@ micInData: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

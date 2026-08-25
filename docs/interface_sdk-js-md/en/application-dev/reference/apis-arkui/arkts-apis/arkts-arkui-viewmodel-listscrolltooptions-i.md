@@ -4,8 +4,6 @@ List scroll to options @interface ListScrollToOptions
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## index
@@ -19,8 +17,6 @@ specified position.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

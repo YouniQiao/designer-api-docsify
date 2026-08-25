@@ -6,14 +6,12 @@ Provides APIs to manage the file retrieval result.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -26,8 +24,6 @@ Closes this FetchResult instance to invalidate it. After this instance is closed
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Error codes:**
@@ -35,31 +31,6 @@ Closes this FetchResult instance to invalidate it. After this instance is closed
 | Error Code ID |
 | --- |
 | 14000011 |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('fetchResultCloseDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    fetchResult.close();
-    console.info('close succeed.');
-  } catch (err) {
-    console.error(`close fail. error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## getAllObjects
 
@@ -70,8 +41,6 @@ getAllObjects(): Promise<Array<T>>
 Obtains all the file assets in the result set. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -87,27 +56,6 @@ Obtains all the file assets in the result set. This API uses a promise to return
 | --- |
 | 14000011 |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getAllObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<sendablePhotoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  console.info('photoAssetList length: ', photoAssetList.length);
-}
-```
-
 ## getCount
 
 ```TypeScript
@@ -117,8 +65,6 @@ getCount(): number
 Obtains the total number of files in the result set.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -134,27 +80,6 @@ Obtains the total number of files in the result set.
 | --- |
 | 14000011 |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getCountDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let fetchCount = fetchResult.getCount();
-  console.info('fetchCount = ', fetchCount);
-}
-```
-
 ## getFirstObject
 
 ```TypeScript
@@ -164,8 +89,6 @@ getFirstObject(): Promise<T>
 Obtains the first asset in the result set. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -180,27 +103,6 @@ Obtains the first asset in the result set. This API uses a promise to return the
 | Error Code ID |
 | --- |
 | 14000011 |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getFirstObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-  console.info('photoAsset displayName: ', photoAsset.displayName);
-}
-```
 
 ## getLastObject
 
@@ -212,8 +114,6 @@ Obtains the last asset in the result set. This API uses a promise to return the 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
@@ -227,27 +127,6 @@ Obtains the last asset in the result set. This API uses a promise to return the 
 | Error Code ID |
 | --- |
 | 14000011 |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getLastObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getLastObject();
-  console.info('photoAsset displayName: ', photoAsset.displayName);
-}
-```
 
 ## getNextObject
 
@@ -259,8 +138,6 @@ Obtains the next asset in the result set. This API uses a promise to return the 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Return value:**
@@ -275,28 +152,6 @@ Obtains the next asset in the result set. This API uses a promise to return the 
 | --- |
 | 14000011 |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getNextObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  await fetchResult.getFirstObject();
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getNextObject();
-  console.info('photoAsset displayName: ', photoAsset.displayName);
-}
-```
-
 ## getObjectByPosition
 
 ```TypeScript
@@ -306,8 +161,6 @@ getObjectByPosition(index: number): Promise<T>
 Obtains the asset with the given index in the result set. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -330,27 +183,6 @@ Obtains the asset with the given index in the result set. This API uses a promis
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000011 |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getObjectByPositionDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getObjectByPosition(0);
-  console.info('photoAsset displayName: ', photoAsset.displayName);
-}
-```
-
 ## isAfterLast
 
 ```TypeScript
@@ -360,8 +192,6 @@ isAfterLast(): boolean
 Checks whether the cursor is in the last row of the result set.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -376,29 +206,3 @@ Checks whether the cursor is in the last row of the result set.
 | Error Code ID |
 | --- |
 | 14000011 |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let fetchCount = fetchResult.getCount();
-  console.info('count:' + fetchCount);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getLastObject();
-  if (fetchResult.isAfterLast()) {
-    console.info('photoAsset isAfterLast displayName = ', photoAsset.displayName);
-  } else {
-    console.info('photoAsset not isAfterLast.');
-  }
-}
-```

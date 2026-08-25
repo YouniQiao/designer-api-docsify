@@ -4,8 +4,6 @@ Defines the struct of AccessibilityActionOptions that can affect operation under
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ scrollStep - the step when the component is scrolled by accessibility.
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

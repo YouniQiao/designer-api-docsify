@@ -4,8 +4,6 @@ Enumerates the Phase 2 authentication methods.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## PHASE2_NONE
@@ -17,8 +15,6 @@ PHASE2_NONE = 0
 Not specified.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ PAP.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -49,8 +43,6 @@ PHASE2_MSCHAP = 2
 MS-CHAP.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +58,6 @@ MS-CHAPv2.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -81,8 +71,6 @@ PHASE2_GTC = 4
 GTC.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +86,6 @@ SIM.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -114,8 +100,6 @@ AKA.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -129,8 +113,6 @@ PHASE2_AKA_PRIME = 7
 AKA Prime.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Enumerates the types of services used by the card emulation application.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 ## PAYMENT
@@ -17,8 +15,6 @@ PAYMENT = "payment"
 Payment service.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,8 +29,6 @@ OTHER = "other"
 Other services.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

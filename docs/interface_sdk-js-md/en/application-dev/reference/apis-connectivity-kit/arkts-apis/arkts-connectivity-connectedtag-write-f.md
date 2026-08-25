@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## write
@@ -15,8 +15,6 @@ function write(data: number[]): Promise<void>
 Writes data to this active tag. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -43,33 +41,6 @@ Writes data to this active tag. This API uses a promise to return the result.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) |
 
-**Examples**
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rawData = [0x01, 0x02, 0x03]; // change it to be correct.
-connectedTag.write(rawData).then(() => {
-    console.info("connectedTag.writeNdefTag Promise success.");
-}).catch((err: BusinessError)=> {
-    console.error("connectedTag.writeNdefTag Promise err: " + err);
-});
-```
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-let rawData = [0x01, 0x02, 0x03]; // change it to be correct.
-connectedTag.write(rawData, (err)=> {
-    if (err) {
-        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag.writeNdefTag AsyncCallback success.");
-    }
-});
-```
-
 
 ## write
 
@@ -80,8 +51,6 @@ function write(data: number[], callback: AsyncCallback<void>): void
 Writes data to this active tag. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -102,7 +71,3 @@ Writes data to this active tag. This API uses an asynchronous callback to return
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) |
-
-**Examples**
-
-See [write](#write)

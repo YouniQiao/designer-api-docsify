@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## queryGroups
@@ -15,8 +15,6 @@ function queryGroups(callback: AsyncCallback<Array<Group>>): void
 查询联系人的所有群组。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -32,109 +30,6 @@ function queryGroups(callback: AsyncCallback<Array<Group>>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Group](arkts-contacts-contact-group-c.md)&gt;&gt; | 是 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryGroups(context, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryGroups((err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Groups.. data->${JSON.stringify(data)}`);
-});
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryGroups(context, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryGroups({
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { contact } from '@kit.ContactsKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryGroups(context, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryGroups({
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## queryGroups
 
@@ -145,8 +40,6 @@ function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): v
 查询联系人的所有群组。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -166,10 +59,6 @@ function queryGroups(context: Context, callback: AsyncCallback<Array<Group>>): v
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
-**示例**
-
-参见 [queryGroups](#querygroups)
-
 
 ## queryGroups
 
@@ -180,8 +69,6 @@ function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): voi
 根据holder查询联系人的所有群组。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -198,10 +85,6 @@ function queryGroups(holder: Holder, callback: AsyncCallback<Array<Group>>): voi
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Group](arkts-contacts-contact-group-c.md)&gt;&gt; | 是 |
 
-**示例**
-
-参见 [queryGroups](#querygroups)
-
 
 ## queryGroups
 
@@ -212,8 +95,6 @@ function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<A
 根据holder查询联系人的所有群组。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -234,10 +115,6 @@ function queryGroups(context: Context, holder: Holder, callback: AsyncCallback<A
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
-**示例**
-
-参见 [queryGroups](#querygroups)
-
 
 ## queryGroups
 
@@ -248,8 +125,6 @@ function queryGroups(holder?: Holder): Promise<Array<Group>>
 根据holder查询联系人的所有群组。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -271,10 +146,6 @@ function queryGroups(holder?: Holder): Promise<Array<Group>>
 | --- |
 | Promise&lt;Array&lt;[Group](arkts-contacts-contact-group-c.md)&gt;&gt; |
 
-**示例**
-
-参见 [queryGroups](#querygroups)
-
 
 ## queryGroups
 
@@ -285,8 +156,6 @@ function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>
 根据holder查询联系人的所有群组。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -311,7 +180,3 @@ function queryGroups(context: Context, holder?: Holder): Promise<Array<Group>>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-**示例**
-
-参见 [queryGroups](#querygroups)

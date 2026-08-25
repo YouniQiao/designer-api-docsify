@@ -4,29 +4,25 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 窗口高度，单位为px，该参数应为正整数，不大于屏幕高度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ height: int
 ## scale
 
 ```TypeScript
-scale: double
+scale: number
 ```
 
 窗口缩放比，显示大小相对于width和height的缩放比，该参数为浮点数，取值范围大于0.0，小于等于1.0。等于1表示与width和height一样大。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ scale: double
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 窗口宽度，单位为px，该参数应为正整数，不大于屏幕宽度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

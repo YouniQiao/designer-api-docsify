@@ -4,14 +4,12 @@ Defines HTTP server identity verification information.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## authenticationType
@@ -25,8 +23,6 @@ Server identity verification type. If the type is not set, negotiation with the 
 **Type:** [AuthenticationType](arkts-network-http-authenticationtype-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -43,8 +39,6 @@ Server credential. The default value is **undefined**.
 **Type:** Credential
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

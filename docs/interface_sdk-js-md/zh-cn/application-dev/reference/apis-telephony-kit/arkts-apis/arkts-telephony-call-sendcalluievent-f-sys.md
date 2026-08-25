@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendCallUiEvent
 
 ```TypeScript
-function sendCallUiEvent(callId: int, eventName: string): Promise<void>
+function sendCallUiEvent(callId: number, eventName: string): Promise<void>
 ```
 
 发布通话界面事件。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function sendCallUiEvent(callId: int, eventName: string): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | eventName | string | 是 |
 
 **返回值：**
@@ -48,16 +46,3 @@ function sendCallUiEvent(callId: int, eventName: string): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callId: number = 0;
-call.sendCallUiEvent(callId, 'eventName').then(() => {
-    console.info(`sendCallUiEvent success.`);
-}).catch((err: BusinessError) => {
-    console.error(`sendCallUiEvent fail, promise: err->${JSON.stringify(err)}`);
-});
-```

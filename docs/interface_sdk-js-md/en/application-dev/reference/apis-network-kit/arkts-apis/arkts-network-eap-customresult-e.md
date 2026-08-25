@@ -4,8 +4,6 @@ Enumerates the EAP authentication results.​
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## RESULT_FAIL
@@ -17,8 +15,6 @@ RESULT_FAIL = 0
 The authentication process ends with a failed result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -32,8 +28,6 @@ The authentication is successful, and the process proceeds to the next step.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## RESULT_FINISH
@@ -45,7 +39,5 @@ RESULT_FINISH = 2
 The authentication process ends with a successful result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap

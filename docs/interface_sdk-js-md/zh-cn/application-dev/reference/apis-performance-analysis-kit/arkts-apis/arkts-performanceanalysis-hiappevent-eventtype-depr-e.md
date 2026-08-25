@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)
@@ -21,8 +19,6 @@ FAULT = 1
 故障类型事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ STATISTIC = 2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [STATISTIC](arkts-performanceanalysis-hiappevent-eventtype-e.md#statistic)
@@ -58,8 +52,6 @@ SECURITY = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [SECURITY](arkts-performanceanalysis-hiappevent-eventtype-e.md#security)
@@ -75,8 +67,6 @@ BEHAVIOR = 4
 行为类型事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

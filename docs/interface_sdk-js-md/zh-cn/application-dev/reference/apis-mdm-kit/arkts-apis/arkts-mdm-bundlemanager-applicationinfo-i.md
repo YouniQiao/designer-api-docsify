@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## accessTokenId
@@ -25,8 +23,6 @@ readonly accessTokenId: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ readonly appDistributionType: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -61,8 +55,6 @@ readonly appIndex: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,8 +72,6 @@ readonly appProvisionType: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -97,8 +87,6 @@ readonly codePath: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,8 +104,6 @@ readonly dataUnclearable: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -133,8 +119,6 @@ readonly debug: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -152,8 +136,6 @@ readonly description: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -169,8 +151,6 @@ readonly descriptionId: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -188,8 +168,6 @@ readonly descriptionResource: Resource
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -205,8 +183,6 @@ readonly enabled: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -224,8 +200,6 @@ readonly icon: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -241,8 +215,6 @@ readonly iconData: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -260,8 +232,6 @@ readonly iconId: number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -278,8 +248,6 @@ readonly iconResource: Resource
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -291,13 +259,15 @@ readonly installSource: string
 ```
 
 应用程序的安装来源，支持的取值如下：  
-- pre-installed表示应用为第一次开机时安装的预置应用。 - ota表示应用为系统升级时新增的预置应用。 - recovery表示卸载后再恢复的预置应用。 - bundleName表示应用由此包名对应的应用安装。 - unknown表示应用安装来源未知。
+- pre-installed表示应用为第一次开机时安装的预置应用。  
+- ota表示应用为系统升级时新增的预置应用。  
+- recovery表示卸载后再恢复的预置应用。  
+- bundleName表示应用由此包名对应的应用安装。  
+- unknown表示应用安装来源未知。
 
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -315,8 +285,6 @@ readonly label: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -332,8 +300,6 @@ readonly labelId: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -351,8 +317,6 @@ readonly labelResource: Resource
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -368,8 +332,6 @@ readonly name: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -387,8 +349,6 @@ readonly nativeLibraryPath: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -404,8 +364,6 @@ readonly process: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -423,8 +381,6 @@ readonly releaseType: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -440,8 +396,6 @@ readonly removable: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -459,8 +413,6 @@ readonly systemApp: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -476,8 +428,6 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

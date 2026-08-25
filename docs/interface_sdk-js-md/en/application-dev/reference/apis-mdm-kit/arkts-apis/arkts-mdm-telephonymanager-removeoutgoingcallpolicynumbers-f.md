@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeOutgoingCallPolicyNumbers
@@ -15,8 +15,6 @@ function removeOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Polic
 Removes the trustlist or blocklist for outgoing calls. If the list is not set, the removal fails. For example, an enterprise can use this API when removing call restrictions and restoring normal call permissions for employees.A policy conflict is reported when this API is called in the following scenario:If the device's call capability has been disabled via the [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md) API, using this API to remove an outgoing call trustlist or blocklist will return error code 203. To resolve the conflict, enable the call capability via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md).
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -42,28 +40,3 @@ Removes the trustlist or blocklist for outgoing calls. If the list is not set, t
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  let numbers: Array<string> = [
-    // Replace it as required.
-    "13112345678"
-  ];
-  telephonyManager.removeOutgoingCallPolicyNumbers(wantTemp, policy, numbers);
-  console.info('Succeeded in removing outgoing call policy.');
-} catch (err) {
-  console.error(`Failed to remove outgoing call policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getNotificationStatisticsByBundle
@@ -16,8 +16,6 @@ function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<Bun
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<Bun
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundles | [BundleOption[]](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundles | [BundleOption[]](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
@@ -45,37 +43,3 @@ function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<Bun
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundles: notificationManager.BundleOption[] = [
-  { bundle:'com.example.test01' },
-  { bundle:'com.example.test02' }
-];
-notificationManager.getNotificationStatisticsByBundle(bundles).then(
-  (data: notificationManager.BundleNotificationStatistics[]) => {
-  console.info(`getNotificationStatisticsByBundle success, data is ${JSON.stringify(data)}`)
-}).catch((err: BusinessError):void => {
-  console.error(`getNotificationStatisticsByBundle err: ${JSON.stringify(err)}`)
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let bundles: notificationManager.BundleOption[] = [
-  { bundle:'com.example.test01' },
-  { bundle:'com.example.test02' }
-];
-notificationManager.getNotificationStatisticsByBundle(bundles).then(
-  (data: notificationManager.BundleNotificationStatistics[]) => {
-  console.info(`getNotificationStatisticsByBundle success, data is ${JSON.stringify(data)}`)
-}).catch((err: Error):void => {
-  console.error(`getNotificationStatisticsByBundle err: ${JSON.stringify(err)}`)
-});
-```

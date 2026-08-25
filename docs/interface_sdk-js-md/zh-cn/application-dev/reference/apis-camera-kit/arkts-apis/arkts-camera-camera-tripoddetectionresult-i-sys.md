@@ -6,8 +6,6 @@ TripodDetectionResult extends [SceneFeatureDetectionResult](arkts-camera-camera-
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -15,7 +13,7 @@ TripodDetectionResult extends [SceneFeatureDetectionResult](arkts-camera-camera-
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## tripodStatus
@@ -29,8 +27,6 @@ Tripod status.
 **类型：** [TripodStatus](arkts-camera-camera-tripodstatus-e-sys.md)
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NO_ERROR
@@ -17,8 +15,6 @@ NO_ERROR = 0
 没有错误。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -32,8 +28,6 @@ UNKNOWN_ERROR = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NETWORK_UNAVAILABLE
@@ -45,8 +39,6 @@ NETWORK_UNAVAILABLE = 2
 网络不可用。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -60,8 +52,6 @@ LOCAL_STORAGE_FULL = 3
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## CONTENT_NOT_FOUND
@@ -74,8 +64,6 @@ CONTENT_NOT_FOUND = 4
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## FREQUENT_USER_REQUESTS
@@ -87,7 +75,5 @@ FREQUENT_USER_REQUESTS = 5
 用户请求过于频繁。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from '@kit.NetworkKit';
+import { mdns } from 'kits/@kit.NetworkKit';
 ```
 
 ## createDiscoveryService
@@ -15,8 +15,6 @@ function createDiscoveryService(context: Context, serviceType: string): Discover
 Creates a **DiscoveryService** object, which is used to discover MDNS services of the specified type.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,19 +38,3 @@ Creates a **DiscoveryService** object, which is used to discover MDNS services o
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-Stage model:
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the application context.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-let serviceType = "_print._tcp";
-let discoveryService : Object = mdns.createDiscoveryService(context, serviceType);
-```

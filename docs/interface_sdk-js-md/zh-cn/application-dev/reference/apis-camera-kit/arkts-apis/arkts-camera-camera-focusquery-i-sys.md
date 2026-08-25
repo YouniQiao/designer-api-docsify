@@ -7,14 +7,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isFocusAssistSupported
@@ -26,8 +24,6 @@ isFocusAssistSupported(): boolean
 Checks whether the focus assist is supported.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -46,24 +42,6 @@ Checks whether the focus assist is supported.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isFocusAssistSupported(professionalPhotoSession: camera.ProfessionalPhotoSession): boolean {
-  let status: boolean = false;
-  try {
-    status = professionalPhotoSession.isFocusAssistSupported();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isFocusAssistSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```
-
 ## isFocusDrivenTypeSupported
 
 ```TypeScript
@@ -73,8 +51,6 @@ isFocusDrivenTypeSupported(type: FocusDrivenType): boolean
 Checks whether a focus drive type is supported.
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -100,24 +76,6 @@ Checks whether a focus drive type is supported.
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isFocusDrivenTypeSupported(session: camera.VideoSessionForSys, type: camera.FocusDrivenType): boolean {
-  let status: boolean = false;
-  try {
-    status = session.isFocusDrivenTypeSupported(type);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isFocusDrivenTypeSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```
-
 ## isFocusRangeTypeSupported
 
 ```TypeScript
@@ -127,8 +85,6 @@ isFocusRangeTypeSupported(type: FocusRangeType): boolean
 Checks whether a focus range type is supported.
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -153,21 +109,3 @@ Checks whether a focus range type is supported.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isFocusRangeTypeSupported(session: camera.VideoSessionForSys, type: camera.FocusRangeType): boolean {
-  let status: boolean = false;
-  try {
-    status = session.isFocusRangeTypeSupported(type);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isFocusRangeTypeSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```

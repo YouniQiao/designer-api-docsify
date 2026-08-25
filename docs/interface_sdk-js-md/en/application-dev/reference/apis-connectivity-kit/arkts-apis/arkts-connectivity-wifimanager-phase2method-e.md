@@ -1,10 +1,8 @@
 # Phase2Method
 
-Wi-Fi phase 2 method. @enum { int }
+Wi-Fi phase 2 method. @enum { number }
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -18,8 +16,6 @@ Phase2 NONE
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## PHASE2_PAP
@@ -31,8 +27,6 @@ PHASE2_PAP
 Phase2 PAP
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -46,8 +40,6 @@ Phase2 MSCHAP
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## PHASE2_MSCHAPV2
@@ -59,8 +51,6 @@ PHASE2_MSCHAPV2
 Phase2 MSCHAPV2
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -74,8 +64,6 @@ Phase2 GTC
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## PHASE2_SIM
@@ -87,8 +75,6 @@ PHASE2_SIM
 Phase2 SIM
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -102,8 +88,6 @@ Phase2 AKA
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## PHASE2_AKA_PRIME
@@ -115,7 +99,5 @@ PHASE2_AKA_PRIME
 Phase2 AKA+
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA

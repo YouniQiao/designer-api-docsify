@@ -4,14 +4,12 @@ The distributedDataObject module provides basic data object management, includin
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

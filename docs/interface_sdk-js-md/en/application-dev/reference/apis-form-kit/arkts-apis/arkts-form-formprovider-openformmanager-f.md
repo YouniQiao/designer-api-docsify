@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## openFormManager
@@ -15,8 +15,6 @@ function openFormManager(want: Want): void
 Opens the Widget Manager page of the current application.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -35,26 +33,3 @@ Opens the Widget Manager page of the current application.
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-const want: Want = {
-  bundleName: 'com.example.formbutton',
-  abilityName: 'EntryFormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  },
-};
-try {
-  formProvider.openFormManager(want);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```

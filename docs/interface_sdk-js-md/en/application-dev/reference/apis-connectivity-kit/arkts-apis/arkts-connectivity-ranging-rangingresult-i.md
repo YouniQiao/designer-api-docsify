@@ -4,14 +4,12 @@ Describes the contents of the ranging results.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@kit.ConnectivityKit';
+import { ranging } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## angle
@@ -25,8 +23,6 @@ Azimuth angle output from ranging.
 **Type:** [RangingMeasurement](arkts-connectivity-ranging-rangingmeasurement-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Address of the ranging device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -62,8 +56,6 @@ The distance measured by the ranging output.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -79,8 +71,6 @@ Received signal strength.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

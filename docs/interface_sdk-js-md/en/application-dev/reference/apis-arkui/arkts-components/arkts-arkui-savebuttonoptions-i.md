@@ -11,8 +11,6 @@ Defines options for the save button, including icon, text, and button type.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,8 +30,6 @@ Background type of the **SaveButton** component. Default value: ButtonType.Capsu
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -46,13 +42,11 @@ Background type of the **SaveButton** component. Default value: ButtonType.Capsu
 icon?: SaveIconStyle
 ```
 
-Icon style of the **SaveButton** component. <br>If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the component uses the default style.
+Icon style of the **SaveButton** component. If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the component uses the default style.
 
 **Type:** [SaveIconStyle](arkts-arkui-saveiconstyle-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,13 +60,11 @@ Icon style of the **SaveButton** component. <br>If this parameter is not specifi
 text?: SaveDescription
 ```
 
-Text on the **SaveButton** component. <br>If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the component uses the default style.
+Text on the **SaveButton** component. If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the component uses the default style.
 
 **Type:** [SaveDescription](arkts-arkui-savedescription-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

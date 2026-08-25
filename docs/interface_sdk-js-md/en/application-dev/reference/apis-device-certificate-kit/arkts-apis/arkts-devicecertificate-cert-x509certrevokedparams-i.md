@@ -4,14 +4,12 @@ Parameters for checking certificate revocation status.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadCrl
@@ -31,8 +29,6 @@ Indicates whether to allow CRL download. The default value is false. true: The C
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,7 +41,10 @@ Indicates whether to allow CRL download. The default value is false. true: The C
 allowOcspCheckOnline?: boolean
 ```
 
-Indicates whether to allow online OCSP check. The default value is false. - **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the certificate and send a request to obtain a response; - **false**: does not perform online OCSP check.
+Indicates whether to allow online OCSP check. The default value is false.  
+- **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the  
+certificate and send a request to obtain a response;  
+- **false**: does not perform online OCSP check.
 
 > **NOTE：**&gt;
 > Skip online OCSP check if a matching OCSP response is found in ocspResponses.
@@ -55,8 +54,6 @@ Indicates whether to allow online OCSP check. The default value is false. - **tr
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,8 +72,6 @@ CRL list. Maximum count: 100.
 **Type:** Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +93,6 @@ Digest algorithm used by OCSP requests. The default value is SHA256.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -118,8 +111,6 @@ Preconfigured OCSP response data. Maximum count: 100.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -137,8 +128,6 @@ Revocation check flag. Array length range: [1,4]. The array must contain either 
 **Type:** Array&lt;[CertRevocationFlag](arkts-devicecertificate-cert-certrevocationflag-e.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

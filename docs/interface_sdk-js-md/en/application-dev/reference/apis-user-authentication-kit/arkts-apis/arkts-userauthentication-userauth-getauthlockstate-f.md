@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getAuthLockState
@@ -15,8 +15,6 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 Queries the lockout state of the specified authentication type. This API uses a promise to return the result.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -45,26 +43,3 @@ Queries the lockout state of the specified authentication type. This API uses a 
 | [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
 | [12500008](../errorcode-useriam.md#12500008-parameter-verification-failed) |
 | [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
-
-**Examples**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let queryType = userAuth.UserAuthType.PIN;
-let authLockState : userAuth.AuthLockState = {
-  isLocked : false,
-  remainingAuthAttempts : 0,
-  lockoutDuration : 0
-}
-
-userAuth.getAuthLockState(queryType)
-  .then((result : userAuth.AuthLockState) => {
-    authLockState = result;
-    console.info(`get auth lock state success, authLockState is: ${JSON.stringify(authLockState)}`);
-  })
-  .catch((err : BusinessError) => {
-    console.info(`get auth lock state failed, err code is : ${err?.code}, err message is : ${err?.message}`);
-  })
-```

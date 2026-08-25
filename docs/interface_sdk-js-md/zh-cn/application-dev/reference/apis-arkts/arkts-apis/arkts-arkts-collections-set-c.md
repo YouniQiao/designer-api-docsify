@@ -5,18 +5,17 @@
 > **说明：**&gt;
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > 本节使用以下标识来表示泛型的使用：
-- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器类型：** \@Sendable
+- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
+**装饰器类型：** \@Sendable
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -29,8 +28,6 @@ import { collections } from '@kit.ArkTS';
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -39,7 +36,7 @@ import { collections } from '@kit.ArkTS';
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
@@ -56,8 +53,6 @@ add(value: T): Set<T>
 检查此Set中是否存在指定值，如果不存在，则将该值添加到Set中。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -92,8 +87,6 @@ clear(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -114,8 +107,6 @@ constructor(values?: readonly T[] | null)
 构造函数，用于创建ArkTS Set对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -143,8 +134,6 @@ constructor(iterable: Iterable<T>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -170,8 +159,6 @@ delete(value: T): boolean
 删除此Set中的指定元素。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -206,8 +193,6 @@ entries(): IterableIterator<[T, T]>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -216,7 +201,7 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; |
+| IterableIterator & lt;[T, T] & gt; |
 
 **错误码：**
 
@@ -234,8 +219,6 @@ forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 对此Set中的每个键值对执行一次回调函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -263,8 +246,6 @@ has(value: T): boolean
 判断此Set中是否存在指定值。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -299,8 +280,6 @@ keys(): IterableIterator<T>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -309,7 +288,7 @@ keys(): IterableIterator<T>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
@@ -328,8 +307,6 @@ values(): IterableIterator<T>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -338,7 +315,7 @@ values(): IterableIterator<T>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
@@ -358,8 +335,6 @@ Set的元素个数。
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

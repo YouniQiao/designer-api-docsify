@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
@@ -17,8 +15,6 @@ TOP = 0
 上方区域。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ BOTTOM = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -53,8 +47,6 @@ START = 2
 前部区域。LTR模式时表示左侧区域，RTL模式表示右侧区域。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,8 +64,6 @@ END = 3
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -89,8 +79,6 @@ VERTICAL = 4
 垂直区域。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,8 +96,6 @@ HORIZONTAL = 5
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -125,8 +111,6 @@ ALL = 6
 全部区域。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

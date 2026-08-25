@@ -4,14 +4,12 @@ CommonOptions定义了Counter的通用属性和事件。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
 ```
 
 ## onHoverDecrease
@@ -23,8 +21,6 @@ onHoverDecrease?: (isHover: boolean) => void
 鼠标进入或退出Counter组件的减少按钮时触发该回调。使用场景：当鼠标悬浮在减少按钮上，需要执行自定义操作（如改变按钮样式、显示提示信息等）时传入此回调。isHover：表示鼠标是否悬浮在减少按钮上，鼠标进入时为true，退出时为false。默认值：不触发鼠标进入或退出Counter组件的减少按钮时的回调。值为undefined时，按默认值处理。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,8 +43,6 @@ onHoverIncrease?: (isHover: boolean) => void
 鼠标进入或退出Counter组件的增加按钮时触发该回调。使用场景：当鼠标悬浮在增加按钮上，需要执行自定义操作（如改变按钮样式、显示提示信息等）时传入此回调。isHover：表示鼠标是否悬浮在增加按钮上，鼠标进入时为true，退出时为false。默认值：不触发鼠标进入或退出Counter组件的增加按钮时的回调。值为undefined时，按默认值处理。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,8 +71,6 @@ focusable?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -98,8 +90,6 @@ step?: number
 **默认值：** 1
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

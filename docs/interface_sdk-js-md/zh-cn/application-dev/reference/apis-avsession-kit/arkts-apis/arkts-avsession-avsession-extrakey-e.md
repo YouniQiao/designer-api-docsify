@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## REQUIRE_ABILITY_LIST
@@ -17,8 +15,6 @@ REQUIRE_ABILITY_LIST = 'requireAbilityList'
 作为setExtras)}接口传入的键，用于向系统设置应用所需的能力列表。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +33,6 @@ setExtras)}接口传入入参 `{[avSession.ExtraKey.REQUIRE_ABILITY_LIST]: [avSe
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -55,8 +49,6 @@ DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -72,8 +64,6 @@ DLNA_DIDL_LITE = 'DIDL-Lite'
 [AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md)中extras属性可传入的键，值传入string类型。用于DLNA投播场景下，在发送给对端的报文中，为DIDL-Lite标签添加内容。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

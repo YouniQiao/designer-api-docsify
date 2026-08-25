@@ -13,47 +13,13 @@ The **SelectTitleBar** component represents a drop-down menu title bar used for 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { SelectTitleBar, SelectTitleBarMenuItem } from '@kit.ArkUI';
+import { SelectTitleBar, SelectTitleBarMenuItem } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onSelected
-
-```TypeScript
-onSelected?: OnSelectedCallback
-```
-
-Callback invoked when an option in the drop-down menu is selected. The index of the selected option is passed in. This parameter is passed to handle specific service logic after an option in the drop-down menu is selected. This parameter can be omitted when there is no specific service logic.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## badgeValue
 
@@ -66,8 +32,6 @@ Value for the badge.Value range: [-2147483648, 2147483647]. If the value is out 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,8 +51,6 @@ Whether to hide the back arrow on the left.Default value: **false**. **true** to
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -106,8 +68,6 @@ List of menu items on the right side of the title bar. This parameter is passed 
 **Type:** Array&lt;[SelectTitleBarMenuItem](arkts-arkui-arkui-advanced-selecttitlebar-selecttitlebarmenuitem-c.md)&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,8 +87,6 @@ Callback invoked when an option in the drop-down menu is selected. The index of 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -143,11 +101,9 @@ options: Array<SelectOption>
 
 Options in the drop-down menu.
 
-**Type:** Array&lt;SelectOption&gt;
+**Type:** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,8 +123,6 @@ Index of the currently selected item.The index of the first item is 0. If this a
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -183,11 +137,9 @@ subtitle?: ResourceStr
 
 Subtitle, used to display supplementary information. This parameter is passed to show the subtitle. If this parameter is not specified, the subtitle area is not displayed.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

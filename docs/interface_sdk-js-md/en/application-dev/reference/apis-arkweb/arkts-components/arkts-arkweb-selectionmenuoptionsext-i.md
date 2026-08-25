@@ -4,8 +4,6 @@ Represents the selection menu option extension.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -21,11 +19,9 @@ menuType?: MenuType
 
 Type of the custom selection menu.Default value: **MenuType.SELECTION_MENU**Since API version 20, **MenuType.PREVIEW_MENU** supports hyperlink preview.
 
-**Type:** MenuType
+**Type:** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -41,8 +37,6 @@ Callback invoked when the custom selection menu appears.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## onDisappear
@@ -56,8 +50,6 @@ Callback invoked when the custom selection menu disappears.
 **Type:** Callback&lt;void&gt;
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -73,8 +65,6 @@ Callback invoked when the custom context menu on selection is hidden.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## onMenuShow
@@ -89,8 +79,6 @@ Callback invoked when the custom context menu on selection is shown.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## preview
@@ -101,11 +89,9 @@ preview?: CustomBuilder
 
 Preview content style of the custom selection menu. If this parameter is not set, there is no preview content.
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -120,7 +106,5 @@ Custom preview menu options.
 **Type:** [PreviewMenuOptions](arkts-arkweb-previewmenuoptions-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core

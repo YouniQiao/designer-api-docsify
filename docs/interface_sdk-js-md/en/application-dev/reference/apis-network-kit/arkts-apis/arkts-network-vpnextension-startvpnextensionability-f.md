@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## startVpnExtensionAbility
@@ -15,8 +15,6 @@ function startVpnExtensionAbility(want: Want): Promise<void>
 Enables the VPN extension ability. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

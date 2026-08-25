@@ -4,8 +4,6 @@ Sets parameters for the drop process.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Whether to disable data prefetching for the drag-and-drop operation. The value *
 **Type:** boolean
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getNetExtAttributeSync
@@ -15,8 +15,6 @@ function getNetExtAttributeSync(netHandle: NetHandle): string
 获取netHandle对应网络的扩展属性，以确定网络的安全级别。使用同步方式返回。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -42,16 +40,3 @@ function getNetExtAttributeSync(netHandle: NetHandle): string
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netHandle = connection.getDefaultNetSync();
-if (netHandle.netId != 0) {
-  let netExtAttribute: string = connection.getNetExtAttributeSync(netHandle);
-  console.info("Succeeded to getNetExtAttribute: " + netExtAttribute);
-}
-```

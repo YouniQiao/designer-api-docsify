@@ -4,29 +4,25 @@ Describes the camera metadata, which is the data source of [CameraInput](arkts-c
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## confidence
 
 ```TypeScript
-readonly confidence: double
+readonly confidence: number
 ```
 
 Confidence of the detection, with a value range of [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -35,16 +31,14 @@ Confidence of the detection, with a value range of [0, 1].
 ## objectId
 
 ```TypeScript
-readonly objectId: int
+readonly objectId: number
 ```
 
 Metadata object ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

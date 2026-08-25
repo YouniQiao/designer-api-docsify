@@ -15,8 +15,6 @@ Sets whether a specified application supports distributed notifications. This AP
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md)
@@ -31,47 +29,9 @@ Sets whether a specified application supports distributed notifications. This AP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | enable | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let enableDistributedByBundleCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("enableDistributedByBundle failed " + JSON.stringify(err));
-  } else {
-    console.info("enableDistributedByBundle success");
-  }
-};
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-
-let enable: boolean = true;
-
-Notification.enableDistributedByBundle(bundle, enable, enableDistributedByBundleCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let enable: boolean = true;
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-
-Notification.enableDistributedByBundle(bundle, enable).then(() => {
-  console.info("enableDistributedByBundle success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`enableDistributedByBundle failed, code is ${err}`);
-});
-```
 
 
 ## enableDistributedByBundle
@@ -84,8 +44,6 @@ Sets whether a specified application supports distributed notifications. This AP
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md)
@@ -100,7 +58,7 @@ Sets whether a specified application supports distributed notifications. This AP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | enable | boolean | Yes |
 
 **Return value:**
@@ -108,7 +66,3 @@ Sets whether a specified application supports distributed notifications. This AP
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [enableDistributedByBundle](#enabledistributedbybundle)

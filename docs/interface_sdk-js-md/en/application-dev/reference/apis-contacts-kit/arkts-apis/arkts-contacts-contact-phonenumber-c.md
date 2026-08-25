@@ -4,14 +4,12 @@ Defines a contact's phone number.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## CUSTOM_LABEL
@@ -25,8 +23,6 @@ Custom phone type, the default value is **0**.
 **Type:** 0
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ Invalid phone type, the default value is **-1**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -61,8 +55,6 @@ Phone number type.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,8 +72,6 @@ Name of the phone number type.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -97,8 +87,6 @@ Assistant phone, the default value is **19**.
 **Type:** 19
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -116,8 +104,6 @@ Callback phone, the default value is **8**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -133,8 +119,6 @@ Car phone, the default value is **9**.
 **Type:** 9
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -152,8 +136,6 @@ Company phone, the default value is **10**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -169,8 +151,6 @@ Family fax, the default value is **5**.
 **Type:** 5
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -188,8 +168,6 @@ Work fax, the default value is **4**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -205,8 +183,6 @@ Home phone, the default value is **1**.
 **Type:** 1
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -224,8 +200,6 @@ Integrated Services Digital Network (ISDN) phone, the default value is **11**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -241,8 +215,6 @@ Main phone, the default value is **12**.
 **Type:** 12
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -260,8 +232,6 @@ MMS phone, the default value is **20**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -277,8 +247,6 @@ Mobile phone, the default value is **2**.
 **Type:** 2
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -296,8 +264,6 @@ Other phone type, the default value is **7**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -313,8 +279,6 @@ Other fax phone, the default value is **13**.
 **Type:** 13
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -332,8 +296,6 @@ Pager, the default value is **6**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -349,8 +311,6 @@ Wireless phone, the default value is **14**.
 **Type:** 14
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -368,8 +328,6 @@ Telex phone, the default value is **15**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -385,8 +343,6 @@ Teletypewriter (TTY) or Test Driven Development (TDD) phone, the default value i
 **Type:** 16
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -404,8 +360,6 @@ Work phone, the default value is **3**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -421,8 +375,6 @@ Work mobile phone, the default value is **17**.
 **Type:** 17
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -440,8 +392,6 @@ Work pager, the default value is **18**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -457,8 +407,6 @@ Phone number.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

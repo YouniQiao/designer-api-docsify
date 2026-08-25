@@ -1,12 +1,10 @@
 # Marquee属性/事件
 
-除支持通用属性外，还支持以下属性。除支持通用事件外，还支持以下事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** MarqueeAttribute extends CommonMethod<MarqueeAttribute>
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ allowScale(value: boolean)
 设置是否允许文本缩放。未通过该接口设置时，默认不允许文本缩放。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,8 +45,6 @@ fontColor(value: ResourceColor)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -72,8 +66,6 @@ fontFamily(value: string | Resource)
 设置字体列表。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -97,8 +89,6 @@ fontSize(value: Length)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -121,8 +111,6 @@ fontWeight(value: number | FontWeight | string)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -142,11 +130,10 @@ marqueeUpdateStrategy(value: MarqueeUpdateStrategy)
 ```
 
 跑马灯组件属性更新后，跑马灯的滚动策略。(当跑马灯为播放状态，且文本内容宽度大于等于跑马灯组件宽度时，该属性生效。)未通过该接口设置时，默认使用MarqueeUpdateStrategy.DEFAULT。使用场景：  
-- MarqueeUpdateStrategy.DEFAULT：适用于内容更新后希望以默认策略重新开始滚动展示的场景。 - MarqueeUpdateStrategy.PRESERVE_POSITION：适用于内容动态更新时希望保持当前滚动位置继续滚动的场景，如实时时钟、股价等动态内容展示。
+- MarqueeUpdateStrategy.DEFAULT：适用于内容更新后希望以默认策略重新开始滚动展示的场景。  
+- MarqueeUpdateStrategy.PRESERVE_POSITION：适用于内容动态更新时希望保持当前滚动位置继续滚动的场景，如实时时钟、股价等动态内容展示。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,7 +145,7 @@ marqueeUpdateStrategy(value: MarqueeUpdateStrategy)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [MarqueeUpdateStrategy](#marqueeupdatestrategy) | 是 |
+| value | [MarqueeUpdateStrategy](../arkts-apis/arkts-arkui-marqueeupdatestrategy-e.md) | 是 |
 
 ## onBounce
 
@@ -169,8 +156,6 @@ onBounce(event: () => void)
 完成一次完整滚动时触发，若循环次数不为1，则该事件会多次触发。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -194,8 +179,6 @@ onFinish(event: () => void)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -218,8 +201,6 @@ onStart(event: () => void)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -241,8 +222,6 @@ onStop(event: Callback<void> | undefined)
 跑马灯滚动结束或停止时触发回调。跑马灯停止表示跑马灯将从开始位置，重新开始循环，不包含暂停场景，暂停不会触发该回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

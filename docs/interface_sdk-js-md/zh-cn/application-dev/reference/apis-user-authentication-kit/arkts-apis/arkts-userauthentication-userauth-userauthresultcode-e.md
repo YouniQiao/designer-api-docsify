@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## SUCCESS
@@ -17,8 +15,6 @@ SUCCESS = 12500000
 执行成功。表示用户身份认证通过，认证令牌有效。应用可使用返回的token进行后续的安全操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ FAIL = 12500001
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -49,8 +43,6 @@ GENERAL_ERROR = 12500002
 操作通用错误。表示认证过程中发生未知错误，建议稍后重试或联系系统管理员。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ CANCELED = 12500003
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -81,8 +71,6 @@ TIMEOUT = 12500004
 认证超时。表示用户在规定时间内未完成认证交互（如未及时输入密码、未正视摄像头等）。建议提示用户重新尝试并注意操作时限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -98,8 +86,6 @@ TYPE_NOT_SUPPORT = 12500005
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -113,8 +99,6 @@ TRUST_LEVEL_NOT_SUPPORT = 12500006
 认证等级不支持。表示指定的认证可信等级高于当前认证类型所能达到的最高等级。建议降低认证等级或使用更安全的认证类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -130,8 +114,6 @@ BUSY = 12500007
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -145,8 +127,6 @@ INVALID_PARAMETERS = 12500008
 参数校验失败。表示传入的参数不符合要求，如参数类型错误、参数值超出范围等。建议检查参数并重新调用。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -162,8 +142,6 @@ LOCKED = 12500009
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -177,8 +155,6 @@ NOT_ENROLLED = 12500010
 用户未录入指定的系统身份认证凭据。表示用户未注册所请求的认证类型（如请求指纹认证但用户未录入指纹）。建议引导用户先注册相应凭据。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -194,8 +170,6 @@ CANCELED_FROM_WIDGET = 12500011
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -209,8 +183,6 @@ PIN_EXPIRED = 12500013
 锁屏密码过期。表示系统锁屏口令已过期（如企业策略要求定期更换密码），用户需更新锁屏密码后才能继续使用认证功能。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

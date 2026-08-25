@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
+import { uiMaterial } from 'kits/@kit.ArkUI';
 ```
 
 ## applyShadow
@@ -29,8 +27,6 @@ applyShadow?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -43,7 +39,7 @@ applyShadow?: boolean
 colorInvert?: boolean
 ```
 
-设置了材质对象的节点的子树是否自动适配材质到背景色的反色。若为false，则不会自动反色。若为true，则只有材质参数足够薄时才会自动反色。具体能反色的材质由系统定义，材质样式至少为THIN或ULTRA_THIN，且与设置应用的沉浸光感的强弱配置相关。材质越薄、沉浸光感越强，越容易符合反色材质的要求。自动反色能力仅对部分属性接口设置特殊资源值时生效，生效的属性接口包括：Text组件的fontColor，Button组件的 fontColor，SymbolGlyph组件的 fontColor，Image组件的 fillColor，Search组件的 placeholderColor、fontColor、 searchIcon中的图标颜色、cancelButton中的图标颜色、 caretStyle中的光标颜色，TabContent组件的 tabBar属性使用 BottomTabBarStyle样式时其中的文本和图标颜色。  
+设置了材质对象的节点的子树是否自动适配材质到背景色的反色。若为false，则不会自动反色。若为true，则只有材质参数足够薄时才会自动反色。具体能反色的材质由系统定义，材质样式至少为THIN或ULTRA_THIN，且与设置应用的沉浸光感的强弱配置相关。材质越薄、沉浸光感越强，越容易符合反色材质的要求。自动反色能力仅对部分属性接口设置特殊资源值时生效，生效的属性接口包括：Text组件的fontColor，Button组件的 fontColor，SymbolGlyph组件的 fontColor，Image组件的 fillColor，Search组件的 placeholderColor、fontColor、 searchIcon中的图标颜色、cancelButton中的图标颜色、 caretStyle中的光标颜色，TabContent组件的 [tabBar](../arkts-components/arkts-arkui-tabcontent-attribute.md#tabbar)属性使用 [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md)样式时其中的文本和图标颜色。  
 **说明：**该参数仅对高档和中档算力设备的显示效果生效。默认值：false
 
 **类型：** boolean
@@ -51,8 +47,6 @@ colorInvert?: boolean
 **默认值：** false
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,8 +67,6 @@ interactive?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -94,8 +86,6 @@ lightEffect?: LightEffectOptions | null
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -111,13 +101,11 @@ materialColor?: ResourceColor
 材质层赋色，该参数会为材质滤镜再混合一层纯色效果。该颜色需要带一定的透明度值，不能为纯不透明的颜色，否则会将材质滤镜效果完全遮挡。  
 **说明：**该参数仅对高档和中档算力设备的显示效果生效。默认值：Color.Transparent
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Transparent
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -139,8 +127,6 @@ style?: ImmersiveStyle
 **默认值：** uiMaterial.ImmersiveStyle.REGULAR
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

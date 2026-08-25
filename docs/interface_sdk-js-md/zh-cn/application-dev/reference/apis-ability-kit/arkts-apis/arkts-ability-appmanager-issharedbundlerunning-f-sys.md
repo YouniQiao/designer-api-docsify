@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isSharedBundleRunning
 
 ```TypeScript
-function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<boolean>
+function isSharedBundleRunning(bundleName: string, versionCode: number): Promise<boolean>
 ```
 
 检查共享库是否正在使用。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -29,7 +27,7 @@ function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<b
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| versionCode | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| versionCode | number | 是 |
 
 **返回值：**
 
@@ -46,50 +44,16 @@ function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<b
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const bundleName = 'this is a bundleName';
-const versionCode = 1;
-
-appManager.isSharedBundleRunning(bundleName, versionCode).then((data) => {
-  console.info(`The shared bundle running is: ${data}`);
-}).catch((e: Error) => {
-  let error = e as BusinessError;
-  console.error(`error: ${error.message}`);
-})
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-const bundleName = 'this is a bundleName';
-const versionCode = 1;
-
-appManager.isSharedBundleRunning(bundleName, versionCode, (err, data) => {
-  if (err) {
-    console.error(`err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`The shared bundle running is: ${JSON.stringify(data)}`);
-  }
-})
-```
-
 
 ## isSharedBundleRunning
 
 ```TypeScript
-function isSharedBundleRunning(bundleName: string, versionCode: long, callback: AsyncCallback<boolean>): void
+function isSharedBundleRunning(bundleName: string, versionCode: number, callback: AsyncCallback<boolean>): void
 ```
 
 检查共享库是否正在使用。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -102,7 +66,7 @@ function isSharedBundleRunning(bundleName: string, versionCode: long, callback: 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| versionCode | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| versionCode | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
@@ -113,7 +77,3 @@ function isSharedBundleRunning(bundleName: string, versionCode: long, callback: 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [isSharedBundleRunning](#issharedbundlerunning)

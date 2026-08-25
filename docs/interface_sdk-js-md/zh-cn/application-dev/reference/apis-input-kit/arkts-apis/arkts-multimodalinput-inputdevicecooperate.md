@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 23
 
 **替代接口：** [cooperate/cooperate](../../apis-distributed-service-kit/arkts-apis/arkts-cooperate.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总
@@ -29,8 +27,8 @@ import { inputDeviceCooperate } from '@kit.InputKit';
 | [enable(键鼠穿越)](arkts-input-inputdevicecooperate-enable-f-sys.md) |
 | [getState(键鼠穿越)](arkts-input-inputdevicecooperate-getstate-f-sys.md) |
 | [getState(键鼠穿越)](arkts-input-inputdevicecooperate-getstate-f-sys.md) |
-| [off(键鼠穿越)](arkts-input-inputdevicecooperate-off-f-sys.md#offcooperation) |
-| [on(键鼠穿越)](arkts-input-inputdevicecooperate-on-f-sys.md#oncooperation) |
+| off(键鼠穿越) |
+| on(键鼠穿越) |
 | [start(键鼠穿越)](arkts-input-inputdevicecooperate-start-f-sys.md) |
 | [start(键鼠穿越)](arkts-input-inputdevicecooperate-start-f-sys.md) |
 | [stop(键鼠穿越)](arkts-input-inputdevicecooperate-stop-f-sys.md) |

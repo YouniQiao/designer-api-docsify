@@ -4,8 +4,6 @@ Describes the connection status of a cellular data link.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CellularData
 
 ## DATA_STATE_UNKNOWN
@@ -17,8 +15,6 @@ DATA_STATE_UNKNOWN = -1
 The status of the cellular data link is unknown.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -32,8 +28,6 @@ The cellular data link is disconnected.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CellularData
 
 ## DATA_STATE_CONNECTING
@@ -45,8 +39,6 @@ DATA_STATE_CONNECTING = 1
 The cellular data link is being connected.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -60,8 +52,6 @@ The cellular data link is connected.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CellularData
 
 ## DATA_STATE_SUSPENDED
@@ -73,7 +63,5 @@ DATA_STATE_SUSPENDED = 3
 The cellular data link is suspended.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData

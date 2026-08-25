@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getFirstPreferredLanguage
@@ -16,8 +16,6 @@ Obtains the first language in the preferred language list.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getFirstPreferredLanguage](arkts-localization-i18n-system-c.md#getfirstpreferredlanguage)
@@ -29,17 +27,3 @@ Obtains the first language in the preferred language list.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let firstPreferredLanguage: string = i18n.System.getFirstPreferredLanguage();
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
-```

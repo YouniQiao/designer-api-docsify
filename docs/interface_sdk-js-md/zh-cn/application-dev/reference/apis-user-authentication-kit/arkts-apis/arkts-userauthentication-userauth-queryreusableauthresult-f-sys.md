@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## queryReusableAuthResult
@@ -15,8 +15,6 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 查询是否有可复用的身份认证结果。该接口用于在发起认证前查询是否存在满足复用条件的认证结果，若存在则直接返回可复用的AuthToken，无需用户再次进行认证交互。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -45,32 +43,3 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 | [12500008](../errorcode-useriam.md#12500008-参数校验失败) |
 | [12500017](../errorcode-useriam.md#12500017-复用身份认证结果失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len = 16;
-  const randData: Uint8Array = rand?.generateRandomSync(len)?.data;
-  const reuseUnlockResult: userAuth.ReuseUnlockResult = {
-    reuseMode: userAuth.ReuseMode.AUTH_TYPE_RELEVANT,
-    reuseDuration: userAuth.MAX_ALLOWABLE_REUSE_DURATION,
-  };
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-    reuseUnlockResult: reuseUnlockResult,
-  };
-  let authToken = userAuth.queryReusableAuthResult(authParam);
-  console.info('query reuse auth result successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to query reuse auth result. Code: ${err.code}, message: ${err.message}`);
-}
-```

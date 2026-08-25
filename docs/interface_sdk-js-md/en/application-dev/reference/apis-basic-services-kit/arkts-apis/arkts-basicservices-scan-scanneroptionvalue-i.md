@@ -4,14 +4,12 @@ Defines the scanner option value.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## boolValue
@@ -26,23 +24,19 @@ Value of the Boolean type.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## numValue
 
 ```TypeScript
-numValue?: int
+numValue?: number
 ```
 
 Value of the number type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,8 +52,6 @@ Value of the string type.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## valueType
@@ -73,7 +65,5 @@ Value type.
 **Type:** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

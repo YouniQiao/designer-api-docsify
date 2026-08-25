@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setProfileNickname
 
 ```TypeScript
-function setProfileNickname(slotId: int, iccid: string, nickname: string): Promise<ResultCode>
+function setProfileNickname(slotId: number, iccid: string, nickname: string): Promise<ResultCode>
 ```
 
 Sets a nickname for the specified profile. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
@@ -28,7 +26,7 @@ Sets a nickname for the specified profile. This API uses a promise to return the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | iccid | string | Yes |
 | [nickname](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-distributedaccount-distributedinfo-i.md) | string | Yes |
 
@@ -48,16 +46,3 @@ Sets a nickname for the specified profile. This API uses a promise to return the
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { eSIM } from '@kit.TelephonyKit';
-
-eSIM.setProfileNickname(1, 'testId', 'testName').then(() => {
-    console.info(`setProfileNickname invoking succeeded.`);
-}).catch((err: BusinessError<void>) => {
-    console.error(`setProfileNickname, ErrorState: err->${JSON.stringify(err)}`);
-});
-```

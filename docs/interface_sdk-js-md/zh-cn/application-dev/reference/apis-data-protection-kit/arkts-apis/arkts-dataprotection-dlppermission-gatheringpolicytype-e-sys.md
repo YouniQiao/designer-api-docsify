@@ -4,8 +4,6 @@ DLP沙箱聚合策略类型的枚举。沙箱聚合表示同一权限类型的DL
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ GATHERING = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ NON_GATHERING = 2
 表示沙箱非聚合。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

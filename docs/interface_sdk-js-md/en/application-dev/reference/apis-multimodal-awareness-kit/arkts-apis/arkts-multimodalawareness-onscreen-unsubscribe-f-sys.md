@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## unsubscribe
@@ -15,8 +15,6 @@ function unsubscribe(capability: OnscreenAwarenessCap, callback?: Callback<Onscr
 Disables proactive awareness on screen content and unsubscribes from a screen awareness result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
@@ -43,23 +41,3 @@ Disables proactive awareness on screen content and unsubscribes from a screen aw
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [34000001](../errorcode-onScreen.md#34000001-service-exception) |
-
-**Examples**
-
-```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
-let onscreenAwarenessCap: onScreen.OnscreenAwarenessCap = {
-  capList: [
-	'contentUiTree',
-  ],
-  description: 'unsubscribe uiTree scenario'
-}
-
-try {
-  onScreen.unsubscribe(onscreenAwarenessCap, (info: onScreen.OnscreenAwarenessInfo) => {
-	console.info(`unsubscribe resultCode: ${info.resultCode}`);
-  });
-} catch (err) {
-  console.error('unsubscribe failed, errCode = ' + err.code);
-}
-```

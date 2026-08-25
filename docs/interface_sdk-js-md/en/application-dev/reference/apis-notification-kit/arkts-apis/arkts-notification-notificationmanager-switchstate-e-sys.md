@@ -4,8 +4,6 @@ Describes the switch state of notifications.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ USER_MODIFIED_OFF = 0
 Disabled state set by the user.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,8 +32,6 @@ Enabled state set by the user.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Initial disabled state before user settings.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ SYSTEM_DEFAULT_ON = 3
 Initial enabled state before user settings.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

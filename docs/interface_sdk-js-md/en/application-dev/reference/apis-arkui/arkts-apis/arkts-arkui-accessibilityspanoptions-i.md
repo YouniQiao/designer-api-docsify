@@ -4,8 +4,6 @@ Defines accessibility options for the span.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ accessibilityDescription?: ResourceStr
 
 Accessibility description. This description provides users with a detailed explanation of the current component to help users understand the intended operation and its consequences, especially when these consequences cannot be directly obtained from the component's attributes and accessibility text alone.Default value: **''**If the value is **undefined**, the default value is used.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,8 +53,6 @@ the component will not be recognized by accessibility services.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -73,11 +67,9 @@ accessibilityText?: ResourceStr
 
 Accessibility text, that is, accessible label name. If a component has no text property, it will not be announced when selected by a screen reader. Setting this property allows you to define accessibility text for such components, which will be announced by a screen reader to help users identify the selected component.Default value: **''**If the value is **undefined**, the default value is used.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

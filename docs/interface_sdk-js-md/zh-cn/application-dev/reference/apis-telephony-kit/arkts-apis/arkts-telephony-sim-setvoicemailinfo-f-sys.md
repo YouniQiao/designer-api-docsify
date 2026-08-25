@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setVoiceMailInfo
 
 ```TypeScript
-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string, callback: AsyncCallback<void>): void
+function setVoiceMailInfo(slotId: number, mailName: string, mailNumber: string, callback: AsyncCallback<void>): void
 ```
 
 Sets the voice mail information.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Sets the voice mail information.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | mailName | string | 是 |
 | mailNumber | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
@@ -47,40 +45,16 @@ Sets the voice mail information.
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 | [8301002](../errorcode-telephony.md#8301002-sim卡读取数据或者更新数据失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.setVoiceMailInfo(0, "mail", "xxx@xxx.com", (err: BusinessError) => {
-    console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.setVoiceMailInfo(0, "mail", "xxx@xxx.com").then(() => {
-    console.info(`setVoiceMailInfo success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setVoiceMailInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setVoiceMailInfo
 
 ```TypeScript
-function setVoiceMailInfo(slotId: int, mailName: string, mailNumber: string): Promise<void>
+function setVoiceMailInfo(slotId: number, mailName: string, mailNumber: string): Promise<void>
 ```
 
 Sets the voice mail information.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -92,7 +66,7 @@ Sets the voice mail information.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | mailName | string | 是 |
 | mailNumber | string | 是 |
 
@@ -115,7 +89,3 @@ Sets the voice mail information.
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 | [8301002](../errorcode-telephony.md#8301002-sim卡读取数据或者更新数据失败) |
-
-**示例**
-
-参见 [setVoiceMailInfo](#setvoicemailinfo)

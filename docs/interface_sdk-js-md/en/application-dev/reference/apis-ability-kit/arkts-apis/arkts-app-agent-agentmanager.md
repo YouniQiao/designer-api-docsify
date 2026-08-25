@@ -4,8 +4,6 @@ The module provides the capability to interact with agents in the system.@namesp
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -15,7 +13,7 @@ The module provides the capability to interact with agents in the system.@namesp
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

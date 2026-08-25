@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from '@kit.ArkUI';
+import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

@@ -4,8 +4,6 @@ Enumerates the NFC states.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Core
 
 ## STATE_OFF
@@ -17,8 +15,6 @@ STATE_OFF = 1
 NFC is closed (OFF).
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ NFC is turning on.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Core
@@ -50,8 +44,6 @@ NFC is open (ON).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Core
@@ -65,8 +57,6 @@ STATE_TURNING_OFF = 4
 NFC is turning off.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

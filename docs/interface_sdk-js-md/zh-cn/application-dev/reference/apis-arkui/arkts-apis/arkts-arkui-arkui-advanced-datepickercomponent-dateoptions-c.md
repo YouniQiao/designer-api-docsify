@@ -6,14 +6,12 @@ DateOptions定义日期选择器的选项。继承于[CommonOptions](arkts-arkui
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from 'kits/@kit.ArkUI';
 ```
 
 ## lunar
@@ -23,7 +21,8 @@ lunar?: boolean
 ```
 
 指定是否显示为农历。  
-- true：显示为农历，适用于需要传统农历日期的场景，如传统节日、农历生日、农历纪念日等。 - false：不显示为农历，适用于使用公历日期的场景。
+- true：显示为农历，适用于需要传统农历日期的场景，如传统节日、农历生日、农历纪念日等。  
+- false：不显示为农历，适用于使用公历日期的场景。
 
 > 默认值：false
 
@@ -35,8 +34,6 @@ lunar?: boolean
 **默认值：** false
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,8 +54,6 @@ mode?: DateMode
 **默认值：** DateMode.DATE
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

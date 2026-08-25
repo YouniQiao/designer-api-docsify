@@ -4,14 +4,12 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## actionTime
@@ -25,8 +23,6 @@ actionTime: number
 **类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ keyAction: KeyAction
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -62,8 +56,6 @@ keyCode: KeyCode
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -79,8 +71,6 @@ keyItems: Array<KeyItem>
 **类型：** Array&lt;[KeyItem](arkts-mdm-systemmanager-keyitem-i.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

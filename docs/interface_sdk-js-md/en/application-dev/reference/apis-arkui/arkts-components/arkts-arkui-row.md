@@ -21,8 +21,6 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -44,8 +42,6 @@ Row(options?: RowOptions | RowOptionsV2)
 Creates a horizontal linear layout container. You can set the spacing between child components.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

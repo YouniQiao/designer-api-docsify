@@ -4,8 +4,6 @@ Provides APIs for device-cloud data sharing, including sharing or unsharing data
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides APIs for device-cloud data sharing, including sharing or unsharing data
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

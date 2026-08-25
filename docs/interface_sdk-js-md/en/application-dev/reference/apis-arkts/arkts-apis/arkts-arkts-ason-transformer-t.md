@@ -9,8 +9,6 @@ The type of conversion result function.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -19,7 +17,7 @@ The type of conversion result function.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| this | [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) | Yes |
+| this | [ISendable](arkts-arkts-ason-isendable-t.md) | Yes |
 | key | string | Yes |
 | value | ISendable \| undefined \| null | Yes |
 

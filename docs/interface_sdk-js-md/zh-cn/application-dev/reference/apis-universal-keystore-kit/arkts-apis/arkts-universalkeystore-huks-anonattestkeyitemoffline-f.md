@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## anonAttestKeyItemOffline
@@ -27,8 +27,6 @@ function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promis
 > verify the certificate expiration。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,72 +62,3 @@ function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promis
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 | [12000027](../errorcode-huks.md#12000027-网络不可用) |
-
-**示例**
-
-```TypeScript
-/* 以离线获取ECC匿名化密钥证书为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  let tmpUint8Array = new Uint8Array(arr);
-  return tmpUint8Array;
-}
-
-let challenge = stringToUint8Array('challenge_data');
-let keyAliasString = "key anon local attest";
-
-/* 1. 生成密钥 */
-async function generateKey(alias: string) {
-  let properties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-      value: huks.HuksKeyAlg.HUKS_ALG_ECC
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-      value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-      value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_DIGEST,
-      value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PADDING,
-      value: huks.HuksKeyPadding.HUKS_PADDING_NONE
-    }
-  ];
-  let options: huks.HuksOptions = {
-    properties: properties
-  };
-
-  await huks.generateKeyItem(alias, options);
-}
-
-/* 2. 离线获取匿名化密钥证书 */
-async function anonAttestKeyOffline() {
-  let aliasString = keyAliasString;
-  let aliasUint8 = stringToUint8Array(aliasString);
-  let properties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE,
-      value: challenge
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_ALIAS,
-      value: aliasUint8
-    }
-  ];
-
-  await generateKey(aliasString);
-  await huks.anonAttestKeyItemOffline(aliasString, properties);
-}
-```

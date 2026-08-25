@@ -4,14 +4,12 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## dataProgressListener
@@ -23,8 +21,6 @@ dataProgressListener: DataProgressListener
 表示获取统一数据时的进度和数据监听器。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ acceptableInfo?: DataLoadInfo
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -63,8 +57,6 @@ destUri?: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,8 +76,6 @@ fileConflictOptions?: FileConflictOptions
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -103,8 +93,6 @@ progressIndicator: ProgressIndicator
 **类型：** ProgressIndicator
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

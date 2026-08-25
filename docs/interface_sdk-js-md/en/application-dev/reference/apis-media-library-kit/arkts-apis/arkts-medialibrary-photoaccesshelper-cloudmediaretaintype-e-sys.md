@@ -4,8 +4,6 @@ Enumerates the modes used for deleting cloud media assets.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Deletes the local metadata and thumbnail of the original files from the cloud.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ HDC_RETAIN_FORCE = 1
 Deletes the local metadata and thumbnail of the original files from the home storage device.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

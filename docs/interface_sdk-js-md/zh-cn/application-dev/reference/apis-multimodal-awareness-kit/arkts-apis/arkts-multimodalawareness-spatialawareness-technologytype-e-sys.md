@@ -1,10 +1,8 @@
 # TechnologyType（系统接口）
 
-提供输入信号的类型。接口根据输入信号类型，执行对应算法。@enum { int } 测距技术类型
+提供输入信号的类型。接口根据输入信号类型，执行对应算法。@enum { number } 测距技术类型
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -19,8 +17,6 @@ BLE_RSSI = 0
 表示蓝牙强度。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ WIFI_RSSI = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -55,8 +49,6 @@ ULTRASOUND = 2
 表示超声强度。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,8 +66,6 @@ NEAR_LINK = 3
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -91,8 +81,6 @@ WIFI_BLE_RSSI = 4
 表示WIFI和蓝牙强度。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

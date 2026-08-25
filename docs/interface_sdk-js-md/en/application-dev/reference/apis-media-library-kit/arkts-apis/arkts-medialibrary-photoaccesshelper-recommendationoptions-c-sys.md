@@ -4,14 +4,12 @@ Defines the image recommendation options. The image recommendation feature depen
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## defaultRecommendationType
@@ -25,8 +23,6 @@ Recommended tag displayed when the picker is opened. This configuration takes ef
 **Type:** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ List of recommendation types. If images of multiple categories need to be recomm
 **Type:** Array&lt;[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

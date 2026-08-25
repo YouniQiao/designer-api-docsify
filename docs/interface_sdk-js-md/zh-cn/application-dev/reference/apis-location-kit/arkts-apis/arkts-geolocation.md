@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [geoLocationManager](arkts-geolocationmanager.md)
@@ -17,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## 汇总

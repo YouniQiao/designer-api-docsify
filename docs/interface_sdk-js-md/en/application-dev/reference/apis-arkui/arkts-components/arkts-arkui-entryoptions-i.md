@@ -4,8 +4,6 @@ Defines the options of Entry ClassDecorator.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Named route name.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -43,11 +39,9 @@ storage? : LocalStorage
 
 LocalStorage to be passed.
 
-**Type:** LocalStorage
+**Type:** [LocalStorage](../arkts-apis/arkts-arkui-localstorage-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ Determines whether to use the LocalStorage instance object returned by the Local
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -78,15 +70,3 @@ Determines whether to use the LocalStorage instance object returned by the Local
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-@Entry({ routeName: 'myPage' })
-@Component
-struct Index {
-  build() {
-    Text('Index')
-  }
-}
-```

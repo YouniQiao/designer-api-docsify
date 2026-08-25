@@ -10,8 +10,6 @@ const estimatedRemainingChargeTime: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +24,6 @@ const remainingEnergy: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -41,8 +37,6 @@ const totalEnergy: number
 表示当前设备电池的总容量，单位毫安时。此接口为系统接口。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 

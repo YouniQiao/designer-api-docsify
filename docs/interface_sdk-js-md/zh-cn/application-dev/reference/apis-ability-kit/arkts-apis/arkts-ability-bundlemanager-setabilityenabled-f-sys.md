@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setAbilityEnabled
 
 ```TypeScript
-function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean): Promise<void>
+function setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boolean): Promise<void>
 ```
 
 设置指定应用或分身应用组件的禁用或使能状态。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -29,7 +27,7 @@ function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| appIndex | number | 是 |
 | isEnabled | boolean | 是 |
 
 **返回值：**
@@ -49,222 +47,6 @@ function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean)
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false, err => {
-      if (err) {
-        hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-      } else {
-        hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-      }
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-// 开发者需根据实际工程更新userId、bundleName和abilityName。
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName : "com.example.myapplication",
-  abilityName : "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo: Array<bundleManager.AbilityInfo>) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false, err => {
-      if (err) {
-        hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-      } else {
-        hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-      }
-    });
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false).then(() => {
-      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-// 开发者需根据实际工程更新userId、bundleName和abilityName。
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName : "com.example.myapplication",
-  abilityName : "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo: Array<bundleManager.AbilityInfo>) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false).then(() => {
-      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-    }).catch((err: Error) => {
-      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', (err as BusinessError).message);
-    });
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, 1, false).then(() => {
-      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-// 代码中使用的bundleName、abilityName、useId需为应用实际的包名、Ability名称、用户ID。
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName : "com.example.myapplication",
-  abilityName : "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo: Array<bundleManager.AbilityInfo>) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, 1, false).then(() => {
-      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-    }).catch((err: Error) => {
-      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', (err as BusinessError).message);
-    });
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
 
 ## setAbilityEnabled
 
@@ -275,8 +57,6 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: Asyn
 设置指定组件的禁用或使能状态。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -302,10 +82,6 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: Asyn
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 
-**示例**
-
-参见 [setAbilityEnabled](#setabilityenabled)
-
 
 ## setAbilityEnabled
 
@@ -316,8 +92,6 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>
 设置指定组件的禁用或使能状态。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -347,7 +121,3 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
-
-**示例**
-
-参见 [setAbilityEnabled](#setabilityenabled)

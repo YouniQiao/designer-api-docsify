@@ -4,8 +4,6 @@ Enumerates media file types.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [PhotoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md)
@@ -23,8 +21,6 @@ IMAGE = 1
 Image.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -44,8 +40,6 @@ Video.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-phototype-e.md#video)
@@ -63,8 +57,6 @@ AUDIO = 3
 Audio.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 

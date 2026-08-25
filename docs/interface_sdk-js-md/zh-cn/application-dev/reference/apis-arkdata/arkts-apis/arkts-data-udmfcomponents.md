@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ContentFormCard, FormType } from '@kit.ArkData';
+import { ContentFormCard, FormType } from 'kits/@kit.ArkData';
 ```
 
 ## 汇总

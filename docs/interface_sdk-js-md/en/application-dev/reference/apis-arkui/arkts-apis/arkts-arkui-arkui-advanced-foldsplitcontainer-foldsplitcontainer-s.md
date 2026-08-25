@@ -12,47 +12,13 @@
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from '@kit.ArkUI';
+import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## extra
-
-```TypeScript
-extra?: RegionBuilder
-```
-
-The builder function which will be rendered in the extra region of container.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onHoverStatusChange
 
@@ -64,43 +30,9 @@ Callback function triggered when the foldable device enters or exits the semi-fo
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## primary
-
-```TypeScript
-primary: RegionBuilder
-```
-
-The builder function which will be rendered in the major region of container.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## secondary
-
-```TypeScript
-secondary: RegionBuilder
-```
-
-The builder function which will be rendered in the minor region of container.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -112,11 +44,9 @@ animationOptions?: AnimateParam | null
 
 Animation settings. The value **null** indicates that the animation is disabled.
 
-**Type:** [AnimateParam](arkts-arkui-common-animateparam-i.md) \| null
+**Type:** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) \| null
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,8 +66,6 @@ Layout information for the expanded state.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -155,8 +83,6 @@ Callback function for the extra region. If this parameter is not provided, there
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,8 +102,6 @@ Layout information for the folded state.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -195,8 +119,6 @@ Layout information for the semi-folded state.
 **Type:** [HoverModeRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -216,8 +138,6 @@ Callback function for the primary region.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -235,8 +155,6 @@ Callback function for the extra region.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

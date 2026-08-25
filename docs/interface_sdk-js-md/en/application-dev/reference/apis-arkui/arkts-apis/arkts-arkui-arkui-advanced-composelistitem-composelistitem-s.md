@@ -13,31 +13,13 @@ The **ComposeListItem** component is a container that presents a series of items
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
+import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentItem
 
@@ -50,8 +32,6 @@ Elements on the left and in the center.
 **Type:** [ContentItem](arkts-arkui-arkui-advanced-composelistitem-contentitem-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,8 +50,6 @@ Element on the right.
 **Type:** [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

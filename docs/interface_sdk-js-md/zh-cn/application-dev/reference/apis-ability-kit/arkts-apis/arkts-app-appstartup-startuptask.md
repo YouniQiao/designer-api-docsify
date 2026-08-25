@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { StartupTask } from '@kit.AbilityKit';
+import { StartupTask } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

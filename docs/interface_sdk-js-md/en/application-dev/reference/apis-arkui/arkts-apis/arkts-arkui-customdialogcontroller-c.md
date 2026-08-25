@@ -18,8 +18,6 @@ dialogController : CustomDialogController | null = new CustomDialogController(Cu
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -34,8 +32,6 @@ close()
 ```
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,8 +59,6 @@ Constructor for a custom dialog box.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -84,8 +78,6 @@ getState(): PromptActionCommonState
 Obtains the state of the custom dialog box.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,8 +106,6 @@ Opens the content of the custom dialog box. This API can be called multiple time
 > of the input method framework documentation.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## sppWrite
@@ -15,8 +15,6 @@ function sppWrite(clientSocket: number, data: ArrayBuffer): void
 Write data through the socket.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -39,26 +37,3 @@ Write data through the socket.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901054 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let clientNumber = -1;
-function clientSocket(code: BusinessError, number: number) {
-  if (code == null || code.code != 0) {
-    return;
-  }
-  console.info(`bluetooth serverSocket Number: ${number}`);
-  // The obtained clientNumber is used as the socket ID for subsequent read/write operations on the client.
-  clientNumber = number;
-}
-let arrayBuffer = new ArrayBuffer(8);
-let data = new Uint8Array(arrayBuffer);
-data[0] = 123;
-try {
-    bluetoothManager.sppWrite(clientNumber, arrayBuffer);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```

@@ -4,8 +4,6 @@ Defines the modes of opening a new window in the WebView, including pop-up windo
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NEW_POPUP
@@ -17,8 +15,6 @@ NEW_POPUP = 0
 Open in a new pop-up window.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ Open in a new window.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NEW_BACKGROUND_TAB
@@ -46,8 +40,6 @@ Open in a new tab in background.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NEW_FOREGROUND_TAB
@@ -59,7 +51,5 @@ NEW_FOREGROUND_TAB = 3
 Open in a new tab in foreground.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## closeGeneratorNodeGraph
@@ -15,8 +15,6 @@ function closeGeneratorNodeGraph(uiContext: UIContext): Promise<void>
 Close the AI node graph Sheet.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

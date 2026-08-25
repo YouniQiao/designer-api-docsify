@@ -4,8 +4,6 @@ Defines the ImageBitmap.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## height
@@ -19,8 +17,6 @@ The height of the Image Bitmap object.
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -39,8 +35,6 @@ The width of the Image Bitmap object.
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -4,14 +4,12 @@ Describes the attributes of the edit box, including the text input type and Ente
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## abilityName
@@ -20,13 +18,14 @@ import { inputMethod } from '@kit.IMEKit';
 abilityName?: string
 ```
 
-Ability name set for the edit box. <br> <br>- If the ability name is set for the edit box, the length cannot exceed 127 characters. (A name longer than 127 characters will be automatically truncated to 127 characters.) <br>- If the ability name is not set for the edit box, the value is an empty string by default. <br>- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
+Ability name set for the edit box.   
+- If the ability name is set for the edit box, the length cannot exceed 127 characters. (A name longer than 127 characters will be automatically truncated to 127 characters.)   
+- If the ability name is not set for the edit box, the value is an empty string by default.   
+- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
 
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -44,8 +43,6 @@ Whether the editor supports consuming key events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -62,8 +59,6 @@ Function type represented by the Enter key.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## placeholder
@@ -72,13 +67,14 @@ Function type represented by the Enter key.
 placeholder?: string
 ```
 
-Placeholder information set for the edit box. <br> <br>- When placeholder information is set for the edit box, the length cannot exceed 255 characters (a placeholder longer than 255 characters will be automatically truncated to 255 characters). It is used to prompt or guide users to enter temporary text or symbols. (For example, the placeholder prompts whether the input item is mandatory.) <br>- If no placeholder is set for the edit box, the value is an empty string by default. <br>- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
+Placeholder information set for the edit box.   
+- When placeholder information is set for the edit box, the length cannot exceed 255 characters (a placeholder longer than 255 characters will be automatically truncated to 255 characters). It is used to prompt or guide users to enter temporary text or symbols. (For example, the placeholder prompts whether the input item is mandatory.)   
+- If no placeholder is set for the edit box, the value is an empty string by default.   
+- This field is provided for the input method application when [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) is called.
 
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -93,7 +89,5 @@ Enumerates the text input types.
 **Type:** [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

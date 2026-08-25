@@ -4,8 +4,6 @@ Parameters used to open the ImageGeneratorDialog.@interface GeneratorDialogOptio
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Parameters used to open the ImageGeneratorDialog.@interface GeneratorDialogOptio
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## content
@@ -24,11 +22,9 @@ content?: ResourceStr
 
 Initial text information used for AI-generated image tasks.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Custom icons used on the AI generated image results page.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -67,8 +61,6 @@ The following configuration parameters are used to customize the imported icon.
 **Type:** [CustomImportIcon](arkts-arkui-imagegeneration-customimporticon-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Model used for AI generate image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -107,8 +97,6 @@ Initial image parameters used for AI-generated image tasks.
 **Type:** Array&lt;ImageItem&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,8 +116,6 @@ Information for LiveView in AI image generation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -147,8 +133,6 @@ Indicates whether to enable minimize during image generation.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,8 +152,6 @@ Callback triggered when the ImageGeneratorDialog changes in size or position.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -188,8 +170,6 @@ Whether to recover from cache for AI image generation. The persistent cache file
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.1.0; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -207,8 +187,6 @@ Text polishing model used in AI generate image tasks.
 **Type:** [TextGenerationModel](arkts-arkui-imagegeneration-textgenerationmodel-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

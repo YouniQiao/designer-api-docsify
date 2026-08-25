@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryAppUsagePriorityGroup
@@ -16,8 +16,6 @@ Queries the usage priority group of the calling application.The priority defined
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
@@ -27,30 +25,6 @@ Queries the usage priority group of the calling application.The priority defined
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-bundleState.queryAppUsagePriorityGroup().then((res: number) => {
-  console.info('BUNDLE_ACTIVE QueryPackageGroup promise succeeded. result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE QueryPackageGroup promise failed. because: ' + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-bundleState.queryAppUsagePriorityGroup((err: BusinessError, res: number) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE QueryPackageGroup callback failed. because: ' + err.code);
-  } else {
-    console.info('BUNDLE_ACTIVE QueryPackageGroup callback succeeded. result: ' + JSON.stringify(res));
-  }
-});
-```
 
 
 ## queryAppUsagePriorityGroup
@@ -63,8 +37,6 @@ Queries the usage priority group of the calling application.The priority defined
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
@@ -74,7 +46,3 @@ Queries the usage priority group of the calling application.The priority defined
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;number & gt; |
-
-**Examples**
-
-See [queryAppUsagePriorityGroup](#queryappusageprioritygroup)

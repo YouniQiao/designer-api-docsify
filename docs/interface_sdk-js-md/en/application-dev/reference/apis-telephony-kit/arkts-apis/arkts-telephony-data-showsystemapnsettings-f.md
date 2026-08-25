@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## showSystemApnSettings
@@ -15,8 +15,6 @@ function showSystemApnSettings(context: Context): Promise<void>
 Open the system APN selection menu, which is presented in a semi-modal form and can be used to select a specific APN. This API uses a promise to return the result. If there is no SIM card or the device does not support the APN menu, the menu cannot be displayed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

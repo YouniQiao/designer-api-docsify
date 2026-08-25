@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## createX500DistinguishedName
@@ -15,8 +15,6 @@ function createX500DistinguishedName(nameStr: string): Promise<X500Distinguished
 表示使用字符串格式的名称创建X500DistinguishedName对象。使用Promise方式返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -49,114 +47,6 @@ function createX500DistinguishedName(nameStr: string): Promise<X500Distinguished
 | [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) |
 | [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let nameStr = '/CN=John Doe/OU=IT Department/O=ACME Inc./L=San Francisco/ST=California/C=US/CN=ALN C/CN=XTS';
-async function createX500DistinguishedName() {
-  try {
-    cert.createX500DistinguishedName(nameStr)
-      .then((_data) => {
-        console.info('createX500DistinguishedName result: success.');
-      })
-      .catch((err: BusinessError) => {
-        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@ohos.base';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let nameStr = '/CN=John Doe/OU=IT Department/O=ACME Inc./L=San Francisco/ST=California/C=US/CN=ALN C/CN=XTS';
-async function createX500DistinguishedName() {
-  try {
-    await cert.createX500DistinguishedName(nameStr);
-    console.info('createX500DistinguishedName result: success.');
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error('createX500DistinguishedName catch, errCode: ' + e.code + ', errMsg: ' + e.message);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let nameDer =
-  new Uint8Array([48, 41, 49, 11, 48, 9, 6, 3, 85, 4, 3, 12, 2, 67, 65, 49, 13, 48, 11, 6, 3, 85, 4, 10, 12, 4, 116,
-    101, 115, 116, 49, 11, 48, 9, 6, 3, 85, 4, 6, 19, 2, 67, 78]);
-
-async function createX500DistinguishedName() {
-  try {
-    cert.createX500DistinguishedName(nameDer)
-      .then((_data) => {
-        console.info('createX500DistinguishedName result: success.');
-      })
-      .catch((err: BusinessError) => {
-        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@ohos.base';
-
-let nameDer =
-  new Uint8Array([48, 41, 49, 11, 48, 9, 6, 3, 85, 4, 3, 12, 2, 67, 65, 49, 13, 48, 11, 6, 3, 85, 4, 10, 12, 4, 116,
-    101, 115, 116, 49, 11, 48, 9, 6, 3, 85, 4, 6, 19, 2, 67, 78]);
-
-async function createX500DistinguishedName() {
-  try {
-    cert.createX500DistinguishedName(nameDer);
-    console.info('createX500DistinguishedName result: success.');
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error('createX500DistinguishedName catch, errCode: ' + e.code + ', errMsg: ' + e.message);
-  }
-}
-```
-
 
 ## createX500DistinguishedName
 
@@ -167,8 +57,6 @@ function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500Distingui
 表示使用DER格式的名称创建X500DistinguishedName对象。使用Promise方式返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -200,7 +88,3 @@ function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500Distingui
 | [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) |
 | [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) |
 | [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) |
-
-**示例**
-
-参见 [createX500DistinguishedName](#createx500distinguishedname)

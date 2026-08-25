@@ -4,8 +4,6 @@ Represents the file system encryption status.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the file system encryption status.
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isEncrypted
@@ -27,8 +25,6 @@ Whether the file system of the device is encrypted.The value **true** means the 
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

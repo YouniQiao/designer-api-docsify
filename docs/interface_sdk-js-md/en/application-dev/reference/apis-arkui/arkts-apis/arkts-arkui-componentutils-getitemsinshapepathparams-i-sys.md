@@ -4,8 +4,6 @@ Image options setted when need to get the image objects.@interface GetItemsInSha
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Image options setted when need to get the image objects.@interface GetItemsInSha
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'kits/@kit.ArkUI';
 ```
 
 ## images
@@ -28,8 +26,6 @@ image information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -39,7 +35,7 @@ image information.
 ## ratio
 
 ```TypeScript
-ratio?: double
+ratio?: number
 ```
 
 The proportion of non-transparent blank pixels in the selected area relative to the total pixels of the image. Default value is 0.15.
@@ -47,8 +43,6 @@ The proportion of non-transparent blank pixels in the selected area relative to 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +61,6 @@ Indicates the path points information.
 **Type:** Array&lt;common2D.Point&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

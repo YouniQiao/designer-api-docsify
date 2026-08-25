@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## appNewGroup
 
 ```TypeScript
-appNewGroup: int
+appNewGroup: number
 ```
 
 变化后的应用分组。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -37,16 +33,14 @@ appNewGroup: int
 ## appOldGroup
 
 ```TypeScript
-appOldGroup: int
+appOldGroup: number
 ```
 
 变化前的应用分组。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -64,8 +58,6 @@ bundleName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -73,17 +65,18 @@ bundleName: string
 ## changeReason
 
 ```TypeScript
-changeReason: long
+changeReason: number
 ```
 
 分组变化原因。  
-- 256:使用记录初创建时，默认匹配的原因。 - 512:计算优先级分组时异常。 - 768:使用时长变化。 - 1024:有其他应用为当前应用强制设置优先级分组。
+- 256:使用记录初创建时，默认匹配的原因。  
+- 512:计算优先级分组时异常。  
+- 768:使用时长变化。  
+- 1024:有其他应用为当前应用强制设置优先级分组。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -92,16 +85,14 @@ changeReason: long
 ## userId
 
 ```TypeScript
-userId: int
+userId: number
 ```
 
 用户id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

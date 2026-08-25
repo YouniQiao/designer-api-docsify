@@ -4,29 +4,25 @@ Compression and decompression return value information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## destLen
 
 ```TypeScript
-destLen: long
+destLen: number
 ```
 
 Total length of the destination buffer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,8 +39,6 @@ For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md).
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

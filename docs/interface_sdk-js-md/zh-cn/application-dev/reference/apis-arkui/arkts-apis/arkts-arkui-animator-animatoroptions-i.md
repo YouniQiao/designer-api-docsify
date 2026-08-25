@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## begin
@@ -26,8 +24,6 @@ begin: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -45,8 +41,6 @@ delay: number
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -62,8 +56,6 @@ direction: "normal" | "reverse" | "alternate" | "alternate-reverse"
 **类型：** "normal" \| "reverse" \| "alternate" \| "alternate-reverse"
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -81,8 +73,6 @@ duration: number
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -98,8 +88,6 @@ easing: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -118,8 +106,6 @@ end: number
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -135,8 +121,6 @@ fill: "none" | "forwards" | "backwards" | "both"
 **类型：** "none" \| "forwards" \| "backwards" \| "both"
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -154,8 +138,6 @@ iterations: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

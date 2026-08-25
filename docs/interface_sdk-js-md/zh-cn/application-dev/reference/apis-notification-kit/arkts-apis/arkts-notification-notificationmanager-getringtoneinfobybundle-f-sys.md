@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getRingtoneInfoByBundle
@@ -16,8 +16,6 @@ function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
@@ -46,49 +44,3 @@ function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600022](../errorcode-notification.md#1600022-无效的包信息) |
 | [1600024](../errorcode-notification.md#1600024-未配置自定义铃声) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    try {
-      let bundle: notificationManager.BundleOption = {
-        bundle: 'bundleName',
-      };
-      notificationManager.getRingtoneInfoByBundle(bundle)
-        .then((ringtoneInfo: notificationManager.RingtoneInfo) => {
-          console.info(`getRingtoneInfoByBundle success: ${JSON.stringify(ringtoneInfo)}`);
-        }).catch((err: BusinessError) => {
-        console.error(`getRingtoneInfoByBundle failed, code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      console.error(`getRingtoneInfoByBundle failed, code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName',
-};
-notificationManager.getRingtoneInfoByBundle(bundle).then((ringtoneInfo: notificationManager.RingtoneInfo) => {
-    console.info(`getRingtoneInfoByBundle success: ${JSON.stringify(ringtoneInfo)}`);
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getRingtoneInfoByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
@@ -19,8 +17,6 @@ COLLABORATION_SINGLE = 0
 设备选择模块单选模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 
@@ -39,8 +35,6 @@ COLLABORATION_MULTIPLE = 1
 设备选择模块多选模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 

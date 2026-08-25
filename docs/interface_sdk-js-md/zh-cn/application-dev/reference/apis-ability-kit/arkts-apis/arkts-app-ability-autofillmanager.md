@@ -4,8 +4,6 @@ autoFillManager模块为应用提供账号、密码、地址、电话号码等�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -13,7 +11,7 @@ autoFillManager模块为应用提供账号、密码、地址、电话号码等�
 ## 导入模块
 
 ```TypeScript
-import { autoFillManager } from '@kit.AbilityKit';
+import { autoFillManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -35,8 +33,6 @@ import { autoFillManager } from '@kit.AbilityKit';
 | 名称 |
 | --- |
 | [FillRequest](arkts-ability-autofillmanager-fillrequest-t.md) |
-| [OnFailureFn](arkts-ability-autofillmanager-onfailurefn-t.md) |
-| [OnSuccessFn](arkts-ability-autofillmanager-onsuccessfn-t.md) |
 | [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md) |
 
 <!--Del-->
@@ -46,13 +42,10 @@ import { autoFillManager } from '@kit.AbilityKit';
 | --- |
 | [AutoFillPopupConfig](arkts-ability-autofillmanager-autofillpopupconfig-t-sys.md) |
 | [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t-sys.md) |
-| [AutoFillTriggerType](arkts-ability-autofillmanager-autofilltriggertype-t-sys.md) |
-| [AutoFillType](arkts-ability-autofillmanager-autofilltype-t-sys.md) |
 | [CustomData](arkts-ability-autofillmanager-customdata-t-sys.md) |
 | [FillRequestCallback](arkts-ability-autofillmanager-fillrequestcallback-t-sys.md) |
 | [FillResponse](arkts-ability-autofillmanager-fillresponse-t-sys.md) |
 | [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t-sys.md) |
-| [PopupPlacement](arkts-ability-autofillmanager-popupplacement-t-sys.md) |
 | [PopupSize](arkts-ability-autofillmanager-popupsize-t-sys.md) |
 | [SaveRequestCallback](arkts-ability-autofillmanager-saverequestcallback-t-sys.md) |
 | [UpdateRequest](arkts-ability-autofillmanager-updaterequest-t-sys.md) |

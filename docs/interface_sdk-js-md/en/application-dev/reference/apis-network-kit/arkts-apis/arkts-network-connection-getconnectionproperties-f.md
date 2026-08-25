@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getConnectionProperties
@@ -16,8 +16,6 @@ Obtains the connection information of the data network specified by **NetHandle*
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -40,43 +38,6 @@ Obtains the connection information of the data network specified by **NetHandle*
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Example: Obtain the connection information of the default network.
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
-    return;
-  }
-  connection.getConnectionProperties(netHandle, (error: BusinessError, data: connection.ConnectionProperties) => {
-    if (error) {
-      console.error(`Failed to get connection properties. Code:${error.code}, message:${error.message}`);
-      return;
-    }
-    console.info("Succeeded to get data: " + JSON.stringify(data));
-  })
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
-    return;
-  }
-
-  connection.getConnectionProperties(netHandle).then((data: connection.ConnectionProperties) => {
-    console.info("Succeeded to get data: " + JSON.stringify(data));
-  })
-});
-```
-
 
 ## getConnectionProperties
 
@@ -88,8 +49,6 @@ Obtains the connection information of the data network specified by **NetHandle*
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -116,7 +75,3 @@ Obtains the connection information of the data network specified by **NetHandle*
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [getConnectionProperties](#getconnectionproperties)

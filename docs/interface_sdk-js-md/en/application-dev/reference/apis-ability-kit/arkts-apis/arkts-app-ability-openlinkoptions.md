@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { OpenLinkOptions } from '@kit.AbilityKit';
+import { OpenLinkOptions } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

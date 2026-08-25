@@ -4,8 +4,6 @@ Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Elem
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Elem
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## accessType
 
 ```TypeScript
-accessType: int
+accessType: number
 ```
 
 The type of access.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -46,8 +42,6 @@ Certificate hash hexadecimal string.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ The name of package.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

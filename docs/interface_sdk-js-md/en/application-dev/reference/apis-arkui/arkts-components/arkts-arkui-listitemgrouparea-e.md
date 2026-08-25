@@ -4,8 +4,6 @@ Enumerates the areas of **ListItemGroup**.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 Area other than the **ListItem**, header, and footer areas in **ListItemGroup**.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ IN_LIST_ITEM_AREA = 1
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -54,8 +48,6 @@ Header area in **ListItemGroup**.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,8 +63,6 @@ IN_FOOTER_AREA = 3
 Footer area in **ListItemGroup**.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

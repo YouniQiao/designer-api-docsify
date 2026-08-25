@@ -1,10 +1,8 @@
 # WifiDetailState (System API)
 
-Wi-Fi detail state. @enum { int } WifiDetailState
+Wi-Fi detail state. @enum { number } WifiDetailState
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -20,8 +18,6 @@ state is unknown
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ INACTIVE = 0
 wifi is closed
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -52,8 +46,6 @@ wifi is opened
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ ACTIVATING = 2
 wifi is opening
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -84,8 +74,6 @@ wifi is closing
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -100,8 +88,6 @@ wifi sta is entering semi active
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ SEMI_ACTIVE = 5
 wifi sta is semi active
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

@@ -4,8 +4,6 @@ Enumeration of permission level for an application to access asset.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## URI_FORMAT_ERROR
@@ -17,8 +15,6 @@ URI_FORMAT_ERROR = 0
 Not media asset uri.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Asset not exists.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -50,8 +44,6 @@ The application has read permission when accessing the asset.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -65,8 +57,6 @@ NO_READ_PERMISSION = 3
 The application has no read permission when accessing the asset.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

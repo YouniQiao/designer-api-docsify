@@ -4,14 +4,12 @@ Provides information about an input device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## axisRanges
@@ -26,39 +24,33 @@ Axis information of the input device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## bus
 
 ```TypeScript
-bus: int
+bus: number
 ```
 
 Bus type of the input device. By default, the bus type reported by the input device prevails.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## displayId
 
 ```TypeScript
-displayId?: int
+displayId?: number
 ```
 
 Indicates the bound target displayId.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,16 +59,14 @@ Indicates the bound target displayId.
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 Unique ID of the input device. If a physical device is repeatedly plugged and unplugged, its ID may change.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -92,8 +82,6 @@ Whether the input device is a local device.The value **true** indicates that the
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## isVirtual
@@ -107,8 +95,6 @@ Whether the input device is a virtual device.The value **true** indicates that t
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -124,8 +110,6 @@ Name of the input device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## phys
@@ -140,23 +124,19 @@ Physical address of the input device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## product
 
 ```TypeScript
-product: int
+product: number
 ```
 
 Product information of the input device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -172,8 +152,6 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## uniq
@@ -188,38 +166,32 @@ Unique ID of the input device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## vendor
 
 ```TypeScript
-vendor: int
+vendor: number
 ```
 
 Vendor information of the input device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## version
 
 ```TypeScript
-version: int
+version: number
 ```
 
 Version information of the input device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice

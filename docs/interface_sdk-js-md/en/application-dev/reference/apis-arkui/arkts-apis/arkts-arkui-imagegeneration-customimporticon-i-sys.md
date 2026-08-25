@@ -4,8 +4,6 @@ Customize the import icon, which is used to add images and text from the applica
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Customize the import icon, which is used to add images and text from the applica
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## callback
@@ -25,8 +23,6 @@ callback: CustomImportCallback
 Async callback function for import operation.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ image: image.PixelMap | ResourceStr
 
 Icon image information.
 
-**Type:** image.PixelMap \| ResourceStr
+**Type:** image.PixelMap \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +56,9 @@ text: ResourceStr
 
 Icon text description.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Represents the cloud data change information.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the cloud data change information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## eventId
@@ -27,8 +25,6 @@ Change event ID.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -45,8 +41,6 @@ Represents the cloud data change information.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

@@ -4,8 +4,6 @@ Enumerates the user device forms.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## AUTOMOTIVE
@@ -17,8 +15,6 @@ AUTOMOTIVE = 'Automotive'
 Telematics device, which is a string.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ PC, which is a string.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -49,8 +43,6 @@ MOBILE = 'Mobile'
 Mobile phone, which is a string.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +58,6 @@ E-ink screen, which is a string.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -81,8 +71,6 @@ TABLET = 'Tablet'
 Tablet, which is a string.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +86,6 @@ Watch, a string type.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -113,8 +99,6 @@ XR = 'XR'
 VR+AR device, a string type.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

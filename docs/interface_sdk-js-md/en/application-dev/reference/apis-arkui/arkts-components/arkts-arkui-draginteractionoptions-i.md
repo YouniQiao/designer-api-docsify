@@ -4,8 +4,6 @@ Interaction behavior for the floating preview image
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,13 +17,11 @@ Interaction behavior for the floating preview image
 defaultAnimationBeforeLifting?: boolean
 ```
 
-Whether to enable the default press animation (scale-down) during long-press lift phase. **true** to enable, **false** otherwise.Default value: **false**.
+Whether to enable the default press animation (scale-down) during number-press lift phase. **true** to enable, **false** otherwise.Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Whether to trigger automatic scrolling when users drag to the edges of a scrolla
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -69,8 +63,6 @@ Whether to enable haptic feedback during dragging.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -85,15 +77,13 @@ isLiftingDisabled?: boolean
 
 Whether to disable the lift animation effect during dragging.  
 **true**: Disable the lifting effect during dragging.  
-**false**: Enable the lifting effect during dragging.With the value **true**, only the custom menu preview (set using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)), also known as the long-press preview, is displayed if both the long-press preview and drag preview are configured.Default value: **false**
+**false**: Enable the lifting effect during dragging.With the value **true**, only the custom menu preview (set using [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)), also known as the number-press preview, is displayed if both the number-press preview and drag preview are configured.Default value: **false**
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,8 +104,6 @@ This parameter is incompatible with bindContextMenu](ts-universal-attributes-men
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

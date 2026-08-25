@@ -4,14 +4,12 @@ Location subsystem command structure.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## command
@@ -26,8 +24,6 @@ Sent command content.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## scenario
@@ -41,7 +37,5 @@ Information about the scenario where the command is sent.
 **Type:** LocationRequestScenario
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core

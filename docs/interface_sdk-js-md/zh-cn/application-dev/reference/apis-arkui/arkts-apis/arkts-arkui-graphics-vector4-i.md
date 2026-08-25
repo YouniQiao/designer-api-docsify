@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## w
 
 ```TypeScript
-w: double
+w: number
 ```
 
 向量w轴方向的值。取值范围：(-∞, +∞)
@@ -19,8 +17,6 @@ w: double
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -31,7 +27,7 @@ w: double
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 向量x轴方向的值。取值范围：(-∞, +∞)
@@ -39,8 +35,6 @@ x: double
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,7 +45,7 @@ x: double
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 向量y轴方向的值。取值范围：(-∞, +∞)
@@ -59,8 +53,6 @@ y: double
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,7 +63,7 @@ y: double
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
 向量z轴方向的值。取值范围：(-∞, +∞)
@@ -79,8 +71,6 @@ z: double
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,14 +4,12 @@ Defines the size property.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'kits/@kit.ArkUI';
 ```
 
 ## height
@@ -25,8 +23,6 @@ Component height.Unit: px
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Component width.Unit: px
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## startAVPlayback
@@ -15,8 +15,6 @@ function startAVPlayback(bundleName: string, assetId: string): Promise<void>
 Start an application for media playback.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -46,30 +44,6 @@ Start an application for media playback.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.startAVPlayback("com.example.myapplication", "121278").then(() => {
-  console.info('startAVPlayback : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`startAVPlayback BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.startAVPlayback("com.example.myapplication", "121278", "entry").then(() => {
-  console.info('startAVPlayback : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`startAVPlayback BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## startAVPlayback
 
@@ -80,8 +54,6 @@ function startAVPlayback(bundleName: string, assetId: string, info: CommandInfo)
 Start an application for media playback with command info.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -110,7 +82,3 @@ Start an application for media playback with command info.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-**Examples**
-
-See [startAVPlayback](#startavplayback)

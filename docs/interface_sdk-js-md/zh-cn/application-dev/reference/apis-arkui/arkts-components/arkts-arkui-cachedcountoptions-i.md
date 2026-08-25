@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -26,8 +24,6 @@ independent?: boolean
 **默认值：** false
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +46,6 @@ isShown?: boolean
 **默认值：** false
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

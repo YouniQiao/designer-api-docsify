@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## addScanner
@@ -15,8 +15,6 @@ function addScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Prom
 Adds a scanner. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -43,18 +41,3 @@ Adds a scanner. This API uses a promise to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uniqueId: string = 'unique_scanner_001';
-let discoveryMode: scan.ScannerDiscoveryMode = scan.ScannerDiscoveryMode.TCP_STR;
-scan.addScanner(uniqueId, discoveryMode).then(() => {
-    console.info('add scanner success');
-}).catch((error: BusinessError) => {
-    console.error('add scanner failed: ' + JSON.stringify(error));
-})
-```

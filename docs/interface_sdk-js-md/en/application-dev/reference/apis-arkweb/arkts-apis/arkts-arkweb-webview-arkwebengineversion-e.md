@@ -4,8 +4,6 @@ For ArkWeb kernel versions, see [Adaptation Guide for the M114 Kernel on OpenHar
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## SYSTEM_DEFAULT
@@ -17,8 +15,6 @@ SYSTEM_DEFAULT = 0
 System default kernel (see [Constraints](../../../web/web-component-overview.md#constraints)). The default kernel is M132 for OpenHarmony 6.0 and M144 for OpenHarmony 7.0.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ Legacy kernel of OpenHarmony 6.0. Developers can select this legacy kernel. If t
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## M132
@@ -46,8 +40,6 @@ Evergreen kernel of OpenHarmony 6.0 (legacy kernel of OpenHarmony 7.0). M132 is 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## M144
@@ -59,8 +51,6 @@ M144 = 3
 Evergreen kernel of OpenHarmony 7.0. M144 is the default kernel of OpenHarmony 7.0. If this kernel does not exist on the system version, the setting does not take effect and the system default kernel is used.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +65,5 @@ ARKWEB_EVERGREEN = 99999
 The latest kernel (evergreen kernel) of the system. Developers can select this kernel to always use the latest kernel on each system version.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

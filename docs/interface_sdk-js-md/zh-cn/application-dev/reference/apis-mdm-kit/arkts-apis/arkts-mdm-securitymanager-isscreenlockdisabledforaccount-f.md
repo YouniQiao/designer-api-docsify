@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isScreenLockDisabledForAccount
@@ -15,8 +15,6 @@ function isScreenLockDisabledForAccount(admin: Want): boolean
 查询当前用户的滑动解锁能力是否被禁用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -44,22 +42,3 @@ function isScreenLockDisabledForAccount(admin: Want): boolean
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let result: boolean = securityManager.isScreenLockDisabledForAccount(wantTemp);
-  console.info(`Succeeded in checking screen lock disabled for account, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to check screen lock disabled for account. Code: ${err.code}, message: ${err.message}`);
-}
-```

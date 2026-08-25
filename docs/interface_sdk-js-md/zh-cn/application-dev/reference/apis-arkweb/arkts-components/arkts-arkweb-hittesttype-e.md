@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 21
 
 **替代接口：** [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md)
@@ -21,8 +19,6 @@ EditText = 0
 可编辑的区域。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 21
 
@@ -42,8 +38,6 @@ Email = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 21
 
 **替代接口：** [Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#email)
@@ -61,8 +55,6 @@ HttpAnchor = 2
 超链接，其src为http。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 21
 
@@ -82,8 +74,6 @@ HttpAnchorImg = 3
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 21
 
 **替代接口：** [HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchorimg)
@@ -101,8 +91,6 @@ Img = 4
 HTML::img标签。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 21
 
@@ -122,8 +110,6 @@ Map = 5
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 21
 
 **替代接口：** [Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#map)
@@ -142,8 +128,6 @@ Phone = 6
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 21
 
 **替代接口：** [Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#phone)
@@ -161,8 +145,6 @@ Unknown = 7
 未知内容。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 21
 

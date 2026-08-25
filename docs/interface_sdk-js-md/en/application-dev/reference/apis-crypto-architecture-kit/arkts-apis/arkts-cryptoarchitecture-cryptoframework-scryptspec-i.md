@@ -11,29 +11,25 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## keySize
 
 ```TypeScript
-keySize: int
+keySize: number
 ```
 
 Length of the derived key, in bytes. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -42,16 +38,14 @@ Length of the derived key, in bytes. The value must be a positive integer.
 ## maxMemory
 
 ```TypeScript
-maxMemory: long
+maxMemory: number
 ```
 
 Maximum memory size, in bytes. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -60,16 +54,14 @@ Maximum memory size, in bytes. The value must be a positive integer.
 ## n
 
 ```TypeScript
-n: long
+n: number
 ```
 
 CPU/memory cost parameter. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -78,16 +70,14 @@ CPU/memory cost parameter. The value must be a positive integer.
 ## p
 
 ```TypeScript
-p: long
+p: number
 ```
 
 Parallelization parameter. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -105,8 +95,6 @@ Original password entered by the user.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
@@ -114,16 +102,14 @@ Original password entered by the user.
 ## r
 
 ```TypeScript
-r: long
+r: number
 ```
 
 Block size. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -140,8 +126,6 @@ Salt value.
 **Type:** Uint8Array
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

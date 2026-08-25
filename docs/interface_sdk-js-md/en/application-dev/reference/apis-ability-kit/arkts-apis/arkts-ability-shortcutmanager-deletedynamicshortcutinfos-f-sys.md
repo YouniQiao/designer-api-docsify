@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## deleteDynamicShortcutInfos
 
 ```TypeScript
-function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: int, ids?: Array<string>): Promise<void>
+function deleteDynamicShortcutInfos(bundleName: string, appIndex: number, userId: number, ids?: Array<string>): Promise<void>
 ```
 
 Deletes dynamic shortcuts.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS or (ohos.permission.MANAGE_SHORTCUTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -29,8 +27,8 @@ Deletes dynamic shortcuts.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| appIndex | number | Yes |
+| userId | number | Yes |
 | ids | Array & lt;string & gt; | No |
 
 **Return value:**
@@ -51,24 +49,3 @@ Deletes dynamic shortcuts.
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
 | [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) |
-
-**Examples**
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use the actual shortcut ID, bundle name, and user ID.
-const bundleName = "com.example.dynamic";
-
-try {
-  shortcutManager.deleteDynamicShortcutInfos(bundleName, 0, 100, ["1", "2"])
-    .then(() => {
-      console.info('deleteDynamicShortcutInfos success');
-    }).catch((err: Error) => {
-    console.error(`deleteDynamicShortcutInfos errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-  });
-} catch (err) {
-  console.error(`deleteDynamicShortcutInfos errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-}
-```

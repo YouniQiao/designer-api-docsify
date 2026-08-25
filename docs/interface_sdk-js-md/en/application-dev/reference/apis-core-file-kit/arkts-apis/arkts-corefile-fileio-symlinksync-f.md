@@ -15,8 +15,6 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [symlinkSync](arkts-corefile-file-fs-symlinksync-f.md)
@@ -29,11 +27,3 @@ Creates a symbolic link based on the file path. This API returns the result sync
 | --- | --- | --- |
 | target | string | Yes |
 | srcPath | string | Yes |
-
-**Examples**
-
-```TypeScript
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + '/test';
-fileio.symlinkSync(srcFile, dstFile);
-```

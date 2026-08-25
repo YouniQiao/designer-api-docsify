@@ -4,14 +4,12 @@ Defines the common options.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
 ```
 
 ## onHoverDecrease
@@ -23,8 +21,6 @@ onHoverDecrease?: (isHover: boolean) => void
 Trigger a mouse hover event at the decrease button.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ onHoverIncrease?: (isHover: boolean) => void
 Trigger a mouse hover event at the increase button.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +70,6 @@ Set the focusable of the counter component.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -97,8 +89,6 @@ Set the step of the counter component, ranges greater than or equal to 1
 **Default:** 1
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

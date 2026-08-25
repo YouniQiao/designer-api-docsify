@@ -4,8 +4,6 @@ Enumerates the types of permissions for accessing media assets.The permissions i
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Temporary read permission.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ PERSISTENT_READ_IMAGEVIDEO = 1
 Persistent read permission.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

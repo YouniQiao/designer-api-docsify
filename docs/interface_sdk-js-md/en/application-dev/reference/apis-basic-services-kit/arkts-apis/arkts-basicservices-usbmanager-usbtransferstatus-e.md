@@ -4,8 +4,6 @@ Enumerates the status code returned after data processing is complete.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## TRANSFER_COMPLETED
@@ -17,8 +15,6 @@ TRANSFER_COMPLETED = 0
 Transfer completed.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -32,8 +28,6 @@ Transfer failed.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## TRANSFER_TIMED_OUT
@@ -45,8 +39,6 @@ TRANSFER_TIMED_OUT = 2
 Transfer timeout.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -60,8 +52,6 @@ Transfer canceled.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## TRANSFER_STALL
@@ -73,8 +63,6 @@ TRANSFER_STALL = 4
 Transfer stalled (at bulk/interrupt endpoint).
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -88,8 +76,6 @@ Device disconnected.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## TRANSFER_OVERFLOW
@@ -101,7 +87,5 @@ TRANSFER_OVERFLOW = 6
 Data overflow.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager

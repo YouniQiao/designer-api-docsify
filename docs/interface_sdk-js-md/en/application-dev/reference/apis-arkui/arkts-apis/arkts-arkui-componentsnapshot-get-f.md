@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## get
@@ -22,8 +22,6 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -50,89 +48,6 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct SnapshotExample {
-  @State pixmap: image.PixelMap | undefined = undefined
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
-        // Replace $r('app.media.img') with the image resource file you use.
-        Image($r('app.media.img'))
-          .autoResize(true)
-          .width(200)
-          .height(200)
-          .margin(5)
-          .id("root")
-      }
-
-      Button("click to generate UI snapshot")
-        .onClick(() => {
-          // You are advised to use this.getUIContext().getComponentSnapshot().get().
-          componentSnapshot.get("root", (error: Error, pixmap: image.PixelMap) => {
-            if (error) {
-              console.error(`error:${JSON.stringify(error)}`)
-              return;
-            }
-            this.pixmap = pixmap
-          }, { scale: 2, waitUntilRenderFinished: true })
-        }).margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-```
-
-```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct SnapshotExample {
-  @State pixmap: image.PixelMap | undefined = undefined
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
-        // Replace $r('app.media.img') with the image resource file you use.
-        Image($r('app.media.img'))
-          .autoResize(true)
-          .width(200)
-          .height(200)
-          .margin(5)
-          .id("root")
-      }
-
-      Button("click to generate UI snapshot")
-        .onClick(() => {
-          // You are advised to use this.getUIContext().getComponentSnapshot().get().
-          componentSnapshot.get("root", { scale: 2, waitUntilRenderFinished: true })
-            .then((pixmap: image.PixelMap) => {
-              this.pixmap = pixmap
-            }).catch((err: Error) => {
-            console.error(`error:${err}`)
-          })
-        }).margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-```
-
 
 ## get
 
@@ -150,8 +65,6 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -182,7 +95,3 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
-
-**Examples**
-
-See [get](#get)

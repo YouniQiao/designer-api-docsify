@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## createVpnObserver
@@ -16,8 +16,6 @@ function createVpnObserver(): VpnObserver
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
@@ -27,11 +25,3 @@ function createVpnObserver(): VpnObserver
 | 类型 |
 | --- |
 | [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) |
-
-**示例**
-
-```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
-
-let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## createNormalOsAccount
@@ -21,8 +21,6 @@ Creates a normal system account. A maximum of two normal system accounts ([osAcc
 > and tablets with 12 GB or more of RAM.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCAL_ACCOUNTS
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@kit.ConnectivityKit';
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disableDeviceControl
@@ -15,8 +15,6 @@ function disableDeviceControl(deviceAddress: PartnerDeviceAddress): Promise<void
 Disables device control for a bound device.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

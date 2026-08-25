@@ -376,8 +376,8 @@ Creates a pointer to the ArkUI_StyledString object.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Drawing_TypographyStyle](capi-drawing-oh-drawing-typographystyle.md)* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
-| [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)* collection | A pointer to OH_Drawing_FontCollection, obtained by {@link OH_Drawing_CreateFontCollection}. |
+| OH_Drawing_TypographyStyle* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
+| OH_Drawing_FontCollection* collection | A pointer to OH_Drawing_FontCollection, obtained by {@link OH_Drawing_CreateFontCollection}. |
 
 **Returns**:
 
@@ -420,7 +420,7 @@ Sets the new layout style to the top of the current format string style stack.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)* handle | A pointer to the ArkUI_StyledString object. |
-| [OH_Drawing_TextStyle](capi-drawing-oh-drawing-textstyle.md)* style | A pointer to the OH_Drawing_TextStyle object. |
+| OH_Drawing_TextStyle* style | A pointer to the OH_Drawing_TextStyle object. |
 
 ### OH_ArkUI_StyledString_AddText()
 
@@ -481,7 +481,7 @@ Creates a pointer to an OH_Drawing_Typography object based on a format string ob
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Typography*](capi-drawing-oh-drawing-typography.md) | A pointer to the OH_Drawing_Typography object. If the object returns a null pointer,          the creation fails because the handle parameter is abnormal, such as a null pointer. |
+| OH_Drawing_Typography* | A pointer to the OH_Drawing_Typography object. If the object returns a null pointer,          the creation fails because the handle parameter is abnormal, such as a null pointer. |
 
 ### OH_ArkUI_StyledString_AddPlaceholder()
 
@@ -500,7 +500,7 @@ Set the placeholder.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)* handle | A pointer to the ArkUI_StyledString object. |
-| [OH_Drawing_PlaceholderSpan](../ArkGraphics2D/capi-drawing-oh-drawing-placeholderspan.md)* placeholder | A pointer to the OH_Drawing_PlaceholderSpan object. |
+| OH_Drawing_PlaceholderSpan* placeholder | A pointer to the OH_Drawing_PlaceholderSpan object. |
 
 ### OH_ArkUI_StyledString_Descriptor_Create()
 
@@ -518,7 +518,7 @@ Creates an <b>ArkUI_StyledString_Descriptor</b> object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* | Returns the pointer to the <b>ArkUI_StyledString_Descriptor</b> object created. |
+| [ArkUI_StyledString_Descriptor*](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | Returns the pointer to the <b>ArkUI_StyledString_Descriptor</b> object created. |
 
 ### OH_ArkUI_StyledString_Descriptor_Destroy()
 
@@ -536,7 +536,7 @@ Destroys an <b>ArkUI_StyledString_Descriptor</b> object and reclaims the memory 
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object. |
 
 ### OH_ArkUI_ConvertToHtml()
 
@@ -554,7 +554,7 @@ Converts styled string information into HTML.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object. |
 
 **Returns**:
 
@@ -580,7 +580,7 @@ Deserializes a byte array containing styled string information into a styled str
 | -- | -- |
 | uint8_t* buffer | Byte array to be deserialized. |
 | size_t bufferSize | Length of the byte array. |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object. |
 
 **Returns**:
 
@@ -606,7 +606,7 @@ Serializes the styled string information into a byte array.
 | -- | -- |
 | uint8_t* buffer | Byte array where the serialized data will be stored. |
 | size_t bufferSize | Length of the byte array. |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object. |
 | size_t* resultSize | Actual length of the byte array. |
 
 **Returns**:
@@ -643,7 +643,7 @@ Creates an [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styleds
 
 | Type | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* | The pointer to the <b>ArkUI_StyledString_Descriptor</b> object created. If the result is a null pointer,      it may be params is invalid. |
+| [ArkUI_StyledString_Descriptor*](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | The pointer to the <b>ArkUI_StyledString_Descriptor</b> object created. If the result is a null pointer,      it may be params is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_CreateWithImageAttachment()
 
@@ -671,7 +671,7 @@ Creates an [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styleds
 
 | Type | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* | The pointer to the <b>ArkUI_StyledString_Descriptor</b> object created. If the result is a null pointer,      it may be params is invalid. |
+| [ArkUI_StyledString_Descriptor*](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | The pointer to the <b>ArkUI_StyledString_Descriptor</b> object created. If the result is a null pointer,      it may be params is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_CreateWithCustomSpan()
 
@@ -699,7 +699,7 @@ Creates an [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styleds
 
 | Type | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* | The pointer to the <b>ArkUI_StyledString_Descriptor</b> object created. If the result is a null pointer,      it may be params is invalid. |
+| [ArkUI_StyledString_Descriptor*](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | The pointer to the <b>ArkUI_StyledString_Descriptor</b> object created. If the result is a null pointer,      it may be params is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_GetLength()
 
@@ -720,14 +720,14 @@ Obtains the length of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | int32_t* length | Pointer to the character length. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_GetString()
 
@@ -748,7 +748,7 @@ Obtains the text content of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | char* buffer | Pointer to the buffer for storing the text content in the memory. You need to allocate the memory. |
 | int32_t bufferSize | Buffer size. |
 | int32_t* writeLength | Pointer to the length of the data actually written to the buffer if[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) is returned.<br>Pointer to the minimum length required for writing the entire string to the buffer if[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) is returned. |
@@ -757,7 +757,7 @@ Obtains the text content of a styled string.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_StyledString_Descriptor_IsEqual()
 
@@ -778,15 +778,15 @@ Checks whether a styled string is the same as another styled string. The two sty
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_StyledString_Descriptor* firstDescriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
-| const ArkUI_StyledString_Descriptor* secondDescriptor | Pointer to another [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* firstDescriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* secondDescriptor | Pointer to another [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | bool* isEqual | Pointer to the **isEqual** parameter indicating whether the two styled strings are the same. **trueif the two are the same; returns **false** otherwise. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_SubStyledString()
 
@@ -807,8 +807,8 @@ Obtains a sub-styled string of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
-| ArkUI_StyledString_Descriptor* subDescriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) sub-styled string object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* subDescriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) sub-styled string object. |
 | uint32_t start | Start position of the sub-styled string. The value range is [0, length of the styled string]. |
 | uint32_t length | Length of the sub-styled string. The value range is [0, difference between the length of the styledstring and the value of **start**]. |
 
@@ -816,7 +816,7 @@ Obtains a sub-styled string of a styled string.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_GetStyles()
 
@@ -837,7 +837,7 @@ Obtains the style set within a specified range of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | uint32_t start | Start position of the specified range. The value range is [0, length of the styled string]. |
 | uint32_t length | Length of the specified range. The value range is [0, difference between the length of the styledstring and the value of **start**]. |
 | [OH_ArkUI_StyledStringKey](capi-styled-string-h.md#oh_arkui_styledstringkey) styledKey | Style type to be obtained. The value is an enumerated value of [OH_ArkUI_StyledStringKey](capi-styled-string-h.md#oh_arkui_styledstringkey). |
@@ -849,7 +849,7 @@ Obtains the style set within a specified range of a styled string.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_StyledString_Descriptor_FromHtml()
 
@@ -870,14 +870,14 @@ Converts an HTML string to a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | const char* html | Pointer to the HTML string to be converted into a styled string. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_ReplaceString()
 
@@ -898,7 +898,7 @@ Replaces the text within a specified range of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | uint32_t start | Start position of the specified range. The value range is [0, length of the styled string]. |
 | uint32_t length | Length of the specified range. The value range is [0, difference between the length of the styledstring and the value of **start**]. |
 | const char* string | Pointer to the string to replace the content in the target range. |
@@ -907,7 +907,7 @@ Replaces the text within a specified range of a styled string.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_InsertString()
 
@@ -928,7 +928,7 @@ Inserts text at a specified position of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | uint32_t start | Insertion position. The value range is [0, length of the styled string]. |
 | const char* string | Pointer to the string to insert. |
 
@@ -936,7 +936,7 @@ Inserts text at a specified position of a styled string.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_RemoveString()
 
@@ -957,7 +957,7 @@ Removes the text within a specified range of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | uint32_t start | Start position of the specified range. The value range is [0, length of the styled string]. |
 | uint32_t length | Length of the specified range. The value range is [0, difference between the length of the styledstring and the value of **start**]. |
 
@@ -965,7 +965,7 @@ Removes the text within a specified range of a styled string.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_ReplaceStyle()
 
@@ -986,14 +986,14 @@ Replaces the style within a specified range of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | [const OH_ArkUI_SpanStyle](capi-arkui-nativemodule-oh-arkui-spanstyle.md)* spanStyle | Pointer to the [OH_ArkUI_SpanStyle](capi-arkui-nativemodule-oh-arkui-spanstyle.md) object.<br>You need to call [OH_ArkUI_SpanStyle_SetStart](capi-styled-string-h.md#oh_arkui_spanstyle_setstart) and [OH_ArkUI_SpanStyle_SetLength](capi-styled-string-h.md#oh_arkui_spanstyle_setlength) to set thetarget range in the object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_SetStyle()
 
@@ -1014,14 +1014,14 @@ Sets a new style for a specified range of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | [const OH_ArkUI_SpanStyle](capi-arkui-nativemodule-oh-arkui-spanstyle.md)* spanStyle | Pointer to the [OH_ArkUI_SpanStyle](capi-arkui-nativemodule-oh-arkui-spanstyle.md) object. You need to call[OH_ArkUI_SpanStyle_SetStart](capi-styled-string-h.md#oh_arkui_spanstyle_setstart) and [OH_ArkUI_SpanStyle_SetLength](capi-styled-string-h.md#oh_arkui_spanstyle_setlength) to set the target range in theobject. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_RemoveStyle()
 
@@ -1042,7 +1042,7 @@ Removes the specified style for a specified range of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | uint32_t start | Start position of the specified range. The value range is [0, length of the styled string]. |
 | uint32_t length | Length of the specified range. The value range is [0, difference between the length of the styledstring and the value of **start**]. |
 | [OH_ArkUI_StyledStringKey](capi-styled-string-h.md#oh_arkui_styledstringkey) styledKey | Style type. The value is an enumerated value of [OH_ArkUI_StyledStringKey](capi-styled-string-h.md#oh_arkui_styledstringkey). |
@@ -1051,7 +1051,7 @@ Removes the specified style for a specified range of a styled string.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_ClearStyles()
 
@@ -1072,13 +1072,13 @@ Clears all styles of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_ReplaceStyledString()
 
@@ -1099,16 +1099,16 @@ Replaces the styled string within a specified range.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | uint32_t start | Start position of the specified range. The value range is [0, length of the styled string]. |
 | uint32_t length | Length of the specified range. The value range is [0, difference between the length of the styledstring and the value of **start**]. |
-| const ArkUI_StyledString_Descriptor* other | Pointer to the new [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* other | Pointer to the new [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_InsertStyledString()
 
@@ -1129,15 +1129,15 @@ Inserts a new styled string at a specified position of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 | uint32_t start | Insertion position. The value range is [0, length of the styled string]. |
-| const ArkUI_StyledString_Descriptor* other | Pointer to the new [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* other | Pointer to the new [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_AppendStyledString()
 
@@ -1158,14 +1158,14 @@ Appends a new styled string to the end of a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
-| const ArkUI_StyledString_Descriptor* other | Pointer to the new [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* other | Pointer to the new [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_StyledString_Descriptor_InvalidateCustomSpan()
 
@@ -1186,13 +1186,13 @@ Actively refreshes the custom span in a styled string.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      Returns [ARKUI_ERROR_CODE_INVALID_STYLED_STRING](capi-error-code-h.md#arkui_errorcode) if the styled string is invalid. |
 
 ### OH_ArkUI_TextStyle_Create()
 
@@ -1259,7 +1259,7 @@ Sets text color for a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_GetFontColor()
 
@@ -1287,7 +1287,7 @@ Obtains the text color of a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_SetFontFamily()
 
@@ -1315,7 +1315,7 @@ Sets a font family for a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_GetFontFamily()
 
@@ -1345,7 +1345,7 @@ Obtains the font family of a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_TextStyle_SetFontSize()
 
@@ -1373,7 +1373,7 @@ Sets font size for a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_GetFontSize()
 
@@ -1401,7 +1401,7 @@ Obtains the font size of a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_SetFontWeight()
 
@@ -1429,7 +1429,7 @@ Sets font weight for a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_GetFontWeight()
 
@@ -1457,7 +1457,7 @@ Obtains the font weight of a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_SetFontStyle()
 
@@ -1479,13 +1479,13 @@ Sets font style for a text font style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_TextStyle](capi-arkui-nativemodule-oh-arkui-textstyle.md)* textStyle | Pointer to the [OH_ArkUI_TextStyle](capi-arkui-nativemodule-oh-arkui-textstyle.md) object. |
-| ArkUI_FontStyle fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle) fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_GetFontStyle()
 
@@ -1507,13 +1507,13 @@ Obtains the font style of a text font style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_TextStyle](capi-arkui-nativemodule-oh-arkui-textstyle.md)* textStyle | Pointer to the [OH_ArkUI_TextStyle](capi-arkui-nativemodule-oh-arkui-textstyle.md) object. |
-| ArkUI_FontStyle* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_SetStrokeWidth()
 
@@ -1541,7 +1541,7 @@ Sets stroke width for a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_GetStrokeWidth()
 
@@ -1569,7 +1569,7 @@ Obtains the stroke width of a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_SetStrokeColor()
 
@@ -1597,7 +1597,7 @@ Sets a stroke color for a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_GetStrokeColor()
 
@@ -1625,7 +1625,7 @@ Obtains the stroke color of a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_SetSuperscript()
 
@@ -1653,7 +1653,7 @@ Sets superscript and subscript styles for a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextStyle_GetSuperscript()
 
@@ -1681,7 +1681,7 @@ Obtains the superscript and subscript styles of a text font style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_Create()
 
@@ -1748,7 +1748,7 @@ Obtains the style of the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetStart()
 
@@ -1776,7 +1776,7 @@ Sets the start position for the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetStart()
 
@@ -1804,7 +1804,7 @@ Obtains the start position of the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetLength()
 
@@ -1832,7 +1832,7 @@ Sets the length for the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetLength()
 
@@ -1860,7 +1860,7 @@ Obtains the length of the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetTextStyle()
 
@@ -1888,7 +1888,7 @@ Sets the text font style for the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetTextStyle()
 
@@ -1916,7 +1916,7 @@ Obtains the text font style of the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetParagraphStyle()
 
@@ -1944,7 +1944,7 @@ Sets the paragraph style for the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetParagraphStyle()
 
@@ -1972,7 +1972,7 @@ Obtains the paragraph style of the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetGestureStyle()
 
@@ -2000,7 +2000,7 @@ Sets the gesture style for the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetGestureStyle()
 
@@ -2028,7 +2028,7 @@ Obtains the gesture style of the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetTextShadowStyle()
 
@@ -2056,7 +2056,7 @@ Sets the text shadow style for the styled string object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetTextShadowStyle()
 
@@ -2084,7 +2084,7 @@ Obtains the text shadow style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetDecorationStyle()
 
@@ -2112,7 +2112,7 @@ Sets the text decorative line style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetDecorationStyle()
 
@@ -2140,7 +2140,7 @@ Obtains the text decorative line style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetBaselineOffsetStyle()
 
@@ -2168,7 +2168,7 @@ Sets the baseline offset style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetBaselineOffsetStyle()
 
@@ -2196,7 +2196,7 @@ Obtains the baseline offset style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetLetterSpacingStyle()
 
@@ -2224,7 +2224,7 @@ Sets the letter spacing style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetLetterSpacingStyle()
 
@@ -2252,7 +2252,7 @@ Obtains the letter spacing style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetLineHeightStyle()
 
@@ -2280,7 +2280,7 @@ Sets the line height style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetLineHeightStyle()
 
@@ -2308,7 +2308,7 @@ Obtains the line height style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetUrlStyle()
 
@@ -2336,7 +2336,7 @@ Sets the URL style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetUrlStyle()
 
@@ -2364,7 +2364,7 @@ Obtains the URL style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetBackgroundColorStyle()
 
@@ -2392,7 +2392,7 @@ Sets the background color style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetBackgroundColorStyle()
 
@@ -2420,7 +2420,7 @@ Obtains the background color style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetUserDataSpan()
 
@@ -2448,7 +2448,7 @@ Sets the user data span style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetUserDataSpan()
 
@@ -2476,7 +2476,7 @@ Obtains the user data span style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetCustomSpan()
 
@@ -2504,7 +2504,7 @@ Sets the custom span style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetCustomSpan()
 
@@ -2532,7 +2532,7 @@ Obtains the custom span style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetImageAttachment()
 
@@ -2560,7 +2560,7 @@ Sets the image style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetImageAttachment()
 
@@ -2588,7 +2588,7 @@ Obtains the image style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_Create()
 
@@ -2655,7 +2655,7 @@ Sets the horizontal offset of the current line relative to the component in the 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_GetX()
 
@@ -2683,7 +2683,7 @@ Obtains the horizontal offset of the current line relative to the component in t
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_SetTop()
 
@@ -2711,7 +2711,7 @@ Sets the distance between the top of a line and the top edge of the component in
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_GetTop()
 
@@ -2739,7 +2739,7 @@ Obtains the distance between the top of a line and the top edge of the component
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_SetBottom()
 
@@ -2767,7 +2767,7 @@ Sets the distance between the bottom of a line and the top edge of the component
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_GetBottom()
 
@@ -2795,7 +2795,7 @@ Obtains the distance between the bottom of a line and the top edge of the compon
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_SetBaseline()
 
@@ -2823,7 +2823,7 @@ Sets the distance between the baseline of the current line and the top edge of t
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_GetBaseline()
 
@@ -2851,7 +2851,7 @@ Obtains the distance between the baseline of the current line and the top edge o
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_SetTextDirection()
 
@@ -2873,13 +2873,13 @@ Sets the text direction in the custom drawing information object for paragraph i
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_LeadingMarginSpanDrawInfo](capi-arkui-nativemodule-oh-arkui-leadingmarginspandrawinfo.md)* drawInfo | Pointer to the [OH_ArkUI_LeadingMarginSpanDrawInfo](capi-arkui-nativemodule-oh-arkui-leadingmarginspandrawinfo.md) object. |
-| ArkUI_TextDirection direction | Text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
+| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection) direction | Text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_GetTextDirection()
 
@@ -2901,13 +2901,13 @@ Obtains the text direction in the custom drawing information object for paragrap
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_LeadingMarginSpanDrawInfo](capi-arkui-nativemodule-oh-arkui-leadingmarginspandrawinfo.md)* drawInfo | Pointer to the [OH_ArkUI_LeadingMarginSpanDrawInfo](capi-arkui-nativemodule-oh-arkui-leadingmarginspandrawinfo.md) object. |
-| ArkUI_TextDirection* direction | Pointer to the text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
+| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)* direction | Pointer to the text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_SetStart()
 
@@ -2935,7 +2935,7 @@ Sets the start index of the current line in the custom drawing information objec
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_GetStart()
 
@@ -2963,7 +2963,7 @@ Obtains the start index of the current line in the custom drawing information ob
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_SetEnd()
 
@@ -2991,7 +2991,7 @@ Sets the end index of the current line in the custom drawing information object 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_GetEnd()
 
@@ -3019,7 +3019,7 @@ Obtains the end index of the current line in the custom drawing information obje
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_SetFirst()
 
@@ -3047,7 +3047,7 @@ Sets whether the current line is the first line of the paragraph in the custom d
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LeadingMarginSpanDrawInfo_GetFirst()
 
@@ -3075,7 +3075,7 @@ Obtains whether the current line is the first line of the paragraph in the custo
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_Create()
 
@@ -3136,13 +3136,13 @@ Sets the horizontal text alignment method in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_TextAlignment align | Horizontal text alignment method. The value is an enumerated value of [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment). |
+| [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment) align | Horizontal text alignment method. The value is an enumerated value of [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetTextAlign()
 
@@ -3164,13 +3164,13 @@ Obtains the horizontal text alignment method in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_TextAlignment* align | Pointer to the horizontal text alignment method. The value is an enumerated value of[ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment). |
+| [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment)* align | Pointer to the horizontal text alignment method. The value is an enumerated value of[ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetTextIndent()
 
@@ -3198,7 +3198,7 @@ Sets the first-line text indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetTextIndent()
 
@@ -3226,7 +3226,7 @@ Obtains the first-line text indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetMaxLines()
 
@@ -3254,7 +3254,7 @@ Sets the maximum number of lines in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetMaxLines()
 
@@ -3282,7 +3282,7 @@ Obtains the maximum number of lines in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetOverflow()
 
@@ -3304,13 +3304,13 @@ Sets the display mode when the paragraph is too long in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_TextOverflow overflow | Display mode when the paragraph is too long. The value is an enumerated value of[ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow). |
+| [ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow) overflow | Display mode when the paragraph is too long. The value is an enumerated value of[ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetOverflow()
 
@@ -3332,13 +3332,13 @@ Obtains the display mode when the paragraph is too long in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_TextOverflow* overflow | Pointer to the display mode when the paragraph is too long. The value is an enumerated value of[ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow). |
+| [ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow)* overflow | Pointer to the display mode when the paragraph is too long. The value is an enumerated value of[ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetWordBreak()
 
@@ -3360,13 +3360,13 @@ Sets the word breaking rule in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_WordBreak wordBreak | Word breaking rule. The value is an enumerated value of [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak). |
+| [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak) wordBreak | Word breaking rule. The value is an enumerated value of [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetWordBreak()
 
@@ -3388,13 +3388,13 @@ Obtains the word breaking rule in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_WordBreak* wordBreak | Pointer to the word breaking rule. The value is an enumerated value of [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak). |
+| [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)* wordBreak | Pointer to the word breaking rule. The value is an enumerated value of [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetLeadingMarginPixelMap()
 
@@ -3416,13 +3416,13 @@ Sets the PixelMap for paragraph indentation in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| struct OH_PixelmapNative* pixelmap | Pointer to the PixelMap for paragraph indentation. |
+| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmap | Pointer to the PixelMap for paragraph indentation. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetLeadingMarginPixelMap()
 
@@ -3444,13 +3444,13 @@ Obtains the PixelMap for paragraph indentation in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| struct OH_PixelmapNative** pixelmap | Double pointer to the PixelMap for paragraph indentation. |
+| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | Double pointer to the PixelMap for paragraph indentation. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetLeadingMarginWidth()
 
@@ -3478,7 +3478,7 @@ Sets the width for paragraph indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetLeadingMarginWidth()
 
@@ -3506,7 +3506,7 @@ Obtains the width for paragraph indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetLeadingMarginHeight()
 
@@ -3534,7 +3534,7 @@ Sets the height for paragraph indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetLeadingMarginHeight()
 
@@ -3562,7 +3562,7 @@ Obtains the height for paragraph indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetParagraphSpacing()
 
@@ -3590,7 +3590,7 @@ Sets the paragraph spacing in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetParagraphSpacing()
 
@@ -3618,7 +3618,7 @@ Obtains the paragraph spacing in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetTextVerticalAlign()
 
@@ -3640,13 +3640,13 @@ Sets the vertical text alignment method in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_TextVerticalAlignment verticalAlignment | Vertical text alignment method. The value is an enumerated value of[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment). |
+| [ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment) verticalAlignment | Vertical text alignment method. The value is an enumerated value of[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetTextVerticalAlign()
 
@@ -3668,13 +3668,13 @@ Obtains the vertical text alignment method in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_TextVerticalAlignment* verticalAlignment | Pointer to the vertical text alignment method. The value is an enumerated value of[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment). |
+| [ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment)* verticalAlignment | Pointer to the vertical text alignment method. The value is an enumerated value of[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_RegisterOnDrawLeadingMarginCallback()
 
@@ -3702,7 +3702,7 @@ Sets the callback function triggered when the paragraph indentation is drawn in 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_RegisterOnGetLeadingMarginCallback()
 
@@ -3730,7 +3730,7 @@ Sets the callback function triggered when the paragraph indentation distance is 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetTextDirection()
 
@@ -3752,13 +3752,13 @@ Sets the text direction in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_TextDirection textDirection | Text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
+| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection) textDirection | Text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetTextDirection()
 
@@ -3780,13 +3780,13 @@ Obtains the text direction in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md) object. |
-| ArkUI_TextDirection* textDirection | Pointer to the text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
+| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)* textDirection | Pointer to the text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_GestureStyle_Create()
 
@@ -3853,7 +3853,7 @@ Sets the click event callback in the event gesture style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_GestureStyle_RegisterOnLongPressCallback()
 
@@ -3881,7 +3881,7 @@ Sets the long-pressing event callback in the event gesture style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_GestureStyle_RegisterOnTouchCallback()
 
@@ -3909,7 +3909,7 @@ Sets the touch event callback in the event gesture style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextShadowStyle_Create()
 
@@ -3970,14 +3970,14 @@ Sets the text shadow options for the text shadow style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_TextShadowStyle](capi-arkui-nativemodule-oh-arkui-textshadowstyle.md)* textShadowStyle | Pointer to the [OH_ArkUI_TextShadowStyle](capi-arkui-nativemodule-oh-arkui-textshadowstyle.md) object. |
-| const OH_ArkUI_ShadowOptions** options | Double pointer to the text shadow options, which points to an array of the[OH_ArkUI_ShadowOptions](capi-arkui-nativemodule-oh-arkui-shadowoptions.md) object. |
+| [const OH_ArkUI_ShadowOptions](capi-arkui-nativemodule-oh-arkui-shadowoptions.md)** options | Double pointer to the text shadow options, which points to an array of the[OH_ArkUI_ShadowOptions](capi-arkui-nativemodule-oh-arkui-shadowoptions.md) object. |
 | uint32_t length | Length of the text shadow options. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextShadowStyle_GetTextShadow()
 
@@ -3999,7 +3999,7 @@ Obtains the text shadow options of the text shadow style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_TextShadowStyle](capi-arkui-nativemodule-oh-arkui-textshadowstyle.md)* textShadowStyle | Pointer to the [OH_ArkUI_TextShadowStyle](capi-arkui-nativemodule-oh-arkui-textshadowstyle.md) object. |
-| OH_ArkUI_ShadowOptions** shadowOptions | Double pointer to the text shadow options, which points to an array of the[OH_ArkUI_ShadowOptions](capi-arkui-nativemodule-oh-arkui-shadowoptions.md) object. |
+| [OH_ArkUI_ShadowOptions](capi-arkui-nativemodule-oh-arkui-shadowoptions.md)** shadowOptions | Double pointer to the text shadow options, which points to an array of the[OH_ArkUI_ShadowOptions](capi-arkui-nativemodule-oh-arkui-shadowoptions.md) object. |
 | uint32_t shadowOptionsSize | Size of the shadow option buffer. |
 | uint32_t* writeLength | Pointer to the number of actual text shadow options in the text shadow style. |
 
@@ -4007,7 +4007,7 @@ Obtains the text shadow options of the text shadow style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_DecorationStyle_Create()
 
@@ -4068,13 +4068,13 @@ Sets the decoration type for the text decorative line style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)* decorationStyle | Pointer to the [OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md) object. |
-| ArkUI_TextDecorationType type | Type of the text decorative line. The value is an enumerated value of [ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype). |
+| [ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype) type | Type of the text decorative line. The value is an enumerated value of [ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_DecorationStyle_GetTextDecorationType()
 
@@ -4096,13 +4096,13 @@ Obtains the decoration type of the text decorative line style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)* decorationStyle | Pointer to the [OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md) object. |
-| ArkUI_TextDecorationType* type | Pointer to the type of the text decorative line. The value is an enumerated value of[ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype). |
+| [ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)* type | Pointer to the type of the text decorative line. The value is an enumerated value of[ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_DecorationStyle_SetColor()
 
@@ -4130,7 +4130,7 @@ Sets the decoration color for the text decorative line style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_DecorationStyle_GetColor()
 
@@ -4158,7 +4158,7 @@ Obtains the decoration color of the text decorative line style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_DecorationStyle_SetTextDecorationStyle()
 
@@ -4180,13 +4180,13 @@ Sets the decoration style for the text decorative line style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)* decorationStyle | Pointer to the [OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md) object. |
-| ArkUI_TextDecorationStyle style | Style of the text decorative line. The value is an enumerated value of[ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle). |
+| [ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle) style | Style of the text decorative line. The value is an enumerated value of[ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_DecorationStyle_GetTextDecorationStyle()
 
@@ -4208,13 +4208,13 @@ Obtains the decoration style of the text decorative line style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)* decorationStyle | Pointer to the [OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md) object. |
-| ArkUI_TextDecorationStyle* style | Pointer to the style of the text decorative line. The value is an enumerated value of[ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle). |
+| [ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)* style | Pointer to the style of the text decorative line. The value is an enumerated value of[ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_DecorationStyle_SetThicknessScale()
 
@@ -4242,7 +4242,7 @@ Sets the thickness scaling factor of the text decorative line style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_DecorationStyle_GetThicknessScale()
 
@@ -4270,7 +4270,7 @@ Obtains the thickness scaling factor of the text decorative line style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_DecorationStyle_SetEnableMultiType()
 
@@ -4298,7 +4298,7 @@ Sets whether to enable the display of multiple decorative lines in the text deco
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_DecorationStyle_GetEnableMultiType()
 
@@ -4326,7 +4326,7 @@ Obtains whether the display of multiple decorative lines is enabled in the text 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_BaselineOffsetStyle_Create()
 
@@ -4393,7 +4393,7 @@ Sets the baseline offset.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_BaselineOffsetStyle_GetBaselineOffset()
 
@@ -4421,7 +4421,7 @@ Obtains the baseline offset.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LetterSpacingStyle_Create()
 
@@ -4488,7 +4488,7 @@ Sets the letter spacing.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LetterSpacingStyle_GetLetterSpacing()
 
@@ -4516,7 +4516,7 @@ Obtains the letter spacing.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LineHeightStyle_Create()
 
@@ -4583,7 +4583,7 @@ Sets the line height.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LineHeightStyle_GetLineHeight()
 
@@ -4611,7 +4611,7 @@ Obtains the line height.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LineHeightStyle_SetLineHeightMultiple()
 
@@ -4639,7 +4639,7 @@ Sets a line height multiplier.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LineHeightStyle_GetLineHeightMultiple()
 
@@ -4667,7 +4667,7 @@ Obtains the line height multiplier.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_SetLineSpacingStyle()
 
@@ -4695,7 +4695,7 @@ Sets a line spacing style for the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SpanStyle_GetLineSpacingStyle()
 
@@ -4723,7 +4723,7 @@ Obtains the line spacing style of the styled string style object.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LineSpacingStyle_Create()
 
@@ -4790,7 +4790,7 @@ Sets line spacing.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LineSpacingStyle_GetLineSpacing()
 
@@ -4818,7 +4818,7 @@ Queries the line spacing.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LineSpacingStyle_SetOnlyBetweenLines()
 
@@ -4846,7 +4846,7 @@ Sets whether the line spacing takes effect only between lines.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_LineSpacingStyle_GetOnlyBetweenLines()
 
@@ -4874,7 +4874,7 @@ Checks whether the line spacing takes effect only between lines.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_BackgroundColorStyle_Create()
 
@@ -4941,7 +4941,7 @@ Sets the background color for the background color style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_BackgroundColorStyle_GetColor()
 
@@ -4969,7 +4969,7 @@ Obtains the background color of the background color style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_BackgroundColorStyle_SetRadius()
 
@@ -5000,7 +5000,7 @@ Sets the background radii for the background color style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_BackgroundColorStyle_GetRadius()
 
@@ -5031,7 +5031,7 @@ Obtains the background radii of the background color style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_UrlStyle_Create()
 
@@ -5098,7 +5098,7 @@ Sets the URL content for the URL style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_UrlStyle_GetUrl()
 
@@ -5128,7 +5128,7 @@ Obtains the URL content of the URL style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_UserDataSpan_Create()
 
@@ -5195,7 +5195,7 @@ Sets the user data in the user data span style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_UserDataSpan_GetUserData()
 
@@ -5223,7 +5223,7 @@ Obtains the user data in the user data span style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_CustomSpan_Create()
 
@@ -5290,7 +5290,7 @@ Sets the callback function triggered when metrics are obtained for the custom sp
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_CustomSpan_RegisterOnDrawCallback()
 
@@ -5318,7 +5318,7 @@ Registers the callback function triggered when the custom span is drawn.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_Create()
 
@@ -5379,13 +5379,13 @@ Sets the image data source in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| struct OH_PixelmapNative* pixelmap | Pointer to the image data source. |
+| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmap | Pointer to the image data source. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetPixelMap()
 
@@ -5407,13 +5407,13 @@ Obtains the image data source in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| struct OH_PixelmapNative** pixelmap | Double pointer to the image data source. |
+| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | Double pointer to the image data source. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetResource()
 
@@ -5441,7 +5441,7 @@ Sets the image resource address in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetResource()
 
@@ -5471,7 +5471,7 @@ Obtains the image resource address in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_ImageAttachment_SetSizeWidth()
 
@@ -5499,7 +5499,7 @@ Sets the image width in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetSizeWidth()
 
@@ -5527,7 +5527,7 @@ Obtains the image width in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetSizeHeight()
 
@@ -5555,7 +5555,7 @@ Sets the image height in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetSizeHeight()
 
@@ -5583,7 +5583,7 @@ Obtains the image height in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetVerticalAlign()
 
@@ -5605,13 +5605,13 @@ Sets the image alignment method in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| ArkUI_ImageSpanAlignment verticalAlign | Image alignment method. The value is an enumerated value of [ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment). |
+| [ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment) verticalAlign | Image alignment method. The value is an enumerated value of [ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetVerticalAlign()
 
@@ -5633,13 +5633,13 @@ Obtains the image alignment method in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| ArkUI_ImageSpanAlignment* verticalAlign | Pointer to the image alignment method. The value is an enumerated value of[ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment). |
+| [ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment)* verticalAlign | Pointer to the image alignment method. The value is an enumerated value of[ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetObjectFit()
 
@@ -5661,13 +5661,13 @@ Sets the image scaling type in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| ArkUI_ObjectFit objectFit | Image scaling type. The value is an enumerated value of [ArkUI_ObjectFit](capi-image-h.md#arkui_objectfit). |
+| [ArkUI_ObjectFit](capi-image-h.md#arkui_objectfit) objectFit | Image scaling type. The value is an enumerated value of [ArkUI_ObjectFit](capi-image-h.md#arkui_objectfit). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetObjectFit()
 
@@ -5689,13 +5689,13 @@ Obtains the image scaling type in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| ArkUI_ObjectFit* objectFit | Pointer to the image scaling type. The value is an enumerated value of [ArkUI_ObjectFit](capi-image-h.md#arkui_objectfit). |
+| [ArkUI_ObjectFit](capi-image-h.md#arkui_objectfit)* objectFit | Pointer to the image scaling type. The value is an enumerated value of [ArkUI_ObjectFit](capi-image-h.md#arkui_objectfit). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetMargin()
 
@@ -5717,13 +5717,13 @@ Sets the image margin in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| ArkUI_Margin margin | Image margin, in vp. |
+| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md) margin | Image margin, in vp. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetMargin()
 
@@ -5745,13 +5745,13 @@ Obtains the image margin in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| ArkUI_Margin* margin | Pointer to the image margin, in vp. |
+| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md)* margin | Pointer to the image margin, in vp. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetPadding()
 
@@ -5773,13 +5773,13 @@ Sets the image padding in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| ArkUI_Margin padding | Image padding, in vp. |
+| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md) padding | Image padding, in vp. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetPadding()
 
@@ -5801,13 +5801,13 @@ Obtains the image padding in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| ArkUI_Margin* padding | Pointer to the image padding, in vp. |
+| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md)* padding | Pointer to the image padding, in vp. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetBorderRadiuses()
 
@@ -5838,7 +5838,7 @@ Sets the image border radii in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetBorderRadiuses()
 
@@ -5869,7 +5869,7 @@ Obtains the image border radii in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetColorFilter()
 
@@ -5898,7 +5898,7 @@ Sets the image color filter in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetColorFilter()
 
@@ -5928,7 +5928,7 @@ Obtains the image color filter in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.      Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_ImageAttachment_SetDrawingColorFilter()
 
@@ -5950,13 +5950,13 @@ Sets the image drawing color filter in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [const OH_Drawing_ColorFilter](capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | Pointer to the image drawing color filter. |
+| const OH_Drawing_ColorFilter* drawingColorFilter | Pointer to the image drawing color filter. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetDrawingColorFilter()
 
@@ -5978,13 +5978,13 @@ Obtains the image drawing color filter in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [OH_Drawing_ColorFilter](capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | Pointer to the image drawing color filter. |
+| OH_Drawing_ColorFilter* drawingColorFilter | Pointer to the image drawing color filter. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetSyncLoad()
 
@@ -6012,7 +6012,7 @@ Sets whether to load the image synchronously in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetSyncLoad()
 
@@ -6040,7 +6040,7 @@ Obtains whether the image is loaded synchronously in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetSupportSvg()
 
@@ -6068,7 +6068,7 @@ Sets whether to enable the enhanced SVG tag parsing feature in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetSupportSvg()
 
@@ -6096,7 +6096,7 @@ Obtains whether the enhanced SVG tag parsing feature is enabled in the image sty
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetResizableSlice()
 
@@ -6127,7 +6127,7 @@ Sets the resizable image slice in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetResizableSlice()
 
@@ -6158,7 +6158,7 @@ Obtains the resizable image slice in the image style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_SetResizableLattice()
 
@@ -6180,13 +6180,13 @@ Sets the resizable image lattice in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [const OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md)* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
+| const OH_Drawing_Lattice* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ImageAttachment_GetResizableLattice()
 
@@ -6208,13 +6208,13 @@ Obtains the resizable image lattice in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md)* lattice | [out] Output parameter. Pointer to the image resizable lattice.The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
+| OH_Drawing_Lattice* lattice | [out] Output parameter. Pointer to the image resizable lattice.The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextEditorChangeEvent_GetRangeBefore()
 
@@ -6243,7 +6243,7 @@ Obtains the range of the content to be replaced in the text change information.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function params is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function params is invalid. |
 
 ### OH_ArkUI_TextEditorChangeEvent_GetReplacementStyledString()
 
@@ -6265,13 +6265,13 @@ Obtains the styled string used for replacement in the text change information.
 | Parameter | Description |
 | -- | -- |
 | const OH_ArkUI_TextEditorChangeEvent* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function params is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function params is invalid. |
 
 ### OH_ArkUI_TextEditorChangeEvent_GetPreviewStyledString()
 
@@ -6293,13 +6293,13 @@ Obtains the styled string of the previewed content in the text change informatio
 | Parameter | Description |
 | -- | -- |
 | const OH_ArkUI_TextEditorChangeEvent* event | Pointer to the [OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md) object. |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function params is invalid. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) Function params is invalid. |
 
 ### OH_ArkUI_TextLayoutManager_Dispose()
 
@@ -6342,7 +6342,7 @@ Gets the line count.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextLayoutManager_GetRectsForRange()
 
@@ -6363,15 +6363,15 @@ Gets the rects for range.
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
 | int32_t start | Indicates the start of range to set. |
 | int32_t end | Indicates the end of range to set. |
-| [OH_Drawing_RectWidthStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_rectwidthstyle) widthStyle | Indicates the width style to set.For details, see the enum <b>OH_Drawing_RectWidthStyle</b>. |
-| [OH_Drawing_RectHeightStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_rectheightstyle) heightStyle | Indicates the height style to set.For details, see the enum <b>OH_Drawing_RectHeightStyle</b>. |
-| [OH_Drawing_TextBox](capi-drawing-oh-drawing-textbox.md)** outTextBoxes | Returns the array of rects for range. |
+| OH_Drawing_RectWidthStyle widthStyle | Indicates the width style to set.For details, see the enum <b>OH_Drawing_RectWidthStyle</b>. |
+| OH_Drawing_RectHeightStyle heightStyle | Indicates the height style to set.For details, see the enum <b>OH_Drawing_RectHeightStyle</b>. |
+| OH_Drawing_TextBox** outTextBoxes | Returns the array of rects for range. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextLayoutManager_GetGlyphPositionAtCoordinate()
 
@@ -6392,13 +6392,13 @@ Gets the glyph position at coordinate.
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
 | double dx | Indicates the positionX of typography to set. |
 | double dy | Indicates the positionY of typography to set. |
-| [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the glyph position at coordinate. |
+| OH_Drawing_PositionAndAffinity** outPos | Returns the glyph position at coordinate. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextLayoutManager_GetLineMetrics()
 
@@ -6418,13 +6418,13 @@ Get line metrics information.
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to a typography object <b>ArkUI_TextLayoutManager</b>. |
 | int32_t lineNumber | Indicates the number of line. |
-| [OH_Drawing_LineMetrics](../ArkGraphics2D/capi-drawing-oh-drawing-linemetrics.md)* outMetrics | Indicates the pointer to a line metrics object <b>OH_Drawing_LineMetrics</b>. |
+| OH_Drawing_LineMetrics* outMetrics | Indicates the pointer to a line metrics object <b>OH_Drawing_LineMetrics</b>. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinate()
 
@@ -6445,13 +6445,13 @@ Gets the character position at coordinate.
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
 | double dx | Indicates the positionX of typography to set. |
 | double dy | Indicates the positionY of typography to set. |
-| [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the character position at coordinate. |
+| OH_Drawing_PositionAndAffinity** outPos | Returns the character position at coordinate. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinateWithEncoding()
 
@@ -6473,13 +6473,13 @@ Gets the character position at coordinate based on the specified encoding type.
 | double dx | Indicates the positionX of typography to set. |
 | double dy | Indicates the positionY of typography to set. |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | Indicates the encoding type used for the returned character position. |
-| [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the character position at coordinate. |
+| OH_Drawing_PositionAndAffinity** outPos | Returns the character position at coordinate. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRange()
 
@@ -6498,15 +6498,15 @@ Get the glyph range produced by the specified range of characters.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)* charRange | The character range. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outGlyphRange | The range of glyphs generated by charRange. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outActualCharRange | If not null, specifies the actual character range that fully defines the returnedglyph range, which may match or slightly exceed the requested range. |
+| OH_Drawing_Range* charRange | The character range. |
+| OH_Drawing_Range** outGlyphRange | The range of glyphs generated by charRange. |
+| OH_Drawing_Range** outActualCharRange | If not null, specifies the actual character range that fully defines the returnedglyph range, which may match or slightly exceed the requested range. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRangeWithEncoding()
 
@@ -6525,16 +6525,16 @@ Get the glyph range produced by the specified range of characters based on the s
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)* charRange | The character range. |
+| OH_Drawing_Range* charRange | The character range. |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | Indicates the encoding type used for <b>charRange</b>. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outGlyphRange | The range of glyphs generated by charRange. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outActualCharRange | If not null, specifies the actual character range that fully defines the returnedglyph range, which may match or slightly exceed the requested range. |
+| OH_Drawing_Range** outGlyphRange | The range of glyphs generated by charRange. |
+| OH_Drawing_Range** outActualCharRange | If not null, specifies the actual character range that fully defines the returnedglyph range, which may match or slightly exceed the requested range. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRange()
 
@@ -6553,15 +6553,15 @@ Get the character range that maps to the glyphs in the given glyph range.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)* glyphRange | The glyph range. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outCharRange | The range of characters generated by glyphRange. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outActualGlyphRange | If not null, specifies the full glyph range generated by the returned character range,which may match or slightly exceed the requested glyph range. |
+| OH_Drawing_Range* glyphRange | The glyph range. |
+| OH_Drawing_Range** outCharRange | The range of characters generated by glyphRange. |
+| OH_Drawing_Range** outActualGlyphRange | If not null, specifies the full glyph range generated by the returned character range,which may match or slightly exceed the requested glyph range. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRangeWithEncoding()
 
@@ -6580,16 +6580,16 @@ Get the character range that maps to the glyphs in the given glyph range based o
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)* glyphRange | The glyph range. |
+| OH_Drawing_Range* glyphRange | The glyph range. |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | Indicates the encoding type used for the returned character range. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outCharRange | The range of characters generated by glyphRange. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outActualGlyphRange | If not null, specifies the full glyph range generated by the returned character range,which may match or slightly exceed the requested glyph range. |
+| OH_Drawing_Range** outCharRange | The range of characters generated by glyphRange. |
+| OH_Drawing_Range** outActualGlyphRange | If not null, specifies the full glyph range generated by the returned character range,which may match or slightly exceed the requested glyph range. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetLinearGradient()
 
@@ -6611,13 +6611,13 @@ Set linear gradient of paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the <b>OH_ArkUI_ParagraphStyle</b> object. |
-| const OH_ArkUI_LinearGradientOptions* linearGradient | Pointer to the <b>OH_ArkUI_LinearGradientOptions</b> object. |
+| [const OH_ArkUI_LinearGradientOptions](capi-arkui-nativemodule-oh-arkui-lineargradientoptions.md)* linearGradient | Pointer to the <b>OH_ArkUI_LinearGradientOptions</b> object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetLinearGradient()
 
@@ -6639,13 +6639,13 @@ Get linear gradient of paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the <b>OH_ArkUI_ParagraphStyle</b> object. |
-| OH_ArkUI_LinearGradientOptions* linearGradient | Pointer to the <b>OH_ArkUI_LinearGradientOptions</b> object. |
+| [OH_ArkUI_LinearGradientOptions](capi-arkui-nativemodule-oh-arkui-lineargradientoptions.md)* linearGradient | Pointer to the <b>OH_ArkUI_LinearGradientOptions</b> object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetRadialGradient()
 
@@ -6667,13 +6667,13 @@ Set radial gradient of paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the <b>OH_ArkUI_ParagraphStyle</b> object. |
-| const OH_ArkUI_RadialGradientOptions* radialGradient | Pointer to the <b>OH_ArkUI_RadialGradientOptions</b> object. |
+| [const OH_ArkUI_RadialGradientOptions](capi-arkui-nativemodule-oh-arkui-radialgradientoptions.md)* radialGradient | Pointer to the <b>OH_ArkUI_RadialGradientOptions</b> object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetRadialGradient()
 
@@ -6695,13 +6695,13 @@ Get radial gradient of paragraph style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | Pointer to the <b>OH_ArkUI_ParagraphStyle</b> object. |
-| OH_ArkUI_RadialGradientOptions* radialGradient | Pointer to the <b>OH_ArkUI_RadialGradientOptions</b> object. |
+| [OH_ArkUI_RadialGradientOptions](capi-arkui-nativemodule-oh-arkui-radialgradientoptions.md)* radialGradient | Pointer to the <b>OH_ArkUI_RadialGradientOptions</b> object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_SetTailIndents()
 
@@ -6730,7 +6730,7 @@ Set tail indents of paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_ParagraphStyle_GetTailIndents()
 
@@ -6760,6 +6760,6 @@ Get tail indents of paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.          Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs.          Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 

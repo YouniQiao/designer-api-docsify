@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { AbilityConstant } from '@kit.AbilityKit';
+import { AbilityConstant } from 'kits/@kit.AbilityKit';
 ```
 
 ## lastExitDetailInfo
@@ -25,8 +23,6 @@ lastExitDetailInfo?: LastExitDetailInfo
 **类型：** [LastExitDetailInfo](arkts-ability-abilityconstant-lastexitdetailinfo-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ lastExitMessage: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -65,8 +59,6 @@ lastExitReason: LastExitReason
 **类型：** [LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,8 +78,6 @@ launchReason: LaunchReason
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -106,8 +96,6 @@ launchReasonMessage?: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -117,17 +105,15 @@ launchReasonMessage?: string
 ## launchUptime
 
 ```TypeScript
-launchUptime?: long
+launchUptime?: number
 ```
 
 表示UIAbility开始启动时系统已运行的时间（自系统开机启动以来的时间），单位为毫秒。  
 **约束：**该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,17 +124,15 @@ launchUptime?: long
 ## launchUTCTime
 
 ```TypeScript
-launchUTCTime?: long
+launchUTCTime?: number
 ```
 
 表示UIAbility开始启动的UTC时间戳，单位为毫秒。  
 **约束：**该功能仅在启动UIAbility时生效。对于其他类型的Ability（例如UIExtensionAbility），所获取的启动时间为默认值0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

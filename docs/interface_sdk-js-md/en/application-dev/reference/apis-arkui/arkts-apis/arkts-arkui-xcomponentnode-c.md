@@ -6,8 +6,6 @@ Defines XComponent Node.@extends FrameNode
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 12
 
 **Substitutes:** XComponent
@@ -23,8 +21,6 @@ changeRenderType(type: NodeRenderType): boolean
 Set the render type of the builderNode.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 12
 
@@ -57,8 +53,6 @@ constructor.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 12
 
 **Substitutes:** createNode
@@ -74,7 +68,7 @@ constructor.
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
 | options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes |
 | id | string | Yes |
-| type | [XComponentType](arkts-arkui-enums-xcomponenttype-e.md) | Yes |
+| type | [XComponentType](arkts-arkui-xcomponenttype-e.md) | Yes |
 | libraryName | string | No |
 
 ## onCreate
@@ -86,8 +80,6 @@ onCreate(event?: Object): void
 Called when the XComponent surface has been created.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 12
 
@@ -112,8 +104,6 @@ onDestroy(): void
 Called when the XComponent surface has been destroyed.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 12
 

@@ -4,8 +4,6 @@ Wi-Fi Ipv6 configuration information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Wi-Fi Ipv6 configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## dnsServers
@@ -27,8 +25,6 @@ DNS servers.
 **Type:** Array&lt;string&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -46,8 +42,6 @@ Domains.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Gate way.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -82,8 +74,6 @@ IPv6 address.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -91,16 +81,14 @@ IPv6 address.
 ## prefixLength
 
 ```TypeScript
-prefixLength: int
+prefixLength: number
 ```
 
 Prefix length.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## landscapeRect
@@ -26,8 +24,6 @@ landscapeRect: window.Rect
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## portraitRect
@@ -41,7 +37,5 @@ portraitRect: window.Rect
 **类型：** window.Rect
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

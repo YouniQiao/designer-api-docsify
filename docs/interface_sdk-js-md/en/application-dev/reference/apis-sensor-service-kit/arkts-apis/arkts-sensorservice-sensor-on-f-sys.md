@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## on
@@ -15,8 +15,6 @@ function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: O
 Subscribes to data of the color sensor.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -48,8 +46,6 @@ function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Optio
 Subscribes to data of the Sodium Adsorption Ratio (SAR) sensor.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Sensors.Sensor
 

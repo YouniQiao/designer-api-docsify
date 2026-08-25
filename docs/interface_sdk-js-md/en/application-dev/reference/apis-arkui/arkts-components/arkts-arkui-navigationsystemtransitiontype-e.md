@@ -14,8 +14,6 @@ Type of the system transition animation.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -27,8 +25,6 @@ DEFAULT = 0
 Default system transition animation.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ No system transition animation.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -63,8 +57,6 @@ TITLE = 2
 System transition animation of the title bar.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +74,6 @@ System transition animation of the content area.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -99,8 +89,6 @@ FADE = 4
 Fade-type system transition animation.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,8 +106,6 @@ Center-scale type system transition animation.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -136,8 +122,6 @@ Right-slide type system transition animation.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -153,8 +137,6 @@ SLIDE_BOTTOM = 7
 Bottom-slide type system transition animation.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

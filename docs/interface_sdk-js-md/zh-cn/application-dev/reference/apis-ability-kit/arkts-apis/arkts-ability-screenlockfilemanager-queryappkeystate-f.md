@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screenLockFileManager } from '@kit.AbilityKit';
+import { screenLockFileManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryAppKeyState
@@ -15,8 +15,6 @@ function queryAppKeyState(): KeyStatus
 以同步方法查询调用方应用锁屏下敏感数据密钥的状态。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
@@ -32,101 +30,3 @@ function queryAppKeyState(): KeyStatus
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [29300002](../errorcode-screenLockFileManager.md#29300002-系统服务工作异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 查询锁屏下应用敏感数据访问权限
-import { screenLockFileManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-    // 查询密钥状态
-    let keyStatus = screenLockFileManager.queryAppKeyState();
-    // 判断密钥状态并处理不同情况
-    if (keyStatus === screenLockFileManager.KeyStatus.KEY_NOT_EXIST) {
-        hilog.info(0x0000, 'testTag', 'Key does not exist.');
-    } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_RELEASED) {
-        hilog.info(0x0000, 'testTag', 'Key has been released.');
-    } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_EXIST) {
-        hilog.info(0x0000, 'testTag', 'Key exists.');
-    }
-} catch (err) {
-    let message = (err as BusinessError).message;
-    hilog.error(0x0000, 'testTag', 'queryAppKeyState failed: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 查询锁屏下应用敏感数据访问权限
-import screenLockFileManager from '@ohos.ability.screenLockFileManager';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-    let keyStatus = screenLockFileManager.queryAppKeyState();
-    if (keyStatus === screenLockFileManager.KeyStatus.KEY_NOT_EXIST) {
-        hilog.info(0x0000, 'testTag', 'Key does not exist.');
-    } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_RELEASED) {
-        hilog.info(0x0000, 'testTag', 'Key has been released.');
-    } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_EXIST) {
-        hilog.info(0x0000, 'testTag', 'Key exists.');
-    }
-} catch (err) {
-    let message = (err as BusinessError).message;
-    hilog.error(0x0000, 'testTag', 'queryAppKeyState failed: %{public}s', message);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 查询锁屏下媒体类型数据的访问权限
-import { screenLockFileManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-    // 查询密钥状态
-    let keyStatus = screenLockFileManager.queryAppKeyState(screenLockFileManager.DataType.MEDIA_DATA);
-    // 判断密钥状态并处理不同情况
-    if (keyStatus === screenLockFileManager.KeyStatus.KEY_NOT_EXIST) {
-        hilog.info(0x0000, 'testTag', 'Key does not exist.');
-    } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_RELEASED) {
-        hilog.info(0x0000, 'testTag', 'Key has been released.');
-    } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_EXIST) {
-        hilog.info(0x0000, 'testTag', 'Key exists.');
-    }
-} catch (err) {
-    let message = (err as BusinessError).message;
-    hilog.error(0x0000, 'testTag', 'queryAppKeyState failed: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 查询锁屏下媒体类型数据的访问权限
-import screenLockFileManager from '@ohos.ability.screenLockFileManager';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-    let keyStatus = screenLockFileManager.queryAppKeyState(screenLockFileManager.DataType.MEDIA_DATA);
-    if (keyStatus === screenLockFileManager.KeyStatus.KEY_NOT_EXIST) {
-        hilog.info(0x0000, 'testTag', 'Key does not exist.');
-    } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_RELEASED) {
-        hilog.info(0x0000, 'testTag', 'Key has been released.');
-    } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_EXIST) {
-        hilog.info(0x0000, 'testTag', 'Key exists.');
-    }
-} catch (err) {
-    let message = (err as BusinessError).message;
-    hilog.error(0x0000, 'testTag', 'queryAppKeyState failed: %{public}s', message);
-}
-```

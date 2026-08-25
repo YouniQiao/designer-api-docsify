@@ -15,8 +15,6 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md)
@@ -33,33 +31,6 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-
-appManager.getForegroundApplications((err, data) => {
-  if (err) {
-    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
-  } else {
-    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
-  }
-});
-```
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-appManager.getForegroundApplications()
-  .then((data) => {
-    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
-  });
-```
-
 
 ## getForegroundApplications
 
@@ -70,8 +41,6 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 获取所有当前处于前台的应用信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -88,7 +57,3 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; |
-
-**示例**
-
-参见 [getForegroundApplications](#getforegroundapplications)

@@ -2,11 +2,9 @@
 
 Defines ImageAnimator Modifier@extends ImageAnimatorAttribute @implements AttributeModifier&lt;ImageAnimatorAttribute&gt;
 
-**Inheritance/Implementation:** ImageAnimatorModifier extends ImageAnimatorAttribute and implements AttributeModifier<ImageAnimatorAttribute>
+**Inheritance/Implementation:** ImageAnimatorModifier extends [ImageAnimatorAttribute](../arkts-components/arkts-arkui-imageanimator-attribute.md#imageanimatorattribute) and implements AttributeModifier<ImageAnimatorAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: ImageAnimatorAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

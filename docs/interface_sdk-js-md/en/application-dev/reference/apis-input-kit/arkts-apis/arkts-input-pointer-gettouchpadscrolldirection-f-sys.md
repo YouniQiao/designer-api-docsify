@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## getTouchpadScrollDirection
@@ -15,8 +15,6 @@ function getTouchpadScrollDirection(callback: AsyncCallback<boolean>): void
 Obtains the touchpad scroll direction. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -35,58 +33,6 @@ Obtains the touchpad scroll direction. This API uses an asynchronous callback to
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadScrollDirection ((error: BusinessError, state: boolean) => {
-              console.info(`getTouchpadScrollDirection success, state: ${JSON.stringify(state)}`);
-            });
-          } catch (error) {
-            console.error(`getTouchpadScrollDirection failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadScrollDirection().then((state: boolean) => {
-              console.info(`getTouchpadScrollDirection success, state: ${JSON.stringify(state)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get touchpad scroll direction failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getTouchpadScrollDirection failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## getTouchpadScrollDirection
 
@@ -97,8 +43,6 @@ function getTouchpadScrollDirection(): Promise<boolean>
 Obtains the scroll direction of the touchpad. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -116,7 +60,3 @@ Obtains the scroll direction of the touchpad. This API uses a promise to return 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getTouchpadScrollDirection](#gettouchpadscrolldirection)

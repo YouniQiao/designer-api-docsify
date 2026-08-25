@@ -4,8 +4,6 @@ Placement enumeration description@enum { number }
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Left
@@ -17,8 +15,6 @@ Left
 Left placement
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ Right placement
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -49,8 +43,6 @@ Top
 Top placement
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ Bottom placement
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -81,8 +71,6 @@ TopLeft
 TopLeft placement
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,8 +86,6 @@ TopRight placement
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -113,8 +99,6 @@ BottomLeft
 BottomLeft placement
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -130,8 +114,6 @@ BottomRight placement
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -145,8 +127,6 @@ LeftTop
 LeftTop placement
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -162,8 +142,6 @@ LeftBottom placement
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -178,8 +156,6 @@ RightTop placement
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -193,8 +169,6 @@ RightBottom
 RightBottom placement
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

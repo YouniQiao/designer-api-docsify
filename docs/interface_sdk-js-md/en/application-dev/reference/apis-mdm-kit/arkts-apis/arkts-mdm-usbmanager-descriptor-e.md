@@ -4,8 +4,6 @@ Enumerates USB descriptors.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## INTERFACE
@@ -17,8 +15,6 @@ INTERFACE = 0
 Interface descriptor.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,8 +29,6 @@ DEVICE = 1
 Device descriptor.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

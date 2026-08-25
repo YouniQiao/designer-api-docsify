@@ -4,8 +4,6 @@ Enumerates network selection modes.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## NETWORK_SELECTION_UNKNOWN
@@ -17,8 +15,6 @@ NETWORK_SELECTION_UNKNOWN = 0
 Unknown network selection mode.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -32,8 +28,6 @@ Automatic network selection mode.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## NETWORK_SELECTION_MANUAL
@@ -45,7 +39,5 @@ NETWORK_SELECTION_MANUAL = 2
 Manual network selection mode.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService

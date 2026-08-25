@@ -4,8 +4,6 @@ Defines an **EventInfo** object, which is used to receive the event details tran
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines an **EventInfo** object, which is used to receive the event details tran
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## eventId
@@ -27,8 +25,6 @@ Event ID, which identifies the upgrade event type. You can determine the specifi
 **Type:** [EventId](arkts-basicservices-update-eventid-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -45,8 +41,6 @@ Represents task data.
 **Type:** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

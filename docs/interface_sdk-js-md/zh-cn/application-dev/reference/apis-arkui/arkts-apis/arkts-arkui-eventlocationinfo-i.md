@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,8 +21,6 @@ getCurrentLocalPosition?(): Coordinate2D
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -35,7 +31,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 |
 | --- |
-| [Coordinate2D](arkts-arkui-units-coordinate2d-i.md) |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) |
 
 ## displayX
 
@@ -48,8 +44,6 @@ displayX: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,8 +63,6 @@ displayY: number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -88,8 +80,6 @@ globalDisplayX?: number
 **类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,8 +99,6 @@ globalDisplayY?: number
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -128,8 +116,6 @@ windowX: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -149,8 +135,6 @@ windowY: number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -169,8 +153,6 @@ x: number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -188,8 +170,6 @@ y: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

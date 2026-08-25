@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## queryTraceRoute
@@ -19,8 +19,6 @@ function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promi
 &gt; -&gt;，调用方需同时申请ohos.permission.APPROXIMATELY_LOCATION和ohos.permission.LOCATION。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.INTERNET and ohos.permission.ACCESS_NET_TRACE_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -48,22 +46,3 @@ function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promi
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dest: string = "www.example.com";
-let options: connection.TraceRouteOptions = {
-    maxJumpNumber: 30,
-    packetsType: connection.PacketsType.NETCONN_PACKETS_ICMP
-};
-
-connection.queryTraceRoute(dest, options).then((data: connection.TraceRouteInfo[]) => {
-    console.info('Succeeded to getDefaultHttpProxy:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-    console.error(`Failed to get request. Code:${err.code}, message:${err.message}`);
-});
-```

@@ -4,8 +4,6 @@ Defines the observer interface.@interface observer
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## observe
@@ -17,8 +15,6 @@ observe(callback: string): void
 Turn on the listener.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -39,8 +35,6 @@ unobserve(): void
 Turn off the listener.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 

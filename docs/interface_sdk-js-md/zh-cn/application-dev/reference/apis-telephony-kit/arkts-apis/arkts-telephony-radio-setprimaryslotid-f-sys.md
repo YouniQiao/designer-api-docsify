@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setPrimarySlotId
 
 ```TypeScript
-function setPrimarySlotId(slotId: int, callback: AsyncCallback<void>): void
+function setPrimarySlotId(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 Set the index number of the main SIM card slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Set the index number of the main SIM card slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -44,44 +42,16 @@ Set the index number of the main SIM card slot.
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.setPrimarySlotId(slotId, (err: BusinessError) => {
-    if (err) {
-        console.error(`setPrimarySlotId failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`setPrimarySlotId success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.setPrimarySlotId(slotId).then(() => {
-    console.info(`setPrimarySlotId success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setPrimarySlotId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setPrimarySlotId
 
 ```TypeScript
-function setPrimarySlotId(slotId: int): Promise<void>
+function setPrimarySlotId(slotId: number): Promise<void>
 ```
 
 Set the index number of the main SIM card slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -93,7 +63,7 @@ Set the index number of the main SIM card slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -113,7 +83,3 @@ Set the index number of the main SIM card slot.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [setPrimarySlotId](#setprimaryslotid)

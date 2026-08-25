@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getPermissionDef
@@ -15,8 +15,6 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 根据给定的permissionName获取权限定义结构体PermissionDef信息。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -40,69 +38,6 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700006](../errorcode-bundle.md#17700006-查询的权限不存在) |
 
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let permission = "ohos.permission.GET_BUNDLE_INFO";
-try {
-  bundleManager.getPermissionDef(permission, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getPermissionDef failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getPermissionDef successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getPermissionDef failed: %{public}s', message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let permissionName = "ohos.permission.GET_BUNDLE_INFO";
-try {
-  bundleManager.getPermissionDef(permissionName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getPermissionDef successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-let permissionName = "ohos.permission.GET_BUNDLE_INFO";
-try {
-  bundleManager.getPermissionDef(permissionName).then((data: bundleManager.PermissionDef) => {
-    hilog.info(0x0000, 'testTag', 'getPermissionDef successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
-}
-```
-
 
 ## getPermissionDef
 
@@ -113,8 +48,6 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 根据给定的permissionName获取权限定义结构体PermissionDef信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -142,7 +75,3 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700006](../errorcode-bundle.md#17700006-查询的权限不存在) |
-
-**示例**
-
-参见 [getPermissionDef](#getpermissiondef)

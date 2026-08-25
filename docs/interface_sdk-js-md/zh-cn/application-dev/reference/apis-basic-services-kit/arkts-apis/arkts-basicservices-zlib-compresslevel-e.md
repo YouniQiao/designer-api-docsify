@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## COMPRESS_LEVEL_NO_COMPRESSION
@@ -17,8 +15,6 @@ COMPRESS_LEVEL_NO_COMPRESSION = 0
 压缩率为0压缩等级。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ COMPRESS_LEVEL_BEST_SPEED = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -50,8 +44,6 @@ COMPRESS_LEVEL_BEST_COMPRESSION = 9
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -65,8 +57,6 @@ COMPRESS_LEVEL_DEFAULT_COMPRESSION = -1
 默认压缩等级。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

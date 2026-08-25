@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getSharedBundleInfo
@@ -15,8 +15,6 @@ function getSharedBundleInfo(bundleName: string,  moduleName: string, callback: 
 Obtains the shared bundle information based on the given bundle name. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -42,50 +40,6 @@ Obtains the shared bundle information based on the given bundle name. This API u
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'library';
-
-try {
-  bundleManager.getSharedBundleInfo(bundleName, moduleName, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getSharedBundleInfo successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'library';
-
-try {
-  bundleManager.getSharedBundleInfo(bundleName, moduleName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getSharedBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', message);
-}
-```
-
 
 ## getSharedBundleInfo
 
@@ -96,8 +50,6 @@ function getSharedBundleInfo(bundleName: string, moduleName: string): Promise<Ar
 Obtains the shared bundle information based on the given bundle name. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -127,7 +79,3 @@ Obtains the shared bundle information based on the given bundle name. This API u
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-
-**Examples**
-
-See [getSharedBundleInfo](#getsharedbundleinfo)

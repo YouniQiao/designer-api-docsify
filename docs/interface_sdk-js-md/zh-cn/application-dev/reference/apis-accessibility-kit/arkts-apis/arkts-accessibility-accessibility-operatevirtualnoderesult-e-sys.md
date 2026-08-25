@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ SUCCESS = 0
 表示执行成功。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ ACCESSIBILITY_ELEMENT_NOT_EXIST = 1
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -55,8 +49,6 @@ CANNOT_MODIFY_ROOT_NODE = 2
 表示当前根节点不允许修改。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,8 +66,6 @@ ACCESSIBILITY_PROPERTY_IS_EMPTY = 3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -91,8 +81,6 @@ ALLOCATE_ID_FAILED = 4
 表示分配虚拟节点ID失败。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,8 +98,6 @@ VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -128,8 +114,6 @@ INTERNAL_ERROR = 6
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -145,8 +129,6 @@ VIRTUAL_NODE_NOT_SUPPORTED = 7
 表示不支持虚拟节点操作。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

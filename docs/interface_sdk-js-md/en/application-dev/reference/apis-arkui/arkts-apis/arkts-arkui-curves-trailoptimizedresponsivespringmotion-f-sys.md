@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## trailOptimizedResponsiveSpringMotion
@@ -15,8 +15,6 @@ function trailOptimizedResponsiveSpringMotion(response?: number, dampingFraction
 Creates a responsive spring animation curve. It is a special case of [springMotion](arkts-arkui-curves-springmotion-f.md), with the only difference in the default values. It can be used together with **springMotion**.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,4 +35,4 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

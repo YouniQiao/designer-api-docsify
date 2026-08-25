@@ -4,8 +4,6 @@ Enumerates the error codes available for audio management.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## ERROR_INVALID_PARAM
@@ -17,8 +15,6 @@ ERROR_INVALID_PARAM = 6800101
 Invalid parameter.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ Memory allocation failure.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## ERROR_ILLEGAL_STATE
@@ -45,8 +39,6 @@ ERROR_ILLEGAL_STATE = 6800103
 Unsupported state.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -60,8 +52,6 @@ Unsupported parameter value.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## ERROR_TIMEOUT
@@ -73,8 +63,6 @@ ERROR_TIMEOUT = 6800105
 Processing timeout.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -88,8 +76,6 @@ Too many audio streams.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## ERROR_SYSTEM
@@ -101,7 +87,5 @@ ERROR_SYSTEM = 6800301
 System error.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core

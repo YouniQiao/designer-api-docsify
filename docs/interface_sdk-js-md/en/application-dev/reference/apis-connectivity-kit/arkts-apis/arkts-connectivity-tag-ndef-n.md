@@ -4,14 +4,12 @@ Provides methods for accessing NDEF tag.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -25,8 +23,6 @@ import { tag } from '@kit.ConnectivityKit';
 | [makeMimeRecord(Standard NFC Tags)](arkts-connectivity-ndef-makemimerecord-f.md) |
 | [makeExternalRecord(Standard NFC Tags)](arkts-connectivity-ndef-makeexternalrecord-f.md) |
 | [createNdefMessage(Standard NFC Tags)](arkts-connectivity-ndef-createndefmessage-f.md) |
-| [createNdefMessageByData(Standard NFC Tags)](arkts-connectivity-ndef-createndefmessagebydata-f.md) |
 | [createNdefMessage(Standard NFC Tags)](arkts-connectivity-ndef-createndefmessage-f.md) |
-| [createNdefMessageByRecords(Standard NFC Tags)](arkts-connectivity-ndef-createndefmessagebyrecords-f.md) |
 | [messageToBytes(Standard NFC Tags)](arkts-connectivity-ndef-messagetobytes-f.md) |
 | [makeApplicationRecord(Standard NFC Tags)](arkts-connectivity-ndef-makeapplicationrecord-f.md) |

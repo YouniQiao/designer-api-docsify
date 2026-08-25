@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { HalfScreenLaunchComponent } from '@kit.ArkUI';
+import { HalfScreenLaunchComponent } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

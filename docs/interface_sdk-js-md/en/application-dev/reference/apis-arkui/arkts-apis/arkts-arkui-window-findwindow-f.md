@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## findWindow
@@ -15,8 +15,6 @@ function findWindow(name: string): Window
 Finds a window based on the name.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,14 +38,3 @@ Finds a window based on the name.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-
-**Examples**
-
-```TypeScript
-let windowClass: window.Window | undefined = undefined;
-try {
-  windowClass = window.findWindow('test');
-} catch (exception) {
-  console.error(`Failed to find the Window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```

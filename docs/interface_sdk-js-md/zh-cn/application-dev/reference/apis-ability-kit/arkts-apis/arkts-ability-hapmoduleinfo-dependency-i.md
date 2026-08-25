@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## bundleName
@@ -19,8 +17,6 @@ readonly bundleName: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,8 +34,6 @@ readonly moduleName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -47,16 +41,14 @@ readonly moduleName: string
 ## versionCode
 
 ```TypeScript
-readonly versionCode: long
+readonly versionCode: number
 ```
 
 标识当前共享包的版本号。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -4,11 +4,9 @@
 declare type AttachmentType = ImageAttachmentInterface | ResourceImageAttachmentOptions
 ```
 
-图片设置项类型，用于设置属性字符串PixelMap类型或ResourceStr类型图片。
+图片设置项类型，用于设置属性字符串PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

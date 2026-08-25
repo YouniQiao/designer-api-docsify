@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -27,8 +25,6 @@ abilityName: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ bundleName: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -68,8 +62,6 @@ deviceId?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -79,16 +71,14 @@ deviceId?: string
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
 意图调用时指定的物理屏幕id，该参数应为整数，仅在executeMode为UI_ABILITY_FOREGROUND时生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,8 +98,6 @@ executeMode: insightIntent.ExecuteMode
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -119,17 +107,15 @@ executeMode: insightIntent.ExecuteMode
 ## flags
 
 ```TypeScript
-flags?: int
+flags?: number
 ```
 
 意图调用时，意图调用方给意图执行方授权的uris的[flags](arkts-ability-wantconstant-flags-e.md)。  
 **说明：**该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION| FLAG_AUTH_WRITE_URI_PERMISSION。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -149,8 +135,6 @@ insightIntentName: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -168,8 +152,6 @@ insightIntentParam: Record<string, Object>
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -189,8 +171,6 @@ moduleName: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -209,8 +189,6 @@ uris?: Array<string>
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -220,17 +198,15 @@ uris?: Array<string>
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 目标意图所属的用户ID。  
 **说明：**如果调用方应用的用户ID与目标意图所属的用户ID不同，则需要申请权限`ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

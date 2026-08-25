@@ -4,14 +4,12 @@ Describes the configuration for file type filtering.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## mimeTypeArray
@@ -25,8 +23,6 @@ Types of media files that PhotoPicker allows users to filter by. The maximum arr
 **Type:** Array&lt;string&gt;
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

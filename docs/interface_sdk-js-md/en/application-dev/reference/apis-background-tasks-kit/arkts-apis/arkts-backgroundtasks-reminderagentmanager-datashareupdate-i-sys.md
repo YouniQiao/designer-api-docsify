@@ -4,8 +4,6 @@ Defines the parameter information used to update the database.The data provider 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the parameter information used to update the database.The data provider 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## equalTo
 
 ```TypeScript
-equalTo: Record<string, double | string | boolean>
+equalTo: Record<string, number | string | boolean>
 ```
 
 Filter criteria. Currently, only **equalTo** is supported.
 
-**Type:** ArkTS-Dyn: Record&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：Record&lt;string, double \| string \| boolean&gt;
+**Type:** Record&lt;string, number \| string \| boolean&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -46,8 +42,6 @@ URI of the data, which is the unique identifier for cross-application data acces
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ New data.
 **Type:** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

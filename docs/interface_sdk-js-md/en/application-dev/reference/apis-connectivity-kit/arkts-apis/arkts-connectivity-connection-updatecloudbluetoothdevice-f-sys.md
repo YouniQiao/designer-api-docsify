@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## updateCloudBluetoothDevice
@@ -15,8 +15,6 @@ function updateCloudBluetoothDevice(trustedPairedDevices: TrustedPairedDevices):
 update cloud devices.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -49,45 +47,3 @@ update cloud devices.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// promise
-/**
- * Update cloud devices in Bluetooth settings.
- */
-const trustPairDeviceArr: connection.TrustedPairedDevice[] = [];
-let descBuffer = new ArrayBuffer(1);
-trustPairDeviceArr.push({
-    sn: '',
-    deviceType: '',
-    modelId: '',
-    manufactory: '',
-    productId: '',
-    hiLinkVersion: '',
-    macAddress: '11:22:33:44:55:66',
-    serviceType: '',
-    serviceId: '',
-    deviceName: '',
-    uuids: '',
-    bluetoothClass: 0,
-    token: descBuffer,
-    deviceNameTime: 0,
-    secureAdvertisingInfo: descBuffer,
-    pairState: 0
-    });
-const trustPairDevices: connection.TrustedPairedDevices = { trustedPairedDevices: trustPairDeviceArr };
-try {
-    connection.updateCloudBluetoothDevice(trustPairDevices)
-        .then(() => {
-            console.info('updateCloudBluetoothDevice success!');
-        })
-        .catch((err: BusinessError) => {
-            console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-        });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

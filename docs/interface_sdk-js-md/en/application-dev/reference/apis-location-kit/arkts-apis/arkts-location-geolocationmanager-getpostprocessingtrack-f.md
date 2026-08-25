@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getPostProcessingTrack
@@ -15,8 +15,6 @@ function getPostProcessingTrack(sportsType: SportsType): Promise<Array<Location>
 Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently.Before calling this API, you need to call on('locationChange') and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i.md#sportstype) to the specific sport mode to start tracking.Returns data within 24 hours since tracking started; Subsequent calls return only new records.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Required permissions:** ohos.permission.LOCATION
 

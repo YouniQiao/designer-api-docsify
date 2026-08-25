@@ -4,8 +4,6 @@ The basic data structure of the hover hand detection area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ The basic data structure of the hover hand detection area.
 ## Modules to Import
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 Height of the rectangle. Unit: px. The value must be an integer within [1,2147483647].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,16 +35,14 @@ Height of the rectangle. Unit: px. The value must be an integer within [1,214748
 ## left
 
 ```TypeScript
-left: int
+left: number
 ```
 
 Left boundary of the rectangle. Unit: px. The value must be an integer within [-2147483648,2147483647].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,16 +53,14 @@ Left boundary of the rectangle. Unit: px. The value must be an integer within [-
 ## top
 
 ```TypeScript
-top: int
+top: number
 ```
 
 Top boundary of the rectangle. Unit: px. The value must be an integer within [-2147483648,2147483647].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,16 +71,14 @@ Top boundary of the rectangle. Unit: px. The value must be an integer within [-2
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 Width of the rectangle. Unit: px. The value must be an integer within [1,2147483647].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

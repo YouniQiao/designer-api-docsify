@@ -4,8 +4,6 @@ Enumerates the constraint sources.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ CONSTRAINT_NOT_EXIST = 0
 The constraint does not exist.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -36,8 +32,6 @@ Constraint from system settings.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Constraint from the device owners' settings.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ CONSTRAINT_TYPE_PROFILE_OWNER = 3
 Constraint from the profile owners' settings.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

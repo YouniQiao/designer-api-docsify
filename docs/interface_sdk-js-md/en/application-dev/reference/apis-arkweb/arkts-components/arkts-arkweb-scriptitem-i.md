@@ -4,8 +4,6 @@ Describes the **ScriptItem** object registered with the **Web** component throug
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,8 +22,6 @@ JavaScript script to be registered and executed.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,8 +48,6 @@ the entire set of scriptRules does not take effect.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -69,8 +63,6 @@ Regular expression matching rules for allowed sources. **urlRegexRules** is used
 **Type:** Array&lt;[UrlRegexRule](arkts-arkweb-urlregexrule-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

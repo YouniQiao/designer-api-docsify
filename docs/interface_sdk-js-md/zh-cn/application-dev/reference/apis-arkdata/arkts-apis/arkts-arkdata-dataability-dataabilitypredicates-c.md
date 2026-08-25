@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## 导入模块
 
 ```TypeScript
-import { dataAbility } from '@kit.ArkData';
+import { dataAbility } from 'kits/@kit.ArkData';
 ```
 
 ## and
@@ -24,8 +22,6 @@ and(): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -33,14 +29,6 @@ and(): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Lisa")
-    .and()
-    .equalTo("SALARY", 200.5);
-```
 
 ## beginsWith
 
@@ -52,8 +40,6 @@ beginsWith(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -68,12 +54,6 @@ beginsWith(field: string, value: string): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.beginsWith("NAME", "os");
-```
 
 ## beginWrap
 
@@ -85,8 +65,6 @@ beginWrap(): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -94,17 +72,6 @@ beginWrap(): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
 
 ## between
 
@@ -116,8 +83,6 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -125,20 +90,14 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.between("AGE", 10, 50);
-```
 
 ## contains
 
@@ -150,8 +109,6 @@ contains(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -166,12 +123,6 @@ contains(field: string, value: string): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.contains("NAME", "os");
-```
 
 ## distinct
 
@@ -183,8 +134,6 @@ distinct(): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -192,12 +141,6 @@ distinct(): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Rose").distinct();
-```
 
 ## endsWith
 
@@ -209,8 +152,6 @@ endsWith(field: string, value: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -225,12 +166,6 @@ endsWith(field: string, value: string): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.endsWith("NAME", "se");
-```
 
 ## endWrap
 
@@ -242,8 +177,6 @@ endWrap(): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -251,17 +184,6 @@ endWrap(): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
 
 ## equalTo
 
@@ -272,8 +194,6 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 配置谓词以匹配数据，数据的指定字段数据类型为ValueType且值等于指定值。此方法类似于SQL语句的“=”。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -290,12 +210,6 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi");
-```
-
 ## glob
 
 ```TypeScript
@@ -305,8 +219,6 @@ glob(field: string, value: string): DataAbilityPredicates
 配置谓词以匹配数据类型为string的指定字段。与like方法不同，该方法的输入参数区分大小写。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -323,18 +235,6 @@ glob(field: string, value: string): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.glob("NAME", "?h*g");
-
-// 仅可匹配到"NAME"字段值为"Lisa"
-dataAbilityPredicates.glob("NAME", "Lisa");
-
-// 仅可以匹配到"NAME"字段值为"lisa"
-dataAbilityPredicates.glob("NAME", "lisa");
-```
-
 ## greaterThan
 
 ```TypeScript
@@ -344,8 +244,6 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 配置谓词以匹配数据类型为ValueType且值大于指定值的字段。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -361,12 +259,6 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.greaterThan("AGE", 18);
-```
 
 ## greaterThanOrEqualTo
 
@@ -378,8 +270,6 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -395,12 +285,6 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.greaterThanOrEqualTo("AGE", 18);
-```
-
 ## groupBy
 
 ```TypeScript
@@ -410,8 +294,6 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 配置谓词按指定列分组查询结果。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -427,12 +309,6 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.groupBy(["AGE", "NAME"]);
-```
-
 ## in
 
 ```TypeScript
@@ -442,8 +318,6 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 配置谓词以匹配数据类型为ValueType数组且值在给定范围内的指定字段。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -460,12 +334,6 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.in("AGE", [18, 20]);
-```
-
 ## indexedBy
 
 ```TypeScript
@@ -475,8 +343,6 @@ indexedBy(field: string): DataAbilityPredicates
 配置谓词以指定索引列。在使用此方法之前，您需要创建一个索引列。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -491,51 +357,6 @@ indexedBy(field: string): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { dataAbility, relationalStore } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  async onCreate(): Promise<void> {
-    let store: relationalStore.RdbStore | undefined = undefined;
-    let context = this.context;
-
-    try {
-      const STORE_CONFIG: relationalStore.StoreConfig = {
-        name: 'RdbTest.db', // 数据库文件名
-        securityLevel: relationalStore.SecurityLevel.S3,
-      };
-      // 表结构：EMPLOYEE (ID, NAME, AGE, SALARY, CODES)
-      const SQL_CREATE_TABLE =
-        'CREATE TABLE IF NOT EXISTS EMPLOYEE (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT NOT NULL, AGE INTEGER, SALARY REAL, CODES BLOB)'; // 建表Sql语句
-      store = await relationalStore.getRdbStore(context, STORE_CONFIG);
-      console.info('Succeeded in getting RdbStore.');
-      await store.executeSql(SQL_CREATE_TABLE); // 创建数据表
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`Failed to get RdbStore. Code:${err.code}, message:${err.message}`);
-    }
-
-    if (!store) {
-      return;
-    }
-
-    // 创建索引
-    const SQL_CREATE_INDEX = 'CREATE INDEX SALARY_INDEX ON EMPLOYEE(SALARY)';
-    await store.executeSql(SQL_CREATE_INDEX);
-    // ...
-
-    let dataAbilityPredicates = new dataAbility.DataAbilityPredicates();
-    dataAbilityPredicates.indexedBy("SALARY_INDEX");
-
-    // ...
-  }
-}
-```
 
 ## isNotNull
 
@@ -547,8 +368,6 @@ isNotNull(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -562,12 +381,6 @@ isNotNull(field: string): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.isNotNull("NAME");
-```
 
 ## isNull
 
@@ -579,8 +392,6 @@ isNull(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -594,12 +405,6 @@ isNull(field: string): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.isNull("NAME");
-```
 
 ## lessThan
 
@@ -611,8 +416,6 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -627,12 +430,6 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.lessThan("AGE", 20);
-```
 
 ## lessThanOrEqualTo
 
@@ -644,8 +441,6 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -661,12 +456,6 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.lessThanOrEqualTo("AGE", 20);
-```
-
 ## like
 
 ```TypeScript
@@ -676,8 +465,6 @@ like(field: string, value: string): DataAbilityPredicates
 配置谓词以匹配数据类型为string且值类似于指定字符串的字段。此方法类似于SQL语句“like”。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -694,12 +481,6 @@ like(field: string, value: string): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.like("NAME", "%os%");
-```
-
 ## limitAs
 
 ```TypeScript
@@ -709,8 +490,6 @@ limitAs(value: number): DataAbilityPredicates
 设置谓词的最大数据记录数量。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -726,12 +505,6 @@ limitAs(value: number): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3);
-```
-
 ## notBetween
 
 ```TypeScript
@@ -742,8 +515,6 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -751,20 +522,14 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.notBetween("AGE", 10, 50);
-```
 
 ## notEqualTo
 
@@ -775,8 +540,6 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 配置谓词以匹配数据，数据的指定字段数据类型为ValueType且不等于指定值。此方法类似于SQL语句的“!=”。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -793,12 +556,6 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.notEqualTo("NAME", "lisi");
-```
-
 ## notIn
 
 ```TypeScript
@@ -808,8 +565,6 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 配置谓词以匹配数据类型为ValueType数组且值不在给定范围内的指定字段。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -826,12 +581,6 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"]);
-```
-
 ## offsetAs
 
 ```TypeScript
@@ -841,8 +590,6 @@ offsetAs(rowOffset: number): DataAbilityPredicates
 设置谓词查询结果的起始位置。需要同步调用[limitAs](#limitas)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时， [limitAs](#limitas)接口需传入参数-1。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -858,13 +605,6 @@ offsetAs(rowOffset: number): DataAbilityPredicates
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**示例**
-
-```TypeScript
-// 跳过前三条数据，显示后续三条数据
-dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3);
-```
-
 ## or
 
 ```TypeScript
@@ -875,8 +615,6 @@ or(): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **返回值：**
@@ -884,14 +622,6 @@ or(): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Lisa")
-    .or()
-    .equalTo("NAME", "Rose");
-```
 
 ## orderByAsc
 
@@ -903,8 +633,6 @@ orderByAsc(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -918,13 +646,6 @@ orderByAsc(field: string): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-// 先按"NAME"字段排序，相同时按"AGE"字段排序，其次按"SALARY"排序
-dataAbilityPredicates.orderByAsc("NAME").orderByAsc("AGE").orderByAsc("SALARY");
-```
 
 ## orderByDesc
 
@@ -936,8 +657,6 @@ orderByDesc(field: string): DataAbilityPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **参数：**
@@ -951,10 +670,3 @@ orderByDesc(field: string): DataAbilityPredicates
 | 类型 |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**示例**
-
-```TypeScript
-// 优先按"AGE"排序，相同时按"SALARY"排序
-dataAbilityPredicates.orderByDesc("AGE").orderByDesc("SALARY");
-```

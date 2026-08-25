@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## postDialProceed
 
 ```TypeScript
-function postDialProceed(callId: int, proceed: boolean, callback: AsyncCallback<void>): void
+function postDialProceed(callId: number, proceed: boolean, callback: AsyncCallback<void>): void
 ```
 
 Continues a call by playing a post-dial DTMF string. This API uses an asynchronous callback to return the result.If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Continues a call by playing a post-dial DTMF string. This API uses an asynchrono
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | proceed | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -44,38 +42,16 @@ Continues a call by playing a post-dial DTMF string. This API uses an asynchrono
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.postDialProceed(1, true, (err: BusinessError) => {
-    console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.postDialProceed(1, true).then(() => {
-    console.info(`postDialProceed success.`);
-}).catch((err: BusinessError) => {
-    console.error(`postDialProceed fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## postDialProceed
 
 ```TypeScript
-function postDialProceed(callId: int, proceed: boolean): Promise<void>
+function postDialProceed(callId: number, proceed: boolean): Promise<void>
 ```
 
 Continues a call by playing a post-dial DTMF string. This API uses a promise to return the result.If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -87,7 +63,7 @@ Continues a call by playing a post-dial DTMF string. This API uses a promise to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | proceed | boolean | Yes |
 
 **Return value:**
@@ -107,7 +83,3 @@ Continues a call by playing a post-dial DTMF string. This API uses a promise to 
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-
-**Examples**
-
-See [postDialProceed](#postdialproceed)

@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
 
 ## 导入模块
 
 ```TypeScript
-import { mdns } from '@kit.NetworkKit';
+import { mdns } from 'kits/@kit.NetworkKit';
 ```
 
 ## off('discoveryStart')
@@ -24,8 +22,6 @@ off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
@@ -37,32 +33,6 @@ off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void
 | type | 'discoveryStart' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 否 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 参考mdns.createDiscoveryService。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let serviceType = "_print._tcp";
-let discoveryService = mdns.createDiscoveryService(context, serviceType);
-discoveryService.startSearchingMDNS();
-
-discoveryService.on('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
-  console.info(JSON.stringify(data));
-});
-
-discoveryService.stopSearchingMDNS();
-
-discoveryService.off('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
-  console.info(JSON.stringify(data));
-});
-```
-
 ## off('discoveryStop')
 
 ```TypeScript
@@ -72,8 +42,6 @@ off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void
 取消订阅停止监听MDNS服务的通知。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -96,8 +64,6 @@ off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
@@ -109,35 +75,6 @@ off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void
 | type | 'serviceFound' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 否 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 参考mdns.createDiscoveryService。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let serviceType = "_print._tcp";
-let discoveryService = mdns.createDiscoveryService(context, serviceType);
-discoveryService.startSearchingMDNS();
-
-discoveryService.on('serviceFound', (data: mdns.LocalServiceInfo) => {
-  console.info('serviceFound', JSON.stringify(data));
-  mdns.resolveLocalService(context, data, (error: BusinessError, resolveData: mdns.LocalServiceInfo) =>  {
-    console.info('serviceFound', JSON.stringify(resolveData));
-  });
-});
-
-discoveryService.stopSearchingMDNS();
-
-discoveryService.off('serviceFound', (data: mdns.LocalServiceInfo) => {
-  console.info(JSON.stringify(data));
-});
-```
-
 ## off('serviceLost')
 
 ```TypeScript
@@ -147,8 +84,6 @@ off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void
 取消订阅移除MDNS服务的通知。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -161,32 +96,6 @@ off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void
 | type | 'serviceLost' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 否 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 参考mdns.createDiscoveryService。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let serviceType = "_print._tcp";
-let discoveryService = mdns.createDiscoveryService(context, serviceType);
-discoveryService.startSearchingMDNS();
-
-discoveryService.on('serviceLost', (data: mdns.LocalServiceInfo) => {
-  console.info(JSON.stringify(data));
-});
-
-discoveryService.stopSearchingMDNS();
-
-discoveryService.off('serviceLost', (data: mdns.LocalServiceInfo) => {
-  console.info(JSON.stringify(data));
-});
-```
-
 ## on('discoveryStart')
 
 ```TypeScript
@@ -196,8 +105,6 @@ on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void
 订阅开启监听mDNS服务的通知。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -210,28 +117,6 @@ on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void
 | type | 'discoveryStart' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 是 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 参考mdns.createDiscoveryService。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let serviceType = "_print._tcp";
-let discoveryService = mdns.createDiscoveryService(context, serviceType);
-discoveryService.startSearchingMDNS();
-
-discoveryService.on('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
-  console.info(JSON.stringify(data));
-});
-
-discoveryService.stopSearchingMDNS();
-```
-
 ## on('discoveryStop')
 
 ```TypeScript
@@ -241,8 +126,6 @@ on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void
 订阅停止监听MDNS服务的通知。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -255,28 +138,6 @@ on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void
 | type | 'discoveryStop' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 是 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 参考mdns.createDiscoveryService。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let serviceType = "_print._tcp";
-let discoveryService = mdns.createDiscoveryService(context, serviceType);
-discoveryService.startSearchingMDNS();
-
-discoveryService.on('discoveryStop', (data: mdns.DiscoveryEventInfo) => {
-  console.info(JSON.stringify(data));
-});
-
-discoveryService.stopSearchingMDNS();
-```
-
 ## on('serviceFound')
 
 ```TypeScript
@@ -286,8 +147,6 @@ on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void
 订阅发现MDNS服务的通知。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -300,31 +159,6 @@ on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void
 | type | 'serviceFound' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 是 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 参考mdns.createDiscoveryService。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let serviceType = "_print._tcp";
-let discoveryService = mdns.createDiscoveryService(context, serviceType);
-discoveryService.startSearchingMDNS();
-
-discoveryService.on('serviceFound', (data: mdns.LocalServiceInfo) => {
-  console.info('serviceFound', JSON.stringify(data));
-  mdns.resolveLocalService(context, data, (error: BusinessError, resolveData: mdns.LocalServiceInfo) =>  {
-    console.info('serviceFound', JSON.stringify(resolveData));
-  });
-});
-
-discoveryService.stopSearchingMDNS();
-```
-
 ## on('serviceLost')
 
 ```TypeScript
@@ -334,8 +168,6 @@ on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void
 订阅移除MDNS服务的通知。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -348,28 +180,6 @@ on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void
 | type | 'serviceLost' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 是 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 参考mdns.createDiscoveryService。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let serviceType = "_print._tcp";
-let discoveryService = mdns.createDiscoveryService(context, serviceType);
-discoveryService.startSearchingMDNS();
-
-discoveryService.on('serviceLost', (data: mdns.LocalServiceInfo) => {
-  console.info(JSON.stringify(data));
-});
-
-discoveryService.stopSearchingMDNS();
-```
-
 ## startSearchingMDNS
 
 ```TypeScript
@@ -380,27 +190,9 @@ startSearchingMDNS(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
-
-**示例**
-
-Stage模型示例：
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 获取context。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let serviceType = "_print._tcp";
-let discoveryService = mdns.createDiscoveryService(context, serviceType);
-discoveryService.startSearchingMDNS();
-```
 
 ## stopSearchingMDNS
 
@@ -412,24 +204,6 @@ stopSearchingMDNS(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.MDNS
-
-**示例**
-
-Stage模型示例：
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 获取context。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let serviceType = "_print._tcp";
-let discoveryService = mdns.createDiscoveryService(context, serviceType);
-discoveryService.stopSearchingMDNS();
-```

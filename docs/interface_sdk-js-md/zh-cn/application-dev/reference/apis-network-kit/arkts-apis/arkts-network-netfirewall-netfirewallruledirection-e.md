@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_IN
@@ -18,8 +16,6 @@ RULE_IN = 1
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_OUT
@@ -31,7 +27,5 @@ RULE_OUT = 2
 出站。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

@@ -6,8 +6,6 @@ The &lt;web&gt; component is a container for displaying web page content.@extend
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## reload
@@ -19,8 +17,6 @@ reload(): void
 Reload the web page content
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -4,8 +4,6 @@ Enum for query entity mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ALL
@@ -17,8 +15,6 @@ ALL = 'all'
 Query all entities.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ BY_PROPERTY = 'byProperty'
 Query entities by property.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

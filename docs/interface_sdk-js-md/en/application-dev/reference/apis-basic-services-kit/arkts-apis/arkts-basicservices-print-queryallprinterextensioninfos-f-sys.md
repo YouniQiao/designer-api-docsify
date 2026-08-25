@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryAllPrinterExtensionInfos
@@ -15,8 +15,6 @@ function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExte
 Obtains the information of all installed printer extensions. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -37,33 +35,6 @@ Obtains the information of all installed printer extensions. This API uses an as
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryAllPrinterExtensionInfos((err: BusinessError, extensionInfos: print.PrinterExtensionInfo[]) => {
-    if (err) {
-        console.error('queryAllPrinterExtensionInfos err ' + JSON.stringify(err));
-    } else {
-        console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
-    console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('failed to get AllPrinterExtension because ' + JSON.stringify(error));
-})
-```
-
 
 ## queryAllPrinterExtensionInfos
 
@@ -74,8 +45,6 @@ function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>
 Obtains the information of all installed printer extensions. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -95,7 +64,3 @@ Obtains the information of all installed printer extensions. This API uses a pro
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [queryAllPrinterExtensionInfos](#queryallprinterextensioninfos)

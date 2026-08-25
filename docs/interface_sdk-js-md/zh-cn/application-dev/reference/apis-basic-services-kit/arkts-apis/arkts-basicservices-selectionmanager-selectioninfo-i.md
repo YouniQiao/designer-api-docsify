@@ -4,14 +4,12 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## 导入模块
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## bundleName
@@ -26,8 +24,6 @@ bundleName: string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.SelectionInput.Selection
@@ -35,16 +31,14 @@ bundleName: string
 ## displayID
 
 ```TypeScript
-displayID: int
+displayID: number
 ```
 
 被划词应用窗口的屏幕ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,16 +47,14 @@ displayID: int
 ## endDisplayX
 
 ```TypeScript
-endDisplayX: int
+endDisplayX: number
 ```
 
 划词结束位置的屏幕x轴坐标，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,16 +63,14 @@ endDisplayX: int
 ## endDisplayY
 
 ```TypeScript
-endDisplayY: int
+endDisplayY: number
 ```
 
 划词结束位置的屏幕y轴坐标，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -89,16 +79,14 @@ endDisplayY: int
 ## endWindowX
 
 ```TypeScript
-endWindowX: int
+endWindowX: number
 ```
 
 划词结束位置的窗口x轴坐标，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -107,16 +95,14 @@ endWindowX: int
 ## endWindowY
 
 ```TypeScript
-endWindowY: int
+endWindowY: number
 ```
 
 划词结束位置的窗口y轴坐标，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,8 +122,6 @@ selectionType: SelectionType
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.SelectionInput.Selection
@@ -145,16 +129,14 @@ selectionType: SelectionType
 ## startDisplayX
 
 ```TypeScript
-startDisplayX: int
+startDisplayX: number
 ```
 
 划词起始位置的屏幕x轴坐标，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -163,16 +145,14 @@ startDisplayX: int
 ## startDisplayY
 
 ```TypeScript
-startDisplayY: int
+startDisplayY: number
 ```
 
 划词起始位置的屏幕y轴坐标，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -181,16 +161,14 @@ startDisplayY: int
 ## startWindowX
 
 ```TypeScript
-startWindowX: int
+startWindowX: number
 ```
 
 划词起始位置的窗口x轴坐标，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -199,16 +177,14 @@ startWindowX: int
 ## startWindowY
 
 ```TypeScript
-startWindowY: int
+startWindowY: number
 ```
 
 划词起始位置的窗口y轴坐标，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -217,16 +193,14 @@ startWindowY: int
 ## windowID
 
 ```TypeScript
-windowID: int
+windowID: number
 ```
 
 被划词应用的窗口ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

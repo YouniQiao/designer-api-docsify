@@ -1,7 +1,5 @@
 # FunctionConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (...args: string[]): Function
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -33,8 +29,6 @@ new(...args: string[]): Function
 
 Creates a new function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -52,5 +46,3 @@ readonly prototype: Function
 ```
 
 **Type:** Function
-
-**ArkTS mode:** 

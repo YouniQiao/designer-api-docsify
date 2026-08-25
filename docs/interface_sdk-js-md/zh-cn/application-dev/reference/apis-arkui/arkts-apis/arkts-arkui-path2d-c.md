@@ -14,8 +14,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -33,8 +31,6 @@ addPath(path: Path2D, transform?: Matrix2D): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -46,36 +42,7 @@ addPath(path: Path2D, transform?: Matrix2D): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
-| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct AddPath {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private path2Da: Path2D = new Path2D("M250 150 L150 350 L350 350 Z");
-  private path2Db: Path2D = new Path2D();
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.path2Db.addPath(this.path2Da)
-          this.context.stroke(this.path2Db)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| transform | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 |
 
 ## constructor
 
@@ -87,54 +54,11 @@ constructor()
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
-
-```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct LengthMetricsUnitDemo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
-  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.contextPX)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextPX.fillRect(10, 10, 100, 100)
-          this.contextPX.clearRect(10, 10, 50, 50)
-        })
-
-      Canvas(this.contextVP)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextVP.fillRect(10, 10, 100, 100)
-          this.contextVP.clearRect(10, 10, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## constructor
 
@@ -146,8 +70,6 @@ constructor(unit: LengthMetricsUnit)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -160,11 +82,7 @@ constructor(unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
-
-**示例**
-
-参见 [constructor](#constructor)
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |
 
 ## constructor
 
@@ -175,8 +93,6 @@ constructor(path: Path2D)
 使用路径对象构造Path2D对象。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -190,10 +106,6 @@ constructor(path: Path2D)
 | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
 
-**示例**
-
-参见 [constructor](#constructor)
-
 ## constructor
 
 ```TypeScript
@@ -203,8 +115,6 @@ constructor(path: Path2D, unit: LengthMetricsUnit)
 使用路径对象构造Path2D对象，支持配置Path2D对象的单位模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -219,11 +129,7 @@ constructor(path: Path2D, unit: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
-
-**示例**
-
-参见 [constructor](#constructor)
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |
 
 ## constructor
 
@@ -234,8 +140,6 @@ constructor(d: string)
 使用符合SVG路径描述规范的路径字符串构造Path2D对象。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -249,10 +153,6 @@ constructor(d: string)
 | --- | --- | --- |
 | [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | string | 是 |
 
-**示例**
-
-参见 [constructor](#constructor)
-
 ## constructor
 
 ```TypeScript
@@ -262,8 +162,6 @@ constructor(description: string, unit: LengthMetricsUnit)
 使用符合SVG路径描述规范的路径字符串构造Path2D对象，支持配置Path2D对象的单位模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -278,8 +176,4 @@ constructor(description: string, unit: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | description | string | 是 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
-
-**示例**
-
-参见 [constructor](#constructor)
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |

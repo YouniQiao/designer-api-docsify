@@ -4,29 +4,25 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
 矩形高，范围[0, 1]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ height: double
 ## topLeftX
 
 ```TypeScript
-topLeftX: double
+topLeftX: number
 ```
 
 矩形区域左上角x坐标，范围[0, 1]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ topLeftX: double
 ## topLeftY
 
 ```TypeScript
-topLeftY: double
+topLeftY: number
 ```
 
 矩形区域左上角y坐标，范围[0, 1]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -71,16 +63,14 @@ topLeftY: double
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
 矩形宽，范围[0, 1]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

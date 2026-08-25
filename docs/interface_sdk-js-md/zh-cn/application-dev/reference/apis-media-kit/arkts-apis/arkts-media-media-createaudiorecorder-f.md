@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createAudioRecorder
@@ -21,8 +21,6 @@ function createAudioRecorder(): AudioRecorder
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [createAVRecorder](arkts-media-media-createavrecorder-f.md)(callback: AsyncCallback&lt;AVRecorder&gt;)
@@ -33,10 +31,4 @@ function createAudioRecorder(): AudioRecorder
 
 | 类型 |
 | --- |
-| [AudioRecorder](arkts-media-multimedia-media-audiorecorder-i.md) |
-
-**示例**
-
-```TypeScript
-let audioRecorder: media.AudioRecorder = media.createAudioRecorder();
-```
+| [AudioRecorder](arkts-media-media-audiorecorder-i.md) |

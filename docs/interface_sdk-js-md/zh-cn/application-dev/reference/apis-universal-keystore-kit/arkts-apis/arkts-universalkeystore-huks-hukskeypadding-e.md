@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.Security.Huks.Core
 
 ## HUKS_PADDING_NONE
@@ -17,8 +15,6 @@ HUKS_PADDING_NONE = 0
 表示不使用填充算法。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,8 +29,6 @@ HUKS_PADDING_OAEP = 1
 表示使用OAEP填充算法。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -52,8 +46,6 @@ HUKS_PADDING_PSS = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -69,8 +61,6 @@ HUKS_PADDING_PKCS1_V1_5 = 3
 表示使用PKCS1_V1_5填充算法。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -88,8 +78,6 @@ HUKS_PADDING_PKCS5 = 4
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -106,8 +94,6 @@ HUKS_PADDING_PKCS7 = 5
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
@@ -122,8 +108,6 @@ HUKS_PADDING_ISO_IEC_9796_2 = 6
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
@@ -137,8 +121,6 @@ HUKS_PADDING_ISO_IEC_9797_1 = 7
 表示使用ISO_IEC_9797_1填充算法<!--Del-->（暂不支持）<!--DelEnd-->。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

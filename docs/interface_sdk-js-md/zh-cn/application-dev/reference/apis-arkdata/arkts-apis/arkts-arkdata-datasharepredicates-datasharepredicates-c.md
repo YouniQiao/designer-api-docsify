@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## 导入模块
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
+import { dataSharePredicates } from 'kits/@kit.ArkData';
 ```
 
 ## and
@@ -24,8 +22,6 @@ and(): DataSharePredicates
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -37,15 +33,6 @@ and(): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "lisi")
-    .and()
-    .equalTo("SALARY", 200.5);
-```
 
 ## beginWrap
 
@@ -57,8 +44,6 @@ beginWrap(): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -68,18 +53,6 @@ beginWrap(): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
 
 ## between
 
@@ -91,8 +64,6 @@ between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -102,21 +73,14 @@ between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| low | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
-| high | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.between("AGE", 10, 50);
-```
 
 ## endWrap
 
@@ -128,8 +92,6 @@ endWrap(): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -139,18 +101,6 @@ endWrap(): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap();
-```
 
 ## equalTo
 
@@ -162,8 +112,6 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -182,13 +130,6 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "Rose");
-```
 
 ## greaterThan
 
@@ -200,8 +141,6 @@ greaterThan(field: string, value: ValueType): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -218,13 +157,6 @@ greaterThan(field: string, value: ValueType): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.greaterThan("AGE", 10);
-```
 
 ## greaterThanOrEqualTo
 
@@ -236,8 +168,6 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -255,13 +185,6 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.greaterThanOrEqualTo("AGE", 10);
-```
-
 ## in
 
 ```TypeScript
@@ -271,8 +194,6 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 该接口用于配置谓词以匹配值在指定范围内的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -293,49 +214,6 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.in("AGE", [18, 20]);
-```
-
-## inValues
-
-```TypeScript
-inValues(field: string, value: Array<ValueType>): DataSharePredicates
-```
-
-Configure {@code DataSharePredicates} to match the specified field whose data type is ValueType array and values are within a given range. Currently only used for RDB and KVDB(schema).
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.inValues("AGE", [18, 20]);
-```
-
 ## lessThan
 
 ```TypeScript
@@ -345,8 +223,6 @@ lessThan(field: string, value: ValueType): DataSharePredicates
 该接口用于配置谓词以匹配值小于指定值的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -364,13 +240,6 @@ lessThan(field: string, value: ValueType): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.lessThan("AGE", 50);
-```
 
 ## lessThanOrEqualTo
 
@@ -382,8 +251,6 @@ lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -401,13 +268,6 @@ lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.lessThanOrEqualTo("AGE", 50);
-```
-
 ## like
 
 ```TypeScript
@@ -417,8 +277,6 @@ like(field: string, value: string): DataSharePredicates
 该接口用于配置谓词以匹配指定通配符表达式的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -437,30 +295,15 @@ like(field: string, value: string): DataSharePredicates
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.like("NAME", "%os%");
-```
-
 ## limit
 
-ArkTS-Dyn:
 ```TypeScript
 limit(total: number, offset: number): DataSharePredicates
-```
-
-ArkTS-Sta:
-```TypeScript
-limit(total: int, offset: int): DataSharePredicates
 ```
 
 该接口用于配置谓词以指定结果数和起始位置。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -472,21 +315,14 @@ limit(total: int, offset: int): DataSharePredicates
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| total | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| total | number | 是 |
+| offset | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "Rose").limit(10, 3);
-```
 
 ## notBetween
 
@@ -498,8 +334,6 @@ notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -509,21 +343,14 @@ notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| low | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
-| high | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](arkts-arkdata-valuetype-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.notBetween("AGE", 10, 50);
-```
 
 ## notEqualTo
 
@@ -534,8 +361,6 @@ notEqualTo(field: string, value: ValueType): DataSharePredicates
 该接口用于配置谓词以匹配值不等于指定值的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -554,13 +379,6 @@ notEqualTo(field: string, value: ValueType): DataSharePredicates
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.notEqualTo("NAME", "Rose");
-```
-
 ## notIn
 
 ```TypeScript
@@ -571,8 +389,6 @@ notIn(field: string, value: Array<ValueType>): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -589,49 +405,6 @@ notIn(field: string, value: Array<ValueType>): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.notIn("NAME", ["Lisa", "Rose"]);
-```
-
-## notInValues
-
-```TypeScript
-notInValues(field: string, value: Array<ValueType>): DataSharePredicates
-```
-
-Configure {@code DataSharePredicates} to match the specified field whose data type is String array and values are out of a given range. Currently only used for RDB and KVDB(schema).
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| field | string | 是 |
-| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.notInValues("NAME", ["Lisa", "Rose"]);
-```
 
 ## or
 
@@ -643,8 +416,6 @@ or(): DataSharePredicates
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -654,15 +425,6 @@ or(): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "lisi")
-    .or()
-    .equalTo("NAME", "Rose");
-```
 
 ## orderByAsc
 
@@ -674,8 +436,6 @@ orderByAsc(field: string): DataSharePredicates
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -693,13 +453,6 @@ orderByAsc(field: string): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.orderByAsc("AGE");
-```
 
 ## orderByDesc
 
@@ -711,8 +464,6 @@ orderByDesc(field: string): DataSharePredicates
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -730,10 +481,3 @@ orderByDesc(field: string): DataSharePredicates
 | 类型 |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.orderByDesc("AGE");
-```

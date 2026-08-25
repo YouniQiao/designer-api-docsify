@@ -4,14 +4,12 @@ Defines a network address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## address
@@ -26,8 +24,6 @@ Network address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -35,16 +31,14 @@ Network address.
 ## family
 
 ```TypeScript
-family?: int
+family?: number
 ```
 
 Address family identifier. The value is **1** for IPv4 and **2** for IPv6. The default value is **1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +47,14 @@ Address family identifier. The value is **1** for IPv4 and **2** for IPv6. The d
 ## port
 
 ```TypeScript
-port?: int
+port?: number
 ```
 
 Port number. The value range is [0, 65535]. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

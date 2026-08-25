@@ -4,8 +4,6 @@ onSslErrorEventReceive接口返回的SSL错误的具体原因。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## Invalid
@@ -17,8 +15,6 @@ Invalid = 0
 一般错误。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ HostMismatch = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -50,8 +44,6 @@ DateInvalid = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -65,8 +57,6 @@ Untrusted = 3
 证书颁发机构不受信任。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

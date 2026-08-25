@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## enabled
@@ -21,8 +19,6 @@ readonly enabled: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -30,16 +26,14 @@ readonly enabled: boolean
 ## iconId
 
 ```TypeScript
-readonly iconId: long
+readonly iconId: number
 ```
 
 备用图标的资源id，是编译构建时根据应用配置的icon自动生成的资源id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,8 +50,6 @@ readonly iconName: string
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

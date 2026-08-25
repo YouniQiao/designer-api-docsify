@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'kits/@kit.ArkUI';
 ```
 
 ## getItemsInShapePath
@@ -15,8 +15,6 @@ function getItemsInShapePath(value: GetItemsInShapePathParams): Array<ImageItem>
 获取位于选定区域内的图像对象。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,14 +4,12 @@ Configuration parameter of ExceptionPrompt. @interface PromptOptions
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { MarginType, PromptOptions, ExceptionPrompt } from '@kit.ArkUI';
+import { MarginType, PromptOptions, ExceptionPrompt } from 'kits/@kit.ArkUI';
 ```
 
 ## actionText
@@ -22,11 +20,9 @@ actionText?: ResourceStr
 
 Right icon button text of PromptOptions.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ icon?: ResourceStr
 
 Icon of PromptOptions.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +60,6 @@ Control concealment of PromptOptions.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -82,11 +74,9 @@ marginTop: Dimension
 
 Distance from the top of PromptOptions.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +96,6 @@ Margin Type of ExceptionPrompt.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -126,8 +114,6 @@ SymbolGlyphModifier of PromptOptions.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -142,11 +128,9 @@ tip?: ResourceStr
 
 Tip text of PromptOptions.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

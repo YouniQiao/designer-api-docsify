@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -23,13 +21,11 @@ color?: ResourceColor
 
 边缘流光颜色。默认值：#FFFFFF，显示为白色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** #FFFFFF
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +46,6 @@ intensity?: number
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -67,11 +61,9 @@ length: Length
 沿流动方向的边缘流光的投影长度（不支持百分比）。取值范围：[0, +∞)单位：vp  
 **说明：**设置小于0的值时，按值为0处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,11 +79,9 @@ position: EdgeLightPosition
 
 边缘流光位置。
 
-**类型：** EdgeLightPosition
+**类型：** [EdgeLightPosition](../arkts-apis/arkts-arkui-edgelightposition-e-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,13 +98,11 @@ thickness?: Length
 边缘流光线条粗细（不支持百分比）。取值范围：[0, +∞)单位：vp默认值：0  
 **说明：**设置小于0的值时，按值为0处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0vp
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

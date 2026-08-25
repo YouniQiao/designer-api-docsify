@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 6
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKit';
+import { Battery, BatteryResponse, GetStatusOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## charging
@@ -28,8 +26,6 @@ charging: boolean
 **类型：** boolean
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 6
 
@@ -49,8 +45,6 @@ level: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 6
 

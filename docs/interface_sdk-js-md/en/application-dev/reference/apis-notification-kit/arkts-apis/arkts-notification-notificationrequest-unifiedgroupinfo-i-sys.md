@@ -4,8 +4,6 @@ Describes the fields of notification intelligent unification information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Unified group summary.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -40,8 +36,6 @@ Other unification information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -57,8 +51,6 @@ Unified group ID.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -76,8 +68,6 @@ Name of a unification scene.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -93,8 +83,6 @@ Unified group title.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

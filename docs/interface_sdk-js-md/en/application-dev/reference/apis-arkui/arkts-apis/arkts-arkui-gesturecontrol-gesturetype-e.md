@@ -4,8 +4,6 @@ Enumerates gesture recognizer types.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TAP_GESTURE
@@ -17,8 +15,6 @@ TAP_GESTURE = 0
 Tap gesture.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Long press gesture.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -49,8 +43,6 @@ PAN_GESTURE = 2
 Pan gesture.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ Pinch gesture.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -81,8 +71,6 @@ SWIPE_GESTURE = 4
 Swipe gesture.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +86,6 @@ Rotation gesture.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -113,8 +99,6 @@ DRAG = 6
 Drag.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,8 +114,6 @@ Click.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -145,8 +127,6 @@ BOX_SELECT_GESTURE = 8
 Swipe gesture used to create a selection area by dragging with the mouse within a scroll container, enabling the batch selection of multiple elements.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,8 +144,6 @@ Swipe gesture used to control the scrolling behavior of a **Web** component.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -182,8 +160,6 @@ Swipe gesture used to select text content by dragging within an input box compon
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -196,11 +172,9 @@ Swipe gesture used to select text content by dragging within an input box compon
 CONTEXT_MENU_HOVER_GESTURE = 11
 ```
 
-Context menu hover gesture. It is a special type of long-press gesture and triggers the **hoverScale** animation effect of the menu during the long-press process (this behavior requires enabling the **hoverScaleInterruption** attribute of ContextMenuAnimationOptions for support).
+Context menu hover gesture. It is a special type of number-press gesture and triggers the **hoverScale** animation effect of the menu during the number-press process (this behavior requires enabling the **hoverScaleInterruption** attribute of [ContextMenuAnimationOptions](../arkts-components/arkts-arkui-contextmenuanimationoptions-i.md) for support).
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getLastLocation
@@ -15,8 +15,6 @@ function getLastLocation(): Location
 Obtain last known location.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -39,15 +37,3 @@ Obtain last known location.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  let location = geoLocationManager.getLastLocation();
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

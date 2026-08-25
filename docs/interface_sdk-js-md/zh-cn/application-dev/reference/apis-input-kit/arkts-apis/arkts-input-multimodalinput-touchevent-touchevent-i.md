@@ -6,14 +6,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
 
 ```TypeScript
-import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from 'kits/@kit.InputKit';
 ```
 
 ## action
@@ -27,8 +25,6 @@ action: Action
 **类型：** [Action](arkts-input-multimodalinput-touchevent-action-e.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,8 +40,6 @@ sourceType: SourceType
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## touch
@@ -60,8 +54,6 @@ touch: Touch
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## touches
@@ -75,7 +67,5 @@ touches: Touch[]
 **类型：** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

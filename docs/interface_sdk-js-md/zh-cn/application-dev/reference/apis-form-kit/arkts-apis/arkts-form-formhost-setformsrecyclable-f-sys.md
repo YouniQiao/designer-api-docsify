@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## setFormsRecyclable
@@ -15,8 +15,6 @@ function setFormsRecyclable(formIds: Array<string>): Promise<void>
 设置卡片可回收。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -49,82 +47,6 @@ function setFormsRecyclable(formIds: Array<string>): Promise<void>
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formIds: string[] = ['12400633174999288'];
-  formHost.setFormsRecyclable(formIds, (err: BusinessError) => {
-    if (err) {
-      console.error(`setFormsRecyclable error, code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formIds: string[] = ['12400633174999288'];
-  formHost.setFormsRecyclable(formIds, (err) => {
-    if (err) {
-      console.error(`setFormsRecyclable error, code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formIds: string[] = ['12400633174999288'];
-  formHost.setFormsRecyclable(formIds).then(() => {
-    console.info('setFormsRecyclable success');
-  }).catch((err: BusinessError) => {
-    console.error(`setFormsRecyclable error, code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formIds: string[] = ['12400633174999288'];
-  formHost.setFormsRecyclable(formIds).then(() => {
-    console.info('setFormsRecyclable success');
-  }).catch((err) => {
-    console.error(`setFormsRecyclable error, code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## setFormsRecyclable
 
@@ -135,8 +57,6 @@ function setFormsRecyclable(formIds: Array<string>, callback: AsyncCallback<void
 设置卡片可回收。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -163,7 +83,3 @@ function setFormsRecyclable(formIds: Array<string>, callback: AsyncCallback<void
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
-
-**示例**
-
-参见 [setFormsRecyclable](#setformsrecyclable)

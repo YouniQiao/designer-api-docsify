@@ -6,8 +6,6 @@ Defines the configuration options of the time picker dialog box.Inherited from [
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ onAccept?: (value: TimePickerResult) => void
 Callback invoked when the OK button in the dialog box is clicked.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,8 +43,6 @@ Callback invoked when the cancel button in the dialog box is clicked.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -62,8 +56,6 @@ onChange?: (value: TimePickerResult) => void
 Triggered when the text picker in the dialog box snaps to the selected item.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,8 +85,6 @@ The settings take effect next time the dialog box appears.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -113,8 +103,6 @@ Event callback after the dialog box disappears.
 onWillDisappear &gt; onDidDisappear.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,8 +125,6 @@ The settings take effect next time the dialog box appears.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -160,8 +146,6 @@ onWillDisappear &gt; onDidDisappear.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -181,11 +165,9 @@ If both are set to **true**, the **primary** field will remain at the default va
 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition,
 even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
 
-**Type:** PickerDialogButtonStyle
+**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -201,11 +183,9 @@ alignment?: DialogAlignment
 
 Alignment mode of the dialog box in the vertical direction.Default value: **DialogAlignment.Default**
 
-**Type:** DialogAlignment
+**Type:** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,8 +208,6 @@ Background blur style of the dialog box.Default value: **BlurStyle.COMPONENT_ULT
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -244,11 +222,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Options for customizing the background blur style.
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -265,13 +241,11 @@ backgroundColor?: ResourceColor
 Backplane color of the dialog box.Default value: **Color.Transparent**  
 **NOTE：**When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -287,11 +261,9 @@ backgroundEffect?: BackgroundEffectOptions
 
 Options for customizing the background effect.
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,11 +284,9 @@ If both are set to **true**, the **primary** field will remain at the default va
 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes.
 In addition, even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
 
-**Type:** PickerDialogButtonStyle
+**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,8 +308,6 @@ Whether to display a leading zero for the hours and minutes. Currently only the 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -354,11 +322,9 @@ disappearTextStyle?: PickerTextStyle
 
 Text color, font size, and font weight of edge items (the second item above or below the selected item).Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
-**Type:** PickerTextStyle
+**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -373,7 +339,8 @@ enableCascade?: boolean
 ```
 
 Whether the AM/PM indicator automatically switches based on the hour value. Only takes effect when **useMilitaryTime** is set to **false**.  
-- **true**: The AM/PM indicator automatically switches based on the hour value. - **false**: The AM/PM indicator remains static regardless of hour changes.  
+- **true**: The AM/PM indicator automatically switches based on the hour value.  
+- **false**: The AM/PM indicator remains static regardless of hour changes.  
 Default value: **false**.When **enableCascade** is set to **true**, it only takes effect if the **loop** parameter is also **true**.
 
 **Type:** boolean
@@ -381,8 +348,6 @@ Default value: **false**.When **enableCascade** is set to **true**, it only take
 **Default:** false
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -397,7 +362,8 @@ enableHapticFeedback?: boolean
 ```
 
 Whether to enable haptic feedback.  
-- **true**: Enable haptic feedback. - **false**: Disable haptic feedback.  
+- **true**: Enable haptic feedback.  
+- **false**: Disable haptic feedback.  
 Default value: **true**.  
 **NOTE：**
 1. Whether this parameter takes effect after being set to **true** depends on hardware support.
@@ -409,8 +375,6 @@ Default value: **true**.
 **Default:** true
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -425,7 +389,8 @@ enableHoverMode?: boolean
 ```
 
 Whether to enable the hover mode.  
-- **true**: Respond when the device is in semi-folded mode. - **false**: Do not respond when the device is in semi-folded mode.  
+- **true**: Respond when the device is in semi-folded mode.  
+- **false**: Do not respond when the device is in semi-folded mode.  
 Default value: **false**.
 
 **Type:** boolean
@@ -433,8 +398,6 @@ Default value: **false**.
 **Default:** false
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -450,13 +413,11 @@ hoverModeArea?: HoverModeAreaType
 
 Display area of the dialog box in hover mode.Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
-**Type:** HoverModeAreaType
+**Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -472,11 +433,9 @@ maskRect?: Rectangle
 
 Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not.Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
-**Type:** Rectangle
+**Type:** [Rectangle](arkts-arkui-rectangle-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -495,8 +454,6 @@ Offset of the dialog box relative to the alignment position.Default value: **{ 
 **Type:** Offset
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -517,8 +474,6 @@ Represents the callback triggered during the scrolling of the text picker when a
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -533,11 +488,9 @@ selectedTextStyle?: PickerTextStyle
 
 Font color, font size, and font weight of the selected item.Default value: { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } }
 
-**Type:** PickerTextStyle
+**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -554,11 +507,9 @@ shadow?: ShadowOptions | ShadowStyle
 Shadow of the dialog box.  
 **NOTE：**Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -574,11 +525,9 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** SystemUiMaterial
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -594,11 +543,9 @@ textStyle?: PickerTextStyle
 
 Text color, font size, and font weight of candidate items (the first item immediately above or below the selected item).Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
-**Type:** PickerTextStyle
+**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -613,14 +560,13 @@ useMilitaryTime?: boolean
 ```
 
 Whether to display the time in 24-hour format or 12-hour format.  
-- **true**: 24-hour format. - **false**: 12-hour format.  
+- **true**: 24-hour format.  
+- **false**: 12-hour format.  
 Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

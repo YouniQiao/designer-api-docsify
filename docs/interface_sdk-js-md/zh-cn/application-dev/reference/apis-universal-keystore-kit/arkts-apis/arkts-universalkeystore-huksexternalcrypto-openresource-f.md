@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## openResource
@@ -18,8 +18,6 @@ function openResource(resourceId: string, params?: HuksExternalCryptoParam[]): P
 > 打开的资源必须使用[closeResource](arkts-universalkeystore-huksexternalcrypto-closeresource-f.md)关闭。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,23 +51,3 @@ function openResource(resourceId: string, params?: HuksExternalCryptoParam[]): P
 | [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 | [12000025](../errorcode-huks.md#12000025-资源超过限制) |
-
-**示例**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-const testResourceId = JSON.stringify({
-  providerName: "testProviderName",
-  bundleName: "com.example.cryptoapplication",
-  abilityName: "CryptoExtension",
-  index: {
-    key: "testKey"
-  } as ESObject
-});
-
-huksExternalCrypto.openResource(testResourceId)
-    .then(() => {
-      console.info('promise: openResource success.');
-    });
-```

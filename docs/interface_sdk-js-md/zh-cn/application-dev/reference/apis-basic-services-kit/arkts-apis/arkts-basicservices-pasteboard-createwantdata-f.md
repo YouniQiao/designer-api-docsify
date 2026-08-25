@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createWantData
@@ -15,8 +15,6 @@ function createWantData(want: Want): PasteData
 构建一个Want剪贴板内容对象。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -35,15 +33,3 @@ function createWantData(want: Want): PasteData
 | 类型 |
 | --- |
 | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-
-let object: Want = {
-    bundleName: "com.example.aafwk.test",
-    abilityName: "com.example.aafwk.test.TwoAbility"
-};
-let pasteData: pasteboard.PasteData = pasteboard.createWantData(object);
-```

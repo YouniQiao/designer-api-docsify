@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## getDeviceIdleTrustlist
@@ -15,8 +15,6 @@ function getDeviceIdleTrustlist(callback: AsyncCallback<Array<number>>): void
 获取休眠模式白名单所包含的 uid，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -41,30 +39,6 @@ function getDeviceIdleTrustlist(callback: AsyncCallback<Array<number>>): void
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.getDeviceIdleTrustlist((error: BusinessError, data: number[]) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getDeviceIdleTrustlist()
-  .then((data: number[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## getDeviceIdleTrustlist
 
@@ -75,8 +49,6 @@ function getDeviceIdleTrustlist(): Promise<Array<number>>
 获取休眠模式白名单所包含的 uid，使用 Promise 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -99,7 +71,3 @@ function getDeviceIdleTrustlist(): Promise<Array<number>>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [getDeviceIdleTrustlist](#getdeviceidletrustlist)

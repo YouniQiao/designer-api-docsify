@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## init
@@ -15,8 +15,6 @@ function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CM
 Indicates the initialization of signature and signature verification using credentials. This is the first step in the signature verification process. Later, the update and finish interfaces need to be invoked in sequence to complete the operations. Use Callback to return the result asynchronously.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -40,51 +38,6 @@ Indicates the initialization of signature and signature verification using crede
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
 | [17500005](../errorcode-certManager.md#17500005-application-not-authorized) |
 
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-
-let uri: string = 'test'; /* The service needs to use the unique identifier of the credential to initialize signing and signature verification, which is not elaborated here. */
-const req: certificateManager.CMSignatureSpec = {
-  purpose: certificateManager.CmKeyPurpose.CM_KEY_PURPOSE_SIGN,
-  padding: certificateManager.CmKeyPadding.CM_PADDING_PSS,
-  digest: certificateManager.CmKeyDigest.CM_DIGEST_SHA256
-}
-try {
-  certificateManager.init(uri, req, (err, cmHandle) => {
-    if (err != null) {
-      console.error(`Failed to init. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('Succeeded in initiating.');
-    }
-  })
-} catch (error) {
-  console.error(`Failed to init. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri: string = 'test'; /* The service needs to use the unique identifier of the credential to initialize signing and signature verification, which is not elaborated here. */
-const req: certificateManager.CMSignatureSpec = {
-  purpose: certificateManager.CmKeyPurpose.CM_KEY_PURPOSE_VERIFY,
-  padding: certificateManager.CmKeyPadding.CM_PADDING_PSS,
-  digest: certificateManager.CmKeyDigest.CM_DIGEST_MD5
-}
-try {
-  certificateManager.init(uri, req).then((handle) => {
-    console.info('Succeeded in initiating.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to init. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to init. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## init
 
@@ -95,8 +48,6 @@ function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>
 Initializes the signing or signature verification operation using the specified credential. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -124,7 +75,3 @@ Initializes the signing or signature verification operation using the specified 
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
 | [17500005](../errorcode-certManager.md#17500005-application-not-authorized) |
-
-**Examples**
-
-See [init](#init)

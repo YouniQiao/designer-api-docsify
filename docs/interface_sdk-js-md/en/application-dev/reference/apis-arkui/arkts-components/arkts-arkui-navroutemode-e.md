@@ -6,11 +6,9 @@ Defines the routing policy.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 13
 
-**Substitutes:** NavPathStack
+**Substitutes:** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,8 +21,6 @@ PUSH_WITH_RECREATE
 The new navigation destination page replaces the current one. The current page is destroyed, but the information about this page is retained in the navigation stack.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 13
 
@@ -46,8 +42,6 @@ The new navigation destination page overwrites the current one. The current page
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 13
 
 **Substitutes:** LaunchMode
@@ -67,8 +61,6 @@ REPLACE
 The new navigation destination page replaces the current one. The current page is destroyed, and the information about this page is removed from the navigation stack.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 13
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ action: () => void
 点击菜单项的事件回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -43,8 +39,6 @@ enabled?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -59,11 +53,9 @@ icon?: ResourceStr
 
 菜单项图标。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,8 +75,6 @@ symbolIcon?: SymbolGlyphModifier
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -99,11 +89,9 @@ value: ResourceStr
 
 菜单项文本。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

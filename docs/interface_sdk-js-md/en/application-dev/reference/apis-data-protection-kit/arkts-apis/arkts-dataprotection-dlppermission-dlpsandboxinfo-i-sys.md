@@ -4,8 +4,6 @@ Represents the DLP sandbox information.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the DLP sandbox information.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## appIndex
@@ -27,8 +25,6 @@ Index of the DLP sandbox application.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -45,8 +41,6 @@ Index of the DLP sandbox application to be bound. This parameter is not returned
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ Token ID of the DLP sandbox application.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 

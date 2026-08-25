@@ -4,8 +4,6 @@ Provides information about the menu item.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ builder?: CustomBuilder
 
 Builder for a level-2 menu.
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,11 +35,9 @@ content?: ResourceStr
 
 Content of the menu item.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,11 +51,9 @@ endIcon?: ResourceStr
 
 End icon of the menu item. Symbol icons are not supported. If the symbol icon is used, **symbolEndIcon** must be used.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -75,11 +67,9 @@ labelInfo?: ResourceStr
 
 Label information at the end of the menu item, such as shortcut keys like Ctrl+C.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,11 +83,9 @@ startIcon?: ResourceStr
 
 Start icon of the menu item. Symbol icons are not supported. If a symbol icon is used, **symbolStartIcon** must be used.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -114,8 +102,6 @@ Symbol icon at the end of a menu item. When this parameter is set, the icon set 
 **Type:** SymbolGlyphModifier
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,8 +120,6 @@ Symbol icon at the start of a menu item. When this parameter is set, the icon se
 **Type:** SymbolGlyphModifier
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

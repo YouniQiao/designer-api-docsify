@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { batteryStats } from '@kit.BasicServicesKit';
+import { batteryStats } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## power
 
 ```TypeScript
-power: double
+power: number
 ```
 
 耗电的值，单位毫安时。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
@@ -46,8 +42,6 @@ type: ConsumptionType
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -55,16 +49,14 @@ type: ConsumptionType
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 耗电信息对应的应用UID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 

@@ -4,14 +4,12 @@ Defines the predicates for an RDB store. This class determines whether the condi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## and
@@ -24,25 +22,13 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-// Find the records in the EMPLOYEE table where the NAME column is Lisa and the SALARY column is 200.5.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa")
-  .and()
-  .equalTo("SALARY", 200.5);
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## beginsWith
 
@@ -53,8 +39,6 @@ beginsWith(field: string, value: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that begin with the given value.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -69,21 +53,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find all the records that start with "Li" in the NAME column, for example, Lisa.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.beginsWith("NAME", "Li");
-```
 
 ## beginWrap
 
@@ -95,27 +71,13 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa")
-  .beginWrap()
-  .equalTo("AGE", 18)
-  .or()
-  .equalTo("SALARY", 200.5)
-  .endWrap();
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## between
 
@@ -127,8 +89,6 @@ Creates an **RdbPredicates** object to search for the records that are within th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -136,28 +96,20 @@ Creates an **RdbPredicates** object to search for the records that are within th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find the records that are greater than or equal to 10 and less than or equal to 50 in the AGE column.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.between("AGE", 10, 50);
-```
 
 ## constructor
 
@@ -168,8 +120,6 @@ constructor(name: string)
 Defines a constructor used to create an **RdbPredicates** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -185,12 +135,6 @@ Defines a constructor used to create an **RdbPredicates** object.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-```
-
 ## contains
 
 ```TypeScript
@@ -200,8 +144,6 @@ contains(field: string, value: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that contain the given value.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -216,21 +158,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find all the records that contain the string 'os' in the NAME column, for example, Rose.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.contains("NAME", "os");
-```
 
 ## distinct
 
@@ -242,22 +176,13 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose").distinct(); // Deduplicate result sets whose NAME is Rose.
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## endsWith
 
@@ -269,8 +194,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -284,21 +207,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find all the records that end with "se" in the NAME column, for example, Rose.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.endsWith("NAME", "se");
-```
 
 ## endWrap
 
@@ -310,27 +225,13 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa")
-  .beginWrap()
-  .equalTo("AGE", 18)
-  .or()
-  .equalTo("SALARY", 200.5)
-  .endWrap();
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## equalTo
 
@@ -341,8 +242,6 @@ equalTo(field: string, value: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are equal to the given value.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -357,21 +256,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find all the records in the NAME column where the value is Lisa.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa");
-```
 
 ## glob
 
@@ -382,8 +273,6 @@ glob(field: string, value: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that match the given string.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -398,21 +287,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find the strings that match "?h*g" in the NAME column.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.glob("NAME", "?h*g");
-```
 
 ## greaterThan
 
@@ -424,8 +305,6 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -439,21 +318,13 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find all the records that are greater than 18 in the AGE column.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.greaterThan("AGE", 18);
-```
 
 ## greaterThanOrEqualTo
 
@@ -465,8 +336,6 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -480,21 +349,13 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find all the records that are greater than or equal to 18 in the AGE column.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.greaterThanOrEqualTo("AGE", 18);
-```
 
 ## groupBy
 
@@ -505,8 +366,6 @@ groupBy(fields: Array<string>): RdbPredicates
 Creates a **RdbPredicates** object to group the query results based on the specified columns.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -520,20 +379,13 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.groupBy(["AGE", "NAME"]);
-```
 
 ## having
 
@@ -544,8 +396,6 @@ having(conditions: string, args?: Array<ValueType>): RdbPredicates
 Filters for group data that meets the conditions.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -560,7 +410,7 @@ Filters for group data that meets the conditions.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
@@ -583,8 +433,6 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -598,21 +446,13 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find records that are within [18, 20] in the AGE column.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.in("AGE", [18, 20]);
-```
 
 ## inAllDevices
 
@@ -624,22 +464,13 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.inAllDevices();
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## inDevices
 
@@ -657,8 +488,6 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -671,38 +500,13 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dmInstance: distributedDeviceManager.DeviceManager;
-let deviceIds: Array<string> = [];
-
-try {
-  dmInstance = distributedDeviceManager.createDeviceManager("com.example.appdatamgrverify");
-  let devices: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
-  for (let i = 0; i < devices.length; i++) {
-    deviceIds[i] = devices[i].networkId!;
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error("createDeviceManager errCode:" + code + ",errMessage:" + message);
-}
-
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.inDevices(deviceIds);
-```
 
 ## indexedBy
 
@@ -714,8 +518,6 @@ Creates a **RdbPredicates** object to specify the index column.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -728,47 +530,7 @@ Creates a **RdbPredicates** object to specify the index column.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.indexedBy("SALARY");
-```
-
-## inValues
-
-```TypeScript
-inValues(field: string, value: Array<ValueType>): RdbPredicates
-```
-
-Configure RdbPredicates to match the specified field whose data type is ValueType array and values are within a given range.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | Array & lt;ValueType & gt; | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
@@ -786,8 +548,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -800,20 +560,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.isNotNull("NAME");
-```
 
 ## isNull
 
@@ -825,8 +578,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -839,20 +590,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.isNull("NAME");
-```
 
 ## lessThan
 
@@ -864,8 +608,6 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -879,21 +621,13 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find all the records that are less than 20 in the AGE column.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.lessThan("AGE", 20);
-```
 
 ## lessThanOrEqualTo
 
@@ -905,8 +639,6 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -920,21 +652,13 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find all the records that are less than or equal to 20 in the AGE column.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.lessThanOrEqualTo("AGE", 20);
-```
 
 ## like
 
@@ -946,8 +670,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -961,7 +683,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
@@ -969,31 +691,15 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// Find all the records that are similar to "os" in the NAME column, for example, Rose.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.like("NAME", "%os%");
-```
-
 ## limitAs
 
-ArkTS-Dyn:
 ```TypeScript
 limitAs(value: number): RdbPredicates
-```
-
-ArkTS-Sta:
-```TypeScript
-limitAs(value: int): RdbPredicates
 ```
 
 Creates a **RdbPredicates** object to limit the number of records.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1001,26 +707,19 @@ Creates a **RdbPredicates** object to limit the number of records.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| value | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose").limitAs(3);
-```
 
 ## notBetween
 
@@ -1032,8 +731,6 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -1041,28 +738,20 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find the records that are less than 10 or greater than 50 in the AGE column.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notBetween("AGE", 10, 50);
-```
 
 ## notContains
 
@@ -1073,8 +762,6 @@ notContains(field: string, value: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records that do not contain the given value in the specified column.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1089,21 +776,13 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find the records that do not contain the string "os" in the NAME column, for example, Lisa.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notContains("NAME", "os");
-```
 
 ## notEqualTo
 
@@ -1114,8 +793,6 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are not equal to the given value.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1130,21 +807,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find all the records in the NAME column where the value is not Lisa.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notEqualTo("NAME", "Lisa");
-```
 
 ## notIn
 
@@ -1156,8 +825,6 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -1171,48 +838,7 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Find the records that are not within [Lisa, Rose] in the NAME column.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notIn("NAME", ["Lisa", "Rose"]);
-```
-
-## notInValues
-
-```TypeScript
-notInValues(field: string, value: Array<ValueType>): RdbPredicates
-```
-
-Configure RdbPredicates to match the specified field whose data type is ValueType array and values are out of a given range.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| field | string | Yes |
-| value | Array & lt;ValueType & gt; | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
@@ -1230,8 +856,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -1245,7 +869,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
@@ -1253,31 +877,15 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// Find all the records that are not similar to "os" in the NAME column, for example, Lisa.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.notLike("NAME", "%os%");
-```
-
 ## offsetAs
 
-ArkTS-Dyn:
 ```TypeScript
 offsetAs(rowOffset: number): RdbPredicates
-```
-
-ArkTS-Sta:
-```TypeScript
-offsetAs(rowOffset: int): RdbPredicates
 ```
 
 Creates an **RdbPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset, pass in a parameter less than or equal to **0** in **limitAs**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1285,26 +893,19 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| rowOffset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| rowOffset | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3);
-```
 
 ## or
 
@@ -1316,25 +917,13 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-// Find all records in the NAME column where the value is Lisa or Rose.
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.equalTo("NAME", "Lisa")
-  .or()
-  .equalTo("NAME", "Rose");
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## orderByAsc
 
@@ -1346,8 +935,6 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -1360,20 +947,13 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.orderByAsc("NAME");
-```
 
 ## orderByDesc
 
@@ -1385,8 +965,6 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Parameters:**
@@ -1399,17 +977,10 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let predicates = new relationalStore.RdbPredicates("EMPLOYEE");
-predicates.orderByDesc("AGE");
-```

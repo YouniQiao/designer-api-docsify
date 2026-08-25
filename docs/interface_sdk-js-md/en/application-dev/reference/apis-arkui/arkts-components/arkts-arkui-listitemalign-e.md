@@ -4,8 +4,6 @@ Sets the alignment mode of child components in the cross-axis direction of the l
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Start
@@ -17,8 +15,6 @@ Start
 The list items are packed toward the start edge of the **List** component along the cross axis.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,8 +32,6 @@ The list items are centered in the **List** component along the cross axis.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -53,8 +47,6 @@ End
 The list items are packed toward the end edge of the **List** component along the cross axis.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

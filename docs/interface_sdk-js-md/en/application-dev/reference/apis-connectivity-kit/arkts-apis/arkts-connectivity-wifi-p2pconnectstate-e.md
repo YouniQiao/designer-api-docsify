@@ -4,8 +4,6 @@ P2P connection status.@enum { number } P2pConnectState
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md)
@@ -22,8 +20,6 @@ p2p is disconnected.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DISCONNECTED](arkts-connectivity-wifimanager-p2pconnectstate-e.md#disconnected)
@@ -39,8 +35,6 @@ CONNECTED = 1
 p2p is connected.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

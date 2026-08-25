@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## check
@@ -16,8 +16,6 @@ function check(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.1.0。
-
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 **返回值：**
@@ -25,9 +23,3 @@ function check(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-let leakObjlist:string = jsLeakWatcher.check();
-```

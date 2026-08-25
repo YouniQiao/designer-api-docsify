@@ -4,8 +4,6 @@ StyledString
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 A constructor used to create a styled string.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ equals(other: StyledString): boolean
 Checks whether this styled string the same as another styled string.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,8 +72,6 @@ Converts an HTML string into a styled string. Currently, the following HTML tags
 | Tag Name| Description | | ------------- | ---------------------------- | | \ & lt;p\ & gt; | Paragraph tag, which separates text into paragraphs. | | \ & lt;span\ & gt; | Inline text supporting style configuration. | | \ & lt;img\ & gt; | Image tag, used to insert an image. | | \ & lt;strong\ & gt; | Bold text tag. | |  & lt;br & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Line break tag. | | \ & lt;b\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Bold text tag. | | \ & lt;a\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Hyperlink tag. | | \ & lt;i\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Italic text tag. | | \ & lt;em\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Italic text tag. | | \ & lt;s\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Strikethrough tag, which adds a line through the text. | | \ & lt;u\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Underline tag, which adds a decorative underline to the text. | | \ & lt;del\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Strikethrough tag, which adds a line through the text. | | \ & lt;sup\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Superscript tag. | | \ & lt;sub\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; |
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +108,6 @@ Obtains the text of this styled string.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -139,8 +129,6 @@ getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<Spa
 Obtains the styles in the specified range of a styled string. The specified range must not exceed the string's length.This API returns only styles explicitly set by the developer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,8 +166,6 @@ Obtains a substring of this styled string. The specified range must not exceed t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -214,8 +200,6 @@ static toHtml(styledString: StyledString): string
 Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md), include: **StyledStringKey.FONT**, **StyledStringKey.DECORATION**, **StyledStringKey.LETTER_SPACING**, **StyledStringKey.TEXT_SHADOW**, **StyledStringKey.LINE_HEIGHT**, and **StyledStringKey.IMAGE**.For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -253,8 +237,6 @@ Length of the styled string.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

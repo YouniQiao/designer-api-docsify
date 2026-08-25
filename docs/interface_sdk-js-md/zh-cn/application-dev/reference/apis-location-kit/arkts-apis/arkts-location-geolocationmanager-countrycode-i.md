@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## country
@@ -26,8 +24,6 @@ country: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 ## type
@@ -41,7 +37,5 @@ type: CountryCodeType
 **类型：** [CountryCodeType](arkts-location-geolocationmanager-countrycodetype-e.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core

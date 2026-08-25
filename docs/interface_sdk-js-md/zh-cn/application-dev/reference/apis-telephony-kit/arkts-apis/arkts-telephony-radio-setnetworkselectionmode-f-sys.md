@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setNetworkSelectionMode
@@ -15,8 +15,6 @@ function setNetworkSelectionMode(options: NetworkSelectionModeOptions, callback:
 Set the current network selection mode.
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -43,54 +41,6 @@ Set the current network selection mode.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let networkInformation: radio.NetworkInformation = {
-    operatorName: "中国移动",
-    operatorNumeric: "898600",
-    state: radio.NetworkInformationState.NETWORK_AVAILABLE,
-    radioTech: "CS"
-}
-let networkSelectionModeOptions: radio.NetworkSelectionModeOptions = {
-    slotId: 0,
-    selectMode: radio.NetworkSelectionMode.NETWORK_SELECTION_AUTOMATIC,
-    networkInformation: networkInformation,
-    resumeSelection: true
-}
-radio.setNetworkSelectionMode(networkSelectionModeOptions, (err: BusinessError) => {
-    if (err) {
-        console.error(`setNetworkSelectionMode failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`setNetworkSelectionMode success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let networkInformation: radio.NetworkInformation = {
-    operatorName: "中国移动",
-    operatorNumeric: "898600",
-    state: radio.NetworkInformationState.NETWORK_AVAILABLE,
-    radioTech: "CS"
-}
-let networkSelectionModeOptions: radio.NetworkSelectionModeOptions = {
-    slotId: 0,
-    selectMode: radio.NetworkSelectionMode.NETWORK_SELECTION_AUTOMATIC,
-    networkInformation: networkInformation,
-    resumeSelection: true
-}
-radio.setNetworkSelectionMode(networkSelectionModeOptions).then(() => {
-    console.info(`setNetworkSelectionMode success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setNetworkSelectionMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setNetworkSelectionMode
 
@@ -101,8 +51,6 @@ function setNetworkSelectionMode(options: NetworkSelectionModeOptions): Promise<
 Set the current network selection mode.
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -133,7 +81,3 @@ Set the current network selection mode.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [setNetworkSelectionMode](#setnetworkselectionmode)

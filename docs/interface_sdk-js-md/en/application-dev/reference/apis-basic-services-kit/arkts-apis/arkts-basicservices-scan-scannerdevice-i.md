@@ -4,14 +4,12 @@ Defines the scanner.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## deviceName
@@ -25,8 +23,6 @@ Name of the scanner.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -42,8 +38,6 @@ Discovery mode of the scanner.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## manufacturer
@@ -57,8 +51,6 @@ Manufacturer of the scanner.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -74,8 +66,6 @@ Model of the scanner.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## scannerId
@@ -90,8 +80,6 @@ Unique identifier of the scanner.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## uniqueId
@@ -105,7 +93,5 @@ Unique ID of the scanner.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

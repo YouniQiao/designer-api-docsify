@@ -4,14 +4,12 @@ Provides APIs for setting the height (**height**), background color (**backgroun
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
+import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -23,8 +21,6 @@ backgroundColor(backgroundColor: ResourceColor): ToolBarModifier
 Sets the background color of the toolbar. By overriding this API, you can implement custom drawing for the background color of the toolbar.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +50,6 @@ Sets the height of the toolbar. By overriding this API, you can implement custom
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -84,8 +78,6 @@ Sets the left and right padding of the toolbar. By overriding this API, you can 
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -113,8 +105,6 @@ stateEffect(stateEffect: boolean): ToolBarModifier
 Sets whether to display the pressed state effect.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

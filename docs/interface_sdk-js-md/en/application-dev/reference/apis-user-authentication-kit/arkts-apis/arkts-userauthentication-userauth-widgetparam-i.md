@@ -4,14 +4,12 @@ Represents the information presented on the user authentication page. This API i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## navigationButtonText
@@ -25,8 +23,6 @@ Description text of the navigation button, with a maximum length of 60 character
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Title of the user authentication page, which cannot be empty or exceed 500 chara
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -62,8 +56,6 @@ Used to display an application modal dialog for authentication. Since API versio
 **Type:** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

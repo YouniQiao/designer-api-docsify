@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## queryOpenedEnterpriseDlpFiles
@@ -20,8 +20,6 @@ function queryOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<A
 > - 相同分类标签的只读企业DLP文件在同一个沙箱中打开。如果一个沙箱中打开了多个相同标签的只读企业DLP文件，则查询结果返回所有该沙箱打开过文件的URI（包括手动关闭的文件）。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
@@ -49,20 +47,3 @@ function queryOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<A
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let options: dlpPermission.DlpFileQueryOptions = {
-  classificationLabel: 'label1'
-}; // 设置查询选项，指定分类标签。
-dlpPermission.queryOpenedEnterpriseDlpFiles(options).then((uris: Array<string>) => {
-  console.info("try to query opened enterprise dlp files, result: ", JSON.stringify(uris));
-}).catch((error: BusinessError)=> {
-  console.error(`Failed to query opened enterprise DLP files. Code: ${error.code}, message: ${error.message}`);
-}).finally(()=> {
-  console.info("after querying opened enterprise dlp files");
-});
-```

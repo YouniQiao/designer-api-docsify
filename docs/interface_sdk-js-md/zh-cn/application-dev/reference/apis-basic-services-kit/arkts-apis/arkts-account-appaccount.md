@@ -1,17 +1,15 @@
-# @ohos.account.appAccount
+# @ohos.account.appAccount(应用账号管理)
 
-本模块提供应用账号信息的添加、删除、修改和查询基础能力，并支持应用间鉴权和分布式数据同步功能。
+本模块提供应用账号信息的添加、删除、修改和查询基础能力。应用账号管理采用应用级账号隔离机制，每个应用的账号信息独立管理。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -20,35 +18,35 @@ import { appAccount } from '@kit.BasicServicesKit';
 
 | 名称 |
 | --- |
-| [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md) |
+| [createAppAccountManager(应用账号管理)](arkts-basicservices-appaccount-createappaccountmanager-f.md) |
 
 ### 类
 
 | 名称 |
 | --- |
-| [Authenticator](arkts-basicservices-appaccount-authenticator-c.md) |
+| [Authenticator(应用账号管理)](arkts-basicservices-appaccount-authenticator-c.md) |
 
 ### 接口
 
 | 名称 |
 | --- |
-| [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md) |
-| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) |
-| [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) |
-| [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) |
-| [AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md) |
-| [AuthResult](arkts-basicservices-appaccount-authresult-i.md) |
-| [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) |
-| [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) |
-| [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) |
-| [OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md) |
-| [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) |
-| [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) |
-| [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) |
+| [AppAccountInfo(应用账号管理)](arkts-basicservices-appaccount-appaccountinfo-i.md) |
+| [AppAccountManager(应用账号管理)](arkts-basicservices-appaccount-appaccountmanager-i.md) |
+| [AuthCallback(应用账号管理)](arkts-basicservices-appaccount-authcallback-i.md) |
+| [AuthenticatorCallback(应用账号管理)](arkts-basicservices-appaccount-authenticatorcallback-i.md) |
+| [AuthenticatorInfo(应用账号管理)](arkts-basicservices-appaccount-authenticatorinfo-i.md) |
+| [AuthResult(应用账号管理)](arkts-basicservices-appaccount-authresult-i.md) |
+| [AuthTokenInfo(应用账号管理)](arkts-basicservices-appaccount-authtokeninfo-i.md) |
+| [CreateAccountImplicitlyOptions(应用账号管理)](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) |
+| [CreateAccountOptions(应用账号管理)](arkts-basicservices-appaccount-createaccountoptions-i.md) |
+| [OAuthTokenInfo(应用账号管理)](arkts-basicservices-appaccount-oauthtokeninfo-i.md) |
+| [SelectAccountsOptions(应用账号管理)](arkts-basicservices-appaccount-selectaccountsoptions-i.md) |
+| [SetPropertiesOptions(应用账号管理)](arkts-basicservices-appaccount-setpropertiesoptions-i.md) |
+| [VerifyCredentialOptions(应用账号管理)](arkts-basicservices-appaccount-verifycredentialoptions-i.md) |
 
 ### 枚举
 
 | 名称 |
 | --- |
-| [Constants](arkts-basicservices-appaccount-constants-e.md) |
-| [ResultCode](arkts-basicservices-appaccount-resultcode-e.md) |
+| [Constants(应用账号管理)](arkts-basicservices-appaccount-constants-e.md) |
+| [ResultCode(应用账号管理)](arkts-basicservices-appaccount-resultcode-e.md) |

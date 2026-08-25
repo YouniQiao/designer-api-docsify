@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## regCustomEapHandler
@@ -15,8 +15,6 @@ function regCustomEapHandler(netType: number, eapCode: number, eapType: number, 
 用于指定需要定制化处理的EAP报文类型和对应的处理callback。使用callback异步回调。系统会将符合条件的EAP报文送入callback函数中供企业应用获取。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
@@ -41,18 +39,3 @@ function regCustomEapHandler(netType: number, eapCode: number, eapType: number, 
 | [33200008](../errorcode-net-eap.md#33200008-无效的eaptype值) |
 | [33200009](../errorcode-net-eap.md#33200009-netmanager进程不存在) |
 | [33200099](../errorcode-net-eap.md#33200099-程序内部错误) |
-
-**示例**
-
-```TypeScript
-import {eap} from '@kit.NetworkKit';
-let netType = 1;
-let eapCode = 1;
-let eapType = 25;
-let eapData = (eapData:eap.EapData):void => {
-  console.info("rsp result", JSON.stringify(eapData));
-};
-
-eap.regCustomEapHandler(netType, eapCode, eapType, eapData);
-console.info('regCustomEapHandler success');
-```

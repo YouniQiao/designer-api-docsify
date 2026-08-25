@@ -13,8 +13,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -22,7 +20,7 @@
 ## 导入模块
 
 ```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## 汇总
@@ -34,12 +32,8 @@ import { proxyChannelManager } from '@kit.DistributedServiceKit';
 | [closeProxyChannel(代理通道管理)](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md) |
 | [off(代理通道管理)](arkts-distributedservice-proxychannelmanager-off-f.md#offreceivedata) |
 | [off(代理通道管理)](arkts-distributedservice-proxychannelmanager-off-f.md#offchannelstatechange) |
-| [offChannelStateChange(代理通道管理)](arkts-distributedservice-proxychannelmanager-offchannelstatechange-f.md) |
-| [offReceiveData(代理通道管理)](arkts-distributedservice-proxychannelmanager-offreceivedata-f.md) |
 | [on(代理通道管理)](arkts-distributedservice-proxychannelmanager-on-f.md#onreceivedata) |
 | [on(代理通道管理)](arkts-distributedservice-proxychannelmanager-on-f.md#onchannelstatechange) |
-| [onChannelStateChange(代理通道管理)](arkts-distributedservice-proxychannelmanager-onchannelstatechange-f.md) |
-| [onReceiveData(代理通道管理)](arkts-distributedservice-proxychannelmanager-onreceivedata-f.md) |
 | [openProxyChannel(代理通道管理)](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md) |
 | [sendData(代理通道管理)](arkts-distributedservice-proxychannelmanager-senddata-f.md) |
 

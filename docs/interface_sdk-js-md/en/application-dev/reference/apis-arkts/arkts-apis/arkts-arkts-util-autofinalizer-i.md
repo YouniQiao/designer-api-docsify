@@ -4,14 +4,12 @@ Provides an interface that can be implemented for releasing a resource which is 
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## onFinalization
@@ -23,8 +21,6 @@ onFinalization(heldValue: T): void
 The developer-defined callback used to release resources.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

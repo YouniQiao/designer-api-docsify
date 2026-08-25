@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryModuleUsageRecords
 
 ```TypeScript
-function queryModuleUsageRecords(maxNum: int, callback: AsyncCallback<Array<HapModuleInfo>>): void
+function queryModuleUsageRecords(maxNum: number, callback: AsyncCallback<Array<HapModuleInfo>>): void
 ```
 
 根据设置的maxNum，查询FA模型下各应用不用Hap包的使用记录。若Hap包中存在FA卡片，使用信息中也包含卡片信息。使用Callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -28,7 +26,7 @@ function queryModuleUsageRecords(maxNum: int, callback: AsyncCallback<Array<HapM
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| maxNum | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| maxNum | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;HapModuleInfo&gt;&gt; | 是 |
 
 **错误码：**
@@ -46,85 +44,16 @@ function queryModuleUsageRecords(maxNum: int, callback: AsyncCallback<Array<HapM
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
 
-**示例**
-
-```TypeScript
-// 无maxNum参数调用方式
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryModuleUsageRecords().then((res: Array<usageStatistics.HapModuleInfo>) => {
-  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryModuleUsageRecords((err: BusinessError, res: Array<usageStatistics.HapModuleInfo>) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE queryModuleUsageRecords callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback succeeded.');
-    for (let i = 0; i < res.length; i++) {
-      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback number : ' + (i + 1));
-      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback result ' + JSON.stringify(res[i]));
-    }
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryModuleUsageRecords(1000).then((res: Array<usageStatistics.HapModuleInfo>) => {
-  console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise succeeded');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryModuleUsageRecords promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryModuleUsageRecords(1000, (err: BusinessError, res: Array<usageStatistics.HapModuleInfo>) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE queryModuleUsageRecords callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback succeeded.');
-    for (let i = 0; i < res.length; i++) {
-      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback number : ' + (i + 1));
-      console.info('BUNDLE_ACTIVE queryModuleUsageRecords callback result ' + JSON.stringify(res[i]));
-    }
-  }
-});
-```
-
 
 ## queryModuleUsageRecords
 
 ```TypeScript
-function queryModuleUsageRecords(maxNum: int): Promise<Array<HapModuleInfo>>
+function queryModuleUsageRecords(maxNum: number): Promise<Array<HapModuleInfo>>
 ```
 
 根据设置的maxNum，查询FA模型下各应用不用Hap包的使用记录。若Hap包中存在FA卡片，使用信息中也包含卡片信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -136,7 +65,7 @@ function queryModuleUsageRecords(maxNum: int): Promise<Array<HapModuleInfo>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| maxNum | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| maxNum | number | 是 |
 
 **返回值：**
 
@@ -158,10 +87,6 @@ function queryModuleUsageRecords(maxNum: int): Promise<Array<HapModuleInfo>>
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
-
-**示例**
-
-参见 [queryModuleUsageRecords](#querymoduleusagerecords)
 
 
 ## queryModuleUsageRecords
@@ -174,8 +99,6 @@ function queryModuleUsageRecords(callback: AsyncCallback<Array<HapModuleInfo>>):
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -203,10 +126,6 @@ function queryModuleUsageRecords(callback: AsyncCallback<Array<HapModuleInfo>>):
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
 
-**示例**
-
-参见 [queryModuleUsageRecords](#querymoduleusagerecords)
-
 
 ## queryModuleUsageRecords
 
@@ -217,8 +136,6 @@ function queryModuleUsageRecords(): Promise<Array<HapModuleInfo>>
 查询FA模型下各应用不用Hap包的使用记录（不超过1000条）。若Hap包中存在FA卡片，使用信息中也包含卡片信息。使用Promise异步回调。使用Promise形式返回不超过1000条FA使用记录，FA使用记录由近及远排序。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -246,7 +163,3 @@ function queryModuleUsageRecords(): Promise<Array<HapModuleInfo>>
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
-
-**示例**
-
-参见 [queryModuleUsageRecords](#querymoduleusagerecords)

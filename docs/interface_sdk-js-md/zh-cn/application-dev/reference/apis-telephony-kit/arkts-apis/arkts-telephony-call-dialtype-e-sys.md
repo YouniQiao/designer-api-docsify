@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ DIAL_CARRIER_TYPE = 0
 载波拨号类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -36,8 +32,6 @@ DIAL_VOICE_MAIL_TYPE = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ DIAL_OTT_TYPE = 2
 OTT拨号类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -68,8 +60,6 @@ XCALL通话。
 **起始版本:** 26.0.0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

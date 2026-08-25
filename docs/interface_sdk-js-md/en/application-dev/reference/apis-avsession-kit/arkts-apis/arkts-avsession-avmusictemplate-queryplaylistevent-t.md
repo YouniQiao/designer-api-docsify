@@ -1,14 +1,12 @@
 # QueryPlaylistEvent
 
 ```TypeScript
-type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntity>
+type QueryPlaylistEvent = (pageIndex: number, sort: Sort) => Promise<PageMediaEntity>
 ```
 
 The query play list event.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -18,7 +16,7 @@ The query play list event.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| pageIndex | number | Yes |
 | sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Yes |
 
 **Return value:**

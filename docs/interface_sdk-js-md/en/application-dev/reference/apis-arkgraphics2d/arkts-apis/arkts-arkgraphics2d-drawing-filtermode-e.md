@@ -4,8 +4,6 @@ Enumerates the filter modes.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## FILTER_MODE_NEAREST
@@ -18,8 +16,6 @@ Nearest filter mode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## FILTER_MODE_LINEAR
@@ -31,7 +27,5 @@ FILTER_MODE_LINEAR = 1
 Linear filter mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

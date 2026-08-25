@@ -74,7 +74,7 @@ OH_LowPowerVideoSink* OH_LowPowerVideoSink_CreateByMime(const char* mime)
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_LowPowerVideoSink*](capi-lowpowervideosink-oh-lowpowervideosink.md) | 如果创建成功返回指向OH_LowPowerVideoSink实例的指针，否则返回空指针。 |
+| OH_LowPowerVideoSink* | 如果创建成功返回指向OH_LowPowerVideoSink实例的指针，否则返回空指针。 |
 
 ### OH_LowPowerVideoSink_Configure()
 
@@ -92,14 +92,14 @@ OH_AVErrCode OH_LowPowerVideoSink_Configure(OH_LowPowerVideoSink* sink, const OH
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 | [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | 指向OH_AVFormat的指针，用于配置LowPowerVideoSink的参数。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_SetParameter()
 
@@ -117,14 +117,14 @@ OH_AVErrCode OH_LowPowerVideoSink_SetParameter(OH_LowPowerVideoSink* sink, const
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 | [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | 指向OH_AVFormat的指针，用于配置LowPowerVideoSink的参数。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_GetParameter()
 
@@ -142,14 +142,14 @@ OH_AVErrCode OH_LowPowerVideoSink_GetParameter(OH_LowPowerVideoSink* sink, OH_AV
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 | [OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | 指向OH_AVFormat的指针，为LowPowerVideoSink设置的参数。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_SetVideoSurface()
 
@@ -167,14 +167,14 @@ OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, co
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 | const OHNativeWindow* surface | 指向OHNativeWindow实例的指针。请参考[OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_Prepare()
 
@@ -192,13 +192,13 @@ OH_AVErrCode OH_LowPowerVideoSink_Prepare(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_StartDecoder()
 
@@ -216,13 +216,13 @@ OH_AVErrCode OH_LowPowerVideoSink_StartDecoder(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_RenderFirstFrame()
 
@@ -240,13 +240,13 @@ OH_AVErrCode OH_LowPowerVideoSink_RenderFirstFrame(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_StartRenderer()
 
@@ -264,13 +264,13 @@ OH_AVErrCode OH_LowPowerVideoSink_StartRenderer(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_UNSUPPORT：不支持的格式。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_Pause()
 
@@ -288,13 +288,13 @@ OH_AVErrCode OH_LowPowerVideoSink_Pause(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_Resume()
 
@@ -312,13 +312,13 @@ OH_AVErrCode OH_LowPowerVideoSink_Resume(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_Flush()
 
@@ -336,13 +336,13 @@ OH_AVErrCode OH_LowPowerVideoSink_Flush(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_Stop()
 
@@ -360,13 +360,13 @@ OH_AVErrCode OH_LowPowerVideoSink_Stop(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_Reset()
 
@@ -384,13 +384,13 @@ OH_AVErrCode OH_LowPowerVideoSink_Reset(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_Destroy()
 
@@ -408,13 +408,13 @@ OH_AVErrCode OH_LowPowerVideoSink_Destroy(OH_LowPowerVideoSink* sink)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_SetSyncAudioSink()
 
@@ -432,14 +432,14 @@ LowPowerVideoSink设置用于音画同步的OH_LowPowerAudioSink。
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* videoSink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* videoSink | 指向OH_LowPowerVideoSink实例的指针。 |
 | OH_LowPowerAudioSink* audioSink | 指向OH_LowPowerAudioSink实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_SetTargetStartFrame()
 
@@ -457,9 +457,9 @@ OH_AVErrCode OH_LowPowerVideoSink_SetTargetStartFrame(OH_LowPowerVideoSink* sink
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 | const int64_t framePts | 渲染的目标视频帧的pts。单位为微秒（μs）。 |
-| [OH_LowPowerVideoSink_OnTargetArrived](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_ontargetarrived) onTargetArrived | OH_LowPowerVideoSink_OnTargetArrived方法，当目标帧渲染时触发该方法。请参考[OH_LowPowerVideoSink_OnTargetArrived](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_ontargetarrived) |
+| OH_LowPowerVideoSink_OnTargetArrived onTargetArrived | OH_LowPowerVideoSink_OnTargetArrived方法，当目标帧渲染时触发该方法。请参考[OH_LowPowerVideoSink_OnTargetArrived](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_ontargetarrived) |
 | const int64_t timeoutMs | 等待目标帧的时间超过timeoutMs，则直接调用onTargetArrived。单位为毫秒（ms）。 |
 | void* userData | 用户数据。 |
 
@@ -467,7 +467,7 @@ OH_AVErrCode OH_LowPowerVideoSink_SetTargetStartFrame(OH_LowPowerVideoSink* sink
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_SetPlaybackSpeed()
 
@@ -485,14 +485,14 @@ OH_AVErrCode OH_LowPowerVideoSink_SetPlaybackSpeed(OH_LowPowerVideoSink* sink, c
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 | const float speed | 播放倍速的值。当前版本有效范围为[0.25, 4.0]。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_ReturnSamples()
 
@@ -510,14 +510,14 @@ OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_A
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
 | [OH_AVSamplesBuffer](capi-avsinkbase-oh-avsamplesbuffer.md)* samples | 需要送LowPowerVideoSink消费的OH_AVSamplesBuffer，支持聚包输入。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_RegisterCallback()
 
@@ -535,14 +535,14 @@ OH_AVErrCode OH_LowPowerVideoSink_RegisterCallback(OH_LowPowerVideoSink* sink, O
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)* sink | 指向OH_LowPowerVideoSink实例的指针。 |
-| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md)* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
+| OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSinkCallback* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSinkCallback_Create()
 
@@ -560,7 +560,7 @@ OH_LowPowerVideoSinkCallback* OH_LowPowerVideoSinkCallback_Create(void)
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_LowPowerVideoSinkCallback*](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md) | 返回指向OH_LowPowerVideoSinkCallback实例的指针。如果内存不足，则返回nullptr。 |
+| OH_LowPowerVideoSinkCallback* | 返回指向OH_LowPowerVideoSinkCallback实例的指针。如果内存不足，则返回nullptr。 |
 
 ### OH_LowPowerVideoSinkCallback_Destroy()
 
@@ -578,13 +578,13 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_Destroy(OH_LowPowerVideoSinkCallback* 
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md)* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
+| OH_LowPowerVideoSinkCallback* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。 |
 
 ### OH_LowPowerVideoSinkCallback_SetDataNeededListener()
 
@@ -602,15 +602,15 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetDataNeededListener(OH_LowPowerVideo
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md)* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
-| [OH_LowPowerVideoSink_OnDataNeeded](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_ondataneeded) onDataNeeded | OH_LowPowerVideoSink_OnDataNeeded方法，在DataNeeded事件触发时调用。请参考[OH_LowPowerVideoSink_OnDataNeeded](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_ondataneeded) |
+| OH_LowPowerVideoSinkCallback* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
+| OH_LowPowerVideoSink_OnDataNeeded onDataNeeded | OH_LowPowerVideoSink_OnDataNeeded方法，在DataNeeded事件触发时调用。请参考[OH_LowPowerVideoSink_OnDataNeeded](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_ondataneeded) |
 | void* userData | 用户执行回调所依赖的数据。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSinkCallback_SetErrorListener()
 
@@ -628,15 +628,15 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetErrorListener(OH_LowPowerVideoSinkC
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md)* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
-| [OH_LowPowerVideoSink_OnError](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onerror) onError | OH_LowPowerVideoSink_OnError方法，在Error事件触发时调用。请参考[OH_LowPowerVideoSink_OnError](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onerror) |
+| OH_LowPowerVideoSinkCallback* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
+| OH_LowPowerVideoSink_OnError onError | OH_LowPowerVideoSink_OnError方法，在Error事件触发时调用。请参考[OH_LowPowerVideoSink_OnError](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onerror) |
 | void* userData | 用户执行回调所依赖的数据。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSinkCallback_SetRenderStartListener()
 
@@ -654,15 +654,15 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetRenderStartListener(OH_LowPowerVide
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md)* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
-| [OH_LowPowerVideoSink_OnRenderStarted](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onrenderstarted) onRenderStarted | OH_LowPowerVideoSink_OnRenderStarted方法，在RenderStarted事件触发时调用。请参考[OH_LowPowerVideoSink_OnRenderStarted](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onrenderstarted) |
+| OH_LowPowerVideoSinkCallback* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
+| OH_LowPowerVideoSink_OnRenderStarted onRenderStarted | OH_LowPowerVideoSink_OnRenderStarted方法，在RenderStarted事件触发时调用。请参考[OH_LowPowerVideoSink_OnRenderStarted](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onrenderstarted) |
 | void* userData | 用户执行回调所依赖的数据。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSinkCallback_SetStreamChangedListener()
 
@@ -680,15 +680,15 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetStreamChangedListener(OH_LowPowerVi
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md)* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
-| [OH_LowPowerVideoSink_OnStreamChanged](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onstreamchanged) onStreamChanged | OH_LowPowerVideoSink_OnStreamChanged方法，在StreamChanged事件触发时调用。请参考[OH_LowPowerVideoSink_OnStreamChanged](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onstreamchanged) |
+| OH_LowPowerVideoSinkCallback* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
+| OH_LowPowerVideoSink_OnStreamChanged onStreamChanged | OH_LowPowerVideoSink_OnStreamChanged方法，在StreamChanged事件触发时调用。请参考[OH_LowPowerVideoSink_OnStreamChanged](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onstreamchanged) |
 | void* userData | 用户执行回调所依赖的数据。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSinkCallback_SetFirstFrameDecodedListener()
 
@@ -706,15 +706,15 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetFirstFrameDecodedListener(OH_LowPow
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md)* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
-| [OH_LowPowerVideoSink_OnFirstFrameDecoded](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onfirstframedecoded) onFirstFrameDecoded | OH_LowPowerVideoSink_OnFirstFrameDecoded方法，在第一帧解码成功时调用。请参考[OH_LowPowerVideoSink_OnFirstFrameDecoded](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onfirstframedecoded) |
+| OH_LowPowerVideoSinkCallback* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
+| OH_LowPowerVideoSink_OnFirstFrameDecoded onFirstFrameDecoded | OH_LowPowerVideoSink_OnFirstFrameDecoded方法，在第一帧解码成功时调用。请参考[OH_LowPowerVideoSink_OnFirstFrameDecoded](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_onfirstframedecoded) |
 | void* userData | 用户执行回调所依赖的数据。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSinkCallback_SetEosListener()
 
@@ -732,15 +732,15 @@ OH_AVErrCode OH_LowPowerVideoSinkCallback_SetEosListener(OH_LowPowerVideoSinkCal
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md)* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
-| [OH_LowPowerVideoSink_OnEos](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_oneos) onEos | OH_LowPowerVideoSink_OnEos方法，在Eos事件触发时调用。请参考[OH_LowPowerVideoSink_OnEos](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_oneos) |
+| OH_LowPowerVideoSinkCallback* callback | 指向OH_LowPowerVideoSinkCallback实例的指针。 |
+| OH_LowPowerVideoSink_OnEos onEos | OH_LowPowerVideoSink_OnEos方法，在Eos事件触发时调用。请参考[OH_LowPowerVideoSink_OnEos](capi-lowpower-video-sink-base-h.md#oh_lowpowervideosink_oneos) |
 | void* userData | 用户执行回调所依赖的数据。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 ### OH_LowPowerVideoSink_GetLatestPts()
 
@@ -758,13 +758,13 @@ OH_AVErrCode OH_LowPowerVideoSink_GetLatestPts(OH_LowPowerVideoSink *sink, int64
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md) *sink | 指向OH_LowPowerVideoSink实例的指针。 |
+| OH_LowPowerVideoSink *sink | 指向OH_LowPowerVideoSink实例的指针。 |
 | int64_t *pts | 当前播放的pts。单位为微秒（μs）。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。  AV_ERR_INVALID_VAL：参数为nullptr或参数非法。  AV_ERR_SERVICE_DIED：媒体服务端已销毁。  AV_ERR_OPERATE_NOT_PERMIT：操作不支持。 |
 
 

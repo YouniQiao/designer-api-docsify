@@ -4,8 +4,6 @@ Enumerates the screen orientations.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ UNSPECIFIED = 0
 Unspecified. The screen orientation is determined by the system.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,8 +32,6 @@ Vertical.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ HORIZONTAL = 2
 Horizontal.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -68,8 +60,6 @@ Reverse vertical.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ REVERSE_HORIZONTAL = 4
 Reverse horizontal.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

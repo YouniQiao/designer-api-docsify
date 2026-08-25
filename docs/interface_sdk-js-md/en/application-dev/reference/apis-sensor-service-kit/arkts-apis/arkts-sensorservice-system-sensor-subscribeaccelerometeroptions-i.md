@@ -4,8 +4,6 @@ Defines the type of data to return for a subscription to data changes of the acc
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** [ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#accelerometer)
@@ -17,7 +15,7 @@ Defines the type of data to return for a subscription to data changes of the acc
 ## Modules to Import
 
 ```TypeScript
-import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
+import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## fail
@@ -29,8 +27,6 @@ fail?: (data: string, code: number) => void
 Callback invoked when an API call fails.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
@@ -59,8 +55,6 @@ Callback invoked when the acceleration sensor data changes.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
@@ -84,13 +78,13 @@ interval: string
 ```
 
 Execution frequency of the callback for returning the acceleration sensor data.The default value is **normal**. The options are as follows:  
-- **game**: called at an interval of 20 ms, which is applicable to gaming scenarios. - **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios. - **normal**: called at an interval of 200 ms, which is applicable to power-saving scenarios.
+- **game**: called at an interval of 20 ms, which is applicable to gaming scenarios.  
+- **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios.  
+- **normal**: called at an interval of 200 ms, which is applicable to power-saving scenarios.
 
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 

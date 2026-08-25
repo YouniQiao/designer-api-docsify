@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getProfileConnectionState
@@ -15,8 +15,6 @@ function getProfileConnectionState(profileId: ProfileId): ProfileConnectionState
 Obtains the connection state of profile. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -32,13 +30,13 @@ Obtains the connection state of profile. On API 10 and above, the permission req
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| profileId | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | Yes |
+| profileId | [ProfileId](arkts-connectivity-constant-profileid-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) |
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) |
 
 **Error codes:**
 
@@ -51,14 +49,3 @@ Obtains the connection state of profile. On API 10 and above, the permission req
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let result: bluetoothManager.ProfileConnectionState = bluetoothManager.getProfileConnectionState(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```

@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## 导入模块
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -24,8 +22,6 @@ getReceivingSurfaceId(): Promise<string>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -33,27 +29,6 @@ getReceivingSurfaceId(): Promise<string>
 | 类型 |
 | --- |
 | Promise & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function GetReceivingSurfaceId() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.getReceivingSurfaceId().then((id: string) => {
-    console.info('Succeeded in getting the ReceivingSurfaceId.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get the ReceivingSurfaceId.code ${error.code}, message is ${error.message}`);
-  })
-}
-```
 
 ## on('imageArrival')
 
@@ -65,8 +40,6 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **参数：**
@@ -75,24 +48,6 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | type | 'imageArrival' | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-
-async function On() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.on('imageArrival', () => {
-    // 接收到图片，实现回调函数逻辑。
-  })
-}
-```
 
 ## readLatestImage
 
@@ -108,8 +63,6 @@ readLatestImage(): Promise<Image>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -117,27 +70,6 @@ readLatestImage(): Promise<Image>
 | 类型 |
 | --- |
 | Promise & lt;Image & gt; |
-
-**示例**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function ReadLatestImage() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.readLatestImage().then((img: sendableImage.Image) => {
-    console.info('Succeeded in reading the latest image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read the latest image. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
 
 ## readNextImage
 
@@ -153,8 +85,6 @@ readNextImage(): Promise<Image>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -162,27 +92,6 @@ readNextImage(): Promise<Image>
 | 类型 |
 | --- |
 | Promise & lt;Image & gt; |
-
-**示例**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function ReadNextImage() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.readNextImage().then((img: sendableImage.Image) => {
-    console.info('Succeeded in reading the next image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read the next image. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
 
 ## release
 
@@ -194,8 +103,6 @@ release(): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 **返回值：**
@@ -203,74 +110,6 @@ release(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: sendableImage.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(context : Context) {
-  const path: string = context.cacheDir + "/test.jpg";
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
-  sendableImageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  let img = await receiver.readNextImage();
-  img.release().then(() => {
-    console.info('Succeeded in releasing an image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Release() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing an image receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
-  })
-}
-```
 
 ## capacity
 
@@ -283,8 +122,6 @@ readonly capacity: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -300,8 +137,6 @@ readonly format: image.ImageFormat
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## size
@@ -315,7 +150,5 @@ readonly size: image.Size
 **类型：** image.Size
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver

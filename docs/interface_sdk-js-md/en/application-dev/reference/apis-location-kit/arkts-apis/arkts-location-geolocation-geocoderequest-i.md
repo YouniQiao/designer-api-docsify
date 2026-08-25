@@ -4,8 +4,6 @@ Configuring parameters in geocode requests@interface GeoCodeRequest
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md)
@@ -17,7 +15,7 @@ Configuring parameters in geocode requests@interface GeoCodeRequest
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## description
@@ -29,8 +27,6 @@ description: string
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ locale?: string
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [locale](arkts-location-geolocationmanager-geocoderequest-i.md#locale)
@@ -65,8 +59,6 @@ maxItems?: number
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -84,8 +76,6 @@ maxLatitude?: number
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [maxLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#maxlatitude)
@@ -101,8 +91,6 @@ maxLongitude?: number
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -120,8 +108,6 @@ minLatitude?: number
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [minLatitude](arkts-location-geolocationmanager-geocoderequest-i.md#minlatitude)
@@ -137,8 +123,6 @@ minLongitude?: number
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

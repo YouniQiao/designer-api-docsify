@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 ```
 
 ## getState
@@ -15,8 +15,6 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 Obtains the state of the screen hopping switch. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -40,64 +38,6 @@ Obtains the state of the screen hopping switch. This API uses an asynchronous ca
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let deviceDescriptor = "descriptor";
-          try {
-            inputDeviceCooperate.getState(deviceDescriptor, (error: BusinessError, data: object) => {
-              if (error) {
-                console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-                return;
-              }
-              console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-            });
-          } catch (error) {
-            console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let deviceDescriptor = "descriptor";
-          try {
-            inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
-              console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-            }, (error: BusinessError) => {
-              console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            });
-          } catch (error) {
-            console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## getState
 
@@ -108,8 +48,6 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 Checks whether screen hopping is enabled. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -137,7 +75,3 @@ Checks whether screen hopping is enabled. This API uses a promise to return the 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [getState](#getstate)

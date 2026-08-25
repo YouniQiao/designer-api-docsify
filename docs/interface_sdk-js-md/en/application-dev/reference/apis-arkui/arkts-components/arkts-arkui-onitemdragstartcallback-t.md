@@ -8,8 +8,6 @@ Defines the callback type used in onItemDragStart.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

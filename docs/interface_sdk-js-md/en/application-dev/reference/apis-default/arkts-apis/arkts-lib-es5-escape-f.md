@@ -13,8 +13,6 @@ declare function escape(string: string): string
 
 Computes a new string in which certain characters have been replaced by a hexadecimal escape sequence.
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility
 
 **Parameters:**

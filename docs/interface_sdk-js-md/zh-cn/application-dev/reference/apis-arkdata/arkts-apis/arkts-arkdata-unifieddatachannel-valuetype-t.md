@@ -1,14 +1,12 @@
 # ValueType
 
 ```TypeScript
-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined
+type ValueType = number | number | number | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined
 ```
 
 用于表示统一数据记录允许的数据字段类型。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

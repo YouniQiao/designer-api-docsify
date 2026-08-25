@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CHANNEL_1
@@ -17,8 +15,6 @@ CHANNEL_1 = 1
 单声道。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ CHANNEL_2 = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CHANNEL_3
@@ -45,8 +39,6 @@ CHANNEL_3 = 3
 三声道。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -60,8 +52,6 @@ CHANNEL_4 = 4
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CHANNEL_5
@@ -73,8 +63,6 @@ CHANNEL_5 = 5
 五声道。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -88,8 +76,6 @@ CHANNEL_6 = 6
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CHANNEL_7
@@ -101,8 +87,6 @@ CHANNEL_7 = 7
 七声道。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -116,8 +100,6 @@ CHANNEL_8 = 8
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CHANNEL_9
@@ -129,8 +111,6 @@ CHANNEL_9 = 9
 九声道。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -144,8 +124,6 @@ CHANNEL_10 = 10
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CHANNEL_12
@@ -157,8 +135,6 @@ CHANNEL_12 = 12
 十二声道。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -172,8 +148,6 @@ CHANNEL_14 = 14
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## CHANNEL_16
@@ -185,7 +159,5 @@ CHANNEL_16 = 16
 十六声道。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## SCROLL_VERTICAL
@@ -17,8 +15,6 @@ SCROLL_VERTICAL = 0
 鼠标垂直滚动轴。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -32,8 +28,6 @@ SCROLL_HORIZONTAL = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## PINCH
@@ -45,7 +39,5 @@ PINCH = 2
 鼠标捏合轴。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

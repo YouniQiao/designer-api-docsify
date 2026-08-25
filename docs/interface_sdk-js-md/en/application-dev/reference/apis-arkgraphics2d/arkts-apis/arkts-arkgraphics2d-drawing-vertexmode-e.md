@@ -4,8 +4,6 @@ Enumerates the connection modes for vertex drawing.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## TRIANGLES_VERTEXMODE
@@ -17,8 +15,6 @@ TRIANGLES_VERTEXMODE = 0
 Every three vertices come from different triangles.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ Consecutive triangles share one edge. It is efficient for continuous surfaces.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## TRIANGLESFAN_VERTEXMODE
@@ -45,7 +39,5 @@ TRIANGLESFAN_VERTEXMODE = 2
 All triangles share one vertex. It is suitable for circles and sectors.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [CompleteData](arkts-ability-wantagent-completedata-i.md)
@@ -29,8 +27,6 @@ extraInfo?: { [key: string]: any }
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [extraInfo](arkts-ability-wantagent-completedata-i.md#extrainfo)
@@ -50,8 +46,6 @@ finalCode: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -73,8 +67,6 @@ finalData: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [finalData](arkts-ability-wantagent-completedata-i.md#finaldata)
@@ -95,8 +87,6 @@ info: WantAgent
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [info](arkts-ability-wantagent-completedata-i.md#info)
@@ -116,8 +106,6 @@ want: Want
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

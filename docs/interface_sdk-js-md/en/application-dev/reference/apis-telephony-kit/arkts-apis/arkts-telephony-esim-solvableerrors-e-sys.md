@@ -4,8 +4,6 @@ Enumerates the solvable errors.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ The user needs to enter the confirmation code during the download.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ SOLVABLE_ERROR_NEED_POLICY_RULE = 1 << 1
 The download process requires user consent to allow the profile policy rules.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

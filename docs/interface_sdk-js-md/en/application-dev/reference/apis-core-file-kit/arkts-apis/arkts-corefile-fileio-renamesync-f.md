@@ -15,8 +15,6 @@ Renames a file. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [renameSync](arkts-corefile-file-fs-renamesync-f.md)
@@ -29,11 +27,3 @@ Renames a file. This API returns the result synchronously.
 | --- | --- | --- |
 | oldPath | string | Yes |
 | newPath | string | Yes |
-
-**Examples**
-
-```TypeScript
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + '/new.txt';
-fileio.renameSync(srcFile, dstFile);
-```

@@ -4,8 +4,6 @@ Enumerates SVG resource limit levels.Higher level allows using less resources du
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ NONE = 0
 Uses the system-defined default SVG resource limits.This level does not disable SVG resource protection.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ Uses low-level restrictions which means allowing using more SVG resource budget.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -56,8 +50,6 @@ Uses medium-level restrictions which means allowing using moderate SVG resource 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -73,8 +65,6 @@ HIGH = 3
 Uses high-level restrictions which means allowing using less SVG resource budget.This level is suitable for simple SVG images, such as icons and basic UI resources.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

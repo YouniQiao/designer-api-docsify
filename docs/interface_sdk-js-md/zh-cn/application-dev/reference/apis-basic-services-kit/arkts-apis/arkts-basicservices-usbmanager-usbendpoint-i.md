@@ -10,45 +10,39 @@ USB端点，用于主机与设备之间数据传输的通信端点。通过[USBI
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## address
 
 ```TypeScript
-address: int
+address: number
 ```
 
 端点地址。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
 ## attributes
 
 ```TypeScript
-attributes: int
+attributes: number
 ```
 
 端点属性，表示端点的传输特性，包括传输类型（批量、中断、实时）和同步类型等。取值遵循USB端点描述符规范。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -64,71 +58,47 @@ direction: USBRequestDirection
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.USB.USBManager
-
-## endpointAddr
-
-```TypeScript
-endpointAddr: int
-```
-
-端点地址。
-
-**类型：** int
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## interfaceId
 
 ```TypeScript
-interfaceId: int
+interfaceId: number
 ```
 
 端点所属的接口的唯一标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
 ## interval
 
 ```TypeScript
-interval: int
+interval: number
 ```
 
 端点间隔。中断端点和实时端点为时间间隔（单位：毫秒）；批量端点不使用此字段。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
 ## maxPacketSize
 
 ```TypeScript
-maxPacketSize: int
+maxPacketSize: number
 ```
 
 端点最大数据包大小，（单位：字节）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -144,22 +114,18 @@ number: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## type
 
 ```TypeScript
-type: int
+type: number
 ```
 
 端点类型。取值见[UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager

@@ -2,8 +2,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** [File](arkts-basicservices-request-file-i.md)
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from '@kit.BasicServicesKit';
+import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## filename
@@ -27,8 +25,6 @@ multipart 提交时，请求头中的文件名。
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -48,8 +44,6 @@ multipart 提交时，表单项目的名称，缺省为file。
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** name
@@ -68,8 +62,6 @@ type?: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** contentType
@@ -87,8 +79,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## uninstallUserTrustedCertificateSync
@@ -15,8 +15,6 @@ function uninstallUserTrustedCertificateSync(certUri: string): void
 Uninstalls a user CA certificate.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_ENTERPRISE_USER_TRUSTED_CERT or ohos.permission.ACCESS_USER_TRUSTED_CERT
 
@@ -36,16 +34,3 @@ Uninstalls a user CA certificate.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
-
-**Examples**
-
-```TypeScript
-import {certificateManager} from '@kit.DeviceCertificateKit';
-
-let certUri: string = "test"; /* The service needs to use the certificate identifier to delete the certificate, which is not elaborated here. */
-try {
-    certificateManager.uninstallUserTrustedCertificateSync(certUri);
-} catch (error) {
-    console.error(`Failed to uninstall user trusted certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```

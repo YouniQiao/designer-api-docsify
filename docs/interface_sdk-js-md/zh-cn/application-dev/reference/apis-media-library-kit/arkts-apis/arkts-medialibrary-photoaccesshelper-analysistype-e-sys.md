@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ ANALYSIS_AESTHETICS_SCORE = 0
 美学评分分析类别。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -36,8 +32,6 @@ ANALYSIS_LABEL = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ ANALYSIS_OCR = 2
 文字识别分析类别。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -68,8 +60,6 @@ ANALYSIS_FACE = 3
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ ANALYSIS_OBJECT = 4
 目标检测分析类别。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -100,8 +88,6 @@ ANALYSIS_RECOMMENDATION = 5
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +101,6 @@ ANALYSIS_SEGMENTATION = 6
 抠图分析类别。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -132,8 +116,6 @@ ANALYSIS_COMPOSITION = 7
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -147,8 +129,6 @@ ANALYSIS_SALIENCY = 8
 最佳呈现主体中心分析类别。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -164,8 +144,6 @@ ANALYSIS_DETAIL_ADDRESS = 9
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -179,8 +157,6 @@ ANALYSIS_HUMAN_FACE_TAG = 10
 人像聚类信息分析类别。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -196,8 +172,6 @@ ANALYSIS_HEAD_POSITION = 11
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -211,8 +185,6 @@ ANALYSIS_BONE_POSE = 12
 人体骨骼点信息分析类别。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -228,8 +200,6 @@ ANALYSIS_VIDEO_LABEL = 13
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -243,8 +213,6 @@ ANALYSIS_HIGHLIGHT = 14
 时刻标签。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -260,8 +228,6 @@ ANALYSIS_MULTI_CROP = 15
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -276,8 +242,6 @@ ANALYSIS_SEARCH_INDEX = 16
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -291,8 +255,6 @@ ANALYSIS_SELECTED = 17
 优选分析类别。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -310,8 +272,6 @@ ANALYSIS_DUPLICATE_SIMILARITY = 18
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -327,8 +287,6 @@ ANALYSIS_NEGATIVE_EMOTION = 19
 负向情绪分析类别。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -346,8 +304,6 @@ ANALYSIS_FACE_AESTHETICS = 20
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -364,8 +320,6 @@ ANALYSIS_MAGIC_EMOJI = 21
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -381,8 +335,6 @@ ANALYSIS_AI_EDIT = 22
 AI编辑分析类别。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

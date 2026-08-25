@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## accountId
 
 ```TypeScript
-accountId: int
+accountId: number
 ```
 
 表示系统账号标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -46,8 +42,6 @@ addedCredentialId?: Uint8Array
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ changeType: CredentialChangeType
 **类型：** [CredentialChangeType](arkts-basicservices-osaccount-credentialchangetype-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -82,8 +74,6 @@ credentialType: AuthType
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -100,8 +90,6 @@ deletedCredentialId?: Uint8Array
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -117,8 +105,6 @@ isSilent: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

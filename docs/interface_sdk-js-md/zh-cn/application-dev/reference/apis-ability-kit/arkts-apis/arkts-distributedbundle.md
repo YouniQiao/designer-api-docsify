@@ -9,8 +9,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [distributedBundleManager](arkts-bundle-distributedbundlemanager.md)
@@ -22,7 +20,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedBundle } from '@kit.AbilityKit';
+import { distributedBundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

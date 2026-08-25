@@ -4,8 +4,6 @@ Information for LiveView in AI image generation.@interface LiveViewInfo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,20 +11,18 @@ Information for LiveView in AI image generation.@interface LiveViewInfo
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## getLongTermTaskId
 
 ```TypeScript
-getLongTermTaskId(): int
+getLongTermTaskId(): number
 ```
 
-Get the long-term task ID for LiveView.
+Get the number-term task ID for LiveView.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Get the Want object for LiveView.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -73,8 +67,6 @@ isLiveViewNeeded(): boolean
 Check whether LiveView is needed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## MODE_DEFAULT
@@ -17,8 +15,6 @@ MODE_DEFAULT = 0
 无声道混合。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ MODE_BLEND_LR = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## MODE_ALL_LEFT
@@ -46,8 +40,6 @@ MODE_ALL_LEFT = 2
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## MODE_ALL_RIGHT
@@ -59,7 +51,5 @@ MODE_ALL_RIGHT = 3
 从右声道覆盖到左声道混合。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

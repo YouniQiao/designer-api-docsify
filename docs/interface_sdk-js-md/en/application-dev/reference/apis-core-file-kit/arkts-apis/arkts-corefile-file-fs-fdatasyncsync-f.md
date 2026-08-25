@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## fdatasyncSync
@@ -17,8 +17,6 @@ declare function fdatasyncSync(fd: number): void
 Synchronizes the data of a file. This API returns the result synchronously.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -39,12 +37,3 @@ Synchronizes the data of a file. This API returns the result synchronously.
 | 13900027 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath);
-fs.fdatasyncSync(file.fd);
-fs.closeSync(file);
-```

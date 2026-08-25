@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## cancelReminder
@@ -15,8 +15,6 @@ function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 取消指定id的提醒，使用回调的方式实现异步调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -31,25 +29,6 @@ function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 | reminderId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
-  console.info("cancelReminder callback");
-});
-```
-
-```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.cancelReminder(1).then(() => {
-    console.info("cancelReminder promise");
-});
-```
-
 
 ## cancelReminder
 
@@ -60,8 +39,6 @@ function cancelReminder(reminderId: number): Promise<void>
 取消指定id的提醒，使用Promise方式实现异步调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -80,7 +57,3 @@ function cancelReminder(reminderId: number): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [cancelReminder](#cancelreminder)

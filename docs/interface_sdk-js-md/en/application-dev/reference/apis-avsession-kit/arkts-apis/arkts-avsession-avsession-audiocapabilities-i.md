@@ -4,14 +4,12 @@ Audio capabilities.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## streamInfos
@@ -25,8 +23,6 @@ Audio stream information.
 **Type:** Array&lt;audio.AudioStreamInfo&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

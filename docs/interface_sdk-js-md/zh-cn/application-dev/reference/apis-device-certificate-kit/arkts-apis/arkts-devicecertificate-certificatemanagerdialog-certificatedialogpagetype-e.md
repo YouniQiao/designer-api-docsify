@@ -4,8 +4,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## PAGE_MAIN
@@ -17,8 +15,6 @@ PAGE_MAIN = 1
 证书管理应用主页面。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,8 +30,6 @@ CA证书列表页面。
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
@@ -50,8 +44,6 @@ PAGE_CREDENTIAL = 3
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
@@ -65,8 +57,6 @@ PAGE_INSTALL_CERTIFICATE = 4
 安装证书页面。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

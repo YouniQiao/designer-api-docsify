@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## on('imsRegStateChange')
@@ -15,8 +15,6 @@ function on(type: 'imsRegStateChange', slotId: number, imsType: ImsServiceType, 
 Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates.
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -44,13 +42,3 @@ Called when the IMS registration state of specified IMS service type correspondi
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-let slotId: number = 0;
-let mode: radio.ImsServiceType = radio.ImsServiceType.TYPE_VIDEO;
-radio.on('imsRegStateChange', slotId, mode, (data: radio.ImsRegInfo) => {
-    console.info(`on imsRegStateChange success, callback: data->${JSON.stringify(data)}`);
-});
-```

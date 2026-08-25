@@ -4,14 +4,12 @@ Defines the window callback.
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -23,8 +21,6 @@ import { window } from '@kit.ArkUI';
 Defines the callback info.
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

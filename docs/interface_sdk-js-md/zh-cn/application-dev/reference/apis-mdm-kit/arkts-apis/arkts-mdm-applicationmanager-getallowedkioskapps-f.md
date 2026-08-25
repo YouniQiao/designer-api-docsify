@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllowedKioskApps
@@ -15,8 +15,6 @@ function getAllowedKioskApps(admin: Want): Array<string>
 获取允许在Kiosk模式下运行的应用。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_KIOSK
 
@@ -44,38 +42,6 @@ function getAllowedKioskApps(admin: Want): Array<string>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { applicationManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.edmtest',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let appIdentifiers: Array<string> = applicationManager.getAllowedKioskApps(wantTemp);
-  console.info(`Succeeded in getting allowed kiosk apps, appIdentifiers: ${JSON.stringify(appIdentifiers)}`);
-} catch (err) {
-  console.error(`Failed to get allowed kiosk apps. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let appIdentifiers: Array<string> = applicationManager.getAllowedKioskApps(null);
-  console.info(`Succeeded in getting allowed kiosk apps, appIdentifiers: ${JSON.stringify(appIdentifiers)}`);
-} catch (err) {
-  console.error(`Failed to get allowed kiosk apps. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getAllowedKioskApps
 
@@ -86,8 +52,6 @@ function getAllowedKioskApps(admin: Want | null): Array<string>
 获取允许在Kiosk模式下运行的应用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_KIOSK
 
@@ -114,7 +78,3 @@ function getAllowedKioskApps(admin: Want | null): Array<string>
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [getAllowedKioskApps](#getallowedkioskapps)

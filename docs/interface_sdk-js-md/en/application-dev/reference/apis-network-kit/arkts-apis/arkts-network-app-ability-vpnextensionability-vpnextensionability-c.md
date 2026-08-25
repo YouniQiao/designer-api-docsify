@@ -4,14 +4,12 @@
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
+import { VpnExtensionAbility, VpnExtensionContext } from 'kits/@kit.NetworkKit';
 ```
 
 ## onCreate
@@ -28,8 +26,6 @@ Represents the callback triggered when the extended VPN is initialized.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -39,19 +35,6 @@ Represents the callback triggered when the extended VPN is initialized.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { VpnExtensionAbility } from '@kit.NetworkKit';
-import { Want } from '@kit.AbilityKit';
-
-class MyVpnExtAbility extends VpnExtensionAbility {
-    onCreate(want: Want) {
-       console.info('MyVpnExtAbility onCreate');
-    }
-}
-```
 
 ## onDestroy
 
@@ -63,23 +46,9 @@ Represents the callback triggered when the extended VPN is destroyed.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { VpnExtensionAbility } from '@kit.NetworkKit';
-
-class MyVpnExtAbility extends VpnExtensionAbility {
-    onDestroy() {
-       console.info('MyVpnExtAbility onDestroy');
-    }
-}
-```
 
 ## context
 
@@ -92,8 +61,6 @@ Specified context.
 **Type:** [VpnExtensionContext](arkts-network-vpnextensioncontext-c.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

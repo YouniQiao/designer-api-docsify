@@ -4,8 +4,6 @@ The result of AI-generated images@interface GeneratorResult
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The result of AI-generated images@interface GeneratorResult
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## image
@@ -27,8 +25,6 @@ Decoded data of AI-generated images.
 **Type:** image.PixelMap
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Statistics of AI-generated image tasks.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -67,8 +61,6 @@ The path information of AI-generated images.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

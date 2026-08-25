@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,8 +21,6 @@ cancelTouch(): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -40,8 +36,6 @@ getEventTargetInfo(): EventTargetInfo
 返回当前触摸识别器对应组件的信息。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ Check whether the current gesture binding node is a descendant of the passed-in 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -88,14 +80,12 @@ Check whether the current gesture binding node is a descendant of the passed-in 
 ## isHostBelongsTo
 
 ```TypeScript
-isHostBelongsTo(uniqueId: int): boolean
+isHostBelongsTo(uniqueId: number): boolean
 ```
 
 返回当前触摸识别器绑定节点是否为传入组件的后代节点。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

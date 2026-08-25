@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## errnoToString
@@ -15,8 +15,6 @@ function errnoToString(errno: number): string
 Obtains detailed information about a system error code.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,12 +31,3 @@ Obtains detailed information about a system error code.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let errnum = -1; // -1 is a system error code.
-let result = util.errnoToString(errnum);
-console.info("result = " + result);
-// Output: result = operation not permitted
-```

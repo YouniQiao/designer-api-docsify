@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## appIndex
@@ -27,8 +25,6 @@ appIndex: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -45,8 +41,6 @@ bindAppIndex?: number
 **类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ tokenID: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

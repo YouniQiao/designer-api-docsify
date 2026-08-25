@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## cubicBezierCurve
@@ -15,8 +15,6 @@ function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurv
 Creates a cubic Bezier curve, with x-coordinates automatically normalized between 0 and 1.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -35,11 +33,4 @@ Creates a cubic Bezier curve, with x-coordinates automatically normalized betwee
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**Examples**
-
-```TypeScript
-import { curves } from '@kit.ArkUI';
-curves.cubicBezierCurve(0.1, 0.0, 0.1, 1.0) // Create a cubic Bézier curve.
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

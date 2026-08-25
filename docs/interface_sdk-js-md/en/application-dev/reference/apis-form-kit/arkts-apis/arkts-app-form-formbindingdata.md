@@ -4,14 +4,12 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## Modules to Import
 
 ```TypeScript
-import { formBindingData } from '@kit.FormKit';
+import { formBindingData } from 'kits/@kit.FormKit';
 ```
 
 ## Summary
@@ -20,7 +18,6 @@ import { formBindingData } from '@kit.FormKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) |
 | [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) |
 
 ### Interfaces

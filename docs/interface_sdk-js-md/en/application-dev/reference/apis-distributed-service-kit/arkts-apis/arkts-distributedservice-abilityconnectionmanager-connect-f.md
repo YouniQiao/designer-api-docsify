@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## connect
 
 ```TypeScript
-function connect(sessionId: int): Promise<ConnectResult>
+function connect(sessionId: number): Promise<ConnectResult>
 ```
 
 Sets up a UIAbility connection after a collaboration session is created and the session ID is obtained. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,7 +24,7 @@ Sets up a UIAbility connection after a collaboration session is created and the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| sessionId | number | Yes |
 
 **Return value:**
 
@@ -39,22 +37,3 @@ Sets up a UIAbility connection after a collaboration session is created and the 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-After an application sets up a collaboration session and obtains the session ID on device A, it calls connect() to set up a UIAbility connection and start the application on device B.
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let sessionId = 100;
-abilityConnectionManager.connect(sessionId).then((ConnectResult) => {
-  if (!ConnectResult.isConnected) {
-    hilog.info(0x0000, 'testTag', 'connect failed');
-    return;
-  }
-}).catch(() => {
-  hilog.error(0x0000, 'testTag', "connect failed");
-})
-```

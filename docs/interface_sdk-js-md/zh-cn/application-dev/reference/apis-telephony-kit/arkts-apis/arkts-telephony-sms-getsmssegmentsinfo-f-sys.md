@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSmsSegmentsInfo
 
 ```TypeScript
-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void
+function getSmsSegmentsInfo(slotId: number, message: string, force7bit: boolean, callback: AsyncCallback<SmsSegmentsInfo>): void
 ```
 
 获取短信段信息。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -26,7 +24,7 @@ function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, ca
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | message | string | 是 |
 | force7bit | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmsSegmentsInfo](arkts-telephony-sms-smssegmentsinfo-i-sys.md)&gt; | 是 |
@@ -42,43 +40,16 @@ function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, ca
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-sms.getSmsSegmentsInfo(slotId, "message", false, (err: BusinessError, data: sms.SmsSegmentsInfo) => {
-      console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.getSmsSegmentsInfo(slotId, "message", false);
-promise.then((data: sms.SmsSegmentsInfo) => {
-    console.info(`getSmsSegmentsInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSmsSegmentsInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getSmsSegmentsInfo
 
 ```TypeScript
-function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>
+function getSmsSegmentsInfo(slotId: number, message: string, force7bit: boolean): Promise<SmsSegmentsInfo>
 ```
 
 获取短信段信息。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -88,7 +59,7 @@ function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): P
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | message | string | 是 |
 | force7bit | boolean | 是 |
 
@@ -108,7 +79,3 @@ function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): P
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getSmsSegmentsInfo](#getsmssegmentsinfo)

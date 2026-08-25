@@ -9,8 +9,6 @@ Describes whether the video is in full-screen playback mode.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ Callback that indicates whether the video playback is in full-screen mode. **tru
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

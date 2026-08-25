@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onDownloadError
@@ -16,8 +16,6 @@ function onDownloadError(url: string, callback: Callback<DownloadError>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 **参数：**
@@ -26,38 +24,3 @@ function onDownloadError(url: string, callback: Callback<DownloadError>): void
 | --- | --- | --- |
 | url | string | 是 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  const errorCallback = (error: cacheDownload.DownloadError) => {
-    console.error(`Error callback from cacheDownload. error code: ${error.errorCode}, error message: ${error.message}`);
-  };
-  // 订阅预下载的错误事件，当下载错误时执行回调，返回错误信息
-  cacheDownload.onDownloadError("https://www.example.com", errorCallback);
-  // 进行缓存下载，资源若下载成功会被缓存到应用内存或应用沙箱目录的特定文件中。  
-  cacheDownload.download("https://www.example.com", {});
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  const errorCallback = (error: cacheDownload.DownloadError) => {
-    console.error(`Error callback from cacheDownload. error code: ${error.errorCode}, error message: ${error.message}`);
-  };
-  // 订阅预下载的错误事件，当下载错误时执行回调，返回错误信息
-  cacheDownload.onDownloadError("https://www.example.com", errorCallback);
-  // 进行缓存下载，资源若下载成功会被缓存到应用内存或应用沙箱目录的特定文件中。
-  cacheDownload.download("https://www.example.com", {});
-} catch (err: Error) {
-  console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
-}
-```

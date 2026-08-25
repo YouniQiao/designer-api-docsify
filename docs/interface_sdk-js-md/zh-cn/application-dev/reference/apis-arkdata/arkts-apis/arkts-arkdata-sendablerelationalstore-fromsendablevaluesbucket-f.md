@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableRelationalStore } from '@kit.ArkData';
+import { sendableRelationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## fromSendableValuesBucket
@@ -15,8 +15,6 @@ function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket
 将可用于跨线程传递的键值对数据，转换为不能用于跨线程传递的键值对数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -38,37 +36,3 @@ function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
-
-**示例**
-
-```TypeScript
-const asset1: sendableRelationalStore.NonSendableAsset = {
-  name: 'hangman',
-  uri: '//path/example',
-  path: '//path/example',
-  createTime: 'createTime1',
-  modifyTime: 'modifyTime1',
-  size: 'size1'
-};
-const asset2: sendableRelationalStore.NonSendableAsset = {
-  name: 'hangman',
-  uri: '//path/example',
-  path: '//path/example',
-  createTime: 'createTime1',
-  modifyTime: 'modifyTime1',
-  size: 'size1'
-};
-const u8 = new Uint8Array([1, 2, 3]);
-
-const sendableValuesBucket = sendableRelationalStore.toSendableValuesBucket({
-  age: 18,
-  name: "hangman",
-  salary: 100.5,
-  passed: true,
-  data1: asset1,
-  blobType: u8,
-  bigValue: BigInt("15822401018187971961171"),
-  data2: [asset1, asset2]
-});
-const nonSendableBucket = sendableRelationalStore.fromSendableValuesBucket(sendableValuesBucket);
-```

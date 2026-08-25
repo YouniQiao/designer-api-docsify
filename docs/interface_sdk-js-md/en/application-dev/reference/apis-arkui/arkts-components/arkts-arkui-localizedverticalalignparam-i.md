@@ -4,8 +4,6 @@ Defines the localized vertical align param of relative container.@interface Loca
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ align: VerticalAlign
 
 Vertical alignment mode relative to the anchor component.
 
-**Type:** VerticalAlign
+**Type:** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ ID of the component that serves as the anchor.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

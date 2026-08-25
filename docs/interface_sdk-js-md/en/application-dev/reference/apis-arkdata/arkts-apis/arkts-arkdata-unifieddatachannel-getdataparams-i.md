@@ -4,14 +4,12 @@ Represents the parameters for obtaining data from UDMF, including the destinatio
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## dataProgressListener
@@ -23,8 +21,6 @@ dataProgressListener: DataProgressListener
 Indicates progress and data listener when getting unified data.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Indicates the supported data information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -63,8 +57,6 @@ Indicates the dest path uri where copy file will be copied to sandbox of applica
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,8 +76,6 @@ Indicates file conflict options when dest path has file with same name.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -103,8 +93,6 @@ Indicates whether to use default system progress indicator.
 **Type:** ProgressIndicator
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Indicates the lock types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Indicates the SIM card password lock.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ FDN_LOCK = 2
 Indicates the fixed dialing lock.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

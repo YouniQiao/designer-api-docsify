@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wearDetection } from '@kit.ConnectivityKit';
+import { wearDetection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isWearDetectionSupported
@@ -15,8 +15,6 @@ function isWearDetectionSupported(deviceId: string, callback: AsyncCallback<bool
 Checks whether the device supports wear detection.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -43,28 +41,6 @@ Checks whether the device supports wear detection.
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-try {
-    wearDetection.isWearDetectionSupported('XX:XX:XX:XX:XX:XX', (err, supported) => {
-        console.info('device support wear detection ' + supported);
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
-
-```TypeScript
-try {
-    wearDetection.isWearDetectionSupported('XX:XX:XX:XX:XX:XX').then((supported) => {
-        console.info('device support wear detection ' + supported);
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
-
 
 ## isWearDetectionSupported
 
@@ -75,8 +51,6 @@ function isWearDetectionSupported(deviceId: string): Promise<boolean>
 Checks whether the device supports wear detection.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -107,7 +81,3 @@ Checks whether the device supports wear detection.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-See [isWearDetectionSupported](#isweardetectionsupported)

@@ -1,7 +1,5 @@
 # lib.es2020.intl
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -48,6 +46,6 @@
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [DisplayNames](../../apis-arkts/arkts-apis/arkts-arkts-intl-displaynames-c.md) |
+| [DisplayNames](arkts-intl-displaynames-i.md) |
 | [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |
-| [RelativeTimeFormat](../../apis-arkts/arkts-apis/arkts-arkts-intl-relativetimeformat-c.md) |
+| [RelativeTimeFormat](../../apis-localization-kit/arkts-apis/arkts-localization-intl-relativetimeformat-c.md) |

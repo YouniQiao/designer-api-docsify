@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from '@kit.CoreFileKit';
+import { securityLabel } from 'kits/@kit.CoreFileKit';
 ```
 
 ## setSecurityLabel
@@ -15,8 +15,6 @@ function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to the same level. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -46,30 +44,6 @@ Sets the data security level for a file or directory. The level can only be adju
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + '/test.txt';
-securityLabel.setSecurityLabel(filePath, "s0").then(() => {
-  console.info("setSecurityLabel successfully");
-}).catch((err: BusinessError) => {
-  console.error("setSecurityLabel failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + '/test.txt';
-securityLabel.setSecurityLabel(filePath, "s0", (err: BusinessError) => {
-  if (err) {
-    console.error("setSecurityLabel failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("setSecurityLabel successfully.");
-  }
-});
-```
-
 
 ## setSecurityLabel
 
@@ -80,8 +54,6 @@ function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback
 Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to the same level. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -105,7 +77,3 @@ Sets the data security level for a file or directory. The level can only be adju
 | 13900037 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [setSecurityLabel](#setsecuritylabel)

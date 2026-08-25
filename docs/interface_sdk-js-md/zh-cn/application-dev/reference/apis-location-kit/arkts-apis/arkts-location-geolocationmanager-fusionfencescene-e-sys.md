@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ AIRPORT = 1
 表示机场场景。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ TRAIN_STATION = 2
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
@@ -56,8 +50,6 @@ SUBWAY = 3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
@@ -73,8 +65,6 @@ SHOP = 4
 表示商场场景。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

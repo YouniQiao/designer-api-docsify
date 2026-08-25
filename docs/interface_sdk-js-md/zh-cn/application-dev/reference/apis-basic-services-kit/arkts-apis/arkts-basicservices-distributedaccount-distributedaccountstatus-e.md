@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## NOT_LOGGED_IN
@@ -18,8 +16,6 @@ NOT_LOGGED_IN = 0
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## LOGGED_IN
@@ -31,7 +27,5 @@ LOGGED_IN = 1
 已登录状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount

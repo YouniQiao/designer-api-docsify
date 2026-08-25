@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CryptoFramework
 
 ## INVALID_PARAMS
@@ -17,8 +15,6 @@ INVALID_PARAMS = 401
 非法入参。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -38,8 +34,6 @@ NOT_SUPPORT = 801
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
@@ -57,8 +51,6 @@ ERR_OUT_OF_MEMORY = 17620001
 内存操作失败。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -78,8 +70,6 @@ ERR_RUNTIME_ERROR = 17620002
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
@@ -98,8 +88,6 @@ ERR_PARAMETER_CHECK_FAILED = 17620003
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -116,8 +104,6 @@ ERR_INVALID_CALL = 17620004
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -133,8 +119,6 @@ ERR_CRYPTO_OPERATION = 17630001
 密码操作错误。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。

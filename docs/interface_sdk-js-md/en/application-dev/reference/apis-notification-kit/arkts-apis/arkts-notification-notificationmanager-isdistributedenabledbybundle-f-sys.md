@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isDistributedEnabledByBundle
@@ -15,8 +15,6 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 Checks whether distributed notification is enabled for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -32,7 +30,7 @@ Checks whether distributed notification is enabled for a specified application. 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
@@ -49,52 +47,6 @@ Checks whether distributed notification is enabled for a specified application. 
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isDistributedEnabledByBundleCallback = (err: BusinessError, data: boolean): void => {
-    if (err) {
-        console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
-    }
-};
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-notificationManager.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
-    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-    uid: 1
-};
-let deviceType: string = "phone";
-notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
-    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## isDistributedEnabledByBundle
 
@@ -105,8 +57,6 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 Checks whether distributed notification is enabled for a specified application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -122,7 +72,7 @@ Checks whether distributed notification is enabled for a specified application. 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 
 **Return value:**
 
@@ -144,10 +94,6 @@ Checks whether distributed notification is enabled for a specified application. 
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
-**Examples**
-
-See [isDistributedEnabledByBundle](#isdistributedenabledbybundle)
-
 
 ## isDistributedEnabledByBundle
 
@@ -159,8 +105,6 @@ Obtains whether a specified application enables cross-device collaboration. This
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -171,7 +115,7 @@ Obtains whether a specified application enables cross-device collaboration. This
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | deviceType | string | Yes |
 
 **Return value:**
@@ -194,7 +138,3 @@ Obtains whether a specified application enables cross-device collaboration. This
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-See [isDistributedEnabledByBundle](#isdistributedenabledbybundle)

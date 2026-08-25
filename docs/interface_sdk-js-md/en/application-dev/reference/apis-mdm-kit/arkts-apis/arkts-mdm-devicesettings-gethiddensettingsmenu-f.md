@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## getHiddenSettingsMenu
@@ -15,8 +15,6 @@ function getHiddenSettingsMenu(admin: Want): Array<SettingsMenu>
 Obtains the hidden setting item list of the current user.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 

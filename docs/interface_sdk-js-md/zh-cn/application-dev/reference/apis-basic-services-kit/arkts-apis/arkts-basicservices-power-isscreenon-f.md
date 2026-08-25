@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## isScreenOn
@@ -15,8 +15,6 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 检测当前设备的亮灭屏状态。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -30,28 +28,6 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-power.isScreenOn((err: Error, data: boolean) => {
-    if (typeof err === 'undefined') {
-        console.info('screen on status is ' + data);
-    } else {
-        console.error('check screen status failed, err: ' + err);
-    }
-})
-```
-
-```TypeScript
-power.isScreenOn()
-.then((data: boolean) => {
-    console.info('screen on status is ' + data);
-})
-.catch((err: Error) => {
-    console.error('check screen status failed, err: ' + err);
-})
-```
-
 
 ## isScreenOn
 
@@ -62,8 +38,6 @@ function isScreenOn(): Promise<boolean>
 检测当前设备的亮灭屏状态。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -76,7 +50,3 @@ function isScreenOn(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isScreenOn](#isscreenon)

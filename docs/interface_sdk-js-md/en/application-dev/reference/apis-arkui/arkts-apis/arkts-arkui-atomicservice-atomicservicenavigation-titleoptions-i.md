@@ -4,14 +4,12 @@ Title bar options.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha, BackgroundTheme, TitleBarType, SideBarOptions, TitleOptions, GradientBackground } from '@kit.ArkUI';
+import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha, BackgroundTheme, TitleBarType, SideBarOptions, TitleOptions, GradientBackground } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -22,11 +20,9 @@ backgroundColor?: ResourceColor
 
 Background color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,13 +36,11 @@ barStyle?: BarStyle
 
 Set title bar style.
 
-**Type:** BarStyle
+**Type:** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
 
 **Default:** BarStyle.STANDARD
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +60,6 @@ Whether to enable the blur effect.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -86,8 +78,6 @@ Set title bar type.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -105,8 +95,6 @@ Set title bar icon.
 **Default:** atomicservice icon
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

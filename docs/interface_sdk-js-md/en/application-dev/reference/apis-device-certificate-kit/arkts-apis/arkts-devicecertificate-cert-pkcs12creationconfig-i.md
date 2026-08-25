@@ -4,14 +4,12 @@ Represents the configuration for creating .p12 files.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## certEncParams
@@ -25,8 +23,6 @@ Algorithm parameters for encrypting the certificate.
 **Type:** [PbesParams](arkts-devicecertificate-cert-pbesparams-i.md)
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -46,8 +42,6 @@ Whether to encrypt the certificate. The default value is **true**. **true** mean
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.Security.Cert
@@ -63,8 +57,6 @@ Algorithm parameters for encrypting the private key.
 **Type:** [PbesParams](arkts-devicecertificate-cert-pbesparams-i.md)
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -84,8 +76,6 @@ MAC digest algorithm for the P12. The default value is **SHA256**.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.Security.Cert
@@ -93,18 +83,16 @@ MAC digest algorithm for the P12. The default value is **SHA256**.
 ## macIterations
 
 ```TypeScript
-macIterations?: int
+macIterations?: number
 ```
 
 Number of P12 MAC iterations. The default value is **2048**. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** 2048
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -113,18 +101,16 @@ Number of P12 MAC iterations. The default value is **2048**. The value must be a
 ## macSaltLen
 
 ```TypeScript
-macSaltLen?: int
+macSaltLen?: number
 ```
 
 Length of the salt value of the P12 MAC. The minimum value is **8**, and the default value is **16**. The value must be an integer greater than or equal to 8.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** 16
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -141,8 +127,6 @@ Password of the .p12 file. The minimum length is 4.
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 

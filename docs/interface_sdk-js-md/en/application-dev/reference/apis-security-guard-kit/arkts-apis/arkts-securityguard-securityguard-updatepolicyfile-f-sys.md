@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## updatePolicyFile
@@ -15,8 +15,6 @@ function updatePolicyFile(policyFile: PolicyFile): Promise<void>
 Update the policy file.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.MANAGE_SECURITY_GUARD_CONFIG
 

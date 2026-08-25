@@ -4,8 +4,6 @@ Describes an audio effect property.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes an audio effect property.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## category
@@ -27,8 +25,6 @@ Effect category this effect property belongs to.
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -46,8 +42,6 @@ Effect flag of this effect property.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Name of effect property.
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

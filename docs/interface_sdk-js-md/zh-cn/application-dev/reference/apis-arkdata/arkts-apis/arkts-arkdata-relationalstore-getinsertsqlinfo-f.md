@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## getInsertSqlInfo
@@ -15,8 +15,6 @@ function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: Confli
 获取用于插入数据的SQL语句，此为同步接口。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -39,37 +37,3 @@ function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: Confli
 | 错误码ID |
 | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-const bucket: relationalStore.ValuesBucket = {
-  name: "Logitech",
-  age: 18,
-  sex: "man",
-  desc: "asserter"
-};
-const sqlInfo: relationalStore.SqlInfo = relationalStore.getInsertSqlInfo(
-  "USER",
-  bucket,
-  relationalStore.ConflictResolution.ON_CONFLICT_NONE
-);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const bucket: relationalStore.ValuesBucket = {
-  'name': "Logitech",
-  'age': 18 as long,
-  'sex': "man",
-  'desc': "asserter"
-};
-const sqlInfo: relationalStore.SqlInfo = relationalStore.getInsertSqlInfo(
-  "USER",
-  bucket,
-  relationalStore.ConflictResolution.ON_CONFLICT_NONE
-);
-```

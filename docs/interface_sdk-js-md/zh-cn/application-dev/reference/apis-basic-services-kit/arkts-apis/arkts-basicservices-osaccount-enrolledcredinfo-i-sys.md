@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## authSubType
@@ -27,8 +25,6 @@ authSubType: AuthSubType
 **类型：** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -46,8 +42,6 @@ authType: AuthType
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -58,13 +52,11 @@ authType: AuthType
 credentialId: Uint8Array
 ```
 
-指示凭据索引，默认为空。
+指示凭据索引。
 
 **类型：** Uint8Array
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -82,8 +74,6 @@ isAbandoned?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -100,8 +90,6 @@ templateId: Uint8Array
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -109,16 +97,14 @@ templateId: Uint8Array
 ## validityPeriod
 
 ```TypeScript
-validityPeriod?: long
+validityPeriod?: number
 ```
 
 指示凭据有效期，单位为ms。默认为undefined，表示有效期未定义。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

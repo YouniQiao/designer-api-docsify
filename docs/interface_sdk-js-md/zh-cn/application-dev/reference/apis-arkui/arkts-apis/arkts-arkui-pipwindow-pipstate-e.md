@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## ABOUT_TO_START
@@ -17,8 +15,6 @@ ABOUT_TO_START = 1
 表示画中画将要启动。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ STARTED = 2
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -49,8 +43,6 @@ ABOUT_TO_STOP = 3
 表示画中画将要停止。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ STOPPED = 4
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -82,8 +72,6 @@ ABOUT_TO_RESTORE = 5
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -97,8 +85,6 @@ ERROR = 6
 表示画中画生命周期执行过程出现了异常。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

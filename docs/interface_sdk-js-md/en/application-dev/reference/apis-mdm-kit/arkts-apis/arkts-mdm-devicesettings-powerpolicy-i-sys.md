@@ -4,8 +4,6 @@ Represents the power policy.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the power policy.
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## delayTime
@@ -27,8 +25,6 @@ Delay, in ms.
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Action to apply the power policy.
 **Type:** [PowerPolicyAction](arkts-mdm-devicesettings-powerpolicyaction-e-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

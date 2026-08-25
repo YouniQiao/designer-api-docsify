@@ -8,8 +8,6 @@ The **hiAppEvent** module provides the application event logging functions, such
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** hiAppEvent

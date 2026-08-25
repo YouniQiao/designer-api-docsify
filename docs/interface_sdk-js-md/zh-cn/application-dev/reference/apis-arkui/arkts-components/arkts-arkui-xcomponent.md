@@ -17,8 +17,6 @@ XComponent(value: { id: string; type: string; libraryname?: string; controller?:
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 12
 
 **替代接口：** (value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
@@ -40,8 +38,6 @@ XComponent(value: { id: string; type: XComponentType; libraryname?: string; cont
 创建**XComponent**组件，其生命周期回调可以从native侧触发。从API版本12开始，该接口不再维护。建议使用XComponent(options: XComponentOptions)替代。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +61,6 @@ XComponent(options: XComponentOptions)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -88,8 +82,6 @@ XComponent(params: NativeXComponentParameters)
 在native侧获取**XComponent**节点实例，并注册**XComponent**所持有的surface的生命周期回调以及触摸、鼠标、按键等组件事件的回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

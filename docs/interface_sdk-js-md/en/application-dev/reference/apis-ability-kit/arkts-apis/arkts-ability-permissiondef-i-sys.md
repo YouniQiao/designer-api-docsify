@@ -7,8 +7,6 @@ The module provides permission details defined in the [module.json5](../../../qu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -16,16 +14,14 @@ The module provides permission details defined in the [module.json5](../../../qu
 ## descriptionId
 
 ```TypeScript
-readonly descriptionId: long
+readonly descriptionId: number
 ```
 
 ID of the permission description.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -34,16 +30,14 @@ ID of the permission description.
 ## grantMode
 
 ```TypeScript
-readonly grantMode: int
+readonly grantMode: number
 ```
 
 [Grant mode of the permission](../../../security/AccessToken/app-permission-mgmt-overview.md#authorization-mode). The value **0** means user authorization, and **1** means system authorization.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -52,16 +46,14 @@ readonly grantMode: int
 ## labelId
 
 ```TypeScript
-readonly labelId: long
+readonly labelId: number
 ```
 
 ID of the permission label.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -78,8 +70,6 @@ Name of the permission.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

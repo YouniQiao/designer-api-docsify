@@ -4,8 +4,6 @@ Defines the response of ShowDialog.@interface ShowDialogSuccessResponse
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md)
@@ -15,7 +13,7 @@ Defines the response of ShowDialog.@interface ShowDialogSuccessResponse
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'kits/@kit.ArkUI';
 ```
 
 ## index
@@ -29,8 +27,6 @@ Defines the index of data.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

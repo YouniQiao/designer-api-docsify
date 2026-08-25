@@ -8,8 +8,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,11 +23,9 @@ repeat?: ImageRepeat
 
 设置背景图片的重复样式。默认值为ImageRepeat.NoRepeat。
 
-**类型：** ImageRepeat
+**类型：** [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +46,6 @@ syncLoad?: boolean
 **类型：** boolean
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

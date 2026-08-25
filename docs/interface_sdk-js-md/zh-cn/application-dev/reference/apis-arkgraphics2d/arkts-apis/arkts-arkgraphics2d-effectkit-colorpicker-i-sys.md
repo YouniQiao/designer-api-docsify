@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
 
 ```TypeScript
-import { effectKit } from '@kit.ArkGraphics2D';
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## discriminatePictureLightDegree
@@ -23,8 +21,6 @@ discriminatePictureLightDegree(): PictureLightDegree
 获取图片的明亮程度。当无法判别图片明亮程度时，返回UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,51 +36,15 @@ discriminatePictureLightDegree(): PictureLightDegree
 | --- |
 | [PictureLightDegree](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md) |
 
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let pictureLightDegree: effectKit.PictureLightDegree = colorPicker.discriminatePictureLightDegree();
-      console.info('The color light degree of the image is ' + pictureLightDegree);
-    }
-  })
-})
-```
-
 ## getAlphaZeroTransparentProportion
 
-ArkTS-Dyn:
 ```TypeScript
 getAlphaZeroTransparentProportion(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getAlphaZeroTransparentProportion(): double
 ```
 
 获取图像中完全透明的像素占比。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
@@ -96,41 +56,13 @@ getAlphaZeroTransparentProportion(): double
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-        let percentage: number = colorPicker.getAlphaZeroTransparentProportion();
-      console.info('Get proportion of fully transparent pixels: ' + percentage);
-    }
-  })
-})
-```
 
 ## getComplexityDegree
 
@@ -141,8 +73,6 @@ getComplexityDegree(): PictureComplexityDegree
 获取图像内容复杂度。当无法判别图像内容复杂度时，返回默认值UNKNOWN_COMPLEXITY_DEGREE_PICTURE。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -162,34 +92,6 @@ getComplexityDegree(): PictureComplexityDegree
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let complexityDegree: effectKit.PictureComplexityDegree = colorPicker.getComplexityDegree();
-      console.info('The complexity degree of the image is ' + complexityDegree);
-    }
-  })
-})
-```
-
 ## getDeepenImmersionColor
 
 ```TypeScript
@@ -199,8 +101,6 @@ getDeepenImmersionColor(): Color
 生成与背景色融合且比背景色更深的强沉浸感颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口通过颜色混合算法，创建一种既与背景色协调又具有更强沉浸感的颜色效果。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -214,35 +114,7 @@ getDeepenImmersionColor(): Color
 
 | 类型 |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
-
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getDeepenImmersionColor();
-      console.info('get deepen immersion color =' + color);
-    }
-  })
-})
-```
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getImmersiveBackgroundColor
 
@@ -254,8 +126,6 @@ getImmersiveBackgroundColor(): Color
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -268,35 +138,7 @@ getImmersiveBackgroundColor(): Color
 
 | 类型 |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
-
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getImmersiveBackgroundColor();
-      console.info('get immersive background color =' + color);
-    }
-  })
-})
-```
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getImmersiveForegroundColor
 
@@ -308,8 +150,6 @@ getImmersiveForegroundColor(): Color
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -322,35 +162,7 @@ getImmersiveForegroundColor(): Color
 
 | 类型 |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
-
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getImmersiveForegroundColor();
-      console.info('get immersive foreground color =' + color);
-    }
-  })
-})
-```
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getMorandiShadowColor
 
@@ -362,8 +174,6 @@ getMorandiShadowColor(): Color
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -376,35 +186,7 @@ getMorandiShadowColor(): Color
 
 | 类型 |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
-
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getMorandiShadowColor();
-      console.info('get Morandi shadow color =' + color);
-    }
-  })
-})
-```
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getReverseColor
 
@@ -416,8 +198,6 @@ getReverseColor(): Color
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -430,35 +210,7 @@ getReverseColor(): Color
 
 | 类型 |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
-
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getReverseColor();
-      console.info('get reverse color =' + color);
-    }
-  })
-})
-```
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getShadeDegree
 
@@ -469,8 +221,6 @@ getShadeDegree(): PictureShadeDegree
 获取图像颜色深浅度。当无法判别图像颜色深浅度时，返回默认值UNKNOWN_SHADE_DEGREE_PICTURE。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -490,51 +240,15 @@ getShadeDegree(): PictureShadeDegree
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let shadeDegree: effectKit.PictureShadeDegree = colorPicker.getShadeDegree();
-      console.info('The shade degree of the image is ' + shadeDegree);
-    }
-  })
-})
-```
-
 ## getTopProportionColorsAndPercentage
 
-ArkTS-Dyn:
 ```TypeScript
 getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, number | null>
-```
-
-ArkTS-Sta:
-```TypeScript
-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>
 ```
 
 同步返回图像占比靠前的颜色值及其对应比例，个数由`colorCount`指定。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -546,46 +260,16 @@ getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double |
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| colorCount | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| colorCount | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Map & lt;Color \ | null, number \| null & gt;<br>ArkTS-Sta：Map & lt;Color \ | null, double \| null & gt; |
+| Map & lt;Color \ | null, number \| null & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let colors: Map<effectKit.Color | null, number | null> = colorPicker.getTopProportionColorsAndPercentage(2);
-      colors.forEach((value: number | null, key: effectKit.Color | null) => {
-        console.info('get top proportion colors and percentages: color ' + key + ', percentage ' + value);
-      })
-    }
-  })
-})
-```

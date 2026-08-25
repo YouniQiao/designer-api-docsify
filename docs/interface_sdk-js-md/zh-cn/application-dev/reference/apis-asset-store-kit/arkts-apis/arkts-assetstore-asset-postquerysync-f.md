@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## postQuerySync
@@ -15,8 +15,6 @@ function postQuerySync(handle: AssetMap): void
 查询的后置处理，用于需要用户认证的关键资产。需与[asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md)函数成对出现。使用同步方式返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -39,14 +37,3 @@ function postQuerySync(handle: AssetMap): void
 | [24000011](../errorcode-asset.md#24000011-包管理服务异常) |
 | [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
 | [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-
-let handle: asset.AssetMap = new Map();
-// 此处传入的new Uint8Array(32)仅作为示例，实际应传入asset.preQuerySync执行成功返回的挑战值。
-handle.set(asset.Tag.AUTH_CHALLENGE, new Uint8Array(32));
-asset.postQuerySync(handle);
-```

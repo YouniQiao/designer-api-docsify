@@ -4,14 +4,12 @@ Describes the recurrence rule of a recurring event.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from '@kit.CalendarKit';
+import { calendarManager } from 'kits/@kit.CalendarKit';
 ```
 
 ## count
@@ -25,8 +23,6 @@ Number of times that an event recurs. The value is a non-negative integer. If th
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Repeats by day of a month. If this parameter is not set, the default value is em
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -61,8 +55,6 @@ Repeats by day of a week. If this parameter is not set, the default value is emp
 **Type:** number[]
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,8 +72,6 @@ Repeats by day of a year. If this parameter is not set, the default value is emp
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -97,8 +87,6 @@ Excluded dates set for a duplicate calendar event, in timestamp format. The valu
 **Type:** number[]
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,8 +104,6 @@ End date of the recurrence period. The value is a 13-digit timestamp. If this pa
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -133,8 +119,6 @@ Recurrence interval of a recurring event. The value is a non-negative integer. I
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -152,8 +136,6 @@ Repeats by month of a year. If this parameter is not set, the default value is e
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -169,8 +151,6 @@ Type of the event recurrence rule.
 **Type:** [RecurrenceFrequency](arkts-calendar-calendarmanager-recurrencefrequency-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -188,8 +168,6 @@ Repeats by week of a month. If this parameter is not set, the default value is e
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -205,8 +183,6 @@ Repeats by week of a year. If this parameter is not set, the default value is em
 **Type:** number[]
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

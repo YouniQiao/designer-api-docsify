@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { scriptManager } from '@kit.AbilityKit';
+import { scriptManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## context
@@ -25,8 +23,6 @@ readonly context: Context
 **类型：** [Context](arkts-ability-context-c.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,8 +41,6 @@ readonly requestCode: string
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

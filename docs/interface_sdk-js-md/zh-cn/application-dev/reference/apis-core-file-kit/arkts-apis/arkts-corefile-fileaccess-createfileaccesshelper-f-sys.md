@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## createFileAccessHelper
@@ -15,8 +15,6 @@ function createFileAccessHelper(context: Context): FileAccessHelper
 以同步方法创建连接当前系统内所有文件管理服务的helper对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 
@@ -75,57 +73,6 @@ function createFileAccessHelper(context: Context): FileAccessHelper
 | 14300003 |
 | 14300004 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { common } from '@kit.AbilityKit';
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext; 
-function createFileAccessHelper01(context: common.UIAbilityContext) {
-  let fileAccessHelper: fileAccess.FileAccessHelper;
-  // wantInfos 从getFileAccessAbilityInfo()获取
-  let wantInfos: Array<Want> = [
-    {
-      bundleName: "com.ohos.UserFile.ExternalFileManager",
-      abilityName: "FileExtensionAbility",
-    },
-  ]
-  try {
-    // context 是EntryAbility 传过来的context
-    fileAccessHelper = fileAccess.createFileAccessHelper(context, wantInfos);
-    if (!fileAccessHelper) {
-      console.error("createFileAccessHelper interface returns an undefined object");
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("createFileAccessHelper failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext; 
-function createFileAccessHelper02(context: common.UIAbilityContext) {
-  let fileAccessHelperAllServer: fileAccess.FileAccessHelper;
-  // 创建连接系统内所有配置fileAccess的文件管理类服务的helper对象
-  try {
-    // context 是EntryAbility 传过来的context
-    fileAccessHelperAllServer = fileAccess.createFileAccessHelper(context);
-    if (!fileAccessHelperAllServer) {
-      console.error("createFileAccessHelper interface returns an undefined object");
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("createFileAccessHelper failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
-
 
 ## createFileAccessHelper
 
@@ -136,8 +83,6 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 以同步方法创建连接指定wants的helper对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 
@@ -196,7 +141,3 @@ function createFileAccessHelper(context: Context, wants: Array<Want>): FileAcces
 | 14300002 |
 | 14300003 |
 | 14300004 |
-
-**示例**
-
-参见 [createFileAccessHelper](#createfileaccesshelper)

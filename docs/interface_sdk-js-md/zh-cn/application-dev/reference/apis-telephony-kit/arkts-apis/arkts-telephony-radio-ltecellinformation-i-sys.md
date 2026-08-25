@@ -4,8 +4,6 @@ Obtains LTE cell information.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ Obtains LTE cell information.
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## bandwidth
 
 ```TypeScript
-bandwidth: int
+bandwidth: number
 ```
 
 Indicates the bandwidth.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -37,16 +33,14 @@ Indicates the bandwidth.
 ## cgi
 
 ```TypeScript
-cgi: long
+cgi: number
 ```
 
 Indicates the cell global identification.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -55,16 +49,14 @@ Indicates the cell global identification.
 ## earfcn
 
 ```TypeScript
-earfcn: int
+earfcn: number
 ```
 
 Indicates the E-UTRA Absolute Radio Frequency Channel Number.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -82,8 +74,6 @@ Support for New Radio_Dual Connectivity.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +89,6 @@ Indicates the mobile country code.
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -118,8 +106,6 @@ Indicates the mobile network code.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -127,16 +113,14 @@ Indicates the mobile network code.
 ## pci
 
 ```TypeScript
-pci: int
+pci: number
 ```
 
 Indicates the physical cell identification.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -145,16 +129,14 @@ Indicates the physical cell identification.
 ## tac
 
 ```TypeScript
-tac: int
+tac: number
 ```
 
 Indicates the tracking area code.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## castAudio
@@ -15,8 +15,6 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 投播会话到指定设备列表。结果通过callback异步回调方式返回。需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -43,41 +41,6 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) |
 | [6600104](../errorcode-avsession.md#6600104-远端会话连接失败) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-let audioManager = audio.getAudioManager();
-let audioRoutingManager = audioManager.getRoutingManager();
-let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
-audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
-  audioDevices = data;
-  console.info('Promise returned to indicate that the device list is obtained.');
-  if (audioDevices !== undefined) {
-    avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors).then(() => {
-      console.info('Succeeded in casting audio.');
-    });
-  }
-});
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-let audioManager = audio.getAudioManager();
-let audioRoutingManager = audioManager.getRoutingManager();
-let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
-audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
-  audioDevices = data;
-  console.info('Promise returned to indicate that the device list is obtained.');
-});
-
-if (audioDevices !== undefined) {
-  avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors, (err) => {
-    console.info('Succeeded in casting audio.');
-  });
-}
-```
-
 
 ## castAudio
 
@@ -88,8 +51,6 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 投播会话到指定设备列表。结果通过Promise异步回调方式返回。调用此接口之前，需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -120,7 +81,3 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) |
 | [6600104](../errorcode-avsession.md#6600104-远端会话连接失败) |
-
-**示例**
-
-参见 [castAudio](#castaudio)

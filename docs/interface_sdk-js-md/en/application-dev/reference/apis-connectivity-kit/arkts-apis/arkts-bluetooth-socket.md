@@ -4,14 +4,12 @@ Provides methods to operate or manage bluetooth socket connection.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.ConnectivityKit';
+import { socket } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

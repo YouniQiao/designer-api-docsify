@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## avoidArea
@@ -27,8 +25,6 @@ avoidArea: window.AvoidArea
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -36,16 +32,14 @@ avoidArea: window.AvoidArea
 ## displayId
 
 ```TypeScript
-displayId: int
+displayId: number
 ```
 
 标准悬浮窗所在屏幕ID。 取值限定为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,8 +57,6 @@ inSidebar: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -81,8 +73,6 @@ templateType: FloatViewTemplateType
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -90,16 +80,14 @@ templateType: FloatViewTemplateType
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 标准悬浮窗窗口ID。 取值限定为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,8 +105,6 @@ windowRect: window.Rect
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -126,16 +112,14 @@ windowRect: window.Rect
 ## windowScale
 
 ```TypeScript
-windowScale: double
+windowScale: number
 ```
 
 标准悬浮窗窗口缩放比例。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

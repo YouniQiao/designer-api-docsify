@@ -4,8 +4,6 @@ Enumerates the quality levels of depth data.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ DEPTH_DATA_QUALITY_BAD = 0
 The depth map is of poor quality and cannot be used for blurring.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -36,8 +32,6 @@ The depth map is of average quality and cannot be used for high-quality blurring
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ DEPTH_DATA_QUALITY_GOOD = 2
 The depth map is of high quality and can be used for high-quality blurring.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

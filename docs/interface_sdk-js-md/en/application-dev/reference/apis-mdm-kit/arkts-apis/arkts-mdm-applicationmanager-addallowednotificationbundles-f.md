@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedNotificationBundles
@@ -28,8 +28,6 @@ Adds applications to the notification trustlist. After the notification trustlis
 > 4. Cross-user settings are supported. The settings take effect immediately.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 

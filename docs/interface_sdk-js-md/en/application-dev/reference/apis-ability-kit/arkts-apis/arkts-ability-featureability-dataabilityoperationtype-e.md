@@ -4,8 +4,6 @@ Enumerates the operation types of a DataAbility. The DataAbility can use an enum
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## TYPE_INSERT
@@ -17,8 +15,6 @@ TYPE_INSERT = 1
 Insert operation.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -34,8 +30,6 @@ Update operation.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -50,8 +44,6 @@ Deletion operation.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -65,8 +57,6 @@ TYPE_ASSERT = 4
 Assert operation.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -4,14 +4,12 @@ Wi-Fi EAP config.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## altSubjectMatch
@@ -25,8 +23,6 @@ Alternate subject match
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -42,8 +38,6 @@ Anonymous identity
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## caCertAlias
@@ -57,8 +51,6 @@ CA certificate alias
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -74,8 +66,6 @@ CA certificate path
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## certEntry
@@ -89,8 +79,6 @@ content of user's certificate
 **Type:** Uint8Array
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -106,8 +94,6 @@ Password of user's certificate
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## clientCertAlias
@@ -121,8 +107,6 @@ Client certificate alias
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -138,8 +122,6 @@ Domain suffix match
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## eapMethod
@@ -154,23 +136,19 @@ EAP authentication method
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## eapSubId
 
 ```TypeScript
-eapSubId: int
+eapSubId: number
 ```
 
 Sub ID of the SIM card
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -186,8 +164,6 @@ The identity
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## password
@@ -201,8 +177,6 @@ Password
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -218,8 +192,6 @@ Phase 2 authentication method
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## plmn
@@ -234,8 +206,6 @@ Public Land Mobile Network of the provider of Passpoint credential
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## realm
@@ -249,7 +219,5 @@ Realm for Passpoint credential
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA

@@ -15,8 +15,6 @@ function getStorageSync(path: string): Storage
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** getPreferences
@@ -32,20 +30,3 @@ function getStorageSync(path: string): Storage
 | 类型 |
 | --- |
 | [Storage](arkts-arkdata-system-storage-storage-c.md) |
-
-**示例**
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-  path = filePath;
-  console.info("======================>getFilesDirPromise====================>");
-
-  let storage = data_storage.getStorageSync(path + '/mystore');
-  storage.putSync('startup', 'auto');
-  storage.flushSync();
-});
-```

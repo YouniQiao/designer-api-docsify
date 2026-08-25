@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDockApp
@@ -30,8 +30,6 @@ Adds an application to the bottom shortcut bar of a PC/2-in-1 device based on th
 > adjust its position.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 

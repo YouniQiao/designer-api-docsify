@@ -4,8 +4,6 @@ The **abilityConnectionManager** module provides APIs for cross-device connectio
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -13,7 +11,7 @@ The **abilityConnectionManager** module provides APIs for cross-device connectio
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## Summary
@@ -28,23 +26,14 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 | [destroyAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-destroyabilityconnectionsession-f.md) |
 | [disconnect](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md) |
 | [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md) |
-| [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md) |
 | [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#offconnect) |
 | [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#offdisconnect) |
 | [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#offreceivemessage) |
 | [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#offreceivedata) |
-| [offConnect](arkts-distributedservice-abilityconnectionmanager-offconnect-f.md) |
-| [offDisconnect](arkts-distributedservice-abilityconnectionmanager-offdisconnect-f.md) |
-| [offReceiveData](arkts-distributedservice-abilityconnectionmanager-offreceivedata-f.md) |
-| [offReceiveMessage](arkts-distributedservice-abilityconnectionmanager-offreceivemessage-f.md) |
 | [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#onconnect) |
 | [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#ondisconnect) |
 | [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivemessage) |
 | [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivedata) |
-| [onConnect](arkts-distributedservice-abilityconnectionmanager-onconnect-f.md) |
-| [onDisconnect](arkts-distributedservice-abilityconnectionmanager-ondisconnect-f.md) |
-| [onReceiveData](arkts-distributedservice-abilityconnectionmanager-onreceivedata-f.md) |
-| [onReceiveMessage](arkts-distributedservice-abilityconnectionmanager-onreceivemessage-f.md) |
 | [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md) |
 | [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md) |
 | [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md) |
@@ -57,14 +46,10 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 | [createStream](arkts-distributedservice-abilityconnectionmanager-createstream-f-sys.md) |
 | [destroyStream](arkts-distributedservice-abilityconnectionmanager-destroystream-f-sys.md) |
 | [getSurfaceId](arkts-distributedservice-abilityconnectionmanager-getsurfaceid-f-sys.md) |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offreceiveimage) |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offcollaborateevent) |
-| [offCollaborateEvent](arkts-distributedservice-abilityconnectionmanager-offcollaborateevent-f-sys.md) |
-| [offReceiveImage](arkts-distributedservice-abilityconnectionmanager-offreceiveimage-f-sys.md) |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#onreceiveimage) |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#oncollaborateevent) |
-| [onCollaborateEvent](arkts-distributedservice-abilityconnectionmanager-oncollaborateevent-f-sys.md) |
-| [onReceiveImage](arkts-distributedservice-abilityconnectionmanager-onreceiveimage-f-sys.md) |
+| off |
+| off |
+| on |
+| on |
 | [sendImage](arkts-distributedservice-abilityconnectionmanager-sendimage-f-sys.md) |
 | [setSurfaceId](arkts-distributedservice-abilityconnectionmanager-setsurfaceid-f-sys.md) |
 | [startStream](arkts-distributedservice-abilityconnectionmanager-startstream-f-sys.md) |

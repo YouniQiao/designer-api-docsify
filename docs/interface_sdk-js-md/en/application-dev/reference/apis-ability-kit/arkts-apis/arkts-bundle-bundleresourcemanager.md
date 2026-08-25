@@ -9,8 +9,6 @@ The module provides APIs for obtaining resource information, including [BundleRe
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
 **System API:** This is a system API.
@@ -18,7 +16,7 @@ The module provides APIs for obtaining resource information, including [BundleRe
 ## Modules to Import
 
 ```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

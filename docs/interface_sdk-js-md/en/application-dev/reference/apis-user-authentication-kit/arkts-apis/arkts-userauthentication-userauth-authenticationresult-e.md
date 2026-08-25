@@ -4,8 +4,6 @@ Enumerates the authentication results.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
@@ -21,8 +19,6 @@ NO_SUPPORT = -1
 The device does not support the current authentication mode.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -40,8 +36,6 @@ The authentication is successful.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [SUCCESS](arkts-userauthentication-userauth-resultcode-e.md#success)
@@ -57,8 +51,6 @@ COMPARE_FAILURE = 1
 The feature comparison failed.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -76,8 +68,6 @@ The authentication was canceled by the user.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [CANCELED](arkts-userauthentication-userauth-resultcode-e.md#canceled)
@@ -93,8 +83,6 @@ TIMEOUT = 3
 The authentication has timed out.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -112,8 +100,6 @@ The camera failed to start.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -127,8 +113,6 @@ BUSY = 5
 The authentication service is not available. Try again later.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -146,8 +130,6 @@ The authentication parameters are invalid.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauth-resultcode-e.md#invalid_parameters)
@@ -163,8 +145,6 @@ LOCKED = 7
 The user account is locked because the number of authentication failures has reached the threshold.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -182,8 +162,6 @@ No authentication credential is registered.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauth-resultcode-e.md#not_enrolled)
@@ -199,8 +177,6 @@ GENERAL_ERROR = 100
 Other errors.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 

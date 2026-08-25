@@ -1,10 +1,8 @@
 # DeviceUsage
 
-表示音频设备类型的枚举（根据用途分类）。@enum { int }
+表示音频设备类型的枚举（根据用途分类）。@enum { number }
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -18,8 +16,6 @@ MEDIA_OUTPUT_DEVICES = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## MEDIA_INPUT_DEVICES
@@ -31,8 +27,6 @@ MEDIA_INPUT_DEVICES = 2
 媒体输入设备。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -46,8 +40,6 @@ ALL_MEDIA_DEVICES = 3
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## CALL_OUTPUT_DEVICES
@@ -59,8 +51,6 @@ CALL_OUTPUT_DEVICES = 4
 通话输出设备。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -74,8 +64,6 @@ CALL_INPUT_DEVICES = 8
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 ## ALL_CALL_DEVICES
@@ -87,7 +75,5 @@ ALL_CALL_DEVICES = 12
 所有通话设备。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device

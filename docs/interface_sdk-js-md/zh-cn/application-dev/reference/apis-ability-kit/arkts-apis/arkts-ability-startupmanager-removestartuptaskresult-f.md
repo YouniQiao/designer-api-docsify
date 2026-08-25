@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { startupManager } from '@kit.AbilityKit';
+import { startupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## removeStartupTaskResult
@@ -13,11 +13,10 @@ function removeStartupTaskResult(startupTask: string): void
 ```
 
 删除指定启动任务或so预加载任务的初始化结果。  
-- 输入为启动任务名时，删除指定启动任务的初始化结果。 - 输入为so文件时，将该so文件置为未加载，缓存中已加载的so文件不会被移除。
+- 输入为启动任务名时，删除指定启动任务的初始化结果。  
+- 输入为so文件时，将该so文件置为未加载，缓存中已加载的so文件不会被移除。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,43 +33,3 @@ function removeStartupTaskResult(startupTask: string): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    try {
-      startupManager.run(['StartupTask_001', 'libentry_001']).then(() => {
-        hilog.info(0x0000, 'testTag', 'StartupTask_001 init successful');
-      }).catch((error: BusinessError) => {
-        hilog.error(0x0000, 'testTag', `StartupTask_001 promise catch failed, error code: ${error.code}, error msg: ${error.message}`);
-      });
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', `startupManager.run failed, error code: ${error.code}, error msg: ${error.message}`);
-    }
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    startupManager.removeStartupTaskResult('StartupTask_001');
-    startupManager.removeStartupTaskResult('libentry_001');
-
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err) {
-        let error = err as BusinessError;
-        hilog.error(0x0000, 'testTag',
-          `Failed to load the content. Cause: error code ${error.code}, error msg ${error.message}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
-    });
-  }
-}
-```

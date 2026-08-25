@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## on('cellInfoChange')
@@ -15,8 +15,6 @@ function on(type: 'cellInfoChange', callback: Callback<Array<CellInformation>>):
 订阅小区信息变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -43,16 +41,6 @@ function on(type: 'cellInfoChange', callback: Callback<Array<CellInformation>>):
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-observer.on('cellInfoChange', (data: Array<radio.CellInformation>) => {
-    console.info("on cellInfoChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('cellInfoChange')
 
@@ -63,8 +51,6 @@ function on(type: 'cellInfoChange', options: ObserverOptions, callback: Callback
 订阅指定卡槽位的小区信息变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -91,16 +77,3 @@ function on(type: 'cellInfoChange', options: ObserverOptions, callback: Callback
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('cellInfoChange', options, (data: Array<radio.CellInformation>) => {
-    console.info("on cellInfoChange, data:" + JSON.stringify(data));
-});
-```

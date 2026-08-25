@@ -4,8 +4,6 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { conversation } from '@kit.DistributedServiceKit';
+import { conversation } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## deviceName
@@ -28,8 +26,6 @@ deviceName: string
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
@@ -39,16 +35,14 @@ deviceName: string
 ## deviceTypeId
 
 ```TypeScript
-deviceTypeId: int
+deviceTypeId: number
 ```
 
 设备类型标识符，表示设备的类别，取值为整数，例如：0x0E-手机、0x11-平板、0x9C-电视、0x0C-PC等（具体数值以系统定义为准）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,8 +62,6 @@ nearby: boolean
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
@@ -88,8 +80,6 @@ networkId: string
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
@@ -107,8 +97,6 @@ udid: string
 **类型：** string
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

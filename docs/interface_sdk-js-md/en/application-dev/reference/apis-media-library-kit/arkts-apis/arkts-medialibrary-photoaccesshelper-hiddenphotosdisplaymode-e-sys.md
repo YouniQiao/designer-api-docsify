@@ -4,8 +4,6 @@ Enumerates the display modes of hidden files in the system.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Display all hidden files in the system.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ ALBUMS_MODE
 Display hidden files by album (display all albums that contain hidden files in the system, excluding the preset hidden album and the albums in the trash).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

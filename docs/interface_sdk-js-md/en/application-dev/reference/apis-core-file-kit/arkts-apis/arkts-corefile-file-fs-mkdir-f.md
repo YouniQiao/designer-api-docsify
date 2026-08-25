@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## mkdir
@@ -18,8 +18,6 @@ Creates a directory. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -55,52 +53,6 @@ Creates a directory. This API uses a promise to return the result.
 | 13900033 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let dirPath = pathDir + "/testDir";
-fs.mkdir(dirPath).then(() => {
-  console.info("mkdir succeed");
-}).catch((err: BusinessError) => {
-  console.error("mkdir failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let dirPath = pathDir + "/testDir1/testDir2/testDir3";
-fs.mkdir(dirPath, true).then(() => {
-  console.info("mkdir succeed");
-}).catch((err: BusinessError) => {
-  console.error("mkdir failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let dirPath = pathDir + "/testDir";
-fs.mkdir(dirPath, (err: BusinessError) => {
-  if (err) {
-    console.error("mkdir failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("mkdir succeed");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let dirPath = pathDir + "/testDir1/testDir2/testDir3";
-fs.mkdir(dirPath, true, (err: BusinessError) => {
-  if (err) {
-    console.error("mkdir failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("mkdir succeed");
-  }
-});
-```
 
 
 ## mkdir
@@ -113,8 +65,6 @@ Creates a directory. This API uses a promise to return the result. The value **t
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -152,10 +102,6 @@ Creates a directory. This API uses a promise to return the result. The value **t
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-See [mkdir](#mkdir)
-
 
 ## mkdir
 
@@ -166,8 +112,6 @@ declare function mkdir(path: string, callback: AsyncCallback<void>): void
 Creates a directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -200,10 +144,6 @@ Creates a directory. This API uses an asynchronous callback to return the result
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-See [mkdir](#mkdir)
-
 
 ## mkdir
 
@@ -214,8 +154,6 @@ declare function mkdir(path: string, recursion: boolean, callback: AsyncCallback
 Creates a directory. This API uses an asynchronous callback to return the result. The value **true** means to create a directory recursively.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -248,7 +186,3 @@ Creates a directory. This API uses an asynchronous callback to return the result
 | 13900033 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [mkdir](#mkdir)

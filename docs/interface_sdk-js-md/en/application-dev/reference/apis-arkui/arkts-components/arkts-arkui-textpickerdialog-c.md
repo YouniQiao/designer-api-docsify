@@ -4,8 +4,6 @@ A text picker dialog box is a dialog box that allows users to select text from t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ static show(options?: TextPickerDialogOptions)
 Shows a text picker in the given settings.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 18
 

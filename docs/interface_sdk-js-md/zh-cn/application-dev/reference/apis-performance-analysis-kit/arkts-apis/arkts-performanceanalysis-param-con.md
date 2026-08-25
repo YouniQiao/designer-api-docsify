@@ -10,8 +10,6 @@ const DISTRIBUTED_SERVICE_INSTANCE_ID: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
@@ -26,8 +24,6 @@ const DISTRIBUTED_SERVICE_NAME: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
@@ -41,8 +37,6 @@ const USER_ID: string
 用户自定义ID。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

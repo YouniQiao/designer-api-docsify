@@ -4,8 +4,6 @@ Enumerates the types of application disposals.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ BLOCK_APPLICATION = 1
 All abilities of the application are blocked. That is, the entire application is blocked.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -36,8 +32,6 @@ A specific ability of the application is blocked.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ NON_BLOCK = 3
 The application is not blocked.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 

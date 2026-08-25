@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onRealTimeWeather
@@ -15,8 +15,6 @@ function onRealTimeWeather(callback: Callback<RealTimeWeatherInfo>): void
 Enables real-time weather awareness and subscribes to real-time weather awareness results. If the capability is not supported, no callback will be triggered. You can obtain the supported capabilities by calling the getAllCapacityList method.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Required permissions:** ohos.permission.vehicle.MMA_WEATHER
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** RouterState
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
 ```
 
 ## index
@@ -29,8 +27,6 @@ index: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -50,8 +46,6 @@ name: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** name
@@ -69,8 +63,6 @@ path: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 

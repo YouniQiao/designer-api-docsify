@@ -4,8 +4,6 @@ Represents the application database schema.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the application database schema.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'kits/@kit.ArkData';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ Bundle name of the application.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -46,8 +42,6 @@ Database information of the application.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Database information of the application.
 ## version
 
 ```TypeScript
-version: int
+version: number
 ```
 
 Version of the database schema.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

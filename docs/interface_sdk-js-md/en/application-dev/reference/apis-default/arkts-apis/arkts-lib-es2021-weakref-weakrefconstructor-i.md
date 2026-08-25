@@ -1,7 +1,5 @@
 # WeakRefConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ new<T extends object>(target: T): WeakRef<T>
 ```
 
 Creates a WeakRef instance for the given target object.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,5 +30,3 @@ readonly prototype: WeakRef<any>
 ```
 
 **Type:** [WeakRef](arkts-lib-es2021-weakref-weakref-i.md)&lt;any&gt;
-
-**ArkTS mode:** 

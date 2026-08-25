@@ -4,8 +4,6 @@ Defines the subtype of a continuous task.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## CAR_KEY
@@ -20,7 +18,5 @@ Car key.
 2. Continuous tasks of this type cannot be updated through the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

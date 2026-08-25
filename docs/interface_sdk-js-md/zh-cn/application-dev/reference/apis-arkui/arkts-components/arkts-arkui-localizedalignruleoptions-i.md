@@ -4,8 +4,6 @@ Defines the Localized align rule options of relative container.@interface Locali
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,13 +19,11 @@ bias?: Bias
 
 设置组件在锚点约束下的偏移参数，其值为到左/上侧锚点的距离与锚点间总距离的比值。
 
-**类型：** Bias
+**类型：** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
 
 **默认值：** {horizontal:0.5,vertical:0.5}
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,8 +43,6 @@ bottom?: LocalizedVerticalAlignParam
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -66,8 +60,6 @@ center?: LocalizedVerticalAlignParam
 **类型：** [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,8 +79,6 @@ end?: LocalizedHorizontalAlignParam
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -106,8 +96,6 @@ middle?: LocalizedHorizontalAlignParam
 **类型：** [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,8 +115,6 @@ start?: LocalizedHorizontalAlignParam
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -146,8 +132,6 @@ top?: LocalizedVerticalAlignParam
 **类型：** [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

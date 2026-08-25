@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## addPrinterToDiscovery
@@ -15,8 +15,6 @@ function addPrinterToDiscovery(printerInformation: PrinterInformation): Promise<
 Adds a printer to the printer discovery list. This API uses a promise to return the result.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -40,25 +38,3 @@ Adds a printer to the printer discovery list. This API uses a promise to return 
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerInformation : print.PrinterInformation = {
-    printerId : 'testPrinterId',
-    printerName : 'testPrinterName',
-    printerStatus : 0,
-    description : 'testDesc',
-    uri : 'testUri',
-    printerMake : 'testPrinterMake',
-    options : 'testOps'
-};
-print.addPrinterToDiscovery(printerInformation).then(() => {
-    console.info('addPrinterToDiscovery success');
-}).catch((error: BusinessError) => {
-    console.error('addPrinterToDiscovery error : ' + JSON.stringify(error));
-})
-```

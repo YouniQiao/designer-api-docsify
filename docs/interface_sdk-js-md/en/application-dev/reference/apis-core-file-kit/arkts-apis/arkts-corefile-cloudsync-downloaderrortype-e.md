@@ -4,8 +4,6 @@ Enumerates the device-cloud download error types.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NO_ERROR
@@ -17,8 +15,6 @@ NO_ERROR = 0
 No error.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -32,8 +28,6 @@ Unknown error.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NETWORK_UNAVAILABLE
@@ -45,8 +39,6 @@ NETWORK_UNAVAILABLE = 2
 The network is unavailable.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -60,8 +52,6 @@ The local space is insufficient.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## CONTENT_NOT_FOUND
@@ -74,8 +64,6 @@ The file is not found in the cloud space.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## FREQUENT_USER_REQUESTS
@@ -87,7 +75,5 @@ FREQUENT_USER_REQUESTS = 5
 The user requests are too frequent to respond.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

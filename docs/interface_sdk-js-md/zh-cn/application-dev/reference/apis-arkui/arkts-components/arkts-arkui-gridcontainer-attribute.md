@@ -1,12 +1,10 @@
 # GridContainer属性/事件
 
-支持通用属性和Column组件的属性方法。支持通用事件。
+支持[通用属性](arkts-arkui-commonmethod-c.md)和Column组件的[属性方法](arkts-arkui-column-attribute.md#columnattribute)。支持[通用事件](arkts-arkui-commonmethod-c.md)。
 
-**继承/实现关系：** GridContainerAttribute extends ColumnAttribute
+**继承/实现关系：** GridContainerAttribute extends [ColumnAttribute](arkts-arkui-column-attribute.md#columnattribute)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

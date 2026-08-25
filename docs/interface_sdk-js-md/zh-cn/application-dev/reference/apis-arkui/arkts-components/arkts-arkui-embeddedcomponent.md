@@ -7,7 +7,9 @@
 ## 约束
 
 **EmbeddedComponent**仅支持在拥有多进程权限的设备上使用。  
-**EmbeddedComponent**只能在UIAbility中使用，且默认情况下被拉起的EmbeddedUIExtensionAbility需与UIAbility属于同一应用。 从API版本26.0.0开始，在同时满足以下条件时，允许**EmbeddedComponent**跨应用拉起EmbeddedUIExtensionAbility： - **EmbeddedComponent**所属应用申请了ohos.permission.SUPPORT_CROSS_APP_EMBED_FOR_OA权限（该权限仅企业普通应用可申请）； - 该应用的appIdentifier在EmbeddedUIExtensionAbility支持的应用清单（即extensionAbilities标签的appIdentifierAllowList属性）中。
+**EmbeddedComponent**只能在UIAbility中使用，且默认情况下被拉起的EmbeddedUIExtensionAbility需与UIAbility属于同一应用。 从API版本26.0.0开始，在同时满足以下条件时，允许**EmbeddedComponent**跨应用拉起EmbeddedUIExtensionAbility：  
+- **EmbeddedComponent**所属应用申请了ohos.permission.SUPPORT_CROSS_APP_EMBED_FOR_OA权限（该权限仅企业普通应用可申请）；  
+- 该应用的appIdentifier在EmbeddedUIExtensionAbility支持的应用清单（即extensionAbilities标签的appIdentifierAllowList属性）中。
 
 ## 子组件
 
@@ -25,8 +27,6 @@ EmbeddedComponent(
 创建跨进程嵌入式组件，用于显示同包名或满足跨应用权限条件的EmbeddedUIExtensionAbility的UI。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +54,6 @@ EmbeddedComponent(
 创建跨进程嵌入式组件，用于显示同包名或满足跨应用权限条件的EmbeddedUIExtensionAbility的UI。相对于API version 12的接口，新增options参数用于传递构造参数。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

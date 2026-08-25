@@ -4,8 +4,6 @@ Enumerates length units.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Length in vp.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ PX = 1
 Length in px.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

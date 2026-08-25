@@ -4,8 +4,6 @@ Enumerates screen hopping events.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Substitutes:** [CooperateState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
@@ -23,8 +21,6 @@ MSG_COOPERATE_INFO_START = 200
 Screen hopping starts.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -44,8 +40,6 @@ Screen hopping succeeds.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate_success)
@@ -63,8 +57,6 @@ MSG_COOPERATE_INFO_FAIL = 202
 Screen hopping fails.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -84,8 +76,6 @@ Screen hopping is enabled.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Substitutes:** [COOPERATE_PREPARE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_prepare)
@@ -103,8 +93,6 @@ MSG_COOPERATE_STATE_OFF = 501
 Screen hopping is disabled.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 

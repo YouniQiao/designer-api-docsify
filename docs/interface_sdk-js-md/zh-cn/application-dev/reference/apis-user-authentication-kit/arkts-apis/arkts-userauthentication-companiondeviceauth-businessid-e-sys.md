@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ DEFAULT = 0
 默认业务ID。系统预设的默认业务，用于基本的伴随设备认证场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +33,6 @@ VENDOR_BEGIN = 10000
 厂商自定义业务ID取值起点。厂商可在此值基础上自定义扩展业务ID，实际取值需大于等于10000，避免与系统保留值[0-9999]冲突。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

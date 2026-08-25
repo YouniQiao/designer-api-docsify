@@ -4,14 +4,12 @@ ErrorManager模块提供对应用运行时各类异常的全局观测能力，�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { errorManager } from '@kit.AbilityKit';
+import { errorManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -27,16 +25,12 @@ import { errorManager } from '@kit.AbilityKit';
 | [off(错误管理模块)](arkts-ability-errormanager-off-f.md#offglobalunhandledrejectiondetected) |
 | [off(错误管理模块)](arkts-ability-errormanager-off-f.md#offfreeze) |
 | [off(错误管理模块)](arkts-ability-errormanager-off-f.md#offglobalerroroccurred) |
-| [offFreeze(错误管理模块)](arkts-ability-errormanager-offfreeze-f.md) |
-| [offUnhandledRejection(错误管理模块)](arkts-ability-errormanager-offunhandledrejection-f.md) |
 | [on(错误管理模块)](arkts-ability-errormanager-on-f.md#onerror) |
 | [on(错误管理模块)](arkts-ability-errormanager-on-f.md#onloopobserver) |
 | [on(错误管理模块)](arkts-ability-errormanager-on-f.md#onunhandledrejection) |
 | [on(错误管理模块)](arkts-ability-errormanager-on-f.md#onglobalunhandledrejectiondetected) |
 | [on(错误管理模块)](arkts-ability-errormanager-on-f.md#onfreeze) |
 | [on(错误管理模块)](arkts-ability-errormanager-on-f.md#onglobalerroroccurred) |
-| [onFreeze(错误管理模块)](arkts-ability-errormanager-onfreeze-f.md) |
-| [onUnhandledRejection(错误管理模块)](arkts-ability-errormanager-onunhandledrejection-f.md) |
 | [setDefaultErrorHandler(错误管理模块)](arkts-ability-errormanager-setdefaulterrorhandler-f.md) |
 | [setDefaultFreezeObserver(错误管理模块)](arkts-ability-errormanager-setdefaultfreezeobserver-f.md) |
 | [setDefaultResourceUsageObserver(错误管理模块)](arkts-ability-errormanager-setdefaultresourceusageobserver-f.md) |

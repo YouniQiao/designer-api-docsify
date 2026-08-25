@@ -4,14 +4,12 @@ The **cloudSync** module provides the device-cloud sync capabilities for applica
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

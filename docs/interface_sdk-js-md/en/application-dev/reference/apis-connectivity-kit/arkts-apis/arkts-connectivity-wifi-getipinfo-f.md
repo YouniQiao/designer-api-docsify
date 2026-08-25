@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getIpInfo
@@ -15,8 +15,6 @@ function getIpInfo(): IpInfo
 Obtains the IP information of a Wi-Fi connection.<p>The IP information includes the host IP address, gateway address, and DNS information.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -31,16 +29,3 @@ Obtains the IP information of a Wi-Fi connection.<p>The IP information includes 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-	let info = wifi.getIpInfo();
-	console.info("info:" + JSON.stringify(info));
-}catch(error){
-	console.error("failed:" + JSON.stringify(error));
-}
-```

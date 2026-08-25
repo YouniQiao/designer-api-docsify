@@ -4,14 +4,12 @@ Represents the configuration options of a **Preferences** instance.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from '@kit.ArkData';
+import { sendablePreferences } from 'kits/@kit.ArkData';
 ```
 
 ## dataGroupId
@@ -25,8 +23,6 @@ Application group ID. <!--RP1-->Currently, this parameter is not supported.<!--R
 **Type:** string \| null
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Name of the **Preferences** instance.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

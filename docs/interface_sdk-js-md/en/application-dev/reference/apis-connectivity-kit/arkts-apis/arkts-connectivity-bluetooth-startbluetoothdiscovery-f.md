@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startBluetoothDiscovery
@@ -15,8 +15,6 @@ function startBluetoothDiscovery(): boolean
 Starts scanning Bluetooth devices.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -31,14 +29,3 @@ Starts scanning Bluetooth devices.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let deviceId : Array<string>;
-function onReceiveEvent(data : Array<string>) {
-    deviceId = data;
-}
-bluetooth.on('bluetoothDeviceFind', onReceiveEvent);
-let result : boolean = bluetooth.startBluetoothDiscovery();
-```

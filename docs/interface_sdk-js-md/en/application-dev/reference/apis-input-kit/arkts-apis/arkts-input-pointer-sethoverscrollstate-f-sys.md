@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## setHoverScrollState
@@ -15,8 +15,6 @@ function setHoverScrollState(state: boolean, callback: AsyncCallback<void>): voi
 Sets the mouse hover scrolling switch state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -36,62 +34,6 @@ Sets the mouse hover scrolling switch state. This API uses an asynchronous callb
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setHoverScrollState(true, (error: BusinessError) => {
-              if (error) {
-                console.error(`Set the mouse hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-                return;
-              }
-              console.info(`Set the mouse hover scroll success`);
-            });
-          } catch (error) {
-            console.error(`Set the mouse hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setHoverScrollState(true).then(() => {
-              console.info(`Set the mouse hover scroll success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`Set the mouse hover scroll failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## setHoverScrollState
 
@@ -102,8 +44,6 @@ function setHoverScrollState(state: boolean): Promise<void>
 Sets the status of the mouse hover scroll switch. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -127,7 +67,3 @@ Sets the status of the mouse hover scroll switch. This API uses a promise to ret
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [setHoverScrollState](#sethoverscrollstate)

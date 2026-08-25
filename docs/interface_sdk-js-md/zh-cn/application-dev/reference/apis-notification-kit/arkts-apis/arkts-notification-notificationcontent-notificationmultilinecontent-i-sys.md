@@ -14,8 +14,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## lineWantAgents
@@ -29,8 +27,6 @@ lineWantAgents?: Array<WantAgent>
 **类型：** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 

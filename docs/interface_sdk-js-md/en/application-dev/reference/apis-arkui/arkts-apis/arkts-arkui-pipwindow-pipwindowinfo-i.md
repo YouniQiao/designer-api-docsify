@@ -4,14 +4,12 @@ Describes the PiP window information.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## size
@@ -26,8 +24,6 @@ Size of the PiP window.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -35,16 +31,14 @@ Size of the PiP window.
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 ID of the PiP window.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

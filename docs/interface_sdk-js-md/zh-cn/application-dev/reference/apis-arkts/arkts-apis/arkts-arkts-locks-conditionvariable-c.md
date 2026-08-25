@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { ArkTSUtils } from '@kit.ArkTS';
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -23,8 +21,6 @@ constructor()
 默认构造函数。创建一个异步等待通知操作的对象。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -40,8 +36,6 @@ notifyAll(): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -56,8 +50,6 @@ notifyOne(): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -71,8 +63,6 @@ static request(name: string): ConditionVariable
 使用指定的名称查找或创建（如果未找到）异步等待通知操作的对象。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -100,8 +90,6 @@ wait(): Promise<void>
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -121,8 +109,6 @@ waitFor(timeout: number): Promise<void>
 异步调用进入等待中，将在被唤醒或者等待时间结束后继续执行。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

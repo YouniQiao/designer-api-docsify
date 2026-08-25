@@ -8,8 +8,6 @@ Represents the callback type for dynamically specifying gesture recognizer parti
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -20,5 +18,5 @@ Represents the callback type for dynamically specifying gesture recognizer parti
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [BaseGestureEvent](../arkts-apis/arkts-arkui-gesture-basegestureevent-i.md) | Yes |
-| recognizers | Array & lt;GestureRecognizer & gt; | Yes |
+| event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | Yes |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes |

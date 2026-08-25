@@ -7,8 +7,6 @@ The DSoftBus module **conversation** provides APIs for cross-device interaction 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.SoftBus.Core
@@ -18,7 +16,7 @@ The DSoftBus module **conversation** provides APIs for cross-device interaction 
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from '@kit.DistributedServiceKit';
+import { conversation } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## Summary

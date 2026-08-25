@@ -4,8 +4,6 @@ Enum for location scenario
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
@@ -22,8 +20,6 @@ UNSET = 0x300
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [UNSET](arkts-location-geolocationmanager-locationrequestscenario-e.md#unset)
@@ -37,8 +33,6 @@ NAVIGATION
 ```
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -54,8 +48,6 @@ TRAJECTORY_TRACKING
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#trajectory_tracking)
@@ -69,8 +61,6 @@ CAR_HAILING
 ```
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -86,8 +76,6 @@ DAILY_LIFE_SERVICE
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DAILY_LIFE_SERVICE](arkts-location-geolocationmanager-locationrequestscenario-e.md#daily_life_service)
@@ -101,8 +89,6 @@ NO_POWER
 ```
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## startOptimizeSpace
@@ -15,8 +15,6 @@ function startOptimizeSpace(optimizePara: OptimizeSpaceParam, callback?: Callbac
 Optimizes local resources that have been synced to the cloud and optimizes local images and videos that have not been accessed before the aging period expires. This API uses a promise to return the result. The callback returns the optimization progress.startOptimizeSpace is used together with **stopOptimizeSpace**. If **startOptimizeSpace** is called repeatedly, the error code 22400006 will be returned, indicating that other tasks are being executed.
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -47,25 +45,3 @@ Optimizes local resources that have been synced to the cloud and optimizes local
 | 13600001 |
 | 22400005 |
 | 22400006 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let para:cloudSync.OptimizeSpaceParam = {totalSize: 1073741824, agingDays: 30};
-let callback = (data:cloudSync.OptimizeSpaceProgress) => {
-  if (data.state == cloudSync.OptimizeState.FAILED) {
-    console.info("optimize space failed");
-  } else if (data.state == cloudSync.OptimizeState.COMPLETED && data.progress == 100) {
-    console.info("optimize space successfully");
-  } else if (data.state == cloudSync.OptimizeState.RUNNING) {
-    console.info("optimize space progress:" + data.progress);
-  }
-}
-cloudSync.startOptimizeSpace(para, callback).then(() => {
-  console.info("start optimize space");
-}).catch((err: BusinessError) => {
-  console.error("start optimize space failed with error message: " + err.message + ", error code: " + err.code);
-});
-```

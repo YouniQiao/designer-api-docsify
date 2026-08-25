@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## 导入模块
 
 ```TypeScript
-import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from '@kit.ArkUI';
+import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from 'kits/@kit.ArkUI';
 ```
 
 ## constructor
@@ -23,8 +21,6 @@ constructor(options: CommonArcButtonOptions)
 弧形按钮的构造函数。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -48,8 +44,6 @@ backgroundBlurStyle: BlurStyle
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -65,8 +59,6 @@ backgroundColor: ColorMetrics
 **类型：** ColorMetrics
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -84,8 +76,6 @@ fontColor: ColorMetrics
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -102,8 +92,6 @@ fontFamily: string | Resource
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -116,11 +104,9 @@ fontMargin: LocalizedMargin
 
 弧形按钮文本边距，单位：vp。默认值：{start:24vp, top: 10vp,end: 24vp, bottom:16vp }。
 
-**类型：** LocalizedMargin
+**类型：** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -138,8 +124,6 @@ fontSize: LengthMetrics
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -156,8 +140,6 @@ fontStyle: FontStyle
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -170,11 +152,9 @@ label: ResourceStr
 
 弧形按钮显示文本。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -188,11 +168,9 @@ onClick?: Callback<ClickEvent>
 
 弧形按钮点击动作触发该回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
+**类型：** Callback&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -206,11 +184,9 @@ onTouch?: Callback<TouchEvent>
 
 弧形按钮手指触摸动作触发该回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt;
+**类型：** Callback&lt;TouchEvent&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -228,8 +204,6 @@ position: ArcButtonPosition
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -246,8 +220,6 @@ pressedFontColor: ColorMetrics
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -263,8 +235,6 @@ ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮�
 **类型：** [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -284,8 +254,6 @@ shadowColor: ColorMetrics
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -301,8 +269,6 @@ shadowEnabled: boolean
 **类型：** boolean
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -320,8 +286,6 @@ status: ArcButtonStatus
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -337,8 +301,6 @@ styleMode: ArcButtonStyleMode
 **类型：** [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

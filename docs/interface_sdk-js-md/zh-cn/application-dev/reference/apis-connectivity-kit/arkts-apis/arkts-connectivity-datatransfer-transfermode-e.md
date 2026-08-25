@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## BASIC
@@ -17,8 +15,6 @@ BASIC = 0
 表示基础模式，无数据重传机制。适用于对时延和吞吐量敏感的业务场景。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,8 +29,6 @@ RELIABLE = 1
 表示可靠模式，有数据重传机制。适用于对数据完整性要求高的业务场景。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

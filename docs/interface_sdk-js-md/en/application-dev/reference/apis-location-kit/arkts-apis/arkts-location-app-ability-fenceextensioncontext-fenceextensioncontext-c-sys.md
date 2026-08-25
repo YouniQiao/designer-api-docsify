@@ -6,14 +6,12 @@ class of static subscriber extension context.@extends ExtensionContext
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## Modules to Import
 
 ```TypeScript
-import { FenceExtensionContext } from '@kit.LocationKit';
+import { FenceExtensionContext } from 'kits/@kit.LocationKit';
 ```
 
 ## startAbility
@@ -25,8 +23,6 @@ startAbility(want: Want): Promise<void>
 Starts a new service extension ability. If the target service extension ability is visible, you can start the target service extension ability; If the target service extension ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible service extension ability. If the target service extension ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,40 +60,3 @@ Starts a new service extension ability. If the target service extension ability 
 | [16000019](../../apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-
-**Examples**
-
-```TypeScript
-import { FenceExtensionAbility, geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-export class MyFenceExtensionAbility extends FenceExtensionAbility {
-  onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions: Record<string, string>): void {
-    // Receive the geofence status change event and process the service logic.
-    console.info(`on geofence transition,id:${transition.geofenceId},event:${transition.transitionEvent},additions:${JSON.stringify(additions)}`);
-    let want: Want = {
-      bundleName: "com.example.myapp",
-      abilityName: "MyServiceExtensionAbility"
-    };
-    try {
-      this.context.startAbility(want)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error('startAbility failed, error.code: ' + JSON.stringify(error.code) +
-            ' error.message: ' + JSON.stringify(error.message));
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error('startAbility failed, error.code: ' + JSON.stringify(code) +
-        ' error.message: ' + JSON.stringify(message));
-    }
-  }
-}
-```

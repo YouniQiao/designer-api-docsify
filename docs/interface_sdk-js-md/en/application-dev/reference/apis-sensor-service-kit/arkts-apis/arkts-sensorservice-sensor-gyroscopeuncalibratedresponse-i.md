@@ -6,108 +6,94 @@ Describes the uncalibrated gyroscope sensor data. It extends from [Response](ark
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## biasX
 
 ```TypeScript
-biasX: double
+biasX: number
 ```
 
 Uncalibrated angular velocity bias of rotation around the x-axis of the device, in rad/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## biasY
 
 ```TypeScript
-biasY: double
+biasY: number
 ```
 
 Uncalibrated angular velocity bias of rotation around the y-axis of the device, in rad/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## biasZ
 
 ```TypeScript
-biasZ: double
+biasZ: number
 ```
 
 Uncalibrated angular velocity bias of rotation around the z-axis of the device, in rad/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 Uncalibrated angular velocity of rotation around the x-axis of the device, in rad/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 Uncalibrated angular velocity of rotation around the y-axis of the device, in rad/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
 Uncalibrated angular velocity of rotation around the z-axis of the device, in rad/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor

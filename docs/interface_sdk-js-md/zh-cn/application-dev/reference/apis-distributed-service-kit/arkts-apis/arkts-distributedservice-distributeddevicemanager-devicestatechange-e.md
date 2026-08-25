@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = 0
 设备物理上线，此时状态未知，在状态更改为可用之前，分布式业务无法使用。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -32,8 +28,6 @@ AVAILABLE = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 ## UNAVAILABLE
@@ -45,7 +39,5 @@ UNAVAILABLE = 2
 设备物理下线，此时状态未知。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager

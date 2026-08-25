@@ -4,8 +4,6 @@ Enumerates the subscription types.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** SubscribeType
@@ -21,8 +19,6 @@ SUBSCRIBE_TYPE_LOCAL = 0
 Local data changes.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Remote data changes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** SUBSCRIBE_TYPE_REMOTE
@@ -57,8 +51,6 @@ SUBSCRIBE_TYPE_ALL = 2
 Local and remote data changes.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

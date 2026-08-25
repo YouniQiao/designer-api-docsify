@@ -8,8 +8,6 @@ Type definition of tone haptics array.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.

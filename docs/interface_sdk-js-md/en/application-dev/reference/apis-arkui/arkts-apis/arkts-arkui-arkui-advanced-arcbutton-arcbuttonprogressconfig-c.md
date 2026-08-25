@@ -4,39 +4,13 @@ Defines the progress indicator configuration options of the **ArcButton** compon
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from '@kit.ArkUI';
+import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from 'kits/@kit.ArkUI';
 ```
-
-## constructor
-
-```TypeScript
-constructor(value: double, total?: double, color?: ResourceColor)
-```
-
-Constructor of the ArcButtonProgressConfig.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Circle
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [value](#value) | double | Yes |
-| [total](#total) | double | No |
-| [color](#color) | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No |
 
 ## color
 
@@ -46,11 +20,9 @@ color?: ResourceColor
 
 Foreground color of the progress indicator. If the component's background color ([backgroundColor](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)) is set, it is used as the default foreground color of the progress indicator. The foreground color of the progress indicator is not affected by the button style ([ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)). The progress indicator's background color is derived solely from its foreground color, with an opacity value of 25%.Default value: **"#1F71FF"**, which is blue.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +44,6 @@ Maximum progress value.Default value: **100**Value range: [0, 2147483647]. If th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -91,8 +61,6 @@ Current progress value. Values less than 0 are adjusted to **0**, and values gre
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

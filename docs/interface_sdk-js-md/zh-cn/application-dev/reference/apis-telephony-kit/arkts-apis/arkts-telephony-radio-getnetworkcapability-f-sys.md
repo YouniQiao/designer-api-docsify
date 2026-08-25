@@ -3,21 +3,19 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getNetworkCapability
 
 ```TypeScript
-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,
+function getNetworkCapability(slotId: number, type: NetworkCapabilityType,
     callback: AsyncCallback<NetworkCapabilityState>): void
 ```
 
 Get the network capability state according to the specified capability type.
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -29,7 +27,7 @@ Get the network capability state according to the specified capability type.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md)&gt; | 是 |
 
@@ -45,46 +43,16 @@ Get the network capability state according to the specified capability type.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let type: radio.NetworkCapabilityType = radio.NetworkCapabilityType.SERVICE_TYPE_NR;
-radio.getNetworkCapability(slotId, type, (err: BusinessError, data: radio.NetworkCapabilityState) => {
-    if (err) {
-        console.error(`getNetworkCapability failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getNetworkCapability success, callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let type: radio.NetworkCapabilityType = radio.NetworkCapabilityType.SERVICE_TYPE_NR;
-radio.getNetworkCapability(slotId, type).then((data: radio.NetworkCapabilityState) => {
-    console.info(`getNetworkCapability success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkCapability failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getNetworkCapability
 
 ```TypeScript
-function getNetworkCapability(slotId: int, type: NetworkCapabilityType): Promise<NetworkCapabilityState>
+function getNetworkCapability(slotId: number, type: NetworkCapabilityType): Promise<NetworkCapabilityState>
 ```
 
 Get the network capability state according to the specified capability type.
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -96,7 +64,7 @@ Get the network capability state according to the specified capability type.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | type | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | 是 |
 
 **返回值：**
@@ -116,7 +84,3 @@ Get the network capability state according to the specified capability type.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getNetworkCapability](#getnetworkcapability)

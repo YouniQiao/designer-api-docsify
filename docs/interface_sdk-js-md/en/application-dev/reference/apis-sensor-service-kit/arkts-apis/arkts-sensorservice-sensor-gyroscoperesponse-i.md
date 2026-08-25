@@ -6,29 +6,25 @@ Describes the gyroscope sensor data. It extends from [Response](arkts-sensorserv
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 Angular velocity of rotation around the x-axis of the device, in rad/s. The value is equal to the reported physical quantity.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,16 +33,14 @@ Angular velocity of rotation around the x-axis of the device, in rad/s. The valu
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 Angular velocity of rotation around the y-axis of the device, in rad/s. The value is equal to the reported physical quantity.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,16 +49,14 @@ Angular velocity of rotation around the y-axis of the device, in rad/s. The valu
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
 Angular velocity of rotation around the z-axis of the device, in rad/s. The value is equal to the reported physical quantity.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

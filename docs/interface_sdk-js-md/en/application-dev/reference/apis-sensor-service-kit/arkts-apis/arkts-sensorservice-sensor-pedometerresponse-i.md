@@ -6,28 +6,24 @@ Describes the pedometer sensor data. It extends from [Response](arkts-sensorserv
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## steps
 
 ```TypeScript
-steps: double
+steps: number
 ```
 
 Number of steps a user has walked.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor

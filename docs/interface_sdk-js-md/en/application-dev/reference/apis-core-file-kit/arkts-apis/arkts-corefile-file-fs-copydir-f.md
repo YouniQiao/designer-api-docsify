@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## copyDir
@@ -17,8 +17,6 @@ declare function copyDir(src: string, dest: string, mode?: number): Promise<void
 Copies the source directory to the destination path. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -59,58 +57,6 @@ Copies the source directory to the destination path. This API uses a promise to 
 | 13900042 |
 | 13900044 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Copy srcPath to destPath.
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-fs.copyDir(srcPath, destPath, 0).then(() => {
-  console.info("copy directory succeed");
-}).catch((err: BusinessError) => {
-  console.error("copy directory failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, ConflictFiles } from '@kit.CoreFileKit';
-// Copy srcPath to destPath.
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-fs.copyDir(srcPath, destPath, 0, (err: BusinessError<Array<ConflictFiles>>) => {
-  if (err && err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error("copy directory failed with conflicting files: " + err.data[i].srcFile + " " + err.data[i].destFile);
-    }
-  } else if (err) {
-    console.error("copy directory failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("copy directory succeed");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, ConflictFiles } from '@kit.CoreFileKit';
-// Copy srcPath to destPath.
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-fs.copyDir(srcPath, destPath, (err: BusinessError<Array<ConflictFiles>>) => {
-  if (err && err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error("copy directory failed with conflicting files: " + err.data[i].srcFile + " " + err.data[i].destFile);
-    }
-  } else if (err) {
-    console.error("copy directory failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("copy directory succeed");
-  }
-});
-```
-
 
 ## copyDir
 
@@ -121,8 +67,6 @@ declare function copyDir(src: string, dest: string, callback: AsyncCallback<void
 Copies the source directory to the destination directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -155,10 +99,6 @@ Copies the source directory to the destination directory. This API uses an async
 | 13900034 |
 | 13900038 |
 | 13900042 |
-
-**Examples**
-
-See [copyDir](#copydir)
 
 
 ## copyDir
@@ -171,8 +111,6 @@ Copies the source directory to the destination path. This API uses an asynchrono
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -189,10 +127,6 @@ Copies the source directory to the destination path. This API uses an asynchrono
 | --- |
 | 13900015 |
 
-**Examples**
-
-See [copyDir](#copydir)
-
 
 ## copyDir
 
@@ -203,8 +137,6 @@ declare function copyDir(src: string, dest: string, mode: number, callback: Asyn
 Copies the source directory to the destination directory. You can set the copy mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -239,10 +171,6 @@ Copies the source directory to the destination directory. You can set the copy m
 | 13900038 |
 | 13900042 |
 
-**Examples**
-
-See [copyDir](#copydir)
-
 
 ## copyDir
 
@@ -253,8 +181,6 @@ declare function copyDir(src: string, dest: string, mode: number, callback: Asyn
 Copies the source directory to the destination path. You can set the copy mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -272,7 +198,3 @@ Copies the source directory to the destination path. You can set the copy mode. 
 | Error Code ID |
 | --- |
 | 13900015 |
-
-**Examples**
-
-See [copyDir](#copydir)

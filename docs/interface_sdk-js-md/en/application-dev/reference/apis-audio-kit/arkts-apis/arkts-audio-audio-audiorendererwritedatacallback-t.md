@@ -8,8 +8,6 @@ Defines the callback function used to write data to the audio renderer. Once the
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Parameters:**

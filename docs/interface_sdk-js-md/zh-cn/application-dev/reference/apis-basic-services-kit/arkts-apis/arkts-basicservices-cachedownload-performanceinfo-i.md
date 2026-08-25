@@ -4,124 +4,108 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## connectTime
 
 ```TypeScript
-readonly connectTime: double
+readonly connectTime: number
 ```
 
 从启动到tcp连接完成所需的时间，单位：毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## dnsTime
 
 ```TypeScript
-readonly dnsTime: double
+readonly dnsTime: number
 ```
 
 从启动到dns解析完成所需的时间，单位：毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## firstReceiveTime
 
 ```TypeScript
-readonly firstReceiveTime: double
+readonly firstReceiveTime: number
 ```
 
 从启动到接收第一个字节所需的时间，单位：毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## firstSendTime
 
 ```TypeScript
-readonly firstSendTime: double
+readonly firstSendTime: number
 ```
 
 从启动到开始发送第一个字节所需的时间，单位：毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## redirectTime
 
 ```TypeScript
-readonly redirectTime: double
+readonly redirectTime: number
 ```
 
 从启动到完成所有重定向步骤所需的时间，单位：毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## tlsTime
 
 ```TypeScript
-readonly tlsTime: double
+readonly tlsTime: number
 ```
 
 从启动到tls连接完成所需的时间，单位：毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## totalTime
 
 ```TypeScript
-readonly totalTime: double
+readonly totalTime: number
 ```
 
 从启动到完成请求所需的时间，单位：毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

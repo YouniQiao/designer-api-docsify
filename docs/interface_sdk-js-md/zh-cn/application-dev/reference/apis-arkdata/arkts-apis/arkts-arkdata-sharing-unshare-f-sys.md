@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## unshare
@@ -19,8 +19,6 @@ function unshare(
 根据指定的共享资源标识和共享参与者发起共享邀请，使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -42,58 +40,6 @@ function unshare(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-cloudData.sharing.unshare('sharing_resource_test', participants).then((result) => {
-  console.info(`unshare succeeded, result: ${result}`);
-}).catch((err) => {
-  console.error(`unshare failed, code is ${err.code},message is ${err.message}`);
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-cloudData.sharing.unshare('sharing_resource_test', participants, ((err: BusinessError|null, result) => {
-  if (err) {
-    console.error(`unshare failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info(`unshare succeeded, result: ${result}`);
-}))
-```
-
 
 ## unshare
 
@@ -107,8 +53,6 @@ function unshare(
 根据指定的共享资源标识和共享参与者发起共享邀请，使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -134,7 +78,3 @@ function unshare(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [unshare](#unshare)

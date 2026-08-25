@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## getFormsInfo
@@ -15,8 +15,6 @@ function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<A
 Obtains the application's widget information that meets a filter criterion on the device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,65 +36,6 @@ Obtains the application's widget information that meets a filter criterion on th
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.getFormsInfo((error, data) => {
-    if (error) {
-      console.error(`callback error, code: ${error.code}, message: ${error.message})`);
-      return;
-    }
-    console.info(`formProvider getFormsInfo, data: ${JSON.stringify(data)}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
-```TypeScript
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const filter: formInfo.FormInfoFilter = {
-  // get info of forms belong to module entry.
-  moduleName: 'entry'
-};
-try {
-  formProvider.getFormsInfo(filter, (error, data) => {
-    if (error) {
-      console.error(`callback error, code: ${error.code}, message: ${error.message})`);
-      return;
-    }
-    console.info(`formProvider getFormsInfo, data: ${JSON.stringify(data)}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
-```TypeScript
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const filter: formInfo.FormInfoFilter = {
-  // get info of forms belong to module entry.
-  moduleName: 'entry'
-};
-try {
-  formProvider.getFormsInfo(filter).then((data: formInfo.FormInfo[]) => {
-    console.info(`formProvider getFormsInfo, data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
 
 ## getFormsInfo
 
@@ -107,8 +46,6 @@ function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 Obtains the application's widget information on the device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -129,10 +66,6 @@ Obtains the application's widget information on the device. This API uses an asy
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-See [getFormsInfo](#getformsinfo)
-
 
 ## getFormsInfo
 
@@ -143,8 +76,6 @@ function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.
 Obtains information about widgets that meet the criteria of the current application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -170,7 +101,3 @@ Obtains information about widgets that meet the criteria of the current applicat
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-See [getFormsInfo](#getformsinfo)

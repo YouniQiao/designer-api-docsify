@@ -4,14 +4,12 @@ Defines the ad configuration.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## [key: string]
@@ -25,8 +23,6 @@ Custom parameters.<!--RP1--><!--RP1End-->
 **Type:** number \| boolean \| string \| undefined
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Sets the maximum ad content rating.W: ages 3+, all audiences. PI: ages 7+, paren
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -61,8 +55,6 @@ Sets whether to request only non-personalized ads.0: Request both personalized a
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -81,8 +73,6 @@ The default value is -1.
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

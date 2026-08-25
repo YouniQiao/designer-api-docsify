@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## DEVICE_POWERED_ON
@@ -17,8 +15,6 @@ DEVICE_POWERED_ON = 0
 开机后可访问。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -35,8 +31,6 @@ DEVICE_FIRST_UNLOCKED = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -51,8 +45,6 @@ DEVICE_UNLOCKED = 2
 **说明：** 未设置锁屏密码时，等同于开机后可访问。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

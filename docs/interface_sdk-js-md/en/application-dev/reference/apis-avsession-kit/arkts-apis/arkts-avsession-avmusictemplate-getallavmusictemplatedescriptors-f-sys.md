@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getAllAVMusicTemplateDescriptors
 
 ```TypeScript
-function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescriptor[]
+function getAllAVMusicTemplateDescriptors(userId?: number): AVMusicTemplateDescriptor[]
 ```
 
 Get all AVMusicTemplate descriptors.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -30,7 +28,7 @@ Get all AVMusicTemplate descriptors.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| userId | number | No |
 
 **Return value:**
 

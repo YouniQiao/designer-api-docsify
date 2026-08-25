@@ -1,7 +1,5 @@
 # ErrorConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (message?: string): Error
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@
 ```TypeScript
 new(message?: string): Error
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -50,5 +44,3 @@ readonly prototype: Error
 ```
 
 **Type:** Error
-
-**ArkTS mode:** 

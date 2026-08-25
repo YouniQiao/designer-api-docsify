@@ -4,8 +4,6 @@ Defines the routing state.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** RouterState
@@ -15,7 +13,7 @@ Defines the routing state.
 ## Modules to Import
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
 ```
 
 ## index
@@ -29,8 +27,6 @@ Index of the current page in the stack. The index starts from 1 from the bottom 
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
@@ -50,8 +46,6 @@ Name of the current page, that is, the file name.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** name
@@ -69,8 +63,6 @@ Path of the current page.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 

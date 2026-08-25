@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createWantRecord
@@ -15,8 +15,6 @@ function createWantRecord(want: Want): PasteDataRecord
 Creates a **PasteDataRecord** object of the Want type.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -35,15 +33,3 @@ Creates a **PasteDataRecord** object of the Want type.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-
-let object: Want = {
-    bundleName: "com.example.aafwk.test",
-    abilityName: "com.example.aafwk.test.TwoAbility"
-};
-let record: pasteboard.PasteDataRecord = pasteboard.createWantRecord(object);
-```

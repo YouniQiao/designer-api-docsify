@@ -4,8 +4,6 @@ Enumerates the notification level.This API is used to define the notification re
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## LEVEL_NONE
@@ -17,8 +15,6 @@ LEVEL_NONE = 0
 Notification is disabled.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,8 +28,6 @@ Notification is enabled, but the notification icon is not displayed in the statu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## LEVEL_LOW
@@ -45,8 +39,6 @@ LEVEL_LOW = 2
 Notification is enabled, and the notification icon is displayed in the status bar, with no alert tone and banner.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -60,8 +52,6 @@ Notification is enabled, and the notification icon is displayed in the status ba
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## LEVEL_HIGH
@@ -73,7 +63,5 @@ LEVEL_HIGH = 4
 Notification is enabled, and the notification icon is displayed in the status bar, with an alert tone and banner.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

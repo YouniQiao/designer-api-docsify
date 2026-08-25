@@ -4,14 +4,12 @@ PhotoViewPicker provides APIs for the user to select images and videos. Before u
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## select
@@ -30,8 +28,6 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,72 +53,6 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | 13900042 |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example01(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
-    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
-    photoSelectOptions.maxSelectNumber = 5;
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select(photoSelectOptions).then((photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
-      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
-    }).catch((err: BusinessError) => {
-      console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example02(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
-    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
-    photoSelectOptions.maxSelectNumber = 5;
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
-      if (err) {
-        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
-        return;
-      }
-      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example03(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select((err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
-      if (err) {
-        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
-        return;
-      }
-      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## select
 
 ```TypeScript
@@ -139,8 +69,6 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -161,10 +89,6 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | 13900042 |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
-**Examples**
-
-See [select](#select)
-
 ## select
 
 ```TypeScript
@@ -182,8 +106,6 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -200,7 +122,3 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900042 |
-
-**Examples**
-
-See [select](#select)

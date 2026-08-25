@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -23,8 +21,6 @@ AI会话创建时触发的回调函数。返回`true`跳过系统默认行为，
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -39,8 +35,6 @@ AI会话销毁时触发的回调函数，用于清理与自定义AI模型关联�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -54,8 +48,6 @@ onExecuteAIAction: OnExecuteAIAction
 AI会话执行操作时触发的回调函数。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,8 +64,6 @@ AI会话类型。
 **类型：** [AISessionType](arkts-arkweb-aisessiontype-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

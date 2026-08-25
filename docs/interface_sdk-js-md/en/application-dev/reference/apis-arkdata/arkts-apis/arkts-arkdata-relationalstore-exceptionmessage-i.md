@@ -4,29 +4,25 @@ Represents an exception message about the SQL statement executed by the database
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## code
 
 ```TypeScript
-code: int
+code: number
 ```
 
 Error code returned by the executed SQL statement. For details about the values and meanings, see [SQLite Error Codes](https://www.sqlite.org/rescode.html).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -42,8 +38,6 @@ Exception message returned by the executed SQL statement.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## sql
@@ -57,7 +51,5 @@ SQL statement that reports the error.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

@@ -4,8 +4,6 @@ Defines the vertical alignment mode of text. The default value is **BASELINE** (
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BASELINE
@@ -17,8 +15,6 @@ BASELINE = 0
 Aligns text along the baseline.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ Aligns text to the bottom.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -54,8 +48,6 @@ Aligns text vertically to the center.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -71,8 +63,6 @@ TOP = 3
 Aligns text to the top.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

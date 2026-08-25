@@ -4,14 +4,12 @@ Circular fence information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## coordinateSystemType
@@ -26,70 +24,60 @@ Coordinate system type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## expiration
 
 ```TypeScript
-expiration: double
+expiration: number
 ```
 
 Expiration of the circular fence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## latitude
 
 ```TypeScript
-latitude: double
+latitude: number
 ```
 
 Latitude of the center point of the circular fence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## longitude
 
 ```TypeScript
-longitude: double
+longitude: number
 ```
 
 Longitude of the center point of the circular fence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## radius
 
 ```TypeScript
-radius: double
+radius: number
 ```
 
 Radius of the circular fence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence

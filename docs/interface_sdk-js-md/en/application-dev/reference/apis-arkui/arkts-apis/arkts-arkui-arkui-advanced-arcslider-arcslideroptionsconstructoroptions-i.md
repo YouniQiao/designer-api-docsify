@@ -4,14 +4,12 @@ Defines the constructor information for **ArcSliderOptions**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstructorOptions, ArcSliderLayoutOptions, ArcSliderLayoutOptionsConstructorOptions, ArcSliderStyleOptions, ArcSliderStyleOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderValueOptionsConstructorOptions } from '@kit.ArkUI';
+import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstructorOptions, ArcSliderLayoutOptions, ArcSliderLayoutOptionsConstructorOptions, ArcSliderStyleOptions, ArcSliderStyleOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderValueOptionsConstructorOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## onChange
@@ -23,8 +21,6 @@ onChange?: ArcSliderChangeHandler
 Callback invoked to notify the application when the progress value of the arc slider changes.Default value: If this parameter is not provided, no callback will be invoked.@Trace
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -40,8 +36,6 @@ Callback invoked to notify the application when the arc slider is enlarged or re
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -56,8 +50,6 @@ Callback invoked to notify the application when the arc slider is touched.Defaul
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -70,11 +62,9 @@ digitalCrownSensitivity?: CrownSensitivity
 
 Sensitivity to the digital crown rotation.Default value: **CrownSensitivity.MEDIUM**@Trace
 
-**Type:** CrownSensitivity
+**Type:** [CrownSensitivity](arkts-arkui-crownsensitivity-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -92,8 +82,6 @@ Style of the arc slider.Default value: default values of all properties of [ArcS
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -110,8 +98,6 @@ Style of the arc slider.Default value: default values of all properties of [ArcS
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -127,8 +113,6 @@ Style of the arc slider.Default value: default values of all properties of [ArcS
 **Type:** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

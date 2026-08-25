@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## addSync
@@ -15,8 +15,6 @@ function addSync(attributes: AssetMap): void
 新增一条关键资产，使用同步方式返回结果。如果要设置[Tag.IS_PERSISTENT](arkts-assetstore-asset-tagtype-e.md)属性，需要申请ohos.permission.STORE_PERSISTENT_DATA权限， 申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -47,22 +45,3 @@ function addSync(attributes: AssetMap): void
 | [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
 | [24000014](../errorcode-asset.md#24000014-文件操作失败) |
 | [24000015](../errorcode-asset.md#24000015-获取系统时间失败) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let attr: asset.AssetMap = new Map();
-attr.set(asset.Tag.SECRET, stringToArray('demo_pwd'));
-attr.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-attr.set(asset.Tag.ACCESSIBILITY, asset.Accessibility.DEVICE_FIRST_UNLOCKED);
-attr.set(asset.Tag.DATA_LABEL_NORMAL_1, stringToArray('demo_label'));
-asset.addSync(attr);
-```

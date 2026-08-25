@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
@@ -27,8 +25,6 @@ and(): RdbPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
@@ -39,16 +35,7 @@ and(): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Lisa")
-    .and()
-    .equalTo("SALARY", 200.5)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## beginsWith
 
@@ -59,8 +46,6 @@ beginsWith(field: string, value: string): RdbPredicates
 配置谓词以匹配数据字段为string且值以指定字符串开头的字段。该方法等同于SQL语句中的"LIKE 'xxx%'"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -79,14 +64,7 @@ beginsWith(field: string, value: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.beginsWith("NAME", "os")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## beginWrap
 
@@ -98,8 +76,6 @@ beginWrap(): RdbPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
@@ -110,19 +86,7 @@ beginWrap(): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## between
 
@@ -133,8 +97,6 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 将谓词配置为匹配数据字段为ValueType且value在给定范围内的指定字段。该方法等同于SQL语句中的"BETWEEN"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -147,21 +109,14 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.between("AGE", 10, 50)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## constructor
 
@@ -172,8 +127,6 @@ constructor(name: string)
 构造函数。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -187,12 +140,6 @@ constructor(name: string)
 | --- | --- | --- |
 | name | string | 是 |
 
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-```
-
 ## contains
 
 ```TypeScript
@@ -202,8 +149,6 @@ contains(field: string, value: string): RdbPredicates
 配置谓词以匹配数据字段为string且value包含指定值的字段。该方法等同于SQL语句中的"LIKE '%xxx%'"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -222,14 +167,7 @@ contains(field: string, value: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.contains("NAME", "os")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## distinct
 
@@ -241,8 +179,6 @@ distinct(): RdbPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [distinct](arkts-arkdata-relationalstore-rdbpredicates-c.md#distinct)
@@ -253,14 +189,7 @@ distinct(): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Rose").distinct()
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## endsWith
 
@@ -271,8 +200,6 @@ endsWith(field: string, value: string): RdbPredicates
 配置谓词以匹配数据字段为string且值以指定字符串结尾的字段。该方法等同于SQL语句中的"LIKE '%xxx'"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -291,14 +218,7 @@ endsWith(field: string, value: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.endsWith("NAME", "se")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## endWrap
 
@@ -310,8 +230,6 @@ endWrap(): RdbPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
@@ -322,19 +240,7 @@ endWrap(): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## equalTo
 
@@ -345,8 +251,6 @@ equalTo(field: string, value: ValueType): RdbPredicates
 配置谓词以匹配数据字段为ValueType且值等于指定值的字段。该方法等同于SQL语句中的"="。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -365,14 +269,7 @@ equalTo(field: string, value: ValueType): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "lisi")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## glob
 
@@ -383,8 +280,6 @@ glob(field: string, value: string): RdbPredicates
 配置RdbPredicates匹配数据字段为string且值符合指定通配符模式的字段，其中*匹配任意多个字符，?匹配单个字符。该方法等同于SQL语句中的"GLOB"
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -403,14 +298,7 @@ glob(field: string, value: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.glob("NAME", "?h*g")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## greaterThan
 
@@ -421,8 +309,6 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 配置谓词以匹配数据字段为ValueType且值大于指定值的字段。该方法等同于SQL语句中的"&gt;"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -441,14 +327,7 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.greaterThan("AGE", 18)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## greaterThanOrEqualTo
 
@@ -459,8 +338,6 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 配置谓词以匹配数据字段为ValueType且value大于或等于指定值的字段。该方法等同于SQL语句中的"&gt;="。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -479,14 +356,7 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.greaterThanOrEqualTo("AGE", 18)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## groupBy
 
@@ -497,8 +367,6 @@ groupBy(fields: Array<string>): RdbPredicates
 配置RdbPredicates按指定列分组查询结果。该方法等同于SQL语句中的"GROUP BY"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -516,14 +384,7 @@ groupBy(fields: Array<string>): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.groupBy(["AGE", "NAME"])
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## in
 
@@ -534,8 +395,6 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 配置RdbPredicates以匹配数据字段为ValueType数组且值在给定范围内的指定字段。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -554,14 +413,7 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.in("AGE", [18, 20])
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## inAllDevices
 
@@ -573,8 +425,6 @@ inAllDevices(): RdbPredicates
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [inAllDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#inalldevices)
@@ -585,14 +435,7 @@ inAllDevices(): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.inAllDevices()
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## inDevices
 
@@ -608,8 +451,6 @@ inDevices(devices: Array<string>): RdbPredicates
 > 方法得到。<!--RP2End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -627,32 +468,7 @@ inDevices(devices: Array<string>): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-
-let dmInstance: deviceManager.DeviceManager;
-let deviceIds: Array<string> = [];
-let devices: Array<string> = [];
-
-deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
-  if (err) {
-    console.error("create device manager failed, err=" + err);
-    return;
-  }
-  dmInstance = manager;
-  devices = dmInstance.getTrustedDeviceListSync();
-  for (let i = 0; i < devices.length; i++) {
-    deviceIds[i] = devices[i].deviceId;
-  }
-})
-
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE");
-predicates.inDevices(deviceIds);
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## indexedBy
 
@@ -663,8 +479,6 @@ indexedBy(field: string): RdbPredicates
 配置RdbPredicates以指定索引列。该方法等同于SQL语句中的"INDEXED BY"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -682,14 +496,7 @@ indexedBy(field: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.indexedBy("SALARY_INDEX")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## isNotNull
 
@@ -700,8 +507,6 @@ isNotNull(field: string): RdbPredicates
 配置谓词以匹配值不为null的指定字段。该方法等同于SQL语句中的"IS NOT NULL"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -719,20 +524,13 @@ isNotNull(field: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.isNotNull("NAME")
-```
 
 ## isNull
 
@@ -743,8 +541,6 @@ isNull(field: string): RdbPredicates
 配置谓词以匹配值为null的字段。该方法等同于SQL语句中的"IS NULL"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -762,14 +558,7 @@ isNull(field: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.isNull("NAME")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## lessThan
 
@@ -780,8 +569,6 @@ lessThan(field: string, value: ValueType): RdbPredicates
 配置谓词以匹配数据字段为valueType且value小于指定值的字段。该方法等同于SQL语句中的"&lt;"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -800,14 +587,7 @@ lessThan(field: string, value: ValueType): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.lessThan("AGE", 20)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## lessThanOrEqualTo
 
@@ -818,8 +598,6 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 配置谓词以匹配数据字段为ValueType且value小于或等于指定值的字段。该方法等同于SQL语句中的"&lt;="。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -838,14 +616,7 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.lessThanOrEqualTo("AGE", 20)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## like
 
@@ -856,8 +627,6 @@ like(field: string, value: string): RdbPredicates
 配置谓词以匹配数据字段为string且值类似于指定字符串的字段。该方法等同于SQL语句中的"LIKE"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -876,14 +645,7 @@ like(field: string, value: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.like("NAME", "%os%")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## limitAs
 
@@ -894,8 +656,6 @@ limitAs(value: number): RdbPredicates
 设置最大数据记录数的谓词。该方法等同于SQL语句中的"LIMIT"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -913,14 +673,7 @@ limitAs(value: number): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Rose").limitAs(3)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## notBetween
 
@@ -931,8 +684,6 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 配置RdbPredicates以匹配数据字段为ValueType且value超出给定范围的指定字段。该方法等同于SQL语句中的"NOT BETWEEN"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -945,21 +696,14 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.notBetween("AGE", 10, 50)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## notEqualTo
 
@@ -970,8 +714,6 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 配置谓词以匹配数据字段为ValueType且值不等于指定值的字段。该方法等同于SQL语句中的"!="。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -990,14 +732,7 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.notEqualTo("NAME", "lisi")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## notIn
 
@@ -1008,8 +743,6 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 将RdbPredicates配置为匹配数据字段为ValueType且值超出给定范围的指定字段。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -1028,14 +761,7 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.notIn("NAME", ["Lisa", "Rose"])
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## offsetAs
 
@@ -1046,8 +772,6 @@ offsetAs(rowOffset: number): RdbPredicates
 配置RdbPredicates以指定返回结果的起始位置。需要同步调用limitAs接口指定查询数量，否则将无查询结果。如需查询指定偏移位置后的所有行，limitAs接口调用需传参数-1。该方法等同于SQL语句中的"OFFSET"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -1065,14 +789,7 @@ offsetAs(rowOffset: number): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## or
 
@@ -1084,8 +801,6 @@ or(): RdbPredicates
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
@@ -1096,16 +811,7 @@ or(): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Lisa")
-    .or()
-    .equalTo("NAME", "Rose")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## orderByAsc
 
@@ -1116,8 +822,6 @@ orderByAsc(field: string): RdbPredicates
 配置谓词以匹配其值按升序排序的列。该方法等同于SQL语句中的"ORDER BY"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -1135,14 +839,7 @@ orderByAsc(field: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.orderByAsc("NAME")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## orderByDesc
 
@@ -1153,8 +850,6 @@ orderByDesc(field: string): RdbPredicates
 配置谓词以匹配其值按降序排序的列。该方法等同于SQL语句中的"ORDER BY"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -1172,11 +867,4 @@ orderByDesc(field: string): RdbPredicates
 
 | 类型 |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**示例**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.orderByDesc("AGE")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## executePeriodically
@@ -20,8 +20,6 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 > - 执行的任务不能拥有依赖关系。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -45,86 +43,6 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 | [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) |
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
 
-**示例**
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): void {
-  console.info("printArgs: " + args);
-}
-
-@Concurrent
-function testExecutePeriodically(args: number): void {
-  let t = Date.now();
-  while ((Date.now() - t) < args) {
-    continue;
-  }
-  taskpool.Task.sendData(args); // 向宿主线程发送消息
-}
-
-function printResult(data: number): void {
-  console.info("taskpool: data is: " + data);
-}
-
-function taskpoolTest() {
-  try {
-    let task: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-    taskpool.executePeriodically(1000, task); // 1000: period is 1000ms
-  } catch (e) {
-    console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-  }
-
-  try {
-    let periodicTask: taskpool.Task = new taskpool.Task(testExecutePeriodically, 200); // 200: test number
-    periodicTask.onReceiveData(printResult);
-    taskpool.executePeriodically(1000, periodicTask); // 1000: period is 1000ms
-  } catch (e) {
-    console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-  }
-}
-
-taskpoolTest();
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): void {
-  console.info("printArgs: " + args);
-}
-
-@Concurrent
-function testExecutePeriodically(args: number): void {
-  let t = Date.now();
-  while ((Date.now() - t) < args) {
-    continue;
-  }
-  taskpool.Task.sendData(args); // 向宿主线程发送消息
-}
-
-function printResult(data: number): void {
-  console.info("taskpool: data is: " + data);
-}
-
-function taskpoolTest() {
-  try {
-    let task: taskpool.Task = new taskpool.GenericsTask<[number], void>(printArgs, 100); // 100: test number
-    taskpool.executePeriodically<[number], void>(1000, task); // 1000: period is 1000ms
-  } catch (e) {
-    console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-  }
-
-  try {
-    let periodicTask: taskpool.Task = new taskpool.GenericsTask<[number], void>(testExecutePeriodically, 200); // 200: test number
-    periodicTask.onReceiveData(printResult);
-    taskpool.executePeriodically<[number], void>(1000, periodicTask); // 1000: period is 1000ms
-  } catch (e) {
-    console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-  }
-}
-
-taskpoolTest();
-```
-
 
 ## executePeriodically
 
@@ -135,8 +53,6 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 周期执行泛型任务，使用Promise异步回调。 executePeriodically任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -159,7 +75,3 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 | [10200028](../errorcode-utils.md#10200028-延时时间小于零) |
 | [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) |
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-
-**示例**
-
-参见 [executePeriodically](#executeperiodically)

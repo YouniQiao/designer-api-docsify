@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## hasRight
@@ -15,8 +15,6 @@ function hasRight(deviceName: string): boolean
 Checks whether the application has the permission to access the device. Checks whether the user, for example, the application or system, has the device access permissions. The value ** true** is returned if the user has the device access permissions; the value **false** is returned otherwise.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -38,21 +36,3 @@ Checks whether the application has the permission to access the device. Checks w
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-function hasRight(): boolean {
-  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-  if (!devicesList || devicesList.length == 0) {
-    console.info(`device list is empty`);
-    return false;
-  }
-
-  let device: usbManager.USBDevice = devicesList[0];
-  usbManager.requestRight(device.name);
-  let right: boolean = usbManager.hasRight(device.name);
-  console.info(`${right}`);
-  return right;
-}
-```

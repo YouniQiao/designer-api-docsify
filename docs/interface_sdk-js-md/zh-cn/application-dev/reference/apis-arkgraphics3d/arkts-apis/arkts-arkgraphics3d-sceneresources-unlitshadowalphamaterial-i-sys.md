@@ -6,8 +6,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -23,8 +21,6 @@ baseColor: MaterialProperty
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## stopBluetoothSearch
@@ -15,8 +15,6 @@ function stopBluetoothSearch(callback?: Callback<BluetoothScanResult>): void
 停止蓝牙扫描，该回调函数需要与startBluetoothSearch接口传入的回调函数保持一致。若无此参数，则取消当前类型的所有订阅。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,25 +34,3 @@ function stopBluetoothSearch(callback?: Callback<BluetoothScanResult>): void
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
- 
-let request: geoLocationManager.BluetoothSearchRequestParams = {
-  'rssiThreshold': -100,
-  'deviceIdArray': ['98:56:07:E6:AA:46','4E:E6:D2:02:27:F9']
-};
-let callback = (bluetoothScanResult: geoLocationManager.BluetoothScanResult) => {
-  if (bluetoothScanResult) {
-    console.info('bluetoothScanResult: deviceId=' + bluetoothScanResult.deviceId);
-  }
-};
-try {
-  geoLocationManager.startBluetoothSearch(request, callback);
-  geoLocationManager.stopBluetoothSearch(callback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

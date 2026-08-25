@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ HIGH_SPEED_INTERVAL_4_5 = 0
 表示连接间隔为4.5毫秒。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ HIGH_SPEED_INTERVAL_4_875 = 1
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -55,8 +49,6 @@ MID_SPEED_INTERVAL_11_25 = 2
 表示连接间隔为11.25毫秒。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,8 +66,6 @@ MID_SPEED_INTERVAL_15 = 3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -91,8 +81,6 @@ MID_SPEED_INTERVAL_50 = 4
 表示连接间隔为50毫秒。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,8 +98,6 @@ LOW_SPEED_INTERVAL_100 = 5
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -127,8 +113,6 @@ LOW_SPEED_INTERVAL_150 = 6
 表示连接间隔为150毫秒。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,8 +130,6 @@ LOW_SPEED_INTERVAL_200 = 7
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -164,8 +146,6 @@ LOW_SPEED_INTERVAL_300 = 8
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -181,8 +161,6 @@ LOW_SPEED_INTERVAL_500 = 9
 表示连接间隔为500毫秒。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

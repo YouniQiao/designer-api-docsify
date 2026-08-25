@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { locationManager } from '@kit.MDMKit';
+import { locationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setLocationPolicy
@@ -20,8 +20,6 @@ Sets a location service policy. This API can be used in enterprise management an
 > - Default: This option removes policy restrictions and allows the user to control the setting independently.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
@@ -44,23 +42,3 @@ Sets a location service policy. This API can be used in enterprise management an
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { locationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-    locationManager.setLocationPolicy(wantTemp, locationManager.LocationPolicy.DISALLOW_LOCATION_SERVICE);
-    console.info(`Succeeded in setting location patch tag.`);
-} catch(err) {
-    console.error(`Failed to get location patch tag. Code: ${err.code}, message: ${err.message}`);
-}
-```

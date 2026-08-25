@@ -4,8 +4,6 @@ USB设备端口。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md)
@@ -17,7 +15,7 @@ USB设备端口。
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## id
@@ -31,8 +29,6 @@ USB端口唯一标识。
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -54,8 +50,6 @@ USB端口角色。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [status](arkts-basicservices-usbmanager-usbport-i-sys.md#status)
@@ -75,8 +69,6 @@ USB端口所支持的模式的数字组合掩码。
 **类型：** PortModeType
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 

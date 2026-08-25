@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## allowUserToCancel
@@ -27,8 +25,6 @@ allowUserToCancel?: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -46,8 +42,6 @@ Bundle名称。
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -64,8 +58,6 @@ setter: KeepAliveSetter
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ setter: KeepAliveSetter
 ## setterUserId
 
 ```TypeScript
-setterUserId?: int
+setterUserId?: number
 ```
 
 应用保活设置者的用户ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -99,8 +89,6 @@ type: KeepAliveAppType
 **类型：** [KeepAliveAppType](arkts-ability-appmanager-keepaliveapptype-e-sys.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

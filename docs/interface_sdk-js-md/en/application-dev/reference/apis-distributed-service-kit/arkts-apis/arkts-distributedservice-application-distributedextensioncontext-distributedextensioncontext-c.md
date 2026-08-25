@@ -6,33 +6,23 @@ Class inherited for the distributed extension function.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
+import { DistributedExtensionContext } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## connectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
-```
-
-ArkTS-Sta:
-```TypeScript
-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
 Connects to a remote Service extension ability.This method connects to a Service extension ability on a remote device. You must implement the ConnectOptions interface to obtain the proxy of the target service extension when connected.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,7 +39,7 @@ Connects to a remote Service extension ability.This method connects to a Service
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **Error codes:**
 
@@ -71,21 +61,13 @@ Connects to a remote Service extension ability.This method connects to a Service
 
 ## disconnectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 disconnectServiceExtensionAbility(connection: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-disconnectServiceExtensionAbility(connection: long): Promise<void>
 ```
 
 Disconnects from a remote Service extension ability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,7 +77,7 @@ Disconnects from a remote Service extension ability.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| connection | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| connection | number | Yes |
 
 **Return value:**
 

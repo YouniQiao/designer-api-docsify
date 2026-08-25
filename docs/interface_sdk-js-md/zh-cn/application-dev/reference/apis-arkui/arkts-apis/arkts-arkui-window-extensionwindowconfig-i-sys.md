@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## subWindowOptions
@@ -27,8 +25,6 @@ subWindowOptions?: SubWindowOptions
 **类型：** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ systemWindowOptions?: SystemWindowOptions
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -67,8 +61,6 @@ windowAttribute: ExtensionWindowAttribute
 **类型：** [ExtensionWindowAttribute](arkts-arkui-window-extensionwindowattribute-e-sys.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,8 +80,6 @@ windowName: string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -107,8 +97,6 @@ windowRect: Rect
 **类型：** Rect
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

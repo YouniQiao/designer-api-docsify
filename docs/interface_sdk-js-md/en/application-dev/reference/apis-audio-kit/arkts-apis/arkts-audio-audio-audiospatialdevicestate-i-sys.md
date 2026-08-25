@@ -4,8 +4,6 @@ Describes spatial device state.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes spatial device state.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## address
@@ -27,8 +25,6 @@ Spatial device address.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -46,8 +42,6 @@ Whether the spatial device supports head tracking.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Whether the spatial device supports spatial rendering.
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -82,21 +74,6 @@ Spatial device type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let spatialDeviceState: audio.AudioSpatialDeviceState = {
-  address: "123",
-  isSpatializationSupported: true,
-  isHeadTrackingSupported: true,
-  spatialDeviceType: audio.AudioSpatialDeviceType.SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE
-};
-```

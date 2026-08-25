@@ -4,14 +4,12 @@ Describe the protocol data is received from remote host.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@kit.ConnectivityKit';
+import { hid } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## protocol
@@ -25,8 +23,6 @@ protocol of protocol data.
 **Type:** ProtocolType
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

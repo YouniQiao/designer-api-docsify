@@ -4,8 +4,6 @@ Represents the cloud database lock information.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Represents the cloud database lock information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'kits/@kit.ArkData';
 ```
 
 ## interval
 
 ```TypeScript
-interval: int
+interval: number
 ```
 
 Lock period of the cloud database, in seconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -37,16 +33,14 @@ Lock period of the cloud database, in seconds.
 ## lockId
 
 ```TypeScript
-lockId: int
+lockId: number
 ```
 
 Lock ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

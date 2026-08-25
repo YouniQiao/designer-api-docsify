@@ -4,8 +4,6 @@ Enumerates the background network policies.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ NET_BACKGROUND_POLICY_NONE = 0
 No background network policy is specified. This is the default value.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -36,8 +32,6 @@ Background applications are allowed to access a metered network.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Applications running in the background are not allowed to access a metered netwo
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ NET_BACKGROUND_POLICY_TRUSTLIST = 3
 Only applications on the allowlist are allowed to access metered networks when they are running in the background.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

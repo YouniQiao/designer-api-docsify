@@ -1,12 +1,10 @@
 # ToggleConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。
 
 **继承/实现关系：** ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,8 +25,6 @@ enabled: boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -47,8 +43,6 @@ isOn: boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -66,8 +60,6 @@ triggerChange: Callback<boolean>
 **类型：** Callback&lt;boolean&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

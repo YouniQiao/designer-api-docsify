@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_TYPE_DEFAULT
@@ -17,8 +15,6 @@ CAMERA_TYPE_DEFAULT = 0
 默认相机类型。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ CAMERA_TYPE_WIDE_ANGLE = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -49,8 +43,6 @@ CAMERA_TYPE_ULTRA_WIDE = 2
 超广角相机。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ CAMERA_TYPE_TELEPHOTO = 3
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -81,8 +71,6 @@ CAMERA_TYPE_TRUE_DEPTH = 4
 带景深信息的相机。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

@@ -4,14 +4,12 @@ The **pointer** module provides APIs related to pointer attribute management, su
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## Summary

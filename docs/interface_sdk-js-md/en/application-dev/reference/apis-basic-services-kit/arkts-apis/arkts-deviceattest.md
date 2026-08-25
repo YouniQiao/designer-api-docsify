@@ -4,14 +4,12 @@ xts_device_attest authResult information@namespace deviceAttest
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.XTS.DeviceAttest
 
 ## Modules to Import
 
 ```TypeScript
-import { deviceAttest } from '@kit.BasicServicesKit';
+import { deviceAttest } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

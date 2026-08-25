@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## appId
@@ -25,8 +23,6 @@ readonly appId: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ readonly appIdentifier: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -62,8 +56,6 @@ readonly certificate?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -79,8 +71,6 @@ readonly fingerprint: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -10,8 +10,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -31,8 +29,6 @@ buttonType?: ButtonType
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -45,13 +41,11 @@ buttonType?: ButtonType
 icon?: SaveIconStyle
 ```
 
-设置保存控件的图标风格。 <br>不传入该参数表示不显示图标；若同时也不传text，整体配置将显示为默认样式。
+设置保存控件的图标风格。 不传入该参数表示不显示图标；若同时也不传text，整体配置将显示为默认样式。
 
 **类型：** [SaveIconStyle](arkts-arkui-saveiconstyle-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,13 +59,11 @@ icon?: SaveIconStyle
 text?: SaveDescription
 ```
 
-设置保存控件的文本描述。 <br>不传入该参数表示不显示文本描述；若同时也不传icon，整体配置将显示为默认样式。
+设置保存控件的文本描述。 不传入该参数表示不显示文本描述；若同时也不传icon，整体配置将显示为默认样式。
 
 **类型：** [SaveDescription](arkts-arkui-savedescription-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [geoLocationManager/geoLocationManager](arkts-geolocationmanager.md)
@@ -13,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
+import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from 'kits/@kit.LocationKit';
 ```
 
 ## getLocation
@@ -25,8 +23,6 @@ static getLocation(options?: GetLocationOption): void
 Obtains the geographic location.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -44,23 +40,6 @@ Obtains the geographic location.
 | --- | --- | --- |
 | options | [GetLocationOption](arkts-location-system-geolocation-getlocationoption-i.md) | No |
 
-**Examples**
-
-```TypeScript
-export default {    
-  getLocation() {        
-    geolocation.getLocation({            
-      success: function(data) {                
-        console.info('success get location data. latitude:' + data.latitude);            
-      },            
-      fail: function(data, code) {                
-        console.info('fail to get location. code:' + code + ', data:' + data);            
-      }
-    });    
-  }
-}
-```
-
 ## getLocationType
 
 ```TypeScript
@@ -70,8 +49,6 @@ static getLocationType(options?: GetLocationTypeOption): void
 Obtains the location types supported by the system.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -85,23 +62,6 @@ Obtains the location types supported by the system.
 | --- | --- | --- |
 | options | [GetLocationTypeOption](arkts-location-system-geolocation-getlocationtypeoption-i.md) | No |
 
-**Examples**
-
-```TypeScript
-export default {    
-  getLocationType() {        
-    geolocation.getLocationType({            
-      success: function(data) {                
-        console.info('success get location type:' + data.types[0]);            
-      },            
-      fail: function(data, code) {                
-        console.info('fail to get location. code:' + code + ', data:' + data);            
-       },        
-     });    
-  },
-}
-```
-
 ## getSupportedCoordTypes
 
 ```TypeScript
@@ -111,8 +71,6 @@ static getSupportedCoordTypes(): Array<string>
 Obtains the supported coordinate system types.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -124,16 +82,6 @@ Obtains the supported coordinate system types.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-**Examples**
-
-```TypeScript
-export default {    
-  getSupportedCoordTypes() {       
-    var types = geolocation.getSupportedCoordTypes();   
-  },
-}
-```
-
 ## subscribe
 
 ```TypeScript
@@ -143,8 +91,6 @@ static subscribe(options: SubscribeLocationOption): void
 Listens to the geographical location. If this method is called multiple times, the last call takes effect.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -162,23 +108,6 @@ Listens to the geographical location. If this method is called multiple times, t
 | --- | --- | --- |
 | options | [SubscribeLocationOption](arkts-location-system-geolocation-subscribelocationoption-i.md) | Yes |
 
-**Examples**
-
-```TypeScript
-export default {    
-  subscribe() {        
-    geolocation.subscribe({            
-      success: function(data) {                
-        console.info('get location. latitude:' + data.latitude);            
-      },            
-      fail: function(data, code) {                
-        console.info('fail to get location. code:' + code + ', data:' + data);            
-      },        
-    });    
-  },
-}
-```
-
 ## unsubscribe
 
 ```TypeScript
@@ -189,8 +118,6 @@ Cancels listening to the geographical location.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** locationChange
@@ -200,13 +127,3 @@ Cancels listening to the geographical location.
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Location.Location.Lite
-
-**Examples**
-
-```TypeScript
-export default {    
-  unsubscribe() {        
-    geolocation.unsubscribe();    
-  }
-}
-```

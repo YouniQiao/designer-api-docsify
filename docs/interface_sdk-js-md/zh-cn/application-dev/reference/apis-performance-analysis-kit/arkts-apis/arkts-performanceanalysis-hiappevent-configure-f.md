@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## configure
@@ -15,8 +15,6 @@ function configure(config: ConfigOption): void
 应用事件打点配置方法，支持配置打点开关和目录存储配额大小。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,19 +32,3 @@ function configure(config: ConfigOption): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [11103001](../errorcode-hiappevent.md#11103001-非法的最大存储配额值) |
-
-**示例**
-
-```TypeScript
-// 配置打点开关为关闭状态
-let config1: hiAppEvent.ConfigOption = {
-  disable: true,
-};
-hiAppEvent.configure(config1);
-
-// 配置文件目录存储配额为100M
-let config2: hiAppEvent.ConfigOption = {
-  maxStorage: '100MB',
-};
-hiAppEvent.configure(config2);
-```

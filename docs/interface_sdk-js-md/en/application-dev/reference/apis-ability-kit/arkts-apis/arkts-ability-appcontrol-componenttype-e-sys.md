@@ -4,8 +4,6 @@ Enumerates the types of application components that function as the displayed pa
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ UIAbility component.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ UI_EXTENSION = 2
 UIExtensionAbility component.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 

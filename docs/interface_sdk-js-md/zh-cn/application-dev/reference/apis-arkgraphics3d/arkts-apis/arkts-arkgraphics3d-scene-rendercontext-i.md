@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## getRenderResourceFactory
@@ -18,8 +16,6 @@ getRenderResourceFactory() : RenderResourceFactory
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **返回值：**
@@ -27,22 +23,6 @@ getRenderResourceFactory() : RenderResourceFactory
 | 类型 |
 | --- |
 | [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) |
-
-**示例**
-
-```TypeScript
-import { Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
-
-function getRenderResourceFactory(): void {
-  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
-  if (!renderContext) {
-    console.error("Failed to get default render context");
-    return;
-  }
-  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
-  console.info("TEST getRenderResourceFactory");
-}
-```
 
 ## loadPlugin
 
@@ -53,8 +33,6 @@ loadPlugin(name: string): Promise<boolean>
 用于加载指定名称的插件，通过插件名称查找并加载对应的插件资源，使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -70,21 +48,6 @@ loadPlugin(name: string): Promise<boolean>
 | --- |
 | Promise & lt;boolean & gt; |
 
-**示例**
-
-```TypeScript
-import { Scene, RenderContext } from '@kit.ArkGraphics3D';
-
-function loadPlugin(): Promise<boolean> {
-  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
-  if (!renderContext) {
-    console.error("Failed to get default render context");
-    return Promise.reject(new Error("RenderContext is null"));
-  }
-  return renderContext.loadPlugin("pluginName");
-}
-```
-
 ## registerResourcePath
 
 ```TypeScript
@@ -94,8 +57,6 @@ registerResourcePath(protocol: string, uri: string): boolean
 注册shader等资产文件所在的路径目录及其检索名，通过检索名查找并替换shader内部关联文件的路径描述，找到对应的资产路径目录， 实现资产及其关联文件的正确加载。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -111,33 +72,3 @@ registerResourcePath(protocol: string, uri: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { Scene, RenderContext } from '@kit.ArkGraphics3D';
-
-function registerResourcePath(): void {
-  // 创建shader资源，路径和文件名可根据项目实际资源自定义
-  Scene.load($rawfile("shaders/custom_shader/custom_material_sample.shader"))
-    .then(() => {
-      const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
-      if (!renderContext) {
-        console.error("Failed to get default render context");
-        return false;
-      }
-      // 注册路径检索名"myproto"及其对应的资产路径目录"OhosRawFile://shaders/custom_shader/"
-      // 当shader内部通过检索名引用关联文件，如路径为"myproto://textures/base.png"，
-      // 系统会将"myproto://"替换为"OhosRawFile://shaders/custom_shader/"，
-      // 最终从"OhosRawFile://shaders/custom_shader/textures/base.png"加载关联文件
-      return renderContext.registerResourcePath("myproto", "OhosRawFile://shaders/custom_shader/");
-    })
-    .then(result => {
-      if (result) {
-        console.info("Succeeded in registering resource path");
-      } else {
-        console.error("Failed to register resource path");
-      }
-    });
-}
-```

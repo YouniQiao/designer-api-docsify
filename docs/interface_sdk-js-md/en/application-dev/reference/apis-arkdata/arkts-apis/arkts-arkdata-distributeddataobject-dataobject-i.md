@@ -4,14 +4,12 @@ Provides APIs for managing a distributed data object. Before using any API of th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'kits/@kit.ArkData';
 ```
 
 ## bindAssetStore
@@ -23,8 +21,6 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<voi
 Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -43,113 +39,6 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { commonType } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Note {
-  title: string | undefined
-  text: string | undefined
-  attachment: commonType.Asset | undefined
-
-  constructor(title: string | undefined, text: string | undefined, attachment: commonType.Asset | undefined) {
-    this.title = title;
-    this.text = text;
-    this.attachment = attachment;
-  }
-}
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let attachment: commonType.Asset = {
-      name: 'test_img.jpg',
-      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
-      path: '/dir/test_img.jpg',
-      createTime: '2024-01-02 10:00:00',
-      modifyTime: '2024-01-02 10:00:00',
-      size: '5',
-      status: commonType.AssetStatus.ASSET_NORMAL
-    }
-    let note: Note = new Note('test', 'test', attachment);
-    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
-    g_object.setSessionId('123456');
-
-    const bindInfo: distributedDataObject.BindInfo = {
-      storeName: 'notepad',
-      tableName: 'note_t',
-      primaryKey: {
-        'uuid': '00000000-0000-0000-0000-000000000000'
-      },
-      field: 'attachment',
-      assetName: attachment.name as string
-    }
-
-    g_object.bindAssetStore('attachment', bindInfo, (err: BusinessError) => {
-      if (err) {
-        console.error('bindAssetStore failed.');
-      }
-      console.info('bindAssetStore success.');
-    });
-  }
-}
-```
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { commonType } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Note {
-  title: string | undefined
-  text: string | undefined
-  attachment: commonType.Asset | undefined
-
-  constructor(title: string | undefined, text: string | undefined, attachment: commonType.Asset | undefined) {
-    this.title = title;
-    this.text = text;
-    this.attachment = attachment;
-  }
-}
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let attachment: commonType.Asset = {
-      name: 'test_img.jpg',
-      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
-      path: '/dir/test_img.jpg',
-      createTime: '2024-01-02 10:00:00',
-      modifyTime: '2024-01-02 10:00:00',
-      size: '5',
-      status: commonType.AssetStatus.ASSET_NORMAL
-    }
-    let note: Note = new Note('test', 'test', attachment);
-    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
-    g_object.setSessionId('123456');
-
-    const bindInfo: distributedDataObject.BindInfo = {
-      storeName: 'notepad',
-      tableName: 'note_t',
-      primaryKey: {
-        'uuid': '00000000-0000-0000-0000-000000000000'
-      },
-      field: 'attachment',
-      assetName: attachment.name as string
-    }
-
-    g_object.bindAssetStore("attachment", bindInfo).then(() => {
-      console.info('bindAssetStore success.');
-    }).catch((err: BusinessError) => {
-      console.error("bindAssetStore failed, error code = " + err.code);
-    });
-  }
-}
-```
-
 ## bindAssetStore
 
 ```TypeScript
@@ -159,8 +48,6 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -184,10 +71,6 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-See [bindAssetStore](#bindassetstore)
-
 ## off('change')
 
 ```TypeScript
@@ -197,8 +80,6 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 Unsubscribes from data changes of this distributed data object.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -215,22 +96,6 @@ Unsubscribes from data changes of this distributed data object.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// Unregister the specified data change callback.
-g_object.off("change", (sessionId: string, fields: Array<string>) => {
-    console.info("change" + sessionId);
-    if (g_object != null && fields != null && fields != undefined) {
-        for (let index: number = 0; index < fields.length; index++) {
-            console.info("changed !" + fields[index] + " " + g_object[fields[index]]);
-        }
-    }
-});
-// Unregister all data change callbacks.
-g_object.off("change");
-```
-
 ## off('status')
 
 ```TypeScript
@@ -243,8 +108,6 @@ off(
 Unsubscribes from the status change of this distributed data object.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -261,17 +124,6 @@ Unsubscribes from the status change of this distributed data object.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// Unregister the specified status change callback.
-g_object.off("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info("status changed " + sessionId + " " + status + " " + networkId);
-});
-// Unregister all status change callbacks.
-g_object.off("status");
-```
-
 ## off('change')
 
 ```TypeScript
@@ -282,8 +134,6 @@ Unsubscribes from data changes of this distributed object.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -292,41 +142,6 @@ Unsubscribes from data changes of this distributed object.
 | --- | --- | --- |
 | type | 'change' | Yes |
 | callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No |
-
-**Examples**
-
-```TypeScript
-const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info("change callback1 " + sessionId);
-  if (fields != null && fields != undefined) {
-      for (let index: number = 0; index < fields.length; index++) {
-          console.info("change !" + fields[index]);
-      }
-  }
-}
-
-const changeCallback2: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info("change callback2 " + sessionId);
-  if (fields != null && fields != undefined) {
-      for (let index: number = 0; index < fields.length; index++) {
-          console.info("change !" + fields[index]);
-      }
-  }
-}
-
-try {
-  // Unregister a single data change callback function.
-  g_object.on("change", changeCallback1);
-  g_object.off("change", changeCallback1);
-
-  // Unregister all data change callback functions.
-  g_object.on("change", changeCallback1);
-  g_object.on("change", changeCallback2);
-  g_object.off("change");
-} catch (error) {
-  console.error("Execute failed, error code =  " + error.code);
-}
-```
 
 ## off('status')
 
@@ -338,8 +153,6 @@ Unsubscribes from status changes of this distributed object.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -348,30 +161,6 @@ Unsubscribes from status changes of this distributed object.
 | --- | --- | --- |
 | type | 'status' | Yes |
 | callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No |
-
-**Examples**
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info("status callback1" + sessionId);
-}
-
-const statusCallback2: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info("status callback2" + sessionId);
-}
-try {
-  // Unregister a single status change callback function.
-  g_object.on("status", statusCallback1);
-  g_object.off("status", statusCallback1);
-
-  // Unregister all status change callback functions.
-  g_object.on("status", statusCallback1);
-  g_object.on("status", statusCallback2);
-  g_object.off("status");
-} catch (error) {
-  console.error("Execute failed, error code =  " + error.code);
-}
-```
 
 ## off('progressChanged')
 
@@ -383,8 +172,6 @@ Unsubscribes from asset transfer progress changes.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -393,92 +180,6 @@ Unsubscribes from asset transfer progress changes.
 | --- | --- | --- |
 | type | 'progressChanged' | Yes |
 | callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No |
-
-**Examples**
-
-```TypeScript
-const progressChangedCallback1: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
-  console.info("progressChanged callback1" + sessionId);
-  console.info("progressChanged callback1" + progress);
-}
-
-const progressChangedCallback2: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
-  console.info("progressChanged callback2" + sessionId);
-  console.info("progressChanged callback2" + progress);
-}
-try {
-  g_object.on("progressChanged", progressChangedCallback1);
-  // Unsubscribes from the asset transfer progress changes.
-  g_object.off("progressChanged", progressChangedCallback1);
-
-  g_object.on("progressChanged", progressChangedCallback1);
-  g_object.on("progressChanged", progressChangedCallback2);
-  // Unsubscribes from all asset transfer progress changes.
-  g_object.off("progressChanged");
-} catch (error) {
-  console.error("Execute failed, error code =  " + error.code);
-}
-```
-
-## offChange
-
-```TypeScript
-offChange(callback?: DataObserver): void
-```
-
-Off watch of change.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No |
-
-## offProgressChanged
-
-```TypeScript
-offProgressChanged(callback?: ProgressObserver): void
-```
-
-Unsubscribes from the asset sync progress.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No |
-
-## offStatus
-
-```TypeScript
-offStatus(callback?: StatusObserver): void
-```
-
-Off watch of status.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No |
 
 ## on('change')
 
@@ -489,8 +190,6 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void 
 Subscribes to data changes of this distributed data object.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -507,19 +206,6 @@ Subscribes to data changes of this distributed data object.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-g_object.on("change", (sessionId: string, fields: Array<string>) => {
-    console.info("change" + sessionId);
-    if (g_object != null && fields != null && fields != undefined) {
-        for (let index: number = 0; index < fields.length; index++) {
-            console.info("changed !" + fields[index] + " " + g_object[fields[index]]);
-        }
-    }
-});
-```
-
 ## on('status')
 
 ```TypeScript
@@ -532,8 +218,6 @@ on(
 Subscribes to status changes of this distributed data object.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -550,14 +234,6 @@ Subscribes to status changes of this distributed data object.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-g_object.on("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info("status changed " + sessionId + " " + status + " " + networkId);
-});
-```
-
 ## on('change')
 
 ```TypeScript
@@ -568,8 +244,6 @@ Subscribes to data changes of this distributed data object.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -578,24 +252,6 @@ Subscribes to data changes of this distributed data object.
 | --- | --- | --- |
 | type | 'change' | Yes |
 | callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info("change callback1 " + sessionId);
-  if (fields != null && fields != undefined) {
-      for (let index: number = 0; index < fields.length; index++) {
-          console.info("change !" + fields[index]);
-      }
-  }
-}
-try {
-  g_object.on("change", changeCallback1);
-} catch (error) {
-  console.error("Execute failed, error code =  " + error.code);
-}
-```
 
 ## on('status')
 
@@ -607,8 +263,6 @@ Subscribes to the status changes of this distributed object.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -617,19 +271,6 @@ Subscribes to the status changes of this distributed object.
 | --- | --- | --- |
 | type | 'status' | Yes |
 | callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info("status callback " + sessionId);
-}
-try {
-  g_object.on("status", statusCallback1);
-} catch (error) {
-  console.error("Execute failed, error code =  " + error.code);
-}
-```
 
 ## on('progressChanged')
 
@@ -641,8 +282,6 @@ Subscribes to the asset transfer progress changes.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **Parameters:**
@@ -651,82 +290,6 @@ Subscribes to the asset transfer progress changes.
 | --- | --- | --- |
 | type | 'progressChanged' | Yes |
 | callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-const progressChangedCallback: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
-  console.info("progressChanged callback" + sessionId);
-  console.info("progressChanged callback" + progress);
-}
-try {
-  g_object.on("progressChanged", progressChangedCallback);
-} catch (error) {
-  console.error("Execute failed, error code =  " + error.code);
-}
-```
-
-## onChange
-
-```TypeScript
-onChange(callback: DataObserver): void
-```
-
-On watch of change.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes |
-
-## onProgressChanged
-
-```TypeScript
-onProgressChanged(callback: ProgressObserver): void
-```
-
-Subscribes to the asset sync progress.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes |
-
-## onStatus
-
-```TypeScript
-onStatus(callback: StatusObserver): void
-```
-
-On watch of status.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes |
 
 ## revokeSave
 
@@ -737,8 +300,6 @@ revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 Revokes the data of this distributed data object saved. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -755,56 +316,6 @@ Revokes the data of this distributed data object saved. This API uses an asynchr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-g_object.setSessionId("123456");
-// Save data for persistence. 
-g_object.save("local", (err: BusinessError, result: distributedDataObject.SaveSuccessResponse) => {
-    if (err) {
-        console.error("save failed, error code = " + err.code);
-        console.error("save failed, error message: " + err.message);
-        return;
-    }
-    console.info("save callback");
-    console.info("save sessionId: " + result.sessionId);
-    console.info("save version: " + result.version);
-    console.info("save deviceId:  " + result.deviceId);
-});
-// Delete the persistence data.
-g_object.revokeSave((err: BusinessError, result: distributedDataObject.RevokeSaveSuccessResponse) => {
-    if (err) {
-      console.error("revokeSave failed, error code = " + err.code);
-      console.error("revokeSave failed, error message: " + err.message);
-      return;
-    }
-    console.info("revokeSave callback");
-    console.info("revokeSave sessionId " + result.sessionId);
-});
-```
-
-```TypeScript
-g_object.setSessionId("123456");
-// Save data for persistence. 
-g_object.save("local").then((result: distributedDataObject.SaveSuccessResponse) => {
-    console.info("save callback");
-    console.info("save sessionId " + result.sessionId);
-    console.info("save version " + result.version);
-    console.info("save deviceId " + result.deviceId);
-}).catch((err: BusinessError) => {
-    console.error("save failed, error code = " + err.code);
-    console.error("save failed, error message: " + err.message);
-});
-// Delete the persistence data.
-g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessResponse) => {
-    console.info("revokeSave callback");
-    console.info("sessionId" + result.sessionId);
-}).catch((err: BusinessError)=> {
-    console.error("revokeSave failed, error code = " + err.code);
-    console.error("revokeSave failed, error message = " + err.message);
-});
-```
-
 ## revokeSave
 
 ```TypeScript
@@ -814,8 +325,6 @@ revokeSave(): Promise<RevokeSaveSuccessResponse>
 Revokes the data of this distributed data object saved. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -831,10 +340,6 @@ Revokes the data of this distributed data object saved. This API uses a promise 
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-See [revokeSave](#revokesave)
-
 ## save
 
 ```TypeScript
@@ -844,8 +349,6 @@ save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 Saves a distributed data object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -863,36 +366,6 @@ Saves a distributed data object. This API uses an asynchronous callback to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-g_object.setSessionId("123456");
-g_object.save("local", (err: BusinessError, result:distributedDataObject.SaveSuccessResponse) => {
-    if (err) {
-        console.error("save failed, error code = " + err.code);
-        console.error("save failed, error message: " + err.message);
-        return;
-    }
-    console.info("save callback");
-    console.info("save sessionId: " + result.sessionId);
-    console.info("save version: " + result.version);
-    console.info("save deviceId:  " + result.deviceId);
-});
-```
-
-```TypeScript
-g_object.setSessionId("123456");
-g_object.save("local").then((callbackInfo: distributedDataObject.SaveSuccessResponse) => {
-    console.info("save callback");
-    console.info("save sessionId " + callbackInfo.sessionId);
-    console.info("save version " + callbackInfo.version);
-    console.info("save deviceId " + callbackInfo.deviceId);
-}).catch((err: BusinessError) => {
-    console.error("save failed, error code = " + err.code);
-    console.error("save failed, error message: " + err.message);
-});
-```
-
 ## save
 
 ```TypeScript
@@ -902,8 +375,6 @@ save(deviceId: string): Promise<SaveSuccessResponse>
 Saves a distributed data object. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -926,10 +397,6 @@ Saves a distributed data object. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-See [save](#save)
-
 ## setAsset
 
 ```TypeScript
@@ -939,8 +406,6 @@ setAsset(assetKey: string, uri: string): Promise<void>
 Sets the property information about a single asset in a distributed object. This API must be called before the setSessionId API is called. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -964,50 +429,6 @@ Sets the property information about a single asset in a distributed object. This
 | [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) |
 | [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) |
 
-**Examples**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { commonType, distributedDataObject } from '@kit.ArkData';
-
-class Note {
-  title: string | undefined
-  text: string | undefined
-  attachment: commonType.Asset | undefined
-
-  constructor(title: string | undefined, text: string | undefined, attachment: commonType.Asset | undefined) {
-    this.title = title;
-    this.text = text;
-    this.attachment = attachment;
-  }
-}
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let attachment: commonType.Asset = {
-      name: 'test_img.jpg',
-      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
-      path: '/dir/test_img.jpg',
-      createTime: '2024-01-02 10:00:00',
-      modifyTime: '2024-01-02 10:00:00',
-      size: '5',
-      status: commonType.AssetStatus.ASSET_NORMAL
-    }
-    let note: Note = new Note('test', 'test', attachment);
-    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
-
-    let uri = "file://test/test.img";
-    g_object.setAsset("attachment", uri).then(() => {
-      console.info('setAsset success.');
-    }).catch((err: BusinessError) => {
-      console.error("setAsset failed, error code = " + err.code);
-    });
-  }
-}
-```
-
 ## setAssets
 
 ```TypeScript
@@ -1017,8 +438,6 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 Sets the property information about multiple assets in a distributed object. This API must be called before the setSessionId API is called. The number of values contained in the uris array ranges from 1 to 50. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -1042,50 +461,6 @@ Sets the property information about multiple assets in a distributed object. Thi
 | [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) |
 | [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) |
 
-**Examples**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { commonType, distributedDataObject } from '@kit.ArkData';
-
-class Note {
-  title: string | undefined
-  text: string | undefined
-  attachment: commonType.Asset | undefined
-
-  constructor(title: string | undefined, text: string | undefined, attachment: commonType.Asset | undefined) {
-    this.title = title;
-    this.text = text;
-    this.attachment = attachment;
-  }
-}
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let attachment: commonType.Asset = {
-      name: 'test_img.jpg',
-      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
-      path: '/dir/test_img.jpg',
-      createTime: '2024-01-02 10:00:00',
-      modifyTime: '2024-01-02 10:00:00',
-      size: '5',
-      status: commonType.AssetStatus.ASSET_NORMAL
-    }
-    let note: Note = new Note('test', 'test', attachment);
-    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
-
-    let uris: Array<string> = ["file://test/test_1.txt", "file://test/test_2.txt"];
-    g_object.setAssets("attachment", uris).then(() => {
-      console.info('setAssets success.');
-    }).catch((err: BusinessError) => {
-      console.error("setAssets failed, error code = " + err.code);
-    });
-  }
-}
-```
-
 ## setSessionId
 
 ```TypeScript
@@ -1095,8 +470,6 @@ setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 Sets a session ID. This API uses an asynchronous callback to return the result. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1117,66 +490,6 @@ Sets a session ID. This API uses an asynchronous callback to return the result. 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) |
 
-**Examples**
-
-```TypeScript
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId(), ()=>{
-    console.info("join session");
-});
-// g_object exits the distributed network.
-g_object.setSessionId("", ()=>{
-    console.info("leave all session");
-});
-```
-
-```TypeScript
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId(), ()=>{
-    console.info("join session");
-});
-// Exit the distributed network.
-g_object.setSessionId(() => {
-    console.info("leave all session.");
-});
-```
-
-```TypeScript
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId()).then (()=>{
-    console.info("join session.");
-    }).catch((error: BusinessError)=>{
-        console.error("error:" + error.code + error.message);
-});
-// Exit the distributed network.
-g_object.setSessionId().then (()=>{
-    console.info("leave all session.");
-    }).catch((error: BusinessError)=>{
-        console.error("error:" + error.code + error.message);
-});
-```
-
-```TypeScript
-class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
-
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
-}
-
-let source: SourceObject = new SourceObject("jack", 18, false);
-let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId());
-// Remove g_object from the distributed network.
-g_object.setSessionId("");
-```
-
 ## setSessionId
 
 ```TypeScript
@@ -1186,8 +499,6 @@ setSessionId(callback: AsyncCallback<void>): void
 Exits all sessions. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 9 - 19: ohos.permission.DISTRIBUTED_DATASYNC
@@ -1208,10 +519,6 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) |
 
-**Examples**
-
-See [setSessionId](#setsessionid)
-
 ## setSessionId
 
 ```TypeScript
@@ -1221,8 +528,6 @@ setSessionId(sessionId?: string): Promise<void>
 Sets a session ID or exits the distributed network. This API uses a promise to return the result. If this parameter is set to "" or null, or left empty, the distributed data object exits the network. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1247,23 +552,3 @@ Sets a session ID or exits the distributed network. This API uses a promise to r
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) |
-
-**Examples**
-
-See [setSessionId](#setsessionid)
-
-## [key: string]
-
-```TypeScript
-[key: string]: Object | null | undefined
-```
-
-Get and set value of property.
-
-**Type:** Object \| null \| undefined
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject

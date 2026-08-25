@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mdns } from '@kit.NetworkKit';
+import { mdns } from 'kits/@kit.NetworkKit';
 ```
 
 ## resolveLocalService
@@ -16,8 +16,6 @@ function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,
 解析一个MDNS服务，使用callback方式作为异步方法。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,59 +40,6 @@ function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,
 | [2204006](../errorcode-net-mdns.md#2204006-解析服务超时) |
 | [2204010](../errorcode-net-mdns.md#2204010-发送消息失败) |
 
-**示例**
-
-Stage模型示例：
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 获取context。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-let localServiceInfo: mdns.LocalServiceInfo = {
-  serviceType: "_print._tcp",
-  serviceName: "servicename",
-  port: 5555,
-  host: {
-  address: "10.14.**.***",
-  },
-  serviceAttribute: [{key: "111", value: [1]}]
-}
-
-mdns.resolveLocalService(context, localServiceInfo, (error: BusinessError, data: mdns.LocalServiceInfo) =>  {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-Stage模型示例：
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 获取context。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-let localServiceInfo: mdns.LocalServiceInfo = {
-  serviceType: "_print._tcp",
-  serviceName: "servicename",
-  port: 5555,
-  host: {
-  address: "10.14.**.***",
-  },
-  serviceAttribute: [{key: "111", value: [1]}]
-}
-
-mdns.resolveLocalService(context, localServiceInfo).then((data: mdns.LocalServiceInfo) => {
-  console.info(JSON.stringify(data));
-});
-```
-
 
 ## resolveLocalService
 
@@ -105,8 +50,6 @@ function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo): P
 解析一个MDNS服务，使用Promise方式作为异步方法。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -135,7 +78,3 @@ function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo): P
 | [2204003](../errorcode-net-mdns.md#2204003-重复注册) |
 | [2204006](../errorcode-net-mdns.md#2204006-解析服务超时) |
 | [2204010](../errorcode-net-mdns.md#2204010-发送消息失败) |
-
-**示例**
-
-参见 [resolveLocalService](#resolvelocalservice)

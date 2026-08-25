@@ -9,8 +9,6 @@ Defines the paragraph style options.Inherits [RichEditorRange](arkts-arkui-riche
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ Paragraph style.
 **Type:** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

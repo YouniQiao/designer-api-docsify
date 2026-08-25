@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## token
@@ -27,8 +25,6 @@ token?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

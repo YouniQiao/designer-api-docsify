@@ -8,30 +8,26 @@ Defines the configuration policy for the high CPU usage event.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## backgroundLoadThreshold
 
 ```TypeScript
-backgroundLoadThreshold?: int
+backgroundLoadThreshold?: number
 ```
 
 High CPU usage threshold of the application background, in percentage. The value range is **[1, 100]**. The default value is **10**. If the value is not within the threshold range, the default value **10** is used.  
 **Note：**: It is recommended that the value be less than **10**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -40,17 +36,15 @@ High CPU usage threshold of the application background, in percentage. The value
 ## foregroundLoadThreshold
 
 ```TypeScript
-foregroundLoadThreshold?: int
+foregroundLoadThreshold?: number
 ```
 
 High CPU usage threshold of the application foreground, in percentage. The value range is **[1, 100]**. The default value is **30**. If the value is not within the threshold range, the default value **30** is used.  
 **Note：**: It is recommended that the value be less than **30**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -59,7 +53,7 @@ High CPU usage threshold of the application foreground, in percentage. The value
 ## perfLogCaptureCount
 
 ```TypeScript
-perfLogCaptureCount?: int
+perfLogCaptureCount?: number
 ```
 
 Number of log collection times per day. Once the system detects that the number of log collection times exceeds the set value, the system still reports the event normally, but the **external_log** field in the exception event is not attached with the log file path information.For debug-type applications, the threshold range is **[-1, 100]**.For release-type applications, the threshold range is **[0, 20]**.Unit: times. Default value: **1**.If the value is not within the threshold range, the default value **1** is used.  
@@ -68,11 +62,9 @@ Number of log collection times per day. Once the system detects that the number 
 2. The value **0** indicates that logs are not collected.
 3. A value greater than **0** indicates the maximum number of daily collection times.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -81,16 +73,14 @@ Number of log collection times per day. Once the system detects that the number 
 ## threadLoadInterval
 
 ```TypeScript
-threadLoadInterval?: int
+threadLoadInterval?: number
 ```
 
 Interval for detecting high CPU usage of application threads, in seconds. The value range is **[5, 3600]**. The default value is **60**.If the value is not within the threshold range, the default value **60** is used.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -99,16 +89,14 @@ Interval for detecting high CPU usage of application threads, in seconds. The va
 ## threadLoadThreshold
 
 ```TypeScript
-threadLoadThreshold?: int
+threadLoadThreshold?: number
 ```
 
 High CPU usage threshold of the application thread, in percentage. The value range is **[15, 100]**. The default value is **70**. If the value is not within the threshold range, the default value **70** is used.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

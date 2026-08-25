@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## NO_ERROR
@@ -17,8 +15,6 @@ NO_ERROR = 0
 没有异常。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -34,8 +30,6 @@ INVALID_PARAMETER = -1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -50,8 +44,6 @@ ABILITY_NOT_FOUND = -2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -65,8 +57,6 @@ PERMISSION_DENY = -3
 权限拒绝。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

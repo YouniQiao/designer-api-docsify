@@ -4,14 +4,12 @@ Represents the historical version information of the device-cloud file when the 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## autoResolved
@@ -26,39 +24,33 @@ Whether the current version is the one where conflicts were automatically resolv
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## editedTime
 
 ```TypeScript
-editedTime: long
+editedTime: number
 ```
 
 File content modification timestamp, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## fileSize
 
 ```TypeScript
-fileSize: long
+fileSize: number
 ```
 
 File size in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -74,8 +66,6 @@ File name of the current version.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## sha256
@@ -90,8 +80,6 @@ Hash value of the file content of the current version.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## versionId
@@ -105,7 +93,5 @@ File version.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 23
 
 **替代接口：** [OpenMode](arkts-corefile-fileio-openmode-n.md)
@@ -23,8 +21,6 @@ READ = 0o0
 读模式。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 
@@ -46,8 +42,6 @@ WRITE = 0o1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 23
 
 **替代接口：** [OpenMode](arkts-corefile-fileio-openmode-n.md)
@@ -67,8 +61,6 @@ WRITE_READ = 0o2
 读写模式。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 

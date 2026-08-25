@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## appId
@@ -30,8 +28,6 @@ appId: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -39,16 +35,14 @@ appId: string
 ## appIndex
 
 ```TypeScript
-appIndex: int
+appIndex: number
 ```
 
 表示分身应用的索引，默认值为0。appIndex为0时，表示设置主应用的拦截规则。appIndex大于0时，表示设置指定分身应用的拦截规则。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -65,8 +59,6 @@ disposedRule: DisposedRule
 **类型：** [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inspector } from '@kit.ArkUI';
+import { inspector } from 'kits/@kit.ArkUI';
 ```
 
 ## createComponentObserver
@@ -15,8 +15,6 @@ function createComponentObserver(id: string): ComponentObserver
 Sets the component after layout or draw criteria and returns the corresponding listening handle
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -39,9 +37,3 @@ Sets the component after layout or draw criteria and returns the corresponding l
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) |
-
-**Examples**
-
-```TypeScript
-let listener:inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // Listen for callback events for the component whose ID is COMPONENT_ID.
-```

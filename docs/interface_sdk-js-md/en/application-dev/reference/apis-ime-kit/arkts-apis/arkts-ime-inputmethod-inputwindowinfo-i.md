@@ -4,29 +4,26 @@ Describes the window information of the input method keyboard.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
-ID of the display where the soft keyboard window is located. <br> <br>**Model restriction**: This parameter can be used only in the stage model.
+ID of the display where the soft keyboard window is located.   
+**Model restriction**: This parameter can be used only in the stage model.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,32 +32,28 @@ ID of the display where the soft keyboard window is located. <br> <br>**Model re
 ## height
 
 ```TypeScript
-height: long
+height: number
 ```
 
 Height of the input method keyboard window, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## left
 
 ```TypeScript
-left: int
+left: number
 ```
 
 Horizontal coordinate of the upper left corner of the input method keyboard window, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -76,38 +69,32 @@ Name of the input method keyboard window.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## top
 
 ```TypeScript
-top: int
+top: number
 ```
 
 Vertical coordinate of the upper left corner of the input method keyboard window, in px. The value must be an integer. The minimum value is 0 and the maximum value is the height of the current screen.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## width
 
 ```TypeScript
-width: long
+width: number
 ```
 
 Width of the input method keyboard window, in px. The value must be an integer. The minimum value is 0 and the maximum value is the width of the current screen.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## queryProbeResult
@@ -19,8 +19,6 @@ Queries network probe results. If an exception (for example, network disconnecti
 > and RTT information.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.INTERNET
 

@@ -4,23 +4,19 @@ The module defines the ability information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## appIndex
 
 ```TypeScript
-readonly appIndex: int
+readonly appIndex: number
 ```
 
 Index of an application clone. It takes effect only for [application clones](../../../quick-start/app-clone.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -35,8 +31,6 @@ Application configuration information <!--Del-->. The information can be obtaine
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,8 +48,6 @@ Bundle name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -72,8 +64,6 @@ Ability description, which describes the content and functions of the current ab
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -81,16 +71,14 @@ Ability description, which describes the content and functions of the current ab
 ## descriptionId
 
 ```TypeScript
-readonly descriptionId: long
+readonly descriptionId: number
 ```
 
 Resource ID of the ability description. It is automatically generated during compilation and build based on the description configured in **abilities** of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,8 +96,6 @@ Device types supported by the ability. The value is derived from that of [device
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -125,8 +111,6 @@ Whether the ability is available, that is, whether it can be started or queried.
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -144,8 +128,6 @@ Whether the ability icon can be hidden in the dock area. **true** if the ability
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -161,8 +143,6 @@ Whether the ability can be launched by other applications. **true** if the abili
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -180,8 +160,6 @@ Resource descriptor of the ability icon. It corresponds to the **icon** field un
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -189,16 +167,14 @@ Resource descriptor of the ability icon. It corresponds to the **icon** field un
 ## iconId
 
 ```TypeScript
-readonly iconId: long
+readonly iconId: number
 ```
 
 Resource ID of the ability icon. It is automatically generated during compilation and build based on the icon configured in **abilities** of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -216,8 +192,6 @@ Resource descriptor of the ability name visible to users. It corresponds to the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -225,16 +199,14 @@ Resource descriptor of the ability name visible to users. It corresponds to the 
 ## labelId
 
 ```TypeScript
-readonly labelId: long
+readonly labelId: number
 ```
 
 Resource ID of the ability label. It is automatically generated during compilation and build based on the label configured in **abilities** of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -252,8 +224,6 @@ Ability launch mode, that is, whether it can be started in multiton mode. For de
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -269,8 +239,6 @@ Metadata of the ability. You can configure the system-defined parameters to use 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -288,8 +256,6 @@ Module name to which the ability belongs.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -305,8 +271,6 @@ Ability name.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -324,8 +288,6 @@ Ability display orientation. It is derived from the **orientation** field under 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -333,16 +295,14 @@ Ability display orientation. It is derived from the **orientation** field under 
 ## orientationId
 
 ```TypeScript
-readonly orientationId: long
+readonly orientationId: number
 ```
 
 Resource ID of the ability display mode. It is derived from the **orientation** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md) file. If the **orientation** field in the file is set to an enumerated value, **orientationId** is **0**. If the **orientation** field is set to a resource index, **orientationId** is a non-zero value, which is the resource ID generated during building. If **orientationId** is set to a value other than **0**, the current display mode is customized, and this ID must be used to obtain the corresponding resource from the resource manager module. If **orientationId** is set to **0**, no resource is configured.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -360,8 +320,6 @@ Array of permissions that other applications must request to start or access thi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -377,8 +335,6 @@ Process name of the ability.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -397,8 +353,6 @@ Permission required for reading the ability data.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -415,8 +369,6 @@ Skills information of the ability. It represents the feature set of [wants](../.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -432,8 +384,6 @@ Window modes supported by the ability.
 **Type:** Array&lt;bundleManager.SupportWindowMode&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -452,8 +402,6 @@ Ability type.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -471,8 +419,6 @@ URI of the ability.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -488,8 +434,6 @@ Window size.
 **Type:** [WindowSize](arkts-ability-abilityinfo-windowsize-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -507,8 +451,6 @@ Permission required for writing data to the ability.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the FA model.
 

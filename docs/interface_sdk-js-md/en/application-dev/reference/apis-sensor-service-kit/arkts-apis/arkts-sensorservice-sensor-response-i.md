@@ -4,14 +4,12 @@ Describes the timestamp of the sensor data.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## accuracy
@@ -26,8 +24,6 @@ Accuracy of the sensor data.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -35,16 +31,14 @@ Accuracy of the sensor data.
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Timestamp when the sensor reports data. Time from device startup to data reporting, in nanoseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

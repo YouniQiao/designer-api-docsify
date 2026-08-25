@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## generateKey
@@ -21,8 +21,6 @@ function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCall
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [generateKeyItem](arkts-universalkeystore-huks-generatekeyitem-f.md)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
@@ -36,73 +34,6 @@ function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCall
 | keyAlias | string | 是 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 以生成RSA512密钥为例 */
-
-let keyAlias = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_RSA
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_RSA_KEY_SIZE_512
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PADDING,
-    value: huks.HuksKeyPadding.HUKS_PADDING_OAEP
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_DIGEST,
-    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-  }
-];
-let options: huks.HuksOptions = {
-  properties: properties
-};
-huks.generateKey(keyAlias, options, (err, data) => {
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 以生成ECC256密钥为例 */
-
-let keyAlias = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_ECC
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_DIGEST,
-    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-  }
-];
-let options: huks.HuksOptions = {
-  properties: properties
-};
-let result = huks.generateKey(keyAlias, options);
-```
 
 
 ## generateKey
@@ -118,8 +49,6 @@ function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult
 > [huks.generateKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-generatekeyitem-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -139,7 +68,3 @@ function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult
 | 类型 |
 | --- |
 | Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; |
-
-**示例**
-
-参见 [generateKey](#generatekey)

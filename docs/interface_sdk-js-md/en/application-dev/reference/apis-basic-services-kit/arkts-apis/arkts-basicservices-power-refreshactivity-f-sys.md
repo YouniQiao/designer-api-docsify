@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## refreshActivity
@@ -15,8 +15,6 @@ function refreshActivity(reason: string): void
 Refreshes the device activity status (for example, resetting the screen-off time).This API takes effect only when the device is active. For details about the device activity status, see [power.isActive](arkts-basicservices-power-isactive-f.md).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REFRESH_USER_ACTION
 
@@ -39,13 +37,3 @@ Refreshes the device activity status (for example, resetting the screen-off time
 | [4900101](../errorcode-power.md#4900101-service-connection-failure) |
 | [4900201](../errorcode-power.md#4900201-frequent-status-refreshes) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-try {
-    power.refreshActivity('refreshActivity_test');
-} catch(err) {
-    console.error('refreshActivity failed, err: ' + err);
-}
-```

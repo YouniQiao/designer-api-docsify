@@ -4,14 +4,12 @@ Defines the radio access technology for the packet switched (PS) or circuit swit
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## csRadioTech
@@ -26,8 +24,6 @@ CS.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## psRadioTech
@@ -41,7 +37,5 @@ PS.
 **Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService

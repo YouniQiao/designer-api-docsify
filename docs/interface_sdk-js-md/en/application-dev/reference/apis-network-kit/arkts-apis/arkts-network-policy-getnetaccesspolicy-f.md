@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## getNetAccessPolicy
@@ -18,8 +18,6 @@ Queries the network access policy of an application (whether cellular or Wi-Fi n
 > **Network access**. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

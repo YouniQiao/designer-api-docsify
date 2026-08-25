@@ -4,8 +4,6 @@ Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tab
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,13 +20,11 @@ barModifier?: CommonModifier
 设置TabBar的通用属性，用于通过CommonModifier统一管理TabBar的样式、布局等通用属性。 当需要动态修改TabBar的通用属性或实现属性的状态管理时传入此参数，不传入时TabBar使用默认样式和布局，无额外通用属性设置。  
 **说明：**动态置为undefined时会保持当前状态不变，不会重置各通用属性。由一个CommonModifier切换为另一个CommonModifier时，重复属性会进行覆盖，非重复属性会同时生效，不会重置前一个CommonModifier的通用属性。Tabs的[barWidth](arkts-arkui-tabs-attribute.md#barwidth)、[barHeight](arkts-arkui-tabs-attribute.md#barheight)、 [barBackgroundColor](arkts-arkui-tabs-attribute.md#barbackgroundcolor)、 [barBackgroundBlurStyle](arkts-arkui-tabs-attribute.md#barbackgroundblurstyle) 、[barBackgroundEffect](arkts-arkui-tabs-attribute.md#barbackgroundeffect)属性会覆盖CommonModifier的 width、height、 backgroundColor、 backgroundBlurStyle 、backgroundEffect属性。
 align属性仅在 [BarMode.Scrollable](arkts-arkui-tabs-attribute.md#barmode)模式下生 效，且Tabs为横向时还需[nonScrollableLayoutStyle](arkts-arkui-scrollablebarmodeoptions-i.md)未设置或设置为异常值时才能生效。  
-TabContent组件的 tabBar 属性为底部页签样式时不支持拖拽功能。
+TabContent组件的 [tabBar](arkts-arkui-tabcontent-attribute.md#tabbar) 属性为底部页签样式时不支持拖拽功能。
 
 **类型：** [CommonModifier](arkts-arkui-commonmodifier-t.md)
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +46,6 @@ barPosition?: BarPosition
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -67,8 +61,6 @@ controller?: TabsController
 **类型：** [TabsController](arkts-arkui-tabscontroller-c.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -88,8 +80,6 @@ index?: number
 **默认值：** 0 [since 11]
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

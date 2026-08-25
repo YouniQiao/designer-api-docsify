@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## fullLog
@@ -27,8 +25,6 @@ fullLog: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 18
 
@@ -46,8 +42,6 @@ module: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -63,8 +57,6 @@ pid: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 18
 
@@ -82,8 +74,6 @@ reason: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -99,8 +89,6 @@ summary: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 18
 
@@ -118,8 +106,6 @@ timestamp: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -136,8 +122,6 @@ type: FaultType
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 18
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -153,8 +137,6 @@ uid: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 18
 

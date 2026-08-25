@@ -4,8 +4,6 @@ Provides the border information of the child component.@interface LayoutBorderIn
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** Measurable/Layoutable
@@ -25,11 +23,9 @@ borderWidth: EdgeWidths
 
 Edge widths in different directions of the component.
 
-**Type:** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
+**Type:** EdgeWidths
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -47,11 +43,9 @@ margin: Margin
 
 Margin values in different directions of the component.
 
-**Type:** Margin
+**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -69,11 +63,9 @@ padding: Padding
 
 Padding values in different directions of the component.
 
-**Type:** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
+**Type:** Padding
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

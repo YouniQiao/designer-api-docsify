@@ -1,7 +1,5 @@
 # PropertyDescriptor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -13,8 +11,6 @@
 get?(): any
 ```
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -24,8 +20,6 @@ get?(): any
 ```TypeScript
 set?(v: any): void
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -41,8 +35,6 @@ configurable?: boolean
 
 **Type:** boolean
 
-**ArkTS mode:** 
-
 ## enumerable
 
 ```TypeScript
@@ -50,8 +42,6 @@ enumerable?: boolean
 ```
 
 **Type:** boolean
-
-**ArkTS mode:** 
 
 ## value
 
@@ -61,8 +51,6 @@ value?: any
 
 **Type:** any
 
-**ArkTS mode:** 
-
 ## writable
 
 ```TypeScript
@@ -70,5 +58,3 @@ writable?: boolean
 ```
 
 **Type:** boolean
-
-**ArkTS mode:** 

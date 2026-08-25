@@ -4,14 +4,12 @@ Defines the format parameters of the video thumbnail to be obtained.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## autoFlip
@@ -26,8 +24,6 @@ Auto flip the thumbnail when video has mirror attribute (Vertical Flip or Horizo
 **Type:** boolean
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -45,8 +41,6 @@ Color format of the thumbnail.
 **Type:** [PixelFormat](arkts-media-media-pixelformat-e-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 

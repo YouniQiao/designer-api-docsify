@@ -4,14 +4,12 @@ The AbilityManager module provides APIs for obtaining, adding, and updating abil
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -31,8 +29,6 @@ import { abilityManager } from '@kit.AbilityKit';
 | --- |
 | [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md) |
 | [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md) |
-| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md) |
-| [acquireShareData](arkts-ability-abilitymanager-acquiresharedata-f-sys.md) |
 | [clearPreloadedUIExtensionAbilities](arkts-ability-abilitymanager-clearpreloadeduiextensionabilities-f-sys.md) |
 | [clearPreloadedUIExtensionAbility](arkts-ability-abilitymanager-clearpreloadeduiextensionability-f-sys.md) |
 | [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f-sys.md) |
@@ -46,12 +42,10 @@ import { abilityManager } from '@kit.AbilityKit';
 | [notifyDebugAssertResult](arkts-ability-abilitymanager-notifydebugassertresult-f-sys.md) |
 | [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md) |
 | [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md) |
-| [off](arkts-ability-abilitymanager-off-f-sys.md#offabilityforegroundstate) |
-| [offAbilityForegroundState](arkts-ability-abilitymanager-offabilityforegroundstate-f-sys.md) |
+| off |
 | [offPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-offpreloadeduiextensionabilitydestroyed-f-sys.md) |
 | [offPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-offpreloadeduiextensionabilityloaded-f-sys.md) |
-| [on](arkts-ability-abilitymanager-on-f-sys.md#onabilityforegroundstate) |
-| [onAbilityForegroundState](arkts-ability-abilitymanager-onabilityforegroundstate-f-sys.md) |
+| on |
 | [onPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-onpreloadeduiextensionabilitydestroyed-f-sys.md) |
 | [onPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-onpreloadeduiextensionabilityloaded-f-sys.md) |
 | [preloadUIExtensionAbility](arkts-ability-abilitymanager-preloaduiextensionability-f-sys.md) |

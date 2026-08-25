@@ -7,8 +7,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -20,8 +18,6 @@ NONE = 0
 设置半模态不避让软键盘。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,8 +35,6 @@ TRANSLATE_AND_RESIZE = 1
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -57,8 +51,6 @@ RESIZE_ONLY = 2
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -74,8 +66,6 @@ TRANSLATE_AND_SCROLL = 3
 设置半模态先上抬面板避让软键盘；当上抬至最大高度仍不足以避让软键盘时，则通过滚动内容完成避让。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,8 +87,6 @@ POPUP_SHEET = 4
 4. 若此时半模态不是跟手样式，则不具备避让软键盘能力。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

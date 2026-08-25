@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_FORMAT_RGBA_8888
@@ -17,8 +15,6 @@ CAMERA_FORMAT_RGBA_8888 = 3
 RGBA_8888格式的图片。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ DNG（数字负片）格式的图片。
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -49,8 +43,6 @@ CAMERA_FORMAT_YUV_420_SP = 1003
 YUV_420_SP格式的图片，对应为NV21格式的图片。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ JPEG格式的图片。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -81,8 +71,6 @@ CAMERA_FORMAT_YCBCR_P010
 YCBCR_P010格式的图片。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -98,8 +86,6 @@ YCRCB_P010格式的图片。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -114,8 +100,6 @@ HEIF格式的图片。
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -129,8 +113,6 @@ CAMERA_FORMAT_DNG_XDRAW = 5
 增强型DNG格式的图片。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

@@ -8,8 +8,6 @@ Configure RdbPredicates to match the specified field whose data type is ValueTyp
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

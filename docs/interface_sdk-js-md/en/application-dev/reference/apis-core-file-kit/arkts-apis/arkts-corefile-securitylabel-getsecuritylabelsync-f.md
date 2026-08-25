@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from '@kit.CoreFileKit';
+import { securityLabel } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getSecurityLabelSync
@@ -15,8 +15,6 @@ function getSecurityLabelSync(path: string): string
 Obtains the data security level of a file or directory in synchronous mode. If no data security level has been set, **s3** is returned by default.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -44,11 +42,3 @@ Obtains the data security level of a file or directory in synchronous mode. If n
 | 13900037 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + '/test.txt';
-let type = securityLabel.getSecurityLabelSync(filePath);
-console.info("getSecurityLabel successfully, Label: " + type);
-```

@@ -4,8 +4,6 @@ Provides APIs for managing a distributed data object. Before using any API of th
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** null
@@ -15,7 +13,7 @@ Provides APIs for managing a distributed data object. Before using any API of th
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'kits/@kit.ArkData';
 ```
 
 ## off('change')
@@ -27,8 +25,6 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 Unsubscribes from data changes of this distributed data object.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -43,36 +39,6 @@ Unsubscribes from data changes of this distributed data object.
 | type | 'change' | Yes |
 | callback | (sessionId: string, fields: Array & lt;string & gt;) = & gt; void | No |
 
-**Examples**
-
-```TypeScript
-class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
-
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
-}
-
-let source: SourceObject = new SourceObject("jack", 18, false);
-let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-// Unregister the specified data change callback.
-g_object.off("change", (sessionId: string, fields: Array<string>) => {
-    console.info("change" + sessionId);
-    if (fields != null && fields != undefined) {
-        for (let index: number = 0; index < fields.length; index++) {
-            console.info("changed !" + fields[index] + " " + g_object[fields[index]]);
-        }
-    }
-});
-// Unregister all data change callbacks.
-g_object.off("change");
-```
-
 ## off('status')
 
 ```TypeScript
@@ -85,8 +51,6 @@ off(
 Unsubscribes from the status change of this distributed data object.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -101,31 +65,6 @@ Unsubscribes from the status change of this distributed data object.
 | type | 'status' | Yes |
 | callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) = & gt; void | No |
 
-**Examples**
-
-```TypeScript
-class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
-
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
-}
-
-let source: SourceObject = new SourceObject("jack", 18, false);
-let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-// Unregister the specified status change callback.
-g_object.off("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info("status changed " + sessionId + " " + status + " " + networkId);
-});
-// Unregister all status change callbacks.
-g_object.off("status");
-```
-
 ## on('change')
 
 ```TypeScript
@@ -135,8 +74,6 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void)
 Subscribes to data changes of this distributed data object.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -151,33 +88,6 @@ Subscribes to data changes of this distributed data object.
 | type | 'change' | Yes |
 | callback | (sessionId: string, fields: Array & lt;string & gt;) = & gt; void | Yes |
 
-**Examples**
-
-```TypeScript
-class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
-
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
-}
-
-let source: SourceObject = new SourceObject("jack", 18, false);
-let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-g_object.on("change", (sessionId: string, fields: Array<string>) => {
-    console.info("change" + sessionId);
-    if (fields != null && fields != undefined) {
-        for (let index: number = 0; index < fields.length; index++) {
-            console.info("changed !" + fields[index] + " " + g_object[fields[index]]);
-        }
-    }
-});
-```
-
 ## on('status')
 
 ```TypeScript
@@ -190,8 +100,6 @@ on(
 Subscribes to status changes of this distributed data object.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -206,29 +114,6 @@ Subscribes to status changes of this distributed data object.
 | type | 'status' | Yes |
 | callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) = & gt; void | Yes |
 
-**Examples**
-
-```TypeScript
-class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
-
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
-}
-
-let source: SourceObject = new SourceObject("jack", 18, false);
-let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-
-g_object.on("status", (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info("status changed " + sessionId + " " + status + " " + networkId);
-});
-```
-
 ## setSessionId
 
 ```TypeScript
@@ -238,8 +123,6 @@ setSessionId(sessionId?: string): boolean
 Sets a session ID. For the devices in the collaboration state in a trusted network, data of the distributed objects with the same session ID can be automatically synced across devices.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -260,63 +143,3 @@ Sets a session ID. For the devices in the collaboration state in a trusted netwo
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId(), ()=>{
-    console.info("join session");
-});
-// g_object exits the distributed network.
-g_object.setSessionId("", ()=>{
-    console.info("leave all session");
-});
-```
-
-```TypeScript
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId(), ()=>{
-    console.info("join session");
-});
-// Exit the distributed network.
-g_object.setSessionId(() => {
-    console.info("leave all session.");
-});
-```
-
-```TypeScript
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId()).then (()=>{
-    console.info("join session.");
-    }).catch((error: BusinessError)=>{
-        console.error("error:" + error.code + error.message);
-});
-// Exit the distributed network.
-g_object.setSessionId().then (()=>{
-    console.info("leave all session.");
-    }).catch((error: BusinessError)=>{
-        console.error("error:" + error.code + error.message);
-});
-```
-
-```TypeScript
-class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
-
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
-}
-
-let source: SourceObject = new SourceObject("jack", 18, false);
-let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-// Add g_object to the distributed network.
-g_object.setSessionId(distributedDataObject.genSessionId());
-// Remove g_object from the distributed network.
-g_object.setSessionId("");
-```

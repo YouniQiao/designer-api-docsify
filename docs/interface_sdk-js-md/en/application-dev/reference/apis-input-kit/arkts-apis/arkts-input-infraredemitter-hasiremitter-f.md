@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
+import { infraredEmitter } from 'kits/@kit.InputKit';
 ```
 
 ## hasIrEmitter
@@ -15,8 +15,6 @@ function hasIrEmitter(): Promise<boolean>
 Checks whether the device has an infrared transmitter. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
@@ -34,26 +32,3 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-            infraredEmitter.hasIrEmitter().then((result: boolean) => {
-              console.info(`hasIrEmitter: ${JSON.stringify(result)}`);
-            }).catch((error: BusinessError)=> {
-              console.error(`hasIrEmitter failed: ${JSON.stringify(error)}`);})
-        })
-    }
-  }
-}
-```

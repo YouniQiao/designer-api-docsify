@@ -4,14 +4,12 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## authenticationValidityPeriod
@@ -25,8 +23,6 @@ authenticationValidityPeriod?: number
 **类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,8 +41,6 @@ passwordExpirationNotification?: number
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -62,8 +56,6 @@ passwordValidityPeriod?: number
 **类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

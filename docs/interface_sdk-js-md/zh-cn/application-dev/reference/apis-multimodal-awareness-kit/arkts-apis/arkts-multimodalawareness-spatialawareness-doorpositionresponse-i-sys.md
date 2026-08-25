@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceId
@@ -28,8 +26,6 @@ deviceId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -39,16 +35,14 @@ deviceId: string
 ## doorLockCode
 
 ```TypeScript
-doorLockCode: int
+doorLockCode: number
 ```
 
 表示门锁校验码，结果≥0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,8 +61,6 @@ position: PositionRelativeToDoor
 **类型：** [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

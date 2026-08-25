@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## THEME_KEY
@@ -18,8 +16,6 @@ THEME_KEY = 'ohos.extra.param.key.form_is_theme'
 **系统接口：** 此接口为系统接口。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -35,8 +31,6 @@ DEVICE_ID_KEY = "ohos.extra.param.key.device_id"
 **系统接口：** 此接口为系统接口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -55,8 +49,6 @@ FORM_MANAGER_SHOW_SINGLE_FORM = 'ohos.extra.param.key.form_manager_show_single_f
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -71,8 +63,6 @@ TEMPLATE_FORM_DETAIL_ID = 'ohos.extra.param.key.template_form_detail_id'
 **系统接口：** 此接口为系统接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -89,8 +79,6 @@ TEMPLATE_FORM_DATA = 'ohos.extra.param.key.template_form_data'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -105,8 +93,6 @@ TEMPLATE_FORM_DISPLAY_NAME = 'ohos.extra.param.key.template_form_display_name'
 **系统接口：** 此接口为系统接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -123,8 +109,6 @@ TEMPLATE_FORM_DESCRIPTION = 'ohos.extra.param.key.template_form_description'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -139,8 +123,6 @@ FORM_FONT_SIZE_SCALE_KEY = 'ohos.extra.param.key.form_font_size_scale'
 **系统接口：** 此接口为系统接口。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,8 +140,6 @@ FORM_FONT_WEIGHT_SCALE_KEY = 'ohos.extra.param.key.form_font_weight_scale'
 **系统接口：** 此接口为系统接口。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

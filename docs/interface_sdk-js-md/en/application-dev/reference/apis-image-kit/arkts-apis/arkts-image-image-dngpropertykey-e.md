@@ -4,8 +4,6 @@ Enumerates the properties available for the metadata of a DNG image.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DNG_VERSION
@@ -17,8 +15,6 @@ DNG_VERSION = 'DNGVersion'
 The DNG version.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ The DNG backward version.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -49,8 +43,6 @@ UNIQUE_CAMERA_MODEL = 'UniqueCameraModel'
 A unique camera model.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +58,6 @@ A localized camera model.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -81,8 +71,6 @@ CFA_PLANE_COLOR = 'CFAPlaneColor'
 The CFA (color filter array) plane color.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +86,6 @@ The CFA (color filter array) layout.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -113,8 +99,6 @@ LINEARIZATION_TABLE = 'LinearizationTable'
 The linearization table.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,8 +114,6 @@ The black level repeat dimension.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -145,8 +127,6 @@ BLACK_LEVEL = 'BlackLevel'
 The zero light encoding level.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,8 +142,6 @@ The black level delta H.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -177,8 +155,6 @@ BLACK_LEVEL_DELTA_V = 'BlackLevelDeltaV'
 The black level delta V.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,8 +170,6 @@ The white level.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -209,8 +183,6 @@ DEFAULT_SCALE = 'DefaultScale'
 The default scale.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,8 +198,6 @@ The default crop origin.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -241,8 +211,6 @@ DEFAULT_CROP_SIZE = 'DefaultCropSize'
 The default crop size.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -258,8 +226,6 @@ A transformation matrix under the first calibration illuminant.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -273,8 +239,6 @@ COLOR_MATRIX2 = 'ColorMatrix2'
 A transformation matrix under the second calibration illuminant.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,8 +254,6 @@ A calibration matrix under the first calibration illuminant.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -305,8 +267,6 @@ CAMERA_CALIBRATION2 = 'CameraCalibration2'
 A calibration matrix under the second calibration illuminant.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,8 +282,6 @@ A dimensionality reduction matrix under the first calibration illuminant.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -337,8 +295,6 @@ REDUCTION_MATRIX2 = 'ReductionMatrix2'
 A dimensionality reduction matrix under the second calibration illuminant.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -354,8 +310,6 @@ The analog balance.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -369,8 +323,6 @@ AS_SHOT_NEUTRAL = 'AsShotNeutral'
 The as-shot neutral.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -386,8 +338,6 @@ The as-shot white, encoded as X‑Y chromaticity coordinates.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -401,8 +351,6 @@ BASELINE_EXPOSURE = 'BaselineExposure'
 The baseline exposure.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -418,8 +366,6 @@ The baseline noise.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -433,8 +379,6 @@ BASELINE_SHARPNESS = 'BaselineSharpness'
 The baseline sharpness.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -450,8 +394,6 @@ The Bayer green split.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -465,8 +407,6 @@ LINEAR_RESPONSE_LIMIT = 'LinearResponseLimit'
 The linear response limit.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -482,8 +422,6 @@ The serial number of the camera.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -497,8 +435,6 @@ LENS_INFO = 'LensInfo'
 Information about the lens.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -514,8 +450,6 @@ The chroma blur radius.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -529,8 +463,6 @@ ANTI_ALIAS_STRENGTH = 'AntiAliasStrength'
 The anti-alias strength.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -546,8 +478,6 @@ The shadow scale.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -561,8 +491,6 @@ DNG_PRIVATE_DATA = 'DNGPrivateData'
 The private data.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -578,8 +506,6 @@ Whether the EXIF MakerNote tag is safe.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -593,8 +519,6 @@ CALIBRATION_ILLUMINANT1 = 'CalibrationIlluminant1'
 The first calibration illuminant.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -610,8 +534,6 @@ The second calibration illuminant.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -625,8 +547,6 @@ BEST_QUALITY_SCALE = 'BestQualityScale'
 The best quality scale.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -642,8 +562,6 @@ The unique identifier of raw image data.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -657,8 +575,6 @@ ORIGINAL_RAW_FILE_NAME = 'OriginalRawFileName'
 The original raw file name.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -674,8 +590,6 @@ The original raw file data.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -689,8 +603,6 @@ ACTIVE_AREA = 'ActiveArea'
 The active area.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -706,8 +618,6 @@ The masked areas.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -721,8 +631,6 @@ AS_SHOT_ICC_PROFILE = 'AsShotICCProfile'
 An ICC profile.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -738,8 +646,6 @@ The as-shot pre-profile matrix.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -753,8 +659,6 @@ CURRENT_ICC_PROFILE = 'CurrentICCProfile'
 The current ICC profile.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -770,8 +674,6 @@ The current pre-profile matrix.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -785,8 +687,6 @@ COLORIMETRIC_REFERENCE = 'ColorimetricReference'
 The colorimetric reference.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -802,8 +702,6 @@ The camera calibration signature.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -817,8 +715,6 @@ PROFILE_CALIBRATION_SIGNATURE = 'ProfileCalibrationSignature'
 The profile calibration signature.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -834,8 +730,6 @@ The extra camera profiles.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -849,8 +743,6 @@ AS_SHOT_PROFILE_NAME = 'AsShotProfileName'
 The "as-shot" camera profile.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -866,8 +758,6 @@ The applied noise reduction.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -881,8 +771,6 @@ PROFILE_NAME = 'ProfileName'
 The profile name.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -898,8 +786,6 @@ The profile hue/saturation map dimensions.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -913,8 +799,6 @@ PROFILE_HUE_SAT_MAP_DATA1 = 'ProfileHueSatMapData1'
 The first hue/saturation mapping table data.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -930,8 +814,6 @@ The second hue/saturation mapping table data.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -945,8 +827,6 @@ PROFILE_TONE_CURVE = 'ProfileToneCurve'
 The profile tone curve.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -962,8 +842,6 @@ The profile embed policy.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -977,8 +855,6 @@ PROFILE_COPYRIGHT = 'ProfileCopyright'
 The profile copyright.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -994,8 +870,6 @@ The first forward matrix.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1009,8 +883,6 @@ FORWARD_MATRIX2 = 'ForwardMatrix2'
 The second forward matrix.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1026,8 +898,6 @@ The preview application name.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1041,8 +911,6 @@ PREVIEW_APPLICATION_VERSION = 'PreviewApplicationVersion'
 The preview application version.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1058,8 +926,6 @@ The preview settings name.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1073,8 +939,6 @@ PREVIEW_SETTINGS_DIGEST = 'PreviewSettingsDigest'
 The preview settings digest.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1090,8 +954,6 @@ The preview color space.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1105,8 +967,6 @@ PREVIEW_DATE_TIME = 'PreviewDateTime'
 The preview date time.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1122,8 +982,6 @@ An MD5 digest of the raw image data.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1137,8 +995,6 @@ ORIGINAL_RAW_FILE_DIGEST = 'OriginalRawFileDigest'
 An MD5 digest of the data stored in the OriginalRawFileData.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1154,8 +1010,6 @@ The sub‑tile block size.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1169,8 +1023,6 @@ ROW_INTERLEAVE_FACTOR = 'RowInterleaveFactor'
 The row interleave factor.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1186,8 +1038,6 @@ The profile look table dimensions.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1201,8 +1051,6 @@ PROFILE_LOOK_TABLE_DATA = 'ProfileLookTableData'
 The profile look table data.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1218,8 +1066,6 @@ The first opcode list.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1233,8 +1079,6 @@ OPCODE_LIST2 = 'OpcodeList2'
 The second opcode list.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1250,8 +1094,6 @@ The third opcode list.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1265,8 +1107,6 @@ NOISE_PROFILE = 'NoiseProfile'
 The noise profile.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1282,8 +1122,6 @@ The original default final size.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1297,8 +1135,6 @@ ORIGINAL_BEST_QUALITY_FINAL_SIZE = 'OriginalBestQualityFinalSize'
 The original best quality final size.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1314,8 +1150,6 @@ The original default crop size.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1329,8 +1163,6 @@ PROFILE_HUE_SAT_MAP_ENCODING = 'ProfileHueSatMapEncoding'
 The profile hue/saturation map encoding.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1346,8 +1178,6 @@ The profile look table encoding.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1361,8 +1191,6 @@ BASELINE_EXPOSURE_OFFSET = 'BaselineExposureOffset'
 The baseline exposure offset.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1378,8 +1206,6 @@ The default black render.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1393,8 +1219,6 @@ NEW_RAW_IMAGE_DIGEST = 'NewRawImageDigest'
 A modified MD5 digest of the raw image data.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1410,8 +1234,6 @@ The gain between the main raw IFD and the preview IFD.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1425,8 +1247,6 @@ DEFAULT_USER_CROP = 'DefaultUserCrop'
 The default user crop.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

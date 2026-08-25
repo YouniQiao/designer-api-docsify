@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## bind
@@ -29,8 +29,6 @@ Binds the float view and floating ball. You need to create the [float view contr
 > registered for the corresponding window.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.USE_FLOAT_BALL and ohos.permission.FLOAT_VIEW
 

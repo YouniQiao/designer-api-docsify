@@ -4,14 +4,12 @@ Describes the contents of the bluetooth scan results.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## connectable
@@ -25,8 +23,6 @@ Connectable of the scanned device
 **Type:** boolean
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -42,8 +38,6 @@ The raw data of broadcast packet
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## deviceId
@@ -57,8 +51,6 @@ Address of the scanned device
 **Type:** string
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -74,22 +66,18 @@ The local name of the scanned device
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## rssi
 
 ```TypeScript
-rssi: int
+rssi: number
 ```
 
 RSSI of the scanned device
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core

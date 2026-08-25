@@ -4,14 +4,12 @@ CompletionHandlerForAbilityStartCallback提供了onRequestSuccess和onRequestFai
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from 'kits/@kit.AbilityKit';
 ```
 
 ## onRequestFailure
@@ -23,8 +21,6 @@ onRequestFailure?: OnRequestFailureFn
 拉起指定类型的Ability组件失败时的回调函数。从API version 21开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,8 +37,6 @@ onRequestSuccess?: OnRequestSuccessFn
 拉起指定类型的Ability组件成功时的回调函数。从API version 21开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

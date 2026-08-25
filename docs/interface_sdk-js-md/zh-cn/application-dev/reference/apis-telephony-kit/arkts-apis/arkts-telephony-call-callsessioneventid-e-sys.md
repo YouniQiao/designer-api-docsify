@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ EVENT_CONTROL_CAMERA_FAILURE = 0
 相机设置失败。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -36,8 +32,6 @@ EVENT_CONTROL_CAMERA_READY = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ EVENT_DISPLAY_SURFACE_RELEASED = 100
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ EVENT_PREVIEW_SURFACE_RELEASED = 101
 本端画面窗口释放。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

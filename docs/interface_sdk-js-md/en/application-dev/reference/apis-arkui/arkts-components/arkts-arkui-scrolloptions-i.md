@@ -4,8 +4,6 @@ Provides parameters for scrolling to a specific position in a scrollable contain
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,15 +17,13 @@ Provides parameters for scrolling to a specific position in a scrollable contain
 animation?: ScrollAnimationOptions | boolean
 ```
 
-Animation configuration Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>Currently, the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; support the &lt;em&gt;Boolean&lt;/em&gt; type and &lt;em&gt;ICurve&lt;/em&gt;. </p>parameters and the boolean type enables default spring animation. [since 10 - 11] and the boolean type enables default spring animation. [since 12]
+Animation configuration Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; Currently, the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; support the &lt;em&gt;Boolean&lt;/em&gt; type and &lt;em&gt;ICurve&lt;/em&gt;. </p>parameters and the boolean type enables default spring animation. [since 10 - 11] and the boolean type enables default spring animation. [since 12]
 
 **Type:** [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md) \| boolean
 
 **Default:** ScrollAnimationOptions: { duration: 1000, curve: Curve.Ease, canOverScroll: false } [since 18]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Set whether the scroll target position can over the boundary.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -61,13 +55,11 @@ Set whether the scroll target position can over the boundary.
 xOffset: number | string
 ```
 
-Horizontal scrolling offset. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This parameter cannot be set in percentage. <br>This parameter takes effect only when the scroll axis is the x-axis. <br>Value range: Values less than 0 are treated as 0, and scrolling occurs without animation. Animated scrolling stops at the starting position by default. By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary. <br>If the parameter type is number, the unit is vp. </p>
+Horizontal scrolling offset. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; This parameter cannot be set in percentage. This parameter takes effect only when the scroll axis is the x-axis. Value range: Values less than 0 are treated as 0, and scrolling occurs without animation. Animated scrolling stops at the starting position by default. By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary. If the parameter type is number, the unit is vp. </p>
 
 **Type:** number \| string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,13 +73,11 @@ Horizontal scrolling offset. Anonymous Object Rectification.<p>&lt;strong&gt;NOT
 yOffset: number | string
 ```
 
-Vertical scrolling offset. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>This parameter cannot be set in percentage. <br>This parameter takes effect only when the scroll axis is the y-axis. <br>Value range: Values less than 0 are treated as 0, and scrolling occurs without animation. Animated scrolling stops at the starting position by default. By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary.<br>If the parameter type is number, the unit is vp. </p>
+Vertical scrolling offset. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; This parameter cannot be set in percentage. This parameter takes effect only when the scroll axis is the y-axis. Value range: Values less than 0 are treated as 0, and scrolling occurs without animation. Animated scrolling stops at the starting position by default. By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary.If the parameter type is number, the unit is vp. </p>
 
 **Type:** number \| string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

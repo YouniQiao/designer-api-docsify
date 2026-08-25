@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ CALL_NORMAL = 0
 呼叫正常。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -36,8 +32,6 @@ CALL_PRIVILEGED = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ CALL_EMERGENCY = 2
 拨打紧急电话。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 

@@ -1,7 +1,5 @@
 # NewableFunction
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -15,8 +13,6 @@ apply<T>(this: new () => T, thisArg: T): void
 
 Calls the function with the specified object as the this value and the elements of specified array as the arguments.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -29,8 +25,6 @@ Calls the function with the specified object as the this value and the elements 
 ```TypeScript
 apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): void
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -47,8 +41,6 @@ bind<T>(this: T, thisArg: any): T
 ```
 
 For a given function, creates a bound function that has the same body as the original function. The this object of the bound function is associated with the specified object, and has the specified initial parameters.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -67,8 +59,6 @@ For a given function, creates a bound function that has the same body as the ori
 bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any, arg0: A0): new (...args: A) => R
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -86,8 +76,6 @@ bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any
 ```TypeScript
 bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1): new (...args: A) => R
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -108,8 +96,6 @@ bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R
 bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2): new (...args: A) => R
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -129,8 +115,6 @@ bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ..
 ```TypeScript
 bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2, arg3: A3): new (...args: A) => R
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -153,8 +137,6 @@ bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2
 bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (...args: AX[]) => R
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -174,8 +156,6 @@ call<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, ...args: A): v
 ```
 
 Calls the function with the specified object as the this value and the specified rest arguments as the arguments.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

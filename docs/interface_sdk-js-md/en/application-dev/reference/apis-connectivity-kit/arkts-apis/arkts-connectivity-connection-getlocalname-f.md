@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getLocalName
@@ -15,8 +15,6 @@ function getLocalName(): string
 Obtains the Bluetooth local name of a device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -38,14 +36,3 @@ Obtains the Bluetooth local name of a device.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900001 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let localName: string = connection.getLocalName();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

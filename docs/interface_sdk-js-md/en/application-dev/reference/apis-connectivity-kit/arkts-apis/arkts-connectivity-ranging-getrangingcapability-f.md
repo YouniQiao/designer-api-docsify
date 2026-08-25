@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@kit.ConnectivityKit';
+import { ranging } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getRangingCapability
@@ -15,8 +15,6 @@ function getRangingCapability(): Promise<RangingCapabilitySupported>
 Queries whether the current device supports ranging capability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

@@ -10,8 +10,6 @@ Specifies whether real-time text (RTT) calling is enabled. If enabled, incoming 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core

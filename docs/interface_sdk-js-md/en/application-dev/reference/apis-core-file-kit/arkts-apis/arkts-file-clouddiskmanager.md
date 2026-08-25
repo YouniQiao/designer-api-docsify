@@ -4,8 +4,6 @@ This module enables the File Manager to obtain the sync root information registe
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ This module enables the File Manager to obtain the sync root information registe
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from '@kit.CoreFileKit';
+import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

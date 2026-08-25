@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## events
@@ -23,8 +21,6 @@ events: Array<string>
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -32,16 +28,14 @@ events: Array<string>
 ## priority
 
 ```TypeScript
-priority?: int
+priority?: number
 ```
 
 表示订阅者的优先级，数值越大，订阅者优先级越高，越优先接收到有序公共事件。 取值范围是-100到1000，超过上下限的优先级将被设置为对应的上下限值，默认优先级为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -59,8 +53,6 @@ publisherBundleName?: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -76,8 +68,6 @@ publisherDeviceId?: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -95,8 +85,6 @@ publisherPermission?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -104,16 +92,14 @@ publisherPermission?: string
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 表示用户ID，用于限制订阅者只接收指定用户ID相关的公共事件。此参数是可选的， 默认值为当前用户的ID。如果指定了此参数，则该值必须是系统中现有的用户ID。通过 [getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取系统用户ID，作为发布者的用户ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

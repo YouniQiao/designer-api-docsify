@@ -4,8 +4,6 @@ Describes the image attachment.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ constructor(value: ImageAttachmentInterface)
 A constructor used to create an image object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +39,9 @@ A constructor used to create an image object.
 constructor(attachment: Optional<AttachmentType>)
 ```
 
-A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and ResourceStr types.
+A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and [ResourceStr](arkts-arkui-resourcestr-t.md) types.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,7 +53,7 @@ A constructor used to create an image object. Compared to the constructor with a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | Optional&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | Yes |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | Yes |
 
 ## colorFilter
 
@@ -72,8 +66,6 @@ Image color filter of the styled string.
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,8 +85,6 @@ Image layout of the styled string.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -109,11 +99,9 @@ readonly objectFit?: ImageFit
 
 Image scale type of the styled string.
 
-**Type:** ImageFit
+**Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,11 +117,9 @@ readonly size?: SizeOptions
 
 Image size of the styled string.Number-type values use px as the unit.
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,11 +135,9 @@ readonly sizeInVp?: SizeOptions
 
 Image size of the styled string.Number-type values use vp as the unit.If **ImageAttachment** is set to a negative value or **undefined**, **undefined** is returned.
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,8 +158,6 @@ Whether to enable [enhanced SVG tag parsing capabilities](../../../reference/api
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -194,8 +176,6 @@ Image data source of the styled string.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -210,11 +190,9 @@ readonly verticalAlign?: ImageSpanAlignment
 
 Image alignment mode of the styled string.
 
-**Type:** ImageSpanAlignment
+**Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

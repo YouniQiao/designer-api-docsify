@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isCellularDataEnabled
@@ -15,8 +15,6 @@ function isCellularDataEnabled(callback: AsyncCallback<boolean>): void
 检查蜂窝数据业务是否启用，使用callback方式作为异步方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -39,32 +37,6 @@ function isCellularDataEnabled(callback: AsyncCallback<boolean>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.isCellularDataEnabled((err: BusinessError, contextData: boolean) => {
-    if(err) {
-        console.error(`isCellularDataEnabled fail. code: ${err.code}, message: ${err.message}, contextData: ${contextData}`);
-    } else {
-        console.info(`isCellularDataEnabled success`);
-    }
-});
-```
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.isCellularDataEnabled().then((contextData: boolean) => {
-    console.info(`isCellularDataEnabled success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`isCellularDataEnabled fail. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## isCellularDataEnabled
 
@@ -75,8 +47,6 @@ function isCellularDataEnabled(): Promise<boolean>
 检查蜂窝数据业务是否启用，使用Promise方式作为异步方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -96,7 +66,3 @@ function isCellularDataEnabled(): Promise<boolean>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [isCellularDataEnabled](#iscellulardataenabled)

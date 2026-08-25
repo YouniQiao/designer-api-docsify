@@ -4,8 +4,6 @@ WebContextMenuResult是ArkWeb组件中用于处理上下文菜单（长按页面
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -29,8 +27,6 @@ closeContextMenu(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -44,8 +40,6 @@ constructor()
 WebContextMenuResult的构造函数。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -64,8 +58,6 @@ copy(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -83,8 +75,6 @@ copyImage(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -101,8 +91,6 @@ cut(): void
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -123,8 +111,6 @@ paste(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -144,8 +130,6 @@ pasteAndMatchStyle(): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## redo
@@ -160,8 +144,6 @@ redo(): void
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -178,8 +160,6 @@ requestPasswordAutoFill(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## saveImage
@@ -194,8 +174,6 @@ saveImage(): void
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -214,8 +192,6 @@ selectAll(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -232,7 +208,5 @@ undo(): void
 > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core

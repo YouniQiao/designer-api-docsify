@@ -4,30 +4,26 @@ Describes the style of captions.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## backgroundColor
 
 ```TypeScript
-backgroundColor: int | string
+backgroundColor: number | string
 ```
 
 Describes the caption background color.number: HEX format color, supporting RGB or ARGB.string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
-**Type:** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
+**Type:** number \| string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -38,16 +34,14 @@ Describes the caption background color.number: HEX format color, supporting RGB 
 ## fontColor
 
 ```TypeScript
-fontColor: int | string
+fontColor: number | string
 ```
 
 Describes the caption font color.number: HEX format color, supporting RGB or ARGB.string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
-**Type:** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
+**Type:** number \| string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -67,8 +61,6 @@ Font edge type of captions.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -87,8 +79,6 @@ Font family of captions.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -98,16 +88,14 @@ Font family of captions.
 ## fontScale
 
 ```TypeScript
-fontScale: int
+fontScale: number
 ```
 
 Font scale factor of captions, in percentage. The value ranges from 1 to 200.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -118,16 +106,14 @@ Font scale factor of captions, in percentage. The value ranges from 1 to 200.
 ## windowColor
 
 ```TypeScript
-windowColor: int | string
+windowColor: number | string
 ```
 
 Describes the caption window color.number: HEX format color, supporting RGB or ARGB.string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
-**Type:** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
+**Type:** number \| string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

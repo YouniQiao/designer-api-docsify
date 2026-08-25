@@ -4,8 +4,6 @@ URL information.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ url?: ResourceStr
 
 URL.Default value: **undefined**
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

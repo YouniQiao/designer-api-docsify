@@ -4,14 +4,12 @@ Defines options for route tracing.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## maxJumpNumber
@@ -25,8 +23,6 @@ Maximum number of jumps. The value range is [1, 30]. The default value is **30**
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Type of the data packet used for probe. The default value is **NETCONN_PACKETS_I
 **Type:** [PacketsType](arkts-network-connection-packetstype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

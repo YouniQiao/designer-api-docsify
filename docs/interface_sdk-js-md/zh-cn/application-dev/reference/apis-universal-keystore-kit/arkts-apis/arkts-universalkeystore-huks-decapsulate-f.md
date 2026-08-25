@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## decapsulate
@@ -16,8 +16,6 @@ function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Arra
 Post-Quantum Cryptography密钥解封装操作，支持HUKS密钥管理 或由应用程序本身决定。如果应用程序选择管理密钥， 对称密钥包含在HuksReturnResult的outData字段中。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
@@ -56,34 +54,3 @@ Post-Quantum Cryptography密钥解封装操作，支持HUKS密钥管理 或由�
 | [12000016](../errorcode-huks.md#12000016-设备密码未设置) |
 | [12000017](../errorcode-huks.md#12000017-同名密钥已存在) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
-
-**示例**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let keyAlias = 'ml_kem_key_b';
-let params: huks.HuksParam[] = [{
-  tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-  value: huks.HuksKeyAlg.HUKS_ALG_ML_KEM,
-}, {
-  tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-  value: huks.HuksKeySize.HUKS_ML_KEM_KEY_PARAM_SET_768,
-}, {
-  tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-  value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_UNWRAP,
-}];
-
-let encapData = new Uint8Array(784);
-
-try {
-  huks.decapsulate(keyAlias, params, encapData).then((data: huks.HuksReturnResult) => {
-    console.info(`decapsulate success, sharedSecret length: ${(data.sharedSecret as Uint8Array).length}`);
-  }).catch((error: BusinessError) => {
-    console.error(`decapsulate failed, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`decapsulate input arg invalid`);
-}
-```

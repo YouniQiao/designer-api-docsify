@@ -4,8 +4,6 @@ Agent extension connect callback.@interface AgentExtensionConnectCallback
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ onAuth(handshakeData: string): void
 Called back when authentication is received.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Called back when data is received.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -67,8 +61,6 @@ onDisconnect(): void
 The callback interface was disconnected successfully.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Enumerates the firewall rule directions, including inbound and outbound.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_IN
@@ -18,8 +16,6 @@ Inbound direction.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_OUT
@@ -31,7 +27,5 @@ RULE_OUT = 2
 Outbound direction.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall

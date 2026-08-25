@@ -4,14 +4,12 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## actionUponExpiry
@@ -25,8 +23,6 @@ actionUponExpiry?: ActionType
 **类型：** ActionType
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -42,8 +38,6 @@ allowedOpenCount?: number
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## authUserList
@@ -57,8 +51,6 @@ authUserList?: Array<AuthUser>
 **类型：** Array&lt;[AuthUser](arkts-dataprotection-dlppermission-authuser-i.md)&gt;
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -74,8 +66,6 @@ contactAccount: string
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## countdown
@@ -89,8 +79,6 @@ countdown?: number
 **类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,8 +96,6 @@ everyoneAccessList?: Array<DLPFileAccess>
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## expireTime
@@ -124,8 +110,6 @@ expireTime?: number
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## extensionFields
@@ -139,8 +123,6 @@ extensionFields?: Record<string, Object>
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,8 +140,6 @@ fileId?: string
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## offlineAccess
@@ -173,8 +153,6 @@ offlineAccess: boolean
 **类型：** boolean
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -190,8 +168,6 @@ ownerAccount: string
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## ownerAccountID
@@ -205,8 +181,6 @@ ownerAccountID: string
 **类型：** string
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -222,8 +196,6 @@ ownerAccountType: AccountType
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## waterMarkConfig
@@ -237,7 +209,5 @@ waterMarkConfig?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

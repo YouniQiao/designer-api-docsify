@@ -4,14 +4,12 @@ TLS security options. When **cert** (local certificate) and **key** (private key
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## ca
@@ -25,8 +23,6 @@ CA certificate of the server, which is used to authenticate the digital certific
 **Type:** string \| Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,8 +38,6 @@ Digital certificate of the local client. An array can be passed since API versio
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## cipherSuite
@@ -57,8 +51,6 @@ Cipher suite used during communication. The default value is **""**.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -74,8 +66,6 @@ Two-way authentication. The default value is **false**. The value **true** means
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## key
@@ -89,8 +79,6 @@ Private key of the local digital certificate.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -106,8 +94,6 @@ Password for reading the private key.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## protocols
@@ -121,8 +107,6 @@ TLS protocol version. The default value is **TLSv1.2**.
 **Type:** Protocol \| Array&lt;Protocol&gt;
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -138,8 +122,6 @@ Signing algorithm used during communication. The default value is **""**.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## useRemoteCipherPrefer
@@ -153,7 +135,5 @@ Whether to use the remote cipher suite preferentially. The value **true** means 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetStack

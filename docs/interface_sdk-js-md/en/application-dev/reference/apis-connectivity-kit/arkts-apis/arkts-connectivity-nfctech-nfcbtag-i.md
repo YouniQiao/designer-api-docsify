@@ -7,28 +7,18 @@ Provides APIs to access NFC-B (ISO 14443-3B) properties and perform I/O operatio
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getRespAppData
 
-ArkTS-Dyn:
 ```TypeScript
 getRespAppData(): number[]
-```
-
-ArkTS-Sta:
-```TypeScript
-getRespAppData(): int[]
 ```
 
 Obtains the application data of this NFC-B tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -37,36 +27,18 @@ Obtains the application data of this NFC-B tag.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
-
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// Obtain the correct nfcB tag by using the tag.TagInfo API in @ohos.nfc.tag.
-let respAppData : number[] = nfcB.getRespAppData();
-console.info("nfcB respAppData: " + respAppData);
-```
+| number[] |
 
 ## getRespProtocol
 
-ArkTS-Dyn:
 ```TypeScript
 getRespProtocol(): number[]
-```
-
-ArkTS-Sta:
-```TypeScript
-getRespProtocol(): int[]
 ```
 
 Obtains the protocol information of this NFC-B tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -75,14 +47,4 @@ Obtains the protocol information of this NFC-B tag.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
-
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// Obtain the correct nfcB tag by using the tag.TagInfo API in @ohos.nfc.tag.
-let respProtocol : number[] = nfcB.getRespProtocol();
-console.info("nfcB respProtocol: " + respProtocol);
-```
+| number[] |

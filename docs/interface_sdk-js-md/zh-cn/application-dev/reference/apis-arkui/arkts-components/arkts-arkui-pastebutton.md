@@ -1,6 +1,7 @@
 # PasteButton
 
-安全控件的粘贴控件。用户点击粘贴控件，应用可以临时获取读取剪贴板权限。 <br>**说明**</br> <ul><li>
+安全控件的粘贴控件。用户点击粘贴控件，应用可以临时获取读取剪贴板权限。 
+**说明**</br> <ul><li>
 
 ## 核心枚举类型</li> <li>**[PasteIconStyle](arkts-arkui-pasteiconstyle-e.md)：** 粘贴控件图标风格枚举，用于指定控件展示的图标风格。</li> <li>**[PasteDescription](arkts-arkui-pastedescription-e.md)：** 粘贴控件文本描述枚举，用于指定控件展示的文本描述。</li> <li>**[PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md)：** 粘贴控件点击结果枚举，用于表示点击后授权是否成功。</li> <li>###### 核心接口类型</li> <li>**[PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md)：** 粘贴控件配置对象，用于指定图标、文字和按钮类型等元素属性。</li> <li>**[PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md)：** 粘贴控件点击回调类型，用于返回点击事件、授权结果和错误信息。</li> <li>###### 子组件</li> <li>不支持</li></ul>
 
@@ -10,11 +11,10 @@
 PasteButton()
 ```
 
-默认创建带有图标、文本、背景的粘贴控件。控件创建完成后，用户点击时系统会执行授权校验；授权成功后，应用可读取当前剪贴板内容。 <br>**说明：**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;为避免因控件样式不合法而导致授权失败，请开发者先了解安全控件样式 的[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt;&lt;/ul&gt;
+默认创建带有图标、文本、背景的粘贴控件。控件创建完成后，用户点击时系统会执行授权校验；授权成功后，应用可读取当前剪贴板内容。   
+**说明：**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;为避免因控件样式不合法而导致授权失败，请开发者先了解安全控件样式 的[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt;&lt;/ul&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -28,11 +28,10 @@ PasteButton()
 PasteButton(options: PasteButtonOptions)
 ```
 
-使用指定的图标、文本和按钮类型创建粘贴按钮。创建后，系统会触发一个 点击按钮时的授权检查。授权成功后，应用将获得临时权限 读取剪贴板。 <br>**说明：**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;为避免因控件样式不合法而导致授权失败，请开发者先了解安全控件样式 的[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt; &lt;/ul&gt;
+使用指定的图标、文本和按钮类型创建粘贴按钮。创建后，系统会触发一个 点击按钮时的授权检查。授权成功后，应用将获得临时权限 读取剪贴板。   
+**说明：**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;为避免因控件样式不合法而导致授权失败，请开发者先了解安全控件样式 的[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt; &lt;/ul&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

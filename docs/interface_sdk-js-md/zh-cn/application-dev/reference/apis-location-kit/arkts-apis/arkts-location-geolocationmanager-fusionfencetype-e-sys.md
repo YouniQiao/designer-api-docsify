@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ GNSS = 1
 四位二进制数的最低位，表示GNSS围栏。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ CELLULAR = 2
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
@@ -56,8 +50,6 @@ WIFI = 4
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
@@ -73,8 +65,6 @@ BLUETOOTH = 8
 四位二进制数的最高位，表示蓝牙围栏。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ Defines sheet size type.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MEDIUM
@@ -17,8 +15,6 @@ MEDIUM = 0
 Defines the sheet size medium height type. The height is half the screen height
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ Defines the sheet size large height type. The height is almost screen height.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -53,8 +47,6 @@ FIT_CONTENT = 2
 Defines the sheet size fit content height type. The height fit content.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

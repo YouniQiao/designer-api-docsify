@@ -4,8 +4,6 @@ Enumerates the parameter constraint types.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_CONSTRAINT_NONE
@@ -17,8 +15,6 @@ SCAN_CONSTRAINT_NONE = 0
 No constraint.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ Range.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_CONSTRAINT_WORD_LIST
@@ -46,8 +40,6 @@ Number list.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_CONSTRAINT_STRING_LIST
@@ -59,7 +51,5 @@ SCAN_CONSTRAINT_STRING_LIST = 3
 String list.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

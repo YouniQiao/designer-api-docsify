@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## PAGE
@@ -17,8 +15,6 @@ PAGE = 1
 UI界面类型的Ability。表示基于Page模板开发的FA，用于提供与用户交互的能力。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -34,8 +30,6 @@ SERVICE = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -49,8 +43,6 @@ DATA = 3
 表示基于Data模板开发的[ParticleAbility](arkts-ability-particleability.md)，用于对外部提供统一的数据访问对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

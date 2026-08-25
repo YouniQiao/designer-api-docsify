@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## supportsCACertDialog
@@ -15,8 +15,6 @@ function supportsCACertDialog(): boolean
 判断设备是否支持[openCertificateDetailDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatedetaildialog-f.md)，[openInstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openinstallcertificatedialog-f.md)和[openUninstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openuninstallcertificatedialog-f.md)接口打开管理CA证书的对话框。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,19 +31,3 @@ function supportsCACertDialog(): boolean
 | 错误码ID |
 | --- |
 | [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) |
-
-**示例**
-
-```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  /* 判断设备是否支持打开CA证书管理对话框。 */
-  let isSupport: boolean = certificateManagerDialog.supportsCACertDialog();
-  console.info(`Succeeded in checking whether the device supports CA dialog.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to check whether the device supports CA dialog. Code: ${error.code}, message: ${error.message}`);
-}
-```

@@ -4,8 +4,6 @@ Callback API type used during data migration, defining the callback methods for 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Callback API type used during data migration, defining the callback methods for 
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## onHeartBeat
@@ -26,38 +24,9 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-dataMigration() {
-  const callback: fontManager.DataMigrationCallback = {
-    onHeartBeat: () => {
-      console.info('onHeartBeat callback');
-    },
-    onProgress(progress : fontManager.DataMigrationProgress) => {
-      console.info('onProgress callback');
-    },
-    onResult(result : int) => {
-      console.info('onResult callback');
-    }
-  }
-  try {
-    let res = await fontManager.dataMigration(callback);
-    console.info('dataMigration suc. res is ' + res);
-  } catch (error) {
-    console.error('dataMigration err.' + error.code);
-  }
-  return;
-}
-```
 
 ## onProgress
 
@@ -69,8 +38,6 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
@@ -81,50 +48,15 @@ Callback function that is periodically invoked during the execution of the data 
 | --- | --- | --- |
 | progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Yes |
 
-**Examples**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-dataMigration() {
-  const callback: fontManager.DataMigrationCallback = {
-    onHeartBeat: () => {
-      console.info('onHeartBeat callback');
-    },
-    onProgress(progress : fontManager.DataMigrationProgress) => {
-      console.info('onProgress callback');
-    },
-    onResult(result : int) => {
-      console.info('onResult callback');
-    }
-  }
-  try {
-    let res = await fontManager.dataMigration(callback);
-    console.info('dataMigration suc. res is ' + res);
-  } catch (error) {
-    console.error('dataMigration err.' + error.code);
-  }
-  return;
-}
-```
-
 ## onResult
 
-ArkTS-Dyn:
 ```TypeScript
 onResult(result : number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onResult(result : int): void
 ```
 
 Callback function that is invoked after the data migration task is completed (whether successful or failed) to notify you of the final migration result. This callback can be used when subsequent operations (such as updating the UI, logging, notifying users, etc.) need to be performed after migration is complete.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -134,31 +66,4 @@ Callback function that is invoked after the data migration task is completed (wh
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| result | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-
-**Examples**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-dataMigration() {
-  const callback: fontManager.DataMigrationCallback = {
-    onHeartBeat: () => {
-      console.info('onHeartBeat callback');
-    },
-    onProgress(progress : fontManager.DataMigrationProgress) => {
-      console.info('onProgress callback');
-    },
-    onResult(result : int) => {
-      console.info('onResult callback');
-    }
-  }
-  try {
-    let res = await fontManager.dataMigration(callback);
-    console.info('dataMigration suc. res is ' + res);
-  } catch (error) {
-    console.error('dataMigration err.' + error.code);
-  }
-  return;
-}
-```
+| result | number | Yes |

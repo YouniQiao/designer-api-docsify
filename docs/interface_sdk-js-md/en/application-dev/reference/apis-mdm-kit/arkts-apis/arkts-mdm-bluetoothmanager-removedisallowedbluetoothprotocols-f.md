@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedBluetoothProtocols
@@ -15,8 +15,6 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 Removes disallowed Bluetooth protocols. After removing some protocols, the user is still restricted by the remaining disallowed protocols; after removing all protocols, the user can use any protocol; removing non-existent protocols results in a successful API call but no actual change.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -40,28 +38,6 @@ Removes disallowed Bluetooth protocols. After removing some protocols, the user 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace it as required.
-let accountId: number = 100;
-let protocols: Array<bluetoothManager.Protocol> = [bluetoothManager.Protocol.GATT, bluetoothManager.Protocol.SPP];
-try{
-    bluetoothManager.removeDisallowedBluetoothProtocols(wantTemp, accountId, protocols);
-    console.info('Succeeded in removing disallowed bluetooth protocols policy.');
-} catch (err) {
-    console.error(`Failed to remove disallowed bluetooth protocols. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## removeDisallowedBluetoothProtocols
 
@@ -82,8 +58,6 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 > policies remain effective.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -108,7 +82,3 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [removeDisallowedBluetoothProtocols](#removedisallowedbluetoothprotocols)

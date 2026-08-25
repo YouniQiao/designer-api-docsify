@@ -4,14 +4,12 @@ SelectionMenuOptions定义SelectionMenu的可选菜单类型项及其配置参�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from '@kit.ArkUI';
+import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## onCopy
@@ -24,8 +22,6 @@ onCopy?: (event?: EditorEventInfo) => void
 **说明：**event为返回信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +46,6 @@ onCut?: (event?: EditorEventInfo) => void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -75,8 +69,6 @@ onPaste?: (event?: EditorEventInfo) => void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -99,8 +91,6 @@ onSelectAll?: (event?: EditorEventInfo) => void
 **说明：**event为返回信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,8 +116,6 @@ backgroundSystemMaterial?: uiMaterial.Material
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -142,11 +130,9 @@ controller?: RichEditorController
 
 扩展下拉菜单。expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
 
-**类型：** [RichEditorController](arkts-arkui-richeditor-richeditorcontroller-c.md)
+**类型：** [RichEditorController](../arkts-components/arkts-arkui-richeditorcontroller-c.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -166,8 +152,6 @@ editorMenuOptions?: Array<EditorMenuOptions>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -185,8 +169,6 @@ expandedMenuOptions?: Array<ExpandedMenuOptions>
 **类型：** Array&lt;[ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## createWatcher
@@ -17,8 +17,6 @@ declare function createWatcher(path: string, events: number, listener: WatchEven
 Creates a **Watcher** object to listen for file or directory changes.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -53,27 +51,3 @@ Creates a **Watcher** object to listen for file or directory changes.
 | 13900025 |
 | 13900030 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { fileIo as fs, WatchEvent } from '@kit.CoreFileKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let pathDir = context.filesDir;
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
-let watcher = fs.createWatcher(filePath, 0x2 | 0x10, (watchEvent: WatchEvent) => {
-  if (watchEvent.event == 0x2) {
-    console.info(watchEvent.fileName + 'was modified');
-  } else if (watchEvent.event == 0x10) {
-    console.info(watchEvent.fileName + 'was closed');
-  }
-});
-watcher.start();
-fs.writeSync(file.fd, 'test');
-fs.closeSync(file);
-watcher.stop();
-```

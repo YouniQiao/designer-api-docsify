@@ -4,8 +4,6 @@ CurrentDayStyle object.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,8 +27,6 @@ Boundary col offset.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -50,8 +46,6 @@ Boundary row offset.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -73,8 +67,6 @@ Number of columns.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -94,8 +86,6 @@ Daily five row space.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -117,8 +107,6 @@ Daily six row space.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -135,11 +123,9 @@ dayColor?: ResourceColor
 
 Text color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -161,8 +147,6 @@ Text fontSize.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -182,8 +166,6 @@ Single date height.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -205,8 +187,6 @@ Single date width.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -226,8 +206,6 @@ Data y axis Off set.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -249,8 +227,6 @@ Gregorian calendar height.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -267,11 +243,9 @@ lunarColor?: ResourceColor
 
 lunar Text color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -293,8 +267,6 @@ lunar text fontSize.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -314,8 +286,6 @@ Lunar data y axis Off set.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -337,8 +307,6 @@ Single lunar height.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -355,11 +323,9 @@ markLunarColor?: ResourceColor
 
 lunar Work and rest text color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -381,8 +347,6 @@ Schedule marker radius.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -402,8 +366,6 @@ Schedule marker X axis Off set
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -425,8 +387,6 @@ schedule Marker Y Axis Off set
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -446,8 +406,6 @@ Under score length.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -469,8 +427,6 @@ Under score width.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -491,8 +447,6 @@ Under score X Axis Off set.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -512,8 +466,6 @@ Under score Y Axis Off set
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 

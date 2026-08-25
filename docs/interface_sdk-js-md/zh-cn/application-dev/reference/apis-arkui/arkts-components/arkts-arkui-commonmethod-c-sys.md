@@ -4,8 +4,6 @@ CommonMethod.
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 将当前组件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。不能与 [blendMode](arkts-arkui-commonmethod-c.md#blendmode)接口同时使用。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,26 +50,11 @@ constructor.
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-```TypeScript
-@Builder
-function myBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-
-// 使用WrappedBuilder封装myBuilder
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
-```
 
 ## edgeLight
 
@@ -90,8 +71,6 @@ edgeLight(params: EdgeLightParams | undefined): T
 > - 当position参数以对角线方式变更时，边缘流光将沿倾斜角45°的方式运行。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,8 +106,6 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统接口：** 此接口为系统接口。
@@ -154,8 +131,6 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 将空间效果应用于组件。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -187,8 +162,6 @@ Set system-styled materials for the component. The material effect behaves diffe
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -219,8 +192,6 @@ useUnionEffect(value: boolean | undefined): T
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -248,8 +219,6 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T
 指定当前组件是否参与祖先组件UnionEffectContainer的融合效果
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

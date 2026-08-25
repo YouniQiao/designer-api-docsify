@@ -4,8 +4,6 @@ Sets the text style.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,13 +17,11 @@ Sets the text style.
 family?: string | Resource
 ```
 
-Font family. <br>To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. Default value: 'HarmonyOS Sans'.
+Font family. To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. Default value: 'HarmonyOS Sans'.
 
 **Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,8 +39,6 @@ Font size. If the value is of the number type, the unit fp is used. Percentage s
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -61,8 +55,6 @@ Font style. Default value: FontStyle.Normal.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -78,8 +70,6 @@ Font weight. For the number type, the value ranges from 100 to 900, at an interv
 **Type:** FontWeight \| number \| string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

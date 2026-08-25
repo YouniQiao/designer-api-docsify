@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,16 +11,14 @@
 ## appIndex
 
 ```TypeScript
-readonly appIndex: int
+readonly appIndex: number
 ```
 
 标识当前动态图标所属的应用分身索引信息。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -40,8 +36,6 @@ readonly bundleName: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -58,8 +52,6 @@ readonly moduleName: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,16 +59,14 @@ readonly moduleName: string
 ## userId
 
 ```TypeScript
-readonly userId: int
+readonly userId: number
 ```
 
 标识当前动态图标所属的用户信息。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

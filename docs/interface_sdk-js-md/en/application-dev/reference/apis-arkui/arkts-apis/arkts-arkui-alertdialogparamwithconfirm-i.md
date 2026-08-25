@@ -8,8 +8,6 @@ Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).Priorities 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,8 +26,6 @@ Information about the confirm button. When the dialog box has focus and the **Ta
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

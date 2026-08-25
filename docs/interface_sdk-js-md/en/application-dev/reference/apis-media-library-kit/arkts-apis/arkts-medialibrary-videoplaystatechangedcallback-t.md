@@ -1,16 +1,14 @@
-# VideoPlayStateChangedCallback
+# videoPlayStateChangedCallback
 
 ```TypeScript
-export type VideoPlayStateChangedCallback = (state: VideoPlayerState) => void
+export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void
 ```
 
-The callback of onVideoPlayStateChanged event
+Callback to be invoked when the video playback state on a photo browser page changes.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

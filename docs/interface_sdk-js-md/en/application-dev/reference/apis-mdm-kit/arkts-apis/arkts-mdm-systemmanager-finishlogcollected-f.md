@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## finishLogCollected
@@ -25,8 +25,6 @@ Deletes the device logs collected by the current MDM app under the current user.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Required permissions:** ohos.permission.ENTERPRISE_READ_LOG
 
 **Model restriction:** This API can be used only in the stage model.
@@ -47,23 +45,3 @@ Deletes the device logs collected by the current MDM app under the current user.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  systemManager.finishLogCollected(wantTemp);
-  console.info('Succeeded in finishing log collected.');
-} catch (err) {
-  console.error(`Failed to finish log collected. Code is ${err.code}, message is ${err.message}`);
-}
-```

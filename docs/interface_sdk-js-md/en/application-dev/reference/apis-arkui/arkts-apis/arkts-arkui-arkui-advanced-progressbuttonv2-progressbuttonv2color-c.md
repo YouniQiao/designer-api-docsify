@@ -4,14 +4,12 @@ Declare ProgressButtonV2 Color.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
+import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## constructor
@@ -23,8 +21,6 @@ constructor(options: ProgressButtonV2ColorOptions)
 The constructor of ProgressButtonV2
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,11 +42,9 @@ backgroundColor?: ColorMetrics
 
 Set background color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,11 +60,9 @@ borderColor?: ColorMetrics
 
 Set border color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,11 +78,9 @@ progressColor?: ColorMetrics
 
 Set progress color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,11 +96,9 @@ textColor?: ColorMetrics
 
 Set text color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

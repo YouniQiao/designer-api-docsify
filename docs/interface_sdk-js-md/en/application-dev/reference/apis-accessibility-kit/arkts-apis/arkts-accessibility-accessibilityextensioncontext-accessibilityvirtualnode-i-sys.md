@@ -4,8 +4,6 @@ Defines an accessibility virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Whether the element has gained focus for accessibility purposes. The value true 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,8 +38,6 @@ Whether the element is an accessibility group. The value true indicates that the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -61,8 +55,6 @@ Accessibility level of the component.'auto': The accessibility grouping service 
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +74,6 @@ Accessibility text information of the element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -101,8 +91,6 @@ Whether the element is checkable. The value true indicates that the element is c
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,8 +110,6 @@ Whether the element is checked. The value true indicates that the element is che
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -133,16 +119,14 @@ Whether the element is checked. The value true indicates that the element is che
 ## childNodeIds
 
 ```TypeScript
-childNodeIds?: Array<long>
+childNodeIds?: Array<number>
 ```
 
 List of child element IDs of the component.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,8 +146,6 @@ Whether the element is clickable. The value true indicates that the element is c
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -182,8 +164,6 @@ Custom component type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -193,16 +173,14 @@ Custom component type.
 ## elementId
 
 ```TypeScript
-elementId?: long
+elementId?: number
 ```
 
 ID of the component to which the element belongs.Default value: -1.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,8 +200,6 @@ Whether the element is enabled. The value true indicates that the element is ena
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -233,16 +209,14 @@ Whether the element is enabled. The value true indicates that the element is ena
 ## parentId
 
 ```TypeScript
-parentId?: long
+parentId?: number
 ```
 
 Parent element ID of the component.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,8 +236,6 @@ Area of the element (relative to the parent node).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -281,8 +253,6 @@ Whether the element is selected. The value true indicates that the element is se
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -302,8 +272,6 @@ Supported action names.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -321,8 +289,6 @@ Text content of the element.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -342,8 +308,6 @@ Simulated touch position.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -353,16 +317,14 @@ Simulated touch position.
 ## virtualNodeId
 
 ```TypeScript
-virtualNodeId: long
+virtualNodeId: number
 ```
 
 Custom virtual node ID of the element.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

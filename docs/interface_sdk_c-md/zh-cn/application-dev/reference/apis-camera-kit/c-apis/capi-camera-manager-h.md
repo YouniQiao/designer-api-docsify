@@ -501,7 +501,7 @@ Camera_ErrorCode OH_CameraManager_CreateCameraInput(Camera_Manager* cameraManage
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [const Camera_Device](capi-oh-camera-camera-device.md)* camera | 用于创建Camera_Input实例的Camera_Device。 |
-| Camera_Input** cameraInput | 如果方法调用成功，将创建Camera_Input实例。 |
+| [Camera_Input](capi-oh-camera-camera-input.md)** cameraInput | 如果方法调用成功，将创建Camera_Input实例。 |
 
 **返回：**
 
@@ -530,7 +530,7 @@ Camera_ErrorCode OH_CameraManager_CreateCameraInput_WithPositionAndType(Camera_M
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [Camera_Position](capi-camera-h.md#camera_position) position | 用于创建Camera_Input实例的相机位置。 |
 | [Camera_Type](capi-camera-h.md#camera_type) type | 用于创建Camera_Input实例的相机类型。 |
-| Camera_Input** cameraInput | 如果方法调用成功，将创建Camera_Input实例。 |
+| [Camera_Input](capi-oh-camera-camera-input.md)** cameraInput | 如果方法调用成功，将创建Camera_Input实例。 |
 
 **返回：**
 
@@ -767,7 +767,7 @@ Camera_ErrorCode OH_CameraManager_CreateMetadataOutput(Camera_Manager* cameraMan
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [const Camera_MetadataObjectType](capi-camera-h.md#camera_metadataobjecttype)* profile | 用于创建Camera_MetadataOutput实例的元数据对象类型。 |
-| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)** metadataOutput | 如果方法调用成功，将创建Camera_MetadataOutput实例。 |
+| Camera_MetadataOutput** metadataOutput | 如果方法调用成功，将创建Camera_MetadataOutput实例。 |
 
 **返回：**
 
@@ -794,7 +794,7 @@ Camera_ErrorCode OH_CameraManager_CreateMetadataOutputWithObjectTypes(Camera_Man
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [const Camera_MetadataObjectType](capi-camera-h.md#camera_metadataobjecttype)* metadataObjectTypes | 用于创建Camera_MetadataOutput实例的元数据对象类型数组。 |
 | uint32_t size | 元数据对象类型数组长度。 |
-| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)** metadataOutput | 如果方法调用成功，将创建Camera_MetadataOutput实例。 |
+| Camera_MetadataOutput** metadataOutput | 如果方法调用成功，将创建Camera_MetadataOutput实例。 |
 
 **返回：**
 

@@ -4,8 +4,6 @@ Defines **PathSeparatorStrategy**, a property of [Options](arkts-basicservices-z
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## PATH_SEPARATOR_STRATEGY_DEFAULT
@@ -17,8 +15,6 @@ PATH_SEPARATOR_STRATEGY_DEFAULT = 0
 Default value, indicating that separators in the file path of the compressed package are not processed.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -33,8 +29,6 @@ PATH_SEPARATOR_STRATEGY_REPLACE_BACKSLASH = 1
 Backslashes () in the file path of the package are replaced with slashes (/).
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 

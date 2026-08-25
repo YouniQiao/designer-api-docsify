@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getP2pLocalDevice
@@ -15,8 +15,6 @@ function getP2pLocalDevice(): Promise<WifiP2pDevice>
 获取本设备的信息。 如果未获取ohos.permission.GET_WIFI_LOCAL_MAC权限，返回的WifiP2pDevice中的DeviceAddress将设置为"00:00:00:00:00:00"。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -36,24 +34,6 @@ function getP2pLocalDevice(): Promise<WifiP2pDevice>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
 
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  // p2p已经建组或者连接成功，才能正常获取到本端设备信息
-  wifiManager.getP2pLocalDevice((err, data:wifiManager.WifiP2pDevice) => {
-    if (err) {
-        console.error("get P2P local device error");
-        return;
-    }
-    console.info("get P2P local device: " + JSON.stringify(data));
-  });
-
-  wifiManager.getP2pLocalDevice().then(data => {
-    console.info("get P2P local device: " + JSON.stringify(data));
-  });
-```
-
 
 ## getP2pLocalDevice
 
@@ -64,8 +44,6 @@ function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void
 获取本设备的信息。 如果未获取ohos.permission.GET_WIFI_LOCAL_MAC权限，返回的WifiP2pDevice中的DeviceAddress将设置为"00:00:00:00:00:00"。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -85,7 +63,3 @@ function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
 | [2801001](../errorcode-wifi.md#2801001-p2p功能未打开) |
-
-**示例**
-
-参见 [getP2pLocalDevice](#getp2plocaldevice)

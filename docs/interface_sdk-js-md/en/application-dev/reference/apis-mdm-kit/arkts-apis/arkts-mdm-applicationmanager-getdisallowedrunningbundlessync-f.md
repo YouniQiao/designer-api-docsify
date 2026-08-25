@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedRunningBundlesSync
@@ -15,8 +15,6 @@ function getDisallowedRunningBundlesSync(admin: Want, accountId?: number): Array
 Obtains applications that are not allowed to run by the current user or specified user.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -46,26 +44,6 @@ Obtains applications that are not allowed to run by the current user or specifie
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: Array<string> = applicationManager.getDisallowedRunningBundlesSync(wantTemp);
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getDisallowedRunningBundlesSync
 
@@ -76,8 +54,6 @@ function getDisallowedRunningBundlesSync(admin: Want | null, accountId?: number)
 Obtains the application running blocklist of the current user or specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -106,7 +82,3 @@ Obtains the application running blocklist of the current user or specified user.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getDisallowedRunningBundlesSync](#getdisallowedrunningbundlessync)

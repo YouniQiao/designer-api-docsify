@@ -4,8 +4,6 @@ The parameters of blur bubbles rise effect.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The parameters of blur bubbles rise effect.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## blurIntensity
@@ -27,8 +25,6 @@ The Gaussian blur intensity of the blur bubbles rise effect. The value range is 
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ The mask image for the blur bubbles rise effect, controlling the blur bubbles ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -68,8 +62,6 @@ The mixing strength between the original and blurred images. The value range is 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -87,8 +79,6 @@ The animation progress of the blur bubbles rise effect. The value range is [0, 1
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

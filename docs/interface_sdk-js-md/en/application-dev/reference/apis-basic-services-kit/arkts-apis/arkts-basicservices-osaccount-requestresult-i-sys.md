@@ -4,8 +4,6 @@ Defines the request result information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the request result information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## credentialId
@@ -27,8 +25,6 @@ Credential ID, which is left blank by default.
 **Type:** Uint8Array
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

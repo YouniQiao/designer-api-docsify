@@ -4,14 +4,12 @@ Represents request options.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## compatibleMode
@@ -25,8 +23,6 @@ HDR video transcoding policy, which can be **FAST_ORIGINAL_FORMAT_MODE** (mainta
 **Type:** [CompatibleMode](arkts-medialibrary-photoaccesshelper-compatiblemode-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -42,8 +38,6 @@ Delivery mode of the requested asset. The value can be **FAST_MODE**, **HIGH_QUA
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## mediaAssetProgressHandler
@@ -57,7 +51,5 @@ Callback used to return the HDR-to-SDR conversion progress.
 **Type:** [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

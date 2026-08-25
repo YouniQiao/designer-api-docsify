@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
 ```
 
 ## distributeOperation
@@ -15,8 +15,6 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 触发指定通知的跨设备协同操作（例如通知跨设备点击跳转、通知跨设备快捷回复等）。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,40 +44,3 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
 | [1600021](../errorcode-notification.md#1600021-跨设备通信超时) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hashcode: string = 'hashcode';
-let operationInfo: notificationSubscribe.OperationInfo = {
-  actionName: 'actionName',
-  userInput: 'userInput',
-  operationType: 1,
-  buttonIndex: 1,
-};
-notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
-  console.info('distributeOperation success');
-}).catch((err: BusinessError) => {
-  console.error(`distributeOperation fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashcode: string = 'hashcode';
-let operationInfo: notificationSubscribe.OperationInfo = {
-  actionName: 'actionName',
-  userInput: 'userInput',
-};
-notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
-  console.info('distributeOperation success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`distributeOperation fail, code is ${error.code}, message is ${error.message}`);
-});
-```

@@ -4,8 +4,6 @@ Enumerates the page types of the certificate management dialog box.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManagerDialog
 
 ## PAGE_MAIN
@@ -17,8 +15,6 @@ PAGE_MAIN = 1
 Main page of the Certificate Manager application.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ CA certificate list page.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
@@ -50,8 +44,6 @@ Credential list page.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
@@ -65,8 +57,6 @@ PAGE_INSTALL_CERTIFICATE = 4
 Certificate installation page.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

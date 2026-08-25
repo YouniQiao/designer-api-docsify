@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## enableScreenCurtain
@@ -17,8 +15,6 @@ enableScreenCurtain(isEnable: boolean): void
 开启或关闭幕帘屏。幕帘屏开启后，屏幕显示内容将被隐藏（屏幕变暗），但设备仍可正常响应操作。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -38,51 +34,6 @@ enableScreenCurtain(isEnable: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) |
 
-**示例**
-
-```TypeScript
-import {
-  AccessibilityElement,
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-    this.context.getRootInActiveWindow().then((rootElement: AccessibilityElement) => {
-      console.info(`succeeded in getting root element of the window, ${JSON.stringify(rootElement)}`);
-      rootElement.enableScreenCurtain(true);
-      console.info(`Succeeded in enabling screen curtain`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to enable screen curtain. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-}
-```
-
 ## executeAction
 
 ```TypeScript
@@ -92,8 +43,6 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 根据action指定的操作类型和parameters，对无障碍节点元素执行相应操作。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -122,62 +71,6 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
 
-**示例**
-
-无参数Action。
-
-```TypeScript
-// 无参数Action示例：
-import { AccessibilityAction } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
-// Action描述中无明确要求的，均为无参数Action。
-rootElement.executeAction(AccessibilityAction.CLICK).then(() => {
-  console.info(`succeeded in performing action CLICK`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action CLICK. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
-有参数Action（setSelection）。
-
-```TypeScript
-// 有参数Action示例：
-import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// selectTextBegin：表示选择起始位置。
-// selectTextEnd：表示选择结束位置。
-// selectTextInForWard：true表示为前光标，false表示为后光标。
-let parameter : Parameter = { selectTextBegin: '0', selectTextEnd: '8', selectTextInForWard: true };
-// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
-// setSelection示例代码。
-rootElement.executeAction(AccessibilityAction.SET_SELECTION, parameter).then(() => {
-  console.info(`succeeded in performing action SET_SELECTION`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action SET_SELECTION. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
-有参数Action（setCursorPosition）。
-
-```TypeScript
-// 有参数Action示例：
-import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// offset：表示光标的设置位置。
-let parameter : Parameter = { offset: '1' };
-// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
-// setCursorPosition示例代码。
-rootElement.executeAction(AccessibilityAction.SET_CURSOR_POSITION, parameter).then(() => {
-  console.info(`succeeded in performing action SET_CURSOR_POSITION`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action SET_CURSOR_POSITION. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 ## findElement('textType')
 
 ```TypeScript
@@ -187,8 +80,6 @@ findElement(type: 'textType', condition: string): Promise<Array<AccessibilityEle
 根据组件配置的accessibilityTextHint无障碍文本类型查询所有节点元素。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -213,34 +104,15 @@ findElement(type: 'textType', condition: string): Promise<Array<AccessibilityEle
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// condition的内容需要与目标组件accessibilityTextHint属性的type字段值保持一致。
-let condition = 'location'; 
-
-// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
-rootElement.findElement('textType', condition).then((data: AccessibilityElement[]) => {
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElement('elementId')
 
 ```TypeScript
-findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
+findElement(type: 'elementId', condition: number): Promise<AccessibilityElement>
 ```
 
 根据elementId查询当前活动窗口下的节点元素。使用Promise异步回调。与[findElementById](#findelementbyid)均根据元素ID查找节点元素，功能等价，推荐优先使用findElementById。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -265,23 +137,6 @@ findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// elementId为10。
-let condition = 10;
-
-// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
-rootElement.findElement('elementId', condition).then((data: AccessibilityElement) => {
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElementByContent
 
 ```TypeScript
@@ -291,8 +146,6 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 根据元素的内容文本查找节点元素，将返回包含指定文本的所有节点元素。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -319,85 +172,6 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) |
-
-**示例**
-
-```TypeScript
-// Page.ets
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-// ...
-
-// AccessibilityExtAbility.ets
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowId: number = 10;
-
-// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
-axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
-    root.findElementByContent('connect').then((elements: AccessibilityElement[]) => {
-        console.info('findElementByContent size=' + elements.length);
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to find element by content. Code: ${err.code}, message: ${err.message}`);
-    });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get root in active window. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## findElementByElementId
-
-```TypeScript
-findElementByElementId(condition: long): Promise<AccessibilityElement>
-```
-
-根据elementId查询当前活动窗口下的节点元素。使用Promise异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| condition | long | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// elementId为10。
-let condition = 10;
-
-// rootElement是AccessibilityElement的实例。
-rootElement.findElement('elementId', condition).then((data: AccessibilityElement) => {
-  console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## findElementByFocusDirection
 
@@ -409,8 +183,6 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -436,90 +208,6 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) |
-
-**示例**
-
-```TypeScript
-// Page.ets
-// 点击TextInput使其成为无障碍焦点元素，向上方向的下一个焦点元素是Text#connect。
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
-// ...
-
-// AccessibilityExtAbility.ets
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
-axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
-    focus.findElementByFocusDirection('up').then((element: AccessibilityElement) => {
-        console.info('findElementByFocusDirection UP componentId: ' + element.componentId);
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to find element by focus direction. Code: ${err.code}, message: ${err.message}`);
-    });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-// Page.ets
-// 点击“二级标题1”，使其成为无障碍焦点元素。下一个聚焦类型为标题焦点元素，是“二级标题2”。
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        
-    SubHeader({
-      secondaryTitle: '二级标题1',
-      operationType: OperationType.BUTTON,
-      operationItem: [{
-        value: '操作',
-        action: () => {
-          Prompt.showToast({ message: 'demo' });
-        }
-      }]
-    })
-
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
-
-    SubHeader({
-      secondaryTitle: '二级标题2',
-      operationType: OperationType.BUTTON,
-      operationItem: [{
-        value: '操作',
-        action: () => {
-          Prompt.showToast({ message: 'demo' });
-        }
-      }]
-    })
-  }
-// ...
-
-// AccessibilityExtAbility.ets
-import { AccessibilityElement, FocusRuleType } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
-    focus.findElementByFocusDirection('forward', FocusRuleType.FOCUS_BY_TITLE).then((element: AccessibilityElement) => {
-        console.info(`findElementByFocusDirection forward componentId: ${element.componentId}`);
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to findElementByFocusDirection forward. Code: ${err.code}, message: ${err.message}`);
-    });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getAccessibilityFocusedElement. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## findElementByFocusDirection
 
@@ -531,8 +219,6 @@ findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Pro
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -562,27 +248,15 @@ findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Pro
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) |
 
-**示例**
-
-参见 [findElementByFocusDirection](#findelementbyfocusdirection)
-
 ## findElementById
 
-ArkTS-Dyn:
 ```TypeScript
 findElementById(condition: number): Promise<AccessibilityElement>
 ```
 
-ArkTS-Sta:
-```TypeScript
-findElementById(condition: long): Promise<AccessibilityElement>
-```
-
-根据元素ID查找当前活动窗口下的节点元素。使用Promise异步回调。与findElement('elementId')功能等价，推荐优先使用本 方法。
+根据元素ID查找当前活动窗口下的节点元素。使用Promise异步回调。与[findElement('elementId')](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#findelementcontent)功能等价，推荐优先使用本 方法。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -594,7 +268,7 @@ findElementById(condition: long): Promise<AccessibilityElement>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| condition | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| condition | number | 是 |
 
 **返回值：**
 
@@ -610,88 +284,6 @@ findElementById(condition: long): Promise<AccessibilityElement>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) |
 
-**示例**
-
-```TypeScript
-// Page.ets
-// 点击TextInput使其成为无障碍焦点元素。
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
-// ...
-
-// AccessibilityExtAbility.ets
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
-axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
-    focus.findElementById(0).then((element: AccessibilityElement) => {
-        console.info('findElementById componentId: ' + element.componentId);
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to find element by id. Code: ${err.code}, message: ${err.message}`);
-    });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## findElementByTextType
-
-```TypeScript
-findElementByTextType(condition: string): Promise<Array<AccessibilityElement>>
-```
-
-根据节点配置的accessibilityTextHint无障碍文本类型查询所有节点元素。使用Promise异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| condition | string | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// condition的内容需要与目标组件accessibilityTextHint属性的type字段值保持一致。
-let condition = 'location'; 
-
-// rootElement是AccessibilityElement的实例。
-rootElement.findElement('textType', condition).then((data: AccessibilityElement[]) => {
-  console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## findElementsByAccessibilityHintText
 
 ```TypeScript
@@ -701,8 +293,6 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 根据提示文本查找元素，将返回accessibilityTextHint属性匹配该文本的所有节点元素。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -730,40 +320,6 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) |
 
-**示例**
-
-```TypeScript
-// Page.ets
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
-        .accessibilityTextHint('location')
-// ...
-
-// AccessibilityExtAbility.ets
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowId: number = 10;
-
-// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
-axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
-    root.findElementsByAccessibilityHintText('location').then((elements: AccessibilityElement[]) => {
-        console.info('findElementsByAccessibilityHintText size=' + elements.length);
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to find elements by accessibility hint text. Code: ${err.code}, message: ${err.message}`);
-    });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get root in active window. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElementsByCondition
 
 ```TypeScript
@@ -773,8 +329,6 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 查询满足条件的可聚焦节点。使用Promise异步回调。与[findElementByFocusDirection](#findelementbyfocusdirection)相 比，本方法主要用于查找UI组件；findElementByFocusDirection主要用于查找Web组件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -802,76 +356,6 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { AccessibilityElement, FocusMoveResult } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
-axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
-    focus.findElementsByCondition('bypassSelf', 'forward').then((res: FocusMoveResult) => {
-        console.info('findElementsByCondition result: ' + res.result);
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to find elements by condition. Code: ${err.code}, message: ${err.message}`);
-    });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-// Page.ets
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        
-    SubHeader({
-      secondaryTitle: '二级标题1',
-      operationType: OperationType.BUTTON,
-      operationItem: [{
-        value: '操作',
-        action: () => {
-          Prompt.showToast({ message: 'demo' });
-        }
-      }]
-    })
-
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
-
-    SubHeader({
-      secondaryTitle: '二级标题2',
-      operationType: OperationType.BUTTON,
-      operationItem: [{
-        value: '操作',
-        action: () => {
-          Prompt.showToast({ message: 'demo' });
-        }
-      }]
-    })
-  }
-// ...
-
-// AccessibilityExtAbility.ets
-
-import { AccessibilityElement, FocusRuleType } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
-    focus.findElementsByCondition("bypassSelf", "forward", FocusRuleType.FOCUS_BY_TITLE).then((res: FocusMoveResult) => {
-        console.info(`findElementsByCondition result: ${res.result}`);
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to findElementsByCondition. Code: ${err.code}, message: ${err.message}`);
-    });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getAccessibilityFocusedElement. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElementsByCondition
 
 ```TypeScript
@@ -881,8 +365,6 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusR
 根据规则和查询条件查找目标类型的可聚焦节点。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -913,10 +395,6 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusR
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-参见 [findElementsByCondition](#findelementsbycondition)
-
 ## getChildren
 
 ```TypeScript
@@ -926,8 +404,6 @@ getChildren(): Promise<Array<AccessibilityElement>>
 获取元素的子元素列表。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -948,42 +424,15 @@ getChildren(): Promise<Array<AccessibilityElement>>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
-axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) => {
-  console.info(`element childrenIds: ${element.childrenIds}`);
-  element.getChildren().then((children: AccessibilityElement[]) => {
-    console.info(`children element's size: ${children.length}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get children. Code: ${err.code}, message: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getCursorPosition
 
-ArkTS-Dyn:
 ```TypeScript
 getCursorPosition(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-getCursorPosition(callback: AsyncCallback<int>): void
 ```
 
 获取文本组件中光标位置。使用callback异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -993,83 +442,17 @@ getCursorPosition(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
-rootElement.getCursorPosition().then((data: number) => {
-  console.info(`succeeded in getting cursor position, ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例
-rootElement.getCursorPosition().then((data: int) => {
-  console.info(`succeeded in getting cursor position, ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to get cursor position, Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
-rootElement.getCursorPosition((err: BusinessError, data: number) => {
-  if (err && err.code) {
-    console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting cursor position, ${data}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例
-rootElement.getCursorPosition((err: BusinessError | null, data: int | undefined) => {
-  if (err?.code) {
-    console.error(`failed to get cursor position, Code is ${err?.code}, message is ${err?.message}`);
-    return;
-  }
-  console.info(`succeeded in getting cursor position, ${data}`);
-});
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 ## getCursorPosition
 
-ArkTS-Dyn:
 ```TypeScript
 getCursorPosition(): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-getCursorPosition(): Promise<int>
 ```
 
 获取文本组件中光标位置。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1079,11 +462,7 @@ getCursorPosition(): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
-
-**示例**
-
-参见 [getCursorPosition](#getcursorposition)
+| Promise & lt;number & gt; |
 
 ## getParent
 
@@ -1095,8 +474,6 @@ getParent(): Promise<AccessibilityElement>
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -1115,25 +492,6 @@ getParent(): Promise<AccessibilityElement>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
-axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) => {
-  console.info(`element parent id: ${element.parentId}`);
-  element.getParent().then((parent: AccessibilityElement) => {
-    console.info(`parent element's parent id: ${parent.parentId}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get parent. Code: ${err.code}, message: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getRoot
 
@@ -1145,8 +503,6 @@ getRoot(): Promise<AccessibilityElement>
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -1165,24 +521,6 @@ getRoot(): Promise<AccessibilityElement>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
-let windows: AccessibilityElement[] = axContext.getAccessibilityWindowsSync();
-for (let window of windows) {
-  console.info(`window id: ${window.windowId}`);
-  window.getRoot().then((root: AccessibilityElement) => {
-    console.info(`root element's componentId: ${root.componentId}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get root. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
 
 ## accessibilityFocused
 
@@ -1195,8 +533,6 @@ accessibilityFocused?: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1214,8 +550,6 @@ accessibilityGroup?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1232,8 +566,6 @@ accessibilityLevel?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1241,16 +573,14 @@ accessibilityLevel?: string
 ## accessibilityNextFocusId
 
 ```TypeScript
-accessibilityNextFocusId?: long
+accessibilityNextFocusId?: number
 ```
 
 下一个要获得焦点的组件的ID。默认值：-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1259,16 +589,14 @@ accessibilityNextFocusId?: long
 ## accessibilityPreviousFocusId
 
 ```TypeScript
-accessibilityPreviousFocusId?: long
+accessibilityPreviousFocusId?: number
 ```
 
 上一个要获得焦点的组件的ID。默认值：-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1286,8 +614,6 @@ accessibilityScrollable?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1303,8 +629,6 @@ accessibilityStateDescription?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1324,8 +648,6 @@ accessibilityText?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1342,8 +664,6 @@ accessibilityVisible?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1351,16 +671,14 @@ accessibilityVisible?: boolean
 ## belongTreeId
 
 ```TypeScript
-belongTreeId?: int
+belongTreeId?: number
 ```
 
 表示元素所属的组件树ID。默认值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1380,8 +698,6 @@ bundleName?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1397,8 +713,6 @@ checkable?: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1416,8 +730,6 @@ checked?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1425,16 +737,14 @@ checked?: boolean
 ## childrenIds
 
 ```TypeScript
-childrenIds?: Array<long>
+childrenIds?: Array<number>
 ```
 
 组件的子元素ID列表。默认值：空数组。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1443,16 +753,14 @@ childrenIds?: Array<long>
 ## childrenTreeId
 
 ```TypeScript
-childrenTreeId?: int
+childrenTreeId?: number
 ```
 
 表示元素的子组件树ID。默认值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1472,8 +780,6 @@ clickable?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1490,8 +796,6 @@ clip?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1499,16 +803,14 @@ clip?: boolean
 ## componentId
 
 ```TypeScript
-componentId?: long
+componentId?: number
 ```
 
 元素所属组件的ID。默认值：-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1526,8 +828,6 @@ componentType?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1544,8 +844,6 @@ contents?: Array<string>
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1553,16 +851,14 @@ contents?: Array<string>
 ## currentIndex
 
 ```TypeScript
-currentIndex?: int
+currentIndex?: number
 ```
 
 当前项的索引。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1580,8 +876,6 @@ currentItem?: AccessibilityGrid
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1597,8 +891,6 @@ customActions?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1618,8 +910,6 @@ customComponentType?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1635,8 +925,6 @@ description?: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1654,8 +942,6 @@ editable?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1663,16 +949,14 @@ editable?: boolean
 ## endIndex
 
 ```TypeScript
-endIndex?: int
+endIndex?: number
 ```
 
 屏幕上显示的最后一个列表项的索引。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1690,8 +974,6 @@ error?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1707,8 +989,6 @@ extraInfo?: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1726,8 +1006,6 @@ focusable?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1743,8 +1021,6 @@ hintText?: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1762,8 +1038,6 @@ hotArea?: Rect
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1771,16 +1045,14 @@ hotArea?: Rect
 ## inputType
 
 ```TypeScript
-inputType?: int
+inputType?: number
 ```
 
 输入文本的类型，不同数值对应不同的输入模式：0表示无特定类型；1表示文本；2表示邮箱；3表示日期；4表示时间；5表示数字；6表示密码；7表示电话号码；8表示用户名；9表示新密码。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1798,8 +1070,6 @@ inspectorKey?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1815,8 +1085,6 @@ isActive?: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1834,8 +1102,6 @@ isEnable?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1851,8 +1117,6 @@ isEssential?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1872,8 +1136,6 @@ isFocused?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1889,8 +1151,6 @@ isHint?: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1908,8 +1168,6 @@ isPassword?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1926,8 +1184,6 @@ isVisible?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1935,16 +1191,14 @@ isVisible?: boolean
 ## itemCount
 
 ```TypeScript
-itemCount?: int
+itemCount?: number
 ```
 
 项目总数。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1962,8 +1216,6 @@ lastContent?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -1971,16 +1223,14 @@ lastContent?: string
 ## layer
 
 ```TypeScript
-layer?: int
+layer?: number
 ```
 
 元素的显示层级。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -1998,8 +1248,6 @@ longClickable?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2007,16 +1255,14 @@ longClickable?: boolean
 ## mainWindowId
 
 ```TypeScript
-mainWindowId?: int
+mainWindowId?: number
 ```
 
 组件的主窗口ID。默认值：-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2025,16 +1271,14 @@ mainWindowId?: int
 ## navDestinationId
 
 ```TypeScript
-navDestinationId?: long
+navDestinationId?: number
 ```
 
 组件的导航目标ID。默认值：-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2043,16 +1287,14 @@ navDestinationId?: long
 ## offset
 
 ```TypeScript
-offset?: double
+offset?: number
 ```
 
 内容区域相对于可滚动组件（如List和Grid）顶部坐标的像素偏移量，单位为像素（px）。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2061,16 +1303,14 @@ offset?: double
 ## pageId
 
 ```TypeScript
-pageId?: int
+pageId?: number
 ```
 
 页面ID。默认值：-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2079,16 +1319,14 @@ pageId?: int
 ## parentId
 
 ```TypeScript
-parentId?: long
+parentId?: number
 ```
 
 组件的父元素ID。默认值：-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2106,8 +1344,6 @@ pluralLineSupported?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2123,8 +1359,6 @@ rect?: Rect
 **类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2142,8 +1376,6 @@ resourceName?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2159,8 +1391,6 @@ screenRect?: Rect
 **类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2178,8 +1408,6 @@ scrollable?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2196,8 +1424,6 @@ selected?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2213,8 +1439,6 @@ sourceType?: AccessibilitySourceType
 **类型：** [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2234,8 +1458,6 @@ spans?: AccessibilitySpan[]
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2243,16 +1465,14 @@ spans?: AccessibilitySpan[]
 ## startIndex
 
 ```TypeScript
-startIndex?: int
+startIndex?: number
 ```
 
 屏幕上第一个列表项的索引。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2270,8 +1490,6 @@ supportedActionNames?: Array<string>
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2288,8 +1506,6 @@ text?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2297,16 +1513,14 @@ text?: string
 ## textLengthLimit
 
 ```TypeScript
-textLengthLimit?: int
+textLengthLimit?: number
 ```
 
 元素的最大文本长度。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2324,8 +1538,6 @@ textMoveUnit?: accessibility.TextMoveUnit
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2341,8 +1553,6 @@ textType?: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2360,8 +1570,6 @@ triggerAction?: AccessibilityAction
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2378,8 +1586,6 @@ type?: WindowType
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -2387,16 +1593,14 @@ type?: WindowType
 ## valueMax
 
 ```TypeScript
-valueMax?: double
+valueMax?: number
 ```
 
 最大值。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2405,16 +1609,14 @@ valueMax?: double
 ## valueMin
 
 ```TypeScript
-valueMin?: double
+valueMin?: number
 ```
 
 最小值。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2423,16 +1625,14 @@ valueMin?: double
 ## valueNow
 
 ```TypeScript
-valueNow?: double
+valueNow?: number
 ```
 
 当前值。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -2441,16 +1641,14 @@ valueNow?: double
 ## windowId
 
 ```TypeScript
-windowId?: int
+windowId?: number
 ```
 
 窗口ID。默认值：-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

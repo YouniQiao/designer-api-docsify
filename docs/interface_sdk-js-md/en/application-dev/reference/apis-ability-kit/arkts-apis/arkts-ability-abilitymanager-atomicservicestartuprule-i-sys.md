@@ -4,8 +4,6 @@ Describes the rule for launching an embedded atomic service.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the rule for launching an embedded atomic service.
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isEmbeddedAllowed
@@ -27,8 +25,6 @@ Whether launching the embedded atomic service is allowed. **true** if allowed, *
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -45,8 +41,6 @@ Whether launching the atomic service is allowed. **true** if allowed, **false** 
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

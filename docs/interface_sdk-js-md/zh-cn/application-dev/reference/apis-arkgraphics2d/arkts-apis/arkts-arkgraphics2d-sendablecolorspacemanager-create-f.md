@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## create
@@ -15,8 +15,6 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 创建标准可共享的色彩管理实例。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -30,7 +28,7 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 
 | 类型 |
 | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) |
 
 **错误码：**
 
@@ -38,35 +36,6 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
-
-**示例**
-
-```TypeScript
-import { colorSpaceManager, sendableColorSpaceManager } from '@kit.ArkGraphics2D';
-let colorSpace: sendableColorSpaceManager.ColorSpaceManager;
-// 创建标准SRGB色域的色彩管理实例
-colorSpace = sendableColorSpaceManager.create(colorSpaceManager.ColorSpace.SRGB);
-```
-
-```TypeScript
-import { colorSpaceManager, sendableColorSpaceManager } from '@kit.ArkGraphics2D';
-let colorSpace: sendableColorSpaceManager.ColorSpaceManager;
-// 定义色域标准三原色参数
-let primaries: colorSpaceManager.ColorSpacePrimaries = {
-  redX: 0.1,
-  redY: 0.1,
-  greenX: 0.2,
-  greenY: 0.2,
-  blueX: 0.3,
-  blueY: 0.3,
-  whitePointX: 0.4,
-  whitePointY: 0.4
-};
-// 定义色域gamma值
-let gamma: number = 2.2;
-// 创建自定义可共享的色彩管理实例
-colorSpace = sendableColorSpaceManager.create(primaries, gamma);
-```
 
 
 ## create
@@ -78,8 +47,6 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 创建用户自定义可共享的色彩管理实例。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -94,7 +61,7 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 
 | 类型 |
 | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) |
 
 **错误码：**
 
@@ -102,7 +69,3 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
-
-**示例**
-
-参见 [create](#create)

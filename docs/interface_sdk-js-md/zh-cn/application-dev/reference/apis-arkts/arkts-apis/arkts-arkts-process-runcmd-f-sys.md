@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## runCmd
@@ -18,8 +18,6 @@ function runCmd(
 返回一个子进程对象，并 spawn 一个新的 ChildProcess 来运行命令。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 

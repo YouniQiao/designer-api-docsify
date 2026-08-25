@@ -9,8 +9,6 @@ ApplicationContext作为应用上下文，继承自Context，提供了应用生�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## getProcessRunningInformation
@@ -22,8 +20,6 @@ getProcessRunningInformation(): Promise<Array<ProcessInformation>>
 获取运行中的进程信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -58,8 +54,6 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
@@ -92,8 +86,6 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 预加载指定UIExtensionAbility实例。使用Promise异步回调。被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -128,101 +120,15 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    // 构造预加载UIExtensionAbility的want参数
-    let want: Want = {
-      bundleName: 'com.ohos.uiextensionprovider',
-      abilityName: 'UIExtensionProvider',
-      moduleName: 'entry',
-      parameters: {
-        // 与UIExtensionAbility在module.json5中"type"字段配置一致
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      }
-    };
-    try {
-      // 获取ApplicationContext实例
-      let applicationContext = this.context.getApplicationContext();
-      // 预加载UIExtensionAbility
-      applicationContext.preloadUIExtensionAbility(want)
-        .then(() => {
-          // 预加载成功处理
-          console.info('preloadUIExtensionAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 预加载失败处理
-          console.error('preloadUIExtensionAbility failed');
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`preloadUIExtensionAbility failed. code: ${code}, message: ${message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.ohos.uiextensionprovider',
-      abilityName: 'UIExtensionProvider',
-      moduleName: 'entry',
-      parameters: {
-        // 与UIExtensionAbility在module.json5中"type"字段配置一致
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      } as Record<string, RecordData>
-    };
-    try {
-      let applicationContext = this.context.getApplicationContext();
-      applicationContext.preloadUIExtensionAbility(want)
-        .then(() => {
-          // 执行正常业务
-          console.info('preloadUIExtensionAbility succeed');
-        })
-        .catch((err) => {
-          // 处理业务逻辑错误
-          let code = (err as BusinessError).code;
-          let message = (err as BusinessError).message;
-          console.error(`preloadUIExtensionAbility failed 1. code: ${code}, message: ${message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`preloadUIExtensionAbility failed 2. code: ${code}, message: ${message}`);
-    }
-  }
-}
-```
-
 ## registerAbilityLifecycleCallback
 
 ```TypeScript
 registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number
 ```
 
-注册监听应用内UIAbility的生命周期。使用callback异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
+注册监听应用内UIAbility的生命周期。使用callback异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -252,11 +158,9 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 ```
 
-注册对系统环境变化的监听。使用callback异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
+注册对系统环境变化的监听。使用callback异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -286,11 +190,9 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-取消监听应用内UIAbility的生命周期。使用callback异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
+取消监听应用内UIAbility的生命周期。使用callback异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -315,11 +217,9 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 ```
 
-取消监听应用内UIAbility的生命周期。使用Promise异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
+取消监听应用内UIAbility的生命周期。使用Promise异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -355,11 +255,9 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<void>): void
 ```
 
-取消对系统环境变化的监听。使用callback异步回调。<p>**说明：**: <br>仅支持主线程调用。 </p>
+取消对系统环境变化的监听。使用callback异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -387,8 +285,6 @@ unregisterEnvironmentCallback(callbackId: number): Promise<void>
 取消对系统环境变化的监听。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 

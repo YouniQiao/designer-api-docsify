@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## updatePrinterInDiscovery
@@ -15,8 +15,6 @@ function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promi
 更新打印机能力到系统打印机发现列表，使用Promise异步回调。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRINT
 
@@ -40,43 +38,3 @@ function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promi
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let testPageSize : print.PrintPageSize = {
-    id : 'ISO_A4',
-    name : 'iso_a4_210x297mm',
-    width : 8268,
-    height : 11692
-};
-
-let testCapability : print.PrinterCapabilities = {
-    supportedPageSizes : [testPageSize],
-    supportedColorModes : [print.PrintColorMode.COLOR_MODE_MONOCHROME],
-    supportedDuplexModes : [print.PrintDuplexMode.DUPLEX_MODE_NONE],
-    supportedMediaTypes : ['stationery'],
-    supportedQualities : [print.PrintQuality.QUALITY_NORMAL],
-    supportedOrientations : [print.PrintOrientationMode.ORIENTATION_MODE_PORTRAIT],
-    options : 'testOptions'
-};
-
-let printerInformation : print.PrinterInformation = {
-    printerId : 'testPrinterId',
-    printerName : 'testPrinterName',
-    printerStatus : 0,
-    description : 'testDesc',
-    capability : testCapability,
-    uri : 'testUri',
-    printerMake : 'testPrinterMake',
-    options : 'testOptions'
-};
-print.updatePrinterInDiscovery(printerInformation).then(() => {
-    console.info('updatePrinterInDiscovery success');
-}).catch((error: BusinessError) => {
-    console.error('updatePrinterInDiscovery error : ' + JSON.stringify(error));
-})
-```

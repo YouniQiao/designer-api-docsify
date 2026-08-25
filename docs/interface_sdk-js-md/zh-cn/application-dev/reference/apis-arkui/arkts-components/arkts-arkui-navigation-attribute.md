@@ -6,8 +6,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -27,11 +25,9 @@ backButtonIcon(value: string | PixelMap | Resource | SymbolGlyphModifier)
 > 不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的
 > fontSize属性修改图标大小、
 > effectStrategy属性修改动效、
-> symbolEffect属性修改动效类型。
+> [symbolEffect](arkts-arkui-symbolglyph-attribute.md#symboleffect)属性修改动效类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,11 +52,9 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier, accessi
 > 不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的
 > fontSize属性修改图标大小、
 > effectStrategy属性修改动效、
-> symbolEffect属性修改动效类型。
+> [symbolEffect](arkts-arkui-symbolglyph-attribute.md#symboleffect)属性修改动效类型。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,8 +78,6 @@ configuration(config: NavigationConfiguration)
 设置导航配置。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -113,8 +105,6 @@ customNavContentTransition(delegate: (from: NavContentInfo, to: NavContentInfo, 
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -136,8 +126,6 @@ divider(style: NavigationDividerStyle | null)
 设置Navigation双栏模式下的分割线样式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -161,8 +149,6 @@ enableDragBar(isEnabled: Optional<boolean>)
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -173,7 +159,7 @@ enableDragBar(isEnabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isEnabled | Optional & lt;boolean & gt; | 是 |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## enableModeChangeAnimation
 
@@ -185,8 +171,6 @@ enableModeChangeAnimation(isEnabled: Optional<boolean>)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -197,7 +181,7 @@ enableModeChangeAnimation(isEnabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isEnabled | Optional & lt;boolean & gt; | 是 |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## enableToolBarAdaptation
 
@@ -209,8 +193,6 @@ enableToolBarAdaptation(enable: Optional<boolean>)
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -221,7 +203,7 @@ enableToolBarAdaptation(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | 是 |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## enableVisibilityLifecycleWithContentCover
 
@@ -229,14 +211,12 @@ enableToolBarAdaptation(enable: Optional<boolean>)
 enableVisibilityLifecycleWithContentCover(isEnabled: Optional<boolean>)
 ```
 
-设置是否启用NavDestination页面onHidden、 onShown生命周期与全模态的联动触发。
+设置是否启用NavDestination页面onHidden、 [onShown](arkts-arkui-navdestination-attribute.md#onshown)生命周期与全模态的联动触发。
 
 > **说明：**&gt;
 > 从API version 23开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -248,7 +228,7 @@ enableVisibilityLifecycleWithContentCover(isEnabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isEnabled | Optional & lt;boolean & gt; | 是 |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## hideBackButton
 
@@ -259,8 +239,6 @@ hideBackButton(value: boolean)
 设置是否隐藏标题栏中的返回键。返回键仅在[titleMode](#titlemode)设置为NavigationTitleMode.Mini时才生效。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -282,8 +260,6 @@ hideNavBar(value: boolean)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -304,8 +280,6 @@ hideTitleBar(value: boolean)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -325,8 +299,6 @@ hideTitleBar(hide: boolean, animated: boolean)
 设置是否隐藏标题栏。与[hideTitleBar](#hidetitlebar)相比，新增标题栏显隐时是否使用动画。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -351,8 +323,6 @@ hideToolBar(value: boolean)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -372,8 +342,6 @@ hideToolBar(hide: boolean, animated: boolean)
 设置是否隐藏工具栏。与[hideToolBar](#hidetoolbar)相比，新增工具栏显隐时是否使用动画。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -405,8 +373,6 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -417,8 +383,8 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array & lt;LayoutSafeAreaType & gt; | 否 |
-| edges | Array & lt;LayoutSafeAreaEdge & gt; | 否 |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md)&gt; | 否 |
+| edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt; | 否 |
 
 ## menus
 
@@ -429,8 +395,6 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 设置页面右上角菜单。不设置时不显示菜单项。使用Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标 会被放入自动生成的更多图标。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -455,8 +419,6 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenu
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -480,8 +442,6 @@ minContentWidth(value: Dimension)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -504,8 +464,6 @@ mode(value: NavigationMode)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -525,8 +483,6 @@ navBarPosition(value: NavBarPosition)
 设置导航页位置。仅在[mode](#mode)设置为NavigationMode.Auto或NavigationMode.Split时生效。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -548,8 +504,6 @@ navBarWidth(value: Length)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -570,8 +524,6 @@ navBarWidthRange(value: [Dimension, Dimension])
 | 条件| 拖拽范围 | | ----| ----------- | |navBarWidthRange和minContentWidth同时设置 | 满足minContentWidth所设置的值后，在navBarWidthRange所设置的范围内进行拖拽 | |navBarWidthRange和minContentWidth均不设置 | 在navBarWidthRange默认的最小和最大范围内进行拖拽 | |仅设置navBarWidthRange属性 | 在navBarWidthRange所设置的范围内进行拖拽，最大拖拽范围不能超过minContentWidth的默认值 | |仅设置minContentWidth属性 | 在navBarWidthRange默认的最小和最大范围内进行拖拽 | |仅设置navBarWidth属性 |
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -595,8 +547,6 @@ navDestination(builder: (name: string, param: unknown) => void)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -619,8 +569,6 @@ onNavBarStateChange(callback: (isVisible: boolean) => void)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -640,8 +588,6 @@ onNavigationModeChange(callback: (mode: NavigationMode) => void)
 当Navigation首次显示或者单双栏状态发生变化时触发该回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -664,8 +610,6 @@ onTitleModeChange(callback: (titleMode: NavigationTitleMode) => void)
 当[titleMode](#titlemode)为NavigationTitleMode.Free时，随着可滚动组件的滑动标题栏模式发生变化时触发此回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -695,8 +639,6 @@ recoverable(recoverable: Optional<boolean>)
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -705,7 +647,7 @@ recoverable(recoverable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [recoverable](#recoverable) | Optional & lt;boolean & gt; | 是 |
+| [recoverable](#recoverable) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## splitPlaceholder
 
@@ -716,8 +658,6 @@ splitPlaceholder(placeholder: ComponentContent)
 Navigation双栏模式下，支持设置右侧页面显示默认占位页，占位页仅作为UI展示页，不可获焦和响应事件。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -742,8 +682,6 @@ subTitle(value: string)
 > **说明：**
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -780,8 +718,6 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -792,7 +728,7 @@ systemBarStyle(style: Optional<SystemBarStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional&lt;[SystemBarStyle](arkts-arkui-systembarstyle-t.md)&gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[SystemBarStyle](arkts-arkui-systembarstyle-t.md)&gt; | 是 |
 
 ## title
 
@@ -807,8 +743,6 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -817,7 +751,7 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ResourceStr \| CustomBuilder \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | 是 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | 是 |
 | options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | 否 |
 
 ## titleMode
@@ -829,8 +763,6 @@ titleMode(value: NavigationTitleMode)
 设置页面标题栏显示模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -853,8 +785,6 @@ toolBar(value: object | CustomBuilder)
 | 名称 | 类型 | 必填 | 说明 | | ------ | ------------- | ---- | --------------- | | value | string | 是 | 工具栏单个选项的显示文本。 | | icon | string | 否 | 工具栏单个选项的图标资源路径。 | | action | () = & gt; void | 否 |
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 10
 
@@ -880,8 +810,6 @@ toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder, options?: Naviga
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

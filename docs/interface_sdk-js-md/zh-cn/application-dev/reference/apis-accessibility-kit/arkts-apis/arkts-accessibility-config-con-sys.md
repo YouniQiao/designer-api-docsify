@@ -3,14 +3,12 @@
 ## audioBalance
 
 ```TypeScript
-const audioBalance: Config<double>
+const audioBalance: Config<number>
 ```
 
 表示左右声道音量平衡的配置。-1.0表示仅左声道输出；0.0表示左右声道平衡输出；1.0表示仅右声道输出；中间值为左右声道音量的线性比例。取值范围为-1.0~1.0。默认值为0.0。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -26,8 +24,6 @@ const audioMono: Config<boolean>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -41,8 +37,6 @@ const clickResponseTime: Config<ClickResponseTime>
 表示点击持续时间功能配置。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -58,8 +52,6 @@ const daltonizationState: Config<boolean>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,8 +65,6 @@ const ignoreRepeatClick: Config<boolean>
 表示忽略重复点击功能启用状态。配合repeatClickInterval使用。true表示已启用忽略重复点击功能，false表示未启用忽略重复点击功能，默认值为false。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -90,8 +80,6 @@ const repeatClickInterval: Config<RepeatClickInterval>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -106,8 +94,6 @@ const screenMagnification: Config<boolean>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -121,8 +107,6 @@ const shortkeyMultiTargets: Config<Array<string>>
 表示辅助扩展快捷键的多目标列表配置。取值为辅助扩展应用的名称，格式为：['bundleName/abilityName']。格式不正确或名称无效时，设置不生效。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
+import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from 'kits/@kit.ArkUI';
 ```
 
 ## onDidAppear
@@ -23,8 +21,6 @@ onDidAppear?: VoidCallback
 对话框出现时的回调函数。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,8 +38,6 @@ onDidDisappear?: VoidCallback
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -60,8 +54,6 @@ onWillAppear?: VoidCallback
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -77,8 +69,6 @@ onWillDisappear?: VoidCallback
 对话框关闭动画开始前的回调函数。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,8 +87,6 @@ alignment?: DialogBaseAlignment
 **类型：** [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,8 +108,6 @@ autoCancel?: boolean
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -134,15 +120,13 @@ autoCancel?: boolean
 backgroundBlurStyle?: BlurStyle
 ```
 
-对话框的背景模糊样式。 <br>设置为BlurStyle.NONE将禁用背景模糊。
+对话框的背景模糊样式。 设置为BlurStyle.NONE将禁用背景模糊。
 
 **类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,11 +142,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 带选项的背景模糊样式。
 
-**类型：** BackgroundBlurStyleOptions
+**类型：** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -176,15 +158,13 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-对话框的背景颜色。 <br>当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
+对话框的背景颜色。 当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Transparent
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,11 +180,9 @@ backgroundEffect?: BackgroundEffectOptions
 
 带选项的背景效果。
 
-**类型：** BackgroundEffectOptions
+**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -220,13 +198,11 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 对话框的边框颜色。
 
-**类型：** ResourceColor \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **默认值：** Color.Black
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -242,13 +218,11 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 背景的边框半径。
 
-**类型：** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -264,13 +238,11 @@ borderStyle?: BorderStyle | EdgeStyles
 
 对话框边框样式。
 
-**类型：** BorderStyle \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
 **默认值：** BorderStyle.Solid
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -286,13 +258,11 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 对话框边框宽度。
 
-**类型：** Dimension \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -312,8 +282,6 @@ Dialog 控制器。
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -328,11 +296,9 @@ dialogTransition?: TransitionEffect
 
 用于打开/关闭对话框内容区域的对话框过渡动效参数。
 
-**类型：** TransitionEffect
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -348,13 +314,11 @@ displayModeInSubWindow?: DialogDisplayMode
 
 定义在子窗口中显示时的对话框显示模式。
 
-**类型：** DialogDisplayMode
+**类型：** [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md)
 
 **默认值：** DialogDisplayMode.SCREEN_BASED
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -376,8 +340,6 @@ enableHoverMode?: boolean
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -398,8 +360,6 @@ focusable?: boolean
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -414,11 +374,9 @@ height?: Dimension
 
 对话框的高度。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -434,13 +392,11 @@ hoverModeArea?: HoverModeAreaType
 
 悬停模式下对话框的显示区域。
 
-**类型：** HoverModeAreaType
+**类型：** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -462,8 +418,6 @@ immersiveMode?: ImmersiveMode
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -484,8 +438,6 @@ isModal?: boolean
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -503,8 +455,6 @@ keyboardAvoidDistance?: LengthMetrics
 **类型：** LengthMetrics
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -526,8 +476,6 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -547,8 +495,6 @@ levelMode?: LevelMode
 **默认值：** LevelMode.OVERLAY
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -570,8 +516,6 @@ levelOrder?: LevelOrder
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -584,13 +528,11 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-页面级对话框显示层下节点的唯一标识。 取值限定为整数。 <br>该参数仅在levelMode为LevelMode.EMBEDDED时生效。
+页面级对话框显示层下节点的唯一标识。 取值限定为整数。 该参数仅在levelMode为LevelMode.EMBEDDED时生效。
 
 **类型：** number
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -606,11 +548,9 @@ maskColor?: ResourceColor
 
 对话框的蒙层颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -626,13 +566,11 @@ maskRect?: Rectangle
 
 对话框的蒙层区域。
 
-**类型：** Rectangle
+**类型：** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
 **默认值：** { x: 0, y: 0, width: '100%', height: '100%' }
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -648,11 +586,9 @@ maskTransition?: TransitionEffect
 
 用于打开/关闭遮罩的蒙层过渡动效参数。
 
-**类型：** TransitionEffect
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -672,8 +608,6 @@ offset?: Offset
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -686,13 +620,11 @@ offset?: Offset
 onWillDismiss?: Callback<DialogDismissal>
 ```
 
-对话框交互关闭的回调。 <br>如果注册了此回调，则用户点击后对话框不会立即关闭 遮罩或返回按钮。 回调中的reason参数用于判断是否可以关闭对话框。
+对话框交互关闭的回调。 如果注册了此回调，则用户点击后对话框不会立即关闭 遮罩或返回按钮。 回调中的reason参数用于判断是否可以关闭对话框。
 
 **类型：** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -708,11 +640,9 @@ shadow?: ShadowOptions | ShadowStyle
 
 对话框的阴影。
 
-**类型：** ShadowOptions \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -726,15 +656,13 @@ shadow?: ShadowOptions | ShadowStyle
 showInSubWindow?: boolean
 ```
 
-是否在子窗口中显示。 <br>isModal = true和showInSubWindow = true不能同时使用。
+是否在子窗口中显示。 isModal = true和showInSubWindow = true不能同时使用。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -750,11 +678,9 @@ systemMaterial?: SystemUiMaterial
 
 为对话框设置系统样式材质。不同的材料有不同的效果，会影响背景色、边框、阴影和对话框的其他视觉属性。
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t-sys.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -770,11 +696,9 @@ width?: Dimension
 
 对话框的宽度。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

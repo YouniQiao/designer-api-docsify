@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## publish
 
 ```TypeScript
-function publish(request: NotificationRequest, userId: int, callback: AsyncCallback<void>): void
+function publish(request: NotificationRequest, userId: number, callback: AsyncCallback<void>): void
 ```
 
 Publishes a notification to a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 18+: ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
@@ -31,7 +29,7 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -61,121 +59,16 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 | [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publish callback
-let publishCallback = (err: BusinessError): void => {
-  if (err) {
-    console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in publishing notification.`);
-  }
-}
-// NotificationRequest object
-let notificationRequest: notificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
-    }
-  }
-};
-notificationManager.publish(notificationRequest, publishCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// NotificationRequest object
-let notificationRequest: notificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
-    }
-  }
-};
-notificationManager.publish(notificationRequest).then(() => {
-  console.info(`Succeeded in publishing notification.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publish callback
-let publishCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("publish success");
-    }
-}
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-// NotificationRequest object
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
-        }
-    }
-};
-notificationManager.publish(notificationRequest, userId, publishCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
-        }
-    }
-};
-
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-
-notificationManager.publish(notificationRequest, userId).then(() => {
-    console.info("publish success");
-}).catch((err: BusinessError) => {
-    console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## publish
 
 ```TypeScript
-function publish(request: NotificationRequest, userId: int): Promise<void>
+function publish(request: NotificationRequest, userId: number): Promise<void>
 ```
 
 Publishes a notification to a specified user. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 18+: ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
@@ -190,7 +83,7 @@ Publishes a notification to a specified user. This API uses a promise to return 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -224,7 +117,3 @@ Publishes a notification to a specified user. This API uses a promise to return 
 | [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) |
 | [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-
-**Examples**
-
-See [publish](#publish)

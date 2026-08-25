@@ -4,30 +4,27 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## compression
 
 ```TypeScript
-compression?: int
+compression?: number
 ```
 
 该值应为整数，目前仅支持取3、4、5，分别对应压缩算法类型：3（CCITT G3）、4（CCITT G4）、5（LZW）。  
-- 对于二值图像：必须为3（G3）或4（G4），自动使用4（G4）。 - 对于Y8/RGB_888格式：自动使用LZW（5），不支持指定其他压缩算法。
+- 对于二值图像：必须为3（G3）或4（G4），自动使用4（G4）。  
+- 对于Y8/RGB_888格式：自动使用LZW（5），不支持指定其他压缩算法。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,8 +42,6 @@ orientation?: Orientation
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
@@ -54,16 +49,14 @@ orientation?: Orientation
 ## resolutionUnit
 
 ```TypeScript
-resolutionUnit?: int
+resolutionUnit?: number
 ```
 
 分辨率单位：1（无单位）、2（英寸）、3（厘米）。目前仅支持1、2、3。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,16 +65,14 @@ resolutionUnit?: int
 ## xResolution
 
 ```TypeScript
-xResolution?: double
+xResolution?: number
 ```
 
 水平分辨率。该值必须大于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,16 +81,14 @@ xResolution?: double
 ## yResolution
 
 ```TypeScript
-yResolution?: double
+yResolution?: number
 ```
 
 垂直分辨率。该值必须大于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

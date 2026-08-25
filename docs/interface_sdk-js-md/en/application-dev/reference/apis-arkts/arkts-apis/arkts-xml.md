@@ -4,14 +4,12 @@ The xml module provides utilities for converting XML text to Javascript object, 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
+import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary

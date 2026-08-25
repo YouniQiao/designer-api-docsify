@@ -4,14 +4,12 @@ Defines callback context information passed to applications during hover detecti
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'kits/@kit.ArkUI';
 ```
 
 ## abort
@@ -23,8 +21,6 @@ abort(): void
 Terminates subsequent hover detection. This API does not trigger CANCEL state notifications, and the application needs to perform state cleanup when executing this API.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +34,9 @@ Terminates subsequent hover detection. This API does not trigger CANCEL state no
 updateConfiguration(config: DragSpringLoadingConfiguration): void
 ```
 
-Updates the hover detection configuration. This API is effective only when the hover detection state is BEGIN. Applications typically set the hover detection configuration when binding onDragSpringLoading or use the default configuration. This API does not modify the original configuration set during binding, but updates dynamic configuration information for subsequent hover detection. Use this API with caution, as different drag data types may require different UX timing.
+Updates the hover detection configuration. This API is effective only when the hover detection state is BEGIN. Applications typically set the hover detection configuration when binding [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#ondragspringloading) or use the default configuration. This API does not modify the original configuration set during binding, but updates dynamic configuration information for subsequent hover detection. Use this API with caution, as different drag data types may require different UX timing.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +62,6 @@ Configuration information in the current callback. Omitted in CANCEL state; uses
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -87,8 +79,6 @@ Callback notification sequence number in the current hover detection cycle. The 
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,8 +98,6 @@ Drag information. Omitted in CANCEL state; uses the [SpringLoadingDragInfos](ark
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -127,8 +115,6 @@ Current state of hover detection.
 **Type:** [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

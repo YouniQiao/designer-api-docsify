@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
+import { browser } from 'kits/@kit.MDMKit';
 ```
 
 ## setPolicySync
@@ -15,8 +15,6 @@ function setPolicySync(admin: Want, appId: string, policyName: string, policyVal
 为指定的浏览器设置浏览器子策略，适用于企业统一管理员工浏览器行为的场景。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 
@@ -41,30 +39,3 @@ function setPolicySync(admin: Want, appId: string, policyName: string, policyVal
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
-let appId: string = 'com.example.******_******/******5t5CoBM=';
-// 浏览器策略名称
-let policyName: string = 'InsecurePrivateNetworkRequestsAllowed';
-// 浏览器策略值
-let policyValue: string = '{"level":"mandatory","scope":"machine","source":"platform","value":true}';
-
-try {
-  browser.setPolicySync(wantTemp, appId, policyName, policyValue);
-  console.info('Succeeded in setting browser policies.');
-} catch (err) {
-  console.error(`Failed to set browser policies. Code is ${err.code}, message is ${err.message}`);
-}
-```

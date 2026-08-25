@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getExternalSourceExtensionsPolicy
@@ -15,8 +15,6 @@ function getExternalSourceExtensionsPolicy(admin: Want): common.ManagedPolicy
 获取外部来源扩展程序的管控策略。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -45,38 +43,6 @@ function getExternalSourceExtensionsPolicy(admin: Want): common.ManagedPolicy
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { common, securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: common.ManagedPolicy = securityManager.getExternalSourceExtensionsPolicy(wantTemp);
-  console.info(`Succeeded in getting managed policy, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get managed policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { common, securityManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: common.ManagedPolicy = securityManager.getExternalSourceExtensionsPolicy(null);
-  console.info(`Succeeded in getting managed policy, result : ${result}`);
-} catch(err) {
-  console.error(`Failed to get managed policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getExternalSourceExtensionsPolicy
 
@@ -87,8 +53,6 @@ function getExternalSourceExtensionsPolicy(admin: Want | null): common.ManagedPo
 获取外部来源扩展程序的管控策略。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -116,7 +80,3 @@ function getExternalSourceExtensionsPolicy(admin: Want | null): common.ManagedPo
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [getExternalSourceExtensionsPolicy](#getexternalsourceextensionspolicy)

@@ -1,21 +1,13 @@
 # tags
 
-支持trace使用场景的标签，用户可通过hitrace抓取指定标签的trace内容。
-
-> **注意**&gt;
-> 以下标签实际值由系统定义，可能随版本升级而发生改变，为避免升级后出现兼容性问题，在生产中应直接使用标签名称而非标签数值。
-@namespace tags
-
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总

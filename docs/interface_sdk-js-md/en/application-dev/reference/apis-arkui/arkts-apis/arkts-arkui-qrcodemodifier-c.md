@@ -2,11 +2,9 @@
 
 Defines QRCode Modifier
 
-**Inheritance/Implementation:** QRCodeModifier extends QRCodeAttribute and implements AttributeModifier<QRCodeAttribute>
+**Inheritance/Implementation:** QRCodeModifier extends [QRCodeAttribute](../arkts-components/arkts-arkui-qrcode-attribute.md#qrcodeattribute) and implements AttributeModifier<QRCodeAttribute>
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: QRCodeAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

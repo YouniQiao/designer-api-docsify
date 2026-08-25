@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## updateAsUser
@@ -15,8 +15,6 @@ function updateAsUser(userId: number, query: AssetMap, attributesToUpdate: Asset
 Updates an asset in the specified user space. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -57,24 +55,3 @@ Updates an asset in the specified user space. This API uses a promise to return 
 | [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
 | [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let userId: number = 100;
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-let attrsToUpdate: asset.AssetMap = new Map();
-attrsToUpdate.set(asset.Tag.SECRET, stringToArray('demo_pwd_new'));
-asset.updateAsUser(userId, query, attrsToUpdate).then(() => {
-  console.info(`Succeeded in updating Asset in user space.`);
-});
-```

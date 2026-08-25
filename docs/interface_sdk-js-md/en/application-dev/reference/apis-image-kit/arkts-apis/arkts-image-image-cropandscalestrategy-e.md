@@ -4,8 +4,6 @@ Enumerates the order of cropping and scaling.If the **cropAndScaleStrategy** par
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SCALE_FIRST
@@ -18,8 +16,6 @@ If both **desiredRegion** and **desiredSize** are specified, the image is first 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CROP_FIRST
@@ -31,7 +27,5 @@ CROP_FIRST = 2
 If both **desiredRegion** and **desiredSize** are specified, the image is first cropped based on **desiredRegion** and then scaled based on **desiredSize**.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core

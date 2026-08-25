@@ -4,14 +4,12 @@ Defines the Contact selection options, which specifies whether one contact or mu
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Applications.Contacts
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## filter
@@ -25,8 +23,6 @@ Contact selection filter. This API can be used in atomic services since API vers
 **Type:** [ContactSelectionFilter](arkts-contacts-contact-contactselectionfilter-i.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -43,8 +39,6 @@ Whether to allow automatic dismissal of the picker when the page that launched i
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +58,6 @@ Whether to display contacts by name. The value **true** indicates that contacts 
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -82,8 +74,6 @@ Whether multiple contacts can be selected. The value **true** indicates that mul
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -99,8 +89,6 @@ Maximum number of contacts. The default value is **10000**. If the value exceeds
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

@@ -4,8 +4,6 @@ Defines the **value** object in a KV store.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** Value
@@ -29,8 +27,6 @@ Type of the value.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** type
@@ -48,8 +44,6 @@ Value of the KV pair stored in the KV store.
 **Type:** Uint8Array \| string \| number \| boolean
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

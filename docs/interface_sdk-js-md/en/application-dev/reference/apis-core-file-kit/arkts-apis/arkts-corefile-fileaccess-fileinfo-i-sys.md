@@ -4,8 +4,6 @@ Provides APIs for managing file or directory attribute information.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -15,7 +13,7 @@ Provides APIs for managing file or directory attribute information.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -28,11 +26,9 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
-**Substitutes:** [listFile](arkts-corefile-fileio-listfile-f.md)
+**Substitutes:** listFile
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -92,68 +88,6 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 | 14300002 |
 | 14300003 |
 | 14300004 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// fileInfoDir indicates information about a directory.
-// let filter = { suffix : [".txt", ".jpg", ".xlsx"] };
-let fileInfoDir :Array<fileAccess.FileInfo> = [];
-let subfileInfos: Array<fileAccess.FileInfo> = [];
-let isDone: boolean = false;
-try {
-  for (let i = 0; i < fileInfoDir.length; ++i) {
-    let fileIterator = fileInfoDir[i].listFile();
-    // listFile() with the filter implementation.
-    // let fileIterator = fileInfoDir.listFile(filter);
-    if (!fileIterator) {
-      console.error("listFile interface returns an undefined object");
-    }
-    while (!isDone) {
-      let result = fileIterator.next();
-      console.info("next result = " + JSON.stringify(result));
-      isDone = result.done;
-      if (!isDone) {
-        subfileInfos.push(result.value);
-      }
-    }
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("listFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// rootInfo can be obtained by getRoots().
-// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
-let rootInfo: Array<fileAccess.FileInfo> = [];
-let fileInfos: Array<fileAccess.FileInfo> = [];
-let isDone: boolean = false;
-try {
-  for (let i = 0; i < rootInfo.length; ++i) {
-    let fileIterator = rootInfo[i].listFile();
-    // listFile() with the filter implementation.
-    // let fileIterator = rootInfo.listFile(filter);
-    if (!fileIterator) {
-      console.error("listFile interface returns an undefined object");
-    }
-    while (!isDone) {
-      let result = fileIterator.next();
-      console.info("next result = " + JSON.stringify(result));
-      isDone = result.done;
-      if (!isDone) {
-        fileInfos.push(result.value);
-      }
-    }
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("listFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
 
 ## scanFile
 
@@ -165,8 +99,6 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -227,68 +159,6 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 | 14300002 |
 | 14300003 |
 | 14300004 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// fileInfoDir indicates information about a directory.
-// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
-let fileInfoDir: Array<fileAccess.FileInfo> = [];
-let subfileInfos: Array<fileAccess.FileInfo> = [];
-let isDone: boolean = false;
-try {
-  for (let i = 0; i < fileInfoDir.length; ++i) {
-    let fileIterator = fileInfoDir[i].scanFile();
-    // scanFile() with the filter implementation.
-    // let fileIterator = fileInfoDir.scanFile(filter);
-    if (!fileIterator) {
-      console.error("scanFile interface returns an undefined object");
-    }
-    while (!isDone) {
-      let result = fileIterator.next();
-      console.info("next result = " + JSON.stringify(result));
-      isDone = result.done;
-      if (!isDone) {
-        subfileInfos.push(result.value);
-      }
-    }
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("scanFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// rootInfo can be obtained by getRoots().
-// let filter = {suffix : [".txt", ".jpg", ".xlsx"]};
-let rootInfo: Array<fileAccess.FileInfo> = [];
-let fileInfos: Array<fileAccess.FileInfo> = [];
-let isDone: boolean = false;
-try {
-  for (let i = 0; i < rootInfo.length; ++i) {
-    let fileIterator = rootInfo[i].scanFile();
-    // scanFile() with the filter implementation.
-    // let fileIterator = rootInfo.scanFile(filter);
-    if (!fileIterator) {
-      console.error("scanFile interface returns undefined object");
-    }
-    while (!isDone) {
-      let result = fileIterator.next();
-      console.info("next result = " + JSON.stringify(result));
-      isDone = result.done;
-      if (!isDone) {
-        fileInfos.push(result.value);
-      }
-    }
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("scanFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
 
 ## fileName
 
@@ -301,8 +171,6 @@ Name of the file or directory.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -326,8 +194,6 @@ Multipurpose Internet Mail Extensions (MIME) type of the file or directory.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -350,8 +216,6 @@ Permissions on the file or directory.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -368,13 +232,11 @@ Permissions on the file or directory.
 mtime: number
 ```
 
-Time when the file or directory was last modified. <br>Unit: ms.
+Time when the file or directory was last modified. Unit: ms.
 
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -398,8 +260,6 @@ Relative path of the file or directory.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -416,13 +276,11 @@ Relative path of the file or directory.
 size: number
 ```
 
-Size of the file or directory. <br>Unit: Byte.
+Size of the file or directory. Unit: Byte.
 
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -445,8 +303,6 @@ URI of the file or directory.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 

@@ -4,14 +4,12 @@ Describes the style of a rectangle.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## color
@@ -26,8 +24,6 @@ Color of the rectangle.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -35,16 +31,14 @@ Color of the rectangle.
 ## leftBottomRadius
 
 ```TypeScript
-leftBottomRadius: double
+leftBottomRadius: number
 ```
 
 Lower left radius of the rectangle, in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -53,16 +47,14 @@ Lower left radius of the rectangle, in physical pixels (px).
 ## leftTopRadius
 
 ```TypeScript
-leftTopRadius: double
+leftTopRadius: number
 ```
 
 Upper left radius of the rectangle, in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -71,16 +63,14 @@ Upper left radius of the rectangle, in physical pixels (px).
 ## rightBottomRadius
 
 ```TypeScript
-rightBottomRadius: double
+rightBottomRadius: number
 ```
 
 Lower right radius of the rectangle, in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -89,16 +79,14 @@ Lower right radius of the rectangle, in physical pixels (px).
 ## rightTopRadius
 
 ```TypeScript
-rightTopRadius: double
+rightTopRadius: number
 ```
 
 Upper right radius of the rectangle, in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

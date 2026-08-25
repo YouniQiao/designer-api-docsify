@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## onLocationChange
@@ -16,8 +16,6 @@ function onLocationChange(request: LocationRequest | ContinuousLocationRequest,
 Subscribe location changed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 23+: ohos.permission.APPROXIMATELY_LOCATION

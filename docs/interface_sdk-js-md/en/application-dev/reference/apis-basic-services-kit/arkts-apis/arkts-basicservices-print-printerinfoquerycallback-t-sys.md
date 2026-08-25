@@ -8,8 +8,6 @@ Defines the callback type used in registering to listen for printerInfoQuery eve
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework

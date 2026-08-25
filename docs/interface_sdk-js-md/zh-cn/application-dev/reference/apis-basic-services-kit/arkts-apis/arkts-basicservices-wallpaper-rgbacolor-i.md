@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## alpha
@@ -27,8 +25,6 @@ alpha: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -46,8 +42,6 @@ blue: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
@@ -64,8 +58,6 @@ green: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
@@ -81,8 +73,6 @@ red: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

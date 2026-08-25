@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## execCmd
@@ -15,8 +15,6 @@ function execCmd(cmd: string, execCmdOptions?: ExecCmdOptions): Promise<CliSessi
 Execute a command. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.EXEC_CLI_TOOL
 

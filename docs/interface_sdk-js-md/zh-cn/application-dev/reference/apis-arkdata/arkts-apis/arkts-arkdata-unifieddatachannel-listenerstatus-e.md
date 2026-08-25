@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## FINISHED
@@ -17,8 +15,6 @@ FINISHED = 0
 表示已完成。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ PROCESSING = 1
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -53,8 +47,6 @@ CANCELED = 2
 表明本次处理已被取消。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,8 +64,6 @@ INNER_ERROR = 200
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -89,8 +79,6 @@ INVALID_PARAMETERS = 201
 表示 [GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md) 包含无效参数。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,8 +96,6 @@ DATA_NOT_FOUND = 202
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -126,8 +112,6 @@ SYNC_FAILED = 203
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -143,8 +127,6 @@ COPY_FILE_FAILED = 204
 表示文件拷贝过程中出现错误。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

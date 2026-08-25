@@ -4,8 +4,6 @@ WebGL 2.0
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
 ## beginQuery
@@ -17,8 +15,6 @@ beginQuery(target: webgl.GLenum, query: WebGLQuery): void
 Begins a query
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -41,8 +37,6 @@ Begins transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -62,8 +56,6 @@ bindBufferBase(target: webgl.GLenum, index: webgl.GLuint, buffer: webgl.WebGLBuf
 Binds buffer base
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -93,8 +85,6 @@ Binds buffer range
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -119,8 +109,6 @@ Binds a sampler
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -142,8 +130,6 @@ Binds a transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -164,8 +150,6 @@ bindVertexArray(array: WebGLVertexArrayObject | null): void
 Binds a vertex array
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -198,8 +182,6 @@ Blits framebuffer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -229,8 +211,6 @@ Clears bufferfi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -258,8 +238,6 @@ clearBufferfv(
 Clears bufferfv
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -289,8 +267,6 @@ Clears bufferiv
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -314,8 +290,6 @@ Clears bufferuiv
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -338,8 +312,6 @@ clientWaitSync(sync: WebGLSync, flags: webgl.GLbitfield, timeout: GLuint64 ): we
 Client waits for sync object
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -379,8 +351,6 @@ Compressed texture image 3D from PBO offset
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -395,7 +365,7 @@ Compressed texture image 3D from PBO offset
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | [depth](#depth) | webgl.GLsizei | Yes |
-| border | webgl.GLint | Yes |
+| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
 | imageSize | webgl.GLsizei | Yes |
 | offset | webgl.GLintptr | Yes |
 
@@ -420,8 +390,6 @@ Compressed texture image 3D from ArrayBufferView
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -436,8 +404,8 @@ Compressed texture image 3D from ArrayBufferView
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | [depth](#depth) | webgl.GLsizei | Yes |
-| border | webgl.GLint | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | No |
 | srcLengthOverride | webgl.GLuint | No |
 
@@ -462,8 +430,6 @@ compressedTexSubImage3D(
 Compressed texture sub image 3D from PBO offset
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -508,8 +474,6 @@ Compressed texture sub image 3D from ArrayBufferView
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -527,7 +491,7 @@ Compressed texture sub image 3D from ArrayBufferView
 | height | webgl.GLsizei | Yes |
 | [depth](#depth) | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | No |
 | srcLengthOverride | webgl.GLuint | No |
 
@@ -546,8 +510,6 @@ copyBufferSubData(
 Copies data from one buffer to another
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -583,8 +545,6 @@ Copies a portion of a 3D texture image
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -613,8 +573,6 @@ Creates a query
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -634,8 +592,6 @@ createSampler(): WebGLSampler | null
 Creates a sampler
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -657,8 +613,6 @@ Creates a transform feedback object
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -678,8 +632,6 @@ createVertexArray(): WebGLVertexArrayObject | null
 Creates a vertex array object
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -701,8 +653,6 @@ Deletes a query
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -722,8 +672,6 @@ deleteSampler(sampler: WebGLSampler | null): void
 Deletes a sampler
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -745,8 +693,6 @@ Deletes a sync object
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -767,8 +713,6 @@ Deletes a transform feedback object
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -788,8 +732,6 @@ deleteVertexArray(vertexArray: WebGLVertexArrayObject | null): void
 Deletes a vertex array object
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -816,8 +758,6 @@ Draws arrays instanced
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -840,8 +780,6 @@ drawBuffers(buffers: webgl.GLenum[]): void
 Sets draw buffers
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -868,8 +806,6 @@ drawElementsInstanced(
 Draws elements instanced
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -902,8 +838,6 @@ Draws range elements
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -929,8 +863,6 @@ Ends a query
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -951,8 +883,6 @@ Ends transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -966,8 +896,6 @@ fenceSync(condition: webgl.GLenum, flags: webgl.GLbitfield): WebGLSync | null
 Creates a sync object
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1002,8 +930,6 @@ Attaches a texture layer to a framebuffer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1027,8 +953,6 @@ getActiveUniformBlockName(program: webgl.WebGLProgram, uniformBlockIndex: webgl.
 Gets active uniform block name
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1061,8 +985,6 @@ Gets active uniform block parameter
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1090,8 +1012,6 @@ getActiveUniforms(program: webgl.WebGLProgram, uniformIndices: webgl.GLuint[], p
 Gets active uniforms
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1127,8 +1047,6 @@ Gets buffer sub data
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1139,7 +1057,7 @@ Gets buffer sub data
 | --- | --- | --- |
 | target | webgl.GLenum | Yes |
 | srcByteOffset | webgl.GLintptr | Yes |
-| dstBuffer | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| dstBuffer | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | dstOffset | webgl.GLuint | No |
 | length | webgl.GLuint | No |
 
@@ -1152,8 +1070,6 @@ getFragDataLocation(program: webgl.WebGLProgram, name: string): webgl.GLint
 Gets fragment data location
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1182,8 +1098,6 @@ Gets indexed parameter
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1210,8 +1124,6 @@ getInternalformatParameter(target: webgl.GLenum, internalformat: webgl.GLenum, p
 Gets internal format parameter
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1241,8 +1153,6 @@ Gets a query
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1269,8 +1179,6 @@ getQueryParameter(query: WebGLQuery, pname: webgl.GLenum): any
 Gets query parameter
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1299,8 +1207,6 @@ Gets sampler parameter
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1327,8 +1233,6 @@ getSyncParameter(sync: WebGLSync, pname: webgl.GLenum): any
 Gets sync parameter
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1357,8 +1261,6 @@ Gets transform feedback varying
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1385,8 +1287,6 @@ getUniformBlockIndex(program: webgl.WebGLProgram, uniformBlockName: string): web
 Gets uniform block index
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1415,8 +1315,6 @@ Gets uniform indices
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1443,8 +1341,6 @@ invalidateFramebuffer(target: webgl.GLenum, attachments: webgl.GLenum[]): void
 Invalidates framebuffer attachments
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1474,8 +1370,6 @@ Invalidates sub framebuffer attachments
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1500,8 +1394,6 @@ isQuery(query: WebGLQuery | null): webgl.GLboolean
 Returns whether a query is valid
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1529,8 +1421,6 @@ Returns whether a sampler is valid
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1556,8 +1446,6 @@ isSync(sync: WebGLSync | null): webgl.GLboolean
 Returns whether a sync object is valid
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1585,8 +1473,6 @@ Returns whether a transform feedback is valid
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1612,8 +1498,6 @@ isVertexArray(vertexArray: WebGLVertexArrayObject | null): webgl.GLboolean
 Returns whether a vertex array is valid
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1641,8 +1525,6 @@ Pauses transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1656,8 +1538,6 @@ readBuffer(src: webgl.GLenum): void
 Sets the read buffer
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1685,8 +1565,6 @@ Sets renderbuffer storage with multisampling
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1711,8 +1589,6 @@ Resumes transform feedback
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1726,8 +1602,6 @@ samplerParameterf(sampler: WebGLSampler, pname: webgl.GLenum, param: webgl.GLflo
 Sets sampler parameterf
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1750,8 +1624,6 @@ samplerParameteri(sampler: WebGLSampler, pname: webgl.GLenum, param: webgl.GLint
 Sets sampler parameteri
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1786,8 +1658,6 @@ Sets texture image 3D from PBO offset
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1802,7 +1672,7 @@ Sets texture image 3D from PBO offset
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | [depth](#depth) | webgl.GLsizei | Yes |
-| border | webgl.GLint | Yes |
+| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
 | pboOffset | webgl.GLintptr | Yes |
@@ -1828,8 +1698,6 @@ Sets texture image 3D from TexImageSource
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1844,7 +1712,7 @@ Sets texture image 3D from TexImageSource
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | [depth](#depth) | webgl.GLsizei | Yes |
-| border | webgl.GLint | Yes |
+| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
 | source | webgl.TexImageSource | Yes |
@@ -1870,8 +1738,6 @@ Sets texture image 3D from ArrayBufferView
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1886,10 +1752,10 @@ Sets texture image 3D from ArrayBufferView
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | [depth](#depth) | webgl.GLsizei | Yes |
-| border | webgl.GLint | Yes |
+| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | ArrayBufferView \| null | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage3D
 
@@ -1913,8 +1779,6 @@ Sets texture image 3D from ArrayBufferView with offset
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -1929,10 +1793,10 @@ Sets texture image 3D from ArrayBufferView with offset
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | [depth](#depth) | webgl.GLsizei | Yes |
-| border | webgl.GLint | Yes |
+| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | Yes |
 
 ## texStorage2D
@@ -1950,8 +1814,6 @@ texStorage2D(
 Sets texture storage 2D
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1983,8 +1845,6 @@ texStorage3D(
 Sets texture storage 3D
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2022,8 +1882,6 @@ texSubImage3D(
 Sets texture sub image 3D from PBO offset
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2066,8 +1924,6 @@ texSubImage3D(
 Sets texture sub image 3D from TexImageSource
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2112,8 +1968,6 @@ Sets texture sub image 3D from ArrayBufferView
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2132,7 +1986,7 @@ Sets texture sub image 3D from ArrayBufferView
 | [depth](#depth) | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | ArrayBufferView \| null | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 | srcOffset | webgl.GLuint | No |
 
 ## transformFeedbackVaryings
@@ -2144,8 +1998,6 @@ transformFeedbackVaryings(program: webgl.WebGLProgram, varyings: string[], buffe
 Sets transform feedback varyings
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2168,8 +2020,6 @@ uniform1ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint): void
 Sets uniform1ui value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2197,8 +2047,6 @@ Sets uniform1uiv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2221,8 +2069,6 @@ uniform2ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint, v1: we
 Sets uniform2ui value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2251,8 +2097,6 @@ Sets uniform2uiv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2275,8 +2119,6 @@ uniform3ui(location: webgl.WebGLUniformLocation | null, v0: webgl.GLuint, v1: we
 Sets uniform3ui value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2305,8 +2147,6 @@ uniform3uiv(
 Sets uniform3uiv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2337,8 +2177,6 @@ Sets uniform4ui value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2368,8 +2206,6 @@ Sets uniform4uiv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2396,8 +2232,6 @@ uniformBlockBinding(
 Sets uniform block binding
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2426,8 +2260,6 @@ uniformMatrix2x3fv(
 Sets uniformMatrix2x3fv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2459,8 +2291,6 @@ Sets uniformMatrix2x4fv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2490,8 +2320,6 @@ uniformMatrix3x2fv(
 Sets uniformMatrix3x2fv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2523,8 +2351,6 @@ Sets uniformMatrix3x4fv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2554,8 +2380,6 @@ uniformMatrix4x2fv(
 Sets uniformMatrix4x2fv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2587,8 +2411,6 @@ Sets uniformMatrix4x3fv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2613,8 +2435,6 @@ Sets vertex attrib divisor
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2635,8 +2455,6 @@ vertexAttribI4i(index: webgl.GLuint, x: webgl.GLint, y: webgl.GLint, z: webgl.GL
 Sets vertex attrib I4i value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2662,8 +2480,6 @@ Sets vertex attrib I4iv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2684,8 +2500,6 @@ vertexAttribI4ui(index: webgl.GLuint, x: webgl.GLuint, y: webgl.GLuint, z: webgl
 Sets vertex attrib I4ui value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2710,8 +2524,6 @@ vertexAttribI4uiv(index: webgl.GLuint, values: Uint32List): void
 Sets vertex attrib I4uiv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2740,8 +2552,6 @@ Sets vertex attrib integer pointer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2765,8 +2575,6 @@ waitSync(sync: WebGLSync, flags: webgl.GLbitfield, timeout: GLint64): void
 Waits for sync object
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2792,8 +2600,6 @@ Active Uniform Blocks
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2809,8 +2615,6 @@ Already Signaled
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2828,8 +2632,6 @@ Any Samples Passed
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2845,8 +2647,6 @@ Any Samples Passed Conservative
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2864,8 +2664,6 @@ Buffer: color
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2881,8 +2679,6 @@ Color Attachment1
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2900,8 +2696,6 @@ Color Attachment10
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2917,8 +2711,6 @@ Color Attachment11
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2936,8 +2728,6 @@ Color Attachment12
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2953,8 +2743,6 @@ Color Attachment13
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -2972,8 +2760,6 @@ Color Attachment14
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -2989,8 +2775,6 @@ Color Attachment15
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3008,8 +2792,6 @@ Color Attachment2
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3025,8 +2807,6 @@ Color Attachment3
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3044,8 +2824,6 @@ Color Attachment4
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3061,8 +2839,6 @@ Color Attachment5
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3080,8 +2856,6 @@ Color Attachment6
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3097,8 +2871,6 @@ Color Attachment7
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3116,8 +2888,6 @@ Color Attachment8
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3133,8 +2903,6 @@ Color Attachment9
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3152,8 +2920,6 @@ Compare Ref To Texture
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3169,8 +2935,6 @@ Condition Satisfied
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3188,8 +2952,6 @@ Copy Read Buffer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3205,8 +2967,6 @@ Copy Read Buffer Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3224,8 +2984,6 @@ Copy Write Buffer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3241,8 +2999,6 @@ Copy Write Buffer Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3260,8 +3016,6 @@ Current query
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3277,8 +3031,6 @@ Buffer: depth
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3296,8 +3048,6 @@ Depth24 Stencil8
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3313,8 +3063,6 @@ Depth32F Stencil8
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3332,8 +3080,6 @@ Internal format: depth component24
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3349,8 +3095,6 @@ Depth Component32F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3368,8 +3112,6 @@ Draw buffer 0
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3385,8 +3127,6 @@ Draw buffer 1
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3404,8 +3144,6 @@ Draw Buffer10
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3421,8 +3159,6 @@ Draw Buffer11
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3440,8 +3176,6 @@ Draw Buffer12
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3457,8 +3191,6 @@ Draw Buffer13
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3476,8 +3208,6 @@ Draw Buffer14
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3493,8 +3223,6 @@ Draw Buffer15
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3512,8 +3240,6 @@ Draw buffer 2
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3529,8 +3255,6 @@ Draw buffer 3
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3548,8 +3272,6 @@ Draw buffer 4
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3565,8 +3287,6 @@ Draw Buffer5
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3584,8 +3304,6 @@ Draw Buffer6
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3601,8 +3319,6 @@ Draw Buffer7
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3620,8 +3336,6 @@ Draw Buffer8
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3637,8 +3351,6 @@ Draw Buffer9
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3656,8 +3368,6 @@ Draw Framebuffer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3673,8 +3383,6 @@ Draw Framebuffer Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3692,8 +3400,6 @@ Buffer usage: dynamic copy
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3709,8 +3415,6 @@ Buffer usage: dynamic read
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3728,8 +3432,6 @@ Float 32 Unsigned Int 24 8 Rev
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3745,8 +3447,6 @@ Float Mat2X3
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3764,8 +3464,6 @@ Float Mat2X4
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3781,8 +3479,6 @@ Float Mat3X2
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3800,8 +3496,6 @@ Float Mat3X4
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3817,8 +3511,6 @@ Float Mat4X2
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3836,8 +3528,6 @@ Float Mat4X3
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3853,8 +3543,6 @@ Fragment Shader Derivative Hint
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3872,8 +3560,6 @@ Framebuffer Attachment Alpha Size
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3889,8 +3575,6 @@ Framebuffer Attachment Blue Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3908,8 +3592,6 @@ Framebuffer Attachment Color Encoding
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3925,8 +3607,6 @@ Framebuffer Attachment Component Type
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3944,8 +3624,6 @@ Framebuffer Attachment Depth Size
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3961,8 +3639,6 @@ Framebuffer Attachment Green Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -3980,8 +3656,6 @@ Framebuffer Attachment Red Size
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -3997,8 +3671,6 @@ Framebuffer Attachment Stencil Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4016,8 +3688,6 @@ Framebuffer Attachment Texture Layer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4033,8 +3703,6 @@ Framebuffer Default
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4052,8 +3720,6 @@ Framebuffer Incomplete Multisample
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4069,8 +3735,6 @@ Half Float
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4088,8 +3752,6 @@ Data type: INT 2_10_10_10_REV
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4105,8 +3767,6 @@ Int Sampler 2D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4124,8 +3784,6 @@ Int Sampler 2D Array
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4141,8 +3799,6 @@ Int Sampler 3D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4160,8 +3816,6 @@ Int Sampler Cube
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4177,8 +3831,6 @@ Interleaved Attribs
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4196,8 +3848,6 @@ Invalid Index
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4213,8 +3863,6 @@ Max value
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4232,8 +3880,6 @@ Max 3D texture size
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4249,8 +3895,6 @@ Max Array Texture Layers
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4268,8 +3912,6 @@ Max client wait timeout WebGL
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4285,8 +3927,6 @@ Max Color Attachments
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4304,8 +3944,6 @@ Max Combined Fragment Uniform Components
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4321,8 +3959,6 @@ Max Combined Uniform Blocks
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4340,8 +3976,6 @@ Max Combined Vertex Uniform Components
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4357,8 +3991,6 @@ Max draw buffers
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4376,8 +4008,6 @@ Max element index
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4393,8 +4023,6 @@ Max elements indices
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4412,8 +4040,6 @@ Max elements vertices
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4429,8 +4055,6 @@ Max Fragment Input Components
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4448,8 +4072,6 @@ Max Fragment Uniform Blocks
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4465,8 +4087,6 @@ Max Fragment Uniform Components
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4484,8 +4104,6 @@ Max Program Texel Offset
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4501,8 +4119,6 @@ Max Samples
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4520,8 +4136,6 @@ Max Server Wait Timeout
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4537,8 +4151,6 @@ Max texture LOD bias
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4556,8 +4168,6 @@ Max Transform Feedback Interleaved Components
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4573,8 +4183,6 @@ Max Transform Feedback Separate Attribs
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4592,8 +4200,6 @@ Max Transform Feedback Separate Components
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4609,8 +4215,6 @@ Max Uniform Block Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4628,8 +4232,6 @@ Max Uniform Buffer Bindings
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4645,8 +4247,6 @@ Max Varying Components
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4664,8 +4264,6 @@ Max Vertex Output Components
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4681,8 +4279,6 @@ Max Vertex Uniform Blocks
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4700,8 +4296,6 @@ Max Vertex Uniform Components
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4717,8 +4311,6 @@ Min value
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4736,8 +4328,6 @@ Min Program Texel Offset
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4753,8 +4343,6 @@ Object Type
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4772,8 +4360,6 @@ Pack row length
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4789,8 +4375,6 @@ Pack skip pixels
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4808,8 +4392,6 @@ Pack skip rows
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4825,8 +4407,6 @@ Pixel Pack Buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4844,8 +4424,6 @@ Pixel Pack Buffer Binding
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4861,8 +4439,6 @@ Pixel Unpack Buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4880,8 +4456,6 @@ Pixel Unpack Buffer Binding
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4897,8 +4471,6 @@ Query result
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4916,8 +4488,6 @@ Query result available
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4933,8 +4503,6 @@ R11F G11F B10F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4952,8 +4520,6 @@ R16F
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -4969,8 +4535,6 @@ R16I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -4988,8 +4552,6 @@ R16Ui
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5005,8 +4567,6 @@ R32F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5024,8 +4584,6 @@ R32I
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5041,8 +4599,6 @@ R32Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5060,8 +4616,6 @@ R8
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5077,8 +4631,6 @@ R8 Snorm
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5096,8 +4648,6 @@ R8I
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5113,8 +4663,6 @@ R8Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5132,8 +4680,6 @@ Rasterizer Discard
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5149,8 +4695,6 @@ Read buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5168,8 +4712,6 @@ Read Framebuffer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5185,8 +4727,6 @@ Read Framebuffer Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5204,8 +4744,6 @@ Pixel format: red
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5221,8 +4759,6 @@ Red Integer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5240,8 +4776,6 @@ Renderbuffer Samples
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5257,8 +4791,6 @@ Rg
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5276,8 +4808,6 @@ Rg16F
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5293,8 +4823,6 @@ Rg16I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5312,8 +4840,6 @@ Rg16Ui
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5329,8 +4855,6 @@ Rg32F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5348,8 +4872,6 @@ Rg32I
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5365,8 +4887,6 @@ Rg32Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5384,8 +4904,6 @@ Rg8
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5401,8 +4919,6 @@ Rg8 Snorm
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5420,8 +4936,6 @@ Rg8I
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5437,8 +4951,6 @@ Rg8Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5456,8 +4968,6 @@ Rg Integer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5473,8 +4983,6 @@ Internal format: RGB10_A2
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5492,8 +5000,6 @@ Internal format: RGB10_A2UI
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5509,8 +5015,6 @@ Rgb16F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5528,8 +5032,6 @@ Rgb16I
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5545,8 +5047,6 @@ Rgb16Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5564,8 +5064,6 @@ Rgb32F
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5581,8 +5079,6 @@ Rgb32I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5600,8 +5096,6 @@ Rgb32Ui
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5617,8 +5111,6 @@ Internal format: RGB8
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5636,8 +5128,6 @@ Rgb8 Snorm
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5653,8 +5143,6 @@ Rgb8I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5672,8 +5160,6 @@ Rgb8Ui
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5689,8 +5175,6 @@ Rgb9 E5
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5708,8 +5192,6 @@ Rgb Integer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5725,8 +5207,6 @@ Rgba16F
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5744,8 +5224,6 @@ Rgba16I
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5761,8 +5239,6 @@ Rgba16Ui
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5780,8 +5256,6 @@ Rgba32F
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5797,8 +5271,6 @@ Rgba32I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5816,8 +5288,6 @@ Rgba32Ui
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5833,8 +5303,6 @@ Internal format: RGBA8
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5852,8 +5320,6 @@ Rgba8 Snorm
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5869,8 +5335,6 @@ Rgba8I
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5888,8 +5352,6 @@ Rgba8Ui
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5905,8 +5367,6 @@ Rgba Integer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5924,8 +5384,6 @@ Sampler 2D Array
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5941,8 +5399,6 @@ Sampler 2D Array Shadow
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5960,8 +5416,6 @@ Sampler 2D Shadow
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -5977,8 +5431,6 @@ Sampler 3D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -5996,8 +5448,6 @@ Sampler Binding
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6013,8 +5463,6 @@ Sampler Cube Shadow
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6032,8 +5480,6 @@ Separate Attribs
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6049,8 +5495,6 @@ Signaled
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6068,8 +5512,6 @@ Signed Normalized
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6085,8 +5527,6 @@ Srgb
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6104,8 +5544,6 @@ Srgb8
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6121,8 +5559,6 @@ Srgb8 Alpha8
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6140,8 +5576,6 @@ Buffer usage: static copy
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6157,8 +5591,6 @@ Buffer usage: static read
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6176,8 +5608,6 @@ Buffer: stencil
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6193,8 +5623,6 @@ Buffer usage: stream copy
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6212,8 +5640,6 @@ Buffer usage: stream read
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6229,8 +5655,6 @@ Sync Condition
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6248,8 +5672,6 @@ Sync Fence
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6265,8 +5687,6 @@ Sync Flags
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6284,8 +5704,6 @@ Sync Flush Commands Bit
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6301,8 +5719,6 @@ Sync Gpu Commands Complete
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6320,8 +5736,6 @@ Sync Status
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6337,8 +5751,6 @@ Texture 2D Array
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6356,8 +5768,6 @@ Texture target: 3D
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6373,8 +5783,6 @@ Texture base level
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6392,8 +5800,6 @@ Texture Binding 2D Array
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6409,8 +5815,6 @@ Texture binding 3D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6428,8 +5832,6 @@ Texture compare function
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6445,8 +5847,6 @@ Texture compare mode
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6464,8 +5864,6 @@ Texture immutable format
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6481,8 +5879,6 @@ Texture immutable levels
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6500,8 +5896,6 @@ Texture max level
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6517,8 +5911,6 @@ Texture max LOD
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6536,8 +5928,6 @@ Texture min LOD
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6553,8 +5943,6 @@ Texture wrap: R
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6572,8 +5960,6 @@ Timeout Expired
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6589,8 +5975,6 @@ Timeout ignored
 **Type:** [GLint64](arkts-arkgraphics2d-glint64-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6608,8 +5992,6 @@ Transform feedback target
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6625,8 +6007,6 @@ Transform feedback active
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6644,8 +6024,6 @@ Transform feedback binding
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6661,8 +6039,6 @@ Transform Feedback Buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6680,8 +6056,6 @@ Transform Feedback Buffer Binding
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6697,8 +6071,6 @@ Transform Feedback Buffer Mode
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6716,8 +6088,6 @@ Transform Feedback Buffer Size
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6733,8 +6103,6 @@ Transform Feedback Buffer Start
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6752,8 +6120,6 @@ Transform feedback paused
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6769,8 +6135,6 @@ Transform Feedback Primitives Written
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6788,8 +6152,6 @@ Transform Feedback Varyings
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6805,8 +6167,6 @@ Uniform Array Stride
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6824,8 +6184,6 @@ Uniform Block Active Uniform Indices
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6841,8 +6199,6 @@ Uniform Block Active Uniforms
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6860,8 +6216,6 @@ Uniform Block Binding
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6877,8 +6231,6 @@ Uniform Block Data Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6896,8 +6248,6 @@ Uniform Block Index
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6913,8 +6263,6 @@ Uniform Block Referenced By Fragment Shader
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6932,8 +6280,6 @@ Uniform Block Referenced By Vertex Shader
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6949,8 +6295,6 @@ Uniform Buffer
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -6968,8 +6312,6 @@ Uniform Buffer Binding
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -6985,8 +6327,6 @@ Uniform Buffer Offset Alignment
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7004,8 +6344,6 @@ Uniform Buffer Size
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7021,8 +6359,6 @@ Uniform Buffer Start
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7040,8 +6376,6 @@ Uniform Is Row Major
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7057,8 +6391,6 @@ Uniform Matrix Stride
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7076,8 +6408,6 @@ Uniform Offset
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7093,8 +6423,6 @@ Uniform Size
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7112,8 +6440,6 @@ Uniform Type
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7129,8 +6455,6 @@ Unpack image height
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7148,8 +6472,6 @@ Unpack row length
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7165,8 +6487,6 @@ Unpack skip images
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7184,8 +6504,6 @@ Unpack skip pixels
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7201,8 +6519,6 @@ Unpack skip rows
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7220,8 +6536,6 @@ Unsignaled
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7237,8 +6551,6 @@ Unsigned Int 10F 11F 11F Rev
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7256,8 +6568,6 @@ Unsigned Int 24 8
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7268,13 +6578,11 @@ Unsigned Int 24 8
 readonly UNSIGNED_INT_2_10_10_10_REV: webgl.GLenum
 ```
 
-Data type: unsigned int 2_10_10_10 rev
+Data type: unsigned number 2_10_10_10 rev
 
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7292,8 +6600,6 @@ Unsigned Int 5 9 9 9 Rev
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7309,8 +6615,6 @@ Unsigned Int Sampler 2D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7328,8 +6632,6 @@ Unsigned Int Sampler 2D Array
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7345,8 +6647,6 @@ Unsigned Int Sampler 3D
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7364,8 +6664,6 @@ Unsigned Int Sampler Cube
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7381,8 +6679,6 @@ Unsigned Int Vec2
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7400,8 +6696,6 @@ Unsigned Int Vec3
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7417,8 +6711,6 @@ Unsigned Int Vec4
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7436,8 +6728,6 @@ Unsigned Normalized
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7453,8 +6743,6 @@ Vertex Array Binding
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -7472,8 +6760,6 @@ Vertex Attrib Array Divisor
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7490,8 +6776,6 @@ Vertex Attrib Array Integer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
@@ -7507,8 +6791,6 @@ Wait Failed
 **Type:** webgl.GLenum
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 

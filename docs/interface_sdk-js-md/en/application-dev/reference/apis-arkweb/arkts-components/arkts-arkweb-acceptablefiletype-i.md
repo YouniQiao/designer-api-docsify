@@ -4,8 +4,6 @@ Provides the file type information recommended by the file selector, including t
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Array of acceptable file types.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## mimeType
@@ -40,7 +36,5 @@ MIME type of the file.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

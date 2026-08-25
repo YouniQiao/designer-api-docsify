@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ autoHide(value: boolean)
 Specifies whether to automatically hide the sidebar when it is dragged to be smaller than the minimum width. The value is subject to the **minSideBarWidth** attribute method. If it is not set in **minSideBarWidth**, the default value is used.Whether the sidebar should be hidden is determined when it is being dragged. When it is dragged to be smaller than the minimum width, the damping effect is required to trigger hiding (a distance out of range).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,8 +43,6 @@ Sets the attributes of the sidebar control button.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -68,8 +62,6 @@ divider(value: DividerStyle | null)
 Sets the divider style.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,8 +86,6 @@ Sets the maximum width of the sidebar. If a value less than 0 is set, the defaul
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -117,8 +107,6 @@ Sets the maximum width of the sidebar. If a value less than 0 is set, the defaul
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -136,12 +124,13 @@ minContentWidth(value: Dimension)
 ```
 
 Sets the minimum content area width of the sidebar container.If this attribute is set to a value less than 0, the default value **360vp** will be used. If this attribute is not set, the width of the content area can shrink to 0.In Embed mode, when the component size is increased, only the content area is enlarged;when the component size is decreased, the content area is shrunk until its width reaches the value defined by **minContentWidth**; if the component size is further decreased, while respecting the **minContentWidth** settings, the sidebar is shrunk until its width reaches the value defined by **minSideBarWidth**; if the component size is further decreased, then:  
-- If [autoHide](#autohide) is set to **false**, while retaining the [minSideBarWidth](#minsidebarwidth) and **minContentWidth** settings, the content area has its content clipped. - If **autoHide** is set to **true**, the sidebar is hidden first, and then the content area is shrunk. After its width reaches the value defined by **minContentWidth**, the content area has its content clipped.  
+- If [autoHide](#autohide) is set to **false**, while retaining the  
+[minSideBarWidth](#minsidebarwidth) and **minContentWidth** settings, the content area has its content clipped.  
+- If **autoHide** is set to **true**, the sidebar is hidden first, and then the content area is shrunk. After its  
+width reaches the value defined by **minContentWidth**, the content area has its content clipped.  
 **minContentWidth** takes precedence over the [maxSideBarWidth](#maxsidebarwidth) and **sideBarWidth** attributes of the sidebar. If **minContentWidth** is not set, **minSideBarWidth** and **maxSideBarWidth** take precedence over its default value.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,8 +155,6 @@ Sets the minimum width of the sidebar. If a value less than 0 is set, the defaul
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -188,8 +175,6 @@ Sets the minimum width of the sidebar. If a value less than 0 is set, the defaul
 **minSideBarWidth**, whether it is specified or kept at the default value, takes precedence over **minWidth** of the sidebar child components.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -214,8 +199,6 @@ Triggered when the status of the sidebar switches between shown and hidden.This 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -235,8 +218,6 @@ showControlButton(value: boolean)
 Specifies whether to display the sidebar control button.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -258,8 +239,6 @@ Specifies whether to display the sidebar.Since API version 10, this attribute su
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -279,8 +258,6 @@ showSideBarWithGesture(value: boolean)
 Specifies whether sideBar can be presented or dismissed by gesture.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -304,8 +281,6 @@ Sets the position of the sidebar.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -326,8 +301,6 @@ Sets the width of the sidebar. If a value less than 0 is set, the default value 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -347,8 +320,6 @@ sideBarWidth(value: Length)
 Sets the width of the sidebar. If a value less than 0 is set, the default value is used. The value must comply with the width constraints. If it is not within the valid range, the valid value closest to the set one is used. Compared to [sideBarWidth](#sidebarwidth), this API supports percentage strings and other pixel units for the **value** parameter.Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

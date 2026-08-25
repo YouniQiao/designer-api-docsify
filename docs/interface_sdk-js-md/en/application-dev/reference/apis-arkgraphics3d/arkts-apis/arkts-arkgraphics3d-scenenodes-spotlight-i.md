@@ -12,42 +12,36 @@ Spotlight, which inherits from Light.A spotlight emits a conical beam of light i
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## innerAngle
 
 ```TypeScript
-innerAngle?: double
+innerAngle?: number
 ```
 
 Angle from the center of the spotlight to the start of the decay, corresponding to the semi-apex angle of the cone, within which the light intensity does not decay with angle. The unit is radian (rad), and the default value is 0. The value must be greater than or equal to 0 and less than or equal to outerAngle.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Default:** 0
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## outerAngle
 
 ```TypeScript
-outerAngle?: double
+outerAngle?: number
 ```
 
 Angle from the center of the spotlight to the end of the decay, corresponding to the semi-apex angle of the cone, beyond which there is no light intensity. The unit is radian (rad), and the default value is PI/4. The value must be greater than or equal to innerAngle and less than or equal to PI/2.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Default:** PI / 4.0
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

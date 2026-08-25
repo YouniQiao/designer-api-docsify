@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getPairedDevices
@@ -15,8 +15,6 @@ function getPairedDevices(): Array<string>
 Obtains the list of Bluetooth devices that have been paired with the current device. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -43,14 +41,3 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let devices: Array<string> = connection.getPairedDevices();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

@@ -7,8 +7,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** null
@@ -26,8 +24,6 @@ HUKS_SUCCESS = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -42,8 +38,6 @@ HUKS_FAILURE = -1
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -60,8 +54,6 @@ HUKS_ERROR_BAD_STATE = -2
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -76,8 +68,6 @@ HUKS_ERROR_INVALID_ARGUMENT = -3
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -94,8 +84,6 @@ HUKS_ERROR_NOT_SUPPORTED = -4
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -110,8 +98,6 @@ HUKS_ERROR_NO_PERMISSION = -5
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -128,8 +114,6 @@ HUKS_ERROR_INSUFFICIENT_DATA = -6
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -144,8 +128,6 @@ HUKS_ERROR_BUFFER_TOO_SMALL = -7
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -162,8 +144,6 @@ HUKS_ERROR_INSUFFICIENT_MEMORY = -8
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -178,8 +158,6 @@ HUKS_ERROR_COMMUNICATION_FAILURE = -9
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -196,8 +174,6 @@ HUKS_ERROR_STORAGE_FAILURE = -10
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -212,8 +188,6 @@ HUKS_ERROR_HARDWARE_FAILURE = -11
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -230,8 +204,6 @@ HUKS_ERROR_ALREADY_EXISTS = -12
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -246,8 +218,6 @@ HUKS_ERROR_NOT_EXIST = -13
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -264,8 +234,6 @@ HUKS_ERROR_NULL_POINTER = -14
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -280,8 +248,6 @@ HUKS_ERROR_FILE_SIZE_FAIL = -15
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -298,8 +264,6 @@ HUKS_ERROR_READ_FILE_FAIL = -16
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -314,8 +278,6 @@ HUKS_ERROR_INVALID_PUBLIC_KEY = -17
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -332,8 +294,6 @@ HUKS_ERROR_INVALID_PRIVATE_KEY = -18
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -348,8 +308,6 @@ HUKS_ERROR_INVALID_KEY_INFO = -19
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -366,8 +324,6 @@ HUKS_ERROR_HASH_NOT_EQUAL = -20
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -382,8 +338,6 @@ HUKS_ERROR_MALLOC_FAIL = -21
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -400,8 +354,6 @@ HUKS_ERROR_WRITE_FILE_FAIL = -22
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -416,8 +368,6 @@ HUKS_ERROR_REMOVE_FILE_FAIL = -23
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -434,8 +384,6 @@ HUKS_ERROR_OPEN_FILE_FAIL = -24
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -450,8 +398,6 @@ HUKS_ERROR_CLOSE_FILE_FAIL = -25
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -468,8 +414,6 @@ HUKS_ERROR_MAKE_DIR_FAIL = -26
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -484,8 +428,6 @@ HUKS_ERROR_INVALID_KEY_FILE = -27
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -502,8 +444,6 @@ HUKS_ERROR_IPC_MSG_FAIL = -28
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -518,8 +458,6 @@ HUKS_ERROR_REQUEST_OVERFLOWS = -29
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -536,8 +474,6 @@ HUKS_ERROR_PARAM_NOT_EXIST = -30
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -552,8 +488,6 @@ HUKS_ERROR_CRYPTO_ENGINE_ERROR = -31
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -570,8 +504,6 @@ HUKS_ERROR_COMMUNICATION_TIMEOUT = -32
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -586,8 +518,6 @@ HUKS_ERROR_IPC_INIT_FAIL = -33
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -604,8 +534,6 @@ HUKS_ERROR_IPC_DLOPEN_FAIL = -34
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -620,8 +548,6 @@ HUKS_ERROR_EFUSE_READ_FAIL = -35
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -638,8 +564,6 @@ HUKS_ERROR_NEW_ROOT_KEY_MATERIAL_EXIST = -36
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -654,8 +578,6 @@ HUKS_ERROR_UPDATE_ROOT_KEY_MATERIAL_FAIL = -37
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -672,8 +594,6 @@ HUKS_ERROR_VERIFICATION_FAILED = -38
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -688,8 +608,6 @@ HUKS_ERROR_CHECK_GET_ALG_FAIL = -100
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -706,8 +624,6 @@ HUKS_ERROR_CHECK_GET_KEY_SIZE_FAIL = -101
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -722,8 +638,6 @@ HUKS_ERROR_CHECK_GET_PADDING_FAIL = -102
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -740,8 +654,6 @@ HUKS_ERROR_CHECK_GET_PURPOSE_FAIL = -103
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -756,8 +668,6 @@ HUKS_ERROR_CHECK_GET_DIGEST_FAIL = -104
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -774,8 +684,6 @@ HUKS_ERROR_CHECK_GET_MODE_FAIL = -105
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -790,8 +698,6 @@ HUKS_ERROR_CHECK_GET_NONCE_FAIL = -106
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -808,8 +714,6 @@ HUKS_ERROR_CHECK_GET_AAD_FAIL = -107
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -824,8 +728,6 @@ HUKS_ERROR_CHECK_GET_IV_FAIL = -108
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -842,8 +744,6 @@ HUKS_ERROR_CHECK_GET_AE_TAG_FAIL = -109
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -858,8 +758,6 @@ HUKS_ERROR_CHECK_GET_SALT_FAIL = -110
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -876,8 +774,6 @@ HUKS_ERROR_CHECK_GET_ITERATION_FAIL = -111
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -892,8 +788,6 @@ HUKS_ERROR_INVALID_ALGORITHM = -112
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -910,8 +804,6 @@ HUKS_ERROR_INVALID_KEY_SIZE = -113
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -926,8 +818,6 @@ HUKS_ERROR_INVALID_PADDING = -114
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -944,8 +834,6 @@ HUKS_ERROR_INVALID_PURPOSE = -115
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -960,8 +848,6 @@ HUKS_ERROR_INVALID_MODE = -116
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -978,8 +864,6 @@ HUKS_ERROR_INVALID_DIGEST = -117
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -994,8 +878,6 @@ HUKS_ERROR_INVALID_SIGNATURE_SIZE = -118
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1012,8 +894,6 @@ HUKS_ERROR_INVALID_IV = -119
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -1028,8 +908,6 @@ HUKS_ERROR_INVALID_AAD = -120
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1046,8 +924,6 @@ HUKS_ERROR_INVALID_NONCE = -121
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -1062,8 +938,6 @@ HUKS_ERROR_INVALID_AE_TAG = -122
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1080,8 +954,6 @@ HUKS_ERROR_INVALID_SALT = -123
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -1096,8 +968,6 @@ HUKS_ERROR_INVALID_ITERATION = -124
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1114,8 +984,6 @@ HUKS_ERROR_INVALID_OPERATION = -125
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -1131,8 +999,6 @@ HUKS_ERROR_INTERNAL_ERROR = -999
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -1147,8 +1013,6 @@ HUKS_ERROR_UNKNOWN_ERROR = -1000
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

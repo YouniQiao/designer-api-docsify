@@ -4,8 +4,6 @@ Enumerates the directions of cursor movement of the input method.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## CURSOR_UP
@@ -17,8 +15,6 @@ CURSOR_UP = 1
 Upward.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -32,8 +28,6 @@ Downward.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## CURSOR_LEFT
@@ -46,8 +40,6 @@ Leftward.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## CURSOR_RIGHT
@@ -59,7 +51,5 @@ CURSOR_RIGHT
 Rightward.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

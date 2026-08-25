@@ -4,14 +4,12 @@ The Ability class is the fundamental unit for application lifecycle scheduling. 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## Modules to Import
 
 ```TypeScript
-import { Ability } from '@kit.AbilityKit';
+import { Ability } from 'kits/@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate
@@ -30,8 +28,6 @@ Called when a system environment variable changes. You can override this callbac
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -43,19 +39,6 @@ Called when a system environment variable changes. You can override this callbac
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// You are not allowed to inherit from the top-level base class Ability. Therefore, the derived class UIAbility is used as an example.
-import { UIAbility, Configuration } from '@kit.AbilityKit';
-
-class MyUIAbility extends UIAbility {
-  onConfigurationUpdate(config: Configuration) {
-    console.info(`onConfigurationUpdate, config: ${JSON.stringify(config)}`);
-  }
-}
-```
 
 ## onMemoryLevel
 
@@ -71,8 +54,6 @@ Called when the available memory of the entire device changes to a specified lev
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -84,16 +65,3 @@ Called when the available memory of the entire device changes to a specified lev
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | level | AbilityConstant.MemoryLevel | Yes |
-
-**Examples**
-
-```TypeScript
-// You are not allowed to inherit from the top-level base class Ability. Therefore, the derived class UIAbility is used as an example.
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-class MyUIAbility extends UIAbility {
-  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
-    console.info(`onMemoryLevel, level: ${JSON.stringify(level)}`);
-  }
-}
-```

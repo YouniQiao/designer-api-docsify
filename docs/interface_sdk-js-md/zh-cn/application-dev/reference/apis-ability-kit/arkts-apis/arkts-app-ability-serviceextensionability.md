@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
+import { ServiceExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

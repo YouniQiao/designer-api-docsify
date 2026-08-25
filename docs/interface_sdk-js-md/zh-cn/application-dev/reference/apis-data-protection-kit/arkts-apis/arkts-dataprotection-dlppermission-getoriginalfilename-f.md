@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getOriginalFileName
@@ -15,8 +15,6 @@ function getOriginalFileName(fileName: string): string
 获取指定DLP文件名的原始文件名。该接口为同步接口。根据原始文件名后缀判断文件类型，选择对应的应用打开。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -38,12 +36,3 @@ function getOriginalFileName(fileName: string): string
 | --- |
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let originalFileName = dlpPermission.getOriginalFileName('test.txt.dlp'); // 获取原始文件名。
-console.info('originalFileName:', originalFileName);
-```

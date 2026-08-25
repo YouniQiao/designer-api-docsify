@@ -4,14 +4,12 @@ Configuring parameters in geo fence requests.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## geofence
@@ -26,8 +24,6 @@ Circular fence information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## scenario
@@ -41,7 +37,5 @@ Indicate the user scenario.
 **Type:** LocationRequestScenario
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence

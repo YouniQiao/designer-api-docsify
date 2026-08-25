@@ -1,17 +1,15 @@
 # RssInfo
 
-描述应用进程的物理内存信息。@interface RssInfo
+描述应用进程的物理内存信息。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## rss
@@ -26,8 +24,6 @@ rss: bigint
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -38,13 +34,11 @@ rss: bigint
 swapRss: bigint
 ```
 
-换出到交换分区的匿名私有页总大小，以KB为单位，计算方式：/proc/{pid}/status: VmSwap。
+换出到交换分区的匿名私有页总大小，以KB为单位，计算方式：/proc/{pid}/status: VmSwap
 
 **类型：** bigint
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 

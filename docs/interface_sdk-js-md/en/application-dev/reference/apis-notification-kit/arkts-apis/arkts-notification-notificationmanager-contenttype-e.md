@@ -4,8 +4,6 @@ Enumerates the notification content types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## NOTIFICATION_CONTENT_BASIC_TEXT
@@ -17,8 +15,6 @@ NOTIFICATION_CONTENT_BASIC_TEXT
 Normal text notification.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Long text notification.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Notification.Notification
@@ -49,8 +43,6 @@ NOTIFICATION_CONTENT_PICTURE
 Picture-attached notification.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ Conversation notification.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Notification.Notification
@@ -81,8 +71,6 @@ NOTIFICATION_CONTENT_MULTILINE
 Multi-line text notification.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +86,6 @@ System live view notification. A third-party application cannot directly create 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Notification.Notification
@@ -113,8 +99,6 @@ NOTIFICATION_CONTENT_LIVE_VIEW
 Common live view notification. Available only to system applications.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

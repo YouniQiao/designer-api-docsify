@@ -10,8 +10,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## FOLD_DISPLAY_MODE_UNKNOWN
@@ -23,8 +21,6 @@ FOLD_DISPLAY_MODE_UNKNOWN = 0
 表示设备当前折叠显示模式未知。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,8 +36,6 @@ FOLD_DISPLAY_MODE_FULL = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -55,8 +49,6 @@ FOLD_DISPLAY_MODE_MAIN = 2
 表示设备当前主屏幕显示。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -72,8 +64,6 @@ FOLD_DISPLAY_MODE_SUB = 3
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -87,8 +77,6 @@ FOLD_DISPLAY_MODE_COORDINATION
 表示设备当前双屏协同显示。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -4,8 +4,6 @@ Defines the title bar options.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Background blur style of the title bar. If this parameter is not set, the backgr
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -42,11 +38,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 Options for the title bar background blur style.  
 **NOTE：**This parameter is only effective when **backgroundBlurStyle** is set.Avoid using this API in conjunction with **backgroundEffect**.
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +56,9 @@ backgroundColor?: ResourceColor
 
 Background color of the title bar. If this parameter is not set, the default color is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,11 +75,9 @@ backgroundEffect?: BackgroundEffectOptions
 Title bar background properties, including blur radius, brightness, saturation, and color.  
 **NOTE：**Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,8 +98,6 @@ Layout style of the title bar.Default value: **BarStyle.STANDARD**
 **Default:** BarStyle.STANDARD
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -135,8 +123,6 @@ style, this API has no effect.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -159,8 +145,6 @@ size changes in response to content scrolling.
 **Type:** [TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,8 +170,6 @@ the [title value](arkts-arkui-navigation-attribute.md#title) type is **ResourceS
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -211,8 +193,6 @@ Default value:LengthMetrics.resource(**\$r('sys.float.margin_left')**)
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -230,8 +210,6 @@ Title scroll blur style.
 **Type:** [ScrollEffectOptions](arkts-arkui-scrolleffectoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -254,8 +232,6 @@ For example, if the modifier is used to set font size attributes, such as **font
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -273,8 +249,6 @@ Set system-styled materials for the TitleBar. Different materials have different
 **Type:** [Material](arkts-arkui-material-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -16,11 +14,9 @@
 AUTH_SUB_TYPE = 1
 ```
 
-认证子类型。
+指示认证凭据子类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -36,8 +32,6 @@ REMAIN_TIMES = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ FREEZING_TIME = 3
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -64,11 +56,9 @@ FREEZING_TIME = 3
 ENROLLMENT_PROGRESS = 4
 ```
 
-指示录入进度，默认为空。
+录入进度。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -80,11 +70,9 @@ ENROLLMENT_PROGRESS = 4
 SENSOR_INFO = 5
 ```
 
-指示传感器信息，默认为空。
+传感器信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -100,8 +88,6 @@ NEXT_PHASE_FREEZING_TIME = 6
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +101,6 @@ CREDENTIAL_LENGTH = 7
 凭据长度。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

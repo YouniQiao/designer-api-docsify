@@ -4,8 +4,6 @@ State-specific styles for the component.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Style of the component in the clicked state.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -44,8 +40,6 @@ Style of the component in the disabled state.
 **Type:** any
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -65,8 +59,6 @@ Style of the component in the focused state.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -84,8 +76,6 @@ Style of the component in the hovered state.
 **Type:** object
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,8 +97,6 @@ Style of the component when being stateless.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -127,8 +115,6 @@ Style of the component in the pressed state.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -146,8 +132,6 @@ Style of the component in the selected state.
 **Type:** object
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

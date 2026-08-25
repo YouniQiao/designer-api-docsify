@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 ## UNKNOWN_STATUS
@@ -17,8 +15,6 @@ UNKNOWN_STATUS = 0
 表示未识别。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -32,8 +28,6 @@ LEFT_HAND_OPERATED = 1
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 ## RIGHT_HAND_OPERATED
@@ -45,7 +39,5 @@ RIGHT_HAND_OPERATED = 2
 表示触控操作手是右手。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion

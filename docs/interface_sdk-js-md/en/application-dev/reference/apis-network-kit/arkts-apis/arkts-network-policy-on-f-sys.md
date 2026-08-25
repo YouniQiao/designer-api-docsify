@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## on('netUidPolicyChange')
@@ -15,8 +15,6 @@ function on(type: 'netUidPolicyChange', callback: Callback<NetUidPolicyInfo>): v
 Registers the callback when the **policy** changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -53,8 +51,6 @@ Registers the callback when the **rule** changes. This API uses an asynchronous 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -89,8 +85,6 @@ function on(type: 'netMeteredIfacesChange', callback: Callback<Array<string>>): 
 Registers the callback when the **iface** changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -127,8 +121,6 @@ Registers the callback for network quota policy changes. This API uses an asynch
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -163,8 +155,6 @@ function on(type: 'netBackgroundPolicyChange', callback: Callback<boolean>): voi
 Registers the callback for background network policy changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 

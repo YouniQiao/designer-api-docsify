@@ -4,8 +4,6 @@ Defines the specific reasons for the blank screen, which identify the underlying
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NO_CONTENTFUL_NODES
@@ -18,8 +16,6 @@ No contentful node is detected.This may be triggered when the detection policy i
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## SUB_THRESHOLD_CONTENTFUL_NODES
@@ -31,7 +27,5 @@ SUB_THRESHOLD_CONTENTFUL_NODES = 1
 The number of contentful nodes detected is less than or equal to the threshold.This may be triggered when the detection policy is **DETECTION_CONTENTFUL_NODES_SEVENTEEN** and **contentfulNodesCountThreshold** is set.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core

@@ -7,8 +7,6 @@ UiTest框架通过By类提供了丰富的控件特征描述API，用于进行控
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [On](arkts-test-uitest-on-c.md)
@@ -18,8 +16,8 @@ UiTest框架通过By类提供了丰富的控件特征描述API，用于进行控
 ## 导入模块
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## clickable
@@ -34,8 +32,6 @@ clickable(b?: boolean): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[clickable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#clickable)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -55,22 +51,6 @@ clickable(b?: boolean): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.clickable(true); // 使用静态构造器ON创建On对象，指定目标控件的可点击状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.clickable(true); // 使用静态构造器BY创建by对象，指定目标控件的可点击状态属性。
-```
-
 ## enabled
 
 ```TypeScript
@@ -83,8 +63,6 @@ enabled(b?: boolean): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[enabled&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#enabled)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -104,22 +82,6 @@ enabled(b?: boolean): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.enabled(true); // 使用静态构造器ON创建On对象，指定目标控件的使能状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.enabled(true); // 使用静态构造器BY创建by对象，指定目标控件的使能状态属性。
-```
-
 ## focused
 
 ```TypeScript
@@ -132,8 +94,6 @@ focused(b?: boolean): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[focused&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#focused)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -153,22 +113,6 @@ focused(b?: boolean): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.focused(true); // 使用静态构造器ON创建On对象，指定目标控件的获焦状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.focused(true); // 使用静态构造器BY创建by对象，指定目标控件的获焦状态属性。
-```
-
 ## id
 
 ```TypeScript
@@ -181,8 +125,6 @@ id(id: number): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[id&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#id)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -202,29 +144,6 @@ id(id: number): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.id('123'); // 使用静态构造器ON创建On对象，指定目标控件的id属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { MatchPattern, On, ON } from '@kit.TestKit';
-
-let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.id(123); // 使用静态构造器BY创建by对象，指定目标控件的id属性。
-```
-
 ## isAfter
 
 ```TypeScript
@@ -237,8 +156,6 @@ isAfter(by: By): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[isAfter&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#isafter)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -258,24 +175,6 @@ isAfter(by: By): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之后。
-let on: On = ON.type('Text').isAfter(ON.text('123')); // 查找text为123之后的第一个Text组件
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之后。
-let by: By = BY.type('Text').isAfter(BY.text('123')); // 查找text为123之后的第一个Text组件。
-```
-
 ## isBefore
 
 ```TypeScript
@@ -288,8 +187,6 @@ isBefore(by: By): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[isBefore&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#isbefore)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -309,24 +206,6 @@ isBefore(by: By): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之前。
-let on: On = ON.type('Button').isBefore(ON.text('123')); // 查找text为123之前的第一个Button组件。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之前。
-let by: By = BY.type('Button').isBefore(BY.text('123')); // 查找text为123之前的第一个Button组件。
-```
-
 ## key
 
 ```TypeScript
@@ -339,8 +218,6 @@ key(key: string): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[id&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#id)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -360,15 +237,6 @@ key(key: string): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.key('123'); // 使用静态构造器BY创建by对象，指定目标控件的key值属性。
-```
-
 ## scrollable
 
 ```TypeScript
@@ -381,8 +249,6 @@ scrollable(b?: boolean): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[scrollable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#scrollable)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -402,22 +268,6 @@ scrollable(b?: boolean): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.scrollable(true); // 使用静态构造器ON创建On对象，指定目标控件的可滑动状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.scrollable(true); // 使用静态构造器BY创建by对象，指定目标控件的可滑动状态属性。
-```
-
 ## selected
 
 ```TypeScript
@@ -430,8 +280,6 @@ selected(b?: boolean): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[selected&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#selected)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -451,22 +299,6 @@ selected(b?: boolean): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.selected(true); // 使用静态构造器ON创建On对象，指定目标控件的被选中状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.selected(true); // 使用静态构造器BY创建by对象，指定目标控件的被选中状态属性。
-```
-
 ## text
 
 ```TypeScript
@@ -479,8 +311,6 @@ text(txt: string, pattern?: MatchPattern): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[text&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#text)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -501,22 +331,6 @@ text(txt: string, pattern?: MatchPattern): By
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.text('123'); // 使用静态构造器ON创建On对象，指定目标控件的text属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { BY, By } from '@kit.TestKit';
-
-let by: By = BY.text('123'); // 使用静态构造器BY创建by对象，指定目标控件的text属性。
-```
-
 ## type
 
 ```TypeScript
@@ -529,8 +343,6 @@ type(tp: string): By
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[type&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#type)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -549,26 +361,3 @@ type(tp: string): By
 | 类型 |
 | --- |
 | [By](arkts-test-uitest-by-c.md) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.type('Button'); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { On, ON, MatchPattern } from '@kit.TestKit';
-
-let on: On = ON.type('Button', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.type('Button'); // 使用静态构造器BY创建by对象，指定目标控件的控件类型属性。
-```

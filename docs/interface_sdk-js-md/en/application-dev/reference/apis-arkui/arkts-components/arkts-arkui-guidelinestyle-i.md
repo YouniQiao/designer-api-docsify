@@ -4,8 +4,6 @@ Defines the ID, direction, and position of a guideline.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Direction of the guideline.A guideline in the vertical direction can only be use
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -44,8 +40,6 @@ ID of the guideline, which must be unique and cannot be the same as the name of 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ Position of the guideline.If no value is specified or an invalid value (for exam
 **Type:** [GuideLinePosition](arkts-arkui-guidelineposition-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

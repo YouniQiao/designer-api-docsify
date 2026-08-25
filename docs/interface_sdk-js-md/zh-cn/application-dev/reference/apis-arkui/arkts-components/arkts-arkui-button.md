@@ -17,8 +17,6 @@ Button()
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -34,8 +32,6 @@ Button(options: ButtonOptions)
 创建可以包含单个子组件的按钮。未通过该接口设置时，则按照ButtonOptions中各参数的默认值配置。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -58,8 +54,6 @@ Button(label: ResourceStr, options?: ButtonOptions)
 使用文本内容创建相应的按钮组件，此时Button无法包含子组件。文本内容默认单行显示。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -85,7 +79,6 @@ Button(label: ResourceStr, options?: ButtonOptions)
 
 | 名称 |
 | --- |
-| [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md) |
 
 ### 枚举
 

@@ -4,8 +4,6 @@ Define some common extra keys used in different scenarios.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## LIVE_VIEW_HIDDEN_WHEN_KEYGUARD
@@ -17,8 +15,6 @@ LIVE_VIEW_HIDDEN_WHEN_KEYGUARD = 'hw_live_view_hidden_when_keyguard'
 Inform the system that the live view card should be hidden on the keyguard.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

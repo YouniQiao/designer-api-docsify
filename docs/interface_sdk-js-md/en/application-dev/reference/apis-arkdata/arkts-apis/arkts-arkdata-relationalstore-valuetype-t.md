@@ -1,14 +1,12 @@
 # ValueType
 
 ```TypeScript
-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets | Float32Array | bigint
+type ValueType = null | number | number | string | boolean | Uint8Array | Asset | Assets | Float32Array | bigint
 ```
 
 Indicates possible value types
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -20,7 +18,7 @@ Indicates possible value types
 | string |
 | boolean |
 | Uint8Array |
-| [Asset](arkts-arkdata-commontype-asset-i.md) |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) |
 | [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) |
 | Float32Array |
 | bigint |

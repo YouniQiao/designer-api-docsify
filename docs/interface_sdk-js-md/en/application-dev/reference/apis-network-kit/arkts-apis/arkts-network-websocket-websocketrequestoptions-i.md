@@ -4,14 +4,12 @@ Defines the optional parameters carried in the request for establishing a WebSoc
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## caPath
@@ -25,8 +23,6 @@ Path of CA certificates. If a path is set, the system uses the CA certificates i
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,8 +38,6 @@ Client certificate.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## header
@@ -57,8 +51,6 @@ Header carrying optional parameters in the request for establishing a WebSocket 
 **Type:** Object
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,8 +68,6 @@ Custom minimum TLS version supported. For example, if this parameter is set to *
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -85,32 +75,28 @@ Custom minimum TLS version supported. For example, if this parameter is set to *
 ## pingInterval
 
 ```TypeScript
-pingInterval?: int
+pingInterval?: number
 ```
 
 Custom [heartbeat detection interval](../../../network/websocket-connection.md). The default value is 30s. Heartbeat detection is initiated at the specified interval. If the value is set to **0**, heartbeat detection is disabled. The maximum value is 30000s, and the minimum value is 0s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## pongTimeout
 
 ```TypeScript
-pongTimeout?: int
+pongTimeout?: number
 ```
 
 Timeout interval for disconnecting a connection after heartbeat detection is initiated. The default value is 30s. If no response is received during the specified interval, the connection is disconnected. The maximum value is 30 000s, and the minimum value is 0s. **pongTimeout** must be less than or equal to **pingInterval**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -126,8 +112,6 @@ Custom **Sec-WebSocket-Protocol** field. The default value is "".
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## proxy
@@ -141,8 +125,6 @@ Proxy configuration. By default, the system network proxy is used.
 **Type:** [ProxyConfiguration](arkts-network-websocket-proxyconfiguration-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -158,8 +140,6 @@ Whether to skip server certificate verification. The value **true** means to ski
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## supportOriginPort
@@ -173,8 +153,6 @@ The option of supporting origin port.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

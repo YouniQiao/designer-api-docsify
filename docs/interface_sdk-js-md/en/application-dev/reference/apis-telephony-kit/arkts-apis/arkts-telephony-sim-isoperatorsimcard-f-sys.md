@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isOperatorSimCard
 
 ```TypeScript
-function isOperatorSimCard(slotId: int, operator: OperatorSimCard): boolean
+function isOperatorSimCard(slotId: number, operator: OperatorSimCard): boolean
 ```
 
 Indicates whether the SIM card in a specified slot is a specified operator.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -26,7 +24,7 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | operator | [OperatorSimCard](arkts-telephony-sim-operatorsimcard-e-sys.md) | Yes |
 
 **Return value:**
@@ -46,18 +44,3 @@ Indicates whether the SIM card in a specified slot is a specified operator.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { sim } from '@kit.TelephonyKit';
-
-let slotId : number = 0;
-let operator : sim.OperatorSimCard = sim.OperatorSimCard.CHINA_TELECOM_CARD;
-try {
-    let isOperatorSimCard: boolean = sim.isOperatorSimCard(slotId, operator);
-    console.info(`is operator sim card: ` + isOperatorSimCard);
-} catch (err) {
-    console.error("isOperatorSimCard err: " + JSON.stringify(err));
-}
-```

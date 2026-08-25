@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## resizeVirtualScreen
 
 ```TypeScript
-function resizeVirtualScreen(screenId:long, width: long, height: long): Promise<void>
+function resizeVirtualScreen(screenId:number, width: number, height: number): Promise<void>
 ```
 
 修改指定虚拟屏的尺寸，使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -26,9 +24,9 @@ function resizeVirtualScreen(screenId:long, width: long, height: long): Promise<
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| screenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| width | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| height | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| screenId | number | 是 |
+| width | number | 是 |
+| height | number | 是 |
 
 **返回值：**
 
@@ -45,20 +43,3 @@ function resizeVirtualScreen(screenId:long, width: long, height: long): Promise<
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 | [1400004](../errorcode-display.md#1400004-参数异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 虚拟屏ID需从createVirtualScreen()返回值获取
-let screenId: number = 1000; // 虚拟屏ID
-let width: number = 1920;
-let height: number = 1080;
-// 修改虚拟屏的尺寸
-screen.resizeVirtualScreen(screenId, width, height).then(() => {
-  console.info(`Succeeded in resizing virtual screen: screenId=${screenId}, width=${width}, height=${height}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to resize virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```

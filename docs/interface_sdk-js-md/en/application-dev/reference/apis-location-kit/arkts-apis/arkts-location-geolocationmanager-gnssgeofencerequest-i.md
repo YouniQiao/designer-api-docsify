@@ -4,14 +4,12 @@ Configuring parameters in GNSS geofence requests.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## fenceExtensionAbilityName
@@ -25,8 +23,6 @@ Indicates the name of FenceExtensionAbility.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -42,8 +38,6 @@ Circular fence information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## geofenceTransitionCallback
@@ -58,23 +52,19 @@ Indicates the callback for reporting the geofence transition status.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## loiterTimeMs
 
 ```TypeScript
-loiterTimeMs?: int
+loiterTimeMs?: number
 ```
 
 Indicates time for which a device is dwelling in the geofence, in milliseconds. If the device dwelling time reaches the value specified by this parameter, a GEOFENCE_TRANSITION_EVENT_DWELL event is reported. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -90,8 +80,6 @@ Indicates geofence transition status monitored.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## notifications
@@ -105,7 +93,5 @@ Indicates the geofence notifications to publish.
 **Type:** Array&lt;[NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence

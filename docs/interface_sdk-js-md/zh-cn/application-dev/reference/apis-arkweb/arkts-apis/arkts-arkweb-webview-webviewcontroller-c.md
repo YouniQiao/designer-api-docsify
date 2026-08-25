@@ -4,14 +4,12 @@ WebviewController是Web组件各种行为的核心控制器，提供网页加载
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## accessBackward
@@ -30,8 +28,6 @@ accessBackward(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -47,68 +43,6 @@ accessBackward(): boolean
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-Ark-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('accessBackward')
-        .onClick(() => {
-          try {
-            let result = this.controller.accessBackward();
-            console.info('result:' + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('accessBackward')
-        .onClick(() => {
-          try {
-            let result = this.controller.accessBackward();
-            console.info('result:' + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## accessForward
 
@@ -120,8 +54,6 @@ accessForward(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -138,68 +70,6 @@ accessForward(): boolean
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-Ark-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('accessForward')
-        .onClick(() => {
-          try {
-            let result = this.controller.accessForward();
-            console.info('result:' + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('accessForward')
-        .onClick(() => {
-          try {
-            let result = this.controller.accessForward();
-            console.info('result:' + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## accessStep
 
 ```TypeScript
@@ -209,8 +79,6 @@ accessStep(step: number): boolean
 当前页面是否可前进或者后退给定的step步。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -235,69 +103,6 @@ accessStep(step: number): boolean
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State steps: number = 2;
-
-  build() {
-    Column() {
-      Button('accessStep')
-        .onClick(() => {
-          try {
-            let result = this.controller.accessStep(this.steps);
-            console.info('result:' + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Button, Web, Column, Component, Entry, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State steps: int = 2
-
-  build() {
-    Column() {
-      Button('accessStep')
-        .onClick(() => {
-          try {
-            let result = this.controller.accessStep(this.steps);
-            console.info('result:' + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## addIntelligentTrackingPreventionBypassingList
 
 ```TypeScript
@@ -307,8 +112,6 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 添加智能防跟踪功能绕过的域名列表。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -327,68 +130,6 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('addIntelligentTrackingPreventionBypassingList')
-        .onClick(() => {
-          try {
-            let hostList = ["www.test1.com", "www.test2.com", "www.test3.com"];
-            webview.WebviewController.addIntelligentTrackingPreventionBypassingList(hostList);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('addIntelligentTrackingPreventionBypassingList')
-        .onClick(() => {
-          try {
-            let hostList = ["www.test1.com", "www.test2.com", "www.test3.com"];
-            webview.WebviewController.addIntelligentTrackingPreventionBypassingList(hostList);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## avoidVisibleViewportBottom
 
 ```TypeScript
@@ -405,8 +146,6 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -422,82 +161,6 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  avoidHeight: number = 100;
-
-  build() {
-    Column() {
-      Button('avoid')
-        .onClick(() => {
-          try {
-            this.controller.avoidVisibleViewportBottom(this.avoidHeight);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('reset')
-        .onClick(() => {
-          try {
-            this.controller.avoidVisibleViewportBottom(0);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Web, Button, Column, Component, Entry } from '@ohos.arkui.component';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  avoidHeight: int = 100;
-
-  build() {
-    Column() {
-      Button('avoid')
-        .onClick(() => {
-          try {
-            this.controller.avoidVisibleViewportBottom(this.avoidHeight);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('reset')
-        .onClick(() => {
-          try {
-            this.controller.avoidVisibleViewportBottom(0);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## backOrForward
 
 ```TypeScript
@@ -507,8 +170,6 @@ backOrForward(step: number): void
 按照历史栈，前进或者后退指定步长的页面，当历史栈中不存在对应步长的页面时，不会进行页面跳转。前进或者后退页面时，直接使用已加载过的网页，无需重新加载网页。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -527,68 +188,6 @@ backOrForward(step: number): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State step: number = -2;
-
-  build() {
-    Column() {
-      Button('backOrForward')
-        .onClick(() => {
-          try {
-            this.controller.backOrForward(this.step);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State step: int = -2
-
-  build() {
-    Column() {
-      Button('backOrForward')
-        .onClick(() => {
-          try {
-            this.controller.backOrForward(this.step);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## backward
 
 ```TypeScript
@@ -599,8 +198,6 @@ backward(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -610,66 +207,6 @@ backward(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-Ark-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('backward')
-        .onClick(() => {
-          try {
-            this.controller.backward();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('backward')
-        .onClick(() => {
-          try {
-            this.controller.backward();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## clearBlanklessLoadingCache
 
@@ -683,8 +220,6 @@ static clearBlanklessLoadingCache(keys?: Array<string>) : void
 > - 清除之后的页面，需在第三次加载页面时才会产生优化效果。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -700,68 +235,6 @@ static clearBlanklessLoadingCache(keys?: Array<string>) : void
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate");
-    // 假设应用的Web页面在2025/06/10会进行大幅改动，例如商品促销活动等，该提案清除白屏插帧优化缓存
-    webview.WebviewController.initializeWebEngine();
-    let pageUpdateTime: number = Date.UTC(2025, 5, 10, 0, 0, 0, 0);
-    let pageUpdateTime1: number = Date.UTC(2025, 5, 11, 0, 0, 0, 0);
-    let pageUpdateTimeNow: number = Date.now();
-    if (pageUpdateTimeNow > pageUpdateTime && pageUpdateTime < pageUpdateTime1) {
-      // 清除指定页面的白屏插帧方案缓存
-      try {
-        webview.WebviewController.clearBlanklessLoadingCache(["https://www.example.com", "https://www.example1.com"]);
-      } catch (error) {
-        console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-      }
-    }
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AppStorage } from '@ohos.arkui.stateManagement';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate");
-    // 假设应用的Web页面在2025/06/10会进行大幅改动，例如商品促销活动等，该提案清除白屏插帧优化缓存
-    webview.WebviewController.initializeWebEngine();
-    let pageUpdateTime: number = Date.UTC(2025, 5, 10, 0, 0, 0, 0);
-    let pageUpdateTime1: number = Date.UTC(2025, 5, 11, 0, 0, 0, 0);
-    let pageUpdateTimeNow: number = Date.now();
-    if (pageUpdateTimeNow > pageUpdateTime && pageUpdateTime < pageUpdateTime1) {
-      // 清除指定页面的白屏插帧方案缓存
-      try {
-        webview.WebviewController.clearBlanklessLoadingCache(["https://www.example.com", "https://www.example1.com"]);
-      } catch (error) {
-        console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-      }
-    }
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
-
 ## clearClientAuthenticationCache
 
 ```TypeScript
@@ -772,8 +245,6 @@ clearClientAuthenticationCache(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -783,66 +254,6 @@ clearClientAuthenticationCache(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearClientAuthenticationCache')
-        .onClick(() => {
-          try {
-            this.controller.clearClientAuthenticationCache();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearClientAuthenticationCache')
-        .onClick(() => {
-          try {
-            this.controller.clearClientAuthenticationCache();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## clearHistory
 
@@ -854,8 +265,6 @@ clearHistory(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -866,65 +275,6 @@ clearHistory(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearHistory')
-        .onClick(() => {
-          try {
-            this.controller.clearHistory();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearHistory')
-        .onClick(() => {
-          try {
-            this.controller.clearHistory();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearHostIP
 
 ```TypeScript
@@ -934,8 +284,6 @@ static clearHostIP(hostName: string): void
 清除指定主机域名解析后的IP地址。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -953,84 +301,6 @@ static clearHostIP(hostName: string): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      // URL加载前设置生效.
-      Button('setHostIP')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setHostIP('www.example.com', '127.0.0.1', 30);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('clearHostIP')
-        .onClick(() => {
-          try {
-            webview.WebviewController.clearHostIP('www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      // URL加载前设置生效。
-      Button('setHostIP')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setHostIP('www.example.com', '127.0.0.1', 30);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('clearHostIP')
-        .onClick(() => {
-          try {
-            webview.WebviewController.clearHostIP('www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearIntelligentTrackingPreventionBypassingList
 
 ```TypeScript
@@ -1040,8 +310,6 @@ static clearIntelligentTrackingPreventionBypassingList(): void
 删除通过addIntelligentTrackingPreventionBypassingList接口添加的所有域名。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1053,56 +321,6 @@ static clearIntelligentTrackingPreventionBypassingList(): void
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearIntelligentTrackingPreventionBypassingList')
-        .onClick(() => {
-          webview.WebviewController.clearIntelligentTrackingPreventionBypassingList();
-      })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearIntelligentTrackingPreventionBypassingList')
-        .onClick(() => {
-          webview.WebviewController.clearIntelligentTrackingPreventionBypassingList();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearMatches
 
 ```TypeScript
@@ -1113,8 +331,6 @@ clearMatches(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1124,66 +340,6 @@ clearMatches(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearMatches')
-        .onClick(() => {
-          try {
-            this.controller.clearMatches();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearMatches')
-        .onClick(() => {
-          try {
-            this.controller.clearMatches();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
 
 ## clearPrefetchedResource
 
@@ -1195,8 +351,6 @@ static clearPrefetchedResource(cacheKeyList: Array<string>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1206,84 +360,6 @@ static clearPrefetchedResource(cacheKeyList: Array<string>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | cacheKeyList | Array & lt;string & gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// Index.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: "https://www.example.com/", controller: this.controller })
-        .onAppear(() => {
-          // 预获取时，需要将"https://www.example1.com/post?e=f&g=h"替换成真实要访问的网站地址。
-          webview.WebviewController.prefetchResource(
-            {
-              url: "https://www.example1.com/post?e=f&g=h",
-              method: "POST",
-              formData: "a=x&b=y",
-            },
-            [{
-              headerKey: "c",
-              headerValue: "z",
-            },],
-            "KeyX", 500);
-        })
-        .onPageEnd(() => {
-          // 清除后续不再使用的预获取缓存。
-          webview.WebviewController.clearPrefetchedResource(["KeyX",]);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// Index.ets
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Web, Column, Component, Entry } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Web({ src: "https://www.example.com/", controller: this.controller })
-        .onAppear(() => {
-          // 预获取时，需要將"https://www.example1.com/post?e=f&g=h"替换成真实要访问的网站地址。
-          webview.WebviewController.prefetchResource(
-            {
-              url: "https://www.example1.com/post?e=f&g=h",
-              method: "POST",
-              formData: "a=x&b=y",
-            },
-            [{
-              headerKey: "c",
-              headerValue: "z",
-            },],
-            "KeyX", 500);
-        })
-        .onPageEnd(() => {
-          // 清除后续不再使用的预获取缓存。
-          webview.WebviewController.clearPrefetchedResource(["KeyX",]);
-        })
-    }
-  }
-}
-```
 
 ## clearServiceWorkerWebSchemeHandler
 
@@ -1295,61 +371,9 @@ static clearServiceWorkerWebSchemeHandler(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearServiceWorkerWebSchemeHandler')
-        .onClick(() => {
-          webview.WebviewController.clearServiceWorkerWebSchemeHandler();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearServiceWorkerWebSchemeHandler')
-        .onClick(() => {
-          webview.WebviewController.clearServiceWorkerWebSchemeHandler();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## clearSslCache
 
@@ -1361,8 +385,6 @@ clearSslCache(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1372,66 +394,6 @@ clearSslCache(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSslCache')
-        .onClick(() => {
-          try {
-            this.controller.clearSslCache();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearSslCache')
-        .onClick(() => {
-          try {
-            this.controller.clearSslCache();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## clearWebSchemeHandler
 
@@ -1443,8 +405,6 @@ clearWebSchemeHandler(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1454,66 +414,6 @@ clearWebSchemeHandler(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearWebSchemeHandler')
-        .onClick(() => {
-          try {
-            this.controller.clearWebSchemeHandler();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearWebSchemeHandler')
-        .onClick(() => {
-          try {
-            this.controller.clearWebSchemeHandler();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## closeAllMediaPresentations
 
@@ -1525,8 +425,6 @@ closeAllMediaPresentations(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1536,66 +434,6 @@ closeAllMediaPresentations(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('closeAllMediaPresentations')
-        .onClick(() => {
-          try {
-            this.controller.closeAllMediaPresentations();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('closeAllMediaPresentations')
-        .onClick(() => {
-          try {
-            this.controller.closeAllMediaPresentations();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## closeCamera
 
@@ -1607,8 +445,6 @@ closeCamera(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1618,10 +454,6 @@ closeCamera(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-完整示例代码参考[startCamera](#startcamera)。
 
 ## constructor
 
@@ -1642,8 +474,6 @@ constructor(webTag?: string)
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -1654,147 +484,6 @@ constructor(webTag?: string)
 | --- | --- | --- |
 | webTag | string | 否 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class WebObj {
-  constructor() {
-  }
-
-  webTest(): string {
-    console.info('Web test');
-    return "Web test";
-  }
-
-  webString(): void {
-    console.info('Web test toString');
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State webTestObj: WebObj = new WebObj();
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objTestName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: '', controller: this.controller })
-        .javaScriptAccess(true)
-        .onControllerAttached(() => {
-          this.controller.loadUrl($rawfile("index.html"));
-          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Web, Button, Column, State, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class WebObj {
-  constructor() {
-  }
-
-  webTest(): string {
-    console.info('Web test');
-    return "Web test";
-  }
-
-  webString(): void {
-    console.info('Web test toString');
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined)
-  @State webTestObj: WebObj = new WebObj();
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objTestName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: '', controller: this.controller })
-        .javaScriptAccess(true)
-        .onControllerAttached(() => {
-          this.controller.loadUrl($rawfile("index.html"));
-          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
-        })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-    </head>
-    <body>
-      <button type="button" onclick="htmlTest()">Click Me!</button>
-      <p id="demo"></p>
-      <p id="webDemo"></p>
-      <script type="text/javascript">
-        function htmlTest() {
-          // This function call expects to return "Web test"
-          let webStr = objTestName.webTest();
-          document.getElementById("webDemo").innerHTML=webStr;
-          console.info('objTestName.webTest result:'+ webStr)
-        }
-      </script>
-    </body>
-</html>
-```
-
 ## createPdf
 
 ```TypeScript
@@ -1804,8 +493,6 @@ createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): vo
 异步callback方式获取指定网页的数据流。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -1825,235 +512,6 @@ createPdf(configuration: PdfConfiguration, callback: AsyncCallback<PdfData>): vo
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController();
-  pdfConfig: webview.PdfConfiguration = {
-    width: 8.27,
-    height: 11.69,
-    marginTop: 0,
-    marginBottom: 0,
-    marginRight: 0,
-    marginLeft: 0,
-    shouldPrintBackground: true
-  }
-
-  build() {
-    Column() {
-      Button('SavePDF')
-        .onClick(() => {
-          this.controller.createPdf(
-            this.pdfConfig,
-            (error, result: webview.PdfData) => {
-              try {
-                // 获取组件上下文
-                let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-                // 获取沙箱路径，设置pdf文件名
-                let filePath = context.filesDir + "/test.pdf";
-                let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-                if (error) {
-                  console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                  return;
-                }
-                fileIo.write(file.fd, result.pdfArrayBuffer().buffer).then((writeLen: number) => {
-                  console.info("createPDF write data to file succeeded and size is:" + writeLen);
-                }).catch((err: BusinessError) => {
-                  console.error("createPDF write data to file failed with error message: " + err.message +
-                    ", error code: " + err.code);
-                }).finally(() => {
-                  fileIo.closeSync(file);
-                });
-              } catch (resError) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            });
-        })
-      Web({ src: "www.example.com", controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { fileIo } from '@kit.CoreFileKit';
-import { Entry, Column, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError, AsyncCallback } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  pdfConfig: webview.PdfConfiguration = {
-    width: 8.27,
-    height: 11.69,
-    marginTop: 0,
-    marginBottom: 0,
-    marginRight: 0,
-    marginLeft: 0,
-    shouldPrintBackground: true
-  } as webview.PdfConfiguration
-
-  build() {
-    Column() {
-      Button('SavePDF')
-        .onClick(() => {
-          this.controller.createPdf(
-            this.pdfConfig,
-            (error, result: webview.PdfData | undefined) => {
-              try {
-                // 获取组件上下文
-                let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-                // 获取沙箱路径，设置pdf文件名
-                let filePath = context.filesDir + "/test.pdf";
-                let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-                if (error) {
-                  console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                  return;
-                }
-                let arrayBuffer: Uint8Array = result?.pdfArrayBuffer() as Uint8Array;
-                fileIo.write(file.fd, arrayBuffer.buffer).then((writeLen: long) => {
-                  console.info("createPDF write data to file succeeded and size is:" + writeLen);
-                }).catch((err: Error) => {
-                  console.error("createPDF write data to file failed with error message: " + err.message +
-                    ", error code: " + err.code);
-                }).finally(() => {
-                  fileIo.closeSync(file);
-                });
-              } catch (resError) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            });
-        })
-      Web({ src: "www.example.com", controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController();
-  pdfConfig: webview.PdfConfiguration = {
-    width: 8.27,
-    height: 11.69,
-    marginTop: 0,
-    marginBottom: 0,
-    marginRight: 0,
-    marginLeft: 0,
-    shouldPrintBackground: true
-  }
-
-  build() {
-    Column() {
-      Button('SavePDF')
-        .onClick(() => {
-          this.controller.createPdf(this.pdfConfig)
-            .then((result: webview.PdfData) => {
-              try {
-                // 获取组件上下文
-                let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-                // 获取沙箱路径，设置pdf文件名
-                let filePath = context.filesDir + "/test.pdf";
-                let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-                fileIo.write(file.fd, result.pdfArrayBuffer().buffer).then((writeLen: number) => {
-                  console.info("createPDF write data to file succeeded and size is:" + writeLen);
-                }).catch((err: BusinessError) => {
-                  console.error("createPDF write data to file failed with error message: " + err.message +
-                    ", error code: " + err.code);
-                }).finally(() => {
-                  fileIo.closeSync(file);
-                });
-              } catch (resError) {
-                console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-              }
-            })
-        })
-      Web({ src: "www.example.com", controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { fileIo } from '@kit.CoreFileKit';
-import { Entry, Column, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError, AsyncCallback } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  pdfConfig: webview.PdfConfiguration = {
-    width: 8.27,
-    height: 11.69,
-    marginTop: 0,
-    marginBottom: 0,
-    marginRight: 0,
-    marginLeft: 0,
-    shouldPrintBackground: true
-  } as webview.PdfConfiguration
-
-  build() {
-    Column() {
-      Button('SavePDF')
-        .onClick(() => {
-          this.controller.createPdf(this.pdfConfig)
-            .then((result: webview.PdfData) => {
-              try {
-                // 获取组件上下文
-                let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-                // 获取沙箱路径，设置pdf文件名
-                let filePath = context.filesDir + "/test.pdf";
-                let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-                fileIo.write(file.fd, result.pdfArrayBuffer().buffer).then((writeLen: long) => {
-                  console.info("createPDF write data to file succeeded and size is:" + writeLen);
-                }).catch((err: Error) => {
-                  console.error("createPDF write data to file failed with error message: " + err.message +
-                    ", error code: " + err.code);
-                }).finally(() => {
-                  fileIo.closeSync(file);
-                });
-              } catch (resError) {
-                console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-              }
-            })
-        })
-      Web({ src: "www.example.com", controller: this.controller })
-    }
-  }
-}
-```
-
 ## createPdf
 
 ```TypeScript
@@ -2063,8 +521,6 @@ createPdf(configuration: PdfConfiguration): Promise<PdfData>
 以Promise方式异步获取指定网页的数据流。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -2089,10 +545,6 @@ createPdf(configuration: PdfConfiguration): Promise<PdfData>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-参见 [createPdf](#createpdf)
-
 ## createWebMessagePorts
 
 ```TypeScript
@@ -2102,8 +554,6 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 创建Web消息端口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2128,10 +578,6 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[onMessageEventExt](./arkts-apis-webview-WebMessagePort.md#onmessageeventext)。
-
 ## createWebPrintDocumentAdapter
 
 ```TypeScript
@@ -2141,8 +587,6 @@ createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter
 创建web相关打印功能。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -2165,98 +609,15 @@ createWebPrintDocumentAdapter(jobName: string): print.PrintDocumentAdapter
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError, print } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('createWebPrintDocumentAdapter')
-        .onClick(() => {
-          try {
-            let webPrintDocadapter = this.controller.createWebPrintDocumentAdapter('example.pdf');
-            print.print('example_jobid', webPrintDocadapter, null, this.getUIContext().getHostContext());
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import print from '@ohos.print';
-import { Entry, Column, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError, AsyncCallback } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-const myPrintAttributes: print.PrintAttributes = {
-  copyNumber: 1 as int,
-  pageRange: {
-    startPage: 1 as int,
-    endPage: 1 as int,
-    pages: [1] as Array<int>
-  },
-  pageSize: {
-    id: 'PAGE_ISO_A4',
-    name: 'A4',
-    width: 210 as int,
-    height: 297 as int
-  },
-  directionMode: print.PrintDirectionMode.DIRECTION_MODE_PORTRAIT,
-  colorMode: print.PrintColorMode.COLOR_MODE_COLOR,
-  duplexMode: print.PrintDuplexMode.DUPLEX_MODE_NONE,
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('createWebPrintDocumentAdapter')
-        .onClick(() => {
-          try {
-            let webPrintDocadapter = this.controller.createWebPrintDocumentAdapter('example.pdf');
-            print.print('example_jobid', webPrintDocadapter, myPrintAttributes, this.getUIContext().getHostContext() as common.UIAbilityContext);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## customizeSchemes
 
 ```TypeScript
 static customizeSchemes(schemes: Array<WebCustomScheme>): void
 ```
 
-对Web内核赋予自定义协议URL的跨域请求与fetch请求的权限。当Web在跨域fetch自定义协议URL时，该fetch请求可被 onInterceptRequest事件接口所拦截，从而开发者可以进一步处理该请求。建议在任何Web组件初始化之前调用该接口。
+对Web内核赋予自定义协议URL的跨域请求与fetch请求的权限。当Web在跨域fetch自定义协议URL时，该fetch请求可被 [onInterceptRequest](../arkts-components/arkts-arkweb-web-attribute.md#oninterceptrequest)事件接口所拦截，从而开发者可以进一步处理该请求。建议在任何Web组件初始化之前调用该接口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2275,171 +636,15 @@ static customizeSchemes(schemes: Array<WebCustomScheme>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  responseWeb: WebResourceResponse = new WebResourceResponse();
-  scheme1: webview.WebCustomScheme = { schemeName: "name1", isSupportCORS: true, isSupportFetch: true };
-  scheme2: webview.WebCustomScheme = { schemeName: "name2", isSupportCORS: true, isSupportFetch: true };
-  scheme3: webview.WebCustomScheme = { schemeName: "name3", isSupportCORS: true, isSupportFetch: true };
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.customizeSchemes([this.scheme1, this.scheme2, this.scheme3]);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onInterceptRequest((event) => {
-          if (event) {
-            console.info('url:' + event.request.getRequestUrl());
-          }
-          return this.responseWeb;
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WebResourceResponse, OnInterceptRequestEvent } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  responseWeb: WebResourceResponse = new WebResourceResponse();
-  scheme1: webview.WebCustomScheme =
-    { schemeName: "name1", isSupportCORS: true, isSupportFetch: true } as webview.WebCustomScheme;
-  scheme2: webview.WebCustomScheme =
-    { schemeName: "name2", isSupportCORS: true, isSupportFetch: true } as webview.WebCustomScheme;
-  scheme3: webview.WebCustomScheme =
-    { schemeName: "name3", isSupportCORS: true, isSupportFetch: true } as webview.WebCustomScheme;
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.customizeSchemes([this.scheme1, this.scheme2, this.scheme3]);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onInterceptRequest((event: OnInterceptRequestEvent): WebResourceResponse => {
-          if (event) {
-            console.info('url:' + event.request.getRequestUrl());
-          }
-          return this.responseWeb;
-        })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  responseWeb: WebResourceResponse = new WebResourceResponse();
-  scheme1: webview.WebCustomScheme = { schemeName: "name1", isSupportCORS: true, isSupportFetch: true };
-  scheme2: webview.WebCustomScheme = { schemeName: "name2", isSupportCORS: true, isSupportFetch: true };
-  scheme3: webview.WebCustomScheme = { schemeName: "name3", isSupportCORS: true, isSupportFetch: true };
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.customizeSchemes([this.scheme1, this.scheme2, this.scheme3], true);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WebResourceResponse, OnInterceptRequestEvent } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  responseWeb: WebResourceResponse = new WebResourceResponse();
-  scheme1: webview.WebCustomScheme =
-    { schemeName: "name1", isSupportCORS: true, isSupportFetch: true } as webview.WebCustomScheme;
-  scheme2: webview.WebCustomScheme =
-    { schemeName: "name2", isSupportCORS: true, isSupportFetch: true } as webview.WebCustomScheme;
-  scheme3: webview.WebCustomScheme =
-    { schemeName: "name3", isSupportCORS: true, isSupportFetch: true } as webview.WebCustomScheme;
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.customizeSchemes([this.scheme1, this.scheme2, this.scheme3], true);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## customizeSchemes
 
 ```TypeScript
 static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: boolean): void
 ```
 
-对Web内核赋予自定义协议URL的跨域请求与fetch请求的权限。当Web在跨域fetch自定义协议URL时，该fetch请求可被 onInterceptRequest事件接口所拦截，从而开发者可以进一步处理该请求。建议在任何Web组件初始化之前调用该接口。
+对Web内核赋予自定义协议URL的跨域请求与fetch请求的权限。当Web在跨域fetch自定义协议URL时，该fetch请求可被 [onInterceptRequest](../arkts-components/arkts-arkweb-web-attribute.md#oninterceptrequest)事件接口所拦截，从而开发者可以进一步处理该请求。建议在任何Web组件初始化之前调用该接口。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
@@ -2459,21 +664,15 @@ static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: bool
 | [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [customizeSchemes](#customizeschemes)
-
 ## deleteJavaScriptRegister
 
 ```TypeScript
 deleteJavaScriptRegister(name: string): void
 ```
 
-删除通过[registerJavaScriptProxy](#registerjavascriptproxy)或者 javaScriptProxy注册到window上的指定name的应用侧JavaScript对象。删除操作在页面下次（重新）加载后生效。
+删除通过[registerJavaScriptProxy](#registerjavascriptproxy)或者 [javaScriptProxy](../arkts-components/arkts-arkweb-web-attribute.md#javascriptproxy)注册到window上的指定name的应用侧JavaScript对象。删除操作在页面下次（重新）加载后生效。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2493,153 +692,6 @@ deleteJavaScriptRegister(name: string): void
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100008](../errorcode-webview.md#17100008-删除不存在的javascriptproxy) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestObj {
-  constructor() {
-  }
-
-  test(): string {
-    return "ArkUI Web Component";
-  }
-
-  toString(): void {
-    console.info('Web Component toString');
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State testObjtest: TestObj = new TestObj();
-  @State name: string = 'objName';
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Register JavaScript To Window')
-        .onClick(() => {
-          try {
-            this.controller.registerJavaScriptProxy(this.testObjtest, this.name, ["test", "toString"]);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister(this.name);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry, $rawfile, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestObj {
-  constructor() {
-  }
-
-  test(): string {
-    return "ArkUI Web Component";
-  }
-
-  toString(): string {
-    console.info('Web Component toString');
-    return 'TestObj toString';
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State testObjtest: TestObj = new TestObj();
-  @State name: string = 'objName';
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Register JavaScript To Window')
-        .onClick(() => {
-          try {
-            this.controller.registerJavaScriptProxy(this.testObjtest, this.name, ["test", "toString"]);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister(this.name);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-    </head>
-    <body>
-      <button type="button" onclick="htmlTest()">Click Me!</button>
-      <p id="demo"></p>
-      <script type="text/javascript">
-        function htmlTest() {
-          let str=objName.test();
-          document.getElementById("demo").innerHTML=str;
-          console.info('objName.test result:'+ str)
-        }
-      </script>
-    </body>
-</html>
-```
-
 ## enableAdsBlock
 
 ```TypeScript
@@ -2652,8 +704,6 @@ enableAdsBlock(enable: boolean): void
 > - 广告过滤功能需要release包，使用debug包不生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2672,68 +722,6 @@ enableAdsBlock(enable: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('enableAdsBlock')
-        .onClick(() => {
-          try {
-            this.controller.enableAdsBlock(true);
-            console.info("enableAdsBlock: true")
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('enableAdsBlock')
-        .onClick(() => {
-          try {
-            this.controller.enableAdsBlock(true);
-            console.info("enableAdsBlock: true")
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## enableAdvancedSecurityMode
 
@@ -2750,8 +738,6 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -2761,74 +747,6 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | securityParams | [SecurityParams](arkts-arkweb-webview-securityparams-i.md) | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear() {
-    webview.WebviewController.enableAdvancedSecurityMode({
-      disableJITCompilation: true,
-      disableWebAssembly: true,
-      disableWebGL: true,
-      disablePDFViewer: true,
-      disableMathML: true,
-      disableServiceWorker: true,
-      disableNonProxyUDP: true
-    });
-    webview.WebviewController.initializeWebEngine();
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Column, Component, Entry, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  aboutToAppear() {
-    webview.WebviewController.enableAdvancedSecurityMode({
-      disableJITCompilation: true,
-      disableWebAssembly: true,
-      disableWebGL: true,
-      disablePDFViewer: true,
-      disableMathML: true,
-      disableServiceWorker: true,
-      disableNonProxyUDP: true
-    });
-    webview.WebviewController.initializeWebEngine();
-  }
-
-  build() {
-    Column() {
-      Web({ src: "https://www.example.com", controller: this.controller })
-    }
-  }
-}
-```
 
 ## enableBackForwardCache
 
@@ -2840,8 +758,6 @@ static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -2849,55 +765,6 @@ static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | features | [BackForwardCacheSupportedFeatures](arkts-arkweb-webview-backforwardcachesupportedfeatures-c.md) | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { window } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-        let features = new webview.BackForwardCacheSupportedFeatures();
-        features.nativeEmbed = true;
-        features.mediaTakeOver = true;
-        // 如果一个页面同时使用了同层渲染和视频托管的能力，需要 nativeEmbed 和
-        // mediaTakeOver 同时设置为 true，该页面才可以进入前进后退缓存中。
-        webview.WebviewController.enableBackForwardCache(features);
-        webview.WebviewController.initializeWebEngine();
-        AppStorage.setOrCreate("abilityWant", want);
-    }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AppStorage } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    let features = new webview.BackForwardCacheSupportedFeatures();
-    features.nativeEmbed = true;
-    features.mediaTakeOver = true;
-    // 如果一个页面同时使用了同层渲染和视频托管的能力，需要 nativeEmbed 和
-    // mediaTakeOver 同时设置为 true，该页面才可以进入前进后退缓存中。
-    webview.WebviewController.enableBackForwardCache(features);
-    webview.WebviewController.initializeWebEngine();
-    AppStorage.setOrCreate("abilityWant", want);
-  }
-}
-```
 
 ## enableIntelligentTrackingPrevention
 
@@ -2908,8 +775,6 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 启用智能防跟踪功能。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2929,68 +794,6 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('enableIntelligentTrackingPrevention')
-        .onClick(() => {
-          try {
-            this.controller.enableIntelligentTrackingPrevention(true);
-            console.info("enableIntelligentTrackingPrevention: true");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('enableIntelligentTrackingPrevention')
-        .onClick(() => {
-          try {
-            this.controller.enableIntelligentTrackingPrevention(true);
-            console.info("enableIntelligentTrackingPrevention: true");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## enablePrivateNetworkAccess
 
 ```TypeScript
@@ -3004,8 +807,6 @@ static enablePrivateNetworkAccess(enable: boolean): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -3013,54 +814,6 @@ static enablePrivateNetworkAccess(enable: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | enable | boolean | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          // 设置为false时ArkWeb将不再检查私有网络请求是否合法
-          webview.WebviewController.enablePrivateNetworkAccess(false);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          // 设置为false时ArkWeb将不再检查私有网络请求是否合法
-          webview.WebviewController.enablePrivateNetworkAccess(false);
-        })
-    }
-  }
-}
-```
 
 ## enableSafeBrowsing
 
@@ -3074,8 +827,6 @@ enableSafeBrowsing(enable: boolean): void
 > 该接口不生效，调用不会产生任何实际效果。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3093,68 +844,6 @@ enableSafeBrowsing(enable: boolean): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('enableSafeBrowsing')
-        .onClick(() => {
-          try {
-            this.controller.enableSafeBrowsing(true);
-            console.info("enableSafeBrowsing: true");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('enableSafeBrowsing')
-        .onClick(() => {
-          try {
-            this.controller.enableSafeBrowsing(true);
-            console.info("enableSafeBrowsing: true");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## enableWholeWebPageDrawing
 
 ```TypeScript
@@ -3165,71 +854,9 @@ static enableWholeWebPageDrawing(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.enableWholeWebPageDrawing();
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Column, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.enableWholeWebPageDrawing();
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## executeAIPageCommand
 
@@ -3247,8 +874,6 @@ executeAIPageCommand(command: string): Promise<string>
 > 26.0.0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3273,80 +898,6 @@ executeAIPageCommand(command: string): Promise<string>
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100024](../errorcode-webview.md#17100024-aipagecommand格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface AIPageCommand {
-  method: string;
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('executeAIPageCommand')
-        .onClick(async () => {
-          try {
-            let commandObj: AIPageCommand = { method: 'getFullDom' };
-            let command: string = JSON.stringify(commandObj);
-            let result: string = await this.controller.executeAIPageCommand(command);
-            console.info(`executeAIPageCommand result: ${result}`);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'https://www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface AIPageCommand {
-  method: string;
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('executeAIPageCommand')
-        .onClick(async () => {
-          try {
-            let commandObj: AIPageCommand = { method: 'getFullDom' };
-            let command: string = JSON.stringify(commandObj);
-            let result: string = await this.controller.executeAIPageCommand(command);
-            console.info(`executeAIPageCommand result: ${result}`);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'https://www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## forward
 
 ```TypeScript
@@ -3356,8 +907,6 @@ forward(): void
 按照历史栈，前进一个页面。一般结合[accessForward](#accessforward)一起使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3369,65 +918,6 @@ forward(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-Ark-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('forward')
-        .onClick(() => {
-          try {
-            this.controller.forward();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('forward')
-        .onClick(() => {
-          try {
-            this.controller.forward();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getActiveWebEngineVersion
 
 ```TypeScript
@@ -3438,8 +928,6 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -3447,10 +935,6 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 | 类型 |
 | --- |
 | [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) |
-
-**示例**
-
-请参考[setActiveWebEngineVersion](#setactivewebengineversion)。
 
 ## getAttachState
 
@@ -3461,8 +945,6 @@ getAttachState(): ControllerAttachState
 查询当前WebViewController是否绑定一个Web组件。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -3486,8 +968,6 @@ getBackForwardEntries(): BackForwardList
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -3503,65 +983,6 @@ getBackForwardEntries(): BackForwardList
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getBackForwardEntries')
-        .onClick(() => {
-          try {
-            let list = this.controller.getBackForwardEntries()
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getBackForwardEntries')
-        .onClick(() => {
-          try {
-            let list = this.controller.getBackForwardEntries()
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getBlanklessInfoWithKey
 
@@ -3583,8 +1004,6 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -3605,84 +1024,6 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-       .javaScriptAccess(true)
-       .onLoadIntercept((event) => {
-            // 当相似度超过50%，加载耗时小于1000ms时启用插帧，否则不启用。
-            try {
-              let info = this.controller.getBlanklessInfoWithKey('https://www.example.com/page1');
-              if (info.errCode == webview.WebBlanklessErrorCode.SUCCESS) {
-                if (info.similarity >= 0.5 && info.loadingTime < 1000) {
-                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', true);
-                } else {
-                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', false);
-                }
-              } else {
-                console.info('getBlankless info err');
-              }
-            } catch (error) {
-              console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-            }
-            return false;
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Entry, Column, Component, Web } from '@ohos.arkui.component'
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-       .javaScriptAccess(true)
-       .onLoadIntercept((event) => {
-          // 当相似度超过50%，加载耗时小于1000ms时启用插帧，否则不启用。
-            try {
-              let info = this.controller.getBlanklessInfoWithKey('https://www.example.com/page1');
-              if (info.errCode == webview.WebBlanklessErrorCode.SUCCESS) {
-                if (info.similarity >= 0.5 && info.loadingTime < 1000) {
-                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', true);
-                } else {
-                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', false);
-                }
-              } else {
-                console.info('getBlankless info err');
-              }
-            } catch (error) {
-              console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-            }
-            return false;
-        })
-    }
-  }
-}
-```
-
 ## getCertificate
 
 ```TypeScript
@@ -3692,8 +1033,6 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过Promise异步返回当前网站的X509格式证书（X509Cert证书类型定义见 [X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)定义），便于开发者展示网站证书信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3711,577 +1050,6 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cert } from '@kit.DeviceCertificateKit';
-
-function Uint8ArrayToString(dataArray: Uint8Array) {
-  let dataString = '';
-  for (let i = 0; i < dataArray.length; i++) {
-    dataString += String.fromCharCode(dataArray[i]);
-  }
-  return dataString;
-}
-
-function ParseX509CertInfo(x509CertArray: Array<cert.X509Cert>) {
-  let res: string = 'getCertificate success: len = ' + x509CertArray.length;
-  for (let i = 0; i < x509CertArray.length; i++) {
-    res += ', index = ' + i + ', issuer name = '
-      + Uint8ArrayToString(x509CertArray[i].getIssuerName().data) + ', subject name = '
-      + Uint8ArrayToString(x509CertArray[i].getSubjectName().data) + ', valid start = '
-      + x509CertArray[i].getNotBeforeTime()
-      + ', valid end = ' + x509CertArray[i].getNotAfterTime();
-  }
-  return res;
-}
-
-@Entry
-@Component
-struct Index {
-  // outputStr在UI界面显示调试信息
-  @State outputStr: string = '';
-  webviewCtl: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Row() {
-      Column() {
-        List({ space: 20, initialIndex: 0 }) {
-          ListItem() {
-            Button() {
-              Text('load bad ssl')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              // 加载一个过期的证书网站，查看获取到的证书信息
-              this.webviewCtl.loadUrl('https://expired.badssl.com');
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('load example')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              // 加载一个https网站，查看网站的证书信息
-              this.webviewCtl.loadUrl('https://www.example.com');
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('getCertificate Promise')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              try {
-                this.webviewCtl.getCertificate().then((x509CertArray: Array<cert.X509Cert>) => {
-                  this.outputStr = ParseX509CertInfo(x509CertArray);
-                })
-              } catch (error) {
-                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
-              }
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('getCertificate AsyncCallback')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              try {
-                this.webviewCtl.getCertificate((error: BusinessError, x509CertArray: Array<cert.X509Cert>) => {
-                  if (error) {
-                    this.outputStr = 'getCertificate failed: ' + error.code + ", errMsg: " + error.message;
-                  } else {
-                    this.outputStr = ParseX509CertInfo(x509CertArray);
-                  }
-                })
-              } catch (error) {
-                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
-              }
-            })
-            .height(50)
-          }
-        }
-        .listDirection(Axis.Horizontal)
-        .height('10%')
-
-        Text(this.outputStr)
-          .width('100%')
-          .fontSize(10)
-
-        Web({ src: 'https://www.example.com', controller: this.webviewCtl })
-          .fileAccess(true)
-          .javaScriptAccess(true)
-          .domStorageAccess(true)
-          .onlineImageAccess(true)
-          .onPageEnd((e) => {
-            if (e) {
-              this.outputStr = 'onPageEnd : url = ' + e.url;
-            }
-          })
-          .onSslErrorEventReceive((e) => {
-            // 忽略ssl证书错误，便于测试一些证书过期的网站，如：https://expired.badssl.com
-            e.handler.handleConfirm();
-          })
-          .width('100%')
-          .height('70%')
-      }
-      .height('100%')
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Entry, Text, Column, Component, Button, Web, State, Row, List, ListItem, FontWeight, ButtonType, Axis } from '@kit.ArkUI'
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cert } from '@kit.DeviceCertificateKit';
-
-function Uint8ArrayToString(dataArray: Uint8Array) {
-  let dataString = '';
-  for (let i = 0; i < dataArray.length; i++) {
-    dataString += String.fromCharCode(dataArray[i]);
-  }
-  return dataString;
-}
-
-function ParseX509CertInfo(x509CertArray: Array<cert.X509Cert>|undefined) {
-  if (x509CertArray !== undefined) {
-    let res: string = 'getCertificate success: len = ' + x509CertArray.length;
-    for (let i = 0; i < x509CertArray.length; i++) {
-      res += ', index = ' + i + ', issuer name = '
-        + Uint8ArrayToString(x509CertArray[i].getIssuerName().data) + ', subject name = '
-        + Uint8ArrayToString(x509CertArray[i].getSubjectName().data) + ', valid start = '
-        + x509CertArray[i].getNotBeforeTime()
-        + ', valid end = ' + x509CertArray[i].getNotAfterTime();
-    }
-    return res
-  } else {
-    console.error("ParseX509CertInfo x509CertArray is undefined");
-    return "";
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  // outputStr在UI界面显示调试信息。
-  @State outputStr: string = '';
-  webviewCtl: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Row() {
-      Column() {
-        List({ space: 20, initialIndex: 0 }) {
-          ListItem() {
-            Button() {
-              Text('load bad ssl')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              // 加载一个过期的证书网站，查看获取到的证书信息。
-              this.webviewCtl.loadUrl('https://expired.badssl.com');
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('load example')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              // 加载一个https网站，查看网站的证书信息。
-              this.webviewCtl.loadUrl('https://www.example.com');
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('getCertificate Promise')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              try {
-                this.webviewCtl.getCertificate().then((x509CertArray: Array<cert.X509Cert>) => {
-                  this.outputStr = ParseX509CertInfo(x509CertArray);
-                })
-              } catch (error) {
-                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
-              }
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('getCertificate AsyncCallback')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              try {
-                this.webviewCtl.getCertificate((error: BusinessError|null, x509CertArray: Array<cert.X509Cert>|undefined):void=> {
-                  if (error) {
-                    this.outputStr = 'getCertificate failed: ' + error.code + ", errMsg: " + error.message;
-                  } else {
-                    this.outputStr = ParseX509CertInfo(x509CertArray);
-                  }
-                })
-              } catch (error) {
-                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
-              }
-            })
-            .height(50)
-          }
-        }
-        .listDirection(Axis.Horizontal)
-        .height('10%')
-
-        Text(this.outputStr)
-          .width('100%')
-          .fontSize(10)
-
-        Web({ src: 'https://www.example.com', controller: this.webviewCtl })
-          .fileAccess(true)
-          .javaScriptAccess(true)
-          .domStorageAccess(true)
-          .onlineImageAccess(true)
-          .onPageEnd((e) => {
-            if (e) {
-              this.outputStr = 'onPageEnd : url = ' + e.url;
-            }
-          })
-          .onSslErrorEventReceive((e) => {
-            // 忽略ssl证书错误，便于测试一些证书过期的网站，如：https://expired.badssl.com。
-            e.handler.handleConfirm();
-          })
-          .width('100%')
-          .height('70%')
-      }
-      .height('100%')
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cert } from '@kit.DeviceCertificateKit';
-
-function Uint8ArrayToString(dataArray: Uint8Array) {
-  let dataString = '';
-  for (let i = 0; i < dataArray.length; i++) {
-    dataString += String.fromCharCode(dataArray[i]);
-  }
-  return dataString;
-}
-
-function ParseX509CertInfo(x509CertArray: Array<cert.X509Cert>) {
-  let res: string = 'getCertificate success: len = ' + x509CertArray.length;
-  for (let i = 0; i < x509CertArray.length; i++) {
-    res += ', index = ' + i + ', issuer name = '
-      + Uint8ArrayToString(x509CertArray[i].getIssuerName().data) + ', subject name = '
-      + Uint8ArrayToString(x509CertArray[i].getSubjectName().data) + ', valid start = '
-      + x509CertArray[i].getNotBeforeTime()
-      + ', valid end = ' + x509CertArray[i].getNotAfterTime();
-  }
-  return res;
-}
-
-@Entry
-@Component
-struct Index {
-  // outputStr在UI界面显示调试信息
-  @State outputStr: string = '';
-  webviewCtl: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Row() {
-      Column() {
-        List({ space: 20, initialIndex: 0 }) {
-          ListItem() {
-            Button() {
-              Text('load bad ssl')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              // 加载一个过期的证书网站，查看获取到的证书信息
-              this.webviewCtl.loadUrl('https://expired.badssl.com');
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('load example')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              // 加载一个https网站，查看网站的证书信息
-              this.webviewCtl.loadUrl('https://www.example.com');
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('getCertificate Promise')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              try {
-                this.webviewCtl.getCertificate().then((x509CertArray: Array<cert.X509Cert>) => {
-                  this.outputStr = ParseX509CertInfo(x509CertArray);
-                })
-              } catch (error) {
-                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
-              }
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('getCertificate AsyncCallback')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              try {
-                this.webviewCtl.getCertificate((error: BusinessError, x509CertArray: Array<cert.X509Cert>) => {
-                  if (error) {
-                    this.outputStr = 'getCertificate failed: ' + error.code + ", errMsg: " + error.message;
-                  } else {
-                    this.outputStr = ParseX509CertInfo(x509CertArray);
-                  }
-                })
-              } catch (error) {
-                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
-              }
-            })
-            .height(50)
-          }
-        }
-        .listDirection(Axis.Horizontal)
-        .height('10%')
-
-        Text(this.outputStr)
-          .width('100%')
-          .fontSize(10)
-
-        Web({ src: 'https://www.example.com', controller: this.webviewCtl })
-          .fileAccess(true)
-          .javaScriptAccess(true)
-          .domStorageAccess(true)
-          .onlineImageAccess(true)
-          .onPageEnd((e) => {
-            if (e) {
-              this.outputStr = 'onPageEnd : url = ' + e.url;
-            }
-          })
-          .onSslErrorEventReceive((e) => {
-            // 忽略ssl证书错误，便于测试一些证书过期的网站，如：https://expired.badssl.com
-            e.handler.handleConfirm();
-          })
-          .width('100%')
-          .height('70%')
-      }
-      .height('100%')
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Text, Column, Component, Button, Web, State, Row, List, ListItem, FontWeight, ButtonType, Axis } from '@kit.ArkUI'
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cert } from '@kit.DeviceCertificateKit';
-
-function Uint8ArrayToString(dataArray: Uint8Array) {
-  let dataString = '';
-  for (let i = 0; i < dataArray.length; i++) {
-    dataString += String.fromCharCode(dataArray[i]);
-  }
-  return dataString;
-}
-
-function ParseX509CertInfo(x509CertArray: Array<cert.X509Cert>|undefined) {
-  if (x509CertArray !== undefined) {
-    let res: string = 'getCertificate success: len = ' + x509CertArray.length;
-    for (let i = 0; i < x509CertArray.length; i++) {
-      res += ', index = ' + i + ', issuer name = '
-        + Uint8ArrayToString(x509CertArray[i].getIssuerName().data) + ', subject name = '
-        + Uint8ArrayToString(x509CertArray[i].getSubjectName().data) + ', valid start = '
-        + x509CertArray[i].getNotBeforeTime()
-        + ', valid end = ' + x509CertArray[i].getNotAfterTime();
-    }
-    return res
-  } else {
-    console.error("ParseX509CertInfo x509CertArray is undefined");
-    return "";
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  // outputStr在UI界面显示调试信息
-  @State outputStr: string = '';
-  webviewCtl: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Row() {
-      Column() {
-        List({ space: 20, initialIndex: 0 }) {
-          ListItem() {
-            Button() {
-              Text('load bad ssl')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              // 加载一个过期的证书网站，查看获取到的证书信息
-              this.webviewCtl.loadUrl('https://expired.badssl.com');
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('load example')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              // 加载一个https网站，查看网站的证书信息
-              this.webviewCtl.loadUrl('https://www.example.com');
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('getCertificate Promise')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              try {
-                this.webviewCtl.getCertificate().then((x509CertArray: Array<cert.X509Cert>) => {
-                  this.outputStr = ParseX509CertInfo(x509CertArray);
-                })
-              } catch (error) {
-                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
-              }
-            })
-            .height(50)
-          }
-
-          ListItem() {
-            Button() {
-              Text('getCertificate AsyncCallback')
-                .fontSize(10)
-                .fontWeight(FontWeight.Bold)
-            }
-            .type(ButtonType.Capsule)
-            .onClick(() => {
-              try {
-                this.webviewCtl.getCertificate((error: BusinessError|null, x509CertArray: Array<cert.X509Cert>|undefined):void=> {
-                  if (error) {
-                    this.outputStr = 'getCertificate failed: ' + error.code + ", errMsg: " + error.message;
-                  } else {
-                    this.outputStr = ParseX509CertInfo(x509CertArray);
-                  }
-                })
-              } catch (error) {
-                this.outputStr = 'getCertificate failed: ' + (error as BusinessError).code + ", errMsg: " + (error as BusinessError).message;
-              }
-            })
-            .height(50)
-          }
-        }
-        .listDirection(Axis.Horizontal)
-        .height('10%')
-
-        Text(this.outputStr)
-          .width('100%')
-          .fontSize(10)
-
-        Web({ src: 'https://www.example.com', controller: this.webviewCtl })
-          .fileAccess(true)
-          .javaScriptAccess(true)
-          .domStorageAccess(true)
-          .onlineImageAccess(true)
-          .onPageEnd((e) => {
-            if (e) {
-              this.outputStr = 'onPageEnd : url = ' + e.url;
-            }
-          })
-          .onSslErrorEventReceive((e) => {
-            // 忽略ssl证书错误，便于测试一些证书过期的网站，如：https://expired.badssl.com。
-            e.handler.handleConfirm();
-          })
-          .width('100%')
-          .height('70%')
-      }
-      .height('100%')
-    }
-  }
-}
-```
-
 ## getCertificate
 
 ```TypeScript
@@ -4291,8 +1059,6 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 获取当前网站的证书信息。使用Web组件加载https网站，会进行SSL证书校验，该接口会通过AsyncCallback异步返回当前网站的X509格式证书（X509Cert证书类型定义见 [X509Cert](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-x509cert-i.md)），便于开发者展示网站证书信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4311,10 +1077,6 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-参见 [getCertificate](#getcertificate)
-
 ## getCustomUserAgent
 
 ```TypeScript
@@ -4324,8 +1086,6 @@ getCustomUserAgent(): string
 获取自定义用户代理。默认User-Agent定义与使用场景请参考[User-Agent开发指导](../../../web/web-default-userAgent.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4343,70 +1103,6 @@ getCustomUserAgent(): string
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State userAgent: string = '';
-
-  build() {
-    Column() {
-      Button('getCustomUserAgent')
-        .onClick(() => {
-          try {
-            this.userAgent = this.controller.getCustomUserAgent();
-            console.info("userAgent: " + this.userAgent);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web, Button, State } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State userAgent: string = '';
-
-  build() {
-    Column() {
-      Button('getCustomUserAgent')
-        .onClick(() => {
-          try {
-            this.userAgent = this.controller.getCustomUserAgent();
-            console.info("userAgent: " + this.userAgent);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getDefaultUserAgent
 
 ```TypeScript
@@ -4417,8 +1113,6 @@ static getDefaultUserAgent(): string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -4426,45 +1120,6 @@ static getDefaultUserAgent(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { webview } from '@kit.ArkWeb';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate");
-    webview.WebviewController.initializeWebEngine();
-    let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();
-    console.info("defaultUserAgent: " + defaultUserAgent);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-'use static'
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AppStorage } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate");
-    webview.WebviewController.initializeWebEngine();
-    let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();
-    console.info("defaultUserAgent: " + defaultUserAgent);
-  }
-}
-```
 
 ## getErrorPageEnabled
 
@@ -4475,8 +1130,6 @@ getErrorPageEnabled(): boolean
 查询是否启用了默认错误页功能。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4492,56 +1145,6 @@ getErrorPageEnabled(): boolean
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-       .onControllerAttached(() => {
-            this.controller.setErrorPageEnabled(true);
-            if (!this.controller.getErrorPageEnabled()) {
-                this.controller.setErrorPageEnabled(true);
-            }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Web, Column, Component, Entry } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-       .onControllerAttached(() => {
-            this.controller.setErrorPageEnabled(true);
-            if (!this.controller.getErrorPageEnabled()) {
-                this.controller.setErrorPageEnabled(true);
-            }
-        })
-    }
-  }
-}
-```
-
 ## getFavicon
 
 ```TypeScript
@@ -4551,8 +1154,6 @@ getFavicon(): image.PixelMap
 获取页面的favicon图标。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4570,70 +1171,6 @@ getFavicon(): image.PixelMap
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State pixelmap: image.PixelMap | undefined = undefined;
-
-  build() {
-    Column() {
-      Button('getFavicon')
-        .onClick(() => {
-          try {
-            this.pixelmap = this.controller.getFavicon();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Button, Web, Column, Component, Entry, State } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State pixelmap: image.PixelMap | undefined = undefined;
-
-  build() {
-    Column() {
-      Button('getFavicon')
-        .onClick(() => {
-          try {
-            this.pixelmap = this.controller.getFavicon();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getHitTest
 
 ```TypeScript
@@ -4643,8 +1180,6 @@ getHitTest(): WebHitTestType
 获取当前被点击区域的元素类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -4666,35 +1201,6 @@ getHitTest(): WebHitTestType
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getHitTest')
-        .onClick(() => {
-          try {
-            let hitTestType = this.controller.getHitTest();
-            console.info("hitTestType: " + hitTestType);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getHitTestValue
 
 ```TypeScript
@@ -4704,8 +1210,6 @@ getHitTestValue(): HitTestValue
 获取当前被点击区域的元素信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -4727,36 +1231,6 @@ getHitTestValue(): HitTestValue
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getHitTestValue')
-        .onClick(() => {
-          try {
-            let hitValue = this.controller.getHitTestValue();
-            console.info("hitType: " + hitValue.type);
-            console.info("extra: " + hitValue.extra);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getLastHitTest
 
 ```TypeScript
@@ -4766,8 +1240,6 @@ getLastHitTest(): HitTestValue
 获取上一次被点击区域的元素信息。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -4783,333 +1255,17 @@ getLastHitTest(): HitTestValue
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getLastHitTest')
-        .onClick(() => {
-          try {
-            let hitValue = this.controller.getLastHitTest();
-            console.info("hitType: " + hitValue.type);
-            console.info("extra: " + hitValue.extra);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getLastHitTest')
-        .onClick(() => {
-          try {
-            let hitValue = this.controller.getLastHitTest();
-            console.info("hitType: " + hitValue.type);
-            console.info("extra: " + hitValue.extra);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getLastJavascriptProxyCallingFrameUrl
 
 ```TypeScript
 getLastJavascriptProxyCallingFrameUrl(): string
 ```
 
-通过[registerJavaScriptProxy](#registerjavascriptproxy)或者 javaScriptProxy注入JavaScript对象到window对象中。该接口可以获取最后一次调用注入的对象的frame的URL。
+通过[registerJavaScriptProxy](#registerjavascriptproxy)或者 [javaScriptProxy](../arkts-components/arkts-arkweb-web-attribute.md#javascriptproxy)注入JavaScript对象到window对象中。该接口可以获取最后一次调用注入的对象的frame的URL。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**返回值：**
-
-| 类型 |
-| --- |
-| string |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestObj {
-  mycontroller: webview.WebviewController;
-
-  constructor(controller: webview.WebviewController) {
-    this.mycontroller = controller;
-  }
-
-  test(testStr: string): string {
-    console.info('Web Component str' + testStr + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-    return testStr;
-  }
-
-  toString(): void {
-    console.info('Web Component toString ' + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-  }
-
-  testNumber(testNum: number): number {
-    console.info('Web Component number' + testNum + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-    return testNum;
-  }
-
-  testBool(testBol: boolean): boolean {
-    console.info('Web Component boolean' + testBol + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-    return testBol;
-  }
-}
-
-class WebObj {
-  mycontroller: webview.WebviewController;
-
-  constructor(controller: webview.WebviewController) {
-    this.mycontroller = controller;
-  }
-
-  webTest(): string {
-    console.info('Web test ' + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-    return "Web test";
-  }
-
-  webString(): void {
-    console.info('Web test toString ' + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State testObjtest: TestObj = new TestObj(this.controller);
-  @State webTestObj: WebObj = new WebObj(this.controller);
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Register JavaScript To Window')
-        .onClick(() => {
-          try {
-            this.controller.registerJavaScriptProxy(this.testObjtest, "objName", ["test", "toString", "testNumber", "testBool"]);
-            this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objName");
-            this.controller.deleteJavaScriptRegister("objTestName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button, $rawfile, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-class TestObj {
-  mycontroller: webview.WebviewController;
-
-  constructor(controller: webview.WebviewController) {
-    this.mycontroller = controller;
-  }
-
-  test(testStr: string): string {
-    console.info('Web Component str' + testStr + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-    return testStr;
-  }
-
-  toStringFunc(): void {
-    console.info('Web Component toString ' + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-  }
-
-  testNumber(testNum: number): number {
-    console.info('Web Component number' + testNum + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-    return testNum;
-  }
-
-  testBool(testBol: boolean): boolean {
-    console.info('Web Component boolean' + testBol + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-    return testBol;
-  }
-}
-
-class WebObj {
-  mycontroller: webview.WebviewController;
-
-  constructor(controller: webview.WebviewController) {
-    this.mycontroller = controller;
-  }
-
-  webTest(): string {
-    console.info('Web test ' + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-    return "Web test";
-  }
-
-  webString(): void {
-    console.info('Web test toString ' + " url " + this.mycontroller.getLastJavascriptProxyCallingFrameUrl());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State testObjtest: TestObj = new TestObj(this.controller);
-  @State webTestObj: WebObj = new WebObj(this.controller);
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Register JavaScript To Window')
-        .onClick(() => {
-          try {
-            this.controller.registerJavaScriptProxy(this.testObjtest, "objName", ["test", "toStringFunc", "testNumber", "testBool"]);
-            this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objName");
-            this.controller.deleteJavaScriptRegister("objTestName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-    </head>
-    <body>
-      <button type="button" onclick="htmlTest()">Click Me!</button>
-      <p id="demo"></p>
-      <p id="webDemo"></p>
-      <script type="text/javascript">
-        function htmlTest() {
-          // This function call expects to return "ArkUI Web Component"
-          let str=objName.test("webtest data");
-          objName.testNumber(1);
-          objName.testBool(true);
-          document.getElementById("demo").innerHTML=str;
-          console.info('objName.test result:'+ str)
-
-          // This function call expects to return "Web test"
-          let webStr = objTestName.webTest();
-          document.getElementById("webDemo").innerHTML=webStr;
-          console.info('objTestName.webTest result:'+ webStr)
-        }
-      </script>
-    </body>
-</html>
-```
-
-## getLastPostMessageURL
-
-```TypeScript
-getLastPostMessageURL(): string
-```
-
-Gets URL of frame that sent the last postMessage to native application.
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5135,8 +1291,6 @@ getMediaPlaybackState(): MediaPlaybackState
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -5153,66 +1307,6 @@ getMediaPlaybackState(): MediaPlaybackState
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getMediaPlaybackState')
-        .onClick(() => {
-          try {
-            console.info("MediaPlaybackState : " + this.controller.getMediaPlaybackState());
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getMediaPlaybackState')
-        .onClick(() => {
-          try {
-            console.info("MediaPlaybackState : " + this.controller.getMediaPlaybackState());
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getOriginalUrl
 
 ```TypeScript
@@ -5222,8 +1316,6 @@ getOriginalUrl(): string
 获取当前页面的原始URL地址。风险提示：如果想获取URL来做JavascriptProxy通信接口认证，请使用 [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](#getlastjavascriptproxycallingframeurl)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5241,179 +1333,6 @@ getOriginalUrl(): string
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, original URL: " + webDownloadItem.getOriginalUrl());
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { Entry, State, Component, Column, Web, Button, Context, Alignment,ClickEvent } from "@kit.ArkUI"
-import { UIContext } from '@ohos.arkui.UIContext';
-import { webview } from '@kit.ArkWeb';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  uiContext : UIContext = this.getUIContext();
-  context : Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-
-  aboutToAppear(): void {
-    webview.WebviewController.setRenderProcessMode(webview.RenderProcessMode.MULTIPLE)
-  }
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem): void => {
-              console.info("will start a download, original URL: " + webDownloadItem.getOriginalUrl());
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getOrgUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getOriginalUrl();
-            console.info("original url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getOrgUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getOriginalUrl();
-            console.info("original url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getPageHeight
 
 ```TypeScript
@@ -5423,8 +1342,6 @@ getPageHeight(): number
 获取当前网页的页面高度。具体使用详情请参考[获取网页内容高度](../../../web/web-getpage-height.md)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5442,69 +1359,6 @@ getPageHeight(): number
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getPageHeight')
-        .onClick(() => {
-          try {
-            let pageHeight = this.controller.getPageHeight();
-            console.info("pageHeight : " + pageHeight);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-
-import { Web, Button, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getPageHeight')
-        .onClick(() => {
-          try {
-            let pageHeight = this.controller.getPageHeight();
-            console.info("pageHeight : " + pageHeight);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getPageOffset
 
 ```TypeScript
@@ -5514,8 +1368,6 @@ getPageOffset(): ScrollOffset
 获取网页当前的滚动偏移量（不包含过滚动偏移量）。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5531,100 +1383,6 @@ getPageOffset(): ScrollOffset
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onScroll((event) => {
-          try {
-            console.info("getPageOffset x:" + this.controller.getPageOffset().x + ",y:" +
-            this.controller.getPageOffset().y);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-
-import { Web, Column, Component, Entry, $rawfile} from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onScroll((event) => {
-          try {
-            console.info("getPageOffset x:" + this.controller.getPageOffset().x + ",y:" +
-            this.controller.getPageOffset().y);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .blue {
-          background-color: lightblue;
-        }
-        .green {
-          background-color: lightgreen;
-        }
-        .blue, .green {
-         font-size:16px;
-         height:200px;
-         text-align: center;       /* 水平居中 */
-         line-height: 200px;       /* 垂直居中（值等于容器高度） */
-        }
-    </style>
-</head>
-<body>
-<div class="blue" >webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-</body>
-</html>
-```
-
 ## getPrintBackground
 
 ```TypeScript
@@ -5634,8 +1392,6 @@ getPrintBackground(): boolean
 查询webview是否打印网页背景。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -5653,66 +1409,6 @@ getPrintBackground(): boolean
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setPrintBackground')
-        .onClick(() => {
-          try {
-            let enable = this.controller.getPrintBackground();
-            console.info("getPrintBackground: " + enable);
-          } catch (error) {
-            console.error(`ErrorCode:${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('setPrintBackground')
-        .onClick(() => {
-          try {
-            let enable = this.controller.getPrintBackground();
-            console.info("getPrintBackground: " + enable);
-          } catch (error) {
-            console.error(`ErrorCode:${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getProgress
 
 ```TypeScript
@@ -5722,8 +1418,6 @@ getProgress() : number
 获取当前网页加载进度。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -5739,54 +1433,6 @@ getProgress() : number
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onPageBegin(() => {
-          let curProgress = this.controller.getProgress();
-          console.info("current page loading progress is :" + curProgress);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onPageBegin(() => {
-          let curProgress = this.controller.getProgress();
-          console.info("current page loading progress is :" + curProgress);
-        })
-    }
-  }
-}
-```
-
 ## getRenderProcessMode
 
 ```TypeScript
@@ -5796,8 +1442,6 @@ static getRenderProcessMode(): RenderProcessMode
 查询ArkWeb的渲染子进程模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -5809,60 +1453,6 @@ static getRenderProcessMode(): RenderProcessMode
 | --- |
 | [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getRenderProcessMode')
-        .onClick(() => {
-          let mode = webview.WebviewController.getRenderProcessMode();
-          console.info("getRenderProcessMode: " + mode);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Column, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct webViewController {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getRenderProcessMode')
-        .onClick(() => {
-          let mode = webview.WebviewController.getRenderProcessMode();
-          console.info("getRenderProcessMode: " + mode);
-        });
-      Web({
-        src: 'www.example.com', controller: this.controller,
-      })
-    }
-  }
-}
-```
-
 ## getScrollable
 
 ```TypeScript
@@ -5872,8 +1462,6 @@ getScrollable(): boolean
 获取当前网页是否允许滚动。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -5891,69 +1479,6 @@ getScrollable(): boolean
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getScrollable')
-        .onClick(() => {
-          try {
-            let scrollEnabled = this.controller.getScrollable();
-            console.info("scrollEnabled: " + scrollEnabled);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-// xxx.ets
-import { Entry, Column, Component, Button, Web } from '@ohos.arkui.component';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getScrollable')
-        .onClick(() => {
-          try {
-            let scrollEnabled = this.controller.getScrollable();
-            console.info("scrollEnabled: " + scrollEnabled);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getScrollOffset
 
 ```TypeScript
@@ -5963,8 +1488,6 @@ getScrollOffset(): ScrollOffset
 获取网页当前的滚动偏移量（包含过滚动偏移量）。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -5976,145 +1499,6 @@ getScrollOffset(): ScrollOffset
 | --- |
 | [ScrollOffset](arkts-arkweb-webview-scrolloffset-i.md) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  @State testTitle: string = 'webScroll'
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State controllerX: number =-100;
-  @State controllerY: number =-100;
-  @State mode: OverScrollMode = OverScrollMode.ALWAYS;
-
-  build() {
-    Column() {
-      Row() {
-        Text(this.testTitle)
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .margin(5)
-      }
-      Column() {
-        Text(`controllerX: ${this.controllerX}, controllerY: ${this.controllerY}`)
-      }
-      .margin({ top: 10, bottom: 10 })
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .key("web_01")
-        .overScrollMode(this.mode)
-        .onTouch(() => {
-          this.controllerX = this.controller.getScrollOffset().x;
-          this.controllerY = this.controller.getScrollOffset().y;
-          let componentInfo = this.getUIContext().getComponentUtils().getRectangleById("web_01");
-          let webHeight = this.getUIContext().px2vp(componentInfo.size.height);
-          let pageHeight = this.controller.getPageHeight();
-          if (this.controllerY < 0) {
-            // case1：网页向下过滚动时，可直接使用ScrollOffset.y
-            console.info(`get downwards overscroll offsetY = ${this.controllerY}`);
-          } else if ((this.controllerY != 0) && (this.controllerY > (pageHeight - webHeight))) {
-            // case2：网页向上过滚动时，需计算出网页下边界与Web组件下边界的偏移量
-            console.info(`get upwards overscroll offsetY = ${this.controllerY - (pageHeight >= webHeight ? (pageHeight - webHeight) : 0)}`);
-          } else {
-            // case3：网页未发生过滚动时，可直接使用ScrollOffset.y
-            console.info(`get scroll offsetY = ${this.controllerY}`);
-          }
-        })
-        .height(600)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-
-import { $rawfile, Web, Text, Row, Column, Component, Entry, OverScrollMode, FontWeight, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  @State testTitle: string = 'webScroll'
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State controllerX: double =-100;
-  @State controllerY: double =-100;
-  @State mode: OverScrollMode = OverScrollMode.ALWAYS;
-
-  build() {
-    Column() {
-      Row() {
-        Text(this.testTitle)
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-      }
-      Column() {
-        Text(`controllerX: ${this.controllerX}, controllerY: ${this.controllerY}`)
-      }
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .key("web_01")
-        .overScrollMode(this.mode)
-        .onTouch(() => {
-          this.controllerX = this.controller.getScrollOffset().x;
-          this.controllerY = this.controller.getScrollOffset().y;
-          let componentInfo = this.getUIContext().getComponentUtils().getRectangleById("web_01");
-          let webHeight = this.getUIContext().px2vp(componentInfo.size.height);
-          let pageHeight = this.controller.getPageHeight();
-          if (this.controllerY < 0) {
-            // case1：网页向下过滚动时，可直接使用ScrollOffset.y
-            console.info(`get downwards overscroll offsetY = ${this.controllerY}`);
-          } else if ((this.controllerY != 0) && (this.controllerY > (pageHeight - webHeight))) {
-            // case2：网页向上过滚动时，需计算出网页下边界与Web组件下边界的偏移量
-            console.info(`get upwards overscroll offsetY = ${this.controllerY - (pageHeight >= webHeight ? (pageHeight - webHeight) : 0)}`);
-          } else {
-            // case3：网页未发生过滚动时，可直接使用ScrollOffset.y
-            console.info(`get scroll offsetY = ${this.controllerY}`);
-          }
-        })
-        .height(600)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Demo</title>
-    <style>
-        body {
-          width:3000px;
-          height:6000px;
-          padding-right:170px;
-          padding-left:170px;
-          border:5px solid blueviolet;
-        }
-    </style>
-</head>
-<body>
-Scroll Test
-</body>
-</html>
-```
-
 ## getSecurityLevel
 
 ```TypeScript
@@ -6124,8 +1508,6 @@ getSecurityLevel(): SecurityLevel
 获取当前网页的安全级别。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6143,59 +1525,6 @@ getSecurityLevel(): SecurityLevel
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onPageEnd((event) => {
-          if (event) {
-            let securityLevel = this.controller.getSecurityLevel();
-            console.info('securityLevel: ', securityLevel);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, OnPageEndEvent } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onPageEnd((event: OnPageEndEvent): void => {
-          if (event) {
-            let securityLevel = this.controller.getSecurityLevel();
-            console.info('securityLevel: ', securityLevel);
-          }
-        })
-    }
-  }
-}
-```
-
 ## getSiteIsolationMode
 
 ```TypeScript
@@ -6206,8 +1535,6 @@ static getSiteIsolationMode(): SiteIsolationMode
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -6215,57 +1542,6 @@ static getSiteIsolationMode(): SiteIsolationMode
 | 类型 |
 | --- |
 | [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getSiteIsolationMode')
-        .onClick(() => {
-          let mode = webview.WebviewController.getSiteIsolationMode();
-          console.info("getSiteIsolationMode: " + mode);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Entry, Component, Column, Web, Button } from '@ohos.arkui.component'
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getSiteIsolationMode')
-        .onClick(() => {
-          let mode = webview.WebviewController.getSiteIsolationMode();
-          console.info("getSiteIsolationMode: " + mode);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getSubframeErrorPageEnabled
 
@@ -6277,8 +1553,6 @@ getSubframeErrorPageEnabled(): boolean
 26.0.0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6296,10 +1570,6 @@ getSubframeErrorPageEnabled(): boolean
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-完整示例代码参考[setErrorPageEnabled](#seterrorpageenabled)。
-
 ## getSurfaceId
 
 ```TypeScript
@@ -6313,8 +1583,6 @@ getSurfaceId(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -6324,86 +1592,6 @@ getSurfaceId(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Example{
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  @State imagePixelMap: image.PixelMap | undefined = undefined;
-
-  build(){
-    Column(){
-      Button("截图")
-        .onClick(()=>{
-          try {
-            let surfaceId = this.controller.getSurfaceId();
-            console.info("surfaceId: " + surfaceId);
-            if(surfaceId.length != 0) {
-              let region:image.Region = { x: 0, y: 0, size: { height: 800, width: 1000}}
-              this.imagePixelMap = image.createPixelMapFromSurfaceSync(surfaceId, region)
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Image(this.imagePixelMap)
-        .height(100)
-      Web({src: 'www.example.com', controller: this.controller})
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Button, Web, Image, ImageContent, Resource, DrawableDescriptor } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Example{
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  @State imagePixelMap: image.PixelMap | DrawableDescriptor | ImageContent | String | Resource = '';
-
-  build(){
-    Column(){
-      Button("截图")
-        .onClick(()=>{
-          try {
-            let surfaceId = this.controller.getSurfaceId();
-            console.info("surfaceId: " + surfaceId);
-            if(surfaceId.length != 0) {
-              let region:image.Region = { x: 0, y: 0, size: { height: 800, width: 1000}}
-              this.imagePixelMap = image.createPixelMapFromSurfaceSync(surfaceId, region)
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Image(this.imagePixelMap)
-        .height(100)
-      Web({src: 'www.example.com', controller: this.controller})
-    }
-  }
-}
-```
 
 ## getTitle
 
@@ -6415,8 +1603,6 @@ getTitle(): string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -6432,68 +1618,6 @@ getTitle(): string
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getTitle')
-        .onClick(() => {
-          try {
-            let title = this.controller.getTitle();
-            console.info("title: " + title);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getTitle')
-        .onClick(() => {
-          try {
-            let title = this.controller.getTitle();
-            console.info("title: " + title);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getUrl
 
@@ -6505,8 +1629,6 @@ getUrl(): string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -6522,174 +1644,6 @@ getUrl(): string
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, url:" + webDownloadItem.getUrl());
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, url:" + webDownloadItem.getUrl());
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-完整示例代码参考[constructor](#constructor)。
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getUrl();
-            console.info("url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getUrl();
-            console.info("url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## getUserAgent
 
@@ -6701,8 +1655,6 @@ getUserAgent(): string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -6719,136 +1671,6 @@ getUserAgent(): string
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getUserAgent')
-        .onClick(() => {
-          try {
-            let userAgent = this.controller.getUserAgent();
-            console.info("userAgent: " + userAgent);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getUserAgent')
-        .onClick(() => {
-          try {
-            let userAgent = this.controller.getUserAgent();
-            console.info("userAgent: " + userAgent);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State ua: string = "";
-
-  aboutToAppear(): void {
-    webview.once('webInited', () => {
-      try {
-        // 应用侧用法示例，定制User-Agent。
-        this.ua = this.controller.getUserAgent() + 'xxx';
-        this.controller.setCustomUserAgent(this.ua);
-      } catch (error) {
-        console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-      }
-    })
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web, State } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State ua: string = "";
-
-  aboutToAppear(): void {
-    webview.once('webInited', () => {
-      try {
-        // 应用侧用法示例，定制User-Agent。
-        this.ua = this.controller.getUserAgent() + 'xxx';
-        this.controller.setCustomUserAgent(this.ua);
-      } catch (error) {
-        console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-      }
-    })
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getUserAgentClientHintsEnabled
 
 ```TypeScript
@@ -6859,8 +1681,6 @@ static getUserAgentClientHintsEnabled(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -6868,12 +1688,6 @@ static getUserAgentClientHintsEnabled(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-
-完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
 
 ## getUserAgentMetadata
 
@@ -6884,8 +1698,6 @@ getUserAgentMetadata(userAgent: string): UserAgentMetadata
 查询userAgent对应的UserAgent Metadata信息。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -6901,12 +1713,6 @@ getUserAgentMetadata(userAgent: string): UserAgentMetadata
 | --- |
 | [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) |
 
-**示例**
-
-完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-
-完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-
 ## getWebId
 
 ```TypeScript
@@ -6916,8 +1722,6 @@ getWebId(): number
 获取Web组件的索引值，用于多个Web组件的管理。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6935,67 +1739,6 @@ getWebId(): number
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getWebId')
-        .onClick(() => {
-          try {
-            let id = this.controller.getWebId();
-            console.info("id: " + id);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Web, Button, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getWebId')
-        .onClick(() => {
-          try {
-            let id = this.controller.getWebId();
-            console.info("id: " + id);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## hasImage
 
 ```TypeScript
@@ -7005,8 +1748,6 @@ hasImage(): Promise<boolean>
 通过Promise方式异步查找当前页面是否存在图像。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7025,144 +1766,6 @@ hasImage(): Promise<boolean>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('hasImageCb')
-        .onClick(() => {
-          try {
-            this.controller.hasImage((error, data) => {
-              if (error) {
-                console.error(`hasImage error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              console.info("hasImage: " + data);
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('hasImageCb')
-        .onClick(() => {
-          try {
-            this.controller.hasImage((error: BusinessError | null, data:  Boolean | undefined): void => {
-              if (error) {
-                console.error(`hasImage error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              console.info("hasImage: " + data);
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('hasImagePm')
-        .onClick(() => {
-          try {
-            this.controller.hasImage().then((data) => {
-              console.info('hasImage: ' + data);
-            }).catch((error: BusinessError) => {
-              console.error("error: " + error);
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('hasImagePm')
-        .onClick(() => {
-          try {
-            this.controller.hasImage().then((data: boolean) => {
-              console.info('hasImage: ' + data);
-            }).catch((error: Error): PromiseLike<void> | undefined => {
-              console.error("error: " + error);
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## hasImage
 
 ```TypeScript
@@ -7172,8 +1775,6 @@ hasImage(callback: AsyncCallback<boolean>): void
 通过Callback方式异步查找当前页面是否存在图像。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7192,10 +1793,6 @@ hasImage(callback: AsyncCallback<boolean>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-参见 [hasImage](#hasimage)
-
 ## initializeWebEngine
 
 ```TypeScript
@@ -7210,29 +1807,9 @@ static initializeWebEngine(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-本示例以EntryAbility为例，描述了在Ability创建阶段完成Web组件动态库加载的功能。
-
-```TypeScript
-// EntryAbility.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate")
-    webview.WebviewController.initializeWebEngine()
-    console.info("EntryAbility onCreate done")
-  }
-}
-```
 
 ## injectOfflineResources
 
@@ -7243,8 +1820,6 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 将本地离线资源注入到内存缓存中，以提升页面首次启动速度。内存缓存中的资源由内核自动管理，当注入的资源过多导致内存压力过大，内核自动释放未使用的资源，应避免注入大量资源到内存缓存中。正常情况下，资源的有效期由提供的Cache-Control或Expires响应头控制其有效期，默认的有效期为86400秒，即1天。资源的MIMEType通过提供的Content-Type响应头配置，Content-Type需符合标准，否则无法正常使用，MODULE_JS必须提供有效的MIMEType，其他类型可不提供。以此方式注入的资源，仅支持通过HTML中的标签加载。如果业务网页中的script标签使用了crossorigin属性，则必须在接口的responseHeaders参数中设置Cross-Origin响应头的值为anonymous 或use-credentials。当调用`webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)`接口后，应用会启动多渲染进程模式，此接口在此场景下不 会生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -7262,505 +1837,6 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-const localStorage: LocalStorage = new LocalStorage('uiContext');
-
-export default class EntryAbility extends UIAbility {
-  storage: LocalStorage = localStorage;
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
-      if (err.code) {
-        return;
-      }
-
-      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// EntryAbility.ets
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import { UIContext, LocalStorage, window } from '@kit.ArkUI';
-
-const localStorage: LocalStorage = new LocalStorage('uiContext');
-
-class EntryAbility extends UIAbility {
-  storage: LocalStorage = localStorage;
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', this.storage, (err: BusinessError<void> | null, data): void => {
-      if (err && err.code) {
-        return;
-      }
-      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
-    });
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// DynamicComponent.ets
-import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
-
-export interface BuilderData {
-  url: string;
-  controller: WebviewController;
-  context: UIContext;
-}
-
-let storage : LocalStorage | undefined = undefined;
-
-export class NodeControllerImpl extends NodeController {
-  private rootNode: BuilderNode<BuilderData[]> | null = null;
-  private wrappedBuilder: WrappedBuilder<BuilderData[]> | null = null;
-
-  constructor(wrappedBuilder: WrappedBuilder<BuilderData[]>, context: UIContext) {
-    storage = context.getSharedLocalStorage();
-    super();
-    this.wrappedBuilder = wrappedBuilder;
-  }
-
-  makeNode(): FrameNode | null {
-    if (this.rootNode != null) {
-      return this.rootNode.getFrameNode();
-    }
-    return null;
-  }
-
-  initWeb(url: string, controller: WebviewController) {
-    if(this.rootNode != null) {
-      return;
-    }
-
-    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
-    if (!uiContext) {
-      return;
-    }
-    this.rootNode = new BuilderNode(uiContext);
-    this.rootNode.build(this.wrappedBuilder, { url: url, controller: controller });
-  }
-}
-
-export const createNode = (wrappedBuilder: WrappedBuilder<BuilderData[]>, data: BuilderData) => {
-  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
-  baseNode.initWeb(data.url, data.controller);
-  return baseNode;
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// DynamicComponent.ets
-import { UIContext, LocalStorage, WrappedBuilder, wrapBuilder, Builder } from '@kit.ArkUI';
-import { NodeController, BuilderNode, FrameNode } from '@ohos.arkui.node';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { injectWebview } from "./InjectWebview";
-
-export class BuilderData {
-  url: string;
-  controller: webview.WebviewController;
-  context: UIContext;
-
-  constructor(url: string, controller: webview.WebviewController, context: UIContext) {
-    this.url = url;
-    this.controller = controller;
-    this.context = context;
-  }
-}
-
-let storage : LocalStorage | undefined = undefined;
-
-type MyBuilder = @Builder (p1: BuilderData) => void;
-
-export class NodeControllerImpl extends NodeController {
-  private rootNode: BuilderNode<BuilderData> | null = null;
-  private wrappedBuilder: WrappedBuilder<MyBuilder> | null = null;
-
-  constructor(wrappedBuilder: WrappedBuilder<MyBuilder>, context: UIContext) {
-    super();
-    storage = context.getSharedLocalStorage();
-    this.wrappedBuilder = wrappedBuilder;
-  }
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    if (this.rootNode != null) {
-      return this.rootNode!.getFrameNode();
-    }
-    return null;
-  }
-
-  initWeb(url: string, controller: webview.WebviewController) {
-    if(this.rootNode != null) {
-      return;
-    }
-
-    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
-    if (!uiContext) {
-      return;
-    }
-    this.rootNode = new BuilderNode<BuilderData>(uiContext);
-    this.rootNode!.build(injectWebview, new BuilderData(url, controller, uiContext));
-  }
-}
-
-export const createNode = (wrappedBuilder: WrappedBuilder<MyBuilder>, data: BuilderData) => {
-  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
-  baseNode.initWeb(data.url, data.controller);
-  return baseNode;
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// InjectWebview.ets
-import { webview } from '@kit.ArkWeb';
-import { resourceConfigs } from "./Resource";
-import { BuilderData } from "./DynamicComponent";
-
-@Builder
-function WebBuilder(data: BuilderData) {
-  Web({ src: data.url, controller: data.controller })
-    .onControllerAttached(async () => {
-      try {
-        data.controller.injectOfflineResources(await getData (data.context));
-      } catch (err) {
-        console.error("error: " + err.code + " " + err.message);
-      }
-    })
-    .fileAccess(true)
-}
-
-export const injectWebview = wrapBuilder<BuilderData[]>(WebBuilder);
-
-export async function getData(context: UIContext) {
-  const resourceMapArr: Array<webview.OfflineResourceMap> = [];
-
-  // 读取配置，从rawfile目录中读取文件内容
-  for (let config of resourceConfigs) {
-    let buf: Uint8Array = new Uint8Array(0);
-    if (config.localPath) {
-      buf = await readRawFile(config.localPath, context);
-    }
-
-    resourceMapArr.push({
-      urlList: config.urlList,
-      resource: buf,
-      responseHeaders: config.responseHeaders,
-      type: config.type,
-    })
-  }
-
-  return resourceMapArr;
-}
-
-export async function readRawFile(url: string, context: UIContext) {
-  try {
-    return await context.getHostContext()!.resourceManager.getRawFileContent(url);
-  } catch (err) {
-    return new Uint8Array(0);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// InjectWebview.ets
-import { UIContext, WrappedBuilder, wrapBuilder, Web, Builder } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { resourceConfigs } from "./Resource";
-import { BuilderData } from "./DynamicComponent";
-
-@Builder
-export function WebBuilder(data: BuilderData) {
-  Web({ src: data.url, controller: data.controller })
-    .onControllerAttached(() => {
-      (async () => {
-        try {
-          const result = await getData(data.context);
-          data.controller.injectOfflineResources(result);
-        } catch (err) {
-          console.error("error: " + err.code + " " + err.message);
-        }
-      })();
-    })
-    .fileAccess(true)
-}
-
-type MyBuilder = @Builder (p1: BuilderData) => void;
-export const injectWebview : WrappedBuilder<MyBuilder> = wrapBuilder(WebBuilder);
-
-export async function getData(context: UIContext): Promise<Array<webview.OfflineResourceMap>> {
-  const resourceMapArr: Array<webview.OfflineResourceMap> = [];
-
-  // 读取配置，从rawfile目录中读取文件内容。
-  for (let config of resourceConfigs) {
-    let buf: Uint8Array = new Uint8Array(0);
-    if (config.localPath) {
-      buf = await readRawFile(config.localPath, context);
-    }
-
-    resourceMapArr.push({
-      urlList: config.urlList,
-      resource: buf,
-      responseHeaders: config.responseHeaders,
-      type: config.type,
-    })
-  }
-
-  return resourceMapArr;
-}
-
-async function readRawFile(path: string, context: UIContext): Promise<Uint8Array> {
-  try {
-    return await context.getHostContext()!.resourceManager.getRawFileContent(path);
-  } catch (err) {
-    return new Uint8Array(0);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// BusinessWebview.ets
-import { BuilderData } from "./DynamicComponent";
-
-@Builder
-function WebBuilder(data: BuilderData) {
-  // 此处组件可根据业务需要自行扩展
-  Web({ src: data.url, controller: data.controller })
-    .cacheMode(CacheMode.Default)
-}
-
-export const businessWebview = wrapBuilder<BuilderData[]>(WebBuilder);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { BuilderData } from "./DynamicComponent";
-import { WrappedBuilder, wrapBuilder, Web, Builder } from '@kit.ArkUI';
-
-@Builder
-function WebBuilder(data: BuilderData) {
-  // 此处组件可根据业务需要自行扩展。
-  Web({ src: data.url, controller: data.controller })
-  // .cacheMode(CacheMode.Default)
-}
-type MyBuilder = @Builder (p1: BuilderData) => void;
-export const businessWebview : WrappedBuilder<MyBuilder> = wrapBuilder(WebBuilder);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// Resource.ets
-import { webview } from '@kit.ArkWeb';
-
-export interface ResourceConfig {
-  urlList: Array<string>,
-  type: webview.OfflineResourceType,
-  responseHeaders: Array<Header>,
-  localPath: string, // 本地资源存放在rawfile目录下的路径
-}
-
-export const resourceConfigs: Array<ResourceConfig> = [
-  {
-    localPath: "example.png",
-    urlList: [
-      "https://www.example.com/",
-      "https://www.example.com/path1/example.png",
-      "https://www.example.com/path2/example.png",
-    ],
-    type: webview.OfflineResourceType.IMAGE,
-    responseHeaders: [
-      { headerKey: "Cache-Control", headerValue: "max-age=1000" },
-      { headerKey: "Content-Type", headerValue: "image/png" },
-    ]
-  },
-  {
-    localPath: "example.js",
-    urlList: [ // 仅提供一个URL，这个URL既作为资源的源，也作为资源的网络请求地址
-      "https://www.example.com/example.js",
-    ],
-    type: webview.OfflineResourceType.CLASSIC_JS,
-    responseHeaders: [
-      // 以<script crossorigin="anonymous" />方式使用，提供额外的响应头
-      { headerKey: "Cross-Origin", headerValue:"anonymous" }
-    ]
-  },
-];
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// Resource.ets
-import { webview } from '@kit.ArkWeb';
-
-export interface ResourceConfig {
-  urlList: Array<string>,
-  type: webview.OfflineResourceType,
-  responseHeaders: Array<webview.WebHeader>,
-  localPath: string, // 本地资源存放在rawfile目录下的路径。
-}
-
-export const resourceConfigs: Array<ResourceConfig> = [
-  {
-    localPath: "example.png",
-    urlList: [
-      "https://www.example.com/",
-      "https://www.example.com/path1/example.png",
-      "https://www.example.com/path2/example.png",
-    ],
-    type: webview.OfflineResourceType.IMAGE,
-    responseHeaders: [
-      { headerKey: "Cache-Control", headerValue: "max-age=1000" },
-      { headerKey: "Content-Type", headerValue: "image/png" },
-    ]
-  },
-  {
-    localPath: "example.js",
-    urlList: [ // 仅提供一个URL，这个URL既作为资源的源，也作为资源的网络请求地址。
-      "https://www.example.com/example.js",
-    ],
-    type: webview.OfflineResourceType.CLASSIC_JS,
-    responseHeaders: [
-      // 以<script crossorigin="anonymous" />方式使用，提供额外的响应头。
-      { headerKey: "Cross-Origin", headerValue:"anonymous" }
-    ]
-  },
-];
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// Index.ets
-import { webview } from '@kit.ArkWeb';
-import { NodeController } from '@kit.ArkUI';
-import { createNode } from "./DynamicComponent"
-import { injectWebview } from "./InjectWebview"
-import { businessWebview } from "./BusinessWebview"
-
-@Entry
-@Component
-struct Index {
-  @State injectNode: NodeController | undefined = undefined;
-  injectController: webview.WebviewController = new webview.WebviewController();
-
-  @State businessNode: NodeController | undefined = undefined;
-  businessController: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    // 初始化用于注入本地资源的Web组件, 提供一个空的html页面作为URL即可
-    this.injectNode = createNode(injectWebview,
-        { url: "https://www.example.com/empty.html", controller: this.injectController, context: this.getUIContext()});
-  }
-
-  build() {
-    Column() {
-      // 在适当的时机加载业务用Web组件，本例以Button点击触发为例
-      Button("加载页面")
-        .onClick(() => {
-          this.businessNode = createNode(businessWebview, {
-            url: "https://www.example.com/business.html",
-            controller: this.businessController,
-            context: this.getUIContext()
-          });
-        })
-      // 用于业务的Web组件
-      NodeContainer(this.businessNode);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// Index.ets
-import { webview } from '@kit.ArkWeb';
-import { Button, Column, Entry, Component, State, NodeContainer } from '@kit.ArkUI';
-import { NodeController } from '@ohos.arkui.node';
-import { createNode, BuilderData } from "./DynamicComponent";
-import { injectWebview } from "./InjectWebview";
-import { businessWebview } from "./BusinessWebview";
-
-@Entry
-@Component
-struct Index {
-  @State injectNode: NodeController | undefined = undefined;
-  injectController: webview.WebviewController = new webview.WebviewController();
-
-  @State businessNode: NodeController | undefined = undefined;
-  businessController: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    // 初始化用于注入本地资源的Web组件, 提供一个空的html页面作为URL即可。
-    this.injectNode = createNode(injectWebview,
-      new BuilderData( "https://www.example.com/empty.html", this.injectController, this.getUIContext()));
-  }
-
-  build() {
-    Column() {
-      // 在适当的时机加载业务用Web组件，本例以Button点击触发为例。
-      Button("加载页面")
-        .onClick(() => {
-          this.businessNode = createNode(businessWebview, new BuilderData(
-            "https://www.example.com/business.html",
-            this.businessController,
-            this.getUIContext()
-          ));
-        })
-      // 用于业务的Web组件。
-      NodeContainer(this.businessNode!);
-    }
-  }
-}
-```
-
-加载的HTML网页示例。
-
-```TypeScript
-<!DOCTYPE html>
-<html lang="en">
-<head></head>
-<body>
-  <img src="https://www.example.com/path1/request.png" />
-  <img src="https://www.example.com/path2/request.png" />
-  <script src="https://www.example.com/example.js" crossorigin="anonymous"></script>
-</body>
-</html>
-```
-
 ## isActiveWebEngineEvergreen
 
 ```TypeScript
@@ -7771,8 +1847,6 @@ static isActiveWebEngineEvergreen(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -7780,46 +1854,6 @@ static isActiveWebEngineEvergreen(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-本示例以EntryAbility为例，实现了在Ability创建阶段判断应用是否正在使用常青内核的功能。
-
-```TypeScript
-// xxx.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate")
-    if (webview.WebviewController.isActiveWebEngineEvergreen()) {
-      console.info("Active Web Engine is Evergreen")
-    }
-    console.info("EntryAbility onCreate done")
-  }
-}
-```
-
-本示例以EntryAbility为例，实现了在Ability创建阶段判断应用是否正在使用常青内核的功能。
-
-```TypeScript
-// xxx.ets
-import UIAbility from '@ohos.app.ability.UIAbility';
-import Want from '@ohos.app.ability.Want';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate")
-    if (webview.WebviewController.isActiveWebEngineEvergreen()) {
-      console.info("Active Web Engine is Evergreen")
-    }
-    console.info("EntryAbility onCreate done")
-  }
-}
-```
 
 ## isAdsBlockEnabled
 
@@ -7831,8 +1865,6 @@ isAdsBlockEnabled(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -7848,68 +1880,6 @@ isAdsBlockEnabled(): boolean
 | 错误码ID |
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isAdsBlockEnabled')
-        .onClick(() => {
-          try {
-            let isAdsBlockEnabled: boolean = this.controller.isAdsBlockEnabled();
-            console.info("isAdsBlockEnabled:", isAdsBlockEnabled);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('isAdsBlockEnabled')
-        .onClick(() => {
-          try {
-            let isAdsBlockEnabled: boolean = this.controller.isAdsBlockEnabled();
-            console.info("isAdsBlockEnabled:", isAdsBlockEnabled);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## isAdsBlockEnabledForCurPage
 
@@ -7921,8 +1891,6 @@ isAdsBlockEnabledForCurPage(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -7939,68 +1907,6 @@ isAdsBlockEnabledForCurPage(): boolean
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isAdsBlockEnabledForCurPage')
-        .onClick(() => {
-          try {
-            let isAdsBlockEnabledForCurPage: boolean = this.controller.isAdsBlockEnabledForCurPage();
-            console.info("isAdsBlockEnabledForCurPage:", isAdsBlockEnabledForCurPage);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('isAdsBlockEnabledForCurPage')
-        .onClick(() => {
-          try {
-            let isAdsBlockEnabledForCurPage: boolean = this.controller.isAdsBlockEnabledForCurPage();
-            console.info("isAdsBlockEnabledForCurPage:", isAdsBlockEnabledForCurPage);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## isAutoPreconnectEnabled
 
 ```TypeScript
@@ -8011,8 +1917,6 @@ static isAutoPreconnectEnabled(): boolean
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -8020,61 +1924,6 @@ static isAutoPreconnectEnabled(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  build() {
-    Column() {
-      Button('isAutoPreconnectEnabled')
-        .onClick(() => {
-          try {
-            let isEnabled: boolean = webview.WebviewController.isAutoPreconnectEnabled();
-            console.info("isAutoPreconnectEnabled:", isEnabled);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Component, Column, Button } from '@ohos.arkui.component'
-import { BusinessError } from '@ohos.base'
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  build() {
-    Column() {
-      Button('isAutoPreconnectEnabled')
-        .onClick(() => {
-          try {
-            let isEnabled: boolean = webview.WebviewController.isAutoPreconnectEnabled();
-            console.info("isAutoPreconnectEnabled:", isEnabled);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
 
 ## isIncognitoMode
 
@@ -8085,8 +1934,6 @@ isIncognitoMode(): boolean
 查询当前是否是隐私模式的Webview。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8104,68 +1951,6 @@ isIncognitoMode(): boolean
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isIncognitoMode')
-        .onClick(() => {
-          try {
-            let result = this.controller.isIncognitoMode();
-            console.info('isIncognitoMode' + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('isIncognitoMode')
-        .onClick(() => {
-          try {
-            let result = this.controller.isIncognitoMode();
-            console.info('isIncognitoMode' + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## isIntelligentTrackingPreventionEnabled
 
 ```TypeScript
@@ -8175,8 +1960,6 @@ isIntelligentTrackingPreventionEnabled(): boolean
 获取Web组件是否启用了智能防跟踪功能。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -8194,68 +1977,6 @@ isIntelligentTrackingPreventionEnabled(): boolean
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isIntelligentTrackingPreventionEnabled')
-        .onClick(() => {
-          try {
-            let result = this.controller.isIntelligentTrackingPreventionEnabled();
-            console.info("result: " + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('isIntelligentTrackingPreventionEnabled')
-         .onClick(() => {
-          try {
-            let result = this.controller.isIntelligentTrackingPreventionEnabled();
-            console.info("result: " + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## isPrivateNetworkAccessEnabled
 
@@ -8270,8 +1991,6 @@ static isPrivateNetworkAccessEnabled(): boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -8279,74 +1998,6 @@ static isPrivateNetworkAccessEnabled(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isPrivateNetworkAccessEnabled')
-        .onClick(() => {
-          try {
-            let isEnabled: boolean = webview.WebviewController.isPrivateNetworkAccessEnabled();
-            console.info("isPrivateNetworkAccessEnabled:", isEnabled);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          // 设置为false时ArkWeb将不再检查私有网络请求是否合法
-          webview.WebviewController.enablePrivateNetworkAccess(false);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Button, Web } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('isPrivateNetworkAccessEnabled')
-        .onClick(() => {
-          try {
-            let isEnabled: boolean = webview.WebviewController.isPrivateNetworkAccessEnabled();
-            console.info("isPrivateNetworkAccessEnabled:", isEnabled);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          // 设置为false时ArkWeb将不再检查私有网络请求是否合法
-          webview.WebviewController.enablePrivateNetworkAccess(false);
-        })
-    }
-  }
-}
-```
 
 ## isSafeBrowsingEnabled
 
@@ -8358,8 +2009,6 @@ isSafeBrowsingEnabled(): boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -8369,58 +2018,6 @@ isSafeBrowsingEnabled(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isSafeBrowsingEnabled')
-        .onClick(() => {
-          let result = this.controller.isSafeBrowsingEnabled();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('isSafeBrowsingEnabled')
-        .onClick(() => {
-          let result = this.controller.isSafeBrowsingEnabled();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## loadData
 
@@ -8438,8 +2035,6 @@ loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, his
 > 一致。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8463,312 +2058,6 @@ loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, his
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          try {
-            this.controller.loadData(
-              "<html><body bgcolor=\"white\">Source:<pre>source</pre></body></html>",
-              "text/html",
-              // UTF-8为charset。
-              "UTF-8"
-            );
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          try {
-            this.controller.loadData(
-              "<html><body bgcolor=\"white\">Source:<pre>source</pre></body></html>",
-              "text/html",
-              // UTF-8为charset。
-              "UTF-8"
-            );
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-Ark-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          try {
-            this.controller.loadData(
-              // Coding tests通过base64编码后的字符串。
-              "Q29kaW5nIHRlc3Rz",
-              "text/html",
-              "base64"
-            );
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-Ark-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          try {
-            this.controller.loadData(
-              // Coding tests通过base64编码后的字符串。
-              "Q29kaW5nIHRlc3Rz",
-              "text/html",
-              "base64"
-            );
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-Ark-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          try {
-            this.controller.loadData(
-              "<img src=aa/bb.jpg>", // 会尝试从"https://xxx.com/" + "aa/bb.jpg"加载该图片
-              "text/html",
-              "UTF-8",
-              "https://xxx.com/",
-              "about:blank"
-            );
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          try {
-            this.controller.loadData(
-              "<img src=aa/bb.jpg>", // 会尝试从"https://xxx.com/" + "aa/bb.jpg"加载该图片
-              "text/html",
-              "UTF-8",
-              "https://xxx.com/",
-              "about:blank"
-            );
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-Ark-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  updateContent: string = '<body><div><image src="resource://rawfile/xxx.png" alt="image -- end" width="500" height="250"></image></div></body>'
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          try {
-            // UTF-8为charset。
-            this.controller.loadData(this.updateContent, "text/html", "UTF-8", " ", " ");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  updataContent: string = '<body><div><image src=resource://rawfile/xxx.png alt="image -- end" width="500" height="250"></image></div></body>'
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          try {
-            // UTF-8为charset。
-            this.controller.loadData(this.updataContent, "text/html", "UTF-8", " ", " ");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-加载沙箱图片。
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('loadData')
-        .onClick(() => {
-          try {
-            this.controller.loadData(
-              "<img src=bb.jpg>", // 尝试从"file:///xxx/" + "bb.jpg"加载该图片。
-              "text/html",
-              "UTF-8",
-              // 加载本地应用沙箱内的图片路径，请将路径改为实际使用的沙箱路径。
-              "file:///data/storage/el2/base/haps/entry/files/data/.cache_dir/",
-              ""
-            );
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .fileAccess(true) // 为了加载应用沙箱内的图片，需要启用文件访问功能。 
-    }
-  }
-}
-```
-
 ## loadUrl
 
 ```TypeScript
@@ -8778,8 +2067,6 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 加载指定的URL。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8801,289 +2088,6 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 | [17100003](../errorcode-webview.md#17100003-resource路径错误) |
 
-**示例**
-
-ArkTs-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('loadUrl')
-        .onClick(() => {
-          try {
-            // 需要加载的URL是string类型。
-            this.controller.loadUrl('www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTs-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('loadUrl')
-        .onClick(() => {
-          try {
-            // 需要加载的URL是string类型。
-            this.controller.loadUrl('www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('loadUrl')
-        .onClick(() => {
-          try {
-            // 带参数headers。
-            this.controller.loadUrl('www.example.com', [{ headerKey: "headerKey", headerValue: "headerValue" }]);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTs-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('loadUrl')
-        .onClick(() => {
-          try {
-            // 带参数headers。
-            this.controller.loadUrl('www.example.com', [{ headerKey: "headerKey", headerValue: "headerValue" }]);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('loadUrl')
-        .onClick(() => {
-          try {
-            // 通过$rawfile加载本地资源文件。
-            this.controller.loadUrl($rawfile('index.html'));
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button, $rawfile } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('loadUrl')
-        .onClick(() => {
-          try {
-            // 通过$rawfile加载本地资源文件。
-            this.controller.loadUrl($rawfile('index.html'));
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('loadUrl')
-        .onClick(() => {
-          try {
-            // 通过resource协议加载本地资源文件。
-            this.controller.loadUrl("resource://rawfile/index.html#home");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('loadUrl')
-        .onClick(() => {
-          try {
-            // 通过resource协议加载本地资源文件。
-            this.controller.loadUrl("resource://rawfile/index.html");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-在“srcmainresourcesrawfile”文件夹下创建index.html：
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<body>
-<div id="content"></div>
-
-<script>
-  function loadContent() {
-    var hash = window.location.hash;
-    var contentDiv = document.getElementById('content');
-
-    if (hash === '#home') {
-      contentDiv.innerHTML = '<h1>Home Page</h1><p>Welcome to the Home Page!</p>';
-    } else {
-      contentDiv.innerHTML = '<h1>Default Page</h1><p>This is the default content.</p>';
-    }
-  }
-
-  // 加载界面
-  window.addEventListener('load', loadContent);
-
-  // 当hash变化时，更新界面
-  window.addEventListener('hashchange', loadContent);
-</script>
-</body>
-</html>
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-  <body>
-    <p>Hello World</p>
-  </body>
-</html>
-```
-
 ## off('controllerAttachStateChange')
 
 ```TypeScript
@@ -9094,8 +2098,6 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -9104,82 +2106,6 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 | --- | --- | --- |
 | type | 'controllerAttachStateChange' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 |
-
-## offControllerAttachStateChange
-
-```TypeScript
-offControllerAttachStateChange(callback?: Callback<ControllerAttachState>): void
-```
-
-Unregister the callback for controller attach state change.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 |
-
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError, Callback } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  // 构建回调函数。
-  handleControllerAttachStateChange: Callback<webview.ControllerAttachState> = (state: webview.ControllerAttachState): void => {
-    if (state == webview.ControllerAttachState.UNATTACHED) {
-      console.info('handleControllerAttachStateChange: Controller is unattached.');
-    } else {
-      console.info('handleControllerAttachStateChange: Controller is attached.');
-    }
-  };
-  aboutToAppear() {
-    try {
-      this.controller.onControllerAttachStateChange(this.handleControllerAttachStateChange);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-    try {
-      // 注册回调以接收controller绑定状态更改通知。
-      this.controller.onControllerAttachStateChange((state: webview.ControllerAttachState) => {
-        if (state == webview.ControllerAttachState.UNATTACHED) {
-          console.info('Controller is unattached.');
-        } else {
-          console.info('Controller is attached.');
-        }
-      })
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-  aboutToDisappear() {
-    // 取消指定注册回调。
-    // this.controller.offControllerAttachStateChange(this.handleControllerAttachStateChange);
-    // 取消所有注册回调。
-    this.controller.offControllerAttachStateChange();
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## on('controllerAttachStateChange')
 
@@ -9190,8 +2116,6 @@ on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState
 注册WebViewController绑定状态事件，通过Callback方式获取WebViewController绑定状态的变化通知。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -9212,8 +2136,6 @@ onActive(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -9224,100 +2146,15 @@ onActive(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('onActive')
-        .onClick(() => {
-          try {
-            this.controller.onActive();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Web, Button, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('onActive')
-        .onClick(() => {
-          try {
-            this.controller.onActive();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-## onControllerAttachStateChange
-
-```TypeScript
-onControllerAttachStateChange(callback: Callback<ControllerAttachState>): void
-```
-
-Register the callback for controller attach state change.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Web.Webview.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 |
-
-**示例**
-
-请参考[offControllerAttachStateChange](#offcontrollerattachstatechange)。
-
 ## onCreateNativeMediaPlayer
 
 ```TypeScript
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-注册回调函数，使用enableNativeMediaPlayer开启应用接管网页媒体播放功能后，当网页中有播放媒体时，触发注册的回调函 数。如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
+注册回调函数，使用[enableNativeMediaPlayer](../arkts-components/arkts-arkweb-web-attribute.md#enablenativemediaplayer)开启应用接管网页媒体播放功能后，当网页中有播放媒体时，触发注册的回调函 数。如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -9329,426 +2166,6 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 | --- | --- | --- |
 | callback | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-class ActualNativeMediaPlayerListener {
-  handler: webview.NativeMediaPlayerHandler;
-
-  constructor(handler: webview.NativeMediaPlayerHandler) {
-    this.handler = handler;
-  }
-
-  onPlaying() {
-    // 本地播放器开始播放。
-    this.handler.handleStatusChanged(webview.PlaybackStatus.PLAYING);
-  }
-  onPaused() {
-    // 本地播放器暂停播放。
-    this.handler.handleStatusChanged(webview.PlaybackStatus.PAUSED);
-  }
-  onSeeking() {
-    // 本地播放器开始执行跳转到目标时间点。
-    this.handler.handleSeeking();
-  }
-  onSeekDone() {
-    // 本地播放器 seek 完成。
-    this.handler.handleSeekFinished();
-  }
-  onEnded() {
-    // 本地播放器播放完成。
-    this.handler.handleEnded();
-  }
-  onVolumeChanged() {
-    // 获取本地播放器的音量。
-    let volume: number = getVolume();
-    this.handler.handleVolumeChanged(volume);
-  }
-  onCurrentPlayingTimeUpdate() {
-    // 更新播放时间。
-    let currentTime: number = getCurrentPlayingTime();
-    // 将时间单位换算成秒。
-    let currentTimeInSeconds = convertToSeconds(currentTime);
-    this.handler.handleTimeUpdate(currentTimeInSeconds);
-  }
-  onBufferedChanged() {
-    // 缓存发生了变化。
-    // 获取本地播放器的缓存时长。
-    let bufferedEndTime: number = getCurrentBufferedTime();
-    // 将时间单位换算成秒。
-    let bufferedEndTimeInSeconds = convertToSeconds(bufferedEndTime);
-    this.handler.handleBufferedEndTimeChanged(bufferedEndTimeInSeconds);
-
-    // 检查缓存状态。
-    // 如果缓存状态发生了变化，则向 ArkWeb 内核通知缓存状态。
-    let lastReadyState: webview.ReadyState = getLastReadyState();
-    let currentReadyState:  webview.ReadyState = getCurrentReadyState();
-    if (lastReadyState != currentReadyState) {
-      this.handler.handleReadyStateChanged(currentReadyState);
-    }
-  }
-  onEnterFullscreen() {
-    // 本地播放器进入了全屏状态。
-    let isFullscreen: boolean = true;
-    this.handler.handleFullscreenChanged(isFullscreen);
-  }
-  onExitFullscreen() {
-    // 本地播放器退出了全屏状态。
-    let isFullscreen: boolean = false;
-    this.handler.handleFullscreenChanged(isFullscreen);
-  }
-  onUpdateVideoSize(width: number, height: number) {
-    // 当本地播放器解析出视频宽高时， 通知 ArkWeb 内核。
-    this.handler.handleVideoSizeChanged(width, height);
-  }
-  onDurationChanged(duration: number) {
-    // 本地播放器解析到了新的媒体时长， 通知 ArkWeb 内核。
-    this.handler.handleDurationChanged(duration);
-  }
-  onError(error: webview.MediaError, errorMessage: string) {
-    // 本地播放器出错了，通知 ArkWeb 内核。
-    this.handler.handleError(error, errorMessage);
-  }
-  onNetworkStateChanged(state: webview.NetworkState) {
-    // 本地播放器的网络状态发生了变化， 通知 ArkWeb 内核。
-    this.handler.handleNetworkStateChanged(state);
-  }
-  onPlaybackRateChanged(playbackRate: number) {
-    // 本地播放器的播放速率发生了变化， 通知 ArkWeb 内核。
-    this.handler.handlePlaybackRateChanged(playbackRate);
-  }
-  onMutedChanged(muted: boolean) {
-    // 本地播放器的静音状态发生了变化， 通知 ArkWeb 内核。
-    this.handler.handleMutedChanged(muted);
-  }
-
-  // ... 监听本地播放器其他的状态 ...
-}
-
-class NativeMediaPlayerImpl implements webview.NativeMediaPlayerBridge {
-  constructor(handler: webview.NativeMediaPlayerHandler, mediaInfo: webview.MediaInfo) {
-    // 1. 创建一个本地播放器的状态监听。
-    let listener: ActualNativeMediaPlayerListener = new ActualNativeMediaPlayerListener(handler);
-    // 2. 创建一个本地播放器。
-    // 3. 监听该本地播放器。
-    // ...
-  }
-
-  updateRect(x: number, y: number, width: number, height: number) {
-    // <video> 标签的位置和大小发生了变化。
-    // 根据该信息变化，作出相应的改变。
-  }
-
-  play() {
-    // 启动本地播放器播放。
-  }
-
-  pause() {
-    // 暂停本地播放器播放。
-  }
-
-  seek(targetTime: number) {
-    // 本地播放器跳转到指定的时间点。
-  }
-
-  release() {
-    // 销毁本地播放器。
-  }
-
-  setVolume(volume: number) {
-    // ArkWeb 内核要求调整本地播放器的音量。
-    // 设置本地播放器的音量。
-  }
-
-  setMuted(muted: boolean) {
-    // 将本地播放器静音或取消静音。
-  }
-
-  setPlaybackRate(playbackRate: number) {
-    // 调整本地播放器的播放速度。
-  }
-
-  enterFullscreen() {
-    // 将本地播放器设置为全屏播放。
-  }
-
-  exitFullscreen() {
-    // 将本地播放器退出全屏播放。
-  }
-
-  resumePlayer() {
-    // 重新创建应用内播放器。
-    // 恢复应用内播放器的状态信息。
-  }
-
-  suspendPlayer(type: webview.SuspendType) {
-    // 记录应用内播放器的状态信息。
-    // 销毁应用内播放器。
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController()
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .enableNativeMediaPlayer({enable: true, shouldOverlay: false})
-        .onPageBegin((event) => {
-          this.controller.onCreateNativeMediaPlayer((handler: webview.NativeMediaPlayerHandler, mediaInfo: webview.MediaInfo) => {
-            if (!shouldHandle(mediaInfo)) {
-              // 本地播放器不接管该媒体。
-              // ArkWeb 内核将用自己的播放器来播放该媒体。
-              return null;
-            }
-            let nativePlayer: webview.NativeMediaPlayerBridge = new NativeMediaPlayerImpl(handler, mediaInfo);
-            return nativePlayer;
-          });
-        })
-    }
-  }
-}
-
-// stub
-function getVolume() {
-  return 1;
-}
-function getCurrentPlayingTime() {
-  return 1;
-}
-function getCurrentBufferedTime() {
-  return 1;
-}
-function convertToSeconds(input: number) {
-  return input;
-}
-function getLastReadyState() {
-  return webview.ReadyState.HAVE_NOTHING;
-}
-function getCurrentReadyState() {
-  return webview.ReadyState.HAVE_NOTHING;
-}
-function shouldHandle(mediaInfo: webview.MediaInfo) {
-  return true;
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Observed, State, AppStorage, ObjectLink } from '@kit.ArkUI';
-import { XComponent, XComponentType, XComponentController, Text, Alignment, Resource, ForEach, Area, XComponentOptions,
-  TouchEvent, Stack, Entry, Color, Component, Column, Row, Button, VideoController, Builder, Web, wrapBuilder,
-  FrameNode, NodeContainer, FlexAlign } from '@kit.ArkUI';
-import { NodeController, NodeRenderType, BuilderNode } from '@ohos.arkui.node';
-import { webview } from '@kit.ArkWeb';
-import { UIContext } from '@kit.ArkUI';
-
-class ActualNativeMediaPlayerListener {
-  handler: webview.NativeMediaPlayerHandler;
-
-  constructor(handler: webview.NativeMediaPlayerHandler) {
-    this.handler = handler;
-  }
-
-  onPlaying() {
-    // 本地播放器开始播放。
-    this.handler.handleStatusChanged(webview.PlaybackStatus.PLAYING);
-  }
-  onPaused() {
-    // 本地播放器暂停播放。
-    this.handler.handleStatusChanged(webview.PlaybackStatus.PAUSED);
-  }
-  onSeeking() {
-    // 本地播放器开始执行跳转到目标时间点。
-    this.handler.handleSeeking();
-  }
-  onSeekDone() {
-    // 本地播放器 seek 完成。
-    this.handler.handleSeekFinished();
-  }
-  onEnded() {
-    // 本地播放器播放完成。
-    this.handler.handleEnded();
-  }
-  onVolumeChanged() {
-    // 获取本地播放器的音量。
-    let volume: number = getVolume();
-    this.handler.handleVolumeChanged(volume);
-  }
-  onCurrentPlayingTimeUpdate() {
-    // 更新播放时间。
-    let currentTime: number = getCurrentPlayingTime();
-    // 将时间单位换算成秒。
-    let currentTimeInSeconds = convertToSeconds(currentTime);
-    this.handler.handleTimeUpdate(currentTimeInSeconds);
-  }
-  onBufferedChanged() {
-    // 缓存发生了变化。
-    // 获取本地播放器的缓存时长。
-    let bufferedEndTime: number = getCurrentBufferedTime();
-    // 将时间单位换算成秒。
-    let bufferedEndTimeInSeconds = convertToSeconds(bufferedEndTime);
-    this.handler.handleBufferedEndTimeChanged(bufferedEndTimeInSeconds);
-
-    // 检查缓存状态。
-    // 如果缓存状态发生了变化，则向 ArkWeb 内核通知缓存状态。
-    let lastReadyState: webview.ReadyState = getLastReadyState();
-    let currentReadyState:  webview.ReadyState = getCurrentReadyState();
-    if (lastReadyState != currentReadyState) {
-      this.handler.handleReadyStateChanged(currentReadyState);
-    }
-  }
-  onEnterFullscreen() {
-    // 本地播放器进入了全屏状态。
-    let isFullscreen: boolean = true;
-    this.handler.handleFullscreenChanged(isFullscreen);
-  }
-  onExitFullscreen() {
-    // 本地播放器退出了全屏状态。
-    let isFullscreen: boolean = false;
-    this.handler.handleFullscreenChanged(isFullscreen);
-  }
-  onUpdateVideoSize(width: number, height: number) {
-    // 当本地播放器解析出视频宽高时， 通知 ArkWeb 内核。
-    this.handler.handleVideoSizeChanged(width, height);
-  }
-  onDurationChanged(duration: number) {
-    // 本地播放器解析到了新的媒体时长， 通知 ArkWeb 内核。
-    this.handler.handleDurationChanged(duration);
-  }
-  onError(error: webview.MediaError, errorMessage: string) {
-    // 本地播放器出错了，通知 ArkWeb 内核。
-    this.handler.handleError(error, errorMessage);
-  }
-  onNetworkStateChanged(state: webview.NetworkState) {
-    // 本地播放器的网络状态发生了变化， 通知 ArkWeb 内核。
-    this.handler.handleNetworkStateChanged(state);
-  }
-  onPlaybackRateChanged(playbackRate: number) {
-    // 本地播放器的播放速率发生了变化， 通知 ArkWeb 内核。
-    this.handler.handlePlaybackRateChanged(playbackRate);
-  }
-  onMutedChanged(muted: boolean) {
-    // 本地播放器的静音状态发生了变化， 通知 ArkWeb 内核。
-    this.handler.handleMutedChanged(muted);
-  }
-
-  // ... 监听本地播放器其他的状态 ...
-}
-
-class NativeMediaPlayerImpl implements webview.NativeMediaPlayerBridge {
-  constructor(handler: webview.NativeMediaPlayerHandler, mediaInfo: webview.MediaInfo) {
-    // 1. 创建一个本地播放器的状态监听。
-    let listener: ActualNativeMediaPlayerListener = new ActualNativeMediaPlayerListener(handler);
-    // 2. 创建一个本地播放器。
-    // 3. 监听该本地播放器。
-    // ...
-  }
-
-  updateRect: webview.UpdateRectFn = (x: double, y: double, width: double, height: double) : void=> {
-    // <video> 标签的位置和大小发生了变化。
-    // 根据该信息变化，作出相应的改变。
-  }
-
-  play: webview.ZeroParamFn = () : void=> {
-    // 启动本地播放器播放。
-  }
-
-  pause: webview.ZeroParamFn = () : void=> {
-    // 暂停本地播放器播放。
-  }
-
-  seek: webview.OneParamFn<double> = (targetTime: double) : void=> {
-    // 本地播放器跳转到指定的时间点。
-  }
-
-  release: webview.ZeroParamFn = () : void=> {
-    // 销毁本地播放器。
-  }
-
-  setVolume: webview.OneParamFn<double> = (volume: double) : void=> {
-    // ArkWeb 内核要求调整本地播放器的音量。
-    // 设置本地播放器的音量。
-  }
-
-  setMuted: webview.OneParamFn<boolean> = (muted: boolean) : void=> {
-    // 将本地播放器静音或取消静音。
-  }
-
-  setPlaybackRate: webview.OneParamFn<double> = (playbackRate: double) : void=> {
-    // 调整本地播放器的播放速度。
-  }
-
-  enterFullscreen: webview.ZeroParamFn = () : void=> {
-    // 将本地播放器设置为全屏播放。
-  }
-
-  exitFullscreen: webview.ZeroParamFn = () : void=> {
-    // 将本地播放器退出全屏播放。
-  }
-
-  resumePlayer?: webview.ResumePlayerFn = () : void=> {
-    // 重新创建应用内播放器。
-    // 恢复应用内播放器的状态信息。
-  }
-
-  suspendPlayer?: webview.SuspendPlayerFn = (type: webview.SuspendType) : void=> {
-    // 记录应用内播放器的状态信息。
-    // 销毁应用内播放器。
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined)
-  build() {
-    Column(undefined) {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .enableNativeMediaPlayer({enable: true, shouldOverlay: false})
-        .onControllerAttached((): void => {
-          this.controller.onCreateNativeMediaPlayer((handler: webview.NativeMediaPlayerHandler, mediaInfo: webview.MediaInfo): webview.NativeMediaPlayerBridge => {
-            let nativePlayer: webview.NativeMediaPlayerBridge = new NativeMediaPlayerImpl(handler, mediaInfo);
-            return nativePlayer;
-          });
-        })
-    }
-  }
-}
-
-// stub
-function getVolume() {
-  return 1;
-}
-function getCurrentPlayingTime() {
-  return 1;
-}
-function getCurrentBufferedTime() {
-  return 1;
-}
-function convertToSeconds(input: number) {
-  return input;
-}
-function getLastReadyState() {
-  return webview.ReadyState.HAVE_NOTHING;
-}
-function getCurrentReadyState() {
-  return webview.ReadyState.HAVE_NOTHING;
-}
-function shouldHandle(mediaInfo: webview.MediaInfo) {
-  return true;
-}
-```
-
 ## onInactive
 
 ```TypeScript
@@ -9758,8 +2175,6 @@ onInactive(): void
 调用此接口通知Web组件进入未激活状态。开发者可以在此回调中实现应用失去焦点时应表现的恰当行为。此状态下会尽可能的暂停任何可以安全暂停的内容，例如动画和地理位置。但不会暂停JavaScript，要全局暂停JavaScript，请使用 [pauseAllTimers](#pausealltimers)。要重新激活Web组件，请调用 [onActive](#onactive)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -9771,65 +2186,6 @@ onInactive(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('onInactive')
-        .onClick(() => {
-          try {
-            this.controller.onInactive();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Web, Button, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('onInactive')
-        .onClick(() => {
-          try {
-            this.controller.onInactive();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## pageDown
 
 ```TypeScript
@@ -9839,8 +2195,6 @@ pageDown(bottom: boolean): void
 将Webview的内容向下滚动半个视框大小或者跳转到页面最底部，通过bottom入参控制。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -9859,101 +2213,6 @@ pageDown(bottom: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('pageDown')
-        .onClick(() => {
-          try {
-            this.controller.pageDown(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, Button, $rawfile } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('pageDown')
-        .onClick(() => {
-          try {
-            this.controller.pageDown(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .blue {
-          background-color: lightblue;
-        }
-        .green {
-          background-color: lightgreen;
-        }
-        .blue, .green {
-         font-size:16px;
-         height:200px;
-         text-align: center;       /* 水平居中 */
-         line-height: 200px;       /* 垂直居中（值等于容器高度） */
-        }
-    </style>
-</head>
-<body>
-<div class="blue" >webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-</body>
-</html>
-```
-
 ## pageUp
 
 ```TypeScript
@@ -9963,8 +2222,6 @@ pageUp(top: boolean): void
 将Webview的内容向上滚动半个视框大小或者跳转到页面最顶部，通过top入参控制。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -9983,99 +2240,6 @@ pageUp(top: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('pageUp')
-        .onClick(() => {
-          try {
-            this.controller.pageUp(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, Button, $rawfile } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('pageUp')
-        .onClick(() => {
-          try {
-            this.controller.pageUp(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .blue {
-          background-color: lightblue;
-        }
-        .green {
-          background-color: lightgreen;
-        }
-        .blue, .green {
-         font-size:16px;
-         height:200px;
-         text-align: center;       /* 水平居中 */
-         line-height: 200px;       /* 垂直居中（值等于容器高度） */
-        }
-    </style>
-</head>
-<body>
-<div class="blue" >webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-</body>
-</html>
-```
-
 ## pauseAllMedia
 
 ```TypeScript
@@ -10086,8 +2250,6 @@ pauseAllMedia(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -10097,66 +2259,6 @@ pauseAllMedia(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('pauseAllMedia')
-        .onClick(() => {
-          try {
-            this.controller.pauseAllMedia();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('pauseAllMedia')
-        .onClick(() => {
-          try {
-            this.controller.pauseAllMedia();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## pauseAllTimers
 
@@ -10168,8 +2270,6 @@ static pauseAllTimers(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -10179,88 +2279,6 @@ static pauseAllTimers(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Row() {
-        Button('PauseAllTimers')
-          .onClick(() => {
-            webview.WebviewController.pauseAllTimers();
-          })
-      }
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Entry, Column, Row, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Row() {
-        Button('PauseAllTimers')
-          .onClick(() => {
-            webview.WebviewController.pauseAllTimers();
-          })
-      }
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!DOCTYPE html>
-<html>
-    <body>
-        <button style="width:300px;height:150px;font-size:50px" onclick="startTimer()">start</button>
-        <button style="width:300px;height:150px;font-size:50px" onclick="resetTimer()">reset</button>
-        <input style="width:300px;height:150px;font-size:50px" value="0" id="show_num">
-    </body>
-</html>
-<script>
-    var timer = null;
-    var num = 0;
-
-    function startTimer() {
-        timer = setInterval(function() {
-            document.getElementById("show_num").value = ++num;
-        }, 1000);
-    }
-    
-    function resetTimer() {
-        clearInterval(timer);
-        document.getElementById("show_num").value = 0;
-        num = 0;
-    }
-</script>
-```
 
 ## pauseMicrophone
 
@@ -10276,8 +2294,6 @@ pauseMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -10285,10 +2301,6 @@ pauseMicrophone(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-完整示例代码参考[resumeMicrophone](#resumemicrophone)。
 
 ## postMessage
 
@@ -10299,8 +2311,6 @@ postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 发送Web消息端口到HTML。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -10321,222 +2331,6 @@ postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  ports: webview.WebMessagePort[] = [];
-  @State sendFromEts: string = 'Send this message from ets to HTML';
-  @State receivedFromHtml: string = 'Display received message send from HTML';
-
-  build() {
-    Column() {
-      // 展示接收到的来自HTML的内容
-      Text(this.receivedFromHtml)
-      // 输入框的内容发送到html
-      TextInput({ placeholder: 'Send this message from ets to HTML' })
-        .onChange((value: string) => {
-          this.sendFromEts = value;
-        })
-
-      Button('postMessage')
-        .onClick(() => {
-          try {
-            // 1、创建两个消息端口。
-            this.ports = this.controller.createWebMessagePorts();
-            // 2、在应用侧的消息端口(如端口1)上注册回调事件。
-            this.ports[1].onMessageEvent((result: webview.WebMessage) => {
-              let msg = 'Got msg from HTML:';
-              if (typeof (result) == "string") {
-                console.info("received string message from html5, string is:" + result);
-                msg = msg + result;
-              } else if (typeof (result) == "object") {
-                if (result instanceof ArrayBuffer) {
-                  console.info("received arraybuffer from html5, length is:" + result.byteLength);
-                  msg = msg + "length is " + result.byteLength;
-                } else {
-                  console.info("not support");
-                }
-              } else {
-                console.info("not support");
-              }
-              this.receivedFromHtml = msg;
-            })
-            // 3、将另一个消息端口(如端口0)发送到HTML侧，由HTML侧保存并使用。
-            this.controller.postMessage('__init_port__', [this.ports[0]], '*');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-
-      // 4、使用应用侧的端口给另一个已经发送到html的端口发送消息。
-      Button('SendDataToHTML')
-        .onClick(() => {
-          try {
-            if (this.ports && this.ports[1]) {
-              this.ports[1].postMessageEvent(this.sendFromEts);
-            } else {
-              console.error(`ports is null, Please initialize first`);
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Web, Column, Component, Entry, State, Text, Button, $rawfile, TextInput } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  ports: webview.WebMessagePort[] =[] as webview.WebMessagePort[];
-  @State sendFromEts: string = 'Send this message from ets to HTML';
-  @State receivedFromHtml: string = 'Display received message send from HTML';
-
-  build() {
-    Column() {
-      // 展示接收到的来自HTML的内容。
-      Text(this.receivedFromHtml)
-      // 输入框的内容发送到html。
-      TextInput({ placeholder: 'Send this message from ets to HTML' })
-        .onChange((value: string) => {
-          this.sendFromEts = value;
-        })
-
-      Button('postMessage')
-        .onClick(() => {
-          try {
-            // 1、创建两个消息端口。
-            this.ports = this.controller.createWebMessagePorts();
-            // 2、在应用侧的消息端口(如端口1)上注册回调事件。
-            this.ports[1].onMessageEvent((result: webview.WebMessage) => {
-              let msg = 'Got msg from HTML:';
-              if (typeof (result) == "string") {
-                console.info("received string message from html5, string is:" + result);
-                msg = msg + result;
-              } else if (typeof (result) == "object") {
-                if (result instanceof ArrayBuffer) {
-                  console.info("received arraybuffer from html5, length is:" + result.byteLength);
-                  msg = msg + "length is " + result.byteLength;
-                } else {
-                  console.info("not support");
-                }
-              } else {
-                console.info("not support");
-              }
-              this.receivedFromHtml = msg;
-            })
-            // 3、将另一个消息端口(如端口0)发送到HTML侧，由HTML侧保存并使用。
-            this.controller.postMessage('__init_port__', [this.ports[0]], '*');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-
-      // 4、使用应用侧的端口给另一个已经发送到html的端口发送消息。
-      Button('SendDataToHTML')
-        .onClick(() => {
-          try {
-            if (this.ports && this.ports[1]) {
-              this.ports[1].postMessageEvent(this.sendFromEts);
-            } else {
-              console.error(`ports is null, Please initialize first`);
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebView Message Port Demo</title>
-</head>
-
-  <body>
-    <h1>WebView Message Port Demo</h1>
-    <div>
-        <input type="button" value="SendToEts" onclick="PostMsgToEts(msgFromJS.value);"/><br/>
-        <input id="msgFromJS" type="text" value="send this message from HTML to ets"/><br/>
-    </div>
-    <p class="output">display received message send from ets</p>
-  </body>
-  <script src="xxx.js"></script>
-</html>
-```
-
-```TypeScript
-// xxx.js
-var h5Port;
-var output = document.querySelector('.output');
-window.addEventListener('message', function (event) {
-    if (event.data == '__init_port__') {
-        if (event.ports[0] != null) {
-            h5Port = event.ports[0]; // 1. 保存从ets侧发送过来的端口
-            h5Port.onmessage = function (event) {
-              // 2. 接收ets侧发送过来的消息.
-              var msg = 'Got message from ets:';
-              var result = event.data;
-              if (typeof(result) == "string") {
-                console.info("received string message from html5, string is:" + result);
-                msg = msg + result;
-              } else if (typeof(result) == "object") {
-                if (result instanceof ArrayBuffer) {
-                  console.info("received arraybuffer from html5, length is:" + result.byteLength);
-                  msg = msg + "length is " + result.byteLength;
-                } else {
-                  console.info("not support");
-                }
-              } else {
-                console.info("not support");
-              }
-              output.innerHTML = msg;
-            }
-        }
-    }
-})
-
-// 3. 使用h5Port往ets侧发送消息.
-function PostMsgToEts(data) {
-    if (h5Port) {
-      h5Port.postMessage(data);
-    } else {
-      console.error("h5Port is null, Please initialize first");
-    }
-}
-```
-
 ## postUrl
 
 ```TypeScript
@@ -10546,8 +2340,6 @@ postUrl(url: string, postData: ArrayBuffer): void
 使用"POST"方法加载带有postData的URL。如果URL不是网络URL，则会使用[loadUrl](#loadurl)方法加载URL，忽略postData参 数。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -10568,102 +2360,6 @@ postUrl(url: string, postData: ArrayBuffer): void
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestObj {
-  constructor() {
-  }
-
-  test(str: string): ArrayBuffer {
-    let buf = new ArrayBuffer(str.length);
-    let buff = new Uint8Array(buf);
-
-    for (let i = 0; i < str.length; i++) {
-      buff[i] = str.charCodeAt(i);
-    }
-    return buf;
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State testObjtest: TestObj = new TestObj();
-
-  build() {
-    Column() {
-      Button('postUrl')
-        .onClick(() => {
-          try {
-            // 数据转化为ArrayBuffer类型。
-            let postData = this.testObjtest.test("Name=test&Password=test");
-            this.controller.postUrl('www.example.com', postData);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: '', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-class TestObj {
-  constructor() {
-  }
-
-  test(str: string): ArrayBuffer {
-    let buf = new ArrayBuffer(str.length);
-    let buff = new Uint8Array(buf);
-
-    for (let i = 0; i < str.length; i++) {
-      buff[i] = str.charCodeAt(i);
-    }
-    return buf;
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State testObjtest: TestObj = new TestObj();
-
-  build() {
-    Column() {
-      Button('postUrl')
-        .onClick(() => {
-          try {
-            // 数据转化为ArrayBuffer类型。
-            let postData = this.testObjtest.test("Name=test&Password=test");
-            this.controller.postUrl('www.example.com', postData);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: '', controller: this.controller })
-    }
-  }
-}
-```
-
 ## precompileJavaScript
 
 ```TypeScript
@@ -10673,8 +2369,6 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 预编译JavaScript生成字节码缓存或根据提供的参数更新已有的字节码缓存。接口通过提供的文件信息、E-Tag响应头和Last-Modified响应头判断是否需要更新已有的字节码缓存。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -10699,477 +2393,6 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-const localStorage: LocalStorage = new LocalStorage('uiContext');
-
-export default class EntryAbility extends UIAbility {
-  storage: LocalStorage = localStorage;
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
-      if (err.code) {
-        return;
-      }
-
-      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// EntryAbility.ets
-import { UIAbility, Want, AbilityConstant} from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIContext, LocalStorage, window } from '@kit.ArkUI';
-
-const localStorage: LocalStorage = new LocalStorage('uiContext');
-
-class EntryAbility extends UIAbility {
-  storage: LocalStorage = localStorage;
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', this.storage, (err: BusinessError<void> | null, data): void => {
-      if (err && err.code) {
-        return;
-      }
-      this.storage.setOrCreate<UIContext>("uiContext", windowStage.getMainWindowSync().getUIContext());
-    });
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// DynamicComponent.ets
-import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
-
-export interface BuilderData {
-  url: string;
-  controller: WebviewController;
-  context: UIContext;
-}
-
-let storage : LocalStorage | undefined = undefined;
-
-export class NodeControllerImpl extends NodeController {
-  private rootNode: BuilderNode<BuilderData[]> | null = null;
-  private wrappedBuilder: WrappedBuilder<BuilderData[]> | null = null;
-
-  constructor(wrappedBuilder: WrappedBuilder<BuilderData[]>, context: UIContext) {
-    storage = context.getSharedLocalStorage();
-    super();
-    this.wrappedBuilder = wrappedBuilder;
-  }
-
-  makeNode(): FrameNode | null {
-    if (this.rootNode != null) {
-      return this.rootNode.getFrameNode();
-    }
-    return null;
-  }
-
-  initWeb(url: string, controller: WebviewController) {
-    if(this.rootNode != null) {
-      return;
-    }
-
-    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
-    if (!uiContext) {
-      return;
-    }
-    this.rootNode = new BuilderNode(uiContext);
-    this.rootNode.build(this.wrappedBuilder, { url: url, controller: controller });
-  }
-}
-
-export const createNode = (wrappedBuilder: WrappedBuilder<BuilderData[]>, data: BuilderData) => {
-  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
-  baseNode.initWeb(data.url, data.controller);
-  return baseNode;
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// DynamicComponent.ets
-import { UIContext, LocalStorage, WrappedBuilder, wrapBuilder, Builder } from '@kit.ArkUI';
-import { NodeController, BuilderNode, FrameNode } from '@ohos.arkui.node';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WebBuilder } from "./PrecompileWebview";
-let storage : LocalStorage | undefined = undefined;
-
-export class BuilderData {
-  url: string;
-  controller: webview.WebviewController;
-  context: UIContext;
-
-  constructor(url: string, controller: webview.WebviewController, context: UIContext) {
-    this.url = url;
-    this.controller = controller;
-    this.context = context;
-  }
-}
-
-type MyBuilder = @Builder (p1: BuilderData) => void;
-
-export class NodeControllerImpl extends NodeController {
-  private rootNode: BuilderNode<BuilderData> | null = null;
-  // private wrappedBuilder: WrappedBuilder<@Builder ((p1: BuilderData) => void)> | null = null;
-
-  private wrappedBuilder: WrappedBuilder<MyBuilder> | null = null;
-  constructor(wrappedBuilder: WrappedBuilder<MyBuilder>, context: UIContext) {
-    super();
-    storage = context.getSharedLocalStorage();
-    this.wrappedBuilder = wrappedBuilder;
-  }
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    if (this.rootNode != null) {
-      return this.rootNode!.getFrameNode();
-    }
-    return null;
-  }
-
-  initWeb(url: string, controller: webview.WebviewController) {
-    if(this.rootNode != null) {
-      return;
-    }
-
-    const uiContext: UIContext = storage!.get<UIContext>("uiContext") as UIContext;
-    if (!uiContext) {
-      return;
-    }
-    this.rootNode = new BuilderNode<BuilderData>(uiContext);
-    this.rootNode!.build(wrapBuilder(WebBuilder), new BuilderData(url, controller, uiContext));
-  }
-}
-
-export const createNode = (wrappedBuilder: WrappedBuilder<MyBuilder>, data: BuilderData) => {
-  const baseNode = new NodeControllerImpl(wrappedBuilder, data.context);
-  baseNode.initWeb(data.url, data.controller);
-  return baseNode;
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// PrecompileWebview.ets
-import { BuilderData } from "./DynamicComponent";
-import { Config, configs } from "./PrecompileConfig";
-
-@Builder
-function WebBuilder(data: BuilderData) {
-  Web({ src: data.url, controller: data.controller })
-    .onControllerAttached(() => {
-      precompile(data.controller, configs, data.context);
-    })
-    .fileAccess(true)
-}
-
-export const precompileWebview = wrapBuilder<BuilderData[]>(WebBuilder);
-
-export const precompile = async (controller: WebviewController, configs: Array<Config>, context: UIContext) => {
-  for (const config of configs) {
-    let content = await readRawFile(config.localPath, context);
-
-    try {
-      controller.precompileJavaScript(config.url, content, config.options)
-        .then(errCode => {
-          console.error("precompile successfully! " + errCode);
-        }).catch((errCode: number) => {
-          console.error("precompile failed. " + errCode);
-      });
-    } catch (err) {
-      console.error("precompile failed. " + err.code + " " + err.message);
-    }
-  }
-}
-
-async function readRawFile(path: string, context: UIContext) {
-  try {
-    return await context.getHostContext()!.resourceManager.getRawFileContent(path);
-  } catch (err) {
-    return new Uint8Array(0);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// PrecompileWebview.ets
-import { UIContext, WrappedBuilder, wrapBuilder, Web, Builder } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BuilderData } from "./DynamicComponent";
-import { Config, configs } from "./PrecompileConfig";
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Builder
-export function WebBuilder(data: BuilderData) {
-  Web({ src: data.url, controller: data.controller })
-    .onControllerAttached(() => {
-      precompile(data.controller, configs, data.context);
-    })
-    .fileAccess(true)
-}
-type MyBuilder = @Builder (p1: BuilderData) => void;
-export const precompileWebview : WrappedBuilder<MyBuilder> = wrapBuilder(WebBuilder);
-
-export const precompile = async (controller: webview.WebviewController, configs: Array<Config>, context: UIContext) => {
-  for (const config of configs) {
-    let content = await readRawFile(config.localPath, context);
-
-    try {
-      controller.precompileJavaScript(config.url, content, config.options)
-        .then(errCode => {
-          console.error("precompile successfully! " + errCode);
-        }).catch((errCode: Error) => {
-        console.error("precompile failed. " + errCode);
-      });
-    } catch (err:BusinessError) {
-      console.error("precompile failed. " + err.code + " " + err.message);
-    }
-  }
-}
-
-async function readRawFile(path: string, context: UIContext): Promise<Uint8Array> {
-  try {
-    return await context.getHostContext()!.resourceManager.getRawFileContent(path);
-  } catch (err) {
-    return new Uint8Array(0);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// BusinessWebview.ets
-import { BuilderData } from "./DynamicComponent";
-
-@Builder
-function WebBuilder(data: BuilderData) {
-  // 此处组件可根据业务需要自行扩展
-  Web({ src: data.url, controller: data.controller })
-    .cacheMode(CacheMode.Default)
-}
-
-export const businessWebview = wrapBuilder<BuilderData[]>(WebBuilder);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// BusinessWebview.ets
-import { BuilderData } from "./DynamicComponent";
-import { WrappedBuilder, wrapBuilder, Web, Builder } from '@kit.ArkUI';
-
-@Builder
-function WebBuilder(data: BuilderData) {
-  // 此处组件可根据业务需要自行扩展。
-  Web({ src: data.url, controller: data.controller })
-    // .cacheMode(CacheMode.Default)
-}
-type MyBuilder = @Builder (p1: BuilderData) => void;
-export const businessWebview : WrappedBuilder<MyBuilder> = wrapBuilder(WebBuilder);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// PrecompileConfig.ets
-import { webview } from '@kit.ArkWeb'
-
-export interface Config {
-  url:  string,
-  localPath: string, // 本地资源路径
-  options: webview.CacheOptions
-}
-
-export let configs: Array<Config> = [
-  {
-    url: "https://www.example.com/example.js",
-    localPath: "example.js",
-    options: {
-      responseHeaders: [
-        { headerKey: "E-Tag", headerValue: "aWO42N9P9dG/5xqYQCxsx+vDOoU="},
-        { headerKey: "Last-Modified", headerValue: "Wed, 21 Mar 2024 10:38:41 GMT"}
-      ]
-    }
-  }
-]
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// PrecompileConfig.ets
-import { webview } from '@kit.ArkWeb'
-
-export interface Config {
-  url:  string,
-  localPath: string, // 本地资源路径。
-  options: webview.CacheOptions
-}
-
-export let configs: Array<Config> = [
-  {
-    url: "https://www.example.com/example.js",
-    localPath: "example.js",
-    options: {
-      responseHeaders: [
-        { headerKey: "E-Tag", headerValue: "aWO42N9P9dG/5xqYQCxsx+vDOoU="},
-        { headerKey: "Last-Modified", headerValue: "Wed, 21 Mar 2024 10:38:41 GMT"}
-      ]
-    }
-  }
-]
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// Index.ets
-import { webview } from '@kit.ArkWeb';
-import { NodeController } from '@kit.ArkUI';
-import { createNode } from "./DynamicComponent"
-import { precompileWebview } from "./PrecompileWebview"
-import { businessWebview } from "./BusinessWebview"
-
-@Entry
-@Component
-struct Index {
-  @State precompileNode: NodeController | undefined = undefined;
-  precompileController: webview.WebviewController = new webview.WebviewController();
-
-  @State businessNode: NodeController | undefined = undefined;
-  businessController: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    // 初始化用于注入本地资源的Web组件
-    this.precompileNode = createNode(precompileWebview,
-      { url: "https://www.example.com/empty.html", controller: this.precompileController, context: this.getUIContext()});
-  }
-
-  build() {
-    Column() {
-      // 在适当的时机加载业务用Web组件，本例以Button点击触发为例
-      Button("加载页面")
-        .onClick(() => {
-          this.businessNode = createNode(businessWebview, {
-            url:  "https://www.example.com/business.html",
-            controller: this.businessController,
-            context: this.getUIContext()
-          });
-        })
-      // 用于业务的Web组件
-      NodeContainer(this.businessNode);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// Index.ets
-import { Button, Column, Entry, Component, State, NodeContainer } from '@kit.ArkUI';
-import { NodeController } from '@ohos.arkui.node';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { createNode, BuilderData } from "./DynamicComponent";
-import { businessWebview } from "./BusinessWebview";
-import { precompileWebview } from "./PrecompileWebview";
-@Entry
-@Component
-struct Index {
-  @State precompileNode: NodeController | undefined = undefined;
-  precompileController: webview.WebviewController = new webview.WebviewController();
-
-  @State businessNode: NodeController | undefined = undefined;
-  businessController: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    // 初始化用于注入本地资源的Web组件。
-    this.precompileNode = createNode(precompileWebview,
-      new BuilderData( "https://www.example.com/empty.html", this.precompileController, this.getUIContext()));
-  }
-
-  build() {
-    Column() {
-      // 在适当的时机加载业务用Web组件，本例以Button点击触发为例。
-      Button("加载页面")
-        .onClick(() => {
-          this.businessNode = createNode(businessWebview, new BuilderData(
-            "https://www.example.com/business.html",
-            this.businessController,
-            this.getUIContext()
-          ));
-        })
-      // 用于业务的Web组件。
-      NodeContainer(this.businessNode!);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const url: "https://www.example.com/example.js";
-const scripts = "console.info('test')";
-
-const options: { responseHeaders: [
-        { headerKey: "E-Tag", headerValue: "aWO42N9P9dG/5xqYQCxsx+vDOoU="},
-        { headerKey: "Last-Modified", headerValue: "Wed, 21 Mar 2024 10:38:41 GMT"}
-      ] } as webview.CacheOptions;
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('PrecompileJavaScript')
-        .onClick(() => {
-          try {
-            this.controller.precompileJavaScript(url, scripts, options);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## prefetchPage
 
 ```TypeScript
@@ -11189,8 +2412,6 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -11209,134 +2430,6 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Button('prefetchPopularPage')
-        .onClick(() => {
-          try {
-            // 预加载时，需要将'https://www.example.com'替换成一个真实的网站地址。
-            let options = new webview.PrefetchOptions();
-            options.ignoreCacheControlNoStore = true;
-            options.minTimeBetweenPrefetchesMs = 100;
-            this.controller.prefetchPage('https://www.example.com', [{ headerKey: "headerKey", headerValue: "headerValue" }], options);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      // 需要将'www.example1.com'替换成一个真实的网站地址。
-      Web({ src: 'www.example1.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Component, Column, Button, Web } from '@ohos.arkui.component'
-import { BusinessError } from '@ohos.base'
-import { webview } from '@kit.ArkWeb';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  build() {
-    Column() {
-      Button('prefetchPopularPage')
-        .onClick(() => {
-          try {
-            let options = new webview.PrefetchOptions();
-            options.ignoreCacheControlNoStore = true;
-            options.minTimeBetweenPrefetchesMs = 100;
-            // 预加载时，需要将'https://www.example.com'替换成一个真实的网站地址。
-            this.controller.prefetchPage('https://www.example.com', [{ headerKey: "headerKey", headerValue: "headerValue" }], options);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      // 需要将'www.example1.com'替换成一个真实的网站地址。
-      Web({ src: 'https://www.example1.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('prefetchPopularPage')
-        .onClick(() => {
-          try {
-            // 预加载时，需要将'https://www.example.com'替换成一个真实的网站地址。
-            this.controller.prefetchPage('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      // 需要将'www.example1.com'替换成一个真实的网站地址。
-      Web({ src: 'www.example1.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('prefetchPopularPage')
-        .onClick(() => {
-          try {
-            // 预加载时，需要将'https://www.example.com'替换成一个真实的网站地址。
-            this.controller.prefetchPage('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      // 需要将'www.example1.com'替换成一个真实的网站地址。
-      Web({ src: 'www.example1.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## prefetchPage
 
 ```TypeScript
@@ -11353,8 +2446,6 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?
 > 则在使用之前会重新验证资源。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11373,10 +2464,6 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-参见 [prefetchPage](#prefetchpage)
-
 ## prefetchResource
 
 ```TypeScript
@@ -11387,8 +2474,6 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
 根据指定的请求信息和附加的HTTP请求头去预获取资源请求，存入内存缓存，并指定其缓存key和有效期，以加快加载速度。目前仅支持Content-Type为application/x-www-form-urlencoded的 POST请求。最多可以预获取6个POST请求。如果要预获取第7个，请通过 [clearPrefetchedResource](#clearprefetchedresource)清除不需要的POST请求缓存，否则会自动清除最早预获取的 POST缓存。如果要使用预获取的资源缓存，开发者需要在正式发起的POST请求的请求头中增加键值“ArkWebPostCacheKey”，其内容为对应缓存的cacheKey。内存缓存中的资源由内核自动管理。当注入的资源过多，导致内存压力过大时，内核会自动释放未使用的资源，但仍应避免向内存缓存中注入大量资源。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -11410,67 +2495,6 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { webview } from '@kit.ArkWeb';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate");
-    webview.WebviewController.initializeWebEngine();
-    // 预获取时，需要將"https://www.example1.com/post?e=f&g=h"替换成真实要访问的网站地址。
-    webview.WebviewController.prefetchResource(
-      {
-        url: "https://www.example1.com/post?e=f&g=h",
-        method: "POST",
-        formData: "a=x&b=y",
-      },
-      [{
-        headerKey: "c",
-        headerValue: "z",
-      },],
-      "KeyX", 500);
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-'use static'
-import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-import { AppStorage } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    webview.WebviewController.initializeWebEngine();
-    // 预获取时，需要将"https://www.example1.com/post?e=f&g=h"替换成真实要访问的网站地址。
-    webview.WebviewController.prefetchResource(
-      {
-        url: "https://www.example1.com/post?e=f&g=h",
-        method: "POST",
-        formData: "a=x&b=y",
-      },
-      [{
-        headerKey: "c",
-        headerValue: "z",
-      },],
-      "KeyX", 500);
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
-
 ## prepareForPageLoad
 
 ```TypeScript
@@ -11480,8 +2504,6 @@ static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: numb
 预连接URL，在加载URL之前调用此API，对URL只进行DNS解析，socket建链操作，并不获取主资源子资源。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -11502,48 +2524,6 @@ static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: numb
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 | [17100013](../errorcode-webview.md#17100013-预连接时输入socket数目无效) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { webview } from '@kit.ArkWeb';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate");
-    webview.WebviewController.initializeWebEngine();
-    // 预连接时，需要将'https://www.example.com'替换成一个真实的网站地址。
-    webview.WebviewController.prepareForPageLoad("https://www.example.com", true, 2);
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { AppStorage } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate");
-    webview.WebviewController.initializeWebEngine();
-    // 预连接时，需要將'https://www.example.com'替换成一个真实的网站地址。
-    webview.WebviewController.prepareForPageLoad("https://www.example.com", true, 2);
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
-
 ## refresh
 
 ```TypeScript
@@ -11553,8 +2533,6 @@ refresh(): void
 调用此接口通知Web组件刷新网页。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -11566,119 +2544,6 @@ refresh(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-'use static'
-
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## refresh
 
 ```TypeScript
@@ -11688,8 +2553,6 @@ refresh(ignoreCache: boolean): void
 通知Web组件刷新网页，可以选择是否忽略缓存刷新。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -11704,10 +2567,6 @@ refresh(ignoreCache: boolean): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-参见 [refresh](#refresh)
 
 ## registerJavaScriptProxy
 
@@ -11730,8 +2589,6 @@ registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -11740,10 +2597,10 @@ registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [jsObject](arkts-arkweb-web-javascriptproxy-i.md) | object | 是 |
+| jsObject | object | 是 |
 | name | string | 是 |
-| methodList | Array & lt;string & gt; | 是 |
-| asyncMethodList | Array & lt;string & gt; | 否 |
+| [methodList](../arkts-components/arkts-arkweb-javascriptproxy-i.md) | Array & lt;string & gt; | 是 |
+| [asyncMethodList](../arkts-components/arkts-arkweb-javascriptproxy-i.md) | Array & lt;string & gt; | 否 |
 | permission | string | 否 |
 
 **错误码：**
@@ -11752,259 +2609,6 @@ registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestObj {
-  constructor() {
-  }
-
-  test(testStr: string): string {
-    console.info('Web Component str' + testStr);
-    return testStr;
-  }
-
-  toString(): void {
-    console.info('Web Component toString');
-  }
-
-  testNumber(testNum: number): number {
-    console.info('Web Component number' + testNum);
-    return testNum;
-  }
-
-  asyncTestBool(testBol: boolean): void {
-    console.info('Web Component boolean' + testBol);
-  }
-}
-
-class WebObj {
-  constructor() {
-  }
-
-  webTest(): string {
-    console.info('Web test');
-    return "Web test";
-  }
-
-  webString(): void {
-    console.info('Web test toString');
-  }
-}
-
-class AsyncObj {
-  constructor() {
-  }
-
-  asyncTest(): void {
-    console.info('Async test');
-  }
-
-  asyncString(testStr: string): void {
-    console.info('Web async string' + testStr);
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State testObjtest: TestObj = new TestObj();
-  @State webTestObj: WebObj = new WebObj();
-  @State asyncTestObj: AsyncObj = new AsyncObj();
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Register JavaScript To Window')
-        .onClick(() => {
-          try {
-            // 同时注册同步和异步函数
-            this.controller.registerJavaScriptProxy(this.testObjtest, "objName", ["test", "toString", "testNumber"], ["asyncTestBool"]);
-            // 仅注册同步函数
-            this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
-            // 仅注册异步函数
-            this.controller.registerJavaScriptProxy(this.asyncTestObj, "objAsyncName", [], ["asyncTest", "asyncString"]);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objName");
-            this.controller.deleteJavaScriptRegister("objTestName");
-            this.controller.deleteJavaScriptRegister("objAsyncName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry, $rawfile, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestObj {
-  constructor() {
-  }
-
-  test(testStr: string): string {
-    console.info('Web Component str' + testStr);
-    return testStr;
-  }
-
-  toString(): string {
-    console.info('Web Component toString');
-    return 'TestObj toString';
-  }
-
-  testNumber(testNum: number): number {
-    console.info('Web Component number' + testNum);
-    return testNum;
-  }
-
-  asyncTestBool(testBol: boolean): void {
-    console.info('Web Component boolean' + testBol);
-  }
-}
-
-class WebObj {
-  constructor() {
-  }
-
-  webTest(): string {
-    console.info('Web test');
-    return "Web test";
-  }
-
-  webString(): void {
-    console.info('Web test toString');
-  }
-}
-
-class AsyncObj {
-  constructor() {
-  }
-
-  asyncTest(): void {
-    console.info('Async test');
-  }
-
-  asyncString(testStr: string): void {
-    console.info('Web async string' + testStr);
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State testObjtest: TestObj = new TestObj();
-  @State webTestObj: WebObj = new WebObj();
-  @State asyncTestObj: AsyncObj = new AsyncObj();
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Register JavaScript To Window')
-        .onClick(() => {
-          try {
-            // 同时注册同步和异步函数
-            this.controller.registerJavaScriptProxy(this.testObjtest, "objName", ["test", "toString", "testNumber"],
-              ["asyncTestBool"]);
-            // 仅注册同步函数
-            this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
-            // 仅注册异步函数
-            this.controller.registerJavaScriptProxy(this.asyncTestObj, "objAsyncName", [],
-              ["asyncTest", "asyncString"]);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objName");
-            this.controller.deleteJavaScriptRegister("objTestName");
-            this.controller.deleteJavaScriptRegister("objAsyncName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-    </head>
-    <body>
-      <button type="button" onclick="htmlTest()">Click Me!</button>
-      <p id="demo"></p>
-      <p id="webDemo"></p>
-      <p id="asyncDemo"></p>
-      <script type="text/javascript">
-        function htmlTest() {
-          // This function call expects to return "ArkUI Web Component"
-          let str=objName.test("webtest data");
-          objName.testNumber(1);
-          objName.asyncTestBool(true);
-          document.getElementById("demo").innerHTML=str;
-          console.info('objName.test result:'+ str)
-
-          // This function call expects to return "Web test"
-          let webStr = objTestName.webTest();
-          document.getElementById("webDemo").innerHTML=webStr;
-          console.info('objTestName.webTest result:'+ webStr)
-
-          objAsyncName.asyncTest();
-          objAsyncName.asyncString("async test data");
-        }
-      </script>
-    </body>
-</html>
-```
 
 ## removeAllCache
 
@@ -12019,8 +2623,6 @@ static removeAllCache(clearRom: boolean): void
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -12035,66 +2637,6 @@ static removeAllCache(clearRom: boolean): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('removeAllCache')
-        .onClick(() => {
-          try {
-            webview.WebviewController.removeAllCache(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('removeAllCache')
-        .onClick(() => {
-          try {
-            webview.WebviewController.removeAllCache(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## removeCache
 
 ```TypeScript
@@ -12107,8 +2649,6 @@ removeCache(clearRom: boolean): void
 > 可以通过在data/storage/el2/base/cache/web/Cache目录下查看Webview的缓存。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -12127,66 +2667,6 @@ removeCache(clearRom: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('removeCache')
-        .onClick(() => {
-          try {
-            this.controller.removeCache(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('removeCache')
-        .onClick(() => {
-          try {
-            this.controller.removeCache(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## removeIntelligentTrackingPreventionBypassingList
 
 ```TypeScript
@@ -12196,8 +2676,6 @@ static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>)
 删除通过addIntelligentTrackingPreventionBypassingList接口添加的部分域名列表。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -12216,68 +2694,6 @@ static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>)
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('removeIntelligentTrackingPreventionBypassingList')
-        .onClick(() => {
-          try {
-            let hostList = ["www.test1.com", "www.test2.com"];
-            webview.WebviewController.removeIntelligentTrackingPreventionBypassingList(hostList);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('removeIntelligentTrackingPreventionBypassingList')
-        .onClick(() => {
-          try {
-            let hostList = ["www.test1.com", "www.test2.com"];
-            webview.WebviewController.removeIntelligentTrackingPreventionBypassingList(hostList);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## requestFocus
 
 ```TypeScript
@@ -12287,8 +2703,6 @@ requestFocus(): void
 使指定组件获取焦点。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -12300,67 +2714,6 @@ requestFocus(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('requestFocus')
-        .onClick(() => {
-          try {
-            this.controller.requestFocus();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        });
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-// xxx.ets
-import { Entry, Column, Component, Button, Web } from '@ohos.arkui.component';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('requestFocus')
-        .onClick(() => {
-          try {
-            this.controller.requestFocus();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        });
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## restoreWebState
 
 ```TypeScript
@@ -12370,8 +2723,6 @@ restoreWebState(state: Uint8Array) : void
 当前WebView从序列化数据中恢复页面状态历史记录。如果state过大，可能会导致异常。建议state大于512k时，放弃恢复页面状态历史记录。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -12390,134 +2741,6 @@ restoreWebState(state: Uint8Array) : void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('RestoreWebState')
-        .onClick(() => {
-          try {
-            let path: string | undefined = AppStorage.get("cacheDir");
-            if (path) {
-              path += '/WebState';
-              // 以同步方法打开文件。
-              let file = fileIo.openSync(path, fileIo.OpenMode.READ_WRITE);
-              let stat = fileIo.statSync(path);
-              let size = stat.size;
-              let buf = new ArrayBuffer(size);
-              fileIo.read(file.fd, buf, (err, readLen) => {
-                if (err) {
-                  console.error("console error with error message: " + err.message + ", error code: " + err.code);
-                } else {
-                  console.info("read file data succeed");
-                  this.controller.restoreWebState(new Uint8Array(buf.slice(0, readLen)));
-                  fileIo.closeSync(file);
-                }
-              });
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Entry, Text, Column, Component, Button, Web, AppStorage} from '@kit.ArkUI'
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('RestoreWebState')
-        .onClick(() => {
-          try {
-            let path: string | undefined = AppStorage.get<string>("cacheDir") as string;
-            if (path !== undefined) {
-              let pathTemp: string = path + '/WebState';
-              // 以同步方法打开文件。
-              let file = fileIo.openSync(pathTemp, fileIo.OpenMode.READ_WRITE);
-              let stat = fileIo.statSync(pathTemp);
-              let size = stat.size;
-              let buf = new ArrayBuffer(size);
-              fileIo.read(file.fd, buf, (err, readLen) => {
-                if (err) {
-                  console.error("console error with error message: " + err.message + ", error code: " + err.code);
-                } else {
-                  if (readLen) {
-                    let readLenTemp = readLen as Int;
-                    console.info("read file data succeed");
-                    this.controller.restoreWebState(new Uint8Array(buf.slice(0, readLen)));
-                    fileIo.closeSync(file);
-                  }
-                }
-              });
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    // 通过在AppStorage对象上绑定cacheDir，可以实现UIAbility组件与Page之间的数据同步。
-    AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { AppStorage} from '@kit.ArkUI'
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    // 通过在AppStorage对象上绑定cacheDir，可以实现UIAbility组件与Page之间的数据同步。
-    AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
-  }
-}
-```
-
 ## resumeAllMedia
 
 ```TypeScript
@@ -12528,8 +2751,6 @@ resumeAllMedia(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -12539,66 +2760,6 @@ resumeAllMedia(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('resumeAllMedia')
-        .onClick(() => {
-          try {
-            this.controller.resumeAllMedia();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('resumeAllMedia')
-        .onClick(() => {
-          try {
-            this.controller.resumeAllMedia();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## resumeAllTimers
 
@@ -12610,8 +2771,6 @@ static resumeAllTimers(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -12621,96 +2780,6 @@ static resumeAllTimers(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Row() {
-        Button('ResumeAllTimers')
-          .onClick(() => {
-            webview.WebviewController.resumeAllTimers();
-          })
-        Button('PauseAllTimers')
-          .onClick(() => {
-            webview.WebviewController.pauseAllTimers();
-          })
-      }
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Entry, Column, Row, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Row() {
-        Button('PauseAllTimers')
-          .onClick(() => {
-            webview.WebviewController.pauseAllTimers();
-          })
-        Button('ResumeAllTimers')
-          .onClick(() => {
-            webview.WebviewController.resumeAllTimers();
-          })
-      }
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!DOCTYPE html>
-<html>
-    <body>
-        <button style="width:300px;height:150px;font-size:50px" onclick="startTimer()">start</button>
-        <button style="width:300px;height:150px;font-size:50px" onclick="resetTimer()">reset</button>
-        <input style="width:300px;height:150px;font-size:50px" value="0" id="show_num">
-    </body>
-</html>
-<script>
-    var timer = null;
-    var num = 0;
-
-    function startTimer() {
-        timer = setInterval(function() {
-            document.getElementById("show_num").value = ++num;
-        }, 1000);
-    }
-
-    function resetTimer() {
-        clearInterval(timer);
-        document.getElementById("show_num").value = 0;
-        num = 0;
-    }
-</script>
-```
 
 ## resumeMicrophone
 
@@ -12722,8 +2791,6 @@ resumeMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -12731,219 +2798,6 @@ resumeMicrophone(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { abilityAccessCtrl, PermissionRequestResult, common } from '@kit.AbilityKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  aboutToAppear(): void {
-    let context: Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-    atManager.requestPermissionsFromUser(context, ['ohos.permission.MICROPHONE'], (err: BusinessError, data: PermissionRequestResult) => {
-      if (err) {
-        console.error(`ErrorCode: ${err.code}, Message: ${err.message}`);
-        return;
-      }
-      console.info('data:' + JSON.stringify(data));
-      console.info('data permissions:' + data.permissions);
-      console.info('data authResults:' + data.authResults);
-    })
-  }
-
-  build() {
-    Column() {
-      Button("resumeMicrophone").onClick(() => {
-        try {
-          this.controller.resumeMicrophone();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("pauseMicrophone").onClick(() => {
-        try {
-          this.controller.pauseMicrophone();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("stopMicrophone").onClick(() => {
-        try {
-          this.controller.stopMicrophone();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onPermissionRequest((event) => {
-          if (event) {
-            this.uiContext.showAlertDialog({
-              title: 'title',
-              message: 'text',
-              primaryButton: {
-                value: 'deny',
-                action: () => {
-                  event.request.deny();
-                }
-              },
-              secondaryButton: {
-                value: 'onConfirm',
-                action: () => {
-                  event.request.grant(event.request.getAccessibleResource());
-                }
-              },
-              cancel: () => {
-                event.request.deny();
-              }
-            })
-          }
-        })
-        .onMicrophoneCaptureStateChange((event: MicrophoneCaptureStateChangeInfo) => {
-          console.info("MicrophoneCapture from ", event.originalState, " to ", event.newState);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { $rawfile, Web, Column, Component, Entry, Button, OnPermissionRequestEvent, Context } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { UIContext } from "@kit.ArkUI";
-import { AlertDialogParamWithButtons, AlertDialogButtonBaseOptions } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { PermissionRequestResult, common } from '@kit.AbilityKit';
-import abilityAccessCtrl from '@ohos.abilityAccessCtrl'
-import { MicrophoneCaptureStateChangeInfo } from '@ohos.arkui.component'
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  uiContext: UIContext = this.getUIContext();
-
-  aboutToAppear(): void {
-    let context: Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-    let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-    atManager.requestPermissionsFromUser(context, ['ohos.permission.MICROPHONE'],
-      (err: BusinessError | null, data?: PermissionRequestResult) => {
-        if (err) {
-          console.error(`ErrorCode: ${err.code}, Message: ${err.message}`);
-          return;
-        }
-        if (data) {
-          console.info('data:' + JSON.stringify(data));
-          console.info('data permissions:' + data.permissions);
-          console.info('data authResults:' + data.authResults);
-        }
-      })
-  }
-
-  build() {
-    Column() {
-      Button("resumeMicrophone").onClick(() => {
-        try {
-          this.controller.resumeMicrophone();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("pauseMicrophone").onClick(() => {
-        try {
-          this.controller.pauseMicrophone();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("stopMicrophone").onClick(() => {
-        try {
-          this.controller.stopMicrophone();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onPermissionRequest((event: OnPermissionRequestEvent): void => {
-          if (event) {
-            const dialogOptions: AlertDialogParamWithButtons = {
-              title: 'title',
-              message: 'text',
-              primaryButton: {
-                value: 'deny',
-                action: () => {
-                  event.request.deny();
-                },
-              } as AlertDialogButtonBaseOptions,
-              secondaryButton: {
-                value: 'onConfirm',
-                action: () => {
-                  event.request.grant(event.request.getAccessibleResource());
-                },
-              } as AlertDialogButtonBaseOptions,
-              cancel: () => {
-                event.request.deny();
-              }
-            };
-            this.uiContext.showAlertDialog(dialogOptions);
-          }
-        })
-        .onMicrophoneCaptureStateChange((event: MicrophoneCaptureStateChangeInfo | undefined): void => {
-          if (event) {
-            console.info("Microphone from ", event.originalState, " to ", event.newState);
-          }
-        })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
- <head>
-   <meta charset="UTF-8">
- </head>
- <body>
-   <video id="video" width="400px" height="400px" autoplay="autoplay">
-   </video>
-   <input type="button" title="HTML5麦克风" value="开启麦克风" onclick="getMedia()" />
-   <script>
-     function getMedia() {
-       let constraints = {
-         video: {
-           width: 500,
-           height: 500
-         },
-         audio: true
-       }
-       let video = document.getElementById("video");
-       let promise = navigator.mediaDevices.getUserMedia(constraints);
-       promise.then(function(MediaStream) {
-         video.srcObject = MediaStream;
-         video.play();
-       })
-     }
-   </script>
- </body>
-</html>
-```
 
 ## runJavaScript
 
@@ -12961,8 +2815,6 @@ runJavaScript(script: string): Promise<string>
 > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -12988,215 +2840,6 @@ runJavaScript(script: string): Promise<string>
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100003](../errorcode-webview.md#17100003-resource路径错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State webResult: string = '';
-
-  build() {
-    Column() {
-      Text(this.webResult).fontSize(20)
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-        .onPageEnd(e => {
-          try {
-            this.controller.runJavaScript(
-              'test()',
-              (error, result) => {
-                if (error) {
-                  console.error(`run JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                  return;
-                }
-                if (result) {
-                  this.webResult = result;
-                  console.info(`The test() return value is: ${result}`);
-                }
-              });
-            if (e) {
-              console.info('url: ', e.url);
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, State, $rawfile, Text } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State webResult: string = '';
-
-  build() {
-    Column() {
-      Text(this.webResult).fontSize(20)
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-        .onPageEnd(e => {
-          try {
-            this.controller.runJavaScript(
-              'test()',
-              (error, result) => {
-                if (error) {
-                  console.error(`run JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                  return;
-                }
-                if (result) {
-                  this.webResult = result;
-                  console.info(`The test() return value is: ${result}`);
-                }
-              });
-            if (e) {
-              console.info('url: ', e.url);
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    Hello world!
-    <script type="text/javascript">
-      function test() {
-        console.info('Ark WebComponent')
-        return "This value is from index.html"
-      }
-    </script>
-  </body>
-</html>
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-        .onPageEnd(e => {
-          try {
-            this.controller.runJavaScript('test()')
-              .then((result) => {
-                console.info('result: ' + result);
-              })
-              .catch((error: BusinessError) => {
-                console.error("error: " + error);
-              })
-            if (e) {
-              console.info('url: ', e.url);
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, $rawfile } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-        .onPageEnd(e => {
-          try {
-            this.controller.runJavaScript('test()')
-              .then((result) => {
-                console.info('result: ' + result);
-              })
-              .catch((error: Error) => {
-                console.error("error: " + error);
-              })
-            if (e) {
-              console.info('url: ', e.url);
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    Hello world!
-    <script type="text/javascript">
-      function test() {
-        console.info('Ark WebComponent')
-        return "This value is from index.html"
-      }
-    </script>
-  </body>
-</html>
-```
-
 ## runJavaScript
 
 ```TypeScript
@@ -13213,8 +2856,6 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -13235,10 +2876,6 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100003](../errorcode-webview.md#17100003-resource路径错误) |
 
-**示例**
-
-参见 [runJavaScript](#runjavascript)
-
 ## runJavaScriptExt
 
 ```TypeScript
@@ -13251,8 +2888,6 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -13277,753 +2912,6 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State msg1: string = '';
-  @State msg2: string = '';
-
-  build() {
-    Column() {
-      Text(this.msg1).fontSize(20)
-      Text(this.msg2).fontSize(20)
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-        .onPageEnd(e => {
-          try {
-            this.controller.runJavaScriptExt(
-              'test()',
-              (error, result) => {
-                if (error) {
-                  console.error(`run JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`)
-                  return;
-                }
-                if (result) {
-                  try {
-                    if (result.getErrorDescription()) {
-                      // 若发生异常或返回类型不支持时，getErrorDescription不为空
-                      console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
-                      return;
-                    }
-                    let type = result.getType();
-                    switch (type) {
-                      case webview.JsMessageType.STRING: {
-                        this.msg1 = "result type:" + typeof (result.getString());
-                        this.msg2 = "result getString:" + ((result.getString()));
-                        break;
-                      }
-                      case webview.JsMessageType.NUMBER: {
-                        this.msg1 = "result type:" + typeof (result.getNumber());
-                        this.msg2 = "result getNumber:" + ((result.getNumber()));
-                        break;
-                      }
-                      case webview.JsMessageType.BOOLEAN: {
-                        this.msg1 = "result type:" + typeof (result.getBoolean());
-                        this.msg2 = "result getBoolean:" + ((result.getBoolean()));
-                        break;
-                      }
-                      case webview.JsMessageType.ARRAY_BUFFER: {
-                        this.msg1 = "result type:" + typeof (result.getArrayBuffer());
-                        this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
-                        break;
-                      }
-                      case webview.JsMessageType.ARRAY: {
-                        this.msg1 = "result type:" + typeof (result.getArray());
-                        this.msg2 = "result getArray:" + result.getArray();
-                        break;
-                      }
-                      default: {
-                        this.msg1 = "default break, type:" + type;
-                        break;
-                      }
-                    }
-                  }
-                  catch (resError) {
-                    console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-                  }
-                }
-              });
-            if (e) {
-              console.info('url: ', e.url);
-            }
-          } catch (resError) {
-            console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Entry, Text, Column, Component, Button, Web, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State msg1: string = '';
-  @State msg2: string = '';
-
-  build() {
-    Column() {
-      Text(this.msg1).fontSize(20)
-      Text(this.msg2).fontSize(20)
-      Web({src:"resource://rawfile/index.html", controller:this.controller})
-        .javaScriptAccess(true)
-        .onPageEnd(e => {
-          try {
-            this.controller.runJavaScriptExt(
-              'test()',
-              (error, result) => {
-                if (error) {
-                  console.error(`run JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`)
-                  return;
-                }
-                if (result) {
-                  try {
-                    if (result.getErrorDescription()) {
-                      // 若发生异常或返回类型不支持时，getErrorDescription不为空
-                      console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
-                      return;
-                    }
-                    let type = result.getType();
-                    switch (type) {
-                      case webview.JsMessageType.STRING: {
-                        this.msg1 = "result type:" + typeof (result.getString());
-                        this.msg2 = "result getString:" + ((result.getString()));
-                        break;
-                      }
-                      case webview.JsMessageType.NUMBER: {
-                        this.msg1 = "result type:" + typeof (result.getNumber());
-                        this.msg2 = "result getNumber:" + ((result.getNumber()));
-                        break;
-                      }
-                      case webview.JsMessageType.BOOLEAN: {
-                        this.msg1 = "result type:" + typeof (result.getBoolean());
-                        this.msg2 = "result getBoolean:" + ((result.getBoolean()));
-                        break;
-                      }
-                      case webview.JsMessageType.ARRAY_BUFFER: {
-                        this.msg1 = "result type:" + typeof (result.getArrayBuffer());
-                        this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
-                        break;
-                      }
-                      case webview.JsMessageType.ARRAY: {
-                        this.msg1 = "result type:" + typeof (result.getArray());
-                        this.msg2 = "result getArray:" + result.getArray();
-                        break;
-                      }
-                      default: {
-                        this.msg1 = "default break, type:" + type;
-                        break;
-                      }
-                    }
-                  }
-                  catch (resError) {
-                    console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-                  }
-                }
-              });
-            if (e) {
-              console.info('url: ', e.url);
-            }
-          } catch (resError) {
-            console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 使用ArrayBuffer入参，从文件中获取JavaScript脚本数据。
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State msg1: string = ''
-  @State msg2: string = ''
-
-  build() {
-    Column() {
-      Text(this.msg1).fontSize(20)
-      Text(this.msg2).fontSize(20)
-      Button('runJavaScriptExt')
-        .onClick(() => {
-          try {
-            let uiContext : UIContext = this.getUIContext();
-            let context : Context | undefined = uiContext.getHostContext() as common.UIAbilityContext;
-            let filePath = context!.filesDir + '/test.txt';
-            // 新建并打开文件。
-            let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-            // 写入一段内容至文件。
-            fileIo.writeSync(file.fd, "test()");
-            // 从文件中读取内容。
-            let arrayBuffer: ArrayBuffer = new ArrayBuffer(6);
-            fileIo.readSync(file.fd, arrayBuffer, { offset: 0, length: arrayBuffer.byteLength });
-            // 关闭文件。
-            fileIo.closeSync(file);
-            this.controller.runJavaScriptExt(
-              arrayBuffer,
-              (error, result) => {
-                if (error) {
-                  console.error(`run JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`)
-                  return;
-                }
-                if (result) {
-                  try {
-                    if (result.getErrorDescription()) {
-                      // 若发生异常或返回类型不支持时，getErrorDescription不为空
-                      console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
-                      return;
-                    }
-                    let type = result.getType();
-                    switch (type) {
-                      case webview.JsMessageType.STRING: {
-                        this.msg1 = "result type:" + typeof (result.getString());
-                        this.msg2 = "result getString:" + ((result.getString()));
-                        break;
-                      }
-                      case webview.JsMessageType.NUMBER: {
-                        this.msg1 = "result type:" + typeof (result.getNumber());
-                        this.msg2 = "result getNumber:" + ((result.getNumber()));
-                        break;
-                      }
-                      case webview.JsMessageType.BOOLEAN: {
-                        this.msg1 = "result type:" + typeof (result.getBoolean());
-                        this.msg2 = "result getBoolean:" + ((result.getBoolean()));
-                        break;
-                      }
-                      case webview.JsMessageType.ARRAY_BUFFER: {
-                        this.msg1 = "result type:" + typeof (result.getArrayBuffer());
-                        this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
-                        break;
-                      }
-                      case webview.JsMessageType.ARRAY: {
-                        this.msg1 = "result type:" + typeof (result.getArray());
-                        this.msg2 = "result getArray:" + result.getArray();
-                        break;
-                      }
-                      default: {
-                        this.msg1 = "default break, type:" + type;
-                        break;
-                      }
-                    }
-                  }
-                  catch (resError) {
-                    console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-                  }
-                }
-              });
-          } catch (resError) {
-            console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// 使用ArrayBuffer入参，从文件中获取JavaScript脚本数据
-import { Entry, Text, Column, Component, Button, Web, UIContext, Context, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State msg1: string = ''
-  @State msg2: string = ''
-  uiContext:UIContext = this.getUIContext();
-  build() {
-    Column() {
-      Text(this.msg1).fontSize(20)
-      Text(this.msg2).fontSize(20)
-      Button('runJavaScriptExt')
-        .onClick(() => {
-          try {
-            let context:Context|undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-            let filePath = context!.filesDir + 'test.txt';
-            // 新建并打开文件
-            let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-            // 写入一段内容至文件
-            fileIo.writeSync(file.fd, "test()");
-            // 从文件中读取内容
-            let arrayBuffer: ArrayBuffer = new ArrayBuffer(6);
-            fileIo.readSync(file.fd, arrayBuffer, { offset: 0, length: arrayBuffer.byteLength });
-            // 关闭文件
-            fileIo.closeSync(file);
-            this.controller.runJavaScriptExt(
-              arrayBuffer,
-              (error, result) => {
-                if (error) {
-                  console.error(`run JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`)
-                  return;
-                }
-                if (result) {
-                  try {
-                    if (result.getErrorDescription()) {
-                      // 若发生异常或返回类型不支持时，getErrorDescription不为空
-                      console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
-                      return;
-                    }
-                    let type = result.getType();
-                    switch (type) {
-                      case webview.JsMessageType.STRING: {
-                        this.msg1 = "result type:" + typeof (result.getString());
-                        this.msg2 = "result getString:" + ((result.getString()));
-                        break;
-                      }
-                      case webview.JsMessageType.NUMBER: {
-                        this.msg1 = "result type:" + typeof (result.getNumber());
-                        this.msg2 = "result getNumber:" + ((result.getNumber()));
-                        break;
-                      }
-                      case webview.JsMessageType.BOOLEAN: {
-                        this.msg1 = "result type:" + typeof (result.getBoolean());
-                        this.msg2 = "result getBoolean:" + ((result.getBoolean()));
-                        break;
-                      }
-                      case webview.JsMessageType.ARRAY_BUFFER: {
-                        this.msg1 = "result type:" + typeof (result.getArrayBuffer());
-                        this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
-                        break;
-                      }
-                      case webview.JsMessageType.ARRAY: {
-                        this.msg1 = "result type:" + typeof (result.getArray());
-                        this.msg2 = "result getArray:" + result.getArray();
-                        break;
-                      }
-                      default: {
-                        this.msg1 = "default break, type:" + type;
-                        break;
-                      }
-                    }
-                  }
-                  catch (resError) {
-                    console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-                  }
-                }
-              });
-          } catch (resError) {
-            console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en-gb">
-<body>
-<h1>run JavaScript Ext demo</h1>
-</body>
-<script type="text/javascript">
-function test() {
-  return "hello, world";
-}
-</script>
-</html>
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State webResult: string = '';
-  @State msg1: string = '';
-  @State msg2: string = '';
-
-  build() {
-    Column() {
-      Text(this.webResult).fontSize(20)
-      Text(this.msg1).fontSize(20)
-      Text(this.msg2).fontSize(20)
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-        .onPageEnd(() => {
-          this.controller.runJavaScriptExt('test()')
-            .then((result) => {
-              try {
-                if (result.getErrorDescription()) {
-                  // 若发生异常或返回类型不支持时，getErrorDescription不为空
-                  console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
-                  return;
-                }
-                let type = result.getType();
-                switch (type) {
-                  case webview.JsMessageType.STRING: {
-                    this.msg1 = "result type:" + typeof (result.getString());
-                    this.msg2 = "result getString:" + ((result.getString()));
-                    break;
-                  }
-                  case webview.JsMessageType.NUMBER: {
-                    this.msg1 = "result type:" + typeof (result.getNumber());
-                    this.msg2 = "result getNumber:" + ((result.getNumber()));
-                    break;
-                  }
-                  case webview.JsMessageType.BOOLEAN: {
-                    this.msg1 = "result type:" + typeof (result.getBoolean());
-                    this.msg2 = "result getBoolean:" + ((result.getBoolean()));
-                    break;
-                  }
-                  case webview.JsMessageType.ARRAY_BUFFER: {
-                    this.msg1 = "result type:" + typeof (result.getArrayBuffer());
-                    this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
-                    break;
-                  }
-                  case webview.JsMessageType.ARRAY: {
-                    this.msg1 = "result type:" + typeof (result.getArray());
-                    this.msg2 = "result getArray:" + result.getArray();
-                    break;
-                  }
-                  default: {
-                    this.msg1 = "default break, type:" + type;
-                    break;
-                  }
-                }
-              }
-              catch (resError) {
-                console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-              }
-            }).catch((error: BusinessError) => {
-            console.error("error: " + error);
-          })
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Entry, Text, Column, Component, Button, Web, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State webResult: string = '';
-  @State msg1: string = '';
-  @State msg2: string = '';
-
-  build() {
-    Column() {
-      Text(this.webResult).fontSize(20)
-      Text(this.msg1).fontSize(20)
-      Text(this.msg2).fontSize(20)
-      Web({src:"resource://rawfile/index.html", controller:this.controller})
-        .javaScriptAccess(true)
-        .onPageEnd(() => {
-          this.controller.runJavaScriptExt('test()')
-            .then((result:webview.JsMessageExt) => {
-              try {
-                if (result.getErrorDescription()) {
-                  // 若发生异常或返回类型不支持时，getErrorDescription不为空
-                  console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
-                  return null;
-                }
-                let type = result.getType();
-                switch (type) {
-                  case webview.JsMessageType.STRING: {
-                    this.msg1 = "result type:" + typeof (result.getString());
-                    this.msg2 = "result getString:" + ((result.getString()));
-                    break;
-                  }
-                  case webview.JsMessageType.NUMBER: {
-                    this.msg1 = "result type:" + typeof (result.getNumber());
-                    this.msg2 = "result getNumber:" + ((result.getNumber()));
-                    break;
-                  }
-                  case webview.JsMessageType.BOOLEAN: {
-                    this.msg1 = "result type:" + typeof (result.getBoolean());
-                    this.msg2 = "result getBoolean:" + ((result.getBoolean()));
-                    break;
-                  }
-                  case webview.JsMessageType.ARRAY_BUFFER: {
-                    this.msg1 = "result type:" + typeof (result.getArrayBuffer());
-                    this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
-                    break;
-                  }
-                  case webview.JsMessageType.ARRAY: {
-                    this.msg1 = "result type:" + typeof (result.getArray());
-                    this.msg2 = "result getArray:" + result.getArray();
-                    break;
-                  }
-                  default: {
-                    this.msg1 = "default break, type:" + type;
-                    break;
-                  }
-                }
-              }
-              catch (resError) {
-                console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-              }
-            }).catch((error) => {
-            console.error("error: " + error);
-          })
-        })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 使用ArrayBuffer入参，从文件中获取JavaScript脚本数据。
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State msg1: string = '';
-  @State msg2: string = '';
-
-  build() {
-    Column() {
-      Text(this.msg1).fontSize(20)
-      Text(this.msg2).fontSize(20)
-      Button('runJavaScriptExt')
-        .onClick(() => {
-          try {
-            let uiContext : UIContext = this.getUIContext();
-            let context : Context | undefined = uiContext.getHostContext() as common.UIAbilityContext;
-            let filePath = context!.filesDir + '/test.txt';
-            // 新建并打开文件。
-            let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-            // 写入一段内容至文件。
-            fileIo.writeSync(file.fd, "test()");
-            // 从文件中读取内容。
-            let arrayBuffer: ArrayBuffer = new ArrayBuffer(6);
-            fileIo.readSync(file.fd, arrayBuffer, { offset: 0, length: arrayBuffer.byteLength });
-            // 关闭文件。
-            fileIo.closeSync(file);
-            this.controller.runJavaScriptExt(arrayBuffer)
-              .then((result) => {
-                try {
-                  if (result.getErrorDescription()) {
-                    // 若发生异常或返回类型不支持时，getErrorDescription不为空
-                    console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
-                    return;
-                  }
-                  let type = result.getType();
-                  switch (type) {
-                    case webview.JsMessageType.STRING: {
-                      this.msg1 = "result type:" + typeof (result.getString());
-                      this.msg2 = "result getString:" + ((result.getString()));
-                      break;
-                    }
-                    case webview.JsMessageType.NUMBER: {
-                      this.msg1 = "result type:" + typeof (result.getNumber());
-                      this.msg2 = "result getNumber:" + ((result.getNumber()));
-                      break;
-                    }
-                    case webview.JsMessageType.BOOLEAN: {
-                      this.msg1 = "result type:" + typeof (result.getBoolean());
-                      this.msg2 = "result getBoolean:" + ((result.getBoolean()));
-                      break;
-                    }
-                    case webview.JsMessageType.ARRAY_BUFFER: {
-                      this.msg1 = "result type:" + typeof (result.getArrayBuffer());
-                      this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
-                      break;
-                    }
-                    case webview.JsMessageType.ARRAY: {
-                      this.msg1 = "result type:" + typeof (result.getArray());
-                      this.msg2 = "result getArray:" + result.getArray();
-                      break;
-                    }
-                    default: {
-                      this.msg1 = "default break, type:" + type;
-                      break;
-                    }
-                  }
-                }
-                catch (resError) {
-                  console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-                }
-              })
-              .catch((error: BusinessError) => {
-                console.error("error: " + error);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// 使用ArrayBuffer入参，从文件中获取JavaScript脚本数据
-import { Entry, Text, Column, Component, Button, Web, UIContext, Context, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State msg1: string = '';
-  @State msg2: string = '';
-  uiContext:UIContext = this.getUIContext();
-  build() {
-    Column() {
-      Text(this.msg1).fontSize(20)
-      Text(this.msg2).fontSize(20)
-      Button('runJavaScriptExt')
-        .onClick(() => {
-          try {
-            let context:Context|undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-            let filePath = context!.filesDir + 'test.txt';
-            // 新建并打开文件。
-            let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-            // 写入一段内容至文件。
-            fileIo.writeSync(file.fd, "test()");
-            // 从文件中读取内容。
-            let arrayBuffer: ArrayBuffer = new ArrayBuffer(6);
-            fileIo.readSync(file.fd, arrayBuffer, { offset: 0, length: arrayBuffer.byteLength });
-            // 关闭文件。
-            fileIo.closeSync(file);
-            this.controller.runJavaScriptExt(arrayBuffer)
-              .then((result:webview.JsMessageExt) => {
-                try {
-                  if (result.getErrorDescription()) {
-                    // 若发生异常或返回类型不支持时，getErrorDescription不为空
-                    console.info(`runJavaScriptExt getErrorDescription: ${result.getErrorDescription()}`);
-                    return null;
-                  }
-                  let type = result.getType();
-                  switch (type) {
-                    case webview.JsMessageType.STRING: {
-                      this.msg1 = "result type:" + typeof (result.getString());
-                      this.msg2 = "result getString:" + ((result.getString()));
-                      break;
-                    }
-                    case webview.JsMessageType.NUMBER: {
-                      this.msg1 = "result type:" + typeof (result.getNumber());
-                      this.msg2 = "result getNumber:" + ((result.getNumber()));
-                      break;
-                    }
-                    case webview.JsMessageType.BOOLEAN: {
-                      this.msg1 = "result type:" + typeof (result.getBoolean());
-                      this.msg2 = "result getBoolean:" + ((result.getBoolean()));
-                      break;
-                    }
-                    case webview.JsMessageType.ARRAY_BUFFER: {
-                      this.msg1 = "result type:" + typeof (result.getArrayBuffer());
-                      this.msg2 = "result getArrayBuffer byteLength:" + ((result.getArrayBuffer().byteLength));
-                      break;
-                    }
-                    case webview.JsMessageType.ARRAY: {
-                      this.msg1 = "result type:" + typeof (result.getArray());
-                      this.msg2 = "result getArray:" + result.getArray();
-                      break;
-                    }
-                    default: {
-                      this.msg1 = "default break, type:" + type;
-                      break;
-                    }
-                  }
-                }
-                catch (resError) {
-                  console.error(`ErrorCode: ${(resError as BusinessError).code},  Message: ${(resError as BusinessError).message}`);
-                }
-              })
-              .catch((error) => {
-                console.error("error: " + error);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({src:"resource://rawfile/index.html", controller:this.controller})
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en-gb">
-<body>
-<h1>run JavaScript Ext demo</h1>
-</body>
-<script type="text/javascript">
-function test() {
-  return "hello, world";
-}
-</script>
-</html>
-```
-
 ## runJavaScriptExt
 
 ```TypeScript
@@ -14036,8 +2924,6 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 > - 前端页面传到应用侧的string数据类型会被视为JSON格式的数据，需要调用JSON.parse反序列化。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -14057,10 +2943,6 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-参见 [runJavaScriptExt](#runjavascriptext)
-
 ## scrollBy
 
 ```TypeScript
@@ -14070,8 +2952,6 @@ scrollBy(deltaX: number, deltaY: number, duration?: number): void
 在指定时间内将页面滚动指定的偏移量。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -14092,106 +2972,6 @@ scrollBy(deltaX: number, deltaY: number, duration?: number): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('scrollBy')
-        .onClick(() => {
-          try {
-            this.controller.scrollBy(50, 50, 500);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('stopScroll')
-        .onClick(() => {
-          try {
-            this.controller.scrollBy(0, 0, 1); // 如果想停止当前scroll产生的动画，可再次生成一个1ms的动画去打断该动画。
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('scrollBy')
-        .onClick(() => {
-          try {
-            this.controller.scrollBy(50, 50, 500);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('stopScroll')
-        .onClick(() => {
-          try {
-            this.controller.scrollBy(0, 0, 1); // 如果想停止当前scroll产生的动画，可再次生成一个1ms的动画去打断该动画。
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Demo</title>
-    <style>
-        body {
-            width:2000px;
-            height:2000px;
-            padding-right:170px;
-            padding-left:170px;
-            border:5px solid blueviolet;
-        }
-    </style>
-</head>
-<body>
-Scroll Test
-</body>
-</html>
-```
-
 ## scrollByWithResult
 
 ```TypeScript
@@ -14201,8 +2981,6 @@ scrollByWithResult(deltaX: number, deltaY: number): boolean
 将页面滚动指定的偏移量，返回值表示此次滚动是否执行成功。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -14226,92 +3004,6 @@ scrollByWithResult(deltaX: number, deltaY: number): boolean
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('scrollByWithResult')
-        .onClick(() => {
-          try {
-          let result = this.controller.scrollByWithResult(50, 50);
-          console.info("original result: " + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, Button, $rawfile } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('scrollByWithResult')
-        .onClick(() => {
-          try {
-          let result = this.controller.scrollByWithResult(50, 50);
-          console.info("original result: " + result);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Demo</title>
-    <style>
-        body {
-            width:2000px;
-            height:2000px;
-            padding-right:170px;
-            padding-left:170px;
-            border:5px solid blueviolet;
-        }
-    </style>
-</head>
-<body>
-Scroll Test
-</body>
-</html>
-```
-
 ## scrollTo
 
 ```TypeScript
@@ -14321,8 +3013,6 @@ scrollTo(x: number, y: number, duration?: number): void
 在指定时间内，将页面滚动到指定的绝对位置。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -14343,117 +3033,15 @@ scrollTo(x: number, y: number, duration?: number): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('scrollTo')
-        .onClick(() => {
-          try {
-            this.controller.scrollTo(50, 50, 500);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-        Button('stopScroll')
-        .onClick(() => {
-          try {
-            this.controller.scrollBy(0, 0, 1); // 如果想停止当前scroll产生的动画，可再次生成一个1ms的动画去打断该动画。
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('scrollTo')
-        .onClick(() => {
-          try {
-            this.controller.scrollTo(50, 50, 500);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-        Button('stopScroll')
-        .onClick(() => {
-          try {
-            this.controller.scrollBy(0, 0, 1); // 如果想停止当前scroll产生的动画，可再次生成一个1ms的动画去打断该动画。
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Demo</title>
-    <style>
-        body {
-            width:2000px;
-            height:2000px;
-            padding-right:170px;
-            padding-left:170px;
-            border:5px solid blueviolet;
-        }
-    </style>
-</head>
-<body>
-Scroll Test
-</body>
-</html>
-```
-
 ## searchAllAsync
 
 ```TypeScript
 searchAllAsync(searchString: string): void
 ```
 
-异步查找网页中所有匹配关键字'searchString'的内容并高亮，结果通过onSearchResultReceive异步返回。
+异步查找网页中所有匹配关键字'searchString'的内容并高亮，结果通过[onSearchResultReceive](../arkts-components/arkts-arkweb-web-attribute.md#onsearchresultreceive)异步返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -14472,92 +3060,6 @@ searchAllAsync(searchString: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State searchString: string = "Hello World";
-
-  build() {
-    Column() {
-      Button('searchString')
-        .onClick(() => {
-          try {
-            this.controller.searchAllAsync(this.searchString);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onSearchResultReceive(ret => {
-          if (ret) {
-            console.info("on search result receive:" + "[cur]" + ret.activeMatchOrdinal +
-              "[total]" + ret.numberOfMatches + "[isDone]" + ret.isDoneCounting);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry, $rawfile, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State searchString: string = "Hello World";
-
-  build() {
-    Column() {
-      Button('searchString')
-        .onClick(() => {
-          try {
-            this.controller.searchAllAsync(this.searchString);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onSearchResultReceive(ret => {
-          if (ret) {
-            console.info("on search result receive:" + "[cur]" + ret.activeMatchOrdinal +
-              "[total]" + ret.numberOfMatches + "[isDone]" + ret.isDoneCounting);
-          }
-        })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-  <body>
-    <p>Hello World Highlight Hello World</p>
-  </body>
-</html>
-```
-
 ## searchNext
 
 ```TypeScript
@@ -14567,8 +3069,6 @@ searchNext(forward: boolean): void
 滚动到下一个匹配的查找结果并高亮。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -14587,66 +3087,6 @@ searchNext(forward: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('searchNext')
-        .onClick(() => {
-          try {
-            this.controller.searchNext(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('searchNext')
-        .onClick(() => {
-          try {
-            this.controller.searchNext(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
 ## serializeWebState
 
 ```TypeScript
@@ -14656,8 +3096,6 @@ serializeWebState() : Uint8Array
 将当前WebView的页面状态历史记录信息序列化。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -14675,114 +3113,6 @@ serializeWebState() : Uint8Array
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('serializeWebState')
-        .onClick(() => {
-          try {
-            let state = this.controller.serializeWebState();
-            let path:string | undefined = AppStorage.get("cacheDir");
-            if (path) {
-              path += '/WebState';
-              // 以同步方法打开文件。
-              let file = fileIo.openSync(path, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-              fileIo.writeSync(file.fd, state.buffer);
-              fileIo.closeSync(file.fd);
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Column, Component, Button, Web, AppStorage } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('serializeWebState')
-        .onClick(() => {
-          try {
-            let state = this.controller.serializeWebState();
-            let path:string | undefined = AppStorage.get<string>("cacheDir") as string;
-            if (path) {
-              path += '/WebState';
-              // 以同步方法打开文件。
-              let file = fileIo.openSync(path as string, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-              fileIo.writeSync(file.fd, state.buffer);
-              fileIo.closeSync(file.fd);
-            }
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-        // 通过在AppStorage对象上绑定cacheDir，可以实现UIAbility组件与Page之间的数据同步。
-        AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
-    }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { AppStorage } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-        // 通过在AppStorage对象上绑定cacheDir，可以实现UIAbility组件与Page之间的数据同步。
-        AppStorage.setOrCreate("cacheDir", this.context.cacheDir);
-    }
-}
-```
-
 ## setActiveWebEngineVersion
 
 ```TypeScript
@@ -14797,8 +3127,6 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -14806,48 +3134,6 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | engineVersion | [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | 是 |
-
-**示例**
-
-本示例以EntryAbility为例，实现了在Ability创建阶段设置ArkWeb内核版本的功能。
-
-```TypeScript
-// xxx.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate")
-    webview.WebviewController.setActiveWebEngineVersion(webview.ArkWebEngineVersion.M132)
-    if (webview.WebviewController.getActiveWebEngineVersion() == webview.ArkWebEngineVersion.M132) {
-      console.info("Active Web Engine Version set to M132")
-    }
-    console.info("EntryAbility onCreate done")
-  }
-}
-```
-
-本示例以EntryAbility为例，实现了在Ability创建阶段设置ArkWeb内核版本的功能。
-
-```TypeScript
-// xxx.ets
-import UIAbility from '@ohos.app.ability.UIAbility';
-import Want from '@ohos.app.ability.Want';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate")
-    webview.WebviewController.setActiveWebEngineVersion(webview.ArkWebEngineVersion.M132)
-    if (webview.WebviewController.getActiveWebEngineVersion() == webview.ArkWebEngineVersion.M132) {
-      console.info("Active Web Engine Version set to M132")
-    }
-    console.info("EntryAbility onCreate done")
-  }
-}
-```
 
 ## setAppCustomUserAgent
 
@@ -14859,8 +3145,6 @@ static setAppCustomUserAgent(userAgent: string) : void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -14868,71 +3152,6 @@ static setAppCustomUserAgent(userAgent: string) : void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | userAgent | string | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.initializeWebEngine();
-      let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();
-      let appUA = defaultUserAgent + " appUA";
-      webview.WebviewController.setAppCustomUserAgent(appUA);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web, Button, State } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.initializeWebEngine();
-      let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();
-      let appUA = defaultUserAgent + " appUA";
-      webview.WebviewController.setAppCustomUserAgent(appUA);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## setAudioMuted
 
@@ -14943,8 +3162,6 @@ setAudioMuted(mute: boolean): void
 设置网页静音。典型使用场景包括：应用需要控制网页音量（如提供静音开关）、后台播放时需要静音等。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -14963,65 +3180,6 @@ setAudioMuted(mute: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State muted: boolean = false;
-
-  build() {
-    Column() {
-      Button("Toggle Mute")
-        .onClick(event => {
-          if (event) {
-            this.muted = !this.muted;
-            this.controller.setAudioMuted(this.muted);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State muted: boolean = false;
-
-  build() {
-    Column() {
-      Button("Toggle Mute")
-        .onClick(e => {
-          if (e) {
-            this.muted = !this.muted;
-            this.controller.setAudioMuted(this.muted);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setAutoPreconnect
 
 ```TypeScript
@@ -15032,8 +3190,6 @@ static setAutoPreconnect(enabled: boolean): void
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -15041,55 +3197,6 @@ static setAutoPreconnect(enabled: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | enabled | boolean | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-        webview.WebviewController.setAutoPreconnect(false);
-        webview.WebviewController.initializeWebEngine();
-        AppStorage.setOrCreate("abilityWant", want);
-    }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-'use static'
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import UIAbility from '@ohos.app.ability.UIAbility';
-import Want from '@ohos.app.ability.Want';
-import { AppStorage } from 'arkui.stateManagement.storage.appStorage'
-import window from '@ohos.window';
-import { BusinessError } from '@ohos.base';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) : void {
-    webview.WebviewController.setAutoPreconnect(false);
-    webview.WebviewController.initializeWebEngine();
-    AppStorage.setOrCreate("abilityWant", want);
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // 在使用时将'xxx'替换成一个真实的ets文件名。
-    windowStage.loadContent('pages/xxx', (err: BusinessError<void> | null): void => {
-      if (err?.code) {
-        return;
-      }
-    });
-  }
-}
-```
 
 ## setBackForwardCacheOptions
 
@@ -15100,8 +3207,6 @@ setBackForwardCacheOptions(options: BackForwardCacheOptions): void
 可以设置Web组件中前进后退缓存的相关选项。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -15117,82 +3222,6 @@ setBackForwardCacheOptions(options: BackForwardCacheOptions): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ts
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Row() {
-        Button("Add options").onClick((event: ClickEvent) => {
-          let options = new webview.BackForwardCacheOptions();
-          options.size = 3;
-          options.timeToLive = 10;
-          this.controller.setBackForwardCacheOptions(options);
-        })
-        Button("Backward").onClick((event: ClickEvent) => {
-          this.controller.backward();
-        })
-        Button("Forward").onClick((event: ClickEvent) => {
-          this.controller.forward();
-        })
-      }
-      Web({ src: "https://www.example.com", controller: this.controller })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ts
-'use static'
-import { Entry, Component, Column, Row, Button, Web } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Row() {
-        Button("Add options").onClick(() => {
-          let options = new webview.BackForwardCacheOptions();
-          options.size = 3;
-          options.timeToLive = 60;
-          this.controller.setBackForwardCacheOptions(options);
-        })
-        Button("Backward").onClick(() => {
-          this.controller.backward();
-        })
-        Button("Forward").onClick(() => {
-          this.controller.forward();
-        })
-      }
-      // 使用时需要將"https://www.example.com"替换成真实要访问的网站地址。
-      Web({ src: "https://example.com", controller: this.controller })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## setBlanklessLoadingCacheCapacity
 
 ```TypeScript
@@ -15202,8 +3231,6 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 设置无白屏加载方案的持久化缓存容量，返回实际生效值。当接口没有显式调用时，默认缓存容量为30MB。当实际缓存超过容量时，将采用淘汰不常用的过渡帧的方式清理。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -15225,58 +3252,6 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate");
-    webview.WebviewController.initializeWebEngine();
-    // 设置缓存容量为10MB
-    try {
-      webview.WebviewController.setBlanklessLoadingCacheCapacity(10);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import UIAbility from '@ohos.app.ability.UIAbility';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import Want from '@ohos.app.ability.Want';
-import { webview } from '@kit.ArkWeb';
-import { AppStorage } from '@ohos.arkui.stateManagement';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    console.info("EntryAbility onCreate");
-    webview.WebviewController.initializeWebEngine();
-    // 设置缓存容量为10MB
-    try {
-      webview.WebviewController.setBlanklessLoadingCacheCapacity(10);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
-
 ## setBlanklessLoadingWithKey
 
 ```TypeScript
@@ -15293,8 +3268,6 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 > 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -15317,84 +3290,6 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-       .javaScriptAccess(true)
-       .onLoadIntercept((event) => {
-            // 当相似度超过50%，加载耗时小于1000ms时启用插帧，否则不启用。
-            try {
-              let info = this.controller.getBlanklessInfoWithKey('https://www.example.com/page1');
-              if (info.errCode == webview.WebBlanklessErrorCode.SUCCESS) {
-                if (info.similarity >= 0.5 && info.loadingTime < 1000) {
-                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', true);
-                } else {
-                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', false);
-                }
-              } else {
-                console.info('getBlankless info err');
-              }
-            } catch (error) {
-              console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-            }
-            return false;
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Entry, Column, Component, Web } from '@ohos.arkui.component'
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-       .javaScriptAccess(true)
-       .onLoadIntercept((event) => {
-            // 当相似度超过50%，加载耗时小于1000ms时启用插帧，否则不启用。
-            try {
-              let info = this.controller.getBlanklessInfoWithKey('https://www.example.com/page1');
-              if (info.errCode == webview.WebBlanklessErrorCode.SUCCESS) {
-                if (info.similarity >= 0.5 && info.loadingTime < 1000) {
-                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', true);
-                } else {
-                  this.controller.setBlanklessLoadingWithKey('http://www.example.com/page1', false);
-                }
-              } else {
-                console.info('getBlankless info err');
-              }
-            } catch (error) {
-              console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-            }
-            return false;
-        })
-    }
-  }
-}
-```
-
 ## setBlanklessLoadingWithParams
 
 ```TypeScript
@@ -15412,8 +3307,6 @@ setBlanklessLoadingWithParams(key: string,
 > [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -15438,94 +3331,6 @@ setBlanklessLoadingWithParams(key: string,
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-       .javaScriptAccess(true)
-       .onLoadIntercept((event) => {
-            try {
-              let info = this.controller.getBlanklessInfoWithKey('https://www.example.com/page1');
-              if (info.errCode == webview.WebBlanklessErrorCode.SUCCESS) {
-                let data = new Date(2026, 5, 10, 0, 0, 0, 0);
-                let param: webview.BlanklessLoadingParam = {
-                  enable: info.similarity > 0.4 && info.similarity < 2000,
-                  duration: info.loadingTime,
-                  expirationTime: data.getTime(),
-                  callback: (info: webview.BlanklessFrameInterpolationInfo)=>{
-                    // 数据监控
-                  },
-                };
-                this.controller.setBlanklessLoadingWithParams('http://www.example.com/page1', param);
-              } else {
-                console.info('getBlankless info err');
-              }
-            } catch (error) {
-              console.error(`ErrorCode: ${(error as BusinessError).code},
-                Message: ${(error as BusinessError).message}`);
-            }
-            return false;
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Entry, Column, Component, Web } from '@ohos.arkui.component'
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-       .javaScriptAccess(true)
-       .onLoadIntercept((event) => {
-            try {
-              let info = this.controller.getBlanklessInfoWithKey('https://www.example.com/page1');
-              if (info.errCode == webview.WebBlanklessErrorCode.SUCCESS) {
-                let data = new Date(2026, 5, 10, 0, 0, 0, 0);
-                let param: webview.BlanklessLoadingParam = {
-                  enable: info.similarity > 0.4 && info.similarity < 2000,
-                  duration: info.loadingTime,
-                  expirationTime: data.getTime() as Int,
-                  callback: (info: webview.BlanklessFrameInterpolationInfo)=>{
-                    // 数据监控
-                  },
-                };
-                this.controller.setBlanklessLoadingWithParams('http://www.example.com/page1', param);
-              } else {
-                console.info('getBlankless info err');
-              }
-            } catch (error) {
-              console.error(`ErrorCode: ${(error as BusinessError).code},
-                Message: ${(error as BusinessError).message}`);
-            }
-            return false;
-        })
-    }
-  }
-}
-```
-
 ## setConnectionTimeout
 
 ```TypeScript
@@ -15535,8 +3340,6 @@ static setConnectionTimeout(timeout: number): void
 设置网络连接超时时间，使用者可通过Web组件中的onErrorReceive方法获取超时错误码。若未调用该接口则默认超时时间为30秒。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -15553,80 +3356,6 @@ static setConnectionTimeout(timeout: number): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setConnectionTimeout')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setConnectionTimeout(5);
-            console.info("setConnectionTimeout: 5s");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onErrorReceive((event) => {
-          if (event) {
-            console.info('getErrorInfo:' + event.error.getErrorInfo());
-            console.info('getErrorCode:' + event.error.getErrorCode());
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry, OnErrorReceiveEvent } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('setConnectionTimeout')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setConnectionTimeout(5);
-            console.info("setConnectionTimeout: 5s");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onErrorReceive((event: OnErrorReceiveEvent): void => {
-          if (event) {
-            console.info('getErrorInfo:' + event.error.getErrorInfo());
-            console.info('getErrorCode:' + event.error.getErrorCode());
-          }
-        })
-    }
-  }
-}
-```
 
 ## setCustomUserAgent
 
@@ -15645,8 +3374,6 @@ setCustomUserAgent(userAgent: string): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -15664,70 +3391,6 @@ setCustomUserAgent(userAgent: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State customUserAgent: string = ' DemoApp';
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-      .onControllerAttached(() => {
-        console.info("onControllerAttached");
-        try {
-          let userAgent = this.controller.getUserAgent() + this.customUserAgent;
-          this.controller.setCustomUserAgent(userAgent);
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State customUserAgent: string = ' DemoApp';
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          console.info("onControllerAttached");
-          try {
-            let userAgent = this.controller.getUserAgent() + this.customUserAgent;
-            this.controller.setCustomUserAgent(userAgent);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
 ## setDownloadDelegate
 
 ```TypeScript
@@ -15737,8 +3400,6 @@ setDownloadDelegate(delegate: WebDownloadDelegate): void
 为当前的Web组件设置一个WebDownloadDelegate，该delegate用来接收页面内触发的下载进度的委托。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -15756,256 +3417,15 @@ setDownloadDelegate(delegate: WebDownloadDelegate): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  download: webview.WebDownloadItem = new webview.WebDownloadItem();
-  failedData: Uint8Array = new Uint8Array();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info('will start a download.');
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start('/data/storage/el2/base/cache/web/' + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info('download update percent complete: ' + webDownloadItem.getPercentComplete());
-              this.download = webDownloadItem;
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error('download failed guid: ' + webDownloadItem.getGuid());
-              // 序列化失败的下载到一个字节数组。
-              this.failedData = webDownloadItem.serialize();
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info('download finish guid: ' + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-            webview.WebDownloadManager.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('resumeDownload')
-        .onClick(() => {
-          try {
-            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('cancel')
-        .onClick(() => {
-          try {
-            this.download.cancel();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('pause')
-        .onClick(() => {
-          try {
-            this.download.pause();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('resume')
-        .onClick(() => {
-          try {
-            this.download.resume();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-  download: webview.WebDownloadItem = new webview.WebDownloadItem();
-  failedData: Uint8Array = new Uint8Array();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download.");
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-              this.download = webDownloadItem;
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-              this.failedData = webDownloadItem.serialize();
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-            webview.WebDownloadManager.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Button('resumeDownload')
-        .onClick(() => {
-          try {
-            webview.WebDownloadManager.resumeDownload(webview.WebDownloadItem.deserialize(this.failedData));
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Button('cancel')
-        .onClick(() => {
-          try {
-            this.download.cancel();
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Button('pause')
-        .onClick(() => {
-          try {
-            this.download.pause();
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Button('resume')
-        .onClick(() => {
-          try {
-            this.download.resume();
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setErrorPageEnabled
 
 ```TypeScript
 setErrorPageEnabled(enable: boolean): void
 ```
 
-设置是否启用默认错误页。在当前接口设置为true时如果页面加载发生错误将触发onOverrideErrorPage回调，可在该回调接口中设置自定义的错误展示页面。
+设置是否启用默认错误页。在当前接口设置为true时如果页面加载发生错误将触发[onOverrideErrorPage](../arkts-components/arkts-arkweb-web-attribute.md#onoverrideerrorpage)回调，可在该回调接口中设置自定义的错误展示页面。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -16021,141 +3441,13 @@ setErrorPageEnabled(enable: boolean): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-       .onControllerAttached(() => {
-            this.controller.setErrorPageEnabled(true);
-            if (!this.controller.getErrorPageEnabled()) {
-                this.controller.setErrorPageEnabled(true);
-            }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web } from '@kit.ArkUI';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          this.controller.setErrorPageEnabled(true);
-          if (!this.controller.getErrorPageEnabled()) {
-            this.controller.setErrorPageEnabled(true);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("iframe_error.html"), controller: this.controller })
-        .onControllerAttached(() => {
-          // 启用mainframe和subframe错误页功能
-          this.controller.setErrorPageEnabled(true, true);
-          // 查询subframe错误页功能是否已启用
-          let isSubframeEnabled: boolean = this.controller.getSubframeErrorPageEnabled();
-          console.info("Subframe error page enabled: " + isSubframeEnabled);
-        })
-        .onOverrideErrorPage((event) => {
-          if (event.request.isMainFrame()) {
-            return "<html><body><h1>主页面加载失败</h1><p>错误码：" + event.error.getErrorCode() + "</p></body></html>";
-          }
-          return "<html><body><h1>子页面加载失败</h1><p>错误码：" + event.error.getErrorCode() + "</p></body></html>";
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web, $rawfile } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("iframe_error.html"), controller: this.controller })
-        .onControllerAttached(() => {
-          // 启用mainframe和subframe错误页功能
-          this.controller.setErrorPageEnabled(true, true);
-          // 查询subframe错误页功能是否已启用
-          let isSubframeEnabled: boolean = this.controller.getSubframeErrorPageEnabled();
-          console.info("Subframe error page enabled: " + isSubframeEnabled);
-        })
-        .onOverrideErrorPage((event) => {
-          if (event.request.isMainFrame()) {
-            return "<html><body><h1>主页面加载失败</h1><p>错误码：" + event.error.getErrorCode() + "</p></body></html>";
-          }
-          return "<html><body><h1>子页面加载失败</h1><p>错误码：" + event.error.getErrorCode() + "</p></body></html>";
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-<!-- resources/rawfile/iframe_error.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>iframe</title>
-</head>
-<body>
-<iframe src="https://error-test.com/" title="iframe_error.html" loading="lazy" referrerpolicy="no-referrer" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-</body>
-</html>
-```
-
 ## setErrorPageEnabled
 
 ```TypeScript
 setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 ```
 
-设置是否启用mainframe错误页功能，并可控制是否同时启用subframe错误页功能。当enable设置为true时，mainframe加载发生错误将展示错误页：若设置了onOverrideErrorPage回调，则展示用户自定 义的错误页；若未设置，则展示ArkWeb提供的默认错误页。当enable和includeSubframe同时设置为true时，subframe加载发生错误也会展示错误页，onOverrideErrorPage回调对 subframe同样生效。
+设置是否启用mainframe错误页功能，并可控制是否同时启用subframe错误页功能。当enable设置为true时，mainframe加载发生错误将展示错误页：若设置了[onOverrideErrorPage](../arkts-components/arkts-arkweb-web-attribute.md#onoverrideerrorpage)回调，则展示用户自定 义的错误页；若未设置，则展示ArkWeb提供的默认错误页。当enable和includeSubframe同时设置为true时，subframe加载发生错误也会展示错误页，onOverrideErrorPage回调对 subframe同样生效。
 
 > **说明：**&gt;
 > - 当enable设置为false时，无论includeSubframe取何值，mainframe和subframe的错误页功能均不启用。&gt;
@@ -16167,8 +3459,6 @@ setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 > 26.0.0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -16187,10 +3477,6 @@ setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-参见 [setErrorPageEnabled](#seterrorpageenabled)
-
 ## setHostIP
 
 ```TypeScript
@@ -16200,8 +3486,6 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 设置主机域名解析后的IP地址。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16221,10 +3505,6 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-请参考[clearHostIP](#clearhostip)。
-
 ## setHttpDns
 
 ```TypeScript
@@ -16234,8 +3514,6 @@ static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 设置Web组件是否使用HTTPDNS解析DNS。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -16254,56 +3532,6 @@ static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate")
-    try {
-      webview.WebviewController.setHttpDns(webview.SecureDnsMode.AUTO, "https://example1.test")
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done")
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-'use static'
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AppStorage } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate")
-    try {
-      webview.WebviewController.setHttpDns(webview.SecureDnsMode.AUTO, "https://example1.test")
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done")
-  }
-}
-```
-
 ## setNetworkAvailable
 
 ```TypeScript
@@ -16313,8 +3541,6 @@ setNetworkAvailable(enable: boolean): void
 设置JavaScript中的`window.navigator.onLine`属性。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -16333,90 +3559,6 @@ setNetworkAvailable(enable: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setNetworkAvailable')
-        .onClick(() => {
-          try {
-            this.controller.setNetworkAvailable(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry, $rawfile } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('setNetworkAvailable')
-        .onClick(() => {
-          try {
-            this.controller.setNetworkAvailable(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<body>
-<h1>online 属性</h1>
-<p id="demo"></p>
-<button onclick="func()">click</button>
-<script>
-    // 检测浏览器是否在线。
-    var online1 = navigator.onLine;
-    document.getElementById("demo").innerHTML = "浏览器在线：" + online1;
-
-    function func(){
-      var online2 = navigator.onLine;
-      document.getElementById("demo").innerHTML = "浏览器在线：" + online2;
-    }
-</script>
-</body>
-</html>
-```
-
 ## setPathAllowingUniversalAccess
 
 ```TypeScript
@@ -16425,17 +3567,20 @@ setPathAllowingUniversalAccess(pathList: Array<string>): void
 
 设置一个路径列表，当file协议访问该路径列表中的资源时，允许跨域访问本地文件，也允许跨域访问其他在线资源。此外，当设置了路径列表时，file协议仅允许访问路径列表中的资源。典型使用场景：用于需要允许Web组件跨域访问本地资源 文件，同时限制访问范围以保证安全的场景。（fileAccess的行为将会被此接口行为覆盖）。setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风险操作。基于最小权限原则，当前el1，el2放开的路径是固定的，路径列表中的路径应符合以下任一路径格式：
 1.应用文件目录的子目录（应用文件目录通过Ability Kit中的 [Context.filesDir](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#属性)获取），例如：
-* /data/storage/el2/base/files/example * /data/storage/el2/base/haps/entry/files/example
+* /data/storage/el2/base/files/example  
+* /data/storage/el2/base/haps/entry/files/example
 2.应用资源目录及其子目录（应用资源目录通过Ability Kit中的 [Context.resourceDir](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#属性)获取），例如：
-* /data/storage/el1/bundle/entry/resources/resfile * /data/storage/el1/bundle/entry/resources/resfile/example
+* /data/storage/el1/bundle/entry/resources/resfile  
+* /data/storage/el1/bundle/entry/resources/resfile/example
 3.从API version 21开始，还包括了应用缓存目录及其子目录（应用缓存目录通过Ability Kit中的 [Context.cacheDir](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#属性)获取），例如：
-* /data/storage/el2/base/cache * /data/storage/el2/base/haps/entry/cache/example * 设置的目录路径中，不允许包含cache/web，否则会抛出异常码401。如果设置目录路径是cache，cache/web也不允许访问。
+* /data/storage/el2/base/cache  
+* /data/storage/el2/base/haps/entry/cache/example  
+* 设置的目录路径中，不允许包含cache/web，否则会抛出异常码401。如果设置目录路径是cache，cache/web也不允许访问。
 4.从API version 21开始，还包括了应用临时目录及其子目录（应用临时目录通过Ability Kit中的 [Context.tempDir](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#属性)获取），例如：
-* /data/storage/el2/base/temp * /data/storage/el2/base/haps/entry/temp/example当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以fileAccess的 行为为准。
+* /data/storage/el2/base/temp  
+* /data/storage/el2/base/haps/entry/temp/example当路径列表中有其中一个路径不满足以上条件之一，则会抛出异常码401，并且设置路径列表失败。当设置的路径列表为空，则file协议可访问范围以fileAccess的 行为为准。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -16452,138 +3597,6 @@ setPathAllowingUniversalAccess(pathList: Array<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Row() {
-      Web({ src: "", controller: this.controller })
-        .onControllerAttached(() => {
-          try {
-            // 设置允许可以跨域访问的路径列表
-            this.controller.setPathAllowingUniversalAccess([
-              this.uiContext.getHostContext()!.resourceDir,
-              this.uiContext.getHostContext()!.filesDir + "/example"
-            ])
-            this.controller.loadUrl("file://" + this.getUIContext().getHostContext()!.resourceDir + "/index.html")
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-        .javaScriptAccess(true)
-        .fileAccess(true)
-        .domStorageAccess(true)
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Component, Web, UIContext, Row } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Row() {
-      Web({ src: "", controller: this.controller })
-        .onControllerAttached(() => {
-          try {
-            // 设置允许可以跨域访问的路径列表。
-            this.controller.setPathAllowingUniversalAccess([
-              this.uiContext.getHostContext()!.resourceDir,
-              this.uiContext.getHostContext()!.filesDir + "/example"
-            ])
-            this.controller.loadUrl("file://" + this.getUIContext().getHostContext()!.resourceDir + "/index.html")
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-        .javaScriptAccess(true)
-        .fileAccess(true)
-        .domStorageAccess(true)
-    }
-  }
-}
-```
-
-加载的html文件，位于应用资源目录resource/resfile/index.html。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
-    <script>
-        function getFile() {
-            var file = "file:///data/storage/el1/bundle/entry/resources/resfile/js/script.js";
-            var xmlHttpReq = new XMLHttpRequest();
-            xmlHttpReq.onreadystatechange = function(){
-                console.info("readyState:" + xmlHttpReq.readyState);
-                console.info("status:" + xmlHttpReq.status);
-                if(xmlHttpReq.readyState == 4){
-                    if (xmlHttpReq.status == 200) {
-                // 如果ets侧正确设置路径列表，则此处能正常获取资源
-                        const element = document.getElementById('text');
-                        element.textContent = "load " + file + " success";
-                    } else {
-                // 如果ets侧不设置路径列表，则此处会触发CORS跨域检查错误
-                        const element = document.getElementById('text');
-                        element.textContent = "load " + file + " failed";
-                    }
-                }
-            }
-            xmlHttpReq.open("GET", file);
-            xmlHttpReq.send(null);
-        }
-
-    </script>
-</head>
-
-<body>
-<div class="page">
-    <button id="example" onclick="getFile()">stealFile</button>
-</div>
-<div id="text"></div>
-</body>
-
-</html>
-```
-
-html中使用file协议通过XMLHttpRequest跨域访问本地js文件，js文件位于resource/resfile/js/script.js。
-
-```TypeScript
-const body = document.body;
-const element = document.createElement('div');
-element.textContent = 'success';
-body.appendChild(element);
-```
-
 ## setPrintBackground
 
 ```TypeScript
@@ -16593,8 +3606,6 @@ setPrintBackground(enable: boolean): void
 设置是否打印网页背景，该接口与[PrintAttributes](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-print-printattributes-i.md)打印参数配置不一致时，本接口设置优先级高于打印参数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16613,64 +3624,6 @@ setPrintBackground(enable: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setPrintBackground')
-        .onClick(() => {
-          try {
-            this.controller.setPrintBackground(false);
-          } catch (error) {
-            console.error(`ErrorCode:${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('setPrintBackground')
-        .onClick(() => {
-          try {
-            this.controller.setPrintBackground(false);
-          } catch (error) {
-            console.error(`ErrorCode:${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setRenderProcessMode
 
 ```TypeScript
@@ -16680,8 +3633,6 @@ static setRenderProcessMode(mode: RenderProcessMode): void
 设置ArkWeb渲染子进程模式，可根据应用对内存占用与渲染进程隔离的需求选择对应的模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16699,66 +3650,6 @@ static setRenderProcessMode(mode: RenderProcessMode): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setRenderProcessMode')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setRenderProcessMode(webview.RenderProcessMode.MULTIPLE);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Column, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct webViewController {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('setRenderProcessMode')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setRenderProcessMode(webview.RenderProcessMode.MULTIPLE);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        });
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setScrollable
 
 ```TypeScript
@@ -16768,8 +3659,6 @@ setScrollable(enable: boolean, type?: ScrollType): void
 设置网页是否允许滚动。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16789,66 +3678,6 @@ setScrollable(enable: boolean, type?: ScrollType): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setScrollable')
-        .onClick(() => {
-          try {
-            this.controller.setScrollable(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('setScrollable')
-        .onClick(() => {
-          try {
-            this.controller.setScrollable(true, webview.ScrollType.EVENT);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setScrollbarMode
 
 ```TypeScript
@@ -16859,12 +3688,10 @@ static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 
 > **说明：**&gt;
 > - 根据滚动条模式，改变当前应用所有web滚动条模式为常驻滚动条或非常驻滚动条。&gt;
-> - 若forceDisplayScrollBar接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。&gt;
+> - 若[forceDisplayScrollBar](../arkts-components/arkts-arkweb-web-attribute.md#forcedisplayscrollbar)接口与当前接口同时设置，forceDisplayScrollBar接口设置不生效。&gt;
 > - 该接口需要在WebViewController绑定Web组件之前调用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -16873,85 +3700,6 @@ static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | scrollbarMode | [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  aboutToAppear(): void {
-    webview.WebviewController.setScrollbarMode(webview.ScrollbarMode.FORCE_DISPLAY_SCROLLBAR);
-  }
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .height('90%')
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// setScrollbarMode.ets
-import { Web, Column, Component, Entry, $rawfile} from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.setScrollbarMode(webview.ScrollbarMode.FORCE_DISPLAY_SCROLLBAR);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
-    <style>
-      body {
-        width:2560px;
-        height:2560px;
-        padding-right:170px;
-        padding-left:170px;
-        border:5px solid blueviolet;
-      }
-    </style>
-</head>
-<body>
-Scroll Test
-</body>
-</html>
-```
 
 ## setServiceWorkerWebSchemeHandler
 
@@ -16962,8 +3710,6 @@ static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandle
 为当前应用的所有Web组件设置用于拦截ServiceWorker的WebSchemeHandler。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16982,68 +3728,6 @@ static setServiceWorkerWebSchemeHandler(scheme: string, handler: WebSchemeHandle
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
-
-  build() {
-    Column() {
-      Button('setWebSchemeHandler')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setServiceWorkerWebSchemeHandler('http', this.schemeHandler);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
-
-  build() {
-    Column() {
-      Button('setWebSchemeHandler')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setServiceWorkerWebSchemeHandler('http', this.schemeHandler);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setSiteIsolationMode
 
 ```TypeScript
@@ -17057,8 +3741,6 @@ static setSiteIsolationMode(mode: SiteIsolationMode): void
 > 接口只能在初始化时调用一次，不支持反复修改。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -17074,65 +3756,6 @@ static setSiteIsolationMode(mode: SiteIsolationMode): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setSiteIsolationMode')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setSiteIsolationMode(webview.SiteIsolationMode.PARTIAL);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Entry, Component, Column, Web, Button } from '@ohos.arkui.component'
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('setSiteIsolationMode')
-        .onClick(() => {
-          try {
-            webview.WebviewController.setSiteIsolationMode(webview.SiteIsolationMode.PARTIAL);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setSocketIdleTimeout
 
 ```TypeScript
@@ -17143,8 +3766,6 @@ static setSocketIdleTimeout(timeout: number): void
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -17152,45 +3773,6 @@ static setSocketIdleTimeout(timeout: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | timeout | number | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-        webview.WebviewController.setSocketIdleTimeout(200);
-        AppStorage.setOrCreate("abilityWant", want);
-    }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-'use static'
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import UIAbility from '@ohos.app.ability.UIAbility';
-import Want from '@ohos.app.ability.Want';
-import window from '@ohos.window';
-import { BusinessError } from '@ohos.base';
-import hilog from '@ohos.hilog';
-import { webview } from '@kit.ArkWeb';
-import { AppStorage } from 'arkui.stateManagement.storage.appStorage';
-
-class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    webview.WebviewController.setSocketIdleTimeout(200);
-    AppStorage.setOrCreate("abilityWant", want);
-  }
-}
-```
 
 ## setSoftKeyboardBehaviorMode
 
@@ -17201,8 +3783,6 @@ setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void
 设置软键盘自动控制模式，当接口没有显式调用时，Web组件失去焦点或获得焦点、状态切换为inactive或active时，系统均会尝试触发软键盘自动隐藏或拉起。典型使用场景：不希望Web组件在inactive或active状态切 换时自动隐藏或重新拉起软键盘时，可使用DISABLE_AUTO_KEYBOARD_ON_ACTIVE；需要保留默认自动管理行为时，可使用DEFAULT。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -17218,56 +3798,6 @@ setSoftKeyboardBehaviorMode(mode: WebSoftKeyboardBehaviorMode): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// index.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('Web InActive').onClick(() => {
-        this.controller.setSoftKeyboardBehaviorMode(webview.WebSoftKeyboardBehaviorMode.DISABLE_AUTO_KEYBOARD_ON_ACTIVE);
-      })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .keyboardAvoidMode(WebKeyboardAvoidMode.RETURN_TO_UICONTEXT)
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import { Entry, Component, Column, Web, Button, WebKeyboardAvoidMode, $rawfile } from '@ohos.arkui.component'
-import { BusinessError } from '@ohos.base'
-import webview from '@ohos.web.webview';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('Web InActive').onClick(() => {
-        this.controller.setSoftKeyboardBehaviorMode(webview.WebSoftKeyboardBehaviorMode.DISABLE_AUTO_KEYBOARD_ON_ACTIVE);
-      })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .keyboardAvoidMode(WebKeyboardAvoidMode.RETURN_TO_UICONTEXT)
-    }
-  }
-}
-```
-
 ## setUrlTrustList
 
 ```TypeScript
@@ -17277,8 +3807,6 @@ setUrlTrustList(urlTrustList: string): void
 设置Web的URL白名单，只有白名单内的URL才能允许加载/跳转，否则将拦截并弹出告警页。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为24。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -17297,287 +3825,6 @@ setUrlTrustList(urlTrustList: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  urltrustList: string = "{\"UrlPermissionList\":[{\"scheme\":\"http\", \"host\":\"trust.example.com\", \"port\":80, \"path\":\"test\"}]}"
-
-  build() {
-    Column() {
-      Button('Setting the trustlist')
-        .onClick(() => {
-          try {
-            // 设置白名单，只允许访问trust网页
-            this.controller.setUrlTrustList(this.urltrustList);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Cancel the trustlist.')
-        .onClick(() => {
-          try {
-            // 白名单传入空字符串表示关闭白名单机制，所有URL都可以允许访问
-            this.controller.setUrlTrustList("");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Access the trust web')
-        .onClick(() => {
-          try {
-            // 白名单生效，可以访问trust网页
-            this.controller.loadUrl('http://trust.example.com/test');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Access the untrust web')
-        .onClick(() => {
-          try {
-            // 白名单生效，此时不可以访问untrust网页，并弹出错误页
-            this.controller.loadUrl('http://untrust.example.com/test');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'http://untrust.example.com/test', controller: this.controller }).onControllerAttached(() => {
-        try {
-          // onControllerAttached回调中设置白名单，可以保证在加载URL之前生效，此时不可以访问untrust网页，并弹出错误页
-          this.controller.setUrlTrustList(this.urltrustList);
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  urltrustList: string = "{\"UrlPermissionList\":[{\"scheme\":\"http\", \"host\":\"trust.example.com\", \"port\":80, \"path\":\"test\"}]}"
-
-  build() {
-    Column() {
-      Button('Setting the trustlist')
-        .onClick(() => {
-          try {
-            // 设置白名单，只允许访问trust网页。
-            this.controller.setUrlTrustList(this.urltrustList);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Cancel the trustlist.')
-        .onClick(() => {
-          try {
-            // 白名单传入空字符串表示关闭白名单机制，所有URL都可以允许访问。
-            this.controller.setUrlTrustList("");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Access the trust web')
-        .onClick(() => {
-          try {
-            // 白名单生效，可以访问trust网页。
-            this.controller.loadUrl('http://trust.example.com/test');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Access the untrust web')
-        .onClick(() => {
-          try {
-            // 白名单生效，此时不可以访问untrust网页，并弹出错误页。
-            this.controller.loadUrl('http://untrust.example.com/test');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'http://untrust.example.com/test', controller: this.controller }).onControllerAttached(() => {
-        try {
-          // onControllerAttached回调中设置白名单，可以保证在加载URL之前生效，此时不可以访问untrust网页，并弹出错误页。
-          this.controller.setUrlTrustList(this.urltrustList);
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  urltrustList: string = "{\"UrlPermissionList\":[{\"scheme\":\"http\", \"host\":\"trust.example.com\", \"path\":\"test\"}]}"
-  urlWildcardList: string = "{\"UrlPermissionList\":[{\"scheme\":\"http\", \"host\":\"*.example.com\", \"path\":\"*\"}]}"
-
-  build() {
-    Column() {
-      Button('Setting the trustlist')
-        .onClick(() => {
-          try {
-            // 设置白名单，只允许访问trust网页
-            this.controller.setUrlTrustList(this.urltrustList);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Setting the wildcardlist')
-        .onClick(() => {
-          try {
-            // 设置通配符白名单，所有URL都可以允许访问
-            this.controller.setUrlTrustList(this.urlWildcardList, true, true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Cancel the trustlist.')
-        .onClick(() => {
-          try {
-            // 白名单传入空字符串表示关闭白名单机制，所有URL都可以允许访问
-            this.controller.setUrlTrustList("");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Access the trust web')
-        .onClick(() => {
-          try {
-            // 白名单生效，可以访问trust网页
-            this.controller.loadUrl('http://trust.example.com/test');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Access the untrust web')
-        .onClick(() => {
-          try {
-            // 白名单生效，此时不可以访问untrust网页，并弹出错误页
-            this.controller.loadUrl('http://untrust.example.com/test');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'http://untrust.example.com/test', controller: this.controller }).onControllerAttached(() => {
-        try {
-          // onControllerAttached回调中设置白名单，可以保证在加载URL之前生效，此时不可以访问untrust网页，并弹出错误页
-          this.controller.setUrlTrustList(this.urltrustList);
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  urltrustList: string = "{\"UrlPermissionList\":[{\"scheme\":\"http\", \"host\":\"trust.example.com\", \"path\":\"test\"}]}"
-  urlWildcardList: string = "{\"UrlPermissionList\":[{\"scheme\":\"http\", \"host\":\"*.example.com\", \"path\":\"*\"]}]}"
-
-  build() {
-    Column() {
-      Button('Setting trustlist')
-        .onClick(() => {
-          try {
-            // 设置白名单，只允许访问trust网页
-            this.controller.setUrlTrustList(this.urltrustList);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Setting wildcardlist')
-        .onClick(() => {
-          try {
-            // 设置通配符白名单，所有URL都可以允许访问
-            this.controller.setUrlTrustList(this.urlWildcardList, true, true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Cancel trustlist.')
-        .onClick(() => {
-          try {
-            // 白名单传入空字符串表示关闭白名单机制，所有URL都可以允许访问
-            this.controller.setUrlTrustList("");
-          } catcharing (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Access trust web')
-        .onClick(() => {
-          try {
-            // 白名单生效，可以访问trust网页
-            this.controller.loadUrl('http://trust.example.com/test');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('Access untrust web')
-        .onClick(() => {
-          try {
-            // 白名单生效，此时不可以访问untrust网页，并弹出错误页
-            this.controller.loadUrl('http://untrust.example.com/test');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'http://untrust.example.com/test', controller: this.controller }).onControllerAttached(() => {
-        try {
-          // onControllerAttached回调中设置白名单，可以保证在加载URL之前生效，此时不可以访问untrust网页，并弹出错误页
-          this.controller.setUrlTrustList(this.urltrustList);
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-    }
-  }
-}
-```
-
 ## setUrlTrustList
 
 ```TypeScript
@@ -17586,9 +3833,7 @@ setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcar
 
 设置Web的URL白名单，只有白名单内的URL才能允许加载/跳转，否则将拦截并弹出告警页。扩展了对Opaque Origin URL以及通配符规则的控制能力。
 
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为23。
+**起始版本：** 24
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -17607,10 +3852,6 @@ setUrlTrustList(urlTrustList: string, allowOpaqueOrigin: boolean, supportWildcar
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [setUrlTrustList](#seturltrustlist)
-
 ## setUserAgentClientHintsEnabled
 
 ```TypeScript
@@ -17625,8 +3866,6 @@ static setUserAgentClientHintsEnabled(enabled: boolean): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -17634,177 +3873,6 @@ static setUserAgentClientHintsEnabled(enabled: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | enabled | boolean | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State userAgent: string = "";
-
-  build() {
-    Column() {
-      Button('setUserAgentMetadata').fontSize(20)
-        .onClick((e: ClickEvent) => {
-          try {
-            let arrayVersions: Array<webview.UserAgentBrandVersion> = new Array<webview.UserAgentBrandVersion>;
-            let brandVersion:webview.UserAgentBrandVersion = new webview.UserAgentBrandVersion();
-            brandVersion.setBrand("brand OpenHarmony");
-            brandVersion.setMajorVersion("major version 1.0");
-            brandVersion.setFullVersion("blank full version 1.0");
-            arrayVersions.push(brandVersion);
-            let metadata:webview.UserAgentMetadata = new webview.UserAgentMetadata();
-            metadata.setBrandVersionList(arrayVersions);
-            metadata.setFormFactors([webview.UserAgentFormFactor.AUTOMOTIVE]);
-            metadata.setArchitecture("arch OpenHarmony");
-            metadata.setBitness("bitness 64");
-            metadata.setFullVersion("full version OpenHarmony");
-            metadata.setMobile(true);
-            metadata.setModel("model OpenHarmony");
-            metadata.setPlatform("platform OpenHarmony");
-            metadata.setPlatformVersion("platform version OpenHarmony");
-            metadata.setWow64(false);
-            this.controller.setUserAgentMetadata(this.userAgent, metadata);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('getUserAgentMetadata').fontSize(20)
-        .onClick((e: ClickEvent) => {
-          try {
-            this.userAgent = this.controller.getUserAgent();
-            let metadata = this.controller.getUserAgentMetadata(this.userAgent);
-            let versionList = metadata.getBrandVersionList();
-            for(let i = 0; i < versionList.length; i++) {
-              console.info("Brand:" + versionList[i].getBrand());
-              console.info("MajorVersion " + versionList[i].getMajorVersion());
-              console.info("FullVersion " + versionList[i].getFullVersion());
-            }
-            let FormFactors = metadata.getFormFactors();
-            for(let j = 0; j < FormFactors.length; j++) {
-              console.info("FormFactor:" + FormFactors[j]);
-            }
-            console.info("Bitness:" + metadata.getBitness());
-            console.info("FullVersion:" + metadata.getFullVersion());
-            console.info("Mobile:" + metadata.getMobile());
-            console.info("Model:" + metadata.getModel());
-            console.info("Platform:" + metadata.getPlatform());
-            console.info("PlatformVersion:" + metadata.getPlatformVersion());
-            console.info("Wow64:" + metadata.getWow64());
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'https://www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          try {
-            this.userAgent = this.controller.getUserAgent();
-            let metaData: webview.UserAgentMetadata = new webview.UserAgentMetadata();
-            metaData.setPlatform("OpenHarmony");
-            this.controller.setCustomUserAgent(this.userAgent);
-            let enabled: boolean = webview.WebviewController.getUserAgentClientHintsEnabled();
-            console.info("isUserAgentClientHintsEnabled:", enabled);
-            webview.WebviewController.setUserAgentClientHintsEnabled(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Button, ClickEvent, Web } from '@kit.ArkUI';
-import { State } from '@ohos.arkui.stateManagement'
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State userAgent: string = "";
-
-  build() {
-    Column() {
-      Button('setUserAgentMetadata').fontSize(20)
-        .onClick((e: ClickEvent) => {
-          try {
-            let arrayVersions: Array<webview.UserAgentBrandVersion> = new Array<webview.UserAgentBrandVersion>;
-            let brandVersion:webview.UserAgentBrandVersion = new webview.UserAgentBrandVersion();
-            brandVersion.setBrand("brand OpenHarmony");
-            brandVersion.setMajorVersion("major version 1.0");
-            brandVersion.setFullVersion("blank full version 1.0");
-            arrayVersions.push(brandVersion);
-            let metadata:webview.UserAgentMetadata = new webview.UserAgentMetadata();
-            metadata.setBrandVersionList(arrayVersions);
-            metadata.setFormFactors([webview.UserAgentFormFactor.AUTOMOTIVE]);
-            metadata.setArchitecture("arch OpenHarmony");
-            metadata.setBitness("bitness 64");
-            metadata.setFullVersion("full version OpenHarmony");
-            metadata.setMobile(true);
-            metadata.setModel("model OpenHarmony");
-            metadata.setPlatform("platform OpenHarmony");
-            metadata.setPlatformVersion("platform version OpenHarmony");
-            metadata.setWow64(false);
-            this.controller.setUserAgentMetadata(this.userAgent, metadata);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('getUserAgentMetadata').fontSize(20)
-        .onClick((e: ClickEvent) => {
-          try {
-            this.userAgent = this.controller.getUserAgent();
-            let metadata = this.controller.getUserAgentMetadata(this.userAgent);
-            let versionList = metadata.getBrandVersionList();
-            for(let i = 0; i < versionList.length; i++) {
-              console.info("Brand:" + versionList[i].getBrand());
-              console.info("MajorVersion:" + versionList[i].getMajorVersion());
-              console.info("FullVersion:" + versionList[i].getFullVersion());
-            }
-            let FormFactors = metadata.getFormFactors();
-            for(let j = 0; j < FormFactors.length; j++) {
-              console.info("FormFactor:" + FormFactors[j]);
-            }
-            console.info("Bitness:" + metadata.getBitness());
-            console.info("FullVersion:" + metadata.getFullVersion());
-            console.info("Mobile:" + metadata.getMobile());
-            console.info("Model:" + metadata.getModel());
-            console.info("Platform:" + metadata.getPlatform());
-            console.info("PlatformVersion:" + metadata.getPlatformVersion());
-            console.info("Wow64:" + metadata.getWow64());
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'https://www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          try {
-            this.userAgent = this.controller.getUserAgent();
-            let metaData: webview.UserAgentMetadata = new webview.UserAgentMetadata();
-            metaData.setPlatform("OpenHarmony");
-            this.controller.setCustomUserAgent(this.userAgent);
-            let enabled: boolean = webview.WebviewController.getUserAgentClientHintsEnabled();
-            console.info("isUserAgentClientHintsEnabled:", enabled);
-            webview.WebviewController.setUserAgentClientHintsEnabled(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-    }
-  }
-}
-```
 
 ## setUserAgentForHosts
 
@@ -17816,8 +3884,6 @@ static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -17826,83 +3892,6 @@ static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 | --- | --- | --- |
 | userAgent | string | 是 |
 | hosts | Array & lt;string & gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.initializeWebEngine();
-      let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();
-      let appUA = defaultUserAgent + " appUA";
-      webview.WebviewController.setUserAgentForHosts(
-        appUA,
-        [
-          "www.example.com",
-          "www.baidu.com"
-        ]
-      );
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web, Button, State } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.initializeWebEngine();
-      let defaultUserAgent = webview.WebviewController.getDefaultUserAgent();
-      let appUA = defaultUserAgent + " appUA";
-      webview.WebviewController.setUserAgentForHosts(
-        appUA,
-        [
-          "www.example.com",
-          "www.baidu.com"
-        ]
-      );
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## setUserAgentMetadata
 
@@ -17920,8 +3909,6 @@ setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -17930,12 +3917,6 @@ setUserAgentMetadata(userAgent: string, metaData: UserAgentMetadata): void
 | --- | --- | --- |
 | userAgent | string | 是 |
 | metaData | [UserAgentMetadata](arkts-arkweb-webview-useragentmetadata-c.md) | 是 |
-
-**示例**
-
-完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
-
-完整示例代码参考[setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled)。
 
 ## setWebDebuggingAccess
 
@@ -17946,8 +3927,6 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 设置是否启用网页调试功能。详情请参考[DevTools工具](../../../web/web-debugging-with-devtools.md)。安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -17965,123 +3944,6 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.setWebDebuggingAccess(true);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.setWebDebuggingAccess(true);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.setWebDebuggingAccess(true, 8888);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  aboutToAppear(): void {
-    try {
-      webview.WebviewController.setWebDebuggingAccess(true, 8888);
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setWebDebuggingAccess
 
 ```TypeScript
@@ -18089,11 +3951,11 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 ```
 
 设置是否启用无线网页调试功能，默认不开启。  
-* 当没有指定端口port时，该接口等同于 [setWebDebuggingAccess](#setwebdebuggingaccess)接口， ArkWeb会启动一个本地domain socket监听。 * 当指定了端口port时，ArkWeb会启动一个tcp socket监听。这时可以无线调试网页。详情请参考[无线调试](../../../web/web-debugging-with-devtools.md#无线调试)。由于小于1024的端口号作为熟知或系统端口，在操作系统上需要特权才能开启，因此port的取值必须大于1024，否则该接口会抛出异常。安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
+* 当没有指定端口port时，该接口等同于  
+[setWebDebuggingAccess](#setwebdebuggingaccess)接口， ArkWeb会启动一个本地domain socket监听。  
+* 当指定了端口port时，ArkWeb会启动一个tcp socket监听。这时可以无线调试网页。详情请参考[无线调试](../../../web/web-debugging-with-devtools.md#无线调试)。由于小于1024的端口号作为熟知或系统端口，在操作系统上需要特权才能开启，因此port的取值必须大于1024，否则该接口会抛出异常。安全提示：启用网页调试功能可以让用户检查修改Web页面内部状态，存在安全隐患，不建议在应用正式发布版本中启用。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -18109,10 +3971,6 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 | 错误码ID |
 | --- |
 | [17100023](../errorcode-webview.md#17100023-使用了不被允许的端口号) |
-
-**示例**
-
-参见 [setWebDebuggingAccess](#setwebdebuggingaccess)
 
 ## setWebDestroyMode
 
@@ -18130,8 +3988,6 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -18139,48 +3995,6 @@ static setWebDestroyMode(mode: WebDestroyMode): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mode | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info("EntryAbility onCreate");
-    webview.WebviewController.initializeWebEngine();
-    // 设置快速销毁模式
-    webview.WebviewController.setWebDestroyMode(webview.WebDestroyMode.FAST_MODE);
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import UIAbility from '@ohos.app.ability.UIAbility';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import Want from '@ohos.app.ability.Want';
-import { AppStorage } from 'arkui.stateManagement.storage.appStorage';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    console.info("EntryAbility onCreate");
-    webview.WebviewController.initializeWebEngine();
-    // 设置快速销毁模式
-    webview.WebviewController.setWebDestroyMode(webview.WebDestroyMode.FAST_MODE);
-    AppStorage.setOrCreate("abilityWant", want);
-    console.info("EntryAbility onCreate done");
-  }
-}
-```
 
 ## setWebSchemeHandler
 
@@ -18191,8 +4005,6 @@ setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 为Web组件设置[WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md), [WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.md)类用于 拦截指定scheme的请求。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -18212,68 +4024,6 @@ setWebSchemeHandler(scheme: string, handler: WebSchemeHandler): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
-
-  build() {
-    Column() {
-      Button('setWebSchemeHandler')
-        .onClick(() => {
-          try {
-            this.controller.setWebSchemeHandler('http', this.schemeHandler);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
-
-  build() {
-    Column() {
-      Button('setWebSchemeHandler')
-        .onClick(() => {
-          try {
-            this.controller.setWebSchemeHandler('http', this.schemeHandler);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## slideScroll
 
 ```TypeScript
@@ -18283,8 +4033,6 @@ slideScroll(vx: number, vy: number): void
 按照指定速度模拟对页面的轻扫滚动动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -18304,90 +4052,6 @@ slideScroll(vx: number, vy: number): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('slideScroll')
-        .onClick(() => {
-          try {
-            this.controller.slideScroll(500, 500);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('slideScroll')
-        .onClick(() => {
-          try {
-            this.controller.slideScroll(500, 500);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Demo</title>
-    <style>
-        body {
-            width:3000px;
-            height:3000px;
-            padding-right:170px;
-            padding-left:170px;
-            border:5px solid blueviolet;
-        }
-    </style>
-</head>
-<body>
-Scroll Test
-</body>
-</html>
-```
-
 ## startCamera
 
 ```TypeScript
@@ -18397,8 +4061,6 @@ startCamera(): void
 开启当前网页摄像头捕获。使用摄像头功能前请在module.json5中添加权限: ohos.permission.CAMERA，具体权限的添加方法请参考 [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -18410,211 +4072,6 @@ startCamera(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { abilityAccessCtrl, PermissionRequestResult, common } from '@kit.AbilityKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  aboutToAppear(): void {
-    let context: Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-    atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: BusinessError, data: PermissionRequestResult) => {
-      if (err) {
-        console.error(`ErrorCode: ${err.code}, Message: ${err.message}`);
-        return;
-      }
-      console.info('data:' + JSON.stringify(data));
-      console.info('data permissions:' + data.permissions);
-      console.info('data authResults:' + data.authResults);
-    })
-  }
-
-  build() {
-    Column() {
-      Button("startCamera").onClick(() => {
-        try {
-          this.controller.startCamera();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("stopCamera").onClick(() => {
-        try {
-          this.controller.stopCamera();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("closeCamera").onClick(() => {
-        try {
-          this.controller.closeCamera();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onPermissionRequest((event) => {
-          if (event) {
-            this.uiContext.showAlertDialog({
-              title: 'title',
-              message: 'text',
-              primaryButton: {
-                value: 'deny',
-                action: () => {
-                  event.request.deny();
-                }
-              },
-              secondaryButton: {
-                value: 'onConfirm',
-                action: () => {
-                  event.request.grant(event.request.getAccessibleResource());
-                }
-              },
-              cancel: () => {
-                event.request.deny();
-              }
-            })
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Web, Column, Component, Entry, Button, OnPermissionRequestEvent, Context } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { UIContext } from "@kit.ArkUI";
-import { AlertDialogParamWithButtons, AlertDialogButtonBaseOptions } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { PermissionRequestResult, common, abilityAccessCtrl } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  uiContext: UIContext = this.getUIContext();
-
-  aboutToAppear(): void {
-    let context: Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-    let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-    atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'],
-      (err: BusinessError | null, data?: PermissionRequestResult) => {
-        if (err) {
-          console.error(`ErrorCode: ${err.code}, Message: ${err.message}`);
-          return;
-        }
-        if (data) {
-          console.info('data:' + JSON.stringify(data));
-          console.info('data permissions:' + data.permissions);
-          console.info('data authResults:' + data.authResults);
-        }
-      })
-  }
-
-  build() {
-    Column() {
-      Button("startCamera").onClick(() => {
-        try {
-          this.controller.startCamera();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("stopCamera").onClick(() => {
-        try {
-          this.controller.stopCamera();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("closeCamera").onClick(() => {
-        try {
-          this.controller.closeCamera();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onPermissionRequest((event: OnPermissionRequestEvent): void => {
-          if (event) {
-            const dialogOptions: AlertDialogParamWithButtons = {
-              title: 'title',
-              message: 'text',
-              primaryButton: {
-                value: 'deny',
-                action: () => {
-                  event.request.deny();
-                },
-              } as AlertDialogButtonBaseOptions,
-              secondaryButton: {
-                value: 'onConfirm',
-                action: () => {
-                  event.request.grant(event.request.getAccessibleResource());
-                },
-              } as AlertDialogButtonBaseOptions,
-              cancel: () => {
-                event.request.deny();
-              }
-            };
-            this.uiContext.showAlertDialog(dialogOptions);
-          }
-        })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-  </head>
-  <body>
-    <video id="video" width="400px" height="400px" autoplay>
-    </video>
-    <input type="button" title="HTML5摄像头" value="开启摄像头" onclick="getMedia()" />
-    <script>
-      function getMedia() {
-        let constraints = {
-          video: {
-            width: 500,
-            height: 500
-          },
-          audio: true
-        }
-        let video = document.getElementById("video");
-        let promise = navigator.mediaDevices.getUserMedia(constraints);
-        promise.then(function(mediaStream) {
-          video.srcObject = mediaStream;
-          video.play();
-        })
-      }
-    </script>
-  </body>
-</html>
-```
-
 ## startDownload
 
 ```TypeScript
@@ -18624,8 +4081,6 @@ startDownload(url: string): void
 使用Web组件的下载能力来下载指定的URL，比如下载网页中指定的图片。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -18644,84 +4099,6 @@ startDownload(url: string): void
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -18731,8 +4108,6 @@ stop(): void
 停止页面加载。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -18744,66 +4119,6 @@ stop(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('stop')
-        .onClick(() => {
-          try {
-            this.controller.stop();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        });
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('stop')
-        .onClick(() => {
-          try {
-            this.controller.stop();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        });
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## stopAllMedia
 
 ```TypeScript
@@ -18814,8 +4129,6 @@ stopAllMedia(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -18825,66 +4138,6 @@ stopAllMedia(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('stopAllMedia')
-        .onClick(() => {
-          try {
-            this.controller.stopAllMedia();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('stopAllMedia')
-        .onClick(() => {
-          try {
-            this.controller.stopAllMedia();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## stopCamera
 
@@ -18896,8 +4149,6 @@ stopCamera(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -18907,10 +4158,6 @@ stopCamera(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-完整示例代码参考[startCamera](#startcamera)。
 
 ## stopMicrophone
 
@@ -18922,8 +4169,6 @@ stopMicrophone(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **错误码：**
@@ -18931,10 +4176,6 @@ stopMicrophone(): void
 | 错误码ID |
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-
-**示例**
-
-完整示例代码参考[resumeMicrophone](#resumemicrophone)。
 
 ## storeWebArchive
 
@@ -18945,8 +4186,6 @@ storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 以Promise方式异步保存当前页面。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -18973,157 +4212,6 @@ storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100003](../errorcode-webview.md#17100003-resource路径错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('storeWebArchive')
-        .onClick(() => {
-          try {
-            this.controller.storeWebArchive("/data/storage/el2/base/", true, (error, filename) => {
-              if (error) {
-                console.error(`save web archive error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              if (filename != null) {
-                console.info(`save web archive success: ${filename}`);
-              }
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('storeWebArchive')
-        .onClick(() => {
-          try {
-            this.controller.storeWebArchive("/data/storage/el2/base/", true,
-              (error: BusinessError<void> | null | undefined, filename: String | undefined) => {
-                if (error) {
-                  console.error(`save web archive error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                  return;
-                }
-                if (filename != null) {
-                  console.info(`save web archive success: ${filename}`);
-                }
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('storeWebArchive')
-        .onClick(() => {
-          try {
-            this.controller.storeWebArchive("/data/storage/el2/base/", true)
-              .then(filename => {
-                if (filename != null) {
-                  console.info(`save web archive success: ${filename}`)
-                }
-              })
-              .catch((error: BusinessError) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('storeWebArchive')
-        .onClick(() => {
-          try {
-            this.controller.storeWebArchive("/data/storage/el2/base/", true)
-              .then(filename => {
-                if (filename != null) {
-                  console.info(`save web archive success: ${filename}`)
-                }
-              })
-              .catch((error: Error) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## storeWebArchive
 
 ```TypeScript
@@ -19133,8 +4221,6 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 以回调方式异步保存当前页面。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -19156,10 +4242,6 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100003](../errorcode-webview.md#17100003-resource路径错误) |
 
-**示例**
-
-参见 [storeWebArchive](#storewebarchive)
-
 ## terminateRenderProcess
 
 ```TypeScript
@@ -19169,8 +4251,6 @@ terminateRenderProcess(): boolean
 销毁渲染进程。调用该接口将会主动销毁相关联的渲染进程。如果渲染进程尚未启动，或者已销毁则没有任何影响。此外销毁渲染进程会同时影响所有与该渲染进程关联的其他实例。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -19186,60 +4266,6 @@ terminateRenderProcess(): boolean
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('terminateRenderProcess')
-        .onClick(() => {
-          let result = this.controller.terminateRenderProcess();
-          console.info("terminateRenderProcess result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Column, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct webViewController {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('terminateRenderProcess')
-        .onClick(() => {
-          const result: boolean = this.controller.terminateRenderProcess();
-          console.info("terminateRenderProcess result: " + result);
-        });
-      Web({
-        src: 'www.example.com', controller: this.controller,
-      })
-    }
-  }
-}
-```
-
 ## trimMemoryByPressureLevel
 
 ```TypeScript
@@ -19249,8 +4275,6 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 根据指定的内存压力等级，主动清理Web组件占用的缓存。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -19268,72 +4292,6 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Row() {
-        Button('trim_Memory')
-          .onClick(() => {
-            try {
-              // 设置当前内存压力等级为适中，释放少量内存
-              webview.WebviewController.trimMemoryByPressureLevel(
-                webview.PressureLevel.MEMORY_PRESSURE_LEVEL_MODERATE);
-            } catch (error) {
-              console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-            }
-          })
-      }.height('10%')
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Component, Web, Column, Row, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  build() {
-    Column() {
-      Row() {
-        Button('trim_Memory')
-          .onClick(() => {
-            try {
-              // 设置当前内存压力等级为适中，释放少量内存。
-              webview.WebviewController.trimMemoryByPressureLevel(
-                webview.PressureLevel.MEMORY_PRESSURE_LEVEL_MODERATE);
-            } catch (error) {
-              console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-            }
-          })
-      }.height('10%')
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## waitForAttached
 
 ```TypeScript
@@ -19343,8 +4301,6 @@ waitForAttached(timeout: number): Promise<ControllerAttachState>
 异步等待WebViewController与Web组件绑定完成，绑定完成或超时触发回调，通过Promise方式返回当前 [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)状态。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -19360,75 +4316,6 @@ waitForAttached(timeout: number): Promise<ControllerAttachState>
 | --- |
 | Promise&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  async aboutToAppear() {
-    this.controller.waitForAttached(1000).then((state: webview.ControllerAttachState) => {
-      if (state == webview.ControllerAttachState.ATTACHED) {
-        // 绑定完成或者超时都会触发回调
-        console.info('Controller is attached.');
-      }
-    })
-    try {
-      const state = await this.controller.waitForAttached(1000);
-      if (state == webview.ControllerAttachState.ATTACHED) {
-        console.info('Controller is attached.');
-      }
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-// xxx.ets
-import { Web, Column, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  aboutToAppear() {
-    this.controller.waitForAttached(1000).then((state: webview.ControllerAttachState) => {
-      if (state == webview.ControllerAttachState.ATTACHED) {
-        // 绑定完成或者超时都会触发回调。
-        console.info('Controller is attached.');
-      }
-    })
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## warmupServiceWorker
 
 ```TypeScript
@@ -19438,8 +4325,6 @@ static warmupServiceWorker(url: string): void
 预热ServiceWorker，以提升首屏页面的加载速度（仅限于会使用ServiceWorker的页面）。在加载URL之前调用此API。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -19457,47 +4342,6 @@ static warmupServiceWorker(url: string): void
 | --- |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { window } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-        console.info("EntryAbility onCreate");
-        webview.WebviewController.initializeWebEngine();
-        webview.WebviewController.warmupServiceWorker("https://www.example.com");
-        AppStorage.setOrCreate("abilityWant", want);
-    }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-'use static'
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AppStorage } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-        console.info("EntryAbility onCreate");
-        webview.WebviewController.initializeWebEngine();
-        webview.WebviewController.warmupServiceWorker("https://www.example.com");
-        AppStorage.setOrCreate("abilityWant", want);
-    }
-}
-```
-
 ## webPageSnapshot
 
 ```TypeScript
@@ -19513,8 +4357,6 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19526,95 +4368,15 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 | info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('webPageSnapshot')
-        .onClick(() => {
-          try {
-            this.controller.webPageSnapshot({ id: "1234", size: { width: 100, height: 100 } }, (error, result) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              if (result) {
-                console.info(`return value is:${result}`);
-                // 开发者可以根据需要处理返回结果
-              }
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Column, Component, Button, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('webPageSnapshot')
-        .onClick(() => {
-          try {
-            this.controller.webPageSnapshot({ id: "1234", size: { width: 100, height: 100 } }, (error, result) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              if (result) {
-                console.info(`return value is:${result}`);
-                // 开发者可以根据需要处理返回结果
-              }
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## zoom
 
 ```TypeScript
 zoom(factor: number): void
 ```
 
-调整当前网页的缩放比例，zoomAccess需为true。
+调整当前网页的缩放比例，[zoomAccess](../arkts-components/arkts-arkweb-web-attribute.md#zoomaccess)需为true。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -19634,71 +4396,6 @@ zoom(factor: number): void
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100004](../errorcode-webview.md#17100004-功能开关未打开) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State factor: number = 2;
-
-  build() {
-    Column() {
-      Button('zoom')
-        .onClick(() => {
-          try {
-            this.controller.zoom(this.factor);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .zoomAccess(true)
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-
-import { Web, Column, Component, Entry, Button, State } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  @State factor: number = 2;
-
-  build() {
-    Column() {
-      Button('zoom')
-        .onClick(() => {
-          try {
-            this.controller.zoom(this.factor);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .zoomAccess(true)
-    }
-  }
-}
-```
-
 ## zoomIn
 
 ```TypeScript
@@ -19708,8 +4405,6 @@ zoomIn(): void
 调用此接口将当前网页进行放大，比例为25%。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -19721,66 +4416,6 @@ zoomIn(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100004](../errorcode-webview.md#17100004-功能开关未打开) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('zoomIn')
-        .onClick(() => {
-          try {
-            this.controller.zoomIn();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('zoomIn')
-        .onClick(() => {
-          try {
-            this.controller.zoomIn();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## zoomOut
 
@@ -19792,8 +4427,6 @@ zoomOut(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19804,63 +4437,3 @@ zoomOut(): void
 | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 | [17100004](../errorcode-webview.md#17100004-功能开关未打开) |
-
-**示例**
-
-ArkTS-Dyn示例
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('zoomOut')
-        .onClick(() => {
-          try {
-            this.controller.zoomOut();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('zoomOut')
-        .onClick(() => {
-          try {
-            this.controller.zoomOut();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```

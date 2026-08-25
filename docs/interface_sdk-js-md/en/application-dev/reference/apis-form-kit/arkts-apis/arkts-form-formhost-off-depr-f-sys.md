@@ -19,8 +19,6 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](arkts-form-formhost-off-f-sys.md)

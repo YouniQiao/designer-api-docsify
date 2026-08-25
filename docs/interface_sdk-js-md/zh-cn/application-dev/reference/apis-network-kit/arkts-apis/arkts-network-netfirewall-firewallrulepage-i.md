@@ -4,14 +4,12 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## data
@@ -25,8 +23,6 @@ data: Array<NetFirewallRule>
 **类型：** Array&lt;[NetFirewallRule](arkts-network-netfirewall-netfirewallrule-i.md)&gt;
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -42,8 +38,6 @@ page: number
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## pageSize
@@ -58,8 +52,6 @@ pageSize: number
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## totalPage
@@ -73,7 +65,5 @@ totalPage: number
 **类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

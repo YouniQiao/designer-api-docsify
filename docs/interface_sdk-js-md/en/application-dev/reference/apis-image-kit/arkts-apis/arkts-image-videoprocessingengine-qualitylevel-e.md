@@ -1,10 +1,8 @@
 # QualityLevel
 
-Levels of processing quality for detail enhancement. @enum {int}
+Levels of processing quality for detail enhancement. @enum {number}
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -17,8 +15,6 @@ NONE = 0
 No detail enhancement.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
@@ -34,8 +30,6 @@ A low level of detail enhancement quality but with a fast speed. It's the defaul
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
@@ -50,8 +44,6 @@ A medium level of detail enhancement quality. Its speed is between the low setti
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
@@ -65,8 +57,6 @@ HIGH = 3
 A high level of detail enhancement quality but with a relatively slow speed.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 

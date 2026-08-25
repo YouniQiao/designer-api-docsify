@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setUsbStorageDeviceAccessPolicy
@@ -30,8 +30,6 @@ You can disable a USB storage device by calling this API or [addDisallowedUsbDev
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 - API version 12 - 24: ohos.permission.ENTERPRISE_MANAGE_USB
@@ -57,23 +55,3 @@ You can disable a USB storage device by calling this API or [addDisallowedUsbDev
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let policy: usbManager.UsbPolicy = usbManager.UsbPolicy.DISABLED;
-  usbManager.setUsbStorageDeviceAccessPolicy(wantTemp, policy);
-  console.info(`Succeeded in setting USB storage device access policy.`);
-} catch (err) {
-  console.error(`Failed to set USB storage device access policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

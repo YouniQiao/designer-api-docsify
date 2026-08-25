@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## create
@@ -20,8 +20,6 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 > .
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -63,8 +61,6 @@ Creates an upload or download task and adds it to the queue. This API uses a pro
 > .
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 

@@ -4,29 +4,25 @@ Indicates rectangle, unit is vp.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'kits/@kit.FormKit';
 ```
 
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
 The height of Rect Unit: vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -35,16 +31,14 @@ The height of Rect Unit: vp.
 ## left
 
 ```TypeScript
-left: double
+left: number
 ```
 
 The left position of Rect Unit: vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -53,16 +47,14 @@ The left position of Rect Unit: vp.
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
 The top position of Rect Unit: vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -71,16 +63,14 @@ The top position of Rect Unit: vp.
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
 The width of Rect Unit: vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

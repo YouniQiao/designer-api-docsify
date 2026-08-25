@@ -4,14 +4,12 @@ Declare type SymbolOptions
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
+import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## effectStrategy
@@ -23,11 +21,9 @@ effectStrategy?: SymbolEffectStrategy
 Effect strategy of the symbol glyph.Default value: **SymbolEffectStrategy.NONE**.  
 **NOTE：**For the resources referenced in **\$r('sys.symbol.ohos_*')**, only **ohos_wifi** supports the hierarchical effect.
 
-**Type:** SymbolEffectStrategy
+**Type:** [SymbolEffectStrategy](../arkts-components/arkts-arkui-symboleffectstrategy-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +39,9 @@ fontColor?: Array<ResourceColor>
 
 Color of the symbol glyph.Default value: depending on the rendering strategy
 
-**Type:** Array&lt;ResourceColor&gt;
+**Type:** Array&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +61,6 @@ Size of the symbol glyph.For the number type, the value must be greater than or 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -87,8 +79,6 @@ Weight of the symbol glyph.For the number type, the value ranges from 100 to 900
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -104,11 +94,9 @@ renderingStrategy?: SymbolRenderingStrategy
 Rendering strategy of the symbol glyph.Default value: **SymbolRenderingStrategy.SINGLE**.  
 **NOTE：**For the resources referenced in **\$r('sys.symbol.ohos_*')**, only **ohos_trash_circle**, **ohos_folder_badge_plus**, and **ohos_lungs** support the **MULTIPLE_COLOR** modes.
 
-**Type:** SymbolRenderingStrategy
+**Type:** [SymbolRenderingStrategy](../arkts-components/arkts-arkui-symbolrenderingstrategy-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

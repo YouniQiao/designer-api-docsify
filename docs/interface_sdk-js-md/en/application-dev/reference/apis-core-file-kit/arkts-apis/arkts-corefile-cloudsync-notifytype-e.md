@@ -4,8 +4,6 @@ Enumerates the data change types.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NOTIFY_ADDED
@@ -17,8 +15,6 @@ NOTIFY_ADDED = 0
 A file is created.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -32,8 +28,6 @@ The file is modified.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NOTIFY_DELETED
@@ -46,8 +40,6 @@ The file is deleted.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NOTIFY_RENAMED
@@ -59,7 +51,5 @@ NOTIFY_RENAMED = 3
 The file is renamed or moved.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

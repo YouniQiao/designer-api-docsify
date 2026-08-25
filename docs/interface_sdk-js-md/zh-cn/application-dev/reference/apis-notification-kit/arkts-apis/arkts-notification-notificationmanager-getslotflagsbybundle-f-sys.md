@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getSlotFlagsByBundle
 
 ```TypeScript
-function getSlotFlagsByBundle(bundle: BundleOption): Promise<long>
+function getSlotFlagsByBundle(bundle: BundleOption): Promise<number>
 ```
 
 获取指定应用的通知渠道标识位。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,13 +26,13 @@ function getSlotFlagsByBundle(bundle: BundleOption): Promise<long>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -48,37 +46,3 @@ function getSlotFlagsByBundle(bundle: BundleOption): Promise<long>
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-notificationManager.getSlotFlagsByBundle(bundle).then((data : number) => {
-    console.info(`getSlotFlagsByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSlotFlagsByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-notificationManager.getSlotFlagsByBundle(bundle).then((data: long) => {
-    console.info(`getSlotFlagsByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getSlotFlagsByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```

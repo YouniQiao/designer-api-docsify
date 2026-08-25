@@ -4,8 +4,6 @@ Provides information about the drop-down menu options.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ icon?: ResourceStr
 
 Icon of the drop-down menu option.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ Symbol icon of drop-down menu option.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -60,11 +54,9 @@ value: ResourceStr
 
 Value of the drop-down menu option.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

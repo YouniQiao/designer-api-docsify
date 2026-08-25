@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,8 +21,6 @@ onAppear?: MenuOnAppearCallback
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -40,8 +36,6 @@ onMenuHide?: MenuCallback
 自定义选择菜单隐藏时回调。若需在菜单隐藏时执行自定义逻辑，可传入此参数；不传入则无回调触发。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,8 +53,6 @@ onMenuShow?: MenuCallback
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -75,11 +67,9 @@ menuType?: MenuType
 
 自定义选择菜单类型。默认值：MenuType.SELECTION_MENU。
 
-**类型：** MenuType
+**类型：** [MenuType](../arkts-apis/arkts-arkui-menutype-e.md)
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,8 +89,6 @@ onDisappear?: Callback<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -118,8 +106,6 @@ previewMenuOptions?: PreviewMenuOptions
 **类型：** [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

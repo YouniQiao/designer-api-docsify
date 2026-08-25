@@ -4,14 +4,12 @@ Provides the NNRT device info
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
 ```
 
 ## deviceID
@@ -25,8 +23,6 @@ NNRT device id.
 **Type:** bigint
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ NNRT device extension array.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -62,8 +56,6 @@ NNRT device performance mode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -79,8 +71,6 @@ NNRT device priority.
 **Type:** Priority
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAdditionalInfo
@@ -15,8 +15,6 @@ function getAdditionalInfo(bundleName: string): string
 以同步接口查询指定bundleName的额外信息。该返回值是在调用install接口时传入的[InstallParam](arkts-ability-installer-installparam-i-sys.md)中的 additionalInfo字段。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -44,21 +42,3 @@ function getAdditionalInfo(bundleName: string): string
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-
-try {
-  let info = bundleManager.getAdditionalInfo(bundleName);
-  hilog.info(0x0000, 'testTag', 'getAdditionalInfo successfully, additionInfo:%{public}s', info);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAdditionalInfo failed. Cause: %{public}s', message);
-}
-```

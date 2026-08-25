@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getDoNotDisturbDate
@@ -16,8 +16,6 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -42,134 +40,6 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getDoNotDisturbDateCallback = (err: BusinessError, data: notificationManager.DoNotDisturbDate): void => {
-    if (err) {
-        console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getDoNotDisturbDate success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-notificationManager.getDoNotDisturbDate(getDoNotDisturbDateCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getDoNotDisturbDateCallback = (err: BusinessError | null, data: notificationManager.DoNotDisturbDate | undefined | null): void => {
-    if (err) {
-        console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getDoNotDisturbDate success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-notificationManager.getDoNotDisturbDate(getDoNotDisturbDateCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDoNotDisturbDate().then((data: notificationManager.DoNotDisturbDate) => {
-  console.info(`getDoNotDisturbDate success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDoNotDisturbDate().then((data: notificationManager.DoNotDisturbDate) => {
-  console.info(`getDoNotDisturbDate success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getDoNotDisturbDate failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getDoNotDisturbDateCallback = (err: BusinessError, data: notificationManager.DoNotDisturbDate): void => {
-    if (err) {
-        console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getDoNotDisturbDate success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 1;
-
-notificationManager.getDoNotDisturbDate(userId, getDoNotDisturbDateCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getDoNotDisturbDateCallback = (err: BusinessError | null, data: notificationManager.DoNotDisturbDate | undefined | null): void => {
-    if (err) {
-        console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getDoNotDisturbDate success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-
-notificationManager.getDoNotDisturbDate(userId, getDoNotDisturbDateCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 1;
-
-notificationManager.getDoNotDisturbDate(userId).then((data: notificationManager.DoNotDisturbDate) => {
-    console.info(`getDoNotDisturbDate success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-
-notificationManager.getDoNotDisturbDate(userId).then((data: notificationManager.DoNotDisturbDate) => {
-    console.info(`getDoNotDisturbDate success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getDoNotDisturbDate failed, code is ${error.code}, message is ${error.message}`);
-});
-```
 
 
 ## getDoNotDisturbDate
@@ -182,8 +52,6 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -208,22 +76,16 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 
-**示例**
-
-参见 [getDoNotDisturbDate](#getdonotdisturbdate)
-
 
 ## getDoNotDisturbDate
 
 ```TypeScript
-function getDoNotDisturbDate(userId: int, callback: AsyncCallback<DoNotDisturbDate>): void
+function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDisturbDate>): void
 ```
 
 查询指定用户的免打扰时间。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -235,7 +97,7 @@ function getDoNotDisturbDate(userId: int, callback: AsyncCallback<DoNotDisturbDa
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 |
 
 **错误码：**
@@ -252,22 +114,16 @@ function getDoNotDisturbDate(userId: int, callback: AsyncCallback<DoNotDisturbDa
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 
-**示例**
-
-参见 [getDoNotDisturbDate](#getdonotdisturbdate)
-
 
 ## getDoNotDisturbDate
 
 ```TypeScript
-function getDoNotDisturbDate(userId: int): Promise<DoNotDisturbDate>
+function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 ```
 
 查询指定用户的免打扰时间。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -279,7 +135,7 @@ function getDoNotDisturbDate(userId: int): Promise<DoNotDisturbDate>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -300,7 +156,3 @@ function getDoNotDisturbDate(userId: int): Promise<DoNotDisturbDate>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-参见 [getDoNotDisturbDate](#getdonotdisturbdate)

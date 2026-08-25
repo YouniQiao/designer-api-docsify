@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## controlTransfer
@@ -15,8 +15,6 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 控制传输。需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备列表；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限；调用 [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)接口得到devicepipe作为参数。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -37,19 +35,3 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-```TypeScript
-let param = {
-  request: 0,
-  reqType: 0,
-  target:0,
-  value: 0,
-  index: 0,
-  data: null
-};
-usb.controlTransfer(devicepipe, param).then((ret) => {
- console.info(`controlTransfer = ${ret}`);
-})
-```

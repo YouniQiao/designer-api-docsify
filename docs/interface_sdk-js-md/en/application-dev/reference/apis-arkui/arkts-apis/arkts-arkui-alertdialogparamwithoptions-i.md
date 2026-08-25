@@ -6,8 +6,6 @@ Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ Button layout direction. The default value is **DialogButtonDirection.AUTO**. Yo
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -48,8 +44,6 @@ Buttons in the dialog box.
 **Type:** Array&lt;[AlertDialogButtonOptions](arkts-arkui-alertdialogbuttonoptions-i.md)&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

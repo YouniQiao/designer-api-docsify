@@ -4,8 +4,6 @@ The enum of gatt characteristic write type
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## WRITE
@@ -17,8 +15,6 @@ WRITE = 1
 Write characteristic with response.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ WRITE_NO_RESPONSE = 2
 Write characteristic without response.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,35 +8,13 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<int>
-```
-
-返回一个迭代位向量的迭代器。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; |
 
 ## [Symbol.iterator]
 
@@ -48,8 +26,6 @@ $_iterator(): IterableIterator<int>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -58,7 +34,7 @@ $_iterator(): IterableIterator<int>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 **错误码：**
 
@@ -75,8 +51,6 @@ constructor(length: number)
 BitVector 的构造函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -97,8 +71,6 @@ flipBitByIndex(index: number): void
 翻转 BitVector 指定索引处的 bit 值，0 翻转为 1，1 翻转为 0。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -128,8 +100,6 @@ flipBitsByRange(fromIndex: number, toIndex: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -158,8 +128,6 @@ getBitCountByRange(element: number, fromIndex: number, toIndex: number): number
 统计指定范围内获取指定 bit 值的数量。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -197,8 +165,6 @@ getBitsByRange(fromIndex: number, toIndex: number): BitVector
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -233,8 +199,6 @@ getIndexOf(element: number, fromIndex: number, toIndex: number): number
 返回指定 bit 值首次出现时的索引值，查找失败返回 **-1**。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -272,8 +236,6 @@ getLastIndexOf(element: number, fromIndex: number, toIndex: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -309,8 +271,6 @@ has(element: number, fromIndex: number, toIndex: number): boolean
 判断范围内是否包含特定 bit 值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -348,8 +308,6 @@ pop(): number
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -376,8 +334,6 @@ push(element: number): boolean
 在 BitVector 尾部插入元素。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -412,8 +368,6 @@ resize(size: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -441,8 +395,6 @@ setAllBits(element: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -469,8 +421,6 @@ setBitsByRange(element: number, fromIndex: number, toIndex: number): void
 将 BitVector 中指定范围的元素均设为特定 bit 值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -502,8 +452,6 @@ values(): IterableIterator<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -512,7 +460,7 @@ values(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 **错误码：**
 
@@ -520,22 +468,6 @@ values(): IterableIterator<number>
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 | [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
-
-## [index: int]
-
-```TypeScript
-[index: int]: int
-```
-
-访问或设置BitVector中指定索引处的元素。
-
-**类型：** int
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Utils.Lang
 
 ## [index: number]
 
@@ -548,8 +480,6 @@ values(): IterableIterator<number>
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -566,8 +496,6 @@ BitVector 的元素个数。
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

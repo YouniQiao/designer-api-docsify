@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getDoNotDisturbProfile
 
 ```TypeScript
-function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>
+function getDoNotDisturbProfile(id: number): Promise<DoNotDisturbProfile>
 ```
 
 Queries the Do Not Disturb profile. This API uses a promise to return the result.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,7 +26,7 @@ Queries the Do Not Disturb profile. This API uses a promise to return the result
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| id | number | Yes |
 
 **Return value:**
 
@@ -49,43 +47,16 @@ Queries the Do Not Disturb profile. This API uses a promise to return the result
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600019](../errorcode-notification.md#1600019-no-configuration-information-for-a-do-not-disturb-profile) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDoNotDisturbProfile(1).then((data: notificationManager.DoNotDisturbProfile) => {
-  console.info(`getDoNotDisturbProfile success: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let id : number = 101;
-let userId : number = 100;
-
-notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationManager.DoNotDisturbProfile) => {
-  console.info(`getDoNotDisturbProfile success: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getDoNotDisturbProfile
 
 ```TypeScript
-function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProfile>
+function getDoNotDisturbProfile(id: number, userId: number): Promise<DoNotDisturbProfile>
 ```
 
 Queries the Do Not Disturb profile of a specified user. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -99,8 +70,8 @@ Queries the Do Not Disturb profile of a specified user. This API uses a promise 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| id | number | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -120,7 +91,3 @@ Queries the Do Not Disturb profile of a specified user. This API uses a promise 
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
 | [1600019](../errorcode-notification.md#1600019-no-configuration-information-for-a-do-not-disturb-profile) |
-
-**Examples**
-
-See [getDoNotDisturbProfile](#getdonotdisturbprofile)

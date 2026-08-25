@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## applyEfficiencyResources
@@ -15,8 +15,6 @@ function applyEfficiencyResources(request: EfficiencyResourcesRequest): void
 Requests efficiency resources.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -40,25 +38,3 @@ Requests efficiency resources.
 | [9800003](../errorcode-backgroundTaskMgr.md#9800003-ipc-failure) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let request: backgroundTaskManager.EfficiencyResourcesRequest = {
-    resourceTypes: backgroundTaskManager.ResourceType.CPU,
-    isApply: true,
-    timeOut: 0,
-    reason: "apply",
-    isPersist: true,
-    isProcess: false,
-    cpuLevel: backgroundTaskManager.EfficiencyResourcesCpuLevel.SMALL_CPU // The application's background task runs on the small CPU core. This parameter is supported since API version 23.
-};
-try {
-    backgroundTaskManager.applyEfficiencyResources(request);
-    console.info("applyEfficiencyResources success. ");
-} catch (error) {
-    console.error(`applyEfficiencyResources failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

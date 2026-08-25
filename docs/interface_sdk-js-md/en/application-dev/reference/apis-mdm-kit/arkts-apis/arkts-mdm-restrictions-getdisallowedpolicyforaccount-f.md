@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedPolicyForAccount
@@ -15,8 +15,6 @@ function getDisallowedPolicyForAccount(admin: Want | null, feature: string, acco
 Obtains the status of a feature for a specified user.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Deprecated since:** 26.0.0
 
@@ -50,27 +48,6 @@ Obtains the status of a feature for a specified user.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let result: boolean = restrictions.getDisallowedPolicyForAccount(wantTemp, 'fingerprint', 100);
-  console.info(`Succeeded in querying is the fingerprint function disabled : ${result}`);
-} catch (err) {
-  console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getDisallowedPolicyForAccount
 
@@ -81,8 +58,6 @@ function getDisallowedPolicyForAccount(admin: Want | null, feature: FeatureForAc
 Obtains the status of a feature for a specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -113,7 +88,3 @@ Obtains the status of a feature for a specified user.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [getDisallowedPolicyForAccount](#getdisallowedpolicyforaccount)

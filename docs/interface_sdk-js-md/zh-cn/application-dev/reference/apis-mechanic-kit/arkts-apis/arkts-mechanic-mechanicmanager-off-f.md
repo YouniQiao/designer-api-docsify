@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## off('attachStateChange')
@@ -15,8 +15,6 @@ function off(type: 'attachStateChange', callback?: Callback<AttachStateChangeInf
 Unsubscribes from device attachment state change events.
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -33,20 +31,6 @@ Unsubscribes from device attachment state change events.
 | --- |
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) |
 
-**示例**
-
-```TypeScript
-// 定义连接状态变化回调函数
-let callback = (result: mechanicManager.AttachStateChangeInfo) => {
-  console.info(`'callback result:' ${result}`);
-};
-
-console.info('Unregister');
-// 取消注册"attachStateChange"事件监听
-mechanicManager.off("attachStateChange", callback);
-console.info('Succeeded in unregistering callback.');
-```
-
 
 ## off('trackingStateChange')
 
@@ -57,8 +41,6 @@ function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>
 设置相机跟踪布局
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -74,17 +56,3 @@ function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>
 | 错误码ID |
 | --- |
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) |
-
-**示例**
-
-```TypeScript
-// 定义跟踪状态变化回调函数
-let callback = (result: mechanicManager.TrackingEventInfo) => {
-  console.info(`'callback result:' ${result}`);
-};
-
-console.info('Unregister');
-// 取消注册"trackingStateChange"事件监听
-mechanicManager.off("trackingStateChange", callback);
-console.info('Succeeded in unregistering callback.');
-```

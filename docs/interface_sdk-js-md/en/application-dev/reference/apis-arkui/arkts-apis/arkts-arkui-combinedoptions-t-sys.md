@@ -10,8 +10,6 @@ Used for ide.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite

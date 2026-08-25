@@ -4,8 +4,6 @@ This module is used to manage plugins for applications.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -13,7 +11,7 @@ This module is used to manage plugins for applications.
 ## Modules to Import
 
 ```TypeScript
-import { pluginBundleManager } from '@kit.AbilityKit';
+import { pluginBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

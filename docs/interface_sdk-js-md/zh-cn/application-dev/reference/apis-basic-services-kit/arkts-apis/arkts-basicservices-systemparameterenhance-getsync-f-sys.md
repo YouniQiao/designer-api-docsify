@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemParameterEnhance } from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getSync
@@ -21,8 +21,6 @@ function getSync(key: string, def?: string): string
 > 开发者应根据具体场景选择合适的方法。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -49,16 +47,3 @@ function getSync(key: string, def?: string): string
 | [14700101](../errorcode-system-parameterV9.md#14700101-系统参数查找失败) |
 | [14700103](../errorcode-device-info.md#14700103-操作因权限被拒绝) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let info: string = systemParameterEnhance.getSync('const.ohos.apiversion');
-  console.info('getSync result: ' + info);
-} catch (e) {
-  console.error(`getSync failed. Code: ${(e as BusinessError).code}, message: ${(e as BusinessError).message}`);
-}
-```

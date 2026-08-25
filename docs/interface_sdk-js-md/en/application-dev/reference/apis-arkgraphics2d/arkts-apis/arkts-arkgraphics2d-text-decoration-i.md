@@ -4,14 +4,12 @@ Describes a text decoration.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## color
@@ -25,8 +23,6 @@ Color of the decoration. The default value is the text color.
 **Type:** common2D.Color
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -44,8 +40,6 @@ Style of the decoration. The default value is **SOLID**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -53,16 +47,14 @@ Style of the decoration. The default value is **SOLID**.
 ## decorationThicknessScale
 
 ```TypeScript
-decorationThicknessScale?: double
+decorationThicknessScale?: number
 ```
 
 Scale factor for the thickness of the decoration line. The value is a floating point number. The default value is **1.0**. If the value is less than or equal to 0, no decoration line is drawn.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -79,8 +71,6 @@ Type of the decoration. The default value is **NONE**.
 **Type:** TextDecorationType
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

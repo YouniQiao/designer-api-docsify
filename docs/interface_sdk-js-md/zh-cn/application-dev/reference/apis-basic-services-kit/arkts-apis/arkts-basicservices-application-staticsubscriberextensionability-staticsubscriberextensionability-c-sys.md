@@ -5,8 +5,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -14,7 +12,7 @@
 ## 导入模块
 
 ```TypeScript
-import { StaticSubscriberExtensionAbility } from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionAbility } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onReceiveEvent
@@ -26,8 +24,6 @@ onReceiveEvent(event: CommonEventData): void
 静态订阅公共事件的回调函数。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,18 +37,6 @@ onReceiveEvent(event: CommonEventData): void
 | --- | --- | --- |
 | event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | 是 |
 
-**示例**
-
-```TypeScript
-import { commonEventManager } from '@kit.BasicServicesKit';
-
-class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
-  onReceiveEvent(event: commonEventManager.CommonEventData) {
-    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-    }
-}
-```
-
 ## context
 
 ```TypeScript
@@ -64,8 +48,6 @@ context: StaticSubscriberExtensionContext
 **类型：** [StaticSubscriberExtensionContext](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

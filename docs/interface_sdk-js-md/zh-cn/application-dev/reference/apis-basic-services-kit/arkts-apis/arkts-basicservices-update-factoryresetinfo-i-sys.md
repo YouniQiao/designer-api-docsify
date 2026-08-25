@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## duration
 
 ```TypeScript
-duration: int
+duration: number
 ```
 
 恢复出厂设置所需持续时间。单位为min。取值范围[0, 86400]。超出范围时抛出异常。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

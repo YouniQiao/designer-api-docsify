@@ -4,14 +4,12 @@ Describes the audio renderer change event.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## deviceDescriptors
@@ -25,8 +23,6 @@ Audio device description.
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -42,22 +38,18 @@ Audio renderer information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## streamId
 
 ```TypeScript
-readonly streamId: int
+readonly streamId: number
 ```
 
 Unique ID of an audio stream.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer

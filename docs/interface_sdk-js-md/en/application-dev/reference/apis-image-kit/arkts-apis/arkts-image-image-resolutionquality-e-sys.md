@@ -4,8 +4,6 @@ Enumerates the image quality levels.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ LOW = 1
 Low image quality, requiring a short decoding time.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -36,8 +32,6 @@ Medium image quality, requiring a medium decoding time
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **System API:** This is a system API.
@@ -48,11 +42,9 @@ Medium image quality, requiring a medium decoding time
 HIGH = 3
 ```
 
-High image quality, requiring a long decoding time.
+High image quality, requiring a number decoding time.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

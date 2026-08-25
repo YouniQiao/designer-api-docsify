@@ -4,8 +4,6 @@ Enumerates the notification types.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -21,8 +19,6 @@ NOTIFY_ADD = 0
 File added.See examples 2 and 3 of **registerObserver**.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -42,8 +38,6 @@ File deleted.See examples 1 and 2 of **unregisterObserver(uri: string, callback:
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -61,8 +55,6 @@ NOTIFY_MOVED_TO = 2
 File or directory moved in (for example, **rename()** is performed on a file or directory in this directory or a file or directory is moved to this directory).See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri: string)**.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -82,8 +74,6 @@ File or directory moved out (for example, **rename()** is performed on a file or
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -101,8 +91,6 @@ NOTIFY_MOVE_SELF = 4
 File moved (for example, the target file or directory is renamed or moved).See example 1 of **registerObserver**.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -122,8 +110,6 @@ Device goes online.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -141,8 +127,6 @@ NOTIFY_DEVICE_OFFLINE = 6
 Device goes offline.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 23
 

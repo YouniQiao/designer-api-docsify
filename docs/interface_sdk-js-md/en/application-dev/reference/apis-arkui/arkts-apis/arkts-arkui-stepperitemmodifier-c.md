@@ -6,8 +6,6 @@ Defines StepperItem Modifier@extends StepperItemAttribute @implements AttributeM
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Deprecated since:** 22
 
 **Substitutes:** [SwiperModifier](arkts-arkui-swipermodifier-c.md)
@@ -23,8 +21,6 @@ applyNormalAttribute?(instance: StepperItemAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Deprecated since:** 22
 

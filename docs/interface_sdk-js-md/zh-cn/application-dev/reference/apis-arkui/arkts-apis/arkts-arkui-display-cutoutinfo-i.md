@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## boundingRects
@@ -25,8 +23,6 @@ readonly boundingRects: Array<Rect>
 **类型：** Array&lt;Rect&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -43,8 +39,6 @@ readonly waterfallDisplayAreaRects: WaterfallDisplayAreaRects
 **类型：** [WaterfallDisplayAreaRects](arkts-arkui-display-waterfalldisplayarearects-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

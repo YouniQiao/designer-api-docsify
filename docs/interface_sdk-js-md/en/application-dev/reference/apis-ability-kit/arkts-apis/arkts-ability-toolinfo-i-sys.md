@@ -4,8 +4,6 @@ ToolInfo describes the basic information of a cli tool.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ The description of the CLI tool.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,8 +38,6 @@ Schemas about custom event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -61,8 +55,6 @@ Supported event types for custom event.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +74,6 @@ The executable path of the CLI tool.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -102,8 +92,6 @@ Whether this tool has subcommand.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -121,8 +109,6 @@ The input schema of the CLI tool.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,8 +130,6 @@ Whether the tool can be executed when the screen is locked.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -163,8 +147,6 @@ The name of the CLI tool.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,8 +166,6 @@ The output schema of the CLI tool.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -203,8 +183,6 @@ The require permissions of the CLI tool.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,8 +202,6 @@ SubCommandInfo list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -243,8 +219,6 @@ The version of the CLI tool (format defined by provider, e.g., "1.0.0").
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

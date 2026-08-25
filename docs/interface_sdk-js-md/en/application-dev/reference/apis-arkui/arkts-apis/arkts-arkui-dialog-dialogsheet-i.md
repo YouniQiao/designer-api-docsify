@@ -4,14 +4,12 @@ The information of sheet item for action sheet style.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
+import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from 'kits/@kit.ArkUI';
 ```
 
 ## action
@@ -23,8 +21,6 @@ action: VoidCallback
 Callback executed when the sheet item is clicked.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,11 +36,9 @@ icon?: ResourceStr
 
 Icon of the sheet item.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,11 +54,9 @@ title: ResourceStr
 
 Title of the sheet item.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,8 +6,6 @@ Defines a gesture group handler object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ constructor(options?: GestureGroupGestureHandlerOptions)
 Constructor used to create a gesture group handler instance.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ onCancel(event: Callback<void>): GestureGroupHandler
 Sets the cancellation callback for the gesture group handler. The callback is triggered when a sequence gesture ([GestureMode](arkts-arkui-gesturemode-e.md).Sequence) is cancelled.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

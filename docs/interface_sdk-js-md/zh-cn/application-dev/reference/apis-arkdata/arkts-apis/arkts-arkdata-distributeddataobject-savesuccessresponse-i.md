@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## 导入模块
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'kits/@kit.ArkData';
 ```
 
 ## deviceId
@@ -25,8 +23,6 @@ deviceId: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -42,22 +38,18 @@ sessionId: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## version
 
 ```TypeScript
-version: int
+version: number
 ```
 
 已保存对象的版本，取值为非负整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject

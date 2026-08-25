@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
+import { defaultAppManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## resetDefaultApplication
 
 ```TypeScript
-function resetDefaultApplication(type: string, userId: int, callback: AsyncCallback<void>) : void
+function resetDefaultApplication(type: string, userId: number, callback: AsyncCallback<void>) : void
 ```
 
 根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型重置默认应用。使用callback异 步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION
 
@@ -29,7 +27,7 @@ function resetDefaultApplication(type: string, userId: int, callback: AsyncCallb
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -43,214 +41,6 @@ function resetDefaultApplication(type: string, userId: int, callback: AsyncCallb
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-let userId = 100;
-defaultAppManager.resetDefaultApplication(defaultAppManager.ApplicationType.BROWSER, userId)
-  .then((data) => {
-    console.info('Operation successful.');
-  })
-  .catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  });
-
-defaultAppManager.resetDefaultApplication("image/png", userId)
-  .then((data) => {
-    console.info('Operation successful.');
-  })
-  .catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  });
-
-defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, userId)
-  .then((data) => {
-    console.info('Operation successful.');
-  })
-  .catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  });
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-// 代码中使用的useId需为应用实际的用户ID。
-let userId = 100;
-defaultAppManager.resetDefaultApplication(defaultAppManager.ApplicationType.BROWSER, userId)
-  .then((data) => {
-    console.info('resetDefaultApplication successful.');
-  })
-  .catch((error: Error) => {
-    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(error));
-  });
-
-defaultAppManager.resetDefaultApplication("image/png", userId)
-  .then((data) => {
-    console.info('resetDefaultApplication successful.');
-  })
-  .catch((error: Error) => {
-    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(error));
-  });
-
-defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, userId)
-  .then((data) => {
-    console.info('resetDefaultApplication successful.');
-  })
-  .catch((error: Error) => {
-    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(error));
-  });
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-let userId = 100;
-defaultAppManager.resetDefaultApplication(defaultAppManager.ApplicationType.BROWSER, userId,
-  (err: BusinessError, data) => {
-    if (err) {
-      console.error('Operation failed. Cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('Operation successful.');
-  });
-
-defaultAppManager.resetDefaultApplication("image/png", userId, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, userId,
-  (err: BusinessError, data) => {
-    if (err) {
-      console.error('Operation failed. Cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('Operation successful.');
-  });
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-// 代码中使用的useId需为应用实际的用户ID。
-let userId = 100;
-defaultAppManager.resetDefaultApplication(defaultAppManager.ApplicationType.BROWSER, userId, (err, data) => {
-  if (err) {
-    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('resetDefaultApplication successful.');
-});
-
-defaultAppManager.resetDefaultApplication("image/png", userId, (err, data) => {
-  if (err) {
-    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('resetDefaultApplication successful.');
-});
-
-defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, userId, (err, data) => {
-  if (err) {
-    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('resetDefaultApplication successful.');
-});
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-defaultAppManager.resetDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.resetDefaultApplication("image/png", (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-defaultAppManager.resetDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError | null, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.resetDefaultApplication("image/png", (err: BusinessError | null, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-
-defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, (err: BusinessError | null, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful.');
-});
-```
-
 
 ## resetDefaultApplication
 
@@ -261,8 +51,6 @@ function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : 
 根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型重置默认应用。使用callback异 步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION
 
@@ -287,22 +75,16 @@ function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : 
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) |
 
-**示例**
-
-参见 [resetDefaultApplication](#resetdefaultapplication)
-
 
 ## resetDefaultApplication
 
 ```TypeScript
-function resetDefaultApplication(type: string, userId?: int) : Promise<void>
+function resetDefaultApplication(type: string, userId?: number) : Promise<void>
 ```
 
 根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型重置默认应用。使用Promise异步 回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_DEFAULT_APPLICATION
 
@@ -315,7 +97,7 @@ function resetDefaultApplication(type: string, userId?: int) : Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| userId | number | 否 |
 
 **返回值：**
 
@@ -333,7 +115,3 @@ function resetDefaultApplication(type: string, userId?: int) : Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) |
-
-**示例**
-
-参见 [resetDefaultApplication](#resetdefaultapplication)

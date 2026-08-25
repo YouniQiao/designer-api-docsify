@@ -4,8 +4,6 @@ Defines a tab controller, which is used to control switching of tabs. One **Tabs
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ changeIndex(value: number): void
 Switches to the specified tab.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ constructor()
 A constructor used to create a **TabsController** object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -71,8 +65,6 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -83,7 +75,7 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| indices | Optional & lt;Array & lt;number & gt; & gt; | Yes |
+| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes |
 
 **Return value:**
 
@@ -115,8 +107,6 @@ Sets the opacity of the tab bar.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -147,8 +137,6 @@ Sets the translation distance of the tab bar.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -159,4 +147,4 @@ Sets the translation distance of the tab bar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| translate | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes |
+| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes |

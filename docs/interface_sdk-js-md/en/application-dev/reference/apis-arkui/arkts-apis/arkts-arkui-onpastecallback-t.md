@@ -1,16 +1,14 @@
 # OnPasteCallback
 
 ```TypeScript
-export type OnPasteCallback = (content: string, event: PasteEvent) => void
+declare type OnPasteCallback = (pasteValue: string, event: PasteEvent) => void
 ```
 
-Defines a TextInput callback when onPaste.Anonymous Object Rectification.
+Called when a paste operation is performed.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,5 +16,5 @@ Defines a TextInput callback when onPaste.Anonymous Object Rectification.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | string | Yes |
-| event | [PasteEvent](arkts-arkui-richeditor-pasteevent-i.md) | Yes |
+| pasteValue | string | Yes |
+| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | Yes |

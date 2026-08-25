@@ -1,14 +1,12 @@
 # ValueType
 
 ```TypeScript
-type ValueType = null | long | double | string | boolean | Uint8Array | Asset | Assets
+type ValueType = null | number | number | string | boolean | Uint8Array | Asset | Assets
 ```
 
 Enumerates the value types, which vary with the parameter function.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -20,5 +18,5 @@ Enumerates the value types, which vary with the parameter function.
 | string |
 | boolean |
 | Uint8Array |
-| [Asset](arkts-arkdata-commontype-asset-i.md) |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) |
 | [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) |

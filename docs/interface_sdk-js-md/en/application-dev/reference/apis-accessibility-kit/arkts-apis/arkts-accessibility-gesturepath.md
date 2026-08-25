@@ -7,7 +7,7 @@ GesturePath represents gesture path information.
 ## Modules to Import
 
 ```TypeScript
-import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePath } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## Summary

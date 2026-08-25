@@ -5,7 +5,7 @@ This module provides application logging and event subscription capabilities, in
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

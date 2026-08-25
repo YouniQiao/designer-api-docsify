@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRunningProcessInfoByBundleName
@@ -16,8 +16,6 @@ Obtains information about the running processes by bundle name. This API uses an
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -37,105 +35,17 @@ Obtains information about the running processes by bundle name. This API uses an
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "bundleName";
-function getRunningProcessInfoByBundleNameCallback(err: BusinessError, data: Array<appManager.ProcessInformation>) {
-  if (err) {
-    console.error(`getRunningProcessInfoByBundleNameCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('getRunningProcessInfoByBundleNameCallback success.');
-  }
-}
-
-try {
-  appManager.getRunningProcessInfoByBundleName(bundleName, getRunningProcessInfoByBundleNameCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "bundleName";
-
-try {
-  appManager.getRunningProcessInfoByBundleName(bundleName).then((data) => {
-    console.info('getRunningProcessInfoByBundleName success.');
-  }).catch((err: BusinessError) => {
-    console.error(`getRunningProcessInfoByBundleName fail, err: ${JSON.stringify(err)}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "bundleName";
-let userId = 0;
-function getRunningProcessInfoByBundleNameCallback(err: BusinessError, data: Array<appManager.ProcessInformation>) {
-  if (err) {
-    console.error(`getRunningProcessInfoByBundleNameCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('getRunningProcessInfoByBundleNameCallback success.');
-  }
-}
-
-try {
-  appManager.getRunningProcessInfoByBundleName(bundleName, userId, getRunningProcessInfoByBundleNameCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "bundleName";
-let userId = 0;
-
-try {
-  appManager.getRunningProcessInfoByBundleName(bundleName, userId).then((data) => {
-    console.info('getRunningProcessInfoByBundleName success.');
-  }).catch((err: BusinessError) => {
-    console.error(`getRunningProcessInfoByBundleName fail, err: ${JSON.stringify(err)}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
 
 ## getRunningProcessInfoByBundleName
 
 ```TypeScript
-function getRunningProcessInfoByBundleName(bundleName: string, userId: int, callback: AsyncCallback<Array<ProcessInformation>>): void
+function getRunningProcessInfoByBundleName(bundleName: string, userId: number, callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
 Obtains information about the running processes by bundle name and user ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -145,7 +55,7 @@ Obtains information about the running processes by bundle name and user ID. This
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes |
 
 **Error codes:**
@@ -155,10 +65,6 @@ Obtains information about the running processes by bundle name and user ID. This
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
 
 
 ## getRunningProcessInfoByBundleName
@@ -171,8 +77,6 @@ Obtains information about the running processes by bundle name. This API uses a 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -197,23 +101,17 @@ Obtains information about the running processes by bundle name. This API uses a 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-See [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)
-
 
 ## getRunningProcessInfoByBundleName
 
 ```TypeScript
-function getRunningProcessInfoByBundleName(bundleName: string, userId: int): Promise<Array<ProcessInformation>>
+function getRunningProcessInfoByBundleName(bundleName: string, userId: number): Promise<Array<ProcessInformation>>
 ```
 
 Obtains information about the running processes by bundle name and user ID. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -223,7 +121,7 @@ Obtains information about the running processes by bundle name and user ID. This
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -238,7 +136,3 @@ Obtains information about the running processes by bundle name and user ID. This
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [getRunningProcessInfoByBundleName](#getrunningprocessinfobybundlename)

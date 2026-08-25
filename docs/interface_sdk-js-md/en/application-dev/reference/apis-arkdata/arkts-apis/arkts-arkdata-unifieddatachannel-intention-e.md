@@ -4,8 +4,6 @@ Enumerates the data channel types supported by the UDMF. It is used to identify 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## DATA_HUB
@@ -17,8 +15,6 @@ DATA_HUB = 'DataHub'
 Public data channel.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ Channel in which data can be dragged and dropped.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -53,8 +47,6 @@ Data channel of the system sharing type.
 **Use scenario**: This API is used to share data across applications in system sharing scenarios.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,8 +63,6 @@ Data channel of the picker type.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -87,8 +77,6 @@ Data channel of the menu type.
 **Use scenario**: This API is used to share data across applications in the shortcut menu.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

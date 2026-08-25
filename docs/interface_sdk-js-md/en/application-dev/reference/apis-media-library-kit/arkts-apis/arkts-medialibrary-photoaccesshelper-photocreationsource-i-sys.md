@@ -4,8 +4,6 @@ Defines the application information provided to create assets on behalf of the a
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the application information provided to create assets on behalf of the a
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## appId
@@ -27,8 +25,6 @@ ID of the target application.
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -46,8 +42,6 @@ Name of the target application.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Bundle name of the target application.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Bundle name of the target application.
 ## tokenId
 
 ```TypeScript
-tokenId?: long
+tokenId?: number
 ```
 
 Token ID of the target application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

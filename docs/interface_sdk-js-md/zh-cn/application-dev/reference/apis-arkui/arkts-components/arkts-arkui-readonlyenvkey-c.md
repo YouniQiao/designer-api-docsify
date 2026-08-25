@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ static readonly WINDOW_AVOID_AREA: ReadonlySystemEnvKey<window.UIEnvWindowAvoidA
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -44,8 +40,6 @@ static readonly WINDOW_AVOID_AREA_PX: ReadonlySystemEnvKey<window.UIEnvWindowAvo
 **类型：** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoPX&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ static readonly WINDOW_DISPLAY_ID: ReadonlySystemEnvKey<number>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -85,8 +77,6 @@ static readonly WINDOW_IS_FOCUSED: ReadonlySystemEnvKey<boolean>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -103,8 +93,6 @@ static readonly WINDOW_IS_HIGHLIGHTED: ReadonlySystemEnvKey<boolean>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -120,8 +108,6 @@ static readonly WINDOW_SIZE: ReadonlySystemEnvKey<window.SizeInVP>
 **类型：** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.SizeInVP&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -141,8 +127,6 @@ static readonly WINDOW_SIZE_PX: ReadonlySystemEnvKey<window.Size>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -160,8 +144,6 @@ static readonly WINDOW_SYSTEM_DENSITY: ReadonlySystemEnvKey<number>
 **类型：** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;number&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

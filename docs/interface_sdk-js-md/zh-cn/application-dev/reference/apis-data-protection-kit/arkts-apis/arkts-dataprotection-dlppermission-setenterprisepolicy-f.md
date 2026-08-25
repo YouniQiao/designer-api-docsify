@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## setEnterprisePolicy
@@ -18,8 +18,6 @@ function setEnterprisePolicy(policy: EnterprisePolicy): void
 > 该接口仅支持企业账号调用。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
@@ -39,53 +37,3 @@ function setEnterprisePolicy(policy: EnterprisePolicy): void
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 | [19100021](../errorcode-dlp.md#19100021-设置企业应用策略失败) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-interface Attribute {
-  attributeId: string;
-  attributeValues: Array<string>;
-  valueType: number;
-  opt: number;
-}
-
-interface Rule {
-  ruleId: string;
-  attributes: Array<Attribute>;
-}
-
-interface Policy {
-  rules: Array<Rule>;
-  policyId: string;
-  ruleConflictAlg: number;
-}
-
-try {
-    let attributeValues: Array<string> = [ '1' ];
-    let attribute: Attribute = {
-        attributeId: 'DeviceHealthyStatus',
-        attributeValues: attributeValues,
-        valueType: 0,
-        opt: 2
-    }; // 属性信息。
-    let rule: Rule = {
-        ruleId: 'ruleId',
-        attributes: [ attribute ]
-    }; // 规则。
-    let policy: Policy = {
-        rules: [ rule ],
-        policyId: 'policyId',
-        ruleConflictAlg: 0
-    }; // 策略。
-    let enterprisePolicy: dlpPermission.EnterprisePolicy = {
-        policyString: JSON.stringify(policy)
-    };
-    dlpPermission.setEnterprisePolicy(enterprisePolicy);
-    console.info('set enterprise policy success'); 
-} catch (err) { 
-    console.error(`Failed to set enterprise policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## applyQuickFix
@@ -15,8 +15,6 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCal
 Applies a quick fix patch. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -41,42 +39,6 @@ Applies a quick fix patch. This API uses an asynchronous callback to return the 
 | [18500002](../errorcode-ability.md#18500002-invalid-patch-package) |
 | [18500008](../errorcode-ability.md#18500008-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-
-try {
-  let hapModuleQuickFixFiles = ['/data/storage/el2/base/entry.hqf'];
-  quickFixManager.applyQuickFix(hapModuleQuickFixFiles, (error) => {
-    if (error) {
-      console.error( `applyQuickFix failed with error: ${error}`);
-    } else {
-      console.info(`applyQuickFix success`);
-    }
-  });
-} catch (paramError) {
-  console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-}
-```
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapModuleQuickFixFiles = ['/data/storage/el2/base/entry.hqf'];
-
-try {
-  quickFixManager.applyQuickFix(hapModuleQuickFixFiles).then(() => {
-    console.info(`applyQuickFix success`);
-  }).catch((error: BusinessError) => {
-    console.error(`applyQuickFix err: ${error}`);
-  });
-} catch (paramError) {
-  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-}
-```
-
 
 ## applyQuickFix
 
@@ -87,8 +49,6 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 Applies a quick fix patch. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -117,7 +77,3 @@ Applies a quick fix patch. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [18500002](../errorcode-ability.md#18500002-invalid-patch-package) |
 | [18500008](../errorcode-ability.md#18500008-internal-error) |
-
-**Examples**
-
-See [applyQuickFix](#applyquickfix)

@@ -19,8 +19,6 @@ Obtains information about the running processes. This API uses a promise to retu
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
@@ -34,31 +32,6 @@ Obtains information about the running processes. This API uses a promise to retu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; |
-
-**Examples**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-appManager.getProcessRunningInfos().then((data) => {
-  console.info(`The process running infos is: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
-});
-```
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-
-appManager.getProcessRunningInfos((error, data) => {
-  if (error && error.code !== 0) {
-    console.error(`getProcessRunningInfos fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`getProcessRunningInfos success, data: ${JSON.stringify(data)}`);
-  }
-});
-```
 
 
 ## getProcessRunningInfos
@@ -75,8 +48,6 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
@@ -90,7 +61,3 @@ Obtains information about the running processes. This API uses an asynchronous c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | Yes |
-
-**Examples**
-
-See [getProcessRunningInfos](#getprocessrunninginfos)

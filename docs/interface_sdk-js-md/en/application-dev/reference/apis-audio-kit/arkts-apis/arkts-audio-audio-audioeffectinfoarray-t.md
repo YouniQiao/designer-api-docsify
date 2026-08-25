@@ -8,8 +8,6 @@ Defines an array that contains the audio effect mode corresponding to a specific
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 **Property type:** Array&lt;Readonly&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt;&gt;

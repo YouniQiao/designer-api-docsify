@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## appWindow
@@ -25,8 +23,6 @@ appWindow?: window.Window
 **类型：** window.Window
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ windowMode?: WindowModeType
 **默认值：** WindowModeType.DIALOG_BOX
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

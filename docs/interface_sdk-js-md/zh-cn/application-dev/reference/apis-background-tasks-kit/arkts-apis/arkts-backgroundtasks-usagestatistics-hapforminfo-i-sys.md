@@ -4,8 +4,6 @@ FA模型的使用信息属性集合。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ FA模型的使用信息属性集合。
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## count
 
 ```TypeScript
-count: int
+count: number
 ```
 
 卡片的点击次数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -37,16 +33,14 @@ count: int
 ## formDimension
 
 ```TypeScript
-formDimension: int
+formDimension: number
 ```
 
 卡片尺寸。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -55,16 +49,14 @@ formDimension: int
 ## formId
 
 ```TypeScript
-formId: long
+formId: number
 ```
 
 卡片Id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -73,16 +65,14 @@ formId: long
 ## formLastUsedTime
 
 ```TypeScript
-formLastUsedTime: long
+formLastUsedTime: number
 ```
 
 卡片的上一次点击时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -99,8 +89,6 @@ formName: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

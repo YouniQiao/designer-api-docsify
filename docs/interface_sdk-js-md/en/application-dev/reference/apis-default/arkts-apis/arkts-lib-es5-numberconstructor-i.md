@@ -1,7 +1,5 @@
 # NumberConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (value?: any): number
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@
 ```TypeScript
 new(value?: any): Number
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -53,8 +47,6 @@ The largest number that can be represented in JavaScript. Equal to approximately
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## MIN_VALUE
 
 ```TypeScript
@@ -64,8 +56,6 @@ readonly MIN_VALUE: number
 The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324.
 
 **Type:** number
-
-**ArkTS mode:** 
 
 ## NaN
 
@@ -77,8 +67,6 @@ A value that is not a number. In equality comparisons, NaN does not equal any va
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## NEGATIVE_INFINITY
 
 ```TypeScript
@@ -88,8 +76,6 @@ readonly NEGATIVE_INFINITY: number
 A value that is less than the largest negative number that can be represented in JavaScript. JavaScript displays NEGATIVE_INFINITY values as -infinity.
 
 **Type:** number
-
-**ArkTS mode:** 
 
 ## POSITIVE_INFINITY
 
@@ -101,8 +87,6 @@ A value greater than the largest number that can be represented in JavaScript. J
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## prototype
 
 ```TypeScript
@@ -110,5 +94,3 @@ readonly prototype: Number
 ```
 
 **Type:** Number
-
-**ArkTS mode:** 

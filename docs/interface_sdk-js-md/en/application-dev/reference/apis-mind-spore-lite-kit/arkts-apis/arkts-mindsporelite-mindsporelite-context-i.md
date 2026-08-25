@@ -4,14 +4,12 @@ Provides the device configurations
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
 ```
 
 ## cpu
@@ -25,8 +23,6 @@ The cpu device information
 **Type:** [CpuDevice](arkts-mindsporelite-mindsporelite-cpudevice-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ The NNRT device information
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -62,15 +56,6 @@ The target device
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
-
-**Examples**
-
-```TypeScript
-let context: mindSporeLite.Context = {};
-context.target = ['cpu','nnrt'];
-```

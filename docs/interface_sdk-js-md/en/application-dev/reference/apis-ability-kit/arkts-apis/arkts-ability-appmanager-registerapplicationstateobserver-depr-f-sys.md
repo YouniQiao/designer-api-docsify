@@ -15,8 +15,6 @@ Register application state observer.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](arkts-ability-appmanager-on-f.md#onapplicationstate)
@@ -38,34 +36,3 @@ Register application state observer.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-
-const observerCode = appManager.registerApplicationStateObserver({
-  onForegroundApplicationChanged(appStateData) {
-    console.info(`onForegroundApplicationChanged, appStateData: ${appStateData}.`);
-  },
-  onAbilityStateChanged(abilityStateData) {
-    console.info(`onAbilityStateChanged, abilityStateData: ${abilityStateData}.`);
-  },
-  onProcessCreated(processData) {
-    console.info(`onProcessCreated, processData: ${processData}.`);
-  },
-  onProcessDied(processData) {
-    console.info(`onProcessDied, processData: ${processData}.`);
-  },
-  onProcessStateChanged(processData) {
-    console.info(`onProcessStateChanged, processData: ${processData}.`);
-  },
-  onAppStarted(appStateData) {
-    console.info(`onAppStarted, appStateData: ${JSON.stringify(appStateData)}`);
-  },
-  onAppStopped(appStateData) {
-    console.info(`onAppStopped, appStateData: ${JSON.stringify(appStateData)}`);
-  }
-});
-console.info(`observerCode: ${observerCode}.`);
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [FormParam](arkts-form-forminfo-formparam-e.md)
@@ -21,8 +19,6 @@ DIMENSION_KEY = 'ohos.extra.param.key.form_dimension'
 卡片规格样式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ NAME_KEY = 'ohos.extra.param.key.form_name'
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [NAME_KEY](arkts-form-forminfo-formparam-e.md#name_key)
@@ -57,8 +51,6 @@ MODULE_NAME_KEY = 'ohos.extra.param.key.module_name'
 卡片所属模块名称。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -76,8 +68,6 @@ WIDTH_KEY = 'ohos.extra.param.key.form_width'
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [WIDTH_KEY](arkts-form-forminfo-formparam-e.md#width_key)
@@ -94,8 +84,6 @@ HEIGHT_KEY = 'ohos.extra.param.key.form_height'
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [HEIGHT_KEY](arkts-form-forminfo-formparam-e.md#height_key)
@@ -111,8 +99,6 @@ TEMPORARY_KEY = 'ohos.extra.param.key.form_temporary'
 临时卡片。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

@@ -4,14 +4,12 @@ Defines an external log manager for external log management.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onCapacityReached
@@ -23,8 +21,6 @@ onCapacityReached(container: ExternalLogContainer): void
 This function is called when external log directory capacity is reached
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 

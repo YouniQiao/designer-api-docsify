@@ -4,14 +4,12 @@ Describes the USB accessory information.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## description
@@ -25,8 +23,6 @@ Description of an accessory.
 **Type:** string
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -42,8 +38,6 @@ Manufacturer of an accessory.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## product
@@ -57,8 +51,6 @@ Product type of an accessory.
 **Type:** string
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -74,8 +66,6 @@ SN of an accessory.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## version
@@ -89,7 +79,5 @@ Version of an accessory.
 **Type:** string
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager

@@ -12,8 +12,6 @@ Boids simulation parameters used to configure the behavioral attributes of each 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -21,16 +19,14 @@ Boids simulation parameters used to configure the behavioral attributes of each 
 ## alignmentDistance
 
 ```TypeScript
-alignmentDistance?: double
+alignmentDistance?: number
 ```
 
 Perception radius of the alignment rule. Unit is m. Neighboring individuals within this distance (inclusive) contribute to the alignment force. Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,16 +37,14 @@ Perception radius of the alignment rule. Unit is m. Neighboring individuals with
 ## alignmentWeight
 
 ```TypeScript
-alignmentWeight?: double
+alignmentWeight?: number
 ```
 
 Weight of the alignment rule. The intensity with which the individual steers toward the average heading of neighboring individuals within the alignmentDistance. Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,16 +55,14 @@ Weight of the alignment rule. The intensity with which the individual steers tow
 ## boundaryDistance
 
 ```TypeScript
-boundaryDistance?: double
+boundaryDistance?: number
 ```
 
 Effective distance of the boundary constraint force. Unit is m. The individual is subject to a repulsive force when its distance to the boundary wall is within this distance. Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,8 +82,6 @@ Maximum corner of the axis-aligned bounding box that constrains the individual's
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -110,8 +100,6 @@ Minimum corner of the axis-aligned bounding box that constrains the individual's
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -121,16 +109,14 @@ Minimum corner of the axis-aligned bounding box that constrains the individual's
 ## boundaryWeight
 
 ```TypeScript
-boundaryWeight?: double
+boundaryWeight?: number
 ```
 
 Weight of the boundary constraint force. The intensity with which the individual is pushed back by the boundary wall within the boundaryDistance. Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,16 +127,14 @@ Weight of the boundary constraint force. The intensity with which the individual
 ## cohesionDistance
 
 ```TypeScript
-cohesionDistance?: double
+cohesionDistance?: number
 ```
 
 Perception radius of the cohesion rule. Unit is m. Neighboring individuals within this distance (inclusive) contribute to the cohesion force. Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,16 +145,14 @@ Perception radius of the cohesion rule. Unit is m. Neighboring individuals withi
 ## cohesionWeight
 
 ```TypeScript
-cohesionWeight?: double
+cohesionWeight?: number
 ```
 
 Weight of the cohesion rule. The intensity with which the individual is attracted toward the average position of neighboring individuals within the cohesionDistance. Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,16 +163,14 @@ Weight of the cohesion rule. The intensity with which the individual is attracte
 ## gravityWeight
 
 ```TypeScript
-gravityWeight?: double
+gravityWeight?: number
 ```
 
 Attraction intensity of the attraction field on this individual. Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,8 +190,6 @@ Initial position of each individual. Each component unit is m. If not set, the c
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -229,8 +207,6 @@ Quaternion of the initial rotation direction of each individual. If not set, the
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,8 +226,6 @@ Initial velocity vector of each individual. Each component unit is m/s. Default 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -261,16 +235,14 @@ Initial velocity vector of each individual. Each component unit is m/s. Default 
 ## maxAccelerationMag
 
 ```TypeScript
-maxAccelerationMag?: double
+maxAccelerationMag?: number
 ```
 
 Maximum acceleration that the individual can reach per simulation frame. Unit is m/s². Value &gt;= 0. Default value is approximately 39.06.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,8 +262,6 @@ Maximum turn rate per axis per simulation frame. Each component unit is rad/simu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -301,16 +271,14 @@ Maximum turn rate per axis per simulation frame. Each component unit is rad/simu
 ## maxVelocityMag
 
 ```TypeScript
-maxVelocityMag?: double
+maxVelocityMag?: number
 ```
 
 Maximum velocity that the individual can reach per simulation frame. Unit is m/s. Value &gt;= 0. Default value is approximately 0.625.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -321,16 +289,14 @@ Maximum velocity that the individual can reach per simulation frame. Unit is m/s
 ## repulsionWeight
 
 ```TypeScript
-repulsionWeight?: double
+repulsionWeight?: number
 ```
 
 Repulsion intensity of the repulsion field on this individual. Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -341,16 +307,14 @@ Repulsion intensity of the repulsion field on this individual. Value &gt;= 0. De
 ## separationDistance
 
 ```TypeScript
-separationDistance?: double
+separationDistance?: number
 ```
 
 Perception radius of the separation rule. Unit is m. Only neighboring individuals strictly within this distance contribute to the separation force (boundary force is 0). Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -361,16 +325,14 @@ Perception radius of the separation rule. Unit is m. Only neighboring individual
 ## separationWeight
 
 ```TypeScript
-separationWeight?: double
+separationWeight?: number
 ```
 
 Weight of the separation rule. The intensity with which the individual is repelled by neighboring individuals within the separationDistance. Value &gt;= 0. Default value: 0.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,14 +4,12 @@ Describes the information about a single POI.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## additionalInfo
@@ -25,8 +23,6 @@ Additional information about the POI.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Indicates the detailed address of the POI.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -64,8 +58,6 @@ Indicates administrative region name.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -73,16 +65,14 @@ Indicates administrative region name.
 ## confidence
 
 ```TypeScript
-confidence: double
+confidence: number
 ```
 
 Indicates the confidence of POI information.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -100,8 +90,6 @@ Indicates the ID of a POI.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -109,16 +97,14 @@ Indicates the ID of a POI.
 ## latitude
 
 ```TypeScript
-latitude: double
+latitude: number
 ```
 
 Indicates the latitude of POI.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -136,8 +122,6 @@ Indicates locality information.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -145,16 +129,14 @@ Indicates locality information.
 ## longitude
 
 ```TypeScript
-longitude: double
+longitude: number
 ```
 
 Indicates the longitude of POI.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -172,8 +154,6 @@ Indicates the name of the POI.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -190,8 +170,6 @@ Indicates sub-administrative region name.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -207,8 +185,6 @@ Indicates sub-locality information.
 **Type:** string
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

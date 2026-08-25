@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## onAcbStateChange
@@ -15,8 +15,6 @@ function onAcbStateChange(callback: Callback<AcbStateParam>): void
 订阅逻辑链路连接状态变化事件。使用callback异步回调。适用于需要在逻辑链路建立或断开时触发相应处理的场景，如数据传输前的链路就绪检查或断连后的资源清理。与 [remoteDevice.onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md) 监听设备层级连接状态不同，本接口监听逻辑链路层级的连接状态。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

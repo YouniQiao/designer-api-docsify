@@ -4,14 +4,12 @@ Provides the element information of the area being clicked. For the sample code,
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## extra
@@ -25,8 +23,6 @@ Extra information of the area being clicked. If the area being clicked is an ima
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,8 +39,6 @@ Element type of the area being clicked.
 **Type:** [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

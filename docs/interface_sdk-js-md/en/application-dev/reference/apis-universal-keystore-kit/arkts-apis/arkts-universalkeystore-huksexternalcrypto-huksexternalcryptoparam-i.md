@@ -4,14 +4,12 @@ Defines the type of the param array used for calling the API.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## tag
@@ -26,8 +24,6 @@ Parameter tag, which is used to distinguish parameters.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## value
@@ -38,10 +34,8 @@ value: boolean | number | bigint | Uint8Array
 
 Value of the tag.
 
-**Type:** boolean \| int \| bigint \| Uint8Array
+**Type:** boolean \| number \| bigint \| Uint8Array
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension

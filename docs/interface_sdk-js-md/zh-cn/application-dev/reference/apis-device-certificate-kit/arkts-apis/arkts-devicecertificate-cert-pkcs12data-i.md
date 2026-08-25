@@ -4,14 +4,12 @@ P12（PKCS #12）数据，包含私钥、证书和其他证书。
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## cert
@@ -25,8 +23,6 @@ cert?: X509Cert
 **类型：** X509Cert
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ otherCerts?: Array<X509Cert>
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Cert
@@ -61,8 +55,6 @@ privateKey?: string | Uint8Array
 **类型：** string \| Uint8Array
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

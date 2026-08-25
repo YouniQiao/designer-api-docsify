@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getConnectionState
@@ -15,8 +15,6 @@ function getConnectionState(params: ConnectionStateParams): ConnectionState
 获取与远端设备之间的端口通道连接状态。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -34,7 +32,7 @@ function getConnectionState(params: ConnectionStateParams): ConnectionState
 
 | 类型 |
 | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) |
 
 **错误码：**
 

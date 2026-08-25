@@ -4,14 +4,12 @@ Provides backup config to backup or restore KVStore.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## fileName
@@ -25,8 +23,6 @@ Specifies the file name to the backup database
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Specifies the root directory relative to the backup database
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

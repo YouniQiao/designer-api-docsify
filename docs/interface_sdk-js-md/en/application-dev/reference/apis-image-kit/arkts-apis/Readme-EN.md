@@ -9,7 +9,6 @@
   - [createImageReceiver](arkts-image-image-createimagereceiver-f.md)
   - [createImageSource](arkts-image-image-createimagesource-f.md)
   - [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md)
-  - [createIncrementalSource](arkts-image-image-createincrementalsource-f.md)
   - [createPicture](arkts-image-image-createpicture-f.md)
   <!--Del-->
   - [createPictureByHdrAndSdrPixelMap(system api)](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md)<!--DelEnd-->

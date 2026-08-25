@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from '@kit.AbilityKit';
+import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
 ```
 
 ## evictFilePages
@@ -15,8 +15,6 @@ function evictFilePages(fileNames: Array<string>): Promise<void>
 Sends a request to the system to release file page cache of specified files. The system determines whether to actually perform the release based on the current memory status, and success is not guaranteed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

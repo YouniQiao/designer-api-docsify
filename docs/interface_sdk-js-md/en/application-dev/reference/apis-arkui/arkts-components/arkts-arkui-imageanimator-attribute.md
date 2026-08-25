@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ duration(value: number)
 Sets the playback duration. This attribute does not take effect when a separate duration is set for any of the image frames.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,8 +45,6 @@ Sets the status before and after execution of the animation in the current playb
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -61,7 +55,7 @@ Sets the status before and after execution of the animation in the current playb
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [FillMode](#fillmode) | Yes |
+| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | Yes |
 
 ## fixedSize
 
@@ -72,8 +66,6 @@ fixedSize(value: boolean)
 Sets whether the image size is fixed at the component size.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -97,8 +89,6 @@ Sets image frame information. Dynamic update is not supported.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -121,8 +111,6 @@ Sets the number of times that the animation is played.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -139,11 +127,9 @@ Sets the number of times that the animation is played.
 monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 ```
 
-Sets whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange] onVisibleAreaChange event.
+Sets whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange] [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) event.
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,8 +153,6 @@ Triggered when the animation playback returns to the initial state.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -190,8 +174,6 @@ onFinish(event: () => void)
 Triggered when the animation playback completes or stops.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -215,8 +197,6 @@ Triggered when the animation playback is paused.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -239,8 +219,6 @@ Triggered when the animation playback is repeated.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -260,8 +238,6 @@ onStart(event: () => void)
 Triggered when the animation starts to play.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -289,8 +265,6 @@ Sets the number of images to be pre-decoded.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -310,8 +284,6 @@ reverse(value: boolean)
 Sets the playback direction.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -334,8 +306,6 @@ state(value: AnimationStatus)
 Sets the playback state of the animation.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

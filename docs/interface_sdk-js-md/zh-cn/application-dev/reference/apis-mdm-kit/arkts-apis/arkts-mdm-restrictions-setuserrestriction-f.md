@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## setUserRestriction
@@ -15,8 +15,6 @@ function setUserRestriction(admin: Want, settingsItem: string, restricted: boole
 设置用户行为的限制规则。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **废弃版本：** 26.0.0
 
@@ -44,45 +42,6 @@ function setUserRestriction(admin: Want, settingsItem: string, restricted: boole
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { restrictions } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  restrictions.setUserRestriction(wantTemp, 'setApn', true);
-  console.info('Succeeded in restricting from setting apn');
-} catch (err) {
-  console.error(`Failed to restrict from setting apn. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  restrictions.setUserRestriction(wantTemp, restrictions.SettingsForDevice.SET_APN, true);
-  console.info('Succeeded in restricting from setting apn');
-} catch (err) {
-  console.error(`Failed to restrict from setting apn. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## setUserRestriction
 
@@ -93,8 +52,6 @@ function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restri
 设置用户行为的限制规则。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -118,7 +75,3 @@ function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restri
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [setUserRestriction](#setuserrestriction)

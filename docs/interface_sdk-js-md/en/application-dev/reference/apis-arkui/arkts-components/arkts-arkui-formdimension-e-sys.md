@@ -4,8 +4,6 @@ Enumerates widget sizes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ Dimension_1_2 = 0
 1 x 2 widget.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,8 +32,6 @@ Dimension_2_2 = 1
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ Dimension_2_4 = 2
 2 x 4 widget.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,8 +60,6 @@ Dimension_4_4 = 3
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ Dimension_2_1 = 4
 2 x 1 widget.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 20
 
@@ -102,8 +90,6 @@ DIMENSION_1_1 = 6
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -117,8 +103,6 @@ DIMENSION_6_4 = 7
 6 x 4 widget.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,8 +118,6 @@ DIMENSION_2_3 = 8
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -149,8 +131,6 @@ DIMENSION_3_3 = 9
 3 x 3 widget. Available for wearable devices.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

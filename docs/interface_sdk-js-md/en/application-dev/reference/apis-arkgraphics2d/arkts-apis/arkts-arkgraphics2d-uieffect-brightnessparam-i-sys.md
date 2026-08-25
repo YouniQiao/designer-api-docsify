@@ -4,8 +4,6 @@ Detailed description of the material brightness parameters.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Detailed description of the material brightness parameters.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## cubicCoeff
 
 ```TypeScript
-cubicCoeff : double
+cubicCoeff : number
 ```
 
 Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -37,16 +33,14 @@ Third-order coefficient for grayscale adjustment. The value range is [-1, 1]. Va
 ## fraction
 
 ```TypeScript
-fraction : double
+fraction : number
 ```
 
 Blending ratio for the brightness effect. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A larger value indicates a weaker brightness effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -55,16 +49,14 @@ Blending ratio for the brightness effect. The value range is [0, 1]. Values less
 ## lightUpDegree
 
 ```TypeScript
-lightUpDegree : double
+lightUpDegree : number
 ```
 
 Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -73,16 +65,14 @@ Grayscale adjustment ratio. The value range is [-1, 1]. Values less than -1 are 
 ## negRgb
 
 ```TypeScript
-negRgb : [double, double, double]
+negRgb : [number, number, number]
 ```
 
 Negative adjustment coefficients based on the base saturation. The value range for each number is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value indicates lower saturation.
 
-**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**Type:** [number, number, number]
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -91,16 +81,14 @@ Negative adjustment coefficients based on the base saturation. The value range f
 ## posRgb
 
 ```TypeScript
-posRgb : [double, double, double]
+posRgb : [number, number, number]
 ```
 
 Positive adjustment coefficients based on the base saturation. The value range for each number is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value indicates higher saturation.
 
-**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**Type:** [number, number, number]
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -109,16 +97,14 @@ Positive adjustment coefficients based on the base saturation. The value range f
 ## quadCoeff
 
 ```TypeScript
-quadCoeff : double
+quadCoeff : number
 ```
 
 Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -127,16 +113,14 @@ Second-order coefficient for grayscale adjustment. The value range is [-1, 1]. V
 ## rate
 
 ```TypeScript
-rate : double
+rate : number
 ```
 
 Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values less than -1 are treated as -1; values greater than 1 are treated as 1. A larger value results in a stronger grayscale adjustment effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -145,16 +129,14 @@ Linear coefficient for grayscale adjustment. The value range is [-1, 1]. Values 
 ## saturation
 
 ```TypeScript
-saturation : double
+saturation : number
 ```
 
 Base saturation for brightness. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A larger value indicates a higher base saturation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 

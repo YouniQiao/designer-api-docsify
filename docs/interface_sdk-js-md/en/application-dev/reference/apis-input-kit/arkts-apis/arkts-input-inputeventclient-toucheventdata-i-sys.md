@@ -4,8 +4,6 @@ Defines the touch event data.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the touch event data.
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## touchEvent
@@ -27,8 +25,6 @@ Touch event.
 **Type:** [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -45,8 +41,6 @@ Whether to use global coordinates to calculate the injected touch event. The def
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 

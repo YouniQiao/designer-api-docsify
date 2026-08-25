@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## addProcessorFromConfig
 
 ```TypeScript
-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>
+function addProcessorFromConfig(processorName: string, configName?: string): Promise<number>
 ```
 
 添加数据处理者配置信息，通过配置文件配置处理者接收的事件名等信息，事件发生后处理者可以接收事件，使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -33,39 +31,10 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [11105001](../errorcode-hiappevent.md#11105001-非法的参数值) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hiAppEvent.addProcessorFromConfig("test_name").then((processorId) => {
-  hilog.info(0x0000, 'hiAppEvent', `Succeeded in adding processor from config, processorId=${processorId}`);
-}).catch((err: BusinessError) => {
-  hilog.error(0x0000, 'hiAppEvent', `Failed to add processor from config, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hiAppEvent.addProcessorFromConfig("test_name").then((processorId: long) => {
-  hilog.info(0x0000, 'hiAppEvent', `Succeeded in adding processor from config, processorId=${processorId}`);
-}).catch((err: Error) => {
-  const bErr = err as BusinessError;
-  hilog.error(0x0000, 'hiAppEvent', `Failed to add processor from config, code: ${bErr.code}, message: ${bErr.message}`);
-});
-```

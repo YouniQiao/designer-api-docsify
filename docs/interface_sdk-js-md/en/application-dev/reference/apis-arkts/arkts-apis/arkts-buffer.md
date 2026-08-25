@@ -4,14 +4,12 @@ A **Buffer** object represents a byte sequence of a fixed length. It is used to 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
+import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -24,11 +22,8 @@ import { buffer } from '@kit.ArkTS';
 | [allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md) |
 | [allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md) |
 | [byteLength](arkts-arkts-buffer-bytelength-f.md) |
-| [byteLength](arkts-arkts-buffer-bytelength-f.md) |
-| [compare](arkts-arkts-buffer-compare-f.md) |
 | [compare](arkts-arkts-buffer-compare-f.md) |
 | [concat](arkts-arkts-buffer-concat-f.md) |
-| [from](arkts-arkts-buffer-from-f.md) |
 | [from](arkts-arkts-buffer-from-f.md) |
 | [from](arkts-arkts-buffer-from-f.md) |
 | [from](arkts-arkts-buffer-from-f.md) |
@@ -49,13 +44,10 @@ import { buffer } from '@kit.ArkTS';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [BlobOptions](arkts-arkts-buffer-bloboptions-i.md) |
 | [TypedArray](arkts-arkts-buffer-typedarray-i.md) |
 
 ### Types
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ArrayUnionType](arkts-arkts-buffer-arrayuniontype-t.md) |
 | [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md) |
-| [TypedArray](arkts-arkts-buffer-typedarray-t.md) |

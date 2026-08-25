@@ -18,8 +18,6 @@ Called when the stepper component is used.
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **替代接口：** index

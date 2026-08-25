@@ -2,9 +2,7 @@
 
 Imaging mode query object.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**Since:** 26.1.0
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -13,7 +11,7 @@ Imaging mode query object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isImagingModeSupported
@@ -24,9 +22,7 @@ isImagingModeSupported(mode: CameraImagingMode): boolean
 
 Checks whether a camera imaging mode is supported.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

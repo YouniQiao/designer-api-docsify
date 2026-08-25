@@ -4,8 +4,6 @@ Describes the spp parameters.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md)
@@ -15,7 +13,7 @@ Describes the spp parameters.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## secure
@@ -29,8 +27,6 @@ Indicates secure channel or not
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Spp link type [SppType](arkts-connectivity-bluetooth-spptype-e.md)
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [type](arkts-connectivity-bluetoothmanager-sppoption-i.md#type)
@@ -69,8 +63,6 @@ Indicates the UUID in the SDP record.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

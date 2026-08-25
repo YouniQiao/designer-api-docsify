@@ -4,8 +4,6 @@ Defines the quick fix information at the application level.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the quick fix information at the application level.
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -28,8 +26,6 @@ Bundle name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Bundle name.
 ## bundleVersionCode
 
 ```TypeScript
-readonly bundleVersionCode: long
+readonly bundleVersionCode: number
 ```
 
 Internal version number of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
@@ -64,8 +58,6 @@ Version number of the application that is shown to users.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -82,8 +74,6 @@ Quick fix information at the HAP file level.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -91,16 +81,14 @@ Quick fix information at the HAP file level.
 ## quickFixVersionCode
 
 ```TypeScript
-readonly quickFixVersionCode: long
+readonly quickFixVersionCode: number
 ```
 
 Version code of the quick fix patch package.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
@@ -117,8 +105,6 @@ Text description of the version number of the quick fix patch package.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 

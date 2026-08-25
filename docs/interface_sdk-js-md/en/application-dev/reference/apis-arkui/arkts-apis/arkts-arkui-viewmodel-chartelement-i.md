@@ -6,8 +6,6 @@ The &lt;chart&gt; component displays line charts, gauge charts, and bar charts.@
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## append
@@ -38,8 +36,6 @@ append(params: {
 Data is dynamiconlyally added to an existing data sequence. The target sequence is specified based on serial, which is the subscript of the datasets array and starts from 0. datasets[index].data is not updated. Only line charts support this attribute. The value is incremented by 1 based on the horizontal coordinate and is related to the xAxis min/max setting.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

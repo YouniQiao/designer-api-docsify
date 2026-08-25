@@ -4,8 +4,6 @@ Describes visible area change configuration options.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,8 +24,6 @@ Expected calculation interval, in ms. If the value is less than 100 or set to **
 **Default:** 1000
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Visible area calculation mode.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -69,8 +63,6 @@ Threshold array. Each threshold represents a ratio of the component's visible ar
 **Type:** Array&lt;number&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

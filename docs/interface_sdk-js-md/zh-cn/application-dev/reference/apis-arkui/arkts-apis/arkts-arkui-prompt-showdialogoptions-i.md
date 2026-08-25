@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'kits/@kit.ArkUI';
 ```
 
 ## buttons
@@ -29,8 +27,6 @@ buttons?: [Button, Button?, Button?]
 **类型：** [Button, Button?, Button?]
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -50,8 +46,6 @@ message?: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [message](arkts-arkui-promptaction-showdialogoptions-i.md#message)
@@ -69,8 +63,6 @@ title?: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

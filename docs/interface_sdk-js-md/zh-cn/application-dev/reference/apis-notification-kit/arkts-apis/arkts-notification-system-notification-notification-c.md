@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 7
 
 **替代接口：** [notification/notification](arkts-notification.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Notification, ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
+import { Notification, ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit';
 ```
 
 ## show
@@ -28,8 +26,6 @@ static show(options?: ShowNotificationOptions): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 7
 
 **替代接口：** [notification/notification](arkts-notification.md)
@@ -41,21 +37,3 @@ static show(options?: ShowNotificationOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-let notificationObj: notification = {
-  show() {
-    notification.show({
-      contentTitle: 'title info',
-      contentText: 'text',
-      clickAction: {
-        bundleName: 'com.example.testapp',
-        abilityName: 'notificationDemo',
-        uri: '/path/to/notification'
-      }
-    });
-  }
-}
-```

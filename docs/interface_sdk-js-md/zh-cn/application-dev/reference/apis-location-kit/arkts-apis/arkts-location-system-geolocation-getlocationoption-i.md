@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md)
@@ -17,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
+import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from 'kits/@kit.LocationKit';
 ```
 
 ## complete
@@ -29,8 +27,6 @@ complete?: () => void
 接口调用结束的回调函数。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -49,8 +45,6 @@ fail?: (data: string, code: number) => void
 接口调用失败的回调函数。data为错误信息，code为错误码。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -76,8 +70,6 @@ success?: (data: GeolocationResponse) => void
 接口调用成功的回调函数。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -105,8 +97,6 @@ coordType?: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
@@ -124,8 +114,6 @@ timeout?: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 

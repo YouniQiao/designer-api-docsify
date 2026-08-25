@@ -4,8 +4,6 @@ Details the space usage of the **\/data** directory on the user device.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Details the space usage of the **\/data** directory on the user device.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## path
@@ -28,8 +26,6 @@ Path name.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
@@ -39,16 +35,14 @@ Path name.
 ## totalCnt
 
 ```TypeScript
-totalCnt: int
+totalCnt: number
 ```
 
 The size of inode count.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,16 +53,14 @@ The size of inode count.
 ## totalSize
 
 ```TypeScript
-totalSize: long
+totalSize: number
 ```
 
-The size of user data dirs. <br>Unit: Byte.
+The size of user data dirs. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,8 +6,6 @@ Represents a set of optional parameters for creating an OS account bound to the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -15,5 +13,5 @@ Represents a set of optional parameters for creating an OS account bound to the 
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```

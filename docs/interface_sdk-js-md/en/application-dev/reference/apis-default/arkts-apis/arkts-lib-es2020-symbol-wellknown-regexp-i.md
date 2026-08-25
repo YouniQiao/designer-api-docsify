@@ -1,7 +1,5 @@
 # RegExp
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@
 ```
 
 Matches a string with this regular expression, and returns an iterable of matches containing the results of that search.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

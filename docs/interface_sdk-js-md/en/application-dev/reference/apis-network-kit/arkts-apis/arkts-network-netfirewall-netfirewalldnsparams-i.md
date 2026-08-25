@@ -8,14 +8,12 @@ Defines the DNS information of a firewall rule.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## primaryDns
@@ -30,8 +28,6 @@ Active DNS server.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## standbyDns
@@ -45,7 +41,5 @@ Standby DNS server.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall

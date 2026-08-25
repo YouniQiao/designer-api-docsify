@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## mechInfo
@@ -26,8 +24,6 @@ Mechanical device information.
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## state
@@ -41,7 +37,5 @@ state: AttachState
 **类型：** [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core

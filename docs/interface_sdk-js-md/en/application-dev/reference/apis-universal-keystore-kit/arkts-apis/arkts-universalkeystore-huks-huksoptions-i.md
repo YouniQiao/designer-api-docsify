@@ -4,14 +4,12 @@ Defines **options** used in the APIs.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## inData
@@ -25,8 +23,6 @@ Tag.
 **Type:** Uint8Array
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,8 +39,6 @@ Tag.
 **Type:** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'kits/@kit.ArkUI';
 ```
 
 ## capture
@@ -15,8 +15,6 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 获取屏幕全屏截图，使用Promise异步回调。此接口可以通过设置不同的displayId截取不同屏幕的截图，且只能截取全屏；[pick](arkts-arkui-screenshot-pick-f.md)接口可实现区域截屏。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本22+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CUSTOM_SCREEN_RECORDING
@@ -46,52 +44,3 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-// 配置截图参数，指定截取displayId为0的屏幕
-let captureOption: screenshot.CaptureOption = {
-  displayId: 0
-};
-try {
-  // 调用capture接口获取全屏截图
-  let promise = screenshot.capture(captureOption);
-  promise.then((pixelMap: image.PixelMap) => {
-    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
-    pixelMap.release(); // PixelMap使用完后及时释放内存
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let captureOption: screenshot.CaptureOption = {
-  "displayId": 0
-};
-try {
-  let promise = screenshot.capture(captureOption);
-  promise.then((pixelMap: image.PixelMap) => {
-    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
-    pixelMap.release(); // PixelMap使用完后及时释放内存
-  }).catch((err: Error) => {
-    console.error(`Failed to save screenshot. Code: ${err?.code}, message: ${err?.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to save screenshot. Code: ${error.code}, message: ${error.message}`);
-};
-```

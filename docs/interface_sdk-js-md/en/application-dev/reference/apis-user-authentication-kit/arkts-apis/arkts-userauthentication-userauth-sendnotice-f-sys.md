@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## sendNotice
@@ -15,8 +15,6 @@ function sendNotice(noticeType: NoticeType, eventData: string): void
 Sends a notification from the user authentication widget. When the unified authentication widget is used for user authentication, this API is used to receive notifications from the unified authentication widget and send the notifications to the user authentication framework.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SUPPORT_USER_AUTH
 
@@ -39,37 +37,3 @@ Sends a notification from the user authentication widget. When the unified authe
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
-
-**Examples**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface  EventData {
-  widgetContextId: number;
-  event: string;
-  version: string;
-  payload: PayLoad;
-}
-interface PayLoad {
-  type: string[];
-}
-try {
-  const eventData : EventData = {
-    widgetContextId: 123456,
-    event: 'EVENT_AUTH_TYPE_READY',
-    version: '1',
-    payload: {
-      type: ['pin']
-    } as PayLoad,
-  };
-  const jsonEventData = JSON.stringify(eventData);
-  let noticeType = userAuth.NoticeType.WIDGET_NOTICE;
-  userAuth.sendNotice(noticeType, jsonEventData);
-  console.info('sendNotice success');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`sendNotice catch error: Code is ${err?.code}, message is ${err?.message}`);
-}
-```

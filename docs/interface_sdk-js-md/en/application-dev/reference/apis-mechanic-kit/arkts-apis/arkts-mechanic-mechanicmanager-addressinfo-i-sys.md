@@ -4,8 +4,6 @@ Definition of device adress information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Definition of device adress information.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## address
@@ -27,8 +25,6 @@ Address of device.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Type of address.
 **Type:** [AddressType](arkts-mechanic-mechanicmanager-addresstype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getSelfTrafficStats
@@ -21,8 +21,6 @@ function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 > - 本接口会有一定耗时，调用时请注意切勿频繁调用。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -47,23 +45,3 @@ function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) |
 | [2103019](../errorcode-net-statistics.md#2103019-时间戳无效) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { connection, statistics } from '@kit.NetworkKit';
-
-let networkInfo: statistics.NetworkInfo = {
-    type: connection.NetBearType.BEARER_CELLULAR,
-    startTime: Math.floor(Date.now() / 1000) - 86400 * 31,
-    endTime: Math.floor(Date.now() / 1000),
-    simId: 1,
-}
-
-statistics.getSelfTrafficStats(networkInfo).then((stats: statistics.NetStatsInfo) => {
-    console.info('getSelfTrafficStats success : ' + JSON.stringify(stats));
-}).catch((err: BusinessError) => {
-    console.error('getSelfTrafficStats error. code: ' + `${err.code}` + ', message: ' + `${err.message}`);
-});
-```

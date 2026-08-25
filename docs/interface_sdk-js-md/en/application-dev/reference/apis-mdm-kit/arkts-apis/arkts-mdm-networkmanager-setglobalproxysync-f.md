@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setGlobalProxySync
@@ -15,8 +15,6 @@ function setGlobalProxySync(admin: Want, httpProxy: connection.HttpProxy): void
 Sets the global network proxy. This API is suitable for enterprise network management scenarios, such as setting a unified network proxy for an enterprise, implementing network access audit, controlling network access paths, and optimizing network performance. It helps enterprises centrally manage network access, making network access auditable and controllable.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -39,33 +37,3 @@ Sets the global network proxy. This API is suitable for enterprise network manag
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { connection } from '@kit.NetworkKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace with actual values.
-let exclusionStr: string = "192.168,baidu.com";
-let exclusionArray: Array<string> = exclusionStr.split(',');
-let httpProxy: connection.HttpProxy = {
-  host: "192.168.xx.xxx",
-  port: 8080,
-  exclusionList: exclusionArray
-};
-
-try {
-  networkManager.setGlobalProxySync(wantTemp, httpProxy);
-  console.info(`Succeeded in setting network global proxy.`);
-} catch (err) {
-  console.error(`Failed to set network global proxy. Code: ${err.code}, message: ${err.message}`);
-}
-```

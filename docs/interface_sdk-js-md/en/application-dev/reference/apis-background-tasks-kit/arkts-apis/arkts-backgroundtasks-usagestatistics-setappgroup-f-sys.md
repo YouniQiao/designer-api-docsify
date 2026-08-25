@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## setAppGroup
@@ -15,8 +15,6 @@ function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCal
 Set app group by bundleName.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -47,36 +45,6 @@ Set app group by bundleName.
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-duplicate-application-group-operation) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName: string = "com.example.deviceUsageStatistics";
-let newGroup = usageStatistics.GroupType.DAILY_GROUP;
-
-usageStatistics.setAppGroup(bundleName, newGroup).then( () => {
-  console.info('BUNDLE_ACTIVE setAppGroup promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE setAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName: string = "com.example.deviceUsageStatistics";
-let newGroup = usageStatistics.GroupType.DAILY_GROUP;
-
-usageStatistics.setAppGroup(bundleName, newGroup, (err: BusinessError) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE setAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE setAppGroup callback succeeded.');
-  }
-});
-```
-
 
 ## setAppGroup
 
@@ -87,8 +55,6 @@ function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>
 Set app group by bundleName.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -123,7 +89,3 @@ Set app group by bundleName.
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-duplicate-application-group-operation) |
-
-**Examples**
-
-See [setAppGroup](#setappgroup)

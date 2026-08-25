@@ -1,7 +1,5 @@
 # PropertyDescriptorMap
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,5 +12,3 @@
 ```
 
 **Type:** PropertyDescriptor
-
-**ArkTS mode:** 

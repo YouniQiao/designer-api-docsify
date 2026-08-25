@@ -4,14 +4,12 @@ Defines the information of a word selection event.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## bundleName
@@ -26,8 +24,6 @@ Bundle name of the application where words are selected.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.SelectionInput.Selection
@@ -35,16 +31,14 @@ Bundle name of the application where words are selected.
 ## displayID
 
 ```TypeScript
-displayID: int
+displayID: number
 ```
 
 ID of the screen where the window with selected words is located.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,16 +47,14 @@ ID of the screen where the window with selected words is located.
 ## endDisplayX
 
 ```TypeScript
-endDisplayX: int
+endDisplayX: number
 ```
 
 X-coordinate of the screen where the word selection ends, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,16 +63,14 @@ X-coordinate of the screen where the word selection ends, in px.
 ## endDisplayY
 
 ```TypeScript
-endDisplayY: int
+endDisplayY: number
 ```
 
 Y-coordinate of the screen where the word selection ends, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,16 +79,14 @@ Y-coordinate of the screen where the word selection ends, in px.
 ## endWindowX
 
 ```TypeScript
-endWindowX: int
+endWindowX: number
 ```
 
 X-coordinate of the window where the word selection ends, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,16 +95,14 @@ X-coordinate of the window where the word selection ends, in px.
 ## endWindowY
 
 ```TypeScript
-endWindowY: int
+endWindowY: number
 ```
 
 Y-coordinate of the window where the word selection ends, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,8 +122,6 @@ Word selection types.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.SelectionInput.Selection
@@ -145,16 +129,14 @@ Word selection types.
 ## startDisplayX
 
 ```TypeScript
-startDisplayX: int
+startDisplayX: number
 ```
 
 X-coordinate of the screen where the word selection starts, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,16 +145,14 @@ X-coordinate of the screen where the word selection starts, in px.
 ## startDisplayY
 
 ```TypeScript
-startDisplayY: int
+startDisplayY: number
 ```
 
 Y-coordinate of the screen where the word selection starts, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,16 +161,14 @@ Y-coordinate of the screen where the word selection starts, in px.
 ## startWindowX
 
 ```TypeScript
-startWindowX: int
+startWindowX: number
 ```
 
 X-coordinate of the window where the word selection starts, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -199,16 +177,14 @@ X-coordinate of the window where the word selection starts, in px.
 ## startWindowY
 
 ```TypeScript
-startWindowY: int
+startWindowY: number
 ```
 
 Y-coordinate of the window where the word selection starts, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -217,16 +193,14 @@ Y-coordinate of the window where the word selection starts, in px.
 ## windowID
 
 ```TypeScript
-windowID: int
+windowID: number
 ```
 
 ID of the window where words are selected.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

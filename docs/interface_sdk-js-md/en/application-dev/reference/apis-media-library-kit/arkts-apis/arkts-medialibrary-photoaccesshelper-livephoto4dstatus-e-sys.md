@@ -4,8 +4,6 @@ Enumerates the 4d livephoto status.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ UNIDENTIFIED = 0
 The livephoto has not been identified.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ The livephoto does not support 4d livephoto.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -55,8 +49,6 @@ SUPPORTED = 2
 The livephoto supports 4d livephoto.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,8 +66,6 @@ The livephoto has generated 4d livephoto.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -91,8 +81,6 @@ LIVEPHOTO_4D = 4
 The livephoto is 4d livephoto.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

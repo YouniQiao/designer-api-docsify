@@ -4,8 +4,6 @@ Defines the style of the lunar calendar switch in the **DatePickerDialog** compo
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,13 +19,11 @@ selectedColor?: ResourceColor
 
 Background color of the switch when it is on.Default value: **\$r('sys.color.ohos_id_color_text_primary_actived')**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** $r('sys.color.ohos_id_color_text_primary_actived')
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,13 +39,11 @@ strokeColor?: ResourceColor
 
 Color of the icon inside the switch.Default value: **Color.White**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.White
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,13 +59,11 @@ unselectedColor?: ResourceColor
 
 Border color of the switch when it is off.Default value: **\$r('sys.color.ohos_id_color_switch_outline_off')**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** $r('sys.color.ohos_id_color_switch_outline_off')
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

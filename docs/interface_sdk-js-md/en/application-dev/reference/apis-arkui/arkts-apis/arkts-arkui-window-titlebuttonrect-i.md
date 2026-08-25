@@ -4,29 +4,25 @@ Describes the rectangle used to hold the minimize, maximize, and close buttons o
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 Height of the rectangle, in vp. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -35,16 +31,14 @@ Height of the rectangle, in vp. The value must be an integer.
 ## right
 
 ```TypeScript
-right: int
+right: number
 ```
 
 Right boundary of the rectangle, in vp. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +47,14 @@ Right boundary of the rectangle, in vp. The value must be an integer.
 ## top
 
 ```TypeScript
-top: int
+top: number
 ```
 
 Top boundary of the rectangle, in vp. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -71,16 +63,14 @@ Top boundary of the rectangle, in vp. The value must be an integer.
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 Width of the rectangle, in vp. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

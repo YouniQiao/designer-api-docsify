@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## isFloatViewEnabled
@@ -16,8 +16,6 @@ Checks whether the device supports the float view.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Description| |------------|------------| | boolean |
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

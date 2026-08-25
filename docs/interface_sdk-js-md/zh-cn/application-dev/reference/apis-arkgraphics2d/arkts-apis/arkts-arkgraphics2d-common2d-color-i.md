@@ -4,29 +4,25 @@ ARGB格式的颜色描述。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { common2D } from '@kit.ArkGraphics2D';
+import { common2D } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## alpha
 
 ```TypeScript
-alpha: int
+alpha: number
 ```
 
 颜色的A分量（透明度），值是0~255的整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ alpha: int
 ## blue
 
 ```TypeScript
-blue: int
+blue: number
 ```
 
 颜色的B分量（蓝色），值是0~255的整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ blue: int
 ## green
 
 ```TypeScript
-green: int
+green: number
 ```
 
 颜色的G分量（绿色），值是0~255的整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -71,16 +63,14 @@ green: int
 ## red
 
 ```TypeScript
-red: int
+red: number
 ```
 
 颜色的R分量（红色），值是0~255的整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

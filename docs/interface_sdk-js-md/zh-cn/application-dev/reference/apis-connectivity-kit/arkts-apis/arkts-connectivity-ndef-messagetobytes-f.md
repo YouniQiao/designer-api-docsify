@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## messageToBytes
 
 ```TypeScript
-function messageToBytes(ndefMessage: NdefMessage): int[]
+function messageToBytes(ndefMessage: NdefMessage): number[]
 ```
 
 把输入的NDEF消息数据对象，转换为字节格式的数据。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +30,7 @@ function messageToBytes(ndefMessage: NdefMessage): int[]
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
+| number[] |
 
 **错误码：**
 

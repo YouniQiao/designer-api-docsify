@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setValueSync
@@ -15,8 +15,6 @@ function setValueSync(dataAbilityHelper: DataAbilityHelper, name: string, value:
 Set settingsdata value(synchronous method)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -42,37 +40,6 @@ Set settingsdata value(synchronous method)
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the setValueSync API will update its value.)
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let ret = settings.setValueSync(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '100');
-```
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the setValueSync API will update its value.)
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let ret = settings.setValueSync(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '100', settings.domainName.DEVICE_SHARED);
-```
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the setValueSync API will update its value.)
-let uri:string = settings.getUriSync(settings.display.SCREEN_BRIGHTNESS_STATUS);
-let helper = featureAbility.acquireDataAbilityHelper(uri);
-let ret:string = settings.setValueSync(helper, settings.display.SCREEN_BRIGHTNESS_STATUS, '100');
-```
-
 
 ## setValueSync
 
@@ -83,8 +50,6 @@ function setValueSync(context: Context, name: string, value: string): boolean
 Set settingsdata value(synchronous method)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_SETTINGS
 
@@ -106,10 +71,6 @@ Set settingsdata value(synchronous method)
 | --- |
 | boolean |
 
-**Examples**
-
-See [setValueSync](#setvaluesync)
-
 
 ## setValueSync
 
@@ -120,8 +81,6 @@ function setValueSync(context: Context, name: string, value: string, domainName:
 Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS or ohos.permission.MANAGE_SETTINGS
 
@@ -149,7 +108,3 @@ Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domai
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [setValueSync](#setvaluesync)

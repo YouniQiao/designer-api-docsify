@@ -1,12 +1,10 @@
 # ImageSpan属性/事件
 
-属性继承自BaseSpan，通用属性方法支持尺寸设置、背景设置、边框设置。通用事件仅支持点击控制事件。还支持以下事件：@extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
+属性继承自[BaseSpan](arkts-arkui-basespan-c.md)，通用属性方法支持尺寸设置、背景设置、边框设置。通用事件仅支持点击控制事件。还支持以下事件：@extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
 
 **继承/实现关系：** ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ alt(value: PixelMap)
 设置图片加载过程中显示的占位图。未通过该接口设置时，默认为null，不显示占位图。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ colorFilter(filter: ColorFilter | DrawingColorFilter)
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -61,7 +55,7 @@ colorFilter(filter: ColorFilter | DrawingColorFilter)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| filter | ColorFilter \| [DrawingColorFilter](../arkts-apis/arkts-arkui-drawingcolorfilter-t.md) | 是 |
+| filter | ColorFilter \| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | 是 |
 
 ## objectFit
 
@@ -72,8 +66,6 @@ objectFit(value: ImageFit)
 设置图片的缩放类型。适用于控制图片在容器中显示方式的场景。未通过该接口设置时，默认缩放类型为ImageFit.Cover。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,8 +89,6 @@ onComplete(callback: ImageCompleteCallback)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -121,8 +111,6 @@ onError(callback: ImageErrorCallback)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -133,7 +121,7 @@ onError(callback: ImageErrorCallback)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [ImageErrorCallback](../arkts-apis/arkts-arkui-imageerrorcallback-t.md) | 是 |
+| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | 是 |
 
 ## supportSvg2
 
@@ -145,8 +133,6 @@ supportSvg2(enable: Optional<boolean>)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -157,7 +143,7 @@ supportSvg2(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | 是 |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## verticalAlign
 
@@ -169,8 +155,6 @@ verticalAlign(value: ImageSpanAlignment)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -181,4 +165,4 @@ verticalAlign(value: ImageSpanAlignment)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-enums-imagespanalignment-e.md) | 是 |
+| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-imagespanalignment-e.md) | 是 |

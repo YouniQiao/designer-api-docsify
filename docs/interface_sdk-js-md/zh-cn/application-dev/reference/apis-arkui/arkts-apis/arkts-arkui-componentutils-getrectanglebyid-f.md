@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'kits/@kit.ArkUI';
 ```
 
 ## getRectangleById
@@ -22,8 +22,6 @@ function getRectangleById(id: string): ComponentInfo
 > 的测量与布局，此时请确保组件正常挂载组件树后再尝试获取组件信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 18
 
@@ -52,10 +50,3 @@ function getRectangleById(id: string): ComponentInfo
 | 错误码ID |
 | --- |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-
-**示例**
-
-```TypeScript
-import { componentUtils } from '@kit.ArkUI';
-let modePosition:componentUtils.ComponentInfo = componentUtils.getRectangleById("onClick");
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 16
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 显示在当前窗口中。
 
 **起始版本：** 16
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ PREFER_WINDOW = 1
 **说明：**除应用主窗口、应用子窗口、系统模态窗口及系统桌面类型的窗口外，其他类型的窗口不支持将文本选择菜单显示在独立窗口中。在预览器中不支持将文本选择菜单显示在独立窗口中。在[UIExtension](arkts-arkui-uiextension.md)中不支持将文本选择菜单显示在独立窗口中。当文本类组件已经显示在子窗类型的Popup、Dialog、 [Toast](../../../ui/arkts-create-toast.md)、Menu中时，不支持将其对应的文本选择菜单显示在独立窗口中。当TextInput、TextArea可支持拉起AutoFill时，不支持将其对应的文本选择菜单显示在独立窗口中。
 
 **起始版本：** 16
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

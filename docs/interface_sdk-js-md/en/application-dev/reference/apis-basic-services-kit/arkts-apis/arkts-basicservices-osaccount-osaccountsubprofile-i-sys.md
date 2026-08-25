@@ -1,10 +1,8 @@
 # OsAccountSubProfile (System API)
 
-Definition of an OS account sub-profile.
+Defines an OS account sub-profile.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -13,22 +11,20 @@ Definition of an OS account sub-profile.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createTime
 
 ```TypeScript
-createTime: long
+createTime: number
 ```
 
-Time when the sub-profile was created. Unit: milliseconds.
+Time when the sub-profile was created. The value is a Unix timestamp (in milliseconds).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +38,11 @@ Time when the sub-profile was created. Unit: milliseconds.
 distributedInfo?: distributedAccount.DistributedInfo
 ```
 
-Distributed account information bound to the OS account sub-profile.
+Distributed account information bound to the OS account sub-profile. The default value is **undefined**.
 
 **Type:** distributedAccount.DistributedInfo
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,16 +53,14 @@ Distributed account information bound to the OS account sub-profile.
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
-Identifier of the OS account sub-profile.
+OS account sub-profile ID. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,16 +71,14 @@ Identifier of the OS account sub-profile.
 ## index
 
 ```TypeScript
-index: int
+index: number
 ```
 
-Position index of the OS account sub-profile, ranging from 0 to the number of sub-profiles minus 1. This index is unique within each OS account and is automatically assigned by the system when the sub-profile is created.
+Location index of the OS account sub-profile. The value ranges from 0 to the number of sub-profiles minus 1. The index is unique under each OS account and is automatically allocated by the system when the sub-profile is created. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,16 +89,14 @@ Position index of the OS account sub-profile, ranging from 0 to the number of su
 ## osAccountLocalId
 
 ```TypeScript
-osAccountLocalId: int
+osAccountLocalId: number
 ```
 
-Local ID of the OS account to which the sub-profile belongs.
+Local ID of the OS account of a sub-profile. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

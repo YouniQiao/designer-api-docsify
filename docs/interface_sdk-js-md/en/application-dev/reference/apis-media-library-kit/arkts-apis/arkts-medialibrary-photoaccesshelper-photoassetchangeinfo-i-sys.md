@@ -4,14 +4,12 @@ Describes the information about a media asset.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## albumChangeInfos
@@ -25,8 +23,6 @@ Smart album change information.
 **Type:** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md)[] \| null
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ The asset source type. Default value: 0.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -57,16 +51,14 @@ The asset source type. Default value: 0.
 ## dateAddedMs
 
 ```TypeScript
-dateAddedMs: long
+dateAddedMs: number
 ```
 
 Unix timestamp when the media asset was created, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -84,8 +76,6 @@ Date when the media asset was created.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -93,16 +83,14 @@ Date when the media asset was created.
 ## dateModifiedMs
 
 ```TypeScript
-dateModifiedMs?: long
+dateModifiedMs?: number
 ```
 
-The modified time of asset. <br>Unit:milliseconds.
+The modified time of asset. Unit:milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,16 +101,14 @@ The modified time of asset. <br>Unit:milliseconds.
 ## dateTakenMs
 
 ```TypeScript
-dateTakenMs: long
+dateTakenMs: number
 ```
 
 Unix timestamp when the media asset was captured, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -131,16 +117,14 @@ Unix timestamp when the media asset was captured, in milliseconds.
 ## dateTrashedMs
 
 ```TypeScript
-dateTrashedMs: long
+dateTrashedMs: number
 ```
 
 Unix timestamp when the media asset was deleted, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -158,8 +142,6 @@ Display name of the media asset.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -167,16 +149,14 @@ Display name of the media asset.
 ## fileId
 
 ```TypeScript
-fileId: int
+fileId: number
 ```
 
 ID of the media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -185,16 +165,14 @@ ID of the media asset.
 ## hiddenTime
 
 ```TypeScript
-hiddenTime?: long
+hiddenTime?: number
 ```
 
-The hidden time of asset. <br>Unit:milliseconds.
+The hidden time of asset. Unit:milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,8 +192,6 @@ Whether the media asset is hidden. **true** if hidden, **false** otherwise.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -232,8 +208,6 @@ Position of the media asset.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -241,16 +215,14 @@ Position of the media asset.
 ## size
 
 ```TypeScript
-size?: long
+size?: number
 ```
 
 File size of the media asset, in bytes. The size of a moving photo includes the total size of the image and video.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -268,8 +240,6 @@ Strong association type of the media asset.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -285,8 +255,6 @@ Accessibility status of the thumbnail.
 **Type:** ThumbnailVisibility
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

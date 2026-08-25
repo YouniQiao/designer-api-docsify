@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_CAR_KEY_NORMAL_NOTIFICATION
@@ -18,8 +16,6 @@ SUBMODE_CAR_KEY_NORMAL_NOTIFICATION = 1
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_NORMAL_NOTIFICATION
@@ -31,8 +27,6 @@ SUBMODE_NORMAL_NOTIFICATION = 2
 普通文本通知。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -48,8 +42,6 @@ SUBMODE_LIVE_VIEW_NOTIFICATION = 3
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_AUDIO_PLAYBACK_NORMAL_NOTIFICATION
@@ -61,8 +53,6 @@ SUBMODE_AUDIO_PLAYBACK_NORMAL_NOTIFICATION = 4
 音视频播放，通知类型为普通文本通知。根据实际场景选择是否接入[AVSession](../../../media/avsession/avsession-overview.md)。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -78,8 +68,6 @@ SUBMODE_AVSESSION_AUDIO_PLAYBACK = 5
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -94,8 +82,6 @@ SUBMODE_AUDIO_RECORD_NORMAL_NOTIFICATION = 6
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_SCREEN_RECORD_NORMAL_NOTIFICATION
@@ -107,8 +93,6 @@ SUBMODE_SCREEN_RECORD_NORMAL_NOTIFICATION = 7
 录屏，通知类型为普通文本通知。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -122,8 +106,6 @@ SUBMODE_VOICE_CHAT_NORMAL_NOTIFICATION = 8
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION
@@ -135,8 +117,6 @@ SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION = 9
 媒体处理，例如：应用在后台导出媒体文件，通知类型为普通文本通知。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -150,8 +130,6 @@ SUBMODE_VIDEO_BROADCAST_NORMAL_NOTIFICATION = 10
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## SUBMODE_WORK_OUT_NORMAL_NOTIFICATION
@@ -163,8 +141,6 @@ SUBMODE_WORK_OUT_NORMAL_NOTIFICATION = 11
 运动，例如：应用在后台有室内跑步场景，通知类型为普通文本通知。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

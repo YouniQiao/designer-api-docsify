@@ -15,8 +15,8 @@ HashMap底层采用数组、链表和红黑树实现，支持高效查询、插�
 ## 导入模块
 
 ```TypeScript
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
+import { HashMap } from 'kits/@kit.ArkTS';
+import { HashMapCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -26,9 +26,3 @@ import { HashMapCbFn } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md) |

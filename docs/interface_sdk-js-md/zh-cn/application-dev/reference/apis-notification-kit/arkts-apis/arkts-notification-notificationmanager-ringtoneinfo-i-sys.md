@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## ringtoneFileName
@@ -27,8 +25,6 @@ ringtoneFileName?: string
 **类型：** string
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -46,8 +42,6 @@ ringtoneTitle?: string
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -64,8 +58,6 @@ ringtoneType: RingtoneType
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -81,8 +73,6 @@ ringtoneUri?: string
 **类型：** string
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 

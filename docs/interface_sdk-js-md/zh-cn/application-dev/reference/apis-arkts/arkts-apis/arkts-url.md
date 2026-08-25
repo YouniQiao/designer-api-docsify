@@ -10,14 +10,12 @@ URL是统一资源定位符，本模块提供了常用的工具函数，实现�
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { url } from '@kit.ArkTS';
+import { url } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -29,9 +27,3 @@ import { url } from '@kit.ArkTS';
 | [URL(URL字符串解析)](arkts-arkts-url-url-c.md) |
 | [URLParams(URL字符串解析)](arkts-arkts-url-urlparams-c.md) |
 | [URLSearchParams(URL字符串解析)](arkts-arkts-url-urlsearchparams-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [UrlCbFn(URL字符串解析)](arkts-arkts-url-urlcbfn-t.md) |

@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getAcbState
@@ -24,8 +22,6 @@ getAcbState(): AcbState
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -36,7 +32,7 @@ getAcbState(): AcbState
 
 | 类型 |
 | --- |
-| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) |
+| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) |
 
 **错误码：**
 
@@ -56,8 +52,6 @@ getConnectionState(): ConnectionState
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -68,7 +62,7 @@ getConnectionState(): ConnectionState
 
 | 类型 |
 | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) |
 
 **错误码：**
 
@@ -88,8 +82,6 @@ getDeviceClass(): DeviceClass
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -100,7 +92,7 @@ getDeviceClass(): DeviceClass
 
 | 类型 |
 | --- |
-| [DeviceClass](arkts-connectivity-remotedevice-deviceclass-t.md) |
+| [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md) |
 
 **错误码：**
 
@@ -119,8 +111,6 @@ getDeviceInformation(): DeviceInformation
 获取远端设备的设备信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -152,8 +142,6 @@ getDeviceName(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -184,8 +172,6 @@ getPairingState(): PairingState
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -196,7 +182,7 @@ getPairingState(): PairingState
 
 | 类型 |
 | --- |
-| [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) |
+| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) |
 
 **错误码：**
 
@@ -215,8 +201,6 @@ startPairing(): Promise<void>
 发起与远端设备的配对。使用Promise异步回调。发起配对后，将依据本端与远端设备的输入输出能力标识（即设备是否具备显示、键盘输入等能力）弹出不同类型的弹窗，需使用者进一步确认。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 

@@ -4,8 +4,6 @@ This module is used to obtain business ability information of various applicatio
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ This module is used to obtain business ability information of various applicatio
 ## Modules to Import
 
 ```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
+import { businessAbilityRouter } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

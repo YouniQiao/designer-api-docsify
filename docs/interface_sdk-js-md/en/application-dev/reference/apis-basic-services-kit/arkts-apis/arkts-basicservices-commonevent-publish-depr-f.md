@@ -15,8 +15,6 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [publish](arkts-basicservices-commoneventmanager-publish-f.md)(event: string, callback: AsyncCallback&lt;void&gt;)
@@ -30,48 +28,6 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 | event | string | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-// Callback for common event publication
-function publishCB(err:Base.BusinessError) {
-    if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
-    } else {
-        console.info("publish");
-    }
-}
-
-// Publish a common event.
-commonEvent.publish("event", publishCB);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-// Information of a common event.
-let options:CommonEventManager.CommonEventPublishData = {
-    code: 0,             // Initial code of the common event.
-    data: "initial data",// Initial data of the common event.
-    isOrdered: true  // The common event is an ordered one.
-}
-
-// Callback for common event publication
-function publishCB(err:Base.BusinessError) {
-    if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
-    } else {
-        console.info("publish");
-    }
-}
-
-// Publish a common event.
-commonEvent.publish("event", options, publishCB);
-```
-
 
 ## publish
 
@@ -82,8 +38,6 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 Publishes a common event with given properties. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -98,7 +52,3 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 | event | string | Yes |
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [publish](#publish)

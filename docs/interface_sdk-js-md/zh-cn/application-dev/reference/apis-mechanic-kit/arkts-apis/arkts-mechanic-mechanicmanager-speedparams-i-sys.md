@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## angle
 
 ```TypeScript
-angle: double
+angle: number
 ```
 
 转动角度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -46,8 +42,6 @@ mode?: MarchingMode
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,16 +49,14 @@ mode?: MarchingMode
 ## speed
 
 ```TypeScript
-speed: int
+speed: number
 ```
 
 转动或移动速度。 取值限定为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 

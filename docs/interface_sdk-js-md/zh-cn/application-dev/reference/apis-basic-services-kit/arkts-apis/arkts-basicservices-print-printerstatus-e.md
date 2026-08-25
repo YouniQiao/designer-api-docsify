@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINTER_IDLE
@@ -17,8 +15,6 @@ PRINTER_IDLE = 0
 表示打印机空闲状态。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ PRINTER_BUSY = 1
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINTER_UNAVAILABLE
@@ -45,7 +39,5 @@ PRINTER_UNAVAILABLE = 2
 表示打印机脱机状态。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework

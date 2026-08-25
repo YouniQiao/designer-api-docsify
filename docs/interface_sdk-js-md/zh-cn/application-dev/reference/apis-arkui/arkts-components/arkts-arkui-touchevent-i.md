@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ getHistoricalPoints(): Array<HistoricalPoint>
 获取当前帧的所有历史点。不同设备每帧的触摸事件频率不同，且该接口仅能在[TouchEvent](#touchevent)中调用，用于获取触发 [onTouch](arkts-arkui-commonmethod-c.md#ontouch)时当前帧历史点的相关信息。[onTouch](arkts-arkui-commonmethod-c.md#ontouch)一帧通常只会调用一次，如果当前帧收到的 [TouchEvent](#touchevent)数目大于1，会将该帧最后一个点通过[onTouch](arkts-arkui-commonmethod-c.md#ontouch)返回，其余点作为历史点。如果多指在同一 帧上报事件，可能触发多次onTouch。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +46,6 @@ preventDefault: () => void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -74,8 +68,6 @@ stopPropagation: () => void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -91,8 +83,6 @@ changedTouches: TouchObject[]
 **类型：** [TouchObject](arkts-arkui-touchobject-i.md)[]
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -110,8 +100,6 @@ eventHandleId?: number
 **类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -131,8 +119,6 @@ touches: TouchObject[]
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -145,11 +131,9 @@ type: TouchType
 
 触摸事件的类型。
 
-**类型：** TouchType
+**类型：** [TouchType](../arkts-apis/arkts-arkui-touchtype-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

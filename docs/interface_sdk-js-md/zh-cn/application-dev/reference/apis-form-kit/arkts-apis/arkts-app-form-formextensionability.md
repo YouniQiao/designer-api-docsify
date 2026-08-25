@@ -16,7 +16,7 @@ The **FormExtensionAbility** module provides lifecycle callbacks invoked when a 
 ## 导入模块
 
 ```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
+import { FormExtensionAbility } from 'kits/@kit.FormKit';
 ```
 
 ## 汇总
@@ -33,20 +33,4 @@ import { FormExtensionAbility } from '@kit.FormKit';
 | 名称 |
 | --- |
 | [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c-sys.md) |
-<!--DelEnd-->
-
-### 类型
-
-| 名称 |
-| --- |
-| [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md) |
-| [OnStopFn](arkts-form-onstopfn-t.md) |
-
-<!--Del-->
-### 类型（系统接口）
-
-| 名称 |
-| --- |
-| [OnAcquireFormDataFn](arkts-form-onacquireformdatafn-t-sys.md) |
-| [OnShareFormFn](arkts-form-onshareformfn-t-sys.md) |
 <!--DelEnd-->

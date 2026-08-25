@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from '@kit.ArkGraphics2D';
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createEffect
@@ -15,8 +15,6 @@ function createEffect(source: image.PixelMap): Filter
 Creates a Filter instance based on the input PixelMap. You can then add various image effects through chained calls, and finally obtain the processed image via getEffectPixelMap.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -35,23 +33,3 @@ Creates a Filter instance based on the input PixelMap. You can then add various 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
-
-**Examples**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  let headFilter = effectKit.createEffect(pixelMap);
-})
-```

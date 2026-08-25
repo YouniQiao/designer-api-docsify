@@ -6,8 +6,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ barrier(value: Array<BarrierStyle>)
 设置RelativeContainer容器内的[屏障](../../../ui/arkts-layout-development-relative-layout.md#多个组件的屏障)，子组件可以以屏障为锚点进行对齐定位。数组中 每个元素代表一条屏障。典型使用场景：避免子组件重叠、基于组件边缘创建虚拟边界、实现组件间自动间隔。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ barrier(barrierStyle: Array<LocalizedBarrierStyle>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -72,8 +66,6 @@ guideLine(value: Array<GuideLineStyle>)
 设置RelativeContainer容器内的[辅助线](../../../ui/arkts-layout-development-relative-layout.md#使用辅助线辅助定位子组件)，数组中每个元素代表一条辅助线。 典型使用场景：子组件基于虚拟参考线对齐、创建可灵活调整的参考线定位、多个子组件基于同一基准线布局。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

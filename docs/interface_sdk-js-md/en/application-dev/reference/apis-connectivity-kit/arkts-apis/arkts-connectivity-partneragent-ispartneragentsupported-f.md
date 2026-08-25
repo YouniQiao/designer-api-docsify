@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@kit.ConnectivityKit';
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isPartnerAgentSupported
@@ -15,8 +15,6 @@ function isPartnerAgentSupported(): boolean
 Checks whether the current device supports the partner agent feature.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

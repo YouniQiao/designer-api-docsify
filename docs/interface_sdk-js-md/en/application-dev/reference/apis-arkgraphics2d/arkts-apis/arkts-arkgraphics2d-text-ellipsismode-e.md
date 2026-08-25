@@ -5,8 +5,6 @@ Enumerates the ellipsis styles.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## START
@@ -18,8 +16,6 @@ START = 0
 Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -35,8 +31,6 @@ Ellipsis in the middle. This enumerated value is valid only when **maxLines** is
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -50,8 +44,6 @@ END = 2
 Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -67,8 +59,6 @@ Ellipsis at the beginning. This enumerated value is valid when **maxLines** is s
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -82,8 +72,6 @@ MULTILINE_MIDDLE = 4
 Ellipsis in the middle. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

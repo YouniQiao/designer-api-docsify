@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## getWindow
@@ -16,8 +16,6 @@ Obtains the window corresponding to this ability. This API uses an asynchronous 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -27,34 +25,6 @@ Obtains the window corresponding to this ability. This API uses an asynchronous 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-featureAbility.getWindow((error: BusinessError, data: window.Window) => {
-  if (error && error.code !== 0) {
-    console.error(`getWindow fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`getWindow success, data: ${typeof(data)}`);
-  }
-});
-```
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-featureAbility.getWindow().then((data: window.Window) => {
-  console.info(`getWindow success, data: ${typeof(data)}`);
-}).catch((error: BusinessError)=>{
-  console.error(`getWindow fail, error: ${JSON.stringify(error)}`);
-});
-```
 
 
 ## getWindow
@@ -67,8 +37,6 @@ Obtains the window corresponding to this ability. This API uses a promise to ret
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -78,7 +46,3 @@ Obtains the window corresponding to this ability. This API uses a promise to ret
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;window.Window & gt; |
-
-**Examples**
-
-See [getWindow](#getwindow)

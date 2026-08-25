@@ -6,14 +6,12 @@
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableAutoDeviceSwitch
@@ -30,8 +28,6 @@ Enables or disables automatic camera switch. You can use [isAutoDeviceSwitchSupp
 > rear cameras.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -51,18 +47,3 @@ Enables or disables automatic camera switch. You can use [isAutoDeviceSwitchSupp
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableAutoDeviceSwitch(session: camera.PhotoSession, isEnable: boolean): void {
-  try {
-    session.enableAutoDeviceSwitch(isEnable);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The enableAutoDeviceSwitch call failed, error code: ${err.code}, error message: ${err.message}`);
-  }
-}
-```

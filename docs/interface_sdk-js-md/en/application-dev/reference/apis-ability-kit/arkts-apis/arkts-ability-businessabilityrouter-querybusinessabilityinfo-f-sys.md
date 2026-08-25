@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
+import { businessAbilityRouter } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryBusinessAbilityInfo
@@ -18,8 +18,6 @@ function queryBusinessAbilityInfo(
 Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -42,47 +40,6 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
-
-try {
-  businessAbilityRouter.queryBusinessAbilityInfo(filter, (error, data) => {
-    if (error) {
-      console.error('queryBusinessAbilityInfo failed ' + error.message);
-      return;
-    }
-    console.info('queryBusinessAbilityInfo success');
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('queryBusinessAbilityInfo failed ' + message);
-}
-```
-
-```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
-
-try {
-  businessAbilityRouter.queryBusinessAbilityInfo(filter)
-    .then(() => {
-      console.info('queryBusinessAbilityInfo success');
-    }).catch((error: BusinessError) => {
-    console.error('queryBusinessAbilityInfo failed ' + error.message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('queryBusinessAbilityInfo failed ' + message);
-}
-```
-
 
 ## queryBusinessAbilityInfo
 
@@ -93,8 +50,6 @@ function queryBusinessAbilityInfo(filter: BusinessAbilityFilter): Promise<Array<
 Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -121,7 +76,3 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [queryBusinessAbilityInfo](#querybusinessabilityinfo)

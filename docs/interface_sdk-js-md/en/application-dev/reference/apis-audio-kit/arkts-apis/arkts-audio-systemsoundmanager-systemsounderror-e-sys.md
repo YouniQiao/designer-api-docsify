@@ -4,8 +4,6 @@ Error enum for system sound.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ ERROR_IO = 5400103
 IO error.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -36,8 +32,6 @@ No error.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ ERROR_TYPE_MISMATCH = 20700001
 Type mismatch.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -68,8 +60,6 @@ Unsupported operation.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ ERROR_DATA_TOO_LARGE = 20700004
 Data size exceeds the limit.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -100,8 +88,6 @@ The number of files exceeds the limit.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -116,8 +102,6 @@ Insufficient ROM space.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -131,8 +115,6 @@ ERROR_INVALID_PARAM = 20700007
 Invalid parameter.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## 导入模块
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'kits/@kit.ArkData';
 ```
 
 ## sessionId
@@ -25,7 +23,5 @@ sessionId: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject

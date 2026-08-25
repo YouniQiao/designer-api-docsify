@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## description
@@ -27,8 +25,6 @@ description: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -45,8 +41,6 @@ diskId: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -65,8 +59,6 @@ fsType: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -82,8 +74,6 @@ id: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -101,8 +91,6 @@ path: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -119,8 +107,6 @@ removable: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -128,16 +114,14 @@ removable: boolean
 ## state
 
 ```TypeScript
-state: int
+state: number
 ```
 
 卷设备状态标识：0：卸载状态 UNMOUNTED。1：检查状态 CHECKING。2：挂载状态 MOUNTED。3：正在弹出状态 EJECTING。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 
@@ -154,8 +138,6 @@ uuid: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Volume
 

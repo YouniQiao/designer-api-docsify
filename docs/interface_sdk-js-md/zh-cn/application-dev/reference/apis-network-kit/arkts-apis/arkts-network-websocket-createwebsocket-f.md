@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## createWebSocket
@@ -16,8 +16,6 @@ function createWebSocket(): WebSocket
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -27,9 +25,3 @@ function createWebSocket(): WebSocket
 | 类型 |
 | --- |
 | [WebSocket](arkts-network-websocket-websocket-i.md) |
-
-**示例**
-
-```TypeScript
-let ws: webSocket.WebSocket = webSocket.createWebSocket();
-```

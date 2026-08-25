@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getNameForUid
@@ -13,8 +13,6 @@ function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 ```
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -29,36 +27,6 @@ function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 | uid | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let uid: number = 20010005;
-
-bundle.getNameForUid(uid)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let uid: number = 20010005;
-
-bundle.getNameForUid(uid, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
 
 ## getNameForUid
 
@@ -69,8 +37,6 @@ function getNameForUid(uid: number): Promise<string>
 通过uid获取对应的Bundle名称，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -89,7 +55,3 @@ function getNameForUid(uid: number): Promise<string>
 | 类型 |
 | --- |
 | Promise & lt;string & gt; |
-
-**示例**
-
-参见 [getNameForUid](#getnameforuid)

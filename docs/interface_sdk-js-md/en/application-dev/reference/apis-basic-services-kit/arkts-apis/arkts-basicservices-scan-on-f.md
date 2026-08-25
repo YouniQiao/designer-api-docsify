@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## on('scanDeviceFound')
@@ -15,8 +15,6 @@ function on(type: 'scanDeviceFound', callback: Callback<ScannerDevice>): void
 Registers a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -35,40 +33,6 @@ Registers a callback used to listen for the scanner discovery event. This API us
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceFound', (device: scan.ScannerDevice) => {
-    console.info('scan device found: ' + JSON.stringify(device));
-})
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceSync', (device: scan.ScannerSyncDevice) => {
-    console.info('scan device sync: ' + JSON.stringify(device));
-})
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceAdd', (device: scan.ScannerDevice) => {
-    console.info('scan device add: ' + JSON.stringify(device));
-})
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceDel', (device: scan.ScannerDevice) => {
-    console.info('scan device delete: ' + JSON.stringify(device));
-})
-```
-
 
 ## on('scanDeviceSync')
 
@@ -79,8 +43,6 @@ function on(type: 'scanDeviceSync', callback: Callback<ScannerSyncDevice>): void
 Registers a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -98,7 +60,3 @@ Registers a callback used to listen for the scanner sync event. This API uses an
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See on

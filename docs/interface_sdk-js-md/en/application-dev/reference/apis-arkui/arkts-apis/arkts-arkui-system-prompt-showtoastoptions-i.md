@@ -4,8 +4,6 @@ Defines the options of ShowToast.@interface ShowToastOptions
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md)
@@ -15,7 +13,7 @@ Defines the options of ShowToast.@interface ShowToastOptions
 ## Modules to Import
 
 ```TypeScript
-import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## bottom
@@ -29,8 +27,6 @@ The distance between toast dialog box and the bottom of screen.
 **Type:** string \| number
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 
@@ -50,8 +46,6 @@ Duration of toast dialog box. The default value is 1500. The recommended value r
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** [duration](arkts-arkui-promptaction-showtoastoptions-i.md#duration)
@@ -69,8 +63,6 @@ Text to display.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 

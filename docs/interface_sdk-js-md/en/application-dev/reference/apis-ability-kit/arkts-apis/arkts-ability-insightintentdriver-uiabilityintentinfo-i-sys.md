@@ -4,8 +4,6 @@ Describes the information of the UIAbility bound to the [intent developed using 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the information of the UIAbility bound to the [intent developed using 
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -27,8 +25,6 @@ Name of the UIAbility bound to the intent.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Intent execution mode.
 **Type:** [ExecuteModeForConfiguration](arkts-ability-insightintentdriver-executemodeforconfiguration-e-sys.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

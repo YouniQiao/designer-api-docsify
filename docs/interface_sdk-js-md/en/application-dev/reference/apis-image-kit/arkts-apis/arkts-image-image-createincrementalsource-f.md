@@ -1,22 +1,32 @@
-# createIncrementalSource
+# CreateIncrementalSource
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
-## createIncrementalSource
+## CreateIncrementalSource
 
 ```TypeScript
-function createIncrementalSource(buf: ArrayBuffer): ImageSource | undefined
+function CreateIncrementalSource(buf: ArrayBuffer): ImageSource
 ```
 
-Creates an ImageSource instance based on the buffer in incremental.
+Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.The ImageSource instance created in incremental mode supports the following capabilities (applicable to synchronous, callback, and promise modes):  
+- Obtaining image information: Call  
+[getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo) to obtain image information by index, or call [getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo) to directly obtain image information.  
+- Obtaining an image property: Call  
+[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty) to obtain the value of a property with the specified index in an image.  
+- Obtaining image properties: Call  
+[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) to obtain the values of properties with the given names in an image.  
+- Updating incremental data: Call  
+[updateData](arkts-image-image-imagesource-i.md#updatedata).  
+- Creating a PixelMap object: Call  
+[createPixelMap](arkts-image-image-imagesource-i.md#createpixelmap) or [createPixelMap](arkts-image-image-imagesource-i.md#createpixelmap) to create a PixelMap object based on decoding options; call [createPixelMap](arkts-image-image-imagesource-i.md#createpixelmap) to create a PixelMap object based on default parameters.  
+- Releasing an ImageSource instance: Call  
+[release](arkts-image-image-imagesource-i.md#release).
 
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+**Since:** 9
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -30,21 +40,18 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ImageSource \| undefined |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
 
 
-## createIncrementalSource
+## CreateIncrementalSource
 
 ```TypeScript
-function createIncrementalSource(buf: ArrayBuffer, 
-      options?: SourceOptions): ImageSource | undefined
+function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on the buffer in incremental.
+Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.The capabilities supported by the ImageSource instance created by this API are the same as those supported by the instance created by [CreateIncrementalSource(buf: ArrayBuffer): ImageSource](#createincrementalsource). Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+**Since:** 9
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -59,4 +66,4 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ImageSource \| undefined |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |

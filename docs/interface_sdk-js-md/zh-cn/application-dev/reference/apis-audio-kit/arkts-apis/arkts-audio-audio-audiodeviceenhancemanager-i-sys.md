@@ -7,14 +7,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## getSoundCardInfo
@@ -26,8 +24,6 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 获取声卡信息。此方法使用 Promise 返回查询结果。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,20 +43,3 @@ getSoundCardInfo(): Promise<SoundCardInfo>
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioManager = audio.getAudioManager();
-let deviceEnhanceManager = audioManager.getDeviceEnhanceManager();
-
-deviceEnhanceManager.getSoundCardInfo().then((soundCardInfo: audio.SoundCardInfo) => {
-  console.info(`Successfully obtained sound card info: ${JSON.stringify(soundCardInfo, null, 2)}`);
-})
-.catch((err: BusinessError) => {
-  console.error(`Failed to get sound card info. Code: ${err.code}, Message: ${err.message}`);
-});
-```

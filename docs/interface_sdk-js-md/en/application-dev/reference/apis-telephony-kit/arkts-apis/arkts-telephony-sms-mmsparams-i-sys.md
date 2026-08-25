@@ -4,8 +4,6 @@ Defines the parameters for sending SMS messages.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the parameters for sending SMS messages.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## data
@@ -27,8 +25,6 @@ MMS PDU address.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -46,8 +42,6 @@ MMSC address.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ MMS configuration file. For details, see [MmsParams](#mmsparams-system-api).
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -73,17 +65,16 @@ MMS configuration file. For details, see [MmsParams](#mmsparams-system-api).
 ## slotId
 
 ```TypeScript
-slotId: int
+slotId: number
 ```
 
 Slot ID of the SIM card used for sending SMS messages.  
-- **0**: card slot 1 - **1**: card slot 2
+- **0**: card slot 1  
+- **1**: card slot 2
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

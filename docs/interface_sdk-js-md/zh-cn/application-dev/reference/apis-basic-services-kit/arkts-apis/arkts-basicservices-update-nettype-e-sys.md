@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ CELLULAR = 1
 数据网络。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -36,8 +32,6 @@ METERED_WIFI = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ NOT_METERED_WIFI = 4
 非热点WIFI。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -68,8 +60,6 @@ WIFI。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ CELLULAR_AND_WIFI = 7
 数据网络和WIFI。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 

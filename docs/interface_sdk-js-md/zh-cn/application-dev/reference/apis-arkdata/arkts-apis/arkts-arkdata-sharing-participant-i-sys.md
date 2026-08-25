@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## attachInfo
@@ -27,8 +25,6 @@ attachInfo?: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -46,8 +42,6 @@ identity: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ privilege?: Privilege
 **类型：** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -82,8 +74,6 @@ role?: Role
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +89,6 @@ state?: State
 **类型：** State
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 

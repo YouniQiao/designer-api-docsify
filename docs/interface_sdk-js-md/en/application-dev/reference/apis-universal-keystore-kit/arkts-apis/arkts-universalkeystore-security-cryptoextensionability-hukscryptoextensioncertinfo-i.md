@@ -4,14 +4,12 @@ Represents the information of certificate.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## Modules to Import
 
 ```TypeScript
-import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
+import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## cert
@@ -25,8 +23,6 @@ The content of the certificate.
 **Type:** Uint8Array
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -42,8 +38,6 @@ The type of the certificate, sign or encrypt.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## resourceId
@@ -57,7 +51,5 @@ The resource index of the certificate.
 **Type:** string
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension

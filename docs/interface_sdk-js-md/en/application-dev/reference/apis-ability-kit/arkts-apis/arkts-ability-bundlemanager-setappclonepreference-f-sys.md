@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setAppClonePreference
@@ -15,8 +15,6 @@ function setAppClonePreference(bundleName: string, appClonePreference: AppCloneP
 Sets the application clone preference configuration.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MANAGE_CLONE_BUNDLE_PREFERENCES
 

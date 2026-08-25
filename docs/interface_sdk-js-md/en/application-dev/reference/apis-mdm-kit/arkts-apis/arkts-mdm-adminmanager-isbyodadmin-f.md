@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isByodAdmin
@@ -15,8 +15,6 @@ function isByodAdmin(admin: Want): boolean
 Checks whether the current application is activated as a BYOD device administrator application based on the **EnterpriseAdminExtensionAbility** component.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.START_PROVISIONING_MESSAGE
 
@@ -42,23 +40,3 @@ Checks whether the current application is activated as a BYOD device administrat
 | --- |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { adminManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: boolean = adminManager.isByodAdmin(wantTemp);
-  console.info(`Succeeded in querying admin is byod admin or not : ${result}`);
-} catch (error) {
-  console.error(`Failed to query admin is byod admin or not. Code is ${error.code}, message is ${error.message}`);
-}
-```

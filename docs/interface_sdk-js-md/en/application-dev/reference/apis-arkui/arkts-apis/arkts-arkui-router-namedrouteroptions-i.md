@@ -4,14 +4,12 @@ Describes the named route options.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## name
@@ -25,8 +23,6 @@ Name of the target named route.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Data that needs to be passed to the target page during redirection. The target p
 **Type:** Object
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,7 +63,5 @@ Whether the corresponding page is recoverable.Default value: **true**.
 **Type:** boolean
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite

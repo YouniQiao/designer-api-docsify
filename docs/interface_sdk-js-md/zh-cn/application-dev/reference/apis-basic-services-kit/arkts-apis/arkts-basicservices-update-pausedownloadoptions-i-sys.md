@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## isAllowAutoResume
@@ -27,8 +25,6 @@ isAllowAutoResume: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 

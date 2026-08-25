@@ -10,8 +10,6 @@ Generates a **borderRadiuses** object with the specified radius for all border c
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -29,47 +27,3 @@ Generates a **borderRadiuses** object with the specified radius for all border c
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [BorderRadiuses](arkts-arkui-borderradiuses-t.md) |
-
-**Examples**
-
-```TypeScript
-import { RenderNode, FrameNode, NodeController, borderRadiuses } from '@kit.ArkUI';
-
-const renderNode = new RenderNode();
-renderNode.frame = {
-  x: 0,
-  y: 0,
-  width: 150,
-  height: 150
-};
-renderNode.backgroundColor = 0xff519db4;
-renderNode.borderRadius = borderRadiuses(32);
-
-
-class MyNodeController extends NodeController {
-  private rootNode: FrameNode | null = null;
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.rootNode = new FrameNode(uiContext);
-
-    const rootRenderNode = this.rootNode.getRenderNode();
-    if (rootRenderNode !== null) {
-      rootRenderNode.appendChild(renderNode);
-    }
-
-    return this.rootNode;
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Row() {
-      NodeContainer(this.myNodeController)
-    }.margin(20)
-  }
-}
-```

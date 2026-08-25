@@ -4,8 +4,6 @@ Defines the console info.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ static assert(value?: Object, ...arguments: Object[]): void
 Prints assertion information.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,8 +48,6 @@ Maintains an internal counter. When this counter is invoked, its label name and 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -79,8 +73,6 @@ static countReset(label?: string): void
 Resets a counter based on the specified label name.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,8 +100,6 @@ Prints debugging information in formatted output mode.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -133,8 +123,6 @@ Prints content of the specified object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -155,8 +143,6 @@ Displays an interactive tree of the descendant elements of the specified XML ele
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -176,8 +162,6 @@ static error(message: string, ...arguments: any[]): void
 Prints error information in formatted output mode.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,8 +186,6 @@ Increases the indentation of subsequent lines by two spaces. If the information 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -223,8 +205,6 @@ static groupCollapsed(...arguments: Object[]): void
 Creates a new inline group in collapsed mode. The usage and function of this API are the same as those of console.group().
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -246,8 +226,6 @@ Reduces the indentation of subsequent lines by two spaces.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -261,8 +239,6 @@ static info(message: string, ...arguments: any[]): void
 Prints log information in formatted output mode. This API is the alias of console.log ().
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -287,8 +263,6 @@ Prints log information in formatted output mode.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -312,8 +286,6 @@ Prints data in a table.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -333,8 +305,6 @@ static time(label?: string): void
 Starts a timer to track the duration of an operation. You can use console.timeEnd() to close the timer and print the elapsed time (in ms).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -362,8 +332,6 @@ Stops the timer started by calling console.time() and prints the elapsed time (i
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -389,8 +357,6 @@ static timeLog(label?: string, ...arguments: Object[]): void
 Prints the elapsed time and other data parameters for the timer started by console.time().
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -419,8 +385,6 @@ Creates a stack trace.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -441,8 +405,6 @@ Prints information about the current hybrid stack of the calling thread in the m
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -456,8 +418,6 @@ static warn(message: string, ...arguments: any[]): void
 Prints warning information in formatted output mode.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

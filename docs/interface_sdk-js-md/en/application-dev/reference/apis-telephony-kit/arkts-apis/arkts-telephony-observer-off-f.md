@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## off('networkStateChange')
@@ -19,8 +19,6 @@ Unregisters the observer for network status change events. This API uses an asyn
 > you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -41,18 +39,6 @@ Unregisters the observer for network status change events. This API uses an asyn
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-let callback: (data: observer.NetworkState) => void = (data: observer.NetworkState) => {
-    console.info("on networkStateChange, data:" + JSON.stringify(data));
-}
-observer.on('networkStateChange', callback);
-// You can pass the callback of the on method to cancel listening for a certain type of callback. If you do not pass the callback, you will cancel listening for all callbacks.
-observer.off('networkStateChange', callback);
-observer.off('networkStateChange');
-```
-
 
 ## off('signalInfoChange')
 
@@ -67,8 +53,6 @@ Unregisters the observer for signal status change events. This API uses an async
 > you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -89,20 +73,6 @@ Unregisters the observer for signal status change events. This API uses an async
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-let callback: (data: Array<radio.SignalInformation>) => void = (data: Array<radio.SignalInformation>) => {
-    console.info("on signalInfoChange, data:" + JSON.stringify(data));
-}
-observer.on('signalInfoChange', callback);
-// You can pass the callback of the on method to cancel listening for a certain type of callback. If you do not pass the callback, you will cancel listening for all callbacks.
-observer.off('signalInfoChange', callback);
-observer.off('signalInfoChange');
-```
-
 
 ## off('cellularDataConnectionStateChange')
 
@@ -117,8 +87,6 @@ Unregisters the observer for connection status change events of the cellular dat
 > you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -139,18 +107,6 @@ Unregisters the observer for connection status change events of the cellular dat
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-let callback: (data: observer.DataConnectionStateInfo) => void = (data: observer.DataConnectionStateInfo) => {
-    console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));
-}
-observer.on('cellularDataConnectionStateChange', callback);
-// You can pass the callback of the on method to cancel listening for a certain type of callback. If you do not pass the callback, you will cancel listening for all callbacks.
-observer.off('cellularDataConnectionStateChange', callback);
-observer.off('cellularDataConnectionStateChange');
-```
-
 
 ## off('cellularDataFlowChange')
 
@@ -165,8 +121,6 @@ Unregisters the observer for the uplink and downlink data flow status change eve
 > you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -187,20 +141,6 @@ Unregisters the observer for the uplink and downlink data flow status change eve
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-let callback: (data: data.DataFlowType) => void = (data: data.DataFlowType) => {
-    console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));
-}
-observer.on('cellularDataFlowChange', callback);
-// You can pass the callback of the on method to cancel listening for a certain type of callback. If you do not pass the callback, you will cancel listening for all callbacks.
-observer.off('cellularDataFlowChange', callback);
-observer.off('cellularDataFlowChange');
-```
-
 
 ## off('callStateChange')
 
@@ -215,8 +155,6 @@ Unregisters the observer for call status change events. This API uses an asynchr
 > you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -237,18 +175,6 @@ Unregisters the observer for call status change events. This API uses an asynchr
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-let callback: (data: observer.CallStateInfo) => void = (data: observer.CallStateInfo) => {
-    console.info("on callStateChange, data:" + JSON.stringify(data));
-}
-observer.on('callStateChange', callback);
-// You can pass the callback of the on method to cancel listening for a certain type of callback. If you do not pass the callback, you will cancel listening for all callbacks.
-observer.off('callStateChange', callback);
-observer.off('callStateChange');
-```
-
 
 ## off('callStateChangeEx')
 
@@ -263,8 +189,6 @@ Unregisters the observer for extended call status change events. This API uses a
 > you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -284,19 +208,6 @@ Unregisters the observer for extended call status change events. This API uses a
 | [8800003](../errorcode-telephony.md#8800003-system-internal-error) |
 | [8800999](../errorcode-telephony.md#8800999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { call } from '@kit.TelephonyKit';
-let callback: (data: call.TelCallState) => void = (data: call.TelCallState) => {
-    console.info("on callStateChangeEx, data:" + JSON.stringify(data));
-}
-observer.on('callStateChangeEx', callback);
-// You can pass the callback of the on method to cancel listening for a certain type of callback. If you do not pass the callback, you will cancel listening for all callbacks.
-observer.off('callStateChangeEx', callback);
-observer.off('callStateChangeEx');
-```
-
 
 ## off('simStateChange')
 
@@ -311,8 +222,6 @@ Unregisters the observer for SIM card status change events. This API uses an asy
 > you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -333,18 +242,6 @@ Unregisters the observer for SIM card status change events. This API uses an asy
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-let callback: (data: observer.SimStateData) => void = (data: observer.SimStateData) => {
-    console.info("on simStateChange, data:" + JSON.stringify(data));
-}
-observer.on('simStateChange', callback);
-// You can pass the callback of the on method to cancel listening for a certain type of callback. If you do not pass the callback, you will cancel listening for all callbacks.
-observer.off('simStateChange', callback);
-observer.off('simStateChange');
-```
-
 
 ## off('iccAccountInfoChange')
 
@@ -359,8 +256,6 @@ Unregisters the observer for account information change events of the SIM card. 
 > you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -380,15 +275,3 @@ Unregisters the observer for account information change events of the SIM card. 
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-let callback: () => void = () => {
-    console.info("on iccAccountInfoChange success");
-}
-observer.on('iccAccountInfoChange', callback);
-// You can pass the callback of the on method to cancel listening for a certain type of callback. If you do not pass the callback, you will cancel listening for all callbacks.
-observer.off('iccAccountInfoChange', callback);
-observer.off('iccAccountInfoChange');
-```

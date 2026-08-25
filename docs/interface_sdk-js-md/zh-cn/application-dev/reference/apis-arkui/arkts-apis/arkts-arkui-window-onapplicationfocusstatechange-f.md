@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## onApplicationFocusStateChange
@@ -16,8 +16,6 @@ function onApplicationFocusStateChange(callback: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -27,17 +25,3 @@ function onApplicationFocusStateChange(callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-try {
-  window.onApplicationFocusStateChange((data) =>{
-      console.info(`Succeeded in enabling the listener for application focus state changes. Data: ${data}`);
-  })
-} catch (exception){
-  console.error(`Failed to enable the listener for application focus state changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```

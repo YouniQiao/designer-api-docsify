@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## showAlertBeforeBackPage
@@ -26,8 +26,6 @@ function showAlertBeforeBackPage(options: EnableAlertOptions): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 18
 
 **替代接口：** [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)
@@ -48,17 +46,3 @@ function showAlertBeforeBackPage(options: EnableAlertOptions): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  this.getUIContext().getRouter().showAlertBeforeBackPage({
-    message: 'Message Info'
-  });
-} catch (err) {
-  console.error(`showAlertBeforeBackPage failed. Code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
-}
-```

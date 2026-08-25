@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isAutoStartupSupported
@@ -20,8 +20,6 @@ function isAutoStartupSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -31,17 +29,3 @@ function isAutoStartupSupported(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { autoStartupManager, UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    // 检查当前设备是否支持开机自启动
-    const isSupported: boolean = autoStartupManager.isAutoStartupSupported();
-    console.info(`isAutoStartupSupported: ${isSupported}.`);
-  }
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllShortcutInfoForSelf
@@ -16,8 +16,6 @@ Obtains all the shortcut information defined in the [configuration](../../../qui
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **Return value:**
@@ -25,17 +23,3 @@ Obtains all the shortcut information defined in the [configuration](../../../qui
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;Array & lt;ShortcutInfo & gt; & gt; |
-
-**Examples**
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-shortcutManager.getAllShortcutInfoForSelf()
-  .then((data: shortcutManager.ShortcutInfo[]) => {
-    console.info('getAllShortcutInfoForSelf shortcut data is' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-  console.error(`getAllShortcutInfoForSelf errData is errCode:${err.code}  message:${err.message}`);
-});
-```

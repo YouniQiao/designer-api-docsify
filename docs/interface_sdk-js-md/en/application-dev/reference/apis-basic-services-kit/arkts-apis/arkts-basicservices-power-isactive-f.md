@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## isActive
@@ -13,11 +13,10 @@ function isActive(): boolean
 ```
 
 Checks whether the current device is active.  
-- A device with a screen is active when the screen is on and inactive when the screen is off. - A device without a screen is active when it exits the sleep mode and inactive when it enters the sleep mode.
+- A device with a screen is active when the screen is on and inactive when the screen is off.  
+- A device without a screen is active when it exits the sleep mode and inactive when it enters the sleep mode.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
@@ -26,10 +25,3 @@ Checks whether the current device is active.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let isActive = power.isActive();
-console.info('power is active: ' + isActive);
-```

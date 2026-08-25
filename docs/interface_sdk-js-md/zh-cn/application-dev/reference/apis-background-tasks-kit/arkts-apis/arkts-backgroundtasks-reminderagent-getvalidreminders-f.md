@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## getValidReminders
@@ -15,8 +15,6 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 获取当前应用已设置的所有有效（未过期）的提醒，使用回调的方式实现异步调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -30,65 +28,6 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.getValidReminders((err: BusinessError, reminders: Array<reminderAgent.ReminderRequest>) => {
-  console.info("callback, getValidReminders length = " + reminders.length);
-  for (let i = 0; i < reminders.length; i++) {
-    console.info("getValidReminders = " + reminders[i]);
-    console.info("getValidReminders, reminderType = " + reminders[i].reminderType);
-    const actionButton = reminders[i].actionButton || [];
-    for (let j = 0; j < actionButton.length; j++) {
-      console.info("getValidReminders, actionButton.title = " + actionButton[j]?.title);
-      console.info("getValidReminders, actionButton.type = " + actionButton[j]?.type);
-    }
-    console.info("getValidReminders, wantAgent.pkgName = " + reminders[i].wantAgent?.pkgName);
-    console.info("getValidReminders, wantAgent.abilityName = " + reminders[i].wantAgent?.abilityName);
-    console.info("getValidReminders, ringDuration = " + reminders[i].ringDuration);
-    console.info("getValidReminders, snoozeTimes = " + reminders[i].snoozeTimes);
-    console.info("getValidReminders, timeInterval = " + reminders[i].timeInterval);
-    console.info("getValidReminders, title = " + reminders[i].title);
-    console.info("getValidReminders, content = " + reminders[i].content);
-    console.info("getValidReminders, expiredContent = " + reminders[i].expiredContent);
-    console.info("getValidReminders, snoozeContent = " + reminders[i].snoozeContent);
-    console.info("getValidReminders, notificationId = " + reminders[i].notificationId);
-    console.info("getValidReminders, slotType = " + reminders[i].slotType);
-  }
-})
-```
-
-```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.getValidReminders().then((reminders: Array<reminderAgent.ReminderRequest>) => {
-  console.info("promise, getValidReminders length = " + reminders.length);
-  for (let i = 0; i < reminders.length; i++) {
-    console.info("getValidReminders = " + reminders[i]);
-    console.info("getValidReminders, reminderType = " + reminders[i].reminderType);
-    const actionButton = reminders[i].actionButton || [];
-    for (let j = 0; j < actionButton.length; j++) {
-      console.info("getValidReminders, actionButton.title = " + actionButton[j]?.title);
-      console.info("getValidReminders, actionButton.type = " + actionButton[j]?.type);
-    }
-    console.info("getValidReminders, wantAgent.pkgName = " + reminders[i].wantAgent?.pkgName);
-    console.info("getValidReminders, wantAgent.abilityName = " + reminders[i].wantAgent?.abilityName);
-    console.info("getValidReminders, ringDuration = " + reminders[i].ringDuration);
-    console.info("getValidReminders, snoozeTimes = " + reminders[i].snoozeTimes);
-    console.info("getValidReminders, timeInterval = " + reminders[i].timeInterval);
-    console.info("getValidReminders, title = " + reminders[i].title);
-    console.info("getValidReminders, content = " + reminders[i].content);
-    console.info("getValidReminders, expiredContent = " + reminders[i].expiredContent);
-    console.info("getValidReminders, snoozeContent = " + reminders[i].snoozeContent);
-    console.info("getValidReminders, notificationId = " + reminders[i].notificationId);
-    console.info("getValidReminders, slotType = " + reminders[i].slotType);
-  }
-})
-```
-
 
 ## getValidReminders
 
@@ -99,8 +38,6 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 获取当前应用已设置的所有有效（未过期）的提醒，使用Promise方式实现异步调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -113,7 +50,3 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;ReminderRequest & gt; & gt; |
-
-**示例**
-
-参见 [getValidReminders](#getvalidreminders)

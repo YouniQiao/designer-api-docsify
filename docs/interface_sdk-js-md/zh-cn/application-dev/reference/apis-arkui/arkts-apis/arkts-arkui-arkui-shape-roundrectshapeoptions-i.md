@@ -6,14 +6,12 @@ RectShape 带有圆角半径的构造函数参数。继承自[ShapeSize](arkts-a
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
 ```
 
 ## radiusHeight
@@ -22,13 +20,11 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 radiusHeight?: number | string
 ```
 
-矩形形状圆角半径的高度。类型为number时取值范围是0, +∞)，string时是[Length。单位：vp默认值：0vp取值为异常值时按照0vp处理。
+矩形形状圆角半径的高度。类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。单位：vp默认值：0vp取值为异常值时按照0vp处理。
 
 **类型：** number \| string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,13 +40,11 @@ radiusHeight?: number | string
 radiusWidth?: number | string
 ```
 
-矩形形状圆角半径的宽度。类型为number时取值范围是0, +∞)，string时是[Length。单位：vp默认值：0vp取值为异常值时按照0vp处理。
+矩形形状圆角半径的宽度。类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。单位：vp默认值：0vp取值为异常值时按照0vp处理。
 
 **类型：** number \| string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## channelLayout
@@ -25,8 +23,6 @@ channelLayout?: AudioChannelLayout
 **类型：** [AudioChannelLayout](arkts-audio-audio-audiochannellayout-e.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -42,8 +38,6 @@ channels: AudioChannel
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## encodingType
@@ -57,8 +51,6 @@ encodingType: AudioEncodingType
 **类型：** [AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -74,24 +66,21 @@ sampleFormat: AudioSampleFormat
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## samplingRate
 
 ```TypeScript
-samplingRate: AudioSamplingRate | int
+samplingRate: AudioSamplingRate | number
 ```
 
 音频文件的采样率，单位为赫兹（Hz）。支持传入[AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md)。从API版本26.0.0开始：  
-- 参数samplingRate支持number类型。 - 音频渲染扩展支持8000Hz到384000Hz范围内以10Hz为步长的采样率值。具体设备支持的采样率规格会存在差异。
+- 参数samplingRate支持number类型。  
+- 音频渲染扩展支持8000Hz到384000Hz范围内以10Hz为步长的采样率值。具体设备支持的采样率规格会存在差异。
 
-**类型：** ArkTS-Dyn: [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| number  <br>ArkTS-Sta：[AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| int
+**类型：** [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **模型约束：** 
 - API版本26.0.0+：此接口可在Stage模型和FA模型下使用。

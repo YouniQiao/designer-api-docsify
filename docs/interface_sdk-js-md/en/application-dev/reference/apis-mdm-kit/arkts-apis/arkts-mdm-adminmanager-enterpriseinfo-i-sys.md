@@ -4,8 +4,6 @@ Represents the enterprise information of a device administrator application.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the enterprise information of a device administrator application.
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## description
@@ -27,8 +25,6 @@ Description of the enterprise.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -45,8 +41,6 @@ Name of the enterprise.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 

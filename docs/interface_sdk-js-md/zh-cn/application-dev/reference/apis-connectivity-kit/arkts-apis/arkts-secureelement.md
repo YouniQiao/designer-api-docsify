@@ -5,14 +5,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.SecureElement
 
 ## 导入模块
 
 ```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
+import { omapi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## 汇总

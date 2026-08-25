@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## isEthernetEnabled
@@ -15,8 +15,6 @@ function isEthernetEnabled(): boolean
 Check whether the global ethernet switch is enabled.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 

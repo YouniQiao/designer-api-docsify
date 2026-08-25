@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## dial
@@ -19,8 +19,6 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 > only for system applications.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -38,40 +36,6 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 | options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.dial("138xxxxxxxx", (err: BusinessError, data: boolean) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialOptions: call.DialOptions = {
-    extras: false
-}
-call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialOptions: call.DialOptions = {
-    extras: false
-}
-call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
-    console.info(`dial success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`dial fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## dial
 
@@ -86,8 +50,6 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 > only for system applications.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -110,10 +72,6 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 | --- |
 | Promise & lt;boolean & gt; |
 
-**Examples**
-
-See [dial](#dial)
-
 
 ## dial
 
@@ -129,8 +87,6 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md)
@@ -145,7 +101,3 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 | --- | --- | --- |
 | phoneNumber | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
-
-**Examples**
-
-See [dial](#dial)

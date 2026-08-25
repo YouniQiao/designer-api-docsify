@@ -20,7 +20,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { ApplicationStateChangeCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -30,9 +30,3 @@ import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
 | 名称 |
 | --- |
 | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) |
-
-### 接口
-
-| 名称 |
-| --- |
-| [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) |

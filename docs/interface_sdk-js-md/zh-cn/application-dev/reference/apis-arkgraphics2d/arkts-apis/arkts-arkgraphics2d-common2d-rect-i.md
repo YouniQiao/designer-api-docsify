@@ -4,29 +4,25 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { common2D } from '@kit.ArkGraphics2D';
+import { common2D } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## bottom
 
 ```TypeScript
-bottom: double
+bottom: number
 ```
 
 矩形区域的右下角纵坐标，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ bottom: double
 ## left
 
 ```TypeScript
-left: double
+left: number
 ```
 
 矩形区域的左上角横坐标，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ left: double
 ## right
 
 ```TypeScript
-right: double
+right: number
 ```
 
 矩形区域的右下角横坐标，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -71,16 +63,14 @@ right: double
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
 矩形区域的左上角纵坐标，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

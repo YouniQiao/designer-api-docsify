@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_NONE
@@ -17,8 +15,6 @@ SCAN_UNIT_NONE = 0
 无单位。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ SCAN_UNIT_PIXEL = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_BIT
@@ -45,8 +39,6 @@ SCAN_UNIT_BIT = 2
 位单位。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -60,8 +52,6 @@ SCAN_UNIT_MM = 3
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_DPI
@@ -73,8 +63,6 @@ SCAN_UNIT_DPI = 4
 DPI单位。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -88,8 +76,6 @@ SCAN_UNIT_PERCENT = 5
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_MICROSECOND
@@ -101,7 +87,5 @@ SCAN_UNIT_MICROSECOND = 6
 微秒单位。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework

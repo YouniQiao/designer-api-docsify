@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## name
@@ -26,8 +24,6 @@ name: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## value
@@ -41,7 +37,5 @@ value: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download

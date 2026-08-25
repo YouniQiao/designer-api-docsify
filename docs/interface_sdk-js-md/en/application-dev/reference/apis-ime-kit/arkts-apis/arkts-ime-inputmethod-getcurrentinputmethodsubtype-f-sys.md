@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## getCurrentInputMethodSubtype
 
 ```TypeScript
-function getCurrentInputMethodSubtype(userId?: int): InputMethodSubtype
+function getCurrentInputMethodSubtype(userId?: number): InputMethodSubtype
 ```
 
 Get the current input method subtype of a specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +26,7 @@ Get the current input method subtype of a specified user.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| userId | number | No |
 
 **Return value:**
 
@@ -45,11 +43,3 @@ Get the current input method subtype of a specified user.
 | 12800023 |
 | 12800024 |
 | 12800025 |
-
-**Examples**
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-
-let currentImeSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
-```

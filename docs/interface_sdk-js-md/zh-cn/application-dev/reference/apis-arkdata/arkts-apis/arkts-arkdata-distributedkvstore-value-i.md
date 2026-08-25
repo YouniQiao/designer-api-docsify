@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## type
@@ -26,8 +24,6 @@ type: ValueType
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -35,16 +31,14 @@ type: ValueType
 ## value
 
 ```TypeScript
-value: Uint8Array | string | long | double | boolean
+value: Uint8Array | string | number | number | boolean
 ```
 
 键值对中的值。Uint8Array、string类型的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，number和boolean类型的取值范围由其自 身类型决定。
 
-**类型：** ArkTS-Dyn: Uint8Array \| string \| number \| number \| boolean  <br>ArkTS-Sta：Uint8Array \| string \| long \| double \| boolean
+**类型：** Uint8Array \| string \| number \| number \| boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

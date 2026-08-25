@@ -9,8 +9,6 @@ The **locationManager** module provides location service management capabilities
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -18,7 +16,7 @@ The **locationManager** module provides location service management capabilities
 ## Modules to Import
 
 ```TypeScript
-import { locationManager } from '@kit.MDMKit';
+import { locationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setCustomWallpaper
@@ -15,8 +15,6 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType, callba
 Sets wallpaper of the specified type based on the uri path of the custom wallpaper.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
@@ -40,40 +38,6 @@ Sets wallpaper of the specified type based on the uri path of the custom wallpap
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = "/data/storage/el2/base/haps/entry/files/test.zip";
-try {
-    wallpaper.setCustomWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError) => {
-        if (error) {
-            console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-            return;
-        }
-        console.info(`success to setCustomWallpaper.`);
-    });
-} catch (error) {
-    console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = "/data/storage/el2/base/haps/entry/files/test.zip";
-try {
-    wallpaper.setCustomWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-        console.info(`success to setCustomWallpaper.`);
-    }).catch((error: BusinessError) => {
-        console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-    });
-} catch (error) {
-    console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-}
-```
-
 
 ## setCustomWallpaper
 
@@ -84,8 +48,6 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType): Promi
 Sets wallpaper of the specified type based on the uri path of the custom wallpaper.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
@@ -113,7 +75,3 @@ Sets wallpaper of the specified type based on the uri path of the custom wallpap
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [setCustomWallpaper](#setcustomwallpaper)

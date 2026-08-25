@@ -4,8 +4,6 @@ Enumerates the types of the relative offset position used in **lseek()**.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## SEEK_SET
@@ -17,8 +15,6 @@ SEEK_SET = 0
 Beginning of the file.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -32,8 +28,6 @@ Current offset position.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## SEEK_END
@@ -45,7 +39,5 @@ SEEK_END = 2
 End of the file.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

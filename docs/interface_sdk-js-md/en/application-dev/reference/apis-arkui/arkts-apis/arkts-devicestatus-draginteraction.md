@@ -7,8 +7,6 @@ The **dragInteraction** module provides the APIs to enable and disable listening
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
 **System API:** This is a system API.
@@ -16,7 +14,7 @@ The **dragInteraction** module provides the APIs to enable and disable listening
 ## Modules to Import
 
 ```TypeScript
-import { dragInteraction } from '@kit.ArkUI';
+import { dragInteraction } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -27,10 +25,8 @@ import { dragInteraction } from '@kit.ArkUI';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) |
-| [off](arkts-arkui-draginteraction-off-f-sys.md#offdrag) |
-| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md) |
-| [on](arkts-arkui-draginteraction-on-f-sys.md#ondrag) |
-| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md) |
+| [off](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) |
+| [on](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) |
 <!--DelEnd-->
 
 <!--Del-->

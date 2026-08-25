@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## EVENT_PAN_GESTURE_LEFT
@@ -17,8 +15,6 @@ EVENT_PAN_GESTURE_LEFT = 0x00000001
 左滑事件。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ EVENT_PAN_GESTURE_RIGHT = 0x00000002
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -53,8 +47,6 @@ EVENT_LONG_PRESS = 0x00000200
 长按事件。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,8 +64,6 @@ EVENT_PAN_GESTURE_UP = 0x00000004
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -89,8 +79,6 @@ EVENT_CLICK = 0x00000100
 点击事件。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,8 +96,6 @@ EVENT_NONE = 0x00000000
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -125,8 +111,6 @@ EVENT_PAN_GESTURE_DOWN = 0x00000008
 下滑事件。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

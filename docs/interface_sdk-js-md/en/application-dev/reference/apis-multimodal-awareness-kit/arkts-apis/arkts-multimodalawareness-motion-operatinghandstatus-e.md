@@ -4,8 +4,6 @@ Defines the status of the operating hand.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 ## UNKNOWN_STATUS
@@ -17,8 +15,6 @@ UNKNOWN_STATUS = 0
 Unknown status.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -32,8 +28,6 @@ Left hand in use.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 ## RIGHT_HAND_OPERATED
@@ -45,7 +39,5 @@ RIGHT_HAND_OPERATED = 2
 Right hand in use.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion

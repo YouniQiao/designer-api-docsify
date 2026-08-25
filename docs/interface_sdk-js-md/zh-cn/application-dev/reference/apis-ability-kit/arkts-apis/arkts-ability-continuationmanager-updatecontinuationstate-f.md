@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## updateContinuationState
@@ -20,8 +20,6 @@ function updateContinuationState(
 通知设备选择模块，更新当前的连接状态，使用AsyncCallback方式作为异步方法。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 22
 
@@ -51,45 +49,6 @@ function updateContinuationState(
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) |
 
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-let deviceId: string = "test deviceId";
-try {
-  continuationManager.updateContinuationState(token, deviceId, continuationManager.DeviceConnectState.CONNECTED, (err) => {
-    if (err.code != 0) {
-      console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('updateContinuationState finished. ');
-  });
-} catch (err) {
-  console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = 1;
-let deviceId: string = "test deviceId";
-try {
-  continuationManager.updateContinuationState(token, deviceId, continuationManager.DeviceConnectState.CONNECTED)
-    .then(() => {
-      console.info('updateContinuationState finished. ');
-    })
-    .catch((err: BusinessError) => {
-      console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-    });
-} catch (err) {
-  console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## updateContinuationState
 
@@ -100,8 +59,6 @@ function updateContinuationState(token: number, deviceId: string, status: Device
 通知设备选择模块，更新当前的连接状态，使用Promise方式作为异步方法。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 22
 
@@ -135,7 +92,3 @@ function updateContinuationState(token: number, deviceId: string, status: Device
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) |
-
-**示例**
-
-参见 [updateContinuationState](#updatecontinuationstate)

@@ -4,8 +4,6 @@ Describes the criteria for filtering scanning results can be set.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ScanFilter](arkts-connectivity-bluetoothmanager-scanfilter-i.md)
@@ -15,7 +13,7 @@ Describes the criteria for filtering scanning results can be set.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -29,8 +27,6 @@ The address of a BLE peripheral device
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ The name of a BLE peripheral device
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-connectivity-bluetoothmanager-scanfilter-i.md#name)
@@ -69,8 +63,6 @@ The service UUID of a BLE peripheral device
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

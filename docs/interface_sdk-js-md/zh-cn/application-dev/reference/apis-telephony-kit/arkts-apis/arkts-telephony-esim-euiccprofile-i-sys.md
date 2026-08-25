@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## accessRules
@@ -27,8 +25,6 @@ accessRules: Array<AccessRule>
 **类型：** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i-sys.md)&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -46,8 +42,6 @@ iccid: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ nickName: string
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -82,8 +74,6 @@ operatorId: OperatorId
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +89,6 @@ policyRules: PolicyRules
 **类型：** [PolicyRules](arkts-telephony-esim-policyrules-e-sys.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -118,8 +106,6 @@ profileClass: ProfileClass
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -135,8 +121,6 @@ profileName: string
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -154,8 +138,6 @@ serviceProviderName: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -171,8 +153,6 @@ state: ProfileState
 **类型：** [ProfileState](arkts-telephony-esim-profilestate-e-sys.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

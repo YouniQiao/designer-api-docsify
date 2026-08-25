@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityBase
 
 ## 导入模块
 
 ```TypeScript
-import { Configuration } from '@kit.AbilityKit';
+import { Configuration } from 'kits/@kit.AbilityKit';
 ```
 
 ## colorMode
@@ -21,13 +19,13 @@ colorMode?: ConfigurationConstant.ColorMode
 ```
 
 表示应用深浅色模式，默认为浅色。支持开发者[设置应用或组件深浅色](../../../application-models/subscribe-system-environment-variable-changes.md#设置深浅色模式)。取值范围：  
-- COLOR_MODE_NOT_SET：未设置 - COLOR_MODE_LIGHT：浅色模式 - COLOR_MODE_DARK：深色模式
+- COLOR_MODE_NOT_SET：未设置  
+- COLOR_MODE_LIGHT：浅色模式  
+- COLOR_MODE_DARK：深色模式
 
 **类型：** ConfigurationConstant.ColorMode
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,14 +38,14 @@ direction?: ConfigurationConstant.Direction
 ```
 
 表示应用屏幕方向。取值范围：  
-- DIRECTION_NOT_SET：未设置 - DIRECTION_HORIZONTAL：水平方向 - DIRECTION_VERTICAL：垂直方向  
+- DIRECTION_NOT_SET：未设置  
+- DIRECTION_HORIZONTAL：水平方向  
+- DIRECTION_VERTICAL：垂直方向  
 该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)组件和 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件中订阅，不支持在 [ApplicationContext](arkts-ability-applicationcontext-c.md)和 [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)组件容器中订阅。
 
 **类型：** ConfigurationConstant.Direction
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,16 +54,14 @@ direction?: ConfigurationConstant.Direction
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
 表示应用所在的物理屏幕ID。该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)组件和 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件中订阅，不支持在 [ApplicationContext](arkts-ability-applicationcontext-c.md)和 [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)组件容器中订阅。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -83,8 +79,6 @@ fontId?: string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -92,16 +86,14 @@ fontId?: string
 ## fontSizeScale
 
 ```TypeScript
-fontSizeScale?: double
+fontSizeScale?: number
 ```
 
 表示字体大小缩放比例，取值为非负数，默认值为1。支持开发者[设置应用字体大小](../../../application-models/subscribe-system-environment-variable-changes.md#设置字体大小)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -110,16 +102,14 @@ fontSizeScale?: double
 ## fontWeightScale
 
 ```TypeScript
-fontWeightScale?: double
+fontWeightScale?: number
 ```
 
 表示字体粗细缩放比例，取值为非负数，默认值为1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -137,8 +127,6 @@ hasPointerDevice?: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -154,8 +142,6 @@ language?: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -173,8 +159,6 @@ locale?: Intl.Locale
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -190,8 +174,6 @@ mcc?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -209,8 +191,6 @@ mnc?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -222,100 +202,19 @@ screenDensity?: ConfigurationConstant.ScreenDensity
 ```
 
 表示屏幕显示密度。取值范围：  
-- SCREEN_DENSITY_NOT_SET：未设置 - SCREEN_DENSITY_SDPI：120 - SCREEN_DENSITY_MDPI：160 - SCREEN_DENSITY_LDPI：240 - SCREEN_DENSITY_XLDPI：320 - SCREEN_DENSITY_XXLDPI：480 - SCREEN_DENSITY_XXXLDPI：640  
+- SCREEN_DENSITY_NOT_SET：未设置  
+- SCREEN_DENSITY_SDPI：120  
+- SCREEN_DENSITY_MDPI：160  
+- SCREEN_DENSITY_LDPI：240  
+- SCREEN_DENSITY_XLDPI：320  
+- SCREEN_DENSITY_XXLDPI：480  
+- SCREEN_DENSITY_XXXLDPI：640  
 字体显示大小与屏幕像素密度呈正相关关系。通过监听屏幕像素密度变化，可以感知字体显示大小的调整。通常情况下，对于相同的物理尺寸，屏幕像素密度越高，字体显示效果越大。该环境变量支持在[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)组件和 [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件中订阅，不支持在 [ApplicationContext](arkts-ability-applicationcontext-c.md)和 [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)组件容器中订阅。
 
 **类型：** ConfigurationConstant.ScreenDensity
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility, AbilityConstant, EnvironmentCallback, Want, Configuration } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    let envCallback: EnvironmentCallback = {
-      onConfigurationUpdated(config: Configuration): void {
-        console.info(`envCallback onConfigurationUpdated success: ${JSON.stringify(config)}`);
-        let language = config.language;
-        let colorMode = config.colorMode;
-        let direction = config.direction;
-        let screenDensity = config.screenDensity;
-        let displayId = config.displayId;
-        let hasPointerDevice = config.hasPointerDevice;
-        let fontId = config.fontId;
-        let fontSizeScale = config.fontSizeScale;
-        let fontWeightScale = config.fontWeightScale;
-        let mcc = config.mcc;
-        let mnc = config.mnc;
-        let locale = config.locale;
-      },
-      onMemoryLevel(level) {
-        console.info(`onMemoryLevel level: ${level}`);
-      }
-    };
-    try {
-      let applicationContext = this.context.getApplicationContext();
-      let callbackId = applicationContext.on('environment', envCallback);
-      console.info(`callbackId: ${callbackId}`);
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIAbility, AbilityConstant, EnvironmentCallback, Want, Configuration } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EnvCallbackCustom implements EnvironmentCallback {
-  onConfigurationUpdated(config: Configuration) {
-    console.info(`envCallback onConfigurationUpdated success: ${JSON.stringify(config)}`);
-    let language = config.language;
-    let colorMode = config.colorMode;
-    let direction = config.direction;
-    let screenDensity = config.screenDensity;
-    let displayId = config.displayId;
-    let hasPointerDevice = config.hasPointerDevice;
-    let fontId = config.fontId;
-    let fontSizeScale = config.fontSizeScale;
-    let fontWeightScale = config.fontWeightScale;
-    let mcc = config.mcc;
-    let mnc = config.mnc;
-    let locale = config.locale;
-  }
-
-  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
-    console.info(`onMemoryLevel level: ${level}`);
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-
-    try {
-      let envCallback = new EnvCallbackCustom();
-      let applicationContext = this.context.getApplicationContext();
-      let callbackId = applicationContext.onEnvironment(envCallback);
-      console.info(`callbackId: ${callbackId}`);
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```

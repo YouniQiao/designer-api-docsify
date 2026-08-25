@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## bundleName
@@ -25,8 +23,6 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,8 +39,6 @@ context: BaseContext
 **类型：** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

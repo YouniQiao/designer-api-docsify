@@ -4,29 +4,25 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## offset
 
 ```TypeScript
-offset: int
+offset: number
 ```
 
 偏移量。单位：字节（Byte）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,8 +42,6 @@ pixels: ArrayBuffer
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -66,8 +60,6 @@ region: Region
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -77,16 +69,14 @@ region: Region
 ## stride
 
 ```TypeScript
-stride: int
+stride: number
 ```
 
 跨距，内存中每行像素所占的空间。单位：字节（Byte）。stride &gt;= region.size.width * 4，不满足时数据读取异常。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

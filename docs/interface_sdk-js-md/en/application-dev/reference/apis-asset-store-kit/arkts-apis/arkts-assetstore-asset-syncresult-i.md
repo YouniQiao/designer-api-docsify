@@ -4,14 +4,12 @@ Represents the sync result of an asset.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## failedCount
@@ -25,8 +23,6 @@ Number of assets that fail to be synced.
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -42,8 +38,6 @@ Sync result code of an asset. If the sync is successful, the result code is **0*
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## totalCount
@@ -57,7 +51,5 @@ Total number of assets to be synced.
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Security.Asset

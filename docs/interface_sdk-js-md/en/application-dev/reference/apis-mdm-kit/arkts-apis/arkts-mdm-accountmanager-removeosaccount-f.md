@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeOsAccount
@@ -15,8 +15,6 @@ function removeOsAccount(admin: Want, accountId: number): Promise<void>
 Removes a system account. Currently, this API is supported only on phones and tablets. It can remove normal system accounts (of the normal type) created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md) and system accounts (of the admin, normal, and guest types) created via [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md). The default system account (ID: 100) cannot be removed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCAL_ACCOUNTS
 

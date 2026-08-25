@@ -4,14 +4,12 @@ An arbitrary-precision Decimal type
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { Decimal } from '@kit.ArkTS';
+import { Decimal } from 'kits/@kit.ArkTS';
 ```
 
 ## abs
@@ -23,8 +21,6 @@ abs(): Decimal
 Return a new Decimal whose value is the absolute value of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,8 +42,6 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -56,7 +50,7 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -79,8 +73,6 @@ acos(): Decimal
 Return a new Decimal whose value is the arccosine (inverse cosine) in radians of the value of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,8 +100,6 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -118,7 +108,7 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -142,8 +132,6 @@ acosh(): Decimal
 Return a new Decimal whose value is the inverse of the hyperbolic cosine in radians of the value of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -171,8 +159,6 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -181,7 +167,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -206,8 +192,6 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -216,7 +200,7 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -240,8 +224,6 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -250,8 +232,8 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -274,8 +256,6 @@ asin(): Decimal
 Return a new Decimal whose value is the arcsine (inverse sine) in radians of the value of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -303,8 +283,6 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -313,7 +291,7 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -337,8 +315,6 @@ asinh(): Decimal
 Return a new Decimal whose value is the inverse of the hyperbolic sine in radians of the value of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -366,8 +342,6 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -376,7 +350,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -400,8 +374,6 @@ atan(): Decimal
 Return a new Decimal whose value is the arctangent (inverse tangent) in radians of the value of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -429,8 +401,6 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -439,7 +409,7 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -464,8 +434,6 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -474,8 +442,8 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -499,8 +467,6 @@ atanh(): Decimal
 Return a new Decimal whose value is the inverse of the hyperbolic tangent in radians of the value of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -528,8 +494,6 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -538,7 +502,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -563,8 +527,6 @@ Return a new Decimal whose value is the cube root of the value of this Decimal, 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -585,8 +547,6 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -595,7 +555,7 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -619,8 +579,6 @@ Return a new Decimal whose value is the value of this Decimal rounded to a whole
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -641,8 +599,6 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -651,7 +607,7 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -675,8 +631,6 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -685,8 +639,8 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [min](#min) | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| [max](#max) | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| [min](#min) | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| [max](#max) | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -711,8 +665,6 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -721,9 +673,9 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| [min](#min) | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| [max](#max) | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| [min](#min) | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| [max](#max) | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -740,21 +692,13 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 ## comparedTo
 
-ArkTS-Dyn:
 ```TypeScript
 comparedTo(n: Value): number
-```
-
-ArkTS-Sta:
-```TypeScript
-comparedTo(n: Value): double
 ```
 
 Return 1 if the value of this Decimal is greater than the value of `n`, -1 if the value of this Decimal is less than the value of `n`, 0 if they have the same value, NaN if the value of either Decimal is NaN.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -764,13 +708,13 @@ Return 1 if the value of this Decimal is greater than the value of `n`, -1 if th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **Error codes:**
 
@@ -788,8 +732,6 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -798,7 +740,7 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Error codes:**
 
@@ -815,8 +757,6 @@ cos(): Decimal
 Return a new Decimal whose value is the cosine of the value in radians of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -838,8 +778,6 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -848,7 +786,7 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -872,8 +810,6 @@ Return a new Decimal whose value is the hyperbolic cosine of the value in radian
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -894,8 +830,6 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -904,7 +838,7 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -920,21 +854,13 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 ## decimalPlaces
 
-ArkTS-Dyn:
 ```TypeScript
 decimalPlaces(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-decimalPlaces(): double
 ```
 
 Return the number of decimal places of the value of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -944,7 +870,7 @@ Return the number of decimal places of the value of this Decimal.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 ## div
 
@@ -956,8 +882,6 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -966,7 +890,7 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -990,8 +914,6 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1000,8 +922,8 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1025,8 +947,6 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1035,7 +955,7 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1059,8 +979,6 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1069,7 +987,7 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1092,8 +1010,6 @@ exp(): Decimal
 Return a new Decimal whose value is the natural exponential of the value of this Decimal, i.e. the base e raised to the power the value of this Decimal, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1121,8 +1037,6 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1131,7 +1045,7 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1156,8 +1070,6 @@ Return a new Decimal whose value is the value of this Decimal rounded to a whole
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1178,8 +1090,6 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1188,7 +1098,7 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1212,8 +1122,6 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1222,7 +1130,7 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1246,8 +1154,6 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1256,7 +1162,7 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1280,8 +1186,6 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1290,7 +1194,7 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1314,8 +1218,6 @@ Return true if the value of this Decimal is a finite number, otherwise return fa
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1335,8 +1237,6 @@ isInteger(): boolean
 Return true if the value of this Decimal is an integer, otherwise return false.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1358,8 +1258,6 @@ Return true if the value of this Decimal is NaN, otherwise return false.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1379,8 +1277,6 @@ isNegative(): boolean
 Return true if the value of this Decimal is negative, otherwise return false.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1402,8 +1298,6 @@ Return true if the value of this Decimal is positive, otherwise return false.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1423,8 +1317,6 @@ isZero(): boolean
 Return true if the value of this Decimal is 0 or -0, otherwise return false.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1446,8 +1338,6 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1456,7 +1346,7 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1480,8 +1370,6 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1490,7 +1378,7 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1513,8 +1401,6 @@ ln(): Decimal
 Return a new Decimal whose value is the natural logarithm of the value of this Decimal, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1542,8 +1428,6 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1552,7 +1436,7 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1577,8 +1461,6 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1587,7 +1469,7 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1612,8 +1494,6 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1622,8 +1502,8 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| base | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| base | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1648,8 +1528,6 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1658,7 +1536,7 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1683,8 +1561,6 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1693,7 +1569,7 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1718,8 +1594,6 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1728,7 +1602,7 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1752,8 +1626,6 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1762,7 +1634,7 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1786,8 +1658,6 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1796,7 +1666,7 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1820,8 +1690,6 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1830,8 +1698,8 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1855,8 +1723,6 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1865,7 +1731,7 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1889,8 +1755,6 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1899,8 +1763,8 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1924,8 +1788,6 @@ Return a new Decimal whose value is the value of this Decimal negated, i.e. as i
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1946,8 +1808,6 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1956,7 +1816,7 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -1981,8 +1841,6 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1991,8 +1849,8 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| base | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| exponent | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| base | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| exponent | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2009,21 +1867,13 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 ## precision
 
-ArkTS-Dyn:
 ```TypeScript
 precision(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-precision(): double
 ```
 
 Return the number of significant digits of the value of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2033,25 +1883,17 @@ Return the number of significant digits of the value of this Decimal.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 ## precision
 
-ArkTS-Dyn:
 ```TypeScript
 precision(includeZeros: boolean | number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-precision(includeZeros: boolean | int): double
 ```
 
 Return the number of significant digits of the value of this Decimal, whether to count integer-part trailing zeros.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2061,13 +1903,13 @@ Return the number of significant digits of the value of this Decimal, whether to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| includeZeros | ArkTS-Dyn: boolean \| number<br>ArkTS-Sta：boolean \ | int | Yes |
+| includeZeros | boolean \| number | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **Error codes:**
 
@@ -2084,8 +1926,6 @@ static random(): Decimal
 Returns a new Decimal with a random value equal to or greater than 0 and less than 1.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2105,21 +1945,13 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 ## random
 
-ArkTS-Dyn:
 ```TypeScript
 static random(significantDigits: number): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-static random(significantDigits: double): Decimal
 ```
 
 Returns a new Decimal with a random value equal to or greater than 0 and less than 1, and with `significantDigits` significant digits (or less if trailing zeros are produced).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2129,7 +1961,7 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| significantDigits | number | Yes |
 
 **Return value:**
 
@@ -2154,8 +1986,6 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2164,7 +1994,7 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2188,8 +2018,6 @@ Configures the 'global' settings for this particular Decimal constructor.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2210,21 +2038,13 @@ Configures the 'global' settings for this particular Decimal constructor.
 
 ## sign
 
-ArkTS-Dyn:
 ```TypeScript
 static sign(n: Value): number
-```
-
-ArkTS-Sta:
-```TypeScript
-static sign(n: Value): double
 ```
 
 Return the sign of the passed value to the method. 1 if x &gt; 0, -1 if x &lt; 0, 0 if x is 0, -0 if x is -0, NaN otherwise
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2234,14 +2054,14 @@ Return the sign of the passed value to the method. 1 if x &gt; 0, -1 if x &lt; 0
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **Error codes:**
 
@@ -2258,8 +2078,6 @@ sin(): Decimal
 Return a new Decimal whose value is the sine of the value in radians of this Decimal.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2281,8 +2099,6 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2291,7 +2107,7 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2315,8 +2131,6 @@ Return a new Decimal whose value is the hyperbolic sine of the value in radians 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2337,8 +2151,6 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2347,7 +2159,7 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2371,8 +2183,6 @@ Return a new Decimal whose value is the square root of this Decimal, rounded to 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2393,8 +2203,6 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2403,7 +2211,7 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2427,8 +2235,6 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2437,7 +2243,7 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2461,8 +2267,6 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2471,8 +2275,8 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
-| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2496,8 +2300,6 @@ Return a new Decimal whose value is the sum of the arguments, rounded to `precis
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2506,7 +2308,7 @@ Return a new Decimal whose value is the sum of the arguments, rounded to `precis
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2530,8 +2332,6 @@ Return a new Decimal whose value is the tangent of the value in radians of this 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2552,8 +2352,6 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2562,7 +2360,7 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2586,8 +2384,6 @@ Return a new Decimal whose value is the hyperbolic tangent of the value in radia
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2608,8 +2404,6 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2618,7 +2412,7 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -2642,8 +2436,6 @@ Return a string representing the value of this Decimal in base 2.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2656,21 +2448,13 @@ Return a string representing the value of this Decimal in base 2.
 
 ## toBinary
 
-ArkTS-Dyn:
 ```TypeScript
 toBinary(significantDigits: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toBinary(significantDigits: double): string
 ```
 
 Return a string representing the value of this Decimal in base 2, round to `significantDigits` significant digits.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2680,7 +2464,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| significantDigits | number | Yes |
 
 **Return value:**
 
@@ -2696,21 +2480,13 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 ## toBinary
 
-ArkTS-Dyn:
 ```TypeScript
 toBinary(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toBinary(significantDigits: double, rounding: Rounding): string
 ```
 
 Return a string representing the value of this Decimal in base 2, round to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2720,7 +2496,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| significantDigits | number | Yes |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
@@ -2745,8 +2521,6 @@ Return a new Decimal whose value is the value of this Decimal.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2759,21 +2533,13 @@ Return a new Decimal whose value is the value of this Decimal.
 
 ## toDecimalPlaces
 
-ArkTS-Dyn:
 ```TypeScript
 toDecimalPlaces(decimalPlaces: number): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-toDecimalPlaces(decimalPlaces: double): Decimal
 ```
 
 Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces` decimal places.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2783,7 +2549,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 
 **Return value:**
 
@@ -2799,21 +2565,13 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 ## toDecimalPlaces
 
-ArkTS-Dyn:
 ```TypeScript
 toDecimalPlaces(decimalPlaces: number, rounding: Rounding): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 ```
 
 Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces` decimal places using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2823,7 +2581,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
@@ -2848,8 +2606,6 @@ Return a string representing the value of this Decimal in exponential notation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2862,21 +2618,13 @@ Return a string representing the value of this Decimal in exponential notation.
 
 ## toExponential
 
-ArkTS-Dyn:
 ```TypeScript
 toExponential(decimalPlaces: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toExponential(decimalPlaces: double): string
 ```
 
 Return a string representing the value of this Decimal in exponential notation rounded to `decimalPlaces` fixed decimal places.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2886,7 +2634,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 
 **Return value:**
 
@@ -2902,21 +2650,13 @@ Return a string representing the value of this Decimal in exponential notation r
 
 ## toExponential
 
-ArkTS-Dyn:
 ```TypeScript
 toExponential(decimalPlaces: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toExponential(decimalPlaces: double, rounding: Rounding): string
 ```
 
 Return a string representing the value of this Decimal in exponential notation rounded to `decimalPlaces` fixed decimal places using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2926,7 +2666,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
@@ -2951,8 +2691,6 @@ Return a string representing the value of this Decimal in normal (fixed-point).
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -2965,21 +2703,13 @@ Return a string representing the value of this Decimal in normal (fixed-point).
 
 ## toFixed
 
-ArkTS-Dyn:
 ```TypeScript
 toFixed(decimalPlaces: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toFixed(decimalPlaces: double): string
 ```
 
 Return a string representing the value of this Decimal in normal (fixed-point) notation to `decimalPlaces` fixed decimal places.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2990,7 +2720,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 
 **Return value:**
 
@@ -3006,21 +2736,13 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 ## toFixed
 
-ArkTS-Dyn:
 ```TypeScript
 toFixed(decimalPlaces: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toFixed(decimalPlaces: double, rounding: Rounding): string
 ```
 
 Return a string representing the value of this Decimal in normal (fixed-point) notation to `decimalPlaces` fixed decimal places and rounded using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3030,7 +2752,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
@@ -3055,8 +2777,6 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3077,8 +2797,6 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3087,7 +2805,7 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| maxDenominator | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| maxDenominator | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -3111,8 +2829,6 @@ Return a string representing the value of this Decimal in base 16
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3125,21 +2841,13 @@ Return a string representing the value of this Decimal in base 16
 
 ## toHexadecimal
 
-ArkTS-Dyn:
 ```TypeScript
 toHexadecimal(significantDigits: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toHexadecimal(significantDigits: double): string
 ```
 
 Return a string representing the value of this Decimal in base 16, round to `significantDigits` significant.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3149,7 +2857,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| significantDigits | number | Yes |
 
 **Return value:**
 
@@ -3165,21 +2873,13 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 ## toHexadecimal
 
-ArkTS-Dyn:
 ```TypeScript
 toHexadecimal(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toHexadecimal(significantDigits: double, rounding: Rounding): string
 ```
 
 Return a string representing the value of this Decimal in base 16, round to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3189,7 +2889,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| significantDigits | number | Yes |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
@@ -3214,8 +2914,6 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3224,7 +2922,7 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -3248,8 +2946,6 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3258,7 +2954,7 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
@@ -3276,21 +2972,13 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 ## toNumber
 
-ArkTS-Dyn:
 ```TypeScript
 toNumber(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-toNumber(): double
 ```
 
 Return the value of this Decimal converted to a number primitive. Zero keeps its sign.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3300,7 +2988,7 @@ Return the value of this Decimal converted to a number primitive. Zero keeps its
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 ## toOctal
 
@@ -3311,8 +2999,6 @@ toOctal(): string
 Return a string representing the value of this Decimal in base 8.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3326,21 +3012,13 @@ Return a string representing the value of this Decimal in base 8.
 
 ## toOctal
 
-ArkTS-Dyn:
 ```TypeScript
 toOctal(significantDigits: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toOctal(significantDigits: double): string
 ```
 
 Return a string representing the value of this Decimal in base 8, round to `significantDigits` significant.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3350,7 +3028,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes | {double \| string \|
+| significantDigits | number | Yes | {number \| string \|
 
 **Return value:**
 
@@ -3366,21 +3044,13 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 ## toOctal
 
-ArkTS-Dyn:
 ```TypeScript
 toOctal(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toOctal(significantDigits: double, rounding: Rounding): string
 ```
 
 Return a string representing the value of this Decimal in base 8, round to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3390,7 +3060,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes | {double \| string \|
+| significantDigits | number | Yes | {number \| string \|
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
@@ -3415,8 +3085,6 @@ Return a string representing the value of this Decimal.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3429,21 +3097,13 @@ Return a string representing the value of this Decimal.
 
 ## toPrecision
 
-ArkTS-Dyn:
 ```TypeScript
 toPrecision(significantDigits: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toPrecision(significantDigits: double): string
 ```
 
 Return a string representing the value of this Decimal rounded to `significantDigits` significant digits.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3453,7 +3113,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| significantDigits | number | Yes |
 
 **Return value:**
 
@@ -3469,21 +3129,13 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 ## toPrecision
 
-ArkTS-Dyn:
 ```TypeScript
 toPrecision(significantDigits: number, rounding: Rounding): string
-```
-
-ArkTS-Sta:
-```TypeScript
-toPrecision(significantDigits: double, rounding: Rounding): string
 ```
 
 Return a string representing the value of this Decimal rounded to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3493,7 +3145,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| significantDigits | number | Yes |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
@@ -3518,8 +3170,6 @@ Return a new Decimal whose value is the value of this Decimal.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3532,21 +3182,13 @@ Return a new Decimal whose value is the value of this Decimal.
 
 ## toSignificantDigits
 
-ArkTS-Dyn:
 ```TypeScript
 toSignificantDigits(significantDigits: number): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-toSignificantDigits(significantDigits: double): Decimal
 ```
 
 Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits` significant digits.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3556,7 +3198,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| significantDigits | number | Yes |
 
 **Return value:**
 
@@ -3572,21 +3214,13 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 ## toSignificantDigits
 
-ArkTS-Dyn:
 ```TypeScript
 toSignificantDigits(significantDigits: number, rounding: Rounding): Decimal
-```
-
-ArkTS-Sta:
-```TypeScript
-toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 ```
 
 Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3596,7 +3230,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| significantDigits | number | Yes |
 | [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
@@ -3621,8 +3255,6 @@ Return a string representing the value of this Decimal. Return exponential notat
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3642,8 +3274,6 @@ trunc(): Decimal
 Return a new Decimal whose value is the value of this Decimal truncated to a whole number.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3665,8 +3295,6 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3675,7 +3303,7 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {number \| string \|
 
 **Return value:**
 
@@ -3699,8 +3327,6 @@ Return a string representing the value of this Decimal. Unlike `toString`, negat
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3723,8 +3349,6 @@ The numbers of decimal digits.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3732,16 +3356,14 @@ The numbers of decimal digits.
 ## e
 
 ```TypeScript
-get e(): double
+get e(): number
 ```
 
 The number of decimal exponent.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3759,8 +3381,6 @@ Not a rounding mode, see modulo
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3776,8 +3396,6 @@ Rounds towards Infinity
 **Type:** 2
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3795,8 +3413,6 @@ Rounds towards zero
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3812,8 +3428,6 @@ Rounds towards -Infinity
 **Type:** 3
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3831,8 +3445,6 @@ Rounds towards nearest neighbour. If equidistant, rounds towards Infinity
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3848,8 +3460,6 @@ Rounds towards nearest neighbour. If equidistant, rounds towards zero
 **Type:** 5
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3867,8 +3477,6 @@ Rounds towards nearest neighbour. If equidistant, rounds towards even neighbour
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3884,8 +3492,6 @@ Rounds towards nearest neighbour. If equidistant, rounds towards -Infinity
 **Type:** 8
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3903,8 +3509,6 @@ Rounds towards nearest neighbour. If equidistant, rounds away from zero
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3921,8 +3525,6 @@ Rounds away from zero
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -3930,16 +3532,14 @@ Rounds away from zero
 ## s
 
 ```TypeScript
-get s(): double
+get s(): number
 ```
 
 The number of decimal sign.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

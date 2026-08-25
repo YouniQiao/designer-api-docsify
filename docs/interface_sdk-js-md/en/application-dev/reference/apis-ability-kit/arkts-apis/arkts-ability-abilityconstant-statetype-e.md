@@ -4,8 +4,6 @@ Enumerates the scenarios for saving application data. You can use it in [onSaveS
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## CONTINUATION
@@ -17,8 +15,6 @@ CONTINUATION = 0
 Application migration scenario.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,25 +32,8 @@ Application recovery scenario.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>) {
-    if (reason === AbilityConstant.StateType.CONTINUATION) {
-      console.info('Save the ability data when the ability continuation.');
-    }
-    return AbilityConstant.OnSaveResult.ALL_AGREE;
-  }
-}
-```

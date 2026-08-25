@@ -4,30 +4,26 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## dismiss
 
 ```TypeScript
-dismiss(target: int | ComponentContent<Object>): Promise<void>
+dismiss(target: number | ComponentContent<Object>): Promise<void>
 ```
 
 关闭对话框。 接受对话ID（由当前返回）或ComponentContent引用。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,8 +60,6 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -97,14 +91,13 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>
 ```
 
-提供一个自定义样式的对话框，其中包含所提供的内容。content参数通过联合类型接受CustomBuilder或ComponentContent： -CustomBuilder：自定义对话框内容的生成器函数。 - ComponentContent：支持状态驱动更新的ComponentContent。
+提供一个自定义样式的对话框，其中包含所提供的内容。content参数通过联合类型接受CustomBuilder或ComponentContent： -CustomBuilder：自定义对话框内容的生成器函数。  
+- ComponentContent：支持状态驱动更新的ComponentContent。
 
 > **说明：**
 > isModal = true和showInSubWindow = true不能同时使用。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,7 +109,7 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | 是 |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | 是 |
 | options | dialog.DialogCustomOptions | 否 |
 
 **返回值：**
@@ -143,8 +136,6 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 更新已呈现的自定义对话框。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

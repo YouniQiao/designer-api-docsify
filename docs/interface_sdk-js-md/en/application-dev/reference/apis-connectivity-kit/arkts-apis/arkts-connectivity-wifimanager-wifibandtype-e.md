@@ -1,10 +1,8 @@
 # WifiBandType
 
-Wi-Fi band type. @enum { int }
+Wi-Fi band type. @enum { number }
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -18,8 +16,6 @@ Default.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## WIFI_BAND_2G
@@ -31,8 +27,6 @@ WIFI_BAND_2G
 Band 2.4G.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -46,8 +40,6 @@ Band 5G.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## WIFI_BAND_6G
@@ -60,8 +52,6 @@ Band 6G.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## WIFI_BAND_60G
@@ -73,7 +63,5 @@ WIFI_BAND_60G
 Band 60G.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA

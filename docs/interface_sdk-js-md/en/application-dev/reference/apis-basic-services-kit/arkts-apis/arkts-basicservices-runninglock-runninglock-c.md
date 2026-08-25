@@ -4,33 +4,23 @@ Defines a **RunningLock** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from '@kit.BasicServicesKit';
+import { runningLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## hold
 
-ArkTS-Dyn:
 ```TypeScript
 hold(timeout: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-hold(timeout: int): void
 ```
 
 Holds a running lock.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -40,7 +30,7 @@ Holds a running lock.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| timeout | number | Yes |
 
 **Error codes:**
 
@@ -48,37 +38,6 @@ Holds a running lock.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// RunningLockTest.ets
-class RunningLockTest {
-    public static recordLock: runningLock.RunningLock;
-
-    public static holdRunningLock(): void {
-        if (RunningLockTest.recordLock) {
-            RunningLockTest.recordLock.hold(500);
-            console.info('hold running lock success');
-        } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
-                if (typeof err === 'undefined') {
-                    console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock;
-                    try {
-                        lock.hold(500);
-                        console.info('hold running lock success');
-                    } catch(err) {
-                        console.error('hold running lock failed, err: ' + err);
-                    }
-                } else {
-                    console.error('create running lock failed, err: ' + err);
-                }
-            });
-        }
-    }
-}
-```
 
 ## isHolding
 
@@ -90,8 +49,6 @@ Checks whether this running lock is being held.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Return value:**
@@ -99,33 +56,6 @@ Checks whether this running lock is being held.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// RunningLockTest.ets
-class RunningLockTest {
-    public static recordLock: runningLock.RunningLock;
-
-    public static isHoldingRunningLock(): void {
-        if (RunningLockTest.recordLock) {
-            let isHolding = RunningLockTest.recordLock.isHolding();
-            console.info('check running lock holding status: ' + isHolding);
-        } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
-                if (typeof err === 'undefined') {
-                    console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock;
-                    let isHolding = lock.isHolding();
-                    console.info('check running lock holding status: ' + isHolding);
-                } else {
-                    console.error('create running lock failed, err: ' + err);
-                }
-            });
-        }
-    }
-}
-```
 
 ## isUsed
 
@@ -136,8 +66,6 @@ isUsed(): boolean
 Checks whether this running lock is used.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -151,19 +79,6 @@ Checks whether this running lock is used.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
-.then((lock: runningLock.RunningLock) => {
-    let isUsed = lock.isUsed();
-    console.info('check running lock used status: ' + isUsed);
-})
-.catch((err: Error) => {
-    console.error('check running lock used status failed, err: ' + err);
-});
-```
-
 ## lock
 
 ```TypeScript
@@ -173,8 +88,6 @@ lock(timeout: number): void
 Locks and holds a **RunningLock** object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -190,19 +103,6 @@ Locks and holds a **RunningLock** object.
 | --- | --- | --- |
 | timeout | number | Yes |
 
-**Examples**
-
-```TypeScript
-runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
-.then((lock: runningLock.RunningLock) => {
-    lock.lock(500);
-    console.info('create running lock and lock success');
-})
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
-});
-```
-
 ## unhold
 
 ```TypeScript
@@ -212,8 +112,6 @@ unhold(): void
 Releases this running lock.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -225,37 +123,6 @@ Releases this running lock.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-// RunningLockTest.ets
-class RunningLockTest {
-    public static recordLock: runningLock.RunningLock;
-
-    public static unholdRunningLock(): void {
-        if (RunningLockTest.recordLock) {
-            RunningLockTest.recordLock.unhold();
-            console.info('unhold running lock success');
-        } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
-                if (typeof err === 'undefined') {
-                    console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock;
-                    try {
-                        lock.unhold();
-                        console.info('unhold running lock success');
-                    } catch(err) {
-                        console.error('unhold running lock failed, err: ' + err);
-                    }
-                } else {
-                    console.error('create running lock failed, err: ' + err);
-                }
-            });
-        }
-    }
-}
-```
-
 ## unlock
 
 ```TypeScript
@@ -266,8 +133,6 @@ Releases this running lock.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [unhold](#unhold)
@@ -275,16 +140,3 @@ Releases this running lock.
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
-
-**Examples**
-
-```TypeScript
-runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
-.then((lock: runningLock.RunningLock) => {
-    lock.unlock();
-    console.info('create running lock and unlock success');
-})
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
-});
-```

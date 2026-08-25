@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryAllPrinterExtensionInfos
@@ -15,8 +15,6 @@ function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExte
 查询所有已安装的打印机扩展服务，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -37,33 +35,6 @@ function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExte
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.queryAllPrinterExtensionInfos((err: BusinessError, extensionInfos: print.PrinterExtensionInfo[]) => {
-    if (err) {
-        console.error('queryAllPrinterExtensionInfos err ' + JSON.stringify(err));
-    } else {
-        console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
-    console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('failed to get AllPrinterExtension because ' + JSON.stringify(error));
-})
-```
-
 
 ## queryAllPrinterExtensionInfos
 
@@ -74,8 +45,6 @@ function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>
 查询所有已安装的打印机扩展服务，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -95,7 +64,3 @@ function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [queryAllPrinterExtensionInfos](#queryallprinterextensioninfos)

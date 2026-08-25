@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 ```
 
 ## openSubscriptionSettingsWithResult
@@ -15,8 +15,6 @@ function openSubscriptionSettingsWithResult(context: UIAbilityContext): Promise<
 打开应用的通知扩展订阅授权页面，以半模态弹窗形式显示。用户可在该页面授权“允许获取本机通知”开关与“已获取的本机通知”应用开关。 使用Promise异步回调，当半模态窗口关闭时返回用户设置的授权的结果。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -44,44 +42,3 @@ function openSubscriptionSettingsWithResult(context: UIAbilityContext): Promise<
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600018](../errorcode-notification.md#1600018-通知设置页面已经拉起) |
 | [1600023](../errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-try {
-  // 请在组件内获取context，确保this.getuIContext().getHostContext()返回结果为UIAbilityContext。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  notificationExtensionSubscription.openSubscriptionSettingsWithResult(context).then((data) => {
-    console.info(`openSubscriptionSettingsWithResult success, data: ${JSON.stringify(data)}`);
-  }).catch((e: Error) => {
-    let error = e as BusinessError
-    console.error(`failed to call openSubscriptionSettingsWithResult, code is ${error.code}, message is ${error.message}`)
-  });
-} catch (error) {
-  console.error(`failed to call openSubscriptionSettingsWithResult, code is ${error.code}, message is ${error.message}`)
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-try {
-  // 请在组件内获取context，确保this.getuIContext().getHostContext()返回结果为UIAbilityContext。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  notificationExtensionSubscription.openSubscriptionSettingsWithResult(context).then((data) => {
-    console.info(`openSubscriptionSettingsWithResult success, data: ${JSON.stringify(data)}`);
-  }).catch((e: Error) => {
-    let error = e as BusinessError
-    console.error(`failed to call openSubscriptionSettingsWithResult ${JSON.stringify(error)}`)
-  });
-} catch (error) {
-  let err = error as BusinessError
-  console.error(`failed to call openSubscriptionSettingsWithResult, code is ${err.code}, message is ${err.message}`)
-}
-```

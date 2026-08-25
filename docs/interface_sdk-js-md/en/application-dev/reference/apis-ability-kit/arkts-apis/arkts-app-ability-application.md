@@ -4,8 +4,6 @@ You can use this module to create a [Context](../../../application-models/applic
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,7 +11,7 @@ You can use this module to create a [Context](../../../application-models/applic
 ## Modules to Import
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
+import { application } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

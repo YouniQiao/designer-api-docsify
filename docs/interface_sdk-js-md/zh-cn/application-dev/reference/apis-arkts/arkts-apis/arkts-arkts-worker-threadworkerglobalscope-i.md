@@ -6,14 +6,12 @@ Worker线程用于与宿主线程通信的类。其中postMessage接口用于向
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from 'kits/@kit.ArkTS';
 ```
 
 ## callGlobalCallObjectMethod
@@ -25,8 +23,6 @@ callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: nu
 Worker线程调用宿主线程上注册的对象的指定方法，此调用对Worker线程同步，对宿主线程异步， 返回值通过数据拷贝传递。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -57,53 +53,6 @@ Worker线程调用宿主线程上注册的对象的指定方法，此调用对Wo
 | [10200020](../errorcode-utils.md#10200020-调用注册对象上的方法类型错误) |
 | [10200021](../errorcode-utils.md#10200021-全局调用等待超时错误) |
 
-**示例**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-class TestObj {
-  private message : string = "this is a message from TestObj";
-  public getMessage() : string {
-    return this.message;
-  }
-  public getMessageWithInput(str : string) : string {
-    return this.message + " with input: " + str;
-  }
-}
-let registerObj = new TestObj();
-// 在ThreadWorker实例上注册registerObj
-workerInstance.registerGlobalCallObject("myObj", registerObj);
-workerInstance.postMessage("start worker");
-```
-
-```TypeScript
-// worker.ets
-import { worker, MessageEvents } from '@kit.ArkTS';
-
-const workerPort = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents): void => {
-  try {
-    // 调用方法无入参
-    let res : string = workerPort.callGlobalCallObjectMethod("myObj", "getMessage", 0) as string;
-    console.info("worker:", res); // worker: this is a message from TestObj
-  } catch (error) {
-    // 异常处理
-    console.error("worker: error code is " + error.code + " error message is " + error.message);
-  }
-  try {
-    // 调用方法有入参
-    let res : string = workerPort.callGlobalCallObjectMethod("myObj", "getMessageWithInput", 0, "hello there!") as string;
-    console.info("worker:", res); // worker: this is a message from TestObj with input: hello there!
-  } catch (error) {
-    // 异常处理
-    console.error("worker: error code is " + error.code + " error message is " + error.message);
-  }
-}
-```
-
 ## close
 
 ```TypeScript
@@ -113,8 +62,6 @@ close(): void
 销毁Worker线程，终止Worker接收消息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -126,44 +73,6 @@ close(): void
 | --- |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 
-**示例**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-```
-
-```TypeScript
-// worker.ets
-import { worker, MessageEvents } from '@kit.ArkTS';
-
-const workerPort = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents): void => {
-    workerPort.close();
-}
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-```
-
-```TypeScript
-// worker.ets
-import { worker } from '@kit.ArkTS';
-
-const parentPort = worker.parentPort;
-parentPort.onmessage = (): void => {
-    parentPort.close()
-}
-```
-
 ## onmessage
 
 ```TypeScript
@@ -173,8 +82,6 @@ onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 回调函数。表示Worker线程收到来自其宿主线程通过postMessage或postMessageWithSharedSendable接口发送的消息时被调用的事件处理程序，处理程序在Worker线程中执行。 其中this指调用者对象本身ThreadWorkerGlobalScope，ev类型为MessageEvents，表示收到的宿主线程发送的消息数据。默认值为undefined。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -204,8 +111,6 @@ onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -234,8 +139,6 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -245,7 +148,7 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | messageObject | Object | 是 |
-| transfer | ArrayBuffer[] | 是 |
+| [transfer](arkts-arkts-worker-postmessageoptions-i.md) | ArrayBuffer[] | 是 |
 
 **错误码：**
 
@@ -253,205 +156,6 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 | --- |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-
-**示例**
-
-```TypeScript
-// Worker.ets
-import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
-
-// 创建worker线程中与宿主线程通信的对象
-const workerPort = worker.workerPort;
-
-// worker线程接收宿主线程信息
-workerPort.onmessage = (e: MessageEvents): void => {
-  // data：宿主线程发送的信息
-  let data: ArrayBuffer = e.data;
-  // 往收到的buffer里写入数据
-  const view = new Int8Array(data).fill(3);
-  // worker线程向宿主线程发送信息
-  workerPort.postMessage(view);
-}
-
-// worker线程发生error的回调
-workerPort.onerror = (err: ErrorEvent) => {
-  console.error("worker.ets onerror" + err.message);
-}
-```
-
-```TypeScript
-// Index.ets
-import { worker, MessageEvents, ErrorEvent } from '@kit.ArkTS';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            // 宿主线程中创建Worker对象
-            const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
-            // 宿主线程向worker线程传递信息
-            const buffer = new ArrayBuffer(8);
-            workerInstance.postMessage(buffer, [buffer]);
-
-            // 此时buffer的所有权转移到了worker线程，在宿主线程中不可用
-            // const view = new Int8Array(buffer).fill(3);
-
-            // 宿主线程接收worker线程信息
-            workerInstance.onmessage = (e: MessageEvents): void => {
-              // data：worker线程发送的信息
-              let data: Int8Array = e.data;
-              console.info("main thread data is  " + data);
-              // 销毁Worker对象
-              workerInstance.terminate();
-            }
-            // 在调用terminate后，执行onexit
-            workerInstance.onexit = (code) => {
-              console.info("main thread terminate");
-            }
-            // 监听Worker错误
-            workerInstance.onAllErrors = (err: ErrorEvent) => {
-              console.error("main error message " + err.message);
-            }
-          })
-      }
-      .width('100%')
-      .height('100%')
-    }
-  }
-}
-```
-
-```TypeScript
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-
-workerInstance.postMessage("hello world");
-
-let buffer = new ArrayBuffer(8);
-
-// 填入options参数，buffer的所有权会转移到Worker线程，在宿主线程中将不可用
-workerInstance.postMessage(buffer, {transfer: [buffer]});
-```
-
-```TypeScript
-// Index.ets
-import { worker, MessageEvents } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (e: MessageEvents): void => {
-  console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { worker, MessageEvents } from '@kit.ArkTS';
-
-const workerPort = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents): void => {
-  let buffer = new ArrayBuffer(8);
-  workerPort.postMessage(buffer, [buffer]);
-}
-```
-
-```TypeScript
-// Index.ets
-import { worker, MessageEvents } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (e: MessageEvents): void => {
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { worker, MessageEvents } from '@kit.ArkTS';
-
-const workerPort = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents): void => {
-    workerPort.postMessage("receive data from main thread");
-}
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-
-let buffer = new ArrayBuffer(8);
-workerInstance.postMessage(buffer, [buffer]);
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-
-workerInstance.postMessage("hello world");
-
-let buffer = new ArrayBuffer(8);
-workerInstance.postMessage(buffer, [buffer]);
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (e: MessageEvents): void => {
-    // let data = e.data;
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.onmessage = (): void => {
-    // let data = e.data;
-    let buffer = new ArrayBuffer(5)
-    workerPort.postMessage(buffer, [buffer]);
-}
-```
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (): void => {
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const parentPort = worker.parentPort;
-parentPort.onmessage = (e: MessageEvents) => {
-  parentPort.postMessage("receive data from main thread");
-}
-```
 
 ## postMessage
 
@@ -462,8 +166,6 @@ postMessage(messageObject: Object, options?: PostMessageOptions): void
 Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程发送消息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -483,10 +185,6 @@ Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程�
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
-**示例**
-
-参见 [postMessage](#postmessage)
-
 ## postMessageAtFront
 
 ```TypeScript
@@ -502,8 +200,6 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -516,7 +212,7 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 | --- | --- | --- |
 | message | Object | 是 |
 | priority | [Priority](arkts-arkts-worker-priority-e.md) | 是 |
-| transfer | ArrayBuffer[] | 否 |
+| [transfer](arkts-arkts-worker-postmessageoptions-i.md) | ArrayBuffer[] | 否 |
 
 **错误码：**
 
@@ -524,88 +220,6 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 | --- |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-
-**示例**
-
-```TypeScript
-// worker文件路径为：entry/src/main/ets/workers/Worker.ets
-// Worker.ets
-
-import { MessageEvents, ThreadWorkerGlobalScope, worker, Priority } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents) => {
-  workerPort.postMessage("1");
-  workerPort.postMessage("2");
-  // 方式1：使用可选链操作符（推荐，最简洁）
-  workerPort.postMessageAtFront?.("3-idle", Priority.IDLE);
-  workerPort.postMessageAtFront?.("4-immediate", Priority.IMMEDIATE);
-
-  // 方式2：使用非空断言，直接调用（需要确定它一定存在）
-  workerPort.postMessageAtFront!("5-low", Priority.LOW);
-
-  // 方式3：判断方法存在后再使用
-  if (workerPort.postMessageAtFront) {
-    workerPort.postMessageAtFront("6-high", Priority.HIGH);
-  } else {
-    workerPort.postMessageWithSharedSendable("6-high");
-  }
-}
-```
-
-```TypeScript
-// Index.ets
-// 接收Worker线程传递至宿主线程的数据
-
-import { worker, MessageEvents } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
-workerInstance.postMessage("start");
-workerInstance.onmessage = (e: MessageEvents) => {
-  // 模拟耗时操作
-  let start = new Date().getTime();
-  while (new Date().getTime() - start < 1000) {
-    continue;
-  }
-  let res: string = e.data as string;
-  // 执行效果：
-  // result is: 1
-  // result is: 4-immediate
-  // result is: 6-high
-  // result is: 2
-  // result is: 5-low
-  // result is: 3-idle
-  console.info("result is: " + res);
-}
-```
-
-如果传递的参数是对象字面量的话，需要[显式标注对象字面量的类型](../../../quick-start/typescript-to-arkts-migration-guide.md#需要显式标注对象字面量的类型)。
-
-```TypeScript
-import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent, Priority } from '@kit.ArkTS';
-
-class ClassA {
-  public obj: string = ""
-}
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents) => {
-  // 使用可选链操作符调用接口，传递字面量对象时会编译报错，需要显式标注对象字面量的类型。
-  // workerPort.postMessageAtFront?.({obj: "obj"}, Priority.HIGH);
-
-  let classAInstance: ClassA = { obj: "obj" };
-  workerPort.postMessageAtFront?.(classAInstance, Priority.HIGH);
-
-  // 使用非空断言，直接调用。可以直接传递对象字面量。
-  workerPort.postMessageAtFront!({ obj: "obj" }, Priority.HIGH);
-  // 判断方法存在后再使用。可以直接传递对象字面量。
-  if (workerPort.postMessageAtFront) {
-    workerPort.postMessageAtFront({ obj: "obj" }, Priority.HIGH);
-  } else {
-    workerPort.postMessageWithSharedSendable({ obj: "obj" });
-  }
-}
-```
 
 ## postMessageWithSharedSendable
 
@@ -617,8 +231,6 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -628,7 +240,7 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | message | Object | 是 |
-| transfer | ArrayBuffer[] | 否 |
+| [transfer](arkts-arkts-worker-postmessageoptions-i.md) | ArrayBuffer[] | 否 |
 
 **错误码：**
 
@@ -636,86 +248,3 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 | --- |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 | [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-
-**示例**
-
-```TypeScript
-// Index.ets
-// 新建SendableObject实例并通过宿主线程传递至Worker线程
-
-import { worker } from '@kit.ArkTS';
-import { SendableObject } from './sendable';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
-let object: SendableObject = new SendableObject();
-workerInstance.postMessageWithSharedSendable(object);
-
-// 使用postMessage接口传递Sendable对象，使用拷贝数据的方式传递
-workerInstance.postMessage(object);
-```
-
-```TypeScript
-// sendable.ets
-// 定义SendableObject
-
-@Sendable
-export class SendableObject {
-  value:number = 45;
-}
-```
-
-```TypeScript
-// worker文件路径为：entry/src/main/ets/workers/Worker.ets
-// Worker.ets
-// 接收宿主线程传递至Worker线程的数据并访问
-
-import { SendableObject } from '../pages/sendable';
-import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (e: MessageEvents) => {
-  let obj: SendableObject = e.data;
-  console.info("sendable obj is: " + obj.value);
-}
-```
-
-```TypeScript
-// worker文件路径为：entry/src/main/ets/workers/Worker.ets
-// Worker.ets
-// 新建SendableObject实例并通过Worker线程传递至宿主线程
-
-import { SendableObject } from '../pages/sendable';
-import { worker, ThreadWorkerGlobalScope, MessageEvents, ErrorEvent } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-workerPort.onmessage = (e: MessageEvents) => {
-  let object: SendableObject = new SendableObject();
-  workerPort.postMessageWithSharedSendable(object);
-}
-```
-
-```TypeScript
-// sendable.ets
-// 定义SendableObject
-
-@Sendable
-export class SendableObject {
-  a:number = 45;
-}
-```
-
-```TypeScript
-// Index.ets
-// 接收Worker线程传递至宿主线程的数据并访问其属性
-
-import { worker, MessageEvents } from '@kit.ArkTS';
-import { SendableObject } from './sendable';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/Worker.ets");
-workerInstance.postMessage(1);
-workerInstance.onmessage = (e: MessageEvents) => {
-  let obj: SendableObject = e.data;
-  console.info("sendable index obj is: " + obj.a);
-}
-```

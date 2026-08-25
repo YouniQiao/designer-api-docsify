@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## deleteWebAdInterface
@@ -15,8 +15,6 @@ function deleteWebAdInterface(controller: web_webview.WebviewController, needRef
 删除通过registerWebAdInterface注入的广告JavaScript对象（该接口仅对部分系统预置应用开放）。
 
 **起始版本：** 16
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
 
 **原子化服务API：** 从API版本16开始，该接口支持在原子化服务API中使用。
 
@@ -35,29 +33,3 @@ function deleteWebAdInterface(controller: web_webview.WebviewController, needRef
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { advertising } from '@kit.AdsKit';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct Index {
-  private webViewController: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteWebAdInterface')
-        .onClick(() => {
-          advertising.deleteWebAdInterface(this.webViewController, true);
-        })
-
-      Web({ src: 'https://www.example.com', controller: this.webViewController })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```

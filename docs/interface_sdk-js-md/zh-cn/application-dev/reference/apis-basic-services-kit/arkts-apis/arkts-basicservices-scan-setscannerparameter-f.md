@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setScannerParameter
 
 ```TypeScript
-function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>
+function setScannerParameter(scannerId: string, optionIndex: number, value: ScannerOptionValue): Promise<void>
 ```
 
 设置扫描仪参数。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRINT
 
@@ -27,7 +25,7 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | scannerId | string | 是 |
-| [optionIndex](arkts-basicservices-scan-scannerparameter-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [optionIndex](arkts-basicservices-scan-scannerparameter-i.md) | number | 是 |
 | value | [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | 是 |
 
 **返回值：**
@@ -41,22 +39,3 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 | 错误码ID |
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let scannerId: string = 'scanner_001';
-let optionIndex: number = 1;
-let value: scan.ScannerOptionValue = {
-    valueType: scan.OptionValueType.SCAN_TYPE_INT,
-    numValue: 100
-};
-scan.setScannerParameter(scannerId, optionIndex, value).then(() => {
-    console.info('set scanner parameter success');
-}).catch((error: BusinessError) => {
-    console.error('set scanner parameter failed: ' + JSON.stringify(error));
-})
-```

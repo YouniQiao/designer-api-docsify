@@ -4,8 +4,6 @@ Enumerates the types of light painting shutter modes.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ TRAFFIC_TRAILS = 0
 Traffic trails.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -36,8 +32,6 @@ Star trails.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Silky water.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ LIGHT_GRAFFITI = 3
 Light graffiti.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

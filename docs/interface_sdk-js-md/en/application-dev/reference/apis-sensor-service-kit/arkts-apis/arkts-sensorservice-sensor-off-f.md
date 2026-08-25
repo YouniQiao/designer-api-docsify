@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## off
@@ -15,8 +15,6 @@ function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResp
 Unsubscribes from data of the acceleration sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -48,8 +46,6 @@ function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, ca
 Unsubscribes from data of the acceleration sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -83,8 +79,6 @@ Unsubscribes from data of the uncalibrated acceleration sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -113,8 +107,6 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: Sensor
 Unsubscribes from data of the uncalibrated acceleration sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -146,8 +138,6 @@ Unsubscribes from data of the ambient light sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -173,8 +163,6 @@ function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, ca
 Unsubscribes from data of the ambient light sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -203,8 +191,6 @@ Unsubscribes from data of the ambient temperature sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -230,8 +216,6 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoPar
 Unsubscribes from data of the ambient temperature sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -260,8 +244,6 @@ Unsubscribes from data of the barometer sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -287,8 +269,6 @@ function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callba
 Unsubscribes from data of the barometer sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -317,8 +297,6 @@ Unsubscribes from data of the gravity sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -344,8 +322,6 @@ function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback
 Unsubscribes from data of the gravity sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -373,8 +349,6 @@ function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): 
 Unsubscribes from data of the gyroscope sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -406,8 +380,6 @@ function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callba
 Unsubscribes from data of the gyroscope sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -441,8 +413,6 @@ Unsubscribes from data of the uncalibrated gyroscope sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -471,8 +441,6 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfo
 Unsubscribes from data of the uncalibrated gyroscope sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -504,8 +472,6 @@ Unsubscribes from data of the Hall effect sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -531,8 +497,6 @@ function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: 
 Unsubscribes from data of the Hall effect sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -560,8 +524,6 @@ function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>):
 Unsubscribes from data of the heart rate sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -591,8 +553,6 @@ function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callb
 Unsubscribes from data of the heart rate sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -624,8 +584,6 @@ Unsubscribes from data of the humidity sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -651,8 +609,6 @@ function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callbac
 Unsubscribes from data of the humidity sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -680,8 +636,6 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAcce
 Unsubscribes from data of the linear acceleration sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -711,8 +665,6 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoPa
 Unsubscribes from data of the linear acceleration sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -744,8 +696,6 @@ Unsubscribes from data of the magnetic field sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -771,8 +721,6 @@ function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, c
 Unsubscribes from data of the magnetic field sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -801,8 +749,6 @@ Unsubscribes from data of the uncalibrated magnetic field sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -828,8 +774,6 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: Senso
 Unsubscribes from data of the uncalibrated magnetic field sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -858,8 +802,6 @@ Unsubscribes from data of the orientation sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -887,8 +829,6 @@ function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, call
 Unsubscribes from data of the orientation sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -919,8 +859,6 @@ Unsubscribes from data of the pedometer sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -949,8 +887,6 @@ function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callba
 Unsubscribes from data of the pedometer sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -982,8 +918,6 @@ Unsubscribes from data of the pedometer detection sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -1012,8 +946,6 @@ function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoPar
 Unsubscribes from data of the pedometer detection sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -1045,8 +977,6 @@ Unsubscribes from data of the proximity sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1072,8 +1002,6 @@ function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callba
 Unsubscribes from data of the proximity sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1102,8 +1030,6 @@ Unsubscribes from data of the rotation vector sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1129,8 +1055,6 @@ function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, 
 Unsubscribes from data of the rotation vector sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1159,8 +1083,6 @@ Unsubscribes from valid motion sensor data.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1186,8 +1108,6 @@ function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoPara
 Unsubscribes from valid motion sensor data.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1216,8 +1136,6 @@ Unsubscribes from data of the wear detection sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1243,8 +1161,6 @@ function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, 
 Unsubscribes from the fused pressure sensor data.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -1274,8 +1190,6 @@ Unsubscribes from data of the wear detection sensor.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -1302,8 +1216,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<
 Unsubscribes from sensor data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1332,8 +1244,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback&lt;AccelerometerUncalibratedResponse&gt;)
@@ -1360,8 +1270,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
@@ -1385,8 +1293,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Cal
 Unsubscribes from sensor data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1412,8 +1318,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
@@ -1438,8 +1342,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.GRAVITY, callback?: Callback&lt;GravityResponse&gt;)
@@ -1463,8 +1365,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<Gyro
 Unsubscribes from sensor data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1492,8 +1392,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback&lt;GyroscopeUncalibratedResponse&gt;)
@@ -1520,8 +1418,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.HALL, callback?: Callback&lt;HallResponse&gt;)
@@ -1545,8 +1441,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<Hea
 Unsubscribes from sensor data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1574,8 +1468,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.HUMIDITY, callback?: Callback&lt;HumidityResponse&gt;)
@@ -1599,8 +1491,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Cal
 Unsubscribes from sensor data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1628,8 +1518,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.MAGNETIC_FIELD, callback?: Callback&lt;MagneticFieldResponse&gt;)
@@ -1653,8 +1541,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callba
 Unsubscribes from sensor data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1680,8 +1566,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
@@ -1705,8 +1589,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<Pedo
 Unsubscribes from sensor data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1734,8 +1616,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.PEDOMETER_DETECTION, callback?: Callback&lt;PedometerDetectionResponse&gt;)
@@ -1762,8 +1642,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;)
@@ -1787,8 +1665,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callbac
 Unsubscribes from sensor data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1814,8 +1690,6 @@ Unsubscribes from valid motion sensor data.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback&lt;SignificantMotionResponse&gt;)
@@ -1840,8 +1714,6 @@ Unsubscribes from sensor data changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](#off)(type: SensorId.WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
@@ -1865,8 +1737,6 @@ function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>)
 Disables listening for sensor status changes.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 

@@ -1,17 +1,15 @@
 # MemoryLimit
 
-Defines the memory limit of the application process.@interface MemoryLimit
+Defines the memory limit of the application process.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## rssLimit
@@ -25,8 +23,6 @@ The limit of the application process's resident set, in kilobyte
 **Type:** bigint
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -42,8 +38,6 @@ The limit of the js vm heap size of current virtual machine, in kilobyte
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## vmTotalHeapSize
@@ -58,8 +52,6 @@ The limit of the total js vm heap size of process, in kilobyte
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## vssLimit
@@ -73,7 +65,5 @@ The limit of the application process's virtual memory, in kilobyte
 **Type:** bigint
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug

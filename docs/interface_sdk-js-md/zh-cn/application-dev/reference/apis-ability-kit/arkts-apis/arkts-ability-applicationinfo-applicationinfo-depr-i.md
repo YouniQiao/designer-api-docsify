@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [ApplicationInfo](#applicationinfo)
@@ -28,8 +26,6 @@ readonly accessTokenId: number
 **默认值：** Indicates the access token of the application
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -51,8 +47,6 @@ readonly codePath: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** codePath
@@ -72,8 +66,6 @@ readonly description: string
 **默认值：** Description of application
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -95,8 +87,6 @@ readonly descriptionId: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** descriptionId
@@ -116,8 +106,6 @@ readonly enabled: boolean
 **默认值：** Indicates whether or not this application may be instantiated
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -139,8 +127,6 @@ readonly entityType: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -159,8 +145,6 @@ readonly entryDir: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -178,8 +162,6 @@ readonly icon: string
 **默认值：** Indicates the icon of the application
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -201,8 +183,6 @@ readonly iconId: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** iconId
@@ -222,8 +202,6 @@ readonly label: string
 **默认值：** Indicates the label of the application
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -245,8 +223,6 @@ readonly labelId: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** labelId
@@ -266,8 +242,6 @@ readonly metaData: Map<string, Array<CustomizeData>>
 **默认值：** Indicates the metadata of module
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -289,8 +263,6 @@ readonly moduleInfos: Array<ModuleInfo>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** hapModulesInfo
@@ -311,8 +283,6 @@ readonly moduleSourceDirs: Array<string>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -330,8 +300,6 @@ readonly name: string
 **默认值：** Indicates the application name, which is the same as {@code bundleName}
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -353,8 +321,6 @@ readonly permissions: Array<string>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** permissions
@@ -374,8 +340,6 @@ readonly process: string
 **默认值：** Process of application, if user do not set it ,the value equal bundleName
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -397,8 +361,6 @@ readonly removable: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** removable
@@ -419,8 +381,6 @@ readonly supportedModes: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -438,8 +398,6 @@ readonly systemApp: boolean
 **默认值：** Indicates whether the application is a system application
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -460,8 +418,6 @@ readonly uid: number
 **默认值：** Indicates the uid of the application
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

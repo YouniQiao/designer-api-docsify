@@ -1,7 +1,5 @@
 # ObjectConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ fromEntries<T = any>(entries: Iterable<readonly [PropertyKey, T]>): { [k: string
 ```
 
 Returns an object created by key-value entries for properties and methods
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,8 +30,6 @@ fromEntries(entries: Iterable<readonly any[]>): any
 ```
 
 Returns an object created by key-value entries for properties and methods
-
-**ArkTS mode:** 
 
 **Parameters:**
 

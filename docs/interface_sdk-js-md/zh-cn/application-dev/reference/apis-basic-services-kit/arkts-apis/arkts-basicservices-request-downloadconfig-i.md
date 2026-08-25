@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## background
@@ -26,8 +24,6 @@ background?: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## description
@@ -41,8 +37,6 @@ description?: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -61,8 +55,6 @@ enableMetered?: boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## enableRoaming
@@ -76,8 +68,6 @@ enableRoaming?: boolean
 **类型：** boolean
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -95,8 +85,6 @@ filePath?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## header
@@ -111,25 +99,23 @@ header?: Object
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## networkType
 
 ```TypeScript
-networkType?: int
+networkType?: number
 ```
 
 设置允许下载的网络类型，通过 [网络类型常量](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)的位运算方式决定允许 的网络类型，支持如下几种设置方式:  
-- 仅支持蜂窝网络下载，参数为NETWORK_MOBILE或0x00000001 - 仅支持WLAN网络下载，参数为NETWORK_WIFI或0x00010000 - 参数默认值，支持蜂窝/WLAN网络下载，参数为NETWORK_MOBILE | NETWORK_WIFI或0x00010001。  
+- 仅支持蜂窝网络下载，参数为NETWORK_MOBILE或0x00000001  
+- 仅支持WLAN网络下载，参数为NETWORK_WIFI或0x00010000  
+- 参数默认值，支持蜂窝/WLAN网络下载，参数为NETWORK_MOBILE | NETWORK_WIFI或0x00010001。  
 当参数为NETWORK_MOBILE | NETWORK_WIFI时，enableMetered和enableRoaming参数不生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download
 
@@ -145,8 +131,6 @@ title?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Download
 
 ## url
@@ -160,7 +144,5 @@ url: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Download

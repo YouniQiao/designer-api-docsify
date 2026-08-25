@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setKeepAliveForAppServiceExtension
@@ -18,8 +18,6 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 > - 仅当应用安装在userId为1的用户下，且应用中entry类型的HAP的module.json5配置文件中的mainElement字段配置为AppServiceExtensionAbility时，该接口才生效。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
@@ -52,25 +50,3 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 | [16000202](../errorcode-ability.md#16000202-仅支持为appservice类型的extensionability设置保活) |
 | [16000203](../errorcode-ability.md#16000203-无法更改appserviceextensionability保活状态) |
 | [16000204](../errorcode-ability.md#16000204-指定的应用未安装在userid为1的用户下) |
-
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = "ohos.samples.keepaliveapp";
-  appManager.setKeepAliveForAppServiceExtension(bundleName, true).then(() => {
-    console.info(`setKeepAliveForAppServiceExtension success`);
-  }).catch((paramError: Error) => {
-    let code = (paramError as BusinessError).code;
-    let message = (paramError as BusinessError).message;
-    console.error(`setKeepAliveForAppServiceExtension fail, err: ${code}, ${message}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] setKeepAliveForAppServiceExtension error: ${code}, ${message}`);
-}
-```

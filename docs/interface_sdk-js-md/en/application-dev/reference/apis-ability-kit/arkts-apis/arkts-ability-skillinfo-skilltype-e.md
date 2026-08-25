@@ -1,10 +1,8 @@
 # SkillType
 
-Enumerates the skill types.@enum { int }
+Enumerates the skill types.@enum { number }
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -17,8 +15,6 @@ APP_SKILL = 0
 Indicates an app skill.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ INDEPENDENT_SKILL = 1
 Indicates an independent skill.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

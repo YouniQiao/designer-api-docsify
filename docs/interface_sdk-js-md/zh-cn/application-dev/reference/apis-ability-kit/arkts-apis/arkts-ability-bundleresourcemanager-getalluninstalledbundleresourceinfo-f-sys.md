@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllUninstalledBundleResourceInfo
 
 ```TypeScript
-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>
+function getAllUninstalledBundleResourceInfo(resourceFlags: number): Promise<Array<BundleResourceInfo>>
 ```
 
 根据给定的resourceFlags获取所有已卸载且保留数据的应用的BundleResourceInfo。使用Promise异步回调。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
 
@@ -28,7 +26,7 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resourceFlags | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| resourceFlags | number | 是 |
 
 **返回值：**
 
@@ -42,24 +40,3 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  bundleResourceManager.getAllUninstalledBundleResourceInfo(resourceFlag).then(data => {
-    hilog.info(0x0000, 'testTag', 'getAllUninstalledBundleResourceInfo successfully. Data length: %{public}s',
-      JSON.stringify(data.length));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getAllUninstalledBundleResourceInfo failed. err: %{public}s', err.message);
-  })
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAllUninstalledBundleResourceInfo failed: %{public}s', message);
-}
-```

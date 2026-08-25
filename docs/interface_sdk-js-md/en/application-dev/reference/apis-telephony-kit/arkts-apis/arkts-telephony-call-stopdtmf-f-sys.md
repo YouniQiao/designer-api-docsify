@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## stopDTMF
 
 ```TypeScript
-function stopDTMF(callId: int, callback: AsyncCallback<void>): void
+function stopDTMF(callId: number, callback: AsyncCallback<void>): void
 ```
 
 Stops playing DTMF tones. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Stops playing DTMF tones. This API uses an asynchronous callback to return the r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -43,42 +41,16 @@ Stops playing DTMF tones. This API uses an asynchronous callback to return the r
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.stopDTMF(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`stopDTMF fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`stopDTMF success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.stopDTMF(1).then(() => {
-    console.info(`stopDTMF success.`);
-}).catch((err: BusinessError) => {
-    console.error(`stopDTMF fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## stopDTMF
 
 ```TypeScript
-function stopDTMF(callId: int): Promise<void>
+function stopDTMF(callId: number): Promise<void>
 ```
 
 Stops playing DTMF tones. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -90,7 +62,7 @@ Stops playing DTMF tones. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 
 **Return value:**
 
@@ -109,7 +81,3 @@ Stops playing DTMF tones. This API uses a promise to return the result.
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-
-**Examples**
-
-See [stopDTMF](#stopdtmf)

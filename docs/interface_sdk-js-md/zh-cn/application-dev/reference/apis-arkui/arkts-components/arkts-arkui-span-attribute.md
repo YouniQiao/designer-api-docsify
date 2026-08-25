@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ decoration(value: DecorationStyleInterface)
 设置文本装饰线样式及其颜色。未通过该接口设置时，默认装饰线类型为TextDecorationType.None（无装饰线），颜色为Color.Black（黑色），样式为TextDecorationStyle.SOLID（实线）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -52,8 +48,6 @@ font(value: Font)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -75,8 +69,6 @@ font(value: Font, fontConfigs?: FontConfigs)
 设置文本样式。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,8 +93,6 @@ fontColor(value: ResourceColor)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -124,8 +114,6 @@ fontFamily(value: string | Resource)
 设置字体列表。未通过该接口设置时，默认字体为'HarmonyOS Sans'。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -149,8 +137,6 @@ fontSize(value: number | string | Resource)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -173,8 +159,6 @@ fontStyle(value: FontStyle)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -196,8 +180,6 @@ fontVariations(fontVariations: Array<FontVariation>)
 设置可变字体的属性，适用于需要动态调整字体粗细、宽度等可变维度参数的场景。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -224,8 +206,6 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -251,8 +231,6 @@ fontWeight(weight: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWe
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -266,7 +244,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWe
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
-| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 |
+| [fontWeightConfigs](../arkts-apis/arkts-arkui-fontconfigs-i.md) | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 |
 
 ## letterSpacing
 
@@ -277,8 +255,6 @@ letterSpacing(value: number | ResourceStr)
 设置文本字符间距。取值小于0，字符聚集重叠，取值大于0且随着数值变大，字符间距越来越大，稀疏分布。适用于标题排版、标签文字等需要调整字符紧凑度或稀疏度的场景。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -302,8 +278,6 @@ lineHeight(value: Length)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -326,8 +300,6 @@ textCase(value: TextCase)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -338,7 +310,7 @@ textCase(value: TextCase)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [TextCase](#textcase) | 是 |
+| value | [TextCase](../arkts-apis/arkts-arkui-textcase-e.md) | 是 |
 
 ## textShadow
 
@@ -350,8 +322,6 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -362,4 +332,4 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ShadowOptions \| Array & lt;ShadowOptions & gt; | 是 |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | 是 |

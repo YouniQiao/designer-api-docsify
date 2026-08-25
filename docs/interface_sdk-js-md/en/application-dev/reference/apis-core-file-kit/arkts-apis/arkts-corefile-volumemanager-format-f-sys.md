@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## format
@@ -15,8 +15,6 @@ function format(volumeId: string, fsType: string, callback: AsyncCallback<void>)
 Formats a volume. This API uses an asynchronous callback to return the result. Currently, only the virtual file allocation table (VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is formatted, the UUID, mounting path, and description of the volume will change.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 
@@ -45,28 +43,6 @@ Formats a volume. This API uses an asynchronous callback to return the result. C
 | 13600008 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-let fsType: string = "";
-volumeManager.format(volumeId, fsType).then(() => {
-  console.info("format successfully");
-}).catch((error: BusinessError) => {
-  console.error("format failed with error:" + JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-let fsType: string = "";
-volumeManager.format(volumeId, fsType, (error: BusinessError) => {
-  // Do something.   
-});
-```
-
 
 ## format
 
@@ -77,8 +53,6 @@ function format(volumeId: string, fsType: string): Promise<void>
 Formats a volume. This API uses a promise to return the result. Currently, only the virtual file allocation table (VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is formatted, the UUID, mounting path, and description of the volume will change.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 
@@ -111,7 +85,3 @@ Formats a volume. This API uses a promise to return the result. Currently, only 
 | 13600005 |
 | 13600008 |
 | 13900042 |
-
-**Examples**
-
-See [format](#format)

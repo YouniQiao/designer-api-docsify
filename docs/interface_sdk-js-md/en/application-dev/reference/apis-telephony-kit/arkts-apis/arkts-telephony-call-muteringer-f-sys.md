@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## muteRinger
@@ -15,8 +15,6 @@ function muteRinger(callback: AsyncCallback<void>): void
 Mutes the ringtone while it is playing. It does not work if the ringtone has been muted. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -42,30 +40,6 @@ Mutes the ringtone while it is playing. It does not work if the ringtone has bee
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.muteRinger((err: BusinessError) => {
-    if (err) {
-        console.error(`muteRinger fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`muteRinger success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.muteRinger().then(() => {
-    console.info(`muteRinger success.`);
-}).catch((err: BusinessError) => {
-    console.error(`muteRinger fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## muteRinger
 
@@ -76,8 +50,6 @@ function muteRinger(): Promise<void>
 Mutes the ringtone while it is playing. It does not work if the ringtone has been muted. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -100,7 +72,3 @@ Mutes the ringtone while it is playing. It does not work if the ringtone has bee
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [muteRinger](#muteringer)

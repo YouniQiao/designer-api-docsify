@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## on('scanDeviceAdd')
@@ -15,8 +15,6 @@ function on(type: 'scanDeviceAdd', callback: Callback<ScannerDevice>): void
 注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -38,40 +36,6 @@ function on(type: 'scanDeviceAdd', callback: Callback<ScannerDevice>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceFound', (device: scan.ScannerDevice) => {
-    console.info('scan device found: ' + JSON.stringify(device));
-})
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceSync', (device: scan.ScannerSyncDevice) => {
-    console.info('scan device sync: ' + JSON.stringify(device));
-})
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceAdd', (device: scan.ScannerDevice) => {
-    console.info('scan device add: ' + JSON.stringify(device));
-})
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceDel', (device: scan.ScannerDevice) => {
-    console.info('scan device delete: ' + JSON.stringify(device));
-})
-```
-
 
 ## on('scanDeviceDel')
 
@@ -82,8 +46,6 @@ function on(type: 'scanDeviceDel', callback: Callback<ScannerDevice>): void
 注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -104,7 +66,3 @@ function on(type: 'scanDeviceDel', callback: Callback<ScannerDevice>): void
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 on

@@ -4,14 +4,12 @@ Defines the ICC account information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## iccId
@@ -25,8 +23,6 @@ ICCID number.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -44,8 +40,6 @@ Whether the card is activated.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## isEsim
@@ -55,13 +49,12 @@ isEsim: boolean
 ```
 
 Whether the SIM card is an eSIM.  
-- **true**: The SIM card is an eSIM. - **false**: The SIM card is not an eSIM.
+- **true**: The SIM card is an eSIM.  
+- **false**: The SIM card is not an eSIM.
 
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -77,8 +70,6 @@ SIM card display name.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## showNumber
@@ -93,38 +84,32 @@ SIM card display number.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## simId
 
 ```TypeScript
-simId: int
+simId: number
 ```
 
 SIM card ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## slotIndex
 
 ```TypeScript
-slotIndex: int
+slotIndex: number
 ```
 
 Card slot ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService

@@ -6,14 +6,12 @@ MulticastSocket连接。在调用MulticastSocket的方法前，需要先通过 [
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## addMembership
@@ -29,8 +27,6 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 > 加入多播组后，既可以是发送端，也可以是接收端，相互之间以广播的形式传递数据，不区分客户端或服务端。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -53,40 +49,6 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 | 2301088 |
 | 2301098 |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.addMembership(addr, (err: Object) => {
-  if (err) {
-    console.error('add membership fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('add membership success');
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.addMembership(addr).then(() => {
-  console.info('addMembership success');
-}).catch((err: Object) => {
-  console.error('addMembership fail');
-});
-```
-
 ## addMembership
 
 ```TypeScript
@@ -100,8 +62,6 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 > 加入多播组后，既可以是发送端，也可以是接收端，相互之间以广播的形式传递数据，不区分客户端或服务端。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -128,10 +88,6 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 | 2301088 |
 | 2301098 |
 
-**示例**
-
-参见 [addMembership](#addmembership)
-
 ## dropMembership
 
 ```TypeScript
@@ -147,8 +103,6 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 > 之后退出才有效。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -170,40 +124,6 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 | 2301088 |
 | 2301098 |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.dropMembership(addr, (err: Object) => {
-  if (err) {
-    console.error('drop membership fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('drop membership success');
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.dropMembership(addr).then(() => {
-  console.info('drop membership success');
-}).catch((err: Object) => {
-  console.error('drop membership fail');
-});
-```
-
 ## dropMembership
 
 ```TypeScript
@@ -219,8 +139,6 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 > 之后退出才有效。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -246,10 +164,6 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 2301088 |
 | 2301098 |
-
-**示例**
-
-参见 [dropMembership](#dropmembership)
 
 ## getLoopbackMode
 
@@ -268,8 +182,6 @@ getLoopbackMode(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -284,32 +196,6 @@ getLoopbackMode(callback: AsyncCallback<boolean>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 2301088 |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getLoopbackMode((err: Object, value: Boolean) => {
-  if (err) {
-    console.error('get loopback mode fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('get loopback mode success, value: ' + JSON.stringify(value));
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getLoopbackMode().then((value: Boolean) => {
-  console.info('loopback mode: ', JSON.stringify(value));
-}).catch((err: Object) => {
-  console.error('get loopback mode failed');
-});
-```
 
 ## getLoopbackMode
 
@@ -328,8 +214,6 @@ getLoopbackMode(): Promise<boolean>
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -345,14 +229,10 @@ getLoopbackMode(): Promise<boolean>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 2301088 |
 
-**示例**
-
-参见 [getLoopbackMode](#getloopbackmode)
-
 ## getMulticastTTL
 
 ```TypeScript
-getMulticastTTL(callback: AsyncCallback<int>): void
+getMulticastTTL(callback: AsyncCallback<number>): void
 ```
 
 获取数据包在网络传输过程中路由器最大跳数(TTL)的值。使用callback异步回调。
@@ -366,8 +246,6 @@ getMulticastTTL(callback: AsyncCallback<int>): void
 > 之后，调用此接口才有效。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -384,36 +262,10 @@ getMulticastTTL(callback: AsyncCallback<int>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 2301088 |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getMulticastTTL((err: Object, value: Number) => {
-  if (err) {
-    console.error('set ttl fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('set ttl success, value: ' + JSON.stringify(value));
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getMulticastTTL().then((value: Number) => {
-  console.info('ttl: ', JSON.stringify(value));
-}).catch((err: Object) => {
-  console.error('set ttl failed');
-});
-```
-
 ## getMulticastTTL
 
 ```TypeScript
-getMulticastTTL(): Promise<int>
+getMulticastTTL(): Promise<number>
 ```
 
 获取数据包在网络传输过程中路由器最大跳数(TTL)的值。使用Promise异步回调。
@@ -427,8 +279,6 @@ getMulticastTTL(): Promise<int>
 > 之后，调用此接口才有效。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -445,14 +295,10 @@ getMulticastTTL(): Promise<int>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 2301088 |
 
-**示例**
-
-参见 [getMulticastTTL](#getmulticastttl)
-
 ## getSocketFd
 
 ```TypeScript
-getSocketFd(): Promise<int>
+getSocketFd(): Promise<number>
 ```
 
 获取MulticastSocket的文件描述符。使用Promise异步回调。
@@ -464,8 +310,6 @@ getSocketFd(): Promise<int>
 > 文件描述符进行关闭。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -485,319 +329,6 @@ getSocketFd(): Promise<int>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let bindAddr: socket.NetAddress = {
-    address: '192.168.xx.xxx',
-    port: 8080
-}
-udp.bind(bindAddr)
-  .then(() => {
-    udp.getSocketFd()
-      .then((fd: number) => {
-        console.info(`Socket FD：${fd}`);
-      }).catch((err: BusinessError) => {
-      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-    });
-  }).catch((err: BusinessError) => {
-  console.error('bind fail');
-});
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let bindAddr: socket.NetAddress = {
-    address: '192.168.xx.xxx',
-    port: 8080
-}
-multicast.bind(bindAddr)
-  .then(() => {
-    console.info('bind success');
-    multicast.getSocketFd().then((fd: number) => {
-      console.info(`Socket FD：${fd}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-    });
-  }).catch((err: BusinessError) => {
-  console.error('bind fail');
-});
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  // 绑定指定网络接口
-}
-tcp.bind(bindAddr)
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions)
-tcp.getSocketFd((err: BusinessError, data: number) => {
-  console.error("getSocketFd failed: " + err);
-  console.info("socketFd: " + data);
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let bindAddr: socket.NetAddress = {
-    address: '192.168.xx.xxx',
-  // 绑定指定网络接口
-}
-tcp.bind(bindAddr)
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions)
-tcp.getSocketFd().then((data: number) => {
-  console.info("socketFd: " + data);
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-let listenAddr: socket.NetAddress = {
-  address:  '192.168.xx.xxx',
-  port: 8080,
-  family: 1
-}
-tcpServer.listen(listenAddr).then(() => {
-  console.info('listen success');
-  tcpServer.getSocketFd().then((fd: number) => {
-    console.info(`Socket FD：${fd}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error('listen fail');
-});
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-let listenAddr: socket.NetAddress = {
-  address: "192.168.xx.xx",
-  port: 8080,
-  family: 1
-}
-tcpServer.listen(listenAddr, (err: BusinessError) => {
-  tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
-    client.getSocketFd().then((fd: number) => {
-      console.info(`Socket FD：${fd}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-    });
-  })
-}).catch((err: BusinessError) => {
-  console.error('listen fail');
-});
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let localAddress : socket.LocalAddress = {
-  address: sandboxPath
-}
-let connectOpt: socket.LocalConnectOptions = {
-  address: localAddress,
-  timeout: 6000
-}
-client.connect(connectOpt).then(() => {
-  console.info('connect ok')
-}).catch((err: Object) => {
-  console.error('connect fail: ' + JSON.stringify(err))
-})
-client.getSocketFd().then((data: number) => {
-  console.info("fd: " + data);
-}).catch((err: Object) => {
-  console.error("getSocketFd failed: " + JSON.stringify(err));
-})
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let listenAddr : socket.LocalAddress = {
-  address: sandboxPath
-}
-
-server.listen(listenAddr).then(() => {
-  console.info("listen success");
-  server.getSocketFd().then((fd: number) => {
-    console.info(`Socket FD：${fd}`);
-  }).catch((err: Object) => {
-    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
-  });
-}).catch((err: Object) => {
-  console.error("listen fail: " + JSON.stringify(err));
-})
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let listenAddr : socket.LocalAddress = {
-  address: sandboxPath
-}
-server.on('connect', (connection: socket.LocalSocketConnection) => {
-  connection.getSocketFd().then((fd: number) => {
-    console.info(`Socket FD：${fd}`);
-  }).catch((err: Object) => {
-    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
-  });
-});
-server.listen(listenAddr).then(() => {
-  console.info("listen success");
-}).catch((err: Object) => {
-  console.error(`listen fail: ${JSON.stringify(err)}`);
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tls.bind(bindAddr, (err: BusinessError) => {
-  if (err) {
-    console.error('bind fail');
-    return;
-  }
-  console.info('bind success');
-});
-tls.getSocketFd().then((data: number) => {
-  console.info("tls socket fd: " + data);
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tlsSecureOptions: socket.TLSSecureOptions = {
-  key: "xxxx",
-  cert: ["xxxx"],
-  ca: ["xxxx"],
-  password: "xxxx",
-  protocols: socket.Protocol.TLSv12,
-  useRemoteCipherPrefer: true,
-  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
-  cipherSuite: "AES256-SHA256"
-}
-let tlsConnectOptions: socket.TLSConnectOptions = {
-  address: netAddress,
-  secureOptions: tlsSecureOptions,
-  ALPNProtocols: ["spdy/1", "http/1.1"]
-}
-tlsServer.listen(tlsConnectOptions).then(() => {
-  console.info("listen success");
-  tlsServer.getSocketFd().then((fd: number) => {
-    console.info(`Socket FD：${fd}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`listen failed: ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tlsSecureOptions: socket.TLSSecureOptions = {
-  key: "xxxx",
-  cert: ["xxxx"],
-  ca: ["xxxx"],
-  password: "xxxx",
-  protocols: socket.Protocol.TLSv12,
-  useRemoteCipherPrefer: true,
-  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
-  cipherSuite: "AES256-SHA256"
-}
-let tlsConnectOptions: socket.TLSConnectOptions = {
-  address: netAddress,
-  secureOptions: tlsSecureOptions,
-  ALPNProtocols: ["spdy/1", "http/1.1"]
-}
-tlsServer.listen(tlsConnectOptions).then(() => {
-  console.info("listen success");
-  tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
-    client.getSocketFd().then((fd: number) => {
-      console.info(`Socket FD：${fd}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-    })
-  });
-}).catch((err: BusinessError) => {
-  console.error(`listen failed: ${JSON.stringify(err)}`);
-});
-```
-
 ## setLoopbackMode
 
 ```TypeScript
@@ -815,8 +346,6 @@ setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -832,32 +361,6 @@ setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 2301088 |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setLoopbackMode(false, (err: Object) => {
-  if (err) {
-    console.error('set loopback mode fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('set loopback mode success');
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setLoopbackMode(false).then(() => {
-  console.info('set loopback mode success');
-}).catch((err: Object) => {
-  console.error('set loopback mode failed');
-});
-```
 
 ## setLoopbackMode
 
@@ -876,8 +379,6 @@ setLoopbackMode(flag: boolean): Promise<void>
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **参数：**
@@ -899,14 +400,10 @@ setLoopbackMode(flag: boolean): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 2301088 |
 
-**示例**
-
-参见 [setLoopbackMode](#setloopbackmode)
-
 ## setMulticastTTL
 
 ```TypeScript
-setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void
+setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void
 ```
 
 设置多播通信时数据包在网络传输过程中路由器最大跳数。使用callback异步回调。
@@ -920,8 +417,6 @@ setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void
 > 之后，调用此接口才有效。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -940,37 +435,10 @@ setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void
 | 2301022 |
 | 2301088 |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let ttl = 8
-multicast.setMulticastTTL(ttl, (err: Object) => {
-  if (err) {
-    console.error('set ttl fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('set ttl success');
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setMulticastTTL(8).then(() => {
-  console.info('set ttl success');
-}).catch((err: Object) => {
-  console.error('set ttl failed');
-});
-```
-
 ## setMulticastTTL
 
 ```TypeScript
-setMulticastTTL(ttl: int): Promise<void>
+setMulticastTTL(ttl: number): Promise<void>
 ```
 
 设置多播通信时数据包在网络传输过程中路由器最大跳数。使用Promise异步回调。
@@ -984,8 +452,6 @@ setMulticastTTL(ttl: int): Promise<void>
 > 之后，调用此接口才有效。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -1009,10 +475,6 @@ setMulticastTTL(ttl: int): Promise<void>
 | 2301022 |
 | 2301088 |
 
-**示例**
-
-参见 [setMulticastTTL](#setmulticastttl)
-
 ## setReuseAddress
 
 ```TypeScript
@@ -1028,8 +490,6 @@ setReuseAddress(reuse: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -1039,29 +499,3 @@ setReuseAddress(reuse: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | reuse | boolean | 是 |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let bindAddr: socket.NetAddress = {
-  // 0.0.0.0 表示绑定本机所有IPv4网络接口上的 8080 端口，常用于多播场景接收该端口的数据。
-  address: '0.0.0.0',
-  port: 8080
-}
-
-try {
-  multicast.setReuseAddress(true);
-  multicast.bind(bindAddr).then(() => {
-    console.info('setReuseAddress success');
-  }).catch((err: BusinessError) => {
-    console.error(`bind failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`setReuseAddress failed, code is ${error.code}, message is ${error.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getPorts
@@ -15,8 +15,6 @@ function getPorts(): Array<USBPort>
 获取所有物理USB端口描述信息。适用于需要枚举USB端口、进行端口管理、设备连接诊断、或查询端口配置信息的场景。开发者模式关闭时，如果没有设备接入，接口返回`undefined`，注意需要对接口返回值做判空处理。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -31,10 +29,3 @@ function getPorts(): Array<USBPort>
 | 类型 |
 | --- |
 | Array & lt;USBPort & gt; |
-
-**示例**
-
-```TypeScript
-// 获取所有USB端口描述信息
-let ret: Array<usbManager.USBPort> = usbManager.getPorts();
-```

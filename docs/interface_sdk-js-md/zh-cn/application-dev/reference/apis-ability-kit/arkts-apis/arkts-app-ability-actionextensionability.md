@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ActionExtensionAbility } from '@kit.AbilityKit';
+import { ActionExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

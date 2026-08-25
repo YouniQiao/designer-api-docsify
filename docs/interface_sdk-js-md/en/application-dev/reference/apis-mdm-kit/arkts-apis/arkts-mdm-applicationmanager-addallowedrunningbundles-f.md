@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedRunningBundles
@@ -30,8 +30,6 @@ Adds applications to the application running trustlist. Only applications in the
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **Model restriction:** This API can be used only in the stage model.
@@ -55,25 +53,3 @@ Adds applications to the application running trustlist. Only applications in the
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace it as required.
-let appIdentifiers: Array<string> = ['0123456789123456789'];
-
-try {
-  applicationManager.addAllowedRunningBundles(wantTemp, appIdentifiers, 100);
-  console.info('Succeeded in adding allowed running bundles.');
-} catch (err) {
-  console.error(`Failed to add allowed running bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```

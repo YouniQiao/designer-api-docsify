@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## setUserRestrictionForAccount
@@ -15,8 +15,6 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: string, account
 设置指定用户行为的限制规则。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -34,7 +32,7 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: string, account
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 | settingsItem | string | 是 |
-| accountId | int | 是 |
+| accountId | number | 是 |
 | restricted | boolean | 是 |
 
 **错误码：**
@@ -46,47 +44,6 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: string, account
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { restrictions } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let userId = 100;
-let settingsItem: string = "modifyWallpaper";
-try {
-  restrictions.setUserRestrictionForAccount(wantTemp, settingsItem, userId, true);
-  console.info('Succeeded in restricting from setting modifyWallpaper');
-} catch (err) {
-  console.error(`Failed to restrict from setting modifyWallpaper. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  restrictions.setUserRestrictionForAccount(wantTemp, restrictions.SettingsForAccount.MODIFY_WALLPAPER, 100, true);
-  console.info('Succeeded in restricting from setting modifyWallpaper');
-} catch (err) {
-  console.error(`Failed to restrict from setting modifyWallpaper. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## setUserRestrictionForAccount
 
@@ -97,8 +54,6 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAcco
 限制指定用户修改指定的设置项。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -112,7 +67,7 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAcco
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 | settingsItem | [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | 是 |
-| accountId | int | 是 |
+| accountId | number | 是 |
 | restricted | boolean | 是 |
 
 **错误码：**
@@ -124,7 +79,3 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAcco
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [setUserRestrictionForAccount](#setuserrestrictionforaccount)

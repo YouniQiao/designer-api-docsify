@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## HUKS_CHALLENGE_TYPE_NORMAL
@@ -17,8 +15,6 @@ HUKS_CHALLENGE_TYPE_NORMAL = 0
 表示challenge为普通类型，默认32字节。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ HUKS_CHALLENGE_TYPE_CUSTOM = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -49,8 +43,6 @@ HUKS_CHALLENGE_TYPE_NONE = 2
 表示免challenge类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

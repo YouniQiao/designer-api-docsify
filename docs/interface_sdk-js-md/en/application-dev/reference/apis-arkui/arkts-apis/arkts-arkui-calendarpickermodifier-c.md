@@ -2,11 +2,9 @@
 
 Defines CalendarPicker Modifier@extends CalendarPickerAttribute @implements AttributeModifier&lt;CalendarPickerAttribute&gt;
 
-**Inheritance/Implementation:** CalendarPickerModifier extends CalendarPickerAttribute and implements AttributeModifier<CalendarPickerAttribute>
+**Inheritance/Implementation:** CalendarPickerModifier extends [CalendarPickerAttribute](../arkts-components/arkts-arkui-calendarpicker-attribute.md#calendarpickerattribute) and implements AttributeModifier<CalendarPickerAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: CalendarPickerAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

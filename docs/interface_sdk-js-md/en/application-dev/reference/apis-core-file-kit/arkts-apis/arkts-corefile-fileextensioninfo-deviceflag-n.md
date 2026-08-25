@@ -4,8 +4,6 @@ Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is u
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -17,7 +15,7 @@ Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is u
 ## Modules to Import
 
 ```TypeScript
-import { fileExtensionInfo } from '@kit.CoreFileKit';
+import { fileExtensionInfo } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

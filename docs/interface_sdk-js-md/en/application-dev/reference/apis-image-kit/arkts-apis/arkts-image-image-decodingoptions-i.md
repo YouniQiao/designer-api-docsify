@@ -4,14 +4,12 @@ Describes the image decoding options.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## cropAndScaleStrategy
@@ -25,8 +23,6 @@ If **desiredRegion** and **desiredSize** are both specified, the order of croppi
 **Type:** [CropAndScaleStrategy](arkts-image-image-cropandscalestrategy-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -42,8 +38,6 @@ Target color space. The default value is **UNKNOWN**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredDynamicRange
@@ -58,8 +52,6 @@ Desired dynamic range. The default value is **SDR**.This property cannot be set 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredPixelFormat
@@ -73,8 +65,6 @@ Pixel format for decoding. The default value is **RGBA_8888**. Only RGBA_8888, B
 **Type:** PixelMapFormat
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,8 +84,6 @@ Rectangle specified by **Region** in the decoded image. When the original image 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -113,8 +101,6 @@ Expected output size. The value must be a positive integer and defaults to the o
 **Type:** Size
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -134,8 +120,6 @@ Whether the image is editable. **true** if editable, **false** otherwise. The de
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -145,16 +129,14 @@ Whether the image is editable. **true** if editable, **false** otherwise. The de
 ## fitDensity
 
 ```TypeScript
-fitDensity?: int
+fitDensity?: number
 ```
 
 Pixel density, in ppi. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -165,16 +147,14 @@ Pixel density, in ppi. The default value is **0**.
 ## index
 
 ```TypeScript
-index?: int
+index?: number
 ```
 
 Index of the image to decode. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -185,16 +165,14 @@ Index of the image to decode. The default value is **0**, indicating the first i
 ## rotate
 
 ```TypeScript
-rotate?: int
+rotate?: number
 ```
 
 Rotation angle. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -205,16 +183,14 @@ Rotation angle. The default value is **0**.
 ## sampleSize
 
 ```TypeScript
-sampleSize?: int
+sampleSize?: number
 ```
 
 Sampling size of the thumbnail. The default value is **1**. Currently, the value can only be **1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getIMSI
 
 ```TypeScript
-function getIMSI(slotId: int, callback: AsyncCallback<string>): void
+function getIMSI(slotId: number, callback: AsyncCallback<string>): void
 ```
 
 Get the international mobile subscriber ID.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Get the international mobile subscriber ID.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
@@ -44,40 +42,16 @@ Get the international mobile subscriber ID.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getIMSI(0, (err: BusinessError, data: string) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getIMSI(0).then((data: string) => {
-    console.info(`getIMSI success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getIMSI failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getIMSI
 
 ```TypeScript
-function getIMSI(slotId: int): Promise<string>
+function getIMSI(slotId: number): Promise<string>
 ```
 
 Get the international mobile subscriber ID.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -89,7 +63,7 @@ Get the international mobile subscriber ID.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -109,7 +83,3 @@ Get the international mobile subscriber ID.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getIMSI](#getimsi)

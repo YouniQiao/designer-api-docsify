@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## 导入模块
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## cert
@@ -25,8 +23,6 @@ cert: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -42,8 +38,6 @@ certAlias: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## fingerprintSha256
@@ -57,8 +51,6 @@ fingerprintSha256: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -74,8 +66,6 @@ issuerName: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## notAfter
@@ -89,8 +79,6 @@ notAfter: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -106,8 +94,6 @@ notBefore: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## serial
@@ -121,8 +107,6 @@ serial: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -138,8 +122,6 @@ state: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## subjectName
@@ -154,8 +136,6 @@ subjectName: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## uri
@@ -169,7 +149,5 @@ uri: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager

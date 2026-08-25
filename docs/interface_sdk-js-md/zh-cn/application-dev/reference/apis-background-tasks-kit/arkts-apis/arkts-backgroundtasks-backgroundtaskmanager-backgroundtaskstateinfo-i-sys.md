@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## appIndex
 
 ```TypeScript
-appIndex: int
+appIndex: number
 ```
 
 应用分身ID。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ authResult?: UserAuthResult
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -68,8 +62,6 @@ bundleName: string
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -79,16 +71,14 @@ bundleName: string
 ## userId
 
 ```TypeScript
-userId: int
+userId: number
 ```
 
 用户ID。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

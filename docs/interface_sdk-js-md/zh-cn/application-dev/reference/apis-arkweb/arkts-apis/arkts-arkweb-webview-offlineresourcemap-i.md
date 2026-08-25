@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## resource
@@ -25,8 +23,6 @@ resource: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -42,8 +38,6 @@ responseHeaders: Array<WebHeader>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## type
@@ -58,8 +52,6 @@ type: OfflineResourceType
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## urlList
@@ -73,7 +65,5 @@ urlList: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core

@@ -411,11 +411,7 @@
   <!--Del-->
   - [off(system api)](arkts-network-statistics-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [offNetStatsChange(system api)](arkts-network-statistics-offnetstatschange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [on(system api)](arkts-network-statistics-on-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onNetStatsChange(system api)](arkts-network-statistics-onnetstatschange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setCalibrationTraffic(system api)](arkts-network-statistics-setcalibrationtraffic-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -429,14 +425,10 @@
   <!--Del-->
   - [NetStatsChangeInfo(system api)](arkts-network-statistics-netstatschangeinfo-i-sys.md)<!--DelEnd-->
   - [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)
-  <!--Del-->
-  - [NetStatsInfoSequenceItem(system api)](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md)<!--DelEnd-->
   - [NetworkInfo](arkts-network-statistics-networkinfo-i.md)
   <!--Del-->
   - [UidInfo(system api)](arkts-network-statistics-uidinfo-i-sys.md)<!--DelEnd-->
   - [NetBearType](arkts-network-statistics-netbeartype-t.md)
-  <!--Del-->
-  - [NetStatsInfoSequence(system api)](arkts-network-statistics-netstatsinfosequence-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UidNetStatsInfo(system api)](arkts-network-statistics-uidnetstatsinfo-t-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -499,7 +491,6 @@
   - [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md)
   - [ClientCert](arkts-network-websocket-clientcert-i.md)
   - [CloseResult](arkts-network-websocket-closeresult-i.md)
-  - [OpenResult](arkts-network-websocket-openresult-i.md)
   - [ServerCert](arkts-network-websocket-servercert-i.md)
   - [WebSocket](arkts-network-websocket-websocket-i.md)
   - [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md)

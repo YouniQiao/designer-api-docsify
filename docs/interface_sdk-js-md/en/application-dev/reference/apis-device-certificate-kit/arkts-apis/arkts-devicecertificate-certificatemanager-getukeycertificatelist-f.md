@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getUkeyCertificateList
@@ -15,8 +15,6 @@ function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promi
 Obtains the list of USB Key credential . This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -46,25 +44,3 @@ Obtains the list of USB Key credential . This API uses a promise to return the r
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 | [17500010](../errorcode-certManager.md#17500010-failed-to-access-the-usb-credential) |
 | [17500011](../errorcode-certManager.md#17500011-failed-to-validate-the-input-parameter) |
-
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ukeyProvider: string = 'testProvider'; /* USB credential provider, which is omitted here. */
-let ukeyInfo: certificateManager.UkeyInfo = { /* USB credential attributes. The value is omitted here. */
-    certPurpose: certificateManager.CertificatePurpose.PURPOSE_DEFAULT,
-}
-try {
-    certificateManager.getUkeyCertificateList(ukeyProvider, ukeyInfo).then((cmResult: certificateManager.CMResult) => {
-        let list: Array<certificateManager.Credential> = cmResult.credentialDetailList ?? [];
-        console.info('Succeeded in getting USB key certificate list.');
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to get USB key certificate list. Code: ${err.code}, message: ${err.message}`);
-    })
-} catch (error: BusinessError) {
-    console.error(`Failed to get USB key certificate list. Code: ${error.code}, message: ${error.message}`);
-}
-```

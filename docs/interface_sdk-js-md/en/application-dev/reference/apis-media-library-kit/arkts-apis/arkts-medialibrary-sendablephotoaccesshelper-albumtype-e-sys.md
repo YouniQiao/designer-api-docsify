@@ -4,8 +4,6 @@ Enumerates the album types.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SMART
@@ -17,8 +15,6 @@ SMART = 4096
 Smart analysis album.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## CLOUD_ACCOUNT
@@ -17,8 +15,6 @@ CLOUD_ACCOUNT = 1
 表示云账号。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -32,8 +28,6 @@ DOMAIN_ACCOUNT = 2
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## ENTERPRISE_ACCOUNT
@@ -45,7 +39,5 @@ ENTERPRISE_ACCOUNT = 4
 表示企业账号。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

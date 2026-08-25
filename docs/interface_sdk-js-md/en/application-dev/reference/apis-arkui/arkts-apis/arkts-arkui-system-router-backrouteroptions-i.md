@@ -4,8 +4,6 @@ Defines the parameters for routing back.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** RouterOptions
@@ -15,7 +13,7 @@ Defines the parameters for routing back.
 ## Modules to Import
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
 ```
 
 ## params
@@ -29,8 +27,6 @@ Data that needs to be passed to the target page during redirection.
 **Type:** Object
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 8
 
@@ -49,8 +45,6 @@ URI of the page to return to. If the specified page does not exist in the page s
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 8
 

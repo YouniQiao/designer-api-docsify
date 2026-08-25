@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from 'kits/@kit.AbilityKit';
 ```
 
 ## setRequestResult
@@ -23,8 +21,6 @@ setRequestResult(result: RequestResult): void
 设置请求结果
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,25 +37,3 @@ setRequestResult(result: RequestResult): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      // 从Want中获取请求方的RequestCallback
-      let requestCallback = dialogRequest.getRequestCallback(want);
-      let myResult: dialogRequest.RequestResult = {
-        result : dialogRequest.ResultCode.RESULT_CANCEL,
-      };
-      // 设置模态弹框的请求结果
-      requestCallback.setRequestResult(myResult);
-    } catch (err) {
-      console.error(`Failed to setRequestResult. Code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```

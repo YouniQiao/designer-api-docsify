@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getSimpleNumberFormatBySkeleton
@@ -15,8 +15,6 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.
 Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -41,34 +39,6 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 | --- |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
-  let formatter: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('%', locale);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call SimpleDateTimeFormat.getSimpleNumberFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n, intl } from '@kit.LocalizationKit';
-
-try {
-  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
-  let formatter: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('%', locale);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call SimpleDateTimeFormat.getSimpleNumberFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 
 ## getSimpleNumberFormatBySkeleton
 
@@ -79,8 +49,6 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.
 Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Deprecated since:** 20
 
@@ -108,7 +76,3 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 | Error Code ID |
 | --- |
 | [890001](../errorcode-i18n.md#890001-parameter-error) |
-
-**Examples**
-
-See [getSimpleNumberFormatBySkeleton](#getsimplenumberformatbyskeleton)

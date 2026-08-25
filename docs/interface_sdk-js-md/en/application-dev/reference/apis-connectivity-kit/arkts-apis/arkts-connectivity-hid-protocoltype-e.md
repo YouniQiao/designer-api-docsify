@@ -4,8 +4,6 @@ Describe the protocol type.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PROTOCOL_BOOT_MODE
@@ -17,8 +15,6 @@ PROTOCOL_BOOT_MODE = 0
 Protocol type boot mode.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,8 +29,6 @@ PROTOCOL_REPORT_MODE = 1
 Protocol type report mode.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **替代接口：** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
@@ -23,8 +21,6 @@ ONLINE = 0
 设备物理上线状态。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -44,8 +40,6 @@ READY = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **替代接口：** [AVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#available)
@@ -64,8 +58,6 @@ OFFLINE = 2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **替代接口：** [UNAVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#unavailable)
@@ -83,8 +75,6 @@ CHANGE = 3
 设备信息更改。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 

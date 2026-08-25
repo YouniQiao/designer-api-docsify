@@ -8,14 +8,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 ## 导入模块
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
+import { uiAppearance } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

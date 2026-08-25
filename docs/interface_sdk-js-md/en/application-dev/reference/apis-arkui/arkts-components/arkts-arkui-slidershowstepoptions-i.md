@@ -4,8 +4,6 @@ Provides accessibility text mapping for the slider step markers.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ Step value-to-text mappings for assistive technologies (for example, screen read
 **Type:** Map&lt;number, [SliderStepItemAccessibility](arkts-arkui-sliderstepitemaccessibility-i.md)&gt;
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

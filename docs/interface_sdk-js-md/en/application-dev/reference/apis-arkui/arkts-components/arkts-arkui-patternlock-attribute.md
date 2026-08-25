@@ -6,8 +6,6 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Sets the background circle style for the dots in a grid when they are in the act
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -37,7 +33,7 @@ Sets the background circle style for the dots in a grid when they are in the act
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | Optional&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)&gt; | Yes |
 
 ## activeColor
 
@@ -48,8 +44,6 @@ activeColor(value: ResourceColor)
 Sets the fill color of the grid dot in the activated state, which is when the dot is highlighted but not selected.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -70,8 +64,6 @@ autoReset(value: boolean)
 Sets whether to allow the user to reset the component status (that is, clear the input) by touching the component again after the input is complete.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,8 +88,6 @@ Sets the background color.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -117,8 +107,6 @@ circleRadius(value: Length)
 Sets the radius of the dots in a grid. If this attribute is set to **0** or a negative value, the default value is used.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -143,8 +131,6 @@ Invoked when a grid dot is connected during pattern password input.The callback 
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -167,8 +153,6 @@ Invoked when the pattern password input is complete.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -188,8 +172,6 @@ pathColor(value: ResourceColor)
 Sets the path color.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -211,8 +193,6 @@ Sets the width of the path stroke. If this attribute is set to **0** or a negati
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -232,8 +212,6 @@ regularColor(value: ResourceColor)
 Sets the fill color of the grid dot in the unselected state.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -255,8 +233,6 @@ Fill color of the grid dot in the selected state.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -276,13 +252,11 @@ sideLength(value: Length)
 Sets the width and height (same value) of the component. If this attribute is set to **0** or a negative number, the component is not displayed.
 
 > **NOTE：**&gt;
-> When the **PatternLock** component has the universal attribute aspectRatio set
+> When the **PatternLock** component has the universal attribute [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio) set
 > and the ratio is not equal to 1 (the component is constrained to a rectangle), the nine‑grid pattern is still
 > drawn as a square, which exceeds the component's bounds.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -303,8 +277,6 @@ skipUnselectedPoint(skipped: boolean)
 Sets whether unselected dots in the grid are automatically skipped when the password path passes over them.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

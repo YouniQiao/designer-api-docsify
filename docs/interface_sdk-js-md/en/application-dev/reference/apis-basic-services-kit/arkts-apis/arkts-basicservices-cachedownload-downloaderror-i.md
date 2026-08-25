@@ -4,14 +4,12 @@ Describes the error message returned when a pre-download error occurs.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## errorCode
@@ -26,8 +24,6 @@ Specific error type returned by the pre-download error callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## message
@@ -41,7 +37,5 @@ Error message. A [universal error code](../../errorcode-universal.md) or [HTTP e
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent

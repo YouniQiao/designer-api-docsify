@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getLocatingRequiredData
@@ -15,8 +15,6 @@ function getLocatingRequiredData(config: LocatingRequiredDataConfig): Promise<Ar
 Get WiFi/BT scanning information, and use the WiFi/BT scanning information for localization.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -45,22 +43,3 @@ Get WiFi/BT scanning information, and use the WiFi/BT scanning information for l
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301800](../errorcode-geoLocationManager.md#3301800-failed-to-start-wi-fi-or-bluetooth-scanning) |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let config: geoLocationManager.LocatingRequiredDataConfig = { 'type': 1, 'needStartScan': true, 'scanInterval': 10000 };
-try {
-  geoLocationManager.getLocatingRequiredData(config).then((result) => {
-    console.info('getLocatingRequiredData return: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getLocatingRequiredData: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

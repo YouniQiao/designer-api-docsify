@@ -4,8 +4,6 @@ A time picker dialog box is a dialog box that allows users to select a time from
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,10 @@ static show(options?: TimePickerDialogOptions)
 
 Shows a time picker dialog box.  
 **NOTE：**
-- Since API version 10, you can use the [showTimePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtimepickerdialog) API in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the time picker dialog box is shown in the intended UI instance.
+- Since API version 10, you can use the
+[showTimePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtimepickerdialog) API in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the time picker dialog box is shown in the intended UI instance.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 18
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from '@kit.NotificationKit';
+import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
+import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
 ```
 
 ## request
@@ -16,8 +16,6 @@ function request(param: RequestParameters, callback: AsyncCallback<RequestCallba
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -28,67 +26,3 @@ function request(param: RequestParameters, callback: AsyncCallback<RequestCallba
 | --- | --- | --- |
 | param | [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { pluginComponentManager } from '@kit.ArkUI';
-
-pluginComponentManager.request(
-  {
-    want: {
-      bundleName: "com.example.provider",
-      abilityName: "com.example.provider.MainAbility",
-    },
-    name: "plugintemplate",
-    data: {
-      "key_1": "plugin component test",
-      "key_2": 1111111,
-    },
-    jsonPath: "",
-  },
-  (err, data) => {
-    if (err) {
-      console.error(`request_callback: err.code = ${err.code}, err.message = ${err.message}`);
-      return;
-    }
-    console.info("request_callback: componentTemplate.ability=" + data.componentTemplate.ability);
-    console.info("request_callback: componentTemplate.source=" + data.componentTemplate.source);
-    console.info("request_callback: data=" + JSON.stringify(data.data));
-    console.info("request_callback: extraData=" + JSON.stringify(data.extraData));
-  }
-)
-```
-
-```TypeScript
-import { pluginComponentManager } from '@kit.ArkUI';
-
-pluginComponentManager.request(
-  {
-    owner: {
-      bundleName: "com.example.user",
-      abilityName: "com.example.user.MainAbility",
-    },
-    target: {
-      bundleName: "com.example.provider",
-      abilityName: "com.example.provider.MainAbility",
-    },
-    name: "plugintemplate",
-    data: {
-      "key1": "myapplication plugin component test",
-    },
-    jsonPath: "",
-  },
-  (err, data) => {
-    if (err) {
-      console.error(`Failed to request. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    if (!data) {
-      return;
-    }
-    console.info("request_callback: componentTemplate.ability=" + data.componentTemplate.ability);
-    console.info("request_callback: componentTemplate.source=" + data.componentTemplate.source);
-  }
-);
-```

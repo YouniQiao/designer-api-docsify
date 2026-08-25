@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CellularData
 
 ## DATA_FLOW_TYPE_NONE
@@ -17,8 +15,6 @@ DATA_FLOW_TYPE_NONE = 0
 表示没有上行或下行数据。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -32,8 +28,6 @@ DATA_FLOW_TYPE_DOWN = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CellularData
 
 ## DATA_FLOW_TYPE_UP
@@ -45,8 +39,6 @@ DATA_FLOW_TYPE_UP = 2
 表示只有上行数据。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -60,8 +52,6 @@ DATA_FLOW_TYPE_UP_DOWN = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CellularData
 
 ## DATA_FLOW_TYPE_DORMANT
@@ -73,7 +63,5 @@ DATA_FLOW_TYPE_DORMANT = 4
 表示没有上下行数据，底层链路处于休眠状态。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData

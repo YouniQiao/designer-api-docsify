@@ -9,14 +9,12 @@ CounterV2InlineStyleOptions定义了数值内联型CounterV2的属性和事件�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from 'kits/@kit.ArkUI';
 ```
 
 ## onChange
@@ -29,8 +27,6 @@ onChange?: OnInlineCounterV2Change
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -40,7 +36,7 @@ onChange?: OnInlineCounterV2Change
 ## max
 
 ```TypeScript
-max?: int
+max?: number
 ```
 
 设置CounterV2的最大值。默认值：999取值范围：[min, +∞)超出取值范围时（即设置值小于min），按min处理。值为undefined时，按默认值处理。
@@ -51,8 +47,6 @@ max?: int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -62,7 +56,7 @@ max?: int
 ## min
 
 ```TypeScript
-min?: int
+min?: number
 ```
 
 设置CounterV2的最小值。默认值：0取值范围：(-∞, max]超出取值范围时（即设置值大于max），按max处理。值为undefined时，按默认值处理。
@@ -73,8 +67,6 @@ min?: int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -84,7 +76,7 @@ min?: int
 ## textWidth
 
 ```TypeScript
-textWidth?: double
+textWidth?: number
 ```
 
 设置数值文本的宽度。默认值：自适应文本宽度。取值范围：[0, +∞)单位：vp超出取值范围时（即设置值小于0），按0处理。值为undefined时，按默认值处理。
@@ -95,8 +87,6 @@ textWidth?: double
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -106,7 +96,7 @@ textWidth?: double
 ## value
 
 ```TypeScript
-value?: int
+value?: number
 ```
 
 设置CounterV2的初始值。默认值：0有效值范围：[min, max]，其中min和max分别对应CounterV2的最小值和最大值。值为undefined时，按默认值处理。边界处理：若value小于min则按min处理，若value大于max则按max处理。
@@ -116,8 +106,6 @@ value?: int
 **默认值：** 0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { emitter } from '@kit.BasicServicesKit';
+import { emitter } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## on
@@ -16,8 +16,6 @@ function on(event: InnerEvent, callback: Callback<EventData>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -28,114 +26,6 @@ function on(event: InnerEvent, callback: Callback<EventData>): void
 | --- | --- | --- |
 | event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | 是 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let innerEvent: emitter.InnerEvent = {
-  eventId: 1
-};
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-
-// 收到eventId为1的事件后执行回调函数
-emitter.on(innerEvent, callback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let innerEvent: emitter.InnerEvent = {
-  eventId: 1
-};
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-}
-
-// 收到eventId为1的事件后执行回调函数
-emitter.on(innerEvent, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-// 收到eventId为"eventId"的事件后执行回调函数
-emitter.on(`eventId`, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-}
-// 收到eventId为"eventId"的事件后执行回调函数
-emitter.on("eventId", callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
-  console.info(`eventData: ${JSON.stringify(eventData)}`);
-}
-
-emitter1.on(`eventId`, callback);
-```
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let emitter1: emitter.Emitter = new emitter.Emitter();
-
-@Sendable
-class Sample {
-  constructor() {
-    this.count = 100;
-  }
-  printCount() {
-    console.info('Print count : ' + this.count);
-  }
-  count: number;
-}
-
-let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
-  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
-  if (eventData?.data instanceof Sample) {
-    eventData?.data?.printCount();
-  }
-}
-
-emitter1.on("eventId", callback);
-```
 
 
 ## on
@@ -148,8 +38,6 @@ function on(eventId: string, callback: Callback<EventData>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -160,10 +48,6 @@ function on(eventId: string, callback: Callback<EventData>): void
 | --- | --- | --- |
 | eventId | string | 是 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 |
-
-**示例**
-
-参见 [on](#on)
 
 
 ## on
@@ -176,8 +60,6 @@ function on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.Emitter
@@ -188,7 +70,3 @@ function on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | --- | --- | --- |
 | eventId | string | 是 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 |
-
-**示例**
-
-参见 [on](#on)

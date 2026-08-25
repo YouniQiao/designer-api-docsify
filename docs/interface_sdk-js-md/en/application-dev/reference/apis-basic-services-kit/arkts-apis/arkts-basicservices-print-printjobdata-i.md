@@ -4,14 +4,12 @@ Defines a print job.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## binaryData
@@ -25,8 +23,6 @@ Binary data to print.
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Color mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -53,16 +47,14 @@ Color mode.
 ## copyNumber
 
 ```TypeScript
-copyNumber: int
+copyNumber: number
 ```
 
 Number of file list copies.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +72,6 @@ Data source type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -97,8 +87,6 @@ Format of the print data.
 **Type:** [PrintDocumentFormat](arkts-basicservices-print-printdocumentformat-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +104,6 @@ Simplex or duplex mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -125,16 +111,14 @@ Simplex or duplex mode.
 ## fdList
 
 ```TypeScript
-fdList?: int[]
+fdList?: number[]
 ```
 
 FD list of files to print.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,8 +136,6 @@ Whether to automatically rotate the page. The value **true** means to automatica
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -169,8 +151,6 @@ Whether to print without margins. The value **true** means to print without marg
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +168,6 @@ Whether pages are printed uncollated. The value **true** means that pages are pr
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -205,8 +183,6 @@ Whether pages are printed in landscape mode. The value **true** indicates that p
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,8 +200,6 @@ Whether pages are printed in reverse order. The value **true** means that pages 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -241,8 +215,6 @@ Whether pages are printed in sequential order.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,8 +232,6 @@ Unique identifier of the print job.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -277,8 +247,6 @@ Name of the print job.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -296,8 +264,6 @@ Type of the paper to print.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -313,8 +279,6 @@ Object stringified in JSON format.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,8 +296,6 @@ Selected page size.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -349,8 +311,6 @@ Printer ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -368,8 +328,6 @@ Print quality.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -385,8 +343,6 @@ Vendor-specific job options in JSON format.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

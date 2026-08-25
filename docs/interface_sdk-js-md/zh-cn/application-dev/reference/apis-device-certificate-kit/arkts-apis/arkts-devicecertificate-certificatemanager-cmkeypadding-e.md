@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_PADDING_NONE
@@ -17,8 +15,6 @@ CM_PADDING_NONE = 0
 无填充。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -32,8 +28,6 @@ PSS方式填充。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_PADDING_PKCS1_V1_5
@@ -45,7 +39,5 @@ CM_PADDING_PKCS1_V1_5 = 2
 PKCS1_V1_5方式填充。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager

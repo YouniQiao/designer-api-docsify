@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryPrintJobById
@@ -15,8 +15,6 @@ function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): vo
 Queries a print job by ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -39,34 +37,6 @@ Queries a print job by ID. This API uses an asynchronous callback to return the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobId : string = '1';
-print.queryPrintJobById(jobId, (err: BusinessError, printJob : print.PrintJob) => {
-    if (err) {
-        console.error('queryPrintJobById failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('queryPrintJobById success, data : ' + JSON.stringify(printJob));
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobId : string = '1';
-print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
-    console.info('queryPrintJobById data : ' + JSON.stringify(printJob));
-}).catch((error: BusinessError) => {
-    console.error('queryPrintJobById error : ' + JSON.stringify(error));
-})
-```
-
 
 ## queryPrintJobById
 
@@ -77,8 +47,6 @@ function queryPrintJobById(jobId: string): Promise<PrintJob>
 Queries a print job by ID. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -105,7 +73,3 @@ Queries a print job by ID. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [queryPrintJobById](#queryprintjobbyid)

@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## copy
@@ -17,8 +17,6 @@ declare function copy(srcUri: string, destUri: string, options?: CopyOptions): P
 Copies a file or directory. This API uses a promise to return the result.File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory.A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -67,89 +65,6 @@ Copies a file or directory. This API uses a promise to return the result.File co
 | 13900042 |
 | 13900044 |
 
-**Examples**
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let srcDirPathLocal: string = pathDir + "/src";
-let dstDirPathLocal: string = pathDir + "/dest";
-
-let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
-let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
-
-let progressListener: fs.ProgressListener = (progress: fs.Progress) => {
-  console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
-};
-let copyOption: fs.CopyOptions = {
-  "progressListener" : progressListener
-}
-try {
-  fs.copy(srcDirUriLocal, dstDirUriLocal, copyOption).then(()=>{
-    console.info("Succeeded in copying.");
-  }).catch((err: BusinessError)=>{
-    console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch(err) {
-  console.error(`Failed to copy.Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let srcDirPathLocal: string = pathDir + "/src";
-let dstDirPathLocal: string = pathDir + "/dest";
-
-let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
-let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
-
-try {
-  fs.copy(srcDirUriLocal, dstDirUriLocal, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info("Succeeded in copying.");
-  })
-} catch(err) {
-  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let srcDirPathLocal: string = pathDir + "/src";
-let dstDirPathLocal: string = pathDir + "/dest";
-
-let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
-let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
-
-try {
-  let progressListener: fs.ProgressListener = (progress: fs.Progress) => {
-    console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
-  };
-  let copyOption: fs.CopyOptions = {
-    "progressListener" : progressListener
-  }
-  fs.copy(srcDirUriLocal, dstDirUriLocal, copyOption, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info("Succeeded in copying.");
-  })
-} catch(err) {
-  console.error(`Failed to copy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## copy
 
@@ -160,8 +75,6 @@ declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<v
 Copies a file or directory. This API uses an asynchronous callback to return the result.File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -203,10 +116,6 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-See [copy](#copy)
-
 
 ## copy
 
@@ -217,8 +126,6 @@ declare function copy(srcUri: string, destUri: string, options: CopyOptions, cal
 Copies a file or directory. This API uses an asynchronous callback to return the result.File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -260,7 +167,3 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [copy](#copy)

@@ -8,8 +8,6 @@ Represents the callback invoked when the mode of the **MultiNavigation** compone
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -20,4 +18,4 @@ Represents the callback invoked when the mode of the **MultiNavigation** compone
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | [NavigationMode](arkts-arkui-navigation-navigationmode-e.md) | Yes |
+| mode | [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md) | Yes |

@@ -4,8 +4,6 @@ Enumerates the PiP template types.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## VIDEO_DRIVE
@@ -17,8 +15,6 @@ VIDEO_DRIVE = 4
  * In-vehicle video template, which is loaded when a PiP window is started on cars.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -35,8 +31,6 @@ VIDEO_NAVIGATION = 5
 In-vehicle navigation template, which is loaded when a PiP window is started on cars.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,7 +1,5 @@
 # TypedPropertyDescriptor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -13,15 +11,11 @@
 get?: () => T
 ```
 
-**ArkTS mode:** 
-
 ## set
 
 ```TypeScript
 set?: (value: T) => void
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -37,8 +31,6 @@ configurable?: boolean
 
 **Type:** boolean
 
-**ArkTS mode:** 
-
 ## enumerable
 
 ```TypeScript
@@ -46,8 +38,6 @@ enumerable?: boolean
 ```
 
 **Type:** boolean
-
-**ArkTS mode:** 
 
 ## value
 
@@ -57,8 +47,6 @@ value?: T
 
 **Type:** T
 
-**ArkTS mode:** 
-
 ## writable
 
 ```TypeScript
@@ -66,5 +54,3 @@ writable?: boolean
 ```
 
 **Type:** boolean
-
-**ArkTS mode:** 

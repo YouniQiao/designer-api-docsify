@@ -1,7 +1,5 @@
 # ResolvedDisplayNamesOptions
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -13,9 +11,7 @@
 fallback: DisplayNamesFallback
 ```
 
-**Type:** DisplayNamesFallback
-
-**ArkTS mode:** 
+**Type:** [DisplayNamesFallback](arkts-intl-displaynamesfallback-t.md)
 
 ## languageDisplay
 
@@ -23,9 +19,7 @@ fallback: DisplayNamesFallback
 languageDisplay?: DisplayNamesLanguageDisplay
 ```
 
-**Type:** DisplayNamesLanguageDisplay
-
-**ArkTS mode:** 
+**Type:** [DisplayNamesLanguageDisplay](arkts-intl-displaynameslanguagedisplay-t.md)
 
 ## locale
 
@@ -33,9 +27,7 @@ languageDisplay?: DisplayNamesLanguageDisplay
 locale: UnicodeBCP47LocaleIdentifier
 ```
 
-**Type:** UnicodeBCP47LocaleIdentifier
-
-**ArkTS mode:** 
+**Type:** [UnicodeBCP47LocaleIdentifier](arkts-intl-unicodebcp47localeidentifier-t.md)
 
 ## style
 
@@ -43,9 +35,7 @@ locale: UnicodeBCP47LocaleIdentifier
 style: RelativeTimeFormatStyle
 ```
 
-**Type:** RelativeTimeFormatStyle
-
-**ArkTS mode:** 
+**Type:** [RelativeTimeFormatStyle](arkts-intl-relativetimeformatstyle-t.md)
 
 ## type
 
@@ -53,6 +43,4 @@ style: RelativeTimeFormatStyle
 type: DisplayNamesType
 ```
 
-**Type:** DisplayNamesType
-
-**ArkTS mode:** 
+**Type:** [DisplayNamesType](arkts-intl-displaynamestype-t.md)

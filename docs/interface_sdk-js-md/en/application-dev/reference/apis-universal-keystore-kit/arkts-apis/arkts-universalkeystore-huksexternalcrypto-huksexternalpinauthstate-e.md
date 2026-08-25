@@ -4,8 +4,6 @@ Enumerates the Ukey PIN authentication states.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_PIN_NO_AUTH
@@ -17,8 +15,6 @@ HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0
 The Ukey PIN is not authenticated.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -32,8 +28,6 @@ The Ukey PIN is authenticated successfully.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_PIN_LOCKED
@@ -45,7 +39,5 @@ HUKS_EXT_CRYPTO_PIN_LOCKED = 2
 The Ukey PIN is locked.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension

@@ -4,14 +4,12 @@ Provides the result returned after the request listener is registered and the re
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
+import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
 ```
 
 ## data
@@ -25,8 +23,6 @@ Component data.
 **Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Extra data.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -61,8 +55,6 @@ Component template.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

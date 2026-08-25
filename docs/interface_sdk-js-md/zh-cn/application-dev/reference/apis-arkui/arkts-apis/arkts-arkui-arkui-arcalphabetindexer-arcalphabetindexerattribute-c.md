@@ -6,14 +6,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## 导入模块
 
 ```TypeScript
-import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
+import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## autoCollapse
@@ -26,8 +24,6 @@ autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -36,7 +32,7 @@ autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | 是 |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 **返回值：**
 
@@ -54,8 +50,6 @@ color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -64,7 +58,7 @@ color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [color](#color) | Optional & lt;ColorMetrics & gt; | 是 |
+| [color](#color) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
 
 **返回值：**
 
@@ -82,8 +76,6 @@ font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -92,7 +84,7 @@ font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [font](#font) | Optional & lt;Font & gt; | 是 |
+| [font](#font) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;Font&gt; | 是 |
 
 **返回值：**
 
@@ -110,8 +102,6 @@ itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -120,7 +110,7 @@ itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| size | Optional & lt;LengthMetrics & gt; | 是 |
+| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 |
 
 **返回值：**
 
@@ -138,8 +128,6 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -148,7 +136,7 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -166,8 +154,6 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -176,7 +162,7 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [color](#color) | Optional & lt;ColorMetrics & gt; | 是 |
+| [color](#color) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
 
 **返回值：**
 
@@ -199,8 +185,6 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -209,7 +193,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;BlurStyle & gt; | 是 |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | 是 |
 
 **返回值：**
 
@@ -227,8 +211,6 @@ popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -237,7 +219,7 @@ popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [color](#color) | Optional & lt;ColorMetrics & gt; | 是 |
+| [color](#color) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
 
 **返回值：**
 
@@ -255,8 +237,6 @@ popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -265,7 +245,7 @@ popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [font](#font) | Optional & lt;Font & gt; | 是 |
+| [font](#font) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;Font&gt; | 是 |
 
 **返回值：**
 
@@ -283,8 +263,6 @@ selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -293,7 +271,7 @@ selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| index | Optional & lt;number & gt; | 是 |
+| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 **返回值：**
 
@@ -311,8 +289,6 @@ selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttrib
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -321,7 +297,7 @@ selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttrib
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [color](#color) | Optional & lt;ColorMetrics & gt; | 是 |
+| [color](#color) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
 
 **返回值：**
 
@@ -339,8 +315,6 @@ selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -349,7 +323,7 @@ selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [color](#color) | Optional & lt;ColorMetrics & gt; | 是 |
+| [color](#color) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
 
 **返回值：**
 
@@ -367,8 +341,6 @@ selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -377,35 +349,7 @@ selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [font](#font) | Optional & lt;Font & gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |
-
-## setArcAlphabetIndexerOptions
-
-```TypeScript
-default setArcAlphabetIndexerOptions(info: ArcAlphabetIndexerInitInfo): this
-```
-
-设置arcAlphabetIndexer选项。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 |
+| [font](#font) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;Font&gt; | 是 |
 
 **返回值：**
 
@@ -423,8 +367,6 @@ usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -433,7 +375,7 @@ usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 **返回值：**
 

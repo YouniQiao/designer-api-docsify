@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## addIccDiallingNumbers
 
 ```TypeScript
-function addIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo, callback: AsyncCallback<void>): void
+function addIccDiallingNumbers(slotId: number, type: ContactType, diallingNumbers: DiallingNumbersInfo, callback: AsyncCallback<void>): void
 ```
 
 Add dialing number information to SIM card.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -28,7 +26,7 @@ Add dialing number information to SIM card.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | type | [ContactType](arkts-telephony-sim-contacttype-e-sys.md) | Yes |
 | diallingNumbers | [DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
@@ -47,49 +45,16 @@ Add dialing number information to SIM card.
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let diallingNumbersInfo: sim.DiallingNumbersInfo = {
-    alphaTag: "alpha",
-    number: "138xxxxxxxx",
-    pin2: "1234"
-};
-sim.addIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInfo, (err: BusinessError) => {
-    console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let diallingNumbersInfo: sim.DiallingNumbersInfo = {
-    alphaTag: "alpha",
-    number: "138xxxxxxxx"
-};
-sim.addIccDiallingNumbers(0, sim.ContactType.GENERAL_CONTACT, diallingNumbersInfo).then(() => {
-    console.info(`addIccDiallingNumbers success.`);
-}).catch((err: BusinessError) => {
-    console.error(`addIccDiallingNumbers failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## addIccDiallingNumbers
 
 ```TypeScript
-function addIccDiallingNumbers(slotId: int, type: ContactType, diallingNumbers: DiallingNumbersInfo): Promise<void>
+function addIccDiallingNumbers(slotId: number, type: ContactType, diallingNumbers: DiallingNumbersInfo): Promise<void>
 ```
 
 Add dialing number information to SIM card.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -101,7 +66,7 @@ Add dialing number information to SIM card.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | type | [ContactType](arkts-telephony-sim-contacttype-e-sys.md) | Yes |
 | diallingNumbers | [DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md) | Yes |
 
@@ -124,7 +89,3 @@ Add dialing number information to SIM card.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
-
-**Examples**
-
-See [addIccDiallingNumbers](#addiccdiallingnumbers)

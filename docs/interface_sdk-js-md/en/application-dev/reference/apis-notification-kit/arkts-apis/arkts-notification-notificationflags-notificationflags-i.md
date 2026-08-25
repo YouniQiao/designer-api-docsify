@@ -4,8 +4,6 @@ Defines the notification flags.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## bannerEnabled
@@ -19,8 +17,6 @@ Settings of banner for the notification. The default value is **TYPE_NONE**. Onl
 **Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,8 +32,6 @@ Settings of screen lock for the notification. The default value is **TYPE_NONE**
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## soundEnabled
@@ -52,8 +46,6 @@ Settings of sound for the notification. The default value is **TYPE_NONE**. This
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## vibrationEnabled
@@ -67,7 +59,5 @@ Settings of vibration for the notification. The default value is **TYPE_NONE**. 
 **Type:** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

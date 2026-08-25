@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getHotspotConfig
@@ -15,8 +15,6 @@ function getHotspotConfig(): HotspotConfig
 获取WLAN热点配置。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
@@ -38,16 +36,3 @@ function getHotspotConfig(): HotspotConfig
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2601000](../errorcode-wifi.md#2601000-hotspot模块异常) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let config = wifiManager.getHotspotConfig();
-  console.info("result:" + JSON.stringify(config));    
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

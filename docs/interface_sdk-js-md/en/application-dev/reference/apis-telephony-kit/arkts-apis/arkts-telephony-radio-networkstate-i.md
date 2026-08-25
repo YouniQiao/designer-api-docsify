@@ -4,14 +4,12 @@ Defines the network status.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## cfgTech
@@ -25,8 +23,6 @@ RAT of the device.
 **Type:** [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -42,8 +38,6 @@ CA status.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## isEmergency
@@ -57,8 +51,6 @@ Whether only emergency calls are allowed.
 **Type:** boolean
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -74,8 +66,6 @@ Whether the user is roaming.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## longOperatorName
@@ -89,8 +79,6 @@ Long carrier name of the registered network.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -106,8 +94,6 @@ NSA network registration status of the device.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## plmnNumeric
@@ -121,8 +107,6 @@ PLMN code of the registered network.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -138,8 +122,6 @@ Network registration status of the device.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## shortOperatorName
@@ -153,7 +135,5 @@ Short carrier name of the registered network.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService

@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## hashAlgorithm
@@ -26,8 +24,6 @@ hashAlgorithm: 'SHA-256'
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## publicKeyHash
@@ -41,7 +37,5 @@ publicKeyHash: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetStack

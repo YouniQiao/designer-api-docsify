@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## CERT_TYPE_PEM
@@ -18,8 +16,6 @@ PEM格式证书。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## CERT_TYPE_DER
@@ -31,7 +27,5 @@ CERT_TYPE_DER = 1
 DER格式证书。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack

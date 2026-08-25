@@ -4,8 +4,6 @@ Enumerates the proxy modes. This API uses a promise to return the result.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Proxy disabled.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ PROXY_MODE_AUTO = 1
 Auto mode.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

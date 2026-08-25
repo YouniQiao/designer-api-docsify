@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## installUserCertificate
@@ -15,8 +15,6 @@ function installUserCertificate(admin: Want, certificate: CertBlob, callback: As
 Installs a user certificate. This API uses a callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -49,67 +47,6 @@ Installs a user certificate. This API uses a callback to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let certFileArray: Uint8Array = new Uint8Array();
-// Initialize the context variable in the onCreate callback function of the MainAbility.
-// Store test.cer in the rawfile directory.
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-context.resourceManager.getRawFileContent("test.cer").then((value) => {
-  certFileArray = value;
-  deviceSettings.installUserCertificate(wantTemp, { inData: certFileArray, alias: "cert_alias_xts" }, (err, result) => {
-    if (err) {
-      console.error(`Failed to install user certificate. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`Succeeded in installing user certificate, result : ${JSON.stringify(result)}`);
-    }
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get row file content. message: ${error.message}`);
-  return;
-});
-```
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let certFileArray: Uint8Array = new Uint8Array();
-// Initialize the context variable in the onCreate callback function of the MainAbility.
-// Store test.cer in the rawfile directory.
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-context.resourceManager.getRawFileContent("test.cer").then((value) => {
-  certFileArray = value
-  deviceSettings.installUserCertificate(wantTemp, { inData: certFileArray, alias: "cert_alias_xts" })
-    .then((result) => {
-      console.info(`Succeeded in installing user certificate, result : ${JSON.stringify(result)}`);
-    }).catch((err: BusinessError) => {
-    console.error(`Failed to install user certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get row file content. message: ${error.message}`);
-  return;
-});
-```
-
 
 ## installUserCertificate
 
@@ -120,8 +57,6 @@ function installUserCertificate(admin: Want, certificate: CertBlob): Promise<str
 Installs a user certificate. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -158,7 +93,3 @@ Installs a user certificate. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [installUserCertificate](#installusercertificate)

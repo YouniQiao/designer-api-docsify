@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## FINGER
@@ -17,8 +15,6 @@ FINGER = 0
 手指。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -32,8 +28,6 @@ PEN = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## RUBBER
@@ -45,8 +39,6 @@ RUBBER = 2
 橡皮擦。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -60,8 +52,6 @@ BRUSH = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## PENCIL
@@ -73,8 +63,6 @@ PENCIL = 4
 铅笔。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -88,8 +76,6 @@ AIRBRUSH = 5
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## MOUSE
@@ -102,8 +88,6 @@ MOUSE = 6
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## LENS
@@ -115,7 +99,5 @@ LENS = 7
 透镜。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

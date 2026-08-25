@@ -1,14 +1,12 @@
 # OnContinueDoneCallback (System API)
 
 ```TypeScript
-type OnContinueDoneCallback = (result: int) => void
+type OnContinueDoneCallback = (result: number) => void
 ```
 
 Callback function on continue mission done.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,4 +18,4 @@ Callback function on continue mission done.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| result | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| result | number | Yes |

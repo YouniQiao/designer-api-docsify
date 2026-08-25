@@ -4,14 +4,12 @@ Represents the information object of the web native messaging connection.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from 'kits/@kit.ArkWeb';
 ```
 
 ## bundleName
@@ -25,8 +23,6 @@ App package name of the caller, used for identity identification and permission 
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -42,8 +38,6 @@ Unique identifier of the connection, used to distinguish and manage different We
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## extensionOrigin
@@ -57,8 +51,6 @@ Original URL of the caller extension, used for security control and origin ident
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -74,8 +66,6 @@ Pipe file descriptor used for reading data. Messages can be read from the Web si
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## fdWrite
@@ -89,7 +79,5 @@ Pipe file descriptor used for writing data. Messages can be sent to the Web side
 **Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

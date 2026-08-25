@@ -15,8 +15,6 @@ Obtains the widget information provided by all applications on the device. This 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md)
@@ -33,32 +31,6 @@ Obtains the widget information provided by all applications on the device. This 
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getAllFormsInfo((error: Base.BusinessError, data: formInfo.FormInfo[]) => {
-  if (error.code) {
-    console.error(`formHost getAllFormsInfo, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`formHost getAllFormsInfo, data: ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
-  console.info(`formHost getAllFormsInfo data: ${JSON.stringify(data)}`);
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost getAllFormsInfo, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## getAllFormsInfo
 
@@ -69,8 +41,6 @@ function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>
 Obtains the widget information provided by all applications on the device. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -87,7 +57,3 @@ Obtains the widget information provided by all applications on the device. This 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |
-
-**Examples**
-
-See [getAllFormsInfo](#getallformsinfo)

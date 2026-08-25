@@ -4,8 +4,6 @@ When starting a modal page, you can transfer custom data to the autofill service
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Custom data transferred for starting the modal page. The data is of the Record t
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

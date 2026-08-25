@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAutoStartApps
@@ -16,8 +16,6 @@ function getAutoStartApps(admin: Want): Array<Want>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -44,130 +42,6 @@ function getAutoStartApps(admin: Want): Array<Want>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let res: Array<Want> = applicationManager.getAutoStartApps(wantTemp);
-  console.info(`Succeeded in adding auto start apps: ${JSON.stringify(res)}`);
-} catch (err) {
-  console.error(`Failed to auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-// 返回示例
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // 从API version 24支持
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-]
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let res: Array<Want> = applicationManager.getAutoStartApps(null);
-  console.info(`Succeeded in adding auto start apps: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-// 返回示例
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // 从API version 24支持
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-]
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let res: Array<Want> = applicationManager.getAutoStartApps(wantTemp, 100);
-  console.info(`Succeeded in getting auto start apps: ${JSON.stringify(res)}`);
-} catch (err) {
-  console.error(`Failed to get auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-// 返回示例
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // 从API version 24支持
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-]
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let res: Array<Want> = applicationManager.getAutoStartApps(null, 100);
-  console.info(`Succeeded in getting auto start apps: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to get auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-// 返回示例
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // 从API version 24支持
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-]
-```
 
 
 ## getAutoStartApps
@@ -180,8 +54,6 @@ function getAutoStartApps(admin: Want | null): Array<Want>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -209,10 +81,6 @@ function getAutoStartApps(admin: Want | null): Array<Want>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [getAutoStartApps](#getautostartapps)
-
 
 ## getAutoStartApps
 
@@ -223,8 +91,6 @@ function getAutoStartApps(admin: Want, accountId: number): Array<Want>
 查询指定用户下的开机自启动应用名单。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -253,10 +119,6 @@ function getAutoStartApps(admin: Want, accountId: number): Array<Want>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-参见 [getAutoStartApps](#getautostartapps)
-
 
 ## getAutoStartApps
 
@@ -267,8 +129,6 @@ function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>
 查询指定用户下的开机自启动应用名单。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -296,7 +156,3 @@ function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [getAutoStartApps](#getautostartapps)

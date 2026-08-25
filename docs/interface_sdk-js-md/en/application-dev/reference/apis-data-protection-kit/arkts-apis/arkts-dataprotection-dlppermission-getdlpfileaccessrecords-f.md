@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getDLPFileAccessRecords
@@ -15,8 +15,6 @@ function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access records are returned, which can be used to track and manage the usage of DLP files. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result.This API is used to obtain the list of DLP files that are accessed recently, which can be used to track and manage file usage.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -35,39 +33,6 @@ Obtains the list of DLP files that are accessed recently. After the API is succe
 | [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  try {
-    let res:Array<dlpPermission.AccessedDLPFileInfo> = await dlpPermission.getDLPFileAccessRecords(); // Obtain the list of recently accessed DLP files.
-    console.info('res', JSON.stringify(res))
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.getDLPFileAccessRecords((err, res) => {
-    if (err != undefined) {
-      console.error('getDLPFileAccessRecords error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the list of recently accessed DLP files.
-} catch (err) {
-  console.error('getDLPFileAccessRecords error,', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
-
 
 ## getDLPFileAccessRecords
 
@@ -78,8 +43,6 @@ function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileIn
 Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access records are returned, which can be used to track and manage the usage of DLP files. This API uses an asynchronous callback to return the result.This API is used to obtain the list of DLP files that are accessed recently, which can be used to track and manage file usage.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -98,7 +61,3 @@ Obtains the list of DLP files that are accessed recently. After the API is succe
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [getDLPFileAccessRecords](#getdlpfileaccessrecords)

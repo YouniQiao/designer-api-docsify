@@ -8,8 +8,6 @@ Enumerates the authentication event information types.It consists of the fields 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md)

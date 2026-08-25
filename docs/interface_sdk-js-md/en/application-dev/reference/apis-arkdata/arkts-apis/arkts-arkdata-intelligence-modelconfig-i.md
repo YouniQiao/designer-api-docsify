@@ -4,14 +4,12 @@ Manages configurations of the embedding model.@interface ModelConfig
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from '@kit.ArkData';
+import { intelligence } from 'kits/@kit.ArkData';
 ```
 
 ## cachePath
@@ -25,8 +23,6 @@ If NPU is used for accelerating, a local path is required for model caching.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -42,8 +38,6 @@ Indicates whether NPU is used.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## modelInfo
@@ -57,8 +51,6 @@ Indicates cloud embedding model information.
 **Type:** [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +68,6 @@ Indicates cloud embedding model network policy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
@@ -93,7 +83,5 @@ Version of the model. The outputs of text or image embedding models with the sam
 **Type:** [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core

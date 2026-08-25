@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## continueMission
@@ -16,8 +16,6 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -30,8 +28,8 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| parameter | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | 是 |
-| options | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | 是 |
+| parameter | [ContinueDeviceInfo](arkts-ability-continuedeviceinfo-i-sys.md) | 是 |
+| options | [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -47,243 +45,6 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 | [16300504](../errorcode-DistributedSchedule.md#16300504-远端未安装应用但支持免安装需使用免安装标识重试) |
 | [16300505](../errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 实现回调函数
-function onContinueDone(resultCode: number): void {
-  console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
-};
-try {
-  // 通过任务ID方式迁移任务
-  // missionId需通过系统API获取实际任务ID
-  distributedMissionManager.continueMission(
-    {
-      srcDeviceId: '',
-      dstDeviceId: '',
-      missionId: 1,
-      wantParam: {'key': 'value'}
-    },
-    { onContinueDone: onContinueDone },
-    (error: BusinessError) => {
-      if (error) {
-        console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-        return;
-      }
-      console.info('continueMission finished');
-  })
-} catch (error) {
-  console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import distributedMissionManager from '@ohos.distributedMissionManager';
-import { BusinessError } from '@ohos.base';
-// 实现回调函数
-function onContinueDone(resultCode: int): void {
-  console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
-};
-let continueDeviceInfo:distributedMissionManager.ContinueDeviceInfo={
-  srcDeviceId: "",
-  dstDeviceId: "",
-  missionId: 1,
-  wantParam: {"key": "value"}
-}
-let options:distributedMissionManager.ContinueCallback={
-  onContinueDone: onContinueDone
-}
-try {
-  // 通过任务ID方式迁移任务
-  // missionId需通过系统API获取实际任务ID
-  distributedMissionManager.continueMission(
-    continueDeviceInfo,
-    options,
-    (error: BusinessError|null,data:string[]|undefined) => {
-      if (error) {
-        console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-        return;
-      }
-      console.info('continueMission finished');
-    })
-} catch (error) {
-  console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 实现回调函数
-function onContinueDone(resultCode: number): void {
-  console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
-};
-try {
-  // 通过任务ID方式迁移任务
-  // missionId需通过系统API获取实际任务ID
-  distributedMissionManager.continueMission(
-    {
-      srcDeviceId: '',
-      dstDeviceId: '',
-      missionId: 1,
-      wantParam: {'key': 'value'}
-    },
-    { onContinueDone: onContinueDone }).then(() => {
-      console.info('continueMission finished successfully');
-    }).catch((error: BusinessError) => {
-    console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import distributedMissionManager from '@ohos.distributedMissionManager';
-import { BusinessError } from '@ohos.base';
-// 实现回调函数
-function onContinueDone(resultCode: int): void {
-  console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
-};
-let continueDeviceInfo:distributedMissionManager.ContinueDeviceInfo={
-  srcDeviceId: "",
-  dstDeviceId: "",
-  missionId: 1,
-  wantParam: {"key": "value"}
-}
-let options:distributedMissionManager.ContinueCallback={
-  onContinueDone: onContinueDone
-}
-try {
-  // 通过任务ID方式迁移任务
-  // missionId需通过系统API获取实际任务ID
-  distributedMissionManager.continueMission(
-    continueDeviceInfo,
-    options,
-    ).then(() => {
-    console.info('continueMission finished successfully');
-    }).catch((error) => {
-    console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-    })
-} catch (error) {
-  console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.continueMission(
-    {
-      srcDeviceId: '',
-      dstDeviceId: '',
-      bundleName: 'ohos.test.continueapp',
-      wantParam: {'key': 'value'}
-    },
-    (error: BusinessError) => {
-      if (error) {
-        console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-        return;
-      }
-      console.info('continueMission finished');
-  })
-} catch (error) {
-  console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import distributedMissionManager from '@ohos.distributedMissionManager';
-import { BusinessError } from '@ohos.base';
-
-let continueMissionInfo:distributedMissionManager.ContinueMissionInfo={
-  srcDeviceId: '',
-  dstDeviceId: '',
-  bundleName: 'ohos.test.continueapp',
-  wantParam: {'key': 'value'}
-}
-try {
-  distributedMissionManager.continueMission(
-    continueMissionInfo,
-    (error: BusinessError|null,data:string[]|undefined) => {
-      if (error) {
-        console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-        return;
-      }
-      console.info('continueMission finished');
-    })
-} catch (error) {
-  console.error(`continueMission failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedMissionManager.continueMission(
-      {
-        srcDeviceId: "",
-        dstDeviceId: "",
-        bundleName: "ohos.test.continueapp",
-        wantParam: {"key": "value"}
-      }
-    ).then(() => {
-        console.info('continueMission finished successfully');
-    }).catch((error: BusinessError) => {
-        console.error(`Failed to continue mission. Code: ${error.code}, message: ${error.message}`);
-    })
-} catch (error) {
-    console.error(`Failed to continue mission. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import distributedMissionManager from '@ohos.distributedMissionManager';
-import { BusinessError } from '@ohos.base';
-
-let continueMissionInfo:distributedMissionManager.ContinueMissionInfo={
-  srcDeviceId: "",
-  dstDeviceId: "",
-  bundleName: "ohos.test.continueapp",
-  wantParam: {"key": "value"}
-}
-try {
-  distributedMissionManager.continueMission(
-    continueMissionInfo
-  ).then(() => {
-    console.info('continueMission finished successfully');
-  }).catch((error) => {
-    console.error('continueMission failed, cause: ' + JSON.stringify(error));
-  })
-} catch (error) {
-  console.error('continueMission failed, cause: ' + JSON.stringify(error));
-}
-```
 
 
 ## continueMission
@@ -296,8 +57,6 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -310,8 +69,8 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| parameter | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | 是 |
-| options | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | 是 |
+| parameter | [ContinueDeviceInfo](arkts-ability-continuedeviceinfo-i-sys.md) | 是 |
+| options | [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | 是 |
 
 **返回值：**
 
@@ -333,10 +92,6 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 | [16300505](../errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
 
-**示例**
-
-参见 [continueMission](#continuemission)
-
 
 ## continueMission
 
@@ -347,8 +102,6 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 通过指定包名（bundleName）的方式进行迁移任务。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -379,10 +132,6 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 | [16300506](../errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
 | [16300507](../errorcode-DistributedSchedule.md#16300507-获取指定的bundlename的missioninfo失败) |
 
-**示例**
-
-参见 [continueMission](#continuemission)
-
 
 ## continueMission
 
@@ -393,8 +142,6 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 通过指定包名（bundleName）的方式进行迁移任务。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -429,7 +176,3 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 | [16300505](../errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
 | [16300507](../errorcode-DistributedSchedule.md#16300507-获取指定的bundlename的missioninfo失败) |
-
-**示例**
-
-参见 [continueMission](#continuemission)

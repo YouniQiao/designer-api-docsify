@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## MENU_PANEL
@@ -17,8 +15,6 @@ MENU_PANEL = 1
 菜单面板为一级面板，显示当前应用可以提供的功能，如翻译、搜索等。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,8 +29,6 @@ MAIN_PANEL = 2
 主面板为二级面板，当用户点击菜单面板中的功能按钮时弹出，展示具体的翻译或搜索结果等内容。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

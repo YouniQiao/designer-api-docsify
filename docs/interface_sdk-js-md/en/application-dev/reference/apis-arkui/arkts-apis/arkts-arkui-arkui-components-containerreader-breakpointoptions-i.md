@@ -4,20 +4,18 @@ Defines the breakpoint configuration options for container dimension analysis. S
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@kit.ArkUI';
+import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height?: Array<double>
+height?: Array<number>
 ```
 
 Optional array of height breakpoint values in vp units. Defines the height thresholds for container height analysis.
@@ -25,8 +23,6 @@ Optional array of height breakpoint values in vp units. Defines the height thres
 **Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,7 +35,7 @@ Optional array of height breakpoint values in vp units. Defines the height thres
 ## width
 
 ```TypeScript
-width?: Array<double>
+width?: Array<number>
 ```
 
 Optional array of width breakpoint values in vp units. Defines the width thresholds for container width analysis.
@@ -47,8 +43,6 @@ Optional array of width breakpoint values in vp units. Defines the width thresho
 **Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

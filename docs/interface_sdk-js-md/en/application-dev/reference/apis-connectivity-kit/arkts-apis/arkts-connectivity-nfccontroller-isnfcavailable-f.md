@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isNfcAvailable
@@ -19,8 +19,6 @@ Checks whether the device supports NFC.
 > [canIUse("SystemCapability.Communication.NFC.Core")](../../../reference/common/init.md#caniuse) instead.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

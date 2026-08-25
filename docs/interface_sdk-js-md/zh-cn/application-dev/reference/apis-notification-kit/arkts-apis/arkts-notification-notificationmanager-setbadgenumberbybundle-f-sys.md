@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setBadgeNumberByBundle
 
 ```TypeScript
-function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise<void>
+function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: number): Promise<void>
 ```
 
 代理其他应用设定角标个数。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,8 +24,8 @@ function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
-| badgeNumber | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
+| badgeNumber | number | 是 |
 
 **返回值：**
 
@@ -48,41 +46,3 @@ function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [1600017](../errorcode-notification.md#1600017-没有对应的代理关系配置) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'com.example.bundleName',
-};
-let badgeNumber: number = 10;
-
-notificationManager.setBadgeNumberByBundle(bundle, badgeNumber).then(() => {
-    console.info('setBadgeNumberByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`setBadgeNumberByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-let badgeNumber: int = 10;
-
-notificationManager.setBadgeNumberByBundle(bundle, badgeNumber).then(() => {
-    console.info('setBadgeNumberByBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setBadgeNumberByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```

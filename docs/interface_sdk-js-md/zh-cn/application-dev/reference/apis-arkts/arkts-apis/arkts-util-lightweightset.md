@@ -20,8 +20,8 @@ LightWeightSet可用于存储一系列值的集合，存储元素中value唯一�
 ## 导入模块
 
 ```TypeScript
-import { LightWeightSet } from '@kit.ArkTS';
-import { LightWeightSetForEachCb } from '@kit.ArkTS';
+import { LightWeightSet } from 'kits/@kit.ArkTS';
+import { LightWeightSetForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -31,9 +31,3 @@ import { LightWeightSetForEachCb } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [LightWeightSetForEachCb](arkts-arkts-lightweightsetforeachcb-t.md) |

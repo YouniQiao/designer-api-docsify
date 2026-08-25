@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## authorizeAdmin
@@ -15,8 +15,6 @@ function authorizeAdmin(admin: Want, bundleName: string, callback: AsyncCallback
 授予指定应用管理员权限。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -45,48 +43,6 @@ function authorizeAdmin(admin: Want, bundleName: string, callback: AsyncCallback
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = "com.example.application";
-
-adminManager.authorizeAdmin(wantTemp, bundleName, (err) => {
-  if (err) {
-    console.error(`Failed to authorize permission to the application. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Successfully authorized permission to the application');
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = "com.example.application";
-
-adminManager.authorizeAdmin(wantTemp, bundleName).then(() => {
-}).catch((err: BusinessError) => {
-  console.error(`Failed to authorize permission to the application. Code: ${err.code}, message: ${err.message}`);
-})
-```
-
 
 ## authorizeAdmin
 
@@ -97,8 +53,6 @@ function authorizeAdmin(admin: Want, bundleName: string): Promise<void>
 授予指定应用管理员权限。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -131,7 +85,3 @@ function authorizeAdmin(admin: Want, bundleName: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [authorizeAdmin](#authorizeadmin)

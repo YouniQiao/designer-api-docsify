@@ -4,14 +4,12 @@ Used to indicate the call state of the current call.@interface AVCallState [sinc
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## muted
@@ -25,8 +23,6 @@ Current muted status.
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,8 +39,6 @@ Current call state. See [CallState](arkts-avsession-avsession-callstate-e.md)
 **Type:** CallState
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

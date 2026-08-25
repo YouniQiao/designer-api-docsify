@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { dataUriUtils } from '@kit.AbilityKit';
+import { dataUriUtils } from 'kits/@kit.AbilityKit';
 ```
 
 ## getId
 
 ```TypeScript
-function getId(uri: string): double
+function getId(uri: string): number
 ```
 
 获取指定uri路径末尾的ID。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,24 +28,10 @@ function getId(uri: string): double
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { dataUriUtils } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let id = dataUriUtils.getId('com.example.dataUriUtils/1221');
-  console.info(`get id: ${id}`);
-} catch (err) {
-  console.error(`get id err, code: ${JSON.stringify((err as BusinessError).code)}, msg: ${JSON.stringify((err as BusinessError).message)}`);
-}
-```

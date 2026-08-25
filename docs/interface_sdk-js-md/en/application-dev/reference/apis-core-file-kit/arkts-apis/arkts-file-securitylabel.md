@@ -4,14 +4,12 @@ The **securityLabel** module provides APIs for managing data security levels of 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from '@kit.CoreFileKit';
+import { securityLabel } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## on('sharingStateChange')
@@ -15,8 +15,6 @@ function on(type: 'sharingStateChange', callback: Callback<boolean>): void
 注册网络共享状态变化事件，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -39,16 +37,6 @@ function on(type: 'sharingStateChange', callback: Callback<boolean>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-
-sharing.on('sharingStateChange', (data: boolean) => {
-  console.info('on sharingStateChange: ' + JSON.stringify(data));
-});
-```
-
 
 ## on('interfaceSharingStateChange')
 
@@ -59,8 +47,6 @@ function on(type: 'interfaceSharingStateChange', callback: Callback<InterfaceSha
 注册网卡网络共享状态变化事件，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -83,16 +69,6 @@ function on(type: 'interfaceSharingStateChange', callback: Callback<InterfaceSha
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-
-sharing.on('interfaceSharingStateChange', (data: object) => {
-  console.info('on interfaceSharingStateChange:' + JSON.stringify(data));
-});
-```
-
 
 ## on('sharingUpstreamChange')
 
@@ -103,8 +79,6 @@ function on(type: 'sharingUpstreamChange', callback: Callback<NetHandle>): void
 注册上行网络变化事件，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -126,13 +100,3 @@ function on(type: 'sharingUpstreamChange', callback: Callback<NetHandle>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-
-sharing.on('sharingUpstreamChange', (data: object) => {
-  console.info('on sharingUpstreamChange:' + JSON.stringify(data));
-});
-```

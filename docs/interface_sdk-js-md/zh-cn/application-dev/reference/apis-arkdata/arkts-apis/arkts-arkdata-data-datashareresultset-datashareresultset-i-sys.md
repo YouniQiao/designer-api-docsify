@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { DataShareResultSet, DataType } from '@kit.ArkData';
+import { DataShareResultSet, DataType } from 'kits/@kit.ArkData';
 ```
 
 ## close
@@ -26,39 +24,21 @@ close(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
 **系统接口：** 此接口为系统接口。
 
-**示例**
-
-```TypeScript
-if (resultSet != undefined) {
-  (resultSet as DataShareResultSet).close();
-}
-```
-
 ## getBlob
 
-ArkTS-Dyn:
 ```TypeScript
 getBlob(columnIndex: number): Uint8Array
-```
-
-ArkTS-Sta:
-```TypeScript
-getBlob(columnIndex: int): Uint8Array
 ```
 
 以字节数组的形式获取当前行中指定列的值。如果当前行中指定的列或键的值为空，或者指定的列或键不是Blob类型，则使用方需要确定是否抛出此异常。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,7 +50,7 @@ getBlob(columnIndex: int): Uint8Array
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -78,38 +58,15 @@ getBlob(columnIndex: int): Uint8Array
 | --- |
 | Uint8Array |
 
-**示例**
-
-```TypeScript
-let columnIndex = 1;
-if (resultSet != undefined) {
-  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  if (!goToFirstRow) {
-    console.error("failed to go to first row");
-  } else {
-    let getBlob = (resultSet as DataShareResultSet).getBlob(columnIndex);
-    console.info('resultSet.getBlob: ' + getBlob);
-  }
-}
-```
-
 ## getColumnIndex
 
-ArkTS-Dyn:
 ```TypeScript
 getColumnIndex(columnName: string): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getColumnIndex(columnName: string): int
 ```
 
 根据指定的列名获取列索引。列名作为输入参数传递。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,35 +84,17 @@ getColumnIndex(columnName: string): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-```TypeScript
-let columnName = "name";
-if (resultSet != undefined) {
-  let getColumnIndex = (resultSet as DataShareResultSet).getColumnIndex(columnName);
-  console.info('resultSet.getColumnIndex: ' + getColumnIndex);
-}
-```
+| number |
 
 ## getColumnName
 
-ArkTS-Dyn:
 ```TypeScript
 getColumnName(columnIndex: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-getColumnName(columnIndex: int): string
 ```
 
 根据指定的列索引获取列名。列索引作为输入参数传递。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -167,7 +106,7 @@ getColumnName(columnIndex: int): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -175,33 +114,15 @@ getColumnName(columnIndex: int): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-let columnIndex = 1;
-if (resultSet != undefined) {
-  let getColumnName = (resultSet as DataShareResultSet).getColumnName(columnIndex);
-  console.info('resultSet.getColumnName: ' + getColumnName);
-}
-```
-
 ## getDataType
 
-ArkTS-Dyn:
 ```TypeScript
 getDataType(columnIndex: number): DataType
-```
-
-ArkTS-Sta:
-```TypeScript
-getDataType(columnIndex: int): DataType
 ```
 
 指定列索引获取该列的数据类型。如果当前行中指定的列或键的值为空，或者指定的列或键不是DataType类型，则使用方需要确定是否抛出此异常。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -213,7 +134,7 @@ getDataType(columnIndex: int): DataType
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -221,34 +142,16 @@ getDataType(columnIndex: int): DataType
 | --- |
 | [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) |
 
-**示例**
-
-```TypeScript
-let columnIndex = 1;
-if (resultSet != undefined) {
-  let getDataType = (resultSet as DataShareResultSet).getDataType(columnIndex);
-  console.info('resultSet.getDataType: ' + getDataType);
-}
-```
-
 ## getDouble
 
-ArkTS-Dyn:
 ```TypeScript
 getDouble(columnIndex: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getDouble(columnIndex: int): double
 ```
 
 以值类型为双浮点数形式获取当前行中指定列的值。如果当前行中指定的列或键的值为空，或者指定的列或键不是double类型，则使用方需要确定是否抛出此异常。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -259,43 +162,24 @@ getDouble(columnIndex: int): double
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
-
-**示例**
-
-```TypeScript
-let columnIndex = 1;
-if (resultSet != undefined) {
-  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  let getDouble = (resultSet as DataShareResultSet).getDouble(columnIndex);
-  console.info('resultSet.getDouble: ' + getDouble);
-}
-```
+| number |
 
 ## getLong
 
-ArkTS-Dyn:
 ```TypeScript
 getLong(columnIndex: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getLong(columnIndex: int): long
 ```
 
 以长整数值形式获取当前行中指定列的值。如果当前行中指定的列或键的值为空，或者指定的列或键不是long类型，则使用方需要确定是否抛出此异常。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -306,43 +190,24 @@ getLong(columnIndex: int): long
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
-
-**示例**
-
-```TypeScript
-let columnIndex = 1;
-if (resultSet != undefined) {
-  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  let getLong = (resultSet as DataShareResultSet).getLong(columnIndex);
-  console.info('resultSet.getLong: ' + getLong);
-}
-```
+| number |
 
 ## getString
 
-ArkTS-Dyn:
 ```TypeScript
 getString(columnIndex: number): string
-```
-
-ArkTS-Sta:
-```TypeScript
-getString(columnIndex: int): string
 ```
 
 以字符串形式获取当前行中指定列的值。如果当前行中指定的列或键的值为空，或者指定的列或键不是string类型，则使用方需要确定是否抛出此异常。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -353,7 +218,7 @@ getString(columnIndex: int): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -361,34 +226,15 @@ getString(columnIndex: int): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-let columnIndex = 1;
-if (resultSet != undefined) {
-  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  let getString = (resultSet as DataShareResultSet).getString(columnIndex);
-  console.info('resultSet.getString: ' + getString);
-}
-```
-
 ## goTo
 
-ArkTS-Dyn:
 ```TypeScript
 goTo(offset: number): boolean
-```
-
-ArkTS-Sta:
-```TypeScript
-goTo(offset: int): boolean
 ```
 
 相对于当前位置向前或向后移动指定行数。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -400,23 +246,13 @@ goTo(offset: int): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| offset | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let goToNum = 1;
-if (resultSet != undefined) {
-  let isGoTo = (resultSet as DataShareResultSet).goTo(goToNum);
-  console.info('resultSet.goTo: ' + isGoTo);
-}
-```
 
 ## goToFirstRow
 
@@ -428,8 +264,6 @@ goToFirstRow(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -441,16 +275,6 @@ goToFirstRow(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-// resultSet需依照本页的使用说明进行创建。
-if (resultSet != undefined) {
-  let isGoToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  console.info('resultSet.goToFirstRow: ' + isGoToFirstRow);
-}
-```
 
 ## goToLastRow
 
@@ -462,8 +286,6 @@ goToLastRow(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -475,15 +297,6 @@ goToLastRow(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-if (resultSet != undefined) {
-  let isGoToLastRow = (resultSet as DataShareResultSet).goToLastRow();
-  console.info('resultSet.goToLastRow: ' + isGoToLastRow);
-}
-```
 
 ## goToNextRow
 
@@ -495,8 +308,6 @@ goToNextRow(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -508,15 +319,6 @@ goToNextRow(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-if (resultSet != undefined) {
-  let isGoToNextRow = (resultSet as DataShareResultSet).goToNextRow();
-  console.info('resultSet.goToNextRow: ' + isGoToNextRow);
-}
-```
 
 ## goToPreviousRow
 
@@ -528,8 +330,6 @@ goToPreviousRow(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -542,32 +342,15 @@ goToPreviousRow(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-if (resultSet != undefined) {
-  let isGoToPreviousRow = (resultSet as DataShareResultSet).goToPreviousRow();
-  console.info('resultSet.goToPreviousRow: ' + isGoToPreviousRow);
-}
-```
-
 ## goToRow
 
-ArkTS-Dyn:
 ```TypeScript
 goToRow(position: number): boolean
-```
-
-ArkTS-Sta:
-```TypeScript
-goToRow(position: int): boolean
 ```
 
 转到结果集的指定行。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -579,7 +362,7 @@ goToRow(position: int): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| position | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| position | number | 是 |
 
 **返回值：**
 
@@ -587,29 +370,17 @@ goToRow(position: int): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let goToRowNum = 2;
-if (resultSet != undefined) {
-  let isGoToRow = (resultSet as DataShareResultSet).goToRow(goToRowNum);
-  console.info('resultSet.goToRow: ' + isGoToRow);
-}
-```
-
 ## columnCount
 
 ```TypeScript
-columnCount: int
+columnCount: number
 ```
 
 结果集中的列数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -629,8 +400,6 @@ columnNames: Array<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -649,8 +418,6 @@ isClosed: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
@@ -660,16 +427,14 @@ isClosed: boolean
 ## rowCount
 
 ```TypeScript
-rowCount: int
+rowCount: number
 ```
 
 结果集中的行数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

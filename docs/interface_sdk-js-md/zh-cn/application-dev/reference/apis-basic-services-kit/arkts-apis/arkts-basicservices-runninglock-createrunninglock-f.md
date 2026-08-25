@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { runningLock } from '@kit.BasicServicesKit';
+import { runningLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createRunningLock
@@ -15,8 +15,6 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 创建RunningLock锁。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -34,28 +32,6 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND, (err: Error, lock: runningLock.RunningLock) => {
-    if (typeof err === 'undefined') {
-        console.info('created running lock: ' + lock);
-    } else {
-        console.error('create running lock failed, err: ' + err);
-    }
-});
-```
-
-```TypeScript
-runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
-.then((lock: runningLock.RunningLock) => {
-    console.info('created running lock: ' + lock);
-})
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
-});
-```
-
 
 ## createRunningLock
 
@@ -66,8 +42,6 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 创建RunningLock锁。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -89,7 +63,3 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 | 类型 |
 | --- |
 | Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; |
-
-**示例**
-
-参见 [createRunningLock](#createrunninglock)

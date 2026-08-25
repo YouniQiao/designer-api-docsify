@@ -1,6 +1,6 @@
 # Uint8ClampedArray
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-n.md).
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md).
 
 > **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
@@ -8,14 +8,12 @@ A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-c
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -28,8 +26,6 @@ Returns an iterator that iterates over numbers.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -38,7 +34,7 @@ Returns an iterator that iterates over numbers.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;number & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
@@ -55,8 +51,6 @@ at(index: number): number | undefined
 Returns the element at the given index. If no element is found, **undefined** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -91,8 +85,6 @@ A constructor used to create an empty ArkTS Uint8ClampedArray.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -112,8 +104,6 @@ constructor(length: number)
 A constructor used to create an ArkTS Uint8ClampedArray of a given length.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -141,8 +131,6 @@ A constructor that creates an ArkTS Uint8ClampedArray from an iterable object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -169,8 +157,6 @@ A constructor that creates an ArkTS Uint8ClampedArray from an array-like object 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -196,8 +182,6 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 A constructor that creates an ArkTS Uint8ClampedArray from an ArrayBuffer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -227,8 +211,6 @@ Copies elements within a given range from this ArkTS Uint8ClampedArray to anothe
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -245,7 +227,7 @@ Copies elements within a given range from this ArkTS Uint8ClampedArray to anothe
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 **Error codes:**
 
@@ -264,8 +246,6 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -274,7 +254,7 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[number, number] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
 
 **Error codes:**
 
@@ -292,8 +272,6 @@ every(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 Checks whether all elements in this ArkTS Uint8ClampedArray meet a given condition.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -328,8 +306,6 @@ Fills all elements in a given range in this ArkTS Uint8ClampedArray with a value
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -346,7 +322,7 @@ Fills all elements in a given range in this ArkTS Uint8ClampedArray with a value
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 **Error codes:**
 
@@ -365,8 +341,6 @@ Returns a new ArkTS Uint8ClampedArray that contains all elements that meet the g
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -381,7 +355,7 @@ Returns a new ArkTS Uint8ClampedArray that contains all elements that meet the g
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 **Error codes:**
 
@@ -399,8 +373,6 @@ find(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number | unde
 Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -435,8 +407,6 @@ Returns the index of the first element that passes a test provided by a callback
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -470,8 +440,6 @@ Calls a callback function for each element in this ArkTS Uint8ClampedArray.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -499,8 +467,6 @@ Creates an ArkTS Uint8ClampedArray from an array-like or iterator object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -515,7 +481,7 @@ Creates an ArkTS Uint8ClampedArray from an array-like or iterator object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 ## from
 
@@ -526,8 +492,6 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 Creates an ArkTS Uint8ClampedArray from an array-like object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -544,7 +508,7 @@ Creates an ArkTS Uint8ClampedArray from an array-like object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 ## from
 
@@ -555,8 +519,6 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 Creates an ArkTS Uint8ClampedArray from an iterator object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -573,7 +535,7 @@ Creates an ArkTS Uint8ClampedArray from an iterator object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 ## includes
 
@@ -584,8 +546,6 @@ includes(searchElement: number, fromIndex?: number): boolean
 Checks whether elements are contained in this ArkTS Uint8ClampedArray.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -621,8 +581,6 @@ Returns the index of the first occurrence of a value in this ArkTS Uint8ClampedA
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -657,8 +615,6 @@ Concatenates all elements in this ArkTS Uint8ClampedArray into a string, with a 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -692,8 +648,6 @@ Returns an iterator object that contains the key (index) of each element in this
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -702,7 +656,7 @@ Returns an iterator object that contains the key (index) of each element in this
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;number & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
@@ -720,8 +674,6 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 Obtains the index of the last occurrence of the specified value in this ArkTS Uint8ClampedArray.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -757,8 +709,6 @@ Applies a callback function to each element in this ArkTS Uint8ClampedArray and 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -773,7 +723,7 @@ Applies a callback function to each element in this ArkTS Uint8ClampedArray and 
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 **Error codes:**
 
@@ -792,8 +742,6 @@ Creates an ArkTS Uint8ClampedArray with a variable number of parameters.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -808,7 +756,7 @@ Creates an ArkTS Uint8ClampedArray with a variable number of parameters.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 ## reduce
 
@@ -819,8 +767,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArray>):
 Applies a reduce function on each element in this ArkTS Uint8ClampedArray and returns the final reduction result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -854,8 +800,6 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8ClampedA
 Applies a reduce function for each element in this ArkTS Uint8ClampedArray, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -891,8 +835,6 @@ Reversely traverses this ArkTS Uint8ClampedArray, applies a reduce function for 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -927,8 +869,6 @@ Reversely traverses this ArkTS Uint8ClampedArray, applies a reduce function on e
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -962,8 +902,6 @@ Reverses this ArkTS Uint8ClampedArray.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -972,7 +910,7 @@ Reverses this ArkTS Uint8ClampedArray.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 **Error codes:**
 
@@ -990,8 +928,6 @@ set(array: ArrayLike<number>, offset?: number): void
 Writes the elements in an array-like object to the given start position in sequence.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1021,8 +957,6 @@ Selects a range of elements in this ArkTS Uint8ClampedArray to create an ArkTS U
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1038,7 +972,7 @@ Selects a range of elements in this ArkTS Uint8ClampedArray to create an ArkTS U
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 **Error codes:**
 
@@ -1056,8 +990,6 @@ some(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 Checks whether any element in this ArkTS Uint8ClampedArray meets a given condition.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1092,8 +1024,6 @@ Sorts elements in this ArkTS Uint8ClampedArray and returns the sorted ArkTS Uint
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1108,7 +1038,7 @@ Sorts elements in this ArkTS Uint8ClampedArray and returns the sorted ArkTS Uint
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 **Error codes:**
 
@@ -1127,8 +1057,6 @@ Truncates an array from a specified position and returns a new ArkTS Uint8Clampe
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1144,7 +1072,7 @@ Truncates an array from a specified position and returns a new ArkTS Uint8Clampe
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) |
 
 **Error codes:**
 
@@ -1162,8 +1090,6 @@ toLocaleString(): string
 Generates digits that match the cultural conventions of the current system locale. Each element converts its digits to a string via its **toLocaleString** API, and these strings are then joined in sequence with commas (,).
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1192,8 +1118,6 @@ Converts an ArkTS Uint8ClampedArray into a string.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1221,8 +1145,6 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1231,7 +1153,7 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;number & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
@@ -1252,8 +1174,6 @@ Returns the item at that index.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1269,8 +1189,6 @@ Bottom-layer buffer used by an ArkTS Uint8ClampedArray.
 **Type:** ArrayBuffer
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1288,8 +1206,6 @@ Number of bytes occupied by an ArkTS Uint8ClampedArray.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1305,8 +1221,6 @@ Offset between the ArkTS Uint8ClampedArray and the start position of the ArrayBu
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1324,8 +1238,6 @@ Number of bytes occupied by each element in the ArkTS Uint8ClampedArray.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1341,8 +1253,6 @@ Number of elements in an ArkTS Uint8ClampedArray.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getKeyItemProperties
@@ -22,8 +22,6 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -58,43 +56,6 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) |
 
-**示例**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 获取密钥属性 */
-huks.getKeyItemProperties(keyAlias, emptyOptions, (error, data) => {
-  if (error) {
-    console.error(`callback: getKeyItemProperties failed`);
-  } else {
-    console.info(`callback: getKeyItemProperties success, data = ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 获取密钥属性 */
-huks.getKeyItemProperties(keyAlias, emptyOptions)
-  .then((data) => {
-    console.info(`promise: getKeyItemProperties success, data = ${JSON.stringify(data)}`);
-  });
-```
-
 
 ## getKeyItemProperties
 
@@ -108,8 +69,6 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -146,7 +105,3 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) |
-
-**示例**
-
-参见 [getKeyItemProperties](#getkeyitemproperties)

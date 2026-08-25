@@ -4,14 +4,12 @@ The **eap** module provides the extensible authentication mechanism to enable th
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## Modules to Import
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDockApp
@@ -18,8 +18,6 @@ function removeDockApp(admin: Want, bundleName: string, abilityName: string): vo
 > 以下应用不可通过本接口从快捷栏中移除：“应用中心”、“任务中心”、“文件管理”、“回收站”，否则报错9201018错误码。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -45,26 +43,3 @@ function removeDockApp(admin: Want, bundleName: string, abilityName: string): vo
 | [9201018](../errorcode-enterpriseDeviceManager.md#9201018-指定应用不支持操作) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 需根据实际情况进行替换
-  let bundleName: string = 'com.example.exampleapplication';
-  let abilityName: string = 'EntryAbility';
-  applicationManager.removeDockApp(wantTemp, bundleName, abilityName);
-  console.info('Succeeded in removing dock app.');
-} catch (err) {
-  console.error(`Failed to remove dock app. Code: ${err.code}, message: ${err.message}`);
-}
-```

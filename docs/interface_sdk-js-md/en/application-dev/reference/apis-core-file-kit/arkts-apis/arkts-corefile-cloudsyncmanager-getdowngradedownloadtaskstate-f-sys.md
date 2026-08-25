@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getDowngradeDownloadTaskState
@@ -15,8 +15,6 @@ function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Arra
 Supports querying the execution status of full data download tasks for integrated cloud drive applications.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 

@@ -1,17 +1,15 @@
 # event(Application Event Logging)
 
-Provides event name constants, including system event name constants and application event name constants. <br>The application event name constants are optional custom event names reserved when you call Write for application event logging.
+Provides event name constants, including system event name constants and application event name constants. The application event name constants are optional custom event names reserved when you call Write for application event logging.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

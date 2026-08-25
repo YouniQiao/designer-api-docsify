@@ -4,8 +4,6 @@ The module defines the application version information. You can use [getAppVersi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## appName
@@ -21,8 +19,6 @@ Application name.
 **Default:** appName
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used only in the FA model.
@@ -45,8 +41,6 @@ Application version number.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** 
 - API version 12 and later: This API can be used only in the FA model.
 
@@ -67,8 +61,6 @@ Application version name.
 **Default:** versionName
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used only in the FA model.

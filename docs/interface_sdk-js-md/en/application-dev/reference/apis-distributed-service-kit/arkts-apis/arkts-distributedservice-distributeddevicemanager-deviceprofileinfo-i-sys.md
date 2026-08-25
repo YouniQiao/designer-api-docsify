@@ -4,8 +4,6 @@ Defines the device profile information.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the device profile information.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## bleMac
@@ -27,8 +25,6 @@ Bluetooth BLE MAC address.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -46,8 +42,6 @@ Bluetooth BR MAC address.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Device ID.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -82,8 +74,6 @@ Device name.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Device SN.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -118,8 +106,6 @@ Device type.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -135,8 +121,6 @@ Firmware version.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -154,8 +138,6 @@ Hardware version.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -172,8 +154,6 @@ Internal product model. This parameter is left unspecified by default.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -185,13 +165,12 @@ isLocalDevice: boolean
 ```
 
 Whether the device is a local device.  
-- **false**: non-local device. - **true**: local device.
+- **false**: non-local device.  
+- **true**: local device.
 
 **Type:** boolean
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -209,8 +188,6 @@ MAC address.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -226,8 +203,6 @@ Manufacturer.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -245,8 +220,6 @@ Device model.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -262,8 +235,6 @@ Modification time.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -281,8 +252,6 @@ Product ID.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -299,8 +268,6 @@ Product name. This parameter is left unspecified by default.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -308,16 +275,14 @@ Product name. This parameter is left unspecified by default.
 ## protocolType
 
 ```TypeScript
-protocolType: int
+protocolType: number
 ```
 
 Protocol type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -335,8 +300,6 @@ Registration time.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -352,8 +315,6 @@ SDK version.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -371,8 +332,6 @@ Service list. This parameter is left unspecified by default.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -380,16 +339,14 @@ Service list. This parameter is left unspecified by default.
 ## setupType
 
 ```TypeScript
-setupType: int
+setupType: number
 ```
 
 Device type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -407,8 +364,6 @@ Share time.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -424,8 +379,6 @@ Starflash MAC address.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -443,8 +396,6 @@ Software version.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -460,8 +411,6 @@ Sub-product ID. This parameter is left unspecified by default.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -479,8 +428,6 @@ Registered device ID.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -496,8 +443,6 @@ Registered user ID.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 

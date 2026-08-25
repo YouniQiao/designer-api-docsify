@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## notifyFormsEnableUpdate
@@ -19,8 +19,6 @@ function notifyFormsEnableUpdate(
 Instructs the widgets to enable or disable updates. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -48,40 +46,6 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
 
-**Examples**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-try {
-  formHost.notifyFormsEnableUpdate(formIds, true, (error: BusinessError) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-try {
-  formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
-    console.info('formHost notifyFormsEnableUpdate success');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## notifyFormsEnableUpdate
 
@@ -92,8 +56,6 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 Instructs the widgets to enable or disable updates. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -125,7 +87,3 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
-
-**Examples**
-
-See [notifyFormsEnableUpdate](#notifyformsenableupdate)

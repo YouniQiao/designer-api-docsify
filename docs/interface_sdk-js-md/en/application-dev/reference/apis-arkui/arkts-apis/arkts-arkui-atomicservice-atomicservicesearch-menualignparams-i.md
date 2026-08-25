@@ -4,14 +4,12 @@ Sets the alignment between the drop-down list button and the drop-down list box.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from 'kits/@kit.ArkUI';
 ```
 
 ## alignType
@@ -22,11 +20,9 @@ alignType: MenuAlignType
 
 Alignment type. Default value: **MenuAlignType.START**
 
-**Type:** MenuAlignType
+**Type:** [MenuAlignType](../arkts-components/arkts-arkui-menualigntype-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -43,8 +39,6 @@ Offset of the drop-down list box relative to the drop-down list button after ali
 **Type:** Offset
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

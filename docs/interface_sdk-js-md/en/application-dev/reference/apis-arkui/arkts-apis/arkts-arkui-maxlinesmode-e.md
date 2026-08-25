@@ -4,8 +4,6 @@ Enumerates the display effects of the **TextArea** component when text exceeds t
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CLIP
@@ -17,8 +15,6 @@ CLIP = 0
 Text is clipped when it exceeds the maximum number of lines.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ SCROLL = 1
 Text can be scrolled when it exceeds the maximum number of lines.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

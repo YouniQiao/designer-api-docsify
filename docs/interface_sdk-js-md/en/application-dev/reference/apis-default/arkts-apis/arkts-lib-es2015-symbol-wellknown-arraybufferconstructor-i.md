@@ -1,7 +1,5 @@
 # ArrayBufferConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,5 +12,3 @@ readonly [Symbol.species]: ArrayBufferConstructor
 ```
 
 **Type:** [ArrayBufferConstructor](arkts-lib-es2015-symbol-wellknown-arraybufferconstructor-i.md)
-
-**ArkTS mode:** 

@@ -4,8 +4,6 @@ Describes the parameters of the Gatt client's characteristic read request.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CharacteristicReadRequest](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md)
@@ -15,7 +13,7 @@ Describes the parameters of the Gatt client's characteristic read request.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -29,8 +27,6 @@ The UUID of a CharacteristicReadReq instance
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Indicates the address of the client that initiates the read request
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md#deviceid)
@@ -69,8 +63,6 @@ Indicates the byte offset of the start position for reading characteristic value
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ The UUID of the service to which the characteristic belongs
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md#serviceuuid)
@@ -109,8 +99,6 @@ The Id of the read request
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

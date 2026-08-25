@@ -4,8 +4,6 @@ Indicates IMS registration technology.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ REGISTRATION_TECH_NONE = 0
 Indicates that ims has no registered technology.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -36,8 +32,6 @@ Indicates that ims registers LTE technology.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Indicates that ims registers IWLAN technology.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ REGISTRATION_TECH_NR = 3
 Indicates that ims registers NR technology.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

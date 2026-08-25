@@ -4,8 +4,6 @@ Enumerates the operations that can be performed on a DLP file. For example, the 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## ACTION_VIEW
@@ -17,8 +15,6 @@ ACTION_VIEW = 0x00000001
 View the file.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -32,8 +28,6 @@ Save the file.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## ACTION_SAVE_AS
@@ -45,8 +39,6 @@ ACTION_SAVE_AS = 0x00000004
 Save the file as another file.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -60,8 +52,6 @@ Edit the file.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## ACTION_SCREEN_CAPTURE
@@ -73,8 +63,6 @@ ACTION_SCREEN_CAPTURE = 0x00000010
 Capture screenshots of the file.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -88,8 +76,6 @@ Share the screen of the file.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## ACTION_SCREEN_RECORD
@@ -101,8 +87,6 @@ ACTION_SCREEN_RECORD = 0x00000040
 Record the screen on which the file is open.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -116,8 +100,6 @@ Copy the file.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## ACTION_PRINT
@@ -129,8 +111,6 @@ ACTION_PRINT = 0x00000100
 Print the file.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -144,8 +124,6 @@ Export the file.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## ACTION_PERMISSION_CHANGE
@@ -157,7 +135,5 @@ ACTION_PERMISSION_CHANGE = 0x00000400
 Modify the permissions on the file.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention

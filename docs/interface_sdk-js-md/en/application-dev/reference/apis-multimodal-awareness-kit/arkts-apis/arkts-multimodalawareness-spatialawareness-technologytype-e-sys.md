@@ -1,10 +1,8 @@
 # TechnologyType (System API)
 
-Enum for distance measurement technology types.@enum { int } TechnologyType
+Enum for distance measurement technology types.@enum { number } TechnologyType
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -19,8 +17,6 @@ BLE_RSSI = 0
 indicates Bluetooth Low Energy (BLE) technology
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ indicates Wi-Fi technology
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -55,8 +49,6 @@ ULTRASOUND = 2
 indicates ultrasound technology
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,8 +66,6 @@ indicates NearLink technology
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -91,8 +81,6 @@ WIFI_BLE_RSSI = 4
 indicates Wi-Fi and Bluetooth technology
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL
@@ -19,8 +17,6 @@ HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL = 34800000
 2. 密钥扩展出现无法解决的错误状态。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ UKey不存在。可能的原因：
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -54,8 +48,6 @@ UKey驱动出现未知错误。
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -69,8 +61,6 @@ HUKS_CRYPTO_EXTENSION_ERR_PIN_NO_AUTH = 34800003
 UKey PIN码未认证，需要先认证Ukey PIN码。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,8 +78,6 @@ HUKS_CRYPTO_EXTENSION_ERR_HANDLE_NOT_EXIST = 34800004
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -103,8 +91,6 @@ HUKS_CRYPTO_EXTENSION_ERR_HANDLE_UNAVAILABLE = 34800005
 句柄不可用。可能的原因：密钥扩展和Ukey的状态不一致。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,8 +106,6 @@ UKey PIN码错误，需要检查输入的PIN码。
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -135,8 +119,6 @@ HUKS_CRYPTO_EXTENSION_ERR_PIN_LOCKED = 34800007
 UKey PIN码被锁。可能的原因：PIN码输入错误次数过多。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

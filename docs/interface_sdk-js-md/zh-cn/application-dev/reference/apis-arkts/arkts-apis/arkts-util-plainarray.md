@@ -15,8 +15,8 @@ PlainArray可用于存储具有关联关系的key-value键值对集合，其中k
 ## 导入模块
 
 ```TypeScript
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { PlainArray } from 'kits/@kit.ArkTS';
+import { PlainArrayForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -26,9 +26,3 @@ import { PlainArrayForEachCb } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [PlainArrayForEachCb](arkts-arkts-plainarrayforeachcb-t.md) |

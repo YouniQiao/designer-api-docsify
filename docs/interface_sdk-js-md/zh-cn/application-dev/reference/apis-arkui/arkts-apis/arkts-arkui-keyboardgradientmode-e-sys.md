@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ NONE = 0
 键盘无模糊效果。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +33,6 @@ LINEAR_GRADIENT = 1
 键盘设置线性渐变模糊效果。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

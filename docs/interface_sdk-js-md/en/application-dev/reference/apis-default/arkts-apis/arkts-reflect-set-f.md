@@ -18,8 +18,6 @@ function set<T extends object, P extends PropertyKey>(
 
 Sets the property of target, equivalent to `target[propertyKey] = value` when `receiver === target`.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -39,8 +37,6 @@ Sets the property of target, equivalent to `target[propertyKey] = value` when `r
 ```TypeScript
 function set(target: object, propertyKey: PropertyKey, value: any, receiver?: any): boolean
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

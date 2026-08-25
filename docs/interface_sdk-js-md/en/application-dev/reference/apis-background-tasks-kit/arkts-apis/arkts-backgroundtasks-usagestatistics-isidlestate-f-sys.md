@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## isIdleState
@@ -15,8 +15,6 @@ function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void
 Checks whether the application with a specified bundle name is in the idle state.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -45,30 +43,6 @@ Checks whether the application with a specified bundle name is in the idle state
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.isIdleState("com.ohos.camera", (err: BusinessError, res: boolean) => {
-  if (err) {
-    console.error('BUNDLE_ACTIVE isIdleState callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE isIdleState callback succeeded, result: ' + JSON.stringify(res));
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.isIdleState("com.ohos.camera").then((res: boolean) => {
-  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE isIdleState promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
 
 ## isIdleState
 
@@ -79,8 +53,6 @@ function isIdleState(bundleName: string): Promise<boolean>
 Checks whether the application with a specified bundle name is in the idle state.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -113,7 +85,3 @@ Checks whether the application with a specified bundle name is in the idle state
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-system-service-operation-failure) |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
-
-**Examples**
-
-See [isIdleState](#isidlestate)

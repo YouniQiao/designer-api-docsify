@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getPermissionManagedState
@@ -19,8 +19,6 @@ function getPermissionManagedState(
 Obtains the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) of a specified application.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION
 
@@ -50,29 +48,3 @@ Obtains the management policy for the [user_grant permission](../../apis-ability
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { securityManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let appInstanceTemp: securityManager.ApplicationInstance = {
-      // Replace with actual values.
-      appIdentifier: '736498586',
-      appIndex: 0,
-      accountId: 100
-};
-let permissionTemp: string = 'ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION';
-try {
-    let result: securityManager.PermissionManagedState = securityManager.getPermissionManagedState(wantTemp, appInstanceTemp, permissionTemp);
-    console.info(`Succeeded in getting permission managed state, result : ${result}`);
-} catch(err) {
-    console.error(`Failed to get permission managed state. Code: ${err.code}, message: ${err.message}`);
-}
-```

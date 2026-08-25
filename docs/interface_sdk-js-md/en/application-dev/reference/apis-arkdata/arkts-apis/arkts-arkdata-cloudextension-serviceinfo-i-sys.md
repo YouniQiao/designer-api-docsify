@@ -4,8 +4,6 @@ Represents the cloud service information.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the cloud service information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'kits/@kit.ArkData';
 ```
 
 ## enableCloud
@@ -27,8 +25,6 @@ Whether the cloud service is enabled. The value true means that the cloud servic
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -46,8 +42,6 @@ Cloud account ID generated using SHA-256.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Cloud account ID generated using SHA-256.
 ## remainingSpace
 
 ```TypeScript
-remainingSpace: long
+remainingSpace: number
 ```
 
 Available account space on the server, in KB.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -73,16 +65,14 @@ Available account space on the server, in KB.
 ## totalSpace
 
 ```TypeScript
-totalSpace: long
+totalSpace: number
 ```
 
 Total account space on the server, in KB.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -91,16 +81,14 @@ Total account space on the server, in KB.
 ## user
 
 ```TypeScript
-user: int
+user: number
 ```
 
 Current user ID of the device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

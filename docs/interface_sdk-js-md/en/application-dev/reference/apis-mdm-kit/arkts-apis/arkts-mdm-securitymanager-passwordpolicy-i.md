@@ -4,14 +4,12 @@ Represents a device screen lock password policy.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## additionalDescription
@@ -25,8 +23,6 @@ Password complexity description, for example, "The password must contain 8 to 30
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Regular expression for password complexity.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -62,8 +56,6 @@ Encryption algorithm used to process password data. After the setting, the encry
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -71,16 +63,14 @@ Encryption algorithm used to process password data. After the setting, the encry
 ## validityPeriod
 
 ```TypeScript
-validityPeriod?: long
+validityPeriod?: number
 ```
 
 Password validity period, in ms.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

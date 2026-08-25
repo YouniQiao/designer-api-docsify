@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## bloom
@@ -19,8 +17,6 @@ bloom?: BloomSettings
 **类型：** [BloomSettings](arkts-arkgraphics3d-scenepostprocesssettings-bloomsettings-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,8 +34,6 @@ colorFringe?: ColorFringeSettings
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## toneMapping
@@ -53,8 +47,6 @@ toneMapping?: ToneMappingSettings
 **类型：** [ToneMappingSettings](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -71,7 +63,5 @@ vignette?: VignetteSettings
 **默认值：** undefined
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

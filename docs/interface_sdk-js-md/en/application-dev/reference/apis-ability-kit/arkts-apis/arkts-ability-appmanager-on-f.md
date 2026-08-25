@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('applicationState')
@@ -15,8 +15,6 @@ function on(type: 'applicationState', observer: ApplicationStateObserver): numbe
 Registers an observer to listen for lifecycle changes of all applications.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -43,46 +41,6 @@ Registers an observer to listen for lifecycle changes of all applications.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let applicationStateObserver: appManager.ApplicationStateObserver = {
-  onForegroundApplicationChanged(appStateData) {
-    console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
-  },
-  onAbilityStateChanged(abilityStateData) {
-    console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
-  },
-  onProcessCreated(processData) {
-    console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
-  },
-  onProcessDied(processData) {
-    console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
-  },
-  onProcessStateChanged(processData) {
-    console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
-  },
-  onAppStarted(appStateData) {
-    console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
-  },
-  onAppStopped(appStateData) {
-    console.info(`[appManager] onAppStopped: ${JSON.stringify(appStateData)}`);
-  }
-};
-
-try {
-  const observerId = appManager.on('applicationState', applicationStateObserver);
-  console.info(`[appManager] observerCode: ${observerId}`);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
 
 ## on('applicationState')
 
@@ -93,8 +51,6 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, bundle
 Registers an observer to listen for lifecycle changes of the specified application.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -121,45 +77,3 @@ Registers an observer to listen for lifecycle changes of the specified applicati
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let applicationStateObserver: appManager.ApplicationStateObserver = {
-  onForegroundApplicationChanged(appStateData) {
-    console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
-  },
-  onAbilityStateChanged(abilityStateData) {
-    console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
-  },
-  onProcessCreated(processData) {
-    console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
-  },
-  onProcessDied(processData) {
-    console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
-  },
-  onProcessStateChanged(processData) {
-    console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
-  },
-  onAppStarted(appStateData) {
-    console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
-  },
-  onAppStopped(appStateData) {
-    console.info(`[appManager] onAppStopped: ${JSON.stringify(appStateData)}`);
-  }
-};
-
-let bundleNameList = ['bundleName1', 'bundleName2'];
-
-try {
-  const observerId = appManager.on('applicationState', applicationStateObserver, bundleNameList);
-  console.info(`[appManager] observerCode: ${observerId}`);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```

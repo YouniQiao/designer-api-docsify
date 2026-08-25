@@ -8,8 +8,6 @@ Describes the state of the [AVPlayer](arkts-multimedia-media.md). Your applicati
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer

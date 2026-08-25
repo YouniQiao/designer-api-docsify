@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## getSystemInputMethodConfigAbility
 
 ```TypeScript
-function getSystemInputMethodConfigAbility(userId?: int): ElementName
+function getSystemInputMethodConfigAbility(userId?: number): ElementName
 ```
 
 Get the system input method config ability of a specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +26,7 @@ Get the system input method config ability of a specified user.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| userId | number | No |
 
 **Return value:**
 
@@ -45,11 +43,3 @@ Get the system input method config ability of a specified user.
 | 12800023 |
 | 12800024 |
 | 12800025 |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-
-let inputMethodConfig: bundleManager.ElementName = inputMethod.getSystemInputMethodConfigAbility();
-```

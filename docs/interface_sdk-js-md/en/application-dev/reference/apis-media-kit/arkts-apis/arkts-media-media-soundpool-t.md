@@ -8,8 +8,6 @@ SoundPool, which provides APIs for loading, unloading, playing, and stopping pla
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Property type:** _SoundPool

@@ -4,29 +4,25 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## content
 
 ```TypeScript
-content: string | Array<int>
+content: string | Array<number>
 ```
 
 如果内容是字符串，则这是一条文本短信。如果内容是字节数组，则这是一条数据短信。
 
-**类型：** ArkTS-Dyn: string \| Array&lt;number&gt;  <br>ArkTS-Sta：string \| Array&lt;int&gt;
+**类型：** string \| Array&lt;number&gt;
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -42,8 +38,6 @@ deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## destinationHost
@@ -58,23 +52,19 @@ destinationHost: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## destinationPort
 
 ```TypeScript
-destinationPort?: int
+destinationPort?: number
 ```
 
 如果发送数据消息，destinationPort 是必需的。否则是可选的。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -90,8 +80,6 @@ sendCallback?: AsyncCallback<ISendShortMessageCallback>
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## serviceCenter
@@ -106,23 +94,20 @@ serviceCenter?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## slotId
 
 ```TypeScript
-slotId: int
+slotId: number
 ```
 
 用于发送短信的SIM卡槽ID：  
-- 0：卡槽1。 - 1：卡槽2。
+- 0：卡槽1。  
+- 1：卡槽2。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms

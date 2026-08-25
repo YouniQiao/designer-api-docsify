@@ -4,14 +4,12 @@ SSAP客户端类，提供了和服务端进行连接和数据传输等操作方�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## callMethod
@@ -23,8 +21,6 @@ callMethod(method: Method): Promise<Method>
 调用服务端方法。例如，在设备控制场景中，客户端可调用服务端提供的配置方法来远程设置设备参数或触发特定操作。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -67,8 +63,6 @@ offEventNotify(callback?: Callback<Event>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -91,8 +85,6 @@ onEventNotify(callback: Callback<Event>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -114,8 +106,6 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 读取服务端描述符。需在调用[connect](arkts-connectivity-ssap-client-i.md#connect)建立连接成功后使用，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -157,8 +147,6 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 启用或禁用服务端属性值更改时的指示（当属性值发生变化时，服务端主动向客户端发送通知）。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -207,8 +195,6 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 > [setPropertyIndication](#setpropertyindication)。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## colorSpace
@@ -25,8 +23,6 @@ colorSpace?: colorSpaceManager.ColorSpace
 **类型：** colorSpaceManager.ColorSpace
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,108 +42,8 @@ isAuto?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
-
-@Entry
-@Component
-struct SnapshotColorModeExample {
-  @State pixmap: image.PixelMap | undefined = undefined;
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
-        // $r('app.media.img')需要替换为开发者所需的图像资源文件
-        Image($r('app.media.img'))
-          .autoResize(true)
-          .width(200)
-          .height(200)
-          .margin(5)
-          .id("root")
-      }
-
-      Button("click to generate UI snapshot")
-        .onClick(() => {
-          this.getUIContext().getComponentSnapshot().get("root", (error: Error, pixmap: image.PixelMap) => {
-            if (error) {
-              console.error(`error:${JSON.stringify(error)}`)
-              return;
-            }
-            this.pixmap = pixmap
-          }, {
-            scale: 2,
-            waitUntilRenderFinished: true,
-            // 设置色彩空间为：DISPLAY_P3
-            colorMode: { colorSpace: colorSpaceManager.ColorSpace.DISPLAY_P3, isAuto: false }
-          })
-        }).margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Image, $r, BusinessError, Row, HorizontalAlign, Column, Component, Button, Color } from '@kit.ArkUI';
-import { State } from '@ohos.arkui.stateManagement';
-import image from '@ohos.multimedia.image';
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
-
-@Entry
-@Component
-struct SnapshotColorModeExample {
-  @State pixmap: image.PixelMap | undefined = undefined;
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
-        Image($r('app.media.startIcon'))
-          .autoResize(true)
-          .width(200)
-          .height(200)
-          .margin(5)
-          .id('root')
-      }
-
-      Button('click to generate UI snapshot')
-        .onClick(() => {
-          this.getUIContext().getComponentSnapshot().get('root', (error: BusinessError|null, pixmap: image.PixelMap|undefined) => {
-            if (pixmap) {
-              this.pixmap = pixmap
-            } else {
-              console.error('error: ' + JSON.stringify(error))
-              return;
-            }
-          }, {
-            scale: 2,
-            waitUntilRenderFinished: true,
-            // 设置色彩空间为：DISPLAY_P3
-            colorMode: { colorSpace: colorSpaceManager.ColorSpace.DISPLAY_P3, isAuto: false }
-          })
-        }).margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-```

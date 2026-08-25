@@ -1,10 +1,8 @@
 # SceneType
 
-Enumeration type of scene.@enum { int } SceneType
+Enumeration type of scene.@enum { number } SceneType
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -17,8 +15,6 @@ GRID_TO_PHOTO_BROWSER = 0
 Tap the grid icon to browse the large image.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ PHOTO_BROWSER_SWIPE = 1
 Swipe left or right in the large image scene.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

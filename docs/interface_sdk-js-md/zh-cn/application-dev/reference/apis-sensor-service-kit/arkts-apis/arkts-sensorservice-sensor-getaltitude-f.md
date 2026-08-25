@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getAltitude
@@ -21,8 +21,6 @@ function getAltitude(seaPressure: number, currentPressure: number, callback: Asy
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)(seaPressure: double, currentPressure: double, callback: AsyncCallback&lt;double&gt;)
@@ -36,33 +34,6 @@ function getAltitude(seaPressure: number, currentPressure: number, callback: Asy
 | seaPressure | number | 是 |
 | currentPressure | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.getAltitude(0, 200, (err: BusinessError, data: number) => {
-  if (err) {
-    console.error(`Failed to operate. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info("Succeeded in getting getAltitude interface get data: " + data);
-});
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getAltitude(0, 200);
-promise.then((data: number) => {
-  console.info('Succeeded in getting sensor_getAltitude_Promise success', data);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
 
 
 ## getAltitude
@@ -78,8 +49,6 @@ function getAltitude(seaPressure: number, currentPressure: number): Promise<numb
 > [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -99,7 +68,3 @@ function getAltitude(seaPressure: number, currentPressure: number): Promise<numb
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-参见 [getAltitude](#getaltitude)

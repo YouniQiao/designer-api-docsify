@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ color?: ResourceColor
 
 设置文本识别成功后的实体颜色。默认值：'#ff0a59f7'，表示蓝色（不透明度为100%）
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,11 +37,9 @@ decoration?: DecorationStyleInterface
 
 设置文本识别成功后的实体装饰线样式。默认值：{ type: TextDecorationType.Underline, color: 与实体颜色一致, style: TextDecorationStyle.SOLID }
 
-**类型：** DecorationStyleInterface
+**类型：** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ enablePreviewMenu?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -85,8 +77,6 @@ onDetectResultUpdate?: Callback<string>
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -104,8 +94,6 @@ types: TextDataDetectorType[]
 **类型：** [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md)[]
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

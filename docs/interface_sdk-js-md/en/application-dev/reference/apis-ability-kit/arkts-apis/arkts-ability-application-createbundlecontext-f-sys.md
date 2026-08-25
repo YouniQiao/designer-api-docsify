@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
+import { application } from 'kits/@kit.AbilityKit';
 ```
 
 ## createBundleContext
@@ -22,8 +22,6 @@ Creates the context for an application. This API uses a promise to return the re
 > the input parameters **Context**, **bundleName**, and **moduleName**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -53,26 +51,3 @@ Creates the context for an application. This API uses a promise to return the re
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { UIAbility, application, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    let moduleContext: common.Context;
-    try {
-      application.createBundleContext(this.context, 'bundlename').then((data: Context)=>{
-        moduleContext = data;
-        console.info('createBundleContext success!');
-      }).catch((error : BusinessError)=>{
-        console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-      })
-    } catch (error) {
-      console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```

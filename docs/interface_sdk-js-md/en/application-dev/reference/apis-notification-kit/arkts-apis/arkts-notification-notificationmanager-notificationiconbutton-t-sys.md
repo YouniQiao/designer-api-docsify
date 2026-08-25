@@ -8,8 +8,6 @@ System notification button.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.

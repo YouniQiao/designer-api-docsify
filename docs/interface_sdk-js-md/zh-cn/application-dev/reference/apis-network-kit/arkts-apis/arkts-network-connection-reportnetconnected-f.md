@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## reportNetConnected
@@ -18,8 +18,6 @@ function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>)
 > 该接口用于浏览器连接portal网络，网络认证成功后，向网络管理上报网络连接成功，网络管理会触发网络探测，更新网络状态。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
@@ -42,44 +40,6 @@ function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>)
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  connection.reportNetConnected(netHandle, (error: BusinessError) => {
-    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-  });
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  connection.reportNetConnected(netHandle, (error: BusinessError|null) => {
-    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-  });
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  connection.reportNetConnected(netHandle).then(() => {
-    console.info(`Succeeded to report`);
-  });
-});
-```
-
 
 ## reportNetConnected
 
@@ -90,8 +50,6 @@ function reportNetConnected(netHandle: NetHandle): Promise<void>
 向网络管理报告网络处于可用状态。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
@@ -118,7 +76,3 @@ function reportNetConnected(netHandle: NetHandle): Promise<void>
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [reportNetConnected](#reportnetconnected)

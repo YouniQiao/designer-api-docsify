@@ -8,8 +8,6 @@ type DataObserver = (sessionId: string, fields: Array<string>) => void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 **参数：**

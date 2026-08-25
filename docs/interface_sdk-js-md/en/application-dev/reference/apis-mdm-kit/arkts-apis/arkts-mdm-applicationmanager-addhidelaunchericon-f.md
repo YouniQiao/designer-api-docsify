@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addHideLauncherIcon
@@ -22,8 +22,6 @@ Adds applications to the home screen icon hide list.
 > still be displayed on the home screen.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 

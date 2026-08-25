@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setLockState
 
 ```TypeScript
-function setLockState(slotId: int, options: LockInfo, callback: AsyncCallback<LockStatusResponse>): void
+function setLockState(slotId: number, options: LockInfo, callback: AsyncCallback<LockStatusResponse>): void
 ```
 
 Set the lock status of the SIM card in the specified slot.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Set the lock status of the SIM card in the specified slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | options | [LockInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-lockinfo-i-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes |
 
@@ -46,50 +44,16 @@ Set the lock status of the SIM card in the specified slot.
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let lockInfo: sim.LockInfo = {
-    lockType: sim.LockType.PIN_LOCK,
-    password: "1234",
-    state: sim.LockState.LOCK_OFF
-};
-sim.setLockState(0, lockInfo, (err: BusinessError, data: sim.LockStatusResponse) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let lockInfo: sim.LockInfo = {
-    lockType: sim.LockType.PIN_LOCK,
-    password: "1234",
-    state: sim.LockState.LOCK_OFF
-};
-sim.setLockState(0, lockInfo).then((data: sim.LockStatusResponse) => {
-    console.info(`setLockState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`setLockState failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setLockState
 
 ```TypeScript
-function setLockState(slotId: int, options: LockInfo): Promise<LockStatusResponse>
+function setLockState(slotId: number, options: LockInfo): Promise<LockStatusResponse>
 ```
 
 Set the lock status of the SIM card in the specified slot.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -101,7 +65,7 @@ Set the lock status of the SIM card in the specified slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | options | [LockInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-lockinfo-i-sys.md) | Yes |
 
 **Return value:**
@@ -123,7 +87,3 @@ Set the lock status of the SIM card in the specified slot.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
-
-**Examples**
-
-See [setLockState](#setlockstate)

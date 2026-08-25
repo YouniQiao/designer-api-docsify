@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ NETWORK = 1
 网络访问资源。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -36,8 +32,6 @@ cpu-runninglock资源。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ TIMER = 1 << 2
 timer任务资源。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -68,8 +60,6 @@ work任务资源。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ AUTO_SYNC = 1 << 4
 自动同步的资源。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -100,8 +88,6 @@ pushkit资源。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +101,6 @@ FREEZE = 1 << 6
 冻结应用资源。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 

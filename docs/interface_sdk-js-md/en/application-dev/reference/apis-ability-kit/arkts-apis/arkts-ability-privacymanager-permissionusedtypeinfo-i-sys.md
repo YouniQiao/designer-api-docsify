@@ -4,8 +4,6 @@ Represents detailed information about the use of a permission.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents detailed information about the use of a permission.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## permissionName
@@ -28,8 +26,6 @@ Name of the sensitive permission accessed.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Name of the sensitive permission accessed.
 ## tokenId
 
 ```TypeScript
-tokenId: int
+tokenId: number
 ```
 
 Token ID of the application that accesses the sensitive permission.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -63,8 +57,6 @@ Usage type of the sensitive permission.
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 

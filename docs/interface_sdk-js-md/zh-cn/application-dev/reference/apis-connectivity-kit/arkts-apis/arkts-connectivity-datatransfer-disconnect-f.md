@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disconnect
@@ -15,8 +15,6 @@ function disconnect(params: ConnectionParams): Promise<void>
 断连远端设备。需在通过[dataTransfer.connect](arkts-connectivity-datatransfer-connect-f.md)成功建立连接后调用，用于断开已建立的远端设备连接。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 

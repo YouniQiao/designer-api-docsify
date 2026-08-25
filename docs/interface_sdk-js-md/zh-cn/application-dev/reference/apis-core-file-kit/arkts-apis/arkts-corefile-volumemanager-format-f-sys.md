@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## format
@@ -15,8 +15,6 @@ function format(volumeId: string, fsType: string, callback: AsyncCallback<void>)
 对指定卷设备进行格式化，使用callback异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的 卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
 
@@ -45,72 +43,6 @@ function format(volumeId: string, fsType: string, callback: AsyncCallback<void>)
 | 13600008 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-let fsType: string = "";
-volumeManager.format(volumeId, fsType).then(() => {
-  console.info("format successfully");
-}).catch((error: BusinessError) => {
-  console.error(`Failed to format. Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-let fsType: string = "";
-volumeManager.format(volumeId, fsType).then(() => {
-  console.info("format successfully");
-}).catch((error: BusinessError): void => {
-  console.error(`Failed to format. Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-let fsType: string = "";
-volumeManager.format(volumeId, fsType, (error: BusinessError) => {
-  if (error) {
-    console.error(`format failed, code is: ${error.code}, message is: ${error.message}`);
-    return;
-  }
-  // 对指定卷设备格式化成功的回调
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-let fsType: string = "";
-volumeManager.format(volumeId, fsType, (error: BusinessError | null) => {
-  if (error) {
-    console.error(`format failed, code is: ${error.code}, message is: ${error.message}`);
-    return;
-  }
-  // 对指定卷设备格式化成功的回调
-});
-```
-
 
 ## format
 
@@ -121,8 +53,6 @@ function format(volumeId: string, fsType: string): Promise<void>
 对指定卷设备进行格式化，使用Promise异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的 卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
 
@@ -155,7 +85,3 @@ function format(volumeId: string, fsType: string): Promise<void>
 | 13600005 |
 | 13600008 |
 | 13900042 |
-
-**示例**
-
-参见 [format](#format)

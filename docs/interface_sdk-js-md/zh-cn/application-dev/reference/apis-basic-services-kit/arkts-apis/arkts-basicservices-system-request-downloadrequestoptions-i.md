@@ -2,8 +2,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from '@kit.BasicServicesKit';
+import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -25,8 +23,6 @@ complete?: () => void
 接口调用结束的回调函数。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -43,8 +39,6 @@ fail?: (data: any, code: number) => void
 Called when downloading fails.
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -68,8 +62,6 @@ success?: (data: DownloadResponse) => void
 Called when the files are successfully downloaded.
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -95,8 +87,6 @@ Download description. The default value is the file name.
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** description
@@ -114,8 +104,6 @@ Name of the file to downloaded. The value is obtained from the current request o
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -135,8 +123,6 @@ Request header.
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** headers
@@ -154,8 +140,6 @@ Resource URL.
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 

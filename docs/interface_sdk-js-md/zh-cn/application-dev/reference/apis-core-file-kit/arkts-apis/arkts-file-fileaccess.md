@@ -11,8 +11,6 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 23
 
 **替代接口：** [fileIo](arkts-corefile-fileio-n.md)
@@ -22,7 +20,7 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 ## 导入模块
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## 汇总

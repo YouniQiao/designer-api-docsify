@@ -4,8 +4,6 @@ FullScreenExitHandler 是 Web 组件提供的全屏退出处理类，用于响�
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -23,8 +21,6 @@ FullScreenExitHandler的构造函数。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -38,8 +34,6 @@ exitFullScreen(): void
 通知开发者Web组件退出全屏。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

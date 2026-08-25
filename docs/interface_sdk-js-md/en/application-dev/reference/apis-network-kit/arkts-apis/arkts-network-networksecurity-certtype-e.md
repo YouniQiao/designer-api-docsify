@@ -4,8 +4,6 @@ Enumerates certificate types.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## CERT_TYPE_PEM
@@ -18,8 +16,6 @@ PEM certificate
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## CERT_TYPE_DER
@@ -31,7 +27,5 @@ CERT_TYPE_DER = 1
 DER certificate.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack

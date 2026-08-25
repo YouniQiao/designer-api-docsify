@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,26 +11,18 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## setDensityDpi
 
-ArkTS-Dyn:
 ```TypeScript
 setDensityDpi(densityDpi: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void
 ```
 
 设置屏幕的像素密度，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,7 +32,7 @@ setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| densityDpi | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| densityDpi | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -53,165 +43,15 @@ setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let densityDpi: number = 320;
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option: VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-// 创建虚拟屏幕
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  // 设置屏幕的像素密度
-  screenClass.setDensityDpi(densityDpi, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set the pixel density of the screen to 320. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the density dpi.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let densityDpi: double = 320;
-
-let option : screen.VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: ''
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  screenClass.setDensityDpi(densityDpi, (err: BusinessError | null) => {
-    const errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to set the pixel density of the screen to 320. Code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the density dpi.');
-  });
-}).catch((err: Error) => {
-  console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let densityDpi: number = 320;
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option: VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-// 创建虚拟屏幕
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  // 设置屏幕的像素密度
-  let promise: Promise<void> = screenClass.setDensityDpi(densityDpi);
-  promise.then(() => {
-    console.info('Succeeded in setting the pixel density of the screen to 320.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the pixel density of the screen to 320. Code: ${err.code}, message: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta:示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let densityDpi: double = 320;
-
-let option : screen.VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: ''
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  let promise: Promise<void> = screenClass.setDensityDpi(densityDpi);
-  promise.then(() => {
-    console.info('Succeeded in setting the pixel density of the screen to 320.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set the pixel density of the screen to 320. Code: ${err?.code}, message: ${err?.message}`);
-  });
-}).catch((err: Error) => {
-  console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 ## setDensityDpi
 
-ArkTS-Dyn:
 ```TypeScript
 setDensityDpi(densityDpi: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setDensityDpi(densityDpi: double): Promise<void>
 ```
 
 设置屏幕的像素密度，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -221,7 +61,7 @@ setDensityDpi(densityDpi: double): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| densityDpi | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| densityDpi | number | 是 |
 
 **返回值：**
 
@@ -236,10 +76,6 @@ setDensityDpi(densityDpi: double): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-参见 [setDensityDpi](#setdensitydpi)
 
 ## setOrientation
 
@@ -251,8 +87,6 @@ setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -272,199 +106,6 @@ setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option: VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-// 创建虚拟屏幕
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  // 设置屏幕方向为垂直方向
-  screenClass.setOrientation(screen.Orientation.VERTICAL, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set the vertical orientation. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the vertical orientation.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let option : screen.VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: ''
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  screenClass.setOrientation(screen.Orientation.VERTICAL, (err: BusinessError | null) => {
-    const errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to set the vertical orientation. Code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the vertical orientation.');
-  });
-}).catch((err: Error) => {
-  console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option: VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-// 创建虚拟屏幕
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  // 设置屏幕方向为垂直方向
-  let promise: Promise<void> = screenClass.setOrientation(screen.Orientation.VERTICAL);
-  promise.then(() => {
-    console.info('Succeeded in setting the vertical orientation.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the vertical orientation. Code: ${err.code}, message: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let option : screen.VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: ''
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  let promise: Promise<void> = screenClass.setOrientation(screen.Orientation.VERTICAL);
-  promise.then(() => {
-    console.info('Succeeded in setting the vertical orientation.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set the vertical orientation. Code: ${err?.code}, message: ${err?.message}`);
-  });
-}).catch((err: Error) => {
-  console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let orientationOptions : screen.OrientationOptions = {
-  needAnimation: true,
-  ignoreRotationLock: false,
-};
-
-let screenClass: screen.Screen | null = null;
-// 获取所有屏幕对象
-let screensPromise: Promise<Array<screen.Screen>> = screen.getAllScreens();
-screensPromise.then((data: Array<screen.Screen>) => {
-  if (data.length > 0) {
-    screenClass = data[0];
-    // 设置屏幕方向为垂直方向，带动画且不忽略旋转锁定
-    let promise: Promise<void> = screenClass.setOrientation(screen.Orientation.VERTICAL, orientationOptions);
-    promise.then(() => {
-      console.info('Succeeded in setting the vertical orientation with orientationOptions.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to set the vertical orientation with orientationOptions. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let orientationOptions : screen.OrientationOptions = {
-  needAnimation: true,
-  ignoreRotationLock: false,
-};
-
-let screensPromise: Promise<Array<screen.Screen>> = screen.getAllScreens();
-screensPromise.then((data: Array<screen.Screen>) => {
-  if (data.length > 0) {
-    let screenClass: screen.Screen = data[0];
-    let promise: Promise<void> = screenClass.setOrientation(screen.Orientation.VERTICAL, orientationOptions);
-    promise.then(() => {
-      console.info('Succeeded in setting the vertical orientation with orientationOptions.');
-    }).catch((err: Error) => {
-      console.error(`Failed to set the vertical orientation with orientationOptions. Code: ${err?.code}, message: ${err?.message}`);
-    });
-  }
-}).catch((err: Error) => {
-  console.error(`Failed to get all screens. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 ## setOrientation
 
 ```TypeScript
@@ -474,8 +115,6 @@ setOrientation(orientation: Orientation): Promise<void>
 设置屏幕方向，使用Promise异步回调。当设置的方向符合[应用旋转策略](../../../quick-start/module-configuration-file.md#abilities标签)（可通过配置 module.json5文件中abilities标签的orientation字段设置应用旋转策略）时，屏幕方向才会发生改变；当设置方向不符合应用旋转策略时，屏幕方向不会发生变化，且接口不会抛异常。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -501,10 +140,6 @@ setOrientation(orientation: Orientation): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-参见 [setOrientation](#setorientation)
-
 ## setOrientation
 
 ```TypeScript
@@ -514,8 +149,6 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 设置屏幕方向
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -544,27 +177,15 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-参见 [setOrientation](#setorientation)
-
 ## setScreenActiveMode
 
-ArkTS-Dyn:
 ```TypeScript
 setScreenActiveMode(modeIndex: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void
 ```
 
 设置屏幕当前显示模式，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -574,7 +195,7 @@ setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modeIndex | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| modeIndex | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -585,165 +206,15 @@ setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option: VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-// 创建虚拟屏幕
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  let modeIndex: number = 0;
-  // 设置屏幕当前显示模式
-  screenClass.setScreenActiveMode(modeIndex, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set screen active mode 0. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the screen active mode 0.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let option : screen.VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: ''
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  let modeIndex: long = 0;
-  screenClass.setScreenActiveMode(modeIndex, (err: BusinessError | null) => {
-    const errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to set screen active mode 0. Code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the screen active mode 0.');
-  });
-}).catch((err: Error) => {
-  console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option: VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-// 创建虚拟屏幕
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  let modeIndex: number = 0;
-  // 设置屏幕当前显示模式
-  let promise: Promise<void> = screenClass.setScreenActiveMode(modeIndex);
-  promise.then(() => {
-    console.info('Succeeded in setting screen active mode 0.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set screen active mode 0. Code: ${err.code}, message: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let option : screen.VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: ''
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  let modeIndex: number = 0;
-  let promise: Promise<void> = screenClass.setScreenActiveMode(modeIndex);
-  promise.then(() => {
-    console.info('Succeeded in setting screen active mode 0.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set screen active mode 0. Code: ${err?.code}, message: ${err?.message}`);
-  });
-}).catch((err: Error) => {
-  console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 ## setScreenActiveMode
 
-ArkTS-Dyn:
 ```TypeScript
 setScreenActiveMode(modeIndex: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setScreenActiveMode(modeIndex: long): Promise<void>
 ```
 
 设置屏幕当前显示模式，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -753,7 +224,7 @@ setScreenActiveMode(modeIndex: long): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modeIndex | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| modeIndex | number | 是 |
 
 **返回值：**
 
@@ -769,23 +240,17 @@ setScreenActiveMode(modeIndex: long): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-参见 [setScreenActiveMode](#setscreenactivemode)
-
 ## activeModeIndex
 
 ```TypeScript
-readonly activeModeIndex: long
+readonly activeModeIndex: number
 ```
 
 当前屏幕所处模式索引。模式索引的当前值和值的范围，会根据屏幕当前分辨率、刷新率和设备硬件差异产生变化。该参数为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -794,16 +259,14 @@ readonly activeModeIndex: long
 ## id
 
 ```TypeScript
-readonly id: long
+readonly id: number
 ```
 
 屏幕的id，该参数应为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -821,8 +284,6 @@ readonly orientation: Orientation
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -830,16 +291,14 @@ readonly orientation: Orientation
 ## parent
 
 ```TypeScript
-readonly parent: long
+readonly parent: number
 ```
 
 屏幕所属群组的id，该参数为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -848,16 +307,14 @@ readonly parent: long
 ## rsId
 
 ```TypeScript
-readonly rsId: long
+readonly rsId: number
 ```
 
 屏幕端口的id，该参数为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -874,8 +331,6 @@ readonly screenType?: ScreenType
 **类型：** [ScreenType](arkts-arkui-screen-screentype-e-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -895,8 +350,6 @@ readonly serialNumber?: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -913,8 +366,6 @@ readonly sourceMode: ScreenSourceMode
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -930,8 +381,6 @@ readonly supportedModeInfo: Array<ScreenModeInfo>
 **类型：** Array&lt;[ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md)&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

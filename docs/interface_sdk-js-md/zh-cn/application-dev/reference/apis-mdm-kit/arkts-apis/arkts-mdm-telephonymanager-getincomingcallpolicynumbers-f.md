@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getIncomingCallPolicyNumbers
@@ -15,8 +15,6 @@ function getIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy):
 获取通话呼入的允许或禁用名单。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -46,45 +44,6 @@ function getIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy):
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // 设置策略类型为禁用名单
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  // 获取通话呼入禁用名单
-  let numbers: Array<string> = telephonyManager.getIncomingCallPolicyNumbers(wantTemp, policy);
-  console.info(`Succeeded in getting incoming call policy. result: ${JSON.stringify(numbers)}`);
-} catch (err) {
-  console.error(`Failed to get incoming call policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-try {
-  // 设置策略类型为禁用名单
-  // 参数需根据实际情况进行替换
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  // 获取通话呼入禁用名单
-  let numbers: Array<string> = telephonyManager.getIncomingCallPolicyNumbers(null, policy);
-  console.info(`Succeeded in getting incoming call policy. result: ${JSON.stringify(numbers)}`);
-} catch (err) {
-  console.error(`Failed to get incoming call policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getIncomingCallPolicyNumbers
 
@@ -95,8 +54,6 @@ function getIncomingCallPolicyNumbers(admin: Want | null, policy: adminManager.P
 获取通话呼入的允许或禁用名单。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -125,7 +82,3 @@ function getIncomingCallPolicyNumbers(admin: Want | null, policy: adminManager.P
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [getIncomingCallPolicyNumbers](#getincomingcallpolicynumbers)

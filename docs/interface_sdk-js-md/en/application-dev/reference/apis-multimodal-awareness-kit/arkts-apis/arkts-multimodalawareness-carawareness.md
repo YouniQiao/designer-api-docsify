@@ -4,8 +4,6 @@ This module provides the capability to use car awareness
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
@@ -13,7 +11,7 @@ This module provides the capability to use car awareness
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

@@ -25,8 +25,6 @@ Creates a cross-process embedded component to display the UI of the EmbeddedUIEx
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -50,11 +48,9 @@ EmbeddedComponent(
 )
 ```
 
-Construct the EmbeddedComponent.<br/> Called when the EmbeddedComponent is used.
+Construct the EmbeddedComponent.Called when the EmbeddedComponent is used.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

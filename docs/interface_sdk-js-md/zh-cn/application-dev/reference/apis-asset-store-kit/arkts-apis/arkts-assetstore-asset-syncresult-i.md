@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## failedCount
@@ -25,8 +23,6 @@ readonly failedCount?: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -42,8 +38,6 @@ readonly resultCode: number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## totalCount
@@ -57,7 +51,5 @@ readonly totalCount?: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.Asset

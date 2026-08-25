@@ -4,8 +4,6 @@ NavDestination上下文信息。
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ getConfigInRouteMap(): RouteMapConfig | undefined
 获取当前NavDestination的路由配置信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ mode?: NavDestinationMode
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -69,8 +63,6 @@ navDestinationId?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -85,11 +77,9 @@ pathInfo: NavPathInfo
 
 跳转NavDestination时指定的参数。
 
-**类型：** NavPathInfo
+**类型：** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -105,11 +95,9 @@ pathStack: NavPathStack
 
 当前NavDestination所处的导航控制器。
 
-**类型：** NavPathStack
+**类型：** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

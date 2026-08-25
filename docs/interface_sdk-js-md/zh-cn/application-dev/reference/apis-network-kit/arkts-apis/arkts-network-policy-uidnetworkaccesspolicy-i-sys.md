@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## [uid: string]
@@ -27,8 +25,6 @@ import { policy } from '@kit.NetworkKit';
 **类型：** [NetworkAccessPolicy](arkts-network-policy-networkaccesspolicy-i-sys.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

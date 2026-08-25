@@ -4,14 +4,12 @@ Represents the EAP profile information.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## Modules to Import
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## altSubjectMatch
@@ -25,8 +23,6 @@ A string to match the alternate subject.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -42,8 +38,6 @@ Anonymous identity.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## caCertAliases
@@ -57,8 +51,6 @@ CA certificate alias.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -74,8 +66,6 @@ CA certificate path.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## certEntry
@@ -89,8 +79,6 @@ CA certificate content.
 **Type:** Uint8Array
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -106,8 +94,6 @@ CA certificate password.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## clientCertAliases
@@ -121,8 +107,6 @@ Client certificate alias.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -138,8 +122,6 @@ A string to match the domain suffix.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## eapMethod
@@ -153,8 +135,6 @@ EAP authentication method.
 **Type:** EapMethod
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -170,8 +150,6 @@ Sub-ID of the SIM card.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## identity
@@ -185,8 +163,6 @@ Identity information.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -202,8 +178,6 @@ Password.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## phase2Method
@@ -217,8 +191,6 @@ Phase 2 authentication method.
 **Type:** Phase2Method
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -234,8 +206,6 @@ Public land mobile network (PLMN) of the passpoint credential provider.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## realm
@@ -249,7 +219,5 @@ Realm for the passpoint credential.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap

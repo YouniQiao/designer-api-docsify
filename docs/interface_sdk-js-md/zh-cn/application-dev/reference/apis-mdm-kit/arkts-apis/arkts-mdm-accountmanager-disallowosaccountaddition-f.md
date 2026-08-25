@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disallowOsAccountAddition
@@ -15,8 +15,6 @@ function disallowOsAccountAddition(admin: Want, disallow: boolean, accountId?: n
 禁止用户添加账号。调用成功后，系统将禁止指定用户或所有用户添加新账号。适用于企业设备管理场景，如防止员工随意创建本地账号、加强设备安全管理等。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
@@ -40,24 +38,3 @@ function disallowOsAccountAddition(admin: Want, disallow: boolean, accountId?: n
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  accountManager.disallowOsAccountAddition(wantTemp, true, 100);
-  console.info('Succeeded in disallowing os account addition.');
-} catch (err) {
-  console.error(`Failed to disallow os account addition. Code: ${err.code}, message: ${err.message}`);
-}
-```

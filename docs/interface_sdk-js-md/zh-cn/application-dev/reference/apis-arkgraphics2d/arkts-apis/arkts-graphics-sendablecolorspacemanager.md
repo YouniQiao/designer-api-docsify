@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## 汇总

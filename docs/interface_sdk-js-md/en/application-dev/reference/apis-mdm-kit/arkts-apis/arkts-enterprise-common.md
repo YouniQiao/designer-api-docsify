@@ -6,8 +6,6 @@ The module provides pure type definitions for common capabilities within MDM Kit
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -15,7 +13,7 @@ The module provides pure type definitions for common capabilities within MDM Kit
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@kit.MDMKit';
+import { common } from 'kits/@kit.MDMKit';
 ```
 
 ## Summary

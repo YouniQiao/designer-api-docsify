@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## factoryReset
@@ -15,8 +15,6 @@ function factoryReset(): Promise<void>
 Resets the network settings to the factory defaults. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -38,16 +36,3 @@ Resets the network settings to the factory defaults. This API uses a promise to 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.factoryReset().then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-})
-```

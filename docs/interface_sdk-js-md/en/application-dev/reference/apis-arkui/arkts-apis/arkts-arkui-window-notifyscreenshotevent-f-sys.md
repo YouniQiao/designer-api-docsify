@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## notifyScreenshotEvent
@@ -15,8 +15,6 @@ function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>
 Notifies a screenshot event. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -41,21 +39,3 @@ Notifies a screenshot event. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let eventType: window.ScreenshotEventType = window.ScreenshotEventType.SYSTEM_SCREENSHOT;
-  let promise = window.notifyScreenshotEvent(eventType);
-  promise.then(() => {
-    console.info(`Succeeded in notifying screenshot event type.`);
-  }).catch((err: BusinessError) =>{
-    console.error(`Failed to notify screenshot event type. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to notify screenshot event type. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```

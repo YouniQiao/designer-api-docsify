@@ -6,14 +6,12 @@ The definition of pagination object.@extends OperResult @interface PageMediaEnti
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## elements
@@ -27,8 +25,6 @@ Query data content (pass corresponding structure data according to the type).
 **Type:** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Episode Range
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -63,8 +57,6 @@ Have next page data.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +74,6 @@ Media type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -91,16 +81,14 @@ Media type.
 ## pageIndex
 
 ```TypeScript
-pageIndex: int
+pageIndex: number
 ```
 
 Pagination query page number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,16 +97,14 @@ Pagination query page number.
 ## pageSize
 
 ```TypeScript
-pageSize: int
+pageSize: number
 ```
 
 Size of per page.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,8 +122,6 @@ Data Sorting
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -145,16 +129,14 @@ Data Sorting
 ## totalSize
 
 ```TypeScript
-totalSize: int
+totalSize: number
 ```
 
 Total size of data.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

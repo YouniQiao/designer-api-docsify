@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## stopBluetoothDiscovery
@@ -15,8 +15,6 @@ function stopBluetoothDiscovery(): void
 Stops Bluetooth device scanning.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -35,14 +33,3 @@ Stops Bluetooth device scanning.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.stopBluetoothDiscovery();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

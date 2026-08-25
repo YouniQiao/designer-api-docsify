@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setDevicePairingConfirmation
@@ -15,8 +15,6 @@ function setDevicePairingConfirmation(deviceId: string, accept: boolean): void
 Sets the confirmation of pairing with a certain device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -41,19 +39,3 @@ Sets the confirmation of pairing with a certain device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Subscribe to the pinRequired event and configure the pairing confirmation after receiving a pairing request from the peer device.
-function onReceivePinRequiredEvent(data: connection.PinRequiredParam) { // data is the input parameter for the pairing request.
-    console.info('pin required  = '+ JSON.stringify(data));
-    connection.setDevicePairingConfirmation(data.deviceId, true);
-}
-try {
-    connection.on('pinRequired', onReceivePinRequiredEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

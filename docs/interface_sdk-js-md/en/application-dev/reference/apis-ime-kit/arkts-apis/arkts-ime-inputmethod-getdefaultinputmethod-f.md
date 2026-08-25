@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## getDefaultInputMethod
@@ -15,8 +15,6 @@ function getDefaultInputMethod(): InputMethodProperty
 Obtains the default input method.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -31,9 +29,3 @@ Obtains the default input method.
 | Error Code ID |
 | --- |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
-
-**Examples**
-
-```TypeScript
-let defaultIme: inputMethod.InputMethodProperty = inputMethod.getDefaultInputMethod();
-```

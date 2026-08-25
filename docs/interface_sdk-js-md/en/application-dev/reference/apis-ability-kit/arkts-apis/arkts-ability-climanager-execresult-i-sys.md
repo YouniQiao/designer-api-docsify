@@ -4,8 +4,6 @@ Execute result of a tool execution.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Execute result of a tool execution.
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## errorText
@@ -27,8 +25,6 @@ Indicates the error output of the tool.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Indicates the execution duration in milliseconds.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -67,8 +61,6 @@ Indicates the exit code, 0 means success.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Indicates the standard output of the tool.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -108,8 +98,6 @@ Indicates the termination signal (if the tool process was terminated by a signal
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -127,8 +115,6 @@ Indicates whether it timed out. true means timeout occurred, false means no time
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

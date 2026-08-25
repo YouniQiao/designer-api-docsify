@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## subscribeManagedEventSync
@@ -15,8 +15,6 @@ function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEven
 Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs.Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md) event.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SUBSCRIBE_MANAGED_EVENT
 
@@ -40,24 +38,3 @@ Subscribes to system management events. After the call is successful, the device
 | [9200008](../errorcode-enterpriseDeviceManager.md#9200008-invalid-system-subscription-event) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED, adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
-
-try {
-  adminManager.subscribeManagedEventSync(wantTemp, events);
-  console.info('Succeeded in subscribing managed event.');
-} catch (err) {
-  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
-}
-```

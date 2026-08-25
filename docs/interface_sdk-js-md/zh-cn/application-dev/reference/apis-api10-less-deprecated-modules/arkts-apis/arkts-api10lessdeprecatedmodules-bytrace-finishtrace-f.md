@@ -19,8 +19,6 @@ function finishTrace(name: string, taskId: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 8
 
 **替代接口：** finishTrace
@@ -33,31 +31,3 @@ function finishTrace(name: string, taskId: number): void
 | --- | --- | --- |
 | name | string | 是 |
 | taskId | number | 是 |
-
-**示例**
-
-```TypeScript
-bytrace.finishTrace("myTestFunc", 1);
-```
-
-```TypeScript
-// 跟踪并行执行的同名任务
-bytrace.startTrace("myTestFunc", 1);
-// 业务流程...... 
-bytrace.startTrace("myTestFunc", 2);  // 第二个跟踪任务开始，同时第一个同名跟踪任务还没结束，出现了并行执行，对应接口的taskId需要不同
-// 业务流程...... 
-bytrace.finishTrace("myTestFunc", 1);
-// 业务流程...... 
-bytrace.finishTrace("myTestFunc", 2);
-```
-
-```TypeScript
-// 跟踪串行执行的同名任务
-bytrace.startTrace("myTestFunc", 1);
-// 业务流程...... 
-bytrace.finishTrace("myTestFunc", 1);  // 第一个跟踪任务结束
-// 业务流程...... 
-bytrace.startTrace("myTestFunc", 1);   // 第二个跟踪任务开始，同名跟踪任务串行执行
-// 业务流程...... 
-bytrace.finishTrace("myTestFunc", 1);
-```

@@ -10,8 +10,6 @@ The distributedBundle module manages distributed bundles.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [distributedBundleManager](arkts-bundle-distributedbundlemanager.md)
@@ -23,7 +21,7 @@ The distributedBundle module manages distributed bundles.
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundle } from '@kit.AbilityKit';
+import { distributedBundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

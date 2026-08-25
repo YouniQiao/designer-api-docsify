@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## removeNetFirewallRule
@@ -15,8 +15,6 @@ function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>
 删除系统用户ID的指定防火墙规则。使用Promise异步回调。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** ohos.permission.MANAGE_NET_FIREWALL
 
@@ -46,16 +44,3 @@ function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [29400000](../errorcode-net-netfirewall.md#29400000-指定用户不存在) |
 | [29400006](../errorcode-net-netfirewall.md#29400006-指定的规则不存在) |
-
-**示例**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-netFirewall.removeNetFirewallRule(100, 1).then(() => {
-  console.info("delete firewall rule success.");
-}).catch((error : BusinessError) => {
-  console.error("delete firewall rule failed: " + JSON.stringify(error));
-});
-```

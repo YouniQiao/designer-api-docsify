@@ -9,8 +9,6 @@ NodeContent是ArkUI提供的ContentSlot的管理器，用于管理挂载到Conte
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## addFrameNode
@@ -22,8 +20,6 @@ addFrameNode(node: FrameNode): void
 将FrameNode添加到NodeContent中，添加后FrameNode将通过关联的ContentSlot渲染显示。适用于需要动态管理ContentSlot中显示内容节点的场景，例如根据用户交互动态新增文本、图片等自定义 FrameNode节点。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,37 +49,11 @@ constructor()
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import { nativeNode } from 'libNativeNode.so'; // 开发者自己实现的so
-import { NodeContent } from '@kit.ArkUI';
-
-@Component
-struct Parent {
-  private nodeContent: NodeContent = new NodeContent();
-
-  aboutToAppear() {
-    // 通过C-API创建节点，并添加到管理器nodeContent上
-    nativeNode.createNativeNode(this.nodeContent);
-  }
-
-  build() {
-    Column() {
-      // 显示nodeContent管理器里存放的Native侧的组件
-      ContentSlot(this.nodeContent)
-    }
-  }
-}
-```
 
 ## removeFrameNode
 
@@ -94,8 +64,6 @@ removeFrameNode(node: FrameNode): void
 将FrameNode从NodeContent中删除，删除后FrameNode将不再通过ContentSlot显示。适用于需要动态移除已添加内容节点的场景，例如用户交互后移除指定的文本、图片等自定义FrameNode节点。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,76 +76,3 @@ removeFrameNode(node: FrameNode): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-
-**示例**
-
-添加和删除NodeContent中的FrameNode节点。
-
-```TypeScript
-// xxx.ets
-import { NodeContent, typeNode } from '@kit.ArkUI';
-
-class NodeContentCtrl {
-  content: NodeContent;
-  textNode: Array<typeNode.Text> = new Array();
-  uiContext: UIContext;
-
-  constructor(uiContext: UIContext) {
-    this.content = new NodeContent();
-    this.uiContext = uiContext;
-  }
-
-  addNode() {
-    let node = typeNode.createNode(this.uiContext, 'Text');
-    node.initialize('ContentText:' + this.textNode.length).fontSize(20);
-    this.textNode.push(node);
-    this.content.addFrameNode(node);
-  }
-
-  removeNode() {
-    let node = this.textNode.pop();
-    if (node) {
-      this.content.removeFrameNode(node);
-    }
-  }
-
-  removeFront() {
-    let node = this.textNode.shift();
-    if (node) {
-      this.content.removeFrameNode(node);
-    }
-  }
-
-  getContent(): NodeContent {
-    return this.content;
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  controller = new NodeContentCtrl(this.getUIContext());
-
-  build() {
-    Row() {
-      Column() {
-        ContentSlot(this.controller.getContent())
-        Button('AddToSlot')
-          .onClick(() => {
-            this.controller.addNode();
-          })
-        Button('RemoveBack')
-          .onClick(() => {
-            this.controller.removeNode();
-          })
-        Button('RemoveFront')
-          .onClick(() => {
-            this.controller.removeFront();
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

@@ -10,8 +10,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,8 +27,6 @@ autoPlay(value: boolean)
 [loop](#loop)为false时，自动轮播到最后一页时停止轮播。手势切换完成后，如果当前页面不是最后一页，自动轮播将继续播放。当Swiper不可见时会停止轮播。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -53,8 +49,6 @@ autoPlay(autoPlay: boolean, options: AutoPlayOptions)
 设置子组件是否自动播放。options入参控制手指或鼠标按下屏幕时子组件是否停止自动播放。当[loop](#loop)设置为false时，自动轮播将在到达最后一页时停止。在通过手势切换且未处于最后一页的情况下，轮播将继续进行。Swiper在不可见时，轮播也将停止。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,8 +82,6 @@ cachedCount(value: number)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -115,8 +107,6 @@ cachedCount(count: number, isShown: boolean)
 > - isShown值为true，且设置的count过大时，如果前后预加载范围内可加载的节点不足，循环场景下同一个可加载节点只会布局在一侧。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -153,8 +143,6 @@ cachedCount(count: number, options: CachedCountOptions)
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -180,8 +168,6 @@ curve(value: Curve | string | ICurve)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -192,7 +178,7 @@ curve(value: Curve | string | ICurve)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Curve \| string \| [ICurve](../arkts-apis/arkts-arkui-curves-icurve-i.md) | 是 |
+| value | Curve \| string \| [ICurve](arkts-arkui-icurve-i.md) | 是 |
 
 ## customContentTransition
 
@@ -200,11 +186,10 @@ curve(value: Curve | string | ICurve)
 customContentTransition(transition: SwiperContentAnimatedTransition)
 ```
 
-自定义Swiper页面切换动画。在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发回调，开发者可以在回调中设置透明度、缩放比例、位移等属性来自定义切换动画。使用说明：1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。2、在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)回调。例如，当视窗内有下 标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调，若同组所有页面均不在视窗内时，则会一起下渲染树。4、在页面跟手滑动和离手后执行切换动画的过程中，默认动画（页面滑动）依然会发生，若希望页面不滑动，可以设置主轴方向上负的位移（translate属性）来抵消页面滑动。例如：当displayCount属性值为2，视窗内有下标为0、1 的两个页面时，页面水平滑动过程中，可以逐帧设置第0页的translate属性在x轴上的值为-position * mainAxisLength来抵消第0页的位移，设置第1页的translate属性在x轴上的值为-(position - 1) * mainAxisLength来抵消第1页的位移。
+自定义Swiper页面切换动画。在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发回调，开发者可以在回调中设置透明度、缩放比例、位移等属性来自定义切换动画。使用说明：1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。2、在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)回调。例如，当视窗内有下 标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调，若同组所有页面均不在视窗内时，则会一起下渲染树。4、在页面跟手滑动和离手后执行切换动画的过程中，默认动画（页面滑动）依然会发生，若希望页面不滑动，可以设置主轴方向上负的位移（translate属性）来抵消页面滑动。例如：当displayCount属性值为2，视窗内有下标为0、1 的两个页面时，页面水平滑动过程中，可以逐帧设置第0页的translate属性在x轴上的值为-position * mainAxisLength来抵消第0页的位移，设置第1页的translate属性在x轴上的值为-(position  
+- 1) * mainAxisLength来抵消第1页的位移。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -229,8 +214,6 @@ disableSwipe(value: boolean)
 设置禁用组件滑动切换功能。适用于仅通过按钮或导航点控制翻页的场景，或需要限制用户滑动操作的场景。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -257,8 +240,6 @@ displayArrow(value: ArrowStyle | boolean, isHoverShow?: boolean)
 > Swiper视窗内显示所有子节点时，只显示一屏，无法翻页，左右翻页箭头均不显示。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -296,8 +277,6 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -320,8 +299,6 @@ displayCount(value: number | string | SwiperAutoFill | ItemFillPolicy, swipeByGr
 设置Swiper视窗内元素显示个数。使用number类型时，子元素主轴宽度会基于Swiper主轴宽度适应。子组件按照主轴均分Swiper宽度（减去displayCount-1个itemSpace）的方式进行主轴拉伸（收缩）布局，设置为小于等于0的值时，按默认值1显 示。使用string类型时，根据子元素的主轴宽度线性布局，不再适应Swiper主轴宽度。此时value值仅支持设置为'auto'，设置 [customContentTransition](#customcontenttransition)和 [onContentDidScroll](#oncontentdidscroll)事件不生效。使用SwiperAutoFill类型时，子元素主轴宽度会基于Swiper主轴宽度适应。通过设置一个子组件最小宽度值minSize，会根据Swiper当前宽度和minSize值自动计算并更改一页内元素显示个数。当minSize为空或 者小于等于0时，Swiper显示1列。使用ItemFillPolicy类型时，子元素主轴宽度会基于Swiper主轴宽度适应。将根据Swiper组件宽度对应断点类型确定显示个数。例如，设置断点类型为ItemFillPolicy.BREAKPOINT_DEFAULT时，在 组件宽度相当于sm及更小断点区间时显示1列，相当于md断点区间时显示2列，相当于lg及更大断点区间时显示3列。参数说明参考 [displayCount](#displaycount) 。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -348,8 +325,6 @@ displayMode(value: SwiperDisplayMode)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -372,8 +347,6 @@ duration(value: number)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -394,8 +367,6 @@ effectMode(value: EdgeEffect)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -406,7 +377,7 @@ effectMode(value: EdgeEffect)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-enums-edgeeffect-e.md) | 是 |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 |
 
 ## index
 
@@ -417,8 +388,6 @@ index(value: number)
 设置当前在容器中显示的子组件的索引值。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -441,8 +410,6 @@ indicator(value: DotIndicator | DigitIndicator | boolean)
 设置导航点指示器样式。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -470,8 +437,6 @@ indicator(indicator: IndicatorComponentController | DotIndicator | DigitIndicato
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -484,7 +449,7 @@ indicator(indicator: IndicatorComponentController | DotIndicator | DigitIndicato
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [indicator](#indicator) | IndicatorComponentController \| [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) \| boolean | 是 |
+| [indicator](#indicator) | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) \| [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) \| boolean | 是 |
 
 ## indicatorInteractive
 
@@ -495,8 +460,6 @@ indicatorInteractive(value: boolean)
 设置导航点是否可交互。适用于需要通过其他方式（如按钮）控制翻页，或需要禁止用户通过导航点点击翻页的场景。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -525,8 +488,6 @@ indicatorStyle(value?: IndicatorStyle)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 10
 
 **替代接口：** [indicator](#indicator)(value: DotIndicator | DigitIndicator | boolean)
@@ -548,8 +509,6 @@ interval(value: number)
 设置使用自动播放时播放的时间间隔。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -573,8 +532,6 @@ itemSpace(value: number | string)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -597,8 +554,6 @@ loop(value: boolean)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -617,11 +572,9 @@ loop(value: boolean)
 maintainVisibleContentPosition(enabled: boolean)
 ```
 
-设置显示区域上方或前方插入或删除数据时是否保持可见内容位置不变。适用于使用单一 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)作为Swiper子节点的情况，通过LazyForEach的 onDataAdd、onDataDelete等接口修改数据源。其他场景 下，显示区域上方或前方插入或删除数据，可见内容位置会变化。在 [displayCount](#displaycount) 属性的swipeByGroup参数设置为true，即按组翻页生效时，一次在显示区域上方或前方插入或删除数据，且插入或删除的是一组节点数量倍数的数据量时，才能保持可见内容位置不变，否则可见内容位置可能会随每组数据重新分组改变。
+设置显示区域上方或前方插入或删除数据时是否保持可见内容位置不变。适用于使用单一 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)作为Swiper子节点的情况，通过LazyForEach的 [onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd)、[onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete)等接口修改数据源。其他场景 下，显示区域上方或前方插入或删除数据，可见内容位置会变化。在 [displayCount](#displaycount) 属性的swipeByGroup参数设置为true，即按组翻页生效时，一次在显示区域上方或前方插入或删除数据，且插入或删除的是一组节点数量倍数的数据量时，才能保持可见内容位置不变，否则可见内容位置可能会随每组数据重新分组改变。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -652,8 +605,6 @@ nestedScroll(value: SwiperNestedScrollMode)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -680,8 +631,6 @@ nextMargin(value: Length, ignoreBlank?: boolean)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -704,8 +653,6 @@ onAnimationEnd(event: OnSwiperAnimationEndCallback)
 切换动画结束时触发该回调。当Swiper切换动效结束时触发，包括动画过程中手势中断，通过SwiperController调用finishAnimation。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -735,8 +682,6 @@ onAnimationStart(event: OnSwiperAnimationStartCallback)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -764,8 +709,6 @@ onChange(event: Callback<number>)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -787,8 +730,6 @@ onContentDidScroll(handler: ContentDidScrollCallback)
 监听Swiper页面滑动事件。使用说明：1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。2、在页面滑动过程中，会对视窗内所有页面逐帧触发[ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md)回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次 index值分别为0和1的回调。3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -815,8 +756,6 @@ Swiper滑动行为拦截事件，在滑动前触发。Swiper会依据该事件�
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -841,8 +780,6 @@ onGestureSwipe(event: OnSwiperGestureSwipeCallback)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -865,8 +802,6 @@ Swiper滑动状态变化事件回调，在跟手滑动、离手动画、停止�
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -879,7 +814,7 @@ Swiper滑动状态变化事件回调，在跟手滑动、离手动画、停止�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | Callback & lt;ScrollState & gt; | 是 |
+| event | Callback&lt;[ScrollState](arkts-arkui-scrollstate-e.md)&gt; | 是 |
 
 ## onSelected
 
@@ -890,8 +825,6 @@ onSelected(event: Callback<number>)
 当选中元素改变时触发该回调，返回值为当前选中的元素的索引值。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -917,8 +850,6 @@ onUnselected(event: Callback<number>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -943,8 +874,6 @@ pageFlipMode(mode: Optional<PageFlipMode>)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -957,7 +886,7 @@ pageFlipMode(mode: Optional<PageFlipMode>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mode | Optional & lt;PageFlipMode & gt; | 是 |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[PageFlipMode](../arkts-apis/arkts-arkui-pageflipmode-e.md)&gt; | 是 |
 
 ## prevMargin
 
@@ -972,8 +901,6 @@ prevMargin(value: Length, ignoreBlank?: boolean)
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -997,8 +924,6 @@ vertical(value: boolean)
 设置导航点是否为纵向排列。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

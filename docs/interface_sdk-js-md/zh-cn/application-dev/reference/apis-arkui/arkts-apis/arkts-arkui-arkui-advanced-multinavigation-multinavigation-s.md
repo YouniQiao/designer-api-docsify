@@ -14,31 +14,13 @@ MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管�
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
+import { SplitPolicy, MultiNavigation, MultiNavPathStack } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build multiNavigation.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## navDestination
 
@@ -49,8 +31,6 @@ navDestination: NavDestinationBuildFunction
 设置加载目标页面的路由规则。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,8 +48,6 @@ onHomeShowOnTop?: OnHomeShowOnTopCallback
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -85,8 +63,6 @@ onNavigationModeChange?: OnNavigationModeChangeCallback
 设置MultiNavigation模式变更时的回调。当需要在导航模式变化时执行特定业务逻辑（如调整页面布局、更新UI状态等）时传入此回调。不传入时不监听导航模式变更事件，导航模式变更时无回调触发。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,28 +82,8 @@ multiStack: MultiNavPathStack
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## navDestination
-
-```TypeScript
-navDestination: PageMapBuilder | undefined
-```
-
-设置加载目标页面的路由规则。取值为undefined时，不会加载。
-
-**类型：** [PageMapBuilder](arkts-arkui-pagemapbuilder-t.md) \| undefined
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

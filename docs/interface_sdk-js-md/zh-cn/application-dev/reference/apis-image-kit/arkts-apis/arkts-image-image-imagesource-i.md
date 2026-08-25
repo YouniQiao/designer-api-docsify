@@ -4,14 +4,12 @@ ImageSource类，用于获取图片相关信息。在调用ImageSource的方法�
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createImageRawData
@@ -23,8 +21,6 @@ createImageRawData(): Promise<ImageRawData>
 获取图片原始数据。使用Promise异步回调。目前仅支持获取DNG图片类型的原始数据。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,29 +39,6 @@ createImageRawData(): Promise<ImageRawData>
 | [7700101](../errorcode-image.md#7700101-图片源存在问题) |
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function createImageRawData(imageSourceObj: image.ImageSource) {
-  await imageSourceObj.createImageRawData().then((data: image.ImageRawData) => {
-    console.info(`createImageRawData successfully. length: ${data.buffer.byteLength}, bitPerPixel:${data.bitsPerPixel}`);
-    if (data.bitsPerPixel == 16) {
-      let array: Uint16Array = new Uint16Array();
-      let value: string = "";
-      array = new Uint16Array(data.buffer);
-      for (let i = 0; i < array.length && i < 10; i++) {
-        value += array[i] + ', ';
-      }
-      console.info(`get dng rawdata is:${value}.`);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create image rawData. error.code is ${error.code}, error.message is ${error.message}`);
-  });
-}
-```
-
 ## createPicture
 
 ```TypeScript
@@ -75,8 +48,6 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 通过图片解码参数创建Picture对象。使用Promise异步回调。由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法，及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -100,121 +71,10 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 | [7700301](../errorcode-image.md#7700301-解码失败) |
 | [7700203](../errorcode-image.md#7700203-不支持的选项) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-async function CreatePicture(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("test.jpg");
-  let opts: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, opts);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  if (pictureObj != null) {
-    console.info('Succeeded in creating picture.');
-  } else {
-    console.error('Failed to create picture.');
-  }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-
-function CreatePictureFunc(context: common.UIAbilityContext): image.Picture | undefined {
-  const resourceMgr: resourceManager.ResourceManager = context.resourceManager;
-  // 此处'test_image.jpg'仅作示例，请开发者自行替换，否则imageSource会创建失败导致后续无法正常执行。
-  let rawFileDescriptor: resourceManager.RawFileDescriptor = await resourceMgr.getRawFd('test_image.jpg');
-  let sourceOptions: image.SourceOptions = { sourceDensity: 98 };
-  let imageSource = image.createImageSource(rawFileDescriptor, sourceOptions);
-  let pixelMap: image.PixelMap = await imageSource.createPixelMap();
-
-  try {
-    let picture: image.Picture = image.createPicture(pixelMap);
-    return picture;
-  } catch (err) {
-    console.error(0x00000, 'CreatePictureFunc', 'CreatePictureFunc failed: ' + err);
-    return undefined;
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function CreatePicture() {
-  let options: image.DecodingOptionsForPicture = {
-    desiredAuxiliaryPictures: [image.AuxiliaryPictureType.GAINMAP] // GAINMAP为需要解码的辅助图类型。 
-  };
-  let pictureObj: image.Picture = await imageSourceApi.createPicture(options);
-  if (pictureObj != null) {
-    console.info('Succeeded in creating picture.');
-  } else {
-    console.error('Failed to create picture.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function CreatePictureFunc(imageSource: image.ImageSource): void {
-  let opts: image.DecodingOptionsForPicture = { desiredAuxiliaryPictures: [image.AuxiliaryPictureType.GAINMAP] };
-  try {
-    let picture = await imageSource.createPicture(opts);
-    console.info(0x00000, 'CreatePictureFunc', 'createPicture success!');
-  } catch (err) {
-    console.error(0x00000, 'CreatePictureFunc', 'CreatePictureFunc failed: ' + err);
-  }
-}
-```
-
-## createPicture
-
-```TypeScript
-createPicture(options?: DecodingOptionsForPicture): Promise<Picture | undefined>
-```
-
-Creates a Picture object based on image decoding parameters. This method uses a promise to return the object.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-
-**示例**
-
-参见 [createPicture](#createpicture)
-
 ## createPictureAtIndex
 
 ```TypeScript
-createPictureAtIndex(index: int): Promise<Picture>
+createPictureAtIndex(index: number): Promise<Picture>
 ```
 
 通过指定序号的图片创建Picture对象。使用Promise异步回调。
@@ -225,8 +85,6 @@ createPictureAtIndex(index: int): Promise<Picture>
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -252,82 +110,6 @@ createPictureAtIndex(index: int): Promise<Picture>
 | [7700203](../errorcode-image.md#7700203-不支持的选项) |
 | [7700301](../errorcode-image.md#7700301-解码失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function CreatePictures() {
-  let frameCount: number = await imageSourceApi.getFrameCount();
-  for (let index = 0; index < frameCount; index++) {
-    try {
-      let pictureObj: image.Picture = await imageSourceObj.createPictureAtIndex(index);
-      console.info('Succeeded in creating picture for frame: ' + index);
-    } catch (e) {
-      console.error('Failed to create picture for frame: ' + index);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function CreatePictures(imageSourceApi: image.ImageSource) {
-  let frameCount: int = await imageSourceApi.getFrameCount();
-  for (let index = 0; index < frameCount; index++) {
-    try {
-      let pictureObj: image.Picture | undefined = await imageSourceApi.createPictureAtIndex(index);
-      if (pictureObj) {
-        console.info('Create picture succeeded for frame: ' + index);
-      }
-    } catch (e) {
-      console.error('Create picture failed for frame: ' + index);
-    }
-  }
-}
-```
-
-## createPictureAtIndex
-
-```TypeScript
-createPictureAtIndex(index : int): Promise<Picture | undefined>
-```
-
-Decodes an image at the specified index into a Picture object.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | int | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-
-**示例**
-
-参见 [createPictureAtIndex](#createpictureatindex)
-
 ## createPixelMap
 
 ```TypeScript
@@ -342,8 +124,6 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -363,246 +143,6 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 | --- |
 | Promise & lt;PixelMap & gt; |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMap() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
-  let opts: image.InitializationOptions = {
-    size: { height: 4, width: 6 },
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-  image.createPixelMap(color, opts).then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating the PixelMap.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function createPixelMap() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
-  let opts: image.InitializationOptions = {
-    size: { height: 4, width: 6 },
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-  image.createPixelMap(color, opts).then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating the PixelMap.');
-  }).catch((err: Error) => {
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMap() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
-  let opts: image.InitializationOptions = {
-    size: { height: 4, width: 6 },
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-  image.createPixelMap(color, opts, (err: BusinessError, pixelMap: image.PixelMap) => {
-    if (err) {
-      console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in creating the PixelMap.');
-  });
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-imageSourceApi.createPixelMap().then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in creating pixelMap object through image decoding parameters.');
-}).catch((error: BusinessError) => {
-  console.error('Failed to create pixelMap object through image decoding parameters.');
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function CreatePixelMapFunc(imageSource: image.ImageSource): Promise<void> {
-  try {
-    let pixelMap = await imageSource.createPixelMap();
-    console.info(0x00000, 'CreatePixelMapFunc', 'createPixelMap success!');
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapFunc', 'CreatePixelMapFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-imageSourceApi.createPixelMap((err: BusinessError, pixelMap: image.PixelMap) => {
-  if (err) {
-    console.error(`Failed to create pixelMap.code is ${err.code},message is ${err.message}`);
-  } else {
-    console.info('Succeeded in creating pixelMap object.');
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function CreatePixelMapCallbackFunc(imageSource: image.ImageSource): void {
-  try {
-    imageSource.createPixelMap((err: BusinessError | null, pixelMap: image.PixelMap | undefined) => {
-      if (err) {
-        console.error(0x00000, 'CreatePixelMapCallbackFunc', 'createPixelMap failed: ' + err);
-      } else {
-        console.info(0x00000, 'CreatePixelMapCallbackFunc', 'createPixelMap success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapCallbackFunc', 'CreatePixelMapCallbackFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-imageSourceApi.createPixelMap((err: BusinessError, pixelMap: image.PixelMap) => {
-  if (err) {
-    console.error(`Failed to create pixelMap.code is ${err.code},message is ${err.message}`);
-  } else {
-    console.info('Succeeded in creating pixelMap object.');
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function CreatePixelMapFunc(imageSource: image.ImageSource): void {
-  try {
-    await imageSource.createPixelMap((err: BusinessError | null, pixelMap: image.PixelMap | undefined) => {
-      if (err) {
-        console.error(0x00000, 'CreatePixelMapFunc', 'createPixelMap failed: ' + err);
-      } else {
-        console.info(0x00000, 'CreatePixelMapFunc', 'createPixelMap success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapFunc', 'CreatePixelMapFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let decodingOptions: image.DecodingOptions = {
-  sampleSize: 1,
-  editable: true,
-  desiredSize: { width: 1, height: 2 },
-  rotate: 10,
-  desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-  desiredRegion: { size: { width: 1, height: 2 }, x: 0, y: 0 },
-  // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
-  cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-  index: 0
-};
-imageSourceApi.createPixelMap(decodingOptions, (err: BusinessError, pixelMap: image.PixelMap) => {
-  if (err) {
-    console.error(`Failed to create pixelMap.code is ${err.code},message is ${err.message}`);
-  } else {
-    console.info('Succeeded in creating pixelMap object.');
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function CreatePixelMapFunc(imageSource: image.ImageSource): void {
-  let decodingOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 1, height: 2 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 1, height: 2 }, x: 0, y: 0 },
-    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  try {
-    imageSource.createPixelMap(decodingOpts, (err: BusinessError | null, pixelMap: image.PixelMap | undefined) => {
-      if (err) {
-        console.error(0x00000, 'CreatePixelMapFunc', 'createPixelMap failed: ' + err);
-      } else {
-        console.info(0x00000, 'CreatePixelMapFunc', 'createPixelMap success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapFunc', 'CreatePixelMapFunc failed: ' + err);
-  }
-}
-```
-
-## createPixelMap
-
-```TypeScript
-createPixelMap(options?: DecodingOptions): Promise<PixelMap | undefined>
-```
-
-Creates a PixelMap object based on image decoding parameters. This method uses a promise to return the object.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;PixelMap \ | undefined & gt; |
-
-**示例**
-
-参见 [createPixelMap](#createpixelmap)
-
 ## createPixelMap
 
 ```TypeScript
@@ -618,8 +158,6 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -631,34 +169,6 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 |
-
-**示例**
-
-参见 [createPixelMap](#createpixelmap)
-
-## createPixelMap
-
-```TypeScript
-createPixelMap(callback: AsyncCallback<PixelMap | undefined>): void
-```
-
-Creates a PixelMap object. This method uses a callback to return the object.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined & gt; | 是 |
-
-**示例**
-
-参见 [createPixelMap](#createpixelmap)
 
 ## createPixelMap
 
@@ -675,8 +185,6 @@ createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): voi
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -689,35 +197,6 @@ createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): voi
 | --- | --- | --- |
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 |
-
-**示例**
-
-参见 [createPixelMap](#createpixelmap)
-
-## createPixelMap
-
-```TypeScript
-createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap | undefined>): void
-```
-
-Creates a PixelMap object based on image decoding parameters. This method uses a callback to return the object.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap \| undefined & gt; | 是 |
-
-**示例**
-
-参见 [createPixelMap](#createpixelmap)
 
 ## createPixelMapList
 
@@ -735,8 +214,6 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 > 口少。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -770,139 +247,6 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 | [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
 | [62980174](../errorcode-image.md#62980174-dma内存数据异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
-  let decodeOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 198, height: 202 },
-    rotate: 0,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    index: 0,
-  };
-  imageSourceObj.createPixelMapList(decodeOpts).then((pixelMapList: Array<image.PixelMap>) => {
-    console.info('Succeeded in creating pixelMapList object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create pixelMapList object, error code is ${err}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function CreatePixelMapListFunc(imageSource: image.ImageSource): Promise<void> {
-  let decodeOpts: image.DecodingOptions = {
-  sampleSize: 1,
-  editable: true,
-  desiredSize: { width: 198, height: 202 },
-  rotate: 0,
-  desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-  index: 0,
-};
-  try {
-    let pixelMapList: Array<image.PixelMap> = await imageSource.createPixelMapList(decodeOpts);
-    console.info(0x00000, 'CreatePixelMapListFunc', 'createPixelMapList success!');
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapListFunc', 'CreatePixelMapListFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.createPixelMapList((err: BusinessError, pixelMapList: Array<image.PixelMap>) => {
-    if (err) {
-      console.error(`Failed to create pixelMapList object, error code is ${err}`);
-    } else {
-      console.info('Succeeded in creating pixelMapList object.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function CreatePixelMapListFunc(imageSource: image.ImageSource): void {
-  try {
-    imageSource.createPixelMapList((err: BusinessError | null, pixelMapList: Array<image.PixelMap> | undefined) => {
-      if (err) {
-        console.error(0x00000, 'CreatePixelMapListFunc', 'createPixelMapList failed: ' + err);
-      } else {
-        console.info(0x00000, 'CreatePixelMapListFunc', 'createPixelMapList success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapListFunc', 'CreatePixelMapListFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
-  let decodeOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 198, height: 202 },
-    rotate: 0,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    index: 0,
-  };
-  imageSourceObj.createPixelMapList(decodeOpts, (err: BusinessError, pixelMapList: Array<image.PixelMap>) => {
-    if (err) {
-      console.error(`Failed to create pixelMapList object, error code is ${err}`);
-    } else {
-      console.info('Succeeded in creating pixelMapList object.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function CreatePixelMapListFunc(imageSource: image.ImageSource): void {
-  let decodeOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 198, height: 202 },
-    rotate: 0,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    index: 0,
-  };
-  try {
-    imageSource.createPixelMapList(decodeOpts, (err: BusinessError | null, pixelMapList: Array<image.PixelMap> | undefined) => {
-      if (err) {
-        console.error(0x00000, 'CreatePixelMapListFunc', 'createPixelMapList failed: ' + err);
-      } else {
-        console.info(0x00000, 'CreatePixelMapListFunc', 'createPixelMapList success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapListFunc', 'CreatePixelMapListFunc failed: ' + err);
-  }
-}
-```
-
 ## createPixelMapList
 
 ```TypeScript
@@ -918,8 +262,6 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 > - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -947,10 +289,6 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 | [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
 | [62980174](../errorcode-image.md#62980174-dma内存数据异常) |
 
-**示例**
-
-参见 [createPixelMapList](#createpixelmaplist)
-
 ## createPixelMapList
 
 ```TypeScript
@@ -966,8 +304,6 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 > - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -996,10 +332,6 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 | [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
 | [62980174](../errorcode-image.md#62980174-dma内存数据异常) |
 
-**示例**
-
-参见 [createPixelMapList](#createpixelmaplist)
-
 ## createPixelMapSync
 
 ```TypeScript
@@ -1013,8 +345,6 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 > [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1030,160 +360,6 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 | --- |
 | [PixelMap](arkts-image-image-pixelmap-i.md) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapSync() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
-  let opts: image.InitializationOptions = {
-    size: { height: 4, width: 6 },
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-    if (pixelMap == undefined) {
-      console.error(`Failed to create the PixelMap.`);
-      return;
-    }
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function createPixelMapSync() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
-  let opts: image.InitializationOptions = {
-    size: { height: 4, width: 6 },
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (err) {
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapSync() {
-  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_1010102, size: { height: 4, width: 6 } };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapSync(opts);
-    if (pixelMap == undefined) {
-      console.error(`Failed to create the PixelMap.`);
-      return;
-    }
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function createPixelMapSync() {
-  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_1010102, size: { height: 4, width: 6 } };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapSync(opts);
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (err) {
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-function CreatePixelMapSync(context : Context) {
-  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 1, height: 2 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 1, height: 2 }, x: 0, y: 0 },
-    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapSync(decodingOptions);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function CreatePixelMapSyncFunc(imageSource: image.ImageSource): void {
-  try {
-    let pixelMap = imageSource.createPixelMapSync();
-    console.info(0x00000, 'CreatePixelMapSyncFunc', 'createPixelMapSync success!');
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapSyncFunc', 'CreatePixelMapSyncFunc failed: ' + err);
-  }
-}
-```
-
-## createPixelMapSync
-
-```TypeScript
-createPixelMapSync(options?: DecodingOptions): PixelMap | undefined
-```
-
-Create a PixelMap object based on image decoding parameters synchronously.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| PixelMap \| undefined |
-
-**示例**
-
-参见 [createPixelMapSync](#createpixelmapsync)
-
 ## createPixelMapUsingAllocator
 
 ```TypeScript
@@ -1198,8 +374,6 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1229,139 +403,6 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 | [7700301](../errorcode-image.md#7700301-解码失败) |
 | [7700302](../errorcode-image.md#7700302-内存分配失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapUsingAllocator() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
-  let opts: image.InitializationOptions = {
-    size: { height: 4, width: 6 },
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-  image.createPixelMapUsingAllocator(color, opts, image.AllocatorType.DMA).then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating the PixelMap.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function createPixelMapUsingAllocator() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
-  let opts: image.InitializationOptions = {
-    size: { height: 4, width: 6 },
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-  image.createPixelMapUsingAllocator(color, opts, image.AllocatorType.DMA).then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating the PixelMap.');
-  }).catch((err: Error) => {
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function CreatePixelMapUsingAllocator(context : Context) {
-  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    editable: true,
-    desiredSize: { width: 3072, height: 4096 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 3072, height: 4096 }, x: 0, y: 0 },
-    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapUsingAllocator(decodingOptions, image.AllocatorType.AUTO);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function CreatePixelMapUsingAllocatorFunc(imageSource: image.ImageSource): Promise<void> {
-   let decodeOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 198, height: 202 },
-    rotate: 0,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    index: 0,
-  };
-  try {
-    let pixelMap = await imageSource.createPixelMapUsingAllocator(decodeOpts, image.AllocatorType.AUTO);
-    console.info(0x00000, 'CreatePixelMapUsingAllocatorFunc', 'createPixelMapUsingAllocator success!');
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapUsingAllocatorFunc', 'CreatePixelMapUsingAllocatorFunc failed: ' + err);
-  }
-}
-```
-
-## createPixelMapUsingAllocator
-
-```TypeScript
-createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType)
-      : Promise<PixelMap | undefined>
-```
-
-Creates a PixelMap based on decoding parameters, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;PixelMap \ | undefined & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) |
-
-**示例**
-
-参见 [createPixelMapUsingAllocator](#createpixelmapusingallocator)
-
 ## createPixelMapUsingAllocatorSync
 
 ```TypeScript
@@ -1375,8 +416,6 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 > [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1406,180 +445,6 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 | [7700301](../errorcode-image.md#7700301-解码失败) |
 | [7700302](../errorcode-image.md#7700302-内存分配失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapUsingAllocatorSync() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
-  let opts: image.InitializationOptions = {
-    size: { height: 4, width: 6 },
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapUsingAllocatorSync(color, opts, image.AllocatorType.DMA);
-    if (pixelMap == undefined) {
-      console.error(`Failed to create the PixelMap.`);
-      return;
-    }
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function createPixelMapUsingAllocatorSync() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素缓冲区大小，取值为：width * height * 4。
-  let opts: image.InitializationOptions = {
-    size: { height: 4, width: 6 },
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区中的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapUsingAllocatorSync(color, opts, image.AllocatorType.DMA);
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (err) {
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapUsingAllocatorSync() {
-  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.BGRA_8888, size: { height: 4, width: 6 } };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapUsingAllocatorSync(opts, image.AllocatorType.DMA);
-    if (pixelMap == undefined) {
-      console.error(`Failed to create the PixelMap.`);
-      return;
-    }
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function createPixelMapUsingAllocatorSync() {
-  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.BGRA_8888, size: { height: 4, width: 6 } };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapUsingAllocatorSync(opts, image.AllocatorType.DMA);
-    console.info('Succeeded in creating the PixelMap.');
-  } catch (err) {
-    console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function CreatePixelMapUsingAllocator(context : Context) {
-  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    editable: true,
-    desiredSize: { width: 3072, height: 4096 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 3072, height: 4096 }, x: 0, y: 0 },
-    // 若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapUsingAllocatorSync(decodingOptions, image.AllocatorType.AUTO);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
-
-ArtTS-Sta示例:
-
-```TypeScript
-function CreatePixelMapUsingAllocatorSyncFunc(imageSource: image.ImageSource): void {
-   let decodeOpts: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 198, height: 202 },
-    rotate: 0,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    index: 0,
-  };
-  try {
-    let pixelMap = imageSource.createPixelMapUsingAllocatorSync(decodeOpts, image.AllocatorType.AUTO);
-    console.info(0x00000, 'CreatePixelMapUsingAllocatorSyncFunc', 'createPixelMapUsingAllocatorSync success!');
-  } catch (err) {
-    console.error(0x00000, 'CreatePixelMapUsingAllocatorSyncFunc', 'CreatePixelMapUsingAllocatorSyncFunc failed: ' + err);
-  }
-}
-```
-
-## createPixelMapUsingAllocatorSync
-
-```TypeScript
-createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap | undefined
-```
-
-Creates a PixelMap based on decoding parameters synchronously, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 否 |
-| allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| PixelMap \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) |
-
-**示例**
-
-参见 [createPixelMapUsingAllocatorSync](#createpixelmapusingallocatorsync)
-
 ## createThumbnail
 
 ```TypeScript
@@ -1594,8 +459,6 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1624,80 +487,6 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 | [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) |
 | [7700305](../errorcode-image.md#7700305-缩略图生成失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function CreateThumbnail(imageSource: image.ImageSource): Promise<image.PixelMap | undefined> {
-  try {
-    if (!imageSource) {
-      console.error('CreateThumbnail: imageSource is null or undefined');
-      return undefined;
-    }
-    const imageInfo = await imageSource.getImageInfo();
-    const supportedMimeTypes = ['image/jpeg', 'image/heif', 'image/heic'];
-    if (!supportedMimeTypes.includes(imageInfo.mimeType)) {
-      console.error(`CreateThumbnail: Unsupported MIME type: ${imageInfo.mimeType}`);
-      return undefined;
-    }
-
-    const decodingOptions: image.DecodingOptionsForThumbnail = {
-      generateThumbnailIfAbsent: true,
-      maxGeneratedPixelDimension: 200,
-    };
-
-    const pixelmap = await imageSource.createThumbnail(decodingOptions);
-    if (pixelmap) {
-      console.info('Succeeded in creating thumbnail pixelMap object.');
-      return pixelmap;
-    } else {
-      console.error('Failed to create thumbnail pixelMap.');
-      return undefined;
-    }
-  } catch (error) {
-    console.error('CreateThumbnail error:', JSON.stringify(error));
-    return undefined;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function CreateThumbnailFunc(imageSource: image.ImageSource): Promise<image.PixelMap | undefined> {
-  try {
-    let imageInfo = await imageSource.getImageInfo();
-    if (!imageInfo) {
-      console.error('CreateThumbnail: imageInfo is undefined');
-      return undefined;
-    }
-    let supportedMimeTypes = ['image/jpeg', 'image/heif', 'image/heic'];
-    if (!supportedMimeTypes.includes(imageInfo.mimeType)) {
-      console.error(`CreateThumbnail: Unsupported MIME type: ${imageInfo.mimeType}`);
-      return undefined;
-    }
-
-    let decodingOptions: image.DecodingOptionsForThumbnail = {
-      generateThumbnailIfAbsent: true,
-      maxGeneratedPixelDimension: 200,
-    };
-
-    let pixelmap = await imageSource.createThumbnail(decodingOptions);
-    if (pixelmap) {
-      console.info('Succeeded in creating thumbnail pixelMap object.');
-      return pixelmap;
-    } else {
-      console.error('Failed to create thumbnail pixelMap.');
-      return undefined;
-    }
-  } catch (err) {
-    console.error('CreateThumbnailFunc failed: ' + err);
-    return undefined;
-  }
-}
-```
-
 ## createThumbnailSync
 
 ```TypeScript
@@ -1713,8 +502,6 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 > [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1743,98 +530,15 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 | [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) |
 | [7700305](../errorcode-image.md#7700305-缩略图生成失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function CreateThumbnailSync(imageSource: image.ImageSource): Promise<image.PixelMap | undefined> {
-  try {
-    if (!imageSource) {
-      console.error('CreateThumbnailSync: imageSource is null or undefined');
-      return undefined;
-    }
-    const imageInfo = await imageSource.getImageInfo();
-    const supportedMimeTypes = ['image/jpeg', 'image/heif', 'image/heic'];
-    if (!supportedMimeTypes.includes(imageInfo.mimeType)) {
-      console.error(`CreateThumbnailSync: Unsupported MIME type: ${imageInfo.mimeType}`);
-      return undefined;
-    }
-
-    const decodingOptionsForThumbnail: image.DecodingOptionsForThumbnail = {
-      generateThumbnailIfAbsent: true,
-      maxGeneratedPixelDimension: 200,
-    };
-
-    const pixelmap = imageSource.createThumbnailSync(decodingOptionsForThumbnail);
-
-    if (pixelmap) {
-      console.info('Succeeded in creating thumbnail pixelMap object.');
-      return pixelmap;
-    } else {
-      console.error('Failed to create thumbnail pixelMap.');
-      return undefined;
-    }
-  } catch (error) {
-    console.error('CreateThumbnailSync error:', JSON.stringify(error));
-    return undefined;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function CreateThumbnailSyncFunc(imageSource: image.ImageSource): Promise<image.PixelMap | undefined> {
-  try {
-    let imageInfo = await imageSource.getImageInfo();
-    if (!imageInfo) {
-      console.error('CreateThumbnailSync: imageInfo is undefined');
-      return undefined;
-    }
-    let supportedMimeTypes = ['image/jpeg', 'image/heif', 'image/heic'];
-    if (!supportedMimeTypes.includes(imageInfo.mimeType)) {
-      console.error(`CreateThumbnailSync: Unsupported MIME type: ${imageInfo.mimeType}`);
-      return undefined;
-    }
-
-    let decodingOptions: image.DecodingOptionsForThumbnail = {
-      generateThumbnailIfAbsent: true,
-      maxGeneratedPixelDimension: 200,
-    };
-
-    let pixelmap = imageSource.createThumbnailSync(decodingOptions);
-    if (pixelmap) {
-      console.info('Succeeded in creating thumbnail pixelMap object.');
-      return pixelmap;
-    } else {
-      console.error('Failed to create thumbnail pixelMap.');
-      return undefined;
-    }
-  } catch (err) {
-    console.error('CreateThumbnailSync error:', JSON.stringify(err));
-    return undefined;
-  }
-}
-```
-
 ## getDelayTimeList
 
-ArkTS-Dyn:
 ```TypeScript
 getDelayTimeList(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
-```TypeScript
-getDelayTimeList(): Promise<Array<int>>
 ```
 
 获取图像延迟时间数组。使用Promise异步回调。此接口仅用于gif图片和webp图片。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1842,7 +546,7 @@ getDelayTimeList(): Promise<Array<int>>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;int & gt; & gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **错误码：**
 
@@ -1857,88 +561,15 @@ getDelayTimeList(): Promise<Array<int>>
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) |
 | [62980149](../errorcode-image.md#62980149-图片参数无效) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetDelayTimeList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getDelayTimeList((err: BusinessError, delayTimes: Array<number>) => {
-    if (err) {
-      console.error(`Failed to get delayTimes object.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting delayTimes object.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function GetDelayTimeListFunc(imageSource: image.ImageSource): void {
-  try {
-    imageSource.getDelayTimeList((err: BusinessError | null, delayTimeList: Array<int> | undefined) => {
-      if (err) {
-        console.error(0x00000, 'GetDelayTimeListFunc', 'getDelayTimeList failed: ' + err);
-      } else {
-        console.info(0x00000, 'GetDelayTimeListFunc', 'getDelayTimeList success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'GetDelayTimeListFunc', 'GetDelayTimeListFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetDelayTimeList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getDelayTimeList().then((delayTimes: Array<number>) => {
-    console.info('Succeeded in getting delayTimes object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get delayTimes object.code is ${err.code},message is ${err.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function GetDelayTimeListFunc(imageSource: image.ImageSource): Promise<void> {
-  try {
-    let delayTimes: Array<int> = await imageSource.getDelayTimeList();
-    console.info(0x00000, 'GetDelayTimeListFunc', 'getDelayTimeList success!');
-  } catch (err) {
-    console.error(0x00000, 'GetDelayTimeListFunc', 'GetDelayTimeListFunc failed: ' + err);
-  }
-}
-```
-
 ## getDelayTimeList
 
-ArkTS-Dyn:
 ```TypeScript
 getDelayTimeList(callback: AsyncCallback<Array<number>>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 ```
 
 获取图像延迟时间数组。使用callback异步回调。此接口仅用于gif图片和webp图片。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1946,7 +577,7 @@ getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
 
 **错误码：**
 
@@ -1961,27 +592,15 @@ getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) |
 | [62980149](../errorcode-image.md#62980149-图片参数无效) |
 
-**示例**
-
-参见 [getDelayTimeList](#getdelaytimelist)
-
 ## getDisposalTypeList
 
-ArkTS-Dyn:
 ```TypeScript
 getDisposalTypeList(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
-```TypeScript
-getDisposalTypeList(): Promise<Array<int>>
 ```
 
 获取图像帧过渡模式数组。使用Promise异步回调。此接口仅用于gif图片。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1989,7 +608,7 @@ getDisposalTypeList(): Promise<Array<int>>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;int & gt; & gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **错误码：**
 
@@ -2000,52 +619,15 @@ getDisposalTypeList(): Promise<Array<int>>
 | [62980137](../errorcode-image.md#62980137-图片操作无效) |
 | [62980149](../errorcode-image.md#62980149-图片参数无效) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetDisposalTypeList(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getDisposalTypeList().then((disposalTypes: Array<number>) => {
-    console.info('Succeeded in getting disposalTypes object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get disposalTypes object.code ${err.code},message is ${err.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function GetDisposalTypeListFunc(imageSource: image.ImageSource): Promise<void> {
-  try {
-    let disposalTypes: Array<int> = await imageSource.getDisposalTypeList();
-    console.info(0x00000, 'GetDisposalTypeListFunc', 'getDisposalTypeList success!');
-  } catch (err) {
-    console.error(0x00000, 'GetDisposalTypeListFunc', 'GetDisposalTypeListFunc failed: ' + err);
-  }
-}
-```
-
 ## getFrameCount
 
-ArkTS-Dyn:
 ```TypeScript
 getFrameCount(): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-getFrameCount(): Promise<int>
 ```
 
 获取图像帧数。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2053,7 +635,7 @@ getFrameCount(): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -2069,88 +651,15 @@ getFrameCount(): Promise<int>
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) |
 | [62980137](../errorcode-image.md#62980137-图片操作无效) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetFrameCount(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getFrameCount((err: BusinessError, frameCount: number) => {
-    if (err) {
-      console.error(`Failed to get frame count.code is ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting frame count.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function GetFrameCountFunc(imageSource: image.ImageSource): void {
-  try {
-    imageSource.getFrameCount((err: BusinessError | null, frameCount: int | undefined) => {
-      if (err) {
-        console.error(0x00000, 'GetFrameCountFunc', 'getFrameCount failed: ' + err);
-      } else {
-        console.info(0x00000, 'GetFrameCountFunc', 'getFrameCount success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'GetFrameCountFunc', 'GetFrameCountFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetFrameCount(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getFrameCount().then((frameCount: number) => {
-    console.info('Succeeded in getting frame count.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get frame count.code is ${err.code},message is ${err.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function GetFrameCountFunc(imageSource: image.ImageSource): Promise<void> {
-  try {
-    let frameCount: int = await imageSource.getFrameCount();
-    console.info(0x00000, 'GetFrameCountFunc', 'getFrameCount success!');
-  } catch (err) {
-    console.error(0x00000, 'GetFrameCountFunc', 'GetFrameCountFunc failed: ' + err);
-  }
-}
-```
-
 ## getFrameCount
 
-ArkTS-Dyn:
 ```TypeScript
 getFrameCount(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-getFrameCount(callback: AsyncCallback<int>): void
 ```
 
 获取图像帧数。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2158,7 +667,7 @@ getFrameCount(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -2174,21 +683,15 @@ getFrameCount(callback: AsyncCallback<int>): void
 | [62980122](../errorcode-image.md#62980122-解码图片头异常) |
 | [62980137](../errorcode-image.md#62980137-图片操作无效) |
 
-**示例**
-
-参见 [getFrameCount](#getframecount)
-
 ## getImageInfo
 
 ```TypeScript
-getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void
+getImageInfo(index: number, callback: AsyncCallback<ImageInfo>): void
 ```
 
 获取指定序号的图片信息。使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2203,172 +706,6 @@ getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void
 | index | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-imageSourceApi.getImageInfo(0, (error: BusinessError, imageInfo: image.ImageInfo) => {
-  if (error) {
-    console.error(`Failed to obtain the image information.code is ${error.code}, message is ${error.message}`);
-  } else {
-    console.info('Succeeded in obtaining the image information.');
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function GetImageInfoFunc(imageSource: image.ImageSource): void {
-  try {
-    imageSource.getImageInfo(0, (err: BusinessError | null, imageInfo: image.ImageInfo | undefined) => {
-      if (err) {
-        console.error(0x00000, 'GetImageInfoFunc', 'getImageInfo failed: ' + err);
-      } else {
-        console.info(0x00000, 'GetImageInfoFunc', 'getImageInfo success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'GetImageInfoFunc', 'GetImageInfoFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageInfo(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageInfo(0, (error: BusinessError, imageInfo: image.ImageInfo) => {
-    if (error) {
-      console.error(`Failed to obtain the image information.code is ${error.code}, message is ${error.message}`);
-    } else {
-      console.info('Succeeded in obtaining the image information.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function GetImageInfoFunc(imageSource: image.ImageSource): void {
-  try {
-    imageSource.getImageInfo((err: BusinessError | null, imageInfo: image.ImageInfo | undefined) => {
-      if (err) {
-        console.error(0x00000, 'GetImageInfoFunc', 'getImageInfo failed: ' + err);
-      } else {
-        console.info(0x00000, 'GetImageInfoFunc', 'getImageInfo success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'GetImageInfoFunc', 'GetImageInfoFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageInfo(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageInfo((err: BusinessError, imageInfo: image.ImageInfo) => {
-    if (err) {
-      console.error(`Failed to obtain the image information.code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('Succeeded in obtaining the image information.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function GetImageInfoFunc(imageSource: image.ImageSource): Promise<void> {
-  try {
-    let imageInfo = await imageSource.getImageInfo(0);
-    console.info(0x00000, 'GetImageInfoFunc', 'getImageInfo success!');
-  } catch (err) {
-    console.error(0x00000, 'GetImageInfoFunc', 'GetImageInfoFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getImageInfo(pixelMap: image.PixelMap) {
-  pixelMap.getImageInfo().then((imageInfo: image.ImageInfo) => {
-    console.info(`Succeeded in obtaining information of the PixelMap with size ${imageInfo.size} and pixel format ${imageInfo.pixelFormat}.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to obtain information of the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function getImageInfo(pixelMap: image.PixelMap) {
-  pixelMap.getImageInfo().then((imageInfo: image.ImageInfo) => {
-    console.info(`Succeeded in obtaining information of the PixelMap with size ${imageInfo.size} and pixel format ${imageInfo.pixelFormat}.`);
-  }).catch((err: Error) => {
-    console.error(`Failed to obtain information of the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getImageInfo(pixelMap: image.PixelMap) {
-  pixelMap.getImageInfo((err: BusinessError, imageInfo: image.ImageInfo) => {
-    if (err) {
-      console.error(`Failed to obtain information of the PixelMap. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in obtaining information of the PixelMap with size ${imageInfo.size} and pixel format ${imageInfo.pixelFormat}.`);
-  });
-}
-```
-
-## getImageInfo
-
-```TypeScript
-getImageInfo(index: int, callback: AsyncCallback<ImageInfo | undefined>): void
-```
-
-Obtains information about an image with the specified sequence number and uses a callback to return the result.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | int | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined & gt; | 是 |
-
-**示例**
-
-参见 [getImageInfo](#getimageinfo)
-
 ## getImageInfo
 
 ```TypeScript
@@ -2378,8 +715,6 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 获取图片信息。使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2393,45 +728,15 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 |
 
-**示例**
-
-参见 [getImageInfo](#getimageinfo)
-
 ## getImageInfo
 
 ```TypeScript
-getImageInfo(callback: AsyncCallback<ImageInfo | undefined>): void
-```
-
-Obtains information about this image and uses a callback to return the result.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined & gt; | 是 |
-
-**示例**
-
-参见 [getImageInfo](#getimageinfo)
-
-## getImageInfo
-
-```TypeScript
-getImageInfo(index?: int): Promise<ImageInfo>
+getImageInfo(index?: number): Promise<ImageInfo>
 ```
 
 获取图片信息。使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2451,44 +756,10 @@ getImageInfo(index?: int): Promise<ImageInfo>
 | --- |
 | Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; |
 
-**示例**
-
-参见 [getImageInfo](#getimageinfo)
-
-## getImageInfo
-
-```TypeScript
-getImageInfo(index?: int): Promise<ImageInfo | undefined>
-```
-
-Get image information from image source.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | int | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined & gt; |
-
-**示例**
-
-参见 [getImageInfo](#getimageinfo)
-
 ## getImageInfoSync
 
 ```TypeScript
-getImageInfoSync(index?: int): ImageInfo
+getImageInfoSync(index?: number): ImageInfo
 ```
 
 获取指定序号的图片信息，使用同步形式返回图片信息。
@@ -2498,8 +769,6 @@ getImageInfoSync(index?: int): ImageInfo
 > [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2515,95 +784,6 @@ getImageInfoSync(index?: int): ImageInfo
 | --- |
 | [ImageInfo](arkts-image-image-imageinfo-i.md) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageInfo(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageInfo(0)
-    .then((imageInfo: image.ImageInfo) => {
-      console.info('Succeeded in obtaining the image information.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to obtain the image information.code is ${error.code}, message is ${error.message}`);
-    })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function GetImageInfoSyncFunc(imageSource: image.ImageSource) {
-  try {
-    let imageInfo = imageSource.getImageInfoSync(0);
-    console.info(0x00000, 'GetImageInfoSyncFunc', 'getImageInfoSync success!');
-  } catch (err) {
-    console.error(0x00000, 'GetImageInfoSyncFunc', 'GetImageInfoSyncFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getImageInfoSync(pixelMap: image.PixelMap) {
-  try {
-    let imageInfo: image.ImageInfo = pixelMap.getImageInfoSync();
-    console.info(`Succeeded in obtaining information of the PixelMap with size ${imageInfo.size} and pixel format ${imageInfo.pixelFormat}.`);
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to obtain information of the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function getImageInfoSync(pixelMap: image.PixelMap) {
-  try {
-    let imageInfo: image.ImageInfo = pixelMap.getImageInfoSync();
-    console.info(`Succeeded in obtaining information of the PixelMap with size ${imageInfo.size} and pixel format ${imageInfo.pixelFormat}.`);
-  } catch (err) {
-    console.error(`Failed to obtain information of the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
-## getImageInfoSync
-
-```TypeScript
-getImageInfoSync(index?: int): ImageInfo | undefined
-```
-
-Get image information from image source synchronously.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | int | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined |
-
-**示例**
-
-参见 [getImageInfoSync](#getimageinfosync)
-
 ## getImageProperties
 
 ```TypeScript
@@ -2613,8 +793,6 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 批量获取图片中的指定属性键的值。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2640,82 +818,6 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 | [62980113](../errorcode-image.md#62980113-图片未知格式) |
 | [62980116](../errorcode-image.md#62980116-解码失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperties(imageSourceObj : image.ImageSource) {
-  let key = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  imageSourceObj.getImageProperties(key).then((data) => {
-    console.info(JSON.stringify(data));
-  }).catch((err: BusinessError | BusinessError[]) => {
-    if (Array.isArray(err)) {
-      (err as BusinessError[]).forEach(e => {
-        console.error(`Failed to get the properties, error.code ${e.code}, error.message ${e.message}`);
-      });
-    } else {
-      console.error(`Failed to get the properties, error.code ${err.code}, error.message ${err.message}`);
-    }
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function GetImagePropertiesFunc(imageSource: image.ImageSource): Promise<void> {
-  let key = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  try {
-    let properties = await imageSource.getImageProperties(key);
-    console.info(0x00000, 'GetImagePropertiesFunc', 'getImageProperty success!');
-  } catch (err) {
-    console.error(0x00000, 'GetImagePropertiesFunc', 'GetImagePropertiesFunc failed: ' + err);
-  }
-}
-```
-
-## getImageProperties
-
-```TypeScript
-getImageProperties(key: Array<PropertyKey>): Promise<Record<string, string|null>>
-```
-
-Obtains the value of properties in an image. This method uses a promise to return the property values in array of records.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | Array&lt;[PropertyKey](arkts-image-image-propertykey-e.md)&gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) |
-| [62980116](../errorcode-image.md#62980116-解码失败) |
-
-**示例**
-
-参见 [getImageProperties](#getimageproperties)
-
 ## getImageProperty
 
 ```TypeScript
@@ -2725,8 +827,6 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2760,80 +860,6 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 | [62980123](../errorcode-image.md#62980123-图片不支持exif解码) |
 | [62980135](../errorcode-image.md#62980135-图片属性值无效) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  let options: image.ImagePropertyOptions = { index: 0, defaultValue: '9999' }
-  imageSourceObj.getImageProperty(image.PropertyKey.BITS_PER_SAMPLE, options)
-    .then((data: string) => {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }).catch((error: BusinessError) => {
-    console.error(`Failed to get the value of the specified attribute key of the image, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function GetImagePropertyFunc(imageSource: image.ImageSource): Promise<void> {
-  let opts: image.ImagePropertyOptions = { index: 0, defaultValue: '9999' };
-  try {
-    let property: string = await imageSource.getImageProperty(image.PropertyKey.BITS_PER_SAMPLE, opts);
-    console.info(0x00000, 'GetImagePropertyFunc', 'getImageProperty success!');
-  } catch (err) {
-    console.error(0x00000, 'GetImagePropertyFunc', 'GetImagePropertyFunc failed: ' + err);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageProperty("BitsPerSample")
-    .then((data: string) => {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }).catch((error: BusinessError) => {
-    console.error(`Failed to get the value of the specified attribute key of the image, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.getImageProperty("BitsPerSample", (error: BusinessError, data: string) => {
-    if (error) {
-      console.error('Failed to get the value of the specified attribute key of the image.');
-    } else {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetImageProperty(imageSourceObj : image.ImageSource) {
-  let property: image.GetImagePropertyOptions = { index: 0, defaultValue: '9999' }
-  imageSourceObj.getImageProperty("BitsPerSample", property, (error: BusinessError, data: string) => {
-    if (error) {
-      console.error('Failed to get the value of the specified attribute key of the image.');
-    } else {
-      console.info('Succeeded in getting the value of the specified attribute key of the image.');
-    }
-  })
-}
-```
-
 ## getImageProperty
 
 ```TypeScript
@@ -2848,8 +874,6 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 > 替。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -2870,10 +894,6 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 | --- |
 | Promise & lt;string & gt; |
 
-**示例**
-
-参见 [getImageProperty](#getimageproperty)
-
 ## getImageProperty
 
 ```TypeScript
@@ -2889,8 +909,6 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **替代接口：** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
@@ -2903,10 +921,6 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 | --- | --- | --- |
 | key | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
-
-**示例**
-
-参见 [getImageProperty](#getimageproperty)
 
 ## getImageProperty
 
@@ -2923,8 +937,6 @@ getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncC
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **替代接口：** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
@@ -2938,10 +950,6 @@ getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncC
 | key | string | 是 |
 | options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
-
-**示例**
-
-参见 [getImageProperty](#getimageproperty)
 
 ## getImagePropertySync
 
@@ -2958,8 +966,6 @@ getImagePropertySync(key: PropertyKey): string
 > [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -2983,74 +989,6 @@ getImagePropertySync(key: PropertyKey): string
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-function GetImagePropertySync(context : Context) {
-  let resourceMgr = context.resourceManager;
-  if (resourceMgr == null) {
-    return;
-  }
-  let fd = resourceMgr.getRawFdSync("example.jpg");
-
-  const imageSourceObj = image.createImageSource(fd);
-  console.info("getImagePropertySync");
-  let bits_per_sample = imageSourceObj.getImagePropertySync(image.PropertyKey.BITS_PER_SAMPLE);
-  console.info("bits_per_sample : " + bits_per_sample);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const imageSourceApi = image.createImageSource(fd);
-console.info("getImagePropertySync");
-if (imageSourceApi) {
-  let bits_per_sample = imageSourceApi.getImagePropertySync(image.PropertyKey.BITS_PER_SAMPLE);
-  console.info("bits_per_sample : " + bits_per_sample);
-}
-```
-
-## getImagePropertySync
-
-```TypeScript
-getImagePropertySync(key: PropertyKey): string | undefined
-```
-
-Obtains the value of a property in the image.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | [PropertyKey](arkts-image-image-propertykey-e.md) | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| string \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
-
-**示例**
-
-参见 [getImagePropertySync](#getimagepropertysync)
-
 ## modifyImageProperties
 
 ```TypeScript
@@ -3065,8 +1003,6 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 > - 调用modifyImageProperties接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -3091,85 +1027,6 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 | [62980135](../errorcode-image.md#62980135-图片属性值无效) |
 | [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperties(imageSourceObj : image.ImageSource) {
-  let keyValues: Record<PropertyKey, string|null> = {
-    [image.PropertyKey.IMAGE_WIDTH] : "1024",
-    [image.PropertyKey.IMAGE_LENGTH] : "1024"
-  };
-  let checkKey = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  imageSourceObj.modifyImageProperties(keyValues).then(() => {
-    imageSourceObj.getImageProperties(checkKey).then((data) => {
-      console.info(`Image Width and Image Height:${data}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function ModifyImagePropertiesFunc(imageSource: image.ImageSource): Promise<void> {
-  let keyValues: Record<image.PropertyKey, string | null> = {};
-  keyValues[image.PropertyKey.IMAGE_WIDTH] = "1024";
-  keyValues[image.PropertyKey.IMAGE_LENGTH] = "1024";
-  try {
-    await imageSource.modifyImageProperties(keyValues);
-    console.info(0x00000, 'ModifyImagePropertiesFunc', 'modifyImageProperties success!');
-  } catch (err) {
-    console.error(0x00000, 'ModifyImagePropertiesFunc', 'ModifyImagePropertiesFunc failed: ' + err);
-  }
-}
-```
-
-## modifyImageProperties
-
-```TypeScript
-modifyImageProperties(records: Record<string, string|null>): Promise<void>
-```
-
-Modify the value of properties in an image with the specified keys.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Image.ImageSource
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) |
-| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) |
-
-**示例**
-
-参见 [modifyImageProperties](#modifyimageproperties)
-
 ## modifyImagePropertiesEnhanced
 
 ```TypeScript
@@ -3188,8 +1045,6 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 > - 调用modifyImagePropertiesEnhanced接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -3213,51 +1068,6 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) |
 | [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImagePropertiesEnhanced(imageSourceObj : image.ImageSource) {
-  let keyValues: Record<string, string|null> = {
-    "ImageWidth" : "1024",
-    "ImageLength" : "1024"
-  };
-  let checkKey = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-  imageSourceObj.modifyImagePropertiesEnhanced(keyValues).then(() => {
-    imageSourceObj.getImageProperties(checkKey).then((data) => {
-      console.info(`Image Width and Image Height:${data}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function ModifyImagePropertiesEnhanced(imageSourceObj: image.ImageSource) {
-  const keyValues: Record<string, string | null> = {};
-  keyValues[image.PropertyKey.IMAGE_WIDTH] = "1024";
-  keyValues[image.PropertyKey.IMAGE_LENGTH] = "1024";
-
-  const checkKey = [image.PropertyKey.IMAGE_WIDTH, image.PropertyKey.IMAGE_LENGTH];
-
-  try {
-    await imageSourceObj.modifyImagePropertiesEnhanced(keyValues);
-    const data = await imageSourceObj.getImageProperties(checkKey);
-    console.info(`Image Width and Image Height:${data}`);
-  } catch (err) {
-    console.error(`Failed to modify the Image Width and Image Height, error.code ${err.code}, error.message ${err.message}`);
-  }
-}
-```
-
 ## modifyImageProperty
 
 ```TypeScript
@@ -3272,8 +1082,6 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -3300,72 +1108,6 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 | [62980135](../errorcode-image.md#62980135-图片属性值无效) |
 | [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.modifyImageProperty(image.PropertyKey.IMAGE_WIDTH, "120").then(() => {
-    imageSourceObj.getImageProperty(image.PropertyKey.IMAGE_WIDTH).then((width: string) => {
-      console.info(`ImageWidth is :${width}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get the Image Width, error.code ${error.code}, error.message ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to modify the Image Width, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function ModifyImagePropertyFunc(imageSource: image.ImageSource): Promise<void> {
-  let opts: image.ImagePropertyOptions = { index: 0, defaultValue: '9999' };
-  try {
-    await imageSource.modifyImageProperty(image.PropertyKey.IMAGE_WIDTH, "120");
-    let property: string = await imageSource.getImageProperty(image.PropertyKey.IMAGE_WIDTH);
-    console.info(0x00000, 'ModifyImagePropertyFunc', 'modifyImageProperty success!');
-    console.info(0x00000, 'ModifyImagePropertyFunc', 'image width is: ' + property);
-  } catch (err) {
-    console.error(0x00000, 'ModifyImagePropertyFunc', 'ModifyImagePropertyFunc failed: ' + err);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.modifyImageProperty("ImageWidth", "120").then(() => {
-    imageSourceObj.getImageProperty("ImageWidth").then((width: string) => {
-      console.info(`ImageWidth is :${width}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get the Image Width, error.code ${error.code}, error.message ${error.message}`);
-    })
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to modify the Image Width, error.code ${error.code}, error.message ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
-  imageSourceObj.modifyImageProperty("ImageWidth", "120", (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to modify the Image Width.code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('Succeeded in modifying the Image Width.');
-    }
-  })
-}
-```
-
 ## modifyImageProperty
 
 ```TypeScript
@@ -3382,8 +1124,6 @@ modifyImageProperty(key: string, value: string): Promise<void>
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 11
 
@@ -3403,10 +1143,6 @@ modifyImageProperty(key: string, value: string): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [modifyImageProperty](#modifyimageproperty)
 
 ## modifyImageProperty
 
@@ -3425,8 +1161,6 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **替代接口：** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
@@ -3441,20 +1175,10 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 | value | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [modifyImageProperty](#modifyimageproperty)
-
 ## readImageMetadata
 
-ArkTS-Dyn:
 ```TypeScript
 readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadata>
-```
-
-ArkTS-Sta:
-```TypeScript
-readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 ```
 
 读取图像源的元数据，使用propertyKeys指定元数据字段。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF、WebP、DNG、GIF、TIFF、HEIFS、JFIF和AVIS（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
@@ -3470,6 +1194,7 @@ readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 > - GPSVersionID字段：当没有有效的GPS数据时，会清除GPS版本号并返回0。&gt;
 > - GPSAltitudeRef字段：当未设置GPSAltitude时，会设置为0xFFFFFFFF。&gt;
 > - ISOSpeedRatings字段：当该标签值为0或65535时，会优先使用推荐曝光指数，若不存在则依次使用标准输出灵敏度、ISO速度、曝光指数。&gt;
+> 该接口支持读取以下格式的元数据：&gt;
 > - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md)。&gt;
 > - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。&gt;
 > - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md)。&gt;
@@ -3477,12 +1202,10 @@ readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 > - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)。&gt;
 > - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。&gt;
 > - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
-> [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。&gt;
+> [XMPMetadata](arkts-image-image-xmpmetadata-c.md)。&gt;
 > - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3493,7 +1216,7 @@ readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | propertyKeys | string[] | 否 |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| index | number | 否 |
 
 **返回值：**
 
@@ -3509,70 +1232,10 @@ readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) |
 | [7700204](../errorcode-image.md#7700204-无效参数) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ReadImageMetadata(imageSourceObj : image.ImageSource) {
-  let propertyKeys = ["ImageWidth", "HwMnoteIsXmageSupported"];
-  await imageSourceObj.readImageMetadata(propertyKeys).then((metaData: image.ImageMetadata) => {
-    if (metaData != undefined && metaData.exifMetadata != undefined &&
-      metaData.makerNoteHuaweiMetadata != undefined) {
-      console.info("ImageWidth: " + metaData.exifMetadata.imageWidth +
-        " HwMnoteIsXmageSupported: " + metaData.makerNoteHuaweiMetadata.isXmageSupported);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read image metadata. error.code is ${error.code}, error.message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  let fd = file.fd;
-  return fd;
-}
-
-async function exifMetadataGetProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    console.info('readImageMetadata: ',JSON.stringify(metaData));
-  } else {
-    console.error('Metadata is null.');
-  }
-  fileIo.closeSync(fd);
-}
-```
-
 ## readImageMetadataByType
 
-ArkTS-Dyn:
 ```TypeScript
 readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise<ImageMetadata>
-```
-
-ArkTS-Sta:
-```TypeScript
-readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<ImageMetadata>
 ```
 
 读取图像源的元数据，使用metadataTypes指定元数据类型。若未指定metadataTypes，则返回所有支持的元数据。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF、WebP、DNG、GIF、TIFF、HEIFS、JFIF和AVIS（不同硬件设备支持情况不同）文件。
@@ -3588,12 +1251,10 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<Im
 > - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)。&gt;
 > - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。&gt;
 > - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
-> [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。&gt;
+> [XMPMetadata](arkts-image-image-xmpmetadata-c.md)。&gt;
 > - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3604,7 +1265,7 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<Im
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | metadataTypes | [MetadataType](arkts-image-image-metadatatype-e.md)[] | 否 |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| index | number | 否 |
 
 **返回值：**
 
@@ -3620,44 +1281,6 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<Im
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) |
 | [7700204](../errorcode-image.md#7700204-无效参数) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ReadImageMetadataByType(imageSource : image.ImageSource, type: image.MetadataType) {
-  let types: image.MetadataType[] = [type];
-  await imageSource.readImageMetadataByType(types, 0).then((metaData: image.ImageMetadata) => {
-    if (metaData != undefined && metaData.exifMetadata != undefined) {
-      console.info("ImageWidth: " + metaData.exifMetadata.imageWidth);
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to read image metadata by type. error.code is ${error.code}, error.message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ReadImageMetadataByType(imageSource : image.ImageSource, type: image.MetadataType) {
-  try {
-    let types: image.MetadataType[] = [type];
-    let metaData: image.ImageMetadata = await imageSource.readImageMetadataByType(types, 0);
-    if (metaData && metaData.exifMetadata) {
-      let width = metaData.exifMetadata?.imageWidth;
-      console.info(`ImageWidth: ${width}`);
-    }
-  } catch (err) {
-    console.error(`ReadImageMetadataByType failed error.code is ${err.code}, error.message is ${err.message}`);
-  }
-}
-```
-
 ## release
 
 ```TypeScript
@@ -3668,8 +1291,6 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **参数：**
@@ -3677,433 +1298,6 @@ release(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function Release(auxPictureObj: image.AuxiliaryPicture) {
-  let funcName = "Release";
-  if (auxPictureObj != null) {
-    auxPictureObj.release();
-    if (auxPictureObj.getType() == null) {
-      console.info(funcName, 'Success !');
-    } else {
-      console.error(funcName, 'Failed !');
-    }
-  } else {
-    console.error('PictureObj is null');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-if (context != undefined) {
-  let auxPicture: image.AuxiliaryPicture | null = GetAuxiliaryPicture(context)
-  if (auxPicture != null) {
-    auxPicture.release();
-  } else {
-    console.error(0x00000, 'GetAuxiliaryPicture', 'auxPicture is null!');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-function ReleaseFunc(img: image.Image): void {
-  try {
-    img.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'release success!');
-      }
-    })
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function ReleaseFunc(img: image.Image): void {
-  try {
-    await img.release()
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function ReleaseFunc(creator: image.ImageCreator): void {
-  try {
-    creator.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'release success!');
-      }
-    })
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function ReleaseFunc(creator: image.ImageCreator): void {
-  try {
-    await creator.release();
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function ReleaseFunc(): void {
-  try {
-    let imagePacker: image.ImagePacker = image.createImagePacker();
-    imagePacker.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'release success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function ReleaseFunc(): Promise<void> {
-  try {
-    let imagePacker: image.ImagePacker = image.createImagePacker();
-    await imagePacker.release();
-    console.info(0x00000, 'ReleaseFunc', 'release success!');
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function ReleaseFunc(): void {
-  let size: image.Size = { height: 8192, width: 8 };
-  try {
-    let receiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-    receiver.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'ReleaseFunc success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function ReleaseFunc(): void {
-  let size: image.Size = { height: 8192, width: 8 };
-  try {
-    let receiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-    await receiver.release();
-    console.info(0x00000, 'ReleaseFunc', 'release success!');
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function ReleaseFunc(imageSource: image.ImageSource): void {
-  try {
-    imageSource.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'release success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function ReleaseFunc(imageSource: image.ImageSource): Promise<void> {
-  try {
-    await imageSource.release();
-    console.info(0x00000, 'ReleaseFunc', 'release success!');
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function Release(pictureObj : image.Picture) {
-  let funcName = "Release";
-  if (pictureObj != null) {
-    pictureObj.release();
-    if (pictureObj.getMainPixelmap() == null) {
-      console.info(funcName, 'Succeeded in releasing a picture.');
-    } else {
-      console.error(funcName, 'Failed to release a picture.');
-    }
-  } else {
-    console.error('Picture object is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function ReleaseFunc(picture: image.Picture): void {
-  try {
-    picture.release();
-    console.info(0x00000, 'ReleaseFunc', 'release success!');
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: Error) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in releasing the PixelMap object.');
-  });
-}
-```
 
 ## release
 
@@ -4115,8 +1309,6 @@ release(): Promise<void>
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 **返回值：**
@@ -4125,27 +1317,15 @@ release(): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [release](#release)
-
 ## updateData
 
-ArkTS-Dyn:
 ```TypeScript
 updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Promise<void>
 ```
 
 更新增量数据。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -4155,8 +1335,8 @@ updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Pro
 | --- | --- | --- |
 | buf | ArrayBuffer | 是 |
 | isFinished | boolean | 是 |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| length | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| offset | number | 是 |
+| length | number | 是 |
 
 **返回值：**
 
@@ -4164,75 +1344,8 @@ updateData(buf: ArrayBuffer, isFinished: boolean, offset: int, length: int): Pro
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const array: ArrayBuffer = new ArrayBuffer(100);
-imageSourceApi.updateData(array, false, 0, 10).then(() => {
-  console.info('Succeeded in updating data.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to update data.code is ${err.code},message is ${err.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function UpdateDataFunc(imageSource: image.ImageSource): void {
-  const array: ArrayBuffer = new ArrayBuffer(100);
-  try {
-    await imageSource.updateData(array, false, 0, 10);
-    console.info(0x00000, 'UpdateDataFunc', 'updateData success!');
-  } catch (err) {
-    console.error(0x00000, 'UpdateDataFunc', 'UpdateDataFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const array: ArrayBuffer = new ArrayBuffer(100);
-imageSourceApi.updateData(array, false, 0, 10, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to update data.code is ${err.code},message is ${err.message}`);
-  } else {
-    console.info('Succeeded in updating data.');
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function UpdateDataFunc(imageSource: image.ImageSource): void {
-  const array: ArrayBuffer = new ArrayBuffer(100);
-  try {
-    imageSource.updateData(array, false, 0, 10, (err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'UpdateDataFunc', 'updateData failed: ' + err);
-      } else {
-        console.info(0x00000, 'UpdateDataFunc', 'updateData success!');
-      }
-    });
-    console.info(0x00000, 'UpdateDataFunc', 'updateData success!');
-  } catch (err) {
-    console.error(0x00000, 'UpdateDataFunc', 'UpdateDataFunc failed: ' + err);
-  }
-}
-```
-
 ## updateData
 
-ArkTS-Dyn:
 ```TypeScript
 updateData(
       buf: ArrayBuffer,
@@ -4243,22 +1356,9 @@ updateData(
     ): void
 ```
 
-ArkTS-Sta:
-```TypeScript
-updateData(
-      buf: ArrayBuffer,
-      isFinished: boolean,
-      offset: int,
-      length: int,
-      callback: AsyncCallback<void>
-    ): void
-```
-
 更新增量数据。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
@@ -4268,13 +1368,9 @@ updateData(
 | --- | --- | --- |
 | buf | ArrayBuffer | 是 |
 | isFinished | boolean | 是 |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| length | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| offset | number | 是 |
+| length | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [updateData](#updatedata)
 
 ## writeImageMetadata
 
@@ -4292,12 +1388,10 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 > 更高效。&gt;
 > - 支持修改JPEG、PNG和HEIF文件类型的图片属性，图片需要包含Exif信息。修改属性前，先通过supportedFormats属性查询设备是否支持HEIF格式的Exif读写。&gt;
 > - 从API版本26.0.0开始，支持修改JPEG、PNG、GIF格式图片的XMP元数据。XMP元数据的操作方法可以参考
-> [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。&gt;
+> [XMPMetadata](arkts-image-image-xmpmetadata-c.md)。&gt;
 > - 调用writeImageMetadata接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4323,61 +1417,6 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) |
 | [7700204](../errorcode-image.md#7700204-无效参数) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function WriteImageMetadata(imageSourceObj : image.ImageSource) {
-  let propertyKeys = ["ImageWidth", "HwMnoteIsXmageSupported"];
-  let metaData = await imageSourceObj.readImageMetadata(propertyKeys);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    metaData.exifMetadata.imageLength = 3072;
-  }
-  await imageSourceObj.writeImageMetadata(metaData).then(() => {
-    console.info(`Succeeded in writing image metadata.`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to write image metadata. error.code is ${error.code}, error.message is ${error.message}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  let fd = file.fd;
-  return fd;
-}
-
-async function exifMetadataGetProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    console.info('readImageMetadata: ',JSON.stringify(metaData));
-    await imageSource.writeImageMetadata(metaData);
-  } else {
-    console.error('Metadata is null.');
-  }
-  fileIo.closeSync(fd);
-}
-```
-
 ## supportedFormats
 
 ```TypeScript
@@ -4389,7 +1428,5 @@ readonly supportedFormats: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## createVirtualScreen
@@ -15,8 +15,6 @@ function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallbac
 创建虚拟屏幕，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CAPTURE_SCREEN
 
@@ -40,116 +38,6 @@ function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallbac
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenClass: screen.Screen | null = null;
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option: VirtualScreenOption = { 
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-}; // 创建虚拟屏幕的参数
-// 创建虚拟屏幕
-screen.createVirtualScreen(option, (err: BusinessError, data: screen.Screen) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  screenClass = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let option : screen.VirtualScreenOption = { 
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: ''
-};
-screen.createVirtualScreen(option, (err: BusinessError | null, data) => {
-  const errCode = err?.code;
-  if (errCode) {
-    console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
-    return;
-  }
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenClass: screen.Screen | null = null;
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option: VirtualScreenOption = { 
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-}; // 创建虚拟屏幕的参数
-
-// 创建虚拟屏幕
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  screenClass = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let screenClass: screen.Screen | null = null;
-
-let option : screen.VirtualScreenOption = { 
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: ''
-};
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  screenClass = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-}).catch((err: Error) => {
-  console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 
 ## createVirtualScreen
 
@@ -160,8 +48,6 @@ function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>
 创建虚拟屏幕，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CAPTURE_SCREEN
 
@@ -189,7 +75,3 @@ function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
-
-**示例**
-
-参见 [createVirtualScreen](#createvirtualscreen)

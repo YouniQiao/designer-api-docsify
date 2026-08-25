@@ -7,8 +7,6 @@ The **NodeController** module provides APIs for managing custom nodes, such as c
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToAppear
@@ -23,8 +21,6 @@ Called after the NodeContainer component bound to this **NodeController** instan
 > For details about the callback timing, see onAppear.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ aboutToDisappear?(): void
 Called when the NodeContainer component bound to this **NodeController** instance is destroyed.
 
 > **NOTE：**&gt;
-> For details about the callback timing, see onDisAppear.
+> For details about the callback timing, see [onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#ondisappear).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +56,6 @@ aboutToResize?(size: Size): void
 Called when the NodeContainer component bound to this **NodeController** instance is resized.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +89,6 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -130,8 +120,6 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -147,8 +135,6 @@ onBind?(containerId: number): void
 Called after this **NodeController** instance is bound to a NodeContainer component.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -175,8 +161,6 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -192,8 +176,6 @@ onTouchEvent?(event: TouchEvent): void
 Called when the NodeContainer component bound to this **NodeController** instance receives a touch event.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -217,8 +199,6 @@ Called after this **NodeController** instance is unbound from a NodeContainer co
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -241,8 +221,6 @@ Called when this **NodeController** instance is about to be bound to a NodeConta
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -264,8 +242,6 @@ onWillUnbind?(containerId: number): void
 Called when this **NodeController** instance is about to be unbound from a NodeContainer component.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -297,8 +273,6 @@ Instructs the NodeContainer component bound to this **NodeController** instance 
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to explicitly define the UI context at the time of the call.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

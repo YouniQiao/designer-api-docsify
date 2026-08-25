@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from '@kit.ConnectivityKit';
+import { wifiext } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getSupportedPowerModel
@@ -15,8 +15,6 @@ function getSupportedPowerModel(): Promise<Array<PowerModel>>
 Obtains the supported power model.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -42,8 +40,6 @@ function getSupportedPowerModel(callback: AsyncCallback<Array<PowerModel>>): voi
 Obtains the supported power model.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

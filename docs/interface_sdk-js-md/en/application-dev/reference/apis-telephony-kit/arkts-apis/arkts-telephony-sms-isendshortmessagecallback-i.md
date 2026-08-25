@@ -1,17 +1,15 @@
 # ISendShortMessageCallback
 
-Provides the callback for the SMS message sending result. It consists of three parts: SMS message sending result, URI for storing the sent SMS message, and whether the SMS message is the last part of a long SMS message.
+Provides the callback for the SMS message sending result. It consists of three parts: SMS message sending result, URI for storing the sent SMS message, and whether the SMS message is the last part of a number SMS message.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isLastPart
@@ -20,14 +18,13 @@ import { sms } from '@kit.TelephonyKit';
 isLastPart: boolean
 ```
 
-Whether this SMS message is the last part of a long SMS message. The default value is **false**.  
-- **true**: yes - **false**: no
+Whether this SMS message is the last part of a number SMS message. The default value is **false**.  
+- **true**: yes  
+- **false**: no
 
 **Type:** boolean
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -43,8 +40,6 @@ SMS message sending result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## url
@@ -58,7 +53,5 @@ URI for storing the sent SMS message.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## clean
@@ -15,8 +15,6 @@ function clean(accountId: string, appActions: Record<string, Action>): Promise<v
 异步方法清理本地云相关数据。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -45,78 +43,6 @@ function clean(accountId: string, appActions: Record<string, Action>): Promise<v
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let appActions: Record<string, cloudSyncManager.Action> = {
-  'com.example.bundleName1': cloudSyncManager.Action.RETAIN_DATA,
-  'com.example.bundleName2': cloudSyncManager.Action.CLEAR_DATA
-};
-cloudSyncManager.clean(accountId, appActions).then(() => {
-  console.info("clean successfully");
-}).catch((err: BusinessError) => {
-  console.error(`clean failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let appActions: Record<string, cloudSyncManager.Action> = new Record<string, cloudSyncManager.Action>();
-appActions['com.example.bundleName1'] = cloudSyncManager.Action.RETAIN_DATA;
-appActions['com.example.bundleName2'] = cloudSyncManager.Action.CLEAR_DATA;
-cloudSyncManager.clean(accountId, appActions).then<void>((): void => {
-  console.info("clean successfully");
-}).catch((err: BusinessError<void>): void => {
-  console.error("clean failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let appActions: Record<string, cloudSyncManager.Action> = {
-  'com.example.bundleName1': cloudSyncManager.Action.RETAIN_DATA,
-  'com.example.bundleName2': cloudSyncManager.Action.CLEAR_DATA
-};
-cloudSyncManager.clean(accountId, appActions, (err: BusinessError) => {
-  if (err) {
-    console.error(`clean failed with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    console.info("clean successfully");
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let appActions: Record<string, cloudSyncManager.Action> = new Record<string, cloudSyncManager.Action>();
-appActions['com.example.bundleName1'] = cloudSyncManager.Action.RETAIN_DATA;
-appActions['com.example.bundleName2'] = cloudSyncManager.Action.CLEAR_DATA;
-cloudSyncManager.clean(accountId, appActions, (err: BusinessError<void> | null): void => {
-  if (err && err.code) {
-    console.error("clean failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("clean successfully");
-  }
-});
-```
-
 
 ## clean
 
@@ -127,8 +53,6 @@ function clean(accountId: string, appActions: Record<string, Action>, callback: 
 异步方法清理本地云相关数据。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -151,7 +75,3 @@ function clean(accountId: string, appActions: Record<string, Action>, callback: 
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [clean](#clean)

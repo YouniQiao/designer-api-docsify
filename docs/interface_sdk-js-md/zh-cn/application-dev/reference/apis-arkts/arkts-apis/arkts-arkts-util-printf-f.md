@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## printf
@@ -15,8 +15,6 @@ function printf(format: string, ...args: Object[]): string
 通过式样化字符串对输入的内容按特定格式输出。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -36,11 +34,3 @@ function printf(format: string, ...args: Object[]): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-let res = util.printf("%s", "hello world!");
-console.info(res);
-// 输出结果：hello world!
-```

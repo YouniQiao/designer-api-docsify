@@ -4,8 +4,6 @@ The enum of SPP type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md)
@@ -21,8 +19,6 @@ SPP_RFCOMM = 0
 RFCOMM
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

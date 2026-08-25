@@ -8,8 +8,6 @@ Defines the data types supported by [onMessageEventExt](arkts-arkweb-webview-web
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 9.
 
 **System capability:** SystemCapability.Web.Webview.Core

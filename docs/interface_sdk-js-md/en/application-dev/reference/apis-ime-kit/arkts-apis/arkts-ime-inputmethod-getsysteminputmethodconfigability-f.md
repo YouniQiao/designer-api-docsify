@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## getSystemInputMethodConfigAbility
@@ -15,8 +15,6 @@ function getSystemInputMethodConfigAbility(): ElementName
 Obtains the information about the input method configuration page ability.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -31,11 +29,3 @@ Obtains the information about the input method configuration page ability.
 | Error Code ID |
 | --- |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-
-let inputMethodConfig: bundleManager.ElementName = inputMethod.getSystemInputMethodConfigAbility();
-```

@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -24,8 +22,6 @@ constructor(encoding?: string)
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -36,149 +32,6 @@ constructor(encoding?: string)
 | --- | --- | --- |
 | encoding | string | 否 |
 
-**示例**
-
-```TypeScript
-let textDecoder = new util.TextDecoder();
-let retStr = textDecoder.encoding;
-console.info('retStr = ' + retStr);
-// 输出结果：retStr = utf-8
-```
-
-```TypeScript
-let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder("utf-8");
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lruCache = new util.LRUCache<number, number>();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lruCache = new util.LRUCache<int, int>();
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-console.info("range = " + range);
-// 输出结果：range = [30, 40]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable<Temperature> {
-  private readonly _temp: int;
-
-  constructor(value: int) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp(): int {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper<Temperature>(tempLower, tempUpper);
-console.info("range = " + range);
-// 输出结果：range = [30, 40]
-```
-
-```TypeScript
-let base64 = new util.Base64Helper();
-```
-
-```TypeScript
-let decoder = new util.StringDecoder();
-```
-
-```TypeScript
-let type = new util.types();
-```
-
-```TypeScript
-let pro : util.LruBuffer<number,number> = new util.LruBuffer();
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
-console.info("range = " + range);
-// 输出结果：range = [30, 40]
-```
-
-```TypeScript
-let base64 = new  util.Base64();
-```
-
 ## end
 
 ```TypeScript
@@ -188,8 +41,6 @@ end(chunk?: string | Uint8Array): string
 结束解码过程，并将内部缓存中存储的任何剩余输入作为字符串返回。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -207,19 +58,6 @@ end(chunk?: string | Uint8Array): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-let decoder = new util.StringDecoder('utf-8');
-let input = new Uint8Array([0xE4, 0xBD, 0xA0, 0xE5, 0xA5, 0xBD]);
-const writeString = decoder.write(input.slice(0, 5));
-const endString = decoder.end(input.slice(5));
-console.info("writeString:", writeString);
-// 输出结果：writeString: 你
-console.info("endString:", endString);
-// 输出结果：endString: 好
-```
-
 ## write
 
 ```TypeScript
@@ -229,8 +67,6 @@ write(chunk: string | Uint8Array): string
 解码字符串。Uint8Array 末尾的任何不完整多字节字符都会从返回的字符串中过滤掉，并存储在内部缓存中以供下次调用使用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -247,13 +83,3 @@ write(chunk: string | Uint8Array): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-let decoder = new util.StringDecoder('utf-8');
-let input =  new Uint8Array([0xE4, 0xBD, 0xA0, 0xE5, 0xA5, 0xBD]);
-const decoded = decoder.write(input);
-console.info("decoded:", decoded);
-// 输出结果：decoded: 你好
-```

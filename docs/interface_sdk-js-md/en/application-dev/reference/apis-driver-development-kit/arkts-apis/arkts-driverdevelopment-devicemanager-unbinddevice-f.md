@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## unbindDevice
@@ -15,8 +15,6 @@ function unbindDevice(deviceId: number, callback: AsyncCallback<number>): void
 Unbinds a peripheral device.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 19
 
@@ -41,42 +39,6 @@ Unbinds a peripheral device.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [22900001](../errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) |
 
-**Examples**
-
-```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // For example, deviceId is 12345678. You can use queryDevices() to obtain the deviceId.
-  deviceManager.unbindDevice(12345678, (error : BusinessError, data : number) => {
-    if (error) {
-      console.error(`unbindDevice async fail. Code is ${error.code}, message is ${error.message}`);
-      return;
-    }
-    console.info(`unbindDevice success`);
-  });
-} catch (error) {
-  console.error(`unbindDevice fail. Code is ${error.code}, message is ${error.message}`);
-}
-```
-
-```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // For example, deviceId is 12345678. You can use queryDevices() to obtain the deviceId.
-  deviceManager.unbindDevice(12345678).then((data : number) => {
-    console.info(`unbindDevice success, Device_Id is ${data}.`);
-  }, (error : BusinessError) => {
-    console.error(`unbindDevice async fail. Code is ${error.code}, message is ${error.message}`);
-  });
-} catch (error) {
-  console.error(`unbindDevice fail. Code is ${error.code}, message is ${error.message}`);
-}
-```
-
 
 ## unbindDevice
 
@@ -87,8 +49,6 @@ function unbindDevice(deviceId: number): Promise<number>
 Unbinds a peripheral device. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 19
 
@@ -117,7 +77,3 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [22900001](../errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) |
-
-**Examples**
-
-See [unbindDevice](#unbinddevice)

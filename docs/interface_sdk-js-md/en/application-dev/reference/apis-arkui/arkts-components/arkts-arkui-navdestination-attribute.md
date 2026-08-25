@@ -6,8 +6,6 @@ The universal attributes are supported.In addition to the universal events, the 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,8 +30,6 @@ Sets the icon of the back button on the title bar.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -44,7 +40,7 @@ Sets the icon of the back button on the title bar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ResourceStr \| PixelMap \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes |
 
 ## backButtonIcon
 
@@ -63,8 +59,6 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -75,7 +69,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| icon | ResourceStr \| PixelMap \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes |
 | accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No |
 
 ## bindToNestedScrollable
@@ -98,8 +92,6 @@ Binds the **NavDestination** component with a nested scrollable container, which
 > - This API can be called in attributeModifier since API version 22.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,8 +126,6 @@ Binds the **NavDestination** component with a scrollable container, which can be
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -146,7 +136,7 @@ Binds the **NavDestination** component with a scrollable container, which can be
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| scrollers | Array & lt;Scroller & gt; | Yes |
+| scrollers | Array&lt;[Scroller](arkts-arkui-scroller-c.md)&gt; | Yes |
 
 ## customTransition
 
@@ -163,8 +153,6 @@ Sets a custom transition animation for the **NavDestination** component.
 > whichever is set later takes effect.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -195,8 +183,6 @@ Sets whether to show or hide the system navigation bar when entering this **NavD
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -207,7 +193,7 @@ Sets whether to show or hide the system navigation bar when entering this **NavD
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## enableStatusBar
 
@@ -234,8 +220,6 @@ Sets whether to show or hide the system status bar when entering this **NavDesti
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -246,7 +230,7 @@ Sets whether to show or hide the system status bar when entering this **NavDesti
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 | animated | boolean | No |
 
 ## fullScreenOverlay
@@ -259,8 +243,6 @@ Sets whether the NavDestination should cover the entire navigation container.Whe
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -271,7 +253,7 @@ Sets whether the NavDestination should cover the entire navigation container.Whe
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [fullScreenOverlay](#fullscreenoverlay) | Optional & lt;boolean & gt; | Yes |
+| [fullScreenOverlay](#fullscreenoverlay) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## hideBackButton
 
@@ -283,8 +265,6 @@ Sets whether to hide the back button in the title bar.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -295,7 +275,7 @@ Sets whether to hide the back button in the title bar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| hide | Optional & lt;boolean & gt; | Yes |
+| hide | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## hideTitleBar
 
@@ -306,8 +286,6 @@ hideTitleBar(value: boolean)
 Specifies whether to hide the title bar.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -328,8 +306,6 @@ hideTitleBar(hide: boolean, animated: boolean)
 Specifies whether to hide the title bar. Compared with [hideTitleBar](#hidetitlebar), this API adds the capability to control whether to animate the visibility change of the title bar.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -353,8 +329,6 @@ hideToolBar(hide: boolean, animated?: boolean)
 Specifies whether to hide the toolbar.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -387,11 +361,9 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 > be intercepted by the system. This allows the system to prioritize responses to system components such as the
 > status bar.&gt;
 > - To allow a component to extend into non-safe areas, the title bar and toolbar must be hidden or set to
-> STACK mode.
+> [STACK](arkts-arkui-barstyle-e.md) mode.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -403,8 +375,8 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array & lt;LayoutSafeAreaType & gt; | No |
-| edges | Array & lt;LayoutSafeAreaEdge & gt; | No |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md)&gt; | No |
+| edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt; | No |
 
 ## menus
 
@@ -412,7 +384,7 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 menus(value: Array<NavigationMenuItem> | CustomBuilder)
 ```
 
-Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. When the value type is Array&lt;NavigationMenuItem&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
+Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
 &gt; **NOTE：**
 
@@ -423,8 +395,6 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -435,7 +405,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Array & lt;NavigationMenuItem & gt; \ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
+| value | Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
 
 ## menus
 
@@ -443,7 +413,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions)
 ```
 
-Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus), this API adds menu options. When the value type is Array&lt;NavigationMenuItem&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
+Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus), this API adds menu options. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
 &gt; **NOTE：**
 
@@ -453,8 +423,6 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 > changing the animation effect type through the **symbolEffect** attribute.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -466,7 +434,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| items | Array & lt;NavigationMenuItem & gt; \ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
+| items | Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
 | options | [NavigationMenuOptions](arkts-arkui-navigationmenuoptions-i.md) | No |
 
 ## mode
@@ -482,8 +450,6 @@ Sets the mode of the **NavDestination** component. Dynamic modification is not s
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -511,8 +477,6 @@ Triggered when the **NavDestination** component becomes active (on top of the st
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -523,7 +487,7 @@ Triggered when the **NavDestination** component becomes active (on top of the st
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;[NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md)&gt;&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;[NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md)&gt;&gt; | Yes |
 
 ## onBackPressed
 
@@ -534,8 +498,6 @@ onBackPressed(callback: () => boolean)
 This callback takes effect when content exists in the navigation controller bound to the **Navigation** component. Triggered when the back button is pressed.The value **true** means that the back button logic is overridden, and **false** means that the previous page is displayed.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -558,8 +520,6 @@ onHidden(callback: Callback<VisibilityChangeReason>)
 Triggered when the navigation destination page is hidden. Starting from API version 21, the callback includes a **VisibilityChangeReason** parameter indicating the cause of the visibility change.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -587,8 +547,6 @@ Triggered when the **NavDestination** component becomes inactive (not on top of 
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -599,7 +557,7 @@ Triggered when the **NavDestination** component becomes inactive (not on top of 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;[NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md)&gt;&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;[NavDestinationActiveReason](arkts-arkui-navdestinationactivereason-e.md)&gt;&gt; | Yes |
 
 ## onNewParam
 
@@ -613,12 +571,10 @@ Triggered when a **NavDestination** page that already exists in the stack is mov
 
 > - This callback is not triggered by
 > replacePath or
-> replaceDestination.&gt;
+> [replaceDestination](arkts-arkui-navpathstack-c.md#replacedestination).&gt;
 > - This API can be called in attributeModifier since API version 22.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -630,7 +586,7 @@ Triggered when a **NavDestination** page that already exists in the stack is mov
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;[ESObject](../../apis-default/arkts-apis/arkts-esobject-t.md)&gt;&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;[ESObject](../../apis-default/arkts-apis/arkts-esobject-t.md)&gt;&gt; | Yes |
 
 ## onReady
 
@@ -645,8 +601,6 @@ Triggered when the **NavDestination** component is about to build a child compon
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -670,8 +624,6 @@ Sets custom page state restore callback.Triggered when page is reconstructed. Th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -682,7 +634,7 @@ Sets custom page state restore callback.Triggered when page is reconstructed. Th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[RestoreStateCallback](arkts-arkui-restorestatecallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[RestoreStateCallback](arkts-arkui-restorestatecallback-t.md)&gt; | Yes |
 
 ## onResult
 
@@ -698,8 +650,6 @@ Triggered when the **NavDestination** component returns.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -710,7 +660,7 @@ Triggered when the **NavDestination** component returns.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;Callback&lt;[ESObject](../../apis-default/arkts-apis/arkts-esobject-t.md)&gt;&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;[ESObject](../../apis-default/arkts-apis/arkts-esobject-t.md)&gt;&gt; | Yes |
 
 ## onSaveState
 
@@ -722,8 +672,6 @@ Sets custom page state save callback.Triggered when page becomes hidden. Save cu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -734,7 +682,7 @@ Sets custom page state save callback.Triggered when page becomes hidden. Save cu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[SaveStateCallback](arkts-arkui-savestatecallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[SaveStateCallback](arkts-arkui-savestatecallback-t.md)&gt; | Yes |
 
 ## onShown
 
@@ -745,8 +693,6 @@ onShown(callback: Callback<VisibilityChangeReason>)
 Triggered when the navigation destination page is displayed. Starting from API version 21, the callback includes a **VisibilityChangeReason** parameter indicating the cause of the visibility change.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -774,8 +720,6 @@ Called when the **NavDestination** component is about to be mounted. The routing
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -801,8 +745,6 @@ Called when the the **NavDestination** component is about to be unmounted (or wh
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -830,8 +772,6 @@ Called when the **NavDestination** component is about to be hidden.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -857,8 +797,6 @@ Called when the **NavDestination** component is about to display.
 > This API can be called within attributeModifier since API version 20.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -896,8 +834,6 @@ Sets the display orientation for the **NavDestination** component. After the tra
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -908,7 +844,7 @@ Sets the display orientation for the **NavDestination** component. After the tra
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| orientation | Optional&lt;[Orientation](arkts-arkui-orientation-t.md)&gt; | Yes |
+| orientation | [Optional](arkts-arkui-optional-t.md)&lt;[Orientation](arkts-arkui-orientation-t.md)&gt; | Yes |
 
 ## recoverable
 
@@ -925,8 +861,6 @@ Sets whether the **NavDestination** component is recoverable. If set to recovera
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -935,7 +869,7 @@ Sets whether the **NavDestination** component is recoverable. If set to recovera
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [recoverable](#recoverable) | Optional & lt;boolean & gt; | Yes |
+| [recoverable](#recoverable) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## systemBarStyle
 
@@ -955,8 +889,6 @@ Sets the style of the system status bar when this **NavDestination** page is dis
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -967,7 +899,7 @@ Sets the style of the system status bar when this **NavDestination** page is dis
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;SystemBarStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;SystemBarStyle&gt; | Yes |
 
 ## systemTransition
 
@@ -978,8 +910,6 @@ systemTransition(type: NavigationSystemTransitionType)
 Sets the system transition animation of the **NavDestination** component. System transition animations for the title bar and content area can be configured separately.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1000,15 +930,13 @@ title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestination
           options?: NavigationTitleOptions)
 ```
 
-Sets the page title. When the title string is too long: (1) If no subtitle is set, the string is scaled down, wrapped in two lines, and then clipped with an ellipsis (...) if it is still overlong. (2) If a subtitle is set, the subtitle is scaled down and then truncated with an ellipsis (...) if it is still overlong.
+Sets the page title. When the title string is too number: (1) If no subtitle is set, the string is scaled down, wrapped in two lines, and then clipped with an ellipsis (...) if it is still overlong. (2) If a subtitle is set, the subtitle is scaled down and then truncated with an ellipsis (...) if it is still overlong.
 
 > **NOTE：**
 
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1018,8 +946,8 @@ Sets the page title. When the title string is too long: (1) If no subtitle is se
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | string \| CustomBuilder \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
-| options | [NavigationTitleOptions](../arkts-apis/arkts-arkui-navigation-navigationtitleoptions-i.md) | No |
+| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | No |
 
 ## toolbarConfiguration
 
@@ -1038,8 +966,6 @@ Sets the content of the toolbar. If this API is not called, the toolbar remains 
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -1050,5 +976,5 @@ Sets the content of the toolbar. If this API is not called, the toolbar remains 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| toolbarParam | Array & lt;ToolbarItem & gt; \ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
-| options | [NavigationToolbarOptions](../arkts-apis/arkts-arkui-navigation-navigationtoolbaroptions-i.md) | No |
+| toolbarParam | Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
+| options | [NavigationToolbarOptions](arkts-arkui-navigationtoolbaroptions-i.md) | No |

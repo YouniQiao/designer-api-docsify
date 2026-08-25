@@ -7,8 +7,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## UPLOADING
@@ -20,8 +18,6 @@ UPLOADING = 0
 上行同步中。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -35,8 +31,6 @@ UPLOAD_FAILED = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## DOWNLOADING
@@ -48,8 +42,6 @@ DOWNLOADING = 2
 下行同步中。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -63,8 +55,6 @@ DOWNLOAD_FAILED = 3
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## COMPLETED
@@ -77,8 +67,6 @@ COMPLETED = 4
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## STOPPED
@@ -90,7 +78,5 @@ STOPPED = 5
 同步已停止。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

@@ -4,14 +4,12 @@ Declaration of the tab item.
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from '@kit.ArkUI';
+import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from 'kits/@kit.ArkUI';
 ```
 
 ## icon
@@ -25,8 +23,6 @@ icon?: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +38,9 @@ symbolStyle?: SymbolGlyphModifier
 
 Symbol图标资源，优先级大于icon。当需要使用Symbol图标作为页签时传入此参数，不传入时使用icon参数设置的图片页签。
 
-**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+**类型：** SymbolGlyphModifier
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ title: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

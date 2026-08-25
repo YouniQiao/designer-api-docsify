@@ -6,14 +6,12 @@ Defines additional options for selecting media assets from Gallery. It inherits 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## themeColor
@@ -28,8 +26,6 @@ Theme color
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -37,28 +33,15 @@ Theme color
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 ID of the user space to access. The default value is **-1**.To use it as a parameter of [PhotoViewPicker.select](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select), request the permission **ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-async function photoPicker() {
-    let picker = new photoAccessHelper.PhotoViewPicker();
-    let option = new photoAccessHelper.PhotoSelectOptions();
-    option.userId = 101;
-    picker.select(option);
-  }
-```

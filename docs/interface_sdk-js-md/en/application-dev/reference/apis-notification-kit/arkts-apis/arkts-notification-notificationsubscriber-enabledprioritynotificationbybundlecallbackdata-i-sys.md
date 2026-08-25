@@ -4,8 +4,6 @@ Returns the notification priority switch state.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Bundle name of the application.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -40,8 +36,6 @@ Whether the priority notification for an application is enabled.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -49,16 +43,14 @@ Whether the priority notification for an application is enabled.
 ## uid
 
 ```TypeScript
-readonly uid: int
+readonly uid: number
 ```
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

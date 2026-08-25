@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## addFusionFence
@@ -15,8 +15,6 @@ function addFusionFence(fenceRequestParams: FusionFenceRequestParams): Promise<v
 Add a fusion fence.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Required permissions:** ohos.permission.LOCATION
 

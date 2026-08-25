@@ -4,8 +4,6 @@ Describes the keep-alive application information, which can be obtained by calli
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the keep-alive application information, which can be obtained by calli
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## allowUserToCancel
@@ -27,8 +25,6 @@ Whether the user can cancel the keep-alive status. **true** if yes, **false** ot
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -46,8 +42,6 @@ Bundle name.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Type of the party that sets to keep the application alive.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Type of the party that sets to keep the application alive.
 ## setterUserId
 
 ```TypeScript
-setterUserId?: int
+setterUserId?: number
 ```
 
 ID of the user who keeps the application alive.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -99,8 +89,6 @@ Type of the application to be kept alive.
 **Type:** [KeepAliveAppType](arkts-ability-appmanager-keepaliveapptype-e-sys.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

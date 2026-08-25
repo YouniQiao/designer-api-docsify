@@ -4,14 +4,12 @@ Provides material configuration information, including the material enabling sta
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
+import { uiMaterial } from 'kits/@kit.ArkUI';
 ```
 
 ## state
@@ -27,8 +25,6 @@ Material enabling state.
 **Default:** MaterialState.DEFAULT
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Material type ID, indicating the material type corresponding to the current conf
 **Default:** MaterialType.IMMERSIVE
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

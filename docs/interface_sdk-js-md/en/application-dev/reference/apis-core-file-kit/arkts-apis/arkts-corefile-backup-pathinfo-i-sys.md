@@ -4,8 +4,6 @@ Path information for file migration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Path information for file migration.
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## destPath
@@ -27,8 +25,6 @@ Destination path for migration.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Source path for migration.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

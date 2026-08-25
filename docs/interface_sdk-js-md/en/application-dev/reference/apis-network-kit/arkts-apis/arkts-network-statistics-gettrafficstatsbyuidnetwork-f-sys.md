@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getTrafficStatsByUidNetwork
 
 ```TypeScript
-function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promise<NetStatsInfoSequence>
+function getTrafficStatsByUidNetwork(uid: number, networkInfo: NetworkInfo): Promise<NetStatsInfoSequence>
 ```
 
 Obtains the traffic statistics of the specified application on the specified network within the specified period. This method uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
@@ -28,14 +26,14 @@ Obtains the traffic statistics of the specified application on the specified net
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| uid | number | Yes |
 | networkInfo | [NetworkInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-cachedownload-networkinfo-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md)&gt; |
+| Promise & lt;NetStatsInfoSequence & gt; |
 
 **Error codes:**
 
@@ -48,23 +46,3 @@ Obtains the traffic statistics of the specified application on the specified net
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) |
-
-**Examples**
-
-```TypeScript
-import { connection, statistics } from '@kit.NetworkKit';
-
-let uid: number = 20020147;
-let networkInfo: statistics.NetworkInfo = {
-  type: connection.NetBearType.BEARER_CELLULAR,
-  startTime: Math.floor(Date.now() / 1000) - 86400 * 7, 
-  endTime: Math.floor(Date.now() / 1000) + 5,
-  simId: 1,
-}
-
-statistics.getTrafficStatsByUidNetwork(uid, networkInfo).then((statsInfoSequence: statistics.NetStatsInfoSequence) => {
-  for (let i = 0; i < statsInfoSequence.length; i--) {
-    console.info("getTrafficStatsByUidNetwork item:" + JSON.stringify(statsInfoSequence[i]));
-  }
-})
-```

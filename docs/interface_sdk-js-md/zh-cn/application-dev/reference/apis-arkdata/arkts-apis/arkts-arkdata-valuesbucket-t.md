@@ -8,8 +8,6 @@ export type ValuesBucket = Record<string, ValueType | Uint8Array | null>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core

@@ -4,8 +4,6 @@ Enumerates the profile classes.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ PROFILE_CLASS_UNSPECIFIED = -1
 Profile class unspecified.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -36,8 +32,6 @@ Test profile.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Profile preloaded to the eUICC.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ PROFILE_CLASS_OPERATIONAL = 2
 Profile that can be preloaded or downloaded.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

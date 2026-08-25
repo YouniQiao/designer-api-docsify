@@ -4,8 +4,6 @@ Indicates IMS registration information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Indicates IMS registration information.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## imsRegState
@@ -27,8 +25,6 @@ Indicates the registration status of the ims service.
 **Type:** [ImsRegState](arkts-telephony-radio-imsregstate-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -45,8 +41,6 @@ Indicates the mode of ims radio technology.
 **Type:** [ImsRegTech](arkts-telephony-radio-imsregtech-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

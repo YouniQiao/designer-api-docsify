@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceName
@@ -15,8 +15,6 @@ function getRemoteDeviceName(deviceId: string): string
 Obtains the name of a peer Bluetooth device.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -49,26 +47,6 @@ Obtains the name of a peer Bluetooth device.
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let remoteDeviceName: string = connection.getRemoteDeviceName('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let remoteDeviceName: string = connection.getRemoteDeviceName('XX:XX:XX:XX:XX:XX', true);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## getRemoteDeviceName
 
@@ -79,8 +57,6 @@ function getRemoteDeviceName(deviceId: string, alias?: boolean): string
 Obtains the name or alias of the Bluetooth peer device.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -113,7 +89,3 @@ Obtains the name or alias of the Bluetooth peer device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-See [getRemoteDeviceName](#getremotedevicename)

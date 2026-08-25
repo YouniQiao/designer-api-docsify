@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getProfileByExtensionAbilitySync
@@ -15,8 +15,6 @@ function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityNa
 以同步方法根据给定的moduleName、extensionAbilityName和metadataName（module.json5中 [metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串，返回对象为string数 组。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,33 +42,3 @@ function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityNa
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 | [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName = 'entry';
-let extensionAbilityName = 'com.example.myapplication.extension';
-let metadataName = 'ability_metadata';
-
-try {
-  let data = bundleManager.getProfileByExtensionAbilitySync(moduleName, extensionAbilityName);
-  hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbilitySync successfully. Data: %{public}s',
-    JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbilitySync failed. Cause: %{public}s', message);
-}
-
-try {
-  let data = bundleManager.getProfileByExtensionAbilitySync(moduleName, extensionAbilityName, metadataName);
-  hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbilitySync successfully. Data: %{public}s',
-    JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbilitySync failed. Cause: %{public}s', message);
-}
-```

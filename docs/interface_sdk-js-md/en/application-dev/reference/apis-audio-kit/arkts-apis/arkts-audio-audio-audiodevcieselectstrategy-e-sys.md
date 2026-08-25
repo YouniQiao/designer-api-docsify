@@ -4,8 +4,6 @@ Enumerates the device select strategy.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ The default follow device select strategy.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ SELECT_STRATEGY_INDEPENDENT = 1
 The independent device select strategy.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 

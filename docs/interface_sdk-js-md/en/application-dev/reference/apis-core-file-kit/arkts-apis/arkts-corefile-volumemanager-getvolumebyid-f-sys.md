@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getVolumeById
@@ -15,8 +15,6 @@ function getVolumeById(volumeId: string, callback: AsyncCallback<Volume>): void
 Obtains information about a volume based on the volume ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -42,26 +40,6 @@ Obtains information about a volume based on the volume ID. This API uses an asyn
 | 13600008 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-volumeManager.getVolumeById(volumeId).then((volume: volumeManager.Volume) => {
-  console.info("getVolumeById successfully:" + JSON.stringify(volume));
-}).catch((error: BusinessError) => {
-  console.error("getVolumeById failed with error:" + JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-volumeManager.getVolumeById(volumeId, (error: BusinessError, volume: volumeManager.Volume) => {
-  // Do something.   
-});
-```
-
 
 ## getVolumeById
 
@@ -72,8 +50,6 @@ function getVolumeById(volumeId: string): Promise<Volume>
 Obtains information about a volume based on the volume ID. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -103,7 +79,3 @@ Obtains information about a volume based on the volume ID. This API uses a promi
 | 13600001 |
 | 13600008 |
 | 13900042 |
-
-**Examples**
-
-See [getVolumeById](#getvolumebyid)

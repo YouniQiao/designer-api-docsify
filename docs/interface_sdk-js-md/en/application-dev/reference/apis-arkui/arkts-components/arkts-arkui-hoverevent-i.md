@@ -6,8 +6,6 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ stopPropagation: () => void
 Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ X coordinate of the cursor or stylus position in the coordinate system of the cu
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -64,8 +58,6 @@ Y coordinate of the cursor or stylus position in the coordinate system of the cu
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +77,6 @@ X coordinate of the cursor or stylus position in the [global coordinate system](
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -104,8 +94,6 @@ Y coordinate of the cursor or stylus position in the [global coordinate system](
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +113,6 @@ X coordinate of the cursor or stylus position in the coordinate system of the cu
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -144,8 +130,6 @@ Y coordinate of the cursor or stylus position in the coordinate system of the cu
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,8 +149,6 @@ X coordinate of the cursor or stylus position in the [component coordinate syste
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -184,8 +166,6 @@ Y coordinate of the cursor or stylus position in the [component coordinate syste
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

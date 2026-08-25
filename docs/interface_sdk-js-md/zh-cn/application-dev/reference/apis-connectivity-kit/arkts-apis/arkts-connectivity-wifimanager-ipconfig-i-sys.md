@@ -4,8 +4,6 @@ WLAN IP配置信息。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ WLAN IP配置信息。
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## dnsServers
 
 ```TypeScript
-dnsServers: int[]
+dnsServers: number[]
 ```
 
 DNS服务器。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -46,8 +42,6 @@ domains: Array<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -55,16 +49,14 @@ domains: Array<string>
 ## gateway
 
 ```TypeScript
-gateway: int
+gateway: number
 ```
 
 网关。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -73,16 +65,14 @@ gateway: int
 ## ipAddress
 
 ```TypeScript
-ipAddress: int
+ipAddress: number
 ```
 
 IP地址。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -91,16 +81,14 @@ IP地址。
 ## prefixLength
 
 ```TypeScript
-prefixLength: int
+prefixLength: number
 ```
 
 前缀长度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

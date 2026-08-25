@@ -6,8 +6,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **系统接口：** 此接口为系统接口。
@@ -15,22 +13,20 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## absorptionRatio
 
 ```TypeScript
-absorptionRatio: double
+absorptionRatio: number
 ```
 
 表示具体的吸收率。单位：W/kg。取值范围：取值为实际上报物理量，由硬件传感器决定。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

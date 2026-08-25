@@ -7,14 +7,12 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## constructor
@@ -26,8 +24,6 @@ constructor()
 [DlpConnManager](#dlpconnmanager) 实例化时的构造函数。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -41,14 +37,6 @@ constructor()
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let dlpConnManager: dlpPermission.DlpConnManager = new dlpPermission.DlpConnManager();
-```
-
 ## registerPlugin
 
 ```TypeScript
@@ -61,8 +49,6 @@ static registerPlugin(plugin: DlpConnPlugin): number
 > registerPlugin将plugin注册到SA（System Ability）侧，待SA（System Ability）调用。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -92,31 +78,6 @@ static registerPlugin(plugin: DlpConnPlugin): number
 | [19100003](../errorcode-dlp.md#19100003-加解密超时) |
 | [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
 
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { Callback } from '@kit.BasicServicesKit';
-
-export default class DataCapsulePlugin implements dlpPermission.DlpConnPlugin {
-  private accountId: string;
-  private accountName: string;
-  constructor() {
-    this.accountId = 'accountId'; // 初始化账号信息。
-    this.accountName = 'accountName';
-  }
-
-  connectServer(requestId: string, requestData: string, callback: Callback<string>): void {
-    let callbackJson = JSON.stringify({
-      'requestId': requestId,
-    });
-    callback(callbackJson);
-  }
-}
-  
-let pluginId: number = dlpPermission.DlpConnManager.registerPlugin(new DataCapsulePlugin());
-```
-
 ## unregisterPlugin
 
 ```TypeScript
@@ -129,8 +90,6 @@ static unregisterPlugin(): void
 > unregisterPlugin将plugin从SA（System Ability）侧注销。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -147,11 +106,3 @@ static unregisterPlugin(): void
 | [19100002](../errorcode-dlp.md#19100002-加解密出错) |
 | [19100003](../errorcode-dlp.md#19100003-加解密超时) |
 | [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.DlpConnManager.unregisterPlugin();
-```

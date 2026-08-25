@@ -4,8 +4,6 @@ The top layer of the @builder function corresponding to start and end must be a 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ onOffsetChange?: (offset: number) => void
 Callback invoked when the location of the list item changes, in vp, when it is swiped left or right (in vertical list layout) or up or down (in horizontal list layout).
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Scroll effect.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -63,11 +57,9 @@ end?: CustomBuilder | SwipeActionItem
 
 Swipe action item displayed on the right of the list item when the item is swiped left (in vertical list layout) or below the list item when the item is swiped up (in horizontal list layout).
 
-**Type:** CustomBuilder \| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -81,11 +73,9 @@ start?: CustomBuilder | SwipeActionItem
 
 Swipe action item displayed on the left of the list item when the item is swiped right (in vertical list layout) or above the list item when the item is swiped down (in horizontal list layout).
 
-**Type:** CustomBuilder \| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

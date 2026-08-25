@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hasReplyPath
@@ -28,8 +26,6 @@ hasReplyPath: boolean
 **类型：** boolean
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -48,8 +44,6 @@ isReplaceMessage: boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## isSmsStatusReportMessage
@@ -67,8 +61,6 @@ isSmsStatusReportMessage: boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## messageClass
@@ -83,39 +75,33 @@ messageClass: ShortMessageClass
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## pdu
 
 ```TypeScript
-pdu: Array<int>
+pdu: Array<number>
 ```
 
 SMS消息中的协议数据单元 (PDU)。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## protocolId
 
 ```TypeScript
-protocolId: int
+protocolId: number
 ```
 
 发送短信时使用的协议标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -131,39 +117,33 @@ scAddress: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## scTimestamp
 
 ```TypeScript
-scTimestamp: long
+scTimestamp: number
 ```
 
 SMSC时间戳。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## status
 
 ```TypeScript
-status: int
+status: number
 ```
 
 SMS-STATUS-REPORT消息中的短信状态指示短信服务中心(SMSC)发送的短信状态。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -179,8 +159,6 @@ visibleMessageBody: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 ## visibleRawAddress
@@ -194,7 +172,5 @@ visibleRawAddress: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms

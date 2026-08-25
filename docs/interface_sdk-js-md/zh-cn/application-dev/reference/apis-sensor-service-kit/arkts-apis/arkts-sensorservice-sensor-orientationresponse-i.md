@@ -6,29 +6,25 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## alpha
 
 ```TypeScript
-alpha: double
+alpha: number
 ```
 
 设备围绕Z轴的旋转角度，即方位角。单位：°（度）；取值范围：[0, 360]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -37,16 +33,14 @@ alpha: double
 ## beta
 
 ```TypeScript
-beta: double
+beta: number
 ```
 
 设备围绕X轴的旋转角度，即俯仰角。单位：°（度）；取值范围：[-180, 180]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -55,16 +49,14 @@ beta: double
 ## gamma
 
 ```TypeScript
-gamma: double
+gamma: number
 ```
 
 设备围绕Y轴的旋转角度，即翻转角。单位：°（度）；取值范围：[-90, 90]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

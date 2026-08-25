@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## NETWORK_TYPE_UNKNOWN
@@ -17,8 +15,6 @@ NETWORK_TYPE_UNKNOWN = 0
 未知网络类型。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -32,8 +28,6 @@ NETWORK_TYPE_GSM = 1
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## NETWORK_TYPE_CDMA
@@ -45,8 +39,6 @@ NETWORK_TYPE_CDMA = 2
 网络类型为CDMA(Code Division Multiple Access)。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -60,8 +52,6 @@ NETWORK_TYPE_WCDMA = 3
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## NETWORK_TYPE_TDSCDMA
@@ -73,8 +63,6 @@ NETWORK_TYPE_TDSCDMA = 4
 网络类型为TDSCDMA(TimeDivision-Synchronous Code Division Multiple Access)。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -88,8 +76,6 @@ NETWORK_TYPE_LTE = 5
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## NETWORK_TYPE_NR
@@ -101,7 +87,5 @@ NETWORK_TYPE_NR = 6
 网络类型为NR(New Radio)。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService

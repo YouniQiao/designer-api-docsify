@@ -6,14 +6,12 @@ OIS (Optical Image Stabilization) interface.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## setOISMode
@@ -25,8 +23,6 @@ setOISMode(mode: OISMode): void
 Sets the OIS mode.
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,21 +45,13 @@ Sets the OIS mode.
 
 ## setOISModeCustom
 
-ArkTS-Dyn:
 ```TypeScript
 setOISModeCustom(pitch: number, yaw: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setOISModeCustom(pitch: double, yaw: double): void
 ```
 
 Sets custom OIS bias values for each axis.
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,8 +63,8 @@ Sets custom OIS bias values for each axis.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pitch | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-| yaw | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| pitch | number | 是 |
+| yaw | number | 是 |
 
 **错误码：**
 

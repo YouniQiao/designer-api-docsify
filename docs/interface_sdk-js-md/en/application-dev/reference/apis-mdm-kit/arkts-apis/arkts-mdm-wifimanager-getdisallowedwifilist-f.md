@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedWifiList
@@ -15,8 +15,6 @@ function getDisallowedWifiList(admin: Want): Array<WifiAccessInfo>
 Obtains disallowed Wi-Fi networks.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -44,25 +42,6 @@ Obtains disallowed Wi-Fi networks.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.edmtest',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let result: Array<wifiManager.WifiAccessInfo> = wifiManager.getDisallowedWifiList(wantTemp);
-  console.info(`Succeeded in getting disallowed Wi-Fi list. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed Wi-Fi list. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getDisallowedWifiList
 
@@ -73,8 +52,6 @@ function getDisallowedWifiList(admin: Want | null): Array<WifiAccessInfo>
 Obtains disallowed Wi-Fi networks.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -101,7 +78,3 @@ Obtains disallowed Wi-Fi networks.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [getDisallowedWifiList](#getdisallowedwifilist)

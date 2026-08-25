@@ -4,8 +4,6 @@ Describes the left and right arrow attributes.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,13 +19,11 @@ arrowColor?: ResourceColor
 
 Color of the arrow.Default value: **'#182431'**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** #182431
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,13 +40,11 @@ arrowSize?: Length
 Size of the arrow.On both sides of the navigation indicator:Default value: **18vp**.On both sides of the component:Default value: **24vp**.  
 **NOTE：**If **showBackground** is set to **true**, the value of **arrowSize** is 3/4 of the value of **backgroundSize**.Percentage values are not supported.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** When isSidebarMiddle is false, the default value is 18vp, Otherwise, the default value is 24vp
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,13 +60,11 @@ backgroundColor?: ResourceColor
 
 Color of the background.On both sides of the navigation indicator:Default value: **'#00000000'**.On both sides of the component:Default value: **'#19182431'**.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** When isSidebarMiddle is false, the default value is #00000000, Otherwise,the default value is #1918243 1 [since 10 - 10] @default When isSidebarMiddle is false, the default value is #00000000, Otherwise, the default value is #1918243 1 [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,13 +80,11 @@ backgroundSize?: Length
 
 Size of the background.On both sides of the navigation indicator:Default value: **24vp**.On both sides of the component:Default value: **32vp**.Percentage values are not supported.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** When isSidebarMiddle is false, the default value is 24vp, Otherwise,the default value is 32vp
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +106,6 @@ Whether the arrow is centered on both sides of the **Swiper** component. The val
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -137,8 +125,6 @@ Whether to show the background for the arrow. The value **true** means to show t
 **Default:** false
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

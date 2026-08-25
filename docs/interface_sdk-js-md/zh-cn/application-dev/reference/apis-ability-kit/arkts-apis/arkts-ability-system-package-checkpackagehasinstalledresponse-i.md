@@ -7,8 +7,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -16,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
+import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from 'kits/@kit.AbilityKit';
 ```
 
 ## result
@@ -30,8 +28,6 @@ result: boolean
 **类型：** boolean
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## unlockScreen
@@ -16,8 +16,6 @@ Unlock the screen.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
@@ -27,30 +25,6 @@ Unlock the screen.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-screenLock.unlockScreen((err: BusinessError) => {      
-  if (err) {
-    console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
-    return;    
-  }
-  console.info(`Succeeded unlocking the screen.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-screenLock.unlockScreen().then(() => {
-  console.info('Succeeded unlocking the screen.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## unlockScreen
@@ -63,8 +37,6 @@ Unlock the screen.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
@@ -74,7 +46,3 @@ Unlock the screen.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [unlockScreen](#unlockscreen)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## queryTrafficStats
@@ -28,11 +28,9 @@ Queries the data usage of a specified application within a specified period for 
 > time, the API returns error code 9200012.&gt;
 > If the input user ID (**accountId**) is not the ID of the current user, the API returns error code 9200012.&gt;
 > It is advised that the query interval (end time – start time) be 1 to 30 days. If the interval is too short, the
-> query result may be inaccurate. If the interval is too long, the query will take a long time.
+> query result may be inaccurate. If the interval is too number, the query will take a number time.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 

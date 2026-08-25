@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryAbilityByWant
@@ -16,8 +16,6 @@ function queryAbilityByWant(want: Want,
 Obtains the ability information of the specified user based on given Want. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -34,67 +32,6 @@ Obtains the ability information of the specified user based on given Want. This 
 | userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-import Want from '@ohos.app.ability.Want';
-
-let bundleFlags: number = 0;
-let userId: number = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-bundle.queryAbilityByWant(want, bundleFlags, userId)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import Want from '@ohos.app.ability.Want';
-
-let bundleFlags: number = 0;
-let userId: number = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-bundle.queryAbilityByWant(want, bundleFlags, userId, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import Want from '@ohos.app.ability.Want';
-
-let bundleFlags: number = 0;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-bundle.queryAbilityByWant(want, bundleFlags, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
 
 ## queryAbilityByWant
 
@@ -105,8 +42,6 @@ function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCall
 Obtains the ability information based on given Want. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -122,10 +57,6 @@ Obtains the ability information based on given Want. This API uses an asynchrono
 | bundleFlags | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | Yes |
 
-**Examples**
-
-See [queryAbilityByWant](#queryabilitybywant)
-
 
 ## queryAbilityByWant
 
@@ -136,8 +67,6 @@ function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): P
 Obtains the ability information based on given Want. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -158,7 +87,3 @@ Obtains the ability information based on given Want. This API uses a promise to 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; |
-
-**Examples**
-
-See [queryAbilityByWant](#queryabilitybywant)

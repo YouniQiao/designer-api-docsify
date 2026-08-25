@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## cancel
@@ -25,8 +23,6 @@ cancel(): void
 取消复制操作。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -44,18 +40,3 @@ cancel(): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-let taskSignal = new photoAccessHelper.TaskSignal();
-
-try {
-  taskSignal.cancel();
-  console.info('cancel batch operation success');
-} catch (err) {
-  console.error(`cancel batch operation failed with error: ${err.code}, ${err.message}`);
-}
-```

@@ -17,29 +17,25 @@ Describes the parameters for window size limits. Applications can obtain the cur
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## maxHeight
 
 ```TypeScript
-maxHeight?: int
+maxHeight?: number
 ```
 
 Maximum window height.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,16 +44,14 @@ Maximum window height.
 ## maxWidth
 
 ```TypeScript
-maxWidth?: int
+maxWidth?: number
 ```
 
 Maximum window width.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,16 +60,14 @@ Maximum window width.
 ## minHeight
 
 ```TypeScript
-minHeight?: int
+minHeight?: number
 ```
 
 Minimum window height.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,16 +76,14 @@ Minimum window height.
 ## minWidth
 
 ```TypeScript
-minWidth?: int
+minWidth?: number
 ```
 
 Minimum window width.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -110,7 +100,5 @@ Unit of the window size limits. The default value is **px**. The value can be **
 **Type:** [PixelUnit](arkts-arkui-window-pixelunit-e.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

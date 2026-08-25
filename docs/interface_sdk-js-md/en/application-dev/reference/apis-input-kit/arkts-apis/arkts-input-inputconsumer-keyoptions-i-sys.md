@@ -4,8 +4,6 @@ Represents combination key options.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Represents combination key options.
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## finalKey
 
 ```TypeScript
-finalKey: int
+finalKey: number
 ```
 
 Final key. This parameter is mandatory. A callback is triggered by the final key.For example, in the combination keys **Ctrl+Alt+A**, **A** is called the final key.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -37,16 +33,14 @@ Final key. This parameter is mandatory. A callback is triggered by the final key
 ## finalKeyDownDuration
 
 ```TypeScript
-finalKeyDownDuration: int
+finalKeyDownDuration: number
 ```
 
 Duration for holding down the key, in μs.If the value of this field is **0**, a callback is triggered immediately.If the value of this field is greater than **0** and **isFinalKeyDown** is **true**, a callback is triggered when the key keeps being pressed after the specified duration expires. If **isFinalKeyDown** is **false**, a callback is triggered when the key is released before the specified duration expires.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -64,8 +58,6 @@ Whether the final key is pressed.The value **true** indicates that the key is pr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
@@ -82,8 +74,6 @@ Whether to report repeated key events. The value **true** means to report repeat
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **System API:** This is a system API.
@@ -91,16 +81,14 @@ Whether to report repeated key events. The value **true** means to report repeat
 ## preKeys
 
 ```TypeScript
-preKeys: Array<int>
+preKeys: Array<number>
 ```
 
 Preceding key set. The number of preceding keys ranges from 0 to 4. There is no requirement on the sequence of the keys.For example, in the combination keys **Ctrl+Alt+A**, **Ctrl+Alt** are called preceding keys.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -117,8 +105,6 @@ Trigger type, which indicates that the conditions for triggering the callback ex
 **Type:** [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

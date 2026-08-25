@@ -4,14 +4,12 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## getDeviceIconInfo
@@ -23,8 +21,6 @@ getDeviceIconInfo(filterOptions: DeviceIconInfoFilterOptions): Promise<DeviceIco
 Obtains the device icon. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -54,36 +50,6 @@ Obtains the device icon. This API uses a promise to return the result.
 | [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
 | [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let productIds:Array<string> = ['M0D2', 'M0D3', 'M0D5', 'M0AB', 'M0BD', 'M0E9', 'M0BC', 'M0EA'];
-  let options:distributedDeviceManager.DeviceIconInfoFilterOptions = {
-    productId: 'P14U',
-    imageType: 'ID',
-    specName: 'lg',
-  };
-  if (productIds.indexOf(options.productId) != -1) {
-    options.internalModel = '';
-  } else {
-    options.subProductId = '';
-  }
-  dmInstance.getDeviceIconInfo(options).then((data: distributedDeviceManager.DeviceIconInfo) => {
-    console.info('getDeviceIconInfo' + JSON.stringify(data));
-  }).catch((e : BusinessError) => {
-    console.error('getDeviceIconInfo errCode:' + e.code + ',errMessage:' + e.message);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getDeviceIconInfo errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## getDeviceNetworkIdList
 
 ```TypeScript
@@ -93,8 +59,6 @@ getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<strin
 Obtains the list of network devices according to the specified filter options.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -124,29 +88,6 @@ Obtains the list of network devices according to the specified filter options.
 | [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
 | [11600107](../errorcode-device-manager.md#11600107-login-account-required) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let queryFiler: distributedDeviceManager.NetworkIdQueryFilter = {
-    wiseDeviceId: '',
-    onlineStatus: 1,
-  }
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.getDeviceNetworkIdList(queryFiler).then((data:Array<string>) => {
-    console.info('getDeviceNetworkIdList name:' + JSON.stringify(data));
-  }).catch((e: BusinessError) => {
-    console.error('getDeviceNetworkIdList errCode:' + e.code + ',errMessage:' + e.message);
-  })
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getDeviceNetworkIdList errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## getDeviceProfileInfoList
 
 ```TypeScript
@@ -156,8 +97,6 @@ getDeviceProfileInfoList(filterOptions: DeviceProfileInfoFilterOptions): Promise
 Obtains the list of devices under the same account. This API uses a promise to return the result.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -188,25 +127,6 @@ Obtains the list of devices under the same account. This API uses a promise to r
 | [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
 | [11600107](../errorcode-device-manager.md#11600107-login-account-required) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.getDeviceProfileInfoList({"isCloud": false}).then((data: Array<distributedDeviceManager.DeviceProfileInfo>) => {
-    console.info('getDeviceProfileInfoList' + JSON.stringify(data));
-  }).catch((e: BusinessError) => {
-    console.error('getDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## getIdentificationByDeviceIds
 
 ```TypeScript
@@ -216,8 +136,6 @@ getIdentificationByDeviceIds(deviceIds: Array<string>): Array<DeviceIdentificati
 Query device identification by device IDs.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM and ohos.permission.sec.ACCESS_UDID
 
@@ -248,50 +166,15 @@ Query device identification by device IDs.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit'
-private idsLists: undefined|Array<distributedDeviceManager.DeviceIdentification> = [];
-getDeviceUdids(deviceIds: Array<string>): void {
-  let deviceManager: distributedDeviceManager.DeviceManager | null = null;
-  try {
-    deviceManager = distributedDeviceManager.createDeviceManager('com.example.myapplication');
-    this.idsLists = deviceManager?.getIdentificationByDeviceIds(deviceIds);
-    console.info("Successfully retrieved UDID list");
-  } catch (error) {
-    console.error('Get device UDID failed:', error);
-    this.idsLists = [];
-  } finally {
-    if (deviceManager) {
-      try {
-        distributedDeviceManager.releaseDeviceManager(deviceManager);
-        console.info("deviceManager released successfully");
-      } catch (releaseError) {
-        console.error('Release device manager failed:', releaseError);
-      }
-    }
-  }
-}
-```
-
 ## getLocalDisplayDeviceName
 
-ArkTS-Dyn:
 ```TypeScript
 getLocalDisplayDeviceName(maxNameLength: number): Promise<string>
-```
-
-ArkTS-Sta:
-```TypeScript
-getLocalDisplayDeviceName(maxNameLength: int): Promise<string>
 ```
 
 Obtains the local device's display name with the specified length. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -303,7 +186,7 @@ Obtains the local device's display name with the specified length. This API uses
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| maxNameLength | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| maxNameLength | number | Yes |
 
 **Return value:**
 
@@ -320,43 +203,15 @@ Obtains the local device's display name with the specified length. This API uses
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let maxNameLength:number = 21;
-  dmInstance.getLocalDisplayDeviceName(maxNameLength).then((data:string)=>{
-    console.info('getLocalDisplayDeviceName name:' + JSON.stringify(data));
-  }).catch((e: BusinessError)=>{
-    console.error('getLocalDisplayDeviceName errCode:' + e.code + ',errMessage:' + e.message);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getLocalDisplayDeviceName errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## getOsTypeByNetworkId
 
-ArkTS-Dyn:
 ```TypeScript
 getOsTypeByNetworkId(networkId: string): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getOsTypeByNetworkId(networkId: string): int
 ```
 
 Query the device operating system type by device network ID.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM
 
@@ -376,7 +231,7 @@ Query the device operating system type by device network ID.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -396,8 +251,6 @@ off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 Unsubscribes from the reply to the UI operation result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -420,52 +273,6 @@ Unsubscribes from the reply to the UI operation result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('replyResult');
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('replyResult errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## offReplyResult
-
-```TypeScript
-offReplyResult(callback?: Callback<ReplyResult>): void
-```
-
-Unregister uiStateChange, this interface can only be used by devicemanager ui.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## on('replyResult')
 
 ```TypeScript
@@ -475,8 +282,6 @@ on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 Subscribes to the reply to the UI operation result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -499,82 +304,15 @@ Subscribes to the reply to the UI operation result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  param: string = '';
-}
-
-interface TmpStr {
-  verifyFailed: boolean;
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('replyResult', (data: Data) => {
-    console.info('replyResult executed, dialog closed' + JSON.stringify(data));
-    let tmpStr: TmpStr = JSON.parse(data.param);
-    let isShow = tmpStr.verifyFailed;
-    console.info('replyResult executed, dialog closed' + isShow);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('replyResult errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## onReplyResult
-
-```TypeScript
-onReplyResult(callback: Callback<ReplyResult>): void
-```
-
-Register a callback from deviceManager service so that the devicemanager ui can be notified when uiStateChanges.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## putDeviceProfileInfoList
 
-ArkTS-Dyn:
 ```TypeScript
 putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promise<int>
 ```
 
 Updates the device list. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -592,7 +330,7 @@ Updates the device list. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -603,43 +341,15 @@ Updates the device list. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceProfileInfoList:Array<distributedDeviceManager.DeviceProfileInfo> = [];
-  dmInstance.putDeviceProfileInfoList(deviceProfileInfoList).then((data:number) => {
-    console.info('put device profile info:' + JSON.stringify(data));
-  }).catch((e: BusinessError) => {
-    console.error('putDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('putDeviceProfileInfoList errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## replyUiAction
 
-ArkTS-Dyn:
 ```TypeScript
 replyUiAction(action: number, actionResult: string): void
-```
-
-ArkTS-Sta:
-```TypeScript
-replyUiAction(action: int, actionResult: string): void
 ```
 
 Replies to the user's UI operation. This API can be used only by the PIN HAP of the **deviceManager**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -651,7 +361,7 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| action | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| action | number | Yes |
 | actionResult | string | Yes |
 
 **Error codes:**
@@ -662,30 +372,6 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  /**
-   * action = 0 - Grant the permission.
-   * action = 1 - Revoke the permission.
-   * action = 2 - Time out the user operation in the permission request dialog.
-   * action = 3 - Cancel the display of the PIN box.
-   * action = 4 - Cancel the display of the PIN input box.
-   * action = 5 - Confirm the input in the PIN input box.
-   */
-  let operation = 0;
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.replyUiAction(operation, 'extra');
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('replyUiAction errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## restoreLocalDeivceName
 
 ```TypeScript
@@ -695,8 +381,6 @@ restoreLocalDeivceName(): void
 Restores the local device name by resetting the network settings.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Deprecated since:** 24
 
@@ -716,21 +400,6 @@ Restores the local device name by resetting the network settings.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.restoreLocalDeivceName();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('restoreLocalDeivceName errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## restoreLocalDeviceName
 
 ```TypeScript
@@ -740,8 +409,6 @@ restoreLocalDeviceName(): void
 Restores the local device name.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -759,38 +426,15 @@ Restores the local device name.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.restoreLocalDeviceName();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('restoreLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## setHeartbeatPolicy
 
-ArkTS-Dyn:
 ```TypeScript
 setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setHeartbeatPolicy(policy: StrategyForHeartbeat, delayTime: int): void
 ```
 
 Sets the heartbeat broadcast policy.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -803,7 +447,7 @@ Sets the heartbeat broadcast policy.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | policy | [StrategyForHeartbeat](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md) | Yes |
-| delayTime | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| delayTime | number | Yes |
 
 **Error codes:**
 
@@ -814,40 +458,15 @@ Sets the heartbeat broadcast policy.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11600102](../errorcode-device-manager.md#11600102-failed-to-obtain-the-service) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let policy = distributedDeviceManager.StrategyForHeartbeat.TEMP_STOP_HEARTBEAT;
-  let delayTime = 1000;
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.setHeartbeatPolicy(policy, delayTime);
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('setHeartbeatPolicy errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## setLocalDeviceName
 
-ArkTS-Dyn:
 ```TypeScript
 setLocalDeviceName(deviceName: string): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-setLocalDeviceName(deviceName: string): Promise<int>
 ```
 
 Sets the local device name. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -865,7 +484,7 @@ Sets the local device name. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -879,43 +498,15 @@ Sets the local device name. This API uses a promise to return the result.
 | [11600107](../errorcode-device-manager.md#11600107-login-account-required) |
 | [11600108](../errorcode-device-manager.md#11600108-unlawful-information-in-device-name) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceName:string = 'xxx';
-  dmInstance.setLocalDeviceName(deviceName).then((data:number)=>{
-    console.info('setLocalDeviceName name:' + JSON.stringify(data));
-  }).catch((e: BusinessError)=>{
-    console.error('setLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('setLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## setRemoteDeviceName
 
-ArkTS-Dyn:
 ```TypeScript
 setRemoteDeviceName(deviceId: string, deviceName: string): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-setRemoteDeviceName(deviceId: string, deviceName: string): Promise<int>
 ```
 
 Sets the remote device name. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -934,7 +525,7 @@ Sets the remote device name. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -947,24 +538,3 @@ Sets the remote device name. This API uses a promise to return the result.
 | [11600106](../errorcode-device-manager.md#11600106-failed-to-obtain-data-from-the-cloud) |
 | [11600107](../errorcode-device-manager.md#11600107-login-account-required) |
 | [11600108](../errorcode-device-manager.md#11600108-unlawful-information-in-device-name) |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceId:string = 'xxx';
-  let deviceName:string = 'xxx';
-  dmInstance.setRemoteDeviceName(deviceId, deviceName).then((data:number)=>{
-    console.info('setRemoteDeviceName name:' + JSON.stringify(data));
-  }).catch((e: BusinessError)=>{
-    console.error('setRemoteDeviceName errCode:' + e.code + ',errMessage:' + e.message);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('setRemoteDeviceName errCode:' + e.code + ',errMessage:' + e.message);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 ```
 
 ## onSystemPrivateCommand
@@ -15,8 +15,6 @@ function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataTyp
 订阅输入法应用发送私有数据命令的事件。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

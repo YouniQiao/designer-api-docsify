@@ -1214,7 +1214,7 @@ Sets the system material of the dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md) material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
+| ArkUI_ImmersiveMaterialHandle material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
 
 **Returns**:
 
@@ -1239,7 +1239,7 @@ Sets the system material of the dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialog8h.md) handle | Indicates the pointer to the custom dialog box controller. |
-| [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md) material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
+| ArkUI_ImmersiveMaterialHandle material | Pointer to material object. The type is [ArkUI_ImmersiveMaterialHandle](capi-arkui-nativemodule-arkui-immersivematerial8h.md). |
 
 **Returns**:
 

@@ -1,12 +1,10 @@
 # Ellipse properties/events
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** EllipseAttribute extends CommonShapeMethod<EllipseAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

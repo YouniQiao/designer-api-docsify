@@ -6,8 +6,6 @@
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## Modules to Import
@@ -24,8 +22,6 @@ customRender(uri: ResourceStr, selfRenderUpdate: boolean)
 Set render pipeline of 3D scene render.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,8 +44,6 @@ Load 3D model environment resource.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -69,8 +63,6 @@ renderHeight(value: Dimension)
 Set render height resolution.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -92,8 +84,6 @@ Set render width resolution.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -113,8 +103,6 @@ shader(uri: ResourceStr)
 Load shader uri.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -136,8 +124,6 @@ Load shader texture uri.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -157,8 +143,6 @@ shaderInputBuffer(buffer: Array<number>)
 Buffer input for shader animation
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { runningLock } from '@kit.BasicServicesKit';
+import { runningLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## isRunningLockTypeSupported
@@ -15,8 +15,6 @@ function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallba
 查询系统是否支持该类型的锁。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -31,28 +29,6 @@ function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallba
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (err: Error, data: boolean) => {
-    if (typeof err === 'undefined') {
-        console.info('BACKGROUND lock support status: ' + data);
-    } else {
-        console.error('check BACKGROUND lock support status failed, err: ' + err);
-    }
-});
-```
-
-```TypeScript
-runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND)
-.then((data: boolean) => {
-    console.info('BACKGROUND lock support status: ' + data);
-})
-.catch((err: Error) => {
-    console.error('check BACKGROUND lock support status failed, err: ' + err);
-});
-```
-
 
 ## isRunningLockTypeSupported
 
@@ -63,8 +39,6 @@ function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 查询系统是否支持该类型的锁。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -83,7 +57,3 @@ function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isRunningLockTypeSupported](#isrunninglocktypesupported)

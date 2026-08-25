@@ -4,8 +4,6 @@ Enumerates the crown actions.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BEGIN
@@ -17,8 +15,6 @@ BEGIN = 0
 Rotation crown behavior begins.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Deprecated since:** 24
 
@@ -38,8 +34,6 @@ Rotation crown behavior update.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -55,8 +49,6 @@ END = 2
 The rotation crown behavior ends.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

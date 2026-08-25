@@ -4,8 +4,6 @@ Defines the options for acquiring the authorization.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the options for acquiring the authorization.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## challenge
@@ -30,8 +28,6 @@ Random challenge value, which prevents replay attacks. The value contains a maxi
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -45,7 +41,10 @@ interactionContext?: Context
 ```
 
 User interaction context configuration. The default value is **undefined**.  
-- If no context is specified, the authorization dialog box is displayed in modal system mode. - If [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) or [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) is specified, the authorization dialog box is displayed in modal application mode. - If no valid context is provided, the authorization dialog box cannot be displayed.  
+- If no context is specified, the authorization dialog box is displayed in modal system mode.  
+- If [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) or  
+[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) is specified, the authorization dialog box is displayed in modal application mode.  
+- If no valid context is provided, the authorization dialog box cannot be displayed.  
 Note: This parameter is valid only when **isInteractionAllowed** is set to **true**.
 
 **Type:** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)
@@ -53,8 +52,6 @@ Note: This parameter is valid only when **isInteractionAllowed** is set to **tru
 **Default:** undefined, which means the authorization dialog will be displayed in modal system mode.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +73,6 @@ Whether user interaction is allowed. The default value is **true**.If the value 
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -97,8 +92,6 @@ Whether to reuse the previous authorization. The default value is **true**.If th
 **Default:** true
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

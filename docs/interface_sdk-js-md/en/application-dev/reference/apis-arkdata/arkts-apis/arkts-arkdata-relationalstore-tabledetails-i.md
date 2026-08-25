@@ -4,14 +4,12 @@ Defines a struct for statistics of device-cloud upload and download tasks of a d
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## download
@@ -26,8 +24,6 @@ Describes the {@code Statistic} details of the download process.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## upload
@@ -41,7 +37,5 @@ Describes the {@code Statistic} details of the upload process.
 **Type:** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

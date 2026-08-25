@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## getFloatViewLimits
@@ -15,8 +15,6 @@ function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimit
 根据传入的模板类型获取对应标准悬浮窗窗口的限制，单位为px。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,10 +40,3 @@ function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimit
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
-
-**示例**
-
-```TypeScript
-let limits: floatView.FloatViewLimits = floatView.getFloatViewLimits(floatView.FloatViewTemplateType.ROUNDED_RECTANGLE);
-console.info('Float view limits: ' + JSON.stringify(limits));
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { OpenLinkOptions } from '@kit.AbilityKit';
+import { OpenLinkOptions } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

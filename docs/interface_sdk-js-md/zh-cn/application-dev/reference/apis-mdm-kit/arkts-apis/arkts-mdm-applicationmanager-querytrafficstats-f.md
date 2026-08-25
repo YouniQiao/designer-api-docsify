@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## queryTrafficStats
@@ -28,8 +28,6 @@ function queryTrafficStats(
 > 建议查询的时间间隔（结束时间-起始时间）最小为1天，最大为30天。时间间隔太小，查询结果可能不准确。时间间隔太大，查询耗时会很长。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -61,48 +59,3 @@ function queryTrafficStats(
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { connection, statistics } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-async function queryTrafficStats() {
-  let wantTemp: Want = {
-    // 需根据实际情况进行替换
-    bundleName: 'com.example.myapplication',
-    abilityName: 'EnterpriseAdminAbility'
-  };
-  // 需根据实际情况进行替换
-  let bundleName: string = 'com.example.test';
-  let appIndex: number = 0;
-  let accountId: number = 100;
-  // 示例代码使用sim.getSimAccountInfo获取simId
-  let slotId: number = 0;
-  let simId: number = 0;
-  await sim.getSimAccountInfo(slotId).then((data: sim.IccAccountInfo) => {
-    simId = data.simId;
-  }).catch((err: BusinessError) => {
-    console.error(`getSimAccountInfo failed, promise: err->${JSON.stringify(err)}`);
-  });
-  let networkInfo: statistics.NetworkInfo = {
-    // 需根据实际情况进行替换
-    type: connection.NetBearType.BEARER_CELLULAR,
-    // 查询2026/4/15 00:00:00.000 ~ 2026/4/16 00:00:00.000的数据（月份从0开始计算）
-    startTime: Math.floor(new Date(2026, 4, 15, 0, 0, 0, 0).getTime() / 1000),
-    endTime: Math.floor(new Date(2026, 4, 16, 0, 0, 0, 0).getTime() / 1000),
-    // 网络类型为BEARER_CELLULAR时，需要传simId；网络类型为BEARER_WIFI时，不需要传simId；
-    simId: simId
-  };
-  await applicationManager.queryTrafficStats(wantTemp, bundleName, appIndex, accountId, networkInfo)
-    .then(result => {
-      console.info('Succeeded in querying traffic stats.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to query traffic stats. Code is ${error.code}, message is ${error.message}`);
-    });
-}
-```

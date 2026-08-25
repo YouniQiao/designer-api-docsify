@@ -4,23 +4,19 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## appIndex
 
 ```TypeScript
-readonly appIndex: int
+readonly appIndex: number
 ```
 
 应用包的分身索引标识，仅在分身应用中生效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -35,8 +31,6 @@ readonly appInfo: ApplicationInfo
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -54,8 +48,6 @@ readonly buildVersion?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -65,16 +57,14 @@ readonly buildVersion?: string
 ## firstInstallTime
 
 ```TypeScript
-readonly firstInstallTime?: long
+readonly firstInstallTime?: number
 ```
 
 应用在当前设备的首次安装时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒，预置应用的首次安装时间戳为1533657660000。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -92,8 +82,6 @@ readonly hapModulesInfo: Array<HapModuleInfo>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -101,17 +89,15 @@ readonly hapModulesInfo: Array<HapModuleInfo>
 ## installTime
 
 ```TypeScript
-readonly installTime: long
+readonly installTime: number
 ```
 
 应用包安装时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒。  
 **说明：**设备出厂首次开机时，如果未获取到当前时间，会以Unix时间戳基准（1970-01-01 08:00:00 UTC+8）作为当前系统的起始时间。例如，开机后未获取到时间，等待32s之后安装成功，则应用包安装时间戳为32000。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -120,16 +106,14 @@ readonly installTime: long
 ## minCompatibleVersionCode
 
 ```TypeScript
-readonly minCompatibleVersionCode: int
+readonly minCompatibleVersionCode: number
 ```
 
 分布式场景下的应用包兼容的最低版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的minCompatibleVersionCode字段。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -147,8 +131,6 @@ readonly name: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -164,8 +146,6 @@ readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 **类型：** Array&lt;bundleManager.PermissionGrantState&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -183,8 +163,6 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -200,8 +178,6 @@ readonly routerMap: Array<RouterItem>
 **类型：** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -219,8 +195,6 @@ readonly signatureInfo: SignatureInfo
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -228,16 +202,14 @@ readonly signatureInfo: SignatureInfo
 ## targetVersion
 
 ```TypeScript
-readonly targetVersion: int
+readonly targetVersion: number
 ```
 
 应用运行目标版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的targetAPIVersion字段。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -246,16 +218,14 @@ readonly targetVersion: int
 ## updateTime
 
 ```TypeScript
-readonly updateTime: long
+readonly updateTime: number
 ```
 
 应用包更新时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -273,8 +243,6 @@ readonly vendor: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -282,16 +250,14 @@ readonly vendor: string
 ## versionCode
 
 ```TypeScript
-readonly versionCode: long
+readonly versionCode: number
 ```
 
 应用包的版本号，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的versionCode字段。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -308,8 +274,6 @@ readonly versionName: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

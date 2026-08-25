@@ -15,8 +15,6 @@ function requestForm(formId: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [requestForm](arkts-form-formhost-requestform-f-sys.md)
@@ -34,30 +32,6 @@ function requestForm(formId: string, callback: AsyncCallback<void>): void
 | formId | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.requestForm(formId, (error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost requestForm, error: ${JSON.stringify(error)}`);
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.requestForm(formId).then(() => {
-  console.info('formHost requestForm success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost requestForm, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## requestForm
 
@@ -68,8 +42,6 @@ function requestForm(formId: string): Promise<void>
 请求卡片更新。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -92,7 +64,3 @@ function requestForm(formId: string): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [requestForm](#requestform)

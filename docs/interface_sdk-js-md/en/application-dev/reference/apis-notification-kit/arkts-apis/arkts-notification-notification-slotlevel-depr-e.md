@@ -4,8 +4,6 @@ Enumerates the notification level.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md)
@@ -21,8 +19,6 @@ LEVEL_NONE = 0
 The notification function is disabled.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ The notification function is enabled, but the notification icon is not displayed
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LEVEL_MIN](arkts-notification-notificationmanager-slotlevel-e.md#level_min)
@@ -57,8 +51,6 @@ LEVEL_LOW = 2
 The notification function is enabled, and the notification icon is displayed in the status bar, with no banner or alert tone.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ The notification feature is enabled, and the notification icon is displayed in t
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LEVEL_DEFAULT](arkts-notification-notificationmanager-slotlevel-e.md#level_default)
@@ -93,8 +83,6 @@ LEVEL_HIGH = 4
 The notification feature is enabled, and the notification icon is displayed in the status bar, with an alert tone and banner.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

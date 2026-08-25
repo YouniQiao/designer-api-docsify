@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## offGetSimActiveState
@@ -16,8 +16,6 @@ Unregisters an observer for SIM card activation state changes. This API uses an 
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -38,15 +36,3 @@ Unregisters an observer for SIM card activation state changes. This API uses an 
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let simActiveState: Callback<boolean> = (isSimActive: boolean) => {
-    console.info(`simActiveState slotId ${JSON.stringify(isSimActive)}`);
-}
-observer.offGetSimActiveState(simActiveState);
-```

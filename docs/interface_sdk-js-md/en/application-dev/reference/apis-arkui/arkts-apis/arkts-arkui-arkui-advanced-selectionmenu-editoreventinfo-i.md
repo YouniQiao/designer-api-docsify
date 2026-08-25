@@ -4,14 +4,12 @@ Provides the information about the selected content.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from '@kit.ArkUI';
+import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## content
@@ -22,11 +20,9 @@ content?: RichEditorSelection
 
 Information about the selected content.
 
-**Type:** RichEditorSelection
+**Type:** [RichEditorSelection](../arkts-components/arkts-arkui-richeditorselection-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ ASR voice control mode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ AUDIO_2_VOICE_TX = 0
 Send output stream to TX.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -36,8 +32,6 @@ Send both output stream and MIC input to TX.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Based on the AUDIO_2_VOICE_TX, Send output stream to voice call record.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ AUDIO_MIX_2_VOICE_TX_EX = 3
 Based on the AUDIO_MIX_2_VOICE_TX, Send output stream to voice call record.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 

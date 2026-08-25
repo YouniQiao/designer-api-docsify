@@ -4,8 +4,6 @@ Defines the routing stack operation options.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,8 +24,6 @@ Whether to enable the transition animation.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,8 +41,6 @@ Operation mode of the routing stack.Default value: **LaunchMode.STANDARD**
 **Type:** [LaunchMode](arkts-arkui-launchmode-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

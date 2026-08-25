@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## writeSync
@@ -21,8 +21,6 @@ declare function writeSync(
 Writes data to a file. This API returns the result synchronously.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,40 +56,3 @@ Writes data to a file. This API returns the result synchronously.
 | 13900034 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
-let str: string = "hello, world";
-let writeLen = fs.writeSync(file.fd, str);
-console.info("write data to file succeed and size is:" + writeLen);
-fs.closeSync(file);
-```
-
-```TypeScript
-import { fileIo as fs, WriteOptions } from '@kit.CoreFileKit';
-let filePath = pathDir + "/test.txt";
-let stream = fs.createStreamSync(filePath,"r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-let num = stream.writeSync("hello, world", writeOption);
-stream.close();
-```
-
-```TypeScript
-import { fileIo as fs, WriteOptions } from '@kit.CoreFileKit';
-let filePath = pathDir + "/test.txt";
-let randomAccessFile = fs.createRandomAccessFileSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-let bytesWritten = randomAccessFile.writeSync("hello, world", writeOption);
-randomAccessFile.close();
-```

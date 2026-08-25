@@ -4,8 +4,6 @@ Dialog状态的枚举。
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## UNINITIALIZED
@@ -17,8 +15,6 @@ UNINITIALIZED = 0
 表示它未初始化。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ INITIALIZED = 1
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -53,8 +47,6 @@ APPEARING = 2
 表示它正在出现。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,8 +64,6 @@ APPEARED = 3
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -90,8 +80,6 @@ DISAPPEARING = 4
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -107,8 +95,6 @@ DISAPPEARED = 5
 表示它消失了。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from '@kit.ConnectivityKit';
+import { wifiext } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getPowerModel
@@ -15,8 +15,6 @@ function getPowerModel(): Promise<PowerModel>
 Obtains the current Wi-Fi power mode.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -42,8 +40,6 @@ function getPowerModel(callback: AsyncCallback<PowerModel>): void
 Obtains the current Wi-Fi power mode.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

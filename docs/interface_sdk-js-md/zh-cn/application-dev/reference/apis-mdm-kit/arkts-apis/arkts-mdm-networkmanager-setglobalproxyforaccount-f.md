@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setGlobalProxyForAccount
@@ -15,8 +15,6 @@ function setGlobalProxyForAccount(admin: Want, httpProxy: connection.HttpProxy, 
 设置指定用户下的网络代理。适用于企业多用户环境下的网络管理场景，例如为不同用户设置不同的网络代理策略、实现用户级网络访问控制、满足不同用户的网络访问需求，帮助企业实现精细化的用户级网络管理。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -41,32 +39,3 @@ function setGlobalProxyForAccount(admin: Want, httpProxy: connection.HttpProxy, 
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { connection } from '@kit.NetworkKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let httpProxy: connection.HttpProxy = {
-  // 需根据实际情况进行替换
-  host: '192.168.xx.xxx',
-  port: 8080,
-  exclusionList: ['192.168', 'baidu.com']
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  networkManager.setGlobalProxyForAccount(wantTemp, httpProxy, 100);
-  console.info(`Succeeded in setting network global proxy.`);
-} catch (err) {
-  console.error(`Failed to set network global proxy. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## stopCastDeviceDiscovery
@@ -15,8 +15,6 @@ function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void
 结束设备搜索发现。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -34,20 +32,6 @@ function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-avSession.stopCastDeviceDiscovery((err) => {
-  console.info('stopCastDeviceDiscovery successfully');
-});
-```
-
-```TypeScript
-avSession.stopCastDeviceDiscovery().then(() => {
-  console.info('stopCastDeviceDiscovery successfully');
-});
-```
-
 
 ## stopCastDeviceDiscovery
 
@@ -58,8 +42,6 @@ function stopCastDeviceDiscovery(): Promise<void>
 结束设备搜索发现。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -76,7 +58,3 @@ function stopCastDeviceDiscovery(): Promise<void>
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [stopCastDeviceDiscovery](#stopcastdevicediscovery)

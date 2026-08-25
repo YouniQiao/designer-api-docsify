@@ -4,8 +4,6 @@ Defines the efficiency resource information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the efficiency resource information.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## cpuLevel
@@ -27,8 +25,6 @@ CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the 
 **Type:** [EfficiencyResourcesCpuLevel](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcescpulevel-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Whether the resource is requested by a process or an application. The value **tr
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -66,8 +60,6 @@ Whether the resource is permanently held. The default value is **false**. The va
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -75,16 +67,14 @@ Whether the resource is permanently held. The default value is **false**. The va
 ## pid
 
 ```TypeScript
-pid: int
+pid: number
 ```
 
 Application PID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -102,8 +92,6 @@ Reason for requesting the resource.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -111,16 +99,14 @@ Reason for requesting the resource.
 ## resourceTypes
 
 ```TypeScript
-resourceTypes: int
+resourceTypes: number
 ```
 
 Enumerates the efficiency resource types.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -129,16 +115,14 @@ Enumerates the efficiency resource types.
 ## timeout
 
 ```TypeScript
-timeout: int
+timeout: number
 ```
 
 Timeout, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -147,16 +131,14 @@ Timeout, in milliseconds.
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 Application UID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 

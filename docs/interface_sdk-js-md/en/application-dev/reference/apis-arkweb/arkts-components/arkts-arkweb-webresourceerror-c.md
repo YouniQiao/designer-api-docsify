@@ -4,8 +4,6 @@ WebResourceError is a class that provides error information when resource loadin
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Constructor of WebResourceError. Creates a WebResourceError object to encapsulat
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -38,8 +34,6 @@ getCustomErrorCode(): number
 Gets the custom error code of the Web resource.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -58,8 +52,6 @@ getErrorCode(): number
 Obtains the error code of the resource loading. It is used to determine the specific cause of the resource loading failure (such as network errors, server errors, or permission issues), so that developers can take appropriate handling strategies based on the error type (such as retrying, prompting the user, or degrading the display).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,8 +72,6 @@ getErrorInfo(): string
 Obtains the error information of the resource loading. It is used to describe the specific cause of the resource loading failure in detail. Developers can output the error information to logs for debugging and analysis, or display a user-friendly error message to users.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

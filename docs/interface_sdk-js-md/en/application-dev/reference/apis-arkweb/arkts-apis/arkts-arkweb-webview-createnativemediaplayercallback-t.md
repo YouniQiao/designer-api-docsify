@@ -9,8 +9,6 @@ Parameter of the [onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontrol
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -27,7 +25,3 @@ Parameter of the [onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontrol
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md) |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).

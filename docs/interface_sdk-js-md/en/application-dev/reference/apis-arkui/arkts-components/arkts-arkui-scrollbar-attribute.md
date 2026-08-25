@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -37,8 +35,6 @@ Sets whether nested scrolling is enabled.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -49,7 +45,7 @@ Sets whether nested scrolling is enabled.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## scrollBarColor
 
@@ -61,8 +57,6 @@ Sets the color of the scrollbar slider. This parameter is valid only when the sc
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -73,4 +67,4 @@ Sets the color of the scrollbar slider. This parameter is valid only when the sc
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Optional & lt;ColorMetrics & gt; | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes |

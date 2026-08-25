@@ -4,24 +4,26 @@ Defines the notification flags.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## reminderFlags
 
 ```TypeScript
-readonly reminderFlags?: long
+readonly reminderFlags?: number
 ```
 
 Settings of the input information reminder features.  
-- Bit 0: sound alert. The value **0** means to enable the feature, and **1** means the opposite. - Bit 1: locking the screen. The value **0** means to enable the feature, and **1** means the opposite. - Bit 2: banner. The value **0** means to enable the feature, and **1** means the opposite. - Bit 3: turning on the screen. The value **0** means to enable the feature, and **1** means the opposite. - Bit 4: vibration. The value **0** means to enable the feature, and **1** means the opposite. - Bit 5: notification icon in the status bar. The value **0** means to enable the feature, and **1** means the opposite.
+- Bit 0: sound alert. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 1: locking the screen. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 2: banner. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 3: turning on the screen. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 4: vibration. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 5: notification icon in the status bar. The value **0** means to enable the feature, and **1** means the  
+opposite.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

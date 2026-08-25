@@ -4,14 +4,12 @@ Describes the audio and video recording profile.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## enableStableQualityMode
@@ -25,8 +23,6 @@ Whether to enable video encoding policy to quality stable encoding.
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 

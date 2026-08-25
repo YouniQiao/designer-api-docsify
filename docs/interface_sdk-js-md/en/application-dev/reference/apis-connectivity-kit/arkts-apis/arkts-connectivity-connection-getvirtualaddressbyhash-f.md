@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getVirtualAddressByHash
@@ -15,8 +15,6 @@ function getVirtualAddressByHash(algorithmType: HashAlgorithmType, hashValue: st
 Obtain the virtual address of the corresponding device based on the hash value of the real address.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

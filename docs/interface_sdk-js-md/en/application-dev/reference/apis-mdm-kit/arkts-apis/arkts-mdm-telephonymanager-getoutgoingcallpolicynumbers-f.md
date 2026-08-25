@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getOutgoingCallPolicyNumbers
@@ -15,8 +15,6 @@ function getOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy):
 Obtains the trustlist or blocklist for outgoing calls.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -46,27 +44,6 @@ Obtains the trustlist or blocklist for outgoing calls.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  let numbers: Array<string> = telephonyManager.getOutgoingCallPolicyNumbers(wantTemp, policy);
-  console.info(`Succeeded in getting outgoing call policy. result: ${JSON.stringify(numbers)}`);
-} catch (err) {
-  console.error(`Failed to get outgoing call policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getOutgoingCallPolicyNumbers
 
@@ -77,8 +54,6 @@ function getOutgoingCallPolicyNumbers(admin: Want | null, policy: adminManager.P
 Obtains the trustlist or blocklist for outgoing calls.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -107,7 +82,3 @@ Obtains the trustlist or blocklist for outgoing calls.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [getOutgoingCallPolicyNumbers](#getoutgoingcallpolicynumbers)

@@ -4,8 +4,6 @@ The module defines the view data used for auto-fill.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## bundleName
@@ -19,8 +17,6 @@ Bundle name.The value cannot exceed 512 characters.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,8 +36,6 @@ Page node information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -60,8 +54,6 @@ Coordinates, width, and height of the page.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -79,8 +71,6 @@ URL of the page.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

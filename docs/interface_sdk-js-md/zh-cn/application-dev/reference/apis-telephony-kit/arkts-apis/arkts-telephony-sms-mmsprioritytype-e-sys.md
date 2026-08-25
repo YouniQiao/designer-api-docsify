@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ MMS_LOW = 128
 彩信优先级低
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -36,8 +32,6 @@ MMS_NORMAL = 129
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ MMS_HIGH = 130
 彩信优先级高
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getCurrentLocation
@@ -16,8 +16,6 @@ function getCurrentLocation(request: CurrentLocationRequest | SingleLocationRequ
 获取当前位置，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -43,111 +41,6 @@ function getCurrentLocation(request: CurrentLocationRequest | SingleLocationRequ
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-定位失败未获取到定位结果) |
 
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 方式一：使用CurrentLocationRequest作为入参
-let requestInfo: geoLocationManager.CurrentLocationRequest = {
-  'priority': geoLocationManager.LocationRequestPriority.FIRST_FIX,
-  'scenario': geoLocationManager.LocationRequestScenario.UNSET,
-  'maxAccuracy': 0
-};
-let locationChange = (err: BusinessError, location: geoLocationManager.Location): void => {
-  if (err) {
-    console.error('locationChange: err=' + JSON.stringify(err));
-  }
-  if (location) {
-    console.info('locationChange: location=' + JSON.stringify(location));
-  }
-};
-
-try {
-  geoLocationManager.getCurrentLocation(requestInfo, locationChange);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-
-// 方式二：使用SingleLocationRequest作为入参
-let request: geoLocationManager.SingleLocationRequest = {
-  'locatingTimeoutMs': 10000,
-  'locatingPriority': geoLocationManager.LocatingPriority.PRIORITY_ACCURACY
-};
-let locationCallback = (err: BusinessError, location: geoLocationManager.Location): void => {
-  if (err) {
-    console.error('locationChange: err=' + JSON.stringify(err));
-  }
-  if (location) {
-    console.info('locationChange: location=' + JSON.stringify(location));
-  }
-};
-
-try {
-  geoLocationManager.getCurrentLocation(request, locationCallback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let locationChange = (err: BusinessError, location: geoLocationManager.Location) => {
-  if (err) {
-    console.error('locationChange: err=' + JSON.stringify(err));
-  }
-  if (location) {
-    console.info('locationChange: location=' + JSON.stringify(location));
-  }
-};
-
-try {
-  geoLocationManager.getCurrentLocation(locationChange);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 方式一：使用CurrentLocationRequest作为入参
-let requestInfo: geoLocationManager.CurrentLocationRequest = {
-  'priority': geoLocationManager.LocationRequestPriority.FIRST_FIX,
-  'scenario': geoLocationManager.LocationRequestScenario.UNSET,
-  'maxAccuracy': 0
-};
-try {
-  geoLocationManager.getCurrentLocation(requestInfo).then((result) => {
-    console.info('current location: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCurrentLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-
-// 方式二：使用SingleLocationRequest作为入参
-let request: geoLocationManager.SingleLocationRequest = {
-  'locatingTimeoutMs': 10000,
-  'locatingPriority': geoLocationManager.LocatingPriority.PRIORITY_ACCURACY
-};
-try {
-  geoLocationManager.getCurrentLocation(request).then((result) => {
-    console.info('current location: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCurrentLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## getCurrentLocation
 
@@ -158,8 +51,6 @@ function getCurrentLocation(callback: AsyncCallback<Location>): void
 获取当前位置，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -184,10 +75,6 @@ function getCurrentLocation(callback: AsyncCallback<Location>): void
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-定位失败未获取到定位结果) |
 
-**示例**
-
-参见 [getCurrentLocation](#getcurrentlocation)
-
 
 ## getCurrentLocation
 
@@ -199,8 +86,6 @@ function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationReq
 获取当前位置，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -230,7 +115,3 @@ function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationReq
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-定位失败未获取到定位结果) |
-
-**示例**
-
-参见 [getCurrentLocation](#getcurrentlocation)

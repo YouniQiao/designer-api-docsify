@@ -4,8 +4,6 @@ Describes the LCD flash information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the LCD flash information.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isLcdFlashNeeded
@@ -28,8 +26,6 @@ Whether the LCD flash is required. **true** if required, **false** otherwise.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Whether the LCD flash is required. **true** if required, **false** otherwise.
 ## lcdCompensation
 
 ```TypeScript
-readonly lcdCompensation: int
+readonly lcdCompensation: number
 ```
 
 LCD flash compensation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

@@ -4,14 +4,12 @@ Result object containing batch operation,including [batchAdd](arkts-assetstore-a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## failedCount
@@ -26,8 +24,6 @@ Failed count of the batch operation, 0 means all success.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## failedErrorInfos
@@ -41,7 +37,5 @@ An array of error details for assets that failed in the batch operation, includi
 **Type:** Array&lt;[BatchErrInfo](arkts-assetstore-asset-batcherrinfo-i.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset

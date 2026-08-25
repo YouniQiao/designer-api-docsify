@@ -7,8 +7,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## ALIAS
@@ -20,8 +18,6 @@ ALIAS = 0
 无抗锯齿处理。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -37,8 +33,6 @@ ANTI_ALIAS = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -52,8 +46,6 @@ SUBPIXEL_ANTI_ALIAS = 2
 使用次像素级别的抗锯齿平滑字型边缘，可以获得更平滑的字型渲染效果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

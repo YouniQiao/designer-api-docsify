@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemSoundManager } from '@kit.AudioKit';
+import { systemSoundManager } from 'kits/@kit.AudioKit';
 ```
 
 ## getFileName
@@ -26,8 +24,6 @@ getFileName(): string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -43,16 +39,6 @@ getFileName(): string
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-toneAttrs.getFileName();
-```
-
-```TypeScript
-toneHapticsAttrs.getFileName();
-```
 
 ## getGentleFileName
 
@@ -64,8 +50,6 @@ getGentleFileName(): string | null
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -81,12 +65,6 @@ getGentleFileName(): string | null
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-toneHapticsAttrs.getGentleFileName();
-```
 
 ## getGentleTitle
 
@@ -98,8 +76,6 @@ getGentleTitle(): string | null
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -115,12 +91,6 @@ getGentleTitle(): string | null
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-toneHapticsAttrs.getGentleTitle();
-```
 
 ## getGentleUri
 
@@ -132,8 +102,6 @@ getGentleUri(): string | null
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -150,12 +118,6 @@ getGentleUri(): string | null
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-toneHapticsAttrs.getGentleUri();
-```
-
 ## getTitle
 
 ```TypeScript
@@ -165,8 +127,6 @@ getTitle(): string
 获取振动标题。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -183,16 +143,6 @@ getTitle(): string
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-toneAttrs.getTitle();
-```
-
-```TypeScript
-toneHapticsAttrs.getTitle();
-```
 
 ## getUri
 
@@ -204,8 +154,6 @@ getUri(): string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -221,13 +169,3 @@ getUri(): string
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-toneAttrs.getUri();
-```
-
-```TypeScript
-toneHapticsAttrs.getUri();
-```

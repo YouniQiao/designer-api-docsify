@@ -4,8 +4,6 @@ Provides fingerprint gesture event types and the offset of the fingerprint senso
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
@@ -13,8 +11,8 @@ Provides fingerprint gesture event types and the offset of the fingerprint senso
 ## Modules to Import
 
 ```TypeScript
-import { shortKey } from '@kit.InputKit';
-import { FingerprintEvent } from '@kit.InputKit';
+import { shortKey } from 'kits/@kit.InputKit';
+import { FingerprintEvent } from 'kits/@kit.InputKit';
 ```
 
 ## action
@@ -29,8 +27,6 @@ Enumeration of fingerprint gesture event types.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
@@ -38,16 +34,14 @@ Enumeration of fingerprint gesture event types.
 ## distanceX
 
 ```TypeScript
-distanceX: double
+distanceX: number
 ```
 
 Offset relative to the short axis of the side fingerprint device (positive values indicate movement to the right, and negative values indicate movement to the left).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -56,16 +50,14 @@ Offset relative to the short axis of the side fingerprint device (positive value
 ## distanceY
 
 ```TypeScript
-distanceY: double
+distanceY: number
 ```
 
-Offset relative to the long axis of the side fingerprint device (positive values indicate upward movement, and negative values indicate downward movement).
+Offset relative to the number axis of the side fingerprint device (positive values indicate upward movement, and negative values indicate downward movement).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

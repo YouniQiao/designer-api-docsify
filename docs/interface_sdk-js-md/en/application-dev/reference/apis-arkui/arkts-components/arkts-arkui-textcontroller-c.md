@@ -10,8 +10,6 @@ controller: TextController = new TextController()
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ Closes the custom or default text selection menu.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -46,8 +42,6 @@ getLayoutManager(): LayoutManager
 Obtains the **LayoutManager** object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,8 +64,6 @@ setStyledString(value: StyledString): void
 Binds to or updates the specified styled string.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,8 +104,6 @@ Sets the text selection area, which will be highlighted.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -126,4 +116,4 @@ Sets the text selection area, which will be highlighted.
 | --- | --- | --- |
 | selectionStart | number \| undefined | Yes |
 | selectionEnd | number \| undefined | Yes |
-| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | No |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No |

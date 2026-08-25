@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## processPluginCommand
@@ -15,8 +15,6 @@ function processPluginCommand(code: PluginCmd, message: string): Promise<string>
 Process the plugin-related commands in the transparent encryption and decryption scenario.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Required permissions:** ohos.permission.DLP_POLICY_MANAGER
 

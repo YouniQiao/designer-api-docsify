@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createImagePacker
@@ -16,8 +16,6 @@ Creates an ImagePacker instance.Images occupy a large amount of memory. When you
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -27,11 +25,3 @@ Creates an ImagePacker instance.Images occupy a large amount of memory. When you
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [ImagePacker](arkts-image-image-imagepacker-i.md) |
-
-**Examples**
-
-```TypeScript
-async function CreateImagePacker() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-}
-```

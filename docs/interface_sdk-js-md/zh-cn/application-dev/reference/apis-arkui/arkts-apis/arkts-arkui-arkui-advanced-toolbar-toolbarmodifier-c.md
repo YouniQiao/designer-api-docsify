@@ -4,14 +4,12 @@ ToolBarModifier提供设置工具栏高度(height)、背景色(backgroundColor)�
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为20。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
+import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -23,8 +21,6 @@ backgroundColor(backgroundColor: ResourceColor): ToolBarModifier
 设置工具栏背景色的接口。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +50,6 @@ height(height: LengthMetrics): ToolBarModifier
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -66,7 +60,7 @@ height(height: LengthMetrics): ToolBarModifier
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [height](#height) | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 是 |
+| [height](#height) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 |
 
 **返回值：**
 
@@ -84,8 +78,6 @@ padding(padding: LengthMetrics): ToolBarModifier
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -96,7 +88,7 @@ padding(padding: LengthMetrics): ToolBarModifier
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [padding](#padding) | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 是 |
+| [padding](#padding) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 |
 
 **返回值：**
 
@@ -113,8 +105,6 @@ stateEffect(stateEffect: boolean): ToolBarModifier
 设置是否显示按压态效果的接口。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

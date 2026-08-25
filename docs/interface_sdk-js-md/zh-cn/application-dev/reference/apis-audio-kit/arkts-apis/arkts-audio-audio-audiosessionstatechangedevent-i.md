@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## stateChangeHint
@@ -25,7 +23,5 @@ stateChangeHint: AudioSessionStateChangeHint
 **类型：** [AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

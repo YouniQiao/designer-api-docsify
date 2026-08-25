@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## readLinesSync
@@ -17,8 +17,6 @@ declare function readLinesSync(filePath: string, options?: Options): ReaderItera
 以同步方式逐行读取文件的文本内容，只支持读取utf-8格式文件。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -52,18 +50,3 @@ declare function readLinesSync(filePath: string, options?: Options): ReaderItera
 | 13900041 |
 | 13900042 |
 | 13900044 |
-
-**示例**
-
-```TypeScript
-import { Options } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-let readerIterator = fileIo.readLinesSync(filePath, options);
-for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-  console.info(`Succeeded in reading lines, content: ${it.value}`);
-}
-```

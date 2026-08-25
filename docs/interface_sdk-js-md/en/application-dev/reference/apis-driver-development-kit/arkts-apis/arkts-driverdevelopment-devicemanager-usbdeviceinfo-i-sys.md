@@ -6,8 +6,6 @@ Defines detailed information about the USB device. It is inherited from [DeviceI
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -15,7 +13,7 @@ Defines detailed information about the USB device. It is inherited from [DeviceI
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## interfaceDescList
@@ -30,8 +28,6 @@ List of interface descriptors of the USB device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -39,16 +35,14 @@ List of interface descriptors of the USB device.
 ## productId
 
 ```TypeScript
-productId: int
+productId: number
 ```
 
 Product ID of the USB device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -57,16 +51,14 @@ Product ID of the USB device.
 ## vendorId
 
 ```TypeScript
-vendorId: int
+vendorId: number
 ```
 
 Vendor ID of the USB device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 

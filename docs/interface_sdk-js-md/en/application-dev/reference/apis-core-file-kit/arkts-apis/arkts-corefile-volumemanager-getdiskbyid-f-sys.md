@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getDiskById
@@ -15,8 +15,6 @@ function getDiskById(diskId: string): Promise<Disk>
 Querying disk information based on the disk ID.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 

@@ -4,14 +4,12 @@ The values of the **ScopeComparable** type are used to implement the **compareTo
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## compareTo
@@ -23,8 +21,6 @@ compareTo(other: ScopeComparable): boolean
 Compares two values and returns a Boolean value.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,37 +37,3 @@ Compares two values and returns a Boolean value.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
-let rational = util.RationalNumber.createRationalFromString("3/4");
-let result = rationalNumber.compareTo(rational);
-console.info("result = " + result);
-// Output: result = -1
-```
-
-Create a class to implement the compareTo method. The Temperature class is used as an example in the following sample code.
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-```

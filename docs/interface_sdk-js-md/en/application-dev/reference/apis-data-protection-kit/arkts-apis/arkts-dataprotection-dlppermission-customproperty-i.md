@@ -4,14 +4,12 @@ Represents a custom policy.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## enterprise
@@ -26,8 +24,6 @@ JSON string of an enterprise custom policy. The value contains a maximum of 4,19
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## options
@@ -41,8 +37,6 @@ Query options about an enterprise DLP file. This parameter is left blank by defa
 **Type:** [DlpFileQueryOptions](arkts-dataprotection-dlppermission-dlpfilequeryoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

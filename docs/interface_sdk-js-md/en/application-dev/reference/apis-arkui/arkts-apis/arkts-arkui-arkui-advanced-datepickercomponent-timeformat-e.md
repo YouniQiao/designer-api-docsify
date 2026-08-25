@@ -4,8 +4,6 @@ TimeFormat enum defines the format of the time picker.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## HOUR_MINUTE
@@ -17,8 +15,6 @@ HOUR_MINUTE = 0
 Displays hour and minute.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ HOUR_MINUTE_SECOND = 1
 Displays hour, minute, and second.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

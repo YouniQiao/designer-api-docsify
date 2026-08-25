@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -13,16 +11,14 @@
 ## abilityState
 
 ```TypeScript
-abilityState: int
+abilityState: number
 ```
 
 表示此任务的能力状态。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -40,8 +36,6 @@ continuable: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -57,8 +51,6 @@ iconPath: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -76,8 +68,6 @@ label: string
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -94,8 +84,6 @@ lockedState: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -103,16 +91,14 @@ lockedState: boolean
 ## missionId
 
 ```TypeScript
-missionId: int
+missionId: number
 ```
 
 表示任务ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -121,16 +107,14 @@ missionId: int
 ## runningState
 
 ```TypeScript
-runningState: int
+runningState: number
 ```
 
 表示运行状态。0表示启用，任务活跃有效，对应的Ability正在运行或可恢复到前台；-1表示未启用，任务已关闭、销毁或不可恢复。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -148,8 +132,6 @@ timestamp: string
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -166,8 +148,6 @@ unclearable: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -183,8 +163,6 @@ want: Want
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 

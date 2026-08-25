@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## hasRight
@@ -15,8 +15,6 @@ function hasRight(deviceName: string): boolean
 判断是否有权访问该设备。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -35,11 +33,3 @@ function hasRight(deviceName: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let devicesName= "1-1";
-let bool = usb.hasRight(devicesName);
-console.info(`hasRight = ${bool}`);
-```

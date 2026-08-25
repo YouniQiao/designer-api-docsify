@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NOTIFY_ADDED
@@ -17,8 +15,6 @@ NOTIFY_ADDED = 0
 文件已新建。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -32,8 +28,6 @@ NOTIFY_MODIFIED = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NOTIFY_DELETED
@@ -46,8 +40,6 @@ NOTIFY_DELETED = 2
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## NOTIFY_RENAMED
@@ -59,7 +51,5 @@ NOTIFY_RENAMED = 3
 文件被重命名或者移动。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

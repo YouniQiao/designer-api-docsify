@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## getEthernetDeviceInfos
@@ -15,8 +15,6 @@ function getEthernetDeviceInfos(): Promise<Array<EthernetDeviceInfos>>
 Obtains the device information (such as the vendor name, product name, and maximum connection rate) of the local Ethernet NIC. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -37,19 +35,3 @@ Obtains the device information (such as the vendor name, product name, and maxim
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.getEthernetDeviceInfos().then((data: Array<ethernet.EthernetDeviceInfos>) => {
-  console.info("getEthernetDeviceInfos data.length = " + JSON.stringify(data.length));
-  for (let i = 0; i < data.length; i++) {
-    console.info("getEthernetDeviceInfos = " + JSON.stringify(data[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error("getEthernetDeviceInfos err = " + err.code);
-});
-```

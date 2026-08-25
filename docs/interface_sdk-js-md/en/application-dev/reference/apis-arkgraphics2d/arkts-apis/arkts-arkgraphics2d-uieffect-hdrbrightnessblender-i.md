@@ -6,8 +6,6 @@ HDR-enabled brightness blender (inherited from BrightnessBlender), used to add a
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -15,5 +13,5 @@ HDR-enabled brightness blender (inherited from BrightnessBlender), used to add a
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```

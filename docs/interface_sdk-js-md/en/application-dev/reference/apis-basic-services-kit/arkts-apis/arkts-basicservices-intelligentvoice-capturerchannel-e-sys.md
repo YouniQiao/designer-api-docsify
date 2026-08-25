@@ -4,8 +4,6 @@ Enumerates capturer channel. @enum {number}
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ CAPTURER_CHANNEL_1 = 0x1 << 0
 Capturer channel 1.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -36,8 +32,6 @@ Capturer channel 2.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Capturer channel 3.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ CAPTURER_CHANNEL_4 = 0x1 << 3
 Capturer channel 4.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## startManualNetworkScan
 
 ```TypeScript
-function startManualNetworkScan(slotId: int, callback: Callback<NetworkSearchRealTimeResult>): void
+function startManualNetworkScan(slotId: number, callback: Callback<NetworkSearchRealTimeResult>): void
 ```
 
 start ManualNetworkScan , Real-time report.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ start ManualNetworkScan , Real-time report.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkSearchRealTimeResult&gt; | Yes |
 
 **Error codes:**

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## off('connect')
@@ -16,8 +16,6 @@ function off(type: 'connect', sessionId: number,
 Disables listening for **connect** events.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,15 +35,6 @@ Disables listening for **connect** events.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-
-let sessionId = 100;
-abilityConnectionManager.off("connect", sessionId);
-```
-
 
 ## off('disconnect')
 
@@ -57,8 +46,6 @@ function off(type: 'disconnect', sessionId: number,
 Disables listening for **disconnect** events.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,16 +65,6 @@ Disables listening for **disconnect** events.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let sessionId = 100;
-abilityConnectionManager.off("disconnect", sessionId);
-```
-
 
 ## off('receiveMessage')
 
@@ -99,8 +76,6 @@ function off(type: 'receiveMessage', sessionId: number,
 Disables listening for **receiveMessage** events.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,16 +95,6 @@ Disables listening for **receiveMessage** events.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let sessionId = 100;
-abilityConnectionManager.off("receiveMessage", sessionId);
-```
-
 
 ## off('receiveData')
 
@@ -141,8 +106,6 @@ function off(type: 'receiveData', sessionId: number,
 Disables listening for **receiveData** events.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,13 +124,3 @@ Disables listening for **receiveData** events.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let sessionId = 100;
-abilityConnectionManager.off("receiveData", sessionId);
-```

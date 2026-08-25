@@ -3,21 +3,19 @@
 ## 导入模块
 
 ```TypeScript
-import { missionManager } from '@kit.AbilityKit';
+import { missionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## moveMissionsToForeground
 
 ```TypeScript
-function moveMissionsToForeground(missionIds: Array<int>, callback: AsyncCallback<void>): void
+function moveMissionsToForeground(missionIds: Array<number>, callback: AsyncCallback<void>): void
 ```
 
 将指定任务批量切到前台。使用callback异步回调。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
@@ -28,7 +26,7 @@ function moveMissionsToForeground(missionIds: Array<int>, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| missionIds | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; | 是 |
+| missionIds | Array & lt;number & gt; | 是 |
 | callback | AsyncCallback & lt;void & gt; | 是 |
 
 **错误码：**
@@ -40,243 +38,17 @@ function moveMissionsToForeground(missionIds: Array<int>, callback: AsyncCallbac
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos('', 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
-    if (error.code) {
-      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
-      return;
-    }
-    if (missionInfos.length < 1) {
-      return;
-    }
-
-    let toShows = new Array<number>();
-    for (let missionInfo of missionInfos) {
-      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-        toShows.push(missionInfo.missionId);
-      }
-    }
-    // 将指定任务批量切换到前台
-    missionManager.moveMissionsToForeground(toShows, (err: BusinessError, data: void) => {
-      if (err) {
-        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
-      } else {
-        console.info(`moveMissionsToForeground successfully: ${JSON.stringify(data)}`);
-      }
-    });
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos('', 10,
-    (error: BusinessError | null, missionInfos: Array<missionManager.MissionInfo> | undefined) => {
-      if (error?.code) {
-        console.error(`getMissionInfos failed, error  ${JSON.stringify(error)}.`);
-        return;
-      }
-      if (!missionInfos || missionInfos.length < 1) {
-        return;
-      }
-
-      let toShows = new Array<int>();
-      for (let missionInfo of missionInfos) {
-        if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-          toShows.push(missionInfo.missionId);
-        }
-      }
-      missionManager.moveMissionsToForeground(toShows, (err: BusinessError | null, data: undefined) => {
-        if (err) {
-          console.error(`moveMissionsToForeground failed: ${err.message}`);
-        } else {
-          console.info(`moveMissionsToForeground successfully: ${JSON.stringify(data)}`);
-        }
-      });
-    });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos('', 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
-    if (error.code) {
-      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
-      return;
-    }
-    if (missionInfos.length < 1) {
-      return;
-    }
-
-    let toShows = new Array<number>();
-    for (let missionInfo of missionInfos) {
-      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-        toShows.push(missionInfo.missionId);
-      }
-    }
-    // 将指定任务批量切换到前台，并将第一个任务移动到最顶层
-    missionManager.moveMissionsToForeground(toShows, toShows[0], (err: BusinessError, data: void) => {
-      if (err) {
-        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
-      } else {
-        console.info(`moveMissionsToForeground successfully`);
-      }
-    });
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos('', 10,
-    (error: BusinessError | null, missionInfos: Array<missionManager.MissionInfo> | undefined) => {
-      if (error?.code) {
-        console.error(`getMissionInfos failed, error ${error}.`);
-        return;
-      }
-      if (!missionInfos || missionInfos.length < 1) {
-        return;
-      }
-
-      let toShows = new Array<int>();
-      for (let missionInfo of missionInfos) {
-        if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-          toShows.push(missionInfo.missionId);
-        }
-      }
-      missionManager.moveMissionsToForeground(toShows, toShows[0], (err: BusinessError | null, data: undefined) => {
-        if (err) {
-          console.error(`moveMissionsToForeground failed: ${err.message}`);
-        } else {
-          console.info(`moveMissionsToForeground successfully: ${JSON.stringify(data)}`);
-        }
-      });
-    });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos('', 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
-    if (error.code) {
-      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}`);
-      return;
-    }
-    if (missionInfos.length < 1) {
-      return;
-    }
-
-    let toShows = new Array<number>();
-    for (let missionInfo of missionInfos) {
-      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-        toShows.push(missionInfo.missionId);
-      }
-    }
-    missionManager.moveMissionsToForeground(toShows, toShows[0]).then(() => {
-      console.info(`moveMissionsToForeground is called`);
-    });
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos('', 10,
-    (error: BusinessError | null, missionInfos: Array<missionManager.MissionInfo> | undefined) => {
-      if (error?.code) {
-        console.error(`getMissionInfos failed, error ${JSON.stringify(error)}.`);
-        return;
-      }
-      if (!missionInfos || missionInfos.length < 1) {
-        return;
-      }
-
-      let toShows = new Array<int>();
-      for (let missionInfo of missionInfos) {
-        if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-          toShows.push(missionInfo.missionId);
-        }
-      }
-      missionManager.moveMissionsToForeground(toShows, toShows[0]).then(() => {
-        console.info(`moveMissionsToForeground is called`);
-      });
-    });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
-
 
 ## moveMissionsToForeground
 
 ```TypeScript
-function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callback: AsyncCallback<void>): void
+function moveMissionsToForeground(missionIds: Array<number>, topMission: number, callback: AsyncCallback<void>): void
 ```
 
 将指定任务批量切换到前台，并将任务ID等于topMission的任务移动到最顶层。使用callback异步回调。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
@@ -287,8 +59,8 @@ function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callb
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| missionIds | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; | 是 |
-| topMission | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| missionIds | Array & lt;number & gt; | 是 |
+| topMission | number | 是 |
 | callback | AsyncCallback & lt;void & gt; | 是 |
 
 **错误码：**
@@ -300,22 +72,16 @@ function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callb
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-参见 [moveMissionsToForeground](#movemissionstoforeground)
-
 
 ## moveMissionsToForeground
 
 ```TypeScript
-function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Promise<void>
+function moveMissionsToForeground(missionIds: Array<number>, topMission?: number): Promise<void>
 ```
 
 将指定任务批量切到前台，并将任务ID等于topMission的任务移动到最顶层。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -327,8 +93,8 @@ function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Pro
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| missionIds | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; | 是 |
-| topMission | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| missionIds | Array & lt;number & gt; | 是 |
+| topMission | number | 否 |
 
 **返回值：**
 
@@ -344,7 +110,3 @@ function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Pro
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [moveMissionsToForeground](#movemissionstoforeground)

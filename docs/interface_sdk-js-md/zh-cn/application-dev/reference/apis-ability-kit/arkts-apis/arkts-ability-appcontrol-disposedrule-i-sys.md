@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## componentType
@@ -27,8 +25,6 @@ componentType: ComponentType
 **类型：** ComponentType
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -46,8 +42,6 @@ controlType: ControlType
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ disposedType: DisposedType
 **类型：** [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -82,8 +74,6 @@ elementList: Array<ElementName>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -91,16 +81,14 @@ elementList: Array<ElementName>
 ## priority
 
 ```TypeScript
-priority: int
+priority: number
 ```
 
 拦截规则的优先级，用于规则列表查询结果排序。取值为整数，数值越小，优先级越高，排序越靠前。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -117,8 +105,6 @@ want: Want
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

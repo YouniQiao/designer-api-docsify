@@ -4,8 +4,6 @@ Deferred video enhancement info.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Deferred video enhancement info.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isDeferredVideoEnhancementAvailable
@@ -27,8 +25,6 @@ Check whether deferred video enhancement available.
 **Type:** boolean
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -45,8 +41,6 @@ Video identifier.
 **Type:** string
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

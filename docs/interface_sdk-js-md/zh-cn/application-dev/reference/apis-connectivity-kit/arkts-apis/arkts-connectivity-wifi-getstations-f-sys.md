@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getStations
@@ -15,8 +15,6 @@ function getStations(): Array<StationInfo>
 获取连接的设备。<p>该方法只能在作为热点的设备上使用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -33,16 +31,3 @@ function getStations(): Array<StationInfo>
 | 类型 |
 | --- |
 | Array & lt;StationInfo & gt; |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let stations = wifi.getStations();
-    console.info("result:" + JSON.stringify(stations));        
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

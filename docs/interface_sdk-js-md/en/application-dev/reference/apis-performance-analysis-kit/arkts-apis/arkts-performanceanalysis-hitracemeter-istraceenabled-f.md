@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isTraceEnabled
@@ -16,8 +16,6 @@ Checks whether application trace capture is enabled.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -27,13 +25,3 @@ Checks whether application trace capture is enabled.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-if (hiTraceMeter.isTraceEnabled()) {
-    // Service flow...
-} else {
-    // Service flow...
-}
-```

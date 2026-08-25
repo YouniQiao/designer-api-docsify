@@ -4,8 +4,6 @@ This module provides the capability to manage HyperSnap.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,7 +11,7 @@ This module provides the capability to manage HyperSnap.
 ## Modules to Import
 
 ```TypeScript
-import { hyperSnapManager } from '@kit.AbilityKit';
+import { hyperSnapManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

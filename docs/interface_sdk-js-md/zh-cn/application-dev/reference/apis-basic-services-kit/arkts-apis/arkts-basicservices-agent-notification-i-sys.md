@@ -4,14 +4,12 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## disable
@@ -25,8 +23,6 @@ Disables the notification. If the value is false, a notification will be display
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 

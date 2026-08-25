@@ -4,8 +4,6 @@ ParallelStrategy作为[Options](arkts-basicservices-zlib-options-i.md)的一个�
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.Zlib
 
 ## PARALLEL_STRATEGY_SEQUENTIAL
@@ -17,8 +15,6 @@ PARALLEL_STRATEGY_SEQUENTIAL = 0
 默认值，串行压缩/解压策略。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -33,8 +29,6 @@ PARALLEL_STRATEGY_PARALLEL_DECOMPRESSION = 1
 并行解压策略。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

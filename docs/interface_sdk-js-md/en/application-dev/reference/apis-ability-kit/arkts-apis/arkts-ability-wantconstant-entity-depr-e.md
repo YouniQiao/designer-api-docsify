@@ -4,8 +4,6 @@ Enumerates the entity constants of the Want object. **entity** specifies additio
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -19,8 +17,6 @@ ENTITY_DEFAULT = 'entity.system.default'
 Default entity. The default entity is used if no entity is specified.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -36,8 +32,6 @@ Home screen entity.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -51,8 +45,6 @@ ENTITY_VOICE = 'entity.system.voice'
 Voice interaction entity.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -68,8 +60,6 @@ Browser type entity.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -83,8 +73,6 @@ ENTITY_VIDEO = 'entity.system.video'
 Video type entity.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

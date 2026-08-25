@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## finishLogCollected
@@ -21,8 +21,6 @@ function finishLogCollected(admin: Want): void
 > 若不调本接口，设备日志会占用系统存储空间，不影响下一次调用[startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md)启动日志收集任务。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.ENTERPRISE_READ_LOG
 
@@ -44,23 +42,3 @@ function finishLogCollected(admin: Want): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  systemManager.finishLogCollected(wantTemp);
-  console.info('Succeeded in finishing log collected.');
-} catch (err) {
-  console.error(`Failed to finish log collected. Code is ${err.code}, message is ${err.message}`);
-}
-```

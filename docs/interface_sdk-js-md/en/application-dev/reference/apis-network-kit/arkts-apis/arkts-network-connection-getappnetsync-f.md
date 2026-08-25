@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getAppNetSync
@@ -15,8 +15,6 @@ function getAppNetSync(): NetHandle
 Obtains the network information bound to an application. This API returns the result synchronously.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -32,11 +30,3 @@ Obtains the network information bound to an application. This API returns the re
 | --- |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let netHandle = connection.getAppNetSync();
-```

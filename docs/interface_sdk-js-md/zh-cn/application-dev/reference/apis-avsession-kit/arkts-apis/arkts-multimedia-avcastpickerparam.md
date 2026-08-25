@@ -6,7 +6,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
+import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from 'kits/@kit.AVSessionKit';
 ```
 
 ## 汇总

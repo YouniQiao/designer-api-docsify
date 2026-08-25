@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@kit.ArkTS';
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
 ```
 
 ## stringify
@@ -15,8 +15,6 @@ function stringify(value: Object | null | undefined): string
 Converts an ArkTS value to a JavaScript Object Notation (JSON) string. Extra supports Map and Set.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

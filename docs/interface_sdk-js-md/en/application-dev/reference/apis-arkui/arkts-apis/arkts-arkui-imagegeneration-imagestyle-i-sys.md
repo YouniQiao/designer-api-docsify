@@ -4,8 +4,6 @@ Style types supported by AI image generation models, like Graffiti, Watercolor.@
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Style types supported by AI image generation models, like Graffiti, Watercolor.@
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## icon
@@ -24,11 +22,9 @@ icon: image.PixelMap | string | Resource
 
 The style icon information which will display in style list.
 
-**Type:** image.PixelMap \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** image.PixelMap \| string \| Resource
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,11 +40,9 @@ name: ResourceStr
 
 The style name information which will display in style list.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

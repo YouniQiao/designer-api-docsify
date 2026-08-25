@@ -4,8 +4,6 @@ FlexAlign enumeration description.@enum { number }
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Start
@@ -17,8 +15,6 @@ Start
 The element is aligned at the head of the principal axis, the first element is aligned with the head of the row, and subsequent elements are aligned with the previous one.
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,8 +32,6 @@ The elements are centered in the direction of the principal axis, and the first 
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -53,8 +47,6 @@ End
 The element is aligned at the tail of the principal axis, the last element is aligned at the end of the row, and the other elements are aligned with the next.
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -72,8 +64,6 @@ Elastic elements are evenly distributed in the direction of the Flex principal a
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -90,8 +80,6 @@ Elastic elements are evenly distributed in the direction of the Flex principal a
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -107,8 +95,6 @@ SpaceEvenly
 Elements in the Flex axis direction are evenly spaced. The spacing between adjacent elements, the spacing between the first element and the beginning of the row, and the spacing between the last element and the end of the row are the same.
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

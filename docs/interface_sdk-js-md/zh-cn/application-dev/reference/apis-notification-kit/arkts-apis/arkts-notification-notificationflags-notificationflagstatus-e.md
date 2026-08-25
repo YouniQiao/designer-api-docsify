@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## TYPE_NONE
@@ -17,8 +15,6 @@ TYPE_NONE = 0
 未设置标志时的默认值，与TYPE_OPEN效果相同。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -32,8 +28,6 @@ TYPE_OPEN = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## TYPE_CLOSE
@@ -45,7 +39,5 @@ TYPE_CLOSE = 2
 通知标志关闭。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification

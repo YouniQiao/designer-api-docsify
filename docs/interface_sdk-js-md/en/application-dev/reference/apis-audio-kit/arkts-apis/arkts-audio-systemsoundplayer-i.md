@@ -4,8 +4,6 @@ Implements a system sound player that provides functions for loading, unloading,
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 ## load
@@ -18,8 +16,6 @@ Loads a system sound.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -43,18 +39,6 @@ Loads a system sound.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemSoundPlayer?.load(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
-  console.info('Succeeded in calling the load method.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to call the load method. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## play
 
@@ -66,8 +50,6 @@ Plays a system sound.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -92,18 +74,6 @@ Plays a system sound.
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemSoundPlayer?.play(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
-  console.info('Succeeded in calling the play method.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to call the play method. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## release
 
 ```TypeScript
@@ -113,8 +83,6 @@ release(): Promise<void>
 Releases this system sound player instance.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,18 +100,6 @@ Releases this system sound player instance.
 | --- |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemSoundPlayer?.release().then(() => {
-  console.info('Succeeded in calling the release method.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to call the release method. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## unload
 
 ```TypeScript
@@ -153,8 +109,6 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 Unloads a system sound that has been loaded before.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,15 +132,3 @@ Unloads a system sound that has been loaded before.
 | --- |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemSoundPlayer?.unload(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
-  console.info('Succeeded in calling the unload method.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to call the unload method. Code: ${err.code}, message: ${err.message}`);
-});
-```

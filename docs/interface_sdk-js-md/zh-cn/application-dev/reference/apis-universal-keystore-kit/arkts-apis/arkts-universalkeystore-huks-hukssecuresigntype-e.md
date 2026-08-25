@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## HUKS_SECURE_SIGN_WITH_AUTHINFO
@@ -18,8 +16,6 @@ HUKS_SECURE_SIGN_WITH_AUTHINFO = 1
 **注意：**携带的认证信息包含身份信息，开发者需在其隐私声明中对此身份信息的使用目的、存留策略和销毁方式进行说明。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## x
 
 ```TypeScript
-x?: double
+x?: number
 ```
 
 X轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,16 +33,14 @@ X轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 ## y
 
 ```TypeScript
-y?: double
+y?: number
 ```
 
 Y轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -55,16 +49,14 @@ Y轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 ## z
 
 ```TypeScript
-z?: double
+z?: number
 ```
 
 Z轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

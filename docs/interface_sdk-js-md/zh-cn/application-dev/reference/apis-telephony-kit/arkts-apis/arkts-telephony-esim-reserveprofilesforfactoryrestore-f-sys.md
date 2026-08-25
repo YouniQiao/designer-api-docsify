@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## reserveProfilesForFactoryRestore
 
 ```TypeScript
-function reserveProfilesForFactoryRestore(slotId: int): Promise<ResultCode>
+function reserveProfilesForFactoryRestore(slotId: number): Promise<ResultCode>
 ```
 
 恢复出厂设置，并保留profiles。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
@@ -28,7 +26,7 @@ function reserveProfilesForFactoryRestore(slotId: int): Promise<ResultCode>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -46,16 +44,3 @@ function reserveProfilesForFactoryRestore(slotId: int): Promise<ResultCode>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3120001](../errorcode-telephony.md#3120001-服务连接失败) |
 | [3120002](../errorcode-telephony.md#3120002-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { eSIM } from '@kit.TelephonyKit';
-
-eSIM.reserveProfilesForFactoryRestore(1).then(() => {
-    console.info(`reserveProfilesForFactoryRestore invoking succeeded.`);
-}).catch((err: BusinessError<void>) => {
-    console.error(`reserveProfilesForFactoryRestore, ErrorState: err->${JSON.stringify(err)}`);
-});
-```

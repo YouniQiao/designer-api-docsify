@@ -4,8 +4,6 @@ Defines enrolled credential information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines enrolled credential information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## authSubType
@@ -27,8 +25,6 @@ Authentication credential subtype.
 **Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -46,8 +42,6 @@ Authentication credential type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -58,13 +52,11 @@ Authentication credential type.
 credentialId: Uint8Array
 ```
 
-Credential ID, which is left blank by default.
+Credential ID.
 
 **Type:** Uint8Array
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -82,8 +74,6 @@ Whether the credential is abandoned. The abandoned credential may be stored as a
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -100,8 +90,6 @@ Authentication credential template ID.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -109,16 +97,14 @@ Authentication credential template ID.
 ## validityPeriod
 
 ```TypeScript
-validityPeriod?: long
+validityPeriod?: number
 ```
 
 Credential validity period, in milliseconds. The default value is **undefined**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## isSimpleKeyboardEnabled
@@ -20,13 +18,11 @@ import { inputMethodEngine } from '@kit.IMEKit';
 isSimpleKeyboardEnabled?: boolean
 ```
 
-是否使能简单键盘，该属性由编辑框应用设置，true表示使能简单键盘，false表示不使能简单键盘。 <br> <br>如果没有设置或设置非法值，则默认不使能简单键盘。
+是否使能简单键盘，该属性由编辑框应用设置，true表示使能简单键盘，false表示不使能简单键盘。 如果没有设置或设置非法值，则默认不使能简单键盘。
 
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -41,7 +37,5 @@ requestKeyboardReason?: RequestKeyboardReason
 **类型：** RequestKeyboardReason
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

@@ -4,8 +4,6 @@ Enumerates the screenshot event types.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## SYSTEM_SCREENSHOT
@@ -17,8 +15,6 @@ SYSTEM_SCREENSHOT = 0
 System screenshot succeeds.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -32,8 +28,6 @@ System screenshot aborted.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## SCROLL_SHOT_START
@@ -45,8 +39,6 @@ SCROLL_SHOT_START = 2
 Scroll screenshot starts.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,8 +52,6 @@ Scroll screenshot ends.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## SCROLL_SHOT_ABORT
@@ -73,7 +63,5 @@ SCROLL_SHOT_ABORT = 4
 Scroll screenshot aborted.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryAllActivePrintJobs
@@ -15,8 +15,6 @@ function queryAllActivePrintJobs(): Promise<PrintJob[]>
 查询所有活跃中的打印任务，使用Promise进行异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -36,16 +34,3 @@ function queryAllActivePrintJobs(): Promise<PrintJob[]>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.queryAllActivePrintJobs().then((printJobs : print.PrintJob[]) => {
-    console.info('queryAllActivePrintJobs success, data : ' + JSON.stringify(printJobs));
-}).catch((error: BusinessError) => {
-    console.error('queryAllActivePrintJobs failed, error : ' + JSON.stringify(error));
-})
-```

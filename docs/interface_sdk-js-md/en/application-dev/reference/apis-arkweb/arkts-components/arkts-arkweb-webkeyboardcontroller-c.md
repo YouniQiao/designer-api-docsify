@@ -4,8 +4,6 @@ WebKeyboardController is a controller class provided by ArkWeb for controlling t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Closes this custom keyboard.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## constructor
@@ -36,8 +32,6 @@ constructor()
 Constructs a **WebKeyboardController** API.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,8 +46,6 @@ deleteBackward(length: number): void
 Deletes a specified length of characters after the cursor.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -73,8 +65,6 @@ Deletes a specified length of characters before the cursor.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -93,8 +83,6 @@ Inserts characters into the **Web** component text box.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -112,8 +100,6 @@ sendFunctionKey(key: number): void
 Inserts a function key. Currently, only the Enter key type is supported. For details about the value, see [EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
 

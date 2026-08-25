@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from '@kit.ArkUI';
+import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

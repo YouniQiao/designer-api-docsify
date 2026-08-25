@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryCurrentBundleEvents
 
 ```TypeScript
-function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallback<Array<BundleEvents>>): void
+function queryCurrentBundleEvents(begin: number, end: number, callback: AsyncCallback<Array<BundleEvents>>): void
 ```
 
 通过指定起始和结束时间，查询当前应用的事件集合，使用Callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -26,8 +24,8 @@ function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| begin | number | 是 |
+| end | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | 是 |
 
 **错误码：**
@@ -44,67 +42,16 @@ function queryCurrentBundleEvents(begin: long, end: long, callback: AsyncCallbac
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryCurrentBundleEvents(0, 20000000000000, (err: BusinessError, res: Array<usageStatistics.BundleEvents>) => {
-  if (err) {
-    console.error('BUNDLE_ACTIVE queryCurrentBundleEvents callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents callback success.');
-    for (let i = 0; i < res.length; i++) {
-      console.info('BUNDLE_ACTIVE queryCurrentBundleEvents callback number : ' + (i + 1));
-      console.info('BUNDLE_ACTIVE queryCurrentBundleEvents callback result ' + JSON.stringify(res[i]));
-    }
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryCurrentBundleEvents(0, 20000000000000, 100).then((res: Array<usageStatistics.BundleEvents>) => {
-  console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryCurrentBundleEvents promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.queryCurrentBundleEvents(0, 20000000000000).then((res: Array<usageStatistics.BundleEvents>) => {
-  console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryCurrentBundleEvents promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryCurrentBundleEvents promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
 
 ## queryCurrentBundleEvents
 
 ```TypeScript
-function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleEvents>>
+function queryCurrentBundleEvents(begin: number, end: number): Promise<Array<BundleEvents>>
 ```
 
 通过指定起始和结束时间段内，查询当前应用的事件集合，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -114,8 +61,8 @@ function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleE
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| begin | number | 是 |
+| end | number | 是 |
 
 **返回值：**
 
@@ -137,22 +84,16 @@ function queryCurrentBundleEvents(begin: long, end: long): Promise<Array<BundleE
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
 
-**示例**
-
-参见 [queryCurrentBundleEvents](#querycurrentbundleevents)
-
 
 ## queryCurrentBundleEvents
 
 ```TypeScript
-function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<Array<BundleEvents>>
+function queryCurrentBundleEvents(begin: number, end: number, maxNum: number): Promise<Array<BundleEvents>>
 ```
 
 通过指定起始时间、结束时间及最大返回条数，查询指定时间段内当前应用的事件集合。若条数大于maxNum，则按事件发生时间降序排列，返回前maxNum条，否则返回所有数据。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,9 +105,9 @@ function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| maxNum | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| begin | number | 是 |
+| end | number | 是 |
+| maxNum | number | 是 |
 
 **返回值：**
 
@@ -186,7 +127,3 @@ function queryCurrentBundleEvents(begin: long, end: long, maxNum: int): Promise<
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-时间操作失败) |
 | [10000008](../errorcode-DeviceUsageStatistics.md#10000008-参数检查失败) |
-
-**示例**
-
-参见 [queryCurrentBundleEvents](#querycurrentbundleevents)

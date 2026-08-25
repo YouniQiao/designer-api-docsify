@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -27,8 +25,6 @@ adaptiveColor?: AdaptiveColor
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -48,8 +44,6 @@ blurOptions?: BlurOptions
 **默认值：** { grayScale: [0,1] } [since 11 - 11] @default { grayScale: [0,0] } [since 12]
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,8 +65,6 @@ brightness?: number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -87,13 +79,11 @@ color?: ResourceColor
 
 颜色，默认透明色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Transparent
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,13 +99,11 @@ inactiveColor?: ResourceColor
 
 模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，控件模糊效果会被移除，如果设置了inactiveColor会使用inactiveColor作为控件背景色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Transparent
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -137,8 +125,6 @@ policy?: BlurStyleActivePolicy
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -156,8 +142,6 @@ radius: number
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -178,8 +162,6 @@ saturation?: number
 **默认值：** 1
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

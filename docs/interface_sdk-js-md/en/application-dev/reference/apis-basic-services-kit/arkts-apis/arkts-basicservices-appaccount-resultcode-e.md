@@ -2,14 +2,11 @@
 
 Enumerates the result codes.
 
-> **NOTE：**<br>
-> 
+> **NOTE：**
 > This API is supported since API version 8 and deprecated since API version 9. For details, see
 > [Account Management Error Codes](../errorcode-account.md).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -25,8 +22,6 @@ The operation is successful.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -40,8 +35,6 @@ ERROR_ACCOUNT_NOT_EXIST = 10001
 The application account does not exist.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -57,8 +50,6 @@ The **AppAccountManager** service is abnormal.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -72,8 +63,6 @@ ERROR_INVALID_PASSWORD = 10003
 The password is invalid.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -89,8 +78,6 @@ The request is invalid.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -104,8 +91,6 @@ ERROR_INVALID_RESPONSE = 10005
 The response is invalid.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -121,8 +106,6 @@ The network is abnormal.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -136,8 +119,6 @@ ERROR_OAUTH_AUTHENTICATOR_NOT_EXIST = 10007
 The authenticator does not exist.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -153,8 +134,6 @@ The authentication is canceled.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -168,8 +147,6 @@ ERROR_OAUTH_LIST_TOO_LARGE = 10009
 The size of the OAuth list exceeds the limit.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -185,8 +162,6 @@ The OAuth service is busy.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -201,8 +176,6 @@ The OAuth service is abnormal.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -213,11 +186,9 @@ The OAuth service is abnormal.
 ERROR_OAUTH_SESSION_NOT_EXIST = 10012
 ```
 
-The session to be authenticated does not exist.
+The authentication session does not exist.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -233,8 +204,6 @@ The authentication timed out.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -249,8 +218,6 @@ The authorization token does not exist.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -261,11 +228,9 @@ The authorization token does not exist.
 ERROR_OAUTH_TOKEN_TOO_MANY = 10015
 ```
 
-The number of OAuth tokens reaches the limit.
+The number of tokens reaches the limit.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -281,8 +246,6 @@ The authentication operation is not supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -297,8 +260,6 @@ The authentication type is not supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -312,8 +273,6 @@ ERROR_PERMISSION_DENIED = 10018
 The required permission is missing.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

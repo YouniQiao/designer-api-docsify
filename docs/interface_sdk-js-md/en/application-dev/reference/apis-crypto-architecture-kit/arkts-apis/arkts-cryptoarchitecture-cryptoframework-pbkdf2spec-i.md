@@ -11,8 +11,6 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Kdf
 - API version 11: SystemCapability.Security.CryptoFramework
@@ -20,22 +18,20 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## iterations
 
 ```TypeScript
-iterations: int
+iterations: number
 ```
 
 Number of iterations. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,16 +42,14 @@ Number of iterations. The value must be a positive integer.
 ## keySize
 
 ```TypeScript
-keySize: int
+keySize: number
 ```
 
 Length of the derived key, in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -75,8 +69,6 @@ Original password entered by the user.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -94,8 +86,6 @@ Salt value.
 **Type:** Uint8Array
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSmsShortCodeType
 
 ```TypeScript
-function getSmsShortCodeType(slotId: int, destAddr: string): Promise<SmsShortCodeType>
+function getSmsShortCodeType(slotId: number, destAddr: string): Promise<SmsShortCodeType>
 ```
 
 获取拟发送短信的目标地址短码类型
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
@@ -28,7 +26,7 @@ function getSmsShortCodeType(slotId: int, destAddr: string): Promise<SmsShortCod
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | destAddr | string | 是 |
 
 **返回值：**

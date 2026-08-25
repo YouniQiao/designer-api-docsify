@@ -7,8 +7,6 @@ The module provides version information about the dispatchInfo struct and dispat
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -25,8 +23,6 @@ Version of the dispatch API.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -42,8 +38,6 @@ Version of the dispatchInfo struct.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

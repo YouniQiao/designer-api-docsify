@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Core
 
 ## 导入模块
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## 汇总
@@ -28,9 +26,7 @@ import { nfcController } from '@kit.ConnectivityKit';
 | [isNfcOpen(标准NFC)](arkts-connectivity-nfccontroller-isnfcopen-f.md) |
 | [isNfcSupported(标准NFC)](arkts-connectivity-nfccontroller-isnfcsupported-f.md) |
 | [off(标准NFC)](arkts-connectivity-nfccontroller-off-f.md#offnfcstatechange) |
-| [offNfcStateChange(标准NFC)](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) |
 | [on(标准NFC)](arkts-connectivity-nfccontroller-on-f.md#onnfcstatechange) |
-| [onNfcStateChange(标准NFC)](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) |
 | [openNfc(标准NFC)](arkts-connectivity-nfccontroller-opennfc-f.md) |
 
 ### 枚举

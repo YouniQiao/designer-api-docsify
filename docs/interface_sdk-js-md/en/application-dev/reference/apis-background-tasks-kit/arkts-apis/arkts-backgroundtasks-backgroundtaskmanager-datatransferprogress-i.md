@@ -4,29 +4,25 @@ Information about continuousTask notification progress.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## continuousTaskId
 
 ```TypeScript
-continuousTaskId: int
+continuousTaskId: number
 ```
 
 Continuous task ID. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Notify progress data.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -61,8 +55,6 @@ Notification parameters, which are used to specify the target page that is redir
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Enumerates contact data fields.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## PHONE
@@ -17,8 +15,6 @@ PHONE = 1
 Phone number of the contact.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -34,8 +30,6 @@ Organization of the contact.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -49,8 +43,6 @@ EMAIL = 0
 Email of the contact.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

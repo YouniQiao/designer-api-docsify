@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## preQuerySync
@@ -15,8 +15,6 @@ function preQuerySync(query: AssetMap): Uint8Array
 Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.querySync](arkts-assetstore-asset-querysync-f.md) and [asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md). This API returns the result synchronously.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -52,20 +50,3 @@ Performs preprocessing for the asset query. This API is used when user authentic
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
 | [24000016](../errorcode-asset.md#24000016-cached-assets-reaches-the-limit) |
 | [24000017](../errorcode-asset.md#24000017-function-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-let challenge: Uint8Array = asset.preQuerySync(query);
-console.info(`Succeeded in pre-querying with sync, the challenge is: `, challenge);
-```

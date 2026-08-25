@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## FILTER_MODE_NEAREST
@@ -18,8 +16,6 @@ FILTER_MODE_NEAREST = 0
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## FILTER_MODE_LINEAR
@@ -31,7 +27,5 @@ FILTER_MODE_LINEAR = 1
 线性过滤模式，使用周围像素点的加权平均值进行采样。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing

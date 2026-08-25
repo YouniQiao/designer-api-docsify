@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
+import { browser } from 'kits/@kit.MDMKit';
 ```
 
 ## getSelfManagedBrowserPolicy
@@ -16,8 +16,6 @@ function getSelfManagedBrowserPolicy(): ArrayBuffer
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -27,20 +25,3 @@ function getSelfManagedBrowserPolicy(): ArrayBuffer
 | 类型 |
 | --- |
 | ArrayBuffer |
-
-**示例**
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { util } from '@kit.ArkTS';
-
-try {
-  let buffer: ArrayBuffer = browser.getSelfManagedBrowserPolicy();
-  let intBuffer: Uint8Array = new Uint8Array(buffer);
-  let decoder: util.TextDecoder = util.TextDecoder.create('utf-8');
-  let stringData: string = decoder.decodeToString(intBuffer);
-  console.info(`Succeeded in getting self managed browser policy, result : ${stringData}`);
-} catch (err) {
-  console.error(`Failed to get self managed browser policy. Code is ${err.code}, message is ${err.message}`);
-}
-```

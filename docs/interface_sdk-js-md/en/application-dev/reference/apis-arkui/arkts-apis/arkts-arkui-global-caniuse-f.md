@@ -10,8 +10,6 @@ Defining syscap function.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite

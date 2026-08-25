@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pluginBundleManager } from '@kit.AbilityKit';
+import { pluginBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllLocalPluginInfoForSelf
@@ -15,8 +15,6 @@ function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>
 查询当前应用中所有自分发插件的信息。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN
 

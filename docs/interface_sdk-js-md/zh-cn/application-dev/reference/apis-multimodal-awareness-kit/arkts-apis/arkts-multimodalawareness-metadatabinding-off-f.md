@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## off('operationSubmitMetadata')
@@ -15,8 +15,6 @@ function off(type: 'operationSubmitMetadata', bundleName: string, callback?: Cal
 取消订阅系统获取编码内容的事件。需先调用on('operationSubmitMetadata')方法订阅事件，未订阅时调用不产生效果。取消订阅后，应用将不再接收编码内容传递事件。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -36,19 +34,3 @@ function off(type: 'operationSubmitMetadata', bundleName: string, callback?: Cal
 | --- |
 | [32100001](../errorcode-metadataBinding.md#32100001-文件创建失败) |
 | [32100005](../errorcode-metadataBinding.md#32100005-取消订阅失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
-
-let bundleName: string = 'com.example.app';
-try {
-  metadataBinding.off('operationSubmitMetadata', bundleName, (event: number) => {
-  });
-} catch (error) {
-  const err = error as BusinessError;
-  console.error(`Failed to unsubscribe operationSubmitMetadata event. Code: ${err.code}, message: ${err.message}`);
-}
-```

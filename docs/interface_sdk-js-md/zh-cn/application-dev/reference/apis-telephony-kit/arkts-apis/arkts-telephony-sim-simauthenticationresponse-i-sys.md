@@ -2,8 +2,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -11,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## response
@@ -24,8 +22,6 @@ response: string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -33,16 +29,14 @@ response: string
 ## simStatusWord1
 
 ```TypeScript
-simStatusWord1: int
+simStatusWord1: number
 ```
 
 Status word 1 of the SIM card, which is returned by the SIM card after command execution.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -51,16 +45,14 @@ Status word 1 of the SIM card, which is returned by the SIM card after command e
 ## simStatusWord2
 
 ```TypeScript
-simStatusWord2: int
+simStatusWord2: number
 ```
 
 Status word 2 of the SIM card, which is returned by the SIM card after command execution.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

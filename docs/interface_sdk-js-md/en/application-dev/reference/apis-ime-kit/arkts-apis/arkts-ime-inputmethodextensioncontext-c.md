@@ -1,24 +1,22 @@
 # InputMethodExtensionContext
 
-The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities. <br> <br>   
-> **NOTE：**&lt;br
-&gt; 
-> &lt;br
-&gt; 
+The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities.   
+> **NOTE：**
+   
+> 
+   
 > The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version. The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** InputMethodExtensionContext extends ExtensionContext
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtensionContext } from '@kit.IMEKit';
+import { InputMethodExtensionContext } from 'kits/@kit.IMEKit';
 ```
 
 ## destroy
@@ -31,8 +29,6 @@ Destroys this input method. This API uses an asynchronous callback to return the
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -42,50 +38,6 @@ Destroys this input method. This API uses an asynchronous callback to return the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InputMethodExtAbility extends InputMethodExtensionAbility {
-  onCreate(want: Want): void {
-    let context: InputMethodExtensionContext = this.context;
-  }
-
-  onDestroy() {
-    this.context.destroy((err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to destroy context, err code = ${err.code}`);
-        return;
-      }
-      console.info('Succeeded in destroying context.');
-    });
-  }
-}
-```
-
-```TypeScript
-import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InputMethodExtAbility extends InputMethodExtensionAbility {
-  onCreate(want: Want): void {
-    let context: InputMethodExtensionContext = this.context;
-  }
-
-  onDestroy() {
-    this.context.destroy().then(() => {
-      console.info('Succeed in destroying context.');
-    }).catch((err: BusinessError)=>{
-      console.error(`Failed to destroy context, err code = ${err.code}`);
-    });
-  }
-}
-```
 
 ## destroy
 
@@ -97,8 +49,6 @@ Destroys this input method. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -109,10 +59,6 @@ Destroys this input method. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [destroy](#destroy)
-
 ## startAbility
 
 ```TypeScript
@@ -122,8 +68,6 @@ startAbility(want: Want): Promise<void>
 Starts an ability. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,35 +109,3 @@ Starts an ability. This API uses a promise to return the result.
 | [16000069](../../apis-ability-kit/errorcode-ability.md#16000069-extensionability-fails-to-start-a-third-party-application-in-strict-mode) |
 | [16000070](../../apis-ability-kit/errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-
-**Examples**
-
-```TypeScript
-import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InputMethodExtAbility extends InputMethodExtensionAbility {
-  onCreate(want: Want): void {
-    const context: InputMethodExtensionContext = this.context;
-    const targetWant: Want = {
-      bundleName: "com.example.aafwk.test",
-      abilityName: "com.example.aafwk.test.TwoAbility"
-    };
-
-    context.startAbility(targetWant)
-      .then(() => console.info('startAbility success'))
-      .catch((err: BusinessError) => {
-        console.error(`StartAbility failed. Code: ${err.code}, Message: ${err.message}`);
-      });
-  }
-
-  onDestroy() {
-    this.context.destroy().then(() => {
-      console.info('Succeed in destroying context.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to destroy context, err code = ${err.code}`);
-    });
-  }
-}
-```

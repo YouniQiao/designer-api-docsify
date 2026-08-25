@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## makeUnique
 
 ```TypeScript
-function makeUnique(screenId: long): Promise<void>
+function makeUnique(screenId: number): Promise<void>
 ```
 
 Sets the screen to independent display mode. This API uses a promise to return the result.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_VIRTUAL_SCREEN
 
@@ -26,7 +24,7 @@ Sets the screen to independent display mode. This API uses a promise to return t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| screenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| screenId | number | Yes |
 
 **Return value:**
 
@@ -43,16 +41,3 @@ Sets the screen to independent display mode. This API uses a promise to return t
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenId: number = 0;
-display.makeUnique(screenId).then(() => {
-  console.info('Succeeded in making unique screens.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to make unique screens. Code:${err.code},message is ${err.message}`);
-});
-```

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getJsonProfile
 
 ```TypeScript
-function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: int): string
+function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: number): string
 ```
 
 以同步的方法根据给定的profileType、bundleName和moduleName查询相应配置文件的JSON字符串。获取调用方自己的配置文件时不需要权限。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -31,7 +29,7 @@ function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName
 | profileType | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | 是 |
 | bundleName | string | 是 |
 | moduleName | string | 否 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| userId | number | 否 |
 
 **返回值：**
 
@@ -51,23 +49,3 @@ function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName
 | [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let profileType = bundleManager.ProfileType.INTENT_PROFILE;
-
-try {
-  let data = bundleManager.getJsonProfile(profileType, bundleName, moduleName);
-  hilog.info(0x0000, 'testTag', 'getJsonProfile successfully. Data: %{public}s', data);
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getJsonProfile failed: %{public}s', message);
-}
-```

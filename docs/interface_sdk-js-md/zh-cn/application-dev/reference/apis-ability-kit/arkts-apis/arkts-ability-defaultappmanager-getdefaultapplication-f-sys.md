@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
+import { defaultAppManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDefaultApplication
 
 ```TypeScript
-function getDefaultApplication(type: string, userId: int, callback: AsyncCallback<BundleInfo>) : void
+function getDefaultApplication(type: string, userId: number, callback: AsyncCallback<BundleInfo>) : void
 ```
 
 根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型获取默认应用信息。使用 callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_DEFAULT_APPLICATION
 
@@ -29,7 +27,7 @@ function getDefaultApplication(type: string, userId: int, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-i.md)&gt; | 是 |
 
 **错误码：**
@@ -44,209 +42,6 @@ function getDefaultApplication(type: string, userId: int, callback: AsyncCallbac
 | [17700023](../errorcode-bundle.md#17700023-指定的默认应用不存在) |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-defaultAppManager.getDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
-  .then((data) => {
-    console.info('Operation successful. bundleInfo: ' + JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  });
-
-defaultAppManager.getDefaultApplication("image/png")
-  .then((data) => {
-    console.info('Operation successful. bundleInfo: ' + JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  });
-
-defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI)
-  .then((data) => {
-    console.info('Operation successful. bundleInfo: ' + JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  });
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager, defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-defaultAppManager.getDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
-  .then((data: bundleManager.BundleInfo) => {
-    console.info('getDefaultApplication successful. bundleInfo: ' + JSON.stringify(data));
-  })
-  .catch((error: Error) => {
-    console.error('getDefaultApplication failed. Cause: ' + JSON.stringify(error));
-  });
-
-defaultAppManager.getDefaultApplication("image/png")
-  .then((data: bundleManager.BundleInfo) => {
-    console.info('getDefaultApplication successful. bundleInfo: ' + JSON.stringify(data));
-  })
-  .catch((error: Error) => {
-    console.error('getDefaultApplication failed. Cause: ' + JSON.stringify(error));
-  });
-
-defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI)
-  .then((data: bundleManager.BundleInfo) => {
-    console.info('getDefaultApplication successful. bundleInfo: ' + JSON.stringify(data));
-  })
-  .catch((error: Error) => {
-    console.error('getDefaultApplication failed. Cause: ' + JSON.stringify(error));
-  });
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-let userId = 100;
-defaultAppManager.getDefaultApplication(defaultAppManager.ApplicationType.BROWSER, userId, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
-});
-
-defaultAppManager.getDefaultApplication("image/png", userId, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
-});
-
-defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, userId, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-// 代码中使用的useId需为应用实际的用户ID。
-let userId = 100;
-defaultAppManager.getDefaultApplication(defaultAppManager.ApplicationType.BROWSER, userId, (err, data) => {
-  if (err) {
-    console.error('getDefaultApplication failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('getDefaultApplication successful. bundleInfo:' + JSON.stringify(data));
-});
-
-defaultAppManager.getDefaultApplication("image/png", userId, (err, data) => {
-  if (err) {
-    console.error('getDefaultApplication failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('getDefaultApplication successful. bundleInfo:' + JSON.stringify(data));
-});
-
-defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, userId, (err, data) => {
-  if (err) {
-    console.error('getDefaultApplication failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('getDefaultApplication successful. bundleInfo:' + JSON.stringify(data));
-});
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-defaultAppManager.getDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
-});
-
-defaultAppManager.getDefaultApplication("image/png", (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
-});
-
-defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, (err: BusinessError, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { uniformTypeDescriptor } from '@kit.ArkData';
-
-defaultAppManager.getDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError | null, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
-});
-
-defaultAppManager.getDefaultApplication("image/png", (err: BusinessError | null, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
-});
-
-defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, (err: BusinessError | null, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
-});
-```
-
 
 ## getDefaultApplication
 
@@ -257,8 +52,6 @@ function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>
 根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型获取默认应用信息。使用 callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_DEFAULT_APPLICATION
 
@@ -284,22 +77,16 @@ function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>
 | [17700023](../errorcode-bundle.md#17700023-指定的默认应用不存在) |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) |
 
-**示例**
-
-参见 [getDefaultApplication](#getdefaultapplication)
-
 
 ## getDefaultApplication
 
 ```TypeScript
-function getDefaultApplication(type: string, userId?: int) : Promise<BundleInfo>
+function getDefaultApplication(type: string, userId?: number) : Promise<BundleInfo>
 ```
 
 根据系统已定义的应用类型或者符合媒体类型格式（type/subtype）的文件类型或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型获取默认应用信息。使用Promise 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_DEFAULT_APPLICATION
 
@@ -312,7 +99,7 @@ function getDefaultApplication(type: string, userId?: int) : Promise<BundleInfo>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| userId | number | 否 |
 
 **返回值：**
 
@@ -331,7 +118,3 @@ function getDefaultApplication(type: string, userId?: int) : Promise<BundleInfo>
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 | [17700023](../errorcode-bundle.md#17700023-指定的默认应用不存在) |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) |
-
-**示例**
-
-参见 [getDefaultApplication](#getdefaultapplication)

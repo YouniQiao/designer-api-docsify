@@ -1,10 +1,8 @@
 # DisplayIntentType (System API)
 
-Enumerates the screenshot display intent type.@enum { int }
+Enumerates the screenshot display intent type.@enum { number }
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -19,8 +17,6 @@ CANONICAL = 0
 Specifies that the screenshot renders with canonical display attributes optimizing output for presentation on the HDR display.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ LOCAL = 1
 Specifies that the screenshot renders with local display attributes optimizing output for presentation on the capture display.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

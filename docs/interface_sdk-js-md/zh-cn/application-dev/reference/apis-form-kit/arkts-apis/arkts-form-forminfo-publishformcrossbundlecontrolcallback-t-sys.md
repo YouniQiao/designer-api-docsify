@@ -8,8 +8,6 @@ type PublishFormCrossBundleControlCallback = (info: PublishFormCrossBundleInfo) 
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form
@@ -27,30 +25,3 @@ type PublishFormCrossBundleControlCallback = (info: PublishFormCrossBundleInfo) 
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formInfo } from '@kit.FormKit';
-
-let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleControlCallback =
-  (info: formInfo.PublishFormCrossBundleInfo): boolean => {
-    console.info('publish form cross bundle info callback success.');
-    return true;
-  };
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formInfo } from '@kit.FormKit';
-
-let publishFormCrossBundleControlCallback: formInfo.PublishFormCrossBundleControlCallback =
-  (info): boolean => {
-    console.info('publish form cross bundle info callback success.');
-    return true;
-  };
-```

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCallIdListForConference
 
 ```TypeScript
-function getCallIdListForConference(callId: int, callback: AsyncCallback<Array<string>>): void
+function getCallIdListForConference(callId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
 Obtains the list of call IDs in a conference. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -26,7 +24,7 @@ Obtains the list of call IDs in a conference. This API uses an asynchronous call
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes |
 
 **Error codes:**
@@ -40,42 +38,16 @@ Obtains the list of call IDs in a conference. This API uses an asynchronous call
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallIdListForConference(1, (err: BusinessError, data: Array<string>) => {
-    if (err) {
-        console.error(`getCallIdListForConference fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`getCallIdListForConference success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallIdListForConference(1).then((data: Array<string>) => {
-    console.info(`getCallIdListForConference success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCallIdListForConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getCallIdListForConference
 
 ```TypeScript
-function getCallIdListForConference(callId: int): Promise<Array<string>>
+function getCallIdListForConference(callId: number): Promise<Array<string>>
 ```
 
 Obtains the list of call IDs in a conference. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -85,7 +57,7 @@ Obtains the list of call IDs in a conference. This API uses a promise to return 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 
 **Return value:**
 
@@ -103,7 +75,3 @@ Obtains the list of call IDs in a conference. This API uses a promise to return 
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-
-**Examples**
-
-See [getCallIdListForConference](#getcallidlistforconference)

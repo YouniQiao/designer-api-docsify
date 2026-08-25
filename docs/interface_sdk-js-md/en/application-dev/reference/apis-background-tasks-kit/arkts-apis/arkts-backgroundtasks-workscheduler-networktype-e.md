@@ -4,8 +4,6 @@ Enumerates the network types that trigger deferred task callback.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## NETWORK_TYPE_ANY
@@ -17,8 +15,6 @@ NETWORK_TYPE_ANY = 0
 Any network type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Mobile network.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -49,8 +43,6 @@ NETWORK_TYPE_WIFI = 2
 Wi-Fi network.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +58,6 @@ Bluetooth network.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -82,8 +72,6 @@ Wi-Fi P2P network.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -97,8 +85,6 @@ NETWORK_TYPE_ETHERNET = 5
 Ethernet.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

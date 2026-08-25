@@ -6,14 +6,12 @@ Defines the moving photo view attribute functions.@extends CommonMethod&lt;Movin
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from '@kit.MediaLibraryKit';
+import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## autoPlay
@@ -25,8 +23,6 @@ autoPlay(isAutoPlay: boolean): MovingPhotoViewAttribute
 Sets whether to allow automatic play. If the value is true, the moving photo starts automatic after the resource is loaded.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -47,14 +43,12 @@ Sets whether to allow automatic play. If the value is true, the moving photo sta
 ## autoPlayPeriod
 
 ```TypeScript
-autoPlayPeriod(startTime: double, endTime: double): MovingPhotoViewAttribute
+autoPlayPeriod(startTime: number, endTime: number): MovingPhotoViewAttribute
 ```
 
 Sets automatic play period, If not set, the moving photo plays in the full video duration. If set, the moving photo plays in the automatic play period.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -83,8 +77,6 @@ Sets whether to enable moving photo analyzer. If the value is true, the moving p
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -110,8 +102,6 @@ muted(isMuted: boolean): MovingPhotoViewAttribute
 Called when judging whether the video is muted.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -139,8 +129,6 @@ Called when determining the zoom type of the view.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -166,8 +154,6 @@ onComplete(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute
 Called when the image load completed.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -195,8 +181,6 @@ Called when playback fails.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -222,8 +206,6 @@ onFinish(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute
 Called when the video playback ends.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -251,8 +233,6 @@ Called when the video playback paused.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -278,8 +258,6 @@ onPrepared(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute
 Called when playback prepared.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -307,8 +285,6 @@ Called when the video is played.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -335,8 +311,6 @@ Called when the video playback stopped.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -362,8 +336,6 @@ repeatPlay(isRepeatPlay: boolean): MovingPhotoViewAttribute
 Sets whether to allow repeat play. If the value is true, the moving photo plays repeat after the resource is loaded.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 

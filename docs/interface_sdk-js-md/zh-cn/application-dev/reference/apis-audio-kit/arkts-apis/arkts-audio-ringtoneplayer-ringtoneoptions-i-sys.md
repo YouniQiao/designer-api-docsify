@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,8 +20,6 @@ loop: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -31,16 +27,14 @@ loop: boolean
 ## volume
 
 ```TypeScript
-volume: double
+volume: number
 ```
 
 指定的相对音量大小，取值范围为[0.00, 1.00]，1表示最大音量，即100%。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

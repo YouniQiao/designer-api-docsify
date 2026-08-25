@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getPermissionDef
@@ -15,8 +15,6 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 Obtains the PermissionDef struct based on the given permission name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -40,46 +38,6 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700006](../errorcode-bundle.md#17700006-permission-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let permission = "ohos.permission.GET_BUNDLE_INFO";
-try {
-  bundleManager.getPermissionDef(permission, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getPermissionDef failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getPermissionDef successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getPermissionDef failed: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let permissionName = "ohos.permission.GET_BUNDLE_INFO";
-try {
-  bundleManager.getPermissionDef(permissionName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getPermissionDef successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
-}
-```
-
 
 ## getPermissionDef
 
@@ -90,8 +48,6 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 Obtains the PermissionDef struct based on the given permission name. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -119,7 +75,3 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700006](../errorcode-bundle.md#17700006-permission-does-not-exist) |
-
-**Examples**
-
-See [getPermissionDef](#getpermissiondef)

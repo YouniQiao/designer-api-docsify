@@ -4,8 +4,6 @@ Knowledge Content class, used for geting related entity.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Knowledge Content class, used for geting related entity.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## getRelatedEntity
@@ -25,8 +23,6 @@ static getRelatedEntity (topic: string, context: ContextMap, option?: Options): 
 Get Related Entities, Smart Label
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -68,8 +64,6 @@ static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>):
 Get Search Suggestion.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { manager } from '@kit.ConnectivityKit';
+import { manager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## onStateChange
@@ -15,8 +15,6 @@ function onStateChange(callback: Callback<NearlinkState>): void
 Subscribes to the NearLink status change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

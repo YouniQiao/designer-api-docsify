@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getAddressesByName
@@ -15,8 +15,6 @@ function getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddre
 使用当前默认网络解析主机名以获取所有IP地址。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -39,83 +37,6 @@ function getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddre
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getAddressesByName("xxxx", (error: BusinessError, data: connection.NetAddress[]) => {
-  if (error) {
-    console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getAddressesByName("xxxx").then((data: connection.NetAddress[]) => {
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-  let host = "www.example.com";
-  netHandle.getAddressesByName(host, (error: BusinessError, data: connection.NetAddress[]) => {
-    if (error) {
-      console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
-      return;
-    }
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  });
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-  let host = "www.example.com";
-  netHandle.getAddressesByName(host).then((data: connection.NetAddress[]) => {
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  });
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-  let host = "www.example.com";
-  netHandle.getAddressesByName(host).then((data: Array<connection.NetAddress>|undefined) => {
-    console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-  });
-});
-```
-
 
 ## getAddressesByName
 
@@ -126,8 +47,6 @@ function getAddressesByName(host: string): Promise<Array<NetAddress>>
 使用当前默认网络解析主机名以获取所有IP地址。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -154,7 +73,3 @@ function getAddressesByName(host: string): Promise<Array<NetAddress>>
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [getAddressesByName](#getaddressesbyname)

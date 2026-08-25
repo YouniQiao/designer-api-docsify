@@ -4,14 +4,12 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## 导入模块
 
 ```TypeScript
-import { backgroundLoader } from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -25,8 +23,6 @@ abilityName: string
 **类型：** string
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ stopCode: StopCode
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -62,8 +56,6 @@ stopMessage: string
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -71,16 +63,14 @@ stopMessage: string
 ## taskId
 
 ```TypeScript
-taskId: int
+taskId: number
 ```
 
 任务id。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

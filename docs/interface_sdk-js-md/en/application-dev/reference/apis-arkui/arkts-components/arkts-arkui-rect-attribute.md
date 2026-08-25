@@ -1,12 +1,10 @@
 # Rect properties/events
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** RectAttribute extends CommonShapeMethod<RectAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ Sets the radius of the rounded corner. The value must be greater than or equal t
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -37,7 +33,7 @@ Sets the radius of the rounded corner. The value must be greater than or equal t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Length \| Array & lt;any & gt; | Yes |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array & lt;any & gt; | Yes |
 
 ## radiusHeight
 
@@ -48,8 +44,6 @@ radiusHeight(value: Length)
 Sets the height of the rounded corner. The width and height are the same when only the height is set. This attribute can be dynamically set using attributeModifier. Invalid values are treated as the default value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,8 +66,6 @@ radiusWidth(value: Length)
 Sets the width of the rounded corner. The width and height are the same when only the width is set. This attribute can be dynamically set using attributeModifier. Invalid values are treated as the default value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

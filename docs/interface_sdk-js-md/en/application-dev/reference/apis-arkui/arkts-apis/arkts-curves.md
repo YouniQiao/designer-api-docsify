@@ -4,14 +4,12 @@ The **Curves** module provides APIs for interpolation calculation to create step
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

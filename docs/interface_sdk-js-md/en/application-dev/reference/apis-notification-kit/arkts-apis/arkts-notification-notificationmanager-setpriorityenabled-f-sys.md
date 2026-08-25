@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setPriorityEnabled
@@ -15,8 +15,6 @@ function setPriorityEnabled(enable: boolean): Promise<void>
 Sets the enabling status of the priority notification.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -45,16 +43,3 @@ Sets the enabling status of the priority notification.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-notificationManager.setPriorityEnabled(false).then(() => {
-    hilog.info(0x0000, 'testTag', `setPriorityEnabled success`);
-}).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', `setPriorityEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```

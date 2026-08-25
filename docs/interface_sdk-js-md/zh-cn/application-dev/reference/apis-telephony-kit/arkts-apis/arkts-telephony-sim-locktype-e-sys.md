@@ -4,8 +4,6 @@ Indicates the lock types.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ Indicates the SIM card password lock.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ FDN_LOCK = 2
 Indicates the fixed dialing lock.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

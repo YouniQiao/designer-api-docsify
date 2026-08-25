@@ -4,8 +4,6 @@ Obtains network information status.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ NETWORK_UNKNOWN = 0
 Indicates that the network state is unknown.
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -36,8 +32,6 @@ Indicates that the network is available for registration.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ Indicates that you have already registered with the network.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ NETWORK_FORBIDDEN = 3
 Indicates that the network is unavailable for registration.
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

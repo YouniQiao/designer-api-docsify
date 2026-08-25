@@ -6,8 +6,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { common } from '@kit.MDMKit';
+import { common } from 'kits/@kit.MDMKit';
 ```
 
 ## 汇总

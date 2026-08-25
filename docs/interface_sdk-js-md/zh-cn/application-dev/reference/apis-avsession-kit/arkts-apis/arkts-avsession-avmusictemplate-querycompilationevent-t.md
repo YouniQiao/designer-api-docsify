@@ -1,14 +1,12 @@
 # QueryCompilationEvent
 
 ```TypeScript
-type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<PageMediaEntity>
+type QueryCompilationEvent = (compilationId: string, pageIndex: number) => Promise<PageMediaEntity>
 ```
 
 合集查询事件。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -19,7 +17,7 @@ type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | compilationId | string | 是 |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| pageIndex | number | 是 |
 
 **返回值：**
 

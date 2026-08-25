@@ -15,8 +15,6 @@ Removes a file. This API uses a promise to return the result.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [unlink](arkts-corefile-file-fs-unlink-f.md)
@@ -35,26 +33,6 @@ Removes a file. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.unlink(filePath).then(() => {
-  console.info("remove file succeed");
-}).catch((error: BusinessError) => {
-  console.error("remove file failed with error:" + error);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.unlink(filePath, (err: BusinessError) => {
-  console.info("remove file succeed");
-});
-```
-
 
 ## unlink
 
@@ -65,8 +43,6 @@ declare function unlink(path: string, callback: AsyncCallback<void>): void
 Removes a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -80,7 +56,3 @@ Removes a file. This API uses an asynchronous callback to return the result.
 | --- | --- | --- |
 | path | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [unlink](#unlink)

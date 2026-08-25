@@ -4,14 +4,12 @@ The **process** module provides process management APIs, for example, APIs for o
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary

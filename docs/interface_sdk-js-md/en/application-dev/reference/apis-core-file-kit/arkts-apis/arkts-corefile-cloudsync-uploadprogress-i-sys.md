@@ -4,8 +4,6 @@ The UploadProgress data structure.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The UploadProgress data structure.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## error
@@ -28,8 +26,6 @@ The error type of upload.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -39,16 +35,14 @@ The error type of upload.
 ## processed
 
 ```TypeScript
-processed: long
+processed: number
 ```
 
-The processed data size for current file. <br>Unit:Byte.
+The processed data size for current file. Unit:Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,16 +53,14 @@ The processed data size for current file. <br>Unit:Byte.
 ## size
 
 ```TypeScript
-size: long
+size: number
 ```
 
-The size of current file. <br>Unit:Byte.
+The size of current file. Unit:Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ The current upload state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -107,8 +97,6 @@ The uri of current file.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

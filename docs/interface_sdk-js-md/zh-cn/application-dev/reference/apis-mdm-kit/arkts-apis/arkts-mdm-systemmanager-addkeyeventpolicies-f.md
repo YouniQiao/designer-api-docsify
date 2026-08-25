@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addKeyEventPolicies
@@ -15,8 +15,6 @@ function addKeyEventPolicies(admin: Want, keyPolicies: Array<KeyEventPolicy>): v
 添加按键事件处理策略。系统触发按键事件时，若匹配下发的按键事件策略，将通过 [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) 回调通知MDM应用，并携带匹配策略的按键事件信息。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -41,34 +39,3 @@ function addKeyEventPolicies(admin: Want, keyPolicies: Array<KeyEventPolicy>): v
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let keypolicy: Array<systemManager.KeyEventPolicy> = [
-  {
-    "keyCode": systemManager.KeyCode.POWER,
-    "keyPolicy": systemManager.KeyPolicy.CUSTOM
-  },
-  {
-    "keyCode": systemManager.KeyCode.VOLUME_UP,
-    "keyPolicy": systemManager.KeyPolicy.CUSTOM
-  }
-];
-
-try {
-  systemManager.addKeyEventPolicies(wantTemp, keypolicy);
-  console.info('Succeeded in adding key event policies.');
-} catch (err) {
-  console.error(`Failed to add key event policies. Code is ${err.code}, message is ${err.message}`);
-}
-```

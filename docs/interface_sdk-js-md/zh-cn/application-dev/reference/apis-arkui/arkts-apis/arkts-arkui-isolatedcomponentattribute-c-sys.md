@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -28,8 +26,6 @@ onError(
 IsolatedComponent加载的Abc（以Ability扩展形式运行）在运行过程中发生异常时触发本回调。可通过回调参数中的code、name和message获取错误信息并做处理。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,8 +6,6 @@ Defines the information of the modal UIExtension to be displayed as the interact
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -15,7 +13,7 @@ Defines the information of the modal UIExtension to be displayed as the interact
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@kit.AbilityKit';
+import { insightIntent } from 'kits/@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -29,8 +27,6 @@ Ability name of the target UIExtension ability.
 **Type:** string
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Bundle name of the target UIExtension ability.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -69,8 +63,6 @@ Type of the interaction UI. The value is fixed to 'MODAL_UIEXTENSION'.
 **Type:** 'MODAL_UIEXTENSION'
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,8 +82,6 @@ Module name of the target UIExtension ability.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -109,8 +99,6 @@ Parameters passed to the target UIExtension ability.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,8 +118,6 @@ Type of the UIExtension ability.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -149,8 +135,6 @@ URI information passed to the target UIExtension ability for data processing.
 **Type:** string
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

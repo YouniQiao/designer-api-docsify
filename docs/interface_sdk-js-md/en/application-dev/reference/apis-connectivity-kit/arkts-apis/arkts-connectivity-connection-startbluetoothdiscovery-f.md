@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startBluetoothDiscovery
@@ -15,8 +15,6 @@ function startBluetoothDiscovery(): void
 Starts scanning Bluetooth devices.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -35,18 +33,3 @@ Starts scanning Bluetooth devices.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function onReceiveEvent(data: Array<string>) {
-    console.info('data length' + data.length);
-}
-try {
-    connection.on('bluetoothDeviceFind', onReceiveEvent);
-    connection.startBluetoothDiscovery();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

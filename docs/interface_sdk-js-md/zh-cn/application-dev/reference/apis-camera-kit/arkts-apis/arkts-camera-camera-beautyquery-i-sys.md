@@ -4,8 +4,6 @@ Provides APIs to obtain and set the beauty effect.
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,26 +11,18 @@ Provides APIs to obtain and set the beauty effect.
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSupportedBeautyRange
 
-ArkTS-Dyn:
 ```TypeScript
 getSupportedBeautyRange(type: BeautyType): Array<number>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getSupportedBeautyRange(type: BeautyType): Array<int>
-```
-
-Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The following table is only an example. | Input Parameter | Example Return Value | Return Value Description | | ----------------| ---- | ---------| | AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** * means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. | | SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value * **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. | | FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that * the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. | | SKIN_TONE | [-1, 16242611] | Beauty levels supported when **type** is set to **SKIN_TONE**. The value **-1** means that the skin tone perfection feature is disabled. Other non-negative values mean the skin tone perfection levels represented by RGB,<br> for example, 16242611, which is 0xF7D7B3 in hexadecimal format, where F7, D7, and B3 represent the values of the R channel, G channel, and B channel, respectively. |
+Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The following table is only an example. | Input Parameter | Example Return Value | Return Value Description | | ----------------| ---- | ---------| | AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** * means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. | | SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value * **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. | | FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that * the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. | | SKIN_TONE | [-1, 16242611] | Beauty levels supported when **type** is set to **SKIN_TONE**. The value **-1** means that the skin tone perfection feature is disabled. Other non-negative values mean the skin tone perfection levels represented by RGB,for example, 16242611, which is 0xF7D7B3 in hexadecimal format, where F7, D7, and B3 represent the values of the R channel, G channel, and B channel, respectively. |
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -48,7 +38,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
@@ -56,30 +46,6 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-function getSupportedBeautyRange(portraitPhotoSession: camera.PortraitPhotoSession): Array<number> {
-  let beautyTypes: Array<camera.BeautyType> = portraitPhotoSession.getSupportedBeautyTypes();
-  if (beautyTypes === undefined || beautyTypes.length <= 0) {
-    return [];
-  }
-  let beautyLevels: Array<number> = portraitPhotoSession.getSupportedBeautyRange(beautyTypes[0]);
-  return beautyLevels;
-}
-```
-
-```TypeScript
-function getSupportedBeautyRange(captureSession: camera.CaptureSession): Array<number> {
-  let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
-  if (beautyTypes === undefined || beautyTypes.length <= 0) {
-    return [];
-  }
-  let beautyLevels: Array<number> = captureSession.getSupportedBeautyRange(beautyTypes[0]);
-  return beautyLevels;
-}
-```
 
 ## getSupportedBeautyTypes
 
@@ -90,8 +56,6 @@ getSupportedBeautyTypes(): Array<BeautyType>
 Obtains the supported beauty types.
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -110,22 +74,6 @@ Obtains the supported beauty types.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-function getSupportedBeautyTypes(portraitPhotoSession: camera.PortraitPhotoSession): Array<camera.BeautyType> {
-  let beautyTypes: Array<camera.BeautyType> = portraitPhotoSession.getSupportedBeautyTypes();
-  return beautyTypes;
-}
-```
-
-```TypeScript
-function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<camera.BeautyType> {
-  let beautyTypes: Array<camera.BeautyType> = captureSession.getSupportedBeautyTypes();
-  return beautyTypes;
-}
-```
-
 ## getSupportedPortraitThemeTypes
 
 ```TypeScript
@@ -135,8 +83,6 @@ getSupportedPortraitThemeTypes(): Array<PortraitThemeType>
 Gets supported portrait theme type.
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -164,8 +110,6 @@ isPortraitThemeSupported(): boolean
 Checks whether portrait theme is supported.
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

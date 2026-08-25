@@ -4,8 +4,6 @@ Defines the FormLink options.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Name of the target UIAbility when action is **"router"** or **"call"**.This API 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -40,14 +36,16 @@ action: string
 ```
 
 Action type.  
-- **"router"**: redirection to the specified UIAbility of the widget provider. - **"message"**: custom message. If this type of action is triggered, the [onFormEvent()](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#onformevent) lifecycle callback of the provider FormExtensionAbility is called. - **"call"**: launch of the widget provider in the background. If this type of action is triggered, the specified UIAbility (whose launch type must be [singleton](../../../application-models/uiability-launch-type.md#singleton) of the widget provider is started in the background, but not displayed in the foreground. This action type requires that the widget provider should have the [ohos.permission.KEEP_BACKGROUND_RUNNING](../../../security/AccessToken/permissions-for-all.md#ohospermissionkeep_background_running) permission.  
+- **"router"**: redirection to the specified UIAbility of the widget provider.  
+- **"message"**: custom message. If this type of action is triggered, the  
+[onFormEvent()](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#onformevent) lifecycle callback of the provider FormExtensionAbility is called.  
+- **"call"**: launch of the widget provider in the background. If this type of action is triggered, the specified  
+UIAbility (whose launch type must be [singleton](../../../application-models/uiability-launch-type.md#singleton) of the widget provider is started in the background, but not displayed in the foreground. This action type requires that the widget provider should have the [ohos.permission.KEEP_BACKGROUND_RUNNING](../../../security/AccessToken/permissions-for-all.md#ohospermissionkeep_background_running) permission.  
 **NOTE：**Whenever possible, avoid using the router event to refresh the widget UI.This API can be used in ArkTS widgets since API version 10.
 
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -67,8 +65,6 @@ Name of the target bundle when action is **"router"** or **"call"**.This API can
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -86,8 +82,6 @@ Name of the target module when action is **"router"** or **"call"**.This API can
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,8 +102,6 @@ Additional parameters carried in the current action. The value is a key-value pa
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -127,8 +119,6 @@ URI of the target UIAbility when action is **"router"**. If both **uri** and **a
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

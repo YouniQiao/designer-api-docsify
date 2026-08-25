@@ -4,14 +4,12 @@ The **thermal** module provides thermal level-related callback and query APIs to
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from '@kit.BasicServicesKit';
+import { thermal } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

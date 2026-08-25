@@ -10,8 +10,6 @@ Indicates the default pitch of the text-to-speech (TTS) engine.<p>100 = 1x. If t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -25,8 +23,6 @@ const DEFAULT_TTS_RATE: string
 Indicates the default speech rate of the TTS engine. 100 = 1x.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
@@ -42,8 +38,6 @@ Indicates the default TTS engine.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -57,8 +51,6 @@ const ENABLED_TTS_PLUGINS: string
 Indicates the list of activated plug-in packages used for TTS. Multiple plug-in packages are separated by spaces.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 

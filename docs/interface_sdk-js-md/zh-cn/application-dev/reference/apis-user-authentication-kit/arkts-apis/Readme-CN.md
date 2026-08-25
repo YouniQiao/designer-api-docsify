@@ -103,12 +103,9 @@
   - [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md)
   <!--Del-->
   - [WidgetParam(系统接口)](arkts-userauthentication-userauth-widgetparam-i-sys.md)<!--DelEnd-->
-  - [AuthCallbackOnResultFunc](arkts-userauthentication-userauth-authcallbackonresultfunc-t.md)
   - [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md)
   - [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md)
   - [AuthType](arkts-userauthentication-userauth-authtype-t.md)
-  <!--Del-->
-  - [AuthWidgetCallbackSendCommandFunc(系统接口)](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md)<!--DelEnd-->
   - [EventInfo](arkts-userauthentication-userauth-eventinfo-t.md)
   <!--Del-->
   - [ResultCallback(系统接口)](arkts-userauthentication-userauth-resultcallback-t-sys.md)<!--DelEnd-->
@@ -135,4 +132,3 @@
   - [常量](arkts-userauthentication-userauth-con.md)
 - [@ohos.userIAM.userAuthIcon](arkts-useriam-userauthicon.md)
   - [UserAuthIcon](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md)
-  - [ClickCallbackFunc](arkts-userauthentication-clickcallbackfunc-t.md)

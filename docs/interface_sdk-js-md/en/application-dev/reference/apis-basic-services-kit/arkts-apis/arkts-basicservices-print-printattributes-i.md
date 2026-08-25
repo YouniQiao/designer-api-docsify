@@ -4,14 +4,12 @@ Defines the print attributes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## colorMode
@@ -26,23 +24,19 @@ Color mode of the files to print.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## copyNumber
 
 ```TypeScript
-copyNumber?: int
+copyNumber?: number
 ```
 
 Number of printed file copies. The default value is **1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -58,8 +52,6 @@ Print direction mode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## duplexMode
@@ -73,8 +65,6 @@ Duplex mode of the files to print.
 **Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -90,8 +80,6 @@ Page range of the file to print.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## pageSize
@@ -105,7 +93,5 @@ Page size of the file to print.
 **Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

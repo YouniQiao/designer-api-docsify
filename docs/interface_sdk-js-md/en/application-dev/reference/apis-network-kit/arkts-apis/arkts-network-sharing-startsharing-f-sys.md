@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## startSharing
@@ -15,8 +15,6 @@ function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): vo
 Enables sharing of a specified type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -47,33 +45,6 @@ Enables sharing of a specified type. This API uses an asynchronous callback to r
 | [2202009](../errorcode-net-sharing.md#2202009-failed-to-enable-forwarding-for-network-sharing) |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) |
 
-**Examples**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing.startSharing(SHARING_WIFI, (error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .startSharing(SHARING_WIFI)
-  .then(() => {
-    console.info('start wifi sharing successful');
-  })
-  .catch((error: BusinessError) => {
-    console.error('start wifi sharing failed');
-  });
-```
-
 
 ## startSharing
 
@@ -84,8 +55,6 @@ function startSharing(type: SharingIfaceType): Promise<void>
 Enables sharing of a specified type. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -120,7 +89,3 @@ Enables sharing of a specified type. This API uses a promise to return the resul
 | [2202006](../errorcode-net-sharing.md#2202006-bluetooth-sharing-failure) |
 | [2202009](../errorcode-net-sharing.md#2202009-failed-to-enable-forwarding-for-network-sharing) |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) |
-
-**Examples**
-
-See [startSharing](#startsharing)

@@ -15,8 +15,6 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md)
@@ -35,28 +33,6 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 | --- |
 | Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fstat(fd).then((stat: fileio.Stat) => {
-  console.info("fstat succeed, the size of file is " + stat.size);
-}).catch((err: BusinessError) => {
-  console.error("fstat failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fstat(fd, (err: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## fstat
 
@@ -67,8 +43,6 @@ declare function fstat(fd: number, callback: AsyncCallback<Stat>): void
 Obtains file status based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -82,7 +56,3 @@ Obtains file status based on the file descriptor. This API uses an asynchronous 
 | --- | --- | --- |
 | fd | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes |
-
-**Examples**
-
-See [fstat](#fstat)

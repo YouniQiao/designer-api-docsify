@@ -4,8 +4,6 @@ ErrorCode定义启动Ability时返回的错误码，包括无效的参数、权�
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## PERMISSION_DENY
@@ -17,8 +15,6 @@ PERMISSION_DENY = -3
 权限拒绝。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,8 +28,6 @@ ABILITY_NOT_FOUND = -2
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## INVALID_PARAMETER
@@ -46,8 +40,6 @@ INVALID_PARAMETER = -1
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## NO_ERROR
@@ -59,7 +51,5 @@ NO_ERROR = 0
 启动成功，无错误。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

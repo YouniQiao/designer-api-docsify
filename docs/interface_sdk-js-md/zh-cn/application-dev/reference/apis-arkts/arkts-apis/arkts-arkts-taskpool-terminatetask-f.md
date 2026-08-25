@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## terminateTask
@@ -16,8 +16,6 @@ function terminateTask(longTask: LongTask): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -27,27 +25,3 @@ function terminateTask(longTask: LongTask): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | longTask | [LongTask](arkts-arkts-taskpool-longtask-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-@Concurrent
-function longTask(arg: number): number {
-  let t: number = Date.now();
-  while (Date.now() - t < arg) {
-    continue;
-  }
-  console.info("longTask has been executed.");
-  return arg;
-}
-
-function concurrentFunc() {
-  let task1: taskpool.LongTask = new taskpool.LongTask(longTask, 1000); // 1000: sleep time
-  taskpool.execute(task1).then((res: Object) => {
-    taskpool.terminateTask(task1);
-    console.info("taskpool longTask result: " + res);
-  });
-}
-
-concurrentFunc();
-```

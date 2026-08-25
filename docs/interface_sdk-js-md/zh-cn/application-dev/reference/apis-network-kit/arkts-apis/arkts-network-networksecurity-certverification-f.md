@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
+import { networkSecurity } from 'kits/@kit.NetworkKit';
 ```
 
 ## certVerification
 
 ```TypeScript
-export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int>
+export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<number>
 ```
 
 系统将使用证书管理中的预置CA证书和用户安装的CA证书来校验应用传入的证书。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -31,7 +29,7 @@ export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -55,58 +53,3 @@ export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<int
 | [2305027](../errorcode-net-networkSecurity.md#2305027-证书不可信) |
 | [2305018](../errorcode-net-networkSecurity.md#2305018-自签名证书) |
 | [2305069](../errorcode-net-networkSecurity.md#2305069-无效的证书验证上下文) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 定义证书数据块
-const cert:networkSecurity.CertBlob = {
-  type: networkSecurity.CertType.CERT_TYPE_PEM,
-  data: '-----BEGIN CERTIFICATE-----\n... (certificate data) ...\n-----END CERTIFICATE-----',
-};
-
-const caCert:networkSecurity.CertBlob = {
-  type: networkSecurity.CertType.CERT_TYPE_PEM,
-  data: '-----BEGIN CERTIFICATE-----\n... (CA certificate data) ...\n-----END CERTIFICATE-----',
-};
-
-// 执行异步证书验证
-networkSecurity.certVerification(cert, caCert)
-  .then((result) => {
-    console.info('Certificate verification result:', result);
-  })
-  .catch((error: BusinessError) => {
-    console.error('Certificate verification failed:', error);
-  });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
-
-// 定义证书数据块
-const cert:networkSecurity.CertBlob = {
-  type: networkSecurity.CertType.CERT_TYPE_PEM,
-  data: '-----BEGIN CERTIFICATE-----\n... (certificate data) ...\n-----END CERTIFICATE-----',
-};
-
-const caCert:networkSecurity.CertBlob = {
-  type: networkSecurity.CertType.CERT_TYPE_PEM,
-  data: '-----BEGIN CERTIFICATE-----\n... (CA certificate data) ...\n-----END CERTIFICATE-----',
-};
-
-// 执行异步证书验证
-networkSecurity.certVerification(cert, caCert)
-  .then((result) => {
-    console.info('Certificate verification result:', result);
-  })
-  .catch((error: Error) => {
-    console.error('Certificate verification failed:', error);
-  });
-```

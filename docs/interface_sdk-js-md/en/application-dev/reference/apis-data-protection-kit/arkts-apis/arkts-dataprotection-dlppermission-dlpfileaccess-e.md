@@ -4,8 +4,6 @@ Enumerates the permissions on a DLP file.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## NO_PERMISSION
@@ -17,8 +15,6 @@ NO_PERMISSION = 0
 The user has no permission on the file.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -32,8 +28,6 @@ The user has only the permission to read the file.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## CONTENT_EDIT
@@ -46,8 +40,6 @@ Edit the file.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## FULL_CONTROL
@@ -59,7 +51,5 @@ FULL_CONTROL = 3
 The user has full control on the file.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention

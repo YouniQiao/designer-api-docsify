@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## MICROPHONE_SWITCH
@@ -17,8 +15,6 @@ MICROPHONE_SWITCH = 201
 打开/关闭麦克风控件组。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ HANG_UP_BUTTON = 202
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -50,8 +44,6 @@ CAMERA_SWITCH = 203
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -65,8 +57,6 @@ MUTE_SWITCH = 204
 静音控件组。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

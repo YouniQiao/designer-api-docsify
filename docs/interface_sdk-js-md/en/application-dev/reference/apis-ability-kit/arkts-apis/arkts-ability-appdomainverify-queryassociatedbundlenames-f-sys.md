@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appDomainVerify } from '@kit.AbilityKit';
+import { appDomainVerify } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryAssociatedBundleNames
@@ -15,8 +15,6 @@ function queryAssociatedBundleNames(domain: string): string[]
 query bundleNames associated with domain.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_APP_DOMAIN_BUNDLE_INFO
 
@@ -46,17 +44,3 @@ query bundleNames associated with domain.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) |
-
-**Examples**
-
-```TypeScript
-import { appDomainVerify } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// Obtain the list of bundle names associated with the domain name "example.com".
-let domain = "example.com";
-let bundleNames = appDomainVerify.queryAssociatedBundleNames(domain);
-bundleNames.forEach(bundleName => {
-  hilog.info(0x0000, 'testTag', `domain:${domain} associate with app:${bundleName}`);
-});
-```

@@ -4,14 +4,12 @@ Defines the options for saving documents.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## themeColor
@@ -25,8 +23,6 @@ Theme color parameter. By default, it is left empty and follows the color settin
 **Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

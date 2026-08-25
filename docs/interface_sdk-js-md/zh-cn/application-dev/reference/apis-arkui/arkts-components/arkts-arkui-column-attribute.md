@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ alignItems(value: HorizontalAlign)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -37,7 +33,7 @@ alignItems(value: HorizontalAlign)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [HorizontalAlign](../arkts-apis/arkts-arkui-enums-horizontalalign-e.md) | 是 |
+| value | [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md) | 是 |
 
 ## justifyContent
 
@@ -49,8 +45,6 @@ justifyContent(value: FlexAlign)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -61,7 +55,7 @@ justifyContent(value: FlexAlign)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [FlexAlign](../arkts-apis/arkts-arkui-enums-flexalign-e.md) | 是 |
+| value | [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md) | 是 |
 
 ## reverse
 
@@ -72,8 +66,6 @@ reverse(isReversed: Optional<boolean>)
 设置子组件在垂直方向上的排列是否反转。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,4 +79,4 @@ reverse(isReversed: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isReversed | Optional & lt;boolean & gt; | 是 |
+| isReversed | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |

@@ -4,8 +4,6 @@ Configuring parameters in current location requests@interface CurrentLocationReq
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md)
@@ -17,7 +15,7 @@ Configuring parameters in current location requests@interface CurrentLocationReq
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## maxAccuracy
@@ -29,8 +27,6 @@ maxAccuracy?: number
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ priority?: LocationRequestPriority
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [priority](arkts-location-geolocationmanager-currentlocationrequest-i.md#priority)
@@ -66,8 +60,6 @@ scenario?: LocationRequestScenario
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [scenario](arkts-location-geolocationmanager-currentlocationrequest-i.md#scenario)
@@ -83,8 +75,6 @@ timeoutMs?: number
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

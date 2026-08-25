@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## addressModeU
@@ -19,8 +17,6 @@ addressModeU?: SamplerAddressMode
 **类型：** [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -36,8 +32,6 @@ addressModeV?: SamplerAddressMode
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## magFilter
@@ -51,8 +45,6 @@ magFilter?: SamplerFilter
 **类型：** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -68,8 +60,6 @@ minFilter?: SamplerFilter
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## mipMapMode
@@ -83,7 +73,5 @@ mipmap过滤模式，控制纹理贴图在多层不同分辨率之间的采样�
 **类型：** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

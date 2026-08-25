@@ -4,8 +4,6 @@ Describes a **FormBindingData** object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md)
@@ -28,8 +26,6 @@ Data to be displayed on the JS widget. The value can be an object containing mul
 **Type:** Object
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

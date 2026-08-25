@@ -6,14 +6,12 @@ Custom elements of mine page.@extends OperResult @interface CustomElement
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## customCompilations
@@ -27,8 +25,6 @@ Compilations of categories
 **Type:** [Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Settings information
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -64,8 +58,6 @@ Tab pages information
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -81,8 +73,6 @@ User information
 **Type:** UserInfo
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

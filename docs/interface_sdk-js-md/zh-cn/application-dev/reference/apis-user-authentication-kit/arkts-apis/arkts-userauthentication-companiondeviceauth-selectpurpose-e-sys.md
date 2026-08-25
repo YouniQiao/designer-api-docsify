@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ SELECT_ADD_DEVICE = 1
 选择添加模板的伴随设备。表示当前操作目的是选择一个设备用于添加新的认证模板，系统应返回适合添加模板的设备列表。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ SELECT_AUTH_DEVICE = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -55,8 +49,6 @@ VENDOR_BEGIN = 10000
 厂商自定义选择目的取值起点。厂商可在此值基础上自定义扩展选择目的，实际取值需大于等于10000，避免与系统保留值[0-9999]冲突。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

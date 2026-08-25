@@ -4,8 +4,6 @@ Defines the input event intercept action.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONTINUE
@@ -17,8 +15,6 @@ CONTINUE = 0
 Continue to deliver the event to the UI framework.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ BLOCK = 1
 Block the event from being delivered to the UI framework.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

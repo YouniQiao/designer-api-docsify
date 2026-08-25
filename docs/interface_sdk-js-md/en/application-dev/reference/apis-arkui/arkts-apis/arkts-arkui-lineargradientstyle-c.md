@@ -6,8 +6,6 @@ Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ constructor(options: LinearGradientOptions)
 A constructor used to create a **LinearGradientStyle** object.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,11 +43,9 @@ options: LinearGradientOptions
 
 Options for displaying a linear gradient.
 
-**Type:** LinearGradientOptions
+**Type:** [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Describes the parameters for requesting efficiency resources.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the parameters for requesting efficiency resources.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## cpuLevel
@@ -28,8 +26,6 @@ CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
@@ -43,13 +39,12 @@ isApply: boolean
 ```
 
 Whether the request is used to apply for resources.  
-- **true**: The request is used to apply for resources. - **false**: The request is used to release resources.
+- **true**: The request is used to apply for resources.  
+- **false**: The request is used to release resources.
 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -62,13 +57,12 @@ isPersist?: boolean
 ```
 
 Whether the resource is permanently held. The default value is **false**.  
-- **true**: The resource is permanently held. - **false**: The resource is held for a limited period of time.
+- **true**: The resource is permanently held.  
+- **false**: The resource is held for a limited period of time.
 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -81,13 +75,12 @@ isProcess?: boolean
 ```
 
 Whether the request is initiated by a process. The default value is **false**.  
-- **true**: The request is initiated by a process. - **false**: The request is initiated by an application.
+- **true**: The request is initiated by a process.  
+- **false**: The request is initiated by an application.
 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -105,8 +98,6 @@ Reason for requesting the resource.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
 **System API:** This is a system API.
@@ -114,16 +105,14 @@ Reason for requesting the resource.
 ## resourceTypes
 
 ```TypeScript
-resourceTypes: int
+resourceTypes: number
 ```
 
 Type of the resource to request.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -132,16 +121,14 @@ Type of the resource to request.
 ## timeOut
 
 ```TypeScript
-timeOut: int
+timeOut: number
 ```
 
 Duration for which the resource will be used, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 

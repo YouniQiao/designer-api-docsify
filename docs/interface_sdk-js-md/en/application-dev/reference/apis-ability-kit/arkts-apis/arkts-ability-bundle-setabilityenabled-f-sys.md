@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## setAbilityEnabled
@@ -15,8 +15,6 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: Async
 Sets whether to enable an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -36,28 +34,6 @@ Sets whether to enable an ability. This API uses an asynchronous callback to ret
 | isEnable | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = "com.example.myapplication";
-let abilityName: string = "EntryAbility";
-
-bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
-  console.info('getAbilityInfo successfully. Data: ' + JSON.stringify(abilityInfo));
-
-  bundle.setAbilityEnabled(abilityInfo, false).then(data => {
-    console.info('setAbilityEnabled successfully.');
-  }).catch((error: BusinessError) => {
-    console.error('setAbilityEnabled failed:' + JSON.stringify(error));
-  })
-}).catch((error: BusinessError) => {
-  console.error('getAbilityInfo failed. Cause: ' + JSON.stringify(error));
-});
-```
-
 
 ## setAbilityEnabled
 
@@ -68,8 +44,6 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>
 Sets whether to enable an ability. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -93,7 +67,3 @@ Sets whether to enable an ability. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [setAbilityEnabled](#setabilityenabled)

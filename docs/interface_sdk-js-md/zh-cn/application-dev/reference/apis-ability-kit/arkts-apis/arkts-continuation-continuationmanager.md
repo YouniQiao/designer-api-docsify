@@ -4,8 +4,6 @@ continuationManager模块提供了流转/协同入口管理服务能力，包括
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **替代接口：** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
@@ -17,7 +15,7 @@ continuationManager模块提供了流转/协同入口管理服务能力，包括
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

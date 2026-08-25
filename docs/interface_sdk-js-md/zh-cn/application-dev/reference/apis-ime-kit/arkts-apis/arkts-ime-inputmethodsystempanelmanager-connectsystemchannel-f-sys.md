@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 ```
 
 ## connectSystemChannel
@@ -15,8 +15,6 @@ function connectSystemChannel(): Promise<void>
 连接面板和输入法之间的系统通道。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 

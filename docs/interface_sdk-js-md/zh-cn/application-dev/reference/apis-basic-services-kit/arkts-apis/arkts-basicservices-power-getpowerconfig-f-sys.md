@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getPowerConfig
@@ -15,8 +15,6 @@ function getPowerConfig(sceneName: string): string
 按场景名称查询电源配置值。例如，在系统电源管理应用中需要读取特定场景的电源配置参数时使用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.POWER_CONFIG
 
@@ -47,14 +45,3 @@ function getPowerConfig(sceneName: string): string
 | [4900101](../errorcode-power.md#4900101-连接服务失败) |
 | [4900400](../errorcode-power.md#4900400-接口入参无效) |
 | [4900501](../errorcode-power.md#4900501-读电源配置值失败) |
-
-**示例**
-
-```TypeScript
-try {
-    let configVal = power.getPowerConfig('scene_name_test');
-    console.info('get power config success, configVal: ' + configVal);
-} catch(err) {
-    console.error('get power config failed, err: ' + err);
-}
-```

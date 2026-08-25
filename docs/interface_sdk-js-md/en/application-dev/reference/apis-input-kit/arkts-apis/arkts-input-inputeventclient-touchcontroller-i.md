@@ -7,14 +7,12 @@ with an **touchUp()** call.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## touchDown
@@ -26,8 +24,6 @@ touchDown(touch: TouchPoint): Promise<void>
 Presses down a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -66,8 +62,6 @@ Moves a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -103,8 +97,6 @@ touchUp(touch: TouchPoint): Promise<void>
 Releases a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 

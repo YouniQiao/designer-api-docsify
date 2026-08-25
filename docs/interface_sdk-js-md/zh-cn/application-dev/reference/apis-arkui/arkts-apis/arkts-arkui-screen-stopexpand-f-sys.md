@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## stopExpand
@@ -15,8 +15,6 @@ function stopExpand(expandScreen:Array<number>, callback: AsyncCallback<void>): 
 停止屏幕的扩展模式，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 20
 
@@ -39,36 +37,6 @@ function stopExpand(expandScreen:Array<number>, callback: AsyncCallback<void>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 屏幕ID需通过getAllScreens()获取
-let expandScreenIds: Array<number> = [1, 2, 3]; // 扩展屏幕ID集合
-// 停止屏幕的扩展模式
-screen.stopExpand(expandScreenIds, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to stop expand screens. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in stopping expand screens.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let expandScreenIds: Array<number> = [1, 2, 3]; // 扩展屏幕ID集合
-// 停止屏幕的扩展模式
-screen.stopExpand(expandScreenIds).then(() => {
-  console.info('Succeeded in stopping expand screens.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stop expand screens. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## stopExpand
 
@@ -79,8 +47,6 @@ function stopExpand(expandScreen:Array<number>): Promise<void>
 停止屏幕的扩展模式，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 20
 
@@ -107,7 +73,3 @@ function stopExpand(expandScreen:Array<number>): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
-
-**示例**
-
-参见 [stopExpand](#stopexpand)

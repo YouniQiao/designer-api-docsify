@@ -7,8 +7,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -31,8 +29,6 @@ initialIndex?: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -48,11 +44,9 @@ scroller?: Scroller
 可滚动组件的控制器。与List绑定后，可以通过它控制List的滚动。默认不绑定滚动控制器。  
 **说明：**不允许和其他滚动类组件，如：ArcList、List、Grid、 Scroll和WaterFlow绑定同一个滚动控制对象。
 
-**类型：** Scroller
+**类型：** [Scroller](arkts-arkui-scroller-c.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -75,8 +69,6 @@ space?: number | string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -93,13 +85,11 @@ spaceWidth?: Dimension
 **说明：**设置为负数或者大于等于List内容区长度时，按默认值显示。spaceWidth参数值小于List分割线宽度时，子组件主轴方向的间隔取分割线宽度。List子组件的visibility属性设置为None时不显示，但该子组件上下的spaceWidth间隔还是会生效。如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为 undefined或null时，space生效。
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

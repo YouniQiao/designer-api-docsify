@@ -4,8 +4,6 @@ Enumerates the text height modifier patterns.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## ALL
@@ -17,8 +15,6 @@ ALL = 0x0
 Allows the first line of the paragraph to rise and the last line to drop.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -34,8 +30,6 @@ Prevents the first line of a paragraph from rising.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -50,8 +44,6 @@ Prevents the last line of a paragraph from dropping.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -65,8 +57,6 @@ DISABLE_ALL = 0x1 | 0x2
 Prevents the first line of the paragraph to rise and the last line to drop.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -4,8 +4,6 @@ KeyEvent object description.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ getModifierKeyState?(keys: Array<string>): boolean
 Obtains the pressed status of modifier keys.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,8 +55,6 @@ Blocks [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -76,8 +70,6 @@ ID of the input device that triggers the key event.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -97,8 +89,6 @@ Intention corresponding to the key.Default value: **IntentionCode.INTENTION_UNKN
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -116,8 +106,6 @@ CapsLock state. **true**: locked. **false**: unlocked.
 **Type:** boolean
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,8 +125,6 @@ NumLock state. **true**: locked. **false**: unlocked.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -156,8 +142,6 @@ ScrollLock state. **true**: locked. **false**: unlocked.
 **Type:** boolean
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -177,8 +161,6 @@ Key value. For details about the key values provided by the key-based input devi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -191,11 +173,9 @@ keySource: KeySource
 
 Type of the input device that triggers the key event.
 
-**Type:** KeySource
+**Type:** [KeySource](../arkts-apis/arkts-arkui-keysource-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -213,8 +193,6 @@ Name of the key.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -230,8 +208,6 @@ State of the Meta key (the key located next to the **Ctrl** key in the lower lef
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -249,8 +225,6 @@ Timestamp of the event. It is the interval between the time when the event is tr
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -263,11 +237,9 @@ type: KeyType
 
 Key type.
 
-**Type:** KeyType
+**Type:** [KeyType](../arkts-apis/arkts-arkui-keytype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -284,8 +256,6 @@ Unicode value of the key. Non-space basic Latin characters in the 0x0021-0x007E 
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

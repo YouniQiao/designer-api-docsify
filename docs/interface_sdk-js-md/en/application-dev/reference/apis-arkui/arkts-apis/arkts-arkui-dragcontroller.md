@@ -1,6 +1,6 @@
 # @ohos.arkui.dragController
 
-This module provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
+This module provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or number-press event, an application can initiate a drag action and carry drag information therein.
 
 > **NOTE：**&gt;
 > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
@@ -10,8 +10,6 @@ This module provides APIs for initiating drag actions. When receiving a gesture 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,7 +17,7 @@ This module provides APIs for initiating drag actions. When receiving a gesture 
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

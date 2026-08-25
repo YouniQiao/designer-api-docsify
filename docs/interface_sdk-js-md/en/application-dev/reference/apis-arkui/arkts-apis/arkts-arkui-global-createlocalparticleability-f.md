@@ -10,8 +10,6 @@ Get the java interface instance. The java instance needs to register, otherwise 
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **Model restriction:** This API can be used only in the FA model.

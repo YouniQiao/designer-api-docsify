@@ -6,8 +6,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ onAccept?: (value: TimePickerResult) => void
 点击弹窗中的“确定”按钮时触发该回调。回调参数为当前选中的时间值，类型为TimePickerResult。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -47,8 +43,6 @@ onCancel?: () => void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -62,8 +56,6 @@ onChange?: (value: TimePickerResult) => void
 滑动弹窗中的选择器后，选项归位至选中项位置时，触发该回调。回调参数为当前选中的时间值，类型为TimePickerResult。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -91,8 +83,6 @@ onDidAppear?: () => void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -111,8 +101,6 @@ onDidDisappear?: () => void
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,8 +122,6 @@ onWillAppear?: () => void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -156,8 +142,6 @@ onWillDisappear?: () => void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -172,7 +156,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 设置确认按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
 
-> 默认值：请参考PickerDialogButtonStyle。
+> 默认值：请参考[PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)。
 
 > **说明：**&gt;
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
@@ -180,11 +164,9 @@ acceptButtonStyle?: PickerDialogButtonStyle
 > 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
 > ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
-**类型：** PickerDialogButtonStyle
+**类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,11 +182,9 @@ alignment?: DialogAlignment
 
 设置弹窗在垂直方向上的对齐方式。默认值：DialogAlignment.Default
 
-**类型：** DialogAlignment
+**类型：** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -231,8 +211,6 @@ backgroundBlurStyle?: BlurStyle
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -252,11 +230,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 > backgroundBlurStyle
 > 的默认效果（BlurStyle.COMPONENT_ULTRA_THICK）。
 
-**类型：** BackgroundBlurStyleOptions
+**类型：** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -276,13 +252,11 @@ backgroundColor?: ResourceColor
 > 1. 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则显示的颜色将不符合预期效果。
 > 2. 从API版本26.0.0开始，设置systemMaterial后，backgroundColor不生效。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Transparent
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -304,11 +278,9 @@ backgroundEffect?: BackgroundEffectOptions
 > 决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
 > 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
 
-**类型：** BackgroundEffectOptions
+**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -324,7 +296,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 设置取消按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
 
-> 默认值：请参考PickerDialogButtonStyle。
+> 默认值：请参考[PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)。
 
 > **说明：**&gt;
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
@@ -332,11 +304,9 @@ cancelButtonStyle?: PickerDialogButtonStyle
 > 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
 > ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
-**类型：** PickerDialogButtonStyle
+**类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -361,8 +331,6 @@ dateTimeOptions?: DateTimeOptions
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -375,13 +343,13 @@ dateTimeOptions?: DateTimeOptions
 disappearTextStyle?: PickerTextStyle
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。默认值：<br>{<br>color: '#ff182431', <br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular <br>} <br>}
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。默认值：
 
-**类型：** PickerTextStyle
+{color: '#ff182431', font: {size: '14fp', weight: FontWeight.Regular } }
+
+**类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -396,7 +364,8 @@ enableCascade?: boolean
 ```
 
 设置上午和下午的标识是否根据小时数自动切换，仅在useMilitaryTime设置为false时生效。  
-- true：自动切换。 - false：不自动切换。  
+- true：自动切换。  
+- false：不自动切换。  
 默认值：false当enableCascade设置为true时，需要loop参数同时为true才能生效。loop用于控制选择器是否循环滚动。
 
 **类型：** boolean
@@ -404,8 +373,6 @@ enableCascade?: boolean
 **默认值：** false
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -420,7 +387,8 @@ enableHapticFeedback?: boolean
 ```
 
 设置是否开启触控反馈。  
-- true：开启触控反馈。 - false：不开启触控反馈。  
+- true：开启触控反馈。  
+- false：不开启触控反馈。  
 默认值：true
 
 > **说明：**&gt;
@@ -433,8 +401,6 @@ enableHapticFeedback?: boolean
 **默认值：** true
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -449,7 +415,8 @@ enableHoverMode?: boolean
 ```
 
 是否响应悬停态。悬停态指折叠屏等设备处于悬停折叠状态时的交互模式，而非鼠标悬停。  
-- true：响应悬停态。 - false：不响应悬停态。  
+- true：响应悬停态。  
+- false：不响应悬停态。  
 默认值：false
 
 **类型：** boolean
@@ -457,8 +424,6 @@ enableHoverMode?: boolean
 **默认值：** false
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -474,13 +439,11 @@ hoverModeArea?: HoverModeAreaType
 
 悬停态下弹窗默认展示区域。仅在enableHoverMode为true时生效。默认值：HoverModeAreaType.BOTTOM_SCREEN
 
-**类型：** HoverModeAreaType
+**类型：** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -496,11 +459,9 @@ maskRect?: Rectangle
 
 弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
 
-**类型：** Rectangle
+**类型：** [Rectangle](arkts-arkui-rectangle-i.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -519,8 +480,6 @@ offset?: Offset
 **类型：** Offset
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -544,8 +503,6 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -561,19 +518,24 @@ selectedTextStyle?: PickerTextStyle
 设置选中项的文本颜色、字号、字体粗细。
 
 > 默认值：&gt;
-> <br>{
-> <br>color: '#ff007dff',
-> <br>font: {
-> <br>size: '20fp',
-> <br>weight: FontWeight.Medium
-> <br>}
-> <br>}
+> 
+{  
+> 
+color: '#ff007dff',  
+> 
+font: {  
+> 
+size: '20fp',  
+> 
+weight: FontWeight.Medium  
+> 
+}  
+> 
+}
 
-**类型：** PickerTextStyle
+**类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -592,11 +554,9 @@ shadow?: ShadowOptions | ShadowStyle
 > **说明：**&gt;
 > 从API版本26.0.0开始，设置systemMaterial后，shadow不生效。
 
-**类型：** ShadowOptions \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -622,11 +582,9 @@ systemMaterial?: SystemUiMaterial
 > borderColor、边框宽度borderWidth、阴影
 > shadow，当设置系统材质时，上述接口不生效。
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -643,19 +601,24 @@ textStyle?: PickerTextStyle
 设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。
 
 > 默认值：&gt;
-> <br>{
-> <br>color: '#ff182431',
-> <br>font: {
-> <br>size: '16fp',
-> <br>weight: FontWeight.Regular
-> <br>}
-> <br>}
+> 
+{  
+> 
+color: '#ff182431',  
+> 
+font: {  
+> 
+size: '16fp',  
+> 
+weight: FontWeight.Regular  
+> 
+}  
+> 
+}
 
-**类型：** PickerTextStyle
+**类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -670,7 +633,8 @@ useMilitaryTime?: boolean
 ```
 
 时间是否以24小时制展示。  
-- true：时间以24小时制展示。 - false：时间以12小时制展示。  
+- true：时间以24小时制展示。  
+- false：时间以12小时制展示。  
 默认值：false
 
 > **说明：** 当设置为false时，enableCascade参数才能生效。
@@ -678,8 +642,6 @@ useMilitaryTime?: boolean
 **类型：** boolean
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

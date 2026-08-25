@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md)
@@ -17,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## maxAccuracy
@@ -31,8 +29,6 @@ maxAccuracy?: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -52,8 +48,6 @@ priority?: LocationRequestPriority
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [priority](arkts-location-geolocationmanager-currentlocationrequest-i.md#priority)
@@ -72,8 +66,6 @@ scenario?: LocationRequestScenario
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [scenario](arkts-location-geolocationmanager-currentlocationrequest-i.md#scenario)
@@ -91,8 +83,6 @@ timeoutMs?: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

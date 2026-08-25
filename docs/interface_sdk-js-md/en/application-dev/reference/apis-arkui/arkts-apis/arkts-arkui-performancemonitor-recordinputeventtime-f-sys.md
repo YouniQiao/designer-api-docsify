@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from '@kit.ArkUI';
+import { performanceMonitor } from 'kits/@kit.ArkUI';
 ```
 
 ## recordInputEventTime
@@ -16,8 +16,6 @@ Records the trigger event type and time before the start of the animation scene.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,8 +26,8 @@ Records the trigger event type and time before the start of the animation scene.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes |
-| sourceType | [SourceType](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-sourcetype-e.md) | Yes |
+| type | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes |
+| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes |
 | time | number | Yes |
 
 **Error codes:**
@@ -37,15 +35,3 @@ Records the trigger event type and time before the start of the animation scene.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { systemDateTime, BusinessError } from '@kit.BasicServicesKit';
-import { performanceMonitor } from '@kit.ArkUI';
-
-// Obtain the current system time.
-let time = systemDateTime.getTime(false);
-// Update the user trigger event type and time.
-performanceMonitor.recordInputEventTime(performanceMonitor.ActionType.LAST_UP, performanceMonitor.SourceType.PERF_MOUSE_EVENT, time);
-```

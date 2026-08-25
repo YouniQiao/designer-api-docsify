@@ -4,8 +4,6 @@ Base interface of profile.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md)
@@ -15,7 +13,7 @@ Base interface of profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getConnectionDevices
@@ -27,8 +25,6 @@ getConnectionDevices(): Array<string>
 Obtains the connected devices list of profile. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -57,18 +53,6 @@ Obtains the connected devices list of profile. On API 10 and above, the permissi
 | 2900004 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
-    let retArray: Array<string> = a2dpSrc.getConnectionDevices();
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## getDeviceState
 
 ```TypeScript
@@ -78,8 +62,6 @@ getDeviceState(device: string): ProfileConnectionState
 Obtains the profile state of device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -101,7 +83,7 @@ Obtains the profile state of device. On API 10 and above, the permission require
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) |
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) |
 
 **Error codes:**
 
@@ -114,15 +96,3 @@ Obtains the profile state of device. On API 10 and above, the permission require
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
-    let ret: bluetoothManager.ProfileConnectionState = a2dpSrc.getDeviceState('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```

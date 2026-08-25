@@ -4,14 +4,12 @@ EAP信息。​**系统能力**​：SystemCapability.Communication.NetManager.E
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## 导入模块
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## bufferLen
@@ -25,8 +23,6 @@ bufferLen: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -42,8 +38,6 @@ eapBuffer: Uint8Array
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## msgId
@@ -57,7 +51,5 @@ msgId: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap

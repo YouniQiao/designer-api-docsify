@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## removeGroupByBundle
@@ -16,8 +16,6 @@ Removes notifications under a notification group of the specified application. T
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ Removes notifications under a notification group of the specified application. T
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | groupName | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -44,38 +42,6 @@ Removes notifications under a notification group of the specified application. T
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeGroupByBundleCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("removeGroupByBundle success");
-    }
-}
-
-let bundleOption: notificationManager.BundleOption = { bundle: "Bundle" };
-let groupName: string = "GroupName";
-
-notificationManager.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleOption: notificationManager.BundleOption = { bundle: "Bundle" };
-let groupName: string = "GroupName";
-
-notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
-    console.info("removeGroupByBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## removeGroupByBundle
 
@@ -87,8 +53,6 @@ Removes notifications under a notification group of the specified application. T
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -99,7 +63,7 @@ Removes notifications under a notification group of the specified application. T
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | groupName | string | Yes |
 
 **Return value:**
@@ -119,7 +83,3 @@ Removes notifications under a notification group of the specified application. T
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-See [removeGroupByBundle](#removegroupbybundle)

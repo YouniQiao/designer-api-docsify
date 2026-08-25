@@ -7,14 +7,12 @@
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## canPreconfig
@@ -26,8 +24,6 @@ canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boo
 Checks whether this session supports a preconfigured resolution.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -52,38 +48,6 @@ Checks whether this session supports a preconfigured resolution.
 | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testCanPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    let result = photoSession.canPreconfig(preconfigType, preconfigRatio);
-    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The canPreconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testCanPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    let result = videoSession.canPreconfig(preconfigType, preconfigRatio);
-    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The canPreconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## off('error')
 
 ```TypeScript
@@ -93,8 +57,6 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from **PhotoSession** error events. This API uses a callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -117,8 +79,6 @@ Unsubscribes from focus state change events.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -140,8 +100,6 @@ Unsubscribes from smooth zoom state change events.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -162,8 +120,6 @@ off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void
 Unsubscribes from macro state change events.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -192,8 +148,6 @@ Unsubscribes from automatic camera switch status change events.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -215,8 +169,6 @@ Unsubscribes from system pressure level change events.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -228,46 +180,6 @@ Unsubscribes from system pressure level change events.
 | type | 'systemPressureLevelChange' | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | No |
 
-## offAutoDeviceSwitchStatusChange
-
-```TypeScript
-offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void
-```
-
-Unsubscribes to auto device switch status event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | No |
-
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes from error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
-
 ## offExposureInfoChange
 
 ```TypeScript
@@ -277,8 +189,6 @@ offExposureInfoChange(callback?: Callback<ExposureInfo>): void
 Unsubscribes from exposure information change events. If you have subscribed to exposure information change events, cancel the subscription before releasing the camera object. This API uses an asynchronous callback to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -292,26 +202,6 @@ Unsubscribes from exposure information change events. If you have subscribed to 
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | No |
 
-## offFocusStateChange
-
-```TypeScript
-offFocusStateChange(callback?: AsyncCallback<FocusState>): void
-```
-
-Unsubscribes from focus state change event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No |
-
 ## offIsoInfoChange
 
 ```TypeScript
@@ -321,8 +211,6 @@ offIsoInfoChange(callback?: Callback<IsoInfo>): void
 Unsubscribes from ISO information change events.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -336,82 +224,6 @@ Unsubscribes from ISO information change events.
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | No |
 
-**Examples**
-
-```TypeScript
-function callback(isoInfo: camera.IsoInfo): void {
-  console.info(`Iso : ${isoInfo}`);
-}
-
-function unregisterIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.offIsoInfoChange(callback);
-}
-
-function unregisterAllIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.offIsoInfoChange();
-}
-```
-
-## offMacroStatusChanged
-
-```TypeScript
-offMacroStatusChanged(callback?: AsyncCallback<boolean>): void
-```
-
-Unsubscribes camera macro status event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No |
-
-## offSmoothZoomInfoAvailable
-
-```TypeScript
-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
-```
-
-Unsubscribes from zoom info event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | No |
-
-## offSystemPressureLevelChange
-
-```TypeScript
-offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void
-```
-
-Unsubscribes to system pressure level event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | No |
-
 ## on('error')
 
 ```TypeScript
@@ -424,8 +236,6 @@ Subscribes to **PhotoSession** error events. This API uses an asynchronous callb
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -451,8 +261,6 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -477,8 +285,6 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -499,8 +305,6 @@ on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void
 Subscribes to macro state change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -532,8 +336,6 @@ Subscribes to automatic camera switch status change events. This API uses an asy
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -558,8 +360,6 @@ Subscribes to system pressure level change events. This API uses an asynchronous
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -571,46 +371,6 @@ Subscribes to system pressure level change events. This API uses an asynchronous
 | type | 'systemPressureLevelChange' | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | Yes |
 
-## onAutoDeviceSwitchStatusChange
-
-```TypeScript
-onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void
-```
-
-Subscribes to auto device switch status event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | Yes |
-
-## onError
-
-```TypeScript
-onError(callback: ErrorCallback): void
-```
-
-Subscribes to error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
 ## onExposureInfoChange
 
 ```TypeScript
@@ -620,8 +380,6 @@ onExposureInfoChange(callback: Callback<ExposureInfo>): void
 Subscribes to exposure information change events. After the exposure parameters are modified, the system returns the updated exposure information. This API uses an asynchronous callback to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -635,26 +393,6 @@ Subscribes to exposure information change events. After the exposure parameters 
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | Yes |
 
-## onFocusStateChange
-
-```TypeScript
-onFocusStateChange(callback: AsyncCallback<FocusState>): void
-```
-
-Subscribes focus state change event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes |
-
 ## onIsoInfoChange
 
 ```TypeScript
@@ -664,8 +402,6 @@ onIsoInfoChange(callback: Callback<IsoInfo>): void
 Subscribes to ISO information change events.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -679,78 +415,6 @@ Subscribes to ISO information change events.
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-function callback(isoInfo: camera.IsoInfo): void {
-  console.info(`Iso : ${isoInfo}`);
-}
-
-function registerIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.onIsoInfoChange(callback);
-}
-```
-
-## onMacroStatusChanged
-
-```TypeScript
-onMacroStatusChanged(callback: AsyncCallback<boolean>): void
-```
-
-Subscribes camera macro status event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
-
-## onSmoothZoomInfoAvailable
-
-```TypeScript
-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
-```
-
-Subscribes zoom info event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | Yes |
-
-## onSystemPressureLevelChange
-
-```TypeScript
-onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void
-```
-
-Subscribes to system pressure level event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | Yes |
-
 ## preconfig
 
 ```TypeScript
@@ -760,8 +424,6 @@ preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
 Preconfigures this session.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -779,35 +441,3 @@ Preconfigures this session.
 | Error Code ID |
 | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    photoSession.preconfig(preconfigType, preconfigRatio);
-    console.info(`preconfig success preconfigType: ${preconfigType}, preconfigRatio: ${preconfigRatio}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The preconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    videoSession.preconfig(preconfigType, preconfigRatio);
-    console.info(`preconfig ${preconfigType} ${preconfigRatio} success`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The preconfig call failed. error code: ${err.code}`);
-  }
-}
-```

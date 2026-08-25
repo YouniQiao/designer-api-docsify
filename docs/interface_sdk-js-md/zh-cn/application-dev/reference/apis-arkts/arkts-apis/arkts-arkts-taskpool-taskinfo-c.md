@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## duration
@@ -20,13 +18,11 @@ import { taskpool } from '@kit.ArkTS';
 duration?: number
 ```
 
-任务执行至当前所用的时间，默认为0，单位：ms。当返回为0时，表示任务未执行；返回为空时，表示没有任务执行。不建议修改此值。<br/> 从API version 11开始，该接口支持在原子化服务中使用。
+任务执行至当前所用的时间，默认为0，单位：ms。当返回为0时，表示任务未执行；返回为空时，表示没有任务执行。不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,13 +34,11 @@ duration?: number
 name: string
 ```
 
-任务的名字，不建议修改此值。<br/> 从API version 12开始，该接口支持在原子化服务中使用。
+任务的名字，不建议修改此值。从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,15 +50,13 @@ name: string
 state: State
 ```
 
-任务的状态。state标识任务的当前状态，不建议修改此值。<br/> 从API version 11开始，该接口支持在原子化服务中使用。
+任务的状态。state标识任务的当前状态，不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** State
 
 **默认值：** State::WAITING
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -76,15 +68,13 @@ state: State
 taskId: number
 ```
 
-任务的ID。系统默认提供全局唯一值，不建议修改此值。<br/> 从API version 11开始，该接口支持在原子化服务中使用。
+任务的ID。系统默认提供全局唯一值，不建议修改此值。从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **默认值：** 0
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

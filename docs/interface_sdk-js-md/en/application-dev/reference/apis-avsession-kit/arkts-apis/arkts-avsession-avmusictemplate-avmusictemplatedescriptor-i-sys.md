@@ -4,8 +4,6 @@ Description of the AVMusicTemplate.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Description of the AVMusicTemplate.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ App package name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Unique id of the AVMusicTemplate.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -59,16 +53,14 @@ Unique id of the AVMusicTemplate.
 ## userId
 
 ```TypeScript
-userId: int
+userId: number
 ```
 
 The user id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

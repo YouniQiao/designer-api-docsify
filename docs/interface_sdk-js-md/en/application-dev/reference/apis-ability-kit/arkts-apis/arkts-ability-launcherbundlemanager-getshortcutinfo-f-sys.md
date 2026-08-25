@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getShortcutInfo
@@ -15,8 +15,6 @@ function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<Short
 Obtains the shortcut information of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -42,46 +40,6 @@ Obtains the shortcut information of the current user based on the given bundle n
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) |
 
-**Examples**
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getShortcutInfo("com.example.demo",
-    (errData: BusinessError, data: launcherBundleManager.ShortcutInfo[]) => {
-      if (errData !== null) {
-        console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-      } else {
-        console.info('data is ' + JSON.stringify(data));
-      }
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getShortcutInfo("com.example.demo")
-    .then((data: launcherBundleManager.ShortcutInfo[]) => {
-      console.info('data is ' + JSON.stringify(data));
-    }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
 
 ## getShortcutInfo
 
@@ -92,8 +50,6 @@ function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>
 Obtains the shortcut information of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -123,7 +79,3 @@ Obtains the shortcut information of the current user based on the given bundle n
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) |
-
-**Examples**
-
-See [getShortcutInfo](#getshortcutinfo)

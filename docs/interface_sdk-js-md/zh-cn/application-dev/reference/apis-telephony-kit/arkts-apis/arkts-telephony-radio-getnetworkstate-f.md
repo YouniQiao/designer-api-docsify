@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getNetworkState
 
 ```TypeScript
-function getNetworkState(slotId: int, callback: AsyncCallback<NetworkState>): void
+function getNetworkState(slotId: number, callback: AsyncCallback<NetworkState>): void
 ```
 
 获取网络状态。使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -26,7 +24,7 @@ function getNetworkState(slotId: int, callback: AsyncCallback<NetworkState>): vo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkState&gt; | 是 |
 
 **错误码：**
@@ -40,56 +38,16 @@ function getNetworkState(slotId: int, callback: AsyncCallback<NetworkState>): vo
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getNetworkState((err: BusinessError, data: radio.NetworkState) => {
-    if (err) {
-        console.error(`getNetworkState failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNetworkState(slotId, (err: BusinessError, data: radio.NetworkState) => {
-    if (err) {
-        console.error(`getNetworkState failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
-    console.info(`getNetworkState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkState failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getNetworkState
 
 ```TypeScript
-function getNetworkState(slotId?: int): Promise<NetworkState>
+function getNetworkState(slotId?: number): Promise<NetworkState>
 ```
 
 获取网络状态。使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -99,7 +57,7 @@ function getNetworkState(slotId?: int): Promise<NetworkState>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| slotId | number | 否 |
 
 **返回值：**
 
@@ -118,10 +76,6 @@ function getNetworkState(slotId?: int): Promise<NetworkState>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-参见 [getNetworkState](#getnetworkstate)
-
 
 ## getNetworkState
 
@@ -132,8 +86,6 @@ function getNetworkState(callback: AsyncCallback<NetworkState>): void
 获取网络状态。使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -155,7 +107,3 @@ function getNetworkState(callback: AsyncCallback<NetworkState>): void
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getNetworkState](#getnetworkstate)

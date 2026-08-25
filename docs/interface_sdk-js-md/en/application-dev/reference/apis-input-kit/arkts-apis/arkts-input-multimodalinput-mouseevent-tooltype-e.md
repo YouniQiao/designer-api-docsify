@@ -4,8 +4,6 @@ Enumerates tool types.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = 0
 Unknown type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -32,8 +28,6 @@ Mouse.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## JOYSTICK
@@ -46,8 +40,6 @@ Joystick.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## TOUCHPAD
@@ -59,7 +51,5 @@ TOUCHPAD = 3
 Touchpad.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core

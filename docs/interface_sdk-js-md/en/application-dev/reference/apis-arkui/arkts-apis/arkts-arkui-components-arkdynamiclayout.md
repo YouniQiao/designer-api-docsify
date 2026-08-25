@@ -3,16 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
+import { DynamicLayout, DynamicLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
-
-### Functions
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayout-f.md) |
 
 ### Classes
 
@@ -24,7 +18,6 @@ import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-i.md) |
 | [DynamicLayoutInterface](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutinterface-i.md) |
 
 ### Constants

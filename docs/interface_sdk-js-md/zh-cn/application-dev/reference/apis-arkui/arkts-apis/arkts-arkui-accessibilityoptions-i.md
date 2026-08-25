@@ -4,8 +4,6 @@ Defines the struct of AccessibilityOptions.@interface AccessibilityOptions
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ accessibilityPreferred -在连接子组件字符串时，是否应该优先考�
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -45,8 +41,6 @@ actionControllerId?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -61,11 +55,9 @@ actionControllerRoleType?: AccessibilityRoleType
 
 stateControllerRoleType - 通过该可选参数指定特定类型的子组件，配置AccessibilityGroup的容器组件进行无障碍聚合后，如果触发无障碍的控制操作时，会将操作转发给该特定类型的子组件。从而聚合屏幕朗读下的点击事件，避免需要对子组件单独进行聚焦。
 
-**类型：** AccessibilityRoleType
+**类型：** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,8 +77,6 @@ stateControllerId -通过该可选参数指定特定ID的子组件，配置Acces
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -101,11 +91,9 @@ stateControllerRoleType?: AccessibilityRoleType
 
 stateControllerRoleType - 通过该可选参数指定特定类型的子组件，配置AccessibilityGroup的容器组件进行无障碍聚合后，会将该子组件的选中状态和状态播报文本作为聚合组件的状态和播报文本。从而聚合屏幕朗读下的状态播报，避免需要对子组件单独进行聚焦。
 
-**类型：** AccessibilityRoleType
+**类型：** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

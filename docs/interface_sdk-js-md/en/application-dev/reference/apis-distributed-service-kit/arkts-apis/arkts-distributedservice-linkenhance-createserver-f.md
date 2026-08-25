@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## createServer
@@ -15,8 +15,6 @@ function createServer(name: string): Server
 Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server. After using the object, call **close()** to destroy the **Server** object to release resources. To use the object again, you need to create another **Server** object.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -44,23 +42,3 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) |
 | [32390203](../errorcode-link-enhance.md#32390203-duplicate-service-name) |
-
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let name: string = "demo";
-  hilog.info(0x0000, TAG, 'start server name = ' + name);
-  // Construct a Server object using the specified name.
-  let server: linkEnhance.Server = linkEnhance.createServer(name);
-} catch (err) {
-  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```

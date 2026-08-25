@@ -6,14 +6,12 @@ Interactive widget extension class. It provides APIs for the widget provider to 
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
 
 ```TypeScript
-import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
+import { LiveFormExtensionAbility, LiveFormInfo } from 'kits/@kit.FormKit';
 ```
 
 ## onLiveFormCreate
@@ -25,8 +23,6 @@ onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession)
 Called after the UI content of **LiveFormExtensionAbility** is created.
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,40 +37,6 @@ Called after the UI content of **LiveFormExtensionAbility** is created.
 | liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | 是 |
 | session | [UIExtensionContentSession](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
-
-const TAG: string = '[testTag] LiveFormExtAbility';
-
-export default class LiveFormExtAbility extends LiveFormExtensionAbility {
-  onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession) {
-    console.info(TAG, `onLiveFormCreate, formId: ${liveFormInfo.formId}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
-
-const TAG: string = '[testTag] LiveFormExtAbility';
-
-export default class LiveFormExtAbility extends LiveFormExtensionAbility {
-  onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession) {
-    console.info(TAG, `onLiveFormCreate, formId: ${liveFormInfo.formId}`);
-  }
-}
-```
-
 ## onLiveFormDestroy
 
 ```TypeScript
@@ -84,8 +46,6 @@ onLiveFormDestroy(liveFormInfo: LiveFormInfo): void
 Called to clear resources when this **LiveFormExtensionAbility** is destroyed.
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,38 +59,6 @@ Called to clear resources when this **LiveFormExtensionAbility** is destroyed.
 | --- | --- | --- |
 | liveFormInfo | [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md) | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
-
-const TAG: string = '[testTag] LiveFormExtAbility';
-
-export default class LiveFormExtAbility extends LiveFormExtensionAbility {
-  onLiveFormDestroy(liveFormInfo: LiveFormInfo) {
-    console.info(TAG, `onLiveFormDestroy, liveFormInfo: ${liveFormInfo.formId}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
-
-const TAG: string = '[testTag] LiveFormExtAbility';
-
-export default class LiveFormExtAbility extends LiveFormExtensionAbility {
-  onLiveFormDestroy(liveFormInfo: LiveFormInfo) {
-    console.info(TAG, `onLiveFormDestroy, formId: ${liveFormInfo.formId}`);
-  }
-}
-```
-
 ## context
 
 ```TypeScript
@@ -143,28 +71,8 @@ Context of the **LiveFormExtensionAbility**. This context is inherited from [Ext
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Ability.Form
-
-## liveFormContext
-
-```TypeScript
-liveFormContext: LiveFormExtensionContext
-```
-
-Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
-
-**类型：** [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.Form

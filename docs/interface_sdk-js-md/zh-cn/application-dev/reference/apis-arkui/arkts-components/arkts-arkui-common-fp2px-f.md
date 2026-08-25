@@ -15,8 +15,6 @@ Converts a number in fp units to a number in px.
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **废弃版本：** 18
 
 **替代接口：** fp2px

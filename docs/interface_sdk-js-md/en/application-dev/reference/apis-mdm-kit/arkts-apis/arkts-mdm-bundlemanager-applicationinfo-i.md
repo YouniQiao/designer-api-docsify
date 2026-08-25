@@ -4,14 +4,12 @@ Defines the application information.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## accessTokenId
@@ -25,8 +23,6 @@ Access token ID of the application, which is used in the [checkAccessToken](../.
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Distribution type of the application signing certificate. For details, see the *
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -61,8 +55,6 @@ Index of an application clone. It takes effect only for application clones.
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +72,6 @@ Type of the application signing certificate file. The options are **debug** and 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -97,8 +87,6 @@ Installation directory of the application.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +104,6 @@ Whether the application data is unclearable. The value **true** means that the a
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -133,8 +119,6 @@ Whether the application is running in debug mode. **true** if in debug mode, **f
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,8 +136,6 @@ Description of the application. It corresponds to the **description** field in [
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -169,8 +151,6 @@ Resource ID of the application description. It is automatically generated during
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +168,6 @@ Resource information of the application description, including the bundle name, 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -205,8 +183,6 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,8 +200,6 @@ Application icon. It corresponds to the **icon** field in the [app.json5](../../
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -241,8 +215,6 @@ Application icon, which is in Base64 encoding format.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,8 +232,6 @@ Resource ID of the application icon. It is automatically generated during compil
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -278,8 +248,6 @@ Resource information of the application icon, including the bundle name, module 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -291,13 +259,15 @@ readonly installSource: string
 ```
 
 Installation source of the application. The options are as follows:  
-- **pre-installed**: The application is a preset application installed at initial device startup. - **ota**: The application is a preset application added during system upgrade. - **recovery**: The preset application is uninstalled and then restored. - **bundleName**: The application corresponding to the bundle name is installed. - **unknown**: The installation source is unknown.
+- **pre-installed**: The application is a preset application installed at initial device startup.  
+- **ota**: The application is a preset application added during system upgrade.  
+- **recovery**: The preset application is uninstalled and then restored.  
+- **bundleName**: The application corresponding to the bundle name is installed.  
+- **unknown**: The installation source is unknown.
 
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -315,8 +285,6 @@ Application label.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -332,8 +300,6 @@ Resource ID of the application label. It is automatically generated during compi
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -351,8 +317,6 @@ Resource information of the application label, including the bundle name, module
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -368,8 +332,6 @@ Name of the application bundle. It corresponds to the **bundleName** field in th
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -387,8 +349,6 @@ Local library file path of the application.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -404,8 +364,6 @@ Process name.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -423,8 +381,6 @@ Release type of the SDK used for application packing. Currently, the SDK release
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -440,8 +396,6 @@ Whether the application is removable. **true** if removable, **false** otherwise
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -459,8 +413,6 @@ Whether the application is a system application. **true** if it is a system appl
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -476,8 +428,6 @@ UID of the application.
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

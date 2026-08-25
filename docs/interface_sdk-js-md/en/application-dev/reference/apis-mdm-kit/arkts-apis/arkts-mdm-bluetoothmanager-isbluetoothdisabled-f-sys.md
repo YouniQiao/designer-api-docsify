@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isBluetoothDisabled
@@ -15,8 +15,6 @@ function isBluetoothDisabled(admin: Want): boolean
 Queries whether Bluetooth is disabled.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -51,23 +49,3 @@ Queries whether Bluetooth is disabled.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let isDisabled: boolean = bluetoothManager.isBluetoothDisabled(wantTemp);
-  console.info(`Succeeded in querying the bluetooth is disabled or not, isDisabled : ${isDisabled}`);
-} catch(err) {
-  console.error(`Failed to query the bluetooth is disabled or not. Code: ${err.code}, message: ${err.message}`);
-};
-```

@@ -1,12 +1,10 @@
 # TextTimer属性/事件
 
-除支持通用属性外，还支持以下属性。除支持通用事件外，还支持以下事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** TextTimerAttribute extends CommonMethod<TextTimerAttribute>
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ contentModifier(modifier: ContentModifier<TextTimerConfiguration>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ contentModifier(modifier: ContentModifier<TextTimerConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md)&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md)&gt; | 是 |
 
 ## fontColor
 
@@ -48,8 +44,6 @@ fontColor(value: ResourceColor)
 设置字体颜色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -73,8 +67,6 @@ fontFamily(value: ResourceStr)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -96,8 +88,6 @@ fontSize(value: Length)
 设置字体大小。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -121,8 +111,6 @@ fontStyle(value: FontStyle)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -144,8 +132,6 @@ fontWeight(value: number | FontWeight | ResourceStr)
 设置文本的字体粗细，设置过大可能会导致不同字体下的文字出现截断。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -169,8 +155,6 @@ format(value: string)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -192,8 +176,6 @@ onTimer(event: (utc: number, elapsedTime: number) => void)
 时间文本发生变化时触发该事件。锁屏状态和应用后台状态下不会触发该事件。组件不可见（非锁屏状态和应用后台状态）时，UI时间变动将停止，但该事件仍会正常触发。设置高精度的 [format](#format)（SS）时，回调间隔可能不均匀，相邻两次回调的时间间隔可能存在差异。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -220,8 +202,6 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -232,4 +212,4 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ShadowOptions \| Array & lt;ShadowOptions & gt; | 是 |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | 是 |

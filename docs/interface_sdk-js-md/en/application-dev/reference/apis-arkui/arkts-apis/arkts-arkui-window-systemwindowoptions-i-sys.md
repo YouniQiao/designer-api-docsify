@@ -4,8 +4,6 @@ Describes the parameters for creating a system window.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the parameters for creating a system window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## windowType
@@ -27,8 +25,6 @@ Window type. There is no default value. If null is passed in, the window fails t
 **Type:** WindowType
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

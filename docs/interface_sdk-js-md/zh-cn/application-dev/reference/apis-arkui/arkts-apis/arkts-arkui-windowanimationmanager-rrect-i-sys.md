@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { windowAnimationManager } from '@kit.ArkUI';
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
 动画目标窗口的高度大小。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,16 +33,14 @@ height: double
 ## left
 
 ```TypeScript
-left: double
+left: number
 ```
 
 动画目标窗口左上角相对于屏幕的横坐标。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -55,16 +49,14 @@ left: double
 ## radius
 
 ```TypeScript
-radius: double
+radius: number
 ```
 
 动画目标窗口的圆角大小。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -73,16 +65,14 @@ radius: double
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
 动画目标窗口左上角相对于屏幕的纵坐标。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -91,16 +81,14 @@ top: double
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
 动画目标窗口的宽度大小。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

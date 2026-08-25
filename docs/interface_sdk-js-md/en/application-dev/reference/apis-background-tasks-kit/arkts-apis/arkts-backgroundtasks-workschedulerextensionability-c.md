@@ -4,14 +4,12 @@ Provides callbacks to be invoked when the scheduling conditions are met or the s
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## Modules to Import
 
 ```TypeScript
-import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## onWorkStart
@@ -24,8 +22,6 @@ Called when the system starts scheduling the deferred task.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -35,20 +31,6 @@ Called when the system starts scheduling the deferred task.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | work | workScheduler.WorkInfo | Yes |
-
-**Examples**
-
-```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
-import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
-
-export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
-  onWorkStart(workInfo: workScheduler.WorkInfo) {
-      console.info(`MyWorkSchedulerExtensionAbility onWorkStart, workId: ${workInfo.workId},
-          bundleName: ${workInfo.bundleName}, abilityName: ${workInfo.abilityName}.`);
-  }
-}
-```
 
 ## onWorkStop
 
@@ -60,8 +42,6 @@ Called when the system stops scheduling the deferred task. This callback is trig
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -71,20 +51,6 @@ Called when the system stops scheduling the deferred task. This callback is trig
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | work | workScheduler.WorkInfo | Yes |
-
-**Examples**
-
-```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
-import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
-
-export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
-  onWorkStop(workInfo: workScheduler.WorkInfo) {
-      console.info(`MyWorkSchedulerExtensionAbility onWorkStop, workId: ${workInfo.workId},
-          bundleName: ${workInfo.bundleName}, abilityName: ${workInfo.abilityName}.`);
-  }
-}
-```
 
 ## context
 
@@ -97,8 +63,6 @@ Context of the WorkSchedulerExtensionAbility. This context inherits from Extensi
 **Type:** [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

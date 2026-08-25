@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ PROXY_MODE_OFF = 0
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ PROXY_MODE_AUTO = 1
 自动代理模式。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

@@ -1,14 +1,12 @@
 # OperationValueType
 
 ```TypeScript
-export type OperationValueType = long | double | string | boolean
+export type OperationValueType = number | number | string | boolean
 ```
 
 Indicates possible value types
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

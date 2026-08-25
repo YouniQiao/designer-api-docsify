@@ -4,14 +4,12 @@ Provides methods to accessing bluetooth call-related capabilities.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from '@kit.ConnectivityKit';
+import { hfp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

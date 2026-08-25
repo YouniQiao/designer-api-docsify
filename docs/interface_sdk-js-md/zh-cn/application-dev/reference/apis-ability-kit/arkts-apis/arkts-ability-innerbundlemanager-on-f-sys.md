@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('BundleStatusChange')
@@ -21,8 +21,6 @@ function on(type: 'BundleStatusChange',
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -57,8 +55,6 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

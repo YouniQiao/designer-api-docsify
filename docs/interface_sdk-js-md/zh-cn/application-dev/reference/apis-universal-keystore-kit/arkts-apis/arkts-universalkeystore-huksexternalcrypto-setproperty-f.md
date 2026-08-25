@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## setProperty
@@ -15,8 +15,6 @@ function setProperty(resourceId: string, propertyId: string, params?: HuksExtern
 The set-type operations of the external crypto extension support calling custom interfaces. However, the custom interface must be registered with the provider.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,33 +49,3 @@ The set-type operations of the external crypto extension support calling custom 
 | [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) |
 | [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
-
-**示例**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-const testResourceId = JSON.stringify({
-  providerName: "testProviderName",
-  bundleName: "com.example.cryptoapplication",
-  abilityName: "CryptoExtension",
-  index: {
-    key: "testKey"
-  } as ESObject
-});
-
-const propertyId = "SKF_SetDevInfo";
-const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [];
-
-async function testFunction() : Promise<void>
-{
-  try {
-    await huksExternalCrypto.setProperty(testResourceId, propertyId, extProperties)
-      .then(() => {
-        console.info('promise: setProperty success.');
-      });
-  } catch (error) {
-    console.error(`promise: setProperty failed, errCode : ${error.code}, errMsg : ${error.message}`);
-  }
-}
-```

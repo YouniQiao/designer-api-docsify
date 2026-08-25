@@ -6,14 +6,12 @@ The **FormEditExtensionAbility** module, inherited from [UIExtensionAbility](../
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
 
 ```TypeScript
-import { FormEditExtensionAbility } from '@kit.FormKit';
+import { FormEditExtensionAbility } from 'kits/@kit.FormKit';
 ```
 
 ## context
@@ -27,26 +25,6 @@ Indicates configuration information about a form edit extension ability context.
 **类型：** [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.Form
-
-## formEditContext
-
-```TypeScript
-formEditContext: FormEditExtensionContext
-```
-
-Indicates configuration information about a form edit extension ability context.
-
-**类型：** [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,8 +6,6 @@ Effect resource, which inherits from SceneResource. It is obtained from the crea
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## getPropertyValue
@@ -19,8 +17,6 @@ getPropertyValue(propertyName: string): Object | null | undefined
 Obtains the value of the specified effect property.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ setPropertyValue(propertyName: string, value: Object | undefined): boolean
 Sets the value of a specified effect property.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,8 +73,6 @@ Effect ID, which is in the format of 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', for
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## enabled
@@ -94,7 +86,5 @@ Enabled status of the effect. true if enabled, false otherwise.
 **Type:** boolean
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

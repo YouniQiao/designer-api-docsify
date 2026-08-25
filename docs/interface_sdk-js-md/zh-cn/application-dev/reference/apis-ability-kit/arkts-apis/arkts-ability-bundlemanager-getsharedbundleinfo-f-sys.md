@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getSharedBundleInfo
@@ -15,8 +15,6 @@ function getSharedBundleInfo(bundleName: string,  moduleName: string, callback: 
 获取指定的共享包信息。使用callback异步回调。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -42,76 +40,6 @@ function getSharedBundleInfo(bundleName: string,  moduleName: string, callback: 
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
 
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'library';
-
-try {
-  bundleManager.getSharedBundleInfo(bundleName, moduleName, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getSharedBundleInfo successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed: %{public}s', message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'library';
-
-try {
-  bundleManager.getSharedBundleInfo(bundleName, moduleName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getSharedBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 开发者需根据实际工程更新bundleName和moduleName。
-let bundleName = 'com.example.myapplication';
-let moduleName = 'library';
-
-try {
-  bundleManager.getSharedBundleInfo(bundleName, moduleName).then((data: Array<bundleManager.SharedBundleInfo>) => {
-    hilog.info(0x0000, 'testTag', 'getSharedBundleInfo successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getSharedBundleInfo failed. Cause: %{public}s', message);
-}
-```
-
 
 ## getSharedBundleInfo
 
@@ -122,8 +50,6 @@ function getSharedBundleInfo(bundleName: string, moduleName: string): Promise<Ar
 获取指定的共享包信息。使用Promise异步回调。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -153,7 +79,3 @@ function getSharedBundleInfo(bundleName: string, moduleName: string): Promise<Ar
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
-
-**示例**
-
-参见 [getSharedBundleInfo](#getsharedbundleinfo)

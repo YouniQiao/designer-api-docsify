@@ -1,8 +1,8 @@
 # Image
 
-The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), ResourceStr, and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF, HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
+The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md), and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF, HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
 > **NOTE**
-> - This component supports the TIFF image format since API version 23.>> - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused> state. For instructions on how to set focus, see> [Setting Whether a Component Is Focusable]> (../../../ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable).> By default, the **Image** component is not focusable. To enable it to gain focus, set both the> focusable and focusOnTouch attributes to> **true**.>> - The **Image** component supports SVG image sources. For details about SVG tags, see SVG Tags.>> - For animated images, animation playback is disabled by default and depends on the visibility of the **Image**> component. When the component is visible, the animation is started through the callback. When the component is> invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the>> [onVisibleAreaChange]> onVisibleAreaChange> event. If the value of **ratios** is greater than 0, the component is visible.>> - For details about how to resolve white block issues during image loading, see> [Solution to White Image Blocks]> (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution).> For details about how to address slow image loading, see> [Optimizing Preset Image Loading]> (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-compression-improve-> performance#section91526132216).>
+> - This component supports the TIFF image format since API version 23.>> - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused> state. For instructions on how to set focus, see> [Setting Whether a Component Is Focusable]> (../../../ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable).> By default, the **Image** component is not focusable. To enable it to gain focus, set both the> focusable and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch) attributes to> **true**.>> - The **Image** component supports SVG image sources. For details about SVG tags, see SVG Tags.>> - For animated images, animation playback is disabled by default and depends on the visibility of the **Image**> component. When the component is visible, the animation is started through the callback. When the component is> invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the>> [onVisibleAreaChange]> [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)> event. If the value of **ratios** is greater than 0, the component is visible.>> - For details about how to resolve white block issues during image loading, see> [Solution to White Image Blocks]> (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution).> For details about how to address slow image loading, see> [Optimizing Preset Image Loading]> (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-compression-improve-> performance#section91526132216).>
 Required Permissions
 The **ohos.permission.INTERNET** permission is required for using online images. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
 Child Components
@@ -18,7 +18,7 @@ Obtains an image from the specified source for subsequent rendering and display.
 
 > **NOTE：**&gt;
 > - Passing a URL directly to an **Image** component may lead to potential performance issues, such as: (1) Large
-> images cannot be downloaded in advance during loading, resulting in a long display time of white blocks; (2)
+> images cannot be downloaded in advance during loading, resulting in a number display time of white blocks; (2)
 > Small images set to load synchronously may block the UI thread in a weak network environment, causing screen
 > freezes; (3) In a rapidly scrolling waterfall flow, images that are about to be displayed cannot be downloaded in
 > advance, resulting in many white blocks during scrolling. Performance issues may manifest differently in
@@ -57,8 +57,6 @@ Obtains an image from the specified source for subsequent rendering and display.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -69,7 +67,7 @@ Obtains an image from the specified source for subsequent rendering and display.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Yes |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Yes |
 
 ## Image
 
@@ -80,8 +78,6 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent)
 Obtains an image. The [ImageContent](arkts-arkui-imagecontent-e.md) type allows you to specify the image content.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,7 +91,7 @@ Obtains an image. The [ImageContent](arkts-arkui-imagecontent-e.md) type allows 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | Yes |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | Yes |
 
 ## Image
 
@@ -106,8 +102,6 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey
 Set src to obtain images
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,7 +115,7 @@ Set src to obtain images
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | Yes |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | Yes |
 | reloadKey | string | No |
 
 ## Image
@@ -130,11 +124,9 @@ Set src to obtain images
 Image(src: PixelMap | ResourceStr | DrawableDescriptor, imageAIOptions: ImageAIOptions)
 ```
 
-Obtains an image. The imageAIOptions parameter allows you to set AI image analysis options.
+Obtains an image. The [imageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) parameter allows you to set AI image analysis options.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,8 +138,8 @@ Obtains an image. The imageAIOptions parameter allows you to set AI image analys
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Yes |
-| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imagecommon-imageaioptions-i.md) | Yes |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Yes |
+| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | Yes |
 
 ## Image
 
@@ -160,8 +152,6 @@ Set src and ai options to obtain images
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -172,8 +162,8 @@ Set src and ai options to obtain images
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Yes |
-| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imagecommon-imageaioptions-i.md) | No |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Yes |
+| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | No |
 | reloadKey | string | No |
 
 ## Summary
@@ -187,12 +177,6 @@ Set src and ai options to obtain images
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) |
-| [DrawingLattice](arkts-arkui-drawinglattice-t.md) |
-| [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) |
-| [ImageMatrix](arkts-arkui-imagematrix-t.md) |
-| [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md) |
-| [ResolutionQuality](arkts-arkui-resolutionquality-t-sys.md) |
 
 ### Enums
 

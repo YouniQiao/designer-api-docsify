@@ -4,14 +4,12 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -25,8 +23,6 @@ The UUID of a CharacteristicWriteRequest instance
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Indicates the address of the client that initiates the write request
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,8 +59,6 @@ Whether this request should be pending for later operation
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,8 +78,6 @@ Whether the remote client need a response
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -97,16 +87,14 @@ Whether the remote client need a response
 ## offset
 
 ```TypeScript
-offset: int
+offset: number
 ```
 
 Indicates the byte offset of the start position for writing characteristic value
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,8 +114,6 @@ The UUID of the service to which the characteristic belongs
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -137,16 +123,14 @@ The UUID of the service to which the characteristic belongs
 ## transId
 
 ```TypeScript
-transId: int
+transId: number
 ```
 
 The Id of the write request
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,8 +149,6 @@ Indicates the value to be written
 **Type:** ArrayBuffer
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

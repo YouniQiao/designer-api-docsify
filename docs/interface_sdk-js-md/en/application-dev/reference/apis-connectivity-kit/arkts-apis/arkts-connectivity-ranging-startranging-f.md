@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@kit.ConnectivityKit';
+import { ranging } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startRanging
@@ -18,8 +18,6 @@ Initiates ranging with a specified device. If the link to the target device is a
 Ranging state updates are notified via onRangingStateChange callback.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

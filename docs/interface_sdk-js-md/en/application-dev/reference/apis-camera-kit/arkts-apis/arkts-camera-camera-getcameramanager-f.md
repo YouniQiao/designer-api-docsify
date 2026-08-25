@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getCameraManager
@@ -15,8 +15,6 @@ function getCameraManager(context: Context): CameraManager
 Obtains a CameraManager instance. This API returns the result synchronously.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -40,21 +38,3 @@ Obtains a CameraManager instance. This API returns the result synchronously.
 | --- |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getCameraManager(context: common.BaseContext): camera.CameraManager | undefined {
-  let cameraManager: camera.CameraManager | undefined = undefined;
-  try {
-    cameraManager = camera.getCameraManager(context);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The getCameraManager call failed. error code: ${err.code}`);
-  }
-  return cameraManager;
-}
-```

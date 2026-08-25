@@ -4,8 +4,6 @@ Describes the information about a shared media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the information about a shared media asset.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## cameraShotKey
@@ -27,8 +25,6 @@ Camera shot information of the media asset.
 **Type:** string
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -46,8 +42,6 @@ Path data of the media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Path data of the media asset.
 ## dateAdded
 
 ```TypeScript
-dateAdded: long
+dateAdded: number
 ```
 
 Data added to the media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -73,16 +65,14 @@ Data added to the media asset.
 ## dateAddedMs
 
 ```TypeScript
-dateAddedMs: long
+dateAddedMs: number
 ```
 
 Time elapsed after the media asset was added.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -100,8 +90,6 @@ Time when the media asset was created.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -109,16 +97,14 @@ Time when the media asset was created.
 ## dateModified
 
 ```TypeScript
-dateModified: long
+dateModified: number
 ```
 
 Data modified in the media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -127,16 +113,14 @@ Data modified in the media asset.
 ## dateModifiedMs
 
 ```TypeScript
-dateModifiedMs: long
+dateModifiedMs: number
 ```
 
 Modified time of the asset in milliseconds
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -154,8 +138,6 @@ Month when the media asset was created.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -163,16 +145,14 @@ Month when the media asset was created.
 ## dateTaken
 
 ```TypeScript
-dateTaken: long
+dateTaken: number
 ```
 
 Timestamp when the media asset was taken and stored locally.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -181,16 +161,14 @@ Timestamp when the media asset was taken and stored locally.
 ## dateTrashed
 
 ```TypeScript
-dateTrashed: long
+dateTrashed: number
 ```
 
 Whether the media asset is moved to the trash.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -199,16 +177,14 @@ Whether the media asset is moved to the trash.
 ## dateTrashedMs
 
 ```TypeScript
-dateTrashedMs: long
+dateTrashedMs: number
 ```
 
 Time elapsed since the media asset was trashed.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -226,8 +202,6 @@ Year when the media asset was created.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -244,8 +218,6 @@ Display name of the media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -253,16 +225,14 @@ Display name of the media asset.
 ## duration
 
 ```TypeScript
-duration: int
+duration: number
 ```
 
 Duration of the media asset if it is a video.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -280,8 +250,6 @@ Dynamic range type of the media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -289,16 +257,14 @@ Dynamic range type of the media asset.
 ## fileId
 
 ```TypeScript
-fileId: int
+fileId: number
 ```
 
 ID of the media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -307,16 +273,14 @@ ID of the media asset.
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 Pixel height of the media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -334,8 +298,6 @@ Whether the media asset is hidden. **true** if hidden, **false** otherwise.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -351,8 +313,6 @@ Whether the media asset is marked as a favorite. **true** if marked, **false** o
 **Type:** boolean
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -370,8 +330,6 @@ Width and height of the LCD thumbnail of the media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -387,8 +345,6 @@ Media type of the media asset.
 **Type:** PhotoType
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -406,8 +362,6 @@ Effect of the moving photo.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -415,16 +369,14 @@ Effect of the moving photo.
 ## orientation
 
 ```TypeScript
-orientation: int
+orientation: number
 ```
 
 Rotation angle of the media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -442,8 +394,6 @@ Whether the media asset is in a pending state. **true** if pending, **false** ot
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -460,8 +410,6 @@ Location of the media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -469,16 +417,14 @@ Location of the media asset.
 ## size
 
 ```TypeScript
-size: long
+size: number
 ```
 
 File size of the media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -496,8 +442,6 @@ Subtype of the media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -514,8 +458,6 @@ Width and height of the thumb thumbnail of the media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -523,16 +465,14 @@ Width and height of the thumb thumbnail of the media asset.
 ## thumbnailModifiedMs
 
 ```TypeScript
-thumbnailModifiedMs?: long
+thumbnailModifiedMs?: number
 ```
 
 Time elapsed since the thumbnail status of the media asset changed.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -550,8 +490,6 @@ Whether the thumbnail of the media asset is ready. **true** if ready, **false** 
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -567,8 +505,6 @@ Whether the thumbnail of the media asset is visible.
 **Type:** ThumbnailVisibility
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -586,8 +522,6 @@ Title of the media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -603,8 +537,6 @@ URI of the media asset.
 **Type:** string
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -622,8 +554,6 @@ User comments on the media asset.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -631,16 +561,14 @@ User comments on the media asset.
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 Pixel width of the media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

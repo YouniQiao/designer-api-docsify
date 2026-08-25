@@ -6,14 +6,12 @@ The definition of the tab page content.@extends OperResult @interface MediaTabCo
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## compilations
@@ -27,8 +25,6 @@ Compilations content of the tab page.
 **Type:** [Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Tab id corresponding to the content.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

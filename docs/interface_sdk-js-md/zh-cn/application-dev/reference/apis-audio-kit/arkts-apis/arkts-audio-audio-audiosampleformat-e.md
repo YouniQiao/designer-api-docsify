@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_INVALID
@@ -17,8 +15,6 @@ SAMPLE_FORMAT_INVALID = -1
 无效格式。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ SAMPLE_FORMAT_U8 = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_S16LE
@@ -45,8 +39,6 @@ SAMPLE_FORMAT_S16LE = 1
 带符号的16位整数，小尾数。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -60,8 +52,6 @@ SAMPLE_FORMAT_S24LE = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_S32LE
@@ -74,8 +64,6 @@ SAMPLE_FORMAT_S32LE = 3
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_F32LE
@@ -87,7 +75,5 @@ SAMPLE_FORMAT_F32LE = 4
 带符号的32位浮点数，小尾数。由于系统限制，该采样格式仅部分设备支持，请根据实际情况使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

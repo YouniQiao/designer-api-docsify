@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit';
+import { AdComponent } from 'kits/@kit.AdsKit';
 ```
 
 ## 汇总

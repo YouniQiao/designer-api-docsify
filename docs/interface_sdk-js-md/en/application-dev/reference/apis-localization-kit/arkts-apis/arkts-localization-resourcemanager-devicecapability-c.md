@@ -4,14 +4,12 @@ Defines the device capability.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## deviceType
@@ -25,8 +23,6 @@ Device type.
 **Type:** DeviceType
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,8 +39,6 @@ Screen density of the device.
 **Type:** ScreenDensity
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,8 +4,6 @@ Enumerates trace output levels.The trace output level lower than the threshold d
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 ## DEBUG
@@ -17,8 +15,6 @@ DEBUG = 0
 Level used only for debugging, which has the lowest priority.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -34,8 +30,6 @@ Level for the log version.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -49,8 +43,6 @@ CRITICAL = 2
 Level for the log version, which has a higher priority than **INFO**.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -66,8 +58,6 @@ Level for the nolog version, which has the highest priority.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -81,8 +71,6 @@ MAX = COMMERCIAL
 Maximum trace output level: **COMMERCIAL**.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## notifyUpdatePackages
@@ -18,8 +18,6 @@ function notifyUpdatePackages(admin: Want, packageInfo: UpdatePackageInfo): Prom
 > 该接口比较耗时，当调用此接口后，后续如果在应用主线程调用其他同步接口时需要等待该接口异步返回。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -49,68 +47,3 @@ function notifyUpdatePackages(admin: Want, packageInfo: UpdatePackageInfo): Prom
 | [9201004](../errorcode-enterpriseDeviceManager.md#9201004-系统更新包不存在或解析失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let notify: systemManager.NotifyDescription = {
-  // 需根据实际情况进行替换
-  "installTips": "installTips",
-  "installTipsDetail": "installTips detail"
-};
-let description: systemManager.PackageDescription = {
-  // 需根据实际情况进行替换
-  "notify": notify
-};
-let updatePackages: Array<systemManager.Package> = [];
-// 应用沙箱路径，需根据实际情况进行替换
-let fileDir = "/xxxx/xxxx/";
-let path1: string = "update_sd_base.zip";
-let path2: string = "update_sd_cust_xxxxx_all_cn.zip";
-let path3: string = "update_sd_preload_xxxxx_all_cn_R1.zip";
-let fd1: number = fileIo.openSync(fileDir + path1, fileIo.OpenMode.READ_ONLY).fd;
-let fd2: number = fileIo.openSync(fileDir + "xxxxx/" + path2, fileIo.OpenMode.READ_ONLY).fd;
-let fd3: number = fileIo.openSync(fileDir + "xxxxx/" + path3, fileIo.OpenMode.READ_ONLY).fd;
-let package1: systemManager.Package = {
-  // 需根据实际情况进行替换
-  "type": systemManager.PackageType.FIRMWARE,
-  "path": path1,
-  "fd": fd1
-};
-let package2: systemManager.Package = {
-  // 需根据实际情况进行替换
-  "type": systemManager.PackageType.FIRMWARE,
-  "path": path2,
-  "fd": fd2
-};
-let package3: systemManager.Package = {
-  // 需根据实际情况进行替换
-  "type": systemManager.PackageType.FIRMWARE,
-  "path": path3,
-  "fd": fd3
-};
-updatePackages.push(package1);
-updatePackages.push(package2);
-updatePackages.push(package3);
-let updatePackageInfo: systemManager.UpdatePackageInfo = {
-  // 需根据实际情况进行替换
-  "version" : "1.0",
-  "packages" : updatePackages,
-  "description" : description
-};
-systemManager.notifyUpdatePackages(wantTemp, updatePackageInfo).then(() => {
-  console.info('Succeeded in notifying update packages.');
-}).catch ((error: BusinessError) => {
-  console.error(`Failed to notify update packages. Code is ${error.code},message is ${error.message}`);
-});
-```

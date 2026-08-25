@@ -4,15 +4,13 @@ Defines the accessibility event information, which describes UI changes or inter
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -24,8 +22,6 @@ constructor(jsonObject: Object)
 Constructor, which is used to construct an EventInfo instance using a JSON object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -39,46 +35,6 @@ Constructor, which is used to construct an EventInfo instance using a JSON objec
 | --- | --- | --- |
 | jsonObject | Object | Yes |
 
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'click',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'click',
-});
-```
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
-```
-
-## constructor
-
-```TypeScript
-constructor()
-```
-
-A constructor used to create a EventInfo object.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Core
-
-**Examples**
-
-See [constructor](#constructor)
-
 ## constructor
 
 ```TypeScript
@@ -88,8 +44,6 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 Constructor, which is used to construct an EventInfo instance using independent parameters.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -105,23 +59,17 @@ Constructor, which is used to construct an EventInfo instance using independent 
 | [bundleName](#bundlename) | string | Yes |
 | [triggerAction](#triggeraction) | [Action](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | Yes |
 
-**Examples**
-
-See [constructor](#constructor)
-
 ## beginIndex
 
 ```TypeScript
-beginIndex?: int
+beginIndex?: number
 ```
 
 Start index. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -141,8 +89,6 @@ Bundle name of the target app. This parameter is mandatory.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -156,13 +102,12 @@ componentType?: string
 ```
 
 It should correspond to the event source component type, and the default value is empty.Example:  
-- Button type - &gt; 'Button'- Image type - &gt; 'Image'
+- Button type - &gt; 'Button'  
+- Image type - &gt; 'Image'
 
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -182,8 +127,6 @@ Content list, which is set according to the actual scenario with no special rest
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -193,16 +136,14 @@ Content list, which is set according to the actual scenario with no special rest
 ## currentIndex
 
 ```TypeScript
-currentIndex?: int
+currentIndex?: number
 ```
 
 Current index. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -222,8 +163,6 @@ Component ID for proactive focus. Set this parameter based on the actual scenari
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -242,8 +181,6 @@ Event description, which is customized by the developer based on service require
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -253,16 +190,14 @@ Event description, which is customized by the developer based on service require
 ## elementId
 
 ```TypeScript
-elementId?: int
+elementId?: number
 ```
 
 Element ID of the component. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -273,16 +208,14 @@ Element ID of the component. The default value is **0**.
 ## endIndex
 
 ```TypeScript
-endIndex?: int
+endIndex?: number
 ```
 
 End index. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -293,16 +226,14 @@ End index. The default value is **0**.
 ## itemCount
 
 ```TypeScript
-itemCount?: int
+itemCount?: number
 ```
 
 Total number of items. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -322,8 +253,6 @@ Latest content, which is set according to the actual scenario with no special re
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -333,16 +262,14 @@ Latest content, which is set according to the actual scenario with no special re
 ## pageId
 
 ```TypeScript
-pageId ?: int
+pageId ?: number
 ```
 
 ID of the page where the event occurs. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -362,8 +289,6 @@ Content for auto-broadcasting. When the application needs to proactively broadca
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -381,8 +306,6 @@ Text moving granularity. The default value is char.
 **Type:** [TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -402,8 +325,6 @@ Content for proactive announcement, which supports the Resource type. The Resour
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -421,8 +342,6 @@ Action that triggers the event (mandatory).
 **Type:** Action
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -442,8 +361,6 @@ Accessibility event type (mandatory).
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -461,8 +378,6 @@ Window update type.
 **Type:** [WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

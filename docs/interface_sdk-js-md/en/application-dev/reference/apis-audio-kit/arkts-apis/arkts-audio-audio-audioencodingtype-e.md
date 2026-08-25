@@ -4,8 +4,6 @@ Enumerates the audio encoding types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## ENCODING_TYPE_INVALID
@@ -17,8 +15,6 @@ ENCODING_TYPE_INVALID = -1
 Invalid.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,8 +29,6 @@ ENCODING_TYPE_RAW = 0
 PCM encoding.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

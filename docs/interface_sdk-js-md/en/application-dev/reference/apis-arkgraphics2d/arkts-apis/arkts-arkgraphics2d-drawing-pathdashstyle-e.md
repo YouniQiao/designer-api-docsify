@@ -4,8 +4,6 @@ Enumerates the drawing styles for path effects. | Name | Value| Description | | 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## TRANSLATE
@@ -17,8 +15,6 @@ TRANSLATE = 0
 Translates only, not rotating with the path.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ Rotates with the path.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## MORPH
@@ -45,7 +39,5 @@ MORPH = 2
 Rotates with the path and stretches or compresses at turns to enhance smoothness.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

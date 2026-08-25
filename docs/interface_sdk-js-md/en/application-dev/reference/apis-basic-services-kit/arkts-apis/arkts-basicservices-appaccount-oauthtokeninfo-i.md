@@ -8,8 +8,6 @@ Defines authorization token information.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
@@ -19,7 +17,7 @@ Defines authorization token information.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## authType
@@ -33,8 +31,6 @@ Authentication type.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -53,8 +49,6 @@ Value of the authorization token.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ duration(value: number)
 设置播放时长。当[images](#images)中任意一帧图片设置了单独的duration后，该属性设置无效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,8 +45,6 @@ fillMode(value: FillMode)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -61,7 +55,7 @@ fillMode(value: FillMode)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [FillMode](#fillmode) | 是 |
+| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | 是 |
 
 ## fixedSize
 
@@ -72,8 +66,6 @@ fixedSize(value: boolean)
 设置图片大小是否固定为组件大小。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -97,8 +89,6 @@ images(value: Array<ImageFrameInfo>)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -121,8 +111,6 @@ iterations(value: number)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -139,11 +127,9 @@ iterations(value: number)
 monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 ```
 
-设置组件是否通过系统 onVisibleAreaChange 的可见性判定，控制组件的暂停和播放。
+设置组件是否通过系统 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) 的可见性判定，控制组件的暂停和播放。
 
 **起始版本：** 17
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为17。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -163,11 +149,9 @@ monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 onCancel(event: () => void)
 ```
 
-状态回调，动画取消时触发。当state被设置为AnimationStatus.Initial时触发；触发后图片显示回到第一帧（正播）或最后一帧（逆播）。与 [onFinish](#onfinish)的区别在于：onCancel对应回到Initial初始状态，onFinish对应动画自然结束或停止（Stopped）状态。
+状态回调，动画取消时触发。当state被设置为[AnimationStatus.Initial](../arkts-apis/arkts-arkui-animationstatus-e.md)时触发；触发后图片显示回到第一帧（正播）或最后一帧（逆播）。与 [onFinish](#onfinish)的区别在于：onCancel对应回到Initial初始状态，onFinish对应动画自然结束或停止（Stopped）状态。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -187,11 +171,9 @@ onCancel(event: () => void)
 onFinish(event: () => void)
 ```
 
-状态回调，动画播放完成时（iterations设置的轮次全部播完且动画自然结束）或者停止播放时（state被切换为AnimationStatus.Stopped）触发。当动画处于 AnimationStatus.Initial状态时返回初始状态不会触发该事件，对应触发的是onCancel。
+状态回调，动画播放完成时（iterations设置的轮次全部播完且动画自然结束）或者停止播放时（state被切换为[AnimationStatus.Stopped](../arkts-apis/arkts-arkui-animationstatus-e.md)）触发。当动画处于 [AnimationStatus.Initial](../arkts-apis/arkts-arkui-animationstatus-e.md)状态时返回初始状态不会触发该事件，对应触发的是onCancel。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -215,8 +197,6 @@ onPause(event: () => void)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -239,8 +219,6 @@ onRepeat(event: () => void)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -260,8 +238,6 @@ onStart(event: () => void)
 状态回调，动画开始播放时触发。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -288,8 +264,6 @@ preDecode(value: number)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -309,8 +283,6 @@ reverse(value: boolean)
 设置播放方向。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -333,8 +305,6 @@ state(value: AnimationStatus)
 控制播放状态。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

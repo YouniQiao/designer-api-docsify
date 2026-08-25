@@ -4,8 +4,6 @@ Defines the plugin information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## icon
@@ -20,23 +18,19 @@ Plugin icon.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## iconId
 
 ```TypeScript
-readonly iconId: long
+readonly iconId: number
 ```
 
 Resource ID of the plugin icon.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -52,23 +46,19 @@ Plugin name.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## labelId
 
 ```TypeScript
-readonly labelId: long
+readonly labelId: number
 ```
 
 Resource ID of the plugin name.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -84,8 +74,6 @@ Bundle name of the application for which the plugin is installed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## pluginModuleInfos
@@ -100,23 +88,19 @@ Module information of the plugin.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## versionCode
 
 ```TypeScript
-readonly versionCode: long
+readonly versionCode: number
 ```
 
 Version number of the plugin.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -131,7 +115,5 @@ Version name of the plugin.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

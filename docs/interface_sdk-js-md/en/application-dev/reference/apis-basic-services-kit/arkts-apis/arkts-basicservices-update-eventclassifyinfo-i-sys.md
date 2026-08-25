@@ -4,8 +4,6 @@ Represents event type information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents event type information.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## eventClassify
@@ -27,8 +25,6 @@ Event type, which specifies the type of event to listen for. The value can be **
 **Type:** [EventClassify](arkts-basicservices-update-eventclassify-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -45,8 +41,6 @@ Additional information, which is used to transfer the extended data. The default
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

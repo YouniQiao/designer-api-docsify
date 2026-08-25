@@ -4,31 +4,13 @@ AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from '@kit.MediaLibraryKit';
+import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from 'kits/@kit.MediaLibraryKit';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-Build function of AlbumPickerComponent
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## onAlbumClick
 
@@ -39,8 +21,6 @@ onAlbumClick?: (albumInfo: AlbumInfo) => boolean
 Callback when select an album, will return album uri
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,8 +42,6 @@ Callback when click the empty area of the album component
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -80,8 +58,6 @@ AlbumPickerController
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -97,8 +73,6 @@ AlbumPickerOptions
 **Type:** [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

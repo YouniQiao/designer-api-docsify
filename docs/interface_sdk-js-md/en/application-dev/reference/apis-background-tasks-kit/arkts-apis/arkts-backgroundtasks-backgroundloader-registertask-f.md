@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundLoader } from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## registerTask
@@ -15,8 +15,6 @@ function registerTask(taskInfo: TaskInfo): void
 Register background load task.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 

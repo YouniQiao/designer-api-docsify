@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## getTouchpadPinchSwitch
@@ -15,8 +15,6 @@ function getTouchpadPinchSwitch(callback: AsyncCallback<boolean>): void
 Obtains the touchpad pinch switch state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -35,62 +33,6 @@ Obtains the touchpad pinch switch state. This API uses an asynchronous callback 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadPinchSwitch((error: BusinessError, state: boolean) => {
-              if (error) {
-                console.error(`getTouchpadPinchSwitch error: ${JSON.stringify(error, [`code`, `message`])}`);
-              } else {
-                console.info(`getTouchpadPinchSwitch success, state: ${JSON.stringify(state)}`);
-              }
-            });
-          } catch (error) {
-            console.error(`getTouchpadPinchSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadPinchSwitch().then((state: boolean) => {
-              console.info(`getTouchpadPinchSwitch success, state: ${JSON.stringify(state)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get touchpad pinch switch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getTouchpadPinchSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## getTouchpadPinchSwitch
 
@@ -101,8 +43,6 @@ function getTouchpadPinchSwitch(): Promise<boolean>
 Obtains the touchpad pinch switch state. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -120,7 +60,3 @@ Obtains the touchpad pinch switch state. This API uses a promise to return the r
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getTouchpadPinchSwitch](#gettouchpadpinchswitch)

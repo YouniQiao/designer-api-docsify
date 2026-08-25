@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getDLPFileAccessRecords
@@ -15,8 +15,6 @@ function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。仅支持在非DLP沙箱应用中调用。使用Promise异步回调。该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -34,30 +32,6 @@ function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 | [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPFileAccessRecords().then((accessRecords) => { // 获取DLP访问列表。
-  console.info('accessRecords', JSON.stringify(accessRecords));
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPFileAccessRecords((err, accessRecords) => {
-  if (err) {
-    console.error(`Failed to get DLP file access records. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('accessRecords', JSON.stringify(accessRecords));
-  }
-}); // 获取DLP访问列表。
-```
-
 
 ## getDLPFileAccessRecords
 
@@ -68,8 +42,6 @@ function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileIn
 查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。使用callback异步回调。该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -87,7 +59,3 @@ function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileIn
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-参见 [getDLPFileAccessRecords](#getdlpfileaccessrecords)

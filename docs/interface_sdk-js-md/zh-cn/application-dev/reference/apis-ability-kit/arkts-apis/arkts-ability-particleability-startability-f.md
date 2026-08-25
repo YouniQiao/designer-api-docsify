@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
+import { particleAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## startAbility
@@ -19,8 +19,6 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -31,57 +29,6 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 | --- | --- | --- |
 | parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { particleAbility, wantConstant } from '@kit.AbilityKit';
-
-particleAbility.startAbility(
-  {
-    want:
-    {
-      action: 'ohos.want.action.home',
-      entities: ['entity.system.home'],
-      type: 'MIMETYPE',
-      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
-      deviceId: '',
-      bundleName: 'com.example.Data',
-      abilityName: 'com.example.Data.EntryAbility',
-      uri: ''
-    },
-  },
-  (error, data) => {
-    if (error && error.code !== 0) {
-      console.error(`startAbility fail, error: ${JSON.stringify(error)}`);
-    } else {
-      console.info(`startAbility success, data: ${JSON.stringify(data)}`);
-    }
-  },
-);
-```
-
-```TypeScript
-import { particleAbility, wantConstant } from '@kit.AbilityKit';
-
-particleAbility.startAbility(
-  {
-    want:
-    {
-      action: 'ohos.want.action.home',
-      entities: ['entity.system.home'],
-      type: 'MIMETYPE',
-      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
-      deviceId: '',
-      bundleName: 'com.example.Data',
-      abilityName: 'com.example.Data.EntryAbility',
-      uri: ''
-    },
-  },
-).then(() => {
-  console.info('particleAbility startAbility');
-});
-```
 
 
 ## startAbility
@@ -96,8 +43,6 @@ function startAbility(parameter: StartAbilityParameter): Promise<void>
 > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -114,7 +59,3 @@ function startAbility(parameter: StartAbilityParameter): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [startAbility](#startability)

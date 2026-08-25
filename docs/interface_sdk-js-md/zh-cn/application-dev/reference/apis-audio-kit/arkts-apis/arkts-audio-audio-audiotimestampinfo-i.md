@@ -4,44 +4,38 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## framePos
 
 ```TypeScript
-readonly framePos: long
+readonly framePos: number
 ```
 
 当前播放或者录制的数据帧位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## timestamp
 
 ```TypeScript
-readonly timestamp: long
+readonly timestamp: number
 ```
 
 播放或者录制到当前数据帧位置时对应的时间戳，单位为纳秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

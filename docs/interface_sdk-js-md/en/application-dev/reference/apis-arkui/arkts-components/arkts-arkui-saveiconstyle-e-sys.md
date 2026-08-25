@@ -4,8 +4,6 @@ Enumerates icon styles of the **SaveButton** component.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PICTURE
@@ -17,8 +15,6 @@ PICTURE = 2
 Picture-attached icon.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

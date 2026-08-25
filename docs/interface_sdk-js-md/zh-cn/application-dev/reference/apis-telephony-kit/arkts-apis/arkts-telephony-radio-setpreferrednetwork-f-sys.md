@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setPreferredNetwork
 
 ```TypeScript
-function setPreferredNetwork(slotId: int, networkMode: PreferredNetworkMode, callback: AsyncCallback<void>): void
+function setPreferredNetwork(slotId: number, networkMode: PreferredNetworkMode, callback: AsyncCallback<void>): void
 ```
 
 Set the preferred network for the specified SIM card slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Set the preferred network for the specified SIM card slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | networkMode | [PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -44,46 +42,16 @@ Set the preferred network for the specified SIM card slot.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.PreferredNetworkMode = radio.PreferredNetworkMode.PREFERRED_NETWORK_MODE_GSM;
-radio.setPreferredNetwork(slotId, mode, (err: BusinessError) => {
-    if (err) {
-        console.error(`setPreferredNetwork failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`setPreferredNetwork success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.PreferredNetworkMode = radio.PreferredNetworkMode.PREFERRED_NETWORK_MODE_GSM;
-radio.setPreferredNetwork(slotId, mode).then(() => {
-    console.info(`setPreferredNetwork success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setPreferredNetwork failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setPreferredNetwork
 
 ```TypeScript
-function setPreferredNetwork(slotId: int, networkMode: PreferredNetworkMode): Promise<void>
+function setPreferredNetwork(slotId: number, networkMode: PreferredNetworkMode): Promise<void>
 ```
 
 Set the preferred network for the specified SIM card slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -95,7 +63,7 @@ Set the preferred network for the specified SIM card slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | networkMode | [PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md) | 是 |
 
 **返回值：**
@@ -115,7 +83,3 @@ Set the preferred network for the specified SIM card slot.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [setPreferredNetwork](#setpreferrednetwork)

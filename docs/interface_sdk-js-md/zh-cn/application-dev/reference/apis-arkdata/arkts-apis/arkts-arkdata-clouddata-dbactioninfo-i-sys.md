@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## action
@@ -27,8 +25,6 @@ action: ClearAction
 **类型：** [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -45,8 +41,6 @@ tableInfo?: Record<string, ClearAction>
 **类型：** Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt;
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 

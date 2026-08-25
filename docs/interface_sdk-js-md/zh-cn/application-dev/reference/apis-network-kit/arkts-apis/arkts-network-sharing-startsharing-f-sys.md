@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## startSharing
@@ -15,8 +15,6 @@ function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): vo
 开启指定类型共享，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -47,33 +45,6 @@ function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): vo
 | [2202009](../errorcode-net-sharing.md#2202009-网络共享开启转发错误) |
 | [2202011](../errorcode-net-sharing.md#2202011-无法获取网络共享配置) |
 
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing.startSharing(SHARING_WIFI, (error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .startSharing(SHARING_WIFI)
-  .then(() => {
-    console.info('start wifi sharing successful');
-  })
-  .catch((error: BusinessError) => {
-    console.error('start wifi sharing failed');
-  });
-```
-
 
 ## startSharing
 
@@ -84,8 +55,6 @@ function startSharing(type: SharingIfaceType): Promise<void>
 开启指定类型共享，使用 Promise 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -120,7 +89,3 @@ function startSharing(type: SharingIfaceType): Promise<void>
 | [2202006](../errorcode-net-sharing.md#2202006-蓝牙共享失败) |
 | [2202009](../errorcode-net-sharing.md#2202009-网络共享开启转发错误) |
 | [2202011](../errorcode-net-sharing.md#2202011-无法获取网络共享配置) |
-
-**示例**
-
-参见 [startSharing](#startsharing)

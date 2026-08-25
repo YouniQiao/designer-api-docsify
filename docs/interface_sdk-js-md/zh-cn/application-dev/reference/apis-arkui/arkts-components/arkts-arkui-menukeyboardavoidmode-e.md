@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 菜单不避让软键盘。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,8 +31,6 @@ TRANSLATE_AND_RESIZE = 1
 菜单避让软键盘。如果空间不足，会平移或重新调整菜单大小避让软键盘。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

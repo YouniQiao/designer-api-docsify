@@ -6,14 +6,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { mediaquery } from '@kit.ArkUI';
+import { mediaquery } from 'kits/@kit.ArkUI';
 ```
 
 ## off('change')
@@ -26,8 +24,6 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -39,45 +35,6 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'change' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 |
-
-**示例**
-
-```TypeScript
-import { mediaquery } from '@kit.ArkUI';
-
-let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // 监听横屏事件
-function onPortrait(mediaQueryResult:mediaquery.MediaQueryResult) {
-  if (mediaQueryResult.matches) {
-    // do something here
-  } else {
-    // do something here
-  }
-}
-listener.on('change', onPortrait) // 注册回调
-listener.off('change', onPortrait) // 注销回调
-```
-
-## offChange
-
-```TypeScript
-offChange(callback?: Callback<MediaQueryResult>): void
-```
-
-通过句柄向对应的查询条件取消注册回调，当媒体属性发生变更时不再触发指定的回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 |
 
 ## on('change')
@@ -93,8 +50,6 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -106,30 +61,4 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'change' | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 |
-
-**示例**
-
-详见[off('change')](#offchange)示例。
-
-## onChange
-
-```TypeScript
-onChange(callback: Callback<MediaQueryResult>): void
-```
-
-通过句柄向对应的查询条件注册回调，当媒体属性发生变更时会触发该回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 |

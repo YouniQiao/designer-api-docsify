@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getPermissionUsedRecordToggleStatus
@@ -15,8 +15,6 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 系统应用调用此接口，可以获取当前用户的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -39,37 +37,6 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 查询权限使用记录开关状态
-privacyManager.getPermissionUsedRecordToggleStatus().then((status) => {
-  console.info('getPermissionUsedRecordToggleStatus success');
-  if (status == true) {
-    console.info('get status is TRUE');
-  } else {
-    console.info('get status is FALSE');
-  }
-}).catch((err: BusinessError): void => {
-  console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-privacyManager.getPermissionUsedRecordToggleStatus(subProfileId).then((status: boolean) => {
-  console.info(`getPermissionUsedRecordToggleStatus success, status: ${status}`);
-}).catch((err: BusinessError): void => {
-  console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getPermissionUsedRecordToggleStatus
 
@@ -80,8 +47,6 @@ function getPermissionUsedRecordToggleStatus(subProfileId: number): Promise<bool
 系统应用调用此接口，可以获取指定子身份资料的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -112,7 +77,3 @@ function getPermissionUsedRecordToggleStatus(subProfileId: number): Promise<bool
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [12100001](../errorcode-access-token.md#12100001-入参错误) |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
-
-**示例**
-
-参见 [getPermissionUsedRecordToggleStatus](#getpermissionusedrecordtogglestatus)

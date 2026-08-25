@@ -4,8 +4,6 @@ CliToolEvent用于描述CLI工具进程运行期间产生的会话事件信息�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +19,6 @@ CLI工具事件数据。
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,8 +37,6 @@ CLI工具事件类型。
 **类型：** [ToolEventType](arkts-ability-clitoolevent-tooleventtype-e-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

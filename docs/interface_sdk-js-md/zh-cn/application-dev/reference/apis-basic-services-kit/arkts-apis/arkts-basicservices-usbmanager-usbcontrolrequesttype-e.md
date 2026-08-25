@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TYPE_STANDARD
@@ -17,8 +15,6 @@ USB_REQUEST_TYPE_STANDARD = 0
 标准请求类型，用于发送USB协议定义的标准控制请求（如设备描述符、设置地址、设置配置等）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -32,8 +28,6 @@ USB_REQUEST_TYPE_CLASS = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TYPE_VENDOR
@@ -45,7 +39,5 @@ USB_REQUEST_TYPE_VENDOR = 2
 厂商请求类型，用于发送厂商自定义的控制请求，具体请求内容由设备厂商定义。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager

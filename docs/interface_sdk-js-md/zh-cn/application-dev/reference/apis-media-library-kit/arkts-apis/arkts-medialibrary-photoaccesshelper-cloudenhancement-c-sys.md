@@ -4,8 +4,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## cancelAllCloudEnhancementTasks
@@ -25,8 +23,6 @@ cancelAllCloudEnhancementTasks(): Promise<void>
 取消全部云增强任务。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -48,23 +44,6 @@ cancelAllCloudEnhancementTasks(): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 14000011 |
 
-**示例**
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('cancelAllCloudEnhancementTasksDemo');
-  try {
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    await cloudEnhancementInstance.cancelAllCloudEnhancementTasks();
-  } catch (err) {
-    console.error(`cancelAllCloudEnhancementTasksDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## cancelCloudEnhancementTasks
 
 ```TypeScript
@@ -74,8 +53,6 @@ cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>
 取消指定云增强任务。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -104,35 +81,6 @@ cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('cancelCloudEnhancementTasksDemo');
-  let photoPredicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  // 查询进行中的云增强任务。
-  photoPredicates.equalTo(photoAccessHelper.PhotoKeys.CE_AVAILABLE, 2);
-  let photoFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: photoPredicates
-  };
-  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  try {
-    let fetchResult = await phAccessHelper.getAssets(photoFetchOptions);
-    let asset = await fetchResult.getLastObject();
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    await cloudEnhancementInstance.cancelCloudEnhancementTasks([asset]);
-  } catch (err) {
-    console.error(`cancelCloudEnhancementTasksDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## getCloudEnhancementInstance
 
 ```TypeScript
@@ -142,8 +90,6 @@ static getCloudEnhancementInstance(context: Context): CloudEnhancement
 获取云增强类实例。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -169,72 +115,6 @@ static getCloudEnhancementInstance(context: Context): CloudEnhancement
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('getCloudEnhancementInstanceDemo');
-  let photoPredicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let photoFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: photoPredicates
-  };
-  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  try {
-    let fetchResult = await phAccessHelper.getAssets(photoFetchOptions);
-    let asset = await fetchResult.getLastObject();
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    let hasCloudWatermark = true;
-    await cloudEnhancementInstance.submitCloudEnhancementTasks([asset], hasCloudWatermark);
-  } catch (err) {
-    console.error(`getCloudEnhancementInstanceDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-## getCloudEnhancementInstance
-
-```TypeScript
-static getCloudEnhancementInstance(context: Context): CloudEnhancement | null
-```
-
-获取云增强类实例。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [CloudEnhancement](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md) \| null |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) |
-
-**示例**
-
-参见 [getCloudEnhancementInstance](#getcloudenhancementinstance)
-
 ## getCloudEnhancementPair
 
 ```TypeScript
@@ -244,8 +124,6 @@ getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>
 查询云增强配对照片。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -274,36 +152,6 @@ getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('getCloudEnhancementPairDemo');
-  let photoPredicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  // 查询已完成的云增强任务。
-  photoPredicates.equalTo(photoAccessHelper.PhotoKeys.CE_AVAILABLE, 5);
-  let photoFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: photoPredicates
-  };
-  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  try {
-    let fetchResult = await phAccessHelper.getAssets(photoFetchOptions);
-    let asset = await fetchResult.getLastObject();
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    let photoAsset: photoAccessHelper.PhotoAsset
-      = await cloudEnhancementInstance.getCloudEnhancementPair(asset);
-  } catch (err) {
-    console.error(`getCloudEnhancementPairDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## prioritizeCloudEnhancementTask
 
 ```TypeScript
@@ -313,8 +161,6 @@ prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>
 提升指定云增强任务的优先级。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -343,36 +189,6 @@ prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('prioritizeCloudEnhancementTaskDemo');
-  let photoPredicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  // 查询进行中的云增强任务。
-  photoPredicates.equalTo(photoAccessHelper.PhotoKeys.CE_AVAILABLE, 2);
-  let photoFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: photoPredicates
-  };
-  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  try {
-    let fetchResult = await phAccessHelper.getAssets(photoFetchOptions);
-    let asset = await fetchResult.getLastObject();
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    let hasCloudWatermark = true;
-    await cloudEnhancementInstance.prioritizeCloudEnhancementTask(asset);
-  } catch (err) {
-    console.error(`prioritizeCloudEnhancementTaskDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## queryCloudEnhancementTaskState
 
 ```TypeScript
@@ -382,8 +198,6 @@ queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancement
 查询云增强任务信息。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -412,62 +226,6 @@ queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancement
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('queryCloudEnhancementTaskStateDemo');
-  let photoPredicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  // 查询进行中的云增强任务。
-  photoPredicates.equalTo(photoAccessHelper.PhotoKeys.CE_AVAILABLE, 2);
-  let photoFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: photoPredicates
-  };
-  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  try {
-    let fetchResult = await phAccessHelper.getAssets(photoFetchOptions);
-    let asset = await fetchResult.getLastObject();
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    const cloudEnhancementTaskState: photoAccessHelper.CloudEnhancementTaskState
-      = await cloudEnhancementInstance.queryCloudEnhancementTaskState(asset);
-    let taskStage = cloudEnhancementTaskState.taskStage;
-    if (taskStage == photoAccessHelper.CloudEnhancementTaskStage.TASK_STAGE_EXCEPTION) {
-      console.info("task has exception");
-    } else if (taskStage == photoAccessHelper.CloudEnhancementTaskStage.TASK_STAGE_PREPARING) {
-      console.info("task is preparing");
-    } else if (taskStage == photoAccessHelper.CloudEnhancementTaskStage.TASK_STAGE_UPLOADING) {
-      let transferredFileSize = cloudEnhancementTaskState.transferredFileSize;
-      let totalFileSize = cloudEnhancementTaskState.totalFileSize;
-      let message = `task is uploading, transferredFileSize: ${transferredFileSize}, totalFileSize: ${totalFileSize}`;
-      console.info(message);
-    } else if (taskStage == photoAccessHelper.CloudEnhancementTaskStage.TASK_STAGE_EXECUTING) {
-      let expectedDuration = cloudEnhancementTaskState.expectedDuration;
-      let message = `task is executing, expectedDuration: ${expectedDuration}`;
-      console.info(message);
-    } else if (taskStage == photoAccessHelper.CloudEnhancementTaskStage.TASK_STAGE_DOWNLOADING) {
-      let transferredFileSize = cloudEnhancementTaskState.transferredFileSize;
-      let totalFileSize = cloudEnhancementTaskState.totalFileSize;
-      let message = `task is downloading, transferredFileSize: ${transferredFileSize}, totalFileSize: ${totalFileSize}`;
-      console.info(message);
-    } else if (taskStage == photoAccessHelper.CloudEnhancementTaskStage.TASK_STAGE_FAILED) {
-      let errCode = cloudEnhancementTaskState.statusCode;
-      let message = `task is failed, errCode: ${errCode}`;
-      console.info(message);
-    } else if (taskStage == photoAccessHelper.CloudEnhancementTaskStage.TASK_STAGE_COMPLETED) {
-      console.info("task is completed");
-    }
-  } catch (err) {
-    console.error(`queryCloudEnhancementTaskStateDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## submitCloudEnhancementTasks
 
 ```TypeScript
@@ -478,8 +236,6 @@ submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: b
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -508,64 +264,8 @@ submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: b
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('submitCloudEnhancementTasksDemo');
-  let photoPredicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let photoFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: photoPredicates
-  };
-  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  try {
-    let fetchResult = await phAccessHelper.getAssets(photoFetchOptions);
-    let asset = await fetchResult.getLastObject();
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    let hasCloudWatermark = true;
-    await cloudEnhancementInstance.submitCloudEnhancementTasks([asset], hasCloudWatermark);
-  } catch (err) {
-    console.error(`submitCloudEnhancementTasksDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('submitCloudEnhancementTasksDemo');
-  let photoPredicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let photoFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: photoPredicates
-  };
-  let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-  try {
-    let fetchResult = await phAccessHelper.getAssets(photoFetchOptions);
-    let asset = await fetchResult.getLastObject();
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    let hasCloudWatermark = true;
-    let triggerAuto = 1;
-    await cloudEnhancementInstance.submitCloudEnhancementTasks([asset], hasCloudWatermark, triggerAuto);
-  } catch (err) {
-    console.error(`submitCloudEnhancementTasksDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## submitCloudEnhancementTasks
 
-ArkTS-Dyn:
 ```TypeScript
 submitCloudEnhancementTasks(
       photoAssets: Array<PhotoAsset>,
@@ -574,20 +274,9 @@ submitCloudEnhancementTasks(
     ): Promise<void>
 ```
 
-ArkTS-Sta:
-```TypeScript
-submitCloudEnhancementTasks(
-      photoAssets: Array<PhotoAsset>,
-      hasCloudWatermark: boolean,
-      triggerMode?: int
-    ): Promise<void>
-```
-
 提交云增强任务，支持选择云增强任务触发类型。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -601,7 +290,7 @@ submitCloudEnhancementTasks(
 | --- | --- | --- |
 | photoAssets | Array & lt;PhotoAsset & gt; | 是 |
 | hasCloudWatermark | boolean | 是 |
-| triggerMode | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| triggerMode | number | 否 |
 
 **返回值：**
 
@@ -617,10 +306,6 @@ submitCloudEnhancementTasks(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
-
-**示例**
-
-参见 [submitCloudEnhancementTasks](#submitcloudenhancementtasks)
 
 ## syncCloudEnhancementTaskStatus
 
@@ -631,8 +316,6 @@ syncCloudEnhancementTaskStatus(): Promise<void>
 同步云增强任务状态。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -653,20 +336,3 @@ syncCloudEnhancementTaskStatus(): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 14000011 |
-
-**示例**
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(context: Context) {
-  console.info('syncCloudEnhancementTaskStatusDemo');
-  try {
-    let cloudEnhancementInstance: photoAccessHelper.CloudEnhancement
-      = photoAccessHelper.CloudEnhancement.getCloudEnhancementInstance(context);
-    await cloudEnhancementInstance.syncCloudEnhancementTaskStatus();
-  } catch (err) {
-    console.error(`syncCloudEnhancementTaskStatusDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```

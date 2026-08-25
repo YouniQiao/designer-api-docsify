@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINTER_ADDED
@@ -17,8 +15,6 @@ PRINTER_ADDED = 0
 表示新打印机到达。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ PRINTER_REMOVED = 1
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINTER_CAPABILITY_UPDATED
@@ -45,8 +39,6 @@ PRINTER_CAPABILITY_UPDATED = 2
 表示打印机更新。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -60,8 +52,6 @@ PRINTER_CONNECTED = 3
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINTER_DISCONNECTED
@@ -74,8 +64,6 @@ PRINTER_DISCONNECTED = 4
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## PRINTER_RUNNING
@@ -87,7 +75,5 @@ PRINTER_RUNNING = 5
 表示打印机正在运行。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework

@@ -4,14 +4,12 @@ Provides APIs for setting different **DataSharePredicates** objects. This type i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
+import { dataSharePredicates } from 'kits/@kit.ArkData';
 ```
 
 ## beginsWith
@@ -24,8 +22,6 @@ Creates a **DataSharePredicates** object to match the data that begins with the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -44,13 +40,6 @@ Creates a **DataSharePredicates** object to match the data that begins with the 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.beginsWith("NAME", "os");
-```
 
 ## contains
 
@@ -62,8 +51,6 @@ Creates a **DataSharePredicates** object to match the data that contains the spe
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -82,13 +69,6 @@ Creates a **DataSharePredicates** object to match the data that contains the spe
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.contains("NAME", "os");
-```
 
 ## distinct
 
@@ -100,8 +80,6 @@ Creates a **DataSharePredicates** object to filter out duplicate data records.Cu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -113,13 +91,6 @@ Creates a **DataSharePredicates** object to filter out duplicate data records.Cu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.equalTo("NAME", "Rose").distinct();
-```
 
 ## endsWith
 
@@ -131,8 +102,6 @@ Creates a **DataSharePredicates** object to match the data that ends with the sp
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -151,13 +120,6 @@ Creates a **DataSharePredicates** object to match the data that ends with the sp
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.endsWith("NAME", "os");
-```
 
 ## glob
 
@@ -169,8 +131,6 @@ Creates a **DataSharePredicates** object to match the data that matches the spec
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -190,13 +150,6 @@ Creates a **DataSharePredicates** object to match the data that matches the spec
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.glob("NAME", "?h*g");
-```
-
 ## groupBy
 
 ```TypeScript
@@ -206,8 +159,6 @@ groupBy(fields: Array<string>): DataSharePredicates
 Creates a **DataSharePredicates** object group the records according to the specified fields.Currently, only RDB store supports this predicate.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -227,13 +178,6 @@ Creates a **DataSharePredicates** object group the records according to the spec
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.groupBy(["AGE", "NAME"]);
-```
-
 ## indexedBy
 
 ```TypeScript
@@ -243,8 +187,6 @@ indexedBy(field: string): DataSharePredicates
 Creates a **DataSharePredicates** object to list data by the specified index. Before using this API, ensure that the index column exists.Currently, only RDB store supports this predicate.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,13 +206,6 @@ Creates a **DataSharePredicates** object to list data by the specified index. Be
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.indexedBy("SALARY_INDEX");
-```
-
 ## inKeys
 
 ```TypeScript
@@ -280,8 +215,6 @@ inKeys(keys: Array<string>): DataSharePredicates
 Creates a **DataSharePredicates** object to match the data whose keys are within the given range.Currently, only the KVDB supports this **DataSharePredicates** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -301,13 +234,6 @@ Creates a **DataSharePredicates** object to match the data whose keys are within
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.inKeys(["Lisa", "Rose"]);
-```
-
 ## isNotNull
 
 ```TypeScript
@@ -317,8 +243,6 @@ isNotNull(field: string): DataSharePredicates
 Creates a **DataSharePredicates** object to match the data whose value is not null.Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -337,13 +261,6 @@ Creates a **DataSharePredicates** object to match the data whose value is not nu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.isNotNull("NAME");
-```
 
 ## isNull
 
@@ -355,8 +272,6 @@ Creates a **DataSharePredicates** object to match the data whose value is null.C
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -375,13 +290,6 @@ Creates a **DataSharePredicates** object to match the data whose value is null.C
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.isNull("NAME");
-```
-
 ## prefixKey
 
 ```TypeScript
@@ -391,8 +299,6 @@ prefixKey(prefix: string): DataSharePredicates
 Creates a **DataSharePredicates** object to match the data with the specified key prefix.Currently, only the KVDB supports this **DataSharePredicates** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -412,13 +318,6 @@ Creates a **DataSharePredicates** object to match the data with the specified ke
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.prefixKey("NAME");
-```
-
 ## unlike
 
 ```TypeScript
@@ -428,8 +327,6 @@ unlike(field: string, value: string): DataSharePredicates
 Creates a **DataSharePredicates** object to match the data that does not match the specified wildcard expression.Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -449,10 +346,3 @@ Creates a **DataSharePredicates** object to match the data that does not match t
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates();
-predicates.unlike("NAME", "%os%");
-```

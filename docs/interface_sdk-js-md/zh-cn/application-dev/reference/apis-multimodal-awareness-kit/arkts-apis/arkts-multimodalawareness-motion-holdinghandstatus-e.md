@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 ## NOT_HELD
@@ -17,8 +15,6 @@ NOT_HELD = 0
 表示未握持。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -32,8 +28,6 @@ LEFT_HAND_HELD = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 ## RIGHT_HAND_HELD
@@ -45,8 +39,6 @@ RIGHT_HAND_HELD = 2
 表示右手握持。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
@@ -60,8 +52,6 @@ BOTH_HANDS_HELD = 3
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
 ## UNKNOWN_STATUS
@@ -73,7 +63,5 @@ UNKNOWN_STATUS = 16
 表示未识别。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion

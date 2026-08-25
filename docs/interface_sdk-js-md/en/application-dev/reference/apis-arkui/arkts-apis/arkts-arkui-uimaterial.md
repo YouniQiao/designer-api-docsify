@@ -4,8 +4,6 @@ This module provides APIs for system materials. Different system materials corre
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -13,7 +11,7 @@ This module provides APIs for system materials. Different system materials corre
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
+import { uiMaterial } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

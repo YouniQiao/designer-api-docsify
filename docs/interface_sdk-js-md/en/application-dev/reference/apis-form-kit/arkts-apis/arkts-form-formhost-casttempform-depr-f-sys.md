@@ -15,8 +15,6 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** castTempForm
@@ -34,30 +32,6 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 | formId | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.castTempForm(formId, (error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost castTempForm, error: ${JSON.stringify(error)}`);
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.castTempForm(formId).then(() => {
-  console.info('formHost castTempForm success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost castTempForm, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## castTempForm
 
@@ -68,8 +42,6 @@ function castTempForm(formId: string): Promise<void>
 Converts a temporary widget to a normal one. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -92,7 +64,3 @@ Converts a temporary widget to a normal one. This API uses a promise to return t
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [castTempForm](#casttempform)

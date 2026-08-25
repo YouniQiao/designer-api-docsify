@@ -4,8 +4,6 @@ Enumerates the usage statuses of a widget.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ The widget is in use.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ UNUSED = 1
 The widget is not in use.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 

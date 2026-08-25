@@ -4,8 +4,6 @@ Enumerates the Wi-Fi security types.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## WIFI_SEC_TYPE_INVALID
@@ -17,8 +15,6 @@ WIFI_SEC_TYPE_INVALID = 0
 Invalid security type. For example, airport public Wi-Fi.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Open security type.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -49,8 +43,6 @@ WIFI_SEC_TYPE_WEP = 2
 Wired Equivalent Privacy (WEP).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +58,6 @@ PSK. For example, home and small office Wi-Fi.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -81,8 +71,6 @@ WIFI_SEC_TYPE_SAE = 4
 Simultaneous Authentication of Equals (SAE). For example, smart home and small- and medium-sized enterprise networks.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +86,6 @@ EAP. For example, large enterprise authentication and university campus networks
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -113,8 +99,6 @@ WIFI_SEC_TYPE_EAP_SUITE_B = 6
 Suite B 192-bit encryption. After the setting, Wi-Fi will use Suite-B 192-bit high-strength encryption, providing a high level of security authentication. It is suitable for government and high-security institutions.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,8 +114,6 @@ Opportunistic Wireless Encryption (OWE). For example, public Wi-Fi in a coffee s
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -146,8 +128,6 @@ WLAN Authentication and Privacy Infrastructure (WAPI) in certificate-based mode 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -161,8 +141,6 @@ WIFI_SEC_TYPE_WAPI_PSK = 9
 WAPI-PSK.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

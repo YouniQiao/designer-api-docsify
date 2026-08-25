@@ -6,14 +6,12 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
+import { DynamicLayout, DynamicLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -25,8 +23,6 @@ import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 动态布局容器。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

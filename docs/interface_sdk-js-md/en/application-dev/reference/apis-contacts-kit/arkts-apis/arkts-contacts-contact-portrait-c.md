@@ -15,14 +15,12 @@ Defines a contact's portrait.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## photo
@@ -36,8 +34,6 @@ Contact portrait in PixelMap format.
 **Type:** image.PixelMap
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -55,30 +51,6 @@ Contact portrait in URI format.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Create contact data in JSON format:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function SetPortraitUri(uri: string) {
-  let portrait: contact.Portrait = {
-    uri: uri
-  };
-}
-
-async function SetPortraitPixelMap(photo: image.PixelMap) {
-  let portrait: contact.Portrait = {
-    uri: "",
-    photo: photo
-  };
-}
-```

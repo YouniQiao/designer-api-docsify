@@ -4,14 +4,12 @@ P2P group information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## clientDevices
@@ -26,23 +24,19 @@ Client list
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## frequency
 
 ```TypeScript
-frequency: int
+frequency: number
 ```
 
 Frequency
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -58,8 +52,6 @@ Group owner IP address
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## groupName
@@ -73,8 +65,6 @@ Group name
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -90,24 +80,6 @@ Interface name
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
-**System capability:** SystemCapability.Communication.WiFi.P2P
-
-## interfaceName
-
-```TypeScript
-interfaceName: string
-```
-
-Interface name
-
-**Type:** string
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## isP2pGo
@@ -122,23 +94,19 @@ Indicates whether it is group owner
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## networkId
 
 ```TypeScript
-networkId: int
+networkId: number
 ```
 
 Network ID
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -154,8 +122,6 @@ Group owner information
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## passphrase
@@ -169,7 +135,5 @@ The group passphrase
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P

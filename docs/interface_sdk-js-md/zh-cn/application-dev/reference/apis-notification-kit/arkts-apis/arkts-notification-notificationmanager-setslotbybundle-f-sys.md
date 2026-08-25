@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setSlotByBundle
@@ -16,8 +16,6 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | [slot](arkts-notification-notificationsorting-notificationsorting-i-sys.md) | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -45,93 +43,6 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setSlotByBundleCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setSlotByBundle success');
-    }
-}
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-notificationManager.setSlotByBundle(bundle, notificationSlot, setSlotByBundleCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setSlotByBundleCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`setSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setSlotByBundle success');
-    }
-}
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-notificationManager.setSlotByBundle(bundle, notificationSlot, setSlotByBundleCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-
-notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
-    console.info('setSlotByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`setSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-
-notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
-    console.info('setSlotByBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setSlotByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## setSlotByBundle
 
@@ -143,8 +54,6 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -155,7 +64,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | [slot](arkts-notification-notificationsorting-notificationsorting-i-sys.md) | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | 是 |
 
 **返回值：**
@@ -176,7 +85,3 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [setSlotByBundle](#setslotbybundle)

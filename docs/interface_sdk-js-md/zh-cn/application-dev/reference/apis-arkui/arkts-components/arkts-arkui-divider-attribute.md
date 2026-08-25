@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ color(value: ResourceColor)
 设置分割线的颜色，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,8 +45,6 @@ lineCap(value: LineCapStyle)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -61,7 +55,7 @@ lineCap(value: LineCapStyle)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [LineCapStyle](../arkts-apis/arkts-arkui-enums-linecapstyle-e.md) | 是 |
+| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | 是 |
 
 ## strokeWidth
 
@@ -79,8 +73,6 @@ strokeWidth(value: number | string)
 > - 如果设备硬件存在1像素取整后分割线不显示问题，建议使用2像素。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -103,8 +95,6 @@ vertical(value: boolean)
 设置分割线的方向，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

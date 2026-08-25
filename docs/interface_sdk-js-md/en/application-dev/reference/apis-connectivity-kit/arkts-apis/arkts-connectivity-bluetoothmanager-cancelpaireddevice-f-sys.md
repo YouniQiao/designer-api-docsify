@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## cancelPairedDevice
@@ -15,8 +15,6 @@ function cancelPairedDevice(deviceId: string): void
 Remove a paired remote device. On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -47,14 +45,3 @@ Remove a paired remote device. On API 10 and above, the permission required by t
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    bluetoothManager.cancelPairedDevice("XX:XX:XX:XX:XX:XX");
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```

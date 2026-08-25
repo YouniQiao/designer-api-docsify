@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ UNIDENTIFIED = 0
 未被检测的资产
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ UNSUPPORTED = 1
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -55,8 +49,6 @@ SUPPORTED = 2
 该动图支持生成子弹时刻
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,8 +66,6 @@ USED = 3
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -91,8 +81,6 @@ LIVEPHOTO_4D = 4
 该动图本身是子弹时间
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

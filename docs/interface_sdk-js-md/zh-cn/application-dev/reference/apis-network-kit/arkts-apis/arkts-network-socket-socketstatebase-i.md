@@ -4,14 +4,12 @@ Socket的状态信息。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## isBound
@@ -25,8 +23,6 @@ isBound: boolean
 **类型：** boolean
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -42,8 +38,6 @@ isClose: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## isConnected
@@ -57,7 +51,5 @@ isConnected: boolean
 **类型：** boolean
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack

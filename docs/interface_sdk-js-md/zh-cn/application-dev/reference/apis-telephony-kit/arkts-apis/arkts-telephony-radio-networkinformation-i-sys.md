@@ -4,8 +4,6 @@ Obtains the network information.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ Obtains the network information.
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## operatorName
@@ -27,8 +25,6 @@ Indicates the name of the operator.
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -46,8 +42,6 @@ Indicates the number of the operator.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -64,8 +58,6 @@ Indicates the radio Technology.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -81,8 +73,6 @@ Indicates the status of network information.
 **类型：** [NetworkInformationState](arkts-telephony-radio-networkinformationstate-e-sys.md)
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

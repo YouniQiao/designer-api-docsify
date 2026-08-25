@@ -4,21 +4,17 @@ The module defines an observer to listen for event processing timeout. It can be
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onLoopTimeOut
 
 ```TypeScript
-onLoopTimeOut?(timeout: int): void
+onLoopTimeOut?(timeout: number): void
 ```
 
 Called when a timeout occurs for the main thread to process an event in the JS runtime.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -29,17 +25,3 @@ Called when a timeout occurs for the main thread to process an event in the JS r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | timeout | number | Yes |
-
-**Examples**
-
-```TypeScript
-import { errorManager } from '@kit.AbilityKit';
-
-let observer: errorManager.LoopObserver = {
-  onLoopTimeOut(timeout: number) {
-    console.info('Duration timeout: ' + timeout);
-  }
-};
-
-errorManager.on("loopObserver", 1, observer);
-```

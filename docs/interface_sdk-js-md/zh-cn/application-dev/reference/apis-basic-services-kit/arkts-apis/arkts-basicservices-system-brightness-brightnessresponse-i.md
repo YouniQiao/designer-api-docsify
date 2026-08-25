@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 7
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
+import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## value
@@ -27,8 +25,6 @@ value: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 7
 

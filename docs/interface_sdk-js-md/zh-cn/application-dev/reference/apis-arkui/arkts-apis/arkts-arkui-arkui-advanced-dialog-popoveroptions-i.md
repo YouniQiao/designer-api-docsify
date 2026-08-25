@@ -1,15 +1,13 @@
 # PopoverOptions
 
-跟手弹出框参数，用于设置弹出框内容、位置属性等。继承自CustomPopupOptions。
+跟手弹出框参数，用于设置弹出框内容、位置属性等。继承自[CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md)。
 
 > **说明：**&gt;
 > radius默认值为32vp。
 
-**继承/实现关系：** PopoverOptions extends CustomPopupOptions
+**继承/实现关系：** PopoverOptions extends [CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -20,5 +18,5 @@
 ## 导入模块
 
 ```TypeScript
-import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
+import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from 'kits/@kit.ArkUI';
 ```

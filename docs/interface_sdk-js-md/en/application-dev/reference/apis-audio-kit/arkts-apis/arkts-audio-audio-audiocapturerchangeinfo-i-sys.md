@@ -4,14 +4,12 @@ Describes the audio capturer change event.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## capturerState
@@ -26,8 +24,6 @@ Audio state.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -35,16 +31,14 @@ Audio state.
 ## clientUid
 
 ```TypeScript
-readonly clientUid: int
+readonly clientUid: number
 ```
 
 Uid for audio capturer client application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 

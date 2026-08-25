@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
+import { networkSecurity } from 'kits/@kit.NetworkKit';
 ```
 
 ## certVerificationSync
 
 ```TypeScript
-export function certVerificationSync(cert: CertBlob, caCert?: CertBlob): int
+export function certVerificationSync(cert: CertBlob, caCert?: CertBlob): number
 ```
 
 Verifies the certificate passed by the application using the preset CA certificate and the CA certificate installed by the user in the certificate management. This API returns the result synchronously.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -31,7 +29,7 @@ Verifies the certificate passed by the application using the preset CA certifica
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -55,33 +53,3 @@ Verifies the certificate passed by the application using the preset CA certifica
 | [2305027](../errorcode-net-networkSecurity.md#2305027-untrusted-certificate) |
 | [2305018](../errorcode-net-networkSecurity.md#2305018-self-signed-certificate) |
 | [2305069](../errorcode-net-networkSecurity.md#2305069-invalid-certificate-verification-context) |
-
-**Examples**
-
-```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
-
-// Create certificate blobs
-const cert: networkSecurity.CertBlob = {
-  type: networkSecurity.CertType.CERT_TYPE_PEM,
-  data: '-----BEGIN CERTIFICATE-----\n...'
-};
-
-const caCert: networkSecurity.CertBlob = {
-  type: networkSecurity.CertType.CERT_TYPE_PEM,
-  data: '-----BEGIN CERTIFICATE-----\n...'
-};
-
-// Asynchronous verification
-networkSecurity.certVerification(cert, caCert)
-  .then((result) => {
-    console.info('Verification Result:', result);
-  })
-  .catch((error: BusinessError) => {
-    console.error('Verification Error:', error);
-  });
-
-// Synchronous verification
-let resultSync: number = networkSecurity.certVerificationSync(cert, caCert);
-console.info('Synchronous Verification Result:', resultSync);
-```

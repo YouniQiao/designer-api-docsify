@@ -4,8 +4,6 @@ Enumerates the file open modes.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md)
@@ -23,8 +21,6 @@ READ = 0o0
 Read mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -46,8 +42,6 @@ Write mode.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md)
@@ -67,8 +61,6 @@ WRITE_READ = 0o2
 Read/Write mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 

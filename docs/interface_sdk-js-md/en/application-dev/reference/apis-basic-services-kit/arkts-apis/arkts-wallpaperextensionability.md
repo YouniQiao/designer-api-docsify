@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
+import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

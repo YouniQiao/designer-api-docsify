@@ -4,33 +4,23 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getColorTintRange
 
-ArkTS-Dyn:
 ```TypeScript
 getColorTintRange(): Array<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-getColorTintRange(): Array<int>
 ```
 
 获取支持配置的白平衡色调调节范围。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,7 +32,7 @@ getColorTintRange(): Array<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
@@ -50,40 +40,15 @@ getColorTintRange(): Array<int>
 | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getColorTintRange(session: camera.PhotoSession | camera.VideoSession): Array<number> {
-  let range: Array<number> = [];
-  try {
-    range = session.getColorTintRange();
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The getColorTintRange call failed. error code: ${err.code}`);
-  }
-  return range;
-}
-```
-
 ## getWhiteBalanceRange
 
-ArkTS-Dyn:
 ```TypeScript
 getWhiteBalanceRange(): Array<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-getWhiteBalanceRange(): Array<int>
 ```
 
 获取手动白平衡模式下，白平衡值的范围。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -93,7 +58,7 @@ getWhiteBalanceRange(): Array<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
@@ -101,23 +66,6 @@ getWhiteBalanceRange(): Array<int>
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getWhiteBalanceRange(session: camera.PhotoSession | camera.VideoSession): Array<number> {
-  let range: Array<number> = [];
-  try {
-    range = session.getWhiteBalanceRange();
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The getWhiteBalanceRange call failed. error code: ${err.code}`);
-  }
-  return range;
-}
-```
 
 ## isWhiteBalanceModeSupported
 
@@ -128,8 +76,6 @@ isWhiteBalanceModeSupported(mode: WhiteBalanceMode): boolean
 检测是否支持当前传入的白平衡模式。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -154,21 +100,3 @@ isWhiteBalanceModeSupported(mode: WhiteBalanceMode): boolean
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400101](../errorcode-camera.md#7400101-无效入参) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isWhiteBalanceModeSupported(session: camera.PhotoSession | camera.VideoSession): boolean {
-  let status: boolean = false;
-  try {
-  let mode: camera.WhiteBalanceMode = camera.WhiteBalanceMode.DAYLIGHT;
-    status = session.isWhiteBalanceModeSupported(mode);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The isWhiteBalanceModeSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```

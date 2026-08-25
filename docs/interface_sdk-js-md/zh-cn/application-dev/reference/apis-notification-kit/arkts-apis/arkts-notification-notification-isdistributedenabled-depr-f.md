@@ -15,8 +15,6 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md)
@@ -29,32 +27,6 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let isDistributedEnabledCallback = (err: Base.BusinessError, data: boolean) => {
-  if (err) {
-    console.error("isDistributedEnabled failed " + JSON.stringify(err));
-  } else {
-    console.info("isDistributedEnabled success " + JSON.stringify(data));
-  }
-};
-
-Notification.isDistributedEnabled(isDistributedEnabledCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.isDistributedEnabled().then((data: boolean) => {
-    console.info("isDistributedEnabled success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isDistributedEnabled failed, code is ${err}`);
-});
-```
-
 
 ## isDistributedEnabled
 
@@ -65,8 +37,6 @@ function isDistributedEnabled(): Promise<boolean>
 查询设备是否支持分布式通知（Promise形式）。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -79,7 +49,3 @@ function isDistributedEnabled(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isDistributedEnabled](#isdistributedenabled)

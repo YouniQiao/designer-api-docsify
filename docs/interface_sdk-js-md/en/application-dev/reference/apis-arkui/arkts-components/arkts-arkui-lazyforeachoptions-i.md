@@ -4,8 +4,6 @@ Defines the options for LazyForEach.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Freeze mode for cached custom nodes that have been removed from the component tr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -46,8 +42,6 @@ Memory optimization strategy for LazyForEach.
 **Type:** [LazyForEachMemOptStrategy](arkts-arkui-lazyforeachmemoptstrategy-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +62,6 @@ Resource release strategy for LazyForEach discarded nodes. Default value: LazyFo
 **Default:** LazyForEachReleaseStrategy.BATCH
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

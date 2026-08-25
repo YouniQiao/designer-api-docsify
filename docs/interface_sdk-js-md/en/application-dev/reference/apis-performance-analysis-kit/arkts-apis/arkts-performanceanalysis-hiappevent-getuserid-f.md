@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getUserId
@@ -15,8 +15,6 @@ function getUserId(name: string): string
 Obtains the value set through **setUserId**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,17 +37,3 @@ Obtains the value set through **setUserId**.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hiAppEvent.setUserId('key', 'value');
-try {
-  let value: string = hiAppEvent.getUserId('key');
-  hilog.info(0x0000, 'hiAppEvent', `getUserId event was successful, userId=${value}`);
-} catch (error) {
-  hilog.error(0x0000, 'hiAppEvent', `failed to getUserId event, code=${error.code}`);
-}
-```

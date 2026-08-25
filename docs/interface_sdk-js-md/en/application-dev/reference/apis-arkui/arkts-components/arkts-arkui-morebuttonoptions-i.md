@@ -4,8 +4,6 @@ Defines the options for the more button menu.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Background blur style of the more button menu. If this parameter is not set, bac
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -42,11 +38,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 Options for the title bar background blur style.  
 **NOTE：**This parameter is only effective when **backgroundBlurStyle** is set.Avoid using this API in conjunction with **backgroundEffect**.
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,11 +57,9 @@ backgroundEffect?: BackgroundEffectOptions
 Title bar background properties, including blur radius, brightness, saturation, and color.  
 **NOTE：**Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

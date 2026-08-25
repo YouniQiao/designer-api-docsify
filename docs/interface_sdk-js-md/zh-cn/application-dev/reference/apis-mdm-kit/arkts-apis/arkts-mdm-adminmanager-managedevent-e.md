@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_BUNDLE_ADDED
@@ -17,8 +15,6 @@ MANAGED_EVENT_BUNDLE_ADDED = 0
 应用安装事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -32,8 +28,6 @@ MANAGED_EVENT_BUNDLE_REMOVED = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_APP_START
@@ -45,8 +39,6 @@ MANAGED_EVENT_APP_START = 2
 应用启动事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -60,8 +52,6 @@ MANAGED_EVENT_APP_STOP = 3
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_SYSTEM_UPDATE
@@ -73,8 +63,6 @@ MANAGED_EVENT_SYSTEM_UPDATE = 4
 系统更新事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -88,8 +76,6 @@ MANAGED_EVENT_ACCOUNT_ADDED = 5
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_ACCOUNT_SWITCHED
@@ -101,8 +87,6 @@ MANAGED_EVENT_ACCOUNT_SWITCHED = 6
 账号切换事件。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -116,8 +100,6 @@ MANAGED_EVENT_ACCOUNT_REMOVED = 7
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## MANAGED_EVENT_STARTUP_GUIDE_COMPLETED
@@ -129,8 +111,6 @@ MANAGED_EVENT_STARTUP_GUIDE_COMPLETED = 8
 开机向导完成事件。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -145,8 +125,6 @@ MANAGED_EVENT_BOOT_COMPLETED = 9
 设备启动完成事件。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -163,8 +141,6 @@ MANAGED_EVENT_BUNDLE_UPDATED = 10
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -179,8 +155,6 @@ MANAGED_EVENT_POLICIES_CHANGED = 11
 **起始版本**：26.0.0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

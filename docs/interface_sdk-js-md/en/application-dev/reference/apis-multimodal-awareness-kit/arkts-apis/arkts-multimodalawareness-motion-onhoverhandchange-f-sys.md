@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onHoverHandChange
@@ -15,8 +15,6 @@ function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Call
 Subscribes to hover hand events and immediately starts detection for five seconds.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,14 +43,12 @@ Subscribes to hover hand events and immediately starts detection for five second
 
 ```TypeScript
 function onHoverHandChange(
-    detectionArea: HoverHandDetectionArea, duration: int, callback: Callback<HoverHandAction>): void
+    detectionArea: HoverHandDetectionArea, duration: number, callback: Callback<HoverHandAction>): void
 ```
 
 Subscribes to hover hand events and immediately starts detection.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,7 +61,7 @@ Subscribes to hover hand events and immediately starts detection.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | Yes |
-| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| duration | number | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | Yes |
 
 **Error codes:**

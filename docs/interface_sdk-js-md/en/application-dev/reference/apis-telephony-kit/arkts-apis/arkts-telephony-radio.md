@@ -4,14 +4,12 @@ The **radio** module provides basic network search management functions. Using t
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## Summary
@@ -82,10 +80,8 @@ import { radio } from '@kit.TelephonyKit';
 | [getUniqueDeviceId(Network Search)](arkts-telephony-radio-getuniquedeviceid-f-sys.md) |
 | [getUniqueDeviceId(Network Search)](arkts-telephony-radio-getuniquedeviceid-f-sys.md) |
 | [isManualNetworkScanning(Network Search)](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md) |
-| [off(Network Search)](arkts-telephony-radio-off-f-sys.md#offimsregstatechange) |
-| [offImsRegStateChange(Network Search)](arkts-telephony-radio-offimsregstatechange-f-sys.md) |
-| [on(Network Search)](arkts-telephony-radio-on-f-sys.md#onimsregstatechange) |
-| [onImsRegStateChange(Network Search)](arkts-telephony-radio-onimsregstatechange-f-sys.md) |
+| off(Network Search) |
+| on(Network Search) |
 | [sendUpdateCellLocationRequest(Network Search)](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) |
 | [sendUpdateCellLocationRequest(Network Search)](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) |
 | [sendUpdateCellLocationRequest(Network Search)](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) |

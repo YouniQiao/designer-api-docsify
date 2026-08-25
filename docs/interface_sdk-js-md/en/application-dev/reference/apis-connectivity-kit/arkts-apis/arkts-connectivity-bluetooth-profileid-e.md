@@ -4,8 +4,6 @@ The enum of profile id.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md)
@@ -22,8 +20,6 @@ A2DP profile.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PROFILE_A2DP_SOURCE](arkts-connectivity-bluetoothmanager-profileid-e.md#profile_a2dp_source)
@@ -39,8 +35,6 @@ PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4
 HFP profile.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

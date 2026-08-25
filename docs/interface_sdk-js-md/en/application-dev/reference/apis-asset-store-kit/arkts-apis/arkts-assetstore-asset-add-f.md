@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## add
@@ -15,8 +15,6 @@ function add(attributes: AssetMap): Promise<void>
 Adds an asset. This API uses a promise to return the result.To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#is_persistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -53,24 +51,3 @@ Adds an asset. This API uses a promise to return the result.To set [IS_PERSISTEN
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
 | [24000014](../errorcode-asset.md#24000014-file-operation-failed) |
 | [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let attr: asset.AssetMap = new Map();
-attr.set(asset.Tag.SECRET, stringToArray('demo_pwd'));
-attr.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-attr.set(asset.Tag.ACCESSIBILITY, asset.Accessibility.DEVICE_FIRST_UNLOCKED);
-attr.set(asset.Tag.DATA_LABEL_NORMAL_1, stringToArray('demo_label'));
-asset.add(attr).then(() => {
-  console.info(`Succeeded in adding Asset.`);
-});
-```

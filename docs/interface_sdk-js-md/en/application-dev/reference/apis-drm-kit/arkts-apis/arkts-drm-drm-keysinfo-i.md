@@ -4,14 +4,12 @@ Defines the status information of a media key.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'kits/@kit.DrmKit';
 ```
 
 ## keyId
@@ -25,8 +23,6 @@ Media key ID.
 **Type:** Uint8Array
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,8 +39,6 @@ Media key status.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

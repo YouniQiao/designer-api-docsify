@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## TRIANGLES_VERTEXMODE
@@ -17,8 +15,6 @@ TRIANGLES_VERTEXMODE = 0
 顶点按顺序每三个一组，分别构成独立的三角形。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ TRIANGLESSTRIP_VERTEXMODE = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## TRIANGLESFAN_VERTEXMODE
@@ -45,7 +39,5 @@ TRIANGLESFAN_VERTEXMODE = 2
 所有三角形共享一个顶点。适用于绘制圆形/扇形的场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing

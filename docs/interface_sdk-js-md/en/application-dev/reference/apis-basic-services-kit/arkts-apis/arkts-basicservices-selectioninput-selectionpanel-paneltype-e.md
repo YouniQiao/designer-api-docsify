@@ -4,8 +4,6 @@ Enumerates the word selection panel types, which defines the two-level architect
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 ## MENU_PANEL
@@ -17,8 +15,6 @@ MENU_PANEL = 1
 Menu panel, which serves as the level-1 panel to display the functions that the current app can provide, such as translation and search.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,8 +29,6 @@ MAIN_PANEL = 2
 Main panel, which serves as the level-2 panel and is displayed when a user taps a function button on the menu panel. It displays specific content such as translation or search results.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

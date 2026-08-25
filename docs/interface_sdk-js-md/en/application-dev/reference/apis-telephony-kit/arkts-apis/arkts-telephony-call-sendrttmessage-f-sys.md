@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendRttMessage
 
 ```TypeScript
-function sendRttMessage(callId: int, rttMessage: string): Promise<void>
+function sendRttMessage(callId: number, rttMessage: string): Promise<void>
 ```
 
 Send rtt message.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -28,7 +26,7 @@ Send rtt message.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | [rttMessage](arkts-telephony-call-rttmessageinfo-i-sys.md) | string | Yes |
 
 **Return value:**

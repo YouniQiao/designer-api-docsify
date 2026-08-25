@@ -4,14 +4,12 @@ WebSchemeHandlerRequest类模块定义了通过WebSchemeHandler拦截到的资�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getFrameUrl
@@ -24,8 +22,6 @@ getFrameUrl(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -33,10 +29,6 @@ getFrameUrl(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getHeader
 
@@ -48,8 +40,6 @@ getHeader(): Array<WebHeader>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -59,10 +49,6 @@ getHeader(): Array<WebHeader>
 | 类型 |
 | --- |
 | Array & lt;WebHeader & gt; |
-
-**示例**
-
-完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getHttpBodyStream
 
@@ -74,8 +60,6 @@ getHttpBodyStream(): WebHttpBodyStream | null
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -85,10 +69,6 @@ getHttpBodyStream(): WebHttpBodyStream | null
 | 类型 |
 | --- |
 | [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null |
-
-**示例**
-
-完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getReferrer
 
@@ -100,8 +80,6 @@ getReferrer(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -111,10 +89,6 @@ getReferrer(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getRequestMethod
 
@@ -126,8 +100,6 @@ getRequestMethod(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -137,10 +109,6 @@ getRequestMethod(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getRequestResourceType
 
@@ -152,8 +120,6 @@ getRequestResourceType(): WebResourceType
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -161,10 +127,6 @@ getRequestResourceType(): WebResourceType
 | 类型 |
 | --- |
 | [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) |
-
-**示例**
-
-完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## getRequestUrl
 
@@ -176,8 +138,6 @@ getRequestUrl(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -187,10 +147,6 @@ getRequestUrl(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## hasGesture
 
@@ -202,8 +158,6 @@ hasGesture(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -213,10 +167,6 @@ hasGesture(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
 
 ## isMainFrame
 
@@ -228,8 +178,6 @@ isMainFrame(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -239,7 +187,3 @@ isMainFrame(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-完整示例代码参考[onRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。

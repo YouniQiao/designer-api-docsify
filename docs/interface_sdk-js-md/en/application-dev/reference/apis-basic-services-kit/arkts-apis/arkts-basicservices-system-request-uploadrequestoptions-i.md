@@ -7,8 +7,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
@@ -18,7 +16,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from '@kit.BasicServicesKit';
+import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -30,8 +28,6 @@ complete?: () => void
 Called when the execution is completed.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ fail?: (data: any, code: number) => void
 Called when uploading fails.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -73,8 +67,6 @@ success?: (data: UploadResponse) => void
 Called when the files are uploaded successfully.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -100,8 +92,6 @@ Form data in the request body.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** data
@@ -119,8 +109,6 @@ List of files to upload, which is submitted through multipart/form-data.
 **Type:** Array&lt;[RequestFile](arkts-basicservices-system-request-requestfile-i.md)&gt;
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -140,8 +128,6 @@ Request header.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** headers
@@ -160,8 +146,6 @@ Request methods available: POST and PUT. The default value is POST.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** method
@@ -179,8 +163,6 @@ Resource URL.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 

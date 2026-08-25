@@ -4,8 +4,6 @@ Enumerates the media types that trigger the context menu (enhanced type obtainin
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 Default value, indicating that the current context menu is not associated with any media type (for example, right- click text or blank area).
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ Image.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## VIDEO
@@ -45,8 +39,6 @@ VIDEO = 2
 Video.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,8 +52,6 @@ Audio.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## CANVAS
@@ -73,7 +63,5 @@ CANVAS = 4
 Canvas.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core

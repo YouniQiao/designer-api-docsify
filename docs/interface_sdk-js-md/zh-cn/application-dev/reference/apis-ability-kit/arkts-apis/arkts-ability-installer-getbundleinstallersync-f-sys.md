@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## getBundleInstallerSync
@@ -15,8 +15,6 @@ function getBundleInstallerSync(): BundleInstaller
 获取并返回BundleInstaller对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -33,18 +31,3 @@ function getBundleInstallerSync(): BundleInstaller
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    installer.getBundleInstallerSync();
-    console.info('getBundleInstallerSync successfully.');
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstallerSync failed. Cause: ' + message);
-}
-```

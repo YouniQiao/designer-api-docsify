@@ -4,8 +4,6 @@ Represents a device clipboard policy.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Default policy, which indicates no policy.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Allow the clipboard to be used in the same application.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -50,8 +44,6 @@ Allow the clipboard to be used on the same device.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -65,8 +57,6 @@ CROSS_DEVICE = 3
 Allow the clipboard to be used across devices.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

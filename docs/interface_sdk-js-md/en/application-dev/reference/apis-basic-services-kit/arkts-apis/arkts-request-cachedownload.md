@@ -1,18 +1,20 @@
 # @ohos.request.cacheDownload(Download and Cache)
 
 The **request** module provides applications with the basic capabilities of file upload and download and background transfer proxy.  
-- The child component **cacheDownload** provides the basic capability of caching application resources in advance. - **cacheDownload** uses the HTTP to download data and caches data resources to the application memory or specified files in the application sandbox directory. - The cached data can be used by specific ArkUI components (such as **Image**) to improve resource loading efficiency. Check whether the ArkUI components support this function by referring to the ArkUI component topics.
+- The child component **cacheDownload** provides the basic capability of caching application resources in advance.  
+- **cacheDownload** uses the HTTP to download data and caches data resources to the application memory or specified  
+files in the application sandbox directory.  
+- The cached data can be used by specific ArkUI components (such as **Image**) to improve resource loading  
+efficiency. Check whether the ArkUI components support this function by referring to the ArkUI component topics.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 Triggered when content is about to be deleted in the input method.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>)
 Triggered when content is about to be entered in the input method.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,8 +72,6 @@ Sets the display mode of the **RichEditor** scrollbar.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -90,7 +82,7 @@ Sets the display mode of the **RichEditor** scrollbar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| state | [BarState](#barstate) | Yes |
+| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes |
 
 ## bindSelectionMenu
 
@@ -99,11 +91,9 @@ bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, response
     options?: SelectionMenuOptions)
 ```
 
-Sets the custom context menu on text selection. If the custom menu is too long, embed a Scroll component to prevent the keyboard from being blocked.
+Sets the custom context menu on text selection. If the custom menu is too number, embed a Scroll component to prevent the keyboard from being blocked.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,7 +107,7 @@ Sets the custom context menu on text selection. If the custom menu is too long, 
 | --- | --- | --- |
 | spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | Yes |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
-| responseType | ResponseType \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | Yes |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | Yes |
 | options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | No |
 
 ## caretColor
@@ -129,8 +119,6 @@ caretColor(value: ResourceColor)
 Sets the color of the caret and selection handle in the text box.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,8 +147,6 @@ Sets whether to enable punctuation compression at the beginning of a line.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -171,7 +157,7 @@ Sets whether to enable punctuation compression at the beginning of a line.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## copyOptions
 
@@ -180,12 +166,12 @@ copyOptions(value: CopyOptions)
 ```
 
 Specifies whether copy and paste is allowed for text content.Since API version 20, copied or cut text from the **RichEditor** component includes HTML-formatted content in the pasteboard.  
-- Only TextSpan and ImageSpan can add HTML content to the pasteboard. Other span types (such as BuilderSpan, SymbolSpan, and CustomSpan) cannot add HTML content to the pasteboard. - For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.  
-If copyOptions is not set to CopyOptions.None, a text selection menu will be displayed when you long-press the component content. If a custom context menu is defined through **bindSelectionMenu** or other approaches, it will be displayed.If copyOptions is set to CopyOptions.None, the copy, cut, translate, share, search, and write-aid functions are disabled, and drag-and-drop operations are not supported.
+- Only TextSpan and ImageSpan can add HTML content to the pasteboard. Other span types (such as BuilderSpan,  
+SymbolSpan, and CustomSpan) cannot add HTML content to the pasteboard.  
+- For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion  
+scope.If copyOptions is not set to CopyOptions.None, a text selection menu will be displayed when you number-press the component content. If a custom context menu is defined through **bindSelectionMenu** or other approaches, it will be displayed.If copyOptions is set to CopyOptions.None, the copy, cut, translate, share, search, and write-aid functions are disabled, and drag-and-drop operations are not supported.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,8 +201,6 @@ Sets a custom keyboard.When a custom keyboard is set, activating the text box op
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -227,7 +211,7 @@ Sets a custom keyboard.When a custom keyboard is set, activating the text box op
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | CustomBuilder \| ComponentContent \| undefined | Yes |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | Yes |
 | options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | No |
 
 ## dataDetectorConfig
@@ -236,13 +220,11 @@ Sets a custom keyboard.When a custom keyboard is set, activating the text box op
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-Configures special entity recognition settings, including entity types to detect, display styles for detected entities, and long-press preview options.This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.When entities A and B overlap, the following rules are followed:
+Configures special entity recognition settings, including entity types to detect, display styles for detected entities, and number-press preview options.This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.When entities A and B overlap, the following rules are followed:
 1. If A ⊂ B, retain B. Otherwise, retain A.
 2. When A ⊄ B and B ⊄ A: If A.start &lt; B.start, retain A; otherwise, retain B.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,8 +254,6 @@ Sets the extended options of the default system menu, including the text content
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -284,7 +264,7 @@ Sets the extended options of the default system menu, including the text content
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| editMenu | [EditMenuOptions](#editmenuoptions) | Yes |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes |
 
 ## enableAutoSpacing
 
@@ -296,8 +276,6 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -308,7 +286,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## enableDataDetector
 
@@ -319,8 +297,6 @@ enableDataDetector(enable: boolean)
 Enables recognition for special entities within the text.For this API to work, the target device must provide the text recognition capability.If enableDataDetector is set to true and the [dataDetectorConfig](#datadetectorconfig) attribute is not specified, the system identifies all types of entities by default, and changes the color and decoration of these entities to the preset style.Touching and right-clicking an entity opens a context menu with actions based on entity type, while left-clicking triggers the first menu option directly.This API does not work for the node text of **addBuilderSpan**.When **copyOptions** is set to **CopyOptions.None**, the menu displayed after an entity is clicked does not provide the text selection or copy functionality.<!--RP1--><!--RP1End-->
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -349,8 +325,6 @@ Sets whether to enable haptic feedback.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -377,8 +351,6 @@ Sets whether to enable the input method when the **RichEditor** component obtain
 > since API version 18.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -407,8 +379,6 @@ Sets whether to enable preview text.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -430,8 +400,6 @@ enableSelectedDataDetector(enable: boolean | undefined)
 Sets whether to enable the AI menu function for text selection. After this function is enabled, the email address, phone number, website address, date, and address in the selection area can be identified, and the corresponding AI menu items can be displayed in the text selection menu. By default, the AI menu feature is enabled.When the AI menu function is enabled, after a text is selected in the component, the corresponding AI menu item is displayed in the text selection menu, including the URL (opening a connection) and email (creating an email) in [TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)., phoneNumber (call), address (navigation), and dateTime (new event).When the AI menu takes effect, the corresponding options can be displayed only when the selected scope contains only one complete AI entity. This menu item does not appear at the same time as the askAI menu item in [TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md).This function takes effect only when [copyOptions](#copyoptions) is set to CopyOptions.LocalDevice or CopyOptions.CROSS_DEVICE.This API depends on the text recognition capability at the bottom layer of the device. Otherwise, the setting does not take effect.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -455,8 +423,6 @@ Sets the Enter key type of the soft keyboard.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -479,8 +445,6 @@ For multi-line text overlay, the line height can be automatically adjusted based
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -491,7 +455,7 @@ For multi-line text overlay, the line height can be automatically adjusted based
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## horizontalScrolling
 
@@ -503,8 +467,6 @@ Whether to enable horizontal scrolling when text is wider than the view. The def
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -515,7 +477,7 @@ Whether to enable horizontal scrolling when text is wider than the view. The def
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## includeFontPadding
 
@@ -527,8 +489,6 @@ Sets whether to add a spacing between the first and last lines to avoid text tru
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -539,7 +499,7 @@ Sets whether to add a spacing between the first and last lines to avoid text tru
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| include | Optional & lt;boolean & gt; | Yes |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## keyboardAppearance
 
@@ -551,8 +511,6 @@ Sets the keyboard appearance.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -563,7 +521,7 @@ Sets the keyboard appearance.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| appearance | Optional & lt;KeyboardAppearance & gt; | Yes |
+| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | Yes |
 
 ## maxLength
 
@@ -575,8 +533,6 @@ Sets the maximum length of the component content. When the total length of the c
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -587,7 +543,7 @@ Sets the maximum length of the component content. When the total length of the c
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [maxLength](#maxlength) | Optional & lt;number & gt; | Yes |
+| [maxLength](#maxlength) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 ## maxLines
 
@@ -599,8 +555,6 @@ Sets the maximum number of lines that the rich text can display. When **maxLines
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -611,7 +565,7 @@ Sets the maximum number of lines that the rich text can display. When **maxLines
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [maxLines](#maxlines) | Optional & lt;number & gt; | Yes |
+| [maxLines](#maxlines) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 ## onCopy
 
@@ -622,8 +576,6 @@ onCopy(callback: Callback<CopyEvent>)
 Triggered during copy. You can use this method to override the system's default behavior and implement the copying of text and images.The **RichEditor** component constructed using [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) supports copying of text and images by default.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -647,8 +599,6 @@ Triggered during cutting. You can use this method to override the system's defau
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -670,8 +620,6 @@ onDeleteComplete(callback: Callback<void>)
 Triggered when content is deleted in the input method.This callback is not supported when the **RichEditor** component constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -700,8 +648,6 @@ Triggered after an addition or deletion operation is performed in the component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -729,8 +675,6 @@ Triggered when text input in the input method is complete.This callback is not s
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -741,7 +685,7 @@ Triggered when text input in the input method is complete.This callback is not s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Callback & lt;TextRange & gt; | Yes |
+| callback | Callback&lt;[TextRange](../arkts-apis/arkts-arkui-textrange-i.md)&gt; | Yes |
 
 ## onEditingChange
 
@@ -752,8 +696,6 @@ onEditingChange(callback: Callback<boolean>)
 Triggered when the content editing state in the component changes.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -777,8 +719,6 @@ Triggered when text input in the input method is complete.This callback can retu
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -800,8 +740,6 @@ onPaste(callback: PasteEventCallback)
 Triggered when a paste operation is performed. You can use this API to override the default system behavior so that both images and text can be pasted.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -825,8 +763,6 @@ Triggered after the **RichEditor** component is initialized.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -845,11 +781,9 @@ Triggered after the **RichEditor** component is initialized.
 onSelect(callback: Callback<RichEditorSelection>)
 ```
 
-Invoked when content is selected.If a mouse device is used for selection, this callback is invoked when the left mouse button is double-clicked to select content and invoked again when the button is released.If a finger is used for selection, this callback is invoked by a long press and invoked again when the finger is released.If the selected area is continuously modified by using a finger or mouse or if the selected area is triple-clicked, the onSelect callback is not invoked.If the selection area needs to be detected in real time or the RichEditor component constructed using [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used, use the onSelectionChange API.
+Invoked when content is selected.If a mouse device is used for selection, this callback is invoked when the left mouse button is number-clicked to select content and invoked again when the button is released.If a finger is used for selection, this callback is invoked by a number press and invoked again when the finger is released.If the selected area is continuously modified by using a finger or mouse or if the selected area is triple-clicked, the onSelect callback is not invoked.If the selection area needs to be detected in real time or the RichEditor component constructed using [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) is used, use the onSelectionChange API.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -873,8 +807,6 @@ Triggered when the selection area or caret position changes in the editing state
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -896,8 +828,6 @@ onSubmit(callback: SubmitCallback)
 Triggered when the Enter key on the soft keyboard is pressed.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -921,8 +851,6 @@ Triggers a callback before a component is bound to an input method.Call the [set
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -933,7 +861,7 @@ Triggers a callback before a component is bound to an input method.Call the [set
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Callback & lt;IMEClient & gt; \ | undefined | Yes |
+| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; \| undefined | Yes |
 
 ## onWillChange
 
@@ -949,8 +877,6 @@ Invoked when any addition or deletion operation is about to be performed in the 
 > since API version 18.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -974,8 +900,6 @@ Whether to avoid an orphan word on the last line of the paragraph.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -984,7 +908,7 @@ Whether to avoid an orphan word on the last line of the paragraph.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## placeholder
 
@@ -1000,8 +924,6 @@ Sets the placeholder text, which is displayed when there is no input.
 > since API version 18.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1026,8 +948,6 @@ Whether to enable punctuation overflow at line ends.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1038,7 +958,7 @@ Whether to enable punctuation overflow at line ends.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## scrollBarColor
 
@@ -1050,8 +970,6 @@ Sets the color of the scrollbar.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -1062,7 +980,7 @@ Sets the color of the scrollbar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Optional & lt;ColorMetrics & gt; | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes |
 
 ## selectedBackgroundColor
 
@@ -1073,8 +991,6 @@ selectedBackgroundColor(value: ResourceColor)
 Sets the background color of the selected text. If the opacity is not set, a 20% opacity will be used.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1098,8 +1014,6 @@ Sets the drag and view style.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -1110,7 +1024,7 @@ Sets the drag and view style.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | SelectedDragPreviewStyle \| undefined | Yes |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | Yes |
 
 ## singleLine
 
@@ -1125,8 +1039,6 @@ Sets whether to enable the single-line mode. If this interface is not used, the 
 > In single-line mode, the newline character is displayed as a space.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1150,8 +1062,6 @@ Sets whether to prevent the back button press from being propagated to other com
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1162,7 +1072,7 @@ Sets whether to prevent the back button press from being propagated to other com
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isStopped | Optional & lt;boolean & gt; | Yes |
+| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## undoStyle
 
@@ -1174,8 +1084,6 @@ Sets whether to retain the original content style when undoing or redoing an act
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1186,4 +1094,4 @@ Sets whether to retain the original content style when undoing or redoing an act
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | Yes |

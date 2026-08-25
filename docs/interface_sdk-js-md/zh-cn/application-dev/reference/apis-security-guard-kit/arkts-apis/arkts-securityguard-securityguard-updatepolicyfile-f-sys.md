@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## updatePolicyFile
@@ -15,8 +15,6 @@ function updatePolicyFile(policyFile: PolicyFile): Promise<void>
 更新配置文件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.MANAGE_SECURITY_GUARD_CONFIG
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## replaceUrl
@@ -25,8 +25,6 @@ function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -51,104 +49,6 @@ function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) |
 
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-})
-  .then(() => {
-    console.info(`replaceUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, (err) => {
-  if (err) {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('replaceUrl success');
-})
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`replaceUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('replaceUrl success');
-});
-```
-
 
 ## replaceUrl
 
@@ -169,8 +69,6 @@ function replaceUrl(options: RouterOptions): Promise<void>
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -200,10 +98,6 @@ function replaceUrl(options: RouterOptions): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) |
 
-**示例**
-
-参见 [replaceUrl](#replaceurl)
-
 
 ## replaceUrl
 
@@ -224,8 +118,6 @@ function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCal
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -251,10 +143,6 @@ function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCal
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) |
 
-**示例**
-
-参见 [replaceUrl](#replaceurl)
-
 
 ## replaceUrl
 
@@ -275,8 +163,6 @@ function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -306,7 +192,3 @@ function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [200002](../errorcode-router.md#200002-路由页面替换时输入的uri错误) |
-
-**示例**
-
-参见 [replaceUrl](#replaceurl)

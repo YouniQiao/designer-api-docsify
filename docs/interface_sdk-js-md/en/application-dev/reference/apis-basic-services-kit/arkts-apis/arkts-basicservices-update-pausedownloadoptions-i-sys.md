@@ -4,8 +4,6 @@ Defines the pausing download options, which are used to control the pause behavi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the pausing download options, which are used to control the pause behavi
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## isAllowAutoResume
@@ -27,8 +25,6 @@ Whether to allow automatic resuming of download. This parameter is set only when
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

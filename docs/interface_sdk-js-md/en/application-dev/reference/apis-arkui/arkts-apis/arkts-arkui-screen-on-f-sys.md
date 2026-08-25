@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## on
@@ -15,8 +15,6 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 Subscribes to events related to the screen state.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,15 +34,6 @@ Subscribes to events related to the screen state.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let callback: Callback<number> = (data: number) => {
-  console.info(`Succeeded in registering the callback for screen changes. Data: ${data}`)
-};
-screen.on('connect', callback);
-```
-
 
 ## on
 
@@ -55,8 +44,6 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 Subscribes to events related to the screen state.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -76,10 +63,6 @@ Subscribes to events related to the screen state.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [on](#on)
-
 
 ## on
 
@@ -90,8 +73,6 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 Subscribes to events related to the screen state.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -110,7 +91,3 @@ Subscribes to events related to the screen state.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [on](#on)

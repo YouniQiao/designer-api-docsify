@@ -11,7 +11,7 @@ UIAbility是包含UI界面的应用组件，继承自[Ability](arkts-ability-app
 ## 导入模块
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -31,11 +31,3 @@ import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteS
 | [Caller](arkts-ability-app-ability-uiability-caller-i.md) |
 | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) |
 | [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [CalleeCallback](arkts-ability-calleecallback-t.md) |
-| [OnReleaseCallback](arkts-ability-onreleasecallback-t.md) |
-| [OnRemoteStateChangeCallback](arkts-ability-onremotestatechangecallback-t.md) |

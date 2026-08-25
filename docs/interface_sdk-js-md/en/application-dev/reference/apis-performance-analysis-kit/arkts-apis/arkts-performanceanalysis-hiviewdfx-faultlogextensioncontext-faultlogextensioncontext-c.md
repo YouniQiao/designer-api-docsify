@@ -10,8 +10,6 @@ FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-perf
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -19,5 +17,5 @@ FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-perf
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
+import { FaultLogExtensionContext } from 'kits/@kit.PerformanceAnalysisKit';
 ```

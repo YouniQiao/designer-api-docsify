@@ -4,29 +4,25 @@ WLAN连接信息。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## chload
 
 ```TypeScript
-chload: int
+chload: number
 ```
 
 此WLAN连接的负载值。值越大表示负载越高。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -44,8 +40,6 @@ WLAN热点是否是HiLinkPro网络。
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -53,16 +47,14 @@ WLAN热点是否是HiLinkPro网络。
 ## networkId
 
 ```TypeScript
-networkId: int
+networkId: number
 ```
 
 WLAN连接的唯一标识ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -71,16 +63,14 @@ WLAN连接的唯一标识ID。
 ## snr
 
 ```TypeScript
-snr: int
+snr: number
 ```
 
 此WLAN连接的信噪比（SNR）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -98,8 +88,6 @@ suppState: SuppState
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +103,6 @@ WLAN的Tx和Rx是否都正常工作
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

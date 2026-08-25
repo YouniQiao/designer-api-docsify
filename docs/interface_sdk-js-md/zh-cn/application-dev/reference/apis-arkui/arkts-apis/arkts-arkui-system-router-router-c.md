@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** [router](arkts-router.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
 ```
 
 ## back
@@ -27,8 +25,6 @@ static back(options?: BackRouterOptions): void
 返回上一页面或指定的页面。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -42,67 +38,6 @@ static back(options?: BackRouterOptions): void
 | --- | --- | --- |
 | options | [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md) | 否 |
 
-**示例**
-
-```TypeScript
-// index页面
-import router from '@system.router';
-class D{
-  indexPushPage() {
-    router.push({
-      uri: 'pages/detail/detail'
-    });
-  }
-}
-export default new D()
-```
-
-```TypeScript
-// detail页面
-import router from '@system.router';
-class E{
-  detailPushPage() {
-    router.push({
-      uri: 'pages/mall/mall'
-    });
-  }
-}
-export default new E()
-```
-
-```TypeScript
-// mall页面通过back，将返回detail页面
-import router from '@system.router';
-class F{
-  mallBackPage() {
-    router.back();
-  }
-}
-export default new F()
-```
-
-```TypeScript
-// detail页面通过back，将返回index页面
-import router from '@system.router';
-class G{
-  defaultBack() {
-    router.back();
-  }
-}
-export default new G()
-```
-
-```TypeScript
-// 通过back，返回到detail页面
-import router from '@system.router';
-class H{
-  backToDetail() {
-    router.back({uri:'pages/detail/detail'});
-  }
-}
-export default new H()
-```
-
 ## clear
 
 ```TypeScript
@@ -113,25 +48,11 @@ static clear(): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** clear
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import router from '@system.router';
-class I{
-  clearPage() {
-    router.clear();
-  }
-}
-export default new I()
-```
 
 ## disableAlertBeforeBackPage
 
@@ -142,8 +63,6 @@ static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): 
 禁用页面返回询问对话框。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -157,25 +76,6 @@ static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): 
 | --- | --- | --- |
 | options | [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | 否 |
 
-**示例**
-
-```TypeScript
-import router from '@system.router';
-class Z{
-  disableAlertBeforeBackPage() {
-    router.disableAlertBeforeBackPage({
-      success: ()=> {
-        console.info('success');
-      },
-      cancel: ()=> {
-        console.info('cancel');
-      }
-    });
-  }
-}
-export default new Z()
-```
-
 ## enableAlertBeforeBackPage
 
 ```TypeScript
@@ -185,8 +85,6 @@ static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): voi
 开启页面返回询问对话框。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -200,26 +98,6 @@ static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): voi
 | --- | --- | --- |
 | options | [EnableAlertBeforeBackPageOptions](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | 是 |
 
-**示例**
-
-```TypeScript
-import router from '@system.router';
-class L{
-  enableAlertBeforeBackPage() {
-    router.enableAlertBeforeBackPage({
-      message: 'Message Info',
-      success: ()=> {
-        console.info('success');
-      },
-      cancel: ()=> {
-        console.info('cancel');
-      }
-    });
-  }
-}
-export default new L()
-```
-
 ## getLength
 
 ```TypeScript
@@ -229,8 +107,6 @@ static getLength(): string
 获取当前在页面栈内的页面数量。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -244,19 +120,6 @@ static getLength(): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-import router from '@system.router';
-class J{
-  getLength() {
-    let size = router.getLength();
-    console.info('pages stack size = ' + size);
-  }
-}
-export default new J()
-```
-
 ## getParams
 
 ```TypeScript
@@ -266,8 +129,6 @@ static getParams(): ParamsInterface
 获取当前页面的参数信息。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 8
 
@@ -291,8 +152,6 @@ static getState(): RouterState
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** getState
@@ -304,21 +163,6 @@ static getState(): RouterState
 | 类型 |
 | --- |
 | [RouterState](arkts-arkui-system-router-routerstate-i.md) |
-
-**示例**
-
-```TypeScript
-import router from '@system.router';
-class K{
-  getState() {
-    let page = router.getState();
-    console.info('current index = ' + page.index);
-    console.info('current name = ' + page.name);
-    console.info('current path = ' + page.path);
-  }
-}
-export default new K()
-```
 
 ## push
 
@@ -333,8 +177,6 @@ static push(options: RouterOptions): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** push
@@ -347,40 +189,6 @@ static push(options: RouterOptions): void
 | --- | --- | --- |
 | options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 |
 
-**示例**
-
-```TypeScript
-// 在当前页面中
-import router from '@system.router';
-class A{
-  pushPage() {
-    router.push({
-      uri: 'pages/routerpage2/routerpage2',
-      params: {
-        data1: 'message',
-        data2: {
-          data3: [123, 456, 789]
-        }
-      }
-    });
-  }
-}
-export default new A()
-```
-
-```TypeScript
-// 在routerpage2页面中
-class B{
-  data:Record<string,string> = {'data1': 'default'}
-  data2:Record<string,number[]> = {'data3': [1, 2, 3]}
-  onInit() {
-    console.info('showData1:' + this.data.data1);
-    console.info('showData3:' + this.data2.data3);
-  }
-}
-export default new B()
-```
-
 ## replace
 
 ```TypeScript
@@ -390,8 +198,6 @@ static replace(options: RouterOptions): void
 用应用内的某个页面替换当前页面，并销毁被替换的页面。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -404,32 +210,3 @@ static replace(options: RouterOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-// 在当前页面中
-import router from '@system.router';
-class C{
-  replacePage() {
-    router.replace({
-      uri: 'pages/detail/detail',
-      params: {
-        data1: 'message'
-      }
-    });
-  }
-}
-export default new C()
-```
-
-```TypeScript
-// 在detail页面中
-class Area {
-  data:Record<string,string> = {'data1': 'default'}
-  onInit() {
-    console.info(`showData1: ${JSON.stringify(this.data)}`);
-  }
-}
-export default new Area()
-```

@@ -4,8 +4,6 @@ Operation type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ CLI operation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ API = 0x02
 API operation.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## NULL
@@ -17,8 +15,6 @@ NULL = 0
 表示列数据类型为NULL。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -32,8 +28,6 @@ INTEGER = 1
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## REAL
@@ -45,8 +39,6 @@ REAL = 2
 表示列类型为浮点数。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -60,8 +52,6 @@ TEXT = 3
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## BLOB
@@ -73,8 +63,6 @@ BLOB = 4
 表示列类型为Uint8Array。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -88,8 +76,6 @@ ASSET = 5
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## ASSETS
@@ -101,8 +87,6 @@ ASSETS = 6
 表示列类型为[Assets](arkts-arkdata-relationalstore-assets-t.md)。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -116,8 +100,6 @@ FLOAT_VECTOR = 7
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## UNLIMITED_INT
@@ -129,7 +111,5 @@ UNLIMITED_INT = 8
 表示列类型为bigint。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

@@ -15,8 +15,6 @@ Verifies the authorization package from the controlled device. This function ver
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 **System capability:** SystemCapability.Security.Asset

@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本10-11：SystemCapability.Security.CryptoFramework
@@ -19,8 +17,6 @@ COMMON_PARAMS_SPEC = 0
 表示公私钥中包含的公共参数。使用此类型的参数可以调用 [generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair) 随机生成密钥对。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,8 +34,6 @@ PRIVATE_KEY_SPEC = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -56,8 +50,6 @@ PUBLIC_KEY_SPEC = 2
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -73,8 +65,6 @@ KEY_PAIR_SPEC = 3
 表示公私钥中包含的全量参数。使用此类型的参数可以调用 [generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair) 生成指定的密钥对。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

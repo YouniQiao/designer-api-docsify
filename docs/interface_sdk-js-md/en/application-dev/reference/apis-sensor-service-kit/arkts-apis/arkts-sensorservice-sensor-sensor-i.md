@@ -4,29 +4,25 @@ Describes the sensor information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## deviceId
 
 ```TypeScript
-deviceId?: int
+deviceId?: number
 ```
 
 Device ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -42,8 +38,6 @@ Device name.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## firmwareVersion
@@ -57,8 +51,6 @@ Firmware version of the sensor.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -74,8 +66,6 @@ Hardware version of the sensor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## isLocalSensor
@@ -89,8 +79,6 @@ Whether the sensor is a local sensor. The value **true** indicates a local senso
 **Type:** boolean
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -106,119 +94,103 @@ Whether the sensor is a mock sensor. The value **true** indicates a mock sensor,
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## maxRange
 
 ```TypeScript
-maxRange:double
+maxRange:number
 ```
 
 Maximum measurement range of the sensor.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## maxSamplePeriod
 
 ```TypeScript
-maxSamplePeriod:long
+maxSamplePeriod:number
 ```
 
 Maximum sampling period.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## minSamplePeriod
 
 ```TypeScript
-minSamplePeriod:long
+minSamplePeriod:number
 ```
 
 Minimum sampling period.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## power
 
 ```TypeScript
-power:double
+power:number
 ```
 
 Estimated sensor power, in mA.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## precision
 
 ```TypeScript
-precision:double
+precision:number
 ```
 
 Precision of the sensor.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## sensorId
 
 ```TypeScript
-sensorId:int
+sensorId:number
 ```
 
 Sensor type ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## sensorIndex
 
 ```TypeScript
-sensorIndex?: int
+sensorIndex?: number
 ```
 
 Sensor index.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -234,8 +206,6 @@ Sensor name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## vendorName
@@ -249,7 +219,5 @@ Vendor of the sensor.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor

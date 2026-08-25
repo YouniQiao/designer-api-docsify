@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## snoozeNotification
 
 ```TypeScript
-function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
+function snoozeNotification(hashCode: string, delayTime: number): Promise<void>
 ```
 
-Snoozes a notification. The notification will be reminded again after the specified time. Each setting will trigger only one reminder, and the reminder mode will be the same as that of the notification.<br>The notification will be deleted after the setting.
+Snoozes a notification. The notification will be reminded again after the specified time. Each setting will trigger only one reminder, and the reminder mode will be the same as that of the notification.The notification will be deleted after the setting.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -31,7 +29,7 @@ Snoozes a notification. The notification will be reminded again after the specif
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | hashCode | string | Yes |
-| delayTime | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| delayTime | number | Yes |
 
 **Return value:**
 

@@ -4,14 +4,12 @@
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
+import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, OnContentWillChangeCallback } from 'kits/@kit.ArkUI';
 ```
 
 ## onContentWillChange
@@ -23,8 +21,6 @@ onContentWillChange?: OnContentWillChangeCallback
 onContentWillChange callback of tabs when tabbar is clicked.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +34,9 @@ barBackgroundColor?: ResourceColor
 
 Sets the barBackgroundColor of tabs.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,8 +54,6 @@ set if need overlap, default value is true.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -74,11 +66,9 @@ controller?: TabsController
 
 Provide methods for switching tabs.
 
-**Type:** TabsController
+**Type:** [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,8 +86,6 @@ Sets the index of tabs.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -110,11 +98,9 @@ layoutMode?: LayoutMode
 
 Sets the layout mode of the bottom tab bar
 
-**Type:** LayoutMode
+**Type:** [LayoutMode](../arkts-components/arkts-arkui-layoutmode-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -132,8 +118,6 @@ onChange callback of tabs when tabs changed.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -149,8 +133,6 @@ onTabBarClick callback of tabs when tabbar is clicked.
 **Type:** Callback&lt;number&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -174,8 +156,6 @@ The tabBar array of tabs.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -191,8 +171,6 @@ set the positions of tabbar.
 **Type:** [TabBarPosition](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -215,8 +193,6 @@ The TabContent array of tabs.
 **Type:** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

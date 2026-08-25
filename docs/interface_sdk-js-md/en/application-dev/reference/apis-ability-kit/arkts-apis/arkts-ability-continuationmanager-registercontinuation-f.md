@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## registerContinuation
@@ -16,8 +16,6 @@ Registers the continuation management service and obtains a token. This API does
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -42,68 +40,6 @@ Registers the continuation management service and obtains a token. This API does
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) |
-
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-try {
-  continuationManager.registerContinuation((err, data) => {
-    if (err.code != 0) {
-      console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('registerContinuation finished, ' + JSON.stringify(data));
-    token = data;
-  });
-} catch (err) {
-  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-try {
-  continuationManager.registerContinuation(
-    {
-      deviceType: ["00E"]
-    },
-    (err, data) => {
-      if (err.code != 0) {
-        console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-        return;
-      }
-      console.info('registerContinuation finished, ' + JSON.stringify(data));
-      token = data;
-  });
-} catch (err) {
-  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-try {
-  continuationManager.registerContinuation(
-    {
-      deviceType: ["00E"]
-    }).then((data) => {
-      console.info('registerContinuation finished, ' + JSON.stringify(data));
-      token = data;
-    }).catch((err: BusinessError) => {
-      console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
 
 
 ## registerContinuation
@@ -116,8 +52,6 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -132,7 +66,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
@@ -143,10 +77,6 @@ Registers the continuation management service and obtains a token. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) |
-
-**Examples**
-
-See [registerContinuation](#registercontinuation)
 
 
 ## registerContinuation
@@ -159,8 +89,6 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -175,7 +103,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | No |
 
 **Return value:**
 
@@ -191,7 +119,3 @@ Registers the continuation management service and obtains a token. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) |
-
-**Examples**
-
-See [registerContinuation](#registercontinuation)

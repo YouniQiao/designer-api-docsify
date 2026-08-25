@@ -4,8 +4,6 @@ The appManager module provides APIs for application management. For example, you
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [appManager/appManager](arkts-app-ability-appmanager.md)

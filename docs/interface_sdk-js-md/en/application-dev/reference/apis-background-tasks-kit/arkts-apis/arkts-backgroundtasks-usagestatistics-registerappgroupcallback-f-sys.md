@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## registerAppGroupCallBack
@@ -15,8 +15,6 @@ function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>,
 Register appGroup change callback to service.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -45,46 +43,6 @@ Register appGroup change callback to service.
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-duplicate-application-group-operation) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function onBundleGroupChanged(res: usageStatistics.AppGroupCallbackInfo) {
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack RegisterGroupCallBack callback success.');
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appOldGroup is : ' + res.appOldGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appNewGroup is : ' + res.appNewGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result changeReason is : ' + res.changeReason);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result userId is : ' + res.userId);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result bundleName is : ' + res.bundleName);
-};
-usageStatistics.registerAppGroupCallBack(onBundleGroupChanged).then( () => {
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE registerAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function onBundleGroupChanged(res: usageStatistics.AppGroupCallbackInfo) {
-  console.info('BUNDLE_ACTIVE onBundleGroupChanged RegisterGroupCallBack callback success.');
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appOldGroup is : ' + res.appOldGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appNewGroup is : ' + res.appNewGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result changeReason is : ' + res.changeReason);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result userId is : ' + res.userId);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result bundleName is : ' + res.bundleName);
-};
-usageStatistics.registerAppGroupCallBack(onBundleGroupChanged, (err: BusinessError) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE registerAppGroupCallBack callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE registerAppGroupCallBack callback success.');
-  }
-});
-```
-
 
 ## registerAppGroupCallBack
 
@@ -95,8 +53,6 @@ function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>)
 Register appGroup change callback to service.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -129,7 +85,3 @@ Register appGroup change callback to service.
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-system-service-operation-failure) |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-duplicate-application-group-operation) |
-
-**Examples**
-
-See [registerAppGroupCallBack](#registerappgroupcallback)

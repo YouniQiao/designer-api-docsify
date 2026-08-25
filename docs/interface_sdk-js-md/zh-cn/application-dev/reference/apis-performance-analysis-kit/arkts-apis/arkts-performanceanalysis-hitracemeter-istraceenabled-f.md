@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isTraceEnabled
@@ -16,8 +16,6 @@ function isTraceEnabled(): boolean
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
@@ -27,13 +25,3 @@ function isTraceEnabled(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-if (hiTraceMeter.isTraceEnabled()) {
-  // 业务流程......
-} else {
-  // 业务流程......
-}
-```

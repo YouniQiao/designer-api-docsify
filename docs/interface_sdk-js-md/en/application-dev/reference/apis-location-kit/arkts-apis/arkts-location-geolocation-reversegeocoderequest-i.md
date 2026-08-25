@@ -4,8 +4,6 @@ Configuring parameters in reverse geocode requests@interface ReverseGeoCodeReque
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md)
@@ -17,7 +15,7 @@ Configuring parameters in reverse geocode requests@interface ReverseGeoCodeReque
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## latitude
@@ -29,8 +27,6 @@ latitude: number
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ locale?: string
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [locale](arkts-location-geolocationmanager-reversegeocoderequest-i.md#locale)
@@ -66,8 +60,6 @@ longitude: number
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#longitude)
@@ -83,8 +75,6 @@ maxItems?: number
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

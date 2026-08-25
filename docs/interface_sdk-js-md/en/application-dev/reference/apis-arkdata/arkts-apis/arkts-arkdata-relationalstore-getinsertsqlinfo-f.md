@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## getInsertSqlInfo
@@ -15,8 +15,6 @@ function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: Confli
 Obtains the SQL statement used to insert data. This API returns the result synchronously.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -39,19 +37,3 @@ Obtains the SQL statement used to insert data. This API returns the result synch
 | Error Code ID |
 | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
-
-**Examples**
-
-```TypeScript
-const bucket: relationalStore.ValuesBucket = {
-  name: "Logitech",
-  age: 18,
-  sex: "man",
-  desc: "asserter"
-};
-const sqlInfo: relationalStore.SqlInfo = relationalStore.getInsertSqlInfo(
-  "USER",
-  bucket,
-  relationalStore.ConflictResolution.ON_CONFLICT_NONE
-);
-```

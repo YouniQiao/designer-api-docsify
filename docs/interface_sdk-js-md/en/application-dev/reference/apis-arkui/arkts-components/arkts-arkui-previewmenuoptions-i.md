@@ -4,8 +4,6 @@ Defines the options of the preview menu.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ hapticFeedbackMode? : HapticFeedbackMode
 
 Vibration effect when the menu is displayed. This parameter takes effect when ImageSpan or BuilderSpan is bound to the preview menu.Default value: **HapticFeedbackMode.DISABLED** (no vibration when the menu is displayed)Note: The settings take effect only when the application has the ohos.permission.VIBRATE permission and the user has enabled haptic feedback.
 
-**Type:** HapticFeedbackMode
+**Type:** [HapticFeedbackMode](arkts-arkui-hapticfeedbackmode-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

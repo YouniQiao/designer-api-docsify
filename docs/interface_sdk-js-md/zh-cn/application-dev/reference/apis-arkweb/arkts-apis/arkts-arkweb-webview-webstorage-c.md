@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## deleteAllData
@@ -24,8 +22,6 @@ static deleteAllData(incognito?: boolean): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -35,34 +31,6 @@ static deleteAllData(incognito?: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | incognito | boolean | 否 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteAllData')
-        .onClick(() => {
-          try {
-            webview.WebStorage.deleteAllData();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
 
 ## deleteOrigin
 
@@ -78,8 +46,6 @@ static deleteOrigin(origin: string): void
 > 建议先调用getOrigins()获取源列表，再调用deleteOrigin()清除指定源存储。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,127 +64,6 @@ static deleteOrigin(origin: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100011](../errorcode-webview.md#17100011-输入参数origin错误) |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = "resource://rawfile/";
-
-  build() {
-    Column() {
-      Button('deleteOrigin')
-        .onClick(() => {
-          try {
-            webview.WebStorage.deleteOrigin(this.origin);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
- <!DOCTYPE html>
- <html>
- <head>
-   <meta charset="UTF-8">
-   <title>test</title>
-   <script type="text/javascript">
-
-       // 打开或创建数据库
-       var request = indexedDB.open('myDatabase', 1);
-
-       // 如果数据库版本变化或首次创建时触发
-       request.onupgradeneeded = function(event) {
-           var db = event.target.result;
-
-           // 创建对象存储（表），设置主键为‘id’
-           var objectStore = db.createObjectStore('customers', { keyPath: 'id' });
-
-           // 为‘name’创建索引
-           objectStore.createIndex('name', 'name', { unique: false });
-       };
-
-       // 打开数据库成功时的回调
-       request.onsuccess = function(event) {
-           var db = event.target.result;
-
-           const customerData = [
-               {id: 1, name: 'John Doe', email: 'john@example.com'},
-               {id: 2, name: 'John Doe', email: 'john@example.com'},
-           ]
-
-           // 插入数据
-           var transaction = db.transaction('customers', 'readwrite');
-           var objectStore = transaction.objectStore('customers');
-
-           customerData.forEach((customer) => {
-               objectStore.add(customer);
-           });
-
-           transaction.oncomplete = function () {
-               console.info('Transaction completed: data added');
-           }
-           
-           transaction.onerror = function (event) {
-               console.error("Transaction failed", event);
-           }
-           
-           // 查询数据
-           var queryTransaction = db.transaction(['customers']);
-           var queryObjectStore = queryTransaction.objectStore('customers');
-           var query = queryObjectStore.get(2);
-           
-           query.onsuccess = function (event) {
-               console.info('query succ');
-               console.info('Customer:', event.target.result);
-               console.info('Customer id:', event.target.result.id);
-               console.info('Customer name:', event.target.result.name);
-               console.info('Customer email:', event.target.result.email);
-           };
-           
-           queryObjectStore.openCursor().onsuccess = (event) => {
-               const cursor = event.target.result;
-               if (cursor) {
-                   var msg = "<p>查询记录：" + cursor.key + "</p>";
-                   document.querySelector("#status").innerHTML += msg;
-                   var msg = "<p><b>" + cursor.value.name + "</b></p>";
-                   document.querySelector("#status").innerHTML += msg;
-                   console.info(`SSN ${cursor.key} 对应的名字是 ${cursor.value.name}`);
-                   cursor.continue();
-               } else {
-                   console.info("没有更多记录了")
-               }
-           }
-       };
-
-       // 错误处理
-       request.onerror = function(event) {
-           console.error('Database error:', event.target.error);
-       };
-
-     </script>
- </head>
- <body>
- <div id="status" name="status">状态信息</div>
- </body>
- </html>
-```
-
 ## getOriginQuota
 
 ```TypeScript
@@ -233,8 +78,6 @@ static getOriginQuota(origin: string): Promise<number>
 > 建议先调用getOrigins()获取源列表，再调用getOriginQuota()获取指定源配额。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -259,76 +102,6 @@ static getOriginQuota(origin: string): Promise<number>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100011](../errorcode-webview.md#17100011-输入参数origin错误) |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = "resource://rawfile/";
-
-  build() {
-    Column() {
-      Button('getOriginQuota')
-        .onClick(() => {
-          try {
-            webview.WebStorage.getOriginQuota(this.origin, (error, quota) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              console.info('quota: ' + quota);
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = "resource://rawfile/";
-
-  build() {
-    Column() {
-      Button('getOriginQuota')
-        .onClick(() => {
-          try {
-            webview.WebStorage.getOriginQuota(this.origin)
-              .then(quota => {
-                console.info('quota: ' + quota);
-              })
-              .catch((e: BusinessError) => {
-                console.error('error: ' + JSON.stringify(e));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
 ## getOriginQuota
 
 ```TypeScript
@@ -343,8 +116,6 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 > 建议先调用getOrigins()获取源列表，再调用getOriginQuota()获取指定源配额。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -364,10 +135,6 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100011](../errorcode-webview.md#17100011-输入参数origin错误) |
 
-**示例**
-
-参见 [getOriginQuota](#getoriginquota)
-
 ## getOrigins
 
 ```TypeScript
@@ -377,8 +144,6 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 以Promise方式异步获取当前使用Web SQL数据库和HTML5支持的Web存储API的所有源的信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -397,82 +162,6 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100012](../errorcode-webview.md#17100012-无可获取的webstorage源) |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getOrigins')
-        .onClick(() => {
-          try {
-            webview.WebStorage.getOrigins((error, origins) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              for (let i = 0; i < origins.length; i++) {
-                console.info('origin: ' + origins[i].origin);
-                console.info('usage: ' + origins[i].usage);
-                console.info('quota: ' + origins[i].quota);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getOrigins')
-        .onClick(() => {
-          try {
-            webview.WebStorage.getOrigins()
-              .then(origins => {
-                for (let i = 0; i < origins.length; i++) {
-                  console.info('origin: ' + origins[i].origin);
-                  console.info('usage: ' + origins[i].usage);
-                  console.info('quota: ' + origins[i].quota);
-                }
-              })
-              .catch((e: BusinessError) => {
-                console.error('error: ' + JSON.stringify(e));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
 ## getOrigins
 
 ```TypeScript
@@ -482,8 +171,6 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 以回调方式异步获取当前使用Web SQL数据库和HTML5支持的Web存储API的所有源的信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -502,10 +189,6 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100012](../errorcode-webview.md#17100012-无可获取的webstorage源) |
 
-**示例**
-
-参见 [getOrigins](#getorigins)
-
 ## getOriginUsage
 
 ```TypeScript
@@ -520,8 +203,6 @@ static getOriginUsage(origin: string): Promise<number>
 > 建议先调用getOrigins()获取源列表，再调用getOriginUsage()获取指定源使用量。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -546,74 +227,6 @@ static getOriginUsage(origin: string): Promise<number>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100011](../errorcode-webview.md#17100011-输入参数origin错误) |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = "resource://rawfile/";
-
-  build() {
-    Column() {
-      Button('getOriginUsage')
-        .onClick(() => {
-          try {
-            webview.WebStorage.getOriginUsage(this.origin, (error, usage) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              console.info('usage: ' + usage);
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = "resource://rawfile/";
-
-  build() {
-    Column() {
-      Button('getOriginUsage')
-        .onClick(() => {
-          try {
-            webview.WebStorage.getOriginUsage(this.origin)
-              .then(usage => {
-                console.info('usage: ' + usage);
-              }).catch((e: BusinessError) => {
-              console.error('error: ' + JSON.stringify(e));
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-    }
-  }
-}
-```
-
 ## getOriginUsage
 
 ```TypeScript
@@ -628,8 +241,6 @@ static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 > 建议先调用getOrigins()获取源列表，再调用getOriginUsage()获取指定源使用量。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -648,7 +259,3 @@ static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100011](../errorcode-webview.md#17100011-输入参数origin错误) |
-
-**示例**
-
-参见 [getOriginUsage](#getoriginusage)

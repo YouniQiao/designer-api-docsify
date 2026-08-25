@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## updateConnectStatus
@@ -20,8 +20,6 @@ function updateConnectStatus(
 通知设备选择模块，更新当前的连接状态，使用AsyncCallback方式作为异步方法。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -40,37 +38,6 @@ function updateConnectStatus(
 | status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-let deviceId: string = "test deviceId";
-continuationManager.updateConnectStatus(token, deviceId, continuationManager.DeviceConnectState.CONNECTED, (err) => {
-  if (err.code != 0) {
-    console.error('updateConnectStatus failed, cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('updateConnectStatus finished. ');
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = 1;
-let deviceId: string = "test deviceId";
-continuationManager.updateConnectStatus(token, deviceId, continuationManager.DeviceConnectState.CONNECTED)
-  .then(() => {
-    console.info('updateConnectStatus finished. ');
-  })
-  .catch((err: BusinessError) => {
-    console.error('updateConnectStatus failed, cause: ' + JSON.stringify(err));
-});
-```
-
 
 ## updateConnectStatus
 
@@ -81,8 +48,6 @@ function updateConnectStatus(token: number, deviceId: string, status: DeviceConn
 通知设备选择模块，更新当前的连接状态，使用Promise方式作为异步方法。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -105,7 +70,3 @@ function updateConnectStatus(token: number, deviceId: string, status: DeviceConn
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [updateConnectStatus](#updateconnectstatus)

@@ -6,8 +6,6 @@ Defines the symbol span style options.Inherits [RichEditorSpanStyleOptions](arkt
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,8 +24,6 @@ Style of the symbol span.
 **Type:** [RichEditorSymbolSpanStyle](arkts-arkui-richeditorsymbolspanstyle-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

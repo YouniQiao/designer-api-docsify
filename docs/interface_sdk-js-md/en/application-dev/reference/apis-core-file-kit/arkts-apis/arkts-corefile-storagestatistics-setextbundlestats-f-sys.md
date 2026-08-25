@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## setExtBundleStats
 
 ```TypeScript
-function setExtBundleStats(userId: int, stats: ExtBundleStats): Promise<void>
+function setExtBundleStats(userId: number, stats: ExtBundleStats): Promise<void>
 ```
 
 Reports the space usage of system applications or system services. This API uses a promise to return the result.
@@ -19,8 +19,6 @@ Reports the space usage of system applications or system services. This API uses
 > application.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -34,7 +32,7 @@ Reports the space usage of system applications or system services. This API uses
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | stats | [ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md) | Yes |
 
 **Return value:**
@@ -52,22 +50,3 @@ Reports the space usage of system applications or system services. This API uses
 | 13600001 |
 | 13600010 |
 | 13600011 |
-
-**Examples**
-
-```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-let extBundleStats: storageStatistics.ExtBundleStats = {
-  businessName: 'com.example.storagedemo',
-  size: 10000,
-  flag: true
-}
-storageStatistics.setExtBundleStats(userId, extBundleStats).then(() => {
-  console.info("setExtBundleStats successfully");
-}).catch((err: BusinessError) => {
-  console.error(`setExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```

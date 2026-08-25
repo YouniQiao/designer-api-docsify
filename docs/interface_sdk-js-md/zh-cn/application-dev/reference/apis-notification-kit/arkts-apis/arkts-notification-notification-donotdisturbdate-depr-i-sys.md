@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md)
@@ -31,8 +29,6 @@ begin: Date
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [begin](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md#begin)
@@ -53,8 +49,6 @@ end: Date
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [end](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md#end)
@@ -74,8 +68,6 @@ type: DoNotDisturbType
 **类型：** DoNotDisturbType
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCallTransferInfo
@@ -15,8 +15,6 @@ function getCallTransferInfo(type: CallTransferType, number: string): Promise<Ca
 Obtains call transfer information with the phone number. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_CALL_TRANSFER_INFO
 
@@ -46,27 +44,3 @@ Obtains call transfer information with the phone number. This API uses a promise
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8401002](../errorcode-telephony.md#8401002-incorrect-number) |
 | [8401003](../errorcode-telephony.md#8401003-frequent-operations) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY, (err: BusinessError, data: call.CallTransferResult) => {
-    if (err) {
-        console.error(`getCallTransferInfo fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`getCallTransferInfo success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY).then((data: call.CallTransferResult) => {
-    console.info(`getCallTransferInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCallTransferInfo fail, promise: err->${JSON.stringify(err)}`);
-});
-```

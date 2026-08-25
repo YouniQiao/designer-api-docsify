@@ -1,14 +1,12 @@
 # Value
 
 ```TypeScript
-type Value = string | double | Decimal
+type Value = string | number | Decimal
 ```
 
 The type used to denote decimal value
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

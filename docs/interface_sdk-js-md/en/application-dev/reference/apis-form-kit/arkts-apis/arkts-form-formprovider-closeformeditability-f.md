@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## closeFormEditAbility
@@ -15,8 +15,6 @@ function closeFormEditAbility(isMainPage?: boolean): void
 Closes the widget editing page.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,45 +33,3 @@ Closes the widget editing page.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16501015](../errorcode-form.md#16501015-failed-to-close-semi-modal-widget-editing-page-of-another-application) |
-
-**Examples**
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-
-const TAG: string = 'FormEditDemo-Page] -->';
-
-@Entry
-@Component
-struct Page {
-  @State message: string = 'Hello World';
-
-  aboutToAppear(): void {
-    console.info(`${TAG} aboutToAppear.....`);
-  }
-
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('PageHelloWorld')
-        .fontSize(50)
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Top },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          console.info(`${TAG} onClick.....`);
-          try {
-            formProvider.closeFormEditAbility();
-            console.info(`${TAG} close FormEditAbility success.`);
-          } catch (error) {
-            console.error(`${TAG} close FormEditAbility faild, code: ${error.code}, message: ${error.message}`);
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```

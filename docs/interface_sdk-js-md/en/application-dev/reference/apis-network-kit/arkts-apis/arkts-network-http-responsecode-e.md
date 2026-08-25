@@ -4,8 +4,6 @@ Enumerates the response codes for an HTTP request.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## OK
@@ -17,8 +15,6 @@ OK = 200
 The request is successful. This return code is generally used for GET and POST requests.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ CREATED = 201
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -49,8 +43,6 @@ ACCEPTED = 202
 "Accepted." The request has been accepted for processing, but the processing has not been completed.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,8 +58,6 @@ NOT_AUTHORITATIVE = 203
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -81,8 +71,6 @@ NO_CONTENT = 204
 "No Content." The server has successfully fulfilled the request but there is no additional content to send in the response payload body.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,8 +86,6 @@ RESET = 205
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -113,8 +99,6 @@ PARTIAL = 206
 "Partial Content." The server has successfully fulfilled the partial GET request for a given resource.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,8 +114,6 @@ MULT_CHOICE = 300
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -145,8 +127,6 @@ MOVED_PERM = 301
 "Moved Permanently." The requested resource has been assigned a new permanent URI and any future references to this resource will be redirected to this URI.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,8 +142,6 @@ MOVED_TEMP = 302
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -177,8 +155,6 @@ SEE_OTHER = 303
 "See Other." The response to the request can be found under a different URI.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -194,8 +170,6 @@ NOT_MODIFIED = 304
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -209,8 +183,6 @@ USE_PROXY = 305
 "Use Proxy." The requested resource can only be accessed through the proxy.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -226,8 +198,6 @@ BAD_REQUEST = 400
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -241,8 +211,6 @@ UNAUTHORIZED = 401
 "Unauthorized." The request requires user authentication.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -258,8 +226,6 @@ PAYMENT_REQUIRED = 402
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -273,8 +239,6 @@ FORBIDDEN = 403
 "Forbidden." The server understands the request but refuses to process it.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -290,8 +254,6 @@ NOT_FOUND = 404
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -305,8 +267,6 @@ BAD_METHOD = 405
 "Method Not Allowed." The method specified in the request is not allowed for the resource identified by the Request-URI.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -322,8 +282,6 @@ NOT_ACCEPTABLE = 406
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -337,8 +295,6 @@ PROXY_AUTH = 407
 "Proxy Authentication Required." The request requires user authentication with the proxy.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -354,8 +310,6 @@ CLIENT_TIMEOUT = 408
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -369,8 +323,6 @@ CONFLICT = 409
 "Conflict." The request cannot be fulfilled due to a conflict with the current state of the resource. Conflicts are most likely to occur in response to a PUT request.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -386,8 +338,6 @@ GONE = 410
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -401,8 +351,6 @@ LENGTH_REQUIRED = 411
 "Length Required." The server refuses to process the request without a defined Content-Length.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -418,8 +366,6 @@ PRECON_FAILED = 412
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -434,8 +380,6 @@ ENTITY_TOO_LARGE = 413
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -446,11 +390,9 @@ ENTITY_TOO_LARGE = 413
 REQ_TOO_LONG = 414
 ```
 
-"Request-URI Too Long." The Request-URI is too long for the server to process.
+"Request-URI Too Long." The Request-URI is too number for the server to process.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -466,8 +408,6 @@ UNSUPPORTED_TYPE = 415
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -481,8 +421,6 @@ RANGE_NOT_SATISFIABLE = 416
 "Range Not Satisfiable." The server cannot serve the requested ranges.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -498,8 +436,6 @@ INTERNAL_ERROR = 500
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -513,8 +449,6 @@ NOT_IMPLEMENTED = 501
 "Not Implemented." The server does not support the function required to fulfill the request.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -530,8 +464,6 @@ BAD_GATEWAY = 502
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -545,8 +477,6 @@ UNAVAILABLE = 503
 "Service Unavailable." The server is currently unable to process the request due to a temporary overload or system maintenance.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -562,8 +492,6 @@ GATEWAY_TIMEOUT = 504
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -577,8 +505,6 @@ VERSION = 505
 The server does not support the HTTP protocol version used in the client request.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

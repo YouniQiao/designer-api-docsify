@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getUserCertificates
@@ -15,8 +15,6 @@ function getUserCertificates(admin: Want, accountId: number): Array<string>
 Obtains the user certificate of a specified system account. Enterprises can use this API to query the list of user certificates installed on a device for scenarios such as certificate audit and certificate validity period management, ensuring traceability of certificate management.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
@@ -44,24 +42,3 @@ Obtains the user certificate of a specified system account. Enterprises can use 
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let accountId: number = 100;
-try {
-  let result: Array<string> = securityManager.getUserCertificates(wantTemp, accountId);
-  console.info(`Succeeded in getting the uri list of user Certificates. result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get the uri list of user Certificates. Code: ${err.code}, message: ${err.message}`);
-}
-```

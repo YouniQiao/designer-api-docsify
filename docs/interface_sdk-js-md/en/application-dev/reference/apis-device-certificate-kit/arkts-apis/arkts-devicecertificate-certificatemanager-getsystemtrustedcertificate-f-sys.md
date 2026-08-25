@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getSystemTrustedCertificate
@@ -15,8 +15,6 @@ function getSystemTrustedCertificate(certUri: string): Promise<CMResult>
 Obtains details about a CA certificate trusted by the system. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
@@ -47,26 +45,3 @@ Obtains details about a CA certificate trusted by the system. This API is called
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let certUri: string = 'test'; /* Unique identifier of the certificate, which can be obtained through the getSystemTrustedCertificateList API. */
-try {
-  certificateManager.getSystemTrustedCertificate(certUri).then((cmResult: certificateManager.CMResult) => {
-    if (cmResult?.certInfo == undefined) {
-      console.info('The result of getting system trusted certificate is undefined.');
-    } else {
-      let cert: certificateManager.CertInfo = cmResult.certInfo;
-      console.info('Succeeded in getting system trusted certificate.');
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get system trusted certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error: BusinessError) {
-  console.error(`Failed to get system trusted certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```

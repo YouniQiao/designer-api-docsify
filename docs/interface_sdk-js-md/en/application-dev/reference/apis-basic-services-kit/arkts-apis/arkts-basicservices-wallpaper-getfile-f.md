@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getFile
@@ -15,8 +15,6 @@ function getFile(wallpaperType: WallpaperType, callback: AsyncCallback<number>):
 Obtains a file of the wallpaper of the specified type. Returns the file descriptor. When usage is complete, the caller needs to close the file descriptor in time.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -31,30 +29,6 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError, data: number) => {
-    if (error) {
-        console.error(`failed to getFile because: ${JSON.stringify(error)}`);
-        return;
-    }
-    console.info(`success to getFile: ${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getFile(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: number) => {
-    console.info(`success to getFile: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to getFile because: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## getFile
 
@@ -65,8 +39,6 @@ function getFile(wallpaperType: WallpaperType): Promise<number>
 Obtains a file of the wallpaper of the specified type. Returns the file descriptor. When usage is complete, the caller needs to close the file descriptor in time.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -85,7 +57,3 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;number & gt; |
-
-**Examples**
-
-See [getFile](#getfile)

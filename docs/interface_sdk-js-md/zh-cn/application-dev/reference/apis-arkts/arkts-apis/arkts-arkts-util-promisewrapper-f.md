@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## promiseWrapper
@@ -15,8 +15,6 @@ function promiseWrapper(original: (err: Object, value: Object) => void): Object
 接收一个使用错误优先回调模式的函数（即最后一个参数为 `(err, value) =&gt; callback`），并通过 promise 返回结果。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

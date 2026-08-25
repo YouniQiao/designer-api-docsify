@@ -4,8 +4,6 @@ Defines the options for initializing the **RichEditor** component.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ Controller for the **RichEditor** component.
 **Type:** [RichEditorController](arkts-arkui-richeditorcontroller-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

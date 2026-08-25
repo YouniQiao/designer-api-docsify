@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isConnected
@@ -15,8 +15,6 @@ function isConnected(): boolean
 查询WLAN是否已连接。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

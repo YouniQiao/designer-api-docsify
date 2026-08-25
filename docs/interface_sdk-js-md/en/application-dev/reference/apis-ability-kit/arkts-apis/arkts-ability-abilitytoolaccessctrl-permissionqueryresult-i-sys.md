@@ -4,8 +4,6 @@ Permission query result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -27,8 +25,6 @@ Whether a dialog is required.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -45,8 +41,6 @@ Permission result list.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -62,8 +56,6 @@ Ticket information.
 **Type:** [TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 

@@ -3,19 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
-
-### Functions
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) |
-| [ArcList](arkts-arkui-arkui-arclist-arclist-f.md) |
-| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) |
-| [ArcListItem](arkts-arkui-arkui-arclist-arclistitem-f.md) |
 
 ### Classes
 
@@ -28,9 +19,7 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |
 | [ArcListInterface](arkts-arkui-arkui-arclist-arclistinterface-i.md) |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |
 | [ArcListItemInterface](arkts-arkui-arkui-arclist-arclistiteminterface-i.md) |
 | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) |
 
@@ -44,7 +33,7 @@ import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@k
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ArcList](arkts-arkui-arkui-arclist-con.md#arclist) |
+| [ArcList](arkts-arkui-arkui-arclist-con.md) |
 | [ArcListInstance](arkts-arkui-arkui-arclist-con.md#arclistinstance) |
 | [ArcListItem](arkts-arkui-arkui-arclist-con.md#arclistitem) |
 | [ArcListItemInstance](arkts-arkui-arkui-arclist-con.md#arclistiteminstance) |

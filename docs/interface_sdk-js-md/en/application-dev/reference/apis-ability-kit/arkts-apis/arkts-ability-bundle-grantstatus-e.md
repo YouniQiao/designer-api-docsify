@@ -9,8 +9,6 @@ Enumerates the permission grant states.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)
@@ -27,8 +25,6 @@ Permission denied.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PERMISSION_DENIED](arkts-ability-bundlemanager-permissiongrantstate-e.md#permission_denied)
@@ -44,8 +40,6 @@ PERMISSION_GRANTED = 0
 Permission granted.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

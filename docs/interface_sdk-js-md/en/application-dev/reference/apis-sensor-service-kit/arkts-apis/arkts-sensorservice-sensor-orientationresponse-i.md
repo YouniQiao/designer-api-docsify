@@ -6,29 +6,25 @@ Describes the orientation sensor data. It extends from [Response](arkts-sensorse
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## alpha
 
 ```TypeScript
-alpha: double
+alpha: number
 ```
 
 Rotation angle of the device around the z-axis, in degrees. The value ranges from 0 to 360.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,16 +33,14 @@ Rotation angle of the device around the z-axis, in degrees. The value ranges fro
 ## beta
 
 ```TypeScript
-beta: double
+beta: number
 ```
 
 Rotation angle of the device around the x-axis, in degrees. The value ranges from 0 to ±180.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,16 +49,14 @@ Rotation angle of the device around the x-axis, in degrees. The value ranges fro
 ## gamma
 
 ```TypeScript
-gamma: double
+gamma: number
 ```
 
 Rotation angle of the device around the y-axis, in degrees. The value ranges from 0 to ±90.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

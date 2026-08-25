@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setAdditionalConfig
 
 ```TypeScript
-function setAdditionalConfig(key: string, value: string): Promise<int>
+function setAdditionalConfig(key: string, value: string): Promise<number>
 ```
 
 Sets the additional system configuration information of the notification. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -35,7 +33,7 @@ Sets the additional system configuration information of the notification. This A
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -48,15 +46,3 @@ Sets the additional system configuration information of the notification. This A
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.setAdditionalConfig('RING_TRUSTLIST_PKG','[bundleName1,bundleName2]').then((data: number) => {
-  console.info(`setAdditionalConfig success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`setAdditionalConfig failed, code is ${err.code}, message is ${err.message}`);
-});
-```

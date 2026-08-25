@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## isVectorSupported
@@ -16,8 +16,6 @@ function isVectorSupported(): boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **返回值：**
@@ -25,44 +23,3 @@ function isVectorSupported(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { contextConstant, UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { relationalStore } from '@kit.ArkData';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let supported = relationalStore.isVectorSupported();
-    if (supported) {
-      // 支持向量数据库
-      console.info("Vector database supported on current platform.");
-      const STORE_CONFIG: relationalStore.StoreConfig = {
-        name: "VectorTest.db",
-        securityLevel: relationalStore.SecurityLevel.S3,
-        vector: true
-      };
-      try {
-        const context = this.context.getApplicationContext().createAreaModeContext(contextConstant.AreaMode.EL3);
-        relationalStore.getRdbStore(context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-          store = rdbStore;
-          console.info('Get RdbStore successfully.');
-          // 成功获取到 rdbStore 后执行后续操作
-        }).catch((err: Error) => {
-          let businessError = err as BusinessError;
-          console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
-        });
-      } catch (error) {
-        const err = error as BusinessError;
-        console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-      }
-    } else {
-      console.info("Vector database not supported on current platform.");
-    }
-  }
-}
-```

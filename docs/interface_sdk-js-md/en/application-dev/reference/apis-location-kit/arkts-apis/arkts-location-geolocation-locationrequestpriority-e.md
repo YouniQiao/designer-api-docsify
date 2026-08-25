@@ -4,8 +4,6 @@ Enum for location priority
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)
@@ -22,8 +20,6 @@ UNSET = 0x200
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [UNSET](arkts-location-geolocationmanager-locationrequestpriority-e.md#unset)
@@ -37,8 +33,6 @@ ACCURACY
 ```
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -54,8 +48,6 @@ LOW_POWER
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LOW_POWER](arkts-location-geolocationmanager-locationrequestpriority-e.md#low_power)
@@ -69,8 +61,6 @@ FIRST_FIX
 ```
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

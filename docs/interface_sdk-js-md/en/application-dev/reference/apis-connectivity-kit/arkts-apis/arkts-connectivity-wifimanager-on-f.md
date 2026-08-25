@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('wifiStateChange')
@@ -15,8 +15,6 @@ function on(type: 'wifiStateChange', callback: Callback<number>): void
 Subscribe Wi-Fi status change events.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -51,8 +49,6 @@ Subscribe Wi-Fi connection change events.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,8 +81,6 @@ function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 Subscribe Wi-Fi scan status change events.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -121,8 +115,6 @@ Subscribe Wi-Fi rssi change events.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -153,8 +145,6 @@ function on(type: 'hotspotStateChange', callback: Callback<number>): void
 Subscribe Wi-Fi hotspot state change events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -187,8 +177,6 @@ Subscribe P2P status change events.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -219,8 +207,6 @@ function on(type: 'p2pConnectionChange', callback: Callback<WifiP2pLinkedInfo>):
 Subscribe P2P connection change events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -253,8 +239,6 @@ Subscribe P2P local device change events.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -285,8 +269,6 @@ function on(type: 'p2pPeerDeviceChange', callback: Callback<WifiP2pDevice[]>): v
 Subscribe P2P peer device change events.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -319,8 +301,6 @@ Subscribe P2P persistent group change events.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -351,8 +331,6 @@ function on(type: 'p2pDiscoveryChange', callback: Callback<number>): void
 Subscribe P2P discovery events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

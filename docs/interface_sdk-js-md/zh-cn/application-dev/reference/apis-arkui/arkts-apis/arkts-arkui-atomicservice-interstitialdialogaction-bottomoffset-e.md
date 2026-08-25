@@ -5,8 +5,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## OFFSET_FOR_BAR
@@ -18,8 +16,6 @@ OFFSET_FOR_BAR = 0
 存在菜单栏情况下与窗口底部的距离。设置后弹框距离底部88vp。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ OFFSET_FOR_NONE = 1
 不存在菜单栏情况下与窗口底部的距离。默认值，设置后弹框距离底部44vp。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

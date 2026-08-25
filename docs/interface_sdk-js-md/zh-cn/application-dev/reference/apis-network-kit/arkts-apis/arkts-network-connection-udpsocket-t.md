@@ -8,8 +8,6 @@ type UDPSocket = socket.UDPSocket
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **属性类型：** socket.UDPSocket

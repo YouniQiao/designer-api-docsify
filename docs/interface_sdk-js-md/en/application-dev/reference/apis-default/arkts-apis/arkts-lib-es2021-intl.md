@@ -1,7 +1,5 @@
 # lib.es2021.intl
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript

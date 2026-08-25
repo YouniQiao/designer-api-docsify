@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## off('steadyStandingDetect')
@@ -15,8 +15,6 @@ function off(type: 'steadyStandingDetect', callback?: Callback<SteadyStandingSta
 Unsubscribes from steady standing state events.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
@@ -34,36 +32,3 @@ Unsubscribes from steady standing state events.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [32500001](../errorcode-deviceStatus.md#32500001-abnormal-service) |
 | [32500003](../errorcode-deviceStatus.md#32500003-unsubscription-failed) |
-
-**Examples**
-
-Example 1: Unsubscribe from all callbacks of steady standing state change events.
-
-```TypeScript
-try {
-   deviceStatus.off('steadyStandingDetect');
-} catch (err) {
-   console.error('off failed, err = ' + err);
-}
-```
-
-Example 2: Unsubscribe from a specific callback of steady standing state change events.
-
-```TypeScript
-// Define the callback variable.
-let callback : Callback<deviceStatus.SteadyStandingStatus> = (data : deviceStatus. SteadyStandingStatus) => {
-   console.info('succeed to get status, now status = ' + data);
-};
-// Subscribe to a specific callback of steady standing state change events.
-try {
-   deviceStatus.on('steadyStandingDetect', callback);
-} catch (err) {
-   console.error('on failed, err = ' + err);
-}
-// Unsubscribe from the specific callback of steady standing state change events.
-try {
-   deviceStatus.off('steadyStandingDetect', callback);
-} catch (err) {
-   console.error('off failed, err = ' + err);
-}
-```

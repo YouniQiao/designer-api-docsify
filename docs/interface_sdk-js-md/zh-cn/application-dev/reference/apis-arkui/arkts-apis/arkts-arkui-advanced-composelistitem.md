@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
+import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

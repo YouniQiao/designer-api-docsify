@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## encodeCount
 
 ```TypeScript
-encodeCount: int
+encodeCount: number
 ```
 
 编码计数
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -37,16 +33,14 @@ encodeCount: int
 ## encodeCountRemaining
 
 ```TypeScript
-encodeCountRemaining: int
+encodeCountRemaining: number
 ```
 
 剩余编码计数
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -64,8 +58,6 @@ scheme: SmsEncodingScheme
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ scheme: SmsEncodingScheme
 ## splitCount
 
 ```TypeScript
-splitCount: int
+splitCount: number
 ```
 
 拆分计数
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

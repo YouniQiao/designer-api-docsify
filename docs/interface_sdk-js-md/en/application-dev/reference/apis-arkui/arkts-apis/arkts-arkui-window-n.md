@@ -4,14 +4,12 @@ Window manager.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -71,18 +69,12 @@ import { window } from '@kit.ArkUI';
 | [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md) |
 | [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md) |
 | [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md) |
-| [on](arkts-arkui-window-on-f-sys.md#onsystembartintchange) |
-| [onSystemBarTintChange](arkts-arkui-window-onsystembartintchange-f-sys.md) |
-| [off](arkts-arkui-window-off-f-sys.md#offsystembartintchange) |
-| [offSystemBarTintChange](arkts-arkui-window-offsystembartintchange-f-sys.md) |
-| [on](arkts-arkui-window-on-f-sys.md#ongesturenavigationenabledchange) |
-| [onGestureNavigationEnabledChange](arkts-arkui-window-ongesturenavigationenabledchange-f-sys.md) |
-| [off](arkts-arkui-window-off-f-sys.md#offgesturenavigationenabledchange) |
-| [offGestureNavigationEnabledChange](arkts-arkui-window-offgesturenavigationenabledchange-f-sys.md) |
-| [on](arkts-arkui-window-on-f-sys.md#onwatermarkflagchange) |
-| [onWaterMarkFlagChange](arkts-arkui-window-onwatermarkflagchange-f-sys.md) |
-| [off](arkts-arkui-window-off-f-sys.md#offwatermarkflagchange) |
-| [offWaterMarkFlagChange](arkts-arkui-window-offwatermarkflagchange-f-sys.md) |
+| on |
+| off |
+| on |
+| off |
+| on |
+| off |
 | [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md) |
 | [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md) |
 <!--DelEnd-->

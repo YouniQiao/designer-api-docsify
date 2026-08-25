@@ -4,14 +4,12 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## progressListener
@@ -23,8 +21,6 @@ progressListener?: ProgressListener
 定义进度数据变化的订阅函数，用于获取粘贴过程的进度。仅当progressIndicator设置为NONE时此参数才生效，可设置该项自行处理进度显示； 当progressIndicator设置为DEFAULT时此参数无效。默认为空（不监听进度）。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ destUri?: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -64,8 +58,6 @@ fileConflictOptions?: FileConflictOptions
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -81,8 +73,6 @@ progressIndicator: ProgressIndicator
 **类型：** ProgressIndicator
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -101,8 +91,6 @@ progressSignal?: ProgressSignal
 **默认值：** -
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

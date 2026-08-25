@@ -4,8 +4,6 @@ WLAN站点信息。@interface StationInfo
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)
@@ -17,7 +15,7 @@ WLAN站点信息。@interface StationInfo
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## ipAddress
@@ -31,8 +29,6 @@ WLAN客户端的IP地址
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -54,8 +50,6 @@ WLAN客户端的MAC地址
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [macAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#macaddress)
@@ -75,8 +69,6 @@ WLAN客户端的网络名称
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

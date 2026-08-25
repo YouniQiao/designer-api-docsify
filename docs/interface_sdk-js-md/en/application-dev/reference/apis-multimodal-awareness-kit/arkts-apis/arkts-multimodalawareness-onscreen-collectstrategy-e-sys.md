@@ -4,8 +4,6 @@ Defines a page information collection policy.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ ALLOW = 1 << 0
 Collection is supported.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ Collection policy of the split-screen window on the application.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -55,8 +49,6 @@ UNSUPPORTED_APP = 1 << 2
 Automatic collection is not supported.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,8 +66,6 @@ Privacy window of the application.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -91,8 +81,6 @@ ANCO_APP = 1 << 4
 VM application, which is a non-HarmonyOS application.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,8 +98,6 @@ Collection policies can be configured.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -127,8 +113,6 @@ BUSINESS_APP = 1 << 6
 Application data can be collected.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,8 +130,6 @@ Floating window.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -164,8 +146,6 @@ Picture-in-picture mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -181,8 +161,6 @@ LAUNCHER = 1 << 9
 Desktop application.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

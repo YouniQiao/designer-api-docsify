@@ -4,14 +4,12 @@ Describes the list of files in [UploadConfig](arkts-basicservices-request-upload
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## filename
@@ -25,8 +23,6 @@ File name in the header when **multipart** is used.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -42,8 +38,6 @@ Name of a form item when **multipart** is used. The default value is **file**.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## type
@@ -58,8 +52,6 @@ Type of the file content. By default, the type is obtained based on the extensio
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## uri
@@ -73,7 +65,5 @@ Local path for storing files.Only **internal://cache/** is supported, that is, *
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download

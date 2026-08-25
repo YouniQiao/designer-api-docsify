@@ -4,8 +4,6 @@ Defines the VPN configuration.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the VPN configuration.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## addresses
@@ -27,8 +25,6 @@ IP address of the vNIC.
 **Type:** Array&lt;LinkAddress&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -46,8 +42,6 @@ Used to specify that the bundle name of the string type cannot access the VPN ne
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ IP address of the DNS server.
 **Type:** Array&lt;string&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -82,8 +74,6 @@ Whether the blocking mode is used. The value **true** indicates that the blockin
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Whether IPv4 is supported. The value **true** indicates that IPv4 is supported, 
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -118,8 +106,6 @@ Whether IPv6 is supported. The value **true** indicates that IPv6 is supported, 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -135,8 +121,6 @@ Whether the built-in VPN is supported. The value **true** indicates that the bui
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -154,8 +138,6 @@ Maximum transmission unit (MTU), in bytes.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -171,8 +153,6 @@ Route information of the vNIC.
 **Type:** Array&lt;RouteInfo&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -190,8 +170,6 @@ List of DNS search domains.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -208,8 +186,6 @@ Used to specify that the bundle name of the string type can access the VPN netwo
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -225,8 +201,6 @@ Unique VPN ID.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 

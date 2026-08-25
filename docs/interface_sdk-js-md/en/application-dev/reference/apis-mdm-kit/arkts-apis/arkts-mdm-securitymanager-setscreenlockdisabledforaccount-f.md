@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setScreenLockDisabledForAccount
@@ -24,8 +24,6 @@ Disables or enables swipe-to-unlock for the current user. When enabled, the user
 > this case, the previously applied policy will no longer take effect.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 

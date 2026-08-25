@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
+import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
 ```
 
 ## on
@@ -16,8 +16,6 @@ function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCal
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -28,28 +26,3 @@ function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCal
 | --- | --- | --- |
 | eventType | string | 是 |
 | callback | [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
-import { Want } from '@kit.AbilityKit';
-
-const onPushListener = (source:Want, template:PluginComponentTemplate, data:pluginComponentManager.KVObject, extraData:pluginComponentManager.KVObject) => {
-  console.info("onPushListener template.source=" + template.source);
-  console.info("onPushListener source=" + JSON.stringify(source));
-  console.info("onPushListener template=" + JSON.stringify(template));
-  console.info("onPushListener data=" + JSON.stringify(data));
-  console.info("onPushListener extraData=" + JSON.stringify(extraData));
-}
-const onRequestListener = (source:Want, name:string, data:pluginComponentManager.KVObject) => {
-  console.info("onRequestListener");
-  console.info("onRequestListener source=" + JSON.stringify(source));
-  console.info("onRequestListener name=" + name);
-  console.info("onRequestListener data=" + JSON.stringify(data));
-  let returnData: Record<string, string | pluginComponentManager.KVObject> = { "template": "ets/pages/plugin.js", "data": data };
-  return returnData;
-}
-pluginComponentManager.on("push", onPushListener);
-pluginComponentManager.on("request", onRequestListener);
-```

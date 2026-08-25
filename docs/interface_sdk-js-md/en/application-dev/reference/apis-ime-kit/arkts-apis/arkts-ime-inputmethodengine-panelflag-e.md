@@ -1,10 +1,9 @@
 # PanelFlag
 
-Enumerates the state types of the input method panel.<br> <br> | Name | Value| Description | | ------------ | -- | ------------------ | | FLG_FIXED | 0 | Fixed state type.| | FLG_FLOATING | 1 | Floating state type.| | FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; | 2 | Candidate state type.|
+Enumerates the state types of the input method panel.  
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Description | | ------------ | -- | ------------------ | | [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) | 0 | Fixed state type.| | [FLG_FLOATING](arkts-ime-inputmethodengine-panelflag-e.md) | 1 | Floating state type.| | FLAG_CANDIDATE & lt;sup & gt;15+ & lt;/sup & gt; | 2 |
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -14,11 +13,9 @@ Enumerates the state types of the input method panel.<br> <br> | Name | Value| D
 FLG_FIXED = 0
 ```
 
-Fixed style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is fixed at the bottom of the screen.</p>
+Fixed style. <p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is fixed at the bottom of the screen.</p>
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -28,11 +25,9 @@ Fixed style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOARD.
 FLG_FLOATING
 ```
 
-Floating style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is floating.</p>
+Floating style. <p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is floating.</p>
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -42,10 +37,8 @@ Floating style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOA
 FLAG_CANDIDATE
 ```
 
-Candidate style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is a candidate window which will show the possible characters when user types a input code. Panel with candidate style will not be automatically shown or hidden by input method service. Input method application developers are supposed to control the panel status on their own.</p>
+Candidate style. <p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is a candidate window which will show the possible characters when user types a input code. Panel with candidate style will not be automatically shown or hidden by input method service. Input method application developers are supposed to control the panel status on their own.</p>
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

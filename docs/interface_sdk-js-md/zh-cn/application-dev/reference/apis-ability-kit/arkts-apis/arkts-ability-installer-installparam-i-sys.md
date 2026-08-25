@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## additionalInfo
@@ -28,8 +26,6 @@ additionalInfo?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -37,16 +33,14 @@ additionalInfo?: string
 ## crowdtestDeadline
 
 ```TypeScript
-crowdtestDeadline?: long
+crowdtestDeadline?: number
 ```
 
 众测活动的截止日期，默认值为-1，表示无截止日期约束，单位：秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -64,8 +58,6 @@ hashParams?: Array<HashParam>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ hashParams?: Array<HashParam>
 ## installFlag
 
 ```TypeScript
-installFlag?: int
+installFlag?: number
 ```
 
 指示安装标志，枚举值：0x00：应用初次安装，0x01：应用覆盖安装，0x10：应用免安装，默认值为应用初次安装。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -100,8 +90,6 @@ isKeepData?: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -117,8 +105,6 @@ parameters?: Array<Parameters>
 **类型：** Array&lt;Parameters&gt;
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -136,8 +122,6 @@ PGO配置文件参数，默认值为空。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -153,8 +137,6 @@ sharedBundleDirPaths?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -172,8 +154,6 @@ specifiedDistributionType?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -181,16 +161,14 @@ specifiedDistributionType?: string
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 指示用户id，默认值：调用方所在用户，取值范围：大于等于0，可使用 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取当前进程所在用户。当安装、卸载或恢复一个驱动应用时，该参数会被忽略，会在所有用户下执行。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -208,8 +186,6 @@ verifyCodeParams?: Array<VerifyCodeParam>
 **类型：** Array&lt;[VerifyCodeParam](arkts-ability-installer-verifycodeparam-i-sys.md)&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 

@@ -4,8 +4,6 @@ This module provides resource-related information, including the application pac
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## bundleName
@@ -20,8 +18,6 @@ Application bundle name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -29,16 +25,16 @@ Application bundle name.
 ## id
 
 ```TypeScript
-id: long
+id: number
 ```
 
-Resource ID. The value ranges are as follows: <br>- Application resource ranges: [0x01000000, 0x06FFFFFF] and [0x08000000, 0xFFFFFFFF], indicating the resource IDs of the application itself. <br>- System resource range: [0x07000000, 0x07FFFFFF], indicating the resource IDs preset by the system.
+Resource ID. The value ranges are as follows:   
+- Application resource ranges: [0x01000000, 0x06FFFFFF] and [0x08000000, 0xFFFFFFFF], indicating the resource IDs of the application itself.   
+- System resource range: [0x07000000, 0x07FFFFFF], indicating the resource IDs preset by the system.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,8 +52,6 @@ Application module name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -74,8 +68,6 @@ Resource parameters, including the resource name (string type), replacement valu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -83,16 +75,26 @@ Resource parameters, including the resource name (string type), replacement valu
 ## type
 
 ```TypeScript
-type?: int
+type?: number
 ```
 
-Resource type. The options are as follows: <br>- 10001: color <br>- 10002: float <br>- 10003: string <br>- 10004: plural <br>- 10005: boolean <br>- 10006: intarray <br>- 10007: integer <br>- 10008: pattern <br>- 10009: strarray <br>- 20000: media <br>- 30000: rawfile <br>- 40000: symbol
+Resource type. The options are as follows:   
+- 10001: color   
+- 10002: float   
+- 10003: string   
+- 10004: plural   
+- 10005: boolean   
+- 10006: intarray   
+- 10007: integer   
+- 10008: pattern   
+- 10009: strarray   
+- 20000: media   
+- 30000: rawfile   
+- 40000: symbol
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

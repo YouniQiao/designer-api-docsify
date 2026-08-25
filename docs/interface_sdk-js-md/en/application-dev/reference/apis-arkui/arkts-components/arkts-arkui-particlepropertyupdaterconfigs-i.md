@@ -4,8 +4,6 @@ Defines the particle property updater configs. @interface ParticlePropertyUpdate
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ The property changes with the animation curve. The array type indicates that mul
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -44,8 +40,6 @@ No effect of particle updater.
 **Type:** void
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ value is **0.2** and **config** is set to **[-3.0,2.0]**, then when the random c
 **Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;T, T&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

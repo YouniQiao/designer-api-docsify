@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## offSpatialMotion
@@ -15,8 +15,6 @@ function offSpatialMotion(callback?: Callback<SpatialMotionInfo>): void
 Disables spatial motion awareness and subscribes to spatial motion awareness results.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Required permissions:** ohos.permission.vehicle.MMA_SPATIALACTION
 

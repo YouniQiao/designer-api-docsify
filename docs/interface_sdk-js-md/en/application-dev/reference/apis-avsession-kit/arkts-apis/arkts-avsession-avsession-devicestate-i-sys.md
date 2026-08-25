@@ -4,8 +4,6 @@ Device state used to describe states including discovery, authentication and oth
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Device state used to describe states including discovery, authentication and oth
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## deviceId
@@ -28,8 +26,6 @@ Unique device descriptor.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Unique device descriptor.
 ## deviceState
 
 ```TypeScript
-readonly deviceState: int
+readonly deviceState: number
 ```
 
 Device connection state.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -55,16 +49,14 @@ Device connection state.
 ## radarErrorCode
 
 ```TypeScript
-readonly radarErrorCode: int
+readonly radarErrorCode: number
 ```
 
 System radar error code returned by cast+services.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -73,16 +65,14 @@ System radar error code returned by cast+services.
 ## reasonCode
 
 ```TypeScript
-readonly reasonCode: int
+readonly reasonCode: number
 ```
 
 Reason for connection failure, for example, user cancellation and timeout.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

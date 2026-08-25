@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addInstallationAllowedAppDistributionTypes
@@ -15,8 +15,6 @@ function addInstallationAllowedAppDistributionTypes(admin: Want, appDistribution
 Adds the distribution type of the application that can be installed. Only applications of the distribution type that is added to [AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md) can be installed on the current device.For details about the distribution type of the application signing certificate, refer to the **appDistributionType** attribute in [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md).
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -39,23 +37,3 @@ Adds the distribution type of the application that can be installed. Only applic
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let appDistributionTypes: Array<bundleManager.AppDistributionType> = [bundleManager.AppDistributionType.APP_GALLERY];
-  bundleManager.addInstallationAllowedAppDistributionTypes(wantTemp, appDistributionTypes);
-  console.info('Succeeded in adding allowed appDistributionTypes.');
-} catch (err) {
-  console.error(`Failed to add allowed appDistributionTypes. Code: ${err.code}, message: ${err.message}`);
-}
-```

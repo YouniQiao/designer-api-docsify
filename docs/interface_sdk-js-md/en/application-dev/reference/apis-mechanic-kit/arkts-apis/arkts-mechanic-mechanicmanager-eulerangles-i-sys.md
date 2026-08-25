@@ -4,8 +4,6 @@ Absolute euler angles relative to the home position.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Absolute euler angles relative to the home position.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## pitch
 
 ```TypeScript
-pitch?: double
+pitch?: number
 ```
 
 Pitch angle, ranging from -Math.PI to Math.PI, measured in radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -37,16 +33,14 @@ Pitch angle, ranging from -Math.PI to Math.PI, measured in radians.
 ## roll
 
 ```TypeScript
-roll?: double
+roll?: number
 ```
 
 Roll angle, ranging from -Math.PI to Math.PI, measured in radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -55,16 +49,14 @@ Roll angle, ranging from -Math.PI to Math.PI, measured in radians.
 ## yaw
 
 ```TypeScript
-yaw?: double
+yaw?: number
 ```
 
 Yaw angle, ranging from -Math.PI to Math.PI, measured in radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## setCameraTrackingLayout
@@ -15,8 +15,6 @@ function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void
 Sets the camera tracking layout for this mechanical device.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -36,11 +34,3 @@ Sets the camera tracking layout for this mechanical device.
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
 | [33300003](../errorcode-mechanic.md#33300003-function-not-supported) |
-
-**Examples**
-
-```TypeScript
-console.info('Set layout');
-mechanicManager.setCameraTrackingLayout(mechanicManager.CameraTrackingLayout.LEFT);
-console.info('Set layout successful');
-```

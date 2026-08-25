@@ -4,8 +4,6 @@ interface of service lifecycle.@interface LifecycleService
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## Modules to Import
@@ -22,8 +20,6 @@ onCommand?(want: Want, startId: number): void
 Called back when Service is started.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -45,8 +41,6 @@ onConnect?(want: Want): rpc.RemoteObject
 Called back when a Service ability is first connected to an ability.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -74,8 +68,6 @@ Called back when all abilities connected to a Service ability are disconnected.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -95,8 +87,6 @@ onReconnect?(want: Want): void
 Called when a new client attempts to connect to a Service ability after all previous client connections to it are disconnected. <p>The Service ability must have been started but not been destroyed, that is, startAbility has been called but terminateSelf has not.</p>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -118,8 +108,6 @@ Called back when an ability is started for initialization (it can be called only
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -133,8 +121,6 @@ onStop?(): void
 Called back before an ability is destroyed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 

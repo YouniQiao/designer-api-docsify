@@ -10,8 +10,6 @@ Indicates the maximum length of a key (80 characters).
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 ## MAX_VALUE_LENGTH
@@ -23,7 +21,5 @@ const MAX_VALUE_LENGTH: 8192
 Indicates the maximum length of a string (8192 characters).
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9

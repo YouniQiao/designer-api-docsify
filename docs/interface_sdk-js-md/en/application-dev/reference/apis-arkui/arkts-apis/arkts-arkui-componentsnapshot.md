@@ -1,6 +1,6 @@
 # @ohos.arkui.componentSnapshot
 
-The **componentSnapshot** module provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet. Snapshots are strictly limited to the component's layout bounds. Content drawn outside the area of the owning component or the parent component is not visible in the snapshots. In addition, sibling components stacked in the component's area are not displayed in the snapshot.Transformation attributes such as scaling, translation, and rotation only apply to the child components of the target component. Applying these transformation attributes directly to the target component itself has no effect; the snapshot will still display the component as it appears before any transformations are applied.For typical use cases (for example, long screenshots) and best practices of component snapshots, see [Using Component Snapshot (ComponentSnapshot)](../../../ui/arkts-uicontext-component-snapshot.md).
+The **componentSnapshot** module provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet. Snapshots are strictly limited to the component's layout bounds. Content drawn outside the area of the owning component or the parent component is not visible in the snapshots. In addition, sibling components stacked in the component's area are not displayed in the snapshot.Transformation attributes such as scaling, translation, and rotation only apply to the child components of the target component. Applying these transformation attributes directly to the target component itself has no effect; the snapshot will still display the component as it appears before any transformations are applied.For typical use cases (for example, number screenshots) and best practices of component snapshots, see [Using Component Snapshot (ComponentSnapshot)](../../../ui/arkts-uicontext-component-snapshot.md).
 
 > **NOTE：**&gt;
 > - In scenarios where XComponent is used to, for example, display video or camera streams,
@@ -16,8 +16,6 @@ The **componentSnapshot** module provides APIs for obtaining component snapshots
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,7 +23,7 @@ The **componentSnapshot** module provides APIs for obtaining component snapshots
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

@@ -1,18 +1,19 @@
 # @ohos.userIAM.userAuth(用户认证)
 
 **userAuth**模块是OpenHarmony系统中用于用户身份认证的核心模块，提供了设备解锁、支付验证、应用登录等场景下的身份认证能力。该模块支持多种生物特征认证方式（人脸、指纹）和密码认证（PIN），并提供不同级别的安全信任等级。从API版本26.0.0开始，新增伴随设备认证的方式。该模块主要用于以下场景：  
-- 设备解锁认证。 - 金融支付验证。 - 应用登录保护。 - 敏感操作确认。
+- 设备解锁认证。  
+- 金融支付验证。  
+- 应用登录保护。  
+- 敏感操作确认。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## 汇总
@@ -108,7 +109,6 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | 名称 |
 | --- |
-| [AuthCallbackOnResultFunc(用户认证)](arkts-userauthentication-userauth-authcallbackonresultfunc-t.md) |
 | [AuthEventKey(用户认证)](arkts-userauthentication-userauth-autheventkey-t.md) |
 | [AuthTipCallback(用户认证)](arkts-userauthentication-userauth-authtipcallback-t.md) |
 | [AuthType(用户认证)](arkts-userauthentication-userauth-authtype-t.md) |
@@ -120,7 +120,6 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | 名称 |
 | --- |
-| [AuthWidgetCallbackSendCommandFunc(用户认证)](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md) |
 | [ResultCallback(用户认证)](arkts-userauthentication-userauth-resultcallback-t-sys.md) |
 | [WidgetParamCallback(用户认证)](arkts-userauthentication-userauth-widgetparamcallback-t-sys.md) |
 <!--DelEnd-->

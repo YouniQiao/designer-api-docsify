@@ -16,8 +16,8 @@ Stack is implemented based on the array data structure. It follows the principle
 ## Modules to Import
 
 ```TypeScript
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
+import { Stack } from 'kits/@kit.ArkTS';
+import { StackForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -27,9 +27,3 @@ import { StackForEachCb } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [Stack](arkts-arkts-util-stack-stack-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [StackForEachCb](arkts-arkts-stackforeachcb-t.md) |

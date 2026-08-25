@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## on('receiveImage')
@@ -16,8 +16,6 @@ function on(type: 'receiveImage', sessionId: number,
 Registers receiveImage event.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,17 +38,6 @@ Registers receiveImage event.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-abilityConnectionManager.on("receiveImage", sessionId, (callbackInfo) => {
-  hilog.info(0x0000, 'testTag', 'session receiveImage, sessionId is', callbackInfo.sessionId);
-});
-```
-
 
 ## on('collaborateEvent')
 
@@ -62,8 +49,6 @@ function on(type: 'collaborateEvent', sessionId: number,
 Registers collaborateEvent event.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,15 +70,3 @@ Registers collaborateEvent event.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let sessionId = 100;
-abilityConnectionManager.on("collaborateEvent", sessionId, (callbackInfo) => {
-  hilog.info(0x0000, 'testTag', 'session collaborateEvent, eventType is', callbackInfo.eventType);
-});
-```

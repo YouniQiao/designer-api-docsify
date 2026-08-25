@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## getTask
@@ -21,8 +21,6 @@ function getTask(taskId: number, taskName?: string): Task | undefined
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -39,40 +37,3 @@ function getTask(taskId: number, taskName?: string): Task | undefined
 | 类型 |
 | --- |
 | Task \| undefined |
-
-**示例**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-
-@Concurrent
-function addNum(num1: number, num2: number) {
-  return num1 + num2;
-}
-
-function checkTask() {
-  try {
-    taskpool.getTask(null);
-  } catch (e) {
-    console.error("error:" + e);
-    // error:BusinessError: Parameter error. The input parameters are invalid, the type of the first param must be number.
-  }
-
-  let task1:taskpool.Task = new taskpool.Task("addNum", addNum, 1, 2);
-  let task2:taskpool.Task | undefined = taskpool.getTask(task1.taskId, "addNum"); // task2 is not undefined
-  let task3:taskpool.Task | undefined = taskpool.getTask(task1.taskId, "add"); // task3 is undefined
-  let task4:taskpool.Task | undefined = taskpool.getTask(0); // task4 is undefined
-}
-
-function dealTask() {
-  let task1:taskpool.Task = new taskpool.Task(addNum, 1, 2);
-  let task2:taskpool.Task | undefined = taskpool.getTask(task1.taskId);
-  if (task2 === undefined) {
-    return;
-  }
-
-  taskpool.execute(task2).then((result) => {
-    console.info("task2 result: " + result); // task2 result: 3
-  })
-}
-```

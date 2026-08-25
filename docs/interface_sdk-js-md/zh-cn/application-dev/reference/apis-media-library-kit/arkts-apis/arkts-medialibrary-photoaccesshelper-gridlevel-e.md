@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SPACIOUS
@@ -17,8 +15,6 @@ SPACIOUS = 0
 宽松宫格档位。该挡位为标准宫格的列数减1。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ STANDARD = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -53,8 +47,6 @@ COMPACT = 2
 紧密宫格档位。该挡位为标准宫格的列数加1。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为23；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

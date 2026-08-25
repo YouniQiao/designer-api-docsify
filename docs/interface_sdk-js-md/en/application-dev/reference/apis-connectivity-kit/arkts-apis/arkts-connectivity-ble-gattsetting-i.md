@@ -4,14 +4,12 @@ Describes the setting for Gatt Connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## autoConnect
@@ -25,8 +23,6 @@ Indicates whether to automatically connect to the remote device, default is {@co
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Transport of the connection, default is {@code TRANSPORT_LE}
 **Type:** BluetoothTransport
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

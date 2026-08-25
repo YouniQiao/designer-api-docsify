@@ -8,14 +8,12 @@ The **Preferences** module provides APIs for processing data in the form of key-
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from '@kit.ArkData';
+import { preferences } from 'kits/@kit.ArkData';
 ```
 
 ## Summary
@@ -58,7 +56,6 @@ import { preferences } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [RecordData](arkts-arkdata-preferences-recorddata-t.md) |
 | [ValueType](arkts-arkdata-preferences-valuetype-t.md) |
 
 ### Constants

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_APP
@@ -17,8 +15,6 @@ TYPE_APP = 0
 表示应用子窗口。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -34,8 +30,6 @@ TYPE_SYSTEM_ALERT = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -49,8 +43,6 @@ TYPE_FLOAT = 8
 表示全局悬浮窗。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,8 +60,6 @@ TYPE_DIALOG = 16
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -85,7 +75,5 @@ TYPE_MAIN = 32
 表示应用主窗口。此窗口类型不支持在创建窗口时使用。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core

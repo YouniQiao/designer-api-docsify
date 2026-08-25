@@ -4,8 +4,6 @@ The module describes the ability information of the launcher application. The in
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## applicationInfo
@@ -19,8 +17,6 @@ Application information of the launcher ability.
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -36,70 +32,60 @@ Element name of the launcher ability.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## iconId
 
 ```TypeScript
-readonly iconId: long
+readonly iconId: number
 ```
 
 Icon ID of the launcher ability.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## installTime
 
 ```TypeScript
-readonly installTime: long
+readonly installTime: number
 ```
 
 Timestamp when the launcher ability was installed, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## labelId
 
 ```TypeScript
-readonly labelId: long
+readonly labelId: number
 ```
 
 Label ID of the launcher ability.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## userId
 
 ```TypeScript
-readonly userId: int
+readonly userId: number
 ```
 
 User ID of the launcher ability.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher

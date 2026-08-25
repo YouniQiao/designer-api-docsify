@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## getAdRequestBody
@@ -15,8 +15,6 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 获取广告请求体，使用Promise异步回调（该接口仅对部分系统预置应用开放）。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Advertising.Ads
 
@@ -40,21 +38,3 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function getAdRequestBody(adRequestParamsArray: advertising.AdRequestParams[]): Promise<void> {
-  // 广告配置参数，开发者可根据项目实际情况设置
-  const adOptions: advertising.AdOptions = {};
-  await advertising.getAdRequestBody(adRequestParamsArray, adOptions).then((data: string) => {
-    hilog.info(0x0000, 'testTag', `Succeeded in getting ad request body. Data is ${data}`);
-  }).catch((error: BusinessError) => {
-    hilog.error(0x0000, 'testTag', `Failed to get ad request body. Code is ${error.code}, message is ${error.message}`);
-  });
-}
-```

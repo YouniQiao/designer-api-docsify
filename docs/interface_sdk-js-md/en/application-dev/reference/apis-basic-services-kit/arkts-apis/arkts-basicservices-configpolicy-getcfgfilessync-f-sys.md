@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from '@kit.BasicServicesKit';
+import { configPolicy } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getCfgFilesSync
@@ -15,8 +15,6 @@ function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: stri
 Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
@@ -41,20 +39,3 @@ Obtains a list of all files of a specified file name based on the provided follo
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { configPolicy, BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let relpath: string = 'etc/config.xml';
-  let extra: string = 'etc/carrier/${telephony.sim.opkey0}';
-  let result: Array<string> = configPolicy.getCfgFilesSync(relpath, configPolicy.FollowXMode.USER_DEFINED, extra);
-  console.info('result is ' + result);
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error('error:' + code + ', ' + message);
-}
-```

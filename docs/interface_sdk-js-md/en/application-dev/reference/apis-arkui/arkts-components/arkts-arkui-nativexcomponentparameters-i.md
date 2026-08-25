@@ -4,8 +4,6 @@ Defines the options of the **XComponent**. An XComponent created with such const
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ imageAIOptions?: ImageAIOptions
 
 AI analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
 
-**Type:** ImageAIOptions
+**Type:** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ type: XComponentType
 
 Type of the component.
 
-**Type:** XComponentType
+**Type:** [XComponentType](../arkts-apis/arkts-arkui-xcomponenttype-e.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

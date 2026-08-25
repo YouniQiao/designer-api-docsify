@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## TASKPOOL
@@ -17,8 +15,6 @@ TASKPOOL = 2
 表示任务池虚拟机实例。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ WORKER = 1
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -50,8 +44,6 @@ MAIN = 0
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -65,8 +57,6 @@ CUSTOM = 3
 表示用户通过[napi_create_ark_runtime](../../../reference/native-lib/napi.md#napi_create_ark_runtime)从本机代码创建的虚拟机实例。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

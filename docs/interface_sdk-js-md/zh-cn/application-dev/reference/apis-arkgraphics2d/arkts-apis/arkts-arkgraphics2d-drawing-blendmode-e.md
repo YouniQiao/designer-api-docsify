@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## CLEAR
@@ -17,8 +15,6 @@ CLEAR = 0
 清除模式，r = 0，设置为全透明。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ r = s，result的4个通道都等于source的4个通道，即结果等于源。�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DST
@@ -45,8 +39,6 @@ DST = 2
 r = d，result的4个通道都等于destination的4个通道，即结果等于目标。保持目标像素不变。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -60,8 +52,6 @@ r = s + (1 - sa) * d，在目标像素上方绘制源像素，考虑源像素的
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DST_OVER
@@ -73,8 +63,6 @@ DST_OVER = 4
 r = d + (1 - da) * s，在源像素上方绘制目标像素，考虑目标像素的透明度。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -88,8 +76,6 @@ r = s * da，仅保留源像素与目标不透明部分的交集。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DST_IN
@@ -101,8 +87,6 @@ DST_IN = 6
 r = d * sa，仅保留目标像素与源不透明部分的交集。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -116,8 +100,6 @@ r = s * (1 - da)，保留源像素中不与目标重叠的部分。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DST_OUT
@@ -129,8 +111,6 @@ DST_OUT = 8
 r = d * (1 - sa)，保留目标像素中不与源重叠的部分。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -144,8 +124,6 @@ r = s * da + d * (1 - sa)，源像素覆盖在目标像素上，仅在目标不�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DST_ATOP
@@ -157,8 +135,6 @@ DST_ATOP = 10
 r = d * sa + s * (1 - da)，目标像素覆盖在源像素上，仅在源不透明部分显示目标像素。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -172,8 +148,6 @@ r = s * (1 - da) + d * (1 - sa)，仅显示源像素和目标像素中不重叠�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## PLUS
@@ -185,8 +159,6 @@ PLUS = 12
 r = min(s + d, 1)，源和目标像素的颜色值相加。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -200,8 +172,6 @@ r = s * d，源和目标像素的颜色值相乘。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## SCREEN
@@ -213,8 +183,6 @@ SCREEN = 14
 滤色模式，r = s + d - s * d，反转源和目标像素的颜色值，相乘后再反转，结果通常更亮。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -228,8 +196,6 @@ OVERLAY = 15
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DARKEN
@@ -241,8 +207,6 @@ DARKEN = 16
 变暗模式，rc = s + d - max(s * da, d * sa), ra = s + (1 - sa) * d，取源和目标像素中较暗的颜色值。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -256,8 +220,6 @@ LIGHTEN = 17
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## COLOR_DODGE
@@ -269,8 +231,6 @@ COLOR_DODGE = 18
 颜色减淡模式，通过减小对比度使目标像素变亮以反映源像素。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -284,8 +244,6 @@ COLOR_BURN = 19
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## HARD_LIGHT
@@ -297,8 +255,6 @@ HARD_LIGHT = 20
 强光模式，根据源像素的亮度，选择性地应用MULTIPLY或SCREEN模式。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -312,8 +268,6 @@ SOFT_LIGHT = 21
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DIFFERENCE
@@ -325,8 +279,6 @@ DIFFERENCE = 22
 差值模式，rc = s + d - 2 * (min(s * da, d * sa)), ra = s + (1 - sa) * d，计算源和目标像素颜色值的差异。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -340,8 +292,6 @@ EXCLUSION = 23
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## MULTIPLY
@@ -353,8 +303,6 @@ MULTIPLY = 24
 正片叠底，r = s * (1 - da) + d * (1 - sa) + s * d，源和目标像素的颜色值相乘，结果通常更暗。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -368,8 +316,6 @@ HUE = 25
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## SATURATION
@@ -381,8 +327,6 @@ SATURATION = 26
 饱和度模式，使用源像素的饱和度，目标像素的色相和亮度。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -396,8 +340,6 @@ COLOR = 27
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## LUMINOSITY
@@ -409,7 +351,5 @@ LUMINOSITY = 28
 亮度模式，使用源像素的亮度，目标像素的色相和饱和度。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing

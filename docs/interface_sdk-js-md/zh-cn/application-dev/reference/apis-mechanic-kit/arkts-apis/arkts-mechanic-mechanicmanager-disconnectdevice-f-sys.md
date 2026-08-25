@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## disconnectDevice
 
 ```TypeScript
-function disconnectDevice(mechId: int): Promise<Result>
+function disconnectDevice(mechId: number): Promise<Result>
 ```
 
 基于具身设备ID断开设备
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.CONNECT_MECHANIC_HARDWARE
 
@@ -30,7 +28,7 @@ function disconnectDevice(mechId: int): Promise<Result>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| mechId | number | 是 |
 
 **返回值：**
 

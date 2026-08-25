@@ -15,8 +15,6 @@ Obtains the Context object associated with a component on the page.
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **废弃版本：** 18
 
 **替代接口：** [getHostContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext)
@@ -31,7 +29,7 @@ Obtains the Context object associated with a component on the page.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | 否 |
+| component | Object | 否 |
 
 **返回值：**
 

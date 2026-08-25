@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disableDeviceAdmin
@@ -15,8 +15,6 @@ function disableDeviceAdmin(admin: Want): Promise<void>
 [SDA](../../../mdm/mdm-kit-term.md#super-device-admin-sda超级设备管理员)应用通过该接口可以解除激活其他 [DA](../../../mdm/mdm-kit-term.md#device-admin-da普通设备管理员)应用，使用Promise异步回调。调用成功后，指定的DA应用将被解除激活，不再具备设备管理能力。该接口仅支持超级设 备管理应用调用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_DEVICE_ADMIN
 
@@ -45,21 +43,3 @@ function disableDeviceAdmin(admin: Want): Promise<void>
 | [9200005](../errorcode-enterpriseDeviceManager.md#9200005-解除激活设备管理器失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { adminManager } from '@kit.MDMKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.disableDeviceAdmin(wantTemp).catch((err: BusinessError) => {
-  console.error(`Failed to disable device admin. Code: ${err.code}, message: ${err.message}`);
-});
-```

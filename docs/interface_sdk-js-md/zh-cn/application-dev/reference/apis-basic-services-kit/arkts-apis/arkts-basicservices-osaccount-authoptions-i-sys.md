@@ -1,10 +1,8 @@
 # AuthOptions（系统接口）
 
-表示 [认证用户](arkts-basicservices-osaccount-userauth-c-sys.md#auth) 的可选参数集合。
+表示认证用户 [auth](arkts-basicservices-osaccount-userauth-c-sys.md#auth) 的可选参数集合。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## accountId
 
 ```TypeScript
-accountId?: int
+accountId?: number
 ```
 
 系统账号标识，默认为undefined。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -40,13 +36,11 @@ accountId?: int
 additionalInfo?: string
 ```
 
-表示有关身份验证选项的附加信息。
+身份认证的附加信息，默认为undefined。
 
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +60,6 @@ authIntent?: AuthIntent
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +75,6 @@ remoteAuthOptions?: RemoteAuthOptions
 **类型：** [RemoteAuthOptions](arkts-basicservices-osaccount-remoteauthoptions-i-sys.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

@@ -4,8 +4,6 @@ Defines the custom event dispatch result. You can influence event dispatch by re
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Unique ID of the child component.If **strategy** is set to **TouchTestStrategy.D
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -44,8 +40,6 @@ Event dispatch strategy.
 **Type:** [TouchTestStrategy](arkts-arkui-touchteststrategy-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

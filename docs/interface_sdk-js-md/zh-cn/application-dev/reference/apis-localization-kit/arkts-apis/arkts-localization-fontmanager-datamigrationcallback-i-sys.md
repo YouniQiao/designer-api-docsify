@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## onHeartBeat
@@ -26,39 +24,9 @@ onHeartBeat(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-class DataMigrationCallbackImpl implements fontManager.DataMigrationCallback {
-  onHeartBeat(): void {
-    console.info('onHeartBeat callback');
-  }
-  onProgress(progress : fontManager.DataMigrationProgress): void {
-    console.info('onProgress callback');
-  }
-  onResult(result : int): void {
-    console.info('onResult callback');
-  }
-}
-
-async function dataMigration() {
-  const callback = new DataMigrationCallbackImpl;
-  try {
-    let res: int = fontManager.dataMigration(callback);
-    console.info('dataMigration suc. res is ' + res);
-  } catch (error) {
-    console.error('dataMigration err.' + error.code);
-  }
-}
-```
 
 ## onProgress
 
@@ -70,8 +38,6 @@ onProgress(progress : DataMigrationProgress): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。
@@ -82,51 +48,15 @@ onProgress(progress : DataMigrationProgress): void
 | --- | --- | --- |
 | progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | 是 |
 
-**示例**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-class DataMigrationCallbackImpl implements fontManager.DataMigrationCallback {
-  onHeartBeat(): void {
-    console.info('onHeartBeat callback');
-  }
-  onProgress(progress : fontManager.DataMigrationProgress): void {
-    console.info('onProgress callback');
-  }
-  onResult(result : int): void {
-    console.info('onResult callback');
-  }
-}
-
-async function dataMigration() {
-  const callback = new DataMigrationCallbackImpl;
-  try {
-    let res: int = fontManager.dataMigration(callback);
-    console.info('dataMigration suc. res is ' + res);
-  } catch (error) {
-    console.error('dataMigration err.' + error.code);
-  }
-}
-```
-
 ## onResult
 
-ArkTS-Dyn:
 ```TypeScript
 onResult(result : number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onResult(result : int): void
 ```
 
 回调函数，在数据迁移任务完成（无论成功或失败）后调用，用于通知开发者迁移的最终结果。当需要在迁移完成后执行后续操作（如更新UI、记录日志、通知用户等）时使用此回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -136,32 +66,4 @@ onResult(result : int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| result | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-class DataMigrationCallbackImpl implements fontManager.DataMigrationCallback {
-  onHeartBeat(): void {
-    console.info('onHeartBeat callback');
-  }
-  onProgress(progress : fontManager.DataMigrationProgress): void {
-    console.info('onProgress callback');
-  }
-  onResult(result : int): void {
-    console.info('onResult callback');
-  }
-}
-
-async function dataMigration() {
-  const callback = new DataMigrationCallbackImpl;
-  try {
-    let res: int = fontManager.dataMigration(callback);
-    console.info('dataMigration suc. res is ' + res);
-  } catch (error) {
-    console.error('dataMigration err.' + error.code);
-  }
-}
-```
+| result | number | 是 |

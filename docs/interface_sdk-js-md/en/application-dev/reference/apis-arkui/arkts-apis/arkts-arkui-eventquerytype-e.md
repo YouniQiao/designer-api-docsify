@@ -4,8 +4,6 @@ Enumerates interaction event types that can be queried.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ON_CLICK
@@ -17,8 +15,6 @@ ON_CLICK = 0
 Click event.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,14 +4,12 @@ Provides fileshare APIS@namespace fileShare
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

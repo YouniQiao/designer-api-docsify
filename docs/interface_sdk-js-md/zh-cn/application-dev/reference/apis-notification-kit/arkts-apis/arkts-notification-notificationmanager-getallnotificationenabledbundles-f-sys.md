@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getAllNotificationEnabledBundles
@@ -15,8 +15,6 @@ function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 获取允许通知的应用列表。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -40,83 +38,16 @@ function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getAllNotificationEnabledBundles().then((data: Array<notificationManager.BundleOption>) => {
-    console.info(`Enable bundle data is ${JSON.stringify(data)}`);
-    data.forEach(element => {
-        console.info(`Enable uid is ${JSON.stringify(element.uid)}`);
-        console.info(`Enable bundle is ${JSON.stringify(element.bundle)}`);
-    });
-}).catch((err: BusinessError) => {
-    console.error(`getAllNotificationEnabledBundles failed, code is ${err.code}, message is ${err.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getAllNotificationEnabledBundles().then((data: Array<notificationManager.BundleOption>) => {
-    console.info(`Enable bundle data is ${JSON.stringify(data)}`);
-    data.forEach(element => {
-        console.info(`Enable uid is ${JSON.stringify(element.uid)}`);
-        console.info(`Enable bundle is ${JSON.stringify(element.bundle)}`);
-    });
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getAllNotificationEnabledBundles failed, code is ${error.code}, message is ${error.message}`);
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId : number = 100;
-
-notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<notificationManager.BundleOption>) => {
-  console.info(`Enable bundle data is ${JSON.stringify(data)}`);
-  data.forEach(element => {
-    console.info(`Enable uid is ${JSON.stringify(element.uid)}`);
-    console.info(`Enable bundle is ${JSON.stringify(element.bundle)}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`getAllNotificationEnabledBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let userId : int = 100;
-
-notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<notificationManager.BundleOption> | undefined): void => {
-  console.info(`Enable bundle data is ${JSON.stringify(data)}`);
-}).catch((err: Error | undefined): void => {
-  console.error(`getAllNotificationEnabledBundles error, code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 
 ## getAllNotificationEnabledBundles
 
 ```TypeScript
-function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOption>>
+function getAllNotificationEnabledBundles(userId: number): Promise<Array<BundleOption>>
 ```
 
 获取指定用户下允许通知的应用列表。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -128,7 +59,7 @@ function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOpti
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -146,7 +77,3 @@ function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOpti
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
-
-**示例**
-
-参见 [getAllNotificationEnabledBundles](#getallnotificationenabledbundles)

@@ -4,14 +4,12 @@ This module identifies sensitive information in a specified file based on the in
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## Summary

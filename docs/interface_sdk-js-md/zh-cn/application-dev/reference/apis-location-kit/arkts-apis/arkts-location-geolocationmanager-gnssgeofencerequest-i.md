@@ -4,14 +4,12 @@ GNSS地理围栏请求参数。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## fenceExtensionAbilityName
@@ -25,8 +23,6 @@ FenceExtensionAbility名称，参见 [FenceExtensionAbility](arkts-location-app-
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -42,8 +38,6 @@ geofence: Geofence
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## geofenceTransitionCallback
@@ -58,23 +52,19 @@ geofenceTransitionCallback: AsyncCallback<GeofenceTransition>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## loiterTimeMs
 
 ```TypeScript
-loiterTimeMs?: int
+loiterTimeMs?: number
 ```
 
 徘徊时间，单位为毫秒，需关注GEOFENCE_TRANSITION_DWELL事件。若设备在多边形围栏内徘徊时间达到该值，则上报GEOFENCE_TRANSITION_DWELL事件。徘徊状态检测周期为10000毫秒。例如：设 置15000，将在驻留超过20000毫秒时上报驻留状态；设置5000，将在驻留超过10000毫秒时上报驻留状态。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -90,8 +80,6 @@ monitorTransitionEvents: Array<GeofenceTransitionEvent>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## notifications
@@ -105,7 +93,5 @@ notifications?: Array<NotificationRequest>
 **类型：** Array&lt;[NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence

@@ -9,15 +9,13 @@ APIs such as [ON.isBefore](#isbefore) and [ON.isAfter](#isafter) can be used to 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Test.UiTest
 
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## afterComponent
@@ -29,8 +27,6 @@ afterComponent(com: Component): On
 Specifies that the target component is located after the given feature component (parameter [Component](arkts-test-uitest-component-c.md)), and returns the On object itself.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -64,8 +60,6 @@ Specifies that the target component is located before the given feature componen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -90,21 +84,13 @@ Specifies that the target component is located before the given feature componen
 
 ## belongingDisplay
 
-ArkTS-Dyn:
 ```TypeScript
 belongingDisplay(displayId: number): On
-```
-
-ArkTS-Sta:
-```TypeScript
-belongingDisplay(displayId: int): On
 ```
 
 Specifies the display to which the target component belongs.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -114,7 +100,7 @@ Specifies the display to which the target component belongs.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| displayId | number | Yes |
 
 **Return value:**
 
@@ -128,15 +114,6 @@ Specifies the display to which the target component belongs.
 | --- |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.belongingDisplay(0); // Use the static constructor ON to create an On object and specify the ID of the display to which the target component belongs.
-```
-
 ## checkable
 
 ```TypeScript
@@ -146,8 +123,6 @@ checkable(b?: boolean): On
 Specifies the checkable attribute of the target component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -170,15 +145,6 @@ Specifies the checkable attribute of the target component.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.checkable(true); // Use the static constructor ON to create an On object and specify the checkable attribute of the target component.
-```
 
 ## checked
 
@@ -190,8 +156,6 @@ Specifies the checked attribute of the target component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -213,15 +177,6 @@ Specifies the checked attribute of the target component.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.checked(true); // Use the static constructor ON to create an On object and specify the checked attribute of the target component.
-```
 
 ## clickable
 
@@ -233,8 +188,6 @@ Specifies the clickable attribute of the target component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -257,22 +210,6 @@ Specifies the clickable attribute of the target component.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.clickable(true); // Use the static constructor ON to create an On object and specify the clickable attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.clickable(true); // Use the static constructor BY to create a By object and specify the clickable attribute of the target component.
-```
-
 ## description
 
 ```TypeScript
@@ -282,8 +219,6 @@ description(val: string, pattern?: MatchPattern): On
 Specifies the description of the target component. Multiple match patterns are supported.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -308,15 +243,6 @@ Specifies the description of the target component. Multiple match patterns are s
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.description('123'); // Use the static constructor ON to create an On object and specify the description attribute of the target component.
-```
-
 ## enabled
 
 ```TypeScript
@@ -326,8 +252,6 @@ enabled(b?: boolean): On
 Specifies the enabled attribute of the target component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -350,22 +274,6 @@ Specifies the enabled attribute of the target component.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.enabled(true); // Use the static constructor ON to create an On object and specify the enabled attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.enabled(true); // Use the static constructor BY to create a By object and specify the enabled attribute of the target component.
-```
 
 ## focused
 
@@ -377,8 +285,6 @@ Specifies the focused attribute of the target component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -401,22 +307,6 @@ Specifies the focused attribute of the target component.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.focused(true); // Use the static constructor ON to create an On object and specify the focused attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.focused(true); // Use the static constructor BY to create a By object and specify the focused attribute of the target component.
-```
-
 ## hint
 
 ```TypeScript
@@ -426,8 +316,6 @@ hint(val: string, pattern?: MatchPattern): On
 Specifies the hint text attribute of the target component.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -452,15 +340,6 @@ Specifies the hint text attribute of the target component.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { MatchPattern, On, ON } from '@kit.TestKit';
-
-let on: On = ON.hint('welcome', MatchPattern.EQUALS); // Use the static constructor ON to create an On object with the hint text attribute of the target component specified.
-```
-
 ## id
 
 ```TypeScript
@@ -470,8 +349,6 @@ id(id: string): On
 Specifies the ID attribute of the target component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -495,29 +372,6 @@ Specifies the ID attribute of the target component.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.id('123'); // Use the static constructor ON to create an On object and specify the ID attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { MatchPattern, On, ON } from '@kit.TestKit';
-
-let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // Use case-insensitive regular expression to match the ID attribute value of the component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.id(123); // Use the static constructor BY to create a By object and specify the id attribute of the target component.
-```
-
 ## id
 
 ```TypeScript
@@ -527,8 +381,6 @@ id(id: string, pattern: MatchPattern): On
 Specifies the **id** attribute and match pattern of the target component.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -553,10 +405,6 @@ Specifies the **id** attribute and match pattern of the target component.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [id](#id)
-
 ## inWindow
 
 ```TypeScript
@@ -566,8 +414,6 @@ inWindow(bundleName: string): On
 Specifies that the target component is located within the given application window.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -591,15 +437,6 @@ Specifies that the target component is located within the given application wind
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.inWindow('com.uitestScene.acts'); // Use the static constructor ON to create an On object and specify that the target component is located within the given application window.
-```
-
 ## isAfter
 
 ```TypeScript
@@ -609,8 +446,6 @@ isAfter(on: On): On
 Specifies that the target component is located after the given attribute component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -633,24 +468,6 @@ Specifies that the target component is located after the given attribute compone
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// Use the static constructor ON to create an On object and specify that the target component is located after the given attribute component.
-let on: On = ON.type('Text').isAfter(ON.text('123')); // Search for the first Text component located after the component whose text is 123.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-// Use the static constructor BY to create a by object and specify that the target component is located after the given attribute component.
-let by: By = BY.type('Text').isAfter(BY.text('123')); // Search for the first Text component located after the component whose text is 123.
-```
 
 ## isBefore
 
@@ -662,8 +479,6 @@ Specifies that the target component is located before the given attribute compon
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -686,35 +501,15 @@ Specifies that the target component is located before the given attribute compon
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// Use the static constructor ON to create an On object and specify that the target component is located before the given attribute component.
-let on: On = ON.type('Button').isBefore(ON.text('123')); // Search for the first Button component located before the component whose text is 123.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-// Use the static constructor BY to create a by object and specify that the target component is located before the given attribute component.
-let by: By = BY.type('Button').isBefore(BY.text('123')); // Search for the first Button component located before the component whose text is 123.
-```
-
 ## longClickable
 
 ```TypeScript
 longClickable(b?: boolean): On
 ```
 
-Specifies the long-clickable attribute of the target component.
+Specifies the number-clickable attribute of the target component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -738,15 +533,6 @@ Specifies the long-clickable attribute of the target component.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.longClickable(true); // Use the static constructor ON to create an On object and specify the longClickable attribute of the target component.
-```
-
 ## originalText
 
 ```TypeScript
@@ -762,8 +548,6 @@ Specifies the text content and text matching pattern of the component.
 > take effect.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -788,15 +572,6 @@ Specifies the text content and text matching pattern of the component.
 | --- |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.originalText('123'); // Use the static constructor ON to create an On object and specify the originalText attribute of the target component.
-```
-
 ## scrollable
 
 ```TypeScript
@@ -806,8 +581,6 @@ scrollable(b?: boolean): On
 Specifies the scrollable attribute of the target component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -830,22 +603,6 @@ Specifies the scrollable attribute of the target component.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.scrollable(true); // Use the static constructor ON to create an On object and specify the scrollable attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.scrollable(true); // Use the static constructor BY to create a By object and specify the scrollable attribute of the target component.
-```
 
 ## selected
 
@@ -857,8 +614,6 @@ Specifies the selected attribute of the target component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -880,22 +635,6 @@ Specifies the selected attribute of the target component.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.selected(true); // Use the static constructor ON to create an On object and specify the selected attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.selected(true); // Use the static constructor BY to create a By object and specify the selected attribute of the target component.
-```
 
 ## text
 
@@ -912,8 +651,6 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 > [On.originalText()](#originaltext) API.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -938,22 +675,6 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.text('123'); // Use the static constructor ON to create an On object and specify the text attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { BY, By } from '@kit.TestKit';
-
-let by: By = BY.text('123'); // Use the static constructor BY to create a By object and specify the text attribute of the target component.
-```
-
 ## type
 
 ```TypeScript
@@ -963,8 +684,6 @@ type(tp: string): On
 Specifies the type attribute of the target component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -988,29 +707,6 @@ Specifies the type attribute of the target component.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.type('Button'); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { On, ON, MatchPattern } from '@kit.TestKit';
-
-let on: On = ON.type('Button', MatchPattern.EQUALS); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.type('Button'); // Use the static constructor BY to create a By object and specify the type attribute of the target component.
-```
-
 ## type
 
 ```TypeScript
@@ -1020,8 +716,6 @@ type(tp: string, pattern: MatchPattern): On
 Specifies the **type** attribute and match pattern of the target component.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1046,10 +740,6 @@ Specifies the **type** attribute and match pattern of the target component.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [type](#type)
-
 ## within
 
 ```TypeScript
@@ -1059,8 +749,6 @@ within(on: On): On
 Specifies that the target component is located within the given attribute component.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1084,16 +772,6 @@ Specifies that the target component is located within the given attribute compon
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// Use the static constructor ON to create an On object and specify that the target component is located within the given attribute component.
-let on: On = ON.text('java').within(ON.type('Scroll')); // Search for the child component whose text is java within the Scroller component.
-```
-
 ## withinComponent
 
 ```TypeScript
@@ -1103,8 +781,6 @@ withinComponent(com: Component): On
 Specifies that the target component is located within the given feature component (parameter [Component](arkts-test-uitest-component-c.md)), and returns the On object itself.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

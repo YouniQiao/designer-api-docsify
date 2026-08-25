@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_NOT_SYSTEM_APP
@@ -17,8 +15,6 @@ CM_ERROR_NOT_SYSTEM_APP = 202
 表示应用程序不是系统应用程序。此接口为系统接口。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -34,8 +30,6 @@ CM_ERROR_PASSWORD_IS_ERR = 17500008
 26.0.0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

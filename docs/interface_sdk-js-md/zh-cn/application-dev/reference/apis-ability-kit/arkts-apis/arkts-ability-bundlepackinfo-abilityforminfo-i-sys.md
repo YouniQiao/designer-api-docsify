@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +19,6 @@ readonly defaultDimension: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -40,8 +36,6 @@ readonly name: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -57,8 +51,6 @@ readonly scheduledUpdateTime: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -76,8 +68,6 @@ readonly supportDimensions: Array<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -94,8 +84,6 @@ readonly type: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -103,16 +91,14 @@ readonly type: string
 ## updateDuration
 
 ```TypeScript
-readonly updateDuration: int
+readonly updateDuration: number
 ```
 
 表示卡片定时刷新的更新频率，单位：分钟，取值为30的倍数值。卡片的最高频率为每30分钟刷新一次，和定点刷新二选一，二者都配置的情况下，定时优先。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -129,8 +115,6 @@ readonly updateEnabled: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

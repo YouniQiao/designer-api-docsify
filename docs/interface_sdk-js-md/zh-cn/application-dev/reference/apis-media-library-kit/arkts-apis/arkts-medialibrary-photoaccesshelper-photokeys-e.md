@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## URI
@@ -18,8 +16,6 @@ URI = 'uri'
 **注意：**查询照片时，该字段仅支持使用 [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalto) 谓词。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -35,8 +31,6 @@ PHOTO_TYPE = 'media_type'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -48,11 +42,11 @@ DISPLAY_NAME = 'display_name'
 ```
 
 显示名字。规格为：  
-- 应包含有效文件主名和图片或视频扩展名。 - 文件名字符串长度的取值范围为[1, 255]。 - 文件主名中不允许出现的非法英文字符，包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]。
+- 应包含有效文件主名和图片或视频扩展名。  
+- 文件名字符串长度的取值范围为[1, 255]。  
+- 文件主名中不允许出现的非法英文字符，包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -68,8 +62,6 @@ SIZE = 'size'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -83,8 +75,6 @@ DATE_ADDED = 'date_added'
 文件创建时的Unix时间戳（单位：秒）。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -100,8 +90,6 @@ DATE_MODIFIED = 'date_modified'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -115,8 +103,6 @@ DURATION = 'duration'
 持续时间（单位：毫秒）。 在API version 23之前，动态照片的duration将返回0； 在API version 23及之后，返回动态照片附带视频片段的时长，异常场景返回-1。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -132,8 +118,6 @@ WIDTH = 'width'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -147,8 +131,6 @@ HEIGHT = 'height'
 图片高度（单位：像素）。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -164,8 +146,6 @@ DATE_TAKEN = 'date_taken'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -179,8 +159,6 @@ ORIENTATION = 'orientation'
 文件的旋转角度，单位为度。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -196,8 +174,6 @@ FAVORITE = 'is_favorite'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -212,8 +188,6 @@ TITLE = 'title'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -227,8 +201,6 @@ POSITION = 'position'
 文件位置类型。
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -245,8 +217,6 @@ DATE_ADDED_MS = 'date_added_ms'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -262,8 +232,6 @@ DATE_MODIFIED_MS = 'date_modified_ms'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -277,8 +245,6 @@ PHOTO_SUBTYPE = 'subtype'
 媒体文件的子类型。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -294,8 +260,6 @@ DYNAMIC_RANGE_TYPE = 'dynamic_range_type'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -309,8 +273,6 @@ COVER_POSITION = 'cover_position'
 动态照片的封面位置，具体表示封面帧所对应的视频时间戳（单位：微秒）。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -326,8 +288,6 @@ BURST_KEY = 'burst_key'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -341,8 +301,6 @@ LCD_SIZE = 'lcd_size'
 LCD图片的宽高，值为width:height拼接而成的字符串。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -358,8 +316,6 @@ THUMB图片的宽高，值为width:height拼接而成的字符串。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -373,8 +329,6 @@ DETAIL_TIME = 'detail_time'
 大图浏览时间，值为拍摄时对应时区的时间的字符串，不会跟随时区变化。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -390,8 +344,6 @@ DATE_TAKEN_MS = 'date_taken_ms'
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -406,8 +358,6 @@ OWNER_ALBUM_ID = 'owner_album_id'
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## MEDIA_SUFFIX
@@ -419,8 +369,6 @@ MEDIA_SUFFIX = 'media_suffix'
 文件的后缀名。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -434,8 +382,6 @@ CHANGE_TIME = 'change_time'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## ASPECT_RATIO
@@ -448,8 +394,6 @@ ASPECT_RATIO = 'aspect_ratio'
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -461,12 +405,11 @@ LOCAL_ASSET_SIZE = 'local_asset_size'
 ```
 
 本地文件的实际大小（单位：字节）。  
-- 该属性仅表示本地文件大小，默认值为0表示纯云文件或尚未识别的本地文件大小。 - 当本地文件为动态照片且模式发生变化时，该属性会发生变化。例如：当图库中的动态照片处于“关闭动态”状态时，该属性仅表示封面帧大小。  
+- 该属性仅表示本地文件大小，默认值为0表示纯云文件或尚未识别的本地文件大小。  
+- 当本地文件为动态照片且模式发生变化时，该属性会发生变化。例如：当图库中的动态照片处于“关闭动态”状态时，该属性仅表示封面帧大小。  
 ​
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

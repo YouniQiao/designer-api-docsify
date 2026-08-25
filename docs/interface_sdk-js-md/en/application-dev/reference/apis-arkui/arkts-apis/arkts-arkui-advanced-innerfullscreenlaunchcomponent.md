@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
+import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

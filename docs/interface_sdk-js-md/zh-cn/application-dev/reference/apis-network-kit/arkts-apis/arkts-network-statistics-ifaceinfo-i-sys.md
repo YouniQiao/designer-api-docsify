@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## endTime
 
 ```TypeScript
-endTime: int
+endTime: number
 ```
 
 查询的结束时间(时间戳;单位：秒)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -46,8 +42,6 @@ iface: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,16 +49,14 @@ iface: string
 ## startTime
 
 ```TypeScript
-startTime: int
+startTime: number
 ```
 
 查询的开始时间(时间戳;单位：秒)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

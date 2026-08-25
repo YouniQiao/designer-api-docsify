@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createKeyAgreement
@@ -12,11 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createKeyAgreement(algName: string): KeyAgreement
 ```
 
-Creates a **KeyAgreement** instance.<br>For details about the supported specifications, see[Key Agreement Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-key-agreement-overview.md).
+Creates a **KeyAgreement** instance.
+
+For details about the supported specifications, see[Key Agreement Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-key-agreement-overview.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,11 +43,3 @@ Creates a **KeyAgreement** instance.<br>For details about the supported specific
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let keyAgreement = cryptoFramework.createKeyAgreement('ECC256');
-```

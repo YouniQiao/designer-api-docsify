@@ -4,8 +4,6 @@ Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate(
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = 0
 未知原因。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,8 +31,6 @@ ABILITY_NOT_RESPONDING = 1
 Ability组件未响应。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -57,8 +51,6 @@ NORMAL = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -74,8 +66,6 @@ CPP_CRASH = 3
 [进程崩溃](../../../dfx/cppcrash-guidelines.md)导致的应用程序退出。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,8 +83,6 @@ JS_ERROR = 4
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -110,8 +98,6 @@ APP_FREEZE = 5
 [应用冻屏](../../../dfx/appfreeze-guidelines.md)导致的应用程序退出。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,8 +116,6 @@ PERFORMANCE_CONTROL = 6
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -145,11 +129,14 @@ RESOURCE_CONTROL = 7
 ```
 
 系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md)获取，可能原因如下:  
-- CPU Highload，CPU高负载。 - CPU_EXT Highload，快速CPU负载检测。 - IO Manage Control，I/O管控。 - App Memory Deterioration，应用内存超限劣化。 - Temperature Control，温度管控。 - Memory Pressure，整机低内存触发按优先级由低到高终止进程。
+- CPU Highload，CPU高负载。  
+- CPU_EXT Highload，快速CPU负载检测。  
+- IO Manage Control，I/O管控。  
+- App Memory Deterioration，应用内存超限劣化。  
+- Temperature Control，温度管控。  
+- Memory Pressure，整机低内存触发按优先级由低到高终止进程。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -167,8 +154,6 @@ UPGRADE = 8
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -184,8 +169,6 @@ USER_REQUEST = 9
 应用程序因多任务中心请求而退出。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -203,27 +186,8 @@ SIGNAL = 10
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    if (launchParam.lastExitReason === AbilityConstant.LastExitReason.APP_FREEZE) {
-      console.info('The ability has exited last because the ability was not responding.');
-    }
-    if (launchParam.lastExitReason === AbilityConstant.LastExitReason.RESOURCE_CONTROL) {
-      console.info(`The ability has exited last because the rss control, the lastExitReason is ${launchParam.lastExitReason}, the lastExitMessage is ${launchParam.lastExitMessage}.`);
-    }
-  }
-}
-```

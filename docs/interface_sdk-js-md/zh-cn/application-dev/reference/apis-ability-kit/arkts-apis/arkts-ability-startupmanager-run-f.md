@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { startupManager } from '@kit.AbilityKit';
+import { startupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## run
@@ -20,8 +20,6 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 > 接口。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,75 +49,6 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 | [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) |
 | [28800004](../errorcode-ability.md#28800004-执行启动任务超时) |
 
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    let startParams = ['StartupTask_001', 'libentry_001'];
-    try {
-      // 手动调用run方法
-      startupManager.run(startParams).then(() => {
-        hilog.info(0x0000, 'testTag', 'StartupTest startupManager run then, startParams = %{public}s.', startParams.join(','));
-      }).catch((err: Error) => {
-        let error = err as BusinessError;
-        hilog.error(0x0000, 'testTag', 'StartupTest promise catch failed, error code: %{public}d, error msg: %{public}s.', error.code, error.message);
-      });
-    } catch (error) {
-      let errMsg = (error as BusinessError).message;
-      let errCode = (error as BusinessError).code;
-      hilog.error(0x0000, 'testTag', 'startupManager.run failed, err code: %{public}d, err msg: %{public}s.', errCode, errMsg);
-    }
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { AbilityStage, startupManager, StartupListener, StartupConfig } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onCreate(): void {
-    hilog.info(0x0000, 'testTag', 'AbilityStage onCreate');
-    let onCompletedCallback = (error: BusinessError) => {
-      if (error) {
-        hilog.error(0x0000, 'testTag', `onCompletedCallback error code: ${error.code}, error msg: ${error.message}`);
-      } else {
-        hilog.info(0x0000, 'testTag', 'onCompletedCallback: success.');
-      }
-    };
-    let startupListener: StartupListener = {
-      'onCompleted': onCompletedCallback
-    };
-    let config: StartupConfig = {
-      'timeoutMs': 10000,
-      'startupListener': startupListener
-    };
-
-    try {
-      // 手动调用run方法
-      startupManager.run(['StartupTask_001', 'libentry_001'], this.context, config).then(() => {
-        hilog.info(0x0000, 'testTag', '%{public}s', 'startupManager.run success');
-      }).catch((err: Error) => {
-        let error = err as BusinessError;
-        hilog.error(0x0000, 'testTag', `startupManager.run promise catch error code: ${error.code}, error msg: ${error.message}`);
-      });
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', `startupManager.run catch error code: ${error.code}, error msg: ${error.message}`);
-    }
-  }
-  // ...
-}
-```
-
 
 ## run
 
@@ -130,8 +59,6 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md)用于启动任务的加载。使 用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,7 +87,3 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 | [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) |
 | [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) |
 | [28800004](../errorcode-ability.md#28800004-执行启动任务超时) |
-
-**示例**
-
-参见 [run](#run)

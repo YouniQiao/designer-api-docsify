@@ -8,8 +8,6 @@ Defines the allowed data types for specifying the background border style of a d
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -18,5 +16,5 @@ Defines the allowed data types for specifying the background border style of a d
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [BorderStyle](arkts-arkui-enums-borderstyle-e.md) |
-| [EdgeStyles](arkts-arkui-units-edgestyles-i.md) |
+| [BorderStyle](arkts-arkui-borderstyle-e.md) |
+| EdgeStyles |

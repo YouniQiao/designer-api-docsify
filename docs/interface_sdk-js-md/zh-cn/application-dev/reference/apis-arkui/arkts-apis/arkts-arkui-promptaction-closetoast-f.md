@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## closeToast
@@ -20,8 +20,6 @@ function closeToast(toastId: number): void
 > closeToast实现。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

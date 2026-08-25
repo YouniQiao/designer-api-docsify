@@ -6,14 +6,12 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
+import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from 'kits/@kit.ArkUI';
 ```
 
 ## customContentTransition
@@ -26,8 +24,6 @@ Defines a custom page transition animation. During finger-following swipes and p
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -36,7 +32,7 @@ Defines a custom page transition animation. During finger-following swipes and p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| transition | Optional&lt;[SwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-swipercontentanimatedtransition-i.md)&gt; | Yes |
+| transition | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-swipercontentanimatedtransition-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -54,8 +50,6 @@ Sets the sensitivity to the digital crown rotation.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -64,7 +58,7 @@ Sets the sensitivity to the digital crown rotation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | Yes |
+| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -82,8 +76,6 @@ Sets whether to disable the swipe feature.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -92,7 +84,7 @@ Sets whether to disable the swipe feature.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| disabled | Optional & lt;boolean & gt; | Yes |
+| [disabled](../arkts-components/arkts-arkui-statestyles-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 **Return value:**
 
@@ -110,8 +102,6 @@ Sets whether to disable the transition animation.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -120,7 +110,7 @@ Sets whether to disable the transition animation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| disabled | Optional & lt;boolean & gt; | Yes |
+| [disabled](../arkts-components/arkts-arkui-statestyles-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 **Return value:**
 
@@ -138,8 +128,6 @@ Sets the duration of the animation for child component switching.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -148,7 +136,7 @@ Sets the duration of the animation for child component switching.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [duration](#duration) | Optional & lt;number & gt; | Yes |
+| [duration](#duration) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
@@ -162,11 +150,9 @@ Sets the duration of the animation for child component switching.
 effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 ```
 
-Sets the effect used when the scroll boundary is reached. For details about the supported effects, see EdgeEffect. The setting does not take effect when configured using the controller API.
+Sets the effect used when the scroll boundary is reached. For details about the supported effects, see [EdgeEffect](arkts-arkui-edgeeffect-e.md). The setting does not take effect when configured using the controller API.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -176,7 +162,7 @@ Sets the effect used when the scroll boundary is reached. For details about the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| edgeEffect | Optional & lt;EdgeEffect & gt; | Yes |
+| edgeEffect | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[EdgeEffect](arkts-arkui-edgeeffect-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -194,8 +180,6 @@ Sets the index of the child component currently displayed in the container. If t
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -204,7 +188,7 @@ Sets the index of the child component currently displayed in the container. If t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [index](#index) | Optional & lt;number & gt; | Yes |
+| [index](#index) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
@@ -222,8 +206,6 @@ Sets the style of the arc dot navigation indicator.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -232,7 +214,7 @@ Sets the style of the arc dot navigation indicator.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional&lt;[ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) \| boolean & gt; | Yes |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) \| boolean & gt; | Yes |
 
 **Return value:**
 
@@ -246,11 +228,9 @@ Sets the style of the arc dot navigation indicator.
 onAnimationEnd(handler: Optional<AnimationEndHandler>): ArcSwiperAttribute
 ```
 
-Triggered when the page transition animation ends.This event is triggered when the page transition animation of the **ArcSwiper** component ends, whether it is caused by gesture interruption or by calling **finishAnimation** through SwiperController. The **index** parameter indicates the index after the animation ends. When the **ArcSwiper** component contains multiple columns, the index is of the leftmost element.
+Triggered when the page transition animation ends.This event is triggered when the page transition animation of the **ArcSwiper** component ends, whether it is caused by gesture interruption or by calling **finishAnimation** through [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md). The **index** parameter indicates the index after the animation ends. When the **ArcSwiper** component contains multiple columns, the index is of the leftmost element.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -260,7 +240,7 @@ Triggered when the page transition animation ends.This event is triggered when t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional&lt;[AnimationEndHandler](arkts-arkui-animationendhandler-t.md)&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[AnimationEndHandler](arkts-arkui-animationendhandler-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -278,8 +258,6 @@ Triggered when the page transition animation starts.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -288,7 +266,7 @@ Triggered when the page transition animation starts.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional&lt;[AnimationStartHandler](arkts-arkui-animationstarthandler-t.md)&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[AnimationStartHandler](arkts-arkui-animationstarthandler-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -306,8 +284,6 @@ Triggered when the index of the currently displayed child component changes. The
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -316,7 +292,7 @@ Triggered when the index of the currently displayed child component changes. The
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional&lt;[IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md)&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -334,8 +310,6 @@ Triggered on a frame-by-frame basis when the page is turned by a swipe.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -344,35 +318,7 @@ Triggered on a frame-by-frame basis when the page is turned by a swipe.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional&lt;[GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md)&gt; | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |
-
-## setArcSwiperOptions
-
-```TypeScript
-default setArcSwiperOptions(controller?: ArcSwiperController): this
-```
-
-Set arcSwiper options.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Circle
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| controller | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | No |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -390,8 +336,6 @@ Sets whether vertical swiping is used.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -400,7 +344,7 @@ Sets whether vertical swiping is used.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isVertical | Optional & lt;boolean & gt; | Yes |
+| isVertical | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 **Return value:**
 

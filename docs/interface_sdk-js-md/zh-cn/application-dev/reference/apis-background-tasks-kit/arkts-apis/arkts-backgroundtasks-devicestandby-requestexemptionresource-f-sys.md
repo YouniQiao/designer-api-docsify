@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceStandby } from '@kit.BackgroundTasksKit';
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## requestExemptionResource
@@ -15,8 +15,6 @@ function requestExemptionResource(request: ResourceRequest): void
 应用订阅申请豁免，使应用临时不进入待机管控。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
@@ -42,18 +40,3 @@ function requestExemptionResource(request: ResourceRequest): void
 | [9800003](../errorcode-backgroundTaskMgr.md#9800003-ipc通信失败) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) |
-
-**示例**
-
-```TypeScript
-import { deviceStandby } from '@kit.BackgroundTasksKit';
-
-let resRequest: deviceStandby.ResourceRequest = {
-  resourceTypes: deviceStandby.ResourceType.TIMER,
-  uid:10003,
-  name:"com.example.app",
-  duration:10,
-  reason:"apply",
-};
-deviceStandby.requestExemptionResource(resRequest);
-```

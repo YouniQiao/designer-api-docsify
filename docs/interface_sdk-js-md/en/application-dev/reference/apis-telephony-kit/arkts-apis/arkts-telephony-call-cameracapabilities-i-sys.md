@@ -4,8 +4,6 @@ Defines the local image resolution in a video call.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the local image resolution in a video call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## callId
 
 ```TypeScript
-callId: int
+callId: number
 ```
 
 Call ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -37,16 +33,14 @@ Call ID.
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 Height of the local image, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -55,16 +49,14 @@ Height of the local image, in pixels.
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 Width of the local image, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 

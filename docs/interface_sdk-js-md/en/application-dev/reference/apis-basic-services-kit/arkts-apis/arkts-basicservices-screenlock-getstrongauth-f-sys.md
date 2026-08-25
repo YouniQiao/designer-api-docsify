@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getStrongAuth
 
 ```TypeScript
-function getStrongAuth(userId: int): int
+function getStrongAuth(userId: number): number
 ```
 
 Obtain strong authentication reason flags for os account local userId.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK
 
@@ -28,13 +26,13 @@ Obtain strong authentication reason flags for os account local userId.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 

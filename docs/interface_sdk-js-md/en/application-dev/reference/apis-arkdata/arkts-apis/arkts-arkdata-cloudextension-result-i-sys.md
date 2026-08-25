@@ -4,8 +4,6 @@ Represents the data sharing result.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Represents the data sharing result.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'kits/@kit.ArkData';
 ```
 
 ## code
 
 ```TypeScript
-code: int
+code: number
 ```
 
 Error code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -46,8 +42,6 @@ Detailed description of the error code. The default value is undefined.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Value returned. The specific type is specified by the T parameter. The default v
 **Type:** T
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

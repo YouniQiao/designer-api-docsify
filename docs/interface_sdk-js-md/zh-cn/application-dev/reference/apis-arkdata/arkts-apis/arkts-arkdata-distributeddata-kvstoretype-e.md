@@ -4,8 +4,6 @@ KVStore数据库类型枚举。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** KVStoreType
@@ -22,8 +20,6 @@ DEVICE_COLLABORATION = 0
 **数据库特点：** 数据以设备的维度管理，不存在冲突；支持按照设备的维度查询数据。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -42,8 +38,6 @@ SINGLE_VERSION = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** SINGLE_VERSION
@@ -59,8 +53,6 @@ MULTI_VERSION = 2
 表示多版本数据库。当前暂不支持使用此接口。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

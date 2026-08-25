@@ -4,14 +4,12 @@ Defines a key.@interface Key [since 9 - 11]
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { Action, Key, KeyEvent } from '@kit.InputKit';
+import { Action, Key, KeyEvent } from 'kits/@kit.InputKit';
 ```
 
 ## code
@@ -26,8 +24,6 @@ Key code.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -35,16 +31,14 @@ Key code.
 ## deviceId
 
 ```TypeScript
-deviceId: int
+deviceId: number
 ```
 
 Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +47,14 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 ## pressedTime
 
 ```TypeScript
-pressedTime: long
+pressedTime: number
 ```
 
 Time when the key is pressed, in microseconds (μs) since the system starts.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

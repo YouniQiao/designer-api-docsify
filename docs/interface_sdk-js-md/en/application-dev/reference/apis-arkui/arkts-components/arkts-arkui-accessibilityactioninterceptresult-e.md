@@ -4,8 +4,6 @@ Enum for the result of accessibility action intercept function
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ACTION_INTERCEPT
@@ -17,8 +15,6 @@ ACTION_INTERCEPT = 0
 intercept the accessibility action
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ the accessibility action can be continued
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -57,8 +51,6 @@ ACTION_RISE = 2
 the accessibility action need to bubble up for execution
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

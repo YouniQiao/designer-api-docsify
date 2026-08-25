@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## bundleName
@@ -20,8 +18,6 @@ bundleName?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -29,18 +25,16 @@ bundleName?: string
 ## code
 
 ```TypeScript
-code?: int
+code?: number
 ```
 
 表示订阅者接收到的公共事件数据。该字段取值与发布者使用 [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md) 发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)中的`code`字段传递的数据一致。取值范围[-2147483648, 2147483647]，默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **默认值：** 0
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -58,8 +52,6 @@ data?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -76,8 +68,6 @@ event: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -93,8 +83,6 @@ parameters?: { [key: string]: any }
 **类型：** { [key: string]: any }
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

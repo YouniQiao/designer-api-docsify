@@ -17,8 +17,6 @@ Constructor parameters
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 12
 
 **Substitutes:** (value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
@@ -40,8 +38,6 @@ XComponent(value: { id: string; type: XComponentType; libraryname?: string; cont
 Creates an **XComponent** component, whose lifecycle callbacks can be triggered from the native side.This API is deprecated since API version 12. You are advised to use [XComponent(options: XComponentOptions)](../../../reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12) instead.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +61,6 @@ Creates an **XComponent** component, allowing you to obtain the **SurfaceId** va
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -88,8 +82,6 @@ XComponent(params: NativeXComponentParameters)
 Obtains an **XComponent** node instance on the native side, and registers the lifecycle callbacks for the surface held by the **XComponent** and the callbacks for component events, such as touch, mouse, and key events.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

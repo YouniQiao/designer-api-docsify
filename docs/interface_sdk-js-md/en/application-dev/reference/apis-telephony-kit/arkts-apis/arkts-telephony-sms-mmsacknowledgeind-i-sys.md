@@ -4,8 +4,6 @@ Defines an MMS confirmation index.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines an MMS confirmation index.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## reportAllowed
@@ -27,8 +25,6 @@ Report allowed.
 **Type:** ReportType
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -46,8 +42,6 @@ Transaction ID.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Version.
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

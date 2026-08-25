@@ -14,8 +14,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## briefText
@@ -29,8 +27,6 @@ briefText: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -46,8 +42,6 @@ expandedTitle: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## longText
@@ -61,7 +55,5 @@ longText: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification

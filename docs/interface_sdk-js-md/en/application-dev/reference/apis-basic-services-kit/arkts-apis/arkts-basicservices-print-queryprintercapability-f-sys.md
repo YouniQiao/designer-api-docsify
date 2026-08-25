@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryPrinterCapability
@@ -15,8 +15,6 @@ function queryPrinterCapability(printerId: string, callback: AsyncCallback<void>
 Queries the printer capability. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -39,34 +37,6 @@ Queries the printer capability. This API uses an asynchronous callback to return
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId: string = 'printerId_32';
-print.queryPrinterCapability(printerId, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to query Printer Capability because : ' + JSON.stringify(err));
-    } else {
-        console.info('start query Printer Capability success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId: string = 'printerId_32';
-print.queryPrinterCapability(printerId).then(() => {
-    console.info('start query Printer success');
-}).catch((error: BusinessError) => {
-    console.error('failed to query Printer Capability because : ' + JSON.stringify(error));
-})
-```
-
 
 ## queryPrinterCapability
 
@@ -77,8 +47,6 @@ function queryPrinterCapability(printerId: string): Promise<void>
 Queries the printer capability. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -105,7 +73,3 @@ Queries the printer capability. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [queryPrinterCapability](#queryprintercapability)

@@ -4,14 +4,12 @@ Represents the handle to a signing or signature verification operation.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## handle
@@ -25,7 +23,5 @@ Handle of the initialization for signing and signature verification. The value c
 **Type:** Uint8Array
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

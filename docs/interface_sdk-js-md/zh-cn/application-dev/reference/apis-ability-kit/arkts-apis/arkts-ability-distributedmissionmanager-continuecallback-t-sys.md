@@ -4,11 +4,9 @@
 export type ContinueCallback = _ContinueCallback
 ```
 
-注册用于通知迁移结果的回调。
+表示跨设备迁移Mission完成后，返回迁移结果的回调函数，迁移Mission详见： [continueMission接口](arkts-ability-distributedmissionmanager-continuemission-f-sys.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

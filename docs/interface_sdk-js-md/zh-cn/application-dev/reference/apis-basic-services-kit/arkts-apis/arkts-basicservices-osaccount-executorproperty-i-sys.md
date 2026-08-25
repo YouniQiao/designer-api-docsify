@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## authSubType
@@ -28,8 +26,6 @@ authSubType: AuthSubType
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -37,16 +33,14 @@ authSubType: AuthSubType
 ## credentialLength
 
 ```TypeScript
-credentialLength?: int
+credentialLength?: number
 ```
 
 指示凭据长度，默认为undefined。查询生物信息等无定长属性的凭据时返回undefined。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -64,8 +58,6 @@ enrollmentProgress?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ enrollmentProgress?: string
 ## freezingTime
 
 ```TypeScript
-freezingTime?: int
+freezingTime?: number
 ```
 
 指示冻结时间，单位为ms，默认为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -91,16 +81,14 @@ freezingTime?: int
 ## nextPhaseFreezingTime
 
 ```TypeScript
-nextPhaseFreezingTime?: int
+nextPhaseFreezingTime?: number
 ```
 
 指示下次冻结时间，单位为ms，默认为undefined。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -109,16 +97,14 @@ nextPhaseFreezingTime?: int
 ## remainTimes
 
 ```TypeScript
-remainTimes?: int
+remainTimes?: number
 ```
 
 指示剩余次数，默认为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -127,16 +113,14 @@ remainTimes?: int
 ## result
 
 ```TypeScript
-result: int
+result: number
 ```
 
 指示结果。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -153,8 +137,6 @@ sensorInfo?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

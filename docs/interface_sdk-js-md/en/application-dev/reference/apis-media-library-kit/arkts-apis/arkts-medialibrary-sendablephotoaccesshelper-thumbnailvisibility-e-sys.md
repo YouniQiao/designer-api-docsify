@@ -4,8 +4,6 @@ Ability to access thumbnail
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Unable to access thumbnail
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ VISIBLE = 1
 able to access thumbnail
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

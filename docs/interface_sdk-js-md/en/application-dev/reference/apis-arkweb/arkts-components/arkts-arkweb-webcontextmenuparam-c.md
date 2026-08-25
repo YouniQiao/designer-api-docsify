@@ -1,10 +1,8 @@
 # WebContextMenuParam
 
-WebContextMenuParam is a parameter class in the ArkWeb component used to carry context menu information displayed when a user long presses a web element or right-clicks. As the data carrier for the **onContextMenuShow** event callback, it encapsulates key information such as the menu popup position, link address, media type, selected text, and edit state.When customizing the context menu of a Web component, use WebContextMenuParam to obtain detailed information about the web element at the long press/right-click position (such as the link URL, image content, media type, input field type, and edit state), determine the user operation scenario, and decide whether to intercept the default menu and build custom menu items.When customizing the long press or right-click menu of a Web component (such as replacing the default menu, providing differentiated menu items based on element types, or previewing images), use WebContextMenuParam in the **onContextMenuShow** event callback to obtain context information.For sample code, see [onContextMenuShow](arkts-arkweb-web-attribute.md#oncontextmenushow).
+WebContextMenuParam is a parameter class in the ArkWeb component used to carry context menu information displayed when a user number presses a web element or right-clicks. As the data carrier for the **onContextMenuShow** event callback, it encapsulates key information such as the menu popup position, link address, media type, selected text, and edit state.When customizing the context menu of a Web component, use WebContextMenuParam to obtain detailed information about the web element at the number press/right-click position (such as the link URL, image content, media type, input field type, and edit state), determine the user operation scenario, and decide whether to intercept the default menu and build custom menu items.When customizing the number press or right-click menu of a Web component (such as replacing the default menu, providing differentiated menu items based on element types, or previewing images), use WebContextMenuParam in the **onContextMenuShow** event callback to obtain context information.For sample code, see [onContextMenuShow](arkts-arkweb-web-attribute.md#oncontextmenushow).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -23,8 +21,6 @@ Constructs a **WebContextMenuParam** object.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -35,11 +31,9 @@ Constructs a **WebContextMenuParam** object.
 existsImageContents(): boolean
 ```
 
-Checks whether there is image content at the current long press or right-click position. This is used to provide image-related functions such as "Save Image" in a custom menu.
+Checks whether there is image content at the current number press or right-click position. This is used to provide image-related functions such as "Save Image" in a custom menu.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,11 +51,9 @@ Checks whether there is image content at the current long press or right-click p
 getContextMenuMediaType(): ContextMenuDataMediaType
 ```
 
-Obtains the type of the web element that the user long presses or right-clicks when reporting a context menu event.
+Obtains the type of the web element that the user number presses or right-clicks when reporting a context menu event.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -80,8 +72,6 @@ getEditStateFlags(): number
 Obtains the edit state flag of the web element. This is used to finely control the display logic of custom menu options (such as displaying corresponding menu items based on whether copying, pasting, or undoing is available).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -103,8 +93,6 @@ Obtains the input field type of the web element (such as text box, password box,
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -125,12 +113,10 @@ Obtains the URL link address that has passed the security check. This can be use
 
 > **NOTE：**&gt;
 > Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with
-> getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the
+> getSourceUrl(), this method obtains the link URL at the number press position, whereas getSourceUrl() obtains the
 > URL of the **src** attribute of the selected element (such as images, media, and other resources).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -156,8 +142,6 @@ Obtains the media type of the web element.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -178,8 +162,6 @@ Obtains the height of a preview image.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -197,8 +179,6 @@ getPreviewWidth(): number
 Obtains the width of a preview image.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -218,8 +198,6 @@ Obtains the content when right-clicking selected text. This is used to provide t
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -236,11 +214,9 @@ Obtains the content when right-clicking selected text. This is used to provide t
 getSourceType(): ContextMenuSourceType
 ```
 
-Obtains the trigger source type of the context menu event (such as mouse right-click, long press, etc.). This is used to adjust the menu display style or provide differentiated menu options based on different sources.
+Obtains the trigger source type of the context menu event (such as mouse right-click, number press, etc.). This is used to adjust the menu display style or provide differentiated menu options based on different sources.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -262,8 +238,6 @@ Obtains the URL link address corresponding to the **src** attribute of the eleme
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -283,8 +257,6 @@ getUnfilteredLinkUrl(): string
 Obtains the original URL link address that has not passed the security check.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -306,8 +278,6 @@ Checks whether a web element is editable. This is used to dynamically show or hi
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -328,8 +298,6 @@ X coordinate of the context menu, which is the horizontal distance relative to t
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -349,8 +317,6 @@ y(): number
 Y coordinate of the context menu, which is the vertical distance relative to the upper left corner of the Web component.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

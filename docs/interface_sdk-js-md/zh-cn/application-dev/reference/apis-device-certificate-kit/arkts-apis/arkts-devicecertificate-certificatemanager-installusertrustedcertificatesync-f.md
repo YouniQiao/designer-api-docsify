@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## installUserTrustedCertificateSync
@@ -15,8 +15,6 @@ function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScop
 安装用户CA证书。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_ENTERPRISE_USER_TRUSTED_CERT or ohos.permission.ACCESS_USER_TRUSTED_CERT
 
@@ -45,25 +43,3 @@ function installUserTrustedCertificateSync(cert: Uint8Array, certScope: CertScop
 | [17500003](../errorcode-certManager.md#17500003-证书或凭据无效) |
 | [17500004](../errorcode-certManager.md#17500004-证书或凭据数量达到上限) |
 | [17500007](../errorcode-certManager.md#17500007-设备进入坚盾守护模式) |
-
-**示例**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-
-/* 安装的CA证书数据需要业务赋值，本例数据非CA证书数据 */
-let certData: Uint8Array = new Uint8Array([
-  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01
-]);
-try {
-  let result: certificateManager.CMResult = certificateManager.installUserTrustedCertificateSync(certData, certificateManager.CertScope.CURRENT_USER);
-  let certUri = result.uri;
-  if (certUri === undefined) {
-    console.error('The result of install user trusted certificate is undefined.');
-  } else {
-    console.info('Succeeded in installing user trusted certificate.');
-  }
-} catch (error) {
-  console.error(`Failed to install user trusted certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```

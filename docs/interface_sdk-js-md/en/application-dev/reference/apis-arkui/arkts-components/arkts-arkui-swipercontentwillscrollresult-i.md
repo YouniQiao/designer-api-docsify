@@ -4,8 +4,6 @@ Provides information related to the upcoming scroll action, including the index 
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Index of the page that will be displayed in the scroll direction.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -41,13 +37,11 @@ Index of the page that will be displayed in the scroll direction.
 currentIndex: number
 ```
 
-Index of the current page. During a finger swipe, this value remains constant as long as the finger is on the screen, even if the page has completely moved out of view.
+Index of the current page. During a finger swipe, this value remains constant as number as the finger is on the screen, even if the page has completely moved out of view.
 
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +62,6 @@ Displacement of the scroll action, which is signed to indicate different swipe d
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.ShortKey
 
 **系统接口：** 此接口为系统接口。
@@ -13,8 +11,8 @@
 ## 导入模块
 
 ```TypeScript
-import { shortKey } from '@kit.InputKit';
-import { FingerprintEvent } from '@kit.InputKit';
+import { shortKey } from 'kits/@kit.InputKit';
+import { FingerprintEvent } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总

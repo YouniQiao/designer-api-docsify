@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setGeofenceEnabled
@@ -15,8 +15,6 @@ function setGeofenceEnabled(enabled: boolean): Promise<void>
 设置地理围栏的启用状态。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,31 +44,3 @@ function setGeofenceEnabled(enabled: boolean): Promise<void>
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.setGeofenceEnabled(true).then(() => {
-  hilog.info(0x0000, 'testTag', '%{public}s', 'setGeofenceEnabled success');
-}).catch((err: BusinessError) => {
-  hilog.error(0x0000, 'testTag', '%{public}s',`setGeofenceEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.setGeofenceEnabled(true).then(() => {
-    console.info('setGeofenceEnabled success');
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setGeofenceEnabled failed, code is ${error.code}, message is ${error.message}`);
-});
-```

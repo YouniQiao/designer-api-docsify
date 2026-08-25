@@ -7,8 +7,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -22,8 +20,6 @@ SUCCESS = 0
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -39,8 +35,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -54,8 +48,6 @@ STATUS_INSTALL_FAILURE_ABORTED = 2
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -71,8 +63,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -86,8 +76,6 @@ STATUS_INSTALL_FAILURE_CONFLICT = 4
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -103,8 +91,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -118,8 +104,6 @@ STATUS_INSTALL_FAILURE_INCOMPATIBLE = 6
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -135,8 +119,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -150,8 +132,6 @@ STATUS_UNINSTALL_FAILURE_BLOCKED = 8
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -167,8 +147,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -182,8 +160,6 @@ STATUS_UNINSTALL_FAILURE_CONFLICT = 10
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -199,8 +175,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -214,8 +188,6 @@ STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED = 0x0C
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -231,8 +203,6 @@ No uninstallation permission.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -246,8 +216,6 @@ STATUS_ABILITY_NOT_FOUND = 0x40
 Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -263,8 +231,6 @@ Installation conflict. (The basic information of the application to update is in
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -278,8 +244,6 @@ STATUS_FAILED_NO_SPACE_LEFT = 0x42
 No uninstallation permission.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -295,8 +259,6 @@ No uninstallation permission.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -311,8 +273,6 @@ No uninstallation permission.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -326,8 +286,6 @@ STATUS_UNINSTALL_PERMISSION_DENIED = 0x45
 No uninstallation permission.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

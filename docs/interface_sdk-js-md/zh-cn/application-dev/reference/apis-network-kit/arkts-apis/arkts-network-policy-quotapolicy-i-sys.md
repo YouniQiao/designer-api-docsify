@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## lastLimitRemind
@@ -27,8 +25,6 @@ lastLimitRemind?: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -46,8 +42,6 @@ lastWarningRemind?: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ limitAction: LimitAction
 **类型：** [LimitAction](arkts-network-policy-limitaction-e-sys.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -82,8 +74,6 @@ limitBytes: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +89,6 @@ metered: boolean
 **类型：** boolean
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -118,8 +106,6 @@ periodDuration: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -135,8 +121,6 @@ warningBytes: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

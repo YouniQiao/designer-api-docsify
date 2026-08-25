@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 ## 导入模块
 
 ```TypeScript
-import { systemLoad } from '@kit.BasicServicesKit';
+import { systemLoad } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -22,9 +20,7 @@ import { systemLoad } from '@kit.BasicServicesKit';
 | --- |
 | [getLevel(性能功耗热融合档位)](arkts-basicservices-systemload-getlevel-f.md) |
 | [off(性能功耗热融合档位)](arkts-basicservices-systemload-off-f.md#offsystemloadchange) |
-| [offSystemLoadChange(性能功耗热融合档位)](arkts-basicservices-systemload-offsystemloadchange-f.md) |
 | [on(性能功耗热融合档位)](arkts-basicservices-systemload-on-f.md#onsystemloadchange) |
-| [onSystemLoadChange(性能功耗热融合档位)](arkts-basicservices-systemload-onsystemloadchange-f.md) |
 
 ### 枚举
 

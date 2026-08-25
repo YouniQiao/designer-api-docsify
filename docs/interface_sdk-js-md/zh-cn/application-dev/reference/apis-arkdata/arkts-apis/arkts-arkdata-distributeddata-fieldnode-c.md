@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** FieldNode
@@ -27,8 +25,6 @@ appendChild(child: FieldNode): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** appendChild
@@ -39,35 +35,13 @@ appendChild(child: FieldNode): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | 是 |
+| [child](../../apis-arkui/arkts-components/arkts-arkui-nestedscrollinfo-i.md) | [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import ddm from '@ohos.data.distributedData';
-try {
-    let node = new ddm.FieldNode("root");
-    let child1 = new ddm.FieldNode("child1");
-    let child2 = new ddm.FieldNode("child2");
-    let child3 = new ddm.FieldNode("child3");
-    node.appendChild(child1);
-    node.appendChild(child2);
-    node.appendChild(child3);
-    console.log("appendNode " + JSON.stringify(node));
-    child1 = null;
-    child2 = null;
-    child3 = null;
-    node = null;
-} catch (e) {
-    console.log("AppendChild " + e);
-}
-```
 
 ## constructor
 
@@ -78,8 +52,6 @@ constructor(name: string)
 用于创建带有string字段FieldNode实例的构造函数。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -105,8 +77,6 @@ default: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** default
@@ -125,8 +95,6 @@ nullable: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** nullable
@@ -144,8 +112,6 @@ type: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

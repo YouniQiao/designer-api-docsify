@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendUssdResponse
 
 ```TypeScript
-function sendUssdResponse(slotId: int, content: string): void
+function sendUssdResponse(slotId: number, content: string): void
 ```
 
 Sends a response to the Unstructured Supplementary Service Data (USSD) service to the carrier.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Sends a response to the Unstructured Supplementary Service Data (USSD) service t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | content | string | Yes |
 
 **Error codes:**

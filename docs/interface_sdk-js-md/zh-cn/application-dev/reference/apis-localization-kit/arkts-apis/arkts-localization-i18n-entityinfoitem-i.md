@@ -4,29 +4,25 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## begin
 
 ```TypeScript
-begin: int
+begin: number
 ```
 
 实体在输入字符串中的起始位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ begin: int
 ## end
 
 ```TypeScript
-end: int
+end: number
 ```
 
 实体在输入字符串中的终止位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -61,8 +55,6 @@ type: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

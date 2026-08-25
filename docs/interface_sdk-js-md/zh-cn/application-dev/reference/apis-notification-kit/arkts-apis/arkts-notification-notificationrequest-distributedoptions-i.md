@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## isDistributed
@@ -15,15 +13,14 @@ isDistributed?: boolean
 ```
 
 是否支持跨设备协同通知。默认为true。  
-- true：支持跨设备协同通知。 - false：不支持跨设备协同通知。
+- true：支持跨设备协同通知。  
+- false：不支持跨设备协同通知。
 
 **类型：** boolean
 
 **默认值：** true
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -39,8 +36,6 @@ supportDisplayDevices?: Array<string>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## supportOperateDevices
@@ -54,7 +49,5 @@ supportOperateDevices?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification

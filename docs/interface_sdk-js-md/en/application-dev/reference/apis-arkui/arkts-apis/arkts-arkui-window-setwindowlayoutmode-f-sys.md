@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## setWindowLayoutMode
@@ -15,8 +15,6 @@ function setWindowLayoutMode(mode: WindowLayoutMode, callback: AsyncCallback<voi
 Sets the window layout mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -39,40 +37,6 @@ Sets the window layout mode. This API uses an asynchronous callback to return th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  window.setWindowLayoutMode(window.WindowLayoutMode.WINDOW_LAYOUT_MODE_CASCADE, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting window layout mode.');
-  });
-} catch (exception) {
-  console.error(`Failed to set window layout mode. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setWindowLayoutMode(window.WindowLayoutMode.WINDOW_LAYOUT_MODE_CASCADE);
-  promise.then(() => {
-    console.info('Succeeded in setting window layout mode.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set window layout mode. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set window layout mode. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 
 ## setWindowLayoutMode
 
@@ -83,8 +47,6 @@ function setWindowLayoutMode(mode: WindowLayoutMode): Promise<void>
 Sets the window layout mode. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -111,7 +73,3 @@ Sets the window layout mode. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-
-**Examples**
-
-See [setWindowLayoutMode](#setwindowlayoutmode)

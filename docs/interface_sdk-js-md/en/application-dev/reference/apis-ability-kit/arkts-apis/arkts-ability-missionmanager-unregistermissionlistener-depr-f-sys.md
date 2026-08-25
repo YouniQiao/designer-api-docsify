@@ -15,8 +15,6 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [off](arkts-ability-missionmanager-off-f-sys.md)
@@ -34,79 +32,6 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 | listenerId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-
-console.info('registerMissionListener');
-let listenerId = missionManager.registerMissionListener({
-  onMissionCreated: (mission) => {
-    console.info('--------onMissionCreated-------');
-  },
-  onMissionDestroyed: (mission) => {
-    console.info('--------onMissionDestroyed-------');
-  },
-  onMissionSnapshotChanged: (mission) => {
-    console.info('--------onMissionSnapshotChanged-------');
-  },
-  onMissionMovedToFront: (mission) => {
-    console.info('--------onMissionMovedToFront-------');
-  },
-  onMissionIconUpdated: (mission, icon) => {
-    console.info('--------onMissionIconUpdated-------');
-  },
-  onMissionClosed: (mission) => {
-    console.info('--------onMissionClosed-------');
-  },
-  onMissionLabelUpdated: (mission) => {
-    console.info('--------onMissionLabelUpdated-------');
-  }
-});
-
-missionManager.unregisterMissionListener(listenerId, (error) => {
-  console.error(`unregisterMissionListener fail, error: ${JSON.stringify(error)}`);
-});
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-console.info('registerMissionListener');
-let listenerId = missionManager.registerMissionListener({
-  onMissionCreated: (mission) => {
-    console.info('--------onMissionCreated-------');
-  },
-  onMissionDestroyed: (mission) => {
-    console.info('--------onMissionDestroyed-------');
-  },
-  onMissionSnapshotChanged: (mission) => {
-    console.info('--------onMissionSnapshotChanged-------');
-  },
-  onMissionMovedToFront: (mission) => {
-    console.info('--------onMissionMovedToFront-------');
-  },
-  onMissionIconUpdated: (mission, icon) => {
-    console.info('--------onMissionIconUpdated-------');
-  },
-  onMissionClosed: (mission) => {
-    console.info('--------onMissionClosed-------');
-  },
-  onMissionLabelUpdated: (mission) => {
-    console.info('--------onMissionLabelUpdated-------');
-  }
-});
-
-missionManager.unregisterMissionListener(listenerId)
-  .then(() => {
-    console.info(`UnregisterMissionListener success.`)
-  })
-  .catch((error: BusinessError) => {
-    console.error(`UnregisterMissionListener fail, error: ${JSON.stringify(error)}.`);
-  });
-```
-
 
 ## unregisterMissionListener
 
@@ -117,8 +42,6 @@ function unregisterMissionListener(listenerId: number): Promise<void>
 Unregisters a mission status listener. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -141,7 +64,3 @@ Unregisters a mission status listener. This API uses a promise to return the res
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [unregisterMissionListener](#unregistermissionlistener)

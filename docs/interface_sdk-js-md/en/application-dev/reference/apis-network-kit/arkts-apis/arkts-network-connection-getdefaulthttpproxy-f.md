@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getDefaultHttpProxy
@@ -22,8 +22,6 @@ Obtains the default HTTP proxy configuration of the network. This API uses an as
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -38,32 +36,6 @@ Obtains the default HTTP proxy configuration of the network. This API uses an as
 | --- |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy((error: BusinessError, data: connection.HttpProxy) => {
-  if (error) {
-    console.error(`Failed to get default http proxy. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info("Succeeded to get data" + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
-  console.info(JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.info(JSON.stringify(error));
-});
-```
 
 
 ## getDefaultHttpProxy
@@ -82,8 +54,6 @@ Obtains the default HTTP proxy configuration of the network. This API uses a pro
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Return value:**
@@ -98,7 +68,3 @@ Obtains the default HTTP proxy configuration of the network. This API uses a pro
 | --- |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [getDefaultHttpProxy](#getdefaulthttpproxy)

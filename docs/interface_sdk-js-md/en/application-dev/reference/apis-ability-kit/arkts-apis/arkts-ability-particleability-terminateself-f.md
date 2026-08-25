@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
+import { particleAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## terminateSelf
@@ -16,8 +16,6 @@ Terminates this ParticleAbility. This API uses an asynchronous callback to retur
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -27,28 +25,6 @@ Terminates this ParticleAbility. This API uses an asynchronous callback to retur
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-
-particleAbility.terminateSelf(
-  (error) => {
-    if (error && error.code !== 0) {
-      console.error(`terminateSelf fail, error: ${JSON.stringify(error)}`);
-    }
-  }
-);
-```
-
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-
-particleAbility.terminateSelf().then(() => {
-  console.info('particleAbility terminateSelf');
-});
-```
 
 
 ## terminateSelf
@@ -61,8 +37,6 @@ Terminates this ParticleAbility. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -72,7 +46,3 @@ Terminates this ParticleAbility. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [terminateSelf](#terminateself)

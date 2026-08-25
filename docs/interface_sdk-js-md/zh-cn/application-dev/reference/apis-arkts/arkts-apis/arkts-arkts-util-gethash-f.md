@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## getHash
@@ -15,8 +15,6 @@ function getHash(object: object): number
 获取对象的哈希值。 如果尚未获取过哈希值，则生成一个随机哈希值，保存到对象的 **hash** 字段中并返回。如果已经获取过哈希值，则返回保存在 **hash** 字段中的哈希值（同一对象返回相同的值）。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -33,18 +31,3 @@ function getHash(object: object): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-interface Person {
-  name: string,
-  age: number
-}
-let obj: Person = { name: 'Jack', age: 20 };
-let result1 = util.getHash(obj);
-console.info('result1 is ' + result1);
-let result2 = util.getHash(obj);
-console.info('result2 is ' + result2);
-// 输出结果：result1 与 result2 的值相等，且为随机的Hash值。
-```

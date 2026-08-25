@@ -4,8 +4,6 @@ General callbacks for both backup and restore procedure. The backup service will
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ General callbacks for both backup and restore procedure. The backup service will
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## onBackupSizeReport
@@ -25,8 +23,6 @@ onBackupSizeReport?: OnBackupSizeReport
 Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the scanned bundle datasize.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -41,8 +37,6 @@ onFileReadyBatch?: OnFileReadyBatch
 Callback called when the backup service tries to send files to the client. The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,8 +64,6 @@ onProcess(bundleName: string, process: string): void
 Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the bundle.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,54 +93,6 @@ Callback called when the backup_sa service return result information. The first 
 | 13900020 |
 | 13900025 |
 
-**Examples**
-
-```TypeScript
-import { backup } from '@kit.CoreFileKit';
-
-onProcess: (bundleName: string, process: string) => {
-  console.info('onProcess bundleName : ' + bundleName);
-  console.info('onProcess processInfo : ' + process);
-}
-```
-
-## onProcess
-
-```TypeScript
-onProcess: OnProcess
-```
-
-Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the bundle.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.FileManagement.StorageService.Backup
-
-**System API:** This is a system API.
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13500006 |
-| 13500008 |
-| 13600001 |
-| 13900001 |
-| 13900005 |
-| 13900011 |
-| 13900020 |
-| 13900025 |
-
-**Examples**
-
-See [onProcess](#onprocess)
-
 ## onResultReport
 
 ```TypeScript
@@ -158,8 +102,6 @@ onResultReport(bundleName: string, result: string): void
 Callback called when the backup service return result information. The first return string parameter indicates the bundleName that triggers the callback. The second return string parameter indicates the result of the bundle.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,51 +128,6 @@ Callback called when the backup service return result information. The first ret
 | 13900025 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { backup } from '@kit.CoreFileKit';
-
-onResultReport: (bundleName: string, result: string) => {
-  console.info('onResultReport bundleName : ' + bundleName);
-  console.info('onResultReport result : ' + result);
-}
-```
-
-## onResultReport
-
-```TypeScript
-onResultReport: OnResultReport
-```
-
-Callback called when the backup service return result information. The first return string parameter indicates the bundleName that triggers the callback. The second return string parameter indicates the result of the bundle.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.FileManagement.StorageService.Backup
-
-**System API:** This is a system API.
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13600001 |
-| 13900005 |
-| 13900011 |
-| 13900025 |
-| 13900042 |
-
-**Examples**
-
-See [onResultReport](#onresultreport)
-
 ## onAllBundlesEnd
 
 ```TypeScript
@@ -242,8 +139,6 @@ Callback called when the all the bundles to backup/restore are done or aborted u
 **Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;undefined&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -261,8 +156,6 @@ Callback called when the backup service dies unexpectedly.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -278,8 +171,6 @@ Callback called when a backup/restore procedure for an bundle is started. The fi
 **Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -297,8 +188,6 @@ Callback called when a backup/restore procedure for an bundle ends successfully 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -315,8 +204,6 @@ Callback called when the backup service tries to send files to the client. The F
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -332,8 +219,6 @@ Callback called when the migrate result is reported. The first return string par
 **Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

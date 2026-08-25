@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
+import { freeInstall } from 'kits/@kit.AbilityKit';
 ```
 
 ## isHapModuleRemovable
@@ -15,8 +15,6 @@ function isHapModuleRemovable(bundleName: string, moduleName: string, callback: 
 Checks whether a module can be removed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -43,43 +41,6 @@ Checks whether a module can be removed. This API uses an asynchronous callback t
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-try {
-  freeInstall.isHapModuleRemovable(bundleName, moduleName, (err, data) => {
-    if (err) {
-      console.error('Operation failed:' + JSON.stringify(err));
-    } else {
-      console.info('Operation succeed:' + JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-try {
-  freeInstall.isHapModuleRemovable(bundleName, moduleName).then(data => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
 
 ## isHapModuleRemovable
 
@@ -90,8 +51,6 @@ function isHapModuleRemovable(bundleName: string, moduleName: string): Promise<b
 Checks whether a module can be removed. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -122,7 +81,3 @@ Checks whether a module can be removed. This API uses a promise to return the re
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-
-**Examples**
-
-See [isHapModuleRemovable](#ishapmoduleremovable)

@@ -4,8 +4,6 @@ Enumerates the component operation event types that can be listened for.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Test.UiTest
 
 ## COMPONENT_UNDEFINED
@@ -17,8 +15,6 @@ COMPONENT_UNDEFINED = 0
 Non-component operation event.Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -34,8 +30,6 @@ Component clicked event.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -46,11 +40,9 @@ Component clicked event.
 COMPONENT_LONG_CLICKED = 2
 ```
 
-Component long-clicked event.
+Component number-clicked event.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -66,8 +58,6 @@ Component scroll start event.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -82,8 +72,6 @@ Component scroll end event.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -97,8 +85,6 @@ COMPONENT_TEXT_CHANGED = 5
 Text change event of the [text input component](../../../ui/arkts-common-components-text-input.md).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

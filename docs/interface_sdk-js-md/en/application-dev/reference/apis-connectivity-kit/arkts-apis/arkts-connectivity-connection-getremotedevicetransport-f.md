@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceTransport
@@ -15,8 +15,6 @@ function getRemoteDeviceTransport(deviceId: string): BluetoothTransport
 Get the transport of the bluetooth device.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +30,7 @@ Get the transport of the bluetooth device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) |
+| [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) |
 
 **Error codes:**
 
@@ -42,14 +40,3 @@ Get the transport of the bluetooth device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let transport: connection.BluetoothTransport = connection.getRemoteDeviceTransport('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

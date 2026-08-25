@@ -4,8 +4,6 @@ Manages notifications.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 7
 
 **Substitutes:** [notification/notification](arkts-notification.md)
@@ -15,7 +13,7 @@ Manages notifications.
 ## Modules to Import
 
 ```TypeScript
-import { Notification, ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
+import { Notification, ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit';
 ```
 
 ## show
@@ -28,8 +26,6 @@ Displays the notification.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 7
 
 **Substitutes:** [notification/notification](arkts-notification.md)
@@ -41,21 +37,3 @@ Displays the notification.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) | No |
-
-**Examples**
-
-```TypeScript
-let notificationObj: notification = {
-  show() {
-    notification.show({
-      contentTitle: 'title info',
-      contentText: 'text',
-      clickAction: {
-        bundleName: 'com.example.testapp',
-        abilityName: 'notificationDemo',
-        uri: '/path/to/notification'
-      }
-    });
-  }
-}
-```

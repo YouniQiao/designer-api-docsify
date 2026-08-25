@@ -4,8 +4,6 @@ interface of app lifecycle.@interface LifecycleApp
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Called back when an ability enters the &lt;b&gt;ACTIVE&lt;/b&gt; state.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -38,8 +34,6 @@ onCompleteContinuation?(result: number): void
 Called back when a local ability migration is complete. <p>You can define the processing logic after the migration is complete. For example, you can display a prompt to notify the user of the successful migration and then exit the local ability.</p>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -61,8 +55,6 @@ Called back when an ability is started for initialization.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -76,8 +68,6 @@ onDestroy?(): void
 Called back before an ability is destroyed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -93,8 +83,6 @@ Called back when an ability enters the &lt;b&gt;BACKGROUND&lt;/b&gt; state.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -109,8 +97,6 @@ Called back when an ability enters the &lt;b&gt;INACTIVE&lt;/b&gt; state (an abi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -124,8 +110,6 @@ onMemoryLevel?(level: number): void
 Called when the system has determined to trim the memory, for example, when the ability is running in the background and there is no enough memory for running as many background processes as possible.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -147,8 +131,6 @@ Called when the launch mode of an ability is set to singleton.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -169,8 +151,6 @@ Called to notify the local device when a running ability on the remote device is
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -184,8 +164,6 @@ onRestoreAbilityState?(inState: PacMap): void
 This method is called if an ability was destroyed at a certain time due to resource reclaim or was unexpectedly destroyed and the [onSaveAbilityState](#onsaveabilitystate) method was called to save its user data and states. Generally, this method is called after the onStart method.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -207,8 +185,6 @@ Restores the user data saved during the migration for an ability on the remote d
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -229,8 +205,6 @@ This method is called when the system determines that the ability may be destroy
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -250,8 +224,6 @@ onSaveData?(data: Object): boolean
 Saves the user data of a local ability generated during runtime. After the migration is triggered and the local ability is ready, this method is called when the Distributed Scheduler Service requests data from the local ability.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -279,8 +251,6 @@ Called back when the state of an ability changes from &lt;b&gt;BACKGROUND&lt;/b&
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -294,8 +264,6 @@ onStartContinuation?(): boolean
 Asks a user whether to start the migration.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 

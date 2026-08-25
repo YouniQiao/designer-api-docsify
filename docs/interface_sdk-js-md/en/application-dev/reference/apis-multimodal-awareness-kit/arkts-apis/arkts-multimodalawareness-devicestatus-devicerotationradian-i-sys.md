@@ -4,8 +4,6 @@ Interface for device rotation radian
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Interface for device rotation radian
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 indicates X-RotationRadian
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
@@ -37,16 +33,14 @@ indicates X-RotationRadian
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 indicates Y-RotationRadian
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
@@ -55,16 +49,14 @@ indicates Y-RotationRadian
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
 indicates Z-RotationRadian
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 

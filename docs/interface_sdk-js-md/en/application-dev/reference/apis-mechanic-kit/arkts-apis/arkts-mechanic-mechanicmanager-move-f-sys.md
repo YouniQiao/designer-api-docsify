@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## move
 
 ```TypeScript
-function move(mechId: int, params: MoveParams): Promise<Result>
+function move(mechId: number, params: MoveParams): Promise<Result>
 ```
 
 Move a mechanical device with the specified parameters.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -26,7 +24,7 @@ Move a mechanical device with the specified parameters.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| mechId | number | Yes |
 | params | [MoveParams](arkts-mechanic-mechanicmanager-moveparams-i-sys.md) | Yes |
 
 **Return value:**

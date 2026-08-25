@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## off('privateModeChange')
@@ -15,8 +15,6 @@ function off(type: 'privateModeChange', callback?: Callback<boolean>): void
 Unsubscribes from privacy mode changes of this display.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -35,13 +33,3 @@ Unsubscribes from privacy mode changes of this display.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-try {
-  display.off("privateModeChange");
-} catch (exception) {
-  console.error(`Failed to unregister callback. Code: ${exception.code} , message : ${exception.message}`);
-}
-```

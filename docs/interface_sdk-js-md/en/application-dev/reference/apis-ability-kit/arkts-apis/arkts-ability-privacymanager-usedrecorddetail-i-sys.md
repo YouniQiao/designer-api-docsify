@@ -4,8 +4,6 @@ Represents the details of a single access record.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Represents the details of a single access record.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## accessDuration
 
 ```TypeScript
-accessDuration: long
+accessDuration: number
 ```
 
 Access duration. Unit: milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -37,16 +33,14 @@ Access duration. Unit: milliseconds.
 ## count
 
 ```TypeScript
-count?: int
+count?: number
 ```
 
 Number of accesses. In accessRecords, it indicates the number of successful accesses; in rejectRecords, it indicates the number of failures or rejections.Default value: 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -55,18 +49,17 @@ Number of accesses. In accessRecords, it indicates the number of successful acce
 ## lockScreenStatus
 
 ```TypeScript
-lockScreenStatus?: int
+lockScreenStatus?: number
 ```
 
 Lock screen status at the time of access.  
-- 1: Indicates permission usage in a non-lock-screen scenario. - 2: Indicates permission usage in a lock-screen scenario.  
+- 1: Indicates permission usage in a non-lock-screen scenario.  
+- 2: Indicates permission usage in a lock-screen scenario.  
 Default value: 1.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -75,16 +68,14 @@ Default value: 1.
 ## status
 
 ```TypeScript
-status: int
+status: number
 ```
 
 Access status. 0 indicates stopped usage, 1 indicates foreground usage, and 2 indicates background usage.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -93,16 +84,14 @@ Access status. 0 indicates stopped usage, 1 indicates foreground usage, and 2 in
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Access timestamp. Unit: milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -119,8 +108,6 @@ Sensitive permission access method.Default value: NORMAL_TYPE.
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 

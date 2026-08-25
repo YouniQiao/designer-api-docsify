@@ -4,14 +4,12 @@ The **motion** module provides the user motion awareness capabilities, including
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 ## Modules to Import
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary
@@ -23,12 +21,8 @@ import { motion } from '@kit.MultimodalAwarenessKit';
 | [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md) |
 | [off](arkts-multimodalawareness-motion-off-f.md#offoperatinghandchanged) |
 | [off](arkts-multimodalawareness-motion-off-f.md#offholdinghandchanged) |
-| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) |
-| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) |
 | [on](arkts-multimodalawareness-motion-on-f.md#onoperatinghandchanged) |
 | [on](arkts-multimodalawareness-motion-on-f.md#onholdinghandchanged) |
-| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) |
-| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) |
 
 <!--Del-->
 ### Functions(System API)

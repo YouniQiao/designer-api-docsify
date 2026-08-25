@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## createX509Cert
@@ -15,8 +15,6 @@ function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert
 表示创建一个X.509证书对象。使用Callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,126 +36,6 @@ function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert
 | [19020001](../errorcode-cert.md#19020001-内存错误) |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
-**示例**
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-// 证书二进制数据，需业务自行赋值。
-let certData = '-----BEGIN CERTIFICATE-----\n' +
-  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-  'Qw==\n' +
-  '-----END CERTIFICATE-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(certData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Cert(encodingBlob, (error, _x509Cert) => {
-  if (error) {
-    console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
-  } else {
-    console.info('createX509Cert result: success.');
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-// 证书二进制数据，需业务自行赋值。
-let certData = '-----BEGIN CERTIFICATE-----\n' +
-  'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-  'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-  'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-  'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-  'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-  'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-  'Qw==\n' +
-  '-----END CERTIFICATE-----\n';
-
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(certData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Cert(encodingBlob).then(_x509Cert => {
-  console.info('createX509Cert result: success.');
-}).catch((error: BusinessError) => {
-  console.error(`createX509Cert failed, errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@ohos.base';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-async function TestCreateX509Cert() {
-  // 证书二进制数据，需业务自行赋值。
-  let certData = '-----BEGIN CERTIFICATE-----\n' +
-    'MIIBHTCBwwICA+gwCgYIKoZIzj0EAwIwGjEYMBYGA1UEAwwPRXhhbXBsZSBSb290\n' +
-    'IENBMB4XDTIzMDkwNTAyNDgyMloXDTI2MDUzMTAyNDgyMlowGjEYMBYGA1UEAwwP\n' +
-    'RXhhbXBsZSBSb290IENBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEHjG74yMI\n' +
-    'ueO7z3T+dyuEIrhxTg2fqgeNB3SGfsIXlsiUfLTatUsU0i/sePnrKglj2H8Abbx9\n' +
-    'PK0tsW/VgqwDIDAKBggqhkjOPQQDAgNJADBGAiEApVZno/Z7WyDc/muRN1y57uaY\n' +
-    'Mjrgnvp/AMdE8qmFiDwCIQCrIYdHVO1awaPgcdALZY+uLQi6mEs/oMJLUcmaag3E\n' +
-    'Qw==\n' +
-    '-----END CERTIFICATE-----\n';
-
-  let encodingBlob: cert.EncodingBlob = {
-    data: stringToUint8Array(certData),
-    // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-    encodingFormat: cert.EncodingFormat.FORMAT_PEM
-  };
-  try {
-    await cert.createX509Cert(encodingBlob);
-    console.info('createX509Cert result: success.');
-  } catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`createX509Cert failed, ${e.code}, ${e.message}`);
-  }
-}
-```
-
 
 ## createX509Cert
 
@@ -168,8 +46,6 @@ function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>
 表示创建一个X.509证书对象。使用Promise方式返回结果。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -195,7 +71,3 @@ function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [19020001](../errorcode-cert.md#19020001-内存错误) |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
-
-**示例**
-
-参见 [createX509Cert](#createx509cert)

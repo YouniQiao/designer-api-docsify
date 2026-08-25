@@ -4,14 +4,12 @@ Provides character attribute management capabilities, such as checking whether a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## detectEncoding
@@ -23,8 +21,6 @@ static detectEncoding(bytes: Uint8Array): EncodingInfo
 Detects the encoding information of the input byte stream.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +50,6 @@ Obtains the type of the input character.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -72,14 +66,6 @@ Obtains the type of the input character.
 | --- |
 | string |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let unicodeType: string = i18n.Unicode.getType('a'); // unicodeType = 'U_LOWERCASE_LETTER'
-```
-
 ## isDigit
 
 ```TypeScript
@@ -89,8 +75,6 @@ static isDigit(ch: string): boolean
 Checks whether the input character is a digit.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -107,14 +91,6 @@ Checks whether the input character is a digit.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isDigit: boolean = i18n.Unicode.isDigit('1'); // isDigit = true
-```
 
 ## isIdeograph
 
@@ -126,8 +102,6 @@ Checks whether the input character is an ideographic character.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -143,14 +117,6 @@ Checks whether the input character is an ideographic character.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isIdeograph: boolean = i18n.Unicode.isIdeograph('a'); // isIdeograph = false
-```
 
 ## isLetter
 
@@ -162,8 +128,6 @@ Checks whether the input character is a letter.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -179,14 +143,6 @@ Checks whether the input character is a letter.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isLetter: boolean = i18n.Unicode.isLetter('a'); // isLetter = true
-```
 
 ## isLowerCase
 
@@ -198,8 +154,6 @@ Checks whether the input character is a lowercase letter.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -215,14 +169,6 @@ Checks whether the input character is a lowercase letter.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isLowercase: boolean = i18n.Unicode.isLowerCase('a'); // isLowercase = true
-```
 
 ## isRTL
 
@@ -234,8 +180,6 @@ Checks whether the input character is of the right to left (RTL) language.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -251,21 +195,6 @@ Checks whether the input character is of the right to left (RTL) language.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isZhRTL: boolean = i18n.isRTL('zh-CN'); // Since Chinese is not written from right to left, false is returned.
-let isArRTL: boolean = i18n.isRTL('ar-EG'); // Since Arabic is written from right to left, true is returned.
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
-```
 
 ## isSpaceChar
 
@@ -277,8 +206,6 @@ Checks whether the input character is a space.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -294,14 +221,6 @@ Checks whether the input character is a space.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isSpacechar: boolean = i18n.Unicode.isSpaceChar('a'); // isSpacechar = false
-```
 
 ## isUpperCase
 
@@ -313,8 +232,6 @@ Checks whether the input character is an uppercase letter.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -330,14 +247,6 @@ Checks whether the input character is an uppercase letter.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isUppercase: boolean = i18n.Unicode.isUpperCase('a'); // isUppercase = false
-```
 
 ## isWhitespace
 
@@ -349,8 +258,6 @@ Checks whether the input character is a whitespace.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -366,11 +273,3 @@ Checks whether the input character is a whitespace.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isWhitespace: boolean = i18n.Unicode.isWhitespace('a'); // isWhitespace = false
-```

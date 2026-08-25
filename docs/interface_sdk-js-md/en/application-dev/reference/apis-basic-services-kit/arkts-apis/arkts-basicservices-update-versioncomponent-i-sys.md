@@ -4,8 +4,6 @@ Represents a version component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents a version component.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## componentId
@@ -27,8 +25,6 @@ Component ID, which uniquely identifies a component in the upgrade package. The 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -46,8 +42,6 @@ Component type.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Information about the version description file.
 **Type:** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -82,8 +74,6 @@ Display version number.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Effective mode. The value **COLD** indicates the cold upgrade, which takes effec
 **Type:** [EffectiveMode](arkts-basicservices-update-effectivemode-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -118,8 +106,6 @@ Internal version number.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -136,8 +122,6 @@ OTA mode. Pass this parameter to specify a specific upgrade mode, which is appli
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -145,16 +129,14 @@ OTA mode. Pass this parameter to specify a specific upgrade mode, which is appli
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
 Size of the upgrade package, in bytes. The value range is [0, +∞]. An exception is thrown if the value is out of range.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -171,8 +153,6 @@ Upgrade action. The value **UPGRADE** indicates that the upgrade package is a di
 **Type:** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

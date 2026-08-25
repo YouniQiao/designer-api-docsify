@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## deleteDynamicShortcutInfos
 
 ```TypeScript
-function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: int, ids?: Array<string>): Promise<void>
+function deleteDynamicShortcutInfos(bundleName: string, appIndex: number, userId: number, ids?: Array<string>): Promise<void>
 ```
 
 删除指定的动态快捷方式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS or (ohos.permission.MANAGE_SHORTCUTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -29,8 +27,8 @@ function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: i
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| appIndex | number | 是 |
+| userId | number | 是 |
 | ids | Array & lt;string & gt; | 否 |
 
 **返回值：**
@@ -51,24 +49,3 @@ function deleteDynamicShortcutInfos(bundleName: string, appIndex: int, userId: i
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
 | [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) |
-
-**示例**
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 请开发者替换为实际的快捷方式id、bundleName、userId。
-const bundleName = "com.example.dynamic";
-
-try {
-  shortcutManager.deleteDynamicShortcutInfos(bundleName, 0, 100, ["1", "2"])
-    .then(() => {
-      console.info('deleteDynamicShortcutInfos success');
-    }).catch((err: Error) => {
-    console.error(`deleteDynamicShortcutInfos errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-  });
-} catch (err) {
-  console.error(`deleteDynamicShortcutInfos errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-}
-```

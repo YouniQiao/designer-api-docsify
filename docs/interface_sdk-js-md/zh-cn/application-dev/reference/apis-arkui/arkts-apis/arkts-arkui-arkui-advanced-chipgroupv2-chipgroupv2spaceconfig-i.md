@@ -4,14 +4,12 @@ ChipGroupV2SpaceConfig定义了ChipGroupV2左右内边距，以及ChipV2与ChipV
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
+import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from 'kits/@kit.ArkUI';
 ```
 
 ## endSpace
@@ -22,11 +20,9 @@ endSpace?: Length
 
 右侧内边距（不支持百分比）。默认值：16单位：vp值为undefined时，按默认值处理。
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,14 +37,14 @@ itemSpace?: string | number
 ```
 
 ChipV2与ChipV2之间的间距（不支持百分比）。取值范围：  
-- number类型：[0, +∞)，如0、8、16、24.5。 - string类型：单位为fp | vp | px | lpx且数值部分大于等于0的字符串，如"8vp"、"16fp"、"12px"、"10lpx"。 - 不支持：负数、百分比单位、无效字符串格式。  
+- number类型：[0, +∞)，如0、8、16、24.5。  
+- string类型：单位为fp | vp | px | lpx且数值部分大于等于0的字符串，如"8vp"、"16fp"、"12px"、"10lpx"。  
+- 不支持：负数、百分比单位、无效字符串格式。  
 传入不在取值范围内或不支持格式的值时，按默认值处理。默认值：8单位：vp值为undefined时，按默认值处理。
 
 **类型：** string \| number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,11 +60,9 @@ startSpace?: Length
 
 左侧内边距（不支持百分比）。默认值：16单位：vp值为undefined时，按默认值处理。
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

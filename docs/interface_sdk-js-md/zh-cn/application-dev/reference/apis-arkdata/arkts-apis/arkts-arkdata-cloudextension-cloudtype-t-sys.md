@@ -1,14 +1,12 @@
 # CloudType（系统接口）
 
 ```TypeScript
-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets
+type CloudType = null | number | number | string | boolean | Uint8Array | CloudAsset | CloudAssets
 ```
 
 表示云数据字段可使用的类型。各接口参数的实际类型视其功能而定。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

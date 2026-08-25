@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## isIntercepted
@@ -27,8 +25,6 @@ isIntercepted: boolean
 **类型：** boolean
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -46,8 +42,6 @@ isPressed: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
@@ -55,16 +49,14 @@ isPressed: boolean
 ## keyCode
 
 ```TypeScript
-keyCode: int
+keyCode: number
 ```
 
 按键键值。当前仅支持返回键/KEYCODE_BACK键。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
@@ -73,16 +65,14 @@ keyCode: int
 ## keyDownDuration
 
 ```TypeScript
-keyDownDuration: int
+keyDownDuration: number
 ```
 
 按键按下持续时间，单位为微秒（μs）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 

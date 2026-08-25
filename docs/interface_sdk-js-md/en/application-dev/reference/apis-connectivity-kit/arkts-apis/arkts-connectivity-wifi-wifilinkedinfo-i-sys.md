@@ -4,8 +4,6 @@ Wi-Fi connection information.@interface WifiLinkedInfo
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md)
@@ -15,7 +13,7 @@ Wi-Fi connection information.@interface WifiLinkedInfo
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## chload
@@ -29,8 +27,6 @@ The load value of this Wi-Fi connection. A greater value indicates a higher load
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ The ID(uniquely identifies) of a Wi-Fi connection.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [networkId](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#networkid)
@@ -74,8 +68,6 @@ The signal-to-noise ratio (SNR) of this Wi-Fi connection.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [snr](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md#snr)
@@ -95,8 +87,6 @@ The state of the supplicant of this Wi-Fi connection.
 **Type:** SuppState
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

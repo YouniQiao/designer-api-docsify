@@ -2,14 +2,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -69,18 +67,12 @@ import { window } from '@kit.ArkUI';
 | [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md) |
 | [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md) |
 | [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md) |
-| [on](arkts-arkui-window-on-f-sys.md#onsystembartintchange) |
-| [onSystemBarTintChange](arkts-arkui-window-onsystembartintchange-f-sys.md) |
-| [off](arkts-arkui-window-off-f-sys.md#offsystembartintchange) |
-| [offSystemBarTintChange](arkts-arkui-window-offsystembartintchange-f-sys.md) |
-| [on](arkts-arkui-window-on-f-sys.md#ongesturenavigationenabledchange) |
-| [onGestureNavigationEnabledChange](arkts-arkui-window-ongesturenavigationenabledchange-f-sys.md) |
-| [off](arkts-arkui-window-off-f-sys.md#offgesturenavigationenabledchange) |
-| [offGestureNavigationEnabledChange](arkts-arkui-window-offgesturenavigationenabledchange-f-sys.md) |
-| [on](arkts-arkui-window-on-f-sys.md#onwatermarkflagchange) |
-| [onWaterMarkFlagChange](arkts-arkui-window-onwatermarkflagchange-f-sys.md) |
-| [off](arkts-arkui-window-off-f-sys.md#offwatermarkflagchange) |
-| [offWaterMarkFlagChange](arkts-arkui-window-offwatermarkflagchange-f-sys.md) |
+| on |
+| off |
+| on |
+| off |
+| on |
+| off |
 | [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md) |
 | [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md) |
 <!--DelEnd-->

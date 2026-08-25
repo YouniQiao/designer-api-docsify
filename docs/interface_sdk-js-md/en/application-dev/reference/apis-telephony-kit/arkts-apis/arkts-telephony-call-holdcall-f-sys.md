@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## holdCall
 
 ```TypeScript
-function holdCall(callId: int, callback: AsyncCallback<void>): void
+function holdCall(callId: number, callback: AsyncCallback<void>): void
 ```
 
 Holds a call based on the specified call ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
@@ -28,7 +26,7 @@ Holds a call based on the specified call ID. This API uses an asynchronous callb
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -43,42 +41,16 @@ Holds a call based on the specified call ID. This API uses an asynchronous callb
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.holdCall(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`holdCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`holdCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.holdCall(1).then(() => {
-    console.info(`holdCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`holdCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## holdCall
 
 ```TypeScript
-function holdCall(callId: int): Promise<void>
+function holdCall(callId: number): Promise<void>
 ```
 
 Holds a call based on the specified call ID. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ANSWER_CALL
 
@@ -90,7 +62,7 @@ Holds a call based on the specified call ID. This API uses a promise to return t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 
 **Return value:**
 
@@ -109,7 +81,3 @@ Holds a call based on the specified call ID. This API uses a promise to return t
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [holdCall](#holdcall)

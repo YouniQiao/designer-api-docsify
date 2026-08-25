@@ -4,8 +4,6 @@ Defines a touchscreen gesture event.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines a touchscreen gesture event.
 ## Modules to Import
 
 ```TypeScript
-import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from '@kit.InputKit';
+import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from 'kits/@kit.InputKit';
 ```
 
 ## action
@@ -27,8 +25,6 @@ Enumerates touchscreen gesture types.
 **Type:** [TouchGestureAction](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -45,8 +41,6 @@ Touch point information.
 **Type:** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

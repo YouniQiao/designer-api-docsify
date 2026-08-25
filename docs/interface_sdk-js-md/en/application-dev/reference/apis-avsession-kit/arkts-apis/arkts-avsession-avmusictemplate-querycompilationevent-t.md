@@ -1,14 +1,12 @@
 # QueryCompilationEvent
 
 ```TypeScript
-type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<PageMediaEntity>
+type QueryCompilationEvent = (compilationId: string, pageIndex: number) => Promise<PageMediaEntity>
 ```
 
 The query compilation event.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -19,7 +17,7 @@ The query compilation event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | compilationId | string | Yes |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| pageIndex | number | Yes |
 
 **Return value:**
 

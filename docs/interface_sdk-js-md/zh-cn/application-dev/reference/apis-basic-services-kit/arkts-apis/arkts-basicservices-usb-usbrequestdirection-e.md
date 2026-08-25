@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [USBRequestDirection](arkts-basicservices-usbmanager-usbrequestdirection-e.md)
@@ -22,8 +20,6 @@ USB_REQUEST_DIR_TO_DEVICE = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [USB_REQUEST_DIR_TO_DEVICE](arkts-basicservices-usbmanager-usbrequestdirection-e.md#usb_request_dir_to_device)
@@ -39,8 +35,6 @@ USB_REQUEST_DIR_FROM_DEVICE = 0x80
 读数据，从设备往主设备。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

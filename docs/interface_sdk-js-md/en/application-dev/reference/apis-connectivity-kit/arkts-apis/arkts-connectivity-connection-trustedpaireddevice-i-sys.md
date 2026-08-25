@@ -4,8 +4,6 @@ Describes device of cloud pair.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Describes device of cloud pair.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## bluetoothClass
 
 ```TypeScript
-bluetoothClass: int
+bluetoothClass: number
 ```
 
 Indicates the bluetoothClass of the peripheral.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ The local name of the device
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -59,16 +53,14 @@ The local name of the device
 ## deviceNameTime
 
 ```TypeScript
-deviceNameTime: long
+deviceNameTime: number
 ```
 
 Indicates the deviceNameTime of the peripheral.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Indicates the device type of the peripheral.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -107,8 +97,6 @@ Indicates the HiLink version of the peripheral.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,8 +116,6 @@ Indicates the macAddress of the peripheral.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -147,8 +133,6 @@ Indicates the manufactory of the peripheral.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,8 +152,6 @@ Indicates the modelId of the peripheral.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -179,16 +161,14 @@ Indicates the modelId of the peripheral.
 ## pairState
 
 ```TypeScript
-pairState: int
+pairState: number
 ```
 
 Indicates the pairState of the peripheral.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,8 +188,6 @@ Indicates the productId of the peripheral.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -227,8 +205,6 @@ Indicates the securityAdvInfo of the peripheral.
 **Type:** ArrayBuffer
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,8 +224,6 @@ Indicates the service id of the peripheral.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -267,8 +241,6 @@ Indicates the service type of the peripheral.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -288,8 +260,6 @@ Indicates the device identify.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -308,8 +278,6 @@ Indicates the token of the peripheral.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -327,8 +295,6 @@ Indicates the uuid of the peripheral.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

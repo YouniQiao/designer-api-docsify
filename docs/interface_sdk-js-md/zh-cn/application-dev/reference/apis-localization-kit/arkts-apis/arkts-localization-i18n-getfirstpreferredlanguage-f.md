@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getFirstPreferredLanguage
@@ -16,8 +16,6 @@ export function getFirstPreferredLanguage(): string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getFirstPreferredLanguage](arkts-localization-i18n-system-c.md#getfirstpreferredlanguage)
@@ -29,17 +27,3 @@ export function getFirstPreferredLanguage(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let firstPreferredLanguage: string = i18n.System.getFirstPreferredLanguage();
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
-```

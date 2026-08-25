@@ -8,8 +8,6 @@
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,13 +21,11 @@
 alignContent?: Alignment
 ```
 
-Alignment of child components in the container. Default value: Alignment.Center. <br>Invalid values are treated as the default value.
+Alignment of child components in the container. Default value: Alignment.Center. Invalid values are treated as the default value.
 
-**Type:** Alignment
+**Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,14 +4,12 @@ TIFF metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## artist
@@ -26,8 +24,6 @@ Name of the image creator or artist.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -35,16 +31,14 @@ Name of the image creator or artist.
 ## compression
 
 ```TypeScript
-readonly compression?: int
+readonly compression?: number
 ```
 
 Compression scheme used for image data (e.g., None, LZW, JPEG, Deflate). The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +56,6 @@ Copyright notice for the image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -79,8 +71,6 @@ Date and time associated with the image (typically last modification).
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +88,6 @@ Name of the document or image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -115,8 +103,6 @@ Host computer/system used for image processing.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,8 +120,6 @@ Description of the image content.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -151,8 +135,6 @@ Manufacturer of the capture device.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,8 +152,6 @@ Model name/number of the capture device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -188,8 +168,6 @@ Indicates image orientation for correct display rotation/flip.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -197,16 +175,14 @@ Indicates image orientation for correct display rotation/flip.
 ## photometricInterpretation
 
 ```TypeScript
-readonly photometricInterpretation?: int
+readonly photometricInterpretation?: number
 ```
 
 Defines how pixel colors are interpreted (e.g., RGB, grayscale). The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,16 +191,14 @@ Defines how pixel colors are interpreted (e.g., RGB, grayscale). The value shoul
 ## primaryChromaticities
 
 ```TypeScript
-readonly primaryChromaticities?: double[]
+readonly primaryChromaticities?: number[]
 ```
 
 Chromaticity coordinates of the RGB primaries.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -233,16 +207,14 @@ Chromaticity coordinates of the RGB primaries.
 ## resolutionUnit
 
 ```TypeScript
-readonly resolutionUnit?: int
+readonly resolutionUnit?: number
 ```
 
 Unit for X/Y resolution. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,8 +232,6 @@ Software used to create or process the image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -269,16 +239,14 @@ Software used to create or process the image.
 ## tileLength
 
 ```TypeScript
-readonly tileLength?: int
+readonly tileLength?: number
 ```
 
 Height of each image tile in pixels. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -287,16 +255,14 @@ Height of each image tile in pixels. The value should be an integer.
 ## tileWidth
 
 ```TypeScript
-readonly tileWidth?: int
+readonly tileWidth?: number
 ```
 
 Width of each image tile in pixels. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,8 +280,6 @@ Tone transfer curve mapping pixel values to output intensity.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -323,16 +287,14 @@ Tone transfer curve mapping pixel values to output intensity.
 ## whitePoint
 
 ```TypeScript
-readonly whitePoint?: double[]
+readonly whitePoint?: number[]
 ```
 
 Chromaticity coordinates of the reference white point.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -341,16 +303,14 @@ Chromaticity coordinates of the reference white point.
 ## xResolution
 
 ```TypeScript
-readonly xResolution?: double
+readonly xResolution?: number
 ```
 
 Horizontal resolution (pixels per resolution unit).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -359,16 +319,14 @@ Horizontal resolution (pixels per resolution unit).
 ## yResolution
 
 ```TypeScript
-readonly yResolution?: double
+readonly yResolution?: number
 ```
 
 Vertical resolution (pixels per resolution unit).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

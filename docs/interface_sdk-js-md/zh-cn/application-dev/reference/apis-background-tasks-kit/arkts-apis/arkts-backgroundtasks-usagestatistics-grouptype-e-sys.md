@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ ALIVE_GROUP = 10
 活跃分组。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -36,8 +32,6 @@ DAILY_GROUP = 20
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ FIXED_GROUP = 30
 常用分组，定期使用，但不是每天使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -68,8 +60,6 @@ RARE_GROUP = 40
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -84,8 +74,6 @@ LIMITED_GROUP = 50
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +87,6 @@ NEVER_GROUP = 60
 从未使用分组，安装但是从未运行过。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

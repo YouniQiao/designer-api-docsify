@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getOsAccountSubProfileManager
@@ -15,8 +15,6 @@ function getOsAccountSubProfileManager(): OsAccountSubProfileManager
 获取系统账号子身份资料管理器。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,21 +33,3 @@ function getOsAccountSubProfileManager(): OsAccountSubProfileManager
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-```

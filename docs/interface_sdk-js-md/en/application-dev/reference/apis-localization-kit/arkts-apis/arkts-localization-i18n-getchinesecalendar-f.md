@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getChineseCalendar
@@ -15,8 +15,6 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 Obtains the ChineseCalendar object for the specified locale.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

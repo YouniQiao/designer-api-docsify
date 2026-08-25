@@ -4,8 +4,6 @@ Defines a disposed rule.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines a disposed rule.
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## componentType
@@ -27,8 +25,6 @@ Type of application component that functions as the displayed page.
 **Type:** ComponentType
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -46,8 +42,6 @@ Control type of application disposal.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Type of application disposal.
 **Type:** [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -82,8 +74,6 @@ List of application components to be disposed of or exempted.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -100,8 +90,6 @@ Specifies whether to jump to another page when the target application is blocked
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
@@ -111,16 +99,14 @@ Specifies whether to jump to another page when the target application is blocked
 ## priority
 
 ```TypeScript
-priority: int
+priority: number
 ```
 
 Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer. A smaller value indicates a higher priority.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -137,8 +123,6 @@ Page displayed when the application is disposed of.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 

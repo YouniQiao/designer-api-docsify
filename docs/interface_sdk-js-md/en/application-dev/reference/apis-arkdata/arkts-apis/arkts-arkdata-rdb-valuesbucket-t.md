@@ -8,8 +8,6 @@ Defines the types of the key and value in a KV pair.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md)

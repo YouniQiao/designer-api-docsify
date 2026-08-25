@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## additionsMap
@@ -28,8 +26,6 @@ additionsMap?: Map<string, string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Location.Location.Core
@@ -39,16 +35,14 @@ additionsMap?: Map<string, string>
 ## arfcn
 
 ```TypeScript
-arfcn: int
+arfcn: number
 ```
 
 表示绝对无线载频信道号（absolute radio frequency channel number）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,16 +53,14 @@ arfcn: int
 ## cellId
 
 ```TypeScript
-cellId: long
+cellId: number
 ```
 
 表示蜂窝网络的小区ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -79,16 +71,14 @@ cellId: long
 ## lac
 
 ```TypeScript
-lac: int
+lac: number
 ```
 
 表示位置区码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,16 +89,14 @@ lac: int
 ## mcc
 
 ```TypeScript
-mcc: int
+mcc: number
 ```
 
 表示移动国家码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -119,16 +107,14 @@ mcc: int
 ## mnc
 
 ```TypeScript
-mnc: int
+mnc: number
 ```
 
 表示移动网络代码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -139,16 +125,14 @@ mnc: int
 ## pci
 
 ```TypeScript
-pci: int
+pci: number
 ```
 
 表示物理小区标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -159,16 +143,14 @@ pci: int
 ## rat
 
 ```TypeScript
-rat: int
+rat: number
 ```
 
 表示无线接入技术。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -179,16 +161,14 @@ rat: int
 ## signalIntensity
 
 ```TypeScript
-signalIntensity: int
+signalIntensity: number
 ```
 
 表示信号强度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -199,16 +179,14 @@ signalIntensity: int
 ## tac
 
 ```TypeScript
-tac?: int
+tac?: number
 ```
 
 表示跟踪区域码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -219,16 +197,14 @@ tac?: int
 ## timeSinceBoot
 
 ```TypeScript
-timeSinceBoot: long
+timeSinceBoot: number
 ```
 
 表示从本次开机到获取位置成功所经过的时间，单位为纳秒。设置飞行模式并解除不记为重启。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

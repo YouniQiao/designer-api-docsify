@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## scan
@@ -15,8 +15,6 @@ function scan(): void
 启动WLAN扫描。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -33,15 +31,3 @@ function scan(): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    wifiManager.scan();
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

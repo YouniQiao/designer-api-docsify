@@ -1,7 +1,5 @@
 # ReadonlyArray
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -15,8 +13,6 @@
 
 Iterator of values in the array.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -28,8 +24,6 @@ entries(): IterableIterator<[number, T]>
 ```
 
 Returns an iterable of key, value pairs for every entry in the array
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -43,8 +37,6 @@ keys(): IterableIterator<number>
 
 Returns an iterable of keys in the array
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -56,8 +48,6 @@ values(): IterableIterator<T>
 ```
 
 Returns an iterable of values in the array
-
-**ArkTS mode:** 
 
 **Return value:**
 

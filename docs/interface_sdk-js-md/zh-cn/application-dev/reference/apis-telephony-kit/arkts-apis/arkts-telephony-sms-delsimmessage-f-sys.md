@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## delSimMessage
 
 ```TypeScript
-function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>): void
+function delSimMessage(slotId: number, msgIndex: number, callback: AsyncCallback<void>): void
 ```
 
 删除SIM卡消息，msgIndex无效时，删除报错。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -28,8 +26,8 @@ function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| [msgIndex](arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
+| [msgIndex](arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -44,45 +42,16 @@ function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let msgIndex: number = 1;
-sms.delSimMessage(slotId, msgIndex, (err: BusinessError) => {
-      console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let msgIndex: number = 1;
-let promise = sms.delSimMessage(slotId, msgIndex);
-promise.then(() => {
-    console.info(`delSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`delSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## delSimMessage
 
 ```TypeScript
-function delSimMessage(slotId: int, msgIndex: int): Promise<void>
+function delSimMessage(slotId: number, msgIndex: number): Promise<void>
 ```
 
 删除SIM卡消息，msgIndex无效时，删除报错。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -94,8 +63,8 @@ function delSimMessage(slotId: int, msgIndex: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| [msgIndex](arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
+| [msgIndex](arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -114,7 +83,3 @@ function delSimMessage(slotId: int, msgIndex: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [delSimMessage](#delsimmessage)

@@ -6,8 +6,6 @@ CommonScrollableMethod@extends CommonMethod&lt;T&gt;
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ CommonScrollableMethod@extends CommonMethod&lt;T&gt;
 autoAdjustScrollBarMargin(enable: boolean | undefined): T
 ```
 
-设置滚动条是否自动调整边距。默认不会自动调整边距。打开滚动条自动边距调整后，滚动条滚动方向上会避让组件[padding](arkts-arkui-commonmethod-c.md#padding)、 [safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding)、 contentStartOffset /contentEndOffset区 域。如果设置了 scrollBarMargin属性，则自 动调整边距不生效。当[padding](arkts-arkui-commonmethod-c.md#padding)、[safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding)、 contentStartOffset 、contentEndOffset在水 平方向上的总和大于组件的宽度，或在垂直方向上的总和大于组件的高度时，滚动条不显示。
+设置滚动条是否自动调整边距。默认不会自动调整边距。打开滚动条自动边距调整后，滚动条滚动方向上会避让组件[padding](arkts-arkui-commonmethod-c.md#padding)、 [safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding)、 contentStartOffset /contentEndOffset区 域。如果设置了 [scrollBarMargin](#scrollbarmargin)属性，则自 动调整边距不生效。当[padding](arkts-arkui-commonmethod-c.md#padding)、[safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding)、 contentStartOffset 、contentEndOffset在水 平方向上的总和大于组件的宽度，或在垂直方向上的总和大于组件的高度时，滚动条不显示。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,8 +51,6 @@ backToTop(backToTop: boolean): T
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -84,8 +78,6 @@ clipContent(clip: ContentClipMode | RectShape): T
 设置滚动容器的内容层裁剪区域。从API版本26.0.0开始，内容层裁剪区域内的子组件支持正常显示。API版本26.0.0以前的版本，当List、Grid和WaterFlow组件的内容层裁剪区域大于组件自身时，完全在组件区域外但在裁剪区域内的子组件默认不会显示。 若需要显示，可将组件的cachedCount属性的show参数设置为true。但由于cachedCount属性设置的预加载子组件仅在空闲时隙执行，在组件大小变化、数据更新等场景下可能存在更新不及时导致闪烁的问题。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,8 +107,6 @@ contentEndOffset(offset: number | Resource): T
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -144,8 +134,6 @@ contentStartOffset(offset: number | Resource): T
 设置内容区域起始偏移量。滚动组件滚动到起始位置时，内容与组件显示区域边界保留指定距离。contentStartOffset + contentEndOffset超过滚动组件内容区长度后contentStartOffset和contentEndOffset会置0。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -175,8 +163,6 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -187,7 +173,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 |
+| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
 
 **返回值：**
 
@@ -205,8 +191,6 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): T
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -217,8 +201,8 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [edgeEffect](#edgeeffect) | [EdgeEffect](#edgeeffect) | 是 |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时是否开启滑动效果。从API version 18开始，支持设置边缘效果生效的边缘。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。 & lt;br/ & gt;默认值： & lt;br/ & gt;List、Grid、WaterFlow组件默认{ alwaysEnabled: false }，Scroll组 件默认{ alwaysEnabled: true }。从API version 18开始，默认增加effectEdge字段，取值为EffectEdge.START \ |
+| [edgeEffect](#edgeeffect) | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时是否开启滑动效果。从API version 18开始，支持设置边缘效果生效的边缘。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。默认值：List、Grid、WaterFlow组件默认{ alwaysEnabled: false }，Scroll组 件默认{ alwaysEnabled: true }。从API version 18开始，默认增加effectEdge字段，取值为EffectEdge.START \|
 
 **返回值：**
 
@@ -235,8 +219,6 @@ enableScrollInteraction(value: boolean): T
 设置是否支持滚动手势。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -265,8 +247,6 @@ enableScrollWithMouse(enabled: boolean | undefined): T
 设置是否支持鼠标左键按下拖动滚动。未通过该接口设置时，默认不支持鼠标左键按下拖动滚动。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -318,8 +298,6 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -355,8 +333,6 @@ flingSpeedLimit(speedLimit: number): T
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -385,8 +361,6 @@ friction(value: number | Resource): T
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -414,8 +388,6 @@ nestedScroll(value: NestedScrollOptions): T
 设置前后两个方向的嵌套滚动模式，实现与父组件的滚动联动。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -448,8 +420,6 @@ onDidScroll(handler: OnScrollCallback): T
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -479,8 +449,6 @@ onDidStopDragging(handler: OnDidStopDraggingCallback): T
 滚动组件结束拖动时触发。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -512,8 +480,6 @@ onDidStopFling(handler: VoidCallback): T
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -544,8 +510,6 @@ onReachEnd(event: () => void): T
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -573,8 +537,6 @@ onReachStart(event: () => void): T
 滚动组件到达起始位置时触发。滚动组件初始化时会触发一次，滚动到起始位置时触发一次。边缘效果为弹簧效果时，划动经过起始位置时触发一次，回弹回起始位置时再触发一次。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -608,8 +570,6 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **废弃版本：** 12
 
 **替代接口：** [onDidScroll](#ondidscroll)
@@ -638,13 +598,11 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 onScrollStart(event: () => void): T
 ```
 
-滚动开始时触发。手指拖动滚动组件或其滚动条触发的滚动开始时，会触发该事件。使用Scroller滚动控制器触发的带动画的滚动，动画开始时会触发该事件。触发该事件的条件：
+滚动开始时触发。手指拖动滚动组件或其滚动条触发的滚动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滚动控制器触发的带动画的滚动，动画开始时会触发该事件。触发该事件的条件：
 1. 滚动组件开始滚动时触发，支持键鼠操作等其他触发滚动的输入设置。
 2. 通过滚动控制器API接口调用后开始，带过渡动效。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -670,13 +628,11 @@ onScrollStart(event: () => void): T
 onScrollStop(event: () => void): T
 ```
 
-滚动停止时触发。手指拖动滚动组件或其滚动条触发的滚动，手指离开屏幕后滚动停止时会触发该事件。使用Scroller滚动控制器触发的带动画的滚动，动画停止时会触发该事件。触发该事件的条件：
+滚动停止时触发。手指拖动滚动组件或其滚动条触发的滚动，手指离开屏幕后滚动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滚动控制器触发的带动画的滚动，动画停止时会触发该事件。触发该事件的条件：
 1. 滚动组件触发滚动后停止，支持键鼠操作等其他触发滚动的输入设置。
 2. 通过调用带过渡动画的滚动控制器API接口，动画停止时。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -702,15 +658,13 @@ onScrollStop(event: () => void): T
 onWillScroll(handler: Optional<OnWillScrollCallback>): T
 ```
 
-滚动事件回调，滚动组件滚动前触发。与 onDidScroll的对比： onWillScroll在滚动发生前触发，可通过返回值指定将要滚动的偏移量，适用于需要拦截或自定义滚动行为的场景；onDidScroll在滚动发生时触发，返回当前帧的实际滚动偏移量和滑动状态，适用于仅需监听滚动过程的场景。两者可同 时使用。回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。Scroll组件的 onWillScroll接口的参数类型是 ScrollOnWillScrollCallback。
+滚动事件回调，滚动组件滚动前触发。与 onDidScroll的对比： onWillScroll在滚动发生前触发，可通过返回值指定将要滚动的偏移量，适用于需要拦截或自定义滚动行为的场景；onDidScroll在滚动发生时触发，返回当前帧的实际滚动偏移量和滑动状态，适用于仅需监听滚动过程的场景。两者可同 时使用。回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。Scroll组件的 onWillScroll接口的参数类型是 [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md)。
 
 > **说明：**&gt;
 > - 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。&gt;
-> - 调用不带动画的ScrollEdge和ScrollToIndex时，不触发onWillScroll。
+> - 调用不带动画的[ScrollEdge](arkts-arkui-scroller-c.md#scrolledge)和[ScrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex)时，不触发onWillScroll。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -739,8 +693,6 @@ onWillStartDragging(handler: VoidCallback): T
 滚动组件开始拖动时触发。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -778,8 +730,6 @@ onWillStartFling(handler: VoidCallback): T
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -809,8 +759,6 @@ onWillStopDragging(handler: OnWillStopDraggingCallback): T
 滚动组件划动离手时触发，使用鼠标滚轮划动时不会触发。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -842,8 +790,6 @@ scrollBar(barState: BarState): T
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -871,8 +817,6 @@ scrollBarColor(color: Color | number | string): T
 设置滚动条的颜色。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -902,8 +846,6 @@ scrollBarColor(color: Color | number | string | Resource): T
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -932,12 +874,10 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 
 > **说明：**&gt;
 > 应确保scrollBarHeight与
-> scrollBarMargin的设定
+> [scrollBarMargin](#scrollbarmargin)的设定
 > 值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -963,11 +903,9 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 scrollBarMargin(margin: ScrollBarMargin): T
 ```
 
-设置滚动条的边距。边距是在滚动条避让滚动组件圆角区域距离的基础上计算的，如果滚动条区域小于滚动条的最小长度，则不显示滚动条。如果设置了本属性，则 autoAdjustScrollBarMargin 的自动调整边距功能不生效。应注意确保 scrollBarHeight与本属性的设定 值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
+设置滚动条的边距。边距是在滚动条避让滚动组件圆角区域距离的基础上计算的，如果滚动条区域小于滚动条的最小长度，则不显示滚动条。如果设置了本属性，则 [autoAdjustScrollBarMargin](#autoadjustscrollbarmargin) 的自动调整边距功能不生效。应注意确保 [scrollBarHeight](#scrollbarheight)与本属性的设定 值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -979,7 +917,7 @@ scrollBarMargin(margin: ScrollBarMargin): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| margin | [ScrollBarMargin](#scrollbarmargin) | 是 |
+| margin | [ScrollBarMargin](../arkts-apis/arkts-arkui-scrollbarmargin-i.md) | 是 |
 
 **返回值：**
 
@@ -996,8 +934,6 @@ scrollBarWidth(value: number | string): T
 设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过滚动组件主轴方向的可视尺寸，则滚动条的宽度会变为默认值4vp。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1026,8 +962,6 @@ scrollBarWidth(value: number | string | Resource): T
 设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过滚动组件主轴方向的可视尺寸，则滚动条的宽度会变为默认值4vp，支持Resource资源类型。未通过该接口设置时，滚动条的宽度为4vp。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

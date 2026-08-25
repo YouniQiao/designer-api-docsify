@@ -4,14 +4,12 @@ Defines the cell information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## data
@@ -26,8 +24,6 @@ Obtains signal strength under different network formats.
 **Type:** [CdmaCellInformation](arkts-telephony-radio-cdmacellinformation-i-sys.md) \| [GsmCellInformation](arkts-telephony-radio-gsmcellinformation-i-sys.md) \| [LteCellInformation](arkts-telephony-radio-ltecellinformation-i-sys.md) \| [NrCellInformation](arkts-telephony-radio-nrcellinformation-i-sys.md) \| [TdscdmaCellInformation](arkts-telephony-radio-tdscdmacellinformation-i-sys.md) \| [WcdmaCellInformation](arkts-telephony-radio-wcdmacellinformation-i-sys.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -45,8 +41,6 @@ Obtains the camp-on status of the serving cell.Returns {@code true} if the user 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -54,16 +48,14 @@ Obtains the camp-on status of the serving cell.Returns {@code true} if the user 
 ## timeStamp
 
 ```TypeScript
-timeStamp: int
+timeStamp: number
 ```
 
 Obtains the timestamp when the cell information is obtained.Returns a timestamp since boot, in nanoseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

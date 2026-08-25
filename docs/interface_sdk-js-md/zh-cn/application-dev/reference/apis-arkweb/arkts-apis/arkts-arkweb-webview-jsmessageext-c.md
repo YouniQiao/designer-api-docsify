@@ -4,14 +4,12 @@ JsMessageExt是ArkWeb框架中用于封装 [runJavaScriptExt](arkts-arkweb-webvi
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getArray
@@ -23,8 +21,6 @@ getArray(): Array<string | number | boolean>
 获取数据对象的数组类型数据。完整示例代码参考 [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext) 。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -52,8 +48,6 @@ getArrayBuffer(): ArrayBuffer
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -79,8 +73,6 @@ getBoolean(): boolean
 获取数据对象的布尔类型数据。完整示例代码参考 [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext) 。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -108,8 +100,6 @@ getErrorDescription(): string | null
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -127,8 +117,6 @@ getNumber(): number
 获取数据对象的数值类型数据。完整示例代码参考 [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext) 。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -156,8 +144,6 @@ getString(): string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -183,8 +169,6 @@ getType(): JsMessageType
 获取数据对象的类型。完整示例代码参考 [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext) 。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

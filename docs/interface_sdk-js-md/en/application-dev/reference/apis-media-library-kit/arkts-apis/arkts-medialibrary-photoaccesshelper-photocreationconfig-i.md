@@ -4,14 +4,12 @@ Represents the configuration for saving a media asset (image or video) to the me
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## fileNameExtension
@@ -25,8 +23,6 @@ File name extension, for example, **'jpg'**.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType]
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -62,8 +56,6 @@ Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -75,13 +67,14 @@ title?: string
 ```
 
 Title of the image or video. If this parameter is not passed, the system generates a title. The title must meet the following requirements:  
-- It must not contain a file name extension. - The total length of the file name, which is in the format of title+file name extension, must be between 1 and 2 55 characters. - It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ]
+- It must not contain a file name extension.  
+- The total length of the file name, which is in the format of title+file name extension, must be between 1 and 2  
+55 characters.  
+- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

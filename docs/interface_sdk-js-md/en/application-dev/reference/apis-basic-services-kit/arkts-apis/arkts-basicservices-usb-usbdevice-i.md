@@ -4,8 +4,6 @@ Represents the USB device information.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)
@@ -15,7 +13,7 @@ Represents the USB device information.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## busNum
@@ -29,8 +27,6 @@ Bus address.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Device class.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [clazz](arkts-basicservices-usbmanager-usbdevice-i.md#clazz)
@@ -69,8 +63,6 @@ Device configuration descriptor information.
 **Type:** Array&lt;[USBConfig](arkts-basicservices-usb-usbconfig-i.md)&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Device address.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [devAddress](arkts-basicservices-usbmanager-usbdevice-i.md#devaddress)
@@ -109,8 +99,6 @@ Device manufacturer.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ Device name.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-basicservices-usbmanager-usbdevice-i.md#name)
@@ -149,8 +135,6 @@ Product ID.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -170,8 +154,6 @@ Product name.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [productName](arkts-basicservices-usbmanager-usbdevice-i.md#productname)
@@ -189,8 +171,6 @@ Device protocol code.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -210,8 +190,6 @@ Sequence number.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [serial](arkts-basicservices-usbmanager-usbdevice-i.md#serial)
@@ -229,8 +207,6 @@ Device subclass.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -250,8 +226,6 @@ Vendor ID.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [vendorId](arkts-basicservices-usbmanager-usbdevice-i.md#vendorid)
@@ -269,8 +243,6 @@ Version.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getNfcVTag
@@ -15,8 +15,6 @@ function getNfcVTag(tagInfo: TagInfo): NfcVTag
 获取NFC V类型Tag对象，通过该对象可访问NfcV技术类型的Tag。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

@@ -4,8 +4,6 @@ Declares interval type.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ BY_OPTIMIZED = 0
 Indicates the interval type that will determine the optimal interval based on the start and end time.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -36,8 +32,6 @@ Indicates the daily interval.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ BY_WEEKLY = 2
 Indicates the weekly interval.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -68,8 +60,6 @@ Indicates the monthly interval.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ BY_ANNUALLY = 4
 Indicates the annually interval.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 

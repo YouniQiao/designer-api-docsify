@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,8 +26,6 @@ Creates an arrow modifier to customize the drop-down arrow icon style of the **S
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -40,7 +36,7 @@ Creates an arrow modifier to customize the drop-down arrow icon style of the **S
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | Optional & lt;SymbolGlyphModifier & gt; | Yes |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;SymbolGlyphModifier&gt; | Yes |
 
 ## arrowPosition
 
@@ -51,8 +47,6 @@ arrowPosition(value: ArrowPosition)
 Sets the alignment between the text and arrow of an option.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +70,6 @@ Sets the alignment between the text and arrow of an option. Compared with [arrow
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -88,7 +80,7 @@ Sets the alignment between the text and arrow of an option. Compared with [arrow
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| position | Optional&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | Yes |
+| position | [Optional](arkts-arkui-optional-t.md)&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | Yes |
 
 ## avoidance
 
@@ -99,8 +91,6 @@ avoidance(mode: AvoidanceMode)
 Sets the avoidance mode for the drop-down menu.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,8 +114,6 @@ Sets the size of the **Select** component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -136,7 +124,7 @@ Sets the size of the **Select** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [value](#value) | [ControlSize](#controlsize) | Yes |
+| [value](#value) | [ControlSize](arkts-arkui-controlsize-e.md) | Yes |
 
 ## controlSize
 
@@ -148,8 +136,6 @@ Sets the size of the **Select** component. Compared with [controlSize](#controls
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -160,7 +146,7 @@ Sets the size of the **Select** component. Compared with [controlSize](#controls
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| size | Optional & lt;ControlSize & gt; | Yes |
+| size | [Optional](arkts-arkui-optional-t.md)&lt;[ControlSize](arkts-arkui-controlsize-e.md)&gt; | Yes |
 
 ## divider
 
@@ -172,8 +158,6 @@ Sets the divider style. If this attribute is not set, the divider is displayed b
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -184,7 +168,7 @@ Sets the divider style. If this attribute is not set, the divider is displayed b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | Optional & lt;DividerOptions & gt; \ | null | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md)&gt; \| null | Yes |
 
 ## dividerStyle
 
@@ -196,8 +180,6 @@ Sets the divider style. If this attribute is not set, the divider is displayed b
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -208,7 +190,7 @@ Sets the divider style. If this attribute is not set, the divider is displayed b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;DividerStyleOptions & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md)&gt; | Yes |
 
 ## font
 
@@ -219,8 +201,6 @@ font(value: Font)
 Sets the text style of the drop-down button. When **size** is set to **0**, the text is not displayed. When **size** is set to a negative value, the text is displayed at its default size.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -242,8 +222,6 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -254,7 +232,7 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| selectFont | Optional & lt;Font & gt; | Yes |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | Yes |
 
 ## fontColor
 
@@ -265,8 +243,6 @@ fontColor(value: ResourceColor)
 Sets the font color of the drop-down button.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -288,8 +264,6 @@ Sets the font color of the drop-down button. Compared with [fontColor](#fontcolo
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -300,7 +274,7 @@ Sets the font color of the drop-down button. Compared with [fontColor](#fontcolo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | Yes |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## keyboardAvoidMode
 
@@ -312,8 +286,6 @@ Sets whether the drop-down menu avoids the soft keyboard. If this API is not use
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -324,7 +296,7 @@ Sets whether the drop-down menu avoids the soft keyboard. If this API is not use
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | Optional & lt;MenuKeyboardAvoidMode & gt; | Yes |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[MenuKeyboardAvoidMode](arkts-arkui-menukeyboardavoidmode-e.md)&gt; | Yes |
 
 ## menuAlign
 
@@ -335,8 +307,6 @@ menuAlign(alignType: MenuAlignType, offset?: Offset)
 Sets the alignment between the drop-down button and the drop-down menu.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -361,8 +331,6 @@ Sets the alignment between the drop-down button and the drop-down menu. Compared
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -373,7 +341,7 @@ Sets the alignment between the drop-down button and the drop-down menu. Compared
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | Optional&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | Yes |
+| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | Yes |
 | offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No |
 
 ## menuBackgroundBlurStyle
@@ -388,8 +356,6 @@ Sets the background blur style of the drop-down menu.
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,8 +379,6 @@ Sets the background blur style of the drop-down menu. Compared with [menuBackgro
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -425,7 +389,7 @@ Sets the background blur style of the drop-down menu. Compared with [menuBackgro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;BlurStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes |
 
 ## menuBackgroundBlurStyleOptions
 
@@ -437,8 +401,6 @@ Defines the select menu's background blur style with options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -449,7 +411,7 @@ Defines the select menu's background blur style with options
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| blurStyle | Optional & lt;BackgroundBlurStyleOptions & gt; | Yes |
+| [blurStyle](arkts-arkui-sheetoptions-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)&gt; | Yes |
 
 ## menuBackgroundColor
 
@@ -463,8 +425,6 @@ Sets the background color of the drop-down menu.
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -488,8 +448,6 @@ Sets the background color of the drop-down menu. Compared with [menuBackgroundCo
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -500,7 +458,7 @@ Sets the background color of the drop-down menu. Compared with [menuBackgroundCo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | Yes |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## menuBackgroundEffect
 
@@ -512,8 +470,6 @@ Defines the select menu's background effect with options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -524,7 +480,7 @@ Defines the select menu's background effect with options
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| effect | Optional & lt;BackgroundEffectOptions & gt; | Yes |
+| effect | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)&gt; | Yes |
 
 ## menuItemContentModifier
 
@@ -539,8 +495,6 @@ Creates a content modifier for the drop-down menu. After **menuItemContentModifi
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -551,7 +505,7 @@ Creates a content modifier for the drop-down menu. After **menuItemContentModifi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | Yes |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | Yes |
 
 ## menuItemContentModifier
 
@@ -566,8 +520,6 @@ Creates a content modifier for the drop-down menu. Compared with [menuItemConten
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -578,7 +530,7 @@ Creates a content modifier for the drop-down menu. Compared with [menuItemConten
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | Yes |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | Yes |
 
 ## menuOutline
 
@@ -590,8 +542,6 @@ Sets the outline style for the drop-down menu.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -602,7 +552,7 @@ Sets the outline style for the drop-down menu.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Yes |
+| [outline](arkts-arkui-commonmethod-c.md) | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Yes |
 
 ## menuSystemMaterial
 
@@ -614,8 +564,6 @@ Set system-styled materials for select's menu. Different materials have differen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -626,7 +574,7 @@ Set system-styled materials for select's menu. Different materials have differen
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| material | Optional & lt;SystemUiMaterial & gt; | Yes |
+| material | [Optional](arkts-arkui-optional-t.md)&lt;[SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)&gt; | Yes |
 
 ## minKeyboardAvoidDistance
 
@@ -638,8 +586,6 @@ Sets the minimum distance for the **Select** component to avoid the soft keyboar
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -650,7 +596,7 @@ Sets the minimum distance for the **Select** component to avoid the soft keyboar
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| distance | Optional & lt;LengthMetrics & gt; | Yes |
+| distance | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes |
 
 ## onSelect
 
@@ -661,8 +607,6 @@ onSelect(callback: (index: number, value: string) => void)
 Triggered when a drop-down menu option is selected.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -684,8 +628,6 @@ Triggered when a drop-down menu option is selected. Compared with onSelect, this
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -696,7 +638,7 @@ Triggered when a drop-down menu option is selected. Compared with onSelect, this
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes |
 
 ## optionBgColor
 
@@ -707,8 +649,6 @@ optionBgColor(value: ResourceColor)
 Sets the background color of options in the drop-down menu.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -730,8 +670,6 @@ Sets the background color of options in the drop-down menu. Compared with [optio
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -742,7 +680,7 @@ Sets the background color of options in the drop-down menu. Compared with [optio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | Yes |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## optionFont
 
@@ -753,8 +691,6 @@ optionFont(value: Font)
 Sets the text font of options in the drop-down menu. When **size** is set to **0**, the text is not displayed. When **size** is set to a negative value, the text is displayed at its default size.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -776,8 +712,6 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -788,7 +722,7 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| selectFont | Optional & lt;Font & gt; | Yes |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | Yes |
 
 ## optionFontColor
 
@@ -799,8 +733,6 @@ optionFontColor(value: ResourceColor)
 Sets the font color of options in the drop-down menu.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -822,8 +754,6 @@ Sets the font color of options in the drop-down menu. Compared with [optionFontC
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -834,7 +764,7 @@ Sets the font color of options in the drop-down menu. Compared with [optionFontC
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | Yes |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## optionHeight
 
@@ -845,8 +775,6 @@ optionHeight(value: Dimension)
 Sets the maximum height for the drop-down menu. Percentage values are not supported. The default maximum height is 80% of the available screen height, and any custom maximum height setting must not exceed this limit.This attribute has no effect when set to abnormal values or zero.If the actual height of all drop-down menu options is less than the set height, the menu will automatically adjust to the actual content height.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -870,8 +798,6 @@ Sets the maximum height for the drop-down menu. Percentage values are not suppor
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -882,7 +808,7 @@ Sets the maximum height for the drop-down menu. Percentage values are not suppor
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| height | Optional & lt;Dimension & gt; | Yes |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | Yes |
 
 ## optionTextModifier
 
@@ -897,8 +823,6 @@ Creates an option text modifier to customize the text style of unselected option
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -909,7 +833,7 @@ Creates an option text modifier to customize the text style of unselected option
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
 
 ## optionWidth
 
@@ -921,8 +845,6 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -933,7 +855,7 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [value](#value) | Dimension \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md) | Yes |
+| [value](#value) | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md) | Yes |
 
 ## optionWidth
 
@@ -945,8 +867,6 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -957,7 +877,7 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| width | Optional & lt;Dimension \ | OptionWidthMode & gt; | Yes |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md)&gt; | Yes |
 
 ## selected
 
@@ -968,8 +888,6 @@ selected(value: number | Resource)
 Sets the index of the initially selected option in the drop-down menu, where the first option has an index of 0. When **selected** is set to an invalid value or is not set, the default default **-1** is used, which indicates no selection. When **selected** is set to **undefined** or **null**, the first option is selected.Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -991,8 +909,6 @@ Sets the index of the initially selected option in the drop-down menu, where the
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1003,7 +919,7 @@ Sets the index of the initially selected option in the drop-down menu, where the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| numCount | Optional & lt;number \ | Resource & gt; | Yes |
+| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes |
 
 ## selectedOptionBgColor
 
@@ -1014,8 +930,6 @@ selectedOptionBgColor(value: ResourceColor)
 Sets the background color of the selected option in the drop-down menu.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1037,8 +951,6 @@ Sets the background color of the selected option in the drop-down menu. Compared
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1049,7 +961,7 @@ Sets the background color of the selected option in the drop-down menu. Compared
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | Yes |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## selectedOptionFont
 
@@ -1060,8 +972,6 @@ selectedOptionFont(value: Font)
 Sets the text font of the selected option in the drop-down menu. When **size** is set to **0**, the text is not displayed. When **size** is set to a negative value, the text is displayed at its default size.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1083,8 +993,6 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1095,7 +1003,7 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| selectFont | Optional & lt;Font & gt; | Yes |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | Yes |
 
 ## selectedOptionFontColor
 
@@ -1106,8 +1014,6 @@ selectedOptionFontColor(value: ResourceColor)
 Sets the font color of the selected option in the drop-down menu.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1129,8 +1035,6 @@ Sets the font color of the selected option in the drop-down menu. Compared with 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1141,7 +1045,7 @@ Sets the font color of the selected option in the drop-down menu. Compared with 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | Yes |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## selectedOptionTextModifier
 
@@ -1156,8 +1060,6 @@ Creates a selected-option text modifier to customize the text style of selected 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1168,7 +1070,7 @@ Creates a selected-option text modifier to customize the text style of selected 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
 
 ## showDefaultSelectedIcon
 
@@ -1179,8 +1081,6 @@ showDefaultSelectedIcon(show: boolean)
 Sets whether to display the default selection icon.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1204,8 +1104,6 @@ Sets whether the drop-down menu is displayed in the subwindow. If this API is no
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1216,7 +1114,7 @@ Sets whether the drop-down menu is displayed in the subwindow. If this API is no
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [showInSubWindow](#showinsubwindow) | Optional & lt;boolean & gt; | Yes |
+| [showInSubWindow](#showinsubwindow) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## space
 
@@ -1227,8 +1125,6 @@ space(value: Length)
 Sets the spacing between the text and arrow of a drop-down menu option. This attribute cannot be set in percentage. If the value specified is **null**, **undefined**, or less than or equal to 8, the default value is used.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1252,8 +1148,6 @@ Sets the spacing between the text and arrow of a drop-down menu option. This att
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1264,7 +1158,7 @@ Sets the spacing between the text and arrow of a drop-down menu option. This att
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| spaceLength | Optional & lt;Length & gt; | Yes |
+| spaceLength | [Optional](arkts-arkui-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | Yes |
 
 ## textModifier
 
@@ -1279,8 +1173,6 @@ Creates a text modifier to customize the text style of the **Select** button. Af
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1291,7 +1183,7 @@ Creates a text modifier to customize the text style of the **Select** button. Af
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | Yes |
 
 ## value
 
@@ -1302,8 +1194,6 @@ value(value: ResourceStr)
 Sets the text content of drop-down button. After a menu option is selected, the button text will automatically update to display the selected option's text.Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1325,8 +1215,6 @@ Sets the text content of drop-down button. After a menu option is selected, the 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1337,4 +1225,4 @@ Sets the text content of drop-down button. After a menu option is selected, the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resStr | Optional & lt;ResourceStr & gt; | Yes |
+| resStr | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)&gt; | Yes |

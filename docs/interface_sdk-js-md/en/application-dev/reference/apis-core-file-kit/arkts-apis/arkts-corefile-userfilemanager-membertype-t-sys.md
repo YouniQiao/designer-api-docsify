@@ -8,8 +8,6 @@ Represents the type of a file asset member.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [MemberType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-membertype-t.md)

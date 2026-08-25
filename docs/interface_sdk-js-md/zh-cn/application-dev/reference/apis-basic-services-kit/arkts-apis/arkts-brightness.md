@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager
 
 **系统接口：** 此接口为系统接口。
@@ -16,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { brightness } from '@kit.BasicServicesKit';
+import { brightness } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总

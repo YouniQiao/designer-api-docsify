@@ -4,14 +4,12 @@ Represents basic image and video information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseItemInfo, ItemInfo, PhotoBrowserInfo, AnimatorParams, MaxSelected, ItemType, ClickType, PickerOrientation, SelectMode, PickerColorMode, ReminderMode, MaxCountType, PhotoBrowserRange, PhotoBrowserUIElement, ItemsDeletedCallback, ExceedMaxSelectedCallback, CurrentAlbumDeletedCallback, videoPlayStateChangedCallback, MovingPhotoBadgeStateChangedCallback, UpdatablePickerConfigs, SingleLineConfig, BadgeConfig, PreselectedInfo, SaveMode, BadgeType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ItemClickedNotifyCallback, ScrollStopAtEndCallback, PhotoBrowserChangeStartCallback, PinchGridSwitchedCallback, ErrorCallback, ClickResult, PickerError } from '@kit.MediaLibraryKit';
+import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseItemInfo, ItemInfo, PhotoBrowserInfo, AnimatorParams, MaxSelected, ItemType, ClickType, PickerOrientation, SelectMode, PickerColorMode, ReminderMode, MaxCountType, PhotoBrowserRange, PhotoBrowserUIElement, ItemsDeletedCallback, ExceedMaxSelectedCallback, CurrentAlbumDeletedCallback, videoPlayStateChangedCallback, MovingPhotoBadgeStateChangedCallback, UpdatablePickerConfigs, SingleLineConfig, BadgeConfig, PreselectedInfo, SaveMode, BadgeType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ItemClickedNotifyCallback, ScrollStopAtEndCallback, PhotoBrowserChangeStartCallback, PinchGridSwitchedCallback, ErrorCallback, ClickResult, PickerError } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## duration
@@ -25,8 +23,6 @@ Video duration, in milliseconds. In versions earlier than API version 23, the va
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Dynamic range type of the media file. The options are **HDR** and **SDR**.For mo
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -61,8 +55,6 @@ Height of the image or video, in px.This parameter is supported only when [ItemT
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,8 +72,6 @@ MIME type of the image or video.This parameter is supported only when [ItemType]
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -97,8 +87,6 @@ State of the moving photo badge.This parameter is supported only when [ItemType]
 **Type:** photoAccessHelper.MovingPhotoBadgeStateType
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -116,8 +104,6 @@ Image or video direction information.1: **TOP-left**: The image is not rotated.2
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -134,8 +120,6 @@ Subtype of the photo. The options are **DEFAULT**, **MOVING_PHOTO**, and **BURST
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -151,8 +135,6 @@ Size of the image or video, in bytes.This parameter is supported only when [Item
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,8 +155,6 @@ URI of the image or video.This parameter is supported only when [ItemType](arkts
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -191,8 +171,6 @@ Log mode of a video file.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -208,8 +186,6 @@ Width of the image or video, in px.This parameter is supported only when [ItemTy
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

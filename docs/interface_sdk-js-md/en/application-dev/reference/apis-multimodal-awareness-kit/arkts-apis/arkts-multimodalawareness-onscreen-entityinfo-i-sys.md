@@ -4,8 +4,6 @@ Provides entity information perceived, including content, links, images, and oth
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides entity information perceived, including content, links, images, and oth
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## entityInfo
@@ -27,8 +25,6 @@ Entity information of the awareness result, including the content, links, images
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Name of the perceived entity, which is fixed.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

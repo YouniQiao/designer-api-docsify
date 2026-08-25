@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## setGestureNavigationEnabled
@@ -15,8 +15,6 @@ function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<vo
 Enables or disables gesture navigation. This API uses an asynchronous callback to return the result. For security purposes, the system does not interfere with the disabling and enabling of gesture navigation. If an application exits abnormally after it disables gesture navigation and wants to restore gesture navigation, it must implement automatic launch and call this API again to enable gesture navigation.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -38,40 +36,6 @@ Enables or disables gesture navigation. This API uses an asynchronous callback t
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  window.setGestureNavigationEnabled(true, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting gesture navigation enabled.');
-  });
-} catch (exception) {
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setGestureNavigationEnabled(true);
-  promise.then(() => {
-    console.info('Succeeded in setting gesture navigation enabled.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 
 ## setGestureNavigationEnabled
 
@@ -82,8 +46,6 @@ function setGestureNavigationEnabled(enable: boolean): Promise<void>
 Enables or disables gesture navigation. This API uses a promise to return the result. For security purposes, the system does not interfere with the disabling and enabling of gesture navigation. If an application exits abnormally after it disables gesture navigation and wants to restore gesture navigation, it must implement automatic launch and call this API again to enable gesture navigation.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -109,7 +71,3 @@ Enables or disables gesture navigation. This API uses a promise to return the re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-
-**Examples**
-
-See [setGestureNavigationEnabled](#setgesturenavigationenabled)

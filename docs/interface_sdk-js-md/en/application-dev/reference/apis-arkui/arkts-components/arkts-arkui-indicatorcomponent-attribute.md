@@ -6,8 +6,6 @@ Defines the IndicatorComponent attribute functions.@extends CommonMethod&lt;Indi
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ count(totalCount: number)
 Sets the total number of indicator.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,8 +47,6 @@ Called when the index value of the displayed subcomponent is set in the containe
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -76,8 +70,6 @@ loop(isLoop: boolean)
 Called when setting whether to turn on cyclic sliding.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -103,8 +95,6 @@ Called when the index value changes.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -129,8 +119,6 @@ Sets the indicator style.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -143,7 +131,7 @@ Sets the indicator style.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| indicatorStyle | DotIndicator \| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Yes |
+| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Yes |
 
 ## vertical
 
@@ -154,8 +142,6 @@ vertical(isVertical: boolean)
 Called when setting whether to slide vertically.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

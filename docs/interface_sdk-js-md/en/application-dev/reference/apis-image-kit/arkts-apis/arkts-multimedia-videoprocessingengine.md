@@ -4,14 +4,12 @@ This module provides the capability of content processing for images, including 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
+import { videoProcessingEngine } from 'kits/@kit.ImageKit';
 ```
 
 ## Summary

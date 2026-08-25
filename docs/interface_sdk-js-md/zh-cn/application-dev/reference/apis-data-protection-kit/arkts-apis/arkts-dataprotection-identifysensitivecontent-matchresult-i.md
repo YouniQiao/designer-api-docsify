@@ -4,14 +4,12 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
 
 ```TypeScript
-import { identifySensitiveContent } from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## matchContent
@@ -25,8 +23,6 @@ readonly matchContent: string
 **类型：** string
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -42,8 +38,6 @@ readonly matchNumber: number
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## sensitiveLabel
@@ -57,7 +51,5 @@ readonly sensitiveLabel: string
 **类型：** string
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

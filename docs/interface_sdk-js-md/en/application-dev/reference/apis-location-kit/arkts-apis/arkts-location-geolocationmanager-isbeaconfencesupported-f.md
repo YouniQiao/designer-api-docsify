@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isBeaconFenceSupported
@@ -16,8 +16,6 @@ Check whether the BeaconFence service is supported.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -27,15 +25,3 @@ Check whether the BeaconFence service is supported.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  let isBeaconFenceSupported = geoLocationManager.isBeaconFenceSupported();
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

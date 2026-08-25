@@ -1,10 +1,8 @@
 # GroupOwnerBand
 
-P2P群组带宽。@enum { int }
+P2P群组带宽。@enum { number }
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -18,8 +16,6 @@ GO_BAND_AUTO = 0
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## GO_BAND_2GHZ
@@ -32,8 +28,6 @@ GO_BAND_2GHZ = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## GO_BAND_5GHZ
@@ -45,7 +39,5 @@ GO_BAND_5GHZ = 2
 5GHz频段。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P

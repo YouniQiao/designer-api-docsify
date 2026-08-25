@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## formatPhoneNumber
@@ -15,8 +15,6 @@ function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, ca
 格式化电话号码，可设置格式化参数。使用callback异步回调。电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -38,48 +36,6 @@ function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, ca
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumber("138xxxxxxxx", (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`formatPhoneNumber fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.NumberFormatOptions = {
-    countryCode: "CN"
-};
-call.formatPhoneNumber("138xxxxxxxx", options, (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`formatPhoneNumber fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.NumberFormatOptions = {
-    countryCode: "CN"
-};
-call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
-    console.info(`formatPhoneNumber success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`formatPhoneNumber fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
-
 
 ## formatPhoneNumber
 
@@ -90,8 +46,6 @@ function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): 
 格式化电话号码，可设置格式化参数。使用Promise异步回调。电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -118,10 +72,6 @@ function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): 
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-参见 [formatPhoneNumber](#formatphonenumber)
-
 
 ## formatPhoneNumber
 
@@ -132,8 +82,6 @@ function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>)
 格式化电话号码。使用callback异步回调。电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -153,7 +101,3 @@ function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>)
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [formatPhoneNumber](#formatphonenumber)

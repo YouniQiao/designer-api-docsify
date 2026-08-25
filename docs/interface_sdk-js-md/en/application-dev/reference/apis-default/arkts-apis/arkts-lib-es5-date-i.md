@@ -1,7 +1,5 @@
 # Date
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -15,8 +13,6 @@ getDate(): number
 
 Gets the day-of-the-month, using local time.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -28,8 +24,6 @@ getDay(): number
 ```
 
 Gets the day of the week, using local time.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -43,8 +37,6 @@ getFullYear(): number
 
 Gets the year, using local time.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -56,8 +48,6 @@ getHours(): number
 ```
 
 Gets the hours in a date, using local time.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -71,8 +61,6 @@ getMilliseconds(): number
 
 Gets the milliseconds of a Date, using local time.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -84,8 +72,6 @@ getMinutes(): number
 ```
 
 Gets the minutes of a Date object, using local time.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -99,8 +85,6 @@ getMonth(): number
 
 Gets the month, using local time.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -112,8 +96,6 @@ getSeconds(): number
 ```
 
 Gets the seconds of a Date object, using local time.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -127,8 +109,6 @@ getTime(): number
 
 Gets the time value in milliseconds.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -140,8 +120,6 @@ getTimezoneOffset(): number
 ```
 
 Gets the difference in minutes between the time on the local computer and Universal Coordinated Time (UTC).
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -155,8 +133,6 @@ getUTCDate(): number
 
 Gets the day-of-the-month, using Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -168,8 +144,6 @@ getUTCDay(): number
 ```
 
 Gets the day of the week using Universal Coordinated Time (UTC).
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -183,8 +157,6 @@ getUTCFullYear(): number
 
 Gets the year using Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -196,8 +168,6 @@ getUTCHours(): number
 ```
 
 Gets the hours value in a Date object using Universal Coordinated Time (UTC).
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -211,8 +181,6 @@ getUTCMilliseconds(): number
 
 Gets the milliseconds of a Date object using Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -224,8 +192,6 @@ getUTCMinutes(): number
 ```
 
 Gets the minutes of a Date object using Universal Coordinated Time (UTC).
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -239,8 +205,6 @@ getUTCMonth(): number
 
 Gets the month of a Date object using Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -253,8 +217,6 @@ getUTCSeconds(): number
 
 Gets the seconds of a Date object using Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -266,8 +228,6 @@ setDate(date: number): number
 ```
 
 Sets the numeric day-of-the-month value of the Date object using local time.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -286,8 +246,6 @@ setFullYear(year: number, month?: number, date?: number): number
 ```
 
 Sets the year of the Date object using local time.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -308,8 +266,6 @@ setHours(hours: number, min?: number, sec?: number, ms?: number): number
 ```
 
 Sets the hour value in the Date object using local time.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -332,8 +288,6 @@ setMilliseconds(ms: number): number
 
 Sets the milliseconds value in the Date object using local time.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -351,8 +305,6 @@ setMinutes(min: number, sec?: number, ms?: number): number
 ```
 
 Sets the minutes value in the Date object using local time.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -374,8 +326,6 @@ setMonth(month: number, date?: number): number
 
 Sets the month value in the Date object using local time.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -394,8 +344,6 @@ setSeconds(sec: number, ms?: number): number
 ```
 
 Sets the seconds value in the Date object using local time.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -416,8 +364,6 @@ setTime(time: number): number
 
 Sets the date and time value in the Date object.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -436,8 +382,6 @@ setUTCDate(date: number): number
 
 Sets the numeric day of the month in the Date object using Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -455,8 +399,6 @@ setUTCFullYear(year: number, month?: number, date?: number): number
 ```
 
 Sets the year value in the Date object using Universal Coordinated Time (UTC).
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -477,8 +419,6 @@ setUTCHours(hours: number, min?: number, sec?: number, ms?: number): number
 ```
 
 Sets the hours value in the Date object using Universal Coordinated Time (UTC).
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -501,8 +441,6 @@ setUTCMilliseconds(ms: number): number
 
 Sets the milliseconds value in the Date object using Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -520,8 +458,6 @@ setUTCMinutes(min: number, sec?: number, ms?: number): number
 ```
 
 Sets the minutes value in the Date object using Universal Coordinated Time (UTC).
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -543,8 +479,6 @@ setUTCMonth(month: number, date?: number): number
 
 Sets the month value in the Date object using Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -563,8 +497,6 @@ setUTCSeconds(sec: number, ms?: number): number
 ```
 
 Sets the seconds value in the Date object using Universal Coordinated Time (UTC).
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -585,8 +517,6 @@ toDateString(): string
 
 Returns a date as a string value.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -599,8 +529,6 @@ toISOString(): string
 
 Returns a date as a string value in ISO format.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -612,8 +540,6 @@ toJSON(key?: any): string
 ```
 
 Used by the JSON.stringify method to enable the transformation of an object's data for JavaScript Object Notation (JSON) serialization.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -632,8 +558,6 @@ toLocaleDateString(locales?: string | string[], options?: Intl.DateTimeFormatOpt
 ```
 
 Converts a date to a string by using the current or specified locale.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -654,8 +578,6 @@ toLocaleString(locales?: string | string[], options?: Intl.DateTimeFormatOptions
 
 Converts a date and time to a string by using the current or specified locale.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -674,8 +596,6 @@ toLocaleTimeString(locales?: string | string[], options?: Intl.DateTimeFormatOpt
 ```
 
 Converts a time to a string by using the current or specified locale.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -696,8 +616,6 @@ toString(): string
 
 Returns a string representation of a date. The format of the string depends on the locale.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -709,8 +627,6 @@ toTimeString(): string
 ```
 
 Returns a time as a string value.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -724,8 +640,6 @@ toUTCString(): string
 
 Returns a date converted to a string using Universal Coordinated Time (UTC).
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -737,8 +651,6 @@ valueOf(): number
 ```
 
 Returns the stored time value in milliseconds since midnight, January 1, 1970 UTC.
-
-**ArkTS mode:** 
 
 **Return value:**
 

@@ -4,8 +4,6 @@ Provides the widget information.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -27,8 +25,6 @@ Ability name of the widget.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -44,8 +40,6 @@ Bundle name of the widget.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,8 +57,6 @@ Dimensions of the widget. The 2 x 2, 4 x 4, 4 x 2, and more options are availabl
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -80,8 +72,6 @@ Whether the widget is exempt from app lock. **true**: The widget is exempt from 
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,8 +90,6 @@ Widget ID. Set this parameter to **0** for a new widget.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -117,8 +105,6 @@ Module name of the widget.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -136,8 +122,6 @@ Widget name.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -149,14 +133,15 @@ renderingMode?: FormRenderingMode
 ```
 
 Widget rendering mode. Default value: **FULL_COLOR**. The options are as follows:  
-- **FULL_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that the widget is displayed in the effect as you set it. - **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In this mode you need to set the widget style based on the best practices.  
+- **FULL_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that  
+the widget is displayed in the effect as you set it.  
+- **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In  
+this mode you need to set the widget style based on the best practices.  
 **NOTE：**If the system does not support unified rendering, the widget framework does not set the widget background to transparent in single color mode.
 
 **Type:** [FormRenderingMode](arkts-arkui-formrenderingmode-e-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -174,8 +159,6 @@ The shape of the form.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -192,8 +175,6 @@ Whether the widget is a temporary widget. **true**: The widget is a temporary wi
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -209,8 +190,6 @@ The want of the form.
 **Type:** import('../api/@ohos.app.ability.Want').default
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

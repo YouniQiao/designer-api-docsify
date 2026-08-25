@@ -3,15 +3,13 @@
 Sets the distance between the child component and the upper and lower dividers.
 
 > **NOTE：**&gt;
-> Similar to RowSplit, the dividers of **ColumnSplit** adjust the height of adjacent child
+> Similar to [RowSplit](arkts-arkui-rowsplit-attribute.md#rowsplit), the dividers of **ColumnSplit** adjust the height of adjacent child
 > components. However, this adjustment is only applied to the extent that the resulting height stays within the
 > height limits of the child components.&gt;
 > Universal attributes such as clip and margin are supported.
 > If **clip** is not set, the default value **true** is used.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,15 +24,13 @@ Sets the distance between the child component and the upper and lower dividers.
 endMargin?: Dimension
 ```
 
-Distance between the child component and the lower divider.<br>Default value: **0vp**<br>Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
+Distance between the child component and the lower divider.Default value: **0vp**Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,15 +44,13 @@ Distance between the child component and the lower divider.<br>Default value: **
 startMargin?: Dimension
 ```
 
-Distance between the child component and the upper divider.<br>Default value: **0vp**<br>Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
+Distance between the child component and the upper divider.Default value: **0vp**Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

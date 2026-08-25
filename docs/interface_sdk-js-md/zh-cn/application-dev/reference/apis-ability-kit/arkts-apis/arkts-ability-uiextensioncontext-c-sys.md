@@ -6,20 +6,12 @@ UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## connectServiceExtensionAbilityWithRootHostToken
 
-ArkTS-Dyn:
 ```TypeScript
 connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOptions): number
-```
-
-ArkTS-Sta:
-```TypeScript
-connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOptions): long
 ```
 
 将当前UIExtensionAbility连接到一个 [ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect)，通过返回的远 程代理对象与ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。与此同时，该方法会将UIExtensionAbility的原始宿主Ability的Token传 递给被连接的ServiceExtensionAbility，ServiceExtensionAbility可以在 [onCreate()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#oncreate)或 [onConnect()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect)方法中，通过Want参数的 [UI_EXTENSION_ROOT_TOKEN](arkts-ability-wantconstant-params-e.md)获取该Token。
@@ -28,8 +20,6 @@ connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOpti
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,7 +38,7 @@ connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOpti
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **错误码：**
 
@@ -83,8 +73,6 @@ setHostPageOverlayForbidden(isForbidden: boolean) : void
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -111,14 +99,16 @@ startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<Abili
 ```
 
 使用设置的caller信息启动一个Ability，caller信息由want携带，在系统服务层识别，Ability可以在onCreate生命周期的want参数中获取到caller信息。使用该接口启动一个Ability时，want的 caller信息不会被当前自身的应用信息覆盖，系统服务层可获取到初始caller的信息。使用Promise异步回调。  
-- 正常情况下可通过调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止并且返回结果给调用方。 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止时，只将正常结果返回给最后一个调用方，其它调用方返回异常信息，异常信息中resultCode为-1。
+- 正常情况下可通过调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止并且返回结果给调用方。  
+- 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
+- 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止时，只将正常结果返回给最后一个调用方，其它调用方返回异常信息，异常信息中resultCode为-1。
 
 > **说明：**&gt;
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,8 +160,6 @@ startServiceExtensionAbility(want: Want): Promise<void>
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -212,14 +200,8 @@ startServiceExtensionAbility(want: Want): Promise<void>
 
 ## startServiceExtensionAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
 ```
 
 启动一个指定系统账号下的ServiceExtensionAbility。使用Promise异步回调。
@@ -229,8 +211,6 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<voi
 > 当accountId为当前用户时，无需进行权限校验。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -245,7 +225,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| accountId | number | 是 |
 
 **返回值：**
 
@@ -285,8 +265,6 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -335,14 +313,8 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 
 ## startUIAbilitiesInSplitWindowMode
 
-ArkTS-Dyn:
 ```TypeScript
 startUIAbilitiesInSplitWindowMode(primaryWindowId: number, secondaryWant: Want): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-startUIAbilitiesInSplitWindowMode(primaryWindowId: int, secondaryWant: Want): Promise<void>
 ```
 
 当第一个UIAbility实例被创建后，启动第二个UIAbility，并以分屏模式进行显示。使用Promise异步回调。 该接口仅在Phone设备中可正常调用，在其他设备中返回801错误码。
@@ -354,8 +326,6 @@ startUIAbilitiesInSplitWindowMode(primaryWindowId: int, secondaryWant: Want): Pr
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
@@ -369,7 +339,7 @@ startUIAbilitiesInSplitWindowMode(primaryWindowId: int, secondaryWant: Want): Pr
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| primaryWindowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| primaryWindowId | number | 是 |
 | secondaryWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 
 **返回值：**

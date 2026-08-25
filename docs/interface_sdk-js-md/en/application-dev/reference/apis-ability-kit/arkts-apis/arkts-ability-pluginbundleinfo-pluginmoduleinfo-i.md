@@ -4,8 +4,6 @@ Defines the module information of a plugin.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## description
@@ -20,23 +18,19 @@ Description of the module.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## descriptionId
 
 ```TypeScript
-readonly descriptionId: long
+readonly descriptionId: number
 ```
 
 Resource ID of the module description.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -51,7 +45,5 @@ Module name of the plugin.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

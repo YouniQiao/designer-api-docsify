@@ -4,14 +4,12 @@ This module provides the application's management capabilities for shortcuts, in
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

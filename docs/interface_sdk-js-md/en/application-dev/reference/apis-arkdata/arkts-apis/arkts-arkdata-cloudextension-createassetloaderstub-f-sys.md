@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'kits/@kit.ArkData';
 ```
 
 ## createAssetLoaderStub
@@ -15,8 +15,6 @@ function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>
 Creates a RemoteObject instance based on an AssetLoader instance. The system uses this object to call the APIs of the AssetLoader instance. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -33,22 +31,3 @@ Creates a RemoteObject instance based on an AssetLoader instance. The system use
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;rpc.RemoteObject & gt; |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-
-class MyAssetLoader implements cloudExtension.AssetLoader {
-  // ...
-}
-
-class MyCloudService implements cloudExtension.CloudService {
-  constructor() {}
-  // ...   
-  async connectAssetLoader(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
-    console.info(`connect asset loader, bundle: ${bundleName}`);
-    return cloudExtension.createAssetLoaderStub(new MyAssetLoader());
-  }
-}
-```

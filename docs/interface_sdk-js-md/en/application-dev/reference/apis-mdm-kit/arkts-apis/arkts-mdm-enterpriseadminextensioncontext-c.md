@@ -11,8 +11,6 @@
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## startAbilityByAdmin
@@ -31,8 +29,6 @@ Directly starts another component within the [EnterpriseAdminExtensionAbility](a
 > - If the **UIAbility** to start has permission protection, you need to apply for the corresponding permission.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ENTERPRISE_START_ABILITIES
 

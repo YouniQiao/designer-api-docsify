@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## execCmd
@@ -15,8 +15,6 @@ function execCmd(cmd: string, execCmdOptions?: ExecCmdOptions): Promise<CliSessi
 执行Shell命令，返回会话信息。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.EXEC_CLI_TOOL
 

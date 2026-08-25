@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## querySyncResult
@@ -15,8 +15,6 @@ function querySyncResult(query: AssetMap): Promise<SyncResult>
 Queries the result of the sync operation. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -44,14 +42,3 @@ Queries the result of the sync operation. This API uses a promise to return the 
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
 | [24000014](../errorcode-asset.md#24000014-file-operation-failed) |
 | [24000018](../errorcode-asset.md#24000018-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-
-let query: asset.AssetMap = new Map();
-asset.querySyncResult(query).then((res: asset.SyncResult) => {
-  console.info(`Succeeded in querying sync result: ${JSON.stringify(res)}`);
-});
-```

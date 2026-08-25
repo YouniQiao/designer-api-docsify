@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getHideLauncherIcon
@@ -15,8 +15,6 @@ function getHideLauncherIcon(admin: Want | null): Array<string>
 Queries the list of applications whose home screen icons are hidden for the current user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 

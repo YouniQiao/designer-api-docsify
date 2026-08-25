@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## update
@@ -15,8 +15,6 @@ function update(query: AssetMap, attributesToUpdate: AssetMap): Promise<void>
 Updates an asset. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -52,23 +50,3 @@ Updates an asset. This API uses a promise to return the result.
 | [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
 | [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-let attrsToUpdate: asset.AssetMap = new Map();
-attrsToUpdate.set(asset.Tag.SECRET, stringToArray('demo_pwd_new'));
-asset.update(query, attrsToUpdate).then(() => {
-  console.info(`Succeeded in updating Asset.`);
-});
-```

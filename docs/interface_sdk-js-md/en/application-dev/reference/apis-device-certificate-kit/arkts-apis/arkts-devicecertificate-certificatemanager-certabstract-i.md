@@ -4,14 +4,12 @@ Represents brief information about a certificate.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## certAlias
@@ -25,8 +23,6 @@ Alias of a certificate. The value contains up to 128 bytes.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -42,8 +38,6 @@ Certificate state. The value **true** indicates that the certificate is enabled,
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## subjectName
@@ -58,8 +52,6 @@ Name of the certificate subject. The value contains up to 1024 bytes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## uri
@@ -73,7 +65,5 @@ Unique identifier of a certificate. The value contains up to 256 bytes.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## replaceSuperAdmin
@@ -15,8 +15,6 @@ function replaceSuperAdmin(oldAdmin: Want, newAdmin: Want, isKeepPolicy: boolean
 Replaces a specified application with a super device administrator application.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -43,27 +41,3 @@ Replaces a specified application with a super device administrator application.
 | [9200011](../errorcode-enterpriseDeviceManager.md#9200011-failed-to-replace-the-device-administrator-application) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let oldAdmin: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let newAdmin: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication_new',
-  abilityName: 'NewEnterpriseAdminAbility'
-};
-try {
-  adminManager.replaceSuperAdmin(oldAdmin, newAdmin, false);
-  console.info(`Succeeded in replacing super admin.`);
-} catch(err) {
-  console.error(`Failed to replace super admin. Code: ${err.code}, message: ${err.message}`);
-}
-```

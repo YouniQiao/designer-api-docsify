@@ -4,14 +4,12 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 ## 导入模块
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## iface
@@ -26,8 +24,6 @@ iface: string
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 ## macAddress
@@ -41,7 +37,5 @@ macAddress: string
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet

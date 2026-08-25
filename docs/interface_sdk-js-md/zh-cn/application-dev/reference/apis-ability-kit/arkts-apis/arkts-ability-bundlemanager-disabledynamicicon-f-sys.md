@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## disableDynamicIcon
@@ -15,8 +15,6 @@ function disableDynamicIcon(bundleName: string): Promise<void>
 根据给定的bundleName禁用动态图标。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON
 
@@ -46,73 +44,6 @@ function disableDynamicIcon(bundleName: string): Promise<void>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700305](../errorcode-bundle.md#17700305-动态图标去使能失败) |
 
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName: string = 'com.ohos.demo';
-
-try {
-  bundleManager.disableDynamicIcon(bundleName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'disableDynamicIcon successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName: string = 'com.ohos.demo';
-let option: bundleManager.BundleOptions = { 'userId': 100, 'appIndex': 0 };
-
-try {
-  bundleManager.disableDynamicIcon(bundleName, option).then(() => {
-    hilog.info(0x0000, 'testTag', 'disableDynamicIcon successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-// 开发者需根据实际工程更新bundleName、userId和appIndex。
-let bundleName: string = 'com.ohos.demo';
-let option: bundleManager.BundleOptions = {'userId':100, 'appIndex':0};
-
-try {
-  bundleManager.disableDynamicIcon(bundleName, option).then(() => {
-    hilog.info(0x0000, 'testTag', 'disableDynamicIcon successfully');
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', (err as BusinessError).message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', message);
-}
-```
-
 
 ## disableDynamicIcon
 
@@ -123,8 +54,6 @@ function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise
 根据给定的bundleName和option禁用动态图标。使用Promise异步回调。禁用当前用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON。禁用其他用户下的动态图标信息时需要申请权限ohos.permission.ACCESS_DYNAMIC_ICON 和 ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -155,7 +84,3 @@ function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
 | [17700305](../errorcode-bundle.md#17700305-动态图标去使能失败) |
-
-**示例**
-
-参见 [disableDynamicIcon](#disabledynamicicon)

@@ -4,8 +4,6 @@ Enumerates the type of information returned by an asset query operation.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## ALL
@@ -18,8 +16,6 @@ The query result contains the asset in plaintext and its attributes.
 **Note：**: Use this option when you need to query the plaintext of a single asset.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -35,8 +31,6 @@ The query result contains only the asset attributes.
 **Note：**: Use this option when you need to query attributes of multiple assets.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

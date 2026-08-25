@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isNewCallAllowed
@@ -15,8 +15,6 @@ function isNewCallAllowed(callback: AsyncCallback<boolean>): void
 Checks whether a new call is allowed. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -39,30 +37,6 @@ Checks whether a new call is allowed. This API uses an asynchronous callback to 
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isNewCallAllowed((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isNewCallAllowed fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`isNewCallAllowed success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isNewCallAllowed().then((data: boolean) => {
-    console.info(`isNewCallAllowed success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNewCallAllowed fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## isNewCallAllowed
 
@@ -73,8 +47,6 @@ function isNewCallAllowed(): Promise<boolean>
 Checks whether a new call is allowed. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -94,7 +66,3 @@ Checks whether a new call is allowed. This API uses a promise to return the resu
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [isNewCallAllowed](#isnewcallallowed)

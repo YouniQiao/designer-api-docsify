@@ -4,30 +4,26 @@ Defines image source initialization options.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## sourceDensity
 
 ```TypeScript
-sourceDensity: int
+sourceDensity: number
 ```
 
 Pixel density of the image resource, in ppi.If **desiredSize** is not set in [DecodingOptions](arkts-image-image-decodingoptions-i.md) and **SourceOptions.sourceDensity** and **DecodingOptions.fitDensity** are not 0, the PixelMap output after decoding will be scaled.The formula for calculating the width after scaling is as follows (the same applies to the height): (width * fitDensity + (sourceDensity &gt;  
 > 1)) / sourceDensity.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,8 +43,6 @@ Image pixel format. The default value is **UNKNOWN**.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -66,8 +60,6 @@ Image pixel size. The default value is null.
 **Type:** Size
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on("notify")
@@ -15,8 +15,6 @@ function on(type: "notify", callback: Callback<number>): void
 注册NFC场强状态事件。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **需要权限：** ohos.permission.NFC_TAG
 

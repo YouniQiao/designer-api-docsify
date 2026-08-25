@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ActionExtensionAbility } from '@kit.AbilityKit';
+import { ActionExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

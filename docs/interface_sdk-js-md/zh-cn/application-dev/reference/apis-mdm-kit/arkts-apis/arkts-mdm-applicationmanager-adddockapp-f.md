@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDockApp
@@ -24,8 +24,6 @@ function addDockApp(admin: Want, bundleName: string, abilityName: string, index?
 > 7.通过本接口添加应用到快捷栏后，用户可以手动移除或调整应用的位置。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -57,26 +55,3 @@ function addDockApp(admin: Want, bundleName: string, abilityName: string, index?
 | [9201019](../errorcode-enterpriseDeviceManager.md#9201019-指定位置不支持操作) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 需根据实际情况进行替换
-  let bundleName: string = 'com.example.exampleapplication';
-  let abilityName: string = 'EntryAbility';
-  applicationManager.addDockApp(wantTemp, bundleName, abilityName, 3);
-  console.info('Succeeded in adding dock app.');
-} catch (err) {
-  console.error(`Failed to add dock app. Code: ${err.code}, message: ${err.message}`);
-}
-```

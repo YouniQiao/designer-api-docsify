@@ -4,14 +4,12 @@ The ConfigurationConstant module provides preset enumerated values related to [C
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## Modules to Import
 
 ```TypeScript
-import { ConfigurationConstant } from '@kit.AbilityKit';
+import { ConfigurationConstant } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

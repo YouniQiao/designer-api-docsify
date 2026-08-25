@@ -4,8 +4,6 @@ Serial port management.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -13,7 +11,7 @@ Serial port management.
 ## Modules to Import
 
 ```TypeScript
-import { serial } from '@kit.BasicServicesKit';
+import { serial } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

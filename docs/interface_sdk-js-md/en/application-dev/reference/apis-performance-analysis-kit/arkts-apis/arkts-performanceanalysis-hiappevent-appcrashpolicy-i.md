@@ -4,14 +4,12 @@ Defines the application crash event configuration policy.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## collectMinidump
@@ -20,13 +18,11 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 collectMinidump?: boolean
 ```
 
-Policy for the APP_CRASH event the value true means to the minidump capture capability is enabled. the value false means to the minidump capture function is disabled. <br>Default value:false.
+Policy for the APP_CRASH event the value true means to the minidump capture capability is enabled. the value false means to the minidump capture function is disabled. Default value:false.
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -44,8 +40,6 @@ The policy for APP_CRASH event. Whether to print the memory values before and af
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -53,16 +47,14 @@ The policy for APP_CRASH event. Whether to print the memory values before and af
 ## logFileCutoffSzBytes
 
 ```TypeScript
-logFileCutoffSzBytes?: int
+logFileCutoffSzBytes?: number
 ```
 
 The policy for APP_CRASH event. Truncation size for crash logs. The value ranges from 0 to 5242880, in bytes. The default value is 0, indicating that crash logs are not truncated.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -82,8 +74,6 @@ Whether to enable the page switching log for APP_CRASH event.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -99,8 +89,6 @@ The policy for APP_CRASH event. Whether to print the mapping information of all 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

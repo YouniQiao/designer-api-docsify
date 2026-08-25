@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## subscribeSystemLiveView
@@ -15,8 +15,6 @@ function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<
 订阅系统实况窗。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -45,42 +43,3 @@ function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onResponseCallback = (id:number, option:notificationManager.ButtonOptions) => {
-    console.info(`notificationId: ${id},onResponseCallback: ${JSON.stringify(option)}`);
-}
-let subscriber: notificationManager.SystemLiveViewSubscriber  = {
-    onResponse: onResponseCallback,
-};
-notificationManager.subscribeSystemLiveView(subscriber).then(() => {
-    console.info('subscribeSystemLiveView success');
-}).catch((err: BusinessError) => {
-    console.error(`subscribeSystemLiveView failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onResponseCallback = (id: int, option: notificationManager.ButtonOptions) => {
-    console.info(`notificationId: ${id},onResponseCallback: ${JSON.stringify(option)}`);
-}
-let subscriber: notificationManager.SystemLiveViewSubscriber  = {
-    onResponse: onResponseCallback,
-};
-notificationManager.subscribeSystemLiveView(subscriber).then(() => {
-    console.info('subscribeSystemLiveView success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`subscribeSystemLiveView failed, code is ${error.code}, message is ${error.message}`);
-});
-```

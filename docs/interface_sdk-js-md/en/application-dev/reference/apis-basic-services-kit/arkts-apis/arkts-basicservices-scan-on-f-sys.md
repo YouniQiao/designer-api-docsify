@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## on('scanDeviceAdd')
@@ -15,8 +15,6 @@ function on(type: 'scanDeviceAdd', callback: Callback<ScannerDevice>): void
 Registers a callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -38,40 +36,6 @@ Registers a callback used to listen for the scanner addition event. This API use
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceFound', (device: scan.ScannerDevice) => {
-    console.info('scan device found: ' + JSON.stringify(device));
-})
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceSync', (device: scan.ScannerSyncDevice) => {
-    console.info('scan device sync: ' + JSON.stringify(device));
-})
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceAdd', (device: scan.ScannerDevice) => {
-    console.info('scan device add: ' + JSON.stringify(device));
-})
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-scan.on('scanDeviceDel', (device: scan.ScannerDevice) => {
-    console.info('scan device delete: ' + JSON.stringify(device));
-})
-```
-
 
 ## on('scanDeviceDel')
 
@@ -82,8 +46,6 @@ function on(type: 'scanDeviceDel', callback: Callback<ScannerDevice>): void
 Registers a callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -104,7 +66,3 @@ Registers a callback used to listen for the scanner deletion event. This API use
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See on

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## register
@@ -16,8 +16,6 @@ function register(callback: AsyncCallback<number>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
@@ -31,54 +29,6 @@ function register(callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-continuationManager.register((err, data) => {
-  if (err.code != 0) {
-    console.error('register failed, cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('register finished, ' + JSON.stringify(data));
-  token = data;
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-continuationManager.register(
-  {
-    deviceType: ["00E"]
-  },
-  (err, data) => {
-    if (err.code != 0) {
-      console.error('register failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('register finished, ' + JSON.stringify(data));
-    token = data;
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-continuationManager.register(
-  { deviceType: ["00E"] }).then((data) => {
-    console.info('register finished, ' + JSON.stringify(data));
-    token = data;
-  }).catch((err: BusinessError) => {
-    console.error('register failed, cause: ' + JSON.stringify(err));
-});
-```
 
 
 ## register
@@ -91,8 +41,6 @@ function register(options: ContinuationExtraParams, callback: AsyncCallback<numb
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
@@ -105,12 +53,8 @@ function register(options: ContinuationExtraParams, callback: AsyncCallback<numb
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 是 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-参见 [register](#register)
 
 
 ## register
@@ -123,8 +67,6 @@ function register(options?: ContinuationExtraParams): Promise<number>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
@@ -137,14 +79,10 @@ function register(options?: ContinuationExtraParams): Promise<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 否 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-参见 [register](#register)

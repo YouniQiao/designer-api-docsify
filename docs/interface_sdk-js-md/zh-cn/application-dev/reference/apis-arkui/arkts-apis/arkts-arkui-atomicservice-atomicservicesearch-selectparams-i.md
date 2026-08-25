@@ -4,14 +4,12 @@ AtomicServiceSearch中“选择区”的可选属性。
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from 'kits/@kit.ArkUI';
 ```
 
 ## onSelect
@@ -23,8 +21,6 @@ onSelect?: OnSelectCallback
 下拉菜单选中某一项的回调。默认值为undefined。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -38,11 +34,9 @@ arrowPosition?: ArrowPosition
 
 下拉菜单项的文本与箭头之间的对齐方式。默认值：ArrowPosition.END。
 
-**类型：** ArrowPosition
+**类型：** [ArrowPosition](../arkts-components/arkts-arkui-arrowposition-e.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -56,11 +50,9 @@ divider?: Optional<DividerOptions> | null
 
 1.设置DividerOptions，则按设置的样式显示分割线。默认值：{strokeWidth: '1px', color: '#33182431'}。 当设置了menuItemContentModifier属性时，本属性不生效。 2.设置为null时，不显示分割线。 3.strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。 4.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。startMargin和endMargin的和与optionWidth的值相等时， 不显示分割线。 startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。
 
-**类型：** Optional&lt;DividerOptions&gt; \| null
+**类型：** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md)&gt; \| null
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -78,8 +70,6 @@ font?: Font
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -92,11 +82,9 @@ fontColor?: ResourceColor
 
 下拉按钮本身的文本颜色。默认值：{fontColor: \$r('sys.color.ohos_id_color_text_primary')}。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -114,8 +102,6 @@ menuAlign?: MenuAlignParams
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -132,8 +118,6 @@ menuBackgroundBlurStyle?: BlurStyle
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -146,11 +130,9 @@ menuBackgroundColor?: ResourceColor
 
 下拉菜单的背景色。默认值：Color.Transparent。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -164,11 +146,9 @@ menuItemContentModifier?: ContentModifier<MenuItemConfiguration>
 
 在Select组件上，定制下拉菜单项内容区的方法。 在应用了该属性后，下拉菜单的内容将完全由开发者自定义，此时为选择区设置的下拉菜单分割线、背景色及字体样式等属性将不再生效。 modifier: 内容修改器，开发者需要自定义class实现ContentModifier接口。默认值为undefined。
 
-**类型：** ContentModifier&lt;MenuItemConfiguration&gt;
+**类型：** [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](../arkts-components/arkts-arkui-menuitemconfiguration-i.md)&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -182,11 +162,9 @@ optionBgColor?: ResourceColor
 
 下拉菜单项的背景色。默认值：Color.Transparent。当设置了menuItemContentModifier属性时，本属性不生效。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -204,8 +182,6 @@ optionFont?: Font
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -218,11 +194,9 @@ optionFontColor?: ResourceColor
 
 下拉菜单项的文本颜色。默认值：\$r('sys.color.ohos_id_color_text_primary')。当设置了menuItemContentModifier属性时，本属性不生效。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -236,11 +210,9 @@ optionHeight?: Dimension
 
 设置下拉菜单显示的最大高度，不支持设置百分比。单位：vp。 下拉菜单的默认最大高度是屏幕可用高度的80%，设置的菜单最大高度不能超过默认最大高度，超过时属性不生效，按默认最大高度显示。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -254,11 +226,9 @@ options?: Array<SelectOption>
 
 下拉选项内容。默认值为undefined。
 
-**类型：** Array&lt;SelectOption&gt;
+**类型：** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -272,11 +242,9 @@ optionWidth?: Dimension | OptionWidthMode
 
 设置下拉菜单项的宽度，不支持设置百分比。单位：vp。OptionWidthMode为枚举类型，决定下拉菜单是否继承下拉按钮宽度。 当设置为异常值或小于最小宽度56vp时，属性不生效，菜单项宽度设为默认值，即菜单默认宽度为2栅格。
 
-**类型：** Dimension \| OptionWidthMode
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [OptionWidthMode](arkts-arkui-optionwidthmode-e.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -294,8 +262,6 @@ selected?: number
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -308,11 +274,9 @@ selectedOptionBgColor?: ResourceColor
 
 下拉菜单选中项的背景色。 默认值：\$r('sys.color.ohos_id_color_component_activated')混合\$r('sys.color.ohos_id_alpha_highlight_bg')的透明度。 当设置了menuItemContentModifier属性时，本属性不生效。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -330,8 +294,6 @@ selectedOptionFont?: Font
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -344,11 +306,9 @@ selectedOptionFontColor?: ResourceColor
 
 下拉菜单选中项的文本颜色。默认值：\$r('sys.color.ohos_id_color_text_primary_activated')。 当设置了menuItemContentModifier属性时，本属性不生效。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -362,11 +322,9 @@ selectValue?: ResourceStr
 
 设置下拉按钮本身的文本内容。默认值为undefined。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -380,11 +338,9 @@ space?: Length
 
 下拉菜单项的文本与箭头之间的间距。默认值：8。单位：vp。
 
-**类型：** Length
+**类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

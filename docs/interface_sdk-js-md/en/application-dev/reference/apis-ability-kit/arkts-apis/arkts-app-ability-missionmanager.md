@@ -4,8 +4,6 @@ The missionManager module provides APIs to lock, unlock, and clear missions, and
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The missionManager module provides APIs to lock, unlock, and clear missions, and
 ## Modules to Import
 
 ```TypeScript
-import { missionManager } from '@kit.AbilityKit';
+import { missionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -45,15 +43,12 @@ import { missionManager } from '@kit.AbilityKit';
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) |
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) |
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#offmission) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#offmission) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#offmissionevent) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#offmissionevent) |
-| [offMission](arkts-ability-missionmanager-offmission-f-sys.md) |
-| [offMission](arkts-ability-missionmanager-offmission-f-sys.md) |
-| [on](arkts-ability-missionmanager-on-f-sys.md#onmission) |
-| [on](arkts-ability-missionmanager-on-f-sys.md#onmissionevent) |
-| [onMission](arkts-ability-missionmanager-onmission-f-sys.md) |
+| off |
+| off |
+| off |
+| off |
+| on |
+| on |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) |
 <!--DelEnd-->

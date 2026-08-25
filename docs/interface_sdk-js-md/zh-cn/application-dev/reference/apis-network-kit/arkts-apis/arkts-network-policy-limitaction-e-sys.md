@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ LIMIT_ACTION_NONE = -1
 默认值。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -36,8 +32,6 @@ LIMIT_ACTION_ACCESS_DISABLED = 0
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ LIMIT_ACTION_ALERT_ONLY = 1
 当配额策略达到限制时，将警告用户。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 

@@ -9,8 +9,6 @@ Describes the system live view notification content, which is used to display re
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## cardButtons
@@ -24,8 +22,6 @@ Live view buttons (a maximum of three buttons are supported). This parameter is 
 **Type:** Array&lt;[NotificationIconButton](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md)&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -42,8 +38,6 @@ Live view types. The default value is **LIVE_VIEW_ACTIVITY**.
 **Type:** [LiveViewTypes](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

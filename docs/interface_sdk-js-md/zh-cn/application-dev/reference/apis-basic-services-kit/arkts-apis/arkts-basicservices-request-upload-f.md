@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## upload
@@ -15,8 +15,6 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 创建并启动一个上传任务，使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -41,42 +39,6 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
-  header: { 'Accept': '*/*' },
-  method: 'POST',
-  files: [{ filename: 'test', name: 'test', uri: 'internal://cache/test.jpg', type: 'image/jpeg' }], // 建议type填写HTTP协议规范的MIME类型
-  data: [{ name: 'name123', value: '123' }],
-};
-request.upload(uploadConfig).then((data: request.UploadTask) => {
-  uploadTask = data;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
-  header: { 'Accept': '*/*' },
-  method: 'POST',
-  files: [{ filename: 'test', name: 'test', uri: 'internal://cache/test.jpg', type: 'image/jpeg' }], // 建议type填写HTTP协议规范的MIME类型
-  data: [{ name: 'name123', value: '123' }],
-};
-request.upload(uploadConfig, (err: BusinessError, data: request.UploadTask) => {
-  if (err) {
-    console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  uploadTask = data;
-});
-```
-
 
 ## upload
 
@@ -87,8 +49,6 @@ function upload(config: UploadConfig): Promise<UploadTask>
 创建并启动一个上传任务，使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -117,7 +77,3 @@ function upload(config: UploadConfig): Promise<UploadTask>
 | 错误码ID |
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [upload](#upload)

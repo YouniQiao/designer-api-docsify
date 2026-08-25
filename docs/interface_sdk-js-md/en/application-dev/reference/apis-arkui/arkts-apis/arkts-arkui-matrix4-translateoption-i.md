@@ -4,14 +4,12 @@ Describes the translation parameters.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from '@kit.ArkUI';
+import { matrix4 } from 'kits/@kit.ArkUI';
 ```
 
 ## x
@@ -25,8 +23,6 @@ Translation distance along the x-axis.Unit: px Default value: **0**Value range: 
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ Translation distance along the y-axis.Unit: px Default value: **0**Value range: 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -61,8 +55,6 @@ Translation distance along the z-axis.Unit: px Default value: **0**Value range: 
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

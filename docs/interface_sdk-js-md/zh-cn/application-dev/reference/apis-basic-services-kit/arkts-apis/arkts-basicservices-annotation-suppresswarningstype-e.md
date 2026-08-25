@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Base
 
 ## COMPATIBILITY
@@ -17,8 +15,6 @@ COMPATIBILITY = 'compatibility'
 支持消除兼容性告警。 当调用API的起始版本高于工程设置的兼容SDK版本时（build-profile.json5中指定的compatibleSdkVersion）产生的告警。 建议在已做版本判断或兼容性处理时使用，避免盲目抑制告警导致低版本设备运行异常。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ SYSCAP = 'syscap'
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -57,8 +51,6 @@ PERMISSION = 'permission'
 支持消除权限告警。当调用需要权限的API但未在配置文件中声明相应权限时产生的告警。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

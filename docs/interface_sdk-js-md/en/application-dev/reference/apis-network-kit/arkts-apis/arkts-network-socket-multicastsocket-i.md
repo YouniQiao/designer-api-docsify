@@ -6,14 +6,12 @@ Defines a **MulticastSocket** connection. Before calling MulticastSocket APIs, y
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## addMembership
@@ -30,8 +28,6 @@ Adds a member to a multicast group. This API uses an asynchronous callback to re
 > regardless of the client or server.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -54,40 +50,6 @@ Adds a member to a multicast group. This API uses an asynchronous callback to re
 | 2301088 |
 | 2301098 |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.addMembership(addr, (err: Object) => {
-  if (err) {
-    console.error('add membership fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('add membership success');
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.addMembership(addr).then(() => {
-  console.info('addMembership success');
-}).catch((err: Object) => {
-  console.error('addMembership fail');
-});
-```
-
 ## addMembership
 
 ```TypeScript
@@ -102,8 +64,6 @@ Adds a member to a multicast group. This API uses a promise to return the result
 > regardless of the client or server.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -130,10 +90,6 @@ Adds a member to a multicast group. This API uses a promise to return the result
 | 2301088 |
 | 2301098 |
 
-**Examples**
-
-See [addMembership](#addmembership)
-
 ## dropMembership
 
 ```TypeScript
@@ -148,8 +104,6 @@ Drops a member from a multicast group. This API uses an asynchronous callback to
 > [addMembership](#addmembership).
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -171,40 +125,6 @@ Drops a member from a multicast group. This API uses an asynchronous callback to
 | 2301088 |
 | 2301098 |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.dropMembership(addr, (err: Object) => {
-  if (err) {
-    console.error('drop membership fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('drop membership success');
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let addr: socket.NetAddress = {
-  address: '239.255.0.1',
-  port: 8080
-}
-multicast.dropMembership(addr).then(() => {
-  console.info('drop membership success');
-}).catch((err: Object) => {
-  console.error('drop membership fail');
-});
-```
-
 ## dropMembership
 
 ```TypeScript
@@ -219,8 +139,6 @@ Drops a member from a multicast group. This API uses a promise to return the res
 > [addMembership](#addmembership).
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -246,10 +164,6 @@ Drops a member from a multicast group. This API uses a promise to return the res
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 | 2301098 |
-
-**Examples**
-
-See [dropMembership](#dropmembership)
 
 ## getLoopbackMode
 
@@ -269,8 +183,6 @@ Obtains the loopback mode flag for multicast communication. This API uses an asy
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -285,32 +197,6 @@ Obtains the loopback mode flag for multicast communication. This API uses an asy
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
-
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getLoopbackMode((err: Object, value: Boolean) => {
-  if (err) {
-    console.error('get loopback mode fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('get loopback mode success, value: ' + JSON.stringify(value));
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getLoopbackMode().then((value: Boolean) => {
-  console.info('loopback mode: ', JSON.stringify(value));
-}).catch((err: Object) => {
-  console.error('get loopback mode failed');
-});
-```
 
 ## getLoopbackMode
 
@@ -330,8 +216,6 @@ Obtains the loopback mode flag for multicast communication. This API uses a prom
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -347,14 +231,10 @@ Obtains the loopback mode flag for multicast communication. This API uses a prom
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
-**Examples**
-
-See [getLoopbackMode](#getloopbackmode)
-
 ## getMulticastTTL
 
 ```TypeScript
-getMulticastTTL(callback: AsyncCallback<int>): void
+getMulticastTTL(callback: AsyncCallback<number>): void
 ```
 
 Obtains the TTL for multicast packets. This API uses an asynchronous callback to return the result.
@@ -369,8 +249,6 @@ Obtains the TTL for multicast packets. This API uses an asynchronous callback to
 > is called.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -387,36 +265,10 @@ Obtains the TTL for multicast packets. This API uses an asynchronous callback to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getMulticastTTL((err: Object, value: Number) => {
-  if (err) {
-    console.error('set ttl fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('set ttl success, value: ' + JSON.stringify(value));
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.getMulticastTTL().then((value: Number) => {
-  console.info('ttl: ', JSON.stringify(value));
-}).catch((err: Object) => {
-  console.error('set ttl failed');
-});
-```
-
 ## getMulticastTTL
 
 ```TypeScript
-getMulticastTTL(): Promise<int>
+getMulticastTTL(): Promise<number>
 ```
 
 Obtains the TTL for multicast packets. This API uses a promise to return the result.
@@ -431,8 +283,6 @@ Obtains the TTL for multicast packets. This API uses a promise to return the res
 > is called.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -449,14 +299,10 @@ Obtains the TTL for multicast packets. This API uses a promise to return the res
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
-**Examples**
-
-See [getMulticastTTL](#getmulticastttl)
-
 ## getSocketFd
 
 ```TypeScript
-getSocketFd(): Promise<int>
+getSocketFd(): Promise<number>
 ```
 
 Obtains the file descriptor of the MulticastSocket. This API uses a promise to return the result.
@@ -471,8 +317,6 @@ Obtains the file descriptor of the MulticastSocket. This API uses a promise to r
 > instead of directly operating the file descriptor.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -492,319 +336,6 @@ Obtains the file descriptor of the MulticastSocket. This API uses a promise to r
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let bindAddr: socket.NetAddress = {
-    address: '192.168.xx.xxx',
-    port: 8080
-}
-udp.bind(bindAddr)
-  .then(() => {
-    udp.getSocketFd()
-      .then((fd: number) => {
-        console.info(`Socket FD: ${fd}`);
-      }).catch((err: BusinessError) => {
-      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-    });
-  }).catch((err: BusinessError) => {
-  console.error('bind fail');
-});
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let bindAddr: socket.NetAddress = {
-    address: '192.168.xx.xxx',
-    port: 8080
-}
-multicast.bind(bindAddr)
-  .then(() => {
-    console.info('bind success');
-    multicast.getSocketFd().then((fd: number) => {
-      console.info(`Socket FD: ${fd}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-    });
-  }).catch((err: BusinessError) => {
-  console.error('bind fail');
-});
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  // Bind the specified network API.
-}
-tcp.bind(bindAddr)
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions)
-tcp.getSocketFd((err: BusinessError, data: number) => {
-  console.error("getSocketFd failed: " + err);
-  console.info("socketFd: " + data);
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let bindAddr: socket.NetAddress = {
-    address: '192.168.xx.xxx',
-  // Bind the specified network API.
-}
-tcp.bind(bindAddr)
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-tcp.connect(tcpconnectoptions)
-tcp.getSocketFd().then((data: number) => {
-  console.info("socketFd: " + data);
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-let listenAddr: socket.NetAddress = {
-  address:  '192.168.xx.xxx',
-  port: 8080,
-  family: 1
-}
-tcpServer.listen(listenAddr).then(() => {
-  console.info('listen success');
-  tcpServer.getSocketFd().then((fd: number) => {
-    console.info(`Socket FD: ${fd}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error('listen fail');
-});
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-let listenAddr: socket.NetAddress = {
-  address: "192.168.xx.xx",
-  port: 8080,
-  family: 1
-}
-tcpServer.listen(listenAddr, (err: BusinessError) => {
-  tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
-    client.getSocketFd().then((fd: number) => {
-      console.info(`Socket FD: ${fd}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-    });
-  })
-}).catch((err: BusinessError) => {
-  console.error('listen fail');
-});
-```
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let localAddress : socket.LocalAddress = {
-  address: sandboxPath
-}
-let connectOpt: socket.LocalConnectOptions = {
-  address: localAddress,
-  timeout: 6000
-}
-client.connect(connectOpt).then(() => {
-  console.info('connect ok')
-}).catch((err: Object) => {
-  console.error('connect fail: ' + JSON.stringify(err))
-})
-client.getSocketFd().then((data: number) => {
-  console.info("fd: " + data);
-}).catch((err: Object) => {
-  console.error("getSocketFd failed: " + JSON.stringify(err));
-})
-```
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let listenAddr : socket.LocalAddress = {
-  address: sandboxPath
-}
-
-server.listen(listenAddr).then(() => {
-  console.info("listen success");
-  server.getSocketFd().then((fd: number) => {
-    console.info(`Socket FD: ${fd}`);
-  }).catch((err: Object) => {
-    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
-  });
-}).catch((err: Object) => {
-  console.error("listen fail: " + JSON.stringify(err));
-})
-```
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let listenAddr : socket.LocalAddress = {
-  address: sandboxPath
-}
-server.on('connect', (connection: socket.LocalSocketConnection) => {
-  connection.getSocketFd().then((fd: number) => {
-    console.info(`Socket FD: ${fd}`);
-  }).catch((err: Object) => {
-    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
-  });
-});
-server.listen(listenAddr).then(() => {
-  console.info("listen success");
-}).catch((err: Object) => {
-  console.error(`listen fail: ${JSON.stringify(err)}`);
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tls.bind(bindAddr, (err: BusinessError) => {
-  if (err) {
-    console.error('bind fail');
-    return;
-  }
-  console.info('bind success');
-});
-tls.getSocketFd().then((data: number) => {
-  console.info("tls socket fd: " + data);
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tlsSecureOptions: socket.TLSSecureOptions = {
-  key: "xxxx",
-  cert: ["xxxx"],
-  ca: ["xxxx"],
-  password: "xxxx",
-  protocols: socket.Protocol.TLSv12,
-  useRemoteCipherPrefer: true,
-  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
-  cipherSuite: "AES256-SHA256"
-}
-let tlsConnectOptions: socket.TLSConnectOptions = {
-  address: netAddress,
-  secureOptions: tlsSecureOptions,
-  ALPNProtocols: ["spdy/1", "http/1.1"]
-}
-tlsServer.listen(tlsConnectOptions).then(() => {
-  console.info("listen success");
-  tlsServer.getSocketFd().then((fd: number) => {
-    console.info(`Socket FD: ${fd}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`listen failed: ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tlsSecureOptions: socket.TLSSecureOptions = {
-  key: "xxxx",
-  cert: ["xxxx"],
-  ca: ["xxxx"],
-  password: "xxxx",
-  protocols: socket.Protocol.TLSv12,
-  useRemoteCipherPrefer: true,
-  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
-  cipherSuite: "AES256-SHA256"
-}
-let tlsConnectOptions: socket.TLSConnectOptions = {
-  address: netAddress,
-  secureOptions: tlsSecureOptions,
-  ALPNProtocols: ["spdy/1", "http/1.1"]
-}
-tlsServer.listen(tlsConnectOptions).then(() => {
-  console.info("listen success");
-  tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
-    client.getSocketFd().then((fd: number) => {
-      console.info(`Socket FD: ${fd}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getSocketFd fail: ${err.message}, errorCode: ${err.code}`);
-    })
-  });
-}).catch((err: BusinessError) => {
-  console.error(`listen failed: ${JSON.stringify(err)}`);
-});
-```
-
 ## setLoopbackMode
 
 ```TypeScript
@@ -823,8 +354,6 @@ Sets the loopback mode flag for multicast communication. This API uses an asynch
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -840,32 +369,6 @@ Sets the loopback mode flag for multicast communication. This API uses an asynch
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
-
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setLoopbackMode(false, (err: Object) => {
-  if (err) {
-    console.error('set loopback mode fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('set loopback mode success');
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setLoopbackMode(false).then(() => {
-  console.info('set loopback mode success');
-}).catch((err: Object) => {
-  console.error('set loopback mode failed');
-});
-```
 
 ## setLoopbackMode
 
@@ -885,8 +388,6 @@ Sets the loopback mode flag for multicast communication. This API uses a promise
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -908,14 +409,10 @@ Sets the loopback mode flag for multicast communication. This API uses a promise
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
-**Examples**
-
-See [setLoopbackMode](#setloopbackmode)
-
 ## setMulticastTTL
 
 ```TypeScript
-setMulticastTTL(ttl: int, callback: AsyncCallback<void>): void
+setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void
 ```
 
 Sets the time to live (TTL) for multicast packets. This API uses an asynchronous callback to return the result.
@@ -930,8 +427,6 @@ Sets the time to live (TTL) for multicast packets. This API uses an asynchronous
 > is called.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -950,37 +445,10 @@ Sets the time to live (TTL) for multicast packets. This API uses an asynchronous
 | 2301022 |
 | 2301088 |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let ttl = 8
-multicast.setMulticastTTL(ttl, (err: Object) => {
-  if (err) {
-    console.error('set ttl fail, err: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('set ttl success');
-})
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-multicast.setMulticastTTL(8).then(() => {
-  console.info('set ttl success');
-}).catch((err: Object) => {
-  console.error('set ttl failed');
-});
-```
-
 ## setMulticastTTL
 
 ```TypeScript
-setMulticastTTL(ttl: int): Promise<void>
+setMulticastTTL(ttl: number): Promise<void>
 ```
 
 Sets the TTL for multicast packets. This API uses a promise to return the result.
@@ -995,8 +463,6 @@ Sets the TTL for multicast packets. This API uses a promise to return the result
 > is called.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1020,10 +486,6 @@ Sets the TTL for multicast packets. This API uses a promise to return the result
 | 2301022 |
 | 2301088 |
 
-**Examples**
-
-See [setMulticastTTL](#setmulticastttl)
-
 ## setReuseAddress
 
 ```TypeScript
@@ -1040,8 +502,6 @@ Sets whether the multicast socket supports address reuse. This API is called in 
 > reuse capability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

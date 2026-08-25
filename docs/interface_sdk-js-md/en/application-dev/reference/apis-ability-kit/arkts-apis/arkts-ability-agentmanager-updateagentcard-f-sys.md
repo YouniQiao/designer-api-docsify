@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## updateAgentCard
@@ -15,8 +15,6 @@ function updateAgentCard(agentCard: AgentCard): Promise<void>
 Updates the AgentCard within specified agent id.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MODIFY_AGENT_CARD
 

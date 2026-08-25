@@ -4,8 +4,6 @@ Enumerates the window blur styles.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ OFF = 0
 Blur disabled.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,8 +32,6 @@ Thin blur.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Regular blur.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ THICK = 3
 Thick blur.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

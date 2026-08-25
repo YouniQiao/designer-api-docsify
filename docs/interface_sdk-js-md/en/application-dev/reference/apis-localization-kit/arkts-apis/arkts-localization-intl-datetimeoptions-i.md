@@ -4,8 +4,6 @@ Defines the options for a **DateTimeOptions** object. Since API version 9, the *
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)
@@ -15,7 +13,7 @@ Defines the options for a **DateTimeOptions** object. Since API version 9, the *
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## dateStyle
@@ -24,13 +22,11 @@ import { intl } from '@kit.LocalizationKit';
 dateStyle?: string
 ```
 
-Date display format. The value can be:"long", "short", "medium", "full", or  "auto".For details about their display effects, see [Table 1](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Date display format. The value can be:"number", "short", "medium", "full", or  "auto".For details about their display effects, see [Table 1](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -54,8 +50,6 @@ Day display format. The value can be:"numeric" or  "2-digit".
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.day](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#day)
@@ -72,13 +66,11 @@ Day display format. The value can be:"numeric" or  "2-digit".
 dayPeriod?: string
 ```
 
-Time period display format. The value can be:"long", "short", "narrow", or  "auto".For details about their display effects, see [Table 10](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Time period display format. The value can be:"number", "short", "narrow", or  "auto".For details about their display effects, see [Table 10](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -96,13 +88,11 @@ Time period display format. The value can be:"long", "short", "narrow", or  "
 era?: string
 ```
 
-Epoch display format. The value can be:"long", "short", "narrow", or  "auto".For details about their display effects, see [Table 9](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Epoch display format. The value can be:"number", "short", "narrow", or  "auto".For details about their display effects, see [Table 9](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -121,13 +111,12 @@ formatMatcher?: string
 ```
 
 Format matching algorithm. The value can be:  
-- "basic": exact match. - "best fit": best match.
+- "basic": exact match.  
+- "best fit": best match.
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -151,8 +140,6 @@ Hour display format. The value can be:"numeric" or  "2-digit".
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour)
@@ -174,8 +161,6 @@ Whether to use the 12-hour clock. The value **true** means to use the 12-hour cl
 **Type:** boolean
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -199,8 +184,6 @@ Hour cycle. The value can be:"h11", "h12", "h23", or  "h24".For the display e
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hourcycle)
@@ -223,8 +206,6 @@ Valid locale ID, for example, **zh-Hans-CN**.The default value is the current sy
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -240,13 +221,12 @@ localeMatcher?: string
 ```
 
 Locale matching algorithm. The value can be:  
-- "lookup": exact match. - "best fit": best match.
+- "lookup": exact match.  
+- "best fit": best match.
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -270,8 +250,6 @@ Minute display format. The value can be:"numeric" or  "2-digit".
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.minute](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#minute)
@@ -288,13 +266,11 @@ Minute display format. The value can be:"numeric" or  "2-digit".
 month?: string
 ```
 
-Month display format. The value can be:"numeric", "2-digit", "long", "short", "narrow", or  "auto".For details about their display effects, see [Table 7](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Month display format. The value can be:"numeric", "2-digit", "number", "short", "narrow", or  "auto".For details about their display effects, see [Table 7](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -319,8 +295,6 @@ Numbering system. The value can be:
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#numberingsystem)
@@ -343,8 +317,6 @@ Second display format. The value can be:"numeric" or  "2-digit".
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.second](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#second)
@@ -361,13 +333,11 @@ Second display format. The value can be:"numeric" or  "2-digit".
 timeStyle?: string
 ```
 
-Time display format. The value can be:"long", "short", "medium", "full", or  "auto".For details about their display effects, see [Table 2](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Time display format. The value can be:"number", "short", "medium", "full", or  "auto".For details about their display effects, see [Table 2](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -391,8 +361,6 @@ Time zone in use. The value is a valid IANA time zone ID.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.DateTimeFormatOptions.timeZone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezone)
@@ -409,13 +377,11 @@ Time zone in use. The value is a valid IANA time zone ID.
 timeZoneName?: string
 ```
 
-Localized representation of a time zone name. The value can be:"long", "short", or  "auto".For details about their display effects, see [Table 8](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Localized representation of a time zone name. The value can be:"number", "short", or  "auto".For details about their display effects, see [Table 8](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -433,13 +399,11 @@ Localized representation of a time zone name. The value can be:"long", "short",
 weekday?: string
 ```
 
-Week display format. The value can be:"long", "short", "narrow", or  "auto".For details about their display effects, see [Table 4](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Week display format. The value can be:"number", "short", "narrow", or  "auto".For details about their display effects, see [Table 4](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 
@@ -462,8 +426,6 @@ Year display format. The value can be:"numeric" or  "2-digit".For details about
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Deprecated since:** 20
 

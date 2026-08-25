@@ -4,14 +4,12 @@ Defines the parameters for creating a child window or system window.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## ctx
@@ -25,8 +23,6 @@ Indicates window context.
 **Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Indicates whether enable window decor, only support dialog, The default value is
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -53,16 +47,14 @@ Indicates whether enable window decor, only support dialog, The default value is
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
 Screen ID of the current window. If it is not set, the screen ID of the parent window is used by default. The value is a non-negative integer and must correspond to an existing screen. In scenarios involving extended screens or heterogeneous virtual screens, a global floating window can be displayed on a specified screen by setting the screen ID. For modal windows and system windows, this parameter takes no effect, and the parent window's screen ID is used by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,8 +72,6 @@ Indicates window id.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -89,16 +79,14 @@ Indicates window id.
 ## parentId
 
 ```TypeScript
-parentId?: int
+parentId?: number
 ```
 
 Indicates Parent window id
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,8 +104,6 @@ Indicates dialog window title when decor enabled.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -133,8 +119,6 @@ Indicates window type
 **Type:** WindowType
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

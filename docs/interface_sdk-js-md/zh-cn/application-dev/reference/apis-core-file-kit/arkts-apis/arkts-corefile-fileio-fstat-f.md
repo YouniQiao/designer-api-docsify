@@ -15,8 +15,6 @@ declare function fstat(fd: number): Promise<Stat>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [stat](arkts-corefile-file-fs-stat-f.md)
@@ -35,28 +33,6 @@ declare function fstat(fd: number): Promise<Stat>
 | --- |
 | Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fstat(fd).then((stat: fileio.Stat) => {
-  console.info("fstat succeed, the size of file is " + stat.size);
-}).catch((err: BusinessError) => {
-  console.error("fstat failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fstat(fd, (err: BusinessError) => {
-  // do something
-});
-```
-
 
 ## fstat
 
@@ -67,8 +43,6 @@ declare function fstat(fd: number, callback: AsyncCallback<Stat>): void
 基于文件描述符获取文件状态信息，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -82,7 +56,3 @@ declare function fstat(fd: number, callback: AsyncCallback<Stat>): void
 | --- | --- | --- |
 | fd | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | 是 |
-
-**示例**
-
-参见 [fstat](#fstat)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hash } from '@kit.CoreFileKit';
+import { hash } from 'kits/@kit.CoreFileKit';
 ```
 
 ## hash
@@ -15,8 +15,6 @@ function hash(path: string, algorithm: string): Promise<string>
 Calculates a hash value for a file. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,30 +40,6 @@ Calculates a hash value for a file. This API uses a promise to return the result
 | 13900020 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-hash.hash(filePath, "sha256").then((str: string) => {
-  console.info("calculate file hash succeed:" + str);
-}).catch((err: BusinessError) => {
-  console.error("calculate file hash failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-hash.hash(filePath, "sha256", (err: BusinessError, str: string) => {
-  if (err) {
-    console.error("calculate file hash failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("calculate file hash succeed:" + str);
-  }
-});
-```
-
 
 ## hash
 
@@ -76,8 +50,6 @@ function hash(path: string, algorithm: string, callback: AsyncCallback<string>):
 Calculates a hash value for a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -97,7 +69,3 @@ Calculates a hash value for a file. This API uses an asynchronous callback to re
 | --- |
 | 13900020 |
 | 13900042 |
-
-**Examples**
-
-See [hash](#hash)

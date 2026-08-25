@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## off('receiveImage')
@@ -16,8 +16,6 @@ function off(type: 'receiveImage', sessionId: number,
 Unregisters receiveImage event.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +38,6 @@ Unregisters receiveImage event.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-
-let sessionId = 100;
-abilityConnectionManager.off("receiveImage", sessionId);
-```
-
 
 ## off('collaborateEvent')
 
@@ -60,8 +49,6 @@ function off(type: 'collaborateEvent', sessionId: number,
 Unregisters collaborateEvent event.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,12 +70,3 @@ Unregisters collaborateEvent event.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-
-let sessionId = 100;
-abilityConnectionManager.off("collaborateEvent", sessionId);
-```

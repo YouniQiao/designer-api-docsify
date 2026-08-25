@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## on('operatingHandChanged')
@@ -12,11 +12,9 @@ import { motion } from '@kit.MultimodalAwarenessKit';
 function on(type: 'operatingHandChanged', callback: Callback<OperatingHandStatus>): void
 ```
 
-订阅触控操作手感知事件。系统通过触控屏传感器采集用户触控数据，结合手势识别算法判断当前操作手是左手还是右手。适用于手势交付、单双手操作适配等场景， <br>通过识别用户的触控操作手状态优化界面布局和交互方式。建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。 <br>相关方法：off('operatingHandChanged')：取消订阅触控操作手感知事件。如果设备不支持此功能，将返回801错误码。
+订阅触控操作手感知事件。系统通过触控屏传感器采集用户触控数据，结合手势识别算法判断当前操作手是左手还是右手。适用于手势交付、单双手操作适配等场景， 通过识别用户的触控操作手状态优化界面布局和交互方式。建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。 相关方法：off('operatingHandChanged')：取消订阅触控操作手感知事件。如果设备不支持此功能，将返回801错误码。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** 
 - API版本20+：ohos.permission.ACTIVITY_MOTION 或 ohos.permission.DETECT_GESTURE
@@ -41,24 +39,6 @@ function on(type: 'operatingHandChanged', callback: Callback<OperatingHandStatus
 | [31500001](../errorcode-motion.md#31500001-服务异常) |
 | [31500002](../errorcode-motion.md#31500002-订阅失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callback:Callback<motion.OperatingHandStatus> = (data:motion.OperatingHandStatus) => {
-    console.info('callback succeeded' + data);
-};
-
-try {
-    motion.on('operatingHandChanged', callback);  
-    console.info("on succeeded");
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Failed to subscribe operatingHandChanged. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## on('holdingHandChanged')
 
@@ -66,11 +46,9 @@ try {
 function on(type: 'holdingHandChanged', callback: Callback<HoldingHandStatus>): void
 ```
 
-订阅握持手状态变化感知事件。系统通过传感器数据，结合识别算法判断当前握持手是左手还是右手。适用于阅读应用、视频播放等需要根据用户握持手状态调整界面布局或功能的场景。 <br>建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('holdingHandChanged')：取消订阅握持手状态变化感知事件。
+订阅握持手状态变化感知事件。系统通过传感器数据，结合识别算法判断当前握持手是左手还是右手。适用于阅读应用、视频播放等需要根据用户握持手状态调整界面布局或功能的场景。 建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('holdingHandChanged')：取消订阅握持手状态变化感知事件。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.DETECT_GESTURE
 
@@ -91,21 +69,3 @@ function on(type: 'holdingHandChanged', callback: Callback<HoldingHandStatus>): 
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [31500001](../errorcode-motion.md#31500001-服务异常) |
 | [31500002](../errorcode-motion.md#31500002-订阅失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callback:Callback<motion.HoldingHandStatus> = (data:motion.HoldingHandStatus) => {
-  console.info('callback succeeded: ' + data);
-};
-
-try {
-  motion.on('holdingHandChanged', callback);
-  console.info('on succeeded');
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to subscribe holdingHandChanged. Code: ${error.code}, message: ${error.message}`);
-}
-```

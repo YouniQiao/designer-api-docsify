@@ -4,8 +4,6 @@ Defines the input parameters of **cipher.aes()**.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -15,7 +13,7 @@ Defines the input parameters of **cipher.aes()**.
 ## Modules to Import
 
 ```TypeScript
-import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## complete
@@ -27,8 +25,6 @@ complete: () => void
 Called when the execution is complete.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
@@ -45,8 +41,6 @@ fail: (data: string, code: number) => void
 Called when data fails to be encrypted or decrypted.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
@@ -70,8 +64,6 @@ success: (data: CipherResponse) => void
 Called when data is encrypted or decrypted successfully.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
@@ -99,8 +91,6 @@ Action to perform. The options are as follows:
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -118,8 +108,6 @@ Initialization vector (IV) for AES-based encryption and decryption. The value is
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
@@ -139,8 +127,6 @@ Length of the IV, in bytes. This field is reserved. The default value is **16**,
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -158,8 +144,6 @@ Offset of the IV for AES-based encryption and decryption. The default value is *
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 
@@ -179,8 +163,6 @@ Key used for encryption or decryption. It is a Base64 encoded string.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -199,8 +181,6 @@ Text to be encrypted or decrypted.The text to be encrypted must be common text. 
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -218,8 +198,6 @@ Encryption mode and padding of the AES algorithm. The default value is **AES/CBC
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 

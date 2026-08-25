@@ -4,8 +4,6 @@ Provides configuration parameters for backup and restore.@interface BackupParams
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides configuration parameters for backup and restore.@interface BackupParams
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## parameters
@@ -27,8 +25,6 @@ The optional parameters a json strings in the form of key value in backup or res
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 

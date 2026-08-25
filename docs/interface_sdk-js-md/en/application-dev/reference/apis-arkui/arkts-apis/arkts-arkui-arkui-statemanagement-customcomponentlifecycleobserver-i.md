@@ -4,14 +4,12 @@ Observes lifecycle status changes of a custom component, and triggers the lifecy
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
 ```
 
 ## aboutToAppear
@@ -23,8 +21,6 @@ aboutToAppear?(): void
 Called after a new instance of the custom component is created and before its **build()** function is executed. You can modify the status variables in this phase. Its function is similar to that of aboutToAppear, but it is triggered under the constraints of the custom component state machine.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,8 +38,6 @@ Called before the custom component is destroyed. You are advised not to change s
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -60,8 +54,6 @@ Called after necessary component recycling operations defined in the application
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -77,8 +69,6 @@ aboutToReuse?(params?: Record<string, Object | undefined | null>): void
 Called when a reusable custom component is re-added to the node tree from the cache to receive the component constructors. The value of **params** is not **undefined** in the reuse callback of the V1 component. The value of **params** is **undefined** in the reuse callback of the V2 component.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,8 +91,6 @@ onDidBuild?(): void
 Called after a new instance of the custom component is created and its **build()** function is executed. You can use this callback for actions that do not affect the UI, such as event data reporting.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

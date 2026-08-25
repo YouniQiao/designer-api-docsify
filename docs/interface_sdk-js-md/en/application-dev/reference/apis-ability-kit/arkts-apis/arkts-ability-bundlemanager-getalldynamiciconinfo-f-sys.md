@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllDynamicIconInfo
 
 ```TypeScript
-function getAllDynamicIconInfo(userId?: int): Promise<Array<DynamicIconInfo>>
+function getAllDynamicIconInfo(userId?: number): Promise<Array<DynamicIconInfo>>
 ```
 
 Obtains the dynamic icon information of all applications and all application clones of a specified user. This API uses a promise to return the result.To obtain the dynamic icon information of all applications and all application clones of the current user, you must request the ohos.permission.GET_BUNDLE_INFO_PRIVILEGED permission.To obtain the dynamic icon information of all applications and all application clones of other users or all users, you must request the ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -28,7 +26,7 @@ Obtains the dynamic icon information of all applications and all application clo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| userId | number | No |
 
 **Return value:**
 
@@ -44,24 +42,3 @@ Obtains the dynamic icon information of all applications and all application clo
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
 | [17700306](../errorcode-bundle.md#17700306-failed-to-obtain-the-dynamic-icon) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let userId: number = 100;
-
-try {
-  bundleManager.getAllDynamicIconInfo(userId).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getAllDynamicIconInfo successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getAllDynamicIconInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAllDynamicIconInfo failed. Cause: %{public}s', message);
-}
-```

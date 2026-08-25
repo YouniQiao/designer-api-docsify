@@ -4,14 +4,12 @@ Provide common Bluetooth interfaces and types.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@kit.ConnectivityKit';
+import { common } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

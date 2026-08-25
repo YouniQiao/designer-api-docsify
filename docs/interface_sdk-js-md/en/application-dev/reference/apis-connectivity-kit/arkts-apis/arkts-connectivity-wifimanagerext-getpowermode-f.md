@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getPowerMode
@@ -15,8 +15,6 @@ function getPowerMode(): Promise<PowerMode>
 Obtains the current Wi-Fi power mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -36,37 +34,6 @@ Obtains the current Wi-Fi power mode.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
-
-  try {
-      let model = wifiManagerExt.getPowerMode();
-      console.info("model info:" + model);
-  }catch(error){
-      console.error("failed: " + JSON.stringify(error));
-  }
-```
-
-```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
-
-  wifiManagerExt.getPowerMode((err, data:wifiManagerExt.PowerMode) => {
-      if (err) {
-          console.error("Failed to get linked information");
-          return;
-      }
-      console.info("get power mode info: " + JSON.stringify(data));
-  });
-
-  wifiManagerExt.getPowerMode().then(data => {
-      console.info("get power mode info: " + JSON.stringify(data));
-  }).catch((error:number) => {
-      console.error("get power mode error");
-  });
-```
-
 
 ## getPowerMode
 
@@ -77,8 +44,6 @@ function getPowerMode(callback: AsyncCallback<PowerMode>): void
 Obtains the current Wi-Fi power mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -97,7 +62,3 @@ Obtains the current Wi-Fi power mode.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) |
-
-**Examples**
-
-See [getPowerMode](#getpowermode)

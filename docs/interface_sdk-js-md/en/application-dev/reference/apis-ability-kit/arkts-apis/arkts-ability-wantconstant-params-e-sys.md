@@ -4,8 +4,6 @@ Defines **Params** (specifying the action that can be performed) in the Want.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## DLP_PARAMS_SANDBOX
@@ -17,8 +15,6 @@ DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'
 Action of obtaining the sandbox flag.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -34,8 +30,6 @@ Action of obtaining the DLP bundle name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 **System API:** This is a system API.
@@ -49,8 +43,6 @@ DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'
 Action of obtaining the DLP module name.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -66,8 +58,6 @@ Action of obtaining the DLP ability name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 **System API:** This is a system API.
@@ -81,8 +71,6 @@ DLP_PARAMS_INDEX = 'ohos.dlp.params.index'
 Action of obtaining the DLP index.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -98,8 +86,6 @@ Indicates the type of hide sensitive information.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 **System API:** This is a system API.
@@ -113,8 +99,6 @@ ASSERT_FAULT_SESSION_ID = 'ohos.ability.params.asssertFaultSessionId'
 Session ID of the AssertFault.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,8 +115,6 @@ UI_EXTENSION_ROOT_TOKEN = 'ohos.param.uiExtension.rootHostToken'
 Indicates the UIExtension root host token when connecting to a service extension ability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

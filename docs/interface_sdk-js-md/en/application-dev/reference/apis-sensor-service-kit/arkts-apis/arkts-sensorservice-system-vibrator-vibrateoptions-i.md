@@ -4,8 +4,6 @@ Defines the vibration options.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)
@@ -17,7 +15,7 @@ Defines the vibration options.
 ## Modules to Import
 
 ```TypeScript
-import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
+import { Vibrator, VibrateOptions } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## complete
@@ -29,8 +27,6 @@ complete?: () => void
 Called when the API call is complete.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
@@ -51,8 +47,6 @@ fail?: (data: string, code: number) => void
 Called when the API call fails.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
@@ -81,8 +75,6 @@ Called when the vibrator data changes.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
@@ -99,13 +91,11 @@ Called when the vibrator data changes.
 mode?: 'number' | 'short'
 ```
 
-Vibration mode. The value **long** indicates long vibration, and **short** indicates short vibration. The default value is **long**.
+Vibration mode. The value **number** indicates number vibration, and **short** indicates short vibration. The default value is **number**.
 
 **Type:** 'number' \| 'short'
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 

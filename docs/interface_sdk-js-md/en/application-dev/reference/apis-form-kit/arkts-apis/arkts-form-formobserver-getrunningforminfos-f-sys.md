@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
+import { formObserver } from 'kits/@kit.FormKit';
 ```
 
 ## getRunningFormInfos
@@ -15,8 +15,6 @@ function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormI
 Obtains the RunningFormInfo objects provided by a specific card host application on the device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -40,76 +38,6 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
-
-**Examples**
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos((error: BusinessError, data: formInfo.RunningFormInfo[]) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      data.forEach(data => {
-        console.info(`formObserver getRunningFormInfos, formId: ${data.formId}`);
-      });
-    }
-  }, 'com.example.ohos.formjsdemo');
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos((error: BusinessError, data: formInfo.RunningFormInfo[]) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      data.forEach(data => {
-        console.info(`formObserver getRunningFormInfos, formId: ${data.formId}`);
-      });
-    }
-  }, true, 'com.example.ohos.formjsdemo');
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos('com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
-    console.info('formObserver getRunningFormInfos success.');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos(true, 'com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
-    console.info('formObserver getRunningFormInfos success.');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
 
 
 ## getRunningFormInfos
@@ -126,8 +54,6 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -152,10 +78,6 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 
-**Examples**
-
-See [getRunningFormInfos](#getrunningforminfos)
-
 
 ## getRunningFormInfos
 
@@ -166,8 +88,6 @@ function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.Ru
 Obtains the RunningFormInfo objects provided by a specific card host application on the device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -197,10 +117,6 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 
-**Examples**
-
-See [getRunningFormInfos](#getrunningforminfos)
-
 
 ## getRunningFormInfos
 
@@ -214,8 +130,6 @@ function getRunningFormInfos(
 Obtains the RunningFormInfo objects provided by a specific card host application on the device.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -245,7 +159,3 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
-
-**Examples**
-
-See [getRunningFormInfos](#getrunningforminfos)

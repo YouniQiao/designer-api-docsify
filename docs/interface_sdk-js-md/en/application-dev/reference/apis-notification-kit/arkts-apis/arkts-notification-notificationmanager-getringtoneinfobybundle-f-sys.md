@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getRingtoneInfoByBundle
@@ -16,8 +16,6 @@ Obtains the custom ringtone information of an application. This API uses a promi
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ Obtains the custom ringtone information of an application. This API uses a promi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 
 **Return value:**
 
@@ -46,31 +44,3 @@ Obtains the custom ringtone information of an application. This API uses a promi
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) |
 | [1600024](../errorcode-notification.md#1600024-custom-ringtones-not-configured) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    try {
-      let bundle: notificationManager.BundleOption = {
-        bundle: "bundleName",
-      };
-      notificationManager.getRingtoneInfoByBundle(bundle)
-        .then((ringtoneInfo: notificationManager.RingtoneInfo) => {
-          console.info(`getRingtoneInfoByBundle success: ${JSON.stringify(ringtoneInfo)}`);
-        }).catch((err: BusinessError) => {
-        console.error(`getRingtoneInfoByBundle failed, code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      console.error(`getRingtoneInfoByBundle failed, code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```

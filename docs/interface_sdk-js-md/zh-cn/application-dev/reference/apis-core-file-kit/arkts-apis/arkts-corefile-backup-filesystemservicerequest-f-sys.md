@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## fileSystemServiceRequest
 
 ```TypeScript
-function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<int>
+function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<number>
 ```
 
 根据指定配置请求文件系统执行碎片清理。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -36,7 +34,7 @@ function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -45,24 +43,3 @@ function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<int>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13900020 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { backup } from '@kit.CoreFileKit';
-
-async function testFunction(size: number) {
-  try {
-    const result = await backup.fileSystemServiceRequest({
-      triggerType: 0,
-      writeSize: size,
-      waitTime: 180
-    });
-    console.info(`fileSystemServiceRequest result: ${result}`);
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`fileSystemServiceRequest err:` + err);
-  }
-}
-```

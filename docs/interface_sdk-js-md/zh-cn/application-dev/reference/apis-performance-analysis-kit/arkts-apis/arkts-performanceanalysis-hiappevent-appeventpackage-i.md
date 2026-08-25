@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## appEventInfos
@@ -26,8 +24,6 @@ appEventInfos: Array<AppEventInfo>
 **类型：** Array&lt;[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,8 +42,6 @@ data: string[]
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
@@ -55,17 +49,15 @@ data: string[]
 ## packageId
 
 ```TypeScript
-packageId: int
+packageId: number
 ```
 
 事件包ID，从0开始自动递增。  
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,17 +66,15 @@ packageId: int
 ## row
 
 ```TypeScript
-row: int
+row: number
 ```
 
 事件包的事件数量。  
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -93,17 +83,15 @@ row: int
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
 事件包的事件大小，单位为byte。  
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

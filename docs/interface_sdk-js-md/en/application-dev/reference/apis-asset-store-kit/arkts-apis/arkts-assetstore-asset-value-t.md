@@ -8,8 +8,6 @@ Represents the value of each attribute in [AssetMap](arkts-assetstore-asset-asse
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset

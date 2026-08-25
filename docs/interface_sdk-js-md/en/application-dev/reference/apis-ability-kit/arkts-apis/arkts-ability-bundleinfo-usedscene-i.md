@@ -4,8 +4,6 @@ Describes the use scenario and timing of the permission, helping developers requ
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## abilities
@@ -19,8 +17,6 @@ Abilities that use the permission.
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,8 +33,6 @@ Time when the permission is used. The value can be **inuse** or **always**.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

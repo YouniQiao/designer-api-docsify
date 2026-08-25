@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_NONE
@@ -17,8 +15,6 @@ LEVEL_NONE
 表示电池电量等级为未知电量。说明系统无法获得当前的电池电量等级。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -32,8 +28,6 @@ LEVEL_FULL
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_HIGH
@@ -45,8 +39,6 @@ LEVEL_HIGH
 表示电池电量等级为高电量。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -60,8 +52,6 @@ LEVEL_NORMAL
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_LOW
@@ -73,8 +63,6 @@ LEVEL_LOW
 表示电池电量等级为低电量。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -88,8 +76,6 @@ LEVEL_WARNING
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_CRITICAL
@@ -102,8 +88,6 @@ LEVEL_CRITICAL
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_SHUTDOWN
@@ -115,7 +99,5 @@ LEVEL_SHUTDOWN
 表示电池电量等级为关机电量。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core

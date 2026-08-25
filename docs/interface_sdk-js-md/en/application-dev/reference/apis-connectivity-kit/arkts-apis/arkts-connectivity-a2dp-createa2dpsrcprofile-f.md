@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from '@kit.ConnectivityKit';
+import { a2dp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createA2dpSrcProfile
@@ -15,8 +15,6 @@ function createA2dpSrcProfile(): A2dpSourceProfile
 create the instance of a2dp profile.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,15 +30,3 @@ create the instance of a2dp profile.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let a2dpProfile = a2dp.createA2dpSrcProfile();
-    console.info('a2dp success');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

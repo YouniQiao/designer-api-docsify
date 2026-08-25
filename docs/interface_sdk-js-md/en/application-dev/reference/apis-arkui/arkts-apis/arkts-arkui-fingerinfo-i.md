@@ -4,8 +4,6 @@ Defines the finger information type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -35,7 +31,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Coordinate2D](arkts-arkui-units-coordinate2d-i.md) |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) |
 
 ## displayX
 
@@ -48,8 +44,6 @@ X-coordinate relative to the upper left corner of the screen, in vp.Value range:
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ Y-coordinate relative to the upper left corner of the screen, in vp.Value range:
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -88,8 +80,6 @@ X-coordinate relative to the upper left corner of the global display, in vp.Valu
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,8 +99,6 @@ Y-coordinate relative to the upper left corner of the global display, in vp.Valu
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -129,8 +117,6 @@ X-coordinate relative to the upper left corner of the application window, in vp.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -147,8 +133,6 @@ Y-coordinate relative to the upper left corner of the application window, in vp.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -161,11 +145,9 @@ hand?: InteractionHand
 
 Whether the event is triggered by a left-hand or right-hand tap.
 
-**Type:** InteractionHand
+**Type:** [InteractionHand](arkts-arkui-interactionhand-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,8 +168,6 @@ Index of the finger, determined by the number of fingers pressed. The first pres
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -204,8 +184,6 @@ X-coordinate relative to the upper left corner of the current component's origin
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -221,8 +199,6 @@ Y-coordinate relative to the upper left corner of the current component's origin
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

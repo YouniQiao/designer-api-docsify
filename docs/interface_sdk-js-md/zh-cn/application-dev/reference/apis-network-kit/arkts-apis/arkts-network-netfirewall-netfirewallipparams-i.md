@@ -4,14 +4,12 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## address
@@ -25,8 +23,6 @@ IP地址。当type等于1时需要设置，并且仅在type等于1时有效，�
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -42,8 +38,6 @@ endIp?: string
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## family
@@ -57,8 +51,6 @@ family?: number
 **类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -74,8 +66,6 @@ IPv4：子网掩码。IPv6：前缀。当type等于1时需要设置，并且仅�
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## startIp
@@ -90,8 +80,6 @@ startIp?: string
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 ## type
@@ -105,7 +93,5 @@ type: number
 **类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall

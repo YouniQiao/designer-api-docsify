@@ -1,17 +1,23 @@
 # KeyboardDelegate
 
-KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过 [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)获取该实例。 <br>核心功能概述： <br> <br>- 物理键盘按键事件：通过on('keyDown'|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回false 表示不消费。 <br>- 光标与选区变化事件：通过on('cursorContextChange')订阅光标位置变化事件，通过on('selectionChange')订阅文本选区变化事件。输入法应用可根据这些事件调整候选词位置或输入策略。 <br>- 文本变化事件：通过on('textChange')订阅编辑框文本内容变化事件，输入法应用可据此更新候选词或输入建议。 <br>- 编辑框属性变化事件：通过on('editorAttributeChanged')订阅编辑框属性变化事件，输入法应用可根据编辑框属性变化动态调整键盘布局。 <br> <br>使用场景： <br> <br>- 开发物理键盘快捷键处理功能时，订阅on('keyDown'|'keyUp')或on('keyEvent')事件拦截特定按键。 <br>- 需要根据编辑框实时状态（光标、选区、文本、属性）调整输入法行为时，订阅对应的on事件。 <br> <br>下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)获取到KeyboardDelegate实例后，通过实例调用。
+KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过 [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)获取该实例。 核心功能概述：   
+- 物理键盘按键事件：通过on('keyDown'|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回false 表示不消费。   
+- 光标与选区变化事件：通过on('cursorContextChange')订阅光标位置变化事件，通过on('selectionChange')订阅文本选区变化事件。输入法应用可根据这些事件调整候选词位置或输入策略。   
+- 文本变化事件：通过on('textChange')订阅编辑框文本内容变化事件，输入法应用可据此更新候选词或输入建议。   
+- 编辑框属性变化事件：通过on('editorAttributeChanged')订阅编辑框属性变化事件，输入法应用可根据编辑框属性变化动态调整键盘布局。   
+ 使用场景：   
+- 开发物理键盘快捷键处理功能时，订阅on('keyDown'|'keyUp')或on('keyEvent')事件拦截特定按键。   
+- 需要根据编辑框实时状态（光标、选区、文本、属性）调整输入法行为时，订阅对应的on事件。   
+ 下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)获取到KeyboardDelegate实例后，通过实例调用。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## off('keyDown' | 'keyUp')
@@ -24,8 +30,6 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -34,19 +38,6 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | 是 |
 | callback | (event: KeyEvent) = & gt; boolean | 否 |
-
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().off('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info('delete keyUp notification.');
-  return true;
-});
-inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info('delete keyDown notification.');
-  return true;
-});
-```
 
 ## off('keyDown' | 'keyUp')
 
@@ -58,8 +49,6 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -68,10 +57,6 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | 是 |
 | callback | (event: KeyEvent) = & gt; boolean | 否 |
-
-**示例**
-
-参见 off
 
 ## off('keyEvent')
 
@@ -83,8 +68,6 @@ off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -93,18 +76,6 @@ off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void
 | --- | --- | --- |
 | type | 'keyEvent' | 是 |
 | callback | (event: InputKeyEvent) = & gt; boolean | 否 |
-
-**示例**
-
-```TypeScript
-import type { KeyEvent } from '@kit.InputKit';
-
-inputMethodEngine.getKeyboardDelegate().off('keyEvent', (keyEvent: KeyEvent) => {
-  console.info('This is a callback function which will be deregistered.');
-  return true;
-});
-inputMethodEngine.getKeyboardDelegate().off('keyEvent');
-```
 
 ## off('cursorContextChange')
 
@@ -116,8 +87,6 @@ off(type: 'cursorContextChange', callback?: (x: number, y: number, height: numbe
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -126,12 +95,6 @@ off(type: 'cursorContextChange', callback?: (x: number, y: number, height: numbe
 | --- | --- | --- |
 | type | 'cursorContextChange' | 是 |
 | callback | (x: number, y: number, height: number) = & gt; void | 否 |
-
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().off('cursorContextChange');
-```
 
 ## off('selectionChange')
 
@@ -146,8 +109,6 @@ off(
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -156,15 +117,6 @@ off(
 | --- | --- | --- |
 | type | 'selectionChange' | 是 |
 | callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | 否 |
-
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate()
-  .off('selectionChange', (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => {
-    console.info('delete selectionChange notification.');
-  });
-```
 
 ## off('textChange')
 
@@ -176,8 +128,6 @@ off(type: 'textChange', callback?: (text: string) => void): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -186,14 +136,6 @@ off(type: 'textChange', callback?: (text: string) => void): void
 | --- | --- | --- |
 | type | 'textChange' | 是 |
 | callback | (text: string) = & gt; void | 否 |
-
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
-  console.info('delete textChange notification. text:' + text);
-});
-```
 
 ## off('editorAttributeChanged')
 
@@ -205,8 +147,6 @@ off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void):
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**
@@ -216,252 +156,15 @@ off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void):
 | type | 'editorAttributeChanged' | 是 |
 | callback | (attr: EditorAttribute) = & gt; void | 否 |
 
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
-```
-
-## offCursorContextChange
-
-```TypeScript
-offCursorContextChange(callback?: CursorContextChangeCallback): void
-```
-
-取消订阅光标上下文变更 [cursorcontextchange](#oncursorcontextchange) 事件，停止监听编辑框中光标位置及上下文文本的变更动作。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | 否 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.offCursorContextChange((x: double, y: double, height: double) => {
-    console.info('delete cursorContextChange notification.');
-  });
-}
-```
-
-## offEditorAttributeChanged
-
-```TypeScript
-offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
-```
-
-取消订阅编辑框属性变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 否 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.offEditorAttributeChanged();
-}
-```
-
-## offKeyDown
-
-```TypeScript
-offKeyDown(callback?: KeyEventCallback): void
-```
-
-取消订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | 否 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.offKeyUp((keyEvent: inputMethodEngine.KeyEvent) => {
-    console.info('delete keyUp notification.');
-    return true;
-  });
-  inputMethodEngineDelegate!.offKeyDown((keyEvent: inputMethodEngine.KeyEvent) => {
-    console.info('delete keyDown notification.');
-    return true;
-  });
-}
-```
-
-## offKeyEvent
-
-```TypeScript
-offKeyEvent(callback?: InputKeyEventCallback): void
-```
-
-取消订阅硬键盘（即物理键盘）事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | 否 |
-
-**示例**
-
-```TypeScript
-import type { KeyEvent } from '@kit.InputKit';
-
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.offKeyEvent((keyEvent: KeyEvent) => {
-    console.info('This is a callback function which will be deregistered.');
-    return true;
-  });
-  inputMethodEngineDelegate!.offKeyEvent();
-}
-```
-
-## offKeyUp
-
-```TypeScript
-offKeyUp(callback?: KeyEventCallback): void
-```
-
-取消订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | 否 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.offKeyUp((keyEvent: inputMethodEngine.KeyEvent) => {
-    console.info('delete keyUp notification.');
-    return true;
-  });
-  inputMethodEngineDelegate!.offKeyDown((keyEvent: inputMethodEngine.KeyEvent) => {
-    console.info('delete keyDown notification.');
-    return true;
-  });
-}
-```
-
-## offSelectionChange
-
-```TypeScript
-offSelectionChange(callback?: SelectionChangeCallback): void
-```
-
-取消订阅文本选择范围变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | 否 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.offSelectionChange((oldBegin: int, oldEnd: int, newBegin: int, newEnd: int) => {
-    console.info('delete selectionChange notification.');
-  });
-}
-```
-
-## offTextChange
-
-```TypeScript
-offTextChange(callback?: Callback<string>): void
-```
-
-取消订阅文本内容变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.offTextChange((text: string) => {
-    console.info(`delete textChange notification. text: ${text}`);
-  });
-}
-```
-
 ## on('keyDown' | 'keyUp')
 
 ```TypeScript
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 ```
 
-订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。 <br> <br>使用场景：实现快捷键功能、拦截特殊按键、处理功能键（如删除、回车等）等。 <br> <br>使用后效果：当物理按键按下/抬起时触发回调，回调函数返回按键信息。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。返回true时按键事件不再向编辑框传递，返回false时按键事件继续向编辑框传 递。
+订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。 使用场景：实现快捷键功能、拦截特殊按键、处理功能键（如删除、回车等）等。 使用后效果：当物理按键按下/抬起时触发回调，回调函数返回按键信息。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。返回true时按键事件不再向编辑框传递，返回false时按键事件继续向编辑框传 递。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -472,32 +175,15 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 | type | 'keyDown' \| 'keyUp' | 是 |
 | callback | (event: KeyEvent) = & gt; boolean | 是 |
 
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().on('keyUp', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info(`inputMethodEngine keyCode.(keyUp): ${keyEvent.keyCode}`);
-  console.info(`inputMethodEngine keyAction.(keyUp): ${keyEvent.keyAction}`);
-  return true;
-});
-inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngine.KeyEvent) => {
-  console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-  console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
-  return true;
-});
-```
-
 ## on('keyDown' | 'keyUp')
 
 ```TypeScript
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 ```
 
-订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。 <br> <br>使用场景：实现快捷键功能、拦截特殊按键、处理功能键（如删除、回车等）等。 <br> <br>使用后效果：当物理按键按下/抬起时触发回调，回调函数返回按键信息。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。返回true时按键事件不再向编辑框传递，返回false时按键事件继续向编辑框传 递。
+订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。 使用场景：实现快捷键功能、拦截特殊按键、处理功能键（如删除、回车等）等。 使用后效果：当物理按键按下/抬起时触发回调，回调函数返回按键信息。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。返回true时按键事件不再向编辑框传递，返回false时按键事件继续向编辑框传 递。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -507,10 +193,6 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | 是 |
 | callback | (event: KeyEvent) = & gt; boolean | 是 |
-
-**示例**
-
-参见 on
 
 ## on('keyEvent')
 
@@ -518,11 +200,9 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 ```
 
-订阅硬键盘（即物理键盘）事件。使用callback异步回调。与on('keyDown'|'keyUp')相比，on('keyEvent')提供更完整的按键事件信息（包含组合键Ctrl/Shift/Alt状态、 unicodeChar等），适用于需要处理组合键或获取更丰富按键信息的场景。 <br> <br>使用场景：需要处理组合键（如Ctrl+C、Shift+Enter等）或获取更完整按键信息（如unicodeChar、ctrlKey等）的场景。 <br> <br>使用后效果：当物理按键事件触发时回调被调用。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。
+订阅硬键盘（即物理键盘）事件。使用callback异步回调。与on('keyDown'|'keyUp')相比，on('keyEvent')提供更完整的按键事件信息（包含组合键Ctrl/Shift/Alt状态、 unicodeChar等），适用于需要处理组合键或获取更丰富按键信息的场景。 使用场景：需要处理组合键（如Ctrl+C、Shift+Enter等）或获取更完整按键信息（如unicodeChar、ctrlKey等）的场景。 使用后效果：当物理按键事件触发时回调被调用。若按键事件被事件订阅者消费，则callback应返回true，否则返回false。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -533,31 +213,15 @@ on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 | type | 'keyEvent' | 是 |
 | callback | (event: InputKeyEvent) = & gt; boolean | 是 |
 
-**示例**
-
-```TypeScript
-import type { KeyEvent } from '@kit.InputKit';
-
-inputMethodEngine.getKeyboardDelegate().on('keyEvent', (keyEvent: KeyEvent) => {
-  console.info(`inputMethodEngine keyEvent.action:${ keyEvent.action}`);
-  console.info(`inputMethodEngine keyEvent.key.code: ${keyEvent.key.code}`);
-  console.info(`inputMethodEngine keyEvent.ctrlKey: ${keyEvent.ctrlKey}`);
-  console.info(`inputMethodEngine keyEvent.unicodeChar: ${keyEvent.unicodeChar}`);
-  return true;
-});
-```
-
 ## on('cursorContextChange')
 
 ```TypeScript
 on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void
 ```
 
-订阅光标变化事件。使用callback异步回调。 <br> <br>使用场景：实时更新候选词显示位置、根据光标位置调整输入法界面、实现跟随光标的浮动菜单等。 <br> <br>使用后效果：当编辑框光标位置发生变化时触发回调，返回光标的x坐标、y坐标和高度信息，输入法应用可据此调整候选词窗口或面板的定位。
+订阅光标变化事件。使用callback异步回调。 使用场景：实时更新候选词显示位置、根据光标位置调整输入法界面、实现跟随光标的浮动菜单等。 使用后效果：当编辑框光标位置发生变化时触发回调，返回光标的x坐标、y坐标和高度信息，输入法应用可据此调整候选词窗口或面板的定位。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -568,16 +232,6 @@ on(type: 'cursorContextChange', callback: (x: number, y: number, height: number)
 | type | 'cursorContextChange' | 是 |
 | callback | (x: number, y: number, height: number) = & gt; void | 是 |
 
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y: number, height: number) => {
-  console.info('inputMethodEngine cursorContextChange x:' + x);
-  console.info('inputMethodEngine cursorContextChange y:' + y);
-  console.info('inputMethodEngine cursorContextChange height:' + height);
-});
-```
-
 ## on('selectionChange')
 
 ```TypeScript
@@ -587,11 +241,9 @@ on(
     ): void
 ```
 
-订阅文本选择范围变化事件。使用callback异步回调。 <br> <br>使用场景：监听用户选中文本以提供剪切、复制、粘贴等快捷操作、根据选择文本显示相关建议、实现文本编辑辅助功能等。 <br> <br>使用后效果：当编辑框中文本选择范围发生变化时触发回调，返回变化前后的选区起始和终止下标。
+订阅文本选择范围变化事件。使用callback异步回调。 使用场景：监听用户选中文本以提供剪切、复制、粘贴等快捷操作、根据选择文本显示相关建议、实现文本编辑辅助功能等。 使用后效果：当编辑框中文本选择范围发生变化时触发回调，返回变化前后的选区起始和终止下标。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -602,29 +254,15 @@ on(
 | type | 'selectionChange' | 是 |
 | callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | 是 |
 
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate()
-  .on('selectionChange', (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => {
-    console.info('selectionChange oldBegin:' + oldBegin);
-    console.info('selectionChange oldEnd:' + oldEnd);
-    console.info('selectionChange newBegin:' + newBegin);
-    console.info('selectionChange newEnd:' + newEnd);
-  });
-```
-
 ## on('textChange')
 
 ```TypeScript
 on(type: 'textChange', callback: (text: string) => void): void
 ```
 
-订阅文本内容变化事件。使用callback异步回调。 <br> <br>使用场景：输入法应用需要根据编辑框文本内容变化更新候选词、提供智能输入建议、实现联想输入等。 <br> <br>使用后效果：当编辑框文本内容发生变化时触发回调，返回当前编辑框的完整文本内容。
+订阅文本内容变化事件。使用callback异步回调。 使用场景：输入法应用需要根据编辑框文本内容变化更新候选词、提供智能输入建议、实现联想输入等。 使用后效果：当编辑框文本内容发生变化时触发回调，返回当前编辑框的完整文本内容。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -635,25 +273,15 @@ on(type: 'textChange', callback: (text: string) => void): void
 | type | 'textChange' | 是 |
 | callback | (text: string) = & gt; void | 是 |
 
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate().on('textChange', (text: string) => {
-  console.info('inputMethodEngine textChange. text:' + text);
-});
-```
-
 ## on('editorAttributeChanged')
 
 ```TypeScript
 on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void
 ```
 
-订阅编辑框属性变化事件。使用callback异步回调。 <br> <br>使用场景：输入法应用需要根据编辑框属性变化（如输入类型从文本切换到数字、回车键类型从"搜索"切换到"发送"等）动态调整键盘布局。 <br> <br>使用后效果：当编辑框属性发生变化时触发回调，返回变化后的编辑框属性信息（包括inputPattern和enterKeyType），输入法应用可据此重新调整键盘布局。
+订阅编辑框属性变化事件。使用callback异步回调。 使用场景：输入法应用需要根据编辑框属性变化（如输入类型从文本切换到数字、回车键类型从"搜索"切换到"发送"等）动态调整键盘布局。 使用后效果：当编辑框属性发生变化时触发回调，返回变化后的编辑框属性信息（包括inputPattern和enterKeyType），输入法应用可据此重新调整键盘布局。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -663,256 +291,3 @@ on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): v
 | --- | --- | --- |
 | type | 'editorAttributeChanged' | 是 |
 | callback | (attr: EditorAttribute) = & gt; void | 是 |
-
-**示例**
-
-```TypeScript
-inputMethodEngine.getKeyboardDelegate()
-  .on('editorAttributeChanged', (editorAttribute: inputMethodEngine.EditorAttribute) => {
-    console.info(`Succeeded in receiving attribute of editor, inputPattern = ${editorAttribute.inputPattern}, enterKeyType = ${editorAttribute.enterKeyType}`);
-  });
-```
-
-## onCursorContextChange
-
-```TypeScript
-onCursorContextChange(callback: CursorContextChangeCallback): void
-```
-
-订阅光标变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | 是 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.onCursorContextChange((x: double, y: double, height: double) => {
-    console.info(`inputMethodEngine cursorContextChange x:${x}, y:${y}, height:${height}`);
-  });
-}
-```
-
-## onEditorAttributeChanged
-
-```TypeScript
-onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
-```
-
-订阅编辑框属性变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.onEditorAttributeChanged((attr: inputMethodEngine.EditorAttribute) => {
-    console.info(`Succeeded in receiving attribute of editor, inputPattern = ${attr.inputPattern}, enterKeyType = ${attr.enterKeyType}`);
-  });
-}
-```
-
-## onKeyDown
-
-```TypeScript
-onKeyDown(callback: KeyEventCallback): void
-```
-
-订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | 是 |
-
-**示例**
-
-```TypeScript
-let KeyboardDelegate = inputMethodEngine.getKeyboardDelegate()
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-
-  inputMethodEngineDelegate!.onKeyUp((keyEvent: inputMethodEngine.KeyEvent) => {
-    console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-    console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
-    return true;
-  });
-  inputMethodEngineDelegate!.onKeyDown((keyEvent: inputMethodEngine.KeyEvent) => {
-    console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-    console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
-    return true;
-  });
-}
-```
-
-## onKeyEvent
-
-```TypeScript
-onKeyEvent(callback: InputKeyEventCallback): void
-```
-
-订阅硬键盘（即物理键盘）事件。使用callback异步回调。 <br> | 参数名 | 类型 | 必填 | 说明 | | -------- | ------ | ---- | ------------------------------------------------------------ | | callback | [InputKeyEventCallback](../../../reference/apis-ime-kit/js-apis-inputmethodengine.md#inputkeyeventcallback23) | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。 -&nbsp;入参按键事件信息的数据类型为[InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)。 -&nbsp;若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | 是 |
-
-**示例**
-
-```TypeScript
-import type { KeyEvent } from '@kit.InputKit';
-
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.onKeyEvent((keyEvent: KeyEvent) => {
-    console.info(`inputMethodEngine keyEvent.action: ${keyEvent.action}`);
-    console.info(`inputMethodEngine keyEvent.key.code: ${keyEvent.key.code}`);
-    console.info(`inputMethodEngine keyEvent.ctrlKey: ${keyEvent.ctrlKey}`);
-    console.info(`inputMethodEngine keyEvent.unicodeChar: ${keyEvent.unicodeChar}`);
-    return true;
-  });
-}
-```
-
-## onKeyUp
-
-```TypeScript
-onKeyUp(callback: KeyEventCallback): void
-```
-
-订阅硬键盘（即物理键盘）上物理按键的按下或抬起事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | 是 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.onKeyUp((keyEvent: inputMethodEngine.KeyEvent) => {
-    console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-    console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
-    return true;
-  });
-  inputMethodEngineDelegate!.onKeyDown((keyEvent: inputMethodEngine.KeyEvent) => {
-    console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
-    console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
-    return true;
-  });
-}
-```
-
-## onSelectionChange
-
-```TypeScript
-onSelectionChange(callback: SelectionChangeCallback): void
-```
-
-订阅文本选择范围变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | 是 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!
-    .onSelectionChange((oldBegin: int, oldEnd: int, newBegin: int, newEnd: int) => {
-      console.info(`inputMethodEngine beforeEach selectionChange oldBegin: ${oldBegin}`);
-      console.info(`inputMethodEngine beforeEach selectionChange oldEnd: ${oldEnd}`);
-      console.info(`inputMethodEngine beforeEach selectionChange newBegin: ${newBegin}`);
-      console.info(`inputMethodEngine beforeEach selectionChange newEnd: ${newEnd}`);
-    });
-
-}
-```
-
-## onTextChange
-
-```TypeScript
-onTextChange(callback: Callback<string>): void
-```
-
-订阅文本内容变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
-if (inputMethodEngineDelegate) {
-  inputMethodEngineDelegate!.onTextChange((text: string) => {
-    console.info(`inputMethodEngine textChange. text: ' ${text}`);
-  });
-}
-```

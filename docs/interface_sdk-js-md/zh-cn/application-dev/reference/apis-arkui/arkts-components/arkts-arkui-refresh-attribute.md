@@ -6,8 +6,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ maxPullDownDistance(distance: Optional<number>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ maxPullDownDistance(distance: Optional<number>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| distance | Optional & lt;number & gt; | 是 |
+| distance | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 ## maxPullDownDistance
 
@@ -48,8 +44,6 @@ maxPullDownDistance(distance: number | Resource | undefined)
 设置最大下拉距离，支持Resource资源类型。未通过该接口设置时，设置最大下拉距离为undefined。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,8 +70,6 @@ onOffsetChange(callback: Callback<number>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -100,8 +92,6 @@ onRefreshing(callback: () => void)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -121,8 +111,6 @@ onStateChange(callback: (state: RefreshStatus) => void)
 当前刷新状态变更时，触发回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -144,8 +132,6 @@ pullDownRatio(ratio: Optional<number>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -156,7 +142,7 @@ pullDownRatio(ratio: Optional<number>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [ratio](../arkts-apis/arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | Optional & lt;number & gt; | 是 |
+| [ratio](../arkts-apis/arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 ## pullToRefresh
 
@@ -167,8 +153,6 @@ pullToRefresh(value: boolean)
 设置当下拉距离超过[refreshOffset](#refreshoffset)时是否能触发刷新。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -192,8 +176,6 @@ pullUpToCancelRefresh(enabled: boolean | undefined)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -216,8 +198,6 @@ refreshOffset(value: number)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -239,8 +219,6 @@ refreshOffset(value: number | Resource)
 设置触发刷新的下拉偏移量，当下拉距离小于该属性设置值时离手不会触发刷新，支持Resource资源类型。未通过该接口设置时，当未设置[promptText](arkts-arkui-refreshoptions-i.md)参数时，默认偏移量为64vp；设置了[promptText](arkts-arkui-refreshoptions-i.md)参数时，默认偏移量为96vp。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

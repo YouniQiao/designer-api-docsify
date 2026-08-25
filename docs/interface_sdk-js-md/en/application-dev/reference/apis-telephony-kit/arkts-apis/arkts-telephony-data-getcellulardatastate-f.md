@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCellularDataState
@@ -16,8 +16,6 @@ Obtains the cellular data connection status. This API uses an asynchronous callb
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 22+: ohos.permission.GET_NETWORK_INFO
@@ -36,32 +34,6 @@ Obtains the cellular data connection status. This API uses an asynchronous callb
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getCellularDataState((err: BusinessError, contextData: data.DataConnectState) => {
-    if(err) {
-        console.error(`getCellularDataState fail. code: ${err.code}, message: ${err.message}, contextData: ${contextData}`);
-    } else {
-        console.info(`getCellularDataState success`);
-    }
-});
-```
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getCellularDataState().then((contextData: data.DataConnectState) => {
-    console.info(`getCellularDataState success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCellularDataState fail. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getCellularDataState
 
@@ -73,8 +45,6 @@ Obtains the cellular data connection status. This API uses a promise to return t
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 22+: ohos.permission.GET_NETWORK_INFO
@@ -92,7 +62,3 @@ Obtains the cellular data connection status. This API uses a promise to return t
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [getCellularDataState](#getcellulardatastate)

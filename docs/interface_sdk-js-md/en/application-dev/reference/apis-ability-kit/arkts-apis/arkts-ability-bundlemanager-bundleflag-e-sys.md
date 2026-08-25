@@ -4,8 +4,6 @@ Enumerates the bundle flags, which indicate the type of bundle information to ob
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY
@@ -18,8 +16,6 @@ Used to obtain the bundle information of the application that has only a home sc
 **System API**: This flag can be used only in system APIs.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,8 +32,6 @@ Used to obtain the bundle information of an application installed by any user. I
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Used to obtain the bundle information of a main application (excluding its clone
 **System API**: This flag can be used only in system APIs.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -70,8 +62,6 @@ Used to obtain the bundle information of an application that has device-cloud fi
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -86,8 +76,6 @@ Used to obtain the bundle information of common app clones (appIndex: 1-5). It i
 **System API**: This flag can be used only in system APIs.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,8 +93,6 @@ Used to obtain the bundle information of sandbox app clones (appIndex: 2000-3000
 **System API**: This flag can be used only in system APIs.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Represents the user authorization result.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## NOT_SUPPORTED
@@ -17,8 +15,6 @@ NOT_SUPPORTED = 0
 The authorization is not supported. For example, if the main type of the requested continuous task is not **MODE_SPECIAL_SCENARIO_PROCESSING**, continuous task running in the background is not supported.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -32,8 +28,6 @@ No user operation.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## DENIED
@@ -46,8 +40,6 @@ The authorization is denied.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## GRANTED_ONCE
@@ -59,8 +51,6 @@ GRANTED_ONCE = 3
 The authorization is granted this time.Note: The authorization record will be cleared when the application exits.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -75,7 +65,5 @@ The authorization is granted always.
 [COMMON_EVENT_PACKAGE_ADDED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_added), [COMMON_EVENT_PACKAGE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_removed), [COMMON_EVENT_BUNDLE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_bundle_removed), [COMMON_EVENT_PACKAGE_FULLY_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_fully_removed), [COMMON_EVENT_PACKAGE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_changed).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

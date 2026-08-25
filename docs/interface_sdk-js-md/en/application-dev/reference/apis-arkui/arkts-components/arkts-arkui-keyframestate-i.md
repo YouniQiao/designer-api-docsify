@@ -4,8 +4,6 @@ Provides keyframe configuration options.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ event: () => void
 Closure function of the state at the time of the keyframe, that is, the state to be reached at the time of the keyframe.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Animation curve used by the keyframe.You are advised to specify the curve using 
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -62,13 +56,12 @@ duration: number
 
 Duration of the keyframe animation, in ms.Value range: [0, +∞)  
 **NOTE：**
-- If this parameter is set to a value less than 0, the value **0** is used. - Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
+- If this parameter is set to a value less than 0, the value **0** is used.
+- Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
 
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

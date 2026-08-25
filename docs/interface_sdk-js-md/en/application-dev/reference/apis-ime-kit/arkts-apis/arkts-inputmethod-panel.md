@@ -11,7 +11,7 @@ The **inputMethod.Panel** module provides APIs for managing the attributes of th
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+import { PanelInfo, PanelType, PanelFlag } from 'kits/@kit.IMEKit';
 ```
 
 ## Summary

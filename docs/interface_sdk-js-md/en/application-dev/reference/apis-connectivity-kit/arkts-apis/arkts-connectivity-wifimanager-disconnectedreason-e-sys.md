@@ -1,10 +1,8 @@
 # DisconnectedReason (System API)
 
-Wi-Fi disconnected reason. @enum { int }
+Wi-Fi disconnected reason. @enum { number }
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -20,8 +18,6 @@ Default reason
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -36,8 +32,6 @@ Password is wrong
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ DISC_REASON_CONNECTION_FULL = 2
 The number of router's connection reaches the maximum number limit
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

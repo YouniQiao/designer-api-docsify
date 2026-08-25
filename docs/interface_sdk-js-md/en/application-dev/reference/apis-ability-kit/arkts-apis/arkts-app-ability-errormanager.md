@@ -4,14 +4,12 @@ The ErrorManager module provides capabilities for registering and unregistering 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from '@kit.AbilityKit';
+import { errorManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -27,16 +25,12 @@ import { errorManager } from '@kit.AbilityKit';
 | [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offglobalunhandledrejectiondetected) |
 | [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offfreeze) |
 | [off(Error Management Module)](arkts-ability-errormanager-off-f.md#offglobalerroroccurred) |
-| [offFreeze(Error Management Module)](arkts-ability-errormanager-offfreeze-f.md) |
-| [offUnhandledRejection(Error Management Module)](arkts-ability-errormanager-offunhandledrejection-f.md) |
 | [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onerror) |
 | [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onloopobserver) |
 | [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onunhandledrejection) |
 | [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onglobalunhandledrejectiondetected) |
 | [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onfreeze) |
 | [on(Error Management Module)](arkts-ability-errormanager-on-f.md#onglobalerroroccurred) |
-| [onFreeze(Error Management Module)](arkts-ability-errormanager-onfreeze-f.md) |
-| [onUnhandledRejection(Error Management Module)](arkts-ability-errormanager-onunhandledrejection-f.md) |
 | [setDefaultErrorHandler(Error Management Module)](arkts-ability-errormanager-setdefaulterrorhandler-f.md) |
 | [setDefaultFreezeObserver(Error Management Module)](arkts-ability-errormanager-setdefaultfreezeobserver-f.md) |
 | [setDefaultResourceUsageObserver(Error Management Module)](arkts-ability-errormanager-setdefaultresourceusageobserver-f.md) |

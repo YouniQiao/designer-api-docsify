@@ -15,8 +15,6 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md)
@@ -33,39 +31,6 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager'
-
-try {
-  missionManager.clearAllMissions(err => {
-    if (err) {
-      console.error('clearAllMissions failed: ${err.message}');
-    } else {
-      console.info('clearAllMissions successfully.');
-    }
-  });
-} catch (err) {
-  console.error('clearAllMissions failed: ${err.message}');
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  missionManager.clearAllMissions().then((data) => {
-    console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`clearAllMissions failed: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`clearAllMissions failed: ${err.message}`);
-}
-```
-
 
 ## clearAllMissions
 
@@ -76,8 +41,6 @@ function clearAllMissions(): Promise<void>
 Clears all unlocked missions. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -94,7 +57,3 @@ Clears all unlocked missions. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [clearAllMissions](#clearallmissions)

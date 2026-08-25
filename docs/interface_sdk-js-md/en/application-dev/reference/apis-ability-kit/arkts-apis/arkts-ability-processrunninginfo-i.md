@@ -4,8 +4,6 @@ The module defines the running information of a process. The information can be 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ProcessInformation/ProcessInformation](arkts-ability-processinformation-i.md)
@@ -25,8 +23,6 @@ Names of all running bundles in the process.
 **Default:** an array of the bundleNames running in the process
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ Process ID.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [pid](arkts-ability-processinformation-i.md#pid)
@@ -70,8 +64,6 @@ Process name.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [processName](arkts-ability-processinformation-i.md#processname)
@@ -91,8 +83,6 @@ UID of the application.
 **Default:** user id
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

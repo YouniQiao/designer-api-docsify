@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## getAllDisplay
@@ -15,8 +15,6 @@ function getAllDisplay(callback: AsyncCallback<Array<Display>>): void
 Obtains all Display objects. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -30,32 +28,6 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-display.getAllDisplay((err: BusinessError, data: Array<display.Display>) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to obtain all the display objects. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the default display objects. Data: ${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise: Promise<Array<display.Display>> = display.getAllDisplay();
-promise.then((data: Array<display.Display>) => {
-  console.info(`Succeeded in obtaining the default display objects. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain all the display objects. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getAllDisplay
 
@@ -66,8 +38,6 @@ function getAllDisplay(): Promise<Array<Display>>
 Obtains all Display objects. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -80,7 +50,3 @@ Obtains all Display objects. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; |
-
-**Examples**
-
-See [getAllDisplay](#getalldisplay)

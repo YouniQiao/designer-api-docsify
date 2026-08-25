@@ -1,10 +1,8 @@
 # WifiStandard
 
-WLAN标准。 @enum { int }
+WLAN标准。 @enum { number }
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -18,8 +16,6 @@ WIFI_STANDARD_UNDEFINED
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI_STANDARD_11A
@@ -31,8 +27,6 @@ WIFI_STANDARD_11A
 WLAN 802.11a
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -46,8 +40,6 @@ WLAN 802.11b
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI_STANDARD_11G
@@ -59,8 +51,6 @@ WIFI_STANDARD_11G
 WLAN 802.11g
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -74,8 +64,6 @@ WLAN 802.11n
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI_STANDARD_11AC
@@ -87,8 +75,6 @@ WIFI_STANDARD_11AC
 WLAN 802.11ac
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -102,8 +88,6 @@ WLAN 802.11ax
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI_STANDARD_11AD
@@ -115,7 +99,5 @@ WIFI_STANDARD_11AD
 WLAN 802.11ad
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

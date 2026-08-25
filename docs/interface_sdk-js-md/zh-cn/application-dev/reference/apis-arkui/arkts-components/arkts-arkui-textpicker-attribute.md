@@ -6,8 +6,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ canLoop(value: boolean)
 设置是否可循环滚动。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ canLoop(isLoop: Optional<boolean>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -61,7 +55,7 @@ canLoop(isLoop: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isLoop | Optional & lt;boolean & gt; | 是 |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## defaultPickerItemHeight
 
@@ -72,8 +66,6 @@ defaultPickerItemHeight(value: number | string)
 设置选择项的高度。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -95,8 +87,6 @@ defaultPickerItemHeight(height: Optional<number | string>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -107,7 +97,7 @@ defaultPickerItemHeight(height: Optional<number | string>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| height | Optional & lt;number \ | string & gt; | 是 |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;number \| string & gt; | 是 |
 
 ## defaultTextStyle
 
@@ -118,8 +108,6 @@ defaultTextStyle(style: TextPickerTextStyle)
 设置关闭滑动过程中文本样式变化的动效时，各个选项的文本样式。 仅当[disableTextStyleAnimation](#disabletextstyleanimation)为true时生效。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -143,8 +131,6 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -155,7 +141,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | 是 |
+| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
 
 ## disableTextStyleAnimation
 
@@ -167,8 +153,6 @@ disableTextStyleAnimation(disabled: boolean)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -179,7 +163,7 @@ disableTextStyleAnimation(disabled: boolean)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| disabled | boolean | 是 |
+| [disabled](arkts-arkui-statestyles-i.md) | boolean | 是 |
 
 ## disappearTextStyle
 
@@ -190,8 +174,6 @@ disappearTextStyle(value: PickerTextStyle)
 设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -215,8 +197,6 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -227,7 +207,7 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | 是 |
 
 ## disappearTextStyle
 
@@ -239,8 +219,6 @@ disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -251,7 +229,7 @@ disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle \ | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 |
 
 ## divider
 
@@ -263,8 +241,6 @@ divider(value: DividerOptions | null)
 [DividerOptions](arkts-arkui-divideroptions-i.md)中startMargin + endMargin 超过组件宽度后，startMargin和endMargin会被置0。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -289,8 +265,6 @@ divider(textDivider: Optional<DividerOptions | null>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -301,7 +275,7 @@ divider(textDivider: Optional<DividerOptions | null>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| textDivider | Optional&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null & gt; | 是 |
+| textDivider | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null & gt; | 是 |
 
 ## enableHapticFeedback
 
@@ -313,8 +287,6 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -325,7 +297,7 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | 是 |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## gradientHeight
 
@@ -336,8 +308,6 @@ gradientHeight(value: Dimension)
 设置渐隐效果的高度。若未设置该属性，则显示默认渐隐效果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -361,8 +331,6 @@ gradientHeight(height: Optional<Dimension>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -373,7 +341,7 @@ gradientHeight(height: Optional<Dimension>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| height | Optional & lt;Dimension & gt; | 是 |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | 是 |
 
 ## onAccept
 
@@ -387,8 +355,6 @@ onAccept(callback: (value: string, index: number) => void)
 > 从API version 8开始支持，从API version 10开始废弃。此接口已完全移除，无替代接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 10
 
@@ -413,8 +379,6 @@ onCancel(callback: () => void)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -434,8 +398,6 @@ onChange(callback: (value: string | string[], index: number | number[]) => void)
 滑动TextPicker文本内容后，选项归位至选中项位置时，触发该回调。当用户滑动选择器导致选中项变化时触发，不能通过修改双向绑定的状态变量 （如selected）来触发。当显示文本或图片加文本列表时，value值为选中项中的文本值，当显示图片列表时，value值为空。回调会在滑动动画结束后触发，如果需要快速获取索引值变化， 建议使用[onEnterSelectedArea](#onenterselectedarea)接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -457,8 +419,6 @@ onChange(callback: Optional<OnTextPickerChangeCallback>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -469,7 +429,7 @@ onChange(callback: Optional<OnTextPickerChangeCallback>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional&lt;[OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)&gt; | 是 |
 
 ## onEnterSelectedArea
 
@@ -495,8 +455,6 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback)
 > - 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -527,8 +485,6 @@ onScrollStop(callback: TextPickerScrollStopCallback)
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -557,8 +513,6 @@ onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -569,7 +523,7 @@ onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional&lt;[TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)&gt; | 是 |
 
 ## selectedBackgroundStyle
 
@@ -581,8 +535,6 @@ selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -593,7 +545,7 @@ selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | 是 |
 
 ## selectedIndex
 
@@ -604,8 +556,6 @@ selectedIndex(value: number | number[])
 设置选中项在数据选择列表中的索引值，优先级高于[TextPickerOptions](arkts-arkui-textpickeroptions-i.md)中的"value"属性。单列数据选择器使用 number类型。多列数据选择器使用number[]类型。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -629,8 +579,6 @@ selectedIndex(index: Optional<number | number[]>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -641,7 +589,7 @@ selectedIndex(index: Optional<number | number[]>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| index | Optional & lt;number \ | number[] & gt; | 是 |
+| index | [Optional](arkts-arkui-optional-t.md)&lt;number \| number[] & gt; | 是 |
 
 ## selectedTextStyle
 
@@ -652,8 +600,6 @@ selectedTextStyle(value: PickerTextStyle)
 设置选中项的文本颜色、字号、字体粗细。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -677,8 +623,6 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -689,7 +633,7 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | 是 |
 
 ## selectedTextStyle
 
@@ -701,8 +645,6 @@ selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -713,7 +655,7 @@ selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle \ | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 |
 
 ## textStyle
 
@@ -724,8 +666,6 @@ textStyle(value: PickerTextStyle)
 设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -749,8 +689,6 @@ textStyle(style: Optional<PickerTextStyle>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -761,7 +699,7 @@ textStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | 是 |
 
 ## textStyle
 
@@ -773,8 +711,6 @@ textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -785,4 +721,4 @@ textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle \ | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | 是 |

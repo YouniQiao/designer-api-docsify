@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## startCollectLog
@@ -13,11 +13,18 @@ function startCollectLog(admin: Want): Promise<void>
 ```
 
 Starts to collect the fault logs of the [FaultType](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger-faulttype-e.md) type that have been generated and stored on the device's hard disk. The fault logs, application service logs, and system runtime logs that are not stored on the hard disk cannot be collected.  
-- After the API is called, the system starts a log collection task. The API returns a response immediately after the task is started. The task may fail due to system performance constraints. - This API can be called by multiple MDM apps. Logs collected by different MDM apps under different users are saved separately and do not affect each other. Only one MDM app can start a log collection task at a time. If this API is called before the task is complete, the error code 9201009 is returned, and other MDM apps may call the API only after the task finishes. - Upon task completion, the MDM app is notified via the [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) callback. The system mounts the collected log files to the MDM app sandbox path, enabling the MDM app to read the logs within the callback. - If the log collection task takes more than 5 minutes, the [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) callback returns a task execution failure message. - After the app obtains the logs, you are advised to call [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) to remove the collected logs.
+- After the API is called, the system starts a log collection task. The API returns a response immediately after  
+the task is started. The task may fail due to system performance constraints.  
+- This API can be called by multiple MDM apps. Logs collected by different MDM apps under different users are saved  
+separately and do not affect each other. Only one MDM app can start a log collection task at a time. If this API is called before the task is complete, the error code 9201009 is returned, and other MDM apps may call the API only after the task finishes.  
+- Upon task completion, the MDM app is notified via the  
+[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) callback. The system mounts the collected log files to the MDM app sandbox path, enabling the MDM app to read the logs within the callback.  
+- If the log collection task takes more than 5 minutes, the  
+[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) callback returns a task execution failure message.  
+- After the app obtains the logs, you are advised to call  
+[systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) to remove the collected logs.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ENTERPRISE_READ_LOG
 
@@ -46,22 +53,3 @@ Starts to collect the fault logs of the [FaultType](../../apis-performance-analy
 | [9201009](../errorcode-enterpriseDeviceManager.md#9201009-failed-to-create-a-log-collection-task) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-systemManager.startCollectLog(wantTemp).then(() => {
-  console.info('Succeeded in starting collect log');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to start collect log. Code: ${err.code}, message: ${err.message}`);
-});
-```

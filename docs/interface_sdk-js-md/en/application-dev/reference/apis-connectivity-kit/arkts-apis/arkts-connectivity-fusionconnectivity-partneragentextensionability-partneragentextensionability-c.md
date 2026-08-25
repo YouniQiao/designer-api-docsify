@@ -6,14 +6,12 @@ Class for the PartnerAgentExtensionAbility. Applications can use this ability to
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionAbility } from '@kit.ConnectivityKit';
+import { PartnerAgentExtensionAbility } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## onDestroyWithReason
@@ -26,8 +24,6 @@ Called when the PartnerAgentExtensionAbility is to be destroyed. Applications ca
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -37,16 +33,6 @@ Called when the PartnerAgentExtensionAbility is to be destroyed. Applications ca
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | reason | [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragentextensionabilitydestroyreason-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
-  onDestroyWithReason(reason: partnerAgent.PartnerAgentExtensionAbilityDestroyReason): void {
-    console.info(`onDestroyWithReason is: ${reason}`);
-  }
-}
-```
 
 ## onDeviceDiscovered
 
@@ -58,8 +44,6 @@ Called when a device is discovered.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -69,16 +53,6 @@ Called when a device is discovered.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-export default class PartnerAgentExtAbility extends PartnerAgentExtensionAbility {
-  onDeviceDiscovered(deviceAddress: partnerAgent.PartnerDeviceAddress): void {
-    console.info(`onDeviceDiscovered success: ${deviceAddress.bluetoothAddress}`);
-  }
-}
-```
 
 ## context
 
@@ -91,8 +65,6 @@ Context of the PartnerAgentExtensionAbility.
 **Type:** [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

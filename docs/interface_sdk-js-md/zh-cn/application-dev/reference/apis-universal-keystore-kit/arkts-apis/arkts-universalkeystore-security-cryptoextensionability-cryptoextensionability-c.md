@@ -4,14 +4,12 @@ Class to be override for external crypto extension ability.
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## 导入模块
 
 ```TypeScript
-import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
+import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## onAuthUkeyPin
@@ -25,8 +23,6 @@ onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCrypt
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **参数：**
@@ -41,25 +37,6 @@ onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCrypt
 | 类型 |
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
-
-**示例**
-
-```TypeScript
-import { huksExternalCrypto, HuksCryptoExtensionParam, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    // 执行PIN码认证操作，并且维护应用的PIN码认证状态。
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      authState: 1
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
 
 ## onClearUkeyPinAuthState
 
@@ -72,8 +49,6 @@ onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExt
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **参数：**
@@ -88,23 +63,6 @@ onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExt
 | 类型 |
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
-
-**示例**
-
-```TypeScript
-import { huksExternalCrypto, HuksCryptoExtensionParam, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
 
 ## onCloseResource
 
@@ -117,8 +75,6 @@ onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCry
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 **参数：**
@@ -134,24 +90,6 @@ onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCry
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huksExternalCrypto, HuksCryptoExtensionParam, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    // 执行句柄关闭操作。如果需要关闭底层句柄，则执行关闭操作。
-    const result: HuksCryptoExtensionResult = {
-        resultCode: 0,
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onEnumCertificates
 
 ```TypeScript
@@ -162,8 +100,6 @@ onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | 
 枚举Extension下所有Ukey设备的证书信息。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -179,25 +115,6 @@ onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | 
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huksExternalCrypto, HuksCryptoExtensionParam, CryptoExtensionAbility, HuksCryptoExtensionResult, HuksCryptoExtensionCertInfo } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    const certInfoSetArray: Array<HuksCryptoExtensionCertInfo> = []
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      certs: certInfoSetArray
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onExportCertificate
 
 ```TypeScript
@@ -208,8 +125,6 @@ onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksEx
 查询指定resourceId下的证书。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -226,26 +141,6 @@ onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksEx
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huksExternalCrypto, CryptoExtensionAbility, HuksCryptoExtensionResult,
-  HuksCryptoExtensionCertInfo } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    const certInfoSetArray: Array<HuksCryptoExtensionCertInfo> = []
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      certs: certInfoSetArray
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onExportKeyItem
 
 ```TypeScript
@@ -255,8 +150,6 @@ onExportKeyItem(handle: string, params: HuksCryptoExtensionParam[]): Promise<Huk
 用于导出指定密钥的公钥。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -275,34 +168,6 @@ onExportKeyItem(handle: string, params: HuksCryptoExtensionParam[]): Promise<Huk
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huks, CryptoExtensionAbility, HuksCryptoExtensionResult, HuksCryptoExtensionParam } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onExportKeyItem(handle: string, params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    // 解析可选参数，推荐传入密钥用途
-    let purpose: huks.HuksKeyPurpose | undefined = params.find(
-      param => param.tag === huks.HuksTag.HUKS_TAG_PURPOSE)?.value as huks.HuksKeyPurpose;
-
-    // 如未传入用途参数，设置默认值（推荐默认签名用途）
-    if (purpose === undefined) {
-      purpose = huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN;
-    }
-
-    let pubKey: Uint8Array = new Uint8Array(1024);
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      outData: pubKey
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onFinishSession
 
 ```TypeScript
@@ -313,8 +178,6 @@ onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 三段式密钥会话结束操作。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -331,25 +194,6 @@ onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huks, HuksCryptoExtensionParams, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams): Promise<HuksCryptoExtensionResult> {
-    let outBuffer: Uint8Array = new Uint8Array(1024);
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      outData: outBuffer
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onGenerateKeyItem
 
 ```TypeScript
@@ -359,8 +203,6 @@ onGenerateKeyItem(handle: string, params:HuksCryptoExtensionParam[]): Promise<Hu
 用于在扩展设备内生成密钥对。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -379,42 +221,6 @@ onGenerateKeyItem(handle: string, params:HuksCryptoExtensionParam[]): Promise<Hu
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huks, CryptoExtensionAbility, HuksCryptoExtensionResult, HuksCryptoExtensionParam } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onGenerateKeyItem(handle: string, params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    // 解析可选参数
-    let algorithm: huks.HuksKeyAlg | undefined = params.find(
-      param => param.tag === huks.HuksTag.HUKS_TAG_ALGORITHM)?.value as huks.HuksKeyAlg;
-    let keySize: huks.HuksKeySize | undefined = params.find(
-      param => param.tag === huks.HuksTag.HUKS_TAG_KEY_SIZE)?.value as huks.HuksKeySize;
-    let purpose: huks.HuksKeyPurpose | undefined = params.find(
-      param => param.tag === huks.HuksTag.HUKS_TAG_PURPOSE)?.value as huks.HuksKeyPurpose;
-
-    // 如未传入参数，设置默认值
-    if (algorithm === undefined) {
-      algorithm = huks.HuksKeyAlg.HUKS_ALG_RSA; // 默认RSA算法
-    }
-    if (keySize === undefined) {
-      keySize = huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048; // 默认2048位
-    }
-    if (purpose === undefined) {
-      purpose = huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN; // 默认签名用途
-    }
-
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onGetProperty
 
 ```TypeScript
@@ -425,8 +231,6 @@ onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCryp
 查询操作回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -444,26 +248,6 @@ onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCryp
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huksExternalCrypto, HuksCryptoExtensionParam, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    // 按照propertyId执行相关函数，函数参数从params中获取。输出数据封装到返回值的property字段中，由HUKS_EXT_CRYPTO_TAG_EXTRA_DATA携带。
-    const emptyArray: Array<huksExternalCrypto.HuksExternalCryptoParam> = [];
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      property: emptyArray
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onGetResourceId
 
 ```TypeScript
@@ -473,8 +257,6 @@ onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtension
 回调以获取加密扩展的资源ID。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -492,24 +274,6 @@ onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtension
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { HuksCryptoExtensionParam, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      resourceId: "test resourceId"
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onGetUkeyPinAuthState
 
 ```TypeScript
@@ -520,8 +284,6 @@ onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExter
 获取Ukey的PIN码认证状态。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -538,25 +300,6 @@ onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExter
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huksExternalCrypto, HuksCryptoExtensionParam, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    // 查询PIN码认证状态。
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      authState: 1
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onImportCertificate
 
 ```TypeScript
@@ -567,8 +310,6 @@ onImportCertificate(handle: string, params: HuksCryptoExtensionParam[],
 导入指定资源句柄的证书。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -588,25 +329,6 @@ onImportCertificate(handle: string, params: HuksCryptoExtensionParam[],
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { CryptoExtensionAbility, HuksCryptoExtensionParam, HuksCryptoExtensionResult,
-  HuksCryptoExtensionCertInfo } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onImportCertificate(handle: string, params: HuksCryptoExtensionParam[],
-      certInfo: HuksCryptoExtensionCertInfo): Promise<HuksCryptoExtensionResult> {
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onImportWrappedKeyItem
 
 ```TypeScript
@@ -617,8 +339,6 @@ onImportWrappedKeyItem(handle: string, wrappingHandle: string, params: HuksCrypt
 用于导入加密封装的密钥对。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -639,41 +359,6 @@ onImportWrappedKeyItem(handle: string, wrappingHandle: string, params: HuksCrypt
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huks, CryptoExtensionAbility, HuksCryptoExtensionResult, HuksCryptoExtensionParam } from '@kit.UniversalKeystoreKit';
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onImportWrappedKeyItem(handle: string, wrappingHandle: string, params: HuksCryptoExtensionParam[], wrappedKey: Uint8Array): Promise<HuksCryptoExtensionResult> {
-    // 解析可选参数
-    let algorithm: huks.HuksKeyAlg | undefined = params.find(
-      param => param.tag === huks.HuksTag.HUKS_TAG_ALGORITHM)?.value as huks.HuksKeyAlg;
-    let keySize: huks.HuksKeySize | undefined = params.find(
-      param => param.tag === huks.HuksTag.HUKS_TAG_KEY_SIZE)?.value as huks.HuksKeySize;
-    let purpose: huks.HuksKeyPurpose | undefined = params.find(
-      param => param.tag === huks.HuksTag.HUKS_TAG_PURPOSE)?.value as huks.HuksKeyPurpose;
-
-    // 如未传入参数，设置默认值
-    if (algorithm === undefined) {
-      algorithm = huks.HuksKeyAlg.HUKS_ALG_RSA;
-    }
-    if (keySize === undefined) {
-      keySize = huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048;
-    }
-    if (purpose === undefined) {
-      purpose = huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT;
-    }
-
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onInitSession
 
 ```TypeScript
@@ -684,8 +369,6 @@ onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionPara
 三段式初始化密钥会话操作。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -702,24 +385,6 @@ onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionPara
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huks, HuksCryptoExtensionParams, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionParams): Promise<HuksCryptoExtensionResult> {
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      handle: "test handle"
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onOpenResource
 
 ```TypeScript
@@ -730,8 +395,6 @@ onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternal
 打开资源句柄回调，在加密操作之前需打开资源，获取句柄。注意：返回的句柄必须被onCloseResource关闭。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -748,25 +411,6 @@ onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternal
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { huksExternalCrypto, HuksCryptoExtensionParam, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    // 解析resourceId，打开底层句柄，并映射为新的句柄返回。
-    let result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      handle: "test handle"
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onSetProperty
 
 ```TypeScript
@@ -777,8 +421,6 @@ onSetProperty(handle: string, propertyId: string, params: HuksCryptoExtensionPar
 根据参数中的handle和propertyId设置属性。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -798,24 +440,6 @@ onSetProperty(handle: string, propertyId: string, params: HuksCryptoExtensionPar
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { HuksCryptoExtensionParam, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onSetProperty(handle: string, propertyId: string, params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult> {
-    // 按照propertyId执行相关设置操作，操作参数从params中获取。
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```
-
 ## onUpdateSession
 
 ```TypeScript
@@ -826,8 +450,6 @@ onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 三段式密钥会话更新数据操作。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -843,22 +465,3 @@ onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 | 类型 |
 | --- |
 | Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
-
-**示例**
-
-```TypeScript
-import { huks, HuksCryptoExtensionParams, CryptoExtensionAbility, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
-
-export default class CryptoExtension extends CryptoExtensionAbility {
-  onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams): Promise<HuksCryptoExtensionResult> {
-    let outBuffer: Uint8Array = new Uint8Array(1024);
-    const result: HuksCryptoExtensionResult = {
-      resultCode: 0,
-      outData: outBuffer
-    };
-
-    // ...
-    return Promise.resolve(result);
-  }
-}
-```

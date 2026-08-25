@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## searchTarget
@@ -15,8 +15,6 @@ function searchTarget(target: TargetInfo, params: SearchParams): Promise<SearchR
 Searching for a specified target.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -44,18 +42,3 @@ Searching for a specified target.
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
 | [33300003](../errorcode-mechanic.md#33300003-function-not-supported) |
 | 33300004 |
-
-**Examples**
-
-```TypeScript
-let targetInfo: mechanicManager.TargetInfo = {
-    targetType: mechanicManager.TargetType.HUMAN_FACE
-};
-let searchParams: mechanicManager.SearchParams = {
-    direction: mechanicManager.SearchDirection.DEFAULT
-}
-mechanicManager.searchTarget(targetInfo,
-    searchParams).then((searchResult) => {
-    console.info(`'result:' ${searchResult}`);
-});
-```

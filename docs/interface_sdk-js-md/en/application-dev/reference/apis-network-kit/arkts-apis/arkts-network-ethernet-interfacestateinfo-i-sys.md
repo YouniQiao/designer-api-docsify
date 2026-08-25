@@ -4,8 +4,6 @@ Listens for status changes of an Ethernet NIC.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Listens for status changes of an Ethernet NIC.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## active
@@ -27,8 +25,6 @@ Whether the Ethernet NIC is activated. The value **true** indicates that the Eth
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -45,8 +41,6 @@ Name of the Ethernet NIC.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 

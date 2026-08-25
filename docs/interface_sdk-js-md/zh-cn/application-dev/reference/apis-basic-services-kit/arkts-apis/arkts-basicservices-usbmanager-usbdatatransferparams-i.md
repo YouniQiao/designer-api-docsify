@@ -4,14 +4,12 @@ USB数据传输参数对象，包含USB数据传输所需的所有参数，用�
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## buffer
@@ -25,8 +23,6 @@ buffer: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -42,8 +38,6 @@ callback: AsyncCallback<SubmitTransferCallback>
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## devPipe
@@ -58,23 +52,19 @@ devPipe: USBDevicePipe
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## endpoint
 
 ```TypeScript
-endpoint: int
+endpoint: number
 ```
 
 端点地址，取值范围为[1, 255]的正整数。需要调用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取设备信息，通过endpoint的address属性确定端点信息，通过direction 属性确定端点方向。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -90,55 +80,47 @@ USB传输标志，用于控制传输行为。可选值包括：0（将短帧报�
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## isoPacketCount
 
 ```TypeScript
-isoPacketCount: int
+isoPacketCount: number
 ```
 
 实时传输时数据包的数量，仅用于具有实时传输端点的I/O。取值范围为[0, INT_MAX]的非负数，（单位：个）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
 ## length
 
 ```TypeScript
-length: int
+length: number
 ```
 
 数据缓冲区的长度，取值范围为[0, INT_MAX]的非负数（期望长度），（单位：字节）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
 ## timeout
 
 ```TypeScript
-timeout: int
+timeout: number
 ```
 
 超时时间（单位：毫秒），指定时间内等待传输完成，若在指定时间内传输完成则正常返回否则返回超时。设置为0时无限等待直到传输完成。传入负数时抛出参数错误异常。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -154,8 +136,6 @@ type: UsbEndpointTransferType
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## userData
@@ -169,7 +149,5 @@ userData: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager

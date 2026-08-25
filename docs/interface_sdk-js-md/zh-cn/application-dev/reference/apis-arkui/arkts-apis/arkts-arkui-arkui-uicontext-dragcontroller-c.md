@@ -7,17 +7,15 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## cancelDataLoading
@@ -26,11 +24,9 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 cancelDataLoading(key: string): void
 ```
 
-当使用startDataLoading获取拖拽数据时，可调用该接口取消数据传输。仅可在拖拽释放后调用。
+当使用[startDataLoading](../arkts-components/arkts-arkui-dragevent-i.md#startdataloading)获取拖拽数据时，可调用该接口取消数据传输。仅可在拖拽释放后调用。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,8 +60,6 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -76,7 +70,7 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| customArray | Array&lt;[CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md)&gt; | 是 |
+| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | 是 |
 | dragInfo | dragController.DragInfo | 是 |
 
 **返回值：**
@@ -92,162 +86,15 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-1.在EntryAbility.ets中获取UI上下文并保存至LocalStorage中。
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { window, UIContext } from '@kit.ArkUI';
-
-let uiContext: UIContext;
-let localStorage: LocalStorage = new LocalStorage('uiContext');
-
-export default class EntryAbility extends UIAbility {
-  storage: LocalStorage = localStorage;
-
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-  }
-
-  onDestroy(): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // Main window is created, set main page for this ability
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-
-    windowStage.loadContent('pages/Index', this.storage, (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
-        return;
-      }
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
-      windowStage.getMainWindow((err, data) => {
-        if (err.code) {
-          console.error(`Failed to obtain the main window. Cause:${err.message}`);
-          return;
-        }
-        let windowClass: window.Window = data;
-        uiContext = windowClass.getUIContext();
-        this.storage.setOrCreate<UIContext>('uiContext', uiContext);
-        // 获取UIContext实例
-      });
-    });
-  }
-
-  onWindowStageDestroy(): void {
-    // Main window is destroyed, release UI related resources
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
-  }
-
-  onForeground(): void {
-    // Ability has brought to foreground
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onForeground');
-  }
-
-  onBackground(): void {
-    // Ability has back to background
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onBackground');
-  }
-}
-```
-
-2.通过this.getUIContext().getSharedLocalStorage()获取上下文，进而获取DragController对象实施后续操作。
-
-```TypeScript
-import { dragController, UIContext } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-import { unifiedDataChannel } from '@kit.ArkData';
-
-@Entry()
-@Component
-struct DragControllerPage {
-  private dragAction: dragController.DragAction | null = null;
-  customBuilders: Array<CustomBuilder | DragItemInfo> = new Array<CustomBuilder | DragItemInfo>();
-  storages = this.getUIContext().getSharedLocalStorage();
-
-  @Builder
-  DraggingBuilder() {
-    Column() {
-      Text("DraggingBuilder")
-    }
-    .width(100)
-    .height(100)
-    .backgroundColor(Color.Blue)
-  }
-
-  build() {
-    Column() {
-      Button('多对象dragAction customBuilder拖拽').onTouch((event?: TouchEvent) => {
-        if (event) {
-          if (event.type == TouchType.Down) {
-            console.info("multi drag Down by listener");
-            this.customBuilders.push(() => {
-              this.DraggingBuilder()
-            });
-            this.customBuilders.push(() => {
-              this.DraggingBuilder()
-            });
-            this.customBuilders.push(() => {
-              this.DraggingBuilder()
-            });
-            let text = new unifiedDataChannel.Text();
-            let unifiedData = new unifiedDataChannel.UnifiedData(text);
-            let dragInfo: dragController.DragInfo = {
-              pointerId: 0,
-              data: unifiedData,
-              extraParams: ''
-            };
-            try {
-              let uiContext: UIContext = this.storages?.get<UIContext>('uiContext') as UIContext;
-              this.dragAction = uiContext.getDragController().createDragAction(this.customBuilders, dragInfo);
-              if (!this.dragAction) {
-                console.info("listener dragAction is null");
-                return;
-              }
-              this.dragAction.on('statusChange', (dragAndDropInfo) => {
-                if (dragAndDropInfo.status == dragController.DragStatus.STARTED) {
-                  console.info("drag has start");
-                } else if (dragAndDropInfo.status == dragController.DragStatus.ENDED) {
-                  console.info("drag has end");
-                  if (!this.dragAction) {
-                    return;
-                  }
-                  this.customBuilders.splice(0, this.customBuilders.length);
-                  this.dragAction.off('statusChange');
-                }
-              })
-              this.dragAction.startDrag().then(() => {
-              }).catch((err: Error) => {
-                console.error(`start drag Error:${err.message}`);
-              })
-            } catch (err) {
-              console.error(`create dragAction Error:${err.message}`);
-            }
-          }
-        }
-      }).margin({ top: 20 })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## enableDropDisallowedBadge
 
 ```TypeScript
 enableDropDisallowedBadge(enabled: boolean): void
 ```
 
-当组件的类型与配置的allowDrop无交集时可显示禁用角标。通常，当组件可以接收或处理拖拽数据，或当它返回DragBehavior.COPY向系统声明数据以复制方式 处理时，拖拽对象会显示加号及数据编号的角标。如果返回DragBehavior.MOVE以向系统声明数据以剪切方式处理，拖拽对象将只显示数据编号的角标。当目标进行拖拽时，若系统决定或组件显式声明无法处理拖拽数据，可通过该方法检查是否 应显示拖拽禁止角标。该接口暂不支持[UIExtension](arkts-arkui-uiextension.md)。
+当组件的类型与配置的[allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop)无交集时可显示禁用角标。通常，当组件可以接收或处理拖拽数据，或当它返回DragBehavior.COPY向系统声明数据以复制方式 处理时，拖拽对象会显示加号及数据编号的角标。如果返回DragBehavior.MOVE以向系统声明数据以剪切方式处理，拖拽对象将只显示数据编号的角标。当目标进行拖拽时，若系统决定或组件显式声明无法处理拖拽数据，可通过该方法检查是否 应显示拖拽禁止角标。该接口暂不支持[UIExtension](arkts-arkui-uiextension.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -261,57 +108,6 @@ enableDropDisallowedBadge(enabled: boolean): void
 | --- | --- | --- |
 | enabled | boolean | 是 |
 
-**示例**
-
-在EntryAbility.ets中调用enableDropDisallowedBadge接口，设置enabled参数为true。
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window, UIContext } from '@kit.ArkUI';
-
- export default class EntryAbility extends UIAbility {
-   onWindowStageCreate(windowStage: window.WindowStage): void {
-       windowStage.loadContent('pages/Index', (err, data) => {
-         if (err.code) {
-         return;
-       }
-       windowStage.getMainWindow((err, data) => {
-         if (err.code) {
-           return;
-         }
-         let windowClass: window.Window = data;
-         let uiContext: UIContext = windowClass.getUIContext();
-         uiContext.getDragController().enableDropDisallowedBadge(true);
-     });
-   });
- }
-}
-```
-
-在Index.ets中拖拽图标icon至下方空白区域，显示拖拽禁止角标。
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  build() {
-    Column({ space: 20 }) {
-      // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件
-      Image($r('app.media.startIcon'))
-        .width(120)
-        .height(120)
-      Text('这里是不能落入区域')
-      Column()
-        .width('100%')
-        .layoutWeight(1)
-        .allowDrop(null)
-        .onDrop(() => {
-        })
-    }.width('100%')
-  }
-}
-```
-
 ## executeDrag
 
 ```TypeScript
@@ -323,8 +119,6 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -335,7 +129,7 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| custom | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md) | 是 |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 |
 | dragInfo | dragController.DragInfo | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | 是 |
 
@@ -345,151 +139,6 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-
-**示例**
-
-```TypeScript
-import { dragController } from '@kit.ArkUI';
-import { unifiedDataChannel } from '@kit.ArkData';
-
-class DragInfo {
-  event: DragEvent | undefined = undefined;
-  extraParams: string = '';
-}
-
-@Entry
-@Component
-struct DragControllerPage {
-  @Builder
-  DraggingBuilder() {
-    Column() {
-      Text("DraggingBuilder")
-    }
-    .width(100)
-    .height(100)
-    .backgroundColor(Color.Blue)
-  }
-
-  build() {
-    Column() {
-      Button('touch to execute drag')
-        .onTouch((event?: TouchEvent) => {
-          if (event) {
-            if (event.type == TouchType.Down) {
-              let text = new unifiedDataChannel.Text();
-              let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-              let dragInfo: dragController.DragInfo = {
-                pointerId: 0,
-                data: unifiedData,
-                extraParams: ''
-              };
-              let eve: DragInfo = new DragInfo();
-              this.getUIContext().getDragController().executeDrag(() => {
-                this.DraggingBuilder()
-              }, dragInfo, (err, eve) => {
-                if (eve.event) {
-                  if (eve.event.getResult() == DragResult.DRAG_SUCCESSFUL) {
-                    // ...
-                  } else if (eve.event.getResult() == DragResult.DRAG_FAILED) {
-                    // ...
-                  }
-                }
-              })
-            }
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { dragController } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-import { unifiedDataChannel } from '@kit.ArkData';
-
-class DragInfo {
-  event: DragEvent | undefined = undefined;
-  extraParams: string = '';
-}
-
-@Entry
-@Component
-struct DragControllerPage {
-  @State pixmap: image.PixelMap | null = null;
-
-  @Builder
-  DraggingBuilder() {
-    Column() {
-      Text("DraggingBuilder")
-    }
-    .width(100)
-    .height(100)
-    .backgroundColor(Color.Blue)
-  }
-
-  @Builder
-  PixmapBuilder() {
-    Column() {
-      Text("PixmapBuilder")
-    }
-    .width(100)
-    .height(100)
-    .backgroundColor(Color.Blue)
-  }
-
-  build() {
-    Column() {
-      Button('touch to execute drag')
-        .onTouch((event?: TouchEvent) => {
-          if (event) {
-            if (event.type == TouchType.Down) {
-              let text = new unifiedDataChannel.Text();
-              let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-              let dragInfo: dragController.DragInfo = {
-                pointerId: 0,
-                data: unifiedData,
-                extraParams: ''
-              };
-              let pb: CustomBuilder = (): void => {
-                this.PixmapBuilder()
-              };
-              this.getUIContext().getComponentSnapshot().createFromBuilder(pb).then((pix: image.PixelMap) => {
-                this.pixmap = pix;
-                let dragItemInfo: DragItemInfo = {
-                  pixelMap: this.pixmap,
-                  builder: () => {
-                    this.DraggingBuilder()
-                  },
-                  extraInfo: "DragItemInfoTest"
-                };
-                let eve: DragInfo = new DragInfo();
-                this.getUIContext()
-                  .getDragController()
-                  .executeDrag(dragItemInfo, dragInfo)
-                  .then((eve) => {
-                    if (eve.event.getResult() == DragResult.DRAG_SUCCESSFUL) {
-                      // ...
-                    } else if (eve.event.getResult() == DragResult.DRAG_FAILED) {
-                      // ...
-                    }
-                  })
-                  .catch((err: Error) => {
-                  })
-              })
-            }
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## executeDrag
 
@@ -502,8 +151,6 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -514,7 +161,7 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| custom | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md) | 是 |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 |
 | dragInfo | dragController.DragInfo | 是 |
 
 **返回值：**
@@ -531,10 +178,6 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-参见 [executeDrag](#executedrag)
-
 ## getDragPreview
 
 ```TypeScript
@@ -544,8 +187,6 @@ getDragPreview(): dragController.DragPreview
 返回一个代表拖拽背板的对象。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -559,10 +200,6 @@ getDragPreview(): dragController.DragPreview
 | --- |
 | dragController.DragPreview |
 
-**示例**
-
-请参考[animate](arkts-arkui-dragcontroller-dragpreview-c.md#animate)示例。
-
 ## notifyDragStartRequest
 
 ```TypeScript
@@ -572,8 +209,6 @@ notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): vo
 控制应用是否可以发起拖拽。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -587,78 +222,6 @@ notifyDragStartRequest(requestStatus: dragController.DragStartRequestStatus): vo
 | --- | --- | --- |
 | requestStatus | dragController.DragStartRequestStatus | 是 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { unifiedDataChannel } from '@kit.ArkData';
-import { image } from '@kit.ImageKit';
-import { dragController } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct NormalEts {
-  @State finished: boolean = false;
-  @State timeout1: number = 1;
-  @State pixmap: image.PixelMap | undefined = undefined;
-  @State unifiedData1: unifiedDataChannel.UnifiedData | undefined = undefined;
-  @State previewData: DragItemInfo | undefined = undefined;
-
-  loadData() {
-    // 设置4s后才能发起拖拽
-    let timeout = setTimeout(() => {
-      this.getUIContext().getComponentSnapshot().get("image1", (error: Error, pixmap: image.PixelMap) => {
-        this.pixmap = pixmap;
-        this.previewData = {
-          pixelMap: this.pixmap
-        };
-      });
-
-      let data: unifiedDataChannel.Image = new unifiedDataChannel.Image();
-      data.imageUri = "app.media.startIcon";
-      let unifiedData = new unifiedDataChannel.UnifiedData(data);
-      this.unifiedData1 = unifiedData;
-
-      this.getUIContext().getDragController().notifyDragStartRequest(dragController.DragStartRequestStatus.READY);
-    }, 4000);
-    this.timeout1 = timeout;
-  }
-
-  build() {
-    Column({ space: 20 }) {
-      Image($r("app.media.startIcon"))
-        .width(150)
-        .height(150)
-        .id("image1")
-        .draggable(true)
-        .dragPreview(this.previewData)
-        .onPreDrag((status: PreDragStatus) => {
-          if (status == PreDragStatus.PREPARING_FOR_DRAG_DETECTION) {
-            this.loadData();
-          } else {
-            clearTimeout(this.timeout1);
-          }
-        })
-        .onDragStart((event: DragEvent) => {
-          if (this.finished == false) {
-            this.getUIContext()
-              .getDragController()
-              // 应用数据准备阶段，无法发起拖拽
-              .notifyDragStartRequest(dragController.DragStartRequestStatus.WAITING);
-          } else {
-            event.setData(this.unifiedData1);
-          }
-        })
-        .onDragEnd(() => {
-          this.finished = false;
-        })
-    }
-    .width('100%')
-    .height(400)
-  }
-}
-```
-
 ## setDragEventStrictReportingEnabled
 
 ```TypeScript
@@ -668,8 +231,6 @@ setDragEventStrictReportingEnabled(enable: boolean): void
 当目标从父组件拖拽到子组件时，通过该方法设置是否会触发父组件的onDragLeave的回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -682,28 +243,3 @@ setDragEventStrictReportingEnabled(enable: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | enable | boolean | 是 |
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window, UIContext } from '@kit.ArkUI';
-
- export default class EntryAbility extends UIAbility {
-   onWindowStageCreate(windowStage: window.WindowStage): void {
-       windowStage.loadContent('pages/Index', (err, data) => {
-         if (err.code) {
-         return;
-       }
-       windowStage.getMainWindow((err, data) => {
-         if (err.code) {
-           return;
-         }
-         let windowClass: window.Window = data;
-         let uiContext: UIContext = windowClass.getUIContext();
-         uiContext.getDragController().setDragEventStrictReportingEnabled(true);
-     });
-   });
- }
-}
-```

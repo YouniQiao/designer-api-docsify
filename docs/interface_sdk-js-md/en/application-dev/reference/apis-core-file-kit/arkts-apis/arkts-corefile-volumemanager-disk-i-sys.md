@@ -4,8 +4,6 @@ Disk information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Disk information.
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## diskId
@@ -27,8 +25,6 @@ Disk ID, in the disk-{Primary device ID}-{Secondary device ID} format.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Disk type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -67,8 +61,6 @@ Disk information extension field.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Indicates that the disk can be removed.The value true indicates that the disk ca
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -99,16 +89,14 @@ Indicates that the disk can be removed.The value true indicates that the disk ca
 ## sizeBytes
 
 ```TypeScript
-sizeBytes: long
+sizeBytes: number
 ```
 
-Disk total size. <br>Unit: Byte.
+Disk total size. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,8 +115,6 @@ Indicates the volume of a disk. A disk may contain multiple volumes.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

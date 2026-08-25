@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## createVlanInterface
@@ -19,8 +19,6 @@ Creates a virtual local area network (VLAN) with specified **vlanId** on a speci
 > API is called.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -52,17 +50,3 @@ Creates a virtual local area network (VLAN) with specified **vlanId** on a speci
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-non-ethernet) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let ifName = "eth0";
-let vlanId = 1;
-connection.createVlanInterface(ifName, vlanId).then(() => {
-  console.info(`Create vlan success`);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create vlan. Code:${error.code}, message:${error.message}`);
-});
-```

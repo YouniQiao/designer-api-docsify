@@ -4,14 +4,12 @@ The **deviceStatus** module provides the device status awareness functionality.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary
@@ -21,9 +19,7 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [off](arkts-multimodalawareness-devicestatus-off-f.md#offsteadystandingdetect) |
-| [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md) |
 | [on](arkts-multimodalawareness-devicestatus-on-f.md#onsteadystandingdetect) |
-| [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md) |
 
 <!--Del-->
 ### Functions(System API)

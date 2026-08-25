@@ -4,8 +4,6 @@ Enumerates the same-page modes for cross-process embedded components and their h
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SEMI_SILENT
@@ -17,8 +15,6 @@ SEMI_SILENT = 0
 Ignores initial page loading events and root node page events from the cross-process embedded component.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ FULL_SILENT = 1
 Ignores all page events from the cross-process embedded component.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

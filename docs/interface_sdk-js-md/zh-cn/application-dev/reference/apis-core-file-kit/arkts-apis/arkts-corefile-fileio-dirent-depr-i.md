@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
@@ -27,8 +25,6 @@ isBlockDevice(): boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
@@ -40,18 +36,6 @@ isBlockDevice(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isBLockDevice = dir.readSync().isBlockDevice();
-```
 
 ## isCharacterDevice
 
@@ -63,8 +47,6 @@ isCharacterDevice(): boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
@@ -76,18 +58,6 @@ isCharacterDevice(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isCharacterDevice = fileio.statSync(filePath).isCharacterDevice();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isCharacterDevice = dir.readSync().isCharacterDevice();
-```
 
 ## isDirectory
 
@@ -99,8 +69,6 @@ isDirectory(): boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
@@ -112,18 +80,6 @@ isDirectory(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let dirPath = pathDir + "/test";
-let isDirectory = fileio.statSync(dirPath).isDirectory();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isDirectory = dir.readSync().isDirectory();
-```
 
 ## isFIFO
 
@@ -135,8 +91,6 @@ isFIFO(): boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
@@ -148,18 +102,6 @@ isFIFO(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFIFO = fileio.statSync(filePath).isFIFO();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isFIFO = dir.readSync().isFIFO();
-```
 
 ## isFile
 
@@ -171,8 +113,6 @@ isFile(): boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
@@ -184,18 +124,6 @@ isFile(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFile = fileio.statSync(filePath).isFile();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isFile = dir.readSync().isFile();
-```
 
 ## isSocket
 
@@ -207,8 +135,6 @@ isSocket(): boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
@@ -220,18 +146,6 @@ isSocket(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isSocket = fileio.statSync(filePath).isSocket();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isSocket = dir.readSync().isSocket();
-```
 
 ## isSymbolicLink
 
@@ -243,8 +157,6 @@ isSymbolicLink(): boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md)
@@ -256,18 +168,6 @@ isSymbolicLink(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test";
-let isSymbolicLink = fileio.statSync(filePath).isSymbolicLink();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isSymbolicLink = dir.readSync().isSymbolicLink();
-```
 
 ## name
 
@@ -280,8 +180,6 @@ readonly name: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

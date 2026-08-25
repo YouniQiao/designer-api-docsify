@@ -4,8 +4,6 @@ Defines the parameters of the **Canvas** component.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ imageAIOptions?: ImageAIOptions
 
 AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
 
-**Type:** ImageAIOptions
+**Type:** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,13 +35,11 @@ AI image analysis options. You can configure the analysis type or bind an analyz
 unit?: LengthMetricsUnit
 ```
 
-Indicates the unit mode employed by Canvas during drawing. <br>It can only be set when creating the **Canvas** component and cannot be modified afterwards. <br>Default value: **LengthMetricsUnit.DEFAULT**
+Indicates the unit mode employed by Canvas during drawing. It can only be set when creating the **Canvas** component and cannot be modified afterwards. Default value: **LengthMetricsUnit.DEFAULT**
 
 **Type:** LengthMetricsUnit
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

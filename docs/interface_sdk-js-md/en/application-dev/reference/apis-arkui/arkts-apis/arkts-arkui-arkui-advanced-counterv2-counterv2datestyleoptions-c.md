@@ -6,14 +6,12 @@ Defines the date style options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from 'kits/@kit.ArkUI';
 ```
 
 ## onDateChange
@@ -26,8 +24,6 @@ Trigger an event when the date of the counter has been changed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -37,7 +33,7 @@ Trigger an event when the date of the counter has been changed.
 ## day
 
 ```TypeScript
-day?: int
+day?: number
 ```
 
 Set the day of the counter component.
@@ -48,8 +44,6 @@ Set the day of the counter component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -59,7 +53,7 @@ Set the day of the counter component.
 ## month
 
 ```TypeScript
-month?: int
+month?: number
 ```
 
 Set the month of the counter component.
@@ -70,8 +64,6 @@ Set the month of the counter component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -81,7 +73,7 @@ Set the month of the counter component.
 ## year
 
 ```TypeScript
-year?: int
+year?: number
 ```
 
 Set the year of the counter component, ranges from 1 to 5000.
@@ -91,8 +83,6 @@ Set the year of the counter component, ranges from 1 to 5000.
 **Default:** 1
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

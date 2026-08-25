@@ -4,14 +4,12 @@ Defines the device configuration.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## colorMode
@@ -25,8 +23,6 @@ Color mode.
 **Type:** ColorMode
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Device type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -61,8 +55,6 @@ Screen orientation modes.
 **Type:** Direction
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,8 +72,6 @@ Language locale.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -89,16 +79,14 @@ Language locale.
 ## mcc
 
 ```TypeScript
-mcc : int
+mcc : number
 ```
 
 Mobile country code (MCC).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -107,16 +95,14 @@ Mobile country code (MCC).
 ## mnc
 
 ```TypeScript
-mnc : int
+mnc : number
 ```
 
 Mobile network code (MNC).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -133,8 +119,6 @@ Screen density
 **Type:** ScreenDensity
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

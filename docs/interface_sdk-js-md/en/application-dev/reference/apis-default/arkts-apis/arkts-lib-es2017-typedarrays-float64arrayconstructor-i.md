@@ -1,7 +1,5 @@
 # Float64ArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new (): Float64Array
 ```
-
-**ArkTS mode:** 
 
 **Return value:**
 

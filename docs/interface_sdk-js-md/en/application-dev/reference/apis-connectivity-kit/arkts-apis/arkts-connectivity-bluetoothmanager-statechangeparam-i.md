@@ -4,8 +4,6 @@ Profile state change parameters.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md)
@@ -15,7 +13,7 @@ Profile state change parameters.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -29,8 +27,6 @@ The address of device
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -49,8 +45,6 @@ Profile state value
 **Type:** ProfileConnectionState
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

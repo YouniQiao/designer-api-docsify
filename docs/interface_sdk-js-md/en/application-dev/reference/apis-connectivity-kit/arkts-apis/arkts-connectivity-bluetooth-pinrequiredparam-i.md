@@ -4,8 +4,6 @@ Describes the bond key param.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PinRequiredParam](arkts-connectivity-bluetoothmanager-pinrequiredparam-i.md)
@@ -15,7 +13,7 @@ Describes the bond key param.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -29,8 +27,6 @@ ID of the device to pair.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -49,8 +45,6 @@ Key for the device pairing.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

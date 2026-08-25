@@ -4,8 +4,6 @@ Provides attribute names and value types of a node element.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityFocused
@@ -19,8 +17,6 @@ Whether the element is in the accessibility focus state. The value **true** indi
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -36,8 +32,6 @@ ID of the next component to be focused. This attribute value set by the user on 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityPreviousFocusId
@@ -51,8 +45,6 @@ ID of the previously focused component. This attribute value set by the user on 
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -68,8 +60,6 @@ Whether the element is scrollable in accessibility mode. This attribute takes pr
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityText
@@ -83,8 +73,6 @@ Accessibility text information of an element.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -100,8 +88,6 @@ Bundle name.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## checkable
@@ -115,8 +101,6 @@ Whether the element is checkable. The value **true** indicates that the element 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -132,8 +116,6 @@ Whether the element is checked. The value **true** indicates that the element is
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## children
@@ -147,8 +129,6 @@ All child elements.
 **Type:** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -164,8 +144,6 @@ Whether the element is clickable. The value **true** indicates that the element 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## componentId
@@ -179,8 +157,6 @@ ID of the component to which the element belongs.Default value: **-1**.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -196,8 +172,6 @@ Component type of the element, for example, 'Button' for the Button component an
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## contents
@@ -211,8 +185,6 @@ List of contents. Set this parameter based on site requirements. No special rest
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -228,8 +200,6 @@ Index of the current item. The value range is greater than or equal to 0. The de
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## customComponentType
@@ -243,8 +213,6 @@ Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-ark
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -260,8 +228,6 @@ Description of the element. Set this parameter based on site requirements. No sp
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## editable
@@ -275,8 +241,6 @@ Whether the element is editable. The value **true** indicates that the element i
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -292,8 +256,6 @@ List index of the last displayed item on the screen. The value range is greater 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## error
@@ -308,8 +270,6 @@ Error status.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## extraInfo
@@ -319,13 +279,30 @@ extraInfo?: string
 ```
 
 Extended attribute used to define properties of specific components. The default value is an empty string. It includes:  
-- CheckboxGroupSelectedStatus: indicates the selection state of the CheckboxGroup component, where **0** indicates selected, **1** indicates partially selected, and **2** indicates unselected. - Row: row information of the focused item in the Grid component, indicating the row number of the item. - Column: column information of the focused item in the Grid component, indicating the column number of the item. - ListItemIndex: row information of the focused item in the List component, indicating the row number of the current item. - SideBarContainerStates: indicates the expanded state of expandable components (SideBarContainer, Select), where **0** indicates collapsed and **1** indicates expanded. - ToggleType: indicates the specific type of the Toggle component, where **0** indicates Checkbox, **1** indicates Switch, and **2** indicates Button. - BindSheet: indicates the display height state of the BindSheet half-modal dialog box component, where **0** indicates large height display state, **1** indicates medium height display state, and **2** indicates small height display state. - hasRegisteredHover: indicates whether the component has registered the onAccessibilityHover event callback. The value **1** indicates that the component has registered the event callback. This field is not used if the callback is not registered. - direction: indicates the layout direction of the List component, where "vertical" indicates vertical and "horizontal" indicates horizontal. - expandedState: indicates the expanded state of a ListItem in the List component, where "expanded" indicates expanded and "collapsed" indicates collapsed. - componentTypeDescription: detailed information about the component type, serving as a supplementary description for componentType.
+- CheckboxGroupSelectedStatus: indicates the selection state of the CheckboxGroup component, where **0** indicates  
+selected, **1** indicates partially selected, and **2** indicates unselected.  
+- Row: row information of the focused item in the Grid component, indicating the row number of the item.  
+- Column: column information of the focused item in the Grid component, indicating the column number of the item.  
+- ListItemIndex: row information of the focused item in the List component, indicating the row number of the  
+current item.  
+- SideBarContainerStates: indicates the expanded state of expandable components (SideBarContainer, Select), where  
+**0** indicates collapsed and **1** indicates expanded.  
+- ToggleType: indicates the specific type of the Toggle component, where **0** indicates Checkbox, **1** indicates  
+Switch, and **2** indicates Button.  
+- BindSheet: indicates the display height state of the BindSheet half-modal dialog box component, where **0**  
+indicates large height display state, **1** indicates medium height display state, and **2** indicates small height display state.  
+- hasRegisteredHover: indicates whether the component has registered the onAccessibilityHover event callback. The  
+value **1** indicates that the component has registered the event callback. This field is not used if the callback is not registered.  
+- direction: indicates the layout direction of the List component, where "vertical" indicates vertical and "  
+horizontal" indicates horizontal.  
+- expandedState: indicates the expanded state of a ListItem in the List component, where "expanded" indicates  
+expanded and "collapsed" indicates collapsed.  
+- componentTypeDescription: detailed information about the component type, serving as a supplementary description  
+for componentType.
 
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -341,8 +318,6 @@ Whether the element is focusable. The value **true** indicates that the element 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## hintText
@@ -356,8 +331,6 @@ Hint text.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -373,8 +346,6 @@ Touchable area of an element.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## inputType
@@ -388,8 +359,6 @@ Type of the input text. Different values correspond to different input modes: **
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -405,8 +374,6 @@ Alias of the element.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## isActive
@@ -420,8 +387,6 @@ Whether the element is active. The value **true** indicates that the element is 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -437,8 +402,6 @@ Whether the element is enabled. The value **true** indicates that the element is
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## isFocused
@@ -452,8 +415,6 @@ Whether the element is focused. The value **true** indicates that the element is
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -469,8 +430,6 @@ Whether the element is a hint. The value **true** indicates that the element is 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## isPassword
@@ -484,8 +443,6 @@ Whether the element is a password. The value **true** indicates that the element
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -501,8 +458,6 @@ Whether the element is visible. The value **true** indicates that the element is
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## itemCount
@@ -516,8 +471,6 @@ Total number of items. The value range is greater than or equal to 0. The defaul
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -533,8 +486,6 @@ Content of the last item in a list or scrollable control.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## layer
@@ -549,8 +500,6 @@ Display layer of the element. The value range is greater than or equal to 0. The
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## longClickable
@@ -559,13 +508,11 @@ Display layer of the element. The value range is greater than or equal to 0. The
 longClickable: boolean
 ```
 
-Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and **false** indicates the opposite. The default value is **false**.
+Whether the element is number-clickable. The value **true** indicates that the element is number-clickable, and **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -581,8 +528,6 @@ For scrollable components such as **List** and **Grid**, this attribute indicate
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## pageId
@@ -596,8 +541,6 @@ Page ID. The default value is **-1**.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -613,8 +556,6 @@ Parent element of the element.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## pluralLineSupported
@@ -628,8 +569,6 @@ Whether the element supports multiple lines of text. The value **true** indicate
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -645,8 +584,6 @@ Rectangular area of the element, including position and size information.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## resourceName
@@ -660,8 +597,6 @@ Resource name of the element.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -677,8 +612,6 @@ Root node element of the window element.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## screenRect
@@ -692,8 +625,6 @@ Display area of the element.
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -709,8 +640,6 @@ Whether the element is scrollable. The value **true** indicates that the element
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## selected
@@ -724,8 +653,6 @@ Whether the element is selected. The value **true** indicates that the element i
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -741,8 +668,6 @@ List index of the first item on the screen. The value range is greater than or e
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## text
@@ -756,8 +681,6 @@ Text of the element.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -773,8 +696,6 @@ Maximum length limit of the element text. The value range is greater than or equ
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textMoveUnit
@@ -788,8 +709,6 @@ Granularity of movement when the text is read.
 **Type:** accessibility.TextMoveUnit
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -805,8 +724,6 @@ Accessibility text type of an element, which is configured by the **accessibilit
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## triggerAction
@@ -820,8 +737,6 @@ Action that triggers the element event.
 **Type:** accessibility.Action
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -837,8 +752,6 @@ Window type of the element.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## valueMax
@@ -852,8 +765,6 @@ Maximum value.Default value: **0**.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -869,8 +780,6 @@ Minimum value.Default value: **0**.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## valueNow
@@ -885,8 +794,6 @@ Current value.Default value: **0**.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## windowId
@@ -900,7 +807,5 @@ Window ID.Default value: **-1**.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

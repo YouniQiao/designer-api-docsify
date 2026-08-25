@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## on('operationSubmitMetadata')
@@ -15,8 +15,6 @@ function on(type: 'operationSubmitMetadata', bundleName: string, callback: Callb
 Subscribes to a system event to obtain the encoded metadata. The application needs to register a callback to return the encoded metadata when the registered system event occurs.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -36,21 +34,3 @@ Subscribes to a system event to obtain the encoded metadata. The application nee
 | --- |
 | [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) |
 | [32100004](../errorcode-metadataBinding.md#32100004-subscription-failed) |
-
-**Examples**
-
-```TypeScript
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName: string = '';
-try {
-  metadataBinding.on('operationSubmitMetadata', bundleName, (event: number) => {
-    if (event == 1) {
-      console.info("The screenshot request is intercepted and the app link is obtained");
-    }
-  });
-} catch (error) {
-  console.error("register screenshot event error");
-}
-```

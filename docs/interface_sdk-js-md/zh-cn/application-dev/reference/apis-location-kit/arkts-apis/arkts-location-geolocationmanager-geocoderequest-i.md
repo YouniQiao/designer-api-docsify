@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## country
@@ -25,8 +23,6 @@ country?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -42,8 +38,6 @@ description: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## locale
@@ -58,86 +52,74 @@ locale?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## maxItems
 
 ```TypeScript
-maxItems?: int
+maxItems?: number
 ```
 
 表示返回位置信息的最大个数。取值范围为大于等于0，推荐该值小于10。默认值是1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## maxLatitude
 
 ```TypeScript
-maxLatitude?: double
+maxLatitude?: number
 ```
 
 表示最大纬度信息。取值范围为-90到90。仅支持WGS84坐标系。默认值是0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## maxLongitude
 
 ```TypeScript
-maxLongitude?: double
+maxLongitude?: number
 ```
 
 表示最大经度信息。取值范围为-180到180。仅支持WGS84坐标系。默认值是0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## minLatitude
 
 ```TypeScript
-minLatitude?: double
+minLatitude?: number
 ```
 
 表示最小纬度信息，与下面三个参数一起，表示一个经纬度范围。取值范围为-90到90。仅支持WGS84坐标系。默认值是0。如果该参数有值时，下面三个参数必填。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
 ## minLongitude
 
 ```TypeScript
-minLongitude?: double
+minLongitude?: number
 ```
 
 表示最小经度信息。取值范围为-180到180。仅支持WGS84坐标系。默认值是0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geocoder

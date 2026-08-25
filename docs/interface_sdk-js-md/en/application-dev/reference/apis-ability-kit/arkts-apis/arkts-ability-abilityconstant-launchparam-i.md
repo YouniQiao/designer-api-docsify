@@ -4,14 +4,12 @@ Describes the launch parameters, which mainly include the ability launch reasons
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AbilityConstant } from '@kit.AbilityKit';
+import { AbilityConstant } from 'kits/@kit.AbilityKit';
 ```
 
 ## lastExitDetailInfo
@@ -25,8 +23,6 @@ Key runtime information for the last exit of the ability (including process ID, 
 **Type:** [LastExitDetailInfo](arkts-ability-abilityconstant-lastexitdetailinfo-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Detailed message that describes the reason for the last exit of the ability.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,8 +59,6 @@ An enumerated value indicating the reason for the last exit of the ability.
 **Type:** [LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,8 +78,6 @@ An enumerated value indicating the reason for ability launch (for example, recov
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -106,8 +96,6 @@ Detailed message that describes the reason for the ability launch.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -117,17 +105,15 @@ Detailed message that describes the reason for the ability launch.
 ## launchUptime
 
 ```TypeScript
-launchUptime?: long
+launchUptime?: number
 ```
 
 System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds.  
 **Constraints**:This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,17 +124,15 @@ System uptime (the time elapsed since the system booted up) when the UIAbility s
 ## launchUTCTime
 
 ```TypeScript
-launchUTCTime?: long
+launchUTCTime?: number
 ```
 
 UTC timestamp when the UIAbility starts, in milliseconds.This API can be used in atomic services since API version 23.  
 **Constraints**:This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

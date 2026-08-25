@@ -8,8 +8,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 12
 
 **替代接口：** OH_AVScreenCapture
@@ -19,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## usages
@@ -33,8 +31,6 @@ Filter by stream usages. But not allow to capture voice streams.
 **类型：** Array&lt;[StreamUsage](arkts-audio-audio-streamusage-e.md)&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 12
 

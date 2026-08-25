@@ -4,14 +4,12 @@ Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, y
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from 'kits/@kit.AudioKit';
 ```
 
 ## isMuted
@@ -23,8 +21,6 @@ isMuted(type: AudioHapticType): boolean
 Checks whether an audio-haptic type is muted.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -46,14 +42,6 @@ Checks whether an audio-haptic type is muted.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let audioHapticType: audioHaptic.AudioHapticType = audioHaptic.AudioHapticType.AUDIO_HAPTIC_TYPE_AUDIO;
-
-let result: boolean = audioHapticPlayerInstance.isMuted(audioHapticType);
-```
-
 ## off('endOfStream')
 
 ```TypeScript
@@ -64,8 +52,6 @@ Unsubscribes from the EOS event. This API uses an asynchronous callback to retur
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Parameters:**
@@ -74,22 +60,6 @@ Unsubscribes from the EOS event. This API uses an asynchronous callback to retur
 | --- | --- | --- |
 | type | 'endOfStream' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
-
-**Examples**
-
-```TypeScript
-// Cancel all subscriptions to the event.
-audioHapticPlayerInstance.off('endOfStream');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let endOfStreamCallback = () => {
-  console.info(`Receive the callback of endOfStream.`);
-};
-
-audioHapticPlayerInstance.on('endOfStream', endOfStreamCallback);
-
-audioHapticPlayerInstance.off('endOfStream', endOfStreamCallback);
-```
 
 ## off('audioInterrupt')
 
@@ -101,8 +71,6 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Parameters:**
@@ -111,108 +79,6 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 | --- | --- | --- |
 | type | 'audioInterrupt' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-// Cancel all subscriptions to the event.
-audioHapticPlayerInstance.off('audioInterrupt');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let isPlaying: boolean; // An identifier specifying whether rendering is in progress.
-let isDucked: boolean; // An identifier specifying whether the audio volume is reduced.
-let audioInterruptCallback = (interruptEvent: audio.InterruptEvent) => {
-  // When an audio interruption event occurs, the audioHapticPlayerInstance receives the interruptEvent callback and performs processing based on the content in the callback.
-  // 1. (Optional) The AudioRenderer reads the value of interruptEvent.forceType to see whether the system has forcibly performed the operation.
-  // Note: In the default focus strategy, INTERRUPT_HINT_RESUME maps to the force type INTERRUPT_SHARE, and others map to INTERRUPT_FORCE. Therefore, the value of forceType does not need to be checked.
-  // 2. (Mandatory) The AudioRenderer then reads the value of interruptEvent.hintType and performs corresponding processing.
-  if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_FORCE) {
-    // The audio focus event has been forcibly executed by the system. The application needs to update its status and displayed content.
-    switch (interruptEvent.hintType) {
-      case audio.InterruptHint.INTERRUPT_HINT_PAUSE:
-        // The audio stream has been paused and temporarily loses the focus. It will receive the interruptEvent corresponding to resume when it is able to regain the focus.
-        console.info('Force paused. Update playing status and stop writing');
-        isPlaying = false; // A simplified processing indicating several operations for switching the application to the paused state.
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_STOP:
-        // The audio stream has been stopped and permanently loses the focus. The user must manually trigger the operation to resume rendering.
-        console.info('Force stopped. Update playing status and stop writing');
-        isPlaying = false; // A simplified processing indicating several operations for switching the application to the paused state.
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_DUCK:
-        // The audio stream is rendered at a reduced volume.
-        console.info('Force ducked. Update volume status');
-        isDucked = true; // A simplified processing indicating several operations for updating the volume status.
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_UNDUCK:
-        // The audio stream is rendered at the normal volume.
-        console.info('Force unducked. Update volume status');
-        isDucked = false; // A simplified processing indicating several operations for updating the volume status.
-        break;
-      default:
-        break;
-    }
-  } else if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_SHARE) {
-    // The audio focus event needs to be operated by the application, which can choose the processing mode. It is recommended that the application process the event according to the value of InterruptHint.
-    switch (interruptEvent.hintType) {
-      case audio.InterruptHint.INTERRUPT_HINT_RESUME:
-        // It is recommended that the application continue rendering. (The audio stream has been forcibly paused and temporarily lost the focus. It can resume rendering now.)
-        // The INTERRUPT_HINT_RESUME operation must be proactively executed by the application and cannot be forcibly executed by the system. Therefore, the INTERRUPT_HINT_RESUME event must map to INTERRUPT_SHARE.
-        console.info('Resume force paused renderer or ignore');
-        // To continue rendering, the application must perform the required operations.
-        break;
-      default:
-        break;
-    }
-  }
-};
-
-audioHapticPlayerInstance.on('audioInterrupt', audioInterruptCallback);
-
-audioHapticPlayerInstance.off('audioInterrupt', audioInterruptCallback);
-```
-
-## offAudioInterrupt
-
-```TypeScript
-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void
-```
-
-Unsubscribes audio interrupt event.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AudioHaptic.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No |
-
-## offEndOfStream
-
-```TypeScript
-offEndOfStream(callback?: Callback<void>): void
-```
-
-Unsubscribes end of stream event.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AudioHaptic.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
 
 ## on('endOfStream')
 
@@ -224,8 +90,6 @@ Subscribes to end of stream (EOS) event, which is triggered when the audio strea
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Parameters:**
@@ -234,14 +98,6 @@ Subscribes to end of stream (EOS) event, which is triggered when the audio strea
 | --- | --- | --- |
 | type | 'endOfStream' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-audioHapticPlayerInstance.on('endOfStream', () => {
-  console.info(`Receive the callback of endOfStream.`);
-});
-```
 
 ## on('audioInterrupt')
 
@@ -253,8 +109,6 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Parameters:**
@@ -263,101 +117,6 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 | --- | --- | --- |
 | type | 'audioInterrupt' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let isPlaying: boolean; // An identifier specifying whether rendering is in progress.
-let isDucked: boolean; // An identifier specifying whether the audio volume is reduced.
-
-audioHapticPlayerInstance.on('audioInterrupt', (interruptEvent: audio.InterruptEvent) => {
-  // When an audio interruption event occurs, the audioHapticPlayerInstance receives the interruptEvent callback and performs processing based on the content in the callback.
-  // 1. (Optional) The AudioRenderer reads the value of interruptEvent.forceType to see whether the system has forcibly performed the operation.
-  // Note: In the default focus strategy, INTERRUPT_HINT_RESUME maps to the force type INTERRUPT_SHARE, and others map to INTERRUPT_FORCE. Therefore, the value of forceType does not need to be checked.
-  // 2. (Mandatory) The AudioRenderer then reads the value of interruptEvent.hintType and performs corresponding processing.
-  if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_FORCE) {
-    // The audio focus event has been forcibly executed by the system. The application needs to update its status and displayed content.
-    switch (interruptEvent.hintType) {
-      case audio.InterruptHint.INTERRUPT_HINT_PAUSE:
-        // The audio stream has been paused and temporarily loses the focus. It will receive the interruptEvent corresponding to resume when it is able to regain the focus.
-        console.info('Force paused. Update playing status and stop writing');
-        isPlaying = false; // A simplified processing indicating several operations for switching the application to the paused state.
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_STOP:
-        // The audio stream has been stopped and permanently loses the focus. The user must manually trigger the operation to resume rendering.
-        console.info('Force stopped. Update playing status and stop writing');
-        isPlaying = false; // A simplified processing indicating several operations for switching the application to the paused state.
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_DUCK:
-        // The audio stream is rendered at a reduced volume.
-        console.info('Force ducked. Update volume status');
-        isDucked = true; // A simplified processing indicating several operations for updating the volume status.
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_UNDUCK:
-        // The audio stream is rendered at the normal volume.
-        console.info('Force unducked. Update volume status');
-        isDucked = false; // A simplified processing indicating several operations for updating the volume status.
-        break;
-      default:
-        break;
-    }
-  } else if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_SHARE) {
-    // The audio focus event needs to be operated by the application, which can choose the processing mode. It is recommended that the application process the event according to the value of InterruptHint.
-    switch (interruptEvent.hintType) {
-      case audio.InterruptHint.INTERRUPT_HINT_RESUME:
-        // It is recommended that the application continue rendering. (The audio stream has been forcibly paused and temporarily lost the focus. It can resume rendering now.)
-        // The INTERRUPT_HINT_RESUME operation must be proactively executed by the application and cannot be forcibly executed by the system. Therefore, the INTERRUPT_HINT_RESUME event must map to INTERRUPT_SHARE.
-        console.info('Resume force paused renderer or ignore');
-        // To continue rendering, the application must perform the required operations.
-        break;
-      default:
-        break;
-    }
-  }
-});
-```
-
-## onAudioInterrupt
-
-```TypeScript
-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
-```
-
-Subscribes audio interrupt event.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AudioHaptic.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes |
-
-## onEndOfStream
-
-```TypeScript
-onEndOfStream(callback: Callback<void>): void
-```
-
-Subscribes end of stream event.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AudioHaptic.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
 ## release
 
@@ -368,8 +127,6 @@ release(): Promise<void>
 Releases this audio-haptic player. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -385,18 +142,6 @@ Releases this audio-haptic player. This API uses a promise to return the result.
 | --- |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioHapticPlayerInstance.release().then(() => {
-  console.info(`Promise returned to indicate that release the audio haptic player successfully.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to release the audio haptic player. ${err}`);
-});
-```
-
 ## setLoop
 
 ```TypeScript
@@ -409,8 +154,6 @@ Sets this audio-haptic player to play in a loop. This API uses a promise to retu
 > This API must be called before the audio-haptic player is released.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -432,28 +175,10 @@ Sets this audio-haptic player to play in a loop. This API uses a promise to retu
 | --- |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioHapticPlayerInstance.setLoop(true).then(() => {
-  console.info('Promise returned to indicate that set player loop successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set player loop. ${err}`);
-});
-```
-
 ## setVolume
 
-ArkTS-Dyn:
 ```TypeScript
 setVolume(volume: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setVolume(volume: double): Promise<void>
 ```
 
 Sets the volume for this audio-haptic player. This API uses a promise to return the result.
@@ -463,15 +188,13 @@ Sets the volume for this audio-haptic player. This API uses a promise to return 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| volume | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| volume | number | Yes |
 
 **Return value:**
 
@@ -487,18 +210,6 @@ Sets the volume for this audio-haptic player. This API uses a promise to return 
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 | [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioHapticPlayerInstance.setVolume(0.5).then(() => {
-  console.info('Promise returned to indicate that set volume successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set volume. ${err}`);
-});
-```
-
 ## start
 
 ```TypeScript
@@ -508,8 +219,6 @@ start(): Promise<void>
 Starts playback. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -527,18 +236,6 @@ Starts playback. This API uses a promise to return the result.
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioHapticPlayerInstance.start().then(() => {
-  console.info(`Promise returned to indicate that start playing successfully.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to start playing. ${err}`);
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -548,8 +245,6 @@ stop(): Promise<void>
 Stops playback. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -565,15 +260,3 @@ Stops playback. This API uses a promise to return the result.
 | --- |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioHapticPlayerInstance.stop().then(() => {
-  console.info(`Promise returned to indicate that stop playing successfully.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stop playing. ${err}`);
-});
-```

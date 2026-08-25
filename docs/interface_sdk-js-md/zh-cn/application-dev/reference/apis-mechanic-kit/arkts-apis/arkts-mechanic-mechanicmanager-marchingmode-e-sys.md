@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ TURN_THEN_MOVE = 0
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ TURNING_MOVING = 1
 边移动边转动
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 

@@ -12,8 +12,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Row
@@ -25,8 +23,6 @@ Row = 0
 栅格元素按照行方向排列。适用于常规LTR（从左到右）布局场景。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -43,8 +39,6 @@ RowReverse = 1
 栅格元素按照逆序行方向排列，适用于RTL（从右到左）语言布局或需要反向排列的场景。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { IntentionCode } from '@kit.InputKit';
+import { IntentionCode } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总

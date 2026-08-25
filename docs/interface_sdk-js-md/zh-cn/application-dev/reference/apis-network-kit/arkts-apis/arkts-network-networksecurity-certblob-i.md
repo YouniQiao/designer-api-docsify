@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
+import { networkSecurity } from 'kits/@kit.NetworkKit';
 ```
 
 ## data
@@ -26,8 +24,6 @@ data: string | ArrayBuffer
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## type
@@ -41,7 +37,5 @@ type: CertType
 **类型：** CertType
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack

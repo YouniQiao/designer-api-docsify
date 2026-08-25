@@ -1,7 +1,5 @@
 # Promise
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,5 +12,3 @@ readonly [Symbol.toStringTag]: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 

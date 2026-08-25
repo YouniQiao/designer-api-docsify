@@ -4,59 +4,13 @@ HashSet是一种非线性容器，用于存储不重复的元素集合，支持�
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
-```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<T>
-```
-
-返回一个迭代器，迭代器的每一项为HashSet中的元素。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
-
-**示例**
-
-```TypeScript
-let hashSet: HashSet<string> = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-
-// 使用方法一：
-let val: Array<string> = Array.from(hashSet.values())
-for (let item of val) {
-  console.info("value: " + item);
-}
-
-// 使用方法二：
-let iter = hashSet.$_iterator();
-let temp: IteratorResult<string> = iter.next();
-while(!temp.done) {
-  console.info("value: " + temp.value);
-  temp = iter.next();
-}
+import { HashSet } from 'kits/@kit.ArkTS';
+import { HashSetCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -71,8 +25,6 @@ while(!temp.done) {
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -81,50 +33,13 @@ while(!temp.done) {
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-```TypeScript
-// 创建HashSet实例并添加元素
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-
-// 使用方法一：
-for (let item of hashSet) {
-  console.info("value: " + item);
-}
-// value: squirrel
-// value: sparrow
-
-// 使用方法二：
-let symbolIterator = hashSet[Symbol.iterator]();
-let iterResult: IteratorResult<string> = symbolIterator.next();
-while(!iterResult.done) {
-  console.info("value: " + iterResult.value);
-  iterResult = symbolIterator.next();
-}
-// value: squirrel
-// value: sparrow
-```
-
-```TypeScript
-// 不建议在Symbol.iterator中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
-let hashSet = new HashSet<string>();
-for(let i = 0; i < 10; i++) {
-  hashSet.add("sparrow" + i);
-}
-for(let i = 0; i < 10; i++) {
-  hashSet.remove("sparrow" + i);
-}
-```
 
 ## add
 
@@ -135,8 +50,6 @@ add(value: T): boolean
 向HashSet添加元素。成功添加后HashSet的length增加1；若待添加元素已存在则不会重复添加，返回false且length不变。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -160,16 +73,6 @@ add(value: T): boolean
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-```TypeScript
-// 创建HashSet实例
-let hashSet = new HashSet<string>();
-// 向HashSet中添加元素
-let result = hashSet.add("squirrel");
-console.info("result:", result);  // result: true
-```
-
 ## clear
 
 ```TypeScript
@@ -179,8 +82,6 @@ clear(): void
 清除HashSet中的所有元素，并将length置为0。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -192,18 +93,6 @@ clear(): void
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-```TypeScript
-// 创建HashSet实例并添加元素
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-hashSet.clear();
-let result = hashSet.isEmpty();
-console.info("result:", result);  // result: true
-```
-
 ## constructor
 
 ```TypeScript
@@ -214,8 +103,6 @@ HashSet的构造函数，用于创建一个空的HashSet实例。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -225,20 +112,6 @@ HashSet的构造函数，用于创建一个空的HashSet实例。
 | 错误码ID |
 | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let hashSet = new HashSet<number>();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let hashSet: HashSet<int> = new HashSet<int>();
-```
 
 ## entries
 
@@ -252,8 +125,6 @@ entries(): IterableIterator<[T, T]>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -262,48 +133,13 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; |
+| IterableIterator & lt;[T, T] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-```TypeScript
-// 创建HashSet实例并添加元素
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-let entriesIterator = hashSet.entries();
-let iterResult: IteratorResult<[string, string]> = entriesIterator.next();
-while(!iterResult.done) {
-  console.info("key:" + iterResult.value[0]);
-  console.info("value:" + iterResult.value[1]);
-  iterResult = entriesIterator.next();
-}
-// key:squirrel
-// value:squirrel
-// key:sparrow
-// value:sparrow
-```
-
-```TypeScript
-// 不建议在entries中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
-let hashSet = new HashSet<string>();
-for(let i = 0; i < 10; i++) {
-  hashSet.add("sparrow" + i);
-}
-for(let i = 0; i < 10; i++) {
-  hashSet.remove("sparrow" + i);
-}
-// key:squirrel
-// value:squirrel
-// key:sparrow
-// value:sparrow
-```
 
 ## forEach
 
@@ -314,8 +150,6 @@ forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Ob
 在遍历过程中对每个元素调用一次回调函数。不建议在forEach回调中使用add、remove方法修改HashSet，因其可能导致迭代过程中的状态异常。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -334,71 +168,6 @@ forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Ob
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-```TypeScript
-// 创建HashSet实例并添加元素
-let hashSet = new HashSet<string>();
-hashSet.add("sparrow");
-hashSet.add("squirrel");
-hashSet.forEach((value: string, key: string): void => {
-  console.info("value:", value, "key:", key);
-});
-// value:squirrel key:squirrel
-// value:sparrow key:sparrow
-```
-
-```TypeScript
-// 不建议在forEach中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
-let hashSet = new HashSet<string>();
-for(let i = 0; i < 10; i++) {
-  hashSet.add("sparrow" + i);
-}
-for(let i = 0; i < 10; i++) {
-  hashSet.remove("sparrow" + i);
-}
-```
-
-```TypeScript
-import { HashSetCbFn } from '@kit.ArkTS';
-
-let hashSet: HashSet<string> = new HashSet<string>();
-hashSet.add("sparrow");
-hashSet.add("squirrel");
-let hashSetCb: HashSetCbFn<string> = (value: string, key: string, set: HashSet<string>): void => {
-  console.info("value: " + value, " key: " + key);
-};
-hashSet.forEach(hashSetCb);
-// value:squirrel key:squirrel 
-// value:sparrow key:sparrow
-```
-
-## forEach
-
-```TypeScript
-forEach(callbackFn: HashSetCbFn<T>): void
-```
-
-遍历HashSet中的所有元素，并对每个元素执行回调函数。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | [HashSetCbFn](arkts-arkts-hashsetcbfn-t.md)&lt;T&gt; | 是 |
-
-**示例**
-
-参见 [forEach](#foreach)
-
 ## has
 
 ```TypeScript
@@ -408,8 +177,6 @@ has(value: T): boolean
 判断HashSet是否包含指定元素，基于哈希值进行查找，具有O(1)的时间复杂度。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -432,16 +199,6 @@ has(value: T): boolean
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-```TypeScript
-// 创建HashSet实例并添加元素
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-let result = hashSet.has("squirrel");
-console.info("result:", result);  // result: true
-```
 
 ## isEmpty
 
@@ -453,8 +210,6 @@ isEmpty(): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -471,25 +226,6 @@ isEmpty(): boolean
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 创建HashSet实例，判断是否为空
-const hashSet = new HashSet<number>();
-let result = hashSet.isEmpty();
-console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const hashSet: HashSet<int> = new HashSet<int>();
-let result = hashSet.isEmpty();
-console.info("result:", result);  // result: true
-```
-
 ## remove
 
 ```TypeScript
@@ -499,8 +235,6 @@ remove(value: T): boolean
 从HashSet中删除指定的元素。成功删除后HashSet的length减少1；若指定元素不存在则集合不变，返回false。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -523,17 +257,6 @@ remove(value: T): boolean
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-```TypeScript
-// 创建HashSet实例并添加元素
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-let result = hashSet.remove("sparrow");
-console.info("result:", result);  // result: true
-```
 
 ## values
 
@@ -547,8 +270,6 @@ values(): IterableIterator<T>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -557,28 +278,13 @@ values(): IterableIterator<T>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-```TypeScript
-// 创建HashSet实例并添加元素
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-let values = hashSet.values();
-for (let value of values) {
-  console.info("value:", value);
-}
-// value: squirrel
-// value: sparrow
-```
 
 ## length
 
@@ -591,8 +297,6 @@ HashSet的元素个数。
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

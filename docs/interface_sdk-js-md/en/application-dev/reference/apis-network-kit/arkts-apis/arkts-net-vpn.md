@@ -4,14 +4,12 @@ This module is the built-in VPN function provided by the OS. It allows users to 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary
@@ -28,10 +26,10 @@ import { vpn } from '@kit.NetworkKit';
 | [getConnectedVpnAppInfo(VPN Management)](arkts-network-vpn-getconnectedvpnappinfo-f-sys.md) |
 | [getSysVpnConfig(VPN Management)](arkts-network-vpn-getsysvpnconfig-f-sys.md) |
 | [getSysVpnConfigList(VPN Management)](arkts-network-vpn-getsysvpnconfiglist-f-sys.md) |
-| [off(VPN Management)](arkts-network-vpn-off-f-sys.md#offconnect) |
-| [off(VPN Management)](arkts-network-vpn-off-f-sys.md#offconnectmulti) |
-| [on(VPN Management)](arkts-network-vpn-on-f-sys.md#onconnect) |
-| [on(VPN Management)](arkts-network-vpn-on-f-sys.md#onconnectmulti) |
+| off(VPN Management) |
+| off(VPN Management) |
+| on(VPN Management) |
+| on(VPN Management) |
 <!--DelEnd-->
 
 <!--Del-->

@@ -4,8 +4,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## expectedDuration
 
 ```TypeScript
-readonly expectedDuration?: int
+readonly expectedDuration?: number
 ```
 
 排队时间，单位：毫秒。当taskStage为CloudEnhancementTaskStage.TASK_STAGE_EXECUTING时提供。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -37,16 +33,14 @@ readonly expectedDuration?: int
 ## statusCode
 
 ```TypeScript
-readonly statusCode?: int
+readonly statusCode?: number
 ```
 
 状态码。当taskStage为CloudEnhancementTaskStage.TASK_STAGE_FAILED时提供。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -64,8 +58,6 @@ readonly taskStage: CloudEnhancementTaskStage
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ readonly taskStage: CloudEnhancementTaskStage
 ## totalFileSize
 
 ```TypeScript
-readonly totalFileSize?: int
+readonly totalFileSize?: number
 ```
 
 总文件大小，单位：字节。当taskStage为CloudEnhancementTaskStage.TASK_STAGE_UPLOADING或者 CloudEnhancementTaskStage.TASK_STAGE_DOWNLOADING时提供。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -91,16 +81,14 @@ readonly totalFileSize?: int
 ## transferredFileSize
 
 ```TypeScript
-readonly transferredFileSize?: int
+readonly transferredFileSize?: number
 ```
 
 已传输的文件大小，单位：字节。当taskStage为CloudEnhancementTaskStage.TASK_STAGE_UPLOADING或者 CloudEnhancementTaskStage.TASK_STAGE_DOWNLOADING时提供。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setPreferredNetwork
 
 ```TypeScript
-function setPreferredNetwork(slotId: int, networkMode: PreferredNetworkMode, callback: AsyncCallback<void>): void
+function setPreferredNetwork(slotId: number, networkMode: PreferredNetworkMode, callback: AsyncCallback<void>): void
 ```
 
 Set the preferred network for the specified SIM card slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Set the preferred network for the specified SIM card slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | networkMode | [PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -44,46 +42,16 @@ Set the preferred network for the specified SIM card slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.PreferredNetworkMode = radio.PreferredNetworkMode.PREFERRED_NETWORK_MODE_GSM;
-radio.setPreferredNetwork(slotId, mode, (err: BusinessError) => {
-    if (err) {
-        console.error(`setPreferredNetwork failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`setPreferredNetwork success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.PreferredNetworkMode = radio.PreferredNetworkMode.PREFERRED_NETWORK_MODE_GSM;
-radio.setPreferredNetwork(slotId, mode).then(() => {
-    console.info(`setPreferredNetwork success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setPreferredNetwork failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setPreferredNetwork
 
 ```TypeScript
-function setPreferredNetwork(slotId: int, networkMode: PreferredNetworkMode): Promise<void>
+function setPreferredNetwork(slotId: number, networkMode: PreferredNetworkMode): Promise<void>
 ```
 
 Set the preferred network for the specified SIM card slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -95,7 +63,7 @@ Set the preferred network for the specified SIM card slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | networkMode | [PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md) | Yes |
 
 **Return value:**
@@ -115,7 +83,3 @@ Set the preferred network for the specified SIM card slot.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [setPreferredNetwork](#setpreferrednetwork)

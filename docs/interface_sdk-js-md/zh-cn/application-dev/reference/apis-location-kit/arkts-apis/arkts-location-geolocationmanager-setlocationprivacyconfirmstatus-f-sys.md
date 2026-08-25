@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## setLocationPrivacyConfirmStatus
@@ -15,8 +15,6 @@ function setLocationPrivacyConfirmStatus(type: LocationPrivacyType, isConfirmed:
 设置用户勾选定位服务隐私申明的状态，记录用户是否同意启用定位服务。只有系统应用才能调用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS
 
@@ -40,15 +38,3 @@ function setLocationPrivacyConfirmStatus(type: LocationPrivacyType, isConfirmed:
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  geoLocationManager.setLocationPrivacyConfirmStatus(1, true);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

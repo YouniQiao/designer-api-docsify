@@ -4,14 +4,12 @@ Prediction information about the first screen loading of the page, mainly includ
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## errCode
@@ -25,8 +23,6 @@ Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-
 **Type:** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -42,8 +38,6 @@ Predicts the loading time of the current load based on the first screen loading 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## similarity
@@ -57,7 +51,5 @@ Similarity of the first screen. The similarity is calculated based on the first 
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

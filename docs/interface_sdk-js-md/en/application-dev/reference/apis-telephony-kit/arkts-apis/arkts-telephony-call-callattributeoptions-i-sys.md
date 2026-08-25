@@ -4,8 +4,6 @@ Defines the call attribute options.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the call attribute options.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## accountId
 
 ```TypeScript
-accountId: int
+accountId: number
 ```
 
 Account ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -46,8 +42,6 @@ Account number.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Account number.
 ## callId
 
 ```TypeScript
-callId: int
+callId: number
 ```
 
 Call ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -82,8 +74,6 @@ Detailed call state.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Enumerates call types.
 **Type:** [CallType](arkts-telephony-call-calltype-e-sys.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -118,8 +106,6 @@ Enumerates conference states.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -127,16 +113,14 @@ Enumerates conference states.
 ## crsType
 
 ```TypeScript
-crsType: int
+crsType: number
 ```
 
 Video RBT type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -154,8 +138,6 @@ Indicates the extra call parameters.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -172,8 +154,6 @@ Indicates is custom accessibility enabled.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -185,13 +165,12 @@ isEcc: boolean
 ```
 
 Whether the call is an ECC. The default value is **false**.  
-- **true**: yes - **false**: no
+- **true**: yes  
+- **false**: no
 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -209,8 +188,6 @@ Home location area of the number.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -227,8 +204,6 @@ Number mark.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -236,16 +211,14 @@ Number mark.
 ## originalCallType
 
 ```TypeScript
-originalCallType: int
+originalCallType: number
 ```
 
 Original call type of the Video RBT service.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -263,8 +236,6 @@ Indicates the rtt state.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -276,13 +247,12 @@ speakerphoneOn: boolean
 ```
 
 Whether the speakerphone is used to answer a call. The default value is **false**.  
-- **true**: yes - **false**: no
+- **true**: yes  
+- **false**: no
 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -291,16 +261,14 @@ Whether the speakerphone is used to answer a call. The default value is **false*
 ## startTime
 
 ```TypeScript
-startTime: int
+startTime: number
 ```
 
 Start time.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -318,8 +286,6 @@ Video state type.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -336,8 +302,6 @@ Defines the VoIP call information.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -353,8 +317,6 @@ X-Call type.
 **Type:** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Telephony.CallManager
 

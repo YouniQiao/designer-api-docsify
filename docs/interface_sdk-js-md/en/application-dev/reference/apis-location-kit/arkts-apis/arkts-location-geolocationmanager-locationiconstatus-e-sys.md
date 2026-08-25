@@ -4,8 +4,6 @@ Enum for location icon status.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ LOCATING_NOT_STARTED = 0
 The locating service is not started.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -36,8 +32,6 @@ The normal locating service is started.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ HD_LOCATING_STARTED = 2
 The HD locating service(RTK) is started.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 

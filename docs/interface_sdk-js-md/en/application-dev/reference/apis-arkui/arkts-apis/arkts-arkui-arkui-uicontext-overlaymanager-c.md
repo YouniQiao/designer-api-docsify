@@ -15,17 +15,15 @@ Provides the capability to draw overlays.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## addComponentContent
@@ -37,8 +35,6 @@ addComponentContent(content: ComponentContent, index?: number): void
 Adds a specified **ComponentContent** node to the **OverlayManager**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,100 +49,6 @@ Adds a specified **ComponentContent** node to the **OverlayManager**.
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 | index | number | No |
 
-**Examples**
-
-```TypeScript
-import { ComponentContent, OverlayManager } from '@kit.ArkUI';
-
-class Params {
-  text: string = "";
-  offset: Position;
-
-  constructor(text: string, offset: Position) {
-    this.text = text;
-    this.offset = offset;
-  }
-}
-
-@Builder
-function builderText(params: Params) {
-  Column() {
-    Text(params.text)
-      .fontSize(30)
-      .fontWeight(FontWeight.Bold)
-  }.offset(params.offset)
-}
-
-@Entry
-@Component
-struct OverlayExample {
-  @State message: string = 'ComponentContent';
-  private uiContext: UIContext = this.getUIContext();
-  private overlayNode: OverlayManager = this.uiContext.getOverlayManager();
-  @StorageLink('contentArray') contentArray: ComponentContent<Params>[] = [];
-  @StorageLink('componentContentIndex') componentContentIndex: number = 0;
-  @StorageLink('arrayIndex') arrayIndex: number = 0;
-  @StorageLink("componentOffset") componentOffset: Position = { x: 0, y: 110 };
-
-  build() {
-    Column({ space: 5 }) {
-      Button("++componentContentIndex: " + this.componentContentIndex).onClick(() => {
-        ++this.componentContentIndex;
-      })
-      Button("--componentContentIndex: " + this.componentContentIndex).onClick(() => {
-        --this.componentContentIndex;
-      })
-      Button("Add ComponentContent" + this.contentArray.length).onClick(() => {
-        let componentContent = new ComponentContent(
-          this.uiContext, wrapBuilder<[Params]>(builderText),
-          new Params(this.message + (this.contentArray.length), this.componentOffset)
-        );
-        this.contentArray.push(componentContent);
-        this.overlayNode.addComponentContent(componentContent, this.componentContentIndex);
-      })
-      Button("++arrayIndex: " + this.arrayIndex).onClick(() => {
-        ++this.arrayIndex;
-      })
-      Button("--arrayIndex: " + this.arrayIndex).onClick(() => {
-        --this.arrayIndex;
-      })
-      Button("Delete ComponentContent" + this.arrayIndex).onClick(() => {
-        if (this.arrayIndex >= 0 && this.arrayIndex < this.contentArray.length) {
-          let componentContent = this.contentArray.splice(this.arrayIndex, 1);
-          this.overlayNode.removeComponentContent(componentContent.pop());
-        } else {
-          console.info("Invalid arrayIndex.");
-        }
-      })
-      Button("Show ComponentContent" + this.arrayIndex).onClick(() => {
-        if (this.arrayIndex >= 0 && this.arrayIndex < this.contentArray.length) {
-          let componentContent = this.contentArray[this.arrayIndex];
-          this.overlayNode.showComponentContent(componentContent);
-        } else {
-          console.info("Invalid arrayIndex.");
-        }
-      })
-      Button("Hide ComponentContent" + this.arrayIndex).onClick(() => {
-        if (this.arrayIndex >= 0 && this.arrayIndex < this.contentArray.length) {
-          let componentContent = this.contentArray[this.arrayIndex];
-          this.overlayNode.hideComponentContent(componentContent);
-        } else {
-          console.info("Invalid arrayIndex.");
-        }
-      })
-      Button("Show All ComponentContent").onClick(() => {
-        this.overlayNode.showAllComponentContents();
-      })
-      Button("Hide All ComponentContent").onClick(() => {
-        this.overlayNode.hideAllComponentContents();
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## addComponentContentWithOrder
 
 ```TypeScript
@@ -156,8 +58,6 @@ addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder)
 Creates an overlay node with the specified display order.This API allows you to define the stacking order of the nodes when they are created.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,87 +72,6 @@ Creates an overlay node with the specified display order.This API allows you to 
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |
 
-**Examples**
-
-This example demonstrates how to use addComponentContentWithOrder to create an overlay node with the specified display order.
-
-```TypeScript
-import { ComponentContent, PromptAction, LevelOrder, UIContext, OverlayManager } from '@kit.ArkUI';
-
-class Params {
-  text: string = "";
-  offset: Position;
-  constructor(text: string, offset: Position) {
-    this.text = text;
-    this.offset = offset;
-  }
-}
-@Builder
-function builderText(params: Params) {
-  Column() {
-    Text(params.text)
-      .fontSize(30)
-      .fontWeight(FontWeight.Bold)
-  }.offset(params.offset)
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Dialog box';
-  private ctx: UIContext = this.getUIContext();
-  private promptAction: PromptAction = this.ctx.getPromptAction();
-  private overlayNode: OverlayManager = this.ctx.getOverlayManager();
-  @StorageLink('contentArray') contentArray: ComponentContent<Params>[] = [];
-  @StorageLink('componentContentIndex') componentContentIndex: number = 0;
-  @StorageLink('arrayIndex') arrayIndex: number = 0;
-  @StorageLink("componentOffset") componentOffset: Position = { x: 0, y: 80 };
-
-  build() {
-    Row() {
-      Column({ space: 10 }) {
-        Button('OverlayManager Bottom Overlay')
-          .fontSize(20)
-          .onClick(() => {
-            let componentContent = new ComponentContent(
-              this.ctx, wrapBuilder<[Params]>(builderText),
-              new Params(this.message + (this.contentArray.length), this.componentOffset)
-            );
-            this.contentArray.push(componentContent);
-            this.overlayNode.addComponentContentWithOrder(componentContent, LevelOrder.clamp(100.1));
-            let topOrder: LevelOrder = this.promptAction.getTopOrder();
-            if (topOrder !== undefined) {
-              console.error('topOrder: ' + topOrder.getOrder());
-            }
-            let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
-            if (bottomOrder !== undefined) {
-              console.error('bottomOrder: ' + bottomOrder.getOrder());
-            }
-          })
-        Button('OverlayManager Top Overlay')
-          .fontSize(20)
-          .onClick(() => {
-            let componentContent = new ComponentContent(
-              this.ctx, wrapBuilder<[Params]>(builderText),
-              new Params(this.message + (this.contentArray.length), this.componentOffset)
-            );
-            this.contentArray.push(componentContent);
-            this.overlayNode.addComponentContentWithOrder(componentContent, LevelOrder.clamp(100.2));
-            let topOrder: LevelOrder = this.promptAction.getTopOrder();
-            if (topOrder !== undefined) {
-              console.error('topOrder: ' + topOrder.getOrder());
-            }
-            let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
-            if (bottomOrder !== undefined) {
-              console.error('bottomOrder: ' + bottomOrder.getOrder());
-            }
-          })
-      }.width('100%')
-    }.height('100%')
-  }
-}
-```
-
 ## hideAllComponentContents
 
 ```TypeScript
@@ -263,17 +82,11 @@ Hides all **ComponentContent** nodes on the **OverlayManager**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-See the example for [addComponentContent](#addcomponentcontent).
 
 ## hideComponentContent
 
@@ -284,8 +97,6 @@ hideComponentContent(content: ComponentContent): void
 Hides a specified **ComponentContent** node on the **OverlayManager**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -299,10 +110,6 @@ Hides a specified **ComponentContent** node on the **OverlayManager**.
 | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 
-**Examples**
-
-See the example for [addComponentContent](#addcomponentcontent).
-
 ## openOrderOverlay
 
 ```TypeScript
@@ -312,8 +119,6 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 Opens an overlay with the specified ComponentContent and options.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -350,8 +155,6 @@ Removes a specified node from the **OverlayManager**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -363,10 +166,6 @@ Removes a specified node from the **OverlayManager**.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
-
-**Examples**
-
-See the example for [addComponentContent](#addcomponentcontent).
 
 ## showAllComponentContents
 
@@ -378,17 +177,11 @@ Shows all **ComponentContent** nodes on the **OverlayManager**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-See the example for [addComponentContent](#addcomponentcontent).
 
 ## showComponentContent
 
@@ -399,8 +192,6 @@ showComponentContent(content: ComponentContent): void
 Shows a specified **ComponentContent** node on the **OverlayManager**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,7 +204,3 @@ Shows a specified **ComponentContent** node on the **OverlayManager**.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
-
-**Examples**
-
-See the example for [addComponentContent](#addcomponentcontent).

@@ -8,8 +8,6 @@ Defines the module information of a plugin.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.

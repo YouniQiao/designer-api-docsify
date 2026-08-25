@@ -4,14 +4,12 @@ Defines a struct for obtaining the batch operation result of shared configuratio
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## allowList
@@ -25,8 +23,6 @@ If the operation is successful, the allowlist is the one set in shared configura
 **Type:** string[] \| undefined
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Operation result code.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -62,8 +56,6 @@ URI to be operated, with a maximum of 256 bytes. The value is fixed at the forma
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -79,8 +71,6 @@ If the operation is successful, the value is the one set in shared configuration
 **Type:** [ValueType](arkts-arkdata-valuetype-t.md) \| undefined
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

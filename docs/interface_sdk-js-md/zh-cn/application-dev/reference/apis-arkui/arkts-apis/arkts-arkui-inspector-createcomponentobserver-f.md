@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inspector } from '@kit.ArkUI';
+import { inspector } from 'kits/@kit.ArkUI';
 ```
 
 ## createComponentObserver
@@ -15,8 +15,6 @@ function createComponentObserver(id: string): ComponentObserver
 绑定指定组件，返回对应的监听句柄。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 18
 
@@ -39,9 +37,3 @@ function createComponentObserver(id: string): ComponentObserver
 | 类型 |
 | --- |
 | [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) |
-
-**示例**
-
-```TypeScript
-let listener: inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // 监听id为COMPONENT_ID的组件回调事件
-```

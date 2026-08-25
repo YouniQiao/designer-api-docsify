@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getControlledAppLists
@@ -20,8 +20,6 @@ function getControlledAppLists(): Promise<Array<string>>
 > 设置的受企业DLP控制的应用程序列表。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.DLP_POLICY_MANAGER
 
@@ -42,18 +40,3 @@ function getControlledAppLists(): Promise<Array<string>>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-dlpPermission.getControlledAppLists().then((res) => {
-  console.info('res', JSON.stringify(res));
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-}).finally(() => {
-  console.info("Completed getControlledAppLists operation.");
-})
-```

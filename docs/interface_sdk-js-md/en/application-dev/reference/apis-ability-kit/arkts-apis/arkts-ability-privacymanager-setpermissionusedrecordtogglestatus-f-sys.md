@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setPermissionUsedRecordToggleStatus
@@ -15,8 +15,6 @@ function setPermissionUsedRecordToggleStatus(status: boolean): Promise<void>
 Sets whether to record the permission usage of this user. Sets the permission usage record switch for this user. This API uses a promise to return the result.When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md) API can add usage records normally; when **status** is **false**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md) API does not generate permission usage records, and deletes the current user's historical records.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PERMISSION_RECORD_TOGGLE
 
@@ -47,19 +45,6 @@ Sets whether to record the permission usage of this user. Sets the permission us
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
 
-**Examples**
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
-  console.info('setPermissionUsedRecordToggleStatus success');
-}).catch((err: BusinessError) => {
-  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## setPermissionUsedRecordToggleStatus
 
@@ -70,8 +55,6 @@ function setPermissionUsedRecordToggleStatus(status: boolean, subProfileId: numb
 Sets whether permission usage records are collected for a specified sub-profile. A system application can call this API to set the permission usage record switch status for the specified sub-profile. This API uses a promise to return the result.When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md) API can add usage records normally; when **status** is **false**, the [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md) API does not generate permission usage records, and deletes the historical records of the specified sub-profile.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Required permissions:** ohos.permission.PERMISSION_RECORD_TOGGLE
 
@@ -105,7 +88,3 @@ Sets whether permission usage records are collected for a specified sub-profile.
 | [12100006](../errorcode-access-token.md#12100006-permission-granting-or-revocation-not-supported) |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
-
-**Examples**
-
-See [setPermissionUsedRecordToggleStatus](#setpermissionusedrecordtogglestatus)

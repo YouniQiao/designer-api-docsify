@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## exportKeyItem
@@ -18,8 +18,6 @@ function exportKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 > 导出[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别公钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,43 +54,6 @@ function exportKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) |
 
-**示例**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 导出公钥 */
-huks.exportKeyItem(keyAlias, emptyOptions, (error, data) => {
-  if (error) {
-    console.error(`callback: exportKeyItem failed`);
-  } else {
-    console.info(`callback: exportKeyItem success, data = ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 导出公钥 */
-huks.exportKeyItem(keyAlias, emptyOptions)
-  .then((data) => {
-    console.info(`promise: exportKeyItem success, data = ${JSON.stringify(data)}`);
-  });
-```
-
 
 ## exportKeyItem
 
@@ -106,8 +67,6 @@ function exportKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 > 导出[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别公钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -146,7 +105,3 @@ function exportKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 | [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) |
-
-**示例**
-
-参见 [exportKeyItem](#exportkeyitem)

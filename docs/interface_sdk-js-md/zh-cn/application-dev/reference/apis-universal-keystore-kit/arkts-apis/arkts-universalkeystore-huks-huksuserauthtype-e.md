@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## HUKS_USER_AUTH_TYPE_FINGERPRINT
@@ -17,8 +15,6 @@ HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0
 表示用户认证类型为指纹。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ HUKS_USER_AUTH_TYPE_FACE = 1 << 1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -49,8 +43,6 @@ HUKS_USER_AUTH_TYPE_PIN = 1 << 2
 表示用户认证类型为PIN码。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

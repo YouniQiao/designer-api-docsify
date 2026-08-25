@@ -1,7 +1,5 @@
 # Array
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -22,8 +20,6 @@
 ```
 
 Returns an object whose properties have the value 'true'when they will be absent when used in a 'with' statement.
-
-**ArkTS mode:** 
 
 **Return value:**
 

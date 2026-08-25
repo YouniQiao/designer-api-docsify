@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## name
@@ -26,8 +24,6 @@ name: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## owner
@@ -41,7 +37,5 @@ owner: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount

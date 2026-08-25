@@ -9,8 +9,6 @@ Defines the callback invoked when the framework needs a passcode for a companion
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth

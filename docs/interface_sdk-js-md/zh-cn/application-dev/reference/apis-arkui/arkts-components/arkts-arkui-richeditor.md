@@ -15,8 +15,6 @@ RichEditor(value: RichEditorOptions)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -38,8 +36,6 @@ RichEditor(options: RichEditorStyledStringOptions)
 创建富文本组件时调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,12 +60,6 @@ RichEditor(options: RichEditorStyledStringOptions)
 
 | 名称 |
 | --- |
-| [MenuCallback](arkts-arkui-menucallback-t.md) |
-| [MenuOnAppearCallback](arkts-arkui-menuonappearcallback-t.md) |
-| [OnHoverCallback](arkts-arkui-onhovercallback-t.md) |
-| [PasteEventCallback](arkts-arkui-pasteeventcallback-t.md) |
-| [RichEditorSpan](arkts-arkui-richeditorspan-t.md) |
-| [SubmitCallback](arkts-arkui-submitcallback-t.md) |
 
 ### 枚举
 

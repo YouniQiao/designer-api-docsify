@@ -4,8 +4,6 @@ Device attest result information.@interface AttestResultInfo
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.XTS.DeviceAttest
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Device attest result information.@interface AttestResultInfo
 ## Modules to Import
 
 ```TypeScript
-import { deviceAttest } from '@kit.BasicServicesKit';
+import { deviceAttest } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## authResult
@@ -27,8 +25,6 @@ Result of the device hardware information authentication.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.XTS.DeviceAttest
 
@@ -46,8 +42,6 @@ Result of the device software information authentication.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.XTS.DeviceAttest
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Software result detail array that includes versionId, patchLevel, rootHash and a
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.XTS.DeviceAttest
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ Credential sent from the cloud.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.XTS.DeviceAttest
 

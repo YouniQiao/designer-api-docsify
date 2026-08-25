@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## allowRebuild
@@ -25,8 +23,6 @@ allowRebuild?: boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -42,8 +38,6 @@ autoCleanDirtyData?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## cryptoParam
@@ -58,8 +52,6 @@ cryptoParam?: CryptoParam
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## customDir
@@ -69,13 +61,11 @@ customDir?: string
 ```
 
 数据库自定义路径。  
-**使用约束：** 数据库路径大小限制为128字节，如果超过该大小会开库失败，抛出错误码401，请参见[通用错误码](../../errorcode-universal.md)。从API version 11开始，支持此可选参数。数据库将在如下的目录结构中被创建：context.databaseDir + "/rdb/" + customDir，其中context.databaseDir是应用沙箱对应 的路径，"/rdb/"表示创建的是关系型数据库，customDir表示自定义的路径。当此参数不填时，默认在本应用沙箱目录下创建RdbStore实例。从API version 18开始，如果同时配置了rootDir参数，将打开或 删除如下路径数据库：rootDir + "/" + customDir + "/" + name。
+**使用约束：** 数据库路径大小限制为128字节，如果超过该大小会开库失败，抛出错误码401，请参见[通用错误码](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/errorcode-universal.md)。从API version 11开始，支持此可选参数。数据库将在如下的目录结构中被创建：context.databaseDir + "/rdb/" + customDir，其中context.databaseDir是应用沙箱对应 的路径，"/rdb/"表示创建的是关系型数据库，customDir表示自定义的路径。当此参数不填时，默认在本应用沙箱目录下创建RdbStore实例。从API version 18开始，如果同时配置了rootDir参数，将打开或 删除如下路径数据库：rootDir + "/" + customDir + "/" + name。
 
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -91,8 +81,6 @@ dataGroupId?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,8 +98,6 @@ enableSemanticIndex?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## encrypt
@@ -125,8 +111,6 @@ encrypt?: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -142,8 +126,6 @@ isReadOnly?: boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## name
@@ -157,8 +139,6 @@ name: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -174,8 +154,6 @@ persist?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## pluginLibs
@@ -184,13 +162,11 @@ persist?: boolean
 pluginLibs?: Array<string>
 ```
 
-配置加载自定义动态库，数组中可传入多个动态库名称，默认值为空数组。具体请见 [pluginLibs的使用约束和示例](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#pluginlibs的使用约束和示例)。
+配置加载自定义动态库，数组中可传入多个动态库名称，默认值为空数组。具体请见 [StoreConfig](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#StoreConfig)。
 
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -206,8 +182,6 @@ rootDir?: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## securityLevel
@@ -222,8 +196,6 @@ securityLevel: SecurityLevel
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## tokenizer
@@ -232,13 +204,11 @@ securityLevel: SecurityLevel
 tokenizer?: Tokenizer
 ```
 
-指定用户在FTS（Full-Text Search）场景下使用哪种分词器。当此参数不填时，则在FTS下不支持中文以及多国语言分词，但仍可支持英文分词。如果用户想使用自定义分词器，可以通过pluginLibs参数进行配置，具体请见 [pluginLibs的使用约束和示例](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#pluginlibs的使用约束和示例)。
+指定用户在FTS（Full-Text Search）场景下使用哪种分词器。当此参数不填时，则在FTS下不支持中文以及多国语言分词，但仍可支持英文分词。如果用户想使用自定义分词器，可以通过pluginLibs参数进行配置，具体请见 [StoreConfig](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#StoreConfig)。
 
 **类型：** [Tokenizer](arkts-arkdata-relationalstore-tokenizer-e.md)
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -253,7 +223,5 @@ vector?: boolean
 **类型：** boolean
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

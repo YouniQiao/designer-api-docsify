@@ -4,33 +4,23 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## getFloat32Array
 
-ArkTS-Dyn:
 ```TypeScript
 getFloat32Array(columnIndex: number): Float32Array
-```
-
-ArkTS-Sta:
-```TypeScript
-getFloat32Array(columnIndex: int): Float32Array
 ```
 
 以浮点数组的形式获取当前行中指定列的值，仅可在向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）下可用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -40,7 +30,7 @@ getFloat32Array(columnIndex: int): Float32Array
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 

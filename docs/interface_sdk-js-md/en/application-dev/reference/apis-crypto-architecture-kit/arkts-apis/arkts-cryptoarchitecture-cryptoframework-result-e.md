@@ -4,8 +4,6 @@ Enumerates the operation results.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CryptoFramework
 
 ## INVALID_PARAMS
@@ -17,8 +15,6 @@ INVALID_PARAMS = 401
 Invalid parameter.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -38,8 +34,6 @@ Unsupported operation.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API version 9 to 11: This API can be used only in the stage model.
@@ -57,8 +51,6 @@ ERR_OUT_OF_MEMORY = 17620001
 The memory operation failed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -78,8 +70,6 @@ Failed to obtain the native object or convert parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API version 9 to 11: This API can be used only in the stage model.
@@ -98,8 +88,6 @@ The parameter check failed.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -116,8 +104,6 @@ Invalid function call.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -133,8 +119,6 @@ ERR_CRYPTO_OPERATION = 17630001
 Cryptographic operation error.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.

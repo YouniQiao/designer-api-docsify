@@ -4,14 +4,12 @@ Describes [environment variable](../../../ui/arkts-env-system-property.md) data 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## cutout
@@ -25,8 +23,6 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -42,8 +38,6 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## navigationIndicator
@@ -58,8 +52,6 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## statusBar
@@ -73,7 +65,5 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

@@ -4,29 +4,25 @@ Describes a rectangle, which can be defined by two coordinate points: upper left
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { common2D } from '@kit.ArkGraphics2D';
+import { common2D } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## bottom
 
 ```TypeScript
-bottom: double
+bottom: number
 ```
 
 Y coordinate of the lower right corner of the rectangle. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -35,16 +31,14 @@ Y coordinate of the lower right corner of the rectangle. The value is a floating
 ## left
 
 ```TypeScript
-left: double
+left: number
 ```
 
 X coordinate of the upper left corner of the rectangle. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -53,16 +47,14 @@ X coordinate of the upper left corner of the rectangle. The value is a floating 
 ## right
 
 ```TypeScript
-right: double
+right: number
 ```
 
 X coordinate of the lower right corner of the rectangle. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -71,16 +63,14 @@ X coordinate of the lower right corner of the rectangle. The value is a floating
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
 Y coordinate of the upper left corner of the rectangle. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

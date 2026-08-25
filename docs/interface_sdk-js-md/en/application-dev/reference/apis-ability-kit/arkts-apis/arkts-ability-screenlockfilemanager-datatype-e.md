@@ -4,8 +4,6 @@ Enumerates the types of sensitive data that can be accessed under the lock scree
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
 ## MEDIA_DATA
@@ -18,8 +16,6 @@ Media data type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
 ## ALL_DATA
@@ -31,7 +27,5 @@ ALL_DATA = 0xffffffff
 All sensitive data types.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager

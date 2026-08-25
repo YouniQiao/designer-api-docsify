@@ -4,8 +4,6 @@ Enumerates the types of the parameters used for prelaunch.
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ NO_NEED_RESTORE_PARAM = 0
 The parameter used for prelaunch is not required.
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -36,8 +32,6 @@ Persistent parameter type. This parameter is used to restore stream information 
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ TRANSIENT_ACTIVE_PARAM = 2
 Temporary parameter type. This parameter is used to restore stream information only within a period of time after the camera application is closed. Its priority is higher than that of the persistent parameter.
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

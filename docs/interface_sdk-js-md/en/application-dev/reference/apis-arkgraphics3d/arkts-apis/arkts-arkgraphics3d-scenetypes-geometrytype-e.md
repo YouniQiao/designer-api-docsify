@@ -1,10 +1,8 @@
 # GeometryType
 
-Enumerates the geometry types.@enum { int }
+Enumerates the geometry types.@enum { number }
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ Custom geometry type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## CUBE
@@ -31,8 +27,6 @@ CUBE = 1
 Cube.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -46,8 +40,6 @@ Plane.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## SPHERE
@@ -60,8 +52,6 @@ Sphere.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## CYLINDER
@@ -73,7 +63,5 @@ CYLINDER = 4
 Cylinder.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

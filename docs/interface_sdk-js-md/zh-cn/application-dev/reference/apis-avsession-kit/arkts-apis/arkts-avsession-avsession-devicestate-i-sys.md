@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## deviceId
@@ -28,8 +26,6 @@ readonly deviceId: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -37,16 +33,14 @@ readonly deviceId: string
 ## deviceState
 
 ```TypeScript
-readonly deviceState: int
+readonly deviceState: number
 ```
 
 投播设备连接状态码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -55,16 +49,14 @@ readonly deviceState: int
 ## radarErrorCode
 
 ```TypeScript
-readonly radarErrorCode: int
+readonly radarErrorCode: number
 ```
 
 系统雷达错误码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -73,16 +65,14 @@ readonly radarErrorCode: int
 ## reasonCode
 
 ```TypeScript
-readonly reasonCode: int
+readonly reasonCode: number
 ```
 
 投播设备连接错误码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

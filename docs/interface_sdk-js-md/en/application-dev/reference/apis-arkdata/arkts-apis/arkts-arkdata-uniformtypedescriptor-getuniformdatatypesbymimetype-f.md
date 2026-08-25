@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 ```
 
 ## getUniformDataTypesByMIMEType
@@ -15,8 +15,6 @@ function getUniformDataTypesByMIMEType(mimeType: string, belongsTo?: string): Ar
 Obtains the uniform data type IDs based on the given MIME type and data type.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,31 +38,3 @@ Obtains the uniform data type IDs based on the given MIME type and data type.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let typeIds = uniformTypeDescriptor.getUniformDataTypesByMIMEType('text/plain', 'general.text');
-    for (let typeId of typeIds) {
-        console.info(`typeId is ${typeId}`);
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypesByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-
-// If no uniform data type ID is found based on "image/myimage" and "general.image", the types generated based on the input parameters are returned.
-try {
-    let flexTypeIds = uniformTypeDescriptor.getUniformDataTypesByMIMEType('image/myimage', 'general.image');
-    for (let flexTypeId of flexTypeIds) {
-        console.info(`typeId is flex type, flex typeId is ${flexTypeId}`);
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypesByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```

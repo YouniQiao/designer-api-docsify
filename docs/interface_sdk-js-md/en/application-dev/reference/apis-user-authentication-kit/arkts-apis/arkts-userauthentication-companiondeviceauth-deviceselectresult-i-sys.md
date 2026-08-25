@@ -4,8 +4,6 @@ Returns the result of companion device selection. It is used to return the devic
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Returns the result of companion device selection. It is used to return the devic
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## deviceKeys
@@ -27,8 +25,6 @@ Device information list. It contains the device service identifier information s
 **Type:** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Device selection context. It carries extension information in JSON format and ca
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

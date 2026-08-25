@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,8 +21,6 @@ contentModifier(modifier: ContentModifier<RatingConfiguration>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -35,7 +31,7 @@ contentModifier(modifier: ContentModifier<RatingConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt; | 是 |
 
 ## contentModifier
 
@@ -47,8 +43,6 @@ contentModifier(modifier: Optional<ContentModifier<RatingConfiguration>>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -59,7 +53,7 @@ contentModifier(modifier: Optional<ContentModifier<RatingConfiguration>>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt;&gt; | 是 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt;&gt; | 是 |
 
 ## onChange
 
@@ -70,8 +64,6 @@ onChange(callback: (value: number) => void)
 当评分条的评分变化时触发该回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -95,8 +87,6 @@ onChange(callback: Optional<OnRatingChangeCallback>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -109,7 +99,7 @@ onChange(callback: Optional<OnRatingChangeCallback>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional&lt;[OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md)&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md)&gt; | 是 |
 
 ## stars
 
@@ -120,8 +110,6 @@ stars(value: number)
 设置评分总数。默认值：5。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -145,8 +133,6 @@ stars(starCount: Optional<number>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -159,7 +145,7 @@ stars(starCount: Optional<number>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| starCount | Optional & lt;number & gt; | 是 |
+| starCount | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 ## starStyle
 
@@ -170,8 +156,6 @@ starStyle(options: StarStyleOptions)
 设置评分的样式。该属性所支持的图片类型能力参考Image组件。支持加载本地图片和网络图片，暂不支持PixelMap类型。默认图片加载方式为异步，暂不支持同步加载。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -195,8 +179,6 @@ starStyle(options: Optional<StarStyleOptions>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -209,7 +191,7 @@ starStyle(options: Optional<StarStyleOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | Optional&lt;[StarStyleOptions](arkts-arkui-starstyleoptions-i.md)&gt; | 是 |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[StarStyleOptions](arkts-arkui-starstyleoptions-i.md)&gt; | 是 |
 
 ## stepSize
 
@@ -220,8 +202,6 @@ stepSize(value: number)
 设置操作评级的步长。设置为小于0.1的值时，按默认值显示。默认值：0.5。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -245,8 +225,6 @@ stepSize(size: Optional<number>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -259,4 +237,4 @@ stepSize(size: Optional<number>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| size | Optional & lt;number & gt; | 是 |
+| size | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |

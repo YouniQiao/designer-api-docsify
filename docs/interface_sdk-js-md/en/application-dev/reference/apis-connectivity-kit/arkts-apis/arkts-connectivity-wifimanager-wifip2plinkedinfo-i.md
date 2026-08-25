@@ -4,14 +4,12 @@ P2P linked information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connectState
@@ -25,8 +23,6 @@ Connection status
 **Type:** P2pConnectState
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -42,8 +38,6 @@ Group owner address
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## isGroupOwner
@@ -57,7 +51,5 @@ Indicates whether it is group owner
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P

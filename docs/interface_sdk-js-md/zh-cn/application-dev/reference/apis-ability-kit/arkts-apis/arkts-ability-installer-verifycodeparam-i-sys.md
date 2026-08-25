@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## moduleName
@@ -29,8 +27,6 @@ moduleName: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 
@@ -49,8 +45,6 @@ signatureFilePath: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 

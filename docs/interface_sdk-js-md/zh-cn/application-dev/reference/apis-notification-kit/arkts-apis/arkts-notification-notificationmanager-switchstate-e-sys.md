@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ USER_MODIFIED_OFF = 0
 表示用户设置的关闭状态。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,8 +32,6 @@ USER_MODIFIED_ON = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ SYSTEM_DEFAULT_OFF = 2
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ SYSTEM_DEFAULT_ON = 3
 表示在用户设置前的初始开启状态。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 

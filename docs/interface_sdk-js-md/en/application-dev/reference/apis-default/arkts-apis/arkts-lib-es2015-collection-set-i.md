@@ -1,7 +1,5 @@
 # Set
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ add(value: T): this
 ```
 
 Appends a new element with a specified value to the end of the Set.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -33,8 +29,6 @@ Appends a new element with a specified value to the end of the Set.
 clear(): void
 ```
 
-**ArkTS mode:** 
-
 ## delete
 
 ```TypeScript
@@ -42,8 +36,6 @@ delete(value: T): boolean
 ```
 
 Removes a specified value from the Set.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -63,8 +55,6 @@ forEach(callbackfn: (value: T, value2: T, set: Set<T>) => void, thisArg?: any): 
 
 Executes a provided function once per each value in the Set object, in insertion order.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -77,8 +67,6 @@ Executes a provided function once per each value in the Set object, in insertion
 ```TypeScript
 has(value: T): boolean
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -97,5 +85,3 @@ readonly size: number
 ```
 
 **Type:** number
-
-**ArkTS mode:** 

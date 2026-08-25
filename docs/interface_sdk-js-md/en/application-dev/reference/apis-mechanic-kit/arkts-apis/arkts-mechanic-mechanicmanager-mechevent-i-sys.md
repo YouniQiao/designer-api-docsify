@@ -4,8 +4,6 @@ Definition of Mechanic device event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Definition of Mechanic device event.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## event
@@ -28,8 +26,6 @@ Event type of this event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Event type of this event.
 ## mechId
 
 ```TypeScript
-mechId: int
+mechId: number
 ```
 
 ID of the mechanical device. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 

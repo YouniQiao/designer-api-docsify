@@ -7,14 +7,12 @@ WebCookieManager is the cookie manager for Web components, providing global mana
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## clearAllCookies
@@ -27,8 +25,6 @@ Clears all cookies, including session cookies and persistent cookies. This API u
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -44,66 +40,6 @@ Clears all cookies, including session cookies and persistent cookies. This API u
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearAllCookies')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearAllCookies((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearAllCookies')
-        .onClick(() => {
-          webview.WebCookieManager.clearAllCookies()
-            .then(() => {
-              console.info("clearAllCookies success!");
-            })
-            .catch((error: BusinessError) => {
-              console.error("error: " + error);
-            });
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## clearAllCookies
 
@@ -115,8 +51,6 @@ Clears all cookies, including session cookies and persistent cookies. This API u
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -133,10 +67,6 @@ Clears all cookies, including session cookies and persistent cookies. This API u
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [clearAllCookies](#clearallcookies)
-
 ## clearAllCookiesSync
 
 ```TypeScript
@@ -146,8 +76,6 @@ static clearAllCookiesSync(incognito?: boolean): void
 Clears all cookies, including session cookies and persistent cookies. To clear only session cookies, use [clearSessionCookieSync](#clearsessioncookiesync).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -159,29 +87,6 @@ Clears all cookies, including session cookies and persistent cookies. To clear o
 | --- | --- | --- |
 | incognito | boolean | No |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearAllCookiesSync')
-        .onClick(() => {
-          webview.WebCookieManager.clearAllCookiesSync();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearSessionCookie
 
 ```TypeScript
@@ -191,8 +96,6 @@ static clearSessionCookie(): Promise<void>
 Clears all session cookies. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -210,70 +113,6 @@ Clears all session cookies. This API uses a promise to return the result.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSessionCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearSessionCookie((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSessionCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearSessionCookie()
-              .then(() => {
-                console.info("clearSessionCookie success!");
-              })
-              .catch((error: BusinessError) => {
-                console.error("error: " + error);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearSessionCookie
 
 ```TypeScript
@@ -283,8 +122,6 @@ static clearSessionCookie(callback: AsyncCallback<void>): void
 Clears all session cookies. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -302,10 +139,6 @@ Clears all session cookies. This API uses an asynchronous callback to return the
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [clearSessionCookie](#clearsessioncookie)
-
 ## clearSessionCookieSync
 
 ```TypeScript
@@ -316,34 +149,9 @@ Deletes all session cookies.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSessionCookieSync')
-        .onClick(() => {
-          webview.WebCookieManager.clearSessionCookieSync();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## configCookie
 
@@ -369,8 +177,6 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -396,102 +202,6 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', "a=b", (error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', 'a=b')
-              .then(() => {
-                console.info('configCookie success!');
-              })
-              .catch((error: BusinessError) => {
-                console.info('error: ' + JSON.stringify(error));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', 'a=b', false, false)
-              .then(() => {
-                console.info('configCookie success!');
-              })
-              .catch((error: BusinessError) => {
-                console.info('error: ' + JSON.stringify(error));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## configCookie
 
 ```TypeScript
@@ -514,8 +224,6 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -541,10 +249,6 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
-
-**Examples**
-
-See [configCookie](#configcookie)
 
 ## configCookie
 
@@ -570,8 +274,6 @@ Sets a single cookie value for a specified URL. This API uses an asynchronous ca
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -591,10 +293,6 @@ Sets a single cookie value for a specified URL. This API uses an asynchronous ca
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
-
-**Examples**
-
-See [configCookie](#configcookie)
 
 ## configCookieSync
 
@@ -620,8 +318,6 @@ Sets a cookie for the specified URL.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -641,62 +337,6 @@ Sets a cookie for the specified URL.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookieSync')
-        .onClick(() => {
-          try {
-            // Only one cookie value can be set in configCookieSync at a time.
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookieSync')
-        .onClick(() => {
-          try {
-            // Only a single cookie value can be set.
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b', false, false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## configCookieSync
 
@@ -721,8 +361,6 @@ Sets a single cookie value for a specified URL.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -742,10 +380,6 @@ Sets a single cookie value for a specified URL.
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
 
-**Examples**
-
-See [configCookieSync](#configcookiesync)
-
 ## deleteEntireCookie
 
 ```TypeScript
@@ -756,36 +390,11 @@ Deletes all cookies.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **Substitutes:** [clearAllCookiesSync](#clearallcookiessync)
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteEntireCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteEntireCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## deleteSessionCookie
 
@@ -797,36 +406,11 @@ Deletes all session cookies.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **Substitutes:** [clearSessionCookieSync](#clearsessioncookiesync)
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteSessionCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteSessionCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## existCookie
 
@@ -837,8 +421,6 @@ static existCookie(incognito?: boolean): boolean
 Checks whether cookies exist.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -856,30 +438,6 @@ Checks whether cookies exist.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('existCookie')
-        .onClick(() => {
-          let result = webview.WebCookieManager.existCookie();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## fetchAllCookies
 
 ```TypeScript
@@ -889,8 +447,6 @@ static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>
 Obtains all cookies. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -906,47 +462,6 @@ Obtains all cookies. This API uses a promise to return the result.
 | --- |
 | Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController()
-
-  build() {
-    Row() {
-      Column() {
-        Button('Config Cookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-
-        Button('Get All Cookies')
-        .onClick(() => {
-          webview.WebCookieManager.fetchAllCookies(false).then((cookies) => {
-            for (let i = 0; i < cookies.length; i++) {
-              console.info('fetchAllCookies cookie[' + i + '].name = ' + cookies[i].name);
-              console.info('fetchAllCookies cookie[' + i + '].value = ' + cookies[i].value);
-            }
-          })
-        })
-
-        Web({ src: 'https://www.example.com', controller: this.controller})
-      }
-    }
-  }
-}
-```
-
 ## fetchCookie
 
 ```TypeScript
@@ -956,8 +471,6 @@ static fetchCookie(url: string): Promise<string>
 Obtains the cookie value of a specified URL. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -982,106 +495,6 @@ Obtains the cookie value of a specified URL. This API uses a promise to return t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', (error, cookie) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              if (cookie) {
-                console.info('fetchCookie cookie = ' + cookie);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com')
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: BusinessError) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', false)
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: BusinessError) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## fetchCookie
 
 ```TypeScript
@@ -1091,8 +504,6 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 Obtains the cookie value of a specified URL. This API uses a promise to return the result.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -1116,10 +527,6 @@ Obtains the cookie value of a specified URL. This API uses a promise to return t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
-**Examples**
-
-See [fetchCookie](#fetchcookie)
-
 ## fetchCookie
 
 ```TypeScript
@@ -1129,8 +536,6 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 Obtains the cookies corresponding to a specified URL. The parameter incognito specifies whether to obtain cookies in Privacy Mode, and the parameter includePartitionedCookies specifies whether to obtain first-party partitioned cookies. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1156,10 +561,6 @@ Obtains the cookies corresponding to a specified URL. The parameter incognito sp
 | --- |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
-**Examples**
-
-See [fetchCookie](#fetchcookie)
-
 ## fetchCookie
 
 ```TypeScript
@@ -1169,8 +570,6 @@ static fetchCookie(url: string, callback: AsyncCallback<string>): void
 Obtains the cookie value of a specified URL. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1190,10 +589,6 @@ Obtains the cookie value of a specified URL. This API uses an asynchronous callb
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
-**Examples**
-
-See [fetchCookie](#fetchcookie)
-
 ## fetchCookieSync
 
 ```TypeScript
@@ -1210,8 +605,6 @@ Obtains the cookie value of the specified URL.
 > cookie value cannot be obtained individually.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1237,35 +630,6 @@ Obtains the cookie value of the specified URL.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookieSync')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-            console.info("fetchCookieSync cookie = " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## fetchCookieSync
 
 ```TypeScript
@@ -1282,8 +646,6 @@ Obtains the cookies corresponding to a specified URL. The optional parameter inc
 > cookie value cannot be obtained individually.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1309,10 +671,6 @@ Obtains the cookies corresponding to a specified URL. The optional parameter inc
 | --- |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
-**Examples**
-
-See [fetchCookieSync](#fetchcookiesync)
-
 ## getCookie
 
 ```TypeScript
@@ -1322,8 +680,6 @@ static getCookie(url: string): string
 Obtains the cookie value of the specified URL.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 
@@ -1350,35 +706,6 @@ Obtains the cookie value of the specified URL.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getCookie')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.getCookie('https://www.example.com');
-            console.info("value: " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## isCookieAllowed
 
 ```TypeScript
@@ -1389,8 +716,6 @@ Checks whether the **WebCookieManager** instance has the permission to send and 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1400,30 +725,6 @@ Checks whether the **WebCookieManager** instance has the permission to send and 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isCookieAllowed')
-        .onClick(() => {
-          let result = webview.WebCookieManager.isCookieAllowed();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## isThirdPartyCookieAllowed
 
@@ -1435,8 +736,6 @@ Checks whether the **WebCookieManager** instance has the permission to send and 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1446,30 +745,6 @@ Checks whether the **WebCookieManager** instance has the permission to send and 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isThirdPartyCookieAllowed')
-        .onClick(() => {
-          let result = webview.WebCookieManager.isThirdPartyCookieAllowed();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## putAcceptCookieEnabled
 
@@ -1481,8 +756,6 @@ Sets whether the **WebCookieManager** instance has the permission to send and re
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1498,34 +771,6 @@ Sets whether the **WebCookieManager** instance has the permission to send and re
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('putAcceptCookieEnabled')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.putAcceptCookieEnabled(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## putAcceptThirdPartyCookieEnabled
 
@@ -1537,8 +782,6 @@ Sets whether the **WebCookieManager** instance has the permission to send and re
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1554,34 +797,6 @@ Sets whether the **WebCookieManager** instance has the permission to send and re
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('putAcceptThirdPartyCookieEnabled')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.putAcceptThirdPartyCookieEnabled(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## saveCookieAsync
 
@@ -1597,8 +812,6 @@ Saves all cookies that can be obtained through fetchCookie and need to be persis
 > written to the disk.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1616,70 +829,6 @@ Saves all cookies that can be obtained through fetchCookie and need to be persis
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('saveCookieAsync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieAsync((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('saveCookieAsync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieAsync()
-              .then(() => {
-                console.info("saveCookieAsyncCallback success!");
-              })
-              .catch((error: BusinessError) => {
-                console.error("error: " + error);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## saveCookieAsync
 
 ```TypeScript
@@ -1694,8 +843,6 @@ Asynchronously saves all cookies (that can be obtained through **fetchCookie** a
 > written to the disk.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1712,10 +859,6 @@ Asynchronously saves all cookies (that can be obtained through **fetchCookie** a
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [saveCookieAsync](#savecookieasync)
 
 ## saveCookieSync
 
@@ -1734,37 +877,7 @@ Synchronously saves all cookies (that can be obtained through **fetchCookie** an
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('saveCookieSync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieSync();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## setCookie
 
@@ -1775,8 +888,6 @@ static setCookie(url: string, value: string): void
 Sets a cookie for the specified URL.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 
@@ -1799,34 +910,6 @@ Sets a cookie for the specified URL.
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.setCookie('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setLazyInitializeWebEngine
 
 ```TypeScript
@@ -1845,8 +928,6 @@ Sets whether to delay the initialization of the ArkWeb kernel. If this method is
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -1854,29 +935,3 @@ Sets whether to delay the initialization of the ArkWeb kernel. If this method is
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | lazy | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-webview.WebCookieManager.setLazyInitializeWebEngine(true);
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-    webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```

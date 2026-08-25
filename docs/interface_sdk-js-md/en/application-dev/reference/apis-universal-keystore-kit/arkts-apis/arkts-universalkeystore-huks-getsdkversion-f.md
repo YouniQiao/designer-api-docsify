@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getSdkVersion
@@ -18,8 +18,6 @@ Obtains the SDK version of the current system.
 > This API is supported since API version 8 and deprecated since API version 11.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -36,15 +34,3 @@ Obtains the SDK version of the current system.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.getSdkVersion(emptyOptions);
-```

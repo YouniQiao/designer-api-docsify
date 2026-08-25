@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## generateRandomBinaryUUID
@@ -15,8 +15,6 @@ function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array
 Uses a secure random number generator to generate a random universally unique identifier (UUID) of RFC 4122 version 4.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,11 +31,3 @@ Uses a secure random number generator to generate a random universally unique id
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | Uint8Array |
-
-**Examples**
-
-```TypeScript
-let uuid = util.generateRandomBinaryUUID(true);
-console.info(JSON.stringify(uuid));
-// Output a random UUID.
-```

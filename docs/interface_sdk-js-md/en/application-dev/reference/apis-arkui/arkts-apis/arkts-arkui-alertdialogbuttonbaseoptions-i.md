@@ -9,8 +9,6 @@ Defines the button style of the alert dialog box.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,8 +26,6 @@ Callback upon button clicking.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -44,11 +40,9 @@ backgroundColor?: ResourceColor
 
 Background color of the button.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ Whether the button is the default focus. Default value: **false**. **true**: The
 **Default:** false
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,8 +85,6 @@ Whether to respond when the button is clicked.Default value: **true**
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -109,11 +99,9 @@ fontColor?: ResourceColor
 
 Font color of the button.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,13 +117,11 @@ style?: DialogButtonStyle
 
 Style of the button.Default value: **DialogButtonStyle.DEFAULT**
 
-**Type:** DialogButtonStyle
+**Type:** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
 **Default:** -
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,11 +137,9 @@ value: ResourceStr
 
 Text of the button. If the value is null, the button is not displayed.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Enumerates the file encryption levels, which are used to ensure data security fo
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## EL1
@@ -17,8 +15,6 @@ EL1 = 0
 Device-level encryption. Directories with this encryption level are accessible after the device is powered on.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ User-level encryption. Directories with this encryption level are accessible onl
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -51,11 +45,13 @@ EL3 = 2
 ```
 
 User-level encryption. The file permissions vary according to their scenarios.  
-- An open file is always readable and writable regardless of whether the screen is locked. - When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such a file can be opened, read, and written. - When the screen is locked, a file can be created and then opened and written but not read. When the screen is unlocked, a file can be created and then opened, read, and written.
+- An open file is always readable and writable regardless of whether the screen is locked.  
+- When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such  
+a file can be opened, read, and written.  
+- When the screen is locked, a file can be created and then opened and written but not read. When the screen is  
+unlocked, a file can be created and then opened, read, and written.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +66,14 @@ EL4 = 3
 ```
 
 User-level encryption. The file permissions vary according to their scenarios.  
-- When the screen is locked, an open file is not readable or writable. When the screen is unlocked, such a file is readable and writable. - When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such a file can be opened, read, and written. - When the screen is locked, a file cannot be created. When the screen is unlocked, a file can be created and then opened, read, and written.
+- When the screen is locked, an open file is not readable or writable. When the screen is unlocked, such a file  
+is readable and writable.  
+- When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such  
+a file can be opened, read, and written.  
+- When the screen is locked, a file cannot be created. When the screen is unlocked, a file can be created and  
+then opened, read, and written.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,8 +92,6 @@ Application-level encryption. The file permissions vary according to their scena
 When the screen is locked, a closed file can be opened, read, and written only if the reserved key is obtained by calling [Access](arkts-ability-screenlockfilemanager-acquireaccess-f.md). When the screen is unlocked, such a file can be opened, read, and written.A file can be created and then opened, read, and written regardless of whether the screen is locked.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

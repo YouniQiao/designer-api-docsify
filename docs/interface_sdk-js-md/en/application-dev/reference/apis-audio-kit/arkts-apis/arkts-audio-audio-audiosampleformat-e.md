@@ -4,8 +4,6 @@ Enumerates the audio sample formats.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_INVALID
@@ -17,8 +15,6 @@ SAMPLE_FORMAT_INVALID = -1
 Invalid format.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ Unsigned 8-bit integer.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_S16LE
@@ -45,8 +39,6 @@ SAMPLE_FORMAT_S16LE = 1
 Signed 16-bit integer, little endian.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -60,8 +52,6 @@ Signed 24-bit integer, little endian.Due to system restrictions, only some devic
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_S32LE
@@ -74,8 +64,6 @@ Signed 32-bit integer, little endian.Due to system restrictions, only some devic
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## SAMPLE_FORMAT_F32LE
@@ -87,7 +75,5 @@ SAMPLE_FORMAT_F32LE = 4
 Signed 32-bit floating-point number, little endian.Due to system restrictions, only some devices support this sampling format.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## setVolumeDescription
@@ -15,8 +15,6 @@ function setVolumeDescription(uuid: string, description: string, callback: Async
 Sets volume description. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -45,28 +43,6 @@ Sets volume description. This API uses an asynchronous callback to return the re
 | 13600008 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let uuid: string = "";
-let description: string = "";
-volumeManager.setVolumeDescription(uuid, description).then(() => {
-  console.info("setVolumeDescription successfully");
-}).catch((error: BusinessError) => {
-  console.error("setVolumeDescription failed with error:" + JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let uuid: string = "";
-let description: string = "";
-volumeManager.setVolumeDescription(uuid, description, (error: BusinessError) => {
-  // Do something.   
-});
-```
-
 
 ## setVolumeDescription
 
@@ -77,8 +53,6 @@ function setVolumeDescription(uuid: string, description: string): Promise<void>
 Sets volume description. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -111,7 +85,3 @@ Sets volume description. This API uses a promise to return the result.
 | 13600005 |
 | 13600008 |
 | 13900042 |
-
-**Examples**
-
-See [setVolumeDescription](#setvolumedescription)

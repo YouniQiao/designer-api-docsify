@@ -7,8 +7,6 @@ PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStor
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -26,8 +24,6 @@ static DeleteProp(key: string): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [deleteProp](#deleteprop)
@@ -40,12 +36,6 @@ static DeleteProp(key: string): void
 | --- | --- | --- |
 | key | string | 是 |
 
-**示例**
-
-```TypeScript
-PersistentStorage.DeleteProp('highScore');
-```
-
 ## deleteProp
 
 ```TypeScript
@@ -55,8 +45,6 @@ static deleteProp(key: string): void
 是[persistProp](#persistprop)的逆向操作。将key对应的属性从 [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续 [AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用 [persistProp](#persistprop)接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -68,12 +56,6 @@ static deleteProp(key: string): void
 | --- | --- | --- |
 | key | string | 是 |
 
-**示例**
-
-```TypeScript
-PersistentStorage.deleteProp('highScore');
-```
-
 ## Keys
 
 ```TypeScript
@@ -83,8 +65,6 @@ static Keys(): Array<string>
 返回所有持久化属性的属性名的数组。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -98,26 +78,6 @@ static Keys(): Array<string>
 | --- |
 | Array & lt;string & gt; |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropB', 48);
-let keys: IterableIterator<string> = AppStorage.Keys();
-```
-
-```TypeScript
-let keys: Array<string> = PersistentStorage.Keys();
-```
-
-```TypeScript
-Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.Keys(); // keys 包含 accessibilityEnabled、languageCode、prop
-```
-
 ## keys
 
 ```TypeScript
@@ -128,8 +88,6 @@ static keys(): Array<string>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -139,32 +97,6 @@ static keys(): Array<string>
 | 类型 |
 | --- |
 | Array & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropB', 48);
-let keys: IterableIterator<string> = AppStorage.keys();
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let keys: IterableIterator<string> = storage.keys();
-```
-
-```TypeScript
-let keys: Array<string> = PersistentStorage.keys();
-```
-
-```TypeScript
-Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.keys(); // keys 包含 accessibilityEnabled、languageCode、prop
-```
 
 ## PersistProp
 
@@ -180,8 +112,6 @@ static PersistProp<T>(key: string, defaultValue: T): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [persistProp](#persistprop)
@@ -194,12 +124,6 @@ static PersistProp<T>(key: string, defaultValue: T): void
 | --- | --- | --- |
 | key | string | 是 |
 | defaultValue | T | 是 |
-
-**示例**
-
-```TypeScript
-PersistentStorage.PersistProp('highScore', '0');
-```
 
 ## persistProp
 
@@ -215,8 +139,6 @@ static persistProp<T>(key: string, defaultValue: T): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -227,10 +149,6 @@ static persistProp<T>(key: string, defaultValue: T): void
 | --- | --- | --- |
 | key | string | 是 |
 | defaultValue | T | 是 |
-
-**示例**
-
-persistProp具体用法详见[从AppStorage中访问PersistentStorage初始化的属性](../../../ui/state-management/arkts-persiststorage.md#从appstorage中访问persistentstorage初始化的属性)。
 
 ## PersistProps
 
@@ -247,8 +165,6 @@ static PersistProps(
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [PersistProps](#persistprops)
@@ -261,12 +177,6 @@ static PersistProps(
 | --- | --- | --- |
 | properties | {       key: string;       defaultValue: any;     }[] | 是 |
 
-**示例**
-
-```TypeScript
-PersistentStorage.PersistProps([{ key: 'highScore', defaultValue: '0' }, { key: 'weightScore', defaultValue: '1' }]);
-```
-
 ## persistProps
 
 ```TypeScript
@@ -277,8 +187,6 @@ static persistProps(props: PersistPropsOptions[]): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -288,9 +196,3 @@ static persistProps(props: PersistPropsOptions[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | 是 |
-
-**示例**
-
-```TypeScript
-PersistentStorage.persistProps([{ key: 'highScore', defaultValue: '0' }, { key: 'weightScore', defaultValue: '1' }]);
-```

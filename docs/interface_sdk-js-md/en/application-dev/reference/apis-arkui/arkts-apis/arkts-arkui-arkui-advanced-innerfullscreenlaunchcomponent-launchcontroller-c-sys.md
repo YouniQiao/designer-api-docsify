@@ -4,8 +4,6 @@ Controller for launching the atomic service.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Controller for launching the atomic service.
 ## Modules to Import
 
 ```TypeScript
-import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
+import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkUI';
 ```
 
 ## launchAtomicService
@@ -25,8 +23,6 @@ public launchAtomicService: LaunchAtomicServiceCallback
 Function to launch atomicservice.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

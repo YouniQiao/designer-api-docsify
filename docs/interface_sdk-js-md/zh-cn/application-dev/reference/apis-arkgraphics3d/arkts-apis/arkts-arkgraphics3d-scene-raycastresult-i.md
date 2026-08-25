@@ -4,23 +4,19 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## centerDistance
 
 ```TypeScript
-centerDistance: double
+centerDistance: number
 ```
 
 命中物体包围盒中心到相机中心的距离，单位为世界坐标系下的场景单位（比如cm、m、km等），取值范围大于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -36,8 +32,6 @@ hitPosition: Position3
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## node
@@ -51,7 +45,5 @@ node: Node
 **类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

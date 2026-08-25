@@ -10,8 +10,6 @@ const MAX_ALLOWABLE_REUSE_DURATION: 300000
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -19,14 +17,12 @@ const MAX_ALLOWABLE_REUSE_DURATION: 300000
 ## PERMANENT_LOCKOUT_DURATION
 
 ```TypeScript
-const PERMANENT_LOCKOUT_DURATION: int = 0x7fffffff
+const PERMANENT_LOCKOUT_DURATION: number = 0x7fffffff
 ```
 
 永久冻结时间，值为0x7fffffff毫秒。当认证不通过次数达到上限后，认证器将进入永久冻结状态，此时需要通过PIN认证才能解锁。该值用于标识认证器的永久冻结状态，可通过 [AuthLockState](arkts-userauthentication-userauth-authlockstate-i.md)的lockoutDuration字段返回。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

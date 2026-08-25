@@ -4,8 +4,6 @@ Describes the status of {@code Progress}.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SUCCESS
@@ -17,8 +15,6 @@ SUCCESS = 0
 The device-cloud sync is successful.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -32,8 +28,6 @@ An unknown error occurs during the device-cloud sync.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## NETWORK_ERROR
@@ -45,8 +39,6 @@ NETWORK_ERROR = 2
 A network error occurs during the device-cloud sync.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -60,8 +52,6 @@ The cloud is unavailable.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## LOCKED_BY_OTHERS
@@ -73,8 +63,6 @@ LOCKED_BY_OTHERS = 4
 The device-cloud sync of another device is being performed.The sync of the local device can be performed only when the cloud resources are available.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -88,8 +76,6 @@ The number of records or size of the data to be synced exceeds the maximum. The 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## NO_SPACE_FOR_ASSET
@@ -101,8 +87,6 @@ NO_SPACE_FOR_ASSET = 6
 The remaining cloud space is less than the size of the data to be synced.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -116,8 +100,6 @@ The device-cloud sync is blocked due to the network strategy.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## STOP_CLOUD_SYNC
@@ -129,8 +111,6 @@ STOP_CLOUD_SYNC = 8
 STOP_CLOUD_SYNC: means cloud synchronization has been stopped.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

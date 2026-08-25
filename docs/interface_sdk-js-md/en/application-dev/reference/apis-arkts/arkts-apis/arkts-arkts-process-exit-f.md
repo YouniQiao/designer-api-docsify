@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## exit
@@ -16,8 +16,6 @@ Terminates this process.Exercise caution when using this API. After this API is 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [exit](arkts-arkts-process-processmanager-c.md#exit)
@@ -29,14 +27,3 @@ Terminates this process.Exercise caution when using this API. After this API is 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | code | number | Yes |
-
-**Examples**
-
-```TypeScript
-process.exit(0);
-```
-
-```TypeScript
-let pro = new process.ProcessManager();
-pro.exit(0);
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bas } from '@kit.ConnectivityKit';
+import { bas } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## onBatteryChange
@@ -15,8 +15,6 @@ function onBatteryChange(callback: Callback<BatteryInfo>): void
 Subscribe the event of battery state changed from a remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

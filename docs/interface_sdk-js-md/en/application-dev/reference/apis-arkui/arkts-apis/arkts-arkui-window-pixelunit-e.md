@@ -4,8 +4,6 @@ Enumerates the pixel units.You can use px2vp and vp2px to convert between physic
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## PX
@@ -18,8 +16,6 @@ Physical pixel unit (px).
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## VP
@@ -31,7 +27,5 @@ VP = 1
 Virtual pixel unit (vp).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

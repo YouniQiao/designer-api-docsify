@@ -15,8 +15,6 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md)
@@ -33,82 +31,6 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 | --- | --- | --- |
 | date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let setDoNotDisturbDateCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("setDoNotDisturbDate failed " + JSON.stringify(err));
-  } else {
-    console.info("setDoNotDisturbDate success");
-  }
-}
-
-let doNotDisturbDate: Notification.DoNotDisturbDate = {
-  type: Notification.DoNotDisturbType.TYPE_ONCE,
-  begin: new Date(),
-  end: new Date(2021, 11, 15, 18, 0)
-};
-
-Notification.setDoNotDisturbDate(doNotDisturbDate, setDoNotDisturbDateCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let doNotDisturbDate: Notification.DoNotDisturbDate = {
-    type: Notification.DoNotDisturbType.TYPE_ONCE,
-    begin: new Date(),
-    end: new Date(2021, 11, 15, 18, 0)
-};
-Notification.setDoNotDisturbDate(doNotDisturbDate).then(() => {
-  console.info("setDoNotDisturbDate success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`setDoNotDisturbDate failed, code is ${err}`);
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let setDoNotDisturbDateCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("setDoNotDisturbDate failed " + JSON.stringify(err));
-  } else {
-    console.info("setDoNotDisturbDate success");
-  }
-}
-
-let doNotDisturbDate: Notification.DoNotDisturbDate = {
-  type: Notification.DoNotDisturbType.TYPE_ONCE,
-  begin: new Date(),
-  end: new Date(2021, 11, 15, 18, 0)
-};
-
-let userId: number = 1;
-Notification.setDoNotDisturbDate(doNotDisturbDate, userId, setDoNotDisturbDateCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let doNotDisturbDate: Notification.DoNotDisturbDate = {
-  type: Notification.DoNotDisturbType.TYPE_ONCE,
-  begin: new Date(),
-  end: new Date(2021, 11, 15, 18, 0)
-};
-
-let userId: number = 1;
-
-Notification.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
-  console.info("setDoNotDisturbDate success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`setDoNotDisturbDate failed, code is ${err}`);
-});
-```
 
 
 ## setDoNotDisturbDate
@@ -121,8 +43,6 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md)
@@ -145,10 +65,6 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setDoNotDisturbDate](#setdonotdisturbdate)
-
 
 ## setDoNotDisturbDate
 
@@ -159,8 +75,6 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 指定用户设置免打扰时间（Callback形式）。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -180,10 +94,6 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 | userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [setDoNotDisturbDate](#setdonotdisturbdate)
-
 
 ## setDoNotDisturbDate
 
@@ -194,8 +104,6 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 指定用户设置免打扰时间（Promise形式）。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -219,7 +127,3 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [setDoNotDisturbDate](#setdonotdisturbdate)

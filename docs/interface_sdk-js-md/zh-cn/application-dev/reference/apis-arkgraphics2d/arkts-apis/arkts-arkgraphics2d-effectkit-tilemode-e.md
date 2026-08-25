@@ -7,8 +7,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CLAMP
@@ -20,8 +18,6 @@ CLAMP = 0
 如果着色器效果超出其原始边界，剩余区域使用着色器的边缘颜色填充。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -35,8 +31,6 @@ REPEAT = 1
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## MIRROR
@@ -49,8 +43,6 @@ MIRROR = 2
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DECAL
@@ -62,7 +54,5 @@ DECAL = 3
 仅在其原始边界内渲染着色器效果。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

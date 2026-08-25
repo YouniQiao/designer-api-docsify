@@ -4,14 +4,12 @@ Describes the information about an encoder.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## bitRate
@@ -25,8 +23,6 @@ Bit rate range of the encoder, with the minimum and maximum bit rates specified,
 **Type:** Range
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -42,8 +38,6 @@ Number of audio channels for the audio capturer, with the minimum and maximum nu
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## frameRate
@@ -57,8 +51,6 @@ Video frame rate range, with the minimum and maximum frame rates specified, in f
 **Type:** Range
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -74,8 +66,6 @@ Video frame height range, with the minimum and maximum heights specified, in px.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## mimeType
@@ -90,23 +80,19 @@ MIME type of the encoder.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## sampleRate
 
 ```TypeScript
-sampleRate?: Array<int>
+sampleRate?: Array<number>
 ```
 
 Audio sampling rate, including all available audio sampling rates, in Hz. The value depends on the encoder type, and this parameter is available only for audio encoders.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -122,8 +108,6 @@ Encoder type. The value **audio** means an audio encoder, and **video** means a 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## width
@@ -137,7 +121,5 @@ Video frame width range, with the minimum and maximum widths specified, in px. T
 **Type:** Range
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getDefaultNet
@@ -24,8 +24,6 @@ function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 > [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md)继续查询更多网络信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -48,46 +46,6 @@ function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet((error: BusinessError, data: connection.NetHandle) => {
-  if (error) {
-    console.error(`Failed to get default net. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info(`Succeeded to get data ${JSON.stringify(data)}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet((error: BusinessError|null, data: connection.NetHandle|undefined) => {
-  if (error) {
-    console.error(`Failed to get default net. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info(`Succeeded to get data ${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((data: connection.NetHandle) => {
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-});
-```
-
 
 ## getDefaultNet
 
@@ -108,8 +66,6 @@ function getDefaultNet(): Promise<NetHandle>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -129,7 +85,3 @@ function getDefaultNet(): Promise<NetHandle>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [getDefaultNet](#getdefaultnet)

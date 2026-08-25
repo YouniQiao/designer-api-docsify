@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## fd
@@ -27,8 +25,6 @@ fd: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 
@@ -45,8 +41,6 @@ name: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Security.SecurityGuard
 

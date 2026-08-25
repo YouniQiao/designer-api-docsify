@@ -4,23 +4,19 @@ The module defines the child process information. The information can be obtaine
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## parentPid
 
 ```TypeScript
-parentPid: int
+parentPid: number
 ```
 
 PID of the parent process of the child process.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -29,16 +25,14 @@ PID of the parent process of the child process.
 ## pid
 
 ```TypeScript
-pid: int
+pid: number
 ```
 
 PID of the child process.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,8 +49,6 @@ Process name of the child process.
 **Type:** string
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

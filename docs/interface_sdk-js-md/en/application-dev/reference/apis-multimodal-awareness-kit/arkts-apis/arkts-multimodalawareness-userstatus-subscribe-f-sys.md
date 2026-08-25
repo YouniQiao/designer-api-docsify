@@ -3,21 +3,19 @@
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## subscribe
 
 ```TypeScript
 function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusData>,
-    deviceInfo?: DeviceInfo[]): int
+    deviceInfo?: DeviceInfo[]): number
 ```
 
 Subscribes to user status monitoring.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,7 +35,7 @@ Subscribes to user status monitoring.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 

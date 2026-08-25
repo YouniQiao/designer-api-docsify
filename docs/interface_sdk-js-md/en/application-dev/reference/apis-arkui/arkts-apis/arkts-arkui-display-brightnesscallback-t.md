@@ -8,8 +8,6 @@ Defines the callback function used to listen for screen brightness information.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**

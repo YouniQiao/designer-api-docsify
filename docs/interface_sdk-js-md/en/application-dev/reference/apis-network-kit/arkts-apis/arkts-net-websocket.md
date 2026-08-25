@@ -4,14 +4,12 @@ Provides WebSocket clients and servers for third-party applications to implement
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary
@@ -29,7 +27,6 @@ import { webSocket } from '@kit.NetworkKit';
 | --- |
 | [ClientCert(WebSocket Connection)](arkts-network-websocket-clientcert-i.md) |
 | [CloseResult(WebSocket Connection)](arkts-network-websocket-closeresult-i.md) |
-| [OpenResult(WebSocket Connection)](arkts-network-websocket-openresult-i.md) |
 | [ServerCert(WebSocket Connection)](arkts-network-websocket-servercert-i.md) |
 | [WebSocket(WebSocket Connection)](arkts-network-websocket-websocket-i.md) |
 | [WebSocketCloseOptions(WebSocket Connection)](arkts-network-websocket-websocketcloseoptions-i.md) |

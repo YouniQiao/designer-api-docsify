@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getP2pLinkedInfo
@@ -15,8 +15,6 @@ function getP2pLinkedInfo(): Promise<WifiP2pLinkedInfo>
 Obtain information about the P2P connection.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -36,24 +34,6 @@ Obtain information about the P2P connection.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  wifiManager.getP2pLinkedInfo((err, data:wifiManager.WifiP2pLinkedInfo) => {
-    if (err) {
-        console.error("get p2p linked info error");
-        return;
-    }
-    console.info("get wifi p2p linked info: " + JSON.stringify(data));
-  });
-
-  wifiManager.getP2pLinkedInfo().then(data => {
-    console.info("get wifi p2p linked info: " + JSON.stringify(data));
-  });
-```
-
 
 ## getP2pLinkedInfo
 
@@ -64,8 +44,6 @@ function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void
 Obtain information about the P2P connection.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -85,7 +63,3 @@ Obtain information about the P2P connection.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 | [2801001](../errorcode-wifi.md#2801001-p2p-module-error) |
-
-**Examples**
-
-See [getP2pLinkedInfo](#getp2plinkedinfo)

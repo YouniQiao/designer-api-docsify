@@ -1178,7 +1178,7 @@ int32_t OH_NativeXComponent_AttachNativeRootNode(OH_NativeXComponent* component,
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)* component | 表示指向[OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)实例的指针。 |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) root | 表示指向Native接口创建的组件实例的指针。 |
+| ArkUI_NodeHandle root | 表示指向Native接口创建的组件实例的指针。 |
 
 **返回：**
 
@@ -1207,7 +1207,7 @@ int32_t OH_NativeXComponent_DetachNativeRootNode(OH_NativeXComponent* component,
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)* component | 表示指向[OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)实例的指针。 |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) root | 表示指向Native接口创建的组件实例的指针。 |
+| ArkUI_NodeHandle root | 表示指向Native接口创建的组件实例的指针。 |
 
 **返回：**
 
@@ -1383,7 +1383,7 @@ OH_NativeXComponent* OH_NativeXComponent_GetNativeXComponent(ArkUI_NodeHandle no
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 指向Native接口创建的组件实例的指针。 |
+| ArkUI_NodeHandle node | 指向Native接口创建的组件实例的指针。 |
 
 **返回：**
 
@@ -1408,7 +1408,7 @@ int32_t OH_NativeXComponent_GetNativeAccessibilityProvider(OH_NativeXComponent* 
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)* component | 表示指向[OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)实例的指针。 |
-| [ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)** handle | 表示指向[ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)实例的指针。 |
+| ArkUI_AccessibilityProvider** handle | 表示指向[ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)实例的指针。 |
 
 **返回：**
 
@@ -1483,7 +1483,7 @@ int32_t OH_ArkUI_XComponent_StopImageAnalyzer(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示XComponent组件实例。 |
+| ArkUI_NodeHandle node | 表示XComponent组件实例。 |
 
 **返回：**
 
@@ -1507,7 +1507,7 @@ OH_ArkUI_SurfaceHolder* OH_ArkUI_SurfaceHolder_Create(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示指向Native接口创建的XComponent组件实例的指针。 |
+| ArkUI_NodeHandle node | 表示指向Native接口创建的XComponent组件实例的指针。 |
 
 **返回：**
 
@@ -1765,7 +1765,7 @@ int32_t OH_ArkUI_XComponent_SetAutoInitialize(ArkUI_NodeHandle node, bool autoIn
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示指向XComponent组件实例的指针。 |
+| ArkUI_NodeHandle node | 表示指向XComponent组件实例的指针。 |
 | bool autoInitialize | 表示XComponent组件是否需要自动初始化Surface。如果autoInitialize值是true，OnSurfaceCreated回调会在挂树时被触发，OnSurfaceDestroyed回调会在下树时被触发。false表示组件不需要自动初始化Surface。autoInitialize默认值是true。 |
 
 **返回：**
@@ -1790,7 +1790,7 @@ int32_t OH_ArkUI_XComponent_Initialize(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示指向XComponent组件实例的指针。 |
+| ArkUI_NodeHandle node | 表示指向XComponent组件实例的指针。 |
 
 **返回：**
 
@@ -1814,7 +1814,7 @@ int32_t OH_ArkUI_XComponent_Finalize(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示指向XComponent组件实例的指针。 |
+| ArkUI_NodeHandle node | 表示指向XComponent组件实例的指针。 |
 
 **返回：**
 
@@ -1838,7 +1838,7 @@ int32_t OH_ArkUI_XComponent_IsInitialized(ArkUI_NodeHandle node, bool* isInitial
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示指向XComponent组件实例的指针。 |
+| ArkUI_NodeHandle node | 表示指向XComponent组件实例的指针。 |
 | bool* isInitialized | 表示XComponent组件是否已经初始化Surface。true表示组件已初始化Surface，false表示组件未初始化Surface。 |
 
 **返回：**
@@ -1863,7 +1863,7 @@ int32_t OH_ArkUI_XComponent_SetExpectedFrameRateRange(ArkUI_NodeHandle node, OH_
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示XComponent组件实例。 |
+| ArkUI_NodeHandle node | 表示XComponent组件实例。 |
 | [OH_NativeXComponent_ExpectedRateRange](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-expectedraterange.md) range | 表示[OH_NativeXComponent_ExpectedRateRange](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-expectedraterange.md)类型的期望帧率信息对象。 |
 
 **返回：**
@@ -1913,7 +1913,7 @@ int32_t OH_ArkUI_XComponent_UnregisterOnFrameCallback(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示XComponent组件实例。 |
+| ArkUI_NodeHandle node | 表示XComponent组件实例。 |
 
 **返回：**
 
@@ -1937,7 +1937,7 @@ int32_t OH_ArkUI_XComponent_SetNeedSoftKeyboard(ArkUI_NodeHandle node, bool need
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示XComponent组件实例。 |
+| ArkUI_NodeHandle node | 表示XComponent组件实例。 |
 | bool needSoftKeyboard | 表示是否需要软键盘。需要时为true，不需要时为false，默认值为false。 |
 
 **返回：**
@@ -1962,13 +1962,13 @@ ArkUI_AccessibilityProvider* OH_ArkUI_AccessibilityProvider_Create(ArkUI_NodeHan
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-accessibility-arkui-node8h.md) node | 表示XComponent组件实例。 |
+| ArkUI_NodeHandle node | 表示XComponent组件实例。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_AccessibilityProvider*](capi-arkui-accessibility-arkui-accessibilityprovider.md) | [ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)类型的指针。 |
+| ArkUI_AccessibilityProvider* | [ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)类型的指针。 |
 
 ### OH_ArkUI_AccessibilityProvider_Dispose()
 
@@ -1986,7 +1986,7 @@ void OH_ArkUI_AccessibilityProvider_Dispose(ArkUI_AccessibilityProvider* provide
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)* provider | 表示由Native接口[OH_ArkUI_AccessibilityProvider_Create](capi-native-interface-xcomponent-h.md#oh_arkui_accessibilityprovider_create)创建的[ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)实例。 |
+| ArkUI_AccessibilityProvider* provider | 表示由Native接口[OH_ArkUI_AccessibilityProvider_Create](capi-native-interface-xcomponent-h.md#oh_arkui_accessibilityprovider_create)创建的[ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)实例。 |
 
 ### OH_ArkUI_SurfaceCallback_SetSurfaceShowEvent()
 

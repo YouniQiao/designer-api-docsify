@@ -4,14 +4,12 @@ Defines the request parameters for the **LocalSocket** object.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## data
@@ -26,8 +24,6 @@ Data to be transmitted.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## encoding
@@ -41,7 +37,5 @@ Encoding format of the string.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack

@@ -4,8 +4,6 @@ Parameters for requesting to report cache location information@interface CachedG
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CachedGnssLocationsRequest](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md)
@@ -17,7 +15,7 @@ Parameters for requesting to report cache location information@interface CachedG
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## reportingPeriodSec
@@ -29,8 +27,6 @@ reportingPeriodSec: number
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -47,8 +43,6 @@ wakeUpCacheQueueFull: boolean
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

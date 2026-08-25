@@ -3,17 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from '@kit.ArkUI';
+import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
-
-### 函数
-
-| 名称 |
-| --- |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-selectioncontainer-f.md) |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-selectioncontainer-f.md) |
 
 ### 类
 
@@ -26,7 +19,6 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 | 名称 |
 | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |
 | [SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) |
 | [SelectionContainerInterface](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerinterface-i.md) |
 | [SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) |
@@ -48,5 +40,5 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 | 名称 |
 | --- |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainer) |
+| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md) |
 | [SelectionContainerInstance](arkts-arkui-arkui-components-selectioncontainer-con.md#selectioncontainerinstance) |

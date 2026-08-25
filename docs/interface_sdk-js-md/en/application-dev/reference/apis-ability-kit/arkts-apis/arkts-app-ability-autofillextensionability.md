@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { AutoFillExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

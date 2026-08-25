@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
@@ -32,8 +30,6 @@ columns?: number | "auto"
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
@@ -51,8 +47,6 @@ gutter?: number | string
 **类型：** number \| string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -72,8 +66,6 @@ margin?: number | string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
@@ -91,8 +83,6 @@ sizeType?: SizeType
 **类型：** [SizeType](arkts-arkui-sizetype-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

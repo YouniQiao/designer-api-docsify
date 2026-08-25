@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## on('sessionCreate')
@@ -15,8 +15,6 @@ function on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => v
 Register session create callback
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -37,16 +35,6 @@ Register session create callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.on('sessionCreate', (descriptor: avSession.AVSessionDescriptor) => {
-  console.info(`on sessionCreate : isActive : ${descriptor.isActive}`);
-  console.info(`on sessionCreate : type : ${descriptor.type}`);
-  console.info(`on sessionCreate : sessionTag : ${descriptor.sessionTag}`);
-});
-```
-
 
 ## on('sessionDestroy')
 
@@ -57,8 +45,6 @@ function on(type: 'sessionDestroy', callback: (session: AVSessionDescriptor) => 
 Register session destroy callback
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -79,16 +65,6 @@ Register session destroy callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.on('sessionDestroy', (descriptor: avSession.AVSessionDescriptor) => {
-  console.info(`on sessionDestroy : isActive : ${descriptor.isActive}`);
-  console.info(`on sessionDestroy : type : ${descriptor.type}`);
-  console.info(`on sessionDestroy : sessionTag : ${descriptor.sessionTag}`);
-});
-```
-
 
 ## on('topSessionChange')
 
@@ -99,8 +75,6 @@ function on(type: 'topSessionChange', callback: (session: AVSessionDescriptor) =
 Register top session changed callback
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -121,16 +95,6 @@ Register top session changed callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.on('topSessionChange', (descriptor: avSession.AVSessionDescriptor) => {
-  console.info(`on topSessionChange : isActive : ${descriptor.isActive}`);
-  console.info(`on topSessionChange : type : ${descriptor.type}`);
-  console.info(`on topSessionChange : sessionTag : ${descriptor.sessionTag}`);
-});
-```
-
 
 ## on('sessionServiceDie')
 
@@ -141,8 +105,6 @@ function on(type: 'sessionServiceDie', callback: () => void): void
 Register Session service death callback, notifying the application to clean up resources.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -163,14 +125,6 @@ Register Session service death callback, notifying the application to clean up r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.on('sessionServiceDie', () => {
-  console.info('on sessionServiceDie  : session is  Died ');
-});
-```
-
 
 ## on('distributedSessionChange')
 
@@ -181,8 +135,6 @@ function on(type: 'distributedSessionChange', distributedSessionType: Distribute
 Register distributed session changed callback
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -203,14 +155,6 @@ Register distributed session changed callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.on('distributedSessionChange', avSession.DistributedSessionType.TYPE_SESSION_REMOTE, (sessionControllers: Array<avSession.AVSessionController>) => {
-  console.info(`on distributedSessionChange size: ${sessionControllers.length}`);
-});
-```
-
 
 ## on('deviceAvailable')
 
@@ -221,8 +165,6 @@ function on(type: 'deviceAvailable', callback: (device: OutputDeviceInfo) => voi
 Register device discovery callback
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -242,16 +184,6 @@ Register device discovery callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let castDevice: avSession.OutputDeviceInfo;
-avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
-  castDevice = device;
-  console.info(`on deviceAvailable  : ${device} `);
-});
-```
-
 
 ## on('deviceOffline')
 
@@ -262,8 +194,6 @@ function on(type: 'deviceOffline', callback: (deviceId: string) => void): void
 Register device offline callback
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -283,16 +213,6 @@ Register device offline callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let castDeviceId: string;
-avSession.on('deviceOffline', (deviceId: string) => {
-  castDeviceId = deviceId;
-  console.info(`on deviceOffline  : ${deviceId} `);
-});
-```
-
 
 ## on('deviceLogEvent')
 
@@ -303,8 +223,6 @@ function on(type: 'deviceLogEvent', callback: Callback<DeviceLogEventCode>): voi
 Register log event callback.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -326,14 +244,6 @@ Register log event callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-avSession.on('deviceLogEvent', (eventCode: avSession.DeviceLogEventCode) => {
-  console.info(`on deviceLogEvent code : ${eventCode}`);
-});
-```
-
 
 ## on('deviceStateChanged')
 
@@ -344,8 +254,6 @@ function on(type: 'deviceStateChanged', callback: Callback<DeviceState>): void
 Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -366,12 +274,3 @@ Registers a system callback for the device connection phase. The callback includ
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-avSession.on('deviceStateChanged', (state: avSession.DeviceState) => {
-  console.info(`on deviceStateChanged state, deviceId=${state.deviceId}, connect status=${state.deviceState},
-    reasonCode=${state.reasonCode}, radarErrorCode=${state.radarErrorCode}`)
-})
-```

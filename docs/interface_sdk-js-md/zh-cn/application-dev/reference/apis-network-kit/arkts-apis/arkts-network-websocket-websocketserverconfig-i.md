@@ -4,45 +4,39 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## maxConcurrentClientsNumber
 
 ```TypeScript
-maxConcurrentClientsNumber: int
+maxConcurrentClientsNumber: number
 ```
 
 最大并发客户端数量，当达到最大数时，服务端拒绝新连接。默认最大数量为10。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## maxConnectionsForOneClient
 
 ```TypeScript
-maxConnectionsForOneClient: int
+maxConnectionsForOneClient: number
 ```
 
 单个客户端的最大连接数。默认最大数量为10。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -58,8 +52,6 @@ protocol?: string
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## serverCert
@@ -73,8 +65,6 @@ serverCert?: ServerCert
 **类型：** [ServerCert](arkts-network-websocket-servercert-i.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -90,22 +80,18 @@ serverIP?: string
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## serverPort
 
 ```TypeScript
-serverPort: int
+serverPort: number
 ```
 
 服务端监听的端口号。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack

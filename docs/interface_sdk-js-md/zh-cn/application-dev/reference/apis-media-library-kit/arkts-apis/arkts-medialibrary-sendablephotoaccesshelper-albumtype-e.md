@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## USER
@@ -18,8 +16,6 @@ USER = 0
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SYSTEM
@@ -31,7 +27,5 @@ SYSTEM = 1024
 系统预置相册。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## SUCCESS
@@ -17,8 +15,6 @@ SUCCESS = 0
 成功。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ ERR_UNKNOWN = -1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## ERR_INVALID_PARAM
@@ -45,8 +39,6 @@ ERR_INVALID_PARAM = -2
 参数不合法。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -60,8 +52,6 @@ WebViewController未绑定组件。
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## ERR_KEY_NOT_MATCH
@@ -73,8 +63,6 @@ ERR_KEY_NOT_MATCH = -4
 未匹配到key值，对于[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) 需与[getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey)配套使用并且key值一致， 否则返回该错误码。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -88,8 +76,6 @@ ERR_SIGNIFICANT_CHANGE = -5
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## ERR_DURATION_OUT_OF_RANGE
@@ -101,8 +87,6 @@ ERR_DURATION_OUT_OF_RANGE = -6
 在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md)设置的插帧持续时间超出范围。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,8 +101,6 @@ ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md)设置的历史帧失效时间超出范围。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

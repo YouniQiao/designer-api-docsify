@@ -4,8 +4,6 @@ Defines cross-device collaborative operation information.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines cross-device collaborative operation information.
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
 ```
 
 ## actionName
@@ -28,8 +26,6 @@ Operation button displayed in the notification. The value must be the same as th
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Operation button displayed in the notification. The value must be the same as th
 ## buttonIndex
 
 ```TypeScript
-buttonIndex?: int
+buttonIndex?: number
 ```
 
 Index of the non-live view button or live view auxiliary area that the user taps.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -55,17 +49,18 @@ Index of the non-live view button or live view auxiliary area that the user taps
 ## operationType
 
 ```TypeScript
-operationType?: int
+operationType?: number
 ```
 
 Operation type.  
-- **0**: The user taps the non-live view. - **1**: The user taps the non-live view button. - **32**: The user taps the live view. - **33**: The user taps the live view auxiliary area.
+- **0**: The user taps the non-live view.  
+- **1**: The user taps the non-live view button.  
+- **32**: The user taps the live view.  
+- **33**: The user taps the live view auxiliary area.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -82,8 +77,6 @@ User input, used to apply quick reply across devices. The value must be the same
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

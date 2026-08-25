@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setGlobalTimeoutOptions
@@ -15,8 +15,6 @@ function setGlobalTimeoutOptions(options?: TimeoutOptions): void
 Sets timeout configuration for all tasks. Used when task-specific timeout configuration is not configured.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

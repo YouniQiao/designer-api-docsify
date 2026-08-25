@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllShortcutInfoForSelf
@@ -16,8 +16,6 @@ function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **返回值：**
@@ -25,35 +23,3 @@ function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;ShortcutInfo & gt; & gt; |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-shortcutManager.getAllShortcutInfoForSelf()
-  .then((data: shortcutManager.ShortcutInfo[]) => {
-    console.info('getAllShortcutInfoForSelf shortcut data is' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`getAllShortcutInfoForSelf errData is errCode:${err.code}  message:${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-shortcutManager.getAllShortcutInfoForSelf()
-  .then((data: shortcutManager.ShortcutInfo[]) => {
-    console.info('getAllShortcutInfoForSelf shortcut data is' + JSON.stringify(data));
-  }).catch((err: Error) => {
-    console.error(`getAllShortcutInfoForSelf errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-  });
-```

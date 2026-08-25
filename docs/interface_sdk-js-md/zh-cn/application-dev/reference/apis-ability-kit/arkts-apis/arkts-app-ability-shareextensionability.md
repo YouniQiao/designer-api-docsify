@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ShareExtensionAbility } from '@kit.AbilityKit';
+import { ShareExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

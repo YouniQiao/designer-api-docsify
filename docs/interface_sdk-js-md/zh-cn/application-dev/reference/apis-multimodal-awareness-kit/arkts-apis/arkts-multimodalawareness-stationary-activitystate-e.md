@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## ENTER
@@ -18,8 +16,6 @@ ENTER = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## EXIT
@@ -31,7 +27,5 @@ EXIT = 2
 退出状态，表示设备当前未处于静止状态。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary

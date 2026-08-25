@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ SUCCESS = 0
 表示端云同步过程成功。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -36,8 +32,6 @@ UNKNOWN_ERROR = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ NETWORK_ERROR = 2
 表示端云同步过程中遇到网络错误。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -68,8 +60,6 @@ CLOUD_DISABLED = 3
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ LOCKED_BY_OTHERS = 4
 表示有其他设备正在进行端云同步，本设备无法进行端云同步。请确保无其他设备占用端云资源后，再使用本设备进行端云同步任务。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -100,8 +88,6 @@ RECORD_LIMIT_EXCEEDED = 5
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +101,6 @@ NO_SPACE_FOR_ASSET = 6
 表示云空间剩余空间小于待同步的资产大小。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 

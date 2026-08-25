@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ icon: ResourceStr | SymbolGlyphModifier
 
 需要设置的图标。
 
-**类型：** ResourceStr \| SymbolGlyphModifier
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| SymbolGlyphModifier
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ index: number
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

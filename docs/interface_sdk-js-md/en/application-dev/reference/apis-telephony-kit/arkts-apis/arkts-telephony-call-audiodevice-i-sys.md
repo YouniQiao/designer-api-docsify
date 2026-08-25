@@ -4,8 +4,6 @@ Enumerates audio devices.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Enumerates audio devices.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## address
@@ -27,8 +25,6 @@ Audio device address.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -46,8 +42,6 @@ Audio device name.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Audio device type.
 **Type:** [AudioDeviceType](arkts-telephony-call-audiodevicetype-e-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 

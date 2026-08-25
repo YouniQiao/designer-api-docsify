@@ -4,8 +4,6 @@ Defines the download options, including the **allowNetwork** and **order** field
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the download options, including the **allowNetwork** and **order** field
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## allowNetwork
@@ -27,8 +25,6 @@ Network type allowed for download. The value **CELLULAR** indicates that only do
 **Type:** [NetType](arkts-basicservices-update-nettype-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -45,8 +41,6 @@ The options are as follows: **DOWNLOAD**: download the upgrade package, which ne
 **Type:** [Order](arkts-basicservices-update-order-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

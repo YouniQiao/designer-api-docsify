@@ -4,8 +4,6 @@ Enumerates the bundle flags, which indicate the type of bundle information to ob
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Obtains the default bundle information, excluding **applicationInfo** and **signatureInfo**.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Obtains the default bundle information and **applicationInfo** (excluding **icon
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -50,8 +44,6 @@ Obtains the default bundle information and **signatureInfo**.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -65,8 +57,6 @@ WITH_APPLICATION_ICON_INFO = 1 << 2
 Obtains the default bundle information and **applicationInfo** (including **iconData**).
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from '@kit.ArkUI';
+import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -13,19 +13,12 @@ import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from '@kit.ArkUI';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md) |
-| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md) |
 
 ### Classes
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |
-
-### Interfaces
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md) |
 
 ### Constants
 

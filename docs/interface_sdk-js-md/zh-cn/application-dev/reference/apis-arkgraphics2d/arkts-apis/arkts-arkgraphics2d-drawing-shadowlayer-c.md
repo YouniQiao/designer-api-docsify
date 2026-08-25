@@ -9,14 +9,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## create
@@ -28,8 +26,6 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color): 
 创建阴影层对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -54,105 +50,6 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color): 
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
-    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
-    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, 0xff00ff00);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    let shadowLayer = drawing.ShadowLayer.create(3.0, -3.0, 3.0, (0xff00ff00).toInt());
-  }
-}
-```
-
-## create
-
-```TypeScript
-static create(blurRadius: double, x: double, y: double, color: common2D.Color): ShadowLayer | undefined
-```
-
-创建阴影层对象。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | double | 是 |
-| x | double | 是 |
-| y | double | 是 |
-| color | common2D.Color | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [create](#create)
-
 ## create
 
 ```TypeScript
@@ -162,8 +59,6 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color | 
 创建阴影层对象。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -187,46 +82,3 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color | 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [create](#create)
-
-## create
-
-```TypeScript
-static create(blurRadius: double, x: double, y: double, color: common2D.Color | int): ShadowLayer | undefined
-```
-
-创建阴影层对象。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | double | 是 |
-| x | double | 是 |
-| y | double | 是 |
-| color | common2D.Color \| int | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [create](#create)

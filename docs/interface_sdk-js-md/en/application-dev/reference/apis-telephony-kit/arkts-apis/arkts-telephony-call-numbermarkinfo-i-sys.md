@@ -4,8 +4,6 @@ Defines a number mark.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines a number mark.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isCloud
@@ -23,13 +21,12 @@ isCloud?: boolean
 ```
 
 Whether the number mark is from the cloud. The default value is **false**.  
-- **true**: yes - **false**: no
+- **true**: yes  
+- **false**: no
 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -47,8 +44,6 @@ Mark content. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the returned
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -56,16 +51,14 @@ Mark content. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the returned
 ## markCount
 
 ```TypeScript
-markCount?: int
+markCount?: number
 ```
 
 Mark count.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -83,8 +76,6 @@ Mark details. When **markType** is set to **MARK_TYPE_ENTERPRISE**, the value of
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -101,8 +92,6 @@ Mark source.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -118,8 +107,6 @@ Mark type.
 **Type:** [MarkType](arkts-telephony-call-marktype-e-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 

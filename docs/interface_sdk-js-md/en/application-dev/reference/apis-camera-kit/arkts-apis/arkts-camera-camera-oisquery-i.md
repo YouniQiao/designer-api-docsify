@@ -4,33 +4,23 @@ OIS (Optical Image Stabilization) query interface.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getCurrentCustomOISBias
 
-ArkTS-Dyn:
 ```TypeScript
 getCurrentCustomOISBias(oisAxis: OISAxes): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getCurrentCustomOISBias(oisAxis: OISAxes): double
 ```
 
 Gets the current custom bias value for the specified OIS axis.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +38,7 @@ Gets the current custom bias value for the specified OIS axis.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **Error codes:**
 
@@ -66,8 +56,6 @@ getCurrentOISMode(): OISMode
 Gets the current OIS mode.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,21 +78,13 @@ Gets the current OIS mode.
 
 ## getSupportedOISBiasRange
 
-ArkTS-Dyn:
 ```TypeScript
 getSupportedOISBiasRange(oisAxis: OISAxes): Array<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-getSupportedOISBiasRange(oisAxis: OISAxes): Array<double>
 ```
 
 Gets the supported bias range for the specified OIS axis.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,7 +102,7 @@ Gets the supported bias range for the specified OIS axis.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; |
+| Array & lt;number & gt; |
 
 **Error codes:**
 
@@ -133,21 +113,13 @@ Gets the supported bias range for the specified OIS axis.
 
 ## getSupportedOISBiasStep
 
-ArkTS-Dyn:
 ```TypeScript
 getSupportedOISBiasStep(oisAxis: OISAxes): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getSupportedOISBiasStep(oisAxis: OISAxes): double
 ```
 
 Gets the bias step for the specified OIS axis.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,7 +137,7 @@ Gets the bias step for the specified OIS axis.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **Error codes:**
 
@@ -183,8 +155,6 @@ isOISModeSupported(mode: OISMode): boolean
 Checks if the specified OIS mode is supported.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

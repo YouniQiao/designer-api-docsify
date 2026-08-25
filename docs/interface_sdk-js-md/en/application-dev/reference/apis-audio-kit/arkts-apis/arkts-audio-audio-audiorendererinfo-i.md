@@ -4,14 +4,12 @@ Describes audio renderer information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## content
@@ -26,8 +24,6 @@ Audio content type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 10
 
 **Substitutes:** usage
@@ -37,16 +33,14 @@ Audio content type.
 ## rendererFlags
 
 ```TypeScript
-rendererFlags: int
+rendererFlags: number
 ```
 
 Flags that control the renderer behavior.Set this parameter to **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,8 +58,6 @@ Audio stream usage.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -81,7 +73,5 @@ Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-a
 **Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume

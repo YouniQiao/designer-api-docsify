@@ -6,8 +6,6 @@
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getContext("2d")
@@ -19,8 +17,6 @@ getContext(type: "2d", options?: ContextAttrOptions): CanvasRenderingContext2D
 Obtains the context of 2D canvas drawing. Only parameters related to 2D canvas drawing are supported. The return value is a 2D drawing object that provides specific 2D drawing operations.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -49,8 +45,6 @@ Obtains the context of webgl canvas drawing. Only parameters related to webgl ca
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -78,8 +72,6 @@ Obtains the context of webgl2 canvas drawing. Only parameters related to webgl2 
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -106,8 +98,6 @@ toDataURL(type?: string, quality?: number): string
 Creates a data URI that contains the image display.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

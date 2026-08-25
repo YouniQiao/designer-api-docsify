@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { commonEventManager } from '@kit.BasicServicesKit';
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## removeStickyCommonEvent
@@ -15,8 +15,6 @@ function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): 
 Removes a sticky common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COMMONEVENT_STICKY
 
@@ -42,61 +40,6 @@ Removes a sticky common event. This API uses an asynchronous callback to return 
 | [1500007](../errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
 | [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
 
-**Examples**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError) => {
-  if (err) {
-    console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
-    return;
-  }
-  console.info(`removeStickyCommonEvent success`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError | null) => {
-  if (err) {
-    console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
-    return;
-  }
-  console.info(`removeStickyCommonEvent success`);
-});
-```
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
-  console.info(`removeStickyCommonEvent success`);
-}).catch ((err: BusinessError) => {
-  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
-  console.info(`removeStickyCommonEvent success`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`removeStickyCommonEvent failed, errCode: ${error.code}, errMes: ${error.message}`);
-});
-```
-
 
 ## removeStickyCommonEvent
 
@@ -107,8 +50,6 @@ function removeStickyCommonEvent(event: string): Promise<void>
 Removes a sticky common event that has been published. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COMMONEVENT_STICKY
 
@@ -138,7 +79,3 @@ Removes a sticky common event that has been published. This API uses a promise t
 | [1500004](../errorcode-CommonEventService.md#1500004-failed-to-send-system-common-events) |
 | [1500007](../errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
 | [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
-
-**Examples**
-
-See [removeStickyCommonEvent](#removestickycommonevent)

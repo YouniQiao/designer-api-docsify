@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getLinkedInfo
@@ -15,8 +15,6 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 Obtain connection information about the Wi-Fi connection. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -39,18 +37,6 @@ Obtain connection information about the Wi-Fi connection. If does't have the per
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-wifiManager.getLinkedInfo().then((data: wifiManager.WifiLinkedInfo) => {
-    console.info("get wifi linked info: " + JSON.stringify(data));
-}).catch((error: Error) => {
-    console.error("get linked info error: ", error);
-});
-```
-
 
 ## getLinkedInfo
 
@@ -61,8 +47,6 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 Obtain connection information about the Wi-Fi connection.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -83,7 +67,3 @@ Obtain connection information about the Wi-Fi connection.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) |
-
-**Examples**
-
-See [getLinkedInfo](#getlinkedinfo)

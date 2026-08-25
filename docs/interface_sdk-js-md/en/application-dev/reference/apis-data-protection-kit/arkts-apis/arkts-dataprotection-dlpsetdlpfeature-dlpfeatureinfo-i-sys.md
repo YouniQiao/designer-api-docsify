@@ -4,8 +4,6 @@ Sets the DLP status.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Sets the DLP status.
 ## Modules to Import
 
 ```TypeScript
-import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
+import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## dlpFeatureStatus
@@ -27,8 +25,6 @@ DLP status, which can be set to **NOT_ENABLED_FEATURE** or **ENABLED_FEATURE**.
 **Type:** [DlpFeatureStatus](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

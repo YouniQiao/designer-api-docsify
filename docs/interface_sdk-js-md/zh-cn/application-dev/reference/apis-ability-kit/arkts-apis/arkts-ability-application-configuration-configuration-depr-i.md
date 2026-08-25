@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
@@ -29,8 +27,6 @@ colorMode?: ConfigurationConstant.ColorMode
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [colorMode](arkts-ability-app-ability-configuration-configuration-i.md#colormode)
@@ -49,57 +45,8 @@ language?: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [language](arkts-ability-app-ability-configuration-configuration-i.md#language)
 
 **系统能力：** SystemCapability.Ability.AbilityBase
-
-**示例**
-
-```TypeScript
-import UIAbility from '@ohos.app.ability.UIAbility';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import EnvironmentCallback from '@ohos.app.ability.EnvironmentCallback';
-import Want from '@ohos.app.ability.Want';
-import Window from '@ohos.window';
-import { BusinessError } from '@ohos.base';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-  }
-
-  onDestroy() {
-  }
-
-  onWindowStageCreate(windowStage: Window.WindowStage) {
-    let envCallback: EnvironmentCallback = {
-      onConfigurationUpdated(config) {
-        console.info(`envCallback onConfigurationUpdated success: ${JSON.stringify(config)}`);
-        let language = config.language;
-        let colorMode = config.colorMode;
-      },
-      onMemoryLevel(level) {
-        console.info(`onMemoryLevel level: ${JSON.stringify(level)}`);
-      }
-    };
-
-    let applicationContext = this.context.getApplicationContext();
-    try {
-      applicationContext.on('environment', envCallback);
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-
-    windowStage.loadContent('pages/index', (err, data) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in loading the content, data: ${JSON.stringify(data)}`);
-    });
-  }
-}
-```

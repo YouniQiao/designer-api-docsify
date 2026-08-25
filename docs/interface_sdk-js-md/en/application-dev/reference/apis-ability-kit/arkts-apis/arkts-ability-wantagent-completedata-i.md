@@ -4,14 +4,12 @@ Describes the data returned by the operation of proactive triggering a WantAgent
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
 ```
 
 ## extraInfo
@@ -26,8 +24,6 @@ Extra information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -35,16 +31,14 @@ Extra information.
 ## finalCode
 
 ```TypeScript
-finalCode: int
+finalCode: number
 ```
 
 Request code that triggers the WantAgent object.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -62,8 +56,6 @@ Final data collected by the common event.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -80,8 +72,6 @@ WantAgent object that is triggered.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -97,8 +87,6 @@ Existing Want that is triggered.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

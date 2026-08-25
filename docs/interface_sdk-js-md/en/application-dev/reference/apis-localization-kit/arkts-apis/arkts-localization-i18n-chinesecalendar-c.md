@@ -6,27 +6,23 @@ Provide a ChineseCalendar interface which could handle unique characteristics of
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## checkLeapMonth
 
 ```TypeScript
-public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean
+public static checkLeapMonth(gregorianYear: number, cyclicalYear: number, month: number): boolean
 ```
 
 Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,8 +59,6 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCalendar object.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Obtains the network search results.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ Obtains the network search results.
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isNetworkSearchSuccess
@@ -27,8 +25,6 @@ Indicates whether the network search was successful.
 **类型：** boolean
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -45,8 +41,6 @@ Obtains the network search results.
 **类型：** Array&lt;[NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)&gt;
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

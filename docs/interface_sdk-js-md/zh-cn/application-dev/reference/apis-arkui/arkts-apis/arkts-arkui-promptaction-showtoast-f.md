@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## showToast
@@ -20,8 +20,6 @@ Creates and displays a toast.创建并显示即时反馈。
 > - Toast样式单一，不支持内容的自定义，具体支持能力请参考ShowToastOptions提供的接口。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -43,59 +41,3 @@ Creates and displays a toast.创建并显示即时反馈。
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-
-**示例**
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct toastExample {
-  build() {
-    Column() {
-      Button('Show toast').fontSize(20)
-        .onClick(() => {
-          try {
-            promptAction.showToast({
-              message: 'Hello World',
-              duration: 2000
-            });
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`showToast args error code is ${code}, message is ${message}`);
-          };
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct toastExample {
-  build() {
-    Column() {
-      Button('Show toast').fontSize(20)
-        .onClick(() => {
-          try {
-            promptAction.showToast({
-              message: 'Hello World',
-              duration: 2000
-            });
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`showToast args error code is ${code}, message is ${message}`);
-          };
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```

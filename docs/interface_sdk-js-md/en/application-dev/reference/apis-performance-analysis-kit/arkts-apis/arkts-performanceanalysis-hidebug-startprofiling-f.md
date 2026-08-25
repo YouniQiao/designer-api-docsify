@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## startProfiling
@@ -16,8 +16,6 @@ Starts the VM profiling method. **startProfiling(filename: string)** and **stopP
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md)
@@ -29,15 +27,3 @@ Starts the VM profiling method. **startProfiling(filename: string)** and **stopP
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | filename | string | Yes |
-
-**Examples**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-
-hidebug.startProfiling("cpuprofiler-20220216");
-// code block
-// ...
-// code block
-hidebug.stopProfiling();
-```

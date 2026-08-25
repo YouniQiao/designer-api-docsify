@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isAddOsAccountByUserDisallowed
@@ -15,8 +15,6 @@ function isAddOsAccountByUserDisallowed(admin: Want, userId: number): boolean
 查询是否禁止某用户添加账号。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -52,24 +50,3 @@ function isAddOsAccountByUserDisallowed(admin: Want, userId: number): boolean
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let isDisallowed: boolean = accountManager.isAddOsAccountByUserDisallowed(wantTemp, 100);
-  console.info(`Succeeded in querying the user can add os account or not: ${isDisallowed}`);
-} catch (err) {
-  console.error(`Failed to query the user can add os account or not. Code: ${err.code}, message: ${err.message}`);
-}
-```

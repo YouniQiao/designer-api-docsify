@@ -8,7 +8,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAtomicService, FailureCode } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -24,10 +24,3 @@ import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit'
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnAtomicServiceRequestFailureFn](arkts-ability-onatomicservicerequestfailurefn-t.md) |
-| [OnAtomicServiceRequestSuccessFn](arkts-ability-onatomicservicerequestsuccessfn-t.md) |

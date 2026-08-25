@@ -12,14 +12,12 @@ Configuration parameters for generating a CSR, including the subject name, diges
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## attributes
@@ -33,8 +31,6 @@ A collection of attributes.
 **Type:** Array&lt;[CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md)&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -51,8 +47,6 @@ Message digest algorithm name.
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -72,8 +66,6 @@ Output format.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.Cert
@@ -89,8 +81,6 @@ Subject name.
 **Type:** [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

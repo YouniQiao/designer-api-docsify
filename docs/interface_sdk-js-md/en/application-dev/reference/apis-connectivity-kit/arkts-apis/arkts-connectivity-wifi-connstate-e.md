@@ -4,8 +4,6 @@ The state of Wi-Fi connection enumeration.@enum { number } ConnState
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
@@ -21,8 +19,6 @@ SCANNING
 The device is searching for an available AP.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ The Wi-Fi connection is being set up.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CONNECTING](arkts-connectivity-wifimanager-connstate-e.md#connecting)
@@ -57,8 +51,6 @@ AUTHENTICATING
 The Wi-Fi connection is being authenticated.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ The IP address of the Wi-Fi connection is being obtained.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [OBTAINING_IPADDR](arkts-connectivity-wifimanager-connstate-e.md#obtaining_ipaddr)
@@ -93,8 +83,6 @@ CONNECTED
 The Wi-Fi connection has been set up.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -112,8 +100,6 @@ The Wi-Fi connection is being torn down.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DISCONNECTING](arkts-connectivity-wifimanager-connstate-e.md#disconnecting)
@@ -130,8 +116,6 @@ The Wi-Fi connection has been torn down.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DISCONNECTED](arkts-connectivity-wifimanager-connstate-e.md#disconnected)
@@ -147,8 +131,6 @@ UNKNOWN
 Failed to set up the Wi-Fi connection.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

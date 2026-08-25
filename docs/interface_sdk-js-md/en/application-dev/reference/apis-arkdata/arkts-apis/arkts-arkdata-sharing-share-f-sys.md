@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## share
@@ -19,8 +19,6 @@ function share(
 Shares data based on the specified shared resource ID and participants. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -42,58 +40,6 @@ Shares data based on the specified shared resource ID and participants. This API
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-cloudData.sharing.share('sharing_resource_test', participants).then((result) => {
-  console.info(`share success, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`share failed, code is ${err.code},message is ${err.message}`);
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-cloudData.sharing.share('sharing_resource_test', participants, ((err: BusinessError, result) => {
-  if (err) {
-    console.error(`share failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info(`share succeeded, result: ${result}`);
-}))
-```
-
 
 ## share
 
@@ -107,8 +53,6 @@ function share(
 Shares data based on the specified shared resource ID and participants. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -134,7 +78,3 @@ Shares data based on the specified shared resource ID and participants. This API
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [share](#share)

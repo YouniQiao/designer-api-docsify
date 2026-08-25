@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** Measurable/Layoutable
@@ -25,11 +23,9 @@ borderWidth: EdgeWidths
 
 子组件边框宽度信息
 
-**类型：** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
+**类型：** EdgeWidths
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -47,11 +43,9 @@ margin: Margin
 
 子组件外边距信息
 
-**类型：** Margin
+**类型：** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -69,11 +63,9 @@ padding: Padding
 
 子组件内边距信息
 
-**类型：** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
+**类型：** Padding
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 

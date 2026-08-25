@@ -6,11 +6,9 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
-**替代接口：** SwiperAttribute
+**替代接口：** [SwiperAttribute](arkts-arkui-swiper-attribute.md#swiperattribute)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +26,6 @@ onChange(callback: (prevIndex: number, index: number) => void)
 Callback when the change label is clicked.
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 
@@ -55,8 +51,6 @@ Callback when the finish label is clicked.
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **替代接口：** onChange
@@ -80,8 +74,6 @@ onNext(callback: (index: number, pendingIndex: number) => void)
 Callback when the next label is clicked.
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 
@@ -107,8 +99,6 @@ Callback when the previous label is clicked.
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **替代接口：** onChange
@@ -132,8 +122,6 @@ onSkip(callback: () => void)
 Callback when the skip label is clicked.
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 

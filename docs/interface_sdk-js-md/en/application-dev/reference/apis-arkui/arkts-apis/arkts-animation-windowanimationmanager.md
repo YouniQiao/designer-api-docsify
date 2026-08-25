@@ -4,8 +4,6 @@ Window animation manager.@namespace windowAnimationManager
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Window animation manager.@namespace windowAnimationManager
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from '@kit.ArkUI';
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -37,17 +35,4 @@ import { windowAnimationManager } from '@kit.ArkUI';
 | [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) |
 | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) |
 | [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) |
-<!--DelEnd-->
-
-<!--Del-->
-### Types(System API)
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AppStartCallback](arkts-arkui-windowanimationmanager-appstartcallback-t-sys.md) |
-| [AppTransitionCallback](arkts-arkui-windowanimationmanager-apptransitioncallback-t-sys.md) |
-| [ScreenUnlockCallback](arkts-arkui-windowanimationmanager-screenunlockcallback-t-sys.md) |
-| [WindowAnimationTargetsUpdationCallback](arkts-arkui-windowanimationmanager-windowanimationtargetsupdationcallback-t-sys.md) |
-| [WindowCloseCallback](arkts-arkui-windowanimationmanager-windowclosecallback-t-sys.md) |
-| [WindowMinimizationCallback](arkts-arkui-windowanimationmanager-windowminimizationcallback-t-sys.md) |
 <!--DelEnd-->

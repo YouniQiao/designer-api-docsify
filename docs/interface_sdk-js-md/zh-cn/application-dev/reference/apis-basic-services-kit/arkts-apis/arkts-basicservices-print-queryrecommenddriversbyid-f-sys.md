@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryRecommendDriversById
@@ -15,8 +15,6 @@ function queryRecommendDriversById(printerId: string): Promise<PpdInfo[]>
 根据打印机ID查询推荐的打印机驱动程序。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 

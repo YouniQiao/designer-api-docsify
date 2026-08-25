@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## openFormManagerCrossBundle
@@ -15,8 +15,6 @@ function openFormManagerCrossBundle(want: Want): void
 Open the view of forms belonging to the specified bundle. Client to communication with FormManagerService.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE
 

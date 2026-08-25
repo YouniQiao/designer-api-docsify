@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## findProxyForUrl
@@ -24,8 +24,6 @@ function findProxyForUrl(url: string): string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -39,12 +37,3 @@ function findProxyForUrl(url: string): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let proxyInfo = connection.findProxyForUrl("http://example.com");
-console.info(proxyInfo);
-```

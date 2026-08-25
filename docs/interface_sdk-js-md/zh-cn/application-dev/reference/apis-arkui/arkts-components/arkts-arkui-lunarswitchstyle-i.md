@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,13 +21,11 @@ selectedColor?: ResourceColor
 
 > 默认值：\$r('sys.color.ohos_id_color_text_primary_actived')。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** $r('sys.color.ohos_id_color_text_primary_actived')
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,13 +43,11 @@ strokeColor?: ResourceColor
 
 > 默认值：Color.White。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.White
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,13 +65,11 @@ unselectedColor?: ResourceColor
 
 > 默认值：\$r('sys.color.ohos_id_color_switch_outline_off')。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** $r('sys.color.ohos_id_color_switch_outline_off')
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

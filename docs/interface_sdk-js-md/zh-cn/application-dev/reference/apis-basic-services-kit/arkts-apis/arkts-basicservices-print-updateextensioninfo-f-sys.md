@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## updateExtensionInfo
@@ -15,8 +15,6 @@ function updateExtensionInfo(info: string, callback: AsyncCallback<void>): void
 更新打印扩展状态，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -39,34 +37,6 @@ function updateExtensionInfo(info: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let info : string = 'WIFI_INACTIVE';
-print.updateExtensionInfo(info, (err: BusinessError) => {
-    if (err) {
-        console.error('updateExtensionInfo failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('updateExtensionInfo success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let info : string = 'WIFI_INACTIVE';
-print.updateExtensionInfo(info).then(() => {
-    console.info('update print job state success');
-}).catch((error: BusinessError) => {
-    console.error('update print job state error : ' + JSON.stringify(error));
-})
-```
-
 
 ## updateExtensionInfo
 
@@ -77,8 +47,6 @@ function updateExtensionInfo(info: string): Promise<void>
 更新打印扩展状态，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -105,7 +73,3 @@ function updateExtensionInfo(info: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [updateExtensionInfo](#updateextensioninfo)

@@ -6,8 +6,6 @@ Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -37,7 +33,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-units-coordinate2d-i.md) |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
 
 ## getHorizontalAxisValue
 
@@ -48,8 +44,6 @@ getHorizontalAxisValue(): number
 Obtains the horizontal axis value of this axis event.
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,8 +67,6 @@ Obtains the two-finger pinch zoom ratio from the axis event.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -97,8 +89,6 @@ Obtains the vertical axis value of this axis event.
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -120,8 +110,6 @@ hasAxis(axisType: AxisType): boolean
 Checks whether this axis event contains the specified axis type.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,11 +137,9 @@ action: AxisAction
 
 Action type of the axis event.
 
-**Type:** AxisAction
+**Type:** [AxisAction](../arkts-apis/arkts-arkui-axisaction-e.md)
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,8 +159,6 @@ X coordinate of the cursor in the coordinate system of the current application s
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -192,8 +176,6 @@ Y coordinate of the cursor in the coordinate system of the current application s
 **Type:** number
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,8 +196,6 @@ Unique identifier for event processing.Value range: [0, +∞)
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -233,8 +213,6 @@ X coordinate of the cursor in the [global coordinate system](../../../windowmana
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -254,8 +232,6 @@ Y coordinate of the cursor in the [global coordinate system](../../../windowmana
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -273,8 +249,6 @@ Enables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -294,8 +268,6 @@ Scroll step length for the mouse wheel.Note: Only the mouse wheel is supported. 
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -313,8 +285,6 @@ X coordinate of the cursor in the coordinate system of the current application w
 **Type:** number
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,8 +304,6 @@ Y coordinate of the cursor in the coordinate system of the current application w
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -354,8 +322,6 @@ X coordinate of the cursor in the [component coordinate system](../../../ui/arku
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -373,8 +339,6 @@ Y coordinate of the cursor in the [component coordinate system](../../../ui/arku
 **Type:** number
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 

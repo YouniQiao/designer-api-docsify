@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## priority
@@ -25,8 +23,6 @@ priority?: Priority
 **类型：** Priority
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -43,8 +39,6 @@ taskIds?: number[]
 **类型：** number[]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -63,8 +57,6 @@ tid: number
 **默认值：** 0
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

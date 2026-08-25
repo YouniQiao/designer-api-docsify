@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## isIfaceActive
@@ -15,8 +15,6 @@ function isIfaceActive(iface: string, callback: AsyncCallback<number>): void
 判断接口是否已激活，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -43,32 +41,6 @@ function isIfaceActive(iface: string, callback: AsyncCallback<number>): void
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 | [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
 
-**示例**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.isIfaceActive("eth0", (error: BusinessError, value: number) => {
-  if (error) {
-    console.error("whether2Activate callback error = " + JSON.stringify(error));
-  } else {
-    console.info("whether2Activate callback = " + JSON.stringify(value));
-  }
-});
-```
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.isIfaceActive("eth0").then((data: number) => {
-  console.info("isIfaceActive promise = " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error("isIfaceActive promise error = " + JSON.stringify(error));
-});
-```
-
 
 ## isIfaceActive
 
@@ -79,8 +51,6 @@ function isIfaceActive(iface: string): Promise<number>
 判断接口是否已激活，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -111,7 +81,3 @@ function isIfaceActive(iface: string): Promise<number>
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 | [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
-
-**示例**
-
-参见 [isIfaceActive](#isifaceactive)

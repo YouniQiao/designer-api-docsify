@@ -4,8 +4,6 @@ Defines the heartbeat broadcast policy.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Stops the heartbeat broadcast temporarily, and resumes it upon timeout expiratio
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ START_HEARTBEAT = 101
 Starts heartbeat broadcast.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 

@@ -1,7 +1,5 @@
 # ArrayBufferConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new(byteLength: number): ArrayBuffer
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@ new(byteLength: number): ArrayBuffer
 ```TypeScript
 isView(arg: any): arg is ArrayBufferView
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -50,5 +44,3 @@ readonly prototype: ArrayBuffer
 ```
 
 **Type:** ArrayBuffer
-
-**ArkTS mode:** 

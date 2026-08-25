@@ -12,8 +12,6 @@ Creates a **Canvas** component. The maximum allowed size cannot exceed 10000 px 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -36,8 +34,6 @@ Creates a **Canvas** component. You can specify a **CanvasRenderingContext2D** o
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -49,7 +45,7 @@ Creates a **Canvas** component. You can specify a **CanvasRenderingContext2D** o
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes |
-| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imagecommon-imageaioptions-i.md) | Yes |
+| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | Yes |
 
 ## Canvas
 
@@ -72,8 +68,6 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 > by other components or windows.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,11 +92,3 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [CanvasDirection](arkts-arkui-canvasdirection-t.md) |
-| [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) |
-| [CanvasLineCap](arkts-arkui-canvaslinecap-t.md) |
-| [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md) |
-| [CanvasTextAlign](arkts-arkui-canvastextalign-t.md) |
-| [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md) |
-| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) |
-| [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md) |

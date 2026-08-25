@@ -4,45 +4,39 @@ Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## attributes
 
 ```TypeScript
-attributes: int
+attributes: number
 ```
 
 Configuration attributes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 Unique ID of the USB configuration.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -58,8 +52,6 @@ Supported interface attributes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## isRemoteWakeup
@@ -73,8 +65,6 @@ Whether remote wakeup is supported. The value **true** indicates that the remote
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -90,23 +80,19 @@ Whether an independent power supply is supported. The value **true** indicates t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## maxPower
 
 ```TypeScript
-maxPower: int
+maxPower: number
 ```
 
 Maximum power consumption.Unit: mA.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -121,7 +107,5 @@ Configuration name, which can be left empty.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager

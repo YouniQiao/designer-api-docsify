@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isSilentReminderEnabled
@@ -16,8 +16,6 @@ Checks whether the silent reminder is enabled. This API uses a promise to return
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ Checks whether the silent reminder is enabled. This API uses a promise to return
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 
 **Return value:**
 
@@ -47,19 +45,3 @@ Checks whether the silent reminder is enabled. This API uses a promise to return
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-notificationManager.isSilentReminderEnabled(bundle).then((data: notificationManager.SwitchState) => {
-    hilog.info(0x0000, 'testTag', '%{public}s', `isSilentReminderEnabled success, switchState:  ${JSON.stringify(data)}.`);
-}).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', '%{public}s', `isSilentReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```

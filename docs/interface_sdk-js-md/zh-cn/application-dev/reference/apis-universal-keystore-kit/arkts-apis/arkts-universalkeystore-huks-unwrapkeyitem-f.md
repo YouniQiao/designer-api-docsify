@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## unwrapKeyItem
@@ -19,8 +19,6 @@ function unwrapKeyItem(keyAlias: string, params: HuksOptions, wrappedKey: Uint8A
 <!--Del-->该功能暂不支持。<!--DelEnd-->
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

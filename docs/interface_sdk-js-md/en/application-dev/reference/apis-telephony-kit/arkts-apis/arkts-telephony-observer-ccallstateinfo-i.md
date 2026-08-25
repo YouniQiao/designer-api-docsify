@@ -4,14 +4,12 @@ Defines information about the call status.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## state
@@ -26,8 +24,6 @@ Call type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## teleNumber
@@ -41,7 +37,5 @@ Phone number.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry

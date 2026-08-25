@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAgentCardsByBundleName
@@ -15,8 +15,6 @@ function getAgentCardsByBundleName(bundleName: string): Promise<Array<AgentCard>
 Gets all AgentCards within specified bundleName.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.GET_AGENT_CARD
 

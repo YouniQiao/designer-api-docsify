@@ -4,8 +4,6 @@ Enumerates the firewall rule types, including IP, Domain, and DNS.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_IP
@@ -17,8 +15,6 @@ RULE_IP = 1
 IP address-based firewall rule.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -32,8 +28,6 @@ Domain name-based rule.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## RULE_DNS
@@ -45,7 +39,5 @@ RULE_DNS = 3
 DNS-based firewall rule.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall

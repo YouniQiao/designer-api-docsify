@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## 导入模块
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## altSubjectMatch
@@ -25,8 +23,6 @@ altSubjectMatch: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -42,8 +38,6 @@ anonymousIdentity: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## caCertAliases
@@ -57,8 +51,6 @@ CA证书别名。
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -74,8 +66,6 @@ CA证书路径。
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## certEntry
@@ -89,8 +79,6 @@ CA证书内容。
 **类型：** Uint8Array
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -106,8 +94,6 @@ CA证书密码。
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## clientCertAliases
@@ -121,8 +107,6 @@ clientCertAliases: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -138,8 +122,6 @@ domainSuffixMatch: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## eapMethod
@@ -153,8 +135,6 @@ AP认证方式。
 **类型：** EapMethod
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -170,8 +150,6 @@ SIM卡的子ID。
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## identity
@@ -185,8 +163,6 @@ identity: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -202,8 +178,6 @@ Password
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## phase2Method
@@ -217,8 +191,6 @@ phase2Method: Phase2Method
 **类型：** Phase2Method
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -234,8 +206,6 @@ plmn: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## realm
@@ -249,7 +219,5 @@ realm: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap

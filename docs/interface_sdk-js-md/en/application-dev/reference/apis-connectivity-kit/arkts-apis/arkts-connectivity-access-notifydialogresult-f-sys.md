@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## notifyDialogResult
@@ -15,8 +15,6 @@ function notifyDialogResult(notifyDialogResultParams: NotifyDialogResultParams):
 Notify bluetooth the result of bluetooth dialog.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -45,18 +43,3 @@ Notify bluetooth the result of bluetooth dialog.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900001 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let notifyDialogResultParams: access.NotifyDialogResultParams = {
-        "dialogType": 0,
-        "dialogResult": true,
-    };
-    access.notifyDialogResult(notifyDialogResultParams);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

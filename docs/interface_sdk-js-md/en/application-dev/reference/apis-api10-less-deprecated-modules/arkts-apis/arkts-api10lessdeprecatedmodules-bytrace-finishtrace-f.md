@@ -19,8 +19,6 @@ Marks the end of a timeslice trace task.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** finishTrace
@@ -33,31 +31,3 @@ Marks the end of a timeslice trace task.
 | --- | --- | --- |
 | name | string | Yes |
 | taskId | number | Yes |
-
-**Examples**
-
-```TypeScript
-bytrace.finishTrace("myTestFunc", 1);
-```
-
-```TypeScript
-// Start trace tasks with the same name concurrently.
-bytrace.startTrace("myTestFunc", 1);
-// Service flow...
-bytrace.startTrace("myTestFunc", 2);  // The second trace task starts while the first task is still running. The first and second tasks have the same name but different task IDs.
-// Service flow...
-bytrace.finishTrace("myTestFunc", 1);
-// Service flow...
-bytrace.finishTrace("myTestFunc", 2);
-```
-
-```TypeScript
-// Start trace tasks with the same name in serial mode.
-bytrace.startTrace("myTestFunc", 1);
-// Service flow...
-bytrace.finishTrace("myTestFunc", 1);  // The first trace task ends.
-// Service flow...
-bytrace.startTrace("myTestFunc", 1);   // The second trace task starts after the first task ends. The two tasks have the same name and task ID.
-// Service flow...
-bytrace.finishTrace("myTestFunc", 1);
-```

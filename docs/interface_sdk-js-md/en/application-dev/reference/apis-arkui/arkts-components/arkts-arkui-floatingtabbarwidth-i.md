@@ -4,8 +4,6 @@ Provides an interface for the options for the floating bar width of the tab widt
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ largeBarWidth?: Length
 
 The bar width of the large devices. It cannot be set in percentage.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ mediumBarWidth?: Length
 
 The bar width of the medium devices. It cannot be set in percentage.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,11 +55,9 @@ smallBarWidth?: Length
 
 The bar width of the small devices. It cannot be set in percentage.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

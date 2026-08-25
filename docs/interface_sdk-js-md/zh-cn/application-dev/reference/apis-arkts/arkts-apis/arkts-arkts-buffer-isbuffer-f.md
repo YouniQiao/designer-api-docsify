@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
+import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## isBuffer
@@ -15,8 +15,6 @@ function isBuffer(obj: Object): boolean
 判断`obj`是否为Buffer。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,25 +31,3 @@ function isBuffer(obj: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let result = buffer.isBuffer(buffer.alloc(10)); // 10: buffer size
-console.info("result = " + result);
-// 输出结果：result = true
-let result1 = buffer.isBuffer(buffer.from('foo'));
-console.info("result1 = " + result1);
-// 输出结果：result1 = true
-let result2 = buffer.isBuffer('a string');
-console.info("result2 = " + result2);
-// 输出结果：result2 = false
-let result3 = buffer.isBuffer([]);
-console.info("result3 = " + result3);
-// 输出结果：result3 = false
-let result4 = buffer.isBuffer(new Uint8Array(1024));
-console.info("result4 = " + result4);
-// 输出结果：result4 = false
-```

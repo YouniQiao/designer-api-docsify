@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## restoreAllPolicies
@@ -15,8 +15,6 @@ function restoreAllPolicies(iccid: string): Promise<void>
 Reset the specified network management policy.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 

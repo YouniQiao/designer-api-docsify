@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { startupManager } from '@kit.AbilityKit';
+import { startupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## run
@@ -20,8 +20,6 @@ Runs startup tasks or loads .so files.
 > .
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,73 +49,6 @@ Runs startup tasks or loads .so files.
 | [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) |
 | [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
 
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    let startParams = ['StartupTask_001', 'libentry_001'];
-    try {
-      // Manually call the run method.
-      startupManager.run(startParams).then(() => {
-        console.info(`StartupTest startupManager run then, startParams = ${startParams}.`);
-      }).catch((error: BusinessError) => {
-        console.error(`StartupTest promise catch failed, error code: ${error.code}, error msg: ${error.message}.`);
-      });
-    } catch (error) {
-      let errMsg = (error as BusinessError).message;
-      let errCode = (error as BusinessError).code;
-      console.error(`Startup.run failed, err code: ${errCode}, err msg: ${errMsg}.`);
-    }
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { AbilityStage, startupManager, StartupListener, StartupConfig } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onCreate(): void {
-    hilog.info(0x0000, 'testTag', 'AbilityStage onCreate');
-    let onCompletedCallback = (error: BusinessError<void>) => {
-      if (error) {
-        hilog.error(0x0000, 'testTag', 'onCompletedCallback error: %{public}s', JSON.stringify(error));
-      } else {
-        hilog.info(0x0000, 'testTag', 'onCompletedCallback: success.');
-      }
-    };
-    let startupListener: StartupListener = {
-      'onCompleted': onCompletedCallback
-    };
-    let config: StartupConfig = {
-      'timeoutMs': 10000,
-      'startupListener': startupListener
-    };
-
-    try {
-      // Manually call the run method.
-      startupManager.run(['StartupTask_001', 'libentry_001'], this.context, config).then(() => {
-        hilog.info(0x0000, 'testTag', '%{public}s', 'startupManager.run success');
-      }).catch((error: BusinessError<void>) => {
-        hilog.error(0x0000, 'testTag', 'startupManager.run promise catch error: %{public}s', JSON.stringify(error));
-      })
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'startupManager.run catch error: %{public}s', JSON.stringify(error));
-    }
-  }
-  // ...
-}
-```
-
 
 ## run
 
@@ -128,8 +59,6 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 Runs startup tasks or loads .so files. You can specify [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,7 +87,3 @@ Runs startup tasks or loads .so files. You can specify [AbilityStageContext](ark
 | [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
 | [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) |
 | [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
-
-**Examples**
-
-See [run](#run)

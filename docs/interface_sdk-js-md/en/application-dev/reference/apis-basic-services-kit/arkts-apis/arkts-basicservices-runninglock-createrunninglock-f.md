@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from '@kit.BasicServicesKit';
+import { runningLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createRunningLock
@@ -15,8 +15,6 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -34,28 +32,6 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND, (err: Error, lock: runningLock.RunningLock) => {
-    if (typeof err === 'undefined') {
-        console.info('created running lock: ' + lock);
-    } else {
-        console.error('create running lock failed, err: ' + err);
-    }
-});
-```
-
-```TypeScript
-runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
-.then((lock: runningLock.RunningLock) => {
-    console.info('created running lock: ' + lock);
-})
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
-});
-```
-
 
 ## createRunningLock
 
@@ -66,8 +42,6 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -89,7 +63,3 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; |
-
-**Examples**
-
-See [createRunningLock](#createrunninglock)

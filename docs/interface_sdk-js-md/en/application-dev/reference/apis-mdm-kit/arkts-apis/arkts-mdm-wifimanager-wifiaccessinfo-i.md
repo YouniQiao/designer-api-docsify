@@ -4,14 +4,12 @@ Represents Wi-Fi access information containing Service Set Identifier (SSID) and
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## bssid
@@ -29,8 +27,6 @@ This property is optional when the [addDisallowedWifiList](arkts-mdm-wifimanager
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -46,8 +42,6 @@ Name of the Wi-Fi hotspot. The encoding format is UTF-8 and the maximum length i
 **Type:** string
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

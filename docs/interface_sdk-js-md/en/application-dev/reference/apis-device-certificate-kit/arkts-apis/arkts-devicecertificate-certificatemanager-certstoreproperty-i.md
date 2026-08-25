@@ -4,14 +4,12 @@ Represents the storage information about a certificate, including the certificat
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## certAlg
@@ -25,8 +23,6 @@ Certificate algorithm. This parameter is valid only when **certType** is set to 
 **Type:** [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -42,8 +38,6 @@ Scope of the certificate. This parameter is mandatory when **certType** is **CA_
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## certType
@@ -57,7 +51,5 @@ Type of the certificate.
 **Type:** CertType
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

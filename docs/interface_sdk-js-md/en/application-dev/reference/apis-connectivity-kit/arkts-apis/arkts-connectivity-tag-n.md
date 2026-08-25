@@ -15,14 +15,12 @@ The **tag** module provides APIs for operating and managing NFC tags. The follow
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -54,13 +52,9 @@ import { tag } from '@kit.ConnectivityKit';
 | [registerForegroundDispatch(Standard NFC Tags)](arkts-connectivity-tag-registerforegrounddispatch-f.md) |
 | [unregisterForegroundDispatch(Standard NFC Tags)](arkts-connectivity-tag-unregisterforegrounddispatch-f.md) |
 | [on(Standard NFC Tags)](arkts-connectivity-tag-on-f.md#onreadermode) |
-| [onReaderMode(Standard NFC Tags)](arkts-connectivity-tag-onreadermode-f.md) |
 | [off(Standard NFC Tags)](arkts-connectivity-tag-off-f.md#offreadermode) |
-| [offReaderMode(Standard NFC Tags)](arkts-connectivity-tag-offreadermode-f.md) |
 | [on(Standard NFC Tags)](arkts-connectivity-tag-on-f.md#onreadermodewithinterval) |
-| [onReaderModeWithInterval(Standard NFC Tags)](arkts-connectivity-tag-onreadermodewithinterval-f.md) |
 | [off(Standard NFC Tags)](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) |
-| [offReaderModeWithInterval(Standard NFC Tags)](arkts-connectivity-tag-offreadermodewithinterval-f.md) |
 | [getBarcodeTag(Standard NFC Tags)](arkts-connectivity-tag-getbarcodetag-f.md) |
 
 ### Interfaces

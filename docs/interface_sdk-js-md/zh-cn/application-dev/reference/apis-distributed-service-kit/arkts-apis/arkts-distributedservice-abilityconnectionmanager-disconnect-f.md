@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## disconnect
 
 ```TypeScript
-function disconnect(sessionId: int): void
+function disconnect(sessionId: number): void
 ```
 
-当协同业务执行完毕后，协同双端的任意一台设备，应断开UIAbility的连接，结束协同状态。
+创建协同会话成功、应用连接成功、协同业务执行完毕后，协同双端的任意一台设备，应断开UIAbility的连接， 结束协同状态。需在connect()建立连接后调用。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -26,28 +24,4 @@ function disconnect(sessionId: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hilog.info(0x0000, 'testTag', 'disconnectRemoteAbility begin');
-let sessionId = 100;
-abilityConnectionManager.disconnect(sessionId);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
-import hilog from '@ohos.hilog';
-
-hilog.info(0x0000, 'testTag', 'disconnectRemoteAbility begin');
-let sessionId = 100;
-abilityConnectionManager.disconnect(sessionId);
-```
+| sessionId | number | 是 |

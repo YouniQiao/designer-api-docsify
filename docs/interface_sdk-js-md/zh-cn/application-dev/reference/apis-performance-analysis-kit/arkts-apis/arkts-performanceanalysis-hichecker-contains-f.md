@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hichecker } from '@kit.PerformanceAnalysisKit';
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## contains
@@ -18,8 +18,6 @@ function contains(rule: bigint): boolean
 当前已添加的规则集中是否包含了某一个特定的规则。如果传入的规则级别为线程级别，则仅在当前线程中进行查询。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -38,14 +36,3 @@ function contains(rule: bigint): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-// 添加一条规则
-hichecker.addRule(hichecker.RULE_THREAD_CHECK_SLOW_PROCESS);
-
-// 查询是否包含
-hichecker.contains(hichecker.RULE_THREAD_CHECK_SLOW_PROCESS); // return true;
-hichecker.contains(hichecker.RULE_CAUTION_PRINT_LOG); // return false;
-```

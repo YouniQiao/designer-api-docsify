@@ -9,8 +9,6 @@ Lightweight storage provides applications with data processing capability and al
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** preferences

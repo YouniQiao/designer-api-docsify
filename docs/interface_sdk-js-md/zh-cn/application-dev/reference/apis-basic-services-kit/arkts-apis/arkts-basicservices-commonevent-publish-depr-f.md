@@ -15,8 +15,6 @@ function publish(event: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [publish](arkts-basicservices-commoneventmanager-publish-f.md)(event: string, callback: AsyncCallback&lt;void&gt;)
@@ -30,48 +28,6 @@ function publish(event: string, callback: AsyncCallback<void>): void
 | event | string | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-// 发布公共事件回调
-function publishCB(err:Base.BusinessError) {
-    if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
-    } else {
-        console.info("publish");
-    }
-}
-
-// 发布公共事件
-commonEvent.publish("event", publishCB);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-// 公共事件相关信息
-let options:CommonEventManager.CommonEventPublishData = {
-    code: 0,             // 公共事件的初始代码
-    data: "initial data", // 公共事件的初始数据
-    isOrdered: true  // 有序公共事件
-};
-
-// 发布公共事件回调
-function publishCB(err:Base.BusinessError) {
-    if (err.code) {
-        console.error(`publish failed, code is ${err.code}`);
-    } else {
-        console.info("publish");
-    }
-}
-
-// 发布公共事件
-commonEvent.publish("event", options, publishCB);
-```
-
 
 ## publish
 
@@ -82,8 +38,6 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 以回调形式发布公共事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -98,7 +52,3 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 | event | string | 是 |
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [publish](#publish)

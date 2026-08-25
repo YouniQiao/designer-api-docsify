@@ -4,12 +4,12 @@
 export declare type StorageDefaultCreator<T> = () => T
 ```
 
-Function that returns the default creator.
+Obtains the default constructor.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 26.0.0.
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

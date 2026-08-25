@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from '@kit.CameraKit';
+import { cameraPicker } from 'kits/@kit.CameraKit';
 ```
 
 ## pick
@@ -20,8 +20,6 @@ Starts the camera picker and enters the corresponding mode based on the media ty
 > background.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,25 +38,3 @@ Starts the camera picker and enters the corresponding mode based on the media ty
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[PickerResult](arkts-camera-camerapicker-pickerresult-c.md)&gt; |
-
-**Examples**
-
-```TypeScript
-import { cameraPicker } from '@kit.CameraKit';
-import { camera } from '@kit.CameraKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function demo(context: Context) {
-  try {
-    let pickerProfile: cameraPicker.PickerProfile = {
-      cameraPosition: camera.CameraPosition.CAMERA_POSITION_BACK
-    };
-    let pickerResult: cameraPicker.PickerResult = await cameraPicker.pick(context,
-      [cameraPicker.PickerMediaType.PHOTO, cameraPicker.PickerMediaType.VIDEO], pickerProfile);
-    console.info("the pick pickerResult is:" + JSON.stringify(pickerResult));
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`the pick call failed. error code: ${err.code}`);
-  }
-}
-```

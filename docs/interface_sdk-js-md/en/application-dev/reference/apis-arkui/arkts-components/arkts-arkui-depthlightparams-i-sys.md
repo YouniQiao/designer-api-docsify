@@ -4,8 +4,6 @@ Lighting parameters struct.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -23,11 +21,9 @@ color: DepthColorRGB
 
 Light color.
 
-**Type:** DepthColorRGB
+**Type:** [DepthColorRGB](arkts-arkui-depthcolorrgb-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,11 +41,9 @@ direction: DepthVector3
 
 Light direction vector.
 
-**Type:** DepthVector3
+**Type:** [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,8 +64,6 @@ Light intensity.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## getInterceptedRecords
@@ -15,8 +15,6 @@ function getInterceptedRecords(userId: number, requestParam: RequestParam): Prom
 Get intercepted records by userId, and it is necessary to specify the pagination query parameters.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.GET_NET_FIREWALL
 
@@ -48,22 +46,3 @@ Get intercepted records by userId, and it is necessary to specify the pagination
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let interceptRecordParam: netFirewall.RequestParam = {
-  page: 1,
-  pageSize: 10,
-  orderField: netFirewall.NetFirewallOrderField.ORDER_BY_RECORD_TIME,
-  orderType: netFirewall.NetFirewallOrderType.ORDER_DESC
-};
-netFirewall.getInterceptedRecords(100, interceptRecordParam).then((result: netFirewall.InterceptedRecordPage) => {
-  console.info("result:", JSON.stringify(result));
-}, (error: BusinessError) => {
-  console.error("get intercept records failed: " + JSON.stringify(error));
-});
-```

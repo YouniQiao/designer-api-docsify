@@ -4,14 +4,12 @@ Represents the advertising state change information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## advertisingId
@@ -25,8 +23,6 @@ Advertising ID. The value range is [0, 255].
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Advertising state.
 **Type:** AdvertisingState
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -5344,8 +5344,8 @@ Set the parameters of background style.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_PickerIndicatorStyle* style | The ArkUI_PickerIndicatorStyle instance. |
-| ArkUI_PickerIndicatorBackground* background | The parameters of background style. |
+| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md)* style | The ArkUI_PickerIndicatorStyle instance. |
+| [ArkUI_PickerIndicatorBackground](capi-arkui-nativemodule-arkui-pickerindicatorbackground.md)* background | The parameters of background style. |
 
 **Returns**:
 
@@ -5369,8 +5369,8 @@ Set the parameters of divider style.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_PickerIndicatorStyle* style | The ArkUI_PickerIndicatorStyle instance. |
-| ArkUI_PickerIndicatorDivider* divider | The parameters of divider style. |
+| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md)* style | The ArkUI_PickerIndicatorStyle instance. |
+| [ArkUI_PickerIndicatorDivider](capi-arkui-nativemodule-arkui-pickerindicatordivider.md)* divider | The parameters of divider style. |
 
 **Returns**:
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## 导入模块
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onRequestContinued
@@ -24,46 +22,7 @@ onRequestContinued?: () => void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
-let sessionId = '1234';
-appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCallback) => {
-  if (callback.onRequestContinued != undefined) {
-    callback.onRequestContinued();
-  }
-}).catch((err: BusinessError) => {
-  console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import appAccount from '@ohos.account.appAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
-let sessionId = '1234';
-appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCallback) => {
-  if (callback.onRequestContinued) {
-    callback.onRequestContinued!();
-  }
-}).catch((e: Error) => {
-  const err = e as BusinessError;
-  console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onRequestRedirected
 
@@ -75,8 +34,6 @@ onRequestRedirected: (request: Want) => void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 **参数：**
@@ -85,115 +42,15 @@ onRequestRedirected: (request: Want) => void
 | --- | --- | --- |
 | request | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-class MyAuthenticator extends appAccount.Authenticator {
-  createAccountImplicitly(
-    options: appAccount.CreateAccountImplicitlyOptions, callback: appAccount.AuthCallback) {
-    let want: Want = {
-      bundleName: 'com.example.accountjsdemo',
-      abilityName: 'com.example.accountjsdemo.LoginAbility',
-    };
-    callback.onRequestRedirected(want);
-  }
-
-  auth(name: string, authType: string,
-    options: Record<string, Object>, callback: appAccount.AuthCallback) {
-    let result: appAccount.AuthResult = {
-      account: {
-        name: 'Lisi',
-        owner: 'com.example.accountjsdemo',
-      },
-      tokenInfo: {
-        token: 'xxxxxx',
-        authType: 'getSocialData'
-      }
-    };
-    callback.onResult(0, result);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import appAccount from '@ohos.account.appAccount';
-import { Want } from '@kit.AbilityKit';
-
-class MyAuthenticator extends appAccount.Authenticator {
-    createAccountImplicitly(
-      options: appAccount.CreateAccountImplicitlyOptions, callback: appAccount.AuthCallback) {
-        let want: Want = {
-          bundleName: 'com.example.accountjsdemo',
-          abilityName: 'com.example.accountjsdemo.LoginAbility',
-        };
-        callback.onRequestRedirected(want);
-    }
-
-    auth(name: string, authType: string,
-      options: Record<string, Object>, callback: appAccount.AuthCallback) {
-        let result: appAccount.AuthResult = {
-          account: {
-            name: 'Lisi',
-            owner: 'com.example.accountjsdemo',
-          },
-          tokenInfo: {
-            token: 'xxxxxx',
-            authType: 'getSocialData'
-          }
-        };
-        callback.onResult(0, result);
-    }
-}
-```
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-
-class MyAuthenticator extends appAccount.Authenticator {
-  addAccountImplicitly(authType: string, callerBundleName: string,
-    options: Record<string, Object>, callback: appAccount.AuthenticatorCallback) {
-    let want: Want = {
-      bundleName: 'com.example.accountjsdemo',
-      abilityName: 'com.example.accountjsdemo.LoginAbility',
-    };
-    callback.onRequestRedirected(want);
-  }
-
-  authenticate(name: string, authType: string, callerBundleName: string,
-    options: Record<string, Object>, callback: appAccount.AuthenticatorCallback) {
-    callback.onResult(appAccount.ResultCode.SUCCESS, {
-      name: name,
-      authType: authType,
-      token: 'xxxxxx'}
-    );
-  }
-}
-```
-
 ## onResult
 
-ArkTS-Dyn:
 ```TypeScript
 onResult: (code: number, result?: AuthResult) => void
-```
-
-ArkTS-Sta:
-```TypeScript
-onResult: (code: int, result?: AuthResult) => void
 ```
 
 通知请求结果。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -201,75 +58,5 @@ onResult: (code: int, result?: AuthResult) => void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| code | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| code | number | 是 |
 | result | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 否 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
-let sessionId = '1234';
-appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCallback) => {
-    let result: appAccount.AuthResult = {
-        account: {
-          name: 'Lisi',
-          owner: 'com.example.accountjsdemo',
-        },
-        tokenInfo: {
-          token: 'xxxxxx',
-          authType: 'getSocialData'
-        }
-    };
-    callback.onResult(0, result);
-}).catch((err: BusinessError) => {
-    console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import appAccount from '@ohos.account.appAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
-let sessionId = '1234';
-appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCallback) => {
-  let result: appAccount.AuthResult = {
-    account: {
-      name: 'Lisi',
-      owner: 'com.example.accountjsdemo',
-    },
-    tokenInfo: {
-      token: 'xxxxxx',
-      authType: 'getSocialData'
-    }
-  };
-  callback.onResult(0, result);
-}).catch((e: Error) => {
-  const err = e as BusinessError;
-  console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
-let sessionId = '1234';
-appAccountManager.getAuthenticatorCallback(sessionId).then((callback: appAccount.AuthenticatorCallback) => {
-  callback.onResult(appAccount.ResultCode.SUCCESS, {
-    name: 'LiSi',
-    owner: 'com.example.accountjsdemo',
-    authType: 'getSocialData',
-    token: 'xxxxxx'}
-  );
-}).catch((err: BusinessError) => {
-  console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
-});
-```

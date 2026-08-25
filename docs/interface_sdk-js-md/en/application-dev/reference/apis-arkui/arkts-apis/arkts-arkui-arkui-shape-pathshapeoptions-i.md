@@ -4,14 +4,12 @@ Represents the parameter of the constructor used to create a **PathShape** objec
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
 ```
 
 ## commands
@@ -25,8 +23,6 @@ Path drawing commands. For more about the commands, see commands.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

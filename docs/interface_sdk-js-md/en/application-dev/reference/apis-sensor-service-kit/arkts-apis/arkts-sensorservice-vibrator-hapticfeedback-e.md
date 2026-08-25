@@ -4,8 +4,6 @@ Defines the vibration effect. The frequency of the same vibration effect may var
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_SOFT
@@ -17,8 +15,6 @@ EFFECT_SOFT = 'haptic.effect.soft'
 Soft vibration, low frequency.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -32,8 +28,6 @@ Hard vibration, medium frequency.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_SHARP
@@ -45,8 +39,6 @@ EFFECT_SHARP = 'haptic.effect.sharp'
 Sharp vibration, high frequency.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -60,8 +52,6 @@ Vibration for a success notification.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_NOTICE_FAILURE
@@ -74,8 +64,6 @@ Vibration for a failure notification.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_NOTICE_WARNING
@@ -87,7 +75,5 @@ EFFECT_NOTICE_WARNING = 'haptic.notice.warning'
 Vibration for an alert.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice

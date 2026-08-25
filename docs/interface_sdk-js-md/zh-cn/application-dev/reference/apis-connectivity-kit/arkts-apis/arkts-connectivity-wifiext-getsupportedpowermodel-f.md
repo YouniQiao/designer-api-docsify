@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiext } from '@kit.ConnectivityKit';
+import { wifiext } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getSupportedPowerModel
@@ -15,8 +15,6 @@ function getSupportedPowerModel(): Promise<Array<PowerModel>>
 获取支持的功率模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -42,8 +40,6 @@ function getSupportedPowerModel(callback: AsyncCallback<Array<PowerModel>>): voi
 获取支持的功率模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

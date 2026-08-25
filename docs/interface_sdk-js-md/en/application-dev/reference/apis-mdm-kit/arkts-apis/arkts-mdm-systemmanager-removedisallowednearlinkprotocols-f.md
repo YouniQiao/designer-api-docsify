@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedNearLinkProtocols
@@ -15,8 +15,6 @@ function removeDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLin
 Removes the list of disallowed NearLink protocols for a specified user. After successful removal, the specified user can use the removed NearLink protocols for communication again, restoring the corresponding protocol connection capabilities. Use cases: In enterprise device management scenarios, administrators can use this API to remove previously set NearLink protocol disabling policies, allowing users to resume communication between devices via NearLink protocols. This is suitable for scenarios where there is a need to restore NearLink communication capabilities for specific users, helping enterprise administrators flexibly adjust NearLink protocol access permissions of user devices to meet communication requirements in different business scenarios.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -41,29 +39,3 @@ Removes the list of disallowed NearLink protocols for a specified user. After su
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace with actual values.
-let protocols: systemManager.NearLinkProtocol[] = [systemManager.NearLinkProtocol.SSAP,
-  systemManager.NearLinkProtocol.DATA_TRANSFER];
-
-// Replace with actual values.
-let accountId: number = 100;
-try {
-  systemManager.removeDisallowedNearLinkProtocols(wantTemp, protocols, accountId);
-  console.info('Succeeded in removing the disabled Starlink protocol list for the specified user.');
-} catch (err) {
-  console.error(`Failed to remove the disabled Starlink protocol list for the specified user. Code is ${err.code}, message is ${err.message}`);
-}
-```

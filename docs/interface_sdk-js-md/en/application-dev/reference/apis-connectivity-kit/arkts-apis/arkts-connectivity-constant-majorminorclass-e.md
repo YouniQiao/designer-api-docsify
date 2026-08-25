@@ -4,8 +4,6 @@ The enum of major minor class of a bluetooth device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## COMPUTER_UNCATEGORIZED
@@ -17,8 +15,6 @@ COMPUTER_UNCATEGORIZED = 0x0100
 The Minor Device Class field Computer Major Class
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,8 +28,6 @@ Desktop computer.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## COMPUTER_SERVER
@@ -45,8 +39,6 @@ COMPUTER_SERVER = 0x0108
 Server.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -60,8 +52,6 @@ Laptop.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## COMPUTER_HANDHELD_PC_PDA
@@ -73,8 +63,6 @@ COMPUTER_HANDHELD_PC_PDA = 0x0110
 Hand-held computer.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -88,8 +76,6 @@ Palmtop computer.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## COMPUTER_WEARABLE
@@ -101,8 +87,6 @@ COMPUTER_WEARABLE = 0x0118
 Wearable computer.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -116,8 +100,6 @@ Tablet.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PHONE_UNCATEGORIZED
@@ -129,8 +111,6 @@ PHONE_UNCATEGORIZED = 0x0200
 Phone Major Class
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -144,8 +124,6 @@ Portable phone.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PHONE_CORDLESS
@@ -157,8 +135,6 @@ PHONE_CORDLESS = 0x0208
 Cordless phone.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -172,8 +148,6 @@ Smartphone.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PHONE_MODEM_OR_GATEWAY
@@ -185,8 +159,6 @@ PHONE_MODEM_OR_GATEWAY = 0x0210
 Modem or gateway phone.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -200,8 +172,6 @@ ISDN phone.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## NETWORK_FULLY_AVAILABLE
@@ -213,8 +183,6 @@ NETWORK_FULLY_AVAILABLE = 0x0300
 LAN/Network Access Point Major Class
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -228,8 +196,6 @@ Device used on network 1 to 17.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## NETWORK_17_TO_33_UTILIZED
@@ -241,8 +207,6 @@ NETWORK_17_TO_33_UTILIZED = 0x0340
 Device used on network 17 to 33.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -256,8 +220,6 @@ Device used on network 33 to 50.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## NETWORK_60_TO_67_UTILIZED
@@ -269,8 +231,6 @@ NETWORK_60_TO_67_UTILIZED = 0x0380
 Device used on network 60 to 67.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -284,8 +244,6 @@ Device used on network 67 to 83.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## NETWORK_83_TO_99_UTILIZED
@@ -297,8 +255,6 @@ NETWORK_83_TO_99_UTILIZED = 0x03C0
 Device used on network 83 to 99.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -312,8 +268,6 @@ Device without network service.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_UNCATEGORIZED
@@ -325,8 +279,6 @@ AUDIO_VIDEO_UNCATEGORIZED = 0x0400
 Unclassified audio or video device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -340,8 +292,6 @@ Wearable audio or video headset.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_HANDSFREE
@@ -353,8 +303,6 @@ AUDIO_VIDEO_HANDSFREE = 0x0408
 Hands-free audio or video device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -368,8 +316,6 @@ Audio or video microphone.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_LOUDSPEAKER
@@ -381,8 +327,6 @@ AUDIO_VIDEO_LOUDSPEAKER = 0x0414
 Audio or video loudspeaker.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -396,8 +340,6 @@ Audio or video headphones.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_PORTABLE_AUDIO
@@ -409,8 +351,6 @@ AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C
 Portable audio or video device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -424,8 +364,6 @@ In-vehicle audio or video device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_SET_TOP_BOX
@@ -437,8 +375,6 @@ AUDIO_VIDEO_SET_TOP_BOX = 0x0424
 Audio or video STB device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -452,8 +388,6 @@ High-fidelity speaker device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_VCR
@@ -465,8 +399,6 @@ AUDIO_VIDEO_VCR = 0x042C
 Video cassette recording (VCR) device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -480,8 +412,6 @@ Camera.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_CAMCORDER
@@ -493,8 +423,6 @@ AUDIO_VIDEO_CAMCORDER = 0x0434
 Camcorder.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -508,8 +436,6 @@ Audio or video monitor.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER
@@ -521,8 +447,6 @@ AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C
 Video display or loudspeaker.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -536,8 +460,6 @@ Video conferencing device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## AUDIO_VIDEO_VIDEO_GAMING_TOY
@@ -549,8 +471,6 @@ AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448
 Audio or video gaming toy.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -564,8 +484,6 @@ Peripheral Major Class
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_KEYBOARD
@@ -577,8 +495,6 @@ PERIPHERAL_KEYBOARD = 0x0540
 Keyboard device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -592,8 +508,6 @@ Pointing peripheral device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_KEYBOARD_POINTING
@@ -605,8 +519,6 @@ PERIPHERAL_KEYBOARD_POINTING = 0x05C0
 Keyboard pointing device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -620,8 +532,6 @@ Unclassified peripheral device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_JOYSTICK
@@ -633,8 +543,6 @@ PERIPHERAL_JOYSTICK = 0x0504
 Peripheral joystick.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -648,8 +556,6 @@ Peripheral game pad.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_REMOTE_CONTROL
@@ -661,8 +567,6 @@ PERIPHERAL_REMOTE_CONTROL = 0x05C0
 Peripheral remote control device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -676,8 +580,6 @@ Peripheral sensing device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_DIGITIZER_TABLET
@@ -689,8 +591,6 @@ PERIPHERAL_DIGITIZER_TABLET = 0x0514
 Peripheral digitizer tablet.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -704,8 +604,6 @@ Peripheral card reader.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_DIGITAL_PEN
@@ -717,8 +615,6 @@ PERIPHERAL_DIGITAL_PEN = 0x051C
 Peripheral digital pen.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -732,8 +628,6 @@ Peripheral RFID scanner.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## PERIPHERAL_GESTURAL_INPUT
@@ -745,8 +639,6 @@ PERIPHERAL_GESTURAL_INPUT = 0x0522
 Gesture input device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -760,8 +652,6 @@ Imaging Major Class
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## IMAGING_DISPLAY
@@ -773,8 +663,6 @@ IMAGING_DISPLAY = 0x0610
 Imaging display device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -788,8 +676,6 @@ Imaging camera device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## IMAGING_SCANNER
@@ -801,8 +687,6 @@ IMAGING_SCANNER = 0x0640
 Imaging scanner.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -816,8 +700,6 @@ Imaging printer.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## WEARABLE_UNCATEGORIZED
@@ -829,8 +711,6 @@ WEARABLE_UNCATEGORIZED = 0x0700
 Wearable Major Class
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -844,8 +724,6 @@ Smart watch.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## WEARABLE_PAGER
@@ -857,8 +735,6 @@ WEARABLE_PAGER = 0x0708
 Wearable pager.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -872,8 +748,6 @@ Smart jacket.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## WEARABLE_HELMET
@@ -885,8 +759,6 @@ WEARABLE_HELMET = 0x0710
 Wearable helmet.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -900,8 +772,6 @@ Wearable glasses.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## TOY_UNCATEGORIZED
@@ -913,8 +783,6 @@ TOY_UNCATEGORIZED = 0x0800
 Minor Device Class field - Toy Major Class
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -928,8 +796,6 @@ Toy robot.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## TOY_VEHICLE
@@ -941,8 +807,6 @@ TOY_VEHICLE = 0x0808
 Toy vehicle.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -956,8 +820,6 @@ Humanoid toy doll.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## TOY_CONTROLLER
@@ -969,8 +831,6 @@ TOY_CONTROLLER = 0x0810
 Toy controller.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -984,8 +844,6 @@ Toy gaming device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_UNCATEGORIZED
@@ -997,8 +855,6 @@ HEALTH_UNCATEGORIZED = 0x0900
 Minor Device Class field - Health
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -1012,8 +868,6 @@ Blood pressure device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_THERMOMETER
@@ -1025,8 +879,6 @@ HEALTH_THERMOMETER = 0x0908
 Thermometer.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -1040,8 +892,6 @@ Body scale.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_GLUCOSE
@@ -1053,8 +903,6 @@ HEALTH_GLUCOSE = 0x0910
 Blood glucose monitor.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -1068,8 +916,6 @@ Pulse oximeter.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_PULSE_RATE
@@ -1081,8 +927,6 @@ HEALTH_PULSE_RATE = 0x0918
 Heart rate monitor.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -1096,8 +940,6 @@ Health data display.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_STEP_COUNTER
@@ -1109,8 +951,6 @@ HEALTH_STEP_COUNTER = 0x0920
 Step counter.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -1124,8 +964,6 @@ Body composition analyzer.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_PEAK_FLOW_MONITOR
@@ -1137,8 +975,6 @@ HEALTH_PEAK_FLOW_MONITOR = 0x0928
 Hygrometer.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -1152,8 +988,6 @@ Medication monitor.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_KNEE_PROSTHESIS
@@ -1165,8 +999,6 @@ HEALTH_KNEE_PROSTHESIS = 0x0930
 Prosthetic knee.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -1180,8 +1012,6 @@ Prosthetic ankle.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_GENERIC_HEALTH_MANAGER
@@ -1194,8 +1024,6 @@ Generic health management device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## HEALTH_PERSONAL_MOBILITY_DEVICE
@@ -1207,7 +1035,5 @@ HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C
 Personal mobility device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

@@ -4,8 +4,6 @@ Enumerates the physical units.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_NONE
@@ -17,8 +15,6 @@ SCAN_UNIT_NONE = 0
 No unit.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ Pixel unit.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_BIT
@@ -45,8 +39,6 @@ SCAN_UNIT_BIT = 2
 Bit unit.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -60,8 +52,6 @@ Millimeter unit.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_DPI
@@ -73,8 +63,6 @@ SCAN_UNIT_DPI = 4
 DPI unit.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -88,8 +76,6 @@ Percentage unit.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_UNIT_MICROSECOND
@@ -101,7 +87,5 @@ SCAN_UNIT_MICROSECOND = 6
 Microsecond unit.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

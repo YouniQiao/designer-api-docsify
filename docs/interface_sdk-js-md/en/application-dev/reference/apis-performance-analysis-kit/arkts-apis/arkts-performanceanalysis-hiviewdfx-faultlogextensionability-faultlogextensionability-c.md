@@ -1,6 +1,6 @@
 # FaultLogExtensionAbility
 
-This module implements the delayed fault notification feature.When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanceanalysis-hiappevent-n.md), the previous event can be received only after the application restarts. If the application fails to start or remains unresponsive for a long time, the fault may not be reported in time.
+This module implements the delayed fault notification feature.When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanceanalysis-hiappevent-n.md), the previous event can be received only after the application restarts. If the application fails to start or remains unresponsive for a number time, the fault may not be reported in time.
 
 > **NOTE：**&gt;
 > - The APIs of this module can be used only in the stage model.&gt;
@@ -10,14 +10,12 @@ This module implements the delayed fault notification feature.When the crash and
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogExtensionAbility } from '@kit.PerformanceAnalysisKit';
+import { FaultLogExtensionAbility } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onConnect
@@ -30,21 +28,9 @@ Called to perform the initialization operation when the system service completes
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
-
-**Examples**
-
-```TypeScript
-export default class MyFaultLogExtension extends FaultLogExtensionAbility {
-    onConnect() {
-      console.info('onConnect');
-    }
-}
-```
 
 ## onDisconnect
 
@@ -56,21 +42,9 @@ Called to release resources and clear the running status when the system service
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
-
-**Examples**
-
-```TypeScript
-export default class MyFaultLogExtension extends FaultLogExtensionAbility {
-    onDisconnect() {
-      console.info('onDisconnect');
-    }
-}
-```
 
 ## onFaultReportReady
 
@@ -82,34 +56,9 @@ Called to subscribe to and process fault events when the system service notifies
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
-
-**Examples**
-
-```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
-
-export default class MyFaultLogExtension extends FaultLogExtensionAbility {
-    onFaultReportReady() {
-        hiAppEvent.addWatcher({
-            name: "watcher",
-            appEventFilters: [
-                {
-                    domain: hiAppEvent.domain.OS,
-                    names: [hiAppEvent.event.APP_CRASH, hiAppEvent.event.APP_FREEZE]
-                }
-            ],
-            onReceive: (domain: string, appEventGroups: Array<hiAppEvent.AppEventGroup>) => {
-                // Process the fault event.
-            }
-        });
-    }
-}
-```
 
 ## context
 
@@ -122,8 +71,6 @@ Context of the FaultLogExtensionAbility. This context is inherited from [Extensi
 **Type:** [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

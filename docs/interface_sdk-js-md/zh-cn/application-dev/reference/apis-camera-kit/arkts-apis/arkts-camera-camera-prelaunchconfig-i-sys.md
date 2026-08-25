@@ -4,8 +4,6 @@ Defines the camera prelaunch configuration. Currently, the configuration is used
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ Defines the camera prelaunch configuration. Currently, the configuration is used
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## activeTime
 
 ```TypeScript
-activeTime?: int
+activeTime?: number
 ```
 
 Activation time, in minutes.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -46,8 +42,6 @@ Camera device.
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -64,8 +58,6 @@ Type of the parameter used for prelaunch.
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -81,8 +73,6 @@ Setting parameter.
 **类型：** [SettingParam](arkts-camera-camera-settingparam-i-sys.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

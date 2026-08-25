@@ -7,8 +7,6 @@ Provides the capability of reading barcode label attributes and accessing I/O op
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getBarcode
@@ -20,8 +18,6 @@ getBarcode(): Promise<ArrayBuffer>
 Obtains a complete barcode tag. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 

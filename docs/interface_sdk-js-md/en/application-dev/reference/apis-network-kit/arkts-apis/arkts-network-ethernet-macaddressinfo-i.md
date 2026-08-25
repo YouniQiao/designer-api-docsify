@@ -4,14 +4,12 @@ Defines the name and MAC address of an Ethernet NIC.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## iface
@@ -26,8 +24,6 @@ Name of the Ethernet NIC.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 ## macAddress
@@ -41,7 +37,5 @@ MAC address of the Ethernet NIC.
 **Type:** string
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet

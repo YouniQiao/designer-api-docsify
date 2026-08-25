@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## createFromBuilder
@@ -24,8 +24,6 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
 > - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 18
 
@@ -55,126 +53,6 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [160001](../errorcode-snapshot.md#160001-图像加载错误) |
 
-**示例**
-
-```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct OffscreenSnapshotExample {
-  @State pixmap: image.PixelMap | undefined = undefined
-
-  @Builder
-  RandomBuilder() {
-    Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-      Text('Test menu item 1')
-        .fontSize(20)
-        .width(100)
-        .height(50)
-        .textAlign(TextAlign.Center)
-      Divider().height(10)
-      Text('Test menu item 2')
-        .fontSize(20)
-        .width(100)
-        .height(50)
-        .textAlign(TextAlign.Center)
-    }
-    .width(100)
-    .id("builder")
-  }
-
-  build() {
-    Column() {
-      Button("click to generate offscreen UI snapshot")
-        .onClick(() => {
-          // 建议使用this.getUIContext().getComponentSnapshot().createFromBuilder()
-          componentSnapshot.createFromBuilder(() => {
-            this.RandomBuilder()
-          },
-            (error: Error, pixmap: image.PixelMap) => {
-              if (error) {
-                console.error(`error:${JSON.stringify(error)}`)
-                return;
-              }
-              this.pixmap = pixmap
-              // 保存pixmap到文件中
-              // ....
-              // 获取组件大小和位置
-              let info = this.getUIContext().getComponentUtils().getRectangleById("builder")
-              console.info(info.size.width + ' ' + info.size.height + ' ' + info.localOffset.x + ' ' +
-              info.localOffset.y + ' ' + info.windowOffset.x + ' ' + info.windowOffset.y)
-            }, 320, true, { scale: 2, waitUntilRenderFinished: true })
-        })
-      Image(this.pixmap)
-        .margin(10)
-        .height(200)
-        .width(200)
-        .border({ color: Color.Black, width: 2 })
-    }.width('100%').margin({ left: 10, top: 5, bottom: 5 }).height(300)
-  }
-}
-```
-
-```TypeScript
-import { componentSnapshot } from '@kit.ArkUI'
-import { image } from '@kit.ImageKit'
-
-@Entry
-@Component
-struct OffscreenSnapshotExample {
-  @State pixmap: image.PixelMap | undefined = undefined
-
-  @Builder
-  RandomBuilder() {
-    Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-      Text('Test menu item 1')
-        .fontSize(20)
-        .width(100)
-        .height(50)
-        .textAlign(TextAlign.Center)
-      Divider().height(10)
-      Text('Test menu item 2')
-        .fontSize(20)
-        .width(100)
-        .height(50)
-        .textAlign(TextAlign.Center)
-    }
-    .width(100)
-    .id("builder")
-  }
-
-  build() {
-    Column() {
-      Button("click to generate offscreen UI snapshot")
-        .onClick(() => {
-          // 建议使用this.getUIContext().getComponentSnapshot().createFromBuilder()
-          componentSnapshot.createFromBuilder(() => {
-            this.RandomBuilder()
-          }, 320, true, { scale: 2, waitUntilRenderFinished: true })
-            .then((pixmap: image.PixelMap) => {
-              this.pixmap = pixmap
-              // 保存pixmap到文件中
-              // ....
-              // 获取组件大小和位置
-              let info = this.getUIContext().getComponentUtils().getRectangleById("builder")
-              console.info(`${info.size.width} ${info.size.height} ${info.localOffset.x} ${
-              info.localOffset.y} ${info.windowOffset.x} ${info.windowOffset.y}`)
-            }).catch((err: Error) => {
-            console.error(`error:${err}`)
-          })
-        })
-      Image(this.pixmap)
-        .margin(10)
-        .height(200)
-        .width(200)
-        .border({ color: Color.Black, width: 2 })
-    }.width('100%').margin({ left: 10, top: 5, bottom: 5 }).height(300)
-  }
-}
-```
-
 
 ## createFromBuilder
 
@@ -194,8 +72,6 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
 > - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 18
 
@@ -229,7 +105,3 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [160001](../errorcode-snapshot.md#160001-图像加载错误) |
-
-**示例**
-
-参见 [createFromBuilder](#createfrombuilder)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeOsAccount
@@ -15,8 +15,6 @@ function removeOsAccount(admin: Want, accountId: number): Promise<void>
 移除系统账号。当前仅支持手机、平板设备使用，可以移除使用[createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md)创建的普通系统账号（normal类型）和 [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md)创建的系统账号（admin、normal、guest类型），不可移除默认系统账号（ID为100）。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_LOCAL_ACCOUNTS
 
@@ -49,30 +47,3 @@ function removeOsAccount(admin: Want, accountId: number): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { osAccount } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 创建普通系统账号
-accountManager.createNormalOsAccount(wantTemp, "TestAccountName").then((accountInfo: osAccount.OsAccountInfo) => {
-  console.info('Succeeded in creating normal os account, accountInfo: ' + JSON.stringify(accountInfo));
-  // 根据系统账号ID移除创建的账号
-  let accountId: number = accountInfo.localId;
-  return accountManager.removeOsAccount(wantTemp, accountId);
-}).then(() => {
-  console.info('Succeeded in removing os account');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create and remove normal os account: code is ${err.code}, message is ${err.message}`);
-});
-```

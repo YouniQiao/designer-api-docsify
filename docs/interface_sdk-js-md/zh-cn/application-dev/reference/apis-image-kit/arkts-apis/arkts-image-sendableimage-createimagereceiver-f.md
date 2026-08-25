@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## createImageReceiver
@@ -15,8 +15,6 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 通过图片大小、图片格式、容量创建ImageReceiver实例。由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行 完成，且后续不再使用该实例。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -39,18 +37,3 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-
-async function CreateImageReceiver() {
-    let size: image.Size = {
-        height: 8192,
-        width: 8
-    } 
-    let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-}
-```

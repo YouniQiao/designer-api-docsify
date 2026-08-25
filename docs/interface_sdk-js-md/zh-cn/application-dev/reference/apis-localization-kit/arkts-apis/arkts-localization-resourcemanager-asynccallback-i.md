@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## [[Call]]
@@ -27,8 +25,6 @@ import { resourceManager } from '@kit.LocalizationKit';
 异步回调函数，携带错误参数和异步返回值。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

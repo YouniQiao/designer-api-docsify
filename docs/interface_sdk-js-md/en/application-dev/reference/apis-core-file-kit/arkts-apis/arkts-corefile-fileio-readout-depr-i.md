@@ -4,8 +4,6 @@ Obtains the file read result. This class applies only to the **read()** method.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -27,8 +25,6 @@ Buffer for storing the data read.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -45,8 +41,6 @@ Length of the data read, in bytes.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -62,8 +56,6 @@ Position of the buffer to which the data will be read relative to the start addr
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

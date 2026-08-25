@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## initSession
@@ -19,8 +19,6 @@ Initializes a session for a key operation. This API uses an asynchronous callbac
 > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,8 +70,6 @@ Initializes a session for a key operation. This API uses a promise to return the
 > [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md) requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

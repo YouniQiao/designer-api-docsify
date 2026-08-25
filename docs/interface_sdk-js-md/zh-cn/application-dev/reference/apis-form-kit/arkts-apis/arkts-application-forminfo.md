@@ -7,8 +7,6 @@ formInfo模块提供了卡片信息和状态等相关类型和枚举。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [formInfo/formInfo](arkts-app-form-forminfo.md)

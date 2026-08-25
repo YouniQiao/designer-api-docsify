@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 ## LOW
@@ -17,8 +15,6 @@ LOW = 0
 设备当前温度、负载比较低，无高负载场景。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
@@ -32,8 +28,6 @@ NORMAL = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 ## MEDIUM
@@ -45,8 +39,6 @@ MEDIUM = 2
 设备温度、负载有一项或多项稍高，或者当前处于高负载场景，无感知业务应暂停或延迟运行。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
@@ -60,8 +52,6 @@ HIGH = 3
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 ## OVERHEATED
@@ -73,8 +63,6 @@ OVERHEATED = 4
 设备发热严重或者负载较重，无感知业务与非关键业务应停止，前台关键业务应降低规格及负载。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
@@ -88,8 +76,6 @@ WARNING = 5
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 ## EMERGENCY
@@ -102,8 +88,6 @@ EMERGENCY = 6
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 ## ESCAPE
@@ -115,7 +99,5 @@ ESCAPE = 7
 设备即将进入热逃生状态或当前负载已经不堪重负，或已经处于紧急状态且高负载状态，所有业务将被强制停止，业务需做好逃生措施，例如保存重要数据等。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## off('deviceSelected')
@@ -15,8 +15,6 @@ function off(type: 'deviceSelected', token: number): void
 取消监听设备连接状态。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 22
 
@@ -47,19 +45,6 @@ function off(type: 'deviceSelected', token: number): void
 | [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) |
 | [16600004](../errorcode-DistributedSchedule.md#16600004-指定的callback已注册) |
 
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-try {
-  continuationManager.off("deviceSelected", token);
-} catch (err) {
-  console.error('off failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## off('deviceUnselected')
 
@@ -70,8 +55,6 @@ function off(type: 'deviceUnselected', token: number): void
 取消监听设备断开状态。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 22
 
@@ -102,19 +85,6 @@ function off(type: 'deviceUnselected', token: number): void
 | [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) |
 | [16600004](../errorcode-DistributedSchedule.md#16600004-指定的callback已注册) |
 
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-try {
-  continuationManager.off("deviceUnselected", token);
-} catch (err) {
-  console.error('off failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## off('deviceConnect')
 
@@ -125,8 +95,6 @@ function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): vo
 异步方法，取消监听设备连接状态，使用Callback形式返回连接的设备信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -143,18 +111,6 @@ function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): vo
 | type | 'deviceConnect' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | 否 |
 
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-continuationManager.off("deviceConnect", (data) => {
-  console.info('onDeviceConnect deviceId: ' + JSON.stringify(data.id));
-  console.info('onDeviceConnect deviceType: ' + JSON.stringify(data.type));
-  console.info('onDeviceConnect deviceName: ' + JSON.stringify(data.name));
-});
-```
-
 
 ## off('deviceDisconnect')
 
@@ -165,8 +121,6 @@ function off(type: 'deviceDisconnect', callback?: Callback<string>): void
 异步方法，取消监听设备断开状态，使用Callback形式返回连接的设备信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -182,13 +136,3 @@ function off(type: 'deviceDisconnect', callback?: Callback<string>): void
 | --- | --- | --- |
 | type | 'deviceDisconnect' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 |
-
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-continuationManager.off("deviceDisconnect", (data) => {
-  console.info('onDeviceDisconnect deviceId: ' + JSON.stringify(data));
-});
-```

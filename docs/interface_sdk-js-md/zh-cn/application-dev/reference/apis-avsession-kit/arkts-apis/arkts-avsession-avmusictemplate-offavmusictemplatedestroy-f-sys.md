@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## offAVMusicTemplateDestroy
@@ -15,8 +15,6 @@ function offAVMusicTemplateDestroy(callback?: Callback<AVMusicTemplateDescriptor
 注销音频模板销毁监听。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 

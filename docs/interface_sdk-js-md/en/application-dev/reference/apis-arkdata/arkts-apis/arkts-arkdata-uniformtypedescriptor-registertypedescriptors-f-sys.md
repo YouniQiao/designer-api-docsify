@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 ```
 
 ## registerTypeDescriptors
@@ -15,8 +15,6 @@ function registerTypeDescriptors(typeDescriptors: Array<TypeDescriptor>): Promis
 Register type descriptors into the system.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DYNAMIC_UTD_TYPE
 

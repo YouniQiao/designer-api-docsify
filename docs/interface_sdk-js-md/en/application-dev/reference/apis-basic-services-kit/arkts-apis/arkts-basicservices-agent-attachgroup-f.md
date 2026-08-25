@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## attachGroup
@@ -15,8 +15,6 @@ function attachGroup(gid: string, tids: string[]): Promise<void>
 Attaches multiple download task IDs to a specified group ID. This API uses a promise to return the result.If any task ID does not meet the attachment conditions, all tasks in the list will not be added to the group.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

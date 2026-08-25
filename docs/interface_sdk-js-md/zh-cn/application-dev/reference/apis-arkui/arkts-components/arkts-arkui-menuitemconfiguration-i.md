@@ -1,12 +1,10 @@
 # MenuItemConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。
 
 **继承/实现关系：** MenuItemConfiguration extends CommonConfiguration<MenuItemConfiguration>
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,11 +19,13 @@
 triggerSelect(index: number, value: string): void
 ```
 
-下拉菜单选中某一项的回调函数。<br/>**说明：**<br/>index会赋值给事件onSelect 回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件 onSelect回调中的文本参数。
+下拉菜单选中某一项的回调函数。
+
+**说明：**
+
+index会赋值给事件onSelect 回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件 onSelect回调中的文本参数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,11 +49,9 @@ icon?: ResourceStr
 下拉菜单项的图片内容。  
 **说明：**string格式可用于加载网络图片和本地图片。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,8 +71,6 @@ index: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -92,8 +88,6 @@ selected: boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -113,8 +107,6 @@ symbolIcon?: SymbolGlyphModifier
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -130,11 +122,9 @@ value: ResourceStr
 下拉菜单项的文本内容。  
 **说明：**当文本字符的长度超过菜单项文本区域的宽度时，文本将会被截断。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

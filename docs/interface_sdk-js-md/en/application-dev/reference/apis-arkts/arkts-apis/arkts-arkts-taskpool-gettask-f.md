@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## getTask
@@ -23,8 +23,6 @@ Obtains the corresponding task instance by task ID, or by task ID and task name.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -41,40 +39,3 @@ Obtains the corresponding task instance by task ID, or by task ID and task name.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | Task \| undefined |
-
-**Examples**
-
-```TypeScript
-import { taskpool } from '@kit.ArkTS';
-
-@Concurrent
-function addNum(num1: number, num2: number) {
-  return num1 + num2;
-}
-
-function checkTask() {
-  try {
-    taskpool.getTask(null);
-  } catch (e) {
-    console.error("error:" + e);
-    // error:BusinessError: Parameter error. The input parameters are invalid, the type of the first param must be number.
-  }
-
-  let task1:taskpool.Task = new taskpool.Task("addNum", addNum, 1, 2);
-  let task2:taskpool.Task | undefined = taskpool.getTask(task1.taskId, "addNum"); // task2 is not undefined
-  let task3:taskpool.Task | undefined = taskpool.getTask(task1.taskId, "add"); // task3 is undefined
-  let task4:taskpool.Task | undefined = taskpool.getTask(0); // task4 is undefined
-}
-
-function dealTask() {
-  let task1:taskpool.Task = new taskpool.Task(addNum, 1, 2);
-  let task2:taskpool.Task | undefined = taskpool.getTask(task1.taskId);
-  if (task2 === undefined) {
-    return;
-  }
-
-  taskpool.execute(task2).then((result) => {
-    console.info("task2 result: " + result); // task2 result: 3
-  })
-}
-```

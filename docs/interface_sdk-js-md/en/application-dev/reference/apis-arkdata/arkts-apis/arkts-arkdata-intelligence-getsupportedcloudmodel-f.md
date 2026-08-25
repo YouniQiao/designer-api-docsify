@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from '@kit.ArkData';
+import { intelligence } from 'kits/@kit.ArkData';
 ```
 
 ## getSupportedCloudModel
@@ -15,8 +15,6 @@ function getSupportedCloudModel(): Promise<Array<CloudModelInfo>>
 Obtains the supported cloud embedding models.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

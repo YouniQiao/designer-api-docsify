@@ -4,8 +4,6 @@ The **NotificationSubscribeInfo** module provides APIs for defining the informat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Bundle names of the applications whose notifications to subscribe to. If this pa
 **Type:** Array&lt;string&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -40,8 +36,6 @@ Device type. If this parameter is not specified, the subscription defaults to no
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -53,13 +47,12 @@ enableClassification?: boolean
 ```
 
 Whether to enable notification classification.  
-- **true**: yes. - **false**: no. The default value is **false**.
+- **true**: yes.  
+- **false**: no. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,17 +63,19 @@ Whether to enable notification classification.
 ## filterLimit
 
 ```TypeScript
-filterLimit?: long
+filterLimit?: number
 ```
 
 Notification filtering range. The default value is **0**. The options are as follows:  
-- **0**: All notifications are included in the subscription. - **1**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is empty. - **2**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is not empty.
+- **0**: All notifications are included in the subscription.  
+- **1**: Filter out notifications whose slot type is  
+[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is empty.  
+- **2**: Filter out notifications whose slot type is  
+[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is not empty.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -93,14 +88,13 @@ needSilentReplayOnSubscribe?: boolean
 ```
 
 Whether to enable silent replay upon subscription.  
-- **true**: yes. - **false**: no. The default value is **false**.  
+- **true**: yes.  
+- **false**: no. The default value is **false**.  
 After this feature is enabled, historical notifications are silently re-pushed upon the first subscription, without ringing or vibration reminders.
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,8 +114,6 @@ Image options of the live notification.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
@@ -140,8 +132,6 @@ Types of the notification slots. If this parameter is not specified, the subscri
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -149,16 +139,14 @@ Types of the notification slots. If this parameter is not specified, the subscri
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 User ID. If this parameter is not specified, the subscription defaults to notifications from the current user ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -175,8 +163,6 @@ Configuration options for notification voice broadcast.
 **Type:** [VoiceContentOptions](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

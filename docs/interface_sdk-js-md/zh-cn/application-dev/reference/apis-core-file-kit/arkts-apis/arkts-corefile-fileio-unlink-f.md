@@ -15,8 +15,6 @@ declare function unlink(path: string): Promise<void>
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md)
@@ -35,26 +33,6 @@ declare function unlink(path: string): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.unlink(filePath).then(() => {
-  console.info("remove file succeed");
-}).catch((error: BusinessError) => {
-  console.error("remove file failed with error:" + error);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.unlink(filePath, (err: BusinessError) => {
-  console.info("remove file succeed");
-});
-```
-
 
 ## unlink
 
@@ -65,8 +43,6 @@ declare function unlink(path: string, callback: AsyncCallback<void>): void
 删除文件，使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -80,7 +56,3 @@ declare function unlink(path: string, callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | path | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [unlink](#unlink)

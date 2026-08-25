@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## createGlobalAudioLoopback
@@ -15,8 +15,6 @@ function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolea
 创建一个全局音频返听实例，该实例提供低延迟的入耳监听功能。 硬件音频返听只能在支持的平台中创建，应用程序应首先使用[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported) 进行检查。 系统中只能存在一个拥有全局返听功能的主实例，其他实例均为控制器。控制器可以通过向主实例发送命令来管理全局返听，并监听其状态变化。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

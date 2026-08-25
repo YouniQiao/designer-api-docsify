@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startAdvertising
@@ -13,11 +13,16 @@ function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, adv
 ```
 
 Starts BLE advertising.  
-- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true,  
+the local name will be carried in the broadcast packet.  
+- If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set,  
+its value will be used as a custom name and carried in the broadcast packet.  
+- If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified,  
+the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect.  
+- To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename),  
+ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
@@ -34,8 +39,8 @@ Starts BLE advertising.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | setting | [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md) | Yes |
-| advData | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | Yes |
-| advResponse | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | No |
+| advData | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | Yes |
+| advResponse | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | No |
 
 **Error codes:**
 
@@ -50,183 +55,24 @@ Starts BLE advertising.
 | 2900099 |
 | 2902054 |
 
-**Examples**
-
-```TypeScript
-let manufactureValueBuffer = new Uint8Array(4);
-manufactureValueBuffer[0] = 1;
-manufactureValueBuffer[1] = 2;
-manufactureValueBuffer[2] = 3;
-manufactureValueBuffer[3] = 4;
-
-let serviceValueBuffer = new Uint8Array(4);
-serviceValueBuffer[0] = 4;
-serviceValueBuffer[1] = 6;
-serviceValueBuffer[2] = 7;
-serviceValueBuffer[3] = 8;
-console.info('manufactureValueBuffer = '+ JSON.stringify(manufactureValueBuffer));
-console.info('serviceValueBuffer = '+ JSON.stringify(serviceValueBuffer));
-try {
-    let setting: ble.AdvertiseSetting = {
-        interval:150,
-        txPower:0,
-        connectable:true
-    };
-    let manufactureDataUnit: ble.ManufactureData = {
-        manufactureId:4567,
-        manufactureValue:manufactureValueBuffer.buffer
-    };
-    let serviceDataUnit: ble.ServiceData = {
-        serviceUuid:"00001888-0000-1000-8000-00805f9b34fb",
-        serviceValue:serviceValueBuffer.buffer
-    };
-    let advData: ble.AdvertiseData = {
-        serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
-        manufactureData:[manufactureDataUnit],
-        serviceData:[serviceDataUnit],
- 	    advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
-    };
-    let advResponse: ble.AdvertiseData = {
-        serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
-        manufactureData:[manufactureDataUnit],
-        serviceData:[serviceDataUnit],
- 	    advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
-    };
-    ble.startAdvertising(setting, advData ,advResponse);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-let manufactureValueBuffer = new Uint8Array(4);
-manufactureValueBuffer[0] = 1;
-manufactureValueBuffer[1] = 2;
-manufactureValueBuffer[2] = 3;
-manufactureValueBuffer[3] = 4;
-
-let serviceValueBuffer = new Uint8Array(4);
-serviceValueBuffer[0] = 4;
-serviceValueBuffer[1] = 6;
-serviceValueBuffer[2] = 7;
-serviceValueBuffer[3] = 8;
-console.info('manufactureValueBuffer = '+ JSON.stringify(manufactureValueBuffer));
-console.info('serviceValueBuffer = '+ JSON.stringify(serviceValueBuffer));
-try {
-    let setting: ble.AdvertiseSetting = {
-        interval:150,
-        txPower:0,
-        connectable:true,
-    };
-    let manufactureDataUnit: ble.ManufactureData = {
-        manufactureId:4567,
-        manufactureValue:manufactureValueBuffer.buffer
-    };
-    let serviceDataUnit: ble.ServiceData = {
-        serviceUuid:"00001888-0000-1000-8000-00805f9b34fb",
-        serviceValue:serviceValueBuffer.buffer
-    };
-    let advData: ble.AdvertiseData = {
-        serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
-        manufactureData:[manufactureDataUnit],
-        serviceData:[serviceDataUnit],
-        advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
-    };
-    let advResponse: ble.AdvertiseData = {
-        serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
-        manufactureData:[manufactureDataUnit],
-        serviceData:[serviceDataUnit],
-        advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
-    };
-    let advertisingParams: ble.AdvertisingParams = {
-        advertisingSettings: setting,
-        advertisingData: advData,
-        advertisingResponse: advResponse,
-        duration: 0
-    }
-    let advHandle = 0xFF;
-    ble.startAdvertising(advertisingParams, (err, outAdvHandle) => {
-        if (err) {
-            return;
-        } else {
-            advHandle = outAdvHandle;
-            console.info("advHandle: " + advHandle);
-        }
-    });
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-let manufactureValueBuffer = new Uint8Array(4);
-manufactureValueBuffer[0] = 1;
-manufactureValueBuffer[1] = 2;
-manufactureValueBuffer[2] = 3;
-manufactureValueBuffer[3] = 4;
-
-let serviceValueBuffer = new Uint8Array(4);
-serviceValueBuffer[0] = 4;
-serviceValueBuffer[1] = 6;
-serviceValueBuffer[2] = 7;
-serviceValueBuffer[3] = 8;
-console.info('manufactureValueBuffer = '+ JSON.stringify(manufactureValueBuffer));
-console.info('serviceValueBuffer = '+ JSON.stringify(serviceValueBuffer));
-try {
-    let setting: ble.AdvertiseSetting = {
-        interval:150,
-        txPower:0,
-        connectable:true
-    };
-    let manufactureDataUnit: ble.ManufactureData = {
-        manufactureId:4567,
-        manufactureValue:manufactureValueBuffer.buffer
-    };
-    let serviceDataUnit: ble.ServiceData = {
-        serviceUuid:"00001888-0000-1000-8000-00805f9b34fb",
-        serviceValue:serviceValueBuffer.buffer
-    };
-    let advData: ble.AdvertiseData = {
-        serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
-        manufactureData:[manufactureDataUnit],
-        serviceData:[serviceDataUnit],
- 	    advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
-    };
-    let advResponse: ble.AdvertiseData = {
-        serviceUuids:["00001888-0000-1000-8000-00805f9b34fb"],
-        manufactureData:[manufactureDataUnit],
-        serviceData:[serviceDataUnit],
- 	    advertiseName:"testName" // You need to apply for the ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME permission.
-    };
-    let advertisingParams: ble.AdvertisingParams = {
-        advertisingSettings: setting,
-        advertisingData: advData,
-        advertisingResponse: advResponse,
-        duration: 0
-    }
-    let advHandle = 0xFF;
-    ble.startAdvertising(advertisingParams)
-        .then(outAdvHandle => {
-            advHandle = outAdvHandle;
-    });
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
 
 ## startAdvertising
 
 ```TypeScript
-function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<int>): void
+function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<number>): void
 ```
 
 Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md) with ID.  
-- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true,  
+the local name will be carried in the broadcast packet.  
+- If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set,  
+its value will be used as a custom name and carried in the broadcast packet.  
+- If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified,  
+the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect.  
+- To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename),  
+ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
@@ -240,8 +86,8 @@ Starts BLE advertising. The API returns a advertising ID. The ID can be used to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-advertising-advertisingparams-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
@@ -256,23 +102,24 @@ Starts BLE advertising. The API returns a advertising ID. The ID can be used to 
 | 2900099 |
 | 2902054 |
 
-**Examples**
-
-See [startAdvertising](#startadvertising)
-
 
 ## startAdvertising
 
 ```TypeScript
-function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
+function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 ```
 
 Starts BLE advertising. The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md). To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md) with ID.  
-- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true, the local name will be carried in the broadcast packet. - If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set, its value will be used as a custom name and carried in the broadcast packet. - If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified, the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect. - To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename), ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true,  
+the local name will be carried in the broadcast packet.  
+- If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is set,  
+its value will be used as a custom name and carried in the broadcast packet.  
+- If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includedevicename) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) is specified,  
+the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename) property will take effect.  
+- To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertisename),  
+ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
@@ -286,13 +133,13 @@ Starts BLE advertising. The API returns a advertising ID. The ID can be used to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-advertising-advertisingparams-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -306,7 +153,3 @@ Starts BLE advertising. The API returns a advertising ID. The ID can be used to 
 | 2900010 |
 | 2900099 |
 | 2902054 |
-
-**Examples**
-
-See [startAdvertising](#startadvertising)

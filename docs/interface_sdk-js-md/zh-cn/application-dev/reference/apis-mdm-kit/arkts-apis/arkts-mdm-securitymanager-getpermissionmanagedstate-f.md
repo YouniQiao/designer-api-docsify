@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getPermissionManagedState
@@ -19,8 +19,6 @@ function getPermissionManagedState(
 获取指定应用的指定user_grant权限的管理策略。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION
 
@@ -50,30 +48,3 @@ function getPermissionManagedState(
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { securityManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let appInstanceTemp: securityManager.ApplicationInstance = {
-  // 需根据实际情况进行替换
-  appIdentifier: '736498586',
-  appIndex: 0,
-  accountId: 100
-};
-let permissionTemp: string = 'ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION';
-try {
-  let result: securityManager.PermissionManagedState =
-    securityManager.getPermissionManagedState(wantTemp, appInstanceTemp, permissionTemp);
-  console.info(`Succeeded in getting permission managed state, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get permission managed state. Code: ${err.code}, message: ${err.message}`);
-}
-```

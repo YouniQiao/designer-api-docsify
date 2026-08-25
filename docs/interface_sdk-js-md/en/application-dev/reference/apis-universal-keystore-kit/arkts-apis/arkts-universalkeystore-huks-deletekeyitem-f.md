@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## deleteKeyItem
@@ -19,8 +19,6 @@ Deletes a key. This API uses an asynchronous callback to return the result.
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,112 +46,6 @@ Deletes a key. This API uses an asynchronous callback to return the result.
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
 
-**Examples**
-
-ArkTS sample code:
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-huks.deleteKeyItem(keyAlias, emptyOptions, (error, data) => {
-  if (error) {
-    console.error(`callback: deleteKeyItem failed`);
-  } else {
-    console.info(`callback: deleteKeyItem key success`);
-  }
-});
-```
-
-The JS sample code is used only for the lightweight devices.
-
-```TypeScript
-<stack class="container">
-    <input type="button" class="deleteBtn" @click="deleteKey">Delete Key</input>
-    <text class="result">{{result}}</text>
-</stack>
-```
-
-```TypeScript
-.container {
-  width: 454px;
-  height: 800px;
-  background-color: #ffffffff;
-}
-
-.deleteBtn {
-  left: 77px;
-  top: 100px;
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  color: white;
-  background-color: orange;
-  font-size: 25px;
-}
-
-.result {
-  left: 30px;
-  top: 190px;
-  width: 390px;
-  height: 80px;
-  text-align: center;
-  color: #ff000000;
-  background-color: #ffffffff;
-  font-size: 25px;
-}
-```
-
-```TypeScript
-import huks from '@ohos.security.huks';
-
-function testDeleteKey() {
-    let huksInfo;
-    let keyAlias = 'keyAlias';
-    let emptyOptions = {
-        properties: []
-    };
-    huks.deleteKeyItem(keyAlias, emptyOptions, (err, data) => {
-        if (err) {
-            huksInfo = 'deleteKeyItem failed, code: ' + err.code + ', message: ' + err.message;
-            console.error(huksInfo);
-        } else {
-            huksInfo = 'deleteKeyItem succeeded';
-            console.info(huksInfo);
-        }
-    });
-    return huksInfo;
-}
-
-export default {
-    data: {
-        result: ''
-    },
-
-    deleteKey() {
-        this.result = testDeleteKey();
-    }
-};
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-huks.deleteKeyItem(keyAlias, emptyOptions)
-  .then((data) => {
-    console.info(`promise: deleteKeyItem key success`);
-  });
-```
-
 
 ## deleteKeyItem
 
@@ -168,8 +60,6 @@ Deletes a key. This API uses a promise to return the result.
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -201,7 +91,3 @@ Deletes a key. This API uses a promise to return the result.
 | [12000012](../errorcode-huks.md#12000012-external-error) |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
-
-**Examples**
-
-See [deleteKeyItem](#deletekeyitem)

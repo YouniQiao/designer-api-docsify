@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -46,8 +42,6 @@ deviceId: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ deviceName?: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -82,8 +74,6 @@ isRemote: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -100,8 +90,6 @@ permissionRecords: Array<PermissionUsedRecord>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -109,16 +97,14 @@ permissionRecords: Array<PermissionUsedRecord>
 ## tokenId
 
 ```TypeScript
-tokenId: int
+tokenId: number
 ```
 
 使用权限的应用身份标识。分布式场景下该字段无效，需结合deviceId和deviceName识别来源设备。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 

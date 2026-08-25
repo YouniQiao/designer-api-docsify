@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## appName
@@ -21,8 +19,6 @@ readonly appName: string
 **默认值：** appName
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 
 - API版本12+：此接口仅可在FA模型下使用。
@@ -45,8 +41,6 @@ readonly versionCode: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 
 - API版本12+：此接口仅可在FA模型下使用。
 
@@ -67,8 +61,6 @@ readonly versionName: string
 **默认值：** versionName
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 
 - API版本12+：此接口仅可在FA模型下使用。

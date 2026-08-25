@@ -4,14 +4,12 @@ Represents data of the HTML type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## details
@@ -25,8 +23,6 @@ Object of the dictionary type used to describe the attributes of the HTML conten
 **Type:** Record&lt;string, string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Content in HTML format.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -61,8 +55,6 @@ Plaintext without HTML tags. This parameter is optional. By default, it is an em
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +72,6 @@ Uniform data type, which has a fixed value of **general.html**. For details, see
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -89,35 +79,15 @@ Uniform data type, which has a fixed value of **general.html**. For details, see
 ## uriAuthorizationPolicies
 
 ```TypeScript
-uriAuthorizationPolicies?: Array<int>
+uriAuthorizationPolicies?: Array<number>
 ```
 
 Defines URI authorization policies for drag intention.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-let htmlObjDetails : Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2'
-}
-let htmlObj : uniformDataStruct.HTML = {
-  uniformDataType :'general.html',
-  htmlContent: '<div><p>Title</p></div>',
-  plainContent : 'this is plainContent',
-  details : htmlObjDetails
-}
-console.info('htmlObj.uniformDataType: ' + htmlObj.uniformDataType);
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HTML, htmlObj);
-```

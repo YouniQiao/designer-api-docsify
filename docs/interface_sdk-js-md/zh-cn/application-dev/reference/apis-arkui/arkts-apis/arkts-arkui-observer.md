@@ -11,8 +11,6 @@ UIObserver提供了UI组件行为变化的无感监听能力，支持监听Navig
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,7 +18,7 @@ UIObserver提供了UI组件行为变化的无感监听能力，支持监听Navig
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -41,18 +39,6 @@ import { uiObserver } from '@kit.ArkUI';
 | [off](arkts-arkui-uiobserver-off-f.md#offtabcontentupdate) |
 | [off](arkts-arkui-uiobserver-off-f.md#offnavdestinationswitch) |
 | [off](arkts-arkui-uiobserver-off-f.md#offnavdestinationswitch) |
-| [offDensityUpdate](arkts-arkui-uiobserver-offdensityupdate-f.md) |
-| [offDidLayout](arkts-arkui-uiobserver-offdidlayout-f.md) |
-| [offNavDestinationSwitch](arkts-arkui-uiobserver-offnavdestinationswitch-f.md) |
-| [offNavDestinationSwitch](arkts-arkui-uiobserver-offnavdestinationswitch-f.md) |
-| [offNavDestinationUpdate](arkts-arkui-uiobserver-offnavdestinationupdate-f.md) |
-| [offNavDestinationUpdate](arkts-arkui-uiobserver-offnavdestinationupdate-f.md) |
-| [offRouterPageUpdate](arkts-arkui-uiobserver-offrouterpageupdate-f.md) |
-| [offScrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md) |
-| [offScrollEvent](arkts-arkui-uiobserver-offscrollevent-f.md) |
-| [offTabContentUpdate](arkts-arkui-uiobserver-offtabcontentupdate-f.md) |
-| [offTabContentUpdate](arkts-arkui-uiobserver-offtabcontentupdate-f.md) |
-| [offWillDraw](arkts-arkui-uiobserver-offwilldraw-f.md) |
 | [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationupdate) |
 | [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationupdate) |
 | [on](arkts-arkui-uiobserver-on-f.md#onscrollevent) |
@@ -65,18 +51,6 @@ import { uiObserver } from '@kit.ArkUI';
 | [on](arkts-arkui-uiobserver-on-f.md#ontabcontentupdate) |
 | [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationswitch) |
 | [on](arkts-arkui-uiobserver-on-f.md#onnavdestinationswitch) |
-| [onDensityUpdate](arkts-arkui-uiobserver-ondensityupdate-f.md) |
-| [onDidLayout](arkts-arkui-uiobserver-ondidlayout-f.md) |
-| [onNavDestinationSwitch](arkts-arkui-uiobserver-onnavdestinationswitch-f.md) |
-| [onNavDestinationSwitch](arkts-arkui-uiobserver-onnavdestinationswitch-f.md) |
-| [onNavDestinationUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md) |
-| [onNavDestinationUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md) |
-| [onRouterPageUpdate](arkts-arkui-uiobserver-onrouterpageupdate-f.md) |
-| [onScrollEvent](arkts-arkui-uiobserver-onscrollevent-f.md) |
-| [onScrollEvent](arkts-arkui-uiobserver-onscrollevent-f.md) |
-| [onTabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md) |
-| [onTabContentUpdate](arkts-arkui-uiobserver-ontabcontentupdate-f.md) |
-| [onWillDraw](arkts-arkui-uiobserver-onwilldraw-f.md) |
 
 ### 类
 
@@ -98,7 +72,6 @@ import { uiObserver } from '@kit.ArkUI';
 | [ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md) |
 | [TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md) |
 | [TextChangeEventInfo](arkts-arkui-uiobserver-textchangeeventinfo-i.md) |
-| [WindowSizeLayoutBreakpointInfo](arkts-arkui-uiobserver-windowsizelayoutbreakpointinfo-i.md) |
 
 ### 枚举
 

@@ -4,14 +4,12 @@ Indicates cloud embedding model information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from '@kit.ArkData';
+import { intelligence } from 'kits/@kit.ArkData';
 ```
 
 ## modelType
@@ -25,8 +23,6 @@ Indicates cloud embedding model type.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Indicates cloud embedding model version.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { Decimal } from '@kit.ArkTS';
+import { Decimal } from 'kits/@kit.ArkTS';
 ```
 
 ## crypto
@@ -25,8 +23,6 @@ crypto?: boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ defaults?: boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -53,16 +47,14 @@ defaults?: boolean
 ## maxE
 
 ```TypeScript
-maxE?: double
+maxE?: number
 ```
 
 正指数极限，若Decimal的指数值大于该值，会溢出至无穷大。 默认值：9e15。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -71,16 +63,14 @@ maxE?: double
 ## minE
 
 ```TypeScript
-minE?: double
+minE?: number
 ```
 
 负指数极限，若Decimal的指数值小于该值，会下溢到零。 默认值：-9e15。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -98,8 +88,6 @@ modulo?: Modulo
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -107,16 +95,14 @@ modulo?: Modulo
 ## precision
 
 ```TypeScript
-precision?: double
+precision?: number
 ```
 
 运算结果的最大有效位数。 默认值：20。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -134,8 +120,6 @@ rounding?: Rounding
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -143,16 +127,14 @@ rounding?: Rounding
 ## toExpNeg
 
 ```TypeScript
-toExpNeg?: double
+toExpNeg?: number
 ```
 
 指数表示法的负指数值的极限值，若Decimal的负指数小于等于该值时，使用科学计数法表示。 默认值：-7。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -161,16 +143,14 @@ toExpNeg?: double
 ## toExpPos
 
 ```TypeScript
-toExpPos?: double
+toExpPos?: number
 ```
 
 指数表示法的正指数值的极限值，若Decimal的正指数大于等于该值时，使用科学计数法表示。 默认值：21。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

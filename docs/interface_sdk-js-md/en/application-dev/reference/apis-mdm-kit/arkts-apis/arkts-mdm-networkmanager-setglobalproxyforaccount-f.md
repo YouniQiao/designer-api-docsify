@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setGlobalProxyForAccount
@@ -15,8 +15,6 @@ function setGlobalProxyForAccount(admin: Want, httpProxy: connection.HttpProxy, 
 Sets the network proxy for a specified user. This API is suitable for network management scenarios in enterprise environments with multiple users. For example, you can set different network proxy policies for different users, implement user-level network access control, and meet the network access requirements of different users, helping enterprises implement refined user-level network management.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -41,32 +39,3 @@ Sets the network proxy for a specified user. This API is suitable for network ma
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { connection } from '@kit.NetworkKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let httpProxy: connection.HttpProxy = {
-  // Replace with actual values.
-  host: '192.168.xx.xxx',
-  port: 8080,
-  exclusionList: ['192.168', 'baidu.com']
-};
-
-try {
-  // Replace parameters with actual values.
-  networkManager.setGlobalProxyForAccount(wantTemp, httpProxy, 100);
-  console.info(`Succeeded in setting network global proxy.`);
-} catch (err) {
-  console.error(`Failed to set network global proxy. Code: ${err.code}, message: ${err.message}`);
-}
-```

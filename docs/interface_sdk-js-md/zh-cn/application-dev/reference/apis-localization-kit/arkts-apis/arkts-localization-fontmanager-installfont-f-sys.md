@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## installFont
 
 ```TypeScript
-function installFont(path: string): Promise<int>
+function installFont(path: string): Promise<number>
 ```
 
 将指定路径下的字体文件安装到系统字体库中。使用Promise异步回调。 安装成功后，应用可以通过字体名称使用该字体。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UPDATE_FONT
 
@@ -34,7 +32,7 @@ function installFont(path: string): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -48,19 +46,3 @@ function installFont(path: string): Promise<int>
 | [31100104](../errorcode-font-manager.md#31100104-字体文件已安装) |
 | [31100105](../errorcode-font-manager.md#31100105-已安装字体文件超过最大数量) |
 | [31100106](../errorcode-font-manager.md#31100106-其他错误导致安装失败) |
-
-**示例**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-  async function installFont() {
-    try {
-      let res = await fontManager.installFont('fontPath');
-      console.info('installFont suc. res is ' + res);
-    } catch (error) {
-      console.error('installFont err.' + error.code);
-    }
-    return;
-  }
-```

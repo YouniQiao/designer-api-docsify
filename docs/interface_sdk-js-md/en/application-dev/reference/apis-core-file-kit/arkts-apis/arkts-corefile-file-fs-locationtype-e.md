@@ -4,8 +4,6 @@ Enumerates the file locations.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## LOCAL
@@ -18,8 +16,6 @@ The file is stored in a local device.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## CLOUD
@@ -31,7 +27,5 @@ CLOUD = 1 << 1
 The file is stored in the cloud.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

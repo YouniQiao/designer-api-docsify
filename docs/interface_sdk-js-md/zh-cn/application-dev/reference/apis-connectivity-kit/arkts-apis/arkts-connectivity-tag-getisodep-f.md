@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getIsoDep
@@ -15,8 +15,6 @@ function getIsoDep(tagInfo: TagInfo): IsoDepTag
 获取IsoDep类型Tag对象，通过该对象可访问支持IsoDep技术类型的Tag。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +30,7 @@ function getIsoDep(tagInfo: TagInfo): IsoDepTag
 
 | 类型 |
 | --- |
-| [IsoDepTag](arkts-connectivity-nfctech-isodeptag-i.md) |
+| [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) |
 
 **错误码：**
 

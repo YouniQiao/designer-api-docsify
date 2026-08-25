@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## authSmbDeviceAsRegisteredUser
@@ -15,8 +15,6 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 Authenticate SMB device as registered user and get available printers.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 

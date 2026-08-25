@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getDoNotDisturbProfile
 
 ```TypeScript
-function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>
+function getDoNotDisturbProfile(id: number): Promise<DoNotDisturbProfile>
 ```
 
 查询勿扰模式配置信息。使用Promise异步回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,7 +26,7 @@ function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| id | number | 是 |
 
 **返回值：**
 
@@ -49,73 +47,16 @@ function getDoNotDisturbProfile(id: long): Promise<DoNotDisturbProfile>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600019](../errorcode-notification.md#1600019-没有对应勿扰模式编号的配置信息) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDoNotDisturbProfile(1).then((data: notificationManager.DoNotDisturbProfile) => {
-  console.info(`getDoNotDisturbProfile success: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDoNotDisturbProfile(1).then((data: notificationManager.DoNotDisturbProfile) => {
-  console.info(`getDoNotDisturbProfile success: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`getDoNotDisturbProfile failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let id : number = 101;
-let userId : number = 100;
-
-notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationManager.DoNotDisturbProfile) => {
-  console.info(`getDoNotDisturbProfile success: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let id : long = 101;
-let userId : int = 100;
-
-notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationManager.DoNotDisturbProfile | undefined): void => {
-  console.info(`getDoNotDisturbProfile success. data: ${JSON.stringify(data)}`);
-}).catch((err: Error | undefined): void => {
-  console.error(`getDoNotDisturbProfile error, code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 
 ## getDoNotDisturbProfile
 
 ```TypeScript
-function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProfile>
+function getDoNotDisturbProfile(id: number, userId: number): Promise<DoNotDisturbProfile>
 ```
 
 查询指定用户的勿扰模式配置信息。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -129,8 +70,8 @@ function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProf
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| id | number | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -150,7 +91,3 @@ function getDoNotDisturbProfile(id: long, userId: int): Promise<DoNotDisturbProf
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
 | [1600019](../errorcode-notification.md#1600019-没有对应勿扰模式编号的配置信息) |
-
-**示例**
-
-参见 [getDoNotDisturbProfile](#getdonotdisturbprofile)

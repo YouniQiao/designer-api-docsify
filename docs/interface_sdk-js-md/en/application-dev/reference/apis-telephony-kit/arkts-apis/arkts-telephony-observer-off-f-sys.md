@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## off('cellInfoChange')
@@ -19,8 +19,6 @@ Unregisters the observer for cell information change events. This API uses an as
 > you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -43,17 +41,3 @@ Unregisters the observer for cell information change events. This API uses an as
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-let callback: (data: Array<radio.CellInformation>) => void = (data: Array<radio.CellInformation>) => {
-    console.info("on cellInfoChange, data:" + JSON.stringify(data));
-}
-observer.on('cellInfoChange', callback);
-// You can pass the callback of the on method to cancel listening for a certain type of callback. If you do not pass the callback, you will cancel listening for all callbacks.
-observer.off('cellInfoChange', callback);
-observer.off('cellInfoChange');
-```

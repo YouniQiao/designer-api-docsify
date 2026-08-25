@@ -4,14 +4,12 @@ Buffer对象用于表示固定长度的字节序列，是专门存放二进制�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
+import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -24,11 +22,8 @@ import { buffer } from '@kit.ArkTS';
 | [allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md) |
 | [allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md) |
 | [byteLength](arkts-arkts-buffer-bytelength-f.md) |
-| [byteLength](arkts-arkts-buffer-bytelength-f.md) |
-| [compare](arkts-arkts-buffer-compare-f.md) |
 | [compare](arkts-arkts-buffer-compare-f.md) |
 | [concat](arkts-arkts-buffer-concat-f.md) |
-| [from](arkts-arkts-buffer-from-f.md) |
 | [from](arkts-arkts-buffer-from-f.md) |
 | [from](arkts-arkts-buffer-from-f.md) |
 | [from](arkts-arkts-buffer-from-f.md) |
@@ -49,13 +44,10 @@ import { buffer } from '@kit.ArkTS';
 
 | 名称 |
 | --- |
-| [BlobOptions](arkts-arkts-buffer-bloboptions-i.md) |
 | [TypedArray](arkts-arkts-buffer-typedarray-i.md) |
 
 ### 类型
 
 | 名称 |
 | --- |
-| [ArrayUnionType](arkts-arkts-buffer-arrayuniontype-t.md) |
 | [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md) |
-| [TypedArray](arkts-arkts-buffer-typedarray-t.md) |

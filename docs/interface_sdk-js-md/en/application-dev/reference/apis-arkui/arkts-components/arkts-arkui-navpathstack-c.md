@@ -15,8 +15,6 @@ A navigation controller that manages all child pages in the **Navigation** compo
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -33,8 +31,6 @@ clear(animated?: boolean): void
 Clears the routing stack.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,8 +54,6 @@ Creates a **NavPathStack** object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -75,8 +69,6 @@ disableAnimation(value: boolean): void
 Disables or enables the transition animation in the **Navigation** component.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,8 +92,6 @@ Obtains the names of all navigation destination pages in the routing stack.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -123,8 +113,6 @@ getIndexByName(name: string): Array<number>
 Obtains the indexes of all the navigation destination pages that match **name**.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,8 +142,6 @@ Obtains the parameter information of the navigation destination page specified b
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -183,8 +169,6 @@ getParamByName(name: string): Array<unknown>
 Obtains the parameter information of all **NavDestination** pages with the specified name, and sorts the information in ascending order by page index.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,8 +198,6 @@ Obtains the parent navigation path stack.When a **Navigation** component is nest
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -237,8 +219,6 @@ getPathStack(): Array<NavPathInfo>
 Obtains the array of route page information from this routing stack.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,8 +242,6 @@ Moves to the top of the routing stack the navigation destination page specified 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -286,8 +264,6 @@ moveToTop(name: string, animated?: boolean): number
 Moves the first navigation destination page that matches **name** from the bottom of the routing stack to the top of the stack.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -339,8 +315,6 @@ Pops the top element out of the routing stack.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -390,8 +364,6 @@ Pops the top element out of the routing stack and invokes the **onPop** callback
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -421,8 +393,6 @@ Returns the routing stack to the page specified by **index**.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -445,8 +415,6 @@ popToIndex(index: number, result: Object, animated?: boolean): void
 Returns the routing stack to the page specified by **index** and invokes the **onPop** callback to pass the page processing result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -471,8 +439,6 @@ popToName(name: string, animated?: boolean): number
 Pops pages until the first navigation destination page that matches **name** from the bottom of the routing stack is at the top of the stack.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -503,8 +469,6 @@ Pops pages until the first navigation destination page that matches **name** fro
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -534,8 +498,6 @@ preloadPath(info: NavPathInfo, options?: PreloadOptions): Promise<void>
 Preloads navigation destination page specified by **info**. The preload page will not be displayed immediately, but will be cached. When **pushPath** is called later with matching parameters, preloaded instance will be used for fast display.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -578,8 +540,6 @@ Pushes the navigation destination page specified by **info** onto the routing st
 > failures.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -624,8 +584,6 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -668,8 +626,6 @@ Pushes the navigation destination page specified by **name**, with the data spec
 > failures.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -715,8 +671,6 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -729,7 +683,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- |
 | name | string | Yes |
 | param | Object | Yes |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes |
+| [onPop](arkts-arkui-navpathinfo-c.md) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes |
 | animated | boolean | No |
 
 **Return value:**
@@ -757,8 +711,6 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -782,8 +734,6 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -806,8 +756,6 @@ pushPathByName(name: string, param: unknown, animated?: boolean): void
 Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -833,8 +781,6 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -847,7 +793,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- |
 | name | string | Yes |
 | param | Object | Yes |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes |
+| [onPop](arkts-arkui-navpathinfo-c.md) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes |
 | animated | boolean | No |
 
 ## removeByIndexes
@@ -859,8 +805,6 @@ removeByIndexes(indexes: Array<number>): number
 Removes the navigation destination pages specified by **indexes** from the routing stack.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -890,8 +834,6 @@ Removes the navigation destination page specified by **name** from the routing s
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -920,8 +862,6 @@ Removes the navigation destination page specified by **navDestinationId** from t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -949,8 +889,6 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 Performs a replacement operation on the routing stack. This API uses a promise to return the result. Its behavior varies depending on the value of [LaunchMode](arkts-arkui-launchmode-e.md) specified in **options**.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -990,8 +928,6 @@ Replaces the top of the routing stack with the navigation destination page speci
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1015,8 +951,6 @@ Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1039,8 +973,6 @@ replacePathByName(name: string, param: Object, animated?: boolean): void
 Replaces the top of the routing stack with the page specified by **name**.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1066,8 +998,6 @@ Sets the interception callback for navigation page redirection.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1078,7 +1008,7 @@ Sets the interception callback for navigation page redirection.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Yes |
+| [interception](arkts-arkui-navigationinterception-i.md) | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Yes |
 
 ## setPathStack
 
@@ -1103,8 +1033,6 @@ Updates the array of route page information in this routing stack to the specifi
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -1127,8 +1055,6 @@ size(): number
 Obtains the stack size.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

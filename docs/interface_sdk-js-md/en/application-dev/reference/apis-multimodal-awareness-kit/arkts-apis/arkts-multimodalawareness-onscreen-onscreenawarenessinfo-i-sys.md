@@ -4,8 +4,6 @@ Returns the list of onscreen awareness information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Returns the list of onscreen awareness information.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## appIndex
 
 ```TypeScript
-appIndex?: int
+appIndex?: number
 ```
 
 Application index.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Application name.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -68,8 +62,6 @@ Application bundle name.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -79,16 +71,15 @@ Application bundle name.
 ## collectStrategy
 
 ```TypeScript
-collectStrategy?: int
+collectStrategy?: number
 ```
 
-Page collection policy, which is the bitwise OR operation combination of <br> CollectStrategy.
+Page collection policy, which is the bitwise OR operation combination of   
+ CollectStrategy.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,16 +90,14 @@ Page collection policy, which is the bitwise OR operation combination of <br> Co
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
 Display ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,8 +117,6 @@ Entity information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -147,8 +134,6 @@ Data item information.
 **Type:** [AwarenessItem](arkts-multimodalawareness-onscreen-awarenessitem-i-sys.md)[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,8 +153,6 @@ Page language information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -187,8 +170,6 @@ Applet ID, for example, the ID of WeChat or Alipay.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,8 +189,6 @@ Name of a third-party mini program.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -227,8 +206,6 @@ Application page ID.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,8 +225,6 @@ Page tag information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -259,16 +234,14 @@ Page tag information.
 ## resultCode
 
 ```TypeScript
-resultCode: int
+resultCode: number
 ```
 
 Return code. The default value **0** indicates success.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -288,8 +261,6 @@ Collection record ID.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -299,16 +270,14 @@ Collection record ID.
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Timestamp for accessing a specified page, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -328,8 +297,6 @@ Application UID.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -339,16 +306,14 @@ Application UID.
 ## windowId
 
 ```TypeScript
-windowId?: int
+windowId?: number
 ```
 
 Window ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

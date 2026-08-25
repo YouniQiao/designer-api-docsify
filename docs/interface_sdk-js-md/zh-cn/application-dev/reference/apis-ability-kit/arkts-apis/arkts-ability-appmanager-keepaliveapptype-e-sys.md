@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ ALL = 0
 三方应用和系统应用。此选项只能作为[getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md)接口的入参被调用。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -36,8 +32,6 @@ THIRD_PARTY = 1
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ SYSTEM = 2
 系统应用。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

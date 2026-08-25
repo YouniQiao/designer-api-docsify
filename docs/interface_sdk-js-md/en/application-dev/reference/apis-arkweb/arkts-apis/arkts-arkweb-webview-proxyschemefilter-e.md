@@ -4,8 +4,6 @@ Enumerates the schemes that use the proxy.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MATCH_ALL_SCHEMES
@@ -17,8 +15,6 @@ MATCH_ALL_SCHEMES = 0
 All schemes use proxies.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -34,8 +30,6 @@ HTTP requests use proxies.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -49,8 +43,6 @@ MATCH_HTTPS = 2
 HTTPS requests use proxies.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

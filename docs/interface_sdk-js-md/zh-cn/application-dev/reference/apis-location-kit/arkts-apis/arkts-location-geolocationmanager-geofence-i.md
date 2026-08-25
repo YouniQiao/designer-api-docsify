@@ -4,14 +4,12 @@ GNSS围栏的配置参数。目前只支持圆形围栏。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## coordinateSystemType
@@ -26,70 +24,60 @@ coordinateSystemType?: CoordinateSystemType
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## expiration
 
 ```TypeScript
-expiration: double
+expiration: number
 ```
 
 围栏存活的时间，单位是毫秒。取值范围为大于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## latitude
 
 ```TypeScript
-latitude: double
+latitude: number
 ```
 
 表示纬度。取值范围为-90到90。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## longitude
 
 ```TypeScript
-longitude: double
+longitude: number
 ```
 
 表示经度。取值范围为-180到180。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## radius
 
 ```TypeScript
-radius: double
+radius: number
 ```
 
 表示圆形围栏的半径。单位是米，取值范围为大于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence

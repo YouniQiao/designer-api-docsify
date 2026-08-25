@@ -4,14 +4,12 @@ HTTP请求任务。在调用HttpRequest的方法前，需要先通过[createHttp
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## destroy
@@ -24,20 +22,9 @@ destroy(): void
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-let httpRequest = http.createHttp();
-
-httpRequest.destroy();
-```
 
 ## enableAutoCookie
 
@@ -60,8 +47,6 @@ enableAutoCookie(enable: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -72,32 +57,6 @@ enableAutoCookie(enable: boolean): void
 | --- | --- | --- |
 | enable | boolean | 是 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-let url = "EXAMPLE_URL"; // 访问url，需要开发者根据实际场景自行定义。
-
-// 开启自动Cookie共享。
-httpRequest.enableAutoCookie(true);
-
-httpRequest.request(url, {
-  method: http.RequestMethod.GET
-}).then((data: http.HttpResponse) => {
-  console.info('first request code:' + data.responseCode);
-  // 后续请求将自动复用该实例保存的Cookie。
-  return httpRequest.request(url, { method: http.RequestMethod.GET });
-}).then((data: http.HttpResponse) => {
-  console.info('second request code:' + data.responseCode);
-}).catch((err: Error) => {
-  console.error('error:' + JSON.stringify(err));
-}).finally(() => {
-  httpRequest.destroy();
-});
-```
-
 ## off("headerReceive")
 
 ```TypeScript
@@ -107,8 +66,6 @@ off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 取消订阅HTTP Response Header事件。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -123,15 +80,6 @@ off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 | type | "headerReceive" | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 否 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.off("headerReceive");
-```
-
 ## off("headersReceive")
 
 ```TypeScript
@@ -141,8 +89,6 @@ off(type: "headersReceive", callback?: Callback<Object>): void
 取消订阅HTTP Response Header 事件。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -155,18 +101,6 @@ off(type: "headersReceive", callback?: Callback<Object>): void
 | type | "headersReceive" | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 否 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
-
 ## off("dataReceive")
 
 ```TypeScript
@@ -176,8 +110,6 @@ off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
 取消订阅HTTP流式响应数据接收事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -190,18 +122,6 @@ off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
 | type | "dataReceive" | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
 ## off("dataEnd")
 
 ```TypeScript
@@ -211,8 +131,6 @@ off(type: "dataEnd", callback?: Callback<void>): void
 取消订阅HTTP流式响应数据接收完毕事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -225,18 +143,6 @@ off(type: "dataEnd", callback?: Callback<void>): void
 | type | "dataEnd" | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
 ## off('dataReceiveProgress')
 
 ```TypeScript
@@ -246,8 +152,6 @@ off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): 
 取消订阅HTTP流式响应数据接收进度事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -260,18 +164,6 @@ off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): 
 | type | 'dataReceiveProgress' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 否 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
 ## off('dataSendProgress')
 
 ```TypeScript
@@ -281,8 +173,6 @@ off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
 取消订阅HTTP网络请求数据发送进度事件。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -295,28 +185,6 @@ off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
 | type | 'dataSendProgress' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 否 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
-```TypeScript
-import http from '@ohos.net.http';
-
-let httpRequest = http.createHttp();
-httpRequest.onDataSendProgress((data: http.DataSendProgressInfo) => {
-  console.info(`dataSendProgress: ${JSON.stringify(data)}`);
-});
-httpRequest.offDataSendProgress();
-```
-
 ## on("headerReceive")
 
 ```TypeScript
@@ -326,8 +194,6 @@ on(type: "headerReceive", callback: AsyncCallback<Object>): void
 订阅HTTP Response Header 事件。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -342,18 +208,6 @@ on(type: "headerReceive", callback: AsyncCallback<Object>): void
 | type | "headerReceive" | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headerReceive", (data: BusinessError) => {
-  console.error("error:" + JSON.stringify(data));
-});
-```
-
 ## on("headersReceive")
 
 ```TypeScript
@@ -363,8 +217,6 @@ on(type: "headersReceive", callback: Callback<Object>): void
 订阅HTTP Response Header 事件。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -377,18 +229,6 @@ on(type: "headersReceive", callback: Callback<Object>): void
 | type | "headersReceive" | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
-
 ## on("dataReceive")
 
 ```TypeScript
@@ -398,8 +238,6 @@ on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
 订阅HTTP流式响应数据接收事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -412,18 +250,6 @@ on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
 | type | "dataReceive" | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
 ## on("dataEnd")
 
 ```TypeScript
@@ -433,8 +259,6 @@ on(type: "dataEnd", callback: Callback<void>): void
 订阅HTTP流式响应数据接收完毕事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -447,18 +271,6 @@ on(type: "dataEnd", callback: Callback<void>): void
 | type | "dataEnd" | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
-
 ## on('dataReceiveProgress')
 
 ```TypeScript
@@ -468,8 +280,6 @@ on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): vo
 订阅HTTP流式响应数据接收进度事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -482,18 +292,6 @@ on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): vo
 | type | 'dataReceiveProgress' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
 ## on('dataSendProgress')
 
 ```TypeScript
@@ -503,8 +301,6 @@ on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
 订阅HTTP网络请求数据发送进度事件。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -517,18 +313,6 @@ on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
 | type | 'dataSendProgress' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
 ## once("headersReceive")
 
 ```TypeScript
@@ -538,8 +322,6 @@ once(type: "headersReceive", callback: Callback<Object>): void
 订阅HTTP Response Header 事件，只能触发一次。触发之后，订阅器就会被移除。使用callback方式作为异步方法。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -551,17 +333,6 @@ once(type: "headersReceive", callback: Callback<Object>): void
 | --- | --- | --- |
 | type | "headersReceive" | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.once("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-```
 
 ## request
 
@@ -581,8 +352,6 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 > (3) 若URL包含中文或其他语言，需先调用encodeURL(URL)编码，再发起请求。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -636,163 +405,6 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 | [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
 | 2300996 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
-  if (!err) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL", (err: BusinessError | null, data: http.HttpResponse) => {
-  if (!err?.code) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET。
-    // 推荐使用body字段传递请求体内容，具体格式与服务端协商确定。
-    body: 'data to send', // 自API 26开始支持。
-    // 推荐使用queryParams字段传递URL参数。可传string或对象。
-    queryParams: { scene: 'request-demo', page: 1 }, // 自API 26开始支持。
-    expectDataType: http.HttpDataType.STRING, // 可选，指定返回数据的类型。
-    usingCache: true, // 可选，默认为true。
-    priority: 1, // 可选，默认为1。
-    // 开发者根据自身业务需要添加header字段。
-    header: new Header('application/json'),
-    readTimeout: 60000, // 可选，默认为60000ms。
-    connectTimeout: 60000, // 可选，默认为60000ms。
-    usingProtocol: http.HttpProtocol.HTTP1_1, // 可选，协议类型默认值由系统自动指定。
-    usingProxy: false // 可选，默认使用系统代理，设置为false不使用代理，自API 10开始支持该属性。
-};
-
-httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
-  if (!err) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET。
-    // 当使用POST请求时此字段用于传递请求体内容，具体格式与服务端协商确定。
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // 可选，指定返回数据的类型。
-    usingCache: true, // 可选，默认为true。
-    priority: 1, // 可选，默认为1。
-    // 开发者根据自身业务需要添加header字段。
-    header: new Header('application/json'),
-    readTimeout: 60000, // 可选，默认为60000ms。
-    connectTimeout: 60000, // 可选，默认为60000ms。
-    usingProtocol: http.HttpProtocol.HTTP1_1, // 可选，协议类型默认值由系统自动指定。
-    usingProxy: false // 可选，默认使用系统代理，设置为false不使用代理，自API 10开始支持该属性。
-};
-
-httpRequest.request("EXAMPLE_URL", options, (err: BusinessError | null, data: http.HttpResponse) => {
-  if (!err?.code) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.request("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data:http.HttpResponse) => {
-  console.info('Result:' + data.result);
-  console.info('code:' + data.responseCode);
-  console.info('type:' + JSON.stringify(data.resultType));
-  console.info('header:' + JSON.stringify(data.header));
-  console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
-  console.info('header.content-Type:' + data.header);
-  console.info('header.Status-Line:' + data.header);
-}).catch((err:Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
-
 ## request
 
 ```TypeScript
@@ -811,8 +423,6 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 > (3) 若URL包含中文或其他语言，需先调用encodeURL(URL)编码，再发起请求。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -867,10 +477,6 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 | [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
 | 2300996 |
 
-**示例**
-
-参见 [request](#request)
-
 ## request
 
 ```TypeScript
@@ -889,8 +495,6 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 > (3) 若URL包含中文或其他语言，需先调用encodeURL(URL)编码，再发起请求。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -950,21 +554,15 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 | [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
 | 2300996 |
 
-**示例**
-
-参见 [request](#request)
-
 ## requestInStream
 
 ```TypeScript
-requestInStream(url: string, callback: AsyncCallback<int>): void
+requestInStream(url: string, callback: AsyncCallback<number>): void
 ```
 
 根据URL地址，发起HTTP网络请求并返回流式响应，使用callback方式作为异步方法。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1018,169 +616,15 @@ requestInStream(url: string, callback: AsyncCallback<int>): void
 | [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
 | 2300996 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) => {
-  if (!err) {
-    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
-  } else {
-    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-import http from '@ohos.net.http';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError<void> | null, data: Int | undefined) => {
-  if (err?.code != 0) {
-    console.error(`requestInStream ERROR : err = ${JSON.stringify(err)}`);
-  } else {
-    console.info(`requestInStream OK! ResponseCode is ${JSON.stringify(data)}`);
-  }
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET。
-    // 当使用POST请求时此字段用于传递请求体内容，具体格式与服务端协商确定。
-    extraData: 'data to send', // 自API version 26开始，推荐使用body字段传递请求体内容，具体格式与服务端协商确定。
-    expectDataType: http.HttpDataType.STRING, // 可选，指定返回数据的类型。
-    usingCache: true, // 可选，默认为true。
-    priority: 1, // 可选，默认为1。
-    // 开发者根据自身业务需要添加header字段。
-    header: new Header('application/json'),
-    readTimeout: 60000, // 可选，默认为60000ms。
-    connectTimeout: 60000, // 可选，默认为60000ms。
-    usingProtocol: http.HttpProtocol.HTTP1_1, // 可选，协议类型默认值由系统自动指定。
-    usingProxy: false // 可选，默认使用系统代理，设置为false不使用代理，自API 10开始支持该属性。
-};
-httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
-  if (!err) {
-    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
-  } else {
-    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import http from '@ohos.net.http';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-  method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET。
-  // 当使用POST请求时此字段用于传递请求体内容，具体格式与服务端协商确定。
-  extraData: 'data to send',
-  expectDataType: http.HttpDataType.STRING, // 可选，指定返回数据的类型。
-  // 开发者根据自身业务需要添加header字段。
-  header: {
-    "Content-Type": "application/json",
-  }as Record<string,string>,
-  readTimeout: 60000, // 可选，默认为60000ms。
-  connectTimeout: 60000, // 可选，默认为60000ms。
-  usingProtocol: http.HttpProtocol.HTTP1_1, // 可选，协议类型默认值由系统自动指定。
-  usingProxy: false // 可选，默认使用系统代理，设置为false不使用代理，自API 10开始支持该属性。
-};
-httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> | null, data: Int | undefined) => {
-  if (err?.code != 0) {
-    console.error(`requestInStream ERROR : err = ${JSON.stringify(err)}`);
-  } else {
-    console.info(`requestInStream OK! ResponseCode is ${JSON.stringify(data)}`);
-  }
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.requestInStream("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data: number) => {
-  console.info("requestInStream OK!" + data);
-}).catch((err: Error) => {
-  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import http from '@ohos.net.http';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.requestInStream("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: {
-    "Content-Type": "application/json",
-  }as Record<string,string>,
-});
-promise.then((data: int) => {
-    console.info(`requestInStream OK! ResponseCode is ${JSON.stringify(data)}`);
-}).catch((err: Error) => {
-  console.error(`requestInStream ERROR : err = ${JSON.stringify(err)}`);
-});
-```
-
 ## requestInStream
 
 ```TypeScript
-requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<int>): void
+requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
 ```
 
 根据URL地址和相关配置项，发起HTTP网络请求并返回流式响应，使用callback方式作为异步方法。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1235,21 +679,15 @@ requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallbac
 | [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
 | 2300996 |
 
-**示例**
-
-参见 [requestInStream](#requestinstream)
-
 ## requestInStream
 
 ```TypeScript
-requestInStream(url: string, options?: HttpRequestOptions): Promise<int>
+requestInStream(url: string, options?: HttpRequestOptions): Promise<number>
 ```
 
 根据URL地址，发起HTTP网络请求并返回流式响应，使用Promise方式作为异步方法。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1309,10 +747,6 @@ requestInStream(url: string, options?: HttpRequestOptions): Promise<int>
 | [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
 | 2300996 |
 
-**示例**
-
-参见 [requestInStream](#requestinstream)
-
 ## requestSync
 
 ```TypeScript
@@ -1331,8 +765,6 @@ requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 > (4) 此接口为同步接口，会阻塞当前线程直到返回HTTP请求响应结果或错误码。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1390,45 +822,3 @@ requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 | [2300997](../errorcode-net-http.md#2300997-明文http被拦截) |
 | [2300998](../errorcode-net-http.md#2300998-不允许访问域名) |
 | [2300999](../errorcode-net-http.md#2300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET。
-    // 当使用POST请求时此字段用于传递请求体内容，具体格式与服务端协商确定。
-    extraData: 'data to send',
-    expectDataType: http.HttpDataType.STRING, // 可选，指定返回数据的类型。
-    usingCache: true, // 可选，默认为true。
-    priority: 1, // 可选，默认为1。
-    // 开发者根据自身业务需要添加header字段。
-    header: new Header('application/json'),
-    readTimeout: 60000, // 可选，默认为60000ms。
-    connectTimeout: 60000, // 可选，默认为60000ms。
-    usingProtocol: http.HttpProtocol.HTTP1_1, // 可选，协议类型默认值由系统自动指定。
-    usingProxy: false, // 可选，默认使用系统代理，设置为false不使用代理，自API 10开始支持该属性。
-};
-let url = "EXAMPLE_URL"; // 访问url
-try {
-  let data: http.HttpResponse = httpRequest.requestSync(url, options);
-  console.info('Result:' + data.result);
-  console.info('code:' + data.responseCode);
-  console.info('type:' + JSON.stringify(data.resultType));
-  console.info('header:' + JSON.stringify(data.header));
-  console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
-} catch (err) {
-  console.error('error:' + JSON.stringify(err));
-}
-httpRequest.destroy();
-```

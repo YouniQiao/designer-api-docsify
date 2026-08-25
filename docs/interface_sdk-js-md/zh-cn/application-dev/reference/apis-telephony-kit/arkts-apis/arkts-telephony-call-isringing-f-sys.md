@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isRinging
@@ -15,8 +15,6 @@ function isRinging(callback: AsyncCallback<boolean>): void
 判断是否正在响铃。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -42,30 +40,6 @@ function isRinging(callback: AsyncCallback<boolean>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isRinging((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isRinging fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`isRinging success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isRinging().then((data: boolean) => {
-    console.info(`isRinging success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isRinging fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## isRinging
 
@@ -76,8 +50,6 @@ function isRinging(): Promise<boolean>
 判断是否正在响铃。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -100,7 +72,3 @@ function isRinging(): Promise<boolean>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [isRinging](#isringing)

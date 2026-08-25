@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## address
@@ -29,8 +27,6 @@ address: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -50,8 +46,6 @@ attributes: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [attributes](arkts-basicservices-usbmanager-usbendpoint-i.md#attributes)
@@ -69,8 +63,6 @@ direction: USBRequestDirection
 **类型：** USBRequestDirection
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -90,8 +82,6 @@ interfaceId: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [interfaceId](arkts-basicservices-usbmanager-usbendpoint-i.md#interfaceid)
@@ -109,8 +99,6 @@ interval: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -130,8 +118,6 @@ maxPacketSize: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [maxPacketSize](arkts-basicservices-usbmanager-usbendpoint-i.md#maxpacketsize)
@@ -150,8 +136,6 @@ number: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [number](arkts-basicservices-usbmanager-usbendpoint-i.md#number)
@@ -169,8 +153,6 @@ type: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

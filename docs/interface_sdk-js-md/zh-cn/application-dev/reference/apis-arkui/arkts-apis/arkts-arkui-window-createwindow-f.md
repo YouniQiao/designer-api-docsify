@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## createWindow
@@ -15,8 +15,6 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 创建子窗口或者系统窗口，使用callback异步回调。非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本12+：ohos.permission.SYSTEM_FLOAT_WINDOW
@@ -46,131 +44,6 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 | [1300008](../errorcode-window.md#1300008-显示设备异常) |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let windowClass: window.Window | undefined = undefined;
-    let config: window.Configuration = {
-      name: 'test',
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config, (err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(data));
-        windowClass.resize(500, 1000);
-      });
-    } catch (exception) {
-      console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let windowClass: window.Window | undefined = undefined;
-    let config: window.Configuration = {
-      name: 'test',
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config, (err: BusinessError<void> | null, data: window.Window | undefined): void => {
-        if (err?.code) {
-          console.error(`Failed to create the window. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        windowClass = data;
-        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(data));
-        windowClass!.resize(500, 1000);
-      });
-    } catch (err: Error) {
-      console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let windowClass: window.Window | undefined = undefined;
-    let config: window.Configuration = {
-      name: "test",
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config).then((value:window.Window) => {
-        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(value));
-        windowClass = value;
-        windowClass.resize(500, 1000);
-      }).catch((err:BusinessError) => {
-        console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let config: window.Configuration = {
-      name: "test",
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config).then((value:window.Window) => {
-        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(value));
-        value.resize(500, 1000);
-      }).catch((err: Error)=> {
-        console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (err: Error) {
-      console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 
 ## createWindow
 
@@ -181,8 +54,6 @@ function createWindow(config: Configuration): Promise<Window>
 创建子窗口或者系统窗口，使用Promise异步回调。非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本12+：ohos.permission.SYSTEM_FLOAT_WINDOW
@@ -216,7 +87,3 @@ function createWindow(config: Configuration): Promise<Window>
 | [1300006](../errorcode-window.md#1300006-窗口上下文异常) |
 | [1300008](../errorcode-window.md#1300008-显示设备异常) |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) |
-
-**示例**
-
-参见 [createWindow](#createwindow)

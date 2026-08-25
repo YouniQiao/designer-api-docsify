@@ -3,19 +3,17 @@
 ChipSymbolGlyphOptions定义前缀图标和后缀图标的属性。
 
 > **说明：**&gt;
-> 不支持使用SymbolEffect修改动效类型及
+> 不支持使用[SymbolEffect](../arkts-components/arkts-arkui-symbolglyph-attribute.md#symboleffect)修改动效类型及
 > effectStrategy设置动效。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
+import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## activated
@@ -29,8 +27,6 @@ activated?: SymbolGlyphModifier
 **类型：** SymbolGlyphModifier
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ normal?: SymbolGlyphModifier
 **类型：** SymbolGlyphModifier
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

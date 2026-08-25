@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'kits/@kit.DrmKit';
 ```
 
 ## pssh
@@ -25,8 +23,6 @@ DRM内容保护系统专用头，包含DRM相关的元数据和初始化数据�
 **类型：** Uint8Array
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -43,8 +39,6 @@ DRM内容保护系统的唯一标识，必须为有效的UUID格式。传入无�
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

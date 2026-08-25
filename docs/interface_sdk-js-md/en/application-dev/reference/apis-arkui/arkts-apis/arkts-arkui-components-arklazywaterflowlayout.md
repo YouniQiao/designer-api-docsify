@@ -3,17 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
+import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
-
-### Functions
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [LazyVWaterFlowLayout](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayout-f.md) |
-| [LazyVWaterFlowLayout](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayout-f.md) |
 
 ### Classes
 
@@ -26,9 +19,7 @@ import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) |
 | [LazyVWaterFlowLayoutInterface](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutinterface-i.md) |
-| [LazyWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazywaterflowlayoutattribute-i.md) |
 
 ### Constants
 

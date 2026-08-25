@@ -4,8 +4,6 @@ Defines the callback information triggered when the document title of the web pa
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Whether the document title is a real title. The value true indicates that the ti
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## title
@@ -40,8 +36,6 @@ Document title.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

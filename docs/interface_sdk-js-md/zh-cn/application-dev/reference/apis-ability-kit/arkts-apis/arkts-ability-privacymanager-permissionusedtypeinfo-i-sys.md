@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## permissionName
@@ -28,8 +26,6 @@ permissionName: Permissions
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -37,16 +33,14 @@ permissionName: Permissions
 ## tokenId
 
 ```TypeScript
-tokenId: int
+tokenId: number
 ```
 
 访问敏感权限的应用身份标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -63,8 +57,6 @@ usedType: PermissionUsedType
 **类型：** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 

@@ -4,8 +4,6 @@ Wi-Fi device configuration information.@interface WifiDeviceConfig
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)
@@ -15,7 +13,7 @@ Wi-Fi device configuration information.@interface WifiDeviceConfig
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## bssid
@@ -29,8 +27,6 @@ Wi-Fi bssid(MAC): the length is 6
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Hide SSID or not, false(default): not hide
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isHiddenSsid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#ishiddenssid)
@@ -69,8 +63,6 @@ Wi-Fi key: maximum length is 64
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Security type: reference definition of WifiSecurityType
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [securityType](arkts-connectivity-wifimanager-wifideviceconfig-i.md#securitytype)
@@ -109,8 +99,6 @@ Wi-Fi SSID: the maximum length is 32
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

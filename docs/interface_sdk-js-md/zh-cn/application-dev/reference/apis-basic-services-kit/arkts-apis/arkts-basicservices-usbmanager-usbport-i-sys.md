@@ -4,8 +4,6 @@ USB设备端口。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ USB设备端口。
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 USB端口唯一标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -46,8 +42,6 @@ USB端口角色信息。其currentMode应在supportedModes范围内。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ USB端口所支持的模式的数字组合掩码。status.currentMode应在此�
 **类型：** PortModeType
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 

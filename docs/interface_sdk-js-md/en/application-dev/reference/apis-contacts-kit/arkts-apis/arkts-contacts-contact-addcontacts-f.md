@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## addContacts
@@ -15,8 +15,6 @@ function addContacts(context: Context, contacts: Array<Contact>): Promise<Array<
 Adds contacts in batches. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -35,7 +33,7 @@ Adds contacts in batches. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise & lt;Array & lt;int & gt; & gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
@@ -44,27 +42,3 @@ Adds contacts in batches. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
 | [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) |
-
-**Examples**
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const contactInfo1: contact.Contact = {
-  name: { fullName: 'xxx1'},
-  phoneNumbers: [{ phoneNumber: '138xxxxxx' }]
-};
-const contactInfo2: contact.Contact = {
-  name: { fullName: 'xxx2'},
-  phoneNumbers: [{ phoneNumber: '139xxxxxx' }]
-};
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.addContacts(context, [contactInfo1, contactInfo2]).then((data) => {
-  console.info(`Succeeded in addContacts.data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to addContacts. Code: ${err.code}, message: ${err.message}`);
-});
-```

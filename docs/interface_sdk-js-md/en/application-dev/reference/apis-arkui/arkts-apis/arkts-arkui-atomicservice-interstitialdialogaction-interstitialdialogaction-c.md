@@ -4,14 +4,12 @@ The **InterstitialDialogAction** component is a dialog box used in atomic servic
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { InterstitialDialogAction, IconStyle, TitlePosition, BottomOffset } from '@kit.ArkUI';
+import { InterstitialDialogAction, IconStyle, TitlePosition, BottomOffset } from 'kits/@kit.ArkUI';
 ```
 
 ## closeDialog
@@ -23,8 +21,6 @@ closeDialog(): void
 Closes the dialog box.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -39,8 +35,6 @@ constructor(dialogOptions: DialogOptions)
 A constructor used to create an **InterstitialDialogAction** instance.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -61,8 +55,6 @@ openDialog(): void
 Opens the dialog box.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

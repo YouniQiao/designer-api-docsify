@@ -4,27 +4,23 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## 导入模块
 
 ```TypeScript
-import { GesturePoint } from '@kit.AccessibilityKit';
+import { GesturePoint } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## constructor
 
 ```TypeScript
-constructor(positionX: double, positionY: double)
+constructor(positionX: number, positionY: number)
 ```
 
 根据传入的X坐标和Y坐标创建GesturePoint实例。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -37,14 +33,6 @@ constructor(positionX: double, positionY: double)
 | [positionX](#positionx) | number | 是 |
 | [positionY](#positiony) | number | 是 |
 
-**示例**
-
-```TypeScript
-import { GesturePoint } from '@kit.AccessibilityKit';
-
-let gesturePoint = new GesturePoint(1, 2);
-```
-
 ## positionX
 
 ```TypeScript
@@ -56,8 +44,6 @@ positionX: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -72,7 +58,5 @@ positionY: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

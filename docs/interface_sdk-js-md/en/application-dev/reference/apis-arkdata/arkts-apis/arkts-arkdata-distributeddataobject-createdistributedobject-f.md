@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'kits/@kit.ArkData';
 ```
 
 ## createDistributedObject
@@ -15,8 +15,6 @@ function createDistributedObject(source: object): DistributedObject
 Creates a distributed data object.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -35,22 +33,3 @@ Creates a distributed data object.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) |
-
-**Examples**
-
-```TypeScript
-class SourceObject {
-    name: string
-    age: number
-    isVis: boolean
-
-    constructor(name: string, age: number, isVis: boolean) {
-        this.name = name
-        this.age = age
-        this.isVis = isVis
-    }
-}
-
-let source: SourceObject = new SourceObject("jack", 18, false);
-let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-```

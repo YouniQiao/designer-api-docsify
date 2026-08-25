@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
+import { uiMaterial } from 'kits/@kit.ArkUI';
 ```
 
 ## convertToECSubMaterial
@@ -15,8 +15,6 @@ function convertToECSubMaterial(material: uiMaterial.ImmersiveMaterial) : uiMate
 Convert from ImmersiveMaterial to another ImmersiveMaterial set on sub component of EffectComponent.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

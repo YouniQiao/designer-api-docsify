@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## requestSuspendDelay
@@ -18,8 +18,6 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 > 短时任务的申请和使用过程中的约束与限制请参考[指南](../../../task-management/transient-task.md#约束与限制)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -47,26 +45,3 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [9900001](../errorcode-backgroundTaskMgr.md#9900001-短时任务调用方信息校验失败) |
 | [9900002](../errorcode-backgroundTaskMgr.md#9900002-短时任务校验失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-// 申请短时任务的原因
-let delayReason = 'test requestSuspendDelay';
-try {
-  let delayInfo = backgroundTaskManager.requestSuspendDelay(delayReason, () => {
-  // 回调函数。应用申请的短时任务即将超时，通过此函数回调应用，执行一些清理和标注工作，并取消短时任务
-  // 此处回调与应用的业务功能不耦合，短时任务申请成功后，正常执行应用本身的业务
-    console.info('Request suspension delay will time out.');
-  })
-  let requestId = delayInfo.requestId;
-  let time = delayInfo.actualDelayTime;
-  console.info('The requestId is: ' + requestId);
-  console.info('The actualDelayTime is: ' + time);
-} catch (error) {
-  console.error(`requestSuspendDelay failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

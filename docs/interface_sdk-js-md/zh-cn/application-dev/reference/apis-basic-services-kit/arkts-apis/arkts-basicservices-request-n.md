@@ -5,15 +5,13 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** 
 - API版本10+：SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -49,18 +47,6 @@ import { request } from '@kit.BasicServicesKit';
 | [UploadConfig(上传下载)](arkts-basicservices-request-uploadconfig-i.md) |
 | [TaskState(上传下载)](arkts-basicservices-request-taskstate-i.md) | 上传任务的任务信息，是 on('complete' \| 'fail') 和 off('complete' \|
 | [UploadTask(上传下载)](arkts-basicservices-request-uploadtask-i.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [DownloadProgressCallback(上传下载)](arkts-basicservices-request-downloadprogresscallback-t.md) |
-| [DownloadCompleteCallback(上传下载)](arkts-basicservices-request-downloadcompletecallback-t.md) |
-| [DownloadPauseCallback(上传下载)](arkts-basicservices-request-downloadpausecallback-t.md) |
-| [DownloadRemoveCallback(上传下载)](arkts-basicservices-request-downloadremovecallback-t.md) |
-| [DownloadFailCallback(上传下载)](arkts-basicservices-request-downloadfailcallback-t.md) |
-| [UploadProgressCallback(上传下载)](arkts-basicservices-request-uploadprogresscallback-t.md) |
-| [UploadHeaderReceiveCallback(上传下载)](arkts-basicservices-request-uploadheaderreceivecallback-t.md) |
 
 ### 常量
 

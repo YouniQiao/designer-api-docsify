@@ -4,8 +4,6 @@ Parameters for configuring the location simulation function.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Parameters for configuring the location simulation function.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## locations
@@ -28,8 +26,6 @@ Mock location array.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Mock location array.
 ## timeInterval
 
 ```TypeScript
-timeInterval: int
+timeInterval: number
 ```
 
 Interval for reporting simulated locations.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 

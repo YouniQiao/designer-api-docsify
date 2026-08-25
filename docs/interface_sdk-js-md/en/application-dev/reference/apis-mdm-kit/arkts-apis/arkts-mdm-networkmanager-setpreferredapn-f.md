@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setPreferredApn
@@ -15,8 +15,6 @@ function setPreferredApn(admin: Want, apnId: string): void
 Sets the preferred APN.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APN
 
@@ -38,23 +36,3 @@ Sets the preferred APN.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { networkManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility',
-};
-let apnId: string = "1"; // Replace it as required.
-try {
-  networkManager.setPreferredApn(wantTemp, apnId);
-  console.info(`Succeeded in setting preferred apn.`);
-} catch (err) {
-  console.error(`Failed to set preferred apn. Code: ${err.code}, message: ${err.message}`);
-}
-```

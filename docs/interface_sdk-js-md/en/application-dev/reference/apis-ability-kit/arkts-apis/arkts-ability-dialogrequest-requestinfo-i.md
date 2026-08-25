@@ -4,14 +4,12 @@ Defines the request information, which is used as an input parameter for binding
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from 'kits/@kit.AbilityKit';
 ```
 
 ## windowRect
@@ -26,25 +24,6 @@ Location attributes of a modal dialog box.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      let requestInfo = dialogRequest.getRequestInfo(want);
-      console.info(`getRequestInfo windowRect=, ${JSON.stringify(requestInfo.windowRect)}` );
-    } catch(err) {
-      console.error(`getRequestInfo err= ${JSON.stringify(err)}`);
-    }
-  }
-}
-```

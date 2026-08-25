@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## createHttp
@@ -19,8 +19,6 @@ function createHttp(): HttpRequest
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -29,12 +27,4 @@ function createHttp(): HttpRequest
 
 | 类型 |
 | --- |
-| [HttpRequest](arkts-network-http-httprequest-i.md) |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-```
+| [HttpRequest](arkts-network-connection-httprequest-t.md) |

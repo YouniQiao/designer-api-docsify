@@ -1,11 +1,9 @@
 # ToneHapticsMode（系统接口）
 
 枚举，系统铃音场景的振动模式。  
-| 名称 | 值 | 说明 | | ----------------------------- | -- | -------------------- | | NONE | 0 | 无振动模式。 | | SYNC | 1 | 与铃音同步模式。 | | NON_SYNC | 2 | 非同步模式。 |@enum {int}
+| 名称 | 值 | 说明 | | ----------------------------- | -- | -------------------- | | NONE | 0 | 无振动模式。 | | SYNC | 1 | 与铃音同步模式。 | | NON_SYNC | 2 | 非同步模式。 |@enum {number}
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -21,8 +19,6 @@ NONE = 0
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -37,8 +33,6 @@ SYNC = 1
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ NON_SYNC = 2
 非同步模式。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

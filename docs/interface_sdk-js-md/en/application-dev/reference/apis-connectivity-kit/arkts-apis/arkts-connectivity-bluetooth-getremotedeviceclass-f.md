@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceClass
@@ -15,8 +15,6 @@ function getRemoteDeviceClass(deviceId: string): DeviceClass
 Obtains the class of a peer Bluetooth device.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -37,9 +35,3 @@ Obtains the class of a peer Bluetooth device.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) |
-
-**Examples**
-
-```TypeScript
-let remoteDeviceClass : bluetooth.DeviceClass = bluetooth.getRemoteDeviceClass("XX:XX:XX:XX:XX:XX");
-```

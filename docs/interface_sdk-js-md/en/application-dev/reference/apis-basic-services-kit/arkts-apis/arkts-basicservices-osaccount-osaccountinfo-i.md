@@ -1,17 +1,15 @@
 # OsAccountInfo
 
-Represents information about an OS account.
+Represents the OS account information.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## constraints
@@ -20,29 +18,25 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraints: Array<string>
 ```
 
-[Constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) of the system account. By default, no value is passed in.
+[Constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) of the OS account. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 ## createTime
 
 ```TypeScript
-createTime: long
+createTime: number
 ```
 
 OS account creation time. The value is a Unix timestamp (in seconds).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -58,8 +52,6 @@ Distributed account information. By default, no value is passed in.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## domainInfo
@@ -73,8 +65,6 @@ Domain account information. By default, no value is passed in.
 **Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -90,8 +80,6 @@ Whether the OS account is activated. The value **true** means the specified acco
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## isActived
@@ -105,8 +93,6 @@ Whether the OS account is activated. The value **true** means the specified acco
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -126,8 +112,6 @@ Whether the OS account information is complete. The value **true** means the spe
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## isUnlocked
@@ -142,8 +126,6 @@ Whether the account is unlocked (whether the **el2/** directory is decrypted). T
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## isVerified
@@ -152,13 +134,11 @@ Whether the account is unlocked (whether the **el2/** directory is decrypted). T
 isVerified: boolean
 ```
 
-Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isUnlocked** instead.
+Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -169,32 +149,28 @@ Whether the account has been verified. The value **true** means the specified ac
 ## lastLoginTime
 
 ```TypeScript
-lastLoginTime: long
+lastLoginTime: number
 ```
 
 Last login time of the OS account. The value is a Unix timestamp (in seconds).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 ## localId
 
 ```TypeScript
-localId: int
+localId: number
 ```
 
 ID of the target OS account.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -210,8 +186,6 @@ Name of the OS account.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## photo
@@ -226,23 +200,19 @@ Avatar of the OS account. By default, no value is passed in.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## serialNumber
 
 ```TypeScript
-serialNumber: long
+serialNumber: number
 ```
 
 SN of the OS account.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -257,7 +227,5 @@ Type of the OS account.
 **Type:** [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount

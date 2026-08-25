@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0x00
 访问关键资产前无需用户认证。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -33,8 +29,6 @@ ANY = 0xFF
 任意一种用户认证方式（PIN码、人脸、指纹等）通过后，均可访问关键资产。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

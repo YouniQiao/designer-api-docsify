@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_NONE
@@ -17,8 +15,6 @@ PHASE2_NONE = 0
 不指定。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -32,8 +28,6 @@ Password authentication protocol
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_MSCHAP
@@ -45,8 +39,6 @@ PHASE2_MSCHAP = 2
 Microsoft challenge handshake authentication protocol
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -60,8 +52,6 @@ Microsoft challenge handshake authentication protocol version 2
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_GTC
@@ -73,8 +63,6 @@ PHASE2_GTC = 4
 Generic token card
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -88,8 +76,6 @@ Subscriber identity module
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_AKA
@@ -102,8 +88,6 @@ Authentication and key agreement
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_AKA_PRIME
@@ -115,7 +99,5 @@ PHASE2_AKA_PRIME = 7
 AKA prime
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap

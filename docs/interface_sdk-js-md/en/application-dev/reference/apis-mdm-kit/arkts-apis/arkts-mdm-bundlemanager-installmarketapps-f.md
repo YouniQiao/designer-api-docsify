@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## installMarketApps
@@ -22,8 +22,6 @@ Downloads and installs an application from AppGallery.
 > callback.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -47,24 +45,3 @@ Downloads and installs an application from AppGallery.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [9201002](../errorcode-enterpriseDeviceManager.md#9201002-failed-to-install-the-enterprise-application) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleNames: Array<string> = [ 'com.huaweicloud.m' ];
-try {
-    bundleManager.installMarketApps(wantTemp, bundleNames);
-    console.info(`Succeeded in installing market apps.`);
-} catch(err) {
-    console.error(`Failed to install market apps. Code: ${err.code}, message: ${err.message}`);
-}
-```

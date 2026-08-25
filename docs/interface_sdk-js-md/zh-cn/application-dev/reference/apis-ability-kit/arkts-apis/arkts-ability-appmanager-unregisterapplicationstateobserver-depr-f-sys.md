@@ -15,8 +15,6 @@ function unregisterApplicationStateObserver(observerId: number, callback: AsyncC
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](arkts-ability-appmanager-off-f.md#offapplicationstate)
@@ -34,39 +32,6 @@ function unregisterApplicationStateObserver(observerId: number, callback: AsyncC
 | observerId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let observerId = 100;
-
-function unregisterApplicationStateObserverCallback(err: BusinessError) {
-  if (err) {
-    console.error(`UnregisterApplicationStateObserverCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
-    return;
-  }
-}
-
-appManager.unregisterApplicationStateObserver(observerId, unregisterApplicationStateObserverCallback);
-```
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let observerId = 100;
-
-appManager.unregisterApplicationStateObserver(observerId)
-.then((data) => {
-    console.info(`unregisterApplicationStateObserver success, data: ${data}.`);
-})
-.catch((err: BusinessError) => {
-    console.error(`unregisterApplicationStateObserver failed, err code: ${err.code}, err msg: ${err.message}.`);
-});
-```
-
 
 ## unregisterApplicationStateObserver
 
@@ -77,8 +42,6 @@ function unregisterApplicationStateObserver(observerId: number): Promise<void>
 取消注册应用程序状态观测器。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -101,7 +64,3 @@ function unregisterApplicationStateObserver(observerId: number): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [unregisterApplicationStateObserver](#unregisterapplicationstateobserver)

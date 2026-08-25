@@ -4,14 +4,12 @@ Defines the customizable attributes of a segment button component.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from '@kit.ArkUI';
+import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle
@@ -25,8 +23,6 @@ Background blur style of the component.If the value is **undefined**, it default
 **Type:** BlurStyle
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Container border radius.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -63,13 +57,11 @@ backgroundColor?: ResourceColor
 
 Background color.Default value: **\$r('sys.color.ohos_id_color_button_normal')**If the value is **undefined**, the default value is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Default:** $r('sys.color.ohos_id_color_button_normal')
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Set system-styled materials for the component. Different materials have differen
 **Type:** uiMaterial.Material
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,8 +101,6 @@ Border radius mode, used to control the border radius calculation method.Default
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -127,13 +115,11 @@ buttonPadding?: Padding | Dimension
 
 Button padding.Default value:For icon buttons and text buttons: { top: 4, right: 8, bottom: 4, left: 8 }For icon+text buttons: { top: 6, right: 8, bottom: 6, left: 8 }Unit: vp If the value is **undefined**, the default value is used.
 
-**Type:** [Padding](arkts-arkui-units-padding-i.md) \| Dimension
+**Type:** Padding \| [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** For text only / icon only buttons Padding { top: 4, right: 8, bottom: 4, left: 8 }. For text & icon buttons Padding { top: 6, right: 8, bottom: 6, left: 8 }.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,8 +139,6 @@ Layout direction of the component.Default value: **Direction.Auto**If the value 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -169,11 +153,9 @@ fontColor?: ResourceColor
 
 Text color of the unselected button.If the value is **undefined**, the color is \$r('sys.color.ohos_id_color_text_secondary').
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -195,8 +177,6 @@ Font size of the unselected item. It cannot be set in percentage.Default value: 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -217,8 +197,6 @@ Font weight of the unselected item.Default value: **FontWeight.Regular**If the v
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -234,13 +212,11 @@ imageSize?: SizeOptions
 Defines the image size.Default value: { width: 24, height: 24 }Unit: vp If the value is **undefined**, the default value is used.  
 **NOTE：**The **imageSize** property takes effect only for icon-only and icon-with-text buttons.
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Default:** SizeOptions { width: 24, height: 24 }
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -261,8 +237,6 @@ Individual button border radius.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -277,13 +251,11 @@ localizedButtonPadding?: LocalizedPadding
 
 Button padding.Default value:Icon button and text button: **{ top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }**.Icon + text button: **{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8) **}.If the value is **undefined**, the default value is used.
 
-**Type:** LocalizedPadding
+**Type:** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
 **Default:** For text only / icon only buttons LocalizedPadding { top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }. For text & icon buttons LocalizedPadding {{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8)}.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -299,11 +271,9 @@ localizedTextPadding?: LocalizedPadding
 
 Text padding.Default value: **0**If the value is **undefined**, the default value is used.
 
-**Type:** LocalizedPadding
+**Type:** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -319,11 +289,9 @@ selectedBackgroundColor?: ResourceColor
 
 Background color of the selected button.When the value is **undefined** and **type** is **"tab"**, the background color is **\$r('sys.color.segment_button_checked_foreground_color')**.When **type** is **"capsule"**, the background color is **\$r('sys.color.ohos_id_color_emphasize')**.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -339,11 +307,9 @@ selectedFontColor?: ResourceColor
 
 Text color of the selected button.If the value is **undefined**, the color is \$r('sys.color.ohos_id_color_text_primary') when type is set to **"tab"**.When type is set to **"capsule"**, the color is \$r('sys.color.ohos_id_color_foreground_contrary').
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -365,8 +331,6 @@ Font size of the selected item. It cannot be set in percentage.Default value: **
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -387,8 +351,6 @@ Font weight of the selected item.Default value: **FontWeight.Medium**If the valu
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -403,13 +365,11 @@ textPadding?: Padding | Dimension
 
 Text padding.Default value: **0**Unit: vp If the value is **undefined**, the default value is used.
 
-**Type:** [Padding](arkts-arkui-units-padding-i.md) \| Dimension
+**Type:** Padding \| [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** 0
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

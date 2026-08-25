@@ -4,8 +4,6 @@ Enumerates shortcut menu triggering modes.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TOUCHPAD_RIGHT_BUTTON
@@ -17,8 +15,6 @@ TOUCHPAD_RIGHT_BUTTON = 1
 Tapping the right-button area of the touchpad.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -32,8 +28,6 @@ Tapping the left-button area of the touchpad.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TOUCHPAD_TWO_FINGER_TAP
@@ -45,8 +39,6 @@ TOUCHPAD_TWO_FINGER_TAP = 3
 Tapping or pressing the touchpad with two fingers.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -60,8 +52,6 @@ Tapping or pressing the touchpad with two fingers, or tapping the right-button a
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON
@@ -73,7 +63,5 @@ TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON = 5
 Tapping or pressing the touchpad with two fingers, or tapping the left-button area of the touchpad.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer

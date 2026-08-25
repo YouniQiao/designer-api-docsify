@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -27,8 +25,6 @@ constructor(mass: number, stiffness: number, damping: number)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -40,5 +36,5 @@ constructor(mass: number, stiffness: number, damping: number)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mass | number | 是 |
-| stiffness | number | 是 |
-| damping | number | 是 |
+| [stiffness](arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |
+| [damping](arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |

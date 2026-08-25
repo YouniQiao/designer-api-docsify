@@ -4,7 +4,7 @@ CommonOptions定义日期时间选择器的通用选项。
 
 > **说明：**&gt;
 > - Date构造函数参数顺序为：年、月索引（0-11）、日、时、分、秒。注意：年份参数需大于99或小于0以避免1900年代映射。&gt;
-> - Date的使用请参考TimePickerOptions，需要注意的是，当需要设置1-99的年份日期时，
+> - Date的使用请参考[TimePickerOptions](../arkts-components/arkts-arkui-timepickeroptions-i.md)，需要注意的是，当需要设置1-99的年份日期时，
 > 不可使用new Date(1, 0, 1)写法，因为JavaScript的new Date(year, month, day)构造函数对1-99的年份有特殊处理，会自动加上1900，
 > 即变为1901年，因此此时推荐使用new Date('0001-01-01')写法。&gt;
 > - DatePickerComponent的文本字号根据显示的总列数变化，当列数大于等于6列时，字号为14vp，其他情况下为16vp，当组件宽度过窄时，可能出现文本
@@ -43,14 +43,12 @@ CommonOptions定义日期时间选择器的通用选项。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from 'kits/@kit.ArkUI';
 ```
 
 ## enableHapticFeedback
@@ -60,7 +58,8 @@ enableHapticFeedback?: boolean
 ```
 
 设置是否启用触控反馈。默认值：true  
-- true：启用触控反馈，适用于需要增强用户交互体验的场景，如游戏、乐器类应用等。 - false：不启用触控反馈，适用于不需要触觉反馈或需要节省设备资源的场景。
+- true：启用触控反馈，适用于需要增强用户交互体验的场景，如游戏、乐器类应用等。  
+- false：不启用触控反馈，适用于不需要触觉反馈或需要节省设备资源的场景。
 
 > **说明：**&gt;
 > 1. 设置为true后，其生效情况取决于系统的硬件是否支持。
@@ -73,8 +72,6 @@ enableHapticFeedback?: boolean
 **默认值：** true
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,8 +98,6 @@ end?: Date
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -116,7 +111,8 @@ loop?: boolean
 ```
 
 设置是否启用循环模式。  
-- true：启用循环模式，支持滚动到边界时继续循环选择。 - false：不启用循环模式，滚动到边界时停止。
+- true：启用循环模式，支持滚动到边界时继续循环选择。  
+- false：不启用循环模式，滚动到边界时停止。
 
 > 默认值：true
 
@@ -132,8 +128,6 @@ loop?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -148,11 +142,9 @@ onChange?: Callback<DatePickerComponentResult>
 
 选择日期或时间后触发该回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**类型：** Callback&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,11 +160,9 @@ onScrollStop?: Callback<DatePickerComponentResult>
 
 选择器项被选中且滚动停止时触发该回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**类型：** Callback&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -199,8 +189,6 @@ selected?: Date
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -225,8 +213,6 @@ start?: Date
 **类型：** Date
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

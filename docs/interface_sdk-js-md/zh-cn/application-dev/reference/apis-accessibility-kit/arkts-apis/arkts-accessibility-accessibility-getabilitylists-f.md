@@ -3,8 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## getAbilityLists
@@ -21,8 +21,6 @@ function getAbilityLists(
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md)(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt;)
@@ -37,38 +35,6 @@ function getAbilityLists(
 | [stateType](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityType: accessibility.AbilityType = 'spoken';
-let abilityState: accessibility.AbilityState = 'enable';
-
-accessibility.getAbilityLists(abilityType, abilityState).then((data: accessibility.AccessibilityAbilityInfo[]) => {
-  console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityType: accessibility.AbilityType = 'spoken';
-let abilityState: accessibility.AbilityState = 'enable';
-
-accessibility.getAbilityLists(abilityType, abilityState, (err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
-  if (err) {
-    console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
-});
-```
-
 
 ## getAbilityLists
 
@@ -79,8 +45,6 @@ function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Pro
 查询辅助应用列表。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -100,7 +64,3 @@ function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Pro
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; |
-
-**示例**
-
-参见 [getAbilityLists](#getabilitylists)

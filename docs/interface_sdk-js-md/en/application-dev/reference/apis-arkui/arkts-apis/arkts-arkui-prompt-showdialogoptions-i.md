@@ -4,8 +4,6 @@ Defines the option of show dialog.@interface ShowDialogOptions
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md)
@@ -15,7 +13,7 @@ Defines the option of show dialog.@interface ShowDialogOptions
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'kits/@kit.ArkUI';
 ```
 
 ## buttons
@@ -29,8 +27,6 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 **Type:** [Button, Button?, Button?]
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Text body.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [message](arkts-arkui-promptaction-showdialogoptions-i.md#message)
@@ -69,8 +63,6 @@ Title of the text to display.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
+import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from 'kits/@kit.ArkUI';
 ```
 
 ## off
@@ -23,8 +21,6 @@ off(type: TreeListenType, callback?: (callbackParam: CallbackParam) => void): vo
 取消监听。需要先注册监听后才能取消。同一监听器不可控制多个树视图组件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ on(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -73,8 +67,6 @@ once(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): vo
 注册树视图节点事件的监听，监听成功后，当节点发生对应事件时会触发回调函数。同一监听器不可控制多个树视图组件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@kit.ArkTS';
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
 ```
 
 ## parse
@@ -15,8 +15,6 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISe
 Converts a JavaScript Object Notation (JSON) string into an ArkTS Value.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

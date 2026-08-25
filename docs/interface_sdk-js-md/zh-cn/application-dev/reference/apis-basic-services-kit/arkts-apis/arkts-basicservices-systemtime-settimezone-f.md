@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setTimezone
@@ -15,8 +15,6 @@ function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 设置系统时区，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -39,40 +37,6 @@ function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 | --- |
 | -1 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.setTimezone('Asia/Shanghai', (error: BusinessError) => {
-    if (error) {
-      console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in setting timezone.`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.setTimezone('Asia/Shanghai').then(() => {
-    console.info(`Succeeded in setting timezone.`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## setTimezone
 
@@ -83,8 +47,6 @@ function setTimezone(timezone: string): Promise<void>
 使用Promise异步回调设置系统时区。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -111,7 +73,3 @@ function setTimezone(timezone: string): Promise<void>
 | 错误码ID |
 | --- |
 | -1 |
-
-**示例**
-
-参见 [setTimezone](#settimezone)

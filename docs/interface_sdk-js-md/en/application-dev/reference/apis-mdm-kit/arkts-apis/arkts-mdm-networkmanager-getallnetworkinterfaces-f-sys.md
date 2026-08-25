@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllNetworkInterfaces
@@ -15,8 +15,6 @@ function getAllNetworkInterfaces(admin: Want, callback: AsyncCallback<Array<stri
 Obtains all activated wired network interfaces. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -47,45 +45,6 @@ Obtains all activated wired network interfaces. This API uses an asynchronous ca
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.getAllNetworkInterfaces(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get all network interfaces. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting all network interfaces, result : ${JSON.stringify(result)}`);
-});
-```
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.getAllNetworkInterfaces(wantTemp).then((result) => {
-  console.info(`Succeeded in getting all network interfaces, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get all network interfaces. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getAllNetworkInterfaces
 
@@ -96,8 +55,6 @@ function getAllNetworkInterfaces(admin: Want): Promise<Array<string>>
 Obtains all activated wired network interfaces. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -132,7 +89,3 @@ Obtains all activated wired network interfaces. This API uses a promise to retur
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getAllNetworkInterfaces](#getallnetworkinterfaces)

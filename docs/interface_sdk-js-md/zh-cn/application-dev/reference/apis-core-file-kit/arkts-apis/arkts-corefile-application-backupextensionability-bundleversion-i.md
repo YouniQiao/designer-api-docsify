@@ -4,31 +4,27 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 ## 导入模块
 
 ```TypeScript
-import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
-import { BackupExtensionAbility } from '@kit.CoreFileKit';
-import { BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility, BundleVersion } from 'kits/@kit.CoreFileKit';
+import { BackupExtensionAbility } from 'kits/@kit.CoreFileKit';
+import { BundleVersion } from 'kits/@kit.CoreFileKit';
 ```
 
 ## code
 
 ```TypeScript
-code: long
+code: number
 ```
 
 应用的版本号。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,8 +41,6 @@ name: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

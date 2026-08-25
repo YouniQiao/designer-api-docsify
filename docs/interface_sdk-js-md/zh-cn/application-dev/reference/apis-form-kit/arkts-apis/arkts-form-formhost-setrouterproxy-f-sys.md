@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## setRouterProxy
@@ -22,8 +22,6 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 > - 一个formId最多只能设置一个跳转代理，多次设置后，最后设置的proxy生效。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -51,234 +49,6 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common, Want } from '@kit.AbilityKit';
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct CardExample {
-  @State formId: number = 0;
-  @State fwidth: number = 420;
-  @State fheight: number = 280;
-  private context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-  build() {
-    Column() {
-      FormComponent({
-        id: this.formId,
-        name: "widget",
-        bundle: "com.example.cardprovider",
-        ability: "EntryFormAbility",
-        module: "entry",
-        dimension: FormDimension.Dimension_2_2,
-        temporary: false,
-      })
-        .allowUpdate(true)
-        .size({ width: this.fwidth, height: this.fheight })
-        .visibility(Visibility.Visible)
-        .onAcquired((form) => {
-          console.info('testTag onAcquired.');
-          this.formId = form.id;
-          try {
-            let formIds: string[] = [this.formId.toString()];
-            formHost.setRouterProxy(formIds, (want: Want) => {
-              console.info('formHost recv router event.');
-              // 卡片使用方自己处理跳转
-              this.context.startAbility(want, (err: BusinessError) => {
-                console.error(`formHost startAbility error, code: ${err.code}, message: ${err.message}`);
-              });
-            }, (err: BusinessError) => {
-              console.error(`set router proxy error, code: ${err.code}, message: ${err.message}`);
-            })
-          } catch (e) {
-            console.error(`formHost setRouterProxy, code: ${(e as BusinessError).code}, message: ${(e as BusinessError).message}`);
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { FormComponent, FormDimension, FormInfo, Visibility } from '@kit.ArkUI';
-import { formHost, formInfo } from '@kit.FormKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct CardExample {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  @State formId: long = 0;
-  @State fwidth: number = 420;
-  @State fheight: number = 280;
-
-  build() {
-    Column() {
-      FormComponent({
-        id: this.formId,
-        name: "widget",
-        bundle: "com.example.cardprovider",
-        ability: "EntryFormAbility",
-        module: "entry",
-        dimension: FormDimension.Dimension_2_2,
-        temporary: false,
-      })
-        .allowUpdate(true)
-        .size({ width: this.fwidth, height: this.fheight })
-        .visibility(Visibility.Visible)
-        .onAcquired((form) => {
-          console.info(`testTag form info`);
-          this.formId = form.id;
-          try {
-            let formIds: Array<string> = [this.formId.toString()];
-            formHost.setRouterProxy(formIds, (want) => {
-              console.info(`formHost recv router event`);
-              // 卡片使用方自己处理跳转
-              this.context.startAbility(want, (error) => {
-                console.error(`formHost startAbility error, code: ${error.code}, message: ${error.message}`);
-              });
-            }).then(() => {
-              console.info('formHost set router proxy success');
-            }).catch((err) => {
-              console.error(`set router proxy error, code: ${err.code}, message: ${err.message}`);
-            })
-          } catch (error) {
-            console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct CardExample {
-  @State formId: number = 0;
-  @State fwidth: number = 420;
-  @State fheight: number = 280;
-  private context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-  build() {
-    Column() {
-      FormComponent({
-        id: this.formId,
-        name: "widget",
-        bundle: "com.example.cardprovider",
-        ability: "EntryFormAbility",
-        module: "entry",
-        dimension: FormDimension.Dimension_2_2,
-        temporary: false,
-      })
-        .allowUpdate(true)
-        .size({ width: this.fwidth, height: this.fheight })
-        .visibility(Visibility.Visible)
-        .onAcquired((form) => {
-          console.info('testTag onAcquired.');
-          this.formId = form.id;
-          try {
-            let formIds: string[] = [this.formId.toString()];
-            formHost.setRouterProxy(formIds, (want: Want) => {
-              console.info('formHost recv router event.');
-              // 卡片使用方自己处理跳转
-              this.context.startAbility(want, (err: BusinessError) => {
-                console.error(`formHost startAbility error, code: ${err.code}, message: ${err.message}`);
-              });
-            }).then(() => {
-              console.info('formHost set router proxy success');
-            }).catch((err: BusinessError) => {
-              console.error(`set router proxy error, code: ${err.code}, message: ${err.message}`);
-            })
-          } catch (e) {
-            console.error(`formHost setRouterProxy, code: ${e.code}, message: ${e.message}`);
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { FormComponent, FormDimension, FormInfo, Visibility } from '@kit.ArkUI';
-import { formHost, formInfo } from '@kit.FormKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct CardExample {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  @State formId: long = 0;
-  @State fwidth: number = 420;
-  @State fheight: number = 280;
-
-  build() {
-    Column() {
-      FormComponent({
-        id: this.formId,
-        name: "widget",
-        bundle: "com.example.cardprovider",
-        ability: "EntryFormAbility",
-        module: "entry",
-        dimension: FormDimension.Dimension_2_2,
-        temporary: false,
-      })
-        .allowUpdate(true)
-        .size({ width: this.fwidth, height: this.fheight })
-        .visibility(Visibility.Visible)
-        .onAcquired((form) => {
-          console.info(`testTag form info`);
-          this.formId = form.id;
-          try {
-            let formIds: Array<string> = [this.formId.toString()];
-            formHost.setRouterProxy(formIds, (want) => {
-              console.info(`formHost recv router event`);
-              // 卡片使用方自己处理跳转
-              this.context.startAbility(want, (error) => {
-                console.error(`formHost startAbility error, code: ${error.code}, message: ${error.message}`);
-              });
-            }).then(() => {
-              console.info('formHost set router proxy success');
-            }).catch((err) => {
-              console.error(`set router proxy error, code: ${err.code}, message: ${err.message}`);
-            })
-          } catch (error) {
-            console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 
 ## setRouterProxy
 
@@ -296,8 +66,6 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 > - 一个formId最多只能设置一个跳转代理，多次设置后，最后设置的proxy生效。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -329,7 +97,3 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
-
-**示例**
-
-参见 [setRouterProxy](#setrouterproxy)

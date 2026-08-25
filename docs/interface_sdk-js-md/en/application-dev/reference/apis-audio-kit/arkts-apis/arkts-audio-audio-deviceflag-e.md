@@ -4,8 +4,6 @@ Enumerates the audio device flags.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## OUTPUT_DEVICES_FLAG
@@ -17,8 +15,6 @@ OUTPUT_DEVICES_FLAG = 1
 Output devices.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -32,8 +28,6 @@ Input devices.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## ALL_DEVICES_FLAG
@@ -45,7 +39,5 @@ ALL_DEVICES_FLAG = 3
 All devices.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device

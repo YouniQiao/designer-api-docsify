@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { serial } from '@kit.BasicServicesKit';
+import { serial } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## addPortAuthorization
@@ -15,8 +15,6 @@ function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 Adds the permission for applications to access the serial port. This API is open only to system applications that display a pop-up window for serial port authorization.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

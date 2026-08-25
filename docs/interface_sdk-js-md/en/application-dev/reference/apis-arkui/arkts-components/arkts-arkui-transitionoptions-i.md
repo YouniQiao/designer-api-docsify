@@ -13,8 +13,6 @@ Defines the transition effect by setting parameters in the struct.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
@@ -39,8 +37,6 @@ Opacity of the component during transition, which is the value of the start poin
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [opacity](arkts-arkui-transitioneffect-c.md#opacity)
@@ -54,13 +50,16 @@ rotate?: RotateOptions
 ```
 
 Rotation of the component during transition, which is the value of the start point of insertion and the end point of deletion.  
-- **x**: X-component of the rotation vector. - **y**: Y-component of the rotation vector. - **z**: Z-component of the rotation vector. - **centerX** and **centerY**: rotation center point. The default values are both **"50%"**, indicating the center point of the page. - If the center point is (0, 0), it refers to the upper left corner of the component.
+- **x**: X-component of the rotation vector.  
+- **y**: Y-component of the rotation vector.  
+- **z**: Z-component of the rotation vector.  
+- **centerX** and **centerY**: rotation center point. The default values are both **"50%"**, indicating the center  
+point of the page.  
+- If the center point is (0, 0), it refers to the upper left corner of the component.
 
 **Type:** [RotateOptions](arkts-arkui-rotateoptions-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -75,14 +74,17 @@ scale?: ScaleOptions
 ```
 
 Scaling of the component during transition, which is the value of the start point of insertion and the end point of deletion.  
-- **x**: scale factor along the x-axis. - **y**: scale factor along the y-axis. - **z**: scale factor along the z-axis (not effective for the current 2D graphics). - **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center point of the page. - If the center point is (0, 0), it refers to the upper left corner of the component.  
+- **x**: scale factor along the x-axis.  
+- **y**: scale factor along the y-axis.  
+- **z**: scale factor along the z-axis (not effective for the current 2D graphics).  
+- **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center  
+point of the page.  
+- If the center point is (0, 0), it refers to the upper left corner of the component.  
 **NOTE：**If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value **"0"** is used.
 
 **Type:** [ScaleOptions](arkts-arkui-scaleoptions-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -105,8 +107,6 @@ Translation of the component during transition, which is the value of the start 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [translate](arkts-arkui-transitioneffect-c.md#translate)
@@ -122,11 +122,9 @@ type?: TransitionType
 Transition type.Default value: **TransitionType.All**  
 **NOTE：**If **type** is not specified, the default value **TransitionType.All** is used, which means that the transition effect works for both component addition and deletion.
 
-**Type:** TransitionType
+**Type:** [TransitionType](../arkts-apis/arkts-arkui-transitiontype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 

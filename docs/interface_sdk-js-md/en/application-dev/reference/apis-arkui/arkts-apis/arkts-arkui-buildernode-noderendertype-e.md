@@ -56,8 +56,6 @@ Enumerates the node rendering types.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RENDER_TYPE_DISPLAY
@@ -69,8 +67,6 @@ RENDER_TYPE_DISPLAY = 0
 The node is displayed on the screen.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,8 +83,6 @@ RENDER_TYPE_TEXTURE = 1
 The node is exported as a texture.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

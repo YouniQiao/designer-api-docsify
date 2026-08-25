@@ -4,14 +4,12 @@ Defines the image recommendation options. The image recommendation feature depen
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## recommendationType
@@ -25,8 +23,6 @@ Type of the recommended image.
 **Type:** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,8 +39,6 @@ Text based on which images are recommended. If both **recommendationType** and *
 **Type:** [TextContextInfo](arkts-medialibrary-photoaccesshelper-textcontextinfo-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,22 +4,18 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## targets
 
 ```TypeScript
-readonly targets: Record<string, double>
+readonly targets: Record<string, number>
 ```
 
 用于存储所有形变目标的名称和对应的权重。权重值通常在[0.0, 1.0]范围内。
 
-**类型：** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, double&gt;
+**类型：** Record&lt;string, number&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

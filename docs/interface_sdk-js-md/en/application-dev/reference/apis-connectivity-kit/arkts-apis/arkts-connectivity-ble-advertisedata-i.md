@@ -4,14 +4,12 @@ Describes the advertising data.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## advertiseName
@@ -25,8 +23,6 @@ Indicates the local name data type in the advertisement packet. If both the prop
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME
 
@@ -48,8 +44,6 @@ Indicates whether the device name will be included in the advertisement packet.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -67,8 +61,6 @@ Indicates whether the tx power will be included in the advertisement packet.
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ The specified manufacturer data list to this advertisement
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -108,8 +98,6 @@ The specified service data list to this advertisement
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -127,8 +115,6 @@ The specified service UUID list to this advertisement
 **Type:** Array&lt;string&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeIptablesFilterRule
@@ -15,8 +15,6 @@ function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule, cal
 移除网络包过滤规则，仅支持IPv4。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -44,67 +42,6 @@ function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule, cal
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let filterRule: networkManager.RemoveFilterRule = {
-  // 需根据实际情况进行替换
-  "srcAddr": "192.168.1.1-192.168.255.255",
-  "destAddr": "10.1.1.1",
-  "srcPort": "8080",
-  "destPort": "8080",
-  "uid": "9696",
-  "direction": networkManager.Direction.OUTPUT,
-  "action": networkManager.Action.DENY,
-  "protocol": networkManager.Protocol.UDP
-};
-
-networkManager.removeIptablesFilterRule(wantTemp, filterRule, (err) => {
-  if (err) {
-    console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in removing iptables filter rule`);
-});
-```
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let filterRule: networkManager.RemoveFilterRule = {
-  // 需根据实际情况进行替换
-  "srcAddr": "192.168.1.1-192.168.255.255",
-  "destAddr": "10.1.1.1",
-  "srcPort": "8080",
-  "destPort": "8080",
-  "uid": "9696",
-  "direction": networkManager.Direction.OUTPUT,
-  "action": networkManager.Action.DENY,
-  "protocol": networkManager.Protocol.UDP
-};
-
-networkManager.removeIptablesFilterRule(wantTemp, filterRule).then(() => {
-  console.info(`Succeeded in removing iptables filter rule`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## removeIptablesFilterRule
 
@@ -115,8 +52,6 @@ function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule): Pr
 移除网络包过滤规则，仅支持IPv4。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -148,7 +83,3 @@ function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule): Pr
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [removeIptablesFilterRule](#removeiptablesfilterrule)

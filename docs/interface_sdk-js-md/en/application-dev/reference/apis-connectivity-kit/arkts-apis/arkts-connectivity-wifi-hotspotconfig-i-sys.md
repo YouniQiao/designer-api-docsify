@@ -4,8 +4,6 @@ Wi-Fi hotspot configuration information.@interface HotspotConfig
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md)
@@ -17,7 +15,7 @@ Wi-Fi hotspot configuration information.@interface HotspotConfig
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## band
@@ -31,8 +29,6 @@ The frequency band of the Wi-Fi hotspot
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -54,8 +50,6 @@ The maximum number of connections allowed by the Wi-Fi hotspot
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [maxConn](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#maxconn)
@@ -75,8 +69,6 @@ The password of the Wi-Fi hotspot
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -98,8 +90,6 @@ The encryption mode of the Wi-Fi hotspot
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [securityType](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#securitytype)
@@ -119,8 +109,6 @@ The SSID of the Wi-Fi hotspot
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

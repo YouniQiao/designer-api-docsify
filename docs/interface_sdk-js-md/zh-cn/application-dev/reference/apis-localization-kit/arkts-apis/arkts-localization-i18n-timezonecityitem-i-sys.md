@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## cityDisplayName
@@ -27,8 +25,6 @@ cityDisplayName: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -46,8 +42,6 @@ cityId: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -55,7 +49,7 @@ cityId: string
 ## latitude
 
 ```TypeScript
-latitude: double
+latitude: number
 ```
 
 以十进制度数表示的时区城市纬度信息(°)。
@@ -63,8 +57,6 @@ latitude: double
 **类型：** number
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,7 +67,7 @@ latitude: double
 ## longitude
 
 ```TypeScript
-longitude: double
+longitude: number
 ```
 
 时区城市的经度信息，十进制度数(°)。
@@ -83,8 +75,6 @@ longitude: double
 **类型：** number
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,16 +85,14 @@ longitude: double
 ## offset
 
 ```TypeScript
-offset: int
+offset: number
 ```
 
 时区ID的偏移量，单位为毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -113,16 +101,14 @@ offset: int
 ## rawOffset
 
 ```TypeScript
-rawOffset?: int
+rawOffset?: number
 ```
 
 时区ID的固定偏移量，单位为毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -140,8 +126,6 @@ zoneDisplayName: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -157,8 +141,6 @@ zoneId: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 

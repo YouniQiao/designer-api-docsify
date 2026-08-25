@@ -8,8 +8,6 @@ Enumerates the page update types. A page update event is triggered by the access
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |

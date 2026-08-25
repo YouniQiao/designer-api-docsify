@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## restartSelfAtomicService
@@ -22,8 +22,6 @@ Restarts the current atomic service.
 > after a successful call to this API, the system returns error code 16000064.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,20 +44,3 @@ Restarts the current atomic service.
 | [16000064](../errorcode-ability.md#16000064-frequent-application-restart) |
 | [16000086](../errorcode-ability.md#16000086-context-is-not-a-uiabilitycontext) |
 | [16000090](../errorcode-ability.md#16000090-caller-is-not-an-atomic-service) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, EmbeddableUIAbility, Want, abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends EmbeddableUIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      abilityManager.restartSelfAtomicService(this.context);
-    } catch (e) {
-      console.error(`restartSelfAtomicService error: ${JSON.stringify(e as BusinessError)}`);
-    }
-  }
-}
-```

@@ -1,10 +1,8 @@
 # SurfaceParam（系统接口）
 
-Surface configuration parameters.@interface SurfaceParam
+Surface配置参数。@interface SurfaceParam
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -13,7 +11,7 @@ Surface configuration parameters.@interface SurfaceParam
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## flip
@@ -27,8 +25,6 @@ flip?: FlipOptions
 **类型：** [FlipOptions](arkts-distributedservice-abilityconnectionmanager-flipoptions-e-sys.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ format?: VideoPixelFormat
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -59,16 +53,14 @@ format?: VideoPixelFormat
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
-编码长度。必须在流启动前设置，设置后不可更新。
+表示编码高度。必须在流启动前设置，流启动后到停止前均无法更新。如需更新需要将流停止后重新配置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -79,16 +71,14 @@ height: int
 ## rotation
 
 ```TypeScript
-rotation?: int
+rotation?: number
 ```
 
-视频旋转角度。 旋转角度范围为{0, 90, 180, 270}，默认为0。
+表示视频的旋转角度（取值范围为{0, 90, 180, 270}，默认值为0）。 0表示不旋转，90表示向右旋转90度（适合竖屏视频），180表示旋转180度，270表示向左旋转90度。 不传入时默认为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,16 +89,14 @@ rotation?: int
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
-编码宽度。必须在流启动前设置，设置后不可更新。
+表示编码宽度。必须在流启动前设置，流启动后到停止前均无法更新。如需更新需要将流停止后重新配置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

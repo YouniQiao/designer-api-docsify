@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## getCooperateSwitchState
@@ -15,8 +15,6 @@ function getCooperateSwitchState(networkId: string, callback: AsyncCallback<bool
 Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
@@ -39,40 +37,6 @@ Obtains the screen hopping status of the target device. This API uses an asynchr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor = "networkId";
-try {
-  cooperate.getCooperateSwitchState(deviceDescriptor, (error: BusinessError, data: boolean) => {
-    if (error) {
-      console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor = "networkId";
-try {
-  cooperate.getCooperateSwitchState(deviceDescriptor).then((data: boolean) => {
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  }, (error: BusinessError) => {
-    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## getCooperateSwitchState
 
@@ -83,8 +47,6 @@ function getCooperateSwitchState(networkId: string): Promise<boolean>
 Obtains the screen hopping status of the target device. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
@@ -111,7 +73,3 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getCooperateSwitchState](#getcooperateswitchstate)

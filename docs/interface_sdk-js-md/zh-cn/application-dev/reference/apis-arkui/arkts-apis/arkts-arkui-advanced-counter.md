@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -30,11 +30,3 @@ import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.Ar
 | 名称 |
 | --- |
 | [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [OnCounterHoverCallback](arkts-arkui-oncounterhovercallback-t.md) |
-| [OnDateCounterChangeCallback](arkts-arkui-ondatecounterchangecallback-t.md) |
-| [OnInlineCounterChange](arkts-arkui-oninlinecounterchange-t.md) |

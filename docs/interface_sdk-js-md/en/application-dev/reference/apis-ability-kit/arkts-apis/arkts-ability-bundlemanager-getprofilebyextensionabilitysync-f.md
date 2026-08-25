@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getProfileByExtensionAbilitySync
@@ -15,8 +15,6 @@ function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityNa
 Obtains the JSON string array of the current application's configuration file based on the given module name, ExtensionAbility name, and metadata name (name configured in [metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API returns the result synchronously. The result value is a string array.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,33 +42,3 @@ Obtains the JSON string array of the current application's configuration file ba
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 | [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName = 'entry';
-let extensionAbilityName = 'com.example.myapplication.extension';
-let metadataName = 'ability_metadata';
-
-try {
-  let data = bundleManager.getProfileByExtensionAbilitySync(moduleName, extensionAbilityName);
-  hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbilitySync successfully. Data: %{public}s',
-    JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbilitySync failed. Cause: %{public}s', message);
-}
-
-try {
-  let data = bundleManager.getProfileByExtensionAbilitySync(moduleName, extensionAbilityName, metadataName);
-  hilog.info(0x0000, 'testTag', 'getProfileByExtensionAbilitySync successfully. Data: %{public}s',
-    JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByExtensionAbilitySync failed. Cause: %{public}s', message);
-}
-```

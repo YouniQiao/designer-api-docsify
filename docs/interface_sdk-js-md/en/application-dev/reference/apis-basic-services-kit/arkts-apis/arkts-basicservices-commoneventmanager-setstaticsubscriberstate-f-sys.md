@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { commonEventManager } from '@kit.BasicServicesKit';
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setStaticSubscriberState
@@ -15,8 +15,6 @@ function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>
 Enables or disables static subscription for an app. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,84 +38,6 @@ Enables or disables static subscription for an app. This API uses an asynchronou
 | [1500007](../errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
 | [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
 
-**Examples**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(true, (err: BusinessError) => {
-  if (err.code != 0) {
-    console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-    return;
-  }
-  console.info(`setStaticSubscriberState success`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(true, (err: BusinessError | null) => {
-  if (err != null) {
-    console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-    return;
-  }
-  console.info(`setStaticSubscriberState success`);
-});
-```
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(false).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch ((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(false).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
-  console.info(`setStaticSubscriberState success, state is ${true}`);
-}).catch((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMes: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let evenName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, evenName).then(() => {
-  console.info(`setStaticSubscriberState success, state is ${true}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setStaticSubscriberState failed, errCode: ${error.code}, errMes: ${error.message}`);
-});
-```
-
 
 ## setStaticSubscriberState
 
@@ -128,8 +48,6 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 Enables or disables static subscription for an app. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,10 +76,6 @@ Enables or disables static subscription for an app. This API uses a promise to r
 | [1500007](../errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
 | [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
 
-**Examples**
-
-See [setStaticSubscriberState](#setstaticsubscriberstate)
-
 
 ## setStaticSubscriberState
 
@@ -172,8 +86,6 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 Enables or disables static subscription to a common event for the current app. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,52 +114,3 @@ Enables or disables static subscription to a common event for the current app. T
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1500007](../errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
 | [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
-
-**Examples**
-
-See [setStaticSubscriberState](#setstaticsubscriberstate)
-
-
-## setStaticSubscriberState
-
-```TypeScript
-function setStaticSubscriberState(enable: boolean, events: Array<string>): Promise<void>
-```
-
-Set static subscriber state.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Notification.CommonEvent
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enable | boolean | Yes |
-| events | Array & lt;string & gt; | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [1500007](../errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
-| [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
-
-**Examples**
-
-See [setStaticSubscriberState](#setstaticsubscriberstate)

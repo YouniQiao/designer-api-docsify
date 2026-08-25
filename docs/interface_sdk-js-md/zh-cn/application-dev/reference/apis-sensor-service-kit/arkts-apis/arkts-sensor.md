@@ -15,18 +15,21 @@
 3. 使用sensor.once接口获取一次传感器数据，适用于无需持续监听的场景。
 4. 使用sensor.off接口取消订阅，确保on和off成对调用。
 sensor.on与sensor.once的区别：  
-- sensor.on持续订阅传感器数据，通过callback反复上报，适用于需要实时监测的场景。 - sensor.once仅获取一次传感器数据，callback只触发一次后自动取消订阅，适用于单次采集的场景。 注意事项： - 订阅前建议先使用getSingleSensor确认设备支持该传感器。 - on订阅和off取消订阅必须成对出现，避免资源泄漏。 - 对于需要权限的传感器（加速度、陀螺仪、心率、计步等），须先申请相应权限。
+- sensor.on持续订阅传感器数据，通过callback反复上报，适用于需要实时监测的场景。  
+- sensor.once仅获取一次传感器数据，callback只触发一次后自动取消订阅，适用于单次采集的场景。  
+注意事项：  
+- 订阅前建议先使用getSingleSensor确认设备支持该传感器。  
+- on订阅和off取消订阅必须成对出现，避免资源泄漏。  
+- 对于需要权限的传感器（加速度、陀螺仪、心率、计步等），须先申请相应权限。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## 汇总
@@ -140,29 +143,6 @@ import { sensor } from '@kit.SensorServiceKit';
 | [off](arkts-sensorservice-sensor-off-f.md) |
 | [off](arkts-sensorservice-sensor-off-f.md) |
 | [off](arkts-sensorservice-sensor-off-f.md#offsensorstatuschange) |
-| [offAccelerometerChange](arkts-sensorservice-sensor-offaccelerometerchange-f.md) |
-| [offAccelerometerUncalibratedChange](arkts-sensorservice-sensor-offaccelerometeruncalibratedchange-f.md) |
-| [offAmbientLightChange](arkts-sensorservice-sensor-offambientlightchange-f.md) |
-| [offAmbientTemperatureChange](arkts-sensorservice-sensor-offambienttemperaturechange-f.md) |
-| [offBarometerChange](arkts-sensorservice-sensor-offbarometerchange-f.md) |
-| [offFusionPressureChange](arkts-sensorservice-sensor-offfusionpressurechange-f.md) |
-| [offGravityChange](arkts-sensorservice-sensor-offgravitychange-f.md) |
-| [offGyroscopeChange](arkts-sensorservice-sensor-offgyroscopechange-f.md) |
-| [offGyroscopeUncalibratedChange](arkts-sensorservice-sensor-offgyroscopeuncalibratedchange-f.md) |
-| [offHallChange](arkts-sensorservice-sensor-offhallchange-f.md) |
-| [offHeartRateChange](arkts-sensorservice-sensor-offheartratechange-f.md) |
-| [offHumidityChange](arkts-sensorservice-sensor-offhumiditychange-f.md) |
-| [offLinearAccelerometerChange](arkts-sensorservice-sensor-offlinearaccelerometerchange-f.md) |
-| [offMagneticFieldChange](arkts-sensorservice-sensor-offmagneticfieldchange-f.md) |
-| [offMagneticFieldUncalibratedChange](arkts-sensorservice-sensor-offmagneticfielduncalibratedchange-f.md) |
-| [offOrientationChange](arkts-sensorservice-sensor-offorientationchange-f.md) |
-| [offPedometerChange](arkts-sensorservice-sensor-offpedometerchange-f.md) |
-| [offPedometerDetectionChange](arkts-sensorservice-sensor-offpedometerdetectionchange-f.md) |
-| [offProximityChange](arkts-sensorservice-sensor-offproximitychange-f.md) |
-| [offRotationVectorChange](arkts-sensorservice-sensor-offrotationvectorchange-f.md) |
-| [offSensorStatusChange](arkts-sensorservice-sensor-offsensorstatuschange-f.md) |
-| [offSignificantMotionChange](arkts-sensorservice-sensor-offsignificantmotionchange-f.md) |
-| [offWearDetectionChange](arkts-sensorservice-sensor-offweardetectionchange-f.md) |
 | [on](arkts-sensorservice-sensor-on-f.md) |
 | [on](arkts-sensorservice-sensor-on-f.md) |
 | [on](arkts-sensorservice-sensor-on-f.md) |
@@ -207,11 +187,6 @@ import { sensor } from '@kit.SensorServiceKit';
 | [on](arkts-sensorservice-sensor-on-f.md) |
 | [on](arkts-sensorservice-sensor-on-f.md) |
 | [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) |
-| [onAccelerometerChange](arkts-sensorservice-sensor-onaccelerometerchange-f.md) |
-| [onAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onaccelerometeruncalibratedchange-f.md) |
-| [onAmbientLightChange](arkts-sensorservice-sensor-onambientlightchange-f.md) |
-| [onAmbientTemperatureChange](arkts-sensorservice-sensor-onambienttemperaturechange-f.md) |
-| [onBarometerChange](arkts-sensorservice-sensor-onbarometerchange-f.md) |
 | [once](arkts-sensorservice-sensor-once-f.md) |
 | [once](arkts-sensorservice-sensor-once-f.md) |
 | [once](arkts-sensorservice-sensor-once-f.md) |
@@ -254,45 +229,6 @@ import { sensor } from '@kit.SensorServiceKit';
 | [once](arkts-sensorservice-sensor-once-f.md) |
 | [once](arkts-sensorservice-sensor-once-f.md) |
 | [once](arkts-sensorservice-sensor-once-f.md) |
-| [onceAccelerometerChange](arkts-sensorservice-sensor-onceaccelerometerchange-f.md) |
-| [onceAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onceaccelerometeruncalibratedchange-f.md) |
-| [onceAmbientLightChange](arkts-sensorservice-sensor-onceambientlightchange-f.md) |
-| [onceAmbientTemperatureChange](arkts-sensorservice-sensor-onceambienttemperaturechange-f.md) |
-| [onceBarometerChange](arkts-sensorservice-sensor-oncebarometerchange-f.md) |
-| [onceGravityChange](arkts-sensorservice-sensor-oncegravitychange-f.md) |
-| [onceGyroscopeChange](arkts-sensorservice-sensor-oncegyroscopechange-f.md) |
-| [onceGyroscopeUncalibratedChange](arkts-sensorservice-sensor-oncegyroscopeuncalibratedchange-f.md) |
-| [onceHallChange](arkts-sensorservice-sensor-oncehallchange-f.md) |
-| [onceHeartRateChange](arkts-sensorservice-sensor-onceheartratechange-f.md) |
-| [onceHumidityChange](arkts-sensorservice-sensor-oncehumiditychange-f.md) |
-| [onceLinearAccelerometerChange](arkts-sensorservice-sensor-oncelinearaccelerometerchange-f.md) |
-| [onceMagneticFieldChange](arkts-sensorservice-sensor-oncemagneticfieldchange-f.md) |
-| [onceMagneticFieldUncalibratedChange](arkts-sensorservice-sensor-oncemagneticfielduncalibratedchange-f.md) |
-| [onceOrientationChange](arkts-sensorservice-sensor-onceorientationchange-f.md) |
-| [oncePedometerChange](arkts-sensorservice-sensor-oncepedometerchange-f.md) |
-| [oncePedometerDetectionChange](arkts-sensorservice-sensor-oncepedometerdetectionchange-f.md) |
-| [onceProximityChange](arkts-sensorservice-sensor-onceproximitychange-f.md) |
-| [onceRotationVectorChange](arkts-sensorservice-sensor-oncerotationvectorchange-f.md) |
-| [onceSignificantMotionChange](arkts-sensorservice-sensor-oncesignificantmotionchange-f.md) |
-| [onceWearDetectionChange](arkts-sensorservice-sensor-onceweardetectionchange-f.md) |
-| [onFusionPressureChange](arkts-sensorservice-sensor-onfusionpressurechange-f.md) |
-| [onGravityChange](arkts-sensorservice-sensor-ongravitychange-f.md) |
-| [onGyroscopeChange](arkts-sensorservice-sensor-ongyroscopechange-f.md) |
-| [onGyroscopeUncalibratedChange](arkts-sensorservice-sensor-ongyroscopeuncalibratedchange-f.md) |
-| [onHallChange](arkts-sensorservice-sensor-onhallchange-f.md) |
-| [onHeartRateChange](arkts-sensorservice-sensor-onheartratechange-f.md) |
-| [onHumidityChange](arkts-sensorservice-sensor-onhumiditychange-f.md) |
-| [onLinearAccelerometerChange](arkts-sensorservice-sensor-onlinearaccelerometerchange-f.md) |
-| [onMagneticFieldChange](arkts-sensorservice-sensor-onmagneticfieldchange-f.md) |
-| [onMagneticFieldUncalibratedChange](arkts-sensorservice-sensor-onmagneticfielduncalibratedchange-f.md) |
-| [onOrientationChange](arkts-sensorservice-sensor-onorientationchange-f.md) |
-| [onPedometerChange](arkts-sensorservice-sensor-onpedometerchange-f.md) |
-| [onPedometerDetectionChange](arkts-sensorservice-sensor-onpedometerdetectionchange-f.md) |
-| [onProximityChange](arkts-sensorservice-sensor-onproximitychange-f.md) |
-| [onRotationVectorChange](arkts-sensorservice-sensor-onrotationvectorchange-f.md) |
-| [onSensorStatusChange](arkts-sensorservice-sensor-onsensorstatuschange-f.md) |
-| [onSignificantMotionChange](arkts-sensorservice-sensor-onsignificantmotionchange-f.md) |
-| [onWearDetectionChange](arkts-sensorservice-sensor-onweardetectionchange-f.md) |
 | [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md) |
 | [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md) |
 | [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md) |
@@ -307,12 +243,8 @@ import { sensor } from '@kit.SensorServiceKit';
 | [off](arkts-sensorservice-sensor-off-f-sys.md) |
 | [off](arkts-sensorservice-sensor-off-f-sys.md) |
 | [off](arkts-sensorservice-sensor-off-f-sys.md) |
-| [offColorChange](arkts-sensorservice-sensor-offcolorchange-f-sys.md) |
-| [offSarChange](arkts-sensorservice-sensor-offsarchange-f-sys.md) |
 | [on](arkts-sensorservice-sensor-on-f-sys.md) |
 | [on](arkts-sensorservice-sensor-on-f-sys.md) |
-| [onColorChange](arkts-sensorservice-sensor-oncolorchange-f-sys.md) |
-| [onSarChange](arkts-sensorservice-sensor-onsarchange-f-sys.md) |
 <!--DelEnd-->
 
 ### 接口

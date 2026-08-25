@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## createCertChainValidator
@@ -15,8 +15,6 @@ function createCertChainValidator(algorithm: string): CertChainValidator
 Creates a **CertChainValidator** object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,17 +41,3 @@ Creates a **CertChainValidator** object.
 | [19020001](../errorcode-cert.md#19020001-memory-error) |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) |
 | [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
-
-**Examples**
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let validator = cert.createCertChainValidator('PKIX');
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`createCertChainValidator failed, errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```

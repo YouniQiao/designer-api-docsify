@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -46,8 +42,6 @@ content?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ pageLink?: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -82,8 +74,6 @@ paragraphs?: Paragraph[]
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -100,8 +90,6 @@ scenario?: Scenario
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -109,16 +97,14 @@ scenario?: Scenario
 ## sessionId
 
 ```TypeScript
-sessionId: long
+sessionId: number
 ```
 
 此次调用该接口的session ID，标识当次调用动作。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -136,8 +122,6 @@ title?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **系统接口：** 此接口为系统接口。
@@ -145,16 +129,14 @@ title?: string
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 获取到的屏上内容的窗口ID
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

@@ -4,14 +4,12 @@ Represents the configuration of a domain server.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## domain
@@ -25,8 +23,6 @@ Domain to which the server belongs.
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -42,8 +38,6 @@ Server configuration ID.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## parameters
@@ -57,7 +51,5 @@ Server configuration parameters.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount

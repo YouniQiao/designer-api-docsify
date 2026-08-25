@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## WGS84
@@ -18,8 +16,6 @@ World Geodetic System 1984，是为GPS全球定位系统使用而建立的坐标
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## GCJ02
@@ -31,7 +27,5 @@ GCJ02 = 2
 GCJ-02是由中国国家测绘局制订的地理信息系统的坐标系统。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence

@@ -4,8 +4,6 @@ Haptics settings in tone scenario.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Haptics settings in tone scenario.
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from '@kit.AudioKit';
+import { systemSoundManager } from 'kits/@kit.AudioKit';
 ```
 
 ## hapticsUri
@@ -27,8 +25,6 @@ Haptics uri. Users can set/get this parameter when [mode](#mode) is NON_SYC. In 
 **Type:** string
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -45,8 +41,6 @@ Haptics mode.
 **Type:** [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e-sys.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

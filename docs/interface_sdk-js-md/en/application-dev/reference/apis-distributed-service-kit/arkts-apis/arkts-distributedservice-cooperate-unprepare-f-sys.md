@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## unprepare
@@ -15,8 +15,6 @@ function unprepare(callback: AsyncCallback<void>): void
 Cancels the preparation for screen hopping. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -39,38 +37,6 @@ Cancels the preparation for screen hopping. This API uses an asynchronous callba
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.unprepare((error: BusinessError) => {
-    if (error) {
-      console.error(`Keyboard mouse crossing unprepare failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Keyboard mouse crossing unprepare success.`);
-  });
-} catch (error) {
-  console.error(`Keyboard mouse crossing unprepare failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.unprepare().then(() => {
-    console.info(`Keyboard mouse crossing unprepare success.`);
-  }, (error: BusinessError) => {
-    console.error(`Keyboard mouse crossing unprepare failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Keyboard mouse crossing unprepare failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## unprepare
 
@@ -81,8 +47,6 @@ function unprepare(): Promise<void>
 Cancels the preparation for screen hopping. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -104,7 +68,3 @@ Cancels the preparation for screen hopping. This API uses a promise to return th
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [unprepare](#unprepare)

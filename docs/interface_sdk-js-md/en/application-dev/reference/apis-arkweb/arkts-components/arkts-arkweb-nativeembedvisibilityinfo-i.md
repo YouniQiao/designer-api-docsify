@@ -4,8 +4,6 @@ Provides visibility information about the same-layer tag, including the visibili
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ ID of the same-layer rendered tag.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## visibility
@@ -40,7 +36,5 @@ Whether the same-layer tag is visible.The value **true** indicates that the same
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core

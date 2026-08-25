@@ -4,8 +4,6 @@ Describes the scanned Wi-Fi information.@interface WifiScanInfo
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)
@@ -15,7 +13,7 @@ Describes the scanned Wi-Fi information.@interface WifiScanInfo
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## band
@@ -29,8 +27,6 @@ Frequency band, 1: 2.4G, 2: 5G
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Wi-Fi bssid(MAC): the length is 6
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [bssid](arkts-connectivity-wifimanager-wifiscaninfo-i.md#bssid)
@@ -69,8 +63,6 @@ Hotspot capability
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Channel width
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [channelWidth](arkts-connectivity-wifimanager-wifiscaninfo-i.md#channelwidth)
@@ -109,8 +99,6 @@ Frequency
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ Received signal strength indicator (RSSI)
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [rssi](arkts-connectivity-wifimanager-wifiscaninfo-i.md#rssi)
@@ -149,8 +135,6 @@ Security type: reference definition of WifiSecurityType
 **Type:** WifiSecurityType
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -170,8 +154,6 @@ Wi-Fi SSID: the maximum length is 32
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ssid](arkts-connectivity-wifimanager-wifiscaninfo-i.md#ssid)
@@ -189,8 +171,6 @@ Time stamp
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

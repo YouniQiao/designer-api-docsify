@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## getNetQuotaPolicies
@@ -15,8 +15,6 @@ function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): vo
 获取计量网络策略，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -41,30 +39,6 @@ function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): vo
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.getNetQuotaPolicies((error: BusinessError, data: policy.NetQuotaPolicy[]) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getNetQuotaPolicies()
-  .then((data: policy.NetQuotaPolicy[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## getNetQuotaPolicies
 
@@ -75,8 +49,6 @@ function getNetQuotaPolicies(): Promise<Array<NetQuotaPolicy>>
 获取计量网络策略，使用 Promise 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -99,7 +71,3 @@ function getNetQuotaPolicies(): Promise<Array<NetQuotaPolicy>>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [getNetQuotaPolicies](#getnetquotapolicies)

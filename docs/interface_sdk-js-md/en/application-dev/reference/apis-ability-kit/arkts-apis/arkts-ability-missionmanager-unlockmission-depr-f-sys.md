@@ -15,8 +15,6 @@ Unlocks a given mission. This API uses an asynchronous callback to return the re
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md)
@@ -34,41 +32,6 @@ Unlocks a given mission. This API uses an asynchronous callback to return the re
 | missionId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-
-let testMissionId = 2;
-try {
-  missionManager.unlockMission(testMissionId, (err, data) => {
-    if (err) {
-      console.error(`unlockMission failed: ${err.message}`);
-    } else {
-      console.info(`unlockMission successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  console.error(`unlockMission failed: ${err.message}`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  missionManager.unlockMission(testMissionId).then((data) => {
-    console.info(`unlockMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`unlockMission failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`unlockMission failed. Cause: ${error.message}`);
-}
-```
-
 
 ## unlockMission
 
@@ -79,8 +42,6 @@ function unlockMission(missionId: number): Promise<void>
 Unlocks a given mission. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -103,7 +64,3 @@ Unlocks a given mission. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [unlockMission](#unlockmission)

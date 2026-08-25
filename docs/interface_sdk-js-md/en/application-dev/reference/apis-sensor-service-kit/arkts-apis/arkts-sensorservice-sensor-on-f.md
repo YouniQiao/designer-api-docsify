@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## on
@@ -16,8 +16,6 @@ function on(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerRespon
 Subscribes to data of the acceleration sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -53,8 +51,6 @@ Subscribes to data of the uncalibrated acceleration sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -86,8 +82,6 @@ Subscribes to data of the ambient light sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -117,8 +111,6 @@ Subscribes to data of the ambient temperature sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -146,8 +138,6 @@ function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, opt
 Subscribes to data of the barometer sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -178,8 +168,6 @@ Subscribes to data of the gravity sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -208,8 +196,6 @@ function on(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>,
 Subscribes to data of the gyroscope sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -245,8 +231,6 @@ Subscribes to data of the uncalibrated gyroscope sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.GYROSCOPE
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -278,8 +262,6 @@ Subscribes to data of the Hall effect sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -308,8 +290,6 @@ function on(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>,
 Subscribes to data of the heart rate sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -343,8 +323,6 @@ Subscribes to data of the humidity sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -373,8 +351,6 @@ function on(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccele
 Subscribes to data of the linear acceleration sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -408,8 +384,6 @@ Subscribes to data of the magnetic field sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -438,8 +412,6 @@ function on(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<Magne
 Subscribes to data of the uncalibrated magnetic field sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -475,8 +447,6 @@ Subscribes to data of the orientation sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -506,8 +476,6 @@ function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, opt
 Subscribes to data of the pedometer sensor. The step counter sensor's data reporting is subject to some delay, and the delay is determined by specific product implementations.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -541,8 +509,6 @@ Subscribes to data of the pedometer detection sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
 **System capability:** SystemCapability.Sensors.Sensor
@@ -574,8 +540,6 @@ Subscribes to data of the proximity sensor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -604,8 +568,6 @@ function on(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorRes
 Subscribes to data of the rotation vector sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -636,8 +598,6 @@ Subscribes to the significant motion sensor data.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -666,8 +626,6 @@ function on(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionRespo
 Subscribes to data of the wear detection sensor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -698,8 +656,6 @@ Subscribes to the fused pressure sensor data.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
@@ -729,8 +685,6 @@ Subscribes to data changes of the acceleration sensor. If this API is called mul
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options)
@@ -758,8 +712,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback
 Subscribes to data changes of the uncalibrated acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -789,8 +741,6 @@ Subscribes to data changes of the ambient light sensor. If this API is called mu
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;, options?: Options)
@@ -816,8 +766,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callb
 Subscribes to data changes of the ambient temperature sensor. If this API is called multiple times for the same application, the last call takes effect.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -845,8 +793,6 @@ Subscribes to data changes of the barometer sensor. If this API is called multip
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
@@ -873,8 +819,6 @@ Subscribes to data changes of the gravity sensor. If this API is called multiple
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;, options?: Options)
@@ -900,8 +844,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyrosc
 Subscribes to data changes of the gyroscope sensor. If this API is called multiple times for the same application, the last call takes effect.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -931,8 +873,6 @@ Subscribes to data changes of the uncalibrated gyroscope sensor. If this API is 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;, options?: Options)
@@ -961,8 +901,6 @@ Subscribes to data changes of the Hall effect sensor. If this API is called mult
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;, options?: Options)
@@ -988,8 +926,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Heart
 Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application, the last call takes effect.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1019,8 +955,6 @@ Subscribes to data changes of the humidity sensor. If this API is called multipl
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;, options?: Options)
@@ -1046,8 +980,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callb
 Subscribes to data changes of the linear acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1077,8 +1009,6 @@ Subscribes to data changes of the magnetic field sensor. If this API is called m
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;, options?: Options)
@@ -1104,8 +1034,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callbac
 Subscribes to data changes of the uncalibrated magnetic field sensor. If this API is called multiple times for the same application, the last call takes effect.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1133,8 +1061,6 @@ Subscribes to data changes of the orientation sensor. If this API is called mult
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
@@ -1160,8 +1086,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedome
 Subscribes to data changes of the pedometer sensor. If this API is called multiple times for the same application, the last call takes effect.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1191,8 +1115,6 @@ Subscribes to data changes of the pedometer detection sensor. If this API is cal
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;, options?: Options)
@@ -1221,8 +1143,6 @@ Subscribes to data changes of the proximity sensor. If this API is called multip
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;, options?: Options)
@@ -1248,8 +1168,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<
 Subscribes to data changes of the rotation vector sensor. If this API is called multiple times for the same application, the last call takes effect.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1277,8 +1195,6 @@ Subscribes to data changes of the significant motion sensor. If this API is call
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;, options?: Options)
@@ -1305,8 +1221,6 @@ Subscribes to data changes of the wear detection sensor. If this API is called m
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](#on)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
@@ -1331,8 +1245,6 @@ function on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>): 
 Enables listening for sensor status changes. This API asynchronously returns the result through a callback.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 

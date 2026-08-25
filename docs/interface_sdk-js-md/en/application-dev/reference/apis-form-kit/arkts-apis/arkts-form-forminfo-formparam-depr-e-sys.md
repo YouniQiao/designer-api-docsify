@@ -4,8 +4,6 @@ Enumerates the widget parameters.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FormParam](arkts-form-forminfo-formparam-e.md)
@@ -21,8 +19,6 @@ IDENTITY_KEY = 'ohos.extra.param.key.form_identity'
 Widget ID.This is a system API.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

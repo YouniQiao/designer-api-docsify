@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## onBadgeNumberQuery
 
 ```TypeScript
-function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<long>): void
+function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<number>): void
 ```
 
 注册应用角标数量查询回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,7 +26,7 @@ function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<long>): 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | ArkTS-Dyn: (bundle: BundleOption) = & gt; Promise & lt;number & gt;<br>ArkTS-Sta：(bundle: BundleOption) = & gt; Promise & lt;long & gt; | 是 |
+| callback | (bundle: BundleOption) = & gt; Promise & lt;number & gt; | 是 |
 
 **错误码：**
 
@@ -39,33 +37,3 @@ function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<long>): 
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try{
-    notificationManager.onBadgeNumberQuery(
-        async (bundleOption: notificationManager.BundleOption) => {
-            return 1;
-        }
-    );
-} catch (err) {
-    console.error(`OnBadgeNumberQuery failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try{
-    notificationManager.onBadgeNumberQuery(
-        async (bundleOption: notificationManager.BundleOption) => {
-            return 1;
-        }
-    );
-} catch (err) {
-    console.info(`onBadgeNumberQuery failed, code is ${err.code}, message is ${err.message}`);
-}
-```

@@ -4,14 +4,12 @@ CounterOptions定义了Counter类型及样式。选择不同的Counter类型时�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
 ```
 
 ## dateOptions
@@ -25,8 +23,6 @@ dateOptions?: DateStyleOptions
 **类型：** [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ direction?: Direction
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -65,8 +59,6 @@ inlineOptions?: InlineStyleOptions
 **类型：** [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,8 +78,6 @@ numberOptions?: NumberStyleOptions
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -105,8 +95,6 @@ type: CounterType
 **类型：** [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

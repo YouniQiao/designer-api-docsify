@@ -4,8 +4,6 @@ Enumerates gesture competition results.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONTINUE
@@ -17,8 +15,6 @@ CONTINUE = 0
 The system gesture recognition process continues.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ REJECT = 1
 Gesture recognition fails.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

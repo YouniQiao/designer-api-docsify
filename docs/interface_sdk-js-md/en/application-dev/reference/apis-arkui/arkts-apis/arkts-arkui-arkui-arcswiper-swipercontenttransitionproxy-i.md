@@ -19,14 +19,12 @@ Implements the proxy object returned during the execution of the custom page tra
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
+import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from 'kits/@kit.ArkUI';
 ```
 
 ## finishTransition
@@ -38,8 +36,6 @@ finishTransition(): void
 Notifies the **ArcSwiper** component that the custom animation has finished playing.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -57,8 +53,6 @@ Index of a page in the viewport.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -74,8 +68,6 @@ Length of the page specified by **index** along the main axis. Unit: vp.
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -93,8 +85,6 @@ Position of the page specified by **index** relative to the start position of th
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -110,8 +100,6 @@ Index of the currently selected page.
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

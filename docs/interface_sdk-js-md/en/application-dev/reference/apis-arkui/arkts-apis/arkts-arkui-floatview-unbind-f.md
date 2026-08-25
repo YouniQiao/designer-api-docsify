@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## unbind
@@ -16,8 +16,6 @@ function unbind(floatViewController: FloatViewController,
 Unbinds the float view and floating ball. The unbinding can be performed only after both the [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md) and [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md) are stopped. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

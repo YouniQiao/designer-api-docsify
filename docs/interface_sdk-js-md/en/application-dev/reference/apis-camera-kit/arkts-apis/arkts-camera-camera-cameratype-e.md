@@ -4,8 +4,6 @@ Enumerates the camera types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## CAMERA_TYPE_DEFAULT
@@ -17,8 +15,6 @@ CAMERA_TYPE_DEFAULT = 0
 Default camera type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -34,8 +30,6 @@ Wide camera.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -49,8 +43,6 @@ CAMERA_TYPE_ULTRA_WIDE = 2
 Ultra-wide camera.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -66,8 +58,6 @@ Telephoto camera.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -81,8 +71,6 @@ CAMERA_TYPE_TRUE_DEPTH = 4
 Camera with depth of field information.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

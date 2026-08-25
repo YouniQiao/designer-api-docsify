@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 ```
 
 ## belongsTo
@@ -23,8 +21,6 @@ belongsTo(type: string): boolean
 判断当前标准化数据类型是否归属于指定的标准化数据类型。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,48 +44,6 @@ belongsTo(type: string): boolean
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let ret = typeObj.belongsTo('general.source-code');
-    if(ret) {
-        console.info('type general.type-script belongs to type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let typeObj : uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    if (!typeObj) {
-        console.info('TypeDescriptor not found');
-        return;
-    }
-    let ret = typeObj.belongsTo('general.source-code');
-    if(ret) {
-        console.info('type general.type-script belongs to type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.info(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
 ## equals
 
 ```TypeScript
@@ -99,8 +53,6 @@ equals(typeDescriptor: TypeDescriptor): boolean
 判断指定的标准化数据类型描述类对象的类型ID和当前标准化数据类型描述类对象的类型ID是否相同，即[TypeDescriptor](#typedescriptor)对象的 typeId。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,53 +76,6 @@ equals(typeDescriptor: TypeDescriptor): boolean
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 获取两个TypeDescriptor对象进行比较
-  let typeA: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-  let typeB: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.python-script');
-  if (!typeA.equals(typeB)) {
-    console.info('typeA is not equal to typeB');
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let typeA: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-  if (!typeA) {
-    console.info('TypeDescriptor not found');
-    return;
-  }
-  let typeB: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.python-script');
-  if (!typeB) {
-    console.info('TypeDescriptor not found');
-    return;
-  }
-  if (!typeA.equals(typeB)) {
-    console.info('typeA is not equal to typeB');
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.info(`throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
 ## isHigherLevelType
 
 ```TypeScript
@@ -180,8 +85,6 @@ isHigherLevelType(type: string): boolean
 判断当前标准化数据类型是否是指定标准化数据类型的高层级类型。例如SOURCE_CODE为TYPE_SCRIPT的高层级类型，TEXT为SOURCE_CODE和TYPE_SCRIPT的高层级类型。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,48 +107,6 @@ isHigherLevelType(type: string): boolean
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 获取TypeDescriptor对象
-  let typeObj: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
-  let ret = typeObj.isHigherLevelType('general.type-script');
-  if (ret) {
-    console.info('type general.source-code is higher level type of type general.type-script');
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`isHigherLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let typeObj: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
-  if (!typeObj) {
-    console.info('TypeDescriptor not found');
-  }
-  let ret = typeObj.isHigherLevelType('general.type-script');
-  if (ret) {
-    console.info('type general.source-code is higher level type of type general.type-script');
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.info(`isHigherLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
 
 ## isLowerLevelType
 
@@ -257,8 +118,6 @@ isLowerLevelType(type: string): boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -280,48 +139,6 @@ isLowerLevelType(type: string): boolean
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let ret = typeObj.isLowerLevelType('general.source-code');
-    if(ret) {
-        console.info('type general.type-script is lower level type of type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let typeObj : uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
-    if (!typeObj) {
-        console.info('TypeDescriptor not found');
-        return;
-    }
-    let ret = typeObj.isLowerLevelType('general.source-code');
-    if(ret) {
-        console.info('type general.source-code is lower level type of type general.type-script');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.info(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
 
 ## belongingToTypes
 
@@ -334,8 +151,6 @@ set belongingToTypes(value: Array<string>)
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -353,8 +168,6 @@ set description(value: string)
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -370,8 +183,6 @@ set filenameExtensions(value: Array<string>)
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -389,8 +200,6 @@ set iconFile(value: string)
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -406,8 +215,6 @@ set mimeTypes(value: Array<string>)
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -425,8 +232,6 @@ set referenceURL(value: string)
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -442,8 +247,6 @@ set typeId(value: string)
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

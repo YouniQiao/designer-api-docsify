@@ -7,8 +7,6 @@ NodeController用于管理自定义节点的创建、显示、更新等操作，
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## aboutToAppear
@@ -23,8 +21,6 @@ aboutToAppear?(): void
 > 回调时机参考onAppear。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,11 +37,9 @@ aboutToDisappear?(): void
 当NodeController绑定的NodeContainer销毁时触发此回调。
 
 > **说明：**&gt;
-> 回调时机参考onDisAppear。
+> 回调时机参考[onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#ondisappear)。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,8 +56,6 @@ aboutToResize?(size: Size): void
 当NodeController绑定的NodeContainer布局时触发此回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,8 +85,6 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 > 判断该对象是否为undefined，防止后续使用此入参时出现[UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,8 +117,6 @@ onAttach?(): void
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -144,8 +132,6 @@ onBind?(containerId: number): void
 当NodeController与NodeContainer绑定后触发此回调。该回调后于 [onWillBind](#onwillbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,8 +158,6 @@ onDetach?(): void
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -189,8 +173,6 @@ onTouchEvent?(event: TouchEvent): void
 当NodeController绑定的NodeContainer收到触摸事件时触发此回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -214,8 +196,6 @@ onUnbind?(containerId: number): void
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -238,8 +218,6 @@ onWillBind?(containerId: number): void
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -261,8 +239,6 @@ onWillUnbind?(containerId: number): void
 当NodeController与NodeContainer即将解绑前触发此回调。该回调先于 [onUnbind](#onunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,8 +266,6 @@ rebuild(): void
 > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask)方法明确调用时的UI上下文。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

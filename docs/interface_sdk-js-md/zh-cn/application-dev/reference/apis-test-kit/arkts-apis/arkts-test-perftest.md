@@ -16,7 +16,7 @@ PerfTest提供白盒性能测试能力，供开发者在测试场景使用。支
 ## 导入模块
 
 ```TypeScript
-import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from 'kits/@kit.TestKit';
 ```
 
 ## 汇总

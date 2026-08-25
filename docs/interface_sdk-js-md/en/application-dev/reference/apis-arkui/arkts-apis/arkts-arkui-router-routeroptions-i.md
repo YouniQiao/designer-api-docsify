@@ -4,14 +4,12 @@ Describes the page routing options.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## params
@@ -26,8 +24,6 @@ Data that needs to be passed to the target page during redirection. The received
 **Type:** Object
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,8 +44,6 @@ Whether the corresponding page is recoverable.Default value: **true**.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## url
@@ -59,13 +53,15 @@ url: string
 ```
 
 URL of the target page, in either of the following formats:  
-- Absolute path of the page. The value is available in the pages list in the **config.json** file, for example: - pages/index/index - pages/detail/detail - special value. If the value of **url** is **"/"**, the application navigates to the home page. By default, the home page is set to the first item in the **src** value array.
+- Absolute path of the page. The value is available in the pages list in the **config.json** file, for example:  
+- pages/index/index  
+- pages/detail/detail  
+- special value. If the value of **url** is **"/"**, the application navigates to the home page. By default, the  
+home page is set to the first item in the **src** value array.
 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

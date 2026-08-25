@@ -4,8 +4,6 @@ Describes the control object.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ LEFT_EAR = 0
 Control object of left ear.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ Control object of right ear.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -55,8 +49,6 @@ LEFT_RIGHT_EAR = 2
 Control object of left and right ear.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

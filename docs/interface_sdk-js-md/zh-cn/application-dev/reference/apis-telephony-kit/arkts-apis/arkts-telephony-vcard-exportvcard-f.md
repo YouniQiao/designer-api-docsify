@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vcard } from '@kit.TelephonyKit';
+import { vcard } from 'kits/@kit.TelephonyKit';
 ```
 
 ## exportVCard
@@ -15,8 +15,6 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 将联系人导出为 VCF(vcard file)文件。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
@@ -42,73 +40,6 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-import { dataSharePredicates } from '@kit.ArkData';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let predicates = new dataSharePredicates.DataSharePredicates();
-        predicates.equalTo('NAME', 'Rose');
-        let options: vcard.VCardBuilderOptions = {
-            cardType: vcard.VCardType.VERSION_21,
-            charset: 'UTF-8'
-        };
-        vcard.exportVCard(this.context, predicates, options, (err: BusinessError, data: string) => {
-            console.error(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-        });
-    }
-}
-```
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-import { dataSharePredicates } from '@kit.ArkData';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let predicates = new dataSharePredicates.DataSharePredicates();
-        predicates.equalTo("NAME", "Rose");
-        let options: vcard.VCardBuilderOptions = {
-            cardType: vcard.VCardType.VERSION_21,
-            charset: "UTF-8"
-        };
-        vcard.exportVCard(this.context, predicates, options).then(() => {
-            console.info(`exportVCard success.`);
-        }).catch((err: BusinessError) => {
-            console.error(`exportVCard failed, promise: err->${JSON.stringify(err)}`);
-        });
-    }
-}
-```
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-import { dataSharePredicates } from '@kit.ArkData';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let predicates = new dataSharePredicates.DataSharePredicates();
-        predicates.equalTo("NAME", "Rose");
-
-        vcard.exportVCard(this.context, predicates, (err: BusinessError, data: string) => {
-            console.error(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-        });
-    }
-}
-```
-
 
 ## exportVCard
 
@@ -119,8 +50,6 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 将联系人导出为 VCF(vcard file)文件。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
@@ -151,10 +80,6 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-参见 [exportVCard](#exportvcard)
-
 
 ## exportVCard
 
@@ -165,8 +90,6 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 将联系人导出为 VCF(vcard file)文件。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_CONTACTS and ohos.permission.READ_CONTACTS
 
@@ -190,7 +113,3 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [exportVCard](#exportvcard)

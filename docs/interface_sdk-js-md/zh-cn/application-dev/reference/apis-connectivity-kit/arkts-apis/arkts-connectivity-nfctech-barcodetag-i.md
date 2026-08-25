@@ -6,8 +6,6 @@ BarcodeTag提供读取条形码标签的属性和访问I/O操作的能力，继�
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getBarcode
@@ -19,8 +17,6 @@ getBarcode(): Promise<ArrayBuffer>
 获取读到的Barcode类型的完整Tag。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 

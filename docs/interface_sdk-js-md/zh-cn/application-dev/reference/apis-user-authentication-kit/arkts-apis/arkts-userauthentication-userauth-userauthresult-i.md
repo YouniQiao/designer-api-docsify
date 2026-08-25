@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## authType
@@ -25,8 +23,6 @@ authType?: UserAuthType
 **类型：** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ enrolledState?: EnrolledState
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -53,18 +47,21 @@ enrolledState?: EnrolledState
 ## result
 
 ```TypeScript
-result: int
+result: number
 ```
 
 用户认证结果。若成功返回SUCCESS(12500000)，若失败返回相应错误码。错误码包括：  
-- FAIL(12500001)：认证不通过。 - CANCELED(12500003)：认证取消。 - TIMEOUT(12500004)：认证超时。 - LOCKED(12500009)：认证器锁定。 - NOT_ENROLLED(12500010)：未注册凭据。 - PIN_EXPIRED(12500013)：锁屏密码过期。  
+- FAIL(12500001)：认证不通过。  
+- CANCELED(12500003)：认证取消。  
+- TIMEOUT(12500004)：认证超时。  
+- LOCKED(12500009)：认证器锁定。  
+- NOT_ENROLLED(12500010)：未注册凭据。  
+- PIN_EXPIRED(12500013)：锁屏密码过期。  
 完整错误码列表参见[UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -81,8 +78,6 @@ token?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

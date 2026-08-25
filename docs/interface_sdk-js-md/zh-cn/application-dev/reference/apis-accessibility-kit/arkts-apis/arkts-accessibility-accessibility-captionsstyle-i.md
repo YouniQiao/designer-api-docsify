@@ -4,30 +4,26 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## backgroundColor
 
 ```TypeScript
-backgroundColor: int | string
+backgroundColor: number | string
 ```
 
 描述字幕背景颜色。number：HEX格式颜色，支持rgb或argb。string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。例：不透明红色，number：0xffff0000，string：'#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-**类型：** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
+**类型：** number \| string
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -38,16 +34,14 @@ backgroundColor: int | string
 ## fontColor
 
 ```TypeScript
-fontColor: int | string
+fontColor: number | string
 ```
 
 描述字幕字体颜色。number：HEX格式颜色，支持rgb或argb。string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。例：不透明红色，number：0xffff0000，string：'#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-**类型：** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
+**类型：** number \| string
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -67,8 +61,6 @@ fontEdgeType: CaptionsFontEdgeType
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -87,8 +79,6 @@ fontFamily: CaptionsFontFamily
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -98,16 +88,14 @@ fontFamily: CaptionsFontFamily
 ## fontScale
 
 ```TypeScript
-fontScale: int
+fontScale: number
 ```
 
 描述字幕字体缩放系数，单位%，参数范围1~200。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -118,16 +106,14 @@ fontScale: int
 ## windowColor
 
 ```TypeScript
-windowColor: int | string
+windowColor: number | string
 ```
 
 描述字幕窗口颜色。number：HEX格式颜色，支持rgb或argb。string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。例：不透明红色，number：0xffff0000，string：'#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
-**类型：** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
+**类型：** number \| string
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

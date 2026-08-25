@@ -4,8 +4,6 @@ Describes the callback invoked for audio interruption or focus gain events.When 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [InterruptEvent](arkts-audio-audio-interruptevent-i.md)
@@ -15,7 +13,7 @@ Describes the callback invoked for audio interruption or focus gain events.When 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## actionType
@@ -29,8 +27,6 @@ Event type. The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERR
 **Type:** [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Whether the focus is gained or released. **true** if the focus is gained or rele
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
@@ -70,8 +64,6 @@ Hint provided along with the audio interruption event.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
@@ -89,8 +81,6 @@ Type of the audio interruption event.
 **Type:** [InterruptType](arkts-audio-audio-interrupttype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

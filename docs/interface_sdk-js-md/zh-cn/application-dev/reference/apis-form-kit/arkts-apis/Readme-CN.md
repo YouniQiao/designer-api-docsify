@@ -16,12 +16,6 @@
   - [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)
   <!--Del-->
   - [FormExtensionAbility(系统接口)](arkts-form-app-form-formextensionability-formextensionability-c-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [OnAcquireFormDataFn(系统接口)](arkts-form-onacquireformdatafn-t-sys.md)<!--DelEnd-->
-  - [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md)
-  <!--Del-->
-  - [OnShareFormFn(系统接口)](arkts-form-onshareformfn-t-sys.md)<!--DelEnd-->
-  - [OnStopFn](arkts-form-onstopfn-t.md)
 <!--Del-->
 - [@ohos.app.form.formHost](arkts-app-form-formhost.md)<!--DelEnd-->
   <!--Del-->
@@ -67,17 +61,7 @@
   <!--Del-->
   - [off(系统接口)](arkts-form-formhost-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [offChangeSceneAnimationState(系统接口)](arkts-form-formhost-offchangesceneanimationstate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [offDeleteFormsCallback(系统接口)](arkts-form-formhost-offdeleteformscallback-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offFormOverflow(系统接口)](arkts-form-formhost-offformoverflow-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offFormUninstall(系统接口)](arkts-form-formhost-offformuninstall-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offGetFormRect(系统接口)](arkts-form-formhost-offgetformrect-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offGetLiveFormStatus(系统接口)](arkts-form-formhost-offgetliveformstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offGetWantParamsCallback(系统接口)](arkts-form-formhost-offgetwantparamscallback-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -87,17 +71,7 @@
   <!--Del-->
   - [on(系统接口)](arkts-form-formhost-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [onChangeSceneAnimationState(系统接口)](arkts-form-formhost-onchangesceneanimationstate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [onDeleteFormsCallback(系统接口)](arkts-form-formhost-ondeleteformscallback-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFormOverflow(系统接口)](arkts-form-formhost-onformoverflow-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFormUninstall(系统接口)](arkts-form-formhost-onformuninstall-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onGetFormRect(系统接口)](arkts-form-formhost-ongetformrect-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onGetLiveFormStatus(系统接口)](arkts-form-formhost-ongetliveformstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onGetWantParamsCallback(系统接口)](arkts-form-formhost-ongetwantparamscallback-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -206,35 +180,7 @@
   <!--Del-->
   - [off(系统接口)](arkts-form-formobserver-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [offCall(系统接口)](arkts-form-formobserver-offcall-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offFormAdd(系统接口)](arkts-form-formobserver-offformadd-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offFormRemove(系统接口)](arkts-form-formobserver-offformremove-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offMessage(系统接口)](arkts-form-formobserver-offmessage-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offNotifyInvisible(系统接口)](arkts-form-formobserver-offnotifyinvisible-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offNotifyVisible(系统接口)](arkts-form-formobserver-offnotifyvisible-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offRouter(系统接口)](arkts-form-formobserver-offrouter-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [on(系统接口)](arkts-form-formobserver-on-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onCall(系统接口)](arkts-form-formobserver-oncall-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFormAdd(系统接口)](arkts-form-formobserver-onformadd-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFormRemove(系统接口)](arkts-form-formobserver-onformremove-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onMessage(系统接口)](arkts-form-formobserver-onmessage-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onNotifyInvisible(系统接口)](arkts-form-formobserver-onnotifyinvisible-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onNotifyVisible(系统接口)](arkts-form-formobserver-onnotifyvisible-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onRouter(系统接口)](arkts-form-formobserver-onrouter-f-sys.md)<!--DelEnd-->
 - [@ohos.app.form.formProvider](arkts-app-form-formprovider.md)
   <!--Del-->
   - [activateSceneAnimation(系统接口)](arkts-form-formprovider-activatesceneanimation-f-sys.md)<!--DelEnd-->

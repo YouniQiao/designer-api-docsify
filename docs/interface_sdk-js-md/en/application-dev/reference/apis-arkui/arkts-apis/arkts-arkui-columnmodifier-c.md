@@ -2,11 +2,9 @@
 
 Defines Column Modifier@extends ColumnAttribute @implements AttributeModifier&lt;ColumnAttribute&gt;
 
-**Inheritance/Implementation:** ColumnModifier extends ColumnAttribute and implements AttributeModifier<ColumnAttribute>
+**Inheritance/Implementation:** ColumnModifier extends [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md#columnattribute) and implements AttributeModifier<ColumnAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: ColumnAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

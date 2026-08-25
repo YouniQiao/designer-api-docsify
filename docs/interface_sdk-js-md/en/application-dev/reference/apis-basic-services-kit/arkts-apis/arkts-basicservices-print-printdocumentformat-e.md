@@ -4,8 +4,6 @@ Enumerates the data formats.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## DOCUMENT_FORMAT_AUTO
@@ -17,8 +15,6 @@ DOCUMENT_FORMAT_AUTO = 0
 Auto-detected format.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ JPEG.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -49,8 +43,6 @@ DOCUMENT_FORMAT_PDF = 2
 PDF.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +58,6 @@ PostScript.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -82,8 +72,6 @@ Text.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Print.PrintFramework
@@ -97,8 +85,6 @@ DOCUMENT_FORMAT_RAW = 5
 RAW.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

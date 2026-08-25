@@ -4,14 +4,12 @@ XML解析选项，用于配置XmlPullParser的解析行为。开发者可通过s
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
+import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## attributeValueCallbackFunction
@@ -23,8 +21,6 @@ attributeValueCallbackFunction?: (name: string, value: string) => boolean
 解析属性和属性值，默认值undefined，表示不解析。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -47,8 +43,6 @@ attributeWithTagCallbackFunction?: AttributeWithTagCb
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -62,8 +56,6 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 解析开始标签、标签值和结束标签，默认值undefined，表示不解析。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -85,8 +77,6 @@ tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md)属性，默认值undefined，表示不解析。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -111,8 +101,6 @@ ignoreNameSpace?: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -128,8 +116,6 @@ supportDoctype?: boolean
 **类型：** boolean
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

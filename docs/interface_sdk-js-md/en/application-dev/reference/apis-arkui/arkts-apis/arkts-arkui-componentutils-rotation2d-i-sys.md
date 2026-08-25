@@ -4,8 +4,6 @@ Describes a rotation in 2D, which can be defined by rotation angle and rotation 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,13 +11,13 @@ Describes a rotation in 2D, which can be defined by rotation angle and rotation 
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'kits/@kit.ArkUI';
 ```
 
 ## angle
 
 ```TypeScript
-angle: double
+angle: number
 ```
 
 Rotation angle Information.
@@ -27,8 +25,6 @@ Rotation angle Information.
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,7 +35,7 @@ Rotation angle Information.
 ## centerX
 
 ```TypeScript
-centerX: double
+centerX: number
 ```
 
 Rotation centerX Information.
@@ -47,8 +43,6 @@ Rotation centerX Information.
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,7 +53,7 @@ Rotation centerX Information.
 ## centerY
 
 ```TypeScript
-centerY: double
+centerY: number
 ```
 
 Rotation centerY Information.
@@ -67,8 +61,6 @@ Rotation centerY Information.
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

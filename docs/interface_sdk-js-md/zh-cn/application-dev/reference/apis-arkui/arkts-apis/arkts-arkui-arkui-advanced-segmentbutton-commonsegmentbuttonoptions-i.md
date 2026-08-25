@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from '@kit.ArkUI';
+import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle
@@ -25,8 +23,6 @@ backgroundBlurStyle?: BlurStyle
 **类型：** BlurStyle
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,8 +43,6 @@ backgroundBorderRadius?: LengthMetrics
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -63,13 +57,11 @@ backgroundColor?: ResourceColor
 
 背景板颜色。默认值：\$r('sys.color.ohos_id_color_button_normal')值为undefined时，按默认值处理。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **默认值：** $r('sys.color.ohos_id_color_button_normal')
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,8 +80,6 @@ backgroundSystemMaterial?: uiMaterial.Material
 **类型：** uiMaterial.Material
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -111,8 +101,6 @@ borderRadiusMode?: BorderRadiusMode
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -127,13 +115,11 @@ buttonPadding?: Padding | Dimension
 
 按钮内边距。默认值：仅图标按钮和仅文字按钮默认值：`{ top: 4, right: 8, bottom: 4, left: 8 }`图标+文本按钮默认值：`{ top: 6, right: 8, bottom: 6, left: 8 }`单位：vp值为undefined时，按默认值处理。
 
-**类型：** [Padding](arkts-arkui-units-padding-i.md) \| Dimension
+**类型：** Padding \| [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** For text only / icon only buttons Padding { top: 4, right: 8, bottom: 4, left: 8 }. For text & icon buttons Padding { top: 6, right: 8, bottom: 6, left: 8 }.
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -153,8 +139,6 @@ direction?: Direction
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -169,11 +153,9 @@ fontColor?: ResourceColor
 
 按钮未选中态的文本颜色。默认值：\$r('sys.color.ohos_id_color_text_secondary')值为undefined时，按默认值处理。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -195,8 +177,6 @@ fontSize?: DimensionNoPercentage
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -217,8 +197,6 @@ fontWeight?: FontWeight
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -234,13 +212,11 @@ imageSize?: SizeOptions
 图片尺寸。默认值：{ width: 24, height: 24 }单位：vp值为undefined时，按默认值处理。  
 **说明：**`imageSize`属性仅对图标按钮和图标+文本按钮生效，对纯文本按钮无效果。
 
-**类型：** SizeOptions
+**类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **默认值：** SizeOptions { width: 24, height: 24 }
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -261,8 +237,6 @@ itemBorderRadius?: LengthMetrics
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -277,13 +251,11 @@ localizedButtonPadding?: LocalizedPadding
 
 按钮内边距，支持随布局方向（LTR/RTL）自适应。默认值：仅图标按钮和仅文字按钮默认值： `{ top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }`图标+文本按钮默认值： `{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8) }`值为undefined时，按默认值处理。
 
-**类型：** LocalizedPadding
+**类型：** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
 **默认值：** For text only / icon only buttons LocalizedPadding { top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }. For text & icon buttons LocalizedPadding {{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8)}.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -299,11 +271,9 @@ localizedTextPadding?: LocalizedPadding
 
 文本内边距，支持随布局方向（LTR/RTL）自适应。默认值：0单位：vp值为undefined时，按默认值处理。
 
-**类型：** LocalizedPadding
+**类型：** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -319,11 +289,9 @@ selectedBackgroundColor?: ResourceColor
 
 按钮选中态的背景板颜色。默认值：type为"tab"时，默认值为`\$r('sys.color.segment_button_checked_foreground_color')`。type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_emphasize')`。值为undefined时，按默认值处理。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -339,11 +307,9 @@ selectedFontColor?: ResourceColor
 
 按钮选中态的文本颜色。默认值：type为"tab"时，默认值为`\$r('sys.color.ohos_id_color_text_primary')`。type为"capsule"时，默认值为`\$r('sys.color.ohos_id_color_foreground_contrary')`。值为undefined时，按默认值处理。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -365,8 +331,6 @@ selectedFontSize?: DimensionNoPercentage
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -387,8 +351,6 @@ selectedFontWeight?: FontWeight
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -403,13 +365,11 @@ textPadding?: Padding | Dimension
 
 文本内边距。默认值：0单位：vp值为undefined时，按默认值处理。
 
-**类型：** [Padding](arkts-arkui-units-padding-i.md) \| Dimension
+**类型：** Padding \| [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** 0
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

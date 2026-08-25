@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isCellularDataEnabledSync
@@ -16,8 +16,6 @@ Checks whether the cellular data service is enabled. This API returns the result
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -37,16 +35,3 @@ Checks whether the cellular data service is enabled. This API returns the result
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-try {
-    let isEnabled: boolean = data.isCellularDataEnabledSync();
-    console.info(`isCellularDataEnabledSync success : ${isEnabled}`);
-} catch (err) {
-    console.error(`isCellularDataEnabledSync fail. code: ${err.code}, message: ${err.message}`);  
-}
-```

@@ -6,8 +6,6 @@ All the universal attributes except **responseRegion** are supported.In addition
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ blockBorderColor(value: ResourceColor)
 Sets the border color of the slider in the block direction.When **SliderBlockType.DEFAULT** is used, **blockBorderColor** sets the border color of the round slider.When **SliderBlockType.IMAGE** is used, **blockBorderColor** does not work as the slider has no border.When **SliderBlockType.SHAPE** is used, **blockBorderColor** sets the border color of the slider in a custom shape.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Sets the border width of the slider in the block direction.When **SliderBlockTyp
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -72,8 +66,6 @@ blockColor(value: ResourceColor)
 Sets the color of the thumb.When **SliderBlockType.DEFAULT** is used, **blockColor** sets the color of the round thumb.When **SliderBlockType.IMAGE** is used, **blockColor** does not work as the thumb has no fill color.When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thumb in a custom shape.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -97,8 +89,6 @@ Sets the color of the slider. Gradient colors are supported.When **SliderBlockTy
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -111,7 +101,7 @@ Sets the color of the slider. Gradient colors are supported.When **SliderBlockTy
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
 
 ## blockSize
 
@@ -123,8 +113,6 @@ Sets the size of the slider in the block direction.When the slider type is set t
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -135,7 +123,7 @@ Sets the size of the slider in the block direction.When the slider type is set t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md) | Yes |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes |
 
 ## blockStyle
 
@@ -146,8 +134,6 @@ blockStyle(value: SliderBlockStyle)
 Sets the style of the slider in the block direction.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,8 +157,6 @@ Creates a content modifier.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -183,7 +167,7 @@ Creates a content modifier.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[SliderConfiguration](arkts-arkui-sliderconfiguration-i.md)&gt; | Yes |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[SliderConfiguration](arkts-arkui-sliderconfiguration-i.md)&gt; | Yes |
 
 ## digitalCrownSensitivity
 
@@ -198,8 +182,6 @@ Sets the sensitivity to the digital crown rotation.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -210,7 +192,7 @@ Sets the sensitivity to the digital crown rotation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | Yes |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
 
 ## enableHapticFeedback
 
@@ -221,8 +203,6 @@ enableHapticFeedback(enabled: boolean)
 Specifies whether to enable haptic feedback.To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,8 +230,6 @@ Sets the maximum value.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** max
@@ -278,8 +256,6 @@ Sets the minimum value.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** min
@@ -301,8 +277,6 @@ minResponsiveDistance(value: number)
 Sets the minimum distance required for the slider to respond.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -326,8 +300,6 @@ Triggered when the slider is dragged or clicked.The **Begin** and **End** states
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -349,8 +321,6 @@ prefix(content: ComponentContent, options?: SliderPrefixOptions)
 Sets the prefix of the slider.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -375,8 +345,6 @@ Set the corner radius of the selected (highlighted) part of the slider.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -398,8 +366,6 @@ selectedColor(value: ResourceColor)
 Sets the color of the portion of the track between the minimum value and the thumb, representing the selected portion.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -423,8 +389,6 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -437,7 +401,7 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [selectedColor](#selectedcolor) | ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
+| [selectedColor](#selectedcolor) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
 
 ## showSteps
 
@@ -448,8 +412,6 @@ showSteps(value: boolean)
 Sets whether to display the step markers along the slider track.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -472,8 +434,6 @@ showSteps(value: boolean, options?: SliderShowStepOptions)
 Sets whether to display the step markers along the slider track.You can set custom accessibility text for each step value. If no accessibility text is provided, the numeric values are used.The accessibility text settings take effect only when the step markers are displayed.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -500,8 +460,6 @@ Sets whether to display a tooltip when the user drags the slider.When **directio
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -525,8 +483,6 @@ Sets the slide range.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -548,8 +504,6 @@ sliderInteractionMode(value: SliderInteraction)
 Sets the interaction mode between the user and the slider.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -573,8 +527,6 @@ Sets the step color.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -597,8 +549,6 @@ Sets the step size (diameter). If the value is 0, the step size is not displayed
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -620,8 +570,6 @@ suffix(content: ComponentContent, options?: SliderSuffixOptions)
 Sets the suffix of the slider.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -646,8 +594,6 @@ Sets the radius of the rounded corner of the track.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -670,8 +616,6 @@ Sets the background color of the track.Since API version 12, **LinearGradient** 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -682,7 +626,7 @@ Sets the background color of the track.Since API version 12, **LinearGradient** 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
 
 ## trackColorMetrics
 
@@ -693,8 +637,6 @@ trackColorMetrics(color: ColorMetricsLinearGradient)
 Sets the linear gradient background color of the track.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -717,8 +659,6 @@ trackThickness(value: Length)
 Sets the thickness of the track. If the value is less than or equal to 0, the default value is used.To ensure [SliderStyle](arkts-arkui-sliderstyle-e.md) works as expected for the thumb and track, [blockSize](#blocksize) should increase or decrease proportionally with **trackThickness**.Specially, when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**, trackThickness: [blockSize](#blocksize) = 1:4; when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet**, trackThickness: [blockSize](#blocksize) = 5:3.If the value of **trackThickness** or [blockSize](#blocksize) exceeds the width or height of the **Slider** component, the default value is used.When [SliderStyle](arkts-arkui-sliderstyle-e.md) is set to **OutSet**, if the specified value of [blockSize](#blocksize) exceeds the width or height of the **Slider** component, the default value is used, regardless of whether the value of **trackThickness** is valid or not.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

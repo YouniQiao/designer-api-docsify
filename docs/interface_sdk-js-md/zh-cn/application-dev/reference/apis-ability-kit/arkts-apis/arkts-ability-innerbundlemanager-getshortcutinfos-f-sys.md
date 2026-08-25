@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## getShortcutInfos
@@ -20,8 +20,6 @@ function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<Shor
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -55,8 +53,6 @@ function getShortcutInfos(bundleName: string): Promise<Array<ShortcutInfo>>
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

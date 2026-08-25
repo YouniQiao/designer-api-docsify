@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## isTokenizerSupported
@@ -15,8 +15,6 @@ function isTokenizerSupported(tokenizer: Tokenizer): boolean
 Checks whether the specified tokenizer is supported. This API returns the result synchronously.This API returns **true** if the specified tokenizer is supported; returns **false** otherwise.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -37,11 +35,3 @@ Checks whether the specified tokenizer is supported. This API returns the result
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let customType = relationalStore.Tokenizer.CUSTOM_TOKENIZER;
-let customTypeSupported = relationalStore.isTokenizerSupported(customType);
-console.info("custom tokenizer supported on current platform: " + customTypeSupported);
-```

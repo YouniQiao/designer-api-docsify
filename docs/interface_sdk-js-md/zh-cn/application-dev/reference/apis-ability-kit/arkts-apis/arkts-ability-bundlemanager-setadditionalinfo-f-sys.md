@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setAdditionalInfo
@@ -15,8 +15,6 @@ function setAdditionalInfo(bundleName: string, additionalInfo: string): void
 设置指定应用的额外信息。此接口仅供应用市场调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -40,22 +38,3 @@ function setAdditionalInfo(bundleName: string, additionalInfo: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700053](../errorcode-bundle.md#17700053-非应用市场调用) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let additionalInfo = "xxxxxxxxx,formUpdateLevel:4";
-
-try {
-  bundleManager.setAdditionalInfo(bundleName, additionalInfo);
-  hilog.info(0x0000, 'testTag', 'setAdditionalInfo successfully.');
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setAdditionalInfo failed. Cause: %{public}s', message);
-}
-```

@@ -4,8 +4,6 @@ Enumerates dialup scenarios.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ CALL_NORMAL = 0
 Common call.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -36,8 +32,6 @@ Privileged call.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ CALL_EMERGENCY = 2
 Emergency call.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 

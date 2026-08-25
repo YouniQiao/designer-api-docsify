@@ -4,8 +4,6 @@ Enumerates the status change types of the **param** element embedded in the same
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ADD
@@ -17,8 +15,6 @@ ADD = 0
 Triggered when a **param** element is added.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ Triggered when a **param** element is modified.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## DELETE
@@ -45,7 +39,5 @@ DELETE = 2
 Triggered when a **param** element is deleted.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core

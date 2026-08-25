@@ -4,8 +4,6 @@ Enumerates the modes in which elements are displayed along the main axis.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Stretch
@@ -17,8 +15,6 @@ Stretch
 The width of each page in the **Swiper** component equals the component's own width.Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use **STRETCH** instead.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -38,8 +34,6 @@ The width of each page in the **Swiper** component equals the maximum width of c
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AUTO_LINEAR](#auto_linear)
@@ -58,8 +52,6 @@ The width of each page in the **Swiper** component equals the component's own wi
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -77,8 +69,6 @@ AUTO_LINEAR
 The width of each page in the **Swiper** component equals the width of the leftmost child component in the viewport. This enumerated value behaves the same as setting [displayCount](arkts-arkui-swiper-attribute.md#displaycount) to **'auto'** (string type). For details, see [displayCount](arkts-arkui-swiper-attribute.md#displaycount).Note: This API is supported since API version 10 and deprecated since API version 12. You are advised to use Scroller.scrollTo instead.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 12
 

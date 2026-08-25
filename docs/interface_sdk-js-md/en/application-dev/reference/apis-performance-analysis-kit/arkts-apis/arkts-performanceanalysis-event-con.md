@@ -11,8 +11,6 @@ Application address sanitizer event. This is a system event name constant.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -27,8 +25,6 @@ Application crash event. This is a system event name constant.
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,8 +41,6 @@ Application freeze event. This is a system event name constant.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -61,8 +55,6 @@ Application task execution timeout event. This is a system event name constant.
 **Atomic service API**: This parameter can be used in atomic services since API version 21.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -79,8 +71,6 @@ Application killed event. This is a system event name constant.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -96,8 +86,6 @@ Event indicating the application launch duration. This is a system event name co
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -112,8 +100,6 @@ Application freeze warning event. This is a system event name constant.
 **Model restriction**: This API can be used only in the stage model. **Atomic service API**: This parameter can be used in atomic services since API version 26.0.0.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,8 +118,6 @@ Audio jank event. This is a system event name constant.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -148,8 +132,6 @@ Event indicating battery usage statistics. This is a system event name constant.
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -166,8 +148,6 @@ Event indicating a high CPU usage. This is a system event name constant.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -182,8 +162,6 @@ Distributed service startup event. This is a reserved application event name con
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -200,8 +178,6 @@ Main thread jank event. This is a system event name constant.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -216,8 +192,6 @@ Application resource leak event. This is a system event name constant.
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -234,8 +208,6 @@ ArkWeb fling jank event. This is a system event name constant.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -250,8 +222,6 @@ Event indicating frame loss during swiping. This is a system event name constant
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -268,8 +238,6 @@ User login event. This is a reserved application event name constant.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -284,8 +252,6 @@ User logout event. This is a reserved application event name constant.
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

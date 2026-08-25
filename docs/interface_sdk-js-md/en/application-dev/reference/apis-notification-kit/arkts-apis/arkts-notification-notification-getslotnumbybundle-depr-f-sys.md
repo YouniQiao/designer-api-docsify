@@ -15,8 +15,6 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md)
@@ -31,41 +29,8 @@ Obtains the number of notification slots of a specified application. This API us
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-let getSlotNumByBundleCallback = (err: Base.BusinessError, data: number) => {
-  if (err) {
-    console.info("getSlotNumByBundle failed " + JSON.stringify(err));
-  } else {
-    console.info("getSlotNumByBundle success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.getSlotNumByBundle(bundle, getSlotNumByBundleCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.getSlotNumByBundle(bundle).then((data: number) => {
-  console.info("getSlotNumByBundle success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`getSlotNumByBundle failed, code is ${err}`);
-});
-```
 
 
 ## getSlotNumByBundle
@@ -78,8 +43,6 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md)
@@ -94,14 +57,10 @@ Obtains the number of notification slots of a specified application. This API us
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;number & gt; |
-
-**Examples**
-
-See [getSlotNumByBundle](#getslotnumbybundle)

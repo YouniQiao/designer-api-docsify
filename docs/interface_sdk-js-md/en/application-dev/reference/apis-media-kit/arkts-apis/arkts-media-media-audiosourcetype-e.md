@@ -4,8 +4,6 @@ Enumerates the audio source types for video recording.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## AUDIO_SOURCE_TYPE_DEFAULT
@@ -18,8 +16,6 @@ Default audio input source.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## AUDIO_SOURCE_TYPE_MIC
@@ -31,8 +27,6 @@ AUDIO_SOURCE_TYPE_MIC = 1
 Microphone audio input source.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,8 +42,6 @@ Audio source in speech recognition scenarios.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION
@@ -61,8 +53,6 @@ AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION = 7
 Voice communication source.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -76,8 +66,6 @@ Voice message source.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## AUDIO_SOURCE_TYPE_CAMCORDER
@@ -89,7 +77,5 @@ AUDIO_SOURCE_TYPE_CAMCORDER = 13
 Audio source in camera recording scenarios.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder

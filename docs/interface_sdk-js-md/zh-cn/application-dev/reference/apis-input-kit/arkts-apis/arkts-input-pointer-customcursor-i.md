@@ -4,45 +4,39 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## 导入模块
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## focusX
 
 ```TypeScript
-focusX?: int
+focusX?: number
 ```
 
 自定义光标焦点的水平坐标。该坐标受自定义光标大小的限制。最小值为0，最大值为资源图的宽度最大值，该参数缺省时默认为0，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## focusY
 
 ```TypeScript
-focusY?: int
+focusY?: number
 ```
 
 自定义光标焦点的垂直坐标。该坐标受自定义光标大小的限制。最小值为0，最大值为资源图的高度最大值，该参数缺省时默认为0，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -57,7 +51,5 @@ pixelMap: image.PixelMap
 **类型：** image.PixelMap
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer

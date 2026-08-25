@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## constructor
@@ -24,8 +22,6 @@ constructor(context: common.Context)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -36,20 +32,6 @@ constructor(context: common.Context)
 | --- | --- | --- |
 | context | common.Context | 是 |
 
-**示例**
-
-其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-// ...
-
-function createAdLoader(context: common.Context): void {
-  const adLoader: advertising.AdLoader = new advertising.AdLoader(context);
-}
-```
-
 ## loadAd
 
 ```TypeScript
@@ -59,8 +41,6 @@ loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener)
 请求单广告位广告。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -83,37 +63,6 @@ loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener)
 | [21800003](../errorcode-ads.md#21800003-广告请求加载失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// ...
-function loadAd(context: common.Context, adRequestParams: advertising.AdRequestParams): void {
-  // 广告配置参数，开发者可根据项目实际情况设置
-  const adOptions: advertising.AdOptions = {};
-  // 广告请求回调监听
-  const adLoaderListener: advertising.AdLoadListener = {
-    onAdLoadFailure: (errorCode: number, errorMsg: string) => {
-      hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
-    },
-    onAdLoadSuccess: (ads: Array<advertising.Advertisement>) => {
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
-      // 保存请求到的广告内容用于展示
-      const returnAds: advertising.Advertisement[] = ads;
-    }
-  };
-  // 创建AdLoader广告对象
-  const adLoader: advertising.AdLoader = new advertising.AdLoader(context);
-  // 调用广告请求接口
-  adLoader.loadAd(adRequestParams, adOptions, adLoaderListener);
-}
-```
-
 ## loadAdWithMultiSlots
 
 ```TypeScript
@@ -123,8 +72,6 @@ loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener
 请求多广告位广告。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -146,35 +93,3 @@ loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) |
 | [21800003](../errorcode-ads.md#21800003-广告请求加载失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// ...
-function loadAdWithMultiSlots(context: common.Context, adRequestParamsArray: advertising.AdRequestParams[]): void {
-  // 广告配置参数，开发者可根据项目实际情况设置
-  const adOptions: advertising.AdOptions = {};
-  // 广告请求回调监听
-  const multiSlotsAdLoaderListener: advertising.MultiSlotsAdLoadListener = {
-    onAdLoadFailure: (errorCode: number, errorMsg: string) => {
-      hilog.error(0x0000, 'testTag', `Failed to load multiSlots ad. Code is ${errorCode}, message is ${errorMsg}`);
-    },
-    onAdLoadSuccess: (ads: Map<string, Array<advertising.Advertisement>>) => {
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading multiSlots ad');
-      // 保存请求到的广告内容用于展示
-      const returnAds: advertising.Advertisement[] = [];
-      ads.forEach((adsArray) => returnAds.push(...adsArray));
-    }
-  };
-  // 创建AdLoader广告对象
-  const adLoader: advertising.AdLoader = new advertising.AdLoader(context);
-  // 调用广告请求接口
-  adLoader.loadAdWithMultiSlots(adRequestParamsArray, adOptions, multiSlotsAdLoaderListener);
-}
-```

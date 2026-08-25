@@ -4,8 +4,6 @@ Defines a custom system event. You can use a common event API to obtain the even
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## COMPLETE
@@ -17,7 +15,5 @@ COMPLETE = 'ohos.request.event.COMPLETE'
 Task completion event. The returned event code can be **0x40** or **0x41**, depending on whether the task is successful or fails.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent

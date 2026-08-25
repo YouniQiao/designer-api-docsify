@@ -4,14 +4,12 @@ Describes audio capturer configurations.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## capturerInfo
@@ -26,8 +24,6 @@ Audio capturer information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## playbackCaptureConfig
@@ -41,8 +37,6 @@ Defines configuration for capturing played audio.This API is supported since API
 **Type:** [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 12
 
@@ -62,8 +56,6 @@ The playback capture mode for audio capturer. This can be a combination of the a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
@@ -79,7 +71,5 @@ Audio stream information.
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer

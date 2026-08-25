@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## 导入模块
 
 ```TypeScript
-import { videoProcessing } from '@kit.MediaKit';
+import { videoProcessing } from 'kits/@kit.MediaKit';
 ```
 
 ## getStatus
@@ -23,8 +21,6 @@ getStatus(): Promise<VideoProcessorStatus | undefined>
 获取当前视频处理功能的状态。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,8 +47,6 @@ offStatusChange(callback?: VideoProcessorStatusCallback): void
 取消注册视频处理功能状态变化的监听回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,8 +75,6 @@ onStatusChange(callback: VideoProcessorStatusCallback): void
 注册视频处理功能状态变化的监听回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

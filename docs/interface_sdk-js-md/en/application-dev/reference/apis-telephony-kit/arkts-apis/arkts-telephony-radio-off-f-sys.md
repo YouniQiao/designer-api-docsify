@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## off('imsRegStateChange')
@@ -15,8 +15,6 @@ function off(type: 'imsRegStateChange', slotId: number, imsType: ImsServiceType,
 Unsubscribe from imsRegStateChange event.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -44,13 +42,3 @@ Unsubscribe from imsRegStateChange event.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-let slotId: number = 0;
-let mode: radio.ImsServiceType = radio.ImsServiceType.TYPE_VIDEO;
-radio.off('imsRegStateChange', slotId, mode, (data: radio.ImsRegInfo) => {
-    console.info(`off imsRegStateChange success, callback: data->${JSON.stringify(data)}`);
-});
-```

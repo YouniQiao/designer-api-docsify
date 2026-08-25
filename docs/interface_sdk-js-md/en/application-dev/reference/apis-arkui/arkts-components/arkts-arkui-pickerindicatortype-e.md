@@ -4,8 +4,6 @@ Enumerates the types of the selected item indicator.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BACKGROUND
@@ -17,8 +15,6 @@ BACKGROUND = 0
 Identifies the selected item by adding a background to it.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ DIVIDER = 1
 Identifies the selected item by adding dividers above and below its edges.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

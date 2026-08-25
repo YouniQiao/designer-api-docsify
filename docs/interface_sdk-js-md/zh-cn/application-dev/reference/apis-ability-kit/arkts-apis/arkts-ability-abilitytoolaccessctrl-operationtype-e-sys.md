@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ CLI = 0x01
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ API = 0x02
 API操作。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getKeyProperties
@@ -15,8 +15,6 @@ function getKeyProperties(keyAlias: string, options: HuksOptions, callback: Asyn
 Obtains key properties. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -33,31 +31,6 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-huks.getKeyProperties(keyAlias, emptyOptions, (err, data) => {
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.getKeyProperties(keyAlias, emptyOptions);
-```
-
 
 ## getKeyProperties
 
@@ -68,8 +41,6 @@ function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksR
 Obtains key properties. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -89,7 +60,3 @@ Obtains key properties. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; |
-
-**Examples**
-
-See [getKeyProperties](#getkeyproperties)

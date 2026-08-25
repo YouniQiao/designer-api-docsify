@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## stopDiscoverPrinter
@@ -15,8 +15,6 @@ function stopDiscoverPrinter(callback: AsyncCallback<void>): void
 Stops discovering printers. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -37,32 +35,6 @@ Stops discovering printers. This API uses an asynchronous callback to return the
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.stopDiscoverPrinter((err: BusinessError) => {
-    if (err) {
-        console.error('failed to stop Discover Printer because : ' + JSON.stringify(err));
-    } else {
-        console.info('stop Discover Printer success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.stopDiscoverPrinter().then(() => {
-    console.info('stop Discovery success');
-}).catch((error: BusinessError) => {
-    console.error('failed to stop Discovery because : ' + JSON.stringify(error));
-})
-```
-
 
 ## stopDiscoverPrinter
 
@@ -73,8 +45,6 @@ function stopDiscoverPrinter(): Promise<void>
 Stops discovering printers. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -94,7 +64,3 @@ Stops discovering printers. This API uses a promise to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [stopDiscoverPrinter](#stopdiscoverprinter)

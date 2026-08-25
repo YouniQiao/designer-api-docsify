@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## unloadCallUI
@@ -15,8 +15,6 @@ function unloadCallUI(): Promise<boolean>
 Unload callUI.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 

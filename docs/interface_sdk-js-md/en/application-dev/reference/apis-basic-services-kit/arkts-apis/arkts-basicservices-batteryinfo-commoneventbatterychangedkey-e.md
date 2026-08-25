@@ -4,8 +4,6 @@ Enumerates keys for querying the additional information about the **COMMON_EVENT
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## EXTRA_SOC
@@ -17,8 +15,6 @@ EXTRA_SOC = 'soc'
 Remaining battery level in percentage.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -32,8 +28,6 @@ Battery charging status of the device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## EXTRA_HEALTH_STATE
@@ -45,8 +39,6 @@ EXTRA_HEALTH_STATE = 'healthState'
 Battery health status of the device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -60,8 +52,6 @@ Type of the charger connected to the device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## EXTRA_VOLTAGE
@@ -73,8 +63,6 @@ EXTRA_VOLTAGE = 'voltage'
 Battery voltage of the device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -88,8 +76,6 @@ Battery technology of the device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## EXTRA_TEMPERATURE
@@ -101,8 +87,6 @@ EXTRA_TEMPERATURE = 'temperature'
 Battery temperature of the device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -116,8 +100,6 @@ Whether the battery is supported by the device or installed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## EXTRA_CAPACITY_LEVEL
@@ -129,7 +111,5 @@ EXTRA_CAPACITY_LEVEL = 'capacityLevel'
 Battery level of the device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

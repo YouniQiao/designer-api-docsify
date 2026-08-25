@@ -4,14 +4,12 @@ The FastBuffer class is a container type for dealing with binary data directly. 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary

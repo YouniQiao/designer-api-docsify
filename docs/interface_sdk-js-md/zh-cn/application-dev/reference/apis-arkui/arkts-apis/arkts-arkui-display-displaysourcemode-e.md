@@ -4,8 +4,6 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## MAIN
@@ -17,8 +15,6 @@ MAIN = 1
 表示设备当前为主屏。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ NONE = 0
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -49,8 +43,6 @@ EXTEND = 3
 表示设备当前为扩展显示模式。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ MIRROR = 2
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -81,8 +71,6 @@ ALONE = 4
 表示设备当前为异源显示模式。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

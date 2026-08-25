@@ -4,8 +4,6 @@ Enumerates the NFC Forum tag types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NFC_FORUM_TYPE_1
@@ -17,8 +15,6 @@ NFC_FORUM_TYPE_1 = 1
 NFC Forum tag type 1.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ NFC Forum tag type 2.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -49,8 +43,6 @@ NFC_FORUM_TYPE_3 = 3
 NFC Forum tag type 3.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ NFC Forum tag type 4.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -81,8 +71,6 @@ MIFARE_CLASSIC = 101
 MIFARE Classic.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

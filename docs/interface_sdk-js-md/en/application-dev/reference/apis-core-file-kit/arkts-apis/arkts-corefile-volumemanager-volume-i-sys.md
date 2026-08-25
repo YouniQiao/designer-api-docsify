@@ -4,8 +4,6 @@ Get All Volumes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Get All Volumes.
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## description
@@ -27,8 +25,6 @@ Description of the volume.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -46,8 +42,6 @@ ID of the disk to which the volume belongs. A disk can have one or more volumes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Extra information of the volume.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,8 +76,6 @@ File system type. Common file systems are **ext2**, **vfat**, and **NTFS**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -102,8 +92,6 @@ Volume ID, in the vol-{Primary device ID}-{Secondary device ID} format. The prim
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -111,16 +99,14 @@ Volume ID, in the vol-{Primary device ID}-{Secondary device ID} format. The prim
 ## partitionNum
 
 ```TypeScript
-partitionNum?: int
+partitionNum?: number
 ```
 
 Partition number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,8 +126,6 @@ Path of the volume mounted. Generally, the path is **\/mnt/data/external/{uuid}*
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -158,8 +142,6 @@ Whether the volume can be removed. Currently, only removable storage devices are
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -167,7 +149,7 @@ Whether the volume can be removed. Currently, only removable storage devices are
 ## state
 
 ```TypeScript
-state: int
+state: number
 ```
 
 Volume status.  
@@ -176,11 +158,9 @@ Volume status.
 **2**: The volume is mounted.  
 **3**: The volume is being ejected.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -197,8 +177,6 @@ Volume UUID, which uniquely identifies a volume irrespective of the card inserti
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 

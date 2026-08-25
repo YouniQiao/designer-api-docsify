@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { manager } from '@kit.ConnectivityKit';
+import { manager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getLocalName
@@ -15,8 +15,6 @@ function getLocalName(): string
 Queries the NearLink name on the local device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

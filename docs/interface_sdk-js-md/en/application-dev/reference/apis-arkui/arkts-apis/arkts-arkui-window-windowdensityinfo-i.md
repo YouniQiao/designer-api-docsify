@@ -4,29 +4,25 @@ Describes the information about the display density of the screen where the wind
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## customDensity
 
 ```TypeScript
-customDensity: double
+customDensity: number
 ```
 
 Custom display size scale factor of the window. The value ranges from 0.5 to 4.0. If this parameter is left unspecified, the system's display size scale factor is used. This parameter takes effect only for the main window. For the child window or system window, it is equivalent to the system's display size scale factor (**systemDensity**).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -35,16 +31,14 @@ Custom display size scale factor of the window. The value ranges from 0.5 to 4.0
 ## defaultDensity
 
 ```TypeScript
-defaultDensity: double
+defaultDensity: number
 ```
 
 Default display size scale factor for the screen where the window is located. The value ranges from 0.5 to 4.0 and varies with the screen.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -53,16 +47,14 @@ Default display size scale factor for the screen where the window is located. Th
 ## systemDensity
 
 ```TypeScript
-systemDensity: double
+systemDensity: number
 ```
 
 System's display size scale factor for the screen where the window is located. The value ranges from 0.5 to 4.0 and varies according to user settings.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

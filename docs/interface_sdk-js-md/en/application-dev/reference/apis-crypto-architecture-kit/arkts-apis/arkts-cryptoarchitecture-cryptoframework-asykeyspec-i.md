@@ -4,8 +4,6 @@ Defines the asymmetric key parameters for creating a key generator. You need to 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -13,7 +11,7 @@ Defines the asymmetric key parameters for creating a key generator. You need to 
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## algName
@@ -27,8 +25,6 @@ Asymmetric key algorithm, for example, **RSA**, **DSA**, **ECC**, **SM2**, **Ed2
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -47,8 +43,6 @@ Key parameter type, which is used to distinguish public and private key paramete
 **Type:** [AsyKeySpecType](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

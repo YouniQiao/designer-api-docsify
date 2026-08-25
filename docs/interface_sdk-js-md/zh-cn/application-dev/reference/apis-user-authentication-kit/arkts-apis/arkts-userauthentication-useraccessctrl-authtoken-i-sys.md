@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAccessCtrl } from '@kit.UserAuthenticationKit';
+import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## authTrustLevel
@@ -27,8 +25,6 @@ authTrustLevel: userAuth.AuthTrustLevel
 **类型：** userAuth.AuthTrustLevel
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -46,8 +42,6 @@ authType: userAuth.UserAuthType
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ challenge: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -82,8 +74,6 @@ credentialId?: bigint
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +89,6 @@ enrolledId?: bigint
 **类型：** bigint
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -118,8 +106,6 @@ secureUid?: bigint
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -135,8 +121,6 @@ AuthToken签发后经过的时间。自AuthToken签发至当前的时间间隔�
 **类型：** bigint
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -154,8 +138,6 @@ tokenType: AuthTokenType
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -163,16 +145,14 @@ tokenType: AuthTokenType
 ## userId
 
 ```TypeScript
-userId: int
+userId: number
 ```
 
 用户ID。表示完成认证的用户标识，取值为非负整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

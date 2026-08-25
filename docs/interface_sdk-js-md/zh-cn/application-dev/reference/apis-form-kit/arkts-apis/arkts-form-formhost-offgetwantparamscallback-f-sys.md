@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## offGetWantParamsCallback
@@ -15,8 +15,6 @@ function offGetWantParamsCallback(callback?: formInfo.GetWantParamsCallback): vo
 取消订阅获取卡片参数事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -39,34 +37,3 @@ function offGetWantParamsCallback(callback?: formInfo.GetWantParamsCallback): vo
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.offGetWantParamsCallback();
-  console.info(`offGetWantParamsCallback success`);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.offGetWantParamsCallback();
-  console.info(`offGetWantParamsCallback success`);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```

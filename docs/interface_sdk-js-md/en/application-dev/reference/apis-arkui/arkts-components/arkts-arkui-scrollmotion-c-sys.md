@@ -4,8 +4,6 @@ Rolling animation model: You can build rolling animation based on the initial po
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,8 +24,6 @@ constructor(position: number, velocity: number, min: number, max: number, prop: 
 Constructor parameters
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 22
 

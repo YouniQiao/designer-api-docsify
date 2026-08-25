@@ -4,14 +4,12 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
 ```
 
 ## bundleName
@@ -25,8 +23,6 @@ Web原生消息扩展应用的包名。
 **类型：** string
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ Web原生消息扩展连接的唯一标识，由connectNative方法返回，用�
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -62,8 +56,6 @@ extensionOrigin: string
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -79,8 +71,6 @@ Web原生消息扩展的进程ID。
 **类型：** number
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

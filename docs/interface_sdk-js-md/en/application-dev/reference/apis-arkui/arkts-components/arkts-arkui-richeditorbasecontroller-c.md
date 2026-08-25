@@ -2,11 +2,9 @@
 
 Represents the base class of the **RichEditor** component controller.
 
-**Inheritance/Implementation:** RichEditorBaseController implements TextEditControllerEx
+**Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-texteditcontrollerex-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ Closes the custom or default context menu on selection.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -43,8 +39,6 @@ The capability of deleting characters is provided. If no content is selected, th
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -60,8 +54,6 @@ getCaretOffset(): number
 Obtains the current caret position.If the caret position cannot be obtained (for example, the controller is not bound to a component), -1 is returned.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +77,6 @@ Obtains the relative position of the caret in the **RichEditor** component. If t
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -97,7 +87,7 @@ Obtains the relative position of the caret in the **RichEditor** component. If t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| RectResult \| undefined |
+| [RectResult](arkts-arkui-rectresult-i.md) \| undefined |
 
 ## getLayoutManager
 
@@ -108,8 +98,6 @@ getLayoutManager(): LayoutManager
 Obtains a **LayoutManager** object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,8 +121,6 @@ Obtains the preview text.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -156,8 +142,6 @@ getTypingStyle(): RichEditorTextStyle
 Obtains the preset text style of a user.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,8 +165,6 @@ Obtains the editing state of this **RichEditor** component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -205,8 +187,6 @@ Scroll the input field component to make the specified content visible.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -226,8 +206,6 @@ setCaretOffset(offset: number): boolean
 Sets the cursor offset.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,8 +240,6 @@ and the menu position will remain unchanged.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -276,7 +252,7 @@ and the menu position will remain unchanged.
 | --- | --- | --- |
 | selectionStart | number | Yes |
 | selectionEnd | number | Yes |
-| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | No |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No |
 
 ## setStyledPlaceholder
 
@@ -287,8 +263,6 @@ setStyledPlaceholder(styledString: StyledString): void
 Set the styledString placeholder.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,8 +286,6 @@ Sets the preset paragraph style. The input text takes effect only when the compo
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -336,8 +308,6 @@ Sets the preset typing style.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -359,8 +329,6 @@ stopEditing(): void
 Exits the editing state.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

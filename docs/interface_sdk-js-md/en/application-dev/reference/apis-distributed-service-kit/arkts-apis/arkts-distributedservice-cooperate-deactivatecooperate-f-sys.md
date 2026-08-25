@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## deactivateCooperate
@@ -15,8 +15,6 @@ function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>
 Stops screen hopping. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
@@ -39,38 +37,6 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.deactivateCooperate(false, (error: BusinessError) => {
-    if (error) {
-      console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Stop Keyboard mouse crossing success.`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.deactivateCooperate(false).then(() => {
-    console.info(`Stop Keyboard mouse crossing success.`);
-  }, (error: BusinessError) => {
-    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## deactivateCooperate
 
@@ -81,8 +47,6 @@ function deactivateCooperate(isUnchained: boolean): Promise<void>
 Stops screen hopping. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
@@ -108,7 +72,3 @@ Stops screen hopping. This API uses a promise to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [deactivateCooperate](#deactivatecooperate)

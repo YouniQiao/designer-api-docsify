@@ -4,8 +4,6 @@ Enumerates the preferred device categories available for recording with Bluetoot
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## PREFERRED_NONE
@@ -17,8 +15,6 @@ PREFERRED_NONE = 0
 No specific device preference.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ Prefers using Bluetooth or NearLink devices for recording; whether to use low-la
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## PREFERRED_LOW_LATENCY
@@ -46,8 +40,6 @@ Prefers using Bluetooth or NearLink devices in low-latency mode for recording.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## PREFERRED_HIGH_QUALITY
@@ -59,7 +51,5 @@ PREFERRED_HIGH_QUALITY = 3
 Prefers using Bluetooth or NearLink devices in high-quality mode for recording.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core

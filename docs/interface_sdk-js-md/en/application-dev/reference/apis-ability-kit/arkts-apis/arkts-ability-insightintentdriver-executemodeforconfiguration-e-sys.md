@@ -4,8 +4,6 @@ Enumerates the execution modes supported by an [intent developed using a configu
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ FOREGROUND = 0
 The intent bound to the UIAbility can run in the foreground.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ BACKGROUND = 1
 The intent bound to the UIAbility can run in the background.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

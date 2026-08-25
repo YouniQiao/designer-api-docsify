@@ -6,14 +6,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## abstract
@@ -28,29 +26,9 @@ abstract?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-## textAbstract
-
-```TypeScript
-set textAbstract(value: string | undefined)
-```
-
-表示文本摘要。
-
-**类型：** string
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -66,28 +44,8 @@ set textContent(value: string)
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let text = new unifiedDataChannel.PlainText();
-text.textContent = 'this is textContent';
-text.abstract = 'This is abstract';
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let text = new unifiedDataChannel.PlainText();
-text.textContent = 'this is textContent';
-text.textAbstract = 'This is a text abstract';
-```

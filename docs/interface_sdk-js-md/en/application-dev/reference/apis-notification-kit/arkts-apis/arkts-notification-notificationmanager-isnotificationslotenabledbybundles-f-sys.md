@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isNotificationSlotEnabledByBundles
@@ -15,8 +15,6 @@ function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: 
 Checks whether a notification slot type is enabled for the specified applications in batch. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

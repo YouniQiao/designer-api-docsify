@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension
 
 ## 导入模块
 
 ```TypeScript
-import { wifiext } from '@kit.ConnectivityKit';
+import { wifiext } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## 汇总

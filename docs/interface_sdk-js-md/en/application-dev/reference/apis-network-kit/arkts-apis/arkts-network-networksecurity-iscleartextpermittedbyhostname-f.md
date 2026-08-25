@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
+import { networkSecurity } from 'kits/@kit.NetworkKit';
 ```
 
 ## isCleartextPermittedByHostName
@@ -15,8 +15,6 @@ export function isCleartextPermittedByHostName(hostName: string): boolean
 Checks whether host name–based plaintext HTTP access is allowed from the preset **network_config.json** file of the application. By default, plaintext HTTP access is allowed.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -39,16 +37,3 @@ Checks whether host name–based plaintext HTTP access is allowed from the prese
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
-
-try {
-  let result: boolean = networkSecurity.isCleartextPermittedByHostName("xxx");
-  console.info(`isCleartextPermitted Result: ${JSON.stringify(result)}`);
-} catch (error) {
-  console.error(`isCleartextPermitted Error: ${JSON.stringify(error)}`);
-}
-```

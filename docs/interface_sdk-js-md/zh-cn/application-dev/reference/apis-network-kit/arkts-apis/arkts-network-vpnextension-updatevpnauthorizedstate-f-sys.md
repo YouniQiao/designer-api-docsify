@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## updateVpnAuthorizedState
@@ -15,8 +15,6 @@ function updateVpnAuthorizedState(bundleName: string): boolean
 更新VPN对话框授权信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.MANAGE_VPN
 

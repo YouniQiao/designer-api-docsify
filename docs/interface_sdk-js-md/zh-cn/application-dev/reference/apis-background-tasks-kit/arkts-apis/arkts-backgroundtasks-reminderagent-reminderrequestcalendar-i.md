@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md)
@@ -17,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## dateTime
@@ -31,8 +29,6 @@ dateTime: LocalDateTime
 **类型：** LocalDateTime
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -52,8 +48,6 @@ repeatDays?: Array<number>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** repeatDays
@@ -71,8 +65,6 @@ repeatMonths?: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

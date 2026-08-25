@@ -6,8 +6,6 @@ Defines the base class **BaseSpan**, including the universal attributes of the *
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ baselineOffset(value: LengthMetrics): T
 Sets the offset of the baseline. This attribute coexists with the **baselineOffset** attribute of the parent component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +50,6 @@ textBackgroundStyle(style: TextBackgroundStyle): T
 Background style. This attribute prioritizes the value separately set for the component. If it is not set, the component can inherit the settings from its parent ContainerSpan.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,15 +4,13 @@ Defines the accessibility event information. An accessibility event is generated
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## elementId
@@ -26,8 +24,6 @@ ID of the element that is actively focused. Active focus means that the app acti
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -44,8 +40,6 @@ Specific event type, which identifies the category of the current accessibility 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## extraInfo
@@ -59,8 +53,6 @@ For TextArea, TextInput, SearchField, and RichEdit components, when text content
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -76,8 +68,6 @@ Target element on which the event occurs. When the accessibility event involves 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## textAnnouncedForAccessibility
@@ -92,8 +82,6 @@ Content actively announced. When the app needs to actively announce content, set
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## timeStamp
@@ -107,7 +95,5 @@ Event timestamp, which is a non-negative integer in milliseconds. The default va
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

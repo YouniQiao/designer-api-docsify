@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getOtaUpdatePolicy
@@ -15,8 +15,6 @@ function getOtaUpdatePolicy(admin: Want): OtaUpdatePolicy
 Checks the update policy. This API is applicable to scenarios where you need to obtain the current OTA update policy configuration of the device, to verify whether the policy is correctly delivered, or to obtain the current policy configuration before making policy adjustments.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -44,22 +42,3 @@ Checks the update policy. This API is applicable to scenarios where you need to 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let policy: systemManager.OtaUpdatePolicy= systemManager.getOtaUpdatePolicy(wantTemp);
-  console.info(`Succeeded in getting update policy: ${JSON.stringify(policy)}`);
-} catch (err) {
-  console.error(`Failed to get update policy. Code is ${err.code}, message is ${err.message}`);
-}
-```

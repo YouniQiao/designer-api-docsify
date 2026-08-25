@@ -4,8 +4,6 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## DATABIT_8
@@ -17,8 +15,6 @@ DATABIT_8 = 8
 报文的有效数据位宽为8比特。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -32,8 +28,6 @@ DATABIT_7 = 7
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## DATABIT_6
@@ -46,8 +40,6 @@ DATABIT_6 = 6
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## DATABIT_5
@@ -59,7 +51,5 @@ DATABIT_5 = 5
 报文的有效数据位宽为5比特。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial

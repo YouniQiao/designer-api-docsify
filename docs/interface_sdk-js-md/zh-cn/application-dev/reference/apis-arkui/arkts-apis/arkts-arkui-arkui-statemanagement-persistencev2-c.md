@@ -6,14 +6,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
 ```
 
 ## globalConnect
@@ -41,8 +39,6 @@ static globalConnect<T extends object>(
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -60,46 +56,6 @@ static globalConnect<T extends object>(
 | 类型 |
 | --- |
 | T \| undefined |
-
-**示例**
-
-如下展示globalConnect持久化Map类型的示例代码：
-
-```TypeScript
-import { PersistenceV2 } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Page1 {
-  // globalConnect支持持久化Map类型的数据
-  @Local map: Map<number, number> = PersistenceV2.globalConnect({
-    type: Map<number, number>, defaultCreator: () => new Map<number, number>()
-  })!;
-  output: string[] = [];
-
-  // 启动应用，第一次进入，展示restored Map.size=0, map.get(0)=undefined, map.get(1)=undefined, map.get(2)=undefined
-  // 关闭应用，第二次进入，展示restored Map.size=1, map.get(0)=0, map.get(1)=undefined, map.get(2)=undefined
-  // 关闭应用，第三次进入，展示restored Map.size=2, map.get(0)=0, map.get(1)=1, map.get(2)=undefined
-  // 关闭应用，第四次进入，展示restored Map.size=3, map.get(0)=0, map.get(1)=1, map.get(2)=2
-  aboutToAppear(): void {
-    const restoredMapSize = this.map.size;
-    this.output.push(`restored Map.size=${restoredMapSize}, map.get(0)=${this.map.get(0)}, map.get(1)=${this.map.get(1)}, map.get(2)=${this.map.get(2)}`);
-    this.map.set(restoredMapSize, restoredMapSize);
-    // 需要手工持久化
-    PersistenceV2.save('Map');
-  }
-
-  build() {
-    Column() {
-      Row() {
-        Text(this.output.join('\n\n'))
-          .fontSize(24)
-      }
-    }
-    .width('100%')
-  }
-}
-```
 
 ## globalConnect
 
@@ -119,8 +75,6 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -139,10 +93,6 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
 | --- |
 | T \| undefined |
 
-**示例**
-
-参见 [globalConnect](#globalconnect)
-
 ## notifyOnError
 
 ```TypeScript
@@ -152,8 +102,6 @@ static notifyOnError(callback: PersistenceErrorCallback | undefined): void
 注册持久化失败时的回调函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -166,15 +114,6 @@ static notifyOnError(callback: PersistenceErrorCallback | undefined): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md) \| undefined | 是 |
-
-**示例**
-
-```TypeScript
-// 持久化失败时调用
-PersistenceV2.notifyOnError((key: string, reason: string, msg: string) => {
-  console.error(`error key: ${key}, reason: ${reason}, message: ${msg}`);
-});
-```
 
 ## save
 
@@ -192,8 +131,6 @@ static save<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -205,21 +142,3 @@ static save<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 |
-
-**示例**
-
-```TypeScript
-@ObservedV2
-class SampleClass {
-  @Trace value: number = 0;
-}
-
-// 假设PersistenceV2中存在key为key_as2的键，持久化该键值对数据
-PersistenceV2.save('key_as2');
-
-// 假设PersistenceV2中存在key为SampleClass的键，持久化该键值对数据
-PersistenceV2.save(SampleClass);
-
-// 假设PersistenceV2中不存在key为key_as1的键，无意义的操作
-PersistenceV2.save('key_as1');
-```

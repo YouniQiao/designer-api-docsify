@@ -10,7 +10,7 @@ TestRunner模块提供了框架测试的能力。包括准备单元测试环境�
 ## 导入模块
 
 ```TypeScript
-import { TestRunner } from '@kit.TestKit';
+import { TestRunner } from 'kits/@kit.TestKit';
 ```
 
 ## 汇总
@@ -25,6 +25,4 @@ import { TestRunner } from '@kit.TestKit';
 
 | 名称 |
 | --- |
-| [OnPrepareFn](arkts-test-onpreparefn-t.md) |
-| [OnRunFn](arkts-test-onrunfn-t.md) |
 | [OnStopFn](arkts-test-onstopfn-t.md) |

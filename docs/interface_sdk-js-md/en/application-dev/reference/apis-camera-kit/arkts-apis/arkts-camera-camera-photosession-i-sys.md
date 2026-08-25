@@ -7,14 +7,12 @@
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSessionConflictFunctions
@@ -26,8 +24,6 @@ getSessionConflictFunctions(): Array<PhotoConflictFunctions>
 Gets session conflict functions.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -54,8 +50,6 @@ getSessionFunctions(outputCapability: CameraOutputCapability): Array<PhotoFuncti
 Gets session functions.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -90,8 +84,6 @@ Unsubscribe from camera feature detection status change events.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -110,14 +102,6 @@ Unsubscribe from camera feature detection status change events.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-function unregisterFeatureDetectionStatus(photoSession: camera.PhotoSession, featureType: camera.SceneFeatureType): void {
-  photoSession.off('featureDetection', featureType);
-}
-```
-
 ## off('effectSuggestionChange')
 
 ```TypeScript
@@ -127,8 +111,6 @@ off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionTyp
 Unsubscribes from effect suggestion event callback.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -151,8 +133,6 @@ Unsubscribes from LCD flash status change events.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -170,93 +150,6 @@ Unsubscribes from LCD flash status change events.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-function unregisterLcdFlashStatus(photoSession: camera.PhotoSession): void {
-  photoSession.off('lcdFlashStatus');
-}
-```
-
-## offEffectSuggestionChange
-
-```TypeScript
-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void
-```
-
-Unsubscribes from effect suggestion event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No |
-
-## offFeatureDetection
-
-```TypeScript
-offFeatureDetection(featureType: SceneFeatureType, callback?: AsyncCallback<SceneFeatureDetectionResult>): void
-```
-
-Unsubscribes from feature detection result.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [featureType](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## offLcdFlashStatus
-
-```TypeScript
-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
-```
-
-Unsubscribes from lcd flash status.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## on('featureDetection')
 
 ```TypeScript
@@ -266,8 +159,6 @@ on(type: 'featureDetection', featureType: SceneFeatureType, callback: AsyncCallb
 Subscribe to scene feature detection status change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -287,25 +178,6 @@ Subscribe to scene feature detection status change events. This API uses an asyn
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, result: camera.SceneFeatureDetectionResult): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`feature type: ${result.featureType}`);
-  console.info(`feature status: ${result.detected}`);
-}
-
-function registerFeatureDetectionStatus(photoSession: camera.PhotoSession, featureType: camera.SceneFeatureType): void {
-  photoSession.on('featureDetection', featureType, callback);
-}
-```
-
 ## on('effectSuggestionChange')
 
 ```TypeScript
@@ -315,8 +187,6 @@ on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>
 Subscribes to effect suggestion event callback.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -339,8 +209,6 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -350,104 +218,6 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'lcdFlashStatus' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, lcdFlashStatus: camera.LcdFlashStatus): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`isLcdFlashNeeded: ${lcdFlashStatus.isLcdFlashNeeded}`);
-  console.info(`lcdCompensation: ${lcdFlashStatus.lcdCompensation}`);
-}
-
-function registerLcdFlashStatus(photoSession: camera.PhotoSession): void {
-  photoSession.on('lcdFlashStatus', callback);
-}
-```
-
-## onEffectSuggestionChange
-
-```TypeScript
-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void
-```
-
-Subscribes to effect suggestion event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes |
-
-## onFeatureDetection
-
-```TypeScript
-onFeatureDetection(featureType: SceneFeatureType, callback: AsyncCallback<SceneFeatureDetectionResult>): void
-```
-
-Subscribes to feature detection results.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [featureType](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) | [SceneFeatureType](arkts-camera-camera-scenefeaturetype-e-sys.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## onLcdFlashStatus
-
-```TypeScript
-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
-```
-
-Subscribes to lcd flash status.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes |
 
 **Error codes:**

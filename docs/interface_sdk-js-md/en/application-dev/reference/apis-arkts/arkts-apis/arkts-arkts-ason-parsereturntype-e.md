@@ -4,8 +4,6 @@ The return types for parsing.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## OBJECT
@@ -17,8 +15,6 @@ OBJECT = 0
 Return type is object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,8 +29,6 @@ MAP = 1
 Return type is map.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 

@@ -4,8 +4,6 @@ ASR processing controller.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ ASR processing controller.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## getAsrAecMode
@@ -25,8 +23,6 @@ getAsrAecMode(): AsrAecMode
 Get ASR AEC mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -45,12 +41,6 @@ Get ASR AEC mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
-**Examples**
-
-```TypeScript
-let mode = asrProcessingController.getAsrAecMode();
-```
-
 ## getAsrNoiseSuppressionMode
 
 ```TypeScript
@@ -60,8 +50,6 @@ getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode
 Get ASR noise suppression mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -80,12 +68,6 @@ Get ASR noise suppression mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
-**Examples**
-
-```TypeScript
-let mode = asrProcessingController.getAsrNoiseSuppressionMode();
-```
-
 ## getAsrWhisperDetectionMode
 
 ```TypeScript
@@ -95,8 +77,6 @@ getAsrWhisperDetectionMode(): AsrWhisperDetectionMode
 Get ASR whisper detection mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -115,12 +95,6 @@ Get ASR whisper detection mode.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
-**Examples**
-
-```TypeScript
-let mode = asrProcessingController.getAsrWhisperDetectionMode();
-```
-
 ## isWhispering
 
 ```TypeScript
@@ -130,8 +104,6 @@ isWhispering(): boolean
 Query whether user is whispering.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -150,12 +122,6 @@ Query whether user is whispering.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
-**Examples**
-
-```TypeScript
-let flag = asrProcessingController.isWhispering();
-```
-
 ## setAsrAecMode
 
 ```TypeScript
@@ -165,8 +131,6 @@ setAsrAecMode(mode: AsrAecMode): boolean
 Set ASR AEC mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -193,12 +157,6 @@ Set ASR AEC mode.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
-**Examples**
-
-```TypeScript
-let flag = asrProcessingController.setAsrAecMode(audio.AsrAecMode.BYPASS);
-```
-
 ## setAsrNoiseSuppressionMode
 
 ```TypeScript
@@ -208,8 +166,6 @@ setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean
 Set ASR noise suppression mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -236,12 +192,6 @@ Set ASR noise suppression mode.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
-**Examples**
-
-```TypeScript
-let flag = asrProcessingController.setAsrNoiseSuppressionMode(audio.AsrNoiseSuppressionMode.BYPASS);
-```
-
 ## setAsrVoiceControlMode
 
 ```TypeScript
@@ -251,8 +201,6 @@ setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean
 Set ASR voice control mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -280,12 +228,6 @@ Set ASR voice control mode.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
-**Examples**
-
-```TypeScript
-let flag = asrProcessingController.setAsrVoiceControlMode(audio.AsrVoiceControlMode.AUDIO_2_VOICE_TX, true);
-```
-
 ## setAsrVoiceMuteMode
 
 ```TypeScript
@@ -295,8 +237,6 @@ setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean
 Set ASR voice mute mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -324,12 +264,6 @@ Set ASR voice mute mode.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
-**Examples**
-
-```TypeScript
-let flag = asrProcessingController.setAsrVoiceMuteMode(audio.AsrVoiceMuteMode.OUTPUT_MUTE, true);
-```
-
 ## setAsrWhisperDetectionMode
 
 ```TypeScript
@@ -339,8 +273,6 @@ setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean
 Set ASR whisper detection mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -366,9 +298,3 @@ Set ASR whisper detection mode.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
-
-**Examples**
-
-```TypeScript
-let flag = asrProcessingController.setAsrWhisperDetectionMode(audio.AsrWhisperDetectionMode.BYPASS);
-```

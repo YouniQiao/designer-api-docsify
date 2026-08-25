@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## makeCall
@@ -15,8 +15,6 @@ function makeCall(phoneNumber: string, callback: AsyncCallback<void>): void
 Launches the call screen and displays the dialed number. This API uses an asynchronous callback to return the result. This API can be called only in a UIAbility.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,44 +37,6 @@ Launches the call screen and displays the dialed number. This API uses an asynch
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// The tel URI format is supported since API version 15, for example, tel:13xxxx.
-call.makeCall("138xxxxxxxx", (err: BusinessError) => {
-    if (err) {
-        console.error(`makeCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`makeCall success`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// The tel URI format is supported since API version 15, for example, tel:13xxxx.
-call.makeCall("138xxxxxxxx").then(() => {
-    console.info(`makeCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Obtain the application context.
-let context = this.getUIContext().getHostContext() as Context;
-// The tel URI format is supported since API version 15, for example, tel:13xxxx.
-call.makeCall(context, "138xxxxxxxx").then(() => {
-    console.info(`makeCall success`);
-}).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## makeCall
 
@@ -87,8 +47,6 @@ function makeCall(phoneNumber: string): Promise<void>
 Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -116,10 +74,6 @@ Launches the call screen and displays the dialed number. This API uses a promise
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-See [makeCall](#makecall)
-
 
 ## makeCall
 
@@ -130,8 +84,6 @@ function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -159,10 +111,6 @@ Launches the call screen and displays the dialed number. This API uses a promise
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-See [makeCall](#makecall)
-
 
 ## makeCall
 
@@ -173,8 +121,6 @@ function makeCall(context: Context, phoneNumber: string): Promise<void>
 Launches the call screen and displays the dialed number. This API uses a promise to return the result. You need to declare the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission if you want to call the API in the background.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -200,7 +146,3 @@ Launches the call screen and displays the dialed number. This API uses a promise
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-
-**Examples**
-
-See [makeCall](#makecall)

@@ -15,8 +15,6 @@ Sets whether this device supports distributed notifications. This API uses an as
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md)
@@ -34,35 +32,6 @@ Sets whether this device supports distributed notifications. This API uses an as
 | enable | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let enabledNotificationCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("enableDistributed failed " + JSON.stringify(err));
-  } else {
-    console.info("enableDistributed success");
-  }
-};
-
-let enable: boolean = true;
-
-Notification.enableDistributed(enable, enabledNotificationCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let enable: boolean = true;
-Notification.enableDistributed(enable).then(() => {
-  console.info("enableDistributed success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`enableDistributed failed, code is ${err}`);
-});
-```
-
 
 ## enableDistributed
 
@@ -73,8 +42,6 @@ function enableDistributed(enable: boolean): Promise<void>
 Sets whether this device supports distributed notifications. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -97,7 +64,3 @@ Sets whether this device supports distributed notifications. This API uses a pro
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [enableDistributed](#enabledistributed)

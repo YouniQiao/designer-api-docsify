@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## isCollaborativePlaybackEnabledForDevice
@@ -25,8 +23,6 @@ isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor)
 查询指定设备移动全景声状态，同步返回结果。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -51,36 +47,6 @@ isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor)
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-}
-
-try {
-  let isCollaborativeEnabled: boolean = audioCollaborativeManager.isCollaborativePlaybackEnabledForDevice(deviceDescriptor);
-  console.info(`AudioCollaborativeManager isCollaborativeEnabled: ${isCollaborativeEnabled}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## isCollaborativePlaybackSupported
 
 ```TypeScript
@@ -90,8 +56,6 @@ isCollaborativePlaybackSupported(): boolean
 查询系统移动全景声支持能力，同步返回结果。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -109,21 +73,6 @@ isCollaborativePlaybackSupported(): boolean
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isCollaborativeSupported: boolean = audioCollaborativeManager.isCollaborativePlaybackSupported();
-  console.info(`AudioCollaborativeManager isCollaborativeSupported: ${isCollaborativeSupported}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
-
 ## isCollaborativePlaybackSupportedForDevice
 
 ```TypeScript
@@ -133,8 +82,6 @@ isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescripto
 检查指定设备是否支持协同播放。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,8 +117,6 @@ setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **系统接口：** 此接口为系统接口。
@@ -196,32 +141,3 @@ setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-let enabled: boolean = true;
-
-audioCollaborativeManager.setCollaborativePlaybackEnabledForDevice(deviceDescriptor, enabled).then(() => {
-  console.info(`setSpatializationEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```

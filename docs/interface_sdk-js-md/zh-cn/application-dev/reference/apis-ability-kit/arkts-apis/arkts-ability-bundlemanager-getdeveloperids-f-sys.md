@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDeveloperIds
 
 ```TypeScript
-function getDeveloperIds(appDistributionType?: int): Array<string>
+function getDeveloperIds(appDistributionType?: number): Array<string>
 ```
 
 根据给定的应用[appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)获取当前用户下的所有开发者ID列表。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -28,7 +26,7 @@ function getDeveloperIds(appDistributionType?: int): Array<string>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| appDistributionType | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| appDistributionType | number | 否 |
 
 **返回值：**
 
@@ -43,21 +41,3 @@ function getDeveloperIds(appDistributionType?: int): Array<string>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appDistributionType = bundleManager.AppDistributionType.ENTERPRISE;
-
-try {
-  let data = bundleManager.getDeveloperIds(appDistributionType);
-  hilog.info(0x0000, 'testTag', 'getDeveloperIds successfully. Data: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getDeveloperIds failed: %{public}s', message);
-}
-```

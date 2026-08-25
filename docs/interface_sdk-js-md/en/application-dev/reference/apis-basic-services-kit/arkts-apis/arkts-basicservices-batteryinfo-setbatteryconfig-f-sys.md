@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryInfo } from '@kit.BasicServicesKit';
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setBatteryConfig
@@ -15,8 +15,6 @@ function setBatteryConfig(sceneName: string, sceneValue: string): number
 Sets the battery configuration based on the specified scenario.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -42,15 +40,3 @@ Sets the battery configuration based on the specified scenario.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [5100101](../errorcode-battery-info.md#5100101-service-connection-failure) |
-
-**Examples**
-
-```TypeScript
-import {batteryInfo} from '@kit.BasicServicesKit';
-
-let sceneName = 'xxx';
-let sceneValue = '0';
-let result = batteryInfo.setBatteryConfig(sceneName, sceneValue);
-
-console.info("The result is: " + result);
-```

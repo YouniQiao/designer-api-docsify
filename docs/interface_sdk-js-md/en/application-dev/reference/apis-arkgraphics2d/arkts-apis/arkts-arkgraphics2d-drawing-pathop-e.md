@@ -4,8 +4,6 @@ Enumerates the path operation types. It is often used in path combination and cl
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DIFFERENCE
@@ -17,8 +15,6 @@ DIFFERENCE = 0
 Difference operation.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ Intersection operation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## UNION
@@ -45,8 +39,6 @@ UNION = 2
 Union operation.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -60,8 +52,6 @@ XOR operation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## REVERSE_DIFFERENCE
@@ -73,7 +63,5 @@ REVERSE_DIFFERENCE = 4
 Reverse difference operation.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

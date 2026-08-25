@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## 汇总
@@ -109,49 +107,29 @@ import { call } from '@kit.TelephonyKit';
 | [kickOutFromConference(拨打电话)](arkts-telephony-call-kickoutfromconference-f-sys.md) |
 | [muteRinger(拨打电话)](arkts-telephony-call-muteringer-f-sys.md) |
 | [muteRinger(拨打电话)](arkts-telephony-call-muteringer-f-sys.md) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offcalldetailschange) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offcalleventchange) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offcalldisconnectedcause) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offmmicoderesult) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offaudiodevicechange) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offpostdialdelay) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offimscallmodechange) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offcallsessionevent) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offpeerdimensionschange) |
-| [off(拨打电话)](arkts-telephony-call-off-f-sys.md#offcameracapabilitieschange) |
-| [offAudioDeviceChange(拨打电话)](arkts-telephony-call-offaudiodevicechange-f-sys.md) |
-| [offCallDetailsChange(拨打电话)](arkts-telephony-call-offcalldetailschange-f-sys.md) |
-| [offCallDisconnectedCause(拨打电话)](arkts-telephony-call-offcalldisconnectedcause-f-sys.md) |
-| [offCallEventChange(拨打电话)](arkts-telephony-call-offcalleventchange-f-sys.md) |
-| [offCallSessionEvent(拨打电话)](arkts-telephony-call-offcallsessionevent-f-sys.md) |
-| [offCameraCapabilitiesChange(拨打电话)](arkts-telephony-call-offcameracapabilitieschange-f-sys.md) |
-| [offImsCallModeChange(拨打电话)](arkts-telephony-call-offimscallmodechange-f-sys.md) |
-| [offMmiCodeResult(拨打电话)](arkts-telephony-call-offmmicoderesult-f-sys.md) |
-| [offPeerDimensionsChange(拨打电话)](arkts-telephony-call-offpeerdimensionschange-f-sys.md) |
-| [offPostDialDelay(拨打电话)](arkts-telephony-call-offpostdialdelay-f-sys.md) |
+| off(拨打电话) |
+| off(拨打电话) |
+| off(拨打电话) |
+| [off(拨打电话)](arkts-telephony-call-mmicoderesult-e-sys.md) |
+| off(拨打电话) |
+| off(拨打电话) |
+| off(拨打电话) |
+| [off(拨打电话)](arkts-telephony-call-callsessionevent-i-sys.md) |
+| off(拨打电话) |
+| off(拨打电话) |
 | [offReceiveRttMessage(拨打电话)](arkts-telephony-call-offreceiverttmessage-f-sys.md) |
 | [offRttErrCause(拨打电话)](arkts-telephony-call-offrtterrcause-f-sys.md) |
 | [offRttModifyInd(拨打电话)](arkts-telephony-call-offrttmodifyind-f-sys.md) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#oncalldetailschange) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#oncalleventchange) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#oncalldisconnectedcause) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#onmmicoderesult) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#onaudiodevicechange) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#onpostdialdelay) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#onimscallmodechange) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#oncallsessionevent) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#onpeerdimensionschange) |
-| [on(拨打电话)](arkts-telephony-call-on-f-sys.md#oncameracapabilitieschange) |
-| [onAudioDeviceChange(拨打电话)](arkts-telephony-call-onaudiodevicechange-f-sys.md) |
-| [onCallDetailsChange(拨打电话)](arkts-telephony-call-oncalldetailschange-f-sys.md) |
-| [onCallDisconnectedCause(拨打电话)](arkts-telephony-call-oncalldisconnectedcause-f-sys.md) |
-| [onCallEventChange(拨打电话)](arkts-telephony-call-oncalleventchange-f-sys.md) |
-| [onCallSessionEvent(拨打电话)](arkts-telephony-call-oncallsessionevent-f-sys.md) |
-| [onCameraCapabilitiesChange(拨打电话)](arkts-telephony-call-oncameracapabilitieschange-f-sys.md) |
-| [onImsCallModeChange(拨打电话)](arkts-telephony-call-onimscallmodechange-f-sys.md) |
-| [onMmiCodeResult(拨打电话)](arkts-telephony-call-onmmicoderesult-f-sys.md) |
-| [onPeerDimensionsChange(拨打电话)](arkts-telephony-call-onpeerdimensionschange-f-sys.md) |
-| [onPostDialDelay(拨打电话)](arkts-telephony-call-onpostdialdelay-f-sys.md) |
+| on(拨打电话) |
+| on(拨打电话) |
+| on(拨打电话) |
+| [on(拨打电话)](arkts-telephony-call-mmicoderesult-e-sys.md) |
+| on(拨打电话) |
+| on(拨打电话) |
+| on(拨打电话) |
+| [on(拨打电话)](arkts-telephony-call-callsessionevent-i-sys.md) |
+| on(拨打电话) |
+| on(拨打电话) |
 | [onReceiveRttMessage(拨打电话)](arkts-telephony-call-onreceiverttmessage-f-sys.md) |
 | [onRttErrCause(拨打电话)](arkts-telephony-call-onrtterrcause-f-sys.md) |
 | [onRttModifyInd(拨打电话)](arkts-telephony-call-onrttmodifyind-f-sys.md) |

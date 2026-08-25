@@ -8,8 +8,6 @@ type ExtraInfo = {[key: string]: Object; }
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **属性类型：** {[key: string]: Object; }

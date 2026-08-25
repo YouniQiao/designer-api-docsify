@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
+import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -20,13 +18,11 @@ import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions }
 backgroundColor?: ColorMetrics
 ```
 
-按钮背景颜色。<br/>默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')
+按钮背景颜色。默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,13 +36,11 @@ backgroundColor?: ColorMetrics
 borderColor?: ColorMetrics
 ```
 
-按钮描边颜色。<br/>默认值：#330A59F7
+按钮描边颜色。默认值：#330A59F7
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,13 +54,11 @@ borderColor?: ColorMetrics
 progressColor?: ColorMetrics
 ```
 
-进度条颜色。<br/>默认值：#330A59F7
+进度条颜色。默认值：#330A59F7
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,13 +72,11 @@ progressColor?: ColorMetrics
 textColor?: ColorMetrics
 ```
 
-按钮文本颜色。<br/>默认值：系统默认值(#CE000000)
+按钮文本颜色。默认值：系统默认值(#CE000000)
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

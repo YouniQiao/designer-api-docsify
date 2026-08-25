@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.Cert
 
 ## PKCS1_PADDING
@@ -17,8 +15,6 @@ PKCS1_PADDING = 0
 PKCS #1 v1.5填充方式。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -33,8 +29,6 @@ PKCS1_PSS_PADDING = 1
 PKCS #1 PSS填充方式。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

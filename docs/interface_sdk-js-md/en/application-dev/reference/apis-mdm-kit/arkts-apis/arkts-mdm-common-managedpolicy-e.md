@@ -4,8 +4,6 @@ Enumerates enterprise device management policies.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Default policy with no restrictions applied.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Policy that disallows extensions from external sources to run.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -49,8 +43,6 @@ FORCE_OPEN = 2
 Policy that forcibly enables extensions from external sources to run.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

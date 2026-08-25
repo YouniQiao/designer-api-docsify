@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
-
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## ALL
@@ -17,8 +15,6 @@ ALL = -1
 监测所有组件类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -32,8 +28,6 @@ CUSTOM_COMPONENT = 1 << 0
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
-
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## WINDOW
@@ -45,8 +39,6 @@ WINDOW = 1 << 1
 监测Window组件类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
@@ -60,8 +52,6 @@ NODE_CONTAINER = 1 << 2
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
-
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## X_COMPONENT
@@ -74,8 +64,6 @@ X_COMPONENT = 1 << 3
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
-
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## ABILITY
@@ -87,7 +75,5 @@ ABILITY = 1 << 4
 监测Ability组件类型。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.1.0。
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker

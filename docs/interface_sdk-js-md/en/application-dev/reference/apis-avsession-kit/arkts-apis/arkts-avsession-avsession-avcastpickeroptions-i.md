@@ -4,14 +4,12 @@ An option to make different picker usage
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## menuPosition
@@ -25,8 +23,6 @@ Set the popup menu position if pickerstyple is set to STYLE_MENU.
 **Type:** [MenuPosition](arkts-avsession-avsession-menuposition-i.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -42,8 +38,6 @@ Set the picker style.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## sessionType
@@ -57,8 +51,6 @@ Indicates current session type to show different picker ui. If not set, default 
 **Type:** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

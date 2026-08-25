@@ -14,8 +14,6 @@ Sets a timer after which a function will be executed.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite

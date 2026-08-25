@@ -7,23 +7,19 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## currentValue
 
 ```TypeScript
-currentValue?: int
+currentValue?: number
 ```
 
 进度当前值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -34,28 +30,25 @@ isPercentage?: boolean
 ```
 
 是否按百分比展示进度。默认为false。  
-- true：进度以百分比形式展示。 - false：进度以绝对值形式展示。
+- true：进度以百分比形式展示。  
+- false：进度以绝对值形式展示。
 
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 ## maxValue
 
 ```TypeScript
-maxValue?: int
+maxValue?: number
 ```
 
 进度最大值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification

@@ -40,4 +40,4 @@
 
 | 名称 |
 | --- |
-| [Repeat(Defines Repeat component.)](arkts-arkui-repeat-con.md#repeat) |
+| [Repeat(Defines Repeat component.)](arkts-arkui-repeat-con.md) |

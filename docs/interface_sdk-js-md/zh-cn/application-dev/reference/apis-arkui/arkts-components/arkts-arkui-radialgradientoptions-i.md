@@ -7,8 +7,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -28,8 +26,6 @@ Defines center point for radial gradient.Anonymous Object Rectification.
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
@@ -48,8 +44,6 @@ Defines color description for gradients.Anonymous Object Rectification.
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
@@ -64,11 +58,9 @@ radius: Length
 
 Defines radius of the radial gradient.Anonymous Object Rectification.
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -89,8 +81,6 @@ Defines gradient colors with repeated coloring.Anonymous Object Rectification.
 **默认值：** false
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

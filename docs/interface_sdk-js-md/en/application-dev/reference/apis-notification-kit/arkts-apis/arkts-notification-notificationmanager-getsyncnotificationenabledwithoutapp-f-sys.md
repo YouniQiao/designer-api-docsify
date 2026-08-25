@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getSyncNotificationEnabledWithoutApp
 
 ```TypeScript
-function getSyncNotificationEnabledWithoutApp(userId: int, callback: AsyncCallback<boolean>): void
+function getSyncNotificationEnabledWithoutApp(userId: number, callback: AsyncCallback<boolean>): void
 ```
 
 Obtains whether the notification sync feature is enabled for devices where the application is not installed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -30,7 +28,7 @@ Obtains whether the notification sync feature is enabled for devices where the a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
@@ -46,47 +44,16 @@ Obtains whether the notification sync feature is enabled for devices where the a
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use the actual user ID when calling the API.
-let userId: number = 100;
-let getSyncNotificationEnabledWithoutAppCallback = (err: BusinessError, data: boolean): void => {
-    if (err) {
-        console.error(`getSyncNotificationEnabledWithoutAppCallback failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getSyncNotificationEnabledWithoutAppCallback success, data: ${JSON.stringify(data)}`);
-    }
-}
-notificationManager.getSyncNotificationEnabledWithoutApp(userId, getSyncNotificationEnabledWithoutAppCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use the actual user ID when calling the API.
-let userId: number = 100;
-notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boolean) => {
-  console.info(`getSyncNotificationEnabledWithoutApp, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getSyncNotificationEnabledWithoutApp
 
 ```TypeScript
-function getSyncNotificationEnabledWithoutApp(userId: int): Promise<boolean>
+function getSyncNotificationEnabledWithoutApp(userId: number): Promise<boolean>
 ```
 
 Obtains whether the notification sync feature is enabled for devices where the application is not installed. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -100,7 +67,7 @@ Obtains whether the notification sync feature is enabled for devices where the a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -120,7 +87,3 @@ Obtains whether the notification sync feature is enabled for devices where the a
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
-
-**Examples**
-
-See [getSyncNotificationEnabledWithoutApp](#getsyncnotificationenabledwithoutapp)

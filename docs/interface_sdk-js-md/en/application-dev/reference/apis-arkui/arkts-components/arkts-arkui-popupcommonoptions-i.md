@@ -4,8 +4,6 @@ Configures the parameters of a popup. You can use the [getPromptAction()](../../
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Represents the callback invoked when the popup state changes.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -42,13 +38,11 @@ arrowHeight?: Dimension
 Arrow height.Default value: **8**Unit: vp  
 **NOTE：**Percentage values are not supported.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 8.0_vp.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,11 +62,9 @@ Offset of the popup arrow relative to the popup.When the arrow is at the top or 
 2. If **arrowPointPosition** is set, **arrowOffset** does not take effect.
 3. Percentage values are not supported.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,11 +80,9 @@ arrowPointPosition?: ArrowPointPosition
 
 Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and **End**, in both vertical and horizontal directions. All these positions are within the parent component area.Default value: **ArrowPointPosition.CENTER**
 
-**Type:** ArrowPointPosition
+**Type:** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,13 +99,11 @@ arrowWidth?: Dimension
 Arrow thickness. If the arrow thickness exceeds the length of the edge minus twice the size of the popup rounded corner, the arrow is not drawn.Default value: **16**Unit: vp  
 **NOTE：**Percentage values are not supported.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 16.0_vp.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,8 +125,6 @@ Whether to automatically dismiss the popup when there is a page operation. The v
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -153,13 +139,11 @@ avoidTarget?: AvoidanceMode
 
 Whether the popup covers the pointing component during avoidance.Default value: **AvoidanceMode.COVER_TARGET**
 
-**Type:** AvoidanceMode
+**Type:** [AvoidanceMode](arkts-arkui-avoidancemode-e.md)
 
 **Default:** AvoidanceMode.COVER_TARGET
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,8 +165,6 @@ Background blur style of the popup.Default value: **BlurStyle.COMPONENT_ULTRA_TH
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -201,8 +183,6 @@ Defines the popup's background blur style with options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -220,8 +200,6 @@ Defines the popup's background effect with options
 **Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,8 +222,6 @@ Linear gradient color of the inner outline of the popup.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -262,13 +238,11 @@ Width of the inner outline of the popup.Default value: **1**Unit: vp
 **NOTE：**
 1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
 2. If no inner outline is set, this parameter must be used together with **borderLinearGradient**.
-3. For double outlines, it is recommended that the inner outline width should not exceed 10 vp.
+3. For number outlines, it is recommended that the inner outline width should not exceed 10 vp.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,8 +264,6 @@ Define the popup theme color mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -311,8 +283,6 @@ Whether to display the arrow. The value **true** means to display the arrow, and
 **Default:** true
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,8 +308,6 @@ Whether the popup responds when the device is in hover mode (semi-folded state),
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -363,8 +331,6 @@ Whether the popup obtains focus when displayed.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -386,8 +352,6 @@ Whether the popup aligns with the transformed position of the target when the ta
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -406,8 +370,6 @@ Defines the display level of the popup.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -425,8 +387,6 @@ Whether to apply a mask with the specified color to the popup. The value **false
 **Type:** boolean \| [PopupMaskType](arkts-arkui-popupmasktype-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -448,8 +408,6 @@ Offset of the popup relative to the display position specified by **placement**.
 **Default:** { x: 0, y: 0 }
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -474,8 +432,6 @@ Interactive dismissal behavior. The default value is **true**, meaning that the 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -497,8 +453,6 @@ Linear gradient color of the outer outline of the popup.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -515,13 +469,11 @@ Width of the outer outline of the popup.Default value: **1**Unit: vp
 **NOTE：**
 1. Percentage values are not supported. If a percentage value is set, the value **0** is used.
 2. If the outer outline is not set, this parameter must be used together with **outlineLinearGradient**.
-3. For double outlines, it is recommended that the outer outline width should not exceed 10 vp.
+3. For number outlines, it is recommended that the outer outline width should not exceed 10 vp.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -537,13 +489,11 @@ placement?: Placement
 
 Preferred position of the popup. If the set position is insufficient for holding the popup, it will be automatically adjusted.Default value: **Placement.Bottom**
 
-**Type:** Placement
+**Type:** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
 **Default:** Placement.Bottom
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -559,11 +509,9 @@ popupColor?: ResourceColor
 
 Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: TRANSPARENT plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -579,13 +527,11 @@ radius?: Dimension
 
 Rounded corner radius of the popup.Default value: **20**Unit: vp
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 20.0_vp.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -606,8 +552,6 @@ Popup shadow.Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 **Default:** ShadowStyle.OUTER_DEFAULT_MD.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -631,8 +575,6 @@ Whether to show the popup in a subwindow. The value **true** means to show the p
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -651,8 +593,6 @@ Set system-styled materials for popup. Different materials have different effect
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -667,11 +607,9 @@ targetSpace?: Length
 
 Spacing between the popup and the host node. Percentage values are not supported.Default value: **8**Unit: vp
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -696,8 +634,6 @@ Transition animations for the entrance and exit of the popup.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -712,11 +648,9 @@ width?: Dimension
 
 Width of the popup.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

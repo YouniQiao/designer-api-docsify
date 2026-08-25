@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
+import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setLogLevel
@@ -18,8 +18,6 @@ Sets the minimum log level of the current application process.You can configure 
 > This function does not take effect for debug applications.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 

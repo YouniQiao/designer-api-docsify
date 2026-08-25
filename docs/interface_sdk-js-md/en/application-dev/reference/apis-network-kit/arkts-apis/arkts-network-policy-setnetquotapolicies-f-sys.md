@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## setNetQuotaPolicies
@@ -15,8 +15,6 @@ function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>, callback: Asy
 Sets the metering network policy. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -42,65 +40,6 @@ Sets the metering network policy. This API uses an asynchronous callback to retu
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netQuotaPolicyList: Array<policy.NetQuotaPolicy> = [];
-let netQuotaPolicy: policy.NetQuotaPolicy = {
-  networkMatchRule: {
-    netType: connection.NetBearType.BEARER_CELLULAR,
-    identity: '',
-    simId: '1'
-  },
-  quotaPolicy: {
-    periodDuration: 'M1',
-    warningBytes: 40000,
-    limitBytes: 50000,
-    metered: true,
-    limitAction: policy.LimitAction.LIMIT_ACTION_NONE
-  }
-}
-netQuotaPolicyList.push(netQuotaPolicy);
-
-policy.setNetQuotaPolicies(netQuotaPolicyList, (error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netQuotaPolicyList: Array<policy.NetQuotaPolicy> = [];
-let netQuotaPolicy: policy.NetQuotaPolicy = {
-  networkMatchRule: {
-    netType: connection.NetBearType.BEARER_CELLULAR,
-    identity: '',
-    simId: '1'
-  },
-  quotaPolicy: {
-    periodDuration: 'M1',
-    warningBytes: 40000,
-    limitBytes: 50000,
-    metered: true,
-    limitAction: policy.LimitAction.LIMIT_ACTION_NONE
-  }
-}
-netQuotaPolicyList.push(netQuotaPolicy);
-
-policy
-  .setNetQuotaPolicies(netQuotaPolicyList)
-  .then(() => {
-    console.info('setNetQuotaPolicies success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## setNetQuotaPolicies
 
@@ -111,8 +50,6 @@ function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>): Promise<void
 Sets the metering network policy. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -142,7 +79,3 @@ Sets the metering network policy. This API uses a promise to return the result.
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [setNetQuotaPolicies](#setnetquotapolicies)

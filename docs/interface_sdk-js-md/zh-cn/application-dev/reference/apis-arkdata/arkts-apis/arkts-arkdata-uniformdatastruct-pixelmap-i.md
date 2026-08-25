@@ -4,29 +4,25 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## details
 
 ```TypeScript
-details?: Record<string, int | long | double | string | Uint8Array>
+details?: Record<string, number | number | number | string | Uint8Array>
 ```
 
 字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**类型：** ArkTS-Dyn: Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**类型：** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ pixelMap: image.PixelMap
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -62,69 +56,6 @@ readonly uniformDataType: 'openharmony.pixel-map'
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-import { image } from '@kit.ImageKit';
-
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-let arrayBuffer = new ArrayBuffer(4 * 200 * 200);
-let opt: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: { height: 200, width: 200 },
-  alphaType: 3
-};
-let pixelMapDetails: Record<string, number | string | Uint8Array> = {
-  'pixelMapKey1': 123,
-  'pixelMapKey2': 'pixelMapValue',
-  'pixelMapKey3': u8Array
-};
-let pixelMap: uniformDataStruct.PixelMap = {
-  uniformDataType: 'openharmony.pixel-map',
-  pixelMap: image.createPixelMapSync(arrayBuffer, opt),
-  details: pixelMapDetails
-};
-console.info('pixelMap.uniformDataType: ' + pixelMap.uniformDataType);
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_PIXEL_MAP, pixelMap);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-import { image } from '@kit.ImageKit';
-
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-let arrayBuffer = new ArrayBuffer(4 * 200 * 200);
-let opt: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: image.PixelMapFormat.BGRA_8888,
-  size: { height: 200, width: 200 },
-  alphaType: image.AlphaType.UNPREMUL
-};
-let pixelMapDetails: Record<string, int | long | double | string | Uint8Array> = {
-  'pixelMapKey1': 123,
-  'pixelMapKey2': 'pixelMapValue',
-  'pixelMapKey3': u8Array
-};
-
-let pixelMaps: image.PixelMap = image.createPixelMapSync(arrayBuffer, opt);
-
-let pixelMap: uniformDataStruct.PixelMap = {
-  uniformDataType: 'openharmony.pixel-map',
-  pixelMap: pixelMaps,
-  details: pixelMapDetails
-};
-console.info('pixelMap.uniformDataType: ' + pixelMap.uniformDataType);
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_PIXEL_MAP, pixelMap);
-```

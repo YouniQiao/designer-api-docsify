@@ -1,17 +1,15 @@
 # tags
 
-Provide trace tags@namespace tags
+Provide trace tags
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

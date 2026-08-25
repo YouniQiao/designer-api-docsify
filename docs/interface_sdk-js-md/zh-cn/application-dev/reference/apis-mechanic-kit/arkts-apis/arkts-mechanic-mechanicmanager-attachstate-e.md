@@ -1,10 +1,8 @@
 # AttachState
 
-Device attach states.@enum { int }
+Device attach states.@enum { number }
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -18,8 +16,6 @@ ATTACHED = 0
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Mechanic.Core
 
 ## DETACHED
@@ -31,7 +27,5 @@ DETACHED = 1
 设备卸载
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core

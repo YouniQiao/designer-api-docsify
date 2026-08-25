@@ -4,14 +4,12 @@ Configuration used for decrypting CMS enveloped data.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## cert
@@ -25,8 +23,6 @@ Public key certificate. This parameter is left empty by default.
 **Type:** X509Cert
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -46,8 +42,6 @@ Format of the content.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
@@ -64,8 +58,6 @@ Encrypted content data for detached CMS enveloped data, used when the CMS struct
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
@@ -81,8 +73,6 @@ Private key parameter. This parameter is left empty by default.
 **Type:** [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

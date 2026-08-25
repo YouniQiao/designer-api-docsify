@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## 导入模块
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -26,8 +24,6 @@ abilityName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -35,16 +31,14 @@ abilityName: string
 ## batteryLevel
 
 ```TypeScript
-batteryLevel?: int
+batteryLevel?: number
 ```
 
 电量。取值范围：[0, 100]
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,8 +56,6 @@ batteryStatus?: BatteryStatus
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -79,8 +71,6 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,8 +88,6 @@ chargerType?: ChargingType
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -107,16 +95,14 @@ chargerType?: ChargingType
 ## earliestStartTime
 
 ```TypeScript
-earliestStartTime?: int
+earliestStartTime?: number
 ```
 
 任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -125,16 +111,14 @@ earliestStartTime?: int
 ## idleWaitTime
 
 ```TypeScript
-idleWaitTime?: int
+idleWaitTime?: number
 ```
 
 空闲等待时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -147,13 +131,12 @@ isCharging?: boolean
 ```
 
 是否充电，默认为false。  
-- true表示充电触发延迟任务回调。 - false表示不充电触发延迟任务回调。
+- true表示充电触发延迟任务回调。  
+- false表示不充电触发延迟任务回调。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -166,13 +149,12 @@ isDeepIdle?: boolean
 ```
 
 是否要求设备进入空闲状态，默认为false。  
-- true表示需要。 - false表示不需要。
+- true表示需要。  
+- false表示不需要。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -185,13 +167,12 @@ isPersisted?: boolean
 ```
 
 注册的延迟任务是否可保存在系统中，默认为false。  
-- true表示可保存，即系统重启后，任务可恢复。 - false表示不可保存。
+- true表示可保存，即系统重启后，任务可恢复。  
+- false表示不可保存。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,13 +185,12 @@ isRepeat?: boolean
 ```
 
 是否循环任务，默认为false。  
-- true表示循环任务。 - false表示非循环任务。
+- true表示循环任务。  
+- false表示非循环任务。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -228,8 +208,6 @@ networkType?: NetworkType
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -237,16 +215,14 @@ networkType?: NetworkType
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, int | double | string | boolean>
+parameters?: Record<string, number | number | string | boolean>
 ```
 
 携带参数信息。
 
-**类型：** ArkTS-Dyn: Record&lt;string, number \| number \| string \| boolean&gt;  <br>ArkTS-Sta：Record&lt;string, int \| double \| string \| boolean&gt;
+**类型：** Record&lt;string, number \| number \| string \| boolean&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -255,16 +231,14 @@ parameters?: Record<string, int | double | string | boolean>
 ## repeatCount
 
 ```TypeScript
-repeatCount?: int
+repeatCount?: number
 ```
 
 循环次数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -273,16 +247,14 @@ repeatCount?: int
 ## repeatCycleTime
 
 ```TypeScript
-repeatCycleTime?: int
+repeatCycleTime?: number
 ```
 
 循环间隔，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -300,8 +272,6 @@ storageRequest?: StorageRequest
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -309,16 +279,14 @@ storageRequest?: StorageRequest
 ## workId
 
 ```TypeScript
-workId: int
+workId: number
 ```
 
 延迟任务ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

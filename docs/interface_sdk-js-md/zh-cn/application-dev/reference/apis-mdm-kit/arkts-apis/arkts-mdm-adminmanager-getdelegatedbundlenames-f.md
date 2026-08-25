@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDelegatedBundleNames
@@ -15,8 +15,6 @@ function getDelegatedBundleNames(admin: Want, policy: string): Array<string>
 查询可以访问某个委托策略的被委托应用，输出被委托应用列表。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_DELEGATED_POLICY
 
@@ -45,24 +43,3 @@ function getDelegatedBundleNames(admin: Want, policy: string): Array<string>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let admin: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let bundleNames: Array<string> = adminManager.getDelegatedBundleNames(admin, "disabled_hdc");
-  console.info(`Succeeded in getting delegated bundles.${JSON.stringify(bundleNames)}`);
-} catch (err) {
-  console.error(`Failed to get delegated bundles. Code: ${err.code}, message: ${err.message}`);
-}
-```

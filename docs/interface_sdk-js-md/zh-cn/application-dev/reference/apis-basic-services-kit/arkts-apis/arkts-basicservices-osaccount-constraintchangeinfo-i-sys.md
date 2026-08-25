@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## constraint
@@ -22,13 +20,11 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraint: string
 ```
 
-发生变更的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。
+发生变更的[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)。
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -45,8 +41,6 @@ isEnabled: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

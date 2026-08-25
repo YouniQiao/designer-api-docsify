@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getSlotsByBundle
@@ -16,8 +16,6 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationSlot&gt;&gt; | 是 |
 
 **错误码：**
@@ -44,79 +42,6 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getSlotsByBundleCallback = (err: BusinessError, data: Array<notificationManager.NotificationSlot>): void => {
-    if (err) {
-        console.error(`getSlotsByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getSlotsByBundle success, data is ${JSON.stringify(data)}`);
-    }
-}
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-notificationManager.getSlotsByBundle(bundle, getSlotsByBundleCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getSlotsByBundleCallback = (err: BusinessError | null, data: Array<notificationManager.NotificationSlot>  | undefined | null): void => {
-    if (err) {
-        console.error(`getSlotsByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getSlotsByBundle success, data is ${JSON.stringify(data)}`);
-    }
-}
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-notificationManager.getSlotsByBundle(bundle, getSlotsByBundleCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-
-notificationManager.getSlotsByBundle(bundle).then((data: Array<notificationManager.NotificationSlot>) => {
-     console.info(`getSlotsByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSlotsByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-
-notificationManager.getSlotsByBundle(bundle).then((data: Array<notificationManager.NotificationSlot>) => {
-    console.info(`getSlotsByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getSlotsByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## getSlotsByBundle
 
@@ -128,8 +53,6 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -140,7 +63,7 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
@@ -160,7 +83,3 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [getSlotsByBundle](#getslotsbybundle)

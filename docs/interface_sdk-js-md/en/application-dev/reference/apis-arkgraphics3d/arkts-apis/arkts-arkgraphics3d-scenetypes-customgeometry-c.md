@@ -6,8 +6,6 @@ A custom geometry type that inherits from GeometryDefinition.@extends GeometryDe
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## colors
@@ -22,14 +20,12 @@ Array of colors for the vertices. The default value is undefined.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## indices
 
 ```TypeScript
-indices?: int[]
+indices?: number[]
 ```
 
 Array of indices for the vertices, with values starting at 0. The default value is undefined.
@@ -39,8 +35,6 @@ Array of indices for the vertices, with values starting at 0. The default value 
 **Default:** undefined
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -55,8 +49,6 @@ Array of normals corresponding to the vertices. The default value is undefined.
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -74,8 +66,6 @@ Parsing mode of triangle primitives. The default value is TRIANGLE_LIST.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## uvs
@@ -90,8 +80,6 @@ Array of UV coordinates for the vertices. The default value is undefined.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## vertices
@@ -105,7 +93,5 @@ Array of vertices that make up the model.
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

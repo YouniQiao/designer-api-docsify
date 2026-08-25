@@ -4,8 +4,6 @@ Enumerates report types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ YES
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ MMS_NO = 129
 NO
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

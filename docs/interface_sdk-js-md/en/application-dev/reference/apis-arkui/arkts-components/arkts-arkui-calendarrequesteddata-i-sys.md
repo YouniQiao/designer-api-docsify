@@ -4,8 +4,6 @@ Defines the struct of CalendarRequestedData.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,8 +27,6 @@ Current Month
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -50,8 +46,6 @@ Current Year
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -73,8 +67,6 @@ Previous month
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -95,8 +87,6 @@ State of month
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -116,8 +106,6 @@ Previous year
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## CHARGING_PLUGGED_ANY
@@ -17,8 +15,6 @@ CHARGING_PLUGGED_ANY = 0
 表示这个触发条件是任何类型的充电器连接。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,8 +30,6 @@ CHARGING_PLUGGED_AC = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -50,8 +44,6 @@ CHARGING_PLUGGED_USB = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -65,8 +57,6 @@ CHARGING_PLUGGED_WIRELESS = 3
 表示这个触发条件是无线充电器连接。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

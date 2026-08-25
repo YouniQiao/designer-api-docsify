@@ -6,8 +6,6 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Creates a content modifier.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -37,7 +33,7 @@ Creates a content modifier.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)&gt; | Yes |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)&gt; | Yes |
 
 ## dateTimeOptions
 
@@ -48,8 +44,6 @@ dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>)
 Sets whether to display a leading zero for the hour.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,7 +57,7 @@ Sets whether to display a leading zero for the hour.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [dateTimeOptions](#datetimeoptions) | Optional & lt;DateTimeOptions & gt; | Yes |
+| [dateTimeOptions](#datetimeoptions) | [Optional](arkts-arkui-optional-t.md)&lt;DateTimeOptions&gt; | Yes |
 
 ## fontColor
 
@@ -74,8 +68,6 @@ fontColor(value: ResourceColor)
 Sets the font color.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -99,8 +91,6 @@ Sets the font family.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -122,8 +112,6 @@ fontFeature(value: string)
 Sets the font feature, for example, monospaced digits.Format: normal \| \&lt;feature-tag-value\&gt;Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,).For example, the input format for monospaced clock fonts is "ss01" on.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,8 +137,6 @@ Sets the font size.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -173,8 +159,6 @@ Sets the font style.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -196,8 +180,6 @@ fontWeight(value: number | FontWeight | string)
 Sets the font weight of the text. If the value is too large, the text in different fonts may be truncated.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -228,11 +210,9 @@ Sets the time format, for example, **yyyy/MM/dd** or **yyyy-MM-dd**.
 **SS**: centisecond (If the number of S characters in the format is less than 3, all are treated as centiseconds.)  
 **SSS**: millisecond (If the number of S characters in the format is greater than or equal to 3, all are treated as milliseconds.)  
 **a**: morning/afternoon (This parameter does not take effect when the hour part is set to **H**.)Date separators: year, month, day, slash (/), hyphen (-), and period (.) (Custom separator styles are allowed. Letters cannot be used as separators, while Chinese characters can be treated as separators.)The parts of the date can be used alone or combined with each other as needed. The time can be updated as frequent as once per second. As such, whenever possible, avoid setting the centisecond and millisecond parts separately.When an invalid letter is set, the letter is ignored. If all letters in **format** are invalid, the display format follows the system's language and hour format settings.If **format** is an empty string ("") or **undefined**, the default value is used.Default value outside of widgets: 12-hour format: aa hh:mm:ss; 24-hour format: HH:mm:ss.Default value in widgets: 12-hour format: hh:mm, 24-hour format: HH:mm.When used in widgets, the minimum time unit is minute. In this case, if the format contains seconds or centiseconds, the default value will be used.The following table shows how different settings of **format** work out.  
-| Input Format | Display Effect | | ------------------------- | ---------------------- | | EEEE, M, d, yyyy | Saturday, Feb, 4, 2023 | | M d, yyyy | Feb 4, 2023 | | EEEE, M, d | Saturday, Feb, 4 | | M d | Feb 4 | | MM/dd/yyyy | Feb/04/2023 | | EEEE MM dd | Saturday Feb 04 | | yyyy | 2023 | | yy | 23 | | MM | Feb | | M | Feb | | dd (complete date) | 04 | | [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | 4 | | EEEE (full name) | Saturday | | E, EE, EEE (abbreviation) | Sat | | M d, yyyy | Feb 4, 2023 | | yyyy/M/d | 2023/Feb/4 | | yyyy-M-d | 2023-Feb-4 | | yyyy.M.d | 2023.Feb.4 | | HH:mm:ss | 17:00:04 | | aa hh:mm:ss | AM 5:00:04 | | hh:mm:ss | 5:00:04 | | HH:mm | 17:00 | | aa hh:mm | AM 5:00 | | hh:mm | 5:00 | | mm:ss | 00:04 | | mm:ss.SS | 00:04.91 | | mm:ss.SSS | 00:04.536 | | hh:mm:ss aa | 5:00:04 AM | | HH |
+| Input Format | Display Effect | | ------------------------- | ---------------------- | | EEEE, M, d, yyyy | Saturday, Feb, 4, 2023 | | M d, yyyy | Feb 4, 2023 | | EEEE, M, d | Saturday, Feb, 4 | | M d | Feb 4 | | MM/dd/yyyy | Feb/04/2023 | | EEEE MM dd | Saturday Feb 04 | | yyyy | 2023 | | yy | 23 | | MM | Feb | | M | Feb | | dd (complete date) | 04 | | [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | 4 | | EEEE (full name) | Saturday | | E, EE, EEE (abbreviation) | [Sat](../arkts-apis/arkts-arkui-week-e.md) | | M d, yyyy | Feb 4, 2023 | | yyyy/M/d | 2023/Feb/4 | | yyyy-M-d | 2023-Feb-4 | | yyyy.M.d | 2023.Feb.4 | | HH:mm:ss | 17:00:04 | | aa hh:mm:ss | AM 5:00:04 | | hh:mm:ss | 5:00:04 | | HH:mm | 17:00 | | aa hh:mm | AM 5:00 | | hh:mm | 5:00 | | mm:ss | 00:04 | | mm:ss.SS | 00:04.91 | | mm:ss.SSS | 00:04.536 | | hh:mm:ss aa | 5:00:04 AM | | HH |
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -256,8 +236,6 @@ Triggered when the time changes.This event does not take effect when the compone
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -280,8 +258,6 @@ Sets the text shadow. It supports input parameters in an array to implement mult
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -294,4 +270,4 @@ Sets the text shadow. It supports input parameters in an array to implement mult
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ShadowOptions \| Array & lt;ShadowOptions & gt; | Yes |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes |

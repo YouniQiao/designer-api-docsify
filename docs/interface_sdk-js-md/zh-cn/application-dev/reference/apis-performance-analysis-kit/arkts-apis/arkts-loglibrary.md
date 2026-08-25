@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总

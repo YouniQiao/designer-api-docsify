@@ -19,8 +19,6 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md)
@@ -39,30 +37,6 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 | isEnableUpdate | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-formHost.notifyFormsEnableUpdate(formIds, true, (error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost notifyFormsEnableUpdate, error: ${JSON.stringify(error)}`);
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
-  console.info('formHost notifyFormsEnableUpdate success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost notifyFormsEnableUpdate, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## notifyFormsEnableUpdate
 
@@ -73,8 +47,6 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 Instructs the widgets to enable or disable updates. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -98,7 +70,3 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [notifyFormsEnableUpdate](#notifyformsenableupdate)

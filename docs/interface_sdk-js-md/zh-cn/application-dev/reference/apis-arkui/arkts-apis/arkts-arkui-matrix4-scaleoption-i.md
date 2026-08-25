@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { matrix4 } from '@kit.ArkUI';
+import { matrix4 } from 'kits/@kit.ArkUI';
 ```
 
 ## centerX
@@ -25,8 +23,6 @@ centerX?: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ centerY?: number
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -61,8 +55,6 @@ x轴的缩放倍数。x&gt;1时以x轴方向放大，0&lt;x&lt;1时以x轴方向
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -80,8 +72,6 @@ y轴的缩放倍数。y&gt;1时以y轴方向放大，0&lt;y&lt;1时以y轴方向
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -97,8 +87,6 @@ z轴的缩放倍数。z&gt;1时以z轴方向放大，0&lt;z&lt;1时以z轴方向
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

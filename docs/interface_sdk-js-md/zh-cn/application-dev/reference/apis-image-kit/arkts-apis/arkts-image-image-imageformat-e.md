@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## YCBCR_422_SP
@@ -18,8 +16,6 @@ YCBCR422半平面格式。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## JPEG
@@ -31,7 +27,5 @@ JPEG = 2000
 JPEG编码格式。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

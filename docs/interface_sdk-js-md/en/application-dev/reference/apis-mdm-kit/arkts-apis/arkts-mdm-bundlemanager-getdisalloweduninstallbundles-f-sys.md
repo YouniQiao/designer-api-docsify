@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedUninstallBundles
@@ -15,8 +15,6 @@ function getDisallowedUninstallBundles(admin: Want, callback: AsyncCallback<Arra
 Obtains the applications that cannot be uninstalled by the current user. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -47,64 +45,6 @@ Obtains the applications that cannot be uninstalled by the current user. This AP
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getDisallowedUninstallBundles(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getDisallowedUninstallBundles(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getDisallowedUninstallBundles(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getDisallowedUninstallBundles
 
@@ -115,8 +55,6 @@ function getDisallowedUninstallBundles(admin: Want, userId: number, callback: As
 Obtains the applications that cannot be uninstalled by the user specified by **userId**. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -148,10 +86,6 @@ Obtains the applications that cannot be uninstalled by the user specified by **u
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [getDisallowedUninstallBundles](#getdisalloweduninstallbundles)
-
 
 ## getDisallowedUninstallBundles
 
@@ -162,8 +96,6 @@ function getDisallowedUninstallBundles(admin: Want, userId?: number): Promise<Ar
 Obtains the list of applications that are not allowed to be uninstalled by the current or specified user. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -199,7 +131,3 @@ Obtains the list of applications that are not allowed to be uninstalled by the c
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getDisallowedUninstallBundles](#getdisalloweduninstallbundles)

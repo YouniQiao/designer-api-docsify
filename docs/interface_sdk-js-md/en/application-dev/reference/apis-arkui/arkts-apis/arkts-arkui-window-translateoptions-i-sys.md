@@ -4,8 +4,6 @@ Describes the translation parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Describes the translation parameters.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## x
 
 ```TypeScript
-x?: double
+x?: number
 ```
 
 Distance to translate along the x-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,16 +33,14 @@ Distance to translate along the x-axis. The value is a floating-point number, th
 ## y
 
 ```TypeScript
-y?: double
+y?: number
 ```
 
 Distance to translate along the y-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -55,16 +49,14 @@ Distance to translate along the y-axis. The value is a floating-point number, th
 ## z
 
 ```TypeScript
-z?: double
+z?: number
 ```
 
 Distance to translate along the z-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

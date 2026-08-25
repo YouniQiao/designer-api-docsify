@@ -4,14 +4,12 @@ XmlPullParser接口用于解析现有的XML文件，适用于对XML文本进行�
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
+import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -24,8 +22,6 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -37,62 +33,6 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 | buffer | ArrayBuffer \| DataView | 是 |
 | encoding | string | 否 |
 
-**示例**
-
-```TypeScript
-let arrayBuffer = new ArrayBuffer(2048);
-let xmlSerializer = new xml.XmlSerializer(arrayBuffer, "utf-8");
-```
-
-```TypeScript
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let strXml = '<title>Happy</title>'
-let textEncoder = new util.TextEncoder();
-let uint8Array = textEncoder.encodeInto(strXml);
-let xmlParser = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UTF-8');
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream, 'utf-8');
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream, 'utf-8');
-```
-
 ## parse
 
 ```TypeScript
@@ -102,8 +42,6 @@ parse(option: ParseOptions): void
 该接口用于根据指定的解析选项解析XML文本。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 14
 
@@ -119,106 +57,6 @@ parse(option: ParseOptions): void
 | --- | --- | --- |
 | option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | 是 |
 
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let strXml =
-  '<?xml version="1.0" encoding="utf-8"?>' +
-  '<note importance="high" logged="true">' +
-    '<company>John &amp; Hans</company>' +
-    '<title>Happy</title>' +
-  '</note>';
-let textEncoder = new util.TextEncoder();
-let arrBuffer = textEncoder.encodeInto(strXml);
-let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer, 'UTF-8');
-let parseResult = '';
-function func(name: string, value: string) {
-  parseResult = name + value;
-  console.info(parseResult);
-  return true;
-}
-let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tagValueCallbackFunction:func}
-that.parse(options);
-// note
-// company
-// John & Hans
-// company
-// title
-// Happy
-// title
-// note
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream);
-
-let handler: xml.XmlSAXHandler = {
-  startDocument: () => {
-  },
-  endDocument: () => {
-  },
-  startElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined,
-    attributes: Map<string, string>) => {
-  },
-  endElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined) => {
-  },
-  characters: (content: string) => {
-  }
-};
-
-saxParser.parse(handler);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream);
-
-let handler: xml.XmlSAXHandler = {
-  startDocument: () => {
-  },
-  endDocument: () => {
-  },
-  startElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined,
-    attributes: Map<string, string>) => {
-  },
-  endElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined) => {
-  },
-  characters: (content: string) => {
-  }
-};
-
-saxParser.parse(handler);
-```
-
 ## parseXml
 
 ```TypeScript
@@ -228,8 +66,6 @@ parseXml(option: ParseOptions): void
 解析XML，调用后将根据ParseOptions中配置的回调函数触发相应的解析事件，通过回调函数传递标签、属性、文本等解析信息。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## setDisallowedPolicyForAccount
@@ -15,8 +15,6 @@ function setDisallowedPolicyForAccount(admin: Want, feature: string, disallow: b
 Disallows a feature for a specified user.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Deprecated since:** 26.0.0
 
@@ -46,27 +44,6 @@ Disallows a feature for a specified user.
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  restrictions.setDisallowedPolicyForAccount(wantTemp, 'fingerprint', true, 100);
-  console.info('Succeeded in setting fingerprint disabled');
-} catch (err) {
-  console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## setDisallowedPolicyForAccount
 
@@ -77,8 +54,6 @@ function setDisallowedPolicyForAccount(admin: Want, feature: FeatureForAccount, 
 Disallows a feature for a specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -105,7 +80,3 @@ Disallows a feature for a specified user.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount)

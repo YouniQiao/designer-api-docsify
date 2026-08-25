@@ -4,8 +4,6 @@ Defines the credential information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the credential information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## accountId
 
 ```TypeScript
-accountId?: int
+accountId?: number
 ```
 
 OS account ID, which is **undefined** by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -46,8 +42,6 @@ Additional information about the credential, which is an empty string by default
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Authentication credential subtype.
 **Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -82,8 +74,6 @@ Authentication credential type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -94,13 +84,11 @@ Authentication credential type.
 token: Uint8Array
 ```
 
-Authentication token, which is left blank by default.
+Authentication token.
 
 **Type:** Uint8Array
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

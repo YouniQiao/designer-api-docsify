@@ -4,29 +4,25 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## 导入模块
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## displayId
 
 ```TypeScript
-displayId: int
+displayId: number
 ```
 
 触点所在屏幕的唯一标识，必须为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,16 +31,14 @@ displayId: int
 ## displayX
 
 ```TypeScript
-displayX: int
+displayX: number
 ```
 
 触点相对于屏幕左边缘的X坐标，单位为像素（px），必须为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,16 +47,14 @@ displayX: int
 ## displayY
 
 ```TypeScript
-displayY: int
+displayY: number
 ```
 
 触点相对于屏幕上边缘的Y坐标，单位为像素（px），必须为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,16 +63,14 @@ displayY: int
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 触点唯一标识。取值范围为[0, 9]，且必须为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

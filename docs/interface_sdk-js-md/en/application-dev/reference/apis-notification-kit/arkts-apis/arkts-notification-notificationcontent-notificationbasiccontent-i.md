@@ -1,10 +1,8 @@
 # NotificationBasicContent
 
-Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as long text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis.
+Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as number text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -20,8 +18,6 @@ Additional notification content, which supplements the notification content and 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## lockscreenPicture
@@ -35,8 +31,6 @@ Picture displayed on the lock screen. This parameter is left empty by default. C
 **Type:** image.PixelMap
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -52,8 +46,6 @@ Notification body content, displayed below the title. It cannot be an empty stri
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## title
@@ -67,7 +59,5 @@ Notification title, displayed at the top of the notification. It cannot be an em
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

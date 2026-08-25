@@ -4,8 +4,6 @@ Since API version 12, [writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writ
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## INT8_ARRAY
@@ -17,8 +15,6 @@ INT8_ARRAY = 0
 The TypedArray type is **INT8_ARRAY**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -32,8 +28,6 @@ The TypedArray type is **UINT8_ARRAY**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## INT16_ARRAY
@@ -45,8 +39,6 @@ INT16_ARRAY = 2
 The TypedArray type is **INT16_ARRAY**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -60,8 +52,6 @@ The TypedArray type is **UINT16_ARRAY**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## INT32_ARRAY
@@ -73,8 +63,6 @@ INT32_ARRAY = 4
 The TypedArray type is **INT32_ARRAY**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -88,8 +76,6 @@ The TypedArray type is **UINT32_ARRAY**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## FLOAT32_ARRAY
@@ -101,8 +87,6 @@ FLOAT32_ARRAY = 6
 The TypedArray type is **FLOAT32_ARRAY**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -116,8 +100,6 @@ The TypedArray type is **FLOAT64_ARRAY**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## BIGINT64_ARRAY
@@ -130,8 +112,6 @@ The TypedArray type is **BIGINT64_ARRAY**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## BIGUINT64_ARRAY
@@ -143,7 +123,5 @@ BIGUINT64_ARRAY = 9
 The TypedArray type is **BIGUINT64_ARRAY**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core

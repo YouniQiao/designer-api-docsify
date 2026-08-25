@@ -4,14 +4,12 @@ Defines a struct for the batch operation result of shared configuration.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## result
@@ -25,8 +23,6 @@ Operation result code.
 **Type:** [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ URI to be operated, with a maximum of 256 bytes. The value is fixed at the forma
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

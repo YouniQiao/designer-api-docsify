@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSmsShortCodeType
 
 ```TypeScript
-function getSmsShortCodeType(slotId: int, destAddr: string): Promise<SmsShortCodeType>
+function getSmsShortCodeType(slotId: number, destAddr: string): Promise<SmsShortCodeType>
 ```
 
 Get the SMS short code type of the destination address.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
@@ -28,7 +26,7 @@ Get the SMS short code type of the destination address.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | destAddr | string | Yes |
 
 **Return value:**

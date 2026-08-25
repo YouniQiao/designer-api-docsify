@@ -4,8 +4,6 @@ Enumerates the screen capture states used in callbacks.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_STARTED
@@ -17,8 +15,6 @@ SCREENCAPTURE_STATE_STARTED = 0
 Screen capture is started.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -32,8 +28,6 @@ Screen capture is canceled.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_STOPPED_BY_USER
@@ -45,8 +39,6 @@ SCREENCAPTURE_STATE_STOPPED_BY_USER = 2
 Screen capture is manually stopped by the user.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -60,8 +52,6 @@ Screen capture is interrupted by another screen capture.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_STOPPED_BY_CALL
@@ -73,8 +63,6 @@ SCREENCAPTURE_STATE_STOPPED_BY_CALL = 4
 Screen capture is interrupted by an incoming call.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -88,8 +76,6 @@ The microphone is unavailable during screen capture.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_MIC_MUTED_BY_USER
@@ -101,8 +87,6 @@ SCREENCAPTURE_STATE_MIC_MUTED_BY_USER = 6
 The microphone is muted by the user.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -116,8 +100,6 @@ The microphone is unmuted by the user.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_ENTER_PRIVATE_SCENE
@@ -129,8 +111,6 @@ SCREENCAPTURE_STATE_ENTER_PRIVATE_SCENE = 8
 The system enters a privacy page during screen capture.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -144,8 +124,6 @@ The system exits a privacy page during screen capture.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_STOPPED_BY_USER_SWITCHES
@@ -158,8 +136,6 @@ Screen capture is interrupted by system user switchover.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## SCREENCAPTURE_STATE_PAUSED_BY_USER
@@ -171,8 +147,6 @@ SCREENCAPTURE_STATE_PAUSED_BY_USER = 11
 Screen capture paused by user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +162,6 @@ Screen capture resumed by user.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -204,8 +176,6 @@ Screen capture paused by app.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -219,8 +189,6 @@ SCREENCAPTURE_STATE_RESUMED_BY_APP = 14
 Screen capture resumed by app.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

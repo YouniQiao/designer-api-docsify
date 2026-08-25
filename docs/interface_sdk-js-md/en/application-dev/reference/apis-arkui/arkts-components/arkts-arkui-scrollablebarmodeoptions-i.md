@@ -4,8 +4,6 @@ Implements a **ScrollableBarModeOptions** object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ margin?: Dimension
 
 Left and right margin of the tab bar in scrollable mode. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Tab layout mode of the tab bar when not scrolling in scrollable mode.Default val
 **Type:** [LayoutStyle](arkts-arkui-layoutstyle-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

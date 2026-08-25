@@ -4,8 +4,6 @@ Enumerates the ringtone parameters.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Whether to enable loop playback. **true** to enable, **false** otherwise.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -31,16 +27,14 @@ Whether to enable loop playback. **true** to enable, **false** otherwise.
 ## volume
 
 ```TypeScript
-volume: double
+volume: number
 ```
 
 Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

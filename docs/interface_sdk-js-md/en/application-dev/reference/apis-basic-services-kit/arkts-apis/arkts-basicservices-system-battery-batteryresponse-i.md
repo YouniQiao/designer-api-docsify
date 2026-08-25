@@ -4,8 +4,6 @@ Defines a response that returns the charging status and remaining power of the d
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Lite
@@ -13,7 +11,7 @@ Defines a response that returns the charging status and remaining power of the d
 ## Modules to Import
 
 ```TypeScript
-import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKit';
+import { Battery, BatteryResponse, GetStatusOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## charging
@@ -27,8 +25,6 @@ Whether the battery is being charged. The value **true** indicates that the batt
 **Type:** boolean
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
@@ -47,8 +43,6 @@ Current battery level in percent, which ranges from **0.00** to **1.00**.Note: T
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 

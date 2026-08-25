@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## EQUAL_TO
@@ -17,8 +15,6 @@ EQUAL_TO = 1
 对应字段等于某值，值类型为string。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ NOT_EQUAL_TO = 2
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
@@ -49,8 +43,6 @@ IN = 3
 对应字段值在某数组中，值类型为string。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ IS_NOT_NULL = 0
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
@@ -82,8 +72,6 @@ NOT_IN = 4
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
@@ -97,8 +85,6 @@ CONTAINS = 5
 对应字段值包含某值，值类型为string
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

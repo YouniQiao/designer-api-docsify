@@ -4,8 +4,6 @@ The **systemTimer** module provides system timer features. You can use the APIs 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The **systemTimer** module provides system timer features. You can use the APIs 
 ## Modules to Import
 
 ```TypeScript
-import { systemTimer } from '@kit.BasicServicesKit';
+import { systemTimer } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

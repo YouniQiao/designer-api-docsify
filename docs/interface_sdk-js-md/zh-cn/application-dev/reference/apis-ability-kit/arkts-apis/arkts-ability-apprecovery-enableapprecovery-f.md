@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appRecovery } from '@kit.AbilityKit';
+import { appRecovery } from 'kits/@kit.AbilityKit';
 ```
 
 ## enableAppRecovery
@@ -15,8 +15,6 @@ function enableAppRecovery(restart?: RestartFlag, saveOccasion?: SaveOccasionFla
 使能应用恢复功能，参数按顺序填入。该接口调用后，应用从启动器启动时第一个Ability支持恢复。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -31,19 +29,3 @@ function enableAppRecovery(restart?: RestartFlag, saveOccasion?: SaveOccasionFla
 | [restart](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-animation-i.md) | [RestartFlag](arkts-ability-apprecovery-restartflag-e.md) | 否 |
 | saveOccasion | [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md) | 否 |
 | saveMode | [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md) | 否 |
-
-**示例**
-
-```TypeScript
-import { appRecovery, AbilityStage } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onCreate() {
-    appRecovery.enableAppRecovery(
-      appRecovery.RestartFlag.ALWAYS_RESTART,
-      appRecovery.SaveOccasionFlag.SAVE_WHEN_ERROR,
-      appRecovery.SaveModeFlag.SAVE_WITH_FILE
-    );
-  }
-}
-```

@@ -14,14 +14,12 @@ Represents the network connection object type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## on('netAvailable')
@@ -34,8 +32,6 @@ Registers a listener for **netAvailable** events. Before you call this API, make
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -47,31 +43,6 @@ Registers a listener for **netAvailable** events. Before you call this API, make
 | type | 'netAvailable' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a NetConnection object.
-let netCon: connection.NetConnection = connection.createNetConnection();
-
-// Use the on API to enable listening for netAvailable events.
-netCon.on('netAvailable', (data: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-
-// Register a listener for network status change events. This API must be called after the on API.
-netCon.register((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-
-// Use the unregister API to unsubscribe from netAvailable events.
-netCon.unregister((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 ## on('netBlockStatusChange')
 
 ```TypeScript
@@ -82,8 +53,6 @@ Registers a listener for **netBlockStatusChange** events. Before you call this A
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -92,31 +61,6 @@ Registers a listener for **netBlockStatusChange** events. Before you call this A
 | --- | --- | --- |
 | type | 'netBlockStatusChange' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a NetConnection object.
-let netCon: connection.NetConnection = connection.createNetConnection();
-
-// Use the on API to enable listening for netBlockStatusChange events.
-netCon.on('netBlockStatusChange', (data: connection.NetBlockStatusInfo) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-
-// Register a listener for network status change events. This API must be called after the on API.
-netCon.register((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-
-// Use the unregister API to remove the listener for netBlockStatusChange events.
-netCon.unregister((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
 
 ## on('netCapabilitiesChange')
 
@@ -127,8 +71,6 @@ on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void
 Registers a listener for **netCapabilitiesChange** events. Before you call this API, make sure that you have called **register** to add a listener for network status changes. When the listener is no longer needed, call **unregister** to remove it.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -141,31 +83,6 @@ Registers a listener for **netCapabilitiesChange** events. Before you call this 
 | type | 'netCapabilitiesChange' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a NetConnection object.
-let netCon: connection.NetConnection = connection.createNetConnection();
-
-// Use the on API to enable listening for netCapChange events.
-netCon.on('netCapabilitiesChange', (data: connection.NetCapabilityInfo) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-
-// Register a listener for network status change events. This API must be called after the on API.
-netCon.register((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-
-// Unsubscribe from netCapabilitiesChange events.
-netCon.unregister((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 ## on('netConnectionPropertiesChange')
 
 ```TypeScript
@@ -176,8 +93,6 @@ Registers a listener for **netConnectionPropertiesChange** events. Before you ca
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -186,31 +101,6 @@ Registers a listener for **netConnectionPropertiesChange** events. Before you ca
 | --- | --- | --- |
 | type | 'netConnectionPropertiesChange' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a NetConnection object.
-let netCon: connection.NetConnection = connection.createNetConnection();
-
-// Use the on API to enable listening for netConnectionChange events.
-netCon.on('netConnectionPropertiesChange', (data: connection.NetConnectionPropertyInfo) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-
-// Register a listener for network status change events. This API must be called after the on API.
-netCon.register((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-
-// Use the unregister API to remove the listener for netConnectionPropertiesChange events.
-netCon.unregister((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
 
 ## on('netLost')
 
@@ -221,8 +111,6 @@ on(type: 'netLost', callback: Callback<NetHandle>): void
 Registers a listener for **netLost** events. Before you call this API, make sure that you have called **register** to add a listener for network status changes. When the listener is no longer needed, call **unregister** to remove it.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -235,31 +123,6 @@ Registers a listener for **netLost** events. Before you call this API, make sure
 | type | 'netLost' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a NetConnection object.
-let netCon: connection.NetConnection = connection.createNetConnection();
-
-// Use the on API to enable listening for netLost events.
-netCon.on('netLost', (data: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-
-// Register a listener for network status change events. This API must be called after the on API.
-netCon.register((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-
-// Use the unregister API to remove the listener for netLost events.
-netCon.unregister((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 ## on('netUnavailable')
 
 ```TypeScript
@@ -270,8 +133,6 @@ Registers a listener for **netUnavailable** events. Before you call this API, ma
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -281,95 +142,6 @@ Registers a listener for **netUnavailable** events. Before you call this API, ma
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'netUnavailable' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a NetConnection object.
-let netCon: connection.NetConnection = connection.createNetConnection();
-
-// Use the on API to enable listening for netUnavailable events.
-netCon.on('netUnavailable', () => {
-  console.info("Succeeded to get unavailable net event");
-});
-
-// Register a listener for network status change events. This API must be called after the on API.
-netCon.register((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-
-// Use the unregister API to remove the listener for netUnavailable events.
-netCon.unregister((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-## onNetBlockStatusChange
-
-```TypeScript
-onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void
-```
-
-Registers a listener for netBlockStatusChange events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.NetManager.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes |
-
-## onNetLost
-
-```TypeScript
-onNetLost(callback: Callback<NetHandle>): void
-```
-
-Registers a listener for **netLost** events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Communication.NetManager.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes |
-
-## onNetUnavailable
-
-```TypeScript
-onNetUnavailable(callback: Callback<void>): void
-```
-
-Registers a listener for netUnavailable events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Communication.NetManager.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
 ## register
@@ -385,8 +157,6 @@ Registers a listener for network status changes. To listen for a specific type o
 > **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -411,18 +181,6 @@ Registers a listener for network status changes. To listen for a specific type o
 | [2101008](../errorcode-net-connection.md#2101008-callback-already-exists) |
 | [2101022](../errorcode-net-connection.md#2101022-number-of-requests-exceeding-the-maximum) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netCon: connection.NetConnection = connection.createNetConnection();
-netCon.register((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 ## unregister
 
 ```TypeScript
@@ -432,8 +190,6 @@ unregister(callback: AsyncCallback<void>): void
 Unregisters the listener for network status changes.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -454,15 +210,3 @@ Unregisters the listener for network status changes.
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [2101007](../errorcode-net-connection.md#2101007-callback-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netCon: connection.NetConnection = connection.createNetConnection();
-netCon.unregister((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```

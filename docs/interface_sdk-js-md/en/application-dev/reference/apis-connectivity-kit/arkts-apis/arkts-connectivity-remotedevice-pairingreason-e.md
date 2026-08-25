@@ -4,8 +4,6 @@ Enum for the pairing reason.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## PAIRING_REASON_SUCCESS
@@ -17,8 +15,6 @@ PAIRING_REASON_SUCCESS = 0
 Pairing succeed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Pairing failed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -49,8 +43,6 @@ PAIRING_REASON_ACB_CONNECTION_FAIL = 2
 Pairing failed: ACB connection failed. The remote device may be powered off or out of range.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +58,6 @@ Pairing failed: ACB connection limit exceeded.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -81,8 +71,6 @@ PAIRING_REASON_REMOTE_CANCELED = 4
 Pairing failed: Cancelled by remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +86,6 @@ Pairing failed: Cancelled by local device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -113,8 +99,6 @@ PAIRING_REASON_AUTH_FAIL = 6
 Pairing failed: Authentication failed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

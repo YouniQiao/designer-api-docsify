@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -34,14 +34,5 @@ import { window } from '@kit.ArkUI';
 
 | 名称 |
 | --- |
-| [Callback](arkts-arkui-callback-t.md) |
 | [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md) |
 | [WindowEventListener](arkts-arkui-windoweventlistener-t.md) |
-
-<!--Del-->
-### 类型（系统接口）
-
-| 名称 |
-| --- |
-| [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md) |
-<!--DelEnd-->

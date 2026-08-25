@@ -4,14 +4,12 @@ Defines cookie-related fields.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## domain
@@ -25,8 +23,6 @@ Domain names that can access the cookie.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -42,8 +38,6 @@ Expiration time of the cookie. For details about the time format, see [Date](htt
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## isHttpOnly
@@ -57,8 +51,6 @@ Whether the cookie can be accessed only through HTTP requests.The value **true**
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -74,8 +66,6 @@ Whether the cookie can be sent only through HTTPS.The value **true** means the c
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## isSessionCookie
@@ -89,8 +79,6 @@ Whether the cookie is a session cookie.The value **true** indicates that the coo
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -106,8 +94,6 @@ Name of the cookie.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## path
@@ -121,8 +107,6 @@ Path of the cookie.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -138,8 +122,6 @@ Same-site policy of the cookie.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## value
@@ -153,7 +135,5 @@ Value of the cookie.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getActiveNotifications
@@ -15,8 +15,6 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 获取当前应用未删除的通知列表。使用callback异步回调。用于查询当前应用在通知中心中所有存量通知的详细信息列表，包括每条通知的ID、标签、内容、创建时间等。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -39,63 +37,6 @@ setBadgeNumber 设置角标个数。
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getActiveNotificationsCallback = (err: BusinessError, data: Array<notificationManager.NotificationRequest>): void => {
-  if (err) {
-    console.error(`Failed to get active notifications. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
-  }
-}
-notificationManager.getActiveNotifications(getActiveNotificationsCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getActiveNotificationsCallback = (err: BusinessError | null, data: Array<notificationManager.NotificationRequest> | undefined | null): void => {
-  if (err) {
-    console.error(`Failed to get active notifications. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
-  }
-}
-notificationManager.getActiveNotifications(getActiveNotificationsCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-  console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get active notifications. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-  console.info(`Succeeded in getting active notifications, data is ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get active notifications. Code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## getActiveNotifications
 
@@ -106,8 +47,6 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 获取当前应用未删除的通知列表。使用Promise异步回调。用于查询当前应用在通知中心中所有存量通知的详细信息列表，包括每条通知的ID、标签、内容、创建时间等。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -128,7 +67,3 @@ setBadgeNumber 设置角标个数。
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-参见 [getActiveNotifications](#getactivenotifications)

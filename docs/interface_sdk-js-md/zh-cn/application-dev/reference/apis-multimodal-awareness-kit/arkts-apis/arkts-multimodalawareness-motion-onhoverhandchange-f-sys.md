@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onHoverHandChange
@@ -15,8 +15,6 @@ function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Call
 订阅悬停手势事件，并立即开始5秒检测。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,14 +43,12 @@ function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Call
 
 ```TypeScript
 function onHoverHandChange(
-    detectionArea: HoverHandDetectionArea, duration: int, callback: Callback<HoverHandAction>): void
+    detectionArea: HoverHandDetectionArea, duration: number, callback: Callback<HoverHandAction>): void
 ```
 
 订阅悬停手势事件，并立即开始检测。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,7 +61,7 @@ function onHoverHandChange(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | 是 |
-| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| duration | number | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | 是 |
 
 **错误码：**

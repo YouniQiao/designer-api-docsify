@@ -4,8 +4,6 @@ Enumerates the device authentication types.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -21,8 +19,6 @@ INVALID_TYPE = -1
 No authentication.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -40,8 +36,6 @@ Point-to-point authentication for devices without accounts.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -58,8 +52,6 @@ Authentication for devices using the same account.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -75,8 +67,6 @@ ACROSS_ACCOUNT = 2
 Authentication for devices using different accounts.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 

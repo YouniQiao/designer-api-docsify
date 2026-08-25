@@ -4,14 +4,12 @@ Provides extended methods to operate or manage Wi-Fi.<p>The APIs involved in thi
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from '@kit.ConnectivityKit';
+import { wifiext } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

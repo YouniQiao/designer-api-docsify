@@ -4,14 +4,12 @@ Describes the button displayed for a reminder.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## dataShareUpdate
@@ -25,8 +23,6 @@ The application database will be updated after a click on the button.
 **Type:** [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -43,8 +39,6 @@ Information about the ability that is displayed after the button is clicked.
 **Type:** WantAgent
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

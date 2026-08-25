@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## startOsu
 
 ```TypeScript
-function startOsu(slotId: int): Promise<OsuStatus>
+function startOsu(slotId: number): Promise<OsuStatus>
 ```
 
 Upgrades the OS if the OS version of the eSIM in the specified slot is not the latest. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
@@ -28,7 +26,7 @@ Upgrades the OS if the OS version of the eSIM in the specified slot is not the l
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -46,16 +44,3 @@ Upgrades the OS if the OS version of the eSIM in the specified slot is not the l
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { eSIM } from '@kit.TelephonyKit';
-
-eSIM.startOsu(1).then(() => {
-    console.info(`startOsu invoking succeeded.`);
-}).catch((err: BusinessError<void>) => {
-    console.error(`startOsu, ErrorState: err->${JSON.stringify(err)}`);
-});
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getNativeHeapSize
@@ -16,8 +16,6 @@ function getNativeHeapSize() : bigint
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
@@ -25,12 +23,3 @@ function getNativeHeapSize() : bigint
 | 类型 |
 | --- |
 | bigint |
-
-**示例**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-
-let nativeHeapSize: bigint = hidebug.getNativeHeapSize();
-console.info(`nativeHeapSize = ${nativeHeapSize}`);
-```

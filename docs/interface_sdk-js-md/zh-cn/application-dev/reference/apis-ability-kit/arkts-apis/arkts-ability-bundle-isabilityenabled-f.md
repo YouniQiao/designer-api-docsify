@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## isAbilityEnabled
@@ -16,8 +16,6 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -29,41 +27,6 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 | info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = "com.example.myapplication";
-let abilityName: string = "EntryAbility";
-
-bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
-  bundle.isAbilityEnabled(abilityInfo).then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-})
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleName: string = "com.example.myapplication";
-let abilityName: string = "EntryAbility";
-
-bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
-  bundle.isAbilityEnabled(abilityInfo, (err, data) => {
-    if (err) {
-      console.error('Operation failed. Cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('Operation successful. Data:' + JSON.stringify(data));
-  })
-})
-```
-
 
 ## isAbilityEnabled
 
@@ -74,8 +37,6 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 根据给定的AbilityInfo查询ability是否已经启用，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -92,7 +53,3 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isAbilityEnabled](#isabilityenabled)

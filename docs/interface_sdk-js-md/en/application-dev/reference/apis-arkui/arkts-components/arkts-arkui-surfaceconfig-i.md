@@ -4,8 +4,6 @@ Describes whether the surface held by the **XComponent** is treated as opaque du
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,8 +24,6 @@ Whether the surface held by the **XComponent** is treated as opaque during rende
 **Default:** false
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

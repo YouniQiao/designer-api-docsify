@@ -120,7 +120,7 @@ int OH_Values_Put(OH_Data_Values *values, const OH_Data_Value *val)
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | 表示指向[OH_Data_Values](capi-rdb-oh-data-values.md)实例的指针。 |
-| const OH_Data_Value *val | 表示指向[OH_Data_Value](capi-rdb-oh-data-value.md)对象的指针。 |
+| [const OH_Data_Value](capi-rdb-oh-data-value.md) *val | 表示指向[OH_Data_Value](capi-rdb-oh-data-value.md)对象的指针。 |
 
 **返回：**
 
@@ -400,7 +400,7 @@ int OH_Values_GetType(OH_Data_Values *values, int index, OH_ColumnType *type)
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | 表示指向[OH_Data_Values](capi-rdb-oh-data-values.md)实例的指针。 |
 | int index | 表示values中目标数据的从零开始的索引。 |
-| OH_ColumnType *type | 一个输出参数，表示数据类型。 |
+| [OH_ColumnType](capi-oh-data-value-h.md#oh_columntype) *type | 一个输出参数，表示数据类型。 |
 
 **返回：**
 
@@ -426,7 +426,7 @@ int OH_Values_Get(OH_Data_Values *values, int index, OH_Data_Value **val)
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | 表示指向[OH_Data_Values](capi-rdb-oh-data-values.md)实例的指针。 |
 | int index | 表示values中目标数据的从零开始的索引。 |
-| OH_Data_Value **val | 一个输出参数，表示指向[OH_Data_Value](capi-rdb-oh-data-value.md)实例的指针。<br>无需申请内存和释放内存。 |
+| [OH_Data_Value](capi-rdb-oh-data-value.md) **val | 一个输出参数，表示指向[OH_Data_Value](capi-rdb-oh-data-value.md)实例的指针。<br>无需申请内存和释放内存。 |
 
 **返回：**
 

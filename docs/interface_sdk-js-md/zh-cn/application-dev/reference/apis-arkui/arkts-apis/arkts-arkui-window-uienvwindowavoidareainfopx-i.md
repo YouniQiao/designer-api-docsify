@@ -4,14 +4,12 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## cutout
@@ -25,8 +23,6 @@ cutout: AvoidArea
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -42,8 +38,6 @@ keyboard: AvoidArea
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## navigationIndicator
@@ -58,8 +52,6 @@ navigationIndicator: AvoidArea
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## statusBar
@@ -73,7 +65,5 @@ statusBar: AvoidArea
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager

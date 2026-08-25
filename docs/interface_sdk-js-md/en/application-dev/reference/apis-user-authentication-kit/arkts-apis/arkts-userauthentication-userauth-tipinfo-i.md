@@ -4,8 +4,6 @@ Represents the tip information displayed during the authentication, which is use
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **Substitutes:** [AuthTipInfo](arkts-userauthentication-userauth-authtipinfo-i.md)
@@ -15,7 +13,7 @@ Represents the tip information displayed during the authentication, which is use
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## module
@@ -29,8 +27,6 @@ ID of the module that sends the tip information.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 
@@ -49,8 +45,6 @@ Tip to be given during the authentication process.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 

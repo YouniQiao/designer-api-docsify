@@ -4,8 +4,6 @@ Indicates the results of manual network scan
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Indicates the results of manual network scan
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isFinish
@@ -27,8 +25,6 @@ Indicates whether the network search was stop.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -45,8 +41,6 @@ the network search results.
 **Type:** Array&lt;[NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

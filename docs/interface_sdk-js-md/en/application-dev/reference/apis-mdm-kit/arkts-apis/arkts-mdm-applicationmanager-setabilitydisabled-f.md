@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setAbilityDisabled
@@ -15,8 +15,6 @@ function setAbilityDisabled(admin: Want, bundleName: string, accountId: number, 
 Sets whether to disable the Ability component of a specified application (system application or third-party application). Currently, only the UIAbility type is supported. After the UIAbility type is disabled, the UI of the Ability component cannot be started.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -42,27 +40,3 @@ Sets whether to disable the Ability component of a specified application (system
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace it as required.
-  let bundleName: string = "com.example.exampleapplication";
-  let accountId: number = 100;
-  let abilityName: string = "EntryAbility";
-  applicationManager.setAbilityDisabled(wantTemp, bundleName, accountId, abilityName, true);
-  console.info('Succeeded in setting ability disabled');
-} catch(err) {
-  console.error(`Failed to set ability disabled. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md)
@@ -21,8 +19,6 @@ LEVEL_NONE = 0
 表示关闭通知功能。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ LEVEL_MIN = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_MIN](arkts-notification-notificationmanager-slotlevel-e.md#level_min)
@@ -57,8 +51,6 @@ LEVEL_LOW = 2
 表示通知功能已启用，且状态栏中显示通知图标，但没有横幅或提示音。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -76,8 +68,6 @@ LEVEL_DEFAULT = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [LEVEL_DEFAULT](arkts-notification-notificationmanager-slotlevel-e.md#level_default)
@@ -93,8 +83,6 @@ LEVEL_HIGH = 4
 表示通知功能已启用，状态栏中显示通知图标，有横幅和提示音。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

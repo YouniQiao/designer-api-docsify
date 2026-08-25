@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from '@kit.ConnectivityKit';
+import { cardEmulation } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getPaymentServices
@@ -15,8 +15,6 @@ function getPaymentServices(): AbilityInfo[]
 Obtains all payment services. If an application declares the support for the HCE feature and **payment-aid**, the application is contained in the payment service list. For details, see [HCE and AID Declaration](../../../reference/apis-connectivity-kit/js-apis-cardEmulation.md#hce-and-aid-declaration).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -39,14 +37,3 @@ Obtains all payment services. If an application declares the support for the HCE
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { cardEmulation } from '@kit.ConnectivityKit';
-
-let paymentServices = cardEmulation.getPaymentServices();
-if (paymentServices == undefined || paymentServices.length == 0) {
-  console.error('paymentServices is null.');
-}
-```

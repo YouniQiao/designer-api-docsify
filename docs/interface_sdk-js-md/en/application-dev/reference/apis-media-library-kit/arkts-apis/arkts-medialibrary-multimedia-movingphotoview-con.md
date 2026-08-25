@@ -10,8 +10,6 @@ Defines MovingPhotoView Component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -25,8 +23,6 @@ declare const MovingPhotoViewInstance: MovingPhotoViewAttribute
 Defines MovingPhotoView Component instance.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

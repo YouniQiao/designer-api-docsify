@@ -8,14 +8,12 @@ The **sendablePreferences** module provides APIs for processing data in the form
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from '@kit.ArkData';
+import { sendablePreferences } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

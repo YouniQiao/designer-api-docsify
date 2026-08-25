@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## disableCellularData
@@ -15,8 +15,6 @@ function disableCellularData(callback: AsyncCallback<void>): void
 禁用蜂窝数据服务，使用callback方式作为异步方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -42,32 +40,6 @@ function disableCellularData(callback: AsyncCallback<void>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.disableCellularData((err: BusinessError) => {
-    if(err) {
-        console.error(`disableCellularData fail. code: ${err.code}, message: ${err.message}`);
-    } else {
-        console.info(`disableCellularData success`);
-    }
-});
-```
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.disableCellularData().then(() => {
-    console.info(`disableCellularData success.`);
-}).catch((err: BusinessError) => {
-    console.error(`disableCellularData fail. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## disableCellularData
 
@@ -78,8 +50,6 @@ function disableCellularData(): Promise<void>
 禁用蜂窝数据服务，使用Promise方式作为异步方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -102,7 +72,3 @@ function disableCellularData(): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [disableCellularData](#disablecellulardata)

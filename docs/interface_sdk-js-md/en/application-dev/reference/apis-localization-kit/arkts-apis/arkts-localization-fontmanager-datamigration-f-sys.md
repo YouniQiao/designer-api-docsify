@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## dataMigration
 
 ```TypeScript
-function dataMigration(callback: DataMigrationCallback): int
+function dataMigration(callback: DataMigrationCallback): number
 ```
 
 Data migration API used during device upgrades to start a migration task, providing real-time feedback on migration progress and results through a callback function.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_FONT
 
@@ -34,7 +32,7 @@ Data migration API used during device upgrades to start a migration task, provid
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -44,30 +42,3 @@ Data migration API used during device upgrades to start a migration task, provid
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) |
 | [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) |
-
-**Examples**
-
-```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
-
-dataMigration() {
-  const callback: fontManager.DataMigrationCallback = {
-    onHeartBeat: () => {
-      console.info('onHeartBeat callback');
-    },
-    onProgress(progress : fontManager.DataMigrationProgress) => {
-      console.info('onProgress callback');
-    },
-    onResult(result : int) => {
-      console.info('onResult callback');
-    }
-  }
-  try {
-    let res = await fontManager.dataMigration(callback);
-    console.info('dataMigration suc. res is ' + res);
-  } catch (error) {
-    console.error('dataMigration err.' + error.code);
-  }
-  return;
-}
-```

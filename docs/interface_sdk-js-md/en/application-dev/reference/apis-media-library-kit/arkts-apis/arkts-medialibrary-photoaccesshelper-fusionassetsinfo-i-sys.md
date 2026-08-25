@@ -4,8 +4,6 @@ Fusion assets information.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Fusion assets information.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## assetsCount
 
 ```TypeScript
-assetsCount: int
+assetsCount: number
 ```
 
 Assets count.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -46,8 +42,6 @@ Assets path.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Assets type.
 **Type:** [FusionAssetType](arkts-medialibrary-photoaccesshelper-fusionassettype-e-sys.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

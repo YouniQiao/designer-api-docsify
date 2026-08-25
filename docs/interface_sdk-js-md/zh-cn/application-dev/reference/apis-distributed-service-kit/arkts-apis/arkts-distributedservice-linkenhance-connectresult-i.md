@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## deviceId
@@ -26,8 +24,6 @@ deviceId: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -35,18 +31,18 @@ deviceId: string
 ## reason
 
 ```TypeScript
-reason: int
+reason: number
 ```
 
 连接成功返回0，连接失败返回错误码：  
-- 32390200：表示客户端连接超时。 - 32390201：表示服务端服务未启动。 - 32390300：表示内部错误。  
+- 32390200：表示客户端连接超时。  
+- 32390201：表示服务端服务未启动。  
+- 32390300：表示内部错误。  
 更多关于错误码的详细介绍请参考[增强连接错误码](../errorcode-link-enhance.md)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,8 +59,6 @@ success: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,14 +4,12 @@ This module provides the capability to manage web modules.@namespace webview
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## Summary
@@ -124,10 +122,5 @@ import { webview } from '@kit.ArkWeb';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) |
-| [OneParamFn](arkts-arkweb-webview-oneparamfn-t.md) |
 | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) |
-| [ResumePlayerFn](arkts-arkweb-webview-resumeplayerfn-t.md) |
-| [SuspendPlayerFn](arkts-arkweb-webview-suspendplayerfn-t.md) |
-| [UpdateRectFn](arkts-arkweb-webview-updaterectfn-t.md) |
 | [WebMessage](arkts-arkweb-webview-webmessage-t.md) |
-| [ZeroParamFn](arkts-arkweb-webview-zeroparamfn-t.md) |

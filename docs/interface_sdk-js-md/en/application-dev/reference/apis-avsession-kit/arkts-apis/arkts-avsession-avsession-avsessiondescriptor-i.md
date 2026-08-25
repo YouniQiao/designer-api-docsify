@@ -4,14 +4,12 @@ The description of the session
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## elementName
@@ -25,8 +23,6 @@ The elementName of the ability that created this session. See ElementName in bun
 **Type:** [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -42,8 +38,6 @@ Session active state
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 ## isTopSession
@@ -57,8 +51,6 @@ Is it the top priority session
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -74,8 +66,6 @@ Unique ID of the session
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 ## sessionTag
@@ -90,8 +80,6 @@ The session tag set by the application
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 ## type
@@ -105,7 +93,5 @@ Session type, currently supports audio or video
 **Type:** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager

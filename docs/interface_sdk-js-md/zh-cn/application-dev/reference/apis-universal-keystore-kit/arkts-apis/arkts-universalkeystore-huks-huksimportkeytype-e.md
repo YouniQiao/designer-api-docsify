@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
 - API版本9-11：SystemCapability.Security.Huks.Extension
@@ -19,8 +17,6 @@ HUKS_KEY_TYPE_PUBLIC_KEY = 0
 表示导入的密钥类型为公钥。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,8 +34,6 @@ HUKS_KEY_TYPE_PRIVATE_KEY = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -55,8 +49,6 @@ HUKS_KEY_TYPE_KEY_PAIR = 2
 表示导入的密钥类型为公私钥对。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

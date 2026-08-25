@@ -15,8 +15,6 @@ declare function mkdirSync(path: string, mode?: number): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [mkdirSync](arkts-corefile-file-fs-mkdirsync-f.md)
@@ -29,10 +27,3 @@ declare function mkdirSync(path: string, mode?: number): void
 | --- | --- | --- |
 | path | string | 是 |
 | mode | number | 否 |
-
-**示例**
-
-```TypeScript
-let dirPath = pathDir + '/testDir';
-fileio.mkdirSync(dirPath);
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { overlay } from '@kit.AbilityKit';
+import { overlay } from 'kits/@kit.AbilityKit';
 ```
 
 ## getOverlayModuleInfo
@@ -15,8 +15,6 @@ function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<Overla
 获取当前应用中overlay特征module的OverlayModuleInfo信息。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -36,47 +34,6 @@ function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<Overla
 | [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
 | [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
 
-**示例**
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let moduleName = "feature";
-
-(async () => {
-  try {
-    let overlayModuleInfo = await overlay.getOverlayModuleInfo(moduleName);
-    console.info('overlayModuleInfo is ' + JSON.stringify(overlayModuleInfo));
-  } catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error('getOverlayModuleInfo failed due to err code : ' + code + ' ' + 'message :' + message);
-  }
-})();
-```
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let moduleName = "feature";
-
-try {
-  overlay.getOverlayModuleInfo(moduleName, (err, data) => {
-    if (err) {
-      console.error('getOverlayModuleInfo failed due to err code : ' + err.code + ' ' + 'message :' + err.message);
-      return;
-    }
-    console.info('overlayModuleInfo is ' + JSON.stringify(data));
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('getOverlayModuleInfo failed due to err code : ' + code + ' ' + 'message :' + message);
-}
-```
-
 
 ## getOverlayModuleInfo
 
@@ -87,8 +44,6 @@ function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>
 获取当前应用中overlay特征module的OverlayModuleInfo信息。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -112,7 +67,3 @@ function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
 | [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
 | [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
-
-**示例**
-
-参见 [getOverlayModuleInfo](#getoverlaymoduleinfo)

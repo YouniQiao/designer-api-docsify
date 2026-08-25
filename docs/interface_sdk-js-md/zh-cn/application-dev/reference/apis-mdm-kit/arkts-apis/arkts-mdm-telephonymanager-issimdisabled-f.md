@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isSimDisabled
@@ -15,8 +15,6 @@ function isSimDisabled(admin: Want, slotId: number): boolean
 查询指定卡槽是否禁用。适用于企业管理员需要确认SIM卡禁用策略是否生效的场景，帮助管理员验证策略执行状态，确保通话管控策略正确实施。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -45,25 +43,3 @@ function isSimDisabled(admin: Want, slotId: number): boolean
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // 设置要查询的卡槽ID
-  let slotId: number = 0;
-  // 查询指定卡槽的SIM卡是否被禁用
-  let result: boolean = telephonyManager.isSimDisabled(wantTemp, slotId);
-  console.info(`Succeeded in querying slotId: ${slotId} is disabled or not, result: ${result}`);
-} catch (err) {
-  console.error(`Failed to query sim is disabled or not. Code: ${err.code}, message: ${err.message}`);
-}
-```

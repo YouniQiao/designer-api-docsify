@@ -4,8 +4,6 @@ Enumerates the global scrollbar modes in the web page.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## OVERLAY_LAYOUT_SCROLLBAR
@@ -17,8 +15,6 @@ OVERLAY_LAYOUT_SCROLLBAR = 0
 Overlay scrollbar that can be dragged.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ The scrollbar is always displayed.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## OVERLAY_VISUAL_SCROLLBAR
@@ -45,8 +39,6 @@ OVERLAY_VISUAL_SCROLLBAR = 2
 Overlay scrollbar that cannot be dragged.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

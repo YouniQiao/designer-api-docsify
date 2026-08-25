@@ -1,21 +1,23 @@
 # @ohos.net.statistics(流量管理)
 
 流量管理模块提供获取设备网络流量数据的能力。该模块支持从多个维度查询数据包的流量使用情况，例如：  
-- 支持获取指定网卡的上/下行流量数据； - 支持获取所有网卡的总流量数据，便于查看设备整体网络使用情况； - 支持根据应用uid获取指定应用的流量数据，帮助开发者监控应用的网络资源消耗； - 支持获取指定socket的流量统计，为细粒度的网络性能分析提供数据基础； - 支持获取应用在指定时间段内的历史流量使用情况，便于分析应用的长期网络使用趋势。
+- 支持获取指定网卡的上/下行流量数据；  
+- 支持获取所有网卡的总流量数据，便于查看设备整体网络使用情况；  
+- 支持根据应用uid获取指定应用的流量数据，帮助开发者监控应用的网络资源消耗；  
+- 支持获取指定socket的流量统计，为细粒度的网络性能分析提供数据基础；  
+- 支持获取应用在指定时间段内的历史流量使用情况，便于分析应用的长期网络使用趋势。
 
 > **说明：**&gt;
 > 本模块首批接口从 API version 10 开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## 汇总
@@ -59,10 +61,8 @@ import { statistics } from '@kit.NetworkKit';
 | [getTrafficStatsByUid(流量管理)](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) |
 | [getTrafficStatsByUid(流量管理)](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) |
 | [getTrafficStatsByUidNetwork(流量管理)](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md) |
-| [off(流量管理)](arkts-network-statistics-off-f-sys.md#offnetstatschange) |
-| [offNetStatsChange(流量管理)](arkts-network-statistics-offnetstatschange-f-sys.md) |
-| [on(流量管理)](arkts-network-statistics-on-f-sys.md#onnetstatschange) |
-| [onNetStatsChange(流量管理)](arkts-network-statistics-onnetstatschange-f-sys.md) |
+| off(流量管理) |
+| on(流量管理) |
 | [setCalibrationTraffic(流量管理)](arkts-network-statistics-setcalibrationtraffic-f-sys.md) |
 | [setTrafficPlanInfo(流量管理)](arkts-network-statistics-settrafficplaninfo-f-sys.md) |
 | [updateIfacesStats(流量管理)](arkts-network-statistics-updateifacesstats-f-sys.md) |
@@ -83,7 +83,6 @@ import { statistics } from '@kit.NetworkKit';
 | --- |
 | [IfaceInfo(流量管理)](arkts-network-statistics-ifaceinfo-i-sys.md) |
 | [NetStatsChangeInfo(流量管理)](arkts-network-statistics-netstatschangeinfo-i-sys.md) |
-| [NetStatsInfoSequenceItem(流量管理)](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md) |
 | [UidInfo(流量管理)](arkts-network-statistics-uidinfo-i-sys.md) |
 <!--DelEnd-->
 
@@ -106,6 +105,5 @@ import { statistics } from '@kit.NetworkKit';
 
 | 名称 |
 | --- |
-| [NetStatsInfoSequence(流量管理)](arkts-network-statistics-netstatsinfosequence-t-sys.md) |
 | [UidNetStatsInfo(流量管理)](arkts-network-statistics-uidnetstatsinfo-t-sys.md) |
 <!--DelEnd-->

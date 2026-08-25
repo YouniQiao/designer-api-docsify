@@ -4,14 +4,12 @@ Provides the method for operating on a remote device. Before using this method, 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getAcbState
@@ -24,8 +22,6 @@ Obtains the logical link connection status with a remote device. This method is 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -36,7 +32,7 @@ Obtains the logical link connection status with a remote device. This method is 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) |
+| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) |
 
 **Error codes:**
 
@@ -56,8 +52,6 @@ Obtains the connection status between the local and remote devices. Unlike [getA
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -68,7 +62,7 @@ Obtains the connection status between the local and remote devices. Unlike [getA
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) |
 
 **Error codes:**
 
@@ -87,8 +81,6 @@ getDeviceClass(): DeviceClass
 Obtains the type of a remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -120,8 +112,6 @@ Obtains the information of a remote device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -151,8 +141,6 @@ getDeviceName(): string
 Obtains the name of a remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -184,8 +172,6 @@ Obtains the pairing status with a remote device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -196,7 +182,7 @@ Obtains the pairing status with a remote device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) |
+| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) |
 
 **Error codes:**
 
@@ -215,8 +201,6 @@ startPairing(): Promise<void>
 Initiates pairing with a remote device. This API uses a promise to return the result. After the pairing is initiated, different types of dialog boxes will be displayed based on the input and output capability IDs of the local and remote devices, for example, whether the devices have the display and keyboard input capabilities. The user will need to confirm the pairing.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

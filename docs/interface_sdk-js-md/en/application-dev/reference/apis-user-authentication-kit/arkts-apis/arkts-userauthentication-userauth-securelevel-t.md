@@ -8,8 +8,6 @@ Enumerates the authentication security levels.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md)

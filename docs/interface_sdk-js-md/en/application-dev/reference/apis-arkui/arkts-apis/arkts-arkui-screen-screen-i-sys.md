@@ -4,8 +4,6 @@ Defines the [physical screen](../../../displaymanager/display-terminology.md#phy
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -13,26 +11,18 @@ Defines the [physical screen](../../../displaymanager/display-terminology.md#phy
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## setDensityDpi
 
-ArkTS-Dyn:
 ```TypeScript
 setDensityDpi(densityDpi: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void
 ```
 
 Sets the pixel density of the screen. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -42,7 +32,7 @@ Sets the pixel density of the screen. This API uses an asynchronous callback to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [densityDpi](arkts-arkui-screen-screen-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [densityDpi](arkts-arkui-screen-screen-i-sys.md) | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -53,98 +43,15 @@ Sets the pixel density of the screen. This API uses an asynchronous callback to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let densityDpi: number = 320;
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option : VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  screenClass.setDensityDpi(densityDpi, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set the pixel density of the screen to 320. Code:${err.code}, message is ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the density dpi.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let densityDpi: number = 320;
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option : VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  let promise: Promise<void> = screenClass.setDensityDpi(densityDpi);
-  promise.then(() => {
-    console.info('Succeeded in setting the pixel density of the screen to 320.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the pixel density of the screen to 320. Code:${err.code}, message is ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
-});
-```
-
 ## setDensityDpi
 
-ArkTS-Dyn:
 ```TypeScript
 setDensityDpi(densityDpi: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setDensityDpi(densityDpi: double): Promise<void>
 ```
 
 Sets the pixel density of the screen. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -154,7 +61,7 @@ Sets the pixel density of the screen. This API uses a promise to return the resu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [densityDpi](arkts-arkui-screen-screen-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [densityDpi](arkts-arkui-screen-screen-i-sys.md) | number | Yes |
 
 **Return value:**
 
@@ -169,10 +76,6 @@ Sets the pixel density of the screen. This API uses a promise to return the resu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
-
-**Examples**
-
-See [setDensityDpi](#setdensitydpi)
 
 ## setOrientation
 
@@ -184,8 +87,6 @@ Sets the screen orientation. This API uses an asynchronous callback to return th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -205,80 +106,6 @@ Sets the screen orientation. This API uses an asynchronous callback to return th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option : VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  screenClass.setOrientation(screen.Orientation.VERTICAL, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set the vertical orientation. Code:${err.code}, message is ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the vertical orientation.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option : VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  let promise: Promise<void> = screenClass.setOrientation(screen.Orientation.VERTICAL);
-  promise.then(() => {
-    console.info('Succeeded in setting the vertical orientation.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the vertical orientation. Code:${err.code}, message is ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
-});
-```
-
 ## setOrientation
 
 ```TypeScript
@@ -288,8 +115,6 @@ setOrientation(orientation: Orientation): Promise<void>
 Sets the screen orientation. This API uses a promise to return the result. The screen orientation changes only when the specified orientation complies with the [application rotation policy](../../../quick-start/module-configuration-file.md#abilities) (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the **module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -315,10 +140,6 @@ Sets the screen orientation. This API uses a promise to return the result. The s
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
-**Examples**
-
-See [setOrientation](#setorientation)
-
 ## setOrientation
 
 ```TypeScript
@@ -328,8 +149,6 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 Set the orientation of the screen
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -358,27 +177,15 @@ Set the orientation of the screen
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
-**Examples**
-
-See [setOrientation](#setorientation)
-
 ## setScreenActiveMode
 
-ArkTS-Dyn:
 ```TypeScript
 setScreenActiveMode(modeIndex: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void
 ```
 
 Sets the active mode of the screen. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -388,7 +195,7 @@ Sets the active mode of the screen. This API uses an asynchronous callback to re
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modeIndex | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| modeIndex | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -399,99 +206,15 @@ Sets the active mode of the screen. This API uses an asynchronous callback to re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option : VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  let modeIndex: number = 0;
-  screenClass.setScreenActiveMode(modeIndex, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set screen active mode 0. Code:${err.code}, message is ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the screen active mode 0.');
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option : VirtualScreenOption = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  let screenClass: screen.Screen = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-  let modeIndex: number = 0;
-  let promise: Promise<void> = screenClass.setScreenActiveMode(modeIndex);
-  promise.then(() => {
-    console.info('Succeeded in setting screen active mode 0.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set screen active mode 0.Code:${err.code}, message is ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
-});
-```
-
 ## setScreenActiveMode
 
-ArkTS-Dyn:
 ```TypeScript
 setScreenActiveMode(modeIndex: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setScreenActiveMode(modeIndex: long): Promise<void>
 ```
 
 Sets the active mode of the screen. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -501,7 +224,7 @@ Sets the active mode of the screen. This API uses a promise to return the result
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modeIndex | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| modeIndex | number | Yes |
 
 **Return value:**
 
@@ -517,23 +240,17 @@ Sets the active mode of the screen. This API uses a promise to return the result
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
-**Examples**
-
-See [setScreenActiveMode](#setscreenactivemode)
-
 ## activeModeIndex
 
 ```TypeScript
-readonly activeModeIndex: long
+readonly activeModeIndex: number
 ```
 
 Index of the active screen mode. The current value and value range of this parameter vary according to the screen resolution, refresh rate, and device hardware. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -542,16 +259,14 @@ Index of the active screen mode. The current value and value range of this param
 ## densityDpi
 
 ```TypeScript
-readonly densityDpi?: double
+readonly densityDpi?: number
 ```
 
 Physical pixel density of the screen, that is, the number of pixels per inch.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -562,16 +277,14 @@ Physical pixel density of the screen, that is, the number of pixels per inch.
 ## id
 
 ```TypeScript
-readonly id: long
+readonly id: number
 ```
 
 Screen ID, which is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -588,8 +301,6 @@ The screen is in use
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -609,8 +320,6 @@ Screen orientation.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -618,16 +327,14 @@ Screen orientation.
 ## parent
 
 ```TypeScript
-readonly parent: long
+readonly parent: number
 ```
 
 ID of the group to which a screen belongs, where the ID is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -636,16 +343,14 @@ ID of the group to which a screen belongs, where the ID is an integer.
 ## rsId
 
 ```TypeScript
-readonly rsId: long
+readonly rsId: number
 ```
 
 Screen port ID, which is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -662,8 +367,6 @@ Screen type.
 **Type:** [ScreenType](arkts-arkui-screen-screentype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -683,8 +386,6 @@ Serial number of the extended screen. By default, the value is an empty string.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -701,8 +402,6 @@ Source mode of the screen
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -718,8 +417,6 @@ Mode set supported by the screen.
 **Type:** Array&lt;[ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

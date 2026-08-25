@@ -7,14 +7,12 @@ formInfo模块提供了卡片信息和状态等相关类型和枚举。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## 导入模块
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'kits/@kit.FormKit';
 ```
 
 ## 汇总

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { missionManager } from '@kit.AbilityKit';
+import { missionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getMissionSnapShot
 
 ```TypeScript
-function getMissionSnapShot(deviceId: string, missionId: int, callback: AsyncCallback<MissionSnapshot>): void
+function getMissionSnapShot(deviceId: string, missionId: number, callback: AsyncCallback<MissionSnapshot>): void
 ```
 
 Obtains the snapshot of a given mission. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -29,7 +27,7 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | deviceId | string | Yes |
-| missionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| missionId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;MissionSnapshot&gt; | Yes |
 
 **Error codes:**
@@ -40,58 +38,16 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let testMissionId = 2;
-
-try {
-  missionManager.getMissionSnapShot('', testMissionId, (err: BusinessError, data: missionManager.MissionSnapshot) => {
-    if (err) {
-      console.error(`getMissionSnapShot failed: ${err.message}`);
-    } else {
-      console.info(`getMissionSnapShot successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`getMissionSnapShot failed: ${err.message}`);
-}
-```
-
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let testMissionId = 2;
-
-try {
-  missionManager.getMissionSnapShot('', testMissionId).then((data: missionManager.MissionSnapshot) => {
-    console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`getMissionSnapShot failed. Cause: ${err.message}`);
-}
-```
-
 
 ## getMissionSnapShot
 
 ```TypeScript
-function getMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSnapshot>
+function getMissionSnapShot(deviceId: string, missionId: number): Promise<MissionSnapshot>
 ```
 
 Obtains the snapshot of a given mission. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -104,7 +60,7 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | deviceId | string | Yes |
-| missionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| missionId | number | Yes |
 
 **Return value:**
 
@@ -119,7 +75,3 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getMissionSnapShot](#getmissionsnapshot)

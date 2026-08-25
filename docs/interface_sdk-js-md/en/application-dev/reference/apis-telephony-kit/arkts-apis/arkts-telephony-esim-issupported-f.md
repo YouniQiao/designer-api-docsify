@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isSupported
 
 ```TypeScript
-function isSupported(slotId: int): boolean
+function isSupported(slotId: number): boolean
 ```
 
 Checks whether the specified card slot supports the eSIM function.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -24,7 +22,7 @@ Checks whether the specified card slot supports the eSIM function.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -39,12 +37,3 @@ Checks whether the specified card slot supports the eSIM function.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
-
-let isSupported: boolean = eSIM.isSupported(1);
-console.info(`the esim is Supported:` + isSupported);
-```

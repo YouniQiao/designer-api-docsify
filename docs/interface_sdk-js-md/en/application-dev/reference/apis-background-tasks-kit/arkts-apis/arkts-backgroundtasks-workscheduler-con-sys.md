@@ -10,8 +10,6 @@ Whether the requested task is executed immediately.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -27,8 +25,6 @@ const WORK_SCHEDULER_CONDITION: string
 The last condition met when the current task is triggered.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

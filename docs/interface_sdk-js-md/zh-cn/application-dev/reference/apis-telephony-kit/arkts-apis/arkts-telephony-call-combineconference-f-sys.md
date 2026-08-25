@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## combineConference
 
 ```TypeScript
-function combineConference(callId: int, callback: AsyncCallback<void>): void
+function combineConference(callId: number, callback: AsyncCallback<void>): void
 ```
 
 合并通话，将两通电话合并成会议电话。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -26,7 +24,7 @@ function combineConference(callId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -41,42 +39,16 @@ function combineConference(callId: int, callback: AsyncCallback<void>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | 8300007 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.combineConference(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`combineConference fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`combineConference success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.combineConference(1).then(() => {
-    console.info(`combineConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`combineConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## combineConference
 
 ```TypeScript
-function combineConference(callId: int): Promise<void>
+function combineConference(callId: number): Promise<void>
 ```
 
 合并通话，将两通电话合并成会议电话。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -86,7 +58,7 @@ function combineConference(callId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 
 **返回值：**
 
@@ -105,7 +77,3 @@ function combineConference(callId: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | 8300007 |
-
-**示例**
-
-参见 [combineConference](#combineconference)

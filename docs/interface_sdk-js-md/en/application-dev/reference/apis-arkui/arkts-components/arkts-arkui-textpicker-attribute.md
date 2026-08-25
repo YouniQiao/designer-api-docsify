@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ canLoop(value: boolean)
 Sets whether to enable loop scrolling.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Sets whether to enable loop scrolling. Compared with [canLoop&lt;sup&gt;10+&lt;/
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -61,7 +55,7 @@ Sets whether to enable loop scrolling. Compared with [canLoop&lt;sup&gt;10+&lt;/
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isLoop | Optional & lt;boolean & gt; | Yes |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## defaultPickerItemHeight
 
@@ -72,8 +66,6 @@ defaultPickerItemHeight(value: number | string)
 Sets the height of the picker items.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -95,8 +87,6 @@ Sets the height of the picker items. Compared with [defaultPickerItemHeight](#de
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -107,7 +97,7 @@ Sets the height of the picker items. Compared with [defaultPickerItemHeight](#de
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| height | Optional & lt;number \ | string & gt; | Yes |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;number \| string & gt; | Yes |
 
 ## defaultTextStyle
 
@@ -118,8 +108,6 @@ defaultTextStyle(style: TextPickerTextStyle)
 Sets the text style of the items when the text style change animation during the scrolling process is disabled. This setting takes effect only when [disableTextStyleAnimation](#disabletextstyleanimation) is set to **true**.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,8 +131,6 @@ Sets the sensitivity to the digital crown rotation.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -155,7 +141,7 @@ Sets the sensitivity to the digital crown rotation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | Yes |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
 
 ## disableTextStyleAnimation
 
@@ -167,8 +153,6 @@ Sets whether to disable the animation effect of text style changes during scroll
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -179,7 +163,7 @@ Sets whether to disable the animation effect of text style changes during scroll
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| disabled | boolean | Yes |
+| [disabled](arkts-arkui-statestyles-i.md) | boolean | Yes |
 
 ## disappearTextStyle
 
@@ -190,8 +174,6 @@ disappearTextStyle(value: PickerTextStyle)
 Sets the text color, font size, and font weight of edge items (the second item above or below the selected item).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,8 +197,6 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -227,7 +207,7 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
 
 ## disappearTextStyle
 
@@ -239,8 +219,6 @@ Sets the text style of edge items (the second item above or below the selected i
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -251,7 +229,7 @@ Sets the text style of edge items (the second item above or below the selected i
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle \ | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes |
 
 ## divider
 
@@ -262,8 +240,6 @@ divider(value: DividerOptions | null)
 Sets the divider style. If not explicitly set, the divider uses the default style.If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -287,8 +263,6 @@ Sets the divider style. If not explicitly set, the divider uses the default styl
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -299,7 +273,7 @@ Sets the divider style. If not explicitly set, the divider uses the default styl
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| textDivider | Optional&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null & gt; | Yes |
+| textDivider | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null & gt; | Yes |
 
 ## enableHapticFeedback
 
@@ -311,8 +285,6 @@ Sets whether to enable haptic feedback.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -323,7 +295,7 @@ Sets whether to enable haptic feedback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## gradientHeight
 
@@ -334,8 +306,6 @@ gradientHeight(value: Dimension)
 Sets the height of the fade effect applied to the top and bottom edges of the content area. If no setting is specified, a default fade effect is used.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -359,8 +329,6 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -371,7 +339,7 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| height | Optional & lt;Dimension & gt; | Yes |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | Yes |
 
 ## onAccept
 
@@ -382,8 +350,6 @@ onAccept(callback: (value: string, index: number) => void)
 Triggered when the OK button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box.This API is supported since API version 8 and deprecated since API version 10. No substitute is provided.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -405,8 +371,6 @@ Triggered when the cancel button in the dialog box is clicked. This event can be
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -426,8 +390,6 @@ onChange(callback: (value: string | string[], index: number | number[]) => void)
 Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty.This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -449,8 +411,6 @@ Triggered when the text picker snaps to the selected item. This event cannot be 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -461,7 +421,7 @@ Triggered when the text picker snaps to the selected item. This event cannot be 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnTextPickerChangeCallback](arkts-arkui-ontextpickerchangecallback-t.md)&gt; | Yes |
 
 ## onEnterSelectedArea
 
@@ -482,8 +442,6 @@ Triggered when an option enters the selection zone during text picker scrolling 
 > - This API cannot be called within attributeModifier.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -510,8 +468,6 @@ Triggered when the scrolling in the text picker stops.If the scrolling is initia
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -537,8 +493,6 @@ Triggered when the scrolling in the text picker stops. Compared with [onScrollSt
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -549,7 +503,7 @@ Triggered when the scrolling in the text picker stops. Compared with [onScrollSt
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[TextPickerScrollStopCallback](arkts-arkui-textpickerscrollstopcallback-t.md)&gt; | Yes |
 
 ## selectedBackgroundStyle
 
@@ -561,8 +515,6 @@ Sets the background style of selected items.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -573,7 +525,7 @@ Sets the background style of selected items.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)&gt; | Yes |
 
 ## selectedIndex
 
@@ -584,8 +536,6 @@ selectedIndex(value: number | number[])
 Sets the index of the selected item or items in the data list. This setting takes precedence over the **value** property in [TextPickerOptions](arkts-arkui-textpickeroptions-i.md). Use the number type for single-column pickers. Use the number[] type for multi-column pickers.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -609,8 +559,6 @@ Sets the index of the selected item or items in the data list. This setting take
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -621,7 +569,7 @@ Sets the index of the selected item or items in the data list. This setting take
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| index | Optional & lt;number \ | number[] & gt; | Yes |
+| index | [Optional](arkts-arkui-optional-t.md)&lt;number \| number[] & gt; | Yes |
 
 ## selectedTextStyle
 
@@ -632,8 +580,6 @@ selectedTextStyle(value: PickerTextStyle)
 Sets the text color, font size, and font weight of the selected item.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -657,8 +603,6 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -669,7 +613,7 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
 
 ## selectedTextStyle
 
@@ -681,8 +625,6 @@ Sets the text style of the selected item, covering the following: text color, fo
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -693,7 +635,7 @@ Sets the text style of the selected item, covering the following: text color, fo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle \ | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes |
 
 ## textStyle
 
@@ -704,8 +646,6 @@ textStyle(value: PickerTextStyle)
 Sets the text color, font size, and font weight of candidate items (the first item immediately above or below the selected item).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -729,8 +669,6 @@ Sets the text color, font size, and font weight of candidate items (the first it
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -741,7 +679,7 @@ Sets the text color, font size, and font weight of candidate items (the first it
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
 
 ## textStyle
 
@@ -753,8 +691,6 @@ Sets the text style of candidate items (the first item immediately above or belo
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -765,4 +701,4 @@ Sets the text style of candidate items (the first item immediately above or belo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle \ | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md) \| [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)&gt; | Yes |

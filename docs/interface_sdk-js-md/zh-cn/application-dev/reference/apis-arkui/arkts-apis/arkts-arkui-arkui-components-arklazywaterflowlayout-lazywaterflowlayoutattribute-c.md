@@ -6,14 +6,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
+import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## columnsGap
@@ -26,8 +24,6 @@ columnsGap(value: LengthMetrics | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -38,7 +34,7 @@ columnsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |
+| value | LengthMetrics \| undefined | 是 |
 
 **返回值：**
 
@@ -56,8 +52,6 @@ footer(builder: CustomBuilder | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -68,7 +62,7 @@ footer(builder: CustomBuilder | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 |
 
 **返回值：**
 
@@ -86,8 +80,6 @@ header(builder: CustomBuilder | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -98,7 +90,7 @@ header(builder: CustomBuilder | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 |
 
 **返回值：**
 
@@ -116,8 +108,6 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -128,7 +118,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | OnVisibleIndexesChangeCallback \| undefined | 是 |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 |
 
 **返回值：**
 
@@ -146,8 +136,6 @@ rowsGap(value: LengthMetrics | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -158,7 +146,7 @@ rowsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |
+| value | LengthMetrics \| undefined | 是 |
 
 **返回值：**
 
@@ -176,8 +164,6 @@ sticky(sticky: StickyStyle | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -188,7 +174,7 @@ sticky(sticky: StickyStyle | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [sticky](#sticky) | StickyStyle \| undefined | 是 |
+| [sticky](#sticky) | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | 是 |
 
 **返回值：**
 

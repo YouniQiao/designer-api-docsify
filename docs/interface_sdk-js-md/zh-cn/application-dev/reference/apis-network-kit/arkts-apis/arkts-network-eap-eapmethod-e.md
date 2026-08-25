@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_NONE
@@ -17,8 +15,6 @@ EAP_NONE = 0
 不指定。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -32,8 +28,6 @@ Protected extensible authentication protocol
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_TLS
@@ -45,8 +39,6 @@ EAP_TLS = 2
 Transport layer security
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -60,8 +52,6 @@ Tunneled transport layer security
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_PWD
@@ -73,8 +63,6 @@ EAP_PWD = 4
 Password
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -88,8 +76,6 @@ Subscriber identity module
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_AKA
@@ -101,8 +87,6 @@ EAP_AKA = 6
 Authentication and key agreement
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
@@ -116,8 +100,6 @@ AKA prime
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Eap
 
 ## EAP_UNAUTH_TLS
@@ -129,7 +111,5 @@ EAP_UNAUTH_TLS = 8
 Unauth TLS
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Eap

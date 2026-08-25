@@ -4,8 +4,6 @@ Represents a set of optional parameters for [auth](arkts-basicservices-osaccount
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Represents a set of optional parameters for [auth](arkts-basicservices-osaccount
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## accountId
 
 ```TypeScript
-accountId?: int
+accountId?: number
 ```
 
 OS account ID, which is **undefined** by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -40,13 +36,11 @@ OS account ID, which is **undefined** by default.
 additionalInfo?: string
 ```
 
-Indicates the additional information about the authentication options.
+Additional information for identity authentication. The default value is **undefined**.
 
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +60,6 @@ Authentication intent, which is **undefined** by default.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -83,8 +75,6 @@ Remote authentication options, which is **undefined** by default.
 **Type:** [RemoteAuthOptions](arkts-basicservices-osaccount-remoteauthoptions-i-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

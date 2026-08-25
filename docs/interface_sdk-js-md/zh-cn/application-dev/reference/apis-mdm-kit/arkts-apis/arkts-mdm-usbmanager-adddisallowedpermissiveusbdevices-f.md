@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedPermissiveUsbDevices
@@ -19,8 +19,6 @@ function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<Permis
 4. 已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口禁用了某用户USB存储设备写入能力。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -44,44 +42,3 @@ function addDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<Permis
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // 禁用USB存储设备（以实际USB设备类型参数为准）
-  let usbDevices1: Array<usbManager.PermissiveUsbDeviceType> = [{
-    baseClass: 8
-  }];
-  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices1);
-
-  // 禁用USB线控耳机（以实际USB设备类型参数为准）
-  let usbDevices2: Array<usbManager.PermissiveUsbDeviceType> = [{
-    baseClass: 0,
-    subClass: 0,
-    protocol: 0,
-    descriptor: usbManager.Descriptor.DEVICE
-  }];
-  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices2);
-
-  // 禁用USB线控键盘输入（以实际USB设备类型参数为准）
-  let usbDevices3: Array<usbManager.PermissiveUsbDeviceType> = [{
-    baseClass: 3,
-    subClass: 1,
-    protocol: 1,
-    descriptor: usbManager.Descriptor.INTERFACE
-  }];
-  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices3);
-  console.info(`Succeeded in adding disallowed permissive USB devices.`);
-} catch (err) {
-  console.error(`Failed to add disallowed permissive USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```

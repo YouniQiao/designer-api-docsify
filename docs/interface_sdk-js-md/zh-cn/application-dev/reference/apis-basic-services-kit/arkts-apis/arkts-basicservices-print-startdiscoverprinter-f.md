@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## startDiscoverPrinter
@@ -15,8 +15,6 @@ function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallb
 通过指定“打印扩展能力列表”来发现打印机，发现的打印机具备包含指定的打印扩展能力。如果指定空的打印扩展能力列表，则表示加载所有扩展能力。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -38,40 +36,6 @@ function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallb
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-// 加载所有打印扩展能力
-let extensionList: string[] = [];
-// 通过指定自己应用的包名，在发现时加载自己的打印扩展能力
-// let extensionList: string[] = ['com.myapplication.test'];
-print.startDiscoverPrinter(extensionList, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to start Discover Printer because : ' + JSON.stringify(err));
-    } else {
-        console.info('start Discover Printer success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-// 加载所有打印扩展能力
-let extensionList: string[] = [];
-// 通过指定自己应用的包名，在发现时加载自己的打印扩展能力
-// let extensionList: string[] = ['com.myapplication.test'];
-print.startDiscoverPrinter(extensionList).then(() => {
-    console.info('start Discovery success');
-}).catch((error: BusinessError) => {
-    console.error('failed to start Discovery because : ' + JSON.stringify(error));
-})
-```
-
 
 ## startDiscoverPrinter
 
@@ -82,8 +46,6 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 通过指定“打印扩展能力列表”来发现打印机，发现的打印机具备包含指定的打印扩展能力。如果指定空的打印扩展能力列表，则表示加载所有扩展能力，使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -109,7 +71,3 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [startDiscoverPrinter](#startdiscoverprinter)

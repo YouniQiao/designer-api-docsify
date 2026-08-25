@@ -4,8 +4,6 @@ The result of publish form.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The result of publish form.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'kits/@kit.FormKit';
 ```
 
 ## code
@@ -27,8 +25,6 @@ The error code.
 **Type:** [PublishFormErrorCode](arkts-form-forminfo-publishformerrorcode-e-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ The message.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,8 +10,6 @@ import { appManager } from '@kit.AbilityKit';
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onAbilityStateChanged
@@ -23,8 +21,6 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 Ability状态发生变化时执行的回调函数。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,8 +40,6 @@ onAppStarted(appStateData: AppStateData): void
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -63,8 +57,6 @@ onAppStopped(appStateData: AppStateData): void
 应用最后一个进程销毁时执行的回调函数。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -84,8 +76,6 @@ onForegroundApplicationChanged(appStateData: AppStateData): void
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -103,8 +93,6 @@ onProcessCreated(processData: ProcessData): void
 进程创建时执行的回调函数。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -124,8 +112,6 @@ onProcessDied(processData: ProcessData): void
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **参数：**
@@ -143,8 +129,6 @@ onProcessStateChanged(processData: ProcessData): void
 进程状态更新时执行的回调函数。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

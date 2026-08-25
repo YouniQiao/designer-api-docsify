@@ -4,8 +4,6 @@ Enumerates the color formats supported by the video thumbnail.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ RGB_565 = 2
 RGB_565.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -36,8 +32,6 @@ RGBA_8888.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ RGB_888 = 5
 RGB_888.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 

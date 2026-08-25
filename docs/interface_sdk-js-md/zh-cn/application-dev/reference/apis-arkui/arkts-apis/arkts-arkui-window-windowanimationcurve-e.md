@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## LINEAR
@@ -17,8 +15,6 @@ LINEAR = 0
 表示动画从头到尾的速度都是相同的。使用该曲线类型时[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)中duration必填。使用该曲线类型时[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)中param选填，且不生效。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ INTERPOLATION_SPRING = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -49,8 +43,6 @@ CUBIC_BEZIER = 2
 表示贝塞尔曲线。使用该曲线类型时[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)中的param和duration为必填项。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isBluetoothSupported
@@ -15,8 +15,6 @@ function isBluetoothSupported(): boolean
 Check whether Bluetooth is available.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

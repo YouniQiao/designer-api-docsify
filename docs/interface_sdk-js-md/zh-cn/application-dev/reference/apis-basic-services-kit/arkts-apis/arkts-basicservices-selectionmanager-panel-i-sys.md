@@ -4,20 +4,18 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## 导入模块
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## moveTo
 
 ```TypeScript
-moveTo(x: int, y: int): Promise<void>
+moveTo(x: number, y: number): Promise<void>
 ```
 
 移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。使用Promise异步回调。
@@ -26,8 +24,6 @@ moveTo(x: int, y: int): Promise<void>
 > 从API version 20开始支持，从API version 24开始废弃。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **废弃版本：** 24
 
@@ -56,20 +52,3 @@ moveTo(x: int, y: int): Promise<void>
 | --- |
 | [33600001](../errorcode-selection.md#33600001-划词服务调用异常) |
 | [33600002](../errorcode-selection.md#33600002-划词面板已被销毁) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 移动划词面板至屏幕指定位置。selectionPanel为createPanel创建出的panel实例
-  selectionPanel.moveTo(200, 200).then(() => {
-    console.info('Succeeded in moving the panel.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move panel. Error code: ${err.code}, error message: ${err.message}`);
-}
-```

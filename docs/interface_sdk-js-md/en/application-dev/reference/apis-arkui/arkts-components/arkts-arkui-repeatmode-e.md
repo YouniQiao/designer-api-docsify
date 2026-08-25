@@ -4,8 +4,6 @@ Defines the Border Image Repeat Mode.@enum { number }
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Repeat
@@ -17,8 +15,6 @@ Repeat
 The source image's slices are tiled. Tiles beyond the border box will be clipped.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,8 +32,6 @@ The source image's slices are stretched to fill the border box.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -54,8 +48,6 @@ The source image's slices are tiled to fill the border box. Tiles may be compres
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -71,8 +63,6 @@ Space
 The source image's slices are tiled to fill the border box. Extra space will be distributed in between tiles.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

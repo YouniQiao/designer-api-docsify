@@ -32,14 +32,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -57,10 +55,8 @@ import { privacyManager } from '@kit.AbilityKit';
 | [getPermissionUsedRecordToggleStatus(Privacy Management)](arkts-ability-privacymanager-getpermissionusedrecordtogglestatus-f-sys.md) |
 | [getPermissionUsedRecordToggleStatus(Privacy Management)](arkts-ability-privacymanager-getpermissionusedrecordtogglestatus-f-sys.md) |
 | [getPermissionUsedTypeInfos(Privacy Management)](arkts-ability-privacymanager-getpermissionusedtypeinfos-f-sys.md) |
-| [off(Privacy Management)](arkts-ability-privacymanager-off-f-sys.md#offactivestatechange) |
-| [offActiveStateChange(Privacy Management)](arkts-ability-privacymanager-offactivestatechange-f-sys.md) |
-| [on(Privacy Management)](arkts-ability-privacymanager-on-f-sys.md#onactivestatechange) |
-| [onActiveStateChange(Privacy Management)](arkts-ability-privacymanager-onactivestatechange-f-sys.md) |
+| off(Privacy Management) |
+| on(Privacy Management) |
 | [setPermissionUsedRecordToggleStatus(Privacy Management)](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md) |
 | [setPermissionUsedRecordToggleStatus(Privacy Management)](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md) |
 | [startUsingPermission(Privacy Management)](arkts-ability-privacymanager-startusingpermission-f-sys.md) |

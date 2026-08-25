@@ -4,8 +4,6 @@ Sets the upgrade policy to control the upgrade behavior.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Sets the upgrade policy to control the upgrade behavior.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## autoUpgradePeriods
@@ -27,8 +25,6 @@ Automatic update period.This parameter is optional and is used when the automati
 **Type:** Array&lt;[UpgradePeriod](arkts-basicservices-update-upgradeperiod-i-sys.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -46,8 +42,6 @@ Automatic upgrade policy.The value **true** indicates that automatic upgrade is 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Automatic download policy.The value **true** indicates that automatic download i
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

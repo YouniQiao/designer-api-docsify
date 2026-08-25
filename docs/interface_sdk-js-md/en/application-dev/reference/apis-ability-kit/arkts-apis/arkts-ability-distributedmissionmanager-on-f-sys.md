@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('continueStateChange')
@@ -15,8 +15,6 @@ function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo
 Subscribes to continuation state change events of the current mission.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -39,17 +37,3 @@ Subscribes to continuation state change events of the current mission.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-
-  try {
-    distributedMissionManager.on('continueStateChange', (data) => {
-      console.info("continueStateChange on:" + JSON.stringify(data));
-    });
-  } catch (error) {
-    console.error("continueStateChange err: " + JSON.stringify(error));
-  }
-```

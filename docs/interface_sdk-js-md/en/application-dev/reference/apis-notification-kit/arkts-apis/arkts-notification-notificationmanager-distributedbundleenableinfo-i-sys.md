@@ -4,8 +4,6 @@ Describes the bundle information of an application that enables cross-device col
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the bundle information of an application that enables cross-device col
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ Bundle name.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -46,8 +42,6 @@ Whether the application enables cross-device collaboration. The value **true** i
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Whether the application enables cross-device collaboration. The value **true** i
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

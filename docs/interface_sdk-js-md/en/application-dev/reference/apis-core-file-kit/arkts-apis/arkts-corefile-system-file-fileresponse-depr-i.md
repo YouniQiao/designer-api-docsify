@@ -4,8 +4,6 @@ Returns a file, including the file information.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -27,8 +25,6 @@ Timestamp when the file is stored the last time, which is the number of millisec
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -44,8 +40,6 @@ File length, in bytes.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
@@ -63,8 +57,6 @@ List of files. When the recursive value is true and the type is dir, the file in
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -81,8 +73,6 @@ File type. Available values are as follows: **dir**: directory **file**: file
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -98,8 +88,6 @@ URI of the file.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 

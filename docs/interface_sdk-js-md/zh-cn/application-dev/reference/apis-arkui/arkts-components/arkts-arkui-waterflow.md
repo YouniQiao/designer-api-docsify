@@ -19,9 +19,9 @@
 > 等异步内容建议预先设置固定宽高或占位大小，使用分组混合布局时也可以通过[GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md)回调提供稳定的主轴大小。&gt;
 > 使用[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)或
 > [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)动态生成FlowItem时，如果影响FlowItem主轴大小的数据发生变
-> 化，应同时通知框架数据已变化：LazyForEach场景请调用DataChangeListener对应方法（如
-> onDataChange、onDataReloaded或
-> onDatasetChange）；Repeat场景应按
+> 化，应同时通知框架数据已变化：LazyForEach场景请调用[DataChangeListener](arkts-arkui-datachangelistener-i.md)对应方法（如
+> onDataChange、[onDataReloaded](arkts-arkui-datachangelistener-i.md#ondatareloaded)或
+> [onDatasetChange](arkts-arkui-datachangelistener-i.md#ondatasetchange)）；Repeat场景应按
 > [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)的数据更新规则修改状态数组。否则可能复用旧节点或旧缓存，导致显示内容、布局
 > 结果与数据不一致。&gt;
 > 若多个列的高度相同，优先放入最左边的列。在RTL模式下，优先放入最右边的列。&gt;
@@ -37,8 +37,6 @@ WaterFlow(options?: WaterFlowOptions)
 创建瀑布流容器。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -61,8 +59,6 @@ WaterFlow(options?: WaterFlowOptions)
 
 | 名称 |
 | --- |
-| [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md) |
-| [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) |
 
 ### 枚举
 

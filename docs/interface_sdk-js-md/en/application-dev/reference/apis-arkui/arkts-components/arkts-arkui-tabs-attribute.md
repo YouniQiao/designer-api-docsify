@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Sets the tab switching animation curve for the **Tabs** component. For details a
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -37,7 +33,7 @@ Sets the tab switching animation curve for the **Tabs** component. For details a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| curve | Curve \| [ICurve](../arkts-apis/arkts-arkui-curves-icurve-i.md) | Yes |
+| curve | Curve \| [ICurve](arkts-arkui-icurve-i.md) | Yes |
 
 ## animationDuration
 
@@ -48,8 +44,6 @@ animationDuration(value: number)
 Sets the duration of the tab switching animation for the **Tabs** component.If **animationCurve** is not set, **animationDuration** only controls the duration of tab switching animations triggered by tapping a tab or calling the **changeIndex** API, and page-turning animations triggered by swiping in **TabContent**, the duration is determined by the intrinsic parameters of the default curve **interpolatingSpring(-1, 1, 228, 30)**.For details about curves unaffected by **animationDuration**, see [Interpolation Calculation](../arkts-apis/arkts-curves.md). These curves include curves of type [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md), and [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,8 +68,6 @@ Sets the animation mode for tab switching initiated by clicking a specific tab o
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -86,7 +78,7 @@ Sets the animation mode for tab switching initiated by clicking a specific tab o
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | Optional&lt;[AnimationMode](arkts-arkui-animationmode-e.md)&gt; | Yes |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[AnimationMode](arkts-arkui-animationmode-e.md)&gt; | Yes |
 
 ## barBackgroundBlurStyle
 
@@ -100,8 +92,6 @@ Sets the background blur style of the tab bar.
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +115,6 @@ Defines the blur style to apply between the background and content of a tab bar.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -138,7 +126,7 @@ Defines the blur style to apply between the background and content of a tab bar.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | style | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes |
-| options | [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md) | Yes |
+| options | [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md) | Yes |
 
 ## barBackgroundColor
 
@@ -149,8 +137,6 @@ barBackgroundColor(value: ResourceColor)
 Sets the background color of the tab bar.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,8 +160,6 @@ Sets the background effect of the tab bar, including the blur radius, brightness
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -198,8 +182,6 @@ Sets the display mode of the tab bar for different Tabs container sizes.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -210,7 +192,7 @@ Sets the display mode of the tab bar for different Tabs container sizes.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional&lt;[TabsBreakpointType](arkts-arkui-tabsbreakpointtype-i.md)&lt;[TabBarDisplayMode](arkts-arkui-tabbardisplaymode-e.md)&gt;&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[TabsBreakpointType](arkts-arkui-tabsbreakpointtype-i.md)&lt;[TabBarDisplayMode](arkts-arkui-tabbardisplaymode-e.md)&gt;&gt; | Yes |
 
 ## barFloatingStyle
 
@@ -222,8 +204,6 @@ Enable floating style for bar.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -234,7 +214,7 @@ Enable floating style for bar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional&lt;[FloatingTabBarStyle](arkts-arkui-floatingtabbarstyle-i.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[FloatingTabBarStyle](arkts-arkui-floatingtabbarstyle-i.md)&gt; | Yes |
 
 ## barGridAlign
 
@@ -245,8 +225,6 @@ barGridAlign(value: BarGridColumnOptions)
 Sets the visible area of the tab bar in grid mode. For details, see **BarGridColumnOptions**. This attribute is effective only in horizontal mode. It is not applicable to [XS, XL, and XXL devices](../../../ui/arkts-layout-development-grid-layout.md#breakpoints).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,11 +244,9 @@ Sets the visible area of the tab bar in grid mode. For details, see **BarGridCol
 barHeight(value: Length)
 ```
 
-Sets the height of the tab bar. For horizontal **Tabs** components, you can set the height to **'auto'** to allow the tab bar to automatically adapt to the height of its child components. If the height is set to a value less than 0 or greater than the height of the **Tabs** component, the default value is used.In versions earlier than API version 14, setting **barHeight** to a fixed value prevents the tab bar from extending beyond the bottom safe area. Since API version 14, the safeAreaPadding attribute is supported. When **safeAreaPadding** is set to 0 or is not explicitly set, the tab bar is allowed to extend beyond the bottom safe area.
+Sets the height of the tab bar. For horizontal **Tabs** components, you can set the height to **'auto'** to allow the tab bar to automatically adapt to the height of its child components. If the height is set to a value less than 0 or greater than the height of the **Tabs** component, the default value is used.In versions earlier than API version 14, setting **barHeight** to a fixed value prevents the tab bar from extending beyond the bottom safe area. Since API version 14, the [safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding) attribute is supported. When **safeAreaPadding** is set to 0 or is not explicitly set, the tab bar is allowed to extend beyond the bottom safe area.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -291,8 +267,6 @@ barHeight(height: Length, noMinHeightLimit: boolean)
 Sets the height of the tab bar. For horizontal **Tabs** components, you can set the height to **'auto'** to allow the tab bar to automatically adapt to the height of its child components; you can also set **noMinHeightLimit** to **true** so that the adaptive height can be less than the default tab bar height. If the height is set to a value less than 0 or greater than the height of the **Tabs** component, the default value is used.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -317,8 +291,6 @@ Sets the tab bar layout mode to **BarMode.Fixed**.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -340,8 +312,6 @@ barMode(value: BarMode.Scrollable, options: ScrollableBarModeOptions)
 Sets the tab bar layout mode to **BarMode.Scrollable**.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -366,8 +336,6 @@ Sets the tab bar layout mode.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -388,8 +356,6 @@ barOverlap(value: boolean)
 Sets whether the tab bar overlaps the **TabContent** component with a blurred background effect.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,8 +379,6 @@ Sets the position of the **Tabs** component.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -435,8 +399,6 @@ Sets the display style of the tab bar.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -447,7 +409,7 @@ Sets the display style of the tab bar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional&lt;[TabBarStyle](arkts-arkui-tabbarstyle-e.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[TabBarStyle](arkts-arkui-tabbarstyle-e.md)&gt; | Yes |
 
 ## barWidth
 
@@ -458,8 +420,6 @@ barWidth(value: Length)
 Sets the width of the tab bar. If the set value is less than 0 or greater than the width of the **Tabs** component, the default value is used.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -480,8 +440,6 @@ cachedMaxCount(count: number, mode: TabsCacheMode)
 Sets the maximum number of child components to cache and the caching mode. If this attribute is not set, all child components are cached by default and are not released after being cached.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -522,8 +480,6 @@ If the **zIndex** attribute is not set for related pages, the **zIndex** values 
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -545,8 +501,6 @@ divider(value: DividerStyle | null)
 Sets the divider between the **TabBar** and **TabContent** components.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -573,8 +527,6 @@ Sets the edge effect used when the boundary of the scrolling area is reached.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -585,7 +537,7 @@ Sets the edge effect used when the boundary of the scrolling area is reached.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [edgeEffect](#edgeeffect) | Optional & lt;EdgeEffect & gt; | Yes |
+| [edgeEffect](#edgeeffect) | [Optional](arkts-arkui-optional-t.md)&lt;[EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md)&gt; | Yes |
 
 ## fadingEdge
 
@@ -596,8 +548,6 @@ fadingEdge(value: boolean)
 Sets whether the tabs fade out when they exceed the container width. It is recommended that this attribute be used together with the **barBackgroundColor** attribute. If **barBackgroundColor** is not defined, the default fade effect shows a white gradient at the container's edge.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -622,8 +572,6 @@ Sets the nested scrolling mode of the **Tabs** component and its parent componen
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -646,8 +594,6 @@ Triggered when the tab switching animation is completed, including cases where t
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -669,8 +615,6 @@ onAnimationStart(handler: OnTabsAnimationStartCallback)
 Triggered when the transition animation starts. If [animationDuration](#animationduration) is set to **0** and [scrollable](#scrollable) is set to **false**, this callback is not triggered.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -706,8 +650,6 @@ Triggered after the active tab changes.This event is triggered when any of the f
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -727,8 +669,6 @@ onContentDidScroll(handler: OnTabsContentDidScrollCallback | undefined)
 Triggered when content in the **Tabs** component scrolls.During page scrolling, the [OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md) callback is invoked for all pages in the viewport on a frame-by-frame basis. For example, when there are two pages whose subscripts are 0 and 1 in the viewport, two callbacks whose indexes are 0 and 1 are invoked in each frame.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -761,8 +701,6 @@ right arrow key on the keyboard to switch to a new page while the tab bar has fo
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -784,8 +722,6 @@ onGestureSwipe(handler: OnTabsGestureSwipeCallback)
 Triggered on a frame-by-frame basis during swipe gestures for tab switching.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -819,8 +755,6 @@ is called, triggering the switching animation.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -842,8 +776,6 @@ onTabBarClick(event: Callback<number>)
 Triggered when a tab is clicked.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -871,8 +803,6 @@ Triggered when the selected element changes. The index of the element that is ab
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -895,8 +825,6 @@ Sets the mode for flipping pages using the mouse wheel.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -907,7 +835,7 @@ Sets the mode for flipping pages using the mouse wheel.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | Optional & lt;PageFlipMode & gt; | Yes |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[PageFlipMode](../arkts-apis/arkts-arkui-pageflipmode-e.md)&gt; | Yes |
 
 ## scrollable
 
@@ -918,8 +846,6 @@ scrollable(value: boolean)
 Sets whether the tabs are scrollable.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -940,8 +866,6 @@ sidebarHeader(header: ComponentContent)
 Sets the header content of the sidebar tab bar.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -965,8 +889,6 @@ Sets the position of the sidebar tab bar. The sidebar tab bar position is not af
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -977,7 +899,7 @@ Sets the position of the sidebar tab bar. The sidebar tab bar position is not af
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| position | Optional&lt;[BarPosition](arkts-arkui-barposition-e.md)&gt; | Yes |
+| position | [Optional](arkts-arkui-optional-t.md)&lt;[BarPosition](arkts-arkui-barposition-e.md)&gt; | Yes |
 
 ## sidebarSearchable
 
@@ -988,8 +910,6 @@ sidebarSearchable(searchOptions?: TabsSidebarSearchableOptions)
 Sets the search options for the sidebar tab bar.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1012,8 +932,6 @@ vertical(value: boolean)
 Sets whether to use vertical tabs.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

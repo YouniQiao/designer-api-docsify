@@ -4,14 +4,12 @@ Defines the callback that is invoked when the remote UIAbility state changes in 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## Modules to Import
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## [[Call]]
@@ -23,8 +21,6 @@ import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteS
 Defines the callback of OnRemoteStateChange.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

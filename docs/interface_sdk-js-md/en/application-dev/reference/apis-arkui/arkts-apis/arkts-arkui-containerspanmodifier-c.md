@@ -2,11 +2,9 @@
 
 Defines ContainerSpan modifier, the base class for quick use modifier ability@extends ContainerSpanAttribute @implements AttributeModifier&lt;ContainerSpanAttribute&gt;
 
-**Inheritance/Implementation:** ContainerSpanModifier extends ContainerSpanAttribute and implements AttributeModifier<ContainerSpanAttribute>
+**Inheritance/Implementation:** ContainerSpanModifier extends [ContainerSpanAttribute](../arkts-components/arkts-arkui-containerspan-attribute.md#containerspanattribute) and implements AttributeModifier<ContainerSpanAttribute>
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(containerSpanAttribute: ContainerSpanAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

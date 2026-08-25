@@ -4,8 +4,6 @@ Scene load parameters object, used to specify additional configuration options w
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -13,18 +11,16 @@ Scene load parameters object, used to specify additional configuration options w
 ## offset
 
 ```TypeScript
-offset?: long
+offset?: number
 ```
 
 The offset of the start of the 3D model data in the resource Unit: byte, The value must be greater than or equal to 0. Default value: 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Default:** 0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,8 @@
 # SessionCategory（系统接口）
 
-表示不同场景会话类别的枚举。@enum { int }
+表示不同场景会话类别的枚举。@enum { number }
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -20,8 +18,6 @@ CATEGORY_ACTIVE = 1
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ CATEGORY_NOT_ACTIVE = 2
 禁止在系统控制入口显示的会话类别。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -52,8 +46,6 @@ CATEGORY_ALL = 3
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ CATEGORY_HIPLAY = 4
 会话类别是HiPlay
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

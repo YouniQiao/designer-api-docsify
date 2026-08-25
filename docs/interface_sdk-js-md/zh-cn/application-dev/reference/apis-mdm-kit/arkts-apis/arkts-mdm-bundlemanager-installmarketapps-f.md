@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## installMarketApps
@@ -20,8 +20,6 @@ function installMarketApps(admin: Want, bundleNames: Array<string>): void
 > 返回。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **需要权限：** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -45,24 +43,3 @@ function installMarketApps(admin: Want, bundleNames: Array<string>): void
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [9201002](../errorcode-enterpriseDeviceManager.md#9201002-企业应用安装失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleNames: Array<string> = ['com.huaweicloud.m'];
-try {
-  bundleManager.installMarketApps(wantTemp, bundleNames);
-  console.info(`Succeeded in installing market apps.`);
-} catch (err) {
-  console.error(`Failed to install market apps. Code: ${err.code}, message: ${err.message}`);
-}
-```

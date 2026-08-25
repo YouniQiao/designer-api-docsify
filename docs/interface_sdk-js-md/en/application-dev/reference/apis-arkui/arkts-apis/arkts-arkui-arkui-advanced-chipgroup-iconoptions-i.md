@@ -4,14 +4,12 @@ Defines the common attributes of icons.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
+import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## size
@@ -22,11 +20,9 @@ size?: SizeOptions
 
 Icon size. This parameter cannot be set in percentage.Default value: **undefined**
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ src: ResourceStr
 
 Icon source, which can be a specific image resource or an image address reference. For details, see [Image](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#image-1).
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

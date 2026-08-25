@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAppProvisionInfoSync
 
 ```TypeScript
-function getAppProvisionInfoSync(bundleName: string, userId?: int): AppProvisionInfo
+function getAppProvisionInfoSync(bundleName: string, userId?: number): AppProvisionInfo
 ```
 
 以同步方法根据bundleName和userId获取应用的provision配置文件信息并返回结果。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -29,7 +27,7 @@ function getAppProvisionInfoSync(bundleName: string, userId?: int): AppProvision
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| userId | number | 否 |
 
 **返回值：**
 
@@ -46,30 +44,3 @@ function getAppProvisionInfoSync(bundleName: string, userId?: int): AppProvision
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.ohos.myapplication";
-let userId = 100;
-
-try {
-  let data = bundleManager.getAppProvisionInfoSync(bundleName);
-  hilog.info(0x0000, 'testTag', 'getAppProvisionInfoSync successfully. Data: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAppProvisionInfoSync failed. Cause: %{public}s', message);
-}
-
-try {
-  let data = bundleManager.getAppProvisionInfoSync(bundleName, userId);
-  hilog.info(0x0000, 'testTag', 'getAppProvisionInfoSync successfully. Data: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAppProvisionInfoSync failed. Cause: %{public}s', message);
-}
-```

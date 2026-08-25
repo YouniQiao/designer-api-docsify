@@ -4,8 +4,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GAINMAP
@@ -17,8 +15,6 @@ GAINMAP = 1
 增益图（Gain Map）。用于更准确地生成HDR图像。HDR合成通常需要同时使用SDR主图、增益图和HDR元数据（[getMetadata](arkts-image-image-pixelmap-i.md#getmetadata)）共同计算亮度映射关系。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -32,8 +28,6 @@ DEPTH_MAP = 2
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## UNREFOCUS_MAP
@@ -45,8 +39,6 @@ UNREFOCUS_MAP = 3
 未重对焦原图（UnReFocus Map）。用于保存拍摄时未重对焦的图片像素内容。可用于人像虚化等后期处理，便于用户自由选择焦点区域。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -60,8 +52,6 @@ LINEAR_MAP = 4
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FRAGMENT_MAP
@@ -74,8 +64,6 @@ FRAGMENT_MAP = 5
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LHDR_GAINMAP
@@ -87,8 +75,6 @@ LHDR_GAINMAP = 10
 特殊增益图（LHDR Gain Map）。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

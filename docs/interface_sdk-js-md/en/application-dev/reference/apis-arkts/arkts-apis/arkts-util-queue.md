@@ -16,8 +16,8 @@ Queue follows the principle of First In First Out (FIFO). It supports insertion 
 ## Modules to Import
 
 ```TypeScript
-import { Queue } from '@kit.ArkTS';
-import { QueueForEachCb } from '@kit.ArkTS';
+import { Queue } from 'kits/@kit.ArkTS';
+import { QueueForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -27,9 +27,3 @@ import { QueueForEachCb } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [Queue](arkts-arkts-util-queue-queue-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [QueueForEachCb](arkts-arkts-queueforeachcb-t.md) |

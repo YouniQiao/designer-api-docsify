@@ -4,19 +4,17 @@ Defines the prefix and suffix icon options.
 
 > **NOTE：**&gt;
 > The animation type cannot be modified via
-> SymbolEffect and
+> [SymbolEffect](../arkts-components/arkts-arkui-symbolglyph-attribute.md#symboleffect) and
 > animations cannot be set via **effectStrategy**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
+import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## activated
@@ -30,8 +28,6 @@ Icon settings for the activated state.Default value: The prefix or suffix icon i
 **Type:** SymbolGlyphModifier
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Sets the icon in the inactive state.Default value: The prefix or suffix icon is 
 **Type:** SymbolGlyphModifier
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

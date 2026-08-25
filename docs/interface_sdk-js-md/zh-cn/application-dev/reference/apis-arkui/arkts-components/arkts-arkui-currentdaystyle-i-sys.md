@@ -4,8 +4,6 @@ CurrentDayStyle object.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -29,8 +27,6 @@ Boundary col offset.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -50,8 +46,6 @@ Boundary row offset.
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -73,8 +67,6 @@ Number of columns.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -94,8 +86,6 @@ Daily five row space.
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -117,8 +107,6 @@ Daily six row space.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -135,11 +123,9 @@ dayColor?: ResourceColor
 
 Text color.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -161,8 +147,6 @@ Text fontSize.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -182,8 +166,6 @@ Single date height.
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -205,8 +187,6 @@ Single date width.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -226,8 +206,6 @@ Data y axis Off set.
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -249,8 +227,6 @@ Gregorian calendar height.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -267,11 +243,9 @@ lunarColor?: ResourceColor
 
 lunar Text color.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -293,8 +267,6 @@ lunar text fontSize.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -314,8 +286,6 @@ Lunar data y axis Off set.
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -337,8 +307,6 @@ Single lunar height.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -355,11 +323,9 @@ markLunarColor?: ResourceColor
 
 lunar Work and rest text color.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -381,8 +347,6 @@ Schedule marker radius.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -402,8 +366,6 @@ Schedule marker X axis Off set
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -425,8 +387,6 @@ schedule Marker Y Axis Off set
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -446,8 +406,6 @@ Under score length.
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -469,8 +427,6 @@ Under score width.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -491,8 +447,6 @@ Under score X Axis Off set.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -512,8 +466,6 @@ Under score Y Axis Off set
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 

@@ -4,70 +4,60 @@ Color in RGBA format. It consists of four components: red, green, blue, and alph
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## a
 
 ```TypeScript
-a: double
+a: number
 ```
 
 Alpha component. The value range is [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## b
 
 ```TypeScript
-b: double
+b: number
 ```
 
 Blue component. The value range is [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## g
 
 ```TypeScript
-g: double
+g: number
 ```
 
 Green component. The value range is [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## r
 
 ```TypeScript
-r: double
+r: number
 ```
 
 Red component. The value range is [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setPasswordPolicy
@@ -15,8 +15,6 @@ function setPasswordPolicy(admin: Want, policy: PasswordPolicy): void
 Sets the device screen lock password policy. After the policy is set, when a user sets a lock screen password, if the password does not meet the requirements, a security prompt will be displayed asking the user to reset the password. This policy is applicable to enterprise security compliance scenarios, such as requiring employees to use strong passwords and change passwords periodically, to reduce the risk of enterprise data leakage.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -40,28 +38,3 @@ Sets the device screen lock password policy. After the policy is set, when a use
 | [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let policy: securityManager.PasswordPolicy = {
-  complexityRegex: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*])[a-zA-Z\\d!@#$%^&*]{8,}$',
-  validityPeriod: 1,
-  additionalDescription: 'The password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one digit, and one special character.',
-};
-try {
-    securityManager.setPasswordPolicy(wantTemp, policy);
-    console.info(`Succeeded in setting password policy.`);
-} catch(err) {
-    console.error(`Failed to set password policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

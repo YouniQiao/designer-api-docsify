@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DISK_ERASURE
@@ -17,8 +15,6 @@ DISK_ERASURE = 0
 磁盘擦除。接口调用后，设备将立即执行磁盘擦除操作。磁盘擦除完成后，整机设备数据将全部被擦除且无法恢复。企业需要做好应用的安全设计，防止应用被攻击导致企业数据丢失。仅支持PC/2in1设备。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,8 +30,6 @@ RESET_FACTORY = 1
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -49,8 +43,6 @@ REBOOT = 2
 设备重启。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +58,6 @@ SHUT_DOWN = 3
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -82,8 +72,6 @@ LOCK_SCREEN = 4
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -94,11 +82,9 @@ LOCK_SCREEN = 4
 LOCK_DEVICE = 5
 ```
 
-设备锁定。该能力使用后设备屏幕无法使用，按键无响应，仅支持锁屏文案定制，不支持在锁屏界面定制交互功能。在开发过程中，下发设备锁定策略前一定要预留逃生通道，并且确保逃生通道正常。 建议开发时保留hdc能力与远程通信能力，通过hdc命令或者远程push能力能触发设备解锁定功能。<br>如果需要实现在屏幕锁定的情况下支持自定义行为的能力， 建议使用[applicationManager.setAllowedKioskApps](arkts-mdm-applicationmanager-setallowedkioskapps-f.md) 接口配置支持Kiosk模式， 使用[applicationManager.enterKioskMode](../../apis-ability-kit/arkts-apis/arkts-ability-kioskmanager-enterkioskmode-f.md)接口进入Kiosk模式。
+设备锁定。该能力使用后设备屏幕无法使用，按键无响应，仅支持锁屏文案定制，不支持在锁屏界面定制交互功能。在开发过程中，下发设备锁定策略前一定要预留逃生通道，并且确保逃生通道正常。 建议开发时保留hdc能力与远程通信能力，通过hdc命令或者远程push能力能触发设备解锁定功能。如果需要实现在屏幕锁定的情况下支持自定义行为的能力， 建议使用[applicationManager.setAllowedKioskApps](arkts-mdm-applicationmanager-setallowedkioskapps-f.md) 接口配置支持Kiosk模式， 使用[applicationManager.enterKioskMode](../../apis-ability-kit/arkts-apis/arkts-ability-kioskmanager-enterkioskmode-f.md)接口进入Kiosk模式。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -113,8 +99,6 @@ UNLOCK_DEVICE = 6
 设备解锁定。接口调用后，设备将被解锁，用户可正常操作设备。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

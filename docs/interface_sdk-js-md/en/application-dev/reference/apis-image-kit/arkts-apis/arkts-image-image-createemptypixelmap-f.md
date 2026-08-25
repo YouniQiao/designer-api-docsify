@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createEmptyPixelMap
@@ -15,8 +15,6 @@ function createEmptyPixelMap(param: InitializationOptions): PixelMap
 Creates an empty PixelMap.The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

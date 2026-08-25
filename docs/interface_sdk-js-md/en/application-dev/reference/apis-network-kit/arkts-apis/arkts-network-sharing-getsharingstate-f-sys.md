@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## getSharingState
@@ -15,8 +15,6 @@ function getSharingState(type: SharingIfaceType, callback: AsyncCallback<Sharing
 Obtains the network sharing state of the specified type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -42,34 +40,6 @@ Obtains the network sharing state of the specified type. This API uses an asynch
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing.getSharingState(SHARING_WIFI, (error: BusinessError, data: sharing.SharingIfaceState) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .getSharingState(SHARING_WIFI)
-  .then((data: sharing.SharingIfaceState) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## getSharingState
 
@@ -80,8 +50,6 @@ function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>
 Obtains the network sharing state of the specified type. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -111,7 +79,3 @@ Obtains the network sharing state of the specified type. This API uses a promise
 | [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) |
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
-
-**Examples**
-
-See [getSharingState](#getsharingstate)

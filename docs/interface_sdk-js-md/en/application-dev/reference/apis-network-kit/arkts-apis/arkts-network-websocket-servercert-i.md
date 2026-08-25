@@ -4,14 +4,12 @@ Certificate information, which includes the paths of the WebSocketServer certifi
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## certPath
@@ -26,8 +24,6 @@ Path of the server certificate file.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## keyPath
@@ -41,7 +37,5 @@ Path of the private key file of the server certificate.
 **Type:** string
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack

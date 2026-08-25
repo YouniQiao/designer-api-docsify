@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disableBluetoothAsync
@@ -15,8 +15,6 @@ function disableBluetoothAsync(): Promise<void>
 Asynchronous interface for disables Bluetooth on a device.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -40,19 +38,3 @@ Asynchronous interface for disables Bluetooth on a device.
 | 2900013 |
 | 2900014 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    access.disableBluetoothAsync().then(() => {
-        console.info('disableBluetoothAsync');
-    }, (error: BusinessError) => {
-        console.error('disableBluetoothAsync: errCode:' + error.code + ',errMessage' + error.message);
-    })
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

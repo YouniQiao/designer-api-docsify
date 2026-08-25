@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemParameterEnhance } from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setSync
@@ -21,8 +21,6 @@ function setSync(key: string, value: string): void
 > 开发者应根据具体场景选择合适的方法。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -43,16 +41,3 @@ function setSync(key: string, value: string): void
 | [14700102](../errorcode-system-parameterV9.md#14700102-系统参数值无效) |
 | [14700103](../errorcode-device-info.md#14700103-操作因权限被拒绝) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemParameterEnhance.setSync('test.parameter.key', 'default');
-} catch (e) {
-  const err: BusinessError = e as BusinessError;
-  console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
-}
-```

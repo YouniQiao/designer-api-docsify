@@ -4,8 +4,6 @@ Defines the event that indicates the start or end of a foreground-background OS 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the event that indicates the start or end of a foreground-background OS 
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
 ID of the logical display where the switchover occurs. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -37,16 +33,14 @@ ID of the logical display where the switchover occurs. The default value is **0*
 ## fromAccountId
 
 ```TypeScript
-fromAccountId: int
+fromAccountId: number
 ```
 
 ID of the source OS account.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -55,16 +49,14 @@ ID of the source OS account.
 ## toAccountId
 
 ```TypeScript
-toAccountId: int
+toAccountId: number
 ```
 
 ID of the target OS account.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

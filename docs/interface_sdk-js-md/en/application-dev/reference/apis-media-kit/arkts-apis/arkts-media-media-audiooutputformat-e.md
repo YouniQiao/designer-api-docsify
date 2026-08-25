@@ -4,8 +4,6 @@ Enumerates the audio output formats.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
@@ -22,8 +20,6 @@ Default output format.This API is defined but not implemented yet.Note: It is su
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
@@ -37,8 +33,6 @@ MPEG_4 = 2
 MPEG-4.Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_MPEG_4** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -56,8 +50,6 @@ AMR_NB.This API is defined but not implemented yet.Note: It is supported since A
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [CFT_AMR](arkts-media-media-containerformattype-e.md#cft_amr)
@@ -74,8 +66,6 @@ AMR_WB.This API is defined but not implemented yet.Note: It is supported since A
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [CFT_AMR](arkts-media-media-containerformattype-e.md#cft_amr)
@@ -91,8 +81,6 @@ AAC_ADTS = 6
 Audio Data Transport Stream (ADTS), which is a transport stream format of AAC-based audio.Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AAC** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 

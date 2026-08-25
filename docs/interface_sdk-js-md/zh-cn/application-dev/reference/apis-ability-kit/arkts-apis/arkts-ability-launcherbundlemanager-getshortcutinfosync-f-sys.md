@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getShortcutInfoSync
@@ -15,8 +15,6 @@ function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>
 查询当前用户下指定应用的快捷方式信息ShortcutInfo，只支持查询主应用的ShortcutInfo，查询分身应用请使用 [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md)。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -47,48 +45,16 @@ function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
 
-**示例**
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = launcherBundleManager.getShortcutInfoSync("com.example.demo");
-  console.info('data is ' + JSON.stringify(data));
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = launcherBundleManager.getShortcutInfoSync("com.example.demo", 100);
-  console.info('data is ' + JSON.stringify(data));
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
 
 ## getShortcutInfoSync
 
 ```TypeScript
-function getShortcutInfoSync(bundleName: string, userId: int): Array<ShortcutInfo>
+function getShortcutInfoSync(bundleName: string, userId: number): Array<ShortcutInfo>
 ```
 
 查询指定用户下指定应用的快捷方式信息ShortcutInfo，只支持查询主应用的ShortcutInfo，查询分身应用请使用 [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md)。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -101,7 +67,7 @@ function getShortcutInfoSync(bundleName: string, userId: int): Array<ShortcutInf
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -120,7 +86,3 @@ function getShortcutInfoSync(bundleName: string, userId: int): Array<ShortcutInf
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
-
-**示例**
-
-参见 [getShortcutInfoSync](#getshortcutinfosync)

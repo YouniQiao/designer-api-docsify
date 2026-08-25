@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createPixelMapSync
@@ -15,8 +15,6 @@ function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions)
 Create pixelmap by data buffer.Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md) instead for better exception handling capabilities.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -39,50 +37,6 @@ Create pixelmap by data buffer.Starting from API 26.0.0, it is recommended to us
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-function CreatePixelMapSync() {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
-  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 4, width: 6 } }
-  let pixelMap : image.PixelMap = image.createPixelMapSync(color, opts);
-  return pixelMap;
-}
-```
-
-```TypeScript
-function CreatePixelMapSync() {
-  let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 4, width: 6 } }
-  let pixelMap : image.PixelMap = image.createPixelMapSync(opts);
-  return pixelMap;
-}
-```
-
-```TypeScript
-function CreatePixelMapSync(context : Context) {
-  // "test.jpg" is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
-  let filePath: string = context.filesDir + "/test.jpg";
-  let imageSource = image.createImageSource(filePath);
-  let decodingOptions: image.DecodingOptions = {
-    sampleSize: 1,
-    editable: true,
-    desiredSize: { width: 1, height: 2 },
-    rotate: 10,
-    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
-    desiredRegion: { size: { width: 1, height: 2 }, x: 0, y: 0 },
-    // If both desiredSize and desiredRegion are passed to the decoding API, you must also include cropAndScaleStrategy to determine whether to crop or scale first. CROP_FIRST is recommended.
-    cropAndScaleStrategy: image.CropAndScaleStrategy.CROP_FIRST,
-    index: 0
-  };
-  let pixelmap = imageSource.createPixelMapSync(decodingOptions);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
-
 
 ## createPixelMapSync
 
@@ -93,8 +47,6 @@ function createPixelMapSync(options: InitializationOptions): PixelMap
 Create an empty pixelmap.Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md) instead for better exception handling capabilities.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -115,7 +67,3 @@ Create an empty pixelmap.Starting from API 26.0.0, it is recommended to use [cre
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [createPixelMapSync](#createpixelmapsync)

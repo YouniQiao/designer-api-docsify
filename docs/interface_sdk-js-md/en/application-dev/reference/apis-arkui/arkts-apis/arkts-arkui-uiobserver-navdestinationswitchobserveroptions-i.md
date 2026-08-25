@@ -4,14 +4,12 @@ Provides the observer options for the page switching event of the **Navigation**
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## navigationId
@@ -22,11 +20,9 @@ navigationId: ResourceStr
 
 ID of the target **Navigation** component.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

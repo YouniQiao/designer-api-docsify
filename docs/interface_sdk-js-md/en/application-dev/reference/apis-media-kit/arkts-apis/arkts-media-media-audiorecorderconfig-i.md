@@ -4,8 +4,6 @@ Provides the audio recorder configuration definitions.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)
@@ -15,7 +13,7 @@ Provides the audio recorder configuration definitions.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## audioEncodeBitRate
@@ -29,8 +27,6 @@ Audio encoding bit rate, in bit/s.
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Audio encoding format. The default value is DEFAULT, it will be deprecated after
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [audioEncoderMime](#audioencodermime)
@@ -69,8 +63,6 @@ audio encoding format MIME. it used to replace audioEncoder.
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Audio sampling rate, in Hz.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [audioSampleRate](arkts-media-media-avrecorderprofile-i.md#audiosamplerate)
@@ -109,8 +99,6 @@ output file format. see @ContainerFormatType , it used to replace "format".
 **Type:** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ Audio output format. The default value is DEFAULT, it will be deprecated after A
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [fileFormat](#fileformat)
@@ -149,8 +135,6 @@ Geographical location information.
 **Type:** Location
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -170,8 +154,6 @@ Number of audio channels.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [audioChannels](arkts-media-media-avrecorderprofile-i.md#audiochannels)
@@ -189,8 +171,6 @@ Audio output uri.support two kind of uri now. format like: scheme + "://" + "con
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

@@ -6,8 +6,6 @@ EmbeddedUIExtensionAbility is a component that enables cross-process UI embeddin
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -15,5 +13,5 @@ EmbeddedUIExtensionAbility is a component that enables cross-process UI embeddin
 ## Modules to Import
 
 ```TypeScript
-import { EmbeddedUIExtensionAbility } from '@kit.AbilityKit';
+import { EmbeddedUIExtensionAbility } from 'kits/@kit.AbilityKit';
 ```

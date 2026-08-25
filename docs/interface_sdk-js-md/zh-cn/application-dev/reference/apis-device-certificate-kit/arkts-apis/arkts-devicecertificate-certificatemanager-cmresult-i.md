@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## 导入模块
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## appUidList
@@ -25,8 +23,6 @@ appUidList?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -42,8 +38,6 @@ certInfo?: CertInfo
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## certList
@@ -57,8 +51,6 @@ certList?: Array<CertAbstract>
 **类型：** Array&lt;[CertAbstract](arkts-devicecertificate-certificatemanager-certabstract-i.md)&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -74,8 +66,6 @@ credential?: Credential
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## credentialDetailList
@@ -89,8 +79,6 @@ credentialDetailList?: Array<Credential>
 **类型：** Array&lt;Credential&gt;
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -106,8 +94,6 @@ credentialList?: Array<CredentialAbstract>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## outData
@@ -121,8 +107,6 @@ outData?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -138,8 +122,6 @@ uri?: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## uriList
@@ -153,8 +135,6 @@ uriList?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

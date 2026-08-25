@@ -4,8 +4,6 @@ The enum of major minor class of a bluetooth device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [MajorMinorClass](arkts-connectivity-constant-majorminorclass-e.md)
@@ -21,8 +19,6 @@ COMPUTER_UNCATEGORIZED = 0x0100
 The Minor Device Class field Computer Major Class
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -40,8 +36,6 @@ Desktop computer.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [COMPUTER_DESKTOP](arkts-connectivity-constant-majorminorclass-e.md#computer_desktop)
@@ -57,8 +51,6 @@ COMPUTER_SERVER = 0x0108
 Server.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -76,8 +68,6 @@ Laptop.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [COMPUTER_LAPTOP](arkts-connectivity-constant-majorminorclass-e.md#computer_laptop)
@@ -93,8 +83,6 @@ COMPUTER_HANDHELD_PC_PDA = 0x0110
 Hand-held computer.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -112,8 +100,6 @@ Palmtop computer.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [COMPUTER_PALM_SIZE_PC_PDA](arkts-connectivity-constant-majorminorclass-e.md#computer_palm_size_pc_pda)
@@ -129,8 +115,6 @@ COMPUTER_WEARABLE = 0x0118
 Wearable computer.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -148,8 +132,6 @@ Tablet.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [COMPUTER_TABLET](arkts-connectivity-constant-majorminorclass-e.md#computer_tablet)
@@ -165,8 +147,6 @@ PHONE_UNCATEGORIZED = 0x0200
 Phone Major Class
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -184,8 +164,6 @@ Portable phone.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PHONE_CELLULAR](arkts-connectivity-constant-majorminorclass-e.md#phone_cellular)
@@ -201,8 +179,6 @@ PHONE_CORDLESS = 0x0208
 Cordless phone.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -220,8 +196,6 @@ Smartphone.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PHONE_SMART](arkts-connectivity-constant-majorminorclass-e.md#phone_smart)
@@ -237,8 +211,6 @@ PHONE_MODEM_OR_GATEWAY = 0x0210
 Modem or gateway phone.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -256,8 +228,6 @@ ISDN phone.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PHONE_ISDN](arkts-connectivity-constant-majorminorclass-e.md#phone_isdn)
@@ -273,8 +243,6 @@ NETWORK_FULLY_AVAILABLE = 0x0300
 LAN/Network Access Point Major Class
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -292,8 +260,6 @@ Device used on network 1 to 17.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [NETWORK_1_TO_17_UTILIZED](arkts-connectivity-constant-majorminorclass-e.md#network_1_to_17_utilized)
@@ -309,8 +275,6 @@ NETWORK_17_TO_33_UTILIZED = 0x0340
 Device used on network 17 to 33.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -328,8 +292,6 @@ Device used on network 33 to 50.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [NETWORK_33_TO_50_UTILIZED](arkts-connectivity-constant-majorminorclass-e.md#network_33_to_50_utilized)
@@ -345,8 +307,6 @@ NETWORK_60_TO_67_UTILIZED = 0x0380
 Device used on network 60 to 67.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -364,8 +324,6 @@ Device used on network 67 to 83.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [NETWORK_67_TO_83_UTILIZED](arkts-connectivity-constant-majorminorclass-e.md#network_67_to_83_utilized)
@@ -381,8 +339,6 @@ NETWORK_83_TO_99_UTILIZED = 0x03C0
 Device used on network 83 to 99.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -400,8 +356,6 @@ Device without network service.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [NETWORK_NO_SERVICE](arkts-connectivity-constant-majorminorclass-e.md#network_no_service)
@@ -417,8 +371,6 @@ AUDIO_VIDEO_UNCATEGORIZED = 0x0400
 Unclassified audio or video device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -436,8 +388,6 @@ Wearable audio or video headset.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AUDIO_VIDEO_WEARABLE_HEADSET](arkts-connectivity-constant-majorminorclass-e.md#audio_video_wearable_headset)
@@ -453,8 +403,6 @@ AUDIO_VIDEO_HANDSFREE = 0x0408
 Hands-free audio or video device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -472,8 +420,6 @@ Audio or video microphone.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AUDIO_VIDEO_MICROPHONE](arkts-connectivity-constant-majorminorclass-e.md#audio_video_microphone)
@@ -489,8 +435,6 @@ AUDIO_VIDEO_LOUDSPEAKER = 0x0414
 Audio or video loudspeaker.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -508,8 +452,6 @@ Audio or video headphones.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AUDIO_VIDEO_HEADPHONES](arkts-connectivity-constant-majorminorclass-e.md#audio_video_headphones)
@@ -525,8 +467,6 @@ AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C
 Portable audio or video device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -544,8 +484,6 @@ In-vehicle audio or video device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AUDIO_VIDEO_CAR_AUDIO](arkts-connectivity-constant-majorminorclass-e.md#audio_video_car_audio)
@@ -561,8 +499,6 @@ AUDIO_VIDEO_SET_TOP_BOX = 0x0424
 Audio or video STB device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -580,8 +516,6 @@ High-fidelity speaker device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AUDIO_VIDEO_HIFI_AUDIO](arkts-connectivity-constant-majorminorclass-e.md#audio_video_hifi_audio)
@@ -597,8 +531,6 @@ AUDIO_VIDEO_VCR = 0x042C
 Video cassette recording (VCR) device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -616,8 +548,6 @@ Camera.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AUDIO_VIDEO_VIDEO_CAMERA](arkts-connectivity-constant-majorminorclass-e.md#audio_video_video_camera)
@@ -633,8 +563,6 @@ AUDIO_VIDEO_CAMCORDER = 0x0434
 Camcorder.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -652,8 +580,6 @@ Audio or video monitor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AUDIO_VIDEO_VIDEO_MONITOR](arkts-connectivity-constant-majorminorclass-e.md#audio_video_video_monitor)
@@ -669,8 +595,6 @@ AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C
 Video display or loudspeaker.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -688,8 +612,6 @@ Video conferencing device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AUDIO_VIDEO_VIDEO_CONFERENCING](arkts-connectivity-constant-majorminorclass-e.md#audio_video_video_conferencing)
@@ -705,8 +627,6 @@ AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448
 Audio or video gaming toy.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -724,8 +644,6 @@ Peripheral Major Class
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PERIPHERAL_NON_KEYBOARD_NON_POINTING](arkts-connectivity-constant-majorminorclass-e.md#peripheral_non_keyboard_non_pointing)
@@ -741,8 +659,6 @@ PERIPHERAL_KEYBOARD = 0x0540
 Keyboard device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -760,8 +676,6 @@ Pointing peripheral device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PERIPHERAL_POINTING_DEVICE](arkts-connectivity-constant-majorminorclass-e.md#peripheral_pointing_device)
@@ -777,8 +691,6 @@ PERIPHERAL_KEYBOARD_POINTING = 0x05C0
 Keyboard pointing device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -796,8 +708,6 @@ Unclassified peripheral device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PERIPHERAL_UNCATEGORIZED](arkts-connectivity-constant-majorminorclass-e.md#peripheral_uncategorized)
@@ -813,8 +723,6 @@ PERIPHERAL_JOYSTICK = 0x0504
 Peripheral joystick.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -832,8 +740,6 @@ Peripheral game pad.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PERIPHERAL_GAMEPAD](arkts-connectivity-constant-majorminorclass-e.md#peripheral_gamepad)
@@ -849,8 +755,6 @@ PERIPHERAL_REMOTE_CONTROL = 0x05C0
 Peripheral remote control device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -868,8 +772,6 @@ Peripheral sensing device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PERIPHERAL_SENSING_DEVICE](arkts-connectivity-constant-majorminorclass-e.md#peripheral_sensing_device)
@@ -885,8 +787,6 @@ PERIPHERAL_DIGITIZER_TABLET = 0x0514
 Peripheral digitizer tablet.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -904,8 +804,6 @@ Peripheral card reader.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PERIPHERAL_CARD_READER](arkts-connectivity-constant-majorminorclass-e.md#peripheral_card_reader)
@@ -921,8 +819,6 @@ PERIPHERAL_DIGITAL_PEN = 0x051C
 Peripheral digital pen.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -940,8 +836,6 @@ Peripheral RFID scanner.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PERIPHERAL_SCANNER_RFID](arkts-connectivity-constant-majorminorclass-e.md#peripheral_scanner_rfid)
@@ -957,8 +851,6 @@ PERIPHERAL_GESTURAL_INPUT = 0x0522
 Gesture input device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -976,8 +868,6 @@ Imaging Major Class
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [IMAGING_UNCATEGORIZED](arkts-connectivity-constant-majorminorclass-e.md#imaging_uncategorized)
@@ -993,8 +883,6 @@ IMAGING_DISPLAY = 0x0610
 Imaging display device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1012,8 +900,6 @@ Imaging camera device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [IMAGING_CAMERA](arkts-connectivity-constant-majorminorclass-e.md#imaging_camera)
@@ -1029,8 +915,6 @@ IMAGING_SCANNER = 0x0640
 Imaging scanner.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1048,8 +932,6 @@ Imaging printer.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [IMAGING_PRINTER](arkts-connectivity-constant-majorminorclass-e.md#imaging_printer)
@@ -1065,8 +947,6 @@ WEARABLE_UNCATEGORIZED = 0x0700
 Wearable Major Class
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1084,8 +964,6 @@ Smart watch.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [WEARABLE_WRIST_WATCH](arkts-connectivity-constant-majorminorclass-e.md#wearable_wrist_watch)
@@ -1101,8 +979,6 @@ WEARABLE_PAGER = 0x0708
 Wearable pager.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1120,8 +996,6 @@ Smart jacket.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [WEARABLE_JACKET](arkts-connectivity-constant-majorminorclass-e.md#wearable_jacket)
@@ -1137,8 +1011,6 @@ WEARABLE_HELMET = 0x0710
 Wearable helmet.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1156,8 +1028,6 @@ Wearable glasses.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [WEARABLE_GLASSES](arkts-connectivity-constant-majorminorclass-e.md#wearable_glasses)
@@ -1173,8 +1043,6 @@ TOY_UNCATEGORIZED = 0x0800
 Minor Device Class field - Toy Major Class
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1192,8 +1060,6 @@ Toy robot.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [TOY_ROBOT](arkts-connectivity-constant-majorminorclass-e.md#toy_robot)
@@ -1209,8 +1075,6 @@ TOY_VEHICLE = 0x0808
 Toy vehicle.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1228,8 +1092,6 @@ Humanoid toy doll.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [TOY_DOLL_ACTION_FIGURE](arkts-connectivity-constant-majorminorclass-e.md#toy_doll_action_figure)
@@ -1245,8 +1107,6 @@ TOY_CONTROLLER = 0x0810
 Toy controller.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1264,8 +1124,6 @@ Toy gaming device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [TOY_GAME](arkts-connectivity-constant-majorminorclass-e.md#toy_game)
@@ -1281,8 +1139,6 @@ HEALTH_UNCATEGORIZED = 0x0900
 Minor Device Class field - Health
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1300,8 +1156,6 @@ Blood pressure device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [HEALTH_BLOOD_PRESSURE](arkts-connectivity-constant-majorminorclass-e.md#health_blood_pressure)
@@ -1317,8 +1171,6 @@ HEALTH_THERMOMETER = 0x0908
 Thermometer.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1336,8 +1188,6 @@ Body scale.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [HEALTH_WEIGHING](arkts-connectivity-constant-majorminorclass-e.md#health_weighing)
@@ -1353,8 +1203,6 @@ HEALTH_GLUCOSE = 0x0910
 Blood glucose monitor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1372,8 +1220,6 @@ Pulse oximeter.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [HEALTH_PULSE_OXIMETER](arkts-connectivity-constant-majorminorclass-e.md#health_pulse_oximeter)
@@ -1389,8 +1235,6 @@ HEALTH_PULSE_RATE = 0x0918
 Heart rate monitor.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1408,8 +1252,6 @@ Health data display.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [HEALTH_DATA_DISPLAY](arkts-connectivity-constant-majorminorclass-e.md#health_data_display)
@@ -1425,8 +1267,6 @@ HEALTH_STEP_COUNTER = 0x0920
 Step counter.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1444,8 +1284,6 @@ Body composition analyzer.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [HEALTH_BODY_COMPOSITION_ANALYZER](arkts-connectivity-constant-majorminorclass-e.md#health_body_composition_analyzer)
@@ -1461,8 +1299,6 @@ HEALTH_PEAK_FLOW_MONITOR = 0x0928
 Hygrometer.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1480,8 +1316,6 @@ Medication monitor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [HEALTH_MEDICATION_MONITOR](arkts-connectivity-constant-majorminorclass-e.md#health_medication_monitor)
@@ -1497,8 +1331,6 @@ HEALTH_KNEE_PROSTHESIS = 0x0930
 Prosthetic knee.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -1516,8 +1348,6 @@ Prosthetic ankle.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [HEALTH_ANKLE_PROSTHESIS](arkts-connectivity-constant-majorminorclass-e.md#health_ankle_prosthesis)
@@ -1534,8 +1364,6 @@ Generic health management device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [HEALTH_GENERIC_HEALTH_MANAGER](arkts-connectivity-constant-majorminorclass-e.md#health_generic_health_manager)
@@ -1551,8 +1379,6 @@ HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C
 Personal mobility device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

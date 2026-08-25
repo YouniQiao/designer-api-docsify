@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -20,13 +18,16 @@ alignContent?: FlexAlign
 ```
 
 当交叉轴存在额外空间时，多行内容之间的对齐方式。仅在wrap为Wrap或WrapReverse下生效。默认值：FlexAlign.Start异常值按默认值处理。取值包括：  
-- Start：首端对齐。 - Center：居中对齐。 - End：尾端对齐。 - SpaceBetween：两端对齐，行与行之间间距相等。 - SpaceAround：每行两侧间距相等。 - SpaceEvenly：行与行之间及两端间距完全相等。
+- Start：首端对齐。  
+- Center：居中对齐。  
+- End：尾端对齐。  
+- SpaceBetween：两端对齐，行与行之间间距相等。  
+- SpaceAround：每行两侧间距相等。  
+- SpaceEvenly：行与行之间及两端间距完全相等。
 
-**类型：** FlexAlign
+**类型：** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -41,13 +42,16 @@ alignItems?: ItemAlign
 ```
 
 所有子组件在Flex容器交叉轴上的对齐格式。设置后，子组件将按照指定的对齐方式在交叉轴方向上定位。默认值：ItemAlign.Start异常值按默认值处理。取值包括：  
-- Auto：使用父容器的对齐方式。 - Start：首部对齐。 - Center：居中对齐。 - End：尾部对齐。 - Stretch：拉伸填充。 - Baseline：基线对齐。
+- Auto：使用父容器的对齐方式。  
+- Start：首部对齐。  
+- Center：居中对齐。  
+- End：尾部对齐。  
+- Stretch：拉伸填充。  
+- Baseline：基线对齐。
 
-**类型：** ItemAlign
+**类型：** [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -62,14 +66,15 @@ direction?: FlexDirection
 ```
 
 子组件在Flex容器上排列的方向，即主轴的方向。设置后，子组件将按照指定的方向在主轴上依次排列。默认值：FlexDirection.Row异常值按默认值处理。取值包括：  
-- Row：主轴为水平方向，起点在左端。 - RowReverse：主轴为水平方向，起点在右端。 - Column：主轴为垂直方向，起点在上端。 - ColumnReverse：主轴为垂直方向，起点在下端。  
+- Row：主轴为水平方向，起点在左端。  
+- RowReverse：主轴为水平方向，起点在右端。  
+- Column：主轴为垂直方向，起点在上端。  
+- ColumnReverse：主轴为垂直方向，起点在下端。  
 Row和RowReverse的起点位置受容器的direction属性影响。
 
-**类型：** FlexDirection
+**类型：** [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -84,14 +89,17 @@ justifyContent?: FlexAlign
 ```
 
 所有子组件在Flex容器主轴上的对齐格式。设置后，子组件将按照指定的对齐方式在主轴方向上分布和排列。默认值：FlexAlign.Start异常值按默认值处理。取值包括：  
-- Start：首端对齐。 - Center：居中对齐。 - End：尾端对齐。 - SpaceBetween：两端对齐，子组件之间间距相等。 - SpaceAround：子组件两侧间距相等。 - SpaceEvenly：子组件之间及两端间距完全相等。  
+- Start：首端对齐。  
+- Center：居中对齐。  
+- End：尾端对齐。  
+- SpaceBetween：两端对齐，子组件之间间距相等。  
+- SpaceAround：子组件两侧间距相等。  
+- SpaceEvenly：子组件之间及两端间距完全相等。  
 **说明：** 当justifyContent设置为SpaceBetween、SpaceAround、SpaceEvenly时，space参数不生效。
 
-**类型：** FlexAlign
+**类型：** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -111,8 +119,6 @@ space?: FlexSpaceOptions
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -126,14 +132,14 @@ wrap?: FlexWrap
 ```
 
 Flex容器是单行/列还是多行/列排列。设置后，子组件将在容器中按指定的换行方式进行布局。默认值：FlexWrap.NoWrap异常值按默认值处理。取值包括：  
-- NoWrap：不换行，子组件总宽度超过容器宽度时被截断。 - Wrap：换行，第一行在上方。 - WrapReverse：换行，第一行在下方。  
+- NoWrap：不换行，子组件总宽度超过容器宽度时被截断。  
+- Wrap：换行，第一行在上方。  
+- WrapReverse：换行，第一行在下方。  
 **说明：**在多行布局时，通过交叉轴方向，确认新行堆叠方向。
 
-**类型：** FlexWrap
+**类型：** [FlexWrap](../arkts-apis/arkts-arkui-flexwrap-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

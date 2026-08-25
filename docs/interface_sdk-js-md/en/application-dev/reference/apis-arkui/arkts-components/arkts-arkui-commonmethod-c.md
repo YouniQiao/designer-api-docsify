@@ -4,8 +4,6 @@ CommonMethod.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,11 +17,9 @@ CommonMethod.
 accessibilityActionOptions(option: AccessibilityActionOptions | undefined): T
 ```
 
-Provides optional parameters for setting accessibility operations of a component, which is used to restrict or <br>modify the operations initiated by accessibility applications such as the screen reader.
+Provides optional parameters for setting accessibility operations of a component, which is used to restrict or modify the operations initiated by accessibility applications such as the screen reader.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,7 +33,7 @@ Provides optional parameters for setting accessibility operations of a component
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| option | AccessibilityActionOptions \| undefined | Yes |
+| option | [AccessibilityActionOptions](../arkts-apis/arkts-arkui-accessibilityactionoptions-i.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -51,11 +47,9 @@ Provides optional parameters for setting accessibility operations of a component
 accessibilityChecked(isCheck: boolean): T
 ```
 
-Sets the checked state for the accessibility node. This API is used in multi-select scenarios and only affects <br>component state announcements in screen reading scenarios.
+Sets the checked state for the accessibility node. This API is used in multi-select scenarios and only affects component state announcements in screen reading scenarios.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,11 +77,9 @@ Sets the checked state for the accessibility node. This API is used in multi-sel
 accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined): T
 ```
 
-Sets the custom accessibility operations of the component, allowing developers to set an array of custom actions <br>for binding custom operation callbacks to components by operation name.
+Sets the custom accessibility operations of the component, allowing developers to set an array of custom actions for binding custom operation callbacks to components by operation name.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,7 +93,7 @@ Sets the custom accessibility operations of the component, allowing developers t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [actions](../../apis-ability-kit/arkts-apis/arkts-ability-skill-i.md) | Array & lt;AccessibilityCustomAction & gt; \ | undefined | Yes |
+| [actions](../../apis-ability-kit/arkts-apis/arkts-ability-skill-i.md) | Array&lt;[AccessibilityCustomAction](../arkts-apis/arkts-arkui-accessibilitycustomaction-i.md)&gt; \| undefined | Yes |
 
 **Return value:**
 
@@ -118,8 +110,6 @@ accessibilityDefaultFocus(focus: boolean): T
 Sets the initial screen reader focus on the page.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,11 +137,9 @@ Sets the initial screen reader focus on the page.
 accessibilityDescription(value: string): T
 ```
 
-Sets the accessibility description. <br>This attribute provides additional context and explanation for the component, helping users understand its <br>functionality and purpose.
+Sets the accessibility description. This attribute provides additional context and explanation for the component, helping users understand its functionality and purpose.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -179,11 +167,9 @@ Sets the accessibility description. <br>This attribute provides additional conte
 accessibilityDescription(description: Resource): T
 ```
 
-Sets the accessibility description, with support for resource references using Resource. <br>This attribute provides additional context and explanation for the component, helping users understand its <br>functionality and purpose. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Reference resource of the accessibility description. You can specify further explanation <br>of the current component, for example, possible operation consequences, especially those that <br>cannot be learned from component attributes and accessibility text. If a component contains <br>both text information and the accessibility description, the text is read first and then the <br>accessibility description, when the component is selected.</p>
+Sets the accessibility description, with support for resource references using Resource. This attribute provides additional context and explanation for the component, helping users understand its functionality and purpose. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: Reference resource of the accessibility description. You can specify further explanation of the current component, for example, possible operation consequences, especially those that cannot be learned from component attributes and accessibility text. If a component contains both text information and the accessibility description, the text is read first and then the accessibility description, when the component is selected.</p>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,8 +201,6 @@ Sets the drawing level for the accessibility focus highlight (green frame).
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -229,7 +213,7 @@ Sets the drawing level for the accessibility focus highlight (green frame).
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| drawLevel | [FocusDrawLevel](../arkts-apis/arkts-arkui-enums-focusdrawlevel-e.md) | Yes |
+| drawLevel | [FocusDrawLevel](../arkts-apis/arkts-arkui-focusdrawlevel-e.md) | Yes |
 
 **Return value:**
 
@@ -243,11 +227,9 @@ Sets the drawing level for the accessibility focus highlight (green frame).
 accessibilityGroup(value: boolean): T
 ```
 
-Sets whether to enable accessibility grouping.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>Whether to enable accessibility grouping. When accessibility grouping is enabled, <br>the component and all its children are treated as a single selectable unit, and the accessibility <br>service will no longer focus on the individual child components.</p>
+Sets whether to enable accessibility grouping.<p>&lt;strong&gt;NOTE&lt;/strong&gt; Whether to enable accessibility grouping. When accessibility grouping is enabled, the component and all its children are treated as a single selectable unit, and the accessibility service will no longer focus on the individual child components.</p>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -275,11 +257,11 @@ Sets whether to enable accessibility grouping.<p>&lt;strong&gt;NOTE&lt;/strong&g
 accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions): T
 ```
 
-Sets whether to enable accessibility grouping.<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If accessibility grouping is enabled and the component does not contain a universal text attribute <br>or an accessibility text attribute, the system will concatenate the universal text attributes of <br>its child components to form a merged text for the component. If a child component lacks a universal <br>text attribute, it will be ignored in the concatenation process.<br>When accessibilityPreferred is set to true, the system will prioritize concatenating the accessibility <br>text attributes of the child components to form the merged text. If a child component lacks an <br>accessibility text attribute, the system will continue to concatenate its universal text attribute. <br>If a child component lacks both, it will be ignored.</p>
+Sets whether to enable accessibility grouping.<p>&lt;strong&gt;NOTE&lt;/strong&gt; If accessibility grouping is enabled and the component does not contain a universal text attribute or an accessibility text attribute, the system will concatenate the universal text attributes of its child components to form a merged text for the component. If a child component lacks a universal text attribute, it will be ignored in the concatenation process.
+
+When accessibilityPreferred is set to true, the system will prioritize concatenating the accessibility text attributes of the child components to form the merged text. If a child component lacks an accessibility text attribute, the system will continue to concatenate its universal text attribute. If a child component lacks both, it will be ignored.</p>
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -308,11 +290,14 @@ Sets whether to enable accessibility grouping.<p>&lt;strong&gt;NOTE&lt;/strong&g
 accessibilityLevel(value: string): T
 ```
 
-Sets the accessibility level. This property determines whether the component can be recognized by accessibility services. <p> Accessibility level, which is used to decide whether a component can be identified by the accessibility service. <br>The options are as follows: <br>"auto": The component's recognizability is determined by the accessibility grouping service and ArkUI. <br>"yes": The component can be recognized by accessibility services. <br>"no": The component cannot be recognized by accessibility services. <br>"no-hide-descendants": Neither the component nor its child components can be recognized by accessibility services. &lt;strong&gt;NOTE&lt;/strong&gt; <br>When accessibilityLevel is set to "auto", the component's recognizability depends on the following factors: <br>1. The accessibility service internally determines whether the component can be recognized. <br>2. If the parent component's accessibilityGroup property has isGroup set to true, the accessibility service will <br>not focus on its child components, making them unrecognizable. <br>3. If the parent component's accessibilityLevel is set to "no-hide-descendants", the component will not be <br>recognized by accessibility services.</p>
+Sets the accessibility level. This property determines whether the component can be recognized by accessibility services. <p> Accessibility level, which is used to decide whether a component can be identified by the accessibility service. The options are as follows: "auto": The component's recognizability is determined by the accessibility grouping service and ArkUI. "yes": The component can be recognized by accessibility services. "no": The component cannot be recognized by accessibility services. "no-hide-descendants": Neither the component nor its child components can be recognized by accessibility services. &lt;strong&gt;NOTE&lt;/strong&gt; When accessibilityLevel is set to "auto", the component's recognizability depends on the following factors: 
+1. The accessibility service internally determines whether the component can be recognized. 
+2. If the parent component's accessibilityGroup property has isGroup set to true, the accessibility service will 
+not focus on its child components, making them unrecognizable. 
+3. If the parent component's accessibilityLevel is set to "no-hide-descendants", the component will not be 
+recognized by accessibility services.</p>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -344,8 +329,6 @@ Sets the next component to receive focus during screen reader navigation.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -376,8 +359,6 @@ Sets the next component to receive focus during screen reader navigation, with o
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -391,7 +372,7 @@ Sets the next component to receive focus during screen reader navigation, with o
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | nextId | string | Yes |
-| nextFocusParams | AccessibilityNextFocusParams \| undefined | Yes |
+| nextFocusParams | [AccessibilityNextFocusParams](../arkts-apis/arkts-arkui-accessibilitynextfocusparams-i.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -409,8 +390,6 @@ Enable or disable specific smart gesture shortcuts, and set response priorities 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -424,7 +403,7 @@ Enable or disable specific smart gesture shortcuts, and set response priorities 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | nextId | string | Yes |
-| nextFocusParams | AccessibilityNextFocusParams \| undefined | Yes |
+| nextFocusParams | [AccessibilityNextFocusParams](../arkts-apis/arkts-arkui-accessibilitynextfocusparams-i.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -441,8 +420,6 @@ accessibilityRole(role: AccessibilityRoleType): T
 Sets the role type of the accessibility component, which affects how the component is announced by screen readers.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -470,11 +447,9 @@ Sets the role type of the accessibility component, which affects how the compone
 accessibilityScrollTriggerable(isTriggerable: boolean): T
 ```
 
-Sets whether the accessibility node triggers automatic screen scrolling. When no focusable components are visible <br>on the current page within a container, this setting determines whether automatic scrolling is initiated.
+Sets whether the accessibility node triggers automatic screen scrolling. When no focusable components are visible on the current page within a container, this setting determines whether automatic scrolling is initiated.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -502,11 +477,9 @@ Sets whether the accessibility node triggers automatic screen scrolling. When no
 accessibilitySelected(isSelect: boolean): T
 ```
 
-Sets the checked state for the accessibility node. This API is used in single-select scenarios and only affects <br>component state announcements in screen reading scenarios.
+Sets the checked state for the accessibility node. This API is used in single-select scenarios and only affects component state announcements in screen reading scenarios.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -534,11 +507,9 @@ Sets the checked state for the accessibility node. This API is used in single-se
 accessibilityStateDescription(description: string | Resource | undefined): T
 ```
 
-Sets the state description of a component for broadcasting, which clearly describes the real-time state of the <br>component in screen reading scenarios. Screen reader will broadcast the state description first.
+Sets the state description of a component for broadcasting, which clearly describes the real-time state of the component in screen reading scenarios. Screen reader will broadcast the state description first.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -570,8 +541,6 @@ Sets the accessibility text. When a component does not contain a text attribute,
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -598,11 +567,9 @@ Sets the accessibility text. When a component does not contain a text attribute,
 accessibilityText(text: Resource): T
 ```
 
-Sets the accessibility text.<p>&lt;strong&gt;NOTE&lt;/strong&gt; If a component has both text content and accessibility text, only the accessibility text is announced. <br>If a component is grouped for accessibility purposes but lacks both text content and accessibility <br>text, the screen reader will concatenate text from its child components (depth-first traversal). <br>To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup. </p>
+Sets the accessibility text.<p>&lt;strong&gt;NOTE&lt;/strong&gt; If a component has both text content and accessibility text, only the accessibility text is announced. If a component is grouped for accessibility purposes but lacks both text content and accessibility text, the screen reader will concatenate text from its child components (depth-first traversal). To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup. </p>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -634,8 +601,6 @@ Sets the text hint for the component, which can be queried by accessibility serv
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -666,8 +631,6 @@ Sets the same-page mode for the current component and its host application.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -694,11 +657,9 @@ Sets the same-page mode for the current component and its host application.
 accessibilityVirtualNode(builder: CustomBuilder): T
 ```
 
-Sets an accessibility virtual child node. For custom drawing components, a **CustomBuilder** is passed, which is <br>used to provide accessibility information. The components within the **CustomBuilder** are only used for layout <br>and not for display.
+Sets an accessibility virtual child node. For custom drawing components, a **CustomBuilder** is passed, which is used to provide accessibility information. The components within the **CustomBuilder** are only used for layout and not for display.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -730,8 +691,6 @@ Sets the alignment mode for child elements within the container's drawing area. 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -760,8 +719,6 @@ Sets the alignment mode for child elements within the container's drawing area. 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -774,7 +731,7 @@ Sets the alignment mode for child elements within the container's drawing area. 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| alignment | Alignment \| [LocalizedAlignment](../arkts-apis/arkts-arkui-enums-localizedalignment-e.md) | Yes |
+| alignment | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) \| [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) | Yes |
 
 **Return value:**
 
@@ -791,8 +748,6 @@ alignRules(value: AlignRuleOption): T
 Sets the alignment rule for child components within the relative container. This attribute only takes effect when the parent container is RelativeContainer, and supports dynamic configuration via [attributeModifier](#attributemodifier).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -821,8 +776,6 @@ alignRules(alignRule: LocalizedAlignRuleOptions): T
 Sets the alignment rules in the relative container. This API is valid only when the container is RelativeContainer,. This attribute replaces the original **left** and **right** directional parameters with **start** and **end** to support proper mirroring in right-to-left (RTL) layout modes. It is recommended that you use this attribute for configuring child component alignment rules in relative containers. This attribute supports dynamic configuration via [attributeModifier](#attributemodifier).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -854,8 +807,6 @@ Sets the alignment mode of the child components along the cross axis of the pare
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -866,7 +817,7 @@ Sets the alignment mode of the child components along the cross axis of the pare
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [ItemAlign](../arkts-apis/arkts-arkui-enums-itemalign-e.md) | Yes |
+| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes |
 
 **Return value:**
 
@@ -883,8 +834,6 @@ allowDrop(value: Array<UniformDataType> | null | Array<string>): T
 Sets the types of data that can be dropped to the component. If **allowDrop** is not set, the component accepts all data types by default.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -913,8 +862,6 @@ allowForceDark(value: boolean): T
 Set whether the component enables the ability to invert colors. This interface needs to be set as the first attribute of the component.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -951,8 +898,6 @@ Sets a property animation for the component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -977,11 +922,13 @@ Sets a property animation for the component.
 aspectRatio(value: number): T
 ```
 
-Sets the aspect ratio of the component, which can be obtained using the following formula: width/height. <br>- If only **width** and **aspectRatio** are set, the height is calculated using the following formula: width/aspectRatio. <br>- If only **height** and **aspectRatio** are set, the width is calculated using the following formula: height x aspectRatio. <br>- If **width**, **height**, and **aspectRatio** are all set, the explicitly set height is ignored, and the effective height is calculated using the following formula: width/aspectRatio. <br>After the **aspectRatio** attribute is set, the component's width and height will be limited by the size of the parent component's content area. The priority of [constraintSize](#constraintsize) is higher than that of **aspectRatio**.
+Sets the aspect ratio of the component, which can be obtained using the following formula: width/height.   
+- If only **width** and **aspectRatio** are set, the height is calculated using the following formula: width/aspectRatio.   
+- If only **height** and **aspectRatio** are set, the width is calculated using the following formula: height x aspectRatio.   
+- If **width**, **height**, and **aspectRatio** are all set, the explicitly set height is ignored, and the effective height is calculated using the following formula: width/aspectRatio.   
+After the **aspectRatio** attribute is set, the component's width and height will be limited by the size of the parent component's content area. The priority of [constraintSize](#constraintsize) is higher than that of **aspectRatio**.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1011,8 +958,6 @@ Sets the attribute modifier.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1040,8 +985,6 @@ backdropBlur(value: number, options?: BlurOptions): T
 Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1071,8 +1014,6 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared to [backdropBlur](#backdropblur), the **radius** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1104,8 +1045,6 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: Syste
 Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared with [backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](#backdropblur), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1139,8 +1078,6 @@ Add a background for the component.Anonymous Object Rectification.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1170,8 +1107,6 @@ Defines the background material blur style. It encapsulates various blur radius,
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -1200,8 +1135,6 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared to [backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](#backgroundblurstyle), the **style** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1233,8 +1166,6 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared with [backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#backgroundblurstyle), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1268,8 +1199,6 @@ Sets the background brightness of the component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1297,8 +1226,6 @@ backgroundBrightness(options: Optional<BackgroundBrightnessOptions>): T
 Sets the background brightness of the component. Compared to [backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](#backgroundbrightness), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1328,8 +1255,6 @@ Background color
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -1358,8 +1283,6 @@ Background color
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1372,7 +1295,7 @@ Background color
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor&gt; | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -1390,8 +1313,6 @@ Background color
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1404,7 +1325,7 @@ Background color
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| ColorMetrics & gt; | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics & gt; | Yes |
 
 **Return value:**
 
@@ -1421,8 +1342,6 @@ backgroundEffect(options: BackgroundEffectOptions): T
 Sets the background effect of the component, including the blur radius, brightness, saturation, and color.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1451,8 +1370,6 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared to [backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](#backgroundeffect), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1488,8 +1405,6 @@ Sets the background effect of the component, including the blur radius, brightne
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -1522,8 +1437,6 @@ Sets the visual effect of the background filter.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1552,8 +1465,6 @@ Background image src: Image address url
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -1564,7 +1475,7 @@ Background image src: Image address url
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | ResourceStr \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes |
+| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes |
 | repeat | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | No |
 
 **Return value:**
@@ -1583,8 +1494,6 @@ Background image
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1597,7 +1506,7 @@ Background image
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | ResourceStr \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes |
+| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes |
 | options | [BackgroundImageOptions](arkts-arkui-backgroundimageoptions-i.md) | No |
 
 **Return value:**
@@ -1615,8 +1524,6 @@ backgroundImagePosition(value: Position | Alignment): T
 Background image position x:Horizontal coordinate;y:Vertical axis coordinate.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1646,8 +1553,6 @@ Background image resizable. value:resizable options
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1658,7 +1563,7 @@ Background image resizable. value:resizable options
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [ResizableOptions](../arkts-apis/arkts-arkui-image-resizableoptions-i.md) | Yes |
+| value | [ResizableOptions](arkts-arkui-resizableoptions-i.md) | Yes |
 
 **Return value:**
 
@@ -1676,8 +1581,6 @@ Background image size
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -1688,7 +1591,7 @@ Background image size
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | SizeOptions \| [ImageSize](../arkts-apis/arkts-arkui-imagesize-e.md) | Yes |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) \| [ImageSize](../arkts-apis/arkts-arkui-imagesize-e.md) | Yes |
 
 **Return value:**
 
@@ -1708,8 +1611,6 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 > This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1741,8 +1642,6 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1769,11 +1668,9 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported.
+Binds a context menu to this component, which is displayed when the user number-presses or right-clicks the component. Only custom menu items are supported.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1784,7 +1681,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
-| responseType | [ResponseType](../arkts-apis/arkts-arkui-enums-responsetype-e.md) | Yes |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) | Yes |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No |
 
 **Return value:**
@@ -1802,8 +1699,6 @@ bindContextMenu(isShown: boolean, content: CustomBuilder, options?: ContextMenuO
 Binds a context menu to the component, whose visibility is subject to the isShown settings.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1835,8 +1730,6 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1864,11 +1757,9 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement>, respo
       options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Custom or fixed-style menu items are supported.
+Binds a context menu to this component, which is displayed when the user number-presses or right-clicks the component. Custom or fixed-style menu items are supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1881,7 +1772,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; | Yes |
-| responseType | [ResponseType](../arkts-apis/arkts-arkui-enums-responsetype-e.md) | Yes |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) | Yes |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No |
 
 **Return value:**
@@ -1896,11 +1787,9 @@ Binds a context menu to this component, which is displayed when the user long-pr
 bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported. Long pressing with a mouse device is not supported.
+Binds a context menu to this component, which is displayed when the user number-presses or right-clicks the component. Only custom menu items are supported. Long pressing with a mouse device is not supported.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1912,7 +1801,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;ResponseType&gt; \| undefined | Yes |
+| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| undefined | Yes |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No |
 
 **Return value:**
@@ -1928,11 +1817,9 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
     options?: ContextMenuOptions): T
 ```
 
-Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Custom or fixed-style menu items are supported. Long pressing with a mouse device is not supported.
+Binds a context menu to this component, which is displayed when the user number-presses or right-clicks the component. Custom or fixed-style menu items are supported. Long pressing with a mouse device is not supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1944,7 +1831,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;ResponseType&gt; \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; \| undefined | Yes |
+| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; \| undefined | Yes |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No |
 
 **Return value:**
@@ -1962,8 +1849,6 @@ bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions): T
 Menu control
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1992,8 +1877,6 @@ Menu control
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -2020,11 +1903,9 @@ Menu control
 bindPopup(show: boolean, popup: PopupOptions | CustomPopupOptions): T
 ```
 
-Popup control <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
+Popup control <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2056,8 +1937,6 @@ Binds a sheet to the component, which is displayed when the component is touched
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -2088,8 +1967,6 @@ Tips control
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -2118,8 +1995,6 @@ blendMode(value: BlendMode, type?: BlendApplyType): T
 Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2152,8 +2027,6 @@ Defines how the component's content (including the content of it child component
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2185,8 +2058,6 @@ Applies a foreground blur effect to the component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -2215,8 +2086,6 @@ blur(blurRadius: Optional<number>, options?: BlurOptions): T
 Applies a foreground blur effect to the component. Compared to [blur](#blur), the **blurRadius** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2248,8 +2117,6 @@ blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAda
 Applies a foreground blur effect to the component. Compared to [blur&lt;sup&gt;18+&lt;/sup&gt;](#blur), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2283,8 +2150,6 @@ Sets the border. When neither color nor radius is specified, set borderColor and
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -2313,8 +2178,6 @@ Sets the border color.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -2325,7 +2188,7 @@ Sets the border color.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-units-localizededgecolors-i.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes |
 
 **Return value:**
 
@@ -2342,8 +2205,6 @@ borderImage(value: BorderImageOption): T
 Sets the border image of the component.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2373,8 +2234,6 @@ Sets the border radius.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -2385,7 +2244,7 @@ Sets the border radius.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Length \| BorderRadiuses \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes |
 
 **Return value:**
 
@@ -2407,8 +2266,6 @@ an off-screen canvas, then undergo a rounded corner clipping, and finally be dra
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -2421,7 +2278,7 @@ an off-screen canvas, then undergo a rounded corner clipping, and finally be dra
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Length \| BorderRadiuses \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes |
 | type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | No |
 
 **Return value:**
@@ -2440,8 +2297,6 @@ Border style
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -2452,7 +2307,7 @@ Border style
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | BorderStyle \| [EdgeStyles](../arkts-apis/arkts-arkui-units-edgestyles-i.md) | Yes |
+| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) \| EdgeStyles | Yes |
 
 **Return value:**
 
@@ -2470,8 +2325,6 @@ Sets the border width.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -2482,7 +2335,7 @@ Sets the border width.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-units-localizededgewidths-i.md) | Yes |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | Yes |
 
 **Return value:**
 
@@ -2499,8 +2352,6 @@ brightness(value: number): T
 Applies a brightness effect to the component. If this API is not used, there will be no change by default.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2529,8 +2380,6 @@ brightness(brightness: Optional<number>): T
 Applies a brightness effect to the component. If this API is not used, there will be no change by default. Compared with [brightness](#brightness), this API supports the **undefined** type for the **brightness** parameter.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2562,8 +2411,6 @@ Sets the parameters of the chain in which the component is the head. This attrib
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -2574,7 +2421,7 @@ Sets the parameters of the chain in which the component is the head. This attrib
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [direction](#direction) | [Axis](../arkts-apis/arkts-arkui-enums-axis-e.md) | Yes |
+| [direction](#direction) | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes |
 | style | [ChainStyle](arkts-arkui-chainstyle-e.md) | Yes |
 
 **Return value:**
@@ -2594,8 +2441,6 @@ Sets the weight of the component in a chain, which is used to re-lay out compone
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2606,17 +2451,13 @@ Sets the weight of the component in a chain, which is used to re-lay out compone
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [chainWeight](#chainweight) | [ChainWeightOptions](../arkts-apis/arkts-arkui-units-chainweightoptions-i.md) | Yes |
+| [chainWeight](arkts-arkui-commonmethod-c.md) | [ChainWeightOptions](../arkts-apis/arkts-arkui-chainweightoptions-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | T |
-
-**Examples**
-
-For details, see [Example 10: Setting Component Weights in a Chain](ts-container-relativecontainer.md#example-10-setting-component-weights-in-a-chain).
 
 ## clickEffect
 
@@ -2627,8 +2468,6 @@ clickEffect(value: ClickEffect | null): T
 Sets the click feedback effect of the component.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2658,8 +2497,6 @@ Sets the click feedback effect of the component. Compared with [clickEffect](#cl
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2687,8 +2524,6 @@ clip(value: boolean): T
 Sets whether to clip the areas of child components that extend beyond this component's bounds, that is, whether to perform clipping based on the edge contour of the parent container If this API is not used, the area of child components extending beyond the current component's bounds is not clipped by default.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2720,8 +2555,6 @@ Sets whether to clip the areas of child components that extend beyond this compo
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2752,8 +2585,6 @@ Sets whether to clip this component based on the given shape.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 12
 
 **Substitutes:** [clipShape](#clipshape)
@@ -2768,7 +2599,7 @@ Sets whether to clip this component based on the given shape.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | boolean \| CircleAttribute \| EllipseAttribute \| PathAttribute \| [RectAttribute](arkts-arkui-rect-attribute.md) | Yes |
+| value | boolean \| [CircleAttribute](arkts-arkui-circle-attribute.md) \| [EllipseAttribute](arkts-arkui-ellipse-attribute.md) \| [PathAttribute](arkts-arkui-path-attribute.md) \| [RectAttribute](arkts-arkui-rect-attribute.md) | Yes |
 
 **Return value:**
 
@@ -2793,8 +2624,6 @@ Clips this component according to the specified shape (which may include positio
 > API.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2834,8 +2663,6 @@ Clips this component according to the specified shape (which may include positio
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2866,8 +2693,6 @@ Applies a color blend effect to the component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -2895,8 +2720,6 @@ colorBlend(color: Optional<Color | string | Resource>): T
 Applies a color blend effect to the component. Compared with [colorBlend](#colorblend), this API supports the **undefined** type for the **color** parameter.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2931,8 +2754,6 @@ Sets the visual effect of the compositing filter.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -2957,12 +2778,10 @@ Sets the visual effect of the compositing filter.
 constraintSize(value: ConstraintSizeOptions): T
 ```
 
-Sets the constraint size of the component, which is used to limit the size range during component layout. <br>Since API version 10, this API supports the calc calculation feature.  
-**Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height** | Default Value | Result | | ---------------------------------------- | ---------------------------------------- | | \ | width=MAX(minWidth,MIN(maxWidth,width))<br>height=MAX(minHeight,MIN(maxHeight,height)) | | maxWidth, maxHeight| width=MAX(minWidth,width)<br>height=MAX(minHeight,height) | minWidth, minHeight| width=MIN(maxWidth,width)<br>height=MIN(maxHeight,height) | | width, height| If minWidth &lt; maxWidth, the layout logic of the component takes effect, and the value range of **width** is [minWidth, maxWidth]. Otherwise, width = MAX(minWidth, maxWidth).<br>If minHeight &lt; maxHeight, the layout logic of the component takes effect, and the value range of **height** is [minHeight, maxHeight]. Otherwise, height = MAX (minHeight, maxHeight).| | width and maxWidth; height and maxHeight| width = minWidth<br>height = minHeight | | width and minWidth; and height and minHeight| The layout logic of the component takes effect, and the value of **width** cannot be greater than that of **maxWidth**.<br>The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.| | minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.<br>The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.| | width, minWidth, and maxWidth| The layout restrictions passed by the parent container are used for layout.| | height, minHeight, and maxHeight| The layout restrictions passed by the parent container are used for layout.|
+Sets the constraint size of the component, which is used to limit the size range during component layout. Since API version 10, this API supports the calc calculation feature.  
+**Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height** | Default Value | Result | | ---------------------------------------- | ---------------------------------------- | | \ | width=MAX(minWidth,MIN(maxWidth,width))height=MAX(minHeight,MIN(maxHeight,height)) | | maxWidth, maxHeight| width=MAX(minWidth,width)height=MAX(minHeight,height) | minWidth, minHeight| width=MIN(maxWidth,width)height=MIN(maxHeight,height) | | width, height| If minWidth &lt; maxWidth, the layout logic of the component takes effect, and the value range of **width** is [minWidth, maxWidth]. Otherwise, width = MAX(minWidth, maxWidth).If minHeight &lt; maxHeight, the layout logic of the component takes effect, and the value range of **height** is [minHeight, maxHeight]. Otherwise, height = MAX (minHeight, maxHeight).| | width and maxWidth; height and maxHeight| width = minWidth height = minHeight | | width and minWidth; and height and minHeight| The layout logic of the component takes effect, and the value of **width** cannot be greater than that of **maxWidth**.The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.| | minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.| | width, minWidth, and maxWidth| The layout restrictions passed by the parent container are used for layout.| | height, minHeight, and maxHeight| The layout restrictions passed by the parent container are used for layout.|
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2992,8 +2811,6 @@ Applies a contrast effect to the component. If this API is not used, there will 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -3021,8 +2838,6 @@ contrast(contrast: Optional<number>): T
 Applies a contrast effect to the component. If this API is not used, there will be no change by default. Compared to [contrast](#contrast), the **contrast** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3053,8 +2868,6 @@ customProperty(name: string, value: Optional<Object>): T
 Sets a custom property for this component.In versions earlier than API 26.0.0, [custom components](../../../ui/state-management/arkts-create-custom-components.md) do not support custom properties.Since API 26.0.0, custom components support setting and reading custom properties.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3089,8 +2902,6 @@ Specifies whether to set this component as the default focus of the current [hie
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -3117,8 +2928,6 @@ Sets how elements are laid out along the main axis of the container. This attrib
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -3143,11 +2952,9 @@ Sets how elements are laid out along the main axis of the container. This attrib
 displayPriority(value: number): T
 ```
 
-Sets the display priority for the component in the layout container. <br>This parameter is only effective in Row, Column, and Flex (single-line) container components.
+Sets the display priority for the component in the layout container. This parameter is only effective in Row, Column, and Flex (single-line) container components.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3173,11 +2980,9 @@ Sets the display priority for the component in the layout container. <br>This pa
 doubleSided(value: Optional<boolean>): T
 ```
 
-Sets whether to component is double-sided.
+Sets whether to component is number-sided.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3209,8 +3014,6 @@ Sets whether the component is draggable. By default, the component is not dragga
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -3238,8 +3041,6 @@ dragPreview(value: CustomBuilder | DragItemInfo | string): T
 Sets the preview image displayed during component drag operations.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3271,8 +3072,6 @@ Sets the drag preview for the component. This API specifically configures or dis
 > This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3306,8 +3105,6 @@ Sets the preview image processing mode, badge count, and interaction behavior du
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -3337,8 +3134,6 @@ Sets the drawModifier of the current component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -3367,8 +3162,6 @@ Sets whether to enable the default click sound effect for a component. Whether t
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -3396,8 +3189,6 @@ enabled(value: boolean): T
 If the value is true, the component is available and can respond to operations such as clicking. If it is set to false, click operations are not responded.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3460,8 +3251,6 @@ Expands the safe area.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -3491,8 +3280,6 @@ Sets the base size of the component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -3520,8 +3307,6 @@ flexGrow(value: number): T
 Sets the percentage of the parent container's remaining space that is allocated to the component.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3551,8 +3336,6 @@ Sets the percentage of the parent container's shrink size that is allocated to t
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -3581,8 +3364,6 @@ Sets whether the component is focusable.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -3608,8 +3389,6 @@ focusBox(style: FocusBoxStyle): T
 Sets the system focus box style for the component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3639,8 +3418,6 @@ Sets whether the component is focusable on touch. If **focusOnTouch** is not set
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -3666,8 +3443,6 @@ focusScopeId(id: string, isGroup?: boolean): T
 Set container as a focus group with a specific identifier.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3698,8 +3473,6 @@ Set container as a focus group with a specific identifier.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -3729,8 +3502,6 @@ focusScopePriority(scopeId: string, priority?: FocusPriority): T
 Set the focus priority of component in a specific focus scope.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3764,8 +3535,6 @@ Applies a foreground blur style to the component.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -3795,8 +3564,6 @@ Applies a foreground blur style to the component. Compared to [foregroundBlurSty
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -3825,8 +3592,6 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 Foreground blur style. blurStyle:Blur style type. sysOptions: system adaptive options.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3858,8 +3623,6 @@ Sets the foreground color of the component. Components without explicit foregrou
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -3870,7 +3633,7 @@ Sets the foreground color of the component. Components without explicit foregrou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ResourceColor \| [ColoringStrategy](../arkts-apis/arkts-arkui-enums-coloringstrategy-e.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md) | Yes |
 
 **Return value:**
 
@@ -3888,8 +3651,6 @@ Sets the foreground color of the component. Components without explicit foregrou
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -3900,7 +3661,7 @@ Sets the foreground color of the component. Components without explicit foregrou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| ColoringStrategy & gt; | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -3917,8 +3678,6 @@ foregroundEffect(options: ForegroundEffectOptions): T
 Sets the foreground effect of the component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3951,8 +3710,6 @@ Sets the visual effect of the foreground (content) filter.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -3983,8 +3740,6 @@ Sets whether to freeze the component. When frozen, the component and its childre
 > This API can be called within [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4017,8 +3772,6 @@ Sets whether to freeze the component. When frozen, the component and its childre
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -4047,8 +3800,6 @@ Implements an implicit shared element transition.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -4074,8 +3825,6 @@ geometryTransition(id: string, options?: GeometryTransitionOptions): T
 Implements an implicit shared element transition.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4109,8 +3858,6 @@ Gesture to bind.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -4119,7 +3866,7 @@ Gesture to bind.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [gesture](#gesture) | [GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md) | Yes |
+| [gesture](#gesture) | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md) | Yes |
 | [mask](#mask) | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No |
 
 **Return value:**
@@ -4141,8 +3888,6 @@ Creates a gesture modifier.
 > This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4172,8 +3917,6 @@ Applies a grayscale effect to the component. The grayscale rendering of the uppe
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -4201,8 +3944,6 @@ grayscale(grayscale: Optional<number>): T
 Applies a grayscale effect to the component. The grayscale rendering of the upper layer will overlay that of lower- layer child components. If this API is not used, there will be no change by default. Compared to [grayscale](#grayscale), the **grayscale** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4234,8 +3975,6 @@ The default offset column number indicates the number of offset columns of the c
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 14
 
 **Substitutes:** grid_col/GridColInterface
@@ -4265,8 +4004,6 @@ gridSpan(value: number): T
 Default number of occupied columns, indicating the number of occupied grid columns when the number of columns (span) of the corresponding size is not set in the useSizeType attribute.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 14
 
@@ -4298,8 +4035,6 @@ Specifies whether to set the component as the default focus of the container. If
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -4322,11 +4057,9 @@ Specifies whether to set the component as the default focus of the container. If
 height(value: Length): T
 ```
 
-Sets the height of the component. By default, the height required to fully hold the component content is used. If a component is higher than its parent, it will overflow. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the height of the component. By default, the height required to fully hold the component content is used. If a component is higher than its parent, it will overflow. Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4356,8 +4089,6 @@ Sets the height of the component or its vertical layout policy. By default, the 
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -4370,7 +4101,7 @@ Sets the height of the component or its vertical layout policy. By default, the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| heightValue | Length \| [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes |
+| heightValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes |
 
 **Return value:**
 
@@ -4387,8 +4118,6 @@ hitTestBehavior(value: HitTestMode): T
 Sets the hit test mode for a component. If **hitTestBehavior** is not set, the component defaults to **HitTestMode.Default**.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4418,8 +4147,6 @@ Sets the hover effect for the component. When no hover effect is specified, the 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -4428,7 +4155,7 @@ Sets the hover effect for the component. When no hover effect is specified, the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [HoverEffect](#hovereffect) | Yes |
+| value | [HoverEffect](../arkts-apis/arkts-arkui-hovereffect-e.md) | Yes |
 
 **Return value:**
 
@@ -4445,8 +4172,6 @@ hueRotate(value: number | string): T
 Rotates the hue of the component. If this API is not used, there will be no change by default.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4475,8 +4200,6 @@ hueRotate(rotation: Optional<number | string>): T
 Rotates the hue of the component. If this API is not used, there will be no change by default. Compared to [hueRotate](#huerotate), the **rotation** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4507,8 +4230,6 @@ id(value: string): T
 Id. User can set an id to the component to identify it.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4551,8 +4272,6 @@ Ignores the safe area for component layout.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -4582,8 +4301,6 @@ Set the component's inspector label which only display on DevEco Studio.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -4612,8 +4329,6 @@ Inverts an image.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -4641,8 +4356,6 @@ invert(options: Optional<number | InvertOptions>): T
 Inverts an image. Compared with [invert](#invert), this API supports the **undefined** type for the **options** parameter.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4674,8 +4387,6 @@ Key. User can set an key to the component to identify it.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -4704,8 +4415,6 @@ Sets a keyboard shortcut for the component.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -4717,7 +4426,7 @@ Sets a keyboard shortcut for the component.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | string \| [FunctionKey](../../apis-input-kit/arkts-apis/arkts-input-inputdevice-functionkey-e.md) | Yes |
-| keys | Array & lt;ModifierKey & gt; | Yes |
+| keys | Array&lt;[ModifierKey](../arkts-apis/arkts-arkui-modifierkey-e.md)&gt; | Yes |
 | action | () = & gt; void | No |
 
 **Return value:**
@@ -4736,8 +4445,6 @@ Sets the alignment rule for child components in the **Stack** container. This AP
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -4750,7 +4457,7 @@ Sets the alignment rule for child components in the **Stack** container. This AP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| alignment | [LocalizedAlignment](../arkts-apis/arkts-arkui-enums-localizedalignment-e.md) | Yes |
+| alignment | [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) | Yes |
 
 **Return value:**
 
@@ -4767,8 +4474,6 @@ layoutWeight(value: number | string): T
 Sets the weight of the component during layout. A component with this attribute is allocated space along the main axis of its parent container (Row, Column, or Flex based on its specified weight.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4798,8 +4503,6 @@ Applies a light up effect to the component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -4827,8 +4530,6 @@ lightUpEffect(degree: Optional<number>): T
 Applies a light up effect to the component. Compared to [lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](#lightupeffect), the **degree** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4858,8 +4559,6 @@ Creates a linear gradient.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -4887,8 +4586,6 @@ linearGradient(options: Optional<LinearGradientOptions>): T
 Creates a linear gradient. Compared to [linearGradient](#lineargradient), this API supports the **undefined** type for the **options** parameter.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4920,8 +4617,6 @@ Applies a linear gradient foreground blur effect to the component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -4951,8 +4646,6 @@ Applies a linear gradient foreground blur effect to the component. Compared with
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -4978,11 +4671,9 @@ Applies a linear gradient foreground blur effect to the component. Compared with
 margin(value: Margin | Length | LocalizedMargin): T
 ```
 
-Sets the margin of the component. The margin is considered as a part of the component's size during position calculation, thereby affecting the component's placement. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the margin of the component. The margin is considered as a part of the component's size during position calculation, thereby affecting the component's placement. Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4994,7 +4685,7 @@ Sets the margin of the component. The margin is considered as a part of the comp
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Margin \| Length \| [LocalizedMargin](../arkts-apis/arkts-arkui-localizedmargin-t.md) | Yes |
+| value | [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LocalizedMargin](../arkts-apis/arkts-arkui-localizedmargin-t.md) | Yes |
 
 **Return value:**
 
@@ -5012,8 +4703,6 @@ Sets the anchor for element positioning. This attribute supports dynamic configu
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -5024,7 +4713,7 @@ Sets the anchor for element positioning. This attribute supports dynamic configu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Position \| [LocalizedPosition](../arkts-apis/arkts-arkui-units-localizedposition-i.md) | Yes |
+| value | Position \| [LocalizedPosition](../arkts-apis/arkts-arkui-localizedposition-i.md) | Yes |
 
 **Return value:**
 
@@ -5041,8 +4730,6 @@ mask(value: ProgressMask): T
 Adds a mask to the component to indicate the progress.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5072,8 +4759,6 @@ Adds a mask to the component to indicate the progress. Compared with [mask&lt;su
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -5102,8 +4787,6 @@ Adds a mask of the specified shape to the component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 12
 
 **Substitutes:** [maskShape](#maskshape)
@@ -5118,7 +4801,7 @@ Adds a mask of the specified shape to the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | CircleAttribute \| EllipseAttribute \| PathAttribute \| RectAttribute \| [ProgressMask](arkts-arkui-progressmask-c.md) | Yes |
+| value | [CircleAttribute](arkts-arkui-circle-attribute.md) \| [EllipseAttribute](arkts-arkui-ellipse-attribute.md) \| [PathAttribute](arkts-arkui-path-attribute.md) \| [RectAttribute](arkts-arkui-rect-attribute.md) \| [ProgressMask](arkts-arkui-progressmask-c.md) | Yes |
 
 **Return value:**
 
@@ -5135,8 +4818,6 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 Adds a mask of the specified shape to the component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5168,8 +4849,6 @@ Adds a mask of the specified shape to the component. Compared with [maskShape&lt
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -5200,8 +4879,6 @@ Sets the visual effect of the material filter. The effects it contains are rende
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -5229,8 +4906,6 @@ monopolizeEvents(monopolize: boolean): T
 Sets whether the component exclusively handles events.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5274,8 +4949,6 @@ Applies a motion blur effect to the component being scaled or moved.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -5315,8 +4988,6 @@ of the animation scaling anchor point.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -5327,7 +4998,7 @@ of the animation scaling anchor point.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [motionBlur](#motionblur) | [Optional](arkts-arkui-optional-t.md)&lt;[MotionBlurOptions](arkts-arkui-motionbluroptions-i.md)&gt; | Yes |
+| [motionBlur](arkts-arkui-commonmethod-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;[MotionBlurOptions](arkts-arkui-motionbluroptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5344,8 +5015,6 @@ motionPath(value: MotionPathOptions): T
 Sets a path animation for the component.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5372,8 +5041,6 @@ mouseResponseRegion(value: Array<Rectangle> | Rectangle): T
 Sets one or more mouse response regions.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5403,8 +5070,6 @@ Set nextFocus.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -5433,8 +5098,6 @@ Sets how the component content is obscured.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -5445,7 +5108,7 @@ Sets how the component content is obscured.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| reasons | Array & lt;ObscuredReasons & gt; | Yes |
+| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5462,8 +5125,6 @@ offset(value: Position | Edges | LocalizedEdges): T
 Sets the offset of the component relative to its original position. When **offset** is used in combination with the position attribute, the **position** attribute takes precedence and the configured offset will not be applied. This attribute supports dynamic configuration via [attributeModifier](#attributemodifier).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5492,8 +5153,6 @@ onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback): 
 Register accessibility action intercept callback, when accessibility action is to be executed,the callback will be executed
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5525,8 +5184,6 @@ Register accessibility focus callback,when the component is focused or out of fo
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -5557,8 +5214,6 @@ Trigger a accessibility hover event.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -5586,8 +5241,6 @@ onAccessibilityHoverTransparent(callback: AccessibilityTransparentCallback): T
 prompt for current component and descendants unable to handle accessibility hover event
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5620,8 +5273,6 @@ Triggered when this component appears.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -5652,11 +5303,9 @@ Triggered when the component area changes in size or position due to layout upda
 > When a component is bound to both the **onAreaChange** event and the [position](#position)
 > attribute, the **onAreaChange** event responds to changes in the **position** attribute of type
 > Position, but does not respond to changes in the **position** attribute of type
-> Edges or LocalizedEdges.
+> Edges or [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5683,8 +5332,6 @@ onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 Triggered when the component area changes. The interval at which the callback is triggered can be set using expectedUpdateInterval in [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md). This event is triggered only in response to changes in component size or position caused by layout updates.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5720,8 +5367,6 @@ Triggered when this component is mounted to the component tree. Due to the follo
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -5750,8 +5395,6 @@ Triggered by mouse wheel scrolling, a two-finger sliding gesture, or a pinch ges
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -5779,8 +5422,6 @@ onBlur(event: () => void): T
 Triggered when the current component loses focus.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5812,8 +5453,6 @@ Allows the current component to customize the hit test and control child compone
 > - This API can be called in [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5847,8 +5486,6 @@ Called when a click event occurs.When triggered by keyboard or gamepad input, th
 > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5886,8 +5523,6 @@ Called when a click event occurs.When triggered by keyboard or gamepad input, th
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -5918,8 +5553,6 @@ onDetach(callback: Callback<void>): T
 Triggered when this component is unmounted from the component tree. You are advised to use [onDisAppear](#ondisappear) instead.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5952,8 +5585,6 @@ Called when the crown is rotated while the component has focus.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -5981,8 +5612,6 @@ onDisAppear(event: () => void): T
 Triggered when this component disappears.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6012,8 +5641,6 @@ Triggered when the dragging of the component bound to the event ends.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -6042,8 +5669,6 @@ Triggered when a dragged item enters a valid drop target. This event takes effec
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -6069,8 +5694,6 @@ onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 Triggered when a dragged item leaves a valid drop target. This event takes effect only when a listener for the onDrop event is enabled.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6098,8 +5721,6 @@ Triggered when a dragged item moves in a valid drop target. This event takes eff
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -6126,8 +5747,6 @@ The component bound to this event can be used as a drag-response target with hov
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -6153,16 +5772,15 @@ The component bound to this event can be used as a drag-response target with hov
 onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo): T
 ```
 
-In a gesture-based drag scenario, this callback is triggered when a user long-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp.For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and:  
-- If a custom drag preview is returned, it is used in place of the default drag preview. - If drag data is set, it is used in place of the default drag data.  
+In a gesture-based drag scenario, this callback is triggered when a user number-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp.For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and:  
+- If a custom drag preview is returned, it is used in place of the default drag preview.  
+- If drag data is set, it is used in place of the default drag data.  
 The custom drag preview is not supported for dragging selected text in the following components: Text, Search, TextInput, TextArea, RichEditor When **onDragStart** is used with menu preview or any component that provides default drag and drop capabilities, custom content on menu items and the preview cannot be dragged.
 
 > **NOTE：**&gt;
 > This API can be called in [attributeModifier](#attributemodifier) since API version 13.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6190,8 +5808,6 @@ A component bound with this event can serve as a drop target. This callback is t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -6215,11 +5831,11 @@ onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T
 ```
 
 Triggered when a dragged item is dropped on a valid drop target. If you do not explicitly call event. [setResult](arkts-arkui-dragevent-i.md#setresult)() in **onDrop** to set the result of the drag reception, the system handles it as follows:  
-- If the component being dragged is one that supports drop actions by default, the system's actual data processing result is used. - For other components, the system assumes that the data is received successfully.
+- If the component being dragged is one that supports drop actions by default, the system's actual data processing  
+result is used.  
+- For other components, the system assumes that the data is received successfully.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6250,8 +5866,6 @@ Triggered when the current component obtains focus.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -6277,8 +5891,6 @@ onFocusAxisEvent(event: Callback<FocusAxisEvent>): T
 Binds a focus axis event callback to the component. Triggered when any operation is performed with the game controller's directional pad or joystick on the bound component.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6308,8 +5920,6 @@ Triggered after events and gestures on the current node and higher-priority node
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -6337,8 +5947,6 @@ onGestureJudgeBegin(callback: (gestureInfo: GestureInfo, event: BaseGestureEvent
 Binds a custom gesture determination callback to the component. When the gesture is about to succeed, the user- defined callback is triggered to obtain the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6368,8 +5976,6 @@ Binds a custom gesture recognizer judgment callback to the component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -6397,8 +6003,6 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback, exp
 Binds a custom gesture recognizer judgment callback to the component.The **exposeInnerGesture** parameter indicates whether to expose gestures from built-in components within ArkUI system composite components to developers. When this parameter is set to **true**, these internal gestures are exposed.For scenarios where exposure of internal gestures is not required, use the original [onGestureRecognizerJudgeBegin](#ongesturerecognizerjudgebegin) API. Use this API with **exposeInnerGesture** set to **true** only when internal gesture exposure is necessary.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6429,8 +6033,6 @@ Triggered when the mouse pointer or stylus enters or leaves the component.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -6456,8 +6058,6 @@ onHoverMove(event: Callback<HoverEvent>): T
 Triggered when a stylus hovers over the component.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6487,8 +6087,6 @@ Triggered when a key event occurs.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -6514,8 +6112,6 @@ onKeyEvent(event: Callback<KeyEvent, boolean>): T
 Triggered when a key operation is performed on the bound component after it obtains focus. If the callback returns **true**, the key event is considered handled.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6545,8 +6141,6 @@ Triggered when the bound component receives a key event. The key event will not 
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -6574,8 +6168,6 @@ onKeyPreIme(event: Callback<KeyEvent, boolean>): T
 Triggered before other callbacks when a key operation is performed on the bound component after it obtains focus.If the return value of this callback is **true**, the key event is considered consumed, and subsequent event callbacks (**keyboardShortcut**, input method events, **onKeyEventDispatch**, and **onKeyEvent**) will be intercepted and no longer triggered.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6605,8 +6197,6 @@ Triggered when the component is clicked by a mouse button or the mouse pointer m
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -6632,8 +6222,6 @@ onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | unde
 Called when component is focused, the return value indicates whether keyboard is needed.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6665,8 +6253,6 @@ Triggered when the component enters a state prior to a gesture-based drag operat
 > This API can be called in [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6708,8 +6294,6 @@ Triggered when the component size changes due to layout updates.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -6740,8 +6324,6 @@ Invoked when a touch event is triggered. Touch events [bubble](../../../ui/arkts
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -6768,8 +6350,6 @@ Binds a custom event interception callback to a component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -6780,7 +6360,7 @@ Binds a custom event interception callback to a component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;[TouchEvent](arkts-arkui-touchevent-i.md), HitTestMode&gt; | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[TouchEvent](arkts-arkui-touchevent-i.md), [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -6797,8 +6377,6 @@ onTouchTestDone(callback: TouchTestDoneCallback): T
 Specifies whether gesture recognizers participate in subsequent processing after [hit testing](../../../ui/arkts-interaction-basic-principles.md#hit-testing) completes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6830,8 +6408,6 @@ Configures a callback for the **onVisibleAreaApproximateChange** event, with opt
 > This API can be called within [attributeModifier](#attributemodifier) since API version 23.
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6866,7 +6442,7 @@ Called when the visible area of the component changes. For details about the dev
 > nodes (up to the window boundary) and its own area.&gt;
 > - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any
 > ancestor node, window-level occlusion, and component rotation. Examples include layouts using
-> Stack, [z-order control](#zindex), and
+> [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zindex), and
 > [rotate](#rotate) transformations.&gt;
 > - It does not support visibility change calculations for nodes that are not in the component tree. For example,
 > preloaded nodes or custom nodes mounted using the
@@ -6878,8 +6454,6 @@ Called when the visible area of the component changes. For details about the dev
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -6888,7 +6462,7 @@ Called when the visible area of the component changes. For details about the dev
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ratios | Array & lt;number & gt; | Yes |
+| [ratios](arkts-arkui-visibleareaeventoptions-i.md) | Array & lt;number & gt; | Yes |
 | event | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | Yes |
 
 **Return value:**
@@ -6907,8 +6481,6 @@ Called when the visible area of the component changes. You can use **measureFrom
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -6919,9 +6491,9 @@ Called when the visible area of the component changes. You can use **measureFrom
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ratios | Array & lt;number & gt; | Yes |
+| [ratios](arkts-arkui-visibleareaeventoptions-i.md) | Array & lt;number & gt; | Yes |
 | event | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | Yes |
-| measureFromViewport | boolean | Yes |
+| [measureFromViewport](arkts-arkui-visibleareaeventoptions-i.md) | boolean | Yes |
 
 **Return value:**
 
@@ -6938,8 +6510,6 @@ opacity(value: number | Resource): T
 Sets the opacity of the component.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6968,8 +6538,6 @@ opacity(opacity: Optional<number | Resource>): T
 Sets the opacity of the component. Compared with [opacity](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-opacity.md#opacity), this API supports the **undefined** type for the **opacity** parameter.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7001,8 +6569,6 @@ Sets the outline attributes in one declaration.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -7015,7 +6581,7 @@ Sets the outline attributes in one declaration.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [OutlineOptions](../arkts-apis/arkts-arkui-units-outlineoptions-i.md) | Yes |
+| value | [OutlineOptions](../arkts-apis/arkts-arkui-outlineoptions-i.md) | Yes |
 
 **Return value:**
 
@@ -7033,8 +6599,6 @@ Sets the outline attributes in one declaration. Compared with [outline](../../..
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -7047,7 +6611,7 @@ Sets the outline attributes in one declaration. Compared with [outline](../../..
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;OutlineOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[OutlineOptions](../arkts-apis/arkts-arkui-outlineoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -7065,8 +6629,6 @@ Sets the outline color. If this API is not used, the default color black will be
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -7079,7 +6641,7 @@ Sets the outline color. If this API is not used, the default color black will be
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-units-localizededgecolors-i.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes |
 
 **Return value:**
 
@@ -7097,8 +6659,6 @@ Sets the outline color. If this API is not used, the default color black will be
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -7111,7 +6671,7 @@ Sets the outline color. If this API is not used, the default color black will be
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors & gt; | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -7129,8 +6689,6 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -7143,7 +6701,7 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Dimension \| [OutlineRadiuses](../arkts-apis/arkts-arkui-units-outlineradiuses-i.md) | Yes |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| OutlineRadiuses | Yes |
 
 **Return value:**
 
@@ -7161,8 +6719,6 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -7175,7 +6731,7 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| radius | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| [OutlineRadiuses](../arkts-apis/arkts-arkui-units-outlineradiuses-i.md)&gt; | Yes |
+| radius | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| OutlineRadiuses & gt; | Yes |
 
 **Return value:**
 
@@ -7193,8 +6749,6 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -7207,7 +6761,7 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [OutlineStyle](arkts-arkui-outlinestyle-e.md) \| [EdgeOutlineStyles](../arkts-apis/arkts-arkui-units-edgeoutlinestyles-i.md) | Yes |
+| value | [OutlineStyle](arkts-arkui-outlinestyle-e.md) \| EdgeOutlineStyles | Yes |
 
 **Return value:**
 
@@ -7225,8 +6779,6 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -7239,7 +6791,7 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[OutlineStyle](arkts-arkui-outlinestyle-e.md) \| [EdgeOutlineStyles](../arkts-apis/arkts-arkui-units-edgeoutlinestyles-i.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[OutlineStyle](arkts-arkui-outlinestyle-e.md) \| EdgeOutlineStyles & gt; | Yes |
 
 **Return value:**
 
@@ -7257,8 +6809,6 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -7271,7 +6821,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Dimension \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md) | Yes |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths | Yes |
 
 **Return value:**
 
@@ -7289,8 +6839,6 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -7303,7 +6851,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [width](#width) | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md)&gt; | Yes |
+| [width](#width) | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths & gt; | Yes |
 
 **Return value:**
 
@@ -7328,8 +6876,6 @@ Adds an overlay to this component, which can be text, a custom component, or [Co
 > user interaction with the underlying content.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7356,11 +6902,9 @@ Adds an overlay to this component, which can be text, a custom component, or [Co
 padding(value: Padding | Length | LocalizedPadding): T
 ```
 
-Sets the padding of the component. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the padding of the component. Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7372,7 +6916,7 @@ Sets the padding of the component. <br>Since API version 10, this API supports t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Length \| [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes |
+| value | Padding \| [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes |
 
 **Return value:**
 
@@ -7393,8 +6937,6 @@ Gesture that can be recognized at once by the component and its child component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -7403,7 +6945,7 @@ Gesture that can be recognized at once by the component and its child component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [gesture](#gesture) | [GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md) | Yes |
+| [gesture](#gesture) | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md) | Yes |
 | [mask](#mask) | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No |
 
 **Return value:**
@@ -7428,11 +6970,14 @@ Sets the pixel rounding policy for the current component in the specified direct
 > [attributeModifier](#attributemodifier)
 > since API version 12.
 In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width. For ease of description, these two sets of directions are referred to as top-left and bottom-right.  
-- Calculate the top-left coordinates of the current component: offset of the top-left corner relative to the parent container. - Calculate the bottom-right coordinates of the current component: offset of the top-left corner relative to the parent container plus the size of the component itself. - Recalculate the size of the current component: bottom-right corner rounded value minus the top-left corner rounded value.
+- Calculate the top-left coordinates of the current component: offset of the top-left corner relative to the  
+parent container.  
+- Calculate the bottom-right coordinates of the current component: offset of the top-left corner relative to the  
+parent container plus the size of the component itself.  
+- Recalculate the size of the current component: bottom-right corner rounded value minus the top-left corner  
+rounded value.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7464,8 +7009,6 @@ Applies a pixel stretch effect to the component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -7494,8 +7037,6 @@ Applies a pixel stretch effect to the component. Compared to [pixelStretchEffect
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -7521,11 +7062,19 @@ position(value: Position | Edges | LocalizedEdges): T
 ```
 
 Sets the absolute positioning, which determines the position of a child component relative to the content area of the parent component. Dynamic configuration via [attributeModifier](#attributemodifier) is supported.  
-**NOTE：**- This API takes effect after the component's size measurement is complete. - When the parent container is Row, Column, or Flex, the child component with **position** set does not occupy any space. - The Position type uses the upper left corner of the parent's content area as the reference point. The Edges type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The LocalizedEdges type provides the same functionality as Edges while supporting layout mirroring. - This attribute is applicable to scenarios where the component's position in the parent container is fixed, for example, where it is pinned to top or floating on the UI. - This attribute is unavailable for a layout container whose width and height are zero. - In [RelativeContainer](../../../reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md), if the child component has [alignRules](#alignrules) set, the **position** attribute will not take effect
+**NOTE：**
+- This API takes effect after the component's size measurement is complete.
+- When the parent container is Row,
+Column, or Flex, the child component with **position** set does not occupy any space.  
+- The Position type uses the upper left corner of the parent's content area as the  
+reference point. The Edges type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type provides the same functionality as Edges while supporting layout mirroring.  
+- This attribute is applicable to scenarios where the component's position in the parent container is fixed, for  
+example, where it is pinned to top or floating on the UI.  
+- This attribute is unavailable for a layout container whose width and height are zero.  
+- In [RelativeContainer](../../../reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md), if the child  
+component has [alignRules](#alignrules) set, the **position** attribute will not take effect
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7554,15 +7103,13 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): T
 Gesture to preferentially recognize.
 1. By default, the child component preferentially recognizes the gesture specified by **gesture**, and the parent
 component preferentially recognizes the gesture specified by **priorityGesture** (if set).
-2. For long press gestures, the component with the shortest minimum hold-down time responds first, ignoring the  
+2. For number press gestures, the component with the shortest minimum hold-down time responds first, ignoring the  
 **priorityGesture** settings.
 
 > **NOTE：**&gt;
 > This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7572,7 +7119,7 @@ component preferentially recognizes the gesture specified by **priorityGesture**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [gesture](#gesture) | [GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md) | Yes |
+| [gesture](#gesture) | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md) | Yes |
 | [mask](#mask) | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No |
 
 **Return value:**
@@ -7590,8 +7137,6 @@ radialGradient(value: RadialGradientOptions): T
 Radial Gradient center:Center point of radial gradient radius:Radius of Radial Gradient. value range [0, +∞) colors:Color description for gradients repeating: Refill. The default value is false Anonymous Object Rectification.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7620,8 +7165,6 @@ radialGradient(options: Optional<RadialGradientOptions>): T
 Radial Gradient center:Center point of radial gradient radius:Radius of Radial Gradient. value range [0, +∞) colors:Color description for gradients repeating: Refill. The default value is false
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7653,8 +7196,6 @@ Sets how the final state of the component's content is rendered during its width
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -7667,7 +7208,7 @@ Sets how the final state of the component's content is rendered during its width
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fitMode | [RenderFit](#renderfit) | Yes |
+| fitMode | [RenderFit](../arkts-apis/arkts-arkui-renderfit-e.md) | Yes |
 
 **Return value:**
 
@@ -7685,8 +7226,6 @@ Sets how the final state of the component's content is rendered during its width
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -7699,7 +7238,7 @@ Sets how the final state of the component's content is rendered during its width
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fitMode | [Optional](arkts-arkui-optional-t.md)&lt;RenderFit&gt; | Yes |
+| fitMode | [Optional](arkts-arkui-optional-t.md)&lt;[RenderFit](../arkts-apis/arkts-arkui-renderfit-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -7716,8 +7255,6 @@ renderGroup(value: boolean): T
 Sets whether to form a render group. A render group means that the subtree composed of the current component and its child components is first rendered on an offscreen canvas and then composited with the parent component. Setting a render group allows the system to cache the rendering result, improving performance. However, if components within the render group are frequently updated, cache invalidation may lead to performance degradation. Additionally, when a render group is set and the current component's opacity is not **1**, the rendering effect may differ.If this attribute is not set, no render group is formed by default.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7749,8 +7286,6 @@ Composite the contents of this view and its children into an offscreen cache bef
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -7781,8 +7316,6 @@ Sets one or more touch targets.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -7810,8 +7343,6 @@ responseRegionList(regions: Array<ResponseRegion>): T
 Sets the touch target list for the component. When this API is called, the [responseRegion](#responseregion) and [mouseResponseRegion](#mouseresponseregion) APIs do not take effect.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7841,8 +7372,6 @@ id for distribute identification.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -7868,8 +7397,6 @@ reuse(options: ReuseOptions): T
 Reuse id is used for identify the reuse type of each @ComponentV2 custom component, which can give user control of sub-component recycle and reuse.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7899,8 +7426,6 @@ Reuse id is used for identify the reuse type for each custom node.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -7929,8 +7454,6 @@ Rotates the component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -7958,8 +7481,6 @@ rotate(options: Optional<RotateOptions>): T
 Rotates the component. Compared with [rotate](#rotate), this API supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7990,8 +7511,6 @@ rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 Sets the component rotation effect. Compared with [rotate](#rotate), this API supports the **RotateAngleOptions** type for the **options** parameter.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8038,8 +7557,6 @@ Sets the safe area padding. This allows the container to add a component-level s
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -8052,7 +7569,7 @@ Sets the safe area padding. This allows the container to add a component-level s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| paddingValue | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| LengthMetrics \| [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes |
+| paddingValue | Padding \| LengthMetrics \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes |
 
 **Return value:**
 
@@ -8069,8 +7586,6 @@ saturate(value: number): T
 Applies a saturation effect to the component. If this API is not used, there will be no change by default.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8100,8 +7615,6 @@ Applies a saturation effect to the component. If this API is not used, there wil
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -8114,7 +7627,7 @@ Applies a saturation effect to the component. If this API is not used, there wil
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [saturate](#saturate) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| [saturate](arkts-arkui-commonmethod-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
@@ -8131,8 +7644,6 @@ scale(value: ScaleOptions): T
 Scales the component.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8161,8 +7672,6 @@ scale(options: Optional<ScaleOptions>): T
 Scales the component. Compared with [scale](#scale), this API supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8194,8 +7703,6 @@ Converts the image to a sepia tone, reducing color intensity to create a warm, v
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -8224,8 +7731,6 @@ Converts the image to a sepia tone, reducing color intensity to create a warm, v
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -8238,7 +7743,7 @@ Converts the image to a sepia tone, reducing color intensity to create a warm, v
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [sepia](#sepia) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| [sepia](arkts-arkui-commonmethod-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
@@ -8255,8 +7760,6 @@ shadow(value: ShadowOptions | ShadowStyle): T
 Applies a shadow effect to the component.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8285,8 +7788,6 @@ shadow(options: Optional<ShadowOptions | ShadowStyle>): T
 Applies a shadow effect to the component. Compared to [shadow](#shadow), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8318,8 +7819,6 @@ Sets the shared transition animation.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -8346,8 +7845,6 @@ shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWit
 Provides a callback to set the parallel relationship between built-in gestures and gestures of other components in the response chain. The corresponding C API is [setInnerGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-1.md#setinnergestureparallelto).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8377,8 +7874,6 @@ Provides a callback to set the parallel relationship between gestures of the cur
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -8403,11 +7898,9 @@ Provides a callback to set the parallel relationship between gestures of the cur
 size(value: SizeOptions): T
 ```
 
-Sets the width and height of the component. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the width and height of the component. Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8419,7 +7912,7 @@ Sets the width and height of the component. <br>Since API version 10, this API s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md) | Yes |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes |
 
 **Return value:**
 
@@ -8436,8 +7929,6 @@ smartGestureShortcut(options?: SmartGestureShortcutOptions): T
 Enable or disable specific smart gesture shortcuts, and set response priorities for them.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8467,8 +7958,6 @@ Applies a spherical effect to the component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -8496,8 +7985,6 @@ sphericalEffect(effect: Optional<number>): T
 Applies a spherical effect to the component. Compared to [sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](#sphericaleffect), the **effect** parameter supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8530,8 +8017,6 @@ Sets the state-specific styles for the component.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -8560,8 +8045,6 @@ Angle Gradient center:is the center point of the angle gradient start:Start poin
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -8589,8 +8072,6 @@ sweepGradient(options: Optional<SweepGradientOptions>): T
 Angle Gradient center:is the center point of the angle gradient start:Start point of angle gradient. The default value is 0 end:End point of angle gradient. The default value is 0 rotating:rotating. The default value is 0 colors:Color description for gradients repeating:repeating. The default value is false
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8622,8 +8103,6 @@ Applies a system bar effect to the component, which means to invert colors based
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -8645,8 +8124,6 @@ systemMaterial(material: SystemUiMaterial | undefined): T
 Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](#backgroundcolor)), border color ([borderColor](#bordercolor)), border width ([borderWidth](#borderwidth)), and shadow ([shadow](#shadow)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see [Setting the System Material](../../../reference/apis-arkui/arkts-apis-uimaterial-sys.md#example-1-setting-the-system-material).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8682,8 +8159,6 @@ Sets the tab navigation order of the component in sequential focus navigation wi
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -8709,8 +8184,6 @@ tabStop(isTabStop: boolean): T
 Set TabStop on component focus
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8740,8 +8213,6 @@ Config toolbar for current component.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -8767,8 +8238,6 @@ touchable(value: boolean): T
 Whether the component can respond to finger interactions such as click and touch events.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -8798,8 +8267,6 @@ Displays the matrix transformation when 2D transformation is performed. If 3D tr
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -8825,8 +8292,6 @@ transform(transform: Optional<object>): T
 Displays the matrix transformation when 2D transformation is performed. If 3D transformation is included, the [transform3D](#transform3d) API is required. Compared with [transform](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform), the transform&lt;sup&gt;18+&lt;/sup&gt; parameter supports the undefined type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8856,8 +8321,6 @@ Sets the 3D transformation matrix of the component. When 3D transformation with 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -8885,8 +8348,6 @@ transition(value: TransitionOptions | TransitionEffect): T
 Sets the transition effects used when a component is inserted or removed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8919,8 +8380,6 @@ Sets the transition effects used when a component is inserted or removed. Compar
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -8952,8 +8411,6 @@ Translates the component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -8981,8 +8438,6 @@ translate(translate: Optional<TranslateOptions>): T
 Translates the component. Compared with [translate](#translate), this API supports the **undefined** type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -9014,8 +8469,6 @@ Sets whether the component should apply the effects template defined by the pare
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -9026,7 +8479,7 @@ Sets whether the component should apply the effects template defined by the pare
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [useEffect](#useeffect) | boolean | Yes |
+| [useEffect](arkts-arkui-commonmethod-c.md) | boolean | Yes |
 | [effectType](../../apis-camera-kit/arkts-apis/arkts-camera-camera-controlcenterstatusinfo-i.md) | [EffectType](arkts-arkui-effecttype-e.md) | Yes |
 
 **Return value:**
@@ -9045,8 +8498,6 @@ Sets whether the component should apply the effects template defined by the pare
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -9057,7 +8508,7 @@ Sets whether the component should apply the effects template defined by the pare
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [useEffect](#useeffect) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
+| [useEffect](arkts-arkui-commonmethod-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 | [effectType](../../apis-camera-kit/arkts-apis/arkts-camera-camera-controlcenterstatusinfo-i.md) | [EffectType](arkts-arkui-effecttype-e.md) | No |
 
 **Return value:**
@@ -9075,8 +8526,6 @@ useEffect(value: boolean): T
 Sets whether the component should apply the effects template defined by the parent effectComponent. If multiple parent effectComponents are found, the nearest one will be used. If no parent effectComponent is found, this method has no effect.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -9105,8 +8554,6 @@ useShadowBatching(value: boolean): T
 Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -9137,8 +8584,6 @@ useShadowBatching(use: Optional<boolean>): T
 Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer. Compared with [useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](#useshadowbatching), this API supports the **undefined** type for the **use** parameter.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -9175,8 +8620,6 @@ Sets the number of occupied columns and offset columns for a specific device wid
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [grid_col/GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
@@ -9204,8 +8647,6 @@ visibility(value: Visibility): T
 Sets the visibility of the component. If **visibility** is not set, the component is displayed by default.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -9238,8 +8679,6 @@ Sets a visual effect that is not a filter effect.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -9264,11 +8703,9 @@ Sets a visual effect that is not a filter effect.
 width(value: Length): T
 ```
 
-Sets the width of the component. By default, the width required to fully hold the component content is used. If a component is wider than its parent, it will overflow. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the width of the component. By default, the width required to fully hold the component content is used. If a component is wider than its parent, it will overflow. Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -9298,8 +8735,6 @@ Sets the width of the component or its horizontal layout policy. By default, the
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -9312,7 +8747,7 @@ Sets the width of the component or its horizontal layout policy. By default, the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| widthValue | Length \| [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes |
+| widthValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes |
 
 **Return value:**
 
@@ -9329,8 +8764,6 @@ zIndex(value: number): T
 Sets the stacking order of the component.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

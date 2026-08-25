@@ -6,8 +6,6 @@ Corresponds to a file, including its metadata and data and the file's manifest d
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -15,5 +13,5 @@ Corresponds to a file, including its metadata and data and the file's manifest d
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```

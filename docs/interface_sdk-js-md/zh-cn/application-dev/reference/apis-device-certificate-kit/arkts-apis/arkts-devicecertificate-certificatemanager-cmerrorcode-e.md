@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_NO_PERMISSION
@@ -17,8 +15,6 @@ CM_ERROR_NO_PERMISSION = 201
 表示应用程序无权限调用接口。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -32,8 +28,6 @@ CM_ERROR_INVALID_PARAMS = 401
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_GENERIC
@@ -45,8 +39,6 @@ CM_ERROR_GENERIC = 17500001
 表示调用接口时发生内部错误。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -60,8 +52,6 @@ CM_ERROR_NO_FOUND = 17500002
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_INCORRECT_FORMAT
@@ -73,8 +63,6 @@ CM_ERROR_INCORRECT_FORMAT = 17500003
 表示输入证书或凭据的数据格式无效。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -88,8 +76,6 @@ CM_ERROR_MAX_CERT_COUNT_REACHED = 17500004
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_NO_AUTHORIZATION
@@ -101,8 +87,6 @@ CM_ERROR_NO_AUTHORIZATION = 17500005
 表示应用未经用户授权。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -116,8 +100,6 @@ CM_ERROR_DEVICE_ENTER_ADVSECMODE = 17500007
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_STORE_PATH_NOT_SUPPORTED
@@ -129,8 +111,6 @@ CM_ERROR_STORE_PATH_NOT_SUPPORTED = 17500009
 表示不支持指定的证书存储路径。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -144,8 +124,6 @@ CM_ERROR_ACCESS_UKEY_SERVICE_FAILED = 17500010
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_PARAMETER_VALIDATION_FAILED
@@ -157,7 +135,5 @@ CM_ERROR_PARAMETER_VALIDATION_FAILED = 17500011
 表示输入参数校验失败。例如：参数格式不正确、参数范围无效。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.CertificateManager

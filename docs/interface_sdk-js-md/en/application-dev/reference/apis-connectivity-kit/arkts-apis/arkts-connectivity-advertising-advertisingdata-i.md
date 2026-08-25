@@ -4,14 +4,12 @@ Represents an advertising data packet.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## includeDeviceName
@@ -25,8 +23,6 @@ Whether the advertising data contains the local device name. **true**: **yes**. 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Manufacturer data. By default, this field is not carried if it is not set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -62,8 +56,6 @@ Service data. By default, this field is not carried if it is not set.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -79,8 +71,6 @@ Service UUIDs. A UUID must contain 36 characters, including 32 hexadecimal digit
 **Type:** string[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

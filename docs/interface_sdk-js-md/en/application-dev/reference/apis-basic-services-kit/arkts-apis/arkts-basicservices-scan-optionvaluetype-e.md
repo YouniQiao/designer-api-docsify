@@ -4,8 +4,6 @@ Enumerates the option value types.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_TYPE_BOOL
@@ -17,8 +15,6 @@ SCAN_TYPE_BOOL = 0
 Boolean.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ Integer.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_TYPE_FIXED
@@ -46,8 +40,6 @@ Fixed-point number.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_TYPE_STRING
@@ -59,7 +51,5 @@ SCAN_TYPE_STRING = 3
 String.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

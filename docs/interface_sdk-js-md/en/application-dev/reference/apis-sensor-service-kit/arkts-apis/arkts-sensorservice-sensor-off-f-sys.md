@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## off
@@ -15,8 +15,6 @@ function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void
 Unsubscribes from data of the color sensor.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -46,8 +44,6 @@ function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?:
 Unsubscribes from data of the color sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -79,8 +75,6 @@ Unsubscribes from data of the SAR sensor.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 **System API:** This is a system API.
@@ -109,8 +103,6 @@ function off(type: SensorId.SAR, sensorInfoParam?: SensorInfoParam, callback?: C
 Unsubscribes from data of the SAR sensor.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Sensors.Sensor
 

@@ -11,8 +11,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -26,13 +24,11 @@
 direction?: ScrollBarDirection
 ```
 
-滚动条的方向，控制可滚动组件对应方向的滚动。<br/>默认值：ScrollBarDirection.Vertical
+滚动条的方向，控制可滚动组件对应方向的滚动。默认值：ScrollBarDirection.Vertical
 
 **类型：** [ScrollBarDirection](arkts-arkui-scrollbardirection-e.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,11 +42,9 @@ scroller: Scroller
 
 可滚动组件的控制器。用于与可滚动组件进行绑定。
 
-**类型：** Scroller
+**类型：** [Scroller](arkts-arkui-scroller-c.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -62,13 +56,11 @@ scroller: Scroller
 state?: BarState
 ```
 
-滚动条状态。<br/>默认值：BarState.Auto
+滚动条状态。默认值：BarState.Auto
 
-**类型：** BarState
+**类型：** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

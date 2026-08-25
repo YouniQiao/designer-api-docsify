@@ -4,8 +4,6 @@ Enumerates of window posture mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## DESKTOP_MODE
@@ -21,8 +19,6 @@ Desktop mode, when the following conditions are met:
 4. The crease region is entirely winthin the window region.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

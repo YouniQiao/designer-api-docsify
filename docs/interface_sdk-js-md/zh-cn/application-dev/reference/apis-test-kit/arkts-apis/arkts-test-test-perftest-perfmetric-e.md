@@ -23,11 +23,9 @@
 > - 列表滑动帧率：指的是在列表滑动时，屏幕每秒钟渲染更新帧的次数。&gt;
 > - 列表滑动帧率数据采集支持的场景：ArkUI子系统List、Grid、Scroll、WaterFlow滚动控件列表的滑动。&gt;
 > - 单次测试期间，仅指定应用内第一次列表滑动的帧率数据会被采集。
-@enum { int }
+@enum { number }
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Test.PerfTest
 
@@ -40,8 +38,6 @@ DURATION = 0
 代码段执行耗时，单位：ms。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -57,8 +53,6 @@ CPU_LOAD = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
@@ -72,8 +66,6 @@ CPU_USAGE = 2
 应用进程CPU使用率，取值为百分比。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -89,8 +81,6 @@ MEMORY_RSS = 3
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
@@ -104,8 +94,6 @@ MEMORY_PSS = 4
 代码段单次执行结束时，应用进程占用物理内存（按比例分摊共享库），单位：KB。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -121,8 +109,6 @@ APP_START_RESPONSE_TIME = 5
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
@@ -136,8 +122,6 @@ APP_START_COMPLETE_TIME = 6
 应用启动的完成时延，单位：ms。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -153,8 +137,6 @@ PAGE_SWITCH_COMPLETE_TIME = 7
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
@@ -168,8 +150,6 @@ LIST_SWIPE_FPS = 8
 应用内列表滑动的帧率，单位：fps(每秒帧数)。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

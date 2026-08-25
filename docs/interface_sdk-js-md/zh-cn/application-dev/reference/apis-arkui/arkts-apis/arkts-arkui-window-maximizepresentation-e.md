@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## FOLLOW_APP_IMMERSIVE_SETTING
@@ -17,8 +15,6 @@ FOLLOW_APP_IMMERSIVE_SETTING = 0
 最大化时，跟随应用app当前设置的全屏模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ EXIT_IMMERSIVE = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -50,8 +44,6 @@ ENTER_IMMERSIVE = 2
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -65,8 +57,6 @@ ENTER_IMMERSIVE_DISABLE_TITLE_AND_DOCK_HOVER = 3
 最大化时，进入全屏模式，鼠标Hover在热区上不显示窗口标题栏和dock栏。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

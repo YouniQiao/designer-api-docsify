@@ -4,14 +4,12 @@ Defines the struct of an intent entity. It represents key information objects in
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@kit.AbilityKit';
+import { insightIntent } from 'kits/@kit.AbilityKit';
 ```
 
 ## entityId
@@ -25,8 +23,6 @@ ID of the intent entity.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

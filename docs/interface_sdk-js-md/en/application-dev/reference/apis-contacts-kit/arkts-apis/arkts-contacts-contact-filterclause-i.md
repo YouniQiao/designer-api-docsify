@@ -4,14 +4,12 @@ Defines the contact filter criteria. Multiple filter criteria are ORed. If the p
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Applications.Contacts
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## dataItem
@@ -25,8 +23,6 @@ Contact data filter item.
 **Type:** [DataFilter](arkts-contacts-contact-datafilter-i.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -44,8 +40,6 @@ Focus mode list.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -62,8 +56,6 @@ Contact ID.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -79,8 +71,6 @@ Contact name.
 **Type:** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createZip
@@ -16,8 +16,6 @@ function createZip(): Promise<Zip>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -27,15 +25,3 @@ function createZip(): Promise<Zip>
 | 类型 |
 | --- |
 | Promise&lt;[Zip](arkts-basicservices-zlib-zip-i.md)&gt; |
-
-**示例**
-
-```TypeScript
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-zlib.createZip().then(data => {
-  console.info('createZip success');
-}).catch((errData: BusinessError) => {
-  console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-})
-```

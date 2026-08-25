@@ -4,8 +4,6 @@ ArkWeb渲染子进程模式类型，可根据应用对内存占用与渲染进�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## SINGLE
@@ -17,8 +15,6 @@ SINGLE = 0
 ArkWeb单渲染子进程模式。该模式下，多个Web复用一个渲染子进程。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -33,8 +29,6 @@ MULTIPLE = 1
 ArkWeb多渲染子进程模式。该模式下，每个Web一个渲染子进程。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

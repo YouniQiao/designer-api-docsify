@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## [key: string]
@@ -25,8 +23,6 @@ import { advertising } from '@kit.AdsKit';
 **类型：** number \| boolean \| string \| undefined
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ adCount?: number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -61,8 +55,6 @@ adHeight?: number
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -80,8 +72,6 @@ adId: string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -98,8 +88,6 @@ adSearchKeyword?: string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -111,14 +99,17 @@ adType?: number
 ```
 
 请求的广告类型。  
-- 1：开屏广告。 - 3：原生广告。 - 7：激励广告。 - 8：横幅广告。 - 12：插屏广告。 - 60：贴片广告。  
+- 1：开屏广告。  
+- 3：原生广告。  
+- 7：激励广告。  
+- 8：横幅广告。  
+- 12：插屏广告。  
+- 60：贴片广告。  
 不填默认为原生广告类型。
 
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -135,8 +126,6 @@ adWidth?: number
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

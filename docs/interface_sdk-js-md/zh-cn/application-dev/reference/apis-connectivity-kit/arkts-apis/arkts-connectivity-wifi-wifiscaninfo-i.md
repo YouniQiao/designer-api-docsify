@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## band
@@ -29,8 +27,6 @@ band: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -50,8 +46,6 @@ WLAN BSSID(MAC)：长度为6
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [bssid](arkts-connectivity-wifimanager-wifiscaninfo-i.md#bssid)
@@ -69,8 +63,6 @@ capabilities: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -90,8 +82,6 @@ channelWidth: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [channelWidth](arkts-connectivity-wifimanager-wifiscaninfo-i.md#channelwidth)
@@ -109,8 +99,6 @@ frequency: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -130,8 +118,6 @@ rssi: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [rssi](arkts-connectivity-wifimanager-wifiscaninfo-i.md#rssi)
@@ -149,8 +135,6 @@ securityType: WifiSecurityType
 **类型：** WifiSecurityType
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -170,8 +154,6 @@ WLAN SSID：最大长度为32
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [ssid](arkts-connectivity-wifimanager-wifiscaninfo-i.md#ssid)
@@ -189,8 +171,6 @@ timestamp: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

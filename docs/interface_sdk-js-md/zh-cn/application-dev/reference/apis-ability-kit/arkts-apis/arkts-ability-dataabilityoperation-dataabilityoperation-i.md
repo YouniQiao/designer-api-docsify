@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## expectedCount
@@ -19,8 +17,6 @@ expectedCount?: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -38,8 +34,6 @@ interrupted?: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -55,8 +49,6 @@ predicates?: dataAbility.DataAbilityPredicates
 **类型：** dataAbility.DataAbilityPredicates
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -74,8 +66,6 @@ predicatesBackReferences?: Map<number, number>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -91,8 +81,6 @@ type: featureAbility.DataAbilityOperationType
 **类型：** featureAbility.DataAbilityOperationType
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -110,8 +98,6 @@ uri: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -128,8 +114,6 @@ valueBackReferences?: rdb.ValuesBucket
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -145,8 +129,6 @@ valuesBucket?: rdb.ValuesBucket
 **类型：** rdb.ValuesBucket
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

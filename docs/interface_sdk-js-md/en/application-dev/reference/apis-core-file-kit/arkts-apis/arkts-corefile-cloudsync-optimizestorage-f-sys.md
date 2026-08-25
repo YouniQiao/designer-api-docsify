@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## optimizeStorage
@@ -15,8 +15,6 @@ function optimizeStorage():Promise<void>
 Optimizes the resources that have been synced to the cloud from the local Gallery and executes the automatic aging policy according to the remaining local space. This API uses a promise to return the result.
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -38,15 +36,3 @@ Optimizes the resources that have been synced to the cloud from the local Galler
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudSync.optimizeStorage().then(() => {
-  console.info("optimize storage successfully");   // The foreground UX waits for blocking operations to complete.
-}).catch((err: BusinessError) => {
-  console.error("optimize storage failed with error message: " + err.message + ", error code: " + err.code);
-});
-```

@@ -9,14 +9,12 @@ This module provides essential functionalities for floating balls. It lets you c
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
+import { floatingBall } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

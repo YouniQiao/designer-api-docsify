@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## displayId
 
 ```TypeScript
-displayId: long
+displayId: number
 ```
 
 对端设备屏幕标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -37,16 +33,14 @@ displayId: long
 ## displayX
 
 ```TypeScript
-displayX: int
+displayX: number
 ```
 
 鼠标X坐标位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -55,16 +49,14 @@ displayX: int
 ## displayY
 
 ```TypeScript
-displayY: int
+displayY: number
 ```
 
 鼠标Y坐标位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

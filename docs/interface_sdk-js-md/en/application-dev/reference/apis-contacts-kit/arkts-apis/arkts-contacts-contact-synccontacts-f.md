@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## syncContacts
@@ -15,8 +15,6 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 Synchronizes multiple contacts to the contacts database in batches.A maximum of 400 contacts can be synchronized at a time. The caller must be running in the foreground.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -39,7 +37,7 @@ Synchronizes multiple contacts to the contacts database in batches.A maximum of 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise & lt;Array & lt;int & gt; & gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 

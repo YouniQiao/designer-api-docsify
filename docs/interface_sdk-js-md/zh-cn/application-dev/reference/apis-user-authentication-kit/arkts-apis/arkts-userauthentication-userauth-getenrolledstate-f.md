@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getEnrolledState
@@ -15,8 +15,6 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 查询凭据注册的状态，以检测用户注册凭据的变更。该接口用于获取指定认证类型的凭据注册信息，包括凭据摘要和数量。应用可通过对比当前查询结果与之前保存的结果，判断用户是否新增或删除了凭据，从而采取相应的业务处理。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -45,18 +43,3 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 | [12500005](../errorcode-useriam.md#12500005-认证类型不支持) |
 | [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) |
-
-**示例**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let enrolledState = userAuth.getEnrolledState(userAuth.UserAuthType.FACE);
-  console.info('get current enrolled state successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to get current enrolled state. Code: ${err.code}, message: ${err.message}`);
-}
-```

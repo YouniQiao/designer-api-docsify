@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createAuxiliaryPictureUsingAllocator
@@ -20,8 +20,6 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
 > - 创建的辅助图像会使用输入的像素进行初始化。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,16 +46,3 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
 | [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) |
 | [7600206](../errorcode-image.md#7600206-无效参数) |
 | [7600301](../errorcode-image.md#7600301-申请内存失败) |
-
-**示例**
-
-```TypeScript
-function CreateAuxiliaryPictureUsingAllocator(info: image.AuxiliaryPictureInfo,  allocatorType?: image.AllocatorType, pixels?: ArrayBuffer ) {
-  let res : image.AuxiliaryPicture;
-  try {
-    res = image.createAuxiliaryPictureUsingAllocator(info, allocatorType, pixels);
-  } catch (error) {
-    console.error(`Failed to create auxiliary picture using allocator=${allocatorType} and pixels=${pixels?.byteLength}.`);
-  }
-}
-```

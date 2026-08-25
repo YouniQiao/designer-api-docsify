@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## forwardingRoutes
@@ -27,8 +25,6 @@ forwardingRoutes?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -46,8 +42,6 @@ VPN接口的地址数组
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
@@ -63,8 +57,6 @@ password?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -82,8 +74,6 @@ The p12 cert data for the ipsec VPN network.
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +89,6 @@ The p12 cert password for the ipsec VPN network.
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -118,8 +106,6 @@ The array of addresses for remote server.
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -133,8 +119,6 @@ saveLogin?: boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -152,8 +136,6 @@ The system user id for the VPN network.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -167,8 +149,6 @@ userName?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -184,8 +164,6 @@ vpnId?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -200,8 +178,6 @@ vpnName?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -215,8 +191,6 @@ vpnType?: SysVpnType
 **类型：** [SysVpnType](arkts-network-vpn-sysvpntype-e-sys.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

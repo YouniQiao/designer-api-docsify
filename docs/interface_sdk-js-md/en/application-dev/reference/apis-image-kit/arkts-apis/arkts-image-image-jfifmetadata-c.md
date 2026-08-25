@@ -4,29 +4,25 @@ JFIF metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## densityUnit
 
 ```TypeScript
-readonly densityUnit?: int
+readonly densityUnit?: number
 ```
 
 JFIF density unit. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ whether the JFIF image is progressive.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -53,16 +47,14 @@ whether the JFIF image is progressive.
 ## version
 
 ```TypeScript
-readonly version?: int[]
+readonly version?: number[]
 ```
 
 JFIF version.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,16 +63,14 @@ JFIF version.
 ## xDensity
 
 ```TypeScript
-readonly xDensity?: int
+readonly xDensity?: number
 ```
 
 JFIF x density. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,16 +79,14 @@ JFIF x density. The value should be an integer.
 ## yDensity
 
 ```TypeScript
-readonly yDensity?: int
+readonly yDensity?: number
 ```
 
 JFIF y density. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

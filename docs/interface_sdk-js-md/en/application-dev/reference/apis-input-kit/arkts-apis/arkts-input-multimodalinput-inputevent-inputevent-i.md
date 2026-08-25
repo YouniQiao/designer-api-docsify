@@ -4,29 +4,25 @@ The **inputEvent** module provides the basic events reported by the device.@inte
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { InputEvent } from '@kit.InputKit';
+import { InputEvent } from 'kits/@kit.InputKit';
 ```
 
 ## actionTime
 
 ```TypeScript
-actionTime: long
+actionTime: number
 ```
 
 Time when an input event is reported, in microseconds (μs) since the system starts.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -35,16 +31,14 @@ Time when an input event is reported, in microseconds (μs) since the system sta
 ## deviceId
 
 ```TypeScript
-deviceId: int
+deviceId: number
 ```
 
 Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +47,14 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 Enumerates event IDs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -71,16 +63,14 @@ Enumerates event IDs.
 ## screenId
 
 ```TypeScript
-screenId: int
+screenId: number
 ```
 
 Target screen ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -89,16 +79,14 @@ Target screen ID.
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 Target window ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

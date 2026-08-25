@@ -6,7 +6,7 @@ The **gestureEvent** module provides APIs for gesture events reported by devices
 ## Modules to Import
 
 ```TypeScript
-import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from '@kit.InputKit';
+import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from 'kits/@kit.InputKit';
 ```
 
 ## Summary

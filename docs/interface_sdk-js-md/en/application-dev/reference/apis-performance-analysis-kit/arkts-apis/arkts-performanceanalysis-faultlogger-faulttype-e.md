@@ -4,8 +4,6 @@ Enumerates the fault types.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **Substitutes:** [event](arkts-performanceanalysis-hiappevent-event-n.md)
@@ -22,8 +20,6 @@ No specific fault type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -37,8 +33,6 @@ CPP_CRASH = 2
 Native program crash.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 18
 
@@ -54,8 +48,6 @@ JS program crash.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -69,8 +61,6 @@ APP_FREEZE = 4
 Application freezing.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 18
 

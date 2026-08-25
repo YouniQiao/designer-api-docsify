@@ -15,8 +15,6 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [symlink](arkts-corefile-file-fs-symlink-f.md)
@@ -36,28 +34,6 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + '/test';
-fileio.symlink(srcFile, dstFile).then(() => {
-  console.info("symlink succeed");
-}).catch((err: BusinessError) => {
-  console.error("symlink failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + '/test';
-fileio.symlink(srcFile, dstFile, (err: BusinessError) => {
-  // do something
-});
-```
-
 
 ## symlink
 
@@ -68,8 +44,6 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 基于文件路径创建符号链接，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -84,7 +58,3 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 | target | string | 是 |
 | srcPath | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [symlink](#symlink)

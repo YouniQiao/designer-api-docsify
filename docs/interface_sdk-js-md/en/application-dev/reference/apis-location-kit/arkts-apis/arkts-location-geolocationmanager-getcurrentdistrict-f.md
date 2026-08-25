@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getCurrentDistrict
@@ -15,8 +15,6 @@ function getCurrentDistrict(params?: DistrictRequestParams): Promise<DistrictInf
 Obtains the information about the district where the current device is located.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 

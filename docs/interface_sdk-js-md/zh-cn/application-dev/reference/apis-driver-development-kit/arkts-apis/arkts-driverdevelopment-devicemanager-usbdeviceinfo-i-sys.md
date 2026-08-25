@@ -6,8 +6,6 @@ USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemana
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
@@ -15,7 +13,7 @@ USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemana
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## interfaceDescList
@@ -30,8 +28,6 @@ USB设备接口描述符列表。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
@@ -39,16 +35,14 @@ USB设备接口描述符列表。
 ## productId
 
 ```TypeScript
-productId: int
+productId: number
 ```
 
 USB设备Product ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -57,16 +51,14 @@ USB设备Product ID。
 ## vendorId
 
 ```TypeScript
-vendorId: int
+vendorId: number
 ```
 
 USB设备Vendor ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 

@@ -4,8 +4,6 @@ The **workScheduler** module provides the APIs for registering, canceling, and q
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -13,7 +11,7 @@ The **workScheduler** module provides the APIs for registering, canceling, and q
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## Summary

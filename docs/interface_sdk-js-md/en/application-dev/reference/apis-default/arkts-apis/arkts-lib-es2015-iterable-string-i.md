@@ -1,7 +1,5 @@
 # String
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@
 ```
 
 Iterator
-
-**ArkTS mode:** 
 
 **Return value:**
 

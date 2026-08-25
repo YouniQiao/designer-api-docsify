@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
+import { fileUri } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getUriFromPath
@@ -15,8 +15,6 @@ function getUriFromPath(path: string): string
 通过应用沙箱内的文件路径生成URI。路径中的中文及非数字字母的特殊字符会进行百分号编码。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -39,11 +37,3 @@ function getUriFromPath(path: string): string
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-let pathDir = this.context.filesDir; // 获取应用沙箱路径。
-let filePath = pathDir + '/test';
-let uri = fileUri.getUriFromPath(filePath);
-```

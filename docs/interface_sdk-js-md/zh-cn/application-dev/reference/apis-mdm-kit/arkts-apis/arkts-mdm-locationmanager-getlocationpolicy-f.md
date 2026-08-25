@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { locationManager } from '@kit.MDMKit';
+import { locationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getLocationPolicy
@@ -15,8 +15,6 @@ function getLocationPolicy(admin: Want): LocationPolicy
 查询位置服务管理策略。可在企业设备管理应用中检查当前设备的位置服务策略状态，用于策略合规性验证或策略调整前的状态确认。适用于确认当前策略配置、设备管理应用启动时读取策略状态、排查位置服务问题时检查策略等场景。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
@@ -45,38 +43,6 @@ function getLocationPolicy(admin: Want): LocationPolicy
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { locationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(wantTemp);
-  console.info(`Succeeded in getting location policy. policy: ${result}`);
-} catch (err) {
-  console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { locationManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(null);
-  console.info(`Succeeded in getting location policy. policy: ${result}`);
-} catch(err) {
-  console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getLocationPolicy
 
@@ -87,8 +53,6 @@ function getLocationPolicy(admin: Want | null): LocationPolicy
 查询位置服务管理策略。可在企业设备管理应用中检查当前设备的位置服务策略状态，用于策略合规性验证或策略调整前的状态确认。适用于确认当前策略配置、设备管理应用启动时读取策略状态、排查位置服务问题时检查策略等场景。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
@@ -116,7 +80,3 @@ function getLocationPolicy(admin: Want | null): LocationPolicy
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getLocationPolicy](#getlocationpolicy)

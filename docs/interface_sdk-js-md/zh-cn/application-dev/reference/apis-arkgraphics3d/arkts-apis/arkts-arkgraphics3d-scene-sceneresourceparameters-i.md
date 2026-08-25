@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## name
@@ -20,8 +18,6 @@ name: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## uri
@@ -32,35 +28,8 @@ uri?: ResourceStr
 
 3D场景所需的资源文件路径。默认值为undefined。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-
-**示例**
-
-```TypeScript
-import { Shader, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
-
-function createShaderPromise(): Promise<Shader> {
-  return new Promise((resolve, reject) => {
-    // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-    scene.then(async (result: Scene) => {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-
-      // 创建shader资源（通过SceneResourceParameters配置），路径和文件名可根据项目实际资源自定义
-      let sceneResourceParameter: SceneResourceParameters = { name: "shaderResource",
-        uri: $rawfile("shaders/custom_shader/custom_material_sample.shader") };
-      let shader: Shader = await sceneFactory.createShader(sceneResourceParameter);
-      resolve(shader);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```

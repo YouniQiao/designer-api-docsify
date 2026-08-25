@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemParameterEnhance } from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## get
@@ -15,8 +15,6 @@ function get(key: string, callback: AsyncCallback<string>): void
 获取系统参数key对应的值，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -38,55 +36,6 @@ function get(key: string, callback: AsyncCallback<string>): void
 | [14700103](../errorcode-device-info.md#14700103-操作因权限被拒绝) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemParameterEnhance.get('const.ohos.apiversion', (err: BusinessError, data: string) => {
-    if (err) {
-      console.error(`Failed to get const.ohos.apiversion value. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`get const.ohos.apiversion value success: ${data}`);
-    }
-  });
-} catch (e) {
-  console.error('get unexpected error: ' + e);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemParameterEnhance.get('const.ohos.apiversion', 'default', (err: BusinessError, data: string) => {
-    if (err) {
-      console.error(`Failed to get const.ohos.apiversion value. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`get const.ohos.apiversion value success: ${data}`);
-    }
-  });
-} catch (e) {
-  console.error('get unexpected error: ' + e);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise: Promise<string> = systemParameterEnhance.get('const.ohos.apiversion');
-  promise.then((value: string) => {
-    console.info('get const.ohos.apiversion success: ' + value);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get const.ohos.apiversion. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  console.error('get unexpected error: ' + e);
-}
-```
-
 
 ## get
 
@@ -97,8 +46,6 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 获取系统参数key对应的值，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -121,10 +68,6 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 | [14700103](../errorcode-device-info.md#14700103-操作因权限被拒绝) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
 
-**示例**
-
-参见 [get](#get)
-
 
 ## get
 
@@ -135,8 +78,6 @@ function get(key: string, def?: string): Promise<string>
 获取系统参数key对应的值，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -163,7 +104,3 @@ function get(key: string, def?: string): Promise<string>
 | [14700101](../errorcode-system-parameterV9.md#14700101-系统参数查找失败) |
 | [14700103](../errorcode-device-info.md#14700103-操作因权限被拒绝) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
-
-**示例**
-
-参见 [get](#get)

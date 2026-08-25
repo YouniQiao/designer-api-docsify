@@ -4,8 +4,6 @@ Enumerates the roles of the participants in a device-cloud share.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Inviter, the one who shares data. Use the enum name rather than the enum value.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ ROLE_INVITEE = 1
 Invitee, the one who can use the shared data. Use the enum name rather than the enum value.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 

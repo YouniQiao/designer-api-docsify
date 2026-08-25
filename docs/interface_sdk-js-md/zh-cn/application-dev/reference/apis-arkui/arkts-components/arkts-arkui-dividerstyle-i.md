@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ color?: ResourceColor
 
 分割线的颜色。默认值：#33182431
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,13 +37,11 @@ endMargin?: Length
 
 分割线与侧边栏底端的距离（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,13 +57,11 @@ startMargin?: Length
 
 分割线与侧边栏顶端的距离（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,13 +77,11 @@ strokeWidth: Length
 
 分割线的线宽（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

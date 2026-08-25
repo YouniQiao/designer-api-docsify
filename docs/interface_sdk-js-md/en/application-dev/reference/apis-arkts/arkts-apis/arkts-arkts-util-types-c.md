@@ -4,14 +4,12 @@ Provides APIs to check different types of built-in objects, such as ArrayBuffer,
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -24,119 +22,9 @@ A constructor used to create a **Types** object.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
-
-**Examples**
-
-```TypeScript
-let textDecoder = new util.TextDecoder();
-let retStr = textDecoder.encoding;
-console.info('retStr = ' + retStr);
-// Output: retStr = utf-8
-```
-
-```TypeScript
-let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder("utf-8");
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
-```
-
-```TypeScript
-let pro = new util.LRUCache<number, number>();
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-console.info("range = " + range);
-// Output: range = [30, 40]
-```
-
-```TypeScript
-let base64 = new util.Base64Helper();
-```
-
-```TypeScript
-let decoder = new util.StringDecoder();
-```
-
-```TypeScript
-let type = new util.types();
-```
-
-```TypeScript
-let pro : util.LruBuffer<number,number> = new util.LruBuffer();
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
-console.info("range = " + range);
-// Output: range = [30, 40]
-```
-
-```TypeScript
-let base64 = new  util.Base64();
-```
 
 ## isAnyArrayBuffer
 
@@ -148,8 +36,6 @@ Checks whether the value is of the ArrayBuffer or SharedArrayBuffer type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -165,15 +51,6 @@ Checks whether the value is of the ArrayBuffer or SharedArrayBuffer type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isAnyArrayBuffer(new ArrayBuffer(0));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isArgumentsObject
 
@@ -185,8 +62,6 @@ Checks whether the value is an **arguments** object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -202,18 +77,6 @@ Checks whether the value is an **arguments** object.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-function foo() {
-    let result = type.isArgumentsObject(arguments);
-    console.info("result = " + result);
-}
-let f = foo();
-// Output: result = true
-```
 
 ## isArrayBuffer
 
@@ -225,8 +88,6 @@ Checks whether the value is of the ArrayBuffer type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -242,15 +103,6 @@ Checks whether the value is of the ArrayBuffer type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isArrayBuffer(new ArrayBuffer(0));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isArrayBufferView
 
@@ -262,8 +114,6 @@ Checks whether the value is of the ArrayBufferView type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -279,15 +129,6 @@ Checks whether the value is of the ArrayBufferView type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isArrayBufferView(new Int8Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isAsyncFunction
 
@@ -299,8 +140,6 @@ Checks whether the value is an asynchronous function.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -316,15 +155,6 @@ Checks whether the value is an asynchronous function.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isAsyncFunction(async () => {});
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isBigInt64Array
 
@@ -336,8 +166,6 @@ Checks whether the value is of the BigInt64Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -353,15 +181,6 @@ Checks whether the value is of the BigInt64Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBigInt64Array(new BigInt64Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isBigUint64Array
 
@@ -373,8 +192,6 @@ Checks whether the value is of the BigUint64Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -390,15 +207,6 @@ Checks whether the value is of the BigUint64Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBigUint64Array(new BigUint64Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isBooleanObject
 
@@ -413,8 +221,6 @@ Checks whether the value is of the Boolean type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -432,15 +238,6 @@ Checks whether the value is of the Boolean type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBooleanObject(new Boolean(true));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isBoxedPrimitive
 
@@ -455,8 +252,6 @@ Checks whether the value is of the Boolean, Number, String, or Symbol type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -475,15 +270,6 @@ Checks whether the value is of the Boolean, Number, String, or Symbol type.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBoxedPrimitive(new Boolean(false));
-console.info("result = " + result);
-// Output: result = true
-```
-
 ## isDataView
 
 ```TypeScript
@@ -493,8 +279,6 @@ isDataView(value: Object): boolean
 Checks whether the value is of the DataView type.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -511,16 +295,6 @@ Checks whether the value is of the DataView type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-const ab = new ArrayBuffer(20);
-let result = type.isDataView(new DataView(ab));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isDate
 
@@ -532,8 +306,6 @@ Checks whether the value is of the Date type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -549,15 +321,6 @@ Checks whether the value is of the Date type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isDate(new Date());
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isExternal
 
@@ -569,8 +332,6 @@ Checks whether the value is of the native external type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -586,53 +347,6 @@ Checks whether the value is of the native external type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// /entry/src/main/cpp/napi_init.cpp
-#include "napi/native_api.h"
-#include <js_native_api.h>
-#include <stdlib.h>
-
-napi_value result;
-static napi_value Testexternal(napi_env env, napi_callback_info info) {
-    int* raw = (int*) malloc(1024);
-    napi_status status = napi_create_external(env, (void*) raw, NULL, NULL, &result);
-    if (status != napi_ok) {
-        napi_throw_error(env, NULL, "create external failed");
-        return NULL;
-    }
-    return result;
-}
-
-EXTERN_C_START
-static napi_value Init(napi_env env, napi_value exports)
-{
-    napi_property_descriptor desc[] = {
-        {"testexternal", nullptr, Testexternal, nullptr, nullptr, nullptr, napi_default, nullptr},
-    };
-    napi_define_properties(env, exports, sizeof(desc) / sizeof(desc[0]), desc);
-    return exports;
-}
-EXTERN_C_END
-// The code for module registration is omitted here. You may need to register the Testexternal method.
-...
-```
-
-```TypeScript
-import testNapi from 'libentry.so';
-
-let type = new util.types();
-const data = testNapi.testexternal();
-let result = type.isExternal(data);
-
-let result01 = type.isExternal(true);
-console.info("result = " + result);
-console.info("result01 = " + result01);
-// Output: result = true
-// Output: result01 = false
-```
 
 ## isFloat32Array
 
@@ -644,8 +358,6 @@ Checks whether the value is of the Float32Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -661,15 +373,6 @@ Checks whether the value is of the Float32Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isFloat32Array(new Float32Array());
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isFloat64Array
 
@@ -681,8 +384,6 @@ Checks whether the value is of the Float64Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -698,15 +399,6 @@ Checks whether the value is of the Float64Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isFloat64Array(new Float64Array());
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isGeneratorFunction
 
@@ -718,8 +410,6 @@ Checks whether the value is a generator function.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -735,22 +425,6 @@ Checks whether the value is a generator function.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export function* foo() {}
-```
-
-```TypeScript
-import { foo } from './test'
-
-let type = new util.types();
-let result = type.isGeneratorFunction(foo);
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isGeneratorObject
 
@@ -762,8 +436,6 @@ Checks whether the value is a generator object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -779,23 +451,6 @@ Checks whether the value is a generator object.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-function* foo() {}
-export const generator = foo();
-```
-
-```TypeScript
-import { generator } from './test'
-
-let type = new util.types();
-let result = type.isGeneratorObject(generator);
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isInt16Array
 
@@ -807,8 +462,6 @@ Checks whether the value is of the Int16Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -824,15 +477,6 @@ Checks whether the value is of the Int16Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isInt16Array(new Int16Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isInt32Array
 
@@ -844,8 +488,6 @@ Checks whether the value is of the Int32Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -861,15 +503,6 @@ Checks whether the value is of the Int32Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isInt32Array(new Int32Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isInt8Array
 
@@ -881,8 +514,6 @@ Checks whether the value is of the Int8Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -898,15 +529,6 @@ Checks whether the value is of the Int8Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isInt8Array(new Int8Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isMap
 
@@ -918,8 +540,6 @@ Checks whether the value is of the Map type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -935,15 +555,6 @@ Checks whether the value is of the Map type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isMap(new Map());
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isMapIterator
 
@@ -955,8 +566,6 @@ Checks whether the value is of the MapIterator type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -972,16 +581,6 @@ Checks whether the value is of the MapIterator type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-const map : Map<number,number> = new Map();
-let result = type.isMapIterator(map.keys());
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isModuleNamespaceObject
 
@@ -993,8 +592,6 @@ Checks whether the value is a module namespace object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1010,24 +607,6 @@ Checks whether the value is a module namespace object.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export function func() {
-  console.info("hello world");
-}
-```
-
-```TypeScript
-import * as nameSpace from './test';
-
-let type = new util.types();
-let result = type.isModuleNamespaceObject(nameSpace);
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isNativeError
 
@@ -1039,8 +618,6 @@ Checks whether the value is of the Error type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1056,15 +633,6 @@ Checks whether the value is of the Error type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isNativeError(new TypeError());
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isNumberObject
 
@@ -1079,8 +647,6 @@ Checks whether the value is of the Number type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1099,15 +665,6 @@ Checks whether the value is of the Number type.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isNumberObject(new Number(0));
-console.info("result = " + result);
-// Output: result = true
-```
-
 ## isPromise
 
 ```TypeScript
@@ -1117,8 +674,6 @@ isPromise(value: Object): boolean
 Checks whether the value is a promise.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1135,15 +690,6 @@ Checks whether the value is a promise.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isPromise(Promise.resolve(1));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isProxy
 
@@ -1155,8 +701,6 @@ Checks whether the value is a proxy.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1172,19 +716,6 @@ Checks whether the value is a proxy.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-class Target{
-}
-let type = new util.types();
-const target : Target = {};
-const proxy = new Proxy(target, target);
-let result = type.isProxy(proxy);
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isRegExp
 
@@ -1196,8 +727,6 @@ Checks whether the value is of the RegExp type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1213,15 +742,6 @@ Checks whether the value is of the RegExp type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isRegExp(new RegExp('abc'));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isSet
 
@@ -1233,8 +753,6 @@ Checks whether the value is of the Set type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1250,16 +768,6 @@ Checks whether the value is of the Set type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let set : Set<number> = new Set();
-let result = type.isSet(set);
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isSetIterator
 
@@ -1271,8 +779,6 @@ Checks whether the value is of the SetIterator type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1288,16 +794,6 @@ Checks whether the value is of the SetIterator type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-const set : Set<number> = new Set();
-let result = type.isSetIterator(set.keys());
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isSharedArrayBuffer
 
@@ -1309,8 +805,6 @@ Checks whether the value is of the SharedArrayBuffer type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1326,15 +820,6 @@ Checks whether the value is of the SharedArrayBuffer type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isSharedArrayBuffer(new SharedArrayBuffer(0));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isStringObject
 
@@ -1349,8 +834,6 @@ Checks whether the value is a string object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1368,15 +851,6 @@ Checks whether the value is a string object.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isStringObject(new String('foo'));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isSymbolObject
 
@@ -1391,8 +865,6 @@ Checks whether the value is a symbol object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 14
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1411,22 +883,6 @@ Checks whether the value is a symbol object.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export const symbols = Symbol('foo');
-```
-
-```TypeScript
-import { symbols } from './test'
-
-let type = new util.types();
-let result = type.isSymbolObject(Object(symbols));
-console.info("result = " + result);
-// Output: result = true
-```
-
 ## isTypedArray
 
 ```TypeScript
@@ -1436,8 +892,6 @@ isTypedArray(value: Object): boolean
 Checks whether the value is of the TypedArray type.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1454,15 +908,6 @@ Checks whether the value is of the TypedArray type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isTypedArray(new Float64Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isUint16Array
 
@@ -1474,8 +919,6 @@ Checks whether the value is of the Uint16Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1491,15 +934,6 @@ Checks whether the value is of the Uint16Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isUint16Array(new Uint16Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isUint32Array
 
@@ -1511,8 +945,6 @@ Checks whether the value is of the Uint32Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1528,15 +960,6 @@ Checks whether the value is of the Uint32Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isUint32Array(new Uint32Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isUint8Array
 
@@ -1548,8 +971,6 @@ Checks whether the value is of the Uint8Array type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1565,15 +986,6 @@ Checks whether the value is of the Uint8Array type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isUint8Array(new Uint8Array([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isUint8ClampedArray
 
@@ -1585,8 +997,6 @@ Checks whether the value is of the Uint8ClampedArray type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1602,15 +1012,6 @@ Checks whether the value is of the Uint8ClampedArray type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isUint8ClampedArray(new Uint8ClampedArray([]));
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isWeakMap
 
@@ -1622,8 +1023,6 @@ Checks whether the value is of the WeakMap type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1639,16 +1038,6 @@ Checks whether the value is of the WeakMap type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let value : WeakMap<object, number> = new WeakMap();
-let result = type.isWeakMap(value);
-console.info("result = " + result);
-// Output: result = true
-```
 
 ## isWeakSet
 
@@ -1660,8 +1049,6 @@ Checks whether the value is of the WeakSet type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1677,12 +1064,3 @@ Checks whether the value is of the WeakSet type.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let type = new util.types();
-let result = type.isWeakSet(new WeakSet());
-console.info("result = " + result);
-// Output: result = true
-```

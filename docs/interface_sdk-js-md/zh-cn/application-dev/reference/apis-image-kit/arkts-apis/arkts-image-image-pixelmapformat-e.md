@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = 0
 未知格式。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,8 +32,6 @@ ARGB_8888 = 1
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## RGB_565
@@ -49,8 +43,6 @@ RGB_565 = 2
 颜色信息由R（Red）、G（Green）、B（Blue）三部分组成，R占5位，G占6位，B占5位，总共占16位，按照从高位到低位的顺序储存。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -68,8 +60,6 @@ RGBA_8888 = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -85,8 +75,6 @@ BGRA_8888 = 4
 颜色信息由B（Blue）、G（Green）、R（Red）与透明度（Alpha）四部分组成，每个部分占8位，总共占32位，按照从高位到低位的顺序储存。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -104,8 +92,6 @@ RGB_888 = 5
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -121,8 +107,6 @@ ALPHA_8 = 6
 颜色信息仅包含透明度（Alpha），每个像素占8位，按照从高位到低位的顺序储存。一个或多个像素组成一行像素，每行像素数据按4字节对齐，如果一行像素所占的字节数不是4的整数倍，则在行末填充空白字节以满足对齐要求。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -140,8 +124,6 @@ RGBA_F16 = 7
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -157,8 +139,6 @@ NV21 = 8
 YVU像素排列，V分量在U分量之前。颜色信息由亮度分量Y和交错排列的色度分量V和U组成，其中Y分量占8位，UV分量因4:2:0采样平均占4位，总共平均占12位，按照从高位到低位的顺序储存。对应 [相机服务CameraFormat中的CAMERA_FORMAT_YUV_420_SP](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -176,8 +156,6 @@ YUV像素排列，U分量在V分量之前。颜色信息由亮度分量Y和交�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -194,8 +172,6 @@ RGBA_1010102 = 10
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## YCBCR_P010
@@ -207,8 +183,6 @@ YCBCR_P010 = 11
 颜色信息由亮度分量Y和色度分量Cb与Cr组成，每个分量有效10位，实际存储时，Y平面每个像素占16位数据（10位有效），UV平面交错排列，每4个像素占32位数据（每色度分量10位有效），平均有效占15位，按照从高位到低位的顺序 储存。对应[相机服务CameraFormat中的CAMERA_FORMAT_YCBCR_P010](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameraformat-e.md)。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -222,8 +196,6 @@ YCRCB_P010 = 12
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## Y8
@@ -235,8 +207,6 @@ Y8 = 14
 仅包含Y平面（亮度）的单通道灰度格式，每个像素占8位，按照从高位到低位的顺序储存。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -251,8 +221,6 @@ ALPHA_U8 = 15
 Indicates that each pixel is stored on 8 bits, without 4-byte stride alignment. Each pixel contains 1 component: ALPHA(8bits) and is stored from the higher-order to the lower-order bits.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -270,8 +238,6 @@ Indicates that each pixel is stored on 16 bits. Each pixel contains 1 component:
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -287,7 +253,5 @@ ASTC_4x4 = 102
 The storage format is ASTC 4x4 format, and the memory usage is only 1/4 of RGBA_8888. This format is only used for direct display scenes and does not support pixel access or post- processing editing.
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

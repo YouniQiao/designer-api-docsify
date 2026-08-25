@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## findWindow
@@ -15,8 +15,6 @@ function findWindow(name: string): Window
 查找指定名称对应的窗口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,27 +38,3 @@ function findWindow(name: string): Window
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let windowClass: window.Window | undefined = undefined;
-try {
-  windowClass = window.findWindow('test');
-} catch (exception) {
-  console.error(`Failed to find the Window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let windowClass: window.Window | undefined = undefined;
-try {
-  windowClass = window.findWindow('test');
-} catch (err: Error) {
-  console.error(`Failed to find the Window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```

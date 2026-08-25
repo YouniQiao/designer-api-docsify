@@ -4,14 +4,12 @@ Key encapsulation mechanism (KEM) interface, defining methods for key encapsulat
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## decapsulate
@@ -23,8 +21,6 @@ decapsulate(priKey: PriKey, wrappedKey: Uint8Array): Promise<Uint8Array>
 Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,11 +56,11 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 decapsulateSync(priKey: PriKey, wrappedKey: Uint8Array): Uint8Array
 ```
 
-Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [decapsulate](#decapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Key decapsulation operation. Using the receiver's private key, executed by the receiver, to decapsulate the shared key from the ciphertext.
+
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [decapsulate](#decapsulate). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +100,6 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -140,11 +134,11 @@ Key encapsulation operation. Using the recipient's public key, executed by the s
 encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult
 ```
 
-Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [encapsulate](#encapsulate). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Key encapsulation operation. Using the recipient's public key, executed by the sender, to generate and encapsulate a shared key.
+
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [encapsulate](#encapsulate). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

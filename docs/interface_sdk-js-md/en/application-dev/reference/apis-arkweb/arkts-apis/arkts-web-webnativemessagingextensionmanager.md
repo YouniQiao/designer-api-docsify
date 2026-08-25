@@ -4,8 +4,6 @@ The webNativeMessagingExtensionManager module is a Web native message extension 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -13,7 +11,7 @@ The webNativeMessagingExtensionManager module is a Web native message extension 
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
 ```
 
 ## Summary

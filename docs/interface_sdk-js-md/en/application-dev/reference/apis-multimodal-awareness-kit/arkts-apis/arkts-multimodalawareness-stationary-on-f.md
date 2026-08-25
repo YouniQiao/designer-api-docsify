@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { stationary } from '@kit.MultimodalAwarenessKit';
+import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## on
@@ -16,8 +16,6 @@ Subscribes to the device status.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 **Parameters:**
@@ -28,12 +26,3 @@ Subscribes to the device status.
 | event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | Yes |
 | reportLatencyNs | number | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-let reportLatencyNs = 1000000000;
-stationary.on('still', stationary.ActivityEvent.ENTER, reportLatencyNs, (data) => {
-    console.info('data=' + JSON.stringify(data));
-})
-```

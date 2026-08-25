@@ -4,29 +4,25 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
 
 ```TypeScript
-import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from 'kits/@kit.InputKit';
 ```
 
 ## blobId
 
 ```TypeScript
-blobId?: int
+blobId?: number
 ```
 
 触摸点属性标识。当前仅支持单指触摸：左手触摸为1，右手触摸为2。默认值为系统自动识别。默认情况下不设置此属性。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,16 +33,14 @@ blobId?: int
 ## fixedDisplayX
 
 ```TypeScript
-fixedDisplayX?: int
+fixedDisplayX?: number
 ```
 
 适配单手模式下screenX坐标的修正值，单位为像素（px）。默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -55,16 +49,14 @@ fixedDisplayX?: int
 ## fixedDisplayY
 
 ```TypeScript
-fixedDisplayY?: int
+fixedDisplayY?: number
 ```
 
 适配单手模式下screenY坐标的修正值，单位为像素（px）。默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

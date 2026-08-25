@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## wakeup
@@ -15,8 +15,6 @@ function wakeup(detail: string): void
 唤醒设备，将设备从睡眠状态恢复到活动状态。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本19+：ohos.permission.POWER_MANAGER
@@ -39,13 +37,3 @@ function wakeup(detail: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [4900101](../errorcode-power.md#4900101-连接服务失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-try {
-    power.wakeup('wakeup_test');
-} catch(err) {
-    console.error('wakeup failed, err: ' + err);
-}
-```

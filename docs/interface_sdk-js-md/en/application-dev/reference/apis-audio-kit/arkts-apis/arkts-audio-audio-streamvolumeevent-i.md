@@ -4,29 +4,25 @@ Describes the event received by the application when the audio stream volume is 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## previousVolume
 
 ```TypeScript
-previousVolume?: int
+previousVolume?: number
 ```
 
 Volume level before change.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -42,8 +38,6 @@ Audio stream for which the volume changes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## updateUi
@@ -58,22 +52,18 @@ Whether to show the volume change in UI. **true** to show, **false** otherwise.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## volume
 
 ```TypeScript
-volume: int
+volume: number
 ```
 
 Volume.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume

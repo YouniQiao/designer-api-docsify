@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## readTextSync
@@ -20,8 +20,6 @@ declare function readTextSync(
 以同步方法基于文本方式读取文件（即直接读取文件的文本内容）。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -58,20 +56,3 @@ declare function readTextSync(
 | 13900041 |
 | 13900042 |
 | 13900044 |
-
-**示例**
-
-```TypeScript
-import { ReadTextOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let readTextOptions: ReadTextOptions = {
-  offset: 1,
-  length: 0,
-  encoding: 'utf-8'
-};
-let stat = fileIo.statSync(filePath);
-readTextOptions.length = stat.size;
-let str = fileIo.readTextSync(filePath, readTextOptions);
-console.info(`Succeeded in reading text, text is: ${str}`);
-```

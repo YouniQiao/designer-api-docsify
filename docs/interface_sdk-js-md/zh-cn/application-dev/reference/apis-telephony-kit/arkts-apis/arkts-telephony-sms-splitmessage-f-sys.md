@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## splitMessage
@@ -15,8 +15,6 @@ function splitMessage(content: string, callback: AsyncCallback<Array<string>>): 
 将长短信拆分为多个片段。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
@@ -43,31 +41,6 @@ function splitMessage(content: string, callback: AsyncCallback<Array<string>>): 
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let content: string = "long message";
-sms.splitMessage(content, (err: BusinessError, data: string[]) => {
-      console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let content: string = "long message";
-let promise = sms.splitMessage(content);
-promise.then((data: string[]) => {
-    console.info(`splitMessage success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`splitMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## splitMessage
 
@@ -78,8 +51,6 @@ function splitMessage(content: string): Promise<Array<string>>
 将长短信拆分为多个片段。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
@@ -110,7 +81,3 @@ function splitMessage(content: string): Promise<Array<string>>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [splitMessage](#splitmessage)

@@ -1,10 +1,8 @@
 # GetInputDataOptions（系统接口）
 
-表示[通知调用者获取数据](../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8)的可选参数集合。
+表示通知调用者获取数据[onGetData](arkts-basicservices-osaccount-iinputer-i-sys.md#ongetdata)的可选参数集合。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## challenge
@@ -27,8 +25,6 @@ challenge?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

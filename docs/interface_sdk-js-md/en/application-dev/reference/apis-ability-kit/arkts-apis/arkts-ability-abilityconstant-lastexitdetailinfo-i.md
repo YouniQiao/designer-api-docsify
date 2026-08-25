@@ -4,14 +4,12 @@ Describes the key runtime information of the process where the ability last exit
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AbilityConstant } from '@kit.AbilityKit';
+import { AbilityConstant } from 'kits/@kit.AbilityKit';
 ```
 
 ## exitMsg
@@ -26,8 +24,6 @@ Reason why the process was killed.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -37,16 +33,14 @@ Reason why the process was killed.
 ## exitSubReason
 
 ```TypeScript
-exitSubReason: int
+exitSubReason: number
 ```
 
 Specific reason for the last exit of the ability.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +60,6 @@ Indecates kill reason message.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -77,16 +69,14 @@ Indecates kill reason message.
 ## pid
 
 ```TypeScript
-pid: int
+pid: number
 ```
 
 ID of the process where the ability last exited.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +96,6 @@ Name of the process.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -126,8 +114,6 @@ Process status of the ability when it last exited.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -137,16 +123,14 @@ Process status of the ability when it last exited.
 ## pss
 
 ```TypeScript
-pss: int
+pss: number
 ```
 
 Actual physical memory usage of the process, in KB.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -157,16 +141,14 @@ Actual physical memory usage of the process, in KB.
 ## rss
 
 ```TypeScript
-rss: int
+rss: number
 ```
 
 Actual memory usage of the process, in KB.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -177,16 +159,14 @@ Actual memory usage of the process, in KB.
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Exact time when the ability last exited.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,42 +177,17 @@ Exact time when the ability last exited.
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    if (launchParam.lastExitDetailInfo) {
-      console.info(`pid: ${launchParam.lastExitDetailInfo.pid}
-      \n processName: ${launchParam.lastExitDetailInfo.processName}
-      \n uid: ${launchParam.lastExitDetailInfo.uid}
-      \n exitSubReason: ${launchParam.lastExitDetailInfo.exitSubReason}
-      \n exitMsg: ${launchParam.lastExitDetailInfo.exitMsg}
-      \n rss: ${launchParam.lastExitDetailInfo.rss}
-      \n pss: ${launchParam.lastExitDetailInfo.pss}
-      \n timestamp: ${launchParam.lastExitDetailInfo.timestamp}
-      \n processState: ${launchParam.lastExitDetailInfo.processState}.`
-      );
-    }
-  }
-}
-```

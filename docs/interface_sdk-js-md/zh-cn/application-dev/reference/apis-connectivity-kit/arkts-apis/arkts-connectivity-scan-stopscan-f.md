@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from '@kit.ConnectivityKit';
+import { scan } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## stopScan
@@ -15,8 +15,6 @@ function stopScan(): Promise<void>
 停止星闪扫描。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 

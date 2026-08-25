@@ -4,8 +4,6 @@ Enumerates of the number of stop bits.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## STOPBIT_1
@@ -18,8 +16,6 @@ The number of stop bits is 1.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## STOPBIT_2
@@ -31,7 +27,5 @@ STOPBIT_2 = 1
 The number of stop bits is 2.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial

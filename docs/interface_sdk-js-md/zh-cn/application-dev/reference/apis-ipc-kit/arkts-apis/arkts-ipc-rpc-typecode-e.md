@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## INT8_ARRAY
@@ -17,8 +15,6 @@ INT8_ARRAY = 0
 TypedArray类型为INT8_ARRAY，数据将以8位有符号整数格式进行读写，每个元素占用1字节。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -32,8 +28,6 @@ TypedArray类型为UINT8_ARRAY，数据将以8位无符号整数格式进行读�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## INT16_ARRAY
@@ -45,8 +39,6 @@ INT16_ARRAY = 2
 TypedArray类型为INT16_ARRAY，数据将以16位有符号整数格式进行读写，每个元素占用2字节。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -60,8 +52,6 @@ TypedArray类型为UINT16_ARRAY，数据将以16位无符号整数格式进行�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## INT32_ARRAY
@@ -73,8 +63,6 @@ INT32_ARRAY = 4
 TypedArray类型为INT32_ARRAY，数据将以32位有符号整数格式进行读写，每个元素占用4字节。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -88,8 +76,6 @@ TypedArray类型为UINT32_ARRAY，数据将以32位无符号整数格式进行�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## FLOAT32_ARRAY
@@ -101,8 +87,6 @@ FLOAT32_ARRAY = 6
 TypedArray类型为FLOAT32_ARRAY，数据将以32位单精度浮点数格式进行读写，每个元素占用4字节。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -116,8 +100,6 @@ TypedArray类型为FLOAT64_ARRAY，数据将以64位双精度浮点数格式进�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## BIGINT64_ARRAY
@@ -130,8 +112,6 @@ TypedArray类型为BIGINT64_ARRAY，数据将以64位大整数格式进行读写
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## BIGUINT64_ARRAY
@@ -143,7 +123,5 @@ BIGUINT64_ARRAY = 9
 TypedArray类型为BIGUINT64_ARRAY，数据将以64位无符号大整数格式进行读写，每个元素占用8字节。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core

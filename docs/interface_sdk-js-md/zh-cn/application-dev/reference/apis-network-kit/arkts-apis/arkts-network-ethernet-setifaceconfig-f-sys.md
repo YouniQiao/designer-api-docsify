@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## setIfaceConfig
@@ -15,8 +15,6 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: Asy
 设置网络接口配置信息，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -47,52 +45,6 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: Asy
 | [2201006](../errorcode-net-ethernet.md#2201006-设备未连接) |
 | [2201007](../errorcode-net-ethernet.md#2201007-用户配置写入失败) |
 
-**示例**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let config: ethernet.InterfaceConfiguration = {
-  mode: 0,
-  ipAddr: "192.168.xx.xxx",
-  route: "192.168.xx.xxx",
-  gateway: "192.168.xx.xxx",
-  netMask: "255.255.255.0",
-  dnsServers: "1.1.1.1"
-};
-
-ethernet.setIfaceConfig("eth0", config, (error: BusinessError) => {
-  if (error) {
-    console.error("setIfaceConfig callback error = " + JSON.stringify(error));
-  } else {
-    console.info("setIfaceConfig callback ok");
-  }
-});
-```
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let config: ethernet.InterfaceConfiguration = {
-  mode: 0,
-  ipAddr: "192.168.xx.xxx",
-  route: "192.168.xx.xxx",
-  gateway: "192.168.xx.xxx",
-  netMask: "255.255.255.0",
-  dnsServers: "1.1.1.1"
-};
-
-const setConfigPromise = ethernet.setIfaceConfig("eth0", config);
-
-setConfigPromise.then(() => {
-  console.info("setIfaceConfig promise ok");
-}).catch((error: BusinessError)  => {
-  console.error("setIfaceConfig promise error = " + JSON.stringify(error));
-});
-```
-
 
 ## setIfaceConfig
 
@@ -103,8 +55,6 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void
 设置网络接口配置信息，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -139,7 +89,3 @@ function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void
 | [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
 | [2201006](../errorcode-net-ethernet.md#2201006-设备未连接) |
 | [2201007](../errorcode-net-ethernet.md#2201007-用户配置写入失败) |
-
-**示例**
-
-参见 [setIfaceConfig](#setifaceconfig)

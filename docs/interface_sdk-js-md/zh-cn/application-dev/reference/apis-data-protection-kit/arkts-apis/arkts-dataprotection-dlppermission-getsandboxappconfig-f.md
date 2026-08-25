@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getSandboxAppConfig
@@ -15,8 +15,6 @@ function getSandboxAppConfig(): Promise<string>
 获取沙箱应用配置信息，使用Promise异步回调。该接口用于获取沙箱应用的配置信息，便于读取或验证当前的配置状态。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -33,15 +31,3 @@ function getSandboxAppConfig(): Promise<string>
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 | [19100018](../errorcode-dlp.md#19100018-应用未授权) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getSandboxAppConfig().then((configInfo) => { // 获取沙箱应用配置信息。
-  console.info('configInfo', configInfo);
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-});
-```

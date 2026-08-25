@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setPermissionManagedState
@@ -20,8 +20,6 @@ function setPermissionManagedState(
 设置指定应用的user_grant权限的管理策略。适用于企业应用批量部署场景，如静默授权减少权限弹窗干扰、统一企业应用权限管理策略，提升员工使用体验和管理效率。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION
 
@@ -47,30 +45,3 @@ function setPermissionManagedState(
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { securityManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let appInstanceTemp: securityManager.ApplicationInstance = {
-  // 需根据实际情况进行替换
-  appIdentifier: '736498586',
-  appIndex: 0,
-  accountId: 100
-};
-let permissionsTemp: Array<string> = ['ohos.permission.CAMERA', 'ohos.permission.LOCATION'];
-try {
-  securityManager.setPermissionManagedState(wantTemp, appInstanceTemp, permissionsTemp,
-    securityManager.PermissionManagedState.GRANTED);
-  console.info('Succeeded in setting permission managed state.');
-} catch (err) {
-  console.error(`Failed to set permission managed state.  Code: ${err.code}, message: ${err.message}`);
-}
-```

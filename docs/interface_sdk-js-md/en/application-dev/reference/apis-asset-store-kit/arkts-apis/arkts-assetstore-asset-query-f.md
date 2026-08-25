@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## query
@@ -15,8 +15,6 @@ function query(query: AssetMap): Promise<Array<AssetMap>>
 Queries one or more assets. If user authentication is required for the access to the asset, call [asset.preQuery](arkts-assetstore-asset-prequery-f.md) before this API and call [asset.postQuery](arkts-assetstore-asset-postquery-f.md) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API uses a promise to return the result.If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -52,28 +50,3 @@ Queries one or more assets. If user authentication is required for the access to
 | [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
 | [24000017](../errorcode-asset.md#24000017-function-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-// If only the asset attributes need to be returned, set RETURN_TYPE to ATTRIBUTES. The attributes do not need to be decrypted, so the query takes a short time.
-query.set(asset.Tag.RETURN_TYPE, asset.ReturnType.ALL); // Return all asset information, including the attributes and asset plaintext. The plaintext needs to be decrypted, so the query takes a long time.
-asset.query(query).then((res: Array<asset.AssetMap>) => {
-  for (let i = 0; i < res.length; i++) {
-    // Parse the attributes.
-    let accessibility: number = res[i].get(asset.Tag.ACCESSIBILITY) as number;
-    console.info(`Succeeded in getting accessibility, which is: ${accessibility}.`);
-  }
-  console.info(`Succeeded in querying Asset.`);
-});
-```

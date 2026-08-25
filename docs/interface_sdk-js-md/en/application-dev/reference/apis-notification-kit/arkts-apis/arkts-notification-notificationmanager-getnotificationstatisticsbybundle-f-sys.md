@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getNotificationStatisticsByBundle
@@ -16,8 +16,6 @@ Obtains notification statistics of a specified list of applications in batches. 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ Obtains notification statistics of a specified list of applications in batches. 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundles | [BundleOption[]](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundles | [BundleOption[]](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 
 **Return value:**
 

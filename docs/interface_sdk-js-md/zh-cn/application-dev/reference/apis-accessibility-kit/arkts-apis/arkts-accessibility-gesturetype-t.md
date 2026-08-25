@@ -17,8 +17,6 @@ type GestureType = 'left' | 'leftThenRight' | 'leftThenUp' | 'leftThenDown' |
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

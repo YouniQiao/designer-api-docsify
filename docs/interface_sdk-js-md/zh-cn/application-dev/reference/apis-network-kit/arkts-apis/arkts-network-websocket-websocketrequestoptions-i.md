@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## caPath
@@ -25,8 +23,6 @@ caPath?: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -42,8 +38,6 @@ clientCert?: ClientCert
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## header
@@ -57,8 +51,6 @@ header?: Object
 **类型：** Object
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -76,8 +68,6 @@ minSupportTlsProtocol?: TlsProtocol
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -85,32 +75,28 @@ minSupportTlsProtocol?: TlsProtocol
 ## pingInterval
 
 ```TypeScript
-pingInterval?: int
+pingInterval?: number
 ```
 
 自定义[心跳检测](../../../network/websocket-connection.md#场景介绍)时间，默认为30s。每pingInterval周期会发起心跳检测，设置为0则表示关闭心跳检测。最大值：30000 s，最小值：0s。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## pongTimeout
 
 ```TypeScript
-pongTimeout?: int
+pongTimeout?: number
 ```
 
 自定义发起心跳检测后，超时断开时间，默认为30s。发起心跳检测后若pongTimeout时间未响应则断开连接。最大值：30000s，最小值：0s。pongTimeout须小于等于pingInterval。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -126,8 +112,6 @@ protocol?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## proxy
@@ -141,8 +125,6 @@ proxy?: ProxyConfiguration
 **类型：** [ProxyConfiguration](arkts-network-websocket-proxyconfiguration-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -158,8 +140,6 @@ skipServerCertVerification?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## supportOriginPort
@@ -173,8 +153,6 @@ supportOriginPort?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

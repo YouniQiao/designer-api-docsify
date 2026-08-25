@@ -6,11 +6,9 @@ Defines the stepper attribute functions@extends CommonMethod&lt;StepperAttribute
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
-**Substitutes:** SwiperAttribute
+**Substitutes:** [SwiperAttribute](arkts-arkui-swiper-attribute.md#swiperattribute)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,8 +28,6 @@ Triggered when the step navigation switches by clicking [prevLabel](arkts-arkui-
 > **NOTE：**
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 
@@ -59,8 +55,6 @@ Triggered when [nextLabel](arkts-arkui-stepperitem-attribute.md#nextlabel) of th
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** onChange
@@ -86,8 +80,6 @@ Triggered when switching to the next step by clicking [nextLabel](arkts-arkui-st
 > **NOTE：**
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 
@@ -115,8 +107,6 @@ Triggered when switching to the previous step by clicking [prevLabel](arkts-arku
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** onChange
@@ -142,8 +132,6 @@ Triggered when [nextLabel](arkts-arkui-stepperitem-attribute.md#nextlabel) is cl
 > **NOTE：**
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 

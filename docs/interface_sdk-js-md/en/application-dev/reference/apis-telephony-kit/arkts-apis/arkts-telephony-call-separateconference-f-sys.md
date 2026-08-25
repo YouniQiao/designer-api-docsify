@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## separateConference
 
 ```TypeScript
-function separateConference(callId: int, callback: AsyncCallback<void>): void
+function separateConference(callId: number, callback: AsyncCallback<void>): void
 ```
 
 Separates calls from a conference call. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Separates calls from a conference call. This API uses an asynchronous callback t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -44,42 +42,16 @@ Separates calls from a conference call. This API uses an asynchronous callback t
 | 8300008 |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.separateConference(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`separateConference fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`separateConference success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.separateConference(1).then(() => {
-    console.info(`separateConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`separateConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## separateConference
 
 ```TypeScript
-function separateConference(callId: int): Promise<void>
+function separateConference(callId: number): Promise<void>
 ```
 
 Separates calls from a conference call. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -91,7 +63,7 @@ Separates calls from a conference call. This API uses a promise to return the re
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 
 **Return value:**
 
@@ -111,7 +83,3 @@ Separates calls from a conference call. This API uses a promise to return the re
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | 8300008 |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [separateConference](#separateconference)

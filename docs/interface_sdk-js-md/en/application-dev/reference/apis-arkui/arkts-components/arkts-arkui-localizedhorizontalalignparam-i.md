@@ -4,8 +4,6 @@ Defines the localized horizontal align param of relative container.@interface Lo
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ align: HorizontalAlign
 
 Horizontal alignment mode relative to the anchor component.
 
-**Type:** HorizontalAlign
+**Type:** [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ ID of the component that serves as the anchor.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

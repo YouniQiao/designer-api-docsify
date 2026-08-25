@@ -5,15 +5,13 @@ AccessibilityExtensionAbility provides accessibility extension capabilities base
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## onAccessibilityConnect
@@ -26,8 +24,6 @@ Callback invoked when the accessibility service is successfully connected.When t
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -40,18 +36,6 @@ Callback invoked when the accessibility service is successfully connected.When t
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onAccessibilityConnect(): void {
-    console.log('AxExtensionAbility onAccessibilityConnect');
-  }
-}
-```
 
 ## onAccessibilityDisconnect
 
@@ -63,8 +47,6 @@ Callback invoked when the accessibility service is successfully disconnected.Whe
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -78,18 +60,6 @@ Callback invoked when the accessibility service is successfully disconnected.Whe
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onAccessibilityDisconnect(): void {
-    console.log('AxExtensionAbility onAccessibilityDisconnect');
-  }
-}
-```
-
 ## onAccessibilityEventInfo
 
 ```TypeScript
@@ -99,8 +69,6 @@ onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 When an accessibility event occurs, the system distributes the event to the connected AccessibilityExtensionAbility and calls this API. You can process service logic based on the event information. This API usually needs to be overridden. For details about event types, see [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -121,21 +89,6 @@ When an accessibility event occurs, the system distributes the event to the conn
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { AccessibilityExtensionAbility, AccessibilityEventInfo, AccessibilityEventType } from '@kit.AccessibilityKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onAccessibilityEventInfo(event: AccessibilityEventInfo): void {
-    console.log('AxExtensionAbility onAccessibilityEventInfo');
-    if (event.eventType === AccessibilityEventType.TYPE_CLICK) {
-      console.log('AxExtensionAbility onAccessibilityEventInfo: click');
-    }
-  }
-}
-```
-
 ## onAccessibilityKeyEvent
 
 ```TypeScript
@@ -145,8 +98,6 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 Called when a key is pressed. You can determine whether to consume the event based on the service logic in this method. This API can be overridden as required.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -172,21 +123,3 @@ Called when a key is pressed. You can determine whether to consume the event bas
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-import { KeyEvent, KeyCode } from '@kit.InputKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean {
-    console.log('AxExtensionAbility onAccessibilityKeyEvent');
-    if (keyEvent.key.code === KeyCode.KEYCODE_VOLUME_UP) {
-      console.log('AxExtensionAbility onAccessibilityKeyEvent: intercept 16');
-      return true;
-    }
-    return false;
-  }
-}
-```

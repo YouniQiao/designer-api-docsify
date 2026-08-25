@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isRamConstrainedDevice
@@ -15,8 +15,6 @@ function isRamConstrainedDevice(): Promise<boolean>
 Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,31 +32,6 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.isRamConstrainedDevice().then((data) => {
-  console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
-});
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.isRamConstrainedDevice((err, data) => {
-  if (err) {
-    console.error(`isRamConstrainedDevice fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
-  }
-});
-```
-
 
 ## isRamConstrainedDevice
 
@@ -69,8 +42,6 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -88,7 +59,3 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [isRamConstrainedDevice](#isramconstraineddevice)

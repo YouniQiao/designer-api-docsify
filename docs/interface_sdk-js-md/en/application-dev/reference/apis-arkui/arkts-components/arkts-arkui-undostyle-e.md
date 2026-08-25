@@ -4,8 +4,6 @@ Enumerates the options for whether to retain the original style during undo/redo
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CLEAR_STYLE
@@ -17,8 +15,6 @@ CLEAR_STYLE = 0
 Undo/Redo operations do not retain the original style.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ KEEP_STYLE = 1
 Undo/Redo operations retain the original style.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

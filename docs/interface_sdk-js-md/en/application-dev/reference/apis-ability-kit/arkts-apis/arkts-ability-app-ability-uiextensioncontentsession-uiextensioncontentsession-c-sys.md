@@ -4,14 +4,12 @@ UIExtensionContentSession is the UI operation class for the UIExtensionAbility. 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
 ```
 
 ## getUIExtensionHostWindowProxy
@@ -23,8 +21,6 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 Obtains the window object corresponding to the current UIExtension to notify the width, height, position, and avoided area.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,52 +41,6 @@ Obtains the window object corresponding to the current UIExtension to notify the
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { uiExtensionHost } from '@kit.ArkUI';
-
-const TAG: string = '[UIExtAbility]';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  onCreate() {
-    console.info(TAG, `UIExtAbility onCreate`);
-  }
-
-  onForeground() {
-    console.info(TAG, `UIExtAbility onForeground`);
-  }
-
-  onBackground() {
-    console.info(TAG, `UIExtAbility onBackground`);
-  }
-
-  onDestroy() {
-    console.info(TAG, `UIExtAbility onDestroy`);
-  }
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    let extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    let data: Record<string, UIExtensionContentSession | uiExtensionHost.UIExtensionHostWindowProxy> = {
-      'session': session,
-      'extensionHostWindow': extensionHostWindow
-    };
-    let storage: LocalStorage = new LocalStorage(data);
-
-    try {
-      session.loadContent('pages/Extension', storage);
-    } catch (err) {
-      console.error('loadContent err:' + JSON.stringify(err));
-    }
-  }
-
-  onSessionDestroy(session: UIExtensionContentSession) {
-    console.info(TAG, `UIExtAbility onSessionDestroy`);
-  }
-}
-```
-
 ## sendData
 
 ```TypeScript
@@ -100,8 +50,6 @@ sendData(data: Record<string, Object>): void
 Sends data to the UIExtensionComponent.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -123,75 +71,6 @@ Sends data to the UIExtensionComponent.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-
-@Entry()
-@Component
-struct Index {
-  private storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          let data: Record<string, Object> = {
-            'number': 123456,
-            'message': 'test'
-          };
-
-          try {
-            this.session?.sendData(data);
-          } catch (err) {
-            console.error('sendData err:' + JSON.stringify(err));
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
-## sendData
-
-```TypeScript
-sendData(data: Record<string, RecordData>): void
-```
-
-Send data from an ui extension to an ui extension component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [sendData](#senddata)
-
 ## setReceiveDataCallback
 
 ```TypeScript
@@ -201,8 +80,6 @@ setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 Sets a callback to receive data from the UIExtensionComponent. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,68 +101,6 @@ Sets a callback to receive data from the UIExtensionComponent. This API uses an 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-
-@Entry()
-@Component
-struct Index {
-  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          this.session?.setReceiveDataCallback((data: Record<string, Object>) => {
-            console.info(`Succeeded in setReceiveDataCallback, data: ${JSON.stringify(data)}`);
-          });
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
-## setReceiveDataCallback
-
-```TypeScript
-setReceiveDataCallback(callback: OnReceiveDataCallback): void
-```
-
-Sets the callback for the ui extension to receive data from an ui extension component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [setReceiveDataCallback](#setreceivedatacallback)
-
 ## setReceiveDataForResultCallback
 
 ```TypeScript
@@ -295,8 +110,6 @@ setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Reco
 Sets a callback with a return value to receive data from the UIExtensionComponent. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -318,69 +131,6 @@ Sets a callback with a return value to receive data from the UIExtensionComponen
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-
-@Entry()
-@Component
-struct Index {
-  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SetReceiveDataForResultCallback')
-        .onClick(() => {
-          this.session?.setReceiveDataForResultCallback((data: Record<string, Object>) => {
-            console.info(`Succeeded in setReceiveDataCallback, data: ${JSON.stringify(data)}`);
-            return data;
-          });
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
-## setReceiveDataForResultCallback
-
-```TypeScript
-setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void
-```
-
-Sets the callback with return value for the ui extension to receive data from an ui extension component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [setReceiveDataForResultCallback](#setreceivedataforresultcallback)
-
 ## setWindowBackgroundColor
 
 ```TypeScript
@@ -390,8 +140,6 @@ setWindowBackgroundColor(color: string): void
 Sets the background color for the loading page of the UIExtensionAbility. This API can be used only after [loadContent()](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent) is called and takes effect.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,35 +161,6 @@ Sets the background color for the loading page of the UIExtensionAbility. This A
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let storage: LocalStorage = new LocalStorage();
-    storage.setOrCreate('session', session);
-
-    try {
-      session.loadContent('pages/Extension', storage);
-    } catch (err) {
-      console.error('loadContent err:' + JSON.stringify(err));
-    }
-
-    try {
-      session.setWindowBackgroundColor('#00FF00');
-    } catch (err) {
-      console.error('setWindowBackgroundColor err:' + JSON.stringify(err));
-    }
-  }
-
-  // ...
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -457,8 +176,6 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -495,79 +212,6 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
-
-**Examples**
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    session.startAbility(want, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to startAbility, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbility`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbility(want, startOptions, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to startAbility, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbility`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbility(want, startOptions)
-      .then(() => {
-        console.info(`Succeeded in startAbility`);
-      })
-      .catch((err: BusinessError) => {
-        console.error(`Failed to startAbility, code: ${err.code}, msg: ${err.message}`);
-      });
-  }
-
-  // ...
-}
-```
 
 ## startAbility
 
@@ -585,8 +229,6 @@ Starts an ability with **options** specified. This API uses an asynchronous call
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -621,10 +263,6 @@ Starts an ability with **options** specified. This API uses an asynchronous call
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
-
-**Examples**
-
-See [startAbility](#startability)
 
 ## startAbility
 
@@ -642,8 +280,6 @@ Starts an ability. This API uses a promise to return the result. UI extension us
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -685,10 +321,6 @@ Starts an ability. This API uses a promise to return the result. UI extension us
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
-
-**Examples**
-
-See [startAbility](#startability)
 
 ## startAbilityAsCaller
 
@@ -700,8 +332,6 @@ Starts an ability as the caller. The initial ability places its caller informati
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -738,94 +368,6 @@ Starts an ability as the caller. The initial ability places its caller informati
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    session.startAbilityAsCaller(localWant, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to startAbilityAsCaller, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbilityAsCaller`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbilityAsCaller(localWant, startOptions, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to startAbilityAsCaller, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbilityAsCaller`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbilityAsCaller(localWant, startOptions)
-      .then(() => {
-        console.info(`Succeeded in startAbilityAsCaller`);
-      })
-      .catch((err: BusinessError) => {
-        console.error(`Failed to startAbilityAsCaller, code: ${err.code}, msg: ${err.message}`);
-      });
-  }
-
-  // ...
-}
-```
-
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -835,8 +377,6 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 Starts an ability as the caller, with **options** specified. The initial ability places its caller information (such as the bundle name and ability name) in the **want** parameter and transfers the information to an ExtensionAbility at the middle layer. When the ExtensionAbility starts another ability by calling this API, the started ability can obtain the caller information of the initial ability from the **onCreate** lifecycle. This API uses an asynchronous callback to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -873,10 +413,6 @@ Starts an ability as the caller, with **options** specified. The initial ability
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-See [startAbilityAsCaller](#startabilityascaller)
-
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -886,8 +422,6 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 Starts an ability as the caller. The initial ability places its caller information (such as the bundle name and ability name) in the **want** parameter and transfers the information to an ExtensionAbility at the middle layer. When the ExtensionAbility starts another ability by calling this API, the started ability can obtain the caller information of the initial ability from the **onCreate** lifecycle. This API uses a promise to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -931,10 +465,6 @@ Starts an ability as the caller. The initial ability places its caller informati
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-See [startAbilityAsCaller](#startabilityascaller)
-
 ## startAbilityForResult
 
 ```TypeScript
@@ -942,7 +472,12 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 ```
 
 Starts an ability and returns the result to the caller after the ability is terminated. This API uses an asynchronous callback to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.An ability can be terminated in the following ways:  
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller.  
+- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,  
+is returned to the caller.  
+- If different applications call this API to start an ability that uses the singleton mode and then call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
@@ -951,8 +486,6 @@ Starts an ability and returns the result to the caller after the ability is term
 > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -990,79 +523,6 @@ Starts an ability and returns the result to the caller after the ability is term
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    session.startAbilityForResult(want, (err: BusinessError, data: common.AbilityResult) => {
-      if (err) {
-        console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbilityForResult, data: ${JSON.stringify(data)}`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbilityForResult(want, startOptions, (err: BusinessError, data: common.AbilityResult) => {
-      if (err) {
-        console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbilityForResult, data: ${JSON.stringify(data)}`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbilityForResult(want, startOptions)
-      .then((data: common.AbilityResult) => {
-        console.info(`Succeeded in startAbilityForResult, data: ${JSON.stringify(data)}`);
-      })
-      .catch((err: BusinessError) => {
-        console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
-      });
-  }
-
-  // ...
-}
-```
-
 ## startAbilityForResult
 
 ```TypeScript
@@ -1070,7 +530,12 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 ```
 
 Starts an ability with **options** specified and returns the result to the caller after the ability is terminated. This API uses an asynchronous callback to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.An ability can be terminated in the following ways:  
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller.  
+- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,  
+is returned to the caller.  
+- If different applications call this API to start an ability that uses the singleton mode and then call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
@@ -1078,8 +543,6 @@ Starts an ability with **options** specified and returns the result to the calle
 > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1116,10 +579,6 @@ Starts an ability with **options** specified and returns the result to the calle
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-See [startAbilityForResult](#startabilityforresult)
-
 ## startAbilityForResult
 
 ```TypeScript
@@ -1127,7 +586,12 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 ```
 
 Starts an ability and returns the result to the caller after the ability is terminated. This API uses a promise to return the result. If the caller application is in foreground, you can use this method to start ability; If the caller application is in the background, you need to apply for permission:ohos.permission.START_ABILITIES_FROM_BACKGROUND. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the target ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.An ability can be terminated in the following ways:  
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller.  
+- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,  
+is returned to the caller.  
+- If different applications call this API to start an ability that uses the singleton mode and then call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
@@ -1135,8 +599,6 @@ Starts an ability and returns the result to the caller after the ability is term
 > The application where the UIExtensionComponent is located must be running in the foreground and gain focus.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1179,7 +641,3 @@ Starts an ability and returns the result to the caller after the ability is term
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
-
-**Examples**
-
-See [startAbilityForResult](#startabilityforresult)

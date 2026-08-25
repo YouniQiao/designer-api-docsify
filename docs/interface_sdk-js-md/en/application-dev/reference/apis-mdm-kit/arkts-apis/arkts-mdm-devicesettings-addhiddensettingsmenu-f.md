@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## addHiddenSettingsMenu
@@ -15,8 +15,6 @@ function addHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>):
 Adds a setting item to the hidden setting item list of the current user. Then the setting item is hidden in the current user's settings menu and cannot be found in settings search. Even if the setting item is located through some means, it cannot be opened when tapped. The settings take effect immediately after the API is called. The Settings application does not need to be restarted.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 

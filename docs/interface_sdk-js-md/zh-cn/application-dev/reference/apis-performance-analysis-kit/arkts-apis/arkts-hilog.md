@@ -4,14 +4,12 @@ hilog日志系统，使应用/服务可以按照指定级别、标识和格式�
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
 ## 导入模块
 
 ```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
+import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总
@@ -21,17 +19,12 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 | 名称 |
 | --- |
 | [debug](arkts-performanceanalysis-hilog-debug-f.md) |
-| [debug](arkts-performanceanalysis-hilog-debug-f.md) |
-| [error](arkts-performanceanalysis-hilog-error-f.md) |
 | [error](arkts-performanceanalysis-hilog-error-f.md) |
 | [fatal](arkts-performanceanalysis-hilog-fatal-f.md) |
-| [fatal](arkts-performanceanalysis-hilog-fatal-f.md) |
-| [info](arkts-performanceanalysis-hilog-info-f.md) |
 | [info](arkts-performanceanalysis-hilog-info-f.md) |
 | [isLoggable](arkts-performanceanalysis-hilog-isloggable-f.md) |
 | [setLogLevel](arkts-performanceanalysis-hilog-setloglevel-f.md) |
 | [setMinLogLevel](arkts-performanceanalysis-hilog-setminloglevel-f.md) |
-| [warn](arkts-performanceanalysis-hilog-warn-f.md) |
 | [warn](arkts-performanceanalysis-hilog-warn-f.md) |
 
 ### 枚举

@@ -4,8 +4,6 @@ Provides the video recorder profile definitions.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Provides the video recorder profile definitions.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## audioBitrate
 
 ```TypeScript
-readonly audioBitrate: int
+readonly audioBitrate: number
 ```
 
 Indicates the audio bit rate, in bit/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -37,16 +33,14 @@ Indicates the audio bit rate, in bit/s.
 ## audioChannels
 
 ```TypeScript
-readonly audioChannels: int
+readonly audioChannels: number
 ```
 
 Indicates the number of audio channels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -64,8 +58,6 @@ Indicates the audio encoding format.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Indicates the audio encoding format.
 ## audioSampleRate
 
 ```TypeScript
-readonly audioSampleRate: int
+readonly audioSampleRate: number
 ```
 
 Indicates the audio sampling rate, in Hz.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -100,8 +90,6 @@ Indicates the output file format.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -109,16 +97,14 @@ Indicates the output file format.
 ## videoBitrate
 
 ```TypeScript
-readonly videoBitrate: int
+readonly videoBitrate: number
 ```
 
 Indicates the video bit rate, in bit/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -136,8 +122,6 @@ Indicates the video encoding format.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
 **System API:** This is a system API.
@@ -145,16 +129,14 @@ Indicates the video encoding format.
 ## videoFrameHeight
 
 ```TypeScript
-readonly videoFrameHeight: int
+readonly videoFrameHeight: number
 ```
 
 Indicates the video height, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -163,16 +145,14 @@ Indicates the video height, in px.
 ## videoFrameRate
 
 ```TypeScript
-readonly videoFrameRate: int
+readonly videoFrameRate: number
 ```
 
 Indicates the video frame rate, in fps.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 
@@ -181,16 +161,14 @@ Indicates the video frame rate, in fps.
 ## videoFrameWidth
 
 ```TypeScript
-readonly videoFrameWidth: int
+readonly videoFrameWidth: number
 ```
 
 Indicates the video width, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
 

@@ -4,14 +4,12 @@ Provides the method for operating on a remote device. Before using this method, 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## cancelDevicePairing
@@ -23,8 +21,6 @@ cancelDevicePairing(): Promise<void>
 Cancels the ongoing pairing request. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -59,8 +55,6 @@ Initiates a connection request to a remote device. This API uses a promise to re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -93,8 +87,6 @@ disconnect(): Promise<void>
 Disconnects from the remote device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -129,8 +121,6 @@ Obtains the alias of a remote device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -164,8 +154,6 @@ Obtains the model of a remote device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -189,14 +177,12 @@ Obtains the model of a remote device.
 ## getRssiValue
 
 ```TypeScript
-getRssiValue(): Promise<int>
+getRssiValue(): Promise<number>
 ```
 
 Obtains the received signal strength indicator (RSSI) of a remote device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -231,8 +217,6 @@ Removes a paired device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -266,8 +250,6 @@ Sets the interval for connecting to a remote device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.MANAGE_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -300,8 +282,6 @@ setDeviceAlias(alias: string): void
 Sets the alias of a remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -337,8 +317,6 @@ Sets the pairing confirmation. You can obtain the pairing request of the peer de
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -371,8 +349,6 @@ setPairingPasscode(passcode: string): Promise<void>
 Sets the pairing passcode. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -413,8 +389,6 @@ startCrediblePairing(): Promise<void>
 Initiates pairing with a trusted remote device without a dialog box. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 

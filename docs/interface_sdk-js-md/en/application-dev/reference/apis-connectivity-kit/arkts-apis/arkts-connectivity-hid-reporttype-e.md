@@ -4,8 +4,6 @@ Describe the report type.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## REPORT_TYPE_INPUT
@@ -17,8 +15,6 @@ REPORT_TYPE_INPUT = 1
 Report type input.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Report type output.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -49,8 +43,6 @@ REPORT_TYPE_FEATURE = 3
 Report type feature.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

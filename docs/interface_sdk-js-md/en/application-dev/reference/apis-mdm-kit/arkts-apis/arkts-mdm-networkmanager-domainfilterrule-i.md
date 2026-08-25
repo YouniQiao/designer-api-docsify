@@ -5,14 +5,12 @@ Represents a domain name filtering rule.In API version 21 and earlier versions, 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## action
@@ -26,8 +24,6 @@ Action to take, that is, receive or discard the data packets.This parameter is m
 **Type:** Action
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ UID of the application.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -62,8 +56,6 @@ Direction chains to which the rule applies.This parameter is optional when a dom
 **Type:** Direction
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,8 +73,6 @@ Domain name. This parameter is mandatory when a domain name filtering rule is ad
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -99,8 +89,6 @@ IP protocol version. The value can be **1** (IPv4) or **2** (IPv6).
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -116,8 +104,6 @@ Log type. Currently, only **NFLOG** is supported. This parameter applies only to
 **Type:** [LogType](arkts-mdm-networkmanager-logtype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

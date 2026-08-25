@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
+import { browser } from 'kits/@kit.MDMKit';
 ```
 
 ## setPolicies
@@ -15,8 +15,6 @@ function setPolicies(admin: Want, appId: string, policies: string, callback: Asy
 为指定的浏览器设置浏览策略，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -49,49 +47,6 @@ function setPolicies(admin: Want, appId: string, policies: string, callback: Asy
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
-let appId: string = 'com.example.******_******/******5t5CoBM=';
-let policies: string = '{"InsecurePrivateNetworkRequestsAllowed":{"level":"mandatory","scope":"machine","source":"platform","value":true},"LegacySameSiteCookieBehaviorEnabledForDomainList":{"level":"mandatory","scope":"machine","source":"platform","value":["[*.]"]}}';
-browser.setPolicies(wantTemp, appId, policies, (err) => {
-  if (err) {
-    console.error(`Failed to set browser policies. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting browser policies.');
-});
-```
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
-let appId: string = 'com.example.******_******/******5t5CoBM=';
-let policies: string = '{"InsecurePrivateNetworkRequestsAllowed":{"level":"mandatory","scope":"machine","source":"platform","value":true},"LegacySameSiteCookieBehaviorEnabledForDomainList":{"level":"mandatory","scope":"machine","source":"platform","value":["[*.]"]}}';
-browser.setPolicies(wantTemp, appId, policies).then(() => {
-  console.info('Succeeded in setting browser policies.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set browser policies. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## setPolicies
 
@@ -102,8 +57,6 @@ function setPolicies(admin: Want, appId: string, policies: string): Promise<void
 为指定的浏览器设置浏览策略，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -140,7 +93,3 @@ function setPolicies(admin: Want, appId: string, policies: string): Promise<void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [setPolicies](#setpolicies)

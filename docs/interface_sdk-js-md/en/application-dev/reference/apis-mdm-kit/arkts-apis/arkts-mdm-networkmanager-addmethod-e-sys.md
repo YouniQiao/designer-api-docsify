@@ -4,8 +4,6 @@ Enumerates the methods used to add the network packets.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ APPEND = 0
 Append the packet.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ INSERT = 1
 Insert the packet.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ The dialogSession module provides APIs related to the dialog box.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -15,7 +13,7 @@ The dialogSession module provides APIs related to the dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
+import { dialogSession } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -25,7 +23,6 @@ import { dialogSession } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md) |
 | [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md) |
 | [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md) |
 | [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md) |

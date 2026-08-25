@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 ```
 
 ## start
@@ -15,8 +15,6 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 Starts screen hopping. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -43,66 +41,6 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 | [4400002](../errorcode-cooperator.md#4400002-input-device-operation-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          const sinkDeviceDescriptor = "descriptor";
-          let srcInputDeviceId = 0;
-          try {
-            inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId, (error: BusinessError) => {
-              if (error) {
-                console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-                return;
-              }
-              console.info(`Start Keyboard mouse crossing success.`);
-            });
-          } catch (error) {
-            console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          const sinkDeviceDescriptor = "descriptor";
-          const srcInputDeviceId = 0;
-          try {
-            inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId).then(() => {
-              console.info(`Start Keyboard mouse crossing success.`);
-            }, (error: BusinessError) => {
-              console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            });
-          } catch (error) {
-            console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## start
 
@@ -113,8 +51,6 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 Starts screen hopping. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -145,7 +81,3 @@ Starts screen hopping. This API uses a promise to return the result.
 | [4400001](../errorcode-cooperator.md#4400001-incorrect-target-device-descriptor) |
 | [4400002](../errorcode-cooperator.md#4400002-input-device-operation-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [start](#start)

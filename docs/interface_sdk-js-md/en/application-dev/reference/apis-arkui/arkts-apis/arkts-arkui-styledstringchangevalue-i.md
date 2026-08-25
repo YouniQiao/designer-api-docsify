@@ -4,8 +4,6 @@ Describes the text changes of the styled string.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ previewText?: StyledString
 
 Styled string for preview content.Used to represent temporary uncommitted input content in scenarios such as voice input, camera input, and IME pre- composition.
 
-**Type:** StyledString
+**Type:** [StyledString](arkts-arkui-styledstring-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Range of the styled string to be replaced in the original string.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -61,11 +55,9 @@ replacementString: StyledString
 
 Styled string used for replacement.
 
-**Type:** StyledString
+**Type:** [StyledString](arkts-arkui-styledstring-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ FileSelectorParam is a file selector parameter class in the ArkWeb component, us
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Constructs a **FileSelectorParam**.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -38,8 +34,6 @@ getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
 Obtains the file type information. Corresponds to `types` in the HTML [option](../../../web/web-file-upload.md#custom-handling-of-file-requests-initiated-by-js-interface). The return value is a two-dimensional array, where each sub-array represents a group of allowed file types. Developers should use this return value to set file type filtering rules when building a file selector, ensuring that users can only select files that meet the frontend requirements. The difference between this parameter and getAcceptType and getMimeTypes is that types supports more fine-grained file type control, allowing grouping by MIME type or file extension.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -58,8 +52,6 @@ getAcceptType(): Array<string>
 Obtains the file filtering type.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -81,8 +73,6 @@ Obtains the default path of the file selector, which corresponds to **startIn** 
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -100,8 +90,6 @@ getDescriptions(): Array<string>
 Obtains the optional description of each group of allowed file types. Corresponds to `description` in the HTML [option](../../../web/web-file-upload.md#custom-handling-of-file-requests-initiated-by-js-interface). The returned description array corresponds one-to-one with the file type groups returned by getAcceptableFileTypes. Developers can use these descriptions as the display text for each file type group when building a file selector, helping users understand the selectable file types. If the frontend does not set description, an empty string is returned.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -121,8 +109,6 @@ Obtains the MIME type of a file.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -140,8 +126,6 @@ getMode(): FileSelectorMode
 Obtains the mode of the file selector.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -163,8 +147,6 @@ Obtains the suggested file name. Corresponds to `suggestedName` in the HTML [opt
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -182,8 +164,6 @@ getTitle(): string
 Obtains the title of this file selector.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -205,8 +185,6 @@ Obtains whether the file selector excludes the option (*\/*), that is, all files
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -224,8 +202,6 @@ isCapture(): boolean
 Checks whether multimedia capabilities are invoked.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

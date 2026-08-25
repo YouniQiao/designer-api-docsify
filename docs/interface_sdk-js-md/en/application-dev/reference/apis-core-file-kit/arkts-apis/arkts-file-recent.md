@@ -10,8 +10,6 @@ The **file.recent** module provides APIs for managing the list of recently acces
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -23,7 +21,7 @@ The **file.recent** module provides APIs for managing the list of recently acces
 ## Modules to Import
 
 ```TypeScript
-import { recent } from '@kit.CoreFileKit';
+import { recent } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## addVirtualScreenSurface
 
 ```TypeScript
-function addVirtualScreenSurface(screenId: long, surfaceId: string, surfaceRegion?: Rect): Promise<void>
+function addVirtualScreenSurface(screenId: number, surfaceId: string, surfaceRegion?: Rect): Promise<void>
 ```
 
 Add surface for the virtual screen.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +26,7 @@ Add surface for the virtual screen.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| screenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| screenId | number | Yes |
 | surfaceId | string | Yes |
 | surfaceRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | No |
 

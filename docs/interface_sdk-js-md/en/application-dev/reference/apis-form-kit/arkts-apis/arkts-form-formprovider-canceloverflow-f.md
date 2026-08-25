@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## cancelOverflow
@@ -15,8 +15,6 @@ function cancelOverflow(formId: string): Promise<void>
 Cancels an animation. This API takes effect only for [scene-based widgets](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams-field). This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -46,22 +44,3 @@ Cancels an animation. This API takes effect only for [scene-based widgets](../..
 | [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
 | [16501011](../errorcode-form.md#16501011-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-
-try {
-  formProvider.cancelOverflow(formId).then(() => {
-    console.info('cancelOverflow succeed.');
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```

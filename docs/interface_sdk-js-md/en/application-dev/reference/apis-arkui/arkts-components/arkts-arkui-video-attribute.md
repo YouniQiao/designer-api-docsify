@@ -1,12 +1,10 @@
 # Video properties/events
 
-In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.
 
 **Inheritance/Implementation:** VideoAttribute extends CommonMethod<VideoAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +26,6 @@ Sets the AI image analysis types, including subject recognition, text recognitio
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -40,7 +36,7 @@ Sets the AI image analysis types, including subject recognition, text recognitio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | Yes |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes |
 
 ## autoPlay
 
@@ -51,8 +47,6 @@ autoPlay(value: boolean)
 Sets whether to enable autoplay. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,8 +68,6 @@ Sets whether to display the video playback control bar. This attribute can be dy
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -92,15 +84,13 @@ Sets whether to display the video playback control bar. This attribute can be dy
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.Note that if this attribute and the overlay attribute are both set, CustomBuilder specified in overlay has no effect.
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.Note that if this attribute and the overlay attribute are both set, [CustomBuilder](arkts-arkui-custombuilder-t.md) specified in [overlay](arkts-arkui-commonmethod-c.md) has no effect.
 
 > **NOTE：**&gt;
 > This API can be called within attributeModifier since API version 20.
 After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,8 +114,6 @@ Sets whether the component responds to keyboard shortcuts when it has focus. Thi
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -148,8 +136,6 @@ Sets whether to repeat the video. This attribute can be dynamically set using at
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -169,8 +155,6 @@ muted(value: boolean)
 Sets whether to mute the video. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -192,8 +176,6 @@ Sets the fill mode for the video content. This attribute can be dynamically set 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -214,8 +196,6 @@ Called when playback fails.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -224,7 +204,7 @@ Called when playback fails.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | Yes |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) \| import('../api/@ohos.base').ErrorCallback | Yes |
 
 ## onFinish
 
@@ -235,8 +215,6 @@ onFinish(event: VoidCallback)
 Called when the video playback ends. Anonymous Object Rectification.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -258,8 +236,6 @@ Called when the video enters and exits the full screen. Anonymous Object Rectifi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -279,8 +255,6 @@ onPause(event: VoidCallback)
 Called when the video is paused. Anonymous Object Rectification.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -302,8 +276,6 @@ Called when the video preparation is complete. Anonymous Object Rectification.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -323,8 +295,6 @@ onSeeked(callback: Callback<PlaybackInfo>)
 Called when the playback time information is reported after the operation progress bar is completed. Anonymous Object Rectification.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -346,8 +316,6 @@ Called when the time information is reported when the progress bar process is op
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -368,8 +336,6 @@ Called when the video is played. Anonymous Object Rectification.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -389,8 +355,6 @@ onStop(event: Callback<void>)
 Called when the video is stopped.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,8 +377,6 @@ onUpdate(callback: Callback<PlaybackInfo>)
 Called when the playback progress changes. Anonymous Object Rectification.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

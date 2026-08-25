@@ -4,8 +4,6 @@ Rotation angle limits relative to the reference point.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Rotation angle limits relative to the reference point.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## negativePitchMax
 
 ```TypeScript
-negativePitchMax: double
+negativePitchMax: number
 ```
 
 Maximum pitch rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians. If the value is less than or equal to -2*Math.PI, there is no restriction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -37,16 +33,14 @@ Maximum pitch rotation angles in the negative direction, ranging from -2*Math.PI
 ## negativeRollMax
 
 ```TypeScript
-negativeRollMax: double
+negativeRollMax: number
 ```
 
 Maximum roll rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians. If the value is less than or equal to -2*Math.PI, there is no restriction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -55,16 +49,14 @@ Maximum roll rotation angles in the negative direction, ranging from -2*Math.PI 
 ## negativeYawMax
 
 ```TypeScript
-negativeYawMax: double
+negativeYawMax: number
 ```
 
 Maximum yaw rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians. If the value is less than or equal to -2*Math.PI, there is no restriction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -73,16 +65,14 @@ Maximum yaw rotation angles in the negative direction, ranging from -2*Math.PI t
 ## positivePitchMax
 
 ```TypeScript
-positivePitchMax: double
+positivePitchMax: number
 ```
 
 Maximum pitch rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians. If the value is greater than or equal to 2*Math.PI, there is no restriction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -91,16 +81,14 @@ Maximum pitch rotation angles in the positive direction, ranging from 0 to 2*Mat
 ## positiveRollMax
 
 ```TypeScript
-positiveRollMax: double
+positiveRollMax: number
 ```
 
 Maximum roll rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians. If the value is greater than or equal to 2*Math.PI, there is no restriction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -109,16 +97,14 @@ Maximum roll rotation angles in the positive direction, ranging from 0 to 2*Math
 ## positiveYawMax
 
 ```TypeScript
-positiveYawMax: double
+positiveYawMax: number
 ```
 
 Maximum yaw rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians. If the value is greater than or equal to 2*Math.PI, there is no restriction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 

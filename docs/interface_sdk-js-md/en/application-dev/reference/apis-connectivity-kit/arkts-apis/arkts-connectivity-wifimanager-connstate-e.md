@@ -1,10 +1,8 @@
 # ConnState
 
-The state of Wi-Fi connection enumeration.@enum { int }
+The state of Wi-Fi connection enumeration.@enum { number }
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -18,8 +16,6 @@ The device is searching for an available AP.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## CONNECTING
@@ -31,8 +27,6 @@ CONNECTING
 The Wi-Fi connection is being set up.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -46,8 +40,6 @@ The Wi-Fi connection is being authenticated.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## OBTAINING_IPADDR
@@ -59,8 +51,6 @@ OBTAINING_IPADDR
 The IP address of the Wi-Fi connection is being obtained.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -74,8 +64,6 @@ The Wi-Fi connection has been set up.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## DISCONNECTING
@@ -87,8 +75,6 @@ DISCONNECTING
 The Wi-Fi connection is being torn down.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -102,8 +88,6 @@ The Wi-Fi connection has been torn down.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## UNKNOWN
@@ -115,7 +99,5 @@ UNKNOWN
 Failed to set up the Wi-Fi connection.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA

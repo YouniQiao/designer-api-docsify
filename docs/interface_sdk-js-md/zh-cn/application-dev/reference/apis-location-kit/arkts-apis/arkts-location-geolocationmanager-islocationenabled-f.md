@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isLocationEnabled
@@ -15,8 +15,6 @@ function isLocationEnabled(): boolean
 判断位置服务是否已经开启。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,15 +32,3 @@ function isLocationEnabled(): boolean
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  let locationEnabled = geoLocationManager.isLocationEnabled();
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

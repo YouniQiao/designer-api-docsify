@@ -6,8 +6,6 @@ Class for the context of the PartnerAgentExtensionAbility.@extends ExtensionCont
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -15,5 +13,5 @@ Class for the context of the PartnerAgentExtensionAbility.@extends ExtensionCont
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionContext } from '@kit.ConnectivityKit';
+import { PartnerAgentExtensionContext } from 'kits/@kit.ConnectivityKit';
 ```

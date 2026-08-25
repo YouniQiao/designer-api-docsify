@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getPixelMap
@@ -15,8 +15,6 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -33,32 +31,6 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError, data: image.PixelMap) => {
-  if (error) {
-    console.error(`failed to getPixelMap. Code: ${error.code}, Message: ${error.message}`);
-    return;
-  }
-  console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.PixelMap) => {
-  console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
-}).catch((error: BusinessError) => {
-  console.error(`failed to getPixelMap. Code: ${error.code}, Message: ${error.message}`);
-});
-```
-
 
 ## getPixelMap
 
@@ -69,8 +41,6 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -91,7 +61,3 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;image.PixelMap & gt; |
-
-**Examples**
-
-See [getPixelMap](#getpixelmap)

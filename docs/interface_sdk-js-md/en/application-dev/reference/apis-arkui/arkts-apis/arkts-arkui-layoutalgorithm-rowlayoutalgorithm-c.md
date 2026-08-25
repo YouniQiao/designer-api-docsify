@@ -12,8 +12,6 @@ Horizontal linear layout algorithm class.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -25,8 +23,6 @@ constructor(option?: RowLayoutAlgorithmOptions)
 Constructs the horizontal linear layout algorithm class.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,11 +46,9 @@ public alignItems?: VerticalAlign
 
 Vertical alignment mode of all child components.Default value: **VerticalAlign.Center**Invalid values are treated as the default value.
 
-**Type:** [VerticalAlign](arkts-arkui-enums-verticalalign-e.md)
+**Type:** [VerticalAlign](arkts-arkui-verticalalign-e.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +70,6 @@ Whether to reverse the horizontal arrangement of child components. **true** indi
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -94,11 +86,9 @@ public justifyContent?: FlexAlign
 
 Horizontal alignment mode of all child components.Default value: **FlexAlign.Start**Invalid values are treated as the default value.
 
-**Type:** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
+**Type:** [FlexAlign](arkts-arkui-flexalign-e.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,8 +109,6 @@ Horizontal spacing between elements in a horizontal layout.Default value: **Leng
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

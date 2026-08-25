@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## tracepoint
@@ -16,8 +16,6 @@ Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Parameters:**
@@ -28,14 +26,3 @@ Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitr
 | type | [HiTraceTracepointType](arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md) | Yes |
 | id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes |
 | msg | string | No |
-
-**Examples**
-
-```TypeScript
-// Start tracing. The trace flag is the union of INCLUDE_ASYNC and DONOT_CREATE_SPAN.
-let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.INCLUDE_ASYNC | hiTraceChain.HiTraceFlag.DONOT_CREATE_SPAN);
-// Trigger the trace point after the service logic is executed for several times.
-hiTraceChain.tracepoint(hiTraceChain.HiTraceCommunicationMode.THREAD, hiTraceChain.HiTraceTracepointType.SS, traceId, "Just an example");
-// Stop tracing after the service is complete.
-hiTraceChain.end(traceId);
-```

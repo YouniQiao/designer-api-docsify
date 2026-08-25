@@ -4,29 +4,25 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height: long
+height: number
 ```
 
 表示截取图像区域的高度，单位为px，该参数应为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ height: long
 ## left
 
 ```TypeScript
-left: long
+left: number
 ```
 
 表示截取图像区域的左边界，单位为px，该参数应为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ left: long
 ## top
 
 ```TypeScript
-top: long
+top: number
 ```
 
 表示截取图像区域的上边界，单位为px，该参数应为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -71,16 +63,14 @@ top: long
 ## width
 
 ```TypeScript
-width: long
+width: number
 ```
 
 表示截取图像区域的宽度，单位为px，该参数应为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

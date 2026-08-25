@@ -1,6 +1,6 @@
 # ArrayBuffer
 
-ArkTS TypedArray（[Int8Array](arkts-arkts-collections-n.md)、 [Uint8Array](arkts-arkts-collections-n.md)、 [Int16Array](arkts-arkts-collections-n.md)、 [Uint16Array](arkts-arkts-collections-n.md)、 [Int32Array](arkts-arkts-collections-n.md)、 [Uint32Array](arkts-arkts-collections-n.md)、 [Uint8ClampedArray](arkts-arkts-collections-n.md)、 [Float32Array](arkts-arkts-collections-n.md)）的底层数据结构。
+ArkTS TypedArray（[Int8Array](arkts-arkts-collections-int8array-c.md)、 [Uint8Array](arkts-arkts-collections-uint8array-c.md)、 [Int16Array](arkts-arkts-collections-int16array-c.md)、 [Uint16Array](arkts-arkts-collections-uint16array-c.md)、 [Int32Array](arkts-arkts-collections-int32array-c.md)、 [Uint32Array](arkts-arkts-collections-uint32array-c.md)、 [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)、 [Float32Array](arkts-arkts-collections-float32array-c.md)）的底层数据结构。
 
 > **说明：**&gt;
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
@@ -8,14 +8,12 @@ ArkTS TypedArray（[Int8Array](arkts-arkts-collections-n.md)、 [Uint8Array](ark
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -27,8 +25,6 @@ constructor(byteLength: number)
 构造函数，用于创建一个指定长度的ArkTS ArrayBuffer对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -55,8 +51,6 @@ slice(begin: number, end?: number): ArrayBuffer
 返回一个新的ArkTS ArrayBuffer对象，其包含原ArkTS ArrayBuffer指定范围的内容。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -93,8 +87,6 @@ buffer所占的字节数。
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

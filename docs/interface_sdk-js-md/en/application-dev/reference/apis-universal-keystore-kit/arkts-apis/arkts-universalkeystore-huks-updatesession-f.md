@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## updateSession
@@ -16,8 +16,6 @@ Updates the key operation. This API uses an asynchronous callback to return the 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -26,7 +24,7 @@ Updates the key operation. This API uses an asynchronous callback to return the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handle | long | Yes |
+| handle | number | Yes |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Yes |
 
@@ -71,8 +69,6 @@ Updates the key operation by segment. The **updateSession** operation is used fo
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -81,7 +77,7 @@ Updates the key operation by segment. The **updateSession** operation is used fo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handle | long | Yes |
+| handle | number | Yes |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
 | token | Uint8Array | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Yes |
@@ -118,8 +114,6 @@ Updates the key operation. This API uses a promise to return the result.The **hu
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -128,7 +122,7 @@ Updates the key operation. This API uses a promise to return the result.The **hu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handle | long | Yes |
+| handle | number | Yes |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
 | token | Uint8Array | No |
 

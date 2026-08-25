@@ -15,9 +15,9 @@ TreeMap可用于存储具有关联关系的key-value键值对集合，存储元�
 ## 导入模块
 
 ```TypeScript
-import { TreeMap } from '@kit.ArkTS';
-import { TreeMapForEachCb } from '@kit.ArkTS';
-import { TreeMapComparator } from '@kit.ArkTS';
+import { TreeMap } from 'kits/@kit.ArkTS';
+import { TreeMapForEachCb } from 'kits/@kit.ArkTS';
+import { TreeMapComparator } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -27,10 +27,3 @@ import { TreeMapComparator } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [TreeMap](arkts-arkts-util-treemap-treemap-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [TreeMapComparator](arkts-arkts-treemapcomparator-t.md) |
-| [TreeMapForEachCb](arkts-arkts-treemapforeachcb-t.md) |

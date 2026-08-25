@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
+import { infraredEmitter } from 'kits/@kit.InputKit';
 ```
 
 ## hasIrEmitter
@@ -15,8 +15,6 @@ function hasIrEmitter(): Promise<boolean>
 查询设备是否配备红外发射器。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
@@ -34,54 +32,3 @@ function hasIrEmitter(): Promise<boolean>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-            // 查询是否有红外发射器
-            infraredEmitter.hasIrEmitter().then((result: boolean) => {
-              console.info(`Succeeded in querying infrared emitter: ${JSON.stringify(result)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to query infrared emitter, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`)})
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { infraredEmitter } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-            // 查询是否有红外发射器
-            infraredEmitter.hasIrEmitter().then((result: boolean) => {
-              console.info(`Succeeded in querying infrared emitter: ${JSON.stringify(result)}.`);
-            }).catch((error)=> {
-              console.error(`Failed to query infrared emitter, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);})
-        })
-    }
-  }
-}
-```

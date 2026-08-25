@@ -8,8 +8,6 @@ type OnMicrophoneCaptureStateChangeCallback = (event: MicrophoneCaptureStateChan
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**

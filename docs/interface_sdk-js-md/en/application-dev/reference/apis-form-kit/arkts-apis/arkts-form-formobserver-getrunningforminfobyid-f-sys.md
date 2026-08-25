@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
+import { formObserver } from 'kits/@kit.FormKit';
 ```
 
 ## getRunningFormInfoById
@@ -15,8 +15,6 @@ function getRunningFormInfoById(formId: string): Promise<formInfo.RunningFormInf
 Obtains the RunningFormInfo object by formId.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -49,76 +47,6 @@ Obtains the RunningFormInfo object by formId.
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formObserver.getRunningFormInfoById(formId).then((data: formInfo.RunningFormInfo) => {
-    console.info(`formObserver getRunningFormInfoById success, formId: ${data.formId}`);
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formObserver.getRunningFormInfoById(formId, true).then((data: formInfo.RunningFormInfo) => {
-    console.info(`formObserver getRunningFormInfoById success, formId: ${data.formId}`);
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formObserver.getRunningFormInfoById(formId, (error: BusinessError, data: formInfo.RunningFormInfo) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info(`formObserver getRunningFormInfoById, formId: ${data.formId}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formObserver.getRunningFormInfoById(formId, true, (error: BusinessError, data: formInfo.RunningFormInfo) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info(`formObserver getRunningFormInfoById, formId: ${data.formId}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## getRunningFormInfoById
 
@@ -129,8 +57,6 @@ function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Prom
 Obtains the RunningFormInfo object by formId.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -164,10 +90,6 @@ Obtains the RunningFormInfo object by formId.
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-See [getRunningFormInfoById](#getrunningforminfobyid)
-
 
 ## getRunningFormInfoById
 
@@ -178,8 +100,6 @@ function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo
 Obtains the RunningFormInfo object by formId.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -206,10 +126,6 @@ Obtains the RunningFormInfo object by formId.
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-See [getRunningFormInfoById](#getrunningforminfobyid)
 
 
 ## getRunningFormInfoById
@@ -226,8 +142,6 @@ Obtains the RunningFormInfo object by formId.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **Model restriction:** This API can be used only in the stage model.
@@ -254,7 +168,3 @@ Obtains the RunningFormInfo object by formId.
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-See [getRunningFormInfoById](#getrunningforminfobyid)

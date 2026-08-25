@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## enableCellularData
@@ -15,8 +15,6 @@ function enableCellularData(callback: AsyncCallback<void>): void
 Enables the cellular data service. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -42,32 +40,6 @@ Enables the cellular data service. This API uses an asynchronous callback to ret
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.enableCellularData((err: BusinessError) => {
-    if(err) {
-        console.error(`enableCellularData fail. code: ${err.code}, message: ${err.message}`);
-    } else {
-        console.info(`enableCellularData success`);
-    }
-});
-```
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.enableCellularData().then(() => {
-    console.info(`enableCellularData success.`);
-}).catch((err: BusinessError) => {
-    console.error(`enableCellularData fail. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## enableCellularData
 
@@ -78,8 +50,6 @@ function enableCellularData(): Promise<void>
 Enables the cellular data service. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -102,7 +72,3 @@ Enables the cellular data service. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [enableCellularData](#enablecellulardata)

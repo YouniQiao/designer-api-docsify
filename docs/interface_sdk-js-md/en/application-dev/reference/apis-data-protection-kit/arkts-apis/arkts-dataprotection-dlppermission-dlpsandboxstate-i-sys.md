@@ -4,8 +4,6 @@ Represents the DLP sandbox state information.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the DLP sandbox state information.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## appIndex
@@ -27,8 +25,6 @@ Index of the DLP sandbox application. The value range is [1000, 1100]. If the va
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -45,8 +41,6 @@ Bundle name of the application.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 

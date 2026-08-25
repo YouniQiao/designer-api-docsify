@@ -195,7 +195,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetModularObjectExtensionInfoElementN
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionInfoHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninfo8h.md) extensionInfo | 目标ModularObjectExtensionAbility的信息句柄。 |
-| AbilityBase_Element *element | 指向[AbilityBase_Element](capi-abilitybase-abilitybase-element.md)的指针，用于接收组件名称。 |
+| [AbilityBase_Element](capi-abilitybase-abilitybase-element.md) *element | 指向[AbilityBase_Element](capi-abilitybase-abilitybase-element.md)的指针，用于接收组件名称。 |
 
 **返回：**
 
@@ -348,7 +348,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ConnectModularObjectExtensionAbility(
 
 | 参数项 | 描述 |
 | -- | -- |
-| AbilityBase_Want *want | 连接ModularObjectExtensionAbility需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
+| [AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | 连接ModularObjectExtensionAbility需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
 | OH_AbilityRuntime_ConnectOptions *connectOptions | 连接选项。详细内容参考[OH_AbilityRuntime_ConnectOptions](capi-abilityruntime-oh-abilityruntime-connectoptions.md)。 |
 | int64_t *connectionId | 指向int64_t的指针，用于接收连接ID。可以在后续调用[OH_AbilityRuntime_DisconnectModularObjectExtensionAbility](capi-modular-object-extension-manager-h.md#oh_abilityruntime_disconnectmodularobjectextensionability)时使用。 |
 

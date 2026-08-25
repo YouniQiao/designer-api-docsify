@@ -4,29 +4,25 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## buttonBackgroundCornerRadius
 
 ```TypeScript
-buttonBackgroundCornerRadius? : int
+buttonBackgroundCornerRadius? : number
 ```
 
 按键背板圆角半径，取值范围4vp-8vp，默认值4vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ buttonBackgroundCornerRadius? : int
 ## buttonBackgroundSize
 
 ```TypeScript
-buttonBackgroundSize? : int
+buttonBackgroundSize? : number
 ```
 
 按钮高亮显示时的大小，取值范围20vp-40vp，默认值28vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ buttonBackgroundSize? : int
 ## buttonIconSize
 
 ```TypeScript
-buttonIconSize? : int
+buttonIconSize? : number
 ```
 
 按键icon的大小，取值范围16vp-24vp，默认值20vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -71,16 +63,14 @@ buttonIconSize? : int
 ## closeButtonRightMargin
 
 ```TypeScript
-closeButtonRightMargin? : int
+closeButtonRightMargin? : number
 ```
 
 关闭按钮右侧距窗口边距，取值范围6vp-22vp，默认值20vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -98,8 +88,6 @@ colorMode?: ConfigurationConstant.ColorMode
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -107,16 +95,14 @@ colorMode?: ConfigurationConstant.ColorMode
 ## spacingBetweenButtons
 
 ```TypeScript
-spacingBetweenButtons? : int
+spacingBetweenButtons? : number
 ```
 
 按钮间距，取值范围8vp-24vp，默认值12vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

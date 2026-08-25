@@ -8,14 +8,12 @@ FlashQuery provides APIs to query the flash status and mode of a camera device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## hasFlash
@@ -27,8 +25,6 @@ hasFlash(): boolean
 Checks whether the camera device has flash.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -46,40 +42,6 @@ Checks whether the camera device has flash.
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function hasFlash(captureSession: camera.CaptureSession): boolean {
-  let status: boolean = false;
-  try {
-    status = captureSession.hasFlash();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The hasFlash call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function hasFlash(photoSession: camera.PhotoSession): boolean {
-  let status: boolean = false;
-  try {
-    status = photoSession.hasFlash();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The hasFlash call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```
-
 ## isFlashModeSupported
 
 ```TypeScript
@@ -89,8 +51,6 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 Checks whether a flash mode is supported.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -113,37 +73,3 @@ Checks whether a flash mode is supported.
 | Error Code ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isFlashModeSupported(captureSession: camera.CaptureSession): boolean {
-  let status: boolean = false;
-  try {
-    status = captureSession.isFlashModeSupported(camera.FlashMode.FLASH_MODE_AUTO);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The isFlashModeSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isFlashModeSupported(photoSession: camera.PhotoSession): boolean {
-  let status: boolean = false;
-  try {
-    status = photoSession.isFlashModeSupported(camera.FlashMode.FLASH_MODE_AUTO);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The isFlashModeSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```

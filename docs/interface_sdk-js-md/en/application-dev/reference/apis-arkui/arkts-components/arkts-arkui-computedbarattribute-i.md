@@ -4,8 +4,6 @@ Provides information about the position and length of the scrollbar.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,13 +17,11 @@ Provides information about the position and length of the scrollbar.
 totalLength: number
 ```
 
-Total length of the grid content, in px.
+Total length of the grid content, in vp.
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,13 +35,11 @@ Total length of the grid content, in px.
 totalOffset: number
 ```
 
-Total offset of the grid content relative to the display area, in px.
+Total offset of the grid content relative to the display area, in vp.
 
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

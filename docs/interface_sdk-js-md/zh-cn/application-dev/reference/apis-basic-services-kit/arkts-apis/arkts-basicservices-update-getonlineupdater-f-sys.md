@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getOnlineUpdater
@@ -18,8 +18,6 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 - 检查新版本和下载升级包都必须依赖设备厂商部署的升级包管理服务器。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -42,20 +40,3 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-try {
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: "com.ohos.ota.updateclient",
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC,
-      subType: update.BusinessSubType.FIRMWARE
-    }
-  };
-  let updater = update.getOnlineUpdater(upgradeInfo);
-} catch(error) {
-  console.error(`Fail to get updater error: ${error}`);
-}
-```

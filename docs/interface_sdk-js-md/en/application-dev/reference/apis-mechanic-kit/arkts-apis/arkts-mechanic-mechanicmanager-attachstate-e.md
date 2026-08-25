@@ -1,10 +1,8 @@
 # AttachState
 
-Device attach states.@enum { int }
+Device attach states.@enum { number }
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -18,8 +16,6 @@ Device attached.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 ## DETACHED
@@ -31,7 +27,5 @@ DETACHED = 1
 Device detached.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core

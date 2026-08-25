@@ -1,10 +1,8 @@
 # Operation (System API)
 
-Enumerates the user operations. @enum { int }
+Enumerates the user operations. @enum { number }
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -20,8 +18,6 @@ Connection operation.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ DISCONNECT = 1
 Disconnection operation.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 

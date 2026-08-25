@@ -6,11 +6,9 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 13
 
-**替代接口：** NavPathStack
+**替代接口：** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +26,6 @@ mode(mode: NavRouteMode)
 设置指定点击NavRouter跳转到NavDestination页面时，使用的路由模式。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 13
 
@@ -57,11 +53,9 @@ onStateChange(callback: (isActivated: boolean) => void)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 13
 
-**替代接口：** onShown
+**替代接口：** [onShown](arkts-arkui-navdestination-attribute.md#onshown)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

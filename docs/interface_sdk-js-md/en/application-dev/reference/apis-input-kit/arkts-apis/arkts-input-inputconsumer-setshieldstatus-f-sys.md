@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## setShieldStatus
@@ -15,8 +15,6 @@ function setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void
 Sets the system hotkey shield status.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INPUT_CONTROL_DISPATCHING
 
@@ -38,28 +36,3 @@ Sets the system hotkey shield status.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { inputConsumer } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let FACTORY_MODE = 0;
-          try {
-            inputConsumer.setShieldStatus(FACTORY_MODE,true);
-            console.info(`set shield status success`);
-          } catch (error) {
-            console.error(`set shield status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```

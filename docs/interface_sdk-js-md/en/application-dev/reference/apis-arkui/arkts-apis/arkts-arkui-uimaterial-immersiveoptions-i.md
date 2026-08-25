@@ -4,14 +4,12 @@ Immersive material parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
+import { uiMaterial } from 'kits/@kit.ArkUI';
 ```
 
 ## applyShadow
@@ -28,8 +26,6 @@ Whether to add a shadow effect for a material.If this parameter is set to **true
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -44,15 +40,13 @@ colorInvert?: boolean
 
 Whether the subtree of the node of the material object automatically adapts the material to the complementary color of the background color.  
 **false** indicates the material is not automatically adapted to the complementary color of the background color.  
-**true** indicates that the material is automatically adapted to the complementary color of the background color only when the material layer is thin enough. The materials that can be adapted to the complementary color are defined by the system. Such materials must have at least the **THIN** or **ULTRA_THIN** style, and are related to the strength configuration of the immersive light effect of the application. The thinner the material and the stronger the immersive light effect, the more likely the material meets the requirements for adapting to the complementary color.The capability of automatically adapting the material to the complementary color takes effect only when special resource values are set for some attribute APIs. The attribute APIs include fontColor of the **Text** component, fontColor of the **Button** component, fontColor of the **SymbolGlyph** component, fillColor of the **Image** component, icon colors in placeholderColor, fontColor, and searchIcon of the **Search** component, icon colors in cancelButton, caret colors in caretStyle, and text and icon colors in tabBar of the **TabContent** component when the BottomTabBarStyle style is used.Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.Default value: **false**
+**true** indicates that the material is automatically adapted to the complementary color of the background color only when the material layer is thin enough. The materials that can be adapted to the complementary color are defined by the system. Such materials must have at least the **THIN** or **ULTRA_THIN** style, and are related to the strength configuration of the immersive light effect of the application. The thinner the material and the stronger the immersive light effect, the more likely the material meets the requirements for adapting to the complementary color.The capability of automatically adapting the material to the complementary color takes effect only when special resource values are set for some attribute APIs. The attribute APIs include fontColor of the **Text** component, fontColor of the **Button** component, fontColor of the **SymbolGlyph** component, fillColor of the **Image** component, icon colors in placeholderColor, fontColor, and searchIcon of the **Search** component, icon colors in cancelButton, caret colors in caretStyle, and text and icon colors in [tabBar](../arkts-components/arkts-arkui-tabcontent-attribute.md#tabbar) of the **TabContent** component when the [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) style is used.Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.Default value: **false**
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +66,6 @@ Whether to set an interactive deformation effect for the component with a materi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -92,8 +84,6 @@ Whether to set a light sensing interaction feedback effect for the component wit
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -108,13 +98,11 @@ materialColor?: ResourceColor
 
 Coloring of the material layer. This parameter is used to add a pure color effect for the material filter. The pure color must have a certain transparency value and cannot be completely opaque. Otherwise, the material filter effect will be completely blocked.Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.Default value: **Color.Transparent**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -135,8 +123,6 @@ Material style. Different styles correspond to different material parameters, wh
 **Default:** uiMaterial.ImmersiveStyle.REGULAR
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## access
@@ -17,8 +17,6 @@ declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,52 +52,6 @@ Checks whether the file or directory exists or has the operation permission. Thi
 | 13900033 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-fs.access(filePath).then((res: boolean) => {
-  if (res) {
-    console.info("file exists");
-  } else {
-    console.info("file not exists");
-  }
-}).catch((err: BusinessError) => {
-  console.error("access failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-fs.access(filePath, fs.AccessModeType.EXIST, fs.AccessFlagType.LOCAL).then((res: boolean) => {
-  if (res) {
-    console.info("file exists");
-  } else {
-    console.info("file not exists");
-  }
-}).catch((err: BusinessError) => {
-  console.error("access failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-fs.access(filePath, (err: BusinessError, res: boolean) => {
-  if (err) {
-    console.error("access failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    if (res) {
-      console.info("file exists");
-    } else {
-      console.info("file not exists");
-    }
-  }
-});
-```
-
 
 ## access
 
@@ -110,8 +62,6 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 Checks whether a file or directory exists. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -141,10 +91,6 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | 13900033 |
 | 13900042 |
 
-**Examples**
-
-See [access](#access)
-
 
 ## access
 
@@ -155,8 +101,6 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -188,7 +132,3 @@ Checks whether the file or directory is stored locally or has the operation perm
 | 13900023 |
 | 13900030 |
 | 13900033 |
-
-**Examples**
-
-See [access](#access)

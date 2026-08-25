@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## registerAppGroupCallBack
@@ -15,8 +15,6 @@ function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>,
 应用注册分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)信息。 使用Callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -45,48 +43,6 @@ function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>,
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-应用分组信息操作重复) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-function onBundleGroupChanged(res: usageStatistics.AppGroupCallbackInfo) {
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack RegisterGroupCallBack callback success.');
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appOldGroup is : ' + res.appOldGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appNewGroup is : ' + res.appNewGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result changeReason is : ' + res.changeReason);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result userId is : ' + res.userId);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result bundleName is : ' + res.bundleName);
-};
-usageStatistics.registerAppGroupCallBack(onBundleGroupChanged).then( () => {
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE registerAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-function onBundleGroupChanged(res: usageStatistics.AppGroupCallbackInfo) {
-  console.info('BUNDLE_ACTIVE onBundleGroupChanged RegisterGroupCallBack callback success.');
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appOldGroup is : ' + res.appOldGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result appNewGroup is : ' + res.appNewGroup);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result changeReason is : ' + res.changeReason);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result userId is : ' + res.userId);
-  console.info('BUNDLE_ACTIVE registerAppGroupCallBack result bundleName is : ' + res.bundleName);
-};
-usageStatistics.registerAppGroupCallBack(onBundleGroupChanged, (err: BusinessError) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE registerAppGroupCallBack callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE registerAppGroupCallBack callback success.');
-  }
-});
-```
-
 
 ## registerAppGroupCallBack
 
@@ -97,8 +53,6 @@ function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>)
 注册应用分组变化监听，即用户名下的某个应用分组发生变化时，向所有已注册分组变化监听的应用返回[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)信息。 使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -131,7 +85,3 @@ function registerAppGroupCallBack(groupCallback: Callback<AppGroupCallbackInfo>)
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-应用分组信息操作重复) |
-
-**示例**
-
-参见 [registerAppGroupCallBack](#registerappgroupcallback)

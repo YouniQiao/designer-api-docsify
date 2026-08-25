@@ -4,8 +4,6 @@ Indicates the preferred network.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ PREFERRED_NETWORK_MODE_GSM = 1
 Preferred GSM network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -36,8 +32,6 @@ Preferred WCDMA network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ PREFERRED_NETWORK_MODE_LTE = 3
 Preferred LTE mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -68,8 +60,6 @@ Preferred LTE/WCDMA network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ PREFERRED_NETWORK_MODE_LTE_WCDMA_GSM = 5
 Preferred LTE/WCDMA/GSM network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -100,8 +88,6 @@ Preferred WCDMA/GSM network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ PREFERRED_NETWORK_MODE_CDMA = 7
 Preferred CDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -132,8 +116,6 @@ Preferred EVDO network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -147,8 +129,6 @@ PREFERRED_NETWORK_MODE_EVDO_CDMA = 9
 Preferred EVDO/CDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -164,8 +144,6 @@ Preferred WCDMA/GSM/EVDO/CDMA network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -179,8 +157,6 @@ PREFERRED_NETWORK_MODE_LTE_EVDO_CDMA = 11
 Preferred LTE/EVDO/CDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -196,8 +172,6 @@ Preferred LTE/WCDMA/GSM/EVDO/CDMA network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -211,8 +185,6 @@ PREFERRED_NETWORK_MODE_TDSCDMA = 13
 Preferred TDSCDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -228,8 +200,6 @@ Preferred TDSCDMA/GSM network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -243,8 +213,6 @@ PREFERRED_NETWORK_MODE_TDSCDMA_WCDMA = 15
 Preferred TDSCDMA/WCDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -260,8 +228,6 @@ Preferred TDSCDMA/WCDMA/GSM network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -275,8 +241,6 @@ PREFERRED_NETWORK_MODE_LTE_TDSCDMA = 17
 Preferred LTE/TDSCDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -292,8 +256,6 @@ Preferred LTE/TDSCDMA/GSM network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -307,8 +269,6 @@ PREFERRED_NETWORK_MODE_LTE_TDSCDMA_WCDMA = 19
 Preferred LTE/TDSCDMA/WCDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -324,8 +284,6 @@ Preferred LTE/TDSCDMA/WCDMA/GSM network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -339,8 +297,6 @@ PREFERRED_NETWORK_MODE_TDSCDMA_WCDMA_GSM_EVDO_CDMA = 21
 Preferred TDSCDMA/WCDMA/GSM/EVDO/CDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -356,8 +312,6 @@ Preferred LTE/TDSCDMA/WCDMA/GSM/EVDO/CDMA network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -371,8 +325,6 @@ PREFERRED_NETWORK_MODE_NR = 31
 Preferred NR network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -388,8 +340,6 @@ Preferred NR/LTE network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -403,8 +353,6 @@ PREFERRED_NETWORK_MODE_NR_LTE_WCDMA = 33
 Preferred NR/LTE/WCDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -420,8 +368,6 @@ Preferred NR/LTE/WCDMA/GSM network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -435,8 +381,6 @@ PREFERRED_NETWORK_MODE_NR_LTE_EVDO_CDMA = 35
 Preferred NR/LTE/EVDO/CDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -452,8 +396,6 @@ Preferred NR/LTE/WCDMA/GSM/EVDO/CDMA network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -467,8 +409,6 @@ PREFERRED_NETWORK_MODE_NR_LTE_TDSCDMA = 37
 Preferred NR/LTE/TDSCDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -484,8 +424,6 @@ Preferred NR/LTE/TDSCDMA/GSM network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -499,8 +437,6 @@ PREFERRED_NETWORK_MODE_NR_LTE_TDSCDMA_WCDMA = 39
 Preferred NR/LTE/TDSCDMA/WCDMA network mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -516,8 +452,6 @@ Preferred NR/LTE/TDSCDMA/WCDMA/GSM network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -532,8 +466,6 @@ Preferred NR/LTE/TDSCDMA/WCDMA/GSM/EVDO/CDMA network mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -547,8 +479,6 @@ PREFERRED_NETWORK_MODE_MAX_VALUE = 99
 Preferred network mode Maximum.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

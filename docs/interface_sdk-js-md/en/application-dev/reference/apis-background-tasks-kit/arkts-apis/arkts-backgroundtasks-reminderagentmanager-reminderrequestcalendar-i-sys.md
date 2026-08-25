@@ -6,14 +6,12 @@ ReminderRequestCalendar extends ReminderRequest Defines a reminder for a calenda
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## rruleWantAgent
@@ -27,8 +25,6 @@ Custom reminder, which specifies the ServiceExtensionAbility to start.
 **Type:** WantAgent
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 

@@ -4,14 +4,12 @@ This module provides the mutual conversion between [Resource](arkts-localization
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { sendableResourceManager } from '@kit.LocalizationKit';
+import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## Summary

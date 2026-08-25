@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## removeMissedIncomingCallNotification
@@ -15,8 +15,6 @@ function removeMissedIncomingCallNotification(callback: AsyncCallback<void>): vo
 Removes missed call notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE and ohos.permission.READ_CALL_LOG and ohos.permission.WRITE_CALL_LOG
 
@@ -41,30 +39,6 @@ Removes missed call notifications. This API uses an asynchronous callback to ret
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.removeMissedIncomingCallNotification((err: BusinessError) => {
-    if (err) {
-        console.error(`removeMissedIncomingCallNotification failed, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`removeMissedIncomingCallNotification success`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.removeMissedIncomingCallNotification().then(() => {
-    console.info(`removeMissedIncomingCallNotification success`);
-}).catch((err: BusinessError) => {
-    console.error(`removeMissedIncomingCallNotification failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## removeMissedIncomingCallNotification
 
@@ -75,8 +49,6 @@ function removeMissedIncomingCallNotification(): Promise<void>
 Removes missed call notifications. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE and ohos.permission.READ_CALL_LOG and ohos.permission.WRITE_CALL_LOG
 
@@ -99,7 +71,3 @@ Removes missed call notifications. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [removeMissedIncomingCallNotification](#removemissedincomingcallnotification)

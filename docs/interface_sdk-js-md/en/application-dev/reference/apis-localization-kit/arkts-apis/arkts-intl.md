@@ -4,14 +4,12 @@ The **intl** module provides basic i18n capabilities, such as time and date form
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## Summary

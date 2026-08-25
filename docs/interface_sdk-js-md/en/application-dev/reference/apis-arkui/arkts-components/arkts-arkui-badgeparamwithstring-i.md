@@ -6,8 +6,6 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes o
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,11 +22,9 @@ value: ResourceStr
 Text string of the badge content.  
 **NOTE：**The ResourceStr type is supported since API version 20.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

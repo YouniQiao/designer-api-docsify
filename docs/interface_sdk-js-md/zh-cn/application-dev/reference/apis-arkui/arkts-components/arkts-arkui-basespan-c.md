@@ -6,8 +6,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ baselineOffset(value: LengthMetrics): T
 设置Span基线的偏移量，适用于上下标排版、混合字号文本对齐微调等场景。此属性与父组件的baselineOffset是共存的。未通过该接口设置时，默认偏移量为0。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,8 +50,6 @@ textBackgroundStyle(style: TextBackgroundStyle): T
 设置文本背景样式。作为ContainerSpan的子组件时可继承该属性值，优先使用自身的设置。未通过该接口设置时，默认背景颜色为Color.Transparent（透明），圆角弧 度为0。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

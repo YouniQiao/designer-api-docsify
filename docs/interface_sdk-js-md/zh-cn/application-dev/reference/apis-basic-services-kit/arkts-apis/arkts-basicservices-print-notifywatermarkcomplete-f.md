@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## notifyWatermarkComplete
@@ -15,8 +15,6 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 通知水印处理完成。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_PRINT
 
@@ -36,28 +34,3 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 | 错误码ID |
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-
-let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => {
-    console.info('Watermark callback triggered, jobId: ' + jobId + ', fd: ' + fd);
-
-    try {
-        // 处理水印后通知系统处理成功
-        print.notifyWatermarkComplete(jobId, print.WatermarkHandleResult.WATERMARK_HANDLE_SUCCESS);
-        console.info('notifyWatermarkComplete success');
-    } catch (error) {
-        console.error('notifyWatermarkComplete error: ' + JSON.stringify(error));
-    }
-}
-
-try {
-    print.registerWatermarkCallback(watermarkCallback);
-    console.info('registerWatermarkCallback success');
-} catch (error) {
-    console.error('registerWatermarkCallback error: ' + JSON.stringify(error));
-}
-```

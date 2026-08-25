@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ LIVE_VIEW_CREATE = 0
 创建
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -36,8 +32,6 @@ LIVE_VIEW_INCREMENTAL_UPDATE = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ LIVE_VIEW_END = 2
 结束
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -68,8 +60,6 @@ LIVE_VIEW_FULL_UPDATE = 3
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ LIVE_VIEW_PENDING_CREATE = 4
 条件触发创建
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,8 +89,6 @@ LIVE_VIEW_PENDING_END = 6
 条件触发结束
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

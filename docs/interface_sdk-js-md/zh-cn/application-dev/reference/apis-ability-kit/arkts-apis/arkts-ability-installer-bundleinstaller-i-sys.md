@@ -4,8 +4,6 @@ Bundle installer interface, include install uninstall recover.
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ Bundle installer interface, include install uninstall recover.
 ## 导入模块
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## addExtResource
@@ -25,8 +23,6 @@ addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>
 根据给定的bundleName和hsp文件路径添加扩展资源。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -57,75 +53,15 @@ addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700301](../errorcode-bundle.md#17700301-扩展资源添加失败) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName : string = 'com.ohos.demo';
-let filePaths : Array<string> = ['/data/storage/el2/base/a.hsp'];
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.addExtResource(bundleName, filePaths).then((data) => {
-            console.info('addExtResource successfully');
-        }).catch((err: BusinessError) => {
-            console.error('addExtResource failed. Cause: ' + err.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和filePaths。
-let bundleName : string = 'com.ohos.demo';
-let filePaths : Array<string> = ['/data/storage/el2/base/a.hsp'];
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.addExtResource(bundleName, filePaths).then(() => {
-            console.info('addExtResource successfully');
-        }).catch((err: Error) => {
-            console.error('addExtResource failed. Cause: ' + (err as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## createAppClone
 
-ArkTS-Dyn:
 ```TypeScript
 createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise<int>
 ```
 
 创建应用分身。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_CLONE_BUNDLE
 
@@ -144,7 +80,7 @@ createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): P
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -158,69 +94,6 @@ createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): P
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
 | [17700069](../errorcode-bundle.md#17700069-应用不支持创建分身) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.camera';
-let createAppCloneParam: installer.CreateAppCloneParam = {
-    userId: 100,
-    appIndex: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.createAppClone(bundleName, createAppCloneParam)
-            .then(() => {
-                console.info('createAppClone successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('createAppClone failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 代码中使用的bundleName、appIndex、useId需为应用实际的包名、应用分身索引、用户ID。
-let bundleName = 'com.ohos.camera';
-let createAppCloneParam: installer.CreateAppCloneParam = {
-    userId: 100,
-    appIndex: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.createAppClone(bundleName, createAppCloneParam)
-            .then(() => {
-                console.info('createAppClone successfully.');
-        }).catch((error: Error) => {
-            console.error('createAppClone failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## destroyAppClone
 
 ```TypeScript
@@ -230,8 +103,6 @@ destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<
 删除应用分身。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.UNINSTALL_CLONE_BUNDLE
 
@@ -264,118 +135,6 @@ destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
 
-**示例**
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.camera';
-let index = 1;
-let userId = 100;
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.destroyAppClone(bundleName, index, userId)
-            .then(() => {
-                console.info('destroyAppClone successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('destroyAppClone failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.camera';
-let index = 1;
-let userId = 100;
-let key = 'ohos.bms.param.verifyUninstallRule';
-let value = 'false';
-let item: installer.Parameters = {key, value};
-let destroyAppCloneOpt: installer.DestroyAppCloneParam = {
-    userId: userId,
-    parameters: [item]
-};
-
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.destroyAppClone(bundleName, index, destroyAppCloneOpt)
-            .then(() => {
-                console.info('destroyAppClone successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('destroyAppClone failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 代码中使用的bundleName、appIndex、useId需为应用实际的包名、应用分身索引、用户ID。
-let bundleName = 'com.ohos.camera';
-let index = 1;
-let userId = 100;
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.destroyAppClone(bundleName, index, userId)
-            .then(() => {
-                console.info('destroyAppClone successfully.');
-        }).catch((error: Error) => {
-            console.error('destroyAppClone failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-
-let key = 'ohos.bms.param.verifyUninstallRule';
-let value = 'false';
-let item: installer.Parameters = {key, value};
-let destroyAppCloneOpt: installer.DestroyAppCloneParam = {
-    userId: userId,
-    parameters: [item]
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.destroyAppClone(bundleName, index, destroyAppCloneOpt)
-            .then(() => {
-                console.info('destroyAppClone successfully.');
-        }).catch((error: Error) => {
-            console.error('destroyAppClone failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## destroyAppClone
 
 ```TypeScript
@@ -385,8 +144,6 @@ destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: Des
 删除应用分身。使用Promise异步回调。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** ohos.permission.UNINSTALL_CLONE_BUNDLE
 
@@ -420,57 +177,6 @@ destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: Des
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
 | [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
 
-**示例**
-
-参见 [destroyAppClone](#destroyappclone)
-
-## destroyAppClone
-
-```TypeScript
-destroyAppClone(bundleName: string, appIndex: int, options?: int | DestroyAppCloneParam): Promise<void>
-```
-
-Destroy clone instance for an application.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**需要权限：** ohos.permission.UNINSTALL_CLONE_BUNDLE
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| bundleName | string | 是 |
-| appIndex | int | 是 |
-| options | int \| [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
-
-**示例**
-
-参见 [destroyAppClone](#destroyappclone)
-
 ## install
 
 ```TypeScript
@@ -484,8 +190,6 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 > appDistributionType字段说明。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本23+：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
@@ -538,187 +242,6 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 | [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) |
 | [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, installParam, (err: BusinessError) => {
-            if (err) {
-                console.error('install failed:' + err.message);
-            } else {
-                console.info('install successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新hapFilePaths和userId。
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, installParam, (err: BusinessError | null) => {
-            if (err) {
-                console.error('install failed:' + err.message);
-            } else {
-                console.info('install successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, (err: BusinessError) => {
-            if (err) {
-                console.error('install failed:' + err.message);
-            } else {
-                console.info('install successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新hapFilePaths。
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, (err: BusinessError | null) => {
-            if (err) {
-                console.error('install failed:' + err.message);
-            } else {
-                console.info('install successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, installParam)
-            .then((data: void) => {
-                console.info('install successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('install failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新hapFilePaths和userId。
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, installParam).then(() => {
-            console.info('install successfully');
-        }).catch((error: Error) => {
-            console.error('install failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## install
 
 ```TypeScript
@@ -732,8 +255,6 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 > appDistributionType字段说明。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本23+：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
@@ -784,10 +305,6 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 | [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) |
 | [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) |
 
-**示例**
-
-参见 [install](#install)
-
 ## install
 
 ```TypeScript
@@ -801,8 +318,6 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 > appDistributionType字段说明。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本23+：ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
@@ -860,10 +375,6 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 | [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) |
 | [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) |
 
-**示例**
-
-参见 [install](#install)
-
 ## installPlugin
 
 ```TypeScript
@@ -873,8 +384,6 @@ installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginPara
 应用安装插件。使用Promise异步回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_PLUGIN_BUNDLE
 
@@ -919,77 +428,10 @@ installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginPara
 | [17700090](../errorcode-bundle.md#17700090-插件与应用之间-plugindistributionids-校验失败) |
 | [17700091](../errorcode-bundle.md#17700091-插件与主体同包名) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hostBundleName = 'com.example.application';
-let pluginFilePaths = ['/data/bms_app_install/test.hsp'];
-let pluginParam : installer.PluginParam = {
-    userId : 100,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.installPlugin(hostBundleName, pluginFilePaths, pluginParam)
-            .then(() => {
-                console.info('installPlugin successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('installPlugin failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('installPlugin failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新hostBundleName、pluginFilePaths和userId。
-let hostBundleName = 'com.example.application';
-let pluginFilePaths = ['/data/bms_app_install/test.hsp'];
-let pluginParam : installer.PluginParam = {
-    userId : 100,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.installPlugin(hostBundleName, pluginFilePaths, pluginParam).then(() => {
-            console.info('installPlugin successfully.');
-        }).catch((error: Error) => {
-            console.error('installPlugin failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('installPlugin failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## installPreexistingApp
 
-ArkTS-Dyn:
 ```TypeScript
 installPreexistingApp(bundleName: string, userId?: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 ```
 
 在指定用户下安装指定bundleName的应用。使用Promise异步回调。
@@ -999,8 +441,6 @@ installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 > enterprise_normal的应用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -1013,7 +453,7 @@ installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| userId | number | 否 |
 
 **返回值：**
 
@@ -1033,63 +473,6 @@ installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 | [17700071](../errorcode-bundle.md#17700071-不允许企业应用安装) |
 | [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.camera';
-let userId = 100;
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.installPreexistingApp(bundleName, userId)
-            .then(() => {
-                console.info('installPreexistingApp successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('installPreexistingApp failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 代码中使用的bundleName、useId需为应用实际的包名、用户ID。
-let bundleName = 'com.ohos.camera';
-let userId = 100;
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.installPreexistingApp(bundleName, userId)
-            .then(() => {
-                console.info('installPreexistingApp successfully.');
-        }).catch((error: Error) => {
-            console.error('installPreexistingApp failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## recover
 
 ```TypeScript
@@ -1099,8 +482,6 @@ recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<
 回滚应用到初次安装时的状态。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
@@ -1128,187 +509,6 @@ recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<
 | [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
 | [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.recover(bundleName, installParam, (err: BusinessError) => {
-            if (err) {
-                console.error('recover failed:' + err.message);
-            } else {
-                console.info('recover successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和userId。
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.recover(bundleName, installParam, (err: BusinessError | null) => {
-            if (err) {
-                console.error('recover failed:' + err.message);
-            } else {
-                console.info('recover successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.recover(bundleName, (err: BusinessError) => {
-            if (err) {
-                console.error('recover failed:' + err.message);
-            } else {
-                console.info('recover successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName。
-let bundleName = 'com.ohos.demo';
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.recover(bundleName, (err: BusinessError | null) => {
-            if (err) {
-                console.error('recover failed:' + err.message);
-            } else {
-                console.info('recover successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.recover(bundleName, installParam)
-            .then((data: void) => {
-                console.info('recover successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('recover failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和userId。
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.recover(bundleName, installParam).then(() => {
-            console.info('recover successfully');
-        }).catch((error: Error) => {
-            console.error('recover failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## recover
 
 ```TypeScript
@@ -1318,8 +518,6 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 回滚应用到初次安装时的状态。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
@@ -1345,10 +543,6 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 | [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
 | [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
 
-**示例**
-
-参见 [recover](#recover)
-
 ## recover
 
 ```TypeScript
@@ -1358,8 +552,6 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 回滚应用到初次安装时的状态。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
@@ -1392,10 +584,6 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 | [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
 | [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
 
-**示例**
-
-参见 [recover](#recover)
-
 ## removeExtResource
 
 ```TypeScript
@@ -1405,8 +593,6 @@ removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>
 根据给定的bundleName和moduleNames删除扩展资源。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1437,58 +623,6 @@ removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700302](../errorcode-bundle.md#17700302-扩展资源删除失败) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName : string = 'com.ohos.demo';
-let moduleNames : Array<string> = ['moduleTest'];
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.removeExtResource(bundleName, moduleNames).then((data) => {
-            console.info('removeExtResource successfully');
-        }).catch((err: BusinessError) => {
-            console.error('removeExtResource failed. Cause: ' + err.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和moduleNames。
-let bundleName : string = 'com.ohos.demo';
-let moduleNames : Array<string> = ['moduleTest'];
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.removeExtResource(bundleName, moduleNames).then(() => {
-            console.info('removeExtResource successfully');
-        }).catch((err: Error) => {
-            console.error('removeExtResource failed. Cause: ' + (err as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## uninstall
 
 ```TypeScript
@@ -1498,8 +632,6 @@ uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallbac
 卸载应用。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1531,303 +663,6 @@ uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallbac
 | [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
 | [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(bundleName, installParam, (err: BusinessError) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和userId。
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(bundleName, installParam, (err: BusinessError | null) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(bundleName, (err: BusinessError) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName。
-let bundleName = 'com.ohos.demo';
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(bundleName, (err: BusinessError | null) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(bundleName, installParam)
-            .then((data: void) => {
-                console.info('uninstall successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('uninstall failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和userId。
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(bundleName, installParam).then(() => {
-            console.info('uninstall successfully');
-        }).catch((error: Error) => {
-            console.error('uninstall failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uninstallParam: installer.UninstallParam = {
-    bundleName: "com.ohos.demo",
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(uninstallParam, (err: BusinessError) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName。
-let uninstallParam: installer.UninstallParam = {
-    bundleName: "com.ohos.demo",
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(uninstallParam, (err: BusinessError | null) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uninstallParam: installer.UninstallParam = {
-    bundleName: "com.ohos.demo",
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(uninstallParam, (err: BusinessError) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName。
-let uninstallParam: installer.UninstallParam = {
-    bundleName: "com.ohos.demo",
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(uninstallParam, (err: BusinessError | null) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## uninstall
 
 ```TypeScript
@@ -1837,8 +672,6 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 卸载应用。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1867,10 +700,6 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 | [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
 | [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
 
-**示例**
-
-参见 [uninstall](#uninstall)
-
 ## uninstall
 
 ```TypeScript
@@ -1880,8 +709,6 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 卸载应用。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1918,10 +745,6 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 | [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
 | [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
 
-**示例**
-
-参见 [uninstall](#uninstall)
-
 ## uninstall
 
 ```TypeScript
@@ -1931,8 +754,6 @@ uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 卸载一个共享包。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1958,10 +779,6 @@ uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 | [17700037](../errorcode-bundle.md#17700037-被卸载的shared-library版本被其他应用依赖) |
 | [17700038](../errorcode-bundle.md#17700038-被卸载的shared-library不存在) |
 
-**示例**
-
-参见 [uninstall](#uninstall)
-
 ## uninstall
 
 ```TypeScript
@@ -1971,8 +788,6 @@ uninstall(uninstallParam: UninstallParam): Promise<void>
 卸载一个共享包。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -2003,10 +818,6 @@ uninstall(uninstallParam: UninstallParam): Promise<void>
 | [17700037](../errorcode-bundle.md#17700037-被卸载的shared-library版本被其他应用依赖) |
 | [17700038](../errorcode-bundle.md#17700038-被卸载的shared-library不存在) |
 
-**示例**
-
-参见 [uninstall](#uninstall)
-
 ## uninstallNewPreinstalledApps
 
 ```TypeScript
@@ -2016,8 +827,6 @@ uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>
 批量卸载新增的预置应用。使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.UNINSTALL_BUNDLE
 
@@ -2046,31 +855,6 @@ uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleNames = ['com.example.application', 'com.example.demo'];
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstallNewPreinstalledApps(bundleNames)
-            .then(() => {
-                console.info('uninstallNewPreinstalledApps successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('uninstallNewPreinstalledApps failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('uninstallNewPreinstalledApps failed. Cause: ' + message);
-}
-```
-
 ## uninstallPlugin
 
 ```TypeScript
@@ -2080,8 +864,6 @@ uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: 
 应用卸载插件。使用Promise异步回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.UNINSTALL_PLUGIN_BUNDLE
 
@@ -2113,67 +895,6 @@ uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: 
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 | [17700092](../errorcode-bundle.md#17700092-插件包名不存在) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hostBundleName = 'com.example.application';
-let pluginBundleName = 'com.ohos.pluginDemo';
-let pluginParam : installer.PluginParam = {
-    userId : 100,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstallPlugin(hostBundleName, pluginBundleName, pluginParam)
-            .then(() => {
-                console.info('uninstallPlugin successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('uninstallPlugin failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('uninstallPlugin failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新hostBundleName、pluginBundleName和userId。
-let hostBundleName = 'com.example.application';
-let pluginBundleName = 'com.ohos.pluginDemo';
-let pluginParam : installer.PluginParam = {
-    userId : 100,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstallPlugin(hostBundleName, pluginBundleName, pluginParam).then(() => {
-            console.info('uninstallPlugin successfully.');
-        }).catch((error: Error) => {
-            console.error('uninstallPlugin failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('uninstallPlugin failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## uninstallUpdates
 
 ```TypeScript
@@ -2183,8 +904,6 @@ uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>
 对预置应用进行卸载更新，恢复到初次安装时的状态。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -2219,67 +938,6 @@ uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>
 | [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
 | [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.camera';
-let installParam: installer.InstallParam = {
-    isKeepData: true,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstallUpdates(bundleName, installParam)
-            .then(() => {
-                console.info('uninstallUpdates successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('uninstallUpdates failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName。
-let bundleName = 'com.ohos.camera';
-let installParam: installer.InstallParam = {
-    isKeepData: true,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstallUpdates(bundleName, installParam) .then(() => {
-            console.info('uninstallUpdates successfully.');
-        }).catch((error: Error) => {
-            console.error('uninstallUpdates failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## updateBundleForSelf
 
 ```TypeScript
@@ -2289,8 +947,6 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, cal
 更新当前应用，仅限企业设备上的企业MDM应用调用，且传入的hapFilePaths中的hap必须都属于当前应用。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_SELF_BUNDLE
 
@@ -2332,187 +988,6 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, cal
 | [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
 | [17700051](../errorcode-bundle.md#17700051-应用自升级时调用方的签名证书profile文件中的类型不是企业mdm) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, installParam, (err: BusinessError) => {
-            if (err) {
-                console.error('updateBundleForSelf failed:' + err.message);
-            } else {
-                console.info('updateBundleForSelf successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新hapFilePaths和userId。
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, installParam, (err: BusinessError | null) => {
-            if (err) {
-                console.error('updateBundleForSelf failed:' + err.message);
-            } else {
-                console.info('updateBundleForSelf successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, (err: BusinessError) => {
-            if (err) {
-                console.error('updateBundleForSelf failed:' + err.message);
-            } else {
-                console.info('updateBundleForSelf successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新hapFilePaths。
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, (err: BusinessError | null) => {
-            if (err) {
-                console.error('updateBundleForSelf failed:' + err.message);
-            } else {
-                console.info('updateBundleForSelf successfully.');
-            }
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, installParam)
-            .then((data: void) => {
-                console.info('updateBundleForSelf successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('updateBundleForSelf failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新hapFilePaths和userId。
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, installParam).then(() => {
-            console.info('updateBundleForSelf successfully');
-        }).catch((error: Error) => {
-            console.error('updateBundleForSelf failed:' + (error as BusinessError).message);
-        });
-    }).catch((error: Error) => {
-        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 ## updateBundleForSelf
 
 ```TypeScript
@@ -2522,8 +997,6 @@ updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>):
 更新当前应用，仅限企业设备上的企业MDM应用调用，且传入的hapFilePaths中的hap必须都属于当前应用。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_SELF_BUNDLE
 
@@ -2563,10 +1036,6 @@ updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>):
 | [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
 | [17700051](../errorcode-bundle.md#17700051-应用自升级时调用方的签名证书profile文件中的类型不是企业mdm) |
 
-**示例**
-
-参见 [updateBundleForSelf](#updatebundleforself)
-
 ## updateBundleForSelf
 
 ```TypeScript
@@ -2576,8 +1045,6 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): P
 更新当前应用，仅限企业设备上的企业MDM应用调用，且传入的hapFilePaths中的hap必须都属于当前应用。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_SELF_BUNDLE
 
@@ -2623,7 +1090,3 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): P
 | [17700049](../errorcode-bundle.md#17700049-应用自升级时安装的应用与调用方包名不同) |
 | [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
 | [17700051](../errorcode-bundle.md#17700051-应用自升级时调用方的签名证书profile文件中的类型不是企业mdm) |
-
-**示例**
-
-参见 [updateBundleForSelf](#updatebundleforself)

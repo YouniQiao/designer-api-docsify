@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setInstallLocalEnterpriseAppEnabled
@@ -12,11 +12,9 @@ import { systemManager } from '@kit.MDMKit';
 function setInstallLocalEnterpriseAppEnabled(admin: Want, isEnable: boolean): void
 ```
 
-Sets whether local installation of enterprise applications is supported. When local installation is enabled, users can install enterprise applications (signing certificate distribution type: **enterprise_normal**) by double- tapping their installation packages on enterprise PCs/2-in-1 devices with the local installation capability.
+Sets whether local installation of enterprise applications is supported. When local installation is enabled, users can install enterprise applications (signing certificate distribution type: **enterprise_normal**) by number- tapping their installation packages on enterprise PCs/2-in-1 devices with the local installation capability.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -39,24 +37,3 @@ Sets whether local installation of enterprise applications is supported. When lo
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let isEnable: boolean = true;
-try {
-  systemManager.setInstallLocalEnterpriseAppEnabled(wantTemp, isEnable);
-  console.info('Succeeded in setting InstallLocalEnterpriseAppEnabled.');
-} catch (err) {
-  console.error(`Failed to set installLocalEnterpriseAppEnabled. Code is ${err.code}, message is ${err.message}`);
-}
-```

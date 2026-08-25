@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## generateDlpFileForEnterprise
@@ -21,8 +21,6 @@ Encrypts a plaintext file to generate a DLP file for an enterprise account. This
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -34,7 +32,7 @@ Encrypts a plaintext file to generate a DLP file for an enterprise account. This
 | plaintextFd | number | Yes |
 | dlpFd | number | Yes |
 | property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | Yes |
-| customProperty | [CustomProperty](../../apis-arkui/arkts-apis/arkts-arkui-customproperty-t.md) | Yes |
+| [customProperty](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) | Yes |
 
 **Return value:**
 
@@ -57,43 +55,3 @@ Encrypts a plaintext file to generate a DLP file for an enterprise account. This
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 | [19100014](../errorcode-dlp.md#19100014-account-not-logged-in) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction(plainFilePath: string, dlpFilePath: string) {
-  let plaintextFd: number | undefined = undefined;
-  let dlpFd: number | undefined = undefined;
-  try {
-    plaintextFd = fileIo.openSync(plainFilePath, fileIo.OpenMode.READ_ONLY).fd;
-    dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE).fd;
-    let dlpProperty: dlpPermission.DLPProperty = {
-      ownerAccount: 'zhangsan',
-      ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
-      authUserList: [],
-      contactAccount: 'zhangsan',
-      offlineAccess: true,
-      ownerAccountID: 'xxxxxxx',
-      everyoneAccessList: []
-    };
-    let customProperty: dlpPermission.CustomProperty = {
-      enterprise: 'customProperty'
-    };
-    await dlpPermission.generateDlpFileForEnterprise(plaintextFd, dlpFd, dlpProperty, customProperty);
-    console.info('Successfully generate DLP file for enterprise.');
-  } catch(err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message);
-  } finally {
-    if (dlpFd) {
-      fileIo.closeSync(dlpFd);
-    }
-    if (plaintextFd) {
-      fileIo.closeSync(plaintextFd);
-    }
-  }
-}
-```

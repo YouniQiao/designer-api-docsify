@@ -4,8 +4,6 @@ Represents the information returned when the move operation fails. If the operat
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -15,7 +13,7 @@ Represents the information returned when the move operation fails. If the operat
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## destUri
@@ -29,8 +27,6 @@ URI of the conflicting file. If the error is not caused by a file conflict, **de
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 23
 
@@ -54,8 +50,6 @@ Error code. For details about the error codes, see [File Management Error Codes]
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -78,8 +72,6 @@ Error message.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -101,8 +93,6 @@ URI of the source file or directory.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 23
 

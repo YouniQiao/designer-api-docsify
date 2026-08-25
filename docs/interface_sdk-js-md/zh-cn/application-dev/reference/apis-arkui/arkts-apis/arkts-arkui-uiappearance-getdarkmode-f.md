@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
+import { uiAppearance } from 'kits/@kit.ArkUI';
 ```
 
 ## getDarkMode
@@ -23,8 +23,6 @@ function getDarkMode(): DarkMode
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **需要权限：** 
 - API版本10 - 19：ohos.permission.UPDATE_CONFIGURATION
 
@@ -42,18 +40,3 @@ function getDarkMode(): DarkMode
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [500001](../errorcode-uiappearance.md#500001-内部错误) |
-
-**示例**
-
-```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let darkMode = uiAppearance.getDarkMode();
-  console.info('Get dark-mode ' + darkMode);
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`Get dark-mode failed. Code: ${err.code}, message: ${err.message}`);
-}
-```

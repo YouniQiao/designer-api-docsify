@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## off('netUidPolicyChange')
@@ -15,8 +15,6 @@ function off(type: 'netUidPolicyChange', callback?: Callback<NetUidPolicyInfo>):
 注销 policy 发生改变时的回调，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -53,8 +51,6 @@ function off(type: 'netUidRuleChange', callback?: Callback<NetUidRuleInfo>): voi
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
@@ -89,8 +85,6 @@ function off(type: 'netMeteredIfacesChange', callback?: Callback<Array<string>>)
 注销计量 iface 发生改变时的回调，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -127,8 +121,6 @@ function off(type: 'netQuotaPolicyChange', callback?: Callback<Array<NetQuotaPol
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
@@ -163,8 +155,6 @@ function off(type: 'netBackgroundPolicyChange', callback?: Callback<boolean>): v
 注销后台网络策略发生改变时的回调，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 

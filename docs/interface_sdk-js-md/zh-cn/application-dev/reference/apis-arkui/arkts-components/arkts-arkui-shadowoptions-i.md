@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,11 +20,9 @@ color?: Color | string | Resource | ColoringStrategy
 阴影的颜色。默认为黑色。  
 **说明：**从API version 11开始，该接口支持使用ColoringStrategy实现智能取色，智能取色功能不支持在ArkTS卡片、textShadow中使用。当前仅支持平均取色和主色取色，智能取色区域为shadow绘制区域。支持使用'average'字符串触发智能平均取色模式，支持使用'primary'字符串触发智能主色模式。
 
-**类型：** Color \| string \| Resource \| ColoringStrategy
+**类型：** Color \| string \| Resource \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,8 +46,6 @@ textShadow中该字段不生效。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -70,8 +64,6 @@ offsetX?: number | Resource
 **类型：** number \| Resource
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -92,8 +84,6 @@ offsetY?: number | Resource
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -112,8 +102,6 @@ radius: number | Resource
 **类型：** number \| Resource
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -134,8 +122,6 @@ type?: ShadowType
 **默认值：** ShadowType.COLOR
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

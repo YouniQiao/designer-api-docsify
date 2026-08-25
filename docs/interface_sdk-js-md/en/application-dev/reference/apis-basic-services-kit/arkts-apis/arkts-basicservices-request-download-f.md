@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## download
@@ -15,8 +15,6 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 Downloads a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -41,31 +39,6 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-let downloadTask: request.DownloadTask;
-// Replace the URL with the HTTP address of the real server.
-request.download({ url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-  downloadTask = data;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-})
-```
-
-```TypeScript
-let downloadTask: request.DownloadTask;
-// Replace the URL with the HTTP address of the real server.
-request.download({ url: 'https://xxxx/xxxxx.hap', 
-filePath: 'xxx/xxxxx.hap'}, (err: BusinessError, data: request.DownloadTask) => {
-  if (err) {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  downloadTask = data;
-});
-```
-
 
 ## download
 
@@ -76,8 +49,6 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 Downloads a file. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -106,7 +77,3 @@ Downloads a file. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [download](#download)

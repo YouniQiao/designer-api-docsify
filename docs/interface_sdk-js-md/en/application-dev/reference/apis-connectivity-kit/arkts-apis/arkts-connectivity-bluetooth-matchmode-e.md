@@ -4,8 +4,6 @@ The enum of BLE match mode.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [MatchMode](arkts-connectivity-bluetoothmanager-matchmode-e.md)
@@ -22,8 +20,6 @@ aggressive mode
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [MATCH_MODE_AGGRESSIVE](arkts-connectivity-bluetoothmanager-matchmode-e.md#match_mode_aggressive)
@@ -39,8 +35,6 @@ MATCH_MODE_STICKY = 2
 sticky mode
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

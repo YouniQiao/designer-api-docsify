@@ -4,8 +4,6 @@ Enumerates the selected state types of the chip. It allows you to specify how ac
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CLICKED
@@ -17,8 +15,6 @@ CLICKED = 0
 Click type. The chip acts as a regular clickable component, without reporting any selected state to accessibility services. Use this type when the chip triggers an action but does not maintain a selected state.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,11 +28,9 @@ Click type. The chip acts as a regular clickable component, without reporting an
 CHECKED = 1
 ```
 
-Checkbox type. The chip reports its selected state to accessibility services using the accessibilityChecked attribute. Use this type for multi-select scenarios, such as tag filtering and attribute selection.
+Checkbox type. The chip reports its selected state to accessibility services using the [accessibilityChecked](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitychecked) attribute. Use this type for multi-select scenarios, such as tag filtering and attribute selection.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,11 +44,9 @@ Checkbox type. The chip reports its selected state to accessibility services usi
 SELECTED = 2
 ```
 
-Radio type. The chip reports its selected state to accessibility services using the accessibilitySelected attribute. Use this type for single-select scenarios, such as navigation bar tabs and radio buttons.
+Radio type. The chip reports its selected state to accessibility services using the [accessibilitySelected](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilityselected) attribute. Use this type for single-select scenarios, such as navigation bar tabs and radio buttons.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

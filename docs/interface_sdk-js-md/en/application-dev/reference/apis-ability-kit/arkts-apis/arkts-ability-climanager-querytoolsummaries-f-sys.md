@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryToolSummaries
@@ -15,8 +15,6 @@ function queryToolSummaries(): Promise<Array<ToolSummary>>
 Query all tool summary information. The summary information only contains the fields: name, description, version.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.QUERY_CLI_TOOL
 

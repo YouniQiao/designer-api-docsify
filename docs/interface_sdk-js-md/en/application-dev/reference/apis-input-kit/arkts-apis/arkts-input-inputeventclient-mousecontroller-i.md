@@ -9,33 +9,23 @@ and end with an **endAxis** call.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## beginAxis
 
-ArkTS-Dyn:
 ```TypeScript
 beginAxis(axis: Axis, value: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-beginAxis(axis: Axis, value: int): Promise<void>
 ```
 
 Starts an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -48,7 +38,7 @@ Starts an axis event. This API uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | Yes |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| value | number | Yes |
 
 **Return value:**
 
@@ -73,8 +63,6 @@ endAxis(axis: Axis): Promise<void>
 Ends an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -104,21 +92,13 @@ Ends an axis event. This API uses a promise to return the result.
 
 ## moveTo
 
-ArkTS-Dyn:
 ```TypeScript
 moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 ```
 
 Moves the mouse cursor to the specified display coordinates. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -130,9 +110,9 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| displayX | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| displayY | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| displayId | number | Yes |
+| displayX | number | Yes |
+| displayY | number | Yes |
 
 **Return value:**
 
@@ -157,8 +137,6 @@ pressButton(button: Button): Promise<void>
 Presses a mouse button. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -196,8 +174,6 @@ Release a mouse button. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -226,21 +202,13 @@ Release a mouse button. This API uses a promise to return the result.
 
 ## updateAxis
 
-ArkTS-Dyn:
 ```TypeScript
 updateAxis(axis: Axis, value: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-updateAxis(axis: Axis, value: int): Promise<void>
 ```
 
 Updates an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -253,7 +221,7 @@ Updates an axis event. This API uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | Yes |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| value | number | Yes |
 
 **Return value:**
 

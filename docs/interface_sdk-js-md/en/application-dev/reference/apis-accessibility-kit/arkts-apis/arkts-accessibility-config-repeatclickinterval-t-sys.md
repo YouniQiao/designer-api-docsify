@@ -8,8 +8,6 @@ Ignore repeated clicks at different time intervals.The configuration takes effec
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.

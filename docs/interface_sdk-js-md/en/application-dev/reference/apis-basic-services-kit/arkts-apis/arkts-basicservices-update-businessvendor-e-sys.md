@@ -4,8 +4,6 @@ Represents a device vendor.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ PUBLIC = 'public'
 Open source. This parameter indicates that the vendor is an open-source vendor, which is applicable to open- source version upgrade.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

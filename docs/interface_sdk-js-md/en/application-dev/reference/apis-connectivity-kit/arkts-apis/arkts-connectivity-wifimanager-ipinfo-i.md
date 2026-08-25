@@ -4,124 +4,108 @@ Wi-Fi IP information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## gateway
 
 ```TypeScript
-gateway: int
+gateway: number
 ```
 
 The gateway of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## ipAddress
 
 ```TypeScript
-ipAddress: int
+ipAddress: number
 ```
 
 The IP address of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## leaseDuration
 
 ```TypeScript
-leaseDuration: int
+leaseDuration: number
 ```
 
 The IP address lease duration of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## netmask
 
 ```TypeScript
-netmask: int
+netmask: number
 ```
 
 The network mask of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## primaryDns
 
 ```TypeScript
-primaryDns: int
+primaryDns: number
 ```
 
 The primary DNS server IP address of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## secondDns
 
 ```TypeScript
-secondDns: int
+secondDns: number
 ```
 
 The secondary DNS server IP address of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## serverIp
 
 ```TypeScript
-serverIp: int
+serverIp: number
 ```
 
 The DHCP server IP address of the Wi-Fi connection
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA

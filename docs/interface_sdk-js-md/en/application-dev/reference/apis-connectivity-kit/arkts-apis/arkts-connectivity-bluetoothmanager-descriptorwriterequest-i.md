@@ -4,8 +4,6 @@ Describes the parameters of the Gatt client's characteristic write request.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)
@@ -15,7 +13,7 @@ Describes the parameters of the Gatt client's characteristic write request.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -29,8 +27,6 @@ The UUID of the characteristic to which the descriptor belongs
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,8 +46,6 @@ The UUID of a DescriptorWriteRequest instance
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [descriptorUuid](arkts-connectivity-ble-descriptorwriterequest-i.md#descriptoruuid)
@@ -69,8 +63,6 @@ Indicates the address of the client that initiates the write request
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -90,8 +82,6 @@ Whether this request should be pending for later operation
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [isPrepared](arkts-connectivity-ble-descriptorwriterequest-i.md#isprepared)
@@ -109,8 +99,6 @@ Whether the remote client need a response
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -130,8 +118,6 @@ Indicates the byte offset of the start position for writing characteristic value
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [offset](arkts-connectivity-ble-descriptorwriterequest-i.md#offset)
@@ -149,8 +135,6 @@ The UUID of the service to which the descriptor belongs
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -170,8 +154,6 @@ The Id of the write request
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [transId](arkts-connectivity-ble-descriptorwriterequest-i.md#transid)
@@ -189,8 +171,6 @@ Indicates the value to be written
 **Type:** ArrayBuffer
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

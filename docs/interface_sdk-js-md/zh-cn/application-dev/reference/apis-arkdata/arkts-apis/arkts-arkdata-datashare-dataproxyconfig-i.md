@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## 导入模块
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## maxValueLength
@@ -25,8 +23,6 @@ maxValueLength?: DataProxyMaxValueLength
 **类型：** [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,8 +39,6 @@ type: DataProxyType
 **类型：** [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

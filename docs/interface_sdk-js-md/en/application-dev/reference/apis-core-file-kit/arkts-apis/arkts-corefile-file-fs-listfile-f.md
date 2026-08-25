@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -20,8 +20,6 @@ declare function listFile(
 Lists the names of all files and directories in the current path. Filtering is supported. This API uses a promise to return the result.You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,54 +48,6 @@ Lists the names of all files and directories in the current path. Filtering is s
 | 13900018 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, Filter, ListFileOptions } from '@kit.CoreFileKit';
-let listFileOption: ListFileOptions = {
-  recursion: false,
-  listNum: 0,
-  filter: {
-    suffix: [".png", ".jpg", ".jpeg"],
-    displayName: ["*abc", "efg*"],
-    fileSizeOver: 1024
-  }
-}
-fs.listFile(pathDir, listFileOption).then((filenames: Array<string>) => {
-  console.info("listFile succeed");
-  for (let i = 0; i < filenames.length; i++) {
-    console.info("fileName: %s", filenames[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error("list file failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, Filter, ListFileOptions } from '@kit.CoreFileKit';
-let listFileOption: ListFileOptions = {
-  recursion: false,
-  listNum: 0,
-  filter: {
-    suffix: [".png", ".jpg", ".jpeg"],
-    displayName: ["*abc", "efg*"],
-    fileSizeOver: 1024
-  }
-};
-fs.listFile(pathDir, listFileOption, (err: BusinessError, filenames: Array<string>) => {
-  if (err) {
-    console.error("list file failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("listFile succeed");
-    for (let i = 0; i < filenames.length; i++) {
-      console.info("filename: %s", filenames[i]);
-    }
-  }
-});
-```
-
 
 ## listFile
 
@@ -108,8 +58,6 @@ declare function listFile(path: string, callback: AsyncCallback<string[]>): void
 Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result.You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -132,10 +80,6 @@ Lists the names of all files and directories in the current path. Filtering is s
 | 13900018 |
 | 13900042 |
 
-**Examples**
-
-See [listFile](#listfile)
-
 
 ## listFile
 
@@ -150,8 +94,6 @@ declare function listFile(
 Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result.You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -174,7 +116,3 @@ Lists the names of all files and directories in the current path. Filtering is s
 | 13900011 |
 | 13900018 |
 | 13900042 |
-
-**Examples**
-
-See [listFile](#listfile)

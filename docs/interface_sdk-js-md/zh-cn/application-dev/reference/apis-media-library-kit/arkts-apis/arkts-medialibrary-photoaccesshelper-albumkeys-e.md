@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## URI
@@ -17,8 +15,6 @@ URI = 'uri'
 相册uri。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,8 +28,6 @@ ALBUM_NAME = 'album_name'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## ALBUM_LPATH
@@ -43,11 +37,12 @@ ALBUM_LPATH = 'lpath'
 ```
 
 相册的虚拟路径。支持的相册及对应的lpath值：  
-- 相机应用相册：'/DCIM/Camera'- 截图应用相册：'/Pictures/Screenshots'- 屏幕录制应用相册：'/Pictures/Screenrecords'- 用户创建的相册：'/Pictures/Users/{用户自定义相册名称}'
+- 相机应用相册：'/DCIM/Camera'  
+- 截图应用相册：'/Pictures/Screenshots'  
+- 屏幕录制应用相册：'/Pictures/Screenrecords'  
+- 用户创建的相册：'/Pictures/Users/{用户自定义相册名称}'
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,7 +55,5 @@ CHANGE_TIME = 'change_time'
 相册的更改时间（单位：秒）。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

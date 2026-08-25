@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from '@kit.ArkUI';
+import { font } from 'kits/@kit.ArkUI';
 ```
 
 ## getUIFontConfig
@@ -15,8 +15,6 @@ function getUIFontConfig(): UIFontConfig
 Obtains the UI font configuration information in the system font configuration file.This API can only obtain the information in the configuration file. If the UI context is not clear, **undefined** may be returned. If you want to obtain the full font configuration information, you are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) API of the font engine.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

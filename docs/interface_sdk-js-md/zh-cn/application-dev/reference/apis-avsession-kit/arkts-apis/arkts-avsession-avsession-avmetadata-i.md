@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## album
@@ -25,8 +23,6 @@ album?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ artist?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -57,13 +51,13 @@ assetId: string
 ```
 
 媒体ID。媒体信息的唯一标识，由应用自定义。  
-- 该属性发生变化则其他元数据属性都将被刷新。 - 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。 - 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
+- 该属性发生变化则其他元数据属性都将被刷新。  
+- 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。  
+- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
 
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -81,8 +75,6 @@ author?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -99,8 +91,6 @@ avQueueId?: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## avQueueImage
@@ -110,13 +100,12 @@ avQueueImage?: image.PixelMap | string
 ```
 
 歌单（歌曲列表）封面图。图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。  
-- 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。 - 设置为url图片路径，获取的为url图片路径。
+- 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
+- 设置为url图片路径，获取的为url图片路径。
 
 **类型：** image.PixelMap \| string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -132,8 +121,6 @@ avQueueName?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## bundleIcon
@@ -147,8 +134,6 @@ readonly bundleIcon?: image.PixelMap
 **类型：** image.PixelMap
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -164,8 +149,6 @@ composer?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## description
@@ -180,8 +163,6 @@ description?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -189,16 +170,14 @@ description?: string
 ## displayTags
 
 ```TypeScript
-displayTags?: int
+displayTags?: number
 ```
 
 媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -214,23 +193,19 @@ drmSchemes?: Array<string>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## duration
 
 ```TypeScript
-duration?: long
+duration?: number
 ```
 
 媒体时长，单位毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -249,8 +224,6 @@ fastForwardSkipIntervals?: SkipIntervals
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -258,16 +231,14 @@ fastForwardSkipIntervals?: SkipIntervals
 ## filter
 
 ```TypeScript
-filter?: int
+filter?: number
 ```
 
 当前会话支持的协议，默认为TYPE_CAST_PLUS_STREAM。具体取值参考[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -286,8 +257,6 @@ lyric?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## mediaImage
@@ -297,13 +266,12 @@ mediaImage?: image.PixelMap | string
 ```
 
 图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。  
-- 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。 - 设置为url图片路径，获取的为url图片路径。
+- 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
+- 设置为url图片路径，获取的为url图片路径。
 
 **类型：** image.PixelMap \| string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -321,8 +289,6 @@ nextAssetId?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -338,8 +304,6 @@ previousAssetId?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -357,8 +321,6 @@ publishDate?: Date
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## rewindSkipIntervals
@@ -373,8 +335,6 @@ rewindSkipIntervals?: SkipIntervals
 **类型：** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -392,8 +352,6 @@ singleLyricText?: string
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -410,8 +368,6 @@ skipIntervals?: SkipIntervals
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## subtitle
@@ -425,8 +381,6 @@ subtitle?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -444,8 +398,6 @@ title?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -461,8 +413,6 @@ writer?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

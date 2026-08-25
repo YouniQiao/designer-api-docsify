@@ -6,14 +6,12 @@ Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquer
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getActiveVideoStabilizationMode
@@ -25,8 +23,6 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 查询当前正在使用的视频防抖模式。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -44,40 +40,6 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getActiveVideoStabilizationMode(captureSession: camera.CaptureSession): camera.VideoStabilizationMode | undefined {
-  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
-  try {
-    vsMode = captureSession.getActiveVideoStabilizationMode();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
-  }
-  return vsMode;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getActiveVideoStabilizationMode(videoSession: camera.VideoSession): camera.VideoStabilizationMode | undefined {
-  let vsMode: camera.VideoStabilizationMode | undefined = undefined;
-  try {
-    vsMode = videoSession.getActiveVideoStabilizationMode();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getActiveVideoStabilizationMode call failed. error code: ${err.code}`);
-  }
-  return vsMode;
-}
-```
-
 ## setVideoStabilizationMode
 
 ```TypeScript
@@ -87,8 +49,6 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 设置视频防抖模式。需要先检查设备是否支持对应的防抖模式，可以通过 [isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported)方法判断所设置的模式是 否支持。建议在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)与[Start](arkts-camera-camera-session-i.md#start)之间设置视频防抖。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -105,33 +65,3 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 | 错误码ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setVideoStabilizationMode(captureSession: camera.CaptureSession): void {
-  try {
-    captureSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setVideoStabilizationMode(videoSession: camera.VideoSession): void {
-  try {
-    videoSession.setVideoStabilizationMode(camera.VideoStabilizationMode.OFF);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setVideoStabilizationMode call failed. error code: ${err.code}`);
-  }
-}
-```

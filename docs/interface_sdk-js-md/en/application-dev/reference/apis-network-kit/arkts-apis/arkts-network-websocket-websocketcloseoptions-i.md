@@ -4,29 +4,25 @@ Defines the optional parameters carried in the request for closing a WebSocket c
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## code
 
 ```TypeScript
-code?: int
+code?: number
 ```
 
 Error code. Set this parameter based on the actual situation. The value must be a positive integer ranging from 1 000 to 1015. If no error code is specified or the input value is not within the preceding range, the code will be set to the default value **1000**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,8 +39,6 @@ Error cause. Set this parameter based on the actual situation. If no reason valu
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

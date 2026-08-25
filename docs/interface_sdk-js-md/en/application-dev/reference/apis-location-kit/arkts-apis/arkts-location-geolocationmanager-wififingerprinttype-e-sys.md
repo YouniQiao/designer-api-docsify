@@ -4,8 +4,6 @@ Enum for Wi-Fi fingerprint type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ SEMANTIC = 1
 Indicates the Wi-Fi fingerprint of semantic information.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ LOCATION = 2
 Indicates the Wi-Fi fingerprint corresponding to a location.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

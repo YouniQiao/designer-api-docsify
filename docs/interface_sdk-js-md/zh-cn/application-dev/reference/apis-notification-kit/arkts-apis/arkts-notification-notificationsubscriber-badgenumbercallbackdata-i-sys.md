@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -22,8 +20,6 @@ readonly appInstanceKey?: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -31,16 +27,14 @@ readonly appInstanceKey?: string
 ## badgeNumber
 
 ```TypeScript
-readonly badgeNumber: int
+readonly badgeNumber: number
 ```
 
 角标个数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -58,8 +52,6 @@ readonly bundle: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -76,8 +68,6 @@ readonly instanceKey?: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **废弃版本：** 15
 
 **替代接口：** [appInstanceKey](#appinstancekey)
@@ -89,16 +79,14 @@ readonly instanceKey?: number
 ## uid
 
 ```TypeScript
-readonly uid: int
+readonly uid: number
 ```
 
 应用的uid。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 

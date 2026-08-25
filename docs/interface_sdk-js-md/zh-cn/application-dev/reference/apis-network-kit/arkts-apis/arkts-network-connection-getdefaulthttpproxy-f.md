@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getDefaultHttpProxy
@@ -21,8 +21,6 @@ function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **参数：**
@@ -37,65 +35,6 @@ function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 | --- |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy((error: BusinessError, data: connection.HttpProxy) => {
-  if (error) {
-    console.error(`Failed to get default http proxy. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy((error: BusinessError|null, data: connection.HttpProxy|undefined) => {
-  if (error) {
-    console.error(`Failed to get default http proxy. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);+
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get request. Code:${error.code}, message:${error.message} `);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-}).catch((error: Error) => {
-  let businessError = error as BusinessError;
-  console.error(`Failed to get request. Code:${error.code}, message:${error.message} `);
-});
-```
 
 
 ## getDefaultHttpProxy
@@ -113,8 +52,6 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 **返回值：**
@@ -129,7 +66,3 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 | --- |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [getDefaultHttpProxy](#getdefaulthttpproxy)

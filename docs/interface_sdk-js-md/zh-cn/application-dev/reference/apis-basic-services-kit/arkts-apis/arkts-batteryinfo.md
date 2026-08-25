@@ -4,44 +4,24 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { batteryInfo } from '@kit.BasicServicesKit';
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
-
-### 函数
-
-| 名称 |
-| --- |
-| [batteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-f.md) |
-| [batterySOC](arkts-basicservices-batteryinfo-batterysoc-f.md) |
-| [batteryTemperature](arkts-basicservices-batteryinfo-batterytemperature-f.md) |
-| [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md) |
-| [healthStatus](arkts-basicservices-batteryinfo-healthstatus-f.md) |
-| [isBatteryPresent](arkts-basicservices-batteryinfo-isbatterypresent-f.md) |
-| [nowCurrent](arkts-basicservices-batteryinfo-nowcurrent-f.md) |
-| [pluggedType](arkts-basicservices-batteryinfo-pluggedtype-f.md) |
-| [technology](arkts-basicservices-batteryinfo-technology-f.md) |
-| [voltage](arkts-basicservices-batteryinfo-voltage-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [estimatedRemainingChargeTime](arkts-basicservices-batteryinfo-estimatedremainingchargetime-f-sys.md) |
 | [getBatteryConfig](arkts-basicservices-batteryinfo-getbatteryconfig-f-sys.md) |
 | [isBatteryConfigSupported](arkts-basicservices-batteryinfo-isbatteryconfigsupported-f-sys.md) |
-| [remainingEnergy](arkts-basicservices-batteryinfo-remainingenergy-f-sys.md) |
 | [setBatteryConfig](arkts-basicservices-batteryinfo-setbatteryconfig-f-sys.md) |
-| [totalEnergy](arkts-basicservices-batteryinfo-totalenergy-f-sys.md) |
 <!--DelEnd-->
 
 ### 枚举

@@ -4,8 +4,6 @@ The enum of major class of a bluetooth device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_MISC
@@ -17,8 +15,6 @@ MAJOR_MISC = 0x0000
 Miscellaneous device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,8 +28,6 @@ Computer.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_PHONE
@@ -45,8 +39,6 @@ MAJOR_PHONE = 0x0200
 Mobile phone.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -60,8 +52,6 @@ Network device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_AUDIO_VIDEO
@@ -73,8 +63,6 @@ MAJOR_AUDIO_VIDEO = 0x0400
 Audio or video device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -88,8 +76,6 @@ Peripheral device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_IMAGING
@@ -101,8 +87,6 @@ MAJOR_IMAGING = 0x0600
 Imaging device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -116,8 +100,6 @@ Wearable device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_TOY
@@ -129,8 +111,6 @@ MAJOR_TOY = 0x0800
 Toy.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -144,8 +124,6 @@ Health device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## MAJOR_UNCATEGORIZED
@@ -157,7 +135,5 @@ MAJOR_UNCATEGORIZED = 0x1F00
 Unclassified device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

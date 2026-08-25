@@ -4,8 +4,6 @@ Enumerates the path operation types contained in an iterator. It is used to read
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## MOVE
@@ -17,8 +15,6 @@ MOVE = 0
 Sets the start point.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ Adds a line segment.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## QUAD
@@ -45,8 +39,6 @@ QUAD = 2
 Adds a quadratic Bezier curve for smooth transitions.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -60,8 +52,6 @@ Adds a conic curve.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## CUBIC
@@ -73,8 +63,6 @@ CUBIC = 4
 Adds a cubic Bezier curve for smooth transitions.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -88,8 +76,6 @@ Closes a path.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DONE
@@ -101,7 +87,5 @@ DONE = CLOSE + 1
 The path setting is complete.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

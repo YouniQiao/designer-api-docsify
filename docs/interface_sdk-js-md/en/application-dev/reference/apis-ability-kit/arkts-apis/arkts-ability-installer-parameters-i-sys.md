@@ -4,8 +4,6 @@ Describes the extended parameter information.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the extended parameter information.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## key
@@ -27,8 +25,6 @@ Key of an extended parameter.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -45,8 +41,6 @@ Value of the extended parameter.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

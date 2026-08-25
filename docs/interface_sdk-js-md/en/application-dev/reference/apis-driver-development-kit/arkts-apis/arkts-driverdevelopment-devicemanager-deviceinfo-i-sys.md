@@ -4,8 +4,6 @@ Defines the detailed information about a device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the detailed information about a device.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## deviceId
 
 ```TypeScript
-deviceId: long
+deviceId: number
 ```
 
 Device ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -46,8 +42,6 @@ UID of the driver matching the device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Whether the device matches the driver. The value `true` indicates the device mat
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 

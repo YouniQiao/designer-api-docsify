@@ -4,8 +4,6 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
 ## SPATIAL_POINT
@@ -17,8 +15,6 @@ SPATIAL_POINT = 'SpatialPoint'
 指向识别能力
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ SPATIAL_GESTURE = 'SpatialGesture'
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
@@ -53,8 +47,6 @@ CAR_STATUS = 'CarStatus'
 车辆状态采集能力
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,8 +64,6 @@ CAR_CFG = 'CarCfg'
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
@@ -89,8 +79,6 @@ HABIT_RECOMMENDATION = 'HabitRecommendation'
 习惯推荐能力
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

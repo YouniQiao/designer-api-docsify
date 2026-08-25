@@ -4,8 +4,6 @@ Defines a vertical domain panel manager.@namespace verticalPanelManager
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
@@ -15,7 +13,7 @@ Defines a vertical domain panel manager.@namespace verticalPanelManager
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from '@kit.AbilityKit';
+import { verticalPanelManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -25,7 +23,6 @@ import { verticalPanelManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md) |
 | [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md) |
 <!--DelEnd-->
 

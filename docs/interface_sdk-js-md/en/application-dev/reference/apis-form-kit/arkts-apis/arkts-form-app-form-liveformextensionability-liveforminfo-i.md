@@ -4,29 +4,25 @@ Provides information about a live form.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## Modules to Import
 
 ```TypeScript
-import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
+import { LiveFormExtensionAbility, LiveFormInfo } from 'kits/@kit.FormKit';
 ```
 
 ## borderRadius
 
 ```TypeScript
-borderRadius: double
+borderRadius: number
 ```
 
 The form border radius. Unit: vp, The value must be greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ The form id of the live form.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -65,8 +59,6 @@ The live form display area.
 **Type:** formInfo.Rect
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

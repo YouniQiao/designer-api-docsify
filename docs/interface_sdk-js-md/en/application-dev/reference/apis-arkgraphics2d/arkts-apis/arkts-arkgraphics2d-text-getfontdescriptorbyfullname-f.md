@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## getFontDescriptorByFullName
@@ -15,8 +15,6 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 Obtains the font descriptor based on the font name and type. This API uses a promise to return the result.A font descriptor is a data structure that describes font features. It contains details of the font appearance and properties.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -40,37 +38,3 @@ Obtains the font descriptor based on the font name and type. This API uses a pro
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-import { BusinessError } from '@kit.BasicServicesKit'
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button("get fontDescriptor")
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .width(300)
-          .height(80)
-          .onClick(() => {
-            let fontType:text.SystemFontType = text.SystemFontType.GENERIC
-            let promise = text.getFontDescriptorByFullName("HarmonyOS Sans", fontType)
-            promise.then((fontDescriptor) => {
-              console.info(`desc: ${JSON.stringify(fontDescriptor)}`)
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get fontDescriptor by fullName, error: ${JSON.stringify(error)}`);
-            });
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

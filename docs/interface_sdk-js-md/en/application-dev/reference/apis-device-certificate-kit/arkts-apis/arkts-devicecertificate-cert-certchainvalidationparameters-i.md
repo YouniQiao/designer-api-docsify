@@ -4,14 +4,12 @@ Represents the parameters for certificate chain validation.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadIntermediateCa
@@ -20,15 +18,13 @@ import { cert } from '@kit.DeviceCertificateKit';
 allowDownloadIntermediateCa?: boolean
 ```
 
-Whether to allow the application to download the missing intermediate CA certificate from the network. **true** means yes; **false** otherwise. The default value is **false**. <br>The download address is obtained from the certificate AIA extension. Only HTTP is supported. To use the network for download, you need to request the **ohos.permission.INTERNET** permission. For details about the permission configuration, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
+Whether to allow the application to download the missing intermediate CA certificate from the network. **true** means yes; **false** otherwise. The default value is **false**. The download address is obtained from the certificate AIA extension. Only HTTP is supported. To use the network for download, you need to request the **ohos.permission.INTERNET** permission. For details about the permission configuration, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -46,8 +42,6 @@ CRL collections used to check whether the certificate is revoked.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -63,8 +57,6 @@ Date for checking certificate validity.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,8 +74,6 @@ Usage of the key in the certificate to be validated.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -99,8 +89,6 @@ Type of the policy for certificate validation.
 **Type:** [ValidationPolicyType](arkts-devicecertificate-cert-validationpolicytype-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,8 +106,6 @@ Parameters for checking the certificate revocation status.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -136,8 +122,6 @@ Host name in the certificate to be verified. This parameter must be used togethe
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -153,8 +137,6 @@ List of trusted anchors.
 **Type:** Array&lt;[X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -173,8 +155,6 @@ Whether to use the prebuilt CA certificate to validate the certificate chain. **
 **Default:** false
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

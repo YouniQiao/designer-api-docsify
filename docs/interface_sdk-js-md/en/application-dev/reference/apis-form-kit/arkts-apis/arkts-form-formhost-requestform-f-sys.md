@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## requestForm
@@ -15,8 +15,6 @@ function requestForm(formId: string, callback: AsyncCallback<void>): void
 Requests a widget update. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -44,40 +42,6 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 | [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
 
-**Examples**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.requestForm(formId, (error: BusinessError) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.requestForm(formId).then(() => {
-    console.info('formHost requestForm success');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## requestForm
 
@@ -88,8 +52,6 @@ function requestForm(formId: string): Promise<void>
 Requests a widget update. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -121,7 +83,3 @@ Requests a widget update. This API uses a promise to return the result.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 | [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
-
-**Examples**
-
-See [requestForm](#requestform)

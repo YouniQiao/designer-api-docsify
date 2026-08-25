@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## on('privateModeChange')
@@ -15,8 +15,6 @@ function on(type: 'privateModeChange', callback: Callback<boolean>): void
 Subscribes to privacy mode changes of this display. When there is a privacy window in the foreground of the display, the display is in privacy mode, and the content in the privacy window cannot be captured or recorded.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -35,18 +33,3 @@ Subscribes to privacy mode changes of this display. When there is a privacy wind
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<boolean> = (data: boolean) => {
-  console.info(`Listening enabled. Data: ${data}`);
-};
-try {
-  display.on("privateModeChange", callback);
-} catch (exception) {
-  console.error(`Failed to register callback. Code: ${exception.code} , message : ${exception.message}`);
-}
-```

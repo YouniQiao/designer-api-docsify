@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## getAllContinuousTasks
@@ -15,8 +15,6 @@ function getAllContinuousTasks(context: Context): Promise<ContinuousTaskInfo[]>
 获取所有长时任务信息，如长时任务ID、长时任务类型等，使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -43,100 +41,6 @@ function getAllContinuousTasks(context: Context): Promise<ContinuousTaskInfo[]>
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    try {
-      // 如果当前没有申请长时任务，则获取到一个空数组
-      backgroundTaskManager.getAllContinuousTasks(this.context).then((res: backgroundTaskManager.ContinuousTaskInfo[]) => {
-        console.info(`Operation getAllContinuousTasks succeeded. data: ` + JSON.stringify(res));
-      }).catch((error: BusinessError) => {
-        console.error(`Operation getAllContinuousTasks failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation getAllContinuousTasks failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      // 如果当前没有申请长时任务，则获取到一个空数组
-      backgroundTaskManager.getAllContinuousTasks(this.context).then((res: backgroundTaskManager.ContinuousTaskInfo[]) => {
-        console.info(`Operation getAllContinuousTasks succeeded. data: ` + JSON.stringify(res));
-      }).catch((error) => {
-        console.error(`Operation getAllContinuousTasks failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation getAllContinuousTasks failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    try {
-      // 如果当前没有申请长时任务，则获取到一个空数组
-      backgroundTaskManager.getAllContinuousTasks(this.context, false).then((res: backgroundTaskManager.ContinuousTaskInfo[]) => {
-        console.info(`Operation getAllContinuousTasks succeeded. data: ` + JSON.stringify(res));
-      }).catch((error: BusinessError) => {
-        console.error(`Operation getAllContinuousTasks failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation getAllContinuousTasks failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      // 如果当前没有申请长时任务，则获取到一个空数组
-      backgroundTaskManager.getAllContinuousTasks(this.context, false).then((res: backgroundTaskManager.ContinuousTaskInfo[]) => {
-        console.info(`Operation getAllContinuousTasks succeeded. data: ` + JSON.stringify(res));
-      }).catch((error) => {
-        console.error(`Operation getAllContinuousTasks failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation getAllContinuousTasks failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 
 ## getAllContinuousTasks
 
@@ -147,8 +51,6 @@ function getAllContinuousTasks(context: Context, includeSuspended: boolean): Pro
 获取所有长时任务信息，如长时任务ID、长时任务类型等。可选择是否获取暂停的长时任务信息，使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -175,7 +77,3 @@ function getAllContinuousTasks(context: Context, includeSuspended: boolean): Pro
 | [9800002](../errorcode-backgroundTaskMgr.md#9800002-parcel读写操作失败) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
-
-**示例**
-
-参见 [getAllContinuousTasks](#getallcontinuoustasks)

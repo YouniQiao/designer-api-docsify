@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## setSeniorModeStateForApp
@@ -15,8 +15,6 @@ function setSeniorModeStateForApp(appSeniorModeInfos: Array<AppSeniorModeInfo>):
 设置应用“长辈模式”的状态。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -46,22 +44,3 @@ function setSeniorModeStateForApp(appSeniorModeInfos: Array<AppSeniorModeInfo>):
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
 | [9300008](../errorcode-accessibility.md#9300008-应用分身索引不合法) |
-
-**示例**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let infos: config.AppSeniorModeInfo[] = [{
-  bundleName: 'com.example.myapplication',
-  appIndex: 0,
-  seniorModeState: true
-}];
-
-config.setSeniorModeStateForApp(infos).then(() => {
-  console.info(`Succeeded in setting seniorModeState for App.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set seniorModeState for app. Code: ${err.code}, message: ${err.message}`);
-});
-```

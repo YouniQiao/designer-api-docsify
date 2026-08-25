@@ -3,16 +3,16 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## cancelAsBundle
 
 ```TypeScript
 function cancelAsBundle(
-    id: int,
+    id: number,
     representativeBundle: string,
-    userId: int,
+    userId: number,
     callback: AsyncCallback<void>
   ): void
 ```
@@ -20,8 +20,6 @@ function cancelAsBundle(
 取消代理通知。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -33,9 +31,9 @@ function cancelAsBundle(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| id | number | 是 |
 | [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -52,124 +50,16 @@ function cancelAsBundle(
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// cancelAsBundle
-let cancelAsBundleCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('cancelAsBundle success');
-    }
-}
-// 被代理应用的包名
-let representativeBundle: string = 'com.example.demo';
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-notificationManager.cancelAsBundle(0, representativeBundle, userId, cancelAsBundleCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cancelAsBundleCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('cancelAsBundle success');
-    }
-}
-// 被代理应用的包名
-let representativeBundle: string = 'bundleName1';
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-notificationManager.cancelAsBundle(0, representativeBundle, userId, cancelAsBundleCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 被代理应用的包名
-let representativeBundle: string = 'com.example.demo';
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-notificationManager.cancelAsBundle(0, representativeBundle, userId).then(() => {
-    console.info('cancelAsBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 被代理应用的包名
-let representativeBundle: string = 'bundleName1';
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-notificationManager.cancelAsBundle(0, representativeBundle, userId).then(() => {
-    console.info('cancelAsBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`cancelAsBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let representativeBundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-notificationManager.cancelAsBundle(representativeBundle, 1).then(() => {
-    console.info('cancelAsBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let representativeBundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-notificationManager.cancelAsBundle(representativeBundle, 1).then(() => {
-    console.info('cancelAsBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`cancelAsBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## cancelAsBundle
 
 ```TypeScript
-function cancelAsBundle(id: int, representativeBundle: string, userId: int): Promise<void>
+function cancelAsBundle(id: number, representativeBundle: string, userId: number): Promise<void>
 ```
 
 取消代理通知。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -181,9 +71,9 @@ function cancelAsBundle(id: int, representativeBundle: string, userId: int): Pro
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| id | number | 是 |
 | [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -205,22 +95,16 @@ function cancelAsBundle(id: int, representativeBundle: string, userId: int): Pro
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-参见 [cancelAsBundle](#cancelasbundle)
-
 
 ## cancelAsBundle
 
 ```TypeScript
-function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<void>
+function cancelAsBundle(representativeBundle: BundleOption, id: number): Promise<void>
 ```
 
 取消代理通知。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -232,8 +116,8 @@ function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<vo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
+| id | number | 是 |
 
 **返回值：**
 
@@ -255,7 +139,3 @@ function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<vo
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [cancelAsBundle](#cancelasbundle)

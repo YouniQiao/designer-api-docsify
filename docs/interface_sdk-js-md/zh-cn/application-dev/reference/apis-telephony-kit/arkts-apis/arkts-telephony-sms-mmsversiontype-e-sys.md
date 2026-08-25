@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ MMS_VERSION_1_0 = 0x10
 彩信版本1_0
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -36,8 +32,6 @@ MMS_VERSION_1_1 = 0x11
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ MMS_VERSION_1_2 = 0x12
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.SmsMms
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ MMS_VERSION_1_3 = 0x13
 彩信版本1_3
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 

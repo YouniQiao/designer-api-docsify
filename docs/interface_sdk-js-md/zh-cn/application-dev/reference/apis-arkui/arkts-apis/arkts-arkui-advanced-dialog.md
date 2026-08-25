@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
+import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

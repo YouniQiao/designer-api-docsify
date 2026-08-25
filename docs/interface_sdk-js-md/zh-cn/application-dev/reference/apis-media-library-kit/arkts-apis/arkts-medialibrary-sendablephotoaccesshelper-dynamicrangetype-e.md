@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SDR
@@ -18,8 +16,6 @@ SDR = 0
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## HDR
@@ -31,7 +27,5 @@ HDR = 1
 高动态范围类型。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

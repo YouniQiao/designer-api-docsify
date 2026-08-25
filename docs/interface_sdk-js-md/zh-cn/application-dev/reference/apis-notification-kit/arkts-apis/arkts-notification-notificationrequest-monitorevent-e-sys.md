@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ MONITOR_TYPE_ENTRY = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ MONITOR_TYPE_LEAVE = 2
 退出地理围栏。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 

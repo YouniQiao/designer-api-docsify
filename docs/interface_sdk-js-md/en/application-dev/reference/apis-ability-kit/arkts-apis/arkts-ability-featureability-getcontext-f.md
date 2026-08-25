@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## getContext
@@ -16,8 +16,6 @@ Obtains the application context.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -27,18 +25,3 @@ Obtains the application context.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) |
-
-**Examples**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-let context = featureAbility.getContext();
-context.getBundleName((error, data) => {
-  if (error && error.code !== 0) {
-    console.error(`getBundleName fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`getBundleName success, data: ${JSON.stringify(data)}`);
-  }
-});
-```

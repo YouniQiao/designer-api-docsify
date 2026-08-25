@@ -3,18 +3,16 @@
 Represents the ECC/SM2 signature data that contains (r, s).
 
 > **NOTE：**&gt;
-> **r** and **s** are each 256 bits long.
+> **r** and **s** are each 256 bits number.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Signature
 
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## r
@@ -28,8 +26,6 @@ Randomized value derived from the elliptic curve calculation using the ephemeral
 **Type:** bigint
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -46,8 +42,6 @@ Signature component, computed using the signer's private key, r, and the hashed 
 **Type:** bigint
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

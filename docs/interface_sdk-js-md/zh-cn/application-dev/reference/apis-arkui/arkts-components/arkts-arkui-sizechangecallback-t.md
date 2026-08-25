@@ -8,8 +8,6 @@ declare type SizeChangeCallback = (oldValue: SizeOptions, newValue: SizeOptions)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -22,5 +20,5 @@ declare type SizeChangeCallback = (oldValue: SizeOptions, newValue: SizeOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| oldValue | [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md) | 是 |
-| newValue | [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md) | 是 |
+| oldValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |
+| newValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |

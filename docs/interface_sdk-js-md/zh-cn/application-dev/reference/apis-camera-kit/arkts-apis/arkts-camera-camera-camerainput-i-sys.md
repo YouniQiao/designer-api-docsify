@@ -4,33 +4,23 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## closeDelayed
 
-ArkTS-Dyn:
 ```TypeScript
 closeDelayed(time: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-closeDelayed(time: int): Promise<void>
 ```
 
 Delay close camera.
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -40,7 +30,7 @@ Delay close camera.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| time | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| time | number | 是 |
 
 **返回值：**
 
@@ -65,8 +55,6 @@ controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus)
 Control auxiliary.
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -102,8 +90,6 @@ usedAsPosition(position: CameraPosition): void
 Sets the camera to be used as a camera at the specified position.
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

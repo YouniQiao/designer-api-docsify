@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('activeStateChange')
@@ -23,8 +23,6 @@ Subscribes to permission usage status change events for a specified permission l
 > When listening is no longer needed, off should be called to unsubscribe.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -52,19 +50,3 @@ Subscribes to permission usage status change events for a specified permission l
 | [12100005](../errorcode-access-token.md#12100005-listener-overflows) |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 | [12100008](../errorcode-access-token.md#12100008-out-of-memory) |
-
-**Examples**
-
-```TypeScript
-import { privacyManager, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let permissionList: Array<Permissions> = [];
-try {
-    privacyManager.on('activeStateChange', permissionList, (data: privacyManager.ActiveChangeResponse) => {
-        console.debug(`receive permission state change, data: + ${data}`);
-    });
-} catch(err) {
-    console.error(`Catch errcode: ${err.code}, message: ${err.message}`);
-}
-```

@@ -4,8 +4,6 @@ Defines the cell broadcast configuration list configs.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the cell broadcast configuration list configs.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## messageIds
 
 ```TypeScript
-messageIds: int[]
+messageIds: number[]
 ```
 
 Indicates the messageIDs for the cell broadcast configuration list configs.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -46,8 +42,6 @@ Indicates the RAN type for the cell broadcast configuration list configs.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Indicates the RAN type for the cell broadcast configuration list configs.
 ## slotId
 
 ```TypeScript
-slotId: int
+slotId: number
 ```
 
 Indicates the card slot ID for the cell broadcast configuration list configs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

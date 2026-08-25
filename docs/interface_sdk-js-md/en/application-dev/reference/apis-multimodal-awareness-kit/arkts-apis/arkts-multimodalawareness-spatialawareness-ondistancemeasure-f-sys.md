@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onDistanceMeasure
@@ -16,8 +16,6 @@ function onDistanceMeasure(configParams: DistanceMeasurementConfigParams,
 Subscribe to distance measurement result data.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SENSING_WITH_ULTRASOUND
 
@@ -44,24 +42,3 @@ Subscribe to distance measurement result data.
 | [35100001](../errorcode-spatialAwareness.md#35100001-service-exception) |
 | [35100002](../errorcode-spatialAwareness.md#35100002-subscription-failed) |
 | [35100004](../errorcode-spatialAwareness.md#35100004-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
-   console.info('call onDistanceMeasure before');
-   let configParams: spatialAwareness.DistanceMeasurementConfigParams = {
-      deviceList: ["123456"],
-      techType: 2,
-      reportMode: 0,
-      reportFrequency: 340
-   };
-   console.info('call onDistanceMeasure start');
-   try {
-      spatialAwareness.onDistanceMeasure(configParams, (data:spatialAwareness.DistanceMeasurementResponse) => {
-         console.info('result = ${data.distance}');
-      });
-   } catch (err) {
-      console.error('call onDistanceMeasure failed, errCode = ' + err.code);
-   }
-```

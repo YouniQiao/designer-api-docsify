@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## isControlSupported
@@ -15,8 +15,6 @@ function isControlSupported(mechDeviceType?: MechDeviceType): boolean
 Checks whether the current device supports embodied control for a specific type of device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 

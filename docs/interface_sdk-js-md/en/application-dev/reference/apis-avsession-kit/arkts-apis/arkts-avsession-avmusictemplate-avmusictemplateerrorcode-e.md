@@ -1,10 +1,8 @@
 # AVMusicTemplateErrorCode
 
-Enumeration ErrorCode types, returns in BusinessError.code.@enum { int }
+Enumeration ErrorCode types, returns in BusinessError.code.@enum { number }
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -17,8 +15,6 @@ ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_FAILED = 35000001
 Failed to create the AVMusicTemplate.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Failed to create the AVMusicTemplate controller.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -49,8 +43,6 @@ ERR_CODE_TEMPLATE_LISTENER_NO_EXIT = 35000003
 Template listener not registered.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +58,6 @@ Controller callback not registered.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -81,8 +71,6 @@ ERR_CODE_AV_MUSIC_TEMPLATE_NOT_EXIST = 35000005
 AVMusicTemplate does not exist.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +86,6 @@ AVMusicTemplateController does not exist.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -113,8 +99,6 @@ ERR_CODE_CONTROLLER_IS_EXIST = 35000007
 AVMusicTemplateController already exists.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,8 +114,6 @@ AVMusicTemplate Manager services do not exist.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -145,8 +127,6 @@ ERR_CODE_SERVICE_EXCEPTION = 35000009
 AVMusicTemplate Manager services exception.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,8 +142,6 @@ The data exceeds the maximum allowable transmission capacity.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -178,8 +156,6 @@ The data write error, data is invalid.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -193,8 +169,6 @@ ERR_CODE_AV_MUSIC_TEMPLATE_ERROR = 35000012
 AVMusicTemplate error.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

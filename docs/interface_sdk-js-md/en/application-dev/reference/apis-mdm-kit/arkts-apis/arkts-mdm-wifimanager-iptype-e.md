@@ -4,8 +4,6 @@ Enumerates the IP address types.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## STATIC
@@ -17,8 +15,6 @@ STATIC = 0
 Static IP address, which is used in scenarios where a fixed IP address is required, for example, a fixed IP address of an office printer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Dynamic Host Configuration Protocol (DHCP), which is a service that automaticall
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -49,8 +43,6 @@ UNKNOWN = 2
 Not specified.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

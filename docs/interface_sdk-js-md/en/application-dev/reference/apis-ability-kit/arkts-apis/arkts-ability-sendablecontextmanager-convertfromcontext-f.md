@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from '@kit.AbilityKit';
+import { sendableContextManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## convertFromContext
@@ -15,8 +15,6 @@ function convertFromContext(context: common.Context): SendableContext
 Converts a Context object to a SendableContext object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,40 +39,3 @@ Converts a Context object to a SendableContext object.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, sendableContextManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { worker } from '@kit.ArkTS';
-
-@Sendable
-export class SendableObject {
-  constructor(sendableContext: sendableContextManager.SendableContext) {
-    this.sendableContext = sendableContext;
-  }
-
-  sendableContext: sendableContextManager.SendableContext;
-  // other sendable object
-}
-
-export default class EntryAbility extends UIAbility {
-  worker: worker.ThreadWorker = new worker.ThreadWorker('entry/ets/workers/Worker.ets');
-
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-
-    // convert and post
-    try {
-      let sendableContext: sendableContextManager.SendableContext =
-        sendableContextManager.convertFromContext(this.context);
-      let object: SendableObject = new SendableObject(sendableContext);
-      hilog.info(0x0000, 'testTag', '%{public}s', 'Ability post message');
-      this.worker.postMessageWithSharedSendable(object);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'convertFromContext failed %{public}s', JSON.stringify(error));
-    }
-  }
-}
-```

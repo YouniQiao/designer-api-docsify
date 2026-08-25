@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from '@kit.ArkUI';
+import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## SelectionMenu
@@ -15,8 +15,6 @@ export declare function SelectionMenu(options: SelectionMenuOptions): void
 入参为空时，文本选择菜单组件SelectionMenu内容区大小及组件大小为零。例如，富文本组件RichEditor使用 bindSelectionMenu接口绑定一个SelectionMenu的右键菜单，则右键富文本组件区域时无任何菜单弹出。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

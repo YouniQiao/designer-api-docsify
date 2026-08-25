@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityLabel } from '@kit.CoreFileKit';
+import { securityLabel } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getSecurityLabelSync
@@ -15,8 +15,6 @@ function getSecurityLabelSync(path: string): string
 以同步方法获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -44,11 +42,3 @@ function getSecurityLabelSync(path: string): string
 | 13900037 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + '/test.txt';
-let type = securityLabel.getSecurityLabelSync(filePath);
-console.info("Succeeded in getting security label, Label: " + type);
-```

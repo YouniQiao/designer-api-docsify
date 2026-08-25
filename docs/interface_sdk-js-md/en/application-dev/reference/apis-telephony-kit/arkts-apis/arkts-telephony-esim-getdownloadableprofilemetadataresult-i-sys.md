@@ -4,8 +4,6 @@ Obtains the metadata of the downloadable profile.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Obtains the metadata of the downloadable profile.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## downloadableProfile
@@ -27,8 +25,6 @@ Downloadable profile.
 **Type:** [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -46,8 +42,6 @@ Profile ICCID.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Whether the profile has a policy rule. The value **true** indicates that the pro
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Whether the profile has a policy rule. The value **true** indicates that the pro
 ## pprType
 
 ```TypeScript
-pprType: int
+pprType: number
 ```
 
 Profile policy rule type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -100,8 +90,6 @@ Profile class.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -117,8 +105,6 @@ Profile name.
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
@@ -136,8 +122,6 @@ Operation result code.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -154,8 +138,6 @@ Service provider name.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -171,8 +153,6 @@ Solvable errors.
 **Type:** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

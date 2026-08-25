@@ -15,8 +15,6 @@ Changes the file owner based on the file descriptor. This API uses a promise to 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -35,30 +33,6 @@ Changes the file owner based on the file descriptor. This API uses a promise to 
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-let stat = fileio.statSync(filePath);
-fileio.fchown(fd, stat.uid, stat.gid).then(() => {
-  console.info("chown succeed");
-}).catch((err: BusinessError) => {
-  console.error("chown failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-let stat = fileio.statSync(filePath);
-fileio.fchown(fd, stat.uid, stat.gid, (err: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## fchown
 
@@ -69,8 +43,6 @@ declare function fchown(fd: number, uid: number, gid: number, callback: AsyncCal
 Changes the file owner based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -84,7 +56,3 @@ Changes the file owner based on the file descriptor. This API uses an asynchrono
 | uid | number | Yes |
 | gid | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [fchown](#fchown)

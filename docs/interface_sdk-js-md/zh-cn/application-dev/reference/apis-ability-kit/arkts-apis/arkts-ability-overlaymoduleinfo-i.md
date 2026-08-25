@@ -4,8 +4,6 @@ OverlayModuleInfo信息，可以通过 [overlay.getOverlayModuleInfo](arkts-abil
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## bundleName
@@ -19,8 +17,6 @@ overlay特征module所属的应用的bundle名称。
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,39 +32,33 @@ overlay特征module的名称。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## priority
 
 ```TypeScript
-readonly priority: int
+readonly priority: number
 ```
 
 overlay特征module的优先级。取值为整数，取值范围1 ~ 100，数值越大优先级越高。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## state
 
 ```TypeScript
-readonly state: int
+readonly state: number
 ```
 
 overlay特征module的 [禁用使能状态](arkts-ability-overlay-setoverlayenabled-f.md)。0代表禁用状态， 1代表使能状态。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -83,7 +73,5 @@ overlay特征指定的目标module的名称，表示当前overlay包的资源需
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

@@ -4,14 +4,12 @@ Represents the configuration for generating a CMS message.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## contentDataFormat
@@ -27,8 +25,6 @@ Format of the content. The default value is **CmsContentDataFormat.BINARY**.
 **Default:** CmsContentDataFormat.BINARY
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -48,8 +44,6 @@ Whether the final CMS message does not contain the raw data. The default value i
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Security.Cert
@@ -67,8 +61,6 @@ Format of the CMS message generated. The default value is **DER**.
 **Default:** CmsFormat.DER
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

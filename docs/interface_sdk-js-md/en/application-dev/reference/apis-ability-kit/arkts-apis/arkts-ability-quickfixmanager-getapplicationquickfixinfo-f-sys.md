@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getApplicationQuickFixInfo
@@ -15,8 +15,6 @@ function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<
 Obtains the quick fix information of the application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -41,42 +39,6 @@ Obtains the quick fix information of the application. This API uses an asynchron
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) |
 | [18500008](../errorcode-ability.md#18500008-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = 'bundleName';
-  quickFixManager.getApplicationQuickFixInfo(bundleName, (error, data) => {
-    if (error) {
-      console.error(`getApplicationQuickFixInfo error: ${error}`);
-    } else {
-      console.info(`getApplicationQuickFixInfo success: ${data}`);
-    }
-  });
-} catch (paramError) {
-  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = 'bundleName';
-  quickFixManager.getApplicationQuickFixInfo(bundleName).then((data) => {
-    console.info(`getApplicationQuickFixInfo success: ${data}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getApplicationQuickFixInfo err: ${error}`);
-  });
-} catch (paramError) {
-  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-}
-```
-
 
 ## getApplicationQuickFixInfo
 
@@ -87,8 +49,6 @@ function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuic
 Obtains the quick fix information of the application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -117,7 +77,3 @@ Obtains the quick fix information of the application. This API uses a promise to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) |
 | [18500008](../errorcode-ability.md#18500008-internal-error) |
-
-**Examples**
-
-See [getApplicationQuickFixInfo](#getapplicationquickfixinfo)

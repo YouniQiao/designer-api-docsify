@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## isFingerprintAuthDisabled
@@ -15,8 +15,6 @@ function isFingerprintAuthDisabled(admin: Want): boolean
 Queries whether fingerprint authentication is disabled.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -51,23 +49,3 @@ Queries whether fingerprint authentication is disabled.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: boolean = restrictions.isFingerprintAuthDisabled(wantTemp);
-  console.info(`Succeeded in getting the state of fingerprint auth. result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get the state of fingerprint auth. Code: ${err.code}, message: ${err.message}`);
-};
-```

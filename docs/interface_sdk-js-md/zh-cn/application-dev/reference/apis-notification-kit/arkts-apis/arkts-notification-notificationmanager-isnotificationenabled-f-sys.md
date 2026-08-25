@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isNotificationEnabled
@@ -16,8 +16,6 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
@@ -42,207 +40,6 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isNotificationEnabledCallback = (err: BusinessError, data: boolean): void => {
-  if (err) {
-    console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`isNotificationEnabled success, data is ${JSON.stringify(data)}`);
-  }
-}
-
-notificationManager.isNotificationEnabled(isNotificationEnabledCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isNotificationEnabledCallback = (err: BusinessError | null, data: boolean | undefined | null): void => {
-  if (err) {
-    console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`isNotificationEnabled success, data is ${JSON.stringify(data)}`);
-  }
-}
-
-notificationManager.isNotificationEnabled(isNotificationEnabledCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isNotificationEnabled().then((data: boolean) => {
-  console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isNotificationEnabled().then((data: boolean) => {
-  console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`isNotificationEnabled failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isNotificationEnabledCallback = (err: BusinessError, data: boolean): void => {
-    if (err) {
-        console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isNotificationEnabled success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-
-notificationManager.isNotificationEnabled(bundle, isNotificationEnabledCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isNotificationEnabledCallback = (err: BusinessError | null, data: boolean | undefined | null): void => {
-    if (err) {
-        console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isNotificationEnabled success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-
-notificationManager.isNotificationEnabled(bundle, isNotificationEnabledCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-notificationManager.isNotificationEnabled(bundle).then((data: boolean) => {
-    console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-notificationManager.isNotificationEnabled(bundle).then((data: boolean) => {
-    console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`isNotificationEnabled failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isNotificationEnabledCallback = (err: BusinessError, data: boolean): void => {
-    if (err) {
-        console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isNotificationEnabled success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 1;
-
-notificationManager.isNotificationEnabled(userId, isNotificationEnabledCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isNotificationEnabledCallback = (err: BusinessError | null, data: boolean | undefined | null): void => {
-    if (err) {
-        console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isNotificationEnabled success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-
-notificationManager.isNotificationEnabled(userId, isNotificationEnabledCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 1;
-
-notificationManager.isNotificationEnabled(userId).then((data: boolean) => {
-    console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNotificationEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-
-notificationManager.isNotificationEnabled(userId).then((data: boolean) => {
-    console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`isNotificationEnabled failed, code is ${error.code}, message is ${error.message}`);
-});
-```
 
 
 ## isNotificationEnabled
@@ -255,8 +52,6 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -267,7 +62,7 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
@@ -287,22 +82,16 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-参见 [isNotificationEnabled](#isnotificationenabled)
-
 
 ## isNotificationEnabled
 
 ```TypeScript
-function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): void
+function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>): void
 ```
 
 获取指定用户ID下的通知使能状态。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -314,7 +103,7 @@ function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
@@ -329,22 +118,16 @@ function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): v
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
 
-**示例**
-
-参见 [isNotificationEnabled](#isnotificationenabled)
-
 
 ## isNotificationEnabled
 
 ```TypeScript
-function isNotificationEnabled(userId: int): Promise<boolean>
+function isNotificationEnabled(userId: number): Promise<boolean>
 ```
 
 获取指定用户下的通知使能状态。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -356,7 +139,7 @@ function isNotificationEnabled(userId: int): Promise<boolean>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -375,7 +158,3 @@ function isNotificationEnabled(userId: int): Promise<boolean>
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
-
-**示例**
-
-参见 [isNotificationEnabled](#isnotificationenabled)

@@ -4,8 +4,6 @@ Implements a **BarGridColumnOptions** object for setting the visible area of the
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ gutter?: Dimension
 
 Column gutter (that is, gap between columns) in grid mode. It cannot be set in percentage.Default value: **24.0**Unit: vp
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Number of columns occupied by a tab on a screen whose width is greater than or e
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -61,11 +55,9 @@ margin?: Dimension
 
 Column margin in grid mode. It cannot be set in percentage.Default value: **24.0**Unit: vp
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +77,6 @@ Number of columns occupied by a tab on a screen whose width is greater than or e
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -104,8 +94,6 @@ Number of columns occupied by a tab on a screen whose width is greater than or e
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

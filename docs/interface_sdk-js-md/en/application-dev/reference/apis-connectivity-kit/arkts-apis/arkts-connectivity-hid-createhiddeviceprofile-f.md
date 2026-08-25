@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@kit.ConnectivityKit';
+import { hid } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createHidDeviceProfile
@@ -15,8 +15,6 @@ function createHidDeviceProfile(): HidDeviceProfile
 Creates the instance of HID device profile.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,14 +31,3 @@ Creates the instance of HID device profile.
 | Error Code ID |
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-try {
-    let hidDeviceProfile = hid.createHidDeviceProfile();
-    console.info('hidDevice success');
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```

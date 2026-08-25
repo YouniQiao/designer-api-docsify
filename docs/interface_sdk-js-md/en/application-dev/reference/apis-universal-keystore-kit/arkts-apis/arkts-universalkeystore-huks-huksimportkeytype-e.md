@@ -4,8 +4,6 @@ Enumerates the types of keys to import. By default, a public key is imported. Th
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 9 to 11: SystemCapability.Security.Huks.Extension
@@ -19,8 +17,6 @@ HUKS_KEY_TYPE_PUBLIC_KEY = 0
 Public key
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,8 +34,6 @@ Private key
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -55,8 +49,6 @@ HUKS_KEY_TYPE_KEY_PAIR = 2
 Public and private key pair
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

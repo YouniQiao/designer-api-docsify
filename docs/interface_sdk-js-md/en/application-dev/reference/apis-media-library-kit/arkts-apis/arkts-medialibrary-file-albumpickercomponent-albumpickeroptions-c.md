@@ -4,14 +4,12 @@ Represents the **AlbumPicker** configuration.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from '@kit.MediaLibraryKit';
+import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## filterType
@@ -25,8 +23,6 @@ Type of the filter. You can use it to display images, videos, or both. If this p
 **Type:** photoAccessHelper.PhotoViewMIMETypes
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -44,8 +40,6 @@ Font size. For details about the value range, see fontSize.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -61,8 +55,6 @@ Theme color of the album page. The options are **AUTO**, **Light**, and **Dark**
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

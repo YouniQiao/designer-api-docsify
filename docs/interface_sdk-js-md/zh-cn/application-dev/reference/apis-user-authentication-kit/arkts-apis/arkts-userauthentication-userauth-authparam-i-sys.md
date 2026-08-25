@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## credentialIdList
@@ -26,8 +24,6 @@ credentialIdList?: Uint8Array[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -37,18 +33,16 @@ credentialIdList?: Uint8Array[]
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 待认证的目标用户ID，用于指定需要认证的用户。当需要认证特定用户而非当前登录用户时传入此参数；若不传入则默认使用当前登录用户的ID。取值为非负整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **默认值：** The ID of the current user. The value is a positive integer greater than or equal to 0.
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

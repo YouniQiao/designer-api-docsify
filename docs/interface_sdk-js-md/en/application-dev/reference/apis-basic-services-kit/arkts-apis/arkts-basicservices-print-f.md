@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## print
@@ -16,8 +16,6 @@ Prints files. This API uses an asynchronous callback to return the result. To st
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [print](#print)
@@ -39,158 +37,6 @@ Prints files. This API uses an asynchronous callback to return the result. To st
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-// Pass in the URIs of the files.
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)], (err: BusinessError, printTask: print.PrintTask) => {
-    if (err) {
-        console.error('print err ' + JSON.stringify(err));
-    } else {
-        printTask.on('succeed', () => {
-            console.info('print state is succeed');
-        })
-        // ...
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-// Pass in the URIs of the files.
-let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
-    printTask.on('succeed', () => {
-        console.info('print state is succeed');
-    })
-    // ...
-}).catch((error: BusinessError) => {
-    console.error('print err ' + JSON.stringify(error));
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-@Entry
-@Component
-struct Index {
-    build() {
-        Scroll() {
-            Column({ space: 10 }) {
-                Button("Print").width('90%').height(50).onClick(() => {
-                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-                    let context = this.getUIContext().getHostContext();
-                    print.print([fileUri.getUriFromPath(filePath)], context, (err: BusinessError, printTask: print.PrintTask) => {
-                        if (err) {
-                            console.error('print err ' + JSON.stringify(err));
-                        } else {
-                            printTask.on('succeed', () => {
-                                console.info('print state is succeed');
-                            })
-                            // ...
-                        }
-                    })
-                })
-            }
-            .justifyContent(FlexAlign.Center)
-            .constraintSize({ minHeight: '100%' })
-            .width('100%')
-        }
-        .height('100%')
-    }
-}
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-@Entry
-@Component
-struct Index {
-    build() {
-        Scroll() {
-            Column({ space: 10 }) {
-                Button("Print").width('90%').height(50).onClick(() => {
-                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-                    let context = this.getUIContext().getHostContext();
-                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
-                        printTask.on('succeed', () => {
-                            console.info('print state is succeed');
-                        })
-                        // ...
-                    }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
-                    })
-                })
-            }
-            .justifyContent(FlexAlign.Center)
-            .constraintSize({ minHeight: '100%' })
-            .width('100%')
-        }
-        .height('100%')
-    }
-}
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-    build() {
-        Scroll() {
-            Column({ space: 10 }) {
-                Button("Print").width('90%').height(50).onClick(() => {
-                    let jobName : string = "jobName";
-                    let printAdapter : print.PrintDocumentAdapter | null = null;
-                    let printAttributes : print.PrintAttributes = {
-                        copyNumber: 1,
-                        pageRange: {
-                            startPage: 0,
-                            endPage: 5,
-                            pages: []
-                        },
-                        pageSize: print.PrintPageType.PAGE_ISO_A3,
-                        directionMode: print.PrintDirectionMode.DIRECTION_MODE_AUTO,
-                        colorMode: print.PrintColorMode.COLOR_MODE_MONOCHROME,
-                        duplexMode: print.PrintDuplexMode.DUPLEX_MODE_NONE
-                    }
-                    let context = this.getUIContext().getHostContext();
-
-                    print.print(jobName, printAdapter, printAttributes, context).then((printTask: print.PrintTask) => {
-                        printTask.on('succeed', () => {
-                            console.info('print state is succeed');
-                        })
-                        // ...
-                    }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
-                    })
-                })
-            }
-            .justifyContent(FlexAlign.Center)
-            .constraintSize({ minHeight: '100%' })
-            .width('100%')
-        }
-        .height('100%')
-    }
-}
-```
 
 
 ## print
@@ -203,8 +49,6 @@ Prints files. This API uses a promise to return the result. To start the system 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [print](#print)
@@ -232,10 +76,6 @@ Prints files. This API uses a promise to return the result. To start the system 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [print](#print)
-
 
 ## print
 
@@ -246,8 +86,6 @@ function print(files: Array<string>, context: Context, callback: AsyncCallback<P
 Prints files. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -268,10 +106,6 @@ Prints files. This API uses an asynchronous callback to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [print](#print)
-
 
 ## print
 
@@ -282,8 +116,6 @@ function print(files: Array<string>, context: Context): Promise<PrintTask>
 Prints files. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -309,10 +141,6 @@ Prints files. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [print](#print)
-
 
 ## print
 
@@ -324,8 +152,6 @@ function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttribu
 Prints a file. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -352,7 +178,3 @@ Prints a file. This API uses a promise to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [print](#print)

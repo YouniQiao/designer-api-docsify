@@ -1,10 +1,8 @@
 # P2pDeviceStatus
 
-P2P设备状态。@enum { int }
+P2P设备状态。@enum { number }
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -18,8 +16,6 @@ CONNECTED = 0
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## INVITED
@@ -31,8 +27,6 @@ INVITED = 1
 表示P2P设备已被邀请。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -46,8 +40,6 @@ FAILED = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## AVAILABLE
@@ -60,8 +52,6 @@ AVAILABLE = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
 ## UNAVAILABLE
@@ -73,7 +63,5 @@ UNAVAILABLE = 4
 表示P2P设备不可用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P

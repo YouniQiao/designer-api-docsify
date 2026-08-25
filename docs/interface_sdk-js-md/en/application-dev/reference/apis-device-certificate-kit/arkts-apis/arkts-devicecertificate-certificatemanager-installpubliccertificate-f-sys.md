@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## installPublicCertificate
@@ -15,8 +15,6 @@ function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : P
 Installs the public credential of the user. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
@@ -50,26 +48,3 @@ Installs the public credential of the user. This API is called only by the certi
 | [17500003](../errorcode-certManager.md#17500003-invalid-certificate-or-credential) |
 | [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) |
 | [17500008](../errorcode-certManager.md#17500008-incorrect-password) |
-
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* The data of the credential to be installed must be assigned based on the service. The data in this example is not the real credential data. */
-let keystore: Uint8Array = new Uint8Array([
-    0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01,
-]);
-let keystorePwd: string = "123456";
-try {
-    certificateManager.installPublicCertificate(keystore, keystorePwd).then((cmResult: certificateManager.CMResult) => {
-        let uri: string = (cmResult?.uri == undefined) ? '' : cmResult.uri;
-        console.info('Succeeded in installing public certificate.');
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to install public certificate. Code: ${err.code}, message: ${err.message}`);
-    })
-} catch (error: BusinessError) {
-    console.error(`Failed to install public certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```

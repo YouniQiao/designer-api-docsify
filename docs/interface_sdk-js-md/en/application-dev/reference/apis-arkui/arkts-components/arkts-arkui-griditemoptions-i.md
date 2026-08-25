@@ -4,8 +4,6 @@ Defines the style of a grid item.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ Style of the grid item.Default value: **GridItemStyle.NONE**.If this parameter i
 **Type:** [GridItemStyle](arkts-arkui-griditemstyle-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Specifies a result object that contains the application bundle name and the stat
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Specifies a result object that contains the application bundle name and the stat
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ Bundle name.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -45,8 +41,6 @@ Whether there are local files that have not been synchronized to the cloud in th
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 

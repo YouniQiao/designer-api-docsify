@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -20,11 +18,15 @@ onLazyLoading?(index: number): void
 ```
 
 可选方法，懒加载指定索引的数据。需要开发者给定数据加载方法。onLazyLoading方法需在懒加载场景下使用。开发者可设置自定义方法，用于向指定的数据源index中写入数据。以下为onLazyLoading的处理规则：  
-- Repeat读取数据源中index对应的数据之前，会先检查index处是否存在数据。 - 如果不存在数据，但开发者提供了onLazyLoading方法，Repeat将调用此方法。 - 在onLazyLoading方法中，开发者需要向Repeat指定的index中写入数据，方式如下：`arr[index] = ...`，其中`arr`表示传入Repeat的数组。不允许使用除`[]`以外的数组操作，且不允许写入 指定index以外的元素，否则系统将抛出异常。 - onLazyLoading方法执行完成后，若指定index中仍无数据，将导致当前index和后续索引对应的组件无法加载。 - 精准懒加载能力为可选配置项。当onLazyLoading缺省，并且totalCount或onTotalCount的返回值大于数据源长度时，Repeat不会渲染列表滚动到数据源末尾时缺失的后续数据。 - onLazyLoading方法中应避免阻塞式耗时操作（如同步网络请求、复杂计算）。若数据加载耗时可能影响滚动流畅度，建议先在onLazyLoading方法中为此数据创建占位符，再创建异步任务加载数据。
+- Repeat读取数据源中index对应的数据之前，会先检查index处是否存在数据。  
+- 如果不存在数据，但开发者提供了onLazyLoading方法，Repeat将调用此方法。  
+- 在onLazyLoading方法中，开发者需要向Repeat指定的index中写入数据，方式如下：`arr[index] = ...`，其中`arr`表示传入Repeat的数组。不允许使用除`[]`以外的数组操作，且不允许写入  
+指定index以外的元素，否则系统将抛出异常。  
+- onLazyLoading方法执行完成后，若指定index中仍无数据，将导致当前index和后续索引对应的组件无法加载。  
+- 精准懒加载能力为可选配置项。当onLazyLoading缺省，并且totalCount或onTotalCount的返回值大于数据源长度时，Repeat不会渲染列表滚动到数据源末尾时缺失的后续数据。  
+- onLazyLoading方法中应避免阻塞式耗时操作（如同步网络请求、复杂计算）。若数据加载耗时可能影响滚动流畅度，建议先在onLazyLoading方法中为此数据创建占位符，再创建异步任务加载数据。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,21 +40,6 @@ onLazyLoading?(index: number): void
 | --- | --- | --- |
 | index | number | 是 |
 
-**示例**
-
-```TypeScript
-// 假设数据项总数为100，首屏渲染需3项数据
-// 初始数组提供前3项数据（arr = ['No.0', 'No.1', 'No.2']），并开启数据懒加载功能
-List() {
-  Repeat<string>(this.arr)
-    .each((repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
-    .virtualScroll({ 
-      onTotalCount: () => { return 100; },
-      onLazyLoading: (index: number) => { this.arr[index] = `No.${index}`; }
-    })
-}
-```
-
 ## onTotalCount
 
 ```TypeScript
@@ -61,11 +48,13 @@ onTotalCount?(): number
 
 可选方法，计算期望加载的数据项总数。需要开发者给定计算方法，其返回值可以不等于数据源长度（实际传入Repeat的数组的长度）。  
 [totalCount](#totalcount)和onTotalCount()的返回值都表示期望加载的数据项总数。开发者可直接设置totalCount属性，给出期望加载的数据项 总数，也可以通过onTotalCount()设定自定义方法，计算期望加载的数据项总数。totalCount与onTotalCount()最多设置一个。如果均未设置，则采用默认值：数据源长度；如果同时设置，则忽略 totalCount。onTotalCount()不同返回值的数据加载处理规则与totalCount一致，具体如下：  
-- onTotalCount()返回值 = 0时，不加载数据。 - 0 &lt; onTotalCount()返回值 &lt;= 数据源长度时，只加载区间[0, onTotalCount()返回值 - 1]索引范围内的数据。 - onTotalCount()返回值 &gt; 数据源长度时，代表Repeat期望加载区间[0, onTotalCount()返回值 - 1]索引范围内的数据，容器组件滚动条样式根据onTotalCount()返回值变化。在容器组件滚 动过程中，应用需要保证在列表即将滑动到数据源末尾时请求后续数据。开发者需要对数据请求的错误场景（如网络延迟）进行保护操作，直到数据源全部加载完成，否则列表滑动过程中会出现滚动效果异常。建议配合使用 [onLazyLoading](#onlazyloading)实现数据懒加载。 - onTotalCount()返回值是非自然数时，由数据源长度取代其返回值。
+- onTotalCount()返回值 = 0时，不加载数据。  
+- 0 &lt; onTotalCount()返回值 &lt;= 数据源长度时，只加载区间[0, onTotalCount()返回值 - 1]索引范围内的数据。  
+- onTotalCount()返回值 &gt; 数据源长度时，代表Repeat期望加载区间[0, onTotalCount()返回值 - 1]索引范围内的数据，容器组件滚动条样式根据onTotalCount()返回值变化。在容器组件滚  
+动过程中，应用需要保证在列表即将滑动到数据源末尾时请求后续数据。开发者需要对数据请求的错误场景（如网络延迟）进行保护操作，直到数据源全部加载完成，否则列表滑动过程中会出现滚动效果异常。建议配合使用 [onLazyLoading](#onlazyloading)实现数据懒加载。  
+- onTotalCount()返回值是非自然数时，由数据源长度取代其返回值。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,8 +80,6 @@ Repeat的内存优化策略。该参数在创建Repeat时设定，不支持动�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -111,8 +98,6 @@ reusable?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -130,8 +115,6 @@ totalCount?: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

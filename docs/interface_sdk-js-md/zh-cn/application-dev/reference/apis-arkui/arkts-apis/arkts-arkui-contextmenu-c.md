@@ -1,10 +1,8 @@
 # ContextMenu
 
-在页面范围内关闭通过 bindContextMenu 属性绑定的菜单。
+在页面范围内关闭通过 [bindContextMenu](../arkts-components/arkts-arkui-commonmethod-c.md#bindcontextmenu) 属性绑定的菜单。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,7 +17,7 @@
 static close()
 ```
 
-在页面范围内关闭通过 bindContextMenu 绑定的菜单。常用于页面跳转、拖拽开始等需要主动关闭已显示菜单的交互场景。
+在页面范围内关闭通过 [bindContextMenu](../arkts-components/arkts-arkui-commonmethod-c.md#bindcontextmenu) 绑定的菜单。常用于页面跳转、拖拽开始等需要主动关闭已显示菜单的交互场景。
 
 > **说明：**&gt;
 > 从API version 18开始废弃，建议使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
@@ -30,8 +28,6 @@ static close()
 > [getContextMenuController](arkts-arkui-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)来明确UI的执行上下文。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 18
 

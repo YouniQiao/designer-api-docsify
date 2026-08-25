@@ -4,8 +4,6 @@ Defines the list of onscreen awareness parameters, which is used to obtain onscr
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the list of onscreen awareness parameters, which is used to obtain onscr
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## parameters
@@ -27,8 +25,6 @@ List of awareness parameters. The parameter result is a key-value data object.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

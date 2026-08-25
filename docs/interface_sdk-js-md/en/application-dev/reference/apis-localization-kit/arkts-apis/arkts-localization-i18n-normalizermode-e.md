@@ -4,8 +4,6 @@ Enumerates text normalization modes.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## NFC
@@ -17,8 +15,6 @@ NFC = 1
 Normalization form C, characters are decomposed and then re-composed by canonical equivalence
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Normalization form D, characters are decomposed by canonical equivalence
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -50,8 +44,6 @@ Normalization form KC, characters are decomposed by compatibility, then re-compo
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -65,8 +57,6 @@ NFKD = 4
 Normalization form KD, characters are decomposed by compatibility
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

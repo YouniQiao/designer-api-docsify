@@ -9,8 +9,6 @@ type Transformer = (this: ISendable, key: string,
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -19,7 +17,7 @@ type Transformer = (this: ISendable, key: string,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| this | [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) | 是 |
+| this | [ISendable](arkts-arkts-ason-isendable-t.md) | 是 |
 | key | string | 是 |
 | value | ISendable \| undefined \| null | 是 |
 

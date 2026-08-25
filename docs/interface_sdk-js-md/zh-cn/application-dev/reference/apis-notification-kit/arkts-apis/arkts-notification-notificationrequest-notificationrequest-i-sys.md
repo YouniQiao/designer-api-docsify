@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## agentBundle
@@ -19,8 +17,6 @@ readonly agentBundle?: BundleOption
 **类型：** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -38,8 +34,6 @@ readonly appInstanceKey?: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -56,8 +50,6 @@ classification?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -73,8 +65,6 @@ readonly creatorInstanceKey?: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **废弃版本：** 15
 
@@ -96,8 +86,6 @@ readonly deviceId?: string
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -113,8 +101,6 @@ extendInfo?: Record<string, Object>
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -137,8 +123,6 @@ forceDistributed?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -155,8 +139,6 @@ groupInfo?: GroupInfo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -170,15 +152,14 @@ isRemoveAllowed?: boolean
 ```
 
 通知是否能被移除（点击通知下方删除按钮无法删除，左滑不出现删除按钮）。默认为true。  
-- true：是。 - false：否。
+- true：是。  
+- false：否。
 
 **类型：** boolean
 
 **默认值：** true
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本11+：ohos.permission.SET_UNREMOVABLE_NOTIFICATION
@@ -204,8 +185,6 @@ notDistributed?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -213,16 +192,14 @@ notDistributed?: boolean
 ## notificationControlFlags
 
 ```TypeScript
-notificationControlFlags?: long
+notificationControlFlags?: number
 ```
 
 通知提醒方式管控。默认值为0。可以通过此接口减少当前通知的提醒方式。与 [NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md)的 枚举进行按位或运算得到该参数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -240,8 +217,6 @@ representativeBundle?: BundleOption
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -249,16 +224,14 @@ representativeBundle?: BundleOption
 ## source
 
 ```TypeScript
-readonly source?: int
+readonly source?: number
 ```
 
 通知源。 预留能力，暂未支持。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -276,8 +249,6 @@ trigger?:Trigger
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -293,8 +264,6 @@ unifiedGroupInfo?: UnifiedGroupInfo
 **类型：** [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 

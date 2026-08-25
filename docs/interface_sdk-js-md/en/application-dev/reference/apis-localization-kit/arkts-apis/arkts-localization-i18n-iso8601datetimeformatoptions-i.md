@@ -4,14 +4,12 @@ Represents optional configuration items for the ISO8601DateTimeFormat object. Th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## dateFormat
@@ -25,8 +23,6 @@ The ISO 8601 date format to format. The value can be: "calendar", the format is 
 **Type:** 'calendar' \| 'ordinal' \| 'week'
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Check if need to show time zone part. Default value is true that show time zone.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -65,8 +59,6 @@ The date time separator style. The value can be: "extended": with -/:, "basic": 
 **Type:** 'extended' \| 'basic'
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,8 +78,6 @@ The ISO 8601 time precision to format. The value can be: "dateOnly", "hours", "m
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -105,8 +95,6 @@ TimeZone object used to format date, default value UTC.
 **Type:** [TimeZone](arkts-localization-i18n-timezone-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

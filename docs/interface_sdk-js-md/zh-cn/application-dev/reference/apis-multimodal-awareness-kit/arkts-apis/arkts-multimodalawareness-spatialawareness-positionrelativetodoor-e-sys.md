@@ -1,10 +1,8 @@
 # PositionRelativeToDoor（系统接口）
 
-门内外识别接口返回结果中表示门内或门外位置的枚举。@enum { int } 门内外识别结果的枚举
+门内外识别接口返回结果中表示门内或门外位置的枚举。@enum { number } 门内外识别结果的枚举
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -19,8 +17,6 @@ OUTDOOR = 0
 表示门外。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +33,6 @@ INDOOR = 1
 表示门内。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

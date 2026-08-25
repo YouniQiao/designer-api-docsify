@@ -1,7 +1,5 @@
 # ArrayBufferTypes
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,5 +12,3 @@ SharedArrayBuffer: SharedArrayBuffer
 ```
 
 **Type:** SharedArrayBuffer
-
-**ArkTS mode:** 

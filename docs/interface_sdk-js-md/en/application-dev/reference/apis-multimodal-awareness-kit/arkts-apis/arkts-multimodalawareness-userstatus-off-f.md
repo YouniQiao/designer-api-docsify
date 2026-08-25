@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## off('userAgeGroupDetected')
@@ -19,8 +19,6 @@ Disables the age group detection function.
 > phones.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Deprecated since:** 24
 
@@ -40,17 +38,3 @@ Disables the age group detection function.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [33900001](../errorcode-userStatus.md#33900001-service-exception) |
 | 33900003 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    userStatus.off('userAgeGroupDetected');
-    console.info("off succeeded");
-} catch (err) {
-    let error = err as BusinessError;
-    console.error("Failed off and err code is " + error.code);
-}
-```

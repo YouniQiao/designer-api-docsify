@@ -7,14 +7,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块
 
 ```TypeScript
-import { sendablePreferences } from '@kit.ArkData';
+import { sendablePreferences } from 'kits/@kit.ArkData';
 ```
 
 ## 汇总

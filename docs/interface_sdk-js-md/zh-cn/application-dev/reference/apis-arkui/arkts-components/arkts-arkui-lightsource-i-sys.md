@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -23,11 +21,9 @@ color?: ResourceColor
 
 光源颜色。默认值：Color.White
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,8 +43,6 @@ intensity: number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -63,11 +57,9 @@ positionX: Dimension
 
 光源相对于当前组件的X坐标。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,11 +75,9 @@ positionY: Dimension
 
 光源相对于当前组件的Y坐标。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -103,11 +93,9 @@ positionZ: Dimension
 
 光源高度。光源越高，照射范围越大。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,14 +2,11 @@
 
 表示返回码的枚举。
 
-> **说明：**<br/>
-> 
+> **说明：**&gt;
 > 从API version 8开始支持，从API version 9开始废弃。相关信息建议查看
 > [账号管理错误码](../errorcode-account.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -25,8 +22,6 @@ SUCCESS = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -40,8 +35,6 @@ ERROR_ACCOUNT_NOT_EXIST = 10001
 表示应用账号不存在。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -57,8 +50,6 @@ ERROR_APP_ACCOUNT_SERVICE_EXCEPTION = 10002
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -72,8 +63,6 @@ ERROR_INVALID_PASSWORD = 10003
 表示密码无效。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -89,8 +78,6 @@ ERROR_INVALID_REQUEST = 10004
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -104,8 +91,6 @@ ERROR_INVALID_RESPONSE = 10005
 表示响应无效。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -121,8 +106,6 @@ ERROR_NETWORK_EXCEPTION = 10006
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -136,8 +119,6 @@ ERROR_OAUTH_AUTHENTICATOR_NOT_EXIST = 10007
 表示认证器不存在。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -153,8 +134,6 @@ ERROR_OAUTH_CANCELED = 10008
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -168,8 +147,6 @@ ERROR_OAUTH_LIST_TOO_LARGE = 10009
 表示开放授权列表过大。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -185,8 +162,6 @@ ERROR_OAUTH_SERVICE_BUSY = 10010
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -200,8 +175,6 @@ ERROR_OAUTH_SERVICE_EXCEPTION = 10011
 表示开放授权服务异常。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -217,8 +190,6 @@ ERROR_OAUTH_SESSION_NOT_EXIST = 10012
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -232,8 +203,6 @@ ERROR_OAUTH_TIMEOUT = 10013
 表示鉴权超时。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -249,8 +218,6 @@ ERROR_OAUTH_TOKEN_NOT_EXIST = 10014
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -264,8 +231,6 @@ ERROR_OAUTH_TOKEN_TOO_MANY = 10015
 表示开放授权令牌过多。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -281,8 +246,6 @@ ERROR_OAUTH_UNSUPPORT_ACTION = 10016
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -297,8 +260,6 @@ ERROR_OAUTH_UNSUPPORT_AUTH_TYPE = 10017
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -312,8 +273,6 @@ ERROR_PERMISSION_DENIED = 10018
 表示权限不足。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

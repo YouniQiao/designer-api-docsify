@@ -15,8 +15,6 @@ Changes the file owner (owner of the symbolic link, not the file referred to by 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -35,28 +33,6 @@ Changes the file owner (owner of the symbolic link, not the file referred to by 
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let stat = fileio.statSync(filePath);
-fileio.lchown(filePath, stat.uid, stat.gid).then(() => {
-  console.info("chown succeed");
-}).catch((err: BusinessError) => {
-  console.error("chown failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let stat = fileio.statSync(filePath);
-fileio.lchown(filePath, stat.uid, stat.gid, (err: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## lchown
 
@@ -67,8 +43,6 @@ declare function lchown(path: string, uid: number, gid: number, callback: AsyncC
 Changes the file owner (owner of the symbolic link, not the file referred to by the symbolic link) based on a file path. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -82,7 +56,3 @@ Changes the file owner (owner of the symbolic link, not the file referred to by 
 | uid | number | Yes |
 | gid | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [lchown](#lchown)

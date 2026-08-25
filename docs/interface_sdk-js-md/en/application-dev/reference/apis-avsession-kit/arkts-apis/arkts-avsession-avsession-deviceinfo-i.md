@@ -4,14 +4,12 @@ Device Information Definition
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## audioCapabilities
@@ -25,8 +23,6 @@ Audio capabilities supported by the device.
 **Type:** [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -44,8 +40,6 @@ The playback type supported by the device. See [AVCastCategory](arkts-avsession-
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -61,8 +55,6 @@ Audio device id.The length of the audioDeviceId array is greater than 1 if outpu
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,8 +72,6 @@ Device name. The length of the deviceName array is greater than 1 if output to m
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -97,8 +87,6 @@ device type.
 **Type:** DeviceType
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,8 +104,6 @@ Device manufacturer.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -133,8 +119,6 @@ Device model name.
 **Type:** string
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -152,8 +136,6 @@ The drm capability supported by current device, each drm is represented by uuid.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -161,16 +143,14 @@ The drm capability supported by current device, each drm is represented by uuid.
 ## supportedProtocols
 
 ```TypeScript
-supportedProtocols?: int
+supportedProtocols?: number
 ```
 
 The protocols supported by current device, can be union of [ProtocolType](arkts-avsession-avsession-protocoltype-e.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -179,16 +159,14 @@ The protocols supported by current device, can be union of [ProtocolType](arkts-
 ## supportedPullClients
 
 ```TypeScript
-supportedPullClients?: Array<int>
+supportedPullClients?: Array<number>
 ```
 
 Whether the device supports pull-end playback, including a collection of pull-end client IDs.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

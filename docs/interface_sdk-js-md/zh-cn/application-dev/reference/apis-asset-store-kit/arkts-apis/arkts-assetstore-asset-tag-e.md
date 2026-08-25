@@ -8,8 +8,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## SECRET
@@ -21,8 +19,6 @@ SECRET = TagType.BYTES | 0x01
 关键资产明文。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -38,8 +34,6 @@ ALIAS = TagType.BYTES | 0x02
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -53,8 +47,6 @@ ACCESSIBILITY = TagType.NUMBER | 0x03
 基于锁屏状态的访问控制。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -70,8 +62,6 @@ REQUIRE_PASSWORD_SET = TagType.BOOL | 0x04
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -85,8 +75,6 @@ AUTH_TYPE = TagType.NUMBER | 0x05
 访问关键资产所需的用户认证类型。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -102,8 +90,6 @@ AUTH_VALIDITY_PERIOD = TagType.NUMBER | 0x06
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -117,8 +103,6 @@ AUTH_CHALLENGE = TagType.BYTES | 0x07
 用户认证的挑战值。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -134,8 +118,6 @@ AUTH_TOKEN = TagType.BYTES | 0x08
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -149,8 +131,6 @@ SYNC_TYPE = TagType.NUMBER | 0x10
 关键资产支持的同步类型。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -166,8 +146,6 @@ IS_PERSISTENT = TagType.BOOL | 0x11
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## DATA_LABEL_CRITICAL_1
@@ -179,8 +157,6 @@ DATA_LABEL_CRITICAL_1 = TagType.BYTES | 0x20
 关键资产附属信息，内容由业务自定义且**有完整性保护**。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -196,8 +172,6 @@ DATA_LABEL_CRITICAL_2 = TagType.BYTES | 0x21
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -211,8 +185,6 @@ DATA_LABEL_CRITICAL_3 = TagType.BYTES | 0x22
 关键资产附属信息，内容由业务自定义且**有完整性保护**。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -228,8 +200,6 @@ DATA_LABEL_CRITICAL_4 = TagType.BYTES | 0x23
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -243,8 +213,6 @@ DATA_LABEL_NORMAL_1 = TagType.BYTES | 0x30
 关键资产附属信息，内容由业务自定义且**无完整性保护**。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -260,8 +228,6 @@ DATA_LABEL_NORMAL_2 = TagType.BYTES | 0x31
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -275,8 +241,6 @@ DATA_LABEL_NORMAL_3 = TagType.BYTES | 0x32
 关键资产附属信息，内容由业务自定义且**无完整性保护**。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -292,8 +256,6 @@ DATA_LABEL_NORMAL_4 = TagType.BYTES | 0x33
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -307,8 +269,6 @@ DATA_LABEL_NORMAL_LOCAL_1 = TagType.BYTES | 0x34
 关键资产附属的本地信息，内容由业务自定义且**无完整性保护**，该项信息不会进行同步。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -324,8 +284,6 @@ DATA_LABEL_NORMAL_LOCAL_2 = TagType.BYTES | 0x35
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -339,8 +297,6 @@ DATA_LABEL_NORMAL_LOCAL_3 = TagType.BYTES | 0x36
 关键资产附属的本地信息，内容由业务自定义且**无完整性保护**，该项信息不会进行同步。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -356,8 +312,6 @@ DATA_LABEL_NORMAL_LOCAL_4 = TagType.BYTES | 0x37
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -372,8 +326,6 @@ RETURN_TYPE = TagType.NUMBER | 0x40
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -387,8 +339,6 @@ RETURN_LIMIT = TagType.NUMBER | 0x41
 关键资产查询返回的结果的最大数量。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -405,8 +355,6 @@ RETURN_OFFSET = TagType.NUMBER | 0x42
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -422,8 +370,6 @@ RETURN_ORDERED_BY = TagType.NUMBER | 0x43
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -437,8 +383,6 @@ CONFLICT_RESOLUTION = TagType.NUMBER | 0x44
 新增关键资产时的冲突（如：别名相同）处理策略。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -454,8 +398,6 @@ UPDATE_TIME = TagType.BYTES | 0x45
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Asset
@@ -470,8 +412,6 @@ OPERATION_TYPE = TagType.NUMBER | 0x46
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## REQUIRE_ATTR_ENCRYPTED
@@ -483,8 +423,6 @@ REQUIRE_ATTR_ENCRYPTED = TagType.BOOL | 0x47
 是否加密业务自定义附属信息。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -500,8 +438,6 @@ GROUP_ID = TagType.BYTES | 0x48
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## WRAP_TYPE
@@ -513,7 +449,5 @@ WRAP_TYPE = TagType.NUMBER | 0x49
 关键资产支持的加密导入导出类型。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Security.Asset

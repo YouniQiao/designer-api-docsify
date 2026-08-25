@@ -6,14 +6,12 @@ Implements the media query listener, including the first query result when the l
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from '@kit.ArkUI';
+import { mediaquery } from 'kits/@kit.ArkUI';
 ```
 
 ## off('change')
@@ -26,8 +24,6 @@ Deregisters a media query listener, so that no callback is triggered when the me
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -39,45 +35,6 @@ Deregisters a media query listener, so that no callback is triggered when the me
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { mediaquery } from '@kit.ArkUI';
-
-let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // Listen for landscape events.
-function onPortrait(mediaQueryResult:mediaquery.MediaQueryResult) {
-  if (mediaQueryResult.matches) {
-    // do something here
-  } else {
-    // do something here
-  }
-}
-listener.on('change', onPortrait) // Register the media query listener.
-listener.off('change', onPortrait) // Unregister the callback.
-```
-
-## offChange
-
-```TypeScript
-offChange(callback?: Callback<MediaQueryResult>): void
-```
-
-Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the media attributes chang.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | No |
 
 ## on('change')
@@ -93,8 +50,6 @@ Registers a media query listener. The callback is triggered when the media attri
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -106,30 +61,4 @@ Registers a media query listener. The callback is triggered when the media attri
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | Yes |
-
-**Examples**
-
-For details, see [off('change')](#offchange).
-
-## onChange
-
-```TypeScript
-onChange(callback: Callback<MediaQueryResult>): void
-```
-
-Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the media attributes change.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | Yes |

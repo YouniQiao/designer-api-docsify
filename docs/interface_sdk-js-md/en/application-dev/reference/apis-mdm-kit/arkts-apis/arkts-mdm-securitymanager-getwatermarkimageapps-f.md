@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getWatermarkImageApps
@@ -15,8 +15,6 @@ function getWatermarkImageApps(admin: Want, accountId: number): Array<string>
 Obtains the list of application bundle names for which watermarks have been set for a specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 

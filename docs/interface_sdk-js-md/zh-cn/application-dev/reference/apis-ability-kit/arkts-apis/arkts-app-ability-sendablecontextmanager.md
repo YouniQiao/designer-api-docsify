@@ -4,8 +4,6 @@ sendableContextManager模块提供Context与[SendableContext](arkts-ability-send
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,7 +11,7 @@ sendableContextManager模块提供Context与[SendableContext](arkts-ability-send
 ## 导入模块
 
 ```TypeScript
-import { sendableContextManager } from '@kit.AbilityKit';
+import { sendableContextManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

@@ -475,7 +475,7 @@ Camera_ErrorCode OH_CaptureSession_AddInput(Camera_CaptureSession* session, Came
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_Input* cameraInput | 要添加的相机输入实例。 |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | 要添加的相机输入实例。 |
 
 **返回：**
 
@@ -500,7 +500,7 @@ Camera_ErrorCode OH_CaptureSession_RemoveInput(Camera_CaptureSession* session, C
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_Input* cameraInput | 要删除的相机输入实例。 |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | 要删除的相机输入实例。 |
 
 **返回：**
 
@@ -675,7 +675,7 @@ Camera_ErrorCode OH_CaptureSession_AddMetadataOutput(Camera_CaptureSession* sess
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | 要添加的元数据输出实例。 |
+| Camera_MetadataOutput* metadataOutput | 要添加的元数据输出实例。 |
 
 **返回：**
 
@@ -700,7 +700,7 @@ Camera_ErrorCode OH_CaptureSession_RemoveMetadataOutput(Camera_CaptureSession* s
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | 要删除的元数据输出实例。 |
+| Camera_MetadataOutput* metadataOutput | 要删除的元数据输出实例。 |
 
 **返回：**
 
@@ -2215,7 +2215,7 @@ Camera_ErrorCode OH_CaptureSession_CanAddInput(Camera_CaptureSession* session, C
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_Input* cameraInput | 要设置的相机输入实例。 |
+| [Camera_Input](capi-oh-camera-camera-input.md)* cameraInput | 要设置的相机输入实例。 |
 | bool* isSuccessful | 是否可以将相机输入添加到会话中的结果。返回true表示可以将相机输入添加到会话中，返回false表示不可以。 |
 
 **返回：**

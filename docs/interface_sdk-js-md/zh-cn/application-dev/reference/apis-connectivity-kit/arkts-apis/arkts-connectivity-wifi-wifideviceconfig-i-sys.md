@@ -4,8 +4,6 @@ WLAN设备配置信息。@interface WifiDeviceConfig
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)
@@ -15,7 +13,7 @@ WLAN设备配置信息。@interface WifiDeviceConfig
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## creatorUid
@@ -29,8 +27,6 @@ WLAN配置创建者的UID
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -52,8 +48,6 @@ disableReason: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [disableReason](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#disablereason)
@@ -73,8 +67,6 @@ IP类型
 **类型：** IpType
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -96,8 +88,6 @@ netId: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#netid)
@@ -117,8 +107,6 @@ randomMacAddr: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -140,8 +128,6 @@ randomMacType: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [randomMacType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randommactype)
@@ -161,8 +147,6 @@ staticIp: IpConfig
 **类型：** IpConfig
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

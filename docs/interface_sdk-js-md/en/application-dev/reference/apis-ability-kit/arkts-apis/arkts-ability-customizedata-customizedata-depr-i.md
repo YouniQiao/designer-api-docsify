@@ -8,8 +8,6 @@ The CustomizeData module provides custom metadata.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Metadata](arkts-ability-metadata-i.md)
@@ -29,8 +27,6 @@ Custom format of the data element. The value is an index to the resource that id
 **Default:** Indicates the custom metadata resource
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Key that identifies a data element.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** name
@@ -73,8 +67,6 @@ Value of the data element.
 **Default:** Indicates the custom metadata value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

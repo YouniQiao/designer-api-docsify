@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## PROTO_TYPE_TCP
@@ -18,8 +16,6 @@ TCP网络协议。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## PROTO_TYPE_UDP
@@ -31,7 +27,5 @@ PROTO_TYPE_UDP = 17
 UDP网络协议。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

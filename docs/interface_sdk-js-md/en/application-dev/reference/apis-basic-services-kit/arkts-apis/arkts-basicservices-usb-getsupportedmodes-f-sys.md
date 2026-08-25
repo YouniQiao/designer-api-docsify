@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getSupportedModes
@@ -15,8 +15,6 @@ function getSupportedModes(portId: number): PortModeType
 Obtains the mask combination for the supported mode list of a given USB port.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -36,10 +34,4 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) |
-
-**Examples**
-
-```TypeScript
-let ret = usb.getSupportedModes(0);
-```
+| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) |

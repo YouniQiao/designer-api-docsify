@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getP2pLocalDevice
@@ -15,8 +15,6 @@ function getP2pLocalDevice(): Promise<WifiP2pDevice>
 Obtain the information about own device information. DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00", if ohos.permission.GET_WIFI_LOCAL_MAC is not granted.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -36,24 +34,6 @@ Obtain the information about own device information. DeviceAddress in the return
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  // The local device information can be obtained only after a P2P group is created or the connection is successful.
-  wifiManager.getP2pLocalDevice((err, data:wifiManager.WifiP2pDevice) => {
-    if (err) {
-        console.error("get P2P local device error");
-        return;
-    }
-    console.info("get P2P local device: " + JSON.stringify(data));
-  });
-
-  wifiManager.getP2pLocalDevice().then(data => {
-    console.info("get P2P local device: " + JSON.stringify(data));
-  });
-```
-
 
 ## getP2pLocalDevice
 
@@ -64,8 +44,6 @@ function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void
 Obtain the information about own device information. DeviceAddress in the returned WifiP2pDevice will be set "00:00:00:00:00:00", if ohos.permission.GET_WIFI_LOCAL_MAC is not granted.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -85,7 +63,3 @@ Obtain the information about own device information. DeviceAddress in the return
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 | [2801001](../errorcode-wifi.md#2801001-p2p-module-error) |
-
-**Examples**
-
-See [getP2pLocalDevice](#getp2plocaldevice)

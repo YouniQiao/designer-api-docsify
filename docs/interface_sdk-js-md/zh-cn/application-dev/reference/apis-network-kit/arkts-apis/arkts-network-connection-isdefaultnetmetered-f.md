@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## isDefaultNetMetered
@@ -15,8 +15,6 @@ function isDefaultNetMetered(callback: AsyncCallback<boolean>): void
 检查当前默认网络上的数据流量使用是否被计费（例如：WiFi网络不会被计费，蜂窝网络会被计费）。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -37,40 +35,6 @@ function isDefaultNetMetered(callback: AsyncCallback<boolean>): void
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.isDefaultNetMetered((error: BusinessError, data: boolean) => {
-  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.isDefaultNetMetered((error: BusinessError|null, data: boolean|undefined) => {
-  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.isDefaultNetMetered().then((data: boolean) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
-
 
 ## isDefaultNetMetered
 
@@ -81,8 +45,6 @@ function isDefaultNetMetered(): Promise<boolean>
 检查当前默认网络上的数据流量使用是否被计费（例如：WiFi网络不会被计费，蜂窝网络会被计费）。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -101,7 +63,3 @@ function isDefaultNetMetered(): Promise<boolean>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [isDefaultNetMetered](#isdefaultnetmetered)

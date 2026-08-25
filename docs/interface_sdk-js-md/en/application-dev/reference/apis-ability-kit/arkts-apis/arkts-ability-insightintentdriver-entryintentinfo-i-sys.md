@@ -4,8 +4,6 @@ Describes the parameters supported by the [@InsightIntentForm](../../../referenc
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the parameters supported by the [@InsightIntentForm](../../../referenc
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -27,8 +25,6 @@ Ability name.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Intent execution mode. that is, execution mode supported when the bound ability 
 **Type:** insightIntent.ExecuteMode[]
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

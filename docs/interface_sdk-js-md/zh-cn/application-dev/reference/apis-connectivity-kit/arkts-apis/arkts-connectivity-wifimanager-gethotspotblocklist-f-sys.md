@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getHotspotBlockList
@@ -15,8 +15,6 @@ function getHotspotBlockList(): Array<StationInfo>
 获取黑名单中的所有站点。如果未获取ohos.permission.GET_WIFI_PEERS_MAC权限，返回随机bssid。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -39,16 +37,3 @@ function getHotspotBlockList(): Array<StationInfo>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2601000](../errorcode-wifi.md#2601000-hotspot模块异常) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let data = wifiManager.getHotspotBlockList();
-  console.info("result:" + JSON.stringify(data));
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

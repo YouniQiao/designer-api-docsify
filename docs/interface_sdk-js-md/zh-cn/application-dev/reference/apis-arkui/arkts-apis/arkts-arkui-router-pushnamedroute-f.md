@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## pushNamedRoute
@@ -25,8 +25,6 @@ function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<voi
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 18
 
@@ -54,144 +52,6 @@ function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<voi
 | [100003](../errorcode-router.md#100003-路由压入的page过多) |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-})
-  .then(() => {
-    console.info(`pushNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, (err) => {
-  if (err) {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('pushNamedRoute success');
-})
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`pushNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('pushNamedRoute success');
-})
-```
-
 
 ## pushNamedRoute
 
@@ -212,8 +72,6 @@ function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 18
 
@@ -246,10 +104,6 @@ function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 | [100003](../errorcode-router.md#100003-路由压入的page过多) |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
-**示例**
-
-参见 [pushNamedRoute](#pushnamedroute)
-
 
 ## pushNamedRoute
 
@@ -270,8 +124,6 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 18
 
@@ -300,10 +152,6 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 | [100003](../errorcode-router.md#100003-路由压入的page过多) |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
-**示例**
-
-参见 [pushNamedRoute](#pushnamedroute)
-
 
 ## pushNamedRoute
 
@@ -324,8 +172,6 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 18
 
@@ -358,7 +204,3 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
-
-**示例**
-
-参见 [pushNamedRoute](#pushnamedroute)

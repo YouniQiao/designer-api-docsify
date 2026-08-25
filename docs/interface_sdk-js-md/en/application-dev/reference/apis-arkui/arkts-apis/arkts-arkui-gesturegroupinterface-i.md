@@ -4,8 +4,6 @@ Combined gestures integrate two or more gestures into a compound gesture, suppor
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ Combined gestures integrate two or more gestures into a compound gesture, suppor
 Return to Obtain GestureGroup.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,8 +47,6 @@ onCancel(event: () => void): GestureGroupInterface
 Triggered when a tap cancellation event is received after a gesture is recognized.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

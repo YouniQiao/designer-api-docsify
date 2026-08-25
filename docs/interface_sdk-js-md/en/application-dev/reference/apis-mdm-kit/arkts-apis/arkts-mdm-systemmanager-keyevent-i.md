@@ -4,14 +4,12 @@ Enumerates key events. When the [EnterpriseAdminExtensionAbility.onKeyEvent](ark
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## actionTime
@@ -20,13 +18,11 @@ import { systemManager } from '@kit.MDMKit';
 actionTime: number
 ```
 
-Time when the key action occurs. The value is a microsecond-level timestamp after the system is powered on. For long-press key events, this parameter remains unchanged in subsequent key events. Apps can use this timestamp to determine whether the event is a long-press event and execute the corresponding long-press event logic accordingly.
+Time when the key action occurs. The value is a microsecond-level timestamp after the system is powered on. For number-press key events, this parameter remains unchanged in subsequent key events. Apps can use this timestamp to determine whether the event is a number-press event and execute the corresponding number-press event logic accordingly.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Key action.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -62,8 +56,6 @@ Key code.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -79,8 +71,6 @@ Information about other keys that are being pressed when the current key event o
 **Type:** Array&lt;[KeyItem](arkts-mdm-systemmanager-keyitem-i.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

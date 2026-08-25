@@ -15,8 +15,6 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md)
@@ -31,39 +29,8 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let isBadgeDisplayedCallback = (err: Base.BusinessError, data: boolean) => {
-  if (err) {
-    console.info("isBadgeDisplayed failed " + JSON.stringify(err));
-  } else {
-    console.info("isBadgeDisplayed success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.isBadgeDisplayed(bundle).then((data) => {
-  console.info("isBadgeDisplayed success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isBadgeDisplayed failed, code is ${err}`);
-});
-```
 
 
 ## isBadgeDisplayed
@@ -76,8 +43,6 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md)
@@ -92,14 +57,10 @@ Checks whether the notification badge is enabled for a specified application. Th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [isBadgeDisplayed](#isbadgedisplayed)

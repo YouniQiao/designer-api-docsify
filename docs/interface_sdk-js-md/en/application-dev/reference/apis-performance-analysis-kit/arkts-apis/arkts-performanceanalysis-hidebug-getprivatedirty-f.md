@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getPrivateDirty
@@ -21,8 +21,6 @@ Obtains the size of the private dirty memory of a process. This API is implement
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
@@ -30,11 +28,3 @@ Obtains the size of the private dirty memory of a process. This API is implement
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | bigint |
-
-**Examples**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-
-let privateDirty: bigint = hidebug.getPrivateDirty();
-```

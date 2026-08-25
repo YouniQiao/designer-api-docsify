@@ -4,14 +4,12 @@ Describes the image decoding options.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## desiredAuxiliaryPictures
@@ -26,8 +24,6 @@ Auxiliary picture type. If no auxiliary picture type is specified or an empty ar
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredPixelFormat
@@ -41,8 +37,6 @@ Desired Pixel format, RGBA_8888\BGRA_8888\RGB_565\NV12\NV21 are supported.
 **Type:** PixelMapFormat
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,8 +53,6 @@ Desired size of the main pixel map. The value (0, 0) indicates that the pixels a
 **Type:** Size
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Enumerates file aggregation types.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Default mode, indicating that this parameter does not take effect.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -34,8 +30,6 @@ Audio mode.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -49,8 +43,6 @@ VIDEO = 2
 Video mode.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -66,8 +58,6 @@ Document mode.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -81,8 +71,6 @@ PICTURE = 4
 Image mode.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## off
@@ -15,8 +15,6 @@ function off(type: string): boolean
 移除已注册的事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 

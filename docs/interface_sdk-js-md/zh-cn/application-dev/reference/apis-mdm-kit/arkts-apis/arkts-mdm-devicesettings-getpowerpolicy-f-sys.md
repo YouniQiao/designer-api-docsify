@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## getPowerPolicy
@@ -15,8 +15,6 @@ function getPowerPolicy(admin: Want, powerScene: PowerScene): PowerPolicy
 获取电源策略。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -52,23 +50,3 @@ function getPowerPolicy(admin: Want, powerScene: PowerScene): PowerPolicy
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let powerScene: deviceSettings.PowerScene = deviceSettings.PowerScene.TIME_OUT;
-  let powerPolicy: deviceSettings.PowerPolicy = deviceSettings.getPowerPolicy(wantTemp, powerScene);
-  console.info(`Succeeded in getting power policy ${JSON.stringify(powerPolicy)}`);
-} catch (err) {
-  console.error(`Failed to get power policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

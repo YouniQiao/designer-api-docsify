@@ -6,20 +6,18 @@ Represents specific data types defined by OpenHarmony. It is a child class of [U
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## details
 
 ```TypeScript
-details?: Record<string, int | long | double | string | Uint8Array>
+details?: Record<string, number | number | number | string | Uint8Array>
 ```
 
 A dictionary type object, where the key is of the string type, and the value can be a number, a string, or a Uint 8Array. The default value is an empty dictionary object.
@@ -28,23 +26,8 @@ A dictionary type object, where the key is of the string type, and the value can
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-let sdr = new unifiedDataChannel.SystemDefinedRecord();
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-sdr.details = {
-    title: 'recordTitle',
-    version: 1,
-    content: u8Array
-};
-let unifiedData = new unifiedDataChannel.UnifiedData(sdr);
-```

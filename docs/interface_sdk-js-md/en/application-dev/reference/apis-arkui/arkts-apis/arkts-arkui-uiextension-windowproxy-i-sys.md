@@ -4,14 +4,12 @@ The proxy of the UIExtension window.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from '@kit.ArkUI';
+import { uiExtension } from 'kits/@kit.ArkUI';
 ```
 
 ## hideNonSecureWindows
@@ -35,8 +33,6 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 > **hideNonSecureWindows(true)** is called.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
 
@@ -67,36 +63,6 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
 
-**Examples**
-
-```TypeScript
-// ExtensionProvider.ts
-
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // Hide non-secure windows.
-    extensionHostWindow.hideNonSecureWindows(true).then(()=> {
-      console.info(`Succeeded in hiding the non-secure windows.`);
-    }).catch((err: BusinessError)=> {
-      console.error(`Failed to hide the non-secure windows. Cause:${JSON.stringify(err)}`);
-    })
-  }
-  onSessionDestroy(session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // Unhide non-secure windows.
-    extensionHostWindow.hideNonSecureWindows(false).then(()=> {
-      console.info(`Succeeded in showing the non-secure windows.`);
-    }).catch((err: BusinessError)=> {
-      console.error(`Failed to show the non-secure windows. Cause:${JSON.stringify(err)}`);
-    })
-  }
-}
-```
-
 ## setWaterMarkFlag
 
 ```TypeScript
@@ -110,8 +76,6 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 > , regardless of whether the window is displayed in full screen, floating, and split screen mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,32 +102,3 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) |
-
-**Examples**
-
-```TypeScript
-// ExtensionProvider.ts
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // Add the watermark flag.
-    extensionHostWindow.setWaterMarkFlag(true).then(() => {
-      console.info(`Succeeded in setting water mark flag of window.`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to setting water mark flag of window. Cause:${JSON.stringify(err)}`);
-    })
-  }
-  onSessionDestroy(session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // Delete the watermark flag.
-    extensionHostWindow.setWaterMarkFlag(false).then(() => {
-      console.info(`Succeeded in deleting water mark flag of window.`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to deleting water mark flag of window. Cause:${JSON.stringify(err)}`);
-    })
-  }
-}
-```

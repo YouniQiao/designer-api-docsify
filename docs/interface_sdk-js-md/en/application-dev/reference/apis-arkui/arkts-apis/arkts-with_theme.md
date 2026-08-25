@@ -30,5 +30,5 @@
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [WithTheme(Defines WithTheme component.)](arkts-arkui-withtheme-con.md#withtheme) |
+| [WithTheme(Defines WithTheme component.)](arkts-arkui-withtheme-con.md) |
 | [WithThemeInstance(Defines WithTheme component.)](arkts-arkui-withtheme-con.md#withthemeinstance) |

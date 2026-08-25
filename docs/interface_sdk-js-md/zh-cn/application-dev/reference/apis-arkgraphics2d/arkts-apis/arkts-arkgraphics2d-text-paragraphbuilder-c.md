@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## addPlaceholder
@@ -24,8 +22,6 @@ addPlaceholder(placeholderSpan: PlaceholderSpan): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -36,96 +32,15 @@ addPlaceholder(placeholderSpan: PlaceholderSpan): void
 | --- | --- | --- |
 | placeholderSpan | [PlaceholderSpan](arkts-arkgraphics2d-text-placeholderspan-i.md) | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myParagraphStyle: text.ParagraphStyle = {
-    align: text.TextAlign.END,
-  };
-  let myPlaceholderSpan: text.PlaceholderSpan = {
-    width: 100,
-    height: 100,
-    align: text.PlaceholderAlignment.ABOVE_BASELINE,
-    baseline: text.TextBaseline.ALPHABETIC,
-    baselineOffset: 100
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addPlaceholder(myPlaceholderSpan);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
-import { text } from "@kit.ArkGraphics2D"
-
-function textFunc() {
-  let myParagraphStyle: text.ParagraphStyle = {
-    align: text.TextAlign.END,
-  };
-  let myPlaceholderSpan: text.PlaceholderSpan = {
-    width: 100,
-    height: 100,
-    align: text.PlaceholderAlignment.ABOVE_BASELINE,
-    baseline: text.TextBaseline.ALPHABETIC,
-    baselineOffset: 100
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addPlaceholder(myPlaceholderSpan);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: () => void = textFunc;
-  build() {
-    Column() {
-      Button("Click").onClick((e: ClickEvent) => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
 ## addSymbol
 
-ArkTS-Dyn:
 ```TypeScript
 addSymbol(symbolId: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-addSymbol(symbolId: int): void
 ```
 
 向正在构建的文本段落中插入具体符号。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -135,78 +50,7 @@ addSymbol(symbolId: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| symbolId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addSymbol(0xF0000);
-  let paragraph = paragraphBuilder.build();
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
-import { text } from "@kit.ArkGraphics2D";
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addSymbol(0xF0000);
-  let paragraph = paragraphBuilder.build();
-}
-
-@Entry
-@Component
-struct Index {
-  fun: () => void = textFunc;
-  build() {
-    Column() {
-      Button("Click").onClick((e: ClickEvent) => {
-        this.fun();
-      })
-    }
-  }
-}
-```
+| symbolId | number | 是 |
 
 ## addText
 
@@ -218,8 +62,6 @@ addText(text: string): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -229,75 +71,6 @@ addText(text: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [text](arkts-graphics-text.md) | string | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addText("123666");
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
-import { text } from "@kit.ArkGraphics2D"
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addText("123666");
-}
-
-@Entry
-@Component
-struct Index {
-  fun: () => void = textFunc;
-  build() {
-    Column() {
-      Button("Click").onClick((e: ClickEvent) => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## build
 
@@ -309,8 +82,6 @@ build(): Paragraph
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -320,77 +91,6 @@ build(): Paragraph
 | 类型 |
 | --- |
 | [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color : {alpha: 255, red: 255, green: 0, blue: 0},
-    fontSize : 20,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle : myTextStyle,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addText("123456789");
-  let paragraph = paragraphBuilder.build();
-  paragraph.layoutSync(200);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color : {alpha: 255, red: 255, green: 0, blue: 0},
-    fontSize : 20,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle : myTextStyle,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addText("123456789");
-  let paragraph = paragraphBuilder.build();
-  paragraph.layoutSync(200);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: () => void = textFunc;
-  build() {
-    Column() {
-      Button("Click").onClick((e: ClickEvent) => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## buildLineTypeset
 
@@ -402,8 +102,6 @@ buildLineTypeset(): LineTypeset
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -413,67 +111,6 @@ buildLineTypeset(): LineTypeset
 | 类型 |
 | --- |
 | [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function test() {
-  let myParagraphStyle: text.ParagraphStyle = {
-    align: text.TextAlign.JUSTIFY,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addText("123456789");
-  let lineTypeset = paragraphBuilder.buildLineTypeset();
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = test;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
-import { text } from '@kit.ArkGraphics2D'
-
-function test() {
-  let myParagraphStyle: text.ParagraphStyle = {
-    align: text.TextAlign.JUSTIFY,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addText("123456789");
-  let lineTypeset = paragraphBuilder.buildLineTypeset();
-}
-
-@Entry
-@Component
-struct Index {
-  fun: () => void = test;
-  build() {
-    Column() {
-      Button("Click").onClick((e: ClickEvent) => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## constructor
 
@@ -485,8 +122,6 @@ ParagraphBuilder对象的构造函数。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -497,73 +132,6 @@ ParagraphBuilder对象的构造函数。
 | --- | --- | --- |
 | paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 是 |
 | fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
-import { text } from "@kit.ArkGraphics2D";
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: () => void = textFunc;
-  build() {
-    Column() {
-      Button("Click").onClick((e: ClickEvent) => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## popStyle
 
@@ -579,82 +147,9 @@ popStyle(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.pushStyle(myTextStyle);
-  paragraphBuilder.popStyle();
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
-import { text } from "@kit.ArkGraphics2D"
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.pushStyle(myTextStyle);
-  paragraphBuilder.popStyle();
-}
-
-@Entry
-@Component
-struct Index {
-  fun: () => void = textFunc;
-  build() {
-    Column() {
-      Button("Click").onClick((e: ClickEvent) => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## pushStyle
 
@@ -669,8 +164,6 @@ pushStyle(textStyle: TextStyle): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -679,73 +172,4 @@ pushStyle(textStyle: TextStyle): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| textStyle | [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.CENTER,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.pushStyle(myTextStyle);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
-import { text } from "@kit.ArkGraphics2D"
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.CENTER,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.pushStyle(myTextStyle);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: () => void = textFunc;
-  build() {
-    Column() {
-      Button("Click").onClick((e: ClickEvent) => {
-        this.fun();
-      })
-    }
-  }
-}
-```
+| textStyle | [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | 是 |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getAvailableStatus
@@ -15,8 +15,6 @@ function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLev
 Checks whether the specified authentication capability is supported. This API is used to check whether the current device supports the specified authentication type and authentication trust level. It helps an application determine whether the authentication capability is available before initiating authentication, thereby avoiding unnecessary authentication failures. If the query is successful (no error is thrown), the authentication capability is available. If an error is thrown, the application should determine the cause based on the error code and take appropriate measures.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -42,28 +40,3 @@ Checks whether the specified authentication capability is supported. This API is
 | [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
 | [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
 | [12500013](../errorcode-useriam.md#12500013-password-expired) |
-
-**Examples**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  userAuth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL3);
-  console.info('current auth trust level is supported');
-} catch (error) {
-  console.error(`current auth trust level is not supported, error = ${error}`);
-}
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let auth = new userAuth.UserAuth();
-let checkCode = auth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1);
-if (checkCode == userAuth.ResultCode.SUCCESS) {
-  console.info('check auth support success');
-} else {
-  console.error(`check auth support fail, code = ${checkCode}`);
-}
-```

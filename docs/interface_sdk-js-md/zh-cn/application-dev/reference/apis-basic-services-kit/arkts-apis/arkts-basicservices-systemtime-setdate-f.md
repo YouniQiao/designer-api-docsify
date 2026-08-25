@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setDate
@@ -15,8 +15,6 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 设置系统日期，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -39,42 +37,6 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | --- |
 | -1 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let date = new Date();
-try {
-  systemTime.setDate(date, (error: BusinessError) => {
-    if (error) {
-      console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in setting date.`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let date = new Date(); 
-try {
-  systemTime.setDate(date).then(() => {
-    console.info(`Succeeded in setting date.`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## setDate
 
@@ -85,8 +47,6 @@ function setDate(date: Date): Promise<void>
 设置系统日期，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -113,7 +73,3 @@ function setDate(date: Date): Promise<void>
 | 错误码ID |
 | --- |
 | -1 |
-
-**示例**
-
-参见 [setDate](#setdate)

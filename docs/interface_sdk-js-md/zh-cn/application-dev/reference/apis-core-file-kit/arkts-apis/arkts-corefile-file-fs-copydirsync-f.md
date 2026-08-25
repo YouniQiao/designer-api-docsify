@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## copyDirSync
@@ -17,8 +17,6 @@ declare function copyDirSync(src: string, dest: string, mode?: number): void
 以同步方法复制源目录至目标路径下。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -53,20 +51,3 @@ declare function copyDirSync(src: string, dest: string, mode?: number): void
 | 13900038 |
 | 13900042 |
 | 13900044 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// copy directory from srcPath to destPath
-let srcPath = pathDir + "/srcDir/";
-let destPath = pathDir + "/destDir/";
-try {
-  fileIo.copyDirSync(srcPath, destPath, 0);
-  console.info(`Succeeded in copying directory.`);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to copy directory. Code: ${err.code}, message: ${err.message}`);
-}
-```

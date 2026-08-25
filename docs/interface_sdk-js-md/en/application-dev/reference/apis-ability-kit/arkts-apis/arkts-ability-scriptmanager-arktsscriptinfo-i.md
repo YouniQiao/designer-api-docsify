@@ -4,14 +4,12 @@ arkTS script info.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from '@kit.AbilityKit';
+import { scriptManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## context
@@ -25,8 +23,6 @@ The context of the bound ability.
 **Type:** [Context](arkts-ability-context-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Request code for identifying the current operation
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

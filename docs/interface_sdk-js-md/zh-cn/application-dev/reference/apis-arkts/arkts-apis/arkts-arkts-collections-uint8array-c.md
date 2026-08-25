@@ -1,6 +1,6 @@
 # Uint8Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-arkts-collections-n.md)实现。
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md)实现。
 
 > **说明：**&gt;
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
@@ -8,14 +8,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -31,8 +29,6 @@ import { collections } from '@kit.ArkTS';
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -41,7 +37,7 @@ import { collections } from '@kit.ArkTS';
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 **错误码：**
 
@@ -58,8 +54,6 @@ at(index: number): number | undefined
 返回指定下标的元素，如果不存在，则返回**undefined**。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -94,8 +88,6 @@ constructor()
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -115,8 +107,6 @@ constructor(length: number)
 构造函数，用于创建一个指定长度的ArkTS Uint8Array对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -144,8 +134,6 @@ constructor(elements: Iterable<number>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -172,8 +160,6 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -199,8 +185,6 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 构造函数，以ArrayBuffer创建一个ArkTS Uint8Array对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -229,8 +213,6 @@ copyWithin(target: number, start: number, end?: number): Uint8Array
 将ArkTS Uint8Array指定范围内的元素依次拷贝到其自身buffer内目标位置，覆盖目标范围内原有数据，并返回修改后的ArkTS Uint8Array。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -267,8 +249,6 @@ entries(): IterableIterator<[number, number]>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -277,7 +257,7 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; |
+| IterableIterator & lt;[number, number] & gt; |
 
 **错误码：**
 
@@ -295,8 +275,6 @@ every(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 测试ArkTS Uint8Array中的所有元素是否满足指定条件，全部满足则返回true，否则返回false。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -330,8 +308,6 @@ fill(value: number, start?: number, end?: number): Uint8Array
 使用特定值填充替换ArkTS Uint8Array指定范围的全部元素，并返回修改后的ArkTS Uint8Array。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -368,8 +344,6 @@ filter(predicate: TypedArrayPredicateFn<number, Uint8Array>): Uint8Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -402,8 +376,6 @@ find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined
 返回ArkTS Uint8Array中第一个满足指定条件的元素的值，如果所有元素都不满足，则返回**undefined**。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -438,8 +410,6 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -473,8 +443,6 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8Array>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -502,8 +470,6 @@ static from(arrayLike: ArrayLike<number>): Uint8Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -529,8 +495,6 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 从一个ArrayLike中创建一个ArkTS Uint8Array对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -559,8 +523,6 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -587,8 +549,6 @@ includes(searchElement: number, fromIndex?: number): boolean
 判断ArkTS Uint8Array是否包含特定元素，包含则返回true，否则返回false。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -624,8 +584,6 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -660,8 +618,6 @@ join(separator?: string): string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -695,8 +651,6 @@ keys(): IterableIterator<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -705,7 +659,7 @@ keys(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 **错误码：**
 
@@ -723,8 +677,6 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 返回ArkTS Uint8Array实例中最后一次出现指定值的索引。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -760,8 +712,6 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -795,8 +745,6 @@ static of(...items: number[]): Uint8Array
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -822,8 +770,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number
 对ArkTS Uint8Array中的每个元素执行归约函数，并返回最终的归约结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -857,8 +803,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>, initial
 对ArkTS Uint8Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -894,8 +838,6 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialVa
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -929,8 +871,6 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Arr
 反向遍历ArkTS Uint8Array，对每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回 最终的归约结果。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -966,8 +906,6 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): n
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1001,8 +939,6 @@ reverse(): Uint8Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1029,8 +965,6 @@ set(array: ArrayLike<number>, offset?: number): void
 将传入的ArrayLike元素依次写入到指定的起始位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1059,8 +993,6 @@ slice(start?: number, end?: number): Uint8Array
 返回一个新的ArkTS Uint8Array对象，其包含原ArkTS Uint8Array指定范围的内容。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1096,8 +1028,6 @@ some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1131,8 +1061,6 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint8Array
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1165,8 +1093,6 @@ subarray(begin?: number, end?: number): Uint8Array
 从指定的位置截取数组，返回一个新的、基于相同ArkTS ArrayBuffer的ArkTS Uint8Array对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1202,8 +1128,6 @@ toLocaleString(): string
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1230,8 +1154,6 @@ toString(): string
 将ArkTS Uint8Array转换为字符串。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1260,8 +1182,6 @@ values(): IterableIterator<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1270,7 +1190,7 @@ values(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 **错误码：**
 
@@ -1291,8 +1211,6 @@ values(): IterableIterator<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1308,8 +1226,6 @@ ArkTS Uint8Array底层使用的buffer。
 **类型：** ArrayBuffer
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1327,8 +1243,6 @@ ArkTS Uint8Array所占的字节数。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1344,8 +1258,6 @@ ArkTS Uint8Array距离其ArrayBuffer起始位置的字节偏移。
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1363,8 +1275,6 @@ ArkTS Uint8Array中每个元素所占的字节数。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1380,8 +1290,6 @@ ArkTS Uint8Array元素个数。
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

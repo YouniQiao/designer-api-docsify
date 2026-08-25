@@ -4,14 +4,12 @@ Defines the information about the redirected-to ability.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -25,8 +23,6 @@ Name of the target ability.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -42,8 +38,6 @@ Parameters to be transferred to the target.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## pkgName
@@ -58,8 +52,6 @@ Name of the target package.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## uri
@@ -73,7 +65,5 @@ URI of the target ability.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent

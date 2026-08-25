@@ -4,8 +4,6 @@ Enumerates the sync modes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## PULL_ONLY
@@ -17,8 +15,6 @@ PULL_ONLY
 Indicates that data is only pulled from the remote end.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Indicates that data is only pushed from the local end.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -49,8 +43,6 @@ PUSH_PULL
 Indicates that data is pushed from the local end, and then pulled from the remote end.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

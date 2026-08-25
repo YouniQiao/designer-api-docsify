@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## preloadUIExtensionAbility
 
 ```TypeScript
-function preloadUIExtensionAbility(want: Want): Promise<int>
+function preloadUIExtensionAbility(want: Want): Promise<number>
 ```
 
 预加载指定的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)并返回预加载UIExtensionAbility实例 的ID。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -36,7 +34,7 @@ function preloadUIExtensionAbility(want: Want): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -48,67 +46,3 @@ function preloadUIExtensionAbility(want: Want): Promise<int>
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityManager, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const preloadWant: Want = {
-    bundleName: 'com.example.application',
-    abilityName: 'EntryBackupAbility',
-    moduleName: 'entry',
-    parameters: {
-      'ability.want.params.uiExtensionType': 'sys/commonUI'
-    }
-  };
-
-  abilityManager.preloadUIExtensionAbility(preloadWant)
-    .then((preloadId: number) => {
-      console.info(`preloadUIExtensionAbility success, preloadId: ${preloadId}`);
-    })
-    .catch((err: BusinessError) => {
-      console.error(`preloadUIExtensionAbility fail, err: ${JSON.stringify(err)}`);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`preloadUIExtensionAbility failed, code is ${code}, message is ${message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { abilityManager, Want } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-try {
-  const preloadWant: Want = {
-    bundleName: 'com.example.application',
-    abilityName: 'EntryBackupAbility',
-    moduleName: 'entry',
-    parameters: {
-      'ability.want.params.uiExtensionType': 'sys/commonUI'
-    } as Record<string, RecordData>
-  };
-
-  abilityManager.preloadUIExtensionAbility(preloadWant)
-    .then((preloadId: int) => {
-      console.info(`preloadUIExtensionAbility success, preloadId: ${preloadId}`);
-    })
-    .catch((error: Error) => {
-      let err = error as BusinessError;
-      console.error(`preloadUIExtensionAbility fail, err: ${JSON.stringify(err)}`);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`preloadUIExtensionAbility failed, code is ${code}, message is ${message}`);
-}
-```

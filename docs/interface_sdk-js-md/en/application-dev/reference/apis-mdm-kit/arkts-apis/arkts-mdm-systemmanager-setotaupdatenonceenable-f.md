@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setOtaUpdateNonceEnable
@@ -19,8 +19,6 @@ Sets whether to enable nonce for OTA update (nonce is enabled by default). When 
 > such as intranet updates.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 

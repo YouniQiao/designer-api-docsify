@@ -4,8 +4,6 @@ Provides OverflowRequest about request/cancel form's overflow
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides OverflowRequest about request/cancel form's overflow
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'kits/@kit.FormKit';
 ```
 
 ## formId
@@ -27,8 +25,6 @@ The form id about request/cancel overflow animation
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -46,8 +42,6 @@ Whether the form request or cancel overflow animation
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ The form's overflow animation parameter
 **Type:** [OverflowInfo](arkts-form-forminfo-overflowinfo-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 

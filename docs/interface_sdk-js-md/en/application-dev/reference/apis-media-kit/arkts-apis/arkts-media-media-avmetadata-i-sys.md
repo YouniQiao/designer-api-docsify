@@ -4,14 +4,12 @@ Defines the audio and video metadata. Parameters that are not declared as read-o
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## gltf_offset
@@ -25,8 +23,6 @@ The offset value of GLTF 3D model in media file. This parameter is not supported
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 

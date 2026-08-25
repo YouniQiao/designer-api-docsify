@@ -2,14 +2,12 @@
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## Modules to Import
 
 ```TypeScript
-import { Bluetooth, BLEFoundResponse, BluetoothDevice, StartBLEScanOptions, StopBLEScanOptions, SubscribeBLEFoundOptions } from '@kit.ConnectivityKit';
+import { Bluetooth, BLEFoundResponse, BluetoothDevice, StartBLEScanOptions, StopBLEScanOptions, SubscribeBLEFoundOptions } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## devices
@@ -23,8 +21,6 @@ The devices of BLEFoundResponse
 **Type:** Array&lt;[BluetoothDevice](arkts-connectivity-system-bluetooth-bluetoothdevice-i.md)&gt;
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 

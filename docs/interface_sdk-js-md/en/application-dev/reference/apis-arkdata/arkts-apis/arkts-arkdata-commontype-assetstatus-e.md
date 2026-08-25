@@ -4,8 +4,6 @@ Enumerates the asset statuses.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## ASSET_NORMAL
@@ -17,8 +15,6 @@ ASSET_NORMAL
 The asset is in normal status.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -32,8 +28,6 @@ The asset is to be inserted to the cloud.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## ASSET_UPDATE
@@ -45,8 +39,6 @@ ASSET_UPDATE
 The asset is to be updated to the cloud.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -60,8 +52,6 @@ The asset is to be deleted from the cloud.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## ASSET_ABNORMAL
@@ -74,8 +64,6 @@ The asset is in abnormal status.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## ASSET_DOWNLOADING
@@ -87,7 +75,5 @@ ASSET_DOWNLOADING
 The asset is being downloaded to a local device.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType

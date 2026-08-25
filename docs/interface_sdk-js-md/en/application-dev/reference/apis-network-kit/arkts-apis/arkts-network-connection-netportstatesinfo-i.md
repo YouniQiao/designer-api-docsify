@@ -4,14 +4,12 @@ Describes the information about the TCP and UDP ports that are currently listene
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## tcpPortStatesInfo
@@ -25,8 +23,6 @@ TCP information currently listened for by the system.
 **Type:** Array&lt;[TcpNetPortStatesInfo](arkts-network-connection-tcpnetportstatesinfo-i.md)&gt;
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ UDP information currently listened for by the system.
 **Type:** Array&lt;[UdpNetPortStatesInfo](arkts-network-connection-udpnetportstatesinfo-i.md)&gt;
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

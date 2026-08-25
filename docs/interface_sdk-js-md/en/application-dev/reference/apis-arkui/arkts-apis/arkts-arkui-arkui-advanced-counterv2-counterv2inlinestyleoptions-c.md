@@ -6,14 +6,12 @@ Defines the inline style options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from 'kits/@kit.ArkUI';
 ```
 
 ## onChange
@@ -26,8 +24,6 @@ Trigger an event when the value of the counter has been changed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -37,7 +33,7 @@ Trigger an event when the value of the counter has been changed.
 ## max
 
 ```TypeScript
-max?: int
+max?: number
 ```
 
 Set maximum value of the counter component
@@ -48,8 +44,6 @@ Set maximum value of the counter component
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -59,7 +53,7 @@ Set maximum value of the counter component
 ## min
 
 ```TypeScript
-min?: int
+min?: number
 ```
 
 Set minimum value of the counter component
@@ -70,8 +64,6 @@ Set minimum value of the counter component
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -81,7 +73,7 @@ Set minimum value of the counter component
 ## textWidth
 
 ```TypeScript
-textWidth?: double
+textWidth?: number
 ```
 
 Set text width of the counter component, ranges greater than or equal to 0. If undefined is passed, the text width will adapt to the text content.
@@ -92,8 +84,6 @@ Set text width of the counter component, ranges greater than or equal to 0. If u
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -103,7 +93,7 @@ Set text width of the counter component, ranges greater than or equal to 0. If u
 ## value
 
 ```TypeScript
-value?: int
+value?: number
 ```
 
 Set initial value of the counter component, ranges from min to max.
@@ -113,8 +103,6 @@ Set initial value of the counter component, ranges from min to max.
 **Default:** 0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDisposedRule
 
 ```TypeScript
-function getDisposedRule(appId: string, appIndex?: int): DisposedRule
+function getDisposedRule(appId: string, appIndex?: number): DisposedRule
 ```
 
 获取指定应用或分身应用已设置的拦截规则。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
@@ -29,7 +27,7 @@ function getDisposedRule(appId: string, appIndex?: int): DisposedRule
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| appIndex | number | 否 |
 
 **返回值：**
 
@@ -47,20 +45,3 @@ function getDisposedRule(appId: string, appIndex?: int): DisposedRule
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-
-**示例**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  let data = appControl.getDisposedRule(appId, 1);
-  console.info('getDisposedRule successfully. Data: ' + JSON.stringify(data));
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('getDisposedRule failed ' + message);
-}
-```

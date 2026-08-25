@@ -4,14 +4,12 @@ VisualEffect class, used to apply background color blending, border lighting, co
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## backgroundColorBlender
@@ -23,8 +21,6 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 A blender for changing the background color of the component. Currently, only the brightness blender is supported.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -44,34 +40,16 @@ A blender for changing the background color of the component. Currently, only th
 | --- |
 | [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) |
 
-**Examples**
-
-```TypeScript
-let blender : uiEffect.BrightnessBlender =
-  uiEffect.createBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
-    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
-visualEffect.backgroundColorBlender(blender)
-```
-
 ## borderLight
 
-ArkTS-Dyn:
 ```TypeScript
 borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: number,
       borderWidth: number): VisualEffect
 ```
 
-ArkTS-Sta:
-```TypeScript
-borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIntensity: double,
-      borderWidth: double): VisualEffect
-```
-
 Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -83,8 +61,8 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 | --- | --- | --- |
 | lightPosition | common2D.Point3d | Yes |
 | [lightColor](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | common2D.Color | Yes |
-| [lightIntensity](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-sensor-colorresponse-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
-| borderWidth | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [lightIntensity](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-sensor-colorresponse-i-sys.md) | number | Yes |
+| borderWidth | number | Yes |
 
 **Return value:**
 
@@ -98,67 +76,16 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { common2D, uiEffect } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct Index {
-  @State point1:common2D.Point3d = {
-    x:0,y:0,z:2
-  }
-  @State color1:common2D.Color = {
-    red:1,green:1,blue:1,alpha:1
-  }
-  @State lightIntensity1:number = 1
-  @State borderWidth:number = 20
-
-  build() {
-    Column() {
-      Stack() {
-        Image($r('app.media.man'))
-          .width('646px')
-          .height('900px')
-          .borderRadius(10)
-        Column()
-          .width('646px')
-          .height('900px')
-          .borderRadius(10)
-          .visualEffect(uiEffect.createEffect().borderLight(this.point1, this.color1, this.lightIntensity1,
-            this.borderWidth))
-      }
-      .width('100%')
-      .height('55%')
-    }
-    .height('100%')
-    .width('100%')
-    .justifyContent(FlexAlign.Center)
-    .backgroundColor('#555')
-  }
-}
-```
-
 ## colorGradient
 
-ArkTS-Dyn:
 ```TypeScript
 colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<number>,
-      alphaMask?: Mask): VisualEffect
-```
-
-ArkTS-Sta:
-```TypeScript
-colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths: Array<double>,
       alphaMask?: Mask): VisualEffect
 ```
 
 Adds a color gradient effect to the component.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -170,7 +97,7 @@ Adds a color gradient effect to the component.
 | --- | --- | --- |
 | colors | Array & lt;Color & gt; | Yes |
 | positions | Array & lt;common2D.Point & gt; | Yes |
-| strengths | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; | Yes |
+| strengths | Array & lt;number & gt; | Yes |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No |
 
 **Return value:**
@@ -184,72 +111,6 @@ Adds a color gradient effect to the component.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { common2D, uiEffect } from "@kit.ArkGraphics2D"
-
-@Entry
-@Component
-struct ColorGradientExample {
-  @State colorsExample: Array<uiEffect.Color> = [
-    {red: 1.0, green: 0.8, blue: 0.5, alpha: 0.8},
-    {red: 1.0, green: 1.5, blue: 0.5, alpha: 1.0}
-  ]
-
-  @State positionsExample: Array<common2D.Point> = [
-    {x: 0.2, y: 0.2},
-    {x: 0.8, y: 0.6}]
-
-  @State strengthsExample: Array<number> = [0.3, 0.3]
-
-  build() {
-    Column() {
-      Row()
-        .width("100%")
-        .height("100%")
-        .backgroundFilter(uiEffect.createFilter().colorGradient(this.colorsExample, this.positionsExample, this.strengthsExample))
-    }
-  }
-}
-```
-
-```TypeScript
-import { common2D, uiEffect } from "@kit.ArkGraphics2D"
-
-@Entry
-@Component
-struct ColorGradientExample {
-  build() {
-    Stack() {
-      Stack() {}
-      .visualEffect(uiEffect.createEffect()
-        .colorGradient(
-          [
-            {red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0},
-            {red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0},
-            {red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0},
-            {red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0},
-          ],
-          [
-            {x: 0.1, y: 0.1},
-            {x: 0.1, y: 0.9},
-            {x: 0.9, y: 0.1},
-            {x: 0.9, y: 0.9},
-          ],
-          [12.4, 7.8, 7.8, 10.0],
-          uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.1)
-        )
-      )
-      .width("1024px")
-      .height("1024px")
-    }
-    .width("100%")
-    .height("100%")
-  }
-}
-```
 
 ## distortionCollapse
 
@@ -271,8 +132,6 @@ capture, such as systemMaterial, backgroundEffect, brightness, and blur, will no
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -283,7 +142,7 @@ capture, such as systemMaterial, backgroundEffect, brightness, and blur, will no
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| distortionParam | [DistortionParam](../../apis-arkui/arkts-apis/arkts-arkui-distortioncomponent-distortionparam-i-sys.md) | Yes |
+| distortionParam | [DistortionParam](../../apis-arkui/arkts-components/arkts-arkui-distortionparam-i-sys.md) | Yes |
 
 **Return value:**
 
@@ -301,8 +160,6 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 Adds a material effect to the component. The material effect simulates the optical properties (refraction, reflection) and dynamic perturbation effects of physical materials to achieve visual representations of glass, metal, and other materials. It can be used for scenarios such as glass-textured UI, fluid material animation, frosted glass effects, etc.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -328,61 +185,3 @@ Adds a material effect to the component. The material effect simulates the optic
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
-
-@Entry
-@Component
-struct Index {
-  @State distortProgress: number = 0.;
-  @State rippleProgress: number = 0.;
-  @State distortFactor: number = 0.;
-  @State materialFactor: number = 1.;
-  @State refractionFactor: number = 1.;
-  @State reflectionFactor: number = 1.;
-  @State tintColorR: number = 1.;
-  @State tintColorG: number = 1.;
-  @State tintColorB: number = 1.;
-  @State tintColorA: number = 1.;
-
-  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
-    let effect: uiEffect.VisualEffect = uiEffect.createEffect();
-    effect.liquidMaterial({
-      enable: true,
-      distortProgress : this.distortProgress,
-      rippleProgress: this.rippleProgress,
-      distortFactor: this.distortFactor,
-      materialFactor : this.materialFactor,
-      refractionFactor : this.refractionFactor,
-      reflectionFactor: this.reflectionFactor,
-      tintColor : [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
-      ripplePosition: undefined,
-    },
-      uiEffect.Mask.createUseEffectMask(true),
-      );
-    return effect;
-  }
-
-  build() {
-    Stack() {
-      EffectComponent() {
-        Column()
-          .position({ x: 200 + 'px', y: 200 + 'px' })
-          .height(553 + 'px')
-          .width(553 + 'px')
-          .borderRadius(12)
-          .visualEffect(this.GetMaterialVisualEffect())
-      }
-      .backgroundEffect({
-        radius: 15,
-      }, { disableSystemAdaptation: true })
-      .width("100%").height("100%").align(Alignment.Center)
-    }
-    .backgroundImage($r('app.media.bg6'), ImageRepeat.NoRepeat)
-    .width("100%").height("100%").align(Alignment.Center)
-  }
-}
-```

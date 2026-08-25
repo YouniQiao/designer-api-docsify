@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## transcode
@@ -15,8 +15,6 @@ function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: stri
 将FastBuffer或Uint8Array对象从fromEnc编码转换为toEnc编码。适用于需要在不同编码格式之间转换数据的场景。例如，将UTF-8编码的数据转换为Latin1编码，以便在仅支持ASCII的系统中处理。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -35,13 +33,3 @@ function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: stri
 | 类型 |
 | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let newBuf = fastbuffer.transcode(fastbuffer.from('buffer'), 'utf-8', 'ascii');
-console.info('newBuf = ' + newBuf.toString('ascii'));
-// 输出结果：newBuf = buffer
-```

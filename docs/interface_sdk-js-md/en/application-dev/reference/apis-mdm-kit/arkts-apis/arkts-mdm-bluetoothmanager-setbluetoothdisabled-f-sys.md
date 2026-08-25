@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setBluetoothDisabled
@@ -15,8 +15,6 @@ function setBluetoothDisabled(admin: Want, disabled: boolean): void
 Sets the policy for disabling Bluetooth.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -35,7 +33,7 @@ Sets the policy for disabling Bluetooth.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| disabled | boolean | Yes |
+| [disabled](../../apis-arkui/arkts-components/arkts-arkui-statestyles-i.md) | boolean | Yes |
 
 **Error codes:**
 
@@ -46,23 +44,3 @@ Sets the policy for disabling Bluetooth.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  bluetoothManager.setBluetoothDisabled(wantTemp, true);
-  console.info('Succeeded in setting the bluetooth disabled.');
-} catch(err) {
-  console.error(`Failed to set the bluetooth disabled. Code: ${err.code}, message: ${err.message}`);
-};
-```

@@ -4,14 +4,12 @@ Represents a SSAP server class, which provides APIs for connecting to and exchan
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## addService
@@ -23,8 +21,6 @@ addService(service: Service): void
 Adds a service on the server.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -58,8 +54,6 @@ Closes the server and unregisters the callback.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -83,8 +77,6 @@ notifyPropertyChanged(address: string, property: Property): Promise<void>
 Notifies the client of property value updates. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -126,8 +118,6 @@ Unsubscribes from the connection status change event. This API uses an asynchron
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -141,14 +131,12 @@ Unsubscribes from the connection status change event. This API uses an asynchron
 ## offMtuChange
 
 ```TypeScript
-offMtuChange(callback?: Callback<int>): void
+offMtuChange(callback?: Callback<number>): void
 ```
 
 Unsubscribes from the MTU change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,8 +158,6 @@ Unsubscribes from the client property read request event. This API uses an async
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -191,8 +177,6 @@ offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void
 Unsubscribes from the client property write request event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,8 +198,6 @@ Subscribes to the connection status change event. This API uses an asynchronous 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -229,14 +211,12 @@ Subscribes to the connection status change event. This API uses an asynchronous 
 ## onMtuChange
 
 ```TypeScript
-onMtuChange(callback: Callback<int>): void
+onMtuChange(callback: Callback<number>): void
 ```
 
 Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -258,8 +238,6 @@ Subscribes to the client property read request event. This API uses an asynchron
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -280,8 +258,6 @@ Subscribes to the client property write request event. This API uses an asynchro
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -301,8 +277,6 @@ removeService(serviceUuid: string): void
 Removes a service from the server.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -336,8 +310,6 @@ Responds to read or write requests from the client. After receiving a request re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -348,7 +320,7 @@ Responds to read or write requests from the client. After receiving a request re
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| response | [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md) | Yes |
+| response | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Yes |
 
 **Error codes:**
 

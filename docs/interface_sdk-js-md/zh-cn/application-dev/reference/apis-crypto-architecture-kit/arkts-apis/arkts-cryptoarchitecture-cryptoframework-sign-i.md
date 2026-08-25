@@ -1,10 +1,20 @@
 # Sign
 
-签名接口，定义基于私钥对数据进行签名的方法。调用前，需通过 [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md)方法创建一个Sign实例。按序调用Sign实例中的init、 update（可选）、sign方法完成签名操作。签名操作的示例代码详见 [签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。<br>Sign实例不支持重复初始化，当业务方需要使用新密钥签名时，需要重新创建新Sign实例并调用init初始化。<br>业务方使用时，调用createSign接口确定签名的模式，调用init接口设置密钥。<br>当待签名数据长度较短时，可在初始化后直接调用sign接口传入数据进行签名，无需调用update。<br>当待签名数据较长时，可通过update接口分段传入切分后的原文数据，最后调用sign接口对整体原文数据进行签名。<br>当使用update分段传入原文时，sign接口API 10之前只支持传入DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环 结束后调用sign进行签名。<br>使用DSA算法签名时，如果摘要算法设置为NoHash，则不支持update操作，调用update接口将返回错误码ERR_CRYPTO_OPERATION。
+签名接口，定义基于私钥对数据进行签名的方法。调用前，需通过 [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md)方法创建一个Sign实例。按序调用Sign实例中的init、 update（可选）、sign方法完成签名操作。签名操作的示例代码详见 [签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。
+
+Sign实例不支持重复初始化，当业务方需要使用新密钥签名时，需要重新创建新Sign实例并调用init初始化。
+
+业务方使用时，调用createSign接口确定签名的模式，调用init接口设置密钥。
+
+当待签名数据长度较短时，可在初始化后直接调用sign接口传入数据进行签名，无需调用update。
+
+当待签名数据较长时，可通过update接口分段传入切分后的原文数据，最后调用sign接口对整体原文数据进行签名。
+
+当使用update分段传入原文时，sign接口API 10之前只支持传入DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环 结束后调用sign进行签名。
+
+使用DSA算法签名时，如果摘要算法设置为NoHash，则不支持update操作，调用update接口将返回错误码ERR_CRYPTO_OPERATION。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
@@ -13,26 +23,18 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## getSignSpec
 
-ArkTS-Dyn:
 ```TypeScript
 getSignSpec(itemType: SignSpecItem): string | number
-```
-
-ArkTS-Sta:
-```TypeScript
-getSignSpec(itemType: SignSpecItem): string | int
 ```
 
 获取签名参数。当前仅支持RSA算法。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -50,7 +52,7 @@ getSignSpec(itemType: SignSpecItem): string | int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: string \| number<br>ArkTS-Sta：string \ | int |
+| string \| number |
 
 **错误码：**
 
@@ -62,30 +64,17 @@ getSignSpec(itemType: SignSpecItem): string | int
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testGetSignSpec() {
-  let signer = cryptoFramework.createSign('RSA|PSS|SHA256|MGF1_SHA256');
-  let setN = 32;
-  signer.setSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
-  signer.getSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM);
-}
-```
-
 ## init
 
 ```TypeScript
 init(priKey: PriKey, callback: AsyncCallback<void>): void
 ```
 
-使用私钥初始化Sign实例。使用callback异步回调。init、update、sign为三段式接口，需要成组使用。其中init和sign必选，update可选。<br>Sign实例不支持重复初始化。
+使用私钥初始化Sign实例。使用callback异步回调。init、update、sign为三段式接口，需要成组使用。其中init和sign必选，update可选。
+
+Sign实例不支持重复初始化。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -116,11 +105,11 @@ init(priKey: PriKey, callback: AsyncCallback<void>): void
 init(priKey: PriKey): Promise<void>
 ```
 
-使用私钥初始化Sign实例。使用Promise异步回调。init、update、sign为三段式接口，需要成组使用。其中init和sign必选，update可选。<br>Sign实例不支持重复初始化。
+使用私钥初始化Sign实例。使用Promise异步回调。init、update、sign为三段式接口，需要成组使用。其中init和sign必选，update可选。
+
+Sign实例不支持重复初始化。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -156,11 +145,13 @@ init(priKey: PriKey): Promise<void>
 initSync(priKey: PriKey): void
 ```
 
-使用私钥初始化Sign实例，通过同步方式获取结果。initSync、updateSync、signSync为三段式接口，需要成组使用。其中initSync和signSync 必选，updateSync可选。<br>Sign实例不支持重复调用initSync。<br><br>**说明：** <br>建议优先使用异步API，init。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+使用私钥初始化Sign实例，通过同步方式获取结果。initSync、updateSync、signSync为三段式接口，需要成组使用。其中initSync和signSync 必选，updateSync可选。
+
+Sign实例不支持重复调用initSync。
+
+**说明：** 建议优先使用异步API，init。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -185,14 +176,14 @@ initSync(priKey: PriKey): void
 ## setSignSpec
 
 ```TypeScript
-setSignSpec(itemType: SignSpecItem, itemValue: int): void
+setSignSpec(itemType: SignSpecItem, itemValue: number): void
 ```
 
-设置签名参数。常用签名参数可通过 [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md) 指定，其他参数则通过本接口设置。<br>当前仅支持RSA算法、SM2算法，从API version11开始，支持SM2算法设置签名参数。
+设置签名参数。常用签名参数可通过 [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md) 指定，其他参数则通过本接口设置。
+
+当前仅支持RSA算法、SM2算法，从API version11开始，支持SM2算法设置签名参数。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -217,63 +208,17 @@ setSignSpec(itemType: SignSpecItem, itemValue: int): void
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetSignSpec() {
-  let signer = cryptoFramework.createSign("RSA|PSS|SHA256|MGF1_SHA256");
-  let setN = 20;
-  signer.setSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetSignSpec() {
-  let signer = cryptoFramework.createSign("RSA|PSS|SHA256|MGF1_SHA256");
-  let setN = 20;
-  signer.setSignSpec(cryptoFramework.SignSpecItem.PSS_SALT_LEN_NUM, setN);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetSignSpec() {
-  let signer = cryptoFramework.createSign('ML-DSA');
-  signer.setSignSpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function testSetSignSpec() {
-  let signer = cryptoFramework.createSign('ML-DSA');
-  signer.setSignSpec(cryptoFramework.SignSpecItem.ML_DSA_DETERMINISTIC_BOOL, true);
-}
-```
-
 ## setSignSpec
 
-ArkTS-Dyn:
 ```TypeScript
 setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 ```
 
-ArkTS-Sta:
-```TypeScript
-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void
-```
+为Sign实例设置指定参数。
 
-为Sign实例设置指定参数。<br>当前仅支持RSA算法中的PSS_SALT_LEN参数和SM2算法中的USER_ID参数。
+当前仅支持RSA算法中的PSS_SALT_LEN参数和SM2算法中的USER_ID参数。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -286,7 +231,7 @@ setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | itemType | [SignSpecItem](arkts-cryptoarchitecture-cryptoframework-signspecitem-e.md) | 是 |
-| itemValue | ArkTS-Dyn: number \| Uint8Array<br>ArkTS-Sta：int \ | Uint8Array | 是 |
+| itemValue | number \| Uint8Array | 是 |
 
 **错误码：**
 
@@ -300,21 +245,17 @@ setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void
 | [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 
-**示例**
-
-参见 [setSignSpec](#setsignspec)
-
 ## setSignSpec
 
 ```TypeScript
-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void
+setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean): void
 ```
 
-为Sign实例设置指定参数。<br>当前仅支持RSA算法中的PSS_SALT_LEN参数、SM2算法中的USER_ID参数以及ML-DSA算法中的ML_DSA_DETERMINISTIC、ML_DSA_MU和 ML_DSA_CONTEXT参数。
+为Sign实例设置指定参数。
+
+当前仅支持RSA算法中的PSS_SALT_LEN参数、SM2算法中的USER_ID参数以及ML-DSA算法中的ML_DSA_DETERMINISTIC、ML_DSA_MU和 ML_DSA_CONTEXT参数。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -340,47 +281,6 @@ setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array | boolean): void
 | [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 
-**示例**
-
-参见 [setSignSpec](#setsignspec)
-
-## setSignSpec
-
-```TypeScript
-setSignSpec(itemType: SignSpecItem, itemValue: boolean): void
-```
-
-为Sign实例设置指定参数。<br>当前仅支持ML-DSA算法中的ML_DSA_DETERMINISTIC和ML_DSA_MU参数。ML_DSA_CONTEXT参数请使用 [setSignSpec()](#setsignspec)。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Security.CryptoFramework.Signature
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| itemType | [SignSpecItem](arkts-cryptoarchitecture-cryptoframework-signspecitem-e.md) | 是 |
-| itemValue | boolean | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) |
-
-**示例**
-
-参见 [setSignSpec](#setsignspec)
-
 ## sign
 
 ```TypeScript
@@ -390,8 +290,6 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 对数据进行签名，包括更新的数据。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -403,7 +301,7 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 |
 
 **错误码：**
@@ -425,8 +323,6 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 对数据进行签名。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -461,8 +357,6 @@ sign(data: DataBlob): Promise<DataBlob>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -473,7 +367,7 @@ sign(data: DataBlob): Promise<DataBlob>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 |
 
 **返回值：**
 
@@ -500,8 +394,6 @@ sign(data: DataBlob | null): Promise<DataBlob>
 对数据进行签名。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -537,11 +429,11 @@ sign(data: DataBlob | null): Promise<DataBlob>
 signSync(data: DataBlob | null): DataBlob
 ```
 
-对数据进行签名，通过同步方式返回签名结果。<br><br>**说明：** <br>建议优先使用异步API，[sign](#sign)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+对数据进行签名，通过同步方式返回签名结果。
+
+**说明：** 建议优先使用异步API，[sign](#sign)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -557,7 +449,7 @@ signSync(data: DataBlob | null): DataBlob
 
 | 类型 |
 | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) |
 
 **错误码：**
 
@@ -569,271 +461,15 @@ signSync(data: DataBlob | null): DataBlob
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function signByCallback() {
-  let inputUpdate: cryptoFramework.DataBlob =
-    { data: new Uint8Array(buffer.from('This is Sign test plan1', 'utf-8').buffer) };
-  let inputVerify: cryptoFramework.DataBlob =
-    { data: new Uint8Array(buffer.from('This is Sign test plan2', 'utf-8').buffer) };
-  let pkData =
-    new Uint8Array([48, 129, 159, 48, 13, 6, 9, 42, 134, 72, 134, 247, 13, 1, 1, 1, 5, 0, 3, 129, 141, 0, 48, 129, 137,
-      2, 129, 129, 0, 214, 179, 23, 198, 183, 139, 148, 8, 173, 74, 56, 160, 15, 248, 244, 166, 209, 250, 142, 74, 216,
-      58, 117, 215, 178, 247, 254, 39, 180, 227, 85, 201, 59, 133, 209, 221, 26, 9, 116, 31, 172, 151, 252, 185, 123,
-      20, 25, 7, 92, 129, 5, 196, 239, 214, 126, 254, 154, 188, 239, 144, 161, 171, 65, 42, 31, 214, 93, 115, 247, 69,
-      94, 143, 54, 51, 25, 49, 146, 204, 205, 165, 20, 120, 35, 184, 190, 65, 106, 12, 214, 176, 57, 125, 235, 51, 88,
-      135, 76, 73, 109, 112, 147, 138, 198, 252, 5, 20, 245, 51, 7, 32, 108, 89, 125, 204, 50, 189, 88, 254, 255, 146,
-      244, 244, 149, 79, 54, 216, 45, 89, 2, 3, 1, 0, 1]);
-  let skData =
-    new Uint8Array([48, 130, 2, 120, 2, 1, 0, 48, 13, 6, 9, 42, 134, 72, 134, 247, 13, 1, 1, 1, 5, 0, 4, 130, 2, 98, 48,
-      130, 2, 94, 2, 1, 0, 2, 129, 129, 0, 214, 179, 23, 198, 183, 139, 148, 8, 173, 74, 56, 160, 15, 248, 244, 166,
-      209, 250, 142, 74, 216, 58, 117, 215, 178, 247, 254, 39, 180, 227, 85, 201, 59, 133, 209, 221, 26, 9, 116, 31,
-      172, 151, 252, 185, 123, 20, 25, 7, 92, 129, 5, 196, 239, 214, 126, 254, 154, 188, 239, 144, 161, 171, 65, 42, 31,
-      214, 93, 115, 247, 69, 94, 143, 54, 51, 25, 49, 146, 204, 205, 165, 20, 120, 35, 184, 190, 65, 106, 12, 214, 176,
-      57, 125, 235, 51, 88, 135, 76, 73, 109, 112, 147, 138, 198, 252, 5, 20, 245, 51, 7, 32, 108, 89, 125, 204, 50,
-      189, 88, 254, 255, 146, 244, 244, 149, 79, 54, 216, 45, 89, 2, 3, 1, 0, 1, 2, 129, 129, 0, 152, 111, 145, 203, 10,
-      88, 116, 163, 112, 126, 9, 20, 68, 34, 235, 121, 98, 14, 182, 102, 151, 125, 114, 91, 210, 122, 215, 29, 212, 5,
-      176, 203, 238, 146, 5, 190, 41, 21, 91, 56, 125, 239, 111, 133, 53, 200, 192, 56, 132, 202, 42, 145, 120, 3, 224,
-      40, 223, 46, 148, 29, 41, 92, 17, 40, 12, 72, 165, 69, 192, 211, 142, 233, 81, 202, 177, 235, 156, 27, 179, 48,
-      18, 85, 154, 101, 193, 45, 218, 91, 24, 143, 196, 248, 16, 83, 177, 198, 136, 77, 111, 134, 60, 219, 95, 246, 23,
-      5, 45, 14, 83, 29, 137, 248, 159, 28, 132, 142, 205, 99, 226, 213, 84, 232, 57, 130, 156, 81, 191, 237, 2, 65, 0,
-      255, 158, 212, 13, 43, 132, 244, 135, 148, 161, 232, 219, 20, 81, 196, 102, 103, 44, 110, 71, 100, 62, 73, 200,
-      32, 138, 114, 209, 171, 150, 179, 92, 198, 5, 190, 218, 79, 227, 227, 37, 32, 57, 159, 252, 107, 211, 139, 198,
-      202, 248, 137, 143, 186, 205, 106, 81, 85, 207, 134, 148, 110, 204, 243, 27, 2, 65, 0, 215, 4, 181, 121, 57, 224,
-      170, 168, 183, 159, 152, 8, 74, 233, 80, 244, 146, 81, 48, 159, 194, 199, 36, 187, 6, 181, 182, 223, 115, 133,
-      151, 171, 78, 219, 90, 161, 248, 69, 6, 207, 173, 3, 81, 161, 2, 60, 238, 204, 177, 12, 138, 17, 220, 179, 71,
-      113, 200, 248, 159, 153, 252, 150, 180, 155, 2, 65, 0, 190, 202, 185, 211, 170, 171, 238, 40, 84, 84, 21, 13, 144,
-      57, 7, 178, 183, 71, 126, 120, 98, 229, 235, 4, 40, 229, 173, 149, 185, 209, 29, 199, 29, 54, 164, 161, 38, 8, 30,
-      62, 83, 179, 47, 42, 165, 0, 156, 207, 160, 39, 169, 229, 81, 180, 136, 170, 116, 182, 20, 233, 45, 90, 100, 9, 2,
-      65, 0, 152, 255, 47, 198, 15, 201, 238, 133, 89, 11, 133, 153, 184, 252, 37, 239, 177, 65, 118, 80, 231, 190, 222,
-      66, 250, 118, 72, 166, 221, 67, 156, 245, 119, 138, 28, 6, 142, 107, 71, 122, 116, 200, 156, 199, 237, 152, 191,
-      239, 4, 184, 64, 114, 143, 81, 62, 48, 23, 233, 217, 95, 47, 221, 104, 171, 2, 64, 30, 219, 1, 230, 241, 70, 246,
-      243, 121, 174, 67, 66, 11, 99, 202, 17, 52, 234, 78, 29, 3, 57, 51, 123, 149, 86, 64, 192, 73, 199, 108, 101, 55,
-      232, 41, 114, 153, 237, 253, 52, 205, 148, 45, 86, 186, 241, 182, 183, 42, 77, 252, 195, 29, 158, 173, 3, 182,
-      207, 254, 61, 71, 184, 167, 184]);
-  let pubKeyBlob: cryptoFramework.DataBlob = { data: pkData };
-  let priKeyBlob: cryptoFramework.DataBlob = { data: skData };
-  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
-  let signer = cryptoFramework.createSign('RSA1024|PKCS1|SHA256');
-  rsaGenerator.convertKey(pubKeyBlob, priKeyBlob, (err, keyPair) => {
-    signer.init(keyPair.priKey, err => {
-      signer.update(inputUpdate, err => {
-        signer.sign(inputVerify, (err, signData) => {
-          console.info('sign output = ' + signData.data);
-        });
-      });
-    });
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function signByCallback() {
-  let inputUpdate: cryptoFramework.DataBlob =
-    { data: new Uint8Array(buffer.from("This is Sign test plan1", 'utf-8').buffer) };
-  let inputVerify: cryptoFramework.DataBlob =
-    { data: new Uint8Array(buffer.from("This is Sign test plan2", 'utf-8').buffer) };
-  let pkData =
-    new Uint8Array([48, 129, 159, 48, 13, 6, 9, 42, 134, 72, 134, 247, 13, 1, 1, 1, 5, 0, 3, 129, 141, 0, 48, 129, 137,
-      2, 129, 129, 0, 214, 179, 23, 198, 183, 139, 148, 8, 173, 74, 56, 160, 15, 248, 244, 166, 209, 250, 142, 74, 216,
-      58, 117, 215, 178, 247, 254, 39, 180, 227, 85, 201, 59, 133, 209, 221, 26, 9, 116, 31, 172, 151, 252, 185, 123,
-      20, 25, 7, 92, 129, 5, 196, 239, 214, 126, 254, 154, 188, 239, 144, 161, 171, 65, 42, 31, 214, 93, 115, 247, 69,
-      94, 143, 54, 51, 25, 49, 146, 204, 205, 165, 20, 120, 35, 184, 190, 65, 106, 12, 214, 176, 57, 125, 235, 51, 88,
-      135, 76, 73, 109, 112, 147, 138, 198, 252, 5, 20, 245, 51, 7, 32, 108, 89, 125, 204, 50, 189, 88, 254, 255, 146,
-      244, 244, 149, 79, 54, 216, 45, 89, 2, 3, 1, 0, 1]);
-  let skData =
-    new Uint8Array([48, 130, 2, 120, 2, 1, 0, 48, 13, 6, 9, 42, 134, 72, 134, 247, 13, 1, 1, 1, 5, 0, 4, 130, 2, 98, 48,
-      130, 2, 94, 2, 1, 0, 2, 129, 129, 0, 214, 179, 23, 198, 183, 139, 148, 8, 173, 74, 56, 160, 15, 248, 244, 166,
-      209, 250, 142, 74, 216, 58, 117, 215, 178, 247, 254, 39, 180, 227, 85, 201, 59, 133, 209, 221, 26, 9, 116, 31,
-      172, 151, 252, 185, 123, 20, 25, 7, 92, 129, 5, 196, 239, 214, 126, 254, 154, 188, 239, 144, 161, 171, 65, 42, 31,
-      214, 93, 115, 247, 69, 94, 143, 54, 51, 25, 49, 146, 204, 205, 165, 20, 120, 35, 184, 190, 65, 106, 12, 214, 176,
-      57, 125, 235, 51, 88, 135, 76, 73, 109, 112, 147, 138, 198, 252, 5, 20, 245, 51, 7, 32, 108, 89, 125, 204, 50,
-      189, 88, 254, 255, 146, 244, 244, 149, 79, 54, 216, 45, 89, 2, 3, 1, 0, 1, 2, 129, 129, 0, 152, 111, 145, 203, 10,
-      88, 116, 163, 112, 126, 9, 20, 68, 34, 235, 121, 98, 14, 182, 102, 151, 125, 114, 91, 210, 122, 215, 29, 212, 5,
-      176, 203, 238, 146, 5, 190, 41, 21, 91, 56, 125, 239, 111, 133, 53, 200, 192, 56, 132, 202, 42, 145, 120, 3, 224,
-      40, 223, 46, 148, 29, 41, 92, 17, 40, 12, 72, 165, 69, 192, 211, 142, 233, 81, 202, 177, 235, 156, 27, 179, 48,
-      18, 85, 154, 101, 193, 45, 218, 91, 24, 143, 196, 248, 16, 83, 177, 198, 136, 77, 111, 134, 60, 219, 95, 246, 23,
-      5, 45, 14, 83, 29, 137, 248, 159, 28, 132, 142, 205, 99, 226, 213, 84, 232, 57, 130, 156, 81, 191, 237, 2, 65, 0,
-      255, 158, 212, 13, 43, 132, 244, 135, 148, 161, 232, 219, 20, 81, 196, 102, 103, 44, 110, 71, 100, 62, 73, 200,
-      32, 138, 114, 209, 171, 150, 179, 92, 198, 5, 190, 218, 79, 227, 227, 37, 32, 57, 159, 252, 107, 211, 139, 198,
-      202, 248, 137, 143, 186, 205, 106, 81, 85, 207, 134, 148, 110, 204, 243, 27, 2, 65, 0, 215, 4, 181, 121, 57, 224,
-      170, 168, 183, 159, 152, 8, 74, 233, 80, 244, 146, 81, 48, 159, 194, 199, 36, 187, 6, 181, 182, 223, 115, 133,
-      151, 171, 78, 219, 90, 161, 248, 69, 6, 207, 173, 3, 81, 161, 2, 60, 238, 204, 177, 12, 138, 17, 220, 179, 71,
-      113, 200, 248, 159, 153, 252, 150, 180, 155, 2, 65, 0, 190, 202, 185, 211, 170, 171, 238, 40, 84, 84, 21, 13, 144,
-      57, 7, 178, 183, 71, 126, 120, 98, 229, 235, 4, 40, 229, 173, 149, 185, 209, 29, 199, 29, 54, 164, 161, 38, 8, 30,
-      62, 83, 179, 47, 42, 165, 0, 156, 207, 160, 39, 169, 229, 81, 180, 136, 170, 116, 182, 20, 233, 45, 90, 100, 9, 2,
-      65, 0, 152, 255, 47, 198, 15, 201, 238, 133, 89, 11, 133, 153, 184, 252, 37, 239, 177, 65, 118, 80, 231, 190, 222,
-      66, 250, 118, 72, 166, 221, 67, 156, 245, 119, 138, 28, 6, 142, 107, 71, 122, 116, 200, 156, 199, 237, 152, 191,
-      239, 4, 184, 64, 114, 143, 81, 62, 48, 23, 233, 217, 95, 47, 221, 104, 171, 2, 64, 30, 219, 1, 230, 241, 70, 246,
-      243, 121, 174, 67, 66, 11, 99, 202, 17, 52, 234, 78, 29, 3, 57, 51, 123, 149, 86, 64, 192, 73, 199, 108, 101, 55,
-      232, 41, 114, 153, 237, 253, 52, 205, 148, 45, 86, 186, 241, 182, 183, 42, 77, 252, 195, 29, 158, 173, 3, 182,
-      207, 254, 61, 71, 184, 167, 184]);
-  let pubKeyBlob: cryptoFramework.DataBlob = { data: pkData };
-  let priKeyBlob: cryptoFramework.DataBlob = { data: skData };
-  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
-  let signer = cryptoFramework.createSign('RSA1024|PKCS1|SHA256');
-  rsaGenerator.convertKey(pubKeyBlob, priKeyBlob, (err, keyPair) => {
-    if (keyPair != undefined) {
-      signer.init(keyPair.priKey, err => {
-        signer.update(inputUpdate, err => {
-          signer.sign(inputVerify, (err, signData) => {
-            if (signData != undefined) {
-              console.info('sign output is ' + signData.data);
-            }
-          });
-        });
-      });
-    }
-  });
-}
-```
-
-此外，更多签名验签的完整示例可参考[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function genKeyPairByData(pubKeyData: Uint8Array, priKeyData: Uint8Array) {
-  let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyData };
-  let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyData };
-  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
-  let keyPair = await rsaGenerator.convertKey(pubKeyBlob, priKeyBlob);
-  console.info('convertKey result: success.');
-  return keyPair;
-}
-
-async function signByPromise() {
-  let pkData =
-    new Uint8Array([48, 129, 159, 48, 13, 6, 9, 42, 134, 72, 134, 247, 13, 1, 1, 1, 5, 0, 3, 129, 141, 0, 48, 129, 137,
-      2, 129, 129, 0, 214, 179, 23, 198, 183, 139, 148, 8, 173, 74, 56, 160, 15, 248, 244, 166, 209, 250, 142, 74, 216,
-      58, 117, 215, 178, 247, 254, 39, 180, 227, 85, 201, 59, 133, 209, 221, 26, 9, 116, 31, 172, 151, 252, 185, 123,
-      20, 25, 7, 92, 129, 5, 196, 239, 214, 126, 254, 154, 188, 239, 144, 161, 171, 65, 42, 31, 214, 93, 115, 247, 69,
-      94, 143, 54, 51, 25, 49, 146, 204, 205, 165, 20, 120, 35, 184, 190, 65, 106, 12, 214, 176, 57, 125, 235, 51, 88,
-      135, 76, 73, 109, 112, 147, 138, 198, 252, 5, 20, 245, 51, 7, 32, 108, 89, 125, 204, 50, 189, 88, 254, 255, 146,
-      244, 244, 149, 79, 54, 216, 45, 89, 2, 3, 1, 0, 1]);
-  let skData =
-    new Uint8Array([48, 130, 2, 120, 2, 1, 0, 48, 13, 6, 9, 42, 134, 72, 134, 247, 13, 1, 1, 1, 5, 0, 4, 130, 2, 98, 48,
-      130, 2, 94, 2, 1, 0, 2, 129, 129, 0, 214, 179, 23, 198, 183, 139, 148, 8, 173, 74, 56, 160, 15, 248, 244, 166,
-      209, 250, 142, 74, 216, 58, 117, 215, 178, 247, 254, 39, 180, 227, 85, 201, 59, 133, 209, 221, 26, 9, 116, 31,
-      172, 151, 252, 185, 123, 20, 25, 7, 92, 129, 5, 196, 239, 214, 126, 254, 154, 188, 239, 144, 161, 171, 65, 42, 31,
-      214, 93, 115, 247, 69, 94, 143, 54, 51, 25, 49, 146, 204, 205, 165, 20, 120, 35, 184, 190, 65, 106, 12, 214, 176,
-      57, 125, 235, 51, 88, 135, 76, 73, 109, 112, 147, 138, 198, 252, 5, 20, 245, 51, 7, 32, 108, 89, 125, 204, 50,
-      189, 88, 254, 255, 146, 244, 244, 149, 79, 54, 216, 45, 89, 2, 3, 1, 0, 1, 2, 129, 129, 0, 152, 111, 145, 203, 10,
-      88, 116, 163, 112, 126, 9, 20, 68, 34, 235, 121, 98, 14, 182, 102, 151, 125, 114, 91, 210, 122, 215, 29, 212, 5,
-      176, 203, 238, 146, 5, 190, 41, 21, 91, 56, 125, 239, 111, 133, 53, 200, 192, 56, 132, 202, 42, 145, 120, 3, 224,
-      40, 223, 46, 148, 29, 41, 92, 17, 40, 12, 72, 165, 69, 192, 211, 142, 233, 81, 202, 177, 235, 156, 27, 179, 48,
-      18, 85, 154, 101, 193, 45, 218, 91, 24, 143, 196, 248, 16, 83, 177, 198, 136, 77, 111, 134, 60, 219, 95, 246, 23,
-      5, 45, 14, 83, 29, 137, 248, 159, 28, 132, 142, 205, 99, 226, 213, 84, 232, 57, 130, 156, 81, 191, 237, 2, 65, 0,
-      255, 158, 212, 13, 43, 132, 244, 135, 148, 161, 232, 219, 20, 81, 196, 102, 103, 44, 110, 71, 100, 62, 73, 200,
-      32, 138, 114, 209, 171, 150, 179, 92, 198, 5, 190, 218, 79, 227, 227, 37, 32, 57, 159, 252, 107, 211, 139, 198,
-      202, 248, 137, 143, 186, 205, 106, 81, 85, 207, 134, 148, 110, 204, 243, 27, 2, 65, 0, 215, 4, 181, 121, 57, 224,
-      170, 168, 183, 159, 152, 8, 74, 233, 80, 244, 146, 81, 48, 159, 194, 199, 36, 187, 6, 181, 182, 223, 115, 133,
-      151, 171, 78, 219, 90, 161, 248, 69, 6, 207, 173, 3, 81, 161, 2, 60, 238, 204, 177, 12, 138, 17, 220, 179, 71,
-      113, 200, 248, 159, 153, 252, 150, 180, 155, 2, 65, 0, 190, 202, 185, 211, 170, 171, 238, 40, 84, 84, 21, 13, 144,
-      57, 7, 178, 183, 71, 126, 120, 98, 229, 235, 4, 40, 229, 173, 149, 185, 209, 29, 199, 29, 54, 164, 161, 38, 8, 30,
-      62, 83, 179, 47, 42, 165, 0, 156, 207, 160, 39, 169, 229, 81, 180, 136, 170, 116, 182, 20, 233, 45, 90, 100, 9, 2,
-      65, 0, 152, 255, 47, 198, 15, 201, 238, 133, 89, 11, 133, 153, 184, 252, 37, 239, 177, 65, 118, 80, 231, 190, 222,
-      66, 250, 118, 72, 166, 221, 67, 156, 245, 119, 138, 28, 6, 142, 107, 71, 122, 116, 200, 156, 199, 237, 152, 191,
-      239, 4, 184, 64, 114, 143, 81, 62, 48, 23, 233, 217, 95, 47, 221, 104, 171, 2, 64, 30, 219, 1, 230, 241, 70, 246,
-      243, 121, 174, 67, 66, 11, 99, 202, 17, 52, 234, 78, 29, 3, 57, 51, 123, 149, 86, 64, 192, 73, 199, 108, 101, 55,
-      232, 41, 114, 153, 237, 253, 52, 205, 148, 45, 86, 186, 241, 182, 183, 42, 77, 252, 195, 29, 158, 173, 3, 182,
-      207, 254, 61, 71, 184, 167, 184]);
-  let keyPair = await genKeyPairByData(pkData, skData);
-  let inputUpdate: cryptoFramework.DataBlob =
-    { data: new Uint8Array(buffer.from('This is Sign test plan1', 'utf-8').buffer) };
-  let inputSign: cryptoFramework.DataBlob =
-    { data: new Uint8Array(buffer.from('This is Sign test plan2', 'utf-8').buffer) };
-  let signer = cryptoFramework.createSign('RSA1024|PKCS1|SHA256');
-  await signer.init(keyPair.priKey);
-  await signer.update(inputUpdate);
-  let signData = await signer.sign(inputSign);
-  console.info('signData result: ' + signData.data);
-}
-```
-
-此外，更多签名验签的完整示例可参考[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function genKeyPairByData(pubKeyData: Uint8Array, priKeyData: Uint8Array) {
-  let pubKeyBlob: cryptoFramework.DataBlob = { data: pubKeyData };
-  let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyData };
-  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
-  let keyPair = rsaGenerator.convertKeySync(pubKeyBlob, priKeyBlob);
-  console.info('convertKeySync result: success.');
-  return keyPair;
-}
-
-function signBySync() {
-  let pkData =
-    new Uint8Array([48, 129, 159, 48, 13, 6, 9, 42, 134, 72, 134, 247, 13, 1, 1, 1, 5, 0, 3, 129, 141, 0, 48, 129, 137,
-      2, 129, 129, 0, 214, 179, 23, 198, 183, 139, 148, 8, 173, 74, 56, 160, 15, 248, 244, 166, 209, 250, 142, 74, 216,
-      58, 117, 215, 178, 247, 254, 39, 180, 227, 85, 201, 59, 133, 209, 221, 26, 9, 116, 31, 172, 151, 252, 185, 123,
-      20, 25, 7, 92, 129, 5, 196, 239, 214, 126, 254, 154, 188, 239, 144, 161, 171, 65, 42, 31, 214, 93, 115, 247, 69,
-      94, 143, 54, 51, 25, 49, 146, 204, 205, 165, 20, 120, 35, 184, 190, 65, 106, 12, 214, 176, 57, 125, 235, 51, 88,
-      135, 76, 73, 109, 112, 147, 138, 198, 252, 5, 20, 245, 51, 7, 32, 108, 89, 125, 204, 50, 189, 88, 254, 255, 146,
-      244, 244, 149, 79, 54, 216, 45, 89, 2, 3, 1, 0, 1]);
-  let skData =
-    new Uint8Array([48, 130, 2, 120, 2, 1, 0, 48, 13, 6, 9, 42, 134, 72, 134, 247, 13, 1, 1, 1, 5, 0, 4, 130, 2, 98, 48,
-      130, 2, 94, 2, 1, 0, 2, 129, 129, 0, 214, 179, 23, 198, 183, 139, 148, 8, 173, 74, 56, 160, 15, 248, 244, 166,
-      209, 250, 142, 74, 216, 58, 117, 215, 178, 247, 254, 39, 180, 227, 85, 201, 59, 133, 209, 221, 26, 9, 116, 31,
-      172, 151, 252, 185, 123, 20, 25, 7, 92, 129, 5, 196, 239, 214, 126, 254, 154, 188, 239, 144, 161, 171, 65, 42, 31,
-      214, 93, 115, 247, 69, 94, 143, 54, 51, 25, 49, 146, 204, 205, 165, 20, 120, 35, 184, 190, 65, 106, 12, 214, 176,
-      57, 125, 235, 51, 88, 135, 76, 73, 109, 112, 147, 138, 198, 252, 5, 20, 245, 51, 7, 32, 108, 89, 125, 204, 50,
-      189, 88, 254, 255, 146, 244, 244, 149, 79, 54, 216, 45, 89, 2, 3, 1, 0, 1, 2, 129, 129, 0, 152, 111, 145, 203, 10,
-      88, 116, 163, 112, 126, 9, 20, 68, 34, 235, 121, 98, 14, 182, 102, 151, 125, 114, 91, 210, 122, 215, 29, 212, 5,
-      176, 203, 238, 146, 5, 190, 41, 21, 91, 56, 125, 239, 111, 133, 53, 200, 192, 56, 132, 202, 42, 145, 120, 3, 224,
-      40, 223, 46, 148, 29, 41, 92, 17, 40, 12, 72, 165, 69, 192, 211, 142, 233, 81, 202, 177, 235, 156, 27, 179, 48,
-      18, 85, 154, 101, 193, 45, 218, 91, 24, 143, 196, 248, 16, 83, 177, 198, 136, 77, 111, 134, 60, 219, 95, 246, 23,
-      5, 45, 14, 83, 29, 137, 248, 159, 28, 132, 142, 205, 99, 226, 213, 84, 232, 57, 130, 156, 81, 191, 237, 2, 65, 0,
-      255, 158, 212, 13, 43, 132, 244, 135, 148, 161, 232, 219, 20, 81, 196, 102, 103, 44, 110, 71, 100, 62, 73, 200,
-      32, 138, 114, 209, 171, 150, 179, 92, 198, 5, 190, 218, 79, 227, 227, 37, 32, 57, 159, 252, 107, 211, 139, 198,
-      202, 248, 137, 143, 186, 205, 106, 81, 85, 207, 134, 148, 110, 204, 243, 27, 2, 65, 0, 215, 4, 181, 121, 57, 224,
-      170, 168, 183, 159, 152, 8, 74, 233, 80, 244, 146, 81, 48, 159, 194, 199, 36, 187, 6, 181, 182, 223, 115, 133,
-      151, 171, 78, 219, 90, 161, 248, 69, 6, 207, 173, 3, 81, 161, 2, 60, 238, 204, 177, 12, 138, 17, 220, 179, 71,
-      113, 200, 248, 159, 153, 252, 150, 180, 155, 2, 65, 0, 190, 202, 185, 211, 170, 171, 238, 40, 84, 84, 21, 13, 144,
-      57, 7, 178, 183, 71, 126, 120, 98, 229, 235, 4, 40, 229, 173, 149, 185, 209, 29, 199, 29, 54, 164, 161, 38, 8, 30,
-      62, 83, 179, 47, 42, 165, 0, 156, 207, 160, 39, 169, 229, 81, 180, 136, 170, 116, 182, 20, 233, 45, 90, 100, 9, 2,
-      65, 0, 152, 255, 47, 198, 15, 201, 238, 133, 89, 11, 133, 153, 184, 252, 37, 239, 177, 65, 118, 80, 231, 190, 222,
-      66, 250, 118, 72, 166, 221, 67, 156, 245, 119, 138, 28, 6, 142, 107, 71, 122, 116, 200, 156, 199, 237, 152, 191,
-      239, 4, 184, 64, 114, 143, 81, 62, 48, 23, 233, 217, 95, 47, 221, 104, 171, 2, 64, 30, 219, 1, 230, 241, 70, 246,
-      243, 121, 174, 67, 66, 11, 99, 202, 17, 52, 234, 78, 29, 3, 57, 51, 123, 149, 86, 64, 192, 73, 199, 108, 101, 55,
-      232, 41, 114, 153, 237, 253, 52, 205, 148, 45, 86, 186, 241, 182, 183, 42, 77, 252, 195, 29, 158, 173, 3, 182,
-      207, 254, 61, 71, 184, 167, 184]);
-  let keyPair = genKeyPairByData(pkData, skData);
-  let inputUpdate: cryptoFramework.DataBlob =
-    { data: new Uint8Array(buffer.from('This is Sign test plan1', 'utf-8').buffer) };
-  let inputSign: cryptoFramework.DataBlob =
-    { data: new Uint8Array(buffer.from('This is Sign test plan2', 'utf-8').buffer) };
-  let signer = cryptoFramework.createSign('RSA1024|PKCS1|SHA256');
-  signer.initSync(keyPair.priKey);
-  signer.updateSync(inputUpdate);
-  let signData = signer.signSync(inputSign);
-  console.info('signData result: ' + signData.data);
-}
-```
-
 ## update
 
 ```TypeScript
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-追加待签名数据，使用callback异步回调完成更新。<br>必须在对[Sign](#sign)实例使用[init](#init)或 [initSync](#initsync)初始化后，才能使用本函数。
+追加待签名数据，使用callback异步回调完成更新。
+
+必须在对[Sign](#sign)实例使用[init](#init)或 [initSync](#initsync)初始化后，才能使用本函数。
 
 > **说明：**&gt;
 > 根据数据量，可以不调用update（即[init](#init)完成后直接调用
@@ -850,8 +486,6 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -862,7 +496,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -881,7 +515,9 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 update(data: DataBlob): Promise<void>
 ```
 
-追加待签名数据，使用Promise异步回调方式完成更新。<br>在使用本函数前，必须先使用[init](#init)对[Sign](#sign)实例进行初始化。
+追加待签名数据，使用Promise异步回调方式完成更新。
+
+在使用本函数前，必须先使用[init](#init)对[Sign](#sign)实例进行初始化。
 
 > **说明：**&gt;
 > 根据数据量，可以不调用update（即[init](#init)
@@ -897,8 +533,6 @@ update(data: DataBlob): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -909,7 +543,7 @@ update(data: DataBlob): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 |
 
 **返回值：**
 
@@ -933,7 +567,9 @@ update(data: DataBlob): Promise<void>
 updateSync(data: DataBlob): void
 ```
 
-追加待签名数据，通过同步方式完成更新。<br>必须在对[Sign](#sign)实例使用[initSync()](#initsync)初始化 后，才能使用本函数。
+追加待签名数据，通过同步方式完成更新。
+
+必须在对[Sign](#sign)实例使用[initSync()](#initsync)初始化 后，才能使用本函数。
 
 > **说明：**&gt;
 > 根据数据量，可以不调用updateSync（即[initSync](#initsync)完成后直接调用
@@ -945,11 +581,10 @@ updateSync(data: DataBlob): void
 > 其余算法操作类似。&gt;
 > OnlySign模式下，不支持updateSync操作，需要直接使用signSync传入数据。&gt;
 > 当使用DSA算法进行签名，并设置了摘要算法为NoHash时，则不支持updateSync操作，updateSync接口会返回错误码ERR_CRYPTO_OPERATION。
-<br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+
+**说明：** 建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -959,7 +594,7 @@ updateSync(data: DataBlob): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 |
+| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 |
 
 **错误码：**
 
@@ -982,8 +617,6 @@ readonly algName: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

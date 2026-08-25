@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
 ```
 
 ## fill
@@ -23,8 +21,6 @@ fill(color: ResourceColor): T
 设置形状的填充区域的透明度，黑色表示完全透明，白色表示完全不透明。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,8 +52,6 @@ offset(offset: Position): T
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -70,7 +64,7 @@ offset(offset: Position): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [offset](#offset) | [Position](arkts-arkui-units-position-i.md) | 是 |
+| [offset](#offset) | [Position](#position) | 是 |
 
 **返回值：**
 
@@ -88,8 +82,6 @@ position(position: Position): T
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -102,7 +94,7 @@ position(position: Position): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [position](#position) | [Position](arkts-arkui-units-position-i.md) | 是 |
+| [position](#position) | [Position](#position) | 是 |
 
 **返回值：**
 

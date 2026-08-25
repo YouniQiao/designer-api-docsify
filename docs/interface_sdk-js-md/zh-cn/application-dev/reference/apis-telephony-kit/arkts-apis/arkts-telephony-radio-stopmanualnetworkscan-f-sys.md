@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## stopManualNetworkScan
 
 ```TypeScript
-function stopManualNetworkScan(slotId: int): Promise<void>
+function stopManualNetworkScan(slotId: number): Promise<void>
 ```
 
 停止手动搜网
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function stopManualNetworkScan(slotId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -46,16 +44,3 @@ function stopManualNetworkScan(slotId: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-radio.startManualNetworkScan(0, (err: BusinessError, data: radio.NetworkSearchRealTimeResult) => {
-    if (err) {
-        console.error(`startManualNetworkScan failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`startManualNetworkScan success, callback: data->${JSON.stringify(data)}`);
-    radio.stopManualNetworkScan(0);
-});
-```

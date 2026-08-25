@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
+import { deviceInfo } from 'kits/@kit.MDMKit';
 ```
 
 ## getDeviceInfo
@@ -15,8 +15,6 @@ function getDeviceInfo(admin: Want, label: string): string
 获取设备信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_DEVICE_INFO
 
@@ -46,24 +44,3 @@ function getDeviceInfo(admin: Want, label: string): string
 | [9200007](../errorcode-enterpriseDeviceManager.md#9200007-系统服务工作异常) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 需根据实际情况进行替换
-  let result: string = deviceInfo.getDeviceInfo(wantTemp, 'deviceName');
-  console.info(`Succeeded in getting device name, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get device name. Code: ${err.code}, message: ${err.message}`);
-}
-```

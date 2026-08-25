@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## createAVSession
@@ -15,8 +15,6 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 Create an AVSession instance. An ability can only create one AVSession
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -36,74 +34,6 @@ Create an AVSession instance. An ability can only create one AVSession
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { avSession } from '@kit.AVSessionKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() { 
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            let currentAVSession: avSession.AVSession;
-            let tag = "createNewSession";
-            let context: Context = this.getUIContext().getHostContext() as Context;
-            let sessionId: string;  // Used as an input parameter of subsequent functions.
-
-            avSession.createAVSession(context, tag, "audio").then(async (data: avSession.AVSession) => {
-            currentAVSession = data;
-            sessionId = currentAVSession.sessionId;
-            console.info(`CreateAVSession : SUCCESS : sessionId = ${sessionId}`);
-            }).catch((err: BusinessError) => {
-            console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { avSession } from '@kit.AVSessionKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-      Text(this.message)
-        .onClick(()=>{
-          let currentAVSession: avSession.AVSession;
-          let tag = "createNewSession";
-          let context: Context = this.getUIContext().getHostContext() as Context;
-          let sessionId: string;  // Used as an input parameter of subsequent functions.
-
-          avSession.createAVSession(context, tag, "audio", async (err: BusinessError, data: avSession.AVSession) => {
-            if (err) {
-              console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
-            } else {
-              currentAVSession = data;
-              sessionId = currentAVSession.sessionId;
-              console.info(`CreateAVSession : SUCCESS : sessionId = ${sessionId}`);
-            }
-          });
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 
 ## createAVSession
 
@@ -114,8 +44,6 @@ function createAVSession(context: Context, tag: string, type: AVSessionType): Pr
 Create an AVSession instance. An ability can only create one AVSession
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -141,7 +69,3 @@ Create an AVSession instance. An ability can only create one AVSession
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-**Examples**
-
-See [createAVSession](#createavsession)

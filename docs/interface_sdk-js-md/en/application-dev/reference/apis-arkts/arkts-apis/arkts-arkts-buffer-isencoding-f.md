@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
+import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## isEncoding
@@ -15,8 +15,6 @@ function isEncoding(encoding: string): boolean
 Checks whether the encoding format is supported.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,18 +31,3 @@ Checks whether the encoding format is supported.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-console.info(buffer.isEncoding('utf-8').toString());
-// Output: true
-console.info(buffer.isEncoding('hex').toString());
-// Output: true
-console.info(buffer.isEncoding('utf/8').toString());
-// Output: false
-console.info(buffer.isEncoding('').toString());
-// Output: false
-```

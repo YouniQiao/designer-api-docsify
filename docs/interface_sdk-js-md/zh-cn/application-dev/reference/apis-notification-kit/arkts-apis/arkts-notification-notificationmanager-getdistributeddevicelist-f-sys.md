@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getDistributedDeviceList
@@ -15,8 +15,6 @@ function getDistributedDeviceList(): Promise<Array<string>>
 查询支持跨设备协同通知的设备类型。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -36,54 +34,3 @@ function getDistributedDeviceList(): Promise<Array<string>>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    try {
-      notificationManager.getDistributedDeviceList().then((data: Array<string>) => {
-        console.info('getDistributedDeviceList succeeded, result = ' + data);
-      }).catch((err: BusinessError) => {
-        console.error(`getDistributedDeviceList failed. Code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      console.error(`getDistributedDeviceList failed. Code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    try {
-      notificationManager.getDistributedDeviceList().then((data: Array<string>) => {
-        console.info('getDistributedDeviceList succeeded, result = ' + data);
-      }).catch((err: Error) => {
-        let error: BusinessError = err as BusinessError;
-        console.error(`getDistributedDeviceList failed. Code is ${error.code}, message is ${error.message}`);
-      });
-    } catch (err) {
-      console.error(`getDistributedDeviceList failed. Code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```

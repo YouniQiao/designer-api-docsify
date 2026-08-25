@@ -17,14 +17,12 @@ are supported since API version 22. This task type must be used independently an
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## checkSpecialScenarioAuth
@@ -36,8 +34,6 @@ checkSpecialScenarioAuth(context: Context): Promise<UserAuthResult>
 Checks whether the user has authorized tasks to run continuously in the background. This API uses a promise to return the result. An exception will be thrown if unauthorized.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -65,29 +61,6 @@ Checks whether the user has authorized tasks to run continuously in the backgrou
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
 
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-      continuousTaskRequest.checkSpecialScenarioAuth(this.context).then((res: backgroundTaskManager.UserAuthResult) => {
-        console.info('Operation checkSpecialScenarioAuth succeeded. data: ' + JSON.stringify(res));
-      }).catch((error: BusinessError) => {
-        console.error(`Operation checkSpecialScenarioAuth failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation checkSpecialScenarioAuth failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 ## checkSpecialScenarioAuthResult
 
 ```TypeScript
@@ -97,8 +70,6 @@ checkSpecialScenarioAuthResult(context: Context): Promise<UserAuthResult>
 Check whether the application can request MODE_SPECIAL_SCENARIO_PROCESSING. No exception will be thrown whether authorized or not.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -136,8 +107,6 @@ Checks whether **BackgroundTaskMode** specified in [ContinuousTaskRequest](#cont
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -157,29 +126,6 @@ Checks whether **BackgroundTaskMode** specified in [ContinuousTaskRequest](#cont
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
 
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    let isModeSupported: boolean = false; 
-    let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-    let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_TASK_KEEPING];
-    continuousTaskRequest.backgroundTaskModes = modeList;
-    try {
-      isModeSupported = continuousTaskRequest.isModeSupported();
-      console.info(`Operation isModeSupported succeeded. isModeSupported is ${isModeSupported}`);
-    } catch (error) {
-      console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 ## requestAuthFromUser
 
 ```TypeScript
@@ -189,8 +135,6 @@ requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 Requests user authorization to run tasks continuously in the background. This API uses an asynchronous callback to return the result. If the API call is successful, a banner notification with a sound is sent. This API is applicable only to continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md) type.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -213,34 +157,6 @@ Requests user authorization to run tasks continuously in the background. This AP
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
 
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callbackAuth(authResult: backgroundTaskManager.UserAuthResult) {
-  console.info('Operation requestAuthFromUser success. auth result: ' + JSON.stringify(authResult));
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-    let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_SPECIAL_SCENARIO_PROCESSING];
-    continuousTaskRequest.backgroundTaskModes = modeList;
-    let subModeList: Array<number> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION];
-    continuousTaskRequest.backgroundTaskSubmodes = subModeList;
-    try {
-      continuousTaskRequest.requestAuthFromUser(this.context, callbackAuth);
-      console.info('Operation requestAuthFromUser succeeded.');
-    } catch (error) {
-      console.error(`Operation requestAuthFromUser failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 ## requestAuthFromUserByDialog
 
 ```TypeScript
@@ -250,8 +166,6 @@ requestAuthFromUserByDialog(context: Context, callback: Callback<UserAuthResult>
 Requesting MODE_SPECIAL_SCENARIO_PROCESSING authorization from users, a dialog box will be displayed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -286,8 +200,6 @@ Main type of a continuous task.Note: The main type must match the subtype.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -303,8 +215,6 @@ Subtype of a continuous task.Note: The main type must match the subtype.
 **Type:** [BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)[]
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -322,8 +232,6 @@ Whether to combine notifications. The value **true** means to combine notificati
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -339,8 +247,6 @@ Continuous task ID. The default value is **-1**.Note: If **combinedTaskNotificat
 **Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -358,8 +264,6 @@ Notify progress data.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -375,8 +279,6 @@ Notification parameters, which are used to specify the target page that is redir
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

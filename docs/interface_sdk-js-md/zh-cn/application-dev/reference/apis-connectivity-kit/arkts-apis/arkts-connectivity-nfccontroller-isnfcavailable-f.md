@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isNfcAvailable
@@ -15,8 +15,6 @@ function isNfcAvailable(): boolean
 查询设备是否有NFC能力。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

@@ -4,8 +4,6 @@ Describes the optional construction parameters during **UIExtensionComponent** c
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -27,8 +25,6 @@ Placeholder for size changes, displayed when the UIExtensionComponent's size cha
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -48,8 +44,6 @@ Whether the DPI settings follow the host or UIExtensionAbility.Default value: **
 **Default:** DpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,8 +65,6 @@ Whether the **UIExtensionComponent** forwards the upper-level caller information
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -90,8 +82,6 @@ Placeholder to be displayed before the UIExtensionComponent establishes a connec
 **Type:** ComponentContent
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,8 +102,6 @@ Following strategy of the window mode.Default value: **FOLLOW_UI_EXTENSION_ABILI
 **Default:** WindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

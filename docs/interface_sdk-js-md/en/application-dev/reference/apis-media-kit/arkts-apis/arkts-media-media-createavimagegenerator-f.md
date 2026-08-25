@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createAVImageGenerator
@@ -15,8 +15,6 @@ function createAVImageGenerator(): Promise<AVImageGenerator>
 Creates an AVImageGenerator instance. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -32,69 +30,6 @@ Creates an AVImageGenerator instance. This API uses a promise to return the resu
 | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avImageGenerator: media.AVImageGenerator;
-media.createAVImageGenerator((error: BusinessError, generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info('Succeeded in creating AVImageGenerator');
-  } else {
-    console.error(`Failed to create AVImageGenerator, error message:${error.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avImageGenerator: media.AVImageGenerator;
-media.createAVImageGenerator().then((generator: media.AVImageGenerator) => {
-  if (generator) {
-    avImageGenerator = generator;
-    console.info('Succeeded in creating AVImageGenerator');
-  } else {
-    console.error('Failed to create AVImageGenerator');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create AVImageGenerator, error message:${error.message}`);
-});
-```
-
-
-## createAVImageGenerator
-
-```TypeScript
-function createAVImageGenerator(): Promise<AVImageGenerator | undefined>
-```
-
-Creates an **AVImageGenerator** instance. This API uses a promise to return the result.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md) \| undefined & gt; |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-
-**Examples**
-
-See [createAVImageGenerator](#createavimagegenerator)
-
 
 ## createAVImageGenerator
 
@@ -105,8 +40,6 @@ function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void
 Creates an AVImageGenerator instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -121,38 +54,3 @@ Creates an AVImageGenerator instance. This API uses an asynchronous callback to 
 | Error Code ID |
 | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-
-**Examples**
-
-See [createAVImageGenerator](#createavimagegenerator)
-
-
-## createAVImageGenerator
-
-```TypeScript
-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator | undefined>): void
-```
-
-Creates an **AVImageGenerator** instance. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md) \| undefined & gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-
-**Examples**
-
-See [createAVImageGenerator](#createavimagegenerator)

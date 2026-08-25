@@ -1,10 +1,8 @@
 # ResourceType (System API)
 
-The type of exemption resources requested by the application.@enum { int }
+The type of exemption resources requested by the application.@enum { number }
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -20,8 +18,6 @@ The resource for non-standby network access.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ RUNNING_LOCK = 1 << 1
 The resource for non-standby cpu running-lock.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -52,8 +46,6 @@ The resource for non-standby timer.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ WORK_SCHEDULER = 1 << 3
 The resource for non-standby workscheduler.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -84,8 +74,6 @@ The resource for non-standby automatic synchronization.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -100,8 +88,6 @@ The resource for non-standby push-kit.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ FREEZE = 1 << 6
 The resource for non-standby freezing application.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 

@@ -4,16 +4,14 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## start
@@ -26,8 +24,6 @@ start(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -48,15 +44,6 @@ start(): void
 | 13900025 |
 | 13900030 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fileIo.createWatcher(filePath, 0xfff, () => {});
-watcher.start();
-watcher.stop();
-```
 
 ## stop
 
@@ -68,8 +55,6 @@ stop(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -90,12 +75,3 @@ stop(): void
 | 13900025 |
 | 13900030 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fileIo.createWatcher(filePath, 0xfff, () => {});
-watcher.start();
-watcher.stop();
-```

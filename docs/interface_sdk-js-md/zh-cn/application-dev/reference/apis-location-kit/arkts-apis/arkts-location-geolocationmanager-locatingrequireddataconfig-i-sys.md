@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## arfcn
 
 ```TypeScript
-arfcn?: int[]
+arfcn?: number[]
 ```
 
 表示绝对无线载频信道号（Absolute Radio Frequency Channel Number，ARFCN）
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ needStartScan: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -57,16 +51,14 @@ needStartScan: boolean
 ## plmnId
 
 ```TypeScript
-plmnId?: int[]
+plmnId?: number[]
 ```
 
 表示SIM卡的PLMN号码（Public Land Mobile Network Identifier，PLMN ID）
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,16 +69,14 @@ plmnId?: int[]
 ## scanInterval
 
 ```TypeScript
-scanInterval?: int
+scanInterval?: number
 ```
 
 表示扫描的时间间隔。单位是毫秒，默认值是10000毫秒，取值范围为大于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -95,16 +85,14 @@ scanInterval?: int
 ## scanTimeout
 
 ```TypeScript
-scanTimeout?: int
+scanTimeout?: number
 ```
 
 表示单次扫描的超时时间。单位是毫秒，默认值是10000毫秒，取值范围为大于0小于600000。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -113,16 +101,14 @@ scanTimeout?: int
 ## slotId
 
 ```TypeScript
-slotId?: int
+slotId?: number
 ```
 
 表示SIM卡的卡槽号。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -141,8 +127,6 @@ type: LocatingRequiredDataType
 **类型：** [LocatingRequiredDataType](arkts-location-geolocationmanager-locatingrequireddatatype-e-sys.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core
 

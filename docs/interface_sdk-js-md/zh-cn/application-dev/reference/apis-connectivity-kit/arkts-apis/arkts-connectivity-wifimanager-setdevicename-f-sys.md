@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setDeviceName
@@ -15,8 +15,6 @@ function setDeviceName(devName: string): void
 设置WLAN P2P设备的名称。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -40,16 +38,3 @@ function setDeviceName(devName: string): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
 | [2801001](../errorcode-wifi.md#2801001-p2p功能未打开) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let name = "****";
-  wifiManager.setDeviceName(name);  
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

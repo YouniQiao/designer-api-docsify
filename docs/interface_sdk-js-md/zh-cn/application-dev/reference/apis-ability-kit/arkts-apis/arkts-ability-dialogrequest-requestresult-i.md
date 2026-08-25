@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from 'kits/@kit.AbilityKit';
 ```
 
 ## result
@@ -25,8 +23,6 @@ result: ResultCode
 **类型：** ResultCode
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,8 +39,6 @@ want?: Want
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

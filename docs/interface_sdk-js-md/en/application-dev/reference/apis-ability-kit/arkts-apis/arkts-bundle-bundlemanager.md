@@ -4,14 +4,12 @@ The module provides APIs for obtaining application information, including bundle
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -81,7 +79,6 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) |
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) |
 | [getAllBundleInfoByDeveloperId](arkts-ability-bundlemanager-getallbundleinfobydeveloperid-f-sys.md) |
-| [getAllBundleInstallInfo](arkts-ability-bundlemanager-getallbundleinstallinfo-f-sys.md) |
 | [getAllBundleInstallInfo](arkts-ability-bundlemanager-getallbundleinstallinfo-f-sys.md) |
 | [getAllDynamicIconInfo](arkts-ability-bundlemanager-getalldynamiciconinfo-f-sys.md) |
 | [getAllNewPreinstalledApplicationInfo](arkts-ability-bundlemanager-getallnewpreinstalledapplicationinfo-f-sys.md) |

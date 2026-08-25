@@ -4,8 +4,6 @@ Enumerates the types of parties that set to keep applications alive.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ System, which means that the system sets to keep applications alive.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ USER = 1
 User, which means that a user sets to keep applications alive.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

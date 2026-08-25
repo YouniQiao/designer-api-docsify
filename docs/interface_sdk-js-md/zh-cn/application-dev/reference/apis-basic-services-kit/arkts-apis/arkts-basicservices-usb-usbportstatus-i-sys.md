@@ -4,8 +4,6 @@ USB设备端口角色信息。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
@@ -17,7 +15,7 @@ USB设备端口角色信息。
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## currentDataRole
@@ -31,8 +29,6 @@ currentDataRole: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -54,8 +50,6 @@ currentMode: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [currentMode](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentmode)
@@ -75,8 +69,6 @@ currentPowerRole: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 

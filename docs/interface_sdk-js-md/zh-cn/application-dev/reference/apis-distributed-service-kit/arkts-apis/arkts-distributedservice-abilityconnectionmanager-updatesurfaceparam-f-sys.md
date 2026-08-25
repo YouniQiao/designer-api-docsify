@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## updateSurfaceParam
 
 ```TypeScript
-function updateSurfaceParam(streamId: int, param: SurfaceParam): void
+function updateSurfaceParam(streamId: number, param: SurfaceParam): void
 ```
 
-Update surface parameters.
+更新与传输流绑定的Surface的配置信息，使新的配置参数生效。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -28,7 +26,7 @@ Update surface parameters.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamId | number | 是 |
 | param | [SurfaceParam](arkts-distributedservice-abilityconnectionmanager-surfaceparam-i-sys.md) | 是 |
 
 **错误码：**
@@ -37,22 +35,3 @@ Update surface parameters.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hilog.info(0x0000, 'testTag', 'updateSurfaceParam');
-let sessionId = 100;
-abilityConnectionManager.createStream(sessionId ,{name: 'receive', role: 0}).then(async (streamId) => {
-  let surfaceParam: abilityConnectionManager.SurfaceParam = {
-    width: 640,
-    height: 480,
-    format: 1
-  }
-  // 更新Surface的配置参数
-  abilityConnectionManager.updateSurfaceParam(streamId, surfaceParam);
-})
-```

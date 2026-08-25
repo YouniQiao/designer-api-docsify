@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## offGetSimActiveState
@@ -15,8 +15,6 @@ function offGetSimActiveState(callback?: Callback<boolean>): void
 取消SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -37,15 +35,3 @@ function offGetSimActiveState(callback?: Callback<boolean>): void
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let simActiveState: Callback<boolean> = (isSimActive: boolean) => {
-    console.info(`simActiveState slotId ${JSON.stringify(isSimActive)}`);
-}
-observer.offGetSimActiveState(simActiveState);
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createVideoPlayer
@@ -15,8 +15,6 @@ function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void
 Creates a **VideoPlayer** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -30,38 +28,6 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoPlayer: media.VideoPlayer;
-media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
-  if (video) {
-    videoPlayer = video;
-    console.info('Succeeded in creating VideoPlayer');
-  } else {
-    console.error(`Failed to create VideoPlayer, error:${error}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoPlayer: media.VideoPlayer;
-media.createVideoPlayer().then((video: media.VideoPlayer) => {
-  if (video) {
-    videoPlayer = video;
-    console.info('Succeeded in creating VideoPlayer');
-  } else {
-    console.error('Failed to create VideoPlayer');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create VideoPlayer, error:${error}`);
-});
-```
-
 
 ## createVideoPlayer
 
@@ -72,8 +38,6 @@ function createVideoPlayer(): Promise<VideoPlayer>
 Creates a VideoPlayer instance. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -86,7 +50,3 @@ Creates a VideoPlayer instance. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; |
-
-**Examples**
-
-See [createVideoPlayer](#createvideoplayer)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## insertData
@@ -15,8 +15,6 @@ function insertData(options: Options, data: UnifiedData, callback: AsyncCallback
 Inserts data to the UDMF public data channel. This API uses an asynchronous callback to return the unique identifier of the data inserted.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,64 +36,6 @@ Inserts data to the UDMF public data channel. This API uses an asynchronous call
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let plainText : uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent : 'This is a plain text example',
-  abstract : 'This is abstract'
-}
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-let options: unifiedDataChannel.Options = {
-  intention: unifiedDataChannel.Intention.DATA_HUB
-}
-try {
-  unifiedDataChannel.insertData(options, unifiedData, (err, key) => {
-    if (err === undefined) {
-      console.info(`Succeeded in inserting data. key = ${key}`);
-    } else {
-      console.error(`Failed to insert data. code is ${err.code}, message is ${err.message} `);
-    }
-  });
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let plainText : uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent : 'This is a plain text example',
-  abstract : 'This is abstract'
-}
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-let options: unifiedDataChannel.Options = {
-  intention: unifiedDataChannel.Intention.DATA_HUB
-}
-try {
-  unifiedDataChannel.insertData(options, unifiedData).then((key) => {
-    console.info(`Succeeded in inserting data. key = ${key}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to insert data. code is ${err.code}, message is ${err.message} `);
-  });
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```
-
 
 ## insertData
 
@@ -106,8 +46,6 @@ function insertData(options: Options, data: UnifiedData): Promise<string>
 Inserts data to the UDMF public data channel. This API uses a promise to return the unique identifier of the data inserted.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,7 +71,3 @@ Inserts data to the UDMF public data channel. This API uses a promise to return 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [insertData](#insertdata)

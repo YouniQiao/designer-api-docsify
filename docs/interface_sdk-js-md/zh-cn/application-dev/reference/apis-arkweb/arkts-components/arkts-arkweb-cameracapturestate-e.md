@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 摄像头未工作。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ PAUSED = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## ACTIVE
@@ -45,7 +39,5 @@ ACTIVE = 2
 摄像头捕获中。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core

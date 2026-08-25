@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'kits/@kit.ArkUI';
 ```
 
 ## showDialog
@@ -15,8 +15,6 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 创建并显示对话框，对话框响应结果异步返回。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -31,56 +29,6 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 | options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import prompt from '@ohos.prompt'
-prompt.showDialog({
-  title: 'Title Info',
-  message: 'Message Info',
-  buttons: [
-    {
-      text: 'button1',
-      color: '#000000'
-    },
-    {
-      text: 'button2',
-      color: '#000000'
-    }
-  ],
-})
-  .then(data => {
-    console.info('showDialog success, click button: ' + data.index);
-  })
-  .catch((err:Error) => {
-    console.info('showDialog error: ' + err);
-  })
-```
-
-```TypeScript
-import prompt from '@ohos.prompt'
-prompt.showDialog({
-  title: 'showDialog Title Info',
-  message: 'Message Info',
-  buttons: [
-    {
-      text: 'button1',
-      color: '#000000'
-    },
-    {
-      text: 'button2',
-      color: '#000000'
-    }
-  ]
-}, (err, data) => {
-  if (err) {
-    console.info('showDialog err: ' + err);
-    return;
-  }
-  console.info('showDialog success callback, click button: ' + data.index);
-});
-```
-
 
 ## showDialog
 
@@ -91,8 +39,6 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 创建并显示对话框，对话框响应后同步返回结果。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -111,7 +57,3 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 | 类型 |
 | --- |
 | Promise & lt;ShowDialogSuccessResponse & gt; |
-
-**示例**
-
-参见 [showDialog](#showdialog)

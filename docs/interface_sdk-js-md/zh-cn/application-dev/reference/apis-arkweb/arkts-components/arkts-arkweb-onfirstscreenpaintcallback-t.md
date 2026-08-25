@@ -8,8 +8,6 @@ type OnFirstScreenPaintCallback = (firstScreenPaint: FirstScreenPaint) => void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -17,7 +15,3 @@ type OnFirstScreenPaintCallback = (firstScreenPaint: FirstScreenPaint) => void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | firstScreenPaint | [FirstScreenPaint](arkts-arkweb-firstscreenpaint-i.md) | 是 |
-
-**示例**
-
-完整示例代码参考[onFirstScreenPaint](./arkts-basic-components-web-events.md#onfirstscreenpaint23)。

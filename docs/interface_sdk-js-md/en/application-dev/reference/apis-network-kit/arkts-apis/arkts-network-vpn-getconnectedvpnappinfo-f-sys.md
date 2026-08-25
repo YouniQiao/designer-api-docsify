@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## getConnectedVpnAppInfo
@@ -15,8 +15,6 @@ function getConnectedVpnAppInfo(): Promise<Array<string>>
 Get the connected VPN App Info.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 

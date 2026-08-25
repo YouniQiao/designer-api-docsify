@@ -4,8 +4,6 @@ Defines the underline color width property.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ disable?: ResourceColor | undefined
 
 Underline color in the disabled state. If no value is specified or if the value specified is **undefined**, **null**, or invalid, the default value is used.
 
-**Type:** ResourceColor \| undefined
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ error?: ResourceColor | undefined
 
 Underline color when an error occurs. If no value is specified or if the value specified is **undefined**, **null**, or invalid, the default value is used. This option changes the color used in the **showCounter** attribute when the maximum number of characters is reached.
 
-**Type:** ResourceColor \| undefined
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,11 +55,9 @@ normal?: ResourceColor | undefined
 
 Underline color in the normal state. If no value is specified or if the value specified is **undefined**, **null**, or invalid, the default value is used.
 
-**Type:** ResourceColor \| undefined
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,11 +73,9 @@ typing?: ResourceColor | undefined
 
 Underline color in the typing state. If no value is specified or if the value specified is **undefined**, **null**, or invalid, the default value is used.
 
-**Type:** ResourceColor \| undefined
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

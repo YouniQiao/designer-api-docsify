@@ -4,8 +4,6 @@ Describes the system notification button.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -17,13 +15,12 @@ hidePanel?: boolean
 ```
 
 Whether to hide the notification panel when the button is tapped. The default value is **false**.  
-- **true**: Yes. - **false**: No.
+- **true**: Yes.  
+- **false**: No.
 
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -41,8 +38,6 @@ Background image of a button.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -59,8 +54,6 @@ Button identifier, used to distinguish multiple different buttons for the same n
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -76,8 +69,6 @@ Text displayed on the button, which defaults to empty. The string length cannot 
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

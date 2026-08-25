@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setDefaultVoiceSlotId
 
 ```TypeScript
-function setDefaultVoiceSlotId(slotId: int, callback: AsyncCallback<void>): void
+function setDefaultVoiceSlotId(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 Set the card slot ID of the default voice service.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Set the card slot ID of the default voice service.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -45,40 +43,16 @@ Set the card slot ID of the default voice service.
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301001](../errorcode-telephony.md#8301001-sim-card-not-activated) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.setDefaultVoiceSlotId(0, (err: BusinessError) => {
-    console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.setDefaultVoiceSlotId(0).then(() => {
-    console.info(`setDefaultVoiceSlotId success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setDefaultVoiceSlotId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setDefaultVoiceSlotId
 
 ```TypeScript
-function setDefaultVoiceSlotId(slotId: int): Promise<void>
+function setDefaultVoiceSlotId(slotId: number): Promise<void>
 ```
 
 Set the card slot ID of the default voice service.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -90,7 +64,7 @@ Set the card slot ID of the default voice service.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -111,7 +85,3 @@ Set the card slot ID of the default voice service.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301001](../errorcode-telephony.md#8301001-sim-card-not-activated) |
-
-**Examples**
-
-See [setDefaultVoiceSlotId](#setdefaultvoiceslotid)

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## cancel
 
 ```TypeScript
-function cancel(representativeBundle: BundleOption, id: int): Promise<void>
+function cancel(representativeBundle: BundleOption, id: number): Promise<void>
 ```
 
 代理取消当前用户其他应用的通知。使用Promise异步回调。需要当前应用与其他应用存在代理关系，或者当前应用有ohos.permission.NOTIFICATION_AGENT_CONTROLLER权限。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -26,8 +24,8 @@ function cancel(representativeBundle: BundleOption, id: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
+| id | number | 是 |
 
 **返回值：**
 
@@ -47,128 +45,3 @@ function cancel(representativeBundle: BundleOption, id: int): Promise<void>
 | [1600007](../errorcode-notification.md#1600007-通知不存在) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [1600017](../errorcode-notification.md#1600017-没有对应的代理关系配置) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// cancel回调
-let cancelCallback = (err: BusinessError): void => {
-  if (err) {
-    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in canceling notification.`);
-  } 
-}
-notificationManager.cancel(0, 'label', cancelCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// cancel回调
-let cancelCallback = (err: BusinessError | null): void => {
-  if (err) {
-    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in canceling notification.`);
-  } 
-}
-notificationManager.cancel(0, 'label', cancelCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.cancel(0).then(() => {
-  console.info(`Succeeded in canceling notification.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.cancel(0).then(() => {
-  console.info(`Succeeded in canceling notification.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to cancel notification. Code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// cancel回调
-let cancelCallback = (err: BusinessError): void => {
-  if (err) {
-    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in canceling notification.`);
-  }
-}
-notificationManager.cancel(0, cancelCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// cancel回调
-let cancelCallback = (err: BusinessError | null): void => {
-  if (err) {
-    console.error(`Failed to cancel notification. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in canceling notification.`);
-  }
-}
-notificationManager.cancel(0, cancelCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: 'bundleName'
-};
-let id: number = 1;
-notificationManager.cancel(bundle, id).then(() => {
-  console.info('cancel success');
-}).catch((err: BusinessError) => {
-  console.error(`cancel failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1'
-};
-let id: int = 1;
-notificationManager.cancel(bundle, id).then(() => {
-  console.info('cancel success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`cancel failed, code is ${error.code}, message is ${error.message}`);
-});
-```

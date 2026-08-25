@@ -4,14 +4,12 @@ The description of the session
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## outputDevice
@@ -25,8 +23,6 @@ The current output device information. It will be undefined if this is a local s
 **Type:** [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 

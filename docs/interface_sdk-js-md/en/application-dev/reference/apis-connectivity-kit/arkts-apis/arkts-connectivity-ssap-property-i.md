@@ -4,14 +4,12 @@ Represents a service Property.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## descriptors
@@ -25,8 +23,6 @@ Descriptors of the current property. By default, this field is not used if not s
 **Type:** PropertyDescriptor[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Operation modes supported by the property. The default value is **READABLE|WRITE
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -61,8 +55,6 @@ Property UUID, in the same format as **serviceUuid**.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +72,6 @@ NearLink service UUID, which is a string of 36 characters. The value consists of
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -97,8 +87,6 @@ Data value of a property.
 **Type:** ArrayBuffer
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

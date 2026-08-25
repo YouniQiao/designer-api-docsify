@@ -6,8 +6,6 @@ The &lt;textarea&gt; component provides an interactive interface to receive user
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## focus
@@ -19,8 +17,6 @@ focus(param: { focus: boolean }): void
 Obtains or loses the focus of a component, which can display or collapse the input method.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

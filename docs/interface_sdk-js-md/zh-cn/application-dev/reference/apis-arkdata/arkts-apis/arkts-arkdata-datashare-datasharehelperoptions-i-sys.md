@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## isProxy
@@ -30,8 +28,6 @@ isProxy?: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -41,18 +37,16 @@ isProxy?: boolean
 ## waitTime
 
 ```TypeScript
-waitTime?: int
+waitTime?: number
 ```
 
 拉起数据提供者进程的等待时间（单位：秒），默认值为2秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **默认值：** 2
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

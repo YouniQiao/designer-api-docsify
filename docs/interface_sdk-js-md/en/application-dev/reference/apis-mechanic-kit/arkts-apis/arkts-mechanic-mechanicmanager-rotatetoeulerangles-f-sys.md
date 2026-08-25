@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## rotateToEulerAngles
 
 ```TypeScript
-function rotateToEulerAngles(mechId: int, angles: EulerAngles, duration: int): Promise<Result>
+function rotateToEulerAngles(mechId: number, angles: EulerAngles, duration: number): Promise<Result>
 ```
 
 Rotates a mechanical device to the absolute angles.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -26,9 +24,9 @@ Rotates a mechanical device to the absolute angles.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| mechId | number | Yes |
 | angles | [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | Yes |
-| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| duration | number | Yes |
 
 **Return value:**
 
@@ -43,18 +41,3 @@ Rotates a mechanical device to the absolute angles.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
-
-**Examples**
-
-```TypeScript
-let degree: mechanicManager.EulerAngles = {
-  yaw: 0.9 * Math.PI,
-  roll: 0.9 * Math.PI,
-  pitch: 0.9 * Math.PI
-}
-mechanicManager.rotateToEulerAngles(0, degree, 500)
-  .then((result: mechanicManager.Result) => {
-    console.info(`'Rotate result:' ${result}`);
-  });
-console.info('End rotation');
-```

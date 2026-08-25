@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundLoader } from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## getTaskInfo
 
 ```TypeScript
-function getTaskInfo(taskId: int): Promise<TaskInfo>
+function getTaskInfo(taskId: number): Promise<TaskInfo>
 ```
 
 获取后台预取任务信息。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -28,7 +26,7 @@ function getTaskInfo(taskId: int): Promise<TaskInfo>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| taskId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| taskId | number | 是 |
 
 **返回值：**
 

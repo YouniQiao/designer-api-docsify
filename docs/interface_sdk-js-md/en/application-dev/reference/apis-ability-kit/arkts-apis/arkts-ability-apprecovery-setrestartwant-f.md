@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appRecovery } from '@kit.AbilityKit';
+import { appRecovery } from 'kits/@kit.AbilityKit';
 ```
 
 ## setRestartWant
@@ -16,8 +16,6 @@ Sets an ability that will be recovered. The ability must be a UIAbility in the c
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -29,28 +27,3 @@ Sets an ability that will be recovered. The ability must be a UIAbility in the c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { appRecovery, Want } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Button("Start to Recover Ability")
-      .fontSize(40)
-      .fontWeight(FontWeight.Bold)
-      .onClick(()=> {
-        // set restart want
-        let want: Want = {
-          bundleName: "ohos.samples.recovery",
-          abilityName: "RecoveryAbility"
-        };
-
-        appRecovery.setRestartWant(want);
-      })
-  }
-}
-```

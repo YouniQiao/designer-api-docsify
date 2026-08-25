@@ -8,8 +8,6 @@ type TwoParamCallback<T, G> = (data1: T, data2: G) => void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 **参数：**

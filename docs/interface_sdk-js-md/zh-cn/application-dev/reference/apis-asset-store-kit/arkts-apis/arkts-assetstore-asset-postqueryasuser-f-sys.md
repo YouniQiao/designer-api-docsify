@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## postQueryAsUser
@@ -15,8 +15,6 @@ function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 在指定用户空间中查询的后置处理，用于需要用户认证的关键资产（与[asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md)函数成对出现）。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -50,17 +48,3 @@ function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 | [24000011](../errorcode-asset.md#24000011-包管理服务异常) |
 | [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
 | [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-
-let userId: number = 100;
-let handle: asset.AssetMap = new Map();
-// 此处传入的new Uint8Array(32)仅作为示例，实际应传入asset.preQueryAsUser执行成功返回的挑战值
-handle.set(asset.Tag.AUTH_CHALLENGE, new Uint8Array(32));
-asset.postQueryAsUser(userId, handle).then(() => {
-  console.info(`Succeeded in post-querying Asset from user space.`);
-});
-```

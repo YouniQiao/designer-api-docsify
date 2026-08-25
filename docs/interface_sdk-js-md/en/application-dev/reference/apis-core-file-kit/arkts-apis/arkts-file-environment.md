@@ -4,14 +4,12 @@ The **Environment** module provides ArkTS APIs for obtaining the root directorie
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.File.Environment
 
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from '@kit.CoreFileKit';
+import { Environment } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

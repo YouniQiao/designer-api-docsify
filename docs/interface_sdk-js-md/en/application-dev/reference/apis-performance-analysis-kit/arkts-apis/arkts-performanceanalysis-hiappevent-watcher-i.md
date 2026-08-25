@@ -9,14 +9,12 @@ Defines parameters for a **Watcher** object. This API is used to configure and m
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onReceive
@@ -28,8 +26,6 @@ onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void
 Real-time subscription callback. Only this callback function is triggered if it is passed together with **onTrigger**. The input arguments are described as follows:domain: domain name.appEventGroups: event group.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,14 +40,8 @@ Real-time subscription callback. Only this callback function is triggered if it 
 
 ## onTrigger
 
-ArkTS-Dyn:
 ```TypeScript
 onTrigger?: (curRow: number, curSize: number, holder: AppEventPackageHolder) => void
-```
-
-ArkTS-Sta:
-```TypeScript
-onTrigger?: (curRow: int, curSize: int, holder: AppEventPackageHolder) => void
 ```
 
 Subscription callback. This parameter takes effect only when it is passed together with **triggerCondition**. The input arguments are described as follows:  
@@ -61,8 +51,6 @@ Subscription callback. This parameter takes effect only when it is passed togeth
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -71,8 +59,8 @@ Subscription callback. This parameter takes effect only when it is passed togeth
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| curRow | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| curSize | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| curRow | number | Yes |
+| curSize | number | Yes |
 | holder | [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) | Yes |
 
 ## appEventFilters
@@ -86,8 +74,6 @@ Subscription filtering condition. This parameter is passed only when subscriptio
 **Type:** [AppEventFilter](arkts-performanceanalysis-hiappevent-appeventfilter-i.md)[]
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -105,8 +91,6 @@ Unique name of a watcher. The value contains a maximum of 32 characters, includi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
@@ -122,8 +106,6 @@ Subscription callback triggering condition. This parameter takes effect only whe
 **Type:** [TriggerCondition](arkts-performanceanalysis-hiappevent-triggercondition-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

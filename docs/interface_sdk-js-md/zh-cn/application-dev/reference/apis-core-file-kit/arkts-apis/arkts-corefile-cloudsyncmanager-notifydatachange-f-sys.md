@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## notifyDataChange
@@ -16,8 +16,6 @@ function notifyDataChange(accountId: string, bundleName: string): Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -42,128 +40,6 @@ function notifyDataChange(accountId: string, bundleName: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.notifyDataChange(accountId, bundleName).then(() => {
-  console.info("notifyDataChange successfully");
-}).catch((err: BusinessError) => {
-  console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.notifyDataChange(accountId, bundleName).then<void>((): void => {
-  console.info("notifyDataChange successfully");
-}).catch((err: BusinessError<void>): void => {
-  console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError) => {
-  if (err) {
-    console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError<void> | null): void => {
-  if (err && err.code) {
-    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData).then(() => {
-  console.info("notifyDataChange successfully");
-}).catch((err: BusinessError) => {
-  console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: int = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData).then<void>((): void => {
-  console.info("notifyDataChange successfully");
-}).catch((err: BusinessError<void>): void => {
-  console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError) => {
-  if (err) {
-    console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: int = 100;
-let extraData: cloudSyncManager.ExtraData = {eventId: "eventId", extraData: "data"};
-cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError<void> | null): void => {
-  if (err && err.code) {
-    console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("notifyDataChange successfully");
-  }
-});
-```
 
 
 ## notifyDataChange
@@ -176,8 +52,6 @@ function notifyDataChange(accountId: string, bundleName: string, callback: Async
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **系统接口：** 此接口为系统接口。
@@ -198,22 +72,16 @@ function notifyDataChange(accountId: string, bundleName: string, callback: Async
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [notifyDataChange](#notifydatachange)
-
 
 ## notifyDataChange
 
 ```TypeScript
-function notifyDataChange(userId: int, extraData: ExtraData): Promise<void>
+function notifyDataChange(userId: number, extraData: ExtraData): Promise<void>
 ```
 
 通知端云服务应用指定用户的云数据变更信息。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -225,7 +93,7 @@ function notifyDataChange(userId: int, extraData: ExtraData): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | extraData | [ExtraData](arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | 是 |
 
 **返回值：**
@@ -243,22 +111,16 @@ function notifyDataChange(userId: int, extraData: ExtraData): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13600001 |
 
-**示例**
-
-参见 [notifyDataChange](#notifydatachange)
-
 
 ## notifyDataChange
 
 ```TypeScript
-function notifyDataChange(userId: int, extraData: ExtraData, callback: AsyncCallback<void>): void
+function notifyDataChange(userId: number, extraData: ExtraData, callback: AsyncCallback<void>): void
 ```
 
 通知端云服务应用指定用户的云数据变更信息。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -270,7 +132,7 @@ function notifyDataChange(userId: int, extraData: ExtraData, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | extraData | [ExtraData](arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -282,7 +144,3 @@ function notifyDataChange(userId: int, extraData: ExtraData, callback: AsyncCall
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13600001 |
-
-**示例**
-
-参见 [notifyDataChange](#notifydatachange)

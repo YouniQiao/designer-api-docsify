@@ -8,8 +8,6 @@ export type ParameterItem = _ParameterItem
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **属性类型：** _ParameterItem

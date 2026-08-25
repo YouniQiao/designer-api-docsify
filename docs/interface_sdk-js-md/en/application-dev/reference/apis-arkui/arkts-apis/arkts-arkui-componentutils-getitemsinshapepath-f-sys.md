@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'kits/@kit.ArkUI';
 ```
 
 ## getItemsInShapePath
@@ -15,8 +15,6 @@ function getItemsInShapePath(value: GetItemsInShapePathParams): Array<ImageItem>
 Get the image objects located within the selected area.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

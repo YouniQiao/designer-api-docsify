@@ -4,31 +4,13 @@ Declare CustomDialog TipsDialog
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
+import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## checkAction
 
@@ -39,8 +21,6 @@ checkAction?: (isChecked: boolean) => void
 Sets the TipsDialog CheckBox Callback.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +42,9 @@ checkTips?: ResourceStr
 
 Sets the TipsDialog checkbox tips.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,11 +60,9 @@ content?: ResourceStr
 
 Sets the TipsDialog content.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,11 +78,9 @@ controller: CustomDialogController
 
 Sets the TipsDialog Controller.
 
-**Type:** CustomDialogController
+**Type:** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,11 +96,9 @@ imageRes: ResourceStr | PixelMap
 
 Sets the TipsDialog imageRes.
 
-**Type:** ResourceStr \| PixelMap
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,11 +114,9 @@ imageSize?: SizeOptions
 
 Sets the TipsDialog image size.
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,8 +136,6 @@ Sets the TipsDialog checkbox check state.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -182,11 +150,9 @@ onCheckedChange?: Callback<boolean>
 
 Sets the TipsDialog CheckBox Callback.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**Type:** Callback&lt;boolean&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,8 +172,6 @@ Sets the TipsDialog primary button.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -225,8 +189,6 @@ Sets the TipsDialog secondary button.
 **Type:** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,8 +208,6 @@ Custom Theme.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -262,11 +222,9 @@ themeColorMode?: ThemeColorMode
 
 Sets the TipsDialog dark or light Mode.
 
-**Type:** ThemeColorMode
+**Type:** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,11 +240,9 @@ title?: ResourceStr
 
 Sets the TipsDialog title.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## isFingerprintAuthDisabled
@@ -15,8 +15,6 @@ function isFingerprintAuthDisabled(admin: Want): boolean
 查询指纹认证是否被禁用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -51,23 +49,3 @@ function isFingerprintAuthDisabled(admin: Want): boolean
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: boolean = restrictions.isFingerprintAuthDisabled(wantTemp);
-  console.info(`Succeeded in getting the state of fingerprint auth. result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get the state of fingerprint auth. Code: ${err.code}, message: ${err.message}`);
-};
-```

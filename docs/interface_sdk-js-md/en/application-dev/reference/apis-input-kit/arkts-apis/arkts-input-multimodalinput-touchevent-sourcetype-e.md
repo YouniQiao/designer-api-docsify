@@ -4,8 +4,6 @@ Enumerates touch sources. Currently, only the touchscreen and touchpad are suppo
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## TOUCH_SCREEN
@@ -17,8 +15,6 @@ TOUCH_SCREEN = 0
 Touchscreen.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -32,8 +28,6 @@ Stylus.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## TOUCH_PAD
@@ -45,7 +39,5 @@ TOUCH_PAD = 2
 Touchpad.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core

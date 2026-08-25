@@ -4,8 +4,6 @@ Represents the access records of a permission.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Represents the access records of a permission.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## accessCount
 
 ```TypeScript
-accessCount: int
+accessCount: number
 ```
 
 Total number of accesses for this permission, indicating the cumulative number of successful uses of this permission within the query time window.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -46,8 +42,6 @@ Access record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETA
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Extension identity, with a maximum length of 48 characters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -75,16 +67,14 @@ Extension identity, with a maximum length of 48 characters.
 ## lastAccessDuration
 
 ```TypeScript
-lastAccessDuration: long
+lastAccessDuration: number
 ```
 
 Last access duration. Unit: milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -93,16 +83,14 @@ Last access duration. Unit: milliseconds.
 ## lastAccessTime
 
 ```TypeScript
-lastAccessTime: long
+lastAccessTime: number
 ```
 
 Last time when the permission was accessed. Unit: milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -111,16 +99,14 @@ Last time when the permission was accessed. Unit: milliseconds.
 ## lastRejectTime
 
 ```TypeScript
-lastRejectTime: long
+lastRejectTime: number
 ```
 
 Last time when the access to the permission was rejected. Unit: milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -138,8 +124,6 @@ Permission name, used to identify the sensitive permission corresponding to the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -147,16 +131,14 @@ Permission name, used to identify the sensitive permission corresponding to the 
 ## rejectCount
 
 ```TypeScript
-rejectCount: int
+rejectCount: number
 ```
 
 Total number of rejections for this permission, indicating the cumulative number of failed or denied permission accesses within the query time window.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -173,8 +155,6 @@ Rejection record collection, effective only when flag is FLAG_PERMISSION_USAGE_D
 **Type:** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 

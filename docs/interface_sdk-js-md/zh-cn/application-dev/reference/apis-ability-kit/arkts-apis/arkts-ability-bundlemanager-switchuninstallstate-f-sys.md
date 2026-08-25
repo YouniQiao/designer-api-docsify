@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## switchUninstallState
@@ -15,8 +15,6 @@ function switchUninstallState(bundleName: string, state: boolean): void
 切换指定应用的可卸载状态，此接口与EDM应用拦截管控机制不互相影响。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CHANGE_BUNDLE_UNINSTALL_STATE
 
@@ -40,18 +38,3 @@ function switchUninstallState(bundleName: string, state: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  bundleManager.switchUninstallState('com.example.myapplication', false);
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'switchUninstallState failed: %{public}s', message);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
+import { distributedBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRemoteAbilityInfo
@@ -16,8 +16,6 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
@@ -43,495 +41,6 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo) => {
-            if (err) {
-                console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-            } else {
-                console.info('Operation succeed:' + JSON.stringify(data));
-            }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, (err: BusinessError | null, data: distributedBundleManager.RemoteAbilityInfo | undefined) => {
-            if (err) {
-                console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-            } else {
-                console.info('Operation succeed:' + JSON.stringify(data));
-            }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }).then((data: distributedBundleManager.RemoteAbilityInfo) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }).then((data: distributedBundleManager.RemoteAbilityInfo) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: Error) => {
-            console.error(`Operation failed: error code is ${(err as BusinessError).code}  and error message is ${(err as BusinessError).message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application1',
-                abilityName: 'EntryAbility1'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ], (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
-          if (err) {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
-let elementNames: Array<bundleManager.ElementName> = [
-    {
-        deviceId: '1',
-        bundleName: 'com.example.application1',
-        abilityName: 'EntryAbility1'
-    },
-    {
-        deviceId: '1',
-        bundleName: 'com.example.application2',
-        abilityName: 'EntryAbility'
-    }
-]
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        elementNames, (err: BusinessError | null, data: distributedBundleManager.RemoteAbilityInfo[] | undefined) => {
-          if (err) {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application',
-                abilityName: 'EntryAbility'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ]).then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
-let elementNames: Array<bundleManager.ElementName> = [
-    {
-        deviceId: '1',
-        bundleName: 'com.example.application1',
-        abilityName: 'EntryAbility1'
-    },
-    {
-        deviceId: '1',
-        bundleName: 'com.example.application2',
-        abilityName: 'EntryAbility'
-    }
-]
-try {
-    distributedBundleManager.getRemoteAbilityInfo(elementNames).then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: Error) => {
-            console.error(`Operation failed: error code is ${(err as BusinessError).code}  and error message is ${(err as BusinessError).message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo) => {
-          if (err) {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, 'zh-Hans-CN', (err: BusinessError | null, data: distributedBundleManager.RemoteAbilityInfo | undefined) => {
-          if (err) {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: Error) => {
-            console.error(`Operation failed: error code is ${(err as BusinessError).code}  and error message is ${(err as BusinessError).message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application1',
-                abilityName: 'EntryAbility1'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ], 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
-          if (err) {
-           console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
-let elementNames: Array<bundleManager.ElementName> = [
-    {
-        deviceId: '1',
-        bundleName: 'com.example.application1',
-        abilityName: 'EntryAbility1'
-    },
-    {
-        deviceId: '1',
-        bundleName: 'com.example.application2',
-        abilityName: 'EntryAbility'
-    }
-]
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        elementNames, 'zh-Hans-CN', (err: BusinessError | null, data: distributedBundleManager.RemoteAbilityInfo[] | undefined) => {
-          if (err) {
-           console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application',
-                abilityName: 'EntryAbility'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ], 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
-let elementNames: Array<bundleManager.ElementName> = [
-    {
-        deviceId: '1',
-        bundleName: 'com.example.application1',
-        abilityName: 'EntryAbility1'
-    },
-    {
-        deviceId: '1',
-        bundleName: 'com.example.application2',
-        abilityName: 'EntryAbility'
-    }
-]
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        elementNames, 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: Error) => {
-            console.error(`Operation failed: error code is ${(err as BusinessError).code}  and error message is ${(err as BusinessError).message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
 
 
 ## getRemoteAbilityInfo
@@ -544,8 +53,6 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
@@ -577,10 +84,6 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
 
-**示例**
-
-参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -591,8 +94,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -620,10 +121,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
 
-**示例**
-
-参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -634,8 +131,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -668,10 +163,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
 
-**示例**
-
-参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -682,8 +173,6 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 获取由elementName和locale指定的远程设备上的应用的AbilityInfo信息。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -712,10 +201,6 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
 
-**示例**
-
-参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -726,8 +211,6 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise
 获取由elementName和locale指定的远程设备上的应用的AbilityInfo信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -761,10 +244,6 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
 
-**示例**
-
-参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -775,8 +254,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -805,10 +282,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
 
-**示例**
-
-参见 [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -819,8 +292,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string):
 获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -853,7 +324,3 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string):
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) |
-
-**示例**
-
-参见 [getRemoteAbilityInfo](#getremoteabilityinfo)

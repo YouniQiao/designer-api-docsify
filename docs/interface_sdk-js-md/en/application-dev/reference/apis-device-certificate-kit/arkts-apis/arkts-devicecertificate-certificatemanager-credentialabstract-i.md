@@ -4,14 +4,12 @@ Represents brief information about a credential.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## alias
@@ -25,8 +23,6 @@ Alias of a credential. The value contains up to 128 bytes.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -42,8 +38,6 @@ Unique identifier of a credential. The value contains up to 256 bytes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## type
@@ -57,7 +51,5 @@ Type of a credential. The value contains up to 8 bytes.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

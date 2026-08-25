@@ -11,14 +11,12 @@ The **font** module provides APIs for registering custom fonts.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { font } from '@kit.ArkUI';
+import { font } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## sendCommand
@@ -15,8 +15,6 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>)
 Send extended commands to location subsystem.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -33,29 +31,6 @@ Send extended commands to location subsystem.
 | command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
-geolocation.sendCommand(requestInfo, (err, result) => {
-    if (err) {
-        console.info('sendCommand: err=' + JSON.stringify(err));
-    }
-    if (result) {
-        console.info('sendCommand: result=' + JSON.stringify(result));
-    }
-});
-```
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
-geolocation.sendCommand(requestInfo).then((result) => {
-    console.info('promise, sendCommand: ' + JSON.stringify(result));
-});
-```
-
 
 ## sendCommand
 
@@ -66,8 +41,6 @@ function sendCommand(command: LocationCommand): Promise<boolean>
 Send extended commands to location subsystem.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -88,7 +61,3 @@ Send extended commands to location subsystem.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [sendCommand](#sendcommand)

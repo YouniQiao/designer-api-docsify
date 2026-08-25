@@ -6,8 +6,6 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ backgroundColor(value: ResourceColor)
 Sets the background color of the QR code.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,8 +45,6 @@ Sets the color of the QR code.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -72,8 +66,6 @@ contentOpacity(value: number | Resource)
 Sets the opacity of the QR code content. The minimum value is 0, and the maximum value is 1.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

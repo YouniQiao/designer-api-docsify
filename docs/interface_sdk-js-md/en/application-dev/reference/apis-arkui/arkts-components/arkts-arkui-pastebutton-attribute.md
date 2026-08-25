@@ -1,12 +1,12 @@
 # PasteButton properties/events
 
-This component can only inherit the universal attributes of security components.<br>Only the following events are supported.
+This component can only inherit the universal attributes of security components.
+
+Only the following events are supported.
 
 **Inheritance/Implementation:** PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -29,8 +29,6 @@ Triggered when the paste button is clicked, returning the authorization result. 
 > to avoid authorization failures caused by incompliant styles.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## answerCall
@@ -15,8 +15,6 @@ function answerCall(callback: AsyncCallback<void>): void
 Answers a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ANSWER_CALL or ohos.permission.MANAGE_CALL_FOR_DEVICES
 
@@ -39,49 +37,3 @@ Answers a call. This API uses an asynchronous callback to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall((err: BusinessError) => {
-    if (err) {
-        console.error(`answerCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`answerCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`answerCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`answerCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(1).then(() => {
-    console.info(`answerCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(0, 1).then(() => {
-    console.info(`answerCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```

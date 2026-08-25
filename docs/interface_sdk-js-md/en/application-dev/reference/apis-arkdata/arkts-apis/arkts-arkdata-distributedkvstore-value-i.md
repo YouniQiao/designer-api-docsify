@@ -4,14 +4,12 @@ Defines the **value** object in a KV store.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## type
@@ -26,8 +24,6 @@ Type of the value.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -35,16 +31,14 @@ Type of the value.
 ## value
 
 ```TypeScript
-value: Uint8Array | string | long | double | boolean
+value: Uint8Array | string | number | number | boolean
 ```
 
 Value of the KV pair.
 
-**Type:** ArkTS-Dyn: Uint8Array \| string \| number \| number \| boolean  <br>ArkTS-Sta：Uint8Array \| string \| long \| double \| boolean
+**Type:** Uint8Array \| string \| number \| number \| boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

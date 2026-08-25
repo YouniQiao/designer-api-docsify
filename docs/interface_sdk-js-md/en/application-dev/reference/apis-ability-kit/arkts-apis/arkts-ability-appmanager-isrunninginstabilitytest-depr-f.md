@@ -15,11 +15,9 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 > **NOTE：**&gt;
 > A stability test scenario refers to a specific testing environment designed to verify application reliability
-> under complex, extreme, or long-term operating conditions.
+> under complex, extreme, or number-term operating conditions.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -33,31 +31,6 @@ Checks whether the system is undergoing a stability test. This API uses an async
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-
-appManager.isRunningInStabilityTest((error, flag) => {
-  if (error && error.code !== 0) {
-    console.error(`isRunningInStabilityTest fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`isRunningInStabilityTest success, the result is: ${JSON.stringify(flag)}`);
-  }
-});
-```
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-appManager.isRunningInStabilityTest().then((flag) => {
-  console.info(`The result of isRunningInStabilityTest is: ${JSON.stringify(flag)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## isRunningInStabilityTest
 
@@ -69,11 +42,9 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 > **NOTE：**&gt;
 > A stability test scenario refers to a specific testing environment designed to verify application reliability
-> under complex, extreme, or long-term operating conditions.
+> under complex, extreme, or number-term operating conditions.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -86,7 +57,3 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [isRunningInStabilityTest](#isrunninginstabilitytest)

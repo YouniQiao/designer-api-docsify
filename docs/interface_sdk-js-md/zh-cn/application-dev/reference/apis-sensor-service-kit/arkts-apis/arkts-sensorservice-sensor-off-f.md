@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## off
@@ -16,8 +16,6 @@ function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResp
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -37,34 +35,6 @@ function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResp
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.ACCELEROMETER, callback1);
-  sensor.on(sensor.SensorId.ACCELEROMETER, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.ACCELEROMETER, callback1);
-  // 取消SensorId.ACCELEROMETER类型的所有回调
-  sensor.off(sensor.SensorId.ACCELEROMETER);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -77,8 +47,6 @@ function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, ca
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -100,66 +68,6 @@ function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, ca
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.AccelerometerResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类别
-const sensorType = sensor.SensorId.ACCELEROMETER;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -170,8 +78,6 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback<Acce
 取消订阅未校准加速度传感器数据。当不再需要接收未校准加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -190,34 +96,6 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback<Acce
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, callback1);
-  sensor.on(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, callback1);
-  // 取消注册SensorId.ACCELEROMETER_UNCALIBRATED类型的所有回调
-  sensor.off(sensor.SensorId.ACCELEROMETER_UNCALIBRATED);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -230,8 +108,6 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: Sensor
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -251,66 +127,6 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: Sensor
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.AccelerometerUncalibratedResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.ACCELEROMETER_UNCALIBRATED;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -321,8 +137,6 @@ function off(type: SensorId.AMBIENT_LIGHT, callback?: Callback<LightResponse>): 
 取消订阅环境光传感器数据。当不再需要接收环境光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -338,34 +152,6 @@ function off(type: SensorId.AMBIENT_LIGHT, callback?: Callback<LightResponse>): 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.AMBIENT_LIGHT, callback1);
-  sensor.on(sensor.SensorId.AMBIENT_LIGHT, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.AMBIENT_LIGHT, callback1);
-  // 取消注册SensorId.AMBIENT_LIGHT
-  sensor.off(sensor.SensorId.AMBIENT_LIGHT);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -378,8 +164,6 @@ function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, ca
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -396,66 +180,6 @@ function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, ca
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.LightResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.AMBIENT_LIGHT;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -466,8 +190,6 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemp
 取消订阅温度传感器数据。当不再需要接收温度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -483,34 +205,6 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemp
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.AMBIENT_TEMPERATURE, callback1);
-  sensor.on(sensor.SensorId.AMBIENT_TEMPERATURE, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.AMBIENT_TEMPERATURE, callback1);
-  // 取消注册SensorId.AMBIENT_TEMPERATURE的所有回调
-  sensor.off(sensor.SensorId.AMBIENT_TEMPERATURE);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -523,8 +217,6 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoPar
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -541,66 +233,6 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoPar
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.AmbientTemperatureResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.AMBIENT_TEMPERATURE;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -611,8 +243,6 @@ function off(type: SensorId.BAROMETER, callback?: Callback<BarometerResponse>): 
 取消订阅气压计传感器数据。当不再需要接收气压计传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -628,34 +258,6 @@ function off(type: SensorId.BAROMETER, callback?: Callback<BarometerResponse>): 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-    console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-    console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-    sensor.on(sensor.SensorId.BAROMETER, callback1);
-    sensor.on(sensor.SensorId.BAROMETER, callback2);
-    // 仅取消callback1的注册
-    sensor.off(sensor.SensorId.BAROMETER, callback1);
-    // 取消注册SensorId.BAROMETER的所有回调
-    sensor.off(sensor.SensorId.BAROMETER);
-} catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -668,8 +270,6 @@ function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callba
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -686,66 +286,6 @@ function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callba
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.BarometerResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.BAROMETER;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -756,8 +296,6 @@ function off(type: SensorId.GRAVITY, callback?: Callback<GravityResponse>): void
 取消订阅重力传感器数据。当不再需要接收重力传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -773,34 +311,6 @@ function off(type: SensorId.GRAVITY, callback?: Callback<GravityResponse>): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.GRAVITY, callback1);
-  sensor.on(sensor.SensorId.GRAVITY, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.GRAVITY, callback1);
-  // 取消注册SensorId.GRAVITY的所有回调
-  sensor.off(sensor.SensorId.GRAVITY);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -813,8 +323,6 @@ function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -831,66 +339,6 @@ function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.GravityResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.GRAVITY;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -901,8 +349,6 @@ function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): 
 取消订阅陀螺仪传感器数据。当不再需要接收陀螺仪传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -923,34 +369,6 @@ function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): 
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.GYROSCOPE, callback1);
-  sensor.on(sensor.SensorId.GYROSCOPE, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.GYROSCOPE, callback1);
-  // 取消注册SensorId.GYROSCOPE的所有回调
-  sensor.off(sensor.SensorId.GYROSCOPE);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -963,8 +381,6 @@ function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callba
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **需要权限：** ohos.permission.GYROSCOPE
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -986,66 +402,6 @@ function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callba
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.GyroscopeResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.GYROSCOPE;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -1056,8 +412,6 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback<Gyroscop
 取消订阅未校准陀螺仪传感器数据。当不再需要接收未校准陀螺仪传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -1076,34 +430,6 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback<Gyroscop
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.GYROSCOPE_UNCALIBRATED, callback1);
-  sensor.on(sensor.SensorId.GYROSCOPE_UNCALIBRATED, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.GYROSCOPE_UNCALIBRATED, callback1);
-  // 取消注册SensorId.GYROSCOPE_UNCALIBRATED的所有回调
-  sensor.off(sensor.SensorId.GYROSCOPE_UNCALIBRATED);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -1116,8 +442,6 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfo
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **需要权限：** ohos.permission.GYROSCOPE
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -1137,66 +461,6 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfo
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.GyroscopeUncalibratedResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.GYROSCOPE_UNCALIBRATED;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -1207,8 +471,6 @@ function off(type: SensorId.HALL, callback?: Callback<HallResponse>): void
 取消订阅霍尔传感器数据。当不再需要接收霍尔传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1224,34 +486,6 @@ function off(type: SensorId.HALL, callback?: Callback<HallResponse>): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.HALL, callback1);
-  sensor.on(sensor.SensorId.HALL, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.HALL, callback1);
-  // 取消注册SensorId.HALL的所有回调
-  sensor.off(sensor.SensorId.HALL);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -1264,8 +498,6 @@ function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: 
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1282,66 +514,6 @@ function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: 
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.HallResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.HALL;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -1352,8 +524,6 @@ function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>):
 取消订阅心率传感器数据。当不再需要接收心率传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -1372,34 +542,6 @@ function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>):
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.HEART_RATE, callback1);
-  sensor.on(sensor.SensorId.HEART_RATE, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.HEART_RATE, callback1);
-  // 取消注册SensorId.HEART_RATE的所有回调
-  sensor.off(sensor.SensorId.HEART_RATE);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -1412,8 +554,6 @@ function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callb
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -1433,66 +573,6 @@ function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callb
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.HeartRateResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.HEART_RATE;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -1503,8 +583,6 @@ function off(type: SensorId.HUMIDITY, callback?: Callback<HumidityResponse>): vo
 取消订阅湿度传感器数据。当不再需要接收湿度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1520,34 +598,6 @@ function off(type: SensorId.HUMIDITY, callback?: Callback<HumidityResponse>): vo
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.HUMIDITY, callback1);
-  sensor.on(sensor.SensorId.HUMIDITY, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.HUMIDITY, callback1);
-  // 取消注册SensorId.HUMIDITY的所有回调
-  sensor.off(sensor.SensorId.HUMIDITY);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -1560,8 +610,6 @@ function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callbac
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1578,66 +626,6 @@ function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callbac
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.HumidityResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.HUMIDITY;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -1648,8 +636,6 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAcce
 取消订阅线性加速度传感器数据。当不再需要接收线性加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1668,34 +654,6 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAcce
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.LINEAR_ACCELEROMETER, callback1);
-  sensor.on(sensor.SensorId.LINEAR_ACCELEROMETER, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.LINEAR_ACCELEROMETER, callback1);
-  // 取消注册SensorId.LINEAR_ACCELEROMETER的所有回调
-  sensor.off(sensor.SensorId.LINEAR_ACCELEROMETER);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -1708,8 +666,6 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoPa
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **需要权限：** ohos.permission.ACCELEROMETER
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -1729,66 +685,6 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoPa
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.LinearAccelerometerResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.LINEAR_ACCELEROMETER;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -1799,8 +695,6 @@ function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldRes
 取消订阅磁场传感器数据。当不再需要接收磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1816,34 +710,6 @@ function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldRes
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.MAGNETIC_FIELD, callback1);
-  sensor.on(sensor.SensorId.MAGNETIC_FIELD, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.MAGNETIC_FIELD, callback1);
-  // 取消注册SensorId.MAGNETIC_FIELD的所有回调
-  sensor.off(sensor.SensorId.MAGNETIC_FIELD);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -1856,8 +722,6 @@ function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, c
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -1874,66 +738,6 @@ function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, c
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.MagneticFieldResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.MAGNETIC_FIELD;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -1944,8 +748,6 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<Mag
 取消订阅未校准的磁场传感器数据。当不再需要接收未校准磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1962,34 +764,6 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<Mag
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback1);
-  sensor.on(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback1);
-  // 取消注册SensorId.MAGNETIC_FIELD_UNCALIBRATED的所有回调
-  sensor.off(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## off
 
@@ -2000,8 +774,6 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: Senso
 取消订阅未校准的磁场传感器数据。当不再需要接收未校准磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -2019,66 +791,6 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: Senso
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.MagneticFieldUncalibratedResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -2089,8 +801,6 @@ function off(type: SensorId.ORIENTATION, callback?: Callback<OrientationResponse
 取消订阅方向传感器数据。当不再需要接收方向传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2109,34 +819,6 @@ function off(type: SensorId.ORIENTATION, callback?: Callback<OrientationResponse
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.ORIENTATION, callback1);
-  sensor.on(sensor.SensorId.ORIENTATION, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.ORIENTATION, callback1);
-  // 取消注册SensorId.ORIENTATION的所有回调
-  sensor.off(sensor.SensorId.ORIENTATION);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## off
 
@@ -2147,8 +829,6 @@ function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, call
 取消订阅方向传感器数据。当不再需要接收方向传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -2168,66 +848,6 @@ function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, call
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.OrientationResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.ORIENTATION;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -2238,8 +858,6 @@ function off(type: SensorId.PEDOMETER, callback?: Callback<PedometerResponse>): 
 取消订阅计步器传感器数据。当不再需要接收计步器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -2258,34 +876,6 @@ function off(type: SensorId.PEDOMETER, callback?: Callback<PedometerResponse>): 
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.PEDOMETER, callback1);
-  sensor.on(sensor.SensorId.PEDOMETER, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.PEDOMETER, callback1);
-  // 取消注册SensorId.PEDOMETER的所有回调
-  sensor.off(sensor.SensorId.PEDOMETER);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -2298,8 +888,6 @@ function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callba
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -2319,66 +907,6 @@ function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callba
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.PedometerResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.PEDOMETER;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -2389,8 +917,6 @@ function off(type: SensorId.PEDOMETER_DETECTION, callback?: Callback<PedometerDe
 取消订阅计步检测器传感器数据。当不再需要接收计步检测器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -2409,34 +935,6 @@ function off(type: SensorId.PEDOMETER_DETECTION, callback?: Callback<PedometerDe
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.PEDOMETER_DETECTION, callback1);
-  sensor.on(sensor.SensorId.PEDOMETER_DETECTION, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.PEDOMETER_DETECTION, callback1);
-  // 取消注册SensorId.PEDOMETER_DETECTION的所有回调
-  sensor.off(sensor.SensorId.PEDOMETER_DETECTION);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -2449,8 +947,6 @@ function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoPar
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
 **系统能力：** SystemCapability.Sensors.Sensor
@@ -2470,66 +966,6 @@ function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoPar
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.PedometerDetectionResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.PEDOMETER_DETECTION;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -2540,8 +976,6 @@ function off(type: SensorId.PROXIMITY, callback?: Callback<ProximityResponse>): 
 取消订阅接近光传感器数据。当不再需要接收接近光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -2557,34 +991,6 @@ function off(type: SensorId.PROXIMITY, callback?: Callback<ProximityResponse>): 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.PROXIMITY, callback1);
-  sensor.on(sensor.SensorId.PROXIMITY, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.PROXIMITY, callback1);
-  // 取消注册SensorId.PROXIMITY的所有回调
-  sensor.off(sensor.SensorId.PROXIMITY);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -2597,8 +1003,6 @@ function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callba
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -2615,66 +1019,6 @@ function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callba
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.ProximityResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.PROXIMITY;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -2685,8 +1029,6 @@ function off(type: SensorId.ROTATION_VECTOR, callback?: Callback<RotationVectorR
 取消订阅旋转矢量传感器数据。当不再需要接收旋转矢量传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -2702,34 +1044,6 @@ function off(type: SensorId.ROTATION_VECTOR, callback?: Callback<RotationVectorR
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.ROTATION_VECTOR, callback1);
-  sensor.on(sensor.SensorId.ROTATION_VECTOR, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.ROTATION_VECTOR, callback1);
-  // 取消注册SensorId.ROTATION_VECTOR的所有回调
-  sensor.off(sensor.SensorId.ROTATION_VECTOR);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## off
@@ -2742,8 +1056,6 @@ function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, 
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -2760,66 +1072,6 @@ function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, 
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.RotationVectorResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.ROTATION_VECTOR;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -2830,8 +1082,6 @@ function off(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback<SignificantM
 取消订阅有效运动传感器数据。当不再需要接收有效运动传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -2848,34 +1098,6 @@ function off(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback<SignificantM
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.SIGNIFICANT_MOTION, callback1);
-  sensor.on(sensor.SensorId.SIGNIFICANT_MOTION, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.SIGNIFICANT_MOTION, callback1);
-  // 取消注册SensorId.SIGNIFICANT_MOTION的所有回调
-  sensor.off(sensor.SensorId.SIGNIFICANT_MOTION);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## off
 
@@ -2886,8 +1108,6 @@ function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoPara
 取消订阅有效运动传感器数据。当不再需要接收有效运动传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -2905,66 +1125,6 @@ function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoPara
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.SignificantMotionResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.SIGNIFICANT_MOTION;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -2975,8 +1135,6 @@ function off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionRes
 取消订阅佩戴检测传感器数据。当不再需要接收佩戴检测传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -2993,34 +1151,6 @@ function off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionRes
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.on(sensor.SensorId.WEAR_DETECTION, callback1);
-  sensor.on(sensor.SensorId.WEAR_DETECTION, callback2);
-  // 仅取消callback1的注册
-  sensor.off(sensor.SensorId.WEAR_DETECTION, callback1);
-  // 取消注册SensorId.WEAR_DETECTION的所有回调
-  sensor.off(sensor.SensorId.WEAR_DETECTION);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## off
 
@@ -3031,8 +1161,6 @@ function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, 
 取消订阅融合压力传感器数据。当不再需要接收融合压力传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -3051,66 +1179,6 @@ function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, 
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.FusionPressureResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.FUSION_PRESSURE;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -3121,8 +1189,6 @@ function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, c
 取消订阅佩戴检测传感器数据。当不再需要接收佩戴检测传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -3140,66 +1206,6 @@ function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, c
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// 传感器回调
-const sensorCallback = (response: sensor.WearDetectionResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// 传感器监听类型
-const sensorType = sensor.SensorId.WEAR_DETECTION;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    // 查询所有的传感器
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // 根据实际业务逻辑获取目标传感器。
-    const targetSensor = sensorList
-      // 按需过滤deviceId为1、sensorId为2的所有传感器。此处示例仅做展示，开发者需要自行调整筛选逻辑。
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // 可能存在的多个同类型传感器，选择sensorIndex为0的传感器。
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // 订阅传感器事件
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // 使用try catch对可能出现的异常进行捕获
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
-
 
 ## off
 
@@ -3215,8 +1221,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -3250,8 +1254,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback&lt;AccelerometerUncalibratedResponse&gt;)
@@ -3283,8 +1285,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
@@ -3313,8 +1313,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Cal
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -3345,8 +1343,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<Baro
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
@@ -3376,8 +1372,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<Gravit
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.GRAVITY, callback?: Callback&lt;GravityResponse&gt;)
@@ -3406,8 +1400,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<Gyro
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -3440,8 +1432,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: 
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback&lt;GyroscopeUncalibratedResponse&gt;)
@@ -3473,8 +1463,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallRespo
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.HALL, callback?: Callback&lt;HallResponse&gt;)
@@ -3503,8 +1491,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<Hea
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -3537,8 +1523,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<Humid
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.HUMIDITY, callback?: Callback&lt;HumidityResponse&gt;)
@@ -3567,8 +1551,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Cal
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -3601,8 +1583,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.MAGNETIC_FIELD, callback?: Callback&lt;MagneticFieldResponse&gt;)
@@ -3631,8 +1611,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callba
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -3663,8 +1641,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<Or
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
@@ -3693,8 +1669,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<Pedo
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -3727,8 +1701,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Cal
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.PEDOMETER_DETECTION, callback?: Callback&lt;PedometerDetectionResponse&gt;)
@@ -3760,8 +1732,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<Prox
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;)
@@ -3790,8 +1760,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callbac
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -3822,8 +1790,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Call
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback&lt;SignificantMotionResponse&gt;)
@@ -3853,8 +1819,6 @@ function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#off)(type: SensorId.WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
@@ -3879,8 +1843,6 @@ function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>)
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
@@ -3895,35 +1857,3 @@ function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>)
 | 错误码ID |
 | --- |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  const statusChangeCallback = (data: sensor.SensorStatusEvent) => {
-    console.info('sensorStatusChange : ' + JSON.stringify(data));
-  }
-  const statusChangeCallback2 = (data: sensor.SensorStatusEvent) => {
-    console.info('sensorStatusChange2 : ' + JSON.stringify(data));
-  }
-  // 注册两个设备上线消息监听回调
-  sensor.on('sensorStatusChange', statusChangeCallback);
-  sensor.on('sensorStatusChange', statusChangeCallback2);
-  
-  // 3秒后注销第一个监听
-  setTimeout(() => {
-    sensor.off('sensorStatusChange', statusChangeCallback);
-  }, 3000);
-  // 5秒后注销所有监听
-  setTimeout(() => {
-    sensor.off('sensorStatusChange');
-  }, 5000);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke on. Code: ${e.code}, message: ${e.message}`);
-}
-```

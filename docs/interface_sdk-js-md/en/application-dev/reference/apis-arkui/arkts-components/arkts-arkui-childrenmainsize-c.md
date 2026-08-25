@@ -4,8 +4,6 @@ Indicates children main size.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Creates an instance of ChildrenMainSize.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -35,24 +31,13 @@ Creates an instance of ChildrenMainSize.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [childDefaultSize](#childdefaultsize) | number | Yes |
+| [childDefaultSize](arkts-arkui-childrenmainsize-c.md) | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-@Builder
-function MyBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
-```
 
 ## splice
 
@@ -63,8 +48,6 @@ splice(start: number, deleteCount?: number, childrenSize?: Array<number>): void
 Changes children main size by removing or replacing existing elements and/or adding new elements in place.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,8 +79,6 @@ Updates main size for specified child.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -128,8 +109,6 @@ Get default size
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

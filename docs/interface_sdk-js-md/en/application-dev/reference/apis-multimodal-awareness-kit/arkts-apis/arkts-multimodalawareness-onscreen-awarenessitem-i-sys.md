@@ -1,11 +1,11 @@
 # AwarenessItem (System API)
 
 Provides page information, which includes:  
-* Basic page information, such as page content, links, and screenshots. * Page entity information, such as the title and body of a page article. * Page interaction information, such as clicks and scrolling.
+* Basic page information, such as page content, links, and screenshots.  
+* Page entity information, such as the title and body of a page article.  
+* Page interaction information, such as clicks and scrolling.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -14,7 +14,7 @@ Provides page information, which includes:
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## itemInfo
@@ -28,8 +28,6 @@ Entity information of the awareness result, including the content, links, screen
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

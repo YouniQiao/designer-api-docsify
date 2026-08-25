@@ -4,14 +4,12 @@ Defines the top and bottom padding of a **ChipGroup** component, which is used t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
+import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## bottom
@@ -22,11 +20,9 @@ bottom: Length
 
 Bottom padding. Percentage values are not supported.Default value: **14**Unit: vp If this parameter is set to **undefined**, the default value is used.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ top: Length
 
 Top padding. Percentage values are not supported.Default value: **14**Unit: vp If the value is **undefined**, the default value is used.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,14 +4,12 @@ UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主�
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
 ```
 
 ## getUIExtensionHostWindowProxy
@@ -23,8 +21,6 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 获取当前UIExtension对应的窗口对象，用于通知宽高、位置、避让信息等。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,102 +41,6 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { uiExtensionHost } from '@kit.ArkUI';
-
-const TAG: string = '[UIExtAbility]';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  onCreate() {
-    console.info(TAG, `UIExtAbility onCreate`);
-  }
-
-  onForeground() {
-    console.info(TAG, `UIExtAbility onForeground`);
-  }
-
-  onBackground() {
-    console.info(TAG, `UIExtAbility onBackground`);
-  }
-
-  onDestroy() {
-    console.info(TAG, `UIExtAbility onDestroy`);
-  }
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    let extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    let data: Record<string, UIExtensionContentSession | uiExtensionHost.UIExtensionHostWindowProxy> = {
-      'session': session,
-      'extensionHostWindow': extensionHostWindow
-    };
-    let storage: LocalStorage = new LocalStorage(data);
-
-    try {
-      session.loadContent('pages/Extension', storage);
-    } catch (err) {
-      console.error('loadContent err:' + JSON.stringify(err));
-    }
-  }
-
-  onSessionDestroy(session: UIExtensionContentSession) {
-    console.info(TAG, `UIExtAbility onSessionDestroy`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { uiExtensionHost, LocalStorage } from '@kit.ArkUI';
-
-const TAG: string = '[UIExtAbility]';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  onCreate() {
-    console.info(TAG, `UIExtAbility onCreate`);
-  }
-
-  onForeground() {
-    console.info(TAG, `UIExtAbility onForeground`);
-  }
-
-  onBackground() {
-    console.info(TAG, `UIExtAbility onBackground`);
-  }
-
-  onDestroy(): Promise<void> | undefined {
-    console.info(TAG, `UIExtAbility onDestroy`);
-    return undefined;
-  }
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    let extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    let data: Record<string, UIExtensionContentSession | uiExtensionHost.UIExtensionHostWindowProxy> = {
-      'session': session,
-      'extensionHostWindow': extensionHostWindow
-    };
-    let storage: LocalStorage = new LocalStorage(data);
-
-    try {
-      session.loadContent('pages/Extension', storage);
-    } catch (err) {
-      console.info('loadContent err:' + JSON.stringify(err));
-    }
-  }
-
-  onSessionDestroy(session: UIExtensionContentSession) {
-    console.info(TAG, `UIExtAbility onSessionDestroy`);
-  }
-}
-```
-
 ## sendData
 
 ```TypeScript
@@ -150,8 +50,6 @@ sendData(data: Record<string, Object>): void
 发送数据给UIExtensionComponent控件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -173,112 +71,6 @@ sendData(data: Record<string, Object>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-
-@Entry()
-@Component
-struct Index {
-  private storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          let data: Record<string, Object> = {
-            'number': 123456,
-            'message': 'test'
-          };
-
-          try {
-            this.session?.sendData(data);
-          } catch (err) {
-            console.error('sendData err:' + JSON.stringify(err));
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { RecordData } from '@kit.BasicServicesKit';
-import { Entry, Text, Column, Component, Button, RelativeContainer, LocalStorage } from '@kit.ArkUI';
-
-@Entry()
-@Component
-struct Index {
-  private storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          let data: Record<string, RecordData> = {
-            'number': 123456,
-            'message': 'test'
-          };
-
-          try {
-            this.session?.sendData(data);
-          } catch (err) {
-            console.error('sendData err:' + JSON.stringify(err));
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
-## sendData
-
-```TypeScript
-sendData(data: Record<string, RecordData>): void
-```
-
-发送数据给UIExtensionComponent控件。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [sendData](#senddata)
-
 ## setReceiveDataCallback
 
 ```TypeScript
@@ -288,8 +80,6 @@ setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 设置从UIExtensionComponent控件接收数据的回调方法。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -311,102 +101,6 @@ setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-
-@Entry()
-@Component
-struct Index {
-  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          this.session?.setReceiveDataCallback((data: Record<string, Object>) => {
-            console.info(`Succeeded in setReceiveDataCallback, data: ${JSON.stringify(data)}`);
-          });
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { Entry, RelativeContainer, Button, Component, LocalStorage } from '@kit.ArkUI';
-import { RecordData } from '@kit.BasicServicesKit';
-
-@Entry()
-@Component
-struct Index {
-  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          this.setReceiveDataCallbackFun();
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-
-  private setReceiveDataCallbackFun() {
-    this.session?.setReceiveDataCallback((data: Record<string, RecordData>) => {
-      console.info(`Succeeded in setReceiveDataCallback, data: ${JSON.stringify(data)}`);
-    });
-  }
-}
-```
-
-## setReceiveDataCallback
-
-```TypeScript
-setReceiveDataCallback(callback: OnReceiveDataCallback): void
-```
-
-设置从UIExtensionComponent控件接收数据的回调方法。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [setReceiveDataCallback](#setreceivedatacallback)
-
 ## setReceiveDataForResultCallback
 
 ```TypeScript
@@ -416,8 +110,6 @@ setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Reco
 设置从UIExtensionComponent控件接收数据带返回值的回调方法。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -439,104 +131,6 @@ setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Reco
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-
-@Entry()
-@Component
-struct Index {
-  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SetReceiveDataForResultCallback')
-        .onClick(() => {
-          this.session?.setReceiveDataForResultCallback((data: Record<string, Object>) => {
-            console.info(`Succeeded in setReceiveDataCallback, data: ${JSON.stringify(data)}`);
-            return data;
-          });
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-import { Entry, RelativeContainer, Button, Component, LocalStorage } from '@kit.ArkUI';
-import { RecordData } from '@kit.BasicServicesKit';
-
-@Entry()
-@Component
-struct Index {
-  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined =
-    this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    RelativeContainer() {
-      Button('SendData')
-        .onClick(() => {
-          this.setReceiveDataForResultCallbackFun();
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-
-  private setReceiveDataForResultCallbackFun() {
-    this.session?.setReceiveDataForResultCallback((data: Record<string, RecordData>) => {
-      console.info(`Succeeded in setReceiveDataCallback, data: ${JSON.stringify(data)}`);
-      return data;
-    });
-  }
-}
-```
-
-## setReceiveDataForResultCallback
-
-```TypeScript
-setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void
-```
-
-设置从UIExtensionComponent控件接收数据带返回值的回调方法。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [setReceiveDataForResultCallback](#setreceivedataforresultcallback)
-
 ## setWindowBackgroundColor
 
 ```TypeScript
@@ -546,8 +140,6 @@ setWindowBackgroundColor(color: string): void
 设置UIExtensionAbility加载界面的背景色。该接口需要在 [loadContent()](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadcontent)调用生效后使用。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -569,68 +161,6 @@ setWindowBackgroundColor(color: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let storage: LocalStorage = new LocalStorage();
-    storage.setOrCreate('session', session);
-
-    try {
-      session.loadContent('pages/Extension', storage);
-    } catch (err) {
-      console.error('loadContent err:' + JSON.stringify(err));
-    }
-
-    try {
-      session.setWindowBackgroundColor('#00FF00');
-    } catch (err) {
-      console.error('setWindowBackgroundColor err:' + JSON.stringify(err));
-    }
-  }
-
-  // ...
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
-import { LocalStorage } from '@kit.ArkUI';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let storage: LocalStorage = new LocalStorage();
-    storage.setOrCreate('session', session);
-
-    try {
-      session.loadContent('pages/Extension', storage);
-    } catch (err) {
-      console.info('loadContent err:' + JSON.stringify(err));
-    }
-
-    try {
-      session.setWindowBackgroundColor('#00FF00');
-    } catch (err) {
-      console.info('setWindowBackgroundColor err:' + JSON.stringify(err));
-    }
-  }
-
-  // ...
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -645,8 +175,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -683,80 +211,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000053](../errorcode-ability.md#16000053-非顶层ability) |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-
-**示例**
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    session.startAbility(want, (err: BusinessError | null) => {
-      if (err) {
-        console.error(`Failed to startAbility, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbility`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbility(want, startOptions, (err: BusinessError | null) => {
-      if (err) {
-        console.error(`Failed to startAbility, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbility`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbility(want, startOptions)
-      .then(() => {
-        console.info(`Succeeded in startAbility`);
-      })
-      .catch((error: Error) => {
-        let err = error as BusinessError;
-        console.error(`Failed to startAbility, code: ${err.code}, msg: ${err.message}`);
-      });
-  }
-
-  // ...
-}
-```
 
 ## startAbility
 
@@ -773,8 +227,6 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -809,10 +261,6 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | [16000053](../errorcode-ability.md#16000053-非顶层ability) |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-
-**示例**
-
-参见 [startAbility](#startability)
 
 ## startAbility
 
@@ -829,8 +277,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -872,10 +318,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 | [16000053](../errorcode-ability.md#16000053-非顶层ability) |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-
-**示例**
-
-参见 [startAbility](#startability)
 
 ## startAbilityAsCaller
 
@@ -887,8 +329,6 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -925,95 +365,6 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    session.startAbilityAsCaller(localWant, (err: BusinessError | null) => {
-      if (err) {
-        console.error(`Failed to startAbilityAsCaller, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbilityAsCaller`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbilityAsCaller(localWant, startOptions, (err: BusinessError | null) => {
-      if (err) {
-        console.error(`Failed to startAbilityAsCaller, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbilityAsCaller`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbilityAsCaller(localWant, startOptions)
-      .then(() => {
-        console.info(`Succeeded in startAbilityAsCaller`);
-      })
-      .catch((error: Error) => {
-        let err = error as BusinessError;
-        console.error(`Failed to startAbilityAsCaller, code: ${err.code}, msg: ${err.message}`);
-      });
-  }
-
-  // ...
-}
-```
-
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -1023,8 +374,6 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个 Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1061,10 +410,6 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-参见 [startAbilityAsCaller](#startabilityascaller)
-
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -1074,8 +419,6 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个 Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1119,10 +462,6 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-参见 [startAbilityAsCaller](#startabilityascaller)
-
 ## startAbilityForResult
 
 ```TypeScript
@@ -1130,7 +469,11 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 ```
 
 启动一个Ability，在Ability终止后返回结果给调用方。使用callback异步回调。 Ability的终止方式包括以下几种情况：  
-- 正常情况下可通过调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止并且返回结果给调用方。 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
+- 正常情况下可通过调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止并且返回结果给调用方。  
+- 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
+- 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
 
 > **说明：**&gt;
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -1138,8 +481,6 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1177,81 +518,6 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    session.startAbilityForResult(want, (err: BusinessError | null, data: common.AbilityResult | undefined) => {
-      if (err) {
-        console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
-        return;
-      }
-      console.info(`Succeeded in startAbilityForResult, data: ${JSON.stringify(data)}`);
-    })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbilityForResult(want, startOptions,
-      (err: BusinessError | null, data: common.AbilityResult | undefined) => {
-        if (err) {
-          console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
-          return;
-        }
-        console.info(`Succeeded in startAbilityForResult, data: ${JSON.stringify(data)}`);
-      })
-  }
-
-  // ...
-}
-```
-
-```TypeScript
-import { UIExtensionContentSession, UIExtensionAbility, Want, StartOptions, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class UIExtAbility extends UIExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let startOptions: StartOptions = {
-      displayId: 0
-    };
-
-    session.startAbilityForResult(want, startOptions)
-      .then((data: common.AbilityResult) => {
-        console.info(`Succeeded in startAbilityForResult, data: ${JSON.stringify(data)}`);
-      })
-      .catch((error: Error) => {
-        let err = error as BusinessError;
-        console.error(`Failed to startAbilityForResult, code: ${err.code}, msg: ${err.message}`);
-      });
-  }
-
-  // ...
-}
-```
-
 ## startAbilityForResult
 
 ```TypeScript
@@ -1259,7 +525,11 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 ```
 
 启动一个Ability，在Ability终止后返回结果给调用方。使用callback异步回调。 Ability的终止方式包括以下几种情况：  
-- 正常情况下可通过调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止并且返回结果给调用方。 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
+- 正常情况下可通过调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止并且返回结果给调用方。  
+- 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
+- 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
 
 > **说明：**&gt;
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -1267,8 +537,6 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1305,10 +573,6 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-参见 [startAbilityForResult](#startabilityforresult)
-
 ## startAbilityForResult
 
 ```TypeScript
@@ -1316,7 +580,11 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 ```
 
 启动一个Ability，在Ability终止后返回结果给调用方。使用Promise异步回调。 Ability的终止方式包括以下几种情况：  
-- 正常情况下可通过调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止并且返回结果给调用方。 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
+- 正常情况下可通过调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止并且返回结果给调用方。  
+- 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
+- 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) 接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
 
 > **说明：**&gt;
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -1324,8 +592,6 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1368,7 +634,3 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 | [16000053](../errorcode-ability.md#16000053-非顶层ability) |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-
-**示例**
-
-参见 [startAbilityForResult](#startabilityforresult)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## addNetFirewallRule
@@ -45,8 +45,6 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<number>
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **需要权限：** ohos.permission.MANAGE_NET_FIREWALL
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
@@ -79,111 +77,3 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<number>
 | [29400004](../errorcode-net-netfirewall.md#29400004-防火墙规则中的域名规则数量超过最大值) |
 | [29400005](../errorcode-net-netfirewall.md#29400005-模糊域名规则数量超过最大值) |
 | [29400007](../errorcode-net-netfirewall.md#29400007-dns规则重复) |
-
-**示例**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ipRule: netFirewall.NetFirewallRule = {
-  name: "rule1",
-  description: "rule1 description",
-  direction: netFirewall.NetFirewallRuleDirection.RULE_IN,
-  action:netFirewall.FirewallRuleAction.RULE_DENY,
-  type: netFirewall.NetFirewallRuleType.RULE_IP,
-  isEnabled: true,
-  appUid: 20001,
-  localIps: [
-    {
-      family: 1,
-      type: 1,
-      address: "10.10.1.1",
-      mask: 32
-    },{
-      family: 1,
-      type: 2,
-      startIp: "10.20.1.1",
-      endIp: "10.20.1.10"
-    }],
-  remoteIps:[
-    {
-      family: 1,
-      type: 1,
-      address: "20.10.1.1",
-      mask: 32
-    },{
-      family: 1,
-      type: 2,
-      startIp: "20.20.1.1",
-      endIp: "20.20.1.10"
-    }],
-  protocol: 6,
-  localPorts: [
-    {
-      startPort: 1000,
-      endPort: 1000
-    },{
-      startPort: 2000,
-      endPort: 2001
-    }],
-  remotePorts: [
-    {
-      startPort: 443,
-      endPort: 443
-    }],
-  userId: 100,
-  interface:"wlan0" // 从API版本26.0.0开始支持
-};
-netFirewall.addNetFirewallRule(ipRule).then((result: number) => {
-  console.info('rule Id: ', result);
-}, (reason: BusinessError) => {
-  console.error('add firewall rule failed: ', JSON.stringify(reason));
-});
-
-let domainRule: netFirewall.NetFirewallRule = {
-  name: "rule2",
-  description: "rule2 description",
-  direction: netFirewall.NetFirewallRuleDirection.RULE_IN,
-  action:netFirewall.FirewallRuleAction.RULE_DENY,
-  type: netFirewall.NetFirewallRuleType.RULE_DOMAIN,
-  isEnabled: true,
-  appUid: 20002,
-  domains: [
-    {
-      isWildcard: false,
-      domain: "www.example.cn"
-    },{
-      isWildcard: true,
-      domain: "*.example.cn"
-    }],
-  userId: 100,
-  interface:"wlan0" // 从API版本26.0.0开始支持
-};
-netFirewall.addNetFirewallRule(domainRule).then((result: number) => {
-  console.info('rule Id: ', result);
-}, (reason: BusinessError) => {
-  console.error('add firewall rule failed: ', JSON.stringify(reason));
-});
-
-let dnsRule: netFirewall.NetFirewallRule = {
-  name: "rule3",
-  description: "rule3 description",
-  direction: netFirewall.NetFirewallRuleDirection.RULE_IN,
-  action:netFirewall.FirewallRuleAction.RULE_DENY,
-  type: netFirewall.NetFirewallRuleType.RULE_DNS,
-  isEnabled: true,
-  appUid: 20003,
-  dns:{
-   primaryDns: "4.4.4.4",
-   standbyDns: "8.8.8.8",
-  },
-  userId: 100,
-  interface:"wlan0" // 从API版本26.0.0开始支持
-};
-netFirewall.addNetFirewallRule(dnsRule).then((result: number) => {
-  console.info('rule Id: ', result);
-}, (reason: BusinessError) => {
-  console.error('add firewall rule failed: ', JSON.stringify(reason));
-});
-```

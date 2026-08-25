@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
+import { deviceInfo } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisplayVersion
@@ -15,8 +15,6 @@ function getDisplayVersion(admin: Want, callback: AsyncCallback<string>): void
 获取设备版本号，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -47,45 +45,6 @@ function getDisplayVersion(admin: Want, callback: AsyncCallback<string>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-deviceInfo.getDisplayVersion(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get display version. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting display version, result : ${result}`);
-});
-```
-
-```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-deviceInfo.getDisplayVersion(wantTemp).then((result) => {
-  console.info(`Succeeded in getting display version, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get display version. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getDisplayVersion
 
@@ -96,8 +55,6 @@ function getDisplayVersion(admin: Want): Promise<string>
 获取设备版本号，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -132,7 +89,3 @@ function getDisplayVersion(admin: Want): Promise<string>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getDisplayVersion](#getdisplayversion)

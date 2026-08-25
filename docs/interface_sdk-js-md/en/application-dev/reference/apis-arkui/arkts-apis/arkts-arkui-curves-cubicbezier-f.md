@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## cubicBezier
@@ -15,8 +15,6 @@ function cubicBezier(x1: number, y1: number, x2: number, y2: number): string
 Creates a cubic Bézier curve. The curve values must be between 0 and 1.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

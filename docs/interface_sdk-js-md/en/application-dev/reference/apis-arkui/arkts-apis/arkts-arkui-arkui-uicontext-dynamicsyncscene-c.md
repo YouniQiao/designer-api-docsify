@@ -4,17 +4,15 @@ Represents a dynamic synchronization scene.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## getFrameRateRange
@@ -26,8 +24,6 @@ getFrameRateRange(): ExpectedFrameRateRange
 Gets the FrameRateRange of the DynamicSyncScene.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,58 +37,6 @@ Gets the FrameRateRange of the DynamicSyncScene.
 | --- |
 | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) |
 
-**Examples**
-
-```TypeScript
-import { SwiperDynamicSyncSceneType, SwiperDynamicSyncScene } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Frame {
-  @State ANIMATION: ExpectedFrameRateRange = { min: 0, max: 120, expected: 90 };
-  @State GESTURE: ExpectedFrameRateRange = { min: 0, max: 120, expected: 30 };
-  private scenes: SwiperDynamicSyncScene[] = [];
-
-  build() {
-    Column() {
-      Text("Animation" + JSON.stringify(this.ANIMATION))
-      Text("Gesture" + JSON.stringify(this.GESTURE))
-      Row(){
-        Swiper() {
-          Text("one")
-          Text("two")
-          Text("three")
-        }
-        .width('100%')
-        .height('300vp')
-        .id("dynamicSwiper")
-        .backgroundColor(Color.Blue)
-        .autoPlay(true)
-        .onAppear(() => {
-          this.scenes = this.getUIContext().requireDynamicSyncScene("dynamicSwiper") as SwiperDynamicSyncScene[];
-        })
-      }
-
-      Button("set frame")
-        .onClick(() => {
-          this.scenes.forEach((scenes: SwiperDynamicSyncScene) => {
-
-            if (scenes.type == SwiperDynamicSyncSceneType.ANIMATION) {
-              scenes.setFrameRateRange(this.ANIMATION);
-              scenes.getFrameRateRange();
-            }
-
-            if (scenes.type == SwiperDynamicSyncSceneType.GESTURE) {
-              scenes.setFrameRateRange(this.GESTURE);
-              scenes.getFrameRateRange();
-            }
-          });
-        })
-      }
-  }
-}
-```
-
 ## setFrameRateRange
 
 ```TypeScript
@@ -102,8 +46,6 @@ setFrameRateRange(range: ExpectedFrameRateRange): void
 Sets the FrameRateRange of the DynamicSyncScene.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,53 +58,3 @@ Sets the FrameRateRange of the DynamicSyncScene.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | range | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { SwiperDynamicSyncSceneType, SwiperDynamicSyncScene } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Frame {
-  @State ANIMATION: ExpectedFrameRateRange = { min: 0, max: 120, expected: 90 };
-  @State GESTURE: ExpectedFrameRateRange = { min: 0, max: 120, expected: 30};
-  private scenes: SwiperDynamicSyncScene[] = [];
-
-  build() {
-    Column() {
-      Text("Animation" + JSON.stringify(this.ANIMATION))
-      Text("Gesture" + JSON.stringify(this.GESTURE))
-      Row(){
-        Swiper() {
-          Text("one")
-          Text("two")
-          Text("three")
-        }
-        .width('100%')
-        .height('300vp')
-        .id("dynamicSwiper")
-        .backgroundColor(Color.Blue)
-        .autoPlay(true)
-        .onAppear(()=>{
-          this.scenes = this.getUIContext().requireDynamicSyncScene("dynamicSwiper") as SwiperDynamicSyncScene[];
-        })
-      }
-
-      Button("set frame")
-        .onClick(() => {
-          this.scenes.forEach((scenes: SwiperDynamicSyncScene) => {
-
-            if (scenes.type == SwiperDynamicSyncSceneType.ANIMATION) {
-              scenes.setFrameRateRange(this.ANIMATION);
-            }
-
-            if (scenes.type == SwiperDynamicSyncSceneType.GESTURE) {
-              scenes.setFrameRateRange(this.GESTURE);
-            }
-          });
-        })
-    }
-  }
-}
-```

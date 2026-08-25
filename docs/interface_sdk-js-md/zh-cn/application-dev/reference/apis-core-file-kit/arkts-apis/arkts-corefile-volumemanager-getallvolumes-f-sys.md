@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getAllVolumes
@@ -15,8 +15,6 @@ function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void
 获取当前外置存储中所有卷设备信息，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -40,60 +38,6 @@ function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void
 | 13600001 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  // 获取到所有卷设备信息
-}).catch((error: BusinessError) => {
-  console.error(`Failed to getAllVolumes. Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  // 获取到所有卷设备信息
-}).catch((error: BusinessError): void => {
-  console.error(`Failed to getAllVolumes. Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes((error: BusinessError, volumes: Array<volumeManager.Volume>) => {
-  if (error) {
-    console.error(`getAllVolumes failed, code is: ${error.code}, message is: ${error.message}`);
-    return;
-  }
-  // 获取到所有卷设备信息
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes((error: BusinessError | null, volumes: Array<volumeManager.Volume> | undefined) => {
-  if (error) {
-    console.error(`getAllVolumes failed, code is: ${error.code}, message is: ${error.message}`);
-    return;
-  }
-  // 获取到所有卷设备信息
-});
-```
-
 
 ## getAllVolumes
 
@@ -104,8 +48,6 @@ function getAllVolumes(): Promise<Array<Volume>>
 获取当前外置存储中所有卷设备信息，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -128,7 +70,3 @@ function getAllVolumes(): Promise<Array<Volume>>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13600001 |
 | 13900042 |
-
-**示例**
-
-参见 [getAllVolumes](#getallvolumes)

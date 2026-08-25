@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## getStateByUrl
@@ -24,8 +24,6 @@ function getStateByUrl(url: string): Array<RouterState>
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **废弃版本：** 18
 
@@ -48,17 +46,3 @@ function getStateByUrl(url: string): Array<RouterState>
 | 类型 |
 | --- |
 | Array & lt;RouterState & gt; |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-let options: Array<router.RouterState> = router.getStateByUrl('pages/index');
-for (let i: number = 0; i < options.length; i++) {
-  console.info('index = ' + options[i].index);
-  console.info('name = ' + options[i].name);
-  console.info('path = ' + options[i].path);
-  console.info('params = ' + options[i].params);
-}
-```

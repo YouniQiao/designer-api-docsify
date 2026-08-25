@@ -5,14 +5,12 @@
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isAutoDeviceSwitchSupported
@@ -24,8 +22,6 @@ isAutoDeviceSwitchSupported(): boolean
 Checks whether the device supports automatic camera switch.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,15 +38,3 @@ Checks whether the device supports automatic camera switch.
 | Error Code ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-
-**Examples**
-
-```TypeScript
-// Check whether the foldable device supports automatic camera switch.
-// If the sample code returns **true**, you can continue to use enableAutoDeviceSwitch to enable automatic camera switching.
-function isAutoDeviceSwitchSupported(session: camera.PhotoSession): boolean {
-  let isSupported = false;
-  isSupported = session.isAutoDeviceSwitchSupported();
-  return isSupported;
-}
-```

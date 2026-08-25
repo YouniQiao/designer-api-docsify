@@ -4,8 +4,6 @@ DataResubmissionHandler是Web组件中处理网页表单数据重新提交的处
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -23,61 +21,9 @@ cancel(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onDataResubmitted((event) => {
-          console.info('onDataResubmitted');
-          event.handler.cancel();
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Column, Component, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onDataResubmitted((event) => {
-          console.info('onDataResubmitted');
-          event.handler.cancel();
-        })
-    }
-  }
-}
-```
 
 ## constructor
 
@@ -88,8 +34,6 @@ constructor()
 DataResubmissionHandler的构造函数。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -105,58 +49,6 @@ resend(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onDataResubmitted((event) => {
-          console.info('onDataResubmitted');
-          event.handler.resend();
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Column, Component, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onDataResubmitted((event) => {
-          console.info('onDataResubmitted');
-          event.handler.resend();
-        })
-    }
-  }
-}
-```

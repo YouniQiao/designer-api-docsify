@@ -4,8 +4,6 @@ Statistics Related to AI Image Generation Tasks.@interface TaskStatistic
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,13 +11,13 @@ Statistics Related to AI Image Generation Tasks.@interface TaskStatistic
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## generationTime
 
 ```TypeScript
-generationTime: double
+generationTime: number
 ```
 
 Time taken for AI image generation task in seconds.
@@ -27,8 +25,6 @@ Time taken for AI image generation task in seconds.
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,7 +35,7 @@ Time taken for AI image generation task in seconds.
 ## imageCount
 
 ```TypeScript
-imageCount: int
+imageCount: number
 ```
 
 Number of images used for AI image generation tasks.
@@ -47,8 +43,6 @@ Number of images used for AI image generation tasks.
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +62,6 @@ Whether the image AI generation task is a sticker generation task.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -87,8 +79,6 @@ The style used in AI image generation tasks.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

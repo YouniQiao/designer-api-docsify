@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## axis
@@ -16,13 +14,11 @@ axis?: Axis
 
 定义懒加载布局的主轴方向。
 
-**类型：** [Axis](arkts-arkui-enums-axis-e.md)
+**类型：** Axis
 
 **默认值：** Axis.Vertical
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

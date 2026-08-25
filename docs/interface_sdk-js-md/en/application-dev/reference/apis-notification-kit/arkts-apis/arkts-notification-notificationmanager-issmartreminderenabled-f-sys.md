@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isSmartReminderEnabled
@@ -15,8 +15,6 @@ function isSmartReminderEnabled(deviceType: string): Promise<boolean>
 Obtains a smart reminder for cross-device collaboration. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -50,16 +48,3 @@ Obtains a smart reminder for cross-device collaboration. This API uses a promise
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceType: string = "phone";
-notificationManager.isSmartReminderEnabled(deviceType).then((data: boolean) => {
-    console.info(`isSmartReminderEnabled success, data:${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`isSmartReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## off('colorChange')
@@ -16,8 +16,6 @@ Unregisters a listener for wallpaper color changes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
@@ -28,30 +26,3 @@ Unregisters a listener for wallpaper color changes.
 | --- | --- | --- |
 | type | 'colorChange' | Yes |
 | callback | (colors: Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;, wallpaperType: WallpaperType) =&gt; void | No |
-
-**Examples**
-
-```TypeScript
-let listener = (colors: Array<wallpaper.RgbaColor>, wallpaperType: wallpaper.WallpaperType): void => {
-    console.info(`wallpaper color changed.`);
-};
-try {
-    wallpaper.on('colorChange', listener);
-} catch (error) {
-    console.error(`failed to on because: ${JSON.stringify(error)}`);
-}
-
-try {
-    // Unsubscribe from the listener.
-    wallpaper.off('colorChange', listener);
-} catch (error) {
-    console.error(`failed to off because: ${JSON.stringify(error)}`);
-}
-
-try {
-    // Unsubscribe from all subscriptions of the colorChange type.
-    wallpaper.off('colorChange');
-} catch (error) {
-    console.error(`failed to off because: ${JSON.stringify(error)}`);
-}
-```

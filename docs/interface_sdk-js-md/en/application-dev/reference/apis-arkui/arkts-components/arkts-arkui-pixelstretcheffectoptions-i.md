@@ -4,8 +4,6 @@ Describes the pixel stretch effect options.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,13 +19,11 @@ bottom?: Length
 
 Length by which a pixel is stretched towards the right edge of the image.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,13 +39,11 @@ left?: Length
 
 Length by which a pixel is stretched towards the left edge of the image.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,13 +59,11 @@ right?: Length
 
 Length by which a pixel is stretched towards the right edge of the image.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,13 +79,11 @@ top?: Length
 
 Length by which a pixel is stretched towards the top edge of the image.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

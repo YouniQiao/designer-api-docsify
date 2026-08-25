@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## init
@@ -15,8 +15,6 @@ function init(): Promise<void>
 Initializes the scan service. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -33,16 +31,3 @@ Initializes the scan service. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-scan.init().then(() => {
-    console.info('scan init success');
-}).catch((error: BusinessError) => {
-    console.error('scan init failed: ' + JSON.stringify(error));
-})
-```

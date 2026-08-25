@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendEnvelopeCmd
 
 ```TypeScript
-function sendEnvelopeCmd(slotId: int, cmd: string, callback: AsyncCallback<void>): void
+function sendEnvelopeCmd(slotId: number, cmd: string, callback: AsyncCallback<void>): void
 ```
 
 Send envelope command to SIM card.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Send envelope command to SIM card.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | cmd | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -45,40 +43,16 @@ Send envelope command to SIM card.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.sendEnvelopeCmd(0, "ls", (err: BusinessError) => {
-    console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.sendEnvelopeCmd(0, "ls").then(() => {
-    console.info(`sendEnvelopeCmd success.`);
-}).catch((err: BusinessError) => {
-    console.error(`sendEnvelopeCmd failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## sendEnvelopeCmd
 
 ```TypeScript
-function sendEnvelopeCmd(slotId: int, cmd: string): Promise<void>
+function sendEnvelopeCmd(slotId: number, cmd: string): Promise<void>
 ```
 
 Send envelope command to SIM card.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -90,7 +64,7 @@ Send envelope command to SIM card.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | cmd | string | Yes |
 
 **Return value:**
@@ -111,7 +85,3 @@ Send envelope command to SIM card.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [sendEnvelopeCmd](#sendenvelopecmd)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isSupportDoNotDisturbMode
@@ -15,8 +15,6 @@ function isSupportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 Checks whether DND mode is supported. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,32 +40,6 @@ Checks whether DND mode is supported. This API uses an asynchronous callback to 
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isSupportDoNotDisturbModeCallback = (err: BusinessError, data: boolean): void => {
-    if (err) {
-        console.error(`isSupportDoNotDisturbMode failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
-    }
-}
-
-notificationManager.isSupportDoNotDisturbMode(isSupportDoNotDisturbModeCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isSupportDoNotDisturbMode().then((data: boolean) => {
-    console.info(`isSupportDoNotDisturbMode success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isSupportDoNotDisturbMode failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## isSupportDoNotDisturbMode
 
@@ -78,8 +50,6 @@ function isSupportDoNotDisturbMode(): Promise<boolean>
 Checks whether DND mode is supported. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -103,7 +73,3 @@ Checks whether DND mode is supported. This API uses a promise to return the resu
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-See [isSupportDoNotDisturbMode](#issupportdonotdisturbmode)

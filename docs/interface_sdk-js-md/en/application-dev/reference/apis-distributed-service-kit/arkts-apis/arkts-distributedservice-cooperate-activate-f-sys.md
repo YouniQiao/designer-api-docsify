@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## activate
@@ -15,8 +15,6 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 Starts screen hopping. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -42,42 +40,6 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [20900001](../errorcode-devicestatus.md#20900001-input-device-operation-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetNetworkId = "networkId";
-let inputDeviceId = 0;
-try {
-  cooperate.activate(targetNetworkId, inputDeviceId, (error: BusinessError) => {
-    if (error) {
-      console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Start Keyboard mouse crossing success.`);
-  });
-} catch (error) {
-  console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetNetworkId = "networkId";
-let inputDeviceId = 0;
-try {
-  cooperate.activate(targetNetworkId, inputDeviceId).then(() => {
-    console.info(`Start Keyboard mouse crossing success.`);
-  }, (error: BusinessError) => {
-    console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## activate
 
@@ -88,8 +50,6 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 Starts screen hopping. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -119,7 +79,3 @@ Starts screen hopping. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [20900001](../errorcode-devicestatus.md#20900001-input-device-operation-failed) |
-
-**Examples**
-
-See [activate](#activate)

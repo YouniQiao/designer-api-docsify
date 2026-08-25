@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## onPairingStateChange
@@ -15,8 +15,6 @@ function onPairingStateChange(callback: Callback<PairingStateParam>): void
 Subscribes to pairing status change events. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

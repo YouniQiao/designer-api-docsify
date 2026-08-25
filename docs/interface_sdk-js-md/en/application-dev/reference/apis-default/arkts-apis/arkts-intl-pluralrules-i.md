@@ -1,7 +1,5 @@
 # PluralRules
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -13,8 +11,6 @@
 resolvedOptions(): ResolvedPluralRulesOptions
 ```
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -24,8 +20,6 @@ resolvedOptions(): ResolvedPluralRulesOptions
 ```TypeScript
 select(n: number): LDMLPluralRule
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

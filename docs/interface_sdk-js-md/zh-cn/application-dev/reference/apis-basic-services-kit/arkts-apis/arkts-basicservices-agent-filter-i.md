@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## action
@@ -21,45 +19,41 @@ action?: Action
 ```
 
 任务操作选项。  
-- UPLOAD表示上传任务。 - DOWNLOAD表示下载任务。 - 如果未填写，则查询所有任务。
+- UPLOAD表示上传任务。  
+- DOWNLOAD表示下载任务。  
+- 如果未填写，则查询所有任务。
 
 **类型：** Action
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## after
 
 ```TypeScript
-after?: long
+after?: number
 ```
 
 开始的Unix时间戳（毫秒），默认值为调用时刻减24小时。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## before
 
 ```TypeScript
-before?: long
+before?: number
 ```
 
 结束的Unix时间戳（毫秒），默认为调用时刻。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -70,13 +64,13 @@ mode?: Mode
 ```
 
 任务模式。  
-- FOREGROUND表示前台任务。 - BACKGROUND表示后台任务。 - 如果未填写，则查询所有任务。
+- FOREGROUND表示前台任务。  
+- BACKGROUND表示后台任务。  
+- 如果未填写，则查询所有任务。
 
 **类型：** [Mode](arkts-basicservices-agent-mode-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -91,7 +85,5 @@ state?: State
 **类型：** State
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent

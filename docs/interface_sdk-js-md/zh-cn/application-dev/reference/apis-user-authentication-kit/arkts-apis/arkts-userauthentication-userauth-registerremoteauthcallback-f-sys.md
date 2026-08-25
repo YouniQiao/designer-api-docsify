@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## registerRemoteAuthCallback
@@ -15,8 +15,6 @@ function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void
 注册远程认证回调。该接口用于在远程认证场景下注册回调接口，注册后系统可通过回调获取远程认证所需的页面参数，并在认证完成后接收认证结果。不允许重复注册，在不使用时应调用 [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md)取消注册，避免回调无法释放。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -39,32 +37,3 @@ function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let remoteAuthCallback: userAuth.IRemoteAuthCallback = {
-  onGetRemoteAuthWidgetParam(challenge: Uint8Array): userAuth.WidgetParam {
-    console.info('Received challenge for remote auth, length: ' + challenge.length);
-    return {
-      title: 'Remote Authentication',
-      navigationButtonText: 'Cancel'
-    } as userAuth.WidgetParam;
-  },
-  onRemoteAuthResult(challenge: Uint8Array, result: userAuth.UserAuthResult): void {
-    console.info('remote auth result, result: ' + result.result + ', authType: ' + result.authType);
-  }
-};
-
-try {
-  userAuth.unregisterRemoteAuthCallback();
-  userAuth.registerRemoteAuthCallback(remoteAuthCallback);
-  console.info('Remote auth callback registered successfully');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to register remote auth callback. Code: ${err.code}, message: ${err.message}`);
-}
-```

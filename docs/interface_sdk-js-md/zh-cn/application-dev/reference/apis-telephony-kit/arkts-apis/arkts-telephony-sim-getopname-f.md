@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getOpName
 
 ```TypeScript
-function getOpName(slotId: int, callback: AsyncCallback<string>): void
+function getOpName(slotId: number, callback: AsyncCallback<string>): void
 ```
 
 获取指定卡槽中SIM卡的OpName。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,7 +22,7 @@ function getOpName(slotId: int, callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **错误码：**
@@ -38,48 +36,16 @@ function getOpName(slotId: int, callback: AsyncCallback<string>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-try {
-    sim.getOpName(0, (err: BusinessError, data: string) => {
-    if (err) {
-      console.error("getOpName failed, err: " + JSON.stringify(err));
-    } else {
-      console.info('getOpName successfully, data: ' + JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  console.error("getOpName err: " + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getOpName(0).then((data: string) => {
-    console.info(`getOpName success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getOpName failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getOpName
 
 ```TypeScript
-function getOpName(slotId: int): Promise<string>
+function getOpName(slotId: number): Promise<string>
 ```
 
 获取指定卡槽中SIM卡的OpName。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -87,7 +53,7 @@ function getOpName(slotId: int): Promise<string>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -105,7 +71,3 @@ function getOpName(slotId: int): Promise<string>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getOpName](#getopname)

@@ -1,10 +1,9 @@
 # ImmersiveMode
 
-枚举，输入法沉浸模式。 <br> | 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | NONE_IMMERSIVE | 0 | 不使用沉浸模式。 | | IMMERSIVE | 1 | 沉浸模式，由输入法应用确定沉浸模式类型。 | | LIGHT_IMMERSIVE | 2 | 浅色沉浸模式。 | | DARK_IMMERSIVE | 3 | 深色沉浸模式。 |
+枚举，输入法沉浸模式。   
+| 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | [NONE_IMMERSIVE](#none_immersive) | 0 | 不使用沉浸模式。 | | [IMMERSIVE](#immersive) | 1 | 沉浸模式，由输入法应用确定沉浸模式类型。 | | [LIGHT_IMMERSIVE](#light_immersive) | 2 | 浅色沉浸模式。 | | [DARK_IMMERSIVE](#dark_immersive) | 3 |
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -18,8 +17,6 @@ NONE_IMMERSIVE = 0
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## IMMERSIVE
@@ -31,8 +28,6 @@ IMMERSIVE
 沉浸模式，由输入法应用确定沉浸模式类型。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -46,8 +41,6 @@ LIGHT_IMMERSIVE
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## DARK_IMMERSIVE
@@ -59,7 +52,5 @@ DARK_IMMERSIVE
 深色沉浸模式。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

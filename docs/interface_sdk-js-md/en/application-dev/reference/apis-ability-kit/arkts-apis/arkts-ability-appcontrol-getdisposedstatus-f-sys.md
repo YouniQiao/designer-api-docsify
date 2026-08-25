@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDisposedStatus
@@ -15,8 +15,6 @@ function getDisposedStatus(appId: string, callback: AsyncCallback<Want>): void
 Obtains the disposed status of an application. This API uses an asynchronous callback to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
@@ -41,49 +39,6 @@ Obtains the disposed status of an application. This API uses an asynchronous cal
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
 
-**Examples**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.getDisposedStatus(appId)
-    .then((data) => {
-      console.info('getDisposedStatus success. DisposedStatus: ' + JSON.stringify(data));
-    }).catch((error: BusinessError) => {
-    let message = (error as BusinessError).message;
-    console.error('getDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('getDisposedStatus failed ' + message);
-}
-```
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.getDisposedStatus(appId, (error, data) => {
-    if (error) {
-      let message = (error as BusinessError).message;
-      console.error('getDisposedStatus failed ' + message);
-      return;
-    }
-    console.info('getDisposedStatus success. DisposedStatus: ' + JSON.stringify(data));
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('getDisposedStatus failed ' + message);
-}
-```
-
 
 ## getDisposedStatus
 
@@ -94,8 +49,6 @@ function getDisposedStatus(appId: string): Promise<Want>
 Obtains the disposed status of an application. This API uses a promise to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
@@ -124,7 +77,3 @@ Obtains the disposed status of an application. This API uses a promise to return
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
-
-**Examples**
-
-See [getDisposedStatus](#getdisposedstatus)

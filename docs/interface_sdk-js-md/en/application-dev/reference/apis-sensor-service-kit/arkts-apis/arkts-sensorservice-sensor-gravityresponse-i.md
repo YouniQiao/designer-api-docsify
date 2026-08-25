@@ -6,60 +6,52 @@ Describes the gravity sensor data. It extends from [Response](arkts-sensorservic
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 Gravitational acceleration along the x-axis of the device, in m/s?.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 Gravitational acceleration along the y-axis of the device, in m/s?.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
 Gravitational acceleration along the z-axis of the device, in m/s?.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor

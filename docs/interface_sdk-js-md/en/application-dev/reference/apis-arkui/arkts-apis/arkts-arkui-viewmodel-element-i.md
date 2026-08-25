@@ -4,8 +4,6 @@ Element@interface Element
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## addChild
@@ -18,8 +16,6 @@ Adds a node to the end of the child node list of the current node.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,7 +24,7 @@ Adds a node to the end of the child node list of the current node.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| child | [Element](arkts-arkui-viewmodel-element-i.md) | Yes |
+| [child](../arkts-components/arkts-arkui-nestedscrollinfo-i.md) | [Element](arkts-arkui-viewmodel-element-i.md) | Yes |
 
 ## animate
 
@@ -39,8 +35,6 @@ animate(keyframes: Array<AnimateStyle>, options: AnimateOptions): AnimationResul
 Creates and runs an animation shortcut on the component. Specify the keyframes and options required for the animation.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -69,8 +63,6 @@ If 0.5 is returned, 50% of the current component is visible.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -97,8 +89,6 @@ Requests or cancels the focus for a component. If focus is set to true, the focu
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -118,8 +108,6 @@ getBoundingClientRect(): RectObj
 Obtains the size and position of the element.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -141,8 +129,6 @@ Requests or cancels the crown rotation focus for a component. If focus is set to
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -162,8 +148,6 @@ setAttribute(name: string, value: string): void
 Sets the value of an attribute on a specified element. If the attribute already exists, update the value. Otherwise, a new attribute is added with the specified name and value.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -185,8 +169,6 @@ setStyle(name: string, value: string): boolean
 Sets a style value on a specified element. If the style exists and the style value is valid, the setting is successful. Otherwise, the setting is invalid.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Model restriction:** This API can be used only in the FA model.
 

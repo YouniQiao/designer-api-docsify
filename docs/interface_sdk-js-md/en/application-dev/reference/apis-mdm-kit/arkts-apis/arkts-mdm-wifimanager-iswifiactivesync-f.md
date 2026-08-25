@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isWifiActiveSync
@@ -15,8 +15,6 @@ function isWifiActiveSync(admin: Want): boolean
 Queries the Wi-Fi status of the current device.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -44,22 +42,3 @@ Queries the Wi-Fi status of the current device.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility',
-};
-
-try {
-  let result: boolean = wifiManager.isWifiActiveSync(wantTemp);
-  console.info(`Succeeded in querying whether the Wi-Fi is active or not, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to query whether the Wi-Fi is active or not. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## constructTLSSocketInstance
@@ -16,8 +16,6 @@ function constructTLSSocketInstance(): TLSSocket
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -25,40 +23,6 @@ function constructTLSSocketInstance(): TLSSocket
 | 类型 |
 | --- |
 | [TLSSocket](arkts-network-socket-tlssocket-i.md) |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-
-tcp.connect(tcpconnectoptions, (err: BusinessError) => {
-  if (err) {
-    console.error('connect fail');
-    return;
-  }
-  console.info('connect success');
-
-  // 确保TCPSocket已连接后，再升级TLSSocket
-  let tls: socket.TLSSocket = socket.constructTLSSocketInstance(tcp);
-})
-```
 
 
 ## constructTLSSocketInstance
@@ -73,8 +37,6 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 > 需要确保TCPSocket已连接，并且当前已经没有传输数据，再调用constructTLSSocketInstance升级TLSSocket。当升级成功后，无需对TCPSocket对象调用close方法。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -98,7 +60,3 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 | [2300002](../errorcode-net-socket.md#2300002-系统内部错误) |
 | 2303601 |
 | 2303602 |
-
-**示例**
-
-参见 [constructTLSSocketInstance](#constructtlssocketinstance)

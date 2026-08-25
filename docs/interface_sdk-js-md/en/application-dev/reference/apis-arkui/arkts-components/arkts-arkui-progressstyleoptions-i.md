@@ -6,8 +6,6 @@ Defines the progress bar style options.Inherits from [CommonProgressStyleOptions
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Number of divisions on the ring-style process indicator.Default value: **120**Va
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -43,11 +39,9 @@ scaleWidth?: Length
 
 Scale width of the ring-style progress indicator. Percentage values are not supported. If the scale width is greater than the stroke width of the progress indicator, the default scale width is used.Default value: **2.0vp**
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,11 +57,9 @@ strokeWidth?: Length
 
 Stroke width of the progress indicator. Percentage values are not supported.Default value: **4.0vp**If the value is out of the range, the default value is used.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

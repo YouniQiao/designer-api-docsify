@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## FACE_DETECTION
@@ -17,8 +15,6 @@ FACE_DETECTION = 0
 元数据的对象类型，用于人脸检测。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ HUMAN_BODY = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -49,8 +43,6 @@ CAT_FACE = 2
 用于检测猫脸的metadata类型。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ CAT_BODY = 3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -81,8 +71,6 @@ DOG_FACE = 4
 用于检测狗脸的metadata类型。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -98,8 +86,6 @@ DOG_BODY = 5
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -113,8 +99,6 @@ SALIENT_DETECTION = 6
 用于显著性检测。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -130,8 +114,6 @@ BAR_CODE_DETECTION = 7
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -145,8 +127,6 @@ BASIC_FACE_DETECTION = 8
 用于基础人脸检测。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

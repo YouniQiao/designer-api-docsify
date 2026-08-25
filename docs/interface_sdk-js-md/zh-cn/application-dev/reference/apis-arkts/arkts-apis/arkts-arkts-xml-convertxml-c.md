@@ -4,14 +4,12 @@ ConvertXML类提供将XML文本转换为JavaScript对象的能力。 推荐使�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { convertxml } from '@kit.ArkTS';
+import { convertxml } from 'kits/@kit.ArkTS';
 ```
 
 ## convert
@@ -28,8 +26,6 @@ convert(xml: string, options?: ConvertOptions): Object
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -50,40 +46,6 @@ convert(xml: string, options?: ConvertOptions): Object
 | --- |
 | Object |
 
-**示例**
-
-```TypeScript
-let xml =
-  '<?xml version="1.0" encoding="utf-8"?>' +
-    '<note importance="high" logged="true">' +
-    '    <title>Happy</title>' +
-    '    <todo>Work</todo>' +
-    '    <todo>Play</todo>' +
-    '</note>';
-// 创建ConvertXML转换实例
-let converter = new convertxml.ConvertXML();
-// 配置转换选项
-let options: convertxml.ConvertOptions = {
-  trim: false,
-  declarationKey: "_declaration",
-  instructionKey: "_instruction",
-  attributesKey: "_attributes",
-  textKey: "_text",
-  cdataKey: "_cdata",
-  doctypeKey: "_doctype",
-  commentKey: "_comment",
-  parentKey: "_parent",
-  typeKey: "_type",
-  nameKey: "_name",
-  elementsKey: "_elements"
-};
-// 调用convert接口转换XML文本（已废弃，建议使用fastConvertToJSObject）
-let result = JSON.stringify(converter.convert(xml, options));
-console.info(result);
-// 输出(宽泛型)
-// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Happy"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Work"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Play"}]}]}]}
-```
-
 ## convertToJSObject
 
 ```TypeScript
@@ -98,8 +60,6 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 14
 
@@ -128,47 +88,6 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 | --- |
 | [10200002](../errorcode-utils.md#10200002-参数解析错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let xml =
-    '<?xml version="1.0" encoding="utf-8"?>' +
-      '<note importance="high" logged="true">' +
-      '    <title>Happy</title>' +
-      '    <todo>Work</todo>' +
-      '    <todo>Play</todo>' +
-      '</note>';
-  // 创建ConvertXML转换实例
-  let converter = new convertxml.ConvertXML();
-  // 配置转换选项
-  let options: convertxml.ConvertOptions = {
-    trim: false,
-    declarationKey: "_declaration",
-    instructionKey: "_instruction",
-    attributesKey: "_attributes",
-    textKey: "_text",
-    cdataKey: "_cdata",
-    doctypeKey: "_doctype",
-    commentKey: "_comment",
-    parentKey: "_parent",
-    typeKey: "_type",
-    nameKey: "_name",
-    elementsKey: "_elements"
-  };
-  // 调用convertToJSObject接口转换XML文本（已废弃，建议使用fastConvertToJSObject）
-  let result = JSON.stringify(converter.convertToJSObject(xml, options));
-  console.info(result);
-} catch (e) {
-  let err: BusinessError = e as BusinessError;
-  console.error(`Failed to convert XML text to JS object using convertToJSObject. Code: ${err.code}, message: ${err.message}`);
-}
-// 输出(宽泛型)
-// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Happy"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Work"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"text","_text":"Play"}]}]}]}
-```
-
 ## fastConvertToJSObject
 
 ```TypeScript
@@ -184,8 +103,6 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。fastConvertToJSObject接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -210,46 +127,6 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 | --- |
 | [10200002](../errorcode-utils.md#10200002-参数解析错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let xml =
-    '<?xml version="1.0" encoding="utf-8"?>' +
-    '<note importance="high" logged="true">' +
-    '   <title>Hello\r\nWorld</title>' +
-    '   <todo><![CDATA[Work\r\n]]></todo>' +
-    '</note>';
-  // 创建ConvertXML转换实例
-  let converter = new convertxml.ConvertXML();
-  // 配置转换选项
-  let options: convertxml.ConvertOptions = {
-    trim: false,
-    declarationKey: "_declaration",
-    instructionKey: "_instruction",
-    attributesKey: "_attributes",
-    textKey: "_text",
-    cdataKey: "_cdata",
-    doctypeKey: "_doctype",
-    commentKey: "_comment",
-    parentKey: "_parent",
-    typeKey: "_type",
-    nameKey: "_name",
-    elementsKey: "_elements"
-  };
-  // 调用fastConvertToJSObject接口转换XML文本
-  let result = JSON.stringify(converter.fastConvertToJSObject(xml, options));
-  console.info(result);
-} catch (e) {
-  let err: BusinessError = e as BusinessError;
-  console.error(`Failed to convert XML text to JS object using fastConvertToJSObject. Code: ${err.code}, message: ${err.message}`);
-}
-// 输出(宽泛型)
-// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"element","_name":"note","_attributes":{"importance":"high","logged":"true"},"_elements":[{"_type":"element","_name":"title","_elements":[{"_type":"text","_text":"Hello\nWorld"}]},{"_type":"element","_name":"todo","_elements":[{"_type":"cdata","_cdata":"Work\n"}]}]}]}
-```
-
 ## largeConvertToJSObject
 
 ```TypeScript
@@ -263,8 +140,6 @@ largeConvertToJSObject(xml: string, options?: ConvertOptions): Object
 > 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,51 +165,3 @@ largeConvertToJSObject(xml: string, options?: ConvertOptions): Object
 | 错误码ID |
 | --- |
 | [10200002](../errorcode-utils.md#10200002-参数解析错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let xmlString =
-    '<?xml version="1.0" encoding="utf-8"?>' +
-    '<?custom-pi processing="example"?>' +
-    '<catalog id="books">' +
-      '<!-- Bestseller Example -->' +
-      '<book category="fiction" ref="B101">' +
-        '<title>Echoes &amp; Whispers</title>' +
-        '<price unit="USD">19.99</price>' +
-        '<descr>' +
-          '<![CDATA[<b>suspense</b>novel & Legendary Stories]]>' +
-        '</descr>' +
-        '<popular/>' +
-      '</book>' +
-    '</catalog>';
-  // 创建ConvertXML转换实例
-  let converter = new convertxml.ConvertXML();
-  // 配置转换选项
-  let options: convertxml.ConvertOptions = {
-    trim: false,
-    declarationKey: "_declaration",
-    instructionKey: "_instruction",
-    attributesKey: "_attributes",
-    textKey: "_text",
-    cdataKey: "_cdata",
-    doctypeKey: "_doctype",
-    commentKey: "_comment",
-    parentKey: "_parent",
-    typeKey: "_type",
-    nameKey: "_name",
-    elementsKey: "_elements"
-  };
-  // 调用largeConvertToJSObject接口转换大型XML文本
-  let result = JSON.stringify(converter.largeConvertToJSObject(xmlString, options));
-  console.info(result);
-} catch (e) {
-  let err: BusinessError = e as BusinessError;
-  console.error(`Failed to convert XML text to JS object using largeConvertToJSObject. Code: ${err.code}, message: ${err.message}`);
-}
-// 输出(宽泛型)
-// {"_declaration":{"_attributes":{"version":"1.0","encoding":"utf-8"}},"_elements":[{"_type":"instruction","_name":"custom-pi","_instruction":"processing=\"example\""},{"_type":"element","_name":"catalog","_attributes":{"id":"books"},"_elements":[{"_type":"comment","_comment":" Bestseller Example "},{"_type":"element","_name":"book","_parent":"catalog","_attributes":{"category":"fiction","ref":"B101"},"_elements":[{"_type":"element","_name":"title","_parent":"book","_elements":[{"_type":"text","_text":"Echoes & Whispers"}]},{"_type":"element","_name":"price","_parent":"book","_attributes":{"unit":"USD"},"_elements":[{"_type":"text","_text":"19.99"}]},{"_type":"element","_name":"descr","_parent":"book","_elements":[{"_type":"cdata","_cdata":"<b>suspense</b>novel & Legendary Stories"}]},{"_type":"element","_name":"popular","_parent":"book"}]}]}]}
-```

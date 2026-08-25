@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## openInstallCertificateDialog
@@ -15,8 +15,6 @@ function openInstallCertificateDialog(context: common.Context, certType: Certifi
 Opens the Certificate Management Install Certificate dialog box. After the certificate is successfully installed, the unique identifier of the certificate is returned. Applications can use the identifier to use the certificate. Use Promise asynchronous callback.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -51,32 +49,3 @@ Opens the Certificate Management Install Certificate dialog box. After the certi
 | [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
 | [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) |
 | [29700005](../errorcode-certManagerDialog.md#29700005-non-secure-operation) |
-
-**Examples**
-
-```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-
-/* context is application context information, which is obtained by the caller. The context here is only an example. */
-let context: common.Context = new UIContext().getHostContext() as common.Context;
-/* certificateType specifies the certificate type. The value CA_CERT here indicates a CA certificate. */
-let certificateType: certificateManagerDialog.CertificateType = certificateManagerDialog.CertificateType.CA_CERT;
-/* certificateScope specifies the usage scope of the certificate. The value CURRENT_USER here means the certificate can be used by the current user. */
-let certificateScope: certificateManagerDialog.CertificateScope = certificateManagerDialog.CertificateScope.CURRENT_USER;
-/* The CA certificate data must be assigned by the service. In this example, the data is not CA certificate data. */
-let caCert: Uint8Array = new Uint8Array([
-  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01,
-]);
-try {
-  certificateManagerDialog.openInstallCertificateDialog(context, certificateType, certificateScope, caCert).then((uri: string) => {
-    console.info('Succeeded opening install certificate');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to open install certificate dialog. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to open install certificate dialog. Code: ${error.code}, message: ${error.message}`);
-}
-```

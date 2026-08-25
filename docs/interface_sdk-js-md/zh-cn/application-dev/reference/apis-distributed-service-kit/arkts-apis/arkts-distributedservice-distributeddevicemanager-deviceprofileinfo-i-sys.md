@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## bleMac
@@ -27,8 +25,6 @@ bleMac: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -46,8 +42,6 @@ brMac: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ deviceId: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -82,8 +74,6 @@ deviceName: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +89,6 @@ deviceSn: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -118,8 +106,6 @@ deviceType: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -135,8 +121,6 @@ firmwareVersion: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -154,8 +138,6 @@ hardwareVersion: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -172,8 +154,6 @@ internalModel?: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -185,13 +165,12 @@ isLocalDevice: boolean
 ```
 
 是否为本地设备。  
-- false：表示非本地设备，即被查询的其他设备。 - true：表示本地设备，即当前正在使用该接口的设备。
+- false：表示非本地设备，即被查询的其他设备。  
+- true：表示本地设备，即当前正在使用该接口的设备。
 
 **类型：** boolean
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -209,8 +188,6 @@ MAC地址。
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -226,8 +203,6 @@ manufacturer: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -245,8 +220,6 @@ model: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -262,8 +235,6 @@ modifyTime: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -281,8 +252,6 @@ productId: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -299,8 +268,6 @@ productName?: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -308,16 +275,14 @@ productName?: string
 ## protocolType
 
 ```TypeScript
-protocolType: int
+protocolType: number
 ```
 
 协议类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -335,8 +300,6 @@ registerTime: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -352,8 +315,6 @@ SDK版本。
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -371,8 +332,6 @@ services?: Array<ServiceProfileInfo>
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -380,16 +339,14 @@ services?: Array<ServiceProfileInfo>
 ## setupType
 
 ```TypeScript
-setupType: int
+setupType: number
 ```
 
 设备类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -407,8 +364,6 @@ shareTime: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -424,8 +379,6 @@ Starflash的MAC地址。
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -443,8 +396,6 @@ softwareVersion: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -460,8 +411,6 @@ subProductId?: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -479,8 +428,6 @@ wiseDeviceId: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -496,8 +443,6 @@ wiseUserId: string
 **类型：** string
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

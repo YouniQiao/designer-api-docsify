@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getSdkVersion
@@ -18,8 +18,6 @@ function getSdkVersion(options: HuksOptions): string
 > 从API version 8开始支持，从API version 11开始废弃。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 11
 
@@ -36,15 +34,3 @@ function getSdkVersion(options: HuksOptions): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions传空 */
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.getSdkVersion(emptyOptions);
-```

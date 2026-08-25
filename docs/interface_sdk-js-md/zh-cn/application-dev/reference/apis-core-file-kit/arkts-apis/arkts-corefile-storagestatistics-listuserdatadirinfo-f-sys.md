@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## listUserdataDirInfo
@@ -15,8 +15,6 @@ function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>
 查询用户设备中/data目录下的空间占用详情，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -40,29 +38,3 @@ function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13600015 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.listUserdataDirInfo().then((dirInfos: storageStatistics.UserdataDirInfo[]) => {
-  console.info("listUserdataDirInfo successfully.");
-}).catch((err: BusinessError) => {
-  console.error(`listUserdataDirInfo failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.listUserdataDirInfo().then((dirInfos: storageStatistics.UserdataDirInfo[]) => {
-  console.info("listUserdataDirInfo successfully.");
-}).catch((err: BusinessError): void => {
-  console.error(`listUserdataDirInfo failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## convertRelativeToGlobalCoordinate
@@ -15,8 +15,6 @@ function convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): 
 Converts relative coordinates (based on the top-left corner of the screen) into global coordinates (based on the top-left corner of the primary screen). This API supports only coordinate conversion between the primary screen and extended screen.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -40,24 +38,3 @@ Converts relative coordinates (based on the top-left corner of the screen) into 
 | --- |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 | [1400004](../errorcode-display.md#1400004-parameter-error) |
-
-**Examples**
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-
-let relativePosition: display.RelativePosition = {
-  displayId: 0,
-  position: {
-    x: 100,
-    y: 200
-  }
-};
-
-try {
-  let position: display.Position = display.convertRelativeToGlobalCoordinate(relativePosition);
-  console.info(`The global coordinate is ${position.x}, ${position.y}`)
-} catch (exception) {
-  console.error(`Failed to convert the relative coordinate to the global coordinate. Code: ${exception.code}, message: ${exception.message}`);
-}
-```

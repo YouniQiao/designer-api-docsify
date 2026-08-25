@@ -4,14 +4,12 @@ Defines the authentication result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## account
@@ -26,8 +24,6 @@ Information about the account to which the token belongs. By default, no value i
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## tokenInfo
@@ -41,7 +37,5 @@ Token information. By default, no value is passed in.
 **Type:** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount

@@ -7,8 +7,6 @@ Provides lazy loading capabilities for FrameNode data, implementing LazyForEach 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attachNodeAdapter
@@ -24,8 +22,6 @@ Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAd
 > **RelativeContainer**, **List**, **ListItemGroup**, **WaterFlow**, and **Grid**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,8 +52,6 @@ A constructor used to create a **NodeAdapter** object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -73,8 +67,6 @@ static detachNodeAdapter(node: FrameNode): void
 Detaches a FrameNode from its NodeAdapter.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,101 +90,11 @@ Disposes of this **NodeAdapter** object. Bindings, if any, of the object will be
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-import { NodeController, FrameNode, BuilderNode } from '@kit.ArkUI';
-
-@Component
-struct TestComponent {
-  build() {
-    Column() {
-      Text('This is a BuilderNode.')
-        .fontSize(16)
-        .fontWeight(FontWeight.Bold)
-    }
-    .width('100%')
-    .backgroundColor(Color.Gray)
-  }
-
-  aboutToAppear() {
-    console.info('aboutToAppear');
-  }
-
-  aboutToDisappear() {
-    console.info('aboutToDisappear');
-  }
-}
-
-@Builder
-function buildComponent() {
-  TestComponent()
-}
-
-// Implement a custom UI controller by extending NodeController.
-class MyNodeController extends NodeController {
-  private rootNode: FrameNode | null = null;
-  private builderNode: BuilderNode<[]> | null = null;
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.rootNode = new FrameNode(uiContext);
-    this.builderNode = new BuilderNode(uiContext, { selfIdealSize: { width: 200, height: 100 } });
-    this.builderNode.build(new WrappedBuilder(buildComponent));
-
-    const rootRenderNode = this.rootNode.getRenderNode();
-    if (rootRenderNode !== null) {
-      rootRenderNode.size = { width: 200, height: 200 };
-      rootRenderNode.backgroundColor = 0xffd5d5d5;
-      rootRenderNode.appendChild(this.builderNode!.getFrameNode()!.getRenderNode());
-    }
-
-    return this.rootNode;
-  }
-
-  disposeFrameNode() {
-    if (this.rootNode !== null && this.builderNode !== null) {
-      // Remove all child nodes from rootNode before clearing the reference relationships.
-      this.rootNode.removeChild(this.builderNode.getFrameNode());
-      // Release the reference between builderNode and FrameNode.
-      this.builderNode.dispose();
-      // Release the reference between rootNode and FrameNode.
-      this.rootNode.dispose();
-    }
-  }
-
-  removeBuilderNode() {
-    const rootRenderNode = this.rootNode!.getRenderNode();
-    if (rootRenderNode !== null && this.builderNode !== null && this.builderNode.getFrameNode() !== null) {
-      rootRenderNode.removeChild(this.builderNode!.getFrameNode()!.getRenderNode());
-    }
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 4 }) {
-      NodeContainer(this.myNodeController)
-      Button('FrameNode dispose')
-        .onClick(() => {
-          this.myNodeController.disposeFrameNode();
-        })
-        .width('100%')
-    }
-  }
-}
-```
 
 ## getAllAvailableItems
 
@@ -203,8 +105,6 @@ getAllAvailableItems(): Array<FrameNode>
 Obtains all available items. Available nodes include both currently displayed and preloaded nodes. The number of preloaded nodes can be configured by adjusting the **cachedCount** property of the parent container, following the [usage constraints](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#constraints) of **LazyForEach**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -227,8 +127,6 @@ insertItem(start: number, count: number): void
 Inserts a specified number of items starting from a specific index.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -253,8 +151,6 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -267,12 +163,6 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 | --- |
 | boolean |
 
-**Examples**
-
-See [FrameNode Validity Check Example.
-
-See NodeAdapter Validity Check Example.
-
 ## moveItem
 
 ```TypeScript
@@ -282,8 +172,6 @@ moveItem(from: number, to: number): void
 Moves items from the starting index to the ending index.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -321,8 +209,6 @@ Called when a FrameNode is attached to the NodeAdapter.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -344,8 +230,6 @@ onCreateChild?(index: number): FrameNode
 Called during node initialization or when new child nodes are detected. When adding child components, follow the child component restrictions for declarative components. For example, **WaterFlow** only supports adding **FlowItem** child nodes. The parent node uses the child node's index and key to determine whether the node is being loaded for the first time or a new node is sliding into view.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -375,8 +259,6 @@ Called when detachment occurs.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -392,8 +274,6 @@ onDisposeChild?(id: number, node: FrameNode): void
 Called when a child node is about to be disposed. Nodes that are neither displayed on the screen nor within the preload range are considered nodes about to be disposed.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -417,8 +297,6 @@ onGetChildId?(index: number): number
 Called during node initialization or when new child nodes are detected. The **index** parameter enables custom ID generation. Ensure that IDs remain unique across different index values.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -448,8 +326,6 @@ Called when a loaded node is reused. Node reuse occurs when the key value of a c
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -469,11 +345,9 @@ Called when a loaded node is reused. Node reuse occurs when the key value of a c
 reloadAllItems(): void
 ```
 
-Reloads all items in this node. This API calls the OnDataReloaded API in **LazyForEach** to trigger component data refresh.
+Reloads all items in this node. This API calls the [OnDataReloaded](../arkts-components/arkts-arkui-datachangelistener-i.md#ondatareloaded) API in **LazyForEach** to trigger component data refresh.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -490,8 +364,6 @@ reloadItem(start: number, count: number): void
 Reloads a specified number of items starting from a specific index.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -515,8 +387,6 @@ removeItem(start: number, count: number): void
 Removes a specified number of items starting from a specific index.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -543,14 +413,8 @@ Get the total number of node count.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-See the example for [NodeAdapter Usage Example.

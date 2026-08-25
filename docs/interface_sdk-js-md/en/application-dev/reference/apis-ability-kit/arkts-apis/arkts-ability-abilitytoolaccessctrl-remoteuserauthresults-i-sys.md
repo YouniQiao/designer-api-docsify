@@ -4,8 +4,6 @@ Remote user authorization results.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -27,8 +25,6 @@ Permission query information.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -44,8 +40,6 @@ Authorization result list.
 **Type:** [RemoteUserAuthItem](arkts-ability-abilitytoolaccessctrl-remoteuserauthitem-i-sys.md)[]
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 

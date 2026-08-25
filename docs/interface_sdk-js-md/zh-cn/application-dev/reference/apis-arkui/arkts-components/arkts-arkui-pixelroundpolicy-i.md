@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -19,15 +17,13 @@
 bottom?: PixelRoundCalcPolicy
 ```
 
-组件底部边界取整对齐方式。 <br>不设置pixelRound或者设置异常值时按四舍五入规则取整。
+组件底部边界取整对齐方式。 不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**类型：** PixelRoundCalcPolicy
+**类型：** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **默认值：** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,15 +39,13 @@ bottom?: PixelRoundCalcPolicy
 end?: PixelRoundCalcPolicy
 ```
 
-组件尾部边界取整对齐方式。 <br>不设置pixelRound或者设置异常值时按四舍五入规则取整。
+组件尾部边界取整对齐方式。 不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**类型：** PixelRoundCalcPolicy
+**类型：** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **默认值：** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,15 +61,13 @@ end?: PixelRoundCalcPolicy
 start?: PixelRoundCalcPolicy
 ```
 
-组件前部边界取整对齐方式。 <br>不设置pixelRound或者设置异常值时按四舍五入规则取整。
+组件前部边界取整对齐方式。 不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**类型：** PixelRoundCalcPolicy
+**类型：** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **默认值：** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,15 +83,13 @@ start?: PixelRoundCalcPolicy
 top?: PixelRoundCalcPolicy
 ```
 
-组件上部边界取整对齐方式。 <br>不设置pixelRound或者设置异常值时按四舍五入规则取整。
+组件上部边界取整对齐方式。 不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**类型：** PixelRoundCalcPolicy
+**类型：** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
 **默认值：** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## SHOW_FILTER
@@ -17,8 +15,6 @@ SHOW_FILTER = 0
 仅展示符合过滤条件的联系人。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ DEFAULT_SELECT = 1
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
@@ -49,8 +43,6 @@ SHOW_FILTER_AND_DEFAULT_SELECT = 2
 默认勾选仅展示符合过滤条件的联系人。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

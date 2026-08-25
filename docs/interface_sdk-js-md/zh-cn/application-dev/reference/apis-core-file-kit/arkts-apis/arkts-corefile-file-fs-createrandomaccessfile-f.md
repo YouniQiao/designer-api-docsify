@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## createRandomAccessFile
@@ -18,8 +18,6 @@ declare function createRandomAccessFile(file: string | File, mode?: number,
 基于文件路径或文件对象创建RandomAccessFile对象。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -69,113 +67,6 @@ declare function createRandomAccessFile(file: string | File, mode?: number,
 | 13900042 |
 | 13900044 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-fileIo.createRandomAccessFile(file, (err: BusinessError, randomAccessFile: fileIo.RandomAccessFile) => {
-  if (err) {
-    console.error(`Failed to create randomaccessfile. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in creating randomaccessfile, fd: ${randomAccessFile.fd}`);
-    randomAccessFile.close();
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
-fileIo.createRandomAccessFile(file, (err: BusinessError<void> | null, randomAccessFile:fileIo.RandomAccessFile | undefined) => {
-  if (err) {
-    console.error(`Failed to create randomaccessfile. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in creating randomaccessfile, fd: ${randomAccessFile.fd}`);
-    randomAccessFile?.close();
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-fileIo.createRandomAccessFile(file, fileIo.OpenMode.READ_ONLY, (err: BusinessError, randomAccessFile: fileIo.RandomAccessFile) => {
-  if (err) {
-    console.error(`Failed to create randomaccessfile. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in creating randomaccessfile, fd: ${randomAccessFile.fd}`);
-    randomAccessFile.close();
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
-fileIo.createRandomAccessFile(file,fileIo.OpenMode.READ_ONLY, (err: BusinessError<void> | null, randomAccessFile:fileIo.RandomAccessFile | undefined) => {
-  if (err) {
-    console.error(`Failed to create randomaccessfile. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in creating randomaccessfile, fd: ${randomAccessFile.fd}`);
-    randomAccessFile?.close();
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.createRandomAccessFile(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE, { start: 10, end: 100 })
-  .then((randomAccessFile: fileIo.RandomAccessFile) => {
-    console.info(`Succeeded in creating randomaccessfile, fd: ${randomAccessFile.fd}`);
-    randomAccessFile.close();
-  })
-  .catch((err: BusinessError) => {
-    console.error(`Failed to create randomaccessfile. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.createRandomAccessFile(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE, { start: 10, end: 100 })
-.then((randomAccessFile: fileIo.RandomAccessFile) => {
-    console.info(`Succeeded in creating randomaccessfile, fd: ${randomAccessFile.fd}`);
-    randomAccessFile.close();
-})
-  .catch((error: Error) => {
-    let err: BusinessError = error as BusinessError;
-    console.error(`Failed to create randomaccessfile. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## createRandomAccessFile
 
@@ -186,8 +77,6 @@ declare function createRandomAccessFile(file: string | File, callback: AsyncCall
 基于文件路径或文件对象，以只读方式创建RandomAccessFile对象。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -229,10 +118,6 @@ declare function createRandomAccessFile(file: string | File, callback: AsyncCall
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-参见 [createRandomAccessFile](#createrandomaccessfile)
-
 
 ## createRandomAccessFile
 
@@ -243,8 +128,6 @@ declare function createRandomAccessFile(file: string | File, mode: number, callb
 基于文件路径或文件对象创建RandomAccessFile对象。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -286,7 +169,3 @@ declare function createRandomAccessFile(file: string | File, mode: number, callb
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-参见 [createRandomAccessFile](#createrandomaccessfile)

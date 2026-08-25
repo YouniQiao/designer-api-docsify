@@ -6,23 +6,19 @@ Material resource, which inherits from SceneResource.@extends SceneResource @int
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## alphaCutoff
 
 ```TypeScript
-alphaCutoff?: double
+alphaCutoff?: number
 ```
 
 Threshold of the alpha channel. If the alpha of a pixel is greater than or equal to this threshold, the pixel is rendered; otherwise, the pixel is not rendered. Setting a value less than 1 enables this mode. The value range is [0, 1]. The default value is 1.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -40,8 +36,6 @@ Whether the material is transparent. The default value is false.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## cullMode
@@ -56,8 +50,6 @@ Culling mode of the material, which can be used to determine whether to cull fro
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## materialType
@@ -71,8 +63,6 @@ Material type.
 **Type:** [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -90,8 +80,6 @@ Polygon drawing mode of the model. The default value is FILL.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## renderSort
@@ -106,8 +94,6 @@ Rendering order, which determines the rendering sequence of materials in the ren
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## shadowReceiver
@@ -121,7 +107,5 @@ Whether the material receives shadows. true if the material receives shadows, fa
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

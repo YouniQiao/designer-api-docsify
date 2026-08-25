@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## queryDeviceInfo
 
 ```TypeScript
-function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>
+function queryDeviceInfo(deviceId?: number): Array<Readonly<DeviceInfo>>
 ```
 
 查询扩展外设详细信息列表。如果没有设备接入，那么将会返回一个空的列表。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -28,7 +26,7 @@ function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 否 |
+| deviceId | number | 否 |
 
 **返回值：**
 
@@ -44,21 +42,3 @@ function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [26300001](../errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) |
-
-**示例**
-
-```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 12345678为示例deviceId，应用开发时可通过queryDevices查询到相应设备的deviceId作为入参
-  let deviceInfos: Array<deviceManager.DeviceInfo> = deviceManager.queryDeviceInfo(12345678);
-  for (let item of deviceInfos) {
-    console.info(`Device id is ${item.deviceId}`);
-  }
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to query device info. Code is ${err.code}, message is ${err.message}`);
-}
-```

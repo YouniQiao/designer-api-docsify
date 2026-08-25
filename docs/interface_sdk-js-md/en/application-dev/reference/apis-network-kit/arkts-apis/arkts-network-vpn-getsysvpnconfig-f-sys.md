@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## getSysVpnConfig
@@ -15,8 +15,6 @@ function getSysVpnConfig(vpnId: string): Promise<SysVpnConfig>
 Get the configuration of system VPN network by the specified vpnId.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 

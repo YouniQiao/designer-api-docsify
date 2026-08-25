@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## runCmd
@@ -18,8 +18,6 @@ function runCmd(
 Returns a child process object and spawns a new ChildProcess to run the command.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 

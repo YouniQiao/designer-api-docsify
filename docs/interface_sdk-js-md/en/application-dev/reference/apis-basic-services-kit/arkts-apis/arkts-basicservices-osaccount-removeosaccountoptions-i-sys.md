@@ -4,8 +4,6 @@ Represents the optional parameter used to remove an OS account.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the optional parameter used to remove an OS account.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## token
@@ -27,8 +25,6 @@ Token obtained from the authentication management API. The value is left empty b
 **Type:** Uint8Array
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Account.OsAccount
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## createHttp
@@ -19,8 +19,6 @@ Creates an HTTP request. You can use this API to initiate or destroy an HTTP req
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -29,18 +27,4 @@ Creates an HTTP request. You can use this API to initiate or destroy an HTTP req
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [HttpRequest](arkts-network-http-httprequest-i.md) |
-
-**Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-```
+| [HttpRequest](arkts-network-connection-httprequest-t.md) |

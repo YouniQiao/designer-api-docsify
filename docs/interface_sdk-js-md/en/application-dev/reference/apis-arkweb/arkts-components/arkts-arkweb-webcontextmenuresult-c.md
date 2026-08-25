@@ -1,10 +1,8 @@
 # WebContextMenuResult
 
-WebContextMenuResult is a class in the ArkWeb component used to handle context menu events (triggered by long- pressing a page element or right-clicking). It provides developers with a set of menu operation execution capabilities, including text editing operations (copy, paste, cut, select all, undo, redo, paste and match style), image operations (copy image, save image), menu control (close menu), and password auto-fill.Developers typically use WebContextMenuResult when they need to customize the context menu behavior of the Web component. Obtain a WebContextMenuResult instance through the **onContextMenuShow** event callback, and use the menu context information provided by **WebContextMenuParam** to determine the user operation scenario and call the corresponding response method, thereby implementing custom menu interaction logic. If the developer does not perform any menu response operation, the **closeContextMenu** method must be called to close the menu.For details about the sample code, see [onContextMenuShow&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkweb-web-attribute.md#oncontextmenushow).
+WebContextMenuResult is a class in the ArkWeb component used to handle context menu events (triggered by number- pressing a page element or right-clicking). It provides developers with a set of menu operation execution capabilities, including text editing operations (copy, paste, cut, select all, undo, redo, paste and match style), image operations (copy image, save image), menu control (close menu), and password auto-fill.Developers typically use WebContextMenuResult when they need to customize the context menu behavior of the Web component. Obtain a WebContextMenuResult instance through the **onContextMenuShow** event callback, and use the menu context information provided by **WebContextMenuParam** to determine the user operation scenario and call the corresponding response method, thereby implementing custom menu interaction logic. If the developer does not perform any menu response operation, the **closeContextMenu** method must be called to close the menu.For details about the sample code, see [onContextMenuShow&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkweb-web-attribute.md#oncontextmenushow).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -23,8 +21,6 @@ Closes this context menu. This API must be called when no operations in **WebCon
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -38,8 +34,6 @@ constructor()
 Constructs a **WebContextMenuResult** object.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -59,8 +53,6 @@ Performs the copy text operation.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -79,8 +71,6 @@ When **WebContextMenuParam** contains image content, this method is used to copy
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -98,8 +88,6 @@ Performs the cut operation.
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,8 +110,6 @@ Performs the paste operation, preserving the original format. If you need to pas
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -145,8 +131,6 @@ Performs the paste operation related to this context menu. The pasted content ma
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## redo
@@ -162,8 +146,6 @@ Performs the redo operation, which re-executes the revoked operation.
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -181,8 +163,6 @@ Requests the username or password data in the password vault to be automatically
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## saveImage
@@ -198,8 +178,6 @@ Saves the image related to this context menu. Calling this method triggers the d
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,8 +197,6 @@ Performs the select all operation.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -238,7 +214,5 @@ Performs the undo operation, which undoes the last editing operation.
 > to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core

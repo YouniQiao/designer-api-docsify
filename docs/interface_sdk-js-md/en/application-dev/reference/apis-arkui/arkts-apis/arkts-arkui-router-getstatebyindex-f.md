@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## getStateByIndex
@@ -21,8 +21,6 @@ Obtains the status information about a page by its index.
 > with the current UI context.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Deprecated since:** 18
 
@@ -45,15 +43,3 @@ Obtains the status information about a page by its index.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | RouterState \| undefined |
-
-**Examples**
-
-```TypeScript
-let options: router.RouterState | undefined = router.getStateByIndex(1);
-if (options != undefined) {
-  console.info('index = ' + options.index);
-  console.info('name = ' + options.name);
-  console.info('path = ' + options.path);
-  console.info(`params = ${JSON.stringify(options.params)}`);
-}
-```

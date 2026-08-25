@@ -4,8 +4,6 @@ Returns the status of the permission for reading screen information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Returns the status of the permission for reading screen information.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## readingCode
 
 ```TypeScript
-readingCode?: int
+readingCode?: number
 ```
 
 If the screen information cannot be read, the corresponding status code will be returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,16 +35,14 @@ If the screen information cannot be read, the corresponding status code will be 
 ## readingState
 
 ```TypeScript
-readingState: int
+readingState: number
 ```
 
 Whether screen reading is allowed. **0**: no; **1**: yes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

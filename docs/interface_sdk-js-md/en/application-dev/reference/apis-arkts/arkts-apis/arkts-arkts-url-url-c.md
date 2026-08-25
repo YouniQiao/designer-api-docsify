@@ -4,14 +4,12 @@ The interface of URL is used to parse, construct, normalize, and encode URLs.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { url } from '@kit.ArkTS';
+import { url } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -23,8 +21,6 @@ constructor(url: string, base?: string | URL)
 URL constructor, which is used to instantiate a URL object. url: Absolute or relative input URL to resolve. Base is required if input is relative. If input is an absolute value, base ignores the value. base: Base URL to parse if input is not absolute.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -39,46 +35,6 @@ URL constructor, which is used to instantiate a URL object. url: Absolute or rel
 | [url](arkts-url.md) | string | Yes |
 | base | string \| URL | No |
 
-**Examples**
-
-```TypeScript
-// Construct a URLParams object in string[][] mode.
-let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
-// Construct a URLParams object in Record<string, string> mode.
-let objectParams1 = new url.URLParams({"fod" : '1' , "bard" : '2'});
-// Construct a URLParams object in string mode.
-let objectParams2 = new url.URLParams('?fod=1&bard=2');
-// Construct a URLParams object using the search property of the url object.
-let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams3 = new url.URLParams(urlObject.search);
-// Construct a URLParams object using the params property of the url object.
-let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams4 = urlObject1.params;
-```
-
-```TypeScript
-let mm = 'https://username:password@host:8080';
-let a = new url.URL("/", mm); // Output 'https://username:password@host:8080/';
-let b = new url.URL(mm); // Output 'https://username:password@host:8080/';
-new url.URL('path/path1', b); // Output 'https://username:password@host:8080/path/path1';
-let c = new url.URL('/path/path1', b);  // Output 'https://username:password@host:8080/path/path1'; 
-new url.URL('/path/path1', c); // Output 'https://username:password@host:8080/path/path1';
-new url.URL('/path/path1', a); // Output 'https://username:password@host:8080/path/path1';
-new url.URL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output https://www.exampleUrl/path/path1
-new url.URL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
-new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
-new url.URL('https://www.example.com', ); // Output https://www.example.com/
-new url.URL('https://www.example.com', b); // Output https://www.example.com/
-```
-
-```TypeScript
-let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
-let objectParams1 = new url.URLSearchParams({"fod" : '1' , "bard" : '2'});
-let objectParams2 = new url.URLSearchParams('?fod=1&bard=2');
-let urlObject = new url.URL('https://developer.mozilla.org/?fod=1&bard=2');
-let params = new url.URLSearchParams(urlObject.search);
-```
-
 ## constructor
 
 ```TypeScript
@@ -89,15 +45,9 @@ A no-argument constructor used to create a URL. It returns a URL object after pa
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
-
-**Examples**
-
-See [constructor](#constructor)
 
 ## parseURL
 
@@ -108,8 +58,6 @@ static parseURL(url: string, base?: string | URL): URL
 Parses a URL.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -134,23 +82,6 @@ Parses a URL.
 | --- |
 | [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
 
-**Examples**
-
-```TypeScript
-let mm = 'https://username:password@host:8080/test/test1/test3';
-let urlObject = url.URL.parseURL(mm);
-let result = urlObject.toString(); // Output 'https://username:password@host:8080/test/test1/test3'
-// If url is a relative path, the path in the base parameter is test/test1, and the path of the parsed URL is /test/path2/path3.
-let url1 = url.URL.parseURL('path2/path3', 'https://www.example.com/test/test1'); // Output 'https://www.example.com/test/path2/path3'
-// If url is a root directory, the path in the base parameter is /test/test1/test3, and the path of the parsed URL is /path1/path2.
-let url2 = url.URL.parseURL('/path1/path2', urlObject); // Output 'https://username:password@host:8080/path1/path2'
-url.URL.parseURL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output 'https://www.exampleUrl/path/path1'
-url.URL.parseURL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
-url.URL.parseURL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
-url.URL.parseURL('https://www.example.com', ); // Output 'https://www.example.com/'
-url.URL.parseURL('https://www.example.com', urlObject); // Output 'https://www.example.com/'
-```
-
 ## toJSON
 
 ```TypeScript
@@ -161,8 +92,6 @@ Converts the parsed URL into a JSON string.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -172,13 +101,6 @@ Converts the parsed URL into a JSON string.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-let result = urlObject.toJSON();
-```
 
 ## toString
 
@@ -190,8 +112,6 @@ Converts the parsed URL into a string.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -201,27 +121,6 @@ Converts the parsed URL into a string.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-let params = new url.URLParams(urlObject.search.slice(1));
-params.append('fod', '3');
-console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
-```
-
-```TypeScript
-const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-let result = urlObject.toString(); // Output 'https://username:password@host:8080/directory/file?query=pppppp#qwer=da'
-```
-
-```TypeScript
-let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
-let params = new url.URLSearchParams(urlObject.search.slice(1));
-params.append('fod', '3');
-console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
-```
 
 ## hash
 
@@ -234,8 +133,6 @@ Gets and sets the fragment portion of the URL.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -253,8 +150,6 @@ Gets and sets the host portion of the URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -270,8 +165,6 @@ Gets and sets the host name portion of the URL，not include the port.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -289,8 +182,6 @@ Gets and sets the serialized URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -306,8 +197,6 @@ Gets the read-only serialization of the URL's origin.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -325,8 +214,6 @@ Gets the URLParams object that represents the URL query parameter. This property
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -342,8 +229,6 @@ Gets and sets the password portion of the URL.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -361,8 +246,6 @@ Gets and sets the path portion of the URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -378,8 +261,6 @@ Gets and sets the port portion of the URL.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -397,8 +278,6 @@ Gets and sets the protocol portion of the URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -415,8 +294,6 @@ Gets and sets the serialized query portion of the URL.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -432,8 +309,6 @@ Gets the URLSearchParams object that represents the URL query parameter. This pr
 **Type:** URLSearchParams
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -452,8 +327,6 @@ Gets and sets the username portion of the URL.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

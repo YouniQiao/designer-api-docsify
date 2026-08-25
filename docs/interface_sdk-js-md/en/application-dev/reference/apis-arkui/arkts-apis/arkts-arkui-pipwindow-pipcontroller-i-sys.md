@@ -4,14 +4,12 @@ Implements a PiP controller that starts, stops, or updates a PiP window and regi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## isPiPSupported
@@ -23,8 +21,6 @@ isPiPSupported(): boolean
 Returns a Boolean value that indicates whether picture-in-picture is supported
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Window.SessionManager
 

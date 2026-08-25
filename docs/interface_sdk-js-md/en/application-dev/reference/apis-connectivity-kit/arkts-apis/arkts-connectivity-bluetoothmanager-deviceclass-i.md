@@ -4,8 +4,6 @@ Describes the class of a bluetooth device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [DeviceClass](arkts-connectivity-connection-deviceclass-i.md)
@@ -15,7 +13,7 @@ Describes the class of a bluetooth device.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## classOfDevice
@@ -29,8 +27,6 @@ Class of the device.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,8 +46,6 @@ Major classes of Bluetooth devices.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [majorClass](arkts-connectivity-connection-deviceclass-i.md#majorclass)
@@ -69,8 +63,6 @@ Major and minor classes of Bluetooth devices.
 **Type:** MajorMinorClass
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

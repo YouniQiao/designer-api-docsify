@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## clearMemoryCache
@@ -16,14 +16,4 @@ Clears this memory cache.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
-
-**Examples**
-
-```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
-  
-cacheDownload.clearMemoryCache();
-```

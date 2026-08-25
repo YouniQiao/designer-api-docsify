@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## getSeniorModeStateForApp
 
 ```TypeScript
-function getSeniorModeStateForApp(bundleName: string, appIndex?: int): Promise<boolean>
+function getSeniorModeStateForApp(bundleName: string, appIndex?: number): Promise<boolean>
 ```
 
 查询应用“长辈模式”的状态。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -31,7 +29,7 @@ function getSeniorModeStateForApp(bundleName: string, appIndex?: int): Promise<b
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| appIndex | number | 否 |
 
 **返回值：**
 
@@ -47,16 +45,3 @@ function getSeniorModeStateForApp(bundleName: string, appIndex?: int): Promise<b
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
 | [9300008](../errorcode-accessibility.md#9300008-应用分身索引不合法) |
-
-**示例**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-config.getSeniorModeStateForApp('com.example.myapplication', 0).then((data: boolean) => {
-  console.info(`Succeeded in getting seniorModeState for app, data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get seniorModeState for app. Code: ${err.code}, message: ${err.message}`);
-});
-```

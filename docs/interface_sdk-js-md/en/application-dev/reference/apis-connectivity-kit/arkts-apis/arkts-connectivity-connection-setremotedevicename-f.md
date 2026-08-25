@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setRemoteDeviceName
@@ -15,8 +15,6 @@ function setRemoteDeviceName(deviceId: string, name: string): Promise<void>
 Modify remote device name.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -47,19 +45,3 @@ Modify remote device name.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2900001 |
 | 2900003 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    connection.setRemoteDeviceName('11:22:33:44:55:66', 'RemoteDeviceName').then(() => {
-        console.info('setRemoteDeviceName success');
-    }, (error: BusinessError) => {
-        console.error('setRemoteDeviceName: errCode: ' + error.code + ',errMessage' + error.message);
-    })
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

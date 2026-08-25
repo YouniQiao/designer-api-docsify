@@ -6,8 +6,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -30,8 +28,6 @@ showInSubWindow?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -47,11 +43,9 @@ title?: ResourceStr
 菜单标题。  
 **说明：**仅在content设置为Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; 时生效。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

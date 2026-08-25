@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## readLinesSync
@@ -17,8 +17,6 @@ declare function readLinesSync(filePath: string, options?: Options): ReaderItera
 Reads the text content of a file line by line. This API returns the result synchronously.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -52,17 +50,3 @@ Reads the text content of a file line by line. This API returns the result synch
 | 13900041 |
 | 13900042 |
 | 13900044 |
-
-**Examples**
-
-```TypeScript
-import { fileIo as fs, Options } from '@kit.CoreFileKit';
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-let readerIterator = fs.readLinesSync(filePath, options);
-for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-  console.info("content: " + it.value);
-}
-```

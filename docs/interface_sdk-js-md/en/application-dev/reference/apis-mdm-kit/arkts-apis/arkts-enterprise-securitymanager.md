@@ -8,8 +8,6 @@ This module provides enterprise device security management capabilities, includi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,7 +15,7 @@ This module provides enterprise device security management capabilities, includi
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## Summary

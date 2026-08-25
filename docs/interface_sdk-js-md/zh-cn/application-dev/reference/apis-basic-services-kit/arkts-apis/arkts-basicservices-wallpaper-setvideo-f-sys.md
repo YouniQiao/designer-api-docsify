@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setVideo
@@ -15,8 +15,6 @@ function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncC
 将视频资源设置为桌面或锁屏的动态壁纸。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
@@ -40,42 +38,6 @@ function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncC
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = '/data/storage/el2/base/haps/entry/files/test.mp4';
-try {
-    wallpaper.setVideo(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError) => {
-        if (error) {
-            console.error(`Failed to setVideo. Code: ${error.code}, message: ${error.message}`);
-            return;
-        }
-        console.info(`success to setVideo.`);
-    });
-} catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to setVideo. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = '/data/storage/el2/base/haps/entry/files/test.mp4';
-try {
-    wallpaper.setVideo(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-        console.info(`success to setVideo.`);
-    }).catch((error: BusinessError) => {
-        console.error(`Failed to setVideo. Code: ${error.code}, Message: ${error.message}`);
-    });
-} catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to setVideo. Code: ${err.code}, Message: ${err.message}`);
-}
-```
-
 
 ## setVideo
 
@@ -86,8 +48,6 @@ function setVideo(source: string, wallpaperType: WallpaperType): Promise<void>
 将视频资源设置为桌面或锁屏的动态壁纸。使用promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
@@ -115,7 +75,3 @@ function setVideo(source: string, wallpaperType: WallpaperType): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [setVideo](#setvideo)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setDistributedEnableByBundle
@@ -15,8 +15,6 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, cal
 Sets whether to enable distributed notification for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -32,7 +30,7 @@ Sets whether to enable distributed notification for a specified application. Thi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | enable | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -50,39 +48,6 @@ Sets whether to enable distributed notification for a specified application. Thi
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setDistributedEnableByBundleCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("setDistributedEnableByBundle success");
-    }
-};
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnableByBundle(bundle, enable, setDistributedEnableByBundleCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
-    console.info("setDistributedEnableByBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## setDistributedEnableByBundle
 
@@ -93,8 +58,6 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Pr
 Sets whether to enable distributed notification for a specified application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -110,7 +73,7 @@ Sets whether to enable distributed notification for a specified application. Thi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | enable | boolean | Yes |
 
 **Return value:**
@@ -132,7 +95,3 @@ Sets whether to enable distributed notification for a specified application. Thi
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-See [setDistributedEnableByBundle](#setdistributedenablebybundle)

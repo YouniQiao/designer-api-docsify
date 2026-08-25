@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setDistributedEnableByBundles
@@ -15,8 +15,6 @@ function setDistributedEnableByBundles(bundleEnableInfos: Array<DistributedBundl
 批量设置应用是否支持跨设备协同。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -49,60 +47,3 @@ function setDistributedEnableByBundles(bundleEnableInfos: Array<DistributedBundl
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle1: notificationManager.DistributedBundleEnableInfo = {
-    bundleName: 'bundleName1',
-    uid: 1,
-    enable: true
-};
-let bundle2: notificationManager.DistributedBundleEnableInfo = {
-    bundleName: 'bundleName2',
-    uid: 2,
-    enable: true
-};
-let bundles: Array<notificationManager.DistributedBundleEnableInfo> = [
-    bundle1,bundle2
-]
-
-let deviceType: string = 'liteWearable';
-notificationManager.setDistributedEnableByBundles(bundles, deviceType).then(() => {
-    console.info('setDistributedEnableByBundles success');
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnableByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle1: notificationManager.DistributedBundleEnableInfo = {
-    bundleName: 'bundleName1',
-    uid: 1,
-    enable: true
-};
-let bundle2: notificationManager.DistributedBundleEnableInfo = {
-    bundleName: 'bundleName2',
-    uid: 2,
-    enable: true
-};
-let bundles: Array<notificationManager.DistributedBundleEnableInfo> = [
-    bundle1,bundle2
-]
-
-let deviceType: string = 'liteWearable';
-notificationManager.setDistributedEnableByBundles(bundles, deviceType).then(() => {
-    console.info('setDistributedEnableByBundles success');
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setDistributedEnableByBundles failed, code is ${error.code}, message is ${error.message}`);
-});
-```

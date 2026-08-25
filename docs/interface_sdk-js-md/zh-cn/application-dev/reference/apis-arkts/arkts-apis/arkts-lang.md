@@ -5,7 +5,7 @@
 ## 导入模块
 
 ```TypeScript
-import { lang, Retention, RetentionPolicy } from '@kit.ArkTS';
+import { lang, Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -16,11 +16,11 @@ import { lang, Retention, RetentionPolicy } from '@kit.ArkTS';
 | --- |
 | [lang](arkts-arkts-lang-n.md) |
 
-### 接口
+### 注解
 
 | 名称 |
 | --- |
-| [Retention](arkts-arkts-lang-retention-i.md) |
+| [Retention](arkts-arkts-lang-retention-a.md) |
 
 ### 枚举
 

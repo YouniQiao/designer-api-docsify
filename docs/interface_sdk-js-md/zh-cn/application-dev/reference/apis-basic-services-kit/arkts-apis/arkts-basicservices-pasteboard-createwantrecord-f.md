@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createWantRecord
@@ -15,8 +15,6 @@ function createWantRecord(want: Want): PasteDataRecord
 创建一条Want内容条目。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -35,15 +33,3 @@ function createWantRecord(want: Want): PasteDataRecord
 | 类型 |
 | --- |
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-
-let object: Want = {
-    bundleName: "com.example.aafwk.test",
-    abilityName: "com.example.aafwk.test.TwoAbility"
-};
-let record: pasteboard.PasteDataRecord = pasteboard.createWantRecord(object);
-```

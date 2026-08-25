@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## removeGroup
@@ -15,8 +15,6 @@ function removeGroup(): void
 Remove a P2P group.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -30,15 +28,3 @@ Remove a P2P group.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 | [2801001](../errorcode-wifi.md#2801001-p2p-module-error) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    wifiManager.removeGroup();  
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

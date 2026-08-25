@@ -4,14 +4,12 @@ Defines the download content options.@interface DownloadContentOptions
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, DownloadDescription, DownloadContentOptions, DownloadStyleOptions } from '@kit.ArkUI';
+import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, DownloadDescription, DownloadContentOptions, DownloadStyleOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## icon
@@ -25,8 +23,6 @@ DownloadFileButton icon Style.
 **Type:** [DownloadIconStyle](arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,8 +39,6 @@ DownloadFileButton description.
 **Type:** [DownloadDescription](arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

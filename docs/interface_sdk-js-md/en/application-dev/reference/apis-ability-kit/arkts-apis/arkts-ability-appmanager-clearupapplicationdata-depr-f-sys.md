@@ -15,8 +15,6 @@ Clear up application data by bundle name
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md)
@@ -39,39 +37,6 @@ Clear up application data by bundle name
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let bundleName = 'bundleName';
-
-function clearUpApplicationDataCallback(err: BusinessError, data: void) {
-  if (err) {
-    console.error(`ClearUpApplicationDataCallback failed, error code: ${err.code}, error msg: ${err.message}.`);
-  } else {
-    console.info(`ClearUpApplicationDataCallback success, data: ${JSON.stringify(data)}.`);
-  }
-}
-
-appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
-```
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let bundleName = 'bundleName';
-appManager.clearUpApplicationData(bundleName)
-  .then((data) => {
-    console.info(`ClearUpApplicationData success, data: ${JSON.stringify(data)}.`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`ClearUpApplicationData failed, error code: ${err.code}, error msg: ${err.message}.`);
-  });
-```
-
 
 ## clearUpApplicationData
 
@@ -82,8 +47,6 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 Clear up application data by bundle name
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -101,7 +64,3 @@ Clear up application data by bundle name
 | --- | --- | --- |
 | bundleName | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [clearUpApplicationData](#clearupapplicationdata)

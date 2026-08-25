@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStateInfos
@@ -15,8 +15,6 @@ function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallba
 Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -34,33 +32,6 @@ Queries usage information about each bundle within a specified period.This metho
 | end | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-bundleState.queryBundleStateInfos(0, 20000000000000, (err: BusinessError ,
-  res: bundleState.BundleActiveInfoResponse ) => {
-  if (err) {
-    console.error('BUNDLE_ACTIVE queryBundleStateInfos callback failed, because: ' + err.code);
-  } else {
-    console.info('BUNDLE_ACTIVE queryBundleStateInfos callback success.');
-    console.info('BUNDLE_ACTIVE queryBundleStateInfos callback result ' + JSON.stringify(res));
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-bundleState.queryBundleStateInfos(0, 20000000000000).then((res: bundleState.BundleActiveInfoResponse) => {
-  console.info('BUNDLE_ACTIVE queryBundleStateInfos promise success.');
-  console.info('BUNDLE_ACTIVE queryBundleStateInfos promise result ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryBundleStateInfos promise failed, because: ' + err.code);
-});
-```
-
 
 ## queryBundleStateInfos
 
@@ -71,8 +42,6 @@ function queryBundleStateInfos(begin: number, end: number): Promise<BundleActive
 Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -94,7 +63,3 @@ Queries usage information about each bundle within a specified period.This metho
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; |
-
-**Examples**
-
-See [queryBundleStateInfos](#querybundlestateinfos)

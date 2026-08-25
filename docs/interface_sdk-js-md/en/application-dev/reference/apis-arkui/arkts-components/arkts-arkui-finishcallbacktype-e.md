@@ -4,8 +4,6 @@ Defines the type of the **onFinish** callback.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## REMOVED
@@ -17,8 +15,6 @@ REMOVED = 0
 The callback is invoked when the entire animation is removed once it has finished.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +30,9 @@ The callback is invoked when the entire animation is removed once it has finishe
 LOGICALLY = 1
 ```
 
-The callback is invoked when the animation logically enters the falling state, though it may still be in its long tail state.
+The callback is invoked when the animation logically enters the falling state, though it may still be in its number tail state.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

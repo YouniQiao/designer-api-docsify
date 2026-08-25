@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendMessage
@@ -19,8 +19,6 @@ Sends an SMS message.
 > [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md).
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 10
 
@@ -46,27 +44,3 @@ Sends an SMS message.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-
-let sendCallback: AsyncCallback<sms.ISendShortMessageCallback> = (err: BusinessError, data: sms.ISendShortMessageCallback) => {
-    console.info(`sendCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`); 
-};
-let deliveryCallback: AsyncCallback<sms.IDeliveryShortMessageCallback> = (err: BusinessError, data: sms.IDeliveryShortMessageCallback) => {
-    console.info(`deliveryCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`); 
-};
-let options: sms.SendMessageOptions = {
-    slotId: 0,
-    content: 'SMS message content';
-    destinationHost: '+861xxxxxxxxxx',
-    serviceCenter: '+861xxxxxxxxxx',
-    destinationPort: 1000,
-    sendCallback: sendCallback,
-    deliveryCallback: deliveryCallback
-};
-sms.sendMessage(options);
-```

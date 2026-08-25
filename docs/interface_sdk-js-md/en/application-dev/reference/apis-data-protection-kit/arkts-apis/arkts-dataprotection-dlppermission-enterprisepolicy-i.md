@@ -4,14 +4,12 @@ Represents an enterprise custom policy.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## policyString
@@ -25,7 +23,5 @@ JSON string of an enterprise custom policy. The value contains a maximum of 4,19
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention

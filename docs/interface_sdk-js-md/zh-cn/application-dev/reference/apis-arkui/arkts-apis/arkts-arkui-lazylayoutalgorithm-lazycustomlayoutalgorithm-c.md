@@ -10,8 +10,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -23,8 +21,6 @@ constructor(option?: LazyCustomLayoutAlgorithmOptions)
 自定义懒加载布局算法类的构造函数。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,8 +55,6 @@ onLayout(self: FrameNode, position: Position): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -94,8 +88,6 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelp
 > [ChildrenCountMode.ALL_NOT_EXPAND](arkts-arkui-framenode-childrencountmode-e.md)，避免获取子组件总数时全量加载子组件导致懒加载失效。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

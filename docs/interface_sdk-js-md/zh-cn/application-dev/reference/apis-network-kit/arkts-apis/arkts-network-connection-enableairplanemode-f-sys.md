@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## enableAirplaneMode
@@ -15,8 +15,6 @@ function enableAirplaneMode(callback: AsyncCallback<void>): void
 开启飞行模式，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -40,25 +38,6 @@ function enableAirplaneMode(callback: AsyncCallback<void>): void
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.enableAirplaneMode((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.enableAirplaneMode().then((error: void) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 
 ## enableAirplaneMode
 
@@ -69,8 +48,6 @@ function enableAirplaneMode(): Promise<void>
 开启飞行模式，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -92,7 +69,3 @@ function enableAirplaneMode(): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [enableAirplaneMode](#enableairplanemode)

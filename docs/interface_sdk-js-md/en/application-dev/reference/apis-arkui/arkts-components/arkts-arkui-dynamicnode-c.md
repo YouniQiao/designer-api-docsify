@@ -4,8 +4,6 @@ Define DynamicNode.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ onMove(handler: Optional<OnMoveHandler>): T
 Invoked when data is moved during drag and drop sorting. This callback is only applicable in a List component. where each ForEach iteration generates a ListItem component. It allows you to define custom drag actions and handle various drag events.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,6 @@ onMove(handler: Optional<OnMoveHandler>, eventHandler: ItemDragEventHandler): T
 Set the move action.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,14 +4,12 @@ The module provides APIs for album management, including creating an album and a
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## Summary
@@ -21,14 +19,12 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [getPhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md) |
-| [getPhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getPhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md) |
 | [getPhotoAccessHelper(Helper functions to access image and video assets)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md) |
 <!--DelEnd-->
 

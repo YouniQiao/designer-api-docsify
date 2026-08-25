@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryAppStatsInfos
 
 ```TypeScript
-function queryAppStatsInfos(begin: long, end: long): Promise<AppStatsMap>
+function queryAppStatsInfos(begin: number, end: number): Promise<AppStatsMap>
 ```
 
 Queries usage information about each application within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -28,8 +26,8 @@ Queries usage information about each application within a specified period.This 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| begin | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| end | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| begin | number | Yes |
+| end | number | Yes |
 
 **Return value:**
 
@@ -51,16 +49,3 @@ Queries usage information about each application within a specified period.This 
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10000007](../errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryAppStatsInfos(0, 20000000000000).then((res:usageStatistics.AppStatsMap) => {
-  console.info('queryAppStatsInfos promise success.');
-  console.info('queryAppStatsInfos promise result ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('queryAppStatsInfos promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```

@@ -4,8 +4,6 @@ DrawingRenderingContext的尺寸信息。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -19,13 +17,11 @@ DrawingRenderingContext的尺寸信息。
 height: number
 ```
 
-获取DrawingRenderingContext的高度，其值为关联的Canvas组件的高度。 <br>支持单位：vp、px。 <br>默认单位为vp。
+获取DrawingRenderingContext的高度，其值为关联的Canvas组件的高度。 支持单位：vp、px。 默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,13 +35,11 @@ height: number
 width: number
 ```
 
-获取DrawingRenderingContext的宽度，其值为关联的Canvas组件的宽度。 <br>支持单位：vp、px。 <br>默认单位为vp。
+获取DrawingRenderingContext的宽度，其值为关联的Canvas组件的宽度。 支持单位：vp、px。 默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## resetAllEfficiencyResources
@@ -15,8 +15,6 @@ function resetAllEfficiencyResources(): void
 释放已申请的全部能效资源。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -34,16 +32,3 @@ function resetAllEfficiencyResources(): void
 | [9800003](../errorcode-backgroundTaskMgr.md#9800003-ipc通信失败) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-资源申请接口信息校验失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-try {
-  backgroundTaskManager.resetAllEfficiencyResources();
-} catch (error) {
-  console.error(`resetAllEfficiencyResources failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

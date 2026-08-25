@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 ```
 
 ## getAbilityDelegator
@@ -16,8 +16,6 @@ Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-ab
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -27,24 +25,3 @@ Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-ab
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) |
-
-**Examples**
-
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-let want: Want = {
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EntryAbility'
-};
-
-abilityDelegator.startAbility(want, (err) => {
-  if (err) {
-    console.error(`Failed start ability, error: ${JSON.stringify(err)}`);
-  } else {
-    console.info('Success start ability.');
-  }
-});
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## abilityStartSetting
@@ -19,8 +17,6 @@ abilityStartSetting?: { [key: string]: any }
 **类型：** { [key: string]: any }
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -38,8 +34,6 @@ abilityStartSettings?: Record<string, Object>
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -55,8 +49,6 @@ want: Want
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

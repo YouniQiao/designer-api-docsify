@@ -4,8 +4,6 @@ Enumerates the reasons for the last exit of the ability. You can use it together
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = 0
 Unknown reason.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ ABILITY_NOT_RESPONDING = 1
 The ability does not respond.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -56,8 +50,6 @@ The ability exits normally because the user closes the application.Note: If the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -73,8 +65,6 @@ CPP_CRASH = 3
 The ability exits due to [process crash](../../../dfx/cppcrash-guidelines.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,8 +82,6 @@ The ability exits due to a JS_ERROR fault triggered when an application has a JS
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -109,8 +97,6 @@ APP_FREEZE = 5
 The ability exits due to [application freeze](../../../dfx/appfreeze-guidelines.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,8 +114,6 @@ The ability exits due to system performance problems, for example, insufficient 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -143,11 +127,15 @@ RESOURCE_CONTROL = 7
 ```
 
 The ability exits due to improper use of system resources. The specific error cause can be obtained through [LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md). The possible causes are as follows:  
-- **CPU Highload**: The CPU load is high. - **CPU_EXT Highload**: A fast CPU load detection is carried out. - **IO Manage Control**: An I/O management and control operation is carried out. - **App Memory Deterioration**: The application memory usage exceeds the threshold. - **Temperature Control**: The temperature is too high or too low. - **Memory Pressure**: The system is low on memory, triggering process termination in ascending order of priority.
+- **CPU Highload**: The CPU load is high.  
+- **CPU_EXT Highload**: A fast CPU load detection is carried out.  
+- **IO Manage Control**: An I/O management and control operation is carried out.  
+- **App Memory Deterioration**: The application memory usage exceeds the threshold.  
+- **Temperature Control**: The temperature is too high or too low.  
+- **Memory Pressure**: The system is low on memory, triggering process termination in ascending order of  
+priority.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,8 +153,6 @@ The application exits due to an upgrade.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -182,8 +168,6 @@ USER_REQUEST = 9
 The ability exits because it receives a request from the multitasking center.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -201,27 +185,8 @@ The ability exits because it receives a kill signal from the system.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { UIAbility, Want, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    if (launchParam.lastExitReason === AbilityConstant.LastExitReason.APP_FREEZE) {
-      console.info('The ability has exit last because the ability was not responding.');
-    }
-    if (launchParam.lastExitReason === AbilityConstant.LastExitReason.RESOURCE_CONTROL) {
-      console.info(`The ability has exited last because the rss control, the lastExitReason is ${launchParam.lastExitReason}, the lastExitMessage is ${launchParam.lastExitMessage}.`);
-    }
-  }
-}
-```

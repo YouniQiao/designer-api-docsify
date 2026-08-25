@@ -4,8 +4,6 @@ Defines the options of the **GridCol** component.The values of `span`, `offset`,
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ Number of offset columns relative to the original position of the component.The 
 **Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,8 +42,6 @@ Sequence number of the component. Child components of the grid are sorted in asc
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -65,8 +59,6 @@ Number of columns occupied by the component. If it is set to **0**, the componen
 **Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

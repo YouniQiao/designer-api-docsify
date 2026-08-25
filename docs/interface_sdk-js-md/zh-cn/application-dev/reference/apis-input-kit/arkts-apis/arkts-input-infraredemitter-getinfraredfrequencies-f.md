@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
+import { infraredEmitter } from 'kits/@kit.InputKit';
 ```
 
 ## getInfraredFrequencies
@@ -15,8 +15,6 @@ function getInfraredFrequencies(): Array<InfraredFrequency>
 查询设备支持的红外信号的频率范围。建议先使用[hasIrEmitter]接口查询设备是否支持红外发射器。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_INPUT_INFRARED_EMITTER
 
@@ -34,56 +32,3 @@ function getInfraredFrequencies(): Array<InfraredFrequency>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            let frequencies = infraredEmitter.getInfraredFrequencies();
-            console.info(`Succeeded in getting infrared frequencies, frequencies: ${JSON.stringify(frequencies)}.`);
-          } catch (error) {
-            console.error(`Failed to get infrared frequencies, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { infraredEmitter } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            let frequencies = infraredEmitter.getInfraredFrequencies();
-            console.info(`Succeeded in getting infrared frequencies, frequencies: ${JSON.stringify(frequencies)}.`);
-          } catch (error) {
-            console.error(`Failed to get infrared frequencies, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```

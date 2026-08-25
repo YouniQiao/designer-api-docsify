@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpJsHeapData
@@ -20,8 +20,6 @@ Dumps VM heap data.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Parameters:**
@@ -36,31 +34,20 @@ Dumps VM heap data.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  hidebug.dumpJsHeapData("heapData");
-} catch (error) {
-  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## dumpJsHeapData
 
 ```TypeScript
-function dumpJsHeapData(filename: string, needClean: boolean): void
+function dumpJsHeapData(filename : string, needClean : boolean) : void
 ```
 
-Exports the heap data. The input parameter is a user-defined file name, excluding the file suffix. The generated file is in the files folder under the application directory.
+Dumps VM heap data and clears the nodeId cache.
+
+> **NOTE：**&gt;
+> Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to
+> call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +61,3 @@ Exports the heap data. The input parameter is a user-defined file name, excludin
 | --- | --- | --- |
 | filename | string | Yes |
 | needClean | boolean | Yes |
-
-**Examples**
-
-See [dumpJsHeapData](#dumpjsheapdata)

@@ -4,29 +4,25 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from 'kits/@kit.AbilityKit';
 ```
 
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 弹框的高度，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,16 +31,14 @@ height: int
 ## left
 
 ```TypeScript
-left: int
+left: number
 ```
 
 弹框边框的左上角的X坐标。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,16 +47,14 @@ left: int
 ## top
 
 ```TypeScript
-top: int
+top: number
 ```
 
 弹框边框的左上角的Y坐标。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,16 +63,14 @@ top: int
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 弹框的宽度，单位为px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

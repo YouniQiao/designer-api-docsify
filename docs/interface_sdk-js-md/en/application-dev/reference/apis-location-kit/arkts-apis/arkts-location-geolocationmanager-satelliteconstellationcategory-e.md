@@ -4,8 +4,6 @@ Enum for satellite constellation category.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## CONSTELLATION_CATEGORY_UNKNOWN
@@ -17,8 +15,6 @@ CONSTELLATION_CATEGORY_UNKNOWN = 0
 Invalid value.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -32,8 +28,6 @@ GPS.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## CONSTELLATION_CATEGORY_SBAS
@@ -45,8 +39,6 @@ CONSTELLATION_CATEGORY_SBAS = 2
 SBAS.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -60,8 +52,6 @@ GLONASS.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## CONSTELLATION_CATEGORY_QZSS
@@ -73,8 +63,6 @@ CONSTELLATION_CATEGORY_QZSS = 4
 QZSS.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -88,8 +76,6 @@ BEIDOU.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## CONSTELLATION_CATEGORY_GALILEO
@@ -102,8 +88,6 @@ GALILEO.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## CONSTELLATION_CATEGORY_IRNSS
@@ -115,7 +99,5 @@ CONSTELLATION_CATEGORY_IRNSS = 7
 IRNSS.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss

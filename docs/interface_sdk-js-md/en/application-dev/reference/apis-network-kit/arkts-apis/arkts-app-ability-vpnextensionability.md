@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
+import { VpnExtensionAbility, VpnExtensionContext } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary

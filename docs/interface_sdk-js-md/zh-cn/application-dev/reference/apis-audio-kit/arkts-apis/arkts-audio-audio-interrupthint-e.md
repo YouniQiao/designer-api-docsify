@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## INTERRUPT_HINT_NONE
@@ -17,8 +15,6 @@ INTERRUPT_HINT_NONE = 0
 无提示。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ INTERRUPT_HINT_RESUME = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
@@ -49,8 +43,6 @@ INTERRUPT_HINT_PAUSE = 2
 提示音频暂停，暂时失去音频焦点。待焦点可用时，会收到INTERRUPT_HINT_RESUME事件。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ INTERRUPT_HINT_STOP = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
@@ -81,8 +71,6 @@ INTERRUPT_HINT_DUCK = 4
 提示音频躲避开始，降低音量播放。从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -98,8 +86,6 @@ INTERRUPT_HINT_UNDUCK = 5
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
@@ -114,8 +100,6 @@ INTERRUPT_HINT_MUTE = 6
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## INTERRUPT_HINT_UNMUTE
@@ -127,7 +111,5 @@ INTERRUPT_HINT_UNMUTE = 7
 提示音频解除静音。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer

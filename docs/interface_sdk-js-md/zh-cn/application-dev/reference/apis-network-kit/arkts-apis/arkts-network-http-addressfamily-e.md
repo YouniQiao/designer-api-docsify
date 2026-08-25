@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 'CURL_IPRESOLVE_WHATEVER'
 设置此选项后，系统将自行选择目标域名的IPv4地址或IPv6地址。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -32,8 +28,6 @@ ONLY_V4 = 'CURL_IPRESOLVE_V4'
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## ONLY_V6
@@ -45,7 +39,5 @@ ONLY_V6 = 'CURL_IPRESOLVE_V6'
 设置此选项后，系统仅解析目标域名的IPv6地址，忽略IPv4地址。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.Communication.NetStack

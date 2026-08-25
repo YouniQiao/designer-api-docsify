@@ -6,8 +6,6 @@ Provides layout geometry information of the parent component (a custom component
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,11 +21,9 @@ borderWidth: EdgeWidth
 
 Width of the parent component's border. Unit: vp.
 
-**Type:** EdgeWidth
+**Type:** [EdgeWidth](../arkts-apis/arkts-arkui-edgewidth-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +39,9 @@ margin: Margin
 
 Margin values of the parent component. Unit: vp.
 
-**Type:** Margin
+**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,11 +57,9 @@ padding: Padding
 
 Padding values of the parent component. Unit: vp.
 
-**Type:** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
+**Type:** Padding
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

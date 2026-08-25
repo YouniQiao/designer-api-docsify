@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## getWindowProperties
@@ -23,8 +21,6 @@ getWindowProperties(): FloatViewProperties
 获取标准悬浮窗窗口的属性。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,17 +39,6 @@ getWindowProperties(): FloatViewProperties
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
 
-**示例**
-
-```TypeScript
-try {
-  let properties: floatView.FloatViewProperties | undefined = this.floatViewController?.getWindowProperties();
-  console.info('Float view properties: ' + JSON.stringify(properties));
-} catch(e) {
-  console.error(`Failed to get window properties. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## offLimitsChange
 
 ```TypeScript
@@ -63,8 +48,6 @@ offLimitsChange(callback?: Callback<FloatViewLimits>): void
 取消标准悬浮窗限制变化的监听事件。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,19 +65,6 @@ offLimitsChange(callback?: Callback<FloatViewLimits>): void
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-```TypeScript
-let onLimitsChange = (limits: floatView.FloatViewLimits) => {
-  console.info('Float view limitsChange: ' + JSON.stringify(limits));
-};
-try {
-  this.floatViewController?.offLimitsChange(onLimitsChange);
-} catch(e) {
-  console.error(`Failed to off limitsChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## offRectChange
 
 ```TypeScript
@@ -104,8 +74,6 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 取消标准悬浮窗矩形区域变化的监听事件。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -123,19 +91,6 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-```TypeScript
-let onRectChange = (info: floatView.FloatViewRectChangeInfo) => {
-  console.info('Float view rectChange: ' + JSON.stringify(info));
-};
-try {
-  this.floatViewController?.offRectChange(onRectChange);
-} catch(e) {
-  console.error(`Failed to off rectChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## offStateChange
 
 ```TypeScript
@@ -145,8 +100,6 @@ offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 取消标准悬浮窗状态变化的监听事件。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,19 +117,6 @@ offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-```TypeScript
-let onStateChange = (info: floatView.FloatViewStateChangeInfo) => {
-  console.info('Float view stateChange: ' + JSON.stringify(info));
-};
-try {
-  this.floatViewController?.offStateChange(onStateChange);
-} catch(e) {
-  console.error(`Failed to off stateChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## onLimitsChange
 
 ```TypeScript
@@ -186,8 +126,6 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 注册标准悬浮窗限制变化的监听事件，当限制规格变化时触发回调，例如设备折叠或者展开。不再使用时，取消监听以避免内存泄漏。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -206,19 +144,6 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) |
 
-**示例**
-
-```TypeScript
-let onLimitsChange = (limits: floatView.FloatViewLimits) => {
-  console.info('Float view limitsChange: ' + JSON.stringify(limits));
-};
-try {
-  this.floatViewController?.onLimitsChange(onLimitsChange);
-} catch(e) {
-  console.error(`Failed to on limitsChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## onRectChange
 
 ```TypeScript
@@ -228,8 +153,6 @@ onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 注册标准悬浮窗矩形区域（位置和大小）变化的监听事件。不再使用时，取消监听以避免内存泄漏。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -248,19 +171,6 @@ onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) |
 
-**示例**
-
-```TypeScript
-let onRectChange = (info: floatView.FloatViewRectChangeInfo) => {
-  console.info('Float view rectChange: ' + JSON.stringify(info));
-};
-try {
-  this.floatViewController?.onRectChange(onRectChange);
-} catch(e) {
-  console.error(`Failed to on rectChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## onStateChange
 
 ```TypeScript
@@ -270,8 +180,6 @@ onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 注册标准悬浮窗状态变化的监听事件。不再使用时，取消监听以避免内存泄漏。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,19 +198,6 @@ onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) |
 
-**示例**
-
-```TypeScript
-let onStateChange = (info: floatView.FloatViewStateChangeInfo) => {
-  console.info('Float view stateChange: ' + JSON.stringify(info));
-};
-try {
-  this.floatViewController?.onStateChange(onStateChange);
-} catch(e) {
-  console.error(`Failed to on stateChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## restoreMainWindow
 
 ```TypeScript
@@ -312,8 +207,6 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 恢复标准悬浮窗的主窗口到前台显示。如果主窗口已处于前台时调用，将抬升主窗口层级。此接口只能在标准悬浮窗窗口被点击后使用。当主窗口处于PAUSED生命周期或处于多任务状态时，调用接口将抛出错误码1300032。使用Promise 异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -340,26 +233,6 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
 | [1300032](../errorcode-window.md#1300032-恢复主窗口失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let param: Record<string, Object> = {
-  "info": "helloworld",
-};
-// 闪控窗状态需是STARTED
-try {
-  this.floatViewController?.restoreMainWindow(param).then(() => {
-    console.info('Succeeded in restoring main window.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to restore main window. Cause:${err.code}, message:${err.message}`);
-  });
-} catch(e) {
-  console.error(`Failed to restore main window. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## setFloatViewVisibilityInApp
 
 ```TypeScript
@@ -369,8 +242,6 @@ setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 设置应用在前台时标准悬浮窗窗口是否可见。使用Promise异步回调。创建标准悬浮窗后未调用此接口前，默认其在应用处于前台时为可见状态。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -395,22 +266,6 @@ setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  this.floatViewController?.setFloatViewVisibilityInApp(true).then(() => {
-    console.info('Succeeded in setting float view visibility in app.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to set float view visibility in app. Cause:${err.code}, message:${err.message}`);
-  });
-} catch(e) {
-  console.error(`Failed to set float view visibility in app. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## setUIContext
 
 ```TypeScript
@@ -421,8 +276,6 @@ setUIContext(path: string, storage?: LocalStorage): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -432,7 +285,7 @@ setUIContext(path: string, storage?: LocalStorage): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| storage | [LocalStorage](arkts-arkui-localstorage-localstorage-c.md) | 否 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | 否 |
 
 **返回值：**
 
@@ -446,22 +299,6 @@ setUIContext(path: string, storage?: LocalStorage): Promise<void>
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  this.floatViewController?.setUIContext('pages/Index').then(() => {
-    console.info('Succeeded in setting UI context.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to set UI context. Cause:${err.code}, message:${err.message}`);
-  });
-} catch(e) {
-  console.error(`Failed to set UI context. Cause:${e.code}, message:${e.message}`);
-}
-```
 
 ## setUIContextByName
 
@@ -473,8 +310,6 @@ setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -484,7 +319,7 @@ setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| storage | [LocalStorage](arkts-arkui-localstorage-localstorage-c.md) | 否 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | 否 |
 
 **返回值：**
 
@@ -499,52 +334,6 @@ setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { entryName } from './Hello'; // 导入命名路由页面
-
-@Entry
-@Component
-struct Index {
-  private floatViewController: floatView.FloatViewController | undefined = undefined;
-  // 创建控制器
-  // ...
-  public setUIContextByName(): void {
-    try {
-      this.floatViewController?.setUIContextByName(entryName).then(() => {
-        console.info('Succeeded in loading the content.');
-      }).catch((err: BusinessError): void => {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (e) {
-      console.error(`Failed to load the content. Cause code: ${e.code}, message: ${e.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-// Hello.ets
-export const entryName : string = 'Hello';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Hello {
-  @State message: string = 'Hello World'
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## setWindowSize
 
 ```TypeScript
@@ -554,8 +343,6 @@ setWindowSize(size: window.Size): Promise<void>
 设置标准悬浮窗窗口大小。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口获取推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通 过[onRectChange](#onrectchange)接口监 听。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -581,27 +368,6 @@ setWindowSize(size: window.Size): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let size: window.Size = {
-  width: 400,
-  height: 600
-};
-try {
-  this.floatViewController?.setWindowSize(size).then(() => {
-    console.info('Succeeded in setting window size.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to set window size. Cause:${err.code}, message:${err.message}`);
-  });
-} catch(e) {
-  console.error(`Failed to set window size. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## start
 
 ```TypeScript
@@ -611,8 +377,6 @@ start(): Promise<void>
 启动标准悬浮窗窗口。接口返回不表示start流程结束，需要通过 [onStateChange](#onstatechange)接 口监听到STARTED回调时判断启动成功。建议在调用[setUIContext()](#setuicontext)或 [setUIContextByName()](#setuicontextbyname)后调用start()。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.FLOAT_VIEW
 
@@ -638,22 +402,6 @@ start(): Promise<void>
 | [1300033](../errorcode-window.md#1300033-启动闪控窗失败) |
 | [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  this.floatViewController?.start().then(() => {
-    console.info('Succeeded in starting float view.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to start float view. Cause:${err.code}, message:${err.message}`);
-  });
-} catch(e) {
-  console.error(`Failed to start float view. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## stop
 
 ```TypeScript
@@ -663,8 +411,6 @@ stop(): Promise<void>
 停止标准悬浮窗窗口。接口返回不表示stop流程结束，需要通过 [onStateChange](#onstatechange)接 口监听到STOPPED回调时判断停止成功。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -685,22 +431,6 @@ stop(): Promise<void>
 | [1300030](../errorcode-window.md#1300030-重复操作闪控窗) |
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  this.floatViewController?.stop().then(() => {
-    console.info('Succeeded in stopping float view.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to stop float view. Cause:${err.code}, message:${err.message}`);
-  });
-} catch(e) {
-  console.error(`Failed to stop float view. Cause:${e.code}, message:${e.message}`);
-}
-```
-
 ## switchTemplate
 
 ```TypeScript
@@ -710,8 +440,6 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 切换标准悬浮窗的模板并改变其窗口尺寸。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md)接口获取目标模板类型推荐的宽高范围和宽高比范围，再根据推荐值调用本 接口。窗口实际大小变化可通过 [onRectChange](#onrectchange)接口监听 。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -736,28 +464,3 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let newSize: window.Size = {
-  width: 800,
-  height: 100
-};
-let templateProperty: floatView.TemplateProperty = {
-  templateType: floatView.FloatViewTemplateType.HORIZONTAL_BAR,
-  size: newSize,
-};
-try {
-  this.floatViewController?.switchTemplate(templateProperty).then(() => {
-    console.info('Succeeded in switching window type and size.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to switch window type and size. Cause:${err.code}, message:${err.message}`);
-  });
-} catch(e) {
-  console.error(`Failed to switch window type and size. Cause:${e.code}, message:${e.message}`);
-}
-```

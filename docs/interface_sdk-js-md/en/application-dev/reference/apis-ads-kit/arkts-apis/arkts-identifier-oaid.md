@@ -10,14 +10,12 @@ This module provides the capability of obtaining and resetting the Open Anonymou
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Advertising.OAID
 
 ## Modules to Import
 
 ```TypeScript
-import { identifier } from '@kit.AdsKit';
+import { identifier } from 'kits/@kit.AdsKit';
 ```
 
 ## Summary

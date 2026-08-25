@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getSharedDirectoryInfo
@@ -15,8 +15,6 @@ function getSharedDirectoryInfo(): Promise<Array<SharedDirectoryInfo>>
 Gets the shared sandbox directories of applications
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_SHARED_FILE
 

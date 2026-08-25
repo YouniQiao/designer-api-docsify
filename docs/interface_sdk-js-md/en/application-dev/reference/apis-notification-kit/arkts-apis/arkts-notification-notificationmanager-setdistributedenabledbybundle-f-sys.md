@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setDistributedEnabledByBundle
@@ -16,8 +16,6 @@ Sets whether a specified application enables cross-device collaboration. This AP
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ Sets whether a specified application enables cross-device collaboration. This AP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | deviceType | string | Yes |
 | enable | boolean | Yes |
 
@@ -52,21 +50,3 @@ Sets whether a specified application enables cross-device collaboration. This AP
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-    uid: 1
-};
-let enable: boolean = true;
-let deviceType: string = "phone";
-notificationManager.setDistributedEnabledByBundle(bundle, deviceType, enable).then(() => {
-    console.info("setDistributedEnabledByBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```

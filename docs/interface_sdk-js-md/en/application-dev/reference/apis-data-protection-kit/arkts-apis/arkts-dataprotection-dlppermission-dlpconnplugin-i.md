@@ -9,14 +9,12 @@ Registers the callback capability with the system ability (SA). This API is used
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## connectServer
@@ -31,8 +29,6 @@ This API is called by the SA. After the request of connecting to the cloud serve
 > **connectServer** indicates a call from the system capability side to the frontend.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE

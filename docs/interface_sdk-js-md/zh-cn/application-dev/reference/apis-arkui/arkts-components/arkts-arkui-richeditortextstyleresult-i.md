@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ decoration: DecorationStyleResult
 
 文本装饰线样式信息。
 
-**类型：** DecorationStyleResult
+**类型：** [DecorationStyleResult](../arkts-apis/arkts-arkui-decorationstyleresult-i.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,11 +37,9 @@ fontColor: ResourceColor
 
 文本颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ fontFamily: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -84,8 +76,6 @@ fontFeature?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -105,8 +95,6 @@ fontSize: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -124,8 +112,6 @@ fontStyle: FontStyle
 **类型：** FontStyle
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -145,8 +131,6 @@ fontWeight: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -164,8 +148,6 @@ halfLeading?: boolean
 **类型：** boolean
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -185,8 +167,6 @@ letterSpacing?: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -205,8 +185,6 @@ lineHeight?: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -221,11 +199,9 @@ strokeColor?: ResourceColor
 
 文本描边颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -241,11 +217,9 @@ strokeJoinStyle?: StrokeJoinStyle
 
 文本描边拐角样式。默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** StrokeJoinStyle
+**类型：** [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -259,13 +233,11 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: number
 ```
 
-文本描边宽度。单位为vp。
+文本描边宽度。单位为[vp](../arkts-apis/arkts-arkui-length-t.md)。
 
 **类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -281,11 +253,9 @@ textBackgroundStyle?: TextBackgroundStyle
 
 文本背景样式。
 
-**类型：** TextBackgroundStyle
+**类型：** [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -302,11 +272,9 @@ textShadow?: Array<ShadowOptions>
 文字阴影效果。  
 **说明：**仅支持查询阴影模糊半径、颜色和偏移量。
 
-**类型：** Array&lt;ShadowOptions&gt;
+**类型：** Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

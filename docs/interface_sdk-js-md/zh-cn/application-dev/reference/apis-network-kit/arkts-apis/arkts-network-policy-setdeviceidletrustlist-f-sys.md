@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## setDeviceIdleTrustlist
@@ -15,8 +15,6 @@ function setDeviceIdleTrustlist(uids: Array<number>, isAllowed: boolean, callbac
 设置多个 uid 是否在休眠防火墙的白名单，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -43,29 +41,6 @@ function setDeviceIdleTrustlist(uids: Array<number>, isAllowed: boolean, callbac
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.setDeviceIdleTrustlist([11111, 22222], true, (error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .setDeviceIdleTrustlist([11111, 22222], true)
-  .then(() => {
-    console.info('setDeviceIdleTrustlist success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## setDeviceIdleTrustlist
 
@@ -76,8 +51,6 @@ function setDeviceIdleTrustlist(uids: Array<number>, isAllowed: boolean): Promis
 设置多个 uid 是否在休眠防火墙的白名单，使用 Promise 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -108,7 +81,3 @@ function setDeviceIdleTrustlist(uids: Array<number>, isAllowed: boolean): Promis
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [setDeviceIdleTrustlist](#setdeviceidletrustlist)

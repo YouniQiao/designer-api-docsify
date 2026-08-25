@@ -4,30 +4,26 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## credentialCount
 
 ```TypeScript
-credentialCount: int
+credentialCount: number
 ```
 
 注册的凭据数量。表示当前用户已注册的该类型凭据数量，例如指纹数量或人脸数量。  
 **注意**：当复用认证结果时，如果之前认证使用的凭据已被删除，返回的credentialCount可能为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,17 +32,15 @@ credentialCount: int
 ## credentialDigest
 
 ```TypeScript
-credentialDigest: int
+credentialDigest: number
 ```
 
 注册的凭据摘要，在凭据增加时随机生成。该值用于标识当前注册凭据的版本，当用户新增或删除凭据时该值会变化。应用可保存此值并在后续查询时对比，以判断凭据是否发生变化。  
 **注意**：当复用认证结果时，如果之前认证使用的凭据已被删除，返回的credentialDigest可能为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

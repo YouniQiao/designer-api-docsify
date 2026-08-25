@@ -3,8 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## offSeniorModeStateChange
@@ -17,8 +17,6 @@ function offSeniorModeStateChange(callback?: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -28,31 +26,3 @@ function offSeniorModeStateChange(callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
-
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe senior mode state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.onSeniorModeStateChange(this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.offSeniorModeStateChange(this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```

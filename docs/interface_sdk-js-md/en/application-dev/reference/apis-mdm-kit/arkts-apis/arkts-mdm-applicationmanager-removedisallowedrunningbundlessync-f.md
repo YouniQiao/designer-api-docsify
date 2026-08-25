@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedRunningBundlesSync
@@ -15,8 +15,6 @@ function removeDisallowedRunningBundlesSync(admin: Want, appIds: Array<string>, 
 Removes applications from the application running blocklist of the current or specified user. After an application is removed, it is allowed to run under the current or specified user.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -40,25 +38,3 @@ Removes applications from the application running blocklist of the current or sp
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace it as required.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-try {
-  applicationManager.removeDisallowedRunningBundlesSync(wantTemp, appIds);
-  console.info('Succeeded in removing disallowed running bundles.');
-} catch (err) {
-  console.error(`Failed to remove disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```

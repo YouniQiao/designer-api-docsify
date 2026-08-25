@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 ## MODE_NORMAL
@@ -17,8 +15,6 @@ MODE_NORMAL = 600
 表示标准模式，默认值。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
@@ -32,8 +28,6 @@ MODE_POWER_SAVE
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 ## MODE_PERFORMANCE
@@ -45,8 +39,6 @@ MODE_PERFORMANCE
 表示性能模式。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
@@ -60,8 +52,6 @@ MODE_EXTREME_POWER_SAVE
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 ## MODE_CUSTOM_POWER_SAVE
@@ -73,7 +63,5 @@ MODE_CUSTOM_POWER_SAVE = 650
 表示自定义省电模式。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core

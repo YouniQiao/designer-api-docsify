@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## setWatermarkImageForAppWindows
@@ -15,8 +15,6 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 设置或取消本应用进程下窗口的水印图片，使用Promise异步回调。该接口需要在 [loadContent()](arkts-arkui-window-window-i.md#loadcontent) 或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使 用。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -39,35 +37,3 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
-
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { BusinessError } from "@kit.BasicServicesKit";
-
-let color: ArrayBuffer = new ArrayBuffer(96);
-let initializationOptions: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: image.PixelMapFormat.RGBA_8888,
-  size: {
-    height: 4,
-    width: 6,
-  },
-};
-image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMap) => {
-  console.info("Succeeded in creating pixelmap.");
-  try {
-    let promise = window.setWatermarkImageForAppWindows(pixelMap);
-    promise.then(() => {
-        console.info("Succeeded in setting watermark image.");
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to set watermark image. Cause code: ${err.code}, message: ${err.message}`);
-    });
-  } catch (exception) {
-    console.error(`Failed to set watermark image. Exception code: ${exception.code}, message: ${exception.message}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
-});
-```

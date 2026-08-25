@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## init
@@ -19,8 +19,6 @@ Initializes the active tag chip.
 > [initialize](arkts-connectivity-connectedtag-initialize-f.md) instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

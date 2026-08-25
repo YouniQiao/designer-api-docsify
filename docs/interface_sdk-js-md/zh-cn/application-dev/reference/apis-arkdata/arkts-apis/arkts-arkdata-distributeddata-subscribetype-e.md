@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** SubscribeType
@@ -21,8 +19,6 @@ SUBSCRIBE_TYPE_LOCAL = 0
 表示订阅本地数据变更。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ SUBSCRIBE_TYPE_REMOTE = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** SUBSCRIBE_TYPE_REMOTE
@@ -57,8 +51,6 @@ SUBSCRIBE_TYPE_ALL = 2
 表示订阅远端和本地数据变更。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

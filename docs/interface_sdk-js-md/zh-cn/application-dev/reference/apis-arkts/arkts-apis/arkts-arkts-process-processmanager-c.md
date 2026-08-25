@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## exit
@@ -24,8 +22,6 @@ exit(code: number): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -36,17 +32,6 @@ exit(code: number): void
 | --- | --- | --- |
 | code | number | 是 |
 
-**示例**
-
-```TypeScript
-process.exit(0);
-```
-
-```TypeScript
-let processManager = new process.ProcessManager();
-processManager.exit(0);
-```
-
 ## getEnvironmentVar
 
 ```TypeScript
@@ -56,8 +41,6 @@ getEnvironmentVar(name: string): string
 获取环境变量对应的值。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -75,19 +58,6 @@ getEnvironmentVar(name: string): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-let pres = process.getEnvironmentVar("PATH");
-```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// 获取PATH环境变量的值
-let pres = processManager.getEnvironmentVar("PATH");
-```
-
 ## getSystemConfig
 
 ```TypeScript
@@ -97,8 +67,6 @@ getSystemConfig(name: number): number
 获取系统配置信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -116,22 +84,6 @@ getSystemConfig(name: number): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-let _SC_ARG_MAX = 0;
-let pres = process.getSystemConfig(_SC_ARG_MAX);
-```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// 定义系统配置参数
-let _SC_ARG_MAX = 0;
-// 获取系统配置信息
-let pres = processManager.getSystemConfig(_SC_ARG_MAX);
-```
-
 ## getThreadPriority
 
 ```TypeScript
@@ -141,8 +93,6 @@ getThreadPriority(v: number): number
 根据指定的 tid 获取线程优先级。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -160,22 +110,6 @@ getThreadPriority(v: number): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-let tid = process.tid;
-let pres = process.getThreadPriority(tid);
-```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// 获取当前线程tid
-let tid = process.tid;
-// 根据tid获取线程优先级
-let pres = processManager.getThreadPriority(tid);
-```
-
 ## getUidForName
 
 ```TypeScript
@@ -185,8 +119,6 @@ getUidForName(v: string): number
 根据指定的用户名，从系统的用户数据库中获取该用户 uid。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -204,19 +136,6 @@ getUidForName(v: string): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-let pres = process.getUidForName("tool");
-```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// 根据用户名获取uid
-let pres = processManager.getUidForName("tool");
-```
-
 ## isAppUid
 
 ```TypeScript
@@ -226,8 +145,6 @@ isAppUid(v: number): boolean
 判断 uid 是否属于当前应用程序。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -245,24 +162,6 @@ isAppUid(v: number): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-// uid通过process.uid获取
-let pres = process.uid;
-let result = process.isAppUid(pres);
-```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// uid通过process.uid获取
-let pres = process.uid;
-// 判断uid是否属于当前应用程序
-let result = processManager.isAppUid(pres);
-console.info("result:", result); // result: true
-```
-
 ## kill
 
 ```TypeScript
@@ -272,8 +171,6 @@ kill(signal: number, pid: number): boolean
 发送信号到指定的进程，结束指定进程（仅支持结束本进程）。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -291,19 +188,3 @@ kill(signal: number, pid: number): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let pid = process.pid;
-let result = process.kill(28, pid);
-```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// 获取当前进程pid
-let pres = process.pid;
-// 发送信号28结束当前进程
-let result = processManager.kill(28, pres);
-```

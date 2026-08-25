@@ -4,8 +4,6 @@ Describes the text background color style.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ A constructor used to create a text background style.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -35,7 +31,7 @@ A constructor used to create a text background style.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [textBackgroundStyle](#textbackgroundstyle) | [TextBackgroundStyle](#textbackgroundstyle) | Yes |
+| [textBackgroundStyle](#textbackgroundstyle) | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) | Yes |
 
 ## textBackgroundStyle
 
@@ -45,11 +41,9 @@ readonly textBackgroundStyle: TextBackgroundStyle
 
 Text background color of the styled string.Default value:{color: Color.Transparent,radius: 0}
 
-**Type:** TextBackgroundStyle
+**Type:** [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md)
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedPermissionBundle
@@ -30,8 +30,6 @@ Adds an application to the permission usage exception list. Applications in the 
 > 5. Both system applications and third-party applications can be added.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 

@@ -4,8 +4,6 @@ Params carried by the framework when prompting for a companion device passcode.@
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Params carried by the framework when prompting for a companion device passcode.@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## challenge
@@ -27,8 +25,6 @@ Challenge carried by the framework when prompting for a companion device passcod
 **Type:** Uint8Array
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

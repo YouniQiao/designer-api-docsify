@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## getLength
@@ -25,8 +25,6 @@ function getLength(): string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 18
 
 **替代接口：** [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)
@@ -40,10 +38,3 @@ function getLength(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-let size = this.getUIContext().getRouter().getLength();
-console.info('pages stack size = ' + size);
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## getEnvironmentVar
@@ -15,8 +15,6 @@ function getEnvironmentVar(name: string): string
 Obtains the value of an environment variable.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -35,14 +33,3 @@ Obtains the value of an environment variable.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let pres = process.getEnvironmentVar("PATH");
-```
-
-```TypeScript
-let pro = new process.ProcessManager();
-let pres = pro.getEnvironmentVar("PATH");
-```

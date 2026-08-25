@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** [Location](arkts-location-geolocationmanager-location-i.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
+import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from 'kits/@kit.LocationKit';
 ```
 
 ## accuracy
@@ -29,8 +27,6 @@ accuracy: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -52,8 +48,6 @@ altitude: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** [altitude](arkts-location-geolocationmanager-location-i.md#altitude)
@@ -73,8 +67,6 @@ latitude: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -96,8 +88,6 @@ longitude: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** [longitude](arkts-location-geolocationmanager-location-i.md#longitude)
@@ -117,8 +107,6 @@ time: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 

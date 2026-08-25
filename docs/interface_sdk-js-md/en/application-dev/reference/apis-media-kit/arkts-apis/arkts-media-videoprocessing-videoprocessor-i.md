@@ -4,14 +4,12 @@ Provides the VideoProcessor type, including AIHDR related functions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessing } from '@kit.MediaKit';
+import { videoProcessing } from 'kits/@kit.MediaKit';
 ```
 
 ## getStatus
@@ -23,8 +21,6 @@ getStatus(): Promise<VideoProcessorStatus | undefined>
 Gets the current status of video processor features.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,8 +47,6 @@ offStatusChange(callback?: VideoProcessorStatusCallback): void
 Unregisters a listener for video processor status changes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,8 +75,6 @@ onStatusChange(callback: VideoProcessorStatusCallback): void
 Registers a listener for video processor status changes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

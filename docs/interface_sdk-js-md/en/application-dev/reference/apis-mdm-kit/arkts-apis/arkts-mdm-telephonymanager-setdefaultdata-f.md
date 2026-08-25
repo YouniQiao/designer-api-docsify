@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setDefaultData
@@ -15,8 +15,6 @@ function setDefaultData(admin: Want, slotId: number): void
 Sets the SIM card in the specified slot as the default data SIM card. The device will use the data connection from the SIM card in that slot for internet access. For example, in dual-SIM device management scenarios, an enterprise can specify a default data SIM card for employee devices to centrally manage data usage. To successfully call this API, the SIM card must be inserted and airplane mode must be turned off.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 

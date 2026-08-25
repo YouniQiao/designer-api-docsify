@@ -4,8 +4,6 @@ USB设备信息。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)
@@ -15,7 +13,7 @@ USB设备信息。
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## busNum
@@ -29,8 +27,6 @@ busNum: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -50,8 +46,6 @@ clazz: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [clazz](arkts-basicservices-usbmanager-usbdevice-i.md#clazz)
@@ -69,8 +63,6 @@ configs: Array<USBConfig>
 **类型：** Array&lt;[USBConfig](arkts-basicservices-usb-usbconfig-i.md)&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -90,8 +82,6 @@ devAddress: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [devAddress](arkts-basicservices-usbmanager-usbdevice-i.md#devaddress)
@@ -109,8 +99,6 @@ manufacturerName: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -130,8 +118,6 @@ name: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [name](arkts-basicservices-usbmanager-usbdevice-i.md#name)
@@ -149,8 +135,6 @@ productId: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -170,8 +154,6 @@ productName: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [productName](arkts-basicservices-usbmanager-usbdevice-i.md#productname)
@@ -189,8 +171,6 @@ protocol: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -210,8 +190,6 @@ serial: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [serial](arkts-basicservices-usbmanager-usbdevice-i.md#serial)
@@ -229,8 +207,6 @@ subClass: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -250,8 +226,6 @@ vendorId: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [vendorId](arkts-basicservices-usbmanager-usbdevice-i.md#vendorid)
@@ -269,8 +243,6 @@ version: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

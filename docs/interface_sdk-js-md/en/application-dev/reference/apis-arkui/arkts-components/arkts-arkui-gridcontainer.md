@@ -12,8 +12,6 @@ Defines the constructor of GridContainer.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** grid_col/GridColInterface

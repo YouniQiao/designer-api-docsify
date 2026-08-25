@@ -1,7 +1,5 @@
 # PromiseConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ allSettled<T extends readonly unknown[] | []>(values: T): Promise<{ -readonly [P
 ```
 
 Creates a Promise that is resolved with an array of results when all of the provided Promises resolve or reject.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,8 +30,6 @@ allSettled<T>(values: Iterable<T | PromiseLike<T>>): Promise<PromiseSettledResul
 ```
 
 Creates a Promise that is resolved with an array of results when all of the provided Promises resolve or reject.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

@@ -8,8 +8,6 @@ Defines the callback for an auto-fill request, which is used to automatically fi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore

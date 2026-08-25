@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [ColorMode](arkts-ability-configurationconstant-colormode-e.md)
@@ -21,8 +19,6 @@ COLOR_MODE_NOT_SET = -1
 未设置颜色模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ COLOR_MODE_DARK = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#color_mode_dark)
@@ -57,8 +51,6 @@ COLOR_MODE_LIGHT = 1
 浅色模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

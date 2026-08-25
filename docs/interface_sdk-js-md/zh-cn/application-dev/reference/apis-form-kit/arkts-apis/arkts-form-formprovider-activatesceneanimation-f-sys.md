@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## activateSceneAnimation
@@ -15,8 +15,6 @@ function activateSceneAnimation(formId: string): Promise<void>
 互动卡片请求状态切换到激活态，只针对[场景动效类型互动卡片](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams标签)生效，使用Promise异 步回调。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -47,45 +45,3 @@ function activateSceneAnimation(formId: string): Promise<void>
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 | [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-
-try {
-  formProvider.activateSceneAnimation(formId).then(() => {
-    console.info('activateSceneAnimation succeed.');
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-
-try {
-  formProvider.activateSceneAnimation(formId).then(() => {
-    console.info('activateSceneAnimation succeed.');
-  }).catch((error) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```

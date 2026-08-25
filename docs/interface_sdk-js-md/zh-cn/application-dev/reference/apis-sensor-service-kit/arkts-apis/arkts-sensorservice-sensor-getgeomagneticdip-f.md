@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getGeomagneticDip
@@ -21,8 +21,6 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getInclination](arkts-sensorservice-sensor-getinclination-f.md)(inclinationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;double&gt;)
@@ -35,33 +33,6 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 | --- | --- | --- |
 | inclinationMatrix | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data: number) => {
-  if (err) {
-    console.error(`Failed to register data. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info("Succeeded in getting getGeomagneticDip interface get data: " + data);
-})
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1]);
-promise.then((data: number) => {
-  console.info('Succeeded in get GeomagneticDip_promise', data);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
 
 
 ## getGeomagneticDip
@@ -77,8 +48,6 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 > [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -97,7 +66,3 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-参见 [getGeomagneticDip](#getgeomagneticdip)

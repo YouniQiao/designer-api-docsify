@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## check
@@ -16,8 +16,6 @@ Obtains the list of objects that are leaked and registered using **jsLeakWatcher
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 **Return value:**
@@ -25,9 +23,3 @@ Obtains the list of objects that are leaked and registered using **jsLeakWatcher
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let leakObjlist:string = jsLeakWatcher.check();
-```

@@ -4,8 +4,6 @@ Decide whether the width of select menu fit the trigger or content@enum { string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## FIT_CONTENT
@@ -17,8 +15,6 @@ FIT_CONTENT = 'fit_content'
 The menu width fit the content.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,8 +31,6 @@ FIT_TRIGGER = 'fit_trigger'
 The menu width fit the trigger.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

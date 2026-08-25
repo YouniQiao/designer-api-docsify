@@ -38,6 +38,8 @@
   - [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md)
   <!--Del-->
   - [CameraOutputCapability(system api)](arkts-camera-camera-cameraoutputcapability-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CameraSharedStatusInfo(system api)](arkts-camera-camera-camerasharedstatusinfo-i-sys.md)<!--DelEnd-->
   - [CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)
   - [CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)
   - [CapturePhoto](arkts-camera-camera-capturephoto-i.md)
@@ -257,6 +259,8 @@
   <!--Del-->
   - [CameraImagingMode(system api)](arkts-camera-camera-cameraimagingmode-e-sys.md)<!--DelEnd-->
   - [CameraPosition](arkts-camera-camera-cameraposition-e.md)
+  <!--Del-->
+  - [CameraSharedStatus(system api)](arkts-camera-camera-camerasharedstatus-e-sys.md)<!--DelEnd-->
   - [CameraStatus](arkts-camera-camera-camerastatus-e.md)
   - [CameraType](arkts-camera-camera-cameratype-e.md)
   <!--Del-->

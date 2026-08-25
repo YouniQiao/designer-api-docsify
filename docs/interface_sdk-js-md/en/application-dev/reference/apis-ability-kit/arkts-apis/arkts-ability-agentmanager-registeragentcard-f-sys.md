@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## registerAgentCard
@@ -15,8 +15,6 @@ function registerAgentCard(agentCard: AgentCard): Promise<void>
 Registers an AgentCard. If `agentCard.type` is not specified, it defaults to `agentConstant.AgentCardType.APP`. When the type is `APP` or `LOW_CODE`, `appInfo` is validated, especially `bundleName` and `abilityName`. A maximum of 1000 AgentCards can be registered under one bundle.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MODIFY_AGENT_CARD
 

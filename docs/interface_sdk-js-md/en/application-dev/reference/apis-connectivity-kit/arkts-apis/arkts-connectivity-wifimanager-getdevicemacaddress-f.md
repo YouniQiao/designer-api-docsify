@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getDeviceMacAddress
@@ -15,8 +15,6 @@ function getDeviceMacAddress(): string[]
 Obtain the MAC address of a Wi-Fi device. Wi-Fi must be enabled. The MAC address is unique and cannot be changed.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_LOCAL_MAC and ohos.permission.GET_WIFI_INFO
 
@@ -36,16 +34,3 @@ Obtain the MAC address of a Wi-Fi device. Wi-Fi must be enabled. The MAC address
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let ret = wifiManager.getDeviceMacAddress();
-    console.info("deviceMacAddress:" + JSON.stringify(ret));
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

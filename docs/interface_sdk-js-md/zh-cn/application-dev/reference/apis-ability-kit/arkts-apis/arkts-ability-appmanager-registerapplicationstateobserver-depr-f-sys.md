@@ -15,8 +15,6 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-ability-appmanager-on-f.md#onapplicationstate)
@@ -38,34 +36,3 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-
-const observerCode = appManager.registerApplicationStateObserver({
-  onForegroundApplicationChanged(appStateData) {
-    console.info(`onForegroundApplicationChanged, appStateData: ${appStateData}.`);
-  },
-  onAbilityStateChanged(abilityStateData) {
-    console.info(`onAbilityStateChanged, abilityStateData: ${abilityStateData}.`);
-  },
-  onProcessCreated(processData) {
-    console.info(`onProcessCreated, processData: ${processData}.`);
-  },
-  onProcessDied(processData) {
-    console.info(`onProcessDied, processData: ${processData}.`);
-  },
-  onProcessStateChanged(processData) {
-    console.info(`onProcessStateChanged, processData: ${processData}.`);
-  },
-  onAppStarted(appStateData) {
-    console.info(`onAppStarted, appStateData: ${JSON.stringify(appStateData)}`);
-  },
-  onAppStopped(appStateData) {
-    console.info(`onAppStopped, appStateData: ${JSON.stringify(appStateData)}`);
-  }
-});
-console.info(`observerCode: ${observerCode}.`);
-```

@@ -4,8 +4,6 @@ Enumerates the fragment map information.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## X_IN_ORIGINAL
@@ -17,8 +15,6 @@ X_IN_ORIGINAL = 'XInOriginal'
 X coordinate of the top-left corner of the fragment map in the original image.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,8 +28,6 @@ Y coordinate of the top-left corner of the fragment map in the original image.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## WIDTH
@@ -46,8 +40,6 @@ Width of the fragment map.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## HEIGHT
@@ -59,7 +51,5 @@ HEIGHT = 'FragmentImageHeight'
 Height of the fragment map.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core

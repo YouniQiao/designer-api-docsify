@@ -4,8 +4,6 @@ Defines the response to the request.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [RequestResult](arkts-ipc-rpc-requestresult-i.md)
@@ -15,7 +13,7 @@ Defines the response to the request.
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## code
@@ -29,8 +27,6 @@ Message code.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ data: MessageParcel
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [data](arkts-ipc-rpc-requestresult-i.md#data)
@@ -70,8 +64,6 @@ Error code.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [errCode](arkts-ipc-rpc-requestresult-i.md#errcode)
@@ -89,8 +81,6 @@ reply: MessageParcel
 **Type:** [MessageParcel](arkts-ipc-rpc-messageparcel-c.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

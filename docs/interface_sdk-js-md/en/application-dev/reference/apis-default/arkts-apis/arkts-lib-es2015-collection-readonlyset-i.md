@@ -1,7 +1,5 @@
 # ReadonlySet
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?: any): void
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -27,8 +23,6 @@ forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?
 ```TypeScript
 has(value: T): boolean
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -47,5 +41,3 @@ readonly size: number
 ```
 
 **Type:** number
-
-**ArkTS mode:** 

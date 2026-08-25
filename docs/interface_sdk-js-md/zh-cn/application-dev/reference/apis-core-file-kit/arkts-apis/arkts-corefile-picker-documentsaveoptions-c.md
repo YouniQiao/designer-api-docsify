@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## 导入模块
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## autoCreateEmptyFile
@@ -27,8 +25,6 @@ autoCreateEmptyFile?: boolean
 **默认值：** true
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ defaultFilePathUri?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
@@ -63,8 +57,6 @@ fileSuffixChoices?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -82,8 +74,6 @@ newFileNames?: Array<string>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
@@ -99,8 +89,6 @@ pickerMode?: DocumentPickerMode
 **类型：** [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

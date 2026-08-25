@@ -4,8 +4,6 @@ P2P群组所有者频段。@enum { number } GroupOwnerBand
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md)
@@ -21,8 +19,6 @@ GO_BAND_AUTO = 0
 默认频段。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ GO_BAND_2GHZ = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [GO_BAND_2GHZ](arkts-connectivity-wifimanager-groupownerband-e.md#go_band_2ghz)
@@ -57,8 +51,6 @@ GO_BAND_5GHZ = 2
 5G频段。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

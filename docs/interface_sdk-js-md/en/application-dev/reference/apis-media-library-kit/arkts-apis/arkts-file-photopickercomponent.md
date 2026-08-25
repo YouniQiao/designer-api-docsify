@@ -16,7 +16,7 @@ You can embed the **PhotoPickerComponent** in your application's layout to let u
 ## Modules to Import
 
 ```TypeScript
-import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseItemInfo, ItemInfo, PhotoBrowserInfo, AnimatorParams, MaxSelected, ItemType, ClickType, PickerOrientation, SelectMode, PickerColorMode, ReminderMode, MaxCountType, PhotoBrowserRange, PhotoBrowserUIElement, ItemsDeletedCallback, ExceedMaxSelectedCallback, CurrentAlbumDeletedCallback, videoPlayStateChangedCallback, MovingPhotoBadgeStateChangedCallback, UpdatablePickerConfigs, SingleLineConfig, BadgeConfig, PreselectedInfo, SaveMode, BadgeType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ItemClickedNotifyCallback, ScrollStopAtEndCallback, PhotoBrowserChangeStartCallback, PinchGridSwitchedCallback, ErrorCallback, ClickResult, PickerError } from '@kit.MediaLibraryKit';
+import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseItemInfo, ItemInfo, PhotoBrowserInfo, AnimatorParams, MaxSelected, ItemType, ClickType, PickerOrientation, SelectMode, PickerColorMode, ReminderMode, MaxCountType, PhotoBrowserRange, PhotoBrowserUIElement, ItemsDeletedCallback, ExceedMaxSelectedCallback, CurrentAlbumDeletedCallback, videoPlayStateChangedCallback, MovingPhotoBadgeStateChangedCallback, UpdatablePickerConfigs, SingleLineConfig, BadgeConfig, PreselectedInfo, SaveMode, BadgeType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ItemClickedNotifyCallback, ScrollStopAtEndCallback, PhotoBrowserChangeStartCallback, PinchGridSwitchedCallback, ErrorCallback, ClickResult, PickerError } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## Summary
@@ -72,24 +72,16 @@ import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseIt
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [CurrentAlbumDeletedCallback(PhotoPickerComponent)](arkts-medialibrary-currentalbumdeletedcallback-t.md) |
-| [DeSelectCallback(PhotoPickerComponent)](arkts-medialibrary-deselectcallback-t.md) |
-| [EnterPhotoBrowserCallback(PhotoPickerComponent)](arkts-medialibrary-enterphotobrowsercallback-t.md) |
 | [ErrorCallback(PhotoPickerComponent)](arkts-medialibrary-errorcallback-t.md) |
 | [ExceedMaxSelectedCallback(PhotoPickerComponent)](arkts-medialibrary-exceedmaxselectedcallback-t.md) |
-| [ExitPhotoBrowserCallback(PhotoPickerComponent)](arkts-medialibrary-exitphotobrowsercallback-t.md) |
-| [ItemClickedCallback(PhotoPickerComponent)](arkts-medialibrary-itemclickedcallback-t.md) |
 | [ItemClickedNotifyCallback(PhotoPickerComponent)](arkts-medialibrary-itemclickednotifycallback-t.md) |
 | [ItemsDeletedCallback(PhotoPickerComponent)](arkts-medialibrary-itemsdeletedcallback-t.md) |
 | [MovingPhotoBadgeStateChangedCallback(PhotoPickerComponent)](arkts-medialibrary-movingphotobadgestatechangedcallback-t.md) |
-| [PhotoBrowserChangedCallback(PhotoPickerComponent)](arkts-medialibrary-photobrowserchangedcallback-t.md) |
 | [PhotoBrowserChangeStartCallback(PhotoPickerComponent)](arkts-medialibrary-photobrowserchangestartcallback-t.md) |
 | [PhotoBrowserZoomCallback(PhotoPickerComponent)](arkts-medialibrary-photobrowserzoomcallback-t.md) |
-| [PickerControllerReadyCallback(PhotoPickerComponent)](arkts-medialibrary-pickercontrollerreadycallback-t.md) |
 | [PickerRecoveryCallback(PhotoPickerComponent)](arkts-medialibrary-pickerrecoverycallback-t.md) |
 | [PinchGridSwitchedCallback(PhotoPickerComponent)](arkts-medialibrary-pinchgridswitchedcallback-t.md) |
 | [ScrollStopAtEndCallback(PhotoPickerComponent)](arkts-medialibrary-scrollstopatendcallback-t.md) |
 | [ScrollStopAtStartCallback(PhotoPickerComponent)](arkts-medialibrary-scrollstopatstartcallback-t.md) |
-| [SelectCallback(PhotoPickerComponent)](arkts-medialibrary-selectcallback-t.md) |
 | [UnselectableItemClickedCallback(PhotoPickerComponent)](arkts-medialibrary-unselectableitemclickedcallback-t.md) |
 | [videoPlayStateChangedCallback(PhotoPickerComponent)](arkts-medialibrary-videoplaystatechangedcallback-t.md) |
-| [VideoPlayStateChangedCallback(PhotoPickerComponent)](arkts-medialibrary-videoplaystatechangedcallback-t.md) |

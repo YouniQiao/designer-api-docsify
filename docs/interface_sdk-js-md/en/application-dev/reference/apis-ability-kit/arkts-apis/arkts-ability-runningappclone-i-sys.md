@@ -4,8 +4,6 @@ The RunningAppClone module defines the information of an application clone in th
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,16 +11,14 @@ The RunningAppClone module defines the information of an application clone in th
 ## appCloneIndex
 
 ```TypeScript
-appCloneIndex: int
+appCloneIndex: number
 ```
 
 Index of an application clone.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -31,16 +27,14 @@ Index of an application clone.
 ## pids
 
 ```TypeScript
-pids: Array<int>
+pids: Array<number>
 ```
 
 Process ID set of the application.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -49,36 +43,15 @@ Process ID set of the application.
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName: string = 'ohos.samples.etsclock';
-  appManager.getRunningMultiAppInfo(bundleName).then((info: appManager.RunningMultiAppInfo) => {
-      hilog.info(0x0000, 'testTag', `getRunningMultiAppInfo success`);
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
-    })
-} catch (err) {
-  hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
-}
-```

@@ -15,8 +15,6 @@ function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md)
@@ -34,45 +32,6 @@ function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo
 | bundleName | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', (error: Base.BusinessError, data: formInfo.FormInfo[]) => {
-  if (error.code) {
-    console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: Base.BusinessError, data: formInfo.FormInfo[]) => {
-  if (error.code) {
-    console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
-  console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## getFormsInfo
 
@@ -87,8 +46,6 @@ function getFormsInfo(
 获取设备上指定应用程序提供的卡片信息。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -108,10 +65,6 @@ function getFormsInfo(
 | moduleName | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 |
 
-**示例**
-
-参见 [getFormsInfo](#getformsinfo)
-
 
 ## getFormsInfo
 
@@ -122,8 +75,6 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 获取设备上指定应用程序提供的卡片信息。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -147,7 +98,3 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |
-
-**示例**
-
-参见 [getFormsInfo](#getformsinfo)

@@ -4,8 +4,6 @@ Enumerates communication modes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Default communication.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -32,8 +28,6 @@ Inter-thread communication.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 ## PROCESS
@@ -46,8 +40,6 @@ Inter-process communication.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 ## DEVICE
@@ -59,7 +51,5 @@ DEVICE = 3
 Inter-device communication.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace

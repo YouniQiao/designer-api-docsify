@@ -6,8 +6,6 @@ The ActionExtensionAbility module provides a template for you to implement custo
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Deprecated since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -17,5 +15,5 @@ The ActionExtensionAbility module provides a template for you to implement custo
 ## Modules to Import
 
 ```TypeScript
-import { ActionExtensionAbility } from '@kit.AbilityKit';
+import { ActionExtensionAbility } from 'kits/@kit.AbilityKit';
 ```

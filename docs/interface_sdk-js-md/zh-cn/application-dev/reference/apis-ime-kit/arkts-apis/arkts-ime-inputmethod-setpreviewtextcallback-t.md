@@ -8,8 +8,6 @@ export type SetPreviewTextCallback = (text: string, range: Range) => void
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **参数：**

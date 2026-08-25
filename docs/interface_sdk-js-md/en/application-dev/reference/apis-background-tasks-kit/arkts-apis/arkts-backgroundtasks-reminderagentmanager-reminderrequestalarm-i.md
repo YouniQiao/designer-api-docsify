@@ -6,60 +6,52 @@ ReminderRequestAlarm extends ReminderRequest Defines a reminder for an alarm.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## daysOfWeek
 
 ```TypeScript
-daysOfWeek?: Array<int>
+daysOfWeek?: Array<number>
 ```
 
 Days of a week when the reminder repeats. The value ranges from 1 to 7, corresponding to the data from Monday to Sunday. This parameter is left empty by default.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## hour
 
 ```TypeScript
-hour: int
+hour: number
 ```
 
 Hour portion of the reminder time. The value range is [0, 23].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## minute
 
 ```TypeScript
-minute: int
+minute: number
 ```
 
 Minute portion of the reminder time. The value range is [0, 59].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent

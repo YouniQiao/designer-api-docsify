@@ -52,7 +52,7 @@
  <br>
 | 名称 | 类型 | 必填 | 装饰器类型 |
 | -------- | -------- | -------- | -------- |
- | controller | CustomDialogController | 是 | - | 输入法切换列表弹窗控制器，用于控制弹窗的打开和关闭。
+ | controller | [CustomDialogController](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller-c.md) | 是 | - | 输入法切换列表弹窗控制器，用于控制弹窗的打开和关闭。
  <br>
  使用场景：当需要通过代码控制输入法切换列表弹窗的显示与隐藏时，必须提供此参数。
  <br>
@@ -76,7 +76,7 @@
 ## 导入模块
 
 ```TypeScript
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from 'kits/@kit.IMEKit';
 ```
 
 ## 汇总

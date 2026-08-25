@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## stopExpand
@@ -15,8 +15,6 @@ function stopExpand(expandScreen:Array<number>, callback: AsyncCallback<void>): 
 Stops extended mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 20
 
@@ -39,33 +37,6 @@ Stops extended mode. This API uses an asynchronous callback to return the result
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let expandScreenIds: Array<number> = [1, 2, 3];
-screen.stopExpand(expandScreenIds, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to stop expand screens. Code:${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in stopping expand screens.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let expandScreenIds: Array<number> = [1, 2, 3];
-screen.stopExpand(expandScreenIds).then(() => {
-  console.info('Succeeded in stopping expand screens.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stop expand screens. Code:${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## stopExpand
 
@@ -76,8 +47,6 @@ function stopExpand(expandScreen:Array<number>): Promise<void>
 Stops extended mode. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 20
 
@@ -104,7 +73,3 @@ Stops extended mode. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
-
-**Examples**
-
-See [stopExpand](#stopexpand)

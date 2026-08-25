@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setUserProperty
@@ -15,8 +15,6 @@ function setUserProperty(name: string, value: string): void
 Sets a user property, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) is configured.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,15 +32,3 @@ Sets a user property, which is used for association when a [Processor](arkts-per
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  hiAppEvent.setUserProperty('key', 'value');
-} catch (error) {
-  hilog.error(0x0000, 'hiAppEvent', `failed to setUserProperty event, code=${error.code}`);
-}
-```

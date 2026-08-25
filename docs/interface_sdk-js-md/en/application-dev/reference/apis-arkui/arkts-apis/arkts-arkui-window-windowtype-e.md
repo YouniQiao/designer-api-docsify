@@ -4,8 +4,6 @@ Enumerates the window types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_APP
@@ -17,8 +15,6 @@ TYPE_APP = 0
 Child window of an application.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -34,8 +30,6 @@ System alert window.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -49,8 +43,6 @@ TYPE_FLOAT = 8
 Global floating window.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +60,6 @@ Modal window.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,7 +75,5 @@ TYPE_MAIN = 32
 Main window of an application.This window type cannot be used during window creation.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

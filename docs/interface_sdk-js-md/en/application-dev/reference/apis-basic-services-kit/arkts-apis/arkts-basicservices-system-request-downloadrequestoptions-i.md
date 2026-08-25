@@ -7,8 +7,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
@@ -18,7 +16,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from '@kit.BasicServicesKit';
+import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -30,8 +28,6 @@ complete?: () => void
 Called when API call is complete.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ fail?: (data: any, code: number) => void
 Called when downloading fails.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -73,8 +67,6 @@ success?: (data: DownloadResponse) => void
 Called when the files are successfully downloaded.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -100,8 +92,6 @@ Download description. The default value is the file name.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** description
@@ -119,8 +109,6 @@ Name of the file to downloaded. The value is obtained from the current request o
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -140,8 +128,6 @@ Request header.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** headers
@@ -159,8 +145,6 @@ Resource URL.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 

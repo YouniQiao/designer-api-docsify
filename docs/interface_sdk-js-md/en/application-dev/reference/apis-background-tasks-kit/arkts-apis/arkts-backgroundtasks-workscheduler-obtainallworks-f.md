@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## obtainAllWorks
@@ -15,8 +15,6 @@ function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>
 Obtains all the deferred tasks. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -47,32 +45,6 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 | [9700002](../errorcode-workScheduler.md#9700002-parcel-operation-failure) |
 | [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
-
-  workScheduler.obtainAllWorks((error: BusinessError, res: Array<workScheduler.WorkInfo>) =>{
-    if (error) {
-      console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
-    } else {
-      console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
-    }
-  });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
-
-  workScheduler.obtainAllWorks().then((res: Array<workScheduler.WorkInfo>) => {
-    console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
-  })
-```
-
 
 ## obtainAllWorks
 
@@ -83,8 +55,6 @@ function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void
 Obtains all the deferred tasks. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,10 +75,6 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 | [9700002](../errorcode-workScheduler.md#9700002-parcel-operation-failure) |
 | [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) |
 
-**Examples**
-
-See [obtainAllWorks](#obtainallworks)
-
 
 ## obtainAllWorks
 
@@ -119,8 +85,6 @@ function obtainAllWorks(): Promise<Array<WorkInfo>>
 Obtains all the deferred tasks. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,7 +104,3 @@ Obtains all the deferred tasks. This API uses a promise to return the result.
 | [9700001](../errorcode-workScheduler.md#9700001-memory-operation-failure) |
 | [9700002](../errorcode-workScheduler.md#9700002-parcel-operation-failure) |
 | [9700003](../errorcode-workScheduler.md#9700003-system-service-failure) |
-
-**Examples**
-
-See [obtainAllWorks](#obtainallworks)

@@ -6,14 +6,12 @@ EmbeddableUIAbility is an embeddable UIAbility component provided for atomic ser
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { EmbeddableUIAbility } from '@kit.AbilityKit';
+import { EmbeddableUIAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## context
@@ -27,8 +25,6 @@ Context of the EmbeddableUIAbility.
 **Type:** [EmbeddableUIAbilityContext](arkts-ability-embeddableuiabilitycontext-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

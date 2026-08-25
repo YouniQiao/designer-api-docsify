@@ -6,14 +6,12 @@ Provides APIs to manage albums.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## commitModify
@@ -25,8 +23,6 @@ commitModify(): Promise<void>
 Commits the modification on the album attributes to the database. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -45,62 +41,6 @@ Commits the modification on the album attributes to the database. This API uses 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('commitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: ['title'],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-  let title: string = photoAccessHelper.PhotoKeys.TITLE.toString();
-  let photoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-  console.info('photoAsset get photoAssetTitle = ', photoAssetTitle);
-  photoAsset.set(title, 'newTitle3');
-  try {
-    await photoAsset.commitModify();
-    let newPhotoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
-    console.info('photoAsset get newPhotoAssetTitle = ', newPhotoAssetTitle);
-  } catch (err) {
-    console.error(`commitModify failed. error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
-  album.albumName = 'hello';
-  album.commitModify().then(() => {
-    console.info('commitModify successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`commitModify failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## convertToPhotoAlbum
 
 ```TypeScript
@@ -110,8 +50,6 @@ convertToPhotoAlbum(): photoAccessHelper.Album
 Converts this Sendable album to a non-Sendable album.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -128,37 +66,6 @@ Converts this Sendable album to a non-Sendable album.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('convertToPhotoAlbumDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let sendableAlbum: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
-  let album: photoAccessHelper.Album = sendableAlbum.convertToPhotoAlbum();
-  album.getAssets(fetchOption).then((albumFetchResult) => {
-    console.info('convertToPhotoAlbum successfully, getCount: ' + albumFetchResult.getCount());
-  }).catch((err: BusinessError) => {
-    console.error(`convertToPhotoAlbum failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## imageCount
 
 ```TypeScript
@@ -170,8 +77,6 @@ Number of image assets in the album
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -186,7 +91,5 @@ Number of video assets in the album
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

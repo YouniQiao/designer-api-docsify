@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## hasKeyItem
@@ -15,8 +15,6 @@ function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 判断密钥是否存在。使用callback异步回调。若密钥不存在，则通过callback返回false。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -43,50 +41,6 @@ function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 
-**示例**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 判断密钥是否存在 */
-huks.hasKeyItem(keyAlias, emptyOptions, (error, data) => {
-  if (error) {
-    console.error(`callback: hasKeyItem failed`);
-  } else {
-    if (data) {
-      console.info(`keyAlias:${keyAlias} is existed!`);
-    } else {
-      console.error(`find key failed`);
-    }
-  }
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 判断密钥是否存在 */
-huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
-  if (data) {
-    console.info(`keyAlias:${keyAlias} is existed!`);
-  } else {
-    console.info(`find key failed!`);
-  }
-});
-```
-
 
 ## hasKeyItem
 
@@ -97,8 +51,6 @@ function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 判断密钥是否存在。使用Promise异步回调。若密钥不存在，则通过Promise返回false。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -129,7 +81,3 @@ function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 | [12000012](../errorcode-huks.md#12000012-外部错误) |
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
-
-**示例**
-
-参见 [hasKeyItem](#haskeyitem)

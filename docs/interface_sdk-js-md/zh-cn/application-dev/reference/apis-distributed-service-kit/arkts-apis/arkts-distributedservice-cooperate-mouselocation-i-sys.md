@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## displayHeight
 
 ```TypeScript
-displayHeight: int
+displayHeight: number
 ```
 
 屏幕高度，单位：px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -37,16 +33,14 @@ displayHeight: int
 ## displayWidth
 
 ```TypeScript
-displayWidth: int
+displayWidth: number
 ```
 
 屏幕宽度，单位：px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -55,16 +49,14 @@ displayWidth: int
 ## displayX
 
 ```TypeScript
-displayX: int
+displayX: number
 ```
 
 鼠标指针位于屏幕的X坐标上的位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -73,16 +65,14 @@ displayX: int
 ## displayY
 
 ```TypeScript
-displayY: int
+displayY: number
 ```
 
 鼠标指针位于屏幕的Y坐标上的位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

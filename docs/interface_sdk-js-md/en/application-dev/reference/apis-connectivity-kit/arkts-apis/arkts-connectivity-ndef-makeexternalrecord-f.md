@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## makeExternalRecord
 
 ```TypeScript
-function makeExternalRecord(domainName: string, type: string, externalData: int[]): NdefRecord
+function makeExternalRecord(domainName: string, type: string, externalData: number[]): NdefRecord
 ```
 
 Creates an NDEF record based on application-specific data.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -28,7 +26,7 @@ Creates an NDEF record based on application-specific data.
 | --- | --- | --- |
 | domainName | string | Yes |
 | type | string | Yes |
-| externalData | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | Yes |
+| externalData | number[] | Yes |
 
 **Return value:**
 

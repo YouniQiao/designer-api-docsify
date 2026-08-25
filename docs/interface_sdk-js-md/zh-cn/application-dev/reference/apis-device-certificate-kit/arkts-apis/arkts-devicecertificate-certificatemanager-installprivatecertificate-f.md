@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## installPrivateCertificate
@@ -20,8 +20,6 @@ function installPrivateCertificate(
 安装私有凭据。使用Callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -46,76 +44,6 @@ function installPrivateCertificate(
 | [17500003](../errorcode-certManager.md#17500003-证书或凭据无效) |
 | [17500004](../errorcode-certManager.md#17500004-证书或凭据数量达到上限) |
 
-**示例**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-
-/* 安装的凭据数据需要业务赋值，本例数据非凭据数据 */
-let keystore: Uint8Array = new Uint8Array([
-  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01
-]);
-let keystorePwd: string = '123456';
-try {
-  certificateManager.installPrivateCertificate(keystore, keystorePwd, 'test', (err, cmResult) => {
-    if (err != null) {
-      console.error(`Failed to install private certificate. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      let uri: string = cmResult?.uri ?? '';
-      console.info('Succeeded in installing private certificate.');
-    }
-  });
-} catch (error) {
-  console.error(`Failed to install private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* 安装的凭据数据需要业务赋值，本例数据非凭据数据 */
-let keystore: Uint8Array = new Uint8Array([
-  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01
-]);
-let keystorePwd: string = '123456';
-try {
-  certificateManager.installPrivateCertificate(keystore, keystorePwd, 'test').then((cmResult) => {
-    let uri: string = cmResult?.uri ?? '';
-    console.info('Succeeded in installing private certificate.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to install private certificate. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`Failed to install private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* 安装的凭据数据需要业务赋值，本例数据非凭据数据。 */
-let keystore: Uint8Array = new Uint8Array([
-  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01
-]);
-let keystorePwd: string = '123456';
-try {
-  /* 安装凭据在首次解锁设备后可以使用。 */
-  let level = certificateManager.AuthStorageLevel.EL2;
-  certificateManager.installPrivateCertificate(keystore, keystorePwd, 'test', level).then((cmResult) => {
-    let uri: string = cmResult.uri ?? '';
-    console.info('Succeeded in installing private certificate.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to install private certificate. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`Failed to install private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## installPrivateCertificate
 
@@ -126,8 +54,6 @@ function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, ce
 安装私有凭据。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -157,10 +83,6 @@ function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, ce
 | [17500003](../errorcode-certManager.md#17500003-证书或凭据无效) |
 | [17500004](../errorcode-certManager.md#17500004-证书或凭据数量达到上限) |
 
-**示例**
-
-参见 [installPrivateCertificate](#installprivatecertificate)
-
 
 ## installPrivateCertificate
 
@@ -171,8 +93,6 @@ function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, ce
 表示安装私有凭据并指定凭据的存储级别。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -202,7 +122,3 @@ function installPrivateCertificate(keystore: Uint8Array, keystorePwd: string, ce
 | [17500001](../errorcode-certManager.md#17500001-内部错误) |
 | [17500003](../errorcode-certManager.md#17500003-证书或凭据无效) |
 | [17500004](../errorcode-certManager.md#17500004-证书或凭据数量达到上限) |
-
-**示例**
-
-参见 [installPrivateCertificate](#installprivatecertificate)

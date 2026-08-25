@@ -4,14 +4,12 @@ Provides information about the **Navigation** component.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## navigationId
@@ -25,8 +23,6 @@ ID of the **Navigation** component.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ pathStack: NavPathStack
 
 Navigation controller of the **Navigation** component.
 
-**Type:** NavPathStack
+**Type:** [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,13 +54,11 @@ Navigation controller of the **Navigation** component.
 uniqueId?: number
 ```
 
-Unique ID of the **Navigation** component, which can be obtained through queryNavigationInfo.
+Unique ID of the **Navigation** component, which can be obtained through [queryNavigationInfo](../arkts-components/arkts-arkui-basecustomcomponent-c.md#querynavigationinfo).
 
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

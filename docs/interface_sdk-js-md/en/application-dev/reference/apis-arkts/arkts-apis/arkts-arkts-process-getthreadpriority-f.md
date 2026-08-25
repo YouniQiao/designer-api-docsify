@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## getThreadPriority
@@ -15,8 +15,6 @@ function getThreadPriority(v: number): number
 Obtains the thread priority based on the specified TID.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -35,16 +33,3 @@ Obtains the thread priority based on the specified TID.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let tid = process.tid;
-let pres = process.getThreadPriority(tid);
-```
-
-```TypeScript
-let pro = new process.ProcessManager();
-let tid = process.tid;
-let pres = pro.getThreadPriority(tid);
-```

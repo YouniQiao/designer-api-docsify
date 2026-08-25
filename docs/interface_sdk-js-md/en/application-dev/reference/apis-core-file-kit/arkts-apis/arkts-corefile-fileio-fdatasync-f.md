@@ -15,8 +15,6 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md)
@@ -35,28 +33,6 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fdatasync(fd).then(() => {
-  console.info("sync data succeed");
-}).catch((err: BusinessError) => {
-  console.error("sync data failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fdatasync (fd, (err: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## fdatasync
 
@@ -67,8 +43,6 @@ declare function fdatasync(fd: number, callback: AsyncCallback<void>): void
 Synchronizes the data of a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -82,7 +56,3 @@ Synchronizes the data of a file. This API uses an asynchronous callback to retur
 | --- | --- | --- |
 | fd | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [fdatasync](#fdatasync)

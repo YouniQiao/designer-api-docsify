@@ -4,8 +4,6 @@ Corresponding to a file's metadata. FileMeta is useful when doing IPC with the b
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Corresponding to a file's metadata. FileMeta is useful when doing IPC with the b
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ Indicates the name of a bundle.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -46,8 +42,6 @@ Indicates a uri to a file.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Indicates uris to files.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

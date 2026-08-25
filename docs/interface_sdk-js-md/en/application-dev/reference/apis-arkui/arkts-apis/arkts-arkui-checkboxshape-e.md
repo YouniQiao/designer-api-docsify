@@ -4,8 +4,6 @@ common enum of the checkbox shape
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CIRCLE
@@ -17,8 +15,6 @@ CIRCLE = 0
 Circle.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ ROUNDED_SQUARE = 1
 Rounded Square.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

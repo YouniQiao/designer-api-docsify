@@ -4,8 +4,6 @@ Defines the **EnableAlertBeforeBackPage** parameter.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md)
@@ -15,7 +13,7 @@ Defines the **EnableAlertBeforeBackPage** parameter.
 ## Modules to Import
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
 ```
 
 ## cancel
@@ -27,8 +25,6 @@ cancel?: (errMsg: string) => void
 Called when the **Cancel** button in the confirm dialog box is clicked. **errMsg** indicates the returned information.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -52,8 +48,6 @@ Called when the dialog box is closed.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md)
@@ -69,8 +63,6 @@ success?: (errMsg: string) => void
 Called when the **OK** button in the confirm dialog box is clicked. **errMsg** indicates the returned information.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -95,8 +87,6 @@ Content displayed in the confirm dialog box.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 

@@ -4,8 +4,6 @@ Represents information about a file or directory in the **Recently deleted** lis
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -15,7 +13,7 @@ Represents information about a file or directory in the **Recently deleted** lis
 ## Modules to Import
 
 ```TypeScript
-import { trash } from '@kit.CoreFileKit';
+import { trash } from 'kits/@kit.CoreFileKit';
 ```
 
 ## ctime
@@ -29,8 +27,6 @@ Time when the file or directory was created. It is the number of seconds elapsed
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -52,8 +48,6 @@ Name of the file or directory.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -73,8 +67,6 @@ Permission on the file or directory.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -96,8 +88,6 @@ Time when the file or directory was last modified. It is the number of milliseco
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -117,8 +107,6 @@ Size of a file or directory, in bytes.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -140,8 +128,6 @@ Path of the file or directory before being deleted.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -161,8 +147,6 @@ URI of the file or directory.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 

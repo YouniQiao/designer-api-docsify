@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createHdrBrightnessBlender
@@ -15,8 +15,6 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 创建HdrBrightnessBlender实例用于给组件添加支持HDR的提亮效果。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -39,26 +37,3 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { uiEffect } from "@kit.ArkGraphics2D"
-
-let blender : uiEffect.HdrBrightnessBlender =
-  uiEffect.createHdrBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
-    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
-
-@Entry
-@Component
-struct example {
-  build() {
-    RelativeContainer() {
-      Image($r("app.media.screenshot"))
-        .width("100%")
-        .height("100%")
-        .advancedBlendMode(blender)
-    }
-  }
-}
-```

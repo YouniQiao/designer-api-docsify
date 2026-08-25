@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## finish
@@ -15,8 +15,6 @@ function finish(handle: number, options: HuksOptions, callback: AsyncCallback<Hu
 Finishes the key operation. This API uses an asynchronous callback to return the result.The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -42,8 +40,6 @@ function finish(handle: number, options: HuksOptions): Promise<HuksResult>
 Finishes the key operation. This API uses a promise to return the result.The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

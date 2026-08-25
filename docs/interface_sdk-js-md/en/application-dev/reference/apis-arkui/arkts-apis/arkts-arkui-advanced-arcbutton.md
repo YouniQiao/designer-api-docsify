@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from '@kit.ArkUI';
+import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

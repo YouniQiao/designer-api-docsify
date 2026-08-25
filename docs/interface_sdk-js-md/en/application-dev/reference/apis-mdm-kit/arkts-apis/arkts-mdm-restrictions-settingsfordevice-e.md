@@ -4,8 +4,6 @@ Enumerates device setting items.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## SET_APN
@@ -18,8 +16,6 @@ APN configuration, currently supported only on phones and tablets.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,11 +26,9 @@ APN configuration, currently supported only on phones and tablets.
 POWER_LONG_PRESS = 1
 ```
 
-Opens the power menu by long-pressing the power button. Currently, this item is supported only on phones and tablets.
+Opens the power menu by number-pressing the power button. Currently, this item is supported only on phones and tablets.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +43,6 @@ SET_ETHERNET_IP = 2
 Changes the Ethernet IP address. Currently, this item is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +59,6 @@ Changes the device name configuration. Currently, this item is supported only on
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -82,8 +72,6 @@ SET_BIOMETRICS_AND_SCREEN_LOCK = 4
 Changes the screen lock password. Currently, this item is supported only on PCs/2-in-1 devices, phones, and tablets.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

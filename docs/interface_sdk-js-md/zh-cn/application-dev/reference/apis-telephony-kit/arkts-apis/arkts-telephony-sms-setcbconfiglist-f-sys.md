@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setCBConfigList
@@ -15,8 +15,6 @@ function setCBConfigList(configs: CBConfigListConfigs): Promise<void>
 打开小区广播列表
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.RECEIVE_SMS
 

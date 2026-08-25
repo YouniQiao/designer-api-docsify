@@ -7,8 +7,6 @@ The module provides the capability to manage startup tasks in [AppStartup](../..
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppStartup
@@ -16,7 +14,7 @@ The module provides the capability to manage startup tasks in [AppStartup](../..
 ## Modules to Import
 
 ```TypeScript
-import { startupManager } from '@kit.AbilityKit';
+import { startupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -25,7 +23,6 @@ import { startupManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md) |
 | [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md) |
 | [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md) |
 | [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md) |

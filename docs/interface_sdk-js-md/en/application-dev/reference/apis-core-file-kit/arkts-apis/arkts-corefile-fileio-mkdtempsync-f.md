@@ -15,8 +15,6 @@ Creates a temporary directory. This API returns the result synchronously.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [mkdtempSync](arkts-corefile-file-fs-mkdtempsync-f.md)
@@ -34,9 +32,3 @@ Creates a temporary directory. This API returns the result synchronously.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let res = fileio.mkdtempSync(pathDir + "/XXXXXX");
-```

@@ -4,14 +4,12 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## 导入模块
 
 ```TypeScript
-import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
+import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## cert
@@ -25,8 +23,6 @@ cert: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -42,8 +38,6 @@ purpose: certificateManager.CertificatePurpose
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## resourceId
@@ -57,7 +51,5 @@ resourceId: string
 **类型：** string
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension

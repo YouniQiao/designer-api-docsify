@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getGlobalProxyForAccount
@@ -20,8 +20,6 @@ Obtains the network proxy for a specified user. This API is suitable for network
 > [getGlobalProxySync](arkts-mdm-networkmanager-getglobalproxysync-f.md) API.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -50,25 +48,3 @@ Obtains the network proxy for a specified user. This API is suitable for network
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { connection } from '@kit.NetworkKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let result: connection.HttpProxy = networkManager.getGlobalProxyForAccount(wantTemp, 100);
-  console.info(`Succeeded in getting network global proxy, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get network global proxy. Code: ${err.code}, message: ${err.message}`);
-}
-```

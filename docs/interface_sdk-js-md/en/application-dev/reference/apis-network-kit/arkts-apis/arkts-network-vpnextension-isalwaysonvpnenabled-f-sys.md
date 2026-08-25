@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## isAlwaysOnVpnEnabled
@@ -15,8 +15,6 @@ function isAlwaysOnVpnEnabled(bundleName: string): Promise<boolean>
 Obtains the status of the **always on** mode. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 

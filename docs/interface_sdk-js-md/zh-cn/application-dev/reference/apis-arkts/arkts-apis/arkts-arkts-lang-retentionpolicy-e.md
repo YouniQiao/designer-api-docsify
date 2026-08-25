@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## SOURCE
@@ -17,8 +15,6 @@ SOURCE = 'source'
 注解将在编译期被移除。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,8 +29,6 @@ BYTECODE = 'bytecode'
 注解将保留到编译产物中。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

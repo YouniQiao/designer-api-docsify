@@ -6,14 +6,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## getSharedPhotoAssets
@@ -25,8 +23,6 @@ getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhoto
 Fetch shared photo assets in an album.
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **需要权限：** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 

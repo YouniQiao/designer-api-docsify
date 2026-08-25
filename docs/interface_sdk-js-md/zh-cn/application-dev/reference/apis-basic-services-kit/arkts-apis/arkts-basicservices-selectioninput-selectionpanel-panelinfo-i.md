@@ -4,29 +4,25 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## 导入模块
 
 ```TypeScript
-import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
+import { PanelInfo, PanelType } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 划词面板高度，单位为px。取值范围(0, +∞)，传入0或负数时面板无法正常创建。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ panelType: PanelType
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.SelectionInput.Selection
@@ -55,16 +49,14 @@ panelType: PanelType
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 划词面板宽度，单位为px。取值范围(0, +∞)，传入0或负数时面板无法正常创建。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,16 +65,14 @@ width: int
 ## x
 
 ```TypeScript
-x: int
+x: number
 ```
 
 划词面板左上角的x轴坐标，单位为px。以主屏幕左上角为原点，x轴正方向向右。取值范围[0, +∞)，传入负数时面板无法正常创建。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,16 +81,14 @@ x: int
 ## y
 
 ```TypeScript
-y: int
+y: number
 ```
 
 划词面板左上角的y轴坐标，单位为px。以主屏幕左上角为原点，y轴正方向向下。取值范围[0, +∞)，传入负数时面板无法正常创建。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

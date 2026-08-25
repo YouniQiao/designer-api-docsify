@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## off('bluetoothDeviceFind')
@@ -15,8 +15,6 @@ function off(type: 'bluetoothDeviceFind', callback?: Callback<Array<string>>): v
 Unsubscribe the event reported when a remote Bluetooth device is discovered.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -41,21 +39,6 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function onReceiveEvent(data: Array<string>) {
-    console.info('bluetooth device find = '+ JSON.stringify(data));
-}
-try {
-    connection.on('bluetoothDeviceFind', onReceiveEvent);
-    connection.off('bluetoothDeviceFind', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## off('discoveryResult')
 
@@ -66,8 +49,6 @@ function off(type: 'discoveryResult', callback?: Callback<Array<DiscoveryResult>
 Unsubscribe the event reported when a remote Bluetooth device is discovered.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** 
 - API version 18+: ohos.permission.ACCESS_BLUETOOTH
@@ -92,21 +73,6 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let onReceiveEvent: (data: Array<connection.DiscoveryResult>) => void = (data: Array<connection.DiscoveryResult>) => { // data is an array of Bluetooth devices discovered.
-    console.info('bluetooth device find = '+ JSON.stringify(data));
-}
-try {
-    connection.on('discoveryResult', onReceiveEvent);
-    connection.off('discoveryResult', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## off('bondStateChange')
 
@@ -117,8 +83,6 @@ function off(type: 'bondStateChange', callback?: Callback<BondStateParam>): void
 Unsubscribe the event reported when a remote Bluetooth device is bonded.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -142,21 +106,6 @@ Unsubscribe the event reported when a remote Bluetooth device is bonded.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function onReceiveEvent(data: connection.BondStateParam) {
-    console.info('bond state = '+ JSON.stringify(data));
-}
-try {
-    connection.on('bondStateChange', onReceiveEvent);
-    connection.off('bondStateChange', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## off('pinRequired')
 
@@ -167,8 +116,6 @@ function off(type: 'pinRequired', callback?: Callback<PinRequiredParam>): void
 Unsubscribe the event of a pairing request from a remote Bluetooth device.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -192,21 +139,6 @@ Unsubscribe the event of a pairing request from a remote Bluetooth device.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function onReceiveEvent(data: connection.PinRequiredParam) {
-    console.info('pin required = '+ JSON.stringify(data));
-}
-try {
-    connection.on('pinRequired', onReceiveEvent);
-    connection.off('pinRequired', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## off('batteryChange')
 
@@ -217,8 +149,6 @@ function off(type: 'batteryChange', callback?: Callback<BatteryInfo>): void
 Unsubscribe the event of battery state changed from a remote device.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -239,18 +169,3 @@ Unsubscribe the event of battery state changed from a remote device.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let onReceiveEvent: (data: connection.BatteryInfo) => void = (data: connection.BatteryInfo) => {
-    console.info('BatteryInfo = '+ JSON.stringify(data));
-}
-try {
-    connection.on('batteryChange', onReceiveEvent);
-    connection.off('batteryChange', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

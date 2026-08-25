@@ -4,14 +4,12 @@ Defines the vibration sequence.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## events
@@ -26,22 +24,18 @@ Vibration event array, which is the **VibratorPattern** object returned by **bui
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## time
 
 ```TypeScript
-time: int
+time: number
 ```
 
 Absolute vibration start time, in ms.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice

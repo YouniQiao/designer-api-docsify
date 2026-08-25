@@ -15,8 +15,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -31,8 +29,6 @@
 ```
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **参数：**
 
@@ -54,8 +50,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **参数：**
 
 | 参数名 | 类型 | 必填 |
@@ -63,7 +57,7 @@
 | width | number | 是 |
 | height | number | 是 |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 |
 
 **返回值：**
 

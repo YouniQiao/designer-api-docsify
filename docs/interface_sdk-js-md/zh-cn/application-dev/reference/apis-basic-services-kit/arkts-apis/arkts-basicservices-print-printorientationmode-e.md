@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## ORIENTATION_MODE_PORTRAIT
@@ -17,8 +15,6 @@ ORIENTATION_MODE_PORTRAIT = 0
 表示纵向打印。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ ORIENTATION_MODE_LANDSCAPE= 1
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## ORIENTATION_MODE_REVERSE_LANDSCAPE
@@ -45,8 +39,6 @@ ORIENTATION_MODE_REVERSE_LANDSCAPE = 2
 表示横向翻转打印。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -60,8 +52,6 @@ ORIENTATION_MODE_REVERSE_PORTRAIT = 3
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## ORIENTATION_MODE_NONE
@@ -73,7 +63,5 @@ ORIENTATION_MODE_NONE = 4
 表示自适应方向打印。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAbilityLabelSync
@@ -15,8 +15,6 @@ function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName
 以同步的方法获取指定bundleName、moduleName和abilityName的label。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -51,23 +49,3 @@ function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
 | [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-
-try {
-  let abilityLabel = bundleManager.getAbilityLabelSync(bundleName, moduleName, abilityName);
-  hilog.info(0x0000, 'testTag', 'getAbilityLabelSync successfully. Data: %{public}s', abilityLabel);
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAbilityLabelSync failed. Cause: %{public}s', message);
-}
-```

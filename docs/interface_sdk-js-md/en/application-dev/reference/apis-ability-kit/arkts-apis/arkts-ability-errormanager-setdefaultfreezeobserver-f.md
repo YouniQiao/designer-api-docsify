@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from '@kit.AbilityKit';
+import { errorManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setDefaultFreezeObserver
@@ -15,8 +15,6 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 Set the default freeze observer, This function will be executed right after the callback function registered through errorManager.on is executed. You can use it to implement chain calls instead of errorManager.on. If an empty observer is set for a certain module, it will cause the call chain to be interrupted. This API must be called in the main thread.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

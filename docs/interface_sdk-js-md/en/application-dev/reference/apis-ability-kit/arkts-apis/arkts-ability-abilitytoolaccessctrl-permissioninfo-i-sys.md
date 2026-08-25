@@ -4,8 +4,6 @@ Permission information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -27,8 +25,6 @@ Authorization status information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -45,8 +41,6 @@ Permission name.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -62,8 +56,6 @@ Permission status.
 **Type:** abilityAccessCtrl.PermissionStatus
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 

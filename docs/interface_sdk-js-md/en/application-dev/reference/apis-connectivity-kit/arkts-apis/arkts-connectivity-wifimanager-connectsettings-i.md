@@ -4,14 +4,12 @@ Describes the settings for Wi-Fi connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## addNetworkToSystem
@@ -26,8 +24,6 @@ Whether to add the network to the system for connection. Default is false, if se
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -37,16 +33,14 @@ Whether to add the network to the system for connection. Default is false, if se
 ## networkId
 
 ```TypeScript
-networkId: int
+networkId: number
 ```
 
 The ID (uniquely identifies) of a Wi-Fi connection.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,16 +51,14 @@ The ID (uniquely identifies) of a Wi-Fi connection.
 ## userActionTimeout
 
 ```TypeScript
-userActionTimeout?: int
+userActionTimeout?: number
 ```
 
 User action timeout threshold(unit is seconds). The maximum value cannot exceed 30, and default is 10.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +77,6 @@ Returned with user action, default value is false.
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

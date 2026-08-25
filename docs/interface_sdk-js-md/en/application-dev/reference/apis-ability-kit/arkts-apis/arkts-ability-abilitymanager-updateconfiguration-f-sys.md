@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## updateConfiguration
@@ -15,8 +15,6 @@ function updateConfiguration(config: Configuration, callback: AsyncCallback<void
 Updates the configuration. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -40,62 +38,6 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { abilityManager, Configuration, ConfigurationConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const config: Configuration = {
-  language: 'Zh-Hans',                 // Simplified Chinese
-  colorMode: ConfigurationConstant.ColorMode.COLOR_MODE_LIGHT,         // Light theme.
-  direction: ConfigurationConstant.Direction.DIRECTION_VERTICAL,       // Vertical direction.
-  screenDensity: ConfigurationConstant.ScreenDensity.SCREEN_DENSITY_SDPI,  // The screen pixel density is sdpi.
-  displayId: 1,                        // The application is displayed on the display with ID 1.
-  hasPointerDevice: true,              // A pointer device is connected.
-};
-
-try {
-  abilityManager.updateConfiguration(config, (err: BusinessError) => {
-    if (err) {
-      console.error(`updateConfiguration fail, err: ${JSON.stringify(err)}`);
-    } else {
-      console.info('updateConfiguration success.');
-    }
-  });
-} catch (paramError) {
-  let code: number = (paramError as BusinessError).code;
-  let message: string = (paramError as BusinessError).message;
-  console.error(`error.code: ${code}, error.message: ${message}`);
-}
-```
-
-```TypeScript
-import { abilityManager, Configuration, ConfigurationConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const config: Configuration = {
-  language: 'Zh-Hans',                 // Simplified Chinese
-  colorMode: ConfigurationConstant.ColorMode.COLOR_MODE_LIGHT,         // Light theme.
-  direction: ConfigurationConstant.Direction.DIRECTION_VERTICAL,       // Vertical direction.
-  screenDensity: ConfigurationConstant.ScreenDensity.SCREEN_DENSITY_SDPI,  // The screen pixel density is sdpi.
-  displayId: 1,                        // The application is displayed on the display with ID 1.
-  hasPointerDevice: true,              // A pointer device is connected.
-};
-
-try {
-  abilityManager.updateConfiguration(config).then(() => {
-    console.info('updateConfiguration success.');
-  }).catch((err: BusinessError) => {
-    console.error(`updateConfiguration fail, err: ${JSON.stringify(err)}`);
-  });
-} catch (paramError) {
-  let code: number = (paramError as BusinessError).code;
-  let message: string = (paramError as BusinessError).message;
-  console.error(`error.code: ${code}, error.message: ${message}`);
-}
-```
-
 
 ## updateConfiguration
 
@@ -106,8 +48,6 @@ function updateConfiguration(config: Configuration): Promise<void>
 Updates the configuration. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -135,7 +75,3 @@ Updates the configuration. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [updateConfiguration](#updateconfiguration)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createGZipSync
@@ -16,8 +16,6 @@ function createGZipSync(): GZip
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
@@ -27,11 +25,3 @@ function createGZipSync(): GZip
 | 类型 |
 | --- |
 | [GZip](arkts-basicservices-zlib-gzip-i.md) |
-
-**示例**
-
-```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
-
-let gzip = zlib.createGZipSync();
-```

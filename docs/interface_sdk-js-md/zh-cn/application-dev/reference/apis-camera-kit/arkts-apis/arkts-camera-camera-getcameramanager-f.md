@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getCameraManager
@@ -15,8 +15,6 @@ function getCameraManager(context: Context): CameraManager
 获取相机管理器实例，同步返回结果。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -40,21 +38,3 @@ function getCameraManager(context: Context): CameraManager
 | --- |
 | [7400101](../errorcode-camera.md#7400101-无效入参) |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-
-**示例**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getCameraManager(context: common.BaseContext): camera.CameraManager | undefined {
-  let cameraManager: camera.CameraManager | undefined = undefined;
-  try {
-    cameraManager = camera.getCameraManager(context);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The getCameraManager call failed. error code: ${err.code}`);
-  }
-  return cameraManager;
-}
-```

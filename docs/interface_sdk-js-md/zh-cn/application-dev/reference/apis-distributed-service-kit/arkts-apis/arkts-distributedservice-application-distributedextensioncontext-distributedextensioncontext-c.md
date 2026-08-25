@@ -6,33 +6,23 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
 
 ```TypeScript
-import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
+import { DistributedExtensionContext } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## connectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 ```
 
-ArkTS-Sta:
-```TypeScript
-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
-```
+将当前DistributedExtensionAbility连接到远端（其他设备上的）ServiceExtensionAbility，建立连接后 通过onConnect回调返回的[rpc.IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)代理与远端 ServiceExtensionAbility进行跨设备IPC通信，以使用其对外提供的能力。适用于多设备限定协同场景， 例如在当前设备上调用其他设备的后台服务能力。使用时，开发者首先通过Want中的deviceId指定目标设备、 bundleName和abilityName指定目标ServiceExtensionAbility，并构造 [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md)实现onConnect、 onDisconnect、onFailed三个回调分别处理连接成功、连接断开和连接失败状态；随后调用 connectServiceExtensionAbility发起连接并获取返回的连接ID，连接成功后在onConnect回调中拿到 IRemoteObject代理对象，基于该代理与远端ServiceExtensionAbility进行IPC通信； 使用完毕后需调用[disconnectServiceExtensionAbility](#disconnectserviceextensionability) 断开连接并释放资源。
 
-连接到远程服务扩展能力。此方法连接到远程设备上的服务扩展能力。 必须实现ConnectOptions接口才能获取目标的代理 连接时的服务扩展。
-
-**起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,7 +39,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **错误码：**
 
@@ -71,21 +61,13 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 
 ## disconnectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 disconnectServiceExtensionAbility(connection: number): Promise<void>
 ```
 
-ArkTS-Sta:
-```TypeScript
-disconnectServiceExtensionAbility(connection: long): Promise<void>
-```
+断开与远端ServiceExtensionAbility的连接，与[connectServiceExtensionAbility](#connectserviceextensionability) 配对使用。调用connectServiceExtensionAbility后，必须在使用完毕后调用此方法释放连接资源， 需要使用connectServiceExtensionAbility返回的连接ID调用此方法。断开连接之后开发者需要将连接成功时 onConnect回调中返回的remote对象置空，以避免后续误用已失效的代理对象。使用Promise异步回调。
 
-断开与远程服务扩展功能的连接。
-
-**起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,7 +77,7 @@ disconnectServiceExtensionAbility(connection: long): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [connection](../../apis-network-kit/arkts-apis/arkts-net-connection.md) | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| [connection](../../apis-network-kit/arkts-apis/arkts-net-connection.md) | number | 是 |
 
 **返回值：**
 

@@ -6,14 +6,12 @@ CDSM客户端类，提供了获取远端设备的合作设备集合信息等操�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## 导入模块
 
 ```TypeScript
-import { cdsm } from '@kit.ConnectivityKit';
+import { cdsm } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getCdsmInfo
@@ -25,8 +23,6 @@ getCdsmInfo(): CdsmInfo
 查询远端设备的合作设备集合信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -58,8 +54,6 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -79,8 +73,6 @@ onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 订阅远端设备合作设备集合信息变化事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## mkdirSync
@@ -17,8 +17,6 @@ declare function mkdirSync(path: string): void
 以同步方法创建单层目录，若父目录不存在则会报错。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,18 +48,6 @@ declare function mkdirSync(path: string): void
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-let dirPath = pathDir + "/testDir";
-fileIo.mkdirSync(dirPath);
-```
-
-```TypeScript
-let dirPath = pathDir + "/testDir1/testDir2/testDir3";
-fileIo.mkdirSync(dirPath, true);
-```
-
 
 ## mkdirSync
 
@@ -72,8 +58,6 @@ declare function mkdirSync(path: string, recursion: boolean): void
 以同步方法创建目录。当recursion指定为true，可递归创建目录。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -105,7 +89,3 @@ declare function mkdirSync(path: string, recursion: boolean): void
 | 13900033 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-参见 [mkdirSync](#mkdirsync)

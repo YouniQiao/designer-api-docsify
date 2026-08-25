@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getRealActiveTime
@@ -15,8 +15,6 @@ function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): vo
 Obtains the time elapsed since system startup, excluding the deep sleep time. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -37,57 +35,6 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 | --- |
 | -1 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getRealActiveTime(true, (error: BusinessError, time: number) => {
-    if (error) {
-      console.info(`Failed to get real active time. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting real active time : ${time}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get real active time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getRealActiveTime((error: BusinessError, time: number) => {
-    if (error) {
-      console.info(`Failed to get real active time. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting real active time : ${time}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get real active time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getRealActiveTime().then((time: number) => {
-    console.info(`Succeeded in getting real active time : ${time}`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to get real active time. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get real active time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## getRealActiveTime
 
@@ -98,8 +45,6 @@ function getRealActiveTime(callback: AsyncCallback<number>): void
 Obtains the time elapsed since system startup, excluding the deep sleep time. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -119,10 +64,6 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 | --- |
 | -1 |
 
-**Examples**
-
-See [getRealActiveTime](#getrealactivetime)
-
 
 ## getRealActiveTime
 
@@ -133,8 +74,6 @@ function getRealActiveTime(isNano?: boolean): Promise<number>
 Obtains the time elapsed since system startup, excluding the deep sleep time. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -159,7 +98,3 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 | Error Code ID |
 | --- |
 | -1 |
-
-**Examples**
-
-See [getRealActiveTime](#getrealactivetime)

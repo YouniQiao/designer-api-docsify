@@ -4,14 +4,12 @@ AppStorageV2提供应用级全局共享状态变量的能力，开发者可以�
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
 ```
 
 ## connect
@@ -34,8 +32,6 @@ static connect<T extends object>(
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -56,26 +52,6 @@ static connect<T extends object>(
 | --- |
 | T \| undefined |
 
-**示例**
-
-```TypeScript
-import { AppStorageV2 } from '@kit.ArkUI';
-
-@ObservedV2
-class SampleClass {
-  @Trace p: number = 0;
-}
-
-// 将key为SampleClass、value为new SampleClass()对象的键值对存储到内存中，并赋值给as1
-const as1: SampleClass | undefined = AppStorageV2.connect(SampleClass, () => new SampleClass());
-
-// 将key为key_as2、value为new SampleClass()对象的键值对存储到内存中，并赋值给as2
-const as2: SampleClass = AppStorageV2.connect(SampleClass, 'key_as2', () => new SampleClass())!;
-
-// key为SampleClass已经在AppStorageV2中，将key为SampleClass的值返回给as3
-const as3: SampleClass = AppStorageV2.connect(SampleClass) as SampleClass;
-```
-
 ## keys
 
 ```TypeScript
@@ -89,8 +65,6 @@ static keys(): Array<string>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -102,13 +76,6 @@ static keys(): Array<string>
 | 类型 |
 | --- |
 | Array & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-// 假设AppStorageV2中存在两个key（key_as1、key_as2），返回[key_as1、key_as2]赋值给keys
-const keys: Array<string> = AppStorageV2.keys();
-```
 
 ## remove
 
@@ -123,8 +90,6 @@ static remove<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -136,16 +101,3 @@ static remove<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 |
-
-**示例**
-
-```TypeScript
-// 假设AppStorageV2中存在key为key_as2的键，从AppStorageV2中删除该键值对数据
-AppStorageV2.remove('key_as2');
-
-// 假设AppStorageV2中存在key为SampleClass的键，从AppStorageV2中删除该键值对数据
-AppStorageV2.remove(SampleClass);
-
-// 假设AppStorageV2中不存在key为key_as1的键，报警告
-AppStorageV2.remove('key_as1');
-```

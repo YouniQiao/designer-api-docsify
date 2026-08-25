@@ -4,8 +4,6 @@ Enumerates the transition effects for switching between the floating image (set 
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Direct transition from the menu preview to the final drag preview image upon drag initiation.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ Smooth size transition from the menu preview to the final drag preview. Disabled
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -53,8 +47,6 @@ SIZE_CONTENT_TRANSITION = 2
 Gradual transition from the menu preview to the final drag preview with opacity and size animations. Disabled when **DISABLE_SCALE** is set in [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md). Suitable for significant visual differences between preview images.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

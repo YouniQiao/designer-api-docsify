@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'kits/@kit.ArkUI';
 ```
 
 ## getRectangleById
@@ -26,8 +26,6 @@ Obtains a **ComponentInfo** object based on the component ID and synchronously r
 > retrieval attempts.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -56,10 +54,3 @@ Obtains a **ComponentInfo** object based on the component ID and synchronously r
 | Error Code ID |
 | --- |
 | [100001](../errorcode-internal.md#100001-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { componentUtils } from '@kit.ArkUI';
-let modePosition:componentUtils.ComponentInfo = componentUtils.getRectangleById("onClick");
-```

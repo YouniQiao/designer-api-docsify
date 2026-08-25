@@ -7,14 +7,12 @@ XmlSAXParser类用于以流式方式解析XML文本。适用于需要边读取�
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
+import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -27,12 +25,10 @@ constructor(inputStream: stream.Readable, encoding?: string)
 
 > **说明：**&gt;
 > - `inputStream`参数必须传入继承自[Readable](arkts-arkts-stream-readable-c.md)且实现
-> [Doread](arkts-arkts-stream-readable-c.md#doread)的类。可以传入其他模块中满足该条件的类，如
+> doRead的类。可以传入其他模块中满足该条件的类，如
 > [ReadStream](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readstream-c.md)。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,62 +42,6 @@ constructor(inputStream: stream.Readable, encoding?: string)
 | --- | --- | --- |
 | inputStream | stream.Readable | 是 |
 | encoding | string | 否 |
-
-**示例**
-
-```TypeScript
-let arrayBuffer = new ArrayBuffer(2048);
-let xmlSerializer = new xml.XmlSerializer(arrayBuffer, "utf-8");
-```
-
-```TypeScript
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let strXml = '<title>Happy</title>'
-let textEncoder = new util.TextEncoder();
-let uint8Array = textEncoder.encodeInto(strXml);
-let xmlParser = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UTF-8');
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream, 'utf-8');
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream, 'utf-8');
-```
 
 ## parse
 
@@ -119,8 +59,6 @@ parse(xmlSAXHandler: XmlSAXHandler): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -132,103 +70,3 @@ parse(xmlSAXHandler: XmlSAXHandler): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | xmlSAXHandler | [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let strXml =
-  '<?xml version="1.0" encoding="utf-8"?>' +
-  '<note importance="high" logged="true">' +
-    '<company>John &amp; Hans</company>' +
-    '<title>Happy</title>' +
-  '</note>';
-let textEncoder = new util.TextEncoder();
-let arrBuffer = textEncoder.encodeInto(strXml);
-let that = new xml.XmlPullParser(arrBuffer.buffer as object as ArrayBuffer, 'UTF-8');
-let parseResult = '';
-function func(name: string, value: string) {
-  parseResult = name + value;
-  console.info(parseResult);
-  return true;
-}
-let options: xml.ParseOptions = {supportDoctype:true, ignoreNameSpace:true, tagValueCallbackFunction:func}
-that.parse(options);
-// note
-// company
-// John & Hans
-// company
-// title
-// Happy
-// title
-// note
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream);
-
-let handler: xml.XmlSAXHandler = {
-  startDocument: () => {
-  },
-  endDocument: () => {
-  },
-  startElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined,
-    attributes: Map<string, string>) => {
-  },
-  endElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined) => {
-  },
-  characters: (content: string) => {
-  }
-};
-
-saxParser.parse(handler);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { xml, stream } from '@kit.ArkTS';
-
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-let saxParser = new xml.XmlSAXParser(readableStream);
-
-let handler: xml.XmlSAXHandler = {
-  startDocument: () => {
-  },
-  endDocument: () => {
-  },
-  startElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined,
-    attributes: Map<string, string>) => {
-  },
-  endElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined) => {
-  },
-  characters: (content: string) => {
-  }
-};
-
-saxParser.parse(handler);
-```

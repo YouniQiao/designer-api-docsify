@@ -4,8 +4,6 @@ Enumerates the album subtypes.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
@@ -23,8 +21,6 @@ USER_GENERIC = 1
 User album.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -44,8 +40,6 @@ Favorites.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#favorite)
@@ -63,8 +57,6 @@ VIDEO = 1026
 Video album.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -84,8 +76,6 @@ Hidden album.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#hidden)
@@ -103,8 +93,6 @@ TRASH = 1028
 Trash.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -124,8 +112,6 @@ Album for screenshots and screen recording files.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#screenshot)
@@ -144,8 +130,6 @@ Album for photos and videos taken by the camera.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [CAMERA](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#camera)
@@ -163,8 +147,6 @@ ANY = 2147483647
 Any album.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 

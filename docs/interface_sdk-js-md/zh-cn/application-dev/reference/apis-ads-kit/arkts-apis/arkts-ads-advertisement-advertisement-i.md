@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## [key:string]
@@ -20,8 +18,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -33,14 +29,17 @@ adType: number
 ```
 
 广告类型。  
-- 1：开屏广告。 - 3：原生广告。 - 7：激励广告。 - 8：横幅广告。 - 12：插屏广告。 - 60：贴片广告。  
+- 1：开屏广告。  
+- 3：原生广告。  
+- 7：激励广告。  
+- 8：横幅广告。  
+- 12：插屏广告。  
+- 60：贴片广告。  
 不填默认为原生广告类型。
 
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -53,13 +52,12 @@ clicked: boolean
 ```
 
 广告是否被点击。  
-- true：被点击。 - false：未被点击。
+- true：被点击。  
+- false：未被点击。
 
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -72,13 +70,12 @@ rewarded: boolean
 ```
 
 广告是否获得奖励。  
-- true：获得奖励。 - false：没有获得奖励。
+- true：获得奖励。  
+- false：没有获得奖励。
 
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -96,8 +93,6 @@ rewardVerifyConfig: Map<string, string>
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -109,13 +104,12 @@ shown: boolean
 ```
 
 广告是否展示。  
-- true：展示。 - false：未展示。
+- true：展示。  
+- false：未展示。
 
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -132,8 +126,6 @@ uniqueId: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

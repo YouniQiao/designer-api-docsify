@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## querySyncResult
@@ -15,8 +15,6 @@ function querySyncResult(query: AssetMap): Promise<SyncResult>
 执行同步操作后，查询同步执行结果。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -44,14 +42,3 @@ function querySyncResult(query: AssetMap): Promise<SyncResult>
 | [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
 | [24000014](../errorcode-asset.md#24000014-文件操作失败) |
 | [24000018](../errorcode-asset.md#24000018-参数校验失败) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-
-let query: asset.AssetMap = new Map();
-asset.querySyncResult(query).then((res: asset.SyncResult) => {
-  console.info(`Succeeded in querying sync result: ${JSON.stringify(res)}`);
-});
-```

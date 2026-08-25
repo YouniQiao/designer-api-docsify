@@ -1,7 +1,5 @@
 # DateConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new (value: number | string | Date): Date
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -22,8 +20,6 @@ readonly notificationClassification?: NotificationClassification
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -33,16 +29,14 @@ readonly notificationClassification?: NotificationClassification
 ## reason
 
 ```TypeScript
-readonly reason?: int
+readonly reason?: number
 ```
 
 删除原因（1:点击通知后删除通知，2:用户删除通知） 。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -60,8 +54,6 @@ readonly request: NotificationRequest
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -77,8 +69,6 @@ readonly sortingMap?: NotificationSortingMap
 **类型：** [NotificationSortingMap](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -96,8 +86,6 @@ readonly sound?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -105,16 +93,14 @@ readonly sound?: string
 ## vibrationValues
 
 ```TypeScript
-readonly vibrationValues?: Array<long>
+readonly vibrationValues?: Array<number>
 ```
 
 通知振动。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -131,8 +117,6 @@ voiceContent?: VoiceContent
 **类型：** [VoiceContent](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

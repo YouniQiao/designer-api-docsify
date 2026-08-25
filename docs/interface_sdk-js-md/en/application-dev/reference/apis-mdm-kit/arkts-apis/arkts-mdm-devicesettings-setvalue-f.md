@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## setValue
@@ -15,8 +15,6 @@ function setValue(admin: Want, item: string, value: string): void
 Sets the device policy.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 
@@ -40,24 +38,3 @@ Sets the device policy.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace with actual values.
-  deviceSettings.setValue(wantTemp, 'screenOff', '3000');
-  console.info(`Succeeded in setting screen off time.`);
-} catch (err) {
-  console.error(`Failed to set screen off time. Code: ${err.code}, message: ${err.message}`);
-}
-```

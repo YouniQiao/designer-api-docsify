@@ -4,8 +4,6 @@ Describes the configuration parameters for raycasting, defining the behavior of 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## rootNode
@@ -19,7 +17,5 @@ Limits the detection scope to this node and its child nodes. If this parameter i
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

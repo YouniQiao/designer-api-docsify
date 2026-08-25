@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## saveToExistingContactViaUI
@@ -15,8 +15,6 @@ function saveToExistingContactViaUI(context: Context, contact: Contact): Promise
 调用保存至已有联系人接口，选择联系人UI界面并完成编辑。使用Promise异步回调。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -45,28 +43,3 @@ function saveToExistingContactViaUI(context: Context, contact: Contact): Promise
 | [16700101](../errorcode-contacts.md#16700101-查询数据库失败) |
 | [16700102](../errorcode-contacts.md#16700102-增删改数据库失败) |
 | [16700103](../errorcode-contacts.md#16700103-用户取消) |
-
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { contact } from '@kit.ContactsKit';
-
-// 请在组件内获取context。
-let contactInfo: contact.Contact = {
-  id: 1,
-  name: {
-    fullName: 'xxx'
-  },
-  phoneNumbers: [{
-    phoneNumber: '138xxxxxx'
-  }]
-}
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.saveToExistingContactViaUI(context, contactInfo);
-promise.then((data) => {
-    console.info(`Succeeded in save to existing Contact via UI.data->${JSON.stringify(data)}`);
-  });
-```

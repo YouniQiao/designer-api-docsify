@@ -4,14 +4,12 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## size
@@ -26,8 +24,6 @@ size: PiPWindowSize
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -35,16 +31,14 @@ size: PiPWindowSize
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 画中画窗口ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

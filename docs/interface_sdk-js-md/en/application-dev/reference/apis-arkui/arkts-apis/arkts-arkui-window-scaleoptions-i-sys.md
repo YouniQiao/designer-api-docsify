@@ -4,8 +4,6 @@ Describes the scale parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Describes the scale parameters.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## pivotX
 
 ```TypeScript
-pivotX?: double
+pivotX?: number
 ```
 
 X coordinate of the scale center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,16 +33,14 @@ X coordinate of the scale center. The value is a floating-point number in the ra
 ## pivotY
 
 ```TypeScript
-pivotY?: double
+pivotY?: number
 ```
 
 Y coordinate of the scale center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -55,16 +49,14 @@ Y coordinate of the scale center. The value is a floating-point number in the ra
 ## x
 
 ```TypeScript
-x?: double
+x?: number
 ```
 
 Scale factor along the x-axis. The value is a floating-point number, and the default value is **1.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -73,16 +65,14 @@ Scale factor along the x-axis. The value is a floating-point number, and the def
 ## y
 
 ```TypeScript
-y?: double
+y?: number
 ```
 
 Scale factor along the y-axis. The value is a floating-point number, and the default value is **1.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

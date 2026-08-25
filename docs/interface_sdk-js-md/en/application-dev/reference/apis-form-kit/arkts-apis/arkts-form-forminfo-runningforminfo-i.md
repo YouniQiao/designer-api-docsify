@@ -4,14 +4,12 @@ The class of a running form information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'kits/@kit.FormKit';
 ```
 
 ## abilityName
@@ -27,8 +25,6 @@ Obtains the class name of the ability to which this form belongs.
 **Default:** -
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -48,8 +44,6 @@ Obtains the bundle name of the application to which this form belongs.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.Form
@@ -57,18 +51,16 @@ Obtains the bundle name of the application to which this form belongs.
 ## dimension
 
 ```TypeScript
-readonly dimension: int
+readonly dimension: number
 ```
 
 Obtains the grid style of this form. The value must be a positive integer, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** -
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -88,8 +80,6 @@ Obtains the id of the this form.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.Form
@@ -107,8 +97,6 @@ The location of this form.
 **Default:** -
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -128,8 +116,6 @@ Obtains the name of this form.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.Form
@@ -147,8 +133,6 @@ Obtains the name of the application module to which this form belongs.
 **Default:** -
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

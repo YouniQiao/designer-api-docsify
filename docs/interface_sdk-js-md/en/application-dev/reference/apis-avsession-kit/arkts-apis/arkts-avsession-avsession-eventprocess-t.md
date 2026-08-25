@@ -8,8 +8,6 @@ The general process funcation with an event and arguments.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.1.0; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 **Parameters:**

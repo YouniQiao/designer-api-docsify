@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## cubicBezierCurve
@@ -15,8 +15,6 @@ function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurv
 构造三阶贝塞尔曲线对象，确保曲线的值在0到1之间。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -35,11 +33,4 @@ function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurv
 
 | 类型 |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**示例**
-
-```TypeScript
-import { curves } from '@kit.ArkUI';
-curves.cubicBezierCurve(0.1, 0.0, 0.1, 1.0) // 创建一个三阶贝塞尔曲线
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

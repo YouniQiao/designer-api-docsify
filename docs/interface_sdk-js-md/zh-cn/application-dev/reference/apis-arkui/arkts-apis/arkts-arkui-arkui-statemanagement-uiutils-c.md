@@ -4,14 +4,12 @@ UIUtils状态管理相关的工具方法，包括获取代理对象的原始对�
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
 ```
 
 ## addMonitor
@@ -23,8 +21,6 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 给状态管理V2的状态变量动态添加监听方法，详见 [addMonitor/clearMonitor](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,8 +55,6 @@ static applySync<T>(task: TaskCallback): T
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -85,52 +79,6 @@ static applySync<T>(task: TaskCallback): T
 | --- |
 | [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) |
 
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Index {
-  @Local columnWidth: number = 50; // 宽度
-  @Local columnHeight: number = 50; // 高度
-  @Local message: string = 'Hello';
-
-  build() {
-    Column() {
-      Button('change size')
-        .margin(20)
-        .onClick(() => {
-          // 在执行动画前，存在额外的修改
-          UIUtils.applySync(() => {
-            this.columnWidth = 100;
-            this.columnHeight = 100;
-            this.message = 'Hello World';
-          });
-          // 动画在1s内，Column方框的尺寸由（100*100）渐变为（200*200），方框内的文本变为Hello ArkUI
-          this.getUIContext().animateTo({
-            duration: 1000
-          }, () => {
-            console.info(`animateTo-in, width=${this.columnWidth}, height=${this.columnHeight}`);
-            this.columnWidth = 200;
-            this.columnHeight = 200;
-            this.message = 'Hello ArkUI';
-            console.info(`animateTo-out, width=${this.columnWidth}, height=${this.columnHeight}`);
-          });
-        })
-      // Column方框
-      Column() {
-        Text(`${this.message}`)
-      }
-      .backgroundColor('#ff17a98d')
-      .width(this.columnWidth)
-      .height(this.columnHeight)
-    }
-  }
-}
-```
-
 ## canBeObserved
 
 ```TypeScript
@@ -140,8 +88,6 @@ static canBeObserved<T extends object>(source: T): ObservedResult
 判断数据对象是否为可观察对象，并返回观察结果。详见[canBeObserved接口：判断对象是否为可被观察对象](../../../ui/state-management/arkts-new-canBeObserved.md)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -161,117 +107,6 @@ static canBeObserved<T extends object>(source: T): ObservedResult
 | --- |
 | [ObservedResult](arkts-arkui-arkui-statemanagement-observedresult-i.md) |
 
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-import { DecoratorInfo, ElementInfo } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = 'CanBeObserved';
-
-class Student {
-  public name?: string;
-
-  constructor(name?: string) {
-    this.name = name ?? '';
-  }
-
-  // 在对象中提供判断该对象是否为可被观察对象的方法
-  test(): void {
-    const result = UIUtils.canBeObserved(this);
-    // 对象是否可被观察
-    const isObserved = result.isObserved;
-    hilog.info(0x00, TAG, `isObserved: ${JSON.stringify(isObserved)}`);
-    // 对象是否可被观察的原因
-    const reason = result.reason;
-    hilog.info(0x00, TAG, `reason: ${reason}`);
-    // 对象可被观察时，对象关联的装饰器信息
-    const decoratorInfoArr = result.decoratorInfo;
-    decoratorInfoArr.forEach((decorator: DecoratorInfo) => {
-      // 装饰器名称
-      const decoratorName = decorator.decoratorName;
-      hilog.info(0x00, TAG, `decoratorName: ${decoratorName}`);
-      // 装饰器装饰的属性名称
-      const stateVariableName = decorator.stateVariableName;
-      hilog.info(0x00, TAG, `stateVariableName: ${stateVariableName}`);
-      // 装饰器所在的组件名称
-      const owningName = decorator.owningComponentOrClassName;
-      hilog.info(0x00, TAG, `owningComponentOrClassName: ${owningName}`);
-      // 装饰器所在的组件id
-      const owningId = decorator.owningComponentId;
-      hilog.info(0x00, TAG, `owningComponentId: ${owningId}`);
-      // 装饰器关联的组件信息
-      const dependentInfo = decorator.dependentInfo;
-      dependentInfo.forEach((elementInfo: ElementInfo) => {
-        // 装饰器关联的组件名称
-        const eleName = elementInfo.elementName;
-        hilog.info(0x00, TAG, `elementName: ${eleName}`);
-        // 装饰器关联的组件id
-        const eleId = elementInfo.elementId;
-        hilog.info(0x00, TAG, `elementId: ${eleId}`);
-      });
-    });
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  @State student: Student = new Student('LiMei');
-
-  build() {
-    Column({ space: 20 }) {
-      Classroom({ student: this.student })
-      Home({ student: this.student })
-      Button('test')
-        .onClick(() => {
-          // 开发者可以在任意页面中使用接口来判断当前对象是否为可被观察对象
-          this.student.test();
-        })
-    }
-    .height('100%')
-    .width('100%')
-    .justifyContent(FlexAlign.Center)
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-
-@Component
-export struct Classroom {
-  @State student: Student = new Student();
-
-  build() {
-    Column() {
-      Text('Classroom ' + this.student.name)
-      School({ student: this.student })
-    }
-  }
-}
-
-@Component
-export struct Home {
-  @State student: Student = new Student();
-
-  build() {
-    Column() {
-      Text('Home ' + this.student.name)
-    }
-  }
-}
-
-@Component
-export struct School {
-  @State student: Student = new Student();
-
-  build() {
-    Column() {
-      Text('School ' + this.student.name)
-    }
-  }
-}
-```
-
 ## clearMonitor
 
 ```TypeScript
@@ -281,8 +116,6 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 删除通过[addMonitor](#addmonitor)给状态管理V2的状态变量添加的监听方法，详见 [addMonitor/clearMonitor](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -316,8 +149,6 @@ static enableV2Compatibility<T extends object>(source: T): T
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -336,47 +167,6 @@ static enableV2Compatibility<T extends object>(source: T): T
 | --- |
 | T |
 
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@Observed
-class ObservedClass {
-  name: string = 'Tom';
-}
-
-@Entry
-@Component
-struct CompV1 {
-  @State observedClass: ObservedClass = new ObservedClass();
-
-  build() {
-    Column() {
-      Text(`@State observedClass: ${this.observedClass.name}`)
-        .onClick(() => {
-          this.observedClass.name = 'State'; // 刷新
-        })
-      // 将V1的状态变量使能V2的观察能力
-      CompV2({ observedClass: UIUtils.enableV2Compatibility(this.observedClass) })
-    }
-  }
-}
-
-@ComponentV2
-struct CompV2 {
-  @Param observedClass: ObservedClass = new ObservedClass();
-
-  build() {
-    // V1状态变量在使能V2观察能力后，可以在V2观察第一层的变化
-    Text(`@Param observedClass: ${this.observedClass.name}`)
-      .onClick(() => {
-        this.observedClass.name = 'Param'; // 刷新
-      })
-  }
-}
-```
-
 ## flushUIUpdates
 
 ```TypeScript
@@ -386,8 +176,6 @@ static flushUIUpdates(): void
 立即处理在调用该函数之前所有的状态变量修改，同步[标脏](../../../ui/state-management/arkts-state-management-introduce.md#触发更新)对应的UI节点，但不会同步执行 @Computed计算和@Monitor回调，详见 [applySync/flushUpdates/flushUIUpdates接口：同步刷新](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md)。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -401,52 +189,6 @@ static flushUIUpdates(): void
 | --- |
 | [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) |
 | [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) |
-
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Index {
-  @Local columnWidth: number = 50; // 宽度
-  @Local columnHeight: number = 50; // 高度
-  @Local message: string = 'Hello';
-
-  build() {
-    Column() {
-      Button('change size')
-        .margin(20)
-        .onClick(() => {
-          // 在执行动画前，存在额外的修改
-          this.columnWidth = 100;
-          this.columnHeight = 100;
-          this.message = 'Hello World';
-          // 立即处理上述状态变量修改，同步标脏对应的UI节点
-          UIUtils.flushUIUpdates();
-          // 动画在1s内，Column方框的尺寸由（100*100）渐变为（200*200），方框内的文本变为Hello ArkUI
-          this.getUIContext().animateTo({
-            duration: 1000
-          }, () => {
-            console.info(`animateTo-in, width=${this.columnWidth}, height=${this.columnHeight}`);
-            this.columnWidth = 200;
-            this.columnHeight = 200;
-            this.message = 'Hello ArkUI';
-            console.info(`animateTo-out, width=${this.columnWidth}, height=${this.columnHeight}`);
-          });
-        })
-      // Column方框
-      Column() {
-        Text(`${this.message}`)
-      }
-      .backgroundColor('#ff17a98d')
-      .width(this.columnWidth)
-      .height(this.columnHeight)
-    }
-  }
-}
-```
 
 ## flushUpdates
 
@@ -458,8 +200,6 @@ static flushUpdates(): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -473,51 +213,6 @@ static flushUpdates(): void
 | [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) |
 | [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) |
 
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Index {
-  @Local columnWidth: number = 50; // 宽度
-  @Local columnHeight: number = 50; // 高度
-  @Local message: string = 'Hello';
-
-  build() {
-    Column() {
-      Button('change size')
-        .margin(20)
-        .onClick(() => {
-          // 在执行动画前，存在额外的修改
-          this.columnWidth = 100;
-          this.columnHeight = 100;
-          this.message = 'Hello World';
-          UIUtils.flushUpdates();
-          // 动画在1s内，Column方框的尺寸由（100*100）渐变为（200*200），方框内的文本变为Hello ArkUI
-          this.getUIContext().animateTo({
-            duration: 1000
-          }, () => {
-            console.info(`animateTo-in, width=${this.columnWidth}, height=${this.columnHeight}`);
-            this.columnWidth = 200;
-            this.columnHeight = 200;
-            this.message = 'Hello ArkUI';
-            console.info(`animateTo-out, width=${this.columnWidth}, height=${this.columnHeight}`);
-          });
-        })
-      // Column方框
-      Column() {
-        Text(`${this.message}`)
-      }
-      .backgroundColor('#ff17a98d')
-      .width(this.columnWidth)
-      .height(this.columnHeight)
-    }
-  }
-}
-```
-
 ## getCustomComponentContext
 
 ```TypeScript
@@ -527,8 +222,6 @@ static getCustomComponentContext<T extends BaseCustomComponent>(customComponent:
 返回给定@Component(V1)或@ComponentV2的[CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md)。使用它来访问组件的复用池。有关复用池的详细信息，请参阅 [全局复用池：集中化的组件回收与复用](../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -548,66 +241,6 @@ static getCustomComponentContext<T extends BaseCustomComponent>(customComponent:
 | --- |
 | [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md) |
 
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@ReusableV2
-@ComponentV2
-struct ReusableChild {
-  aboutToRecycle() {
-    console.info('ReusableChild aboutToRecycle');
-  }
-  aboutToReuse() {
-    console.info('ReusableChild aboutToReuse');
-  }
-
-  build() {
-    Text('ReusableChild')
-  }
-}
-
-@Entry
-@ComponentV2({ 
-  reusePool: 'shared', // 声明共享全局复用池
-  poolAccepts: [ReusableChild], // 全局复用池接纳子组件类型ReusableChild
-  freezeWhenInactive: false // 关闭组件冻结功能。该参数必须在声明reusePool时提供，也可以开启组件冻结。
-})
-struct Index {
-  @Local showChild: boolean = true;
-
-  inspectPool() {
-    // 获取此组件的CustomComponentContext
-    const context = UIUtils.getCustomComponentContext(this);
-    // 通过上下文访问复用池。
-    const pool = context.getReusePool();
-    if (pool) {
-      const info = pool.getReusableInfo(ReusableChild);
-      if (info && !Array.isArray(info)) {
-        console.info(`ReusableChild 在池中: count=${info.count}, maxCount=${info.maxCount}`);
-      }
-    }
-  }
-
-  build() {
-    Column() {
-      Button('切换子组件')
-        .onClick(() => { 
-          this.showChild = !this.showChild;
-        })
-      Button('检查池')
-        .onClick(() => {
-          this.inspectPool();
-        })
-      if (this.showChild) {
-        ReusableChild()
-      }
-    }
-  }
-}
-```
-
 ## getLifecycle
 
 ```TypeScript
@@ -617,8 +250,6 @@ static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomCo
 getLifecycle用于获取自定义组件的生命周期实例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -638,29 +269,6 @@ getLifecycle用于获取自定义组件的生命周期实例。
 | --- |
 | [CustomComponentLifecycle](arkts-arkui-arkui-statemanagement-customcomponentlifecycle-i.md) |
 
-**示例**
-
-```TypeScript
-import { UIUtils, ComponentAppear } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State lifecycleState: number = -1;
-
-  @ComponentAppear
-  myAppear() {
-    // UIUtils.getLifecycle获得自定义组件的生命周期实例，getCurrentState查询自定义组件当前生命周期。
-    // 预期查询到的生命周期为CustomComponentLifecycleState.APPEARED = 1。
-    this.lifecycleState = UIUtils.getLifecycle(this).getCurrentState();
-  }
-
-  build() {
-    Text(`${this.lifecycleState}`)
-  }
-}
-```
-
 ## getTarget
 
 ```TypeScript
@@ -670,8 +278,6 @@ static getTarget<T extends object>(source: T): T
 从状态管理框架包裹的代理对象中获取原始对象。详见[getTarget接口：获取状态管理框架代理前的原始对象](../../../ui/state-management/arkts-new-getTarget.md)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -691,32 +297,6 @@ static getTarget<T extends object>(source: T): T
 | --- |
 | T |
 
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-class NonObservedClass {
-  name: string = 'Tom';
-}
-
-let nonObservedClass: NonObservedClass = new NonObservedClass();
-
-@Entry
-@Component
-struct Index {
-  @State someClass: NonObservedClass = nonObservedClass;
-
-  build() {
-    Column() {
-      Text(`this.someClass === nonObservedClass: ${this.someClass === nonObservedClass}`) // false
-      Text(`UIUtils.getTarget(this.someClass) === nonObservedClass: ${UIUtils.getTarget(this.someClass) ===
-        nonObservedClass}`) // true
-    }
-  }
-}
-```
-
 ## makeBinding
 
 ```TypeScript
@@ -726,8 +306,6 @@ static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 创建只读的单向数据绑定实例，用于构建[\@Builder](../../../ui/state-management/arkts-builder.md)函数中参数类型为`Binding`的对应实参。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -747,94 +325,6 @@ static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 | --- |
 | [Binding](arkts-arkui-arkui-statemanagement-binding-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-import { Binding, UIUtils } from '@kit.ArkUI';
-
-@Builder
-function CustomButton(num1: Binding<number>) {
-  Row() {
-    Button(`Custom Button: ${num1.value}`)
-      .onClick(() => {
-        // num1.value += 1; 会报错，Binding类型不支持修改
-      })
-  }
-}
-
-@Entry
-@ComponentV2
-struct CompV2 {
-  @Local number1: number = 5;
-
-  build() {
-    Column() {
-      Text('parent component')
-
-      CustomButton(
-        /**
-         * 创建只读绑定实例
-         * @param getter - 返回this.number1的函数
-         * @returns 只读的Binding<number>对象
-         *
-         * 特点：
-         * 1. 每次访问.value时重新计算
-         * 2. 不能直接修改值
-         */
-        UIUtils.makeBinding<number>(
-          () => this.number1 // GetterCallback
-        )
-      )
-    }
-  }
-}
-```
-
-```TypeScript
-import { Binding, MutableBinding, UIUtils } from '@kit.ArkUI';
-
-@Builder
-function CustomButton(num1: MutableBinding<number>) {
-  Row() {
-    Button(`Custom Button: ${num1.value}`)
-      .onClick(() => {
-        // MutableBinding类型支持修改
-        num1.value += 1;
-      })
-  }
-}
-
-@Entry
-@ComponentV2
-struct CompV2 {
-  @Local number1: number = 10;
-
-  build() {
-    Column() {
-      Text('parent component')
-
-      CustomButton(
-        /**
-         * 创建可变绑定
-         * @param getter - 返回this.number1的函数
-         * @param setter - 当绑定值修改时调用的回调
-         * @returns 可变的MutableBinding<number>对象
-         *
-         * 特点：
-         * 1. 支持读取和写入操作
-         * 2. 修改.value时会自动调用setter回调
-         */
-        UIUtils.makeBinding<number>(
-          () => this.number1, // GetterCallback
-          (val: number) => {
-            this.number1 = val;
-          }) // SetterCallback
-      )
-    }
-  }
-}
-```
-
 ## makeBinding
 
 ```TypeScript
@@ -844,8 +334,6 @@ static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): Mut
 创建可修改的双向数据绑定实例，用于构建\@Builder函数中参数类型为`MutableBinding`的对应实参。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -866,10 +354,6 @@ static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): Mut
 | --- |
 | [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md)&lt;T&gt; |
 
-**示例**
-
-参见 [makeBinding](#makebinding)
-
 ## makeObserved
 
 ```TypeScript
@@ -879,8 +363,6 @@ static makeObserved<T extends object>(source: T): T
 将普通不可观察数据变为可观察数据。详见[makeObserved接口：将非观察数据变为可观察数据](../../../ui/state-management/arkts-new-makeObserved.md)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -900,37 +382,6 @@ static makeObserved<T extends object>(source: T): T
 | --- |
 | T |
 
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-class NonObservedClass {
-  name: string = 'Tom';
-}
-
-@Entry
-@ComponentV2
-struct Index {
-  // 使用makeObserved将NonObservedClass实例变为可观察对象
-  observedClass: NonObservedClass = UIUtils.makeObserved(new NonObservedClass());
-  nonObservedClass: NonObservedClass = new NonObservedClass();
-
-  build() {
-    Column() {
-      Text(`observedClass: ${this.observedClass.name}`)
-        .onClick(() => {
-          this.observedClass.name = 'Jane'; // 刷新
-        })
-      Text(`observedClass: ${this.nonObservedClass.name}`)
-        .onClick(() => {
-          this.nonObservedClass.name = 'Jane'; // 不刷新
-        })
-    }
-  }
-}
-```
-
 ## makeV1Observed
 
 ```TypeScript
@@ -940,8 +391,6 @@ static makeV1Observed<T extends object>(source: T): T
 将不可观察的对象包装成状态管理V1可观察的对象，其能力等同于@Observed，可初始化@ObjectLink。该接口可搭配[enableV2Compatibility](#enablev2compatibility)应用于状态管理V1和V2混用场景，详见 [状态管理V1和V2混用指导（API version 19及之后）](../../../ui/state-management/arkts-v1-v2-mixusage.md)。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -960,50 +409,3 @@ static makeV1Observed<T extends object>(source: T): T
 | 类型 |
 | --- |
 | T |
-
-**示例**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-class Outer {
-  outerValue: string = 'outer';
-  inner: Inner;
-
-  constructor(inner: Inner) {
-    this.inner = inner;
-  }
-}
-
-class Inner {
-  interValue: string = 'inner';
-}
-
-@Entry
-@Component
-struct Index {
-  // 使用makeV1Observed将Inner实例包装为V1可观察对象，传入Outer构造函数
-  @State outer: Outer = new Outer(UIUtils.makeV1Observed(new Inner()));
-
-  build() {
-    Column() {
-      // makeV1Observed的返回值可初始化@ObjectLink
-      Child({ inner: this.outer.inner })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-
-@Component
-struct Child {
-  @ObjectLink inner: Inner;
-
-  build() {
-    Text(`${this.inner.interValue}`)
-      .onClick(() => {
-        this.inner.interValue += '!';
-      })
-  }
-}
-```

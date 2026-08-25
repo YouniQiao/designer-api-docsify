@@ -1,7 +1,5 @@
 # Number
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOption
 ```
 
 Converts a number to a string by using the current or specified locale.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

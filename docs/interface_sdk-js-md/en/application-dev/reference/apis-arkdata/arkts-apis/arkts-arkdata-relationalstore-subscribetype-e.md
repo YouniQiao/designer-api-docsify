@@ -4,8 +4,6 @@ Enumerates the subscription types. Use the enum name rather than the enum value.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SUBSCRIBE_TYPE_REMOTE
@@ -18,8 +16,6 @@ Subscribe to remote data changes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SUBSCRIBE_TYPE_CLOUD
@@ -31,8 +27,6 @@ SUBSCRIBE_TYPE_CLOUD = 1
 Subscribe to cloud data changes.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
@@ -49,8 +43,6 @@ Subscribe to detailed information about cloud data changes.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -65,7 +57,5 @@ SUBSCRIBE_TYPE_LOCAL_DETAILS
 Subscribe to detailed information about local data changes.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

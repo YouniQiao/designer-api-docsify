@@ -10,8 +10,6 @@ controller: TextController = new TextController()
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,8 +27,6 @@ closeSelectionMenu(): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -46,8 +42,6 @@ getLayoutManager(): LayoutManager
 获取布局管理器对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,8 +64,6 @@ setStyledString(value: StyledString): void
 触发绑定或更新属性字符串。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,8 +96,6 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -118,4 +108,4 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 | --- | --- | --- |
 | selectionStart | number \| undefined | 是 |
 | selectionEnd | number \| undefined | 是 |
-| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | 否 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 |

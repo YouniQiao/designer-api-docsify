@@ -15,8 +15,6 @@ Listens for file or directory changes. This API uses an asynchronous callback to
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [createWatcher](arkts-corefile-file-fs-createwatcher-f.md)
@@ -36,12 +34,3 @@ Listens for file or directory changes. This API uses an asynchronous callback to
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Watcher](arkts-corefile-fileio-watcher-depr-i.md) |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
-  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
-});
-```

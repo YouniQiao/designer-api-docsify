@@ -13,31 +13,13 @@ The editable title bar is a title bar that comes with button icons, typically **
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from '@kit.ArkUI';
+import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onCancel
 
@@ -48,8 +30,6 @@ onCancel?: () => void
 Cancel action event, which is triggered when the left button is of the Cancel type. This parameter is required to customize the return or cancel operation logic. If this parameter is not specified, clicking the button on the left does not respond.Default value: **() =&gt; void**Back action event, which is triggered when the button on the left side is of the Back type, since API version 12.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +47,6 @@ Save button click event. This parameter is required to customize the save operat
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -83,13 +61,12 @@ contentMargin?: LocalizedMargin
 
 Content margin. Negative numbers are not supported.Default value:{start: LengthMetrics.resource(*\$r('sys.float.margin_left')*), end: LengthMetrics.resource(*\$r('sys.float.margin_right')*)}
 
-**Type:** LocalizedMargin
+**Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
-**Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')), <br> end: LengthMetrics.resource($r('sys.float.margin_right'))}
+**Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')), 
+ end: LengthMetrics.resource($r('sys.float.margin_right'))}
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,8 +85,6 @@ A single menu item for the profile picture on the left. This parameter is requir
 **Type:** [EditableTitleBarItem](arkts-arkui-editabletitlebaritem-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,8 +107,6 @@ Whether the save button on the right is required.Default value: **true**, indica
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -154,8 +127,6 @@ Whether the left icon is the default focus.Default value: **false**, indicating 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -174,8 +145,6 @@ Type of the icon on the left.Default value: **EditableLeftIconType.Back**
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -193,8 +162,6 @@ List of menu items on the right. This parameter is required to display custom bu
 **Type:** Array&lt;[EditableTitleBarMenuItem](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -217,8 +184,6 @@ Title style.Default value:{safeAreaTypes: [SafeAreaType.SYSTEM],safeAreaEdges: [
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -239,8 +204,6 @@ Whether the save icon is the default focus.Default value: **false**, indicating 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -255,11 +218,9 @@ subtitle?: ResourceStr
 
 Subtitle. This parameter is required to display a subtitle below the title bar. If this parameter is not passed, the default value is used and no subtitle is displayed.Default value: **''**, indicating that the subtitle is empty.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -275,11 +236,9 @@ title: ResourceStr
 
 Title.Default value: **''**, indicating that the title is empty.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

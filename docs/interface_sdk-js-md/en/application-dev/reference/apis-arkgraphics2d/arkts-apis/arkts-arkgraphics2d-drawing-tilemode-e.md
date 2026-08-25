@@ -4,8 +4,6 @@ Enumerates the tile modes of the shader effect.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## CLAMP
@@ -17,8 +15,6 @@ CLAMP = 0
 Replicates the edge color if the shader effect draws outside of its original boundary.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ Repeats the shader effect in both horizontal and vertical directions.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## MIRROR
@@ -46,8 +40,6 @@ Repeats the shader effect in both horizontal and vertical directions, alternatin
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DECAL
@@ -59,7 +51,5 @@ DECAL = 3
 Renders the shader effect only within the original boundary.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

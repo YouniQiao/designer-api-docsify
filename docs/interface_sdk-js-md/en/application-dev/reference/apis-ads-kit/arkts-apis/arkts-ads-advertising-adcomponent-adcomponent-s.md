@@ -12,14 +12,12 @@ This module provides the capability of displaying ads, covering native, roll, sp
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit';
+import { AdComponent } from 'kits/@kit.AdsKit';
 ```
 
 ## adRenderer
@@ -31,8 +29,6 @@ adRenderer?: () => void
 Application self-rendered ad style. The application self-rendered ad style is a restricted capability. For details, please consult [Traffic Monetization Official Website Customer Support](https://developer.huawei.com/consumer/en/doc/monetize/ support-0000001061434261).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -47,8 +43,6 @@ build(): void
 A constructor used to create an **AdComponent** object.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +60,6 @@ Array of ad objects.NOTE: For non-roll ad types, the component only displays the
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -83,8 +75,6 @@ Ad display parameters.
 **Type:** advertising.AdDisplayOptions
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -102,8 +92,6 @@ Callback for ad status changes.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -120,94 +108,6 @@ Used to provide the playback status of roll ads externally. Set to 1 for playing
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Advertising.Ads
-
-**Examples**
-
-```TypeScript
-import { AdComponent, advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Entry
-@Component
-struct Index {
-  // Requested ad content
-  private ads: advertising.Advertisement[] = [];
-  // Ad display parameters
-  private adDisplayOptions: advertising.AdDisplayOptions = {};
-
-  build() {
-    Column() {
-      AdComponent({
-        ads: this.ads,
-        displayOptions: this.adDisplayOptions,
-        interactionListener: {
-          onStatusChanged: (status: string, ad: advertising.Advertisement, data: string) => {
-            switch (status) {
-              case 'onAdOpen':
-                hilog.info(0x0000, 'testTag', 'onAdOpen');
-                break;
-              case 'onAdClick':
-                hilog.info(0x0000, 'testTag', 'onAdClick');
-                break;
-              case 'onAdClose':
-                hilog.info(0x0000, 'testTag', 'onAdClose');
-                break;
-            }
-          }
-        }
-      })
-        .width('100%')
-        .height('100%')
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { AdComponent, advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Entry
-@Component
-struct Index {
-  // Requested ad content
-  private ads: advertising.Advertisement[] = [];
-  // Ad display parameters
-  private adDisplayOptions: advertising.AdDisplayOptions = {};
-
-  build() {
-    Column() {
-      AdComponent({
-        ads: this.ads,
-        displayOptions: this.adDisplayOptions,
-        interactionListener: {
-          onStatusChanged: (status: string, ad: advertising.Advertisement, data: string) => {
-            switch (status) {
-              case 'onAdOpen':
-                hilog.info(0x0000, 'testTag', 'onAdOpen');
-                break;
-              case 'onAdClick':
-                hilog.info(0x0000, 'testTag', 'onAdClick');
-                break;
-              case 'onAdClose':
-                hilog.info(0x0000, 'testTag', 'onAdClose');
-                break;
-            }
-          }
-        }
-      })
-        .width('100%')
-        .height('100%')
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```

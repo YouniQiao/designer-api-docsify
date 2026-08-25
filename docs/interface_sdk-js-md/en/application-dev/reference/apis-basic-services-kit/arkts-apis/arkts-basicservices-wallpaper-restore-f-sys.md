@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## restore
@@ -15,8 +15,6 @@ function restore(wallpaperType: WallpaperType, callback: AsyncCallback<void>): v
 Removes a wallpaper of the specified type and restores the default one.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
@@ -39,30 +37,6 @@ Removes a wallpaper of the specified type and restores the default one.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError) => {
-    if (error) {
-        console.error(`failed to restore. Code: ${error.code}, Message: ${error.message}`);
-        return;
-    }
-    console.info(`success to restore.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
- 
-wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-    console.info(`success to restore.`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to restore. Code: ${error.code}, Message: ${error.message}`);
-});
-```
-
 
 ## restore
 
@@ -73,8 +47,6 @@ function restore(wallpaperType: WallpaperType): Promise<void>
 Removes a wallpaper of the specified type and restores the default one.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
@@ -101,7 +73,3 @@ Removes a wallpaper of the specified type and restores the default one.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [restore](#restore)

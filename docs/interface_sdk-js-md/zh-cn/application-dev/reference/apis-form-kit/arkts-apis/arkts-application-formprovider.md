@@ -7,8 +7,6 @@ FormProvider模块提供了卡片提供方相关接口的能力，开发者在�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [formProvider](arkts-app-form-formprovider.md)

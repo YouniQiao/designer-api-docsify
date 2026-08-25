@@ -10,8 +10,6 @@
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -29,8 +27,6 @@ Constructs a **ScreenCaptureHandler** object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -45,8 +41,6 @@ Denies the screen capture operation initiated by a web page. This method is call
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -60,8 +54,6 @@ getOrigin(): string
 Obtains the origin of the web page. This method is used to verify the trustworthiness of the request origin, or to implement a whitelist mechanism to control which web pages can perform screen capture.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,8 +74,6 @@ grant(config: ScreenCaptureConfig): void
 Grants permission for the screen capture operation accessed by a web page. This method grants screen capture permission based on the provided configuration parameters. After the permission is granted, the web page can perform screen capture according to the configured parameters. The configuration parameters are validated to ensure compliance with system security requirements. This method is called after the user agrees to the screen capture request from a web page, or when automatically granting permission to trusted web pages based on business policies.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

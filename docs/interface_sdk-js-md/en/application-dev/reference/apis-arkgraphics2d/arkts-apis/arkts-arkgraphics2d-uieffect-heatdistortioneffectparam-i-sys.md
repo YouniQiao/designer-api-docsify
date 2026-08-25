@@ -4,8 +4,6 @@ The parameters of heat distortion effect.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The parameters of heat distortion effect.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## intensity
@@ -27,8 +25,6 @@ The intensity of the heat distortion. The value range is [0, 1], and values outs
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ The noise scale of the heat distortion, controlling the fineness of the noise te
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -68,8 +62,6 @@ The animation progress of the heat distortion. The value range is [0, 1], and va
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -87,8 +79,6 @@ The rise weight of the heat distortion, controlling the rising speed of bubbles.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

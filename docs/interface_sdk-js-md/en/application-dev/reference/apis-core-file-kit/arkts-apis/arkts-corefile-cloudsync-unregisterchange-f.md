@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## unregisterChange
@@ -15,8 +15,6 @@ function unregisterChange(uri: string): void
 Unsubscribes from the change of a file.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -35,22 +33,3 @@ Unsubscribes from the change of a file.
 | 13900002 |
 | 13900012 |
 | 14000002 |
-
-**Examples**
-
-```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
-
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-let onCallback1 = (changeData: cloudSync.ChangeData) => {
-  if (changeData.type == cloudSync.NotifyType.NOTIFY_ADDED) {
-    // file had added, do something
-  } else if (changeData.type== cloudSync.NotifyType.NOTIFY_DELETED) {
-    // file had removed, do something
-  }
-}
-cloudSync.registerChange(uri, false, onCallback1);
-// Unregister the listener.
-cloudSync.unregisterChange(uri);
-```

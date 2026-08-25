@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## constructTLSSocketInstance
@@ -16,8 +16,6 @@ Creates a **TLSSocket** object.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -25,40 +23,6 @@ Creates a **TLSSocket** object.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [TLSSocket](arkts-network-socket-tlssocket-i.md) |
-
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-```
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tcpconnectoptions: socket.TCPConnectOptions = {
-  address: netAddress,
-  timeout: 6000
-}
-
-tcp.connect(tcpconnectoptions, (err: BusinessError) => {
-  if (err) {
-    console.error('connect fail');
-    return;
-  }
-  console.info('connect success');
-
-  // Ensure that a TCPSocket connection has been established before upgrading it to a TLSSocket connection.
-  let tls: socket.TLSSocket = socket.constructTLSSocketInstance(tcp);
-})
-```
 
 
 ## constructTLSSocketInstance
@@ -75,8 +39,6 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 > object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -100,7 +62,3 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
 | 2303601 |
 | 2303602 |
-
-**Examples**
-
-See [constructTLSSocketInstance](#constructtlssocketinstance)

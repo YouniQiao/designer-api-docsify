@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## unregister
@@ -15,8 +15,6 @@ function unregister(token: number, callback: AsyncCallback<void>): void
 Unregisters the continuation management service. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -33,34 +31,6 @@ Unregisters the continuation management service. This API uses an asynchronous c
 | token | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-continuationManager.unregister(token, (err) => {
-  if (err.code != 0) {
-    console.error('unregister failed, cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('unregister finished. ');
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = 1;
-continuationManager.unregister(token)
-  .then(() => {
-    console.info('unregister finished. ');
-  }).catch((err: BusinessError) => {
-    console.error('unregister failed, cause: ' + JSON.stringify(err));
-});
-```
-
 
 ## unregister
 
@@ -71,8 +41,6 @@ function unregister(token: number): Promise<void>
 Unregisters the continuation management service. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -93,7 +61,3 @@ Unregisters the continuation management service. This API uses a promise to retu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [unregister](#unregister)

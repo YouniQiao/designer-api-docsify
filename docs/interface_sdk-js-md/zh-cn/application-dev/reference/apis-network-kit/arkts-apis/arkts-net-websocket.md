@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## 汇总
@@ -29,7 +27,6 @@ import { webSocket } from '@kit.NetworkKit';
 | --- |
 | [ClientCert(WebSocket连接)](arkts-network-websocket-clientcert-i.md) |
 | [CloseResult(WebSocket连接)](arkts-network-websocket-closeresult-i.md) |
-| [OpenResult(WebSocket连接)](arkts-network-websocket-openresult-i.md) |
 | [ServerCert(WebSocket连接)](arkts-network-websocket-servercert-i.md) |
 | [WebSocket(WebSocket连接)](arkts-network-websocket-websocket-i.md) |
 | [WebSocketCloseOptions(WebSocket连接)](arkts-network-websocket-websocketcloseoptions-i.md) |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## controlDeviceAction
@@ -15,8 +15,6 @@ function controlDeviceAction(controlDeviceActionParams: ControlDeviceActionParam
 Controls the actions of Bluetooth peripherals.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -49,24 +47,3 @@ Controls the actions of Bluetooth peripherals.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let controlDeviceActionParams: connection.ControlDeviceActionParams = {
-        deviceId: '40:DC:A5:E5:75:C3',
-        type: connection.ControlType.PLAY,
-        typeValue: connection.ControlTypeValue.ENABLE,
-        controlObject: connection.ControlObject.LEFT_EAR
-    };
-    connection.controlDeviceAction(controlDeviceActionParams).then(() => {
-        console.info('controlDeviceAction success');
-    }, (err: BusinessError) => {
-        console.error('controlDeviceAction: errCode' + err.code + ', errMessage: ' + err.message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

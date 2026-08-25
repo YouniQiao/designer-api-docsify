@@ -4,14 +4,12 @@ NativeMediaPlayerHandler 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webvi
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## handleBufferedEndTimeChanged
@@ -24,8 +22,6 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -35,10 +31,6 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bufferedEndTime | number | 是 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleDurationChanged
 
@@ -50,8 +42,6 @@ handleDurationChanged(duration: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -61,10 +51,6 @@ handleDurationChanged(duration: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | duration | number | 是 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleEnded
 
@@ -76,15 +62,9 @@ handleEnded(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleError
 
@@ -95,8 +75,6 @@ handleError(error: MediaError, errorMessage: string): void
 当播放器发生错误时，调用该方法将错误通知给 ArkWeb 内核。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -109,10 +87,6 @@ handleError(error: MediaError, errorMessage: string): void
 | error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | 是 |
 | [errorMessage](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-errormessage-i-sys.md) | string | 是 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleFullscreenChanged
 
 ```TypeScript
@@ -123,8 +97,6 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -133,11 +105,7 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| fullscreen | boolean | 是 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
+| [fullscreen](../../apis-arkui/arkts-components/arkts-arkui-fullscreeninfo-i.md) | boolean | 是 |
 
 ## handleMutedChanged
 
@@ -149,8 +117,6 @@ handleMutedChanged(muted: boolean): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -160,10 +126,6 @@ handleMutedChanged(muted: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | muted | boolean | 是 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleNetworkStateChanged
 
@@ -175,8 +137,6 @@ handleNetworkStateChanged(state: NetworkState): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -186,10 +146,6 @@ handleNetworkStateChanged(state: NetworkState): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | state | [NetworkState](../../apis-telephony-kit/arkts-apis/arkts-telephony-radio-networkstate-i.md) | 是 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handlePlaybackRateChanged
 
@@ -201,8 +157,6 @@ handlePlaybackRateChanged(playbackRate: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -212,10 +166,6 @@ handlePlaybackRateChanged(playbackRate: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | playbackRate | number | 是 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleReadyStateChanged
 
@@ -227,8 +177,6 @@ handleReadyStateChanged(state: ReadyState): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -238,10 +186,6 @@ handleReadyStateChanged(state: ReadyState): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | state | [ReadyState](arkts-arkweb-webview-readystate-e.md) | 是 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleSeekFinished
 
@@ -253,15 +197,9 @@ handleSeekFinished(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleSeeking
 
@@ -273,15 +211,9 @@ handleSeeking(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleStatusChanged
 
@@ -293,8 +225,6 @@ handleStatusChanged(status: PlaybackStatus): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -304,10 +234,6 @@ handleStatusChanged(status: PlaybackStatus): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | status | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | 是 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
 
 ## handleTimeUpdate
 
@@ -319,8 +245,6 @@ handleTimeUpdate(currentPlayTime: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -331,10 +255,6 @@ handleTimeUpdate(currentPlayTime: number): void
 | --- | --- | --- |
 | currentPlayTime | number | 是 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleVideoSizeChanged
 
 ```TypeScript
@@ -344,8 +264,6 @@ handleVideoSizeChanged(width: number, height: number): void
 当播放器解析出视频的尺寸时，调用该方法将视频尺寸通知给 ArkWeb 内核。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -358,10 +276,6 @@ handleVideoSizeChanged(width: number, height: number): void
 | width | number | 是 |
 | height | number | 是 |
 
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。
-
 ## handleVolumeChanged
 
 ```TypeScript
@@ -372,8 +286,6 @@ handleVolumeChanged(volume: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -383,7 +295,3 @@ handleVolumeChanged(volume: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | volume | number | 是 |
-
-**示例**
-
-完整示例代码参考[onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer)。

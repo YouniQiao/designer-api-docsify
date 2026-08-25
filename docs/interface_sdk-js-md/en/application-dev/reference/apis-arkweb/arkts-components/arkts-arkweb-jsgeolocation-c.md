@@ -4,8 +4,6 @@ JsGeolocation is the authorization response object provided to the app when the 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Constructor of JsGeolocation. The constructor itself is not directly called by t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -38,8 +34,6 @@ invoke(origin: string, allow: boolean, retain: boolean): void
 Sets the geolocation permission status of a web page. This method must be called in the [onGeolocationShow event](arkts-arkweb-web-attribute.md#ongeolocationshow) callback to respond to the authorization request from the web page that initiated the geolocation permission request.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

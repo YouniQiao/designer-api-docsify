@@ -3,8 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## isSeniorModeEnabled
@@ -16,8 +16,6 @@ function isSeniorModeEnabled(): Promise<boolean>
 查询系统关怀模式是否开启。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,27 +32,3 @@ function isSeniorModeEnabled(): Promise<boolean>
 | 错误码ID |
 | --- |
 | [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  aboutToAppear(): void {
-    accessibility.isSeniorModeEnabled().then((data: boolean) => {
-      console.info(`success data:isSeniorModeEnabled : ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to call isSeniorModeEnabled. Code:${err.code}, message:${err.message}`);
-    });
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```

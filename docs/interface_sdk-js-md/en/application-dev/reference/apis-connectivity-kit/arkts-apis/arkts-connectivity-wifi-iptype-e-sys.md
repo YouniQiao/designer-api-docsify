@@ -4,8 +4,6 @@ Wi-Fi IP type enumeration.@enum { number } IpType
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md)
@@ -23,8 +21,6 @@ STATIC
 Use statically configured IP settings
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ Use dynamically configured IP settings
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DHCP](arkts-connectivity-wifimanager-iptype-e-sys.md#dhcp)
@@ -63,8 +57,6 @@ UNKNOWN
 No IP details are assigned
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

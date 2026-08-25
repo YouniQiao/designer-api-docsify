@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## createDeviceManager
@@ -15,8 +15,6 @@ function createDeviceManager(bundleName: string): DeviceManager
 创建一个设备管理实例，是分布式设备管理方法的调用入口。该实例用于获取可信设备列表以及本地设备的名称、 类型、标识和网络标识等信息。当设备管理实例不再使用时，应调用releaseDeviceManager释放该实例，避免资源泄漏。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -37,18 +35,3 @@ function createDeviceManager(bundleName: string): DeviceManager
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 创建设备管理实例
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to create device manager. Code: ${error.code}, message: ${error.message}`);
-}
-```

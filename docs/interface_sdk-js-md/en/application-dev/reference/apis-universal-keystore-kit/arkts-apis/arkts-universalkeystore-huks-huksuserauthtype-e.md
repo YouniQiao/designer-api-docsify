@@ -4,8 +4,6 @@ Enumerates the user authentication types.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Security.Huks.Extension
 
 ## HUKS_USER_AUTH_TYPE_FINGERPRINT
@@ -17,8 +15,6 @@ HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0
 Fingerprint authentication.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Facial authentication.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -50,8 +44,6 @@ PIN authentication.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -65,8 +57,6 @@ HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5
 TUI PIN authentication. <!--Del-->(Currently not supported.)<!--DelEnd-->
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

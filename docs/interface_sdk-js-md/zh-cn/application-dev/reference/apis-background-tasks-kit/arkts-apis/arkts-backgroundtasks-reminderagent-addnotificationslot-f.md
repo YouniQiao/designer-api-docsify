@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## addNotificationSlot
@@ -15,8 +15,6 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 添加一个NotificationSlot，使用回调的方式实现异步调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -31,35 +29,6 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 | [slot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsorting-notificationsorting-i-sys.md) | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-import notification from '@ohos.notification';
-import reminderAgent from '@ohos.reminderAgent';
-import { NotificationSlot } from './notification/notificationSlot';
-
-let mySlot:NotificationSlot = {
-  type: notification.SlotType.SOCIAL_COMMUNICATION
-}
-reminderAgent.addNotificationSlot(mySlot, (err: BusinessError, data: void) => {
-  console.info("addNotificationSlot callback");
-});
-```
-
-```TypeScript
-import notification from '@ohos.notification';
-import reminderAgent from '@ohos.reminderAgent';
-import { NotificationSlot } from './notification/notificationSlot';
-
-let mySlot:NotificationSlot = {
-  type: notification.SlotType.SOCIAL_COMMUNICATION
-}
-reminderAgent.addNotificationSlot(mySlot).then(() => {
-  console.info("addNotificationSlot promise");
-});
-```
-
 
 ## addNotificationSlot
 
@@ -70,8 +39,6 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 添加一个NotificationSlot，使用Promise方式实现异步调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -90,7 +57,3 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [addNotificationSlot](#addnotificationslot)

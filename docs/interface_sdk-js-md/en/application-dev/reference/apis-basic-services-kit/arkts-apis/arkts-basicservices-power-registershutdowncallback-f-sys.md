@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## registerShutdownCallback
@@ -15,8 +15,6 @@ function registerShutdownCallback(callback: Callback<boolean>): void
 Registers a callback to be invoked when the device is shut down or rebooted. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.REBOOT
 
@@ -37,16 +35,3 @@ Registers a callback to be invoked when the device is shut down or rebooted. Thi
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [4900101](../errorcode-power.md#4900101-service-connection-failure) |
-
-**Examples**
-
-```TypeScript
-try {
-    power.registerShutdownCallback((isReboot: boolean) => {
-        console.info('device shutdown is: ' + isReboot);
-    });
-    console.info('register shutdown callback success.');
-} catch(err) {
-    console.error('register shutdown callback failed, err: ' + err);
-}
-```

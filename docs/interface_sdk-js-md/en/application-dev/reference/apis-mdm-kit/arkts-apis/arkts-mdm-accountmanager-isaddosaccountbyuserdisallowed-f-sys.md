@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isAddOsAccountByUserDisallowed
@@ -15,8 +15,6 @@ function isAddOsAccountByUserDisallowed(admin: Want, userId: number): boolean
 Queries whether to disallow a user to add accounts.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -52,24 +50,3 @@ Queries whether to disallow a user to add accounts.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let isDisallowed: boolean = accountManager.isAddOsAccountByUserDisallowed(wantTemp, 100);
-  console.info(`Succeeded in querying the user can add os account or not: ${isDisallowed}`);
-} catch (err) {
-  console.error(`Failed to query the user can add os account or not. Code: ${err.code}, message: ${err.message}`);
-}
-```

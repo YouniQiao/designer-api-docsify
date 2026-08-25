@@ -4,8 +4,6 @@ Enumerates the color component types of images.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## YUV_Y
@@ -17,8 +15,6 @@ YUV_Y = 1
 Luminance component.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
@@ -32,8 +28,6 @@ Chrominance component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## YUV_V
@@ -46,8 +40,6 @@ Chrominance component.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver
 
 ## JPEG
@@ -59,7 +51,5 @@ JPEG = 4
 JPEG type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageReceiver

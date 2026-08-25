@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md)
@@ -13,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
+import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from 'kits/@kit.LocationKit';
 ```
 
 ## accuracy
@@ -27,8 +25,6 @@ Location accuracy.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Altitude.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [altitude](arkts-location-geolocationmanager-location-i.md#altitude)
@@ -71,8 +65,6 @@ Latitude.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 
@@ -94,8 +86,6 @@ Longitude.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-location-i.md#longitude)
@@ -115,8 +105,6 @@ Time when the location is obtained.
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 

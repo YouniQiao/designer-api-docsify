@@ -4,8 +4,6 @@ Enumerates control request types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TYPE_STANDARD
@@ -17,8 +15,6 @@ USB_REQUEST_TYPE_STANDARD = 0
 Standard.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -32,8 +28,6 @@ Class.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_TYPE_VENDOR
@@ -45,7 +39,5 @@ USB_REQUEST_TYPE_VENDOR = 2
 Vendor.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager

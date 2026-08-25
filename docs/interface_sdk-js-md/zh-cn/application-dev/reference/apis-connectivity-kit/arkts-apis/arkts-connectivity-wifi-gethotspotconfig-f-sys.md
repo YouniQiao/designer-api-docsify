@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getHotspotConfig
@@ -15,8 +15,6 @@ function getHotspotConfig(): HotspotConfig
 获取热点配置信息。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -33,16 +31,3 @@ function getHotspotConfig(): HotspotConfig
 | 类型 |
 | --- |
 | [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let config = wifi.getHotspotConfig();
-    console.info("result:" + JSON.stringify(config));        
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

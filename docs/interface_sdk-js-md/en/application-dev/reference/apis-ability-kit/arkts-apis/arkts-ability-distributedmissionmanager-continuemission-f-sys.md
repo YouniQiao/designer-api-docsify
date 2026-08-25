@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## continueMission
@@ -16,8 +16,6 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -30,8 +28,8 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| parameter | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | Yes |
-| options | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | Yes |
+| parameter | [ContinueDeviceInfo](arkts-ability-continuedeviceinfo-i-sys.md) | Yes |
+| options | [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -47,111 +45,6 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 | [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installation-free-is-supported-try-again-with-the-freeinstall-flag) |
 | [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
-
-**Examples**
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Implement a callback function.
-function onContinueDone(resultCode: number): void {
-  console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
-};
-try {
-  // Call continueMission.
-  distributedMissionManager.continueMission(
-    {
-      srcDeviceId: "",
-      dstDeviceId: "",
-      missionId: 1,
-      wantParam: {"key": "value"}
-    },
-    { onContinueDone: onContinueDone },
-    (error: BusinessError) => {
-      if (error) {
-        console.error('continueMission failed, cause: ' + JSON.stringify(error));
-        return;
-      }
-      console.info('continueMission finished');
-  })
-} catch (error) {
-  console.error('continueMission failed, cause: ' + JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Implement a callback function.
-function onContinueDone(resultCode: number): void {
-  console.info('onContinueDone resultCode: ' + JSON.stringify(resultCode));
-};
-try {
-  // Call continueMission.
-  distributedMissionManager.continueMission(
-    {
-      srcDeviceId: "",
-      dstDeviceId: "",
-      missionId: 1,
-      wantParam: {"key": "value"}
-    },
-    { onContinueDone: onContinueDone }).then(() => {
-      console.info('continueMission finished successfully');
-    }).catch((error: BusinessError) => {
-    console.error('continueMission failed, cause: ' + JSON.stringify(error));
-  })
-} catch (error) {
-  console.error('continueMission failed, cause: ' + JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.continueMission(
-    {
-      srcDeviceId: "",
-      dstDeviceId: "",
-      bundleName: "ohos.test.continueapp",
-      wantParam: {"key": "value"}
-    },
-    (error: BusinessError) => {
-      if (error) {
-        console.error('continueMission failed, cause: ' + JSON.stringify(error));
-        return;
-      }
-      console.info('continueMission finished');
-  })
-} catch (error) {
-  console.error('continueMission failed, cause: ' + JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedMissionManager.continueMission(
-      {
-        srcDeviceId: "",
-        dstDeviceId: "",
-        bundleName: "ohos.test.continueapp",
-        wantParam: {"key": "value"}
-      }
-    ).then(() => {
-        console.info('continueMission finished successfully');
-    }).catch((error: BusinessError) => {
-        console.error('continueMission failed, cause: ' + JSON.stringify(error));
-    })
-} catch (error) {
-    console.error('continueMission failed, cause: ' + JSON.stringify(error));
-}
-```
 
 
 ## continueMission
@@ -164,8 +57,6 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
@@ -178,8 +69,8 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| parameter | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | Yes |
-| options | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | Yes |
+| parameter | [ContinueDeviceInfo](arkts-ability-continuedeviceinfo-i-sys.md) | Yes |
+| options | [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | Yes |
 
 **Return value:**
 
@@ -201,10 +92,6 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 | [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
 
-**Examples**
-
-See [continueMission](#continuemission)
-
 
 ## continueMission
 
@@ -215,8 +102,6 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 Continues a mission on a remote device, with the bundle name specified. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -247,10 +132,6 @@ Continues a mission on a remote device, with the bundle name specified. This API
 | [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
 | [16300507](../errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) |
 
-**Examples**
-
-See [continueMission](#continuemission)
-
 
 ## continueMission
 
@@ -261,8 +142,6 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 Continues a mission on a remote device, with the bundle name specified. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS and ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -297,7 +176,3 @@ Continues a mission on a remote device, with the bundle name specified. This API
 | [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) |
 | [16300507](../errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) |
-
-**Examples**
-
-See [continueMission](#continuemission)

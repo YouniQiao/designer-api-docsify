@@ -6,8 +6,6 @@ ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sy
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -15,7 +13,7 @@ ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sy
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getColorEffect
@@ -27,8 +25,6 @@ getColorEffect(): ColorEffectType
 Obtains the color effect in use.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -47,15 +43,6 @@ Obtains the color effect in use.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
-**Examples**
-
-```TypeScript
-function getColorEffect(session: camera.PhotoSessionForSys): camera.ColorEffectType {
-  let colorEffect: camera.ColorEffectType = session.getColorEffect();
-  return colorEffect;
-}
-```
-
 ## setColorEffect
 
 ```TypeScript
@@ -65,8 +52,6 @@ setColorEffect(type: ColorEffectType): void
 Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getsupportedcoloreffects) to obtain the supported color effects.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -84,11 +69,3 @@ Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-c
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-
-**Examples**
-
-```TypeScript
-function setColorEffect(session: camera.PhotoSessionForSys, colorEffect: camera.ColorEffectType): void {
-  session.setColorEffect(colorEffect);
-}
-```

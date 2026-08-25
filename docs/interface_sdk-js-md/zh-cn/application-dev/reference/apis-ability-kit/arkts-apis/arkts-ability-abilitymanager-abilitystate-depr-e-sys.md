@@ -4,8 +4,6 @@ Ability的状态信息。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [AbilityState](arkts-ability-abilitymanager-abilitystate-e.md)
@@ -23,8 +21,6 @@ INITIAL = 0
 表示Ability为初始化状态。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ FOREGROUND = 9
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [FOREGROUND](arkts-ability-abilitymanager-abilitystate-e.md#foreground)
@@ -63,8 +57,6 @@ BACKGROUND = 10
 表示Ability处于后台。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -84,8 +76,6 @@ FOREGROUNDING = 11
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [FOREGROUNDING](arkts-ability-abilitymanager-abilitystate-e.md#foregrounding)
@@ -103,8 +93,6 @@ BACKGROUNDING = 12
 表示Ability处于后台调度中。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setPowerConfig
@@ -15,8 +15,6 @@ function setPowerConfig(sceneName: string, value: string): void
 根据场景名称设置电源配置值。例如，在系统电源管理应用中需要动态调整特定场景的电源配置参数时使用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.POWER_CONFIG
 
@@ -42,14 +40,3 @@ function setPowerConfig(sceneName: string, value: string): void
 | [4900101](../errorcode-power.md#4900101-连接服务失败) |
 | [4900400](../errorcode-power.md#4900400-接口入参无效) |
 | [4900601](../errorcode-power.md#4900601-写电源配置值失败) |
-
-**示例**
-
-```TypeScript
-try {
-    power.setPowerConfig('scene_name_test', 'value_test');
-    console.info('set power config success');
-} catch(err) {
-    console.error('set power config failed, err: ' + err);
-}
-```

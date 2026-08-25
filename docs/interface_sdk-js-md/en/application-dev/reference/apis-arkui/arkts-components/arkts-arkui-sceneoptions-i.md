@@ -4,8 +4,6 @@ Scene options used by 3D scene control@interface SceneOptions
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Scene type when 3D rendering
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -41,11 +37,9 @@ scene?: ResourceStr | Scene
 
 ResourceStr type for 3D rendering, Scene type for 3d scene controlling
 
-**Type:** ResourceStr \| [Scene](arkts-arkui-scene-t.md)
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [Scene](arkts-arkui-scene-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -8,14 +8,12 @@ This module provides JavaScript APIs of the scan framework for discovering and c
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -33,12 +31,8 @@ import { scan } from '@kit.BasicServicesKit';
 | [init](arkts-basicservices-scan-init-f.md) |
 | [off](arkts-basicservices-scan-off-f.md#offscandevicefound) |
 | [off](arkts-basicservices-scan-off-f.md#offscandevicesync) |
-| [offScanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md) |
-| [offScanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md) |
 | [on](arkts-basicservices-scan-on-f.md#onscandevicefound) |
 | [on](arkts-basicservices-scan-on-f.md#onscandevicesync) |
-| [onScanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md) |
-| [onScanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md) |
 | [openScanner](arkts-basicservices-scan-openscanner-f.md) |
 | [setScanAutoOption](arkts-basicservices-scan-setscanautooption-f.md) |
 | [setScannerParameter](arkts-basicservices-scan-setscannerparameter-f.md) |
@@ -53,14 +47,10 @@ import { scan } from '@kit.BasicServicesKit';
 | [addScanner](arkts-basicservices-scan-addscanner-f-sys.md) |
 | [deleteScanner](arkts-basicservices-scan-deletescanner-f-sys.md) |
 | [getAddedScanners](arkts-basicservices-scan-getaddedscanners-f-sys.md) |
-| [off](arkts-basicservices-scan-off-f-sys.md#offscandeviceadd) |
-| [off](arkts-basicservices-scan-off-f-sys.md#offscandevicedel) |
-| [offScanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md) |
-| [offScanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md) |
-| [on](arkts-basicservices-scan-on-f-sys.md#onscandeviceadd) |
-| [on](arkts-basicservices-scan-on-f-sys.md#onscandevicedel) |
-| [onScanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md) |
-| [onScanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md) |
+| off |
+| off |
+| on |
+| on |
 <!--DelEnd-->
 
 ### Interfaces

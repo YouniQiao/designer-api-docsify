@@ -4,14 +4,12 @@ Sets initialization parameters of the function area.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from 'kits/@kit.ArkUI';
 ```
 
 ## auxiliaryItem
@@ -25,8 +23,6 @@ Auxiliary item on the right of the search area. Default value: **undefined**.
 **Type:** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -43,8 +39,6 @@ Independent item on the right of the search area. Default value: **undefined**.
 **Type:** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

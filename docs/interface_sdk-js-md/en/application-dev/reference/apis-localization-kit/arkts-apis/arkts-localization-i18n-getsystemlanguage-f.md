@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getSystemLanguage
@@ -16,8 +16,6 @@ Obtains the system language.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
@@ -29,17 +27,3 @@ Obtains the system language.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let systemLanguage: string = i18n.System.getSystemLanguage(); // If the system language is simplified Chinese, then systemLanguage is 'zh-Hans'.
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let systemLanguage: string = i18n.getSystemLanguage();
-```

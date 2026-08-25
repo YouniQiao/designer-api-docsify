@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getBundleInfos
@@ -15,8 +15,6 @@ function getBundleInfos(bundleFlag: BundleFlag, userId: number, callback: AsyncC
 Obtains all BundleInfo for a specified user in the system. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 8
 
@@ -47,8 +45,6 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** getAllBundleInfo
@@ -76,8 +72,6 @@ function getBundleInfos(bundleFlag: BundleFlag, userId?: number): Promise<Array<
 Obtains all BundleInfo for a specified user. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 8
 

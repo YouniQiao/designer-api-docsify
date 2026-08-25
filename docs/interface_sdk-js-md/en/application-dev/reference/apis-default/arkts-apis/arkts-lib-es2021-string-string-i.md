@@ -1,7 +1,5 @@
 # String
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ replaceAll(searchValue: string | RegExp, replaceValue: string): string
 ```
 
 Replace all instances of a substring in a string, using a regular expression or search string.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ replaceAll(searchValue: string | RegExp, replacer: (substring: string, ...args: 
 ```
 
 Replace all instances of a substring in a string, using a regular expression or search string.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

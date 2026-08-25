@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isScreenLockDisabledForAccount
@@ -15,8 +15,6 @@ function isScreenLockDisabledForAccount(admin: Want): boolean
 Checks whether swipe-to-unlock is disabled for the current user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 

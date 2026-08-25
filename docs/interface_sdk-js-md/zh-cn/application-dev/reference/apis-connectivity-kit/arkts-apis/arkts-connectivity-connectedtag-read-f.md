@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## read
@@ -15,8 +15,6 @@ function read(): Promise<number[]>
 读取有源标签内容。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -36,31 +34,6 @@ function read(): Promise<number[]>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3200101](../errorcode-nfc.md#3200101-有源nfc标签状态异常) |
 
-**示例**
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connectedTag.read().then((data) => {
-    console.info("connectedTag read Promise data = " + data);
-}).catch((err: BusinessError)=> {
-    console.error("connectedTag read Promise err: " + err);
-});
-```
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-connectedTag.read((err, data)=> {
-    if (err) {
-        console.error("connectedTag read AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag read AsyncCallback data: " + data);
-    }
-});
-```
-
 
 ## read
 
@@ -71,8 +44,6 @@ function read(callback: AsyncCallback<number[]>): void
 读取有源标签内容，使用AsyncCallback方式作为异步方法。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -91,7 +62,3 @@ function read(callback: AsyncCallback<number[]>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3200101](../errorcode-nfc.md#3200101-有源nfc标签状态异常) |
-
-**示例**
-
-参见 [read](#read)

@@ -4,8 +4,6 @@ Manages GATT server. Before calling an Gatt server method, you must use [createG
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md)
@@ -15,7 +13,7 @@ Manages GATT server. Before calling an Gatt server method, you must use [createG
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## addService
@@ -27,8 +25,6 @@ addService(service: GattService): boolean
 Adds a specified service to be hosted. The added service and its characteristics are provided by the local device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -42,49 +38,13 @@ Adds a specified service to be hosted. The added service and its characteristics
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [service](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-event-i.md) | [GattService](arkts-connectivity-bluetooth-gattservice-i.md) | Yes |
+| [service](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-event-i.md) | [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// Create descriptors.
-let descriptors : Array<bluetooth.BLEDescriptor> = [];
-let arrayBuffer = new ArrayBuffer(8);
-let descV = new Uint8Array(arrayBuffer);
-descV[0] = 11;
-let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
-descriptors[0] = descriptor;
-
-// Create characteristics.
-let characteristics : Array<bluetooth.BLECharacteristic> = [];
-let arrayBufferC = new ArrayBuffer(8);
-let cccV = new Uint8Array(arrayBufferC);
-cccV[0] = 1;
-let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
-let characteristicN : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001821-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
-characteristics[0] = characteristic;
-
-// Create a gattService instance.
-let gattService : bluetooth.GattService = {serviceUuid:'00001810-0000-1000-8000-00805F9B34FB', isPrimary: true, characteristics:characteristics, includeServices:[]};
-
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-let ret : boolean = gattServer.addService(gattService);
-if (ret) {
-   console.info("add service successfully");
-} else {
-   console.error("add service failed");
-}
-```
 
 ## close
 
@@ -96,8 +56,6 @@ Closes this {@code GattServer} object and unregisters its callbacks.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [close](arkts-connectivity-bluetoothmanager-gattserver-i.md#close)
@@ -105,18 +63,6 @@ Closes this {@code GattServer} object and unregisters its callbacks.
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Examples**
-
-```TypeScript
-let server : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-server.close();
-```
-
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-let ret : boolean = device.close();
-```
 
 ## notifyCharacteristicChanged
 
@@ -127,8 +73,6 @@ notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharac
 Sends a notification of a change in a specified local characteristic.This method should be called for every BLE peripheral device that has requested notifications.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -143,34 +87,13 @@ Sends a notification of a change in a specified local characteristic.This method
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | deviceId | string | Yes |
-| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md) | Yes |
+| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// Create descriptors.
-let descriptors : Array<bluetooth.BLEDescriptor> = [];
-let arrayBuffer = new ArrayBuffer(8);
-let descV = new Uint8Array(arrayBuffer);
-descV[0] = 11;
-let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
-descriptors[0] = descriptor;
-let arrayBufferC = new ArrayBuffer(8);
-let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
-let notifyCharacteristic : bluetooth.NotifyCharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001821-0000-1000-8000-00805F9B34FB', characteristicValue: characteristic.characteristicValue, confirm: false};
-let server : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-server.notifyCharacteristicChanged('XX:XX:XX:XX:XX:XX', notifyCharacteristic);
-```
 
 ## off('characteristicRead')
 
@@ -181,8 +104,6 @@ off(type: 'characteristicRead', callback?: Callback<CharacteristicReadReq>): voi
 Unsubscribe characteristic read event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -199,13 +120,6 @@ Unsubscribe characteristic read event.
 | type | 'characteristicRead' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | No |
 
-**Examples**
-
-```TypeScript
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.off("characteristicRead");
-```
-
 ## off('characteristicWrite')
 
 ```TypeScript
@@ -215,8 +129,6 @@ off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteReq>): v
 Unsubscribe characteristic write event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -233,13 +145,6 @@ Unsubscribe characteristic write event.
 | type | 'characteristicWrite' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | No |
 
-**Examples**
-
-```TypeScript
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.off("characteristicWrite");
-```
-
 ## off('descriptorRead')
 
 ```TypeScript
@@ -249,8 +154,6 @@ off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void
 Unsubscribe descriptor read event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -267,13 +170,6 @@ Unsubscribe descriptor read event.
 | type | 'descriptorRead' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | No |
 
-**Examples**
-
-```TypeScript
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.off("descriptorRead");
-```
-
 ## off('descriptorWrite')
 
 ```TypeScript
@@ -283,8 +179,6 @@ off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void
 Unsubscribe descriptor write event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -301,13 +195,6 @@ Unsubscribe descriptor write event.
 | type | 'descriptorWrite' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | No |
 
-**Examples**
-
-```TypeScript
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.off("descriptorWrite");
-```
-
 ## off('connectStateChange')
 
 ```TypeScript
@@ -317,8 +204,6 @@ off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): vo
 Unsubscribe server connection state changed event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -335,13 +220,6 @@ Unsubscribe server connection state changed event.
 | type | 'connectStateChange' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No |
 
-**Examples**
-
-```TypeScript
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.off("connectStateChange");
-```
-
 ## on('characteristicRead')
 
 ```TypeScript
@@ -351,8 +229,6 @@ on(type: 'characteristicRead', callback: Callback<CharacteristicReadReq>): void
 Subscribe characteristic read event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -369,33 +245,6 @@ Subscribe characteristic read event.
 | type | 'characteristicRead' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-let arrayBufferCCC = new ArrayBuffer(8);
-let cccValue = new Uint8Array(arrayBufferCCC);
-cccValue[0] = 1;
-function ReadCharacteristicReq(CharacteristicReadReq : bluetooth.CharacteristicReadReq) {
-  let deviceId : string = CharacteristicReadReq.deviceId;
-  let transId : number = CharacteristicReadReq.transId;
-  let offset : number = CharacteristicReadReq.offset;
-  let characteristicUuid : string = CharacteristicReadReq.characteristicUuid;
-
-  let serverResponse : bluetooth.ServerResponse = {deviceId: deviceId, transId: transId, status: 0, 
-  offset: offset, value:arrayBufferCCC};
-
-  let ret : boolean = gattServer.sendResponse(serverResponse);
-  if (ret) {
-    console.info('bluetooth sendResponse successfully');
-  } else {
-    console.error('bluetooth sendResponse failed');
-  }
-}
-
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.on("characteristicRead", ReadCharacteristicReq);
-```
-
 ## on('characteristicWrite')
 
 ```TypeScript
@@ -405,8 +254,6 @@ on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteReq>): voi
 Subscribe characteristic write event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -423,36 +270,6 @@ Subscribe characteristic write event.
 | type | 'characteristicWrite' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-let arrayBufferCCC = new ArrayBuffer(8);
-let cccValue = new Uint8Array(arrayBufferCCC);
-function WriteCharacteristicReq(CharacteristicWriteReq : bluetooth.CharacteristicWriteReq) {
-  let deviceId : string = CharacteristicWriteReq.deviceId;
-  let transId : number = CharacteristicWriteReq.transId;
-  let offset : number = CharacteristicWriteReq.offset;
-  let isPrep : boolean = CharacteristicWriteReq.isPrep;
-  let needRsp : boolean = CharacteristicWriteReq.needRsp;
-  let value =  new Uint8Array(arrayBufferCCC);
-  let characteristicUuid : string = CharacteristicWriteReq.characteristicUuid;
-
-  cccValue.set(new Uint8Array(value));
-  let serverResponse : bluetooth.ServerResponse = {deviceId: deviceId, transId: transId, status: 0, 
-  offset: offset, value:arrayBufferCCC};
-
-  let ret : boolean = gattServer.sendResponse(serverResponse);
-  if (ret) {
-    console.info('bluetooth sendResponse successfully');
-  } else {
-    console.error('bluetooth sendResponse failed');
-  }
-}
-
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.on("characteristicWrite", WriteCharacteristicReq);
-```
-
 ## on('descriptorRead')
 
 ```TypeScript
@@ -462,8 +279,6 @@ on(type: 'descriptorRead', callback: Callback<DescriptorReadReq>): void
 Subscribe descriptor read event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -480,33 +295,6 @@ Subscribe descriptor read event.
 | type | 'descriptorRead' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-let arrayBufferDesc = new ArrayBuffer(8);
-let descValue = new Uint8Array(arrayBufferDesc);
-descValue[0] = 1;
-function ReadDescriptorReq(DescriptorReadReq : bluetooth.DescriptorReadReq) {
-  let deviceId : string = DescriptorReadReq.deviceId;
-  let transId : number = DescriptorReadReq.transId;
-  let offset : number = DescriptorReadReq.offset;
-  let descriptorUuid : string = DescriptorReadReq.descriptorUuid;
-
-  let serverResponse : bluetooth.ServerResponse = {deviceId: deviceId, transId: transId, status: 0, 
-  offset: offset, value:arrayBufferDesc};
-
-  let ret : boolean = gattServer.sendResponse(serverResponse);
-  if (ret) {
-    console.info('bluetooth sendResponse successfully');
-  } else {
-    console.error('bluetooth sendResponse failed');
-  }
-}
-
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.on("descriptorRead", ReadDescriptorReq);
-```
-
 ## on('descriptorWrite')
 
 ```TypeScript
@@ -516,8 +304,6 @@ on(type: 'descriptorWrite', callback: Callback<DescriptorWriteReq>): void
 Subscribe descriptor write event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -534,35 +320,6 @@ Subscribe descriptor write event.
 | type | 'descriptorWrite' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-let arrayBufferDesc = new ArrayBuffer(8);
-let descValue = new Uint8Array(arrayBufferDesc);
-function WriteDescriptorReq(DescriptorWriteReq : bluetooth.DescriptorWriteReq) {
-  let deviceId : string = DescriptorWriteReq.deviceId;
-  let transId : number = DescriptorWriteReq.transId;
-  let offset : number = DescriptorWriteReq.offset;
-  let isPrep : boolean = DescriptorWriteReq.isPrep;
-  let needRsp : boolean = DescriptorWriteReq.needRsp;
-  let value = new Uint8Array(arrayBufferDesc);
-  let descriptorUuid : string = DescriptorWriteReq.descriptorUuid;
-
-  descValue.set(new Uint8Array(value));
-  let serverResponse : bluetooth.ServerResponse = {deviceId: deviceId, transId: transId, status: 0, offset: offset, value:arrayBufferDesc};
-
-  let ret : boolean = gattServer.sendResponse(serverResponse);
-  if (ret) {
-    console.info('bluetooth sendResponse successfully');
-  } else {
-    console.error('bluetooth sendResponse failed');
-  }
-}
-
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.on("descriptorWrite", WriteDescriptorReq);
-```
-
 ## on('connectStateChange')
 
 ```TypeScript
@@ -572,8 +329,6 @@ on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void
 Subscribe server connection state changed event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -590,18 +345,6 @@ Subscribe server connection state changed event.
 | type | 'connectStateChange' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-function Connected(BLEConnectChangedState : bluetooth.BLEConnectChangedState) {
-  let deviceId : string = BLEConnectChangedState.deviceId;
-  let status : bluetooth.ProfileConnectionState = BLEConnectChangedState.state;
-}
-
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.on("connectStateChange", Connected);
-```
-
 ## removeService
 
 ```TypeScript
@@ -611,8 +354,6 @@ removeService(serviceUuid: string): boolean
 Removes a specified service from the list of GATT services provided by this device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -634,13 +375,6 @@ Removes a specified service from the list of GATT services provided by this devi
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let server : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-server.removeService('00001810-0000-1000-8000-00805F9B34FB');
-```
-
 ## sendResponse
 
 ```TypeScript
@@ -650,8 +384,6 @@ sendResponse(serverResponse: ServerResponse): boolean
 Sends a response to a specified read or write request to a given BLE peripheral device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -665,37 +397,13 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| serverResponse | [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md) | Yes |
+| serverResponse | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-/* send response */
-let arrayBufferCCC = new ArrayBuffer(8);
-let cccValue = new Uint8Array(arrayBufferCCC);
-cccValue[0] = 1;
-let serverResponse : bluetooth.ServerResponse = {
-    "deviceId": "XX:XX:XX:XX:XX:XX",
-    "transId": 0,
-    "status": 0,
-    "offset": 0,
-    "value": arrayBufferCCC,
-};
-
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-let ret : boolean = gattServer.sendResponse(serverResponse);
-if (ret) {
-  console.info('bluetooth sendResponse successfully');
-} else {
-  console.error('bluetooth sendResponse failed');
-}
-```
 
 ## startAdvertising
 
@@ -706,8 +414,6 @@ startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, advResponse?
 Starts BLE advertising.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -722,55 +428,8 @@ Starts BLE advertising.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | setting | [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md) | Yes |
-| advData | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | Yes |
-| advResponse | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | No |
-
-**Examples**
-
-```TypeScript
-let manufactureValueBuffer = new Uint8Array(4);
-manufactureValueBuffer[0] = 1;
-manufactureValueBuffer[1] = 2;
-manufactureValueBuffer[2] = 3;
-manufactureValueBuffer[3] = 4;
-
-let serviceValueBuffer = new Uint8Array(4);
-serviceValueBuffer[0] = 4;
-serviceValueBuffer[1] = 6;
-serviceValueBuffer[2] = 7;
-serviceValueBuffer[3] = 8;
-console.info('manufactureValueBuffer = '+ JSON.stringify(manufactureValueBuffer));
-console.info('serviceValueBuffer = '+ JSON.stringify(serviceValueBuffer));
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-let setting : bluetooth.AdvertiseSetting = {
-    interval:150,
-    txPower:60,
-    connectable:true,
-}
-
-let manufactureData : bluetooth.ManufactureData = {
-    manufactureId:4567,
-    manufactureValue:manufactureValueBuffer.buffer
-}
-
-let serviceData : bluetooth.ServiceData = {
-    serviceUuid:"00001888-0000-1000-8000-00805f9b34fb",
-    serviceValue:serviceValueBuffer.buffer
-}
-
-let advData : bluetooth.AdvertiseData = {
-    serviceUuids:["00001889-0000-1000-8000-00805f9b34fb"],
-    manufactureData:[manufactureData],
-    serviceData:[serviceData],
-}
-
-let advResponse : bluetooth.AdvertiseData = {
-    serviceUuids:["00001889-0000-1000-8000-00805f9b34fb"],
-    manufactureData:[manufactureData],
-    serviceData:[serviceData],
-}
-gattServer.startAdvertising(setting, advData, advResponse);
-```
+| advData | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | Yes |
+| advResponse | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | No |
 
 ## stopAdvertising
 
@@ -782,8 +441,6 @@ Stops BLE advertising.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [stopAdvertising](arkts-connectivity-bluetoothmanager-gattserver-i.md#stopadvertising)
@@ -791,10 +448,3 @@ Stops BLE advertising.
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Examples**
-
-```TypeScript
-let server : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-server.stopAdvertising();
-```

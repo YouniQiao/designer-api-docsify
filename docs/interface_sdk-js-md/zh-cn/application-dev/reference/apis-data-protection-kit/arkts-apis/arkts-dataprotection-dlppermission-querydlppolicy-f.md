@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## queryDlpPolicy
@@ -18,8 +18,6 @@ function queryDlpPolicy(dlpFd: number): Promise<string>
 > 该接口仅支持企业账号调用。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
@@ -52,23 +50,3 @@ function queryDlpPolicy(dlpFd: number): Promise<string>
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 | [19100013](../errorcode-dlp.md#19100013-用户无权限) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-let dlpFd : number | undefined = undefined; // 待查询策略的DLP文件描述符。
-let dlpFilePath: string = "file://docs/storage/Users/currentUser/Documents/test.txt.dlp"; // 指定DLP文件路径。
-dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_ONLY).fd; // 打开DLP文件获取描述符。
-dlpPermission.queryDlpPolicy(dlpFd).then((policy) => {
-  console.info('DLP policy:' + policy);
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-}).finally(()=>{
-  if (dlpFd) {
-    fileIo.closeSync(dlpFd);
-  }
-});
-```

@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getInstance
@@ -23,8 +21,6 @@ static getInstance(mode: NormalizerMode): Normalizer
 获取文本标准化对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -48,32 +44,6 @@ static getInstance(mode: NormalizerMode): Normalizer
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let transliterator: i18n.Transliterator = i18n.Transliterator.getInstance('Any-Latn');
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let normalizer: i18n.Normalizer = i18n.Normalizer.getInstance(i18n.NormalizerMode.NFC);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call Normalizer.getInstance failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 ## normalize
 
 ```TypeScript
@@ -83,8 +53,6 @@ normalize(text: string): string
 对字符串进行标准化处理。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -107,18 +75,3 @@ normalize(text: string): string
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let normalizer: i18n.Normalizer = i18n.Normalizer.getInstance(i18n.NormalizerMode.NFC);
-  let normalizedText: string = normalizer.normalize('\u1E9B\u0323'); // normalizedText = 'ẛ̣'
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call Normalizer.getInstance failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## RING_CHANNEL_ALARM
@@ -17,8 +15,6 @@ RING_CHANNEL_ALARM = 0
 闹钟通道。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -32,8 +28,6 @@ RING_CHANNEL_MEDIA = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## RING_CHANNEL_NOTIFICATION
@@ -45,7 +39,5 @@ RING_CHANNEL_NOTIFICATION = 2
 通知通道。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

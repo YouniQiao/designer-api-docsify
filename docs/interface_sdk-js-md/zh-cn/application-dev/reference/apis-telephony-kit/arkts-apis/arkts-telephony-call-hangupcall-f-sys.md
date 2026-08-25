@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hangUpCall
 
 ```TypeScript
-function hangUpCall(callId: int, callback: AsyncCallback<void>): void
+function hangUpCall(callId: number, callback: AsyncCallback<void>): void
 ```
 
 挂断电话。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ANSWER_CALL or ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function hangUpCall(callId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -43,54 +41,16 @@ function hangUpCall(callId: int, callback: AsyncCallback<void>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hangUpCall((err: BusinessError) => {
-    if (err) {
-        console.error(`hangUpCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`hangUpCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hangUpCall(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`hangUpCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`hangUpCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hangUpCall(1).then(() => {
-    console.info(`hangUpCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`hangUpCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## hangUpCall
 
 ```TypeScript
-function hangUpCall(callId?: int): Promise<void>
+function hangUpCall(callId?: number): Promise<void>
 ```
 
 挂断电话。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ANSWER_CALL or ohos.permission.SET_TELEPHONY_STATE
 
@@ -102,7 +62,7 @@ function hangUpCall(callId?: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| callId | number | 否 |
 
 **返回值：**
 
@@ -121,7 +81,3 @@ function hangUpCall(callId?: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [hangUpCall](#hangupcall)

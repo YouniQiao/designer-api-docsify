@@ -4,14 +4,12 @@ Provides configuration for decimal.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { Decimal } from '@kit.ArkTS';
+import { Decimal } from 'kits/@kit.ArkTS';
 ```
 
 ## crypto
@@ -25,8 +23,6 @@ The value that determines whether cryptographically-secure pseudo-random number 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ If object has a 'defaults' property with value true then the new constructor wil
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -53,16 +47,14 @@ If object has a 'defaults' property with value true then the new constructor wil
 ## maxE
 
 ```TypeScript
-maxE?: double
+maxE?: number
 ```
 
 The positive exponent limit, i.e. the exponent value above which overflow to Infinity occurs. Default value: 9e15
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -71,16 +63,14 @@ The positive exponent limit, i.e. the exponent value above which overflow to Inf
 ## minE
 
 ```TypeScript
-minE?: double
+minE?: number
 ```
 
 The negative exponent limit, i.e. the exponent value below which underflow to zero occurs. Default value: -9e15
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +88,6 @@ The modulo mode used when calculating the modulus: a mod n. Default value: 1 (RO
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -107,16 +95,14 @@ The modulo mode used when calculating the modulus: a mod n. Default value: 1 (RO
 ## precision
 
 ```TypeScript
-precision?: double
+precision?: number
 ```
 
 The maximum number of significant digits of the result of an operation. Default value: 20
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -134,8 +120,6 @@ The default rounding mode used when rounding the result of an operation to preci
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -143,16 +127,14 @@ The default rounding mode used when rounding the result of an operation to preci
 ## toExpNeg
 
 ```TypeScript
-toExpNeg?: double
+toExpNeg?: number
 ```
 
 The negative exponent value at and below which toString returns exponential notation. Default value: -7
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -161,16 +143,14 @@ The negative exponent value at and below which toString returns exponential nota
 ## toExpPos
 
 ```TypeScript
-toExpPos?: double
+toExpPos?: number
 ```
 
 The positive exponent value at and above which toString returns exponential notation. Default value: 21
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

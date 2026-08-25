@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## isBuffer
@@ -15,8 +15,6 @@ function isBuffer(obj: Object): boolean
 判断`obj`是否为FastBuffer。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -33,25 +31,3 @@ function isBuffer(obj: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let allocResult = fastbuffer.isBuffer(fastbuffer.alloc(10)); // 10: fastbuffer size
-console.info('allocResult = ' + allocResult);
-// 输出结果：allocResult = true
-let fromResult = fastbuffer.isBuffer(fastbuffer.from('foo'));
-console.info('fromResult = ' + fromResult);
-// 输出结果：fromResult = true
-let stringResult = fastbuffer.isBuffer('a string');
-console.info('stringResult = ' + stringResult);
-// 输出结果：stringResult = false
-let arrayResult = fastbuffer.isBuffer([]);
-console.info('arrayResult = ' + arrayResult);
-// 输出结果：arrayResult = false
-let uint8ArrayResult = fastbuffer.isBuffer(new Uint8Array(1024));
-console.info('uint8ArrayResult = ' + uint8ArrayResult);
-// 输出结果：uint8ArrayResult = false
-```

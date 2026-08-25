@@ -4,8 +4,6 @@ Wi-Fi device configuration information.@interface WifiDeviceConfig
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)
@@ -15,7 +13,7 @@ Wi-Fi device configuration information.@interface WifiDeviceConfig
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## creatorUid
@@ -29,8 +27,6 @@ The UID of the Wi-Fi configuration creator
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Disable reason
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [disableReason](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#disablereason)
@@ -73,8 +67,6 @@ IP Type
 **Type:** IpType
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -96,8 +88,6 @@ Allocated networkId
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#netid)
@@ -117,8 +107,6 @@ Random mac address, the length is 6
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -140,8 +128,6 @@ Random mac type
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [randomMacType](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#randommactype)
@@ -161,8 +147,6 @@ IP config of static
 **Type:** IpConfig
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

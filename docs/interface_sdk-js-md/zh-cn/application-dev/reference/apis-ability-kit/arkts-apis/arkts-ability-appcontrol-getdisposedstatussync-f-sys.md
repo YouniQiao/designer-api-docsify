@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDisposedStatusSync
@@ -15,8 +15,6 @@ function getDisposedStatusSync(appId: string): Want
 以同步方法获取指定应用已设置的处置状态。成功返回应用的处置状态，失败抛出对应异常。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
@@ -45,21 +43,3 @@ function getDisposedStatusSync(appId: string): Want
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) |
-
-**示例**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let appId: string = "com.example.myapplication_xxxxx";
-let want: Want;
-
-try {
-  want = appControl.getDisposedStatusSync(appId);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('getDisposedStatusSync failed ' + message);
-}
-```

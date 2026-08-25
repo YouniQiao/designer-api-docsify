@@ -4,14 +4,12 @@ Defines the options of the visible interface on the screen.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { App, AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from '@kit.ArkUI';
+import { App, AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## complete
@@ -23,8 +21,6 @@ complete?: () => void
 Called when the API call is complete.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,8 +35,6 @@ fail?: (data: string, code: number) => void
 Callback upon failure.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,8 +57,6 @@ Callback upon success.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -80,8 +72,6 @@ Whether to keep the application visible. The default value is **false**.
 **Type:** boolean
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,8 +4,6 @@ Defines the grid layout options. In this API, **irregularIndexes** and **onGetIr
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Called to return the StartLineInfo based on target index for the scrollToIndex o
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -40,8 +36,6 @@ onGetStartIndexByOffset?: OnGetStartIndexByOffsetCallback
 Called to return the StartLineInfo based on total offset for the fast or reverse sliding.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

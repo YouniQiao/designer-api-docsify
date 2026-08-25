@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## replace
@@ -20,8 +20,6 @@ function replace(options: RouterOptions): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options: router.RouterOptions)
@@ -33,22 +31,3 @@ function replace(options: RouterOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replace({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-});
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## execTool
@@ -16,8 +16,6 @@ function execTool(toolName: string, subCommand: string, args: Record<string, Obj
 Execute a CLI command
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.EXEC_CLI_TOOL
 

@@ -4,8 +4,6 @@ USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md)中可以�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)
@@ -15,7 +13,7 @@ USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md)中可以�
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## attributes
@@ -29,8 +27,6 @@ attributes: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -50,8 +46,6 @@ id: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [id](arkts-basicservices-usbmanager-usbconfiguration-i.md#id)
@@ -69,8 +63,6 @@ interfaces: Array<USBInterface>
 **类型：** Array&lt;USBInterface&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -90,8 +82,6 @@ isRemoteWakeup: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isremotewakeup)
@@ -109,8 +99,6 @@ isSelfPowered: boolean
 **类型：** boolean
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -130,8 +118,6 @@ maxPower: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxpower)
@@ -149,8 +135,6 @@ name: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

@@ -4,8 +4,6 @@ Represents the RDB data change result. The data returned by the callback is not 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the RDB data change result. The data returned by the callback is not 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## data
@@ -27,8 +25,6 @@ Data of the callback. If an error occurs during callback data processing, the ca
 **Type:** Array&lt;string&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ ID of the template that triggers the callback.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -67,8 +61,6 @@ URI of the callback.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedWifiList
@@ -17,8 +17,6 @@ function addAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void
 2. 已经通过[addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md)接口添加了Wi-Fi禁用名单。通过[removeDisallowedWifiList](arkts-mdm-wifimanager-removedisallowedwifilist-f.md)移除Wi-Fi禁用名单后，可解除冲突。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -41,27 +39,3 @@ function addAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.edmtest',
-  abilityName: 'com.example.edmtest.EnterpriseAdminAbility'
-};
-try {
-  let wifiIds: Array<wifiManager.WifiAccessInfo> = [{
-    // 需根据实际情况进行替换
-    ssid: "wifi_name",
-    bssid: "68:77:24:77:A6:D8"
-  }];
-  wifiManager.addAllowedWifiList(wantTemp, wifiIds);
-  console.info(`Succeeded in adding allowed Wi-Fi list.`);
-} catch (err) {
-  console.error(`Failed to add allowed Wi-Fi list. Code: ${err.code}, message: ${err.message}`);
-}
-```

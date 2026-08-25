@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getKeepAliveAppServiceExtensions
@@ -15,8 +15,6 @@ function getKeepAliveAppServiceExtensions(): Promise<Array<KeepAliveBundleInfo>>
 获取所有保活的AppServiceExtensionAbility应用信息，此信息由[KeepAliveBundleInfo](arkts-ability-appmanager-keepalivebundleinfo-i-sys.md)定义。使用Promise异步 回调。 该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
@@ -38,24 +36,3 @@ function getKeepAliveAppServiceExtensions(): Promise<Array<KeepAliveBundleInfo>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  appManager.getKeepAliveAppServiceExtensions().then((data) => {
-    console.info(`getKeepAliveAppServiceExtensions success, data: ${data}`);
-  }).catch((paramError: Error) => {
-    let code = (paramError as BusinessError).code;
-    let message = (paramError as BusinessError).message;
-    console.error(`getKeepAliveAppServiceExtensions fail, err: ${code}, ${message}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] getKeepAliveAppServiceExtensions error: ${code}, ${message}`);
-}
-```

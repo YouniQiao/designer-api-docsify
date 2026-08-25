@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isEmergencyPhoneNumber
@@ -15,8 +15,6 @@ function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOpt
 Checks whether the called number is an emergency number based on the phone number. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -38,44 +36,6 @@ Checks whether the called number is an emergency number based on the phone numbe
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isEmergencyPhoneNumber("138xxxxxxxx", (err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isEmergencyPhoneNumber fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.EmergencyNumberOptions = {slotId: 1}
-call.isEmergencyPhoneNumber("112", options, (err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isEmergencyPhoneNumber fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.EmergencyNumberOptions = {slotId: 1}
-call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
-    console.info(`isEmergencyPhoneNumber success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isEmergencyPhoneNumber fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## isEmergencyPhoneNumber
 
@@ -86,8 +46,6 @@ function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOp
 Checks whether the called number is an emergency number based on the phone number. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -114,10 +72,6 @@ Checks whether the called number is an emergency number based on the phone numbe
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-See [isEmergencyPhoneNumber](#isemergencyphonenumber)
-
 
 ## isEmergencyPhoneNumber
 
@@ -128,8 +82,6 @@ function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boo
 Checks whether the called number is an emergency number. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -149,7 +101,3 @@ Checks whether the called number is an emergency number. This API uses an asynch
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [isEmergencyPhoneNumber](#isemergencyphonenumber)

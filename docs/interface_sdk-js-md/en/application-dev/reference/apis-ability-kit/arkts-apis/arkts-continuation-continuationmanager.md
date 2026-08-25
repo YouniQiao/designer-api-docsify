@@ -4,8 +4,6 @@ The continuationManager module provides the continuation/collaboration managemen
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
@@ -17,7 +15,7 @@ The continuationManager module provides the continuation/collaboration managemen
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

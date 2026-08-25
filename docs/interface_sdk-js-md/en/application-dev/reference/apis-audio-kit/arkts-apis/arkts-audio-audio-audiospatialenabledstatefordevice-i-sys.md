@@ -4,8 +4,6 @@ This interface is used to notify the listener of any device Spatialization or He
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ This interface is used to notify the listener of any device Spatialization or He
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## deviceDescriptor
@@ -27,8 +25,6 @@ Audio device description.
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -45,8 +41,6 @@ Spatialization or Head Tracking or Adaptive Spatial Rendering enable state.
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## badgeNumberEnabled
@@ -21,13 +19,12 @@ badgeNumberEnabled?: boolean
 ```
 
 表示是否开启通知角标数字展示。  
-- true：开启。 - false：关闭。
+- true：开启。  
+- false：关闭。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,13 +37,12 @@ bannerEnabled?: boolean
 ```
 
 表示是否开启横幅通知。  
-- true：开启。 - false：关闭。
+- true：开启。  
+- false：关闭。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,13 +55,12 @@ lockScreenEnabled?: boolean
 ```
 
 表示是否开启锁屏通知。  
-- true：开启。 - false：关闭。
+- true：开启。  
+- false：关闭。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,13 +73,12 @@ notificationEnabled?: boolean
 ```
 
 表示应用通知使能状态。  
-- true：开启。 - false：关闭。
+- true：开启。  
+- false：关闭。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,13 +91,12 @@ soundEnabled: boolean
 ```
 
 表示是否开启响铃。  
-- true：开启。 - false：关闭。
+- true：开启。  
+- false：关闭。
 
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -114,12 +107,11 @@ vibrationEnabled: boolean
 ```
 
 表示是否开启振动。  
-- true：开启。 - false：关闭。
+- true：开启。  
+- false：关闭。
 
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification

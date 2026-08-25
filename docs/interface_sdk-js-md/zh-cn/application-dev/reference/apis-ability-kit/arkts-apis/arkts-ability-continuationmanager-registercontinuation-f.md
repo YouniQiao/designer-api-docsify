@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## registerContinuation
@@ -16,8 +16,6 @@ function registerContinuation(callback: AsyncCallback<number>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 22
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
@@ -42,68 +40,6 @@ function registerContinuation(callback: AsyncCallback<number>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-应用注册token已达到最大次数限制) |
-
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-try {
-  continuationManager.registerContinuation((err, data) => {
-    if (err.code != 0) {
-      console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('registerContinuation finished, ' + JSON.stringify(data));
-    token = data;
-  });
-} catch (err) {
-  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-try {
-  continuationManager.registerContinuation(
-    {
-      deviceType: ["00E"]
-    },
-    (err, data) => {
-      if (err.code != 0) {
-        console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-        return;
-      }
-      console.info('registerContinuation finished, ' + JSON.stringify(data));
-      token = data;
-  });
-} catch (err) {
-  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-try {
-  continuationManager.registerContinuation(
-    {
-      deviceType: ["00E"]
-    }).then((data) => {
-      console.info('registerContinuation finished, ' + JSON.stringify(data));
-      token = data;
-    }).catch((err: BusinessError) => {
-      console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('registerContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
 
 
 ## registerContinuation
@@ -116,8 +52,6 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 22
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
@@ -132,7 +66,7 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 是 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
@@ -143,10 +77,6 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-应用注册token已达到最大次数限制) |
-
-**示例**
-
-参见 [registerContinuation](#registercontinuation)
 
 
 ## registerContinuation
@@ -159,8 +89,6 @@ function registerContinuation(options?: ContinuationExtraParams): Promise<number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 22
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
@@ -175,7 +103,7 @@ function registerContinuation(options?: ContinuationExtraParams): Promise<number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 否 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 否 |
 
 **返回值：**
 
@@ -191,7 +119,3 @@ function registerContinuation(options?: ContinuationExtraParams): Promise<number
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) |
 | [16600003](../errorcode-DistributedSchedule.md#16600003-应用注册token已达到最大次数限制) |
-
-**示例**
-
-参见 [registerContinuation](#registercontinuation)

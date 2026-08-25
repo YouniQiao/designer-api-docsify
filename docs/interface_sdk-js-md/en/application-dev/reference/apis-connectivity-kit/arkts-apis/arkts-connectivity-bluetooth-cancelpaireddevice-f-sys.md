@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## cancelPairedDevice
@@ -15,8 +15,6 @@ function cancelPairedDevice(deviceId: string): boolean
 Remove a paired remote device.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -39,9 +37,3 @@ Remove a paired remote device.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let result : boolean = bluetooth.cancelPairedDevice("XX:XX:XX:XX:XX:XX");
-```

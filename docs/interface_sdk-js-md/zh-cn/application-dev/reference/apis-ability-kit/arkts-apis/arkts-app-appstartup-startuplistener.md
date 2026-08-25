@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { StartupListener } from '@kit.AbilityKit';
+import { StartupListener } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -13,9 +13,3 @@ import { StartupListener } from '@kit.AbilityKit';
 | 名称 |
 | --- |
 | [StartupListener](arkts-ability-app-appstartup-startuplistener-startuplistener-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [OnCompletedFn](arkts-ability-oncompletedfn-t.md) |

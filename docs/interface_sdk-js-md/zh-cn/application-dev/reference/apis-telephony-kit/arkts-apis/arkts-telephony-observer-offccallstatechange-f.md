@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## offCCallStateChange
@@ -15,8 +15,6 @@ function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 取消三方应用监听运营商通话状态并获取通话号码，使用callback方式作为异步方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_CALL_FOR_DEVICES
 
@@ -37,16 +35,3 @@ function offCCallStateChange(callback?: Callback<CCallStateInfo>): void
 | [8800002](../errorcode-telephony.md#8800002-服务连接失败) |
 | [8800003](../errorcode-telephony.md#8800003-系统内部错误) |
 | [8800999](../errorcode-telephony.md#8800999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { observer } from '@kit.TelephonyKit';
-
-let callback: (data: observer.CCallStateInfo) => void = (data: observer.CCallStateInfo) => {
-    console.info("onCCallStateChange, data:" + JSON.stringify(data));
-}
-
-observer.offCCallStateChange(callback);
-observer.offCCallStateChange();
-```

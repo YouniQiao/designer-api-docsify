@@ -10,8 +10,6 @@ Maximum number of records in a **PasteData** object. In versions earlier than AP
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -25,8 +23,6 @@ const MIMETYPE_PIXELMAP = 'pixelMap'
 MIME type of the PixelMap content.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,8 +38,6 @@ MIME type of the HTML content.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -57,8 +51,6 @@ const MIMETYPE_TEXT_PLAIN = 'text/plain'
 MIME type of the plain text content.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,8 +66,6 @@ MIME type of the URI content.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -89,8 +79,6 @@ const MIMETYPE_TEXT_WANT = 'text/want'
 MIME type of the Want content.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

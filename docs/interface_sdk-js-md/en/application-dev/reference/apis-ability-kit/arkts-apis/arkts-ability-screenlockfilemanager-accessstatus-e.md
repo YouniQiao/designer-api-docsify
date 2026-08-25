@@ -4,8 +4,6 @@ Enumerates the statuses for requesting access permissions for sensitive data und
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
 ## ACCESS_DENIED
@@ -18,8 +16,6 @@ The request for access permission for sensitive data under lock screen is denied
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
 ## ACCESS_GRANTED
@@ -31,7 +27,5 @@ ACCESS_GRANTED = 0
 The request for access permission for sensitive data under lock screen is granted.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.ScreenLockFileManager

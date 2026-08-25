@@ -15,8 +15,6 @@ function getRdbStore(context: Context, config: StoreConfig, version: number, cal
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md)
@@ -32,84 +30,6 @@ function getRdbStore(context: Context, config: StoreConfig, version: number, cal
 | version | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | 是 |
 
-**示例**
-
-FA模型示例：
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-import relationalStore from '@ohos.data.relationalStore';
-import window from '@ohos.window';
-import { BusinessError } from '@ohos.base';
-
-const STORE_CONFIG: data_rdb.StoreConfig = { name: "RdbTest.db"}
-data_rdb.getRdbStore(this.context, STORE_CONFIG, 1, (err, rdbStore) => {
-  if (err) {
-    console.error("Get RdbStore failed, err: " + err)
-    return
-  }
-  console.info("Get RdbStore successfully.")
-})
-```
-
-Stage模型示例：
-
-```TypeScript
-import UIAbility from '@ohos.app.ability.UIAbility';
-import { BusinessError } from "@ohos.base";
-import window from '@ohos.window';
-
-const STORE_CONFIG: data_rdb.StoreConfig = { name: "RdbTest.db"}
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage){
-    data_rdb.getRdbStore(this.context, STORE_CONFIG, 1, (err: BusinessError, rdbStore: data_rdb.RdbStore) => {
-      if (err) {
-        console.error("Get RdbStore failed, err: " + err)
-        return
-      }
-      console.info("Get RdbStore successfully.")
-    })
-  }
-}
-```
-
-FA模型示例：
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-const STORE_CONFIG: data_rdb.StoreConfig = { name: "RdbTest.db"}
-let promise = data_rdb.getRdbStore(this.context, STORE_CONFIG, 1);
-promise.then(async (rdbStore) => {
-  console.info("Get RdbStore successfully.")
-}).catch((err: BusinessError) => {
-  console.error("Get RdbStore failed, err: " + err)
-})
-```
-
-Stage模型示例：
-
-```TypeScript
-import UIAbility from '@ohos.app.ability.UIAbility';
-import { BusinessError } from "@ohos.base";
-import window from '@ohos.window';
-
-const STORE_CONFIG: data_rdb.StoreConfig = { name: "RdbTest.db"}
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage){
-    context = this.context
-  }
-}
-
-// 获取context后调用getRdbStore
-let promise = data_rdb.getRdbStore(this.context, STORE_CONFIG, 1);
-promise.then(async (rdbStore: data_rdb.RdbStore) => {
-  console.info("Get RdbStore successfully.")
-}).catch((err: BusinessError) => {
-  console.error("Get RdbStore failed, err: " + err)
-})
-```
-
 
 ## getRdbStore
 
@@ -120,8 +40,6 @@ function getRdbStore(context: Context, config: StoreConfig, version: number): Pr
 获得一个相关的RdbStore，操作关系型数据库，用户可以根据自己的需求配置RdbStore的参数，然后通过RdbStore调用相关接口可以执行相关的数据操作，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -140,7 +58,3 @@ function getRdbStore(context: Context, config: StoreConfig, version: number): Pr
 | 类型 |
 | --- |
 | Promise & lt;RdbStore & gt; |
-
-**示例**
-
-参见 [getRdbStore](#getrdbstore)

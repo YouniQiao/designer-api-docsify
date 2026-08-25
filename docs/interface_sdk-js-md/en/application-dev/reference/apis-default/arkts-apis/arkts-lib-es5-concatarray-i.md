@@ -1,7 +1,5 @@
 # ConcatArray
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 join(separator?: string): string
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@ join(separator?: string): string
 ```TypeScript
 slice(start?: number, end?: number): T[]
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -52,8 +46,6 @@ readonly [n: number]: T
 
 **Type:** T
 
-**ArkTS mode:** 
-
 ## length
 
 ```TypeScript
@@ -61,5 +53,3 @@ readonly length: number
 ```
 
 **Type:** number
-
-**ArkTS mode:** 

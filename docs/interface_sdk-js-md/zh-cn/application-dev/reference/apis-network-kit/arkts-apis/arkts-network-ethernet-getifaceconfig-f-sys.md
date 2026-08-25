@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## getIfaceConfig
@@ -15,8 +15,6 @@ function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfigur
 获取指定网络接口信息，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -43,42 +41,6 @@ function getIfaceConfig(iface: string, callback: AsyncCallback<InterfaceConfigur
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 | [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
 
-**示例**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.getIfaceConfig("eth0", (error: BusinessError, value: ethernet.InterfaceConfiguration) => {
-  if (error) {
-    console.error("getIfaceConfig  callback error = " + JSON.stringify(error));
-  } else {
-    console.info("getIfaceConfig callback mode = " + JSON.stringify(value.mode));
-    console.info("getIfaceConfig callback ipAddr = " + JSON.stringify(value.ipAddr));
-    console.info("getIfaceConfig callback route = " + JSON.stringify(value.route));
-    console.info("getIfaceConfig callback gateway = " + JSON.stringify(value.gateway));
-    console.info("getIfaceConfig callback netMask = " + JSON.stringify(value.netMask));
-    console.info("getIfaceConfig callback dnsServers = " + JSON.stringify(value.dnsServers));
-  }
-});
-```
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.getIfaceConfig("eth0").then((data: ethernet.InterfaceConfiguration) => {
-  console.info("getIfaceConfig promise mode = " + JSON.stringify(data.mode));
-  console.info("getIfaceConfig promise ipAddr = " + JSON.stringify(data.ipAddr));
-  console.info("getIfaceConfig promise route = " + JSON.stringify(data.route));
-  console.info("getIfaceConfig promise gateway = " + JSON.stringify(data.gateway));
-  console.info("getIfaceConfig promise netMask = " + JSON.stringify(data.netMask));
-  console.info("getIfaceConfig promise dnsServers = " + JSON.stringify(data.dnsServers));
-}).catch((error: BusinessError) => {
-  console.error("getIfaceConfig promise error = " + JSON.stringify(error));
-});
-```
-
 
 ## getIfaceConfig
 
@@ -89,8 +51,6 @@ function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>
 获取指定网络接口信息，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -121,7 +81,3 @@ function getIfaceConfig(iface: string): Promise<InterfaceConfiguration>
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 | [2201005](../errorcode-net-ethernet.md#2201005-设备信息不存在) |
-
-**示例**
-
-参见 [getIfaceConfig](#getifaceconfig)

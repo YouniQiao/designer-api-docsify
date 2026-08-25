@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setGlobalProxySync
@@ -15,8 +15,6 @@ function setGlobalProxySync(admin: Want, httpProxy: connection.HttpProxy): void
 设置网络全局代理。适用于企业网络管理场景，例如设置企业统一的网络代理、实现网络访问审计、控制网络访问路径、优化网络性能，帮助企业集中管理网络访问，实现网络访问的可审计和可控制。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -39,33 +37,3 @@ function setGlobalProxySync(admin: Want, httpProxy: connection.HttpProxy): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { connection } from '@kit.NetworkKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-let exclusionStr: string = "192.168,baidu.com";
-let exclusionArray: Array<string> = exclusionStr.split(',');
-let httpProxy: connection.HttpProxy = {
-  host: "192.168.xx.xxx",
-  port: 8080,
-  exclusionList: exclusionArray
-};
-
-try {
-  networkManager.setGlobalProxySync(wantTemp, httpProxy);
-  console.info(`Succeeded in setting network global proxy.`);
-} catch (err) {
-  console.error(`Failed to set network global proxy. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -4,29 +4,25 @@ Defines the vibrator status change event.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## deviceId
 
 ```TypeScript
-deviceId: int
+deviceId: number
 ```
 
 Device ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -42,38 +38,32 @@ Vibrator status. The value **true** indicates that the device is online, and the
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Event timestamp, in ms.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## vibratorCount
 
 ```TypeScript
-vibratorCount: int
+vibratorCount: number
 ```
 
 Number of vibrators on the device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice

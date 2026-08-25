@@ -4,29 +4,25 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## deviceId
 
 ```TypeScript
-deviceId: int
+deviceId: number
 ```
 
 设备的ID。可用于 [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) 和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)等接口指定目标设备。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -42,38 +38,32 @@ isVibratorOnline: boolean
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 报告事件的时间戳。单位：ms（毫秒）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## vibratorCount
 
 ```TypeScript
-vibratorCount: int
+vibratorCount: number
 ```
 
 设备上的马达的数量。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

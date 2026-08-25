@@ -4,45 +4,39 @@ Describes the metadata keys used by a gain map, that is, the values available fo
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## alternateHeadroom
 
 ```TypeScript
-alternateHeadroom: double
+alternateHeadroom: number
 ```
 
 The alternate hdr headroom.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## baseHeadroom
 
 ```TypeScript
-baseHeadroom: double
+baseHeadroom: number
 ```
 
 The baseline hdr headroom.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -58,39 +52,33 @@ The per-channel metadata.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## gainmapChannelCount
 
 ```TypeScript
-gainmapChannelCount: int
+gainmapChannelCount: number
 ```
 
 The number of gain map channels, with a value of 1 or 3.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## miniVersion
 
 ```TypeScript
-miniVersion: int
+miniVersion: number
 ```
 
 The minimum version a parser needs to understand.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -106,22 +94,18 @@ Indicate whether to use the color space of the base image.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## writerVersion
 
 ```TypeScript
-writerVersion: int
+writerVersion: number
 ```
 
 The version used by the writer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core

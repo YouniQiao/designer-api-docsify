@@ -4,14 +4,12 @@ System wallpaper@namespace wallpaper
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -54,10 +52,8 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md) |
 | [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md) |
 | [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md) |
-| [off](arkts-basicservices-wallpaper-off-f-sys.md#offwallpaperchange) |
-| [offWallpaperChange](arkts-basicservices-wallpaper-offwallpaperchange-f-sys.md) |
-| [on](arkts-basicservices-wallpaper-on-f-sys.md#onwallpaperchange) |
-| [onWallpaperChange](arkts-basicservices-wallpaper-onwallpaperchange-f-sys.md) |
+| off |
+| on |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md) |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md) |
 | [setAllWallpapers](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md) |
@@ -98,9 +94,3 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) |
 | [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) |
 <!--DelEnd-->
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [WallpaperChangeObserver](arkts-basicservices-wallpaper-wallpaperchangeobserver-t.md) |

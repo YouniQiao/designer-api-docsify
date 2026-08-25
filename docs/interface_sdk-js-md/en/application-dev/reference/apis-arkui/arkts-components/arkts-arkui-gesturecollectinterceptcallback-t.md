@@ -9,8 +9,6 @@ Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-common
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -21,8 +19,8 @@ Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-common
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| recognizers | Array & lt;GestureRecognizer & gt; | Yes |
-| touchRecognizers | Array & lt;TouchRecognizer & gt; | No |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes |
+| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No |
 
 **Return value:**
 

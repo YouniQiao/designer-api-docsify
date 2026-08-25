@@ -4,14 +4,12 @@ Defines the axis range of an input device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## axis
@@ -26,87 +24,75 @@ Axis type of an input device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## flat
 
 ```TypeScript
-flat: int
+flat: number
 ```
 
 Benchmark value of the axis.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## fuzz
 
 ```TypeScript
-fuzz: int
+fuzz: number
 ```
 
 Fuzzy value of the axis.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## max
 
 ```TypeScript
-max: int
+max: number
 ```
 
 Maximum value of the axis.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## min
 
 ```TypeScript
-min: int
+min: number
 ```
 
 Minimum value of the axis.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## resolution
 
 ```TypeScript
-resolution: int
+resolution: number
 ```
 
 Resolution of the axis.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -121,7 +107,5 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 **Type:** SourceType
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice

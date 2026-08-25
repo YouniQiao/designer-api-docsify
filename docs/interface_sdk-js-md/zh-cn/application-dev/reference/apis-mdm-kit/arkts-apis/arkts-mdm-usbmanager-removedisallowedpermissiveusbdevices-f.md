@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedPermissiveUsbDevices
@@ -15,8 +15,6 @@ function removeDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<Per
 移除通过[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口禁用的USB设备类型。被移除的USB设备类型 可恢复正常使用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -39,25 +37,3 @@ function removeDisallowedPermissiveUsbDevices(admin: Want, usbDevices: Array<Per
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let usbDevices: Array<usbManager.PermissiveUsbDeviceType> = [{
-    baseClass: 8
-  }];
-  usbManager.removeDisallowedPermissiveUsbDevices(wantTemp, usbDevices);
-  console.info(`Succeeded in removing disallowed permissive USB devices.`);
-} catch (err) {
-  console.error(`Failed to remove disallowed permissive USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getURI
@@ -16,8 +16,6 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -29,20 +27,6 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 | name | string | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS, (uri:string) => {
-    console.info(`callback:uri -> ${JSON.stringify(uri)}`)
-})
-```
-
-```TypeScript
-settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS).then((uri:string) => {
-    console.info(`promise:uri -> ${JSON.stringify(uri)}`)
-})
-```
-
 
 ## getURI
 
@@ -53,8 +37,6 @@ function getURI(name: string): Promise<object>
 Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -71,7 +53,3 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;object & gt; |
-
-**Examples**
-
-See [getURI](#geturi)

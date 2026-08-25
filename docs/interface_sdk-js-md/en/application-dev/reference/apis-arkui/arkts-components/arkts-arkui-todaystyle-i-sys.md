@@ -4,8 +4,6 @@ Non current day style.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,11 +23,9 @@ focusedAreaBackgroundColor?: ResourceColor
 
 Background color of the focus area.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -51,8 +47,6 @@ Focus area radius.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -69,11 +63,9 @@ focusedDayColor?: ResourceColor
 
 Style of focus color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -91,11 +83,9 @@ focusedLunarColor?: ResourceColor
 
 Focus on Lunar Colors.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 

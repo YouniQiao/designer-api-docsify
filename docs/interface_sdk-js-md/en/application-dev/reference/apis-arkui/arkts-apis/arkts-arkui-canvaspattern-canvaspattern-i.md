@@ -4,8 +4,6 @@ Describes an opaque object of a template, which is created using the createPatte
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setTransform
@@ -17,8 +15,6 @@ setTransform(transform?: Matrix2D): void
 Adds the matrix transformation effect to the current template.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the FA model.
 

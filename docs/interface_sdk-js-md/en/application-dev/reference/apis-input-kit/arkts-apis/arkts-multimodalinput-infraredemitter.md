@@ -4,14 +4,12 @@ The **infraredEmitter** module generates IR signals of the specified frequency a
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 ## Modules to Import
 
 ```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
+import { infraredEmitter } from 'kits/@kit.InputKit';
 ```
 
 ## Summary

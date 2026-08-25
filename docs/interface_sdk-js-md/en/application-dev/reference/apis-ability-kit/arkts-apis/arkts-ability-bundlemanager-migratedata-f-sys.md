@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## migrateData
@@ -15,8 +15,6 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 Migrates files from the source path to the destination path. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MIGRATE_DATA
 
@@ -50,28 +48,3 @@ Migrates files from the source path to the destination path. This API uses a pro
 | [17700084](../errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) |
 | [17700085](../errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) |
 | [17700086](../errorcode-bundle.md#17700086-system-error) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // Change the values of source1, source2, and dest to the actual file or directory paths.
-  let source1: string = "/data/app/el2/100/base/com.example.myapplication/";
-  let source2: string = "/data/app/el2/101/base/com.example.myapplication/log.txt";
-  let dest: string = "/data/local/tmp";
-  let sourcePaths: Array<string> = [source1, source2];
-
-  bundleManager.migrateData(sourcePaths, dest)
-    .then(() => {
-      console.info(`migrateData succeed`);
-    })
-    .catch((err: BusinessError) => {
-      console.error(`migrateData err : `, JSON.stringify(err));
-    })
-} catch (err) {
-  console.error(`migrateData call err : `, JSON.stringify(err));
-}
-```

@@ -4,14 +4,12 @@ Defines the type of the IP address to be queried.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## family
@@ -25,7 +23,5 @@ Type of the IP address to be queried. The default value is **FAMILY_TYPE_ALL**.
 **Type:** [FamilyType](arkts-network-connection-familytype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core

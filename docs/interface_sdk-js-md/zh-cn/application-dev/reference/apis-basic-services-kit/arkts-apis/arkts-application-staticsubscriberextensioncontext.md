@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionContext } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总

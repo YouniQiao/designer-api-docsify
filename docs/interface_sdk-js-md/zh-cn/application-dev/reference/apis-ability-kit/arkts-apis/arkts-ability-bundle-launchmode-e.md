@@ -8,8 +8,6 @@ Ability组件的启动模式。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [LaunchType](arkts-ability-bundlemanager-launchtype-e.md)
@@ -26,8 +24,6 @@ Ability只有一个实例。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [SINGLETON](arkts-ability-bundlemanager-launchtype-e.md#singleton)
@@ -43,8 +39,6 @@ STANDARD = 1
 Ability有多个实例。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

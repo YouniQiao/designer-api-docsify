@@ -6,14 +6,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
 ```
 
 ## commands
@@ -25,8 +23,6 @@ commands(commands: string): PathShape
 设置路径的绘制指令。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,8 +53,6 @@ constructor(options?: PathShapeOptions)
 创建PathShape对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

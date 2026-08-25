@@ -4,8 +4,6 @@ TransformObject@interface TransformObject
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## matrix
@@ -17,8 +15,6 @@ matrix(scaleX: number, skewX: number, skewY: number, scaleY: number, translateX:
 Defines a 2D transformation, using a matrix of six values..
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -62,8 +58,6 @@ Defines a 3D transformation using a 4x4 matrix of 16 values.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -99,8 +93,6 @@ Defines a perspective view for the 3D transformation element.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -121,8 +113,6 @@ Define the 2D rotation and specify the angle in the parameters.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -142,8 +132,6 @@ rotate3d(x: number, y: number, z: number, angle: number): void
 Defines a 3D transformation for rotating the X / Y / Z axes.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -168,8 +156,6 @@ Defines 3D transformations for rotating of the X axes.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -189,8 +175,6 @@ rotateY(angle: number): void
 Defines 3D transformations for rotating of the Y axes.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -212,8 +196,6 @@ Defines 3D transformations for rotating of the Z axes.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -233,8 +215,6 @@ scale(x: number, y: number): void
 Defines 2D transformations for scaling of the X and Y axes
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -256,8 +236,6 @@ scale3d(x: number, y: number, z: number): void
 Defines 3D transformations for scaling of the X / Y / Z axes
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -281,8 +259,6 @@ Defines 2D transformations for scaling of the X axes
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -302,8 +278,6 @@ scaleY(y: number): void
 Defines 2D transformations for scaling of the Y axes
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -325,8 +299,6 @@ Defines 3D transformations for scaling of the Z axes
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -346,8 +318,6 @@ skew(xAngle: number, yAngle: number): void
 Defines the 2D skew transition along the X and Y axes.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -370,8 +340,6 @@ Defines the 2D skew transition along the X axes.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -391,8 +359,6 @@ skewY(angle: number): void
 Defines the 2D skew transition along the Y axes.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -414,8 +380,6 @@ Defines 2D transformations for translation of the X and Y axes
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -436,8 +400,6 @@ translate3d(x: number, y: number, z: number): void
 Defines 3D transformations for translation of the X / Y / Z axes
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -461,8 +423,6 @@ Defines 2D transformations for translation of the X axes
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -483,8 +443,6 @@ Defines 2D transformations for translation of the Y axes
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -504,8 +462,6 @@ translateZ(z: number): void
 Defines 3D transformations for translation of the Z axes
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 

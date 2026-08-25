@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getAllUserTrustedCertificates
@@ -15,8 +15,6 @@ function getAllUserTrustedCertificates(): Promise<CMResult>
 Obtains all user trusted root CA certificates of the device. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -35,54 +33,6 @@ Obtains all user trusted root CA certificates of the device. This API uses a pro
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  certificateManager.getAllUserTrustedCertificates().then((cmResult) => {
-    if (cmResult === undefined) { // If the number of root CA certificates is 0, the returned cmResult is undefined.
-      console.info('The count of the user trusted certificates is 0.');
-    } else if (cmResult.certList == undefined) {
-      console.info('The result of getting all user trusted certificates is undefined.');
-    } else {
-      let list = cmResult.certList;
-      console.info('Succeeded in getting all user trusted certificates.');
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get all user trusted certificates. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to get all user trusted certificates. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  /* Obtain the user root CA certificates of the current user. To obtain the user root CA certificates accessible to all users, pass in GLOBAL_USER. */
-  let scope: certificateManager.CertScope = certificateManager.CertScope.CURRENT_USER;
-  certificateManager.getAllUserTrustedCertificates(scope).then((cmResult) => {
-    if (cmResult === undefined) { // If the number of root CA certificates is 0, the returned cmResult is undefined.
-      console.info('The count of the user trusted certificates is 0.');
-    } else if (cmResult.certList == undefined) {
-      console.info('The result of getting current user trusted certificates is undefined.');
-    } else {
-      let list = cmResult.certList;
-      console.info('Succeeded in getting current user trusted certificates.');
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get current user trusted certificates. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to get current user trusted certificates. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## getAllUserTrustedCertificates
 
@@ -93,8 +43,6 @@ function getAllUserTrustedCertificates(scope: CertScope): Promise<CMResult>
 Obtains the user root CA certificates based on the certificate scope. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -119,7 +67,3 @@ Obtains the user root CA certificates based on the certificate scope. This API u
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
-
-**Examples**
-
-See [getAllUserTrustedCertificates](#getallusertrustedcertificates)

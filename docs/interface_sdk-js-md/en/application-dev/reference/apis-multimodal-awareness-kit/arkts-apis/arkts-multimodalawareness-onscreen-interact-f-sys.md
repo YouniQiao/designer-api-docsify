@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## interact
@@ -13,11 +13,9 @@ function interact(capability: OnscreenAwarenessCap,
                    options?: OnscreenAwarenessOptions): Promise<OnscreenAwarenessInfo[]>
 ```
 
-Proactively triggers screen behavior interaction to identify screen behaviors and return behavior receipts. For <br> example, after a link is clicked, the system accurately jumps to the specified paragraph and <br> highlights the text based on the receipt information.
+Proactively triggers screen behavior interaction to identify screen behaviors and return behavior receipts. For example, after a link is clicked, the system accurately jumps to the specified paragraph and highlights the text based on the receipt information.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS

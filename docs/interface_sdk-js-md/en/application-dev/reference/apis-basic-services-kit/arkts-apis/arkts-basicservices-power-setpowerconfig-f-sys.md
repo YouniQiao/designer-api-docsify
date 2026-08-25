@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setPowerConfig
@@ -15,8 +15,6 @@ function setPowerConfig(sceneName: string, value: string): void
 Update the power configuration value for a given scene name.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.POWER_CONFIG
 

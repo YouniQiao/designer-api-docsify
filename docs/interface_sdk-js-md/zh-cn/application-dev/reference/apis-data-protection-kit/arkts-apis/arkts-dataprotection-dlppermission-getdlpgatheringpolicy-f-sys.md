@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getDLPGatheringPolicy
@@ -15,8 +15,6 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 查询DLP沙箱聚合策略。使用Promise异步回调。应用需要获取当前系统的DLP沙箱聚合策略配置时使用此接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -39,30 +37,6 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPGatheringPolicy().then((gatheringPolicy: dlpPermission.GatheringPolicyType) => {
-  console.info('gatheringPolicy: ', JSON.stringify(gatheringPolicy));
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get DLPGatheringPolicy. Code: ${error.code}, message: ${error.message}`);
-}); // 获取沙箱聚合策略。
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
-  if (err) {
-    console.error(`Failed to get DLPGatheringPolicy. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('gatheringPolicy：', JSON.stringify(gatheringPolicy));
-  }
-}); // 获取沙箱聚合策略。
-```
-
 
 ## getDLPGatheringPolicy
 
@@ -73,8 +47,6 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 查询DLP沙箱聚合策略。使用callback异步回调。应用需要获取当前系统的DLP沙箱聚合策略配置时使用此接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -97,7 +69,3 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-参见 [getDLPGatheringPolicy](#getdlpgatheringpolicy)

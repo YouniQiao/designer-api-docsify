@@ -5,24 +5,6 @@
   <!--Del-->
   - [DataShareExtensionAbility(系统接口)](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [BatchInsertFn(系统接口)](arkts-arkdata-batchinsertfn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [BatchUpdateFn(系统接口)](arkts-arkdata-batchupdatefn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DeleteFn(系统接口)](arkts-arkdata-deletefn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DenormalizeUriFn(系统接口)](arkts-arkdata-denormalizeurifn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [InsertFn(系统接口)](arkts-arkdata-insertfn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [NormalizeUriFn(系统接口)](arkts-arkdata-normalizeurifn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [OnCreateFn(系统接口)](arkts-arkdata-oncreatefn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [QueryFn(系统接口)](arkts-arkdata-queryfn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [UpdateFn(系统接口)](arkts-arkdata-updatefn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [UpdateOperation(系统接口)](arkts-arkdata-updateoperation-t-sys.md)<!--DelEnd-->
 - [@ohos.data.cloudData](arkts-data-clouddata.md)
   - [cloudData](arkts-arkdata-clouddata-n.md)
@@ -260,7 +242,6 @@
   <!--Del-->
   - [SingleKVStore(系统接口)](arkts-arkdata-distributedkvstore-singlekvstore-i-sys.md)<!--DelEnd-->
   - [Value](arkts-arkdata-distributedkvstore-value-i.md)
-  - [Constants](arkts-arkdata-distributedkvstore-constants-e.md)
   - [KVStoreType](arkts-arkdata-distributedkvstore-kvstoretype-e.md)
   - [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
   - [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md)
@@ -288,7 +269,6 @@
   - [removePreferencesFromCacheSync](arkts-arkdata-preferences-removepreferencesfromcachesync-f.md)
   - [Options](arkts-arkdata-preferences-options-i.md)
   - [Preferences](arkts-arkdata-preferences-preferences-i.md)
-  - [RecordData](arkts-arkdata-preferences-recorddata-t.md)
   - [ValueType](arkts-arkdata-preferences-valuetype-t.md)
   - [StorageType](arkts-arkdata-preferences-storagetype-e.md)
   - [常量](arkts-arkdata-preferences-con.md)

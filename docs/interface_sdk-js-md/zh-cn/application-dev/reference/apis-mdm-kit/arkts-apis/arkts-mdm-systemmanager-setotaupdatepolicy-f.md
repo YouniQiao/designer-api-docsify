@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setOtaUpdatePolicy
@@ -15,8 +15,6 @@ function setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void
 设置升级策略。设置成功后，系统将按照指定的策略类型进行OTA升级处理，不同策略类型对应不同的升级行为。内网升级场景下，需要先调用 [systemManager.notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md)接口通知系统更新包，再调用该接口设置升级策略。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -39,87 +37,3 @@ function setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 默认升级策略
-let otaUpdatePolicy1: systemManager.OtaUpdatePolicy = {
-  "policyType": systemManager.PolicyType.DEFAULT,
-  "version": "version_1.0.0.0"
-};
-try {
-  systemManager.setOtaUpdatePolicy(wantTemp, otaUpdatePolicy1);
-  console.info('Succeeded in setting ota update policy.');
-} catch (err) {
-  console.error(`Failed to set ota update policy. Code is ${err.code}, message is ${err.message}`);
-}
-// 禁止升级
-let otaUpdatePolicy2: systemManager.OtaUpdatePolicy = {
-  "policyType": systemManager.PolicyType.PROHIBIT,
-  "version": "version_1.0.0.1"
-};
-try {
-  systemManager.setOtaUpdatePolicy(wantTemp, otaUpdatePolicy2);
-  console.info('Succeeded in setting ota update policy.');
-} catch (err) {
-  console.error(`Failed to set ota update policy. Code is ${err.code}, message is ${err.message}`);
-}
-// 强制升级
-let otaUpdatePolicy3: systemManager.OtaUpdatePolicy = {
-  "policyType": systemManager.PolicyType.UPDATE_TO_SPECIFIC_VERSION,
-  "version": "version_1.0.0.2",
-  "latestUpdateTime": 1716343200 // 时间戳
-};
-try {
-  systemManager.setOtaUpdatePolicy(wantTemp, otaUpdatePolicy3);
-  console.info('Succeeded in setting ota update policy.');
-} catch (err) {
-  console.error(`Failed to set ota update policy. Code is ${err.code}, message is ${err.message}`);
-}
-// 指定时间窗口升级
-let otaUpdatePolicy4: systemManager.OtaUpdatePolicy = {
-  "policyType": systemManager.PolicyType.WINDOWS,
-  "version": "version_1.0.0.3",
-  "installStartTime": 1716281049, // 时间戳
-  "installEndTime": 1716343200 // 时间戳
-};
-try {
-  systemManager.setOtaUpdatePolicy(wantTemp, otaUpdatePolicy4);
-  console.info('Succeeded in setting ota update policy.');
-} catch (err) {
-  console.error(`Failed to set ota update policy. Code is ${err.code}, message is ${err.message}`);
-}
-// 延迟升级
-let otaUpdatePolicy5: systemManager.OtaUpdatePolicy = {
-  "policyType": systemManager.PolicyType.POSTPONE,
-  "version": "version_1.0.0.4",
-  "delayUpdateTime": 5 // 单位（小时）
-};
-try {
-  systemManager.setOtaUpdatePolicy(wantTemp, otaUpdatePolicy5);
-  console.info('Succeeded in setting ota update policy.');
-} catch (err) {
-  console.error(`Failed to set ota update policy. Code is ${err.code}, message is ${err.message}`);
-}
-// 禁用公网升级
-let otaUpdatePolicy6: systemManager.OtaUpdatePolicy = {
-  "policyType": systemManager.PolicyType.DEFAULT,
-  "version": "version_1.0.0.5",
-  "disableSystemOtaUpdate": true
-};
-try {
-  systemManager.setOtaUpdatePolicy(wantTemp, otaUpdatePolicy6);
-  console.info('Succeeded in setting ota update policy.');
-} catch (err) {
-  console.error(`Failed to set ota update policy. Code is ${err.code}, message is ${err.message}`);
-}
-```

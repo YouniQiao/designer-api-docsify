@@ -3,13 +3,13 @@
 ## 导入模块
 
 ```TypeScript
-import { childProcessManager } from '@kit.AbilityKit';
+import { childProcessManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## startNativeChildProcess
 
 ```TypeScript
-function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>
+function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<number>
 ```
 
 启动[Native子进程](../../../application-models/ability-terminology.md#native子进程)。使用Promise异步回调。
@@ -20,8 +20,6 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -30,7 +28,7 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| entryPoint | string | 是 |
+| [entryPoint](../../apis-arkui/arkts-components/arkts-arkui-dynamicoptions-i-sys.md) | string | 是 |
 | [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | 是 |
 | options | [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | 否 |
 
@@ -38,7 +36,7 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -49,84 +47,3 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 | [16000061](../errorcode-ability.md#16000061-不支持的操作) |
 | [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) |
-
-**示例**
-
-子进程部分，详见[子进程开发指导（ArkTS）- 创建支持参数传递的Native子进程](../../../application-models/arkts-child-process-development-guideline.md#创建支持参数传递的native子进程)：
-
-```TypeScript
-#include <AbilityKit/native_child_process.h>
-
-extern "C" {
-
-/**
- * 子进程的入口函数，实现子进程的业务逻辑
- * 函数名称可以自定义，在主进程调用OH_Ability_StartNativeChildProcess方法时指定，此示例中为Main
- * 函数返回后子进程退出
- */
-void Main(NativeChildProcess_Args args)
-{
-    // 获取传入的entryParams
-    char *entryParams = args.entryParams;
-    // 获取传入的fd列表，对应ChildProcessArgs中的args.fds
-    NativeChildProcess_Fd *current = args.fdList.head;
-    while (current != nullptr) {
-        char *fdName = current->fdName;
-        int32_t fd = current->fd;
-        current = current->next;
-        // 业务逻辑..
-    }
-}
-} // extern "C"
-```
-
-主进程部分，示例中的context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)：
-
-```TypeScript
-// 主进程：
-// 使用childProcessManager.startNativeChildProcess方法启动子进程:
-import { common, ChildProcessArgs, ChildProcessOptions, childProcessManager } from '@kit.AbilityKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Text('Click')
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            try {
-              let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-              let path = context.filesDir + "/test.txt";
-              let file = fileIo.openSync(path, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
-              let args: ChildProcessArgs = {
-                entryParams: "testParam",
-                fds: {
-                  "key1": file.fd
-                }
-              };
-              let options: ChildProcessOptions = {
-                isolationMode: false
-              };
-              childProcessManager.startNativeChildProcess("libentry.so:Main", args, options)
-                .then((pid) => {
-                  console.info(`startNativeChildProcess success, pid: ${pid}`);
-                })
-                .catch((err: BusinessError) => {
-                  console.error(`startNativeChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
-                })
-            } catch (err: BusinessError) {
-              console.error(`startNativeChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
-            }
-          });
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

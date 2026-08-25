@@ -1,7 +1,5 @@
 # ArrayBufferView
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -17,8 +15,6 @@ The ArrayBuffer instance referenced by the array.
 
 **Type:** [ArrayBufferLike](arkts-arraybufferlike-t.md)
 
-**ArkTS mode:** 
-
 ## byteLength
 
 ```TypeScript
@@ -29,8 +25,6 @@ The length in bytes of the array.
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## byteOffset
 
 ```TypeScript
@@ -40,5 +34,3 @@ byteOffset: number
 The offset in bytes of the array.
 
 **Type:** number
-
-**ArkTS mode:** 

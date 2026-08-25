@@ -4,8 +4,6 @@ Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoas
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## SCREENSHOT
@@ -17,8 +15,6 @@ SCREENSHOT = 1
 Screenshot Photo Type
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

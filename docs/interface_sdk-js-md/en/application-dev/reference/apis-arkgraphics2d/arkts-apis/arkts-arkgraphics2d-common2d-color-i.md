@@ -4,29 +4,25 @@ Describes a color in ARGB format.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { common2D } from '@kit.ArkGraphics2D';
+import { common2D } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## alpha
 
 ```TypeScript
-alpha: int
+alpha: number
 ```
 
 Alpha component of the color. The value is an integer ranging from 0 to 255.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -35,16 +31,14 @@ Alpha component of the color. The value is an integer ranging from 0 to 255.
 ## blue
 
 ```TypeScript
-blue: int
+blue: number
 ```
 
 Blue component of the color. The value is an integer ranging from 0 to 255.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -53,16 +47,14 @@ Blue component of the color. The value is an integer ranging from 0 to 255.
 ## green
 
 ```TypeScript
-green: int
+green: number
 ```
 
 Green component of the color. The value is an integer ranging from 0 to 255.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -71,16 +63,14 @@ Green component of the color. The value is an integer ranging from 0 to 255.
 ## red
 
 ```TypeScript
-red: int
+red: number
 ```
 
 Red component of the color. The value is an integer ranging from 0 to 255.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

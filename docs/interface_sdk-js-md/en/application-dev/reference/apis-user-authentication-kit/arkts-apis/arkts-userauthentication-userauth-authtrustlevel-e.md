@@ -4,8 +4,6 @@ Enumerates the trust levels of the authentication result. This enum defines four
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## ATL1
@@ -17,8 +15,6 @@ ATL1 = 10000
 Authentication trust level 1. It can identify individual users and provides basic liveness detection capabilities (such as simple action detection). The security strength is low, and the authentication result may be risky. It is applicable to low-security scenarios such as service risk control, common personal data query, and access to non-sensitive information. It is recommended that this level be used together with other security measures.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Authentication trust level 2. It can accurately identify individual users and pr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -50,8 +44,6 @@ Authentication trust level 3. It can accurately identify individual users and pr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -65,8 +57,6 @@ ATL4 = 40000
 Authentication trust level 4. It can accurately identify individual users and provides strong liveness detection capabilities (such as in-depth analysis and multi-dimensional verification). It features the highest security strength and can effectively defend against various advanced forgery attacks. It is applicable to high-security scenarios, such as small-amount payment, financial transactions, and access to highly sensitive data. Only a few high-security authentication solutions support this level.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

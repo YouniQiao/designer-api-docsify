@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createWakeupIntelligentVoiceEngine
@@ -15,8 +15,6 @@ function createWakeupIntelligentVoiceEngine(descriptor: WakeupIntelligentVoiceEn
 Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md) instance. This method uses an asynchronous callback to return the WakeupIntelligentVoiceEngine instance.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -41,42 +39,6 @@ Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-w
 | [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wakeupEngineDescriptor: intelligentVoice.WakeupIntelligentVoiceEngineDescriptor = {
-  needReconfirm: true,
-  wakeupPhrase: 'Xiaohua Xiaohua',
-}
-let wakeupIntelligentVoiceEngine: intelligentVoice.WakeupIntelligentVoiceEngine | null = null;
-intelligentVoice.createWakeupIntelligentVoiceEngine(wakeupEngineDescriptor, (err: BusinessError, data: intelligentVoice.WakeupIntelligentVoiceEngine) => {
-  if (err) {
-    console.error(`Failed to create wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-  } else {
-    console.info(`Succeeded in creating wakeupIntelligentVoice engine.`);
-    wakeupIntelligentVoiceEngine = data;
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wakeupEngineDescriptor: intelligentVoice.WakeupIntelligentVoiceEngineDescriptor = {
-  needReconfirm: true,
-  wakeupPhrase: 'Xiaohua Xiaohua',
-}
-let wakeupIntelligentVoiceEngine: intelligentVoice.WakeupIntelligentVoiceEngine | null = null;
-intelligentVoice.createWakeupIntelligentVoiceEngine(wakeupEngineDescriptor).then((data: intelligentVoice.WakeupIntelligentVoiceEngine) => {
-  wakeupIntelligentVoiceEngine = data;
-  console.info(`Succeeded in creating wakeupIntelligentVoice engine.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-});
-```
-
 
 ## createWakeupIntelligentVoiceEngine
 
@@ -87,8 +49,6 @@ function createWakeupIntelligentVoiceEngine(descriptor: WakeupIntelligentVoiceEn
 Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md) instance. This method uses a promise to return the WakeupIntelligentVoiceEngine instance.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -117,7 +77,3 @@ Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-w
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
-
-**Examples**
-
-See [createWakeupIntelligentVoiceEngine](#createwakeupintelligentvoiceengine)

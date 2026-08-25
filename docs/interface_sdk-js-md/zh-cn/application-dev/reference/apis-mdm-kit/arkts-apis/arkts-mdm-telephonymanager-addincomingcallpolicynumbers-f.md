@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addIncomingCallPolicyNumbers
@@ -19,8 +19,6 @@ function addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, 
 3. 已经通过本接口设置了通话呼入的允许名单，再通过本接口添加通话呼入禁用名单，返回9200010错误码。通过[removeIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-removeincomingcallpolicynumbers-f.md)接口将之前设置的通话呼入允许名单移除后，可解除冲突。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -47,31 +45,3 @@ function addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, 
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // 设置策略类型为禁用名单
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  // 设置要添加到禁用名单的通话号码
-  let numbers: Array<string> = [
-    // 需根据实际情况进行替换
-    "13112345678"
-  ];
-  // 添加通话呼入禁用名单
-  telephonyManager.addIncomingCallPolicyNumbers(wantTemp, policy, numbers);
-  console.info('Succeeded in adding incoming call policy.');
-} catch (err) {
-  console.error(`Failed to add incoming call policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

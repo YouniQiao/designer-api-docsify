@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## unregisterRemoteAuthCallback
@@ -15,8 +15,6 @@ function unregisterRemoteAuthCallback(): void
 注销远程认证回调。该接口用于注销已注册的远程认证回调，注销后系统不再接收远程认证的页面参数请求和认证结果通知。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -33,18 +31,3 @@ function unregisterRemoteAuthCallback(): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  userAuth.unregisterRemoteAuthCallback();
-  console.info('Remote auth callback unregistered successfully');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to unregister remote auth callback. Code: ${err.code}, message: ${err.message}`);
-}
-```

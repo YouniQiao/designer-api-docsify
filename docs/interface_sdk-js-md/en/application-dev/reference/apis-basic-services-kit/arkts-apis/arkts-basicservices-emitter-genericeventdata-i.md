@@ -4,14 +4,12 @@ Describes the generic data carried by the emitted event.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Emitter
 
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from '@kit.BasicServicesKit';
+import { emitter } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## data
@@ -25,8 +23,6 @@ Data carried by the emitted event. **T** represents a generic type, which can be
 **Type:** T
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

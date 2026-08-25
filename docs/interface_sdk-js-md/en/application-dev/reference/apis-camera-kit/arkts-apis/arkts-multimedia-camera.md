@@ -8,14 +8,12 @@ The module provides a set of camera service APIs for you to easily develop a cam
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## Summary
@@ -143,6 +141,7 @@ import { camera } from '@kit.CameraKit';
 | [CameraInput(AutoDeviceSwitch)](arkts-camera-camera-camerainput-i-sys.md) |
 | [CameraManager(AutoDeviceSwitch)](arkts-camera-camera-cameramanager-i-sys.md) |
 | [CameraOutputCapability(AutoDeviceSwitch)](arkts-camera-camera-cameraoutputcapability-i-sys.md) |
+| [CameraSharedStatusInfo(AutoDeviceSwitch)](arkts-camera-camera-camerasharedstatusinfo-i-sys.md) |
 | [CaptureSession(AutoDeviceSwitch)](arkts-camera-camera-capturesession-i-sys.md) |
 | [ColorEffect(AutoDeviceSwitch)](arkts-camera-camera-coloreffect-i-sys.md) |
 | [ColorEffectQuery(AutoDeviceSwitch)](arkts-camera-camera-coloreffectquery-i-sys.md) |
@@ -260,6 +259,7 @@ import { camera } from '@kit.CameraKit';
 | [CameraErrorCode(AutoDeviceSwitch)](arkts-camera-camera-cameraerrorcode-e-sys.md) |
 | [CameraFormat(AutoDeviceSwitch)](arkts-camera-camera-cameraformat-e-sys.md) |
 | [CameraImagingMode(AutoDeviceSwitch)](arkts-camera-camera-cameraimagingmode-e-sys.md) |
+| [CameraSharedStatus(AutoDeviceSwitch)](arkts-camera-camera-camerasharedstatus-e-sys.md) |
 | [ColorEffectType(AutoDeviceSwitch)](arkts-camera-camera-coloreffecttype-e-sys.md) |
 | [ColorReservationType(AutoDeviceSwitch)](arkts-camera-camera-colorreservationtype-e-sys.md) |
 | [DeferredDeliveryImageType(AutoDeviceSwitch)](arkts-camera-camera-deferreddeliveryimagetype-e-sys.md) |

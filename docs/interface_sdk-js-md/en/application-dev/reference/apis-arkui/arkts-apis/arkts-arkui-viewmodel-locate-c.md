@@ -2,8 +2,6 @@
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## countryOrRegion
@@ -17,8 +15,6 @@ country or region, such ass 'CN'.
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -36,8 +32,6 @@ text layout direction, ltr or rtl.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -54,8 +48,6 @@ language, such as 'zh'.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -71,8 +63,6 @@ The Unicode locale key set defined by the locale. If this locale does not have a
 **Type:** object
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Model restriction:** This API can be used only in the FA model.
 

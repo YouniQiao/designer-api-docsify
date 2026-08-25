@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## createCamera
@@ -19,8 +17,6 @@ createCamera(params: SceneNodeParameters): Promise<Camera>
 根据节点参数创建相机，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -36,52 +32,6 @@ createCamera(params: SceneNodeParameters): Promise<Camera>
 | --- |
 | Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { SceneNodeParameters, Camera, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
-
-function createCameraPromise(): Promise<Camera> {
-  return new Promise((resolve, reject) => {
-    // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-    scene.then(async (result: Scene) => {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let sceneCameraParameter: SceneNodeParameters = { name: "camera1" };
-      // 创建相机
-      let camera: Camera = await sceneFactory.createCamera(sceneCameraParameter);
-      resolve(camera);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```
-
-```TypeScript
-import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, CameraParameters,
-  RenderingPipelineType } from '@kit.ArkGraphics3D';
-
-function createCameraPromise(): Promise<Camera> {
-  return new Promise((resolve, reject) => {
-    // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-    scene.then(async (result: Scene) => {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let nodeParameter: SceneNodeParameters = { name: "camera1" };
-      let camParameter: CameraParameters = {renderingPipeline: RenderingPipelineType.FORWARD};
-      // 创建相机
-      let camera: Camera = await sceneFactory.createCamera(nodeParameter, camParameter);
-      resolve(camera);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```
-
 ## createCamera
 
 ```TypeScript
@@ -91,8 +41,6 @@ createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promi
 根据节点参数与相机参数创建相机，使用Promise异步回调。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -109,10 +57,6 @@ createCamera(params: SceneNodeParameters, cameraParams: CameraParameters): Promi
 | --- |
 | Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; |
 
-**示例**
-
-参见 [createCamera](#createcamera)
-
 ## createEffect
 
 ```TypeScript
@@ -122,8 +66,6 @@ createEffect(params: EffectParameters): Promise<Effect>
 根据特效参数创建特效对象，使用Promise异步回调。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -139,31 +81,6 @@ createEffect(params: EffectParameters): Promise<Effect>
 | --- |
 | Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { SceneResourceFactory, Scene, Effect, EffectParameters } from '@kit.ArkGraphics3D';
-
-function createEffect() : Promise<Effect> {
-  return new Promise((resolve, reject) => {
-    let scene: Promise<Scene> = Scene.load();
-    scene.then(async (result: Scene | undefined) => {
-      if (!result) {
-        return;
-      }
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      // 特效ID，固定格式为'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'，比如'e68a7f45-2d21-4a0d-9aef-7d9c825d3f12'
-      let params: EffectParameters = {effectId: "e68a7f45-2d21-4a0d-9aef-7d9c825d3f12"};
-      let effect: Effect = await sceneFactory.createEffect(params);
-      resolve(effect);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```
-
 ## createEnvironment
 
 ```TypeScript
@@ -173,8 +90,6 @@ createEnvironment(params: SceneResourceParameters): Promise<Environment>
 根据场景资源参数创建环境，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -190,30 +105,6 @@ createEnvironment(params: SceneResourceParameters): Promise<Environment>
 | --- |
 | Promise&lt;[Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { Environment, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
-
-function createEnvironmentPromise(): Promise<Environment> {
-  return new Promise((resolve, reject) => {
-    // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-    scene.then(async (result: Scene) => {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      // 加载环境贴图资源，路径和文件名可根据项目实际资源自定义
-      let sceneEnvironmentParameter: SceneResourceParameters = { name: "env", uri: $rawfile("KTX/quarry_02_2k_radiance.ktx") };
-      // 创建Environment
-      let env: Environment = await sceneFactory.createEnvironment(sceneEnvironmentParameter);
-      resolve(env);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```
-
 ## createGeometry
 
 ```TypeScript
@@ -223,8 +114,6 @@ createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry
 根据场景节点参数和网格数据创建几何对象，使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -241,36 +130,6 @@ createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry
 | --- |
 | Promise&lt;[Geometry](arkts-arkgraphics3d-scenenodes-geometry-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { SceneResourceFactory, Scene, Geometry, CubeGeometry } from '@kit.ArkGraphics3D';
-
-function createGeometryPromise() : Promise<Geometry> {
-  return new Promise((resolve, reject) => {
-    let scene: Promise<Scene> = Scene.load();
-    scene.then(async (result: Scene | undefined) => {
-      if (!result) {
-        return;
-      }
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      // 创建立方体几何数据
-      let cubeGeom = new CubeGeometry();
-      cubeGeom.size = { x: 1, y: 1, z: 1 };
-      // 根据立方体几何数据创建网格资源
-      let meshRes = await sceneFactory.createMesh({ name: "MeshName" }, cubeGeom);
-      console.info("TEST createGeometryPromise");
-      // 根据场景节点参数和网格资源创建几何对象
-      let geometry: Geometry = await sceneFactory.createGeometry({ name: "GeometryName" }, meshRes);
-      resolve(geometry);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```
-
 ## createLight
 
 ```TypeScript
@@ -280,8 +139,6 @@ createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>
 根据节点参数和灯光类型创建灯光，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -298,29 +155,6 @@ createLight(params: SceneNodeParameters, lightType: LightType): Promise<Light>
 | --- |
 | Promise&lt;[Light](arkts-arkgraphics3d-scenenodes-light-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { SceneNodeParameters, LightType, Light, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
-
-function createLightPromise() : Promise<Light> {
-  return new Promise((resolve, reject) => {
-    // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-    scene.then(async (result: Scene) => {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let sceneLightParameter: SceneNodeParameters = { name: "light" };
-      // 创建平行光
-      let light: Light = await sceneFactory.createLight(sceneLightParameter, LightType.DIRECTIONAL);
-      resolve(light);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```
-
 ## createMaterial
 
 ```TypeScript
@@ -330,8 +164,6 @@ createMaterial(params: SceneResourceParameters, materialType: MaterialType): Pro
 根据场景资源参数和材质类型创建材质，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -348,29 +180,6 @@ createMaterial(params: SceneResourceParameters, materialType: MaterialType): Pro
 | --- |
 | Promise&lt;[Material](arkts-arkgraphics3d-sceneresources-material-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-import { MaterialType, Material, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
-
-function createMaterialPromise() : Promise<Material> {
-  return new Promise((resolve, reject) => {
-    // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-    scene.then(async (result: Scene) => {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let sceneMaterialParameter: SceneResourceParameters = { name: "material" };
-      // 创建材质
-      let material: Material = await sceneFactory.createMaterial(sceneMaterialParameter, MaterialType.SHADER);
-      resolve(material);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```
-
 ## createNode
 
 ```TypeScript
@@ -380,8 +189,6 @@ createNode(params: SceneNodeParameters): Promise<Node>
 创建节点，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -396,27 +203,3 @@ createNode(params: SceneNodeParameters): Promise<Node>
 | 类型 |
 | --- |
 | Promise&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt; |
-
-**示例**
-
-```TypeScript
-import { SceneNodeParameters, SceneResourceFactory, Scene, Node } from '@kit.ArkGraphics3D';
-
-function createNodePromise(): Promise<Node> {
-  return new Promise((resolve, reject) => {
-    // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-    scene.then(async (result: Scene) => {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let sceneNodeParameter: SceneNodeParameters = { name: "empty_node",
-        path:"/rootNode_/empty_node" };
-      // 创建节点
-      let node: Node = await sceneFactory.createNode(sceneNodeParameter);
-      resolve(node);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```

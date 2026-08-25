@@ -4,8 +4,6 @@ Describes the widget state information.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md)
@@ -29,8 +27,6 @@ Widget state.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [formState](arkts-form-forminfo-formstateinfo-i.md#formstate)
@@ -48,8 +44,6 @@ Want text.
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

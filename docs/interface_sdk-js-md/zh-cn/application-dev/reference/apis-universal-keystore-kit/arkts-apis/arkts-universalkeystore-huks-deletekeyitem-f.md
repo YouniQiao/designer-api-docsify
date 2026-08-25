@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## deleteKeyItem
@@ -18,8 +18,6 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 > 删除[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -47,115 +45,6 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 
-**示例**
-
-ArkTS示例：
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 删除密钥 */
-huks.deleteKeyItem(keyAlias, emptyOptions, (error) => {
-  if (error) {
-    console.error(`callback: deleteKeyItem failed`);
-  } else {
-    console.info(`callback: deleteKeyItem key success`);
-  }
-});
-```
-
-JS示例代码仅供轻量级设备使用。
-
-```TypeScript
-<stack class="container">
-    <input type="button" class="deleteBtn" @click="deleteKey">删除密钥</input>
-    <text class="result">{{result}}</text>
-</stack>
-```
-
-```TypeScript
-.container {
-  width: 454px;
-  height: 800px;
-  background-color: #ffffffff;
-}
-
-.deleteBtn {
-  left: 77px;
-  top: 100px;
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  color: white;
-  background-color: orange;
-  font-size: 25px;
-}
-
-.result {
-  left: 30px;
-  top: 190px;
-  width: 390px;
-  height: 80px;
-  text-align: center;
-  color: #ff000000;
-  background-color: #ffffffff;
-  font-size: 25px;
-}
-```
-
-```TypeScript
-import huks from '@ohos.security.huks';
-
-function testDeleteKey() {
-    let huksInfo;
-    let keyAlias = 'keyAlias';
-    let emptyOptions = {
-        properties: []
-    };
-    huks.deleteKeyItem(keyAlias, emptyOptions, (err, data) => {
-        if (err) {
-            huksInfo = 'deleteKeyItem failed, code: ' + err.code + ', message: ' + err.message;
-            console.error(huksInfo);
-        } else {
-            huksInfo = 'deleteKeyItem succeeded';
-            console.info(huksInfo);
-        }
-    });
-    return huksInfo;
-}
-
-export default {
-    data: {
-        result: ''
-    },
-
-    deleteKey() {
-        this.result = testDeleteKey();
-    }
-};
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-/* 删除密钥 */
-huks.deleteKeyItem(keyAlias, emptyOptions)
-  .then(() => {
-    console.info(`promise: deleteKeyItem key success`);
-  });
-```
-
 
 ## deleteKeyItem
 
@@ -169,8 +58,6 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 > 删除[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -202,7 +89,3 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 | [12000012](../errorcode-huks.md#12000012-外部错误) |
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
-
-**示例**
-
-参见 [deleteKeyItem](#deletekeyitem)

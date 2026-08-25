@@ -4,8 +4,6 @@ Provides APIs for setting and obtaining ringtone parameters as well as playing a
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Sets ringtone parameters. This API uses an asynchronous callback to return the r
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -33,42 +29,6 @@ Sets ringtone parameters. This API uses an asynchronous callback to return the r
 | options | [RingtoneOptions](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RingtoneOptions {
-  volume: number = 0;
-  loop: boolean = false;
-}
-let ringtoneOptions: RingtoneOptions = {volume: 0.5, loop: true};
-
-systemRingtonePlayer.configure(ringtoneOptions, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to configure ringtone options. ${err}`);
-    return;
-  }
-  console.info(`Callback invoked to indicate a successful setting of ringtone options.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RingtoneOptions {
-  volume: number = 0;
-  loop: boolean = false;
-}
-let ringtoneOptions: RingtoneOptions = {volume: 0.5, loop: true};
-
-systemRingtonePlayer.configure(ringtoneOptions).then(() => {
-  console.info(`Promise returned to indicate a successful setting of ringtone options.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to configure ringtone options. ${err}`);
-});
-```
-
 ## configure
 
 ```TypeScript
@@ -78,8 +38,6 @@ configure(options: RingtoneOptions): Promise<void>
 Sets ringtone parameters. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -97,10 +55,6 @@ Sets ringtone parameters. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [configure](#configure)
-
 ## getAudioRendererInfo
 
 ```TypeScript
@@ -110,8 +64,6 @@ getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 Obtains the information about the audio renderer used by the ringtone. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -123,38 +75,6 @@ Obtains the information about the audio renderer used by the ringtone. This API 
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioRendererInfo&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioRendererInfo: audio.AudioRendererInfo | undefined = undefined;
-
-systemRingtonePlayer.getAudioRendererInfo((err: BusinessError, value: audio.AudioRendererInfo) => {
-  if (err) {
-    console.error(`Failed to get ringtone AudioRendererInfo. ${err}`);
-    return;
-  }
-  console.info(`Callback invoked to indicate the value of the ringtone AudioRendererInfo is obtained.`);
-  audioRendererInfo = value;
-});
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioRendererInfo: audio.AudioRendererInfo | undefined = undefined;
-
-systemRingtonePlayer.getAudioRendererInfo().then((value: audio.AudioRendererInfo) => {
-  console.info(`Promise returned to indicate that the value of the ringtone AudioRendererInfo is obtained ${value}.`);
-  audioRendererInfo = value;
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to get the ringtone AudioRendererInfo ${err}`);
-});
-```
-
 ## getAudioRendererInfo
 
 ```TypeScript
@@ -164,8 +84,6 @@ getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 Obtains the information about the audio renderer used by the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -177,10 +95,6 @@ Obtains the information about the audio renderer used by the ringtone. This API 
 | --- |
 | Promise & lt;audio.AudioRendererInfo & gt; |
 
-**Examples**
-
-See [getAudioRendererInfo](#getaudiorendererinfo)
-
 ## getTitle
 
 ```TypeScript
@@ -190,8 +104,6 @@ getTitle(callback: AsyncCallback<string>): void
 Obtains the title of the ringtone. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -203,30 +115,6 @@ Obtains the title of the ringtone. This API uses an asynchronous callback to ret
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.getTitle((err: BusinessError, value: string) => {
-  if (err) {
-    console.error(`Failed to get system ringtone title. ${err}`);
-    return;
-  }
-  console.info(`Callback invoked to indicate the value of the system ringtone title is obtained ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.getTitle().then((value: string) => {
-  console.info(`Promise returned to indicate that the value of the system ringtone title is obtained ${value}.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to get the system ringtone title ${err}`);
-});
-```
-
 ## getTitle
 
 ```TypeScript
@@ -236,8 +124,6 @@ getTitle(): Promise<string>
 Obtains the title of the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -249,10 +135,6 @@ Obtains the title of the ringtone. This API uses a promise to return the result.
 | --- |
 | Promise & lt;string & gt; |
 
-**Examples**
-
-See [getTitle](#gettitle)
-
 ## off('audioInterrupt')
 
 ```TypeScript
@@ -262,8 +144,6 @@ off(type: 'audioInterrupt'): void
 Unsubscribes from the audio interruption event.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -281,34 +161,6 @@ Unsubscribes from the audio interruption event.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-systemRingtonePlayer.off('audioInterrupt');
-```
-
-## offAudioInterrupt
-
-```TypeScript
-offAudioInterrupt(): void
-```
-
-Unsubscribes to audio interrupt events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-**System API:** This is a system API.
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## on('audioInterrupt')
 
@@ -320,8 +172,6 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -338,85 +188,6 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let isPlaying: boolean = false; // An identifier specifying whether rendering is in progress.
-let isDucked: boolean = false; // An identifier specifying whether the audio volume is reduced.
-
-systemRingtonePlayer.on('audioInterrupt', async(interruptEvent: audio.InterruptEvent) => {
-  if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_FORCE) {
-    // The system forcibly interrupts audio rendering. The application must update the status and displayed content accordingly.
-    switch (interruptEvent.hintType) {
-      case audio.InterruptHint.INTERRUPT_HINT_PAUSE:
-        // The audio stream has been paused and temporarily loses the focus. It will receive the interruptEvent corresponding to resume when it is able to regain the focus.
-        console.info('Force paused. Update playing status and stop writing');
-        isPlaying = false; // A simplified processing indicating several operations for switching the application to the paused state.
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_STOP:
-        // The audio stream has been stopped and permanently loses the focus. The user must manually trigger the operation to resume rendering.
-        console.info('Force stopped. Update playing status and stop writing');
-        isPlaying = false; // A simplified processing indicating several operations for switching the application to the paused state.
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_DUCK:
-        // The audio stream is rendered at a reduced volume.
-        console.info('Force ducked. Update volume status');
-        isDucked = true; // A simplified processing indicating several operations for updating the volume status.
-        break;
-      case audio.InterruptHint.INTERRUPT_HINT_UNDUCK:
-        // The audio stream is rendered at the normal volume.
-        console.info('Force unducked. Update volume status');
-        isDucked = false; // A simplified processing indicating several operations for updating the volume status.
-        break;
-      default:
-        break;
-    }
-  } else if (interruptEvent.forceType == audio.InterruptForceType.INTERRUPT_SHARE) {
-    // The application can choose to take action or ignore.
-    switch (interruptEvent.hintType) {
-      case audio.InterruptHint.INTERRUPT_HINT_RESUME:
-        // It is recommended that the application continue rendering. (The audio stream has been forcibly paused and temporarily lost the focus. It can resume rendering now.)
-        console.info('Resume force paused renderer or ignore');
-        // To continue rendering, the application must perform the required operations.
-        break;
-      default:
-        break;
-    }
-  }
-});
-```
-
-## onAudioInterrupt
-
-```TypeScript
-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
-```
-
-Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio playback is interrupted.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.SystemSound.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## release
@@ -429,8 +200,6 @@ Releases the ringtone player. This API uses an asynchronous callback to return t
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -440,30 +209,6 @@ Releases the ringtone player. This API uses an asynchronous callback to return t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.release((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to release ringtone player. ${err}`);
-    return;
-  }
-  console.info(`Callback invoked to indicate a successful releasing of ringtone player.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.release().then(() => {
-  console.info(`Promise returned to indicate a successful releasing of ringtone player.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to release ringtone player. ${err}`);
-});
-```
 
 ## release
 
@@ -475,8 +220,6 @@ Releases the ringtone player. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -486,10 +229,6 @@ Releases the ringtone player. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [release](#release)
 
 ## start
 
@@ -501,8 +240,6 @@ Starts playing the ringtone. This API uses an asynchronous callback to return th
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -512,30 +249,6 @@ Starts playing the ringtone. This API uses an asynchronous callback to return th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.start((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to start playing ringtone. ${err}`);
-    return;
-  }
-  console.info(`Callback invoked to indicate a successful starting of ringtone.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.start().then(() => {
-  console.info(`Promise returned to indicate a successful starting of ringtone.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to start playing ringtone. ${err}`);
-});
-```
 
 ## start
 
@@ -547,8 +260,6 @@ Starts playing the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -558,10 +269,6 @@ Starts playing the ringtone. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [start](#start)
 
 ## stop
 
@@ -573,8 +280,6 @@ Stops playing the ringtone. This API uses an asynchronous callback to return the
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -584,30 +289,6 @@ Stops playing the ringtone. This API uses an asynchronous callback to return the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.stop((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to stop playing ringtone. ${err}`);
-    return;
-  }
-  console.info(`Callback invoked to indicate a successful stopping of ringtone.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemRingtonePlayer.stop().then(() => {
-  console.info(`Promise returned to indicate a successful stopping of ringtone.`);
-}).catch ((err: BusinessError) => {
-  console.error(`Failed to stop playing ringtone. ${err}`);
-});
-```
 
 ## stop
 
@@ -619,8 +300,6 @@ Stops playing the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -630,10 +309,6 @@ Stops playing the ringtone. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [stop](#stop)
 
 ## state
 
@@ -646,8 +321,6 @@ Gets player state.
 **Type:** media.AVPlayerState
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 

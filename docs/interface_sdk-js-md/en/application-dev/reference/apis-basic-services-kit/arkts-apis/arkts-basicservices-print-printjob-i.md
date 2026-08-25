@@ -4,77 +4,67 @@ Defines a print job.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## colorMode
 
 ```TypeScript
-colorMode: int
+colorMode: number
 ```
 
 Color mode.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## copyNumber
 
 ```TypeScript
-copyNumber: int
+copyNumber: number
 ```
 
 Copy of the file list.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## duplexMode
 
 ```TypeScript
-duplexMode: int
+duplexMode: number
 ```
 
 Simplex or duplex mode.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## fdList
 
 ```TypeScript
-fdList: Array<int>
+fdList: Array<number>
 ```
 
 FD list of files to print.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -90,8 +80,6 @@ Whether pages are printed in landscape mode. The value **true** indicates that p
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## isSequential
@@ -105,8 +93,6 @@ Whether the printing is sequential. The value **true** means that the printing i
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -122,8 +108,6 @@ ID of the print job.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## jobState
@@ -137,8 +121,6 @@ State of the print job.
 **Type:** [PrintJobState](arkts-basicservices-print-printjobstate-e.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -154,8 +136,6 @@ Substate of the print job.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## margin
@@ -169,8 +149,6 @@ Current page margin.
 **Type:** [PrintMargin](arkts-basicservices-print-printmargin-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -186,8 +164,6 @@ Printer options. The value is a JSON object string.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## pageRange
@@ -201,8 +177,6 @@ Print range.
 **Type:** [PrinterRange](arkts-basicservices-print-printerrange-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -218,8 +192,6 @@ Selected page size.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## preview
@@ -233,8 +205,6 @@ Preview settings.
 **Type:** [PreviewAttribute](arkts-basicservices-print-previewattribute-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -250,8 +220,6 @@ ID of the printer used for printing.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## vendorOptions
@@ -265,8 +233,6 @@ Vendor-specific job options in JSON format.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,8 @@
 # RenderingPipelineType
 
-渲染管线类型枚举。@enum { int }
+渲染管线类型枚举。@enum { number }
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ FORWARD_LIGHTWEIGHT = 0
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## FORWARD
@@ -31,7 +27,5 @@ FORWARD = 1
 高质量前向渲染管线，用于复杂的视觉效果（例如光晕）。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

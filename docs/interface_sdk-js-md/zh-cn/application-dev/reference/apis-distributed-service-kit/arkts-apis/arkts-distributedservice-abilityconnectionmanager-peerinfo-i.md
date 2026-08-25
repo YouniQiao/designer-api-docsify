@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## abilityName
@@ -20,13 +18,11 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 abilityName: string
 ```
 
-对端应用的组件名。
+对端应用的组件名，用于标识要连接的UIAbility组件。需与对端应用的abilityName保持一致。
 
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,13 +34,11 @@ abilityName: string
 bundleName: string
 ```
 
-对端应用的包名。
+对端应用的包名，用于唯一标识要连接的应用。需与对端应用的bundleName保持一致。
 
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,13 +50,11 @@ bundleName: string
 deviceId: string
 ```
 
-对端设备ID。
+对端设备的网络ID，用于标识要连接的远程设备。 可通过分布式设备管理接口getAvailableDeviceListSync获取。
 
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,13 +66,11 @@ deviceId: string
 moduleName: string
 ```
 
-对端应用的模块名。
+对端应用的模块名，用于标识要连接的应用模块。通常为'entry'或其他自定义模块名。
 
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,13 +82,11 @@ moduleName: string
 serviceName?: string
 ```
 
-应用设置的服务名称。
+应用设置的服务名称。若设置此值，需与createAbilityConnectionSession接口的serviceName参数保持一致。 不设置此值时，使用默认服务名称。
 
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

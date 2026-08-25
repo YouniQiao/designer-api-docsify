@@ -4,8 +4,6 @@ Sets the scrolling policy of the marquee after its attributes are updated.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Restarts the marquee from the start position after the attributes of the marquee component are updated.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ PRESERVE_POSITION = 1
 Resumes the marquee from the current position after the attributes of the marquee component are updated.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

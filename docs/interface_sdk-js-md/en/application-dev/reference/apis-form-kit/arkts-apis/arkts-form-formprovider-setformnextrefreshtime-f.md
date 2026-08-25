@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## setFormNextRefreshTime
 
 ```TypeScript
-function setFormNextRefreshTime(formId: string, minute: int, callback: AsyncCallback<void>): void
+function setFormNextRefreshTime(formId: string, minute: number, callback: AsyncCallback<void>): void
 ```
 
 Sets the next refresh time for a widget. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -27,7 +25,7 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | formId | string | Yes |
-| minute | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| minute | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -43,54 +41,16 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 | [16501002](../errorcode-form.md#16501002-too-many-widgets) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
 
-**Examples**
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formProvider.setFormNextRefreshTime(formId, 5, (error: BusinessError) => {
-    if (error) {
-      console.error(`callback error, code: ${error.code}, message: ${error.message})`);
-      return;
-    }
-    console.info(`formProvider setFormNextRefreshTime success`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formProvider.setFormNextRefreshTime(formId, 5).then(() => {
-    console.info(`formProvider setFormNextRefreshTime success`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
 
 ## setFormNextRefreshTime
 
 ```TypeScript
-function setFormNextRefreshTime(formId: string, minute: int): Promise<void>
+function setFormNextRefreshTime(formId: string, minute: number): Promise<void>
 ```
 
 Sets the next refresh time for a widget. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -101,7 +61,7 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | formId | string | Yes |
-| minute | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| minute | number | Yes |
 
 **Return value:**
 
@@ -121,7 +81,3 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 | [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
 | [16501002](../errorcode-form.md#16501002-too-many-widgets) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
-
-**Examples**
-
-See [setFormNextRefreshTime](#setformnextrefreshtime)

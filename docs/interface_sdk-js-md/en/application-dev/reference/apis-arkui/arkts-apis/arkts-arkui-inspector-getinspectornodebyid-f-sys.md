@@ -15,11 +15,9 @@ Get inspector node info by node id.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** getInspectorByKey
+**Substitutes:** [getInspectorByKey](arkts-arkui-global-getinspectorbykey-f.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

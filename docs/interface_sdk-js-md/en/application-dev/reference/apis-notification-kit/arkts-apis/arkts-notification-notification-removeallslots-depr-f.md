@@ -15,8 +15,6 @@ Removes all notification slots. This API uses an asynchronous callback to return
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md)
@@ -29,31 +27,6 @@ Removes all notification slots. This API uses an asynchronous callback to return
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let removeAllCallBack = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("removeAllSlots failed " + JSON.stringify(err));
-  } else {
-    console.info("removeAllSlots success");
-  }
-}
-Notification.removeAllSlots(removeAllCallBack);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.removeAllSlots().then(() => {
-  console.info("removeAllSlots success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`removeAllSlots failed, code is ${err}`);
-});
-```
-
 
 ## removeAllSlots
 
@@ -64,8 +37,6 @@ function removeAllSlots(): Promise<void>
 Removes all notification slots. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -78,7 +49,3 @@ Removes all notification slots. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [removeAllSlots](#removeallslots)

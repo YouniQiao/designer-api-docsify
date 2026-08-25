@@ -4,14 +4,12 @@ Describes the pre-downloaded download information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## network
@@ -25,8 +23,6 @@ Pre-downloaded network information.
 **Type:** NetworkInfo
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,8 +38,6 @@ Pre-downloaded performance information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## resource
@@ -57,7 +51,5 @@ Pre-downloaded resource information.
 **Type:** [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent

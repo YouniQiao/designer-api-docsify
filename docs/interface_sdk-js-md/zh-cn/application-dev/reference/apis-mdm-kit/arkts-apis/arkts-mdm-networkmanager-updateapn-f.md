@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## updateApn
@@ -15,8 +15,6 @@ function updateApn(admin: Want, apnInfo: Record<string, string>, apnId: string):
 更新APN。适用于企业移动网络配置管理场景，例如修改APN配置参数、调整运营商设置、优化移动网络连接性能，帮助企业灵活调整移动网络配置，确保设备移动网络连接参数符合实际需求。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APN
 
@@ -39,30 +37,3 @@ function updateApn(admin: Want, apnInfo: Record<string, string>, apnId: string):
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { networkManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let apnInfo: Record<string, string> = {
-  // 需根据实际情况进行替换
-  "apnName": "CTNET",
-  "apn": "CTNET",
-  "mnc": "11",
-  "mcc": "460"
-};
-let apnId: string = "1"; // 需根据实际情况进行替换
-try {
-  networkManager.updateApn(wantTemp, apnInfo, apnId);
-  console.info(`Succeeded in updating apn.`);
-} catch (err) {
-  console.error(`Failed to update apn. Code: ${err.code}, message: ${err.message}`);
-}
-```

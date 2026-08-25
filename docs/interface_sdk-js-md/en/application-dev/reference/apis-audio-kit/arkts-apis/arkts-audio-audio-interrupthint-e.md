@@ -4,8 +4,6 @@ Enumerates the hints provided along with audio interruption.The hint is obtained
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## INTERRUPT_HINT_NONE
@@ -17,8 +15,6 @@ INTERRUPT_HINT_NONE = 0
 None.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ A hint is displayed, indicating that the audio stream is restored. The applicati
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -49,8 +43,6 @@ INTERRUPT_HINT_PAUSE = 2
 A hint is displayed, indicating that the audio stream is paused and the audio focus is lost temporarily.When the audio focus is available, the **INTERRUPT_HINT_RESUME** event is received.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ A hint is displayed, indicating that the audio stream stops and the audio focus 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -81,8 +71,6 @@ INTERRUPT_HINT_DUCK = 4
 A hint is displayed, indicating that audio ducking starts and the audio is played at a lower volume.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +86,6 @@ A hint is displayed, indicating that audio ducking ends and the audio is played 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
@@ -114,8 +100,6 @@ A hint is displayed, indicating that the audio is muted.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
 ## INTERRUPT_HINT_UNMUTE
@@ -127,7 +111,5 @@ INTERRUPT_HINT_UNMUTE = 7
 A hint is displayed, indicating that the audio is unmuted.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer

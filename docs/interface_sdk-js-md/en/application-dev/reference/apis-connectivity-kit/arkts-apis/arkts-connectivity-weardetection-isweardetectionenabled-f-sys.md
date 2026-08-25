@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wearDetection } from '@kit.ConnectivityKit';
+import { wearDetection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isWearDetectionEnabled
@@ -15,8 +15,6 @@ function isWearDetectionEnabled(deviceId: string, callback: AsyncCallback<boolea
 Check whether the wearing detection is enabled.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -43,28 +41,6 @@ Check whether the wearing detection is enabled.
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-try {
-    wearDetection.isWearDetectionEnabled('XX:XX:XX:XX:XX:XX', (err, enabled) => {
-        console.info('device enable wear detection ' + enabled);
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
-
-```TypeScript
-try {
-    wearDetection.isWearDetectionEnabled('XX:XX:XX:XX:XX:XX').then((enabled) => {
-        console.info('device enable wear detection ' + enabled);
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
-
 
 ## isWearDetectionEnabled
 
@@ -75,8 +51,6 @@ function isWearDetectionEnabled(deviceId: string): Promise<boolean>
 Check whether the wearing detection is enabled.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -107,7 +81,3 @@ Check whether the wearing detection is enabled.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-See [isWearDetectionEnabled](#isweardetectionenabled)

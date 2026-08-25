@@ -4,8 +4,6 @@ Represents the transparently transmitted data, which contains information requir
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the transparently transmitted data, which contains information requir
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## eventId
@@ -27,8 +25,6 @@ Event ID. The value **cloud_data_change** indicates cloud data changes.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -46,23 +42,6 @@ Data to be transmitted transparently. **extraData** is a JSON string that must c
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-// accountId: ID of the cloud account.
-// bundleName: application bundle name.
-// containerName: name of the cloud database.
-// databaseScopes: type of the cloud database.
-// recordTypes: names of the tables in the cloud database.
-
-let extraData: cloudData.ExtraData = {
-  eventId: "cloud_data_change",
-  extraData: '{"data": "{"accountId": "aaa", "bundleName": "com.bbb.xxx", "containerName": "alias", "databaseScopes": ["private", "shared"], "recordTypes": ["xxx", "yyy", "zzz"]}"}',
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## anonAttestKeyItem
@@ -19,8 +19,6 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: Asy
 <!--RP1--><!--RP1End-->
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -51,192 +49,6 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: Asy
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) |
 
-**示例**
-
-```TypeScript
-/* 以获取RSA匿名化密钥证书为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  let tmpUint8Array = new Uint8Array(arr);
-  return tmpUint8Array;
-}
-
-let securityLevel = stringToUint8Array('sec_level');
-let challenge = stringToUint8Array('challenge_data');
-let versionInfo = stringToUint8Array('version_info');
-let keyAliasString = "key anon attest";
-
-async function generateKeyThenAttestKey(): Promise<void> {
-  let aliasString = keyAliasString;
-  let aliasUint8 = stringToUint8Array(aliasString);
-  /* 1. 配置密钥生成参数 */
-  let generateProperties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-      value: huks.HuksKeyAlg.HUKS_ALG_RSA
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-      value: huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-      value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_DIGEST,
-      value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PADDING,
-      value: huks.HuksKeyPadding.HUKS_PADDING_PSS
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_GENERATE_TYPE,
-      value: huks.HuksKeyGenerateType.HUKS_KEY_GENERATE_TYPE_DEFAULT
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
-      value: huks.HuksCipherMode.HUKS_MODE_ECB
-    }
-  ];
-  let generateOptions: huks.HuksOptions = {
-    properties: generateProperties
-  };
-  /* 2. 配置匿名证明参数 */
-  let anonAttestProperties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO,
-      value: securityLevel
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE,
-      value: challenge
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_VERSION_INFO,
-      value: versionInfo
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_ALIAS,
-      value: aliasUint8
-    }
-  ];
-  let anonAttestOptions: huks.HuksOptions = {
-    properties: anonAttestProperties
-  };
-  /* 3. 生成密钥并获取匿名密钥证明 */
-  huks.generateKeyItem(aliasString, generateOptions, (error) => {
-    if (error) {
-      console.error(`callback: generateKeyItem failed`);
-    } else {
-      console.info(`callback: generateKeyItem success`);
-      huks.anonAttestKeyItem(aliasString, anonAttestOptions, (error) => {
-        if (error) {
-          console.error(`callback: anonAttestKeyItem failed`);
-        } else {
-          console.info(`callback: anonAttestKeyItem success`);
-        }
-      });
-    }
-  });
-}
-```
-
-```TypeScript
-/* 以获取RSA匿名化密钥证书为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  let tmpUint8Array = new Uint8Array(arr);
-  return tmpUint8Array;
-}
-
-let securityLevel = stringToUint8Array('sec_level');
-let challenge = stringToUint8Array('challenge_data');
-let versionInfo = stringToUint8Array('version_info');
-let keyAliasString = "key anon attest";
-
-/* 1. 生成密钥 */
-async function generateKey(alias: string): Promise<void> {
-  let properties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-      value: huks.HuksKeyAlg.HUKS_ALG_RSA
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-      value: huks.HuksKeySize.HUKS_RSA_KEY_SIZE_2048
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-      value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_DIGEST,
-      value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PADDING,
-      value: huks.HuksKeyPadding.HUKS_PADDING_PSS
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_GENERATE_TYPE,
-      value: huks.HuksKeyGenerateType.HUKS_KEY_GENERATE_TYPE_DEFAULT
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
-      value: huks.HuksCipherMode.HUKS_MODE_ECB
-    }
-  ];
-  let options: huks.HuksOptions = {
-    properties: properties
-  };
-
-  await huks.generateKeyItem(alias, options);
-}
-
-/* 2. 获取匿名化密钥证书 */
-async function anonAttestKey(): Promise<void> {
-  let aliasString = keyAliasString;
-  let aliasUint8 = stringToUint8Array(aliasString);
-
-  let properties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO,
-      value: securityLevel
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE,
-      value: challenge
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_VERSION_INFO,
-      value: versionInfo
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_ALIAS,
-      value: aliasUint8
-    }
-  ];
-  let options: huks.HuksOptions = {
-    properties: properties
-  };
-
-  await generateKey(aliasString);
-  await huks.anonAttestKeyItem(aliasString, options);
-}
-```
-
 
 ## anonAttestKeyItem
 
@@ -251,8 +63,6 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<Huks
 <!--RP1--><!--RP1End-->
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -289,7 +99,3 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<Huks
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) |
-
-**示例**
-
-参见 [anonAttestKeyItem](#anonattestkeyitem)

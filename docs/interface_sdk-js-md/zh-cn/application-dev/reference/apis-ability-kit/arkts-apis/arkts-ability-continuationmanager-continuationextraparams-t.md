@@ -8,8 +8,6 @@ export type ContinuationExtraParams = _ContinuationExtraParams
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 22
 
 **替代接口：** [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)

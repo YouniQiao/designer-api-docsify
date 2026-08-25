@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createHdrBrightnessBlender
@@ -15,8 +15,6 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness effect to a component.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -39,26 +37,3 @@ Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness ef
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { uiEffect } from "@kit.ArkGraphics2D"
-
-let blender : uiEffect.HdrBrightnessBlender =
-  uiEffect.createHdrBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
-    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
-
-@Entry
-@Component
-struct example {
-  build() {
-    RelativeContainer() {
-      Image($r("app.media.screenshot"))
-        .width("100%")
-        .height("100%")
-        .advancedBlendMode(blender)
-    }
-  }
-}
-```

@@ -4,8 +4,6 @@ Enumerates the key algorithms.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Security.Huks.Core
 
 ## HUKS_ALG_RSA
@@ -17,8 +15,6 @@ HUKS_ALG_RSA = 1
 RSA.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,8 +32,6 @@ ECC.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -53,8 +47,6 @@ HUKS_ALG_DSA = 3
 DSA<!--RP5--><!--RP5End-->.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -72,8 +64,6 @@ AES.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -87,8 +77,6 @@ HUKS_ALG_HMAC = 50
 HMAC.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,8 +94,6 @@ HKDF.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -123,8 +109,6 @@ HUKS_ALG_PBKDF2 = 52
 PBKDF2.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -142,8 +126,6 @@ ECDH.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -159,8 +141,6 @@ HUKS_ALG_X25519 = 101
 X25519.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -178,8 +158,6 @@ Ed25519.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -195,8 +173,6 @@ HUKS_ALG_DH = 103
 DH.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -214,8 +190,6 @@ SM2.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -231,8 +205,6 @@ HUKS_ALG_SM3 = 151
 SM3
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -250,8 +222,6 @@ SM4.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -268,8 +238,6 @@ DES (supported for <!--RP4-->lightweight devices<!--RP4End--> since API version 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -283,8 +251,6 @@ HUKS_ALG_3DES = 161
 3DES (supported for <!--RP4-->lightweight devices<!--RP4End--> since API version 12; supported for <!--RP5--> standard devices<!--RP5End--> since API version 18).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -300,8 +266,6 @@ CMAC (supported for <!--RP4-->lightweight devices<!--RP4End--> since API version
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -316,8 +280,6 @@ ML-KEM.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -331,8 +293,6 @@ HUKS_ALG_ML_DSA = 201
 ML-DSA.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

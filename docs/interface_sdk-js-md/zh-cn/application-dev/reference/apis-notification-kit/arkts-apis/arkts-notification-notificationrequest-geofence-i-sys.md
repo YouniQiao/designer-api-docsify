@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -22,8 +20,6 @@ coordinateSystemType:CoordinateSystemType
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -31,16 +27,14 @@ coordinateSystemType:CoordinateSystemType
 ## delayTime
 
 ```TypeScript
-delayTime?:int
+delayTime?:number
 ```
 
 围栏延迟时间，单位：秒，进入围栏后触发围栏的延迟时间，取值范围：[0, 300]。默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -49,16 +43,14 @@ delayTime?:int
 ## latitude
 
 ```TypeScript
-latitude:double
+latitude:number
 ```
 
 地理围栏中心点纬度，取值范围：[-90, 90]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -67,16 +59,14 @@ latitude:double
 ## longitude
 
 ```TypeScript
-longitude:double
+longitude:number
 ```
 
 地理围栏中心点经度，取值范围：[-180, 180]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -94,8 +84,6 @@ monitorEvent:MonitorEvent
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -103,16 +91,14 @@ monitorEvent:MonitorEvent
 ## radius
 
 ```TypeScript
-radius:double
+radius:number
 ```
 
 围栏半径，单位：米，取值范围：[200, 2000]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 

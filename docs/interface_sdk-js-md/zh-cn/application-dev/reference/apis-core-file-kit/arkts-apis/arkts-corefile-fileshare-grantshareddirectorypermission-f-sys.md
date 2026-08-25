@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## grantSharedDirectoryPermission
@@ -15,8 +15,6 @@ function grantSharedDirectoryPermission(): Promise<void>
 授予应用捐献目录的临时访问权限。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_SHARED_FILE
 
@@ -40,41 +38,3 @@ function grantSharedDirectoryPermission(): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 13900001 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function grantSharedDirectoryPermission() {
-  try {
-    fileShare.grantSharedDirectoryPermission().then(() => {
-      console.info('grantSharedDirectoryPermission success');
-    }).catch((err: BusinessError) => {
-      console.error(`grantSharedDirectoryPermission err: ${JSON.stringify(err)}`);
-    });
-  } catch (error) {
-    console.error(`grantSharedDirectoryPermission error, Code: ${error.code}, message: ${error.message}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function grantSharedDirectoryPermission() {
-  try {
-    await fileShare.grantSharedDirectoryPermission();
-    console.info("grantSharedDirectoryPermission success.");
-  }
-  catch (error) {
-    console.error('grantSharedDirectoryPermission error, Code: ' + error.code + ', message: ' + error.message);
-  }
-}
-```

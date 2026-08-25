@@ -4,8 +4,6 @@ ApiVersion: the bundle Api version class.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -13,16 +11,14 @@ ApiVersion: the bundle Api version class.
 ## compatible
 
 ```TypeScript
-readonly compatible: int
+readonly compatible: number
 ```
 
 Minimum API version.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -40,8 +36,6 @@ Name of the API version.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -49,16 +43,14 @@ Name of the API version.
 ## target
 
 ```TypeScript
-readonly target: int
+readonly target: number
 ```
 
 Target API version.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

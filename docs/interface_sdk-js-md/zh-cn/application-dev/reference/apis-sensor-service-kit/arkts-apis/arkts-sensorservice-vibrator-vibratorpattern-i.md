@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## events
@@ -26,22 +24,18 @@ events: Array<VibratorEvent>
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## time
 
 ```TypeScript
-time: int
+time: number
 ```
 
 振动绝对起始时间。单位：ms（毫秒）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

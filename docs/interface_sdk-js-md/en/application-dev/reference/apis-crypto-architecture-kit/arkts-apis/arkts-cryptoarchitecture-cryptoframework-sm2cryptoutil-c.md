@@ -4,14 +4,12 @@ Provides APIs for SM2 cryptographic operations.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## genCipherTextBySpec
@@ -23,8 +21,6 @@ static genCipherTextBySpec(spec: SM2CipherTextSpec, mode?: string): DataBlob
 Generates SM2 ciphertext in ASN.1 format.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,7 +37,7 @@ Generates SM2 ciphertext in ASN.1 format.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) |
 
 **Error codes:**
 
@@ -50,28 +46,6 @@ Generates SM2 ciphertext in ASN.1 format.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let spec: cryptoFramework.SM2CipherTextSpec = {
-    xCoordinate: BigInt('20625015362595980457695435345498579729138244358573902431560627260141789922999'),
-    yCoordinate: BigInt('48563164792857017065725892921053777369510340820930241057309844352421738767712'),
-    cipherTextData: new Uint8Array([100, 227, 78, 195, 249, 179, 43, 70, 242, 69, 169, 10, 65, 123]),
-    hashData: new Uint8Array([87, 167, 167, 247, 88, 146, 203, 234, 83, 126, 117, 129, 52, 142, 82, 54, 152, 226, 201,
-      111, 143, 115, 169, 125, 128, 42, 157, 31, 114, 198, 109, 244]),
-  }
-  let data = cryptoFramework.SM2CryptoUtil.genCipherTextBySpec(spec, 'C1C3C2');
-  console.info('genCipherTextBySpec result: success.');
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`genCipherTextBySpec failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```
 
 ## getCipherTextSpec
 
@@ -83,8 +57,6 @@ Obtains SM2 ciphertext parameters from the SM2 ciphertext in ASN.1 format.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
@@ -93,7 +65,7 @@ Obtains SM2 ciphertext parameters from the SM2 ciphertext in ASN.1 format.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| cipherText | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
+| cipherText | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes |
 | mode | string | No |
 
 **Return value:**

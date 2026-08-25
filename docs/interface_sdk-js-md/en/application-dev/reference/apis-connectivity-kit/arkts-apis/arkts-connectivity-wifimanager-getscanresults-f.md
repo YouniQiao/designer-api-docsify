@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getScanResults
@@ -15,8 +15,6 @@ function getScanResults(): Promise<Array<WifiScanInfo>>
 Obtain the scanned sta list.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -40,51 +38,6 @@ Obtain the scanned sta list.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  
-  wifiManager.getScanResults((err, result) => {
-      if (err) {
-          console.error("get scan info error");
-          return;
-      }
-  
-      let len = result.length;
-      console.info("wifi received scan info: " + len);
-      for (let i = 0; i < len; ++i) {
-          console.info("ssid: " + result[i].ssid);
-          console.info("bssid: " + result[i].bssid);
-          console.info("capabilities: " + result[i].capabilities);
-          console.info("securityType: " + result[i].securityType);
-          console.info("rssi: " + result[i].rssi);
-          console.info("band: " + result[i].band);
-          console.info("frequency: " + result[i].frequency);
-          console.info("channelWidth: " + result[i].channelWidth);
-          console.info("timestamp: " + result[i].timestamp);
-      }
-  });
-  
-  wifiManager.getScanResults().then(result => {
-      let len = result.length;
-      console.info("wifi received scan info: " + len);
-      for (let i = 0; i < len; ++i) {
-          console.info("ssid: " + result[i].ssid);
-          console.info("bssid: " + result[i].bssid);
-          console.info("capabilities: " + result[i].capabilities);
-          console.info("securityType: " + result[i].securityType);
-          console.info("rssi: " + result[i].rssi);
-          console.info("band: " + result[i].band);
-          console.info("frequency: " + result[i].frequency);
-          console.info("channelWidth: " + result[i].channelWidth);
-          console.info("timestamp: " + result[i].timestamp);
-      }
-  }).catch((err:number) => {
-      console.error("failed:" + JSON.stringify(err));
-  });
-```
-
 
 ## getScanResults
 
@@ -95,8 +48,6 @@ function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void
 Obtain the scanned sta list.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -119,7 +70,3 @@ Obtain the scanned sta list.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
-
-**Examples**
-
-See [getScanResults](#getscanresults)

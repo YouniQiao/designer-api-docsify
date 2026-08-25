@@ -4,8 +4,6 @@ Defines arguments for an event query.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines arguments for an event query.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## beginTime
 
 ```TypeScript
-beginTime: long
+beginTime: number
 ```
 
 Start time of the system event to be queried. The value is a 13-digit timestamp, indicating the number of milliseconds elapsed since 00:00:00:00 on January 1, 1970.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -37,16 +33,14 @@ Start time of the system event to be queried. The value is a 13-digit timestamp,
 ## endTime
 
 ```TypeScript
-endTime: long
+endTime: number
 ```
 
 End time of the system event to be queried. The value is a 13-digit timestamp, indicating the number of milliseconds elapsed since 00:00:00:00 on January 1, 1970.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -55,7 +49,7 @@ End time of the system event to be queried. The value is a 13-digit timestamp, i
 ## fromSeq
 
 ```TypeScript
-fromSeq?: long
+fromSeq?: number
 ```
 
 Start SN of the events to be queried. The default value is **-1**
@@ -64,8 +58,6 @@ Start SN of the events to be queried. The default value is **-1**
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Start SN of the events to be queried. The default value is **-1**
 ## maxEvents
 
 ```TypeScript
-maxEvents: long
+maxEvents: number
 ```
 
 Maximum number of events that can be queried.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -91,7 +81,7 @@ Maximum number of events that can be queried.
 ## toSeq
 
 ```TypeScript
-toSeq?: long
+toSeq?: number
 ```
 
 End SN of the system events to be queried. The default value is **-1**.
@@ -99,8 +89,6 @@ End SN of the system events to be queried. The default value is **-1**.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 

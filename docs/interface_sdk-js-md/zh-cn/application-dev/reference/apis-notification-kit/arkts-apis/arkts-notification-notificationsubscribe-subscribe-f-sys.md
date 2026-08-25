@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
 ```
 
 ## subscribe
@@ -15,8 +15,6 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 订阅当前用户下所有应用的通知。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -46,137 +44,6 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// subscribe回调
-let subscribeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('subscribe success');
-  }
-}
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-// 不会对bundleNames进行校验，开发者自己确定需要订阅哪些bundleName
-let info: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ['bundleName1','bundleName2']
-};
-notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-//subscribe回调
-let subscribeCallback = (err: BusinessError | null) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('subscribe success');
-  }
-}
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-//不会对bundleNames进行校验，开发者自己确定需要订阅哪些bundleName
-let info: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ['bundleName1','bundleName2']
-};
-notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subscribeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('subscribe success');
-  }
-}
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-notificationSubscribe.subscribe(subscriber, subscribeCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subscribeCallback = (err: BusinessError | null) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('subscribe success');
-  }
-}
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-notificationSubscribe.subscribe(subscriber, subscribeCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-notificationSubscribe.subscribe(subscriber).then(() => {
-  console.info('subscribe success');
-}).catch((err: BusinessError) => {
-  console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-notificationSubscribe.subscribe(subscriber).then(() => {
-  console.info('subscribe success');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`subscribe failed, code is ${error.code}, message is ${error.message}`);
-});
-```
 
 
 ## subscribe
@@ -193,8 +60,6 @@ function subscribe(
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 26.0.0
 
 **替代接口：** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md)
@@ -210,7 +75,7 @@ function subscribe(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | 是 |
-| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | 是 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -225,10 +90,6 @@ function subscribe(
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 
-**示例**
-
-参见 [subscribe](#subscribe)
-
 
 ## subscribe
 
@@ -239,8 +100,6 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 订阅通知并指定订阅信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -257,7 +116,7 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | 是 |
-| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | 否 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | 否 |
 
 **返回值：**
 
@@ -276,7 +135,3 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-参见 [subscribe](#subscribe)

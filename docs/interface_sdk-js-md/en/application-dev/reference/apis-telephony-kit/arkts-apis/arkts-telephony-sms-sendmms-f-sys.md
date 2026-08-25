@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendMms
@@ -15,8 +15,6 @@ function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback
 Sends an MMS message. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
@@ -44,154 +42,6 @@ Sends an MMS message. This API uses an asynchronous callback to return the resul
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-FA model:
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common, featureAbility } from '@kit.AbilityKit';
-
-// Obtain the context.
-let context: common.BaseContext = featureAbility.getContext();
-
-// Configure the path for storing PDUs of MMS messages. Such PDUs are sent from the encoding API.
-const sandBoxPath: string = '/data/storage/el2/base/files/';
-let filePath: string  = sandBoxPath + 'SendReq.mms';
-
-// Options for sending MMS messages (The MMSC is for reference only.)
-let mmsPars: sms.MmsParams = {
-  slotId : 0,
-  mmsc: 'http://mmsc.myuni.com.cn',
-  data: filePath,
-  mmsConfig: {
-   userAgent:'ua',
-   userAgentProfile: 'uaprof'
-  }
-};
-
-// Call the sendMms API.
-sms.sendMms(context, mmsPars, async(err: BusinessError) =>{
-  if (err) {
-      console.error(`sendMms fail, err : ${JSON.stringify(err)}`);
-      return;
-  }
-  console.info(`sendMms Success`);
-})
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-// Configure the path for storing PDUs of MMS messages. Such PDUs are sent from the encoding API.
-const sandBoxPath = '/data/storage/el2/base/files/';
-let filePath  = sandBoxPath + 'SendReq.mms';
-
-// Configure the MMS user agent and profile. The default values are ua and uaprof, respectively. The configuration is subject to the carrier's requirements. 
-let mmsConf: sms.MmsConfig = {
-  userAgent:'ua',
-  userAgentProfile: 'uaprof'
-};
-
-// Options for sending MMS messages (The MMSC is for reference only.)
-let mmsPars: sms.MmsParams = {
-  slotId : 0,
-  mmsc: 'http://mmsc.myuni.com.cn',
-  data: filePath,
-  mmsConfig: mmsConf
-};
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-    sms.sendMms(this.context, mmsPars, async(err: BusinessError) =>{
-        if (err) {
-            console.error(`sendMms fail, err : ${JSON.stringify(err)}`);
-            return;
-        }
-        console.info(`sendMms Success`);
-        })
-    }
-}
-```
-
-FA model:
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common, featureAbility } from '@kit.AbilityKit';
-
-// Obtain the context.
-let context: common.BaseContext = featureAbility.getContext();
-
-// Configure the path for storing PDUs of MMS messages. Such PDUs are sent from the encoding API.
-const sandBoxPath: string = '/data/storage/el2/base/files/';
-let filePath: string = sandBoxPath + 'SendReq.mms';
-
-// Options for sending MMS messages (The MMSC is for reference only.)
-let mmsPars: sms.MmsParams = {
-  slotId: 0,
-  mmsc: 'http://mmsc.myuni.com.cn',
-  data: filePath,
-  mmsConfig: {
-   userAgent:'ua',
-   userAgentProfile: 'uaprof'
-  }
-};
-
-// Call the sendMms API.
-let promise = sms.sendMms(context, mmsPars);
-promise.then(() => {
-    console.info(`sendMms success`);
-}).catch((err: BusinessError) => {
-    console.error(`sendMms failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-// Configure the path for storing PDUs of MMS messages. Such PDUs are sent from the encoding API.
-const sandBoxPath = '/data/storage/el2/base/files/';
-let filePath  = sandBoxPath + 'SendReq.mms';
-
-// Configure the MMS user agent and profile. The default values are ua and uaprof, respectively. The configuration is subject to the carrier's requirements. 
-let mmsConf: sms.MmsConfig = {
-  userAgent:'ua',
-  userAgentProfile: 'uaprof'
-};
-
-// Options for sending MMS messages (The MMSC is for reference only.)
-let mmsPars: sms.MmsParams = {
-  slotId : 0,
-  mmsc: 'http://mmsc.myuni.com.cn',
-  data: filePath,
-  mmsConfig: mmsConf
-};
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-    let promise = sms.sendMms(this.context, mmsPars);
-    promise.then(() => {
-        console.info(`sendMms success`);
-    }).catch((err: BusinessError) => {
-        console.error(`sendMms failed, promise: err->${JSON.stringify(err)}`);
-    });
-    }
-}
-```
-
 
 ## sendMms
 
@@ -202,8 +52,6 @@ function sendMms(context: Context, mmsParams: MmsParams): Promise<void>
 Sends an MMS message. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
@@ -235,7 +83,3 @@ Sends an MMS message. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [sendMms](#sendmms)

@@ -6,8 +6,6 @@ Manager a2dp source profile.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [A2dpSourceProfile](arkts-connectivity-bluetoothmanager-a2dpsourceprofile-i.md)
@@ -17,7 +15,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -29,8 +27,6 @@ connect(device: string): boolean
 Connect to device with a2dp.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -52,24 +48,6 @@ Connect to device with a2dp.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
-let ret : boolean = a2dpSrc.connect('XX:XX:XX:XX:XX:XX');
-```
-
-```TypeScript
-let hfpAg : bluetooth.HandsFreeAudioGatewayProfile= bluetooth.getProfile(bluetooth.ProfileId
-    .PROFILE_HANDS_FREE_AUDIO_GATEWAY);
-let ret : boolean = hfpAg.connect('XX:XX:XX:XX:XX:XX');
-```
-
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-let ret : boolean = device.connect();
-```
-
 ## disconnect
 
 ```TypeScript
@@ -79,8 +57,6 @@ disconnect(device: string): boolean
 Disconnect to device with a2dp.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -102,24 +78,6 @@ Disconnect to device with a2dp.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
-let ret : boolean = a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
-```
-
-```TypeScript
-let hfpAg : bluetooth.HandsFreeAudioGatewayProfile = bluetooth.getProfile(bluetooth.ProfileId
-    .PROFILE_HANDS_FREE_AUDIO_GATEWAY);
-let ret : boolean = hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
-```
-
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-let ret : boolean = device.disconnect();
-```
-
 ## getPlayingState
 
 ```TypeScript
@@ -129,8 +87,6 @@ getPlayingState(device: string): PlayingState
 Obtains the playing state of device.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -150,13 +106,6 @@ Obtains the playing state of device.
 | --- |
 | [PlayingState](arkts-connectivity-a2dp-playingstate-e.md) |
 
-**Examples**
-
-```TypeScript
-let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
-let state : bluetooth.PlayingState = a2dpSrc.getPlayingState('XX:XX:XX:XX:XX:XX');
-```
-
 ## off('connectionStateChange')
 
 ```TypeScript
@@ -166,8 +115,6 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 Unsubscribe the event reported when the profile connection state changes .
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -191,8 +138,6 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 Subscribe the event reported when the profile connection state changes .
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

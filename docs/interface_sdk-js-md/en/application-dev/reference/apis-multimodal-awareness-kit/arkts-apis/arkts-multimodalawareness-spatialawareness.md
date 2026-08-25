@@ -4,8 +4,6 @@ This module provides the capability to subscribe to report the distance measurem
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -15,7 +13,7 @@ This module provides the capability to subscribe to report the distance measurem
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

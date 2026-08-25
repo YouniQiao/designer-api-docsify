@@ -15,8 +15,6 @@ function getFreeBytes(path: string, callback: AsyncCallback<number>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** getFreeBytes
@@ -30,32 +28,6 @@ function getFreeBytes(path: string, callback: AsyncCallback<number>): void
 | path | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let path = "/dev";
-statfs.getFreeBytes(path).then((number: number) => {
-  console.info("getFreeBytes promise successfully:" + number);
-}).catch((err: BusinessError) => {
-  console.error("getFreeBytes failed with error:" + JSON.stringify(err));
-});
-```
-
-```TypeScript
-import common from '@ohos.app.ability.common';
-import { BusinessError } from '@ohos.base';
-let context = getContext(this) as common.UIAbilityContext;
-let path = context.filesDir;
-statfs.getFreeBytes(path, (err: BusinessError, freeBytes:Number) => {
-    if (err) {
-        console.error('getFreeBytes callback failed');
-    } else {
-        console.info('getFreeBytes callback success' + freeBytes);
-    }
-});
-```
-
 
 ## getFreeBytes
 
@@ -66,8 +38,6 @@ function getFreeBytes(path: string): Promise<number>
 异步方法获取指定文件系统空闲字节数，以Promise形式返回结果。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -86,7 +56,3 @@ function getFreeBytes(path: string): Promise<number>
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-参见 [getFreeBytes](#getfreebytes)

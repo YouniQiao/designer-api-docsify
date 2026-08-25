@@ -4,8 +4,6 @@ Defines authentication information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -15,7 +13,7 @@ Defines authentication information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## authType
@@ -29,8 +27,6 @@ Authentication type.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -50,8 +46,6 @@ Extended field. Optional. The default value is **undefined**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -69,8 +63,6 @@ Authentication token.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 

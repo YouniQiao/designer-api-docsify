@@ -4,14 +4,12 @@ The uri module provides APIs for parsing URI strings that comply with the RFC398
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { uri } from '@kit.ArkTS';
+import { uri } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setDistributedEnabled
@@ -15,8 +15,6 @@ function setDistributedEnabled(enable: boolean, deviceType: string): Promise<voi
 Sets whether the device of a specified type enables cross-device notification. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,29 +41,3 @@ Sets whether the device of a specified type enables cross-device notification. T
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    try {
-      let isEnable: boolean = true;
-      let deviceType: string = "wearable";
-      notificationManager.setDistributedEnabled(isEnable, deviceType).then(() => {
-        console.info('setDistributedEnabled succeeded.');
-      }).catch((err: BusinessError) => {
-        console.error(`setDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      console.error(`setDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```

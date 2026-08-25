@@ -4,8 +4,6 @@ Friction animation model. You can build friction animation by friction force, in
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,8 +24,6 @@ constructor(friction: number, position: number, velocity: number)
 Constructor parameters
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 22
 

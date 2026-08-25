@@ -8,8 +8,6 @@ export type ErrorHandler = (errObject: Error) => void
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDomainFilterRule
@@ -15,8 +15,6 @@ function removeDomainFilterRule(admin: Want, domainFilterRule?: DomainFilterRule
 移除设备域名过滤规则。适用于企业网络安全策略调整场景，例如取消某些域名访问限制、调整域名过滤策略、清理过时或无效的规则、解决误拦截问题，帮助企业灵活调整域名访问策略，确保网络访问控制策略符合实际需求。API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。移除规则后如果不存在[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后，会将 [addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md)添加的默认DENY规则清空。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -39,41 +37,3 @@ function removeDomainFilterRule(admin: Want, domainFilterRule?: DomainFilterRule
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let domainFilterRule: networkManager.DomainFilterRule = {
-  // 需根据实际情况进行替换
-  "domainName": "www.example.com",
-  "appUid": "9696",
-  "action": networkManager.Action.DENY,
-  "family": 1,
-  "logType": networkManager.LogType.NFLOG
-};
-
-// 移除指定的规则
-try {
-  networkManager.removeDomainFilterRule(wantTemp, domainFilterRule);
-  console.info('Succeeded in removing domain filter rules');
-} catch (err) {
-  console.error(`Failed to remove domain filter rules. Code: ${err.code}, message: ${err.message}`);
-}
-
-// 清空IP协议版本为IPv4的所有规则
-try {
-  networkManager.removeDomainFilterRule(wantTemp);
-  console.info('Succeeded in removing all domain filter rules');
-} catch (err) {
-  console.error(`Failed to remove all domain filter rules. Code: ${err.code}, message: ${err.message}`);
-}
-```

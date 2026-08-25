@@ -9,14 +9,12 @@ appRecovery模块提供了应用在故障状态下的恢复能力。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { appRecovery } from '@kit.AbilityKit';
+import { appRecovery } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

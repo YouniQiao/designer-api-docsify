@@ -4,14 +4,12 @@ Base options shared by all dialog types.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
+import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from 'kits/@kit.ArkUI';
 ```
 
 ## onDidAppear
@@ -23,8 +21,6 @@ onDidAppear?: VoidCallback
 Callback function when the dialog appears.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,8 +38,6 @@ Callback function when the dialog disappears.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -60,8 +54,6 @@ Callback function before the dialog open animation starts.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -77,8 +69,6 @@ onWillDisappear?: VoidCallback
 Callback function before the dialog close animation starts.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +87,6 @@ Alignment of the dialog.
 **Type:** [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,8 +108,6 @@ Whether to allow dismissal by touching the mask or pressing the Back button.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -134,15 +120,13 @@ Whether to allow dismissal by touching the mask or pressing the Back button.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box. <br>Setting this parameter to BlurStyle.NONE disables the background blur.
+Background blur style of the dialog box. Setting this parameter to BlurStyle.NONE disables the background blur.
 
 **Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,11 +142,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Background blur style with options.
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,15 +158,13 @@ Background blur style with options.
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box. <br>When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
+Background color of the dialog box. When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,11 +180,9 @@ backgroundEffect?: BackgroundEffectOptions
 
 Background effect with options.
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,13 +198,11 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Border color of the dialog box.
 
-**Type:** ResourceColor \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Default:** Color.Black
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,13 +218,11 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 Border radius of the background.
 
-**Type:** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,13 +238,11 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Border style of the dialog box.
 
-**Type:** BorderStyle \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
 **Default:** BorderStyle.Solid
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -286,13 +258,11 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Border width of the dialog box.
 
-**Type:** Dimension \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,8 +282,6 @@ Dialog controller.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -328,11 +296,9 @@ dialogTransition?: TransitionEffect
 
 Dialog transition parameters for opening/closing the dialog content area.
 
-**Type:** TransitionEffect
+**Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -348,13 +314,11 @@ displayModeInSubWindow?: DialogDisplayMode
 
 Defines the dialog display mode when show in subwindow.
 
-**Type:** DialogDisplayMode
+**Type:** [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md)
 
 **Default:** DialogDisplayMode.SCREEN_BASED
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -376,8 +340,6 @@ Whether to enable the hover mode.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -398,8 +360,6 @@ Whether the dialog box can get focus.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -414,11 +374,9 @@ height?: Dimension
 
 Height of the dialog box.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -434,13 +392,11 @@ hoverModeArea?: HoverModeAreaType
 
 Display area of the dialog box in hover mode.
 
-**Type:** HoverModeAreaType
+**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -462,8 +418,6 @@ Overlay effect for the page-level dialog box.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -484,8 +438,6 @@ Whether the dialog box is a modal.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -503,8 +455,6 @@ Distance between the dialog and system keyboard.
 **Type:** LengthMetrics
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -526,8 +476,6 @@ Keyboard avoid mode.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -547,8 +495,6 @@ Display level of the dialog box.
 **Default:** LevelMode.OVERLAY
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -570,8 +516,6 @@ Display order of the dialog.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -584,13 +528,11 @@ Display order of the dialog.
 levelUniqueId?: number
 ```
 
-Unique ID of the node under the display level for the page-level dialog box. The value should be an integer. <br>This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
+Unique ID of the node under the display level for the page-level dialog box. The value should be an integer. This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
 
 **Type:** number
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -606,11 +548,9 @@ maskColor?: ResourceColor
 
 Mask color of the dialog.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -626,13 +566,11 @@ maskRect?: Rectangle
 
 Mask area of the dialog box. Events outside the mask area are transparently transmitted.
 
-**Type:** Rectangle
+**Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' }
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -648,11 +586,9 @@ maskTransition?: TransitionEffect
 
 Mask transition parameters for opening/closing the mask.
 
-**Type:** TransitionEffect
+**Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -672,8 +608,6 @@ Offset of the dialog relative to the alignment position.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -686,13 +620,11 @@ Offset of the dialog relative to the alignment position.
 onWillDismiss?: Callback<DialogDismissal>
 ```
 
-Callback for interactive closure of the dialog box. <br>If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button. The reason parameter in the callback is used to determine whether the dialog can be closed.
+Callback for interactive closure of the dialog box. If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button. The reason parameter in the callback is used to determine whether the dialog can be closed.
 
 **Type:** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -708,11 +640,9 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -726,15 +656,13 @@ Shadow of the dialog box.
 showInSubWindow?: boolean
 ```
 
-Whether to display in a subwindow. <br>isModal = true and showInSubWindow = true cannot be used at the same time.
+Whether to display in a subwindow. isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -750,11 +678,9 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** SystemUiMaterial
+**Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -770,11 +696,9 @@ width?: Dimension
 
 Width of the dialog box.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Provides the child component layout information.@interface LayoutInfo
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [Layoutable](arkts-arkui-layoutable-i.md)
@@ -25,11 +23,9 @@ constraint: ConstraintSizeOptions
 
 Constraint size of the child component.
 
-**Type:** ConstraintSizeOptions
+**Type:** [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,8 +46,6 @@ Position coordinates of the child component.
 **Type:** Position
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

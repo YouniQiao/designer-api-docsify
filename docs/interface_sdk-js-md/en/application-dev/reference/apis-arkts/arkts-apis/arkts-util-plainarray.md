@@ -17,8 +17,8 @@ PlainArray stores key-value (KV) pairs. Each key must be unique, be of the numbe
 ## Modules to Import
 
 ```TypeScript
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { PlainArray } from 'kits/@kit.ArkTS';
+import { PlainArrayForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -28,9 +28,3 @@ import { PlainArrayForEachCb } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [PlainArrayForEachCb](arkts-arkts-plainarrayforeachcb-t.md) |

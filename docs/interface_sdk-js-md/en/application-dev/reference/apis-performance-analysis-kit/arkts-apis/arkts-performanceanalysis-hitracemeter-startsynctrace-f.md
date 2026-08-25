@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## startSyncTrace
@@ -16,8 +16,6 @@ Starts a synchronous trace with the trace output level specified. For details, s
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
@@ -29,15 +27,3 @@ Starts a synchronous trace with the trace output level specified. For details, s
 | level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes |
 | name | string | Yes |
 | customArgs | string | No |
-
-**Examples**
-
-```TypeScript
-const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-// If the customArgs parameter is not required, do not pass in this parameter or pass in an empty string.
-hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc");
-hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc", "");
-// Use commas (,) to separate multiple key-value pairs.
-hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc", "key=value");
-hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc", "key1=value1,key2=value2");
-```

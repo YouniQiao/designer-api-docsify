@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getBadgeDisplayStatusByBundles
@@ -15,8 +15,6 @@ function getBadgeDisplayStatusByBundles(bundles: Array<BundleOption>) : Promise<
 Batch obtains the display statuses of application badges. This API uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,25 +44,3 @@ Batch obtains the display statuses of application badges. This API uses a promis
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundles: Array<notificationManager.BundleOption> = [
-    {
-        bundle: 'bundleName',
-    },
-    {
-        bundle: 'bundleName1',
-    }
-];
-notificationManager.getBadgeDisplayStatusByBundles(bundles).then((data: Map<notificationManager.BundleOption, boolean>) => {
-    data.forEach((value, key) => {
-        console.info(`Bundle is ${key.bundle}, uid is ${key.uid}, badge status is ${value}.`);
-    });
-}).catch((err: BusinessError) => {
-    console.error(`GetBadgeDisplayStatusByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```

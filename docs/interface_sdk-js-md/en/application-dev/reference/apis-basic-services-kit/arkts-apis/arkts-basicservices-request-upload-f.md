@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## upload
@@ -15,8 +15,6 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 Uploads a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -41,42 +39,6 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // Replace the URL with the HTTP address of the real server.
-  header: { 'Accept': '*/*' },
-  method: "POST",
-  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // Set type to the MIME type specified by the HTTP.
-  data: [{ name: "name123", value: "123" }],
-};
-request.upload(uploadConfig).then((data: request.UploadTask) => {
-  uploadTask = data;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-})
-```
-
-```TypeScript
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // Replace the URL with the HTTP address of the real server.
-  header: { 'Accept': '*/*' },
-  method: "POST",
-  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // Set type to the MIME type specified by the HTTP.
-  data: [{ name: "name123", value: "123" }],
-};
-request.upload(uploadConfig, (err: BusinessError, data: request.UploadTask) => {
-  if (err) {
-    console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  uploadTask = data;
-});
-```
-
 
 ## upload
 
@@ -87,8 +49,6 @@ function upload(config: UploadConfig): Promise<UploadTask>
 Uploads a file. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -117,7 +77,3 @@ Uploads a file. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [upload](#upload)

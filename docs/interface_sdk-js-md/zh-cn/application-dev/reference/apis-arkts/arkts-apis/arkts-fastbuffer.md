@@ -4,14 +4,12 @@ FastBuffer对象是比Buffer性能更优的Buffer容器，用于表示固定长�
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总

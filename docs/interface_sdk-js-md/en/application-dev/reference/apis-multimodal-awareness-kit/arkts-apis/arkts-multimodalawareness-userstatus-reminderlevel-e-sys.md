@@ -4,8 +4,6 @@ Enumerates comfort reminder levels required for triggering specific alert ringto
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ WEAK_REMINDER = 0
 Weak reminder level.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ NORMAL_REMINDER = 1
 Normal reminder level.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

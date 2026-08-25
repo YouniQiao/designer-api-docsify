@@ -1,6 +1,6 @@
 # TextInputController
 
-The controller for the **TextInput** component inherits from TextContentControllerBase. The APIs involved are as follows:<!--Del--> system API getText and other APIs like<!--DelEnd--> getTextContentRect, getTextContentLineCount, getCaretOffset, addText, deleteText, getSelection, clearPreviewText, setStyledPlaceholder, and deleteBackward.
+The controller for the **TextInput** component inherits from [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md). The APIs involved are as follows:<!--Del--> system API getText and other APIs like<!--DelEnd--> [getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentrect), [getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentlinecount), getCaretOffset, addText, [deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deletetext), getSelection, [clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearpreviewtext), setStyledPlaceholder, and deleteBackward.
 
 ## Objects to Import
 
@@ -8,11 +8,9 @@ The controller for the **TextInput** component inherits from TextContentControll
 controller: TextInputController = new TextInputController();
 ```
 
-**Inheritance/Implementation:** TextInputController extends TextContentControllerBase
+**Inheritance/Implementation:** TextInputController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** 
 - API version 10 and later: SystemCapability.ArkUI.ArkUI.Full
@@ -31,8 +29,6 @@ caretPosition(value: number): void
 Sets the position of the caret. If the value is less than 0, the value **0** is used. If the value exceeds the text length, the caret is placed at the end of the text.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,8 +50,6 @@ A constructor used to create a **TextInputController** object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -70,8 +64,6 @@ Sets the text selection area, which will be highlighted.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -84,7 +76,7 @@ Sets the text selection area, which will be highlighted.
 | --- | --- | --- |
 | selectionStart | number | Yes |
 | selectionEnd | number | Yes |
-| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | No |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No |
 
 ## stopEditing
 
@@ -95,8 +87,6 @@ stopEditing(): void
 Exits the editing state.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,20 +1,18 @@
 # AVCastController
 
-在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。
+在投播建立后，调用[avSession.AVSession.getAVCastController](arkts-avsession-avsession-avsession-i.md#getavcastcontroller)后， 返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。
 
 > **说明：**&gt;
 > - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## setDisplaySurface
@@ -26,8 +24,6 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 设置播放的surfaceId，在投播sink端使用。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -48,44 +44,6 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
-**示例**
-
-```TypeScript
-import { media } from '@kit.MediaKit';
-
-let surfaceID: string = '';
-media.createAVRecorder().then((avRecorder) => {
-  avRecorder.getInputSurface((surfaceId: string) => {
-    console.info('Succeeded in getting input surface.');
-    surfaceID = surfaceId;
-    if (surfaceID) {
-      // 需先通过avSession.getAVCastController获取avCastController实例。
-      avCastController.setDisplaySurface(surfaceID).then(() => {
-        console.info('Succeeded in setting display surface.');
-      });
-    }
-  });
-})
-```
-
-```TypeScript
-import { media } from '@kit.MediaKit';
-
-let surfaceID: string = '';
-media.createAVRecorder().then((avRecorder) => {
-  avRecorder.getInputSurface((surfaceId: string) => {
-    console.info('Succeeded in getting input surface.');
-    surfaceID = surfaceId;
-    if (surfaceID) {
-      // 需先通过avSession.getAVCastController获取avCastController实例。
-      avCastController.setDisplaySurface(surfaceID, () => {
-          console.info('Succeeded in setting display surface.');
-      });
-    }
-  });
-})
-```
-
 ## setDisplaySurface
 
 ```TypeScript
@@ -95,8 +53,6 @@ setDisplaySurface(surfaceId: string): Promise<void>
 设置播放的surfaceId，在投播sink端使用。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -121,7 +77,3 @@ setDisplaySurface(surfaceId: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
-
-**示例**
-
-参见 [setDisplaySurface](#setdisplaysurface)

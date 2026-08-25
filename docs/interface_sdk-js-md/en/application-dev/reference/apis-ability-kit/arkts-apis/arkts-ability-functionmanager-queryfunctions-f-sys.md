@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from '@kit.AbilityKit';
+import { functionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryFunctions
@@ -15,8 +15,6 @@ function queryFunctions(): Promise<Array<FunctionInfo>>
 Query all available functions.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_FUNCTION
 

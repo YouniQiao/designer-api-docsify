@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
+import { application } from 'kits/@kit.AbilityKit';
 ```
 
 ## createPluginModuleContextForHostBundle
@@ -16,8 +16,6 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 根据入参Context、插件包名、插件模块名和安装插件的应用包名，创建对应插件的Context，用于获取插件的基本信息。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -48,31 +46,3 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, application, common, Context, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let moduleContext: common.Context;
-    try {
-      application.createPluginModuleContextForHostBundle(this.context, 'com.example.pluginBundleName',
-        'pluginModuleName', 'com.example.hostBundleName')
-        .then((data: common.Context) => {
-          moduleContext = data;
-          console.info('createPluginModuleContextForHostBundle success!');
-        })
-        .catch((error: Error) => {
-          let code: number = (error as BusinessError).code;
-          let message: string = (error as BusinessError).message;
-          console.error(`createPluginModuleContextForHostBundle failed, error.code: ${code}, error.message: ${message}`);
-        });
-    } catch (error: BusinessError) {
-      console.error(`createPluginModuleContextForHostBundle failed, error.code: ${error.code}, error.message: ${error.message}`);
-    }
-  }
-}
-```

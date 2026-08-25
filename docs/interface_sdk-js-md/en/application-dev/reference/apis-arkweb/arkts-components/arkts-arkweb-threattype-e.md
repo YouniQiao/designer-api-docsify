@@ -4,8 +4,6 @@ Enumerates the website threat types.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## THREAT_ILLEGAL
@@ -17,8 +15,6 @@ THREAT_ILLEGAL = 0
 Illegal website.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ Fraudulent website.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -49,8 +43,6 @@ THREAT_RISK = 2
 Website that poses security risks.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,8 +58,6 @@ Website suspected to contain unsafe content.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -82,8 +72,6 @@ Website that passes the security check and no risk is found.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## THREAT_UNPROCESSED
@@ -95,7 +83,5 @@ THREAT_UNPROCESSED = 5
 Website that does not perform security check.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
+import { freeInstall } from 'kits/@kit.AbilityKit';
 ```
 
 ## getBundlePackInfo
@@ -16,8 +16,6 @@ function getBundlePackInfo(bundleName: string,
 基于bundleName和bundlePackFlag来获取bundlePackInfo。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -43,66 +41,6 @@ function getBundlePackInfo(bundleName: string,
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
-try {
-  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag, (err, data) => {
-    if (err) {
-      console.error('Operation failed:' + JSON.stringify(err));
-    } else {
-      console.info('Operation succeed:' + JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
-try {
-  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag).then(data => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName。
-let bundleName = 'com.example.myapplication';
-let bundlePackFlag = freeInstall.BundlePackFlag.GET_PACK_INFO_ALL;
-try {
-  freeInstall.getBundlePackInfo(bundleName, bundlePackFlag).then((data: freeInstall.BundlePackInfo) => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: Error) => {
-    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
 
 ## getBundlePackInfo
 
@@ -113,8 +51,6 @@ function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag):
 基于bundleName和BundlePackFlag来获取bundlePackInfo。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -144,7 +80,3 @@ function getBundlePackInfo(bundleName: string, bundlePackFlag : BundlePackFlag):
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [getBundlePackInfo](#getbundlepackinfo)

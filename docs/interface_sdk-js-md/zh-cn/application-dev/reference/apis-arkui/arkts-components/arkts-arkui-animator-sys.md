@@ -12,8 +12,6 @@ Animator(value: string)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

@@ -8,8 +8,6 @@ type OnVerifyPinCallback = (verifyPinEvent: VerifyPinEvent) => void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**

@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from 'kits/@kit.AbilityKit';
 ```
 
 ## windowRect
@@ -26,26 +24,6 @@ windowRect?: WindowRect
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      // 获取请求方的RequestInfo
-      let requestInfo = dialogRequest.getRequestInfo(want);
-      console.info(`getRequestInfo windowRect=, ${JSON.stringify(requestInfo.windowRect)}` );
-    } catch (err) {
-      console.error(`Failed to getRequestInfo. Code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```

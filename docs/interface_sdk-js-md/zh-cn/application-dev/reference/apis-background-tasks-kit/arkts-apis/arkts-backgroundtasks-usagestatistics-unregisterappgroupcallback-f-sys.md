@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## unregisterAppGroupCallBack
@@ -15,8 +15,6 @@ function unregisterAppGroupCallBack(callback: AsyncCallback<void>): void
 应用解除分组变化监听。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -44,32 +42,6 @@ function unregisterAppGroupCallBack(callback: AsyncCallback<void>): void
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-应用分组信息操作重复) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.unregisterAppGroupCallBack().then( () => {
-  console.info('BUNDLE_ACTIVE unregisterAppGroupCallBack promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE unregisterAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.unregisterAppGroupCallBack((err: BusinessError) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE unregisterAppGroupCallBack callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE unregisterAppGroupCallBack callback success.');
-  }
-});
-```
-
 
 ## unregisterAppGroupCallBack
 
@@ -80,8 +52,6 @@ function unregisterAppGroupCallBack(): Promise<void>
 应用解除分组变化监听。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -108,7 +78,3 @@ function unregisterAppGroupCallBack(): Promise<void>
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-应用分组信息操作重复) |
-
-**示例**
-
-参见 [unregisterAppGroupCallBack](#unregisterappgroupcallback)

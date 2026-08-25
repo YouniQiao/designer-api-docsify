@@ -11,54 +11,46 @@ A cylinder geometry type that inherits from GeometryDefinition.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## height
 
 ```TypeScript
-set height(value: double)
+set height(value: number)
 ```
 
 Height of the cylinder, in scene units of the world coordinate system (such as cm, m, km, etc.). The value range is greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## radius
 
 ```TypeScript
-set radius(value: double)
+set radius(value: number)
 ```
 
 Bottom radius of the cylinder, in scene units of the world coordinate system (such as cm, m, km, etc.). The value range is greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## segmentCount
 
 ```TypeScript
-set segmentCount(value: int)
+set segmentCount(value: number)
 ```
 
 Use regular polygons to approximate the circular base of the cylinder, where segmentCount is the number of sides of the regular polygon used.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

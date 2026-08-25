@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { trash } from '@kit.CoreFileKit';
+import { trash } from 'kits/@kit.CoreFileKit';
 ```
 
 ## recover
@@ -15,8 +15,6 @@ function recover(uri: string): void
 将uri对应文件/目录恢复到原路径。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 23
 
@@ -41,11 +39,3 @@ function recover(uri: string): void
 | 13900002 |
 | 13900020 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let fileinfos = trash.listFile();
-let uri = fileinfos[0].uri;
-trash.recover(uri);
-```

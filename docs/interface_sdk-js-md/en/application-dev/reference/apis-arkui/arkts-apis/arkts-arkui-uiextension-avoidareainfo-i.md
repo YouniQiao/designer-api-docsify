@@ -4,14 +4,12 @@ Represents the information about the avoidance area of the window.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from '@kit.ArkUI';
+import { uiExtension } from 'kits/@kit.ArkUI';
 ```
 
 ## area
@@ -25,8 +23,6 @@ Avoidance area for the content of the window.
 **Type:** window.AvoidArea
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Type of the avoidance area of the window.
 **Type:** window.AvoidAreaType
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

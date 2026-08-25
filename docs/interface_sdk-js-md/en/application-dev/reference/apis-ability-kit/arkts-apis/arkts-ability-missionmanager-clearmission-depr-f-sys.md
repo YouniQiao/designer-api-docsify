@@ -15,8 +15,6 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md)
@@ -34,41 +32,6 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 | missionId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-
-let testMissionId = 2;
-try {
-  missionManager.clearMission(testMissionId, (err, data) => {
-    if (err) {
-      console.error(`clearMission failed: ${err.message}`);
-    } else {
-      console.info(`clearMission successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  console.error(`clearMission failed: ${err.message}`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  missionManager.clearMission(testMissionId).then((data) => {
-    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`clearMission failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`clearMission failed. Cause: ${error.message}`);
-}
-```
-
 
 ## clearMission
 
@@ -79,8 +42,6 @@ function clearMission(missionId: number): Promise<void>
 Clears a given mission, regardless of whether it is locked. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -103,7 +64,3 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [clearMission](#clearmission)

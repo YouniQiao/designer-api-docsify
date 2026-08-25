@@ -6,14 +6,12 @@ Describes the size of an image. It inherits from [lang.ISendable](../../../arkts
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## height
@@ -27,8 +25,6 @@ Height of the output image, in px.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -47,8 +43,6 @@ Width of the output image, in px.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

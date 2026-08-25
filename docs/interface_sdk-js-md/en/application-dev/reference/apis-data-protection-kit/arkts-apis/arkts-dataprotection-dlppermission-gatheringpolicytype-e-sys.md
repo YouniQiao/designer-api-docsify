@@ -4,8 +4,6 @@ Enumerates the DLP sandbox gathering policy types. **GATHERING** allows the DLP 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Allows the DLP files of the same permission type to be opened in a sandbox. For 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ NON_GATHERING = 2
 Allows the DLP files of different permission types to be opened in different sandboxes.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 

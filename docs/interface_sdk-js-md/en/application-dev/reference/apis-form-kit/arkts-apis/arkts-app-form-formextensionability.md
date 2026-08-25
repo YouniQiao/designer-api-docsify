@@ -16,7 +16,7 @@ The **FormExtensionAbility** module provides lifecycle callbacks invoked when a 
 ## Modules to Import
 
 ```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
+import { FormExtensionAbility } from 'kits/@kit.FormKit';
 ```
 
 ## Summary
@@ -33,20 +33,4 @@ import { FormExtensionAbility } from '@kit.FormKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c-sys.md) |
-<!--DelEnd-->
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md) |
-| [OnStopFn](arkts-form-onstopfn-t.md) |
-
-<!--Del-->
-### Types(System API)
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnAcquireFormDataFn](arkts-form-onacquireformdatafn-t-sys.md) |
-| [OnShareFormFn](arkts-form-onshareformfn-t-sys.md) |
 <!--DelEnd-->

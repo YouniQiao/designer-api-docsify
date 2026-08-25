@@ -8,8 +8,6 @@ The context of window extension. It allows access to windowExtension-specific re
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.

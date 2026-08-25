@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## startCasting
@@ -15,8 +15,6 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo, callback:
 启动投播。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -42,25 +40,6 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo, callback:
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600108](../errorcode-avsession.md#6600108-设备连接失败) |
 
-**示例**
-
-```TypeScript
-let sessionId = 'xxx'; // sessionId需要通过avSession.createAVSession创建会话后获取。
-let myToken: avSession.SessionToken = {
-  sessionId: sessionId,
-}
-let castDevice: avSession.OutputDeviceInfo | undefined = undefined;
-avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
-  castDevice = device;
-  console.info(`on deviceAvailable  : ${device} `);
-  if (castDevice !== undefined) {
-    avSession.startCasting(myToken, castDevice, () => {
-        console.info('Succeeded in starting casting.');
-    });
-  }
-});
-```
-
 
 ## startCasting
 
@@ -71,8 +50,6 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<
 启动投播。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -102,7 +79,3 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600108](../errorcode-avsession.md#6600108-设备连接失败) |
-
-**示例**
-
-参见 [startCasting](#startcasting)

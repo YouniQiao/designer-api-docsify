@@ -9,8 +9,6 @@ Describes how to determine the focus capability of the starting node and its chi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.

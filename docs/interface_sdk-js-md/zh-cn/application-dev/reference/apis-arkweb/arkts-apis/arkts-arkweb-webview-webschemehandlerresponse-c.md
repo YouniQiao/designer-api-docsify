@@ -4,14 +4,12 @@ WebSchemeHandlerResponse是自定义scheme拦截场景中用于构造HTTP响应�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## constructor
@@ -24,152 +22,9 @@ Response的构造函数。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class WebObj {
-  constructor() {
-  }
-
-  webTest(): string {
-    console.info('Web test');
-    return "Web test";
-  }
-
-  webString(): void {
-    console.info('Web test toString');
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State webTestObj: WebObj = new WebObj();
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objTestName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: '', controller: this.controller })
-        .javaScriptAccess(true)
-        .onControllerAttached(() => {
-          this.controller.loadUrl($rawfile("index.html"));
-          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { $rawfile, Web, Button, Column, State, Component, Entry } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class WebObj {
-  constructor() {
-  }
-
-  webTest(): string {
-    console.info('Web test');
-    return "Web test";
-  }
-
-  webString(): void {
-    console.info('Web test toString');
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined)
-  @State webTestObj: WebObj = new WebObj();
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objTestName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: '', controller: this.controller })
-        .javaScriptAccess(true)
-        .onControllerAttached(() => {
-          this.controller.loadUrl($rawfile("index.html"));
-          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
-        })
-    }
-  }
-}
-```
-
-加载的html文件。
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-    </head>
-    <body>
-      <button type="button" onclick="htmlTest()">Click Me!</button>
-      <p id="demo"></p>
-      <p id="webDemo"></p>
-      <script type="text/javascript">
-        function htmlTest() {
-          // This function call expects to return "Web test"
-          let webStr = objTestName.webTest();
-          document.getElementById("webDemo").innerHTML=webStr;
-          console.info('objTestName.webTest result:'+ webStr)
-        }
-      </script>
-    </body>
-</html>
-```
 
 ## getCustomErrorCode
 
@@ -180,8 +35,6 @@ getCustomErrorCode(): number
 获取当前Response的自定义错误码。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -203,8 +56,6 @@ getEncoding(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -215,10 +66,6 @@ getEncoding(): string
 | --- |
 | string |
 
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
-
 ## getHeaderByName
 
 ```TypeScript
@@ -228,8 +75,6 @@ getHeaderByName(name: string): string
 按名称获取Response头部字段值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -247,10 +92,6 @@ getHeaderByName(name: string): string
 | --- |
 | string |
 
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
-
 ## getMimeType
 
 ```TypeScript
@@ -261,8 +102,6 @@ getMimeType(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -272,113 +111,6 @@ getMimeType(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, mime type:" + webDownloadItem.getMimeType());
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download， mime type:" + webDownloadItem.getMimeType());
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-完整示例代码参考[constructor](#constructor)。
 
 ## getNetErrorCode
 
@@ -390,8 +122,6 @@ getNetErrorCode(): WebNetErrorList
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -401,10 +131,6 @@ getNetErrorCode(): WebNetErrorList
 | 类型 |
 | --- |
 | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) |
-
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
 
 ## getStatus
 
@@ -416,8 +142,6 @@ getStatus(): number
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -427,10 +151,6 @@ getStatus(): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
 
 ## getStatusText
 
@@ -442,8 +162,6 @@ getStatusText(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -453,10 +171,6 @@ getStatusText(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
 
 ## getUrl
 
@@ -468,8 +182,6 @@ getUrl(): string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -480,174 +192,6 @@ getUrl(): string
 | --- |
 | string |
 
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, url:" + webDownloadItem.getUrl());
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { State, Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, url:" + webDownloadItem.getUrl());
-              // 传入一个下载路径，并开始下载。
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-完整示例代码参考[constructor](#constructor)。
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getUrl();
-            console.info("url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { Web, Column, Component, Entry, Button } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@ohos.base';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('getUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getUrl();
-            console.info("url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setCustomErrorCode
 
 ```TypeScript
@@ -657,8 +201,6 @@ setCustomErrorCode(customErrorCode: number): void
 给当前的Response设置自定义错误码。详情参考WebResourceError.getCustomErrorCode。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -680,8 +222,6 @@ setEncoding(encoding: string): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -698,10 +238,6 @@ setEncoding(encoding: string): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
-
 ## setHeaderByName
 
 ```TypeScript
@@ -711,8 +247,6 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 给当前的Response设置头信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -732,10 +266,6 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
-
 ## setMimeType
 
 ```TypeScript
@@ -745,8 +275,6 @@ setMimeType(type: string): void
 给当前的Response设置媒体类型。例如，注入HTML内容时设置为text/html，注入JSON数据时设置为application/json。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -764,10 +292,6 @@ setMimeType(type: string): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
-
 ## setNetErrorCode
 
 ```TypeScript
@@ -777,8 +301,6 @@ setNetErrorCode(code: WebNetErrorList): void
 给当前的Response设置网络错误码。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -796,10 +318,6 @@ setNetErrorCode(code: WebNetErrorList): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
-
 ## setStatus
 
 ```TypeScript
@@ -809,8 +327,6 @@ setStatus(code: number): void
 给当前的Response设置HTTP状态码。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -828,10 +344,6 @@ setStatus(code: number): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
-
 ## setStatusText
 
 ```TypeScript
@@ -841,8 +353,6 @@ setStatusText(text: string): void
 给当前的Response设置状态文本。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -860,10 +370,6 @@ setStatusText(text: string): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[constructor](#constructor)。
-
 ## setUrl
 
 ```TypeScript
@@ -873,8 +379,6 @@ setUrl(url: string): void
 给当前的Response设置重定向或因HSTS而更改后的URL，设置了url后会触发请求的跳转。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -891,7 +395,3 @@ setUrl(url: string): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-完整示例代码参考[constructor](#constructor)。

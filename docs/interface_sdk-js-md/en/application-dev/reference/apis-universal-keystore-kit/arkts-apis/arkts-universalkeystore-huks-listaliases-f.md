@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## listAliases
@@ -15,8 +15,6 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 Lists key aliases. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,24 +42,3 @@ Lists key aliases. This API uses a promise to return the result.
 | [12000012](../errorcode-huks.md#12000012-external-error) |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
-
-**Examples**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit'
-
-async function testListAliases() {
-  let queryProperties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_AUTH_STORAGE_LEVEL,
-      value: huks.HuksAuthStorageLevel.HUKS_AUTH_STORAGE_LEVEL_DE
-    }
-  ];
-  let queryOptions: huks.HuksOptions = {
-    properties: queryProperties
-  };
-
-  let result: huks.HuksListAliasesReturnResult = await huks.listAliases(queryOptions);
-  console.info(`promise: listAliases success`);
-}
-```

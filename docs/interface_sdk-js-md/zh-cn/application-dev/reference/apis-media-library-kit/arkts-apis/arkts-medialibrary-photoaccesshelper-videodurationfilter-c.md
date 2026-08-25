@@ -4,29 +4,25 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## extraVideoDuration
 
 ```TypeScript
-extraVideoDuration?: int
+extraVideoDuration?: number
 ```
 
 针对FilterOperator.BETWEEN情况下，配置视频时长的上限值。默认值为-1。单位为毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ filterOperator: FilterOperator
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -53,16 +47,14 @@ filterOperator: FilterOperator
 ## videoDuration
 
 ```TypeScript
-videoDuration: int
+videoDuration: number
 ```
 
 指定过滤视频的时长。单位为毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

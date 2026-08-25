@@ -4,14 +4,12 @@ Describes the options for showing the action menu.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## distortionMode
@@ -22,13 +20,11 @@ distortionMode?: DistortionMode
 
 Sets the distortion animation Mode of the dialog.
 
-**Type:** DistortionMode
+**Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,13 +40,11 @@ edgeLightMode?: EdgeLightMode
 
 Sets the edgeLight animation Mode of the dialog.
 
-**Type:** EdgeLightMode
+**Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

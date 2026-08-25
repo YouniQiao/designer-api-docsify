@@ -4,14 +4,12 @@ Describes the information about a continuous-task notification.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## contentType
@@ -26,8 +24,6 @@ Content type of a continuous-task notification.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -35,16 +31,14 @@ Content type of a continuous-task notification.
 ## continuousTaskId
 
 ```TypeScript
-continuousTaskId?: int
+continuousTaskId?: number
 ```
 
 ID of a continuous task.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -53,16 +47,14 @@ ID of a continuous task.
 ## notificationId
 
 ```TypeScript
-notificationId: int
+notificationId: number
 ```
 
 ID of the continuous-task notification.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -79,8 +71,6 @@ Slot type of a continuous-task notification.Note: After a continuous task is suc
 **Type:** notificationManager.SlotType
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

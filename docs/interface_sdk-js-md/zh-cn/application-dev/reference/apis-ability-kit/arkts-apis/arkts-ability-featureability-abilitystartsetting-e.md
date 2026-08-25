@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## BOUNDS_KEY
@@ -17,8 +15,6 @@ BOUNDS_KEY = 'abilityBounds'
 窗口显示大小属性的参数名。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -34,8 +30,6 @@ WINDOW_MODE_KEY = 'windowMode'
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -50,16 +44,6 @@ DISPLAY_ID_KEY = 'displayId'
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
-
-**示例**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-featureAbility.AbilityStartSetting.BOUNDS_KEY
-```

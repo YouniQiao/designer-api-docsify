@@ -4,14 +4,12 @@ This module provides APIs for obtaining file system information, including the t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## Modules to Import
 
 ```TypeScript
-import { statfs } from '@kit.CoreFileKit';
+import { statfs } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

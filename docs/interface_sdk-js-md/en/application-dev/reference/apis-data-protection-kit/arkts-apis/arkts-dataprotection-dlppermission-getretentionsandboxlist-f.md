@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getRetentionSandboxList
@@ -15,8 +15,6 @@ function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSa
 Obtains the sandbox applications in the retention state of an application. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result.This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -42,56 +40,6 @@ Obtains the sandbox applications in the retention state of an application. This 
 | [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  try {
-    let res:Array<dlpPermission.RetentionSandboxInfo> = await dlpPermission.getRetentionSandboxList(); // Obtain the sandbox apps in the retention state.
-    console.info('res', JSON.stringify(res))
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.getRetentionSandboxList("bundleName", (err, res) => {
-    if (err != undefined) {
-      console.error('getRetentionSandboxList error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the sandbox retention information.
-} catch (err) {
-  console.error('getRetentionSandboxList error,', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.getRetentionSandboxList((err, res) => {
-    if (err != undefined) {
-      console.error('getRetentionSandboxList error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the sandbox retention information.
-} catch (err) {
-  console.error('getRetentionSandboxList error,', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
-
 
 ## getRetentionSandboxList
 
@@ -102,8 +50,6 @@ function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Arr
 Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result.This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -124,10 +70,6 @@ Obtains the sandbox applications in the retention state of an application. This 
 | [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-See [getRetentionSandboxList](#getretentionsandboxlist)
-
 
 ## getRetentionSandboxList
 
@@ -138,8 +80,6 @@ function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxI
 Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result.This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.This API can be called only in non-DLP sandbox applications.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -158,7 +98,3 @@ Obtains the sandbox applications in the retention state of an application. This 
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [getRetentionSandboxList](#getretentionsandboxlist)

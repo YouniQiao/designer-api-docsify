@@ -4,14 +4,12 @@ WebSchemeHandlerResponse is a class used to construct HTTP response data in cust
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## constructor
@@ -24,133 +22,9 @@ Constructs a **Response** object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview, WebNetErrorList } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
-
-  build() {
-    Column() {
-      Button('response').onClick(() => {
-        let response = new webview.WebSchemeHandlerResponse();
-        try {
-          response.setUrl("http://www.example.com")
-          response.setStatus(200)
-          response.setStatusText("OK")
-          response.setMimeType("text/html")
-          response.setEncoding("utf-8")
-          response.setHeaderByName("header1", "value1", false)
-          response.setNetErrorCode(WebNetErrorList.NET_OK)
-          console.info("[schemeHandler] getUrl:" + response.getUrl())
-          console.info("[schemeHandler] getStatus:" + response.getStatus())
-          console.info("[schemeHandler] getStatusText:" + response.getStatusText())
-          console.info("[schemeHandler] getMimeType:" + response.getMimeType())
-          console.info("[schemeHandler] getEncoding:" + response.getEncoding())
-          console.info("[schemeHandler] getHeaderByValue:" + response.getHeaderByName("header1"))
-          console.info("[schemeHandler] getNetErrorCode:" + response.getNetErrorCode())
-
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Web({ src: 'https://www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class WebObj {
-  constructor() {
-  }
-
-  webTest(): string {
-    console.info('Web test');
-    return "Web test";
-  }
-
-  webString(): void {
-    console.info('Web test toString');
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController()
-  @State webTestObj: WebObj = new WebObj();
-
-  build() {
-    Column() {
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objTestName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: '', controller: this.controller })
-        .javaScriptAccess(true)
-        .onControllerAttached(() => {
-          this.controller.loadUrl($rawfile("index.html"));
-          this.controller.registerJavaScriptProxy(this.webTestObj, "objTestName", ["webTest", "webString"]);
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="utf-8">
-    </head>
-    <body>
-      <button type="button" onclick="htmlTest()">Click Me!</button>
-      <p id="demo"></p>
-      <p id="webDemo"></p>
-      <script type="text/javascript">
-        function htmlTest() {
-          // This function call expects to return "Web test"
-          let webStr = objTestName.webTest();
-          document.getElementById("webDemo").innerHTML=webStr;
-          console.info('objTestName.webTest result:'+ webStr)
-        }
-      </script>
-    </body>
-</html>
-```
 
 ## getCustomErrorCode
 
@@ -161,8 +35,6 @@ getCustomErrorCode(): number
 Get the custom error code of the Web response.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,8 +56,6 @@ Obtains the character encoding format of the response.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -196,10 +66,6 @@ Obtains the character encoding format of the response.
 | --- |
 | string |
 
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
-
 ## getHeaderByName
 
 ```TypeScript
@@ -209,8 +75,6 @@ getHeaderByName(name: string): string
 Obtains the value of a response header field by name.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -228,10 +92,6 @@ Obtains the value of a response header field by name.
 | --- |
 | string |
 
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
-
 ## getMimeType
 
 ```TypeScript
@@ -242,8 +102,6 @@ Obtains the MIME type of this response.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -253,59 +111,6 @@ Obtains the MIME type of this response.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, mime type:" + webDownloadItem.getMimeType());
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-For details about the sample code, see [constructor](#constructor).
 
 ## getNetErrorCode
 
@@ -317,8 +122,6 @@ Obtains the network error code of the response.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -328,10 +131,6 @@ Obtains the network error code of the response.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) |
-
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
 
 ## getStatus
 
@@ -343,8 +142,6 @@ Obtains the HTTP status code of the response.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -354,10 +151,6 @@ Obtains the HTTP status code of the response.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
 
 ## getStatusText
 
@@ -369,8 +162,6 @@ Obtains the status text of this response.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -380,10 +171,6 @@ Obtains the status text of this response.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
 
 ## getUrl
 
@@ -395,8 +182,6 @@ Obtains the redirection URL or the URL changed due to HSTS.Risk warning: To obta
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -407,88 +192,6 @@ Obtains the redirection URL or the URL changed due to HSTS.Risk warning: To obta
 | --- |
 | string |
 
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  delegate: webview.WebDownloadDelegate = new webview.WebDownloadDelegate();
-
-  build() {
-    Column() {
-      Button('setDownloadDelegate')
-        .onClick(() => {
-          try {
-            this.delegate.onBeforeDownload((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("will start a download, url:" + webDownloadItem.getUrl());
-              // Pass in a download path and start the download.
-              webDownloadItem.start("/data/storage/el2/base/cache/web/" + webDownloadItem.getSuggestedFileName());
-            })
-            this.delegate.onDownloadUpdated((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download update percent complete: " + webDownloadItem.getPercentComplete());
-            })
-            this.delegate.onDownloadFailed((webDownloadItem: webview.WebDownloadItem) => {
-              console.error("download failed guid: " + webDownloadItem.getGuid());
-            })
-            this.delegate.onDownloadFinish((webDownloadItem: webview.WebDownloadItem) => {
-              console.info("download finish guid: " + webDownloadItem.getGuid());
-            })
-            this.controller.setDownloadDelegate(this.delegate);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Button('startDownload')
-        .onClick(() => {
-          try {
-            this.controller.startDownload('https://www.example.com');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-For details about the sample code, see [constructor](#constructor).
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getUrl')
-        .onClick(() => {
-          try {
-            let url = this.controller.getUrl();
-            console.info("url: " + url);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setCustomErrorCode
 
 ```TypeScript
@@ -498,8 +201,6 @@ setCustomErrorCode(customErrorCode: number): void
 Set the custom error code for the Web response.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -521,8 +222,6 @@ Sets the character encoding format for the current response.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -539,10 +238,6 @@ Sets the character encoding format for the current response.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
-
 ## setHeaderByName
 
 ```TypeScript
@@ -552,8 +247,6 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 Sets the header information for this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -573,10 +266,6 @@ Sets the header information for this response.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
-
 ## setMimeType
 
 ```TypeScript
@@ -586,8 +275,6 @@ setMimeType(type: string): void
 Sets the MIME type for the current response. For example, set it to text/html when injecting HTML content, and set it to application/json when injecting JSON data.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -605,10 +292,6 @@ Sets the MIME type for the current response. For example, set it to text/html wh
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
-
 ## setNetErrorCode
 
 ```TypeScript
@@ -618,8 +301,6 @@ setNetErrorCode(code: WebNetErrorList): void
 Sets the network error code for this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -637,10 +318,6 @@ Sets the network error code for this response.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
-
 ## setStatus
 
 ```TypeScript
@@ -650,8 +327,6 @@ setStatus(code: number): void
 Sets the HTTP status code for this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -669,10 +344,6 @@ Sets the HTTP status code for this response.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
-
 ## setStatusText
 
 ```TypeScript
@@ -682,8 +353,6 @@ setStatusText(text: string): void
 Sets the status text for this response.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -701,10 +370,6 @@ Sets the status text for this response.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).
-
 ## setUrl
 
 ```TypeScript
@@ -714,8 +379,6 @@ setUrl(url: string): void
 Sets the redirection URL or the URL changed due to HSTS for this response. After the URL is set, a redirection to the new URL is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -732,7 +395,3 @@ Sets the redirection URL or the URL changed due to HSTS for this response. After
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-For details about the sample code, see [constructor](#constructor).

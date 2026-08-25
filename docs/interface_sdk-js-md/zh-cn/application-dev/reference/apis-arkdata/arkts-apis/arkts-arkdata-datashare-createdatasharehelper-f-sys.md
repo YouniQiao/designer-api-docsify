@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## createDataShareHelper
@@ -15,8 +15,6 @@ function createDataShareHelper(context: Context, uri: string, callback: AsyncCal
 创建DataShareHelper实例。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,87 +38,6 @@ function createDataShareHelper(context: Context, uri: string, callback: AsyncCal
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15700010](../errorcode-datashare.md#15700010-创建datasharehelper异常) |
 
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let uri = "datashare:///com.samples.datasharetest.DataShare";
-    let dataShareHelper: dataShare.DataShareHelper | undefined = undefined;
-    let context = this.context;
-    try {
-      dataShare.createDataShareHelper(context, uri, (err:BusinessError, data:dataShare.DataShareHelper) => {
-        if (err !== undefined) {
-          console.error(`Failed to create DataShareHelper. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info("createDataShareHelper succeed, data : " + data);
-        dataShareHelper = data;
-      });
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`Failed to create DataShareHelper. Code: ${code}, message: ${message}`);
-    };
-  }
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let uri = "datashareproxy://com.samples.datasharetest.DataShare";
-    let dataShareHelper: dataShare.DataShareHelper | undefined = undefined;
-    let context = this.context;
-    try {
-      dataShare.createDataShareHelper(context, uri, {isProxy : true}, (err:BusinessError, data:dataShare.DataShareHelper) => {
-        if (err !== undefined) {
-          console.error(`Failed to create DataShareHelper. Code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info("createDataShareHelper succeed, data : " + data);
-        dataShareHelper = data;
-      });
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`Failed to create DataShareHelper. Code: ${code}, message: ${message}`);
-    };
-  }
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let uri = "datashareproxy://com.samples.datasharetest.DataShare";
-    let dataShareHelper: dataShare.DataShareHelper | undefined = undefined;
-    let context = this.context;
-    try {
-      dataShare.createDataShareHelper(context, uri, {isProxy : true}).then((data: dataShare.DataShareHelper) => {
-        console.info("createDataShareHelper succeed, data : " + data);
-        dataShareHelper = data;
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to create DataShareHelper. Code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`Failed to create DataShareHelper. Code: ${code}, message: ${message}`);
-    };
-  }
-}
-```
-
 
 ## createDataShareHelper
 
@@ -136,8 +53,6 @@ function createDataShareHelper(
 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -162,10 +77,6 @@ function createDataShareHelper(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15700010](../errorcode-datashare.md#15700010-创建datasharehelper异常) |
 
-**示例**
-
-参见 [createDataShareHelper](#createdatasharehelper)
-
 
 ## createDataShareHelper
 
@@ -180,8 +91,6 @@ function createDataShareHelper(
 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -210,7 +119,3 @@ function createDataShareHelper(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15700010](../errorcode-datashare.md#15700010-创建datasharehelper异常) |
-
-**示例**
-
-参见 [createDataShareHelper](#createdatasharehelper)

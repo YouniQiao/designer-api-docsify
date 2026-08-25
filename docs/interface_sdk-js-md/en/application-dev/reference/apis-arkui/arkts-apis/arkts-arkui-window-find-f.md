@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## find
@@ -15,8 +15,6 @@ function find(id: string, callback: AsyncCallback<Window>): void
 Finds a window based on the ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -31,36 +29,6 @@ Finds a window based on the ID. This API uses an asynchronous callback to return
 | id | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-window.find('test', (err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to find the Window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  windowClass = data;
-  console.info('Succeeded in finding the window. Data: ' + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.find('test');
-promise.then((data) => {
-  windowClass = data;
-  console.info('Succeeded in finding the window. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find the Window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## find
 
@@ -71,8 +39,6 @@ function find(id: string): Promise<Window>
 Finds a window based on the ID. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -91,7 +57,3 @@ Finds a window based on the ID. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
-
-**Examples**
-
-See [find](#find)

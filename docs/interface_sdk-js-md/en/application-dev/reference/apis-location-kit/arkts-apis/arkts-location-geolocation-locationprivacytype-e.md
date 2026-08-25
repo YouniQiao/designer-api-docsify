@@ -4,8 +4,6 @@ Enum for location privacy type
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LocationPrivacyType](arkts-location-geolocationmanager-locationprivacytype-e-sys.md)
@@ -22,8 +20,6 @@ OTHERS = 0
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [OTHERS](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#others)
@@ -38,8 +34,6 @@ STARTUP
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [STARTUP](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#startup)
@@ -53,8 +47,6 @@ CORE_LOCATION
 ```
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

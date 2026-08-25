@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## setCloudStrategy
@@ -15,8 +15,6 @@ function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.Value
 设置应用自身的云同步策略，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -39,16 +37,3 @@ function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.Value
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 仅WIFI同步
-cloudData.setCloudStrategy(cloudData.StrategyType.NETWORK, [cloudData.NetWorkStrategy.WIFI]).then(() => {
-    console.info('Succeeded in setting the cloud strategy');
-}).catch((err) => {
-    console.error(`Failed to set cloud strategy. Code: ${err.code}, message: ${err.message}`);
-});
-```

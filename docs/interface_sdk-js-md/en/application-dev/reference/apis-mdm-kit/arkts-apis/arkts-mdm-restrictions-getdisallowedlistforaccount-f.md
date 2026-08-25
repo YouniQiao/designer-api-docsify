@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedListForAccount
@@ -15,8 +15,6 @@ function getDisallowedListForAccount(admin: Want, feature: string, accountId: nu
 Obtains the list of applications that are not allowed to use a feature for a specified user.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -46,24 +44,3 @@ Obtains the list of applications that are not allowed to use a feature for a spe
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let result: Array<string> = restrictions.getDisallowedListForAccount(wantTemp, 'snapshotSkip', 100);
-  console.info('Succeeded in querying disallowed list for account');
-} catch (err) {
-  console.error(`Failed to query disallowed list for account. Code is ${err.code}, message is ${err.message}`);
-}
-```

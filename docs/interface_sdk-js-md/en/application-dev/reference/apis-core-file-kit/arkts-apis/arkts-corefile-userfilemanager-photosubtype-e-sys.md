@@ -4,8 +4,6 @@ Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md) ty
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** PhotoSubType
@@ -23,8 +21,6 @@ DEFAULT = 0
 Default (photo) type.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -44,8 +40,6 @@ Screenshots and screen recording files.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** SCREENSHOT
@@ -63,8 +57,6 @@ CAMERA = 2
 Photos and videos taken by a camera.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 

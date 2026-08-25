@@ -4,29 +4,25 @@ Task retry configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## maxRetryCount
 
 ```TypeScript
-maxRetryCount?: int
+maxRetryCount?: number
 ```
 
 Maximum number of retry attempts. The default value is 1. The minimum value is 0. The maximum value is 10. When set to 0, no retries will be performed.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

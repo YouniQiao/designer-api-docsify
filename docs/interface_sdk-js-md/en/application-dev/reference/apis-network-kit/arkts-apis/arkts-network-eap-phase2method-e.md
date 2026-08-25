@@ -4,8 +4,6 @@ Enumerates the Phase 2 authentication methods.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_NONE
@@ -17,8 +15,6 @@ PHASE2_NONE = 0
 Not specified.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -32,8 +28,6 @@ PAP.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_MSCHAP
@@ -45,8 +39,6 @@ PHASE2_MSCHAP = 2
 MS-CHAP.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -60,8 +52,6 @@ MS-CHAPv2.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_GTC
@@ -73,8 +63,6 @@ PHASE2_GTC = 4
 GTC.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -88,8 +76,6 @@ SIM.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_AKA
@@ -102,8 +88,6 @@ AKA.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## PHASE2_AKA_PRIME
@@ -115,7 +99,5 @@ PHASE2_AKA_PRIME = 7
 AKA Prime.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap

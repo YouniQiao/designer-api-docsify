@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## hasKeyItem
@@ -15,8 +15,6 @@ function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 Checks whether a key exists. This API uses an asynchronous callback to return the result.If the key does not exist, **false** is returned through the callback.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,48 +41,6 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
 
-**Examples**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.hasKeyItem(keyAlias, emptyOptions, (error, data) => {
-  if (error) {
-    console.error(`callback: hasKeyItem failed`);
-  } else {
-    if (data) {
-      console.info(`keyAlias:${keyAlias} is existed!`);
-    } else {
-      console.error(`find key failed`);
-    }
-  }
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
-  if (data) {
-    console.info(`keyAlias:${keyAlias} is existed!`);
-  } else {
-    console.info(`find key failed!`);
-  }
-});
-```
-
 
 ## hasKeyItem
 
@@ -95,8 +51,6 @@ function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 Checks whether a key exists. This API uses a promise to return the result.If the key does not exist, **false** is returned through the promise.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -127,7 +81,3 @@ Checks whether a key exists. This API uses a promise to return the result.If the
 | [12000012](../errorcode-huks.md#12000012-external-error) |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
-
-**Examples**
-
-See [hasKeyItem](#haskeyitem)

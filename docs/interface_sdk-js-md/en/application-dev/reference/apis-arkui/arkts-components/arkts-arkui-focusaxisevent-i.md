@@ -6,8 +6,6 @@ Describes the focus axis event object. Inherits from [BaseEvent](arkts-arkui-bas
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,11 +21,9 @@ axisMap: Map<AxisModel, number>
 
 Axis value table of the focus axis event.
 
-**Type:** Map&lt;AxisModel, number&gt;
+**Type:** Map&lt;[AxisModel](../arkts-apis/arkts-arkui-axismodel-e.md), number&gt;
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Blocks [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

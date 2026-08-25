@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## getAssets
@@ -23,8 +21,6 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 获取相册中的文件。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -47,117 +43,6 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 13900020 |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('albumGetAssetsDemoCallback');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: photoAccessHelper.Album = await albumList.getFirstObject();
-  album.getAssets(fetchOption, (err, albumFetchResult) => {
-    if (albumFetchResult !== undefined) {
-      console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
-    } else {
-      console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('albumGetAssetsDemoPromise');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
-  let album: photoAccessHelper.Album = await albumList.getFirstObject();
-  album.getAssets(fetchOption).then((albumFetchResult) => {
-    console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
-  }).catch((err: BusinessError) => {
-    console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getAssets');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-
-  phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
-    if (fetchResult !== undefined) {
-      console.info('fetchResult success');
-      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-      if (photoAsset !== undefined) {
-        console.info('photoAsset.displayName : ' + photoAsset.displayName);
-      }
-    } else {
-      console.error(`fetchResult fail with error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getAssets');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    if (fetchResult !== undefined) {
-      console.info('fetchResult success');
-      let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-      if (photoAsset !== undefined) {
-        console.info('photoAsset.displayName :' + photoAsset.displayName);
-      }
-    }
-  } catch (err) {
-    console.error(`getAssets failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## getAssets
 
 ```TypeScript
@@ -167,8 +52,6 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 获取相册中的文件。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
@@ -198,10 +81,6 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 | 13900020 |
 | 14000011 |
 
-**示例**
-
-参见 [getAssets](#getassets)
-
 ## albumName
 
 ```TypeScript
@@ -213,8 +92,6 @@ albumName: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -230,8 +107,6 @@ readonly albumSubtype: AlbumSubtype
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## albumType
@@ -245,8 +120,6 @@ readonly albumType: AlbumType
 **类型：** AlbumType
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -262,39 +135,33 @@ readonly albumUri: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## changeTime
 
 ```TypeScript
-readonly changeTime?: long
+readonly changeTime?: number
 ```
 
 相册的更改时间，单位：秒。 单位为： second，取值应≥0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## count
 
 ```TypeScript
-readonly count: int
+readonly count: number
 ```
 
 相册中文件数量。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -310,8 +177,6 @@ readonly coverUri: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## lpath
@@ -321,12 +186,13 @@ readonly lpath?: string
 ```
 
 相册的虚拟路径。支持的相册及对应的lpath值：  
-- 相机应用相册：'/DCIM/Camera'- 截图应用相册：'/Pictures/Screenshots'- 屏幕录制应用相册：'/Pictures/Screenrecords'- 用户创建的相册：'/Pictures/Users/{用户自定义相册名称}'
+- 相机应用相册：'/DCIM/Camera'  
+- 截图应用相册：'/Pictures/Screenshots'  
+- 屏幕录制应用相册：'/Pictures/Screenrecords'  
+- 用户创建的相册：'/Pictures/Users/{用户自定义相册名称}'
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

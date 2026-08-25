@@ -4,14 +4,12 @@ Defines the popup init info.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
+import { PopupV2, PopupV2InitInfo, PopupV2Button } from 'kits/@kit.ArkUI';
 ```
 
 ## buttons
@@ -25,8 +23,6 @@ The buttons of Popup.
 **Type:** [PopupV2Button?, PopupV2Button?]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -44,8 +40,6 @@ Indicates the attribute of the current popup direction.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -58,11 +52,9 @@ icon?: ResourceStr
 
 The icon of Popup.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -80,8 +72,6 @@ The icon attributes of Popup.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -94,11 +84,9 @@ maxWidth?: Dimension
 
 Set the max width of the popup.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -112,11 +100,9 @@ message: ResourceStr
 
 The message of Popup.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -134,8 +120,6 @@ The message attributes of Popup.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -151,8 +135,6 @@ The close button callback of Popup.
 **Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -170,8 +152,6 @@ The show close of Popup.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -184,11 +164,9 @@ title?: ResourceStr
 
 The title of Popup.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -205,8 +183,6 @@ The title attributes of Popup.
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

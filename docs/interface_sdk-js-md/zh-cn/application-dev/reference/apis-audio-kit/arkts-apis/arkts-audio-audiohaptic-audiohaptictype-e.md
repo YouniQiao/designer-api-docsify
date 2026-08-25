@@ -1,10 +1,8 @@
 # AudioHapticType
 
-枚举，音振类型。@enum { int }
+枚举，音振类型。@enum { number }
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -18,8 +16,6 @@ AUDIO_HAPTIC_TYPE_AUDIO = 0
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## AUDIO_HAPTIC_TYPE_HAPTIC
@@ -31,7 +27,5 @@ AUDIO_HAPTIC_TYPE_HAPTIC = 1
 振动。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

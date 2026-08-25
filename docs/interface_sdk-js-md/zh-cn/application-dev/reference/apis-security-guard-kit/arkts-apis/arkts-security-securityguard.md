@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Security.SecurityGuard
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## 汇总
@@ -24,8 +22,8 @@ import { securityGuard } from '@kit.SecurityGuardKit';
 | 名称 |
 | --- |
 | [getModelResult(本模块提供设备风险管理平台能力。)](arkts-securityguard-securityguard-getmodelresult-f-sys.md) |
-| [off(本模块提供设备风险管理平台能力。)](arkts-securityguard-securityguard-off-f-sys.md#offsecurityeventoccur) |
-| [on(本模块提供设备风险管理平台能力。)](arkts-securityguard-securityguard-on-f-sys.md#onsecurityeventoccur) |
+| off(本模块提供设备风险管理平台能力。) |
+| on(本模块提供设备风险管理平台能力。) |
 | [querySecurityEvent(本模块提供设备风险管理平台能力。)](arkts-securityguard-securityguard-querysecurityevent-f-sys.md) |
 | [reportSecurityEvent(本模块提供设备风险管理平台能力。)](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md) |
 | [startSecurityEventCollector(本模块提供设备风险管理平台能力。)](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md) |

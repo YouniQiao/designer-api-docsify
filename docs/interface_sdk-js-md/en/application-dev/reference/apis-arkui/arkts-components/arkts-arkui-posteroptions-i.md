@@ -4,8 +4,6 @@ Defines display options for the first frame of the video.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,13 +19,11 @@ contentTransitionEffect?: ContentTransitionEffect
 
 Transition effect to apply when the video preview image changes. This parameter does not take effect if **showFirstFrame** is **true**, or if a valid **previewUri** in [VideoOptions](arkts-arkui-videooptions-i.md) is not provided.Default value: **ContentTransitionEffect.IDENTITY**.If this parameter is set to **undefined** or **null**, it defaults to **ContentTransitionEffect.IDENTITY**.
 
-**Type:** ContentTransitionEffect
+**Type:** [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md)
 
 **Default:** ContentTransitionEffect.IDENTITY
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Whether to enable first frame display, showing the first frame of the video as a
 **Default:** false
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

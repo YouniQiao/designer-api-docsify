@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundLoader } from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## getTaskInfo
 
 ```TypeScript
-function getTaskInfo(taskId: int): Promise<TaskInfo>
+function getTaskInfo(taskId: number): Promise<TaskInfo>
 ```
 
 Obtains the information of a background load task. This API returns the result via a promise.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -28,7 +26,7 @@ Obtains the information of a background load task. This API returns the result v
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| taskId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| taskId | number | Yes |
 
 **Return value:**
 

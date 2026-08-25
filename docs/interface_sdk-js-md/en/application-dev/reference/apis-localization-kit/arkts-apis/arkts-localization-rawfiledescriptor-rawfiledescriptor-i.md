@@ -4,23 +4,19 @@ This module provides file descriptor information of the HAP where the `rawfile` 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## fd
 
 ```TypeScript
-fd: int
+fd: number
 ```
 
 File descriptor.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -29,16 +25,14 @@ File descriptor.
 ## length
 
 ```TypeScript
-length: long
+length: number
 ```
 
 File length, indicating the size of the `rawfile` file. The unit is bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,16 +41,14 @@ File length, indicating the size of the `rawfile` file. The unit is bytes.
 ## offset
 
 ```TypeScript
-offset: long
+offset: number
 ```
 
 Start offset, indicating the start position of the `rawfile` file in the HAP. The unit is bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

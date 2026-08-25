@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## errorCode
@@ -19,8 +17,6 @@ errorCode: T
 **类型：** T
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -36,38 +32,32 @@ errorType?: ErrorType
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## soundId
 
 ```TypeScript
-soundId?: int
+soundId?: number
 ```
 
 发生错误的资源ID，load方法能够获取soundId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## streamId
 
 ```TypeScript
-streamId?: int
+streamId?: number
 ```
 
 发生错误的音频流ID，play方法能够获取streamId。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool

@@ -4,8 +4,6 @@ Provides APIs for managing partner agents.@namespace partnerAgent
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -13,7 +11,7 @@ Provides APIs for managing partner agents.@namespace partnerAgent
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@kit.ConnectivityKit';
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

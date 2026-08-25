@@ -4,14 +4,12 @@ Defines the TLS configuration, including the version and cipher suite.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## cipherSuites
@@ -25,8 +23,6 @@ Array of cipher suite types. If no cipher suite type is set, all supported ciphe
 **Type:** [CipherSuite](arkts-network-http-ciphersuite-t.md)[]
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -44,8 +40,6 @@ Latest TLS version.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -61,8 +55,6 @@ Earliest TLS version.
 **Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

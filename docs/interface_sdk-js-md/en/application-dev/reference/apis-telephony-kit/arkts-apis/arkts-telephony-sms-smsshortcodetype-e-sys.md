@@ -4,8 +4,6 @@ Enumerates SMS short code types.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ SMS_SHORT_CODE_TYPE_UNKNOWN = -1
 Indicates an unknown SMS short code type.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -36,8 +32,6 @@ Indicates a not premium SMS short code type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ SMS_SHORT_CODE_TYPE_POSSIBLE_PREMIUM = 1
 Indicates a possible premium SMS short code type.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

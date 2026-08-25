@@ -6,14 +6,12 @@ The class of agent extension ability. This class cannot be used in Harmony Archi
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AgentExtensionAbility } from '@kit.AbilityKit';
+import { AgentExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## onAuth
@@ -25,8 +23,6 @@ onAuth(proxy: AgentHostProxy, handshakeData: string): void
 Called back when authentication is sent.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,8 +47,6 @@ Called back when an agent extension is connected to an ability.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -76,8 +70,6 @@ Called back when an agent extension is started for initialization.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -99,8 +91,6 @@ onData(proxy: AgentHostProxy, data: string): void
 Called back when data is sent.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +115,6 @@ Called back before an agent service extension is destroyed.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -142,8 +130,6 @@ onDisconnect(want: Want, proxy: AgentHostProxy): void
 Called back when ability connected to an agent service extension is disconnected.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -169,8 +155,6 @@ Context of the AgentExtensionAbility.
 **Type:** [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

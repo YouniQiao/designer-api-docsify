@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isInEmergencyCall
@@ -15,8 +15,6 @@ function isInEmergencyCall(callback: AsyncCallback<boolean>): void
 Checks whether a call is an emergency call. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -42,30 +40,6 @@ Checks whether a call is an emergency call. This API uses an asynchronous callba
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isInEmergencyCall((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isInEmergencyCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`isInEmergencyCall success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isInEmergencyCall().then((data: boolean) => {
-    console.info(`isInEmergencyCall success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isInEmergencyCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## isInEmergencyCall
 
@@ -76,8 +50,6 @@ function isInEmergencyCall(): Promise<boolean>
 Checks whether a call is an emergency call. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -100,7 +72,3 @@ Checks whether a call is an emergency call. This API uses a promise to return th
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [isInEmergencyCall](#isinemergencycall)

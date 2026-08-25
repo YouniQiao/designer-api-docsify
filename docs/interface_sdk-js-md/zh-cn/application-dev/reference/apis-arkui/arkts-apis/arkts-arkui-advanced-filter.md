@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
+import { Filter, FilterParams, FilterResult, FilterType } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -21,21 +21,8 @@ import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 | --- |
 | [Filter](arkts-arkui-arkui-advanced-filter-filter-s.md) |
 
-### 接口
-
-| 名称 |
-| --- |
-| [FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-i.md) |
-| [FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-i.md) |
-
 ### 枚举
 
 | 名称 |
 | --- |
 | [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [OnFilterChangedCallback](arkts-arkui-onfilterchangedcallback-t.md) |

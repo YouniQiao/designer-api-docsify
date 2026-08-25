@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height: long
+height: number
 ```
 
 表示截取图像的高度，单位为px，该参数应为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,16 +33,14 @@ height: long
 ## width
 
 ```TypeScript
-width: long
+width: number
 ```
 
 表示截取图像的宽度，单位为px，该参数应为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

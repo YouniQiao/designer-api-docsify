@@ -6,8 +6,6 @@ Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Called when the Cancel button in the dialog is clicked.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -42,8 +38,6 @@ onDidAppear?: VoidCallback
 Callback function when the dialog appears.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,8 +55,6 @@ Callback function when the dialog disappears.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -78,8 +70,6 @@ onWillAppear?: VoidCallback
 Callback function before the dialog openAnimation starts.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +87,6 @@ Callback function before the dialog closeAnimation starts.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -113,11 +101,9 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 Style of accept button.
 
-**Type:** PickerDialogButtonStyle
+**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,11 +119,9 @@ alignment?: DialogAlignment
 
 Defines the dialog alignment of the screen.
 
-**Type:** DialogAlignment
+**Type:** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,8 +143,6 @@ Defines the textPickerDialog's background blur Style
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -175,11 +157,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Defines the textPickerDialog's background blur style with options
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -195,13 +175,11 @@ backgroundColor?: ResourceColor
 
 Defines the textPickerDialog's background color
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -217,11 +195,9 @@ backgroundEffect?: BackgroundEffectOptions
 
 Defines the textPickerDialog's background effect with options
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -237,11 +213,9 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 Style of cancel button.
 
-**Type:** PickerDialogButtonStyle
+**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -263,8 +237,6 @@ Can scroll loop if true is set, on the contrary it can not.Default Value: true
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -282,8 +254,6 @@ Called when the default height of the selected element is set.
 **Type:** number \| string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -303,8 +273,6 @@ Defines to set the default text style for options.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -323,8 +291,6 @@ Defines whether to disable the text style animation.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -342,8 +308,6 @@ Text style of disappearing items.
 **Type:** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -365,8 +329,6 @@ Enable or disable haptic feedback.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -387,8 +349,6 @@ Defines whether to respond to the hover mode.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -403,13 +363,11 @@ hoverModeArea?: HoverModeAreaType
 
 Defines the dialog's display area in hover mode.
 
-**Type:** HoverModeAreaType
+**Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -425,11 +383,9 @@ maskRect?: Rectangle
 
 Mask Region of dialog. The size cannot exceed the main window.
 
-**Type:** Rectangle
+**Type:** [Rectangle](arkts-arkui-rectangle-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -449,8 +405,6 @@ Defines the dialog offset.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -468,8 +422,6 @@ Called when the OK button in the dialog is clicked.
 **Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -489,8 +441,6 @@ This event is triggered when a TextPicker text is selected in dialog.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -509,8 +459,6 @@ This event is triggered when an item enters the selected area in dialog.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -528,8 +476,6 @@ This event is triggered when a TextPicker text is selected and scrolling has sto
 **Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -551,8 +497,6 @@ Background style of selected items.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -571,8 +515,6 @@ Text style of selected items
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -587,11 +529,9 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the dialog's shadow.
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -607,11 +547,9 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** SystemUiMaterial
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -630,8 +568,6 @@ Text style of normal items
 **Type:** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

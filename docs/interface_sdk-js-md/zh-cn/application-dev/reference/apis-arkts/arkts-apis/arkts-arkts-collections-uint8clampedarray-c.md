@@ -1,6 +1,6 @@
 # Uint8ClampedArray
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-arkts-collections-n.md)实现。
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md)实现。
 
 > **说明：**&gt;
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
@@ -8,14 +8,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -28,8 +26,6 @@ import { collections } from '@kit.ArkTS';
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -38,7 +34,7 @@ import { collections } from '@kit.ArkTS';
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 **错误码：**
 
@@ -55,8 +51,6 @@ at(index: number): number | undefined
 返回指定下标的元素，如果不存在，则返回undefined。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -91,8 +85,6 @@ constructor()
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -112,8 +104,6 @@ constructor(length: number)
 构造函数，用于创建一个指定长度的ArkTS Uint8ClampedArray对象，所有元素初始值为0。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -141,8 +131,6 @@ constructor(elements: Iterable<number>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -169,8 +157,6 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -196,8 +182,6 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 构造函数，以ArrayBuffer创建一个ArkTS Uint8ClampedArray对象，且ArkTS Uint8ClampedArray和ArrayBuffer共享内存。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -227,8 +211,6 @@ copyWithin(target: number, start: number, end?: number): Uint8ClampedArray
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -245,7 +227,7 @@ copyWithin(target: number, start: number, end?: number): Uint8ClampedArray
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 **错误码：**
 
@@ -264,8 +246,6 @@ entries(): IterableIterator<[number, number]>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -274,7 +254,7 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; |
+| IterableIterator & lt;[number, number] & gt; |
 
 **错误码：**
 
@@ -293,8 +273,6 @@ every(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -303,7 +281,7 @@ every(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 
 **返回值：**
 
@@ -328,8 +306,6 @@ fill(value: number, start?: number, end?: number): Uint8ClampedArray
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -346,7 +322,7 @@ fill(value: number, start?: number, end?: number): Uint8ClampedArray
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 **错误码：**
 
@@ -365,8 +341,6 @@ filter(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): Uint8Clampe
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -375,13 +349,13 @@ filter(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): Uint8Clampe
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 **错误码：**
 
@@ -400,8 +374,6 @@ find(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number | unde
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -410,7 +382,7 @@ find(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number | unde
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 
 **返回值：**
 
@@ -435,8 +407,6 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -445,7 +415,7 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 
 **返回值：**
 
@@ -470,8 +440,6 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8ClampedArray>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -480,7 +448,7 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8ClampedArray>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, Uint8ClampedArray&gt; | 是 |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 
 **错误码：**
 
@@ -499,8 +467,6 @@ static from(arrayLike: ArrayLike<number>): Uint8ClampedArray
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -515,7 +481,7 @@ static from(arrayLike: ArrayLike<number>): Uint8ClampedArray
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 ## from
 
@@ -526,8 +492,6 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 从一个ArrayLike中创建一个ArkTS Uint8ClampedArray对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -544,7 +508,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 ## from
 
@@ -555,8 +519,6 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 从一个可迭代对象中创建一个ArkTS Uint8ClampedArray对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -573,7 +535,7 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 ## includes
 
@@ -584,8 +546,6 @@ includes(searchElement: number, fromIndex?: number): boolean
 判断ArkTS Uint8ClampedArray是否包含特定元素。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -621,8 +581,6 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -657,8 +615,6 @@ join(separator?: string): string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -692,8 +648,6 @@ keys(): IterableIterator<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -702,7 +656,7 @@ keys(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 **错误码：**
 
@@ -720,8 +674,6 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 返回ArkTS Uint8ClampedArray实例中最后一次出现searchElement的索引，如果对象不包含，则为-1。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -757,8 +709,6 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8ClampedArray>): Uint8ClampedA
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -767,13 +717,13 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8ClampedArray>): Uint8ClampedA
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Uint8ClampedArray&gt; | 是 |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 **错误码：**
 
@@ -792,8 +742,6 @@ static of(...items: number[]): Uint8ClampedArray
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -808,7 +756,7 @@ static of(...items: number[]): Uint8ClampedArray
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 ## reduce
 
@@ -820,8 +768,6 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArray>):
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -830,7 +776,7 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArray>):
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8ClampedArray&gt; | 是 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 
 **返回值：**
 
@@ -855,8 +801,6 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8ClampedA
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -865,7 +809,7 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8ClampedA
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8ClampedArray&gt; | 是 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 | initialValue | U | 是 |
 
 **返回值：**
@@ -891,8 +835,6 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Cla
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -901,7 +843,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Cla
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8ClampedArray&gt; | 是 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 | initialValue | U | 是 |
 
 **返回值：**
@@ -927,8 +869,6 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArr
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -937,7 +877,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArr
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8ClampedArray&gt; | 是 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 
 **返回值：**
 
@@ -962,8 +902,6 @@ reverse(): Uint8ClampedArray
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -972,7 +910,7 @@ reverse(): Uint8ClampedArray
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 **错误码：**
 
@@ -990,8 +928,6 @@ set(array: ArrayLike<number>, offset?: number): void
 将传入的ArrayLike元素依次写入到指定的起始位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1021,8 +957,6 @@ slice(start?: number, end?: number): Uint8ClampedArray
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1038,7 +972,7 @@ slice(start?: number, end?: number): Uint8ClampedArray
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 **错误码：**
 
@@ -1057,8 +991,6 @@ some(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1067,7 +999,7 @@ some(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 |
 
 **返回值：**
 
@@ -1092,8 +1024,6 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint8ClampedArray
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1108,7 +1038,7 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint8ClampedArray
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 **错误码：**
 
@@ -1127,8 +1057,6 @@ subarray(begin?: number, end?: number): Uint8ClampedArray
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1144,7 +1072,7 @@ subarray(begin?: number, end?: number): Uint8ClampedArray
 
 | 类型 |
 | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) |
 
 **错误码：**
 
@@ -1162,8 +1090,6 @@ toLocaleString(): string
 根据当前应用的系统地区获取符合当前文化习惯的数字表示形式，让每个元素调用自己的toLocaleString方法把数字转换为字符串，然后使用逗号将每个元素的结果字符串按照顺序拼接成字符串。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1192,8 +1118,6 @@ toString(): string
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1221,8 +1145,6 @@ values(): IterableIterator<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1231,7 +1153,7 @@ values(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 **错误码：**
 
@@ -1252,8 +1174,6 @@ values(): IterableIterator<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1269,8 +1189,6 @@ ArkTS Uint8ClampedArray底层使用的buffer。
 **类型：** ArrayBuffer
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1288,8 +1206,6 @@ ArkTS Uint8ClampedArray所占的字节数。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1305,8 +1221,6 @@ ArkTS Uint8ClampedArray距离其ArrayBuffer起始位置的偏移。
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1324,8 +1238,6 @@ ArkTS Uint8ClampedArray中每个元素所占的字节数。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1341,8 +1253,6 @@ ArkTS Uint8ClampedArray元素个数。
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

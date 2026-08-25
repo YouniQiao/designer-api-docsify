@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connectToCandidateConfigWithUserAction
 
 ```TypeScript
-function connectToCandidateConfigWithUserAction(networkId: int): Promise<void>
+function connectToCandidateConfigWithUserAction(networkId: number): Promise<void>
 ```
 
 通过networkId连接到指定的候选热点，并等待用户响应结果。 只允许连接自己添加的配置。此方法一次连接一个配置。 应用必须在前台运行。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
@@ -28,7 +26,7 @@ function connectToCandidateConfigWithUserAction(networkId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| networkId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| networkId | number | 是 |
 
 **返回值：**
 
@@ -47,20 +45,3 @@ function connectToCandidateConfigWithUserAction(networkId: int): Promise<void>
 | [2501005](../errorcode-wifi.md#2501005-用户未响应连接请求) |
 | [2501006](../errorcode-wifi.md#2501006-用户拒绝连接请求) |
 | [2501007](../errorcode-wifi.md#2501007-参数校验失败) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  
-  try {
-    let networkId = 0; // 候选网络ID，在添加候选网络时生成
-    wifiManager.connectToCandidateConfigWithUserAction(networkId).then(result => {
-      console.info("result:" + JSON.stringify(result));
-    }).catch((err:number) => {
-      console.error("failed:" + JSON.stringify(err));
-    });
-  }catch(error){  
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

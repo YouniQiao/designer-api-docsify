@@ -16,8 +16,8 @@ LightWeightMap可用于存储具有关联关系的key-value键值对，其中key
 ## 导入模块
 
 ```TypeScript
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
+import { LightWeightMap } from 'kits/@kit.ArkTS';
+import { LightWeightMapCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -27,9 +27,3 @@ import { LightWeightMapCbFn } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [LightWeightMapCbFn](arkts-arkts-lightweightmapcbfn-t.md) |

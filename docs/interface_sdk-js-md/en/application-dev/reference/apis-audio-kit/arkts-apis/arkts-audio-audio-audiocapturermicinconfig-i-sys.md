@@ -4,8 +4,6 @@ Describes audio capturer configuration that can capture microphone input (mic-in
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes audio capturer configuration that can capture microphone input (mic-in
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## capturerInfo
@@ -27,8 +25,6 @@ Capturer attribute information.
 **Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Stream information that describes echo reference signal. If not set this attribu
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -67,8 +61,6 @@ Stream information that describes Mic-In audio stream.
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Prefered input device for this audio capturer. The preferred device must be an i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -107,8 +97,6 @@ Stream information that describes the processed audio stream.
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

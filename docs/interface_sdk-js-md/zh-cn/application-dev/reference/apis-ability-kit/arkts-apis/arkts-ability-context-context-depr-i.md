@@ -6,8 +6,6 @@ Context模块提供了Ability或Application的上下文的基础能力，包括�
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## getAbilityInfo
@@ -19,8 +17,6 @@ getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 检查此能力的配置是否正在更改。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -42,8 +38,6 @@ getAbilityInfo(): Promise<AbilityInfo>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -63,8 +57,6 @@ getApplicationContext(): Context
 获取应用上下文信息。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -86,8 +78,6 @@ getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -107,8 +97,6 @@ getApplicationInfo(): Promise<ApplicationInfo>
 获取有关当前应用程序的信息。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -130,8 +118,6 @@ getAppType(callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -151,8 +137,6 @@ getAppType(): Promise<string>
 获取此应用的类型。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -174,8 +158,6 @@ getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -195,8 +177,6 @@ getAppVersionInfo(): Promise<AppVersionInfo>
 获取应用的版本信息。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -218,8 +198,6 @@ getBundleName(callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -239,8 +217,6 @@ getBundleName(): Promise<string>
 获取当前ability的Bundle名称。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -262,8 +238,6 @@ getCacheDir(callback: AsyncCallback<string>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -283,8 +257,6 @@ getCacheDir(): Promise<string>
 获取该应用程序的内部存储目录。使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -306,8 +278,6 @@ getCallingBundle(callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -327,8 +297,6 @@ getCallingBundle(): Promise<string>
 获取ability调用方的Bundle名称。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -350,8 +318,6 @@ getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -371,8 +337,6 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 获取此能力的当前显示方向。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -394,8 +358,6 @@ getElementName(callback: AsyncCallback<ElementName>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -416,8 +378,6 @@ getElementName(): Promise<ElementName>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -437,8 +397,6 @@ getExternalCacheDir(callback: AsyncCallback<string>): void
 获取应用程序的外部缓存目录。使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 7
 
@@ -462,8 +420,6 @@ getExternalCacheDir(): Promise<string>
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 7
 
 **模型约束：** 此接口仅可在FA模型下使用。
@@ -486,8 +442,6 @@ getFilesDir(callback: AsyncCallback<string>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -507,8 +461,6 @@ getFilesDir(): Promise<string>
 获取内部存储器上此应用程序的文件目录。使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -530,8 +482,6 @@ getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -551,8 +501,6 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 获取应用的ModuleInfo对象。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -574,8 +522,6 @@ getOrCreateDistributedDir(): Promise<string>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -595,8 +541,6 @@ getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 获取Ability或应用的分布式文件路径。使用Promise异步回调。 如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -618,8 +562,6 @@ getOrCreateLocalDir(): Promise<string>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -639,8 +581,6 @@ getOrCreateLocalDir(callback: AsyncCallback<string>): void
 获取应用程序的本地根目录。使用callback异步回调。 如果是第一次调用，将创建目录。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -662,8 +602,6 @@ getProcessInfo(callback: AsyncCallback<ProcessInfo>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -683,8 +621,6 @@ getProcessInfo(): Promise<ProcessInfo>
 获取有关当前进程的信息，包括进程id和名称。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -706,8 +642,6 @@ getProcessName(callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -727,8 +661,6 @@ getProcessName(): Promise<string>
 获取当前进程的名称。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -750,8 +682,6 @@ isUpdatingConfigurations(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -771,8 +701,6 @@ isUpdatingConfigurations(): Promise<boolean>
 检查此能力的配置是否正在更改。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -794,8 +722,6 @@ printDrawnCompleted(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -815,8 +741,6 @@ printDrawnCompleted(): Promise<void>
 通知系统绘制此页面功能所需的时间。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -842,8 +766,6 @@ requestPermissionsFromUser(
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -865,8 +787,6 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 从系统请求某些权限。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -895,8 +815,6 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCal
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -917,8 +835,6 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 设置当前Ability的显示方向。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -946,11 +862,7 @@ setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
-
-**替代接口：** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -973,11 +885,7 @@ setShowOnLockScreen(show: boolean): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
-
-**替代接口：** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1005,8 +913,6 @@ setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 12
 
 **替代接口：** setWakeUpScreen
@@ -1031,8 +937,6 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 设置恢复此功能时是否唤醒屏幕。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 12
 
@@ -1064,8 +968,6 @@ verifyPermission(permission: string, options?: PermissionOptions): Promise<numbe
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -1093,8 +995,6 @@ verifyPermission(permission: string, options: PermissionOptions, callback: Async
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -1116,8 +1016,6 @@ verifyPermission(permission: string, callback: AsyncCallback<number>): void
 验证系统中运行的当前pid和uid是否具有指定的权限。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

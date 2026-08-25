@@ -8,8 +8,6 @@ Enumerates the test result types of the click event.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 21
 
 **Substitutes:** [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md)
@@ -25,8 +23,6 @@ EditText = 0
 Editable area.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 21
 
@@ -46,8 +42,6 @@ Email address.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 21
 
 **Substitutes:** [Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#email)
@@ -65,8 +59,6 @@ HttpAnchor = 2
 Hyperlink whose **src** is **http**.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 21
 
@@ -86,8 +78,6 @@ Image with a hyperlink, where **src** is **http**.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 21
 
 **Substitutes:** [HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#httpanchorimg)
@@ -105,8 +95,6 @@ Img = 4
 HTML::img tag.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 21
 
@@ -126,8 +114,6 @@ Geographical address.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 21
 
 **Substitutes:** [Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#map)
@@ -146,8 +132,6 @@ Phone number.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 21
 
 **Substitutes:** [Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#phone)
@@ -165,8 +149,6 @@ Unknown = 7
 Unknown content.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 21
 

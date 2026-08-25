@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## findProxyForUrl
@@ -29,8 +29,6 @@ Parses the specified URL proxy address based on the configured PAC script and re
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -44,12 +42,3 @@ Parses the specified URL proxy address based on the configured PAC script and re
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let proxyInfo = connection.findProxyForUrl("http://example.com");
-console.info(proxyInfo);
-```

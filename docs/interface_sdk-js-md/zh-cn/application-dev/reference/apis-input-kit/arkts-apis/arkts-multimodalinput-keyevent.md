@@ -6,7 +6,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Action, Key, KeyEvent } from '@kit.InputKit';
+import { Action, Key, KeyEvent } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总

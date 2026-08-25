@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ WIFI = 1
 表示WiFi扫描信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -36,8 +32,6 @@ BLUETOOTH = 2
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ CELLULAR = 3
 表示蜂窝小区信息。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core
 

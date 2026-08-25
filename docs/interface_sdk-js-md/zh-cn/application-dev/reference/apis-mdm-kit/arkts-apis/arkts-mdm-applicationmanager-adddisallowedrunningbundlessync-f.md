@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedRunningBundlesSync
@@ -22,8 +22,6 @@ function addDisallowedRunningBundlesSync(
 > 若指定应用正在运行，将其加入禁止名单后，系统将立即终止该应用进程。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -48,25 +46,3 @@ function addDisallowedRunningBundlesSync(
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-try {
-  applicationManager.addDisallowedRunningBundlesSync(wantTemp, appIds);
-  console.info('Succeeded in adding disallowed running bundles.');
-} catch (err) {
-  console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```

@@ -4,8 +4,6 @@ USB设备接口描述符。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ USB设备接口描述符。
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## bClass
 
 ```TypeScript
-bClass: int
+bClass: number
 ```
 
 类型代码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -37,16 +33,14 @@ bClass: int
 ## bInterfaceNumber
 
 ```TypeScript
-bInterfaceNumber: int
+bInterfaceNumber: number
 ```
 
 接口编号。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -55,16 +49,14 @@ bInterfaceNumber: int
 ## bProtocol
 
 ```TypeScript
-bProtocol: int
+bProtocol: number
 ```
 
 协议代码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
@@ -73,16 +65,14 @@ bProtocol: int
 ## bSubClass
 
 ```TypeScript
-bSubClass: int
+bSubClass: number
 ```
 
 子类型代码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 

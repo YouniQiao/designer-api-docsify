@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isByodAdmin
@@ -15,8 +15,6 @@ function isByodAdmin(admin: Want): boolean
 根据企业设备管理扩展组件查询当前应用是否被激活为BYOD设备管理应用。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.START_PROVISIONING_MESSAGE
 
@@ -42,23 +40,3 @@ function isByodAdmin(admin: Want): boolean
 | --- |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { adminManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 请根据实际情况替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: boolean = adminManager.isByodAdmin(wantTemp);
-  console.info(`Succeeded in querying admin is byod admin or not : ${result}`);
-} catch (error) {
-  console.error(`Failed to query admin is byod admin or not. Code is ${error.code}, message is ${error.message}`);
-}
-```

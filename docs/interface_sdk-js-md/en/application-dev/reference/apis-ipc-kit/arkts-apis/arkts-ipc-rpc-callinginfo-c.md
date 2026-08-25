@@ -4,14 +4,12 @@ Defines the IPC context, including the PID and UID, local and remote device IDs,
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## callerPid
@@ -27,8 +25,6 @@ PID of the caller. callerPid is valid only when the isLocalCalling is true. Othe
 **Default:** -1
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -46,8 +42,6 @@ Token ID of the caller. callerTokenId is valid only when the isLocalCalling is t
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## callerUid
@@ -63,8 +57,6 @@ UID of the caller. callerUid is valid only when the isLocalCalling is true. Othe
 **Default:** -1
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -82,8 +74,6 @@ Whether the peer end of the current communication is a process on the local devi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## localDeviceId
@@ -98,8 +88,6 @@ Local device ID. This parameter is valid only in RPC scenarios. localDeviceId is
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## remoteDeviceId
@@ -113,7 +101,5 @@ Remote device ID. This parameter is valid only in RPC scenarios. remoteDeviceId 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core

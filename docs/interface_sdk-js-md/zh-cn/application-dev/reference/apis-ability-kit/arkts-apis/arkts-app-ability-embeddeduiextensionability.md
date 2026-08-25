@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { EmbeddedUIExtensionAbility } from '@kit.AbilityKit';
+import { EmbeddedUIExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

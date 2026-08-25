@@ -8,8 +8,6 @@ Enumerates the canvas clipping modes.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DIFFERENCE
@@ -22,8 +20,6 @@ Clips a specified area. That is, the difference set is obtained.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## INTERSECT
@@ -35,7 +31,5 @@ INTERSECT = 1
 Retains a specified area. That is, the intersection is obtained.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

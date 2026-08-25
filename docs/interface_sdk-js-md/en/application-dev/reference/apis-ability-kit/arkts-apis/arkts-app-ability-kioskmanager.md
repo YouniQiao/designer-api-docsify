@@ -4,8 +4,6 @@ The KioskManager module provides APIs to manage kiosk mode, including entering/e
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,7 +11,7 @@ The KioskManager module provides APIs to manage kiosk mode, including entering/e
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from '@kit.AbilityKit';
+import { kioskManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

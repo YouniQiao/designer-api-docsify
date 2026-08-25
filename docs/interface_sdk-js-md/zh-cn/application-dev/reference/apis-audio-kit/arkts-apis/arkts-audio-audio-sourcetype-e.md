@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_INVALID
@@ -17,8 +15,6 @@ SOURCE_TYPE_INVALID = -1
 无效的音频源。SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ Mic音频源。SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_VOICE_RECOGNITION
@@ -46,8 +40,6 @@ SOURCE_TYPE_VOICE_RECOGNITION = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_PLAYBACK_CAPTURE
@@ -59,8 +51,6 @@ SOURCE_TYPE_PLAYBACK_CAPTURE = 2
 播放音频流（内录）录制音频源。SystemCapability.Multimedia.Audio.PlaybackCapture从API version 10开始支持，从API version 12开始废弃，建议使用[录屏接口AVScreenCapture](../apis-media-kit/capi-avscreencapture.md)替代。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 12
 
@@ -78,8 +68,6 @@ SOURCE_TYPE_VOICE_COMMUNICATION = 7
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_VOICE_MESSAGE
@@ -91,8 +79,6 @@ SOURCE_TYPE_VOICE_MESSAGE = 10
 短语音消息的音频源。SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -106,8 +92,6 @@ SOURCE_TYPE_CAMCORDER = 13
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_UNPROCESSED
@@ -120,8 +104,6 @@ SOURCE_TYPE_UNPROCESSED = 14
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## SOURCE_TYPE_LIVE
@@ -133,7 +115,5 @@ SOURCE_TYPE_LIVE = 17
 直播场景的音频源，在支持的设备上会提供系统回声消除能力。SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

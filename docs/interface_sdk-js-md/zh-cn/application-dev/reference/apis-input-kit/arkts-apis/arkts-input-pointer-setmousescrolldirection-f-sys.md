@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## setMouseScrollDirection
@@ -15,8 +15,6 @@ function setMouseScrollDirection(inverted: boolean): Promise<void>
 设置鼠标滚轮滚动的方向，使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
 
@@ -43,62 +41,3 @@ function setMouseScrollDirection(inverted: boolean): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Button('setMouseScrollDirection')
-        .onClick(() => {
-          try {
-            // 设置鼠标滚动方向
-            pointer.setMouseScrollDirection(false).then(() => {
-              console.info(`Succeeded in setting mouse scroll direction.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { pointer } from '@kit.InputKit';
-import { BusinessError, AsyncCallback } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text("setMouseScrollDirection")
-        .onClick(() => {
-          try {
-            // 设置鼠标滚动方向
-            pointer.setMouseScrollDirection(false).then(() => {
-              console.info(`Succeeded in setting mouse scroll direction.`);
-            });
-          } catch (error) {
-            console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```

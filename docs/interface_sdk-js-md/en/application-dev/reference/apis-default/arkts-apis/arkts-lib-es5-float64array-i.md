@@ -2,8 +2,6 @@
 
 A typed array of 64-bit float values. The contents are initialized to 0. If the requested number of bytes could not be allocated an exception is raised.
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -16,8 +14,6 @@ copyWithin(target: number, start: number, end?: number): this
 ```
 
 Returns the this object after copying a section of the array identified by start and end to the same array starting at position target
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -39,8 +35,6 @@ every(predicate: (value: number, index: number, array: Float64Array) => unknown,
 
 Determines whether all the members of an array satisfy the specified test.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -59,8 +53,6 @@ fill(value: number, start?: number, end?: number): this
 ```
 
 Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -82,8 +74,6 @@ filter(predicate: (value: number, index: number, array: Float64Array) => any, th
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -102,8 +92,6 @@ find(predicate: (value: number, index: number, obj: Float64Array) => boolean, th
 ```
 
 Returns the value of the first element in the array where predicate is true, and undefined otherwise.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -124,8 +112,6 @@ findIndex(predicate: (value: number, index: number, obj: Float64Array) => boolea
 
 Returns the index of the first element in the array where predicate is true, and -1 otherwise.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -145,8 +131,6 @@ forEach(callbackfn: (value: number, index: number, array: Float64Array) => void,
 
 Performs the specified action for each element in an array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -161,8 +145,6 @@ indexOf(searchElement: number, fromIndex?: number): number
 ```
 
 Returns the index of the first occurrence of a value in an array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -183,8 +165,6 @@ join(separator?: string): string
 
 Adds all the elements of an array separated by the specified separator string.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -202,8 +182,6 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 ```
 
 Returns the index of the last occurrence of a value in an array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -224,8 +202,6 @@ map(callbackfn: (value: number, index: number, array: Float64Array) => number, t
 
 Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -245,8 +221,6 @@ reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: n
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -262,8 +236,6 @@ Calls the specified callback function for all the elements in an array. The retu
 ```TypeScript
 reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number, initialValue: number): number
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -284,8 +256,6 @@ reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: num
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -305,8 +275,6 @@ reduceRight(callbackfn: (previousValue: number, currentValue: number, currentInd
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -322,8 +290,6 @@ Calls the specified callback function for all the elements in an array, in desce
 ```TypeScript
 reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Float64Array) => number, initialValue: number): number
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -344,8 +310,6 @@ reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -365,8 +329,6 @@ reverse(): Float64Array
 
 Reverses the elements in an Array.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -378,8 +340,6 @@ set(array: ArrayLike<number>, offset?: number): void
 ```
 
 Sets a value or an array of values.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -395,8 +355,6 @@ slice(start?: number, end?: number): Float64Array
 ```
 
 Returns a section of an array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -417,8 +375,6 @@ some(predicate: (value: number, index: number, array: Float64Array) => unknown, 
 
 Determines whether the specified callback function returns true for any element of an array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -438,8 +394,6 @@ sort(compareFn?: (a: number, b: number) => number): this
 
 Sorts an array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -458,8 +412,6 @@ subarray(begin?: number, end?: number): Float64Array
 
 at begin, inclusive, up to end, exclusive.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -477,8 +429,6 @@ at begin, inclusive, up to end, exclusive.
 toString(): string
 ```
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -490,8 +440,6 @@ valueOf(): Float64Array
 ```
 
 Returns the primitive value of the specified object.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -505,8 +453,6 @@ Returns the primitive value of the specified object.
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## buffer
 
 ```TypeScript
@@ -516,8 +462,6 @@ readonly buffer: ArrayBufferLike
 The ArrayBuffer instance referenced by the array.
 
 **Type:** [ArrayBufferLike](arkts-arraybufferlike-t.md)
-
-**ArkTS mode:** 
 
 ## byteLength
 
@@ -529,8 +473,6 @@ The length in bytes of the array.
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## byteOffset
 
 ```TypeScript
@@ -540,8 +482,6 @@ readonly byteOffset: number
 The offset in bytes of the array.
 
 **Type:** number
-
-**ArkTS mode:** 
 
 ## BYTES_PER_ELEMENT
 
@@ -553,8 +493,6 @@ The size in bytes of each element in the array.
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## length
 
 ```TypeScript
@@ -564,5 +502,3 @@ readonly length: number
 The length of the array.
 
 **Type:** number
-
-**ArkTS mode:** 

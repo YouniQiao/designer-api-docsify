@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeKeyEventPolicies
@@ -15,8 +15,6 @@ function removeKeyEventPolicies(admin: Want, keyCodes: Array<KeyCode>): void
 Removes a key event handling policy. After the deletion is successful, the system restores the default handling behavior for the specified key event. This API is applicable to scenarios where there is a need to restore the default key behavior, helping enterprise administrators flexibly adjust device key response policies to meet the needs of different business scenarios.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -40,27 +38,3 @@ Removes a key event handling policy. After the deletion is successful, the syste
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let keyCodes: Array<systemManager.KeyCode> = [
-  systemManager.KeyCode.POWER, systemManager.KeyCode.VOLUME_UP,
-];
-
-try {
-  systemManager.removeKeyEventPolicies(wantTemp, keyCodes);
-  console.info('Succeeded in removing key event policies.');
-} catch (err) {
-  console.error(`Failed to remove key event policies. Code is ${err.code}, message is ${err.message}`);
-}
-```

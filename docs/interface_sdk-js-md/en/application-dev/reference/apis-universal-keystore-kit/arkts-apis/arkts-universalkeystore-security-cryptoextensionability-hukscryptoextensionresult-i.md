@@ -4,14 +4,12 @@ Represents the operation result of crypto extension.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## Modules to Import
 
 ```TypeScript
-import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
+import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## authState
@@ -22,11 +20,9 @@ authState?: number
 
 Auth state.
 
-**Type:** int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -42,8 +38,6 @@ The cert array.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## errInfo
@@ -57,8 +51,6 @@ The detailed error information returned.
 **Type:** huksExternalCrypto.HuksExternalErrorInfo
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +68,6 @@ The provider resource handle.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## outData
@@ -91,8 +81,6 @@ Returned data.
 **Type:** Uint8Array
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -108,8 +96,6 @@ Returned property info.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## resourceId
@@ -124,8 +110,6 @@ The returned resource ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -138,11 +122,9 @@ resultCode: number
 
 Returned code.
 
-**Type:** int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -154,10 +136,8 @@ retryCount?: number
 
 The remaining retry count when the PIN is incorrect.
 
-**Type:** int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## uninstall
@@ -20,8 +20,6 @@ function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 26.0.0
 
 **替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
@@ -51,103 +49,6 @@ function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 参数需根据实际情况进行替换
-bundleManager.uninstall(wantTemp, 'bundleName', 100, true).then(() => {
-  console.info('Succeeded in uninstalling bundles.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
 
 
 ## uninstall
@@ -164,8 +65,6 @@ function uninstall(admin: Want, bundleName: string, userId: number, callback: As
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 26.0.0
 
 **替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
@@ -196,10 +95,6 @@ function uninstall(admin: Want, bundleName: string, userId: number, callback: As
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [uninstall](#uninstall)
 
 
 ## uninstall
@@ -216,8 +111,6 @@ function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callbac
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 26.0.0
 
 **替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
@@ -249,10 +142,6 @@ function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callbac
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [uninstall](#uninstall)
-
 
 ## uninstall
 
@@ -267,8 +156,6 @@ function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: 
 > 允许卸载时，调用此接口卸载应用会返回401错误码。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -301,7 +188,3 @@ function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: 
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [uninstall](#uninstall)

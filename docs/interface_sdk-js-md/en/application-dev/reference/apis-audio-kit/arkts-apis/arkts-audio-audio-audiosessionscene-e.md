@@ -4,8 +4,6 @@ Enumerates the audio session scenes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_SCENE_MEDIA
@@ -17,8 +15,6 @@ AUDIO_SESSION_SCENE_MEDIA = 0
 Scene for media.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ Scene for game.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_SCENE_VOICE_COMMUNICATION
@@ -45,7 +39,5 @@ AUDIO_SESSION_SCENE_VOICE_COMMUNICATION = 2
 Scene for voice communication.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core

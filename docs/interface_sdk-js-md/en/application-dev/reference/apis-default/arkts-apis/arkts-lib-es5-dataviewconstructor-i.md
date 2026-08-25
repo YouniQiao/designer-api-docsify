@@ -1,7 +1,5 @@
 # DataViewConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new(buffer: ArrayBufferLike, byteOffset?: number, byteLength?: number): DataView
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,5 +30,3 @@ readonly prototype: DataView
 ```
 
 **Type:** DataView
-
-**ArkTS mode:** 

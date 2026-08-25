@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## addVirtualScreenSurface
 
 ```TypeScript
-function addVirtualScreenSurface(screenId: long, surfaceId: string, surfaceRegion?: Rect): Promise<void>
+function addVirtualScreenSurface(screenId: number, surfaceId: string, surfaceRegion?: Rect): Promise<void>
 ```
 
 为虚拟屏幕添加surface。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -28,7 +26,7 @@ function addVirtualScreenSurface(screenId: long, surfaceId: string, surfaceRegio
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| screenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| screenId | number | 是 |
 | surfaceId | string | 是 |
 | surfaceRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | 否 |
 
@@ -47,82 +45,3 @@ function addVirtualScreenSurface(screenId: long, surfaceId: string, surfaceRegio
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 | [1400004](../errorcode-display.md#1400004-参数异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  xComponentController: XComponentController = new XComponentController();
-
-  addVirtualScreenSurface = () => {
-    let screenId: number = 1;
-    let surfaceId = this.xComponentController.getXComponentSurfaceId();
-    display.addVirtualScreenSurface(screenId, surfaceId).then(() => {
-      console.info('Succeeded in adding surface for the virtual screen.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to add surface for the virtual screen. Code:${err.code}, message is ${err.message}`);
-    });
-  }
-  build() {
-    RelativeContainer() {
-      XComponent({
-        type: XComponentType.SURFACE,
-        controller: this.xComponentController
-      })
-      Button('addSurface')
-        .onClick((event: ClickEvent) => {
-          this.addVirtualScreenSurface();
-      }).width('100%')
-      .height(20)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  xComponentController: XComponentController = new XComponentController();
-
-  addVirtualScreenSurface = () => {
-    // 虚拟屏ID需从createVirtualScreen()返回值获取
-    let screenId: number = 1;
-    let surfaceId = this.xComponentController.getXComponentSurfaceId();
-    display.addVirtualScreenSurface(screenId, surfaceId).then(() => {
-      console.info('Succeeded in adding surface for the virtual screen.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to add surface for the virtual screen. Code: ${err.code}, message: ${err.message}`);
-    });
-  };
-  build() {
-    RelativeContainer() {
-      XComponent({
-        type: XComponentType.SURFACE,
-        controller: this.xComponentController
-      })
-      Button('addSurface')
-        .onClick((event: ClickEvent) => {
-          this.addVirtualScreenSurface();
-      }).width('100%')
-      .height(20)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```

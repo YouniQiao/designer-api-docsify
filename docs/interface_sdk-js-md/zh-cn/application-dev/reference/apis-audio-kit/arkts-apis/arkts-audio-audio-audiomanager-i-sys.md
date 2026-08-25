@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## disableSafeMediaVolume
@@ -23,8 +21,6 @@ disableSafeMediaVolume(): Promise<void>
 设置安全音量为非激活状态。使用Promise异步回调。 设置为非激活状态后，当设备长时间高音量播放时，不再自动提醒用户降低到安全音量。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -45,18 +41,6 @@ disableSafeMediaVolume(): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.disableSafeMediaVolume().then(() => {
-  console.info('disableSafeMediaVolume success.');
-}).catch((err: BusinessError) => {
-  console.error(`disableSafeMediaVolume fail: ${err.code},${err.message}`);
-});
-```
-
 ## getCollaborativeManager
 
 ```TypeScript
@@ -66,8 +50,6 @@ getCollaborativeManager(): AudioCollaborativeManager
 获取移动全景声管理器。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -85,15 +67,6 @@ getCollaborativeManager(): AudioCollaborativeManager
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioManager: audio.AudioManager = audio.getAudioManager();
-let audioCollaborativeManager: audio.AudioCollaborativeManager = audioManager.getCollaborativeManager();
-```
-
 ## getEffectManager
 
 ```TypeScript
@@ -103,8 +76,6 @@ getEffectManager(): AudioEffectManager
 获取音效会话管理器。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -122,14 +93,6 @@ getEffectManager(): AudioEffectManager
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let audioEffectManager: audio.AudioEffectManager = audioManager.getEffectManager();
-```
-
 ## getExtraParameters
 
 ```TypeScript
@@ -139,8 +102,6 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 获取指定音频参数值。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -167,19 +128,6 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subKeys: Array<String> = ['key_example'];
-audioManager.getExtraParameters('key_example', subKeys).then((value: Record<string, string>) => {
-  console.info(`Promise returned to indicate that the value of the audio extra parameters is obtained ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get the audio extra parameters ${err}`);
-});
-```
-
 ## getRecordingManager
 
 ```TypeScript
@@ -189,8 +137,6 @@ getRecordingManager(): AudioRecordingManager
 获取录音策略管理器。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -210,12 +156,6 @@ getRecordingManager(): AudioRecordingManager
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-let audioRecordingManager: audio.AudioRecordingManager = audioManager.getRecordingManager();
-```
-
 ## on('volumeChange')
 
 ```TypeScript
@@ -232,8 +172,6 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** volumeChange
@@ -248,16 +186,6 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 | --- | --- | --- |
 | type | 'volumeChange' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
-  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
-  console.info(`Volume level: ${volumeEvent.volume} `);
-  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-});
-```
 
 ## on('ringerModeChange')
 
@@ -274,8 +202,6 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** ringerModeChange
@@ -291,31 +217,15 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 | type | 'ringerModeChange' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
-  console.info(`Updated ringermode: ${ringerMode}`);
-});
-```
-
 ## reportPlaybackCaptureUserAllowed
 
-ArkTS-Dyn:
 ```TypeScript
 reportPlaybackCaptureUserAllowed(streamId: number, allowed: boolean): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-reportPlaybackCaptureUserAllowed(streamId: long, allowed: boolean): Promise<void>
 ```
 
 报告用户允许的结果，以响应来自特定系统应用的播放捕获请求给音频系统。 系统将根据该结果继续启动播放捕获或返回失败。 该 API 使用 Promise 来返回结果。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -329,7 +239,7 @@ reportPlaybackCaptureUserAllowed(streamId: long, allowed: boolean): Promise<void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| streamId | number | 是 |
 | allowed | boolean | 是 |
 
 **返回值：**
@@ -356,8 +266,6 @@ setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **系统接口：** 此接口为系统接口。
@@ -369,30 +277,6 @@ setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void
 | scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the audio scene mode. ${err}`);
-    return;
-  }
-  console.info('Callback invoked to indicate a successful setting of the audio scene mode.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL).then(() => {
-  console.info('Promise returned to indicate a successful setting of the audio scene mode.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the audio scene mode ${err}`);
-});
-```
-
 ## setAudioScene
 
 ```TypeScript
@@ -402,8 +286,6 @@ setAudioScene(scene: AudioScene): Promise<void>
 设置音频场景模式。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -421,10 +303,6 @@ setAudioScene(scene: AudioScene): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setAudioScene](#setaudioscene)
-
 ## setExtraParameters
 
 ```TypeScript
@@ -434,8 +312,6 @@ setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<vo
 音频扩展参数设置。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -464,20 +340,3 @@ setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<vo
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let kvpairs = {} as Record<string, string>;
-kvpairs = {
-  'key_example': 'value_example'
-};
-
-audioManager.setExtraParameters('key_example', kvpairs).then(() => {
-  console.info('Promise returned to indicate a successful setting of the extra parameters.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the audio extra parameters ${err}`);
-});
-```

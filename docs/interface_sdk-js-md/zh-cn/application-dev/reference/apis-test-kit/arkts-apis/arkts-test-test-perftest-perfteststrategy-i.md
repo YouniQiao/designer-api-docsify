@@ -10,14 +10,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Test.PerfTest
 
 ## 导入模块
 
 ```TypeScript
-import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from 'kits/@kit.TestKit';
 ```
 
 ## actionCode
@@ -31,8 +29,6 @@ actionCode: Callback<Callback<boolean>>
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -50,8 +46,6 @@ bundleName?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
@@ -59,16 +53,14 @@ bundleName?: string
 ## iterations
 
 ```TypeScript
-iterations?: int
+iterations?: number
 ```
 
 测试迭代执行次数，取值范围为大于0的整数，默认值为5。超出范围时抛出异常。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -86,8 +78,6 @@ metrics: Array<PerfMetric>
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
@@ -104,8 +94,6 @@ resetCode?: Callback<Callback<boolean>>
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
@@ -113,16 +101,14 @@ resetCode?: Callback<Callback<boolean>>
 ## timeout
 
 ```TypeScript
-timeout?: int
+timeout?: number
 ```
 
 单次代码段（actionCode/resetCode）执行的超时时间，取值范围为大于0的整数，单位：ms，默认值为10000ms。 当测试代码段执行耗时较长时，可适当增大此值以避免超时，超时后将触发异常，并终止测试执行。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## disableCellularDataRoaming
 
 ```TypeScript
-function disableCellularDataRoaming(slotId: int, callback: AsyncCallback<void>): void
+function disableCellularDataRoaming(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 Disables the cellular data roaming service. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Disables the cellular data roaming service. This API uses an asynchronous callba
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -43,44 +41,16 @@ Disables the cellular data roaming service. This API uses an asynchronous callba
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.disableCellularDataRoaming(0, (err: BusinessError) => {
-    if(err) {
-        console.error(`disableCellularDataRoaming fail. code: ${err.code}, message: ${err.message}`);
-    } else {
-        console.info(`disableCellularDataRoaming success`);
-    }
-});
-```
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.disableCellularDataRoaming(0).then(() => {
-    console.info(`disableCellularDataRoaming success.`);
-}).catch((err: BusinessError) => {
-    console.error(`disableCellularDataRoaming fail. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## disableCellularDataRoaming
 
 ```TypeScript
-function disableCellularDataRoaming(slotId: int): Promise<void>
+function disableCellularDataRoaming(slotId: number): Promise<void>
 ```
 
 Disables the cellular data roaming service. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -92,7 +62,7 @@ Disables the cellular data roaming service. This API uses a promise to return th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -111,7 +81,3 @@ Disables the cellular data roaming service. This API uses a promise to return th
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [disableCellularDataRoaming](#disablecellulardataroaming)

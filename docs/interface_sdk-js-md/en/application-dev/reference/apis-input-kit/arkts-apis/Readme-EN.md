@@ -25,17 +25,13 @@
   - [off](arkts-input-inputconsumer-off-f.md)
   <!--Del-->
   - [off(system api)](arkts-input-inputconsumer-off-f-sys.md)<!--DelEnd-->
-  - [offHotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md)
   <!--Del-->
   - [offKey(system api)](arkts-input-inputconsumer-offkey-f-sys.md)<!--DelEnd-->
-  - [offKeyPressed](arkts-input-inputconsumer-offkeypressed-f.md)
   - [on](arkts-input-inputconsumer-on-f.md)
   <!--Del-->
   - [on(system api)](arkts-input-inputconsumer-on-f-sys.md)<!--DelEnd-->
-  - [onHotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md)
   <!--Del-->
   - [onKey(system api)](arkts-input-inputconsumer-onkey-f-sys.md)<!--DelEnd-->
-  - [onKeyPressed](arkts-input-inputconsumer-onkeypressed-f.md)
   <!--Del-->
   - [setShieldStatus(system api)](arkts-input-inputconsumer-setshieldstatus-f-sys.md)<!--DelEnd-->
   - [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md)
@@ -65,9 +61,7 @@
   - [getKeyboardTypeSync](arkts-input-inputdevice-getkeyboardtypesync-f.md)
   - [isFunctionKeyEnabled](arkts-input-inputdevice-isfunctionkeyenabled-f.md)
   - [off](arkts-input-inputdevice-off-f.md)
-  - [offChange](arkts-input-inputdevice-offchange-f.md)
   - [on](arkts-input-inputdevice-on-f.md)
-  - [onChange](arkts-input-inputdevice-onchange-f.md)
   - [setFunctionKeyEnabled](arkts-input-inputdevice-setfunctionkeyenabled-f.md)
   <!--Del-->
   - [setInputDeviceEnabled(system api)](arkts-input-inputdevice-setinputdeviceenabled-f-sys.md)<!--DelEnd-->
@@ -135,55 +129,7 @@
   <!--Del-->
   - [off(system api)](arkts-input-inputmonitor-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [offFingerprint(system api)](arkts-input-inputmonitor-offfingerprint-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offFourFingersSwipe(system api)](arkts-input-inputmonitor-offfourfingersswipe-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offKeyPressed(system api)](arkts-input-inputmonitor-offkeypressed-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offMouse(system api)](arkts-input-inputmonitor-offmouse-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offPinch(system api)](arkts-input-inputmonitor-offpinch-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offRotate(system api)](arkts-input-inputmonitor-offrotate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offSwipeInward(system api)](arkts-input-inputmonitor-offswipeinward-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offThreeFingersSwipe(system api)](arkts-input-inputmonitor-offthreefingersswipe-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offThreeFingersTap(system api)](arkts-input-inputmonitor-offthreefingerstap-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offTouch(system api)](arkts-input-inputmonitor-offtouch-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offTouchscreenPinch(system api)](arkts-input-inputmonitor-offtouchscreenpinch-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offTouchscreenSwipe(system api)](arkts-input-inputmonitor-offtouchscreenswipe-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [on(system api)](arkts-input-inputmonitor-on-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFingerprint(system api)](arkts-input-inputmonitor-onfingerprint-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFourFingersSwipe(system api)](arkts-input-inputmonitor-onfourfingersswipe-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onKeyPressed(system api)](arkts-input-inputmonitor-onkeypressed-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onMouse(system api)](arkts-input-inputmonitor-onmouse-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onPinch(system api)](arkts-input-inputmonitor-onpinch-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onRotate(system api)](arkts-input-inputmonitor-onrotate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onSwipeInward(system api)](arkts-input-inputmonitor-onswipeinward-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onThreeFingersSwipe(system api)](arkts-input-inputmonitor-onthreefingersswipe-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onThreeFingersTap(system api)](arkts-input-inputmonitor-onthreefingerstap-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onTouch(system api)](arkts-input-inputmonitor-ontouch-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onTouchscreenPinch(system api)](arkts-input-inputmonitor-ontouchscreenpinch-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onTouchscreenSwipe(system api)](arkts-input-inputmonitor-ontouchscreenswipe-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [queryTouchEvents(system api)](arkts-input-inputmonitor-querytouchevents-f-sys.md)<!--DelEnd-->
   <!--Del-->

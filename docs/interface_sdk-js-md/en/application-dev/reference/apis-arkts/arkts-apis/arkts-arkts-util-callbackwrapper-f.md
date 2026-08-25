@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## callbackWrapper
@@ -27,8 +27,6 @@ Calls back an asynchronous function. In the callback, the first parameter indica
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -44,17 +42,3 @@ Calls back an asynchronous function. In the callback, the first parameter indica
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | [function](arkts-arkts-taskpool-task-c.md) |
-
-**Examples**
-
-```TypeScript
-async function fn(input: string) {
-  return input;
-}
-let cb = util.callbackWrapper(fn);
-cb('hello world', (err : Object, ret : string) => {
-  if (err) throw new Error;
-  console.info(ret);
-});
-// Output: hello world
-```

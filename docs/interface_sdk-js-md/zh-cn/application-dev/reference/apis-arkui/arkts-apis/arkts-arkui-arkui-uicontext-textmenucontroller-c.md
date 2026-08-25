@@ -7,17 +7,15 @@ TextMenuController用于控制文本选择菜单的行为，支持设置菜单�
 
 **起始版本：** 16
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## disableMenuItems
@@ -41,7 +39,7 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 > 、TextInput、Search、
 > RichEditor、Web。
 > &gt;
-> - 系统服务菜单项指除TextMenuItemId中的复制、剪切、全选、粘贴以外的菜单项。
+> - 系统服务菜单项指除[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)中的复制、剪切、全选、粘贴以外的菜单项。
 > &gt;
 > - 当disableSystemServiceMenuItems与disableMenuItems同时设置时，以先设置的disableSystemServiceMenuItems的设置结果为准。。
 > &gt;
@@ -57,8 +55,6 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -69,52 +65,7 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| items | Array & lt;TextMenuItemId & gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { TextMenuController } from '@kit.ArkUI';
-
-// xxx.ets
-@Entry
-@Component
-struct Index {
-  aboutToAppear(): void {
-    // 禁用搜索和翻译菜单。
-    TextMenuController.disableMenuItems([TextMenuItemId.SEARCH, TextMenuItemId.TRANSLATE]);
-  }
-
-  aboutToDisappear(): void {
-    // 恢复系统服务菜单。
-    TextMenuController.disableMenuItems([]);
-  }
-
-  build() {
-    Row() {
-      Column() {
-        TextInput({ text: '这是一个TextInput，长按弹出文本选择菜单' })
-          .height(60)
-          .fontStyle(FontStyle.Italic)
-          .fontWeight(FontWeight.Bold)
-          .textAlign(TextAlign.Center)
-          .caretStyle({ width: '4vp' })
-          .editMenuOptions({
-            onCreateMenu: (menuItems: Array<TextMenuItem>) => {
-                // menuItems不包含搜索和翻译。
-                return menuItems;
-            },
-            onMenuItemClick: (menuItem: TextMenuItem, textRange: TextRange) => {
-                // onMenuItemClick回调函数返回boolean类型
-                return false;
-            }
-          })
-      }.width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| items | Array&lt;[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)&gt; | 是 |
 
 ## disableSystemServiceMenuItems
 
@@ -134,7 +85,7 @@ static disableSystemServiceMenuItems(disable: boolean): void
 > &gt;
 > - 涉及文本选择菜单的组件有 Text、TextArea、TextInput、Search、RichEditor、Web。
 > &gt;
-> - 系统服务菜单项指除TextMenuItemId中的复制、剪切、全选、粘贴以外的菜单项。
+> - 系统服务菜单项指除[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)中的复制、剪切、全选、粘贴以外的菜单项。
 > &gt;
 > - 当disableSystemServiceMenuItems与disableMenuItems同时设置时，以先调用的方法为准。例如：先调用disableSystemServiceMenuItems(true)，再调用disableMenuItems([...])时，以disableSystemServiceMenuItems的设置为准；反之，先调用disableMenuItems([...])时，则以disableMenuItems的设置为准。建议根据实际禁用范围需求选择使用其中一个方法，避免同时调用。
 > &gt;
@@ -150,8 +101,6 @@ static disableSystemServiceMenuItems(disable: boolean): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -164,51 +113,6 @@ static disableSystemServiceMenuItems(disable: boolean): void
 | --- | --- | --- |
 | disable | boolean | 是 |
 
-**示例**
-
-```TypeScript
-import { TextMenuController } from '@kit.ArkUI';
-
-// xxx.ets
-@Entry
-@Component
-struct Index {
-  aboutToAppear(): void {
-    // 禁用所有系统服务菜单。
-    TextMenuController.disableSystemServiceMenuItems(true);
-  }
-
-  aboutToDisappear(): void {
-    // 页面消失恢复系统服务菜单。
-    TextMenuController.disableSystemServiceMenuItems(false);
-  }
-
-  build() {
-    Row() {
-      Column() {
-        TextInput({ text: '这是一个TextInput，长按弹出文本选择菜单' })
-          .height(60)
-          .fontStyle(FontStyle.Italic)
-          .fontWeight(FontWeight.Bold)
-          .textAlign(TextAlign.Center)
-          .caretStyle({ width: '4vp' })
-          .editMenuOptions({
-            onCreateMenu: (menuItems: Array<TextMenuItem>) => {
-                // menuItems不包含被屏蔽的系统菜单项。
-                return menuItems;
-            },
-            onMenuItemClick: (menuItem: TextMenuItem, textRange: TextRange) => {
-                // onMenuItemClick回调函数返回boolean类型。
-                return false;
-            }
-          })
-      }.width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## setMenuOptions
 
 ```TypeScript
@@ -218,8 +122,6 @@ setMenuOptions(options: TextMenuOptions): void
 设置菜单选项。例如，需要在特定UIContext下优先使用独立窗口显示文本选择菜单时，可通过此接口设置菜单的显示模式。未通过该接口设置时，文本选择菜单默认在当前窗口显示（showMode为TextMenuShowMode.DEFAULT）。
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -231,45 +133,4 @@ setMenuOptions(options: TextMenuOptions): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [TextMenuOptions](arkts-arkui-textcommon-textmenuoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Index {
-  aboutToAppear(): void {
-    // 设置在对应的UIContext下优先使用独立窗口显示文本选择菜单
-    this.getUIContext()
-      .getTextMenuController()
-      .setMenuOptions(
-        {
-          showMode: TextMenuShowMode.PREFER_WINDOW
-        }
-      );
-  }
-
-  build() {
-    Row() {
-      Column() {
-        TextInput({ text: '这是一个TextInput，长按弹出文本选择菜单' })
-          .height(60)
-          .fontStyle(FontStyle.Italic)
-          .fontWeight(FontWeight.Bold)
-          .textAlign(TextAlign.Center)
-          .caretStyle({ width: '4vp' })
-
-        Text('这是一个Text，长按弹出文本选择菜单')
-          .height(60)
-          .copyOption(CopyOptions.InApp)
-          .fontStyle(FontStyle.Italic)
-          .fontWeight(FontWeight.Bold)
-          .textAlign(TextAlign.Center)
-      }.width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| options | [TextMenuOptions](arkts-arkui-textmenuoptions-i.md) | 是 |

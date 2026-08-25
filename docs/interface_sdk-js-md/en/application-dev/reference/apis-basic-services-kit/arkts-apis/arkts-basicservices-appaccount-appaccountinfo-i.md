@@ -4,14 +4,12 @@ Defines application account information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## name
@@ -26,8 +24,6 @@ Name of the application account.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## owner
@@ -41,7 +37,5 @@ Owner of the application account. The value is the bundle name of the applicatio
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount

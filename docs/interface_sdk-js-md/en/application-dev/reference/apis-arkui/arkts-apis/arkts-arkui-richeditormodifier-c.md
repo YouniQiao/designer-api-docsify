@@ -2,11 +2,9 @@
 
 Defines RichEditor Modifier
 
-**Inheritance/Implementation:** RichEditorModifier extends RichEditorAttribute and implements AttributeModifier<RichEditorAttribute>
+**Inheritance/Implementation:** RichEditorModifier extends [RichEditorAttribute](../arkts-components/arkts-arkui-richeditor-attribute.md#richeditorattribute) and implements AttributeModifier<RichEditorAttribute>
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: RichEditorAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

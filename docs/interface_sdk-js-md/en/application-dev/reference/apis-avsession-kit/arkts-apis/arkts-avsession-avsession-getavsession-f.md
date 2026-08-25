@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getAVSession
@@ -15,8 +15,6 @@ function getAVSession(context: Context): Promise<AVSession>
 Get an AVSession instance if already created.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -40,38 +38,3 @@ Get an AVSession instance if already created.
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { avSession } from '@kit.AVSessionKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            let currentAVSession: avSession.AVSession;
-            let context: Context = this.getUIContext().getHostContext() as Context;
-            let sessionId: string;  // Used as an input parameter of subsequent functions.
-            let sessionTag: string;
-
-            avSession.getAVSession(context).then(async (data: avSession.AVSession) => {
-              currentAVSession = data;
-              sessionId = currentAVSession.sessionId;
-              sessionTag = currentAVSession.sessionTag;
-              console.info(`GetAVSession : SUCCESS : sessionId=${sessionId}, sessionTag=${sessionTag}`);
-            }).catch((err: BusinessError) => {
-              console.error(`GetAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```

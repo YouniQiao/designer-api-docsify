@@ -10,8 +10,6 @@ const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW = 7
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -25,8 +23,6 @@ const CAPTURE_MODE_LIGHT_GRAFFITI = 10
 拍摄模式：轻涂鸦模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,8 +38,6 @@ const CAPTURE_MODE_MOVING_PHOTO = 20
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -57,8 +51,6 @@ const CAPTURE_MODE_PANORAMA = 8
 拍摄模式：全景模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,8 +66,6 @@ const CAPTURE_MODE_PORTRAIT = 23
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -89,8 +79,6 @@ const CAPTURE_MODE_PROFESSIONAL = 2
 拍摄模式：专业模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,8 +94,6 @@ const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW = 42
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -121,8 +107,6 @@ const CAPTURE_MODE_SILKY_WATER = 11
 拍摄模式：缎面感水流模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,8 +122,6 @@ const CAPTURE_MODE_SNAP_SHOT = 62
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -153,8 +135,6 @@ const CAPTURE_MODE_STAR_TRACK = 12
 拍摄模式：星轨模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,8 +150,6 @@ const CAPTURE_MODE_SUPER_MACRO = 47
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -185,8 +163,6 @@ const CAPTURE_MODE_TAIL_LIGHT = 9
 拍摄模式：尾灯模式。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -202,8 +178,6 @@ const CAPTURE_MODE_WIDEAPERTURE = 19
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -217,8 +191,6 @@ const DUBLIN_CORE: XMPNamespace
 Dublin Core元数据命名空间。 Namespace uri: 'http://purl.org/dc/elements/1.1/', prefix: 'dc'
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -234,8 +206,6 @@ EXIF元数据命名空间。 Namespace uri: 'http://ns.adobe.com/exif/1.0/', pre
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -249,8 +219,6 @@ const TIFF: XMPNamespace
 TIFF图像格式参数命名空间。 Namespace uri: 'http://ns.adobe.com/tiff/1.0/', prefix: 'tiff'
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,8 +234,6 @@ XMAGE水印模式：XMAGE水印固定位于图像底部中央。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -281,8 +247,6 @@ const XMAGE_WATERMARK_MODE_BORDER = 10
 XMAGE水印模式：XMAGE水印会自动调整到边界位置，系统根据图像内容选择最适合的边界区域。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -298,8 +262,6 @@ XMP基础命名空间。 Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix: 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -313,8 +275,6 @@ const XMP_RIGHTS: XMPNamespace
 XMP版权与权限命名空间。 Namespace uri: 'http://ns.adobe.com/xap/1.0/rights/', prefix: 'xmpRights'
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createHtmlTextRecord
@@ -15,8 +15,6 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 创建一条HTML内容的条目。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -35,10 +33,3 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 | 类型 |
 | --- |
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
-
-**示例**
-
-```TypeScript
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createHtmlTextRecord(html);
-```

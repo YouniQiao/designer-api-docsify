@@ -4,14 +4,12 @@ The **Zip** module provides APIs for file compression and decompression.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.Zlib
 
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

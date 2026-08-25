@@ -6,8 +6,6 @@ Defines the lazy custom layout algorithm.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -19,8 +17,6 @@ constructor(option?: LazyCustomLayoutAlgorithmOptions)
 Constructor.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Method to assign a position to the DynamicLayout FrameNode and each of its child
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -68,8 +62,6 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelp
 Method to measure the DynamicLayout FrameNode and its content to determine the measured size.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

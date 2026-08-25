@@ -16,10 +16,10 @@ List底层通过单向链表实现，每个节点有一个指向后一个元素�
 ## 导入模块
 
 ```TypeScript
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
+import { List } from 'kits/@kit.ArkTS';
+import { ListComparatorFn } from 'kits/@kit.ArkTS';
+import { ListForEachCb } from 'kits/@kit.ArkTS';
+import { ListReplaceCb } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -35,5 +35,3 @@ import { ListReplaceCb } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md) |
-| [ListForEachCb](arkts-arkts-listforeachcb-t.md) |
-| [ListReplaceCb](arkts-arkts-listreplacecb-t.md) |

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## deleteDesktopShortcutInfo
 
 ```TypeScript
-function deleteDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promise<void>
+function deleteDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): Promise<void>
 ```
 
 删除指定用户的快捷方式信息。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS
 
@@ -29,7 +27,7 @@ function deleteDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Pro
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -45,86 +43,3 @@ function deleteDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Pro
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct ShortcutExample {
-  build() {
-    Column({ space: 20 }) {
-      Row({ space: 20 }) {
-        Button('delete').onClick(() => {
-          let data: shortcutManager.ShortcutInfo = {
-            id: "test1",
-            bundleName: "com.example.myapplication",
-            moduleName: "",
-            hostAbility: "",
-            icon: "",
-            iconId: 1,
-            label: "hello",
-            labelId: 1,
-            wants: [],
-            appIndex: 0,
-            sourceType: 0,
-          }
-          try {
-            shortcutManager.deleteDesktopShortcutInfo(data, 100)
-              .then(() => {
-                console.info("deleteDesktopShortcutInfo success");
-              }).catch((err: BusinessError) => {
-              console.error(`deleteDesktopShortcutInfo errData is errCode:${err.code}  message:${err.message}`);
-            });
-          } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`deleteDesktopShortcutInfo error is errCode:${code}  message:${message}`);
-          }
-        })
-      }
-    }
-  }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 代码中使用的shortcutInfo、useId需为应用实际设置的快捷方式信息、用户ID。
-let data: shortcutManager.ShortcutInfo = {
-  id: "test1",
-  bundleName: "com.example.myapplication",
-  moduleName: "",
-  hostAbility: "",
-  icon: "",
-  iconId: 1,
-  label: "hello",
-  labelId: 1,
-  wants: [],
-  appIndex: 0,
-  sourceType: 0,
-}
-try {
-  shortcutManager.deleteDesktopShortcutInfo(data, 100)
-    .then(() => {
-      console.info("deleteDesktopShortcutInfo success");
-    }).catch((err: Error) => {
-    console.error(`deleteDesktopShortcutInfo errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-  });
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`deleteDesktopShortcutInfo error is errCode:${code}  message:${message}`);
-}
-```

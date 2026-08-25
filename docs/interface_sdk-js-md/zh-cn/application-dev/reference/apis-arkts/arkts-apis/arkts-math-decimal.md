@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Decimal } from '@kit.ArkTS';
+import { Decimal } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总

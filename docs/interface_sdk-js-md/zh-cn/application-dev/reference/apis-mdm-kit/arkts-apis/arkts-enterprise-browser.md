@@ -7,14 +7,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## 导入模块
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
+import { browser } from 'kits/@kit.MDMKit';
 ```
 
 ## 汇总

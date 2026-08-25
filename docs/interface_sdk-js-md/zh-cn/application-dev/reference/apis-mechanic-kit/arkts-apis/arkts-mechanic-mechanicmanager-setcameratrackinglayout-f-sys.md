@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## setCameraTrackingLayout
@@ -15,8 +15,6 @@ function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void
 设置相机跟踪布局
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -36,11 +34,3 @@ function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) |
 | [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
 | [33300003](../errorcode-mechanic.md#33300003-功能不支持) |
-
-**示例**
-
-```TypeScript
-console.info('Set layout');
-mechanicManager.setCameraTrackingLayout(mechanicManager.CameraTrackingLayout.LEFT);
-console.info('Set layout successful');
-```

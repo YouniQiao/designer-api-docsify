@@ -15,14 +15,12 @@ CommonOptions defines common options for the date time picker.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from 'kits/@kit.ArkUI';
 ```
 
 ## enableHapticFeedback
@@ -32,7 +30,8 @@ enableHapticFeedback?: boolean
 ```
 
 Enables or disables haptic feedback.Default value: true  
-- true: Enable haptic feedback. - false: Disable haptic feedback.  
+- true: Enable haptic feedback.  
+- false: Disable haptic feedback.  
 **Description**:
 1. When set to true, its effectiveness depends on whether the system's hardware supports it.
 2. To enable haptic feedback, you need to configure the requestPermissions field in the project's  
@@ -43,8 +42,6 @@ Enables or disables haptic feedback.Default value: true
 **Default:** true
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +62,6 @@ End date or time of the picker.Default value: Date(2100, 12, 31, 23, 59, 59)Valu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -80,7 +75,8 @@ loop?: boolean
 ```
 
 Sets whether to enable loop mode.  
-- true: Enable loop mode. - false: Disable loop mode.  
+- true: Enable loop mode.  
+- false: Disable loop mode.  
 Default value: true
 
 **Type:** boolean
@@ -88,8 +84,6 @@ Default value: true
 **Default:** true
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,11 +99,9 @@ onChange?: Callback<DatePickerComponentResult>
 
 Callback triggered after date or time is selected.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**Type:** Callback&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,11 +117,9 @@ onScrollStop?: Callback<DatePickerComponentResult>
 
 Callback triggered when a picker item is selected and scrolling stops.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**Type:** Callback&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,8 +141,6 @@ Selected date. Default value is the current system date or time.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -171,8 +159,6 @@ Start date or time of the picker.Default value: Date(1970, 0, 1, 0, 0, 0)Value r
 **Type:** Date
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

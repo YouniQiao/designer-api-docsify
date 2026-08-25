@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## 汇总
@@ -29,15 +27,11 @@ import { config } from '@kit.AccessibilityKit';
 | [enableAbility(系统辅助功能配置)](arkts-accessibility-config-enableability-f-sys.md) |
 | [enableAbilityWithCallback(系统辅助功能配置)](arkts-accessibility-config-enableabilitywithcallback-f-sys.md) |
 | [getSeniorModeStateForApp(系统辅助功能配置)](arkts-accessibility-config-getseniormodestateforapp-f-sys.md) |
-| [off(系统辅助功能配置)](arkts-accessibility-config-off-f-sys.md#offenabledaccessibilityextensionlistchange) |
-| [off(系统辅助功能配置)](arkts-accessibility-config-off-f-sys.md#offinstalledaccessibilitylistchange) |
-| [offEnabledAccessibilityExtensionListChange(系统辅助功能配置)](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md) |
-| [offInstalledAccessibilityListChange(系统辅助功能配置)](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md) |
+| off(系统辅助功能配置) |
+| off(系统辅助功能配置) |
 | [offSeniorModeStateChangeForApp(系统辅助功能配置)](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md) |
-| [on(系统辅助功能配置)](arkts-accessibility-config-on-f-sys.md#onenabledaccessibilityextensionlistchange) |
-| [on(系统辅助功能配置)](arkts-accessibility-config-on-f-sys.md#oninstalledaccessibilitylistchange) |
-| [onEnabledAccessibilityExtensionListChange(系统辅助功能配置)](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md) |
-| [onInstalledAccessibilityListChange(系统辅助功能配置)](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md) |
+| on(系统辅助功能配置) |
+| on(系统辅助功能配置) |
 | [onSeniorModeStateChangeForApp(系统辅助功能配置)](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md) |
 | [setMagnificationState(系统辅助功能配置)](arkts-accessibility-config-setmagnificationstate-f-sys.md) |
 | [setSeniorModeStateForApp(系统辅助功能配置)](arkts-accessibility-config-setseniormodestateforapp-f-sys.md) |

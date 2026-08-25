@@ -10,8 +10,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -29,7 +27,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 
 | 类型 |
 | --- |
-| TextAttribute \| undefined |
+| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -41,8 +39,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 获取Column节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,7 +57,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 
 | 类型 |
 | --- |
-| ColumnAttribute \| undefined |
+| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -73,8 +69,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 获取Row节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,7 +87,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 
 | 类型 |
 | --- |
-| RowAttribute \| undefined |
+| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -105,8 +99,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 获取Stack节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -125,7 +117,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 
 | 类型 |
 | --- |
-| StackAttribute \| undefined |
+| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -137,8 +129,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 获取Flex节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -157,7 +147,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 
 | 类型 |
 | --- |
-| FlexAttribute \| undefined |
+| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -169,8 +159,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 获取Swiper节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -189,7 +177,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 
 | 类型 |
 | --- |
-| SwiperAttribute \| undefined |
+| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -201,8 +189,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 获取Progress节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -221,7 +207,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 
 | 类型 |
 | --- |
-| ProgressAttribute \| undefined |
+| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -233,8 +219,6 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 获取Scroll节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -253,7 +237,7 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 
 | 类型 |
 | --- |
-| ScrollAttribute \| undefined |
+| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -265,8 +249,6 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 获取RelativeContainer节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -285,7 +267,7 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 
 | 类型 |
 | --- |
-| RelativeContainerAttribute \| undefined |
+| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -297,8 +279,6 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 获取LoadingProgress节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访 问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -317,7 +297,7 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 
 | 类型 |
 | --- |
-| LoadingProgressAttribute \| undefined |
+| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -329,8 +309,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 获取Image节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -349,7 +327,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 
 | 类型 |
 | --- |
-| ImageAttribute \| undefined |
+| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -361,8 +339,6 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 获取List节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -381,7 +357,7 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 
 | 类型 |
 | --- |
-| ListAttribute \| undefined |
+| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -393,8 +369,6 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 获取ListItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -413,7 +387,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 
 | 类型 |
 | --- |
-| ListItemAttribute \| undefined |
+| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -425,8 +399,6 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 获取TextInput节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -445,7 +417,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 
 | 类型 |
 | --- |
-| TextInputAttribute \| undefined |
+| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -457,8 +429,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 获取Button节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -477,7 +447,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 
 | 类型 |
 | --- |
-| ButtonAttribute \| undefined |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -489,8 +459,6 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 获取ListItemGroup节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -509,7 +477,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 
 | 类型 |
 | --- |
-| ListItemGroupAttribute \| undefined |
+| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -521,8 +489,6 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 获取WaterFlow节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -541,7 +507,7 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 
 | 类型 |
 | --- |
-| WaterFlowAttribute \| undefined |
+| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -553,8 +519,6 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 获取FlowItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -573,7 +537,7 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 
 | 类型 |
 | --- |
-| FlowItemAttribute \| undefined |
+| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -585,8 +549,6 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 获取XComponent节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -605,7 +567,7 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 
 | 类型 |
 | --- |
-| XComponentAttribute \| undefined |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -617,8 +579,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 获取Checkbox节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -637,7 +597,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 
 | 类型 |
 | --- |
-| CheckboxAttribute \| undefined |
+| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -649,8 +609,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 获取Radio节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -669,7 +627,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 
 | 类型 |
 | --- |
-| RadioAttribute \| undefined |
+| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -681,8 +639,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 获取Slider节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -701,7 +657,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 
 | 类型 |
 | --- |
-| SliderAttribute \| undefined |
+| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -713,8 +669,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 获取Toggle节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -733,7 +687,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 
 | 类型 |
 | --- |
-| ToggleAttribute \| undefined |
+| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -745,8 +699,6 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 获取TextArea节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -765,7 +717,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 
 | 类型 |
 | --- |
-| TextAreaAttribute \| undefined |
+| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -777,8 +729,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 获取Grid节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -797,7 +747,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 
 | 类型 |
 | --- |
-| GridAttribute \| undefined |
+| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -809,8 +759,6 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 获取GridItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -829,4 +777,4 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 
 | 类型 |
 | --- |
-| GridItemAttribute \| undefined |
+| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) \| undefined |

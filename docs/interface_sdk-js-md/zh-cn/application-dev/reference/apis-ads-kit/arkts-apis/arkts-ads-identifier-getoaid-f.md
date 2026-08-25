@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { identifier } from '@kit.AdsKit';
+import { identifier } from 'kits/@kit.AdsKit';
 ```
 
 ## getOAID
@@ -18,8 +18,6 @@ function getOAID(callback: AsyncCallback<string>): void
 > 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.APP_TRACKING_CONSENT
 
@@ -37,34 +35,6 @@ function getOAID(callback: AsyncCallback<string>): void
 | --- |
 | [17300001](../errorcode-oaid.md#17300001-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { identifier } from '@kit.AdsKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-void identifier.getOAID().then((data: string) => {
-  const oaid: string = data;
-  hilog.info(0x0000, 'testTag', `Succeeded in getting OAID: ${oaid}`);
-}).catch((error: BusinessError) => {
-  hilog.error(0x0000, 'testTag', `Failed to get oaid. Code is ${error.code}, message is ${error.message}`);
-});
-```
-
-```TypeScript
-import { identifier } from '@kit.AdsKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-identifier.getOAID((err: BusinessError, data: string) => {
-  if (err.code) {
-    return;
-  }
-  const oaid: string = data;
-  hilog.info(0x0000, 'testTag', `Succeeded in getting OAID: ${oaid}`);
-});
-```
-
 
 ## getOAID
 
@@ -78,8 +48,6 @@ function getOAID(): Promise<string>
 > 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.APP_TRACKING_CONSENT
 
@@ -96,7 +64,3 @@ function getOAID(): Promise<string>
 | 错误码ID |
 | --- |
 | [17300001](../errorcode-oaid.md#17300001-系统内部错误) |
-
-**示例**
-
-参见 [getOAID](#getoaid)

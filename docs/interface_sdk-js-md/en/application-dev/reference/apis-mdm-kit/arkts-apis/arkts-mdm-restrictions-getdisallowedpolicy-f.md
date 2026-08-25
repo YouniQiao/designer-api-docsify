@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedPolicy
@@ -15,8 +15,6 @@ function getDisallowedPolicy(admin: Want | null, feature: string): boolean
 Queries whether a feature is disabled.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Deprecated since:** 26.0.0
 
@@ -52,27 +50,6 @@ Queries whether a feature is disabled.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let result: boolean = restrictions.getDisallowedPolicy(wantTemp, 'printer');
-  console.info(`Succeeded in querying whether the printing function is disabled. Disabled status: ${result}`);
-} catch (err) {
-  console.error(`Failed to get printer disabled status. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getDisallowedPolicy
 
@@ -83,8 +60,6 @@ function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boo
 Queries whether a specified device feature is disabled.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 
@@ -113,7 +88,3 @@ Queries whether a specified device feature is disabled.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [getDisallowedPolicy](#getdisallowedpolicy)

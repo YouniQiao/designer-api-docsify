@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## setCalibrationTraffic
@@ -15,8 +15,6 @@ function setCalibrationTraffic(simId: number, remainTraffic: number, totalTraffi
 设置流量校准数据。在做流量校准时，可通过本接口设置相关流量数据。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
@@ -50,18 +48,3 @@ function setCalibrationTraffic(simId: number, remainTraffic: number, totalTraffi
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { connection, statistics } from '@kit.NetworkKit';
-
-let simId:number = 1;
-let remainData:number = 600*1024*1024;   // 当前剩余流量为600MB。
-let totalData:number = 1024*1024*1024;   // 套餐总流量为1GB。
-statistics.setCalibrationTraffic(simId, remainData, totalData).then(() => {
-  console.info(`setCalibrationTraffic succ`);
-}).catch((error: BusinessError) => {
-  console.info(`setCalibrationTraffic error. code:${error.code}, message:${error.message}`);
-});
-```

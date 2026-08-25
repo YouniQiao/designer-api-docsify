@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -13,13 +11,13 @@
 ## 导入模块
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'kits/@kit.ArkUI';
 ```
 
 ## angle
 
 ```TypeScript
-angle: double
+angle: number
 ```
 
 旋转角信息
@@ -27,8 +25,6 @@ angle: double
 **类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,7 +35,7 @@ angle: double
 ## centerX
 
 ```TypeScript
-centerX: double
+centerX: number
 ```
 
 旋转中心X信息。
@@ -47,8 +43,6 @@ centerX: double
 **类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,7 +53,7 @@ centerX: double
 ## centerY
 
 ```TypeScript
-centerY: double
+centerY: number
 ```
 
 旋转中心Y信息。
@@ -67,8 +61,6 @@ centerY: double
 **类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

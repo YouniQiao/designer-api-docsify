@@ -4,15 +4,13 @@ This module provides accessibility features, including obtaining the accessibili
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## Summary
@@ -39,21 +37,13 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 | [sendAccessibilityEvent(Accessibility)](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) |
 | [getTouchModeSync(Accessibility)](arkts-accessibility-accessibility-gettouchmodesync-f.md) |
 | [on(Accessibility)](arkts-accessibility-accessibility-on-f.md#onaccessibilitystatechange) |
-| [onAccessibilityStateChange(Accessibility)](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md) |
 | [on(Accessibility)](arkts-accessibility-accessibility-on-f.md#ontouchguidestatechange) |
-| [onTouchGuideStateChange(Accessibility)](arkts-accessibility-accessibility-ontouchguidestatechange-f.md) |
 | [on(Accessibility)](arkts-accessibility-accessibility-on-f.md#onscreenreaderstatechange) |
-| [onScreenReaderStateChange(Accessibility)](arkts-accessibility-accessibility-onscreenreaderstatechange-f.md) |
 | [on(Accessibility)](arkts-accessibility-accessibility-on-f.md#ontouchmodechange) |
-| [onTouchModeChange(Accessibility)](arkts-accessibility-accessibility-ontouchmodechange-f.md) |
 | [off(Accessibility)](arkts-accessibility-accessibility-off-f.md#offaccessibilitystatechange) |
-| [offAccessibilityStateChange(Accessibility)](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md) |
 | [off(Accessibility)](arkts-accessibility-accessibility-off-f.md#offtouchguidestatechange) |
-| [offTouchGuideStateChange(Accessibility)](arkts-accessibility-accessibility-offtouchguidestatechange-f.md) |
 | [off(Accessibility)](arkts-accessibility-accessibility-off-f.md#offscreenreaderstatechange) |
-| [offScreenReaderStateChange(Accessibility)](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md) |
 | [off(Accessibility)](arkts-accessibility-accessibility-off-f.md#offtouchmodechange) |
-| [offTouchModeChange(Accessibility)](arkts-accessibility-accessibility-offtouchmodechange-f.md) |
 | [getCaptionsManager(Accessibility)](arkts-accessibility-accessibility-getcaptionsmanager-f.md) |
 | [onAnimationReduceStateChange(Accessibility)](arkts-accessibility-accessibility-onanimationreducestatechange-f.md) |
 | [offAnimationReduceStateChange(Accessibility)](arkts-accessibility-accessibility-offanimationreducestatechange-f.md) |

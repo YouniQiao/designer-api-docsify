@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
 ```
 
 ## loadModelFromBuffer
@@ -17,8 +17,6 @@ function loadModelFromBuffer(
 Create a Model instance from buffer
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,76 +44,6 @@ Create a Model instance from buffer
 | 1000004 |
 | 1000005 |
 
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let modelFile = 'xxx.ms';
-let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
-globalContext.getApplicationContext()
-  .resourceManager
-  .getRawFileContent(modelFile)
-  .then((buffer: Uint8Array) => {
-    let modelBuffer = buffer.buffer;
-    mindSporeLite.loadModelFromBuffer(modelBuffer, (mindSporeLiteModel: mindSporeLite.Model) => {
-      let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
-    })
-  })
-  .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
-  });
-```
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let modelFile = 'xxx.ms';
-let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
-globalContext.getApplicationContext()
-  .resourceManager
-  .getRawFileContent(modelFile)
-  .then((buffer: Uint8Array) => {
-    let modelBuffer = buffer.buffer;
-    let context: mindSporeLite.Context = {};
-    context.target = ['cpu'];
-    mindSporeLite.loadModelFromBuffer(modelBuffer, context, (mindSporeLiteModel: mindSporeLite.Model) => {
-      let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
-    })
-  })
-  .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
-  });
-```
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let modelFile = 'xxx.ms';
-let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
-globalContext.getApplicationContext()
-  .resourceManager
-  .getRawFileContent(modelFile)
-  .then((buffer: Uint8Array) => {
-    let modelBuffer = buffer.buffer;
-    mindSporeLite.loadModelFromBuffer(modelBuffer).then((mindSporeLiteModel: mindSporeLite.Model) => {
-      let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
-    })
-  })
-  .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
-  });
-```
-
 
 ## loadModelFromBuffer
 
@@ -127,8 +55,6 @@ function loadModelFromBuffer(
 Create a Model instance from buffer
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,10 +76,6 @@ Create a Model instance from buffer
 | 1000004 |
 | 1000005 |
 
-**Examples**
-
-See [loadModelFromBuffer](#loadmodelfrombuffer)
-
 
 ## loadModelFromBuffer
 
@@ -166,8 +88,6 @@ function loadModelFromBuffer(
 Create a Model instance from buffer
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -189,7 +109,3 @@ Create a Model instance from buffer
 | 1000003 |
 | 1000004 |
 | 1000005 |
-
-**Examples**
-
-See [loadModelFromBuffer](#loadmodelfrombuffer)

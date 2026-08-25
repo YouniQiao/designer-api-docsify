@@ -4,14 +4,12 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## 导入模块
 
 ```TypeScript
-import { serialManager } from '@kit.BasicServicesKit';
+import { serialManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## baudRate
@@ -25,8 +23,6 @@ baudRate: BaudRates
 **类型：** [BaudRates](arkts-basicservices-serialmanager-baudrates-e.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -44,8 +40,6 @@ dataBits?: DataBits
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## parity
@@ -62,8 +56,6 @@ parity?: Parity
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## stopBits
@@ -79,7 +71,5 @@ stopBits?: StopBits
 **默认值：** STOPBIT_1
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial

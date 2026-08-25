@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { stationary } from '@kit.MultimodalAwarenessKit';
+import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## once
@@ -16,8 +16,6 @@ function once(activity: ActivityType, callback: Callback<ActivityResponse>): voi
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
 **参数：**
@@ -26,11 +24,3 @@ function once(activity: ActivityType, callback: Callback<ActivityResponse>): voi
 | --- | --- | --- |
 | activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-stationary.once('still', (data) => {
-    console.info('data=' + JSON.stringify(data));
-});
-```

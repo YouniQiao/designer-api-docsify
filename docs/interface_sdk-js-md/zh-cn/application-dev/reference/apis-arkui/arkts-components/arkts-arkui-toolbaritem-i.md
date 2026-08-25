@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,8 +21,6 @@ action?: () => void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -39,11 +35,9 @@ activeIcon?: ResourceStr
 
 工具栏单个选项处于ACTIVE态时的图标资源路径。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,13 +52,11 @@ activeSymbolIcon?: SymbolGlyphModifier
 ```
 
 工具栏单个选项处于ACTIVE态时的symbol资源（优先级高于activeIcon）。  
-**说明：**不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 fontSize属性修改图标大小、effectStrategy 属性修改动效、symbolEffect属性修改动 效类型。
+**说明：**不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 fontSize属性修改图标大小、effectStrategy 属性修改动效、[symbolEffect](arkts-arkui-symbolglyph-attribute.md#symboleffect)属性修改动 效类型。
 
 **类型：** SymbolGlyphModifier
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,11 +72,9 @@ icon?: ResourceStr
 
 工具栏单个选项的图标资源路径。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,8 +94,6 @@ status?: ToolbarItemStatus
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -119,13 +107,11 @@ symbolIcon?: SymbolGlyphModifier
 ```
 
 工具栏单个选项的symbol资源（优先级高于icon）。  
-**说明：**不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 fontSize属性修改图标大小、effectStrategy 属性修改动效、symbolEffect属性修改动 效类型。
+**说明：**不支持通过[SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md)对象的 fontSize属性修改图标大小、effectStrategy 属性修改动效、[symbolEffect](arkts-arkui-symbolglyph-attribute.md#symboleffect)属性修改动 效类型。
 
 **类型：** SymbolGlyphModifier
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -141,11 +127,9 @@ value: ResourceStr
 
 工具栏单个选项的显示文本。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

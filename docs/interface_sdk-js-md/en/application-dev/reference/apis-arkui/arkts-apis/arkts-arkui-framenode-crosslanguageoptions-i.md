@@ -4,8 +4,6 @@ Provides options for configuring or querying the cross-language access permissio
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## attributeSetting
@@ -21,8 +19,6 @@ Whether the FrameNode supports cross-language settings.The value **true** means 
 **Default:** false
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Whether the FrameNode supports cross-language operations on the component tree.T
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

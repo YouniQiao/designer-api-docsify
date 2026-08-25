@@ -4,14 +4,12 @@ Provides an option for determining whether a call is a video call.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Applications.Contacts
 
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isCustomAccessibility
@@ -25,8 +23,6 @@ Whether the third-party app supports custom accessibility features. Default valu
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -43,8 +39,6 @@ Whether to hide the dial screen. **true**: yes; **false**: no.
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

@@ -7,8 +7,6 @@ The module provides APIs for managing distributed bundles.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
@@ -16,7 +14,7 @@ The module provides APIs for managing distributed bundles.
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
+import { distributedBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

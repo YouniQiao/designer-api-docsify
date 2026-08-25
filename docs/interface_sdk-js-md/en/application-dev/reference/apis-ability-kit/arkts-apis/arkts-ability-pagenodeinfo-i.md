@@ -4,8 +4,6 @@ PageNodeInfo defines the page node information used for auto-fill.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## autoFillType
@@ -20,8 +18,6 @@ The auto fill type of page node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -31,16 +27,14 @@ The auto fill type of page node.
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 The id of page node. The value should be an integer
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,8 +54,6 @@ Is the page node in the focus. The value **true** means the current node is focu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -79,8 +71,6 @@ The placeholder of page node.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,8 +90,6 @@ The rect of page node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -119,8 +107,6 @@ The value of page node.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Defines the unique identifier for a custom menu item. It is used to identify men
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ equals(id: TextMenuItemId): boolean
 Checks whether this **TextMenuItemId** object is the same as another **TextMenuItemId** object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,6 @@ static of(id: ResourceStr): TextMenuItemId
 Creates a **TextMenuItemId** object based on **id**.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +79,6 @@ ID for the navigation menu item. It is a level-1 menu item. This menu item provi
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -104,8 +96,6 @@ static readonly AI_WRITER: TextMenuItemId
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +115,6 @@ static readonly askAI: TextMenuItemId
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -144,8 +132,6 @@ ID for the autofill menu item. It is a level-1 menu item. When a menu item is ta
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,8 +151,6 @@ ID for the camera input menu item. It is a level-1 menu item.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -184,8 +168,6 @@ ID for the collaboration service menu item. It is a level-1 menu item.
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -205,8 +187,6 @@ ID for the default copy menu item. It is a level-1 menu item.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -224,8 +204,6 @@ ID for the default cut menu item. It is a level-1 menu item.
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -245,8 +223,6 @@ ID for the event creation menu item. It is a level-1 menu item. This menu item p
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -264,8 +240,6 @@ ID for the email menu item. It is a level-1 menu item. This menu item provides t
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -285,8 +259,6 @@ ID for the password vault menu item. It is a level-2 menu item. Tapping this men
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -304,8 +276,6 @@ ID for the default paste menu item. It is a level-1 menu item.
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -325,8 +295,6 @@ ID for the phone call menu item. It is a level-1 menu item. This menu item provi
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -344,8 +312,6 @@ ID for the search menu item. It is a level-1 menu item. This menu item launches 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -365,8 +331,6 @@ ID for the default select-all menu item. It is a level-1 menu item.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -384,8 +348,6 @@ ID for the share menu item. It is a level-1 menu item. This menu item launches a
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -405,8 +367,6 @@ ID for the translate menu item. It is a level-1 menu item. The translation servi
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -424,8 +384,6 @@ ID for the URL menu item. It is a level-1 menu item. This menu item provides the
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

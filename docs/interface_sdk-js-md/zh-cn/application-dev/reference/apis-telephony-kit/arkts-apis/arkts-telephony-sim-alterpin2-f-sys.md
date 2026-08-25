@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## alterPin2
 
 ```TypeScript
-function alterPin2(slotId: int, newPin2: string, oldPin2: string, callback: AsyncCallback<LockStatusResponse>): void
+function alterPin2(slotId: number, newPin2: string, oldPin2: string, callback: AsyncCallback<LockStatusResponse>): void
 ```
 
 Change Pin2 password.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Change Pin2 password.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | newPin2 | string | 是 |
 | oldPin2 | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | 是 |
@@ -47,40 +45,16 @@ Change Pin2 password.
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 | [8301002](../errorcode-telephony.md#8301002-sim卡读取数据或者更新数据失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.alterPin2(0, "1234", "0000", (err: BusinessError, data: sim.LockStatusResponse) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.alterPin2(0, "1234", "0000").then((data: sim.LockStatusResponse) => {
-    console.info(`alterPin2 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`alterPin2 failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## alterPin2
 
 ```TypeScript
-function alterPin2(slotId: int, newPin2: string, oldPin2: string): Promise<LockStatusResponse>
+function alterPin2(slotId: number, newPin2: string, oldPin2: string): Promise<LockStatusResponse>
 ```
 
 Change Pin2 password.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -92,7 +66,7 @@ Change Pin2 password.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | newPin2 | string | 是 |
 | oldPin2 | string | 是 |
 
@@ -115,7 +89,3 @@ Change Pin2 password.
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 | [8301002](../errorcode-telephony.md#8301002-sim卡读取数据或者更新数据失败) |
-
-**示例**
-
-参见 [alterPin2](#alterpin2)

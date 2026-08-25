@@ -4,8 +4,6 @@ Get the user storage statistics.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Get the user storage statistics.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## app
 
 ```TypeScript
-app: long
+app: number
 ```
 
-The size of application. <br>Unit: Byte.
+The size of application. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -37,16 +33,14 @@ The size of application. <br>Unit: Byte.
 ## audio
 
 ```TypeScript
-audio: long
+audio: number
 ```
 
-The size of audio file. <br>Unit: Byte.
+The size of audio file. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -55,16 +49,14 @@ The size of audio file. <br>Unit: Byte.
 ## file
 
 ```TypeScript
-file: long
+file: number
 ```
 
-The size of other file. <br>Unit: Byte.
+The size of other file. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -73,16 +65,14 @@ The size of other file. <br>Unit: Byte.
 ## image
 
 ```TypeScript
-image: long
+image: number
 ```
 
-The size of image file. <br>Unit: Byte.
+The size of image file. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -91,16 +81,14 @@ The size of image file. <br>Unit: Byte.
 ## total
 
 ```TypeScript
-total: long
+total: number
 ```
 
-The total size of device. <br>Unit: Byte.
+The total size of device. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -109,16 +97,14 @@ The total size of device. <br>Unit: Byte.
 ## video
 
 ```TypeScript
-video: long
+video: number
 ```
 
-The size of video file. <br>Unit: Byte.
+The size of video file. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

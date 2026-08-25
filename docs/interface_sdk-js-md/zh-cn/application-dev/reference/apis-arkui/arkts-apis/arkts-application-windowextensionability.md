@@ -14,7 +14,7 @@ WindowExtensionAbility基于ExtensionAbility。WindowExtensionAbility中展示�
 ## 导入模块
 
 ```TypeScript
-import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
+import { WindowExtensionAbility, WindowExtensionContext } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

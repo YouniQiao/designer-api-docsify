@@ -15,8 +15,6 @@ Changes file permissions. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -34,26 +32,6 @@ Changes file permissions. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.chmod(filePath, 0o700).then(() => {
-  console.info("chmod succeed");
-}).catch((err: BusinessError) => {
-  console.error("chmod failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.chmod(filePath, 0o700, (err: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## chmod
 
@@ -64,8 +42,6 @@ declare function chmod(path: string, mode: number, callback: AsyncCallback<void>
 Changes file permissions. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -78,7 +54,3 @@ Changes file permissions. This API uses an asynchronous callback to return the r
 | path | string | Yes |
 | mode | number | Yes | Permissions on the file. You can specify multiple permissions, separated using a bitwise OR operator (\|
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [chmod](#chmod)

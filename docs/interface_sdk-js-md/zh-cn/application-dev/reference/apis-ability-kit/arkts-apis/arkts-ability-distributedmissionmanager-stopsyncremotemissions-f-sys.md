@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## stopSyncRemoteMissions
@@ -12,11 +12,9 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 function stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCallback<void>): void
 ```
 
-停止同步远端设备的任务列表。使用callback异步回调。
+停止同步远端设备的任务列表。使用callback异步回调。调用成功后，系统将停止同步指定远端设备的任务列表。需先调用startSyncRemoteMissions启动同步后再调用，未启动同步时调用不生效。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -40,91 +38,6 @@ function stopSyncRemoteMissions(parameter: MissionDeviceInfo, callback: AsyncCal
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 停止同步远端设备的任务列表
-  distributedMissionManager.stopSyncRemoteMissions(
-    {
-      deviceId: ""
-    },
-    (error: BusinessError) => {
-      if (error) {
-        console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-        return;
-      }
-      console.info('stopSyncRemoteMissions finished');}
-  )
-} catch (error) {
-  console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import distributedMissionManager from '@ohos.distributedMissionManager';
-import { BusinessError } from '@ohos.base';
-let deviceId: distributedMissionManager.MissionDeviceInfo = { deviceId: "" }
-try {
-  // 停止同步远端设备的任务列表
-  distributedMissionManager.stopSyncRemoteMissions(
-    deviceId,
-    (error: BusinessError|null,data:string[]|undefined) => {
-      if (error) {
-        console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-        return;
-      }
-      console.info('stopSyncRemoteMissions finished');}
-  )
-} catch (error) {
-  console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.stopSyncRemoteMissions(
-    {
-      deviceId: ""
-    }).then(() => {
-      console.info('stopSyncRemoteMissions finished successfully');
-    }).catch((error: BusinessError) => {
-    console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import distributedMissionManager from '@ohos.distributedMissionManager';
-import { BusinessError } from '@ohos.base';
-let deviceId: distributedMissionManager.MissionDeviceInfo = { deviceId: "" }
-try {
-  distributedMissionManager.stopSyncRemoteMissions(deviceId).then(() => {
-    console.info('stopSyncRemoteMissions finished successfully');
-  }).catch((error) => {
-    console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-  })
-} catch (error) {
-  console.error(`stopSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## stopSyncRemoteMissions
 
@@ -132,11 +45,9 @@ try {
 function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>
 ```
 
-停止同步远端设备的任务列表。使用promise异步回调。
+停止同步远端设备的任务列表。使用promise异步回调。调用成功后，系统将停止同步指定远端设备的任务列表。需先调用startSyncRemoteMissions启动同步后再调用，未启动同步时调用不生效。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -164,7 +75,3 @@ function stopSyncRemoteMissions(parameter: MissionDeviceInfo): Promise<void>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [stopSyncRemoteMissions](#stopsyncremotemissions)

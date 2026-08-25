@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## getMacAddress
@@ -16,8 +16,6 @@ Obtains the names and MAC addresses of all Ethernet NICs. This API uses a promis
 **Required permission**: ohos.permission.GET_ETHERNET_LOCAL_MAC
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.GET_ETHERNET_LOCAL_MAC
 
@@ -36,16 +34,3 @@ Obtains the names and MAC addresses of all Ethernet NICs. This API uses a promis
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.getMacAddress().then((data: Array<ethernet.MacAddressInfo>) => {
-  console.info("getMacAddress promise data = " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error("getMacAddress promise error = " + JSON.stringify(error));
-});
-```

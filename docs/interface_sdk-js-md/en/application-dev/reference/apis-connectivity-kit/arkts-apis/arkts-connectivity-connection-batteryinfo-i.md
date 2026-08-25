@@ -4,29 +4,25 @@ Describes the contents of the battery information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## batteryLevel
 
 ```TypeScript
-batteryLevel: int
+batteryLevel: number
 ```
 
 Electricity value of the general device. {@code -1} means no power information.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,16 +31,14 @@ Electricity value of the general device. {@code -1} means no power information.
 ## boxBatteryLevel
 
 ```TypeScript
-boxBatteryLevel: int
+boxBatteryLevel: number
 ```
 
 Electricity value of the box. {@code -1} means no power information.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +56,6 @@ The charge state of the box.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -71,16 +63,14 @@ The charge state of the box.
 ## leftEarBatteryLevel
 
 ```TypeScript
-leftEarBatteryLevel: int
+leftEarBatteryLevel: number
 ```
 
 Electricity value of the left ear. {@code -1} means no power information.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +88,6 @@ The charge state of the left ear.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -107,16 +95,14 @@ The charge state of the left ear.
 ## rightEarBatteryLevel
 
 ```TypeScript
-rightEarBatteryLevel: int
+rightEarBatteryLevel: number
 ```
 
 Electricity value of the right ear. {@code -1} means no power information.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,8 +119,6 @@ The charge state of the right ear.
 **Type:** [DeviceChargeState](arkts-connectivity-connection-devicechargestate-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

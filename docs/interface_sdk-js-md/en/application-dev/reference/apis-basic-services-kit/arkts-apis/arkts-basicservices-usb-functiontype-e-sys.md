@@ -4,8 +4,6 @@ Enumerates USB device function types.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md)
@@ -23,8 +21,6 @@ NONE = 0
 No function.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ ACM function.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ACM](arkts-basicservices-usbmanager-functiontype-e-sys.md#acm)
@@ -63,8 +57,6 @@ ECM = 2
 ECM function.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -84,8 +76,6 @@ HDC function.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [HDC](arkts-basicservices-usbmanager-functiontype-e-sys.md#hdc)
@@ -103,8 +93,6 @@ MTP = 8
 Media transmission.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -124,8 +112,6 @@ Image transmission.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#ptp)
@@ -143,8 +129,6 @@ RNDIS = 32
 Network sharing.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -164,8 +148,6 @@ MIDI function.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [MIDI](arkts-basicservices-usbmanager-functiontype-e-sys.md#midi)
@@ -184,8 +166,6 @@ Audio function.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AUDIO_SOURCE](arkts-basicservices-usbmanager-functiontype-e-sys.md#audio_source)
@@ -203,8 +183,6 @@ NCM = 256
 NCM transmission.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 

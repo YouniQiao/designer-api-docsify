@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## interpolatingSpring
@@ -15,8 +15,6 @@ function interpolatingSpring(velocity: number, mass: number, stiffness: number, 
 构造插值器弹簧曲线对象，生成一条从0到1的动画曲线，实际动画值根据曲线进行插值计算。动画时间由曲线参数决定，不受animation、animateTo中的duration参数控制。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -30,18 +28,11 @@ function interpolatingSpring(velocity: number, mass: number, stiffness: number, 
 | --- | --- | --- |
 | velocity | number | 是 |
 | mass | number | 是 |
-| stiffness | number | 是 |
-| damping | number | 是 |
+| [stiffness](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |
+| [damping](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**示例**
-
-```TypeScript
-import { curves } from '@kit.ArkUI'
-curves.interpolatingSpring(10, 1, 228, 30) // 创建一个时长由弹簧参数决定的弹簧插值曲线
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

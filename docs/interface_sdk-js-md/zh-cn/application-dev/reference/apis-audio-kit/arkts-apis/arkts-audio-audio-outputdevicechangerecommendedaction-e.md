@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## DEVICE_CHANGE_RECOMMEND_TO_CONTINUE
@@ -18,8 +16,6 @@ DEVICE_CHANGE_RECOMMEND_TO_CONTINUE = 0
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## DEVICE_CHANGE_RECOMMEND_TO_STOP
@@ -31,7 +27,5 @@ DEVICE_CHANGE_RECOMMEND_TO_STOP = 1
 推荐停止播放。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

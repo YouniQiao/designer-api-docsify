@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableResourceManager } from '@kit.LocalizationKit';
+import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## resourceToSendableResource
@@ -15,8 +15,6 @@ export function resourceToSendableResource(resource: Resource): SendableResource
 Converts a `Resource` object to a `SendableResource` object that can be used for cross-thread transmission.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,37 +30,10 @@ Converts a `Resource` object to a `SendableResource` object that can be used for
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) |
+| [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Resource file path: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { sendableResourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let sendableResource: sendableResourceManager.SendableResource = sendableResourceManager.resourceToSendableResource($r('app.string.test'));
-} catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error(`resourceToSendableResource failed, error code: ${code}, message: ${message}.`);
-}
-```

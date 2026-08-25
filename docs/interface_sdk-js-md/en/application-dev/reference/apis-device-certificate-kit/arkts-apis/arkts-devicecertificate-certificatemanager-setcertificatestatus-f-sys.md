@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## setCertificateStatus
@@ -15,8 +15,6 @@ function setCertificateStatus(certUri: string, certType: CertType, enabled: bool
 Sets the status of a CA certificate. Currently, only the status of a user's CA certificate can be set. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_USER_TRUSTED_CERT
 
@@ -49,22 +47,3 @@ Sets the status of a CA certificate. Currently, only the status of a user's CA c
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let certUri: string = 'test'; /* Unique identifier of the user CA certificate. */
-try {
-  /* Set the user CA certificate status to enabled. */
-  certificateManager.setCertificateStatus(certUri, certificateManager.CertType.CA_CERT_USER, true).then(() => {
-    console.info('Succeeded in setting certificate status.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set certificate status. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error: BusinessError) {
-  console.error(`Failed to set certificate status. Code: ${error.code}, message: ${error.message}`);
-}
-```

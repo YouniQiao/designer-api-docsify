@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getNetworkSelectionMode
 
 ```TypeScript
-function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSelectionMode>): void
+function getNetworkSelectionMode(slotId: number, callback: AsyncCallback<NetworkSelectionMode>): void
 ```
 
 获取当前选网模式。使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -24,7 +22,7 @@ function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSel
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | 是 |
 
 **错误码：**
@@ -37,44 +35,16 @@ function getNetworkSelectionMode(slotId: int, callback: AsyncCallback<NetworkSel
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNetworkSelectionMode(slotId, (err: BusinessError, data: radio.NetworkSelectionMode) => {
-    if (err) {
-        console.error(`getNetworkSelectionMode failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getNetworkSelectionMode success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNetworkSelectionMode(slotId).then((data: radio.NetworkSelectionMode) => {
-    console.info(`getNetworkSelectionMode success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkSelectionMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getNetworkSelectionMode
 
 ```TypeScript
-function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>
+function getNetworkSelectionMode(slotId: number): Promise<NetworkSelectionMode>
 ```
 
 获取当前选网模式。使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -82,7 +52,7 @@ function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -99,7 +69,3 @@ function getNetworkSelectionMode(slotId: int): Promise<NetworkSelectionMode>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getNetworkSelectionMode](#getnetworkselectionmode)

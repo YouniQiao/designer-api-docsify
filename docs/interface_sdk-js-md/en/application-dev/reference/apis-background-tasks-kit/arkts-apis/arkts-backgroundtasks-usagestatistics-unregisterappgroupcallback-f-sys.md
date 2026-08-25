@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## unregisterAppGroupCallBack
@@ -15,8 +15,6 @@ function unregisterAppGroupCallBack(callback: AsyncCallback<void>): void
 Unregister appGroup change callback from service.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -44,30 +42,6 @@ Unregister appGroup change callback from service.
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-duplicate-application-group-operation) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.unregisterAppGroupCallBack().then( () => {
-  console.info('BUNDLE_ACTIVE unregisterAppGroupCallBack promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE unregisterAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.unregisterAppGroupCallBack((err: BusinessError) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE unregisterAppGroupCallBack callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE unregisterAppGroupCallBack callback success.');
-  }
-});
-```
-
 
 ## unregisterAppGroupCallBack
 
@@ -78,8 +52,6 @@ function unregisterAppGroupCallBack(): Promise<void>
 Unregister appGroup change callback from service.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -106,7 +78,3 @@ Unregister appGroup change callback from service.
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-system-service-operation-failure) |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-duplicate-application-group-operation) |
-
-**Examples**
-
-See [unregisterAppGroupCallBack](#unregisterappgroupcallback)

@@ -4,8 +4,6 @@ Enumerates the device discovery modes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -22,8 +20,6 @@ Passive discovery.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -39,8 +35,6 @@ DISCOVER_MODE_ACTIVE = 0xAA
 Active discovery.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 

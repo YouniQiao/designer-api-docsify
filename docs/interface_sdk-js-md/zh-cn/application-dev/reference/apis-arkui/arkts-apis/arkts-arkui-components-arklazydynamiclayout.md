@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from '@kit.ArkUI';
+import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -13,19 +13,12 @@ import { LazyDynamicLayout, LazyDynamicLayoutAttribute } from '@kit.ArkUI';
 | 名称 |
 | --- |
 | [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md) |
-| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md) |
 
 ### 类
 
 | 名称 |
 | --- |
 | [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md) |
-
-### 接口
-
-| 名称 |
-| --- |
-| [LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-i.md) |
 
 ### 常量
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## onGetWantParamsCallback
@@ -15,8 +15,6 @@ function onGetWantParamsCallback(callback: formInfo.GetWantParamsCallback): void
 Register callback of getting the want parameters of the form.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

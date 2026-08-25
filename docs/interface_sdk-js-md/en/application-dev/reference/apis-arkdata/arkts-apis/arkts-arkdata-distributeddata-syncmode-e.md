@@ -4,8 +4,6 @@ Enumerates the sync modes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** SyncMode
@@ -21,8 +19,6 @@ PULL_ONLY = 0
 Pull data from the peer end to the local end only.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Push data from the local end to the peer end only.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** PUSH_ONLY
@@ -57,8 +51,6 @@ PUSH_PULL = 2
 Push data from the local end to the peer end and then pull data from the peer end to the local end.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

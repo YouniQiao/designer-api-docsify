@@ -1,17 +1,15 @@
 # DomainAccountInfo
 
-Represents the domain account information.
+Represents domain account information.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## accountId
@@ -25,8 +23,6 @@ Domain account ID.This is a system API and is **undefined** by default.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -43,8 +39,6 @@ Whether the domain account has been authenticated. The value **true** means that
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

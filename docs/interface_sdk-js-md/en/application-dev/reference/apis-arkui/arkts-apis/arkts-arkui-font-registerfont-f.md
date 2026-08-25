@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from '@kit.ArkUI';
+import { font } from 'kits/@kit.ArkUI';
 ```
 
 ## registerFont
@@ -21,8 +21,6 @@ Registers a custom font with the font manager.This API is asynchronous and does 
 > the current UI context.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 

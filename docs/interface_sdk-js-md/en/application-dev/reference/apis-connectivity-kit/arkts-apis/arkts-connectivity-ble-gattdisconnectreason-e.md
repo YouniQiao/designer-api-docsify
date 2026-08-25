@@ -4,8 +4,6 @@ The enum of gatt disconnection reasons.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CONN_TIMEOUT
@@ -17,8 +15,6 @@ CONN_TIMEOUT = 1
 Disconnection due to timeout.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ The connection is disconnected due to the peer.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -54,8 +48,6 @@ The connection is disconnected due to the local host.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -71,8 +63,6 @@ CONN_UNKNOWN = 4
 Disconnection due to unknown reason.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

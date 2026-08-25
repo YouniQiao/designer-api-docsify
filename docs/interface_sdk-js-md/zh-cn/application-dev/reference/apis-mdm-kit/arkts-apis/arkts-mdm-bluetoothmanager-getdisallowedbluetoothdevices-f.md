@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedBluetoothDevices
@@ -15,8 +15,6 @@ function getDisallowedBluetoothDevices(admin: Want): Array<string>
 获取蓝牙设备禁用名单。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -44,41 +42,6 @@ function getDisallowedBluetoothDevices(admin: Want): Array<string>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // 获取蓝牙设备禁用名单
-  let result: Array<string> = bluetoothManager.getDisallowedBluetoothDevices(wantTemp);
-  console.info(`Succeeded in getting disallowed bluetooth devices. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
-
-// 创建企业设备管理扩展组件
-try {
-  // 获取蓝牙设备禁用名单
-  // 参数需根据实际情况进行替换
-  let result: Array<string> = bluetoothManager.getDisallowedBluetoothDevices(null);
-  console.info(`Succeeded in getting disallowed bluetooth devices. Result: ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get disallowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getDisallowedBluetoothDevices
 
@@ -89,8 +52,6 @@ function getDisallowedBluetoothDevices(admin: Want | null): Array<string>
 获取蓝牙设备禁用名单。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -117,7 +78,3 @@ function getDisallowedBluetoothDevices(admin: Want | null): Array<string>
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [getDisallowedBluetoothDevices](#getdisallowedbluetoothdevices)

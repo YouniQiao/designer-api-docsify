@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## getAsrAecMode
@@ -25,8 +23,6 @@ getAsrAecMode(): AsrAecMode
 获取自动语音识别（ASR）的声学回声消除（AEC）模式，同步返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -45,12 +41,6 @@ getAsrAecMode(): AsrAecMode
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
-**示例**
-
-```TypeScript
-let mode = asrProcessingController.getAsrAecMode();
-```
-
 ## getAsrNoiseSuppressionMode
 
 ```TypeScript
@@ -60,8 +50,6 @@ getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode
 获取自动语音识别（ASR）的噪音抑制模式，同步返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -80,12 +68,6 @@ getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
-**示例**
-
-```TypeScript
-let mode = asrProcessingController.getAsrNoiseSuppressionMode();
-```
-
 ## getAsrWhisperDetectionMode
 
 ```TypeScript
@@ -95,8 +77,6 @@ getAsrWhisperDetectionMode(): AsrWhisperDetectionMode
 获取自动语音识别（ASR）的耳语检测模式，同步返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -115,12 +95,6 @@ getAsrWhisperDetectionMode(): AsrWhisperDetectionMode
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
-**示例**
-
-```TypeScript
-let mode = asrProcessingController.getAsrWhisperDetectionMode();
-```
-
 ## isWhispering
 
 ```TypeScript
@@ -130,8 +104,6 @@ isWhispering(): boolean
 查询耳语状态。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -150,12 +122,6 @@ isWhispering(): boolean
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
-**示例**
-
-```TypeScript
-let flag = asrProcessingController.isWhispering();
-```
-
 ## setAsrAecMode
 
 ```TypeScript
@@ -165,8 +131,6 @@ setAsrAecMode(mode: AsrAecMode): boolean
 设置自动语音识别（ASR）的声学回声消除（AEC）模式，同步返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -193,12 +157,6 @@ setAsrAecMode(mode: AsrAecMode): boolean
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
-**示例**
-
-```TypeScript
-let flag = asrProcessingController.setAsrAecMode(audio.AsrAecMode.BYPASS);
-```
-
 ## setAsrNoiseSuppressionMode
 
 ```TypeScript
@@ -208,8 +166,6 @@ setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean
 设置自动语音识别（ASR）的噪音抑制模式，同步返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -236,12 +192,6 @@ setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
-**示例**
-
-```TypeScript
-let flag = asrProcessingController.setAsrNoiseSuppressionMode(audio.AsrNoiseSuppressionMode.BYPASS);
-```
-
 ## setAsrVoiceControlMode
 
 ```TypeScript
@@ -251,8 +201,6 @@ setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean
 设置在系统通话中上报mode及通话录音的上行通路的自动语音识别（ASR）音频通路选择。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -280,12 +228,6 @@ setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
-**示例**
-
-```TypeScript
-let flag = asrProcessingController.setAsrVoiceControlMode(audio.AsrVoiceControlMode.AUDIO_2_VOICE_TX, true);
-```
-
 ## setAsrVoiceMuteMode
 
 ```TypeScript
@@ -295,8 +237,6 @@ setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean
 在系统通话中，对自动语音识别（ASR）的音频通路进行静音控制。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -324,12 +264,6 @@ setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
-**示例**
-
-```TypeScript
-let flag = asrProcessingController.setAsrVoiceMuteMode(audio.AsrVoiceMuteMode.OUTPUT_MUTE, true);
-```
-
 ## setAsrWhisperDetectionMode
 
 ```TypeScript
@@ -339,8 +273,6 @@ setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean
 设置自动语音识别（ASR）的耳语检测模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -366,9 +298,3 @@ setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
-
-**示例**
-
-```TypeScript
-let flag = asrProcessingController.setAsrWhisperDetectionMode(audio.AsrWhisperDetectionMode.BYPASS);
-```

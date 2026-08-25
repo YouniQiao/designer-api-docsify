@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addOsAccount
@@ -15,8 +15,6 @@ function addOsAccount(admin: Want, name: string, type: osAccount.OsAccountType):
 后台添加账号。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -54,25 +52,3 @@ function addOsAccount(admin: Want, name: string, type: osAccount.OsAccountType):
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { osAccount } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let info: osAccount.OsAccountInfo = accountManager.addOsAccount(wantTemp, "TestAccountName", osAccount.OsAccountType.NORMAL);
-  console.info(`Succeeded in creating os account: ${JSON.stringify(info)}`);
-} catch (err) {
-  console.error(`Failed to create os account. Code: ${err.code}, message: ${err.message}`);
-}
-```

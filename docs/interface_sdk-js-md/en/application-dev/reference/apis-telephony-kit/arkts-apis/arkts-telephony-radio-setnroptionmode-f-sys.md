@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setNROptionMode
 
 ```TypeScript
-function setNROptionMode(slotId: int, mode: NROptionMode, callback: AsyncCallback<void>): void
+function setNROptionMode(slotId: number, mode: NROptionMode, callback: AsyncCallback<void>): void
 ```
 
 Set the NR option mode.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Set the NR option mode.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | mode | [NROptionMode](arkts-telephony-radio-nroptionmode-e-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -44,46 +42,16 @@ Set the NR option mode.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.NROptionMode = radio.NROptionMode.NR_OPTION_NSA_ONLY;
-radio.setNROptionMode(slotId, mode, (err: BusinessError) => {
-    if (err) {
-        console.error(`setNROptionMode failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`setNROptionMode success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.NROptionMode = radio.NROptionMode.NR_OPTION_NSA_ONLY;
-radio.setNROptionMode(slotId, mode).then(() => {
-    console.info(`setNROptionMode success`);
-}).catch((err: BusinessError) => {
-    console.error(`setNROptionMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setNROptionMode
 
 ```TypeScript
-function setNROptionMode(slotId: int, mode: NROptionMode): Promise<void>
+function setNROptionMode(slotId: number, mode: NROptionMode): Promise<void>
 ```
 
 Set the NR option mode.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -95,7 +63,7 @@ Set the NR option mode.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | mode | [NROptionMode](arkts-telephony-radio-nroptionmode-e-sys.md) | Yes |
 
 **Return value:**
@@ -115,7 +83,3 @@ Set the NR option mode.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [setNROptionMode](#setnroptionmode)

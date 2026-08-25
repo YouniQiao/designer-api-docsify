@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from '@kit.AbilityKit';
+import { scriptManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## completeArkTSScriptInApp
@@ -15,8 +15,6 @@ function completeArkTSScriptInApp(context: Context, requestCode: string, result:
 complete arkTS script for in-app skills.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,14 +4,12 @@ The displaySync module allows your application to draw its custom UI content at 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { displaySync } from '@kit.ArkGraphics2D';
+import { displaySync } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## Summary

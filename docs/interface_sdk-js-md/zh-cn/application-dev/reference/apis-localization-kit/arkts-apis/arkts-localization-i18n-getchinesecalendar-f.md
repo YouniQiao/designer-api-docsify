@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getChineseCalendar
@@ -15,8 +15,6 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 获取指定区域的农历对象。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,10 +33,3 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 | 类型 |
 | --- |
 | [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) |
-
-**示例**
-
-```TypeScript
-let locale: Intl.Locale = i18n.System.getSystemLocaleInstance();
-let calendar: i18n.ChineseCalendar = i18n.getChineseCalendar(locale);
-```

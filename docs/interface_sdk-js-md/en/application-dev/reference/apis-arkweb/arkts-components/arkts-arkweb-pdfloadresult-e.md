@@ -4,8 +4,6 @@ Defines the PDF page loading results, which identify various states and error ty
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## LOAD_SUCCESS
@@ -17,8 +15,6 @@ LOAD_SUCCESS = 0
 The PDF file is successfully loaded.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ Failed to load the PDF file.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## PARSE_ERROR_FORMAT
@@ -45,8 +39,6 @@ PARSE_ERROR_FORMAT = 2
 The PDF file format is not supported.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,8 +52,6 @@ The PDF file password is incorrect.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## PARSE_ERROR_HANDLER
@@ -73,7 +63,5 @@ PARSE_ERROR_HANDLER = 4
 Failed to process the PDF file.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core

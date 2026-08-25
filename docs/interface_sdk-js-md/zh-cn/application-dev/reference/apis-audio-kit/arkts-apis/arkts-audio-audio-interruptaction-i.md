@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [InterruptEvent](arkts-audio-audio-interruptevent-i.md)
@@ -18,7 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## actionType
@@ -32,8 +30,6 @@ actionType: InterruptActionType
 **类型：** [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -53,8 +49,6 @@ activated?: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
@@ -73,8 +67,6 @@ hint?: InterruptHint
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
@@ -92,8 +84,6 @@ type?: InterruptType
 **类型：** [InterruptType](arkts-audio-audio-interrupttype-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

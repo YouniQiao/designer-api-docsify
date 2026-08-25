@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getKeyEventPolicies
@@ -15,8 +15,6 @@ function getKeyEventPolicies(admin: Want): Array<KeyEventPolicy>
 获取按键事件处理策略。适用于需要查询当前按键事件处理策略配置的场景，帮助企业管理员验证策略是否正确下发，或在进行策略调整前获取当前配置。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -45,39 +43,6 @@ function getKeyEventPolicies(admin: Want): Array<KeyEventPolicy>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let result: Array<systemManager.KeyEventPolicy> = [];
-try {
-  result = systemManager.getKeyEventPolicies(wantTemp);
-  console.info('Succeeded in getting key event policies.');
-} catch (err) {
-  console.error(`Failed to get key event policies. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-
-let result: Array<systemManager.KeyEventPolicy> = [];
-try {
-  // 参数需根据实际情况进行替换
-  result = systemManager.getKeyEventPolicies(null);
-  console.info('Succeeded in getting key event policies.');
-} catch (err) {
-  console.error(`Failed to get key event policies. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getKeyEventPolicies
 
@@ -88,8 +53,6 @@ function getKeyEventPolicies(admin: Want | null): Array<KeyEventPolicy>
 获取按键事件处理策略。适用于需要查询当前按键事件处理策略配置的场景，帮助企业管理员验证策略是否正确下发，或在进行策略调整前获取当前配置。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -117,7 +80,3 @@ function getKeyEventPolicies(admin: Want | null): Array<KeyEventPolicy>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [getKeyEventPolicies](#getkeyeventpolicies)

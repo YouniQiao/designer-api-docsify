@@ -4,8 +4,6 @@ Describes the codec bit rate.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_96000
@@ -17,8 +15,6 @@ CODEC_BIT_RATE_96000 = 0
 Codec bit rate 96k.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,8 +28,6 @@ Codec bit rate 128k.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_192000
@@ -45,8 +39,6 @@ CODEC_BIT_RATE_192000 = 2
 Codec bit rate 192k.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -60,8 +52,6 @@ Codec bit rate 256k.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_320000
@@ -73,8 +63,6 @@ CODEC_BIT_RATE_320000 = 4
 Codec bit rate 320k.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -88,8 +76,6 @@ Codec bit rate 480k.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_640000
@@ -101,8 +87,6 @@ CODEC_BIT_RATE_640000 = 6
 Codec bit rate 640k.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -116,8 +100,6 @@ Codec bit rate 960k.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_ABR
@@ -129,8 +111,6 @@ CODEC_BIT_RATE_ABR = 8
 Codec bit rate adaptive bitrate streaming.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -144,8 +124,6 @@ Codec bit rate 1.5M.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## CODEC_BIT_RATE_2300000
@@ -157,7 +135,5 @@ CODEC_BIT_RATE_2300000 = 10
 Codec bit rate 2.3M.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

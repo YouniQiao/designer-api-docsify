@@ -7,14 +7,12 @@ InterstitialDialogAction弹框在原子化服务中用于在保持当前的上�
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { InterstitialDialogAction, IconStyle, TitlePosition, BottomOffset } from '@kit.ArkUI';
+import { InterstitialDialogAction, IconStyle, TitlePosition, BottomOffset } from 'kits/@kit.ArkUI';
 ```
 
 ## closeDialog
@@ -26,8 +24,6 @@ closeDialog(): void
 关闭弹框。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,8 +38,6 @@ constructor(dialogOptions: DialogOptions)
 InterstitialDialogAction的构造函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -64,8 +58,6 @@ openDialog(): void
 打开弹框。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

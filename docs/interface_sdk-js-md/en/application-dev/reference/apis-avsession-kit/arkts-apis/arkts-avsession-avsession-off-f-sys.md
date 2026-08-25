@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## off('sessionCreate')
@@ -15,8 +15,6 @@ function off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) =>
 Unregister session create callback
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -37,12 +35,6 @@ Unregister session create callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.off('sessionCreate');
-```
-
 
 ## off('sessionDestroy')
 
@@ -53,8 +45,6 @@ function off(type: 'sessionDestroy', callback?: (session: AVSessionDescriptor) =
 Unregister session destroy callback
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -75,12 +65,6 @@ Unregister session destroy callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.off('sessionDestroy');
-```
-
 
 ## off('topSessionChange')
 
@@ -91,8 +75,6 @@ function off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor)
 Unregister top session changed callback
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -113,12 +95,6 @@ Unregister top session changed callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.off('topSessionChange');
-```
-
 
 ## off('sessionServiceDie')
 
@@ -129,8 +105,6 @@ function off(type: 'sessionServiceDie', callback?: () => void): void
 Unregister Session service death callback, notifying the application to clean up resources.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -151,12 +125,6 @@ Unregister Session service death callback, notifying the application to clean up
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.off('sessionServiceDie');
-```
-
 
 ## off('distributedSessionChange')
 
@@ -167,8 +135,6 @@ function off(type: 'distributedSessionChange', distributedSessionType: Distribut
 Unregister distributed session changed callback
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -189,12 +155,6 @@ Unregister distributed session changed callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-avSession.off('distributedSessionChange', avSession.DistributedSessionType.TYPE_SESSION_REMOTE);
-```
-
 
 ## off('deviceAvailable')
 
@@ -205,8 +165,6 @@ function off(type: 'deviceAvailable', callback?: (device: OutputDeviceInfo) => v
 Unregister device discovery callback
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -226,12 +184,6 @@ Unregister device discovery callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-avSession.off('deviceAvailable');
-```
-
 
 ## off('deviceOffline')
 
@@ -242,8 +194,6 @@ function off(type: 'deviceOffline', callback?: (deviceId: string) => void): void
 Unregister device offline callback
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -263,12 +213,6 @@ Unregister device offline callback
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-avSession.off('deviceOffline');
-```
-
 
 ## off('deviceLogEvent')
 
@@ -279,8 +223,6 @@ function off(type: 'deviceLogEvent', callback?: Callback<DeviceLogEventCode>): v
 UnRegister log event callback.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -302,12 +244,6 @@ UnRegister log event callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-avSession.off('deviceLogEvent');
-```
-
 
 ## off('deviceStateChanged')
 
@@ -318,8 +254,6 @@ function off(type: 'deviceStateChanged', callback?: Callback<DeviceState>): void
 Unregisters a system callback for the device connection phase.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -340,9 +274,3 @@ Unregisters a system callback for the device connection phase.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-avSession.off('deviceStateChanged');
-```

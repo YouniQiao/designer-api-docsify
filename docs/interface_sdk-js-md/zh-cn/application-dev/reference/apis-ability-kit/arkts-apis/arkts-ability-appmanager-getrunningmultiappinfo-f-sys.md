@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRunningMultiAppInfo
@@ -15,8 +15,6 @@ function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo
 根据应用包名获取系统中运行态的应用多开（即在一个设备上运行多个相同的应用）的相关信息。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -47,24 +45,3 @@ function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000072](../errorcode-ability.md#16000072-不支持应用多开) |
 | [18500001](../errorcode-ability.md#18500001-指定的包名无效) |
-
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = "ohos.samples.etsclock";
-  appManager.getRunningMultiAppInfo(bundleName).then((info: appManager.RunningMultiAppInfo) => {
-    hilog.info(0x0000, 'testTag', `getRunningMultiAppInfo success`);
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
-  })
-} catch (e) {
-  let err = e as BusinessError;
-  hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
-}
-```

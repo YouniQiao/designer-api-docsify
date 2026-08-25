@@ -4,14 +4,12 @@ The **RPC** module implements communication between processes, including inter-p
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## Summary
@@ -47,9 +45,3 @@ import { rpc } from '@kit.IPCKit';
 | --- |
 | [ErrorCode](arkts-ipc-rpc-errorcode-e.md) |
 | [TypeCode](arkts-ipc-rpc-typecode-e.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnRemoteDiedFunc](arkts-ipc-rpc-onremotediedfunc-t.md) |

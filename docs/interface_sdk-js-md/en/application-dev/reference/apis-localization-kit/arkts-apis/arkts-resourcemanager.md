@@ -1,8 +1,17 @@
 # @ohos.resourceManager(Resource Management)
 
 This module provides the capabilities to access application resources and system resources. It allows applications to obtain the best-matching application or system resources based on the current [configuration](arkts-localization-resourcemanager-configuration-c.md), supporting internationalization resource matching and multi- device adaptation. For details about the matching rules, see [Matching Resources](../../../quick-start/resource-categories-and-access.md#matching-resources).The configuration includes language, script, country/region, orientation, color mode, Mobile Country Code (MCC), Mobile Network Code (MNC), device type, and screen density.  
-**Use scenarios** - Application internationalization: Automatically obtains matching string resources based on the user's language and region. - Multi-device adaptation: Obtains appropriate media resources based on device type and screen density. - Dynamic resource configuration: Obtains resources corresponding to the current device state, such as orientation and color mode.  
-**How to Use** - In the FA model, you need to import the module and then call [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md) to obtain a **ResourceManager** object. - Since API version 9, in the stage model, the stage model allows you to obtain the **resourceManager** object through context without importing any module. For details about the context, see [application context](../../../application-models/application-context-stage.md).  
+**Use scenarios**  
+- Application internationalization: Automatically obtains matching string resources based on the user's language and  
+region.  
+- Multi-device adaptation: Obtains appropriate media resources based on device type and screen density.  
+- Dynamic resource configuration: Obtains resources corresponding to the current device state, such as orientation  
+and color mode.  
+**How to Use**  
+- In the FA model, you need to import the module and then call  
+[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md) to obtain a **ResourceManager** object.  
+- Since API version 9, in the stage model, the stage model allows you to obtain the **resourceManager** object  
+through context without importing any module. For details about the context, see [application context](../../../application-models/application-context-stage.md).  
  ```ts
  import { UIAbility } from '@kit.AbilityKit';
  import { window } from '@kit.ArkUI';
@@ -17,14 +26,12 @@ This module provides the capabilities to access application resources and system
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.ResourceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## Summary

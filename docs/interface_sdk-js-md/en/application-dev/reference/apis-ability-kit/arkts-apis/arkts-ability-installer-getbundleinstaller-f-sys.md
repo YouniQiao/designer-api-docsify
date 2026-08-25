@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## getBundleInstaller
@@ -15,8 +15,6 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 Obtains a BundleInstaller object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -35,42 +33,6 @@ Obtains a BundleInstaller object. This API uses an asynchronous callback to retu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    installer.getBundleInstaller((err: BusinessError, data: installer.BundleInstaller) => {
-        if (err) {
-            console.error('getBundleInstaller failed:' + err.message);
-        } else {
-            console.info('getBundleInstaller successfully');
-        }
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed:' + message);
-}
-```
-
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        console.info('getBundleInstaller successfully.');
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
-
 
 ## getBundleInstaller
 
@@ -81,8 +43,6 @@ function getBundleInstaller(): Promise<BundleInstaller>
 Obtains a BundleInstaller object. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -99,7 +59,3 @@ Obtains a BundleInstaller object. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [getBundleInstaller](#getbundleinstaller)

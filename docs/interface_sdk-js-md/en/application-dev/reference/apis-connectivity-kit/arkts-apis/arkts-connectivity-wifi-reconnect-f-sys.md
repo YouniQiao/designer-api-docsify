@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## reconnect
@@ -15,8 +15,6 @@ function reconnect(): boolean
 Re-connects to current network.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -33,15 +31,3 @@ Re-connects to current network.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    wifi.reconnect();
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

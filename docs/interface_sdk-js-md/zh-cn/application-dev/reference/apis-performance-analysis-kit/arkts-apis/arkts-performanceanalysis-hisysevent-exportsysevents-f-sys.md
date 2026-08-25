@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## exportSysEvents
 
 ```TypeScript
-function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long
+function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): number
 ```
 
 批量导出系统事件，以文件格式写入应用沙箱固定目录(/data/storage/el2/base/cache/hiview/event/)。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
@@ -35,7 +33,7 @@ function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **错误码：**
 
@@ -47,115 +45,3 @@ function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long
 | [11200301](../errorcode-hisysevent-sys.md#11200301-查询规则的数量超过限制) |
 | [11200302](../errorcode-hisysevent-sys.md#11200302-非法的查询规则) |
 | [11200304](../errorcode-hisysevent-sys.md#11200304-查询频率超过限制) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let customizedParams: Record<string, string | number> = {
-    'PID': 487,
-    'UID': 103,
-    'PACKAGE_NAME': "com.ohos.hisysevent.test",
-    'PROCESS_NAME': "syseventservice",
-    'MSG': "no msg."
-  };
-  let eventInfo: hiSysEvent.SysEventInfo = {
-    domain: "RELIABILITY",
-    name: "STACK",
-    eventType: hiSysEvent.EventType.FAULT,
-    params: customizedParams
-  };
-  hiSysEvent.write(eventInfo, (err: BusinessError) => {
-    // 处理事件写入成功后的操作
-  });
-
-  let queryArg: hiSysEvent.QueryArg = {
-    beginTime: -1,
-    endTime: -1,
-    maxEvents: 1,
-  };
-  let queryRules: hiSysEvent.QueryRule[] = [{
-    domain: "RELIABILITY",
-    names: ["STACK"],
-  } as hiSysEvent.QueryRule];
-  let time = hiSysEvent.exportSysEvents(queryArg, queryRules);
-  console.info(`receive export task time is : ${time}`);
-
-  // 等待文件写入完成后读取（建议通过监听文件系统事件或轮询文件大小确认）
-  setTimeout(() => {
-    let eventDir = '/data/storage/el2/base/cache/hiview/event';
-    let filenames = fileIo.listFileSync(eventDir);
-    for (let i = 0; i < filenames.length; i++) {
-      if (filenames[i].indexOf(time.toString()) != -1) {
-        let res = fileIo.readTextSync(eventDir + '/' + filenames[i]);
-        let events: string = JSON.parse('[' + res.slice(0, res.length - 1) + ']');
-        console.info("read file end, events is :" + JSON.stringify(events));
-      }
-    }
-  }, 10000);
-} catch (err) {
-  // 捕获并打印错误信息
-  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let customizedParams: Record<string, boolean | int | double | string | bigint | boolean[] | int[] | double[] | string[] | bigint[]> = {
-    'PID': 487,
-    'UID': 103,
-    'PACKAGE_NAME': "com.ohos.hisysevent.test",
-    'PROCESS_NAME': "syseventservice",
-    'MSG': "no msg."
-  };
-  let eventInfo: hiSysEvent.SysEventInfo = {
-    domain: "RELIABILITY",
-    name: "STACK",
-    eventType: hiSysEvent.EventType.FAULT,
-    params: customizedParams
-  };
-  hiSysEvent.write(eventInfo, (err: BusinessError<void> | null, data: undefined) => {
-    // 处理事件写入成功后的操作
-  });
-
-  let queryArg: hiSysEvent.QueryArg = {
-    beginTime: -1,
-    endTime: -1,
-    maxEvents: 1,
-  };
-  let queryRules: hiSysEvent.QueryRule[] = [{
-    domain: "RELIABILITY",
-    names: ["STACK"],
-  } as hiSysEvent.QueryRule];
-  let time = hiSysEvent.exportSysEvents(queryArg, queryRules);
-  console.info(`receive export task time is : ${time}`);
-
-  // 延迟读取本次导出的事件
-  setTimeout(() => {
-    let eventDir = '/data/storage/el2/base/cache/hiview/event';
-    let filenames = fileIo.listFileSync(eventDir);
-    for (let i = 0; i < filenames.length; i++) {
-      if (filenames[i].indexOf(time.toString()) != -1) {
-        let res = fileIo.readTextSync(eventDir + '/' + filenames[i]);
-        let events: string = JSON.parse('[' + res.slice(0, res.length - 1) + ']');
-        console.info("read file end, events is :" + JSON.stringify(events));
-      }
-    }
-  }, 10000);
-} catch (err) {
-  // 捕获并打印错误信息
-  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
-}
-```

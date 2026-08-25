@@ -4,14 +4,12 @@ This module provides the capability to manage web modules.@namespace webview
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## 汇总
@@ -124,10 +122,5 @@ import { webview } from '@kit.ArkWeb';
 | 名称 |
 | --- |
 | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) |
-| [OneParamFn](arkts-arkweb-webview-oneparamfn-t.md) |
 | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) |
-| [ResumePlayerFn](arkts-arkweb-webview-resumeplayerfn-t.md) |
-| [SuspendPlayerFn](arkts-arkweb-webview-suspendplayerfn-t.md) |
-| [UpdateRectFn](arkts-arkweb-webview-updaterectfn-t.md) |
 | [WebMessage](arkts-arkweb-webview-webmessage-t.md) |
-| [ZeroParamFn](arkts-arkweb-webview-zeroparamfn-t.md) |

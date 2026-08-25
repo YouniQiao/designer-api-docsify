@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## stopBlinking
@@ -15,8 +15,6 @@ function stopBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkResu
 停止闪光灯闪烁或屏幕闪烁。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -46,16 +44,3 @@ function stopBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkResu
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-try {
-  let code: config.BlinkResultCode = config.stopBlinking(config.BlinkingMode.SINGLE_BLINK, config.BlinkingScenario.ALARM);
-  console.info(`Succeeded in stopBlinking, result code: ${code}`);
-} catch (err) {
-  console.error(`Failed to call stopBlinking, code is ${err.code}, message is ${err.message}`);
-}
-```

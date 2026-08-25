@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## bearerPrivateIdentifier
@@ -25,8 +23,6 @@ bearerPrivateIdentifier?: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,62 +40,6 @@ netCapabilities: NetCapabilities
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let config: wifiManager.WifiDeviceConfig = {
-  ssid: "TEST",
-  preSharedKey: "**********",
-  securityType: wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
-};
-// 通过wifiManager.addCandidateConfig获取注册WLAN的networkId。
-wifiManager.addCandidateConfig(config,(error,networkId) => {
- let netConnectionWlan = connection.createNetConnection({
-   netCapabilities: {
-     bearerTypes: [connection.NetBearType.BEARER_WIFI]
-   },
-   bearerPrivateIdentifier: `${networkId}`
- });
- netConnectionWlan.register((error: BusinessError) => {
-   console.error(`Failed to get register.Code:${error.code}, message:${error.message}`);
- });
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let config: wifiManager.WifiDeviceConfig = {
-  ssid: "TEST",
-  preSharedKey: "**********",
-  securityType: wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
-};
-// 通过wifiManager.addCandidateConfig获取注册WLAN的networkId。
-wifiManager.addCandidateConfig(config,(error,networkId) => {
-  let netConnectionWlan = connection.createNetConnection({
-    netCapabilities: {
-      bearerTypes: [connection.NetBearType.BEARER_WIFI]
-    },
-    bearerPrivateIdentifier: `${networkId}`
-  });
-  netConnectionWlan.register((error: BusinessError|null) => {
-    console.error(`Failed to get register.Code:${error.code}, message:${error.message}`);
-  });
-});
-```

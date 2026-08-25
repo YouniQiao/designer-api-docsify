@@ -4,8 +4,6 @@ Enumerates the ArkWeb renderer subprocess mode types. You can select the appropr
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## SINGLE
@@ -17,8 +15,6 @@ SINGLE = 0
 ArkWeb single render subprocess mode. In this mode, multiple **Web** components share one render subprocess.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,8 +29,6 @@ MULTIPLE = 1
 ArkWeb multi-render subprocess mode. In this mode, each **Web** component has a rendering subprocess.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,14 +4,12 @@ Defines the type of the param used for calling the API.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## Modules to Import
 
 ```TypeScript
-import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
+import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## tag
@@ -26,8 +24,6 @@ Parameter tag, which is used to distinguish parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -40,11 +36,9 @@ value: boolean | number | bigint | Uint8Array
 
 Value of the tag.
 
-**Type:** boolean \| int \| bigint \| Uint8Array
+**Type:** boolean \| number \| bigint \| Uint8Array
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Enumerates password-based encryption scheme (PBES) algorithms.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## AES_128_CBC
@@ -17,8 +15,6 @@ AES_128_CBC = 0
 AES-128-CBC.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -34,8 +30,6 @@ AES-192-CBC.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.Security.Cert
@@ -49,8 +43,6 @@ AES_256_CBC = 2
 AES-256-CBC.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 

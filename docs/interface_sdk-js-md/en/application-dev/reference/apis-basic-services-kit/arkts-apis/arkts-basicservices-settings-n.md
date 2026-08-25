@@ -4,14 +4,12 @@ This module provides settings data access abilities.@namespace settings
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

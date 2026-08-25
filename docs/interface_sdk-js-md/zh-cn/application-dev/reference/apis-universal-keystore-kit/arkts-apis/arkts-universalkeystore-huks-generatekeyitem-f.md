@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## generateKeyItem
@@ -18,8 +18,6 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 > 生成[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -59,162 +57,6 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) |
 
-**示例**
-
-ArkTS示例：
-
-```TypeScript
-/* 以生成ECC密钥为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-let keyAlias: string = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_ECC
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_DIGEST,
-    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-  },
-];
-let options: huks.HuksOptions = {
-  properties: properties
-};
-/* 生成密钥 */
-huks.generateKeyItem(keyAlias, options, (error) => {
-  if (error) {
-    console.error(`callback: generateKeyItem failed`);
-  } else {
-    console.info(`callback: generateKeyItem key success`);
-  }
-});
-```
-
-JS示例代码仅供轻量级设备使用。
-
-```TypeScript
-<stack class="container">
-    <input type="button" class="generateBtn" @click="generateKey">生成密钥</input>
-    <text class="result">{{result}}</text>
-</stack>
-```
-
-```TypeScript
-.container {
-  width: 454px;
-  height: 800px;
-  background-color: #ffffffff;
-}
-
-.generateBtn {
-  left: 77px;
-  top: 100px;
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  color: white;
-  background-color: orange;
-  font-size: 25px;
-}
-
-.result {
-  left: 30px;
-  top: 190px;
-  width: 390px;
-  height: 80px;
-  text-align: center;
-  color: #ff000000;
-  background-color: #ffffffff;
-  font-size: 25px;
-}
-```
-
-```TypeScript
-import huks from '@ohos.security.huks';
-
-function testGenerateKey() {
-    let huksInfo;
-    let keyAlias = 'keyAlias';
-    let properties = [{
-        tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-        value: huks.HuksKeyAlg.HUKS_ALG_DES
-    }, {
-        tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-        value: huks.HuksKeySize.HUKS_DES_KEY_SIZE_64
-    }, {
-        tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-        value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT |
-        huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT
-    }];
-    let options = {
-        properties: properties
-    };
-
-    huks.generateKeyItem(keyAlias, options, (err) => {
-        if (err) {
-            huksInfo = 'generateKeyItem failed, code: ' + err.code + ', message: ' + err.message;
-            console.error(huksInfo);
-        } else {
-            huksInfo = 'generateKeyItem succeeded';
-            console.info(huksInfo);
-        }
-    });
-    return huksInfo;
-}
-
-export default {
-    data: {
-        result: ''
-    },
-
-    generateKey() {
-        this.result = testGenerateKey();
-    }
-};
-```
-
-```TypeScript
-/* 以生成ECC密钥为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-let keyAlias = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_ECC
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_DIGEST,
-    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-  },
-];
-let options: huks.HuksOptions = {
-  properties: properties
-};
-/* 生成密钥 */
-huks.generateKeyItem(keyAlias, options)
-  .then((data) => {
-    console.info(`promise: generateKeyItem success`);
-  });
-```
-
 
 ## generateKeyItem
 
@@ -228,8 +70,6 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 > 生成[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -273,7 +113,3 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 | [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) |
-
-**示例**
-
-参见 [generateKeyItem](#generatekeyitem)

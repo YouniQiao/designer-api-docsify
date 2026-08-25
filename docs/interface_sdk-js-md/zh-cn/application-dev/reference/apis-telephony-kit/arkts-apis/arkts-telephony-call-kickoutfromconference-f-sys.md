@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## kickOutFromConference
 
 ```TypeScript
-function kickOutFromConference(callId: int, callback: AsyncCallback<void>): void
+function kickOutFromConference(callId: number, callback: AsyncCallback<void>): void
 ```
 
 移出电话会议，将指定通话从会议电话中挂断。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -28,7 +26,7 @@ function kickOutFromConference(callId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -43,42 +41,16 @@ function kickOutFromConference(callId: int, callback: AsyncCallback<void>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.kickOutFromConference(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`kickOutFromConference fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`kickOutFromConference success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.kickOutFromConference(1).then(() => {
-    console.info(`kickOutFromConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`kickOutFromConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## kickOutFromConference
 
 ```TypeScript
-function kickOutFromConference(callId: int): Promise<void>
+function kickOutFromConference(callId: number): Promise<void>
 ```
 
 移出电话会议，将指定通话从会议电话中挂断。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -90,7 +62,7 @@ function kickOutFromConference(callId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 
 **返回值：**
 
@@ -109,7 +81,3 @@ function kickOutFromConference(callId: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [kickOutFromConference](#kickoutfromconference)

@@ -4,8 +4,6 @@ Enumerates the types of areas to avoid for window content.When adapting window c
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_SYSTEM
@@ -17,8 +15,6 @@ TYPE_SYSTEM = 0
 Default area of the system. <!--RP11-->It contains the status bar and three-button navigation bar.<!--RP11End-->
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ Cutout area.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -49,8 +43,6 @@ TYPE_SYSTEM_GESTURE = 2
 Side return gesture area. Currently, no devices support this type of avoid area.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,8 +58,6 @@ Fixed soft keyboard area.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -82,8 +72,6 @@ Bottom navigation bar. <!--RP12-->OpenHarmony devices do not support this capabi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -97,8 +85,6 @@ TYPE_FLOAT_NAVIGATION = 5
 Area for float navigation
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,16 +4,14 @@ Provides APIs for observing the changes of files or directories. Before using th
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## start
@@ -26,8 +24,6 @@ Starts listening.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
@@ -48,15 +44,6 @@ Starts listening.
 | 13900025 |
 | 13900030 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fs.createWatcher(filePath, 0xfff, () => {});
-watcher.start();
-watcher.stop();
-```
 
 ## stop
 
@@ -68,8 +55,6 @@ Stops listening and removes the **Watcher** object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Error codes:**
@@ -90,12 +75,3 @@ Stops listening and removes the **Watcher** object.
 | 13900025 |
 | 13900030 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fs.createWatcher(filePath, 0xfff, () => {});
-watcher.start();
-watcher.stop();
-```

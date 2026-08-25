@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SwipeRefresher } from '@kit.ArkUI';
+import { SwipeRefresher } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

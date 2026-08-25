@@ -4,60 +4,52 @@ Defines the offset area between the input method soft keyboard and the system pa
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## bottom
 
 ```TypeScript
-readonly bottom: int
+readonly bottom: number
 ```
 
 Distance between the bottom border of the keyboard area and the bottom border of the system panel area, in px. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## left
 
 ```TypeScript
-readonly left: int
+readonly left: number
 ```
 
 Distance between the left border of the keyboard area and the left border of the system panel area, in px. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## right
 
 ```TypeScript
-readonly right: int
+readonly right: number
 ```
 
 Distance between the right border of the keyboard area and the right border of the system panel area, in px. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

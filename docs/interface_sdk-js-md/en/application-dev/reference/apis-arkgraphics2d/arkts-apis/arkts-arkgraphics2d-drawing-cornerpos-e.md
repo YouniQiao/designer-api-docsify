@@ -4,8 +4,6 @@ Enumerates the corner positions of a rounded rectangle.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## TOP_LEFT_POS
@@ -17,8 +15,6 @@ TOP_LEFT_POS = 0
 Top left corner of the rounded rectangle.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ Top right corner of the rounded rectangle.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## BOTTOM_RIGHT_POS
@@ -46,8 +40,6 @@ Bottom right corner of the rounded rectangle.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## BOTTOM_LEFT_POS
@@ -59,7 +51,5 @@ BOTTOM_LEFT_POS = 3
 Bottom left corner of the rounded rectangle.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## cancelReminder
@@ -15,8 +15,6 @@ function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 Cancels the reminder with the specified ID. This API uses an asynchronous callback to return the cancellation result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -31,22 +29,6 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 | reminderId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
-  console.info("cancelReminder callback");
-});
-```
-
-```TypeScript
-reminderAgent.cancelReminder(1).then(() => {
-    console.info("cancelReminder promise");
-});
-```
-
 
 ## cancelReminder
 
@@ -57,8 +39,6 @@ function cancelReminder(reminderId: number): Promise<void>
 Cancels the reminder with the specified ID. This API uses a promise to return the cancellation result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -77,7 +57,3 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [cancelReminder](#cancelreminder)

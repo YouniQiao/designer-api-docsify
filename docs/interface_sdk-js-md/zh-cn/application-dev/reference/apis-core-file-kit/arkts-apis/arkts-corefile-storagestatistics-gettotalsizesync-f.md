@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getTotalSizeSync
 
 ```TypeScript
-function getTotalSizeSync(): long
+function getTotalSizeSync(): number
 ```
 
 同步获取内置存储的总空间大小（单位为Byte）。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本10 - 14：ohos.permission.STORAGE_MANAGER
@@ -27,7 +25,7 @@ function getTotalSizeSync(): long
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **错误码：**
 
@@ -37,33 +35,3 @@ function getTotalSizeSync(): long
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900042 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let totalSize = storageStatistics.getTotalSizeSync();
-  console.info('getTotalSizeSync successfully:' + totalSize);
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`getTotalSizeSync failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let totalSize = storageStatistics.getTotalSizeSync();
-  console.info('getTotalSizeSync successfully:' + totalSize);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`getTotalSizeSync failed. Code: ${err.code}, message: ${err.message}`);
-}
-```

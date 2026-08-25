@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -19,8 +17,6 @@ FACE_AUTH_TIP_TOO_BRIGHT = 1
 光线太强，获取的图像太亮。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 11
 
@@ -36,8 +32,6 @@ FACE_AUTH_TIP_TOO_DARK = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -51,8 +45,6 @@ FACE_AUTH_TIP_TOO_CLOSE = 3
 人脸距离设备过近。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 11
 
@@ -68,8 +60,6 @@ FACE_AUTH_TIP_TOO_FAR = 4
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -83,8 +73,6 @@ FACE_AUTH_TIP_TOO_HIGH = 5
 设备太高，仅获取到人脸上部。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 11
 
@@ -100,8 +88,6 @@ FACE_AUTH_TIP_TOO_LOW = 6
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -115,8 +101,6 @@ FACE_AUTH_TIP_TOO_RIGHT = 7
 设备太靠右，仅获取到人脸右部。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 11
 
@@ -132,8 +116,6 @@ FACE_AUTH_TIP_TOO_LEFT = 8
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -147,8 +129,6 @@ FACE_AUTH_TIP_TOO_MUCH_MOTION = 9
 在图像采集过程中，用户人脸移动太快。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 11
 
@@ -164,8 +144,6 @@ FACE_AUTH_TIP_POOR_GAZE = 10
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -179,8 +157,6 @@ FACE_AUTH_TIP_NOT_DETECTED = 11
 没有检测到人脸信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 11
 

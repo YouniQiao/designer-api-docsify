@@ -4,8 +4,6 @@ ModifierUtils provides utility methods for modifier and attribute operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isInstanceOf
@@ -17,8 +15,6 @@ static isInstanceOf<T extends CommonMethod<T>>(instance: T, componentName: strin
 Checks if the given instance is of the specified component type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

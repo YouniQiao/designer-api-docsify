@@ -4,8 +4,6 @@ Describes the screen position information.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Describes the screen position information.
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## id
 
 ```TypeScript
-id: long
+id: number
 ```
 
 Screen ID. The value must be a positive integer. Any non-positive integer values will be considered invalid and result in an error.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,16 +33,14 @@ Screen ID. The value must be a positive integer. Any non-positive integer values
 ## startX
 
 ```TypeScript
-startX: long
+startX: number
 ```
 
 Start X coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being rightwards. in px. The value must be a non-negative integer. Any other values will be considered invalid and result in an error.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -55,16 +49,14 @@ Start X coordinate of the screen. The top-left vertex of the bounding rectangle 
 ## startY
 
 ```TypeScript
-startY: long
+startY: number
 ```
 
 Start Y coordinate of the screen. The top-left vertex of the bounding rectangle formed by the two screens is used as the origin, with the positive direction being downwards. in px. The value must be a non-negative integer. Any other values will be considered invalid and result in an error.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

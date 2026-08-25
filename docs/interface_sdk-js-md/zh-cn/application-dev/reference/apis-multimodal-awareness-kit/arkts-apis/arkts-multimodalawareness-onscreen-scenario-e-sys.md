@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = 0
 表示屏上内容所处场景未知。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -33,8 +29,6 @@ ARTICLE = 1
 表示屏上内容处于文章场景。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

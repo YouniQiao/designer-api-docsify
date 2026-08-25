@@ -4,8 +4,6 @@ Enum of CustomKeyboardContinueFeature
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ENABLED
@@ -17,8 +15,6 @@ ENABLED = 0
 Enable custom keyboard continuation.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ DISABLED = 1
 Disable custom keyboard continuation.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

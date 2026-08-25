@@ -1,6 +1,8 @@
 # Poly1305ParamsSpec
 
-加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，封装使用ChaCha20-Poly1305 AEAD模式进行加密或解密的参数， 需要nonce、AAD和认证标签。它是 [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。<br>适用于[ChaCha20-Poly1305](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20)。
+加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，封装使用ChaCha20-Poly1305 AEAD模式进行加密或解密的参数， 需要nonce、AAD和认证标签。它是 [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。
+
+适用于[ChaCha20-Poly1305](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20)。
 
 > **说明：**&gt;
 > 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要
@@ -17,14 +19,12 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## aad
@@ -38,8 +38,6 @@ aad: DataBlob
 **类型：** DataBlob
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -57,8 +55,6 @@ authTag: DataBlob
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
@@ -74,8 +70,6 @@ Nonce（通过iv字段传入），长度为12字节。
 **类型：** DataBlob
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

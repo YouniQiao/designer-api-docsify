@@ -4,8 +4,6 @@ This module provides basic NearLink management capabilities, including enabling 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -13,7 +11,7 @@ This module provides basic NearLink management capabilities, including enabling 
 ## Modules to Import
 
 ```TypeScript
-import { manager } from '@kit.ConnectivityKit';
+import { manager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

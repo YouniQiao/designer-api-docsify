@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## closeOpenedEnterpriseDlpFiles
@@ -19,8 +19,6 @@ Closes all opened enterprise DLP files that meet the specified options. This API
 > [generateDlpFileForEnterprise](arkts-dataprotection-dlppermission-generatedlpfileforenterprise-f.md).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 

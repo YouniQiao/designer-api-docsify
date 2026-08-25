@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## getNetQuotaPolicies
@@ -15,8 +15,6 @@ function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): vo
 Obtains the metering network policy. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -41,30 +39,6 @@ Obtains the metering network policy. This API uses an asynchronous callback to r
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.getNetQuotaPolicies((error: BusinessError, data: policy.NetQuotaPolicy[]) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getNetQuotaPolicies()
-  .then((data: policy.NetQuotaPolicy[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## getNetQuotaPolicies
 
@@ -75,8 +49,6 @@ function getNetQuotaPolicies(): Promise<Array<NetQuotaPolicy>>
 Obtains the metering network policy. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -99,7 +71,3 @@ Obtains the metering network policy. This API uses a promise to return the resul
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [getNetQuotaPolicies](#getnetquotapolicies)

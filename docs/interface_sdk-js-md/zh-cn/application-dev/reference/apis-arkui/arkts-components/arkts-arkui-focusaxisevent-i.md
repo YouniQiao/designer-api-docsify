@@ -6,8 +6,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,11 +21,9 @@ axisMap: Map<AxisModel, number>
 
 焦点轴事件的轴值表。
 
-**类型：** Map&lt;AxisModel, number&gt;
+**类型：** Map&lt;[AxisModel](../arkts-apis/arkts-arkui-axismodel-e.md), number&gt;
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ stopPropagation: Callback<void>
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

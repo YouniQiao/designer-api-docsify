@@ -1,7 +1,5 @@
 # StringConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (value?: any): string
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -31,8 +27,6 @@
 new(value?: any): String
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -48,8 +42,6 @@ new(value?: any): String
 ```TypeScript
 fromCharCode(...codes: number[]): string
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -68,5 +60,3 @@ readonly prototype: String
 ```
 
 **Type:** String
-
-**ArkTS mode:** 

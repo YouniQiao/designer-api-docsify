@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## onSessionCreate
@@ -15,8 +15,6 @@ function onSessionCreate(callback: Callback<AVSessionDescriptor>): void
 Register session create callback
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
 

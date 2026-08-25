@@ -4,14 +4,12 @@ Defines contact filter options.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Applications.Contacts
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## filterCondition
@@ -25,8 +23,6 @@ Filter criteria.
 **Type:** [FilterCondition](arkts-contacts-contact-filtercondition-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -43,8 +39,6 @@ Filter value. The default value is **undefined**.
 **Type:** string \| [ValueType](../../apis-arkdata/arkts-apis/arkts-arkdata-valuetype-t.md)[]
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

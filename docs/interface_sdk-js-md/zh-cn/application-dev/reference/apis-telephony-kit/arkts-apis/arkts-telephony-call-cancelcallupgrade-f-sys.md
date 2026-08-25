@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## cancelCallUpgrade
 
 ```TypeScript
-function cancelCallUpgrade(callId: int): Promise<void>
+function cancelCallUpgrade(callId: number): Promise<void>
 ```
 
 视频通话升级过程中取消升级。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -28,7 +26,7 @@ function cancelCallUpgrade(callId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 
 **返回值：**
 
@@ -47,15 +45,3 @@ function cancelCallUpgrade(callId: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.cancelCallUpgrade(1).then(() => {
-    console.info(`cancelCallUpgrade success.`);
-}).catch((err: BusinessError) => {
-    console.error(`cancelCallUpgrade fail, promise: err->${JSON.stringify(err)}`);
-});
-```

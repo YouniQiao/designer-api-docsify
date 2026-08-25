@@ -4,8 +4,6 @@ The **volumeManager** module provides APIs for querying and managing volumes and
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The **volumeManager** module provides APIs for querying and managing volumes and
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

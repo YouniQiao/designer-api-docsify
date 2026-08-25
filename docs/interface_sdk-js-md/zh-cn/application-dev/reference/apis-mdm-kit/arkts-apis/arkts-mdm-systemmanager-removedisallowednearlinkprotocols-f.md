@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedNearLinkProtocols
@@ -15,8 +15,6 @@ function removeDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLin
 为指定用户移除禁用的星闪协议名单。移除成功后，指定用户可以重新使用移除列表中的星闪协议进行通信，恢复相应的协议连接能力。使用场景：在企业设备管理场景下，管理员可通过此接口移除之前设置的星闪协议禁用策略，允许用户恢复使用星闪协议进行 设备间通信。适用于需要恢复特定用户星闪通信能力的场景，帮助企业管理员灵活调整用户设备的星闪协议访问权限，满足不同业务场景的通信需求。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -41,29 +39,3 @@ function removeDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLin
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-let protocols: systemManager.NearLinkProtocol[] = [systemManager.NearLinkProtocol.SSAP,
-  systemManager.NearLinkProtocol.DATA_TRANSFER];
-
-// 需根据实际情况进行替换
-let accountId: number = 100;
-try {
-  systemManager.removeDisallowedNearLinkProtocols(wantTemp, protocols, accountId);
-  console.info('Succeeded in removing the disabled Starlink protocol list for the specified user.');
-} catch (err) {
-  console.error(`Failed to remove the disabled Starlink protocol list for the specified user. Code is ${err.code}, message is ${err.message}`);
-}
-```

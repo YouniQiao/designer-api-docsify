@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## removeVirtualScreenSurface
 
 ```TypeScript
-function removeVirtualScreenSurface(screenId: long, surfaceId: string): Promise<void>
+function removeVirtualScreenSurface(screenId: number, surfaceId: string): Promise<void>
 ```
 
 Remove surface for the virtual screen.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +26,7 @@ Remove surface for the virtual screen.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| screenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| screenId | number | Yes |
 | surfaceId | string | Yes |
 
 **Return value:**

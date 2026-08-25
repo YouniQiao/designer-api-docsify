@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -26,13 +24,11 @@ backgroundColor?: ResourceColor
 > **说明：**&gt;
 > 当type为PickerIndicatorType.BACKGROUND时生效。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** 'sys.color.comp_background_tertiary'
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,16 +51,14 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 > **说明：**&gt;
 > 1. 当type为PickerIndicatorType.BACKGROUND时生效。
 > 2. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)：统一设置四个圆角半径的大小和单位。
-> 3. BorderRadiuses：单独设置四个圆角半径的大小（单位为vp）。
-> 4. LocalizedBorderRadiuses：单独设置四个圆角半径的大小和单位。
+> 3. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)：单独设置四个圆角半径的大小（单位为vp）。
+> 4. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)：单独设置四个圆角半径的大小和单位。
 
-**类型：** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** { value:12, unit:LengthUnit.vp }
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,13 +79,11 @@ dividerColor?: ResourceColor
 > **说明：**&gt;
 > 当type为PickerIndicatorType.DIVIDER时生效。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** $r('sys.color.comp_divider')
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,8 +114,6 @@ endMargin?: LengthMetrics
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -152,8 +142,6 @@ startMargin?: LengthMetrics
 **默认值：** 0
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,8 +174,6 @@ strokeWidth?: LengthMetrics
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -211,8 +197,6 @@ type: PickerIndicatorType
 **默认值：** PickerIndicatorType.BACKGROUND
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

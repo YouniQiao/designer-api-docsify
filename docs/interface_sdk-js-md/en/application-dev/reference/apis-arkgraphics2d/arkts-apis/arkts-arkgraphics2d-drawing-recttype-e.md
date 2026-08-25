@@ -4,8 +4,6 @@ Enumerates the types of rectangles used to fill the lattices. Used only in [Latt
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Draws an image into the lattice.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ Sets the lattice to transparent.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## FIXEDCOLOR
@@ -45,7 +39,5 @@ FIXEDCOLOR = 2
 Draws the colors in the **fColors** array in [Lattice](arkts-graphics-drawing.md) into a lattice.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

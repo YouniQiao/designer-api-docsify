@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
+import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## watch
@@ -16,8 +16,6 @@ Registers the object to be checked.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 **Parameters:**
@@ -26,10 +24,3 @@ Registers the object to be checked.
 | --- | --- | --- |
 | obj | object | Yes |
 | msg | string | Yes |
-
-**Examples**
-
-```TypeScript
-let obj:Object = new Object();
-jsLeakWatcher.watch(obj, "Trace Object");
-```

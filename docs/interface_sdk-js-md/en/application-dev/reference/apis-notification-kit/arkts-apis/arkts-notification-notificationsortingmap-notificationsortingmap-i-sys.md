@@ -4,8 +4,6 @@ The **NotificationSortingMap** module provides APIs for defining the sorting inf
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Hash codes for notification sorting.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -39,8 +35,6 @@ Array of notification sorting information.
 **Type:** Record&lt;string, [NotificationSorting](arkts-notification-notificationsorting-notificationsorting-i-sys.md)&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

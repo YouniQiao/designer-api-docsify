@@ -24,8 +24,6 @@ Defines the style of the custom dialog box.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -41,13 +39,11 @@ distortionMode?: DistortionMode
 
 Sets the distortion animation Mode of the dialog.
 
-**Type:** DistortionMode
+**Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,13 +59,11 @@ edgeLightMode?: EdgeLightMode
 
 Sets the edgeLight animation Mode of the dialog.
 
-**Type:** EdgeLightMode
+**Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

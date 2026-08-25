@@ -4,8 +4,6 @@ Enumerates the P12 MAC digest algorithms.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## SHA256
@@ -17,8 +15,6 @@ SHA256 = 0
 SHA-256.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -34,8 +30,6 @@ SHA-384.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.Security.Cert
@@ -49,8 +43,6 @@ SHA512 = 2
 SHA-512.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 

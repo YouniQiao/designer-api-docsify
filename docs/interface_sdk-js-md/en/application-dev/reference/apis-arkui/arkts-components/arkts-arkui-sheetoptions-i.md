@@ -6,8 +6,6 @@ Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindop
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ shouldDismiss?: (sheetDismiss: SheetDismiss) => void
 Callback function when the sheet interactive dismiss
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,8 +49,6 @@ Defines sheet background blur Style
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -69,11 +63,9 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Defines the sheet's border color.
 
-**Type:** ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,11 +81,9 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Defines the sheet's border style.
 
-**Type:** BorderStyle \| [EdgeStyles](../arkts-apis/arkts-arkui-units-edgestyles-i.md)
+**Type:** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,11 +99,9 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Defines the sheet's border width.
 
-**Type:** Dimension \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,8 +121,6 @@ Defines sheet detents
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -149,13 +135,11 @@ detentSelection?: SheetSize | Length
 
 Select a detent from detents property
 
-**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
+**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** detents[0]
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -177,8 +161,6 @@ Defines whether the control bar is displayed.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -198,8 +180,6 @@ Sets whether the sheet edge has spring effect.
 **Default:** 3
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -221,8 +201,6 @@ Defines whether the sheet dragbar is floating, when it's displayed.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -242,8 +220,6 @@ Defines whether to respond to the hover mode.
 **Default:** false
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -265,8 +241,6 @@ Set whether interaction is allowed outside the sheet
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -281,13 +255,11 @@ height?: SheetSize | Length
 
 Defines sheet height
 
-**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
+**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** SheetSize.LARGE
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -309,8 +281,6 @@ Defines the sheet's display area in hover mode.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -331,8 +301,6 @@ Determine the mode of sheet how to avoid keyboard.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -347,11 +315,9 @@ maskColor?: ResourceColor
 
 Defines sheet maskColor
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -373,8 +339,6 @@ Defines transition type when preferType is SheetType.CONTENT_COVER
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -395,8 +359,6 @@ Determine the level sheet shows, whether sheet should be displayed within the pa
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -414,8 +376,6 @@ Called when detents of the sheet changed
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -435,8 +395,6 @@ Called when height of the sheet is changed
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -454,8 +412,6 @@ Called when the sheet type changed
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;[SheetType](arkts-arkui-sheettype-e.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -475,8 +431,6 @@ Called when width of the sheet changed
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -494,8 +448,6 @@ Callback function when the sheet will dismiss
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;[DismissSheetAction](arkts-arkui-dismisssheetaction-i.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -515,8 +467,6 @@ Sheet springs back callback when dismiss
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -531,13 +481,11 @@ placement?: Placement
 
 The placement of popup sheet type. Supports all positions defined in Placement.
 
-**Type:** Placement
+**Type:** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
 **Default:** Placement.Bottom
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -559,8 +507,6 @@ placement On target node
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -579,8 +525,6 @@ Defines the sheet prefer type
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -595,11 +539,9 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines sheet radius
 
-**Type:** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -619,13 +561,11 @@ onto the canvas with rounded corners applied.
 2. **RenderStrategy.OFFSCREEN**: The current component and its child components will first be rendered onto
 an off-screen canvas, then undergo a rounded corner clipping, and finally be drawn onto the main canvas.
 
-**Type:** RenderStrategy
+**Type:** [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md)
 
 **Default:** RenderStrategy.FAST
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -647,8 +587,6 @@ Determine sheet scroll size mode.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -666,8 +604,6 @@ Defines the sheet's shadow.
 **Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -689,8 +625,6 @@ Defines whether the close icon is displayed
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -711,8 +645,6 @@ Whether to display in the sub window.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -730,8 +662,6 @@ Set system-styled materials for sheet. Different materials have different effect
 **Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -751,8 +681,6 @@ Defines the sheet title
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -771,8 +699,6 @@ The UIContext that the sheet belongs to
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -787,11 +713,9 @@ width?: Dimension
 
 Defines the sheet's width.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

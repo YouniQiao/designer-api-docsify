@@ -7,14 +7,12 @@ AbilityDelegatorRegistry是自动化测试框架使用指南模块，该模块�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 ```
 
 ## 汇总

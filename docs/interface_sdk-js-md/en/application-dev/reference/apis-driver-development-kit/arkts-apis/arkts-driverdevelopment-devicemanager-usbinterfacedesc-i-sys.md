@@ -4,8 +4,6 @@ Defines the interface descriptor of a USB device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the interface descriptor of a USB device.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## bClass
 
 ```TypeScript
-bClass: int
+bClass: number
 ```
 
 Interface class.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -37,16 +33,14 @@ Interface class.
 ## bInterfaceNumber
 
 ```TypeScript
-bInterfaceNumber: int
+bInterfaceNumber: number
 ```
 
 Interface ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -55,16 +49,14 @@ Interface ID.
 ## bProtocol
 
 ```TypeScript
-bProtocol: int
+bProtocol: number
 ```
 
 Interface protocol.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -73,16 +65,14 @@ Interface protocol.
 ## bSubClass
 
 ```TypeScript
-bSubClass: int
+bSubClass: number
 ```
 
 Interface subclass.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 

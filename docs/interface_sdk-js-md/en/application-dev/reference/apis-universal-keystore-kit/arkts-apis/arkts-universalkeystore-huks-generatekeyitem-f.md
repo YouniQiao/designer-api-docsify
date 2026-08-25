@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## generateKeyItem
@@ -19,8 +19,6 @@ Generates a key. This API uses an asynchronous callback to return the result.Bas
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,160 +58,6 @@ Generates a key. This API uses an asynchronous callback to return the result.Bas
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) |
 | [12000026](../errorcode-huks.md#12000026-secure-element-fault) |
 
-**Examples**
-
-ArkTS sample code:
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Generate a 256-bit ECC key. */
-let keyAlias: string = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_ECC
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_DIGEST,
-    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-  },
-];
-let options: huks.HuksOptions = {
-  properties: properties
-};
-huks.generateKeyItem(keyAlias, options, (error, data) => {
-  if (error) {
-    console.error(`callback: generateKeyItem failed`);
-  } else {
-    console.info(`callback: generateKeyItem key success`);
-  }
-});
-```
-
-The JS sample code is used only for the lightweight devices.
-
-```TypeScript
-<stack class="container">
-    <input type="button" class="generateBtn" @click="generateKey">Generate Key</input>
-    <text class="result">{{result}}</text>
-</stack>
-```
-
-```TypeScript
-.container {
-  width: 454px;
-  height: 800px;
-  background-color: #ffffffff;
-}
-
-.generateBtn {
-  left: 77px;
-  top: 100px;
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  color: white;
-  background-color: orange;
-  font-size: 25px;
-}
-
-.result {
-  left: 30px;
-  top: 190px;
-  width: 390px;
-  height: 80px;
-  text-align: center;
-  color: #ff000000;
-  background-color: #ffffffff;
-  font-size: 25px;
-}
-```
-
-```TypeScript
-import huks from '@ohos.security.huks';
-
-function testGenerateKey() {
-    let huksInfo;
-    let keyAlias = 'keyAlias';
-    let properties = [{
-        tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-        value: huks.HuksKeyAlg.HUKS_ALG_DES
-    }, {
-        tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-        value: huks.HuksKeySize.HUKS_DES_KEY_SIZE_64
-    }, {
-        tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-        value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_ENCRYPT |
-        huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_DECRYPT
-    }];
-    let options = {
-        properties: properties
-    };
-
-    huks.generateKeyItem(keyAlias, options, (err) => {
-        if (err) {
-            huksInfo = 'generateKeyItem failed, code: ' + err.code + ', message: ' + err.message;
-            console.error(huksInfo);
-        } else {
-            huksInfo = 'generateKeyItem succeeded';
-            console.info(huksInfo);
-        }
-    });
-    return huksInfo;
-}
-
-export default {
-    data: {
-        result: ''
-    },
-
-    generateKey() {
-        this.result = testGenerateKey();
-    }
-};
-```
-
-```TypeScript
-/* Generate a 256-bit ECC key. */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-let keyAlias = 'keyAlias';
-let properties: Array<huks.HuksParam> = [
-  {
-    tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-    value: huks.HuksKeyAlg.HUKS_ALG_ECC
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-    value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-    value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-  },
-  {
-    tag: huks.HuksTag.HUKS_TAG_DIGEST,
-    value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-  },
-];
-let options: huks.HuksOptions = {
-  properties: properties
-};
-huks.generateKeyItem(keyAlias, options)
-  .then((data) => {
-    console.info(`promise: generateKeyItem success`);
-  });
-```
-
 
 ## generateKeyItem
 
@@ -229,8 +73,6 @@ Generates a key. This API uses a promise to return the result.
 Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -274,7 +116,3 @@ Based on the principle that the key cannot be transferred out of [Trusted Execut
 | [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) |
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) |
 | [12000026](../errorcode-huks.md#12000026-secure-element-fault) |
-
-**Examples**
-
-See [generateKeyItem](#generatekeyitem)

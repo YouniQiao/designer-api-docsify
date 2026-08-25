@@ -19,8 +19,6 @@ function startTrace(name: string, taskId: number, expectedTime?: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 8
 
 **替代接口：** startTrace
@@ -34,10 +32,3 @@ function startTrace(name: string, taskId: number, expectedTime?: number): void
 | name | string | 是 |
 | taskId | number | 是 |
 | expectedTime | number | 否 |
-
-**示例**
-
-```TypeScript
-bytrace.startTrace("myTestFunc", 1);
-bytrace.startTrace("myTestFunc", 1, 5); // 从startTrace到finishTrace流程的期望耗时为5ms
-```

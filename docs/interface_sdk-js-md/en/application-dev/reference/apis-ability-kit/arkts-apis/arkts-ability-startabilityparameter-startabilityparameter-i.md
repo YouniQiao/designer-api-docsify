@@ -4,8 +4,6 @@ The module defines the parameters for starting an ability. The parameters can be
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## abilityStartSetting
@@ -19,8 +17,6 @@ Indicates the special start setting used in starting ability.
 **Type:** { [key: string]: any }
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -38,8 +34,6 @@ Indicates the special start setting used in starting ability. The ability of thi
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -55,8 +49,6 @@ Indicates the Want containing information about the target ability to start.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
-function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: long): Promise<void>
+function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: number): Promise<void>
 ```
 
 Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to [connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -29,7 +27,7 @@ Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | context | [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) | Yes |
-| connectId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| connectId | number | Yes |
 
 **Return value:**
 

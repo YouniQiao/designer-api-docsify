@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## mkdirSync
@@ -17,8 +17,6 @@ declare function mkdirSync(path: string): void
 Creates a directory. This API returns the result synchronously.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,18 +48,6 @@ Creates a directory. This API returns the result synchronously.
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-let dirPath = pathDir + "/testDir";
-fs.mkdirSync(dirPath);
-```
-
-```TypeScript
-let dirPath = pathDir + "/testDir1/testDir2/testDir3";
-fs.mkdirSync(dirPath, true);
-```
-
 
 ## mkdirSync
 
@@ -72,8 +58,6 @@ declare function mkdirSync(path: string, recursion: boolean): void
 Creates a directory. This API returns the result synchronously. The value **true** means to create a directory recursively.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -105,7 +89,3 @@ Creates a directory. This API returns the result synchronously. The value **true
 | 13900033 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [mkdirSync](#mkdirsync)

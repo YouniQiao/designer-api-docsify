@@ -8,20 +8,6 @@ export type AccessibilityExtensionContext = _AccessibilityExtensionContext.defau
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **属性类型：** _AccessibilityExtensionContext.default
-
-**示例**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-
-class EntryAbility extends AccessibilityExtensionAbility {
-  onConnect(): void {
-    let accessibilityContext = this.context;
-  } 
-}
-```

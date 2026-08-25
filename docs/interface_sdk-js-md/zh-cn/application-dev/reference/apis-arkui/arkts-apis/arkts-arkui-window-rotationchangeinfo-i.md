@@ -4,29 +4,25 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## displayId
 
 ```TypeScript
-displayId: long
+displayId: number
 ```
 
 窗口所在屏幕Id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ displayRect: Rect
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -53,18 +47,19 @@ displayRect: Rect
 ## orientation
 
 ```TypeScript
-orientation: int
+orientation: number
 ```
 
 窗口显示方向。  
-- 0表示竖屏。 - 1表示反向横屏。 - 2表示反向竖屏。 - 3表示横屏。  
+- 0表示竖屏。  
+- 1表示反向横屏。  
+- 2表示反向竖屏。  
+- 3表示横屏。  
 开发者在使用时，需要注意该方向与display对象的属性orientation含义不一致。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -81,8 +76,6 @@ type: RotationChangeType
 **类型：** [RotationChangeType](arkts-arkui-window-rotationchangetype-e.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

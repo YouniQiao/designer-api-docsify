@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## openDoubleClickSettingsPage
@@ -12,12 +12,10 @@ import { settings } from '@kit.BasicServicesKit';
 function openDoubleClickSettingsPage(context: Context): void
 ```
 
-1. Opens the settings page for double-pressing the Down key.
-2. This API is used to set the default application started by double-pressing the Down key.
+1. Opens the settings page for number-pressing the Down key.
+2. This API is used to set the default application started by number-pressing the Down key.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

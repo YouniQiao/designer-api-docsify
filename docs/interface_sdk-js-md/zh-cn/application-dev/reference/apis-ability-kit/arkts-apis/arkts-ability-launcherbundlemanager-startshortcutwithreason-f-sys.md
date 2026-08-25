@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## startShortcutWithReason
@@ -15,8 +15,6 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 根据指定的快捷方式信息，拉起对应的Ability，并携带快捷方式的启动原因。使用Promise异步回调。被拉起方可以通过[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md)的launchReasonMessage字段获取到 启动原因，并根据启动原因进行业务逻辑处理。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.START_SHORTCUT and ohos.permission.SET_LAUNCH_REASON_MESSAGE
 
@@ -46,36 +44,3 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700065](../errorcode-bundle.md#17700065-shortcutinfo结构体中指定的want不支持被拉起) |
-
-**示例**
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant } from '@kit.AbilityKit';
-
-try {
-  let data: Array<launcherBundleManager.ShortcutInfo> =
-    launcherBundleManager.getShortcutInfoSync("com.example.myapplication");
-  console.info('startShortcutWithReason data is ' + JSON.stringify(data));
-  let startReason = AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT;
-  if (data) {
-    try {
-      launcherBundleManager.startShortcutWithReason(data[0], startReason)
-        .then(() => {
-          console.info('startShortcutWithReason success');
-        }).catch((err: BusinessError) => {
-        console.error(`startShortcutWithReason errData is errCode:${err.code}  message:${err.message}`);
-      });
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let message = (error as BusinessError).message;
-      console.error(`startShortcutWithReason error is errCode:${code}  message:${message}`);
-    }
-  }
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`startShortcutWithReason errData is errCode:${code}  message:${message}`);
-}
-```

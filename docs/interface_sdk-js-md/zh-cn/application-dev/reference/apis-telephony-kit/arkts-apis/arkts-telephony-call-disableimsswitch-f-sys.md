@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## disableImsSwitch
 
 ```TypeScript
-function disableImsSwitch(slotId: int, callback: AsyncCallback<void>): void
+function disableImsSwitch(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 禁用Ims开关。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function disableImsSwitch(slotId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -43,42 +41,16 @@ function disableImsSwitch(slotId: int, callback: AsyncCallback<void>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.disableImsSwitch(0, (err: BusinessError) => {
-    if (err) {
-        console.error(`disableImsSwitch fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`disableImsSwitch success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.disableImsSwitch(0).then(() => {
-    console.info(`disableImsSwitch success.`);
-}).catch((err: BusinessError) => {
-    console.error(`disableImsSwitch fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## disableImsSwitch
 
 ```TypeScript
-function disableImsSwitch(slotId: int): Promise<void>
+function disableImsSwitch(slotId: number): Promise<void>
 ```
 
 禁用Ims开关。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -90,7 +62,7 @@ function disableImsSwitch(slotId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -109,7 +81,3 @@ function disableImsSwitch(slotId: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [disableImsSwitch](#disableimsswitch)

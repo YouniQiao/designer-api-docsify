@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## off('connect')
@@ -16,8 +16,6 @@ function off(type: 'connect', sessionId: number,
 取消connect事件的回调监听。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,16 +35,6 @@ function off(type: 'connect', sessionId: number,
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-
-// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 100;
-abilityConnectionManager.off("connect", sessionId);
-```
-
 
 ## off('disconnect')
 
@@ -58,8 +46,6 @@ function off(type: 'disconnect', sessionId: number,
 取消disconnect事件的回调监听。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -79,17 +65,6 @@ function off(type: 'disconnect', sessionId: number,
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 100;
-abilityConnectionManager.off("disconnect", sessionId);
-```
-
 
 ## off('receiveMessage')
 
@@ -101,8 +76,6 @@ function off(type: 'receiveMessage', sessionId: number,
 取消receiveMessage事件的回调监听。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,17 +95,6 @@ function off(type: 'receiveMessage', sessionId: number,
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 100;
-abilityConnectionManager.off("receiveMessage", sessionId);
-```
-
 
 ## off('receiveData')
 
@@ -144,8 +106,6 @@ function off(type: 'receiveData', sessionId: number,
 取消receiveData事件的回调监听。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,14 +124,3 @@ function off(type: 'receiveData', sessionId: number,
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 100;
-abilityConnectionManager.off("receiveData", sessionId);
-```

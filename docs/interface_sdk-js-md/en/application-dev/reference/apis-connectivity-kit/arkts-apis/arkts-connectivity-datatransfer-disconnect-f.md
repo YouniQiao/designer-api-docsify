@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disconnect
@@ -15,8 +15,6 @@ function disconnect(params: ConnectionParams): Promise<void>
 Disconnects from the remote device. This method is called to disconnect from the remote device after it is successfully connected using [dataTransfer.connect](arkts-connectivity-datatransfer-connect-f.md). This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

@@ -4,8 +4,6 @@ Enumerates thermal levels.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 ## COOL
@@ -17,8 +15,6 @@ COOL = 0
 The device is cool, and services are not restricted.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
@@ -32,8 +28,6 @@ The device is in the normal temperature range but it is getting warm. You need t
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 ## WARM
@@ -45,8 +39,6 @@ WARM = 2
 The device is warm. You need to stop or delay some imperceptible services.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
@@ -60,8 +52,6 @@ The device is heating up. You need to stop all imperceptible services and downgr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 ## OVERHEATED
@@ -73,8 +63,6 @@ OVERHEATED = 4
 The device is overheated. You need to stop all imperceptible services and downgrade or reduce the load of major foreground services.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
@@ -88,8 +76,6 @@ The device is overheated and is about to enter the emergency state. You need to 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 ## EMERGENCY
@@ -102,8 +88,6 @@ The device has entered the emergency state. You need to stop all services except
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
 ## ESCAPE
@@ -115,7 +99,5 @@ ESCAPE = 7
 The device is about to enter the escape state. You need to stop all services and take necessary emergency measures such as data backup.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.ThermalManager

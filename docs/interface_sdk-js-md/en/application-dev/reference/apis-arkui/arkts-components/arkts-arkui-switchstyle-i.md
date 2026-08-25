@@ -4,8 +4,6 @@ Sets the style for the component of the **Switch** type.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ pointColor?: ResourceColor
 
 Color of the circular slider when the component is of the **Switch** type.Default value: **\$r('sys.color.ohos_id_color_foreground_contrary')**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Radius of the circular slider when the component is of the **Switch** type. The 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -67,8 +61,6 @@ Radius of the slider track border corners when the component is of the **Switch*
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -83,11 +75,9 @@ unselectedColor?: ResourceColor
 
 Background color of the component when it is of the **Switch** type and is disabled.Default value: **0x337F7F7F** (applies to both dark and light modes). Since API version 20, when [optimizing color mode switching overhead](../../../ui/ui-dark-light-color-adaptation.md#optimizing-color-mode-switching-overhead) is enabled, the default value is **0x19000000** (black with 10% opacity) in light mode and **0x19FFFFFF** (white with 10% opacity) in dark mode.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

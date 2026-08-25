@@ -7,17 +7,15 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## activate
@@ -29,8 +27,6 @@ activate(isActive: boolean, autoInactive?: boolean): void
 设置当前界面的[焦点激活态](../../../ui/arkts-common-events-focus-event.md)。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,43 +41,6 @@ activate(isActive: boolean, autoInactive?: boolean): void
 | [isActive](#isactive) | boolean | 是 |
 | autoInactive | boolean | 否 |
 
-**示例**
-
-```TypeScript
-// 该示例表示在页面加载完成时进入焦点激活态，可按方向键在button间走焦
-@Entry
-@Component
-struct ActivateExample {
-  aboutToAppear() {
-    this.getUIContext().getFocusController().activate(true, false);
-  }
-
-  aboutToDisappear() {
-    this.getUIContext().getFocusController().activate(false);
-  }
-
-  build() {
-    Row() {
-      Button('Button1')
-        .width(200)
-        .height(70)
-        .defaultFocus(true)
-
-      Button('Button2')
-        .width(200)
-        .height(70)
-
-      Button('Button3')
-        .width(200)
-        .height(70)
-    }
-    .padding(10)
-    .justifyContent(FlexAlign.SpaceBetween)
-    .width(800)
-  }
-}
-```
-
 ## clearFocus
 
 ```TypeScript
@@ -92,63 +51,11 @@ clearFocus(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-在该示例中，按钮"button2"默认获焦，点击按钮"clearFocus"后，焦点回到该页面的根容器节点"column1"，此时按下键盘TAB键，按钮"button2"重新获焦。可通过点击"button1"使该按钮获焦，点击按钮"clearFocus"后，焦点同样回到该页面的根容器节点"column1"，此时按下键盘TAB键，由按钮"button1"重新获焦。
-
-```TypeScript
-@Entry
-@Component
-struct ClearFocusExample {
-  @State btColor: Color = Color.Blue;
-
-  build() {
-    Column({ space: 20 }) {
-      Column({ space: 5 }) {
-        Button('button1')
-          .width(200)
-          .height(70)
-          .fontColor(Color.White)
-          .focusOnTouch(true)
-          .backgroundColor(Color.Blue)
-        Button('button2')
-          .width(200)
-          .height(70)
-          .fontColor(Color.White)
-          .focusOnTouch(true)
-          .backgroundColor(this.btColor)
-          .defaultFocus(true)
-          .onFocus(() => {
-            this.btColor = Color.Red;
-          })
-          .onBlur(() => {
-            this.btColor = Color.Blue;
-          })
-        Button('clearFocus')
-          .width(200)
-          .height(70)
-          .fontColor(Color.White)
-          .backgroundColor(Color.Blue)
-          .onClick(() => {
-            this.getUIContext().getFocusController().clearFocus();
-          })
-      }
-      .id('column2')
-    }
-    .id('column1')
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## isActive
 
@@ -159,8 +66,6 @@ isActive(): boolean
 返回UI实例的焦点激活态。焦点激活态可参考[基础概念：焦点激活态](../../../ui/arkts-common-events-focus-event.md#基础概念)。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -174,56 +79,6 @@ isActive(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-验证isActive返回UI实例的焦点激活态。
-
-```TypeScript
-@Entry
-@Component
-struct ClearFocusExample {
-  @State btColor: Color = Color.Blue;
-
-  build() {
-    Column({ space: 20 }) {
-      Column({ space: 5 }) {
-        Button('button1')
-          .width(200)
-          .height(70)
-          .fontColor(Color.White)
-          .focusOnTouch(true)
-          .backgroundColor(Color.Blue)
-          .onClick(() => {
-            console.info("button1 onClick");
-            this.getUIContext().getFocusController().activate(true);
-            console.info(`focus status ${this.getUIContext().getFocusController().isActive()}`);
-          })
-        Button('button2')
-          .width(200)
-          .height(70)
-          .fontColor(Color.White)
-          .focusOnTouch(true)
-          .backgroundColor(this.btColor)
-          .defaultFocus(true)
-          .onClick(() => {
-            console.info("button2 onClick");
-            this.getUIContext().getFocusController().activate(false);
-            console.info(`focus status ${this.getUIContext().getFocusController().isActive()}`);
-          })
-          .onFocus(() => {
-            this.btColor = Color.Red;
-          })
-          .onBlur(() => {
-            this.btColor = Color.Blue;
-          })
-      }
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## requestFocus
 
 ```TypeScript
@@ -233,8 +88,6 @@ requestFocus(key: string): void
 通过组件的id将焦点转移到组件树对应的实体节点，当前帧生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -256,62 +109,6 @@ requestFocus(key: string): void
 | [150002](../errorcode-focus.md#150002-祖先节点无法获得焦点) |
 | [150003](../errorcode-focus.md#150003-节点不存在) |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct RequestExample {
-  @State btColor: Color = Color.Blue;
-
-  build() {
-    Column({ space: 20 }) {
-      Column({ space: 5 }) {
-        Button('Button')
-          .width(200)
-          .height(70)
-          .fontColor(Color.White)
-          .focusOnTouch(true)
-          .backgroundColor(this.btColor)
-          .onFocus(() => {
-            this.btColor = Color.Red;
-          })
-          .onBlur(() => {
-            this.btColor = Color.Blue;
-          })
-          .id("testButton")
-
-        Divider()
-          .vertical(false)
-          .width("80%")
-          .backgroundColor(Color.Black)
-          .height(10)
-
-        Button('requestFocus')
-          .width(200)
-          .height(70)
-          .onClick(() => {
-            this.getUIContext().getFocusController().requestFocus("testButton");
-          })
-
-        Button('requestFocus fail')
-          .width(200)
-          .height(70)
-          .onClick(() => {
-            try {
-              this.getUIContext().getFocusController().requestFocus("eee");
-            } catch (error) {
-              console.error(`requestFocus failed code is ${error.code} message is ${error.message}`);
-            }
-          })
-      }
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## setAutoFocusTransfer
 
 ```TypeScript
@@ -321,8 +118,6 @@ setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 设置页面切换时，新的页面是否需要主动获取焦点。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -336,58 +131,6 @@ setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 | --- | --- | --- |
 | isAutoFocusTransfer | boolean | 是 |
 
-**示例**
-
-```TypeScript
-@CustomDialog
-struct CustomDialogExample {
-  controller?: CustomDialogController;
-
-  build() {
-    Column() {
-      Text('这是自定义弹窗')
-        .fontSize(30)
-        .height(100)
-      Text('弹窗不能主动获取焦点')
-        .fontSize(20)
-        .height(100)
-      Button('点我关闭弹窗')
-        .onClick(() => {
-          if (this.controller != undefined) {
-            this.getUIContext().getFocusController().setAutoFocusTransfer(true);
-            this.controller.close();
-          }
-        })
-        .margin(20)
-    }
-  }
-}
-
-@Entry
-@Component
-struct CustomDialogUser {
-  dialogController: CustomDialogController | null = new CustomDialogController({
-    builder: CustomDialogExample({}),
-  });
-
-  aboutToDisappear() {
-    this.dialogController = null;
-  }
-
-  build() {
-    Column() {
-      Button('click me')
-        .onClick(() => {
-          if (this.dialogController != null) {
-            this.getUIContext().getFocusController().setAutoFocusTransfer(false);
-            this.dialogController.open();
-          }
-        }).backgroundColor(0x317aff)
-    }.width('100%').margin({ top: 5 })
-  }
-}
-```
-
 ## setKeyProcessingMode
 
 ```TypeScript
@@ -397,8 +140,6 @@ setKeyProcessingMode(mode: KeyProcessingMode): void
 设置按键事件处理的优先级。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -410,50 +151,4 @@ setKeyProcessingMode(mode: KeyProcessingMode): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mode | [KeyProcessingMode](arkts-arkui-focus-keyprocessingmode-e.md) | 是 |
-
-**示例**
-
-```TypeScript
-// 该示例演示了在页面加载完成后设置走焦类型的实现方式。
-@Entry
-@Component
-struct Index {
-  aboutToAppear() {
-    this.getUIContext().getFocusController().setKeyProcessingMode(KeyProcessingMode.ANCESTOR_EVENT);
-  }
-
-  build() {
-    Row() {
-      Row() {
-        Button('Button1').id('Button1').onKeyEvent((event) => {
-          console.info("Button1");
-          return true;
-        })
-        Button('Button2').id('Button2').onKeyEvent((event) => {
-          console.info("Button2");
-          return true;
-        })
-      }
-      .width('100%')
-      .height('100%')
-      .id('Row1')
-      .onKeyEventDispatch((event) => {
-        let context = this.getUIContext();
-        context.getFocusController().requestFocus('Button1');
-        return context.dispatchKeyEvent('Button1', event);
-      })
-    }
-    .height('100%')
-    .width('100%')
-    .onKeyEventDispatch((event) => {
-      if (event.type == KeyType.Down) {
-        let context = this.getUIContext();
-        context.getFocusController().requestFocus('Row1');
-        return context.dispatchKeyEvent('Row1', event);
-      }
-      return true;
-    })
-  }
-}
-```
+| mode | [KeyProcessingMode](arkts-arkui-keyprocessingmode-e.md) | 是 |

@@ -6,17 +6,15 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## constructor
@@ -29,80 +27,8 @@ constructor()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-function GetUIContextByAtomicInterface(): UIContext {
-  let callingScopeUIContext = UIContext.getCallingScopeUIContext();
-  if (callingScopeUIContext) {
-    hilog.info(0x00, 'testTag', `Get UIContext of calling scope.`)
-    return callingScopeUIContext;
-  }
-  let allContexts = UIContext.getAllUIContexts();
-  let length = allContexts.length;
-  if (length === 1) {
-    hilog.info(0x00, 'testTag', `Get UIContext of unique UI instance.`)
-    return allContexts[0];
-  }
-  let lastFocusedUIContext = UIContext.getLastFocusedUIContext();
-  if (lastFocusedUIContext) {
-    hilog.info(0x00, 'testTag', `Get UIContext of last focused instance.`)
-    return lastFocusedUIContext;
-  }
-  let lastForegroundUIContext = UIContext.getLastForegroundUIContext();
-  if (lastForegroundUIContext) {
-    hilog.info(0x00, 'testTag', `Get UIContext of last foregrounded instance.`)
-    return lastForegroundUIContext;
-  }
-  if (length !== 0) {
-    hilog.info(0x00, 'testTag', `Get UIContext with maximum instanceId.`)
-    return allContexts[length - 1];
-  }
-  hilog.info(0x00, 'testTag', `Get UIContext of undefined calling scope.`)
-  return new UIContext();
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  aboutToAppear() {
-    let uiContext = this.getUIContext();
-    hilog.info(0x00, 'testTag', `aboutToAppear UIContext: ${uiContext.getId()}`)
-  }
-
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          let resolvedUIContext = UIContext.resolveUIContext();
-          let contextByAtomicInterface = GetUIContextByAtomicInterface();
-          hilog.info(0x00, 'testTag',
-            `UIContext id: ${resolvedUIContext.getId()}, strategy: ${resolvedUIContext.strategy}, contextByAtomicInterface: ${contextByAtomicInterface.getId()}`);
-          this.message = 'Welcome';
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```

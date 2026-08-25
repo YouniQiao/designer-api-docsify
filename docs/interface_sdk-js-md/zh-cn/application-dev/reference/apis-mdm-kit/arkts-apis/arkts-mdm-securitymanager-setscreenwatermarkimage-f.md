@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setScreenWatermarkImage
@@ -19,8 +19,6 @@ function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void
 > 2.当水印图片尺寸小于屏幕时，图片会被拉伸；当水印图片尺寸大于屏幕时，图片会被压缩。该实现方式与应用级别水印的重复平铺方式不同。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -43,34 +41,3 @@ function setScreenWatermarkImage(admin: Want, pixelMap: image.PixelMap): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-import { image } from '@kit.ImageKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-// 此处'test.png'仅作示例，请开发者自行替换
-const path: string = context.filesDir + "/test.png";
-// 创建ImageSource
-const imageSource: image.ImageSource = image.createImageSource(path);
-// 创建PixelMap
-imageSource.createPixelMap().then((pixelMap: image.PixelMap) => {
-  try {
-    securityManager.setScreenWatermarkImage(wantTemp, pixelMap);
-    console.info(`Succeeded in setting screen watermark image.`);
-  } catch (err) {
-    console.error(`Failed to set screen watermark image. Code: ${err.code}, message: ${err.message}`);
-  }
-}).catch((err: Error) => {
-  console.error(`Failed to create PixelMap. message: ${err.message}`);
-});
-```

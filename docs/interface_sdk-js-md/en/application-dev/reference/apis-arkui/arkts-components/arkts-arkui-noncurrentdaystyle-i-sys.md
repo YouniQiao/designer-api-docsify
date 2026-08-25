@@ -4,8 +4,6 @@ Non current day style.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,11 +23,9 @@ nonCurrentMonthDayColor?: ResourceColor
 
 Non-current month day color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -47,11 +43,9 @@ nonCurrentMonthLunarColor?: ResourceColor
 
 Lunar style of non-current month.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -69,11 +63,9 @@ nonCurrentMonthOffDayMarkColor?: ResourceColor
 
 Non-Current Month Off Day Marker Color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -91,11 +83,9 @@ nonCurrentMonthWorkDayMarkColor?: ResourceColor
 
 Non-Current Month Workday Marker Color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 

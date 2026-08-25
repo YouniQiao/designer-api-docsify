@@ -3,13 +3,13 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setKeepAliveForBundle
 
 ```TypeScript
-function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean): Promise<void>
+function setKeepAliveForBundle(bundleName: string, userId: number, enable: boolean): Promise<void>
 ```
 
 为指定用户下的应用设置或取消保活。使用Promise异步回调。 从API version 18开始，该接口仅在2in1和Wearable设备上生效。对于API version 18之前版本，该接口仅在2in1设备上生效。其他情况下调用该接口将返回错误码801。
@@ -22,8 +22,6 @@ function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean)
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.MANAGE_APP_KEEP_ALIVE
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -35,7 +33,7 @@ function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | enable | boolean | 是 |
 
 **返回值：**
@@ -57,25 +55,3 @@ function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean)
 | [16300008](../errorcode-ability.md#16300008-指定的包不存在主uiability) |
 | [16300009](../errorcode-ability.md#16300009-指定的包不存在状态栏) |
 | [16300010](../errorcode-ability.md#16300010-指定的应用在运行中但没有绑定状态栏) |
-
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = 'ohos.samples.keepaliveapp';
-  let userId = 100;
-  appManager.setKeepAliveForBundle(bundleName, userId, true).then(() => {
-    console.info(`setKeepAliveForBundle success`);
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    console.error(`setKeepAliveForBundle fail, err: ${err.code}, ${err.message}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] setKeepAliveForBundle error: ${code}, ${message}`);
-}
-```

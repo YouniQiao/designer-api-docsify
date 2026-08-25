@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryPrinterCapability
@@ -15,8 +15,6 @@ function queryPrinterCapability(printerId: string, callback: AsyncCallback<void>
 查询打印机能力，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -39,34 +37,6 @@ function queryPrinterCapability(printerId: string, callback: AsyncCallback<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerId: string = 'printerId_32';
-print.queryPrinterCapability(printerId, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to query Printer Capability because : ' + JSON.stringify(err));
-    } else {
-        console.info('start query Printer Capability success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerId: string = 'printerId_32';
-print.queryPrinterCapability(printerId).then(() => {
-    console.info('start query Printer success');
-}).catch((error: BusinessError) => {
-    console.error('failed to query Printer Capability because : ' + JSON.stringify(error));
-})
-```
-
 
 ## queryPrinterCapability
 
@@ -77,8 +47,6 @@ function queryPrinterCapability(printerId: string): Promise<void>
 查询打印机能力，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -105,7 +73,3 @@ function queryPrinterCapability(printerId: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [queryPrinterCapability](#queryprintercapability)

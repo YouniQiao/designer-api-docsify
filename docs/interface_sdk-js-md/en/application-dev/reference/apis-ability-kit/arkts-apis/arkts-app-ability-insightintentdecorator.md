@@ -46,8 +46,8 @@ The InsightIntentDecorator module provides several types of intent decorators fo
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, InsightIntentForm, InsightIntentEntity } from '@kit.AbilityKit';
-import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, LinkIntentParamMapping, InsightIntentEntity, InsightIntentForm } from '@kit.AbilityKit';
+import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, InsightIntentForm, InsightIntentEntity } from 'kits/@kit.AbilityKit';
+import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, LinkIntentParamMapping, InsightIntentEntity, InsightIntentForm } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -59,13 +59,6 @@ import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, Insi
 | [EntryIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-entryintentdecoratorinfo-i.md) |
 | [FormIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-formintentdecoratorinfo-i.md) |
 | [FunctionIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-functionintentdecoratorinfo-i.md) |
-| [InsightIntentEntity](arkts-ability-app-ability-insightintentdecorator-insightintententity-i.md) |
-| [InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-i.md) |
-| [InsightIntentForm](arkts-ability-app-ability-insightintentdecorator-insightintentform-i.md) |
-| [InsightIntentFunction](arkts-ability-app-ability-insightintentdecorator-insightintentfunction-i.md) |
-| [InsightIntentFunctionMethod](arkts-ability-app-ability-insightintentdecorator-insightintentfunctionmethod-i.md) |
-| [InsightIntentLink](arkts-ability-app-ability-insightintentdecorator-insightintentlink-i.md) |
-| [InsightIntentPage](arkts-ability-app-ability-insightintentdecorator-insightintentpage-i.md) |
 | [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) |
 | [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md) |
 | [LinkIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-linkintentdecoratorinfo-i.md) |

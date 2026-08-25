@@ -4,8 +4,6 @@ Provides APIs for managing the **Authenticator** object.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
@@ -15,7 +13,7 @@ Provides APIs for managing the **Authenticator** object.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## execute
@@ -27,8 +25,6 @@ execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): vo
 Starts user authentication. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -46,34 +42,6 @@ Starts user authentication. This API uses an asynchronous callback to return the
 | level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let authenticator = userAuth.getAuthenticator();
-authenticator.execute('FACE_ONLY', 'S2', (error, code)=>{
-  if (code === userAuth.ResultCode.SUCCESS) {
-    console.info('auth success');
-    return;
-  }
-  console.error(`auth fail, code = ${code}`);
-});
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  let authenticator = userAuth.getAuthenticator();
-  authenticator.execute('FACE_ONLY', 'S2').then((code)=>{
-    console.info('auth success');
-  })
-} catch (error) {
-  console.error(`auth fail, code = ${error}`);
-}
-```
-
 ## execute
 
 ```TypeScript
@@ -83,8 +51,6 @@ execute(type: AuthType, level: SecureLevel): Promise<number>
 Starts user authentication. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 8
 
@@ -106,7 +72,3 @@ Starts user authentication. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;number & gt; |
-
-**Examples**
-
-See [execute](#execute)

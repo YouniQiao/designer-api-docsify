@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## download
@@ -15,8 +15,6 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 创建并启动一个下载任务，使用callback异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -41,31 +39,6 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-let downloadTask: request.DownloadTask;
-// 需要手动将url替换为真实服务器的HTTP协议地址
-request.download({ url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-  downloadTask = data;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-})
-```
-
-```TypeScript
-let downloadTask: request.DownloadTask;
-// 需要手动将url替换为真实服务器的HTTP协议地址
-request.download({ url: 'https://xxxx/xxxxx.hap', 
-filePath: 'xxx/xxxxx.hap'}, (err: BusinessError, data: request.DownloadTask) => {
-  if (err) {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  downloadTask = data;
-});
-```
-
 
 ## download
 
@@ -76,8 +49,6 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 创建并启动一个下载任务，使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -106,7 +77,3 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 | 错误码ID |
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [download](#download)

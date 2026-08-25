@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## fdopenStream
@@ -17,8 +17,6 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 基于文件描述符打开文件流。使用Promise异步回调。需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -69,81 +67,6 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.fdopenStream(file.fd, "r+").then((stream: fileIo.Stream) => {
-  console.info(`Succeeded in opening stream.`);
-  stream.closeSync();
-}).catch((err: BusinessError) => {
-  console.error(`Failed to open stream. Code: ${err.code}, message: ${err.message}`);
-  // 文件流打开失败后，文件描述符需要手动关闭
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.fdopenStream(file.fd, "r+").then((stream:fileIo.Stream) => {
-  console.info(`Succeeded in opening stream.`);
-  stream.closeSync();
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to open stream. Code: ${err.code}, message: ${err.message}`);
-  // 文件流打开失败后，文件描述符需要手动关闭
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_ONLY);
-fileIo.fdopenStream(file.fd, "r+", (err: BusinessError, stream: fileIo.Stream) => {
-  if (err) {
-    console.error(`Failed to fdopen stream. Code: ${err.code}, message: ${err.message}`);
-    // 文件流打开失败后，文件描述符需要手动关闭
-    fileIo.closeSync(file);
-  } else {
-    console.info(`Succeeded in fdopening stream.`);
-    stream.closeSync();
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_ONLY);
-fileIo.fdopenStream(file.fd, "r+", (err: BusinessError<void> | null, stream:fileIo.Stream | undefined) => {
-  if (err) {
-    console.error(`Failed to fdopen stream. Code: ${err.code}, message: ${err.message}`);
-    stream?.closeSync();
-  } else {
-    console.info(`Succeeded in fdopening stream.`);
-    // 文件流打开失败后，文件描述符需要手动关闭
-   fileIo.closeSync(file);
-  }
-});
-```
-
 
 ## fdopenStream
 
@@ -154,8 +77,6 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 基于文件描述符打开文件流，需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -200,7 +121,3 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-参见 [fdopenStream](#fdopenstream)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## setGlobalHttpProxy
@@ -15,8 +15,6 @@ function setGlobalHttpProxy(httpProxy: HttpProxy, callback: AsyncCallback<void>)
 Sets the global network HTTP proxy configuration information. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -42,45 +40,6 @@ Sets the global network HTTP proxy configuration information. This API uses an a
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let exclusionStr = "192.168,baidu.com";
-let exclusionArray = exclusionStr.split(',');
-let httpProxy: connection.HttpProxy = {
-    host: "192.168.xx.xxx",
-    port: 8080,
-    exclusionList: exclusionArray
-}
-connection.setGlobalHttpProxy(httpProxy, (err: BusinessError) => {
-    if (err) {
-        console.error(`setGlobalHttpProxy failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`setGlobalHttpProxy success.`);
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let exclusionStr = "192.168,baidu.com";
-let exclusionArray = exclusionStr.split(',');
-connection.setGlobalHttpProxy({
-  host: "192.168.xx.xxx",
-  port: 8080,
-  exclusionList: exclusionArray
-} as connection.HttpProxy).then(() => {
-  console.info("success");
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 
 ## setGlobalHttpProxy
 
@@ -91,8 +50,6 @@ function setGlobalHttpProxy(httpProxy: HttpProxy): Promise<void>
 Sets the global network HTTP proxy configuration information. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -122,7 +79,3 @@ Sets the global network HTTP proxy configuration information. This API uses a pr
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [setGlobalHttpProxy](#setglobalhttpproxy)

@@ -28,8 +28,6 @@ Not supported
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -43,8 +41,6 @@ export declare const ArcScrollBarInstance: ArcScrollBarAttribute
 Defines ArcScrollBar Component instance.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

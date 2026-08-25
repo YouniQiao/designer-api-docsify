@@ -4,8 +4,6 @@ Provides APIs for encapsulating file asset attributes.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md)
@@ -17,7 +15,7 @@ Provides APIs for encapsulating file asset attributes.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@kit.CoreFileKit';
+import { userFileManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## close
@@ -30,11 +28,9 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [close](arkts-corefile-fileio-close-f.md)
+**Substitutes:** close
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -46,85 +42,6 @@ Closes a file. This API uses an asynchronous callback to return the result.
 | --- | --- | --- |
 | fd | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('closeDemo');
-  try {
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-    const fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    let fd: number = await fileAsset.open('rw');
-    console.info('file fd', fd);
-    fileAsset.close(fd, (err) => {
-      if (err == undefined) {
-        console.info('asset close succeed.');
-      } else {
-        console.error('close failed, message = ' + err);
-      }
-    });
-  } catch (err) {
-    console.error('close failed, message = ' + err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('closeDemo');
-  try {
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-    const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    let fd: number = await asset.open('rw');
-    console.info('file fd', fd);
-    await asset.close(fd);
-    console.info('asset close succeed.');
-  } catch (err) {
-    console.error('close failed, message = ' + err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('fetchResultCloseDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-    fetchResult.close();
-    console.info('close succeed.');
-  } catch (err) {
-    console.error('close fail. message = ' + err);
-  }
-}
-```
 
 ## close
 
@@ -136,11 +53,9 @@ Closes this file. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [close](arkts-corefile-fileio-close-f.md)
+**Substitutes:** close
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -158,10 +73,6 @@ Closes this file. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [close](#close)
-
 ## commitModify
 
 ```TypeScript
@@ -171,8 +82,6 @@ commitModify(callback: AsyncCallback<void>): void
 Commits the modification on the file metadata to the database. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -189,120 +98,6 @@ Commits the modification on the file metadata to the database. This API uses an 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('commitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  let displayName: string = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
-  let fileAssetDisplayName: userFileManager.MemberType = fileAsset.get(displayName);
-  console.info('fileAsset get fileAssetDisplayName = ', fileAssetDisplayName);
-  let newFileAssetDisplayName = 'new' + fileAssetDisplayName;
-  console.info('fileAsset newFileAssetDisplayName = ', newFileAssetDisplayName);
-  fileAsset.set(displayName, newFileAssetDisplayName);
-  fileAsset.commitModify((err) => {
-    if (err == undefined) {
-      let commitModifyDisplayName = fileAsset.get(displayName);
-      console.info('fileAsset commitModify successfully, commitModifyDisplayName = ', commitModifyDisplayName);
-    } else {
-      console.error('commitModify failed, message =', err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('commitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  let displayName = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
-  let fileAssetDisplayName: userFileManager.MemberType = fileAsset.get(displayName);
-  console.info('fileAsset get fileAssetDisplayName = ', fileAssetDisplayName);
-  let newFileAssetDisplayName = 'new' + fileAssetDisplayName;
-  console.info('fileAsset newFileAssetDisplayName = ', newFileAssetDisplayName);
-  fileAsset.set(displayName, newFileAssetDisplayName);
-  try {
-    await fileAsset.commitModify();
-    let commitModifyDisplayName = fileAsset.get(displayName);
-    console.info('fileAsset commitModify successfully, commitModifyDisplayName = ', commitModifyDisplayName);
-  } catch (err) {
-    console.error('commitModify failed. message = ', err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  const albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-  const album: userFileManager.Album = await albumList.getFirstObject();
-  album.albumName = 'hello';
-  album.commitModify((err) => {
-    if (err != undefined) {
-      console.error('commitModify failed with error: ' + err);
-    } else {
-      console.info('commitModify successfully');
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('albumCommitModifyDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  try {
-    let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-    let album: userFileManager.Album = await albumList.getFirstObject();
-    album.albumName = 'hello';
-    album.commitModify().then(() => {
-      console.info('commitModify successfully');
-    }).catch((err: BusinessError) => {
-      console.error('commitModify failed with error: ' + err);
-    });
-  } catch (err) {
-    console.error('getPhotoAlbums failed. message = ', err);
-  }
-}
-```
 
 ## commitModify
 
@@ -314,8 +109,6 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#commitmodify)
@@ -332,10 +125,6 @@ Commits the modification on the file metadata to the database. This API uses a p
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [commitModify](#commitmodify)
-
 ## favorite
 
 ```TypeScript
@@ -345,8 +134,6 @@ favorite(isFavorite: boolean, callback: AsyncCallback<void>): void
 Favorites or unfavorites a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -365,55 +152,6 @@ Favorites or unfavorites a file. This API uses an asynchronous callback to retur
 | isFavorite | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('favoriteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  asset.favorite(true, (err) => {
-    if (err == undefined) {
-      console.info('favorite successfully');
-    } else {
-      console.error('favorite failed with error:' + err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('favoriteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  asset.favorite(true).then(() => {
-    console.info('favorite successfully');
-  }).catch((err: BusinessError) => {
-    console.error('favorite failed with error:' + err);
-  });
-}
-```
-
 ## favorite
 
 ```TypeScript
@@ -423,8 +161,6 @@ favorite(isFavorite: boolean): Promise<void>
 Favorites or unfavorites this file asset. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -448,10 +184,6 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [favorite](#favorite)
-
 ## get
 
 ```TypeScript
@@ -461,8 +193,6 @@ get(member: string): MemberType
 Obtains the value of a **FileAsset** parameter.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -484,32 +214,6 @@ Obtains the value of a **FileAsset** parameter.
 | --- |
 | [MemberType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-membertype-t.md) |
 
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('fileAssetGetDemo');
-  try {
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: userFileManager.FetchOptions = {
-      fetchColumns: ['title'],
-      predicates: predicates
-    };
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    let title: userFileManager.ImageVideoKey = userFileManager.ImageVideoKey.TITLE;
-    let fileAssetTitle: userFileManager.MemberType = fileAsset.get(title.toString());
-    console.info('fileAsset Get fileAssetTitle = ', fileAssetTitle);
-  } catch (err) {
-    console.error('release failed. message = ', err);
-  }
-}
-```
-
 ## getExif
 
 ```TypeScript
@@ -517,7 +221,7 @@ getExif(callback: AsyncCallback<string>): void
 ```
 
 Obtains the EXIF data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).  
-| Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md) | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | [SceneType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-scenetype-e.md) | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | [Model](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-model-i.md) | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | [LightSource](../../apis-arkui/arkts-apis/arkts-arkui-common-lightsource-i-sys.md) | Light source.| | [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | [WhiteBalance](../../apis-camera-kit/arkts-apis/arkts-camera-camera-whitebalance-i.md) | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue |
+| Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md) | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | [SceneType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-scenetype-e.md) | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | [Model](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-model-i.md) | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | [LightSource](../../apis-arkui/arkts-components/arkts-arkui-lightsource-i-sys.md) | Light source.| | [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | [WhiteBalance](../../apis-camera-kit/arkts-apis/arkts-camera-camera-whitebalance-i.md) | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue |
 
 > **NOTE：**&gt;
 > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
@@ -525,8 +229,6 @@ Obtains the EXIF data from a JPG image and returns a JSON string. This API uses 
 > **fetchColumns**.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -550,74 +252,6 @@ Obtains the EXIF data from a JPG image and returns a JSON string. This API uses 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  try {
-    console.info('getExifDemo');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.isNotNull('all_exif')
-    let fetchOptions: userFileManager.FetchOptions = {
-      fetchColumns: ['all_exif', userFileManager.ImageVideoKey.USER_COMMENT.toString()],
-      predicates: predicates
-    };
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    console.info('getExifDemo fileAsset displayName: ' + JSON.stringify(fileAsset.displayName));
-    let exifMessage: string = await fileAsset.getExif();
-    let userCommentKey: string = 'UserComment';
-    let userComment: string = JSON.stringify(JSON.parse(exifMessage), [userCommentKey]);
-    console.info('getExifDemo userComment: ' + JSON.stringify(userComment));
-    fetchResult.close();
-  } catch (err) {
-    console.error('getExifDemoCallback failed with error: ' + err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  try {
-    console.info('getExifDemo');
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.isNotNull('all_exif')
-    let fetchOptions: userFileManager.FetchOptions = {
-      fetchColumns: ['all_exif', userFileManager.ImageVideoKey.USER_COMMENT.toString()],
-      predicates: predicates
-    };
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    if (fileAsset === undefined) {
-      console.error('getExif fileAsset is undefined');
-      fetchResult.close();
-      return;
-    }
-    console.info('getExifDemo fileAsset displayName: ' + JSON.stringify(fileAsset.displayName));
-    let userCommentKey: string = 'UserComment';
-    fileAsset.getExif((err, exifMessage) => {
-      if (exifMessage != undefined) {
-        let userComment: string = JSON.stringify(JSON.parse(exifMessage), [userCommentKey]);
-        console.info('getExifDemo userComment: ' + JSON.stringify(userComment));
-      } else {
-        console.error('getExif failed, message = ', err);
-      }
-    });
-    fetchResult.close();
-  } catch (err) {
-    console.error('getExifDemoCallback failed with error: ' + err);
-  }
-}
-```
-
 ## getExif
 
 ```TypeScript
@@ -625,7 +259,7 @@ getExif(): Promise<string>
 ```
 
 Obtains the EXIF data from a JPG image and returns a JSON string. This API uses a promise to return the result.For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).  
-| Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md) | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | [SceneType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-scenetype-e.md) | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | [Model](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-model-i.md) | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | [LightSource](../../apis-arkui/arkts-apis/arkts-arkui-common-lightsource-i-sys.md) | Light source.| | [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | [WhiteBalance](../../apis-camera-kit/arkts-apis/arkts-camera-camera-whitebalance-i.md) | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue |
+| Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md) | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | [SceneType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-scenetype-e.md) | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | [Model](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-model-i.md) | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | [LightSource](../../apis-arkui/arkts-components/arkts-arkui-lightsource-i-sys.md) | Light source.| | [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | [WhiteBalance](../../apis-camera-kit/arkts-apis/arkts-camera-camera-whitebalance-i.md) | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue |
 
 > **NOTE：**&gt;
 > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
@@ -633,8 +267,6 @@ Obtains the EXIF data from a JPG image and returns a JSON string. This API uses 
 > **fetchColumns**.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -658,10 +290,6 @@ Obtains the EXIF data from a JPG image and returns a JSON string. This API uses 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-See [getExif](#getexif)
-
 ## getThumbnail
 
 ```TypeScript
@@ -671,8 +299,6 @@ getThumbnail(callback: AsyncCallback<image.PixelMap>): void
 Obtains the thumbnail of a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -690,86 +316,6 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes |
 
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getThumbnailDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  console.info('asset displayName = ', asset.displayName);
-  asset.getThumbnail((err, pixelMap) => {
-    if (err == undefined) {
-      console.info('getThumbnail successful ' + pixelMap);
-    } else {
-      console.error('getThumbnail fail', err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { image } from '@kit.ImageKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getThumbnailDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let size: image.Size = { width: 720, height: 720 };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  console.info('asset displayName = ', asset.displayName);
-  asset.getThumbnail(size, (err, pixelMap) => {
-    if (err == undefined) {
-      console.info('getThumbnail successful ' + pixelMap);
-    } else {
-      console.error('getThumbnail fail', err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getThumbnailDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let size: image.Size = { width: 720, height: 720 };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  console.info('asset displayName = ', asset.displayName);
-  asset.getThumbnail(size).then((pixelMap) => {
-    console.info('getThumbnail successful ' + pixelMap);
-  }).catch((err: BusinessError) => {
-    console.error('getThumbnail fail' + err);
-  });
-}
-```
-
 ## getThumbnail
 
 ```TypeScript
@@ -779,8 +325,6 @@ getThumbnail(size: image.Size, callback: AsyncCallback<image.PixelMap>): void
 Obtains the file thumbnail of the given size. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -799,10 +343,6 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 | size | image.Size | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes |
 
-**Examples**
-
-See [getThumbnail](#getthumbnail)
-
 ## getThumbnail
 
 ```TypeScript
@@ -812,8 +352,6 @@ getThumbnail(size?: image.Size): Promise<image.PixelMap>
 Obtains the file thumbnail of the given size. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -837,10 +375,6 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 | --- |
 | Promise & lt;image.PixelMap & gt; |
 
-**Examples**
-
-See [getThumbnail](#getthumbnail)
-
 ## open
 
 ```TypeScript
@@ -855,11 +389,9 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [open](arkts-corefile-fileio-open-f.md)
+**Substitutes:** open
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -873,47 +405,6 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 | --- | --- | --- |
 | mode | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
-
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('openDemo');
-   let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  const fileAsset: userFileManager.FileAsset = await mgr.createPhotoAsset(testFileName);
-  fileAsset.open('rw', (err, fd) => {
-    if (fd != undefined) {
-      console.info('File fd' + fd);
-      fileAsset.close(fd);
-    } else {
-      console.error('File err' + err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('openDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    const fileAsset: userFileManager.FileAsset = await mgr.createPhotoAsset(testFileName);
-    let fd: number = await fileAsset.open('rw');
-    if (fd != undefined) {
-      console.info('File fd' + fd);
-      fileAsset.close(fd);
-    } else {
-      console.error(' open File fail');
-    }
-  } catch (err) {
-    console.error('open Demo err' + err);
-  }
-}
-```
 
 ## open
 
@@ -929,11 +420,9 @@ Opens this file asset. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [open](arkts-corefile-fileio-open-f.md)
+**Substitutes:** open
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -953,10 +442,6 @@ Opens this file asset. This API uses a promise to return the result.
 | --- |
 | Promise & lt;number & gt; |
 
-**Examples**
-
-See [open](#open)
-
 ## set
 
 ```TypeScript
@@ -966,8 +451,6 @@ set(member: string, value: string): void
 Sets a **FileAsset** parameter.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -984,31 +467,6 @@ Sets a **FileAsset** parameter.
 | member | string | Yes |
 | value | string | Yes |
 
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('fileAssetSetDemo');
-  try {
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    let displayName: string = userFileManager.ImageVideoKey.DISPLAY_NAME.toString();
-    fileAsset.set(displayName, 'newDisplayName1');
-  } catch (err) {
-    console.error('release failed. message = ', err);
-  }
-}
-```
-
 ## setHidden
 
 ```TypeScript
@@ -1018,8 +476,6 @@ setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 Sets a file to hidden state. This API uses an asynchronous callback to return the result.The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -1045,58 +501,6 @@ Sets a file to hidden state. This API uses an asynchronous callback to return th
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900020 |
 
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('setHiddenDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOption);
-  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  asset.setHidden(true, (err) => {
-    if (err == undefined) {
-      console.info('setHidden successfully');
-    } else {
-      console.error('setHidden failed with error:' + err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  // Restore a file from a hidden album. Before the operation, ensure that the file exists in the hidden album.
-  console.info('setHiddenDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getAlbums(userFileManager.AlbumType.SYSTEM, userFileManager.AlbumSubType.HIDDEN);
-  const album: userFileManager.Album = await albumList.getFirstObject();
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await album.getPhotoAssets(fetchOption);
-  const asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  asset.setHidden(false).then(() => {
-    console.info('setHidden successfully');
-  }).catch((err: BusinessError) => {
-    console.error('setHidden failed with error:' + err);
-  });
-}
-```
-
 ## setHidden
 
 ```TypeScript
@@ -1106,8 +510,6 @@ setHidden(hiddenState: boolean): Promise<void>
 Sets this file asset to the hidden state. This API uses a promise to return the result.The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -1137,10 +539,6 @@ Sets this file asset to the hidden state. This API uses a promise to return the 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900020 |
-
-**Examples**
-
-See [setHidden](#sethidden)
 
 ## setUserComment
 
@@ -1155,8 +553,6 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [setUserComment](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
@@ -1181,60 +577,6 @@ Sets user comment information of an image or video. This API uses an asynchronou
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  try {
-    console.info('setUserCommentDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    let userComment: string = 'test_set_user_comment';
-    await fileAsset.setUserComment(userComment);
-  } catch (err) {
-    console.error('setUserCommentDemoCallback failed with error: ' + err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  try {
-    console.info('setUserCommentDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: userFileManager.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    let userComment: string = 'test_set_user_comment';
-    fileAsset.setUserComment(userComment, (err) => {
-      if (err === undefined) {
-        console.info('setUserComment successfully');
-      } else {
-        console.error('setUserComment failed with error: ' + err);
-      }
-    });
-  } catch (err) {
-    console.error('setUserCommentDemoCallback failed with error: ' + err);
-  }
-}
-```
-
 ## setUserComment
 
 ```TypeScript
@@ -1247,8 +589,6 @@ Sets user comment information of an image or video. This API uses a promise to r
 > This API can only be used to set user comment information of an image or video.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -1279,10 +619,6 @@ Sets user comment information of an image or video. This API uses a promise to r
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [setUserComment](#setusercomment)
-
 ## displayName
 
 ```TypeScript
@@ -1294,8 +630,6 @@ File name, including the file name extension, to display.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -1317,8 +651,6 @@ Type of the file.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [photoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#phototype)
@@ -1338,8 +670,6 @@ Media asset URI, for example, **file://media/Photo/1/IMG_datetime_0001/displayNa
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 

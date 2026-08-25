@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## clearRouterProxy
@@ -15,8 +15,6 @@ function clearRouterProxy(formIds: Array<string>, callback: AsyncCallback<void>)
 Clears the router proxy set for widgets. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -43,40 +41,6 @@ Clears the router proxy set for widgets. This API uses an asynchronous callback 
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
 
-**Examples**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formIds: string[] = ['12400633174999288'];
-  formHost.clearRouterProxy(formIds, (err: BusinessError) => {
-    if (err) {
-      console.error(`formHost clear router proxy error, code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formIds: string[] = ['12400633174999288'];
-  formHost.clearRouterProxy(formIds).then(() => {
-    console.info('formHost clear router proxy success');
-  }).catch((err: BusinessError) => {
-    console.error(`formHost clear router proxy error, code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## clearRouterProxy
 
@@ -87,8 +51,6 @@ function clearRouterProxy(formIds: Array<string>): Promise<void>
 Clears the router proxy set for widgets. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -119,7 +81,3 @@ Clears the router proxy set for widgets. This API uses a promise to return the r
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
-
-**Examples**
-
-See [clearRouterProxy](#clearrouterproxy)

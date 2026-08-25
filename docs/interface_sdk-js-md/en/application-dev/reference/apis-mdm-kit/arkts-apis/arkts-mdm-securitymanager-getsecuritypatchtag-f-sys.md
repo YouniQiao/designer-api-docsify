@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getSecurityPatchTag
@@ -15,8 +15,6 @@ function getSecurityPatchTag(admin: Want): string
 Queries the security patch tag of a device.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -51,23 +49,3 @@ Queries the security patch tag of a device.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-    let res: string = securityManager.getSecurityPatchTag(wantTemp);
-    console.info(`Succeeded in getting security patch tag. tag: ${res}`);
-} catch(err) {
-    console.error(`Failed to get security patch tag. Code: ${err.code}, message: ${err.message}`);
-}
-```

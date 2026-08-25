@@ -4,14 +4,12 @@ Provides recording strategy management, including collaborative recording and re
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## offSystemRecordControllerEnabledChange
@@ -23,8 +21,6 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 Unsubscribes from the system recording controller panel enabled state change event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,8 +51,6 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 Subscribes to the system recording controller panel enabled state change event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

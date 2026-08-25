@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md)
@@ -23,8 +21,6 @@ TYPE_NORMAL = 0
 一般通知。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ TYPE_CONTINUOUS = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [TYPE_CONTINUOUS](arkts-notification-notificationmanager-sourcetype-e-sys.md#type_continuous)
@@ -63,8 +57,6 @@ TYPE_TIMER = 2
 计划通知。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

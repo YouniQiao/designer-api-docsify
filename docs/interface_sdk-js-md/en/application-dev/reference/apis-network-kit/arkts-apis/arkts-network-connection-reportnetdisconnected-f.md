@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## reportNetDisconnected
@@ -16,8 +16,6 @@ Reports the network unavailability to the network management module. This API us
 **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
@@ -40,37 +38,6 @@ Reports the network unavailability to the network management module. This API us
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet((error: BusinessError, netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
-    return;
-  }
-  connection.reportNetDisconnected(netHandle, (error: BusinessError, data: void) => {
-    if (error) {
-      console.error(`Failed to get default net. Code:${error.code}, message:${error.message}`);
-      return;
-    }
-    console.info("report success");
-  });
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  connection.reportNetDisconnected(netHandle).then( () => {
-    console.info(`report success`);
-  });
-});
-```
-
 
 ## reportNetDisconnected
 
@@ -82,8 +49,6 @@ Reports the network unavailability to the network management module. This API us
 **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
@@ -110,7 +75,3 @@ Reports the network unavailability to the network management module. This API us
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [reportNetDisconnected](#reportnetdisconnected)

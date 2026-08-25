@@ -6,8 +6,6 @@ Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ constructor(options: RadialGradientOptions)
 A constructor used to create a **RadialGradientOptions** object.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,11 +43,9 @@ options: RadialGradientOptions
 
 Options for displaying a radial gradient.
 
-**Type:** RadialGradientOptions
+**Type:** [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

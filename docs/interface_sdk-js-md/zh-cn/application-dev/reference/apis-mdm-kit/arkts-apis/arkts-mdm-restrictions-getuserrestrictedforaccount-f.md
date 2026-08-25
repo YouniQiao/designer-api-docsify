@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## getUserRestrictedForAccount
@@ -15,8 +15,6 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: string, a
 获取指定用户设置项的禁用状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -34,7 +32,7 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: string, a
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 |
 | settingsItem | string | 是 |
-| accountId | int | 是 |
+| accountId | number | 是 |
 
 **返回值：**
 
@@ -51,48 +49,6 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: string, a
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { restrictions } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况替换
-let userId = 100;
-let settingsItem: string = "modifyWallpaper";
-try {
-  let result: boolean = restrictions.getUserRestrictedForAccount(wantTemp, settingsItem, userId);
-  console.info(`Succeeded in getting user restricted: ${result}`);
-} catch (err) {
-  console.error(`Failed to get user restricted. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: boolean = restrictions.getUserRestrictedForAccount(wantTemp, restrictions.SettingsForAccount.MODIFY_WALLPAPER, 100);
-  console.info(`Succeeded in getting user restricted: ${result}`);
-} catch (err) {
-  console.error(`Failed to get user restricted. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getUserRestrictedForAccount
 
@@ -103,8 +59,6 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: SettingsF
 获取指定用户设置项的禁用状态。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -118,7 +72,7 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: SettingsF
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 |
 | settingsItem | [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | 是 |
-| accountId | int | 是 |
+| accountId | number | 是 |
 
 **返回值：**
 
@@ -135,7 +89,3 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: SettingsF
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [getUserRestrictedForAccount](#getuserrestrictedforaccount)

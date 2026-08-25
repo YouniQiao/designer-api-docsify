@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -28,8 +26,6 @@ analyzerConfig(config: ImageAnalyzerConfig)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -40,7 +36,7 @@ analyzerConfig(config: ImageAnalyzerConfig)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | 是 |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | 是 |
 
 ## autoPlay
 
@@ -51,8 +47,6 @@ autoPlay(value: boolean)
 设置视频是否自动播放，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,8 +68,6 @@ controls(value: boolean)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -92,14 +84,12 @@ controls(value: boolean)
 enableAnalyzer(enable: boolean)
 ```
 
-设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。启用后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。不支持与overlay属性同时使用，两者同时设置时overlay中 CustomBuilder属性会失效。
+设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。启用后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。不支持与overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](arkts-arkui-custombuilder-t.md)属性会失效。
 
 > **说明：**&gt;
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -123,8 +113,6 @@ enableShortcutKey(enabled: boolean)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -147,8 +135,6 @@ loop(value: boolean)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -169,8 +155,6 @@ muted(value: boolean)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -190,8 +174,6 @@ objectFit(value: ImageFit)
 设置视频的填充模式，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -216,8 +198,6 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -226,7 +206,7 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | 是 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) \| import('../api/@ohos.base').ErrorCallback | 是 |
 
 ## onFinish
 
@@ -237,8 +217,6 @@ onFinish(event: VoidCallback)
 播放结束时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -260,8 +238,6 @@ onFullscreenChange(callback: Callback<FullscreenInfo>)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -281,8 +257,6 @@ onPause(event: VoidCallback)
 暂停时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -304,8 +278,6 @@ onPrepared(callback: Callback<PreparedInfo>)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -325,8 +297,6 @@ onSeeked(callback: Callback<PlaybackInfo>)
 操作进度条完成后，上报播放时间信息，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -348,8 +318,6 @@ onSeeking(callback: Callback<PlaybackInfo>)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -370,8 +338,6 @@ onStart(event: VoidCallback)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -391,8 +357,6 @@ onStop(event: Callback<void>)
 播放停止时触发该事件(当stop()方法被调用后触发)，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -415,8 +379,6 @@ onUpdate(callback: Callback<PlaybackInfo>)
 播放进度变化时触发该事件，支持attributeModifier动态设置属性方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

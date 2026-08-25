@@ -4,8 +4,6 @@ Defines the callback triggered to notify the user of PIN verification.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ User operation.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## identity
@@ -40,7 +36,5 @@ Certificate credential ID used for verification.
 **Type:** string
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core

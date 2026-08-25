@@ -4,8 +4,6 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Inserts text at a specified position in the editable content. If no position is 
 **addText** only affects the UI performance within the application and has no effect on the internal logic of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,8 +54,6 @@ Notifies the input method to clear the current preview text.
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -78,8 +72,6 @@ Deletes the character before the text cursor in the text box bound to the basic 
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,8 +93,6 @@ Deletes text within a specified range in the editable content.
 > of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,12 +122,10 @@ Obtains the position information of the caret.
 > to the component.&gt;
 > - The location information in the return value is the location of the caret relative to the editable component.&gt;
 > - If the caret position cannot be obtained (for example, when the
-> TextInputController is not bound to the TextInput component),
+> [TextInputController](arkts-arkui-textinputcontroller-c.md) is not bound to the TextInput component),
 > **null** is returned.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,8 +149,6 @@ Obtains the current text selection range.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -185,8 +171,6 @@ Obtains the number of lines of the edited text.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -208,8 +192,6 @@ getTextContentRect() : RectResult
 Obtains the position of the edited text area relative to the component and its size. The unit of the return value is pixel.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -236,8 +218,6 @@ Passes the start and end indexes to the bound text box components (**TextInput**
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -262,8 +242,6 @@ Binds or updates the styled placeholder string.
 > When the controller is not bound to any component or the component bound to the controller is released, this interface does not take effect.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

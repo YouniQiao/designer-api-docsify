@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## openNotificationSettingsWithResult
@@ -15,8 +15,6 @@ function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<
 拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、 通知提醒方式等。使用Promise异步回调，当半模态窗口关闭时返回用户设置的状态。与openNotificationSettings相比，此接口在半模态窗口关闭时返回 NotificationSetting对象，开发者可根据返回结果判断用户是否开启了通知 权限，从而决定后续逻辑。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,60 +46,3 @@ isNotificationEnabled 查询当前应用通知授权状态。
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600018](../errorcode-notification.md#1600018-通知设置页面已经拉起) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`);
-      notificationManager.openNotificationSettingsWithResult(this.context).then((data) => {
-        hilog.info(0x0000, 'testTag', `[ANS] openNotificationSettingsWithResult success, data: ${JSON.stringify(data)}`);
-      }).catch((err: BusinessError) => {
-        hilog.error(0x0000, 'testTag', `[ANS] openNotificationSettingsWithResult failed, code is ${err.code}, message is ${err.message}`);
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`);
-      notificationManager.openNotificationSettingsWithResult(this.context).then((data) => {
-        hilog.info(0x0000, 'testTag', `[ANS] openNotificationSettingsWithResult success, data: ${JSON.stringify(data)}`);
-      }).catch((err: Error) : void => {
-        let error: BusinessError = err as BusinessError;
-        hilog.error(0x0000, 'testTag', `[ANS] openNotificationSettingsWithResult failed, code is ${error.code}, message is ${error.message}`);
-      });
-    });
-  }
-}
-```

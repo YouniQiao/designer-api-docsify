@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Location.Location.Lite
@@ -11,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
+import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from 'kits/@kit.LocationKit';
 ```
 
 ## types
@@ -23,8 +21,6 @@ types: Array<string>
 **Type:** Array&lt;string&gt;
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 9
 

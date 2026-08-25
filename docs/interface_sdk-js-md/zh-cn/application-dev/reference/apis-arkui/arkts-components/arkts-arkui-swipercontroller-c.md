@@ -4,8 +4,6 @@ Swiper容器组件的控制器，可以将此对象绑定至Swiper组件，实�
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ changeIndex(index: number, useAnimation?: boolean)
 翻至指定页面。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,8 +51,6 @@ changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -81,8 +75,6 @@ constructor()
 SwiperController的构造函数。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -109,8 +101,6 @@ fakeDragBy(offset: number): boolean
 > 件时的返回的节点显示信息可能与布局结果不一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -142,8 +132,6 @@ finishAnimation(callback?: VoidCallback)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -165,8 +153,6 @@ isFakeDragging(): boolean
 获取是否在模拟拖拽中的状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -196,8 +182,6 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -210,7 +194,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| indices | Optional & lt;Array & lt;number & gt; & gt; | 是 |
+| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 |
 
 **返回值：**
 
@@ -235,8 +219,6 @@ showNext()
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本10开始，该接口支持在ArkTS卡片中使用。
@@ -252,8 +234,6 @@ showPrevious()
 翻至上一页。翻页带动效切换过程，时长通过Swiper的[duration](arkts-arkui-swiper-attribute.md#duration)属性设置。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -275,8 +255,6 @@ startFakeDrag(): boolean
 > - 模拟拖拽无法触发嵌套滚动。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -305,8 +283,6 @@ stopFakeDrag(): boolean
 > 在开启模拟拖拽后，如果接收到真实拖拽手势，模拟拖拽会结束。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

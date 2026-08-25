@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## deleteAgentCard
@@ -15,8 +15,6 @@ function deleteAgentCard(bundleName: string, agentId: string): Promise<void>
 删除指定应用agentId对应的AgentCard。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.MODIFY_AGENT_CARD
 

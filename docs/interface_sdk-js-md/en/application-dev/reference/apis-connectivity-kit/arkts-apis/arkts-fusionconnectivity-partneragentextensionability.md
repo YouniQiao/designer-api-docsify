@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionAbility } from '@kit.ConnectivityKit';
+import { PartnerAgentExtensionAbility } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

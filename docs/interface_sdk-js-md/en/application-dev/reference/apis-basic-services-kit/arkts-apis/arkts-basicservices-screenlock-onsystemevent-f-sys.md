@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onSystemEvent
@@ -15,8 +15,6 @@ function onSystemEvent(callback: Callback<SystemEvent>): boolean
 Register system event related to screen lock service.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
@@ -44,18 +42,3 @@ Register system event related to screen lock service.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isSuccess = screenLock.onSystemEvent((event: screenLock.SystemEvent) => {
-    console.info(`Succeeded in Registering the system event which related to screenlock. eventType: ${event.eventType}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to register the system event which related to screenlock, Code: ${error.code}, message: ${error.message}`);
-}
-```

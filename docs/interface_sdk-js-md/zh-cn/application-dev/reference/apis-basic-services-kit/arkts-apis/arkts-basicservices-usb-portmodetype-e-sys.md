@@ -4,8 +4,6 @@ USB端口模式类型。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
@@ -23,8 +21,6 @@ NONE = 0
 无。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ UFP = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [UFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#ufp)
@@ -63,8 +57,6 @@ DFP = 2
 数据下行，对外提供电源。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -84,8 +76,6 @@ DRP = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [DRP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#drp)
@@ -103,8 +93,6 @@ NUM_MODES = 4
 当前不支持。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 

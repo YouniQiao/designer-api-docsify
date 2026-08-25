@@ -4,14 +4,12 @@ Text change event info@interface TextChangeEventInfo
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## content
@@ -25,8 +23,6 @@ Current content of text field component .
 **Type:** string
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ The id of text input component.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -65,8 +59,6 @@ The uniqueId of the text input component.
 **Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

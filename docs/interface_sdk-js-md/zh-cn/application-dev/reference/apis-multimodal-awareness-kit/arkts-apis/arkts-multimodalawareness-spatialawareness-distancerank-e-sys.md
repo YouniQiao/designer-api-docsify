@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
 表示超短距。单位：cm，范围：[0:5]。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ RANK_SHORT_RANGE = 'rankShort'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -56,8 +50,6 @@ RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -73,8 +65,6 @@ RANK_MEDIUM_RANGE = 'rankMedium'
 表示中距。单位：cm，范围：(500:1000]。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

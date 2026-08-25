@@ -4,14 +4,12 @@ Defines custom cursor configuration.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## followSystem
@@ -25,7 +23,5 @@ Whether to adjust the cursor size based on system settings. The value **true** m
 **Type:** boolean
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer

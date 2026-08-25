@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addOutgoingCallPolicyNumbers
@@ -21,8 +21,6 @@ will return error code 9200010. To resolve the conflict, remove the previously s
 will return error code 9200010. To resolve the conflict, remove the previously set trustlist via the [removeOutgoingCallPolicyNumbers](arkts-mdm-telephonymanager-removeoutgoingcallpolicynumbers-f.md) API.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -49,28 +47,3 @@ will return error code 9200010. To resolve the conflict, remove the previously s
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  let numbers: Array<string> = [
-    // Replace it as required.
-    "13112345678"
-  ];
-  telephonyManager.addOutgoingCallPolicyNumbers(wantTemp, policy, numbers);
-  console.info('Succeeded in adding outgoing call policy.');
-} catch (err) {
-  console.error(`Failed to add outgoing call policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

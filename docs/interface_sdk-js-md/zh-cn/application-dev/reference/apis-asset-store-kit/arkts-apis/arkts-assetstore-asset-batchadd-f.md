@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## batchAdd
@@ -15,8 +15,6 @@ function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>
 批量新增关键资产。使用Promise异步回调。设置[Tag.IS_PERSISTENT](arkts-assetstore-asset-tagtype-e.md)属性时，需要申请ohos.permission.STORE_PERSISTENT_DATA权限，申请方式请参考 [声明权限](../../../security/AccessToken/declare-permissions.md)。批量新增的关键资产必须具有相同的[Tag.GROUP_ID](arkts-assetstore-asset-tagtype-e.md)和[Tag.REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tagtype-e.md)属性。批量新增的关键资产数量最大值为100。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -49,32 +47,3 @@ function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>
 | [24000014](../errorcode-asset.md#24000014-文件操作失败) |
 | [24000015](../errorcode-asset.md#24000015-获取系统时间失败) |
 | [24000019](../errorcode-asset.md#24000019-属性值不一致) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let attributesArray: Array<asset.AssetMap> = [];
-let attr1: asset.AssetMap = new Map();
-attr1.set(asset.Tag.SECRET, stringToArray('demo_pwd1'));
-attr1.set(asset.Tag.ALIAS, stringToArray('demo_alias1'));
-attr1.set(asset.Tag.ACCESSIBILITY, asset.Accessibility.DEVICE_FIRST_UNLOCKED);
-attributesArray.push(attr1);
-
-let attr2: asset.AssetMap = new Map();
-attr2.set(asset.Tag.SECRET, stringToArray('demo_pwd2'));
-attr2.set(asset.Tag.ALIAS, stringToArray('demo_alias2'));
-attr2.set(asset.Tag.ACCESSIBILITY, asset.Accessibility.DEVICE_FIRST_UNLOCKED);
-attributesArray.push(attr2);
-
-asset.batchAdd(attributesArray).then((res: asset.BatchResult) => {
-  console.info(`Succeeded in batch adding Asset, failedCount: ${res.failedCount}`);
-});
-```

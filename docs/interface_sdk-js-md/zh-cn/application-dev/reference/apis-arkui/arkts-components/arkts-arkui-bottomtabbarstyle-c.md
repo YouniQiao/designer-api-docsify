@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,8 +21,6 @@ BottomTabBarStyle的构造函数。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -33,7 +29,7 @@ BottomTabBarStyle的构造函数。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 |
 | text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
 
 ## iconStyle
@@ -45,8 +41,6 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 设置底部页签的图标样式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,8 +70,6 @@ id(value: string): BottomTabBarStyle
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -105,8 +97,6 @@ labelStyle(value: LabelStyle): BottomTabBarStyle
 设置底部页签的label文本和字体的样式。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,8 +126,6 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -166,8 +154,6 @@ BottomTabBarStyle的静态构造函数。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -178,7 +164,7 @@ BottomTabBarStyle的静态构造函数。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 |
 | text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
 
 **返回值：**
@@ -197,8 +183,6 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -209,7 +193,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Dimension \| [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | 是 |
+| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 |
 
 **返回值：**
 
@@ -226,8 +210,6 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 设置底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值，仅fixed水平模式下在底部页签之间有效。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -257,8 +239,6 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -269,7 +249,7 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [VerticalAlign](#verticalalign) | 是 |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | 是 |
 
 **返回值：**
 

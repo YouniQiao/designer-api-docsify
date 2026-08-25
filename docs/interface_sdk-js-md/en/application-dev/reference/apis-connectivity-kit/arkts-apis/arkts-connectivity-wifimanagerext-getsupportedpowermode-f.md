@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getSupportedPowerMode
@@ -15,8 +15,6 @@ function getSupportedPowerMode(): Promise<Array<PowerMode>>
 Obtains the supported power Mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -36,20 +34,6 @@ Obtains the supported power Mode.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
-
-wifiManagerExt.getSupportedPowerMode((err, data: wifiManagerExt.PowerMode[]) => {
-    if (err) {
-        console.error("get supported power mode info error: ", err);
-        return;
-    }
-    console.info("get supported power mode info: " + JSON.stringify(data));
-});
-```
-
 
 ## getSupportedPowerMode
 
@@ -60,8 +44,6 @@ function getSupportedPowerMode(callback: AsyncCallback<Array<PowerMode>>): void
 Obtains the supported power Mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -80,7 +62,3 @@ Obtains the supported power Mode.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) |
-
-**Examples**
-
-See [getSupportedPowerMode](#getsupportedpowermode)

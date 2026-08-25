@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'kits/@kit.ArkUI';
 ```
 
 ## getDragPreview
@@ -20,8 +20,6 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 > associated with the current UI context.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 18
 

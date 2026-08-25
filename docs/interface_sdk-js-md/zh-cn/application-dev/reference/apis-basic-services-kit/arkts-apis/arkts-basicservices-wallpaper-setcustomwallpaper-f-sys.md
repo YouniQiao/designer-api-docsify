@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setCustomWallpaper
@@ -15,8 +15,6 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType, callba
 将指定的zip资源包设置为桌面或锁屏的壁纸资源，仅当com.ohos.sceneboard存在时，支持使用该接口。且具有ohos.permission.GET_WALLPAPER权限的应用可以访问/data/wallpaper/目 录获取设置的资源。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
@@ -40,41 +38,6 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType, callba
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = '/data/storage/el2/base/haps/entry/files/test.zip';
-try {
-    wallpaper.setCustomWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError) => {
-        if (error) {
-            console.error(`Failed to setCustomWallpaper. Code: ${error.code}, message: ${error.message}`);
-            return;
-        }
-        console.info(`success to setCustomWallpaper.`);
-    });
-} catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to setCustomWallpaper. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = "/data/storage/el2/base/haps/entry/files/test.zip";
-try {
-    wallpaper.setCustomWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-        console.info(`success to setCustomWallpaper.`);
-    }).catch((error: BusinessError) => {
-        console.error(`Failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-    });
-} catch (error) {
-    console.error(`Failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-}
-```
-
 
 ## setCustomWallpaper
 
@@ -85,8 +48,6 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType): Promi
 将指定的zip资源包设置为桌面或锁屏的壁纸资源，仅当com.ohos.sceneboard存在时，支持使用该接口。且具有ohos.permission.GET_WALLPAPER权限的应用可以访问/data/wallpaper/目 录获取设置的资源。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
@@ -114,7 +75,3 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType): Promi
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [setCustomWallpaper](#setcustomwallpaper)

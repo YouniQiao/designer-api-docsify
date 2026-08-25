@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.ConnectivityKit';
+import { socket } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## off('sppRead')
@@ -15,8 +15,6 @@ function off(type: 'sppRead', clientSocket: number, callback?: Callback<ArrayBuf
 Unsubscribe the event reported when data is read from the socket.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -34,16 +32,3 @@ Unsubscribe the event reported when data is read from the socket.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let clientNumber = 1; // clientNumber is obtained by sppAccept or sppConnect.
-try {
-    socket.off('sppRead', clientNumber);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

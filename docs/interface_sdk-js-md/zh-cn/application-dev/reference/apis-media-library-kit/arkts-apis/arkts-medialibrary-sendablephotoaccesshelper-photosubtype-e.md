@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 默认照片类型。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ MOVING_PHOTO = 3
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -49,8 +43,6 @@ BURST = 4
 连拍照片文件类型。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

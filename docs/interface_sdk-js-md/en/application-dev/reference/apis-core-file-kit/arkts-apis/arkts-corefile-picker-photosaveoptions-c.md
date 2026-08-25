@@ -4,18 +4,16 @@ Defines the options for saving images or videos.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 12
 
-**Substitutes:** SaveButtonOptions
+**Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## newFileNames
@@ -30,10 +28,8 @@ File name of the image or video to save. If this parameter is not specified, the
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 18
 
-**Substitutes:** SaveButtonOptions
+**Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md)
 
 **System capability:** SystemCapability.FileManagement.UserFileService

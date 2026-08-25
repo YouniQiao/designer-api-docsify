@@ -4,8 +4,6 @@ Invoke options for function execution.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Invoke options for function execution.
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from '@kit.AbilityKit';
+import { functionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## context
@@ -22,13 +20,11 @@ import { functionManager } from '@kit.AbilityKit';
 context?: Context
 ```
 
-Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.
+Context of the caller.Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.
 
 **Type:** [Context](arkts-ability-context-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

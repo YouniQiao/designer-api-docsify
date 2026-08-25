@@ -4,8 +4,6 @@ Enumerates the flash modes.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## FLASH_MODE_CLOSE
@@ -17,8 +15,6 @@ FLASH_MODE_CLOSE = 0
 The flash is off.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -34,8 +30,6 @@ The flash is on.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -50,8 +44,6 @@ The flash mode is auto, indicating that the flash fires automatically depending 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -65,8 +57,6 @@ FLASH_MODE_ALWAYS_OPEN = 3
 The flash is steady on.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

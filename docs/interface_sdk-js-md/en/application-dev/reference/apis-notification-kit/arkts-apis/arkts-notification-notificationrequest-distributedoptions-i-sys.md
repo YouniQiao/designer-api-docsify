@@ -4,23 +4,19 @@ Describes options for cross-device notifications. Not supported currently.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## remindType
 
 ```TypeScript
-readonly remindType?: int
+readonly remindType?: number
 ```
 
 Notification reminder type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

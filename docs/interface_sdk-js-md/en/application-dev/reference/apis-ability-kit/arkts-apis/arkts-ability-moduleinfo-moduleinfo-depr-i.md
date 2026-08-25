@@ -8,8 +8,6 @@ The ModuleInfo module provides module information of an application.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md#hapmoduleinfo)
@@ -30,8 +28,6 @@ The module name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** name
@@ -51,8 +47,6 @@ The module source path.
 **Default:** Indicates the module source dir of this module
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

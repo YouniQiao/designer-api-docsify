@@ -4,14 +4,12 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## 导入模块
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## tag
@@ -26,8 +24,6 @@ tag: HuksExternalCryptoTag
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## value
@@ -38,10 +34,8 @@ value: boolean | number | bigint | Uint8Array
 
 标签对应值。
 
-**类型：** boolean \| int \| bigint \| Uint8Array
+**类型：** boolean \| number \| bigint \| Uint8Array
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setAutoUnlockAfterReboot
@@ -15,8 +15,6 @@ function setAutoUnlockAfterReboot(admin: Want, isAllowed: boolean): void
 Sets automatic unlocking upon device reboot. This setting takes effect only on devices without a screen lock password. This API is applicable to enterprise unattended devices or scenarios where services need to be quickly restored through a restart, avoiding device downtime caused by manual unlocking, thereby improving device operation and maintenance efficiency and service continuity.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -39,23 +37,3 @@ Sets automatic unlocking upon device reboot. This setting takes effect only on d
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let isAllowed: boolean = true;
-try {
-  systemManager.setAutoUnlockAfterReboot(wantTemp, isAllowed);
-  console.info('Succeeded in setting setAutoUnlockAfterReboot.');
-} catch (err) {
-  console.error(`Failed to set auto unlock after reboot. Code is ${err.code}, message is ${err.message}`);
-}
-```

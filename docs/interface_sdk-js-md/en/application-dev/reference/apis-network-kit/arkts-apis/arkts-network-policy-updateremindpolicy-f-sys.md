@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## updateRemindPolicy
@@ -16,8 +16,6 @@ Updates a reminder policy. This API uses an asynchronous callback to return the 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -28,7 +26,7 @@ Updates a reminder policy. This API uses an asynchronous callback to return the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [netType](arkts-network-policy-networkmatchrule-i-sys.md) | [NetBearType](arkts-network-connection-netbeartype-e.md) | Yes |
+| [netType](arkts-network-policy-networkmatchrule-i-sys.md) | [NetBearType](arkts-network-statistics-netbeartype-t.md) | Yes |
 | simId | string | Yes |
 | [remindType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-distributedoptions-i-sys.md) | [RemindType](arkts-network-policy-remindtype-e-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
@@ -44,40 +42,6 @@ Updates a reminder policy. This API uses an asynchronous callback to return the 
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.updateRemindPolicy(
-  connection.NetBearType.BEARER_CELLULAR,
-  '1',
-  policy.RemindType.REMIND_TYPE_WARNING,
-  (error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  }
-);
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .updateRemindPolicy(
-    connection.NetBearType.BEARER_CELLULAR,
-    '1',
-    policy.RemindType.REMIND_TYPE_WARNING
-  )
-  .then(() => {
-    console.info('updateRemindPolicy success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## updateRemindPolicy
 
@@ -89,8 +53,6 @@ Updates a reminder policy. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -101,7 +63,7 @@ Updates a reminder policy. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [netType](arkts-network-policy-networkmatchrule-i-sys.md) | [NetBearType](arkts-network-connection-netbeartype-e.md) | Yes |
+| [netType](arkts-network-policy-networkmatchrule-i-sys.md) | [NetBearType](arkts-network-statistics-netbeartype-t.md) | Yes |
 | simId | string | Yes |
 | [remindType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-distributedoptions-i-sys.md) | [RemindType](arkts-network-policy-remindtype-e-sys.md) | Yes |
 
@@ -121,7 +83,3 @@ Updates a reminder policy. This API uses a promise to return the result.
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [updateRemindPolicy](#updateremindpolicy)

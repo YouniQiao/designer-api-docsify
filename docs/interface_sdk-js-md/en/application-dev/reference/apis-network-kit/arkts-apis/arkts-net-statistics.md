@@ -1,18 +1,23 @@
 # @ohos.net.statistics(Traffic Management)
 
 The Traffic Management module provides the capability to obtain device network traffic data. This module supports querying packet traffic usage from multiple dimensions, for example:  
-- Obtaining the uplink/downlink traffic data of a specified NIC. - Obtaining the total traffic data of all NICs, facilitating the viewing of overall device network usage. - Obtaining the traffic data of a specified application based on the application UID, helping you monitor the network resource consumption of applications. - Obtaining traffic statistics for a specified socket, providing a data foundation for fine-grained network performance analysis. - Obtaining the historical traffic usage of an application within a specified time period, facilitating the analysis of long-term network usage trends of the application.
+- Obtaining the uplink/downlink traffic data of a specified NIC.  
+- Obtaining the total traffic data of all NICs, facilitating the viewing of overall device network usage.  
+- Obtaining the traffic data of a specified application based on the application UID, helping you monitor the network  
+resource consumption of applications.  
+- Obtaining traffic statistics for a specified socket, providing a data foundation for fine-grained network  
+performance analysis.  
+- Obtaining the historical traffic usage of an application within a specified time period, facilitating the analysis  
+of number-term network usage trends of the application.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary
@@ -56,10 +61,8 @@ import { statistics } from '@kit.NetworkKit';
 | [getTrafficStatsByUid(Traffic Management)](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) |
 | [getTrafficStatsByUid(Traffic Management)](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) |
 | [getTrafficStatsByUidNetwork(Traffic Management)](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md) |
-| [off(Traffic Management)](arkts-network-statistics-off-f-sys.md#offnetstatschange) |
-| [offNetStatsChange(Traffic Management)](arkts-network-statistics-offnetstatschange-f-sys.md) |
-| [on(Traffic Management)](arkts-network-statistics-on-f-sys.md#onnetstatschange) |
-| [onNetStatsChange(Traffic Management)](arkts-network-statistics-onnetstatschange-f-sys.md) |
+| off(Traffic Management) |
+| on(Traffic Management) |
 | [setCalibrationTraffic(Traffic Management)](arkts-network-statistics-setcalibrationtraffic-f-sys.md) |
 | [setTrafficPlanInfo(Traffic Management)](arkts-network-statistics-settrafficplaninfo-f-sys.md) |
 | [updateIfacesStats(Traffic Management)](arkts-network-statistics-updateifacesstats-f-sys.md) |
@@ -80,7 +83,6 @@ import { statistics } from '@kit.NetworkKit';
 | --- |
 | [IfaceInfo(Traffic Management)](arkts-network-statistics-ifaceinfo-i-sys.md) |
 | [NetStatsChangeInfo(Traffic Management)](arkts-network-statistics-netstatschangeinfo-i-sys.md) |
-| [NetStatsInfoSequenceItem(Traffic Management)](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md) |
 | [UidInfo(Traffic Management)](arkts-network-statistics-uidinfo-i-sys.md) |
 <!--DelEnd-->
 
@@ -103,6 +105,5 @@ import { statistics } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [NetStatsInfoSequence(Traffic Management)](arkts-network-statistics-netstatsinfosequence-t-sys.md) |
 | [UidNetStatsInfo(Traffic Management)](arkts-network-statistics-uidnetstatsinfo-t-sys.md) |
 <!--DelEnd-->

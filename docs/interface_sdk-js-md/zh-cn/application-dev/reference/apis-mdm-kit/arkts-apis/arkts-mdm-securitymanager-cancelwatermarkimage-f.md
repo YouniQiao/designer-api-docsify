@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## cancelWatermarkImage
@@ -15,8 +15,6 @@ function cancelWatermarkImage(admin: Want, bundleName: string, accountId: number
 取消指定用户的水印策略。当应用不再需要水印保护或需要更换水印时，企业可调用此接口取消水印策略。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -40,25 +38,3 @@ function cancelWatermarkImage(admin: Want, bundleName: string, accountId: number
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-  securityManager.cancelWatermarkImage(wantTemp, bundleName, accountId);
-  console.info(`Succeeded in cancelling watermarkImage policy.`);
-} catch (err) {
-  console.error(`Failed to cancel watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -4,8 +4,6 @@ Represents the locale information, which consists of the language, script, and c
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the locale information, which consists of the language, script, and c
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## displayName
@@ -27,8 +25,6 @@ Representation of ID in the specified locale in SystemLocaleManager.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -46,8 +42,6 @@ Language code or country/region code, for example, "zh" or "CN".
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Local name of the ID.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ Language or country/region suggestion type.
 **Type:** [SuggestionType](arkts-localization-i18n-suggestiontype-e-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 

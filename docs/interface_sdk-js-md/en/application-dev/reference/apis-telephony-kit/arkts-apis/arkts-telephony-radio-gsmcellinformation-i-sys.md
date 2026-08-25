@@ -4,8 +4,6 @@ Obtains GSM cell information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Obtains GSM cell information.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## arfcn
 
 ```TypeScript
-arfcn: int
+arfcn: number
 ```
 
-Indicates the ARFCN(absolute radio frequency channel int).
+Indicates the ARFCN(absolute radio frequency channel number).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -37,16 +33,14 @@ Indicates the ARFCN(absolute radio frequency channel int).
 ## bsic
 
 ```TypeScript
-bsic: int
+bsic: number
 ```
 
 Indicates the base station identification code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -55,16 +49,14 @@ Indicates the base station identification code.
 ## cellId
 
 ```TypeScript
-cellId: int
+cellId: number
 ```
 
 Indicates the cell identification.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -73,16 +65,14 @@ Indicates the cell identification.
 ## lac
 
 ```TypeScript
-lac: int
+lac: number
 ```
 
 Indicates the location area code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -100,8 +90,6 @@ Indicates the mobile country code.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -117,8 +105,6 @@ Indicates the mobile network code.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

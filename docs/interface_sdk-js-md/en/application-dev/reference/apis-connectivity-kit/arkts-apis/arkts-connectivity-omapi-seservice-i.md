@@ -4,14 +4,12 @@
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.SecureElement
 
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
+import { omapi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getReaders
@@ -23,8 +21,6 @@ getReaders(): Reader[]
 Obtains available SE readers, which include all the SEs on the device.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -40,32 +36,6 @@ Obtains available SE readers, which include all the SEs on the device.
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let seService : omapi.SEService;
-let seReaders : omapi.Reader[];
-
-// Initialize seService before using it.
-function secureElementDemo() {
-    // Obtain readers.
-    try {
-        seReaders = seService.getReaders();
-    } catch (error) {
-        hilog.error(0x0000, 'testTag', 'getReaders error %{public}s', JSON.stringify(error));
-    }
-    if (seReaders == undefined || seReaders.length == 0) {
-        hilog.error(0x0000, 'testTag', 'no valid reader found.');
-        // Release the SE service resources.
-        seService.shutdown();
-        return;
-    }
-}
-```
-
 ## getVersion
 
 ```TypeScript
@@ -75,8 +45,6 @@ getVersion(): string
 Obtains the version of the Open Mobile API (OMAPI) specification used.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -92,25 +60,6 @@ Obtains the version of the Open Mobile API (OMAPI) specification used.
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let seService : omapi.SEService;
-
-// Initialize seService before using it.
-
-try {
-    let version = seService.getVersion();
-    hilog.error(0x0000, 'testTag', 'version %{public}s', JSON.stringify(version));
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'getVersion error %{public}s', JSON.stringify(error));
-}
-```
-
 ## isConnected
 
 ```TypeScript
@@ -120,8 +69,6 @@ isConnected(): boolean
 Checks whether this SE service is connected.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.SecureElement
 
@@ -137,29 +84,6 @@ Checks whether this SE service is connected.
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let seService : omapi.SEService;
-
-function secureElementDemo() {
-    omapi.createService().then((data) => {
-        seService = data;
-        if (seService == undefined || !seService.isConnected()) {
-            hilog.error(0x0000, 'testTag', 'seservice state disconnected');
-            return;
-        }
-        hilog.info(0x0000, 'testTag', 'seservice state connected');
-    }).catch((error : BusinessError)=> {
-        hilog.error(0x0000, 'testTag', 'createService error %{public}s', JSON.stringify(error));
-    });
-}
-```
-
 ## shutdown
 
 ```TypeScript
@@ -170,8 +94,6 @@ Releases all SE resources allocated to this SE service. After that, [isConnected
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.SecureElement
 
 **Error codes:**
@@ -179,21 +101,3 @@ Releases all SE resources allocated to this SE service. After that, [isConnected
 | Error Code ID |
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let seService : omapi.SEService;
-
-// Initialize seService before using it.
-
-try {
-    seService.shutdown();
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'shutdown error %{public}s', JSON.stringify(error));
-}
-```

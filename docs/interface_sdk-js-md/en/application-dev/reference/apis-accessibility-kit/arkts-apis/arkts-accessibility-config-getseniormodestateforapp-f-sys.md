@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## getSeniorModeStateForApp
 
 ```TypeScript
-function getSeniorModeStateForApp(bundleName: string, appIndex?: int): Promise<boolean>
+function getSeniorModeStateForApp(bundleName: string, appIndex?: number): Promise<boolean>
 ```
 
 Queries the senior mode state of an app. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -31,7 +29,7 @@ Queries the senior mode state of an app. This API uses a promise to return the r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| appIndex | number | No |
 
 **Return value:**
 

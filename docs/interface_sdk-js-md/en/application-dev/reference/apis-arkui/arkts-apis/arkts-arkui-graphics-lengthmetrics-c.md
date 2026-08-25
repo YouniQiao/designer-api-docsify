@@ -4,8 +4,6 @@ Defines the length attribute. When the length unit is PERCENT, the value **1** i
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoRefresh
@@ -17,8 +15,6 @@ autoRefresh?(value: boolean): LengthMetrics
 Sets whether the **LengthMetrics** object automatically updates with system configuration changes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ A constructor used to create a **LengthMetrics** instance. If the **unit** param
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -72,8 +66,6 @@ static fp(value: number): LengthMetrics
 Creates a length property in fp.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -103,8 +95,6 @@ Creates a length property in lpx.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -132,8 +122,6 @@ static percent(value: number): LengthMetrics
 Creates a length property in percent. The value **1** indicates 100%.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,8 +151,6 @@ Creates a length property in px.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -193,8 +179,6 @@ Represents the length of a resource of the Resource type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -213,52 +197,6 @@ Represents the length of a resource of the Resource type.
 | --- |
 | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
-**Examples**
-
-Use LengthMetrics to set the padding and margin attributes of Row.
-
-```TypeScript
-import { LengthMetrics, LengthUnit } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct SizeExample {
-  build() {
-    Column({ space: 10 }) {
-      Text('margin and padding:')
-        .fontSize(12)
-        .fontColor(0xCCCCCC)
-        .width('90%')
-      Row() {
-        Row() {
-          Row()
-            .size({ width: '100%', height: '100%' })
-            .backgroundColor('#ffd5d5d5')
-        }
-        .width(80)
-        .height(80)
-        .padding({
-          top: new LengthMetrics(20, LengthUnit.VP),
-          bottom: LengthMetrics.px(15),
-          start: LengthMetrics.vp(10),
-          end: LengthMetrics.fp(20)
-        })
-        .margin({
-          top: LengthMetrics.percent(0.1),
-          bottom: LengthMetrics.lpx(20),
-          start: LengthMetrics.resource($r('app.float.row_margin_start')),
-          end: LengthMetrics.vp(10)
-        })
-        .backgroundColor(Color.White)
-      }
-      .backgroundColor("#ff2787d9")
-    }
-    .width('100%')
-    .margin({ top: 5 })
-  }
-}
-```
-
 ## vp
 
 ```TypeScript
@@ -268,8 +206,6 @@ static vp(value: number): LengthMetrics
 Creates a length property in vp.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -303,8 +239,6 @@ Unit of the length property. The default value is VP.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -322,8 +256,6 @@ Value of the length property.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

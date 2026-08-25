@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## setNetFirewallPolicy
@@ -18,8 +18,6 @@ function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promis
 > 同一系统用户下，多应用调用该接口下发策略，会以最新下发的策略为准。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** ohos.permission.MANAGE_NET_FIREWALL
 
@@ -48,21 +46,3 @@ function setNetFirewallPolicy(userId: number, policy: NetFirewallPolicy): Promis
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [29400000](../errorcode-net-netfirewall.md#29400000-指定用户不存在) |
-
-**示例**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let policy: netFirewall.NetFirewallPolicy = {
-  isOpen: true,
-  inAction: netFirewall.FirewallRuleAction.RULE_DENY,
-  outAction: netFirewall.FirewallRuleAction.RULE_ALLOW
-};
-netFirewall.setNetFirewallPolicy(100, policy).then(() => {
-  console.info("set firewall policy success.");
-}).catch((error : BusinessError) => {
-  console.error("set firewall policy failed: " + JSON.stringify(error));
-});
-```

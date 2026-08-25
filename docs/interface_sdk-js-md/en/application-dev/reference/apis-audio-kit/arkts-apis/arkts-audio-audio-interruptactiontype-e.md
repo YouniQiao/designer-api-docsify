@@ -4,8 +4,6 @@ Enumerates the returned event types for audio interruption events.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [InterruptType](arkts-audio-audio-interrupttype-e.md)
@@ -22,8 +20,6 @@ Focus gain event.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [INTERRUPT_TYPE_BEGIN](arkts-audio-audio-interrupttype-e.md#interrupt_type_begin)
@@ -39,8 +35,6 @@ TYPE_INTERRUPT = 1
 Audio interruption event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

@@ -4,8 +4,6 @@ Defines an event query instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -13,26 +11,18 @@ Defines an event query instance.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## onComplete
 
-ArkTS-Dyn:
 ```TypeScript
 onComplete: (reason: number, total: number) => void
 ```
 
-ArkTS-Sta:
-```TypeScript
-onComplete: (reason: int, total: int) => void
-```
-
-Callback used to return the query result statistics: (reason: int, total: int) =&gt; void
+Callback used to return the query result statistics: (reason: number, total: number) =&gt; void
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -42,8 +32,8 @@ Callback used to return the query result statistics: (reason: int, total: int) =
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| reason | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| total | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| reason | number | Yes |
+| total | number | Yes |
 
 ## onQuery
 
@@ -54,8 +44,6 @@ onQuery: (infos: SysEventInfo[]) => void
 Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) =&gt; void.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 

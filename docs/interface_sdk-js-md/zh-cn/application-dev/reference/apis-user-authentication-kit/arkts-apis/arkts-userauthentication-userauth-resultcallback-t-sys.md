@@ -8,8 +8,6 @@ type ResultCallback = (challenge: Uint8Array, result: UserAuthResult) => void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -21,4 +19,4 @@ type ResultCallback = (challenge: Uint8Array, result: UserAuthResult) => void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | challenge | Uint8Array | 是 |
-| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | 是 |
+| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | 是 |

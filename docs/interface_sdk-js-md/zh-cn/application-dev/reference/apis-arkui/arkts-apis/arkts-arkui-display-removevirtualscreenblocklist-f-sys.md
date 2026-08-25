@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## removeVirtualScreenBlocklist
 
 ```TypeScript
-function removeVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>
+function removeVirtualScreenBlocklist(windowIds: Array<number>): Promise<void>
 ```
 
 将窗口从禁止投屏显示的名单中移除，被移除的窗口可以在投屏时显示。仅对应用主窗或系统窗口生效。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -26,7 +24,7 @@ function removeVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| windowIds | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;int & gt; | 是 |
+| windowIds | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
@@ -42,67 +40,3 @@ function removeVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display, window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // ...
-    let windowId = windowStage.getMainWindowSync().getWindowProperties().id; // 获取窗口ID
-    let windowIds = [windowId];
-
-    // 将窗口添加到禁止投屏显示的名单
-    let promise = display.addVirtualScreenBlocklist(windowIds);
-    promise.then(() => {
-      console.info('Succeeded in adding virtual screen blocklist.');
-      // 将窗口从禁止投屏显示的名单移除
-      promise = display.removeVirtualScreenBlocklist(windowIds);
-      promise.then(() => {
-        console.info('Succeeded in removing virtual screen blocklist.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to remove virtual screen blocklist. Code: ${err.code}, message: ${err.message}`);
-      });
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to add virtual screen blocklist. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display, window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // ...
-    let windowId = windowStage.getMainWindowSync().getWindowProperties().id;
-    let windowIds = [windowId];
-
-    let promise = display.addVirtualScreenBlocklist(windowIds);
-    promise.then(() => {
-      console.info('Succeeded in adding virtual screen blocklist.');
-    }).catch((err: Error) => {
-      console.error(`Failed to add virtual screen blocklist. Code: ${err?.code} , message: ${err?.message}`);
-    })
-
-    promise = display.removeVirtualScreenBlocklist(windowIds);
-    promise.then(() => {
-      console.info('Succeeded in removing virtual screen blocklist.');
-    }).catch((err: Error) => {
-      console.error(`Failed to remove virtual screen blocklist. Code: ${err?.code} , message: ${err?.message}`);
-    })
-  }
-}
-```

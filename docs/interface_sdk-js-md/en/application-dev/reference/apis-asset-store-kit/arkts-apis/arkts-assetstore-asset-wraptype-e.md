@@ -4,8 +4,6 @@ Enumerates the encrypted import/export types supported by the asset.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## NEVER
@@ -18,8 +16,6 @@ Encrypted import/export is not allowed for the asset.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## TRUSTED_ACCOUNT
@@ -31,7 +27,5 @@ TRUSTED_ACCOUNT = 1
 Encrypted import/export is allowed for the asset only on devices where a trusted account is logged in.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Security.Asset

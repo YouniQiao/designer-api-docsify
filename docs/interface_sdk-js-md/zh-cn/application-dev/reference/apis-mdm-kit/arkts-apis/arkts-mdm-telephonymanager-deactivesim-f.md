@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## deactiveSim
@@ -15,8 +15,6 @@ function deactiveSim(admin: Want, slotId: number): void
 停用指定卡槽SIM卡。停用该SIM卡，无法使用该卡槽的SIM卡接打电话，收发短信，上网。例如，企业可在员工休假或设备维护期间，临时停用SIM卡。该接口需要插入SIM卡并关闭飞行模式才能成功调用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -42,25 +40,3 @@ function deactiveSim(admin: Want, slotId: number): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 设置要停用的卡槽ID
-let slotId: number = 0;
-try {
-  // 停用指定卡槽的SIM卡
-  telephonyManager.deactiveSim(wantTemp, slotId);
-  console.info(`success in deactivating SIM card on slot ${slotId}`);
-} catch (err) {
-  console.error(`Failed to deactivate SIM on slot ${slotId}. Code: ${err.code}, message: ${err.message}`);
-}
-```

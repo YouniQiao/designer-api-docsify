@@ -8,8 +8,6 @@ type Partial<T> = {
 
 Make all properties in T optional
 
-**ArkTS mode:** 
-
 **Property type:** {
     [P in keyof T]?: T[P];
 }

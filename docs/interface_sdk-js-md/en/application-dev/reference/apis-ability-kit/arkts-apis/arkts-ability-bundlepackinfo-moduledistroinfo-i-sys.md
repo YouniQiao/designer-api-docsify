@@ -4,8 +4,6 @@ ModuleDistroInfo: the bundle info summary class.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Whether it should be installed together with the application. **true** if it sho
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -40,8 +36,6 @@ Whether the HAP file supports the installation-free feature. **true** if the HAP
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -58,8 +52,6 @@ Module name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -75,8 +67,6 @@ Module type.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

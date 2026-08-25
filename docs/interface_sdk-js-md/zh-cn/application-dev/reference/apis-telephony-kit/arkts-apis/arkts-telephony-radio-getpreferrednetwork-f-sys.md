@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getPreferredNetwork
 
 ```TypeScript
-function getPreferredNetwork(slotId: int, callback: AsyncCallback<PreferredNetworkMode>): void
+function getPreferredNetwork(slotId: number, callback: AsyncCallback<PreferredNetworkMode>): void
 ```
 
 Get the preferred network for the specified SIM card slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Get the preferred network for the specified SIM card slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md)&gt; | 是 |
 
 **错误码：**
@@ -43,44 +41,16 @@ Get the preferred network for the specified SIM card slot.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getPreferredNetwork(slotId, (err: BusinessError, data: radio.PreferredNetworkMode) => {
-    if (err) {
-        console.error(`getPreferredNetwork failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getPreferredNetwork success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getPreferredNetwork(slotId).then((data: radio.PreferredNetworkMode) => {
-    console.info(`getPreferredNetwork success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getPreferredNetwork failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getPreferredNetwork
 
 ```TypeScript
-function getPreferredNetwork(slotId: int): Promise<PreferredNetworkMode>
+function getPreferredNetwork(slotId: number): Promise<PreferredNetworkMode>
 ```
 
 Get the preferred network for the specified SIM card slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -92,7 +62,7 @@ Get the preferred network for the specified SIM card slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -111,7 +81,3 @@ Get the preferred network for the specified SIM card slot.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getPreferredNetwork](#getpreferrednetwork)

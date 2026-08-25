@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## LEVEL_NONE
@@ -17,8 +15,6 @@ LEVEL_NONE = 0
 表示关闭通知功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -32,8 +28,6 @@ LEVEL_MIN = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## LEVEL_LOW
@@ -45,8 +39,6 @@ LEVEL_LOW = 2
 表示通知功能已启用，状态栏中显示通知图标，无横幅，无提示音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -60,8 +52,6 @@ LEVEL_DEFAULT = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## LEVEL_HIGH
@@ -73,7 +63,5 @@ LEVEL_HIGH = 4
 表示通知功能已启用，状态栏中显示通知图标，有横幅，有提示音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification

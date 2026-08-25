@@ -4,8 +4,6 @@ Week Style.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,8 +27,6 @@ Style of week space.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -47,11 +43,9 @@ weekColor?: ResourceColor
 
 Style of week color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -69,11 +63,9 @@ weekendDayColor?: ResourceColor
 
 Style of week day color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -91,11 +83,9 @@ weekendLunarColor?: ResourceColor
 
 Style of lunar color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 
@@ -117,8 +107,6 @@ Style of week font size.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -139,8 +127,6 @@ Style of week height.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -160,8 +146,6 @@ Style of week width.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 

@@ -4,8 +4,6 @@ This module provides the Network Response.
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
@@ -25,8 +23,6 @@ metered: boolean
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## type
@@ -40,7 +36,5 @@ type: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

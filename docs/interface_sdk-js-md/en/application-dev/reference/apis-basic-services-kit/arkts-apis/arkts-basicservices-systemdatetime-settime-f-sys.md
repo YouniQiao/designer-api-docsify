@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from '@kit.BasicServicesKit';
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setTime
 
 ```TypeScript
-function setTime(time: long, callback: AsyncCallback<void>): void
+function setTime(time: number, callback: AsyncCallback<void>): void
 ```
 
 Sets the system time. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -28,7 +26,7 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| time | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| time | number | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -40,56 +38,16 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set the system time to 2021-01-20 02:36:25.
-let time: number = 1611081385000;
-try {
-  systemDateTime.setTime(time, (error: BusinessError) => {
-    if (error) {
-      console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in setting time`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set the system time to 2021-01-20 02:36:25.
-let time: number = 1611081385000;
-try {
-  systemDateTime.setTime(time).then(() => {
-    console.info(`Succeeded in setting time.`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## setTime
 
 ```TypeScript
-function setTime(time: long): Promise<void>
+function setTime(time: number): Promise<void>
 ```
 
 Sets the system time. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -101,7 +59,7 @@ Sets the system time. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| time | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| time | number | Yes |
 
 **Return value:**
 
@@ -117,7 +75,3 @@ Sets the system time. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) |
-
-**Examples**
-
-See [setTime](#settime)

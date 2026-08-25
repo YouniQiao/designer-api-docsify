@@ -7,33 +7,23 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## printAppInfo
 
-ArkTS-Dyn:
 ```TypeScript
 printAppInfo(fd: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-printAppInfo(fd: int): void
 ```
 
 打印当前应用进程的完整音频运行时快照。快照包含所有播放流、录音流和音频会话信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,25 +33,17 @@ printAppInfo(fd: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| fd | number | 是 |
 
 ## printCapturerInfo
 
-ArkTS-Dyn:
 ```TypeScript
 printCapturerInfo(capturer: AudioCapturer, fd: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-printCapturerInfo(capturer: AudioCapturer, fd: int): void
 ```
 
 打印指定录音实例的完整音频运行时快照。快照包含流信息、通路信息、音量和设备信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,25 +54,17 @@ printCapturerInfo(capturer: AudioCapturer, fd: int): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | capturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| fd | number | 是 |
 
 ## printLoopbackInfo
 
-ArkTS-Dyn:
 ```TypeScript
 printLoopbackInfo(loopback: AudioLoopback, fd: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-printLoopbackInfo(loopback: AudioLoopback, fd: int): void
 ```
 
 打印指定耳返实例的完整音频运行时快照。快照包含耳返状态、设备和音效信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,25 +75,17 @@ printLoopbackInfo(loopback: AudioLoopback, fd: int): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | loopback | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | 是 |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| fd | number | 是 |
 
 ## printRendererInfo
 
-ArkTS-Dyn:
 ```TypeScript
 printRendererInfo(renderer: AudioRenderer, fd: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-printRendererInfo(renderer: AudioRenderer, fd: int): void
 ```
 
 打印指定音频播放实例的完整音频运行时快照。快照包含流信息、通路信息、音量和设备信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,25 +96,17 @@ printRendererInfo(renderer: AudioRenderer, fd: int): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | renderer | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | 是 |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| fd | number | 是 |
 
 ## printSessionInfo
 
-ArkTS-Dyn:
 ```TypeScript
 printSessionInfo(session: AudioSessionManager, fd: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-printSessionInfo(session: AudioSessionManager, fd: int): void
 ```
 
 打印指定会话管理器实例的完整音频运行时快照。快照包含会话状态、场景、策略和设备信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -159,4 +117,4 @@ printSessionInfo(session: AudioSessionManager, fd: int): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | session | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | 是 |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| fd | number | 是 |

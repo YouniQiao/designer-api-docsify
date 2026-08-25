@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setExternalSourceExtensionsPolicy
@@ -16,12 +16,13 @@ Sets the management policy for extensions from external sources. After the polic
 - DEFAULT:  
 Default policy with no restrictions applied. Users can enable or disable **Run extensions from external sources** in **Settings**   
 > **Privacy & security**
-> **Advanced option**. - DISALLOW:
-Policy that disallows extensions from external sources to run. With this policy, currently running extensions can continue, but cannot be started after being closed. Users cannot enable **Run extensions from external sources**. - FORCE_OPEN:Policy that forcibly enables extensions from external sources to run. Users cannot disable **Run extensions from external sources**.
+> **Advanced option**.
+- DISALLOW:  
+Policy that disallows extensions from external sources to run. With this policy, currently running extensions can continue, but cannot be started after being closed. Users cannot enable **Run extensions from external sources**.  
+- FORCE_OPEN:  
+Policy that forcibly enables extensions from external sources to run. Users cannot disable **Run extensions from external sources**.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -46,22 +47,3 @@ Policy that disallows extensions from external sources to run. With this policy,
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { common, securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-    securityManager.setExternalSourceExtensionsPolicy(wantTemp, common.ManagedPolicy.FORCE_OPEN);
-    console.info(`Succeeded in setting managed policy.`);
-} catch(err) {
-    console.error(`Failed to set managed policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

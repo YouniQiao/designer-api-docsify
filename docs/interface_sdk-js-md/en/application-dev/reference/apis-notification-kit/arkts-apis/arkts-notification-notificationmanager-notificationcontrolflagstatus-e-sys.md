@@ -4,8 +4,6 @@ Each bit can control the notification mode. When the bitwise OR operation is per
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ NOTIFICATION_STATUS_CLOSE_SOUND = 1 << 0
 Disables the sound notification function.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,8 +32,6 @@ Disables the screen lock notification function.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ NOTIFICATION_STATUS_CLOSE_BANNER = 1 << 2
 Disables the banner notification function.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -68,8 +60,6 @@ Disables the screen-on notification function.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -84,8 +74,6 @@ Disables the vibration notification function.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -99,8 +87,6 @@ NOTIFICATION_STATUS_CLOSE_STATUSBAR_ICON = 1 << 5
 Disables the icon notification function in the status bar.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

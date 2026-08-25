@@ -4,8 +4,6 @@ Obtains the network selection mode option.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ Obtains the network selection mode option.
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## networkInformation
@@ -27,8 +25,6 @@ Indicates the network information.
 **类型：** [NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -46,8 +42,6 @@ Indicates whether to continue selecting the network selection mode.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -64,8 +58,6 @@ Indicates the network search mode of the SIM card.
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ Indicates the network search mode of the SIM card.
 ## slotId
 
 ```TypeScript
-slotId: int
+slotId: number
 ```
 
 Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

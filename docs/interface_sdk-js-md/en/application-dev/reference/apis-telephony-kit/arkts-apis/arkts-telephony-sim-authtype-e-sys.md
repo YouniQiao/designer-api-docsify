@@ -4,8 +4,6 @@ Indicates the Authentication type
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Authentication type is EAP-SIM. See RFC 4186
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ SIM_AUTH_EAP_AKA_TYPE = 129
 Authentication type is EAP-AKA. See RFC 4187
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

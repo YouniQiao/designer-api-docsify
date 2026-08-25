@@ -4,14 +4,12 @@ The request agent api. Supports "background" and "frontend" tasks as while. Thou
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -83,12 +81,6 @@ import { request } from '@kit.BasicServicesKit';
 | [State(上传下载)](arkts-basicservices-agent-state-e.md) |
 | [Faults(上传下载)](arkts-basicservices-agent-faults-e.md) |
 | [WaitingReason(上传下载)](arkts-basicservices-agent-waitingreason-e.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [ProgressCallback(上传下载)](arkts-basicservices-agent-progresscallback-t.md) |
 
 ### 常量
 

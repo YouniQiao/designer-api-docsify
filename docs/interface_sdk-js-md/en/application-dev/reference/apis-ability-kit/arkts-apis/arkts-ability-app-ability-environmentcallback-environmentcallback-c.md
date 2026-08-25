@@ -4,14 +4,12 @@ The EnvironmentCallback module provides capabilities to listen for system enviro
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { EnvironmentCallback } from '@kit.AbilityKit';
+import { EnvironmentCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdated
@@ -23,8 +21,6 @@ onConfigurationUpdated(config: Configuration): void
 Called when the system configuration changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#onenvironment).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,10 +34,6 @@ Called when the system configuration changes, after [a listener has been registe
 | --- | --- | --- |
 | config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes |
 
-**Examples**
-
-See Usage of EnvironmentCallback.
-
 ## onMemoryLevel
 
 ```TypeScript
@@ -51,8 +43,6 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 Called when the system memory level changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#onenvironment).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,7 +55,3 @@ Called when the system memory level changes, after [a listener has been register
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | level | AbilityConstant.MemoryLevel | Yes |
-
-**Examples**
-
-See Usage of EnvironmentCallback.

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## UNKNOWN_CARD
@@ -17,8 +15,6 @@ UNKNOWN_CARD = -1
 未知类型。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -32,8 +28,6 @@ SINGLE_MODE_SIM_CARD = 10
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## SINGLE_MODE_USIM_CARD
@@ -45,8 +39,6 @@ SINGLE_MODE_USIM_CARD = 20
 单USIM卡。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -60,8 +52,6 @@ SINGLE_MODE_RUIM_CARD = 30
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## DUAL_MODE_CG_CARD
@@ -73,8 +63,6 @@ DUAL_MODE_CG_CARD = 40
 双卡模式C+G。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -88,8 +76,6 @@ CT_NATIONAL_ROAMING_CARD = 41
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## CU_DUAL_MODE_CARD
@@ -101,8 +87,6 @@ CU_DUAL_MODE_CARD = 42
 中国联通双模卡。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -116,8 +100,6 @@ DUAL_MODE_TELECOM_LTE_CARD = 43
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## DUAL_MODE_UG_CARD
@@ -130,8 +112,6 @@ DUAL_MODE_UG_CARD = 50
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## SINGLE_MODE_ISIM_CARD
@@ -143,7 +123,5 @@ SINGLE_MODE_ISIM_CARD = 60
 单一ISIM卡类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService

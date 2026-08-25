@@ -11,8 +11,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **系统接口：** 此接口为系统接口。
@@ -20,16 +18,14 @@
 ## alignmentDistance
 
 ```TypeScript
-alignmentDistance?: double
+alignmentDistance?: number
 ```
 
 对齐规则的感知半径，单位为m。在该距离内（含边界）的邻近个体对对齐力有贡献。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,16 +36,14 @@ alignmentDistance?: double
 ## alignmentWeight
 
 ```TypeScript
-alignmentWeight?: double
+alignmentWeight?: number
 ```
 
 对齐规则权重。个体在alignmentDistance范围内朝向邻近个体平均航向的强度。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,16 +54,14 @@ alignmentWeight?: double
 ## boundaryDistance
 
 ```TypeScript
-boundaryDistance?: double
+boundaryDistance?: number
 ```
 
 边界约束力生效距离，单位为m。个体距边界墙面在该距离内时受到排斥力。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -89,8 +81,6 @@ boundaryMaxPos?: Vec3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -109,8 +99,6 @@ boundaryMinPos?: Vec3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -120,16 +108,14 @@ boundaryMinPos?: Vec3
 ## boundaryWeight
 
 ```TypeScript
-boundaryWeight?: double
+boundaryWeight?: number
 ```
 
 边界约束力权重。个体在boundaryDistance范围内被边界墙推回的强度。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,16 +126,14 @@ boundaryWeight?: double
 ## cohesionDistance
 
 ```TypeScript
-cohesionDistance?: double
+cohesionDistance?: number
 ```
 
 凝聚规则的感知半径，单位为m。在该距离内（含边界）的邻近个体对凝聚力有贡献。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,16 +144,14 @@ cohesionDistance?: double
 ## cohesionWeight
 
 ```TypeScript
-cohesionWeight?: double
+cohesionWeight?: number
 ```
 
 凝聚规则权重。个体在cohesionDistance范围内朝向邻近个体平均位置吸引的强度。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -180,16 +162,14 @@ cohesionWeight?: double
 ## gravityWeight
 
 ```TypeScript
-gravityWeight?: double
+gravityWeight?: number
 ```
 
 引力场权重。引力场对该个体的吸引强度。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -209,8 +189,6 @@ initialPosition?: Vec3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -228,8 +206,6 @@ initialRotation?: Quaternion
 **类型：** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -249,8 +225,6 @@ initialVelocity?: Vec3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -260,16 +234,14 @@ initialVelocity?: Vec3
 ## maxAccelerationMag
 
 ```TypeScript
-maxAccelerationMag?: double
+maxAccelerationMag?: number
 ```
 
 个体每模拟帧可达到的最大加速度，单位为m/s²。取值 &gt;= 0。默认值约为39.06。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -289,8 +261,6 @@ maxTurnRate?: Vec3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -300,16 +270,14 @@ maxTurnRate?: Vec3
 ## maxVelocityMag
 
 ```TypeScript
-maxVelocityMag?: double
+maxVelocityMag?: number
 ```
 
 个体每模拟帧可达到的最大速度，单位为m/s。取值 &gt;= 0。默认值约为0.625。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -320,16 +288,14 @@ maxVelocityMag?: double
 ## repulsionWeight
 
 ```TypeScript
-repulsionWeight?: double
+repulsionWeight?: number
 ```
 
 斥力场权重。斥力场对该个体的排斥强度。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -340,16 +306,14 @@ repulsionWeight?: double
 ## separationDistance
 
 ```TypeScript
-separationDistance?: double
+separationDistance?: number
 ```
 
 分离规则的感知半径，单位为m。仅严格在该距离内的邻近个体对分离力有贡献（边界处力为0）。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -360,16 +324,14 @@ separationDistance?: double
 ## separationWeight
 
 ```TypeScript
-separationWeight?: double
+separationWeight?: number
 ```
 
 分离规则权重。个体在separationDistance范围内受邻近个体排斥的强度。取值 &gt;= 0。默认值为0.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

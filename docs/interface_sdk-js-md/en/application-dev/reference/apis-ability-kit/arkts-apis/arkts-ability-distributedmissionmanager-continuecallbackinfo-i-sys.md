@@ -4,8 +4,6 @@ Defines the information about the callback that is triggered for mission continu
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the information about the callback that is triggered for mission continu
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## info
@@ -27,8 +25,6 @@ Continuation information of the mission.
 **Type:** ContinuableInfo
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Continuation state of the mission.
 **Type:** ContinueState
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

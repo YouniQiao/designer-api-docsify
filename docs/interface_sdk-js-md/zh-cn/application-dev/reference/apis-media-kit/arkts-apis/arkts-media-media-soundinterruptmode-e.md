@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## NO_INTERRUPT
@@ -17,8 +15,6 @@ NO_INTERRUPT = 0
 表示同一ID的音频，如果前者尚未播放完成，后者不会打断前者的播放，二者并行播放。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,8 +29,6 @@ SAME_SOUND_INTERRUPT = 1
 表示同一ID的音频，如果前者尚未播放完成，后者在播放前会先打断前者的播放。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

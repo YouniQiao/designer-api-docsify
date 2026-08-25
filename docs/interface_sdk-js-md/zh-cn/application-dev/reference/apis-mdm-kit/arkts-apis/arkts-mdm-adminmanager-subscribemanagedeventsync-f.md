@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## subscribeManagedEventSync
@@ -15,8 +15,6 @@ function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEven
 订阅系统管理事件。调用成功后，当已订阅的系统管理事件发生时，设备管理应用将收到相应的通知。从API版本26.0.0开始，非超级设备管理应用调用该接口订阅[MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md)事件时返回9200002错误码。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_SUBSCRIBE_MANAGED_EVENT
 
@@ -40,25 +38,3 @@ function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEven
 | [9200008](../errorcode-enterpriseDeviceManager.md#9200008-系统订阅事件无效) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED,
-  adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
-
-try {
-  adminManager.subscribeManagedEventSync(wantTemp, events);
-  console.info('Succeeded in subscribing managed event.');
-} catch (err) {
-  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
-}
-```

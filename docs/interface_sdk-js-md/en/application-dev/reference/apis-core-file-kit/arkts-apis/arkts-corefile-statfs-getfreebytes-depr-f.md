@@ -15,8 +15,6 @@ Obtains the free size of the specified file system, in bytes. This API uses an a
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** getFreeBytes
@@ -30,32 +28,6 @@ Obtains the free size of the specified file system, in bytes. This API uses an a
 | path | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let path = "/dev";
-statfs.getFreeBytes(path).then((number: number) => {
-  console.info("getFreeBytes promise successfully:" + number);
-}).catch((err: BusinessError) => {
-  console.error("getFreeBytes failed with error:" + JSON.stringify(err));
-});
-```
-
-```TypeScript
-import common from '@ohos.app.ability.common';
-import { BusinessError } from '@ohos.base';
-let context = getContext(this) as common.UIAbilityContext;
-let path = context.filesDir;
-statfs.getFreeBytes(path, (err: BusinessError, freeBytes:Number) => {
-    if (err) {
-        console.error('getFreeBytes callback failed');
-    } else {
-        console.info('getFreeBytes callback success' + freeBytes);
-    }
-});
-```
-
 
 ## getFreeBytes
 
@@ -66,8 +38,6 @@ function getFreeBytes(path: string): Promise<number>
 Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -86,7 +56,3 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;number & gt; |
-
-**Examples**
-
-See [getFreeBytes](#getfreebytes)

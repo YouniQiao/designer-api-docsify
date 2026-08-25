@@ -4,8 +4,6 @@ Describes the divider style.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ color?: ResourceColor
 
 Color of the divider.Default value: **#33182431**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,13 +37,11 @@ endMargin?: Length
 
 Distance between the divider and the bottom of the sidebar. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,13 +57,11 @@ startMargin?: Length
 
 Distance between the divider and the top of the sidebar. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,13 +77,11 @@ strokeWidth: Length
 
 Width of the divider. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 0
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

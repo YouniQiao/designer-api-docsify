@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getSuperAdmin
@@ -15,8 +15,6 @@ function getSuperAdmin(): Promise<Want>
 Queries the super device administrator application of this first user (u100). This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,16 +33,3 @@ Queries the super device administrator application of this first user (u100). Th
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-adminManager.getSuperAdmin().then((result) => {
-  console.info(`Succeeded in getting super admin :${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get super admin. Code: ${err.code}, message: ${err.message}`);
-})
-```

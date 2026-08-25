@@ -4,14 +4,12 @@ Describes the parsing options, which can define the mode for processing BigInt.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from '@kit.ArkTS';
+import { JSON } from 'kits/@kit.ArkTS';
 ```
 
 ## bigIntMode
@@ -25,8 +23,6 @@ Mode for processing BigInt.
 **Type:** BigIntMode
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

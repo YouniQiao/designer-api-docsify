@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
@@ -40,8 +38,6 @@ Obtains the network type.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -49,20 +45,6 @@ Obtains the network type.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | {     /**      * Called when the network type is obtained.      * @syscap SystemCapability.Communication.NetManager.Core      * @since 3      */     success?: (data: NetworkResponse) = & gt; void;     /**      * Called when the network type fails to be obtained.      * @syscap SystemCapability.Communication.NetManager.Core      * @since 3      */     fail?: (data: any, code: number) = & gt; void;     /**      * Called when the execution is completed.      * @syscap SystemCapability.Communication.NetManager.Core      * @since 3      */     complete?: () = & gt; void;   } | No |
-
-**Examples**
-
-```TypeScript
-export default class Network {
-  getType() {
-    network.getType({
-      success: (data) => {
-        console.info('success get network type:' + data.type);
-      }
-    });
-  }
-}
-```
 
 ## subscribe
 
@@ -87,8 +69,6 @@ Listens to the network connection state. If this method is called multiple times
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -96,20 +76,6 @@ Listens to the network connection state. If this method is called multiple times
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | {     /**      * Called when the network connection state changes.      * @syscap SystemCapability.Communication.NetManager.Core      * @since 3      */     success?: (data: NetworkResponse) = & gt; void;     /**      * Called when the listening fails.      * @syscap SystemCapability.Communication.NetManager.Core      * @since 3      */     fail?: (data: any, code: number) = & gt; void;   } | No |
-
-**Examples**
-
-```TypeScript
-export default class Network {
-  subscribe() {
-    network.subscribe({
-      success: (data) => {
-        console.info('success get network type:' + data.type);
-      }
-    });
-  }
-}
-```
 
 ## unsubscribe
 
@@ -121,14 +87,4 @@ Cancels listening to the network connection state.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
-
-**Examples**
-
-```TypeScript
-import network from '@system.network';
-
-network.unsubscribe();
-```

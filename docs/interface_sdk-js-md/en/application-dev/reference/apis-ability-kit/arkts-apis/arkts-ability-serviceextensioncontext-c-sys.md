@@ -9,22 +9,14 @@ The ServiceExtensionContext module provides the context environment for the Serv
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
 
 ## connectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
-```
-
-ArkTS-Sta:
-```TypeScript
-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
 Connects this ability to a ServiceExtensionAbility. This API can be called only on the main thread.
@@ -34,8 +26,6 @@ Connects this ability to a ServiceExtensionAbility. This API can be called only 
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +44,7 @@ Connects this ability to a ServiceExtensionAbility. This API can be called only 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **Error codes:**
 
@@ -75,55 +65,10 @@ Connects this ability to a ServiceExtensionAbility. This API can be called only 
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want, common } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let commRemote: rpc.IRemoteObject; // Release the instance when the connection is disconnected.
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MyAbility'
-    };
-    let options: common.ConnectOptions = {
-      onConnect(elementName, remote) {
-        commRemote = remote;
-        console.info('----------- onConnect -----------');
-      },
-      onDisconnect(elementName) {
-        console.info('----------- onDisconnect -----------');
-      },
-      onFailed(code) {
-        console.error('----------- onFailed -----------');
-      }
-    };
-    let connection: number;
-
-    try {
-      connection = this.context.connectServiceExtensionAbility(want, options);
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## connectServiceExtensionAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options: ConnectOptions): number
-```
-
-ArkTS-Sta:
-```TypeScript
-connectServiceExtensionAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long
 ```
 
 Connects this ability to a ServiceExtensionAbility of a given account. This API can be called only on the main thread.This API can be properly called on phones and tablets. If it is called on other devices, error code 16000006 is returned.
@@ -135,8 +80,6 @@ Connects this ability to a ServiceExtensionAbility of a given account. This API 
 > Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -151,14 +94,14 @@ Connects this ability to a ServiceExtensionAbility of a given account. This API 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 | options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **Error codes:**
 
@@ -180,64 +123,15 @@ Connects this ability to a ServiceExtensionAbility of a given account. This API 
 | [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
 | [16000055](../errorcode-ability.md#16000055-installation-free-timeout) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want, common } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let commRemote: rpc.IRemoteObject; // Release the instance when the connection is disconnected.
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-    let options: common.ConnectOptions = {
-      onConnect(elementName, remote) {
-        commRemote = remote;
-        console.info('----------- onConnect -----------');
-      },
-      onDisconnect(elementName) {
-        console.info('----------- onDisconnect -----------');
-      },
-      onFailed(code) {
-        console.info('----------- onFailed -----------');
-      }
-    };
-    let connection: number;
-
-    try {
-      connection = this.context.connectServiceExtensionAbilityWithAccount(want, accountId, options);
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## disconnectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-disconnectServiceExtensionAbility(connection: long, callback: AsyncCallback<void>): void
 ```
 
 Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -249,7 +143,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| connection | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| connection | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -260,88 +154,15 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let commRemote: rpc.IRemoteObject | null; // Release the instance when the connection is disconnected.
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    // connection is the return value of connectServiceExtensionAbility.
-    let connection = 1;
-    try {
-      this.context.disconnectServiceExtensionAbility(connection, (error: BusinessError) => {
-        commRemote = null;
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('disconnectServiceExtensionAbility succeed');
-      });
-    } catch (paramError) {
-      commRemote = null;
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let commRemote: rpc.IRemoteObject | null; // Release the instance when the connection is disconnected.
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    // connection is the return value of connectServiceExtensionAbility.
-    let connection = 1;
-    try {
-      this.context.disconnectServiceExtensionAbility(connection)
-        .then(() => {
-          commRemote = null;
-          // Carry out normal service processing.
-          console.info('disconnectServiceExtensionAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          commRemote = null;
-          // Process service logic errors.
-          console.error(`disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      commRemote = null;
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## disconnectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 disconnectServiceExtensionAbility(connection: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-disconnectServiceExtensionAbility(connection: long): Promise<void>
 ```
 
 Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -353,7 +174,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| connection | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| connection | number | Yes |
 
 **Return value:**
 
@@ -369,10 +190,6 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-See [disconnectServiceExtensionAbility](#disconnectserviceextensionability)
-
 ## openAtomicService
 
 ```TypeScript
@@ -386,8 +203,6 @@ Starts an atomic service based on an application ID. This API uses a promise to 
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -421,35 +236,6 @@ Starts an atomic service based on an application ID. This API uses a promise to 
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, AtomicServiceOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class ServiceExtension extends ServiceExtensionAbility {
-  onRequest(want: Want, startId: number) {
-    let appId: string = '6918661953712445909';
-    let options: AtomicServiceOptions = {
-      displayId: 0,
-    };
-    try {
-      this.context.openAtomicService(appId, options)
-        .then(() => {
-          console.info('openAtomicService succeed');
-        })
-        .catch((err: BusinessError) => {
-          console.error(`openAtomicService failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`openAtomicService failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
 ## openLink
 
 ```TypeScript
@@ -457,7 +243,9 @@ openLink(link: string, options?: OpenLinkOptions): Promise<void>
 ```
 
 Starts a UIAbility through App Linking. This API can be called only on the main thread. It uses a promise to return the result asynchronously.A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking:  
-- The **actions** field must contain **ohos.want.action.viewData**. - The **entities** field must contain **entity.system.browsable**. - The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.  
+- The **actions** field must contain **ohos.want.action.viewData**.  
+- The **entities** field must contain **entity.system.browsable**.  
+- The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.  
 If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
 
 > **NOTE：**&gt;
@@ -465,8 +253,6 @@ If an input parameter is invalid, for example, a mandatory parameter is not set 
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -509,48 +295,6 @@ If an input parameter is invalid, for example, a mandatory parameter is not set 
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 | [16000136](../errorcode-ability.md#16000136-prohibited-from-launching-the-applications-own-uiability-via-app-linking) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want, OpenLinkOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function log(info: string) {
-  console.error(`[ServiceExtApp]:: ${JSON.stringify(info)}`);
-}
-
-export default class ServiceExtAbility extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    log(`ServiceExtAbility OnCreate`);
-  }
-
-  onRequest(want: Want, startId: number) {
-    log(`ServiceExtAbility onRequest`);
-    let link: string = 'https://www.example.com';
-    let openLinkOptions: OpenLinkOptions = {
-      appLinkingOnly: false
-    };
-    try {
-      this.context.openLink(
-        link,
-        openLinkOptions
-      ).then(() => {
-        log(`open link success.`);
-      }).catch((err: BusinessError) => {
-        log(`open link failed, errCode ${JSON.stringify(err.code)}`);
-      });
-    }
-    catch (e) {
-      log(`exception occurred, errCode ${JSON.stringify(e.code)}`);
-    }
-  }
-
-  onDestroy() {
-    log(`ServiceExtAbility onDestroy`);
-  }
-}
-```
-
 ## preStartMission
 
 ```TypeScript
@@ -560,8 +304,6 @@ preStartMission(bundleName: string, moduleName: string, abilityName: string, sta
 Starts an atomic service and pre-opens the window, with the loading box skipped. This API uses a promise to return the result.If parameter verification is successful but the atomic service fails to start, you need to implement an exception mechanism to capture the error.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRE_START_ATOMIC_SERVICE
 
@@ -597,49 +339,6 @@ Starts an atomic service and pre-opens the window, with the loading box skipped.
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function log(info: string) {
-  console.error(`[ServiceExtApp]:: ${JSON.stringify(info)}`);
-}
-
-export default class ServiceExtAbility extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    log(`ServiceExtAbility OnCreate, want: ${JSON.stringify(want)}.`);
-  }
-
-  onRequest(want: Want, startId: number) {
-    log(`ServiceExtAbility onRequest`);
-    try {
-      if (want.parameters && want.parameters["ohos.aafwk.param.startTime"]) {
-        this.context.preStartMission(
-          want.bundleName,
-          want.moduleName,
-          want.abilityName,
-          want.parameters["ohos.aafwk.param.startTime"] as string
-        ).then(() => {
-          log(`pre-start mission success.`);
-        }).catch((err: BusinessError) => {
-          log(`pre-start mission failed, errCode: ${err.code}, errMsg: ${err.message}.`);
-        });
-      }
-    } catch (e) {
-      let code = (e as BusinessError).code;
-      let msg = (e as BusinessError).message;
-      log(`exception occurred, errCode: ${code}, errMsg: ${msg}.`);
-    }
-  }
-
-  onDestroy() {
-    log(`ServiceExtAbility onDestroy`);
-  }
-}
-```
-
 ## requestModalUIExtension
 
 ```TypeScript
@@ -653,8 +352,6 @@ Requests the specified focused application to start the UIExtensionAbility of th
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -682,82 +379,6 @@ Requests the specified focused application to start the UIExtensionAbility of th
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class ServiceExtension extends ServiceExtensionAbility {
-  onCreate() {
-    let pickerWant: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'UIExtAbility',
-      moduleName: 'entry_test',
-      parameters: {
-        'bundleName': 'com.example.myapplication',
-        // The value is the same as the value of type configured for com.example.myapplication.UIExtAbility.
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      }
-    };
-
-    try {
-      this.context.requestModalUIExtension(pickerWant)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('requestModalUIExtension succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class ServiceExtension extends ServiceExtensionAbility {
-  onCreate() {
-    let pickerWant: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'com.example.myapplication.UIExtAbility',
-      moduleName: 'entry_test',
-      parameters: {
-        'bundleName': 'com.example.myapplication',
-        // The value is the same as the value of type configured for com.example.myapplication.UIExtAbility.
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      }
-    };
-
-    try {
-      this.context.requestModalUIExtension(pickerWant, (err: BusinessError) => {
-        if (err.code) {
-          // Process service logic errors.
-          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('requestModalUIExtension succeed');
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
 ## requestModalUIExtension
 
 ```TypeScript
@@ -771,8 +392,6 @@ Requests the specified focused application to start the UIExtensionAbility of th
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -805,20 +424,10 @@ Requests the specified focused application to start the UIExtensionAbility of th
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-See [requestModalUIExtension](#requestmodaluiextension)
-
 ## requestModalUIExtensionWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 requestModalUIExtensionWithAccount(pickerWant: Want, accountId: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<void>
 ```
 
 Requests the specified focused application to start the UIExtensionAbility of the corresponding type for the specified user. The focused application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the specified application does not gain focus, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **Want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. This API can be called only on the main thread. It uses a promise to return the result asynchronously.Before starting the UIExtensionAbility, ensure that the focused application has finished page initialization. Otherwise, the UIExtensionAbility fails to start. The application can determine the time to start the UIExtensionAbility by listening for the page loading status.
@@ -828,8 +437,6 @@ Requests the specified focused application to start the UIExtensionAbility of th
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -844,7 +451,7 @@ Requests the specified focused application to start the UIExtensionAbility of th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 
 **Return value:**
 
@@ -870,8 +477,6 @@ Starts an ability. This API can be called only on the main thread. It uses an as
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -916,102 +521,6 @@ Starts an ability. This API can be called only on the main thread. It uses an as
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MyAbility'
-    };
-
-    try {
-      this.context.startAbility(want, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbility succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MyAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0,
-    };
-
-    try {
-      this.context.startAbility(want, options)
-        .then((data: void) => {
-          // Carry out normal service processing.
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startAbility(want, options, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbility succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-    }
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -1021,8 +530,6 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 Starts an ability. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1069,10 +576,6 @@ Starts an ability. This API can be called only on the main thread. It uses an as
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-See [startAbility](#startability)
-
 ## startAbility
 
 ```TypeScript
@@ -1082,8 +585,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 Starts an ability. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1134,10 +635,6 @@ Starts an ability. This API can be called only on the main thread. It uses a pro
 | [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) |
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-
-**Examples**
-
-See [startAbility](#startability)
 
 ## startAbilityAsCaller
 
@@ -1153,8 +650,6 @@ Starts an ability with the caller information specified. The caller information 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -1199,86 +694,6 @@ Starts an ability with the caller information specified. The caller information 
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    // want contains the information about the caller who starts the application.
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    // Start a new ability using the caller information.
-    this.context.startAbilityAsCaller(localWant, (err) => {
-      if (err && err.code != 0) {
-        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
-      } else {
-        console.info('startAbilityAsCaller success.');
-      }
-    })
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    // want contains the information about the caller who starts the application.
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let option: StartOptions = {
-      displayId: 0
-    }
-
-    // Start a new ability using the caller information.
-    this.context.startAbilityAsCaller(localWant, option, (err) => {
-      if (err && err.code != 0) {
-        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
-      } else {
-        console.info('startAbilityAsCaller success.');
-      }
-    })
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    // want contains the information about the caller who starts the application.
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let option: StartOptions = {
-      displayId: 0
-    };
-
-    // Start a new ability using the caller information.
-    this.context.startAbilityAsCaller(localWant, option)
-      .then(() => {
-        console.info('startAbilityAsCaller success.');
-      })
-      .catch((err: BusinessError) => {
-        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
-      })
-  }
-}
-```
-
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -1292,8 +707,6 @@ Starts an ability with the caller information and start options specified. The c
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1338,10 +751,6 @@ Starts an ability with the caller information and start options specified. The c
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-See [startAbilityAsCaller](#startabilityascaller)
-
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -1355,8 +764,6 @@ Starts an ability with the start options specified. The caller information is ca
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1408,10 +815,6 @@ Starts an ability with the start options specified. The caller information is ca
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-See [startAbilityAsCaller](#startabilityascaller)
-
 ## startAbilityByCall
 
 ```TypeScript
@@ -1419,11 +822,14 @@ startAbilityByCall(want: Want): Promise<Caller>
 ```
 
 Starts an ability in the foreground or background and obtains the caller object for communicating with the ability. This API can be called only on the main thread. It uses a promise to return the result asynchronously.This API cannot be used to start the UIAbility with the launch type set to [specified](../../../application-models/uiability-launch-type.md#specified).Observe the following when using this API:  
-- If an application running in the background needs to call this API to start an ability, it must have the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission. - If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the ohos.permission.START_INVISIBLE_ABILITY permission. - The rules for using this API in the same-device and cross-device scenarios are different. For details, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+- If an application running in the background needs to call this API to start an ability, it must have the  
+ohos.permission.START_ABILITIES_FROM_BACKGROUND permission.  
+- If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the  
+ohos.permission.START_INVISIBLE_ABILITY permission.  
+- The rules for using this API in the same-device and cross-device scenarios are different. For details, see  
+[Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ABILITY_BACKGROUND_COMMUNICATION
 
@@ -1461,99 +867,23 @@ Starts an ability in the foreground or background and obtains the caller object 
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-Start an ability in the background.
-
-```TypeScript
-import { ServiceExtensionAbility, Caller, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let caller: Caller;
-    // Start an ability in the background by not passing parameters.
-    let wantBackground: Want = {
-      bundleName: 'com.example.myservice',
-      moduleName: 'entry',
-      abilityName: 'EntryAbility',
-      deviceId: ''
-    };
-
-    try {
-      this.context.startAbilityByCall(wantBackground)
-        .then((obj: Caller) => {
-          // Carry out normal service processing.
-          caller = obj;
-          console.info('startAbilityByCall succeed');
-        }).catch((error: BusinessError) => {
-        // Process service logic errors.
-        console.error(`startAbilityByCall failed, error.code: ${error.code}, error.message: ${error.message}`);
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-Start an ability in the foreground.
-
-```TypeScript
-import { ServiceExtensionAbility, Caller, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let caller: Caller;
-    // Start an ability in the foreground with ohos.aafwk.param.callAbilityToForeground in parameters set to true.
-    let wantForeground: Want = {
-      bundleName: 'com.example.myservice',
-      moduleName: 'entry',
-      abilityName: 'EntryAbility',
-      deviceId: '',
-      parameters: {
-        'ohos.aafwk.param.callAbilityToForeground': true
-      }
-    };
-
-    try {
-      this.context.startAbilityByCall(wantForeground)
-        .then((obj: Caller) => {
-          // Carry out normal service processing.
-          caller = obj;
-          console.info('startAbilityByCall succeed');
-        }).catch((error: BusinessError) => {
-        // Process service logic errors.
-        console.error(`startAbilityByCall failed, error.code: ${error.code}, error.message: ${error.message}`);
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## startAbilityByCallWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 startAbilityByCallWithAccount(want: Want, accountId: number): Promise<Caller>
 ```
 
-ArkTS-Sta:
-```TypeScript
-startAbilityByCallWithAccount(want: Want, accountId: int): Promise<Caller>
-```
-
 Starts an ability with the account ID specified and obtains the caller object for communicating with the ability. This API can be called only on the main thread. It uses a promise to return the result asynchronously.This API cannot be used to start the UIAbility with the launch type set to [specified](../../../application-models/uiability-launch-type.md#specified).Observe the following when using this API:  
-- If an application needs to call this API to start an ability that belongs to another user, it must have the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions. - If an application running in the background needs to call this API to start an ability, it must have the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission. - If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the ohos.permission.START_INVISIBLE_ABILITY permission. - The rules for using this API in the same-device and cross-device scenarios are different. For details, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+- If an application needs to call this API to start an ability that belongs to another user, it must have the  
+ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.  
+- If an application running in the background needs to call this API to start an ability, it must have the  
+ohos.permission.START_ABILITIES_FROM_BACKGROUND permission.  
+- If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the  
+ohos.permission.START_INVISIBLE_ABILITY permission.  
+- The rules for using this API in the same-device and cross-device scenarios are different. For details, see  
+[Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1568,7 +898,7 @@ Starts an ability with the account ID specified and obtains the caller object fo
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 
 **Return value:**
 
@@ -1595,57 +925,10 @@ Starts an ability with the account ID specified and obtains the caller object fo
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want, Caller } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let caller: Caller;
-    // ID of a system account. The value -1 indicates the current user.
-    let accountId = -1;
-    // Specify the ability to start.
-    let want: Want = {
-      bundleName: 'com.acts.actscalleeabilityrely',
-      moduleName: 'entry',
-      abilityName: 'EntryAbility',
-      deviceId: '',
-      parameters: {
-        // If ohos.aafwk.param.callAbilityToForeground is set to true, the ability is launched in the foreground; if it is set to false or not set, the ability is launched in the background.
-        'ohos.aafwk.param.callAbilityToForeground': true
-      }
-    };
-
-    try {
-      this.context.startAbilityByCallWithAccount(want, accountId)
-        .then((obj: Caller) => {
-          // Carry out normal service processing.
-          caller = obj;
-          console.info('startAbilityByCallWithAccount succeed');
-        }).catch((error: BusinessError) => {
-        // Process service logic errors.
-        console.error(`startAbilityByCallWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## startAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void
 ```
 
 Starts an ability with the account ID specified. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
@@ -1655,8 +938,6 @@ Starts an ability with the account ID specified. This API can be called only on 
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1671,7 +952,7 @@ Starts an ability with the account ID specified. This API can be called only on 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -1706,117 +987,10 @@ Starts an ability with the account ID specified. This API can be called only on 
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-
-    try {
-      this.context.startAbilityWithAccount(want, accountId, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbilityWithAccount succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startAbilityWithAccount(want, accountId, options, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbilityWithAccount succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startAbilityWithAccount(want, accountId, options)
-        .then((data: void) => {
-          // Carry out normal service processing.
-          console.info('startAbilityWithAccount succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## startAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
 Starts an ability with the account ID and start options specified. This API can be called only on the main thread. It uses an asynchronous callback to return the result.
@@ -1826,8 +1000,6 @@ Starts an ability with the account ID and start options specified. This API can 
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1842,7 +1014,7 @@ Starts an ability with the account ID and start options specified. This API can 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -1878,20 +1050,10 @@ Starts an ability with the account ID and start options specified. This API can 
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-See [startAbilityWithAccount](#startabilitywithaccount)
-
 ## startAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Promise<void>
 ```
 
 Starts an ability with the account ID specified. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
@@ -1901,8 +1063,6 @@ Starts an ability with the account ID specified. This API can be called only on 
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1917,7 +1077,7 @@ Starts an ability with the account ID specified. This API can be called only on 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No |
 
 **Return value:**
@@ -1957,10 +1117,6 @@ Starts an ability with the account ID specified. This API can be called only on 
 | [16000078](../errorcode-ability.md#16000078-multi-instance-mode-is-not-supported) |
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-
-**Examples**
-
-See [startAbilityWithAccount](#startabilitywithaccount)
 
 ## startRecentAbility
 
@@ -1976,8 +1132,6 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -2020,108 +1174,6 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    try {
-      this.context.startRecentAbility(want, (err: BusinessError) => {
-        if (err.code) {
-          // Process service logic errors.
-          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startRecentAbility succeed');
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startRecentAbility(want, options, (err: BusinessError) => {
-        if (err.code) {
-          // Process service logic errors.
-          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startRecentAbility succeed');
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0,
-    };
-
-    try {
-      this.context.startRecentAbility(want, options)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('startRecentAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
 ## startRecentAbility
 
 ```TypeScript
@@ -2135,8 +1187,6 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2181,10 +1231,6 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-See [startRecentAbility](#startrecentability)
-
 ## startRecentAbility
 
 ```TypeScript
@@ -2198,8 +1244,6 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2249,10 +1293,6 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 | [16000079](../errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-See [startRecentAbility](#startrecentability)
-
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -2262,8 +1302,6 @@ startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 Starts a ServiceExtensionAbility. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2298,68 +1336,6 @@ Starts a ServiceExtensionAbility. This API uses an asynchronous callback to retu
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    try {
-      this.context.startServiceExtensionAbility(want, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`startServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startServiceExtensionAbility succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    try {
-      this.context.startServiceExtensionAbility(want)
-        .then((data) => {
-          // Carry out normal service processing.
-          console.info('startServiceExtensionAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -2369,8 +1345,6 @@ startServiceExtensionAbility(want: Want): Promise<void>
 Starts a ServiceExtensionAbility. This API uses a promise to return the result asynchronously.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2410,20 +1384,10 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result a
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
 
-**Examples**
-
-See [startServiceExtensionAbility](#startserviceextensionability)
-
 ## startServiceExtensionAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 startServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-startServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void
 ```
 
 Starts a ServiceExtensionAbility with the account ID specified. This API uses an asynchronous callback to return the result.
@@ -2436,8 +1400,6 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -2451,7 +1413,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -2474,80 +1436,10 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-
-    try {
-      this.context.startServiceExtensionAbilityWithAccount(want, accountId, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`startServiceExtensionAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startServiceExtensionAbilityWithAccount succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-
-    try {
-      this.context.startServiceExtensionAbilityWithAccount(want, accountId)
-        .then((data: void) => {
-          // Carry out normal service processing.
-          console.info('startServiceExtensionAbilityWithAccount succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startServiceExtensionAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## startServiceExtensionAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
 ```
 
 Starts a ServiceExtensionAbility with the account ID specified. This API uses a promise to return the result asynchronously.
@@ -2559,8 +1451,6 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 > Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -2575,7 +1465,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 
 **Return value:**
 
@@ -2602,10 +1492,6 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 | [16000012](../errorcode-ability.md#16000012-application-under-control) |
 | [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
 | [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-
-**Examples**
-
-See [startServiceExtensionAbilityWithAccount](#startserviceextensionabilitywithaccount)
 
 ## startUIAbilities
 
@@ -2620,8 +1506,6 @@ Starts multiple UIAbility components simultaneously. This API uses a promise to 
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2668,37 +1552,6 @@ Starts multiple UIAbility components simultaneously. This API uses a promise to 
 | [16000125](../errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) |
 | [16000126](../errorcode-ability.md#16000126-dlp-files-cannot-be-started) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryServiceExtAbility extends ServiceExtensionAbility {
-  onRequest() {
-    let want1: Want = {
-      bundleName: 'com.example.myapplication1',
-      abilityName: 'EntryAbility'
-    };
-    let want2: Want = {
-      bundleName: 'com.example.myapplication2',
-      abilityName: 'EntryAbility'
-    };
-    let wantList: Array<Want> = [want1, want2];
-    try {
-      this.context.startUIAbilities(wantList).then(() => {
-        console.info(`TestTag:: start succeeded.`);
-      }).catch((error: BusinessError) => {
-        console.info(`TestTag:: startUIAbilities failed: ${JSON.stringify(error)}`);
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-    }
-  }
-}
-```
-
 ## startUIServiceExtensionAbility
 
 ```TypeScript
@@ -2712,8 +1565,6 @@ Starts a new [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceexte
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2753,28 +1604,6 @@ Starts a new [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceexte
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-export default class MyServiceExtensionAbility extends ServiceExtensionAbility {
-  onRequest(want: Want, startId: number) {
-    const startWant: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'UIServiceExtensionAbility'
-    }
-    // Start a UIServiceExtensionAbility.
-    this.context.startUIServiceExtensionAbility(startWant).then(() => {
-      console.info('succeeded');
-    }).catch((error: BusinessError) => {
-      console.error(`error code: ${error.code}, error message : ${error.message}`);
-    })
-  }
-}
-```
-
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -2784,8 +1613,6 @@ stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 Stops a ServiceExtensionAbility. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2815,68 +1642,6 @@ Stops a ServiceExtensionAbility. This API uses an asynchronous callback to retur
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
-
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    try {
-      this.context.stopServiceExtensionAbility(want, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`stopServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('stopServiceExtensionAbility succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    try {
-      this.context.stopServiceExtensionAbility(want)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('stopServiceExtensionAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`stopServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
 
 ## stopServiceExtensionAbility
 
@@ -2888,8 +1653,6 @@ Stops a ServiceExtensionAbility. This API uses a promise to return the result as
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -2924,20 +1687,10 @@ Stops a ServiceExtensionAbility. This API uses a promise to return the result as
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
 
-**Examples**
-
-See [stopServiceExtensionAbility](#stopserviceextensionability)
-
 ## stopServiceExtensionAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void
 ```
 
 Stops a ServiceExtensionAbility with the specified account. This API uses an asynchronous callback to return the result.
@@ -2946,8 +1699,6 @@ Stops a ServiceExtensionAbility with the specified account. This API uses an asy
 > Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -2962,7 +1713,7 @@ Stops a ServiceExtensionAbility with the specified account. This API uses an asy
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -2981,80 +1732,10 @@ Stops a ServiceExtensionAbility with the specified account. This API uses an asy
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-
-    try {
-      this.context.stopServiceExtensionAbilityWithAccount(want, accountId, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`stopServiceExtensionAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('stopServiceExtensionAbilityWithAccount succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-
-    try {
-      this.context.stopServiceExtensionAbilityWithAccount(want, accountId)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('stopServiceExtensionAbilityWithAccount succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`stopServiceExtensionAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## stopServiceExtensionAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
 ```
 
 Stops a ServiceExtensionAbility with the specified account. This API uses a promise to return the result asynchronously.
@@ -3063,8 +1744,6 @@ Stops a ServiceExtensionAbility with the specified account. This API uses a prom
 > Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3079,7 +1758,7 @@ Stops a ServiceExtensionAbility with the specified account. This API uses a prom
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 
 **Return value:**
 
@@ -3102,10 +1781,6 @@ Stops a ServiceExtensionAbility with the specified account. This API uses a prom
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
-
-**Examples**
-
-See [stopServiceExtensionAbilityWithAccount](#stopserviceextensionabilitywithaccount)
 
 ## terminateSelf
 
@@ -3117,8 +1792,6 @@ Terminates this ability. This API can be called only on the main thread. It uses
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -3143,44 +1816,6 @@ Terminates this ability. This API can be called only on the main thread. It uses
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    this.context.terminateSelf((error: BusinessError) => {
-      if (error.code) {
-        // Process service logic errors.
-        console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
-        return;
-      }
-      // Carry out normal service processing.
-      console.info('terminateSelf succeed');
-    });
-  }
-}
-```
-
-```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    this.context.terminateSelf().then(() => {
-      // Carry out normal service processing.
-      console.info('terminateSelf succeed');
-    }).catch((error: BusinessError) => {
-      // Process service logic errors.
-      console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
-    });
-  }
-}
-```
-
 ## terminateSelf
 
 ```TypeScript
@@ -3190,8 +1825,6 @@ terminateSelf(): Promise<void>
 Terminates this ability. This API can be called only on the main thread. It uses a promise to return the result asynchronously.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3215,7 +1848,3 @@ Terminates this ability. This API can be called only on the main thread. It uses
 | [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [terminateSelf](#terminateself)

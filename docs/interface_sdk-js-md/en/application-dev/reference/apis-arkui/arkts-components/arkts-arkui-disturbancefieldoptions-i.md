@@ -4,8 +4,6 @@ Defines particle disturbance Field params.@interface DisturbanceFieldOptions
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Feather value, which represents the degree of attenuation from the center of the
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -48,8 +44,6 @@ Noise amplitude, which indicates the range of noise fluctuations. The greater th
 **Default:** 1
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,8 +65,6 @@ Noise frequency. The higher the frequency, the finer the noise. The value is gre
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -92,8 +84,6 @@ Noise scale, used to control the overall size of the noise pattern. The value is
 **Default:** 1
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,8 +105,6 @@ Position of the field.Default value: {x:0, y:0}.Value range of **x** and **y**: 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -136,8 +124,6 @@ Shape of the field.Default value: **DisturbanceFieldShape.RECT**
 **Default:** DisturbanceFieldShape.RECT
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,8 +145,6 @@ Size of the field.Default value: {width:0, height:0}.Value range of **width** an
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -180,8 +164,6 @@ Field strength, which indicates the intensity of the repulsive force from the ce
 **Default:** 0
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

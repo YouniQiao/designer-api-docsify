@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## move
 
 ```TypeScript
-function move(mechId: int, params: MoveParams): Promise<Result>
+function move(mechId: number, params: MoveParams): Promise<Result>
 ```
 
 以特定参数移动一个具身设备
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -26,7 +24,7 @@ function move(mechId: int, params: MoveParams): Promise<Result>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| mechId | number | 是 |
 | params | [MoveParams](arkts-mechanic-mechanicmanager-moveparams-i-sys.md) | 是 |
 
 **返回值：**

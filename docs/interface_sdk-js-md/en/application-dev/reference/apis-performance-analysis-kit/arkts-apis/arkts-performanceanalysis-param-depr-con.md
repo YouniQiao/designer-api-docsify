@@ -10,8 +10,6 @@ Distributed service instance id.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** DISTRIBUTED_SERVICE_INSTANCE_ID
@@ -28,8 +26,6 @@ Distributed service name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** DISTRIBUTED_SERVICE_NAME
@@ -45,8 +41,6 @@ const USER_ID: string
 User id.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

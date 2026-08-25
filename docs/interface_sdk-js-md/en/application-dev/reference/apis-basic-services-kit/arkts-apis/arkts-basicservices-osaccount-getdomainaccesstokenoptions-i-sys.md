@@ -4,8 +4,6 @@ Defines the options for obtaining a domain access token.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the options for obtaining a domain access token.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## businessParams
@@ -22,13 +20,11 @@ import { osAccount } from '@kit.BasicServicesKit';
 businessParams: Record<string, Object>
 ```
 
-Service parameters customized by the service party based on the request protocol.
+Business parameters customized by the business party based on the request protocol.
 
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -37,16 +33,14 @@ Service parameters customized by the service party based on the request protocol
 ## callerUid
 
 ```TypeScript
-callerUid: int
+callerUid: number
 ```
 
-Unique identifier of the caller.
+Caller UID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -64,8 +58,6 @@ Domain account information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ Token of the domain account.
 **Type:** Uint8Array
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

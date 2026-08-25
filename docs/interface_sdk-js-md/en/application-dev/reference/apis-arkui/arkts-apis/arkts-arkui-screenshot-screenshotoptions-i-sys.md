@@ -4,8 +4,6 @@ Describes the screenshot options.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Describes the screenshot options.
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'kits/@kit.ArkUI';
 ```
 
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
 ID of the [display](arkts-arkui-display-displaystate-e.md) device on which the screen region is to be captured. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -46,8 +42,6 @@ Region of the screen to capture. If no value is passed, the region of the logica
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Whether to capture all displays on the current screen. If the screen contains mu
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -82,8 +74,6 @@ Whether to send a notification after a snapshot is captured. **true** to send, *
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -91,16 +81,14 @@ Whether to send a notification after a snapshot is captured. **true** to send, *
 ## rotation
 
 ```TypeScript
-rotation?: int
+rotation?: number
 ```
 
 Angle by which the captured image should be rotated. Currently, the value can be **0** only. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -117,8 +105,6 @@ Region of the screen to capture. If no value is passed, the region of the logica
 **Type:** Rect
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

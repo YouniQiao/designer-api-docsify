@@ -4,8 +4,6 @@ Describes the value of the indication or notification sent by the Gatt server.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [NotifyCharacteristic](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md)
@@ -15,7 +13,7 @@ Describes the value of the indication or notification sent by the Gatt server.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -29,8 +27,6 @@ The UUID of a NotifyCharacteristic instance
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ The value of a NotifyCharacteristic instance
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [characteristicValue](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#characteristicvalue)
@@ -70,8 +64,6 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [confirm](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#confirm)
@@ -89,8 +81,6 @@ The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md) ins
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getApplicationInfo
@@ -16,8 +16,6 @@ function getApplicationInfo(bundleName: string,
 根据给定的Bundle名称获取指定用户下的ApplicationInfo，使用callback异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -34,55 +32,6 @@ function getApplicationInfo(bundleName: string,
 | userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = "com.example.myapplication";
-let bundleFlags: number = 0;
-let userId: number = 100;
-
-bundle.getApplicationInfo(bundleName, bundleFlags, userId)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleName: string = "com.example.myapplication";
-let bundleFlags: number = 0;
-let userId: number = 100;
-
-bundle.getApplicationInfo(bundleName, bundleFlags, userId, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleName: string = "com.example.myapplication";
-let bundleFlags: number = 0;
-
-bundle.getApplicationInfo(bundleName, bundleFlags, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
 
 ## getApplicationInfo
 
@@ -93,8 +42,6 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, callback: A
 根据给定的Bundle名称获取ApplicationInfo，使用callback异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -110,10 +57,6 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, callback: A
 | bundleFlags | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | 是 |
 
-**示例**
-
-参见 [getApplicationInfo](#getapplicationinfo)
-
 
 ## getApplicationInfo
 
@@ -124,8 +67,6 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: nu
 根据给定的Bundle名称获取ApplicationInfo。使用Promise异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -146,7 +87,3 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: nu
 | 类型 |
 | --- |
 | Promise&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; |
-
-**示例**
-
-参见 [getApplicationInfo](#getapplicationinfo)

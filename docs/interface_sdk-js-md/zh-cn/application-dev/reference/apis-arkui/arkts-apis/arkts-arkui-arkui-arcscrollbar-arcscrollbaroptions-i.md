@@ -7,14 +7,12 @@ ArcScrollBar的构造函数参数。
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## 导入模块
 
 ```TypeScript
-import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
+import { ArcScrollBar, ArcScrollBarAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## scroller
@@ -25,11 +23,9 @@ scroller: Scroller
 
 可滚动组件的控制器，用于与可滚动组件进行绑定。
 
-**类型：** Scroller
+**类型：** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -41,13 +37,11 @@ scroller: Scroller
 state?: BarState
 ```
 
-滚动条状态。<br/>默认值：BarState.Auto
+滚动条状态。默认值：BarState.Auto
 
-**类型：** BarState
+**类型：** [BarState](arkts-arkui-barstate-e.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

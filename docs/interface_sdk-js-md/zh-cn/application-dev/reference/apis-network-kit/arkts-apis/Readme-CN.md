@@ -411,11 +411,7 @@
   <!--Del-->
   - [off(系统接口)](arkts-network-statistics-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [offNetStatsChange(系统接口)](arkts-network-statistics-offnetstatschange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [on(系统接口)](arkts-network-statistics-on-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onNetStatsChange(系统接口)](arkts-network-statistics-onnetstatschange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setCalibrationTraffic(系统接口)](arkts-network-statistics-setcalibrationtraffic-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -429,14 +425,10 @@
   <!--Del-->
   - [NetStatsChangeInfo(系统接口)](arkts-network-statistics-netstatschangeinfo-i-sys.md)<!--DelEnd-->
   - [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)
-  <!--Del-->
-  - [NetStatsInfoSequenceItem(系统接口)](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md)<!--DelEnd-->
   - [NetworkInfo](arkts-network-statistics-networkinfo-i.md)
   <!--Del-->
   - [UidInfo(系统接口)](arkts-network-statistics-uidinfo-i-sys.md)<!--DelEnd-->
   - [NetBearType](arkts-network-statistics-netbeartype-t.md)
-  <!--Del-->
-  - [NetStatsInfoSequence(系统接口)](arkts-network-statistics-netstatsinfosequence-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UidNetStatsInfo(系统接口)](arkts-network-statistics-uidnetstatsinfo-t-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -499,7 +491,6 @@
   - [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md)
   - [ClientCert](arkts-network-websocket-clientcert-i.md)
   - [CloseResult](arkts-network-websocket-closeresult-i.md)
-  - [OpenResult](arkts-network-websocket-openresult-i.md)
   - [ServerCert](arkts-network-websocket-servercert-i.md)
   - [WebSocket](arkts-network-websocket-websocket-i.md)
   - [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md)

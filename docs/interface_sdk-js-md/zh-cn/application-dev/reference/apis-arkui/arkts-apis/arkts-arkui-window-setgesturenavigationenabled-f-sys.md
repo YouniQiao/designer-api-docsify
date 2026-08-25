@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## setGestureNavigationEnabled
@@ -15,8 +15,6 @@ function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<vo
 设置手势导航启用状态。使用callback异步回调。系统出于安全的考虑，不会干预手势的禁用和恢复。应用调用本接口禁用手势后异常退出的情况下，如果想要恢复手势，需自行实现自动拉起机制并再次调用本接口恢复手势。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -38,82 +36,6 @@ function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<vo
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  window.setGestureNavigationEnabled(true, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting gesture navigation enabled.');
-  });
-} catch (exception) {
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  window.setGestureNavigationEnabled(true, (err: BusinessError<void> | null) => {
-    const errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to set gesture navigation enabled. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in setting gesture navigation enabled.');
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setGestureNavigationEnabled(true);
-  promise.then(() => {
-    console.info('Succeeded in setting gesture navigation enabled.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setGestureNavigationEnabled(true);
-  promise.then(() => {
-    console.info('Succeeded in setting gesture navigation enabled.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## setGestureNavigationEnabled
 
@@ -124,8 +46,6 @@ function setGestureNavigationEnabled(enable: boolean): Promise<void>
 设置手势导航启用状态。使用Promise异步回调。系统出于安全的考虑，不会干预手势的禁用和恢复。应用调用本接口禁用手势后异常退出的情况下，如果想要恢复手势，需自行实现自动拉起机制并再次调用本接口恢复手势。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -151,7 +71,3 @@ function setGestureNavigationEnabled(enable: boolean): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-参见 [setGestureNavigationEnabled](#setgesturenavigationenabled)

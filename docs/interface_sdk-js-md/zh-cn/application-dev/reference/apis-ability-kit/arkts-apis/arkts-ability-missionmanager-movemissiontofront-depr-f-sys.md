@@ -15,8 +15,6 @@ function moveMissionToFront(missionId: number, callback: AsyncCallback<void>): v
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md)
@@ -34,65 +32,6 @@ function moveMissionToFront(missionId: number, callback: AsyncCallback<void>): v
 | missionId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 将指定任务切换到前台
-  missionManager.moveMissionToFront(testMissionId, (err, data) => {
-    if (err) {
-      console.error(`moveMissionToFront failed: ${err.message}`);
-    } else {
-      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`moveMissionToFront failed. Code: ${error.code}, message: ${error.message}.`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 将指定任务切换到前台，并指定窗口模式
-  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err, data) => {
-    if (err) {
-      console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
-    } else {
-      console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`moveMissionToFront sync failed. Code: ${error.code}, message: ${error.message}.`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 将指定任务切换到前台
-  missionManager.moveMissionToFront(testMissionId).then((data) => {
-    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`moveMissionToFront failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`moveMissionToFront failed. Cause: ${error.message}`);
-}
-```
-
 
 ## moveMissionToFront
 
@@ -103,8 +42,6 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 把指定任务id的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -124,10 +61,6 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [moveMissionToFront](#movemissiontofront)
-
 
 ## moveMissionToFront
 
@@ -138,8 +71,6 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 把指定任务id的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -163,7 +94,3 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [moveMissionToFront](#movemissiontofront)

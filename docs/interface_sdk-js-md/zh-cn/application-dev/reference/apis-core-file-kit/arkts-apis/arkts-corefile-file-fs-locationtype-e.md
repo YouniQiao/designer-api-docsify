@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## LOCAL
@@ -18,8 +16,6 @@ LOCAL = 1 << 0
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## CLOUD
@@ -31,7 +27,5 @@ CLOUD = 1 << 1
 文件在云端存在。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

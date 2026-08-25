@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## dnsServers
@@ -27,8 +25,6 @@ dnsServers: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -46,8 +42,6 @@ gateway: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ httpProxy?: HttpProxy
 **类型：** HttpProxy
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -82,8 +74,6 @@ ipAddr: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +89,6 @@ mode: IPSetMode
 **类型：** [IPSetMode](arkts-network-ethernet-ipsetmode-e-sys.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
@@ -118,8 +106,6 @@ netMask: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **系统接口：** 此接口为系统接口。
@@ -135,8 +121,6 @@ route: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 

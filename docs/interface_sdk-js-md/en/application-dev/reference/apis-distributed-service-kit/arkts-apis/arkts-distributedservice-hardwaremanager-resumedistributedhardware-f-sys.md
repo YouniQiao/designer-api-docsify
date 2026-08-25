@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hardwareManager } from '@kit.DistributedServiceKit';
+import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## resumeDistributedHardware
@@ -15,8 +15,6 @@ function resumeDistributedHardware(description: HardwareDescriptor): Promise<voi
 Resumes the distributed hardware service on the controlled device. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
@@ -45,25 +43,3 @@ Resumes the distributed hardware service on the controlled device. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 24200101 |
 | 24200102 |
-
-**Examples**
-
-```TypeScript
-import { hardwareManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let description: hardwareManager.HardwareDescriptor = {
-    type: 1,
-    srcNetworkId: '1111'
-  };
-  hardwareManager.resumeDistributedHardware(description).then(() => {
-    console.info('resume distributed hardware successfully');
-  }).catch((error: BusinessError) => {
-    console.error('resume distributed hardware failed, cause:' + error);
-  })
-  console.info('resume distributed hardware successfully');
-} catch (error) {
-  console.error('resume distributed hardware failed:' + error);
-}
-```

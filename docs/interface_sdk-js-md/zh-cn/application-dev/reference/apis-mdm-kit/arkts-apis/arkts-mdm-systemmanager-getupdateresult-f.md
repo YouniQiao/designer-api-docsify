@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getUpdateResult
@@ -15,8 +15,6 @@ function getUpdateResult(admin: Want, version: string): Promise<UpdateResult>
 获取系统更新结果。使用Promise异步回调。适用于需要检查系统更新是否成功的场景，帮助企业管理员了解设备升级状态，及时处理更新失败的情况，确保设备系统版本符合企业要求。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -45,22 +43,3 @@ function getUpdateResult(admin: Want, version: string): Promise<UpdateResult>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-systemManager.getUpdateResult(wantTemp, "1.0").then((result:systemManager.UpdateResult) => {
-  console.info(`Succeeded in getting update result: ${JSON.stringify(result)}`);
-}).catch((error: BusinessError) => {
-  console.error(`Get update result failed. Code is ${error.code},message is ${error.message}`);
-});
-```

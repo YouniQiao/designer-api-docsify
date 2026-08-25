@@ -15,8 +15,6 @@ Grants tool permissions based on user authorization results. This function grant
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
 **System capability:** SystemCapability.Security.Asset
@@ -27,7 +25,7 @@ Grants tool permissions based on user authorization results. This function grant
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userAuthResult | [UserAuthResult[]](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-userauthresult-i.md) | Yes |
+| userAuthResult | [UserAuthResult[]](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Yes |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## connectAbility
@@ -23,8 +23,6 @@ Connects this ability to a ServiceAbility.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -41,29 +39,3 @@ Connects this ability to a ServiceAbility.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-
-let connectId = featureAbility.connectAbility(
-  {
-    deviceId: '',
-    bundleName: 'com.ix.ServiceAbility',
-    abilityName: 'com.ix.ServiceAbility.ServiceAbilityA',
-  },
-  {
-    onConnect: (element, remote) => {
-      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
-    },
-    onDisconnect: (element) => {
-      console.info(`ConnectAbility onDisconnect element.deviceId : ${element.deviceId}`);
-    },
-    onFailed: (code) => {
-      console.error(`featureAbilityTest ConnectAbility onFailed errCode : ${code}`);
-    },
-  },
-);
-```

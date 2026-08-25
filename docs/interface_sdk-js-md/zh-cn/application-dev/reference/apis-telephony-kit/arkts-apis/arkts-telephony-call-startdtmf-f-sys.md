@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## startDTMF
 
 ```TypeScript
-function startDTMF(callId: int, character: string, callback: AsyncCallback<void>): void
+function startDTMF(callId: number, character: string, callback: AsyncCallback<void>): void
 ```
 
 启动双音多频。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function startDTMF(callId: int, character: string, callback: AsyncCallback<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | character | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -44,42 +42,16 @@ function startDTMF(callId: int, character: string, callback: AsyncCallback<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.startDTMF(1, "0", (err: BusinessError) => {
-    if (err) {
-        console.error(`startDTMF fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`startDTMF success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.startDTMF(1, "0").then(() => {
-    console.info(`startDTMF success.`);
-}).catch((err: BusinessError) => {
-    console.error(`startDTMF fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## startDTMF
 
 ```TypeScript
-function startDTMF(callId: int, character: string): Promise<void>
+function startDTMF(callId: number, character: string): Promise<void>
 ```
 
 启动双音多频。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -91,7 +63,7 @@ function startDTMF(callId: int, character: string): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | character | string | 是 |
 
 **返回值：**
@@ -111,7 +83,3 @@ function startDTMF(callId: int, character: string): Promise<void>
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
-
-**示例**
-
-参见 [startDTMF](#startdtmf)

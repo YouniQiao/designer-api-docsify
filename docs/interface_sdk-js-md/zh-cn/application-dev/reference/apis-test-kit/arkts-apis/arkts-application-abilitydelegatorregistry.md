@@ -4,8 +4,6 @@ AbilityDelegatorRegistry模块提供用于存储已注册的[AbilityDelegator](.
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [abilityDelegatorRegistry](arkts-app-ability-abilitydelegatorregistry.md)

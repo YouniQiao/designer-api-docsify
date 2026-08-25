@@ -21,8 +21,6 @@ Marks the start of a timeslice trace task.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** startTrace
@@ -36,10 +34,3 @@ Marks the start of a timeslice trace task.
 | name | string | Yes |
 | taskId | number | Yes |
 | expectedTime | number | No |
-
-**Examples**
-
-```TypeScript
-bytrace.startTrace("myTestFunc", 1);
-bytrace.startTrace("myTestFunc", 1, 5); // The expected duration of the trace is 5 ms.
-```

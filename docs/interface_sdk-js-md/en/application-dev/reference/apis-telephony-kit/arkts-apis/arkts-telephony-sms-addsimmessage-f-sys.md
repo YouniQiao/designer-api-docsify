@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## addSimMessage
@@ -15,8 +15,6 @@ function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>
 Adds a message to the SIM card. If the SIM card is full, an error is reported. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -43,40 +41,6 @@ Adds a message to the SIM card. If the SIM card is full, an error is reported. T
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let simMessageOptions: sms.SimMessageOptions = {
-    slotId: 0,
-    smsc: "test",
-    pdu: "xxxxxx",
-    status: sms.SimMessageStatus.SIM_MESSAGE_STATUS_READ
-};
-sms.addSimMessage(simMessageOptions, (err: BusinessError) => {
-      console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let simMessageOptions: sms.SimMessageOptions = {
-    slotId: 0,
-    smsc: "test",
-    pdu: "xxxxxx",
-    status: sms.SimMessageStatus.SIM_MESSAGE_STATUS_READ
-};
-sms.addSimMessage(simMessageOptions).then(() => {
-    console.info(`addSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`addSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## addSimMessage
 
@@ -87,8 +51,6 @@ function addSimMessage(options: SimMessageOptions): Promise<void>
 Adds a message to the SIM card. If the SIM card is full, an error is reported. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -119,7 +81,3 @@ Adds a message to the SIM card. If the SIM card is full, an error is reported. T
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [addSimMessage](#addsimmessage)

@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ ERR_CODE_DISTRIBUTED_HARDWARE_NOT_STARTED = 24200101
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ ERR_CODE_DEVICE_NOT_CONNECTED = 24200102
 表示源端设备未连接。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 

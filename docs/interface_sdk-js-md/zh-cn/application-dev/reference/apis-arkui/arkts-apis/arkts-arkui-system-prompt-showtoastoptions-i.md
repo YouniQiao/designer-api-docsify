@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## bottom
@@ -29,8 +27,6 @@ bottom?: string | number
 **类型：** string \| number
 
 **起始版本：** 5
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为5。
 
 **废弃版本：** 8
 
@@ -50,8 +46,6 @@ duration?: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** [duration](arkts-arkui-promptaction-showtoastoptions-i.md#duration)
@@ -69,8 +63,6 @@ message: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 

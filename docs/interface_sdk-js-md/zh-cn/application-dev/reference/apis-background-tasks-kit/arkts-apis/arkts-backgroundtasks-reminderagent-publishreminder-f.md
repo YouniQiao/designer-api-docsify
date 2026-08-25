@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## publishReminder
@@ -15,8 +15,6 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 发布一个后台代理提醒，使用回调的方式实现异步调用，该方法需要申请通知弹窗权限 [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification) 后才能调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -33,35 +31,6 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 | [reminderReq](arkts-backgroundtasks-reminderagentmanager-reminderinfo-i.md) | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-import reminderAgent from '@ohos.reminderAgent';
-
-let timer:reminderAgent.ReminderRequestTimer = {
-  reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgent.publishReminder(timer, (err: BusinessError, reminderId: number) => {
-  console.info("callback, reminderId = " + reminderId);
-});
-```
-
-```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
-let timer:reminderAgent.ReminderRequestTimer = {
-  reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgent.publishReminder(timer).then((reminderId: number) => {
-  console.info("promise, reminderId = " + reminderId);
-});
-```
-
 
 ## publishReminder
 
@@ -72,8 +41,6 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 发布一个后台代理提醒，使用Promise方式实现异步调用，该方法需要申请通知弹窗权限 [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification) 后才能调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -94,7 +61,3 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-参见 [publishReminder](#publishreminder)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getUsbStorageDeviceAccessPolicy
@@ -15,8 +15,6 @@ function getUsbStorageDeviceAccessPolicy(admin: Want): UsbPolicy
 Obtains the access policy of the USB storage device.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
@@ -47,25 +45,6 @@ Obtains the access policy of the USB storage device.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let result: usbManager.UsbPolicy = usbManager.getUsbStorageDeviceAccessPolicy(wantTemp);
-  console.info(`Succeeded in getting USB storage device access policy. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get USB storage device access policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getUsbStorageDeviceAccessPolicy
 
@@ -76,8 +55,6 @@ function getUsbStorageDeviceAccessPolicy(admin: Want | null): UsbPolicy
 Obtains the USB storage device (baseClass = 0x08) access policy.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 
@@ -105,7 +82,3 @@ Obtains the USB storage device (baseClass = 0x08) access policy.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getUsbStorageDeviceAccessPolicy](#getusbstoragedeviceaccesspolicy)

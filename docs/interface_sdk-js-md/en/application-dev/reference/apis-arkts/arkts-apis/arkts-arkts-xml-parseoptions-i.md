@@ -4,14 +4,12 @@ Parse options for XmlPullParser.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
+import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## attributeValueCallbackFunction
@@ -23,8 +21,6 @@ attributeValueCallbackFunction?: (name: string, value: string) => boolean
 Attribute value callback function.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,8 +43,6 @@ Attribute value and tag callback function.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -62,8 +56,6 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 Tag value callback function.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -85,8 +77,6 @@ tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 Token value callback function.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -111,8 +101,6 @@ Whether to ignore parsing texts of the elements.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -128,8 +116,6 @@ Whether to parsing Doctype of the elements.
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

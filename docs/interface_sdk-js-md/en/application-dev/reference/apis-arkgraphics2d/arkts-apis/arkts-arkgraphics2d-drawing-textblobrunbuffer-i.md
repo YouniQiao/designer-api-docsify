@@ -4,60 +4,52 @@ Describes a series of consecutive glyphs with the same attributes in a text blob
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## glyph
 
 ```TypeScript
-glyph: int
+glyph: number
 ```
 
 Index of the glyph. The value is an integer. If a floating point number is passed in, the value is rounded down.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## positionX
 
 ```TypeScript
-positionX: double
+positionX: number
 ```
 
 X coordinate of the start point of the text blob. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## positionY
 
 ```TypeScript
-positionY: double
+positionY: number
 ```
 
 Y coordinate of the start point of the text blob. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

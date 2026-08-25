@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
+import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## setDlpFeature
@@ -15,8 +15,6 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 Sets the DLP status. This API uses a promise to return the result. The system enables or disables the DLP protection function based on the DLP status specified using this API.When this feature is enabled, right-click the file to be encrypted, and the encryption option is displayed in the shortcut menu. Files in .txt, .pdf, .xls, .xlsx, .ppt, .pptx, .doc, and .docx formats can be encrypted.This API is used to enable or disable the DLP function in enterprise policies.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

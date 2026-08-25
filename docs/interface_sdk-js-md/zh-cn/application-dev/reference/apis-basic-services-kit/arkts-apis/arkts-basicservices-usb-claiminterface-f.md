@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## claimInterface
@@ -15,8 +15,6 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 注册通信接口。需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息以及interfaces；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限；调 用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)接口得到devicepipe作为参数。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -30,17 +28,10 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 | --- | --- | --- |
 | [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
 | iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | 是 |
-| force | boolean | 否 |
+| [force](../../apis-arkui/arkts-components/arkts-arkui-historicalpoint-i.md) | boolean | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-let ret = usb.claimInterface(devicepipe, interfaces);
-console.info(`claimInterface = ${ret}`);
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## createMicInAudioCapturer
@@ -15,8 +15,6 @@ function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<Aud
 Obtains a special [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance. This method uses a promise to return the capturer instance. This capture can be used to record both Mic-In audio data and echo reference signal, for application to process algorithm. Mic-In audio data and echo reference signal will be put in one buffer or multiple buffers according to configuration set by application. Capturer is also not allowed to be created when application is in background.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.MICROPHONE
 
@@ -47,44 +45,3 @@ Obtains a special [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 | [6800301](../errorcode-audio.md#6800301-system-error) |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioEcStreamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // Sampling rate.
-  channels: audio.AudioChannel.CHANNEL_2, // Channel.
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // Sampling format.
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // Encoding format.
-};
-
-let audioCapturerInfo: audio.AudioCapturerInfo = {
-  source: audio.SourceType.SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT, // Audio source type: microphone. The value of SourceType must be SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT.
-  capturerFlags: 0 // AudioCapturer flag.
-};
-
-let audioMicInStreamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // Sampling rate.
-  channels: audio.AudioChannel.CHANNEL_2, // Channel.
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // Sampling format.
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // Encoding format.
-};
-
-let audioCapturerMicInConfig: audio.AudioCapturerMicInConfig = {
-  ecStreamInfo: audioEcStreamInfo,
-  capturerInfo: audioCapturerInfo,
-  micInStreamInfo: audioMicInStreamInfo
-};
-
-let audioCapturer: audio.AudioCapturer | null = null;
-
-audio.createMicInAudioCapturer(audioCapturerMicInConfig).then((data) => {
-  audioCapturer = data;
-  console.info('AudioCapturer Created : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`AudioCapturer Created : ERROR : ${err}`);
-});
-```

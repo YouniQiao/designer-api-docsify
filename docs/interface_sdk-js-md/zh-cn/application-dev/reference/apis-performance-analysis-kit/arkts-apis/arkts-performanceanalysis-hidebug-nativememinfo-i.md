@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## privateClean
@@ -20,13 +18,9 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 privateClean: bigint
 ```
 
-私有干净内存大小，以KB为单位，计算方式：/proc/{pid}/smaps_rollup: Private_Clean。
-
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -36,13 +30,9 @@ privateClean: bigint
 privateDirty: bigint
 ```
 
-私有脏内存大小，以KB为单位，计算方式：/proc/{pid}/smaps_rollup: Private_Dirty。
-
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -52,13 +42,9 @@ privateDirty: bigint
 pss: bigint
 ```
 
-实际占用的物理内存大小(比例分配共享库占用的内存)，以KB为单位，计算方式：/proc/{pid}/smaps_rollup: Pss + SwapPss。
-
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -68,13 +54,9 @@ pss: bigint
 rss: bigint
 ```
 
-实际占用的物理内存大小(包括共享库占用)，以KB为单位，计算方式：/proc/{pid}/smaps_rollup: Rss。
-
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -84,13 +66,9 @@ rss: bigint
 sharedClean: bigint
 ```
 
-共享净内存大小，以KB为单位，计算方式：/proc/{pid}/smaps_rollup: Shared_Clean。
-
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -100,13 +78,9 @@ sharedClean: bigint
 sharedDirty: bigint
 ```
 
-共享脏内存大小，以KB为单位，计算方式：/proc/{pid}/smaps_rollup: Shared_Dirty。
-
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -116,12 +90,8 @@ sharedDirty: bigint
 vss: bigint
 ```
 
-占用的虚拟内存大小(包括共享库所占用的内存)，以KB为单位，计算方式：/proc/{pid}/statm: size * 4。
-
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug

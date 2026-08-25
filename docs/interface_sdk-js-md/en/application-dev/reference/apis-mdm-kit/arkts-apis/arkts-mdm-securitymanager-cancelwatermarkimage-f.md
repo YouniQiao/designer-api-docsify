@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## cancelWatermarkImage
@@ -15,8 +15,6 @@ function cancelWatermarkImage(admin: Want, bundleName: string, accountId: number
 Cancels the watermark policy for a specified user. When an application no longer requires watermark protection or needs to be updated, enterprises can call this API to cancel the watermark policy.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -40,25 +38,3 @@ Cancels the watermark policy for a specified user. When an application no longer
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-    securityManager.cancelWatermarkImage(wantTemp, bundleName, accountId);
-    console.info(`Succeeded in setting cancel watermarkImage policy.`);
-} catch(err) {
-    console.error(`Failed to cancel watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

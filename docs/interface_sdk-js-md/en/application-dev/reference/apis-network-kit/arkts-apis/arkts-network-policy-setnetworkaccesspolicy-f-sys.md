@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## setNetworkAccessPolicy
@@ -15,8 +15,6 @@ function setNetworkAccessPolicy(uid: number, policy: NetworkAccessPolicy, isReco
 Sets whether the application with the specified UID can access the network. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -48,22 +46,3 @@ Sets whether the application with the specified UID can access the network. This
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accessPolicy: policy.NetworkAccessPolicy = {
-  allowWiFi: false,
-  allowCellular: true,
-}
-policy
-  .setNetworkAccessPolicy(11111, accessPolicy)
-  .then(() => {
-    console.info('setNetworkAccessPolicy success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```

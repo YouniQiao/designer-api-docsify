@@ -1,10 +1,8 @@
 # GetAuthInfoOptions（系统接口）
 
-表示[查询认证凭据信息](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getauthinfo)的可选参数集合。
+表示查询认证凭据信息[getAuthInfo](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getauthinfo)的可选参数集合。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## accountId
 
 ```TypeScript
-accountId?: int
+accountId?: number
 ```
 
 系统账号标识，默认为undefined。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -45,8 +41,6 @@ authType?: AuthType
 **类型：** AuthType
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 

@@ -15,8 +15,6 @@ Sets whether to enable notification for a specified application. This API uses a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md)
@@ -31,40 +29,9 @@ Sets whether to enable notification for a specified application. This API uses a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | enable | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let enableNotificationCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("enableNotification failed " + JSON.stringify(err));
-  } else {
-    console.info("enableNotification success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.enableNotification(bundle, false, enableNotificationCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.enableNotification(bundle, false).then(() => {
-  console.info("enableNotification success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`enableNotification failed, code is ${err}`);
-});
-```
 
 
 ## enableNotification
@@ -77,8 +44,6 @@ Sets whether to enable notification for a specified application. This API uses a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md)
@@ -93,7 +58,7 @@ Sets whether to enable notification for a specified application. This API uses a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | enable | boolean | Yes |
 
 **Return value:**
@@ -101,7 +66,3 @@ Sets whether to enable notification for a specified application. This API uses a
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [enableNotification](#enablenotification)

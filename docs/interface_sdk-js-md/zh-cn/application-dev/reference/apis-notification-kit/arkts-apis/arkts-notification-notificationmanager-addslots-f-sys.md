@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## addSlots
@@ -15,8 +15,6 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 创建多个通知渠道。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,99 +41,6 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// addSlots回调
-let addSlotsCallBack = (err: BusinessError): void => {
-    if (err) {
-        console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('addSlots success');
-    }
-}
-// 通知slot对象
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-// 通知slot array 对象
-let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
-notificationSlotArray[0] = notificationSlot;
-
-notificationManager.addSlots(notificationSlotArray, addSlotsCallBack);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// addSlots回调
-let addSlotsCallBack = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('addSlots success');
-    }
-}
-// 通知slot对象
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-// 通知slot array 对象
-let notificationSlotArray: notificationManager.NotificationSlot[] = [
-    notificationSlot
-]
-
-notificationManager.addSlots(notificationSlotArray, addSlotsCallBack);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 通知slot对象
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-// 通知slot array 对象
-let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
-notificationSlotArray[0] = notificationSlot;
-
-notificationManager.addSlots(notificationSlotArray).then(() => {
-    console.info('addSlots success');
-}).catch((err: BusinessError) => {
-    console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 通知slot对象
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-// 通知slot array 对象
-let notificationSlotArray: notificationManager.NotificationSlot[] = [
-    notificationSlot
-]
-
-notificationManager.addSlots(notificationSlotArray).then(() => {
-    console.info('addSlots success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`addSlots failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## addSlots
 
@@ -146,8 +51,6 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 创建多个通知渠道。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -178,7 +81,3 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-参见 [addSlots](#addslots)

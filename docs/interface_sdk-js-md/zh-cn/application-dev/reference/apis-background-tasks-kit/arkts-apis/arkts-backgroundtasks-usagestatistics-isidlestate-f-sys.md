@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## isIdleState
@@ -15,8 +15,6 @@ function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void
 查询指定的应用是否为常用应用（GroupType值≤30），使用Callback形式返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -45,32 +43,6 @@ function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.isIdleState('com.ohos.camera', (err: BusinessError, res: boolean) => {
-  if (err) {
-    console.error('BUNDLE_ACTIVE isIdleState callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE isIdleState callback succeeded, result: ' + JSON.stringify(res));
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.isIdleState('com.ohos.camera').then((res: boolean) => {
-  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE isIdleState promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
 
 ## isIdleState
 
@@ -81,8 +53,6 @@ function isIdleState(bundleName: string): Promise<boolean>
 查询指定的应用是否为常用应用（GroupType值≤30），使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -115,7 +85,3 @@ function isIdleState(bundleName: string): Promise<boolean>
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-系统服务操作失败) |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
-
-**示例**
-
-参见 [isIdleState](#isidlestate)

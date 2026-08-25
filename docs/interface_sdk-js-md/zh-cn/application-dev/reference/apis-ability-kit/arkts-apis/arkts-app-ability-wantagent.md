@@ -9,7 +9,7 @@ WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md)对象�
 ## 导入模块
 
 ```TypeScript
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

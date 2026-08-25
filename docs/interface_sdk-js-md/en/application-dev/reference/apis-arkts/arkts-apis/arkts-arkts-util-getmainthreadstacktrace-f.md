@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## getMainThreadStackTrace
@@ -16,8 +16,6 @@ Obtains the stack trace information of the main thread. A maximum of 64 call fra
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,11 +25,3 @@ Obtains the stack trace information of the main thread. A maximum of 64 call fra
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let stack = util.getMainThreadStackTrace();
-console.info(stack);
-// Obtain the stack trace information of the main thread.
-```

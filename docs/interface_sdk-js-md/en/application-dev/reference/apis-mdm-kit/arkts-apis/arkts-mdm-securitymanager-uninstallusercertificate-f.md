@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## uninstallUserCertificate
@@ -15,8 +15,6 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 Uninstalls a user certificate. This API uses a promise to return the result. This API is applicable to enterprise certificate management scenarios, such as replacing an expired certificate and revoking an employee's access to enterprise resources. Enterprises can call this API to uninstall a certificate when the certificate expires, is replaced, or is no longer needed, ensuring the flexibility and security of device certificate management.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_CERTIFICATE
 
@@ -46,24 +44,3 @@ Uninstalls a user certificate. This API uses a promise to return the result. Thi
 | [9201001](../errorcode-enterpriseDeviceManager.md#9201001-failed-to-manage-the-certificate) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let aliasStr = "certName";
-securityManager.uninstallUserCertificate(wantTemp, aliasStr).then(() => {
-  console.info(`Succeeded in uninstalling user certificate.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to uninstall user certificate. Code is ${err.code}, message is ${err.message}`);
-});
-```

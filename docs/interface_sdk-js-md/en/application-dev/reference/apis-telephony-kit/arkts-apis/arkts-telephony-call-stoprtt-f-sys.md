@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## stopRtt
 
 ```TypeScript
-function stopRtt(callId: int, type: ImsRttMode): Promise<void>
+function stopRtt(callId: number, type: ImsRttMode): Promise<void>
 ```
 
 Stop rtt.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -28,7 +26,7 @@ Stop rtt.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | type | [ImsRttMode](arkts-telephony-call-imsrttmode-e-sys.md) | Yes |
 
 **Return value:**

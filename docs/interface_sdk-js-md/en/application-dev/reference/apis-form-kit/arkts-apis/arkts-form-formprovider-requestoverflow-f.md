@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## requestOverflow
@@ -17,8 +17,6 @@ Requests an animation. This API takes effect only for [scene-based widgets](../.
 > **NOTE：**&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -49,32 +47,3 @@ Requests an animation. This API takes effect only for [scene-based widgets](../.
 | [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
 | [16501011](../errorcode-form.md#16501011-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-let overflowInfo: formInfo.OverflowInfo = {
-  area: {
-    left: -10,
-    top: -10,
-    width: 180,
-    height: 180
-  },
-  duration: 1000,
-  useDefaultAnimation: false,
-};
-
-try {
-  formProvider.requestOverflow(formId, overflowInfo).then(() => {
-    console.info('requestOverflow succeed.');
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```

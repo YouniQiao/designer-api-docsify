@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setCurrentFunctions
@@ -15,8 +15,6 @@ function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 Sets the current USB function list in Device mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -37,14 +35,3 @@ Sets the current USB function list in Device mode.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-```TypeScript
-let funcs : number = usb.FunctionType.HDC;
-usb.setCurrentFunctions(funcs).then(() => {
-    console.info('usb setCurrentFunctions successfully.');
-}).catch((err : BusinessError) => {
-    console.error('usb setCurrentFunctions failed: ' + err.code + ' message: ' + err.message);
-});
-```

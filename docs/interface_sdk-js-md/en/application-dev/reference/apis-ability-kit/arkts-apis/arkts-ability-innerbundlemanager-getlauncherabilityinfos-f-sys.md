@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfos
@@ -21,8 +21,6 @@ Obtains an array of the launcher ability information based on a given bundle nam
 > instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -57,8 +55,6 @@ Obtains an array of the launcher ability information based on a given bundle nam
 > instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

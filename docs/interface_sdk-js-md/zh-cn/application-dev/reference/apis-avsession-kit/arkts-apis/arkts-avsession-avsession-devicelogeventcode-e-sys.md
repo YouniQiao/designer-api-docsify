@@ -4,8 +4,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ DEVICE_LOG_FULL = 1
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ DEVICE_LOG_EXCEPTION = 2
 日志写入异常。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

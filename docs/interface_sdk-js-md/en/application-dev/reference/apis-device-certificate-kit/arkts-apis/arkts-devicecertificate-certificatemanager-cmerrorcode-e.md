@@ -4,8 +4,6 @@ Enumerates the error codes used in the certificate management APIs.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_NO_PERMISSION
@@ -17,8 +15,6 @@ CM_ERROR_NO_PERMISSION = 201
 The application does not have the permission to call the API.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -32,8 +28,6 @@ Invalid input parameter is found.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_GENERIC
@@ -45,8 +39,6 @@ CM_ERROR_GENERIC = 17500001
 An internal error occurs when the interface is called.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -60,8 +52,6 @@ The certificate or credential does not exist.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_INCORRECT_FORMAT
@@ -73,8 +63,6 @@ CM_ERROR_INCORRECT_FORMAT = 17500003
 The certificate or credential is in invalid format.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -88,8 +76,6 @@ The number of certificates or credentials has reached the limit.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_NO_AUTHORIZATION
@@ -101,8 +87,6 @@ CM_ERROR_NO_AUTHORIZATION = 17500005
 The application has not obtained user authorization.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -116,8 +100,6 @@ The device enters the advanced security mode. In this mode, CA certificate insta
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_STORE_PATH_NOT_SUPPORTED
@@ -129,8 +111,6 @@ CM_ERROR_STORE_PATH_NOT_SUPPORTED = 17500009
 The device does not support the specified certificate storage path.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -144,8 +124,6 @@ The USB Key service fails to be accessed.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_ERROR_PARAMETER_VALIDATION_FAILED
@@ -157,7 +135,5 @@ CM_ERROR_PARAMETER_VALIDATION_FAILED = 17500011
 The input parameter validation fails.For example, the parameter format is incorrect or the parameter range is invalid.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

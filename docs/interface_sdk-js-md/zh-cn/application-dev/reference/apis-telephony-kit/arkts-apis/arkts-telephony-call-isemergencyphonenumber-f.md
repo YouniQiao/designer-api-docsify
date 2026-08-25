@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isEmergencyPhoneNumber
@@ -15,8 +15,6 @@ function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOpt
 根据电话号码参数，判断是否是紧急电话号码。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -38,44 +36,6 @@ function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOpt
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isEmergencyPhoneNumber("138xxxxxxxx", (err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isEmergencyPhoneNumber fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.EmergencyNumberOptions = {slotId: 1};
-call.isEmergencyPhoneNumber("112", options, (err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isEmergencyPhoneNumber fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`isEmergencyPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.EmergencyNumberOptions = {slotId: 1};
-call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
-    console.info(`isEmergencyPhoneNumber success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isEmergencyPhoneNumber fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
-
 
 ## isEmergencyPhoneNumber
 
@@ -86,8 +46,6 @@ function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOp
 根据电话号码参数，判断是否是紧急电话号码。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -114,10 +72,6 @@ function isEmergencyPhoneNumber(phoneNumber: string, options?: EmergencyNumberOp
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-参见 [isEmergencyPhoneNumber](#isemergencyphonenumber)
-
 
 ## isEmergencyPhoneNumber
 
@@ -128,8 +82,6 @@ function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boo
 判断是否是紧急电话号码。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -149,7 +101,3 @@ function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boo
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [isEmergencyPhoneNumber](#isemergencyphonenumber)

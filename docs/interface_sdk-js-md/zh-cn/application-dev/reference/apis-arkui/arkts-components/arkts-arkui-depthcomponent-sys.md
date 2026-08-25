@@ -12,8 +12,6 @@ DepthComponent(background: ResourceStr | PixelMap, options?: DepthComponentOptio
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -26,7 +24,7 @@ DepthComponent(background: ResourceStr | PixelMap, options?: DepthComponentOptio
 
 | 参数名 | [类型](#类型) | 必填 |
 | --- | --- | --- |
-| background | ResourceStr \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 |
+| background | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 |
 | options | [DepthComponentOptions](arkts-arkui-depthcomponentoptions-i-sys.md) | 否 |
 
 ## 汇总
@@ -40,9 +38,6 @@ DepthComponent(background: ResourceStr | PixelMap, options?: DepthComponentOptio
 
 | 名称 |
 | --- |
-| [DepthComponentCompleteCallback](arkts-arkui-depthcomponentcompletecallback-t-sys.md) |
-| [DepthComponentErrorCallback](arkts-arkui-depthcomponenterrorcallback-t-sys.md) |
-| [DepthMapCallback](arkts-arkui-depthmapcallback-t-sys.md) |
 
 ### 枚举
 

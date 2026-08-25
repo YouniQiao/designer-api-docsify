@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## subscribe
@@ -15,8 +15,6 @@ function subscribe(events: MechEventType[], callback: Callback<MechEvent>): void
 订阅具身设备事件回调
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 

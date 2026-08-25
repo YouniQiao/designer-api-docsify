@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
+import { floatingBall } from 'kits/@kit.ArkUI';
 ```
 
 ## context
@@ -25,7 +23,5 @@ context: BaseContext
 **类型：** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager

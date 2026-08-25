@@ -4,8 +4,6 @@ TLS通信的协议版本。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## TLSv12
@@ -18,8 +16,6 @@ TLSv12 = "TLSv1.2"
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## TLSv13
@@ -31,7 +27,5 @@ TLSv13 = "TLSv1.3"
 使用TLSv1.3协议通信。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Communication.NetStack

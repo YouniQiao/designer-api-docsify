@@ -4,8 +4,6 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## appUid
@@ -27,8 +25,6 @@ Application or service ID.
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -44,8 +40,6 @@ domain?: string
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -59,8 +53,6 @@ localIp?: string
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -78,8 +70,6 @@ Local port.
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -96,8 +86,6 @@ Transport layer protocol.
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -111,8 +99,6 @@ remoteIp?: string
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -130,8 +116,6 @@ Remote port.
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **系统接口：** 此接口为系统接口。
@@ -147,8 +131,6 @@ Time stamp.
 **类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 

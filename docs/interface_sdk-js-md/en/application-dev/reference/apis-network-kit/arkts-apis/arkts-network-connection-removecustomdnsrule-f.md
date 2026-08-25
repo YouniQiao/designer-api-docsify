@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## removeCustomDnsRule
@@ -18,8 +18,6 @@ Removes the custom DNS rules of the specified host from the current application.
 > You can call [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md) to add a custom rule.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -44,32 +42,6 @@ Removes the custom DNS rules of the specified host from the current application.
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.removeCustomDnsRule("xxxx", (error: BusinessError, data: void) => {
-  if (error) {
-    console.error(`Failed to remove custom dns rule. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-})
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.removeCustomDnsRule("xxxx").then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-})
-```
-
 
 ## removeCustomDnsRule
 
@@ -83,8 +55,6 @@ Removes the custom DNS rules of the specified host from the current application.
 > You can call [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md) to add a custom rule.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -113,7 +83,3 @@ Removes the custom DNS rules of the specified host from the current application.
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [removeCustomDnsRule](#removecustomdnsrule)

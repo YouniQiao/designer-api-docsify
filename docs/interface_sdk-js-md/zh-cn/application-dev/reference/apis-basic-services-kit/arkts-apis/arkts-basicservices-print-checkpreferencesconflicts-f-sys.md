@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## checkPreferencesConflicts
@@ -15,8 +15,6 @@ function checkPreferencesConflicts(printerId: string, changedType: string, prefe
 检查首选项冲突。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 

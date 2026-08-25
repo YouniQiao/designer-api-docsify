@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## addNotificationSlot
@@ -15,8 +15,6 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 Adds a notification slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -33,41 +31,6 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let mySlot: notificationManager.NotificationSlot = {
-  notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-}
-
-reminderAgentManager.addNotificationSlot(mySlot, (err: BusinessError) => {
-  if (err.code) {
-    console.error("callback err code:" + err.code + " message:" + err.message);
-  } else {
-    console.info("addNotificationSlot callback");
-  }
-});
-```
-
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let mySlot: notificationManager.NotificationSlot = {
-  notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-}
-reminderAgentManager.addNotificationSlot(mySlot).then(() => {
-  console.info("addNotificationSlot promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
 
 ## addNotificationSlot
 
@@ -78,8 +41,6 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 Adds a notification slot. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -100,7 +61,3 @@ Adds a notification slot. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [addNotificationSlot](#addnotificationslot)

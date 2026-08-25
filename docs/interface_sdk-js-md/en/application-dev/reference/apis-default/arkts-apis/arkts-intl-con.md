@@ -42,5 +42,3 @@ const ListFormat: {
         supportedLocalesOf(locales: BCP47LanguageTag | BCP47LanguageTag[], options?: Pick<ListFormatOptions, "localeMatcher">): BCP47LanguageTag[];
     }
 ```
-
-**ArkTS mode:** 

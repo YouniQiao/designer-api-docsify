@@ -7,8 +7,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Ability.Form
@@ -22,8 +20,6 @@ MODE_AUTO = -1
 表示自动模式。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -41,8 +37,6 @@ MODE_DARK = 0
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -58,8 +52,6 @@ MODE_LIGHT = 1
 表示亮色。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## usbFunctionsFromString
@@ -15,8 +15,6 @@ function usbFunctionsFromString(funcs: string): number
 Converts the USB function list in the string format to a numeric mask in Device mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -43,10 +41,3 @@ Converts the USB function list in the string format to a numeric mask in Device 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let funcs: string = "acm";
-let ret: number = usbManager.usbFunctionsFromString(funcs);
-```

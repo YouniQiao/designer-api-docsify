@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## getRdbStore
@@ -16,8 +16,6 @@ Obtains an RdbStore instance. You can set the **config** parameter as required a
 | Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result| | ------- | -------------------------------- | ---- | | Non-encryption| Encryption | The RDB store is opened in encrypted mode. | | Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. |Currently, **getRdbStore()** does not support multi-thread concurrent operations.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -49,110 +47,6 @@ Obtains an RdbStore instance. You can set the **config** parameter as required a
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 | [14800020](../errorcode-data-rdb.md#14800020-key-damaged-or-lost) |
 
-**Examples**
-
-FA model:
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-let context = featureAbility.getContext();
-
-const STORE_CONFIG: relationalStore.StoreConfig = {
-  name: "RdbTest.db",
-  securityLevel: relationalStore.SecurityLevel.S3
-};
-
-relationalStore.getRdbStore(context, STORE_CONFIG, async (err: BusinessError, rdbStore: relationalStore.RdbStore) => {
-  if (err) {
-    console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info('Get RdbStore successfully.');
-  store = rdbStore;
-  // Perform subsequent operations after the rdbStore instance is successfully obtained.
-});
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-
-    relationalStore.getRdbStore(this.context, STORE_CONFIG, async (err: BusinessError, rdbStore: relationalStore.RdbStore) => {
-      if (err) {
-        console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-        return;
-      }
-      console.info('Get RdbStore successfully.');
-      store = rdbStore;
-      // Perform subsequent operations after the rdbStore instance is successfully obtained.
-    });
-  }
-}
-```
-
-FA model:
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-let context = featureAbility.getContext();
-
-const STORE_CONFIG: relationalStore.StoreConfig = {
-  name: "RdbTest.db",
-  securityLevel: relationalStore.SecurityLevel.S3
-};
-
-relationalStore.getRdbStore(context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-  store = rdbStore;
-  console.info('Get RdbStore successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-});
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-
-    relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-      store = rdbStore;
-      console.info('Get RdbStore successfully.');
-    }).catch((err: BusinessError) => {
-      console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-    });
-  }
-}
-```
-
 
 ## getRdbStore
 
@@ -164,8 +58,6 @@ Obtains an RdbStore instance. You can set the **config** parameter as required a
 | Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result| | ------- | -------------------------------- | ---- | | Non-encryption| Encryption | The RDB store is opened in encrypted mode. | | Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. |Currently, **getRdbStore()** does not support multi-thread concurrent operations.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -201,7 +93,3 @@ Obtains an RdbStore instance. You can set the **config** parameter as required a
 | [14800020](../errorcode-data-rdb.md#14800020-key-damaged-or-lost) |
 | [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
 | [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-
-**Examples**
-
-See [getRdbStore](#getrdbstore)

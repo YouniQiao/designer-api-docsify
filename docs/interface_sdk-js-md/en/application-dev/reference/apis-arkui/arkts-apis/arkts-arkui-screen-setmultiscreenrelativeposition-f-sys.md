@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## setMultiScreenRelativePosition
@@ -16,8 +16,6 @@ function setMultiScreenRelativePosition(mainScreenOptions: MultiScreenPositionOp
 Sets the positions of the primary and secondary screens in extend mode. This API uses a promise to return the result.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -44,27 +42,3 @@ Sets the positions of the primary and secondary screens in extend mode. This API
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mainScreenOptions: screen.MultiScreenPositionOptions = {
-  id : 0,
-  startX : 0,
-  startY : 0
-};
-
-let secondaryScreenOptions: screen.MultiScreenPositionOptions = {
-  id : 12,
-  startX : 1000,
-  startY : 1000
-};
-
-screen.setMultiScreenRelativePosition(mainScreenOptions, secondaryScreenOptions).then(() => {
-  console.info('Succeeded in setting multi screen relative position.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set multi screen relative position. Code:${err.code}, message is ${err.message}`);
-});
-```

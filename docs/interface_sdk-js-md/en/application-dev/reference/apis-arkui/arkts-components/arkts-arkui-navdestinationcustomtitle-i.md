@@ -4,8 +4,6 @@ Defines a custom title for the **NavDestination** component.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ builder: CustomBuilder
 
 Content of the title bar.
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,11 +35,9 @@ height: TitleHeight | Length
 
 Height of the title bar.Value range: [0, +��)
 
-**Type:** TitleHeight \| Length
+**Type:** [TitleHeight](../arkts-apis/arkts-arkui-titleheight-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

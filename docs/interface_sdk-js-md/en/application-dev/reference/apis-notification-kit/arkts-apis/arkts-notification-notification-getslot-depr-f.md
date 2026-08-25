@@ -15,8 +15,6 @@ Obtains a notification slot of a specified type. This API uses an asynchronous c
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getSlot](arkts-notification-notificationmanager-getslot-f.md)
@@ -30,34 +28,6 @@ Obtains a notification slot of a specified type. This API uses an asynchronous c
 | slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-// getSlot callback
-let getSlotCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("getSlot failed " + JSON.stringify(err));
-  } else {
-    console.info("getSlot success");
-  }
-}
-let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
-Notification.getSlot(slotType, getSlotCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let slotType: Notification.SlotType = Notification.SlotType.SOCIAL_COMMUNICATION;
-Notification.getSlot(slotType).then((data) => {
-  console.info("getSlot success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`getSlot failed, code is ${err}`);
-});
-```
-
 
 ## getSlot
 
@@ -68,8 +38,6 @@ function getSlot(slotType: SlotType): Promise<NotificationSlot>
 Obtains a notification slot of a specified type. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -88,7 +56,3 @@ Obtains a notification slot of a specified type. This API uses a promise to retu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; |
-
-**Examples**
-
-See [getSlot](#getslot)

@@ -8,8 +8,6 @@ Defines the callback invoked when a new page is about to be displayed.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -21,7 +19,7 @@ Defines the callback invoked when a new page is about to be displayed.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | currentIndex | number | Yes |
-| comingIndex | number | Yes |
+| [comingIndex](arkts-arkui-swipercontentwillscrollresult-i.md) | number | Yes |
 
 **Return value:**
 

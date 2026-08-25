@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## on('rotationAxesStatusChange')
@@ -15,8 +15,6 @@ function on(type: 'rotationAxesStatusChange', callback: Callback<RotationAxesSta
 Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -35,13 +33,3 @@ Register a listener for axis state changes. The status of the rotation axis chan
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
-
-**Examples**
-
-```TypeScript
-console.info('Register Axis Status listener');
-mechanicManager.on("rotationAxesStatusChange", (result: mechanicManager.RotationAxesStateChangeInfo) => {
-  console.info(`'result:' ${result}`);
-});
-console.info('Successful registration');
-```

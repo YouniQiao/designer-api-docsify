@@ -13,14 +13,12 @@ The **usbManager** module provides USB device management functions, including US
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -63,16 +61,13 @@ import { usbManager } from '@kit.BasicServicesKit';
 | [addDeviceAccessRight](arkts-basicservices-usbmanager-adddeviceaccessright-f-sys.md) |
 | [getCurrentFunctions](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md) |
 | [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md) |
-| [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md) |
 | [getFunctionsFromString](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md) |
 | [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md) |
 | [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md) |
 | [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md) |
 | [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md) |
-| [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md) |
 | [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md) |
 | [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md) |
-| [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md) |
 | [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md) |
 | [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md) |
 | [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md) |

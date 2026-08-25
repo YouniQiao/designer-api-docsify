@@ -4,8 +4,6 @@ class of window extension ability.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -15,7 +13,7 @@ class of window extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
+import { WindowExtensionAbility, WindowExtensionContext } from 'kits/@kit.ArkUI';
 ```
 
 ## onConnect
@@ -28,8 +26,6 @@ Called back when a window extension is first connected to an ability.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
@@ -43,19 +39,6 @@ Called back when a window extension is first connected to an ability.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { WindowExtensionAbility } from '@kit.ArkUI';
-import { Want } from '@kit.AbilityKit';
-
-export default class MyWindowExtensionAbility extends WindowExtensionAbility {
-  onConnect(want: Want) {
-    console.info(`WindowExtAbility onConnect, abilityName: ${want.abilityName}`);
-  }
-}
-```
 
 ## onDisconnect
 
@@ -67,8 +50,6 @@ Called back when all abilities connected to a window extension are disconnected.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 21
 
 **Model restriction:** This API can be used only in the stage model.
@@ -83,19 +64,6 @@ Called back when all abilities connected to a window extension are disconnected.
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 
-**Examples**
-
-```TypeScript
-import { WindowExtensionAbility } from '@kit.ArkUI';
-import { Want } from '@kit.AbilityKit';
-
-export default class MyWindowExtensionAbility extends WindowExtensionAbility {
-  onDisconnect(want: Want) {
-    console.info(`WindowExtAbility onDisconnect, abilityName: ${want.abilityName}`);
-  }
-}
-```
-
 ## onWindowReady
 
 ```TypeScript
@@ -105,8 +73,6 @@ onWindowReady(window: window.Window): void
 Called back when window is created.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 21
 
@@ -122,23 +88,6 @@ Called back when window is created.
 | --- | --- | --- |
 | [window](arkts-arkui-window-n.md) | window.Window | Yes |
 
-**Examples**
-
-```TypeScript
-import { WindowExtensionAbility, window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MyWindowExtensionAbility extends WindowExtensionAbility {
-  onWindowReady(window: window.Window) {
-    window.setUIContent('WindowExtAbility/pages/index1',(err:BusinessError) => {
-      let pro = window.getWindowProperties();
-      console.info(`WindowExtension pro: ${JSON.stringify(pro)}`);
-      window.showWindow();
-    });
-  }
-}
-```
-
 ## context
 
 ```TypeScript
@@ -150,8 +99,6 @@ Indicates window extension ability context.
 **Type:** [WindowExtensionContext](arkts-arkui-windowextensioncontext-t-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 21
 

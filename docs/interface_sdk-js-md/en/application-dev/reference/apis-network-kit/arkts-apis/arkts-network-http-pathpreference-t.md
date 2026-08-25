@@ -13,8 +13,6 @@ Enumerates the types of networks specified in an HTTP request.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |

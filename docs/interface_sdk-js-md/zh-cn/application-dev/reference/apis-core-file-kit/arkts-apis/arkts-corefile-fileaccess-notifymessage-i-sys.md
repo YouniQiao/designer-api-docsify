@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 23
 
 **替代接口：** WatchEvent
@@ -17,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## type
@@ -31,8 +29,6 @@ type: NotifyType
 **类型：** NotifyType
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 23
 
@@ -55,8 +51,6 @@ uris: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 23
 

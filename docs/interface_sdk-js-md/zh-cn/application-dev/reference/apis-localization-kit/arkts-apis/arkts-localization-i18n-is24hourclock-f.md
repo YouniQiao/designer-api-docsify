@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## is24HourClock
@@ -16,8 +16,6 @@ export function is24HourClock(): boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [is24HourClock](arkts-localization-i18n-system-c.md#is24hourclock)
@@ -29,17 +27,3 @@ export function is24HourClock(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let is24HourClock: boolean = i18n.System.is24HourClock(); // 如果系统时制是24小时制，is24HourClock = true
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let is24HourClock: boolean = i18n.is24HourClock();
-```

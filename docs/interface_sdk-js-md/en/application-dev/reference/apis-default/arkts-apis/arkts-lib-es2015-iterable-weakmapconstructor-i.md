@@ -1,7 +1,5 @@
 # WeakMapConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new <K extends object, V>(iterable: Iterable<readonly [K, V]>): WeakMap<K, V>
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

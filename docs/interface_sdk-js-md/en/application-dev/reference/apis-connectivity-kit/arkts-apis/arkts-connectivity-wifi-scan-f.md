@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## scan
@@ -15,8 +15,6 @@ function scan(): boolean
 Scans Wi-Fi hotspot.<p>This API works in asynchronous mode.</p>
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -31,15 +29,3 @@ Scans Wi-Fi hotspot.<p>This API works in asynchronous mode.</p>
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-	wifi.scan();
-}catch(error){
-	console.error("failed:" + JSON.stringify(error));
-}
-```

@@ -4,8 +4,6 @@ interface of form lifecycle.@interface LifecycleForm
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## Modules to Import
@@ -22,8 +20,6 @@ onShare?(formId: string): { [key: string]: any }
 Called when the system shares the form.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -52,8 +48,6 @@ onShareForm?(formId: string): Record<string, Object>
 Called when the system shares the form. The ability of this function is same as onShare. If both are set, this function will be called.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the FA model.
 

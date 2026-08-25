@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getInstallLocalEnterpriseAppEnabled
@@ -15,8 +15,6 @@ function getInstallLocalEnterpriseAppEnabled(admin: Want | null): boolean
 Checks whether local installation of enterprise applications is supported. This API is applicable to scenarios where there is a need to verify whether the local installation of enterprise applications is enabled on the device, helping enterprise administrators confirm the policy configuration status to ensure that enterprise applications can be properly installed.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -44,22 +42,3 @@ Checks whether local installation of enterprise applications is supported. This 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let isEnable: boolean = systemManager.getInstallLocalEnterpriseAppEnabled(wantTemp);
-  console.info('Succeeded in getting installLocalEnterpriseAppEnabled.');
-} catch (err) {
-  console.error(`Failed to get installLocalEnterpriseAppEnabled. Code is ${err.code}, message is ${err.message}`);
-}
-```

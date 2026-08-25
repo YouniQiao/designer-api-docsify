@@ -4,8 +4,6 @@ Defines the callback information triggered when the web form data can be resubmi
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,8 +22,6 @@ Handler for resubmitting web form data.
 **Type:** [DataResubmissionHandler](arkts-arkweb-dataresubmissionhandler-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

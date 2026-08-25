@@ -1,7 +1,5 @@
 # String
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ match(matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): Re
 ```
 
 Matches a string or an object that supports being matched against, and returns an array containing the results of that search, or null if no matches are found.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,8 +30,6 @@ replace(searchValue: { [Symbol.replace](string: string, replaceValue: string): s
 ```
 
 Passes a string and {@linkcode replaceValue} to the `[Symbol.replace]` method on {@linkcode searchValue}. This method is expected to implement its own replacement algorithm.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -56,8 +50,6 @@ replace(searchValue: { [Symbol.replace](string: string, replacer: (substring: st
 
 Replaces text in a string, using an object that supports replacement within a string.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -77,8 +69,6 @@ search(searcher: { [Symbol.search](string: string): number; }): number
 
 Finds the first substring match in a regular expression search.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -96,8 +86,6 @@ split(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, l
 ```
 
 Split a string into substrings using the specified separator and return them as an array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

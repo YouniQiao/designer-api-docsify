@@ -20,8 +20,6 @@ function remove(
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md)
@@ -36,79 +34,10 @@ function remove(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | [notificationKey](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | 是 |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let removeCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("remove failed " + JSON.stringify(err));
-  } else {
-    console.info("remove success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-let notificationKey: Notification.NotificationKey = {
-  id: 0,
-  label: "label",
-};
-let reason: Notification.RemoveReason = Notification.RemoveReason.CLICK_REASON_REMOVE;
-Notification.remove(bundle, notificationKey, reason, removeCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-let notificationKey: Notification.NotificationKey = {
-  id: 0,
-  label: "label",
-};
-let reason: Notification.RemoveReason = Notification.RemoveReason.CLICK_REASON_REMOVE;
-Notification.remove(bundle, notificationKey, reason).then(() => {
-  console.info("remove success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`remove failed, code is ${err}`);
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let hashCode: string = 'hashCode';
-
-let removeCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("remove failed " + JSON.stringify(err));
-  } else {
-    console.info("remove success");
-  }
-}
-let reason: Notification.RemoveReason = Notification.RemoveReason.CANCEL_REASON_REMOVE;
-Notification.remove(hashCode, reason, removeCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let hashCode: string = 'hashCode';
-let reason: Notification.RemoveReason = Notification.RemoveReason.CLICK_REASON_REMOVE;
-Notification.remove(hashCode, reason).then(() => {
-  console.info("remove success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`remove failed, code is ${err}`);
-});
-```
 
 
 ## remove
@@ -121,8 +50,6 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md)
@@ -137,7 +64,7 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | [notificationKey](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | 是 |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | 是 |
 
@@ -146,10 +73,6 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [remove](#remove)
 
 
 ## remove
@@ -161,8 +84,6 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 删除指定通知（Callback形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -182,10 +103,6 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [remove](#remove)
-
 
 ## remove
 
@@ -196,8 +113,6 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 删除指定通知（Promise形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -221,7 +136,3 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [remove](#remove)

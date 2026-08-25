@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Security.Asset
 
 ## PRIVATE_PIN
@@ -17,8 +15,6 @@ PRIVATE_PIN = 0x100
 隐私PIN码仅支持系统应用
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 

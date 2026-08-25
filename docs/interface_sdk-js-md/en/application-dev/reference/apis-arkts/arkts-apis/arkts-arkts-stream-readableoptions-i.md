@@ -4,14 +4,12 @@ Describes the options used in the **Readable** constructor.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { stream } from '@kit.ArkTS';
+import { stream } from 'kits/@kit.ArkTS';
 ```
 
 ## encoding
@@ -25,8 +23,6 @@ Encoding format. If an invalid string is input, an exception is thrown in the **
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

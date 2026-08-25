@@ -4,14 +4,12 @@ Input parameters of the function for opening a proxy channel, including the link
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## linkType
@@ -25,8 +23,6 @@ Link type of the proxy channel. For details about the value range, see [LinkType
 **Type:** [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ MAC address of the peer device, in the format of XX:XX:XX:XX:XX:XX, where XX is 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -61,8 +55,6 @@ UUID of the service listened on by the peer device, in the standard UUID string 
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

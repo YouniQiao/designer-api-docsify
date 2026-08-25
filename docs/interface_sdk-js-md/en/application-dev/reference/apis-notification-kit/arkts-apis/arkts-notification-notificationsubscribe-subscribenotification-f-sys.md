@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
 ```
 
 ## subscribeNotification
@@ -15,8 +15,6 @@ function subscribeNotification(subscriber: NotificationSubscriber): Promise<void
 Subscribes to notifications. After the subscription, the new message is received through the callback in the subscriber. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.NOTIFICATION_SYSTEM_SUBSCRIBER
 
@@ -59,8 +57,6 @@ Subscribes to notifications. After the subscription, the new message is received
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Required permissions:** ohos.permission.NOTIFICATION_SYSTEM_SUBSCRIBER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -74,7 +70,7 @@ Subscribes to notifications. After the subscription, the new message is received
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes |
-| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | Yes |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | Yes |
 
 **Return value:**
 

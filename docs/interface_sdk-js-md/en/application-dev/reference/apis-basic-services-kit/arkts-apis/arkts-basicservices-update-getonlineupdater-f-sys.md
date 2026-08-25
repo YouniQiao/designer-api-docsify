@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getOnlineUpdater
@@ -15,11 +15,10 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 Obtains an **OnlineUpdater** object, which can be used to check for new versions online, download update packages, and install update packages. This API can be used in scenarios such as OTA upgrade (for details, see Upgrading Service Terms) of client applications and online system upgrade. This API can help users obtain system updates in a timely manner, improving upgrade efficiency and user experience.  
 **Overview**This API obtains an **OnlineUpdater** object through the system service interface. The object provides core functions such as checking for new versions, downloading update packages, and installing update packages.  
 **Constraints**  
-- The upgrade package management server deployed by the vendor is required for checking for new versions and downloading update packages.
+- The upgrade package management server deployed by the vendor is required for checking for new versions and  
+downloading update packages.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -42,20 +41,3 @@ Obtains an **OnlineUpdater** object, which can be used to check for new versions
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-try {
-      const upgradeInfo: update.UpgradeInfo = {
-        upgradeApp: "com.ohos.ota.updateclient",
-        businessType: {
-          vendor: update.BusinessVendor.PUBLIC,
-          subType: update.BusinessSubType.FIRMWARE
-        }
-      };
-      let updater = update.getOnlineUpdater(upgradeInfo);
-    } catch(error) {
-      console.error(`Fail to get updater error: ${error}`);
-    }
-```

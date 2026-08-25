@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getResourceManager
@@ -16,8 +16,6 @@ export function getResourceManager(callback: AsyncCallback<ResourceManager>): vo
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -27,105 +25,6 @@ export function getResourceManager(callback: AsyncCallback<ResourceManager>): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default {
-  onCreate() {
-    resourceManager.getResourceManager((error, mgr) => {
-      if (error != null) {
-        console.error("error is " + error);
-        return;
-      }
-      // 'test'仅作示例，请替换为实际使用的资源名称
-      mgr.getStringByName('test', (error, value) => {
-        if (error) {
-          console.error("error is " + JSON.stringify(error));
-        } else {
-          console.info("success is " + value);
-        }
-
-      });
-    });
-  }
-};
-```
-
-```TypeScript
-import resourceManager from '@ohos.resourceManager';
-// FA模型请使用上述方式导入模块
-
-// 'com.example.testapp'仅作示例，请替换为实际应用包名
-const BUNDLE_NAME = 'com.example.testapp';
-
-export default {
-  onCreate() {
-    resourceManager.getResourceManager(BUNDLE_NAME, (error, mgr) => {
-      if (error != null) {
-        console.error("getResourceManager error is " + error);
-        return;
-      }
-      // 'test'仅作示例，请替换为实际使用的资源名称
-      mgr.getStringByName('test', (error, value) => {
-        if (error) {
-          console.error("getResourceManager error is " + JSON.stringify(error));
-        } else {
-          console.info("getResourceManager success is " + value);
-        }
-      });
-    });
-  }
-};
-```
-
-```TypeScript
-import resourceManager from '@ohos.resourceManager';
-// FA模型请使用上述方式导入模块
-
-export default {
-  onCreate() {
-    resourceManager.getResourceManager().then(resMgr => {
-      try {
-        // 'test'仅作示例，请替换为实际使用的资源名称
-        let testStr = resMgr.getStringByNameSync('test')
-        console.info("getResourceManager success is " + testStr);
-      } catch (error) {
-        console.error("getResourceManager error is " + JSON.stringify(error));
-      }
-    }).catch(error => {
-      console.error("getResourceManager error is " + error);
-    });
-  }
-};
-```
-
-```TypeScript
-import resourceManager from '@ohos.resourceManager';
-// FA模型请使用上述方式导入模块
-
-// 'com.example.testapp'仅作示例，请替换为实际应用包名
-const BUNDLE_NAME = 'com.example.testapp';
-
-export default {
-  onCreate() {
-    resourceManager.getResourceManager(BUNDLE_NAME).then(resMgr => {
-      try {
-        // 'test'仅作示例，请替换为实际使用的资源名称
-        let testStr = resMgr.getStringByNameSync('test')
-        console.info("getResourceManager success is " + testStr);
-      } catch (error) {
-        console.error("getResourceManager error is " + JSON.stringify(error));
-      }
-    }).catch(error => {
-      console.error("getResourceManager error is " + error);
-    });
-  }
-};
-```
 
 
 ## getResourceManager
@@ -138,8 +37,6 @@ export function getResourceManager(bundleName: string, callback: AsyncCallback<R
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -150,10 +47,6 @@ export function getResourceManager(bundleName: string, callback: AsyncCallback<R
 | --- | --- | --- |
 | bundleName | string | 是 |
 | callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | 是 |
-
-**示例**
-
-参见 [getResourceManager](#getresourcemanager)
 
 
 ## getResourceManager
@@ -166,8 +59,6 @@ export function getResourceManager(): Promise<ResourceManager>
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -177,10 +68,6 @@ export function getResourceManager(): Promise<ResourceManager>
 | 类型 |
 | --- |
 | Promise&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; |
-
-**示例**
-
-参见 [getResourceManager](#getresourcemanager)
 
 
 ## getResourceManager
@@ -192,8 +79,6 @@ export function getResourceManager(bundleName: string): Promise<ResourceManager>
 获取指定应用的资源管理对象。使用Promise异步回调。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -210,7 +95,3 @@ export function getResourceManager(bundleName: string): Promise<ResourceManager>
 | 类型 |
 | --- |
 | Promise&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; |
-
-**示例**
-
-参见 [getResourceManager](#getresourcemanager)

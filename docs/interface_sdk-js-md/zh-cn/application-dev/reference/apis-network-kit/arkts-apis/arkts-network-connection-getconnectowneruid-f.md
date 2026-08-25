@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getConnectOwnerUid
@@ -20,8 +20,6 @@ function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: N
 > - protocol参数为PROTO_TYPE_UDP时，若通过local，remote参数未筛选出符合条件的UID，则仅基于local参数筛选并返回匹配的UID。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -50,19 +48,3 @@ function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: N
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100301](../errorcode-net-connection.md#2100301-调用方身份验证不通过非vpn应用) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let protocol = connection.ProtocolType.PROTO_TYPE_TCP;
-let local: connection.NetAddress = { address: '192.168.1.100', family: 1, port: 6666 };
-let remote: connection.NetAddress = { address: '192.168.1.200', family: 1, port: 8888 };
-connection.getConnectOwnerUid(protocol, local, remote).then((uid) => {
-  console.info(`Succeeded to get uid: ${uid}`);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get ConnectOwnerUid. errorCode: ${error.code} message:${error.message}`);
-});
-```

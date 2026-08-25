@@ -4,8 +4,6 @@ Provides the **FileIterator** object.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -15,7 +13,7 @@ Provides the **FileIterator** object.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## next
@@ -27,8 +25,6 @@ next(): { value: FileInfo, done: boolean }
 Obtains information about the next-level files or directories.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 

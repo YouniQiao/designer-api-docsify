@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## MATRIX
@@ -17,8 +15,6 @@ MATRIX = 0
 矩阵测光模式。对画面广泛区域进行测光，适合拍摄自然风光。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ CENTER = 1
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -49,8 +43,6 @@ SPOT = 2
 点测光模式。对画面测光点周围约2.5%进行测光，专注于特定微小区域的光线，如被摄主体的眼睛。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 

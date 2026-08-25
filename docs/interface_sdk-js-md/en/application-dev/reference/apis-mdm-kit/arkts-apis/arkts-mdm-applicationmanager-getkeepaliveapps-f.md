@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getKeepAliveApps
@@ -15,8 +15,6 @@ function getKeepAliveApps(admin: Want, accountId: number): Array<string>
 Obtains the bundle name of the keep-alive application.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -46,26 +44,6 @@ Obtains the bundle name of the keep-alive application.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: Array<string> = applicationManager.getKeepAliveApps(wantTemp, 100);
-  console.info('Succeeded in getting keep alive apps.');
-} catch (err) {
-  console.error(`Failed to get keep alive apps. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getKeepAliveApps
 
@@ -76,8 +54,6 @@ function getKeepAliveApps(admin: Want | null, accountId: number): Array<string>
 Obtains the bundle name of the keep-alive application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -106,7 +82,3 @@ Obtains the bundle name of the keep-alive application.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getKeepAliveApps](#getkeepaliveapps)

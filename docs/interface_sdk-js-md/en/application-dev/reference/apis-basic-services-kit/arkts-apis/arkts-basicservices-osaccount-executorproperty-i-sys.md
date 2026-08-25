@@ -4,8 +4,6 @@ Defines the executor property.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the executor property.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## authSubType
@@ -28,8 +26,6 @@ Authentication credential subtype.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Authentication credential subtype.
 ## credentialLength
 
 ```TypeScript
-credentialLength?: int
+credentialLength?: number
 ```
 
 Credential length, which is **undefined** by default. When credentials with indefinite-length attributes such as biometric information are queried, **undefined** is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -64,8 +58,6 @@ Enrollment progress, which is left blank by default.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Enrollment progress, which is left blank by default.
 ## freezingTime
 
 ```TypeScript
-freezingTime?: int
+freezingTime?: number
 ```
 
 Freezing time, in milliseconds. The default value is **-1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -91,16 +81,14 @@ Freezing time, in milliseconds. The default value is **-1**.
 ## nextPhaseFreezingTime
 
 ```TypeScript
-nextPhaseFreezingTime?: int
+nextPhaseFreezingTime?: number
 ```
 
 Next freezing time, in milliseconds. The default value is **undefined**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -109,16 +97,14 @@ Next freezing time, in milliseconds. The default value is **undefined**.
 ## remainTimes
 
 ```TypeScript
-remainTimes?: int
+remainTimes?: number
 ```
 
 Number of remaining authentication times, which is **-1** by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -127,16 +113,14 @@ Number of remaining authentication times, which is **-1** by default.
 ## result
 
 ```TypeScript
-result: int
+result: number
 ```
 
 Result.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -153,8 +137,6 @@ Sensor information, which is left blank by default.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

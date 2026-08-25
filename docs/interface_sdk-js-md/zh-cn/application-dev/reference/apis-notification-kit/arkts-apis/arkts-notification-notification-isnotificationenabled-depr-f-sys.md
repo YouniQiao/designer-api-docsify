@@ -15,8 +15,6 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
@@ -31,63 +29,8 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
-  if (err) {
-    console.error("isNotificationEnabled failed " + JSON.stringify(err));
-  } else {
-    console.info("isNotificationEnabled success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.isNotificationEnabled(bundle, isNotificationEnabledCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.isNotificationEnabled(bundle).then((data) => {
-  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isNotificationEnabled failed, code is ${err}`);
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
-  if (err) {
-    console.error("isNotificationEnabled failed " + JSON.stringify(err));
-  } else {
-    console.info("isNotificationEnabled success");
-  }
-}
-
-Notification.isNotificationEnabled(isNotificationEnabledCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.isNotificationEnabled().then((data: boolean) => {
-  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isNotificationEnabled failed, code is ${err}`);
-});
-```
 
 
 ## isNotificationEnabled
@@ -100,8 +43,6 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
@@ -116,17 +57,13 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isNotificationEnabled](#isnotificationenabled)
 
 
 ## isNotificationEnabled
@@ -139,8 +76,6 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
@@ -156,10 +91,6 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-参见 [isNotificationEnabled](#isnotificationenabled)
 
 
 ## isNotificationEnabled
@@ -172,8 +103,6 @@ function isNotificationEnabled(): Promise<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
@@ -190,10 +119,6 @@ function isNotificationEnabled(): Promise<boolean>
 | --- |
 | Promise & lt;boolean & gt; |
 
-**示例**
-
-参见 [isNotificationEnabled](#isnotificationenabled)
-
 
 ## isNotificationEnabled
 
@@ -204,8 +129,6 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 获取指定用户ID下的通知使能状态。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -224,10 +147,6 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 | userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-参见 [isNotificationEnabled](#isnotificationenabled)
-
 
 ## isNotificationEnabled
 
@@ -238,8 +157,6 @@ function isNotificationEnabled(userId: number): Promise<boolean>
 获取指定用户下的通知使能状态。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -262,7 +179,3 @@ function isNotificationEnabled(userId: number): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isNotificationEnabled](#isnotificationenabled)

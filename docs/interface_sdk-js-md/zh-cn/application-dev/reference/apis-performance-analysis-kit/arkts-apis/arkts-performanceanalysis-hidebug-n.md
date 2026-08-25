@@ -1,17 +1,15 @@
 # hidebug
 
-为应用提供多种调试、调优的方法，帮助开发者定位性能瓶颈、优化应用性能。主要功能包括：内存数据分析、CPU使用率监控、trace采集、profiler采集、VM堆快照转储。由于该模块的接口大多比较耗费性能，接口调用较为耗时，且基于HiDebug模块定义，该模块内的接口仅建议在应用调试、调优阶段使用。若需要在其他场景使用时，请认真评估所需调用的接口对应用性能的影响。@namespace hidebug
+为应用提供多种调试、调优的方法，帮助开发者定位性能瓶颈、优化应用性能。主要功能包括：内存数据分析、CPU使用率监控、trace采集、profiler采集、VM堆快照转储。由于该模块的接口大多比较耗费性能，接口调用较为耗时，且基于 HiDebug模块定义，该模块内的接口仅建议在应用调试、调优阶段使用。若需要在其他场景使用时，请认真评估所需调用的接口对应用性能的影响。@namespace hidebug
 
-**起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**起始版本：** 8
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总
@@ -53,7 +51,6 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [getAppNativeMemInfoWithCache](arkts-performanceanalysis-hidebug-getappnativememinfowithcache-f.md) |
 | [startAppTraceCapture](arkts-performanceanalysis-hidebug-startapptracecapture-f.md) |
 | [stopAppTraceCapture](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md) |
-| [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md) |
 | [requestTrace](arkts-performanceanalysis-hidebug-requesttrace-f.md) |
 | [getVMRuntimeStats](arkts-performanceanalysis-hidebug-getvmruntimestats-f.md) |
 | [getVMRuntimeStat](arkts-performanceanalysis-hidebug-getvmruntimestat-f.md) |
@@ -71,7 +68,6 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 | [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md) |
 | [setProcDumpInSharedOOM](arkts-performanceanalysis-hidebug-setprocdumpinsharedoom-f.md) |
 | [getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md) |
-| [enableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-enablegwpasangrayscale-f.md) |
 
 ### 接口
 

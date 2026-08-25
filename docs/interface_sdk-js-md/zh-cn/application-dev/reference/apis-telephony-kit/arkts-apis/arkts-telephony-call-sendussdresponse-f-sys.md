@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendUssdResponse
 
 ```TypeScript
-function sendUssdResponse(slotId: int, content: string): void
+function sendUssdResponse(slotId: number, content: string): void
 ```
 
 用于向运营商发送USSD业务（Unstructured Supplementary Service Data，非结构化补充数据业务）的响应消息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function sendUssdResponse(slotId: int, content: string): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | content | string | 是 |
 
 **错误码：**
@@ -40,23 +38,3 @@ function sendUssdResponse(slotId: int, content: string): void
 | 8400001 |
 | 8400002 |
 | 8400003 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { call } from '@kit.TelephonyKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-function testSendUssdResponse() {
-    const slotId: int = 0;
-    const content: string = "OK";
-
-    try {
-        call.sendUssdResponse(slotId, content);
-    } catch (error) {
-        const err = error as BusinessError;
-        hilog.error(0x0000, 'testTag', `Failed to send USSD response. Code: ${err.code}, Message: ${err.message}`);
-    }
-}
-```

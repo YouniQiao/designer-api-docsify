@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## getAttachedMechDevices
@@ -15,8 +15,6 @@ function getAttachedMechDevices(): MechInfo[]
 Obtain the list of connected mechanical devices.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -31,11 +29,3 @@ Obtain the list of connected mechanical devices.
 | Error Code ID |
 | --- |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
-
-**Examples**
-
-```TypeScript
-console.info('Query device list');
-let mechanicInfos = mechanicManager.getAttachedMechDevices();
-console.info(`'device list:' ${mechanicInfos}`);
-```

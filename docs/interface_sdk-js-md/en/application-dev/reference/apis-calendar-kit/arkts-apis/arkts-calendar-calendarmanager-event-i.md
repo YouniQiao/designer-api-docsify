@@ -4,14 +4,12 @@ Describes an **Event** object, including the event title, start time, and end ti
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from '@kit.CalendarKit';
+import { calendarManager } from 'kits/@kit.CalendarKit';
 ```
 
 ## attendee
@@ -25,8 +23,6 @@ Attendees in a meeting. If this parameter is not set, the default null value is 
 **Type:** [Attendee](arkts-calendar-calendarmanager-attendee-i.md)[]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ Event description, with a maximum of 5,000 characters. If this parameter is not 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -61,8 +55,6 @@ End time of an event. The value is a 13-digit timestamp. For an all-day event, t
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,8 +72,6 @@ Event ID. This parameter does not need to be set in [addEvent()](arkts-calendar-
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -97,8 +87,6 @@ Unique ID of an event, with a maximum of 5,000 characters. If this parameter is 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,8 +104,6 @@ End time of an event instance, which must be a 13-digit timestamp. The default v
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -133,8 +119,6 @@ Start time of an event instance, which must be a 13-digit timestamp. The default
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -152,8 +136,6 @@ Whether the event is an all-day event. The value **true** means that the event i
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -169,8 +151,6 @@ Unique ID of an event, with a maximum of 5,000 characters. If this parameter is 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -188,8 +168,6 @@ Event location. If this parameter is not set, the default null value is used.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -205,8 +183,6 @@ Recurrence rule of an event. The event is a recurring event if this parameter is
 **Type:** [RecurrenceRule](arkts-calendar-calendarmanager-recurrencerule-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -224,8 +200,6 @@ Reminder time of the event, in minutes. For example, if the value is 5, the remi
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -241,8 +215,6 @@ service?: EventService
 **Type:** [EventService](arkts-calendar-calendarmanager-eventservice-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -260,8 +232,6 @@ Start time of an event. The value is a 13-digit timestamp. For an all-day event,
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -277,8 +247,6 @@ Time zone of the event, with a maximum of 5,000 characters. If this parameter is
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -296,8 +264,6 @@ Event title, with a maximum of 5,000 characters. If this parameter is not specif
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -313,8 +279,6 @@ Event type.When getEvents() is called to query events, this field is queried by 
 **Type:** EventType
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

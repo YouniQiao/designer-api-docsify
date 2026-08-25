@@ -4,45 +4,39 @@ Defines a struct for the details about the device-cloud sync process.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## deleted
 
 ```TypeScript
-deleted: Array<string> | Array<long>
+deleted: Array<string> | Array<number>
 ```
 
 Location where data is deleted. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the deleted data.
 
-**Type:** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
+**Type:** Array&lt;string&gt; \| Array&lt;number&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## inserted
 
 ```TypeScript
-inserted: Array<string> | Array<long>
+inserted: Array<string> | Array<number>
 ```
 
 Location where data is inserted. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the inserted data.
 
-**Type:** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
+**Type:** Array&lt;string&gt; \| Array&lt;number&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -58,8 +52,6 @@ Name of the table with data changes.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## type
@@ -74,22 +66,18 @@ Type of the data changed, which can be data or asset.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## updated
 
 ```TypeScript
-updated: Array<string> | Array<long>
+updated: Array<string> | Array<number>
 ```
 
 Location where data is updated. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the updated data.
 
-**Type:** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
+**Type:** Array&lt;string&gt; \| Array&lt;number&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

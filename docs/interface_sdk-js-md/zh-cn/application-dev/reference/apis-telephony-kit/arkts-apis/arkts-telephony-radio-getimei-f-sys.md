@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getIMEI
 
 ```TypeScript
-function getIMEI(slotId: int, callback: AsyncCallback<string>): void
+function getIMEI(slotId: number, callback: AsyncCallback<string>): void
 ```
 
 Obtains the IMEI of a specified card slot of the device.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Obtains the IMEI of a specified card slot of the device.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **错误码：**
@@ -43,56 +41,16 @@ Obtains the IMEI of a specified card slot of the device.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getIMEI((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getIMEI failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getIMEI(slotId, (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getIMEI failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getIMEI(slotId).then((data: string) => {
-    console.info(`getIMEI success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getIMEI failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getIMEI
 
 ```TypeScript
-function getIMEI(slotId?: int): Promise<string>
+function getIMEI(slotId?: number): Promise<string>
 ```
 
 Obtains the IMEI of a specified card slot of the device.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -104,7 +62,7 @@ Obtains the IMEI of a specified card slot of the device.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| slotId | number | 否 |
 
 **返回值：**
 
@@ -124,10 +82,6 @@ Obtains the IMEI of a specified card slot of the device.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-参见 [getIMEI](#getimei)
-
 
 ## getIMEI
 
@@ -138,8 +92,6 @@ function getIMEI(callback: AsyncCallback<string>): void
 Obtains the IMEI of a specified card slot of the device.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -164,7 +116,3 @@ Obtains the IMEI of a specified card slot of the device.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getIMEI](#getimei)

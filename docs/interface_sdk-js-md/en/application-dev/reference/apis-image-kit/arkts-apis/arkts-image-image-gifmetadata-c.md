@@ -4,29 +4,25 @@ Gif metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## canvasHeight
 
 ```TypeScript
-readonly canvasHeight?: int
+readonly canvasHeight?: number
 ```
 
 Canvas height. Unit: px, The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,16 +31,14 @@ Canvas height. Unit: px, The value should be an integer.
 ## canvasWidth
 
 ```TypeScript
-readonly canvasWidth?: int
+readonly canvasWidth?: number
 ```
 
 Canvas width. Unit: px, The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,16 +47,14 @@ Canvas width. Unit: px, The value should be an integer.
 ## delayTime
 
 ```TypeScript
-readonly delayTime?: int
+readonly delayTime?: number
 ```
 
 Delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,16 +63,14 @@ Delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 ## disposalType
 
 ```TypeScript
-readonly disposalType?: int
+readonly disposalType?: number
 ```
 
 Disposal type of each frame in the image. 0 - No disposal specified. 1 - Do not dispose. 2 - Restore to background color. 3 - Restore to previous. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +88,6 @@ whether the GIF image has a global color map.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -107,16 +95,14 @@ whether the GIF image has a global color map.
 ## loopCount
 
 ```TypeScript
-readonly loopCount?: int
+readonly loopCount?: number
 ```
 
 Loop count. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,16 +111,14 @@ Loop count. The value range is all integers.
 ## unclampedDelayTime
 
 ```TypeScript
-readonly unclampedDelayTime?: int
+readonly unclampedDelayTime?: number
 ```
 
 Unclamped delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

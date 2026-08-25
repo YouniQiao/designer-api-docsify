@@ -4,8 +4,6 @@ Enumerates device log event code.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Log is full.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ DEVICE_LOG_EXCEPTION = 2
 Log is written with exception, such as the fd cannot be written and so on.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

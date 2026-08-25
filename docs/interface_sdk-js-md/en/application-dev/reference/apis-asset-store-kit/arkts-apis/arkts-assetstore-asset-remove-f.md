@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## remove
@@ -15,8 +15,6 @@ function remove(query: AssetMap): Promise<void>
 Removes one or more assets. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -49,21 +47,3 @@ Removes one or more assets. This API uses a promise to return the result.
 | [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
 | [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-asset.remove(query).then(() => {
-  console.info(`Succeeded in removing Asset.`);
-});
-```

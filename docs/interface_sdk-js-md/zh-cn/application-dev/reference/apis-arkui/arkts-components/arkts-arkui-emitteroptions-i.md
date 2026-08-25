@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -27,8 +25,6 @@ annulusRegion?: ParticleAnnulusRegion
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -48,8 +44,6 @@ emitRate?: number
 **默认值：** 5
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,8 +71,6 @@ particle: EmitterParticleOptions<PARTICLE>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -93,13 +85,11 @@ position?: ParticleTuple<Dimension, Dimension>
 
 发射器位置（距离组件左上角的位置。第一个参数为x方向上的相对偏移，第二个参数为y轴方向相对偏移。）默认值：`[0.0, 0.0]`
 
-**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 
 **默认值：** [0,0]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -121,8 +111,6 @@ shape?: ParticleEmitterShape
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -137,13 +125,11 @@ size?: ParticleTuple<Dimension, Dimension>
 
 发射窗口的大小。第一个参数为发射器宽，第二个参数为发射器高。默认值：`['100%','100%']`(即发射窗口占满Particle组件)
 
-**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 
 **默认值：** ['100%','100%']
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

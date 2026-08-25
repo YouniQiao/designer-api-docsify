@@ -4,14 +4,12 @@ Defines the options for creating a **Collator** object. Since API version 9, the
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## caseFirst
@@ -29,8 +27,6 @@ The default value is **false**.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,8 +60,6 @@ Collation rules for the locale. The value can be:
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -81,8 +75,6 @@ Whether to ignore punctuation. The value **true** means to ignore punctuation, a
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -102,8 +94,6 @@ Locale matching algorithm. The options are as follows:
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -115,14 +105,13 @@ numeric?: boolean
 ```
 
 Whether numeric sorting is used. The options are as follows:  
-- **true**: Numeric sorting is used. For example, '1' &lt; '2' &lt; '10' &lt; '11'. - **false**: Numeric sorting is not used. For example, '1' &lt; '10' &lt; '11' &lt; '2'.  
+- **true**: Numeric sorting is used. For example, '1' &lt; '2' &lt; '10' &lt; '11'.  
+- **false**: Numeric sorting is not used. For example, '1' &lt; '10' &lt; '11' &lt; '2'.  
 The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -135,14 +124,17 @@ sensitivity?: string
 ```
 
 Differences in the strings that lead to non-zero return values. The options are as follows:  
-- **base**: Different letters are considered unequal, for example, 'a' ≠ 'b', 'a' = 'á', 'a' = 'A'. - **accent**: Different letters or same letters with different pronunciations are considered unequal, for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' = 'A'. - **case**: Different letters or same letters with different cases are considered unequal, for example, 'a' ≠ 'b', 'a' = 'á', 'a' ≠ 'A'. - **variant**: Different letters, pronunciations, other distinguishing marks, or cases are all considered unequal, for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' ≠ 'A'.  
-The default value is **variant**.
+- **base**: Different letters are considered unequal, for example, 'a' ≠ 'b', 'a' = 'á', 'a' = 'A'.  
+- **accent**: Different letters or same letters with different pronunciations are considered unequal, for example  
+, 'a' ≠ 'b', 'a' ≠ 'á', 'a' = 'A'.  
+- **case**: Different letters or same letters with different cases are considered unequal, for example, 'a' ≠ 'b'  
+, 'a' = 'á', 'a' ≠ 'A'.  
+- **variant**: Different letters, pronunciations, other distinguishing marks, or cases are all considered unequal  
+, for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' ≠ 'A'.The default value is **variant**.
 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -155,14 +147,13 @@ usage?: string
 ```
 
 Purpose of comparison. The options are as follows:  
-- **sort**: sorting. - **search**: search for matched strings.  
+- **sort**: sorting.  
+- **search**: search for matched strings.  
 The default value is **sort**.
 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

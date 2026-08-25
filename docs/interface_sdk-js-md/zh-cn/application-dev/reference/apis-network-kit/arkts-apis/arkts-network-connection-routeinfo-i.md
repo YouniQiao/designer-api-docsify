@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## destination
@@ -25,8 +23,6 @@ destination: LinkAddress
 **类型：** LinkAddress
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -42,8 +38,6 @@ gateway: NetAddress
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## hasGateway
@@ -58,24 +52,6 @@ hasGateway: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
-## iface
-
-```TypeScript
-iface: string
-```
-
-Network card name.
-
-**类型：** string
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## interface
@@ -89,8 +65,6 @@ interface: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -107,8 +81,6 @@ isDefaultRoute: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## isExcludedRoute
@@ -122,7 +94,5 @@ isExcludedRoute?: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

@@ -6,8 +6,6 @@ Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindop
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ Options for blur snapshot optimization of the sheet. When this property is set, 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -51,8 +47,6 @@ Edge light animation mode of the sheet. Default value: EdgeLightMode.EDGELIGHT_D
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -70,8 +64,6 @@ Offset of the sheet. Bottom spacing, which is effective only when the sheet is a
 **Type:** Position
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

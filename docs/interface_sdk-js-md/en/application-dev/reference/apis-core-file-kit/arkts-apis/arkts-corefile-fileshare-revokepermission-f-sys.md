@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## revokePermission
 
 ```TypeScript
-function revokePermission(tokenID: int): Promise<void>
+function revokePermission(tokenID: number): Promise<void>
 ```
 
 Revoke all persistence permissions for the application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.REVOKE_FILE_ACCESS_PERSIST
 
@@ -30,7 +28,7 @@ Revoke all persistence permissions for the application.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| tokenID | number | Yes |
 
 **Return value:**
 
@@ -48,54 +46,16 @@ Revoke all persistence permissions for the application.
 | 13900001 |
 | 13900020 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { picker } from '@kit.CoreFileKit';
-
-async function revokePermissionExample() {
-  try {
-    let DocumentSelectOptions = new picker.DocumentSelectOptions();
-    let documentPicker = new picker.DocumentViewPicker();
-    let uris = await documentPicker.select(DocumentSelectOptions);
-    let policyInfo: fileShare.PolicyInfo = {
-      uri: uris[0], 
-      // Multiple permissions can be revoked in combination. For example, the read and write permissions can be revoked using fileShare.OperationMode.READ_MODE | fileShare.OperationMode.WRITE_MODE.
-      operationMode: fileShare.OperationMode.READ_MODE,
-    };
-    let policies: Array<fileShare.PolicyInfo> = [policyInfo];
-    fileShare.revokePermission(policies).then(() => {
-      console.info("revokePermission successfully");
-    }).catch((err: BusinessError<Array<fileShare.PolicyErrorResult>>) => {
-      console.error("revokePermission failed with error message: " + err.message + ", error code: " + err.code);
-        if (err.code == 13900001 && err.data) {
-          for (let i = 0; i < err.data.length; i++) {
-            console.error("error code : " + JSON.stringify(err.data[i].code));
-            console.error("error uri : " + JSON.stringify(err.data[i].uri));
-            console.error("error reason : " + JSON.stringify(err.data[i].message));
-          }
-        }
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error('revokePermission failed with err: ' + JSON.stringify(err));
-  }
-}
-```
-
 
 ## revokePermission
 
 ```TypeScript
-function revokePermission(tokenID: int, policies: Array<PolicyInfo>): Promise<void>
+function revokePermission(tokenID: number, policies: Array<PolicyInfo>): Promise<void>
 ```
 
 Revoke persistence permissions for the URI.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.REVOKE_FILE_ACCESS_PERSIST
 
@@ -109,7 +69,7 @@ Revoke persistence permissions for the URI.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| tokenID | number | Yes |
 | policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | Yes |
 
 **Return value:**
@@ -129,7 +89,3 @@ Revoke persistence permissions for the URI.
 | 13900001 |
 | 13900011 |
 | 13900020 |
-
-**Examples**
-
-See [revokePermission](#revokepermission)

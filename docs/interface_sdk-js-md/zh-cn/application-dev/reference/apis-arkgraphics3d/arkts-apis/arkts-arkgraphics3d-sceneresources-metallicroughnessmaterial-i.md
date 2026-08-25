@@ -6,8 +6,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## ambientOcclusion
@@ -21,8 +19,6 @@ ambientOcclusion: MaterialProperty
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,8 +34,6 @@ baseColor: MaterialProperty
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## clearCoat
@@ -53,8 +47,6 @@ clearCoat: MaterialProperty
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -70,8 +62,6 @@ clearCoatNormal: MaterialProperty
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## clearCoatRoughness
@@ -85,8 +75,6 @@ clearCoatRoughness: MaterialProperty
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -102,8 +90,6 @@ emissive: MaterialProperty
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## material
@@ -117,8 +103,6 @@ material: MaterialProperty
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -134,8 +118,6 @@ normal: MaterialProperty
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## sheen
@@ -150,8 +132,6 @@ sheen: MaterialProperty
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## specular
@@ -165,7 +145,5 @@ specular: MaterialProperty
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

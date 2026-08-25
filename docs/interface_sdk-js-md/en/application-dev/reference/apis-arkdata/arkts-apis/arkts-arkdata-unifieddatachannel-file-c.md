@@ -6,14 +6,12 @@ Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-u
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## details
@@ -27,8 +25,6 @@ A dictionary type object, where both the key and value are of the string type an
 **Type:** Record&lt;string, string&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Indicates the uri of file
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -68,33 +62,8 @@ Defines URI authorization policies for drag intention.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
-import { fileUri } from '@kit.CoreFileKit'
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let context = this.context;
-    let pathDir = context.filesDir;
-    let file = new unifiedDataChannel.File();
-    file.details = {
-        name: 'test',
-        type: 'txt'
-    };
-    let filePath = pathDir + '/test.txt';
-    file.uri = fileUri.getUriFromPath(filePath);
-  }
-}
-```

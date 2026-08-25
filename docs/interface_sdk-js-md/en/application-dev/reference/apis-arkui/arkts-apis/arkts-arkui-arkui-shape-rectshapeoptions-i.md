@@ -6,14 +6,12 @@ Represents the parameter of the constructor used to create a **RectShape** objec
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
 ```
 
 ## radius
@@ -22,13 +20,11 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 radius?: number | string | Array<number | string>
 ```
 
-Radius of the rectangle border corners.When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.Unit: vp.If the value is invalid, 0 vp is used.
+Radius of the rectangle border corners.When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.Unit: vp.If the value is invalid, 0 vp is used.
 
 **Type:** number \| string \| Array&lt;number \| string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

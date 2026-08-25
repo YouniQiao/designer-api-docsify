@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getInstalledBundleList
@@ -15,8 +15,6 @@ function getInstalledBundleList(admin: Want, accountId: number): Promise<Array<B
 Obtains the applications installed by a specified user on a device. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_ALL_BUNDLE_INFO
 
@@ -45,48 +43,6 @@ Obtains the applications installed by a specified user on a device. This API use
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let accountId: number = 100;
-bundleManager.getInstalledBundleList(wantTemp, accountId).then((result) => {
-  console.info('Succeeded in getting installed bundle list.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get installed bundle list. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let accountId: number = 100;
-let bundleInfoGetFlag: number = bundleManager.BundleInfoGetFlag.WITH_APPLICATION_INFO
-  | bundleManager.BundleInfoGetFlag.WITH_SIGNATURE_INFO;
-bundleManager.getInstalledBundleList(wantTemp, accountId, bundleInfoGetFlag).then((result) => {
-  console.info('Succeeded in getting installed bundle list.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get installed bundle list. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getInstalledBundleList
 
@@ -97,8 +53,6 @@ function getInstalledBundleList(admin: Want, accountId: number, bundleInfoGetFla
 Obtains the list of applications installed by a specified user based on the specified **bundleInfoGetFlag**. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_ALL_BUNDLE_INFO
 
@@ -111,8 +65,8 @@ Obtains the list of applications installed by a specified user based on the spec
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | int | Yes |
-| bundleInfoGetFlag | int | Yes |
+| accountId | number | Yes |
+| bundleInfoGetFlag | number | Yes |
 
 **Return value:**
 
@@ -127,7 +81,3 @@ Obtains the list of applications installed by a specified user based on the spec
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [getInstalledBundleList](#getinstalledbundlelist)

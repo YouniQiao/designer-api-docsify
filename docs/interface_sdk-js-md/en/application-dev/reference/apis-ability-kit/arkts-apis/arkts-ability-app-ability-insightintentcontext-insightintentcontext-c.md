@@ -4,14 +4,12 @@ The module provides the context for intent execution. It is used as a property i
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentContext } from '@kit.AbilityKit';
+import { InsightIntentContext } from 'kits/@kit.AbilityKit';
 ```
 
 ## setReturnModeForUIAbilityForeground
@@ -24,8 +22,6 @@ Sets the return mode of the intent execution result. This API is applicable to i
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -43,49 +39,6 @@ Sets the return mode of the intent execution result. This API is applicable to i
 | Error Code ID |
 | --- |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class InsightIntentExecutorUI extends InsightIntentExecutor {
-  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
-    hilog.info(0x0000, 'testTag', 'onExecuteInUIAbilityForegroundMode %{public}s', name);
-    let result: insightIntent.ExecuteResult;
-    result = {
-      code: 0,
-      result: {
-        message: 'Unsupported insight intent.',
-      },
-    };
-
-    try {
-      this.context.setReturnModeForUIAbilityForeground(insightIntent.ReturnMode.FUNCTION);
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let msg = (error as BusinessError).message;
-      console.error(`testTag setReturnModeForUIAbilityForeground fail, error code: ${code}, err msg: ${msg}.`);
-    }
-
-    let localStorageData: Record<string, number> = {
-      'insightId': this.context.instanceId,
-    };
-    let storage: LocalStorage = new LocalStorage(localStorageData);
-    pageLoader.loadContent('pages/UIAbilityIndex', storage, (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
-      } else {
-        hilog.info(0x0000, 'testTag', '%{public}s', 'Succeeded in loading the content');
-      }
-    });
-    return result;
-  }
-}
-```
 
 ## setReturnModeForUIExtensionAbility
 
@@ -97,8 +50,6 @@ Sets the return mode of the intent execution result. This API is applicable to i
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -117,48 +68,6 @@ Sets the return mode of the intent execution result. This API is applicable to i
 | --- |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class InsightIntentExecutorUI extends InsightIntentExecutor {
-  onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,
-    pageLoader: UIExtensionContentSession): insightIntent.ExecuteResult {
-    hilog.info(0x0000, 'testTag', 'onExecuteInUIExtensionAbility %{public}s', name);
-    let result: insightIntent.ExecuteResult;
-    result = {
-      code: 0,
-      result: {
-        message: 'Unsupported insight intent.',
-      },
-    };
-    try {
-      this.context.setReturnModeForUIExtensionAbility(insightIntent.ReturnMode.FUNCTION)
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let msg = (error as BusinessError).message;
-      console.error(`testTag setReturnModeForUIExtensionAbility fail, error code: ${code}, error msg: ${msg}.`);
-    }
-
-    try {
-      let localStorageData: Record<string, number> = {
-        'insightId': this.context.instanceId,
-      };
-      let storage: LocalStorage = new LocalStorage(localStorageData);
-      storage.setOrCreate('session', pageLoader);
-      pageLoader.loadContent('pages/UIExtensionPage', storage);
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let msg = (err as BusinessError).message;
-      console.info(`testTag loadContent error code: ${code}, error msg: ${msg}.`);
-    }
-    return result;
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -168,8 +77,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,77 +111,6 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 | [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-```TypeScript
-import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
-    let want: Want = {
-      bundleName: 'com.ohos.intentExecuteDemo',
-      moduleName: 'entry',
-      abilityName: 'AnotherAbility',
-    };
-
-    try {
-      this.context.startAbility(want, (error) => {
-        if (error) {
-          hilog.error(0x0000, 'testTag', 'Start ability failed with %{public}s', JSON.stringify(error));
-        } else {
-          hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability succeed');
-        }
-      })
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'Start ability error caught %{public}s', JSON.stringify(error));
-    }
-
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
-```
-
-```TypeScript
-import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  async onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): Promise<insightIntent.ExecuteResult> {
-    let want: Want = {
-      bundleName: 'com.ohos.intentExecuteDemo',
-      moduleName: 'entry',
-      abilityName: 'AnotherAbility',
-    };
-
-    try {
-      await this.context.startAbility(want);
-      hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability finished');
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'Start ability error caught %{public}s', JSON.stringify(error));
-    }
-
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -284,8 +120,6 @@ startAbility(want: Want): Promise<void>
 Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -325,23 +159,17 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 | [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
 | [16200001](../errorcode-ability.md#16200001-caller-released) |
 
-**Examples**
-
-See [startAbility](#startability)
-
 ## instanceId
 
 ```TypeScript
-instanceId: int
+instanceId: number
 ```
 
 Unique ID of an intent instance. Its execution result can be returned through [insightIntentProvider.sendExecuteResult] [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md) and [insightIntentProvider.sendIntentResult] [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

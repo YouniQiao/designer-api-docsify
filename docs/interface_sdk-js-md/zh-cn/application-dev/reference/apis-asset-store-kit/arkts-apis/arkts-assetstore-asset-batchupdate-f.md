@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## batchUpdate
@@ -15,8 +15,6 @@ function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<As
 批量更新符合条件的关键资产。使用Promise异步回调。批量更新的关键资产必须具有相同的[Tag.GROUP_ID](arkts-assetstore-asset-tagtype-e.md)和[Tag.REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tagtype-e.md)属性。批量更新的关键资产数量最大值为100。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -47,35 +45,3 @@ function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<As
 | [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
 | [24000015](../errorcode-asset.md#24000015-获取系统时间失败) |
 | [24000019](../errorcode-asset.md#24000019-属性值不一致) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let srcAttrs: Array<asset.AssetMap> = [];
-let srcAttr1: asset.AssetMap = new Map();
-srcAttr1.set(asset.Tag.ALIAS, stringToArray('demo_alias1'));
-srcAttrs.push(srcAttr1);
-let srcAttr2: asset.AssetMap = new Map();
-srcAttr2.set(asset.Tag.ALIAS, stringToArray('demo_alias2'));
-srcAttrs.push(srcAttr2);
-
-let destAttrs: Array<asset.AssetMap> = [];
-let destAttr1: asset.AssetMap = new Map();
-destAttr1.set(asset.Tag.SECRET, stringToArray('demo_pwd_new1'));
-destAttrs.push(destAttr1);
-let destAttr2: asset.AssetMap = new Map();
-destAttr2.set(asset.Tag.SECRET, stringToArray('demo_pwd_new2'));
-destAttrs.push(destAttr2);
-
-asset.batchUpdate(srcAttrs, destAttrs).then((res: asset.BatchResult) => {
-  console.info(`Succeeded in batch updating Asset, failedCount: ${res.failedCount}`);
-});
-```

@@ -4,8 +4,6 @@ The proxy object of the connected party for the AgentExtensionAbility, used to s
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## authorize
@@ -17,8 +15,6 @@ authorize(handshakeData: string): void
 Send authentication to an agent service host.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ sendData(data: string): void
 Send data to an agent service host.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

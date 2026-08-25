@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setPriorityIntelligentEnabled
@@ -15,8 +15,6 @@ function setPriorityIntelligentEnabled(enable: boolean): Promise<void>
 设置优先通知智能服务使能状态。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -47,31 +45,3 @@ function setPriorityIntelligentEnabled(enable: boolean): Promise<void>
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-notificationManager.setPriorityIntelligentEnabled(false).then(() => {
-  hilog.info(0x0000, 'testTag', `setPriorityIntelligentEnabled success`);
-}).catch((err: BusinessError) => {
-  hilog.error(0x0000, 'testTag', `setPriorityIntelligentEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.setPriorityIntelligentEnabled(false).then(() => {
-    console.info(`setPriorityIntelligentEnabled success`);
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setPriorityIntelligentEnabled failed, code is ${error.code}, message is ${error.message}`);
-});
-```

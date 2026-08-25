@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('applicationState')
@@ -15,8 +15,6 @@ function on(type: 'applicationState', observer: ApplicationStateObserver): numbe
 注册所有应用程序的状态监听器。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -43,46 +41,6 @@ function on(type: 'applicationState', observer: ApplicationStateObserver): numbe
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let applicationStateObserver: appManager.ApplicationStateObserver = {
-  onForegroundApplicationChanged(appStateData: appManager.AppStateData) {
-    console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
-  },
-  onAbilityStateChanged(abilityStateData: appManager.AbilityStateData) {
-    console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
-  },
-  onProcessCreated(processData: appManager.ProcessData) {
-    console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
-  },
-  onProcessDied(processData: appManager.ProcessData) {
-    console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
-  },
-  onProcessStateChanged(processData: appManager.ProcessData) {
-    console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
-  },
-  onAppStarted(appStateData: appManager.AppStateData) {
-    console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
-  },
-  onAppStopped(appStateData: appManager.AppStateData) {
-    console.info(`[appManager] onAppStopped: ${JSON.stringify(appStateData)}`);
-  }
-};
-
-try {
-  const observerId = appManager.on('applicationState', applicationStateObserver);
-  console.info(`[appManager] observerCode: ${observerId}`);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
 
 ## on('applicationState')
 
@@ -93,8 +51,6 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, bundle
 注册指定应用程序的状态监听器。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -121,45 +77,3 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, bundle
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let applicationStateObserver: appManager.ApplicationStateObserver = {
-  onForegroundApplicationChanged(appStateData: appManager.AppStateData) {
-    console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
-  },
-  onAbilityStateChanged(abilityStateData: appManager.AbilityStateData) {
-    console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
-  },
-  onProcessCreated(processData: appManager.ProcessData) {
-    console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
-  },
-  onProcessDied(processData: appManager.ProcessData) {
-    console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
-  },
-  onProcessStateChanged(processData: appManager.ProcessData) {
-    console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
-  },
-  onAppStarted(appStateData: appManager.AppStateData) {
-    console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
-  },
-  onAppStopped(appStateData: appManager.AppStateData) {
-    console.info(`[appManager] onAppStopped: ${JSON.stringify(appStateData)}`);
-  }
-};
-
-let bundleNameList = ['bundleName1', 'bundleName2'];
-
-try {
-  const observerId = appManager.on('applicationState', applicationStateObserver, bundleNameList);
-  console.info(`[appManager] observerCode: ${observerId}`);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```

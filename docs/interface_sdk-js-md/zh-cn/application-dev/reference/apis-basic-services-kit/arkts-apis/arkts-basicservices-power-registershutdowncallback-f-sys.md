@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## registerShutdownCallback
@@ -15,8 +15,6 @@ function registerShutdownCallback(callback: Callback<boolean>): void
 订阅电源关机或重启的回调提醒。使用callback异步回调。调用此方法订阅回调后，可在不再需要时调用power.unregisterShutdownCallback取消订阅，释放系统资源。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.REBOOT
 
@@ -37,16 +35,3 @@ function registerShutdownCallback(callback: Callback<boolean>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [4900101](../errorcode-power.md#4900101-连接服务失败) |
-
-**示例**
-
-```TypeScript
-try {
-    power.registerShutdownCallback((isReboot: boolean) => {
-        console.info('device shutdown is: ' + isReboot);
-    });
-    console.info('register shutdown callback success.');
-} catch(err) {
-    console.error('register shutdown callback failed, err: ' + err);
-}
-```

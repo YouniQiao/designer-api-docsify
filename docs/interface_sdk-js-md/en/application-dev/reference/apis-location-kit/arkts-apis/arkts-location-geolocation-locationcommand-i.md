@@ -4,8 +4,6 @@ Location subsystem command structure@interface LocationCommand
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md)
@@ -17,7 +15,7 @@ Location subsystem command structure@interface LocationCommand
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## command
@@ -29,8 +27,6 @@ command: string
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -47,8 +43,6 @@ scenario: LocationRequestScenario
 **Type:** LocationRequestScenario
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

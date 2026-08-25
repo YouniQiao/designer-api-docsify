@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getAllExtBundleStats
 
 ```TypeScript
-function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>
+function getAllExtBundleStats(userId: number): Promise<Array<ExtBundleStats>>
 ```
 
 Obtains the space usage of all system applications or system services of a specified user. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -30,7 +28,7 @@ Obtains the space usage of all system applications or system services of a speci
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -47,17 +45,3 @@ Obtains the space usage of all system applications or system services of a speci
 | 13600001 |
 | 13600010 |
 | 13600013 |
-
-**Examples**
-
-```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-storageStatistics.getAllExtBundleStats(userId).then((bundleStatsList: storageStatistics.ExtBundleStats[]) => {
-  console.info("getAllExtBundleStats successfully");
-}).catch((err: BusinessError) => {
-  console.error(`getAllExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```

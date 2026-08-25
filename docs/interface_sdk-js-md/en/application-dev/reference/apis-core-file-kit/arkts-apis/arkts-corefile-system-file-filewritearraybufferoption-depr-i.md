@@ -4,8 +4,6 @@ Defines the options used in writeArrayBuffer().
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -25,8 +23,6 @@ Callback invoked when the API call is complete.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -40,8 +36,6 @@ fail?: (data: string, code: number) => void
 Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
@@ -64,8 +58,6 @@ Callback invoked when the API call is successful.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -81,8 +73,6 @@ Whether to enable the append mode. The default value is **false**. If the value 
 **Type:** boolean
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
@@ -100,8 +90,6 @@ Buffer from which the data is derived.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -117,8 +105,6 @@ Offset of the position in the file where writing starts, in bytes. The default v
 **Type:** number
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
@@ -137,8 +123,6 @@ URI of a local file. If it does not exist, a file will be created. Restricted by
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 

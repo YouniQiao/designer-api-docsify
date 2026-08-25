@@ -7,30 +7,26 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## backgroundLoadThreshold
 
 ```TypeScript
-backgroundLoadThreshold?: int
+backgroundLoadThreshold?: number
 ```
 
 应用后台CPU高负载异常阈值，阈值范围：[1, 100]，单位：%，默认值：10。若设置值在阈值范围外，系统将取用默认值10。  
 **说明：**建议取值小于10。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -39,17 +35,15 @@ backgroundLoadThreshold?: int
 ## foregroundLoadThreshold
 
 ```TypeScript
-foregroundLoadThreshold?: int
+foregroundLoadThreshold?: number
 ```
 
 应用前台CPU高负载异常阈值，阈值范围：[1, 100]，单位：%，默认值：30。若设置值在阈值范围外，系统将取用默认值30。  
 **说明：**建议取值小于30。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -58,7 +52,7 @@ foregroundLoadThreshold?: int
 ## perfLogCaptureCount
 
 ```TypeScript
-perfLogCaptureCount?: int
+perfLogCaptureCount?: number
 ```
 
 采样栈每日采集次数。一旦系统检测到当前异常日志的采集次数超过设置值，系统仍会正常上报事件，但异常事件中的external_log字段，将不再附加日志文件路径信息。Debug版本应用，阈值范围：[-1, 100]；Release版本应用，阈值范围：[0, 20]。单位：次，默认值：1。若设置值在阈值范围外，系统将取用默认值1。  
@@ -67,11 +61,9 @@ perfLogCaptureCount?: int
 2. 值为0，表示不采集日志。
 3. 值大于0，表示每日采集次数上限。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -80,16 +72,14 @@ perfLogCaptureCount?: int
 ## threadLoadInterval
 
 ```TypeScript
-threadLoadInterval?: int
+threadLoadInterval?: number
 ```
 
 应用线程CPU高负载异常检测周期，阈值范围：[5, 3600]，单位：秒，默认值：60。若设置值在阈值范围外，系统将取用默认值60。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -98,16 +88,14 @@ threadLoadInterval?: int
 ## threadLoadThreshold
 
 ```TypeScript
-threadLoadThreshold?: int
+threadLoadThreshold?: number
 ```
 
 应用线程CPU高负载异常阈值，阈值范围：[15, 100]，单位：%，默认值：70。若设置值在阈值范围外，系统将取用默认值70。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

@@ -4,8 +4,6 @@ Type of window height breakpoint.@enum { number }
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## HEIGHT_SM
@@ -17,8 +15,6 @@ HEIGHT_SM = 0
 Window aspectRatio &lt; 0.8 type.
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ Window aspectRatio &gt;= 0.8 and &lt; 1.2 type.
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -53,8 +47,6 @@ HEIGHT_LG = 2
 Window aspectRatio &gt;= 1.2 type.
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

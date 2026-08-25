@@ -1,12 +1,10 @@
 # DataPanelShadowOptions
 
-Inherits from MultiShadowOptions and has all properties of **MultiShadowOptions**.
+Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has all properties of **MultiShadowOptions**.
 
-**Inheritance/Implementation:** DataPanelShadowOptions extends MultiShadowOptions
+**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,13 +22,11 @@ colors?: Array<ResourceColor | LinearGradient>
 Array of shadow colors for data segments.Default value: same as the value of **valueColors**  
 **NOTE：**If the number of the set shadow colors is less than that of the data segments, the number of the displayed shadow colors is the same as the former.If the number of the set shadow colors is greater than that of the data segments, the number of the displayed shadow colors is the same as the latter.
 
-**Type:** Array&lt;ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt;
+**Type:** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt;
 
 **Default:** Consistent with valueColors
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

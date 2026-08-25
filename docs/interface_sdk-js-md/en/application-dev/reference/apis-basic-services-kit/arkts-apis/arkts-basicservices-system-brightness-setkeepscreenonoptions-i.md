@@ -4,8 +4,6 @@ Options for setting the screen to be steady on.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
@@ -13,7 +11,7 @@ Options for setting the screen to be steady on.
 ## Modules to Import
 
 ```TypeScript
-import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
+import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -25,8 +23,6 @@ complete?: () => void
 Called when an API call is complete.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 
@@ -41,8 +37,6 @@ fail?: (data: string, code: number) => void
 Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 
@@ -65,8 +59,6 @@ Called when an API call is successful.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 7
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
@@ -82,8 +74,6 @@ The value **true** means to keep the screen steady on, and the value **false** i
 **Type:** boolean
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 

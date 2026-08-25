@@ -4,8 +4,6 @@ Sets the placeholder image.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ error?: ResourceStr | PixelMap
 
 Placeholder image displayed when loading fails.
 
-**Type:** ResourceStr \| PixelMap
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +39,9 @@ placeholder?: ResourceStr | PixelMap
 
 Placeholder image displayed during loading.
 
-**Type:** ResourceStr \| PixelMap
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

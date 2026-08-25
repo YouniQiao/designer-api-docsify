@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## readSync
@@ -21,8 +21,6 @@ declare function readSync(
 以同步方法从文件读取数据，返回实际读取的字节数。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,53 +54,3 @@ declare function readSync(
 | 13900034 |
 | 13900042 |
 | 13900044 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-let buf = new ArrayBuffer(4096);
-fileIo.readSync(file.fd, buf);
-fileIo.closeSync(file);
-```
-
-```TypeScript
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-let buf = new ArrayBuffer(4096);
-let num = stream.readSync(buf, readOption);
-stream.close();
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: number = 4096;
-let arrayBuffer = new ArrayBuffer(length);
-let readLength = randomAccessFile.readSync(arrayBuffer);
-randomAccessFile.close();
-fileIo.closeSync(file);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: long = 4096;
-let arrayBuffer = new ArrayBuffer(length);
-let readLength = randomAccessFile.readSync(arrayBuffer);
-randomAccessFile.close();
-fileIo.closeSync(file);
-```

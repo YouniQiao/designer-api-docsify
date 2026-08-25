@@ -4,8 +4,6 @@ Enumerates the types of the multi-app mode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## UNSPECIFIED
@@ -17,8 +15,6 @@ UNSPECIFIED = 0
 Unspecified. It is the default value of [multiAppMode](../../../quick-start/app-configuration-file.md#multiappmode).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -32,8 +28,6 @@ MULTI_INSTANCE = 1
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## APP_CLONE
@@ -45,7 +39,5 @@ APP_CLONE = 2
 [App clone mode](../../../quick-start/app-clone.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

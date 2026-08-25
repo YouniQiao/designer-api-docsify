@@ -4,8 +4,6 @@ appMemoryOptimizer provides application memory optimization capabilities, includ
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,7 +11,7 @@ appMemoryOptimizer provides application memory optimization capabilities, includ
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from '@kit.AbilityKit';
+import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

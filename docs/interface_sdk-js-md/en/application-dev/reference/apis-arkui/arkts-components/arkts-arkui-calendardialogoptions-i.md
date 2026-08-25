@@ -11,8 +11,6 @@ Defines the configuration options of the calendar picker dialog box.Inherits fro
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ onCancel?: VoidCallback
 Triggered when the Cancel button in the dialog box is clicked.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,8 +52,6 @@ The settings take effect next time the dialog box appears.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -76,8 +70,6 @@ Event callback after the dialog box disappears.
 onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,8 +92,6 @@ The settings take effect next time the dialog box appears.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -123,8 +113,6 @@ onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisap
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -140,11 +128,9 @@ acceptButtonStyle?: PickerDialogButtonStyle
 Style of the accept button.  
 **NOTE：**In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
-**Type:** PickerDialogButtonStyle
+**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,8 +153,6 @@ Background blur style of the dialog box.Default value: **BlurStyle.COMPONENT_ULT
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -183,11 +167,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Options for customizing the background blur style.
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,13 +186,11 @@ backgroundColor?: ResourceColor
 Backplane color of the dialog box.Default value: **Color.Transparent**  
 **NOTE：**When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,11 +206,9 @@ backgroundEffect?: BackgroundEffectOptions
 
 Options for customizing the background effect.
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -247,11 +225,9 @@ cancelButtonStyle?: PickerDialogButtonStyle
 Style of the cancel button.  
 **NOTE：**In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
-**Type:** PickerDialogButtonStyle
+**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,7 +242,8 @@ enableHoverMode?: boolean
 ```
 
 Whether to respond when the device is in semi-folded mode.  
-- **true**: Respond when the device is in semi-folded mode. - **false**: Do not respond when the device is in semi-folded mode.  
+- **true**: Respond when the device is in semi-folded mode.  
+- **false**: Do not respond when the device is in semi-folded mode.  
 Default value: **false**.
 
 **Type:** boolean
@@ -274,8 +251,6 @@ Default value: **false**.
 **Default:** false
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -291,13 +266,11 @@ hoverModeArea?: HoverModeAreaType
 
 Display area of the dialog box when the device is in semi-folded mode.Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
-**Type:** HoverModeAreaType
+**Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,7 +285,8 @@ markToday?: boolean
 ```
 
 Whether to highlight the current system date.  
-- **true**: Highlight the current system date. - **false**: Do not highlight the current system date.  
+- **true**: Highlight the current system date.  
+- **false**: Do not highlight the current system date.  
 Default value: **false**.
 
 **Type:** boolean
@@ -320,8 +294,6 @@ Default value: **false**.
 **Default:** false
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -341,8 +313,6 @@ Triggered when the OK button in the dialog box is clicked.The callback parameter
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -361,8 +331,6 @@ Triggered when the selection in the picker changes the selected date.The callbac
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -377,11 +345,9 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -397,11 +363,9 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** SystemUiMaterial
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

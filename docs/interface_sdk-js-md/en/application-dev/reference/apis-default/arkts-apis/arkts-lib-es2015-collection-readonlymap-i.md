@@ -1,7 +1,5 @@
 # ReadonlyMap
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 forEach(callbackfn: (value: V, key: K, map: ReadonlyMap<K, V>) => void, thisArg?: any): void
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -27,8 +23,6 @@ forEach(callbackfn: (value: V, key: K, map: ReadonlyMap<K, V>) => void, thisArg?
 ```TypeScript
 get(key: K): V | undefined
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -45,8 +39,6 @@ get(key: K): V | undefined
 ```TypeScript
 has(key: K): boolean
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -65,5 +57,3 @@ readonly size: number
 ```
 
 **Type:** number
-
-**ArkTS mode:** 

@@ -4,14 +4,12 @@ WebResourceHandler是自定义scheme拦截场景中用于向Web组件返回拦�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## didFail
@@ -23,8 +21,6 @@ didFail(code: WebNetErrorList): void
 通知ArkWeb内核被拦截请求将返回失败，并结束该网络请求，调用前需调用[didReceiveResponse](#didreceiveresponse)传入响应 头。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -43,157 +39,6 @@ didFail(code: WebNetErrorList): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
-**示例**
-
-示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview, WebNetErrorList } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
-
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          try {
-            this.schemeHandler.onRequestStart((request: webview.WebSchemeHandlerRequest, resourceHandler: webview.WebResourceHandler) => {
-              console.info('[schemeHandler] onRequestStart');
-              try {
-                console.info('[schemeHandler] onRequestStart url:' + request.getRequestUrl());
-                console.info('[schemeHandler] onRequestStart method:' + request.getRequestMethod());
-                console.info('[schemeHandler] onRequestStart referrer:' + request.getReferrer());
-                console.info('[schemeHandler] onRequestStart isMainFrame:' + request.isMainFrame());
-                console.info('[schemeHandler] onRequestStart hasGesture:' + request.hasGesture());
-                console.info('[schemeHandler] onRequestStart header size:' + request.getHeader().length);
-                console.info('[schemeHandler] onRequestStart resource type:' + request.getRequestResourceType());
-                console.info('[schemeHandler] onRequestStart frame url:' + request.getFrameUrl());
-                let header = request.getHeader();
-                for (let i = 0; i < header.length; i++) {
-                  console.info('[schemeHandler] onRequestStart header:' + header[i].headerKey + ' ' + header[i].headerValue);
-                }
-                let stream = request.getHttpBodyStream();
-                if (stream) {
-                  console.info('[schemeHandler] onRequestStart has http body stream');
-                } else {
-                  console.info('[schemeHandler] onRequestStart has no http body stream');
-                }
-              } catch (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-
-              if (request.getRequestUrl().endsWith('example.com')) {
-                return false;
-              }
-
-              try {
-                // 直接调用didFail(WebNetErrorList.ERR_FAILED, true)，若此前未调用didReceiveResponse，系统将自动生成响应头，网络错误码为-104（对应ERR_CONNECTION_FAILED）
-                resourceHandler.didFail(WebNetErrorList.ERR_FAILED, true);
-              } catch (error) {
-                // 当error.code为17100101(The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList)
-                // 且didFail(code: WebNetErrorList, completeIfNoResponse: boolean)的code值不为null时，接口会继续调用不会中断。
-                console.error(`[schemeHandler] ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-              return true;
-            })
-
-            this.schemeHandler.onRequestStop((request: webview.WebSchemeHandlerRequest) => {
-              console.info('[schemeHandler] onRequestStop');
-            });
-
-            this.controller.setWebSchemeHandler('https', this.schemeHandler);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-        .javaScriptAccess(true)
-        .domStorageAccess(true)
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Entry, Column, Component, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-import { WebNetErrorList } from '@ohos.web.netErrorList';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
-
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          try {
-            this.schemeHandler.onRequestStart((request: webview.WebSchemeHandlerRequest, resourceHandler: webview.WebResourceHandler) => {
-              console.info("[schemeHandler] onRequestStart");
-              try {
-                console.info("[schemeHandler] onRequestStart url:" + request.getRequestUrl());
-                console.info("[schemeHandler] onRequestStart method:" + request.getRequestMethod());
-                console.info("[schemeHandler] onRequestStart referrer:" + request.getReferrer());
-                console.info("[schemeHandler] onRequestStart isMainFrame:" + request.isMainFrame());
-                console.info("[schemeHandler] onRequestStart hasGesture:" + request.hasGesture());
-                console.info("[schemeHandler] onRequestStart header size:" + request.getHeader().length);
-                console.info("[schemeHandler] onRequestStart resource type:" + request.getRequestResourceType());
-                console.info("[schemeHandler] onRequestStart frame url:" + request.getFrameUrl());
-                let header = request.getHeader();
-                for (let i = 0; i < header.length; i++) {
-                  console.info("[schemeHandler] onRequestStart header:" + header[i].headerKey + " " + header[i].headerValue);
-                }
-                let stream = request.getHttpBodyStream();
-                if (stream) {
-                  console.info("[schemeHandler] onRequestStart has http body stream");
-                } else {
-                  console.info("[schemeHandler] onRequestStart has no http body stream");
-                }
-              } catch (error) {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              }
-
-              if (request.getRequestUrl().endsWith("example.com")) {
-                return false;
-              }
-
-              try {
-                resourceHandler.didFail(WebNetErrorList.ERR_FAILED, true);
-              } catch (error) {
-                console.error(`[schemeHandler] ErrorCode: ${error.code},  Message: ${error.message}`);
-              }
-              return true;
-            })
-
-            this.schemeHandler.onRequestStop((request: webview.WebSchemeHandlerRequest) => {
-              console.info("[schemeHandler] onRequestStop");
-            });
-
-            this.controller.setWebSchemeHandler('https', this.schemeHandler);
-          } catch (error) {
-            console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-          }
-        })
-        .javaScriptAccess(true)
-        .domStorageAccess(true)
-    }
-  }
-}
-```
-
 ## didFail
 
 ```TypeScript
@@ -203,8 +48,6 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 通知ArkWeb内核，被拦截请求将返回失败。若completeIfNoResponse为false，调用前需调用 [didReceiveResponse](#didreceiveresponse)传入响应头。若completeIfNoResponse为true，且调用前未调用 [didReceiveResponse](#didreceiveresponse)，则自动生成一个响应头，网络错误码为-104，详情参见 [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -222,10 +65,6 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 | [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
-**示例**
-
-参见 [didFail](#didfail)
-
 ## didFail
 
 ```TypeScript
@@ -235,8 +74,6 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 通知ArkWeb内核，被拦截请求应返回失败，并携带自定义错误码。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -254,10 +91,6 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 | --- |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
-**示例**
-
-参见 [didFail](#didfail)
-
 ## didFinish
 
 ```TypeScript
@@ -267,8 +100,6 @@ didFinish(): void
 通知Web组件被拦截的请求已经完成，并且没有更多的数据可用，调用前需调用[didReceiveResponse](#didreceiveresponse)传入响应 头。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -280,10 +111,6 @@ didFinish(): void
 | --- |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
-**示例**
-
-示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-
 ## didReceiveResponse
 
 ```TypeScript
@@ -293,8 +120,6 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 将构造的响应头传递给被拦截的请求。需在调用didFinish或didFail之前调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -313,10 +138,6 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
-**示例**
-
-示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-
 ## didReceiveResponseBody
 
 ```TypeScript
@@ -326,8 +147,6 @@ didReceiveResponseBody(data: ArrayBuffer): void
 将构造的响应体传递给被拦截的请求。需在调用didFinish或didFail之前调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -345,7 +164,3 @@ didReceiveResponseBody(data: ArrayBuffer): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
-
-**示例**
-
-示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。

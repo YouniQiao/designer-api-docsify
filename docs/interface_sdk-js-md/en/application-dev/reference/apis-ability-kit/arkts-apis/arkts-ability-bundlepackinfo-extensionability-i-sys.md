@@ -4,8 +4,6 @@ ExtensionAbility: the extension ability forms class.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Widget information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -39,8 +35,6 @@ Name of the ExtensionAbility.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

@@ -4,8 +4,6 @@ Enumerates USB port roles.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
@@ -17,7 +15,7 @@ Enumerates USB port roles.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## currentDataRole
@@ -31,8 +29,6 @@ Current data role.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -54,8 +50,6 @@ Current USB mode.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [currentMode](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentmode)
@@ -75,8 +69,6 @@ Current power role.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 

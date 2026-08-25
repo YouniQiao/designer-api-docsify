@@ -4,29 +4,25 @@ Represents the measurement result data corresponding to the performance metric.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Test.PerfTest
 
 ## Modules to Import
 
 ```TypeScript
-import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from 'kits/@kit.TestKit';
 ```
 
 ## average
 
 ```TypeScript
-readonly average: double
+readonly average: number
 ```
 
 Average value of the measurement data of each round (the value **-1** is excluded).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -35,16 +31,14 @@ Average value of the measurement data of each round (the value **-1** is exclude
 ## maximum
 
 ```TypeScript
-readonly maximum: double
+readonly maximum: number
 ```
 
 Maximum value of the measurement data of each round (the value **-1** is excluded).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -62,8 +56,6 @@ Performance metric to test.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
@@ -71,16 +63,14 @@ Performance metric to test.
 ## minimum
 
 ```TypeScript
-readonly minimum: double
+readonly minimum: number
 ```
 
 Minimum value of the measurement data of each round (the value **-1** is excluded).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -89,16 +79,14 @@ Minimum value of the measurement data of each round (the value **-1** is exclude
 ## roundValues
 
 ```TypeScript
-readonly roundValues: Array<double>
+readonly roundValues: Array<number>
 ```
 
 Measurement data value of each round of the tested performance metric. The unit is the same as that of the corresponding [PerfMetric](arkts-test-test-perftest-perfmetric-e.md). If data collection fails, the value **-1** is returned.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

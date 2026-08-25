@@ -4,22 +4,18 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## ACTION_ADD_ACCOUNT_IMPLICITLY
 
 ```TypeScript
-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'
+ACTION_ADD_ACCOUNT_IMPLICITLY = "addAccountImplicitly"
 ```
 
 表示操作，隐式添加账号。  
 **说明：**从API version 8开始支持，从API version 9开始废弃，建议使用ACTION_CREATE_ACCOUNT_IMPLICITLY替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -30,15 +26,13 @@ ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'
 ## ACTION_AUTHENTICATE
 
 ```TypeScript
-ACTION_AUTHENTICATE = 'authenticate'
+ACTION_AUTHENTICATE = "authenticate"
 ```
 
 表示操作，鉴权。  
 **说明：**从API version 8开始支持，从API version 9开始废弃，建议使用ACTION_AUTH替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -56,8 +50,6 @@ ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## ACTION_AUTH
@@ -69,8 +61,6 @@ ACTION_AUTH = "auth"
 表示操作，鉴权。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -84,8 +74,6 @@ ACTION_VERIFY_CREDENTIAL = "verifyCredential"
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## ACTION_SET_AUTHENTICATOR_PROPERTIES
@@ -97,8 +85,6 @@ ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"
 表示操作，设置认证器属性。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -112,8 +98,6 @@ KEY_NAME = "name"
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## KEY_OWNER
@@ -122,11 +106,9 @@ KEY_NAME = "name"
 KEY_OWNER = "owner"
 ```
 
-表示键名，应用账号所有者的包名。最大长度为1024个字符。
+表示键名，应用账号所有者的包名。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -140,8 +122,6 @@ KEY_TOKEN = "token"
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## KEY_ACTION
@@ -153,8 +133,6 @@ KEY_ACTION = "action"
 表示键名，操作。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -168,8 +146,6 @@ KEY_AUTH_TYPE = "authType"
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## KEY_SESSION_ID
@@ -181,8 +157,6 @@ KEY_SESSION_ID = "sessionId"
 表示键名，会话标识。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -196,8 +170,6 @@ KEY_CALLER_PID = "callerPid"
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## KEY_CALLER_UID
@@ -209,8 +181,6 @@ KEY_CALLER_UID = "callerUid"
 表示键名，调用方UID。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -224,8 +194,6 @@ KEY_CALLER_BUNDLE_NAME = "callerBundleName"
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## KEY_REQUIRED_LABELS
@@ -238,8 +206,6 @@ KEY_REQUIRED_LABELS = "requiredLabels"
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.AppAccount
 
 ## KEY_BOOLEAN_RESULT
@@ -251,7 +217,5 @@ KEY_BOOLEAN_RESULT = "booleanResult"
 表示键名，布尔返回值。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.AppAccount

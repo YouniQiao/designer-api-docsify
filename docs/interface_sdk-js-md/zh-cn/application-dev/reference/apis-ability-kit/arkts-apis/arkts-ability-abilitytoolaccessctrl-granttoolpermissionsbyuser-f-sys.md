@@ -15,8 +15,6 @@ export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Pr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **需要权限：** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
 **系统能力：** SystemCapability.Security.Asset
@@ -27,7 +25,7 @@ export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Pr
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userAuthResult | [UserAuthResult[]](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-userauthresult-i.md) | 是 |
+| userAuthResult | [UserAuthResult[]](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | 是 |
 
 **返回值：**
 
@@ -47,29 +45,3 @@ export function grantToolPermissionsByUser(userAuthResult: UserAuthResult[]): Pr
 | [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) |
 | [24010004](../errorcode-abilityToolAccessCtrl-sys.md#24010004-权限不存在) |
 | [24010005](../errorcode-abilityToolAccessCtrl-sys.md#24010005-授权失败) |
-
-**示例**
-
-```TypeScript
-import { abilityToolAccessCtrl, abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userAuthResult: Array<abilityToolAccessCtrl.UserAuthResult> = [{
-  permissionInfo: [{
-    permission: 'ohos.permission.cli.BUNDLE_ACTIVE_INFO' as Permissions,
-    permissionStatus: abilityAccessCtrl.PermissionStatus.GRANTED
-  }],
-  permissionQuery: {
-    operationInfo: [{
-      operationType: abilityToolAccessCtrl.OperationType.CLI,
-      info: 'ohos.permission.cli.BUNDLE_ACTIVE_INFO'
-    }],
-    needTicket: true
-  }
-}];
-abilityToolAccessCtrl.grantToolPermissionsByUser(userAuthResult).then((data: Array<abilityToolAccessCtrl.TicketInfo>) => {
-  console.info('grantToolPermissionsByUser success, data: ' + JSON.stringify(data));
-}).catch((err: BusinessError): void => {
-  console.error(`grantToolPermissionsByUser fail, code: ${err.code}, message: ${err.message}`);
-});
-```

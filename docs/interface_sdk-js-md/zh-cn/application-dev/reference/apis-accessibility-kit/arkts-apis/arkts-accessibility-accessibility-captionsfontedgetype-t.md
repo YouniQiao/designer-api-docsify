@@ -8,8 +8,6 @@ type CaptionsFontEdgeType = 'none' | 'raised' | 'depressed' | 'uniform' | 'dropS
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。

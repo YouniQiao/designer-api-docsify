@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 ```
 
 ## on('cooperation')
@@ -15,8 +15,6 @@ function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: str
 注册监听键鼠穿越状态，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 
@@ -39,34 +37,3 @@ function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: str
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let callback = (error: BusinessError | undefined, data: { deviceDescriptor: string, eventMsg: EventMsg }) => {
-            if (error) {
-              console.error(`Failed to monitor cooperation, Code: ${error.code}, message: ${error.message}.`);
-              return;
-            }
-            console.info(`Succeeded in monitoring cooperation, data: ${JSON.stringify(data)}.`);
-          };
-          try {
-            inputDeviceCooperate.on('cooperation', callback);
-          } catch (error) {
-            console.error(`Failed to register keyboard and mouse traversal status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```

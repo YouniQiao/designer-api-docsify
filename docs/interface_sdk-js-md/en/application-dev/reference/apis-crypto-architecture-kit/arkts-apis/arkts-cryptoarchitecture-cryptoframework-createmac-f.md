@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createMac
@@ -12,11 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createMac(algName: string): Mac
 ```
 
-Creates a **Mac** instance.<br>For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
+Creates a **Mac** instance.
+
+For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,38 +43,6 @@ Creates a **Mac** instance.<br>For details about the supported specifications, s
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // Set algName based on the algorithm supported.
-  let mac = cryptoFramework.createMac('SHA256');
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // Set algName based on the algorithm supported.
-  let spec: cryptoFramework.HmacSpec = {
-    algName: 'HMAC',
-    mdName: 'SHA256',
-  };
-  let mac = cryptoFramework.createMac(spec);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`sync failed: errCode: ${error.code}, errMsg: ${error.message}`);
-}
-```
-
 
 ## createMac
 
@@ -82,11 +50,11 @@ try {
 function createMac(macSpec: MacSpec): Mac
 ```
 
-Creates a **Mac** instance.<br>For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
+Creates a **Mac** instance.
+
+For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -112,7 +80,3 @@ Creates a **Mac** instance.<br>For details about the supported specifications, s
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-
-**Examples**
-
-See [createMac](#createmac)

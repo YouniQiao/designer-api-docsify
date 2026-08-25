@@ -15,8 +15,6 @@ Attaches an ID to the end of a given URI.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [attachId](arkts-ability-datauriutils-attachid-f.md)
@@ -35,15 +33,3 @@ Attaches an ID to the end of a given URI.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import dataUriUtils from '@ohos.ability.dataUriUtils';
-
-let id = 1122;
-let uri = dataUriUtils.attachId(
-    'com.example.dataUriUtils',
-	id,
-);
-```

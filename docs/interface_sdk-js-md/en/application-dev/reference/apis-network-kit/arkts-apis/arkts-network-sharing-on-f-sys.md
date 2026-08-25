@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## on('sharingStateChange')
@@ -15,8 +15,6 @@ function on(type: 'sharingStateChange', callback: Callback<boolean>): void
 Registers the network sharing status change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -39,16 +37,6 @@ Registers the network sharing status change event. This API uses an asynchronous
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-
-sharing.on('sharingStateChange', (data: boolean) => {
-  console.info('on sharingStateChange: ' + JSON.stringify(data));
-});
-```
-
 
 ## on('interfaceSharingStateChange')
 
@@ -59,8 +47,6 @@ function on(type: 'interfaceSharingStateChange', callback: Callback<InterfaceSha
 Subscribes to network sharing state changes of a specified NIC. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -83,16 +69,6 @@ Subscribes to network sharing state changes of a specified NIC. This API uses an
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-
-sharing.on('interfaceSharingStateChange', (data: object) => {
-  console.info('on interfaceSharingStateChange:' + JSON.stringify(data));
-});
-```
-
 
 ## on('sharingUpstreamChange')
 
@@ -103,8 +79,6 @@ function on(type: 'sharingUpstreamChange', callback: Callback<NetHandle>): void
 Subscribes to upstream network changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -126,13 +100,3 @@ Subscribes to upstream network changes. This API uses an asynchronous callback t
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-
-sharing.on('sharingUpstreamChange', (data: object) => {
-  console.info('on sharingUpstreamChange:' + JSON.stringify(data));
-});
-```

@@ -1,12 +1,10 @@
 # UIScrollEvent
 
-frameNode中[getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) 方法的返回值，可用于给Scroll节点设置滚动事件。UIScrollEvent继承于UIScrollableCommonEvent。
+frameNode中[getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) 方法的返回值，可用于给Scroll节点设置滚动事件。UIScrollEvent继承于[UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)。
 
-**继承/实现关系：** UIScrollEvent extends UIScrollableCommonEvent
+**继承/实现关系：** UIScrollEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 [onDidScroll](arkts-arkui-scroll-attribute.md#ondidscroll)事件的回调。方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void
 [onWillScroll](arkts-arkui-scroll-attribute.md#onwillscroll)事件的回调。方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

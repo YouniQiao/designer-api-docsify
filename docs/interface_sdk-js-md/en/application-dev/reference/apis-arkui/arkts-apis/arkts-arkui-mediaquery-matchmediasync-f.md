@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from '@kit.ArkUI';
+import { mediaquery } from 'kits/@kit.ArkUI';
 ```
 
 ## matchMediaSync
@@ -27,8 +27,6 @@ Sets the media query condition. This API returns the corresponding media query l
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 18
 
 **Substitutes:** matchMediaSync
@@ -50,11 +48,3 @@ Sets the media query condition. This API returns the corresponding media query l
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) |
-
-**Examples**
-
-```TypeScript
-import { mediaquery } from '@kit.ArkUI';
-
-let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // Listen for landscape events.
-```

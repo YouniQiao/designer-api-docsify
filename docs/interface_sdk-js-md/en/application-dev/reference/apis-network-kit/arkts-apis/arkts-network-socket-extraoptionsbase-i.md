@@ -4,14 +4,12 @@ Defines base properties of the **LocalSocket** object.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## receiveBufferSize
@@ -25,8 +23,6 @@ Size of the RX buffer, in bytes. The value ranges from 0 to 262144. If this para
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,8 +38,6 @@ Whether to reuse addresses. The value **true** means to reuse addresses, and the
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## sendBufferSize
@@ -58,8 +52,6 @@ Size of the TX buffer, in bytes. The value ranges from 0 to 262144. If this para
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## socketTimeout
@@ -73,7 +65,5 @@ Timeout duration of the local socket connection, in ms.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack

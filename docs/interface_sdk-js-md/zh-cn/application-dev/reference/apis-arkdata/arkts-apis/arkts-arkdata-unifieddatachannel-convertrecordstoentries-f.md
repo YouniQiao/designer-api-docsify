@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## convertRecordsToEntries
@@ -18,8 +18,6 @@ function convertRecordsToEntries(data: UnifiedData): void
 否则不会产生任何行为。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,99 +36,3 @@ function convertRecordsToEntries(data: UnifiedData): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let details: Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2'
-};
-let plainTextObj: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'The weather is very good today',
-  abstract: 'The weather is very good today',
-  details: details
-};
-let htmlObj: uniformDataStruct.HTML = {
-  uniformDataType: 'general.html',
-  htmlContent: '<div><p>The weather is very good today</p></div>',
-  plainContent: 'The weather is very good today',
-  details: details
-};
-let plainText = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainTextObj);
-let html = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HTML, htmlObj);
-let unifiedData = new unifiedDataChannel.UnifiedData(plainText);
-unifiedData.addRecord(html);
-unifiedData.properties.tag = 'records_to_entries_data_format';
-
-try {
-  unifiedDataChannel.convertRecordsToEntries(unifiedData);
-  let records: Array<unifiedDataChannel.UnifiedRecord> = unifiedData.getRecords();
-  console.info(`Records size is ${records.length}`); // After conversion, its length must be less than 1
-  if (records.length == 1) {
-    let plainTextObjRead: uniformDataStruct.PlainText =
-      records[0].getEntry(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) as uniformDataStruct.PlainText;
-    console.info(`TextContent is ${plainTextObjRead.textContent}`);
-    let htmlObjRead: uniformDataStruct.HTML =
-      records[0].getEntry(uniformTypeDescriptor.UniformDataType.HTML) as uniformDataStruct.HTML;
-    console.info(`HtmlContent is ${htmlObjRead.htmlContent}`);
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Convert data throws an exception. code is ${error.code}, message is ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let details: Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2'
-}
-let plainTextObj: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'The weather is very good today',
-  textAbstract: 'The weather is very good today',
-  details: details
-}
-let htmlObj: uniformDataStruct.HTML = {
-  uniformDataType: 'general.html',
-  htmlContent: '<div><p>The weather is very good today</p></div>',
-  plainContent: 'The weather is very good today',
-  details: details
-}
-let plainText = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainTextObj);
-let html = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.HTML, htmlObj);
-let unifiedData = new unifiedDataChannel.UnifiedData(plainText);
-unifiedData.addRecord(html);
-unifiedData.properties.tag = 'records_to_entries_data_format';
-
-try {
-  unifiedDataChannel.convertRecordsToEntries(unifiedData);
-  let records: Array<unifiedDataChannel.UnifiedRecord> = unifiedData.getRecords();
-  console.info(`Records size is ${records.length}`); // After conversion, its length must be less than 1
-  if (records.length == 1) {
-    let plainTextObjRead: uniformDataStruct.PlainText =
-      records[0].getEntry(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) as uniformDataStruct.PlainText;
-    console.info(`TextContent is ${plainTextObjRead.textContent}`);
-    let htmlObjRead: uniformDataStruct.HTML =
-      records[0].getEntry(uniformTypeDescriptor.UniformDataType.HTML) as uniformDataStruct.HTML;
-    console.info(`HtmlContent is ${htmlObjRead.htmlContent}`);
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Convert data throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```

@@ -4,8 +4,6 @@ Enumerates hover detection states during drag operations. Under default system c
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BEGIN
@@ -17,8 +15,6 @@ BEGIN
 Initial state when a dragged item enters the component boundary and remains stationary for the specified duration. This state enables preparation operations.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ Periodic notification state during sustained hover detection. In this state, per
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -54,8 +48,6 @@ Final state indicating completion of the hover detection cycle, which is trigger
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -71,8 +63,6 @@ CANCEL
 Interruption state of hover detection triggered by termination events, which include the following: finger or mouse release, window switching, screen off, exiting the component boundary, entering child components, or exceeding the movement threshold within the component. The application will restore the UI style and cancel pending navigation and view switching operations.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

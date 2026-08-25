@@ -4,14 +4,12 @@ Defines a **WebSocket** object. Before invoking WebSocket APIs, you need to call
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## close
@@ -23,8 +21,6 @@ close(callback: AsyncCallback<boolean>): void
 Closes the WebSocket connection. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -45,93 +41,6 @@ Closes the WebSocket connection. This API uses an asynchronous callback to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-ws.close((err: BusinessError) => {
-  if (!err) {
-    console.info("close success")
-  } else {
-    console.error(`close fail. Code: ${err.code}, message: ${err.message}`)
-  }
-});
-```
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-
-let options: webSocket.WebSocketCloseOptions | undefined;
-if (options != undefined) {
-    options.code = 1000
-    options.reason = "your reason"
-}
-ws.close(options, (err: BusinessError) => {
-    if (!err) {
-        console.info("close success")
-    } else {
-        console.error(`close fail. Code: ${err.code}, message: ${err.message}`)
-    }
-});
-```
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-let options: webSocket.WebSocketCloseOptions | undefined;
-if (options != undefined) {
-    options.code = 1000
-    options.reason = "your reason"
-}
-let promise = ws.close();
-promise.then((value: boolean) => {
-    console.info("close success")
-}).catch((err:string) => {
-    console.error("close fail, error:" + JSON.stringify(err))
-});
-```
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let localServer: webSocket.WebSocketServer;
-let config: webSocket.WebSocketServerConfig = {
-  serverPort: 8080, // Listening port
-  maxConcurrentClientsNumber: 10,
-  maxConnectionsForOneClient: 10,
-}
-
-localServer = webSocket.createWebSocketServer();
-localServer.start(config).then((success: boolean) => {
-  if (success) {
-    console.info('webSocket server start success');
-  } else {
-    console.error('websocket server start failed');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to start. Code: ${error.code}, message: ${error.message}`);
-});
-
-localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
-  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
-  localServer.close(connection).then((success: boolean) => {
-    if (success) {
-      console.info('close client successfully');
-    } else {
-      console.error('close client failed');
-    }
-  });
-});
-```
-
 ## close
 
 ```TypeScript
@@ -141,8 +50,6 @@ close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void
 Closes the WebSocket connection based on the options parameter. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -164,10 +71,6 @@ Closes the WebSocket connection based on the options parameter. This API uses an
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-See [close](#close)
-
 ## close
 
 ```TypeScript
@@ -177,8 +80,6 @@ close(options?: WebSocketCloseOptions): Promise<boolean>
 Closes a WebSocket connection based on the specified options. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -205,10 +106,6 @@ Closes a WebSocket connection based on the specified options. This API uses a pr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-See [close](#close)
-
 ## connect
 
 ```TypeScript
@@ -229,8 +126,6 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 > length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -257,75 +152,6 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) |
 | [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) |
 
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-let url = "ws://";
-ws.connect(url, (err: BusinessError, value: boolean) => {
-  if (!err) {
-    console.info("connect success")
-  } else {
-    console.error(`connect fail. Code: ${err.code}, message: ${err.message}`)
-  }
-});
-```
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Example 1:
-let ws = webSocket.createWebSocket();
-let options: webSocket.WebSocketRequestOptions | undefined;
-if (options !=undefined) {
-  options.header = {
-     name1: "value1",
-     name2: "value2",
-     name3: "value3"
-  };
-  options.caPath = "";
-}
-let url = "ws://"
-ws.connect(url, options, (err: BusinessError, value: Object) => {
-  if (!err) {
-    console.info("connect success")
-  } else {
-    console.error(`connect fail. Code: ${err.code}, message: ${err.message}`)
-  }
-});
-
-// Example 2:
-let url = "ws://"
-let ws = webSocket.createWebSocket();
-let options: webSocket.WebSocketRequestOptions = {
-  minSupportTlsProtocol: webSocket.TlsProtocol.TLS_V_1_1
-};
-ws.connect(url, options, (err: BusinessError, value: Object) => {
-  if (!err) {
-    console.info("connect success")
-  } else {
-    console.error(`connect fail. Code: ${err.code}, message: ${err.message}`)
-  }
-});
-```
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-let url = "ws://"
-let promise = ws.connect(url);
-promise.then((value: boolean) => {
-  console.info("connect success")
-}).catch((err:string) => {
-  console.error("connect fail, error:" + JSON.stringify(err))
-});
-```
-
 ## connect
 
 ```TypeScript
@@ -346,8 +172,6 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 > length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -375,10 +199,6 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) |
 | [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) |
 
-**Examples**
-
-See [connect](#connect)
-
 ## connect
 
 ```TypeScript
@@ -399,8 +219,6 @@ Establishes a WebSocket connection to a given URL. This API uses a promise to re
 > length of URLs is changed from 2048 characters to 8196 characters.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -433,10 +251,6 @@ Establishes a WebSocket connection to a given URL. This API uses a promise to re
 | [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) |
 | [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) |
 
-**Examples**
-
-See [connect](#connect)
-
 ## off('open')
 
 ```TypeScript
@@ -451,8 +265,6 @@ Unsubscribes from WebSocket open events. This API uses an asynchronous callback 
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -464,25 +276,6 @@ Unsubscribes from WebSocket open events. This API uses an asynchronous callback 
 | type | 'open' | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No |
 
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-class OutValue {
-  status: number = 0
-  message: string = ""
-}
-let callback1 = (err: BusinessError, value: Object) => {
- console.info("on open, status:" + ((value as OutValue).status + ", message:" + (value as OutValue).message))
-}
-ws.on('open', callback1);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-ws.off('open', callback1);
-```
-
 ## off('openInfo')
 
 ```TypeScript
@@ -492,8 +285,6 @@ off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void
 Cancels listening for the open info events of a WebSocket connection.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -521,8 +312,6 @@ Unsubscribes from WebSocket server message receiving events. This API uses an as
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -533,15 +322,6 @@ Unsubscribes from WebSocket server message receiving events. This API uses an as
 | --- | --- | --- |
 | type | 'message' | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | No |
-
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-ws.off('message');
-```
 
 ## off('close')
 
@@ -557,8 +337,6 @@ Unsubscribes from WebSocket close events. This API uses an asynchronous callback
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -569,15 +347,6 @@ Unsubscribes from WebSocket close events. This API uses an asynchronous callback
 | --- | --- | --- |
 | type | 'close' | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-ws.off('close');
-```
 
 ## off('error')
 
@@ -593,8 +362,6 @@ Unsubscribes from WebSocket error events. This API uses an asynchronous callback
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -605,15 +372,6 @@ Unsubscribes from WebSocket error events. This API uses an asynchronous callback
 | --- | --- | --- |
 | type | 'error' | Yes |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
-
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-ws.off('error');
-```
 
 ## off('dataEnd')
 
@@ -629,8 +387,6 @@ Unsubscribes from WebSocket data receiving end events. This API uses an asynchro
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -639,15 +395,6 @@ Unsubscribes from WebSocket data receiving end events. This API uses an asynchro
 | --- | --- | --- |
 | type | 'dataEnd' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-ws.off('dataEnd');
-```
 
 ## off('headerReceive')
 
@@ -663,8 +410,6 @@ Unsubscribes from HTTP response header events. This API uses an asynchronous cal
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -673,140 +418,6 @@ Unsubscribes from HTTP response header events. This API uses an asynchronous cal
 | --- | --- | --- |
 | type | 'headerReceive' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-ws.off('headerReceive');
-```
-
-## offDataEnd
-
-```TypeScript
-offDataEnd(callback?: Callback<void>): void
-```
-
-Cancels listening for receiving data ends events of a WebSocket connection.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
-
-## offHeaderReceive
-
-```TypeScript
-offHeaderReceive(callback?: Callback<ResponseHeaders>): void
-```
-
-Unregisters the observer for HTTP Response Header events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** 
-- API version 23 and later: SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No |
-
-## offMessage
-
-```TypeScript
-offMessage(callback?: AsyncCallback<string | ArrayBuffer>): void
-```
-
-Cancels listening for the message events of a WebSocket connection. data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | No |
-
-## offOpen
-
-```TypeScript
-offOpen(callback?: Callback<OpenResult>): void
-```
-
-Cancels listening for the open events of a WebSocket connection.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | No |
-
-## offWebSocketClose
-
-```TypeScript
-offWebSocketClose(callback?: AsyncCallback<CloseResult>): void
-```
-
-Cancels listening for the close events of a WebSocket connection.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No |
-
-## offWebSocketError
-
-```TypeScript
-offWebSocketError(callback?: ErrorCallback): void
-```
-
-Cancels listening for the error events of a WebSocket connection.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
 
 ## on('open')
 
@@ -818,8 +429,6 @@ Subscribes to WebSocket open events. This API uses an asynchronous callback to r
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -830,22 +439,6 @@ Subscribes to WebSocket open events. This API uses an asynchronous callback to r
 | --- | --- | --- |
 | type | 'open' | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError, Callback } from '@kit.BasicServicesKit';
-
-let ws= webSocket.createWebSocket();
-class OutValue {
-  status: number = 0
-  message: string = ""
-}
-ws.on('open', (err: BusinessError, value: Object) => {
-  console.info("on open, status:" + (value as OutValue).status + ", message:" + (value as OutValue).message)
-});
-```
 
 ## on('message')
 
@@ -860,8 +453,6 @@ Subscribes to WebSocket server message receiving events. This API uses an asynch
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -873,18 +464,6 @@ Subscribes to WebSocket server message receiving events. This API uses an asynch
 | type | 'message' | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-ws.on('message', (err: BusinessError<void>, value: string | ArrayBuffer) => {
-  console.info("on message, message:" + value)
-});
-```
-
 ## on('openInfo')
 
 ```TypeScript
@@ -894,8 +473,6 @@ on(type: 'openInfo', callback: AsyncCallback<WebSocketOpenInfo>): void
 Enables listening for the open info events of a WebSocket connection.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -918,8 +495,6 @@ Subscribes to WebSocket close events. This API uses an asynchronous callback to 
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -931,18 +506,6 @@ Subscribes to WebSocket close events. This API uses an asynchronous callback to 
 | type | 'close' | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-ws.on('close', (err: BusinessError, value: webSocket.CloseResult) => {
-  console.info("on close, code is " + value.code + ", reason is " + value.reason)
-});
-```
-
 ## on('error')
 
 ```TypeScript
@@ -952,8 +515,6 @@ on(type: 'error', callback: ErrorCallback): void
 Subscribes to WebSocket error events. This API uses an asynchronous callback to return the result.The error code of the [error](#onerror) event callback is described as follows: WebSocket is essentially an HTTP protocol upgrade. If the server agrees to the upgrade, the server returns 101. The status code indicates that the protocol is switched from HTTP to WebSocket (the **open** callback is triggered). If the server rejects the upgrade or other exceptions occur, the server returns 200, indicating that the server only processes the request as a common HTTP request.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -966,18 +527,6 @@ Subscribes to WebSocket error events. This API uses an asynchronous callback to 
 | type | 'error' | Yes |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
 
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-ws.on('error', (err: BusinessError) => {
-  console.error(`on error. Code: ${err.code}, message: ${err.message}`)
-});
-```
-
 ## on('dataEnd')
 
 ```TypeScript
@@ -988,8 +537,6 @@ Subscribes to the WebSocket data receiving end event. This API uses an asynchron
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -998,17 +545,6 @@ Subscribes to the WebSocket data receiving end event. This API uses an asynchron
 | --- | --- | --- |
 | type | 'dataEnd' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-ws.on('dataEnd', () => {
-  console.info("on dataEnd")
-});
-```
 
 ## on('headerReceive')
 
@@ -1020,8 +556,6 @@ Subscribes to HTTP response header events. This API uses an asynchronous callbac
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**
@@ -1030,142 +564,6 @@ Subscribes to HTTP response header events. This API uses an asynchronous callbac
 | --- | --- | --- |
 | type | 'headerReceive' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-
-let ws = webSocket.createWebSocket();
-ws.on('headerReceive', (data) => {
-  console.info("on headerReceive " + JSON.stringify(data))
-});
-```
-
-## onDataEnd
-
-```TypeScript
-onDataEnd(callback: Callback<void>): void
-```
-
-Enables listening for receiving data ends events of a WebSocket connection.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-## onHeaderReceive
-
-```TypeScript
-onHeaderReceive(callback: Callback<ResponseHeaders>): void
-```
-
-Registers an observer for HTTP Response Header events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** 
-- API version 23 and later: SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes |
-
-## onMessage
-
-```TypeScript
-onMessage(callback: AsyncCallback<string | ArrayBuffer>): void
-```
-
-Enables listening for the message events of a WebSocket connection. data in AsyncCallback can be a string(API 6) or an ArrayBuffer(API 8).
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | Yes |
-
-## onOpen
-
-```TypeScript
-onOpen(callback: Callback<OpenResult>): void
-```
-
-Enables listening for the open events of a WebSocket connection.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | Yes |
-
-## onWebSocketClose
-
-```TypeScript
-onWebSocketClose(callback: AsyncCallback<CloseResult>): void
-```
-
-Enables listening for the close events of a WebSocket connection.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes |
-
-## onWebSocketError
-
-```TypeScript
-onWebSocketError(callback: ErrorCallback): void
-```
-
-Enables listening for the error events of a WebSocket connection.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
 
 ## send
 
@@ -1176,8 +574,6 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void
 Sends data through a WebSocket connection. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1199,103 +595,6 @@ Sends data through a WebSocket connection. This API uses an asynchronous callbac
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-let url = "ws://"
-class OutValue {
-  status: number = 0
-  message: string = ""
-}
-ws.connect(url, (err: BusinessError, value: boolean) => {
-    if (!err) {
-      console.info("connect success")
-    } else {
-      console.error(`connect fail. Code: ${err.code}, message: ${err.message}`)
-    }
-});
-ws.on('open', (err: BusinessError, value: Object) => {
-  console.info("on open, status:" + (value as OutValue).status + ", message:" + (value as OutValue).message)
-    ws.send("Hello, server!", (err: BusinessError, value: boolean) => {
-    if (!err) {
-      console.info("send success")
-    } else {
-      console.error(`send fail. Code: ${err.code}, message: ${err.message}`)
-    }
-  });
-});
-```
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-let url = "ws://"
-class OutValue {
-  status: number = 0
-  message: string = ""
-}
-ws.connect(url, (err: BusinessError, value: boolean) => {
-    if (!err) {
-      console.info("connect success")
-    } else {
-      console.error("connect fail. Code: ${err.code}, message: ${err.message}")
-    }
-});
-
-ws.on('open', (err: BusinessError, value: Object) => {
-  console.info("on open, status:" + (value as OutValue).status + ", message:" + (value as OutValue).message)
-  let promise = ws.send("Hello, server!");
-  promise.then((value: boolean) => {
-    console.info("send success")
-  }).catch((err:string) => {
-    console.error("send fail, error:" + JSON.stringify(err))
-  });
-});
-```
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let localServer: webSocket.WebSocketServer;
-let config: webSocket.WebSocketServerConfig = {
-  serverPort: 8080, // Listening port
-  maxConcurrentClientsNumber: 10,
-  maxConnectionsForOneClient: 10,
-}
-
-localServer = webSocket.createWebSocketServer();
-localServer.start(config).then((success: boolean) => {
-  if (success) {
-    console.info('webSocket server start success');
-  } else {
-    console.error('websocket server start failed');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to start. Code: ${error.code}, message: ${error.message}`);
-});
-
-localServer.on('connect', async (connection: webSocket.WebSocketConnection) => {
-  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
-  // Use send() to send data to the client when the on('connect') event is received.
-  localServer.send("Hello, I'm server!", connection).then((success: boolean) => {
-    if (success) {
-      console.info('message send successfully');
-    } else {
-      console.error('message send failed');
-    }
-  }).catch((error: BusinessError) => {
-    console.error(`message send failed, Code: ${error.code}, message: ${error.message}`);
-  });
-});
-```
-
 ## send
 
 ```TypeScript
@@ -1305,8 +604,6 @@ send(data: string | ArrayBuffer): Promise<boolean>
 Sends data through the WebSocket connection. This API uses a promise to return the result.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1332,7 +629,3 @@ Sends data through the WebSocket connection. This API uses a promise to return t
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [send](#send)

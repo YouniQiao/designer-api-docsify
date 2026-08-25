@@ -2,8 +2,6 @@
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet)
@@ -29,8 +27,6 @@ Shows an action sheet in the given settings.
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 18
 

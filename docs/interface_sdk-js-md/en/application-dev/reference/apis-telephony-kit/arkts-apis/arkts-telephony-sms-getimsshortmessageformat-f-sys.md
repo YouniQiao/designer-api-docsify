@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getImsShortMessageFormat
@@ -15,8 +15,6 @@ function getImsShortMessageFormat(callback: AsyncCallback<string>): void
 Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, or **unknown**. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -39,28 +37,6 @@ Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, o
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.getImsShortMessageFormat((err: BusinessError, data: string) => {
-      console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.getImsShortMessageFormat().then((data: string) => {
-    console.info(`getImsShortMessageFormat success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getImsShortMessageFormat failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getImsShortMessageFormat
 
@@ -71,8 +47,6 @@ function getImsShortMessageFormat(): Promise<string>
 Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, or **unknown**. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -92,7 +66,3 @@ Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, o
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getImsShortMessageFormat](#getimsshortmessageformat)

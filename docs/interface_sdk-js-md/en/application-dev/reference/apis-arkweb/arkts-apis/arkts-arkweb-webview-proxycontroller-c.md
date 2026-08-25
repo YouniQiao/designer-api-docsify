@@ -4,14 +4,12 @@ ProxyController is a static class in the ArkWeb framework used to manage the pro
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## applyProxyOverride
@@ -23,8 +21,6 @@ static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChang
 Sets the proxy configuration used by all Web instances in the app. URLs that match the bypass rules inserted through [insertBypassRule](arkts-arkweb-webview-proxyconfig-c.md#insertbypassrule) will not use the proxy but instead send requests directly to the origin address specified by the URL. After the proxy is successfully set, there is no guarantee that the new proxy configuration will be used immediately after the network is connected. Before loading a page, wait for the callback function to be triggered. The callback function is invoked on the UI thread.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -43,10 +39,6 @@ Sets the proxy configuration used by all Web instances in the app. URLs that mat
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-For details about the sample code, see [removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride).
-
 ## removeProxyOverride
 
 ```TypeScript
@@ -56,8 +48,6 @@ static removeProxyOverride(callback: OnProxyConfigChangeCallback): void
 Removes the proxy configuration. After the proxy configuration is removed, there is no guarantee that the default network connection will be restored immediately after the network is connected. Before loading a page, wait for the callback function to be triggered. The callback function is invoked on the UI thread.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -74,88 +64,3 @@ Removes the proxy configuration. After the proxy configuration is removed, there
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  proxyRules: webview.ProxyRule[] = [];
-
-  build() {
-    Row() {
-      Column() {
-        Button("applyProxyOverride").onClick(()=>{
-          let proxyConfig:webview.ProxyConfig = new webview.ProxyConfig();
-          // The first proxy configuration https://proxy.XXX.com is preferentially used.
-          // When the proxy fails, insertDirectRule is used.
-          try {
-            proxyConfig.insertProxyRule("https://proxy.XXX.com", webview.ProxySchemeFilter.MATCH_ALL_SCHEMES);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-          try {
-            proxyConfig.insertDirectRule(webview.ProxySchemeFilter.MATCH_HTTP);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-          try {
-            proxyConfig.insertBypassRule("*.example.com");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-          proxyConfig.clearImplicitRules();
-          proxyConfig.bypassHostnamesWithoutPeriod();
-          try {
-            proxyConfig.enableReverseBypass(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-          let bypassRules = proxyConfig.getBypassRules();
-          for (let i = 0; i < bypassRules.length; i++) {
-            console.info("bypassRules: " + bypassRules[i]);
-          }
-          this.proxyRules = proxyConfig.getProxyRules();
-          for (let i = 0; i < this.proxyRules.length; i++) {
-            console.info("SchemeFilter: " + this.proxyRules[i].getSchemeFilter());
-            console.info("Url: " + this.proxyRules[i].getUrl());
-          }
-          let isReverseBypassRule = proxyConfig.isReverseBypassEnabled();
-          console.info("isReverseBypassRules: " + isReverseBypassRule);
-          try {
-            webview.ProxyController.applyProxyOverride(proxyConfig, () => {
-              console.info("PROXYCONTROLLER proxy changed");
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-        Button("loadUrl-https").onClick(()=>{
-          this.controller.loadUrl("https://www.example.com")
-        })
-        Button("loadUrl-http").onClick(()=>{
-          this.controller.loadUrl("http://www.example.com")
-        })
-        Button("removeProxyOverride").onClick(()=>{
-          try {
-          webview.ProxyController.removeProxyOverride(() => {
-            console.info("PROXYCONTROLLER proxy changed");
-          });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-        Web({ src: 'www.example.com', controller: this.controller})
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

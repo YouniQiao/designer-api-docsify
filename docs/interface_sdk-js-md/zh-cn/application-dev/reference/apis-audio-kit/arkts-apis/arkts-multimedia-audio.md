@@ -1,11 +1,12 @@
 # @ohos.multimedia.audio
 
 音频管理提供基础的音频控制能力，包括音量调节、设备管理、数据采集及渲染。 该模块提供以下音频相关的常用功能：  
-- [AudioManager](arkts-audio-audio-audiomanager-i.md)：音频管理器。 - [AudioDeviceEnhanceManager](arkts-audio-audio-audiodeviceenhancemanager-i.md)：音频设备增强管理器。 - [AudioRenderer](arkts-audio-audio-audiorenderer-i.md)：音频渲染，用于播放PCM（Pulse Code Modulation）音频数据。 - [AudioCapturer](arkts-audio-audio-audiocapturer-i.md)：音频采集，用于录制PCM音频数据。
+- [AudioManager](arkts-audio-audio-audiomanager-i.md)：音频管理器。  
+- [AudioDeviceEnhanceManager](arkts-audio-audio-audiodeviceenhancemanager-i.md)：音频设备增强管理器。  
+- [AudioRenderer](arkts-audio-audio-audiorenderer-i.md)：音频渲染，用于播放PCM（Pulse Code Modulation）音频数据。  
+- [AudioCapturer](arkts-audio-audio-audiocapturer-i.md)：音频采集，用于录制PCM音频数据。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Multimedia.Audio.Core
@@ -13,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## 汇总
@@ -24,12 +25,7 @@ import { audio } from '@kit.AudioKit';
 | --- |
 | [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) |
 | [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) |
-| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) |
-| [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) |
 | [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md) |
-| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md) |
-| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) |
-| [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) |
 | [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) |
 | [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) |
 | [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) |
@@ -40,11 +36,8 @@ import { audio } from '@kit.AudioKit';
 | 名称 |
 | --- |
 | [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md) |
-| [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md) |
 | [createGlobalAudioLoopback](arkts-audio-audio-createglobalaudioloopback-f-sys.md) |
 | [createMicInAudioCapturer](arkts-audio-audio-createmicinaudiocapturer-f-sys.md) |
-| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) |
-| [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) |
 | [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) |
 | [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md) |
 <!--DelEnd-->

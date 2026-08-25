@@ -8,8 +8,6 @@ Represents the result returned.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)
@@ -19,7 +17,7 @@ Represents the result returned.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## certChains
@@ -33,8 +31,6 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 **Type:** Array&lt;string&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -70,8 +64,6 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -87,8 +79,6 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 **Type:** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

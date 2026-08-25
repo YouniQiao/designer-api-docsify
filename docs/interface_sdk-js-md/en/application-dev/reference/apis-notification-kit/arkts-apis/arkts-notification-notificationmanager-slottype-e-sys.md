@@ -4,8 +4,6 @@ Enumerates the notification slot types.Different types correspond to different [
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## EMERGENCY_INFORMATION
@@ -17,8 +15,6 @@ EMERGENCY_INFORMATION = 10
 Emergency event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isGeocoderAvailable
@@ -15,8 +15,6 @@ function isGeocoderAvailable(): boolean
 判断地理编码与逆地理编码服务状态。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geocoder
 
@@ -32,15 +30,3 @@ function isGeocoderAvailable(): boolean
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  let isAvailable = geoLocationManager.isGeocoderAvailable();
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

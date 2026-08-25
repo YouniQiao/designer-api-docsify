@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemLoad } from '@kit.BasicServicesKit';
+import { systemLoad } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## on('systemLoadChange')
@@ -15,8 +15,6 @@ function on(type: 'systemLoadChange', callback: Callback<SystemLoadLevel>): void
 Enables listening for system load level changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ResourceSchedule.SystemLoad
 
@@ -32,20 +30,3 @@ Enables listening for system load level changes. This API uses an asynchronous c
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { systemLoad } from '@kit.BasicServicesKit';
-
-function onSystemLoadChange(res: systemLoad.SystemLoadLevel) {
-    console.info(`system load changed, current level ` + res);
-}
-
-try {
-    systemLoad.on('systemLoadChange', onSystemLoadChange);
-    console.info(`register systemload callback succeeded. `);
-} catch (err) {
-    console.error(`register systemload callback failed: ` + JSON.stringify(err));
-}
-```

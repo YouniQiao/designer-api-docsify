@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setWifiProfile
@@ -15,8 +15,6 @@ function setWifiProfile(admin: Want, profile: WifiProfile, callback: AsyncCallba
 为当前设备配置Wi-Fi，使连接到指定网络。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -48,57 +46,6 @@ function setWifiProfile(admin: Want, profile: WifiProfile, callback: AsyncCallba
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let profile: wifiManager.WifiProfile = {
-  // 需根据实际情况进行替换
-  'ssid': 'name',
-  'preSharedKey': 'passwd',
-  'securityType': wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
-};
-
-wifiManager.setWifiProfile(wantTemp, profile, (err) => {
-  if (err) {
-    console.error(`Failed to set wifi profile. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting wifi profile');
-});
-```
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let profile: wifiManager.WifiProfile = {
-  // 需根据实际情况进行替换
-  'ssid': 'name',
-  'preSharedKey': 'passwd',
-  'securityType': wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
-};
-
-wifiManager.setWifiProfile(wantTemp, profile).then(() => {
-  console.info('Succeeded in setting wifi profile');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set wifi profile. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## setWifiProfile
 
@@ -109,8 +56,6 @@ function setWifiProfile(admin: Want, profile: WifiProfile): Promise<void>
 为当前设备配置Wi-Fi，使连接到指定网络。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -146,7 +91,3 @@ function setWifiProfile(admin: Want, profile: WifiProfile): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [setWifiProfile](#setwifiprofile)

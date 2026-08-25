@@ -4,14 +4,12 @@ Describes the properties and behavior of the arc dot navigation indicator.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
+import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from 'kits/@kit.ArkUI';
 ```
 
 ## arcDirection
@@ -24,8 +22,6 @@ Sets the direction of the arc navigation indicator.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -34,7 +30,7 @@ Sets the direction of the arc navigation indicator.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| direction | Optional&lt;[ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md)&gt; | Yes |
+| direction | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -48,11 +44,9 @@ Sets the direction of the arc navigation indicator.
 backgroundColor(color: Optional<ResourceColor>): ArcDotIndicator
 ```
 
-Sets the color of the arc navigation indicator when it is long-pressed.
+Sets the color of the arc navigation indicator when it is number-pressed.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -62,7 +56,7 @@ Sets the color of the arc navigation indicator when it is long-pressed.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Optional & lt;ResourceColor & gt; | Yes |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -80,8 +74,6 @@ A constructor used to create an **ArcDotIndicator** instance.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -96,8 +88,6 @@ Sets the color of the unselected navigation points in the arc navigation indicat
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -106,7 +96,7 @@ Sets the color of the unselected navigation points in the arc navigation indicat
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Optional & lt;ResourceColor & gt; | Yes |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -124,8 +114,6 @@ Sets the mask gradient color of the arc navigation indicator.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -134,7 +122,7 @@ Sets the mask gradient color of the arc navigation indicator.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Optional & lt;LinearGradient & gt; | Yes |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LinearGradient&gt; | Yes |
 
 **Return value:**
 
@@ -152,8 +140,6 @@ Sets the color of the selected navigation point in the arc navigation indicator.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -162,7 +148,7 @@ Sets the color of the selected navigation point in the arc navigation indicator.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Optional & lt;ResourceColor & gt; | Yes |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 **Return value:**
 

@@ -4,14 +4,12 @@ Defines the dynamic range mode used for the snapshot.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## dynamicRangeMode
@@ -32,8 +30,6 @@ For details about the enum values, see DynamicRangeMode.Default value: **STANDAR
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -52,56 +48,8 @@ Whether the system automatically determines the dynamic range mode to be used.Th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct SnapshotDynamicRangeExample {
-  @State pixmap: image.PixelMap | undefined = undefined;
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.pixmap).width(200).height(200).border({ color: Color.Black, width: 2 }).margin(5)
-        // Replace $r('app.media.img') with the image resource file you use.
-        Image($r('app.media.img'))
-          .autoResize(true)
-          .width(200)
-          .height(200)
-          .margin(5)
-          .id("root")
-      }
-
-      Button("click to generate UI snapshot")
-        .onClick(() => {
-          this.getUIContext().getComponentSnapshot().get("root", (error: Error, pixmap: image.PixelMap) => {
-            if (error) {
-              console.error(`error:${JSON.stringify(error)}`)
-              return;
-            }
-            this.pixmap = pixmap
-          }, {
-            scale: 2,
-            waitUntilRenderFinished: true,
-            // Set isAuto to true for the dynamic range mode.
-            dynamicRangeMode: { dynamicRangeMode: DynamicRangeMode.STANDARD, isAuto: true }
-          })
-        }).margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-```

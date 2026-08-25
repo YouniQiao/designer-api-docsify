@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setWifiDisabled
@@ -15,8 +15,6 @@ function setWifiDisabled(admin: Want, disabled: boolean): void
 设置禁用Wi-Fi策略。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -35,7 +33,7 @@ function setWifiDisabled(admin: Want, disabled: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
-| disabled | boolean | 是 |
+| [disabled](../../apis-arkui/arkts-components/arkts-arkui-statestyles-i.md) | boolean | 是 |
 
 **错误码：**
 
@@ -46,23 +44,3 @@ function setWifiDisabled(admin: Want, disabled: boolean): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  wifiManager.setWifiDisabled(wantTemp, true);
-  console.info('Succeeded in setting the wifi disabled');
-} catch (err) {
-  console.error(`Failed to set the wifi disabled. Code: ${err.code}, message: ${err.message}`);
-};
-```

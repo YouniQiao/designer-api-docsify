@@ -1,6 +1,8 @@
 # AeadParamsSpec
 
-Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).<br>It is applicable to the CCM and GCM modes of AES. <br>It is applicable to the GCM mode of SM4. <br>It is applicable to ChaCha20-Poly1305.
+Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
+
+It is applicable to the CCM and GCM modes of AES. It is applicable to the GCM mode of SM4. It is applicable to ChaCha20-Poly1305.
 
 > **NOTE：**&gt;
 > When **AeadParamsSpec** is used for encryption in AES-CCM mode:
@@ -13,14 +15,12 @@ Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.CryptoFramework.Cipher
 
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## authenticatedData
@@ -34,8 +34,6 @@ Optional additional authenticated data.
 **Type:** Uint8Array
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,8 +59,6 @@ Number used once.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -72,10 +68,12 @@ Number used once.
 ## tagLen
 
 ```TypeScript
-tagLen?: int
+tagLen?: number
 ```
 
-Authentication tag length, in bytes.<br>For encryption, the tag will be added to the end of the ciphertext. <br>For decryption, the tag should be at the end of the ciphertext. <br>The value should be an integer.
+Authentication tag length, in bytes.
+
+For encryption, the tag will be added to the end of the ciphertext. For decryption, the tag should be at the end of the ciphertext. The value should be an integer.
 
 > **NOTE：**
 > - For AES-CCM, the default value is 12. The supported values are 4, 6, 8, 10, 12, 14, and 16.
@@ -83,11 +81,9 @@ Authentication tag length, in bytes.<br>For encryption, the tag will be added to
 > - For SM4-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16.
 > - For ChaCha20-Poly1305, the default value is 16. The supported value is 16.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

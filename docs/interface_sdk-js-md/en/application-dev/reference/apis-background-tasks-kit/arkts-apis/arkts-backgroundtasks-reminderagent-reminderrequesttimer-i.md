@@ -6,8 +6,6 @@ Defines a reminder for a scheduled timer.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md)
@@ -17,7 +15,7 @@ Defines a reminder for a scheduled timer.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## triggerTimeInSeconds
@@ -31,8 +29,6 @@ Number of seconds in the countdown timer. Unit: s.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

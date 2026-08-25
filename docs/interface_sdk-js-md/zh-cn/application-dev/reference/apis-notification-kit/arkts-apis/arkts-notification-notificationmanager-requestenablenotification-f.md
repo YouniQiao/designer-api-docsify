@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## requestEnableNotification
@@ -15,8 +15,6 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 当前应用请求通知使能。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -40,126 +38,6 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600004](../errorcode-notification.md#1600004-通知开关关闭) |
 | [1600013](../errorcode-notification.md#1600013-通知弹窗已弹出) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`);
-      let requestEnableNotificationCallback = (err: BusinessError): void => {
-        if (err) {
-          hilog.error(0x0000, 'testTag', `[ANS] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
-        } else {
-          hilog.info(0x0000, 'testTag', `[ANS] requestEnableNotification success`);
-        }
-      };
-      notificationManager.requestEnableNotification(this.context, requestEnableNotificationCallback);
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { AppStorage } from '@ohos.arkui.stateManagement'
-import common from '@ohos.app.ability.common';
-
-let requestEnableNotificationCallback = (err: BusinessError | null): void => {
-  if (err) {
-    console.info(`requestEnableNotification1 Promise err: ${err.code}, errMes: ${err.message}`)
-  } else {
-    console.info(`requestEnableNotification1 Promise success!`)
-  }
-};
-let testAbilityContext: common.UIAbilityContext = AppStorage.get<common.UIAbilityContext>('UIAbilityContext') as common.UIAbilityContext
-notificationManager.requestEnableNotification(testAbilityContext, requestEnableNotificationCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`);
-      notificationManager.requestEnableNotification(this.context).then(() => {
-        hilog.info(0x0000, 'testTag', `[ANS] requestEnableNotification success`);
-      }).catch((err: BusinessError) => {
-        hilog.error(0x0000, 'testTag', `[ANS] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import common from '@ohos.app.ability.common';
-import { AppStorage } from '@ohos.arkui.stateManagement'
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let testAbilityContext: common.UIAbilityContext = AppStorage.get<common.UIAbilityContext>('UIAbilityContext') as common.UIAbilityContext
-    await notificationManager.requestEnableNotification(testAbilityContext).then(() => {
-      console.info(`requestEnableNotification Promise success!`)
-    }).catch((err: Error): void => {
-      let error: BusinessError = err as BusinessError;
-      console.info(`requestEnableNotification Promise err: ${error.code}, errMes: ${error.message}`)
-    })
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let requestEnableNotificationCallback = (err: BusinessError): void => {
-  if (err) {
-    console.error(`requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`requestEnableNotification success`);
-  }
-};
-notificationManager.requestEnableNotification(requestEnableNotificationCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.requestEnableNotification().then(() => {
-  console.info(`requestEnableNotification success`);
-}).catch((err: BusinessError) => {
-  console.error(`requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
 
 
 ## requestEnableNotification
@@ -180,8 +58,6 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -212,10 +88,6 @@ openNotificationSettingsWithResult 拉起应用的通知设置界面。
 | [1600004](../errorcode-notification.md#1600004-通知开关关闭) |
 | [1600013](../errorcode-notification.md#1600013-通知弹窗已弹出) |
 
-**示例**
-
-参见 [requestEnableNotification](#requestenablenotification)
-
 
 ## requestEnableNotification
 
@@ -226,8 +98,6 @@ function requestEnableNotification(): Promise<void>
 当前应用请求通知使能。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -251,10 +121,6 @@ function requestEnableNotification(): Promise<void>
 | [1600004](../errorcode-notification.md#1600004-通知开关关闭) |
 | [1600013](../errorcode-notification.md#1600013-通知弹窗已弹出) |
 
-**示例**
-
-参见 [requestEnableNotification](#requestenablenotification)
-
 
 ## requestEnableNotification
 
@@ -273,8 +139,6 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 > 。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -310,7 +174,3 @@ openNotificationSettingsWithResult 拉起应用的通知设置界面。
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600004](../errorcode-notification.md#1600004-通知开关关闭) |
 | [1600013](../errorcode-notification.md#1600013-通知弹窗已弹出) |
-
-**示例**
-
-参见 [requestEnableNotification](#requestenablenotification)

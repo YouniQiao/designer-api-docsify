@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## getFoldDisplayMode
@@ -15,8 +15,6 @@ function getFoldDisplayMode(): FoldDisplayMode
 获取可折叠设备当前的显示模式。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -33,10 +31,3 @@ function getFoldDisplayMode(): FoldDisplayMode
 | 错误码ID |
 | --- |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-let data: display.FoldDisplayMode = display.getFoldDisplayMode();
-console.info(`Succeeded in obtaining fold display mode. Data: ${data}`);
-```

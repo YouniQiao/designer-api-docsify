@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## selectContacts
@@ -16,8 +16,6 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
@@ -33,58 +31,6 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 | 错误码ID |
 | --- |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 打开选择联系人UI界面
-contact.selectContacts((err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// 打开选择联系人UI界面
-let promise = contact.selectContacts();
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 打开选择联系人UI界面，支持选择一个联系人
-contact.selectContacts({
-  isMultiSelect:false
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// 打开选择联系人UI界面，支持选择一个联系人
-let promise = contact.selectContacts({isMultiSelect:false});
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
 
 
 ## selectContacts
@@ -97,8 +43,6 @@ function selectContacts(): Promise<Array<Contact>>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.Contacts
@@ -108,10 +52,6 @@ function selectContacts(): Promise<Array<Contact>>
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
-
-**示例**
-
-参见 [selectContacts](#selectcontacts)
 
 
 ## selectContacts
@@ -123,8 +63,6 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入[筛选条件](arkts-contacts-contact-contactselectionoptions-i.md)）。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -143,10 +81,6 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 | --- |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
-**示例**
-
-参见 [selectContacts](#selectcontacts)
-
 
 ## selectContacts
 
@@ -157,8 +91,6 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入筛选条件）。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -181,7 +113,3 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 | 错误码ID |
 | --- |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-**示例**
-
-参见 [selectContacts](#selectcontacts)

@@ -4,14 +4,12 @@ Describes heap memory information of either an ArkTS-VM, or the shared heap memo
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## heapObjectSize
@@ -25,8 +23,6 @@ The value is a number representing the total size of all heap objects in KB, fro
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ The value is a string representing whether this memory information is from an Ar
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -62,8 +56,6 @@ If this memory information describes an ArkTS-VM local heap, the value is a numb
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -79,8 +71,6 @@ If this memory information describes an ArkTS-VM local heap, the value is a stri
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

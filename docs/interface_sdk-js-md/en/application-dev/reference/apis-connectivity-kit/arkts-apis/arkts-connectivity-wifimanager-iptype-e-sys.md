@@ -1,10 +1,8 @@
 # IpType (System API)
 
-Wi-Fi IP type enumeration.@enum { int }
+Wi-Fi IP type enumeration.@enum { number }
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -20,8 +18,6 @@ Use statically configured IP settings
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -36,8 +32,6 @@ Use dynamically configured IP settings
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ UNKNOWN
 No IP details are assigned
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

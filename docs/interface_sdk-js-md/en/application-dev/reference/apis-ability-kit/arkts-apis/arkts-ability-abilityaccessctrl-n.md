@@ -2,14 +2,12 @@
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 ## Modules to Import
 
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

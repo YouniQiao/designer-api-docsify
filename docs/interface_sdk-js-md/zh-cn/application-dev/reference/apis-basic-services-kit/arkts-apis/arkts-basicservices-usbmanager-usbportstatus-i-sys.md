@@ -4,8 +4,6 @@ USB设备端口角色信息。currentMode表示端口的当前USB模式，其值
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ USB设备端口角色信息。currentMode表示端口的当前USB模式，其值
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## currentDataRole
 
 ```TypeScript
-currentDataRole: int
+currentDataRole: number
 ```
 
 当前设备数据传输角色，取值参见[DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -37,16 +33,14 @@ currentDataRole: int
 ## currentMode
 
 ```TypeScript
-currentMode: int
+currentMode: number
 ```
 
 当前的USB模式，取值参见[PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -55,16 +49,14 @@ currentMode: int
 ## currentPowerRole
 
 ```TypeScript
-currentPowerRole: int
+currentPowerRole: number
 ```
 
 当前设备电源角色，取值参见[PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 

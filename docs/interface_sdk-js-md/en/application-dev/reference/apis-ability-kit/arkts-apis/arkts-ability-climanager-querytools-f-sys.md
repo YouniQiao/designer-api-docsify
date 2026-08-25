@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryTools
@@ -15,8 +15,6 @@ function queryTools(): Promise<Array<ToolInfo>>
 Query all detailed information of tools
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.QUERY_CLI_TOOL
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## unregisterWatermarkCallback
@@ -15,8 +15,6 @@ function unregisterWatermarkCallback(callback?: WatermarkCallback): void
 注销强制水印处理的监听事件。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_PRINT
 
@@ -35,23 +33,3 @@ function unregisterWatermarkCallback(callback?: WatermarkCallback): void
 | 错误码ID |
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-
-let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => {
-    console.info('Watermark callback triggered, jobId: ' + jobId + ', fd: ' + fd);
-}
-
-try {
-    print.registerWatermarkCallback(watermarkCallback);
-    console.info('registerWatermarkCallback success');
-    // 取消注册指定的水印处理回调
-    print.unregisterWatermarkCallback(watermarkCallback);
-    console.info('unregisterWatermarkCallback success');
-} catch (error) {
-    console.error('unregisterWatermarkCallback error: ' + JSON.stringify(error));
-}
-```

@@ -1,10 +1,8 @@
 # GeometryType
 
-几何类型枚举，用于指定不同的几何类型。@enum { int }
+几何类型枚举，用于指定不同的几何类型。@enum { number }
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ CUSTOM = 0
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## CUBE
@@ -31,8 +27,6 @@ CUBE = 1
 立方体类型。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -46,8 +40,6 @@ PLANE = 2
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## SPHERE
@@ -60,8 +52,6 @@ SPHERE = 3
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## CYLINDER
@@ -73,7 +63,5 @@ CYLINDER = 4
 圆柱体类型。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

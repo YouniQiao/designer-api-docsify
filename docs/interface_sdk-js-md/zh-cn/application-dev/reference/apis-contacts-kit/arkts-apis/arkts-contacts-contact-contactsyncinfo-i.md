@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## completedBatches
@@ -22,11 +20,9 @@ completedBatches: Array<number>
 
 表示已成功同步的联系人的批处理标识符数组。值的范围是从1到totalBatches。
 
-**类型：** Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +38,9 @@ lastSyncTime: number
 
 表示联系人同步的最新时间戳（毫秒）。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +60,6 @@ mode: ContactSyncMode
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -82,11 +74,9 @@ syncId: number
 
 表示用于同步所有联系人的同步标识符。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,11 +92,9 @@ totalBatches: number
 
 表示要同步的联系人批次总数。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

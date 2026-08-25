@@ -10,14 +10,12 @@ ChipItemStyle定义了Chip的通用属性。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
+import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -29,11 +27,9 @@ backgroundColor?: ResourceColor
 Chip背景颜色。默认值：\$r('sys.color.ohos_id_color_button_normal')  
 **说明：**从API版本26.0.0开始，当设置backgroundSystemMaterial时，应将backgroundColor设为Color.Transparent，否则会与系统材质冲突；当 backgroundSystemMaterial为undefined时，backgroundColor属性生效。为undefined时，backgroundColor走默认值。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,11 +46,9 @@ fontColor?: ResourceColor
 Chip文字颜色。默认值：\$r('sys.color.ohos_id_color_text_primary')  
 **说明：**从API版本26.0.0开始，backgroundSystemMaterial设置自动反色的系统材质时，fontColor使用系统预定义的可反色颜色资源，文字颜色自动适配到材质背景色的反色。为undefined时，fontColor走默认值。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,11 +65,9 @@ selectedBackgroundColor?: ResourceColor
 Chip激活时的背景颜色。默认值：\$r('sys.color.ohos_id_color_emphasize')  
 **说明：**从API版本26.0.0开始，当设置selectedBackgroundSystemMaterial时，应将selectedBackgroundColor设为Color.Transparent，否则会与系统材质冲突； 当selectedBackgroundSystemMaterial为undefined时，selectedBackgroundColor属性生效。为undefined时，selectedBackgroundColor走默认值。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,11 +84,9 @@ selectedFontColor?: ResourceColor
 Chip激活时的文字颜色。默认值：\$r('sys.color.ohos_id_color_text_primary_contrary')  
 **说明：**从API版本26.0.0开始，selectedBackgroundSystemMaterial设置自动反色的系统材质时，selectedFontColor使用系统预定义的可反色颜色资源（如 `\$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。为undefined时，selectedFontColor走默认值。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,11 +102,9 @@ size?: ChipSize | SizeOptions
 
 Chip尺寸，使用时需要从Chip组件引入ChipSize类型。默认值：ChipSize.NORMAL或{ height: 0, width: 0 }为undefined时，使用默认值。
 
-**类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
+**类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

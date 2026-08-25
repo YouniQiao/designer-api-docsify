@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## clearWindowMask
@@ -23,8 +21,6 @@ clearWindowMask(): Promise<void>
 清除异形窗口的掩码使其恢复为矩形窗口，使用Promise异步回调。异形窗口为非常规形状的窗口，掩码用于描述异形窗口的形状。此接口仅限子窗和全局悬浮窗可用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,83 +41,15 @@ clearWindowMask(): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let maskWidth = windowClass.getWindowProperties().windowRect.width;
-  let maskHeight = windowClass.getWindowProperties().windowRect.height;
-  let windowMask = Array<Array<number>>(maskHeight).fill([]).map((_, row) => {
-    let array = Array<number>(maskWidth);
-    for (let i = 0 ; i < maskWidth; i++) {
-      array[i] = (i + row) > (maskWidth + maskHeight) / 2 ? 1 : 0;
-    }
-    return array;
-  });
-  windowClass.setWindowMask(windowMask).then(() => {
-    console.info('Succeeded in setting the window mask.');
-    windowClass?.clearWindowMask().then(() => {
-      console.info('Succeeded in clearing the window mask.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to clear window mask. Cause code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set window mask. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set or clear the window mask. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let maskWidth = windowClass.getWindowProperties().windowRect.width;
-  let maskHeight = windowClass.getWindowProperties().windowRect.height;
-  let windowMask = Array<Array<Long>>(maskHeight).fill([]).map((_, row) => {
-    let array = Array<Long>(maskWidth);
-    for (let i = 0 ; i < maskWidth; i++) {
-      array[i] = (i + row) > (maskWidth + maskHeight) / 2 ? 1 : 0;
-    }
-    return array;
-  });
-  windowClass.setWindowMask(windowMask).then(() => {
-    console.info('Succeeded in setting the window mask.');
-    windowClass?.clearWindowMask().then(() => {
-      console.info('Succeeded in clearing the window mask.');
-    }).catch((err) => {
-      console.error(`Failed to clear window mask. Cause code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err) => {
-    console.error(`Failed to set window mask. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set or clear the window mask. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## clientToGlobalDisplay
 
-ArkTS-Dyn:
 ```TypeScript
 clientToGlobalDisplay(winX: number, winY: number): Position
-```
-
-ArkTS-Sta:
-```TypeScript
-clientToGlobalDisplay(winX: int, winY: int): Position
 ```
 
 将相对于当前窗口左上角的坐标转换为相对于主屏幕左上角的全局坐标。不支持在经过显示缩放的窗口中调用，例如手机或平板设备在非自由多窗模式下的悬浮窗场景。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -129,8 +57,8 @@ clientToGlobalDisplay(winX: int, winY: int): Position
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| winX | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| winY | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| winX | number | 是 |
+| winY | number | 是 |
 
 **返回值：**
 
@@ -147,41 +75,10 @@ clientToGlobalDisplay(winX: int, winY: int): Position
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let position = windowClass.clientToGlobalDisplay(100, 100);
-  console.info(`Succeeded in converting the position in the current window to the position in global display. Position: ` + JSON.stringify(position));
-} catch (exception) {
-  console.error(`Failed to convert the position. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let position = windowClass.clientToGlobalDisplay(100, 100);
-  console.info(`Succeeded in converting the position in the current window to the position in global display. Position: ${JSON.stringify(position)}`);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to convert the position. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## convertOrientationAndRotation
 
-ArkTS-Dyn:
 ```TypeScript
 convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, value: int): int
 ```
 
 提供窗口方向、屏幕方向和屏幕角度互相转换的能力。窗口方向指窗口所在屏幕的方向，以窗口模块对横竖屏的定义方式表示，窗口的方向分别用0、1、2和3表示竖屏、反向横屏、反向竖屏和横屏四个方向，其对横竖屏的定义与 [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)和枚举类 [Orientation](arkts-arkui-window-orientation-e.md)中对横竖屏的定义一致，如Orientation设置为LANDSCAPE时，窗口方向为横屏。
@@ -193,8 +90,6 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -203,13 +98,13 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 | --- | --- | --- |
 | from | [RotationInfoType](arkts-arkui-window-rotationinfotype-e.md) | 是 |
 | to | [RotationInfoType](arkts-arkui-window-rotationinfotype-e.md) | 是 |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| value | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -218,38 +113,6 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let originalValue: number = 0;
-  let fromType: window.RotationInfoType = window.RotationInfoType.WINDOW_ORIENTATION;
-  let toType: window.RotationInfoType = window.RotationInfoType.DISPLAY_ORIENTATION;
-  let convertedValue: number = windowClass.convertOrientationAndRotation(fromType, toType, originalValue);
-  console.info(`Convert ${originalValue} of type: ${fromType} to ${convertedValue} of type: ${toType}`);
-} catch (exception) {
-  console.error(`Failed to convert orientation and rotation between window and display. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let originalValue: int = 0;
-  let fromType: window.RotationInfoType = window.RotationInfoType.WINDOW_ORIENTATION;
-  let toType: window.RotationInfoType = window.RotationInfoType.DISPLAY_ORIENTATION;
-  let convertedValue: int = windowClass.convertOrientationAndRotation(fromType, toType, originalValue);
-  console.info(`Convert ${originalValue} of type: ${fromType} to ${convertedValue} of type: ${toType}`);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to convert orientation and rotation between window and display. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
 
 ## createSubWindowWithOptions
 
@@ -260,8 +123,6 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 创建主窗口、子窗口或悬浮窗下的子窗口，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -292,59 +153,6 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let options : window.SubWindowOptions = {
-    title: 'title',
-    decorEnabled: true,
-    isModal: true
-  };
-  let promise = windowClass.createSubWindowWithOptions('mySubWindow', options);
-  promise.then((data) => {
-    console.info(`Succeeded in creating the subwindow. Data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create the subwindow. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to create the subwindow. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    try {
-      let options : window.SubWindowOptions = {
-        title: 'title',
-        decorEnabled: true
-      };
-      let promise = windowStage.createSubWindowWithOptions('mySubWindow', options);
-      promise.then((data) => {
-        windowClass = data;
-        console.info(`Succeeded in creating the subwindow. Data: ${JSON.stringify(data)}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to create the subwindow. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to create the subwindow. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
 ## destroy
 
 ```TypeScript
@@ -359,8 +167,6 @@ destroy(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [destroyWindow](#destroywindow)(callback: AsyncCallback&lt;void&gt;)
@@ -372,32 +178,6 @@ destroy(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.destroy((err: BusinessError) => {
-  const errCode: number = err.code;
-  if (err.code) {
-    console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying the window.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.destroy();
-promise.then(() => {
-  console.info('Succeeded in destroying the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## destroy
 
@@ -412,8 +192,6 @@ destroy(): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [destroyWindow](#destroywindow)()
@@ -426,10 +204,6 @@ destroy(): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [destroy](#destroy)
-
 ## destroyWindow
 
 ```TypeScript
@@ -439,8 +213,6 @@ destroyWindow(callback: AsyncCallback<void>): void
 销毁当前窗口，使用callback异步回调，支持系统窗口及应用子窗口，全局悬浮窗和模态窗。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -459,63 +231,6 @@ destroyWindow(callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.destroyWindow((err) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying the window.');
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.destroyWindow((err: BusinessError<void> | null): void => {
-  if (err?.code) {
-    console.error(`Failed to destroy the window. Cause code: ${err?.code}, message: ${err?.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying the window.');
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.destroyWindow();
-promise.then(() => {
-  console.info('Succeeded in destroying the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.destroyWindow();
-promise.then(() => {
-  console.info('Succeeded in destroying the window.');
-}).catch((err: Error) => {
-  console.error(`Failed to destroy the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## destroyWindow
 
 ```TypeScript
@@ -525,8 +240,6 @@ destroyWindow(): Promise<void>
 销毁当前窗口，使用Promise异步回调，支持系统窗口及应用子窗口，全局悬浮窗和模态窗。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -545,10 +258,6 @@ destroyWindow(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [destroyWindow](#destroywindow)
-
 ## disableLandscapeMultiWindow
 
 ```TypeScript
@@ -558,8 +267,6 @@ disableLandscapeMultiWindow(): Promise<void>
 应用部分界面支持横向布局时，在退出该界面时去使能，去使能后不支持进入横向多窗。此接口只对应用主窗口生效，且需要在module.json5配置文件中[abilities](../../../quick-start/module-configuration-file.md#abilities标签)标签中配 置preferMultiWindowOrientation属性为"landscape_auto"。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -578,37 +285,6 @@ disableLandscapeMultiWindow(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let promise = windowClass.disableLandscapeMultiWindow();
-      promise.then(() => {
-        console.info('Succeeded in making multi-window become not landscape.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to make multi-window become not landscape. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
 ## enableDrag
 
 ```TypeScript
@@ -618,8 +294,6 @@ enableDrag(enable: boolean): Promise<void>
 使能/禁止拖拽窗口，仅对系统窗口、应用子窗口、全局悬浮窗和模态窗口生效。使用Promise异步回调。使能后，将允许通过鼠标操作或触摸对窗口进行拉伸操作。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -645,41 +319,6 @@ enableDrag(enable: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.enableDrag(true).then(() => {
-    console.info('succeeded in setting window draggable');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set window draggable. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set window draggable. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.enableDrag(true).then(() => { 
-    console.info('succeeded in setting window draggable');
-  }).catch((err: Error) => {
-    console.error(`Failed to set window draggable. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set window draggable. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## enableLandscapeMultiWindow
 
 ```TypeScript
@@ -689,8 +328,6 @@ enableLandscapeMultiWindow(): Promise<void>
 应用部分界面支持横向布局时，在进入该界面时使能，使能后可支持进入横向多窗。不建议竖向布局界面使用。此接口只对应用主窗口生效，且需要在module.json5配置文件中[abilities](../../../quick-start/module-configuration-file.md#abilities标签)标签中配 置preferMultiWindowOrientation属性为"landscape_auto"。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -709,37 +346,6 @@ enableLandscapeMultiWindow(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let promise = windowClass.enableLandscapeMultiWindow();
-      promise.then(() => {
-        console.info('Succeeded in making multi-window become landscape.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to make multi-window become landscape. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
-
 ## getAvoidArea
 
 ```TypeScript
@@ -747,16 +353,19 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 ```
 
 获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。主窗口/子窗口：  
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 全局悬浮窗、模态窗或系统窗口：  
-- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。
+- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
 
 > **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -771,34 +380,6 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 | type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let type = window.AvoidAreaType.TYPE_SYSTEM;
-windowClass.getAvoidArea(type, (err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let type = window.AvoidAreaType.TYPE_SYSTEM;
-let promise = windowClass.getAvoidArea(type);
-promise.then((data) => {
-  console.info('Succeeded in obtaining the area. Data:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the area. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getAvoidArea
 
 ```TypeScript
@@ -806,16 +387,19 @@ getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 ```
 
 获取当前窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与窗口内容重叠时，需要窗口内容避让的区域。主窗口/子窗口：  
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下， 仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 全局悬浮窗、模态窗或系统窗口：  
-- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。
+- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
 
 > **说明：**&gt;
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getwindowavoidarea)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -835,10 +419,6 @@ getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 | --- |
 | Promise&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; |
 
-**示例**
-
-参见 [getAvoidArea](#getavoidarea)
-
 ## getColorSpace
 
 ```TypeScript
@@ -852,8 +432,6 @@ getColorSpace(): Promise<ColorSpace>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getWindowColorSpace](#getwindowcolorspace)
@@ -865,32 +443,6 @@ getColorSpace(): Promise<ColorSpace>
 | 类型 |
 | --- |
 | Promise & lt;ColorSpace & gt; |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.getColorSpace((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting window colorspace. Cause:' + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.getColorSpace();
-promise.then((data) => {
-  console.info('Succeeded in getting window color space. Cause:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getColorSpace
 
@@ -905,8 +457,6 @@ getColorSpace(callback: AsyncCallback<ColorSpace>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getWindowColorSpace](#getwindowcolorspace)
@@ -919,10 +469,6 @@ getColorSpace(callback: AsyncCallback<ColorSpace>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ColorSpace&gt; | 是 |
 
-**示例**
-
-参见 [getColorSpace](#getcolorspace)
-
 ## getDecorButtonStyle
 
 ```TypeScript
@@ -932,8 +478,6 @@ getDecorButtonStyle(): DecorButtonStyle
 获取装饰栏按钮样式，仅对主窗和子窗生效。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -954,31 +498,6 @@ getDecorButtonStyle(): DecorButtonStyle
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let decorButtonStyle = windowClass.getDecorButtonStyle();
-  console.info(`Succeeded in getting the style of button. Data: ${JSON.stringify(decorButtonStyle)}`);
-} catch (exception) {
-  console.error(`Failed to get the style of button. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let decorButtonStyle = windowClass.getDecorButtonStyle();
-  console.info(`Succeeded in getting the style of button. Data: ${JSON.stringify(decorButtonStyle)}.`);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to get the style of button. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## getGlobalRect
 
 ```TypeScript
@@ -988,8 +507,6 @@ getGlobalRect(): Rect
 获取窗口在其所在物理屏幕上的真实显示区域，同步接口。在某些设备上，窗口显示时可能经过了缩放，此接口可以获取缩放后窗口在屏幕上的真实位置和大小。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -1009,31 +526,6 @@ getGlobalRect(): Rect
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let rect = windowClass.getGlobalRect();
-  console.info(`Succeeded in getting window rect: ` + JSON.stringify(rect));
-} catch (exception) {
-  console.error(`Failed to get window rect. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let rect = windowClass.getGlobalRect();
-  console.info(`Succeeded in getting window rect: ` + JSON.stringify(rect));
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to get window rect. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## getImmersiveModeEnabledState
 
 ```TypeScript
@@ -1043,8 +535,6 @@ getImmersiveModeEnabledState(): boolean
 查询当前窗口是否开启沉浸式布局。仅支持主窗和子窗调用。返回值与[setImmersiveModeEnabledState()](#setimmersivemodeenabledstate)以及 [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)设置结果一致，若 未调用上述两个接口则默认返回false。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1063,29 +553,6 @@ getImmersiveModeEnabledState(): boolean
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let isEnabled = windowClass.getImmersiveModeEnabledState();
-} catch (exception) {
-  console.error(`Failed to get the window immersive mode enabled status. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let isEnabled = windowClass.getImmersiveModeEnabledState();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to get the window immersive mode enabled status. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getParentWindow
 
 ```TypeScript
@@ -1095,8 +562,6 @@ getParentWindow(): Window
 获取子窗口的父窗口。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -1117,34 +582,6 @@ getParentWindow(): Window
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-try {
-  let windowClass: window.Window = window.findWindow('subWindow');
-  let parentWindow: window.Window = windowClass.getParentWindow();
-  let properties = parentWindow.getWindowProperties();
-  console.info(`Succeeded in obtaining parent window properties. Property: ${JSON.stringify(properties)}`);
-} catch (exception) {
-  console.error(`Failed to get the parent window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-try {
-  let windowClass: window.Window = window.findWindow('subWindow');
-  let parentWindow: window.Window = windowClass.getParentWindow();
-  let properties = parentWindow.getWindowProperties();
-  console.info(`Succeeded in obtaining parent window properties. Property: ${JSON.stringify(properties)}`);
-} catch (err: Error) {
-  console.error(`Failed to get the parent window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## getPreferredOrientation
 
 ```TypeScript
@@ -1154,8 +591,6 @@ getPreferredOrientation(): Orientation
 获取窗口的显示方向属性。未指定方向时，返回window.Orientation.UNSPECIFIED。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1173,68 +608,6 @@ getPreferredOrientation(): Orientation
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let orientation = windowClass.getPreferredOrientation();
-      } catch (exception) {
-        console.error(`Failed to get window orientation. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data: window.Window | undefined) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let orientation = windowClass?.getPreferredOrientation();
-      } catch (exception) {
-        let err = exception as BusinessError;
-        console.error(`Failed to get window orientation. Cause code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-};
-```
-
 ## getProperties
 
 ```TypeScript
@@ -1248,8 +621,6 @@ getProperties(callback: AsyncCallback<WindowProperties>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [getWindowProperties](#getwindowproperties)
@@ -1261,32 +632,6 @@ getProperties(callback: AsyncCallback<WindowProperties>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.getProperties((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.getProperties();
-promise.then((data) => {
-  console.info('Succeeded in obtaining the window properties. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the window properties. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getProperties
 
@@ -1301,8 +646,6 @@ getProperties(): Promise<WindowProperties>
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [getWindowProperties](#getwindowproperties)
@@ -1315,10 +658,6 @@ getProperties(): Promise<WindowProperties>
 | --- |
 | Promise&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; |
 
-**示例**
-
-参见 [getProperties](#getproperties)
-
 ## getStatusBarProperty
 
 ```TypeScript
@@ -1328,8 +667,6 @@ getStatusBarProperty(): StatusBarProperty
 获取主窗口状态栏的属性，如状态栏文字颜色。子窗口不支持查询，调用会返回错误码1300004。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1348,84 +685,15 @@ getStatusBarProperty(): StatusBarProperty
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let statusBarProperty = windowClass.getStatusBarProperty();
-        console.info('Succeeded in obtaining system bar properties. Property: ' + JSON.stringify(statusBarProperty));
-      } catch (err) {
-        console.error(`Failed to get system bar properties. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    windowStage.getMainWindow((err: BusinessError<void> | null, windowClass: window.Window | undefined) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      try {
-        let statusBarProperty = windowClass!.getStatusBarProperty();
-        console.info('Succeeded in obtaining system bar properties. Property: ' + JSON.stringify(statusBarProperty));
-      } catch (exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to get system bar properties. Code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-};
-```
-
 ## getSubWindowZLevel
 
-ArkTS-Dyn:
 ```TypeScript
 getSubWindowZLevel(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getSubWindowZLevel(): int
 ```
 
 获取当前子窗口层级级别。不支持主窗、系统窗调用。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1435,7 +703,7 @@ getSubWindowZLevel(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -1444,64 +712,6 @@ getSubWindowZLevel(): int
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let subWindowZLevel = -1;
-    // 创建子窗
-    windowStage.createSubWindow('testSubWindow').then((subWindow) => {
-      if (subWindow == null) {
-        console.error('Failed to create the sub window. Cause: The sub window is null');
-        return;
-      }
-      try {
-        subWindowZLevel = subWindow.getSubWindowZLevel();
-        console.info(`Succeeded in obtaining sub window zLevel: ${subWindowZLevel}`);
-      } catch (err) {
-        console.error(`Failed to obtain the sub window zLevel. Cause code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let subWindowZLevel: int = -1;
-    // 创建子窗
-    windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window) => {
-
-      try {
-        subWindowZLevel = subWindow.getSubWindowZLevel();
-        console.info(`Succeeded in obtaining sub window zLevel: ${subWindowZLevel}`);
-      } catch (exception) {
-        let err = exception as BusinessError;
-        console.error(`Failed to obtain the sub window zLevel. Cause code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
 
 ## getTitleButtonRect
 
@@ -1512,8 +722,6 @@ getTitleButtonRect(): TitleButtonRect
 获取主窗口或启用装饰的子窗口的标题栏上的最小化、最大化、关闭按钮矩形区域。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1532,79 +740,6 @@ getTitleButtonRect(): TitleButtonRect
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let titleButtonArea = windowClass.getTitleButtonRect();
-        console.info('Succeeded in obtaining the area of title buttons. Data: ' + JSON.stringify(titleButtonArea));
-      } catch (exception) {
-        console.error(`Failed to get the area of title buttons. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // 加载主窗口对应的页面
-    windowStage.loadContent('pages/Index', (err: BusinessError | null) => {
-      let mainWindow: window.Window | undefined = undefined;
-      // 获取应用主窗口。
-      windowStage.getMainWindow().then(
-        data => {
-          if (!data) {
-            console.error('Failed to get main window. Cause: The data is undefined.');
-            return null;
-          }
-          mainWindow = data;
-          console.info('Succeeded in obtaining the main window.');
-          try {
-            let titleButtonArea = mainWindow!.getTitleButtonRect();
-            console.info('Succeeded in obtaining the area of title buttons. Data: ' + JSON.stringify(titleButtonArea));
-          } catch (exception) {
-            let err = exception as BusinessError;
-            console.error(`Failed to get the area of title buttons. Cause code: ${err.code}, message: ${err.message}`);
-          }
-        }
-      ).catch((err: Error) => {
-        if(err.code){
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        }
-      });
-    });
-  }
-}
-```
-
 ## getUIContext
 
 ```TypeScript
@@ -1614,8 +749,6 @@ getUIContext() : UIContext
 获取UIContext实例。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1635,80 +768,6 @@ getUIContext() : UIContext
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window, UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // 为主窗口加载对应的目标页面。
-    windowStage.loadContent('pages/page2', (err: BusinessError) => {
-      let errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      // 获取应用主窗口。
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        let errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        console.info('Succeeded in obtaining the main window. Data: ' + JSON.stringify(data));
-        // 获取UIContext实例。
-        let uiContext: UIContext | null = null;
-        uiContext = windowClass.getUIContext();
-      });
-    });
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window, UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // 为主窗口加载对应的目标页面。
-    windowStage.loadContent('pages/page2', (err: BusinessError<void> | null): void => {
-      if (err?.code) {
-        console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      // 获取应用主窗口。
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError<void> | null, data: window.Window | undefined) => {
-        if (err?.code) {
-          console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        windowClass = data;
-        console.info('Succeeded in obtaining the main window. Data: ' + JSON.stringify(data));
-        // 获取UIContext实例。
-        let uiContext: UIContext | null = null;
-        uiContext = windowClass!.getUIContext();
-      });
-    });
-  }
-};
-```
-
 ## getWindowAvoidArea
 
 ```TypeScript
@@ -1716,15 +775,19 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 ```
 
 获取当前窗口避让区域。主窗口/子窗口：  
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 全局悬浮窗、模态窗或系统窗口：  
 - 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取避让区域，否则获取的避让区域为空。  
 该接口一般适用于两种场景：  
-- 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可 调用该接口。 - 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
+- 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可  
+调用该接口。  
+- 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1749,31 +812,6 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let type = window.AvoidAreaType.TYPE_SYSTEM;
-try {
-  let avoidArea = windowClass.getWindowAvoidArea(type);
-} catch (exception) {
-  console.error(`Failed to obtain the area. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let type = window.AvoidAreaType.TYPE_SYSTEM;
-try {
-  let avoidArea = windowClass.getWindowAvoidArea(type);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to obtain the area. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getWindowAvoidAreaIgnoringVisibility
 
 ```TypeScript
@@ -1781,13 +819,15 @@ getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 ```
 
 获取当前应用窗口的避让区域，即使避让区域当前处于不可见状态。主窗口/子窗口：  
-- 主窗口在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在系统栏（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 主窗口在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在系统栏（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 全局悬浮窗、模态窗或系统窗口：  
-- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域 为空。
+- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -1812,17 +852,6 @@ getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-```TypeScript
-let type = window.AvoidAreaType.TYPE_SYSTEM;
-try {
-  let avoidArea = windowClass.getWindowAvoidAreaIgnoringVisibility(type);
-} catch (exception) {
-  console.error(`Failed to obtain the area. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## getWindowColorSpace
 
 ```TypeScript
@@ -1832,8 +861,6 @@ getWindowColorSpace(): ColorSpace
 获取当前窗口色域模式。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1851,52 +878,15 @@ getWindowColorSpace(): ColorSpace
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let colorSpace = windowClass.getWindowColorSpace();
-  console.info(`Succeeded in getting the window color space. ColorSpace: ${colorSpace}`);
-} catch (exception) {
-  console.error(`Failed to get the window color space. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let colorSpace = windowClass.getWindowColorSpace();
-  console.info(`Succeeded in getting the window color space. ColorSpace: ${colorSpace}`);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to get the window color space. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getWindowCornerRadius
 
-ArkTS-Dyn:
 ```TypeScript
 getWindowCornerRadius(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getWindowCornerRadius(): double
 ```
 
 该接口用于获取子窗或悬浮窗的圆角半径值，在未调用[setWindowCornerRadius()](#setwindowcornerradius)接口设置窗口圆角半径值时，调用此接口可获取 窗口默认圆角半径值。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
@@ -1906,7 +896,7 @@ getWindowCornerRadius(): double
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
@@ -1916,46 +906,15 @@ getWindowCornerRadius(): double
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-try {
-  let cornerRadius = windowClass.getWindowCornerRadius();
-} catch (exception) {
-  console.error(`Failed to get corner radius. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let cornerRadius: double = windowClass.getWindowCornerRadius();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to get corner radius. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## getWindowDecorHeight
 
-ArkTS-Dyn:
 ```TypeScript
 getWindowDecorHeight(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getWindowDecorHeight(): int
 ```
 
 对存在标题栏和三键区的窗口形态生效，用于获取窗口的标题栏高度。如果使用Stage模型，该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。由于系统像素转换可能存在精度误差，调用[setWindowDecorHeight()](#setwindowdecorheight)设置的值与获取的值可能存在1vp的差异。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1965,7 +924,7 @@ getWindowDecorHeight(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -1973,35 +932,6 @@ getWindowDecorHeight(): int
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-windowClass.setUIContent('pages/WindowPage').then(() => {
-  try {
-    let height = windowClass?.getWindowDecorHeight();
-    console.info(`Succeeded in getting the height of window decor: ${height}`);
-  } catch (exception) {
-    console.error(`Failed to get the height of window decor. Cause code: ${exception.code}, message: ${exception.message}`);
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-windowClass.setUIContent('pages/Index').then(() => {
-  try {
-    let height = windowClass?.getWindowDecorHeight();
-    console.info(`Succeeded in getting the height of window decor: ${height}`);
-  } catch (exception) {
-    let err = exception as BusinessError;
-    console.error(`Failed to get the height of window decor. Cause code: ${err.code}, message: ${err.message}`);
-  }
-})
-```
 
 ## getWindowDecorVisible
 
@@ -2012,8 +942,6 @@ getWindowDecorVisible(): boolean
 查询窗口标题栏是否可见。如果使用Stage模型，该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -2032,36 +960,6 @@ getWindowDecorVisible(): boolean
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let isVisible: boolean | undefined = undefined;
-windowClass.setUIContent('pages/WindowPage').then(() => {
-  try {
-    isVisible = windowClass?.getWindowDecorVisible();
-  } catch (exception) {
-    console.error(`Failed to get the window decor visibility. Cause code: ${exception.code}, message: ${exception.message}`);
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let isVisible: boolean | undefined = undefined;
-windowClass.setUIContent('pages/Index').then(() => {
-  try {
-    isVisible = windowClass?.getWindowDecorVisible();
-    console.info(`Succeeded in getting the window decor visible: ${isVisible}`);
-  } catch (exception) {
-    let err = exception as BusinessError;
-    console.error(`Failed to get the window decor visibility. Cause code: ${err.code}, message: ${err.message}`);
-  }
-})
-```
-
 ## getWindowDensityInfo
 
 ```TypeScript
@@ -2071,8 +969,6 @@ getWindowDensityInfo(): WindowDensityInfo
 获取当前窗口所在屏幕的系统显示大小缩放系数、系统默认显示大小缩放系数和自定义显示大小缩放系数信息。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -2091,31 +987,6 @@ getWindowDensityInfo(): WindowDensityInfo
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let densityInfo = windowClass.getWindowDensityInfo();
-} catch (exception) {
-  console.error(`Failed to obtain the window densityInfo. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let densityInfo = windowClass.getWindowDensityInfo();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to obtain the window densityInfo. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getWindowLimits
 
 ```TypeScript
@@ -2125,8 +996,6 @@ getWindowLimits(): WindowLimits
 获取当前应用窗口的尺寸限制，单位为物理像素px。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2145,29 +1014,6 @@ getWindowLimits(): WindowLimits
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let windowLimits = windowClass.getWindowLimits();
-} catch (exception) {
-  console.error(`Failed to obtain the window limits of window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let windowLimits = windowClass.getWindowLimits();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to obtain the window limits of window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## getWindowLimitsVP
 
 ```TypeScript
@@ -2177,8 +1023,6 @@ getWindowLimitsVP(): WindowLimits
 获取当前应用窗口的尺寸限制，单位为虚拟像素vp。对于系统窗口和全局悬浮窗，默认窗口宽高的系统限制最小值为1px，通过此接口获取到的1vp，是计算取整后的值。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -2195,16 +1039,6 @@ getWindowLimitsVP(): WindowLimits
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-```TypeScript
-try {
-  let windowLimits: window.WindowLimits = windowClass.getWindowLimitsVP();
-} catch (exception) {
-  console.error(`Failed to obtain the window limits. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## getWindowProperties
 
 ```TypeScript
@@ -2214,8 +1048,6 @@ getWindowProperties(): WindowProperties
 获取当前窗口的属性。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2233,29 +1065,6 @@ getWindowProperties(): WindowProperties
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let properties = windowClass.getWindowProperties();
-} catch (exception) {
-  console.error(`Failed to obtain the window properties. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let properties = windowClass.getWindowProperties();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to obtain the window properties. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getWindowStateSnapshot
 
 ```TypeScript
@@ -2265,8 +1074,6 @@ getWindowStateSnapshot(): Promise<string>
 获取设备形态，仅测试使用
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2288,42 +1095,6 @@ getWindowStateSnapshot(): Promise<string>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.getWindowStateSnapshot().then((data) => {
-    let jsonObj: Record<string, Object> = JSON.parse(data);
-    console.info(`Succeeded, data=${data}, isPcMode=${jsonObj["isPcMode"]}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed. Cause code: ${err.code}, cancel message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Panic. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.getWindowStateSnapshot().then((data) => {
-    console.info(`Succeeded, data=${data}`);
-  }).catch((err: Error) => {
-    console.error(`Failed. Cause code: ${err.code}, cancel message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Panic. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getWindowStatus
 
 ```TypeScript
@@ -2340,8 +1111,6 @@ getWindowStatus(): WindowStatusType
 > dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2360,29 +1129,6 @@ getWindowStatus(): WindowStatusType
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let windowStatusType = windowClass.getWindowStatus();
-} catch (exception) {
-  console.error(`Failed to obtain the window status of window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let windowStatusType = windowClass.getWindowStatus();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to obtain the window status of window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## getWindowSystemBarProperties
 
 ```TypeScript
@@ -2392,8 +1138,6 @@ getWindowSystemBarProperties(): SystemBarProperties
 获取主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2413,62 +1157,6 @@ getWindowSystemBarProperties(): SystemBarProperties
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let systemBarProperty = windowClass.getWindowSystemBarProperties();
-        console.info('Success in obtaining system bar properties. Property: ' + JSON.stringify(systemBarProperty));
-      } catch (err) {
-        console.error(`Failed to get system bar properties. Code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let mainWindow = windowStage.getMainWindowSync();
-    try {
-      let systemBarProperty = mainWindow.getWindowSystemBarProperties();
-      console.info('Succeeded in obtaining system bar properties. Property: ' + JSON.stringify(systemBarProperty));
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to get system bar properties. Code: ${err.code}, message: ${err.message}`);
-    }
-  }
-};
-```
-
 ## getWindowTransitionAnimation
 
 ```TypeScript
@@ -2478,8 +1166,6 @@ getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAn
 获取特定场景下的窗口转场动画配置。当前只支持在应用主窗下使用。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2509,54 +1195,15 @@ getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAn
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let transitionAnimationResult = windowClass.getWindowTransitionAnimation(window.WindowTransitionType.DESTROY);
-        console.info('Succeeded in getting window transition animation: ' + JSON.stringify(transitionAnimationResult));
-      } catch (exception) {
-        console.error(`Failed to obtain the window transition animation. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    })
-  }
-}
-```
-
 ## globalDisplayToClient
 
-ArkTS-Dyn:
 ```TypeScript
 globalDisplayToClient(globalDisplayX: number, globalDisplayY: number): Position
-```
-
-ArkTS-Sta:
-```TypeScript
-globalDisplayToClient(globalDisplayX: int, globalDisplayY: int): Position
 ```
 
 将相对于主屏幕左上角的全局坐标转换为相对于当前窗口左上角的坐标。不支持在经过显示缩放的窗口中调用，例如手机或平板设备在非自由多窗模式下的悬浮窗场景。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -2564,8 +1211,8 @@ globalDisplayToClient(globalDisplayX: int, globalDisplayY: int): Position
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| globalDisplayX | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| globalDisplayY | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| globalDisplayX | number | 是 |
+| globalDisplayY | number | 是 |
 
 **返回值：**
 
@@ -2582,31 +1229,6 @@ globalDisplayToClient(globalDisplayX: int, globalDisplayY: int): Position
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let position = windowClass.globalDisplayToClient(100, 100);
-  console.info(`Succeeded in converting in the position in global display to the position in the current window. Position: ` + JSON.stringify(position));
-} catch (exception) {
-  console.error(`Failed to convert the position. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let position = windowClass.globalDisplayToClient(100, 100);
-  console.info(`Succeeded in converting in the position in global display to the position in the current window. Position: ${JSON.stringify(position)}`);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to convert the position. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## isFloatNavigationAvoidAreaEnabled
 
 ```TypeScript
@@ -2616,8 +1238,6 @@ isFloatNavigationAvoidAreaEnabled(): boolean
 查询当前窗口是否支持获取三键导航类型的避让区域。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2637,29 +1257,6 @@ isFloatNavigationAvoidAreaEnabled(): boolean
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let isEnabled = windowClass.isFloatNavigationAvoidAreaEnabled();
-} catch (exception) {
-  console.error(`Failed to check if the window is enabled float navigation avoid area. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let isEnabled = windowClass.isFloatNavigationAvoidAreaEnabled();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to check if the window is enabled float navigation avoid area. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## isFocused
 
 ```TypeScript
@@ -2669,8 +1266,6 @@ isFocused(): boolean
 判断当前窗口是否已获焦。为获取准确的获焦状态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。可使用on('windowEvent')监听对应状态变更， 再执行对应具体业务。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2688,31 +1283,6 @@ isFocused(): boolean
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let focus = windowClass.isFocused();
-  console.info(`Succeeded in checking whether the window is focused. Data: ${focus}`);
-} catch (exception) {
-  console.error(`Failed to check whether the window is focused. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let focus: boolean = windowClass.isFocused();
-  console.info(`Succeeded in checking whether the window is focused. Data: ${JSON.stringify(focus)}`);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to check whether the window is focused. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## isGestureBackEnabled
 
 ```TypeScript
@@ -2722,8 +1292,6 @@ isGestureBackEnabled(): boolean
 获取当前窗口是否启用返回手势功能，仅主窗可以调用成功，其他类型的窗口调用返回1300004错误码。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -2743,66 +1311,6 @@ isGestureBackEnabled(): boolean
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-
-      // 获取当前窗口是否禁用返回手势功能
-      try {
-        let gestureBackEnabled: boolean = windowClass.isGestureBackEnabled();
-        console.info(`Succeeded in obtaining gesture back enabled status: ${gestureBackEnabled}`);
-      } catch (exception) {
-        console.error(`Failed to get gesture back enabled status. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let mainWindow = windowStage.GetMainWindowSync();
-    // 获取当前窗口是否禁用返回手势功能
-    try {
-      let gestureBackEnabled: boolean = mainWindow.isGestureBackEnabled();
-      console.info(`Succeeded in obtaining gesture back enabled status: ${gestureBackEnabled}`);
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to get gesture back enabled status. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## isImmersiveLayout
 
 ```TypeScript
@@ -2812,8 +1320,6 @@ isImmersiveLayout(): boolean
 查询当前窗口是否处于沉浸式布局状态。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -2830,16 +1336,6 @@ isImmersiveLayout(): boolean
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-```TypeScript
-try {
-  let isEnabled = windowClass.isImmersiveLayout();
-} catch (exception) {
-  console.error(`Failed to check if the window layout is in immersive mode. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## isInFreeWindowMode
 
 ```TypeScript
@@ -2849,8 +1345,6 @@ isInFreeWindowMode(): boolean
 查询当前窗口是否为[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)模式。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -2869,13 +1363,6 @@ isInFreeWindowMode(): boolean
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-let isInFreeWindowMode: boolean = windowClass.isInFreeWindowMode();
-console.info(`isInFreeWindowMode: ${isInFreeWindowMode}`);
-```
-
 ## isReceiveDragEventEnabled
 
 ```TypeScript
@@ -2885,8 +1372,6 @@ isReceiveDragEventEnabled(): boolean
 获取当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md)的状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2905,19 +1390,6 @@ isReceiveDragEventEnabled(): boolean
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isReceiveDragEventEnabled = windowClass.isReceiveDragEventEnabled();
-  console.info(`Succeeded in getting the window receiveDragEvent status: ${isReceiveDragEventEnabled}`);
-} catch (exception) {
-  console.error(`Failed to get the window receiveDragEvent status. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
 
 ## isSeparationTouchEnabled
 
@@ -2929,8 +1401,6 @@ isSeparationTouchEnabled(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -2948,19 +1418,6 @@ isSeparationTouchEnabled(): boolean
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isSeparationTouchEnabled = windowClass.isSeparationTouchEnabled();
-  console.info(`Succeeded in getting the window separationTouchEnabled status: ${isSeparationTouchEnabled}`);
-} catch (exception) {
-  console.error(`Failed to get the window separationTouchEnabled status.. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
 
 ## isShowing
 
@@ -2975,8 +1432,6 @@ isShowing(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isWindowShowing](#iswindowshowing)
@@ -2988,32 +1443,6 @@ isShowing(callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.isShowing((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.isShowing();
-promise.then((data) => {
-  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the window is showing. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## isShowing
 
@@ -3028,8 +1457,6 @@ isShowing(): Promise<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isWindowShowing](#iswindowshowing)
@@ -3041,10 +1468,6 @@ isShowing(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isShowing](#isshowing)
 
 ## isSupportWideGamut
 
@@ -3060,8 +1483,6 @@ isSupportWideGamut(): Promise<boolean>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut)()
@@ -3073,32 +1494,6 @@ isSupportWideGamut(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.isSupportWideGamut((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in checking whether the window support WideGamut Data: ' + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.isSupportWideGamut();
-promise.then((data) => {
-  console.info('Succeeded in checking whether the window support WideGamut. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## isSupportWideGamut
 
@@ -3114,8 +1509,6 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut)(callback: AsyncCallback&lt;boolean&gt;)
@@ -3128,10 +1521,6 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-参见 [isSupportWideGamut](#issupportwidegamut)
-
 ## isSystemAvoidAreaEnabled
 
 ```TypeScript
@@ -3141,8 +1530,6 @@ isSystemAvoidAreaEnabled(): boolean
 获取悬浮窗、模态窗或WindowType为系统类型的窗口是否可以获取窗口内容的避让区[AvoidArea](arkts-arkui-window-avoidarea-i.md)。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -3163,92 +1550,6 @@ isSystemAvoidAreaEnabled(): boolean
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error('Failed to load the content. Cause: %{public}s', JSON.stringify(err));
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      let windowClass: window.Window | undefined = undefined;
-      let config: window.Configuration = {
-        name: "test",
-        windowType: window.WindowType.TYPE_DIALOG,
-        decorEnabled: true,
-        ctx: this.context
-      };
-      try {
-        window.createWindow(config, (err: BusinessError, data) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to create the system window. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          windowClass = data;
-          windowClass.setUIContent('pages/Test');
-          let promise = windowClass.setSystemAvoidAreaEnabled(true);
-          promise.then(() => {
-            let enabled = windowClass?.isSystemAvoidAreaEnabled();
-          }).catch((err: BusinessError) => {
-            console.error(`Failed to obtain the system window avoid area enable. Cause code: ${err.code}, message: ${err.message}`);
-          });
-        });
-      } catch (exception) {
-        console.error(`Failed to create the system window. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let config: window.Configuration = {
-  name: "test",
-  windowType: window.WindowType.TYPE_DIALOG,
-  decorEnabled: true,
-  ctx: this.context
-};
-try {
-  window.createWindow(config, (err: BusinessError<void> | null, data) => {
-    const errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to create the system window. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    windowClass = data;
-    windowClass!.setUIContent('pages/Test');
-    let enabled = true;
-    let promise = windowClass!.setSystemAvoidAreaEnabled(enabled);
-    promise.then(() => {
-      let enable = windowClass?.isSystemAvoidAreaEnabled();
-    }).catch((err: Error) => {
-      console.error(`Failed to obtain whether the system window can get avoid area. Cause code: ${err.code}, message: ${err.message}`);
-    });
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to create the system window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## isWindowHighlighted
 
 ```TypeScript
@@ -3258,8 +1559,6 @@ isWindowHighlighted(): boolean
 获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。可使用 on('windowHighlightChange') 监听对应状态变更，再执行对应具体业务。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -3278,35 +1577,6 @@ isWindowHighlighted(): boolean
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isHighlighted = windowClass.isWindowHighlighted();
-  console.info(`Succeeded in getting the window highlight status: ${isHighlighted}`);
-} catch (exception) {
-  console.error(`Failed to get the window highlight status.. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let isHighlighted: boolean = windowClass.isWindowHighlighted();
-  console.info(`Succeeded in getting the window highlight status: ${isHighlighted}`);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to get the window highlight status. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## isWindowShowing
 
 ```TypeScript
@@ -3316,8 +1586,6 @@ isWindowShowing(): boolean
 判断当前窗口是否已显示。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3335,30 +1603,6 @@ isWindowShowing(): boolean
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let data = windowClass.isWindowShowing();
-  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
-} catch (exception) {
-  console.error(`Failed to check whether the window is showing. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let data = windowClass.isWindowShowing();
-  console.info('Succeeded in checking whether the window is showing. Data: ' + JSON.stringify(data));
-} catch (err: Error) {
-  console.error(`Failed to check whether the window is showing. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## isWindowSupportWideGamut
 
 ```TypeScript
@@ -3368,8 +1612,6 @@ isWindowSupportWideGamut(): Promise<boolean>
 判断当前窗口是否支持广色域模式，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3387,64 +1629,6 @@ isWindowSupportWideGamut(): Promise<boolean>
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.isWindowSupportWideGamut((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking whether the window support WideGamut Data: ${data}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.isWindowSupportWideGamut((err: BusinessError<void> | null, data) => {
-  const errCode = err?.code;
-  if (errCode) {
-    console.error(`Failed to check whether the window support WideGamut. Cause code: ${err?.code}, message: ${err?.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking whether the window support WideGamut Data: ${data}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.isWindowSupportWideGamut();
-promise.then((data) => {
-  console.info(`Succeeded in checking whether the window support WideGamut. Data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.isWindowSupportWideGamut();
-promise.then((data) => {
-  console.info(`Succeeded in checking whether the window support WideGamut. Data: ${data}`);
-}).catch((err: Error) => {
-  console.error(`Failed to check whether the window support WideGamut. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## isWindowSupportWideGamut
 
 ```TypeScript
@@ -3454,8 +1638,6 @@ isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void
 判断当前窗口是否支持广色域模式，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3473,10 +1655,6 @@ isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-参见 [isWindowSupportWideGamut](#iswindowsupportwidegamut)
-
 ## keepKeyboardOnFocus
 
 ```TypeScript
@@ -3486,8 +1664,6 @@ keepKeyboardOnFocus(keepKeyboardFlag: boolean): void
 当前窗口获焦时是否保留由其他窗口创建的软键盘，支持系统窗口、应用子窗口、模态窗和全局悬浮窗。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3508,29 +1684,6 @@ keepKeyboardOnFocus(keepKeyboardFlag: boolean): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  windowClass.keepKeyboardOnFocus(true);
-} catch (exception) {
-  console.error(`Failed to keep keyboard onFocus. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  windowClass.keepKeyboardOnFocus(true);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to keep keyboard onFocus. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## loadContent
 
 ```TypeScript
@@ -3540,8 +1693,6 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 根据当前工程中指定的页面路径为窗口加载具体页面内容，通过LocalStorage传递状态属性给加载的页面，使用callback异步回调。建议在UIAbility启动过程中使用该接口，重复调用将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3554,7 +1705,7 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| storage | [LocalStorage](arkts-arkui-localstorage-localstorage-c.md) | 是 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -3564,272 +1715,6 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-windowClass.loadContent('pages/page2', storage, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in loading the content.');
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-windowClass.loadContent('pages/page2', storage, (err: BusinessError<void> | null): void => {
-  if (err?.code) {
-    console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-    return;
-  }
-  console.info('Succeeded in loading the content.');
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-let promise = windowClass.loadContent('pages/page2', storage);
-promise.then(() => {
-  console.info('Succeeded in loading the content.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-let promise = windowClass.loadContent('pages/page2', storage);
-promise.then(() => {
-  console.info('Succeeded in loading the content.');
-}).catch((err: Error) => {
-  console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.loadContent('pages/page2/page3', (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in loading the content.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.loadContent('pages/page2/page3');
-promise.then(() => {
-  console.info('Succeeded in loading the content.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.loadContent('pages/page2', this.storage, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.loadContent('pages/page2', this.storage, (err: BusinessError<void> | null): void => {
-        if (err?.code) {
-          console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (err: Error) {
-      console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-};
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    console.info('onWindowStageCreate');
-    try {
-      let promise = windowStage.loadContent('pages/page2', this.storage);
-      promise.then(() => {
-        console.info('Succeeded in loading the content.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    console.info('onWindowStageCreate');
-    try {
-      let promise = windowStage.loadContent('pages/page2', this.storage);
-      promise.then(() => {
-        console.info('Succeeded in loading the content.');
-      }).catch((err: Error) => {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (err: Error) {
-      console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-};
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.loadContent('pages/page2', (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.loadContent('pages/page2', (err: BusinessError<void> | null): void => {
-        if (err?.code) {
-          console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (err: Error) {
-      console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-};
-```
 
 ## loadContent
 
@@ -3841,8 +1726,6 @@ loadContent(path: string, storage: LocalStorage): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -3854,7 +1737,7 @@ loadContent(path: string, storage: LocalStorage): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| storage | [LocalStorage](arkts-arkui-localstorage-localstorage-c.md) | 是 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | 是 |
 
 **返回值：**
 
@@ -3870,10 +1753,6 @@ loadContent(path: string, storage: LocalStorage): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [loadContent](#loadcontent)
-
 ## loadContent
 
 ```TypeScript
@@ -3888,8 +1767,6 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setUIContent](#setuicontent)(path: string, callback: AsyncCallback&lt;void&gt;)
@@ -3903,10 +1780,6 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 | path | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [loadContent](#loadcontent)
-
 ## loadContent
 
 ```TypeScript
@@ -3919,8 +1792,6 @@ loadContent(path: string): Promise<void>
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[setUIContent()](#setuicontent)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -3940,10 +1811,6 @@ loadContent(path: string): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [loadContent](#loadcontent)
-
 ## loadContentByName
 
 ```TypeScript
@@ -3953,8 +1820,6 @@ loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<v
 根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，通过LocalStorage传递状态属性至加载页面，使用callback异步回调。建议在UIAbility启动过程中使用该接口，重复调用该接口将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3967,7 +1832,7 @@ loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| storage | [LocalStorage](arkts-arkui-localstorage-localstorage-c.md) | 是 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -3977,457 +1842,6 @@ loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<v
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let storage: LocalStorage = new LocalStorage();
-    let newValue: number = 121;
-    storage.setOrCreate('storageSimpleProp', newValue);
-    try {
-      let windowClass: window.Window = windowStage.getMainWindowSync();
-      if (!windowClass) {
-        console.error('Failed to get main window.');
-        return;
-      }
-      windowClass.loadContentByName(Index.entryName, storage, (err: BusinessError) => {
-        const errCode: number = err?.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-
-try {
-  (windowClass as window.Window).loadContentByName(Index.entryName, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in loading the content.');
-  });
-} catch (exception) {
-  console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-try {
-  let promise = (windowClass as window.Window).loadContentByName(Index.entryName, storage);
-  promise.then(() => {
-    console.info('Succeeded in loading the content.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    try {
-      windowStage.loadContentByName(Index.entryName, this.storage, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    try {
-      windowStage.loadContentByName(Index.entryName, this.storage, (err: BusinessError<void> | null): void => {
-        if (err?.code) {
-          console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (err: Error) {
-      console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-};
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.loadContentByName(Index.entryName, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    try {
-      windowStage.loadContentByName(Index.entryName, (err: BusinessError<void> | null): void => {
-        if (err?.code) {
-          console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        console.info('Succeeded in loading the content.');
-      });
-    } catch (err: Error) {
-      console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-};
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    try {
-      let promise = windowStage.loadContentByName(Index.entryName, this.storage);
-      promise.then(() => {
-        console.info('Succeeded in loading the content.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-};
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import * as Index from '../pages/Index'; // 导入命名路由页面
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    this.storage.setOrCreate('storageSimpleProp', 121);
-    try {
-      let promise = windowStage.loadContentByName(Index.entryName, this.storage);
-      promise.then(() => {
-        console.info('Succeeded in loading the content.');
-      }).catch((err: Error) => {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (err: Error) {
-      console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-};
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
 
 ## loadContentByName
 
@@ -4439,8 +1853,6 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -4462,10 +1874,6 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [loadContentByName](#loadcontentbyname)
-
 ## loadContentByName
 
 ```TypeScript
@@ -4475,8 +1883,6 @@ loadContentByName(name: string, storage?: LocalStorage): Promise<void>
 根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，通过LocalStorage传递状态属性至加载页面，使用Promise异步回调。建议在UIAbility启动过程中使用该接口，重复调用该接口将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4489,7 +1895,7 @@ loadContentByName(name: string, storage?: LocalStorage): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| storage | [LocalStorage](arkts-arkui-localstorage-localstorage-c.md) | 否 |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | 否 |
 
 **返回值：**
 
@@ -4505,10 +1911,6 @@ loadContentByName(name: string, storage?: LocalStorage): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [loadContentByName](#loadcontentbyname)
-
 ## maximize
 
 ```TypeScript
@@ -4518,8 +1920,6 @@ maximize(presentation?: MaximizePresentation): Promise<void>
 实现最大化功能。主窗口可调用此接口实现最大化功能；子窗口需在创建时设置子窗口参数maximizeSupported为true， 再调用此接口可实现最大化功能。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4547,129 +1947,6 @@ maximize(presentation?: MaximizePresentation): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300005](../errorcode-window.md#1300005-windowstage异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let promise = windowClass.maximize();
-      // let promise = windowClass.maximize(window.MaximizePresentation.ENTER_IMMERSIVE);
-      promise.then(() => {
-        console.info('Succeeded in maximizing the window.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to maximize the window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, windowClass) => {
-      if (err?.code) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      if (windowClass != undefined) {
-        let promise = windowClass.maximize();
-        promise.then(() => {
-        console.info('Succeeded in maximizing the window.');
-        }).catch((err: Error) => {
-          console.error(`Failed to maximize the window. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      }
-    });
-  }
-};
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      let mainWindow = windowStage.getMainWindowSync();
-      mainWindow.maximize(window.MaximizePresentation.ENTER_IMMERSIVE, true)
-        .then(() => {
-          console.info('Window maximized successfully.');
-        })
-        .catch((err: BusinessError) => {
-          console.error(`Failed to maximize the window. Cause code: ${err.code}, message: ${err.message}`);
-        });
-    });
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (err: BusinessError | null) => {
-      if (err?.code) {
-        console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      let mainWindow = windowStage.getMainWindowSync();
-      mainWindow.maximize(window.MaximizePresentation.ENTER_IMMERSIVE, true)
-        .then(() => {
-          console.info('Window maximized successfully.');
-        })
-        .catch((err: Error) => {
-          console.error(`Failed to maximize the window. Cause code: ${err.code}, message: ${err.message}`);
-        });
-    });
-  }
-}
-```
-
 ## maximize
 
 ```TypeScript
@@ -4679,8 +1956,6 @@ maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<
 实现最大化功能。主窗口可调用此接口实现最大化功能；子窗口需在创建时设置子窗口参数maximizeSupported为true，再调用此接口可实现最大化功能。在具备折叠功能的2in1设备上，支持控制悬停态（参考 [折叠屏悬停态最佳实践](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-folded-hover)）下主窗口的瀑布流模式行为，即窗口在悬停态下 最大化时是否跨上下两个半屏显示。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -4706,10 +1981,6 @@ maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-参见 [maximize](#maximize)
-
 ## maximizeWithOptions
 
 ```TypeScript
@@ -4719,8 +1990,6 @@ maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>
 最大化应用窗口。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4748,80 +2017,6 @@ maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      let mainWindow = windowStage.getMainWindowSync();
-      let maximizeOptions: window.MaximizeOptions = {
-        maximizePresentation: window.MaximizePresentation.ENTER_IMMERSIVE,
-        acrossDisplayPresentation: window.AcrossDisplayPresentation.FOLLOW_ACROSS_DISPLAY_SETTING,
-        snapshotAnimationConfig: {
-          duration: 200,
-          delay: 30
-        }
-      };
-      mainWindow.maximizeWithOptions(maximizeOptions)
-        .then(() => {
-          console.info('Window maximized successfully.');
-        })
-        .catch((err: BusinessError) => {
-          console.error(`Failed to maximize the window. Cause code: ${err.code}, message: ${err.message}`);
-        });
-    });
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (err: BusinessError | null) => {
-      if (err?.code) {
-        console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      let maximizeOptions: window.MaximizeOptions = {
-        maximizePresentation: window.MaximizePresentation.ENTER_IMMERSIVE,
-        acrossDisplayPresentation: window.AcrossDisplayPresentation.FOLLOW_ACROSS_DISPLAY_SETTING,
-        snapshotAnimationConfig: {
-          duration: 200,
-          delay: 30
-        }
-      };
-      mainWindow.maximizeWithOptions(maximizeOptions)
-        .then(() => {
-          console.info('Window maximized successfully.');
-        })
-        .catch((err: Error) => {
-          console.error(`Failed to maximize the window. Cause code: ${err.code}, message: ${err.message}`);
-        });
-    });
-  }
-}
-```
-
 ## minimize
 
 ```TypeScript
@@ -4829,12 +2024,11 @@ minimize(callback: AsyncCallback<void>): void
 ```
 
 此接口根据调用对象不同，实现不同的功能：  
-- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](#restore)进行还原。 - 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用 [showWindow()](#showwindow)进行还原。  
-该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用callback异步回调。
+- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](#restore)进行还原。  
+- 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用  
+[showWindow()](#showwindow)进行还原。该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4854,63 +2048,6 @@ minimize(callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.minimize((err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to minimize the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in minimizing the window.');
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.minimize((err: BusinessError<void> | null): void => {
-  if (err?.code) {
-    console.error(`Failed to minimize the window. Cause code: ${err?.code}, message: ${err?.message}`);
-    return;
-  }
-  console.info('Succeeded in minimizing the window.');
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.minimize();
-promise.then(() => {
-  console.info('Succeeded in minimizing the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to minimize the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.minimize();
-promise.then(() => {
-  console.info('Succeeded in minimizing the window.');
-}).catch((err: Error) => {
-  console.error(`Failed to minimize the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## minimize
 
 ```TypeScript
@@ -4918,12 +2055,11 @@ minimize(): Promise<void>
 ```
 
 此接口根据调用对象不同，实现不同的功能：  
-- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](#restore)进行还原。 - 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用 [showWindow()](#showwindow)进行还原。  
-该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用Promise异步回调。
+- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](#restore)进行还原。  
+- 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用  
+[showWindow()](#showwindow)进行还原。该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -4943,10 +2079,6 @@ minimize(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [minimize](#minimize)
-
 ## moveTo
 
 ```TypeScript
@@ -4959,8 +2091,6 @@ moveTo(x: number, y: number): Promise<void>
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[moveWindowTo()](#movewindowto)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -4981,32 +2111,6 @@ moveTo(x: number, y: number): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.moveTo(300, 300, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in moving the window.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.moveTo(300, 300);
-promise.then(() => {
-  console.info('Succeeded in moving the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## moveTo
 
 ```TypeScript
@@ -5020,8 +2124,6 @@ moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 > [moveWindowTo()](#movewindowto)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -5037,20 +2139,10 @@ moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 | y | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [moveTo](#moveto)
-
 ## moveWindowTo
 
-ArkTS-Dyn:
 ```TypeScript
 moveWindowTo(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-moveWindowTo(x: int, y: int): Promise<void>
 ```
 
 移动窗口位置，使用Promise异步回调。调用成功即返回，但返回后无法立即获取最终生效结果。如需立即获取，请使用 [moveWindowToAsync()](#movewindowtoasync)。
@@ -5067,8 +2159,6 @@ moveWindowTo(x: int, y: int): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -5077,8 +2167,8 @@ moveWindowTo(x: int, y: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| x | number | 是 |
+| y | number | 是 |
 
 **返回值：**
 
@@ -5094,91 +2184,10 @@ moveWindowTo(x: int, y: int): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.moveWindowTo(300, 300, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in moving the window.');
-  });
-} catch (exception) {
-  console.error(`Failed to move the window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.moveWindowTo(300, 300, (err: BusinessError<void> | null) => {
-    if (err?.code) {
-      console.error(`Failed to move the window. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in moving the window.');
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.moveWindowTo(300, 300);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to move the window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.moveWindowTo(300, 300);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-  }).catch((err: Error) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## moveWindowTo
 
-ArkTS-Dyn:
 ```TypeScript
 moveWindowTo(x: number, y: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
 移动窗口位置，使用callback异步回调。调用成功即返回，但返回后无法立即获取最终生效结果。如需立即获取，请使用 [moveWindowToAsync()](#movewindowtoasync)。
@@ -5195,8 +2204,6 @@ moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -5205,8 +2212,8 @@ moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| x | number | 是 |
+| y | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -5217,20 +2224,10 @@ moveWindowTo(x: int, y: int, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [moveWindowTo](#movewindowto)
-
 ## moveWindowToAsync
 
-ArkTS-Dyn:
 ```TypeScript
 moveWindowToAsync(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-moveWindowToAsync(x: int, y: int): Promise<void>
 ```
 
 移动窗口位置，使用Promise异步回调。调用生效后返回，回调中可使用[getWindowProperties()](#getwindowproperties)（见示例）立即获取最终生效结 果。该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。在自由悬浮窗口模式下，不同类型窗口的移动行为如下：  
@@ -5241,8 +2238,6 @@ moveWindowToAsync(x: int, y: int): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -5251,8 +2246,8 @@ moveWindowToAsync(x: int, y: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| x | number | 是 |
+| y | number | 是 |
 
 **返回值：**
 
@@ -5269,104 +2264,10 @@ moveWindowToAsync(x: int, y: int): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.moveWindowToAsync(300, 300);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: ` + JSON.stringify(rect));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to move the window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.moveWindowToAsync(300, 300);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: ${JSON.stringify(rect)}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let moveConfiguration: window.MoveConfiguration = {
-    displayId: 0
-  };
-  let promise = windowClass.moveWindowToAsync(300, 300, moveConfiguration);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: ` + JSON.stringify(rect));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to move the window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let moveConfiguration: window.MoveConfiguration = {
-    displayId: 0
-  };
-  let promise = windowClass.moveWindowToAsync(300, 300, moveConfiguration);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: ${JSON.stringify(rect)}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## moveWindowToAsync
 
-ArkTS-Dyn:
 ```TypeScript
 moveWindowToAsync(x: number, y: number, moveConfiguration?: MoveConfiguration): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>
 ```
 
 移动窗口位置，支持配置moveConfiguration参数指定窗口移动的目标屏幕ID，使用Promise异步回调。调用生效后返回，回调中可使用 [getWindowProperties()](#getwindowproperties)（见示例）立即获取最终生效结果。该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。在自由悬浮窗口模式下，不同类型窗口的移动行为如下：  
@@ -5377,8 +2278,6 @@ moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promis
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -5387,8 +2286,8 @@ moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promis
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| x | number | 是 |
+| y | number | 是 |
 | moveConfiguration | [MoveConfiguration](arkts-arkui-window-moveconfiguration-i.md) | 否 |
 
 **返回值：**
@@ -5406,20 +2305,10 @@ moveWindowToAsync(x: int, y: int, moveConfiguration?: MoveConfiguration): Promis
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
-**示例**
-
-参见 [moveWindowToAsync](#movewindowtoasync)
-
 ## moveWindowToGlobal
 
-ArkTS-Dyn:
 ```TypeScript
 moveWindowToGlobal(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-moveWindowToGlobal(x: int, y: int): Promise<void>
 ```
 
 基于屏幕坐标移动窗口位置，使用Promise异步回调。调用生效后返回，回调中可使用[getWindowProperties()](#getwindowproperties)（见示例）立即获 取最终生效结果。该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
@@ -5430,8 +2319,6 @@ moveWindowToGlobal(x: int, y: int): Promise<void>
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -5440,8 +2327,8 @@ moveWindowToGlobal(x: int, y: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| x | number | 是 |
+| y | number | 是 |
 
 **返回值：**
 
@@ -5458,104 +2345,10 @@ moveWindowToGlobal(x: int, y: int): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.moveWindowToGlobal(300, 300);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: ` + JSON.stringify(rect));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to move the window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.moveWindowToGlobal(300, 300);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: ${JSON.stringify(rect)}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let moveConfiguration: window.MoveConfiguration = {
-    displayId: 0
-  };
-  let promise = windowClass.moveWindowToGlobal(300, 300, moveConfiguration);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: ` + JSON.stringify(rect));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to move the window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let moveConfiguration: window.MoveConfiguration = {
-    displayId: 0
-  };
-  let promise = windowClass.moveWindowToGlobal(300, 300, moveConfiguration);
-  promise.then(() => {
-    console.info('Succeeded in moving the window.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: : ${JSON.stringify(rect)}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## moveWindowToGlobal
 
-ArkTS-Dyn:
 ```TypeScript
 moveWindowToGlobal(x: number, y: number, moveConfiguration?: MoveConfiguration): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promise<void>
 ```
 
 基于屏幕坐标移动窗口位置，支持配置moveConfiguration参数指定窗口移动的目标屏幕ID，使用Promise异步回调。调用生效后返回，回调中可使用 [getWindowProperties()](#getwindowproperties)（见示例）立即获取最终生效结果。该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
@@ -5566,8 +2359,6 @@ moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promi
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -5576,8 +2367,8 @@ moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| x | number | 是 |
+| y | number | 是 |
 | moveConfiguration | [MoveConfiguration](arkts-arkui-window-moveconfiguration-i.md) | 否 |
 
 **返回值：**
@@ -5595,20 +2386,10 @@ moveWindowToGlobal(x: int, y: int, moveConfiguration?: MoveConfiguration): Promi
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
-**示例**
-
-参见 [moveWindowToGlobal](#movewindowtoglobal)
-
 ## moveWindowToGlobalDisplay
 
-ArkTS-Dyn:
 ```TypeScript
 moveWindowToGlobalDisplay(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-moveWindowToGlobalDisplay(x: int, y: int): Promise<void>
 ```
 
 基于[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)移动窗口位置，使用Promise异步回调。该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
@@ -5620,16 +2401,14 @@ moveWindowToGlobalDisplay(x: int, y: int): Promise<void>
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| x | number | 是 |
+| y | number | 是 |
 
 **返回值：**
 
@@ -5647,43 +2426,6 @@ moveWindowToGlobalDisplay(x: int, y: int): Promise<void>
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.moveWindowToGlobalDisplay(300, 300);
-  promise.then(() => {
-    console.info('Succeeded in moving the window in global display.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to move the window in global display. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to move the window in global display. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.moveWindowToGlobalDisplay(300, 300);
-  promise.then(() => {
-    console.info('Succeeded in moving the window in global display.');
-  }).catch((err: Error) => {
-    console.error(`Failed to move the window in global display. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to move the window in global display. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## off('rotationChange')
 
 ```TypeScript
@@ -5694,8 +2436,6 @@ off(type: 'rotationChange',
 关闭窗口旋转变化的监听。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -5726,8 +2466,6 @@ off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): vo
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -5757,8 +2495,6 @@ off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -5784,8 +2520,6 @@ off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void
 关闭窗口可见性状态变化事件的监听。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -5813,8 +2547,6 @@ off(type: 'windowSizeChange', callback?: Callback<Size>): void
 关闭窗口尺寸变化的监听。仅在主线程调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5848,8 +2580,6 @@ off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [off](#offavoidareachange)(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;)
@@ -5873,8 +2603,6 @@ off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -5895,14 +2623,12 @@ off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void
 ## off('keyboardHeightChange')
 
 ```TypeScript
-off(type: 'keyboardHeightChange', callback?: Callback<int>): void
+off(type: 'keyboardHeightChange', callback?: Callback<number>): void
 ```
 
 关闭固定态软键盘高度变化的监听，使应用程序不再接收键盘高度变化的通知。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -5930,8 +2656,6 @@ off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void
 关闭固定态软键盘即将开始显示的监听。改变输入法窗口为固定态或者悬浮态方法详细介绍请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -5961,8 +2685,6 @@ off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -5990,8 +2712,6 @@ off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void
 关闭固定态软键盘即将开始隐藏的监听。改变输入法窗口为固定态切换至悬浮态方法详细介绍请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -6021,8 +2741,6 @@ off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -6051,8 +2769,6 @@ off(type: 'touchOutside', callback?: Callback<void>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -6073,14 +2789,12 @@ off(type: 'touchOutside', callback?: Callback<void>): void
 ## off('displayIdChange')
 
 ```TypeScript
-off(type: 'displayIdChange', callback?: Callback<long>): void
+off(type: 'displayIdChange', callback?: Callback<number>): void
 ```
 
 关闭本窗口所处屏幕变化事件的监听。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -6111,8 +2825,6 @@ off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -6136,14 +2848,12 @@ off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void
 ## off('systemDensityChange')
 
 ```TypeScript
-off(type: 'systemDensityChange', callback?: Callback<double>): void
+off(type: 'systemDensityChange', callback?: Callback<number>): void
 ```
 
 关闭本窗口所处屏幕的系统显示大小缩放系数变化事件的监听。在接口回调函数中，建议直接使用返回值进行vp和px的转换。例如，若返回值为density，计算px可使用vp * density = px。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -6173,8 +2883,6 @@ off(type: 'noInteractionDetected', callback?: Callback<void>): void
 关闭本窗口在指定超时时间内无交互事件的监听，交互事件支持物理键盘输入事件和屏幕触控点击事件，不支持软键盘输入事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -6206,8 +2914,6 @@ off(type: 'screenshot', callback?: Callback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -6235,8 +2941,6 @@ off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -6262,8 +2966,6 @@ off(type: 'dialogTargetTouch', callback?: Callback<void>): void
 关闭模态窗口目标窗口的点击事件的监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -6292,8 +2994,6 @@ off(type: 'windowEvent', callback?: Callback<WindowEventType>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -6320,8 +3020,6 @@ off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void
 关闭窗口模式变化的监听。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -6351,8 +3049,6 @@ off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -6378,8 +3074,6 @@ off(type: 'subWindowClose', callback?: Callback<void>): void
 关闭子窗口关闭事件的监听。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -6411,8 +3105,6 @@ off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -6442,8 +3134,6 @@ off(type: 'windowHighlightChange', callback?: Callback<boolean>): void
 关闭窗口激活态变化事件的监听。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -6475,8 +3165,6 @@ off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): 
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -6505,8 +3193,6 @@ off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void
 关闭窗口矩形（窗口位置及窗口大小）变化的监听。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -6538,8 +3224,6 @@ off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): 
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -6567,8 +3251,6 @@ off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -6587,1292 +3269,6 @@ off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-## offAvoidAreaChange
-
-```TypeScript
-offAvoidAreaChange(callback?: Callback<AvoidAreaOptions>): void
-```
-
-关闭当前窗口系统避让区变化的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md)&gt; | 否 |
-
-**示例**
-
-```TypeScript
-const callback = (data: window.AvoidAreaOptions) => {
-  // ...
-}
-try {
-  windowClass.onAvoidAreaChange(callback);
-
-  windowClass.offAvoidAreaChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offAvoidAreaChange();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to enable or disable the listener for system avoid area changes. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offDialogTargetTouch
-
-```TypeScript
-offDialogTargetTouch(callback?: Callback<void>): void
-```
-
-关闭模态窗口目标窗口的点击事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callback = () => {
-  // ...
-}
-try {
-  windowClass.onDialogTargetTouch(callback);
-  windowClass.offDialogTargetTouch(callback);
-  // 如果通过onDialogTargetTouch开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offDialogTargetTouch();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to register or unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offDisplayIdChange
-
-```TypeScript
-offDisplayIdChange(callback?: Callback<long>): void
-```
-
-关闭本窗口所处屏幕变化事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;long&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-const callback = (displayId: long) => {
-  // ...
-}
-try {
-  // 通过on接口开启监听
-  windowClass.onDisplayIdChange(callback);
-  // 关闭指定callback的监听
-  windowClass.offDisplayIdChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offDisplayIdChange();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to unregister callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offFrameMetricsMeasured
-
-```TypeScript
-offFrameMetricsMeasured(callback?: Callback<FrameMetrics>): void
-```
-
-关闭窗口帧率指标变化事件的监听。该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-try {
-  let callback: Callback<window.FrameMetrics> = (data: window.FrameMetrics) => {
-    console.info(`Window frame metrics changed: ${JSON.stringify(data)}`);
-  };
-  // 通过on接口开启监听
-  windowClass.onFrameMetricsMeasured(callback);
-  // 关闭指定callback的监听
-  windowClass.offFrameMetricsMeasured(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offFrameMetricsMeasured();
-} catch (exception) {
-  let error = exception as BusinessError
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offFreeWindowModeChange
-
-```TypeScript
-offFreeWindowModeChange(callback?: Callback<boolean>): void
-```
-
-free window mode change callback off.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-const callback = (isInFreeWindowMode: boolean) => {
-  // ...
-}
-try {
-  // 通过on接口开启监听
-  windowClass.onFreeWindowModeChange(callback);
-  // 关闭指定callback的监听
-  windowClass.offFreeWindowModeChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听
-  windowClass.offFreeWindowModeChange();
-} catch (exception: Error) {
-  console.error(`Failed to disable the listener for free window mode change. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-## offKeyboardDidHide
-
-```TypeScript
-offKeyboardDidHide(callback?: Callback<KeyboardInfo>): void
-```
-
-关闭固定态软键盘隐藏动画完成的监听。改变输入法窗口为固定态切换至悬浮态方法详细介绍请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callback = (keyboardInfo: window.KeyboardInfo) => {
-  // ...
-}
-try {
-  windowClass.onKeyboardDidHide(callback);
-  windowClass.offKeyboardDidHide(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offKeyboardDidHide();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register or unregister callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offKeyboardDidShow
-
-```TypeScript
-offKeyboardDidShow(callback?: Callback<KeyboardInfo>): void
-```
-
-关闭固定态软键盘显示动画完成的监听。改变输入法窗口为固定态或者悬浮态方法详细介绍请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callback = (keyboardInfo: window.KeyboardInfo) => {
-  // ...
-}
-try {
-  windowClass.onKeyboardDidShow(callback);
-  windowClass.offKeyboardDidShow(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offKeyboardDidShow();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register or unregister callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offKeyboardHeightChange
-
-```TypeScript
-offKeyboardHeightChange(callback?: Callback<int>): void
-```
-
-关闭固定态软键盘高度变化的监听，使应用程序不再接收键盘高度变化的通知。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;int&gt; | 否 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callback = (height: int) => {
-  // ...
-}
-try {
-  windowClass.onKeyboardHeightChange(callback);
-
-  windowClass.offKeyboardHeightChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offKeyboardHeightChange();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to disable the listener for keyboard height changes. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offKeyboardWillHide
-
-```TypeScript
-offKeyboardWillHide(callback?: Callback<KeyboardInfo>): void
-```
-
-关闭固定态软键盘即将开始隐藏的监听。改变输入法窗口为固定态切换至悬浮态方法详细介绍请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callback = (keyboardInfo: window.KeyboardInfo) => {
-  console.info(`Keyboard will hide animation. keyboardInfo: ` + JSON.stringify(keyboardInfo));
-}
-try {
-  windowClass.onKeyboardWillHide(callback);
-  windowClass.offKeyboardWillHide(callback);
-  // 如果通过onKeyboardWillHide开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offKeyboardWillHide();
-  console.info(`Unregister keyboard will hide animation success`);
-} catch (exception) {
-    let err = exception as BusinessError;
-  console.error(`Failed to register or unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offKeyboardWillShow
-
-```TypeScript
-offKeyboardWillShow(callback?: Callback<KeyboardInfo>): void
-```
-
-关闭固定态软键盘即将开始显示的监听。改变输入法窗口为固定态或者悬浮态方法详细介绍请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callback = (keyboardInfo: window.KeyboardInfo) => {
-  console.info(`Keyboard will show animation. keyboardInfo: ` + JSON.stringify(keyboardInfo));
-}
-try {
-  windowClass.onKeyboardWillShow(callback);
-  windowClass.offKeyboardWillShow(callback);
-  // 如果通过onKeyboardWillShow开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offKeyboardWillShow();
-  console.info(`Unregister keyboard will show animation success`);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to register or unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offNoInteractionDetected
-
-```TypeScript
-offNoInteractionDetected(callback?: Callback<void>): void
-```
-
-关闭本窗口在指定超时时间内无交互事件的监听，交互事件支持物理键盘输入事件和屏幕触控点击事件，不支持软键盘输入事件。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-## offOcclusionStateChanged
-
-```TypeScript
-offOcclusionStateChanged(callback?: Callback<OcclusionState>): void
-```
-
-关闭窗口可见性状态变化事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-try {
-  let callback: Callback<window.OcclusionState> = (data: window.OcclusionState) => {
-    console.info(`Window occlusion state changed: ${data}`);
-  };
-  // 通过on接口开启监听
-  windowClass.onOcclusionStateChanged(callback);
-  // 关闭指定callback的监听
-  windowClass.offOcclusionStateChanged(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offOcclusionStateChanged();
-} catch (exception) {
-  let error = exception as window.Error;
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offRectChangeInGlobalDisplay
-
-```TypeScript
-offRectChangeInGlobalDisplay(callback?: Callback<RectChangeOptions>): void
-```
-
-关闭[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)下窗口矩形（窗口位置及窗口大小）变化的监听事件。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-const callback = (rectChangeOptions: window.RectChangeOptions) => {
-  // ...
-}
-
-try {
-  windowClass.onRectChangeInGlobalDisplay(callback);
-  windowClass.offRectChangeInGlobalDisplay(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offRectChangeInGlobalDisplay();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to disable the listener for window rect changes in global display. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offRotationChange
-
-```TypeScript
-offRotationChange(callback?: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | undefined>):
-      void
-```
-
-Unregister the callback of rotation change
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| undefined & gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@Kit.BasicServicesKit';
-
-const callback = (info: window.RotationChangeInfo): window.RotationChangeResult | undefined => {
-  // ...
-  return undefined;
-}
-try {
-  windowClass?.offRotationChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听。
-  windowClass?.offRotationChange();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offScreenshot
-
-```TypeScript
-offScreenshot(callback?: Callback<void>): void
-```
-
-关闭截屏事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
-
-**示例**
-
-```TypeScript
-let callback = () => {
-  console.info('screenshot happened');
-};
-try {
-  windowClass.onScreenshot(callback);
-  windowClass.offScreenshot(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offScreenshot();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register or unregister callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offScreenshotAppEvent
-
-```TypeScript
-offScreenshotAppEvent(callback?: Callback<ScreenshotEventType>): void
-```
-
-关闭屏幕截屏事件类型的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-const callback = (eventType: window.ScreenshotEventType) => {
-  // ...
-}
-try {
-  // 通过on接口开启监听
-  windowClass.onScreenshotAppEvent(callback);
-  // 关闭指定callback的监听
-  windowClass.offScreenshotAppEvent(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offScreenshotAppEvent();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to unregister callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offSubWindowClose
-
-```TypeScript
-offSubWindowClose(callback?: Callback<void>): void
-```
-
-关闭子窗口关闭事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-
-**示例**
-
-```TypeScript
-const callback = () => {
-  // ...
-}
-try {
-  windowClass.onSubWindowClose(callback);
-  windowClass.offSubWindowClose(callback);
-  // 如果通过onSubWindowClose开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offSubWindowClose();
-} catch (err: Error) {
-  console.error(`Failed to register or unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offSystemDensityChange
-
-```TypeScript
-offSystemDensityChange(callback?: Callback<double>): void
-```
-
-关闭本窗口所处屏幕的系统显示大小缩放系数变化事件的监听。在接口回调函数中，建议直接使用返回值进行vp和px的转换。例如，若返回值为density，计算px可使用vp * density = px。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;double&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-const callback = (density: double) => {
-  // ...
-}
-try {
-  // 通过on接口开启监听
-  windowClass.onSystemDensityChange(callback);
-  // 关闭指定callback的监听
-  windowClass.offSystemDensityChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offSystemDensityChange();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to unregister callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offTouchOutside
-
-```TypeScript
-offTouchOutside(callback?: Callback<void>): void
-```
-
-关闭本窗口区域范围外的点击事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callback = () => {
-  // ...
-}
-try {
-  windowClass.onTouchOutside(callback);
-  windowClass.offTouchOutside(callback);
-  // 如果通过onTouchOutside开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offTouchOutside();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to register or unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offUiExtensionSecureLimitChange
-
-```TypeScript
-offUiExtensionSecureLimitChange(callback?: Callback<boolean>): void
-```
-
-UIExtension in window secure limit change callback off.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-const callback = (data: boolean) => {
-  // ...
-}
-try {
-  // 通过on接口开启监听
-  windowClass.onUiExtensionSecureLimitChange(callback);
-  // 关闭指定callback的监听
-  windowClass.offUiExtensionSecureLimitChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offUiExtensionSecureLimitChange();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to unregister callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offWindowEvent
-
-```TypeScript
-offWindowEvent(callback?: Callback<WindowEventType>): void
-```
-
-关闭窗口生命周期变化的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[WindowEventType](arkts-arkui-window-windoweventtype-e.md)&gt; | 否 |
-
-**示例**
-
-```TypeScript
-const callback = (windowEventType: window.WindowEventType) => {
-  // ...
-}
-try {
-  // 通过onWindowEvent接口开启监听
-  windowClass.onWindowEvent(callback);
-  // 关闭指定callback的监听
-  windowClass.offWindowEvent(callback);
-  // 如果通过onWindowEvent开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offWindowEvent());
-} catch (err: Error) {
-  console.error(`Failed to unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offWindowHighlightChange
-
-```TypeScript
-offWindowHighlightChange(callback?: Callback<boolean>): void
-```
-
-关闭窗口激活态变化事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-const callback = (data: boolean) => {
-  // ...
-}
-try {
-  // 通过on接口开启监听
-  windowClass.onWindowHighlightChange(callback);
-  // 关闭指定callback的监听
-  windowClass.offWindowHighlightChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offWindowHighlightChange();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offWindowRectChange
-
-```TypeScript
-offWindowRectChange(callback?: Callback<RectChangeOptions>): void
-```
-
-关闭窗口矩形（窗口位置及窗口大小）变化的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-const callback = (rectChangeOptions: window.RectChangeOptions) => {
-  // ...
-}
-
-try {
-  windowClass.onWindowRectChange(callback);
-  windowClass.offWindowRectChange(callback);
-  // 如果通过onWindowRectChange开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offWindowRectChange();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to disable the listener for window rect changes. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offWindowSizeChange
-
-```TypeScript
-offWindowSizeChange(callback?: Callback<Size>): void
-```
-
-关闭窗口尺寸变化的监听。仅在主线程调用。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;Size&gt; | 否 |
-
-**示例**
-
-```TypeScript
-const callback = (size: window.Size) => {
-  // ...
-}
-try {
-  // 通过onWindowSizeChange接口开启监听
-  windowClass.onWindowSizeChange(callback);
-  // 关闭指定callback的监听
-  windowClass.offWindowSizeChange(callback);
-  // 如果通过onWindowSizeChange开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offWindowSizeChange();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to disable the listener for window size changes. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offWindowStatusChange
-
-```TypeScript
-offWindowStatusChange(callback?: Callback<WindowStatusType>): void
-```
-
-关闭窗口模式变化的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-const callback = (windowStatusType: window.WindowStatusType) => {
-    // ...
-}
-try {
-    windowClass.onWindowStatusChange(callback);
-    windowClass.offWindowStatusChange(callback);
-    // 如果通过onWindowStatusChange开启多个callback进行监听，同时关闭所有监听：
-    windowClass.offWindowStatusChange();
-} catch (exception) {
-    let err = exception as BusinessError;
-    console.error(`Failed to unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offWindowStatusDidChange
-
-```TypeScript
-offWindowStatusDidChange(callback?: Callback<WindowStatusType>): void
-```
-
-关闭窗口模式变化的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-const callback = (windowStatusType: window.WindowStatusType) => {
-    // ...
-}
-try {
-  windowClass.onWindowStatusDidChange(callback);
-  windowClass.offWindowStatusDidChange(callback);
-  // 如果通过onWindowStatusDidChange开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offWindowStatusDidChange();
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## offWindowTitleButtonRectChange
-
-```TypeScript
-offWindowTitleButtonRectChange(callback?: Callback<TitleButtonRect>): void
-```
-
-Unsubscribes from the change event of the rectangle that holds the minimize, maximize, and close buttons on the title bar of the window.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[TitleButtonRect](arkts-arkui-window-titlebuttonrect-i.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-windowClass?.setUIContent('pages/WindowPage').then(() => {
-  const callback = (titleButtonRect: window.TitleButtonRect) => {
-    // ...
-  }
-  try {
-    // 通过on接口开启监听
-    windowClass?.onWindowTitleButtonRectChange(callback);
-    // 关闭指定callback的监听
-    windowClass?.offWindowTitleButtonRectChange(callback);
-    // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-    windowClass?.offWindowTitleButtonRectChange();
-    console.info('Succeeded in disabling the listener for window title buttons area changes');
-  } catch (exception) {
-    let err = exception as BusinessError;
-    console.error(`Failed to disable the listener for window title buttons area changes. Cause code: ${err.code}, message: ${err.message}`);
-  }
-})
-```
-
-## offWindowVisibilityChange
-
-```TypeScript
-offWindowVisibilityChange(callback?: Callback<boolean>): void
-```
-
-关闭本窗口可见状态变化事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-const callback = (data: boolean) => {
-  // ...
-}
-try {
-  // 通过on接口开启监听
-  windowClass.onWindowVisibilityChange(callback);
-  // 关闭指定callback的监听
-  windowClass.offWindowVisibilityChange(callback);
-  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-  windowClass.offWindowVisibilityChange();
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to unregister callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## offWindowWillClose
-
-```TypeScript
-offWindowWillClose(callback?: Callback<void, Promise<boolean>>): void
-```
-
-关闭主窗口或子窗口关闭事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-      const callback = () => {
-        // ...
-        return new Promise<boolean>((resolve, reject) => {
-          // 是否关闭该窗口
-          let result: boolean = true;
-          resolve(result);
-        });
-      }
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      windowClass.onWindowWillClose(callback);
-      windowClass.offWindowWillClose(callback);
-      // 如果通过on开启多个callback进行监听，同时关闭所有监听：
-      windowClass.offWindowWillClose();
-      console.info('Succeeded in off the window will close');
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to register callback. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## on('rotationChange')
 
 ```TypeScript
@@ -7882,8 +3278,6 @@ on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, 
 开启窗口旋转变化的监听。[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)中窗口旋转事件类型为窗口即将旋转时，必须返回 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)。窗口旋转事件类型为窗口旋转结束时返回 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)不生效。该函数只允许在主线程注册。同一个窗口多次注册同类型回调函数，只生效最新注册的同类型回调函数返回值。系统提供了超时保护机制，若20ms内窗口未返回 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)，系统不处理该返回值。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -7914,8 +3308,6 @@ on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -7945,8 +3337,6 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -7970,11 +3360,12 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 ```
 
 开启窗口可见性状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：  
-- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](#setwindowshadowenabled)和 [setWindowShadowRadius](#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是 完全可见，但实际返回的是部分可见。 - 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。 - 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](#setwindowshadowenabled)和  
+[setWindowShadowRadius](#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是 完全可见，但实际返回的是部分可见。  
+- 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
+- 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -8002,8 +3393,6 @@ on(type: 'windowSizeChange', callback: Callback<Size>): void
 开启窗口尺寸变化的监听。仅在主线程调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8037,8 +3426,6 @@ on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [on](#onavoidareachange)(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;)
@@ -8059,14 +3446,16 @@ on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 ```
 
 开启当前应用窗口系统避让区域变化的监听。主窗口/子窗口：  
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。  
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。  
+- 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。  
 全局悬浮窗、模态窗或系统窗口：  
-- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避 让区域。  
-<!--RP7-->常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。<!--RP7End-->
+- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避  
+让区域。<!--RP7-->常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。<!--RP7End-->
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8088,14 +3477,12 @@ on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 ## on('keyboardHeightChange')
 
 ```TypeScript
-on(type: 'keyboardHeightChange', callback: Callback<int>): void
+on(type: 'keyboardHeightChange', callback: Callback<number>): void
 ```
 
 开启固定态软键盘高度变化的监听。当软键盘从本窗口唤出且与窗口有重叠区域时，通知键盘高度变化。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -8123,8 +3510,6 @@ on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
 开启固定态软键盘即将开始显示的监听。此监听在固定态软键盘即将开始显示或软键盘由悬浮态切换为固定态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上 获焦窗口，而不是虚拟屏上应用窗口。改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -8154,8 +3539,6 @@ on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -8183,8 +3566,6 @@ on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
 开启固定态软键盘即将开始隐藏的监听。此监听在固定态软键盘即将开始隐藏或软键盘由固定态切换为悬浮态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上 获焦窗口，而不是虚拟屏上应用窗口。改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -8214,8 +3595,6 @@ on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -8244,8 +3623,6 @@ on(type: 'touchOutside', callback: Callback<void>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -8266,14 +3643,12 @@ on(type: 'touchOutside', callback: Callback<void>): void
 ## on('displayIdChange')
 
 ```TypeScript
-on(type: 'displayIdChange', callback: Callback<long>): void
+on(type: 'displayIdChange', callback: Callback<number>): void
 ```
 
 开启本窗口所处屏幕变化事件的监听。比如，当前窗口移动到其他屏幕时，可以从此接口监听到这个行为。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -8301,11 +3676,12 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 ```
 
 开启本窗口可见状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：  
-- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](#setwindowshadowenabled)和 [setWindowShadowRadius](#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是 完全可见，但实际返回的是部分可见。 - 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。 - 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](#setwindowshadowenabled)和  
+[setWindowShadowRadius](#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是 完全可见，但实际返回的是部分可见。  
+- 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
+- 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -8330,14 +3706,12 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 ## on('systemDensityChange')
 
 ```TypeScript
-on(type: 'systemDensityChange', callback: Callback<double>): void
+on(type: 'systemDensityChange', callback: Callback<number>): void
 ```
 
 开启本窗口所处屏幕的系统显示大小缩放系数变化事件的监听。比如，当调整窗口所处屏幕的显示大小缩放系数时，可以从此接口监听到这个行为。在接口回调函数中，建议直接使用返回值进行vp和px的转换。例如，若返回值为density，计算px可使用vp * density = px。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -8367,8 +3741,6 @@ on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): vo
 开启本窗口在指定超时时间内无交互事件的监听，交互事件支持物理键盘输入事件和屏幕触控点击事件，不支持软键盘输入事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -8401,8 +3773,6 @@ on(type: 'screenshot', callback: Callback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -8430,8 +3800,6 @@ on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **参数：**
@@ -8457,8 +3825,6 @@ on(type: 'dialogTargetTouch', callback: Callback<void>): void
 开启模态窗口所遮盖窗口的点击或触摸事件的监听，除模态窗口以外其他窗口调用此接口不生效。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -8486,8 +3852,6 @@ on(type: 'windowEvent', callback: Callback<WindowEventType>): void
 开启窗口生命周期变化的监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8523,8 +3887,6 @@ on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -8553,8 +3915,6 @@ on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -8580,8 +3940,6 @@ on(type: 'subWindowClose', callback: Callback<void>): void
 开启子窗口关闭事件的监听。此监听仅在点击系统提供的右上角关闭按钮关闭子窗时触发，其余关闭方式不触发回调。当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。该接口触发的窗口关闭事件监听回调函数是同步执行，子窗口的异步关闭事件监听参考 on('windowWillClose') 方法。如果存在 on('windowWillClose') 监听事件，只响应 on('windowWillClose') 接口。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -8613,8 +3971,6 @@ on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -8644,8 +4000,6 @@ on(type: 'windowHighlightChange', callback: Callback<boolean>): void
 开启窗口激活态变化事件的监听。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -8677,8 +4031,6 @@ on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): vo
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -8707,8 +4059,6 @@ on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void
 开启窗口矩形（窗口位置及窗口大小）变化的监听。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -8740,8 +4090,6 @@ on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): vo
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -8769,8 +4117,6 @@ on(type: 'freeWindowModeChange', callback: Callback<boolean>): void
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -8789,1150 +4135,6 @@ on(type: 'freeWindowModeChange', callback: Callback<boolean>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-## onAvoidAreaChange
-
-```TypeScript
-onAvoidAreaChange(callback: Callback<AvoidAreaOptions>): void
-```
-
-开启当前应用窗口系统避让区域变化的监听。主窗口/子窗口：  
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为 [window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（ [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。 - 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。  
-全局悬浮窗、模态窗或系统窗口：  
-- 仅在调用[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避 让区域。  
-<!--RP7-->常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。<!--RP7End-->
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onAvoidAreaChange((data) => {
-    console.info('Succeeded in enabling the listener for system avoid area changes. type:' +
-    JSON.stringify(data.type) + ', area: ' + JSON.stringify(data.area));
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to enable the listener for system avoid area changes. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onDialogTargetTouch
-
-```TypeScript
-onDialogTargetTouch(callback: Callback<void>): void
-```
-
-开启模态窗口所遮盖窗口的点击或触摸事件的监听，除模态窗口以外其他窗口调用此接口不生效。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.onDialogTargetTouch(() => {
-    console.info('touch dialog target');
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onDisplayIdChange
-
-```TypeScript
-onDisplayIdChange(callback: Callback<long>): void
-```
-
-开启本窗口所处屏幕变化事件的监听。比如，当前窗口移动到其他屏幕时，可以从此接口监听到这个行为。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;long&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onDisplayIdChange((data) => {
-    console.info('Window displayId changed, displayId=' + JSON.stringify(data));
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onFrameMetricsMeasured
-
-```TypeScript
-onFrameMetricsMeasured(callback: Callback<FrameMetrics>): void
-```
-
-开启窗口帧率指标变化事件的监听。该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和 [postFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postframecallback)、 [postDelayedFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postdelayedframecallback) 、 displaySync.on('frame') 中的任意一个时，即使无UI内容重绘，也可能触发回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-try {
-  let callback: Callback<window.FrameMetrics> = (data: window.FrameMetrics) => {
-    console.info(`Window frame metrics changed: ${JSON.stringify(data)}`);
-  };
-  windowClass.onFrameMetricsMeasured(callback);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onFreeWindowModeChange
-
-```TypeScript
-onFreeWindowModeChange(callback: Callback<boolean>): void
-```
-
-free window mode change callback on.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onFreeWindowModeChange((data) => {
-    console.info('Succeeded in enabling the listener for free window mode changes. Data: ' + JSON.stringify(data));
-  });
-} catch (exception: Error) {
-  console.error(`Failed to enable the listener for free window mode changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-## onKeyboardDidHide
-
-```TypeScript
-onKeyboardDidHide(callback: Callback<KeyboardInfo>): void
-```
-
-开启固定态软键盘隐藏动画完成的监听。此监听在固定态软键盘隐藏动画完成或软键盘由固定态切换至悬浮态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上 获焦窗口，而不是虚拟屏上应用窗口。改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.onKeyboardDidHide((keyboardInfo) => {
-    console.info(`keyboard hide animationD completion. keyboardInfo: ${JSON.stringify(keyboardInfo)}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onKeyboardDidShow
-
-```TypeScript
-onKeyboardDidShow(callback: Callback<KeyboardInfo>): void
-```
-
-开启固定态软键盘显示动画完成的监听。此监听在固定态软键盘显示动画完成或软键盘由悬浮态切换至固定态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上 获焦窗口，而不是虚拟屏上应用窗口。改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.onKeyboardDidShow((keyboardInfo) => {
-    console.info(`keyboard show animation completion. keyboardInfo: ${JSON.stringify(keyboardInfo)}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onKeyboardHeightChange
-
-```TypeScript
-onKeyboardHeightChange(callback: Callback<int>): void
-```
-
-开启固定态软键盘高度变化的监听。当软键盘从本窗口唤出且与窗口有重叠区域时，通知键盘高度变化。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见 [输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;int&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    windowClass.onKeyboardHeightChange((data) => {
-    console.info(`Succeeded in enabling the listener for keyboard height changes. Data: ${JSON.stringify(data)}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to enable the listener for keyboard height changes. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onKeyboardWillHide
-
-```TypeScript
-onKeyboardWillHide(callback: Callback<KeyboardInfo>): void
-```
-
-开启固定态软键盘即将开始隐藏的监听。此监听在固定态软键盘即将开始隐藏或软键盘由固定态切换为悬浮态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上 获焦窗口，而不是虚拟屏上应用窗口。改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callback = (keyboardInfo: window.KeyboardInfo) => {
-  console.info(`Keyboard will hide animation. keyboardInfo: ` + JSON.stringify(keyboardInfo));
-}
-try {
-  windowClass.onKeyboardWillHide(callback);
-  console.info(`Register keyboard will hide animation success`);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to register or unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onKeyboardWillShow
-
-```TypeScript
-onKeyboardWillShow(callback: Callback<KeyboardInfo>): void
-```
-
-开启固定态软键盘即将开始显示的监听。此监听在固定态软键盘即将开始显示或软键盘由悬浮态切换为固定态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上 获焦窗口，而不是虚拟屏上应用窗口。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callback = (keyboardInfo: window.KeyboardInfo) => {
-  console.info(`Keyboard will show animation. keyboardInfo: ` + JSON.stringify(keyboardInfo));
-}
-try {
-  windowClass.onKeyboardWillShow(callback);
-  console.info(`Register keyboard will show animation success`);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to register or unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onNoInteractionDetected
-
-```TypeScript
-onNoInteractionDetected(timeout: long, callback: Callback<void>): void
-```
-
-开启本窗口在指定超时时间内无交互事件的监听，交互事件支持物理键盘输入事件和屏幕触控点击事件，不支持软键盘输入事件。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| timeout | long | 是 |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-## onOcclusionStateChanged
-
-```TypeScript
-onOcclusionStateChanged(callback: Callback<OcclusionState>): void
-```
-
-开启窗口可见性状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：  
-- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](#setwindowshadowenabled)和 [setWindowShadowRadius](#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是 完全可见，但实际返回的是部分可见。 - 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。 - 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-## onRectChangeInGlobalDisplay
-
-```TypeScript
-onRectChangeInGlobalDisplay(callback: Callback<RectChangeOptions>): void
-```
-
-开启[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)下窗口矩形（窗口位置及窗口大小）变化的监听事件。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-const callback = (rectChangeOptions: window.RectChangeOptions) => {
-  console.info(`Succeeded in enabling the listener for window rect changes in global display. Data: ${JSON.stringify(rectChangeOptions)}`);
-}
-
-try {
-  windowClass.onRectChangeInGlobalDisplay(callback);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to enable the listener for window rect changes in global display. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onRotationChange
-
-```TypeScript
-onRotationChange(callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | undefined>): void
-```
-
-Register the callback of rotation change
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| undefined & gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-## onScreenshot
-
-```TypeScript
-onScreenshot(callback: Callback<void>): void
-```
-
-开启截屏事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onScreenshot(() => {
-    console.info('screenshot happened');
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onScreenshotAppEvent
-
-```TypeScript
-onScreenshotAppEvent(callback: Callback<ScreenshotEventType>): void
-```
-
-开启屏幕截屏事件类型的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-const callback = (eventType: window.ScreenshotEventType) => {
-  console.info(`screenshotAppEvent happened. Event: ${eventType}`);
-}
-try {
-  windowClass.onScreenshotAppEvent(callback);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onSubWindowClose
-
-```TypeScript
-onSubWindowClose(callback: Callback<void>): void
-```
-
-开启子窗口关闭事件的监听。此监听仅能通过系统提供的子窗口右上角关闭按键触发，其余关闭窗口的方式不触发回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-
-**示例**
-
-```TypeScript
-const callback = () => {
-  // ...
-  console.info('Sub Window Close happened');
-}
-try {
-  windowClass.onSubWindowClose(callback);
-} catch (err: Error) {
-  console.error(`Failed to register callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onSystemDensityChange
-
-```TypeScript
-onSystemDensityChange(callback: Callback<double>): void
-```
-
-开启本窗口所处屏幕的系统显示大小缩放系数变化事件的监听。比如，当调整窗口所处屏幕的显示大小缩放系数时，可以从此接口监听到这个行为。在接口回调函数中，建议直接使用返回值进行vp和px的转换。例如，若返回值为density，计算px可使用vp * density = px。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;double&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-const callback = (density: double) => {
-  console.info('System density changed, density=' + JSON.stringify(density));
-}
-try {
-  windowClass.onSystemDensityChange(callback);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onTouchOutside
-
-```TypeScript
-onTouchOutside(callback: Callback<void>): void
-```
-
-开启本窗口区域范围外的点击事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.onTouchOutside(() => {
-    console.info('touch outside');
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onUiExtensionSecureLimitChange
-
-```TypeScript
-onUiExtensionSecureLimitChange(callback: Callback<boolean>): void
-```
-
-UIExtension in window secure limit change callback on.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onUiExtensionSecureLimitChange((data: boolean) => {
-    console.info(`Window secure limit Change: ${data}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onWindowEvent
-
-```TypeScript
-onWindowEvent(callback: Callback<WindowEventType>): void
-```
-
-开启窗口生命周期变化的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[WindowEventType](arkts-arkui-window-windoweventtype-e.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onWindowEvent((data) => {
-    console.info('Window event happened. Event:' + JSON.stringify(data));
-  });
-} catch (err: Error) {
-  console.error(`Failed to register callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onWindowHighlightChange
-
-```TypeScript
-onWindowHighlightChange(callback: Callback<boolean>): void
-```
-
-开启窗口激活态变化事件的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.onWindowHighlightChange((data: boolean) => {
-    console.info(`Window highlight Change: ${data}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onWindowRectChange
-
-```TypeScript
-onWindowRectChange(callback: Callback<RectChangeOptions>): void
-```
-
-开启窗口矩形（窗口位置及窗口大小）变化的监听。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onWindowRectChange((data: window.RectChangeOptions) => {
-      console.info(`Succeeded window rect changes. Data: ` + JSON.stringify(data));
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to disable the listener for window rect changes. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onWindowSizeChange
-
-```TypeScript
-onWindowSizeChange(callback: Callback<Size>): void
-```
-
-开启窗口尺寸变化的监听。仅在主线程调用。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;Size&gt; | 是 |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onWindowSizeChange((data) => {
-    console.info('Succeeded in enabling the listener for window size changes. Data: ' + JSON.stringify(data));
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to enable the listener for window size changes. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onWindowStatusChange
-
-```TypeScript
-onWindowStatusChange(callback: Callback<WindowStatusType>): void
-```
-
-开启窗口模式变化的监听，当窗口windowStatus发生变化时进行通知（此时窗口属性可能还没有更新，如果需要在收到windowStatus变化通知时能够立即获取到变化后的窗口大小、位置，建议使用 on('windowStatusDidChange') ）。使用当前接口开启监听后，在调用maximize、recover方法时会收到多次回调，如需获取去重后的回调，可使用 on('windowStatusDidChange') 。
-
-> **说明：**&gt;
-> 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，应用的
-> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置小于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
-> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::FULL_SCREEN。应用的
-> [targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)设置大于等于14时，在窗口最大化状态（窗口铺满整个屏幕，2in1设备会有
-> dock栏和状态栏，Tablet设备会有状态栏）时返回值对应为WindowStatusType::MAXIMIZE。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-try {
-    windowClass.onWindowStatusChange((WindowStatusType) => {
-        console.info('Succeeded in enabling the listener for window status changes. Data: ' + JSON.stringify(WindowStatusType));
-    });
-} catch (exception) {
-    let err = exception as BusinessError;
-    console.error(`Failed to unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onWindowStatusDidChange
-
-```TypeScript
-onWindowStatusDidChange(callback: Callback<WindowStatusType>): void
-```
-
-开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md)属性已经完成更新）。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onWindowStatusDidChange((WindowStatusType) => {
-      console.info(`Succeeded in enabling the listener for window status changes. Data: ${JSON.stringify(WindowStatusType)}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to unregister callback. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## onWindowTitleButtonRectChange
-
-```TypeScript
-onWindowTitleButtonRectChange(callback: Callback<TitleButtonRect>): void
-```
-
-Subscribes to the change event of the rectangle that holds the minimize, maximize, and close buttons on the title bar of the window.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[TitleButtonRect](arkts-arkui-window-titlebuttonrect-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-```TypeScript
-windowClass?.setUIContent('pages/WindowPage').then(() => {
-  try {
-    windowClass?.onWindowTitleButtonRectChange((titleButtonRect: window.TitleButtonRect) => {
-      console.info('Succeeded in enabling the listener for window title buttons area changes. Data: ' + JSON.stringify(titleButtonRect));
-    });
-    console.info('Succeeded in enabling the listener for window title buttons area changes');
-  } catch (exception) {
-    let err = exception as BusinessError;
-    console.error(`Failed to enable the listener for window title buttons area changes. Cause code: ${err.code}, message: ${err.message}`);
-  }
-})
-```
-
-## onWindowVisibilityChange
-
-```TypeScript
-onWindowVisibilityChange(callback: Callback<boolean>): void
-```
-
-开启本窗口可见状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：  
-- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](#setwindowshadowenabled)和 [setWindowShadowRadius](#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是 完全可见，但实际返回的是部分可见。 - 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。 - 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.onWindowVisibilityChange((data: boolean) => {
-    console.info('Window visibility changed, isVisible=' + data);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## onWindowWillClose
-
-```TypeScript
-onWindowWillClose(callback: Callback<void, Promise<boolean>>): void
-```
-
-开启主窗口或子窗口关闭事件的监听。此监听仅能通过系统提供的窗口标题栏关闭按键触发，其余关闭窗口的方式不触发回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    const callback = () => {
-      // ...
-      return new Promise<boolean>((resolve, reject) => {
-        // 是否关闭该窗口
-        let result: boolean = true;
-        resolve(result);
-      });
-    }
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      windowClass.onWindowWillClose(callback);
-      console.info('Succeeded in on the window will close');
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to register callback. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## raiseToAppTop
 
 ```TypeScript
@@ -9942,8 +4144,6 @@ raiseToAppTop(): Promise<void>
 应用子窗口调用，提升应用子窗口到顶层，只在当前应用同一个父窗口下的相同类型子窗范围内生效，对于自定义了zLevel属性的子窗口，只在当前应用同一个父窗口下相同zLevel值的子窗范围内生效。使用Promise异步回调。使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](#showwindow)并执行完毕。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -9962,126 +4162,6 @@ raiseToAppTop(): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    // 创建子窗
-    windowStage.createSubWindow('testSubWindow').then((subWindow) => {
-      if (subWindow == null) {
-        console.error('Failed to create the subWindow. Cause: The data is empty');
-        return;
-      }
-      subWindow.showWindow().then(() => {
-        subWindow.raiseToAppTop((err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to raise the window to app top. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in raising the window to app top.');
-        });
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    // 创建子窗
-    windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window) => {
-      subWindow.showWindow().then(() => {
-        subWindow.raiseToAppTop((err: BusinessError<void> | null) => {
-          const errCode = err?.code;
-          if (errCode) {
-            console.error(`Failed to raise the window to app top. Cause code: ${err?.code}, message: ${err?.message}`);
-            return;
-          }
-          console.info('Succeeded in raising the window to app top.');
-        });
-      });
-    });
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    // 创建子窗
-    windowStage.createSubWindow('testSubWindow').then((subWindow) => {
-      if (subWindow == null) {
-        console.error('Failed to create the subWindow. Cause: The data is empty');
-        return;
-      }
-      subWindow.showWindow().then(() => {
-        subWindow.raiseToAppTop().then(() => {
-          console.info('Succeeded in raising window to app top');
-        }).catch((err: BusinessError)=>{
-          console.error(`Failed to raise window to app top. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    // 创建子窗
-    windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window) => {
-      subWindow.showWindow().then(() => {
-        subWindow.raiseToAppTop().then(() => {
-          console.info('Succeeded in raising window to app top');
-        }).catch((err: Error)=>{
-          console.error(`Failed to raise window to app top. Cause code: ${err?.code}, message: ${err?.message}`);
-        });
-      });
-    });
-  }
-}
-```
-
 ## recover
 
 ```TypeScript
@@ -10091,8 +4171,6 @@ recover(): Promise<void>
 将主窗口从全屏、最大化、分屏模式下还原为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING），并恢复到进入该模式之前的大小和位置，已经是自由悬浮窗口模式不可再还原。使用Promise 异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -10112,140 +4190,6 @@ recover(): Promise<void>
 | [1300001](../errorcode-window.md#1300001-重复操作) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      if (!windowClass) {
-        console.error('Failed to get main window.');
-        return;
-      }
-      let promise = windowClass.recover();
-      promise.then(() => {
-        console.info('Succeeded in recovering the window.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to recover the window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to recover the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      if (!windowClass) {
-        console.error('Failed to get main window.');
-        return;
-      }
-      let promise = windowClass.recover();
-      promise.then(() => {
-        console.info('Succeeded in recovering the window.');
-      }).catch((err: Error) => {
-        console.error(`Failed to recover the window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to recover the window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      if (!windowClass) {
-        console.error('Failed to get main window.');
-        return;
-      }
-      let snapshotAnimationConfig: window.WindowSnapshotAnimationConfig = {
-        duration: 200,
-        delay: 30
-      };
-      let promise = windowClass.recover(snapshotAnimationConfig);
-      promise.then(() => {
-        console.info('Succeeded in recovering the window.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to recover the window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to recover the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      if (!windowClass) {
-        console.error('Failed to get main window.');
-        return;
-      }
-      let snapshotAnimationConfig: window.WindowSnapshotAnimationConfig = {
-        duration: 200,
-        delay: 30
-      };
-      let promise = windowClass.recover(snapshotAnimationConfig);
-      promise.then(() => {
-        console.info('Succeeded in recovering the window.');
-      }).catch((err: Error) => {
-        console.error(`Failed to recover the window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to recover the window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## recover
 
 ```TypeScript
@@ -10255,8 +4199,6 @@ recover(snapshotAnimationConfig: WindowSnapshotAnimationConfig): Promise<void>
 Restores the main window from full-screen, maximized, or split-screen mode to a floating window, and resets its size and position to their previous values before full-screen, maximized, or split-screen mode was entered.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -10284,10 +4226,6 @@ Restores the main window from full-screen, maximized, or split-screen mode to a 
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-参见 [recover](#recover)
-
 ## resetAspectRatio
 
 ```TypeScript
@@ -10297,8 +4235,6 @@ resetAspectRatio(callback: AsyncCallback<void>): void
 取消设置窗口内容布局的比例，使用callback异步回调。仅主窗可设置，调用后将清除持久化储存的比例信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -10317,135 +4253,6 @@ resetAspectRatio(callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window = windowStage.getMainWindowSync(); // 获取应用主窗口
-    if (!windowClass) {
-      console.info('Failed to load the content. Cause: windowClass is null');
-    }
-    try {
-      let promise = windowClass.resetAspectRatio();
-      promise.then(() => {
-        console.info('Succeeded in resetting aspect ratio of window.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to reset the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to reset the aspect ratio of window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window = windowStage.getMainWindowSync(); // 获取应用主窗口
-    if (!windowClass) {
-      console.info('Failed to load the content. Cause: windowClass is null');
-    }
-    try {
-      let promise = windowClass.resetAspectRatio();
-      promise.then(() => {
-        console.info('Succeeded in resetting aspect ratio of window.');
-      }).catch((err: Error) => {
-        console.error(`Failed to reset the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to reset the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window = windowStage.getMainWindowSync(); // 获取应用主窗口
-    if (!windowClass) {
-      console.info('Failed to load the content. Cause: windowClass is null');
-    }
-    try {
-      windowClass.resetAspectRatio((err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to reset the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in resetting aspect ratio of window.');
-      });
-    } catch (exception) {
-      console.error(`Failed to reset the aspect ratio of window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window = windowStage.getMainWindowSync(); // 获取应用主窗口
-    if (!windowClass) {
-      console.info('Failed to load the content. Cause: windowClass is null');
-    }
-    try {
-      windowClass.resetAspectRatio((err: BusinessError<void> | null) => {
-        if (err?.code) {
-          console.error(`Failed to reset the aspect ratio of window. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        console.info('Succeeded in resetting aspect ratio of window.');
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to reset the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## resetAspectRatio
 
 ```TypeScript
@@ -10455,8 +4262,6 @@ resetAspectRatio(): Promise<void>
 取消设置窗口内容布局的比例，使用Promise异步回调。仅主窗可设置，调用后将清除持久化储存的比例信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -10475,10 +4280,6 @@ resetAspectRatio(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-参见 [resetAspectRatio](#resetaspectratio)
-
 ## resetSize
 
 ```TypeScript
@@ -10491,8 +4292,6 @@ resetSize(width: number, height: number): Promise<void>
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[resize()](#resize)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -10513,32 +4312,6 @@ resetSize(width: number, height: number): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.resetSize(500, 1000, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in changing the window size.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.resetSize(500, 1000);
-promise.then(() => {
-  console.info('Succeeded in changing the window size.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## resetSize
 
 ```TypeScript
@@ -10552,8 +4325,6 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 > [resize()](#resize)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -10569,20 +4340,10 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 | height | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [resetSize](#resetsize)
-
 ## resize
 
-ArkTS-Dyn:
 ```TypeScript
 resize(width: number, height: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-resize(width: int, height: int): Promise<void>
 ```
 
 基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](#resizeasync)。窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过 [getWindowLimits](#getwindowlimits)接口进行查询。调用该接口设置的宽度与高度受到此限制约束，规则：若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制；若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。
@@ -10592,8 +4353,6 @@ resize(width: int, height: int): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -10602,8 +4361,8 @@ resize(width: int, height: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| width | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| height | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| width | number | 是 |
+| height | number | 是 |
 
 **返回值：**
 
@@ -10619,91 +4378,10 @@ resize(width: int, height: int): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.resize(500, 1000, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in changing the window size.');
-  });
-} catch (exception) {
-  console.error(`Failed to change the window size. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.resize(500, 1000, (err: BusinessError<void> | null) => {
-    if (err?.code) {
-      console.error(`Failed to change the window size. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in changing the window size.');
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.resize(500, 1000);
-  promise.then(() => {
-    console.info('Succeeded in changing the window size.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to change the window size. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.resize(500, 1000);
-  promise.then(() => {
-    console.info('Succeeded in changing the window size.');
-  }).catch((err: Error) => {
-    console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## resize
 
-ArkTS-Dyn:
 ```TypeScript
 resize(width: number, height: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-resize(width: int, height: int, callback: AsyncCallback<void>): void
 ```
 
 基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](#resizeasync)。窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过 [getWindowLimits](#getwindowlimits)接口进行查询。调用该接口设置的宽度与高度受到此限制约束，规则：若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制；若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。
@@ -10713,8 +4391,6 @@ resize(width: int, height: int, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -10723,8 +4399,8 @@ resize(width: int, height: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| width | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| height | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| width | number | 是 |
+| height | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -10735,20 +4411,10 @@ resize(width: int, height: int, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [resize](#resize)
-
 ## resizeAsync
 
-ArkTS-Dyn:
 ```TypeScript
 resizeAsync(width: number, height: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-resizeAsync(width: int, height: int): Promise<void>
 ```
 
 基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。调用生效后返回，回调中可使用[getWindowProperties()](#getwindowproperties)（见示例）立即获取最终生效结果。窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过 [getWindowLimits](#getwindowlimits)接口进行查询。调用该接口设置的宽度与高度受到此限制约束，规则：若所设置的窗口宽/高尺寸小于窗口最小宽/高限制值，则窗口最小宽/高限制值生效，系统窗口和全局悬浮窗设置最小值不受窗口最小宽/高限制值限制；若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过 [getWindowStatus()](#getwindowstatus)获取）时调用生效，否则抛出错误码1300010。
@@ -10758,8 +4424,6 @@ resizeAsync(width: int, height: int): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -10768,8 +4432,8 @@ resizeAsync(width: int, height: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| width | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| height | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| width | number | 是 |
+| height | number | 是 |
 
 **返回值：**
 
@@ -10787,47 +4451,6 @@ resizeAsync(width: int, height: int): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.resizeAsync(500, 1000);
-  promise.then(() => {
-    console.info('Succeeded in changing the window size.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: ` + JSON.stringify(rect));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to change the window size. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.resizeAsync(500, 1000);
-  promise.then(() => {
-    console.info('Succeeded in changing the window size.');
-    let rect = windowClass?.getWindowProperties().windowRect;
-    console.info(`Get window rect: ` + JSON.stringify(rect));
-  }).catch((err: Error) => {
-    console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## restore
 
 ```TypeScript
@@ -10837,8 +4460,6 @@ restore(): Promise<void>
 主窗口为最小化状态且UIAbility生命周期为onForeground时，将主窗口从最小化状态，恢复到前台显示，并恢复到进入最小化状态之前的大小和位置。主窗口为前台状态时，仅抬升主窗口层级。使用Promise异步回调。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -10859,69 +4480,6 @@ restore(): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      // 调用minimize, 使主窗最小化
-      windowClass.minimize();
-      // 设置延时函数延时5秒钟后对主窗进行恢复。
-      setTimeout(()=>{
-        // 调用restore()函数对主窗进行恢复。
-        let promise = windowClass.restore();
-        promise.then(() => {
-          console.info('Succeeded in restoring the window.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to restore the window. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      }, 5000);
-    } catch (exception) {
-      console.error(`Failed to restore the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    try {
-      let windowClass: window.Window = windowStage.getMainWindowSync();
-      // 调用minimize, 使主窗最小化
-      windowClass.minimize();
-      // 设置延时函数延时5秒钟后对主窗进行恢复。
-      setTimeout(()=>{
-        // 调用restore()函数对主窗进行恢复。
-        let promise = windowClass.restore();
-        promise.then(() => {
-          console.info('Succeeded in restoring the window.');
-        }).catch((err: Error) => {
-          console.error(`Failed to restore the window. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      }, 5000);
-    } catch (err: Error) {
-      console.error(`Failed to restore the window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## restoreMainWindow
 
 ```TypeScript
@@ -10931,8 +4489,6 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 将当前窗口的主窗口恢复到前台显示，如果主窗口已处于前台，则会抬升主窗层级。此接口仅适用于类型为[TYPE_FLOAT](arkts-arkui-window-windowtype-e.md)的窗口，并且需在窗口触发过 [DOWN](arkts-arkui-touchtype-e.md)事件后才能调用。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -10960,122 +4516,10 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300007](../errorcode-window.md#1300007-windowextension拉起应用失败) |
 
-**示例**
-
-```TypeScript
-// Float.ets
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { JSON } from '@kit.ArkTS';
-
-@Entry
-@Component
-struct Float {
-  build() {
-    Button('CreateFloatWindow').onClick(() => {
-      this.createFloatWindow();
-    })
-  }
-
-  private createFloatWindow() {
-    let windowClass: window.Window | undefined = undefined;
-    let config: window.Configuration = {
-      name: 'testFloatWindow',
-      title: 'floatWindow',
-      windowType: window.WindowType.TYPE_FLOAT,
-      ctx: this.getUIContext()?.getHostContext(),
-      decorEnabled: true,
-    };
-    try {
-      window.createWindow(config, (err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        console.info(`succeeded in creating the window. Data: ${JSON.stringify(data)}`);
-        windowClass.resize(500, 1600).then(() => {
-          console.info('Succeeded in changing the window size.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to change the window size. Cause code: ${err.code}, message: ${err.message}`);
-        });
-        windowClass.setUIContent('pages/FloatWindowInfo').then(() => {
-          console.info('Succeeded in loading the content.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        });
-        windowClass.showWindow().then(() => {
-          console.info('showWindow success');
-        }).catch((err: BusinessError) => {
-          console.error(`showWindow err: ${JSON.stringify(err)}`);
-        });
-        windowClass.moveWindowToAsync(20, 200).then(() => {
-          console.info('Succeeded in moving the window.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to move the window. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      });
-    } catch (exception) {
-      console.error(`failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-// FloatWindowInfo.ets
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct FloatWindowInfo {
-  @State subWindow: window.Window | undefined = undefined;
-  @State windowId: number = -1;
-  async aboutToAppear(): Promise<void> {
-    this.subWindow = window.findWindow('testFloatWindow');
-    this.windowId = this.subWindow?.getWindowProperties()?.id;
-  }
-
-  build() {
-    Column() {
-      Text('Hello')
-    }
-    .width('100%')
-    .height('100%')
-    .onTouch((event: TouchEvent) => {
-      // 保证有Down事件产生，实际调用时机可由开发者决定
-      if (event.type === TouchType.Down) {
-        let param: Record<string, Object> = {
-          "info": "helloworld",
-        };
-        try {
-          let promise = this.subWindow?.restoreMainWindow(param);
-          promise?.then(() => {
-            console.info('Succeeded in restoring the main window.');
-          }).catch((err: BusinessError) => {
-            console.error(`Failed to restore the main window. Cause code: ${err.code}, message: ${err.message}`);
-          });
-        } catch (exception) {
-          console.error(`Failed to restore the main window. Cause code: ${exception.code}, message: ${exception.message}`);
-        }
-      }
-    })
-  }
-}
-```
-
 ## setAspectRatio
 
-ArkTS-Dyn:
 ```TypeScript
 setAspectRatio(ratio: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setAspectRatio(ratio: double, callback: AsyncCallback<void>): void
 ```
 
 设置窗口内容布局（不含边框和标题栏等装饰）的比例，使用callback异步回调。
@@ -11089,8 +4533,6 @@ setAspectRatio(ratio: double, callback: AsyncCallback<void>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -11099,7 +4541,7 @@ setAspectRatio(ratio: double, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -11110,149 +4552,10 @@ setAspectRatio(ratio: double, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window = windowStage.getMainWindowSync(); // 获取应用主窗口
-    if (!windowClass) {
-      console.info('windowClass is null');
-    }
-    try {
-      let ratio = 1.0;
-      let promise = windowClass.setAspectRatio(ratio);
-      promise.then(() => {
-        console.info('Succeeded in setting aspect ratio of window.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set the aspect ratio of window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window = windowStage.getMainWindowSync(); // 获取应用主窗口
-    if (!windowClass) {
-      console.info('windowClass is null');
-    }
-    try {
-      let ratio = 1.0;
-      let promise = windowClass.setAspectRatio(ratio);
-      promise.then(() => {
-        console.info('Succeeded in setting aspect ratio of window.');
-      }).catch((err: Error) => {
-        console.error(`Failed to set the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to set the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window = windowStage.getMainWindowSync(); // 获取应用主窗口
-    if (!windowClass) {
-      console.info('Failed to load the content. Cause: windowClass is null');
-    }
-    try {
-      let ratio = 1.0;
-      windowClass.setAspectRatio(ratio, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the aspect ratio of window.');
-      });
-    } catch (exception) {
-      console.error(`Failed to set the aspect ratio of window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window = windowStage.getMainWindowSync(); // 获取应用主窗口
-    if (!windowClass) {
-      console.info('Failed to load the content. Cause: windowClass is null');
-    }
-    try {
-      let ratio = 1.0;
-      windowClass.setAspectRatio(ratio, (err: BusinessError<void> | null) => {
-        if (err?.code) {
-          console.error(`Failed to set the aspect ratio of window. Cause code: ${err?.code}, message: ${err?.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the aspect ratio of window.');
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to set the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## setAspectRatio
 
-ArkTS-Dyn:
 ```TypeScript
 setAspectRatio(ratio: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setAspectRatio(ratio: double): Promise<void>
 ```
 
 设置窗口内容布局（不含边框和标题栏等装饰）的比例，使用Promise异步回调。
@@ -11266,8 +4569,6 @@ setAspectRatio(ratio: double): Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -11276,7 +4577,7 @@ setAspectRatio(ratio: double): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -11291,10 +4592,6 @@ setAspectRatio(ratio: double): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
-
-**示例**
-
-参见 [setAspectRatio](#setaspectratio)
 
 ## setBackgroundColor
 
@@ -11310,8 +4607,6 @@ setBackgroundColor(color: string): Promise<void>
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowBackgroundColor](#setwindowbackgroundcolor)
@@ -11330,34 +4625,6 @@ setBackgroundColor(color: string): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let color: string = '#00ff33';
-windowClass.setBackgroundColor(color, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the background color.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let color: string = '#00ff33';
-let promise = windowClass.setBackgroundColor(color);
-promise.then(() => {
-  console.info('Succeeded in setting the background color.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the background color. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setBackgroundColor
 
 ```TypeScript
@@ -11372,8 +4639,6 @@ setBackgroundColor(color: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowBackgroundColor](#setwindowbackgroundcolor)
@@ -11386,10 +4651,6 @@ setBackgroundColor(color: string, callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | color | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [setBackgroundColor](#setbackgroundcolor)
 
 ## setBrightness
 
@@ -11404,8 +4665,6 @@ setBrightness(brightness: number): Promise<void>
 > [setWindowBrightness()](#setwindowbrightness)替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -11425,34 +4684,6 @@ setBrightness(brightness: number): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let brightness: number = 1;
-windowClass.setBrightness(brightness, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the brightness.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let brightness: number = 1;
-let promise = windowClass.setBrightness(brightness);
-promise.then(() => {
-  console.info('Succeeded in setting the brightness.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setBrightness
 
 ```TypeScript
@@ -11468,8 +4699,6 @@ setBrightness(brightness: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowBrightness](#setwindowbrightness)(brightness: double, callback: AsyncCallback&lt;void&gt;)
@@ -11482,10 +4711,6 @@ setBrightness(brightness: number, callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | brightness | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [setBrightness](#setbrightness)
 
 ## setColorSpace
 
@@ -11500,8 +4725,6 @@ setColorSpace(colorSpace: ColorSpace): Promise<void>
 > [setWindowColorSpace()](#setwindowcolorspace)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -11521,32 +4744,6 @@ setColorSpace(colorSpace: ColorSpace): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting window colorspace.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.setColorSpace(window.ColorSpace.WIDE_GAMUT);
-promise.then(() => {
-  console.info('Succeeded in setting window colorspace.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setColorSpace
 
 ```TypeScript
@@ -11562,8 +4759,6 @@ setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
@@ -11577,20 +4772,10 @@ setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
 | colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [setColorSpace](#setcolorspace)
-
 ## setContentAspectRatio
 
-ArkTS-Dyn:
 ```TypeScript
 setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: boolean): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: boolean): Promise<void>
 ```
 
 设置窗口内容布局（不含边框和标题栏等装饰）的比例，使用Promise异步回调。
@@ -11604,15 +4789,13 @@ setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: bo
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | 是 |
 | [isPersistent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md) | boolean | 否 |
 | needUpdateRect | boolean | 否 |
 
@@ -11632,61 +4815,6 @@ setContentAspectRatio(ratio: double, isPersistent?: boolean, needUpdateRect?: bo
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      let ratio = 1.0;
-      let promise = windowClass.setContentAspectRatio(ratio, true, true);
-      promise.then(() => {
-        console.info('Succeeded in setting aspect ratio of window.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set the aspect ratio of window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      let ratio = 1.0;
-      let promise = windowClass.setContentAspectRatio(ratio, true, true);
-      promise.then(() => {
-        console.info('Succeeded in setting aspect ratio of window.');
-      }).catch((err: Error) => {
-        console.error(`Failed to set the aspect ratio of window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set the aspect ratio of window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
 ## setDecorButtonStyle
 
 ```TypeScript
@@ -11696,8 +4824,6 @@ setDecorButtonStyle(dectorStyle: DecorButtonStyle): void
 设置装饰栏按钮样式，仅对主窗和子窗生效。如果使用Stage模型，该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -11718,72 +4844,6 @@ setDecorButtonStyle(dectorStyle: DecorButtonStyle): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { ConfigurationConstant } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    try {
-      windowStage.loadContent('pages/Index').then(() =>{
-        let windowClass = windowStage.getMainWindowSync();
-        let colorMode : ConfigurationConstant.ColorMode = ConfigurationConstant.ColorMode.COLOR_MODE_LIGHT;
-        let style: window.DecorButtonStyle = {
-          colorMode: colorMode,
-          buttonBackgroundSize: 28,
-          spacingBetweenButtons: 12,
-          closeButtonRightMargin: 20,
-          buttonIconSize: 20,
-          buttonBackgroundCornerRadius: 4
-        };
-        windowClass.setDecorButtonStyle(style);
-        console.info(`Succeeded in setting the style of button. Data: ${JSON.stringify(style)}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set the style of button. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { ConfigurationConstant } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    try {
-      windowStage.loadContent('pages/Index').then(() =>{
-        let windowClass = windowStage.getMainWindowSync();
-        let colorMode : ConfigurationConstant.ColorMode = ConfigurationConstant.ColorMode.COLOR_MODE_LIGHT;
-        let style: window.DecorButtonStyle = {
-          colorMode: colorMode,
-          buttonBackgroundSize: 28,
-          spacingBetweenButtons: 12,
-          closeButtonRightMargin: 20,
-          buttonIconSize: 20,
-          buttonBackgroundCornerRadius: 4
-        };
-        windowClass.setDecorButtonStyle(style);
-        console.info(`Succeeded in setting the style of button. Data: ${JSON.stringify(style)}`);
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to set the style of button. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## setDialogBackGestureEnabled
 
 ```TypeScript
@@ -11793,8 +4853,6 @@ setDialogBackGestureEnabled(enabled: boolean): Promise<void>
 设置模态窗口是否响应手势返回事件，非模态窗口调用返回错误码。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -11822,139 +4880,6 @@ setDialogBackGestureEnabled(enabled: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    let config: window.Configuration = {
-      name: "test",
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config, (err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        windowClass.setUIContent('pages/Index');
-        let enabled = true;
-        let promise = windowClass.setDialogBackGestureEnabled(enabled);
-        promise.then(() => {
-          console.info('Succeeded in setting dialog window to respond back gesture.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set dialog window to respond back gesture. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      });
-    } catch (exception) {
-      console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-// ets/pages/Index.ets
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World'
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize(50)
-        .fontWeight(FontWeight.Bold)
-    }
-    .height('100%')
-    .width('100%')
-  }
-
-  onBackPress(): boolean | void {
-    console.info('Succeeded in setting dialog window to respond back gesture.');
-    return true;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    let config: window.Configuration = {
-      name: "test",
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config, (err: BusinessError<void> | null, data: window.Window|undefined) => {
-        const errCode: number = err!.code;
-        if (errCode) {
-          console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        windowClass.setUIContent('pages/Index');
-        let enabled = true;
-        let promise = windowClass.setDialogBackGestureEnabled(enabled);
-        promise.then(() => {
-          console.info('Succeeded in setting dialog window to respond back gesture.');
-        }).catch((err) => {
-          console.error(`Failed to set dialog window to respond back gesture. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-// ets/pages/Index.ets
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World'
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize(50)
-        .fontWeight(FontWeight.Bold)
-    }
-    .height('100%')
-    .width('100%')
-  }
-
-  onBackPress(): boolean {
-    console.info('Succeeded in setting dialog window to respond back gesture.');
-    return true;
-  }
-}
-```
-
 ## setDimBehind
 
 ```TypeScript
@@ -11964,8 +4889,6 @@ setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
 窗口叠加时，设备有子窗口的情况下设置靠后的窗口的暗度值，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -11978,32 +4901,6 @@ setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
 | [dimBehindValue](arkts-arkui-window-windowproperties-i.md) | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.setDimBehind(0.5, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the dimness.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.setDimBehind(0.5);
-promise.then(() => {
-  console.info('Succeeded in setting the dimness.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the dimness. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setDimBehind
 
 ```TypeScript
@@ -12013,8 +4910,6 @@ setDimBehind(dimBehindValue: number): Promise<void>
 窗口叠加时，设备有子窗口的情况下设置靠后的窗口的暗度值，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -12032,10 +4927,6 @@ setDimBehind(dimBehindValue: number): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setDimBehind](#setdimbehind)
-
 ## setDragKeyFramePolicy
 
 ```TypeScript
@@ -12045,8 +4936,6 @@ setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>
 设置主窗口拖拽的关键帧策略，并使用Promise处理异步回调。非主窗口调用时，返回1300004错误码。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -12072,85 +4961,6 @@ setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let keyFramePolicy: window.KeyFramePolicy = {
-        enable: true
-      }
-      try {
-        let promise = windowClass.setDragKeyFramePolicy(keyFramePolicy);
-        promise.then((ret: window.KeyFramePolicy) => {
-          console.info(`Succeeded in setting key frame: ${JSON.stringify(ret)}`);
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set key frame. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set key frame. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.getMainWindow((err: BusinessError | null, window: window.Window | undefined) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      if (window === undefined) {
-        console.error(`Failed to obtain the main window. The main window is null.`);
-        return;
-      }
-      let keyFramePolicy: window.KeyFramePolicy = {
-        enable: true
-      }
-      try {
-        let promise = window.setDragKeyFramePolicy(keyFramePolicy);
-        promise.then((ret: window.KeyFramePolicy) => {
-          console.info(`Succeeded in setting key frame: ${JSON.stringify(ret)}`);
-        }).catch((err: Error) => {
-          console.error(`Failed to set key frame. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set key frame. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setExclusivelyHighlighted
 
 ```TypeScript
@@ -12160,8 +4970,6 @@ setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>
 设置窗口独占激活态属性。独占激活态表示窗口获焦时，会导致当前父子窗口链中处于激活态的其他窗口失去激活态。使用Promise异步回调。此接口对主窗、模态窗不生效。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -12189,45 +4997,6 @@ setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let exclusivelyHighlighted: boolean = true;
-try {
-  let promise = windowClass.setExclusivelyHighlighted(exclusivelyHighlighted);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to be exclusively highlight.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window to be exclusively highlight. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the window to be exclusively highlight. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let exclusivelyHighlighted: boolean = true;
-try {
-  let promise = windowClass.setExclusivelyHighlighted(exclusivelyHighlighted);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to be exclusively highlight.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set the window to be exclusively highlight. Cause code: ${err?.code}, message: ${err?.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the window to be exclusively highlight. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setFloatNavigationAvoidAreaEnabled
 
 ```TypeScript
@@ -12237,8 +5006,6 @@ setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 设置当前窗口是否支持获取三键导航类型的避让区域。未调用此接口设置前，系统默认不支持获取三键导航类型的避让区域。使用Promise异步回调。调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取到 [TYPE_FLOAT_NAVIGATION](arkts-arkui-window-avoidareatype-e.md)避让类型对应的避让区域或通过 on('avoidAreaChange')监听 TYPE_FLOAT_NAVIGATION避让类型对应的避让区域的变化。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -12266,31 +5033,6 @@ setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let enabled = false;
-  windowClass.setFloatNavigationAvoidAreaEnabled(enabled);
-} catch (exception) {
-  console.error(`Failed to set the window float navigation avoid area enabled status. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let enabled = false;
-  windowClass.setFloatNavigationAvoidAreaEnabled(enabled);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set the window float navigation avoid area enabled status. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## setFocusable
 
 ```TypeScript
@@ -12304,8 +5046,6 @@ setFocusable(isFocusable: boolean): Promise<void>
 > [setWindowFocusable()](#setwindowfocusable)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -12325,34 +5065,6 @@ setFocusable(isFocusable: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-windowClass.setFocusable(isFocusable, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window to be focusable.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-let promise = windowClass.setFocusable(isFocusable);
-promise.then(() => {
-  console.info('Succeeded in setting the window to be focusable.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setFocusable
 
 ```TypeScript
@@ -12368,8 +5080,6 @@ setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
@@ -12383,10 +5093,6 @@ setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 | isFocusable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [setFocusable](#setfocusable)
-
 ## setFollowParentMultiScreenPolicy
 
 ```TypeScript
@@ -12396,8 +5102,6 @@ setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>
 设置子窗口在其父窗口处于拖拽移动或拖拽缩放过程时，该子窗口是否支持跨多个屏幕同时显示。使用Promise异步回调。通过监听父窗口大小位置变化，对子窗口调用 [moveWindowTo()](#movewindowto)等接口实现子窗口跟随父窗口布局时 ，此时子窗口默认不支持跨多个屏幕同时显示。对子窗口调用此接口后可以使能子窗口在跟随父窗口布局过程中跨多个屏幕同时显示。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
@@ -12425,49 +5129,6 @@ setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let windowClass: window.Window = window.findWindow('subWindow');
-  let enabled: boolean = true;
-  let promise = windowClass?.setFollowParentMultiScreenPolicy(enabled);
-  promise.then(() => {
-    console.info('Succeeded in setting the sub window supports multi-screen simultaneous display')
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the sub window supports multi-screen simultaneous display. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the sub window supports multi-screen simultaneous display. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let windowClass: window.Window = window.findWindow('subWindow');
-  let enabled: boolean = true;
-  if (windowClass != undefined) {
-    let promise = windowClass.setFollowParentMultiScreenPolicy(enabled);
-    promise.then(() => {
-      console.info('Succeeded in setting the sub window supports multi-screen simultaneous display')
-    }).catch((err: Error) => {
-      console.error(`Failed to set the sub window supports multi-screen simultaneous display. Cause code: ${err.code}, message: ${err.message}`);
-    });
-  }
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the sub window supports multi-screen simultaneous display. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setFollowParentWindowLayoutEnabled
 
 ```TypeScript
@@ -12477,8 +5138,6 @@ setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>
 设置子窗或模态窗口（即WindowType为TYPE_DIALOG的窗口）的布局信息（position和size）是否跟随主窗，使用Promise异步回调。1、只支持主窗的一级子窗或模态窗口使用该接口。2、当子窗或模态窗口调用该接口后，立即使其布局信息与主窗完全一致并保持，除非传入false再次调用该接口，否则效果将持续。3、当子窗或模态窗口调用该接口后，再调用moveTo、resize等修改布局信息的接口将不生效。4、当子窗或模态窗口不再使用该功能后，不保证子窗或模态窗口的布局信息（position和size）为确定的值，需要应用重新进行设置。该接口调用生效后， [setRelativePositionToParentWindowEnabled()](#setrelativepositiontoparentwindowenabled)接口调用不生效 。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -12508,76 +5167,6 @@ setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (loadError) => {
-      if (loadError.code) {
-        console.error(`Failed to load the content. Cause code: ${loadError.code}, message: ${loadError.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      windowStage.createSubWindow('subWindow').then((subWindow: window.Window) => {
-        if (subWindow == null) {
-          console.error('Failed to create the subWindow. Cause: The data is empty');
-          return;
-        }
-        subWindow.setFollowParentWindowLayoutEnabled(true).then(() => {
-          console.info('after set follow parent window layout')
-        }).catch((error: BusinessError) => {
-          console.error(`setFollowParentWindowLayoutEnabled failed. ${error.code} ${error.message}`);
-        })
-      }).catch((error: BusinessError) => {
-        console.error(`createSubWindow failed. ${error.code} ${error.message}`);
-      })
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (loadError) => {
-      if (loadError?.code) {
-        console.error(`Failed to load the content. Cause code: ${loadError?.code}, message: ${loadError?.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      windowStage.createSubWindow('subWindow').then((subWindow: window.Window) => {
-        if (subWindow == null) {
-          console.error('Failed to create the subWindow. Cause: The data is empty');
-          return Promise.resolve();
-        }
-        subWindow.setFollowParentWindowLayoutEnabled(true).then(() => {
-          console.info('after set follow parent window layout')
-        }).catch((error: Error) => {
-          console.error(`setFollowParentWindowLayoutEnabled failed. ${error.code} ${error.message}`);
-        })
-      }).catch((error: Error) => {
-        console.error(`createSubWindow failed. ${error.code} ${error.message}`);
-      })
-    });
-  }
-}
-```
-
 ## setFullScreen
 
 ```TypeScript
@@ -12594,8 +5183,6 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;)
@@ -12608,70 +5195,6 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | [isFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isFullScreen: boolean = true;
-      windowClass.setFullScreen(isFullScreen, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in enabling the full-screen mode.');
-      });
-    });
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isFullScreen: boolean = true;
-      let promise = windowClass.setFullScreen(isFullScreen);
-      promise.then(() => {
-        console.info('Succeeded in enabling the full-screen mode.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to enable the full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
 
 ## setFullScreen
 
@@ -12688,8 +5211,6 @@ setFullScreen(isFullScreen: boolean): Promise<void>
 > 屏。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -12709,10 +5230,6 @@ setFullScreen(isFullScreen: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setFullScreen](#setfullscreen)
-
 ## setGestureBackEnabled
 
 ```TypeScript
@@ -12722,8 +5239,6 @@ setGestureBackEnabled(enabled: boolean): Promise<void>
 设置当前窗口是否启用手势侧滑返回功能，仅主窗可以调用成功，其他类型的窗口调用返回1300004错误码。开启此功能后，仅当窗口处于全屏模式且位于前台获焦状态下才会生效。禁用此功能后，当前应用会禁用手势热区，侧滑返回功能失效；切换到其他应用或者回到桌面后，手势热区恢复，侧滑返回功能正常。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -12751,85 +5266,6 @@ setGestureBackEnabled(enabled: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-
-      // 设置当前窗口禁用返回手势功能
-      try {
-        let gestureBackEnabled: boolean = false;
-        let promise = windowClass.setGestureBackEnabled(gestureBackEnabled);
-        promise.then(() => {
-          console.info(`Succeeded in setting gesture back disabled`);
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set gesture back disabled, Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch(exception) {
-        console.error(`Failed to set gesture back disabled, Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-
-      // 设置当前窗口禁用返回手势功能
-      try {
-        let gestureBackEnabled: boolean = false;
-        let promise = windowClass!.setGestureBackEnabled(gestureBackEnabled);
-        promise.then(() => {
-          console.info(`Succeeded in setting gesture back disabled`);
-        }).catch((err: Error) => {
-          console.error(`Failed to set gesture back disabled, Cause code: ${err?.code}, message: ${err?.message}`);
-        });
-      } catch(exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to set gesture back disabled, Cause code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setImmersiveModeEnabledState
 
 ```TypeScript
@@ -12839,8 +5275,6 @@ setImmersiveModeEnabledState(enabled: boolean): void
 设置当前窗口是否开启沉浸式布局，该调用不会改变窗口模式和窗口大小。仅主窗口和子窗口可调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -12861,33 +5295,6 @@ setImmersiveModeEnabledState(enabled: boolean): void
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let enabled = false;
-  windowClass.setImmersiveModeEnabledState(enabled);
-} catch (exception) {
-  console.error(`Failed to set the window immersive mode enabled status. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let enabled = false;
-  windowClass!.setImmersiveModeEnabledState(enabled);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set the window immersive mode enabled status, cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## setKeepScreenOn
 
 ```TypeScript
@@ -12901,8 +5308,6 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 > [setWindowKeepScreenOn()](#setwindowkeepscreenon)替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -12922,34 +5327,6 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-windowClass.setKeepScreenOn(isKeepScreenOn, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the screen to be always on.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-let promise = windowClass.setKeepScreenOn(isKeepScreenOn);
-promise.then(() => {
-  console.info('Succeeded in setting the screen to be always on.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setKeepScreenOn
 
 ```TypeScript
@@ -12965,8 +5342,6 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
@@ -12979,10 +5354,6 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | [isKeepScreenOn](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [setKeepScreenOn](#setkeepscreenon)
 
 ## setLayoutFullScreen
 
@@ -12998,8 +5369,6 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
@@ -13012,70 +5381,6 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 | --- | --- | --- |
 | [isLayoutFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen: boolean = true;
-      windowClass.setLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the window layout to full-screen mode.');
-      });
-    });
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen: boolean = true;
-      let promise = windowClass.setLayoutFullScreen(isLayoutFullScreen);
-      promise.then(() => {
-        console.info('Succeeded in setting the window layout to full-screen mode.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
 
 ## setLayoutFullScreen
 
@@ -13091,8 +5396,6 @@ setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
@@ -13111,10 +5414,6 @@ setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setLayoutFullScreen](#setlayoutfullscreen)
-
 ## setOutsideTouchable
 
 ```TypeScript
@@ -13128,8 +5427,6 @@ setOutsideTouchable(touchable: boolean): Promise<void>
 > 从API version 9开始，系统默认允许点击子窗口之外的区域，此接口不再支持使用，也不再提供替代接口。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -13147,32 +5444,6 @@ setOutsideTouchable(touchable: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.setOutsideTouchable(true, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the area to be touchable.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.setOutsideTouchable(true);
-promise.then(() => {
-  console.info('Succeeded in setting the area to be touchable.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the area to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setOutsideTouchable
 
 ```TypeScript
@@ -13187,8 +5458,6 @@ setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -13200,27 +5469,15 @@ setOutsideTouchable(touchable: boolean, callback: AsyncCallback<void>): void
 | touchable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [setOutsideTouchable](#setoutsidetouchable)
-
 ## setParentWindow
 
-ArkTS-Dyn:
 ```TypeScript
 setParentWindow(windowId: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setParentWindow(windowId: int): Promise<void>
 ```
 
 更改子窗口的父窗口，该父窗口仅支持同进程下的主窗口、子窗口或悬浮窗，使用Promise异步回调。如果该子窗口处于获焦状态，且新的父窗口处于前台，则会抬升父窗口的层级。如果该子窗口处于获焦状态，且新的父窗口的子窗口存在层级更高的模态子窗口，则焦点会转移给该模态子窗口。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -13230,7 +5487,7 @@ setParentWindow(windowId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| windowId | number | 是 |
 
 **返回值：**
 
@@ -13248,48 +5505,6 @@ setParentWindow(windowId: int): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let windowClass: window.Window = window.findWindow('subWindow');
-  let newParentWindow: window.Window = window.findWindow('newParentWindow');
-  let newParentWindowId: number = newParentWindow.getWindowProperties().id;
-  let promise = windowClass.setParentWindow(newParentWindowId);
-  promise.then(() => {
-    console.info('Succeeded in setting the new parent window.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the new parent window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the new parent window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let windowClass: window.Window = window.findWindow('subWindow');
-  let newParentWindow: window.Window = window.findWindow('newParentWindow');
-  let newParentWindowId: int = newParentWindow.getWindowProperties().id;
-  let promise = windowClass.setParentWindow(newParentWindowId);
-  promise.then(() => {
-    console.info('Succeeded in setting the new parent window.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set the new parent window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err: Error) {
-  console.error(`Failed to set the new parent window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setPreferredOrientation
 
 ```TypeScript
@@ -13299,8 +5514,6 @@ setPreferredOrientation(orientation: Orientation): Promise<void>
 设置主窗口的显示方向属性，使用Promise异步回调。非主窗口调用后不生效不报错。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -13325,156 +5538,6 @@ setPreferredOrientation(orientation: Orientation): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let orientation = window.Orientation.AUTO_ROTATION;
-      try {
-        windowClass.setPreferredOrientation(orientation, (err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to set window orientation. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in setting window orientation.');
-        });
-      } catch (exception) {
-        console.error(`Failed to set window orientation. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data: window.Window | undefined) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      let orientation = window.Orientation.AUTO_ROTATION;
-      try {
-        windowClass?.setPreferredOrientation(orientation, (err: BusinessError<void> | null) => {
-          const errCode = err?.code;
-          if (errCode) {
-            console.error(`Failed to set window orientation. Cause code: ${err?.code}, message: ${err?.message}`);
-            return;
-          }
-          console.info('Succeeded in setting window orientation.');
-        });
-      } catch (exception) {
-        let err = exception as BusinessError;
-        console.error(`Failed to set window orientation. Cause code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let orientation = window.Orientation.AUTO_ROTATION;
-      try {
-        let promise = windowClass.setPreferredOrientation(orientation);
-        promise.then(() => {
-          console.info('Succeeded in setting the window orientation.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set the window orientation. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set window orientation. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data: window.Window | undefined) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      let orientation = window.Orientation.AUTO_ROTATION;
-      try {
-        let promise = windowClass?.setPreferredOrientation(orientation);
-        promise?.then(() => {
-          console.info('Succeeded in setting the window orientation.');
-        }).catch((err: Error) => {
-          console.error(`Failed to set the window orientation. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        let err = exception as BusinessError;
-        console.error(`Failed to set window orientation. Cause code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setPreferredOrientation
 
 ```TypeScript
@@ -13484,8 +5547,6 @@ setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>)
 设置主窗口的显示方向属性，使用callback异步回调。相关横竖屏开发实践查询 [横竖屏切换](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-landscape-and-portrait-development)。非主窗口 调用后不生效不报错。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -13505,10 +5566,6 @@ setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>)
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-参见 [setPreferredOrientation](#setpreferredorientation)
-
 ## setPreferredOrientationWithResult
 
 ```TypeScript
@@ -13518,8 +5575,6 @@ setPreferredOrientationWithResult(orientation: Orientation): Promise<Orientation
 设置主窗口的显示方向属性，通过Promise异步返回显示方向的执行结果。非主窗口调用后不生效，OrientationResult返回window. [OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md).ORIENTATION_IGNORED。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -13547,41 +5602,6 @@ setPreferredOrientationWithResult(orientation: Orientation): Promise<Orientation
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let orientation = window.Orientation.LANDSCAPE;
-      try {
-        windowClass.setPreferredOrientationWithResult(orientation).then((result: window.OrientationResult) => {
-          console.info(`Succeeded in setting the window orientation. Result: ${JSON.stringify(result)}`);
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set the window orientation. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set window orientation. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setPrivacyMode
 
 ```TypeScript
@@ -13595,8 +5615,6 @@ setPrivacyMode(isPrivacyMode: boolean): Promise<void>
 > [setWindowPrivacyMode()](#setwindowprivacymode)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -13616,34 +5634,6 @@ setPrivacyMode(isPrivacyMode: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-windowClass.setPrivacyMode(isPrivacyMode, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window to privacy mode.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-let promise = windowClass.setPrivacyMode(isPrivacyMode);
-promise.then(() => {
-  console.info('Succeeded in setting the window to privacy mode.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setPrivacyMode
 
 ```TypeScript
@@ -13659,8 +5649,6 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
@@ -13674,10 +5662,6 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 | [isPrivacyMode](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [setPrivacyMode](#setprivacymode)
-
 ## setRaiseByClickEnabled
 
 ```TypeScript
@@ -13687,8 +5671,6 @@ setRaiseByClickEnabled(enable: boolean): Promise<void>
 禁止/使能子窗点击抬升功能。使用Promise异步回调。通常来说，点击一个子窗口，会将该子窗口显示抬升到应用内同一个父窗口下同类型子窗口的最上方，如果设置为false，那么点击子窗口的时候，不会将该子窗口进行抬升，而是保持不变。使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](#showwindow)并执行完毕。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -13715,146 +5697,6 @@ setRaiseByClickEnabled(enable: boolean): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    // 创建子窗
-    windowStage.createSubWindow("testSubWindow").then((subWindow) => {
-      if (subWindow == null) {
-        console.error('Failed to create the subWindow. Cause: The data is empty');
-        return;
-      }
-      subWindow.showWindow().then(() => {
-        try {
-          let enabled = false;
-          subWindow.setRaiseByClickEnabled(enabled, (err) => {
-          if (err.code) {
-            console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in disabling the raise-by-click function.');
-          });
-        } catch (err) {
-          console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
-        }
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    // 创建子窗
-    windowStage.createSubWindow("testSubWindow").then((subWindow: window.Window) => {
-      subWindow.showWindow().then(() => {
-        try {
-          let enabled = false;
-          subWindow.setRaiseByClickEnabled(enabled, (err: BusinessError<void> | null) => {
-          if (err?.code) {
-            console.error(`Failed to disable the raise-by-click function. Cause code: ${err?.code}, message: ${err?.message}`);
-            return;
-          }
-          console.info('Succeeded in disabling the raise-by-click function.');
-          });
-        } catch (exception) {
-          let err = exception as BusinessError;
-          console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
-        }
-      });
-    });
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    // 创建子窗
-    windowStage.createSubWindow('testSubWindow').then((subWindow) => {
-      if (subWindow == null) {
-        console.error('Failed to create the subWindow. Cause: The data is empty');
-        return;
-      }
-      subWindow.showWindow().then(() => {
-        try {
-          let enabled = false;
-          subWindow.setRaiseByClickEnabled(enabled).then(() => {
-            console.info('Succeeded in disabling the raise-by-click function.');
-          }).catch((err: BusinessError) => {
-            console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
-          });
-        } catch (err) {
-          console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
-        }
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    // 创建子窗
-    windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window) => {
-      subWindow.showWindow().then(() => {
-        try {
-          let enabled = false;
-          subWindow.setRaiseByClickEnabled(enabled).then(() => {
-            console.info('Succeeded in disabling the raise-by-click function.');
-          }).catch((err: Error) => {
-            console.error(`Failed to disable the raise-by-click function. Cause code: ${err?.code}, message: ${err?.message}`);
-          });
-        } catch (exception) {
-          let err = exception as BusinessError;
-          console.error(`Failed to disable the raise-by-click function. Cause code: ${err.code}, message: ${err.message}`);
-        }
-      });
-    });
-  }
-}
-```
-
 ## setReceiveDragEventEnabled
 
 ```TypeScript
@@ -13864,8 +5706,6 @@ setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 设置当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md)，使用Promise异步回调。默认场景下为true，能够接收拖拽事件。当enable为false，当前窗口不能接收拖拽事件。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -13891,57 +5731,11 @@ setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enabled = false;
-try {
-  let promise = windowClass.setReceiveDragEventEnabled(enabled);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to be WindowReceiveDragEventEnabled.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window to be the window ReceiveDragEventEnabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the window ReceiveDragEventEnabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enabled = false;
-try {
-  let promise = windowClass.setReceiveDragEventEnabled(enabled);
-  promise?.then(() => {
-    console.info('Succeeded in setting the window to be WindowReceiveDragEventEnabled.');
-  }).catch((e) => {
-    let err = e as BusinessError;
-    console.error(`Failed to set the window to be WindowReceiveDragEventEnabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the WindowReceiveDragEventEnabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## setRelativePositionToParentWindowEnabled
 
-ArkTS-Dyn:
 ```TypeScript
 setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor,
         offsetX?: number, offsetY?: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor,
-        offsetX?: int, offsetY?: int): Promise<void>
 ```
 
 用于设置一级子窗是否支持与主窗保持相对位置不变。使用Promise异步回调。该相对位置通过一级子窗与主窗之间锚点的偏移量表示，子窗和主窗使用的窗口锚点相同。
@@ -13952,8 +5746,6 @@ setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
@@ -13962,8 +5754,8 @@ setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor
 | --- | --- | --- |
 | enabled | boolean | 是 |
 | anchor | [WindowAnchor](arkts-arkui-window-windowanchor-e.md) | 否 |
-| offsetX | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
-| offsetY | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| offsetX | number | 否 |
+| offsetY | number | 否 |
 
 **返回值：**
 
@@ -13980,75 +5772,6 @@ setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (loadError: BusinessError) => {
-      if (loadError.code) {
-        console.error(`Failed to load the content. Cause code: ${loadError.code}, message: ${loadError.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      windowStage.createSubWindow('subWindow').then((subWindow: window.Window) => {
-        if (subWindow == null) {
-          console.error('Failed to create the subWindow. Cause: The data is empty');
-          return;
-        }
-        subWindow.setRelativePositionToParentWindowEnabled(true).then(() => {
-          console.info('after set relative position to parent window enabled');
-        }).catch((error: BusinessError) => {
-          console.error(`setRelativePositionToParentWindowEnabled failed. ${error.code} ${error.message}`);
-        })
-      }).catch((error: BusinessError) => {
-        console.error(`createSubWindow failed. ${error.code} ${error.message}`);
-      })
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (loadError: BusinessError<void> | null): void => {
-      if (loadError && loadError.code) {
-        console.error(`Failed to load the content. Cause code: ${loadError.code}, message: ${loadError.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      windowStage.createSubWindow('subWindow').then((subWindow: window.Window) => {
-        if (subWindow == null) {
-          console.error('Failed to create the subWindow. Cause: The data is empty');
-          return null;
-        }
-        subWindow.setRelativePositionToParentWindowEnabled(true).then(() => {
-          console.info('after set relative position to parent window enabled');
-        }).catch((error: Error) => {
-          console.error(`setRelativePositionToParentWindowEnabled failed. ${error.code} ${error.message}`);
-        })
-      }).catch((error: Error)=>{
-        console.error(`createSubWindow failed. ${error.code} ${error.message}`);
-      })
-    });
-  }
-}
-```
-
 ## setResizeByDragEnabled
 
 ```TypeScript
@@ -14058,8 +5781,6 @@ setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void
 禁止/使能通过拖拽方式缩放主窗口或启用装饰的子窗口的功能。使用callback异步回调。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -14081,80 +5802,6 @@ setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  let enabled = false;
-  windowClass.setResizeByDragEnabled(enabled, (err) => {
-    if (err.code) {
-      console.error(`Failed to set the function of disabling the resize by drag window. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in setting the function of disabling the resize by drag window.`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the function of disabling the resize by drag window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let enabled = false;
-  windowClass.setResizeByDragEnabled(enabled, (err) => {
-    if (err?.code) {
-      console.error(`Failed to set the function of disabling the resize by drag window. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info(`Succeeded in setting the function of disabling the resize by drag window.`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the function of disabling the resize by drag window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let enabled = false;
-  let promise = windowClass.setResizeByDragEnabled(enabled);
-  promise.then(() => {
-    console.info(`Succeeded in setting the function of disabling the resize by drag window.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the function of disabling the resize by drag window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the function of disabling the resize by drag window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let enabled = false;
-  let promise = windowClass.setResizeByDragEnabled(enabled);
-  promise.then(() => {
-    console.info(`Succeeded in setting the function of disabling the resize by drag window.`);
-  }).catch((err: Error) => {
-    console.error(`Failed to set the function of disabling the resize by drag window. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the function of disabling the resize by drag window. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setResizeByDragEnabled
 
 ```TypeScript
@@ -14164,8 +5811,6 @@ setResizeByDragEnabled(enable: boolean): Promise<void>
 禁止/使能通过拖拽方式缩放主窗口或启用装饰的子窗口的功能。使用Promise异步回调。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -14192,10 +5837,6 @@ setResizeByDragEnabled(enable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [setResizeByDragEnabled](#setresizebydragenabled)
-
 ## setSeparationTouchEnabled
 
 ```TypeScript
@@ -14205,11 +5846,10 @@ setSeparationTouchEnabled(enabled: boolean): Promise<void>
 设置当前窗口是否支持事件分离状态，使用Promise异步回调。默认场景下为true，支持事件分离状态。当enable为true，支持事件分离状态下：  
 - 所有手指点击产生的事件均会发送给其手指命中的窗口。  
 当enable为false，不支持事件分离状态下：  
-- 当第一根手指点击持续命中该窗口未抬起时，后续其他手指无论是否点击命中该窗口，其产生的事件均会分发给该窗口。 - 当第一根手指点击未保持持续命中该窗口时，后续其他手指即使点击命中该窗口，其产生的事件也不会分发给该窗口，该事件会被系统丢弃。
+- 当第一根手指点击持续命中该窗口未抬起时，后续其他手指无论是否点击命中该窗口，其产生的事件均会分发给该窗口。  
+- 当第一根手指点击未保持持续命中该窗口时，后续其他手指即使点击命中该窗口，其产生的事件也不会分发给该窗口，该事件会被系统丢弃。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -14235,45 +5875,6 @@ setSeparationTouchEnabled(enabled: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enabled = false;
-try {
-  let promise = windowClass.setSeparationTouchEnabled(enabled);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to be separationTouchEnabled.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window to be separationTouchEnabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the separationTouchEnabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enabled = false;
-try {
-  let promise = windowClass.setSeparationTouchEnabled(enabled);
-  promise?.then(() => {
-    console.info('Succeeded in setting the window to be separationTouchEnabled.');
-  }).catch((e) => {
-    let err = e as BusinessError;
-    console.error(`Failed to set the window to be separationTouchEnabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the separationTouchEnabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## setSpecificSystemBarEnabled
 
 ```TypeScript
@@ -14283,8 +5884,6 @@ setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnim
 设置主窗口状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏，使用Promise异步回调。调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -14312,81 +5911,6 @@ setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnim
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 此处以隐藏状态栏为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let promise = windowClass.setSpecificSystemBarEnabled('status', false);
-        promise.then(() => {
-          console.info('Succeeded in setting the system bar to be invisible.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 此处以隐藏状态栏为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let promise = windowClass!.setSpecificSystemBarEnabled('status', false);
-        promise.then(() => {
-          console.info('Succeeded in setting the system bar to be invisible.');
-        }).catch((err: Error) => {
-          console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setStatusBarColor
 
 ```TypeScript
@@ -14397,8 +5921,6 @@ setStatusBarColor(color: ColorMetrics): Promise<void>
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -14407,7 +5929,7 @@ setStatusBarColor(color: ColorMetrics): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) | 是 |
+| color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 |
 
 **返回值：**
 
@@ -14423,79 +5945,6 @@ setStatusBarColor(color: ColorMetrics): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ColorMetrics, window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let promise = windowClass.setStatusBarColor(ColorMetrics.numeric(0x112233));
-        promise.then(() => {
-          console.info('Succeeded in setting the status bar color.');
-        }).catch((err: BusinessError) => {
-          console.error(`Set the status bar color failed. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set the status bar color. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@ohos.app.ability.UIAbility';
-import { BusinessError } from '@ohos.base';
-import { ColorMetrics, window } from '@ohos.window';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        let promise = windowClass!.setStatusBarColor(ColorMetrics.numeric(0x112233));
-        promise.then(() => {
-          console.info('Succeeded in setting the status bar color.');
-        }).catch((err: Error) => {
-          console.error(`Set the status bar color failed. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to set the status bar color. Cause code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setSubWindowModal
 
 ```TypeScript
@@ -14505,8 +5954,6 @@ setSubWindowModal(isModal: boolean): Promise<void>
 设置子窗的模态属性是否启用，使用Promise异步回调。子窗口调用该接口时，设置子窗口模态属性是否启用。启用子窗口模态属性后，其父级窗口不能响应用户操作，直到子窗口关闭或者子窗口的模态属性被禁用。子窗口之外的窗口调用该接口时，会报错。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -14534,145 +5981,6 @@ setSubWindowModal(isModal: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    // 创建子窗
-    try {
-      let subWindow = windowStage.createSubWindow('testSubWindow');
-      subWindow.then((data) => {
-        if (data == null) {
-          console.error('Failed to create the subWindow. Cause: The data is empty');
-          return;
-        }
-        windowClass = data;
-        let promise = windowClass.setSubWindowModal(true);
-        promise.then(() => {
-          console.info('Succeeded in setting subwindow modal');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set subwindow modal. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      });
-    } catch (exception) {
-      console.error(`Failed to create the subWindow. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    // 创建子窗
-    try {
-      let subWindow = windowStage.createSubWindow('testSubWindow');
-      subWindow.then((data: window.Window) => {
-        windowClass = data;
-        let promise = windowClass?.setSubWindowModal(true);
-        promise?.then(() => {
-          console.info('Succeeded in setting subwindow modal');
-        }).catch((err: Error) => {
-          console.error(`Failed to set subwindow modal. Cause code: ${err?.code}, message: ${err?.message}`);
-        });
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to create the subWindow. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    // 创建子窗
-    try {
-      let subWindow = windowStage.createSubWindow('testSubWindow');
-      subWindow.then((data) => {
-        if (!data) {
-          console.error('Failed to create the subWindow. Cause: The data is empty');
-          return;
-        }
-        windowClass = data;
-        let promise = windowClass.setSubWindowModal(true, window.ModalityType.WINDOW_MODALITY);
-        promise.then(() => {
-          console.info('Succeeded in setting subwindow modal');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set subwindow modal. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      });
-    } catch (exception) {
-      console.error(`Failed to create the subWindow. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    // 创建子窗
-    try {
-      let subWindow = windowStage.createSubWindow('testSubWindow');
-      subWindow.then((data: window.Window) => {
-        windowClass = data;
-        let promise = windowClass?.setSubWindowModal(true, window.ModalityType.WINDOW_MODALITY);
-        promise?.then(() => {
-          console.info('Succeeded in setting subwindow modal');
-        }).catch((err: Error) => {
-          console.error(`Failed to set subwindow modal. Cause code: ${err?.code}, message: ${err?.message}`);
-        });
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to create the subWindow. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## setSubWindowModal
 
 ```TypeScript
@@ -14682,8 +5990,6 @@ setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>
 设置子窗的模态类型，使用Promise异步回调。当子窗口模态类型为模窗口子窗时，其父级窗口不能响应用户操作，直到子窗口关闭或者子窗口的模态类型被禁用。当子窗口模态类型为模应用子窗时，其父级窗口与该应用其他实例的窗口不能响应用户操作，直到子窗口关闭或者子窗口的模态类型被禁用。此接口仅支持设置子窗口模态类型，当需要禁用子窗口模态属性时，建议使用 [setSubWindowModal&lt;sup&gt;12+&lt;/sup&gt;](#setsubwindowmodal)。子窗口之外的窗口调用该接口时，会报错。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -14712,27 +6018,15 @@ setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-参见 [setSubWindowModal](#setsubwindowmodal)
-
 ## setSubWindowZLevel
 
-ArkTS-Dyn:
 ```TypeScript
 setSubWindowZLevel(zLevel: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setSubWindowZLevel(zLevel: int): Promise<void>
 ```
 
 设置当前子窗口层级级别，设置了模态属性的子窗不支持。使用Promise异步回调。通过该接口改变子窗口的显示层级时，不会发生焦点切换。推荐使用[shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md)进行焦点切换。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -14742,7 +6036,7 @@ setSubWindowZLevel(zLevel: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [zLevel](arkts-arkui-window-subwindowoptions-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [zLevel](arkts-arkui-window-subwindowoptions-i.md) | number | 是 |
 
 **返回值：**
 
@@ -14761,71 +6055,6 @@ setSubWindowZLevel(zLevel: int): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300009](../errorcode-window.md#1300009-父窗口无效) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let zLevel: number = 1;
-    // 创建子窗
-    try {
-      windowStage.createSubWindow('testSubWindow').then((subWindow) => {
-        if (subWindow == null) {
-          console.error('Failed to create the sub window. Cause: The sub window is null');
-          return;
-        }
-        subWindow.setSubWindowZLevel(zLevel).then(() => {
-          console.info('Succeeded in setting sub window zLevel.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set sub window zLevel. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      });
-    } catch (err) {
-      console.error(`Failed to create the sub window or set zLevel. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let zLevel: int = 1;
-    // 创建子窗
-    try {
-      windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window) => {
-        subWindow.setSubWindowZLevel(zLevel).then(() => {
-          console.info('Succeeded in setting sub window zLevel.');
-        }).catch((err: Error) => {
-          console.error(`Failed to set sub window zLevel. Cause code: ${err?.code}, message: ${err?.message}`);
-        });
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to create the sub window or set zLevel. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## setSystemAvoidAreaEnabled
 
 ```TypeScript
@@ -14835,8 +6064,6 @@ setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 创建全局悬浮窗、模态窗或WindowType窗口类型为系统窗口时，调用该接口使能后才可以通过[getWindowAvoidArea()](#getwindowavoidarea)获取窗口避 让区信息或通过 on('avoidAreaChange')监听窗 口避让区变化。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -14863,109 +6090,6 @@ setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error('Failed to load the content. Cause: %{public}s', JSON.stringify(err));
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      let windowClass: window.Window | undefined = undefined;
-      let config: window.Configuration = {
-        name: "test",
-        windowType: window.WindowType.TYPE_DIALOG,
-        decorEnabled: true,
-        ctx: this.context
-      };
-      try {
-        window.createWindow(config, (err: BusinessError, data) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to create the system window. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          windowClass = data;
-          windowClass.setUIContent('pages/Test');
-          let enabled = true;
-          let promise = windowClass.setSystemAvoidAreaEnabled(enabled);
-          promise.then(() => {
-            let type = window.AvoidAreaType.TYPE_SYSTEM;
-            let avoidArea = windowClass?.getWindowAvoidArea(type);
-          }).catch((err: BusinessError) => {
-            console.error(`Failed to obtain the system window avoid area. Cause code: ${err.code}, message: ${err.message}`);
-          });
-        });
-      } catch (exception) {
-        console.error(`Failed to create the system window. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err?.code) {
-        console.error('Failed to load the content. Cause: %{public}s', JSON.stringify(err));
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      let windowClass: window.Window | undefined = undefined;
-      let config: window.Configuration = {
-        name: "test",
-        windowType: window.WindowType.TYPE_DIALOG,
-        decorEnabled: true,
-        ctx: this.context
-      };
-      try {
-        window.createWindow(config, (err: BusinessError<void> | null, data) => {
-          const errCode = err?.code;
-          if (errCode) {
-            console.error(`Failed to create the system window. Cause: ${err}`);
-            return;
-          }
-          windowClass = data;
-          windowClass!.setUIContent('pages/Test');
-          let enabled = true;
-          let promise = windowClass!.setSystemAvoidAreaEnabled(enabled);
-          promise.then(() => {
-            let type = window.AvoidAreaType.TYPE_SYSTEM;
-            let avoidArea = windowClass!.getWindowAvoidArea(type);
-          }).catch((err: Error) => {
-            console.error(`Failed to obtain the system window avoid area. Cause code: ${err.code}, message: ${err.message}`);
-          });
-        });
-      } catch (exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to create the system window. Cause code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setSystemBarEnable
 
 ```TypeScript
@@ -14981,8 +6105,6 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status'|'navigation'&gt;)
@@ -14995,72 +6117,6 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 | --- | --- | --- |
 | names | Array & lt;'status' \ | 'navigation' & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-// 此处以状态栏等均不显示为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      windowClass.setSystemBarEnable(names, (err: BusinessError) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the system bar to be invisible.');
-      });
-    });
-  }
-}
-```
-
-```TypeScript
-// 此处以状态栏等均不显示为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      let promise = windowClass.setSystemBarEnable(names);
-      promise.then(() => {
-        console.info('Succeeded in setting the system bar to be invisible.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
 
 ## setSystemBarEnable
 
@@ -15077,8 +6133,6 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status'|'navigation'&gt;)
@@ -15097,10 +6151,6 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setSystemBarEnable](#setsystembarenable)
-
 ## setSystemBarProperties
 
 ```TypeScript
@@ -15116,8 +6166,6 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: Async
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
@@ -15130,82 +6178,6 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: Async
 | --- | --- | --- |
 | systemBarProperties | [SystemBarProperties](arkts-arkui-window-systembarproperties-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let systemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // 以下两个属性从API Version8开始支持
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
-      windowClass.setSystemBarProperties(systemBarProperties, (err) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        console.info('Succeeded in setting the system bar properties.');
-      });
-    });
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let systemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // 以下两个属性从API Version8开始支持
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
-      let promise = windowClass.setSystemBarProperties(systemBarProperties);
-      promise.then(() => {
-        console.info('Succeeded in setting the system bar properties.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    });
-  }
-}
-```
 
 ## setSystemBarProperties
 
@@ -15221,8 +6193,6 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 > 替代。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -15242,10 +6212,6 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setSystemBarProperties](#setsystembarproperties)
-
 ## setTitleAndDockHoverShown
 
 ```TypeScript
@@ -15255,8 +6221,6 @@ setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolea
 设置主窗口进入全屏模式时鼠标Hover到热区上是否显示窗口标题栏和dock栏，使用Promise异步回调。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -15283,89 +6247,6 @@ setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolea
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // 加载主窗口对应的页面。
-    windowStage.loadContent('pages/Index', (err) => {
-      let mainWindow: window.Window | undefined = undefined;
-      // 获取应用主窗口。
-      windowStage.getMainWindow().then(
-        data => {
-          if (!data) {
-            console.error('Failed to get main window. Cause: The data is undefined.');
-            return;
-          }
-          mainWindow = data;
-          console.info(`Succeeded in obtaining the main window. Data: ${JSON.stringify(data)}`);
-          // 调用maximize接口，设置窗口进入全屏模式。
-          mainWindow.maximize(window.MaximizePresentation.ENTER_IMMERSIVE);
-          // 调用setTitleAndDockHoverShown接口，隐藏标题栏和Dock栏。
-          mainWindow.setTitleAndDockHoverShown(false, false);
-        }
-      ).catch((err: BusinessError) => {
-          if(err.code){
-            console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          }
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // 加载主窗口对应的页面。
-    windowStage.loadContent('pages/Index', (err) => {
-      let mainWindow: window.Window | undefined = undefined;
-      // 获取应用主窗口。
-      windowStage.getMainWindow().then(
-        data => {
-          if (!data) {
-            console.error('Failed to get main window. Cause: The data is undefined.');
-            return null;
-          }
-          mainWindow = data;
-          console.info(`Succeeded in obtaining the main window.`);
-          // 调用maximize接口，设置窗口进入全屏模式。
-          mainWindow!.maximize(window.MaximizePresentation.ENTER_IMMERSIVE);
-          // 调用setTitleAndDockHoverShown接口，隐藏标题栏和Dock栏。
-          let promise = mainWindow!.setTitleAndDockHoverShown(false, false);
-          promise.then(() => {
-            console.info('Succeeded in setting the title and dock hoverShown false.');
-          }).catch((err: Error) => {
-            console.error(`Failed to set the title and dock hoverShown false. Cause code: ${err.code}, message: ${err.message}`);
-          });
-        }
-      ).catch((err: Error) => {
-        if(err.code){
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        }
-      });
-    });
-  }
-}
-```
-
 ## setTouchable
 
 ```TypeScript
@@ -15379,8 +6260,6 @@ setTouchable(isTouchable: boolean): Promise<void>
 > [setWindowTouchable()](#setwindowtouchable)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -15400,34 +6279,6 @@ setTouchable(isTouchable: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable = true;
-windowClass.setTouchable(isTouchable, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the window to be touchable.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable = true;
-let promise = windowClass.setTouchable(isTouchable);
-promise.then(() => {
-  console.info('Succeeded in setting the window to be touchable.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setTouchable
 
 ```TypeScript
@@ -15443,8 +6294,6 @@ setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
@@ -15458,10 +6307,6 @@ setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 | isTouchable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [setTouchable](#settouchable)
-
 ## setTouchableAreas
 
 ```TypeScript
@@ -15471,8 +6316,6 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 实现设置窗口可触摸区域；不设置时默认整个窗口区域可触摸；设置窗口可触摸区域后，区域外触摸事件将被透传；如果窗口区域发生变化需要重新设置。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.SET_WINDOW_TOUCH_AREAS
@@ -15503,33 +6346,6 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  windowClass.setTouchableAreas([{left: 100, top: 100, width: 200, height:200},
-    {left: 400, top: 100, width: 200, height:200}]);
-} catch (exception) {
-  console.error(`Failed to set touchable areas. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.setTouchableAreas([{left: 100, top: 100, width: 200, height:200},
-    {left: 400, top: 100, width: 200, height:200}]);
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set touchable areas. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setUIContent
 
 ```TypeScript
@@ -15539,8 +6355,6 @@ setUIContent(path: string, callback: AsyncCallback<void>): void
 根据当前工程中指定的某个页面路径为窗口加载具体页面内容，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -15560,79 +6374,6 @@ setUIContent(path: string, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.setUIContent('pages/page2/page3', (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in loading the content.');
-  });
-} catch (exception) {
-  console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.setUIContent('pages/page2/page3', (err: BusinessError<void> | null): void => {
-    if (err?.code) {
-      console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in loading the content.');
-  });
-} catch (err: Error) {
-  console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.setUIContent('pages/page2/page3');
-  promise.then(() => {
-    console.info('Succeeded in loading the content.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to load the content. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.setUIContent('pages/page2/page3');
-  promise.then(() => {
-    console.info('Succeeded in loading the content.');
-  }).catch((err: Error) => {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err: Error) {
-  console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
 
 ## setUIContent
 
@@ -15644,8 +6385,6 @@ setUIContent(path: string): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -15670,10 +6409,6 @@ setUIContent(path: string): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [setUIContent](#setuicontent)
-
 ## setWindowBackgroundColor
 
 ```TypeScript
@@ -15684,8 +6419,6 @@ setWindowBackgroundColor(color: string | ColorMetrics): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -15694,7 +6427,7 @@ setWindowBackgroundColor(color: string | ColorMetrics): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | string \| [ColorMetrics](arkts-arkui-colormetrics-t.md) | 是 |
+| color | string \| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 |
 
 **错误码：**
 
@@ -15702,65 +6435,15 @@ setWindowBackgroundColor(color: string | ColorMetrics): void
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ColorMetrics } from '@kit.ArkUI';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-windowClass.loadContent('pages/page2', storage, (err: BusinessError) => {
-  let errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in loading the content.');
-  let color1: string = '#00FF33';
-  let color2: ColorMetrics = ColorMetrics.numeric(0xff112233);
-  try {
-    windowClass?.setWindowBackgroundColor(color1);
-    windowClass?.setWindowBackgroundColor(color2);
-  } catch (exception) {
-    console.error(`Failed to set the background color. Cause code: ${exception.code}, message: ${exception.message}`);
-  };
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let color1: string = '#00FF33';
-let color2: ColorMetrics = ColorMetrics.numeric(0xff112233);
-try {
-  windowClass.setWindowBackgroundColor(color1);
-  windowClass.setWindowBackgroundColor(color2);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set the background color. Cause code: ${error.code}, message: ${error.message}`);
-};
-```
-
 ## setWindowBrightness
 
-ArkTS-Dyn:
 ```TypeScript
 setWindowBrightness(brightness: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setWindowBrightness(brightness: double): Promise<void>
 ```
 
 主窗口设置窗口亮度。当窗口处于前台且获焦时，窗口亮度生效。使用Promise异步回调。窗口亮度生效时只会影响当前设备屏幕亮度，无法修改虚拟屏（如投屏所在的屏幕）的屏幕亮度。当接口入参为-1时，窗口亮度恢复为系统屏幕亮度（可以通过控制中心或快捷键调整）。当窗口退至后台时，窗口亮度失效，可以通过控制中心或快捷键调整。不建议连续调用或窗口退至后台时调用此接口，否则可能产生时序问题。设备行为差异：针对TV设备：当前接口不生效也不报错。 针对非2in1设备（不包含TV设备）： 在OpenHarmony 6.1之前，当前窗口的窗口亮度生效时，控制中心调整系统屏幕亮度不生效。 从OpenHarmony 6.1开始，当前窗口的窗口亮度生效时，控制中心可以调整系统屏幕亮度，同时会将当前窗口恢复为系统屏幕亮度。 针对2in1设备： 在OpenHarmony 5.0.2之前，窗口设置屏幕亮度生效时，控制中心或快捷键调整系统屏幕亮度不生效。 从OpenHarmony 5.0.2开始，窗口亮度与系统屏幕亮度保持一致，可以通过本接口、控制中心或者快捷键设置系统屏幕亮度。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -15770,7 +6453,7 @@ setWindowBrightness(brightness: double): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| brightness | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| brightness | number | 是 |
 
 **返回值：**
 
@@ -15786,185 +6469,15 @@ setWindowBrightness(brightness: double): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (loadError: BusinessError) => {
-      if (loadError.code) {
-        console.error(`Failed to load the content. Cause code: ${loadError.code}, message: ${loadError.message}`);
-        return;
-      }
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        let brightness: number = 1.0;
-        try {
-          windowClass.setWindowBrightness(brightness, (err: BusinessError) => {
-            const errCode: number = err.code;
-            if (errCode) {
-              console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
-              return;
-            }
-            console.info('Succeeded in setting the brightness.');
-          });
-        } catch (exception) {
-          console.error(`Failed to set the brightness. Cause code: ${exception.code}, message: ${exception.message}`);
-        }
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      let brightness: double = 1.0;
-      try {
-        windowClass!.setWindowBrightness(brightness, (err: BusinessError<void> | null) => {
-          const errCode = err?.code;
-          if (errCode) {
-            console.error(`Failed to set the brightness. Cause code: ${err?.code}, message: ${err?.message}`);
-            return;
-          }
-          console.info('Succeeded in setting the brightness.');
-        });
-      } catch (exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to set the brightness. Cause code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (loadError: BusinessError) => {
-      if (loadError.code) {
-        console.error(`Failed to load the content. Cause code: ${loadError.code}, message: ${loadError.message}`);
-        return;
-      }
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        let brightness: number = 1.0;
-        try {
-          let promise = windowClass.setWindowBrightness(brightness);
-          promise.then(() => {
-            console.info('Succeeded in setting the brightness.');
-          }).catch((err: BusinessError) => {
-            console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
-          });
-        } catch (exception) {
-          console.error(`Failed to set the brightness. Cause code: ${exception.code}, message: ${exception.message}`);
-        }
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      let brightness: double = 1.0;
-      try {
-        let promise = windowClass!.setWindowBrightness(brightness);
-        promise.then(() => {
-          console.info('Succeeded in setting the brightness.');
-        }).catch((err: Error) => {
-          console.error(`Failed to set the brightness. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to set the brightness. Cause code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setWindowBrightness
 
-ArkTS-Dyn:
 ```TypeScript
 setWindowBrightness(brightness: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void
 ```
 
 主窗口设置窗口亮度。当窗口处于前台且获焦时，窗口亮度生效。使用Promise异步回调。窗口亮度生效时只会影响当前设备屏幕亮度，无法修改虚拟屏（如投屏所在的屏幕）的屏幕亮度。当接口入参为-1时，窗口亮度恢复为系统屏幕亮度（可以通过控制中心或快捷键调整）。当窗口退至后台时，窗口亮度失效，可以通过控制中心或快捷键调整。不建议连续调用或窗口退至后台时调用此接口，否则可能产生时序问题。设备行为差异：针对TV设备：当前接口不生效也不报错。 针对非2in1设备（不包含TV设备）： 在OpenHarmony 6.1之前，当前窗口的窗口亮度生效时，控制中心调整系统屏幕亮度不生效。 从OpenHarmony 6.1开始，当前窗口的窗口亮度生效时，控制中心可以调整系统屏幕亮度，同时会将当前窗口恢复为系统屏幕亮度。 针对2in1设备： 在OpenHarmony 5.0.2之前，窗口设置屏幕亮度生效时，控制中心或快捷键调整系统屏幕亮度不生效。 从OpenHarmony 5.0.2开始，窗口亮度与系统屏幕亮度保持一致，可以通过本接口、控制中心或者快捷键设置系统屏幕亮度。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -15974,7 +6487,7 @@ setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| brightness | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| brightness | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -15984,10 +6497,6 @@ setWindowBrightness(brightness: double, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-参见 [setWindowBrightness](#setwindowbrightness)
 
 ## setWindowColorSpace
 
@@ -15999,8 +6508,6 @@ setWindowColorSpace(colorSpace:ColorSpace): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -16024,82 +6531,6 @@ setWindowColorSpace(colorSpace:ColorSpace): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.setWindowColorSpace(window.ColorSpace.WIDE_GAMUT, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting window colorspace.');
-  });
-} catch (exception) {
-  console.error(`Failed to set window colorspace. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  windowClass.setWindowColorSpace(window.ColorSpace.WIDE_GAMUT, (err: BusinessError<void> | null) => {
-    const errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to set window colorspace. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in setting window colorspace.');
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set window colorspace. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.setWindowColorSpace(window.ColorSpace.WIDE_GAMUT);
-  promise.then(() => {
-    console.info('Succeeded in setting window colorspace.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set window colorspace. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.setWindowColorSpace(window.ColorSpace.WIDE_GAMUT);
-  promise.then(() => {
-    console.info('Succeeded in setting window colorspace.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set window colorspace. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set window colorspace. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## setWindowColorSpace
 
 ```TypeScript
@@ -16109,8 +6540,6 @@ setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void
 设置当前窗口为广色域模式或默认色域模式，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16130,10 +6559,6 @@ setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-参见 [setWindowColorSpace](#setwindowcolorspace)
-
 ## setWindowContainerColor
 
 ```TypeScript
@@ -16143,8 +6568,6 @@ setWindowContainerColor(activeColor: string, inactiveColor: string): void
 设置主窗口容器在焦点态和非焦点态时的背景色。在Stage模型下，该接口需在调用 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)后使用。窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和 [setWindowBackgroundColor()](#setwindowbackgroundcolor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WINDOW_TRANSPARENT
 
@@ -16166,46 +6589,6 @@ setWindowContainerColor(activeColor: string, inactiveColor: string): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    windowStage.loadContent('pages/page2', (err: BusinessError) => {
-      let errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      // 获取应用主窗口。
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        let errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        let activeColor: string = '#00000000';
-        let inactiveColor: string = '#FF000000';
-        try {
-          windowClass.setWindowContainerColor(activeColor, inactiveColor);
-          console.info('Succeeded in setting window container color.');
-        } catch (exception) {
-          console.error(`Failed to set the window container color. Cause code: ${exception.code}, message: ${exception.message}`);
-        };
-      });
-    });
-  }
-}
-```
-
 ## setWindowContainerModalColor
 
 ```TypeScript
@@ -16215,8 +6598,6 @@ setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 设置主窗口容器在焦点态和非焦点态时的背景色。该接口需在调用 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)后使用。窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和 [setWindowBackgroundColor()](#setwindowbackgroundcolor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.SET_WINDOW_ALPHA
@@ -16240,106 +6621,15 @@ setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    windowStage.loadContent('pages/Index', (err: BusinessError) => {
-      let errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      // 获取应用主窗口。
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        let errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        let activeColor: string = '#00000000';
-        let inactiveColor: string = '#FF000000';
-        try {
-          windowClass.setWindowContainerModalColor(activeColor, inactiveColor);
-          console.info('Succeeded in setting window container color.');
-        } catch (exception) {
-          console.error(`Failed to set the window container color. Cause code: ${exception.code}, message: ${exception.message}`);
-        };
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    windowStage.loadContent('pages/Index', (err: BusinessError) => {
-      let errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      // 获取应用主窗口。
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        let errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        let activeColor: string = '#00000000';
-        let inactiveColor: string = '#FF000000';
-        try {
-          windowClass.setWindowContainerModalColor(activeColor, inactiveColor);
-          console.info('Succeeded in setting window container color.');
-        } catch (exception) {
-          let error = exception as BusinessError;
-          console.error(`Failed to set the window container color. Cause code: ${error.code}, message: ${error.message}`);
-        };
-      });
-    });
-  }
-}
-```
-
 ## setWindowCornerRadius
 
-ArkTS-Dyn:
 ```TypeScript
 setWindowCornerRadius(cornerRadius: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setWindowCornerRadius(cornerRadius: double): Promise<void>
 ```
 
 设置子窗或悬浮窗的圆角半径值，使用Promise异步回调。圆角半径值过大将会导致三键（最大化、最小化、关闭按钮）位置被裁切，且会导致热区不易识别，请根据窗口大小设置合适的圆角半径值。在调用此接口之前调用[getWindowCornerRadius()](#getwindowcornerradius)接口可以获得窗口默认圆角半径值。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
@@ -16349,7 +6639,7 @@ setWindowCornerRadius(cornerRadius: double): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| cornerRadius | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| cornerRadius | number | 是 |
 
 **返回值：**
 
@@ -16367,40 +6657,15 @@ setWindowCornerRadius(cornerRadius: double): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = windowClass.setWindowCornerRadius(1.0);
-  promise.then(() => {
-    console.info('Succeeded in setting window corner radius.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set window corner radius. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set corner radius. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## setWindowDecorHeight
 
-ArkTS-Dyn:
 ```TypeScript
 setWindowDecorHeight(height: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setWindowDecorHeight(height: int): void
 ```
 
 设置窗口的标题栏高度，对存在标题栏和三键区的窗口形态生效。如果使用Stage模型，该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。当主窗口进入全屏沉浸状态时，此时鼠标Hover到窗口标题栏热区时，会显示悬浮标题栏，悬浮标题栏高度固定为37vp。由于系统像素转换可能存在精度误差，设置后调用[getWindowDecorHeight()](#getwindowdecorheight)获取的值可能与设置的值存在1vp的差异。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16410,7 +6675,7 @@ setWindowDecorHeight(height: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| height | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| height | number | 是 |
 
 **错误码：**
 
@@ -16419,37 +6684,6 @@ setWindowDecorHeight(height: int): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-windowClass.setUIContent('pages/WindowPage').then(() => {
-  let height: number = 50;
-  try {
-    windowClass?.setWindowDecorHeight(height);
-    console.info(`Succeeded in setting the height of window decor: ${height}`);
-  } catch (exception) {
-    console.error(`Failed to set the height of window decor. Cause code: ${exception.code}, message: ${exception.message}`);
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-windowClass.setUIContent('pages/Index').then(() => {
-  let height: int = 50;
-  try {
-    windowClass?.setWindowDecorHeight(height);
-    console.info(`Succeeded in setting the height of window decor: ${height}`);
-  } catch (exception) {
-    let err = exception as BusinessError;
-    console.error(`Failed to set the height of window decor. Cause code: ${exception.code}, message: ${exception.message}`);
-  }
-})
-```
 
 ## setWindowDecorVisible
 
@@ -16460,8 +6694,6 @@ setWindowDecorVisible(isVisible: boolean): void
 设置窗口标题栏是否可见，对存在标题栏和三键区的窗口形态生效。Stage模型下，该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。设置窗口标题栏不可见后，当主窗口进入全屏沉浸状态时，此时鼠标Hover到上方窗口标题栏热区上会显示悬浮标题栏。若想禁用悬浮标题栏显示，请使用 [setTitleAndDockHoverShown()](#settitleanddockhovershown)接口。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16482,61 +6714,6 @@ setWindowDecorVisible(isVisible: boolean): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-windowClass.loadContent('pages/page2', storage, (err: BusinessError) => {
-  let errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in loading the content.');
-  let isVisible = false;
-  // 调用setWindowDecorVisible接口
-  try {
-      windowClass?.setWindowDecorVisible(isVisible);
-  } catch (exception) {
-      console.error(`Failed to set the visibility of window decor. Cause code: ${exception.code}, message: ${exception.message}`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { LocalStorage } from '@ohos.arkui.stateManagement';
-
-onWindowStageCreate(windowStage: window.WindowStage): void {
-  let storage: LocalStorage = new LocalStorage();
-  storage.setOrCreate('storageSimpleProp', 121);
-  windowStage.loadContent('pages/Index', storage, (err: BusinessError | null) => {
-    let errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to load the content. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in loading the content.');
-    let isVisible = false;
-    // 调用setWindowDecorVisible接口
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      windowClass?.setWindowDecorVisible(isVisible);
-      console.info(`Succeeded in setting the window decor visible: ${isVisible}`);
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to set the visibility of window decor. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  });
-}
-```
-
 ## setWindowDelayRaiseOnDrag
 
 ```TypeScript
@@ -16546,8 +6723,6 @@ setWindowDelayRaiseOnDrag(isEnabled: boolean): void
 设置窗口是否使能延迟抬升，仅主窗和子窗可设置。不调用此接口或传入false，主窗和子窗在鼠标左键按下时，默认立即抬升。调用此接口使能延迟抬升后，在跨窗拖拽场景，可拖拽组件所在窗口在鼠标左键按下时不会立即抬升，直到鼠标左键抬起。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -16566,30 +6741,6 @@ setWindowDelayRaiseOnDrag(isEnabled: boolean): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-try {
-  windowClass.setWindowDelayRaiseOnDrag(true);
-} catch (exception) {
-  console.error(`Failed to set window delay raise. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  windowClass.setWindowDelayRaiseOnDrag(true);
-  console.info('Succeeded in setting the window delay raise.');
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set window delay raise. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setWindowFocusable
 
 ```TypeScript
@@ -16599,8 +6750,6 @@ setWindowFocusable(isFocusable: boolean): Promise<void>
 设置窗口是否具有获得焦点的能力，使用Promise异步回调。从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md)接口创建虚拟屏，并设置 supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16626,86 +6775,6 @@ setWindowFocusable(isFocusable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-try {
-  windowClass.setWindowFocusable(isFocusable, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the window to be focusable.');
-  });
-} catch (exception) {
-  console.error(`Failed to set the window to be focusable. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-try {
-  windowClass.setWindowFocusable(isFocusable, (err: BusinessError<void> | null) => {
-    const errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to set the window to be focusable. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the window to be focusable.');
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-try {
-  let promise = windowClass.setWindowFocusable(isFocusable);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to be focusable.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the window to be focusable. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isFocusable: boolean = true;
-try {
-  let promise = windowClass.setWindowFocusable(isFocusable);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to be focusable.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set the window to be focusable. Cause code: ${err?.code}, message: ${err?.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the window to be focusable. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setWindowFocusable
 
 ```TypeScript
@@ -16715,8 +6784,6 @@ setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 设置窗口是否具有获得焦点的能力，使用callback异步回调。从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md)接口创建虚拟屏，并设置 supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16737,27 +6804,15 @@ setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [setWindowFocusable](#setwindowfocusable)
-
 ## setWindowGrayScale
 
-ArkTS-Dyn:
 ```TypeScript
 setWindowGrayScale(grayScale: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setWindowGrayScale(grayScale: double): Promise<void>
 ```
 
 设置窗口灰阶，使用Promise异步回调。该接口需要在调用 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)使窗口加载页面内容后调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -16767,7 +6822,7 @@ setWindowGrayScale(grayScale: double): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| grayScale | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| grayScale | number | 是 |
 
 **返回值：**
 
@@ -16784,61 +6839,6 @@ setWindowGrayScale(grayScale: double): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass?.setUIContent('pages/Index', (error: BusinessError) => {
-  if (error.code) {
-    console.error(`Failed to set the content. Cause code: ${error.code}`);
-    return;
-  }
-  console.info('Succeeded in setting the content.');
-  let grayScale: number = 0.5;
-  try {
-    if (canIUse('SystemCapability.Window.SessionManager')) {
-      let promise = windowClass?.setWindowGrayScale(grayScale);
-      promise?.then(() => {
-        console.info('Succeeded in setting the grayScale.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to set the grayScale. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  } catch (exception) {
-    console.error(`Failed to set the grayScale. Cause code: ${exception.code}, message: ${exception.message}`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass?.setUIContent('pages/Index', (error: BusinessError<void> | null) => {
-  if (error?.code) {
-    console.error(`Failed to set the content. Cause: ${error}`);
-    return;
-  }
-  console.info('Succeeded in setting the content.');
-  let grayScale: double = 0.5;
-  try {
-    let promise = windowClass?.setWindowGrayScale(grayScale);
-    promise?.then(() => {
-      console.info('Succeeded in setting the grayScale.');
-    }).catch((err: Error) => {
-      console.error(`Failed to set the grayScale. Cause code: ${err.code}, message: ${err.message}`);
-    });
-  } catch (exception) {
-    let error = exception as BusinessError;
-    console.error(`Failed to set the grayScale. Cause code: ${error.code}, message: ${error.message}`);
-  } 
-});
-```
-
 ## setWindowKeepScreenOn
 
 ```TypeScript
@@ -16848,8 +6848,6 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 设置当前窗口位于前台时当前设备的屏幕是否为常亮状态，异源虚拟屏下不生效。使用Promise异步回调。仅在必要场景（导航、视频播放、绘画、游戏等场景）下，设置该属性为true；退出上述场景后，应当重置该属性为false；其他场景（无屏幕互动、音频播放等）下，不使用该接口；系统检测到非规范使用该接口时，可能会恢复自动灭屏功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -16875,86 +6873,6 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-try {
-  windowClass.setWindowKeepScreenOn(isKeepScreenOn, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the screen to be always on.');
-  });
-} catch (exception) {
-  console.error(`Failed to set the screen to be always on. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-try {
-  windowClass.setWindowKeepScreenOn(isKeepScreenOn, (err: BusinessError<void> | null) => {
-    const errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to set the screen to be always on. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the screen to be always on.');
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set the screen to be always on. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-try {
-  let promise = windowClass.setWindowKeepScreenOn(isKeepScreenOn);
-  promise.then(() => {
-    console.info('Succeeded in setting the screen to be always on.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the screen to be always on. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isKeepScreenOn: boolean = true;
-try {
-  let promise = windowClass.setWindowKeepScreenOn(isKeepScreenOn);
-  promise.then(() => {
-    console.info('Succeeded in setting the screen to be always on.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set the screen to be always on. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set the screen to be always on. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## setWindowKeepScreenOn
 
 ```TypeScript
@@ -16964,8 +6882,6 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): v
 设置当前窗口位于前台时当前设备的屏幕是否为常亮状态，异源虚拟屏下不生效。使用callback异步回调。仅在必要场景（导航、视频播放、绘画、游戏等场景）下，设置该属性为true；退出上述场景后，应当重置该属性为false；其他场景（无屏幕互动、音频播放等）下，不使用该接口；系统检测到非规范使用该接口时，可能会恢复自动灭屏功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -16986,10 +6902,6 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): v
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [setWindowKeepScreenOn](#setwindowkeepscreenon)
-
 ## setWindowLayoutFullScreen
 
 ```TypeScript
@@ -17003,8 +6915,6 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 > [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -17029,116 +6939,6 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen = true;
-      try {
-        let promise = windowClass.setWindowLayoutFullScreen(isLayoutFullScreen);
-        promise.then(() => {
-          console.info('Succeeded in setting the window layout to full-screen mode.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen = true;
-      try {
-        let promise = windowClass!.setWindowLayoutFullScreen(isLayoutFullScreen);
-        promise.then(() => {
-          console.info('Succeeded in setting the window layout to full-screen mode.');
-        }).catch((err: Error) => {
-          console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err?.code}, message: ${err?.message}`);
-        });
-      } catch (exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let isLayoutFullScreen = true;
-      try {
-        windowClass.setWindowLayoutFullScreen(isLayoutFullScreen, (err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to set the window layout to full-screen mode. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in setting the window layout to full-screen mode.');
-        });
-      } catch (exception) {
-        console.error(`Failed to set the window layout to full-screen mode. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setWindowLayoutFullScreen
 
 ```TypeScript
@@ -17148,8 +6948,6 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 设置应用主窗口或应用子窗口的布局是否为沉浸式布局，使用Promise异步回调。其余窗口调用不生效也不报错。沉浸式布局生效时，布局不避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件可能产生与其重叠的情况。非沉浸式布局生效时，布局避让状态栏与<!--RP15-->三键导航栏<!--RP15End-->，组件不会与其重叠。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -17175,10 +6973,6 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)
-
 ## setWindowLimits
 
 ```TypeScript
@@ -17197,8 +6991,6 @@ setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 > [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -17226,98 +7018,6 @@ setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let windowLimits: window.WindowLimits = {
-    maxWidth: 1500,
-    maxHeight: 1000,
-    minWidth: 500,
-    minHeight: 400
-  };
-  let promise = windowClass.setWindowLimits(windowLimits);
-    promise.then((data) => {
-    console.info('Succeeded in changing the window limits. Cause:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to change the window limits. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to change the window limits. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let windowLimits: window.WindowLimits = {
-    maxWidth: 1500,
-    maxHeight: 1000,
-    minWidth: 500,
-    minHeight: 400
-  };
-  let promise = windowClass.setWindowLimits(windowLimits);
-    promise.then((data : window.WindowLimits) => {
-    console.info(`Succeeded in changing the window limits: ${JSON.stringify(data)}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to change the window limits. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to change the window limits. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let windowLimits: window.WindowLimits = {
-    maxWidth: 1500,
-    maxHeight: 1000,
-    minWidth: 100,
-    minHeight: 100
-  };
-  let promise = windowClass.setWindowLimits(windowLimits, true);
-  promise.then((data) => {
-    console.info(`Succeeded in changing the window limits. Cause: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to change the window limits. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to change the window limits. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let windowLimits: window.WindowLimits = {
-    maxWidth: 1500,
-    maxHeight: 1000,
-    minWidth: 100,
-    minHeight: 100
-  };
-  let promise = windowClass.setWindowLimits(windowLimits, true);
-  promise.then((data : window.WindowLimits) => {
-    console.info(`Succeeded in changing the window limits: ${JSON.stringify(data)}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to change the window limits. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to change the window limits. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setWindowLimits
 
 ```TypeScript
@@ -17336,8 +7036,6 @@ setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<Window
 > [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -17366,27 +7064,15 @@ setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<Window
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-参见 [setWindowLimits](#setwindowlimits)
-
 ## setWindowMask
 
-ArkTS-Dyn:
 ```TypeScript
 setWindowMask(windowMask: Array<Array<number>>): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setWindowMask(windowMask: Array<Array<long>>): Promise<void>
 ```
 
 设置异形窗口的掩码，使用Promise异步回调。异形窗口为非常规形状的窗口，掩码用于描述异形窗口的形状。此接口仅限子窗和全局悬浮窗可用。当异形窗口大小发生变化时，实际的显示内容为掩码大小和窗口大小的交集部分。该接口只在多个线程操作同一个窗口时可能返回错误码1300002。窗口被销毁场景下错误码返回401。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -17396,7 +7082,7 @@ setWindowMask(windowMask: Array<Array<long>>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| windowMask | ArkTS-Dyn: Array & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Array & lt;Array & lt;long & gt; & gt; | 是 |
+| windowMask | Array & lt;Array & lt;number & gt; & gt; | 是 |
 
 **返回值：**
 
@@ -17414,83 +7100,15 @@ setWindowMask(windowMask: Array<Array<long>>): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let maskWidth = windowClass.getWindowProperties().windowRect.width;
-  let maskHeight = windowClass.getWindowProperties().windowRect.height;
-  let windowMask = Array<Array<number>>(maskHeight).fill([]).map((_, row) => {
-    let array = Array<number>(maskWidth);
-    for (let i = 0 ; i < maskWidth; i++) {
-      array[i] = (i + row) > (maskWidth + maskHeight) / 2 ? 1 : 0;
-    }
-    return array;
-  });
-  let promise = windowClass.setWindowMask(windowMask);
-  promise.then(() => {
-    console.info('Succeeded in setting the window mask.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window mask. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the window mask. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let rows = windowClass.getWindowProperties().windowRect.width;
-  let rows = windowClass.getWindowProperties().windowRect.height;
-  let windowMask: Array<Array<long>> = [];
-
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < cols; j++) {
-      windowMask[i][j] = 1;
-    }
-  }
-  for (let i = 0; i < rows / 2; i++) {
-    for (let j = 0; j < cols / 2; j++) {
-      windowMask[i][j] = 0;
-    }
-  }
-
-  let promise = windowClass.setWindowMask(windowMask);
-  promise.then(() => {
-    console.info('Succeeded in setting the window mask.');
-  }).catch((err) => {
-    console.error(`Failed to set the window mask. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the window mask. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setWindowMaskWithAlpha
 
-ArkTS-Dyn:
 ```TypeScript
 setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: number, maskHeight: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: int, maskHeight: int): Promise<void>
 ```
 
 设置异形窗口的掩码
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -17501,8 +7119,8 @@ setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: int, maskHeight: int):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | windowMask | Uint8Array | 是 |
-| maskWidth | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| [maskHeight](../arkts-components/arkts-arkui-floatingtabbarstyle-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| maskWidth | number | 是 |
+| [maskHeight](../arkts-components/arkts-arkui-floatingtabbarstyle-i.md) | number | 是 |
 
 **返回值：**
 
@@ -17520,54 +7138,6 @@ setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: int, maskHeight: int):
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let maskWidth = windowClass.getWindowProperties().windowRect.width;
-  let maskHeight = windowClass.getWindowProperties().windowRect.height;
-  let windowMask = new Uint8Array(maskWidth * maskHeight);
-  for (let i = 0 ; i < maskHeight; i++) {
-    for (let j = 0 ; j < maskWidth; j++) {
-      windowMask[i * maskWidth + j] = (i + j) > (maskWidth + maskHeight) / 2 ? 255 : 0;
-    }
-  }
-  windowClass.setWindowMaskWithAlpha(windowMask, maskWidth, maskHeight).then(() => {
-    console.info('Succeeded in setting the window mask.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window mask. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the window mask. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let maskWidth = windowClass.getWindowProperties().windowRect.width;
-  let maskHeight = windowClass.getWindowProperties().windowRect.height;
-  let windowMask = new Uint8Array(maskWidth * maskHeight);
-  for (let i = 0 ; i < maskHeight; i++) {
-    for (let j = 0 ; j < maskWidth; j++) {
-      windowMask[i * maskWidth + j] = (i + j) > (maskWidth + maskHeight) / 2 ? 255 : 0;
-    }
-  }
-  windowClass.setWindowMaskWithAlpha(windowMask, maskWidth, maskHeight).then(() => {
-    console.info('Succeeded in setting the window mask.');
-  }).catch((err) => {
-    console.error(`Failed to set the window mask. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the window mask. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## setWindowPrivacyMode
 
 ```TypeScript
@@ -17577,8 +7147,6 @@ setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 设置窗口是否为隐私模式，使用Promise异步回调。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。隐私模式窗口退后台后在多任务卡片中显示为白色蒙层或隐私蒙层。未调用此接口时，窗口默认不开启隐私模式，可以被截屏或录屏。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRIVACY_WINDOW
 
@@ -17605,86 +7173,6 @@ setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-try {
-  windowClass.setWindowPrivacyMode(isPrivacyMode, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the window to privacy mode.');
-  });
-} catch (exception) {
-  console.error(`Failed to set the window to privacy mode. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-try {
-  windowClass.setWindowPrivacyMode(isPrivacyMode, (err: BusinessError<void> | null) => {
-    const errCode = err?.code;
-    if (errCode) {
-      console.error(`Failed to set the window to privacy mode. Cause code: ${err?.code}, message: ${err?.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the window to privacy mode.');
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set the window to privacy mode. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-try {
-  let promise = windowClass.setWindowPrivacyMode(isPrivacyMode);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to privacy mode.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the window to privacy mode. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isPrivacyMode: boolean = true;
-try {
-  let promise = windowClass.setWindowPrivacyMode(isPrivacyMode);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to privacy mode.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set the window to privacy mode. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to set the window to privacy mode. Cause code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## setWindowPrivacyMode
 
 ```TypeScript
@@ -17694,8 +7182,6 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 设置窗口是否为隐私模式，使用callback异步回调。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。隐私模式窗口退后台后在多任务卡片中显示为白色蒙层或隐私蒙层。未调用此接口时，窗口默认不开启隐私模式，可以被截屏或录屏。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRIVACY_WINDOW
 
@@ -17717,10 +7203,6 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-参见 [setWindowPrivacyMode](#setwindowprivacymode)
-
 ## setWindowShadowEnabled
 
 ```TypeScript
@@ -17730,8 +7212,6 @@ setWindowShadowEnabled(enable: boolean): Promise<void>
 设置主窗口是否显示阴影，使用Promise异步回调。未调用该接口时，主窗口默认显示阴影。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WINDOW_TRANSPARENT
 
@@ -17759,62 +7239,15 @@ setWindowShadowEnabled(enable: boolean): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    windowStage.loadContent('pages/page2', (err: BusinessError) => {
-      let errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      // 获取应用主窗口。
-      let windowClass: window.Window | undefined = undefined;
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        let errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        let enable = true;
-        let promise = windowClass.setWindowShadowEnabled(enable);
-        promise.then(() => {
-          console.info('Succeeded in setting window shadow.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set the window shadow. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      });
-    });
-  }
-}
-```
-
 ## setWindowShadowRadius
 
-ArkTS-Dyn:
 ```TypeScript
 setWindowShadowRadius(radius: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setWindowShadowRadius(radius: double): void
 ```
 
 设置子窗或悬浮窗窗口边缘阴影的模糊半径。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
@@ -17824,7 +7257,7 @@ setWindowShadowRadius(radius: double): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| radius | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| radius | number | 是 |
 
 **错误码：**
 
@@ -17834,16 +7267,6 @@ setWindowShadowRadius(radius: double): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
-
-**示例**
-
-```TypeScript
-try {
-  windowClass.setWindowShadowRadius(4.0);
-} catch (exception) {
-  console.error(`Failed to set shadow. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
 
 ## setWindowSystemBarEnable
 
@@ -17859,8 +7282,6 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 > 替代。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -17885,119 +7306,6 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 此处以状态栏等均不显示为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      try {
-        let promise = windowClass.setWindowSystemBarEnable(names);
-        promise.then(() => {
-          console.info('Succeeded in setting the system bar to be invisible.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 此处以状态栏等均不显示为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      try {
-        let promise = windowClass!.setWindowSystemBarEnable(names);
-        promise.then(() => {
-          console.info('Succeeded in setting the system bar to be invisible.');
-        }).catch((err: Error) => {
-          console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
-```TypeScript
-// 此处以状态栏等均不显示为例
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let names: Array<'status' | 'navigation'> = [];
-      try {
-        windowClass.setWindowSystemBarEnable(names, (err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to set the system bar to be invisible. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in setting the system bar to be invisible.');
-        });
-      } catch (exception) {
-        console.error(`Failed to set the system bar to be invisible. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setWindowSystemBarEnable
 
 ```TypeScript
@@ -18007,8 +7315,6 @@ setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 <!--RP14-->设置主窗口状态栏、三键导航栏的可见模式，状态栏通过status控制、三键导航栏通过navigation控制<!--RP14End-->，使用Promise异步回调。调用生效后返回并不表示状态栏、<!--RP15-->三键导航栏<!--RP15End-->的显示或隐藏已完成。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -18034,10 +7340,6 @@ setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [setWindowSystemBarEnable](#setwindowsystembarenable)
-
 ## setWindowSystemBarProperties
 
 ```TypeScript
@@ -18052,8 +7354,6 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 > 替代。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -18079,134 +7379,6 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let systemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // 以下两个属性从API Version8开始支持
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
-      try {
-        let promise = windowClass.setWindowSystemBarProperties(systemBarProperties);
-        promise.then(() => {
-          console.info('Succeeded in setting the system bar properties.');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to set the system bar properties. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError<void> | null, data) => {
-      const errCode = err?.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      windowClass = data;
-      let systemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        //以下两个属性从API Version8开始支持
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
-      try {
-        let promise = windowClass!.setWindowSystemBarProperties(systemBarProperties);
-        promise.then(() => {
-          console.info('Succeeded in setting the system bar properties.');
-        }).catch((err: Error) => {
-          console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        let error = exception as BusinessError;
-        console.error(`Failed to set the system bar properties. Cause code: ${error.code}, message: ${error.message}`);
-      }
-    });
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      let systemBarProperties: window.SystemBarProperties = {
-        statusBarColor: '#ff00ff',
-        navigationBarColor: '#00ff00',
-        // 以下两个属性从API Version8开始支持
-        statusBarContentColor: '#ffffff',
-        navigationBarContentColor: '#00ffff'
-      };
-      try {
-        windowClass.setWindowSystemBarProperties(systemBarProperties, (err: BusinessError) => {
-          const errCode: number = err.code;
-          if (errCode) {
-            console.error(`Failed to set the system bar properties. Cause code: ${err.code}, message: ${err.message}`);
-            return;
-          }
-          console.info('Succeeded in setting the system bar properties.');
-        });
-      } catch (exception) {
-        console.error(`Failed to set the system bar properties. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 ## setWindowSystemBarProperties
 
 ```TypeScript
@@ -18216,8 +7388,6 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<
 设置主窗口<!--Del-->三键导航栏、<!--DelEnd-->状态栏的属性，使用Promise异步回调。子窗口调用后不生效。主窗口在非全屏/最大化模式（悬浮窗、分屏等场景）下配置不生效，进入全屏/最大化模式后配置生效。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -18243,10 +7413,6 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [setWindowSystemBarProperties](#setwindowsystembarproperties)
-
 ## setWindowTitle
 
 ```TypeScript
@@ -18256,8 +7422,6 @@ setWindowTitle(titleName: string): Promise<void>
 设置窗口标题，使用Promise异步回调。如果使用Stage模型，该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -18283,43 +7447,6 @@ setWindowTitle(titleName: string): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let title = "title";
-  windowClass.setWindowTitle(title).then(() => {
-    console.info('Succeeded in setting the window title.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window title. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the window title. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let title = "title";
-  windowClass.setWindowTitle(title).then(() => {
-    console.info('Succeeded in setting the window title.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window title. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the window title. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setWindowTitleButtonVisible
 
 ```TypeScript
@@ -18329,8 +7456,6 @@ setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVi
 设置主窗标题栏上的最大化、最小化、关闭按钮是否可见。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -18353,79 +7478,6 @@ setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVi
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // 加载主窗口对应的页面
-    windowStage.loadContent('pages/Index', (err) => {
-      let mainWindow: window.Window | undefined = undefined;
-      // 获取应用主窗口。
-      windowStage.getMainWindow().then(
-        data => {
-          if (!data) {
-            console.error('Failed to get main window. Cause: The data is undefined.');
-            return;
-          }
-          mainWindow = data;
-          console.info('Succeeded in obtaining the main window. Data: ' + JSON.stringify(data));
-          // 调用setWindowTitleButtonVisible接口，隐藏主窗标题栏最大化、最小化、关闭按钮。
-          mainWindow.setWindowTitleButtonVisible(false, false, false);
-        }
-      ).catch((err: BusinessError) => {
-          if (err.code) {
-            console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-          }
-      });
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
- onWindowStageCreate(windowStage: window.WindowStage): void {
-    // 加载主窗口对应的页面
-    windowStage.loadContent('pages/Index', (err: BusinessError | null) => {
-      let mainWindow: window.Window | undefined = undefined;
-      // 获取应用主窗口。
-      windowStage.getMainWindow().then(
-        data => {
-          if (!data) {
-            console.error('Failed to get main window. Cause: The data is undefined.');
-            return null;
-          }
-          mainWindow = data;
-          console.info('Succeeded in obtaining the main window.');
-          // 调用setWindowTitleButtonVisible接口，隐藏主窗标题栏最大化、最小化、关闭按钮。
-          mainWindow!.setWindowTitleButtonVisible(false, false, false);
-          console.info('Succeeded in setting the window title button visible.');
-        }
-      ).catch((err: Error) => {
-        if(err.code){
-          console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        }
-      });
-    });
-  }
-}
-```
-
 ## setWindowTitleMoveEnabled
 
 ```TypeScript
@@ -18435,8 +7487,6 @@ setWindowTitleMoveEnabled(enabled: boolean): void
 禁止/使能主窗或子窗标题栏默认移动窗口和双击最大化的功能，当禁用标题栏默认移动窗口和双击最大化的功能时，可使用[startMoving()](#startmoving)在应用热区中发起 拖拽移动，使用[maximize()](#maximize)实现最大化功能。如果使用Stage模型，该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -18457,49 +7507,6 @@ setWindowTitleMoveEnabled(enabled: boolean): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    try {
-      windowStage.loadContent('pages/Index').then(() =>{
-        let windowClass = windowStage.getMainWindowSync();
-        let enabled = false;
-        windowClass.setWindowTitleMoveEnabled(enabled);
-        console.info(`Succeeded in setting the the window title move enabled: ${enabled}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to set the window title move enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-onWindowStageCreate(windowStage: window.WindowStage): void {
-  try {
-    windowStage.loadContent('pages/Index').then(() =>{
-      let windowClass = windowStage.getMainWindowSync();
-      let enabled = false;
-      windowClass.setWindowTitleMoveEnabled(enabled);
-      console.info(`Succeeded in setting the the window title move enabled: ${enabled}`);
-    });
-  } catch (exception) {
-    let err = exception as BusinessError;
-    console.error(`Failed to set the window title move enabled. Cause code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
-
 ## setWindowTopmost
 
 ```TypeScript
@@ -18509,8 +7516,6 @@ setWindowTopmost(isWindowTopmost: boolean): Promise<void>
 应用主窗口调用，用于实现将窗口置于其他应用窗口之上不被遮挡，使用Promise异步回调。应用可通过自定义快捷键实现主窗口的置顶和取消置顶。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WINDOW_TOPMOST
 
@@ -18540,84 +7545,6 @@ setWindowTopmost(isWindowTopmost: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// Index.ets
-import { window } from '@kit.ArkUI';
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined;
-let keyUpEventAry: string[] = [];
-
-@Entry
-@Component
-struct Index {
-  private context = (this.getUIContext()?.getHostContext() as common.UIAbilityContext);
-  private windowStage = this.context.windowStage;
-
-  build() {
-    RelativeContainer() {
-      Button('窗口置顶')
-        .onClick(() => {
-          try {
-            windowClass = this.windowStage.getMainWindowSync();
-            // true:窗口置顶，false:取消窗口置顶
-            let isWindowTopmost: boolean = true;
-            let promiseTopmost = windowClass.setWindowTopmost(isWindowTopmost);
-            promiseTopmost.then(() => {
-              console.info('Succeeded in setting the main window to be topmost.');
-            }).catch((err: BusinessError) => {
-              console.error(`Failed to set the main window to be topmost. Cause code: ${err.code}, message: ${err.message}`);
-            });
-          } catch (exception) {
-            console.error(`Failed to obtain the top window. Cause code: ${exception.code}, message: ${exception.message}`)
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-    .onKeyEvent((event) => {
-      if (event) {
-        if (event.type === KeyType.Down) {
-          keyUpEventAry = [];
-        }
-        if (event.type === KeyType.Up) {
-          keyUpEventAry.push(event.keyText);
-          // 自定义快捷键 ctrl+T 执行主窗口置顶、取消置顶的操作
-          if (windowClass && keyUpEventAry.includes('KEYCODE_CTRL_LEFT') && keyUpEventAry.includes('KEYCODE_T')) {
-            let isWindowTopmost: boolean = false;
-            windowClass.setWindowTopmost(isWindowTopmost);
-          }
-        }
-      }
-    })
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  let windowClass = windowStage.getMainWindowSync();
-  //  true:窗口置顶，false:取消窗口置顶
-  let isWindowTopmost: boolean = true;
-  let promiseTopmost = windowClass.setWindowTopmost(isWindowTopmost);
-  promiseTopmost.then(() => {
-    console.info('Succeeded in setting the main window to be topmost.');
-  }).catch((exception) => {
-    let err = exception as BusinessError;
-    console.error(`Failed to set the main window to be topmost. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to obtain the top window. Cause code: ${exception.code}, message: ${exception.message}`)
-}
-```
-
 ## setWindowTouchable
 
 ```TypeScript
@@ -18627,8 +7554,6 @@ setWindowTouchable(isTouchable: boolean): Promise<void>
 设置窗口是否为可点击状态，使用Promise异步回调。当窗口处于可点击状态时，若用户点击命中该窗口，事件将发送给该窗口处理。当窗口处于不可点击状态时，透传点击事件，传递给下层窗口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -18654,85 +7579,6 @@ setWindowTouchable(isTouchable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable = true;
-try {
-  windowClass.setWindowTouchable(isTouchable, (err: BusinessError) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the window to be touchable.');
-  });
-} catch (exception) {
-  console.error(`Failed to set the window to be touchable. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable = true;
-try {
-  windowClass.setWindowTouchable(isTouchable, (err: BusinessError<void> | null) => {
-    if (err & err.code) {
-      console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in setting the window to be touchable.');
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable: boolean = true;
-try {
-  let promise = windowClass.setWindowTouchable(isTouchable);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to be touchable.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the window to be touchable. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isTouchable: boolean = true;
-try {
-  let promise = windowClass.setWindowTouchable(isTouchable);
-  promise.then(() => {
-    console.info('Succeeded in setting the window to be touchable.');
-  }).catch((err) => {
-    console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  let err = exception as BusinessError;
-  console.error(`Failed to set the window to be touchable. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## setWindowTouchable
 
 ```TypeScript
@@ -18742,8 +7588,6 @@ setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 设置窗口是否为可点击状态，使用callback异步回调。当窗口处于可点击状态时，若用户点击命中该窗口，事件将发送给该窗口处理。当窗口处于不可点击状态时，透传点击事件，传递给下层窗口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -18764,10 +7608,6 @@ setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-参见 [setWindowTouchable](#setwindowtouchable)
-
 ## setWindowTransitionAnimation
 
 ```TypeScript
@@ -18777,8 +7617,6 @@ setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: Tr
 给特定场景下的窗口增加转场动画。当前只支持在应用主窗下使用。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -18809,49 +7647,6 @@ setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: Tr
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    windowStage.getMainWindow((err: BusinessError, data) => {
-      const errCode: number = err.code;
-      if (errCode) {
-        console.error(`Failed to obtain the main window. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      windowClass = data;
-      try {
-        const animationConfig: window.WindowAnimationConfig = {
-          duration: 1000,
-          curve: window.WindowAnimationCurve.LINEAR,
-        };
-        const transitionAnimation: window.TransitionAnimation = {
-          opacity: 0.5,
-          config: animationConfig
-        };
-        let promise = windowClass.setWindowTransitionAnimation(window.WindowTransitionType.DESTROY, transitionAnimation);
-        promise.then((data) => {
-          console.info('Succeeded in setting window transition animation. Cause:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to set window transition animation. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to obtain the window status of window. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    })
-  }
-}
-```
-
 ## show
 
 ```TypeScript
@@ -18866,8 +7661,6 @@ show(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [showWindow](#showwindow)(callback: AsyncCallback&lt;void&gt;)
@@ -18879,32 +7672,6 @@ show(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-windowClass.show((err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in showing the window.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = windowClass.show();
-promise.then(() => {
-  console.info('Succeeded in showing the window.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## show
 
@@ -18919,8 +7686,6 @@ show(): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [showWindow](#showwindow)()
@@ -18932,10 +7697,6 @@ show(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [show](#show)
 
 ## showWindow
 
@@ -18952,8 +7713,6 @@ showWindow(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -18970,250 +7729,6 @@ showWindow(callback: AsyncCallback<void>): void
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      try {
-        // 创建子窗
-        windowStage.createSubWindow('testSubWindow').then((subWindow) => {
-          if (subWindow == null) {
-            console.error('Failed to create the subWindow. Cause: The data is empty');
-            return;
-          }
-          subWindow.setUIContent('pages/Index', (err) => {
-            if (err.code) {
-              console.error(`Failed to load the subWindow content. Cause code: ${err.code}, message: ${err.message}`);
-              return;
-            }
-            console.info('Succeeded in loading the subWindow content.');
-            try {
-              subWindow.showWindow((err: BusinessError) => {
-                const errCode: number = err.code;
-                if (errCode) {
-                  console.error(`Failed to show the window. Error code: ${err.code}, message: ${err.message}`);
-                  return;
-                }
-                console.info('Succeeded in showing the window.');
-              });
-            } catch (exception) {
-              console.error(`Failed to show the window. Cause code: ${exception.code}, message: ${exception.message}`);
-            }
-          })
-        });
-      } catch (exception) {
-        console.error(`Failed to create the sub window. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-  });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err: BusinessError<void> | null): void => {
-      if (err?.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      try {
-        // 创建子窗
-        windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window | undefined) => {
-          subWindow!.setUIContent('pages/Index', (err: BusinessError<void> | null): void => {
-            if (err?.code) {
-              console.error(`Failed to load the subWindow content. Cause code: ${err.code}, message: ${err.message}`);
-              return;
-            }
-            console.info('Succeeded in loading the subWindow content.');
-            try {
-              subWindow!.showWindow((err: BusinessError<void> | null): void => {
-                if (err?.code) {
-                  console.error(`Failed to show the window. Error code: ${err?.code}, message: ${err?.message}`);
-                  return;
-                }
-                console.info('Succeeded in showing the window.');
-              });
-            } catch (err: Error) {
-              console.error(`Failed to show the window. Cause code: ${err.code}, message: ${err.message}`);
-            }
-          })
-        });
-      } catch (err: Error) {
-        console.error(`Failed to create the sub window. Cause code: ${err.code}, message: ${err.message}`);
-      }
-  });
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      try {
-        // 创建子窗
-        windowStage.createSubWindow('testSubWindow').then((subWindow) => {
-          if (subWindow == null) {
-            console.error('Failed to create the subWindow. Cause: The data is empty');
-            return;
-          }
-          subWindow.setUIContent('pages/Index', (err) => {
-            if (err.code) {
-              console.error(`Failed to load the subWindow content. Cause code: ${err.code}, message: ${err.message}`);
-              return;
-            }
-            console.info('Succeeded in loading the subWindow content.');
-            try {
-              let promise = subWindow.showWindow();
-              promise.then(() => {
-                console.info('Succeeded in showing the window.');
-              }).catch((err: BusinessError) => {
-                console.error(`Failed to show the window. Error code: ${err.code}, message: ${err.message}`);
-              });
-            } catch (exception) {
-              console.error(`Failed to show window. Cause code: ${exception.code}, message: ${exception.message}`);
-            }
-          });
-        });
-      } catch (exception) {
-        console.error(`Failed to create the sub window. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err: BusinessError<void> | null): void => {
-      if (err?.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      try {
-        // 创建子窗
-        windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window | undefined) => {
-          subWindow!.setUIContent('pages/Index', (err: BusinessError<void> | null): void => {
-            if (err?.code) {
-              console.error(`Failed to load the subWindow content. Cause code: ${err.code}, message: ${err.message}`);
-              return;
-            }
-            console.info('Succeeded in loading the subWindow content.');
-            try {
-              let promise = subWindow!.showWindow();
-              promise.then(() => {
-                console.info('Succeeded in showing the window.');
-              }).catch((err: Error) => {
-                console.error(`Failed to show the window. Error code: ${err.code}, message: ${err.message}`);
-              });
-            } catch (err: Error) {
-              console.error(`Failed to show window. Cause code: ${err.code}, message: ${err.message}`);
-            }
-          });
-        });
-      } catch (err: Error) {
-        console.error(`Failed to create the sub window. Cause code: ${err.code}, message: ${err.message}`);
-      }
-    });
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-        return;
-      }
-      console.info('Succeeded in loading the content.');
-      // 创建子窗
-      try {
-        windowStage.createSubWindow('subWindow').then((data) => {
-          if (data == null) {
-            console.error('Failed to create the subWindow. Cause: The data is empty');
-            return;
-          }
-          data.setUIContent('pages/Index', (err) => {
-            if (err.code) {
-              console.error(`Failed to load the subWindow content. Cause code: ${err.code}, message: ${err.message}`);
-              return;
-            }
-            console.info('Succeeded in loading the subWindow content.');
-            let options: window.ShowWindowOptions = {
-              focusOnShow: false
-            };
-            try {
-              data.showWindow(options).then(() => {
-                console.info('Succeeded in showing window');
-              }).catch((err: BusinessError) => {
-                console.error(`Failed to show window. Error code: ${err.code}, message: ${err.message}`);
-              });
-            } catch (exception) {
-              console.error(`Failed to show window. Cause code: ${exception.code}, message: ${exception.message}`);
-            }
-          });
-        });
-      } catch (exception) {
-        console.error(`Failed to create the sub window. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
-
 ## showWindow
 
 ```TypeScript
@@ -19228,8 +7743,6 @@ showWindow(): Promise<void>
 > 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -19247,10 +7760,6 @@ showWindow(): Promise<void>
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-参见 [showWindow](#showwindow)
-
 ## showWindow
 
 ```TypeScript
@@ -19265,8 +7774,6 @@ showWindow(options: ShowWindowOptions): Promise<void>
 > 一直显示启动界面；如果系统窗口、应用子窗口和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -19293,10 +7800,6 @@ showWindow(options: ShowWindowOptions): Promise<void>
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
-**示例**
-
-参见 [showWindow](#showwindow)
-
 ## snapshot
 
 ```TypeScript
@@ -19306,8 +7809,6 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 获取窗口截图，使用callback异步回调。若当前窗口设置为隐私模式（可通过 [setWindowPrivacyMode](#setwindowprivacymode) 接口设置），截图结果为白屏。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -19325,72 +7826,6 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-windowClass.snapshot((err: BusinessError, pixelMap: image.PixelMap) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to snapshot window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in snapshotting window. Pixel bytes number: ' + pixelMap.getPixelBytesNumber());
-  pixelMap.release(); // PixelMap使用完后及时释放内存
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-windowClass.snapshot((err: BusinessError<void> | null, pixelMap: image.PixelMap | undefined) => {
-  const errCode = err?.code;
-  if (errCode) {
-    console.error(`Failed to snapshot window. Cause code: ${err?.code}, message: ${err?.message}`);
-    return;
-  }
-  console.info('Succeeded in snapshotting window. Pixel bytes number: ' + pixelMap?.getPixelBytesNumber());
-  pixelMap?.release(); // PixelMap使用完后及时释放内存
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let promise = windowClass.snapshot();
-promise.then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in snapshotting window. Pixel bytes number: ' + pixelMap.getPixelBytesNumber());
-  pixelMap.release(); // PixelMap使用完后及时释放内存
-}).catch((err: BusinessError) => {
-  console.error(`Failed to snapshot window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let promise = windowClass.snapshot();
-promise.then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in snapshotting window. Pixel bytes number: ' + pixelMap.getPixelBytesNumber());
-  pixelMap.release(); // PixelMap使用完后及时释放内存
-}).catch((err: Error) => {
-  console.error(`Failed to snapshot window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## snapshot
 
 ```TypeScript
@@ -19400,8 +7835,6 @@ snapshot(): Promise<image.PixelMap>
 获取当前窗口截图。若当前窗口设置为隐私模式（可通过 [setWindowPrivacyMode](#setwindowprivacymode) 接口设置），截图结果为白屏。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -19419,10 +7852,6 @@ snapshot(): Promise<image.PixelMap>
 | --- |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-参见 [snapshot](#snapshot)
-
 ## snapshotIgnorePrivacy
 
 ```TypeScript
@@ -19432,8 +7861,6 @@ snapshotIgnorePrivacy(): Promise<image.PixelMap>
 获取当前窗口截图。即使当前窗口设置为隐私模式（可通过 [setWindowPrivacyMode](#setwindowprivacymode) 接口设置），仍可调用本接口返回当前窗口截图。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -19452,38 +7879,6 @@ snapshotIgnorePrivacy(): Promise<image.PixelMap>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let promise = windowClass.snapshotIgnorePrivacy();
-promise.then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in snapshotting window. Pixel bytes number: ' + pixelMap.getPixelBytesNumber());
-  pixelMap.release(); // PixelMap使用完后及时释放内存
-}).catch((err: BusinessError) => {
-  console.error(`Failed to snapshot window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let promise = windowClass.snapshotIgnorePrivacy();
-promise.then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in snapshotting window. Pixel bytes number: ' + pixelMap.getPixelBytesNumber());
-  pixelMap.release(); // PixelMap使用完后及时释放内存
-}).catch((err: Error) => {
-  console.error(`Failed to snapshot window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## snapshotSync
 
 ```TypeScript
@@ -19493,8 +7888,6 @@ snapshotSync(): image.PixelMap
 获取当前窗口截图，此接口为同步接口。若当前窗口设置为隐私模式（ [setWindowPrivacyMode](#setwindowprivacymode) 接口设置），截图结果为白屏。Stage模型下，该接口需要在 [loadContent()](#loadcontent) 或[setUIContent()](#setuicontent)调用生效后使用。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -19512,21 +7905,6 @@ snapshotSync(): image.PixelMap
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300018](../errorcode-window.md#1300018-api调用超时) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-try {
-  let pixelMap = windowClass.snapshotSync();
-  console.info(`Succeeded in snapshotting window`);
-  pixelMap.release(); // PixelMap使用完后及时释放内存
-} catch (exception) {
-  console.error(`Failed to snapshot window. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 ## startMoving
 
 ```TypeScript
@@ -19537,8 +7915,6 @@ startMoving(): Promise<void>
 [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，对系统窗口、应用主窗口、应用子窗口、全局悬浮窗和模态窗口生效。非自由窗口状态下，仅对系统窗口、应用子窗 口、全局悬浮窗和模态窗口生效，应用主窗口调用该接口返回801或1300004错误码。仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标或触摸点移动。在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -19560,223 +7936,15 @@ startMoving(): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private isTouchDown: boolean = false;
-  build() {
-    Row() {
-      Column() {
-        Blank('160')
-          .color(Color.Red)
-          .onTouch((event: TouchEvent) => {
-            if (event.type == TouchType.Down) {
-              this.isTouchDown = true;
-            } else if (event.type === TouchType.Move && this.isTouchDown) {
-              try {
-                let context = this.getUIContext()?.getHostContext();
-                if (!context) {
-                  console.error('Failed to get host context.');
-                  return;
-                }
-                window.getLastWindow(context).then((data)=>{
-                  if (!data) {
-                    console.error('Failed to get last window.');
-                    return;
-                  }
-                  let windowClass: window.Window = data;
-                  windowClass.startMoving().then(() => {
-                    console.info('Succeeded in starting moving window.')
-                  }).catch((err: BusinessError) => {
-                    console.error(`Failed to start moving. Cause code: ${err.code}, message: ${err.message}`);
-                  });
-                });
-              } catch (exception) {
-                console.error(`Failed to start moving window. Cause code: ${exception.code}, message: ${exception.message}`);
-              }
-            } else {
-              this.isTouchDown = false;
-            }
-          })
-      }.width('100%')
-    }.height('100%').width('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private isTouchDown: boolean = false;
-  build() {
-    Row() {
-      Column() {
-        Blank('160')
-          .color(Color.Red)
-          .onTouch((event: TouchEvent) => {
-            if (event.type == TouchType.Down) {
-              this.isTouchDown = true;
-            } else if (event.type === TouchType.Move && this.isTouchDown) {
-              try {
-                let context = this.getUIContext()?.getHostContext();
-                if (!context) {
-                  console.error('Failed to get host context.');
-                  return;
-                }
-                window.getLastWindow(context).then((data)=>{
-                  if (!data) {
-                    console.error('Failed to get last window.');
-                    return Promise.resolve();
-                  }
-                  let windowClass: window.Window = data;
-                  windowClass.startMoving().then(() => {
-                    console.info('Succeeded in starting moving window.')
-                  }).catch((err: Error) => {
-                    console.error(`Failed to start moving. Cause code: ${err.code}, message: ${err.message}`);
-                  });
-                });
-              } catch (exception) {
-                let err = exception as BusinessError;
-                console.error(`Failed to start moving window. Cause code: ${err.code}, message: ${err.message}`);
-              }
-            } else {
-              this.isTouchDown = false;
-            }
-          })
-      }.width('100%')
-    }.height('100%').width('100%')
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private isTouchDown: boolean = false;
-  build() {
-    Row() {
-      Column() {
-        Blank('160')
-          .color(Color.Red)
-          .onTouch((event: TouchEvent) => {
-            if (event.type == TouchType.Down) {
-              this.isTouchDown = true;
-            } else if (event.type === TouchType.Move && this.isTouchDown) {
-              try {
-                let context = this.getUIContext()?.getHostContext();
-                if (!context) {
-                  console.error('Failed to get host context.');
-                  return;
-                }
-                window.getLastWindow(context).then((data)=>{
-                  let windowClass: window.Window = data;
-                  windowClass.startMoving(100, 50).then(() => {
-                    console.info('Succeeded in starting moving window.')
-                  }).catch((err: BusinessError) => {
-                    console.error(`Failed to start moving. Cause code: ${err.code}, message: ${err.message}`);
-                  });
-                });
-              } catch (exception) {
-                console.error(`Failed to start moving window. Cause code: ${exception.code}, message: ${exception.message}`);
-              }
-            } else {
-              this.isTouchDown = false;
-            }
-          })
-      }.width('100%')
-    }.height('100%').width('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private isTouchDown: boolean = false;
-  build() {
-    Row() {
-      Column() {
-        Blank('160')
-          .color(Color.Red)
-          .onTouch((event: TouchEvent) => {
-            if (event.type == TouchType.Down) {
-              this.isTouchDown = true;
-            } else if (event.type === TouchType.Move && this.isTouchDown) {
-              try {
-                let context = this.getUIContext()?.getHostContext();
-                if (!context) {
-                  console.error('Failed to get host context.');
-                  return;
-                }
-                window.getLastWindow(context).then((data)=>{
-                  let windowClass: window.Window = data;
-                  windowClass.startMoving(100, 50).then(() => {
-                    console.info('Succeeded in starting moving window.')
-                  }).catch((err: Error) => {
-                    console.error(`Failed to start moving. Cause code: ${err.code}, message: ${err.message}`);
-                  });
-                });
-              } catch (exception) {
-                let err = exception as BusinessError;
-                console.error(`Failed to start moving window. Cause code: ${err.code}, message: ${err.message}`);
-              }
-            } else {
-              this.isTouchDown = false;
-            }
-          })
-      }.width('100%')
-    }.height('100%').width('100%')
-  }
-}
-```
-
 ## startMoving
 
-ArkTS-Dyn:
 ```TypeScript
 startMoving(offsetX: number, offsetY: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-startMoving(offsetX: int, offsetY: int): Promise<void>
 ```
 
 指定鼠标在窗口内的位置并移动窗口，使用Promise异步回调。在同应用内窗口分合后，且鼠标保持按下状态直接移动新窗口，如果此时鼠标快速移动，窗口移动时鼠标可能会在窗口外。可以使用本接口指定窗口移动时鼠标在窗口内的位置，先移动窗口到鼠标位置，再开始移动窗口。仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标移动。在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md)（需要保证当前行为已经触发 TouchType.Down事件）时调用此接口，触发移动效果。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -19786,8 +7954,8 @@ startMoving(offsetX: int, offsetY: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| offsetX | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| offsetY | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| offsetX | number | 是 |
+| offsetY | number | 是 |
 
 **返回值：**
 
@@ -19806,10 +7974,6 @@ startMoving(offsetX: int, offsetY: int): Promise<void>
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
 
-**示例**
-
-参见 [startMoving](#startmoving)
-
 ## stopMoving
 
 ```TypeScript
@@ -19819,8 +7983,6 @@ stopMoving(): Promise<void>
 在窗口拖拽移动过程中，通过此接口来停止窗口移动，使用Promise异步回调。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -19840,60 +8002,3 @@ stopMoving(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300004](../errorcode-window.md#1300004-无权限操作) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      windowClass.on('windowRectChange', (data: window.RectChangeOptions) => {
-        if (data.reason === window.RectChangeReason.MOVE) {
-          windowClass.stopMoving().then(() => {
-            console.info('Succeeded in stopping moving window.')
-          }).catch((err: BusinessError) => {
-            console.error(`Failed to stop moving. Cause code: ${err.code}, message: ${err.message}`);
-          });
-        }
-      });
-    } catch (exception) {
-      console.error(`Failed to stop moving window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    try {
-      let windowClass = windowStage.getMainWindowSync();
-      windowClass.stopMoving().then(() => {
-        console.info('Succeeded in stopping moving window.')
-      }).catch((err: Error) => {
-        console.error(`Failed to stop moving. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      let err = exception as BusinessError;
-      console.error(`Failed to stop moving window. Cause code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```

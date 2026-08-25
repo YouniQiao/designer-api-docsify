@@ -4,8 +4,6 @@ Enumerates the types of the distributed hardware.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ ALL = 0
 All distributed hardware.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -36,8 +32,6 @@ Distributed camera.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ SCREEN = 8
 Distributed screen.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -68,8 +60,6 @@ Distributed microphone for mobile calls.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ MODEM_SPEAKER = 512
 Distributed speaker for mobile calls.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -100,8 +88,6 @@ Distributed microphone.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ SPEAKER = 2048
 Distributed speaker.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## createVlanInterface
@@ -18,8 +18,6 @@ function createVlanInterface(ifName: string, vlanId: number): Promise<void>
 > - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -51,17 +49,3 @@ function createVlanInterface(ifName: string, vlanId: number): Promise<void>
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [2100400](../errorcode-net-connection.md#2100400-传入网卡名不正确非以太网) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let ifName = "eth0";
-let vlanId = 1;
-connection.createVlanInterface(ifName, vlanId).then(() => {
-  console.info(`Create vlan success`);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create vlan. Code:${error.code}, message:${error.message}`);
-});
-```

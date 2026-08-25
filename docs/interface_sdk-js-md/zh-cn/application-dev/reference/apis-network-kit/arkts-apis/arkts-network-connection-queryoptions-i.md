@@ -4,14 +4,12 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## family
@@ -25,7 +23,5 @@ family?: FamilyType
 **类型：** [FamilyType](arkts-network-connection-familytype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

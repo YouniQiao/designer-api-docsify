@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## moduleName
@@ -19,8 +17,6 @@ moduleName: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,28 +34,6 @@ srcEntrance: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let monitor: abilityDelegatorRegistry.AbilityStageMonitor = {
-  moduleName: 'feature_as1',
-  srcEntrance: './ets/Application/MyAbilityStage.ts',
-};
-
-let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityStageMonitor(monitor, (error, data) => {
-  if (error) {
-    console.error(`waitAbilityStageMonitor fail. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info(`waitAbilityStageMonitor success, data: ${JSON.stringify(data)}`);
-  }
-});
-```

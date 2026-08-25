@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createRandom
@@ -15,8 +15,6 @@ function createRandom(): Random
 Creates a **Random** instance.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -39,17 +37,3 @@ Creates a **Random** instance.
 | Error Code ID |
 | --- |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let rand = cryptoFramework.createRandom();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## addCustomDnsRule
@@ -20,8 +20,6 @@ Adds custom DNS rules for the specified host of the current application. This AP
 > application.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -47,32 +45,6 @@ Adds custom DNS rules for the specified host of the current application. This AP
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"], (error: BusinessError, data: void) => {
-  if (error) {
-    console.error(`Failed to get add custom dns rule. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-})
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-})
-```
-
 
 ## addCustomDnsRule
 
@@ -88,8 +60,6 @@ Adds custom DNS rules for the specified host of the current application. This AP
 > application.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -119,7 +89,3 @@ Adds custom DNS rules for the specified host of the current application. This AP
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [addCustomDnsRule](#addcustomdnsrule)

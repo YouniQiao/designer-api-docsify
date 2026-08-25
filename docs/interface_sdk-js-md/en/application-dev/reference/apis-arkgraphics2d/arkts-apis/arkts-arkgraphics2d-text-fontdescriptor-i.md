@@ -4,14 +4,12 @@ Describes the font descriptor information.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## copyright
@@ -25,8 +23,6 @@ Font copyright information. Any string is acceptable. The default value is an em
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -44,8 +40,6 @@ Family name of the font. Any string is acceptable. The default value is an empty
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -61,8 +55,6 @@ Array of OpenType feature tags supported by the font. The default value is an em
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +74,6 @@ Subfamily name of the font. Any string is acceptable. The default value is an em
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -100,8 +90,6 @@ Font name. Any string is acceptable. The default value is an empty string.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -109,16 +97,14 @@ Font name. Any string is acceptable. The default value is an empty string.
 ## index
 
 ```TypeScript
-index?: int
+index?: number
 ```
 
 Font index. This parameter is valid only when the font file is in TTC format. The value is **0** for the TTF format.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,16 +115,14 @@ Font index. This parameter is valid only when the font file is in TTC format. Th
 ## italic
 
 ```TypeScript
-italic?: int
+italic?: number
 ```
 
 Whether the font is italic. The value **0** means that the font is not italic, and **1** means the opposite. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -155,8 +139,6 @@ List of languages supported by the font. The default value is an empty array. Ea
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,8 +158,6 @@ Font license information. Any string is acceptable. The default value is an empt
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -193,8 +173,6 @@ Extracts the font family name based on the system language configuration. If the
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -212,8 +190,6 @@ Extracts the full font name based on the system language configuration. If the f
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -229,8 +205,6 @@ Extracts the unique font ID based on the system language configuration. If the f
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -248,8 +222,6 @@ Extracts the font subfamily name based on the system language configuration. If 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -265,8 +237,6 @@ Font manufacturer information. Any string is acceptable. The default value is an
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -284,8 +254,6 @@ Whether the font is monospaced. The value **true** means that the font is monosp
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -301,8 +269,6 @@ Absolute path of the font. Any string that complies with the system restrictions
 **Type:** string
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -320,8 +286,6 @@ Unique name of the font. Any string is acceptable. The default value is an empty
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -337,8 +301,6 @@ Whether the font is symbolic. The value **true** means that the font is symbolic
 **Type:** boolean
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -356,8 +318,6 @@ Font trademark information. Any string is acceptable. The default value is an em
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -373,8 +333,6 @@ Font variable axis record array, which is used to describe the variable axis inf
 **Type:** Array&lt;[FontVariationAxis](arkts-arkgraphics2d-text-fontvariationaxis-i.md)&gt;
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -392,8 +350,6 @@ Font variable instance record array, which is used to describe the variable inst
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -409,8 +365,6 @@ Font version. Any string is acceptable. The default value is an empty string.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -428,8 +382,6 @@ Font weight. The default value is **0**.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -437,16 +389,14 @@ Font weight. The default value is **0**.
 ## width
 
 ```TypeScript
-width?: int
+width?: number
 ```
 
 Font width. The value is an integer ranging from 1 to 9. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

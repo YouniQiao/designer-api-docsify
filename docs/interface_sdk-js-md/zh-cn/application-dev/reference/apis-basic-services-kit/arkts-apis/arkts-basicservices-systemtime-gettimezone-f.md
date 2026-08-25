@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getTimezone
@@ -15,8 +15,6 @@ function getTimezone(callback: AsyncCallback<string>): void
 获取系统时区，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -36,40 +34,6 @@ function getTimezone(callback: AsyncCallback<string>): void
 | --- |
 | -1 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getTimezone((error: BusinessError, data: string) => {
-    if (error) {
-      console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting timezone : ${data}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getTimezone().then((data: string) => {
-    console.info(`Succeeded in getting timezone: ${data}`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## getTimezone
 
@@ -80,8 +44,6 @@ function getTimezone(): Promise<string>
 获取系统时区，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -100,7 +62,3 @@ function getTimezone(): Promise<string>
 | 错误码ID |
 | --- |
 | -1 |
-
-**示例**
-
-参见 [getTimezone](#gettimezone)

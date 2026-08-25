@@ -4,44 +4,38 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## inclination
 
 ```TypeScript
-inclination: Array<double>
+inclination: Array<number>
 ```
 
 倾斜矩阵，长度为9的一维数组，表示地磁倾斜变换矩阵。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## rotation
 
 ```TypeScript
-rotation: Array<double>
+rotation: Array<number>
 ```
 
 旋转矩阵，长度为9的一维数组，表示设备在三维空间中的旋转状态。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor

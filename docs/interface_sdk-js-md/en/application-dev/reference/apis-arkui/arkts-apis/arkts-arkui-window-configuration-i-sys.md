@@ -4,14 +4,12 @@ Defines the parameters for creating a child window or system window.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## defaultDensityEnabled
@@ -26,8 +24,6 @@ Whether the window should use the default density of the system. If the default 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -35,16 +31,14 @@ Whether the window should use the default density of the system. If the default 
 ## zIndex
 
 ```TypeScript
-zIndex?: int
+zIndex?: number
 ```
 
 Z-level of the system window. This parameter is valid only when [WindowType](arkts-arkui-window-windowtype-e.md) is set to **TYPE_DYNAMIC**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 

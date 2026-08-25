@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createPort
@@ -15,8 +15,6 @@ function createPort(uuid: string): void
 注册端口通道。端口通道注册后方可用于连接远端设备，不再使用时需通过[dataTransfer.destroyPort](arkts-connectivity-datatransfer-destroyport-f.md)销毁。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 

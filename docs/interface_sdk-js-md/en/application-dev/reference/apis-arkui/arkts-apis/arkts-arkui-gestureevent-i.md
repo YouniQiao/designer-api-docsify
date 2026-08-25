@@ -1,12 +1,10 @@
 # GestureEvent
 
-Defines the gesture event information. Inherits from BaseEvent.
+Defines the gesture event information. Inherits from [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md).
 
-**Inheritance/Implementation:** GestureEvent extends BaseEvent
+**Inheritance/Implementation:** GestureEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +26,6 @@ Rotation angle for the **RotationGesture** event, in deg.Angle of the swipe gest
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -47,8 +43,6 @@ Information about touch points of the gesture event. For gesture events initiate
 **Type:** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,8 +67,6 @@ information exists.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -90,8 +82,6 @@ X-axis offset of the gesture event relative to the finger press position, in vp.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -109,8 +99,6 @@ Y-axis offset of the gesture event relative to the finger press position, in vp.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -126,8 +114,6 @@ X-coordinate of the center of the pinch gesture, in vp, relative to the original
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -145,8 +131,6 @@ Y-coordinate of the center of the pinch gesture, in vp, relative to the original
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -162,8 +146,6 @@ Whether the event is a repeated trigger event, used in the **LongPressGesture** 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -181,8 +163,6 @@ Scale ratio. This attribute is used for the pinch gesture.Value range: [0, +∞)
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -199,8 +179,6 @@ Swipe gesture speed, that is, the average swipe speed of all fingers relative to
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -216,8 +194,6 @@ Coordinate information of the current tap gesture. For non-tap gestures, the ret
 **Type:** [EventLocationInfo](arkts-arkui-eventlocationinfo-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -237,8 +213,6 @@ Velocity along the main axis. This parameter is used in [PanGesture](arkts-arkui
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -257,8 +231,6 @@ Velocity along the x-axis. This parameter is used in [PanGesture](arkts-arkui-ge
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -276,8 +248,6 @@ Velocity along the y-axis. This parameter is used in [PanGesture](arkts-arkui-ge
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Returns the changes of the application enabling state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Bundle name of the application.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -34,13 +30,13 @@ Bundle name of the application.
 readonly enable: boolean
 ```
 
-Whether the application notification is enabled. - **true**: enabled. - **false**: disabled.
+Whether the application notification is enabled.  
+- **true**: enabled.  
+- **false**: disabled.
 
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -49,16 +45,14 @@ Whether the application notification is enabled. - **true**: enabled. - **false*
 ## uid
 
 ```TypeScript
-readonly uid: int
+readonly uid: number
 ```
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

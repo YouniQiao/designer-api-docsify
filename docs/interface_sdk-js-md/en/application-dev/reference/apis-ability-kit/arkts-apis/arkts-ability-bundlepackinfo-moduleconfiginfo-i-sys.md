@@ -4,8 +4,6 @@ ModuleConfigInfo: the module summary of a bundle.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Ability information of the module.
 **Type:** Array&lt;[ModuleAbilityInfo](arkts-ability-bundlepackinfo-moduleabilityinfo-i-sys.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -40,8 +36,6 @@ API version of the module.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -57,8 +51,6 @@ Device types supported by the module.
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -76,8 +68,6 @@ Distribution information of the module.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -94,8 +84,6 @@ ExtensionAbility information of the module.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -111,8 +99,6 @@ Name of the main ability.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

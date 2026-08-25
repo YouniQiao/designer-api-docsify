@@ -4,8 +4,6 @@ FileSelectorParam是ArkWeb组件中的文件选择器参数类，用于获取Web
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -23,8 +21,6 @@ FileSelectorParam的构造函数。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -38,8 +34,6 @@ getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
 获取文件类型信息。对应HTML里[option](../../../web/web-file-upload.md#自定义处理js接口拉起的文件请求)中的`types`。返回值为二维数组，每个子数组代表一组允许的文件类型。开发者应 在构建文件选择器时使用该返回值设置文件类型过滤规则，确保用户只能选择符合前端要求的文件。该参数与getAcceptType和getMimeTypes的区别在于types支持更精细的文件类型控制，可按MIME类型或扩展名分组设置。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -58,8 +52,6 @@ getAcceptType(): Array<string>
 获取文件过滤类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -81,8 +73,6 @@ getDefaultPath(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -100,8 +90,6 @@ getDescriptions(): Array<string>
 获取允许的各组文件类型的可选描述。对应HTML里[option](../../../web/web-file-upload.md#自定义处理js接口拉起的文件请求)中的`description`。返回的描述数组与 getAcceptableFileTypes返回的文件类型组一一对应。开发者可在构建文件选择器时使用这些描述作为每组文件类型的显示文本，帮助用户理解可选择的文件类型。若前端未设置description，返回空字符串。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -121,8 +109,6 @@ getMimeTypes(): Array<string>
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -140,8 +126,6 @@ getMode(): FileSelectorMode
 获取文件选择器的模式。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -163,8 +147,6 @@ getSuggestedName(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -182,8 +164,6 @@ getTitle(): string
 获取文件选择器标题。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -205,8 +185,6 @@ isAcceptAllOptionExcluded(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **返回值：**
@@ -224,8 +202,6 @@ isCapture(): boolean
 获取是否调用多媒体能力。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

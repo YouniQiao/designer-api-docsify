@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## startBackgroundRunning
@@ -15,8 +15,6 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 申请长时任务，支持申请一种类型，使用callback异步回调。长时任务申请成功后，会有通知栏消息，没有提示音。一个UIAbility（FA模型则为ServiceAbility）同一时刻仅支持通过本接口支持申请一个长时任务，可以通过 API version 21新增接口 [startBackgroundRunning](#startbackgroundrunning) 申请多个长时任务。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -48,475 +46,6 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 | [9800006](../errorcode-backgroundTaskMgr.md#9800006-长时任务通知信息校验失败) |
 | [9800007](../errorcode-backgroundTaskMgr.md#9800007-长时任务信息存储失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
-// 在原子化服务中，请删除WantAgent导入
-
-const callback = (error: BusinessError, data: void) => {
-  if (error) {
-    console.error(`Operation startBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
-  } else {
-    console.info('Operation startBackgroundRunning succeeded');
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    let wantAgentInfo: wantAgent.WantAgentInfo = {
-      // 点击通知后，将要执行的动作列表
-      wants: [
-        {
-          bundleName: 'com.example.myapplication',
-          abilityName: 'EntryAbility'
-        }
-      ],
-      // 点击通知后，动作类型
-      actionType: wantAgent.OperationType.START_ABILITY,
-      // 使用者自定义的一个私有值
-      requestCode: 0,
-      // 点击通知后，动作执行属性
-      wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-    };
-
-    try {
-      // 通过wantAgent模块下getWantAgent方法获取WantAgent对象
-      // 在原子化服务中，请使用wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: object) => {替换下面一行代码
-      wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
-        try {
-          backgroundTaskManager.startBackgroundRunning(this.context,
-            backgroundTaskManager.BackgroundMode.AUDIO_PLAYBACK, wantAgentObj, callback)
-        } catch (error) {
-          console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-        }
-      });
-    } catch (error) {
-      console.error(`Operation getWantAgent failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-function callback(error: BusinessError<void> | null, data?: int) {
-  if (error) {
-    console.error(`Operation startBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
-  } else {
-    console.info('Operation startBackgroundRunning succeeded');
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let wantAgentInfo: wantAgent.WantAgentInfo = {
-      // 点击通知后，将要执行的动作列表
-      wants: [
-        {
-          bundleName: 'com.example.myapplication',
-          abilityName: 'EntryAbility'
-        }
-      ],
-      // 点击通知后，动作类型
-      actionType: wantAgent.OperationType.START_ABILITY,
-      // 使用者自定义的一个私有值
-      requestCode: 0,
-      // 点击通知后，动作执行属性
-      actionFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-    };
-
-    try {
-      // 通过wantAgent模块下getWantAgent方法获取WantAgent对象
-      wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
-        try {
-          backgroundTaskManager.startBackgroundRunning(this.context,
-            backgroundTaskManager.BackgroundMode.LOCATION, wantAgentObj, callback)
-        } catch (error) {
-          console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-        }
-      });
-    } catch (error) {
-      console.error(`Operation getWantAgent failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
-// 在原子化服务中，请删除WantAgent导入
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    let wantAgentInfo: wantAgent.WantAgentInfo = {
-      // 点击通知后，将要执行的动作列表
-      wants: [
-        {
-          bundleName: 'com.example.myapplication',
-          abilityName: 'EntryAbility'
-        }
-      ],
-      // 点击通知后，动作类型
-      actionType: wantAgent.OperationType.START_ABILITY,
-      // 使用者自定义的一个私有值
-      requestCode: 0,
-      // 点击通知后，动作执行属性
-      wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-    };
-
-    try {
-      // 通过wantAgent模块下getWantAgent方法获取WantAgent对象
-      // 在原子化服务中，请使用wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: object) => {替换下面一行代码
-      wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
-        try {
-          backgroundTaskManager.startBackgroundRunning(this.context,
-            backgroundTaskManager.BackgroundMode.AUDIO_PLAYBACK, wantAgentObj).then(() => {
-              console.info('Operation startBackgroundRunning succeeded');
-            }).catch((error: BusinessError) => {
-              console.error(`Operation startBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
-            });
-        } catch (error) {
-          console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-        }
-      });
-    } catch (error) {
-      console.error(`Operation getWantAgent failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let wantAgentInfo: wantAgent.WantAgentInfo = {
-      // 点击通知后，将要执行的动作列表
-      wants: [
-        {
-          bundleName: 'com.example.myapplication',
-          abilityName: 'EntryAbility'
-        }
-      ],
-      // 点击通知后，动作类型
-      actionType: wantAgent.OperationType.START_ABILITY,
-      // 使用者自定义的一个私有值
-      requestCode: 0,
-      // 点击通知后，动作执行属性
-      actionFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-    };
-
-    try {
-      // 通过wantAgent模块下getWantAgent方法获取WantAgent对象
-      wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
-        try {
-          backgroundTaskManager.startBackgroundRunning(this.context,
-            backgroundTaskManager.BackgroundMode.LOCATION, wantAgentObj).then(() => {
-              console.info('Operation startBackgroundRunning succeeded');
-            }).catch((error) => {
-              console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-            });
-        } catch (error) {
-          console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-        }
-      });
-    } catch (error) {
-      console.error(`Operation getWantAgent failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationManager } from '@kit.NotificationKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
-// 在原子化服务中，请删除WantAgent导入
-
-export default class EntryAbility extends UIAbility {
-  notificationId: number = 0; // 保存通知Id
-
-  onCreate() {
-    let wantAgentInfo: wantAgent.WantAgentInfo = {
-      // 点击通知后，将要执行的动作列表
-      wants: [
-        {
-          bundleName: 'com.example.myapplication',
-          abilityName: 'EntryAbility'
-        }
-      ],
-      // 点击通知后，动作类型
-      actionType: wantAgent.OperationType.START_ABILITY,
-      // 使用者自定义的一个私有值
-      requestCode: 0,
-      // 点击通知后，动作执行属性
-      wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-    };
-
-    try {
-      // 通过wantAgent模块下getWantAgent方法获取WantAgent对象
-      // 在原子化服务中，请使用wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: object) => {替换下面一行代码
-      wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
-        try {
-          // 当长时任务类型包含数据传输(dataTransfer)时，应用需要更新进度，其他类型不需要
-          let list: Array<string> = ['dataTransfer'];
-          // 在原子化服务中，let list: Array<string> = ['audioPlayback'];
-          backgroundTaskManager.startBackgroundRunning(this.context, list, wantAgentObj).then((res: backgroundTaskManager.ContinuousTaskNotification) => {
-            console.info('Operation startBackgroundRunning succeeded');
-            // 对于上传下载类的长时任务，应用可以使用res中返回的notificationId来更新通知，比如发送带进度条的模板通知
-            this.inotificationId = res.notificationId;
-          }).catch((error: BusinessError) => {
-            console.error(`Operation startBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
-          });
-        } catch (error) {
-          console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-        }
-      });
-    } catch (error) {
-      console.error(`Operation getWantAgent failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-
-  // 当长时任务类型包含数据传输(dataTransfer)时，应用需要更新进度，其他类型不需要
-  // 从API版本26.1.0开始，可使用updateDataTransferProgress接口更新包含数据传输类型的长时任务通知。可选择通知是否带进度环，以及进度环为100时是否响铃。
-  updateProcess(process: number) {
-    // 定义通知类型，更新进度时的通知类型必须为实况窗
-    let downLoadTemplate: notificationManager.NotificationTemplate = {
-      name: 'downloadTemplate', // 当前只支持downloadTemplate，保持不变
-      data: {
-        title: '文件下载：music.mp4', // 必填
-        fileName: 'senTemplate', // 必填
-        progressValue: process, // 应用更新进度值，自定义
-      }
-    };
-    let request: notificationManager.NotificationRequest = {
-      content: {
-        // 系统实况类型，保持不变
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW,
-        systemLiveView: {
-          typeCode: 8, // 数据传输(dataTransfer)类型需要填写 8，当前仅支持此类型。保持不变
-          title: 'test', // 应用自定义
-          text: 'test', // 应用自定义
-        }
-      },
-      id: this.notificationId, // 必须是申请长时任务返回的notificationId，否则应用更新通知失败
-      notificationSlotType: notificationManager.SlotType.LIVE_VIEW, // 实况窗类型，保持不变
-      template: downLoadTemplate // 应用需要设置的模版名称
-    };
-
-    try {
-      notificationManager.publish(request).then(() => {
-        console.info('publish success, id= ' + this.notificationId);
-      }).catch((err: BusinessError) => {
-        console.error(`publish fail: ${JSON.stringify(err)}`);
-      });
-    } catch (err) {
-      console.error(`publish fail: ${JSON.stringify(err)}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  notificationId: int = 0; // 保存通知Id
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let wantAgentInfo: wantAgent.WantAgentInfo = {
-      // 点击通知后，将要执行的动作列表
-      wants: [
-        {
-          bundleName: 'com.huawei.ani.myapplication',
-          abilityName: 'EntryAbility'
-        }
-      ],
-      // 点击通知后，动作类型
-      actionType: wantAgent.OperationType.START_ABILITY,
-      // 使用者自定义的一个私有值
-      requestCode: 0,
-      // 点击通知后，动作执行属性
-      actionFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-    };
-
-    try {
-      // 通过wantAgent模块下getWantAgent方法获取WantAgent对象
-      wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
-        try {
-          let list: Array<string> = ['dataTransfer'];
-          backgroundTaskManager.startBackgroundRunning(this.context, list, wantAgentObj).then((res: backgroundTaskManager.ContinuousTaskNotification) => {
-            console.info('Operation startBackgroundRunning succeeded');
-            // 对于上传下载类的长时任务，应用可以使用res中返回的notificationId来更新通知，比如发送带进度条的模板通知
-            this.notificationId = res.notificationId;
-          }).catch((error) => {
-            console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).code}`);
-          });
-        } catch (error) {
-          console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-        }
-      });
-    } catch (error) {
-      console.error(`Operation getWantAgent failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
-// 在原子化服务中，请删除WantAgent导入
-
-export default class EntryAbility extends UIAbility {
-  notificationId: number = 0; // 保存通知id
-  continuousTaskId: number | undefined = -1;
-  onCreate() {
-    let wantAgentInfo: wantAgent.WantAgentInfo = {
-      // 请开发者替换为实际被拉起应用的bundleName和abilityName
-      wants: [
-        {
-          bundleName: 'com.example.myapplication',
-          abilityName: 'EntryAbility'
-        }
-      ],
-      // 设置点击通知后的动作类型
-      actionType: wantAgent.OperationType.START_ABILITY,
-      // 开发者自定义的请求码，用于标识将被执行的动作
-      requestCode: 0,
-      // 设置点击通知后的动作执行属性
-      wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-    };
-
-    try {
-      // 通过wantAgent模块下getWantAgent方法获取WantAgent对象
-      // 在原子化服务中，请使用wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: object) => {替换下面一行代码
-      wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
-        try {
-          // 如果要合并通知，主类型和子类型都必须相同，combinedTaskNotification为true，continuousTaskId必须存在且合法
-          // 申请主类型为MODE_LOCATION的长时任务
-          let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_LOCATION];
-          let subModeList: Array<number> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_NORMAL_NOTIFICATION];
-          // 创建长时任务请求对象
-          let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-          continuousTaskRequest.backgroundTaskModes =  modeList;
-          continuousTaskRequest.backgroundTaskSubmodes = subModeList;
-          continuousTaskRequest.wantAgent = wantAgentObj;
-          continuousTaskRequest.combinedTaskNotification = false;
-          continuousTaskRequest.continuousTaskId = this.continuousTaskId;
-          backgroundTaskManager.startBackgroundRunning(this.context, continuousTaskRequest).then((res: backgroundTaskManager.ContinuousTaskNotification) => {
-            console.info(`Operation startBackgroundRunning succeeded. notificationId is ${res.notificationId} continuousTaskId is ${res.continuousTaskId}`);
-            this.notificationId = res.notificationId;
-            this.continuousTaskId = res.continuousTaskId;
-          }).catch((error: BusinessError) => {
-            console.error(`Operation startBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
-          });
-        } catch (error) {
-          console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-        }
-      });
-    } catch (error) {
-      console.error(`Operation getWantAgent failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  notificationId: int = 0; // 保存通知id
-  continuousTaskId: int | undefined = -1;
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let wantAgentInfo: wantAgent.WantAgentInfo = {
-      // 请开发者替换为实际被拉起应用的bundleName和abilityName
-      wants: [
-        {
-          bundleName: 'com.example.myapplication',
-          abilityName: 'EntryAbility'
-        }
-      ],
-      // 设置点击通知后的动作类型
-      actionType: wantAgent.OperationType.START_ABILITY,
-      // 开发者自定义的请求码，用于标识将被执行的动作
-      requestCode: 0,
-      // 设置点击通知后的动作执行属性
-      actionFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-    };
-
-    try {
-      // 通过wantAgent模块下getWantAgent方法获取WantAgent对象
-      wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
-        try {
-          // 如果要合并通知，主类型和子类型都必须相同，combinedTaskNotification为true，continuousTaskId必须存在且合法
-          // 申请主类型为MODE_LOCATION的长时任务
-          let modeList: Array<backgroundTaskManager.BackgroundTaskMode> = [backgroundTaskManager.BackgroundTaskMode.MODE_LOCATION];
-          let subModeList: Array<backgroundTaskManager.BackgroundTaskSubmode> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_NORMAL_NOTIFICATION];
-          // 创建长时任务请求对象
-          let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-          continuousTaskRequest.backgroundTaskModes =  modeList;
-          continuousTaskRequest.backgroundTaskSubmodes = subModeList;
-          continuousTaskRequest.wantAgent = wantAgentObj;
-          backgroundTaskManager.startBackgroundRunning(this.context, continuousTaskRequest).then((res: backgroundTaskManager.ContinuousTaskNotification) => {
-            console.info(`Operation startBackgroundRunning succeeded. notificationId is ${res.notificationId} continuousTaskId is ${res.continuousTaskId}`);
-            this.notificationId = res.notificationId;
-            this.continuousTaskId = res.continuousTaskId;
-          }).catch((error) => {
-            console.error(`Operation startBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
-          });
-        } catch (error) {
-          console.error(`Operation startBackgroundRunning failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-        }
-      });
-    } catch (error) {
-      console.error(`Operation getWantAgent failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 
 ## startBackgroundRunning
 
@@ -527,8 +56,6 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 申请长时任务，支持申请一种类型，使用Promise异步回调。长时任务申请成功后，会有通知栏消息，没有提示音。一个UIAbility（FA模型则为ServiceAbility）同一时刻仅支持通过本接口支持申请一个长时任务，可以通过 API version 21新增接口 [startBackgroundRunning](#startbackgroundrunning) 申请多个长时任务。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -565,10 +92,6 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 | [9800006](../errorcode-backgroundTaskMgr.md#9800006-长时任务通知信息校验失败) |
 | [9800007](../errorcode-backgroundTaskMgr.md#9800007-长时任务信息存储失败) |
 
-**示例**
-
-参见 [startBackgroundRunning](#startbackgroundrunning)
-
 
 ## startBackgroundRunning
 
@@ -579,8 +102,6 @@ function startBackgroundRunning(context: Context, bgModes: string[], wantAgent: 
 申请长时任务，支持申请多种类型，使用Promise异步回调。长时任务申请成功后，会有通知栏消息，没有提示音。一个UIAbility（FA模型则为ServiceAbility）同一时刻仅支持通过本接口支持申请一个长时任务，可以通过 API version 21新增接口 [startBackgroundRunning](#startbackgroundrunning) 申请多个长时任务。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -616,10 +137,6 @@ function startBackgroundRunning(context: Context, bgModes: string[], wantAgent: 
 | [9800006](../errorcode-backgroundTaskMgr.md#9800006-长时任务通知信息校验失败) |
 | [9800007](../errorcode-backgroundTaskMgr.md#9800007-长时任务信息存储失败) |
 
-**示例**
-
-参见 [startBackgroundRunning](#startbackgroundrunning)
-
 
 ## startBackgroundRunning
 
@@ -630,8 +147,6 @@ function startBackgroundRunning(context: Context, request: ContinuousTaskRequest
 申请长时任务，一个UIAbility（FA模型则为ServiceAbility）下支持通过本接口申请多个长时任务，使用Promise异步回调。通过本接口申请长时任务时，支持与已存在的长时任务合并通知，具体请参考 [ContinuousTaskRequest](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md)。&lt;/br&gt;同一时间最多可存在10个长时任务，长时任务申请成功后，会有通知栏消息， 没有提示音。&lt;/br&gt;如果通过本接口申请的一个长时任务中同时包含多种类型，且包含数据传输类型，则在通知栏会发送2个长时任务通知，一个为数据传输类型，另一个为其他类型的合并通知。任意一个通知被移除时，长时任务取消，且另一个通知也会同 步移除。接口返回的长时任务通知Id为数据传输类型的Id，主要用于数据传输的进度更新。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -662,7 +177,3 @@ function startBackgroundRunning(context: Context, request: ContinuousTaskRequest
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
 | [9800006](../errorcode-backgroundTaskMgr.md#9800006-长时任务通知信息校验失败) |
 | [9800007](../errorcode-backgroundTaskMgr.md#9800007-长时任务信息存储失败) |
-
-**示例**
-
-参见 [startBackgroundRunning](#startbackgroundrunning)

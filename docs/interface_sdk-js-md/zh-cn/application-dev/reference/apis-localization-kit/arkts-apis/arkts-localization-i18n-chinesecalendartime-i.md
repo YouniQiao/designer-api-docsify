@@ -4,20 +4,18 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## cyclicalYear
 
 ```TypeScript
-cyclicalYear: int
+cyclicalYear: number
 ```
 
 农历的干支年。取值范围：[1, 60]。
@@ -25,8 +23,6 @@ cyclicalYear: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,7 +33,7 @@ cyclicalYear: int
 ## date
 
 ```TypeScript
-date: int
+date: number
 ```
 
 农历的日。
@@ -45,8 +41,6 @@ date: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,7 +51,7 @@ date: int
 ## gregorianYear
 
 ```TypeScript
-gregorianYear: int
+gregorianYear: number
 ```
 
 公历的年。取值范围：[1900, 2100]。
@@ -65,8 +59,6 @@ gregorianYear: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,7 +69,7 @@ gregorianYear: int
 ## hour
 
 ```TypeScript
-hour?: int
+hour?: number
 ```
 
 农历的时。默认值：0。
@@ -85,8 +77,6 @@ hour?: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,8 +96,6 @@ isLeapMonth?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -117,7 +105,7 @@ isLeapMonth?: boolean
 ## minute
 
 ```TypeScript
-minute?: int
+minute?: number
 ```
 
 农历的分。默认值：0。
@@ -125,8 +113,6 @@ minute?: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -137,7 +123,7 @@ minute?: int
 ## month
 
 ```TypeScript
-month: int
+month: number
 ```
 
 农历的月。  
@@ -146,8 +132,6 @@ month: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,7 +142,7 @@ month: int
 ## second
 
 ```TypeScript
-second?: int
+second?: number
 ```
 
 农历的秒。默认值：0。
@@ -166,8 +150,6 @@ second?: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

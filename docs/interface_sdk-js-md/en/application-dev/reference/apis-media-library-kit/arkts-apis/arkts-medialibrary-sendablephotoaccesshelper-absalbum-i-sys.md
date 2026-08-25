@@ -6,14 +6,12 @@ Defines the abstract interface of albums.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## getSharedPhotoAssets
@@ -25,8 +23,6 @@ getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhoto
 Fetch shared photo assets in an album.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 

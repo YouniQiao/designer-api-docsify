@@ -4,8 +4,6 @@ Defines the parameters for querying historical traffic of an application.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the parameters for querying historical traffic of an application.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## ifaceInfo
@@ -28,8 +26,6 @@ NIC information, including the NIC name and query time range.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ NIC information, including the NIC name and query time range.
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 Application UID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

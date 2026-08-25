@@ -10,8 +10,6 @@ EnterpriseAdminExtensionContext是 [EnterpriseAdminExtensionAbility](arkts-mdm-e
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## startAbilityByAdmin
@@ -29,8 +27,6 @@ startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 > 如果被启动的UIAbility有权限保护，需要额外申请对应的权限。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.ENTERPRISE_START_ABILITIES
 

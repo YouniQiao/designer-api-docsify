@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## getAllContinuousTasks
@@ -15,8 +15,6 @@ function getAllContinuousTasks(context: Context): Promise<ContinuousTaskInfo[]>
 Obtains all continuous task information, including the task ID and type. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -43,50 +41,6 @@ Obtains all continuous task information, including the task ID and type. This AP
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
 
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      // If no continuous task is requested, an empty array is obtained.
-      backgroundTaskManager.getAllContinuousTasks(this.context).then((res: backgroundTaskManager.ContinuousTaskInfo[]) => {
-        console.info(`Operation getAllContinuousTasks succeeded. data: ` + JSON.stringify(res));
-      }).catch((error: BusinessError) => {
-        console.error(`Operation getAllContinuousTasks failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation getAllContinuousTasks failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      // If no continuous task is requested, an empty array is obtained.
-      backgroundTaskManager.getAllContinuousTasks(this.context, false).then((res: backgroundTaskManager.ContinuousTaskInfo[]) => {
-        console.info(`Operation getAllContinuousTasks succeeded. data: ` + JSON.stringify(res));
-      }).catch((error: BusinessError) => {
-        console.error(`Operation getAllContinuousTasks failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation getAllContinuousTasks failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 
 ## getAllContinuousTasks
 
@@ -97,8 +51,6 @@ function getAllContinuousTasks(context: Context, includeSuspended: boolean): Pro
 Obtains all continuous task information, including the task ID and type. It supports specifying whether to include suspended tasks and uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -125,7 +77,3 @@ Obtains all continuous task information, including the task ID and type. It supp
 | [9800002](../errorcode-backgroundTaskMgr.md#9800002-parcel-operation-failure) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-
-**Examples**
-
-See [getAllContinuousTasks](#getallcontinuoustasks)

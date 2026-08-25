@@ -4,8 +4,6 @@ Defines the Subscribale base class.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -24,8 +22,6 @@ public addOwningProperty(subscriber: IPropertySubscriber): void
 Adds a subscriber to the list of owned properties.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,18 +43,9 @@ Constructor.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-```
 
 ## notifyPropertyHasChanged
 
@@ -69,8 +56,6 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 Notify subscribers that a property value has changed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -93,8 +78,6 @@ Removes a subscriber from the list of owned properties.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -114,8 +97,6 @@ public removeOwningPropertyById(subscriberId: number): void
 Removes a subscriber from the list of owned properties by ID.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,8 +119,6 @@ A set of property IDs that this instance owns.
 **Type:** Set&lt;number&gt;
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,14 +4,12 @@
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha, BackgroundTheme, TitleBarType, SideBarOptions, TitleOptions, GradientBackground } from '@kit.ArkUI';
+import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha, BackgroundTheme, TitleBarType, SideBarOptions, TitleOptions, GradientBackground } from 'kits/@kit.ArkUI';
 ```
 
 ## navDestinationBuilder
@@ -23,8 +21,6 @@ navDestinationBuilder?: NavDestinationBuilder
 The builder of navDestination.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,8 +38,6 @@ The background with gradient colors of Navigation.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -60,8 +54,6 @@ Hide navigation title bar.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -74,11 +66,9 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 
 The layout style users defined and inserted.
 
-**Type:** CustomBuilder \| Array&lt;NavigationMenuItem&gt;
+**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt;
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -92,11 +82,9 @@ minContentWidth?: Dimension
 
 Sets the minimum width of content.
 
-**Type:** Dimension
+**Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -110,11 +98,9 @@ mode?: NavigationMode
 
 Sets the mode of navigation.
 
-**Type:** NavigationMode
+**Type:** [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -128,11 +114,9 @@ modeChangeCallback?: Callback<NavigationMode>
 
 Trigger callback when navigation mode changes.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavigationMode&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -146,11 +130,9 @@ navBarWidth?: Length
 
 Sets the width of navigation bar.
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -171,8 +153,6 @@ Sets the minimum width and the maximum width of navigation bar.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -189,8 +169,6 @@ the content of Navigation.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -203,11 +181,9 @@ navPathStack?: NavPathStack
 
 the information of route page.Providers methods for controlling destination page in the stack.
 
-**Type:** NavPathStack
+**Type:** [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -225,8 +201,6 @@ Set side bar content.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -242,8 +216,6 @@ Set side bar options.
 **Type:** [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -261,8 +233,6 @@ Trigger callback when the visibility of navigation bar change.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -275,11 +245,9 @@ title?: ResourceStr
 
 Sets the Navigation title.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -296,8 +264,6 @@ The color of Navigation's TitleBar.
 **Type:** [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

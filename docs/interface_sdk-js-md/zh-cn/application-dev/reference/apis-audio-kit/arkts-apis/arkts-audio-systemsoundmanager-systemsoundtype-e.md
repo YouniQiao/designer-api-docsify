@@ -1,10 +1,8 @@
 # SystemSoundType
 
-枚举，表示系统音效类型。@enum { int }
+枚举，表示系统音效类型。@enum { number }
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -17,8 +15,6 @@ PHOTO_SHUTTER = 0
 拍照音效。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,8 +30,6 @@ VIDEO_RECORDING_BEGIN = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -49,8 +43,6 @@ VIDEO_RECORDING_END = 2
 视频录制结束音效。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

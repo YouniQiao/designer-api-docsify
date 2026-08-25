@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## requestRight
@@ -15,8 +15,6 @@ function requestRight(deviceName: string): Promise<boolean>
 请求应用访问设备的临时权限。使用Promise异步回调返回结果。系统应用默认拥有访问设备权限，无需调用此接口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -38,22 +36,3 @@ function requestRight(deviceName: string): Promise<boolean>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-function requestRight() {
-  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-  if (!devicesList || devicesList.length == 0) {
-    console.info(`device list is empty`);
-    return;
-  }
-
-  let device: usbManager.USBDevice = devicesList?.[0];
-  usbManager.requestRight(device.name).then(ret => {
-    console.info(`requestRight = ${ret}`);
-  }).catch((error) => {
-    console.error(`Failed to request right. Code: ${error.code}, message: ${error.message}`);
-  });
-}
-```

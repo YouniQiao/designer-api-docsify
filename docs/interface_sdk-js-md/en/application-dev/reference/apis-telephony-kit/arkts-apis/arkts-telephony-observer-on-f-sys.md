@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## on('cellInfoChange')
@@ -15,8 +15,6 @@ function on(type: 'cellInfoChange', callback: Callback<Array<CellInformation>>):
 Registers an observer for cell information change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -43,16 +41,6 @@ Registers an observer for cell information change events. This API uses an async
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-observer.on('cellInfoChange', (data: Array<radio.CellInformation>) => {
-    console.info("on cellInfoChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('cellInfoChange')
 
@@ -63,8 +51,6 @@ function on(type: 'cellInfoChange', options: ObserverOptions, callback: Callback
 Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -91,16 +77,3 @@ Registers an observer for signal status change events of the SIM card in the spe
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('cellInfoChange', options, (data: Array<radio.CellInformation>) => {
-    console.info("on cellInfoChange, data:" + JSON.stringify(data));
-});
-```

@@ -4,8 +4,6 @@ Enumerates the reasons for audio stream device changes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## REASON_UNKNOWN
@@ -17,8 +15,6 @@ REASON_UNKNOWN = 0
 Unknown reason.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ A new device is available.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -49,8 +43,6 @@ REASON_OLD_DEVICE_UNAVAILABLE = 2
 The old device is unavailable. When this reason is reported, consider pausing audio playback.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ Forcibly selected.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
@@ -82,8 +72,6 @@ The audio session has been activated.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## REASON_STREAM_PRIORITY_CHANGED
@@ -95,7 +83,5 @@ REASON_STREAM_PRIORITY_CHANGED = 5
 An audio stream with higher priority appears.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device

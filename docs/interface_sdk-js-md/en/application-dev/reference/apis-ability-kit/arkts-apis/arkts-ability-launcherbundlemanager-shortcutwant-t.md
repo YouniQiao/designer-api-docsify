@@ -8,8 +8,6 @@ Defines the target [wants](../../../quick-start/module-configuration-file.md#wan
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
 **Property type:** _ShortcutWant

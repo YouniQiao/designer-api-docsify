@@ -3,16 +3,16 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## cancelAsBundle
 
 ```TypeScript
 function cancelAsBundle(
-    id: int,
+    id: number,
     representativeBundle: string,
-    userId: int,
+    userId: number,
     callback: AsyncCallback<void>
   ): void
 ```
@@ -20,8 +20,6 @@ function cancelAsBundle(
 Cancels a notification published through the reminder agent. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -33,9 +31,9 @@ Cancels a notification published through the reminder agent. This API uses an as
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| id | number | Yes |
 | [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -52,65 +50,16 @@ Cancels a notification published through the reminder agent. This API uses an as
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// cancelAsBundle
-let cancelAsBundleCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("cancelAsBundle success");
-    }
-}
-// Bundle name of the application whose notification function is taken over by the reminder agent
-let representativeBundle: string = "com.example.demo";
-// Use the actual user ID when calling the API.
-let userId: number = 100;
-notificationManager.cancelAsBundle(0, representativeBundle, userId, cancelAsBundleCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Bundle name of the application whose notification function is taken over by the reminder agent
-let representativeBundle: string = "com.example.demo";
-// Use the actual user ID when calling the API.
-let userId: number = 100;
-notificationManager.cancelAsBundle(0, representativeBundle, userId).then(() => {
-    console.info("cancelAsBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let representativeBundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
-};
-notificationManager.cancelAsBundle(representativeBundle, 1).then(() => {
-    console.info("cancelAsBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## cancelAsBundle
 
 ```TypeScript
-function cancelAsBundle(id: int, representativeBundle: string, userId: int): Promise<void>
+function cancelAsBundle(id: number, representativeBundle: string, userId: number): Promise<void>
 ```
 
 Cancels a notification published through the reminder agent. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -122,9 +71,9 @@ Cancels a notification published through the reminder agent. This API uses a pro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| id | number | Yes |
 | [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -146,22 +95,16 @@ Cancels a notification published through the reminder agent. This API uses a pro
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
-**Examples**
-
-See [cancelAsBundle](#cancelasbundle)
-
 
 ## cancelAsBundle
 
 ```TypeScript
-function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<void>
+function cancelAsBundle(representativeBundle: BundleOption, id: number): Promise<void>
 ```
 
 Cancels a notification published through the reminder agent. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -173,8 +116,8 @@ Cancels a notification published through the reminder agent. This API uses a pro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| id | number | Yes |
 
 **Return value:**
 
@@ -196,7 +139,3 @@ Cancels a notification published through the reminder agent. This API uses a pro
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-See [cancelAsBundle](#cancelasbundle)

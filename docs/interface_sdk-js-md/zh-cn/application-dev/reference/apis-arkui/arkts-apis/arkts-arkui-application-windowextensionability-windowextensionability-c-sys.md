@@ -4,8 +4,6 @@ WindowExtensionAbility类。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 21
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -15,7 +13,7 @@ WindowExtensionAbility类。
 ## 导入模块
 
 ```TypeScript
-import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
+import { WindowExtensionAbility, WindowExtensionContext } from 'kits/@kit.ArkUI';
 ```
 
 ## onConnect
@@ -28,8 +26,6 @@ onConnect(want: Want): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -43,19 +39,6 @@ onConnect(want: Want): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { WindowExtensionAbility } from '@kit.ArkUI';
-import { Want } from '@kit.AbilityKit';
-
-export default class MyWindowExtensionAbility extends WindowExtensionAbility {
-  onConnect(want: Want) {
-    console.info(`WindowExtAbility onConnect, abilityName: ${want.abilityName}`);
-  }
-}
-```
 
 ## onDisconnect
 
@@ -67,8 +50,6 @@ onDisconnect(want: Want): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -83,19 +64,6 @@ onDisconnect(want: Want): void
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 
-**示例**
-
-```TypeScript
-import { WindowExtensionAbility } from '@kit.ArkUI';
-import { Want } from '@kit.AbilityKit';
-
-export default class MyWindowExtensionAbility extends WindowExtensionAbility {
-  onDisconnect(want: Want) {
-    console.info(`WindowExtAbility onDisconnect, abilityName: ${want.abilityName}`);
-  }
-}
-```
-
 ## onWindowReady
 
 ```TypeScript
@@ -105,8 +73,6 @@ onWindowReady(window: window.Window): void
 当窗口被创建时回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 21
 
@@ -122,23 +88,6 @@ onWindowReady(window: window.Window): void
 | --- | --- | --- |
 | [window](arkts-arkui-window-n.md) | window.Window | 是 |
 
-**示例**
-
-```TypeScript
-import { WindowExtensionAbility, window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MyWindowExtensionAbility extends WindowExtensionAbility {
-  onWindowReady(window: window.Window) {
-    window.setUIContent('WindowExtAbility/pages/index1',(err:BusinessError) => {
-      let pro = window.getWindowProperties();
-      console.info(`WindowExtension pro: ${JSON.stringify(pro)}`);
-      window.showWindow();
-    });
-  }
-}
-```
-
 ## context
 
 ```TypeScript
@@ -150,8 +99,6 @@ Indicates window extension ability context.
 **类型：** [WindowExtensionContext](arkts-arkui-windowextensioncontext-t-sys.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 21
 

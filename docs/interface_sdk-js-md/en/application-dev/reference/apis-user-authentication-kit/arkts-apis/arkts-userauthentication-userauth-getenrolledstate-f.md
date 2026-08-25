@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getEnrolledState
@@ -15,8 +15,6 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 Obtains the credential state. This API is used to obtain the credential enrollment information of a specified authentication type, including the credential digest and quantity. The application can compare the current query result with the previously saved result to determine whether the user has added or deleted credentials, and then perform corresponding service processing.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -45,18 +43,3 @@ Obtains the credential state. This API is used to obtain the credential enrollme
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 | [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
 | [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
-
-**Examples**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let enrolledState = userAuth.getEnrolledState(userAuth.UserAuthType.FACE);
-  console.info(`get current enrolled state success, enrolledState = ${JSON.stringify(enrolledState)}`);
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`get current enrolled state failed, Code is ${err?.code}, message is ${err?.message}`);
-}
-```

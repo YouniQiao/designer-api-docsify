@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getInstalledBundleList
 
 ```TypeScript
-function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
+function getInstalledBundleList(bundleFlags: number): Promise<Array<BundleInfo>>
 ```
 
 根据给定的bundleFlags获取系统中所有的BundleInfo。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_INSTALLED_BUNDLE_LIST
 
@@ -28,7 +26,7 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| bundleFlags | number | 是 |
 
 **返回值：**
 
@@ -41,24 +39,3 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 | 错误码ID |
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
-
-try {
-  bundleManager.getInstalledBundleList(bundleFlags).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getInstalledBundleList successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: Error) => {
-    hilog.error(0x0000, 'testTag', 'getInstalledBundleList failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getInstalledBundleList failed. Cause: %{public}s', message);
-}
-```

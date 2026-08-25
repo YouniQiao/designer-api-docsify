@@ -6,8 +6,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@
 alignItems(value: ItemAlign)
 ```
 
-设置GridRow中的GridCol交叉轴方向对齐方式。GridCol本身也可通过alignSelf(ItemAlign)设置自身对齐方式。当上述两种对齐方式都设置时，以GridCol自身设置 为准。
+设置GridRow中的GridCol交叉轴方向对齐方式。GridCol本身也可通过alignSelf([ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md))设置自身对齐方式。当上述两种对齐方式都设置时，以GridCol自身设置 为准。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,7 +35,7 @@ alignItems(value: ItemAlign)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [ItemAlign](../arkts-apis/arkts-arkui-enums-itemalign-e.md) | 是 |
+| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | 是 |
 
 ## onBreakpointChange
 
@@ -55,8 +51,6 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 > margin属性值，否则可能导致组件尺寸计算循环触发、布局抖动或渲染性能下降。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

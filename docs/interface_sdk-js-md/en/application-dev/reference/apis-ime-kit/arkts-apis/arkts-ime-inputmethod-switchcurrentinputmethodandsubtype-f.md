@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## switchCurrentInputMethodAndSubtype
@@ -16,20 +16,18 @@ function switchCurrentInputMethodAndSubtype(
   ): void
 ```
 
-Switches to a specified subtype of a specified input method. This API uses an asynchronous callback to return the result. <br> <br>   
-> **NOTE：**&lt;br
-&gt; 
-> &lt;br
-&gt; 
-> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission. &lt;br
-&gt; 
-> &lt;br
-&gt; 
+Switches to a specified subtype of a specified input method. This API uses an asynchronous callback to return the result.   
+> **NOTE：**
+   
+> 
+   
+> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission.
+   
+> 
+   
 > - Since API version 11, this API can only be called by the current input method application.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
@@ -53,44 +51,6 @@ Switches to a specified subtype of a specified input method. This API uses an as
 | [12800005](../errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
-**Examples**
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
-inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodAndSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodAndSubtype.');
-  }
-});
-```
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
-inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodAndSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodAndSubtype.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## switchCurrentInputMethodAndSubtype
 
@@ -101,20 +61,18 @@ function switchCurrentInputMethodAndSubtype(
   ): Promise<boolean>
 ```
 
-Switches to a specified subtype of a specified input method. This API uses a promise to return the result. <br> <br>   
-> **NOTE：**&lt;br
-&gt; 
-> &lt;br
-&gt; 
-> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission. &lt;br
-&gt; 
-> &lt;br
-&gt; 
+Switches to a specified subtype of a specified input method. This API uses a promise to return the result.   
+> **NOTE：**
+   
+> 
+   
+> - In API versions 9 and 10, this API can only be called by system applications granted the **ohos.permission.CONNECT_IME_ABILITY** permission.
+   
+> 
+   
 > - Since API version 11, this API can only be called by the current input method application.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
@@ -142,7 +100,3 @@ Switches to a specified subtype of a specified input method. This API uses a pro
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [12800005](../errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
-
-**Examples**
-
-See [switchCurrentInputMethodAndSubtype](#switchcurrentinputmethodandsubtype)

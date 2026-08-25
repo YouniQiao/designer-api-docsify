@@ -4,8 +4,6 @@ Enumerates the notification slot types.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SlotType](arkts-notification-notificationmanager-slottype-e.md)
@@ -21,8 +19,6 @@ UNKNOWN_TYPE = 0
 Unknown type.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Notification slot for social communication.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#social_communication)
@@ -57,8 +51,6 @@ SERVICE_INFORMATION = 2
 Notification slot for service information.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ Notification slot for content consultation.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CONTENT_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#content_information)
@@ -93,8 +83,6 @@ OTHER_TYPES = 0xFFFF
 Notification slot for other purposes.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

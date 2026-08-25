@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.ConnectivityKit';
+import { scan } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## stopScan
@@ -15,8 +15,6 @@ function stopScan(): Promise<void>
 Stops NearLink scanning. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

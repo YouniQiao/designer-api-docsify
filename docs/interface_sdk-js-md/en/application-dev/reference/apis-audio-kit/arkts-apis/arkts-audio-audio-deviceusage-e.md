@@ -4,8 +4,6 @@ Enumerates the audio device types by usage.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## MEDIA_OUTPUT_DEVICES
@@ -17,8 +15,6 @@ MEDIA_OUTPUT_DEVICES = 1
 Media output device.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -32,8 +28,6 @@ Media input device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## ALL_MEDIA_DEVICES
@@ -45,8 +39,6 @@ ALL_MEDIA_DEVICES = 3
 All media devices.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
@@ -60,8 +52,6 @@ Call output device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## CALL_INPUT_DEVICES
@@ -74,8 +64,6 @@ Call input device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## ALL_CALL_DEVICES
@@ -87,7 +75,5 @@ ALL_CALL_DEVICES = 12
 All call devices.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device

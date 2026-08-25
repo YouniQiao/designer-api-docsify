@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## addPrinterToCups
@@ -15,8 +15,6 @@ function addPrinterToCups(printerUri: string, printerName: string, printerMake: 
 Add a printer to cups.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -47,20 +45,3 @@ Add a printer to cups.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [13100003](../errorcode-print.md#13100003-print-service-error) |
-
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerUri : string = "testPrinterUri";
-let printerName : string = "testPrinterName";
-let printerMake : string = "testPrinterMake";
-
-print.addPrinterToCups(printerUri, printerName, printerMake).then((result: boolean) => {
-    console.info('addPrinterToCups success' + JSON.stringify(result));
-}).catch((error: BusinessError) => {
-    console.error('addPrinterToCups error : ' + JSON.stringify(error));
-})
-```

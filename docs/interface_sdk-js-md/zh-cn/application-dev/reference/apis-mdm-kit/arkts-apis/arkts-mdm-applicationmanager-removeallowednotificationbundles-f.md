@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeAllowedNotificationBundles
@@ -15,8 +15,6 @@ function removeAllowedNotificationBundles(admin: Want, bundleNames: Array<string
 从允许发送通知的应用名单中移除应用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -40,25 +38,3 @@ function removeAllowedNotificationBundles(admin: Want, bundleNames: Array<string
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let bundleNames: Array<string> = ['com.example.notificationapp'];
-
-try {
-  applicationManager.removeAllowedNotificationBundles(wantTemp, bundleNames, 100);
-  console.info('Succeeded in removing allowed notification bundles.');
-} catch (err) {
-  console.error(`Failed to remove allowed notification bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```

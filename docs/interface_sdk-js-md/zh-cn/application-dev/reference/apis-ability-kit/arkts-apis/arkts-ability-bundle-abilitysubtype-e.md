@@ -7,8 +7,6 @@ Ability组件的子类型。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -23,8 +21,6 @@ UNSPECIFIED = 0
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -38,8 +34,6 @@ CA = 1
 安装冲突 （常见于升级和已有应用基本信息不一致）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

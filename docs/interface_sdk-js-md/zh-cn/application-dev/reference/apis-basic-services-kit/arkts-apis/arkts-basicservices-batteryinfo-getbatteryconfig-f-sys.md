@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { batteryInfo } from '@kit.BasicServicesKit';
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getBatteryConfig
@@ -15,8 +15,6 @@ function getBatteryConfig(sceneName: string): string
 按场景名称查询电池配置。调用该接口后，系统将根据传入的场景名称查找并返回对应的电池充电配置值。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -41,16 +39,3 @@ function getBatteryConfig(sceneName: string): string
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [5100101](../errorcode-battery-info.md#5100101-连接服务失败) |
-
-**示例**
-
-```TypeScript
-try {
-  let sceneName = 'xxx';
-  let result = batteryInfo.getBatteryConfig(sceneName);
-
-  console.info("The result is: " + result);
-} catch(err) {
-  console.error('getBatteryConfig failed, err: ' + err);
-}
-```

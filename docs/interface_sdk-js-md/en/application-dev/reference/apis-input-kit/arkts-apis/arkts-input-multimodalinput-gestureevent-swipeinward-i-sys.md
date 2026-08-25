@@ -4,8 +4,6 @@ Defines an inward swipe event.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines an inward swipe event.
 ## Modules to Import
 
 ```TypeScript
-import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from '@kit.InputKit';
+import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from 'kits/@kit.InputKit';
 ```
 
 ## type
@@ -28,8 +26,6 @@ Type of the inward swipe event. The value is fixed at **SwipeInward**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Type of the inward swipe event. The value is fixed at **SwipeInward**.
 ## x
 
 ```TypeScript
-x: int
+x: number
 ```
 
 X-coordinate of the swipe event trigger point, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -55,16 +49,14 @@ X-coordinate of the swipe event trigger point, in pixels.
 ## y
 
 ```TypeScript
-y: int
+y: number
 ```
 
 Y-coordinate of the swipe event trigger point, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

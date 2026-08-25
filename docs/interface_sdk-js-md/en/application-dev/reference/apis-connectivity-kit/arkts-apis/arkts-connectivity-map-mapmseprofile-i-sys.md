@@ -6,14 +6,12 @@ Manager MAP MSE profile.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { map } from '@kit.ConnectivityKit';
+import { map } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disconnect
@@ -25,8 +23,6 @@ disconnect(deviceId: string): void
 Disconnect the map connection with the remote device.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -53,18 +49,6 @@ Disconnect the map connection with the remote device.
 | 2900004 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    mapMseProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## getMessageAccessAuthorization
 
 ```TypeScript
@@ -74,8 +58,6 @@ getMessageAccessAuthorization(deviceId: string): Promise<AccessAuthorization>
 Get the message access authorization.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -108,20 +90,6 @@ Get the message access authorization.
 | 2900004 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    mapMseProfile.getMessageAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
-        console.info('authorization ' + authorization);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## setMessageAccessAuthorization
 
 ```TypeScript
@@ -131,8 +99,6 @@ setMessageAccessAuthorization(deviceId: string, authorization: AccessAuthorizati
 Set the message access authorization.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -145,7 +111,7 @@ Set the message access authorization.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | deviceId | string | Yes |
-| authorization | [AccessAuthorization](arkts-connectivity-constant-accessauthorization-e-sys.md) | Yes |
+| authorization | [AccessAuthorization](arkts-connectivity-pbap-accessauthorization-t-sys.md) | Yes |
 
 **Return value:**
 
@@ -165,17 +131,3 @@ Set the message access authorization.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let mapMseProfile = map.createMapMseProfile();
-    mapMseProfile.setMessageAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
-        console.info('setMessageAccessAuthorization');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## inputDialerSpecialCode
@@ -15,8 +15,6 @@ function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>
 暗码广播。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -42,31 +40,6 @@ function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.inputDialerSpecialCode('*#*#2846579#*#*', (err: BusinessError) => {
-    if (err) {
-        console.error(`inputDialerSpecialCode fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`inputDialerSpecialCode success`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    call.inputDialerSpecialCode('*#*#2846579#*#*');
-    console.info(`inputDialerSpecialCode success`);
-} catch (error) {
-    console.error(`inputDialerSpecialCode fail, promise: err->${JSON.stringify(error)}`);
-}
-```
-
 
 ## inputDialerSpecialCode
 
@@ -77,8 +50,6 @@ function inputDialerSpecialCode(inputCode: string): Promise<void>
 暗码广播。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -108,7 +79,3 @@ function inputDialerSpecialCode(inputCode: string): Promise<void>
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
-
-**示例**
-
-参见 [inputDialerSpecialCode](#inputdialerspecialcode)

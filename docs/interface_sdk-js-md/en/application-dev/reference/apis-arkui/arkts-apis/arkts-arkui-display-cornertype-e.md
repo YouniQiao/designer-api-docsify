@@ -4,8 +4,6 @@ Enumerates the types of corners on the screen.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## TOP_LEFT
@@ -17,8 +15,6 @@ TOP_LEFT = 0
 Top-left corner of the screen.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -34,8 +30,6 @@ Top-right corner of the screen.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -50,8 +44,6 @@ Bottom-right corner of the screen.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -65,8 +57,6 @@ BOTTOM_LEFT  = 3
 Bottom-left corner of the screen.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -4,14 +4,12 @@ VPN观察者对象。用于监听VPN相关事件。在调用VpnObserver的方法
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## offAuthorizationResult
@@ -27,8 +25,6 @@ offAuthorizationResult(callback?: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
@@ -38,26 +34,6 @@ offAuthorizationResult(callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | Callback & lt;boolean & gt; | 否 |
-
-**示例**
-
-```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
-
-let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
-
-let callback = (result: boolean) => {
-  console.info('Authorization result: ' + result);
-};
-// 注册监听器
-vpnObserver.onAuthorizationResult(callback);
-
-// 取消注册指定监听器
-vpnObserver.offAuthorizationResult(callback);
-
-// 取消注册已注册的监听器
-vpnObserver.offAuthorizationResult();
-```
 
 ## onAuthorizationResult
 
@@ -72,8 +48,6 @@ onAuthorizationResult(callback: Callback<boolean>): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
@@ -83,18 +57,3 @@ onAuthorizationResult(callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | Callback & lt;boolean & gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
-
-let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
-vpnObserver.onAuthorizationResult((result: boolean) => {
-  if (result) {
-    console.info('VPN authorization succeeded');
-  } else {
-    console.error('VPN authorization failed');
-  }
-});
-```

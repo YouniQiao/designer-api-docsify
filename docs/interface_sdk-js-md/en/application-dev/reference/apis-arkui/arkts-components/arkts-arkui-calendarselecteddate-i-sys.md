@@ -4,8 +4,6 @@ Defines the struct of CalendarSelectedDate.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,8 +27,6 @@ Application day
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -51,8 +47,6 @@ Application month
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -72,8 +66,6 @@ Application year
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 20
 

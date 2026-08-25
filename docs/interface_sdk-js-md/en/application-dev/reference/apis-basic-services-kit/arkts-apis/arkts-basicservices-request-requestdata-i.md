@@ -4,14 +4,12 @@ Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconf
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## name
@@ -26,8 +24,6 @@ Name of a form element.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## value
@@ -41,7 +37,5 @@ Value of a form element.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download

@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,8 +21,6 @@ closeSelectionMenu(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -40,8 +36,6 @@ getLayoutManager(): LayoutManager
 获取布局管理器对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,8 +62,6 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -82,4 +74,4 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 | --- | --- | --- |
 | selectionStart | number | 是 |
 | selectionEnd | number | 是 |
-| options | [SelectionOptions](arkts-arkui-common-selectionoptions-i.md) | 否 |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | 否 |

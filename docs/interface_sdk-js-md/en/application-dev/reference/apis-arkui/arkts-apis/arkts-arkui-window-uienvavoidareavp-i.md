@@ -4,14 +4,12 @@ Describes the information about the window avoidance area in units of vp, which 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## bottomRect
@@ -25,8 +23,6 @@ Rectangle centered at the bottom of the window's two diagonals, in vp.
 **Type:** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -42,8 +38,6 @@ Rectangle centered to the left of the window's two diagonals, in vp.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## rightRect
@@ -57,8 +51,6 @@ Rectangle centered to the right of the window's two diagonals, in vp.
 **Type:** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -74,8 +66,6 @@ Rectangle centered at the top of the window's two diagonals, in vp.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## visible
@@ -89,7 +79,5 @@ Whether the avoid area is visible. **true** if visible, **false** otherwise.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

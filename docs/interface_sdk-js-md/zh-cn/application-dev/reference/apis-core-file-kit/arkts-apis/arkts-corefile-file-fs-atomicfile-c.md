@@ -4,16 +4,14 @@ AtomicFile是一个用于对文件进行原子读写等操作的类。在写操�
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -25,8 +23,6 @@ constructor(path: string)
 对于给定路径的文件创建一个AtomicFile类。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -52,8 +48,6 @@ delete(): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -66,61 +60,6 @@ delete(): void
 | 13900027 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { util } from '@kit.ArkTS';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let pathDir = context.filesDir;
-
-try {
-  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    file.finishWrite();
-    setTimeout(()=>{
-      let data = file.readFully();
-      let decoder = util.TextDecoder.create('utf-8');
-      let str = decoder.decodeToString(new Uint8Array(data));
-      file.delete();
-      console.info(`Succeeded in delete atomicfile.`);
-    },1000);
-  })
-} catch (err) {
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { util } from '@kit.ArkTS';
-
-try {
-  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    file.finishWrite();
-    setTimeout(()=>{
-      let data = file.readFully();
-      let decoder = util.TextDecoder.create('utf-8');
-      let str = decoder.decodeToString(new Uint8Array(data));
-      file.delete();
-      console.info(`Succeeded in delete atomicfile.`);
-    },1000);
-  })
-} catch (error: Error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## failWrite
 
 ```TypeScript
@@ -131,8 +70,6 @@ failWrite(): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -140,47 +77,6 @@ failWrite(): void
 | 错误码ID |
 | --- |
 | 13900042 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let pathDir = context.filesDir;
-
-let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
-try {
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    console.info(`Succeeded in writing atomicFile.`);
-  })
-} catch (err) {
-  file.failWrite();
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
-try {
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    console.info(`Succeeded in writing atomicFile.`);
-  })
-} catch (error: Error) {
-  let err: BusinessError = error as BusinessError;
-  file.failWrite();
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
 
 ## finishWrite
 
@@ -192,8 +88,6 @@ finishWrite(): void
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **错误码：**
@@ -201,45 +95,6 @@ finishWrite(): void
 | 错误码ID |
 | --- |
 | 13900042 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let pathDir = context.filesDir;
-
-try {
-  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    file.finishWrite();
-  })
-} catch (err) {
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-try {
-  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    file.finishWrite();
-  })
-} catch (error: Error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
 
 ## getBaseFile
 
@@ -250,8 +105,6 @@ getBaseFile(): File
 通过AtomicFile对象获取文件对象。文件描述符fd需要由用户调用close方法关闭。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -270,49 +123,6 @@ getBaseFile(): File
 | 13900012 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let pathDir = context.filesDir;
-
-try {
-  let atomicFile = new fileIo.AtomicFile(`${pathDir}/write.txt`);
-  let writeStream = atomicFile.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    atomicFile.finishWrite();
-    let file = atomicFile.getBaseFile();
-    console.info(`Succeeded in getting base file. fd: ${file.fd}, path: ${file.path}, name:${file.name}`);
-  })
-} catch (err) {
-  console.error(`Failed to get baseFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-try {
-  let atomicFile = new fileIo.AtomicFile(`${pathDir}/write.txt`);
-  let writeStream = atomicFile.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    atomicFile.finishWrite();
-    let file = atomicFile.getBaseFile();
-    console.info(`Succeeded in getting base file. fd: ${file.fd}, path: ${file.path}, name:${file.name}`);
-  })
-} catch (error: Error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to get base file. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## openRead
 
 ```TypeScript
@@ -322,8 +132,6 @@ openRead(): ReadStream
 创建一个读文件流。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -342,67 +150,6 @@ openRead(): ReadStream
 | 13900012 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let pathDir = context.filesDir;
-
-try {
-  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    file.finishWrite();
-    setTimeout(()=>{
-      let readStream = file.openRead();
-      readStream.on('readable', () => {
-        const data = readStream.read();
-        if (!data) {
-          console.error(`Failed to read atomicfile, data is null.`);
-          return;
-        }
-        console.info(`Succeeded in reading atomicfile, data is: ${data}`);
-      });
-    },1000);
-  })
-} catch (err) {
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-try {
-let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
-let writeStream = file.startWrite();
-writeStream.write("hello, world", "utf-8", ()=> {
-  file.finishWrite();
-  setTimeout(()=>{
-    let readStream = file.openRead();
-    readStream.on('readable', () => {
-      const data = readStream.read();
-      if (!data) {
-        console.error(`Failed to read atomicfile, data is null.`);
-        return;
-      }
-      console.info(`Succeeded in reading atomicfile, data is: ${data}`);
-    });
-  },1000);
-})
-} catch (error: Error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## readFully
 
 ```TypeScript
@@ -412,8 +159,6 @@ readFully(): ArrayBuffer
 读取文件全部内容。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -430,59 +175,6 @@ readFully(): ArrayBuffer
 | 13900005 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { util, buffer } from '@kit.ArkTS';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let pathDir = context.filesDir;
-
-try {
-  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    file.finishWrite();
-    setTimeout(()=>{
-      let data = file.readFully();
-      let decoder = util.TextDecoder.create('utf-8');
-      let str = decoder.decodeToString(new Uint8Array(data));
-      console.info(`Succeeded in reading atomicfile fully, str is: ${str}`);
-    },1000);
-  })
-} catch (err) {
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { util, buffer } from '@kit.ArkTS';
-
-try {
-  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    file.finishWrite();
-    setTimeout(()=>{
-      let data = file.readFully();
-      let decoder = util.TextDecoder.create('utf-8');
-      let str = decoder.decodeToString(new Uint8Array(data));
-      console.info(`Succeeded in reading atomicfile fully, str is: ${str}`);
-    },1000);
-  })
-} catch (error: Error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 ## startWrite
 
 ```TypeScript
@@ -492,8 +184,6 @@ startWrite(): WriteStream
 对文件开始新的写入操作。将返回一个WriteStream，用于在其中写入新的文件数据。当文件不存在时新建文件。在写入文件完成后，写入成功需要调用finishWrite()，写入失败需要调用failWrite()。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -512,45 +202,3 @@ startWrite(): WriteStream
 | 13900012 |
 | 13900027 |
 | 13900042 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { fileIo as fs} from '@kit.CoreFileKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let pathDir = context.filesDir;
-
-try {
-  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    file.finishWrite();
-    console.info(`Succeeded in writing atomicfile finished.`);
-  })
-} catch (err) {
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-try {
-  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
-  let writeStream = file.startWrite();
-  writeStream.write("hello, world", "utf-8", ()=> {
-    file.finishWrite();
-    console.info(`Succeeded in writing atomicfile finished.`);
-  })
-} catch (error: Error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
-}
-```

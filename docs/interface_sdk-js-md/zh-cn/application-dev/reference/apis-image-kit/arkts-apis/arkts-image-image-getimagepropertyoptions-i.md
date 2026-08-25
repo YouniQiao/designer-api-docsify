@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **替代接口：** [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)
@@ -18,7 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## defaultValue
@@ -32,8 +30,6 @@ defaultValue?: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -52,8 +48,6 @@ index?: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 

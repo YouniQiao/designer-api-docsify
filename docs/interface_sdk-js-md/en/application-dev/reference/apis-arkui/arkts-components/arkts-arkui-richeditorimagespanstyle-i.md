@@ -4,8 +4,6 @@ Sets the image span style.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Image layout style. Default value: **{"borderRadius":"","margin":""}**
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -41,11 +37,9 @@ objectFit?: ImageFit
 
 Scale mode of the image.
 
-**Type:** ImageFit
+**Type:** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ Width and height of the image, in px. Default value: varies by the value of **ob
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -81,11 +73,9 @@ verticalAlign?: ImageSpanAlignment
 
 Vertical alignment mode of the image.
 
-**Type:** ImageSpanAlignment
+**Type:** [ImageSpanAlignment](../arkts-apis/arkts-arkui-imagespanalignment-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

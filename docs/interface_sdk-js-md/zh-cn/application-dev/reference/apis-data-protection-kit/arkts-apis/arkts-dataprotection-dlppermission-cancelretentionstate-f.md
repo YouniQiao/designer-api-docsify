@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## cancelRetentionState
@@ -15,8 +15,6 @@ function cancelRetentionState(docUris: Array<string>): Promise<void>
 取消沙箱保留状态，即恢复DLP文件关闭时自动卸载沙箱策略。使用Promise异步回调。该接口用于取消沙箱保留状态，恢复默认行为以释放系统资源，适用于不再频繁访问DLP文件的场景。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -40,32 +38,6 @@ function cancelRetentionState(docUris: Array<string>): Promise<void>
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-dlpPermission.cancelRetentionState([uri]).then(() => { // 取消沙箱保留。
-  console.info('success!');
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-dlpPermission.cancelRetentionState([uri], (err, res) => {
-  if (err) {
-    console.error(`Failed to cancel retention state. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('cancelRetentionState success');
-  }
-}); // 取消沙箱保留。
-```
-
 
 ## cancelRetentionState
 
@@ -76,8 +48,6 @@ function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<vo
 取消沙箱保留状态即恢复DLP文件关闭时自动卸载沙箱策略。使用callback异步回调。该接口用于取消沙箱保留状态，恢复默认行为以释放系统资源，适用于不再频繁访问DLP文件的场景。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -95,7 +65,3 @@ function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<vo
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-参见 [cancelRetentionState](#cancelretentionstate)

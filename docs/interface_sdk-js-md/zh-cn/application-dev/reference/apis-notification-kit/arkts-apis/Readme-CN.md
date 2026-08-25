@@ -206,13 +206,9 @@
   <!--Del-->
   - [offBadgeNumberQuery(系统接口)](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [offCheckNotification(系统接口)](arkts-notification-notificationmanager-offchecknotification-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [on(系统接口)](arkts-notification-notificationmanager-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onBadgeNumberQuery(系统接口)](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onCheckNotification(系统接口)](arkts-notification-notificationmanager-onchecknotification-f-sys.md)<!--DelEnd-->
   - [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md)
   - [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)
   - [publish](arkts-notification-notificationmanager-publish-f.md)
@@ -559,8 +555,6 @@
     - [SubscribeCallbackData(系统接口)](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [VoiceContent(系统接口)](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [BadgeEnabledChangedCallback(系统接口)](arkts-notification-badgeenabledchangedcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->
     - [EnabledSilentReminderChangedCallback(系统接口)](arkts-notification-enabledsilentreminderchangedcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->

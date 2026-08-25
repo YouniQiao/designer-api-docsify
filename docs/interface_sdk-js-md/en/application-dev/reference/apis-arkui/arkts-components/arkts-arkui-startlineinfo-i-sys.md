@@ -4,8 +4,6 @@ Define start line info used in GridLayoutOptions.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -27,8 +25,6 @@ Define the start index of the row where the target index or offset is located.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -47,8 +43,6 @@ Define the start row of the item with startIndex.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -61,13 +55,11 @@ Define the start row of the item with startIndex.
 startOffset: number
 ```
 
-Offset between the top of the **GridItem** corresponding to **startIndex** and the top of the **Grid**. <br>Unit: vp
+Offset between the top of the **GridItem** corresponding to **startIndex** and the top of the **Grid**. Unit: vp
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,13 +73,11 @@ Offset between the top of the **GridItem** corresponding to **startIndex** and t
 totalOffset: number
 ```
 
-Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.<br>Unit: vp
+Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.Unit: vp
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

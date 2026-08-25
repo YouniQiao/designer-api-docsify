@@ -4,8 +4,6 @@ Defines the service profile information. It is populated based on the data retur
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the service profile information. It is populated based on the data retur
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## data
@@ -27,8 +25,6 @@ Service data. The value is a string of up to 1000 characters. This parameter is 
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -46,8 +42,6 @@ Device ID.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Service ID.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ Service type.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAbilityInfo
@@ -15,8 +15,6 @@ function getAbilityInfo(bundleName: string, abilityName: string, callback: Async
 通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -32,38 +30,6 @@ function getAbilityInfo(bundleName: string, abilityName: string, callback: Async
 | abilityName | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = "com.example.myapplication";
-let abilityName: string = "EntryAbility";
-
-bundle.getAbilityInfo(bundleName, abilityName)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleName: string = "com.example.myapplication";
-let abilityName: string = "EntryAbility";
-
-bundle.getAbilityInfo(bundleName, abilityName, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
 
 ## getAbilityInfo
 
@@ -74,8 +40,6 @@ function getAbilityInfo(bundleName: string, abilityName: string): Promise<Abilit
 通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -95,7 +59,3 @@ function getAbilityInfo(bundleName: string, abilityName: string): Promise<Abilit
 | 类型 |
 | --- |
 | Promise&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; |
-
-**示例**
-
-参见 [getAbilityInfo](#getabilityinfo)

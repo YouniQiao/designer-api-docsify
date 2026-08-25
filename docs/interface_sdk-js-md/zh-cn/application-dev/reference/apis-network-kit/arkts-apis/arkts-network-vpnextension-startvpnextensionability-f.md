@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## startVpnExtensionAbility
@@ -15,8 +15,6 @@ function startVpnExtensionAbility(want: Want): Promise<void>
 启动新的三方VPN功能。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -8,8 +8,6 @@ Get form rect info callback
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.

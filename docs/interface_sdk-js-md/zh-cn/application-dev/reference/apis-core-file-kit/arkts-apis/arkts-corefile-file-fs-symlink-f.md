@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## symlink
@@ -20,8 +20,6 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 > 从API version 11开始，不支持三方应用使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -57,69 +55,6 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/test";
-fileIo.symlink(srcFile, dstFile).then(() => {
-  console.info(`Succeeded in creating symbolic link.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/test";
-fileIo.symlink(srcFile, dstFile).then(() => {
-  console.info(`Succeeded in creating symbolic link.`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/test";
-fileIo.symlink(srcFile, dstFile, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in creating symbolic link.`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + "/test";
-fileIo.symlink(srcFile, dstFile, (err: BusinessError<void> | null) => {
-  if (err) {
-    console.error(`Failed to create symbolic link. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in creating symbolic link.`);
-  }
-});
-```
-
 
 ## symlink
 
@@ -133,8 +68,6 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 > 从API version 11开始，不支持三方应用使用。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -164,7 +97,3 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 | 13900030 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-参见 [symlink](#symlink)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getCurrentLocation
@@ -16,8 +16,6 @@ function getCurrentLocation(request: CurrentLocationRequest | SingleLocationRequ
 Obtain current location.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -43,111 +41,6 @@ Obtain current location.
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// Method 1: Use CurrentLocationRequest as the input parameter.
-let requestInfo: geoLocationManager.CurrentLocationRequest = {
-  'priority': geoLocationManager.LocationRequestPriority.FIRST_FIX,
-  'scenario': geoLocationManager.LocationRequestScenario.UNSET,
-  'maxAccuracy': 0
-};
-let locationChange = (err: BusinessError, location: geoLocationManager.Location): void => {
-  if (err) {
-    console.error('locationChange: err=' + JSON.stringify(err));
-  }
-  if (location) {
-    console.info('locationChange: location=' + JSON.stringify(location));
-  }
-};
-
-try {
-  geoLocationManager.getCurrentLocation(requestInfo, locationChange);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-
-// Method 2: Use SingleLocationRequest as the input parameter.
-let request: geoLocationManager.SingleLocationRequest = {
-  'locatingTimeoutMs': 10000,
-  'locatingPriority': geoLocationManager.LocatingPriority.PRIORITY_ACCURACY
-};
-let locationCallback = (err: BusinessError, location: geoLocationManager.Location): void => {
-  if (err) {
-    console.error('locationChange: err=' + JSON.stringify(err));
-  }
-  if (location) {
-    console.info('locationChange: location=' + JSON.stringify(location));
-  }
-};
-
-try {
-  geoLocationManager.getCurrentLocation(request, locationCallback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let locationChange = (err: BusinessError, location: geoLocationManager.Location) => {
-  if (err) {
-    console.error('locationChange: err=' + JSON.stringify(err));
-  }
-  if (location) {
-    console.info('locationChange: location=' + JSON.stringify(location));
-  }
-};
-
-try {
-  geoLocationManager.getCurrentLocation(locationChange);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Method 1: Use CurrentLocationRequest as the input parameter.
-let requestInfo: geoLocationManager.CurrentLocationRequest = {
-  'priority': geoLocationManager.LocationRequestPriority.FIRST_FIX,
-  'scenario': geoLocationManager.LocationRequestScenario.UNSET,
-  'maxAccuracy': 0
-};
-try {
-  geoLocationManager.getCurrentLocation(requestInfo).then((result) => {
-    console.info('current location: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCurrentLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-
-// Method 2: Use SingleLocationRequest as the input parameter.
-let request: geoLocationManager.SingleLocationRequest = {
-  'locatingTimeoutMs': 10000,
-  'locatingPriority': geoLocationManager.LocatingPriority.PRIORITY_ACCURACY
-};
-try {
-  geoLocationManager.getCurrentLocation(request).then((result) => {
-    console.info('current location: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCurrentLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## getCurrentLocation
 
@@ -158,8 +51,6 @@ function getCurrentLocation(callback: AsyncCallback<Location>): void
 Obtain current location.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -184,10 +75,6 @@ Obtain current location.
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) |
 
-**Examples**
-
-See [getCurrentLocation](#getcurrentlocation)
-
 
 ## getCurrentLocation
 
@@ -199,8 +86,6 @@ function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationReq
 Obtain current location.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -230,7 +115,3 @@ Obtain current location.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) |
-
-**Examples**
-
-See [getCurrentLocation](#getcurrentlocation)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## isDefaultNetMetered
@@ -16,8 +16,6 @@ Checks whether the data traffic over the current default network is metered. For
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -38,26 +36,6 @@ Checks whether the data traffic over the current default network is metered. For
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.isDefaultNetMetered((error: BusinessError, data: boolean) => {
-  console.error(JSON.stringify(error));
-  console.info('data: ' + data);
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.isDefaultNetMetered().then((data: boolean) => {
-  console.info('data: ' + data);
-});
-```
-
 
 ## isDefaultNetMetered
 
@@ -69,8 +47,6 @@ Checks whether the data traffic over the current default network is metered. For
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -89,7 +65,3 @@ Checks whether the data traffic over the current default network is metered. For
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [isDefaultNetMetered](#isdefaultnetmetered)

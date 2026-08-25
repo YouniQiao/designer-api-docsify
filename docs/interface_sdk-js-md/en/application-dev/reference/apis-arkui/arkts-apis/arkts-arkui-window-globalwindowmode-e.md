@@ -4,8 +4,6 @@ Enumerates the window modes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## FULLSCREEN
@@ -17,8 +15,6 @@ FULLSCREEN = 1
 Full-screen window. The first binary bit from right to left is 1.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -34,8 +30,6 @@ Split-screen window. The second binary bit from right to left is 1.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -50,8 +44,6 @@ Floating window. The third binary bit from right to left is 1.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -65,8 +57,6 @@ PIP = 1 << 3
 PiP window. The fourth binary bit from right to left is 1.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

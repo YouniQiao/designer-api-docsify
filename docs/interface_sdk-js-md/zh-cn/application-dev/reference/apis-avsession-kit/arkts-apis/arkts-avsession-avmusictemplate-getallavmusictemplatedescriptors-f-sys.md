@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getAllAVMusicTemplateDescriptors
 
 ```TypeScript
-function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescriptor[]
+function getAllAVMusicTemplateDescriptors(userId?: number): AVMusicTemplateDescriptor[]
 ```
 
 获取所有的音频模板描述，返回音频模板描述的集合。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -30,7 +28,7 @@ function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescript
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| userId | number | 否 |
 
 **返回值：**
 

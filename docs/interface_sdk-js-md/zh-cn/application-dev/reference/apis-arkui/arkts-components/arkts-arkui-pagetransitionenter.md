@@ -12,8 +12,6 @@ PageTransitionEnter(value: PageTransitionOptions)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -33,8 +31,6 @@ PageTransitionEnter(event: PageTransitionCallback)
 逐帧回调，直到入场动画结束，progress从0变化到1。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -57,7 +53,6 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 | 名称 |
 | --- |
-| [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) |
 
 ### 枚举
 

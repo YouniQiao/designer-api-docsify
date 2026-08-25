@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## updateSimMessage
@@ -15,8 +15,6 @@ function updateSimMessage(options: UpdateSimMessageOptions, callback: AsyncCallb
 Updates a SIM message. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -43,43 +41,6 @@ Updates a SIM message. This API uses an asynchronous callback to return the resu
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let updateSimMessageOptions: sms.UpdateSimMessageOptions = {
-    slotId: 0,
-    msgIndex: 1,
-    newStatus: sms.SimMessageStatus.SIM_MESSAGE_STATUS_FREE,
-    pdu: "xxxxxxx",
-    smsc: "test"
-};
-sms.updateSimMessage(updateSimMessageOptions, (err: BusinessError) => {
-      console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let updateSimMessageOptions: sms.UpdateSimMessageOptions = {
-    slotId: 0,
-    msgIndex: 1,
-    newStatus: sms.SimMessageStatus.SIM_MESSAGE_STATUS_FREE,
-    pdu: "xxxxxxx",
-    smsc: "test"
-};
-let promise = sms.updateSimMessage(updateSimMessageOptions);
-promise.then(() => {
-    console.info(`updateSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`updateSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## updateSimMessage
 
@@ -90,8 +51,6 @@ function updateSimMessage(options: UpdateSimMessageOptions): Promise<void>
 Updates a SIM message. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -122,7 +81,3 @@ Updates a SIM message. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [updateSimMessage](#updatesimmessage)

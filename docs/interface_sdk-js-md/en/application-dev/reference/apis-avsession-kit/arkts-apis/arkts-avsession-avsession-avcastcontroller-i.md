@@ -4,14 +4,12 @@ AVCastController definition used to implement a remote control when a cast is co
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getAVPlaybackState
@@ -23,8 +21,6 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 Get the playback status of the current player
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -40,52 +36,6 @@ Get the playback status of the current player
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`getAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('getAVPlaybackState : SUCCESS');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('getAVPlaybackState : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`getAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avsessionController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`getAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('getAVPlaybackState : SUCCESS');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avsessionController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('getAVPlaybackState : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`getAVPlaybackState BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getAVPlaybackState
 
 ```TypeScript
@@ -95,8 +45,6 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 Get the playback status of the current player
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -114,10 +62,6 @@ Get the playback status of the current player
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-See [getAVPlaybackState](#getavplaybackstate)
-
 ## getCurrentItem
 
 ```TypeScript
@@ -127,8 +71,6 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 Get the current playing item
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -144,30 +86,6 @@ Get the current playing item
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.getCurrentItem((err: BusinessError, value: avSession.AVQueueItem) => {
-  if (err) {
-    console.error(`getCurrentItem BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('getCurrentItem successfully');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.getCurrentItem().then((value: avSession.AVQueueItem) => {
-  console.info('getCurrentItem successfully');
-}).catch((err: BusinessError) => {
-  console.error(`getCurrentItem BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getCurrentItem
 
 ```TypeScript
@@ -177,8 +95,6 @@ getCurrentItem(): Promise<AVQueueItem>
 Get the current playing item
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -196,10 +112,6 @@ Get the current playing item
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-See [getCurrentItem](#getcurrentitem)
-
 ## getRecommendedResolutionLevel
 
 ```TypeScript
@@ -209,8 +121,6 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 Get recommended resolution of remote player based on each decoder.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -234,19 +144,6 @@ Get recommended resolution of remote player based on each decoder.
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let decoderType = avSession.DecoderType.OH_AVCODEC_MIMETYPE_VIDEO_AVC;
-aVCastController.getRecommendedResolutionLevel(decoderType).then((resolutionLevel: avSession.ResolutionLevel) => {
-  console.info('getRecommendedResolutionLevel successfully');
-}).catch((err: BusinessError) => {
-  console.error(`getRecommendedResolutionLevel BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getSupportedDecoders
 
 ```TypeScript
@@ -256,8 +153,6 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 Get supported decoders of remote player.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -275,21 +170,6 @@ Get supported decoders of remote player.
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.getSupportedDecoders().then((decoderTypes: avSession.DecoderType[]) => {
-  console.info(`getSupportedDecoders : SUCCESS : decoderTypes.length : ${decoderTypes.length}`);
-  if (decoderTypes.length > 0 ) {
-    console.info(`getSupportedDecoders : SUCCESS : decoderTypes[0] : ${decoderTypes[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`getSupportedDecoders BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getSupportedHdrCapabilities
 
 ```TypeScript
@@ -299,8 +179,6 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 Get supported hdr capabilities of remote player.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -318,39 +196,15 @@ Get supported hdr capabilities of remote player.
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import type hdrCapability from './@ohos.graphics.hdrCapability';
-
-aVCastController.getSupportedHdrCapabilities().then((hdrFormats: hdrCapability.HDRFormat[]) => {
-  console.info(`getSupportedHdrCapabilities : SUCCESS : hdrFormats.length : ${hdrFormats.length}`);
-  if (hdrFormats.length > 0 ) {
-    console.info(`getSupportedHdrCapabilities : SUCCESS : descriptors[0] : ${hdrFormats[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`getSupportedHdrCapabilities BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getSupportedPlaySpeeds
 
-ArkTS-Dyn:
 ```TypeScript
 getSupportedPlaySpeeds(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
-```TypeScript
-getSupportedPlaySpeeds(): Promise<Array<double>>
 ```
 
 Get supported speed of remote player.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -360,28 +214,13 @@ Get supported speed of remote player.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;double & gt; & gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
-  console.info(`getSupportedPlaySpeeds : SUCCESS : hdrFormats.length : ${nums.length}`);
-  if (nums.length > 0 ) {
-    console.info(`getSupportedPlaySpeeds : SUCCESS : descriptors[0] : ${nums[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`getSupportedPlaySpeeds BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getValidCommands
 
@@ -392,8 +231,6 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 Get commands supported by the current cast controller
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -409,52 +246,6 @@ Get commands supported by the current cast controller
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.getValidCommands((err: BusinessError, state: avSession.AVCastControlCommandType[]) => {
-  if (err) {
-    console.error(`getValidCommands BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('getValidCommands successfully');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.getValidCommands().then((state: avSession.AVCastControlCommandType[]) => {
-  console.info('getValidCommands successfully');
-}).catch((err: BusinessError) => {
-  console.error(`getValidCommands BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avsessionController.getValidCommands().then((validCommands: avSession.AVControlCommandType[]) => {
-  console.info(`GetValidCommands : SUCCESS : size : ${validCommands.length}`);
-}).catch((err: BusinessError) => {
-  console.error(`GetValidCommands BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avsessionController.getValidCommands((err: BusinessError, validCommands: avSession.AVControlCommandType[]) => {
-  if (err) {
-    console.error(`GetValidCommands BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`GetValidCommands : SUCCESS : size : ${validCommands.length}`);
-  }
-});
-```
-
 ## getValidCommands
 
 ```TypeScript
@@ -464,8 +255,6 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 Get commands supported by the current cast controller
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -481,10 +270,6 @@ Get commands supported by the current cast controller
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-See [getValidCommands](#getvalidcommands)
-
 ## off('playbackStateChange')
 
 ```TypeScript
@@ -494,8 +279,6 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 Unregister playback state changed callback
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -525,8 +308,6 @@ Unregister listener for current media item playback events.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -553,8 +334,6 @@ off(type: 'playNext'): void
 Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -583,8 +362,6 @@ Unregister playback command callback sent by remote side or media center. When c
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -612,8 +389,6 @@ Unregister requested playback command callback sent by remote side or media cent
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -640,8 +415,6 @@ Unregister endOfStream state callback.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -667,8 +440,6 @@ off(type: 'seekDone'): void
 Unregister listens for playback events.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -697,8 +468,6 @@ Unregister the valid commands of the casted session changed callback
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -726,8 +495,6 @@ Unregister listener for video size change event, used at remote side.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -743,12 +510,6 @@ Unregister listener for video size change event, used at remote side.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-aVCastController.off('videoSizeChange');
-```
-
 ## off('error')
 
 ```TypeScript
@@ -758,8 +519,6 @@ off(type: 'error'): void
 Unregister listens for playback error events.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -794,8 +553,6 @@ Unregister listeners for cast control generic error events.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -822,8 +579,6 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 Unregister listeners for cast control input/output error events.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -852,8 +607,6 @@ Unregister listeners for cast control parsing error events.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -880,8 +633,6 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 Unregister listeners for cast control decoding error events.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -910,8 +661,6 @@ Unregister listeners for cast control audio renderer error events.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -939,8 +688,6 @@ Unregister listeners for cast control drm error events.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -967,8 +714,6 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 Unregister listener for drm key request.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -998,8 +743,6 @@ Unregister listener for custom data sent from remote device.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1017,421 +760,6 @@ Unregister listener for custom data sent from remote device.
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-## offCastControlAudioRendererError
-
-```TypeScript
-offCastControlAudioRendererError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control audio renderer error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
-
-## offCastControlDecodingError
-
-```TypeScript
-offCastControlDecodingError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control decoding error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
-
-## offCastControlDrmError
-
-```TypeScript
-offCastControlDrmError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control drm error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
-
-## offCastControlGenericError
-
-```TypeScript
-offCastControlGenericError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control generic error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
-
-## offCastControlIoError
-
-```TypeScript
-offCastControlIoError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control input/output error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
-
-## offCastControlParsingError
-
-```TypeScript
-offCastControlParsingError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control parsing error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
-
-## offCustomDataChange
-
-```TypeScript
-offCustomDataChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unregister listener for custom data sent from remote device.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## offEndOfStream
-
-```TypeScript
-offEndOfStream(callback?: NoParamCallback): void
-```
-
-Unregister endOfStream state callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## offError
-
-```TypeScript
-offError(): void
-```
-
-Unregister listens for playback error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## offKeyRequest
-
-```TypeScript
-offKeyRequest(callback?: KeyRequestCallback): void
-```
-
-Unregister listener for drm key request.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## offMediaItemChange
-
-```TypeScript
-offMediaItemChange(): void
-```
-
-Unregister listener for current media item playback events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## offPlaybackStateChange
-
-```TypeScript
-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
-```
-
-Unregister playback state changed callback
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## offPlayNext
-
-```TypeScript
-offPlayNext(): void
-```
-
-Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-**Examples**
-
-```TypeScript
-currentAVSession.offPlayNext();
-```
-
-## offPlayPrevious
-
-```TypeScript
-offPlayPrevious(): void
-```
-
-Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-**Examples**
-
-```TypeScript
-currentAVSession.offPlayPrevious();
-```
-
-## offRequestPlay
-
-```TypeScript
-offRequestPlay(callback?: Callback<AVQueueItem>): void
-```
-
-Unregister requested playback command callback sent by remote side or media center.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## offSeekDone
-
-```TypeScript
-offSeekDone(): void
-```
-
-Unregister listens for playback events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## offValidCommandChange
-
-```TypeScript
-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void
-```
-
-Unregister the valid commands of the casted session changed callback
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## offVideoSizeChange
-
-```TypeScript
-offVideoSizeChange(): void
-```
-
-Unregister listener for video size change event, used at remote side.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
 ## on('playbackStateChange')
 
 ```TypeScript
@@ -1441,8 +769,6 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 Register playback state changed callback
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1473,8 +799,6 @@ Register listener for current media item playback events.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1502,8 +826,6 @@ on(type: 'playNext', callback: Callback<void>): void
 Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1533,8 +855,6 @@ Register playback command callback sent by remote side or media center. Applicat
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1563,8 +883,6 @@ Register requested playback command callback sent by remote side or media center
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1591,8 +909,6 @@ Register endOfStream state callback. Application needs update the new media reso
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1612,14 +928,12 @@ Register endOfStream state callback. Application needs update the new media reso
 ## on('seekDone')
 
 ```TypeScript
-on(type: 'seekDone', callback: Callback<int>): void
+on(type: 'seekDone', callback: Callback<number>): void
 ```
 
 Register listens for playback events.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1649,8 +963,6 @@ Register the valid commands of the casted session changed callback
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 **Parameters:**
@@ -1671,14 +983,12 @@ Register the valid commands of the casted session changed callback
 ## on('videoSizeChange')
 
 ```TypeScript
-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void
+on(type: 'videoSizeChange', callback: (width: number, height: number) => void): void
 ```
 
 Register listener for video size change event, used at remote side.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1696,15 +1006,6 @@ Register listener for video size change event, used at remote side.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-aVCastController.on('videoSizeChange', (width: number, height: number) => {
-  console.info(`width : ${width} `);
-  console.info(`height: ${height} `);
-});
-```
-
 ## on('error')
 
 ```TypeScript
@@ -1714,8 +1015,6 @@ on(type: 'error', callback: ErrorCallback): void
 Register listeners for playback error events.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1750,8 +1049,6 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 Register listeners for cast control generic error events.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -1793,8 +1090,6 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 Register listeners for cast control input/output error events.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -1840,8 +1135,6 @@ Register listeners for cast control parsing error events.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1873,8 +1166,6 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 Register listeners for cast control decoding error events.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -1909,8 +1200,6 @@ Register listeners for cast control audio renderer error error events.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -1940,8 +1229,6 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 Register listeners for cast control drm error events.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -1980,8 +1267,6 @@ Register listener for drm key request.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -2010,8 +1295,6 @@ Register listener for custom data sent from remote device.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -2029,573 +1312,6 @@ Register listener for custom data sent from remote device.
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-## onCastControlAudioRendererError
-
-```TypeScript
-onCastControlAudioRendererError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control audio renderer error error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6615000](../errorcode-avsession.md#6615000-unknown-error-related-to-the-audio-renderer) |
-| [6615001](../errorcode-avsession.md#6615001-audio-renderer-initialization-failure) |
-| [6615002](../errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) |
-
-## onCastControlDecodingError
-
-```TypeScript
-onCastControlDecodingError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control decoding error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6614000](../errorcode-avsession.md#6614000-unknown-decoding-error) |
-| [6614001](../errorcode-avsession.md#6614001-decoder-initialization-failure) |
-| [6614002](../errorcode-avsession.md#6614002-decoder-query-failure) |
-| [6614003](../errorcode-avsession.md#6614003-media-sample-decoding-failure) |
-| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) |
-| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) |
-
-## onCastControlDrmError
-
-```TypeScript
-onCastControlDrmError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control drm error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6616000](../errorcode-avsession.md#6616000-unknown-drm-error) |
-| [6616001](../errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) |
-| [6616002](../errorcode-avsession.md#6616002-device-provisioning-failure) |
-| [6616003](../errorcode-avsession.md#6616003-drm-protected-content-to-play-is-incompatible) |
-| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) |
-| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) |
-| [6616006](../errorcode-avsession.md#6616006-drm-system-error) |
-| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) |
-| [6616008](../errorcode-avsession.md#6616008-expired-drm-license-loaded) |
-| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) |
-
-## onCastControlGenericError
-
-```TypeScript
-onCastControlGenericError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control generic error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) |
-| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) |
-| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) |
-| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) |
-| [6611004](../errorcode-avsession.md#6611004-runtime-check-failure) |
-| [6611100](../errorcode-avsession.md#6611100-cross-device-data-transmission-locked) |
-| [6611101](../errorcode-avsession.md#6611101-unsupported-seek-mode) |
-| [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) |
-| [6611103](../errorcode-avsession.md#6611103-unsupported-playback-mode) |
-| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) |
-| [6611105](../errorcode-avsession.md#6611105-device-revocation) |
-| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) |
-| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) |
-| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) |
-
-## onCastControlIoError
-
-```TypeScript
-onCastControlIoError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control input/output error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6612000](../errorcode-avsession.md#6612000-unknown-io-error) |
-| [6612001](../errorcode-avsession.md#6612001-network-connection-failure) |
-| [6612002](../errorcode-avsession.md#6612002-network-timeout) |
-| [6612003](../errorcode-avsession.md#6612003-invalid-content-type-http-header) |
-| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) |
-| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) |
-| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) |
-| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) |
-| [6612008](../errorcode-avsession.md#6612008-data-to-read-out-of-range) |
-| [6612100](../errorcode-avsession.md#6612100-no-playable-content) |
-| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) |
-| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) |
-| [6612103](../errorcode-avsession.md#6612103-content-expired) |
-| [6612104](../errorcode-avsession.md#6612104-requested-content-cannot-be-used) |
-| [6612105](../errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) |
-| [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) |
-| [6612107](../errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) |
-
-## onCastControlParsingError
-
-```TypeScript
-onCastControlParsingError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control parsing error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6613000](../errorcode-avsession.md#6613000-unknown-parsing-error) |
-| [6613001](../errorcode-avsession.md#6613001-invalid-type) |
-| [6613002](../errorcode-avsession.md#6613002-error-in-parsing-media-manifest) |
-| [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) |
-| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) |
-
-## onCustomDataChange
-
-```TypeScript
-onCustomDataChange(callback: Callback<Record<string, Object>>): void
-```
-
-Register listener for custom data sent from remote device.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## onEndOfStream
-
-```TypeScript
-onEndOfStream(callback: NoParamCallback): void
-```
-
-Register endOfStream state callback. Application needs update the new media resource when receive these commands by using playItem.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## onError
-
-```TypeScript
-onError(callback: ErrorCallback): void
-```
-
-Register listeners for playback error events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## onKeyRequest
-
-```TypeScript
-onKeyRequest(callback: KeyRequestCallback): void
-```
-
-Register listener for drm key request.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## onMediaItemChange
-
-```TypeScript
-onMediaItemChange(callback: Callback<AVQueueItem>): void
-```
-
-Register listener for current media item playback events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## onPlaybackStateChange
-
-```TypeScript
-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
-```
-
-Register playback state changed callback
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| filter | Array & lt;string & gt; | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## onPlaybackStateChangeAll
-
-```TypeScript
-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
-```
-
-Registers a callback to be invoked whenever the playback state changes
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## onPlayNext
-
-```TypeScript
-onPlayNext(callback: NoParamCallback): void
-```
-
-Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-**Examples**
-
-```TypeScript
-currentAVSession.onPlayNext((info: CommandInfo) => {
-  console.info('on playNext entry');
-});
-```
-
-## onPlayPrevious
-
-```TypeScript
-onPlayPrevious(callback: NoParamCallback): void
-```
-
-Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-**Examples**
-
-```TypeScript
-currentAVSession.onPlayPrevious((info: CommandInfo) => {
-  console.info('on playPrevious entry');
-});
-```
-
-## onRequestPlay
-
-```TypeScript
-onRequestPlay(callback: Callback<AVQueueItem>): void
-```
-
-Register requested playback command callback sent by remote side or media center. The AVQueueItem may include the requested assetId, starting position and other configurations.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## onSeekDone
-
-```TypeScript
-onSeekDone(callback: Callback<int>): void
-```
-
-Register listens for playback events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-## onValidCommandChange
-
-```TypeScript
-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void
-```
-
-Register the valid commands of the casted session changed callback
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## onVideoSizeChange
-
-```TypeScript
-onVideoSizeChange(callback: VideoSizeEvent): void
-```
-
-Register listener for video size change event, used at remote side.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [VideoSizeEvent](arkts-avsession-avsession-videosizeevent-t.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
 ## prepare
 
 ```TypeScript
@@ -2605,8 +1321,6 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 Load the current item and mediaUri can be null, this is needed for sink media information displaying
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2625,66 +1339,6 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set playback parameters.
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: "http://resource1_album_address",
-    lyricUri: "http://resource1_lyric_address",
-    appName: 'MyMusic'
-  }
-};
-// Prepare for playback. This operation triggers loading and buffering, but not the actual playback.
-aVCastController.prepare(playItem, (err: BusinessError) => {
-  if (err) {
-    console.error(`prepare BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('prepare successfully');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set playback parameters.
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: "http://resource1_album_address",
-    lyricUri: "http://resource1_lyric_address",
-    appName: 'MyMusic'
-  }
-};
-// Prepare for playback. This operation triggers loading and buffering, but not the actual playback.
-aVCastController.prepare(playItem).then(() => {
-  console.info('prepare successfully');
-}).catch((err: BusinessError) => {
-  console.error(`prepare BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## prepare
 
 ```TypeScript
@@ -2694,8 +1348,6 @@ prepare(item: AVQueueItem): Promise<void>
 Load the current item and mediaUri can be null, this is needed for sink media information displaying
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2721,10 +1373,6 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
-**Examples**
-
-See [prepare](#prepare)
-
 ## processMediaKeyResponse
 
 ```TypeScript
@@ -2734,8 +1382,6 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 Process the response corresponding to the media key request obtained by the application.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2761,19 +1407,6 @@ Process the response corresponding to the media key request obtained by the appl
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, requestData: Uint8Array) => {
-  // Obtain the DRM URL based on the asset ID.
-  let drmUrl = 'http://license.xxx.xxx.com:8080/drmproxy/getLicense';
-  // Obtain a media key from the server. Assign a value based on service requirements.
-  let licenseResponseData: Uint8Array = new Uint8Array();
-  console.info(`Succeeded in get license by ${drmUrl}.`);
-  aVCastController.processMediaKeyResponse(assetId, licenseResponseData);
-}
-```
-
 ## release
 
 ```TypeScript
@@ -2783,8 +1416,6 @@ release(callback: AsyncCallback<void>): void
 Destroy the controller
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2799,30 +1430,6 @@ Destroy the controller
 | Error Code ID |
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.release((err: BusinessError) => {
-  if (err) {
-    console.error(`release BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('release successfully');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.release().then(() => {
-  console.info('release successfully');
-}).catch((err: BusinessError) => {
-  console.error(`release BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## release
 
@@ -2834,8 +1441,6 @@ Destroy the controller
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -2852,10 +1457,6 @@ Destroy the controller
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-See [release](#release)
-
 ## sendControlCommand
 
 ```TypeScript
@@ -2865,8 +1466,6 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 Send control commands to remote player
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2886,56 +1485,6 @@ Send control commands to remote player
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avCommand: avSession.AVCastControlCommand = {command:'play'};
-aVCastController.sendControlCommand(avCommand).then(() => {
-  console.info('SendControlCommand successfully');
-}).catch((err: BusinessError) => {
-  console.error(`SendControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avCommand: avSession.AVCastControlCommand = {command:'play'};
-aVCastController.sendControlCommand(avCommand, (err: BusinessError) => {
-  if (err) {
-    console.error(`SendControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('SendControlCommand successfully');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avCommand: avSession.AVControlCommand = {command:'play'};
-avsessionController.sendControlCommand(avCommand).then(() => {
-  console.info('SendControlCommand successfully');
-}).catch((err: BusinessError) => {
-  console.error(`SendControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avCommand: avSession.AVControlCommand = {command:'play'};
-avsessionController.sendControlCommand(avCommand, (err: BusinessError) => {
-  if (err) {
-    console.error(`SendControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('SendControlCommand successfully');
-  }
-});
-```
-
 ## sendControlCommand
 
 ```TypeScript
@@ -2945,8 +1494,6 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 Send control commands to remote player
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2973,10 +1520,6 @@ Send control commands to remote player
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
-**Examples**
-
-See [sendControlCommand](#sendcontrolcommand)
-
 ## sendCustomData
 
 ```TypeScript
@@ -2986,8 +1529,6 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 Sends custom data to a remote device.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -3011,95 +1552,6 @@ Sends custom data to a remote device.
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-aVCastController.sendCustomData({customData : "This is custom data"});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { avSession } from '@kit.AVSessionKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() { 
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            let currentAVSession: avSession.AVSession | undefined = undefined;
-            let tag = "createNewSession";
-            let context: Context = this.getUIContext().getHostContext() as Context;
-
-            avSession.createAVSession(context, tag, "audio", (err: BusinessError, data: avSession.AVSession) => {
-            if (err) {
-                console.error(`CreateAVSession BusinessError: code: ${err.code}, message: ${err.message}`);
-            } else {
-                currentAVSession = data;
-            }
-            });
-            if (currentAVSession !== undefined) {
-            (currentAVSession as avSession.AVSession).sendCustomData({customData : "This is custom data"}).then(() => {
-                console.info('sendCustomData successfully');
-            }).catch((err: BusinessError) => {
-                console.error(`sendCustomData BusinessError: code: ${err.code}, message: ${err.message}`);
-            })
-            }
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  private tag: string = "createNewSession";
-  private sessionId: string = "";
-  private controller: avSession.AVSessionController | undefined = undefined;
-  private currentAVSession?: avSession.AVSession;
-  context = this.getUIContext();
-
-  aboutToAppear(): void {
-    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
-      .then(async (data: avSession.AVSession) => {
-        this.currentAVSession = data;
-        this.sessionId = this.currentAVSession.sessionId;
-        this.controller = await this.currentAVSession.getController();
-        console.info(`CreateAVSession : SUCCESS :sessionId = ${this.sessionId}`);
-      })
-      .catch((err: BusinessError) => {
-        console.error(`CreateAVSession BusinessError:code: ${err.code}, message: ${err.message}`)
-      });
-
-    if (this.controller !== undefined) {
-      (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" })
-    }
-  }
-
-  build() {
-    Column() {
-      Text('AVSession Demo')
-        .fontSize(20)
-        .margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
 ## start
 
 ```TypeScript
@@ -3109,8 +1561,6 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 Play the current item, should contain mediaUri otherwise the playback will fail.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -3129,67 +1579,6 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set playback parameters.
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: "http://resource1_album_address",
-    lyricUri: "http://resource1_lyric_address",
-    appName: 'MyMusic'
-  }
-};
-
-// Start playback.
-aVCastController.start(playItem, (err: BusinessError) => {
-  if (err) {
-    console.error(`start BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('start successfully');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set playback parameters.
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: "http://resource1_album_address",
-    lyricUri: "http://resource1_lyric_address",
-    appName: 'MyMusic'
-  }
-};
-// Start playback.
-aVCastController.start(playItem).then(() => {
-  console.info('start successfully');
-}).catch((err: BusinessError) => {
-  console.error(`start BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## start
 
 ```TypeScript
@@ -3199,8 +1588,6 @@ start(item: AVQueueItem): Promise<void>
 Play the current item, should contain mediaUri otherwise the playback will fail.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -3225,7 +1612,3 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
-
-**Examples**
-
-See [start](#start)

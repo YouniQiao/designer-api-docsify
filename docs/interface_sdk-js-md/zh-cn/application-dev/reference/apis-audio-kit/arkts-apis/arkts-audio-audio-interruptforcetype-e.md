@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 ## INTERRUPT_FORCE
@@ -17,8 +15,6 @@ INTERRUPT_FORCE = 0
 强制打断类型，即具体操作已由系统强制执行。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -33,8 +29,6 @@ INTERRUPT_SHARE = 1
 共享打断类型，即系统不执行具体操作，通过[InterruptHint](arkts-audio-audio-interrupthint-e.md)建议并提示应用操作，应用可自行决策下一步处理方式。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

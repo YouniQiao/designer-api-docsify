@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## updateNetwork
 
 ```TypeScript
-function updateNetwork(config: WifiDeviceConfig): int
+function updateNetwork(config: WifiDeviceConfig): number
 ```
 
 Update the specified Wi-Fi configuration.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
@@ -34,7 +32,7 @@ Update the specified Wi-Fi configuration.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -46,21 +44,3 @@ Update the specified Wi-Fi configuration.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let config:wifiManager.WifiDeviceConfig = {
-    ssid : "****",
-    preSharedKey : "****",
-    securityType : 3
-  }
-  let ret = wifiManager.updateNetwork(config);
-  console.info("ret:" + ret);
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

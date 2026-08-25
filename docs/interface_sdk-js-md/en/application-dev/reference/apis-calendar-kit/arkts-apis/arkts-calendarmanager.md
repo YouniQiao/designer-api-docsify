@@ -4,14 +4,12 @@ The calendarManager module provides APIs for calendar and event management, incl
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from '@kit.CalendarKit';
+import { calendarManager } from 'kits/@kit.CalendarKit';
 ```
 
 ## Summary

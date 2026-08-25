@@ -9,8 +9,6 @@ type FlatArray<Arr, Depth extends number> = {
 }[Depth extends -1 ? "done" : "recur"]
 ```
 
-**ArkTS mode:** 
-
 **Property type:** {
     "done": Arr,
     "recur": Arr extends ReadonlyArray&lt;infer InnerArr&gt;

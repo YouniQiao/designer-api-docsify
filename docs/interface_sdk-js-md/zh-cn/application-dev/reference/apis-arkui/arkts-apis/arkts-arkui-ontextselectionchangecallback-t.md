@@ -1,16 +1,14 @@
 # OnTextSelectionChangeCallback
 
 ```TypeScript
-export type OnTextSelectionChangeCallback = (selectionStart: int, selectionEnd: int) => void
+declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionEnd: number) => void
 ```
 
-文本选择变化回调或光标位置变化回调。
+文本选择的位置发生变化或编辑状态下光标位置发生变化时，触发该回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,5 +16,5 @@ export type OnTextSelectionChangeCallback = (selectionStart: int, selectionEnd: 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| selectionStart | int | 是 |
-| selectionEnd | int | 是 |
+| selectionStart | number | 是 |
+| selectionEnd | number | 是 |

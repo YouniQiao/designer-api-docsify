@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## updateFormLockedState
@@ -15,8 +15,6 @@ function updateFormLockedState(formId: string, isLocked: boolean): Promise<void>
 通知卡片管控状态更新。使用Promise异步回调。卡片管控状态是指，应用使能了应用锁管控，对应应用的卡片也会跟随使能应用锁管控，此时卡片页面会使用加锁的蒙板样式遮罩卡片。在管控状态下，操作和使用卡片需要输入加锁时设置的密码。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -48,42 +46,3 @@ function updateFormLockedState(formId: string, isLocked: boolean): Promise<void>
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-let isLocked: boolean = true;
-
-try {
-  formHost.updateFormLockedState(formId, isLocked).then(() => {
-    console.info(`formHost updateFormLockedState success`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-let isLocked: boolean = true;
-
-try {
-  formHost.updateFormLockedState(formId, isLocked).then(() => {
-    console.info(`formHost updateFormLockedState success`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```

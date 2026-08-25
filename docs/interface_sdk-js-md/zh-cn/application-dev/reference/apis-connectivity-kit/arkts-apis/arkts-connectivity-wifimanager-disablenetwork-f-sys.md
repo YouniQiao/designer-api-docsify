@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disableNetwork
 
 ```TypeScript
-function disableNetwork(netId: int): void
+function disableNetwork(netId: number): void
 ```
 
 通过networkId去使能指定的DeviceConfig。 去使能后的DeviceConfig将不再被关联。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -28,7 +26,7 @@ function disableNetwork(netId: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| netId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| netId | number | 是 |
 
 **错误码：**
 
@@ -41,43 +39,16 @@ function disableNetwork(netId: int): void
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
 | [2501001](../errorcode-wifi.md#2501001-sta功能未打开) |
 
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let netId = 0;
-  wifiManager.disableNetwork(netId);  
-} catch (error) {
-  console.error(`failed: ${JSON.stringify(error)}`);
-}
-```
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let netId = 0;
-  let blockDuration = 300;
-  wifiManager.disableNetwork(netId, blockDuration);  
-} catch (error) {
-  console.error(`failed: ${JSON.stringify(error)}`);
-}
-```
-
 
 ## disableNetwork
 
 ```TypeScript
-function disableNetwork(netId: int, blockDuration: int): void
+function disableNetwork(netId: number, blockDuration: number): void
 ```
 
 通过networkId在一段时间内去使能指定的DeviceConfig。 去使能后的DeviceConfig将不再被关联。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -89,8 +60,8 @@ function disableNetwork(netId: int, blockDuration: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| netId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| blockDuration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| netId | number | 是 |
+| blockDuration | number | 是 |
 
 **错误码：**
 
@@ -101,7 +72,3 @@ function disableNetwork(netId: int, blockDuration: int): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
 | [2501001](../errorcode-wifi.md#2501001-sta功能未打开) |
-
-**示例**
-
-参见 [disableNetwork](#disablenetwork)

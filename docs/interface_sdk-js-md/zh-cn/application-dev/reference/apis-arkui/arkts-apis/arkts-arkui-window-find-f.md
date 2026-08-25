@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## find
@@ -19,8 +19,6 @@ function find(id: string, callback: AsyncCallback<Window>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [findWindow](arkts-arkui-window-findwindow-f.md)
@@ -33,36 +31,6 @@ function find(id: string, callback: AsyncCallback<Window>): void
 | --- | --- | --- |
 | id | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-window.find('test', (err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to find the Window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  windowClass = data;
-  console.info('Succeeded in finding the window. Data: ' + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.find('test');
-promise.then((data) => {
-  windowClass = data;
-  console.info('Succeeded in finding the window. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find the Window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## find
@@ -77,8 +45,6 @@ function find(id: string): Promise<Window>
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -97,7 +63,3 @@ function find(id: string): Promise<Window>
 | 类型 |
 | --- |
 | Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
-
-**示例**
-
-参见 [find](#find)

@@ -10,14 +10,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -80,4 +78,3 @@ import { PiPWindow } from '@kit.ArkUI';
 | [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) |
 | [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) |
 | [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) |
-| [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) |

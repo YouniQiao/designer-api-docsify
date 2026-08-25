@@ -4,8 +4,6 @@ Water ripple scene mode enumeration.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ SMALL2MEDIUM_RECV = 0
 Phone tapping 2in1 device (receiving end).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -36,8 +32,6 @@ Phone tapping 2in1 device (sending end).
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Phone tapping phone.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ MINI_RECV = 3
 2in1 device sharing with other devices (keyboard and mouse sharing scenario).
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 

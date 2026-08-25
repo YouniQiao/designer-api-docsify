@@ -4,8 +4,6 @@ This module defines the result information of monitoring install, update and uni
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ This module defines the result information of monitoring install, update and uni
 ## Modules to Import
 
 ```TypeScript
-import { bundleMonitor } from '@kit.AbilityKit';
+import { bundleMonitor } from 'kits/@kit.AbilityKit';
 ```
 
 ## appIndex
 
 ```TypeScript
-readonly appIndex: int
+readonly appIndex: number
 ```
 
 The app index of clone app
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -46,8 +42,6 @@ The bundle name
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ The bundle name
 ## userId
 
 ```TypeScript
-readonly userId: int
+readonly userId: number
 ```
 
 The user id
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

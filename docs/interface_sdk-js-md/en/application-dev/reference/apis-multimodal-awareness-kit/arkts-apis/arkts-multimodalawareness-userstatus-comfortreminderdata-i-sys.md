@@ -6,8 +6,6 @@ Defines comfort reminder data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -15,22 +13,20 @@ Defines comfort reminder data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## eventType
 
 ```TypeScript
-eventType: int
+eventType: number
 ```
 
 Event type. The value ranges from 0 to 1. 0: Gaze event, 1: Ambient sound event..
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Fusion reminder data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
@@ -69,8 +63,6 @@ Swing reminder data.
 **Type:** [ReminderLevel](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

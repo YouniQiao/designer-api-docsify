@@ -4,8 +4,6 @@ Describes the button style.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Style and importance of the button. The system automatically adjusts the button 
 **Default:** ButtonStyleMode.EMPHASIZED
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,6 @@ Button size.Default value: **ControlSize.NORMAL**
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -75,8 +69,6 @@ Role of the button. The system automatically adjusts the button background color
 **Default:** ButtonRole.NORMAL
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,8 +92,6 @@ Whether to enable the pressed state effect when the button is clicked.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -119,8 +109,6 @@ Button display style.Default value: **ButtonType.ROUNDED_RECTANGLE**API version 
 **Type:** [ButtonType](arkts-arkui-buttontype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setWifiProfile
@@ -15,8 +15,6 @@ function setWifiProfile(admin: Want, profile: WifiProfile, callback: AsyncCallba
 Configures Wi-Fi for the current device to connect to a specified network. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -48,57 +46,6 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let profile: wifiManager.WifiProfile = {
-  // Replace with actual values.
-  'ssid': 'name',
-  'preSharedKey': 'passwd',
-  'securityType': wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
-};
-
-wifiManager.setWifiProfile(wantTemp, profile, (err) => {
-  if (err) {
-    console.error(`Failed to set wifi profile. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting wifi profile');
-});
-```
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let profile: wifiManager.WifiProfile = {
-  // Replace with actual values.
-  'ssid': 'name',
-  'preSharedKey': 'passwd',
-  'securityType': wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
-};
-
-wifiManager.setWifiProfile(wantTemp, profile).then(() => {
-  console.info('Succeeded in setting wifi profile');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set wifi profile. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## setWifiProfile
 
@@ -109,8 +56,6 @@ function setWifiProfile(admin: Want, profile: WifiProfile): Promise<void>
 Configures Wi-Fi for the current device to connect to a specified network. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -146,7 +91,3 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [setWifiProfile](#setwifiprofile)

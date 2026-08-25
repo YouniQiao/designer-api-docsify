@@ -15,8 +15,6 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getSlots](arkts-notification-notificationmanager-getslots-f.md)
@@ -29,32 +27,6 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-// getSlots回调
-function getSlotsCallback(err: Base.BusinessError) {
-  if (err) {
-    console.error("getSlots failed " + JSON.stringify(err));
-  } else {
-    console.info("getSlots success");
-  }
-}
-Notification.getSlots(getSlotsCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.getSlots().then((data) => {
-  console.info("getSlots success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`getSlots failed, code is ${err}`);
-});
-```
-
 
 ## getSlots
 
@@ -65,8 +37,6 @@ function getSlots(): Promise<Array<NotificationSlot>>
 获取此应用程序的所有通知通道（Promise形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -79,7 +49,3 @@ function getSlots(): Promise<Array<NotificationSlot>>
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; |
-
-**示例**
-
-参见 [getSlots](#getslots)

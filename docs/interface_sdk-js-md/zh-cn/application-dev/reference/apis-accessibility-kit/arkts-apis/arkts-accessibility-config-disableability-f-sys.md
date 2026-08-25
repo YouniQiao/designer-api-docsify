@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## disableAbility
@@ -15,8 +15,6 @@ function disableAbility(name: string): Promise<void>
 关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md)或 [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)配对使用。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -45,55 +43,6 @@ function disableAbility(name: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) |
 
-**示例**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-
-config.disableAbility(name).then(() => {
-  console.info(`Succeeded in disabling ability, name is ${name}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to disable ability. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-
-config.disableAbility(name, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to disable ability. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in disabling, name is ${name}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-
-config.disableAbility(name, (err: BusinessError | null) => {
-  if (err?.code) {
-    console.error(`failed to disable ability, Code is ${err?.code}, message is ${err?.message}`);
-    return;
-  }
-  console.info(`Succeeded in disabling, name is ${name}`);
-});
-```
-
 
 ## disableAbility
 
@@ -104,8 +53,6 @@ function disableAbility(name: string, callback: AsyncCallback<void>): void
 关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md)或 [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)配对使用。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -128,7 +75,3 @@ function disableAbility(name: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) |
-
-**示例**
-
-参见 [disableAbility](#disableability)

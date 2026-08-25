@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +19,6 @@ bundleNames?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -40,8 +36,6 @@ deviceType?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -52,13 +46,13 @@ deviceType?: string
 enableClassification?: boolean
 ```
 
-是否启用通知分类。 - true：表示启用。 - false：表示禁用。默认值为false。
+是否启用通知分类。  
+- true：表示启用。  
+- false：表示禁用。默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,17 +63,19 @@ enableClassification?: boolean
 ## filterLimit
 
 ```TypeScript
-filterLimit?: long
+filterLimit?: number
 ```
 
 通知过滤范围。默认值为0。取值范围包括：  
-- 0：不进行任何过滤，订阅全部通知。 - 1：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且 [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)为空的通知过滤掉。 - 2：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且 [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)不为空的通知过滤掉。
+- 0：不进行任何过滤，订阅全部通知。  
+- 1：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且  
+[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)为空的通知过滤掉。  
+- 2：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且  
+[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)不为空的通知过滤掉。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -91,13 +87,14 @@ filterLimit?: long
 needSilentReplayOnSubscribe?: boolean
 ```
 
-是否启用订阅时的静默重放。 - true：表示启用。 - false：表示禁用。默认值为false。 启用后，首次订阅时会以静默方式重新推送历史通知，不会出现响铃和振动提醒。
+是否启用订阅时的静默重放。  
+- true：表示启用。  
+- false：表示禁用。默认值为false。  
+启用后，首次订阅时会以静默方式重新推送历史通知，不会出现响铃和振动提醒。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,8 +114,6 @@ pictureOptions?: PictureOptions
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -137,8 +132,6 @@ slotTypes?: Array<notificationManager.SlotType>
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -146,16 +139,14 @@ slotTypes?: Array<notificationManager.SlotType>
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 用户ID。 不传递该参数时，默认订阅当前用户ID的通知。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -172,8 +163,6 @@ voiceContentOptions?: VoiceContentOptions
 **类型：** [VoiceContentOptions](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

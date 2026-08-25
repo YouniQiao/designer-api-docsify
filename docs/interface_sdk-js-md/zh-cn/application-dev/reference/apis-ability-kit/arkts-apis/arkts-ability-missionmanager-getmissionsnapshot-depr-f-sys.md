@@ -15,8 +15,6 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md)
@@ -35,45 +33,6 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 | missionId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 获取任务快照
-  missionManager.getMissionSnapShot('', testMissionId, (err, data) => {
-    if (err) {
-      console.error(`getMissionSnapShot failed. Code: ${err.code}, message: ${err.message}.`);
-    } else {
-      console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`getMissionSnapShot sync failed. Code: ${error.code}, message: ${error.message}.`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 获取任务快照
-  missionManager.getMissionSnapShot('', testMissionId).then((data) => {
-    console.info(`getMissionSnapShot successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
-}
-```
-
 
 ## getMissionSnapShot
 
@@ -84,8 +43,6 @@ function getMissionSnapShot(deviceId: string, missionId: number): Promise<Missio
 获取任务快照。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -109,7 +66,3 @@ function getMissionSnapShot(deviceId: string, missionId: number): Promise<Missio
 | 类型 |
 | --- |
 | Promise&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; |
-
-**示例**
-
-参见 [getMissionSnapShot](#getmissionsnapshot)

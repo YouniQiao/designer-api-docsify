@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_DIR_TO_DEVICE
@@ -18,8 +16,6 @@ USB_REQUEST_DIR_TO_DEVICE = 0
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## USB_REQUEST_DIR_FROM_DEVICE
@@ -31,7 +27,5 @@ USB_REQUEST_DIR_FROM_DEVICE = 0x80
 读数据，设备向主机。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager

@@ -4,8 +4,6 @@ Menu divider mode.@enum { number }
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FLOATING_ABOVE_MENU
@@ -17,8 +15,6 @@ FLOATING_ABOVE_MENU = 0
 Menu divider mode floating above menu.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ EMBEDDED_IN_MENU = 1
 Menu divider mode embedded in menu.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

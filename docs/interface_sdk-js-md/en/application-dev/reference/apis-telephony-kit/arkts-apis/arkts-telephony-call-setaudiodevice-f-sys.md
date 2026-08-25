@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setAudioDevice
@@ -15,8 +15,6 @@ function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): voi
 Sets the audio device for a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -43,36 +41,6 @@ Sets the audio device for a call. This API uses an asynchronous callback to retu
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioDevice: call.AudioDevice = {
-    deviceType: call.AudioDeviceType.DEVICE_EARPIECE
-}
-call.setAudioDevice(audioDevice, (err: BusinessError) => {
-    if (err) {
-        console.error(`setAudioDevice fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`setAudioDevice success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioDevice: call.AudioDevice = {
-    deviceType: call.AudioDeviceType.DEVICE_EARPIECE
-}
-call.setAudioDevice(audioDevice).then(() => {
-    console.info(`setAudioDevice success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setAudioDevice fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setAudioDevice
 
@@ -83,8 +51,6 @@ function setAudioDevice(device: AudioDevice): Promise<void>
 Sets the audio device for a call. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -115,7 +81,3 @@ Sets the audio device for a call. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [setAudioDevice](#setaudiodevice)

@@ -9,8 +9,6 @@ Defines the sweep gradient parameters.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,8 +28,6 @@ Center of the sweep gradient, that is, the coordinates relative to the upper lef
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -49,8 +45,6 @@ Array of color stops, each of which consists of a color and its stop position. I
 **Type:** Array&lt;[ResourceColor, number]&gt;
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,8 +66,6 @@ End point of the sweep gradient.Default value: **0**.When specified as a string,
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -91,8 +83,6 @@ Array of color stops, each of which consists of a color and its stop position. I
 **Type:** Array&lt;[ColorMetrics, number]&gt;
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +106,6 @@ Whether the colors are repeated.Default value: **false**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -138,8 +126,6 @@ Rotation angle of the sweep gradient. Default value: **0**.When specified as a s
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -159,8 +145,6 @@ Start point of the sweep gradient.Default value: **0**.When specified as a strin
 **Default:** 0 [since 18]
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

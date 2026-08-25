@@ -9,8 +9,6 @@ The module provides APIs for setting and obtaining installation-free information
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
@@ -18,7 +16,7 @@ The module provides APIs for setting and obtaining installation-free information
 ## Modules to Import
 
 ```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
+import { freeInstall } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

@@ -7,7 +7,7 @@ The **mouseEvent** module provides mouse events reported by a device. It is inhe
 ## Modules to Import
 
 ```TypeScript
-import { Action as MouseAction, Axis, AxisValue, Button, MouseEvent, ToolType as MouseToolType } from '@kit.InputKit';
+import { Action as MouseAction, Axis, AxisValue, Button, MouseEvent, ToolType as MouseToolType } from 'kits/@kit.InputKit';
 ```
 
 ## Summary

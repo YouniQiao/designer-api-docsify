@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## cancelMuted
@@ -15,8 +15,6 @@ function cancelMuted(callback: AsyncCallback<void>): void
 取消通话中的静音。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -39,30 +37,6 @@ function cancelMuted(callback: AsyncCallback<void>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.cancelMuted((err: BusinessError) => {
-    if (err) {
-        console.error(`cancelMuted fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`cancelMuted success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.cancelMuted().then(() => {
-    console.info(`cancelMuted success.`);
-}).catch((err: BusinessError) => {
-    console.error(`cancelMuted fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## cancelMuted
 
@@ -73,8 +47,6 @@ function cancelMuted(): Promise<void>
 取消通话中的静音。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -94,7 +66,3 @@ function cancelMuted(): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [cancelMuted](#cancelmuted)

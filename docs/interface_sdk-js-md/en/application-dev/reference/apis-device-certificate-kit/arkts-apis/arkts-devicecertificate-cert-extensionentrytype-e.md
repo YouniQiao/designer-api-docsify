@@ -4,8 +4,6 @@ Enumerates the entry types in certificate extensions that can be obtained.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## EXTENSION_ENTRY_TYPE_ENTRY
@@ -17,8 +15,6 @@ EXTENSION_ENTRY_TYPE_ENTRY = 0
 Entire extension entry.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Critical attribute (**critical** flag) of the extension entry.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -49,8 +43,6 @@ EXTENSION_ENTRY_TYPE_ENTRY_VALUE = 2
 Value (extension-specific data) of the extension entry.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

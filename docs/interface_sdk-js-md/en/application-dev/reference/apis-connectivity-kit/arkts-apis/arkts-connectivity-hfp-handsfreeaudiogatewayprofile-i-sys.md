@@ -6,14 +6,12 @@ Manager hfp source profile.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from '@kit.ConnectivityKit';
+import { hfp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -26,8 +24,6 @@ Initiate an HFP connection to a remote device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -52,18 +48,6 @@ Initiate an HFP connection to a remote device.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hfpAg = hfp.createHfpAgProfile();
-    hfpAg.connect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## disconnect
 
@@ -75,8 +59,6 @@ Disconnect the HFP connection with the remote device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -101,15 +83,3 @@ Disconnect the HFP connection with the remote device.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hfpAg = hfp.createHfpAgProfile();
-    hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

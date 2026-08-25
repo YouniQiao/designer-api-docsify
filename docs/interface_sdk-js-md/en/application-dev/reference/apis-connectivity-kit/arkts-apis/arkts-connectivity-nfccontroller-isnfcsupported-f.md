@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isNfcSupported
@@ -15,8 +15,6 @@ function isNfcSupported(): boolean
 Checks whether the device supports NFC.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

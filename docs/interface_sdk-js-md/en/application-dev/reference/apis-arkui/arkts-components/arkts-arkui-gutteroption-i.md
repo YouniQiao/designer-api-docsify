@@ -4,8 +4,6 @@ Provides the gutter options for the grid layout to define the spacing between ch
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ x?: Length | GridRowSizeOption
 
 Horizontal spacing between grid child components. Unit: vp.
 
-**Type:** Length \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -41,11 +37,9 @@ y?: Length | GridRowSizeOption
 
 Vertical spacing between grid child components. Unit: vp.
 
-**Type:** Length \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

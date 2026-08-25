@@ -4,8 +4,6 @@ Defines the options for obtaining the onscreen content.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the options for obtaining the onscreen content.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## contentUnderstand
@@ -27,8 +25,6 @@ Whether content understanding is required. The default value is **False**.
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -46,8 +42,6 @@ Whether to obtain the page link. The default value is **False**.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Whether to obtain only the text and divide the text into paragraphs. The default
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Whether to obtain only the text and divide the text into paragraphs. The default
 ## windowId
 
 ```TypeScript
-windowId?: int
+windowId?: number
 ```
 
 ID of the window whose content needs to be obtained. If this parameter is not set or is set to **undefined**, the content of the full-screen window is obtained by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

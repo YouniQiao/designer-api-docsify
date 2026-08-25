@@ -4,14 +4,12 @@
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 ## 导入模块
 
 ```TypeScript
-import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## 汇总

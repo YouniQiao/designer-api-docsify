@@ -1,7 +1,5 @@
 # Uint16Array
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,5 +12,3 @@ readonly [Symbol.toStringTag]: "Uint16Array"
 ```
 
 **Type:** "Uint16Array"
-
-**ArkTS mode:** 

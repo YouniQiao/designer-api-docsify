@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getIpInfo
@@ -15,8 +15,6 @@ function getIpInfo(): IpInfo
 获取IP信息。<p>IP信息包括主机IP地址、网关地址和DNS信息。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -31,16 +29,3 @@ function getIpInfo(): IpInfo
 | 类型 |
 | --- |
 | [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-  let info = wifi.getIpInfo();
-  console.info("info:" + JSON.stringify(info));
-}catch(error){
-  console.error("failed:" + JSON.stringify(error));
-}
-```

@@ -4,8 +4,6 @@ Describes the contents of the Bluetooth scan results.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the contents of the Bluetooth scan results.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## deviceName
@@ -27,8 +25,6 @@ The local name of the device.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -46,8 +42,6 @@ Mac address of the scanned device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ Mac address of the scanned device.
 ## rssi
 
 ```TypeScript
-rssi: int
+rssi: number
 ```
 
 RSSI of the remote device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -73,16 +65,14 @@ RSSI of the remote device.
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Time stamp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 

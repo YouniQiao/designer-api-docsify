@@ -6,8 +6,6 @@ A constructor used to create a **DotIndicator** object. It inherits from [Indica
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ color(value: ResourceColor): DotIndicator
 Sets the color of the dot-style navigation indicator.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +61,6 @@ A constructor used to create a **DotIndicator** object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -84,8 +78,6 @@ indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 Set indicator icon.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,8 +109,6 @@ Sets the height of a dot-style navigation indicator of the **Swiper** component.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -148,8 +138,6 @@ itemWidth(value: Length): DotIndicator
 Sets the width of a dot-style navigation indicator of the **Swiper** component.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,8 +169,6 @@ Sets whether to enable the mask for the dot-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -213,8 +199,6 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -225,7 +209,7 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [maxDisplayCount](#maxdisplaycount) | number | Yes |
+| [maxDisplayCount](arkts-arkui-dotindicator-c.md) | number | Yes |
 
 **Return value:**
 
@@ -242,8 +226,6 @@ selectedColor(value: ResourceColor): DotIndicator
 Sets the color of the selected dot-style navigation indicator.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -275,8 +257,6 @@ Sets the height of the selected dot-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -307,8 +287,6 @@ Sets the width of the selected dot-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -338,8 +316,6 @@ space(space: LengthMetrics): DotIndicator
 Sets the spacing between dot-style navigation indicators of the **Swiper** component.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

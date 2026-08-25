@@ -4,8 +4,6 @@ Enumerates the certificate encoding formats.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## FORMAT_DER
@@ -17,8 +15,6 @@ FORMAT_DER = 0
 Distinguished Encoding Rules (DER) format.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Privacy-Enhanced Mail (PEM) format.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -49,8 +43,6 @@ FORMAT_PKCS7 = 2
 PKCS #7 format.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

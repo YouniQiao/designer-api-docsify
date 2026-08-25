@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setAdminRunningMode
@@ -15,8 +15,6 @@ function setAdminRunningMode(admin: Want, mode: RunningMode): void
 Sets the running mode of the device administrator application.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -40,22 +38,3 @@ Sets the running mode of the device administrator application.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let admin: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  adminManager.setAdminRunningMode(admin, adminManager.RunningMode.MULTI_USER);
-  console.info(`Succeeded in setting admin running mode.`);
-} catch(err) {
-  console.error(`Failed to set admin running mode. Code: ${err.code}, message: ${err.message}`);
-}
-```

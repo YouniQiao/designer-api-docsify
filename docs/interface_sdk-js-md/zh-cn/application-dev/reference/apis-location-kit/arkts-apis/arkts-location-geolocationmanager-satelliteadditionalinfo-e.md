@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## SATELLITES_ADDITIONAL_INFO_NULL
@@ -17,8 +15,6 @@ SATELLITES_ADDITIONAL_INFO_NULL = 0
 默认值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -32,8 +28,6 @@ SATELLITES_ADDITIONAL_INFO_EPHEMERIS_DATA_EXIST = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## SATELLITES_ADDITIONAL_INFO_ALMANAC_DATA_EXIST
@@ -45,8 +39,6 @@ SATELLITES_ADDITIONAL_INFO_ALMANAC_DATA_EXIST = 2
 表示本卫星具有年历数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -60,8 +52,6 @@ SATELLITES_ADDITIONAL_INFO_USED_IN_FIX = 4
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## SATELLITES_ADDITIONAL_INFO_CARRIER_FREQUENCY_EXIST
@@ -73,7 +63,5 @@ SATELLITES_ADDITIONAL_INFO_CARRIER_FREQUENCY_EXIST = 8
 表示本卫星具有载波频率。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss

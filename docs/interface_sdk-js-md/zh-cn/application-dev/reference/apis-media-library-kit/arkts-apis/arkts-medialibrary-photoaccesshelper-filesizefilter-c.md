@@ -4,29 +4,25 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## extraFileSize
 
 ```TypeScript
-extraFileSize?: long
+extraFileSize?: number
 ```
 
 针对FilterOperator.BETWEEN情况下，配置文件大小的上限值。默认值为-1。单位为字节（Byte）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ extraFileSize?: long
 ## fileSize
 
 ```TypeScript
-fileSize: long
+fileSize: number
 ```
 
 指定进行过滤的文件大小。单位为字节（Byte）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -61,8 +55,6 @@ filterOperator: FilterOperator
 **类型：** [FilterOperator](arkts-medialibrary-photoaccesshelper-filteroperator-e.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

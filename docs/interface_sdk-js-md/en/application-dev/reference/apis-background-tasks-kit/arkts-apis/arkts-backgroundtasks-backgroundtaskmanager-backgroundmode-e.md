@@ -4,8 +4,6 @@ Defines the type of a continuous task.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## DATA_TRANSFER
@@ -18,8 +16,6 @@ Data transfer.Use scenario: upload and download in non-hosting mode, for example
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## AUDIO_PLAYBACK
@@ -31,8 +27,6 @@ AUDIO_PLAYBACK = 2
 Audio and video playback.Use scenario: audio/video playback in the background and audio/video casting.Note: Since API version 20, if an application requests or updates a continuous task of the **AUDIO_PLAYBACK** type without connecting to AVSession, a notification will appear in the notification panel once the task is successfully requested or updated.Once AVSession is connected, notifications will be sent by AVSession instead of the background task module.For API version 19 and earlier versions, the background task module does not display notifications in the notification panel.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,8 +42,6 @@ Audio recording.Use scenario: recording and screen capture in the background.<!-
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## LOCATION
@@ -61,8 +53,6 @@ LOCATION = 4
 Positioning and navigation.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -78,8 +68,6 @@ Bluetooth-related services.Use scenario: An application moves to the background 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## MULTI_DEVICE_CONNECTION
@@ -91,8 +79,6 @@ MULTI_DEVICE_CONNECTION = 6
 Multi-device connection.Use scenario: distributed service connection and casting.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,8 +94,6 @@ Audio and video calls.Use scenario: Chat applications (with audio and video serv
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## TASK_KEEPING
@@ -122,7 +106,5 @@ Computing tasks.Use scenario: antivirus software.
 **NOTE：**: Starting from API version 21, this capability is available for PCs/2-in-1 devices, and non-PCs/2-in-1 devices that have obtained the ACL permission [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system). In API version 20 and earlier versions, this task type is limited to PCs/2-in-1 devices only.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

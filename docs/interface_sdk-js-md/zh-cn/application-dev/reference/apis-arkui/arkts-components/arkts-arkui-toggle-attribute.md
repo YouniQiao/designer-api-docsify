@@ -6,8 +6,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ contentModifier(modifier: ContentModifier<ToggleConfiguration>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ contentModifier(modifier: ContentModifier<ToggleConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | 是 |
 
 ## onChange
 
@@ -48,8 +44,6 @@ onChange(callback: (isOn: boolean) => void)
 开关状态切换时触发该事件。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -73,8 +67,6 @@ selectedColor(value: ResourceColor)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -97,8 +89,6 @@ switchPointColor(color: ResourceColor)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -120,8 +110,6 @@ switchStyle(value: SwitchStyle)
 设置Switch类型的样式。仅当type为ToggleType.Switch生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

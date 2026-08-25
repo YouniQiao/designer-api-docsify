@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from '@kit.NetworkKit';
+import { mdns } from 'kits/@kit.NetworkKit';
 ```
 
 ## resolveLocalService
@@ -16,8 +16,6 @@ function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,
 Resolves an MDNS service. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,59 +40,6 @@ Resolves an MDNS service. This API uses an asynchronous callback to return the r
 | [2204006](../errorcode-net-mdns.md#2204006-service-resolution-timeout) |
 | [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) |
 
-**Examples**
-
-Stage model:
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the application context.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-let localServiceInfo: mdns.LocalServiceInfo = {
-  serviceType: "_print._tcp",
-  serviceName: "servicename",
-  port: 5555,
-  host: {
-  address: "10.14.**.***",
-  },
-  serviceAttribute: [{key: "111", value: [1]}]
-}
-
-mdns.resolveLocalService(context, localServiceInfo, (error: BusinessError, data: mdns.LocalServiceInfo) =>  {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-Stage model:
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the application context.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-let localServiceInfo: mdns.LocalServiceInfo = {
-  serviceType: "_print._tcp",
-  serviceName: "servicename",
-  port: 5555,
-  host: {
-  address: "10.14.**.***",
-  },
-  serviceAttribute: [{key: "111", value: [1]}]
-}
-
-mdns.resolveLocalService(context, localServiceInfo).then((data: mdns.LocalServiceInfo) => {
-  console.info(JSON.stringify(data));
-});
-```
-
 
 ## resolveLocalService
 
@@ -105,8 +50,6 @@ function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo): P
 Resolves an MDNS service. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -135,7 +78,3 @@ Resolves an MDNS service. This API uses a promise to return the result.
 | [2204003](../errorcode-net-mdns.md#2204003-repeated-registration) |
 | [2204006](../errorcode-net-mdns.md#2204006-service-resolution-timeout) |
 | [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) |
-
-**Examples**
-
-See [resolveLocalService](#resolvelocalservice)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpHeapData
@@ -12,11 +12,9 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function dumpHeapData(filename: string): void
 ```
 
-Exports the VM heap data and generates a filename.heapsnapshot file. The input parameter is a user-defined file name, excluding the file suffix. The generated file is in the files folder under the application directory. Such as "/data/accounts/account_0/appdata/[package name]/files/xxx.heapsnapshot".
+Dumps the VM heap data and generates the **filename.heapsnapshot** file.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -29,11 +27,3 @@ Exports the VM heap data and generates a filename.heapsnapshot file. The input p
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | filename | string | Yes |
-
-**Examples**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-
-hidebug.dumpHeapData("heap-20220216");
-```

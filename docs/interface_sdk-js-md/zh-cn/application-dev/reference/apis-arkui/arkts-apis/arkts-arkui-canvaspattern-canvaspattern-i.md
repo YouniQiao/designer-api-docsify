@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## setTransform
@@ -17,8 +15,6 @@ setTransform(transform?: Matrix2D): void
 使用Matrix2D对象作为参数，对当前CanvasPattern进行矩阵变换。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

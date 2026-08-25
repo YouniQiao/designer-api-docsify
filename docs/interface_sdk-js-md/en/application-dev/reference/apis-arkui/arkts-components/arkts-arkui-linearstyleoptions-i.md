@@ -6,8 +6,6 @@ Linear style options.Inherits from [ScanEffectOptions](arkts-arkui-scaneffectopt
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ Border radius of the linear progress indicator.Value range: [0, strokeWidth/2] D
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -45,11 +41,9 @@ strokeWidth?: Length
 
 Stroke width of the progress indicator. Percentage values are not supported.Default value: **4.0vp**
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

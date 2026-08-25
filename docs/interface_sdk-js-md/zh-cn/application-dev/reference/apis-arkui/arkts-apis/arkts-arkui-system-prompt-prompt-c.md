@@ -7,14 +7,12 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## showActionMenu
@@ -27,8 +25,6 @@ static showActionMenu(options: ShowActionMenuOptions): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -38,36 +34,6 @@ static showActionMenu(options: ShowActionMenuOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import prompt from '@system.prompt';
-class C{
-  showActionMenu() {
-    prompt.showActionMenu({
-      title: 'Title Info',
-      buttons: [
-        {
-          text: 'item1',
-          color: '#666666'
-        },
-        {
-          text: 'item2',
-          color: '#000000'
-        },
-      ],
-      success: (tapIndex)=> {
-        console.info('dialog success callback，click button : ' + tapIndex);
-      },
-      fail: (errMsg)=> {
-        console.info('dialog fail callback' + errMsg);
-      },
-    });
-  }
-}
-export default new C()
-```
 
 ## showDialog
 
@@ -79,8 +45,6 @@ static showDialog(options: ShowDialogOptions): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -90,33 +54,6 @@ static showDialog(options: ShowDialogOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import prompt from '@system.prompt';
-class B{
-  showDialog() {
-    prompt.showDialog({
-      title: 'Title Info',
-      message: 'Message Info',
-      buttons: [
-        {
-          text: 'button',
-          color: '#666666'
-        },
-      ],
-      success: (data)=> {
-        console.info('dialog success callback，click button : ' + data.index);
-      },
-      cancel: ()=> {
-        console.info('dialog cancel callback');
-      },
-    });
-  }
-}
-export default new B()
-```
 
 ## showToast
 
@@ -128,8 +65,6 @@ static showToast(options: ShowToastOptions): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -139,18 +74,3 @@ static showToast(options: ShowToastOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import prompt from '@system.prompt';
-class A{
-  showToast() {
-    prompt.showToast({
-      message: 'Message Info',
-      duration: 2000
-    });
-  }
-}
-export default new A()
-```

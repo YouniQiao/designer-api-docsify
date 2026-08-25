@@ -4,8 +4,6 @@ Represents a screen hopping message notification.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
@@ -23,8 +21,6 @@ COOPERATE_PREPARE = 0
 The preparation for screen hopping is finished.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -44,8 +40,6 @@ The preparation for screen hopping is cancelled.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [COOPERATE_UNPREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_unprepare)
@@ -63,8 +57,6 @@ COOPERATE_ACTIVATE = 2
 Screen hopping starts.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -84,8 +76,6 @@ Starting screen hopping succeeds.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate_success)
@@ -103,8 +93,6 @@ COOPERATE_ACTIVATE_FAIL = 4
 Starting screen hopping fails.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -124,8 +112,6 @@ Stopping screen hopping succeeds.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [COOPERATE_DEACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_deactivate_success)
@@ -144,8 +130,6 @@ Stopping screen hopping fails.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 11
 
 **Substitutes:** [COOPERATE_DEACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_deactivate_failure)
@@ -163,8 +147,6 @@ COOPERATE_SESSION_DISCONNECTED = 7
 The screen hopping session is disconnected.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 

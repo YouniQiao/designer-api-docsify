@@ -5,14 +5,12 @@ WebResourceHandler is a handler used to return the result of an intercepted requ
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## didFail
@@ -24,8 +22,6 @@ didFail(code: WebNetErrorList): void
 Notifies the ArkWeb kernel that the intercepted request will fail and ends the network request. Before calling this API, call [didReceiveResponse](#didreceiveresponse) to pass in the response header.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,82 +40,6 @@ Notifies the ArkWeb kernel that the intercepted request will fail and ends the n
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
-**Examples**
-
-For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-
-```TypeScript
-// xxx.ets
-import { webview, WebNetErrorList } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  schemeHandler: webview.WebSchemeHandler = new webview.WebSchemeHandler();
-
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-        .onControllerAttached(() => {
-          try {
-            this.schemeHandler.onRequestStart((request: webview.WebSchemeHandlerRequest, resourceHandler: webview.WebResourceHandler) => {
-              console.info("[schemeHandler] onRequestStart");
-              try {
-                console.info("[schemeHandler] onRequestStart url:" + request.getRequestUrl());
-                console.info("[schemeHandler] onRequestStart method:" + request.getRequestMethod());
-                console.info("[schemeHandler] onRequestStart referrer:" + request.getReferrer());
-                console.info("[schemeHandler] onRequestStart isMainFrame:" + request.isMainFrame());
-                console.info("[schemeHandler] onRequestStart hasGesture:" + request.hasGesture());
-                console.info("[schemeHandler] onRequestStart header size:" + request.getHeader().length);
-                console.info("[schemeHandler] onRequestStart resource type:" + request.getRequestResourceType());
-                console.info("[schemeHandler] onRequestStart frame url:" + request.getFrameUrl());
-                let header = request.getHeader();
-                for (let i = 0; i < header.length; i++) {
-                  console.info("[schemeHandler] onRequestStart header:" + header[i].headerKey + " " + header[i].headerValue);
-                }
-                let stream = request.getHttpBodyStream();
-                if (stream) {
-                  console.info("[schemeHandler] onRequestStart has http body stream");
-                } else {
-                  console.info("[schemeHandler] onRequestStart has no http body stream");
-                }
-              } catch (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-
-              if (request.getRequestUrl().endsWith("example.com")) {
-                return false;
-              }
-
-              try {
-                // Call didFail(WebNetErrorList.ERR_FAILED, true) to automatically construct a network request error ERR_CONNECTION_FAILED.
-                resourceHandler.didFail(WebNetErrorList.ERR_FAILED, true);
-              } catch (error) {
-                // When error.code is 17100101(The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList)
-                // and the code value of didFail(code: WebNetErrorList, completeIfNoResponse: boolean) is not null, the API is still called.
-                console.error(`[schemeHandler] ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-              return true;
-            })
-
-            this.schemeHandler.onRequestStop((request: webview.WebSchemeHandlerRequest) => {
-              console.info("[schemeHandler] onRequestStop");
-            });
-
-            this.controller.setWebSchemeHandler('https', this.schemeHandler);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-        .javaScriptAccess(true)
-        .domStorageAccess(true)
-    }
-  }
-}
-```
-
 ## didFail
 
 ```TypeScript
@@ -129,8 +49,6 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 Notifies the ArkWeb kernel that the intercepted request will fail. If **completeIfNoResponse** is set to **false**, call [didReceiveResponse](#didreceiveresponse) first to pass in the response header. If **completeIfNoResponse** is set to **true** and [didReceiveResponse](#didreceiveresponse) is not called beforehand, a response header is automatically generated with the network error code -104. For details, see [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -148,10 +66,6 @@ Notifies the ArkWeb kernel that the intercepted request will fail. If **complete
 | [17100101](../errorcode-webview.md#17100101-incorrect-network-error-code) |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
-**Examples**
-
-See [didFail](#didfail)
-
 ## didFail
 
 ```TypeScript
@@ -161,8 +75,6 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 Notify that this request should be failed.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -180,10 +92,6 @@ Notify that this request should be failed.
 | --- |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
-**Examples**
-
-See [didFail](#didfail)
-
 ## didFinish
 
 ```TypeScript
@@ -193,8 +101,6 @@ didFinish(): void
 Notifies the **Web** component that the intercepted request is complete and no more data is available. Before calling this API, call [didReceiveResponse](#didreceiveresponse) to pass in the response header.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -206,10 +112,6 @@ Notifies the **Web** component that the intercepted request is complete and no m
 | --- |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
-**Examples**
-
-For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-
 ## didReceiveResponse
 
 ```TypeScript
@@ -219,8 +121,6 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 Passes the constructed response header to the intercepted request. This API must be called before **didFinish** or **didFail**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -239,10 +139,6 @@ Passes the constructed response header to the intercepted request. This API must
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
-**Examples**
-
-For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).
-
 ## didReceiveResponseBody
 
 ```TypeScript
@@ -252,8 +148,6 @@ didReceiveResponseBody(data: ArrayBuffer): void
 Passes the constructed response body to the intercepted request. This API must be called before **didFinish** or **didFail**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -271,7 +165,3 @@ Passes the constructed response body to the intercepted request. This API must b
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
-
-**Examples**
-
-For details about the example, see [OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart).

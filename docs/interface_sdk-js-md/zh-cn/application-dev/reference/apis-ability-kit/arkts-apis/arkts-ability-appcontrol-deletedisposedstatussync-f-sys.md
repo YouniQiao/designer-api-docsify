@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## deleteDisposedStatusSync
 
 ```TypeScript
-function deleteDisposedStatusSync(appId: string, appIndex?: int): void
+function deleteDisposedStatusSync(appId: string, appIndex?: number): void
 ```
 
 以同步方法删除指定应用或分身应用的处置状态。成功返回null，失败抛出对应异常。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -29,7 +27,7 @@ function deleteDisposedStatusSync(appId: string, appIndex?: int): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| appIndex | number | 否 |
 
 **错误码：**
 
@@ -41,19 +39,3 @@ function deleteDisposedStatusSync(appId: string, appIndex?: int): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-
-**示例**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId: string = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.deleteDisposedStatusSync(appId, 1);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatusSync failed ' + message);
-}
-```

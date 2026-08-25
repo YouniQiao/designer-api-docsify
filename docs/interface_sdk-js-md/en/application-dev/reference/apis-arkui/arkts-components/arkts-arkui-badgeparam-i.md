@@ -4,8 +4,6 @@ Provides basic parameters for creating a badge.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,8 +26,6 @@ Position to display the badge relative to the parent component.Default value: **
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -47,8 +43,6 @@ Style of the badge, including the font color, font size, badge color, and badge 
 **Type:** [BadgeStyle](arkts-arkui-badgestyle-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

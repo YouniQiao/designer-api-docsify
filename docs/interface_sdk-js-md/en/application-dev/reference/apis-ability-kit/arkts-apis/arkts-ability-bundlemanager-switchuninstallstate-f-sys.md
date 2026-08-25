@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## switchUninstallState
@@ -15,8 +15,6 @@ function switchUninstallState(bundleName: string, state: boolean): void
 Switches the uninstall state of an application. This API is independent of EDM application interception control.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CHANGE_BUNDLE_UNINSTALL_STATE
 
@@ -40,18 +38,3 @@ Switches the uninstall state of an application. This API is independent of EDM a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  bundleManager.switchUninstallState('com.example.myapplication', false);
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'switchUninstallState failed: %{public}s', message);
-}
-```

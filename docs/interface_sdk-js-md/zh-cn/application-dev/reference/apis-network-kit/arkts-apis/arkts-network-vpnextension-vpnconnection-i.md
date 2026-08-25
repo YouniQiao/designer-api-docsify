@@ -4,14 +4,12 @@ VPN连接对象。在调用VpnConnection的方法前，需要先通过vpnExt.cre
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## addRoute
@@ -23,8 +21,6 @@ addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 为VPN网络添加路由
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,7 +50,7 @@ addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 ## create
 
 ```TypeScript
-create(config: VpnConfig): Promise<int>
+create(config: VpnConfig): Promise<number>
 ```
 
 使用config创建一个VPN网络。使用Promise异步回调。
@@ -64,8 +60,6 @@ create(config: VpnConfig): Promise<int>
 > [destroy(vpnId: string)](#destroy)接口销毁启动的VPN网络，并执行资源清理等操作。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -92,85 +86,6 @@ create(config: VpnConfig): Promise<int>
 | [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) |
 
-**示例**
-
-```TypeScript
-import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
-import { common, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let context: vpnExtension.VpnExtensionContext;
-export default class MyVpnExtAbility extends VpnExtensionAbility {
-  private tunIp: string = '10.0.0.5';
-  private blockedAppName: string = 'com.example.myvpndemo';
-  onCreate(want: Want) {
-    let vpnConnection : vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
-    console.info("vpn createVpnConnection: " + JSON.stringify(vpnConnection));
-    this.SetupVpn();
-    
-    // 不需要VPN网络时，调用destroy()接口销毁启动的VPN网络，并执行资源清理等操作。
-    vpnConnection.destroy().then(() => {
-      console.info("destroy success.");
-    }).catch((error : BusinessError) => {
-      console.error(`destroy fail. Code:${error.code}, message:${error.message}`);
-    });
-  }
-  SetupVpn() {
-        class Address {
-            address: string;
-            family: number;
-
-            constructor(address: string, family: number) {
-                this.address = address;
-                this.family = family;
-            }
-        }
-
-        class AddressWithPrefix {
-            address: Address;
-            prefixLength: number;
-
-            constructor(address: Address, prefixLength: number) {
-                this.address = address;
-                this.prefixLength = prefixLength;
-            }
-        }
-
-        class Config {
-            addresses: AddressWithPrefix[];
-            mtu: number;
-            dnsAddresses: string[];
-            trustedApplications: string[];
-            blockedApplications: string[];
-
-            constructor(
-                tunIp: string,
-                blockedAppName: string
-            ) {
-                this.addresses = [
-                    new AddressWithPrefix(new Address(tunIp, 1), 24)
-                ];
-                this.mtu = 1400;
-                this.dnsAddresses = ["114.114.114.114"];
-                this.trustedApplications = [];
-                this.blockedApplications = [blockedAppName];
-            }
-        }
-
-        let config = new Config(this.tunIp, this.blockedAppName);
-
-        try {
-            let vpnConnection : vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
-            vpnConnection.create(config).then((data) => {
-                hilog.error(0x0000, 'developTag', 'tunfd: %{public}s', JSON.stringify(data) ?? '');
-            })
-        } catch (error) {
-            hilog.error(0x0000, 'developTag', 'VPN setUp fail: %{public}s', JSON.stringify(error) ?? '');
-        }
-    }
-}
-```
-
 ## delRoute
 
 ```TypeScript
@@ -180,8 +95,6 @@ delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 删除VPN网络的路由
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -218,8 +131,6 @@ destroy(): Promise<void>
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **返回值：**
@@ -236,46 +147,6 @@ destroy(): Promise<void>
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context: vpnExtension.VpnExtensionContext;
-export default class MyVpnExtAbility extends VpnExtensionAbility {
-  onCreate(want: Want) {
-    let vpnConnection : vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
-    console.info("VPN createVpnConnection: " + JSON.stringify(vpnConnection));
-    vpnConnection.destroy().then(() => {
-      console.info("destroy success.");
-    }).catch((error : BusinessError) => {
-      console.error("destroy fail" + JSON.stringify(error));
-    });
-  }
-}
-```
-
-```TypeScript
-import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
-import { BusinessError } from "@kit.BasicServicesKit";
-
-export default class MyVpnExtAbility extends VpnExtensionAbility {
-  onCreate() {
-    let vpnConnection = vpnExtension.createVpnConnection(this.context);
-
-    // 可通过generateVpnId()获取vpnId
-    let vpnId = 'testVpnId';
-    vpnConnection.destroy(vpnId).then(() => {
-      console.info("destroy success");
-    }).catch((error: BusinessError) => {
-      console.error(`destroy fail, Code is ${error.code}, message is ${error.message}`);
-    });
-  }
-}
-```
-
 ## destroy
 
 ```TypeScript
@@ -285,8 +156,6 @@ destroy(vpnId: string): Promise<void>
 根据vpnId销毁指定的VPN网络。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -309,10 +178,6 @@ destroy(vpnId: string): Promise<void>
 | [19900001](../errorcode-net-vpn.md#19900001-无效参数) |
 | [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) |
 
-**示例**
-
-参见 [destroy](#destroy)
-
 ## generateVpnId
 
 ```TypeScript
@@ -325,8 +190,6 @@ generateVpnId(): Promise<string>
 > 当前系统多VPN能力仅支持IPv4。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -343,37 +206,15 @@ generateVpnId(): Promise<string>
 | [19900001](../errorcode-net-vpn.md#19900001-无效参数) |
 | [19900002](../errorcode-net-vpn.md#19900002-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
-import { BusinessError } from "@kit.BasicServicesKit";
-
-export default class MyVpnExtAbility extends VpnExtensionAbility {
-  onCreate() {
-    let vpnConnection = vpnExtension.createVpnConnection(this.context);
-    vpnConnection.generateVpnId().then((data) => {
-      if (data) {
-        console.info("generateVpnId success, vpnId = " + JSON.stringify(data));
-      }
-    }).catch((error: BusinessError) => {
-      console.error(`generateVpnId fail, Code is ${error.code}, message is ${error.message}`);
-    });
-  }
-}
-```
-
 ## protect
 
 ```TypeScript
-protect(socketFd: int): Promise<void>
+protect(socketFd: number): Promise<void>
 ```
 
 保护套接字不受VPN连接影响，通过该套接字发送的数据将直接基于物理网络收发，因此其流量不会通过VPN转发。使用Promise方式作为异步方法。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -399,38 +240,6 @@ protect(socketFd: int): Promise<void>
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 | [2203004](../errorcode-net-vpn.md#2203004-无效描述符) |
 
-**示例**
-
-```TypeScript
-import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
-import { common, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let g_tunnelFd = -1;
-let context: vpnExtension.VpnExtensionContext;
-export default class MyVpnExtAbility extends VpnExtensionAbility {
-  private vpnServerIp: string = '192.168.31.13';
-  onCreate(want: Want) {
-    let vpnConnection : vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
-    console.info("VPN createVpnConnection: " + JSON.stringify(vpnConnection));
-    this.CreateTunnel();
-    this.Protect();
-  }
-  CreateTunnel() {
-      g_tunnelFd = 8888;
-  }
-  Protect() {
-        hilog.info(0x0000, 'developTag', '%{public}s', 'VPN Protect');
-        let vpnConnection : vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
-        vpnConnection.protect(g_tunnelFd).then(() => {
-            hilog.info(0x0000, 'developTag', '%{public}s', 'VPN Protect Success');
-        }).catch((err : Error) => {
-            hilog.error(0x0000, 'developTag', 'VPN Protect Failed %{public}s', JSON.stringify(err) ?? '');
-        })
-  }
-}
-```
-
 ## protectProcessNet
 
 ```TypeScript
@@ -441,8 +250,6 @@ protectProcessNet(): Promise<void>
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **返回值：**
@@ -450,32 +257,3 @@ protectProcessNet(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-import { vpnExtension, VpnExtensionAbility } from '@kit.NetworkKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let g_tunnelFd = -1;
-export default class MyVpnExtAbility  extends VpnExtensionAbility {
-  onCreate() {
-    let vpnConnection = vpnExtension.createVpnConnection(this.context);
-    console.info("VPN createVpnConnection: " + JSON.stringify(vpnConnection));
-    this.ProtectNetByProcess();
-  }
-  CreateTunnel() {
-    g_tunnelFd = 8888;
-  }
-  ProtectNetByProcess() {
-    hilog.info(0x0000, 'developTag', '%{public}s', 'vpn ProtectNetByProcess');
-    let vpnConnection = vpnExtension.createVpnConnection(this.context);
-    vpnConnection.protectProcessNet().then(() => {
-      hilog.info(0x0000, 'developTag', '%{public}s', 'vpn ProtectNetByProcess Success');
-      this.CreateTunnel();
-    }).catch((err: Error) => {
-      hilog.error(0x0000, 'developTag', 'vpn ProtectNetByProcess Failed %{public}s', JSON.stringify(err) ?? '');
-    })
-  }
-}
-```

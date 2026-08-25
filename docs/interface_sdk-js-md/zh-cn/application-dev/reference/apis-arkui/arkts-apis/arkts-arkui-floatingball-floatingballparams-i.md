@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
+import { floatingBall } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -25,8 +23,6 @@ backgroundColor?: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -42,8 +38,6 @@ content?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## contentColor
@@ -56,11 +50,12 @@ contentColor?: string
 
 **类型：** string
 
-**默认值：** Set different default values according to the 'backgroundColor'. - If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#99FFFFFF', otherwise is '#99000000'- If 'backgroundColor' is not provided, default value is $r('sys.color.font_secondary')
+**默认值：** Set different default values according to the 'backgroundColor'.
+- If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#99FFFFFF',
+otherwise is '#99000000'
+- If 'backgroundColor' is not provided, default value is $r('sys.color.font_secondary')
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,8 +73,6 @@ icon?: image.PixelMap
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## template
@@ -93,8 +86,6 @@ template: FloatingBallTemplate
 **类型：** [FloatingBallTemplate](arkts-arkui-floatingball-floatingballtemplate-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -112,8 +103,6 @@ textUpdateAnimationType?: FloatingBallTextUpdateAnimationType
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -130,8 +119,6 @@ title: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## titleColor
@@ -144,11 +131,12 @@ titleColor?: string
 
 **类型：** string
 
-**默认值：** Set different default values according to the 'backgroundColor'. - If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#E5FFFFFF', otherwise is '#E5000000'. - If 'backgroundColor' is not provided, default value is $r('sys.color.font_primary').
+**默认值：** Set different default values according to the 'backgroundColor'.
+- If 'backgroundColor' is provided, when 'backgroundColor' is light color, default value is '#E5FFFFFF',
+otherwise is '#E5000000'.
+- If 'backgroundColor' is not provided, default value is $r('sys.color.font_primary').
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

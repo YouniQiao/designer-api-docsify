@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedRunningBundles
@@ -15,8 +15,6 @@ function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<
 Obtains applications that are not allowed to run by the current user. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -47,64 +45,6 @@ Obtains applications that are not allowed to run by the current user. This API u
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-});
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-});
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getDisallowedRunningBundles
 
@@ -115,8 +55,6 @@ function getDisallowedRunningBundles(admin: Want, userId: number, callback: Asyn
 Obtains an application from the applications that are not allowed to run by the current user (specified by **userId**). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -148,10 +86,6 @@ Obtains an application from the applications that are not allowed to run by the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [getDisallowedRunningBundles](#getdisallowedrunningbundles)
-
 
 ## getDisallowedRunningBundles
 
@@ -162,8 +96,6 @@ function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Arra
 Obtains applications that are not allowed to run under the current user or a specified user. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -199,7 +131,3 @@ Obtains applications that are not allowed to run under the current user or a spe
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getDisallowedRunningBundles](#getdisallowedrunningbundles)

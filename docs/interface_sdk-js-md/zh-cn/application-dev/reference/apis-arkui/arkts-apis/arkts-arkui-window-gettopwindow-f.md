@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## getTopWindow
@@ -20,8 +20,6 @@ function getTopWindow(callback: AsyncCallback<Window>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [getLastWindow](arkts-arkui-window-getlastwindow-f.md)(ctx: BaseContext, callback: AsyncCallback&lt;Window&gt;)
@@ -35,82 +33,6 @@ function getTopWindow(callback: AsyncCallback<Window>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-window.getTopWindow((err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  windowClass = data;
-  console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.getTopWindow();
-promise.then((data)=> {
-    windowClass = data;
-    console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError)=>{
-    console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage:window.WindowStage){
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    try {
-      window.getTopWindow(this.context, (err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if(errCode){
-          console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
-          return ;
-        }
-        windowClass = data;
-        console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-      });
-    } catch(error){
-      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage:window.WindowStage) {
-    console.info('onWindowStageCreate');
-    let windowClass: window.Window | undefined = undefined;
-    let promise = window.getTopWindow(this.context);
-    promise.then((data) => {
-      windowClass = data;
-      console.info('Succeeded in obtaining the top window. Data: ' + JSON.stringify(data));
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to obtain the top window. Cause code: ${error.code}, message: ${error.message}`);
-    });
-  }
-}
-```
 
 
 ## getTopWindow
@@ -126,8 +48,6 @@ function getTopWindow(): Promise<Window>
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [getLastWindow](arkts-arkui-window-getlastwindow-f.md)(ctx: BaseContext)
@@ -142,10 +62,6 @@ function getTopWindow(): Promise<Window>
 | --- |
 | Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
 
-**示例**
-
-参见 [getTopWindow](#gettopwindow)
-
 
 ## getTopWindow
 
@@ -159,8 +75,6 @@ function getTopWindow(ctx: BaseContext): Promise<Window>
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -179,10 +93,6 @@ function getTopWindow(ctx: BaseContext): Promise<Window>
 | 类型 |
 | --- |
 | Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
-
-**示例**
-
-参见 [getTopWindow](#gettopwindow)
 
 
 ## getTopWindow
@@ -199,8 +109,6 @@ function getTopWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getLastWindow](arkts-arkui-window-getlastwindow-f.md)(ctx: BaseContext, callback: AsyncCallback&lt;Window&gt;)
@@ -213,7 +121,3 @@ function getTopWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 | --- | --- | --- |
 | [ctx](arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 |
-
-**示例**
-
-参见 [getTopWindow](#gettopwindow)

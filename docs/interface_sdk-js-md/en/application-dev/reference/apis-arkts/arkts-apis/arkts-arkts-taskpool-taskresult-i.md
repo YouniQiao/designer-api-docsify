@@ -4,14 +4,12 @@ Describes the supplementary information captured in **BusinessError** in the cat
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## error
@@ -25,8 +23,6 @@ Error message. By default, the value is the same as the **message** field of **B
 **Type:** Error \| Object
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -43,8 +39,6 @@ Task execution result. The default value is **undefined**. You are advised not t
 **Type:** Object
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDisposedStatusSync
@@ -15,8 +15,6 @@ function getDisposedStatusSync(appId: string): Want
 Obtains the disposed status of an application. This API returns the result synchronously. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
@@ -45,21 +43,3 @@ Obtains the disposed status of an application. This API returns the result synch
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
-
-**Examples**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let appId: string = "com.example.myapplication_xxxxx";
-let want: Want;
-
-try {
-  want = appControl.getDisposedStatusSync(appId);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('getDisposedStatusSync failed ' + message);
-}
-```

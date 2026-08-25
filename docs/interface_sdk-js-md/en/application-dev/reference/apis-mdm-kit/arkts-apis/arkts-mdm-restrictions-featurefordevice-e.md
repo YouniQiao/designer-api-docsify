@@ -4,8 +4,6 @@ Enumerates device features.
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## WIFI_P2P
@@ -17,8 +15,6 @@ WIFI_P2P = 0
 Wi-Fi P2P (peer-to-peer connection), which allows devices to directly connect to each other without an access point. Once this feature is disallowed, devices cannot be connected through Wi-Fi P2P, affecting application functions that require direct Wi-Fi connections, such as file transfer, online gaming, and screen sharing.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ X key.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -49,8 +43,6 @@ LOCAL_INPUT = 2
 After local input (including the keyboard, mouse, touchpad, and touchscreen) is disabled, operations cannot be performed through local input. You can restart the device to cancel the disabling. If local input is disabled when the screen is off, the screen cannot be woken up. If the screen automatically turns off after this feature is disabled, the screen also cannot be woken up.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +58,6 @@ Network packet filtering.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -81,8 +71,6 @@ SUDO = 4
 Super user do.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +86,6 @@ Policy for controlling network traffic redirection. After this capability is dis
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -113,8 +99,6 @@ CORE_DUMP = 6
 Create a file dump. After this capability is disabled, file dumps cannot be created through the task manager. Currently, this capability is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,8 +114,6 @@ RS-232 serial port control policy. If this capability is disabled, data cannot b
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -145,8 +127,6 @@ DISK_ERASURE = 8
 Disk erasure capability. Once disabled, the "Disk Erasure" entry will be grayed out. Currently, this capability is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,8 +142,6 @@ Device Bluetooth capability. If a Bluetooth device blocklist or trustlist is con
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -177,8 +155,6 @@ MODIFY_DATE_TIME = 10
 Device capability to modify system time.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,8 +170,6 @@ Device printing capability. When the device printing capability has been disable
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -209,8 +183,6 @@ HDC = 12
 Capability for other devices to connect to and debug this device via HDC. Disabling this capability prevents external devices from connecting or debugging via HDC.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,8 +198,6 @@ Device microphone capability.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -241,8 +211,6 @@ FINGERPRINT = 14
 Device fingerprint authentication capability. Enable device fingerprint authentication will trigger a policy conflict if fingerprint authentication has already been disabled for a user via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,8 +234,6 @@ Device USB capability. Disabling this capability prohibits the use of external U
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -281,8 +247,6 @@ WIFI = 16
 Device Wi-Fi capability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -298,8 +262,6 @@ Network tethering capability (the ability to share the device's internet connect
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -313,8 +275,6 @@ INACTIVE_USER_FREEZE = 18
 Capability of freezing inactive users. When this capability is disabled, non-**UIAbility** processes will generally not be frozen, and background tasks requested by **UIAbility** (such as transient tasks, continuous tasks, deferred tasks, or energy efficiency resources) will also not be frozen. Currently, this capability is supported only on PCs/2-in-1 devices. When the system switches to the enterprise space user, the personal space users are inactive users.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -330,8 +290,6 @@ Device camera capability.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -345,8 +303,6 @@ MTP_CLIENT = 20
 Media Transfer Protocol (MTP) client capability (including read and write capabilities), currently supported only on PC/2-in-1 devices. MTP allows users to linearly access media files on mobile devices. A policy conflict occurs when you disable the MTP client capability after MTP client write has been disabled for specific users via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -362,8 +318,6 @@ MTP server capability, currently supported only on phone and tablets.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -378,8 +332,6 @@ Samba client capability, currently supported only on PC/2-in-1 devices.Samba is 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -393,8 +345,6 @@ SAMBA_SERVER = 23
 Samba server capability, currently supported only on PC/2-in-1 devices.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,8 +363,6 @@ Backup and restore capability. If this feature is disabled, the **Settings**
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -428,8 +376,6 @@ MAINTENANCE_MODE = 25
 Device maintenance mode capability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -445,8 +391,6 @@ Multimedia Messaging Service (MMS) capability to receive and send multimedia mes
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -460,8 +404,6 @@ SMS = 27
 Short Messaging Service (SMS) capability to receive and send SMS messages. Currently, this feature is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -477,8 +419,6 @@ Cellular data capability, which is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -492,8 +432,6 @@ AIRPLANE_MODE = 29
 Airplane mode capability, which is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -509,8 +447,6 @@ Virtual Private Network (VPN) capability.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -524,8 +460,6 @@ NOTIFICATION = 31
 Device notification capability. After this capability is disabled, notifications sent by system applications and third-party applications will not be displayed. However, notification capabilities for system services are not affected. If you disable the device-level notification capability after an allowed notification bundle has already been set via [addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md), error code 9200010 will be reported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -541,8 +475,6 @@ Near Field Communication (NFC) capability, which is supported only on phones and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -556,8 +488,6 @@ PRIVATE_SPACE = 33
 Privacy space creation capability, which is supported only on smartphones and tablets. This setting does not affect existing private spaces.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -573,8 +503,6 @@ Call capability. Disabling this feature blocks incoming or outgoing calls. Curre
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -588,8 +516,6 @@ APP_CLONE = 35
 [Application clone capability](../../../quick-start/app-clone.md). When this feature is disabled, new application clones cannot be created. This feature is invalid for the application clone that has been created.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -605,8 +531,6 @@ External storage capability. Disabling this feature prohibits the use of externa
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -620,8 +544,6 @@ RANDOM_MAC = 37
 Random MAC address capability for Wi-Fi connections. When this feature is disabled, only the device's physical MAC address can be used for Wi-Fi connections.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -637,8 +559,6 @@ Device audio playback capability. When this feature is disabled, media playback 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -653,8 +573,6 @@ Capability of the device to debug other devices through HDC. Currently, this fea
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -668,8 +586,6 @@ VIRTUAL_SERVICE = 40
 Device virtualization service capability, which refers to the system capability of running other operating system platforms (such as Linux and Windows) through virtualization technology by leveraging the redundancy of the device's hardware resources. If this capability is disabled, it is advised to uninstall all applications related to the virtualization service and prohibit their reinstallation.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -688,8 +604,6 @@ Device USB-to-serial port capability. After the capability is disabled, external
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -703,8 +617,6 @@ SCREEN_SHOT = 42
 Screenshot capability. After this capability is disabled, screenshots cannot be taken.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -720,8 +632,6 @@ Screen recording capability. After this capability is disabled, screen recording
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -735,8 +645,6 @@ DISK_RECOVERY_KEY = 44
 [Key export](../../../security/UniversalKeystoreKit/huks-export-key-arkts.md) recovery capability. Currently, it is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -752,8 +660,6 @@ NearLink capability.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -767,8 +673,6 @@ DEVELOPER_MODE = 46
 Developer mode. Disabling this feature takes effect after the device is restarted.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -784,8 +688,6 @@ Factory reset capability.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -799,8 +701,6 @@ REMOTE_DESK = 48
 Remote desktop capability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -816,8 +716,6 @@ Remote diagnosis capability.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -831,8 +729,6 @@ OTA_UPDATE = 50
 Public network system upgrade capability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

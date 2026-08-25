@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
+import { particleAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## cancelBackgroundRunning
@@ -15,8 +15,6 @@ function cancelBackgroundRunning(callback: AsyncCallback<void>): void
 Requests to cancel a continuous task from the system. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -32,34 +30,6 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(error: BusinessError, data: void) {
-  if (error && error.code !== 0) {
-    console.error(`Operation failed error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`Operation succeeded, data: ${data}`);
-  }
-}
-
-particleAbility.cancelBackgroundRunning(callback);
-```
-
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-particleAbility.cancelBackgroundRunning().then(() => {
-  console.info('Operation succeeded');
-}).catch((err: BusinessError) => {
-  console.error(`Operation failed cause: ${JSON.stringify(err)}`);
-});
-```
-
 
 ## cancelBackgroundRunning
 
@@ -70,8 +40,6 @@ function cancelBackgroundRunning(): Promise<void>
 Requests to cancel a continuous task from the system. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -86,7 +54,3 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [cancelBackgroundRunning](#cancelbackgroundrunning)

@@ -12,8 +12,6 @@ Defines the dynamic layout container component, which supports dynamically switc
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -31,8 +29,6 @@ export declare const DynamicLayoutInstance: DynamicLayoutAttribute
 Defines DynamicLayout Component instance.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

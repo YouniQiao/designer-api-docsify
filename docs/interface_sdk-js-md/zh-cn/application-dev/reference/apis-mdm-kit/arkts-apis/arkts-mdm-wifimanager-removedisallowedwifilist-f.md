@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedWifiList
@@ -15,8 +15,6 @@ function removeDisallowedWifiList(admin: Want, list: Array<WifiAccessInfo>): voi
 移除Wi-Fi禁用名单。若移除禁用名单中的部分Wi-Fi，则当前设备不允许连接禁用名单内剩余的Wi-Fi。若移除禁用名单中的所有Wi-Fi，则当前设备可以连接任意的Wi-Fi。适用于企业Wi-Fi策略调整场景，例如解除对特定Wi- Fi的禁用限制、允许员工连接新批准的办公网络、或完全移除禁用策略。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -38,27 +36,3 @@ function removeDisallowedWifiList(admin: Want, list: Array<WifiAccessInfo>): voi
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.edmtest',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let wifiIds: Array<wifiManager.WifiAccessInfo> = [{
-    // 需根据实际情况进行替换
-    ssid: "wifi_name",
-    bssid: "68:77:24:77:A6:D8"
-  }];
-  wifiManager.removeDisallowedWifiList(wantTemp, wifiIds);
-  console.info(`Succeeded in removing disallowed Wi-Fi list.`);
-} catch (err) {
-  console.error(`Failed to remove disallowed Wi-Fi list. Code: ${err.code}, message: ${err.message}`);
-}
-```

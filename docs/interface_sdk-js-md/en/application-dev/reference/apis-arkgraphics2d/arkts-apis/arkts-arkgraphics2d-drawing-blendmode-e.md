@@ -4,8 +4,6 @@ Enumerates the blend modes. A blend mode combines two colors (source color and d
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## CLEAR
@@ -17,8 +15,6 @@ CLEAR = 0
 r = 0, sets the destination pixels to fully transparent.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ r = s (all channels of the result equal those of the source), replaces the desti
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DST
@@ -45,8 +39,6 @@ DST = 2
 r = d (all channels of the result equal those of the destination), keeps the destination pixels unchanged.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -60,8 +52,6 @@ r = s + (1 - sa) * d, draws the source pixels over the destination pixels, consi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DST_OVER
@@ -73,8 +63,6 @@ DST_OVER = 4
 r = d + (1 - da) * s, draws the destination pixels over the source pixels, considering the destination's transparency.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -88,8 +76,6 @@ r = s * da, retains only the intersection of the source pixels with the opaque p
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DST_IN
@@ -101,8 +87,6 @@ DST_IN = 6
 r = d * sa, retains only the intersection of the destination pixels with the opaque parts of the source.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -116,8 +100,6 @@ r = s * (1 - da), retains the parts of the source pixels that do not overlap wit
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DST_OUT
@@ -129,8 +111,6 @@ DST_OUT = 8
 r = d * (1 - sa), retains the parts of the destination pixels that do not overlap with the source.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -144,8 +124,6 @@ r = s * da + d * (1 - sa), covers the destination pixels with the source pixels,
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DST_ATOP
@@ -157,8 +135,6 @@ DST_ATOP = 10
 r = d * sa + s * (1 - da), covers the source pixels with the destination pixels, showing the destination only in the opaque parts of the source.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -172,8 +148,6 @@ r = s * (1 - da) + d * (1 - sa), shows only the non-overlapping parts of the sou
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## PLUS
@@ -185,8 +159,6 @@ PLUS = 12
 r = min(s + d, 1), adds the color values of the source and destination pixels.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -200,8 +172,6 @@ r = s * d, multiplies the color values of the source and destination pixels.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## SCREEN
@@ -213,8 +183,6 @@ SCREEN = 14
 r = s + d - s * d, inverts the color values of the source and destination pixels, multiplies them, and then inverts the result, typically producing a brighter outcome.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -228,8 +196,6 @@ Selectively applies **MULTIPLY** or **SCREEN** based on the brightness of the de
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DARKEN
@@ -241,8 +207,6 @@ DARKEN = 16
 rc = s + d - max(s * da, d * sa), ra = s + (1 - sa) * d, takes the darker color values between the source and destination pixels.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -256,8 +220,6 @@ rc = s + d - min(s * da, d * sa), ra = s + (1 - sa) * d, takes the lighter color
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## COLOR_DODGE
@@ -269,8 +231,6 @@ COLOR_DODGE = 18
 Brightens the destination pixels by reducing contrast to reflect the source pixels.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -284,8 +244,6 @@ Darkens the destination pixels by increasing contrast to reflect the source pixe
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## HARD_LIGHT
@@ -297,8 +255,6 @@ HARD_LIGHT = 20
 Selectively applies **MULTIPLY** or **SCREEN** based on the brightness of the source pixels.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -312,8 +268,6 @@ Softly brightens or darkens the destination pixels based on the brightness of th
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## DIFFERENCE
@@ -325,8 +279,6 @@ DIFFERENCE = 22
 rc = s + d - 2 * (min(s * da, d * sa)), ra = s + (1 - sa) * d, calculates the difference between the color values of the source and destination pixels.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -340,8 +292,6 @@ rc = s + d - two(s * d), ra = s + (1 - sa) * d, similar to **DIFFERENCE** but wi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## MULTIPLY
@@ -353,8 +303,6 @@ MULTIPLY = 24
 r = s * (1 - da) + d * (1 - sa) + s * d, multiplies the color values of the source and destination pixels, typically resulting in a darker outcome.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -368,8 +316,6 @@ Uses the hue of the source pixels and the saturation and brightness of the desti
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## SATURATION
@@ -381,8 +327,6 @@ SATURATION = 26
 Uses the saturation of the source pixels and the hue and brightness of the destination pixels.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -396,8 +340,6 @@ Uses the hue and saturation of the source pixels and the brightness of the desti
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## LUMINOSITY
@@ -409,7 +351,5 @@ LUMINOSITY = 28
 Uses the brightness of the source pixels and the hue and saturation of the destination pixels.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

@@ -4,8 +4,6 @@ Connect type for device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Connect type for local device.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ CONNECT_TYPE_DISTRIBUTED = 2
 Connect type for distributed device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

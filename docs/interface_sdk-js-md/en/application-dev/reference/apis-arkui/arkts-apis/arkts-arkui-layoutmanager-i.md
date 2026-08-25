@@ -8,8 +8,6 @@ Implements a layout manager object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,8 +24,6 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 Obtains the position of the character nearest to the specified coordinate.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,8 +55,6 @@ Obtains the position of the character nearest to the specified coordinate based 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -91,8 +85,6 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -120,8 +112,6 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 Obtains the character range and the actual glyph range based on the specified glyph range and encoding type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,8 +142,6 @@ Obtains the position of a glyph close to a given coordinate.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -183,8 +171,6 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -212,8 +198,6 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 Obtains the glyph range and the actual character range based on the specified character range and encoding type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,8 +228,6 @@ Obtains the total number of lines in the component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -267,8 +249,6 @@ getLineMetrics(lineNumber: number): LineMetrics
 Obtains the information about the specified line, including line metrics, text style information, and font properties.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -297,8 +277,6 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 Obtains the drawing area information of the characters or placeholders within any range of the text, based on the specified rectangle width and height styles.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

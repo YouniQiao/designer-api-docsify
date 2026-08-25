@@ -8,14 +8,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## 汇总

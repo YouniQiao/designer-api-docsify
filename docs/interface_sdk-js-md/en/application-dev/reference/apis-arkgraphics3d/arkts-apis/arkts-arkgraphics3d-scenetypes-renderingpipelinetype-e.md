@@ -1,10 +1,8 @@
 # RenderingPipelineType
 
-Enumerates the rendering pipeline types.@enum { int }
+Enumerates the rendering pipeline types.@enum { number }
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ Lightweight forward rendering pipeline that directly renders to the back buffer.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## FORWARD
@@ -31,7 +27,5 @@ FORWARD = 1
 High-quality forward rendering pipeline designed for complex visual effects (for example, bloom).
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

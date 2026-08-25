@@ -4,8 +4,6 @@ Defines the network for which the quota policy is set.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the network for which the quota policy is set.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## identity
@@ -27,8 +25,6 @@ ID of the SIM card on the metered cellular network.It is used for Ethernet and W
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -46,8 +42,6 @@ Network type.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Identifier of the SIM card on the metered cellular network.It is not used for Et
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

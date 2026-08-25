@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('bluetoothDeviceFind')
@@ -15,8 +15,6 @@ function on(type: 'bluetoothDeviceFind', callback: Callback<Array<string>>): voi
 Subscribe the event reported when a remote Bluetooth device is discovered. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -44,20 +42,6 @@ Subscribe the event reported when a remote Bluetooth device is discovered. On AP
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function onReceiveEvent(data: Array<string>) { // data is an array of Bluetooth device addresses.
-    console.info('bluetooth device find = '+ JSON.stringify(data));
-}
-try {
-    connection.on('bluetoothDeviceFind', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## on('discoveryResult')
 
@@ -68,8 +52,6 @@ function on(type: 'discoveryResult', callback: Callback<Array<DiscoveryResult>>)
 Subscribe the event reported when a remote Bluetooth device is discovered. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -96,20 +78,6 @@ Subscribe the event reported when a remote Bluetooth device is discovered. On AP
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let onReceiveEvent: (data: Array<connection.DiscoveryResult>) => void = (data: Array<connection.DiscoveryResult>) => { // data is an array of Bluetooth devices discovered.
-    console.info('bluetooth device find = '+ JSON.stringify(data));
-}
-try {
-    connection.on('discoveryResult', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## on('bondStateChange')
 
@@ -120,8 +88,6 @@ function on(type: 'bondStateChange', callback: Callback<BondStateParam>): void
 Subscribe the event reported when a remote Bluetooth device is bonded. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -147,20 +113,6 @@ Subscribe the event reported when a remote Bluetooth device is bonded. On API 26
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function onReceiveEvent(data: connection.BondStateParam) { // data, as the input parameter of the callback, indicates the pairing state.
-    console.info('pair state = '+ JSON.stringify(data));
-}
-try {
-    connection.on('bondStateChange', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## on('pinRequired')
 
@@ -171,8 +123,6 @@ function on(type: 'pinRequired', callback: Callback<PinRequiredParam>): void
 Subscribe the event of a pairing request from a remote Bluetooth device. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -198,20 +148,6 @@ Subscribe the event of a pairing request from a remote Bluetooth device. On API 
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function onReceiveEvent(data: connection.PinRequiredParam) { // data is the pairing request parameter.
-    console.info('pin required = '+ JSON.stringify(data));
-}
-try {
-    connection.on('pinRequired', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## on('batteryChange')
 
@@ -222,8 +158,6 @@ function on(type: 'batteryChange', callback: Callback<BatteryInfo>): void
 Subscribe the event of battery state changed from a remote device.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -244,17 +178,3 @@ Subscribe the event of battery state changed from a remote device.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let onReceiveEvent: (data: connection.BatteryInfo) => void = (data: connection.BatteryInfo) => {
-    console.info('BatteryInfo = '+ JSON.stringify(data));
-}
-try {
-    connection.on('batteryChange', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

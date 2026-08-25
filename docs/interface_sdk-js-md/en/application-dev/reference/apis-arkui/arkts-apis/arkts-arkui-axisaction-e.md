@@ -4,8 +4,6 @@ Enumerates the types of axis actions for axis events.
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 No axis event.
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ The axis event begins.
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -53,8 +47,6 @@ UPDATE = 2
 The axis event is in progress.
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +64,6 @@ The axis event ends.
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -89,8 +79,6 @@ CANCEL = 4
 The axis event is canceled.
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 

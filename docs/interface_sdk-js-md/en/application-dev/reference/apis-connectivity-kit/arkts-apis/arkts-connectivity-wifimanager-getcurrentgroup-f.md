@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getCurrentGroup
@@ -15,8 +15,6 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 Obtain information about the current p2p group.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -36,24 +34,6 @@ Obtain information about the current p2p group.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  // The current group information can be obtained only after the P2P group is created or the connection is successful.
-  wifiManager.getCurrentGroup((err, data:wifiManager.WifiP2pGroupInfo) => {
-    if (err) {
-        console.error("get current P2P group error");
-        return;
-    }
-    console.info("get current P2P group: " + JSON.stringify(data));
-  });
-
-  wifiManager.getCurrentGroup().then(data => {
-    console.info("get current P2P group: " + JSON.stringify(data));
-  });
-```
-
 
 ## getCurrentGroup
 
@@ -64,8 +44,6 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 Obtain information about the current p2p group.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -84,7 +62,3 @@ Obtain information about the current p2p group.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
-
-**Examples**
-
-See [getCurrentGroup](#getcurrentgroup)

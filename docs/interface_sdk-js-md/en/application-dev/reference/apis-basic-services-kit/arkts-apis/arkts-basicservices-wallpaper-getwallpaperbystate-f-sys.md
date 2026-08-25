@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getWallpaperByState
@@ -15,8 +15,6 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 Obtains the default pixel map of a wallpaper of the specified device type. Returns the default pixel map. Only the static wallpaper set by using setAllWallpapers can be obtained.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WALLPAPER
 
@@ -45,17 +43,3 @@ Obtains the default pixel map of a wallpaper of the specified device type. Retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { wallpaper } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-wallpaper.getWallpaperByState(wallpaper.WallpaperType.WALLPAPER_SYSTEM,wallpaper.FoldState.NORMAL,wallpaper.RotateState.PORTRAIT).then((data:image.PixelMap) => {
-  console.info(`success to getWallpaperByState: ${JSON.stringify(data.getImageInfoSync())}`);
-}).catch((error: BusinessError) => {
-  console.error(`failed to getWallpaperByState. Code: ${error.code}, Message: ${error.message}`);
-});
-```

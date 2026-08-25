@@ -4,23 +4,19 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## flags
 
 ```TypeScript
-readonly flags?: int
+readonly flags?: number
 ```
 
 标识当前应用和当前用户之间的状态集合，每一位表示一个特定的布尔状态，取值参考 [ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## on('connect')
@@ -13,11 +13,9 @@ function on(type: 'connect', sessionId: number,
         callback: Callback<EventCallbackInfo>): void
 ```
 
-注册connect事件的回调监听。使用callback异步回调。
+注册connect事件的回调监听。当connect接口调用成功后会触发该事件。使用callback异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,19 +35,6 @@ function on(type: 'connect', sessionId: number,
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 100;
-abilityConnectionManager.on("connect", sessionId,(callbackInfo) => {
-  hilog.info(0x0000, 'testTag', 'session connect, sessionId is', callbackInfo.sessionId);
-});
-```
-
 
 ## on('disconnect')
 
@@ -61,8 +46,6 @@ function on(type: 'disconnect', sessionId: number,
 注册disconnect事件的回调监听。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,19 +65,6 @@ function on(type: 'disconnect', sessionId: number,
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 100;
-abilityConnectionManager.on("disconnect", sessionId,(callbackInfo) => {
-  hilog.info(0x0000, 'testTag', 'session disconnect, sessionId is', callbackInfo.sessionId);
-});
-```
-
 
 ## on('receiveMessage')
 
@@ -106,8 +76,6 @@ function on(type: 'receiveMessage', sessionId: number,
 注册receiveMessage事件的回调监听。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,19 +95,6 @@ function on(type: 'receiveMessage', sessionId: number,
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 100;
-abilityConnectionManager.on("receiveMessage", sessionId,(callbackInfo) => {
-  hilog.info(0x0000, 'testTag', 'receiveMessage, sessionId is', callbackInfo.sessionId);
-});
-```
-
 
 ## on('receiveData')
 
@@ -151,8 +106,6 @@ function on(type: 'receiveData', sessionId: number,
 注册receiveData事件的回调监听。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -171,16 +124,3 @@ function on(type: 'receiveData', sessionId: number,
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 100;
-abilityConnectionManager.on("receiveData", sessionId,(callbackInfo) => {
-  hilog.info(0x0000, 'testTag', 'receiveData, sessionId is', callbackInfo.sessionId);
-});
-```

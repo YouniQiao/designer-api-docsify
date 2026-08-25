@@ -4,15 +4,13 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -24,8 +22,6 @@ constructor(jsonObject: Object)
 构造函数，通过JSON对象构造EventInfo实例。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -39,57 +35,6 @@ constructor(jsonObject: Object)
 | --- | --- | --- |
 | jsonObject | Object | 是 |
 
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'click',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'click',
-});
-```
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-let eventInfo: accessibility.EventInfo = ({
-  type: 'click',
-  bundleName: 'com.example.MyApplication',
-  triggerAction: 'click',
-});
-```
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-// 参数依次为：type、bundleName、triggerAction。
-let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
-```
-
-## constructor
-
-```TypeScript
-constructor()
-```
-
-构造函数。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-
-**示例**
-
-参见 [constructor](#constructor)
-
 ## constructor
 
 ```TypeScript
@@ -99,8 +44,6 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 构造函数，通过独立参数构造EventInfo实例。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -116,23 +59,17 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 | [bundleName](#bundlename) | string | 是 |
 | [triggerAction](#triggeraction) | [Action](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | 是 |
 
-**示例**
-
-参见 [constructor](#constructor)
-
 ## beginIndex
 
 ```TypeScript
-beginIndex?: int
+beginIndex?: number
 ```
 
 画面显示条目的开始序号，默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -152,8 +89,6 @@ bundleName: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -167,13 +102,12 @@ componentType?: string
 ```
 
 应与事件源组件类型对应，默认值为空。例如：  
-- 按钮Button类型-&gt;'Button'。 - 图片Image类型-&gt;'Image'。
+- 按钮Button类型-&gt;'Button'。  
+- 图片Image类型-&gt;'Image'。
 
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -193,8 +127,6 @@ contents?: Array<string>
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -204,16 +136,14 @@ contents?: Array<string>
 ## currentIndex
 
 ```TypeScript
-currentIndex?: int
+currentIndex?: number
 ```
 
 当前条目序号，默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -233,8 +163,6 @@ customId?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -253,8 +181,6 @@ description?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -264,16 +190,14 @@ description?: string
 ## elementId
 
 ```TypeScript
-elementId?: int
+elementId?: number
 ```
 
 组件elementId，默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -284,16 +208,14 @@ elementId?: int
 ## endIndex
 
 ```TypeScript
-endIndex?: int
+endIndex?: number
 ```
 
 画面显示条目的结束序号，默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -304,16 +226,14 @@ endIndex?: int
 ## itemCount
 
 ```TypeScript
-itemCount?: int
+itemCount?: number
 ```
 
 条目总数，默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -333,8 +253,6 @@ lastContent?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -344,16 +262,14 @@ lastContent?: string
 ## pageId
 
 ```TypeScript
-pageId ?: int
+pageId ?: number
 ```
 
 事件源的页面ID，默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -373,8 +289,6 @@ textAnnouncedForAccessibility?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -392,8 +306,6 @@ textMoveUnit?: TextMoveUnit
 **类型：** [TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -413,8 +325,6 @@ textResourceAnnouncedForAccessibility?: Resource
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -432,8 +342,6 @@ triggerAction: Action
 **类型：** Action
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -453,8 +361,6 @@ type: EventType
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
@@ -472,8 +378,6 @@ windowUpdateType?: WindowUpdateType
 **类型：** [WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

@@ -1,6 +1,6 @@
 # ArrayBuffer
 
-Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-collections-n.md), [Uint8Array](arkts-arkts-collections-n.md), [Int16Array](arkts-arkts-collections-n.md), [Uint16Array](arkts-arkts-collections-n.md), [Int32Array](arkts-arkts-collections-n.md), [Uint32Array](arkts-arkts-collections-n.md), [Uint8ClampedArray](arkts-arkts-collections-n.md), and [Float32Array](arkts-arkts-collections-n.md)).
+Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-collections-int8array-c.md), [Uint8Array](arkts-arkts-collections-uint8array-c.md), [Int16Array](arkts-arkts-collections-int16array-c.md), [Uint16Array](arkts-arkts-collections-uint16array-c.md), [Int32Array](arkts-arkts-collections-int32array-c.md), [Uint32Array](arkts-arkts-collections-uint32array-c.md), [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md), and [Float32Array](arkts-arkts-collections-float32array-c.md)).
 
 > **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
@@ -8,14 +8,12 @@ Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-colle
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -27,8 +25,6 @@ constructor(byteLength: number)
 A constructor used to create an ArkTS ArrayBuffer of a given length.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -55,8 +51,6 @@ slice(begin: number, end?: number): ArrayBuffer
 Selects a range of elements in this ArkTS ArrayBuffer to create an ArkTS ArrayBuffer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -93,8 +87,6 @@ Number of bytes occupied by the buffer.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

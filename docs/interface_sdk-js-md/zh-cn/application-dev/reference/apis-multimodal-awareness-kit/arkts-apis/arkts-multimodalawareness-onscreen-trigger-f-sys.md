@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## trigger
@@ -16,8 +16,6 @@ function trigger(capability: OnscreenAwarenessCap,
 主动触发屏幕内容感知，获取当前屏幕感知结果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
@@ -51,27 +49,3 @@ function trigger(capability: OnscreenAwarenessCap,
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [34000001](../errorcode-carAwareness.md#34000001-服务异常) |
 | [34000002](../errorcode-carAwareness.md#34000002-指定能力不支持) |
-
-**示例**
-
-```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
-let onscreenAwarenessCap: onScreen.OnscreenAwarenessCap = {
-  capList: [
-    'UiImage'
-  ]
-}
-
-let onscreenAwarenessOptions: onScreen.OnscreenAwarenessOptions = {
-  parameters: {
-    "windowId": 102
-  } as Record<string, Object>
-}
-try {
-  let info: onScreen.OnscreenAwarenessInfo =
-    await onScreen.trigger(onscreenAwarenessCap, onscreenAwarenessOptions);
-  console.info(`trigger resultCode: ${info.resultCode}`);
-} catch (err) {
-  console.error(`trigger failed, Code: ${err.code}, message: ${err.message}`);
-}
-```

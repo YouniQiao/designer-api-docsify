@@ -4,8 +4,6 @@ Describes the bundle installation or uninstall status.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -25,8 +23,6 @@ Installation or uninstall error code. The value must be defined in [InstallError
 **Default:** Indicates the install or uninstall error code
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -66,8 +62,6 @@ Installation or uninstall status message.
 **Default:** Indicates the install or uninstall result string message
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

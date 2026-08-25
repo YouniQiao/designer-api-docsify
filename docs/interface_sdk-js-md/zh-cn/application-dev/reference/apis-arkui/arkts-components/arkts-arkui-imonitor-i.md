@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 获取指定path的变化信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,53 +39,6 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 | --- |
 | [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; \| undefined |
 
-**示例**
-
-```TypeScript
-@ObservedV2
-class Info {
-  @Trace name: string = 'Tom';
-  @Trace age: number = 25;
-  @Trace height: number = 175;
-
-  // 监听一个变量
-  @Monitor('name')
-  onNameChange(monitor: IMonitor) {
-    // 未指定value的入参时，默认使用dirty中的第一个路径作为入参
-    console.info(`path: ${monitor.value()?.path} change from ${monitor.value()?.before} to ${monitor.value()?.now}`);
-  }
-
-  // 监听多个变量
-  @Monitor('age','height')
-  onRecordChange(monitor: IMonitor) {
-    // 指定value的入参时，将返回入参路径path对应的变量变化值信息
-    monitor.dirty.forEach((path: string) => {
-      console.info(`path: ${path} change from ${monitor.value(path)?.before} to ${monitor.value(path)?.now}`);
-    })
-  }
-}
-
-@Entry
-@ComponentV2
-struct Index {
-  @Local info: Info = new Info();
-
-  build() {
-    Column() {
-      Text(`info.name: ${this.info.name}`)
-        .onClick(() => {
-          this.info.name = 'Bob'; // 输出日志：path: name change from Tom to Bob
-        })
-      Text(`info.age: ${this.info.age}, info.height: ${this.info.height}`)
-        .onClick(() => {
-          this.info.age++; // 输出日志：path: age change from 25 to 26
-          this.info.height++; // 输出日志：path: height change from 175 to 176
-        })
-    }
-  }
-}
-```
-
 ## dirty
 
 ```TypeScript
@@ -101,8 +50,6 @@ dirty: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

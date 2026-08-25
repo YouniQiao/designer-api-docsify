@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## revokeQuickFix
@@ -15,8 +15,6 @@ function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void
 Revokes quick fix. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
@@ -41,33 +39,6 @@ Revokes quick fix. This API uses an asynchronous callback to return the result.
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) |
 | [18500009](../errorcode-ability.md#18500009-application-has-a-quick-fix-task-being-processed) |
 
-**Examples**
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-
-quickFixManager.revokeQuickFix(bundleName, (err) => {
-  if (err.code) {
-    console.error(`revokeQuickFix ${bundleName} failed, err code: ${err.code}, err msg: ${err.message}.`);
-  }
-});
-```
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-
-quickFixManager.revokeQuickFix(bundleName).then(() => {
-  console.info(`revokeQuickFix ${bundleName} success.`);
-}).catch((err: BusinessError) => {
-  console.error(`revokeQuickFix ${bundleName} failed, err code: ${err.code}, err msg: ${err.message}.`);
-});
-```
-
 
 ## revokeQuickFix
 
@@ -78,8 +49,6 @@ function revokeQuickFix(bundleName: string): Promise<void>
 Revokes quick fix. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
@@ -108,7 +77,3 @@ Revokes quick fix. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) |
 | [18500009](../errorcode-ability.md#18500009-application-has-a-quick-fix-task-being-processed) |
-
-**Examples**
-
-See [revokeQuickFix](#revokequickfix)

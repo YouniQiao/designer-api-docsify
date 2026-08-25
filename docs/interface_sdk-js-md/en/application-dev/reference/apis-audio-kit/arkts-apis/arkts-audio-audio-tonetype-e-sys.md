@@ -4,8 +4,6 @@ Enumerates tone types for player.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ TONE_TYPE_DIAL_0 = 0
 Dial tone for key 0.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -36,8 +32,6 @@ Dial tone for key 1.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ TONE_TYPE_DIAL_2 = 2
 Dial tone for key 2.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -68,8 +60,6 @@ Dial tone for key 3.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ TONE_TYPE_DIAL_4 = 4
 Dial tone for key 4.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -100,8 +88,6 @@ Dial tone for key 5.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ TONE_TYPE_DIAL_6 = 6
 Dial tone for key 6.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -132,8 +116,6 @@ Dial tone for key 7.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -147,8 +129,6 @@ TONE_TYPE_DIAL_8 = 8
 Dial tone for key 8.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -164,8 +144,6 @@ Dial tone for key 9.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -179,8 +157,6 @@ TONE_TYPE_DIAL_S = 10
 Dial tone for key *.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -196,8 +172,6 @@ Dial tone for key #.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -211,8 +185,6 @@ TONE_TYPE_DIAL_A = 12
 Dial tone for key A.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -228,8 +200,6 @@ Dial tone for key B.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -243,8 +213,6 @@ TONE_TYPE_DIAL_C = 14
 Dial tone for key C.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -260,8 +228,6 @@ Dial tone for key D.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -275,8 +241,6 @@ TONE_TYPE_COMMON_SUPERVISORY_DIAL = 100
 Supervisory tone for dial.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -292,8 +256,6 @@ Supervisory tone for busy.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -307,8 +269,6 @@ TONE_TYPE_COMMON_SUPERVISORY_CONGESTION = 102
 Supervisory tone for dial.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -324,8 +284,6 @@ Supervisory tone for radio path acknowledgment.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -339,8 +297,6 @@ TONE_TYPE_COMMON_SUPERVISORY_RADIO_NOT_AVAILABLE = 104
 Supervisory tone for radio path not available.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -356,8 +312,6 @@ Supervisory tone for call waiting.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -371,8 +325,6 @@ TONE_TYPE_COMMON_SUPERVISORY_RINGTONE = 107
 Supervisory tone for ringtone.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -388,8 +340,6 @@ Supervisory tone for call holding.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -403,8 +353,6 @@ TONE_TYPE_COMMON_PROPRIETARY_BEEP = 200
 Proprietary tone for beep.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
@@ -420,8 +368,6 @@ Proprietary tone for positive acknowledgment.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -436,8 +382,6 @@ Proprietary tone for prompt.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 
 **System API:** This is a system API.
@@ -448,11 +392,9 @@ Proprietary tone for prompt.
 TONE_TYPE_COMMON_PROPRIETARY_DOUBLE_BEEP = 204
 ```
 
-Proprietary tone for double beep.
+Proprietary tone for number beep.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Tone
 

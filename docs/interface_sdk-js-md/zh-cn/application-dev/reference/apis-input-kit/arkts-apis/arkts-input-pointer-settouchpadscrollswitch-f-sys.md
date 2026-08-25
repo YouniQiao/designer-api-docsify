@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## setTouchpadScrollSwitch
@@ -15,8 +15,6 @@ function setTouchpadScrollSwitch(state: boolean, callback: AsyncCallback<void>):
 设置触控板滚轴开关，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -36,129 +34,6 @@ function setTouchpadScrollSwitch(state: boolean, callback: AsyncCallback<void>):
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置触控板滚动开关
-            pointer.setTouchpadScrollSwitch(true, (error: BusinessError) => {
-              if (error) {
-                console.error(`Failed to set touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-                return;
-              }
-              console.info(`Succeeded in setting touchpad scroll switch.`);
-            });
-          } catch (error) {
-            console.error(`Failed to set touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { pointer } from '@kit.InputKit';
-import { BusinessError, AsyncCallback } from '@kit.BasicServicesKit';
-
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置触摸板滚动开关
-            pointer.setTouchpadScrollSwitch(true, (error: BusinessError<void>|null, data: undefined) => {
-              if (error) {
-                console.error(`Failed to set touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-                return;
-              }
-              console.info(`Succeeded in setting touchpad scroll switch.`);
-            });
-          } catch (error) {
-            console.error(`Failed to set touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置触摸板滚动开关
-            pointer.setTouchpadScrollSwitch(false).then(() => {
-              console.info(`Succeeded in setting touchpad scroll switch.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { pointer } from '@kit.InputKit';
-import { BusinessError, AsyncCallback } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置触摸板滚动开关
-            pointer.setTouchpadScrollSwitch(false).then(() => {
-              console.info(`Succeeded in setting touchpad scroll switch.`);
-            });
-          } catch (error) {
-            console.error(`Failed to set touchpad scroll switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## setTouchpadScrollSwitch
 
@@ -169,8 +44,6 @@ function setTouchpadScrollSwitch(state: boolean): Promise<void>
 设置触控板滚轴开关，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -194,7 +67,3 @@ function setTouchpadScrollSwitch(state: boolean): Promise<void>
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [setTouchpadScrollSwitch](#settouchpadscrollswitch)

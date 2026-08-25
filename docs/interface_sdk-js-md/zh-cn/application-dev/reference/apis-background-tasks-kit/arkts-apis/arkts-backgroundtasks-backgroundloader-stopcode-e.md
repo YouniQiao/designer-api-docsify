@@ -4,8 +4,6 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## SUCCESS
@@ -17,8 +15,6 @@ SUCCESS = 0
 执行成功码。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,8 +30,6 @@ SYSTEM_ERROR = 1
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -49,8 +43,6 @@ PERCEPTIBLE_ERROR = 2
 任务执行中发生可感知任务错误
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +58,6 @@ TIMEOUT_ERROR = 3
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
@@ -81,8 +71,6 @@ EXECUTE_ERROR = 4
 执行任务异常。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

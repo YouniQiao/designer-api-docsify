@@ -4,8 +4,6 @@ Enumerates the permission toggle states.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Indicates that the dialog box for the specified permission is disabled. When an 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ OPEN = 1
 Indicates that the dialog box for the specified permission is enabled. When an app calls APIs such as [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) to request this permission, a permission dialog box will be displayed normally.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 

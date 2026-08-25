@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## command
@@ -25,8 +23,6 @@ command: AVControlCommandType
 **类型：** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,23 +40,19 @@ commandInfo?: CommandInfo
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## parameter
 
 ```TypeScript
-parameter?: LoopMode | string | double
+parameter?: LoopMode | string | number
 ```
 
 命令对应的参数。
 
-**类型：** ArkTS-Dyn: [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number  <br>ArkTS-Sta：[LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
+**类型：** [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

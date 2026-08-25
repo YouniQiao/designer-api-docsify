@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ SUGGESTION_TYPE_NONE = 0
 非推荐语言或国家地区。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -36,8 +32,6 @@ SUGGESTION_TYPE_RELATED = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ SUGGESTION_TYPE_SIM = 2
 SIM卡国家地区推荐的语言。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.I18n
 

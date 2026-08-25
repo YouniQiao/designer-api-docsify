@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from '@kit.ConnectivityKit';
+import { cdsm } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createCdsmClient
@@ -15,8 +15,6 @@ function createCdsmClient(address: string): CdsmClient
 Creates a CDSM client instance.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

@@ -8,8 +8,6 @@ Defines a callback triggered when the **param** element embedded in the same-lay
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -17,7 +15,3 @@ Defines a callback triggered when the **param** element embedded in the same-lay
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | [NativeEmbedParamDataInfo](arkts-arkweb-nativeembedparamdatainfo-i.md) | Yes |
-
-**Examples**
-
-For details about the sample code, see [onNativeEmbedObjectParamChange](./arkts-basic-components-web-events.md#onnativeembedobjectparamchange21).

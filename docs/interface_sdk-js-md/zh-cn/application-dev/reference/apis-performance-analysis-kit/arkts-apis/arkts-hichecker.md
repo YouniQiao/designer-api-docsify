@@ -4,14 +4,12 @@ HiChecker可以作为应用开发阶段使用的检测工具，用于检测代�
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
 ## 导入模块
 
 ```TypeScript
-import { hichecker } from '@kit.PerformanceAnalysisKit';
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总

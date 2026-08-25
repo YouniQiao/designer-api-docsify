@@ -1,16 +1,14 @@
 # OnContentScrollCallback
 
 ```TypeScript
-export type OnContentScrollCallback = (totalOffsetX: double, totalOffsetY: double) => void
+declare type OnContentScrollCallback = (totalOffsetX: number, totalOffsetY: number) => void
 ```
 
-Defines a TextInput callback when onContentScroll. Anonymous Object Rectification.
+Called when the text content is scrolled.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,5 +16,5 @@ Defines a TextInput callback when onContentScroll. Anonymous Object Rectificatio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| totalOffsetX | double | Yes |
-| totalOffsetY | double | Yes |
+| totalOffsetX | number | Yes |
+| totalOffsetY | number | Yes |

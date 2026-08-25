@@ -4,8 +4,6 @@ The missionManager module provides APIs to lock, unlock, and clear missions, and
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [missionManager/missionManager](arkts-app-ability-missionmanager.md)

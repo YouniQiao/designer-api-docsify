@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ ALL = 0
 表示所有分布式硬件。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -36,8 +32,6 @@ CAMERA = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ SCREEN = 8
 表示分布式屏幕。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -68,8 +60,6 @@ MODEM_MIC = 256
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ MODEM_SPEAKER = 512
 表示分布式移动通话的扬声器。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
@@ -100,8 +88,6 @@ MIC = 1024
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +101,6 @@ SPEAKER = 2048
 表示分布式扬声器。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DistributedHardwareFWK
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## actionNames
@@ -18,8 +16,6 @@ actionNames(callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -29,32 +25,6 @@ actionNames(callback: AsyncCallback<Array<string>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.actionNames().then((data: string[]) => {
-  console.info(`succeeded in getting action names, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.actionNames((err: BusinessError, data: string[]) => {
-  if (err) {
-    console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting action names, ${JSON.stringify(data)}`);
-});
-```
 
 ## actionNames
 
@@ -66,8 +36,6 @@ actionNames(): Promise<Array<string>>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -77,10 +45,6 @@ actionNames(): Promise<Array<string>>
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;string & gt; & gt; |
-
-**示例**
-
-参见 [actionNames](#actionnames)
 
 ## attributeNames
 
@@ -92,8 +56,6 @@ attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<A
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -103,34 +65,6 @@ attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<A
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { ElementAttributeKeys } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.attributeNames().then((data: ElementAttributeKeys[]) => {
-  console.info(`succeeded in getting attribute names, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get attribute names. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { ElementAttributeKeys } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.attributeNames((err: BusinessError, data: ElementAttributeKeys[]) => {
-  if (err) {
-    console.error(`Failed to get attribute names. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting attribute names, ${JSON.stringify(data)}`);
-});
-```
 
 ## attributeNames
 
@@ -142,8 +76,6 @@ attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -153,10 +85,6 @@ attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;T & gt; & gt; |
-
-**示例**
-
-参见 [attributeNames](#attributenames)
 
 ## attributeValue
 
@@ -170,8 +98,6 @@ attributeValue<T extends keyof ElementAttributeValues>(
 根据属性名称获取属性值。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -191,38 +117,6 @@ attributeValue<T extends keyof ElementAttributeValues>(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9300004](../errorcode-accessibility.md#9300004-属性不存在) |
 
-**示例**
-
-```TypeScript
-import { ElementAttributeKeys } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let attributeName: ElementAttributeKeys = 'bundleName';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.attributeValue(attributeName).then((data: string) => {
-  console.info(`succeeded in getting attribute value by name, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get attribute value. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { ElementAttributeKeys } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let attributeName: ElementAttributeKeys = 'bundleName';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.attributeValue(attributeName, (err: BusinessError, data: string) => {
-  if (err) {
-    console.error(`Failed to get attribute value. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting attribute value, ${JSON.stringify(data)}`);
-});
-```
-
 ## attributeValue
 
 ```TypeScript
@@ -232,8 +126,6 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 根据属性名称获取属性值。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -258,10 +150,6 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9300004](../errorcode-accessibility.md#9300004-属性不存在) |
 
-**示例**
-
-参见 [attributeValue](#attributevalue)
-
 ## findElement('content')
 
 ```TypeScript
@@ -271,8 +159,6 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 根据节点内容查询所有节点元素。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -292,24 +178,6 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition = 'keyword';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('content', condition, (err: BusinessError, data: AccessibilityElement[]) => {
-  if (err) {
-    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-});
-```
-
 ## findElement('content')
 
 ```TypeScript
@@ -319,8 +187,6 @@ findElement(type: 'content', condition: string): Promise<Array<AccessibilityElem
 根据节点内容查询所有节点元素。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -345,22 +211,6 @@ findElement(type: 'content', condition: string): Promise<Array<AccessibilityElem
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition = 'keyword';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('content', condition).then((data: AccessibilityElement[]) => {
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElement('focusType')
 
 ```TypeScript
@@ -370,8 +220,6 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 根据焦点元素类型查询节点元素。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -390,24 +238,6 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { FocusType, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusType = 'normal';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('focusType', condition, (err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-});
-```
 
 ## findElement('focusType')
 
@@ -419,8 +249,6 @@ findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityEleme
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -444,22 +272,6 @@ findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityEleme
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { FocusType, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusType = 'normal';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('focusType', condition).then((data: AccessibilityElement) => {
-  console.info(`succeeded in finding element,${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElement('focusDirection')
 
 ```TypeScript
@@ -469,8 +281,6 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 根据下一焦点元素方向查询节点元素。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -490,24 +300,6 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { FocusDirection, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusDirection = 'up';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('focusDirection', condition, (err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-});
-```
-
 ## findElement('focusDirection')
 
 ```TypeScript
@@ -517,8 +309,6 @@ findElement(type: 'focusDirection', condition: FocusDirection): Promise<Accessib
 根据下一焦点元素方向查询节点元素。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -543,22 +333,6 @@ findElement(type: 'focusDirection', condition: FocusDirection): Promise<Accessib
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { FocusDirection, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusDirection = 'up';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('focusDirection', condition).then((data: AccessibilityElement) => {
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## performAction
 
 ```TypeScript
@@ -568,8 +342,6 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 对无障碍节点元素执行指定操作。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -590,87 +362,6 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
 
-**示例**
-
-无参数Action。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-// Action描述中无明确要求的，均为无参数Action。
-rootElement.performAction('click').then(() => {
-  console.info(`succeeded in performing action.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-有参数Action（setSelection）。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-// setSelection示例代码。
-rootElement.performAction('setSelection', {
-  selectTextBegin: '0', // 表示选择起始位置。
-  selectTextEnd: '8',   // 表示选择结束位置。
-  selectTextInForWard: true   // true表示为前光标，false表示为后光标。
-}).then(() => {
-  console.info(`succeeded in performing action`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-有参数Action（setCursorPosition）。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-// setCursorPosition示例代码。
-rootElement.performAction('setCursorPosition', {
-  offset: '1'   // 表示光标的设置位置。
-}).then(() => {
-  console.info(`succeeded in performing action`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let actionName = 'action';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.performAction(actionName, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in performing action, actionName is ${actionName}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let actionName = 'action';
-let parameters: object = {};
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.performAction(actionName, parameters, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in performing action,actionName is ${actionName}, parameters is ${parameters}`);
-});
-```
-
 ## performAction
 
 ```TypeScript
@@ -680,8 +371,6 @@ performAction(actionName: string, parameters?: object): Promise<void>
 对无障碍节点元素执行指定操作。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -707,10 +396,6 @@ performAction(actionName: string, parameters?: object): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
 
-**示例**
-
-参见 [performAction](#performaction)
-
 ## performAction
 
 ```TypeScript
@@ -720,8 +405,6 @@ performAction(actionName: string, callback: AsyncCallback<void>): void
 对无障碍节点元素执行指定操作。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -740,7 +423,3 @@ performAction(actionName: string, callback: AsyncCallback<void>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
-
-**示例**
-
-参见 [performAction](#performaction)

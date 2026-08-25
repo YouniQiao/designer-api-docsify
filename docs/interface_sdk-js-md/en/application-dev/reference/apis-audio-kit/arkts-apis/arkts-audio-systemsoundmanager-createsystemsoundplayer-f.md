@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from '@kit.AudioKit';
+import { systemSoundManager } from 'kits/@kit.AudioKit';
 ```
 
 ## createSystemSoundPlayer
@@ -15,8 +15,6 @@ function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 Creates a SystemSoundPlayer instance. This function uses a promise to return the result. This player can be used to play some system sounds for media or camera actions.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -31,18 +29,3 @@ Creates a SystemSoundPlayer instance. This function uses a promise to return the
 | Error Code ID |
 | --- |
 | [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let systemSoundPlayer: systemSoundManager.SystemSoundPlayer | null = null;
-
-systemSoundManager.createSystemSoundPlayer().then((systemSoundPlayerInstance) => {
-  console.info('Succeeded in creating the system sound player.');
-  systemSoundPlayer = systemSoundPlayerInstance;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the system sound player. Code: ${err.code}, message: ${err.message}`);
-});
-```

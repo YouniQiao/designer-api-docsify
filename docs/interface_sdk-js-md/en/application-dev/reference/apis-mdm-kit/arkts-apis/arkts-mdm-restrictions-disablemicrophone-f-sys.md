@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## disableMicrophone
@@ -15,8 +15,6 @@ function disableMicrophone(admin: Want, disable: boolean): void
 Enables or disables the microphone.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -46,23 +44,3 @@ Enables or disables the microphone.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  restrictions.disableMicrophone(wantTemp, true);
-  console.info('Succeeded in setting microphone disabled');
-} catch (err) {
-  console.error(`Failed to disable microphone. Code is ${err.code}, message is ${err.message}`);
-}
-```

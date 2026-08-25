@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ x?: Length | GridRowSizeOption
 
 栅格子组件水平方向间距。取值范围：大于等于0的数值或字符串。默认值：0vp。非法值：按默认值处理。单位：vp
 
-**类型：** Length \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -41,11 +37,9 @@ y?: Length | GridRowSizeOption
 
 栅格子组件垂直方向间距。取值范围：大于等于0的数值或字符串。默认值：0vp。非法值：按默认值处理。单位：vp
 
-**类型：** Length \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

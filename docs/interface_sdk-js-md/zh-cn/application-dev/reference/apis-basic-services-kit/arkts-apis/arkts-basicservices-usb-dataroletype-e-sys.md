@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md)
@@ -23,8 +21,6 @@ NONE = 0
 无。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ HOST = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [HOST](arkts-basicservices-usbmanager-dataroletype-e-sys.md#host)
@@ -63,8 +57,6 @@ DEVICE = 2
 从设备角色。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 

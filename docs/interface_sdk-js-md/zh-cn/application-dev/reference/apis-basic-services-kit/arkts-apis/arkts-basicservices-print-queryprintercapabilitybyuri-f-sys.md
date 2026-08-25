@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryPrinterCapabilityByUri
@@ -15,8 +15,6 @@ function queryPrinterCapabilityByUri(printerUri: string, printerId: string): Pro
 使用打印机的uri查询打印机能力，使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -46,18 +44,3 @@ function queryPrinterCapabilityByUri(printerUri: string, printerId: string): Pro
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [13100005](../errorcode-print.md#13100005-无效的打印机) |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerUri : string = "testPrinterUri";
-let printerId : string = "testPrinterId";
-print.queryPrinterCapabilityByUri(printerUri, printerId).then((capabilities: print.PrinterCapabilities) => {
-    console.info('queryPrinterCapabilityByUri success' + JSON.stringify(capabilities));
-}).catch((error: BusinessError) => {
-    console.error('queryPrinterCapabilityByUri error : ' + JSON.stringify(error));
-})
-```

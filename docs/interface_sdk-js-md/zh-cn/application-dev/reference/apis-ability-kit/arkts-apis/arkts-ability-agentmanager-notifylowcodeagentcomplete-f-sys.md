@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## notifyLowCodeAgentComplete
@@ -15,8 +15,6 @@ function notifyLowCodeAgentComplete(agentId: string): Promise<void>
 通知指定的 [LOW_CODE](../../../reference/apis-ability-kit/js-apis-app-agent-agentConstant-sys.md#agentconstantagentcardtype)类 型的AgentCard关联的Agent生命周期已结束。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.CONNECT_AGENT
 

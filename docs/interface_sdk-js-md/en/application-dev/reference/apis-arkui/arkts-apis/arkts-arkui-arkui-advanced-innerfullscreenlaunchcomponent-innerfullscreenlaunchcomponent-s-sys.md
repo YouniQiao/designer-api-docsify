@@ -9,8 +9,6 @@
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -18,7 +16,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
+import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkUI';
 ```
 
 ## content
@@ -32,8 +30,6 @@ Content displayed in the component.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -51,8 +47,6 @@ Controller for launching the atomic service.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -68,8 +62,6 @@ Callback triggered when an exception occurs during the execution of an embedded 
 **Type:** [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,8 +79,6 @@ Callback triggered when an embedded atomic service calls [@ohos.window (window)]
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -104,8 +94,6 @@ Callback triggered when an embedded atomic service exits normally. Exit scenario
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

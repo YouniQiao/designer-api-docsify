@@ -4,8 +4,6 @@ Defines predicates for an RDB store. This class determines whether the condition
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
@@ -27,8 +25,6 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
@@ -39,16 +35,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Lisa")
-    .and()
-    .equalTo("SALARY", 200.5)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## beginsWith
 
@@ -59,8 +46,6 @@ beginsWith(field: string, value: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that start with the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -79,14 +64,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.beginsWith("NAME", "os")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## beginWrap
 
@@ -98,8 +76,6 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
@@ -110,19 +86,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## between
 
@@ -133,8 +97,6 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are within the specified range.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -147,21 +109,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.between("AGE", 10, 50)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## constructor
 
@@ -172,8 +127,6 @@ constructor(name: string)
 A constructor used to create an **RdbPredicates** object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -187,12 +140,6 @@ A constructor used to create an **RdbPredicates** object.
 | --- | --- | --- |
 | name | string | Yes |
 
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-```
-
 ## contains
 
 ```TypeScript
@@ -202,8 +149,6 @@ contains(field: string, value: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that contain the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -222,14 +167,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.contains("NAME", "os")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## distinct
 
@@ -241,8 +179,6 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [distinct](arkts-arkdata-relationalstore-rdbpredicates-c.md#distinct)
@@ -253,14 +189,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Rose").distinct()
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## endsWith
 
@@ -271,8 +200,6 @@ endsWith(field: string, value: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that end with the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -291,14 +218,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.endsWith("NAME", "se")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## endWrap
 
@@ -310,8 +230,6 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
@@ -322,19 +240,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## equalTo
 
@@ -345,8 +251,6 @@ equalTo(field: string, value: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are equal to the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -365,14 +269,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "lisi")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## glob
 
@@ -383,8 +280,6 @@ glob(field: string, value: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that match the given string.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -403,14 +298,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.glob("NAME", "?h*g")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## greaterThan
 
@@ -421,8 +309,6 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are greater than the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -441,14 +327,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.greaterThan("AGE", 18)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## greaterThanOrEqualTo
 
@@ -459,8 +338,6 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are greater than or equal to the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -479,14 +356,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.greaterThanOrEqualTo("AGE", 18)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## groupBy
 
@@ -497,8 +367,6 @@ groupBy(fields: Array<string>): RdbPredicates
 Creates an **RdbPredicates** object to group the query results based on the specified columns.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -516,14 +384,7 @@ Creates an **RdbPredicates** object to group the query results based on the spec
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.groupBy(["AGE", "NAME"])
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## in
 
@@ -534,8 +395,6 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are within the specified range.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -554,14 +413,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.in("AGE", [18, 20])
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## inAllDevices
 
@@ -573,8 +425,6 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [inAllDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#inalldevices)
@@ -585,14 +435,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.inAllDevices()
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## inDevices
 
@@ -611,8 +454,6 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [inDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#indevices)
@@ -629,35 +470,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-
-let dmInstance: deviceManager.DeviceManager;
-let deviceIds: Array<string> = [];
-let devices: Array<string> = [];
-
-deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
-  if (err) {
-    console.log("create device manager failed, err=" + err);
-    return;
-  }
-  dmInstance = manager;
-  devices = dmInstance.getTrustedDeviceListSync();
-  for (let i = 0; i < devices.length; i++) {
-    deviceIds[i] = devices[i].deviceId;
-  }
-})
-
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE");
-predicates.inDevices(deviceIds);
-                                  
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE");
-predicates.inDevices(deviceIds);
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## indexedBy
 
@@ -668,8 +481,6 @@ indexedBy(field: string): RdbPredicates
 Creates an **RdbPredicates** object to specify the index column.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -687,14 +498,7 @@ Creates an **RdbPredicates** object to specify the index column.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.indexedBy("SALARY_INDEX")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## isNotNull
 
@@ -705,8 +509,6 @@ isNotNull(field: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are not **null**.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -724,20 +526,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.isNotNull("NAME")
-```
 
 ## isNull
 
@@ -748,8 +543,6 @@ isNull(field: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are **null**.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -767,14 +560,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.isNull("NAME")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## lessThan
 
@@ -785,8 +571,6 @@ lessThan(field: string, value: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are less than the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -805,14 +589,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.lessThan("AGE", 20)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## lessThanOrEqualTo
 
@@ -823,8 +600,6 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are less than or equal to the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -843,14 +618,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.lessThanOrEqualTo("AGE", 20)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## like
 
@@ -861,8 +629,6 @@ like(field: string, value: string): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are similar to the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -881,14 +647,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.like("NAME", "%os%")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## limitAs
 
@@ -899,8 +658,6 @@ limitAs(value: number): RdbPredicates
 Creates an **RdbPredicates** object to limit the number of records.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -918,14 +675,7 @@ Creates an **RdbPredicates** object to limit the number of records.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Rose").limitAs(3)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## notBetween
 
@@ -936,8 +686,6 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are out of the specified range.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -950,21 +698,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.notBetween("AGE", 10, 50)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## notEqualTo
 
@@ -975,8 +716,6 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are not equal to the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -995,14 +734,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.notEqualTo("NAME", "lisi")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## notIn
 
@@ -1013,8 +745,6 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 Creates an **RdbPredicates** object to search for the records in the specified column that are out of the specified range.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1033,14 +763,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.notIn("NAME", ["Lisa", "Rose"])
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## offsetAs
 
@@ -1051,8 +774,6 @@ offsetAs(rowOffset: number): RdbPredicates
 Creates an **RdbPredicates** object to specify the start position of the returned result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset, pass in **-1** in **limitAs**.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1070,14 +791,7 @@ Creates an **RdbPredicates** object to specify the start position of the returne
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3)
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## or
 
@@ -1089,8 +803,6 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
@@ -1101,16 +813,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Lisa")
-    .or()
-    .equalTo("NAME", "Rose")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## orderByAsc
 
@@ -1121,8 +824,6 @@ orderByAsc(field: string): RdbPredicates
 Creates an **RdbPredicates** object to sort the records in the specified column in ascending order.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1140,14 +841,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.orderByAsc("NAME")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
 
 ## orderByDesc
 
@@ -1158,8 +852,6 @@ orderByDesc(field: string): RdbPredicates
 Creates an **RdbPredicates** object to sort the records in the specified column in descending order.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1177,11 +869,4 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.orderByDesc("AGE")
-```
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |

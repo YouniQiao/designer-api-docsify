@@ -3,21 +3,19 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## findMatchingWlan
 
 ```TypeScript
 function findMatchingWlan(
-      wlanBssidArray: Array<string>, rssiThreshold: int, needStartScan: boolean): Promise<Array<MatchingWlanInfo>>
+      wlanBssidArray: Array<string>, rssiThreshold: number, needStartScan: boolean): Promise<Array<MatchingWlanInfo>>
 ```
 
 使用WLAN扫描结果与输入的WLAN BSSID列表进行匹配，匹配成功时返回对应的WLAN设备信息，匹配失败时返回空数组(数组长度为0)。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -32,7 +30,7 @@ function findMatchingWlan(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | wlanBssidArray | Array & lt;string & gt; | 是 |
-| [rssiThreshold](arkts-location-geolocationmanager-bluetoothsearchrequestparams-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [rssiThreshold](arkts-location-geolocationmanager-bluetoothsearchrequestparams-i.md) | number | 是 |
 | [needStartScan](arkts-location-geolocationmanager-locatingrequireddataconfig-i-sys.md) | boolean | 是 |
 
 **返回值：**
@@ -49,20 +47,3 @@ function findMatchingWlan(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) |
 | [3301800](../errorcode-geoLocationManager.md#3301800-启动wi-fi或蓝牙扫描失败) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  let wlanBssidArray: Array<string> = ["02:1b:32:23:ea:91", "02:1b:32:23:ea:93"];
-  let rssiThreshold: number = -70;
-  let needStartScan: boolean = true;
-  geoLocationManager.findMatchingWlan(wlanBssidArray, rssiThreshold, needStartScan).then((res) => {
-    console.info("WLAN BSSID Matched Result: " + JSON.stringify(res));
-  })
-} catch (error) {
-  console.error("findMatchingWlan: errCode " + error.code + ", errMessage " + error.message);
-}
-```

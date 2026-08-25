@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
-import { BackupExtensionAbility } from '@kit.CoreFileKit';
-import { BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility, BundleVersion } from 'kits/@kit.CoreFileKit';
+import { BackupExtensionAbility } from 'kits/@kit.CoreFileKit';
+import { BundleVersion } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

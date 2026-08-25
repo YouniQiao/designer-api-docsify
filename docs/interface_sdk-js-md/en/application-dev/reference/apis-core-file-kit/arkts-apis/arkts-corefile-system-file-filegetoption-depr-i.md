@@ -4,8 +4,6 @@ Defines the options used in get().
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -25,8 +23,6 @@ Callback invoked when the API call is complete.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -40,8 +36,6 @@ fail?: (data: string, code: number) => void
 Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error **301**: file or directory not found
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
@@ -63,8 +57,6 @@ success?: (file: FileResponse) => void
 Callback invoked when the API call is successful. **file** is [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#fileresponse).
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
@@ -88,8 +80,6 @@ Indicates whether to recursively obtain the file list in a subdirectory. The val
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -107,8 +97,6 @@ URI of the file. Restricted by the underlying file system of lite wearables, the
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 

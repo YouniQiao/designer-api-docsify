@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## enableAirplaneMode
@@ -15,8 +15,6 @@ function enableAirplaneMode(callback: AsyncCallback<void>): void
 Enables the airplane mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -40,25 +38,6 @@ Enables the airplane mode. This API uses an asynchronous callback to return the 
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.enableAirplaneMode((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.enableAirplaneMode().then((error: void) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 
 ## enableAirplaneMode
 
@@ -69,8 +48,6 @@ function enableAirplaneMode(): Promise<void>
 Enables airplane mode. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -92,7 +69,3 @@ Enables airplane mode. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [enableAirplaneMode](#enableairplanemode)

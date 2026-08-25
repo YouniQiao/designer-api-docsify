@@ -4,28 +4,24 @@ Describes the floating ball window information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
+import { floatingBall } from 'kits/@kit.ArkUI';
 ```
 
 ## windowId
 
 ```TypeScript
-readonly windowId: int
+readonly windowId: number
 ```
 
 ID of the floating ball window. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

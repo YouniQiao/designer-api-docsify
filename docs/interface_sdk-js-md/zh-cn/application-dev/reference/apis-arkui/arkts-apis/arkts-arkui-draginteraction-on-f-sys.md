@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragInteraction } from '@kit.ArkUI';
+import { dragInteraction } from 'kits/@kit.ArkUI';
 ```
 
 ## on('drag')
@@ -15,8 +15,6 @@ function on(type: 'drag', callback: Callback<DragState>): void
 注册监听拖拽状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -35,15 +33,3 @@ function on(type: 'drag', callback: Callback<DragState>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-try {
-  dragInteraction.on('drag', (data: dragInteraction.DragState) => {
-    console.info(`Drag interaction event: ${data}`);
-  });
-} catch (error) {
-  console.error(`Register failed, code: ${error.code}, message: ${error.message}`);
-}
-```

@@ -4,29 +4,25 @@ Describes audio capturer configurations.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## playbackCaptureUid
 
 ```TypeScript
-playbackCaptureUid?: int
+playbackCaptureUid?: number
 ```
 
 The target application uid for voice/video communication playback capture. This parameter takes effect only when [MODE_ONLY_VOIP](arkts-audio-audio-audioplaybackcapturemode-e-sys.md#mode_only_voip) is set in [playbackCaptureMode](arkts-audio-audio-audiocaptureroptions-i.md#playbackcapturemode). In other playback capture modes, this parameter is ignored. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Perfered input device for this audio capturer. The preferredInputDevice must be 
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 

@@ -13,8 +13,6 @@ function has(target: object, propertyKey: PropertyKey): boolean
 
 Equivalent to `propertyKey in target`.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |

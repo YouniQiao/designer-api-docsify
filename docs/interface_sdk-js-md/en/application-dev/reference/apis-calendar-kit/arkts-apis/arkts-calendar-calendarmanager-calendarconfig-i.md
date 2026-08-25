@@ -4,14 +4,12 @@ Describes the calendar configuration information.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from '@kit.CalendarKit';
+import { calendarManager } from 'kits/@kit.CalendarKit';
 ```
 
 ## color
@@ -26,8 +24,6 @@ Calendar color. If the value is a number, the value ranges from 0x000001 to 0xFF
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## enableReminder
@@ -41,7 +37,5 @@ Whether to enable the reminder for events in the calendar. The value **true** me
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Applications.CalendarData

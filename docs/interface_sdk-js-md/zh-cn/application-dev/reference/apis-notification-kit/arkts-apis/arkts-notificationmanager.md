@@ -12,14 +12,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## 汇总
@@ -43,10 +41,7 @@ import { notificationManager } from '@kit.NotificationKit';
 | [getActiveNotifications](arkts-notification-notificationmanager-getactivenotifications-f.md) |
 | [getBadgeNumber](arkts-notification-notificationmanager-getbadgenumber-f.md) |
 | [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md) |
-| [getNotificationParameters](arkts-notification-notificationmanager-getnotificationparameters-f.md) |
 | [getNotificationSetting](arkts-notification-notificationmanager-getnotificationsetting-f.md) |
-| [getSlot](arkts-notification-notificationmanager-getslot-f.md) |
-| [getSlot](arkts-notification-notificationmanager-getslot-f.md) |
 | [getSlot](arkts-notification-notificationmanager-getslot-f.md) |
 | [getSlot](arkts-notification-notificationmanager-getslot-f.md) |
 | [getSlots](arkts-notification-notificationmanager-getslots-f.md) |
@@ -95,8 +90,6 @@ import { notificationManager } from '@kit.NotificationKit';
 | [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md) |
 | [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) |
 | [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) |
-| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) |
-| [getActiveNotificationByFilter](arkts-notification-notificationmanager-getactivenotificationbyfilter-f-sys.md) |
 | [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md) |
 | [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md) |
 | [getAllNotificationEnabledBundles](arkts-notification-notificationmanager-getallnotificationenabledbundles-f-sys.md) |
@@ -118,7 +111,6 @@ import { notificationManager } from '@kit.NotificationKit';
 | [getPriorityStrategyByBundles](arkts-notification-notificationmanager-getprioritystrategybybundles-f-sys.md) |
 | [getReminderInfoByBundles](arkts-notification-notificationmanager-getreminderinfobybundles-f-sys.md) |
 | [getRingtoneInfoByBundle](arkts-notification-notificationmanager-getringtoneinfobybundle-f-sys.md) |
-| [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md) |
 | [getSlotByBundle](arkts-notification-notificationmanager-getslotbybundle-f-sys.md) |
 | [getSlotFlagsByBundle](arkts-notification-notificationmanager-getslotflagsbybundle-f-sys.md) |
 | [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md) |
@@ -148,14 +140,11 @@ import { notificationManager } from '@kit.NotificationKit';
 | [isSmartReminderEnabled](arkts-notification-notificationmanager-issmartreminderenabled-f-sys.md) |
 | [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) |
 | [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) |
-| [off](arkts-notification-notificationmanager-off-f-sys.md#offchecknotification) |
+| off |
 | [offBadgeNumberQuery](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md) |
-| [offCheckNotification](arkts-notification-notificationmanager-offchecknotification-f-sys.md) |
-| [on](arkts-notification-notificationmanager-on-f-sys.md#onchecknotification) |
-| [on](arkts-notification-notificationmanager-on-f-sys.md#onchecknotification) |
+| on |
+| on |
 | [onBadgeNumberQuery](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md) |
-| [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) |
-| [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) |
 | [publishAsBundle](arkts-notification-notificationmanager-publishasbundle-f-sys.md) |

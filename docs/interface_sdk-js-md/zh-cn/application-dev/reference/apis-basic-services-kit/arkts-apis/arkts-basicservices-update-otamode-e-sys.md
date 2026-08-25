@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ REGULAR_OTA = 0
 正常升级，先下载完整升级包到本地，再执行安装升级，适用于大多数常规升级场景。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 
@@ -36,8 +32,6 @@ STREAM_OTA = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ AB正常升级，适用于A/B分区设备。详见[术语](../../../basic-servic
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Update.UpdateService
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ AB_STREAM_OTA = 3
 AB流式升级，适用于A/B分区设备。详见[术语](../../../basic-services/update/update-kit-term.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Update.UpdateService
 

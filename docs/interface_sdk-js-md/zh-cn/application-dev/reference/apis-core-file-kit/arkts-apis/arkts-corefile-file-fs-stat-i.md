@@ -4,16 +4,14 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## isBlockDevice
@@ -26,8 +24,6 @@ isBlockDevice(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -42,13 +38,6 @@ isBlockDevice(): boolean
 | --- |
 | 13900005 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isBLockDevice = fileIo.statSync(filePath).isBlockDevice();
-```
 
 ## isCharacterDevice
 
@@ -60,8 +49,6 @@ isCharacterDevice(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -76,13 +63,6 @@ isCharacterDevice(): boolean
 | --- |
 | 13900005 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isCharacterDevice = fileIo.statSync(filePath).isCharacterDevice();
-```
 
 ## isDirectory
 
@@ -94,8 +74,6 @@ isDirectory(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -112,13 +90,6 @@ isDirectory(): boolean
 | --- |
 | 13900005 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let dirPath = pathDir + "/test";
-let isDirectory = fileIo.statSync(dirPath).isDirectory();
-```
 
 ## isFIFO
 
@@ -130,8 +101,6 @@ isFIFO(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -147,13 +116,6 @@ isFIFO(): boolean
 | 13900005 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFIFO = fileIo.statSync(filePath).isFIFO();
-```
-
 ## isFile
 
 ```TypeScript
@@ -163,8 +125,6 @@ isFile(): boolean
 用于判断文件是否是普通文件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -183,13 +143,6 @@ isFile(): boolean
 | 13900005 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFile = fileIo.statSync(filePath).isFile();
-```
-
 ## isSocket
 
 ```TypeScript
@@ -199,8 +152,6 @@ isSocket(): boolean
 判断文件是否是套接字。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -216,13 +167,6 @@ isSocket(): boolean
 | --- |
 | 13900005 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isSocket = fileIo.statSync(filePath).isSocket();
-```
 
 ## isSymbolicLink
 
@@ -234,8 +178,6 @@ isSymbolicLink(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
@@ -250,13 +192,6 @@ isSymbolicLink(): boolean
 | --- |
 | 13900005 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isSymbolicLink = fileIo.statSync(filePath).isSymbolicLink();
-```
 
 ## atime
 
@@ -270,8 +205,6 @@ readonly atime: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -290,8 +223,6 @@ readonly atimeNs?:bigint
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## ctime
@@ -305,8 +236,6 @@ readonly ctime: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -322,8 +251,6 @@ readonly ctimeNs?:bigint
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## gid
@@ -337,8 +264,6 @@ readonly gid: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -354,8 +279,6 @@ readonly ino: bigint
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## location
@@ -369,8 +292,6 @@ readonly location: LocationType
 **类型：** [LocationType](arkts-corefile-file-fs-locationtype-e.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -396,8 +317,6 @@ readonly mode: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -413,8 +332,6 @@ readonly mtime: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -432,8 +349,6 @@ readonly mtimeNs?:bigint
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## size
@@ -447,8 +362,6 @@ readonly size: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -465,7 +378,5 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

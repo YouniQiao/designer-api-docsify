@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getDisplayCountry
@@ -15,8 +15,6 @@ export function getDisplayCountry(country: string, locale: string, sentenceCase?
 Obtains the localized name of the specified country/region.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -37,24 +35,3 @@ Obtains the localized name of the specified country/region.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let displayCountry: string = i18n.System.getDisplayCountry('CN', 'en-GB'); // displayCountry = 'China'
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.getDisplayCountry failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let countryName: string = i18n.getDisplayCountry('zh-CN', 'en-GB', true); // countryName = 'China'
-countryName = i18n.getDisplayCountry('zh-CN', 'en-GB'); // countryName = 'China'
-```

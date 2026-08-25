@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## setPowerPolicy
@@ -15,8 +15,6 @@ function setPowerPolicy(admin: Want, powerScene: PowerScene, powerPolicy: PowerP
 设置电源策略。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -47,26 +45,3 @@ function setPowerPolicy(admin: Want, powerScene: PowerScene, powerPolicy: PowerP
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let delayTime = 0;
-  let powerScene: deviceSettings.PowerScene = deviceSettings.PowerScene.TIME_OUT;
-  let powerPolicyAction: deviceSettings.PowerPolicyAction = deviceSettings.PowerPolicyAction.AUTO_SUSPEND;
-  let powerPolicy: deviceSettings.PowerPolicy = {powerPolicyAction, delayTime};
-  deviceSettings.setPowerPolicy(wantTemp, powerScene, powerPolicy);
-  console.info(`Succeeded in setting power policy`);
-} catch (err) {
-  console.error(`Failed to set power policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

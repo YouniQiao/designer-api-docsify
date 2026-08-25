@@ -3,17 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@kit.ArkUI';
+import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
-
-### 函数
-
-| 名称 |
-| --- |
-| [ContainerReader](arkts-arkui-arkui-components-containerreader-containerreader-f.md) |
-| [ContainerReader](arkts-arkui-arkui-components-containerreader-containerreader-f.md) |
 
 ### 类
 
@@ -26,7 +19,6 @@ import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@k
 | 名称 |
 | --- |
 | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md) |
 | [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) |
 | [ContainerReaderInterface](arkts-arkui-arkui-components-containerreader-containerreaderinterface-i.md) |
 
@@ -34,5 +26,5 @@ import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@k
 
 | 名称 |
 | --- |
-| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md#containerreader) |
+| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md) |
 | [ContainerReaderInstance](arkts-arkui-arkui-components-containerreader-con.md#containerreaderinstance) |

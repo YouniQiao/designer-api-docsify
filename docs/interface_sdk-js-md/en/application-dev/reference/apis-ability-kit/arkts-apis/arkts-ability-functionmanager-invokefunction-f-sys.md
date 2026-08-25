@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from '@kit.AbilityKit';
+import { functionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## invokeFunction
@@ -16,8 +16,6 @@ function invokeFunction(functionNamespace: string, functionName: string,
 Invoke a function by functionNamespace and functionName.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_FUNCTION
 

@@ -10,8 +10,6 @@ Enumerates the preset vibration effect IDs. This parameter is needed when you ca
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_CLOCK_TIMER
@@ -23,7 +21,5 @@ EFFECT_CLOCK_TIMER = 'haptic.clock.timer'
 Vibration effect when a user adjusts the timer.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice

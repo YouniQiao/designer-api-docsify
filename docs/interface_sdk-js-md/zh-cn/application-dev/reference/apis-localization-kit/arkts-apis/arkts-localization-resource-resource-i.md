@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## bundleName
@@ -20,8 +18,6 @@ bundleName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -29,17 +25,16 @@ bundleName: string
 ## id
 
 ```TypeScript
-id: long
+id: number
 ```
 
 资源ID，取值如下：  
-- 应用资源区间：[0x01000000, 0x06FFFFFF] 和 [0x08000000, 0xFFFFFFFF]，表示应用自身的资源ID。 - 系统资源区间：[0x07000000, 0x07FFFFFF]，表示系统预置的资源ID。
+- 应用资源区间：[0x01000000, 0x06FFFFFF] 和 [0x08000000, 0xFFFFFFFF]，表示应用自身的资源ID。  
+- 系统资源区间：[0x07000000, 0x07FFFFFF]，表示系统预置的资源ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -57,8 +52,6 @@ moduleName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -75,8 +68,6 @@ params?: any[]
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -84,16 +75,26 @@ params?: any[]
 ## type
 
 ```TypeScript
-type?: int
+type?: number
 ```
 
-资源类型，取值如下： <br>- 10001: color <br>- 10002: float <br>- 10003: string <br>- 10004: plural <br>- 10005: boolean <br>- 10006: intarray <br>- 10007: integer <br>- 10008: pattern <br>- 10009: strarray <br>- 20000: media <br>- 30000: rawfile <br>- 40000: symbol
+资源类型，取值如下：   
+- 10001: color   
+- 10002: float   
+- 10003: string   
+- 10004: plural   
+- 10005: boolean   
+- 10006: intarray   
+- 10007: integer   
+- 10008: pattern   
+- 10009: strarray   
+- 20000: media   
+- 30000: rawfile   
+- 40000: symbol
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## installEnterpriseReSignatureCertificate
@@ -27,8 +27,6 @@ designated internal software and tools are installed and run on employees' mobil
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -41,8 +39,8 @@ designated internal software and tools are installed and run on employees' mobil
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 | certificateAlias | string | Yes |
-| fd | int | Yes |
-| accountId | int | Yes |
+| fd | number | Yes |
+| accountId | number | Yes |
 
 **Error codes:**
 
@@ -54,33 +52,3 @@ designated internal software and tools are installed and run on employees' mobil
 | [9201006](../errorcode-enterpriseDeviceManager.md#9201006-installed-enterprise-re-signing-certificate-exceeding-the-limit) |
 | [9201007](../errorcode-enterpriseDeviceManager.md#9201007-invalid-enterprise-re-signing-certificate) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// The test.cer certificate file must be placed in the app sandbox and be a valid enterprise re-signing certificate.
-// Replace with actual values.
-const filePath = '/test.cer';
-// Replace with actual values.
-let certificateAlias: string = 'test.cer';
-let fd: number = fs.openSync(filePath, fs.OpenMode.READ_ONLY).fd;
-// Replace with actual values.
-let accountId: number = 100;
-try {
-  securityManager.installEnterpriseReSignatureCertificate(
-    wantTemp, certificateAlias, fd, accountId);
-  console.info('Success to install enterprise re signature certificate.');
-} catch (err) {
-  console.error(`Failed to install enterprise re signature certificate.
-    Code: ${err.code}, message: ${err.message}`);
-};
-```

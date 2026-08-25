@@ -18,7 +18,7 @@ The Window module provides basic window management capabilities, such as creatin
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -39,14 +39,5 @@ import { window } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [Callback](arkts-arkui-callback-t.md) |
 | [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md) |
 | [WindowEventListener](arkts-arkui-windoweventlistener-t.md) |
-
-<!--Del-->
-### Types(System API)
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [TransitionControllerCallback](arkts-arkui-transitioncontrollercallback-t-sys.md) |
-<!--DelEnd-->

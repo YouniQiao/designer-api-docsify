@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getTrafficStatsByNetwork
@@ -15,8 +15,6 @@ function getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise<UidNetStats
 获取指定时间段内所有应用在指定网络中的流量使用详情，使用 Promise 异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
@@ -47,23 +45,3 @@ function getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise<UidNetStats
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) |
-
-**示例**
-
-```TypeScript
-import { connection, statistics } from '@kit.NetworkKit';
-
-let networkInfo: statistics.NetworkInfo = {
-  type: connection.NetBearType.BEARER_CELLULAR,
-  startTime: Math.floor(Date.now() / 1000) - 86400 * 7, 
-  endTime: Math.floor(Date.now() / 1000) + 5,
-  simId: 1,
-}
-
-statistics.getTrafficStatsByNetwork(networkInfo).then((statsInfo: statistics.UidNetStatsInfo) => {
-  let rank: Map<string, object> = new Map<string, object>(Object.entries(statsInfo));
-  rank.forEach((value: object, key: string) => {
-    console.info("getTrafficStatsByNetwork key=" + key + ", value=" + JSON.stringify(value));
-  })
-})
-```

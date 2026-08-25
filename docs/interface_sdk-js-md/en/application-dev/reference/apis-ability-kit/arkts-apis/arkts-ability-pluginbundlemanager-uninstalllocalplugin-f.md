@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pluginBundleManager } from '@kit.AbilityKit';
+import { pluginBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## uninstallLocalPlugin
@@ -15,8 +15,6 @@ function uninstallLocalPlugin(pluginBundleName: string): Promise<void>
 Uninstall the plugin for self application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN
 

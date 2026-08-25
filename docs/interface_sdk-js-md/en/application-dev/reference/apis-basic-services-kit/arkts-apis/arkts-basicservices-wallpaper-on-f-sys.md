@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## on('wallpaperChange')
@@ -18,8 +18,6 @@ function on(
 Registers a listener for wallpaper changes to receive notifications about the changes.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -38,16 +36,3 @@ Registers a listener for wallpaper changes to receive notifications about the ch
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-try {
-    let listener = (wallpaperType: wallpaper.WallpaperType, resourceType: wallpaper.WallpaperResourceType): void => {
-        console.info(`wallpaper color changed.`);
-    };
-    wallpaper.on('wallpaperChange', listener);
-} catch (error) {
-    console.error(`failed to on. Code: ${error.code}, Message: ${error.message}`);
-}
-```

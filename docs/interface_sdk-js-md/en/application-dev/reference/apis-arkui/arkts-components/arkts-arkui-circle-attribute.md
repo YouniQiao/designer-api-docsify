@@ -1,12 +1,10 @@
 # Circle properties/events
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** CircleAttribute extends CommonShapeMethod<CircleAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ Sets the color of the fill area. An invalid value is handled as the default valu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -37,7 +33,7 @@ Sets the color of the fill area. An invalid value is handled as the default valu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ResourceColor \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | Yes |
 
 ## stroke
 
@@ -49,8 +45,6 @@ Sets the stroke color. This attribute can be dynamically set using attributeModi
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -61,4 +55,4 @@ Sets the stroke color. This attribute can be dynamically set using attributeModi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ResourceColor \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | Yes |

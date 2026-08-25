@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## isIdleStateSync
@@ -15,8 +15,6 @@ function isIdleStateSync(bundleName: string): boolean
 Checks whether the application with a specified bundle name is in the idle state.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -49,9 +47,3 @@ Checks whether the application with a specified bundle name is in the idle state
 | [10000003](../errorcode-DeviceUsageStatistics.md#10000003-system-service-operation-failure) |
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
-
-**Examples**
-
-```TypeScript
-let isIdleState: boolean = usageStatistics.isIdleStateSync("com.ohos.camera");
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { scriptManager } from '@kit.AbilityKit';
+import { scriptManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## completeArkTSScriptInApp
@@ -15,8 +15,6 @@ function completeArkTSScriptInApp(context: Context, requestCode: string, result:
 完成应用的ArkTS脚本执行，上报执行结果。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,14 +4,12 @@ pluginComponentManager.request方法接收到的回调结果。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
+import { pluginComponentManager, PluginComponentTemplate } from 'kits/@kit.ArkUI';
 ```
 
 ## componentTemplate
@@ -25,8 +23,6 @@ componentTemplate: PluginComponentTemplate
 **类型：** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ data: KVObject
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -61,8 +55,6 @@ extraData: KVObject
 **类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

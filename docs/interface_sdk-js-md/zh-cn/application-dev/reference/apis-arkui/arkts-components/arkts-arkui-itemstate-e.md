@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **替代接口：** Swiper
@@ -23,8 +21,6 @@ Normal
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **替代接口：** index
@@ -40,15 +36,13 @@ Disabled
 ```
 
 不可用状态，右侧文本按钮灰度显示，不可点击进入下一个StepperItem。  
-**说明：**从API version 8开始支持，从API version 22开始废弃，建议使用indicatorInteractive替代。
+**说明：**从API version 8开始支持，从API version 22开始废弃，建议使用[indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive)替代。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
-**替代接口：** indicatorInteractive
+**替代接口：** [indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -64,8 +58,6 @@ Waiting
 **说明：**从API version 8开始支持，从API version 22开始废弃，建议使用Swiper替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 
@@ -85,8 +77,6 @@ Skip
 **说明：**从API version 8开始支持，从API version 22开始废弃，建议使用index替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 

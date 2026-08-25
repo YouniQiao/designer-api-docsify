@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## deactivateCooperate
@@ -15,8 +15,6 @@ function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>
 停止键鼠穿越，使用Callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
@@ -39,72 +37,6 @@ function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.deactivateCooperate(false, (error: BusinessError) => {
-    if (error) {
-      console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Stop Keyboard mouse crossing success.`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  cooperate.deactivateCooperate(false, (error: BusinessError<void>|null, info: undefined) => {
-    if (error) {
-      console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Stop Keyboard mouse crossing success.`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.deactivateCooperate(false).then(() => {
-    console.info(`Stop Keyboard mouse crossing success.`);
-  }, (error: BusinessError) => {
-    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-try {
-  cooperate.deactivateCooperate(false).then(() => {
-    console.info(`Stop Keyboard mouse crossing success.`);
-  }, (error: Error): void => {
-    console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## deactivateCooperate
 
@@ -115,8 +47,6 @@ function deactivateCooperate(isUnchained: boolean): Promise<void>
 停止键鼠穿越，使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
@@ -142,7 +72,3 @@ function deactivateCooperate(isUnchained: boolean): Promise<void>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [deactivateCooperate](#deactivatecooperate)

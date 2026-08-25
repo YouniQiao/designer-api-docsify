@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 ```
 
 ## getAbilityDelegator
@@ -16,8 +16,6 @@ function getAbilityDelegator(): AbilityDelegator
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -27,28 +25,3 @@ function getAbilityDelegator(): AbilityDelegator
 | 类型 |
 | --- |
 | [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) |
-
-**示例**
-
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取应用程序的AbilityDelegator对象
-let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-// 构造Want参数，指定目标Ability
-let want: Want = {
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EntryAbility'
-};
-
-// 启动指定Ability
-abilityDelegator.startAbility(want, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed start ability. code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Success start ability.');
-  }
-});
-```

@@ -4,8 +4,6 @@ Defines the parameters required for the uninstall of a shared bundle.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the parameters required for the uninstall of a shared bundle.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -28,8 +26,6 @@ Name of the shared bundle.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Name of the shared bundle.
 ## versionCode
 
 ```TypeScript
-versionCode?: int
+versionCode?: number
 ```
 
 Version number of the shared bundle. By default, no value is passed, and all shared bundles of the specified name are uninstalled.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

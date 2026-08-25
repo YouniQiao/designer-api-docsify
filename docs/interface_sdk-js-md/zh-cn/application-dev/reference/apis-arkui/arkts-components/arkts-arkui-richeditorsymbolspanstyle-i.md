@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ effectStrategy?: SymbolEffectStrategy
 
 设置SymbolSpan组件动效策略。默认值：SymbolEffectStrategy.NONE。
 
-**类型：** SymbolEffectStrategy
+**类型：** [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,11 +37,9 @@ fontColor?: Array<ResourceColor>
 
 设置SymbolSpan组件颜色。默认值：不同渲染策略下默认值不同。
 
-**类型：** Array&lt;ResourceColor&gt;
+**类型：** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ fontSize?: number | string | Resource
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -85,8 +77,6 @@ fontWeight?: number | FontWeight | string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -101,11 +91,9 @@ renderingStrategy?: SymbolRenderingStrategy
 
 设置SymbolSpan组件渲染策略。默认值：SymbolRenderingStrategy.SINGLE。
 
-**类型：** SymbolRenderingStrategy
+**类型：** [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

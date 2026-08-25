@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { JSON } from '@kit.ArkTS';
+import { JSON } from 'kits/@kit.ArkTS';
 ```
 
 ## remove
@@ -16,8 +16,6 @@ function remove(obj: object, property: string): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -28,16 +26,3 @@ function remove(obj: object, property: string): void
 | --- | --- | --- |
 | obj | object | 是 |
 | property | string | 是 |
-
-**示例**
-
-```TypeScript
-import { JSON } from '@kit.ArkTS';
-
-const jsonText = '{"name": "John", "age": 30, "city": "ChongQing"}';
-let inputObj = JSON.parse(jsonText);
-JSON.remove(inputObj, "name");
-let result = JSON.has(inputObj, "name");
-console.info("result = " + result);
-// 打印结果：result = false
-```

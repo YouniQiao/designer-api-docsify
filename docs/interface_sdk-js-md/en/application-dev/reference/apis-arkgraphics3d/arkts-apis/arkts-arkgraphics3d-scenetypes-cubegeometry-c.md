@@ -6,8 +6,6 @@ A cube geometry type that inherits from GeometryDefinition.@extends GeometryDefi
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## size
@@ -21,7 +19,5 @@ Width, height, and depth of the cube, indicating the size of the cube. The unit 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

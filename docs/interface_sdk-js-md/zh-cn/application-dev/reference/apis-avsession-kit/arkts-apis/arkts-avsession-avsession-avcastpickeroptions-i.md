@@ -4,14 +4,12 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## menuPosition
@@ -25,8 +23,6 @@ menuPosition?: MenuPosition
 **类型：** [MenuPosition](arkts-avsession-avsession-menuposition-i.md)
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -42,8 +38,6 @@ pickerStyle?: AVCastPickerStyle
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## sessionType
@@ -57,8 +51,6 @@ sessionType?: AVSessionType
 **类型：** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

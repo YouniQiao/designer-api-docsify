@@ -6,8 +6,6 @@ Inherits from Array&lt;[ToolBarOption](arkts-arkui-arkui-advanced-toolbar-toolba
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -17,5 +15,5 @@ Inherits from Array&lt;[ToolBarOption](arkts-arkui-arkui-advanced-toolbar-toolba
 ## Modules to Import
 
 ```TypeScript
-import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
+import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from 'kits/@kit.ArkUI';
 ```

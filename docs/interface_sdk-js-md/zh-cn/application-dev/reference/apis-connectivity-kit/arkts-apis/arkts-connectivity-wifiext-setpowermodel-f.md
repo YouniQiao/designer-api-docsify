@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiext } from '@kit.ConnectivityKit';
+import { wifiext } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setPowerModel
@@ -15,8 +15,6 @@ function setPowerModel(model: PowerModel): boolean
 设置功率模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

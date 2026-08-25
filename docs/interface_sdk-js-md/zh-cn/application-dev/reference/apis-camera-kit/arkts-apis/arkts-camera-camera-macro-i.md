@@ -6,14 +6,12 @@ Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i.md)。提供使能�
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableMacro
@@ -28,8 +26,6 @@ enableMacro(enabled: boolean): void
 > 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i.md#ismacrosupported)接口查询当前设备是否支持微距能力。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -48,14 +44,3 @@ enableMacro(enabled: boolean): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 | [7400102](../errorcode-camera.md#7400102-非法操作) |
-
-**示例**
-
-```TypeScript
-function enableMacro(photoSession: camera.PhotoSession): void {
-  let isSupported: boolean = photoSession.isMacroSupported();
-  if (isSupported) {
-    photoSession.enableMacro(true);
-  }
-}
-```

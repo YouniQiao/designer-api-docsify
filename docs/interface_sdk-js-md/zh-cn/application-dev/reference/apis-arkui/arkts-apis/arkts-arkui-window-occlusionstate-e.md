@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## NO_OCCLUSION
@@ -17,8 +15,6 @@ NO_OCCLUSION = 0
 窗口完全可见（没有任何部分被其他非透明窗口遮挡）。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -32,8 +28,6 @@ PARTIAL_OCCLUSION = 1
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## FULL_OCCLUSION
@@ -45,7 +39,5 @@ FULL_OCCLUSION = 2
 窗口完全不可见（完全被其他非透明窗口遮挡，或窗口最小化，或窗口隐藏）。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager

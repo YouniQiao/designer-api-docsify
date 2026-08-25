@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setSimLabelIndex
 
 ```TypeScript
-function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>
+function setSimLabelIndex(simId: number, simLabelIndex: number): Promise<void>
 ```
 
 Set the SIM card labelIndex.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,8 +26,8 @@ Set the SIM card labelIndex.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| simId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| [simLabelIndex](arkts-telephony-sim-iccaccountinfo-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| simId | number | Yes |
+| [simLabelIndex](arkts-telephony-sim-iccaccountinfo-i-sys.md) | number | Yes |
 
 **Return value:**
 

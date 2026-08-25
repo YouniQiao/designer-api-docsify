@@ -7,14 +7,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## select
@@ -31,8 +29,6 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -58,72 +54,6 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 | 13900042 |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example01(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
-    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
-    photoSelectOptions.maxSelectNumber = 5;
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select(photoSelectOptions).then((photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
-      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
-    }).catch((err: BusinessError) => {
-      console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example02(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
-    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE;
-    photoSelectOptions.maxSelectNumber = 5;
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
-      if (err) {
-        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
-        return;
-      }
-      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example03(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    photoPicker.select((err: BusinessError, photoSelectResult: photoAccessHelper.PhotoSelectResult) => {
-      if (err) {
-        console.error(`PhotoViewPicker.select failed with err: ${err.code}, ${err.message}`);
-        return;
-      }
-      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`PhotoViewPicker failed with err: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## select
 
 ```TypeScript
@@ -138,8 +68,6 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -160,10 +88,6 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 | 13900042 |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |
 
-**示例**
-
-参见 [select](#select)
-
 ## select
 
 ```TypeScript
@@ -178,8 +102,6 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -197,7 +119,3 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13900042 |
-
-**示例**
-
-参见 [select](#select)

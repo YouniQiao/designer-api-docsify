@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## checkPermissionInUse
@@ -15,8 +15,6 @@ function checkPermissionInUse(permissionName: Permissions): boolean
 Queries whether a specified sensitive permission is currently being used. It can be used in scenarios such as displaying the real-time permission usage status on the permission management interface. The judgment is based on whether there is currently an active call that has been marked as started by [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) and has not yet been marked as stopped by [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 

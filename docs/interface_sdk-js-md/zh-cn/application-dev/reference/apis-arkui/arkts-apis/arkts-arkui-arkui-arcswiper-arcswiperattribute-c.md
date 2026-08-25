@@ -6,14 +6,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## 导入模块
 
 ```TypeScript
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
+import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from 'kits/@kit.ArkUI';
 ```
 
 ## customContentTransition
@@ -26,8 +24,6 @@ customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): 
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -36,7 +32,7 @@ customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| transition | Optional&lt;[SwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-swipercontentanimatedtransition-i.md)&gt; | 是 |
+| transition | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-swipercontentanimatedtransition-i.md)&gt; | 是 |
 
 **返回值：**
 
@@ -54,8 +50,6 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttri
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -64,7 +58,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttri
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | 是 |
+| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
 
 **返回值：**
 
@@ -82,8 +76,6 @@ disableSwipe(disabled: Optional<boolean>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -92,7 +84,7 @@ disableSwipe(disabled: Optional<boolean>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| disabled | Optional & lt;boolean & gt; | 是 |
+| [disabled](../arkts-components/arkts-arkui-statestyles-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 **返回值：**
 
@@ -110,8 +102,6 @@ disableTransitionAnimation(disabled: Optional<boolean>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -120,7 +110,7 @@ disableTransitionAnimation(disabled: Optional<boolean>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| disabled | Optional & lt;boolean & gt; | 是 |
+| [disabled](../arkts-components/arkts-arkui-statestyles-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 **返回值：**
 
@@ -138,8 +128,6 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -148,7 +136,7 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [duration](#duration) | Optional & lt;number & gt; | 是 |
+| [duration](#duration) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 **返回值：**
 
@@ -162,11 +150,9 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 ```
 
-设置边缘滑动效果。目前支持的滑动效果参见EdgeEffect的枚举说明。 通过[ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md)的showNext、showPrevious、finishAnimation接口控制翻页时，回弹效果不生效。
+设置边缘滑动效果。目前支持的滑动效果参见[EdgeEffect](arkts-arkui-edgeeffect-e.md)的枚举说明。 通过[ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md)的showNext、showPrevious、finishAnimation接口控制翻页时，回弹效果不生效。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -176,7 +162,7 @@ effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| edgeEffect | Optional & lt;EdgeEffect & gt; | 是 |
+| edgeEffect | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[EdgeEffect](arkts-arkui-edgeeffect-e.md)&gt; | 是 |
 
 **返回值：**
 
@@ -194,8 +180,6 @@ index(index: Optional<number>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -204,7 +188,7 @@ index(index: Optional<number>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [index](#index) | Optional & lt;number & gt; | 是 |
+| [index](#index) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 **返回值：**
 
@@ -222,8 +206,6 @@ indicator(style: Optional<ArcDotIndicator | boolean>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -232,7 +214,7 @@ indicator(style: Optional<ArcDotIndicator | boolean>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional&lt;[ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) \| boolean & gt; | 是 |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) \| boolean & gt; | 是 |
 
 **返回值：**
 
@@ -246,11 +228,9 @@ indicator(style: Optional<ArcDotIndicator | boolean>): ArcSwiperAttribute
 onAnimationEnd(handler: Optional<AnimationEndHandler>): ArcSwiperAttribute
 ```
 
-切换动画结束时触发该回调。当ArcSwiper切换动效结束时触发，包括动画过程中手势中断或通过SwiperController调用finishAnimation。参数为动画结束后的index值，多列 ArcSwiper时，index为最左侧组件的索引。
+切换动画结束时触发该回调。当ArcSwiper切换动效结束时触发，包括动画过程中手势中断或通过[SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md)调用finishAnimation。参数为动画结束后的index值，多列 ArcSwiper时，index为最左侧组件的索引。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -260,7 +240,7 @@ onAnimationEnd(handler: Optional<AnimationEndHandler>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional&lt;[AnimationEndHandler](arkts-arkui-animationendhandler-t.md)&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[AnimationEndHandler](arkts-arkui-animationendhandler-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -278,8 +258,6 @@ onAnimationStart(handler: Optional<AnimationStartHandler>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -288,7 +266,7 @@ onAnimationStart(handler: Optional<AnimationStartHandler>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional&lt;[AnimationStartHandler](arkts-arkui-animationstarthandler-t.md)&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[AnimationStartHandler](arkts-arkui-animationstarthandler-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -306,8 +284,6 @@ onChange(handler: Optional<IndexChangedHandler>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -316,7 +292,7 @@ onChange(handler: Optional<IndexChangedHandler>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional&lt;[IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md)&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -334,8 +310,6 @@ onGestureSwipe(handler: Optional<GestureSwipeHandler>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -344,35 +318,7 @@ onGestureSwipe(handler: Optional<GestureSwipeHandler>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | Optional&lt;[GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md)&gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |
-
-## setArcSwiperOptions
-
-```TypeScript
-default setArcSwiperOptions(controller?: ArcSwiperController): this
-```
-
-设置arcSwiper选项。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| controller | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | 否 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -390,8 +336,6 @@ vertical(isVertical: Optional<boolean>): ArcSwiperAttribute
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -400,7 +344,7 @@ vertical(isVertical: Optional<boolean>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isVertical | Optional & lt;boolean & gt; | 是 |
+| isVertical | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 **返回值：**
 

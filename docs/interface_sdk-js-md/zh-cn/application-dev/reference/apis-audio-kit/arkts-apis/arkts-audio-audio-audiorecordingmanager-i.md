@@ -8,14 +8,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## enableSystemRecordController
@@ -32,8 +30,6 @@ enableSystemRecordController(show: boolean, config: SystemRecordControllerConfig
 > - 应用必须在前台才能启用该面板，如果应用在后台，启用操作不会生效。禁用面板不受应用前台或后台状态限制。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

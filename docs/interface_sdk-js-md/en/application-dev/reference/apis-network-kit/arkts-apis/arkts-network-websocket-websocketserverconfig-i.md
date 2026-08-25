@@ -4,45 +4,39 @@ Defines the WebSocketServer configuration.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## maxConcurrentClientsNumber
 
 ```TypeScript
-maxConcurrentClientsNumber: int
+maxConcurrentClientsNumber: number
 ```
 
 Maximum number of concurrent clients. When the number of concurrent clients reaches the maximum, the server rejects new connections. The default value is **10**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
 ## maxConnectionsForOneClient
 
 ```TypeScript
-maxConnectionsForOneClient: int
+maxConnectionsForOneClient: number
 ```
 
 Maximum number of connections for each client. The default value is **10**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -58,8 +52,6 @@ Custom protocol.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## serverCert
@@ -73,8 +65,6 @@ Certificate information, which includes the paths of the WebSocketServer certifi
 **Type:** [ServerCert](arkts-network-websocket-servercert-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -90,22 +80,18 @@ IP address of the WebSocketServer. The default value is **0.0.0.0**.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## serverPort
 
 ```TypeScript
-serverPort: int
+serverPort: number
 ```
 
 Port of the WebSocketServer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## updateImsCallMode
 
 ```TypeScript
-function updateImsCallMode(callId: int, mode: ImsCallMode, callback: AsyncCallback<void>): void
+function updateImsCallMode(callId: number, mode: ImsCallMode, callback: AsyncCallback<void>): void
 ```
 
 Updates the IMS call mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Updates the IMS call mode. This API uses an asynchronous callback to return the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | mode | [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -44,42 +42,16 @@ Updates the IMS call mode. This API uses an asynchronous callback to return the 
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.updateImsCallMode(1, 1, (err: BusinessError) => {
-    if (err) {
-        console.error(`updateImsCallMode fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`updateImsCallMode success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.updateImsCallMode(1, 1).then(() => {
-    console.info(`updateImsCallMode success.`);
-}).catch((err: BusinessError) => {
-    console.error(`updateImsCallMode fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## updateImsCallMode
 
 ```TypeScript
-function updateImsCallMode(callId: int, mode: ImsCallMode): Promise<void>
+function updateImsCallMode(callId: number, mode: ImsCallMode): Promise<void>
 ```
 
 Updates the IMS call mode. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -91,7 +63,7 @@ Updates the IMS call mode. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | mode | [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md) | Yes |
 
 **Return value:**
@@ -111,7 +83,3 @@ Updates the IMS call mode. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [updateImsCallMode](#updateimscallmode)

@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## VIBRATOR_STOP_MODE_TIME
@@ -18,8 +16,6 @@ VIBRATOR_STOP_MODE_TIME = 'time'
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## VIBRATOR_STOP_MODE_PRESET
@@ -31,7 +27,5 @@ VIBRATOR_STOP_MODE_PRESET = 'preset'
 停止[VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)类型（预置EffectId模式）的振动。需与startVibration时使用的VibratePreset类型对应。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

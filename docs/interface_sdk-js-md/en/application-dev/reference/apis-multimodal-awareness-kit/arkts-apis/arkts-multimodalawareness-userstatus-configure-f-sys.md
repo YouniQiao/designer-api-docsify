@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## configure
 
 ```TypeScript
-function configure(featureId: UserStatusFeature, detail: string): int
+function configure(featureId: UserStatusFeature, detail: string): number
 ```
 
 Configures feature parameters.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,7 +33,7 @@ Configures feature parameters.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 

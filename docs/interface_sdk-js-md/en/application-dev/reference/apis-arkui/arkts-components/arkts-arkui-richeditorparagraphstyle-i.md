@@ -4,8 +4,6 @@ Describes the paragraph style.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 
 Indent of the paragraph. It has no effect if the paragraph starts with an image or builder span. If of the **Dimension** type, this parameter cannot be set in percentage. Default value: **{"size":["0.00px","0.00px"]}**
 
-**Type:** Dimension \| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ lineBreakStrategy?: LineBreakStrategy
 
 Line break rule.Default value: **LineBreakStrategy.GREEDY**This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphens are not supported.
 
-**Type:** LineBreakStrategy
+**Type:** [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ Spacing between paragraphs.Unit: fp Default value: **0**
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -81,11 +73,9 @@ shaderStyle?: ShaderStyle
 
 Set shader style.
 
-**Type:** ShaderStyle
+**Type:** [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,8 +95,6 @@ Horizontal alignment mode of the text.Default value: **TextAlign.START**
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -124,8 +112,6 @@ Sets the text direction.Default value: TextDirection.DEFAULT
 **Type:** TextDirection
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,8 +131,6 @@ Vertical alignment of text paragraphs.Default value: **TextVerticalAlign.BASELIN
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -164,8 +148,6 @@ Word break rule.Default value: **WordBreak.BREAK_WORD**
 **Type:** WordBreak
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSupportedPkids
 
 ```TypeScript
-function getSupportedPkids(slotId: int) : Promise<string>
+function getSupportedPkids(slotId: number) : Promise<string>
 ```
 
 Obtains the public key ID information supported by the phone.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
@@ -28,7 +26,7 @@ Obtains the public key ID information supported by the phone.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -45,16 +43,3 @@ Obtains the public key ID information supported by the phone.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
-
-try {
-    let supportedPkids: string = await eSIM.getSupportedPkids(1);
-    console.info(`supported pkids is:` + supportedPkids);
-} catch (err) {
-    console.error(`getSupportedPkids, promise: err->${JSON.stringify(err)}`)
-}
-```

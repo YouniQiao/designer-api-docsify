@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## deleteSysVpnConfig
@@ -15,8 +15,6 @@ function deleteSysVpnConfig(vpnId: string): Promise<void>
 Delete the configuration of system VPN network by the specified vpnId.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 

@@ -15,8 +15,6 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** getPreferences
@@ -32,20 +30,3 @@ Reads the specified file and loads its data to the **Storage** instance for data
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Storage](arkts-arkdata-system-storage-storage-c.md) |
-
-**Examples**
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-  path = filePath;
-  console.info("======================>getFilesDirPromise====================>");
-
-  let storage = data_storage.getStorageSync(path + '/mystore');
-  storage.putSync('startup', 'auto');
-  storage.flushSync();
-});
-```

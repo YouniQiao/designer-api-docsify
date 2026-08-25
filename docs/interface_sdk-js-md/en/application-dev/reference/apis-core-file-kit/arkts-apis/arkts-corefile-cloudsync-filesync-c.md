@@ -4,14 +4,12 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -24,8 +22,6 @@ A constructor used to create a **FileSync** instance.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **Error codes:**
@@ -34,41 +30,15 @@ A constructor used to create a **FileSync** instance.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let fileSync = new cloudSync.FileSync()
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
-let download = new cloudSync.Download()
-```
-
-```TypeScript
-let fileSync = new cloudSync.FileSync("com.ohos.demo")
-```
-
 ## getLastSyncTime
 
-ArkTS-Dyn:
 ```TypeScript
 getLastSyncTime(): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-getLastSyncTime(): Promise<long>
 ```
 
 Obtains the last sync time. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -76,7 +46,7 @@ Obtains the last sync time. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -85,53 +55,15 @@ Obtains the last sync time. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.getLastSyncTime().then((timeStamp: number) => {
-  let date = new Date(timeStamp);
-  console.info("get last sync time successfully:"+ date);
-}).catch((err: BusinessError) => {
-  console.error("get last sync time failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
-  if (err) {
-    console.error("get last sync time with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    let date = new Date(timeStamp);
-    console.info("get last sync time successfully:"+ date);
-  }
-});
-```
-
 ## getLastSyncTime
 
-ArkTS-Dyn:
 ```TypeScript
 getLastSyncTime(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-getLastSyncTime(callback: AsyncCallback<long>): void
 ```
 
 Obtains the last sync time. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -139,7 +71,7 @@ Obtains the last sync time. This API uses an asynchronous callback to return the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
@@ -147,10 +79,6 @@ Obtains the last sync time. This API uses an asynchronous callback to return the
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
-
-**Examples**
-
-See [getLastSyncTime](#getlastsynctime)
 
 ## off
 
@@ -162,8 +90,6 @@ Removes the specified callback from the device-cloud sync progress.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **Parameters:**
@@ -171,126 +97,6 @@ Removes the specified callback from the device-cloud sync progress.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'progress' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13600001 |
-
-**Examples**
-
-```TypeScript
-let fileSync = new cloudSync.FileSync();
-
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("file sync state: " + pg.state + "error type:" + pg.error);
-}
-
-fileSync.on('progress', callback);
-
-fileSync.off('progress', callback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-
-let callback = (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-}
-
-try {
-  fileCache.on('progress', callback);
-  fileCache.off('progress', callback);
-} catch (e) {
-  const error = e as BusinessError;
-  console.error(`Error code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (pg: cloudSync.MultiDownloadProgress) => {
-  console.info("download state: " + pg.state);
-}
-
-try {
-  fileCache.on('batchDownload', callback);
-  fileCache.off('batchDownload', callback);
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to unregister download callback, error code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync();
-
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("gallery sync state: " + pg.state + "error type:" + pg.error);
-}
-
-gallerySync.on('progress', callback);
-
-gallerySync.off('progress', callback);
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
-    console.info("syncState: " + pg.state);
-});
-
-gallerySync.off('progress');
-```
-
-```TypeScript
-let download = new cloudSync.Download();
-
-let callback = (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-}
-
-download.on('progress', callback);
-
-download.off('progress', callback);
-```
-
-```TypeScript
-let download = new cloudSync.Download();
-
-download.on('progress', (pg: cloudSync.DownloadProgress) => {
-    console.info("download state:" + pg.state);
-});
-
-download.off('progress');
-```
-
-## offProgress
-
-```TypeScript
-offProgress(callback?: Callback<SyncProgress>): void
-```
-
-Unsubscribes from sync progress event.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | No |
 
 **Error codes:**
@@ -310,8 +116,6 @@ Registers a listener for the device-cloud sync progress.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **Parameters:**
@@ -319,97 +123,6 @@ Registers a listener for the device-cloud sync progress.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'progress' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| 13600001 |
-
-**Examples**
-
-```TypeScript
-let fileSync = new cloudSync.FileSync();
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("file sync state: " + pg.state + "error type:" + pg.error);
-}
-
-fileSync.on('progress', callback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-};
-
-try {
-  fileCache.on('progress', callback);
-} catch (e) {
-  const error = e as BusinessError;
-  console.error(`Error code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let callback = (data: cloudSync.MultiDownloadProgress) => {
-  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
-  if (data.state == cloudSync.State.COMPLETED) {
-    console.info('Batch download finished.');
-  } else if (data.state == cloudSync.State.FAILED) {
-    console.info(`Batch download stopped, error type: ${data.errType}.`);
-  }
-};
-
-try {
-  fileCache.on('batchDownload', callback);
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
-  console.info("syncState: " + pg.state);
-});
-```
-
-```TypeScript
-let download = new cloudSync.Download();
-
-download.on('progress', (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-});
-```
-
-## onProgress
-
-```TypeScript
-onProgress(callback: Callback<SyncProgress>): void
-```
-
-Subscribes to sync progress change event. This method uses a callback to get sync progress changes.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes |
 
 **Error codes:**
@@ -429,8 +142,6 @@ Starts device-cloud sync of a file. This API uses a promise to return the result
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **Return value:**
@@ -448,143 +159,6 @@ Starts device-cloud sync of a file. This API uses a promise to return the result
 | 22400001 |
 | 22400002 |
 | 22400003 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("file sync state: " + pg.state + "error type:" + pg.error);
-}
-
-fileSync.on('progress', callback);
-
-fileSync.start().then(() => {
-  console.info("start sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.start((err: BusinessError) => {
-  if (err) {
-    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start sync successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-
-try {
-  fileCache.on('progress', (pg: cloudSync.DownloadProgress) => {
-    console.info("download state:" + pg.state);
-  });
-} catch (e) {
-  const error = e as BusinessError;
-  console.error(`Error code: ${error.code}, message: ${error.message}`);
-}
-
-fileCache.start(uri).then(() => {
-  console.info("start download successfully");
-}).catch((err: BusinessError) => {
-  console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-
-fileCache.start(uri, (err: BusinessError) => {
-  if (err) {
-    console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start download successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
-  console.info("syncState: " + pg.state);
-});
-
-gallerySync.start().then(() => {
-  console.info("start sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.start((err: BusinessError) => {
-  if (err) {
-    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start sync successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.on('progress', (pg: cloudSync.DownloadProgress) => {
-  console.info("download state:" + pg.state);
-});
-
-download.start(uri).then(() => {
-  console.info("start download successfully");
-}).catch((err: BusinessError) => {
-  console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.start(uri, (err: BusinessError) => {
-  if (err) {
-    console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("start download successfully");
-  }
-});
-```
 
 ## start
 
@@ -596,8 +170,6 @@ Starts device-cloud sync of a file. This API uses an asynchronous callback to re
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **Parameters:**
@@ -616,10 +188,6 @@ Starts device-cloud sync of a file. This API uses an asynchronous callback to re
 | 22400002 |
 | 22400003 |
 
-**Examples**
-
-See [start](#start)
-
 ## stop
 
 ```TypeScript
@@ -629,8 +197,6 @@ stop(): Promise<void>
 Stops device-cloud sync of a file. This API uses a promise to return the result.Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -647,120 +213,6 @@ Stops device-cloud sync of a file. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.stop().then(() => {
-  console.info("stop sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.stop((err: BusinessError) => {
-  if (err) {
-    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop sync successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-
-fileCache.stop(uri, true).then(() => {
-  console.info("stop download successfully");
-}).catch((err: BusinessError) => {
-  console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-
-fileCache.stop(uri, (err: BusinessError) => {
-  if (err) {
-    console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop download successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.stop().then(() => {
-  console.info("stop sync successfully");
-}).catch((err: BusinessError) => {
-  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.stop((err: BusinessError) => {
-  if (err) {
-    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop sync successfully");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.stop(uri).then(() => {
-  console.info("stop download successfully");
-}).catch((err: BusinessError) => {
-  console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let download = new cloudSync.Download();
-let uri: string = "file:///media/Photo/1";
-
-download.stop(uri, (err: BusinessError) => {
-  if (err) {
-    console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("stop download successfully");
-  }
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -770,8 +222,6 @@ stop(callback: AsyncCallback<void>): void
 Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result.Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -787,7 +237,3 @@ Stops device-cloud sync of a file. This API uses an asynchronous callback to ret
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
-
-**Examples**
-
-See [stop](#stop)

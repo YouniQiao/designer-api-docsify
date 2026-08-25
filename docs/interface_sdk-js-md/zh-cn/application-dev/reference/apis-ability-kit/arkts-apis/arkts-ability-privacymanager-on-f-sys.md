@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('activeStateChange')
@@ -20,8 +20,6 @@ function on(type: 'activeStateChange',
 > 不允许使用有交集的两个permissionList分别订阅同一个回调函数。即如果两个permissionList包含相同的权限名，则不能使用同一个回调函数进行订阅。该接口通常与[off](arkts-ability-privacymanager-off-f-sys.md)配套使用，在不再需要监听时应调用off取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -49,21 +47,3 @@ function on(type: 'activeStateChange',
 | [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 | [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
-
-**示例**
-
-```TypeScript
-import { privacyManager, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let permissionList: Array<Permissions> = [];
-try {
-    // 订阅权限使用状态变更事件
-    privacyManager.on('activeStateChange', permissionList, (data: privacyManager.ActiveChangeResponse) => {
-        console.debug(`receive permission state change, data: ${data}`);
-    });
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
-}
-```

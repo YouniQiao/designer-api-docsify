@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## setTextHighContrast
@@ -16,8 +16,6 @@ Sets the high contrast mode for text rendering.The setting of this API takes eff
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -27,9 +25,3 @@ Sets the high contrast mode for text rendering.The setting of this API takes eff
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | action | [TextHighContrast](arkts-arkgraphics2d-text-texthighcontrast-e.md) | Yes |
-
-**Examples**
-
-```TypeScript
-text.setTextHighContrast(text.TextHighContrast.TEXT_APP_DISABLE_HIGH_CONTRAST)
-```

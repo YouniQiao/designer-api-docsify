@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { overlay } from '@kit.AbilityKit';
+import { overlay } from 'kits/@kit.AbilityKit';
 ```
 
 ## getTargetOverlayModuleInfos
@@ -15,8 +15,6 @@ function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCa
 获取指定的目标module所关联的OverlayModuleInfo。overlay特征的module一般是为设备上存在的非overlay特征的module提供覆盖的资源文件，其中非overlay特征的module被称作目标 module。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -35,48 +33,6 @@ function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCa
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
 | [17700034](../errorcode-bundle.md#17700034-指定的module是overlay特征的module) |
 
-**示例**
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetModuleName = "feature";
-
-(async () => {
-  try {
-    let overlayModuleInfos = await overlay.getTargetOverlayModuleInfos(targetModuleName);
-    console.info('overlayModuleInfos are ' + JSON.stringify(overlayModuleInfos));
-  } catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error('getTargetOverlayModuleInfos failed due to err code : ' + code + ' ' + 'message :' + message);
-  }
-})();
-```
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetModuleName = "feature";
-
-try {
-  overlay.getTargetOverlayModuleInfos(targetModuleName, (err, data) => {
-    if (err) {
-      console.error('getTargetOverlayModuleInfos failed due to err code : ' + err.code + ' ' + 'message :' +
-      err.message);
-      return;
-    }
-    console.info('overlayModuleInfo is ' + JSON.stringify(data));
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('getTargetOverlayModuleInfos failed due to err code : ' + code + ' ' + 'message :' + message);
-}
-```
-
 
 ## getTargetOverlayModuleInfos
 
@@ -87,8 +43,6 @@ function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<Ov
 获取指定的目标module所关联的OverlayModuleInfo。overlay特征的module一般是为设备上存在的非overlay特征的module提供覆盖的资源文件，其中非overlay特征的module被称作目标 module。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -111,7 +65,3 @@ function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<Ov
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
 | [17700034](../errorcode-bundle.md#17700034-指定的module是overlay特征的module) |
-
-**示例**
-
-参见 [getTargetOverlayModuleInfos](#gettargetoverlaymoduleinfos)

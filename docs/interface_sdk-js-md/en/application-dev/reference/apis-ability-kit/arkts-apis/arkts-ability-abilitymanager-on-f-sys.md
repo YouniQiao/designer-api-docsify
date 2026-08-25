@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('abilityForegroundState')
@@ -16,8 +16,6 @@ Registers an observer to listen for ability start or exit events.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -29,7 +27,7 @@ Registers an observer to listen for ability start or exit events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'abilityForegroundState' | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [AbilityForegroundStateObserver](arkts-ability-abilityforegroundstateobserver-i.md) | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | Yes |
 
 **Error codes:**
 
@@ -39,23 +37,3 @@ Registers an observer to listen for ability start or exit events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer: abilityManager.AbilityForegroundStateObserver = {
-  onAbilityStateChanged(abilityStateData) {
-    console.info(`onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
-  },
-};
-try {
-  abilityManager.on('abilityForegroundState', observer);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```

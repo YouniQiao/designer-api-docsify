@@ -1,14 +1,12 @@
 # CloudType (System API)
 
 ```TypeScript
-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets
+type CloudType = null | number | number | string | boolean | Uint8Array | CloudAsset | CloudAssets
 ```
 
 Enumerates the types of the cloud data field. The specific type is determined by the parameter function.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 

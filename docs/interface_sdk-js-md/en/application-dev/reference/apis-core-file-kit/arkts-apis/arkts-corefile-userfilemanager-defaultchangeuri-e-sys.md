@@ -4,8 +4,6 @@ Enumerates the **DefaultChangeUri** subtypes.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DefaultChangeUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md)
@@ -23,8 +21,6 @@ DEFAULT_PHOTO_URI = 0
 Default **PhotoAsset** URI. The **PhotoAsset** change notifications are received based on this parameter and **forSubUri{true}**.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -44,8 +40,6 @@ Default album URI. Album change notifications are received based on this paramet
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DEFAULT_ALBUM_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#default_album_uri)
@@ -63,8 +57,6 @@ DEFAULT_AUDIO_URI = 2
 Default **AudioAsset** URI. The **AudioAsset** change notifications are received based on this parameter and **forSubUri{true}**.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragInteraction } from '@kit.ArkUI';
+import { dragInteraction } from 'kits/@kit.ArkUI';
 ```
 
 ## getDataSummary
@@ -15,8 +15,6 @@ function getDataSummary(): Array<Summary>
 Obtains the data summary of all dragged objects.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -33,10 +31,3 @@ Obtains the data summary of all dragged objects.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-let summary: Array<dragInteraction.Summary> = dragInteraction.getDataSummary();
-console.info(`Drag interaction summary: ${summary}`);
-```

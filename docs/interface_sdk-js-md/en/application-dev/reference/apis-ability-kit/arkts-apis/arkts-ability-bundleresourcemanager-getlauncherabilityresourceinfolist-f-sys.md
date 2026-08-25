@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityResourceInfoList
 
 ```TypeScript
-function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, resourceFlags: int): Promise<Array<LauncherAbilityResourceInfo>>
+function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, resourceFlags: number): Promise<Array<LauncherAbilityResourceInfo>>
 ```
 
 Obtains the launcher ability resource information of each application corresponding to the **BundleOptions** element in **optionsList**. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
 
@@ -31,7 +29,7 @@ Obtains the launcher ability resource information of each application correspond
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | optionsList | Array&lt;[BundleOptions](arkts-ability-bundleinfo-bundleoptions-i-sys.md)&gt; | Yes |
-| resourceFlags | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| resourceFlags | number | Yes |
 
 **Return value:**
 
@@ -50,34 +48,3 @@ Obtains the launcher ability resource information of each application correspond
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager, bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// Replace the application information with the actual one.
-let option: bundleManager.BundleOptions = {
-  bundleName: 'com.example.demo',
-  moduleName: 'entry',
-  abilityName: 'EntryAbility',
-  appIndex: 0
-};
-
-let optionsList: Array<bundleManager.BundleOptions> = [];
-optionsList.push(option);
-let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  bundleResourceManager.getLauncherAbilityResourceInfoList(optionsList, resourceFlag).then(data => {
-    hilog.info(0x0000, 'testTag', 'getLauncherAbilityResourceInfoList successfully. Data length: %{public}s',
-      JSON.stringify(data.length));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getLauncherAbilityResourceInfoList failed. err: %{public}s', err.message);
-  })
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getLauncherAbilityResourceInfoList failed: %{public}s', message);
-}
-```

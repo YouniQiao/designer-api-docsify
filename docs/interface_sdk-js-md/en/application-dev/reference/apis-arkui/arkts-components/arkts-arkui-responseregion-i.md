@@ -19,8 +19,6 @@ Defines a touch target consisting of an input tool type, touch position, and siz
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -42,8 +40,6 @@ Height of the touch target.Default value: **LengthMetrics.percent(1)**
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -58,13 +54,11 @@ tool?: ResponseRegionSupportedTool
 
 Type of the input tool applicable to the touch target.Default value: **ResponseRegionSupportedTool.ALL**
 
-**Type:** ResponseRegionSupportedTool
+**Type:** [ResponseRegionSupportedTool](../arkts-apis/arkts-arkui-responseregionsupportedtool-e.md)
 
 **Default:** ResponseRegionSupportedTool.ALL
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,8 +80,6 @@ Width of the touch target.Default value: **LengthMetrics.percent(1)**
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -108,8 +100,6 @@ X coordinate of the touch point relative to the upper left corner of the compone
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -129,8 +119,6 @@ Y coordinate of the touch point relative to the upper left corner of the compone
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

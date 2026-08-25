@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getKeyEventPolicies
@@ -15,8 +15,6 @@ function getKeyEventPolicies(admin: Want): Array<KeyEventPolicy>
 Obtains the key event handling policy.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -45,26 +43,6 @@ Obtains the key event handling policy.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let result: Array<systemManager.KeyEventPolicy> = [];
-try {
-  result = systemManager.getKeyEventPolicies(wantTemp);
-  console.info('Succeeded in getting key event policies.');
-} catch (err) {
-  console.error(`Failed to get key event policies. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getKeyEventPolicies
 
@@ -75,8 +53,6 @@ function getKeyEventPolicies(admin: Want | null): Array<KeyEventPolicy>
 Obtains the key event handling policy. This API is applicable to scenarios where you need to query the current key event handling policy configuration. It helps enterprise administrators verify whether the policy has been correctly applied or obtain the current configuration before making policy adjustments.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -104,7 +80,3 @@ Obtains the key event handling policy. This API is applicable to scenarios where
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [getKeyEventPolicies](#getkeyeventpolicies)

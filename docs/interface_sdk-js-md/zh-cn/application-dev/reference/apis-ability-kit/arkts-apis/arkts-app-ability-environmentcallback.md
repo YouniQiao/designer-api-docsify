@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { EnvironmentCallback } from '@kit.AbilityKit';
+import { EnvironmentCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -13,9 +13,3 @@ import { EnvironmentCallback } from '@kit.AbilityKit';
 | 名称 |
 | --- |
 | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) |
-
-### 接口
-
-| 名称 |
-| --- |
-| [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-i.md) |

@@ -4,29 +4,28 @@ Describes the options for tiff image packing.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## compression
 
 ```TypeScript
-compression?: int
+compression?: number
 ```
 
-Compression algorithm type: 3 (CCITT G3), 4 (CCITT G4), 5 (LZW). - For binary image: must be 3 (G3) or 4 (G4), automatically uses 4 (G4). - For Y8/RGB_888 format: automatically uses LZW (5), user setting is ignored. The value should be an integer, Currently, only 3, 4, and 5 are supported.
+Compression algorithm type: 3 (CCITT G3), 4 (CCITT G4), 5 (LZW).  
+- For binary image: must be 3 (G3) or 4 (G4), automatically uses 4 (G4).  
+- For Y8/RGB_888 format: automatically uses LZW (5), user setting is ignored.  
+The value should be an integer, Currently, only 3, 4, and 5 are supported.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +43,6 @@ Image orientation.Default value is TOP_LEFT.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -53,16 +50,14 @@ Image orientation.Default value is TOP_LEFT.
 ## resolutionUnit
 
 ```TypeScript
-resolutionUnit?: int
+resolutionUnit?: number
 ```
 
 Resolution unit: 1 (No unit), 2 (Inch), 3 (Centimeter). Currently, only 1, 2, and 3 are supported.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,16 +66,14 @@ Resolution unit: 1 (No unit), 2 (Inch), 3 (Centimeter). Currently, only 1, 2, an
 ## xResolution
 
 ```TypeScript
-xResolution?: double
+xResolution?: number
 ```
 
 Horizontal resolution. The value must be greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,16 +82,14 @@ Horizontal resolution. The value must be greater than 0.
 ## yResolution
 
 ```TypeScript
-yResolution?: double
+yResolution?: number
 ```
 
 Vertical resolution. The value must be greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

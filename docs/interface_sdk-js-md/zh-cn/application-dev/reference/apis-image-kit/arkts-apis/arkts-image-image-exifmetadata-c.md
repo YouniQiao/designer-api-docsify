@@ -6,14 +6,12 @@ ExifMetadata implements Metadata Exif（Exchangeable image file format）元数�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## clone
@@ -26,8 +24,6 @@ clone(): Promise<ExifMetadata>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -37,292 +33,6 @@ clone(): Promise<ExifMetadata>
 | 类型 |
 | --- |
 | Promise&lt;[ExifMetadata](arkts-image-image-exifmetadata-c.md)&gt; |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Clone(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("exif.jpg"); // 图片包含exif metadata。
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    let new_metadata: image.Metadata = await metaData.clone();
-    new_metadata.getProperties(["ImageWidth"]).then((data1) => {
-      console.info(`Clone new_metadata and get Properties: ${data1}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to clone new_metadata, error : ${err}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function CloneFunc(metadata: image.Metadata): void {
-  try {
-    let newMetadata = await metadata.clone();
-    console.info(0x00000, 'CloneFunc', 'clone success!');
-  } catch (err) {
-    console.error(0x00000, 'CloneFunc', 'CloneFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataClone(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    let new_metadata = await metaData.exifMetadata.clone();
-    new_metadata.getProperties(["ImageWidth"]).then((data1) => {
-      console.info(`Succeeded in cloning metadata and getting properties. Data: ${JSON.stringify(data1)}.`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to clone metadata and get properties. Code: ${err.code}, message: ${err.message}.`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function exifMetadataClone(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    try {
-      const exif = metaData?.exifMetadata;
-      if (exif) {
-        let new_metadata = await exif.clone();
-        let data = new_metadata.getProperties(["ImageWidth"]);
-        const count = Object.keys(data).length;
-        console.info(`Clone new_metadata and get Properties: ${data}`);
-      }
-    } catch ( err ) {
-      console.error(`Clone new_metadata failed, error : ${err}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiClone(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    let new_metadata = await metaData.makerNoteHuaweiMetadata.clone();
-    new_metadata.getProperties(["HwMnoteIsXmageSupported"]).then((data1) => {
-      console.info(`Succeeded in cloning metadata and getting properties. Data: ${JSON.stringify(data1)}.`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to clone metadata and get properties. Code: ${err.code}, message: ${err.message}.`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiMetadataClone(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    try {
-      const exif = metaData?.makerNoteHuaweiMetadata;
-      if (exif) {
-        let new_metadata = await exif.clone();
-        let data = new_metadata.getProperties(["HwMnoteIsXmageSupported"]);
-        const count = Object.keys(data).length;
-        console.info(`Clone new_metadata and get Properties: ${data}`);
-      }
-    } catch ( err ) {
-      console.error(`Clone new_metadata failed, error : ${err}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataClone(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    let new_metadata = await metaData.heifsMetadata.clone();
-    new_metadata.getProperties(["HeifsDelayTime"]).then((data1) => {
-      console.info(`Succeeded in cloning metadata and getting properties. Data: ${JSON.stringify(data1)}.`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to clone metadata and get properties. Code: ${err.code}, message: ${err.message}.`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function heifsMetadataClone(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    try {
-      const exif = metaData?.heifsMetadata;
-      if (exif) {
-        let new_metadata = await exif.clone();
-        let data = new_metadata.getProperties(["HeifsDelayTime"]);
-        const count = Object.keys(data).length;
-        console.info(`Clone new_metadata and get Properties: ${data}`);
-      }
-    } catch ( err ) {
-      console.error(`Clone new_metadata failed, error : ${err}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function clone(pixelMap: image.PixelMap) {
-  pixelMap.clone().then((clonedPixelMap: image.PixelMap) => {
-    console.info('Succeeded in cloning the PixelMap.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to clone the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function clone(pixelMap: image.PixelMap) {
-  pixelMap.clone().then((clonedPixelMap: image.PixelMap) => {
-    console.info('Succeeded in cloning the PixelMap.');
-  }).catch((err: Error) => {
-    console.error(`Failed to clone the PixelMap. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
 
 ## createInstance
 
@@ -334,8 +44,6 @@ static createInstance(): ExifMetadata
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -345,80 +53,6 @@ static createInstance(): ExifMetadata
 | 类型 |
 | --- |
 | [ExifMetadata](arkts-image-image-exifmetadata-c.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function exifMetadataCreateInstance(context: Context) {
-  let exifMetadata = image.ExifMetadata.createInstance();
-  if (exifMetadata != undefined) {
-    console.info("Succeeded in creating an ExifMetadata instance.");
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-async function exifMetadataCreateInstance(context: common.UIAbilityContext) {
-  let exifMetadata = image.ExifMetadata.createInstance();
-  if (exifMetadata != undefined) {
-    console.info("createInstance success");
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function makerNoteHuaweiCreateInstance(context: Context) {
-  let makerNoteHuaweiMetadata = image.MakerNoteHuaweiMetadata.createInstance();
-  if (makerNoteHuaweiMetadata != undefined) {
-    console.info("Succeeded in creating a MakerNoteHuaweiMetadata instance.");
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-async function makerNoteHuaweiMetadataCreateInstance(context: common.UIAbilityContext) {
-  let makerNoteHuaweiMetadata = image.MakerNoteHuaweiMetadata.createInstance();
-  if (makerNoteHuaweiMetadata != undefined) {
-    console.info("createInstance success");
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function heifsMetadataCreateInstance(context: Context) {
-  let heifsMetadata = image.HeifsMetadata.createInstance();
-  if (heifsMetadata != undefined) {
-    console.info("Succeeded in creating a HeifsMetadata instance.");
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-async function heifsMetadataCreateInstance(context: common.UIAbilityContext) {
-  let heifsMetadata = image.HeifsMetadata.createInstance();
-  if (heifsMetadata != undefined) {
-    console.info("createInstance success");
-  }
-}
-```
 
 ## getAllProperties
 
@@ -430,8 +64,6 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -441,267 +73,6 @@ getAllProperties(): Promise<Record<string, string | null>>
 | 类型 |
 | --- |
 | Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetAllProperties(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("exif.jpg"); // 图片包含exif metadata。
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    await metaData.getAllProperties().then((data2) => {
-      const count = Object.keys(data2).length;
-      console.info('Metadata have ', count, ' properties');
-      console.info(`Get metadata all properties: ${data2}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get metadata all properties. error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function GetAllPropertiesFunc(metadata: image.Metadata): void {
-  try {
-    let properties = await metadata.getAllProperties();
-    console.info(0x00000, 'GetAllPropertiesFunc', 'getAllProperties success!');
-  } catch (err) {
-    console.error(0x00000, 'GetAllPropertiesFunc', 'GetAllPropertiesFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataGetAllProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    await metaData.exifMetadata.getAllProperties().then((data) => {
-      const count = Object.keys(data).length;
-      console.info(`Succeeded in getting all properties. Count: ${count}, data: ${JSON.stringify(data)}.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get all properties. Code: ${error.code}, message: ${error.message}.`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function exifMetadataGetAllProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    try {
-      const exif = metaData?.exifMetadata;
-      if (exif) {
-        let data = exif.getAllProperties();
-        const count = Object.keys(data).length;
-        console.info('Metadata have ', count, ' properties');
-        console.info(`Get metadata all properties: ${data}`);
-      }
-    } catch ( err ) {
-      console.error(`Get metadata all properties failed error.code is ${err.code}, error.message is ${err.message}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiGetAllProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    await metaData.makerNoteHuaweiMetadata.getAllProperties().then((data) => {
-      const count = Object.keys(data).length;
-      console.info(`Succeeded in getting all properties. Count: ${count}, data: ${JSON.stringify(data)}.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get all properties. Code: ${error.code}, message: ${error.message}.`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiMetadataGetAllProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    try {
-      const exif = metaData?.makerNoteHuaweiMetadata;
-      if (exif) {
-        let data = exif.getAllProperties();
-        const count = Object.keys(data).length;
-        console.info('Metadata have ', count, ' properties');
-        console.info(`Get metadata all properties: ${data}`);
-      }
-    } catch ( err ) {
-      console.error(`Get metadata all properties failed error.code is ${err.code}, error.message is ${err.message}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataGetAllProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    await metaData.heifsMetadata.getAllProperties().then((data) => {
-      const count = Object.keys(data).length;
-      console.info(`Succeeded in getting all properties. Count: ${count}, data: ${JSON.stringify(data)}.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get all properties. Code: ${error.code}, message: ${error.message}.`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function exifMetadataGetAllProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    try {
-      const exif = metaData?.heifsMetadata;
-      if (exif) {
-        let data = exif.getAllProperties();
-        const count = Object.keys(data).length;
-        console.info('Metadata have ', count, ' properties');
-        console.info(`Get metadata all properties: ${data}`);
-      }
-    } catch ( err ) {
-      console.error(`Get metadata all properties failed error.code is ${err.code}, error.message is ${err.message}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
 
 ## getBlob
 
@@ -713,8 +84,6 @@ getBlob(): Promise<ArrayBuffer>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -725,251 +94,6 @@ getBlob(): Promise<ArrayBuffer>
 | --- |
 | Promise & lt;ArrayBuffer & gt; |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function GetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let pictureObj: image.Picture = await imageSource.createPicture();
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    let blob = await metaData.getBlob();
-    if (blob != undefined) {
-      console.info("Succeeded in getting blob.");
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function metadataGetBlob(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let picture = await imageSource.createPicture();
-  if (picture != undefined) {
-    let metadataType = image.MetadataType.EXIF_METADATA;
-    let metadata = await picture.getMetadata(metadataType);
-    if (metadata != null) {
-      let blob = await metadata.getBlob();
-      if (blob != undefined) {
-        console.info("get blob success");
-      }
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataGetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    let blob = await metaData.exifMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("Succeeded in getting blob.");
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function exifMetadataGetBlob(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    const exif = metaData?.exifMetadata;
-    if (exif) {
-      let blob = await exif.getBlob();
-      if (blob != undefined) {
-        console.info("get blob success");
-      }
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiGetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("Succeeded in getting blob.");
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiMetadataGetBlob(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    const exif = metaData?.makerNoteHuaweiMetadata;
-    if (exif) {
-      let blob = await exif.getBlob();
-      if (blob != undefined) {
-        console.info("get blob success");
-      }
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataGetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    let blob = await metaData.heifsMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("Succeeded in getting blob.");
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function heifsMetadataGetBlob(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    const exif = metaData?.heifsMetadata;
-    if (exif) {
-      let blob = await exif.getBlob();
-      if (blob != undefined) {
-        console.info("get blob success");
-      }
-    }
-  }
-}
-```
-
 ## getProperties
 
 ```TypeScript
@@ -979,8 +103,6 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 获取图像的元数据属性值。使用Promise异步回调。要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1004,258 +126,6 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 | --- |
 | [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetProperties(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("exif.jpg"); // 图片包含exif metadata。
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    await metaData.getProperties(["ImageWidth", "ImageLength"]).then((data2) => {
-      console.info('Get properties ',JSON.stringify(data2));
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get properties. error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-function GetPropertiesFunc(metadata: image.Metadata): void {
-  try {
-    let properties: Record<string, string | null> = await metadata.getProperties(["ImageWidth", "ImageLength"]);
-    console.info(0x00000, 'GetPropertiesFunc', 'getProperties success!');
-  } catch (err) {
-    console.error(0x00000, 'GetPropertiesFunc', 'GetPropertiesFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataGetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    await metaData.exifMetadata.getProperties(["ImageWidth", "ImageLength"]).then((data) => {
-      console.info(`Succeeded in getting properties. Data: ${JSON.stringify(data)}.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get properties. Code: ${error.code}, message: ${error.message}.`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function exifMetadataGetProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    try {
-      const exif = metaData?.exifMetadata;
-      if (exif) {
-        let data = exif.getProperties(["ImageWidth", "ImageLength"]);
-        console.info('Get properties ',JSON.stringify(data));
-      }
-    } catch (err) {
-      console.error(`Get properties failed error.code is ${err.code}, error.message is ${err.message}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-  fileIo.closeSync(fd);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiGetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    await metaData.makerNoteHuaweiMetadata.getProperties(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]).then((data) => {
-      console.info(`Succeeded in getting properties. Data: ${JSON.stringify(data)}.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get properties. Code: ${error.code}, message: ${error.message}.`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiMetadataGetProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    try {
-      const exif = metaData?.makerNoteHuaweiMetadata;
-      if (exif) {
-        let data = exif.getProperties(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-        console.info('Get properties ',JSON.stringify(data));
-      }
-    } catch (err) {
-      console.error(`Get properties failed error.code is ${err.code}, error.message is ${err.message}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-  fileIo.closeSync(fd);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataGetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    await metaData.heifsMetadata.getProperties(["HeifsDelayTime"]).then((data) => {
-      console.info('Succeeded in getting properties. ',JSON.stringify(data));
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to get properties. error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataGetProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    try {
-      const exif = metaData?.heifsMetadata;
-      if (exif) {
-        let data = exif.getProperties(["HeifsDelayTime"]);
-        console.info('Get properties ',JSON.stringify(data));
-      }
-    } catch (err) {
-      console.error(`Get properties failed error.code is ${err.code}, error.message is ${err.message}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-  fs.closeSync(fd);
-}
-```
-
 ## setBlob
 
 ```TypeScript
@@ -1265,8 +135,6 @@ setBlob(blob: ArrayBuffer): Promise<void>
 使用二进制数据替换当前元数据。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1290,291 +158,6 @@ setBlob(blob: ArrayBuffer): Promise<void>
 | --- |
 | [7600206](../errorcode-image.md#7600206-无效参数) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function setBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let pictureObj: image.Picture = await imageSource.createPicture();
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    let blob = await metaData.getBlob();
-    if (blob != undefined) {
-      console.info("Succeeded in getting blob.");
-      metaData.setBlob(blob);
-    }
-    let new_blob = metaData.getBlob();
-    if (new_blob != undefined) {
-      console.info("new_blob is not undefined");
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function metadataSetBlob(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let picture = await imageSource.createPicture();
-  if (picture != undefined) {
-    let metadataType = image.MetadataType.EXIF_METADATA;
-    let metadata = await picture.getMetadata(metadataType);
-    if (metadata != null) {
-      let blob = await metadata.getBlob();
-      if (blob != undefined) {
-        console.info("get blob success");
-        metadata.setBlob(blob);
-      }
-      let new_blob = metadata.getBlob();
-      if (new_blob != undefined) {
-        console.info("new_blob is not undefined");
-      }
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataSetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    let blob = await metaData.exifMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("Succeeded in getting blob.");
-      metaData.exifMetadata.setBlob(blob);
-    }
-    let new_blob = metaData.exifMetadata.getBlob();
-    if (new_blob != undefined) {
-      console.info("new_blob is not undefined");
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function exifMetadataSetBlob(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    const exif = metaData?.exifMetadata;
-    if (exif) {
-      let blob = await exif.getBlob();
-      if (blob != undefined) {
-        console.info("get blob success");
-        exif.setBlob(blob);
-      }
-      let new_blob = exif.getBlob();
-      if (new_blob != undefined) {
-        console.info("new_blob is not undefined");
-      }
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiSetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("Succeeded in getting blob.");
-      metaData.makerNoteHuaweiMetadata.setBlob(blob);
-    }
-    let new_blob = metaData.makerNoteHuaweiMetadata.getBlob();
-    if (new_blob != undefined) {
-      console.info("new_blob is not undefined");
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiMetadataSetBlob(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    const exif = metaData?.makerNoteHuaweiMetadata;
-    if (exif) {
-      let blob = await exif.getBlob();
-      if (blob != undefined) {
-        console.info("get blob success");
-        exif.setBlob(blob);
-      }
-      let new_blob = exif.getBlob();
-      if (new_blob != undefined) {
-        console.info("new_blob is not undefined");
-      }
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataSetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    let blob = await metaData.heifsMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("Succeeded in getting blob.");
-      metaData.heifsMetadata.setBlob(blob);
-    }
-    let new_blob = metaData.heifsMetadata.getBlob();
-    if (new_blob != undefined) {
-      console.info("new_blob is not undefined");
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function heifsMetadataSetBlob(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    const exif = metaData?.heifsMetadata;
-    if (exif) {
-      let blob = await exif.getBlob();
-      if (blob != undefined) {
-        console.info("get blob success");
-        exif.setBlob(blob);
-      }
-      let new_blob = exif.getBlob();
-      if (new_blob != undefined) {
-        console.info("new_blob is not undefined");
-      }
-    }
-  }
-}
-```
-
 ## setProperties
 
 ```TypeScript
@@ -1584,8 +167,6 @@ setProperties(records: Record<string, string | null>): Promise<void>
 批量设置图片元数据中的指定属性的值。使用Promise异步回调。要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1609,299 +190,17 @@ setProperties(records: Record<string, string | null>): Promise<void>
 | --- |
 | [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function SetProperties(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("exif.jpg"); // 图片包含exif metadata。
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    let setkey: Record<string, string | null> = {
-      "ImageWidth": "200",
-      "ImageLength": "300"
-    };
-    await metaData.setProperties(setkey).then(async () => {
-      console.info('Succeeded in setting AuxPictureObj properties.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to set metadata Properties. code is ${error.code}, message is ${error.message}`);
-    })
-  } else {
-    console.error('AuxPictureObj metadata is null. ');
-  }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-function SetPropertiesFunc(metadata: image.Metadata): void {
-  let properties: Record<string, string | null> = {
-    "ImageWidth": "200",
-    "ImageLength": "300"
-  };
-  try {
-    await metadata.setProperties(properties);
-    console.info(0x00000, 'SetPropertiesFunc', 'setProperties success!');
-  } catch (err) {
-    console.error(0x00000, 'SetPropertiesFunc', 'SetPropertiesFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataSetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    let setkey: Record<string, string | null> = {
-      "ImageWidth": "200",
-      "ImageLength": "300"
-    };
-    await metaData.exifMetadata.setProperties(setkey).then(async () => {
-      console.info('Succeeded in setting properties.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to set metadata Properties. code is ${error.code}, message is ${error.message}`);
-    })
-  } else {
-    console.error('metadata is null. ');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function exifMetadataSetProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    try {
-      const exif = metaData?.exifMetadata;
-      let setkey: Record<string, string | null> = {
-        "ImageWidth": "200",
-        "ImageLength": "300"
-      };
-      if (exif) {
-        let data = exif.setProperties(setkey);
-        console.info('Set properties ',JSON.stringify(data));
-      }
-    } catch ( err ) {
-      console.error(`Failed to set metadata Properties. code is ${err.code}, error.message is ${err.message}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiSetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    let setkey: Record<string, string | null> = {
-      "HwMnoteIsXmageSupported": "1",
-      "HwMnoteXmageMode": "9"
-    };
-    await metaData.makerNoteHuaweiMetadata.setProperties(setkey).then(async () => {
-      console.info('Succeeded in setting properties.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to set metadata Properties. code is ${error.code}, message is ${error.message}`);
-    })
-  } else {
-    console.error('metadata is null. ');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // 图片包含exif metadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiMetadataSetProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    try {
-      const exif = metaData?.makerNoteHuaweiMetadata;
-      let setkey: Record<string, string | null> = {
-        "HwMnoteIsXmageSupported": "1",
-        "HwMnoteXmageMode": "9"
-      };
-      if (exif) {
-        let data = exif.setProperties(setkey);
-        console.info('Set properties ',JSON.stringify(data));
-      }
-    } catch ( err ) {
-      console.error(`Failed to set metadata Properties. code is ${err.code}, error.message is ${err.message}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataSetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    let setkey: Record<string, string | null> = {
-      "HeifsDelayTime": "200",
-    };
-    await metaData.heifsMetadata.setProperties(setkey).then(async () => {
-      console.info('Succeeded in setting properties.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to set metadata Properties. code is ${error.code}, message is ${error.message}`);
-    })
-  } else {
-    console.error('metadata is null. ');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { common } from '@kit.AbilityKit';
-
-function getFileFd(context: common.UIAbilityContext): int | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // 图片包含HeifsMetadata。
-  const file: fileIo.File = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  const fd = file.fd;
-  return fd;
-}
-
-async function heifsMetadataSetProperties(context: common.UIAbilityContext) {
-  let fd = getFileFd(context);
-  if (fd == undefined) {
-    return;
-  }
-  let imageSource = image.createImageSource(fd);
-  if (imageSource == null) {
-    return;
-  }
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    try {
-      const exif = metaData?.heifsMetadata;
-      let setkey: Record<string, string | null> = {
-        "HeifsDelayTime": "200",
-      };
-      if (exif) {
-        let data = exif.setProperties(setkey);
-        console.info('Set properties ',JSON.stringify(data));
-      }
-    } catch ( err ) {
-      console.error(`Failed to set metadata Properties. code is ${err.code}, error.message is ${err.message}`);
-    }
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
 ## apertureValue
 
 ```TypeScript
-apertureValue?: double
+apertureValue?: number
 ```
 
 镜头光圈。单位为APEX。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1919,8 +218,6 @@ artist?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1928,16 +225,14 @@ artist?: string
 ## bitsPerSample
 
 ```TypeScript
-bitsPerSample?: int[]
+bitsPerSample?: number[]
 ```
 
 像素各分量的位数。如RGB是3分量，格式是8，8，8。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1955,8 +250,6 @@ bodySerialNumber?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -1964,16 +257,14 @@ bodySerialNumber?: string
 ## brightnessValue
 
 ```TypeScript
-brightnessValue?: double
+brightnessValue?: number
 ```
 
 图像的亮度值。单位为APEX。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1991,8 +282,6 @@ cameraOwnerName?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2009,8 +298,6 @@ cfaPattern?: ArrayBuffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2018,16 +305,14 @@ cfaPattern?: ArrayBuffer
 ## colorSpace
 
 ```TypeScript
-colorSpace?: int
+colorSpace?: number
 ```
 
 颜色空间信息标签，通常记录为颜色空间说明符。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2045,8 +330,6 @@ componentsConfiguration?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2054,16 +337,14 @@ componentsConfiguration?: string
 ## compositeImage
 
 ```TypeScript
-compositeImage?: int
+compositeImage?: number
 ```
 
 指示图像是否为合成图像。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2072,16 +353,14 @@ compositeImage?: int
 ## compressedBitsPerPixel
 
 ```TypeScript
-compressedBitsPerPixel?: double
+compressedBitsPerPixel?: number
 ```
 
 图像压缩方案。单位为每像素比特。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2090,16 +369,14 @@ compressedBitsPerPixel?: double
 ## compression
 
 ```TypeScript
-compression?: int
+compression?: number
 ```
 
 用于图像压缩的算法标准。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2108,16 +385,14 @@ compression?: int
 ## contrast
 
 ```TypeScript
-contrast?: int
+contrast?: number
 ```
 
 相机应用的对比度优化策略。例如：标准处理、弱化对比度等。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2135,8 +410,6 @@ copyright?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2144,16 +417,14 @@ copyright?: string
 ## customRendered
 
 ```TypeScript
-customRendered?: int
+customRendered?: number
 ```
 
 表示对图像数据的特殊处理，如HDR合成、AI场景增强。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2171,8 +442,6 @@ dateTime?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2188,8 +457,6 @@ dateTimeDigitized?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2207,8 +474,6 @@ dateTimeOriginal?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2225,8 +490,6 @@ deviceSettingDescription?: ArrayBuffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2234,16 +497,14 @@ deviceSettingDescription?: ArrayBuffer
 ## digitalZoomRatio
 
 ```TypeScript
-digitalZoomRatio?: double
+digitalZoomRatio?: number
 ```
 
 拍摄时的数字变焦比。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2261,8 +522,6 @@ exifVersion?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2270,16 +529,14 @@ exifVersion?: string
 ## exposureBiasValue
 
 ```TypeScript
-exposureBiasValue?: double
+exposureBiasValue?: number
 ```
 
 曝光偏差值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2288,16 +545,14 @@ exposureBiasValue?: double
 ## exposureIndex
 
 ```TypeScript
-exposureIndex?: double
+exposureIndex?: number
 ```
 
 拍摄时选定的曝光指数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2306,16 +561,14 @@ exposureIndex?: double
 ## exposureMode
 
 ```TypeScript
-exposureMode?: int
+exposureMode?: number
 ```
 
 曝光模式。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2324,16 +577,14 @@ exposureMode?: int
 ## exposureProgram
 
 ```TypeScript
-exposureProgram?: int
+exposureProgram?: number
 ```
 
 相机在拍摄照片时用于设置曝光的程序类。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2342,16 +593,14 @@ exposureProgram?: int
 ## exposureTime
 
 ```TypeScript
-exposureTime?: double
+exposureTime?: number
 ```
 
 曝光时间。单位为秒（s）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2369,8 +618,6 @@ fileSource?: ArrayBuffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2378,16 +625,14 @@ fileSource?: ArrayBuffer
 ## flash
 
 ```TypeScript
-flash?: int
+flash?: number
 ```
 
 闪光。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2396,16 +641,14 @@ flash?: int
 ## flashEnergy
 
 ```TypeScript
-flashEnergy?: double
+flashEnergy?: number
 ```
 
 图像捕获时的闪光灯能量。单位为光束烛光秒（BCPS，Beam Candlepower Seconds）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2423,8 +666,6 @@ FPXR（FlashPix Extension Resource）支持的FlashPix格式版本，用于增�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2432,16 +673,14 @@ FPXR（FlashPix Extension Resource）支持的FlashPix格式版本，用于增�
 ## fNumber
 
 ```TypeScript
-fNumber?: double
+fNumber?: number
 ```
 
 光圈值，如f/1.8。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2450,16 +689,14 @@ fNumber?: double
 ## focalLength
 
 ```TypeScript
-focalLength?: double
+focalLength?: number
 ```
 
 焦距。单位为毫米（mm）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2468,16 +705,14 @@ focalLength?: double
 ## focalLengthIn35mmFilm
 
 ```TypeScript
-focalLengthIn35mmFilm?: int
+focalLengthIn35mmFilm?: number
 ```
 
 换算成35mm等效焦距。单位为毫米（mm）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2486,16 +721,14 @@ focalLengthIn35mmFilm?: int
 ## focalPlaneResolutionUnit
 
 ```TypeScript
-focalPlaneResolutionUnit?: int
+focalPlaneResolutionUnit?: number
 ```
 
 FocalPlaneXResolution和FocalPlaneYResolution的测量单位。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2504,16 +737,14 @@ FocalPlaneXResolution和FocalPlaneYResolution的测量单位。
 ## focalPlaneXResolution
 
 ```TypeScript
-focalPlaneXResolution?: double
+focalPlaneXResolution?: number
 ```
 
 传感器物理平面X轴方向上每单位物理长度的像素数量。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2522,16 +753,14 @@ focalPlaneXResolution?: double
 ## focalPlaneYResolution
 
 ```TypeScript
-focalPlaneYResolution?: double
+focalPlaneYResolution?: number
 ```
 
 传感器物理平面Y轴方向上每单位物理长度的像素数量。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2540,16 +769,14 @@ focalPlaneYResolution?: double
 ## gainControl
 
 ```TypeScript
-gainControl?: int
+gainControl?: number
 ```
 
 整体图像增益调整程度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2558,16 +785,14 @@ gainControl?: int
 ## gamma
 
 ```TypeScript
-gamma?: double
+gamma?: number
 ```
 
 每个组件的伽玛值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2576,16 +801,14 @@ gamma?: double
 ## gpsAltitude
 
 ```TypeScript
-gpsAltitude?: double
+gpsAltitude?: number
 ```
 
 基于GPSAltitudeRef中的参考高度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2594,16 +817,14 @@ gpsAltitude?: double
 ## gpsAltitudeRef
 
 ```TypeScript
-gpsAltitudeRef?: int
+gpsAltitudeRef?: number
 ```
 
 用于GPS的参考高度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2621,8 +842,6 @@ GPS区域名称的字符串。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2639,8 +858,6 @@ GPS日期戳。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2648,16 +865,14 @@ GPS日期戳。
 ## gpsDestBearing
 
 ```TypeScript
-gpsDestBearing?: double
+gpsDestBearing?: number
 ```
 
 到达目的地的方位。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2675,8 +890,6 @@ gpsDestBearingRef?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2684,16 +897,14 @@ gpsDestBearingRef?: string
 ## gpsDestDistance
 
 ```TypeScript
-gpsDestDistance?: double
+gpsDestDistance?: number
 ```
 
 到目的地的距离。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2711,8 +922,6 @@ gpsDestDistanceRef?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2720,16 +929,14 @@ gpsDestDistanceRef?: string
 ## gpsDestLatitude
 
 ```TypeScript
-gpsDestLatitude?: double[]
+gpsDestLatitude?: number[]
 ```
 
 目的地的纬度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2747,8 +954,6 @@ gpsDestLatitudeRef?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2756,16 +961,14 @@ gpsDestLatitudeRef?: string
 ## gpsDestLongitude
 
 ```TypeScript
-gpsDestLongitude?: double[]
+gpsDestLongitude?: number[]
 ```
 
 目的地的经度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2783,8 +986,6 @@ gpsDestLongitudeRef?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2792,16 +993,14 @@ gpsDestLongitudeRef?: string
 ## gpsDifferential
 
 ```TypeScript
-gpsDifferential?: int
+gpsDifferential?: number
 ```
 
 是否对GPS数据应用了差分校正，这对精确定位精度至关重要。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2810,16 +1009,14 @@ gpsDifferential?: int
 ## gpsDop
 
 ```TypeScript
-gpsDop?: double
+gpsDop?: number
 ```
 
 GPS数据精度DOP精度衰减因子（Dilution of Precision）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2828,16 +1025,14 @@ GPS数据精度DOP精度衰减因子（Dilution of Precision）。
 ## gpsHPositioningError
 
 ```TypeScript
-gpsHPositioningError?: double
+gpsHPositioningError?: number
 ```
 
 水平定位误差。单位为米（m）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2846,16 +1041,14 @@ gpsHPositioningError?: double
 ## gpsImgDirection
 
 ```TypeScript
-gpsImgDirection?: double
+gpsImgDirection?: number
 ```
 
 拍摄时图像的方向。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2873,8 +1066,6 @@ gpsImgDirectionRef?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2882,16 +1073,14 @@ gpsImgDirectionRef?: string
 ## gpsLatitude
 
 ```TypeScript
-gpsLatitude?: double[]
+gpsLatitude?: number[]
 ```
 
 GPS纬度。纬度用三个RATIONAL（分数形式存储的数值）值表示，分别是度、分和秒，格式为dd/1、mm/1、ss/1。当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100,0/1。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2909,8 +1098,6 @@ GPS纬度参考。例如，N表示北纬，S表示南纬。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2918,16 +1105,14 @@ GPS纬度参考。例如，N表示北纬，S表示南纬。
 ## gpsLongitude
 
 ```TypeScript
-gpsLongitude?: double[]
+gpsLongitude?: number[]
 ```
 
 GPS经度。经度用三个RATIONAL（分数形式存储的数值）值表示，分别是度、分和秒，格式为dd/1、mm/1、ss/1。当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100，0/1。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2945,8 +1130,6 @@ GPS经度参考。例如，E表示东经，W表示西经。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2962,8 +1145,6 @@ GPS接收机使用的大地测量数据。
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2981,8 +1162,6 @@ GPS测量模式。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -2998,8 +1177,6 @@ gpsProcessingMethod?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3017,8 +1194,6 @@ gpsSatellites?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3026,16 +1201,14 @@ gpsSatellites?: string
 ## gpsSpeed
 
 ```TypeScript
-gpsSpeed?: double
+gpsSpeed?: number
 ```
 
 GPS接收器移动的速度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3053,8 +1226,6 @@ GPS接收器移动速度的单位。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3071,8 +1242,6 @@ gpsStatus?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3080,16 +1249,14 @@ gpsStatus?: string
 ## gpsTimestamp
 
 ```TypeScript
-gpsTimestamp?: double[]
+gpsTimestamp?: number[]
 ```
 
 GPS时间戳。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3098,16 +1265,14 @@ GPS时间戳。
 ## gpsTrack
 
 ```TypeScript
-gpsTrack?: double
+gpsTrack?: number
 ```
 
 GPS接收器移动的方向。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3125,8 +1290,6 @@ gpsTrackRef?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3134,16 +1297,14 @@ gpsTrackRef?: string
 ## gpsVersionID
 
 ```TypeScript
-gpsVersionID?: int[]
+gpsVersionID?: number[]
 ```
 
 GPS信息的格式版本标识符。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3161,8 +1322,6 @@ imageDescription?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3170,16 +1329,14 @@ imageDescription?: string
 ## imageLength
 
 ```TypeScript
-imageLength?: int
+imageLength?: number
 ```
 
 图像长度。单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3197,8 +1354,6 @@ imageUniqueId?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3206,16 +1361,14 @@ imageUniqueId?: string
 ## imageWidth
 
 ```TypeScript
-imageWidth?: int
+imageWidth?: number
 ```
 
 图像宽度。单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3224,16 +1377,14 @@ imageWidth?: int
 ## isoSpeedLatitudeyyy
 
 ```TypeScript
-isoSpeedLatitudeyyy?: int
+isoSpeedLatitudeyyy?: number
 ```
 
 表示相机传感器在单次曝光中可记录的最大动态范围。单位为EV。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3242,16 +1393,14 @@ isoSpeedLatitudeyyy?: int
 ## isoSpeedLatitudezzz
 
 ```TypeScript
-isoSpeedLatitudezzz?: int
+isoSpeedLatitudezzz?: number
 ```
 
 表示相机传感器在过曝方向保护高光细节的能力边界。单位为EV。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3260,16 +1409,14 @@ isoSpeedLatitudezzz?: int
 ## isoSpeedRatings
 
 ```TypeScript
-isoSpeedRatings?: int
+isoSpeedRatings?: number
 ```
 
 ISO 12232中指定的相机或输入设备的ISO速度和ISO纬度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3278,16 +1425,14 @@ ISO 12232中指定的相机或输入设备的ISO速度和ISO纬度。
 ## jpegInterchangeFormat
 
 ```TypeScript
-jpegInterchangeFormat?: int
+jpegInterchangeFormat?: number
 ```
 
 JPEG交换格式比特流的SOI（Start of Image）标记。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3296,16 +1441,14 @@ JPEG交换格式比特流的SOI（Start of Image）标记。
 ## jpegInterchangeFormatLength
 
 ```TypeScript
-jpegInterchangeFormatLength?: int
+jpegInterchangeFormatLength?: number
 ```
 
 JPEG流的字节数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3323,8 +1466,6 @@ lensMake?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3340,8 +1481,6 @@ lensModel?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3359,8 +1498,6 @@ lensSerialNumber?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3368,16 +1505,14 @@ lensSerialNumber?: string
 ## lensSpecification
 
 ```TypeScript
-lensSpecification?: double[]
+lensSpecification?: number[]
 ```
 
 所用镜头的规格。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3386,16 +1521,14 @@ lensSpecification?: double[]
 ## lightSource
 
 ```TypeScript
-lightSource?: int
+lightSource?: number
 ```
 
 光源。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3413,8 +1546,6 @@ make?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3431,8 +1562,6 @@ Exif/相机文件系统设计规则DCF（Design rule for Camera File system）�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3440,16 +1569,14 @@ Exif/相机文件系统设计规则DCF（Design rule for Camera File system）�
 ## maxApertureValue
 
 ```TypeScript
-maxApertureValue?: double
+maxApertureValue?: number
 ```
 
 镜头的最小光圈值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3458,16 +1585,14 @@ maxApertureValue?: double
 ## meteringMode
 
 ```TypeScript
-meteringMode?: int
+meteringMode?: number
 ```
 
 测光模式。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3485,8 +1610,6 @@ model?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3494,16 +1617,14 @@ model?: string
 ## newSubfileType
 
 ```TypeScript
-newSubfileType?: int
+newSubfileType?: number
 ```
 
 表示该子文件的数据类型（例如文本/图像等基本类型，而非具体存储格式）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3521,8 +1642,6 @@ ISO 14524中规定的光电转换函数（OECF）。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3538,8 +1657,6 @@ offsetTime?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3557,8 +1674,6 @@ offsetTimeDigitized?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3574,8 +1689,6 @@ offsetTimeOriginal?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3593,8 +1706,6 @@ orientation?: Orientation
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3602,16 +1713,14 @@ orientation?: Orientation
 ## photographicSensitivity
 
 ```TypeScript
-photographicSensitivity?: int[]
+photographicSensitivity?: number[]
 ```
 
 拍摄图像时相机或输入设备的灵敏度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3620,16 +1729,14 @@ photographicSensitivity?: int[]
 ## photometricInterpretation
 
 ```TypeScript
-photometricInterpretation?: int
+photometricInterpretation?: number
 ```
 
 像素组成，如RGB（红绿蓝，Red Green Blue）和YCbCr（亮度-蓝色色差-红色色差，Luma-Chrominance）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3638,16 +1745,14 @@ photometricInterpretation?: int
 ## photoMode
 
 ```TypeScript
-photoMode?: int
+photoMode?: number
 ```
 
 照片模式。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3656,16 +1761,14 @@ photoMode?: int
 ## pixelXDimension
 
 ```TypeScript
-pixelXDimension?: int
+pixelXDimension?: number
 ```
 
 图像在X轴上的（二维坐标系中的Horizontal Axis）尺寸。单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3674,16 +1777,14 @@ pixelXDimension?: int
 ## pixelYDimension
 
 ```TypeScript
-pixelYDimension?: int
+pixelYDimension?: number
 ```
 
 图像在Y轴上的（二维坐标系中的Vertical Axis）尺寸。单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3692,16 +1793,14 @@ pixelYDimension?: int
 ## planarConfiguration
 
 ```TypeScript
-planarConfiguration?: int
+planarConfiguration?: number
 ```
 
 指示像素分量是以块状或平面格式记录。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3710,16 +1809,14 @@ planarConfiguration?: int
 ## primaryChromaticities
 
 ```TypeScript
-primaryChromaticities?: double[]
+primaryChromaticities?: number[]
 ```
 
 图像原色的色度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3728,16 +1825,14 @@ primaryChromaticities?: double[]
 ## recommendedExposureIndex
 
 ```TypeScript
-recommendedExposureIndex?: int
+recommendedExposureIndex?: number
 ```
 
 推荐曝光指数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3746,16 +1841,14 @@ recommendedExposureIndex?: int
 ## referenceBlackWhite
 
 ```TypeScript
-referenceBlackWhite?: double[]
+referenceBlackWhite?: number[]
 ```
 
 参考黑点值和白点值。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3773,8 +1866,6 @@ relatedSoundFile?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3782,16 +1873,14 @@ relatedSoundFile?: string
 ## resolutionUnit
 
 ```TypeScript
-resolutionUnit?: int
+resolutionUnit?: number
 ```
 
 用于测量宽度方向上的图像分辨率和高度方向上的图像分辨率的单位。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3800,16 +1889,14 @@ resolutionUnit?: int
 ## rowsPerStrip
 
 ```TypeScript
-rowsPerStrip?: int
+rowsPerStrip?: number
 ```
 
 每条图像数据的行数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3818,16 +1905,14 @@ rowsPerStrip?: int
 ## samplesPerPixel
 
 ```TypeScript
-samplesPerPixel?: int
+samplesPerPixel?: number
 ```
 
 记录每个像素的颜色分量数量，适用于RGB（红绿蓝，Red Green Blue）和YCbCr（亮度-蓝色色差-红色色差，Luma-Chrominance）色彩模型。由于这两种模型都是三分量模型（一个亮度分量加两个色度分量，或三个颜色通道），因此该标签的标准值为3。对于JPEG压缩图像，此标签将会被对应的JPEG标记替换。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3836,16 +1921,14 @@ samplesPerPixel?: int
 ## saturation
 
 ```TypeScript
-saturation?: int
+saturation?: number
 ```
 
 相机应用的色彩饱和度调节策略。例如：标准、降饱和模式等。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3854,16 +1937,14 @@ saturation?: int
 ## sceneCaptureType
 
 ```TypeScript
-sceneCaptureType?: int
+sceneCaptureType?: number
 ```
 
 拍摄的场景类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3881,8 +1962,6 @@ sceneType?: ArrayBuffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3890,16 +1969,14 @@ sceneType?: ArrayBuffer
 ## sensingMethod
 
 ```TypeScript
-sensingMethod?: int
+sensingMethod?: number
 ```
 
 摄像头的图像传感器类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3908,16 +1985,14 @@ sensingMethod?: int
 ## sensitivityType
 
 ```TypeScript
-sensitivityType?: int
+sensitivityType?: number
 ```
 
 灵敏度类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3926,16 +2001,14 @@ sensitivityType?: int
 ## sharpness
 
 ```TypeScript
-sharpness?: int
+sharpness?: number
 ```
 
 相机应用的边缘增强处理方式。例如：弱锐化、标准锐化等。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3944,16 +2017,14 @@ sharpness?: int
 ## shutterSpeedValue
 
 ```TypeScript
-shutterSpeedValue?: double
+shutterSpeedValue?: number
 ```
 
 快门速度，表示为摄影曝光相加系统值APEX（Additive System of Photographic Exposure）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3971,8 +2042,6 @@ software?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3989,8 +2058,6 @@ sourceExposureTimesOfCompositeImage?: ArrayBuffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -3998,16 +2065,14 @@ sourceExposureTimesOfCompositeImage?: ArrayBuffer
 ## sourceImageNumberOfCompositeImage
 
 ```TypeScript
-sourceImageNumberOfCompositeImage?: int[]
+sourceImageNumberOfCompositeImage?: number[]
 ```
 
 用于合成图像的源图像数量。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4025,8 +2090,6 @@ spatialFrequencyResponse?: ArrayBuffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -4043,8 +2106,6 @@ spectralSensitivity?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -4052,16 +2113,14 @@ spectralSensitivity?: string
 ## standardOutputSensitivity
 
 ```TypeScript
-standardOutputSensitivity?: int
+standardOutputSensitivity?: number
 ```
 
 标准输出灵敏度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4070,16 +2129,14 @@ standardOutputSensitivity?: int
 ## stripByteCounts
 
 ```TypeScript
-stripByteCounts?: int[]
+stripByteCounts?: number[]
 ```
 
 压缩后每个条带中的字节数。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4088,16 +2145,14 @@ stripByteCounts?: int[]
 ## stripOffsets
 
 ```TypeScript
-stripOffsets?: int[]
+stripOffsets?: number[]
 ```
 
 图像数据的分块存储偏移量，单位为字节（Byte）。为提高大图像访问效率，原始像素数据被分割为多个连续区块（称为条带）。此标签按顺序存储每个条带在文件中的起始位置偏移量。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4106,16 +2161,14 @@ stripOffsets?: int[]
 ## subfileType
 
 ```TypeScript
-subfileType?: int
+subfileType?: number
 ```
 
 已弃用标签，表示该子文件中的数据类型。请使用newSubfileType替代。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4124,16 +2177,14 @@ subfileType?: int
 ## subjectArea
 
 ```TypeScript
-subjectArea?: int[]
+subjectArea?: number[]
 ```
 
 用于指示主要对象在整个场景中的位置和区域。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4142,16 +2193,14 @@ subjectArea?: int[]
 ## subjectDistance
 
 ```TypeScript
-subjectDistance?: double
+subjectDistance?: number
 ```
 
 拍照设备到被摄体的距离。单位为米（m）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4160,16 +2209,14 @@ subjectDistance?: double
 ## subjectDistanceRange
 
 ```TypeScript
-subjectDistanceRange?: int
+subjectDistanceRange?: number
 ```
 
 指示到对象的距离范围。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4178,16 +2225,14 @@ subjectDistanceRange?: int
 ## subjectLocation
 
 ```TypeScript
-subjectLocation?: int[]
+subjectLocation?: number[]
 ```
 
 图像中主体的像素坐标（基于左上角原点）。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4205,8 +2250,6 @@ subsecTime?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -4222,8 +2265,6 @@ subsecTimeDigitized?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4241,8 +2282,6 @@ subsecTimeOriginal?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -4258,8 +2297,6 @@ transferFunction?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4277,8 +2314,6 @@ userComment?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -4286,16 +2321,14 @@ userComment?: string
 ## whiteBalance
 
 ```TypeScript
-whiteBalance?: int
+whiteBalance?: number
 ```
 
 白平衡。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4304,16 +2337,14 @@ whiteBalance?: int
 ## whitePoint
 
 ```TypeScript
-whitePoint?: double[]
+whitePoint?: number[]
 ```
 
 图像白点的色度。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4322,16 +2353,14 @@ whitePoint?: double[]
 ## xResolution
 
 ```TypeScript
-xResolution?: double
+xResolution?: number
 ```
 
 宽度方向上的图像分辨率。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4340,16 +2369,14 @@ xResolution?: double
 ## yCbCrCoefficients
 
 ```TypeScript
-yCbCrCoefficients?: double[]
+yCbCrCoefficients?: number[]
 ```
 
 用于将RGB图像数据转换为YCbCr图像数据的变换矩阵系数。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4358,16 +2385,14 @@ yCbCrCoefficients?: double[]
 ## yCbCrPositioning
 
 ```TypeScript
-yCbCrPositioning?: int
+yCbCrPositioning?: number
 ```
 
 色度分量相对于亮度分量的位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4376,16 +2401,14 @@ yCbCrPositioning?: int
 ## yCbCrSubSampling
 
 ```TypeScript
-yCbCrSubSampling?: int[]
+yCbCrSubSampling?: number[]
 ```
 
 色度分量与亮度分量的采样比。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4394,16 +2417,14 @@ yCbCrSubSampling?: int[]
 ## yResolution
 
 ```TypeScript
-yResolution?: double
+yResolution?: number
 ```
 
 高度方向上的图像分辨率。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

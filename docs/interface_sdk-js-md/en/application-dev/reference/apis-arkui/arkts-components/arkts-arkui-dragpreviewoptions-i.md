@@ -4,8 +4,6 @@ Preview image processing mode and badge count during dragging.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ How the background image is processed when the component is dragged.Default valu
 **Type:** [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) \| Array&lt;[DragPreviewMode](arkts-arkui-dragpreviewmode-e.md)&gt;
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,8 +49,6 @@ Use [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-bord
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -74,8 +68,6 @@ Whether to display the number badge or the number displayed on the badge. For a 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -93,8 +85,6 @@ Transition effect between the floating image and drag preview.Default value: **D
 **Type:** [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

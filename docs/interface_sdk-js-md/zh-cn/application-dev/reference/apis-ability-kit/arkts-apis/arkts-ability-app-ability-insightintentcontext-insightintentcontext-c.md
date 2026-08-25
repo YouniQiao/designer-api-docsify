@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { InsightIntentContext } from '@kit.AbilityKit';
+import { InsightIntentContext } from 'kits/@kit.AbilityKit';
 ```
 
 ## setReturnModeForUIAbilityForeground
@@ -24,8 +22,6 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -43,97 +39,6 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 | 错误码ID |
 | --- |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class InsightIntentExecutorUI extends InsightIntentExecutor {
-  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
-    hilog.info(0x0000, 'testTag', 'onExecuteInUIAbilityForegroundMode %{public}s', name);
-    let result: insightIntent.ExecuteResult;
-    result = {
-      code: 0,
-      result: {
-        message: 'Unsupported insight intent.',
-      },
-    };
-
-    try {
-      this.context.setReturnModeForUIAbilityForeground(insightIntent.ReturnMode.FUNCTION);
-    } catch (error) {
-      const err: BusinessError = error as BusinessError;
-      console.error(`Failed to setReturnModeForUIAbilityForeground. Code: ${err.code}, message: ${err.message}`);
-    }
-
-    let localStorageData: Record<string, number> = {
-      'insightId': this.context.instanceId,
-    };
-    let storage: LocalStorage = new LocalStorage(localStorageData);
-    pageLoader.loadContent('pages/UIAbilityIndex', storage, (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
-      } else {
-        hilog.info(0x0000, 'testTag', '%{public}s', 'Succeeded in loading the content');
-      }
-    });
-    return result;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { window, LocalStorage } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-export default class InsightIntentExecutorUI extends InsightIntentExecutor {
-  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
-    hilog.info(0x0000, 'testTag', 'onExecuteInUIAbilityForegroundMode %{public}s', name);
-    let result: insightIntent.ExecuteResult;
-    result = {
-      code: 0,
-      result: {
-        'message': 'Unsupported insight intent.',
-      } as Record<string, RecordData>,
-    };
-
-    try {
-      this.context.setReturnModeForUIAbilityForeground(insightIntent.ReturnMode.FUNCTION);
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let msg = (error as BusinessError).message;
-      console.error(`testTag setReturnModeForUIAbilityForeground fail, error code: ${code}, err msg: ${msg}.`);
-    }
-
-    let localStorageData: Record<string, number> = {
-      'insightId': this.context.instanceId,
-    };
-    let storage: LocalStorage = new LocalStorage(localStorageData);
-    pageLoader.loadContent('pages/UIAbilityIndex', storage, (error, data): void => {
-      let err = error as BusinessError;
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
-      } else {
-        hilog.info(0x0000, 'testTag', '%{public}s', 'Succeeded in loading the content');
-      }
-    });
-    return result;
-  }
-}
-```
 
 ## setReturnModeForUIExtensionAbility
 
@@ -145,8 +50,6 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -165,95 +68,6 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 | --- |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class InsightIntentExecutorUI extends InsightIntentExecutor {
-  onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,
-    pageLoader: UIExtensionContentSession): insightIntent.ExecuteResult {
-    hilog.info(0x0000, 'testTag', 'onExecuteInUIExtensionAbility %{public}s', name);
-    let result: insightIntent.ExecuteResult;
-    result = {
-      code: 0,
-      result: {
-        message: 'Unsupported insight intent.',
-      },
-    };
-    try {
-      this.context.setReturnModeForUIExtensionAbility(insightIntent.ReturnMode.FUNCTION)
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let msg = (error as BusinessError).message;
-      console.error(`testTag setReturnModeForUIExtensionAbility fail, error code: ${code}, error msg: ${msg}.`);
-    }
-
-    try {
-      let localStorageData: Record<string, number> = {
-        'insightId': this.context.instanceId,
-      };
-      let storage: LocalStorage = new LocalStorage(localStorageData);
-      storage.setOrCreate('session', pageLoader);
-      pageLoader.loadContent('pages/UIExtensionPage', storage);
-    } catch (err) {
-      const error: BusinessError = err as BusinessError;
-      console.error(`Failed to loadContent. Code: ${error.code}, message: ${error.message}`);
-    }
-    return result;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-import { LocalStorage } from '@kit.ArkUI';
-
-export default class InsightIntentExecutorUI extends InsightIntentExecutor {
-  onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,
-    pageLoader: UIExtensionContentSession): insightIntent.ExecuteResult {
-    hilog.info(0x0000, 'testTag', 'onExecuteInUIExtensionAbility %{public}s', name);
-    let result: insightIntent.ExecuteResult;
-    result = {
-      code: 0,
-      result: {
-        'message': 'Unsupported insight intent.',
-      } as Record<string, RecordData>,
-    };
-    try {
-      this.context.setReturnModeForUIExtensionAbility(insightIntent.ReturnMode.FUNCTION)
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let msg = (error as BusinessError).message;
-      console.error(`testTag setReturnModeForUIExtensionAbility fail, error code: ${code}, error msg: ${msg}.`);
-    }
-
-    try {
-      let localStorageData: Record<string, number> = {
-        'insightId': this.context.instanceId,
-      };
-      let storage: LocalStorage = new LocalStorage(localStorageData);
-      storage.setOrCreate('session', pageLoader);
-      pageLoader.loadContent('pages/UIExtensionPage', storage);
-    } catch (err) {
-      let code = (err as BusinessError).code;
-      let msg = (err as BusinessError).message;
-      console.info(`testTag loadContent error code: ${code}, error msg: ${msg}.`);
-    }
-    return result;
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -263,8 +77,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 启动UIAbility组件，仅支持启动本应用内的UIAbility组件。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -299,162 +111,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000061](../errorcode-ability.md#16000061-不支持的操作) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
-    let want: Want = {
-      bundleName: 'com.ohos.intentExecuteDemo', // 此处仅为示例，开发者在实际使用中需替换为真实包名
-      moduleName: 'entry',
-      abilityName: 'AnotherAbility',
-    };
-
-    try {
-      this.context.startAbility(want, (error) => {
-        if (error) {
-          hilog.error(0x0000, 'testTag', 'Start ability failed with %{public}s', JSON.stringify(error));
-        } else {
-          hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability succeed');
-        }
-      })
-    } catch (error) {
-      const err: BusinessError = error as BusinessError;
-      console.error(`Failed to start ability. Code: ${err.code}, message: ${err.message}`);
-    }
-
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { RecordData } from '@kit.BasicServicesKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
-    let want: Want = {
-      bundleName: 'com.ohos.intentexecutedemo',
-      moduleName: 'entry',
-      abilityName: 'AnotherAbility',
-    };
-
-    try {
-      this.context.startAbility(want, (error) => {
-        if (error) {
-          hilog.error(0x0000, 'testTag', 'Start ability failed with %{public}s', JSON.stringify(error));
-        } else {
-          hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability succeed');
-        }
-      })
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'Start ability error caught %{public}s', JSON.stringify(error));
-    }
-
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        'message': 'Execute insight intent succeed.',
-      } as Record<string, RecordData>
-    };
-    return result;
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  async onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): Promise<insightIntent.ExecuteResult> {
-    let want: Want = {
-      bundleName: 'com.ohos.intentExecuteDemo', // 此处仅为示例，开发者在实际使用中需替换为真实包名
-      moduleName: 'entry',
-      abilityName: 'AnotherAbility',
-    };
-
-    try {
-      await this.context.startAbility(want);
-      hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability finished');
-    } catch (error) {
-      const err: BusinessError = error as BusinessError;
-      console.error(`Failed to start ability. Code: ${err.code}, message: ${err.message}`);
-    }
-
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { RecordData } from '@kit.BasicServicesKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  async onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): Promise<insightIntent.ExecuteResult> {
-    let want: Want = {
-      bundleName: 'com.ohos.intentexecutedemo',
-      moduleName: 'entry',
-      abilityName: 'AnotherAbility',
-    };
-
-    try {
-      await this.context.startAbility(want);
-      hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability finished');
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'Start ability error caught %{public}s', JSON.stringify(error));
-    }
-
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        'message': 'Execute insight intent succeed.',
-      } as Record<string, RecordData>
-    };
-    return result;
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -464,8 +120,6 @@ startAbility(want: Want): Promise<void>
 启动UIAbility组件，仅支持启动本应用内的UIAbility组件。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -505,23 +159,17 @@ startAbility(want: Want): Promise<void>
 | [16000061](../errorcode-ability.md#16000061-不支持的操作) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-参见 [startAbility](#startability)
-
 ## instanceId
 
 ```TypeScript
-instanceId: int
+instanceId: number
 ```
 
 意图实例唯一ID。用于通过 [insightIntentProvider.sendExecuteResult接口] sendExecuteResult 和 [insightIntentProvider.sendIntentResult接口] sendIntentResult返回指定意图的执行结果。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

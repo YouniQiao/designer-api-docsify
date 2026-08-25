@@ -12,14 +12,12 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -82,4 +80,3 @@ import { PiPWindow } from '@kit.ArkUI';
 | [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) |
 | [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) |
 | [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) |
-| [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) |

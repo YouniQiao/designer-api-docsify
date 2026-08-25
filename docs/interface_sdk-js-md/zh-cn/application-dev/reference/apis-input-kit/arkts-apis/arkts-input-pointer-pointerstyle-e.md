@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 默认
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -32,8 +28,6 @@ EAST = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## WEST
@@ -45,8 +39,6 @@ WEST = 2
 向西箭头
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -60,8 +52,6 @@ SOUTH = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH
@@ -73,8 +63,6 @@ NORTH = 4
 向北箭头
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -88,8 +76,6 @@ WEST_EAST = 5
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_SOUTH
@@ -101,8 +87,6 @@ NORTH_SOUTH = 6
 向北南箭头
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -116,8 +100,6 @@ NORTH_EAST = 7
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_WEST
@@ -129,8 +111,6 @@ NORTH_WEST = 8
 向西北箭头
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -144,8 +124,6 @@ SOUTH_EAST = 9
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SOUTH_WEST
@@ -157,8 +135,6 @@ SOUTH_WEST = 10
 向西南箭头
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -172,8 +148,6 @@ NORTH_EAST_SOUTH_WEST = 11
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_WEST_SOUTH_EAST
@@ -185,8 +159,6 @@ NORTH_WEST_SOUTH_EAST = 12
 西北东南调整
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -200,8 +172,6 @@ CROSS = 13
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## CURSOR_COPY
@@ -213,8 +183,6 @@ CURSOR_COPY = 14
 复制
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -228,8 +196,6 @@ CURSOR_FORBID = 15
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## COLOR_SUCKER
@@ -241,8 +207,6 @@ COLOR_SUCKER = 16
 取色器
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -256,8 +220,6 @@ HAND_GRABBING = 17
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## HAND_OPEN
@@ -269,8 +231,6 @@ HAND_OPEN = 18
 张开的手
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -284,8 +244,6 @@ HAND_POINTING = 19
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## HELP
@@ -297,8 +255,6 @@ HELP = 20
 帮助选择
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -312,8 +268,6 @@ MOVE = 21
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RESIZE_LEFT_RIGHT
@@ -325,8 +279,6 @@ RESIZE_LEFT_RIGHT = 22
 内部左右调整
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -340,8 +292,6 @@ RESIZE_UP_DOWN = 23
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SCREENSHOT_CHOOSE
@@ -353,8 +303,6 @@ SCREENSHOT_CHOOSE = 24
 截图十字准星
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -368,8 +316,6 @@ SCREENSHOT_CURSOR = 25
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TEXT_CURSOR
@@ -381,8 +327,6 @@ TEXT_CURSOR = 26
 文本选择
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -396,8 +340,6 @@ ZOOM_IN = 27
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## ZOOM_OUT
@@ -409,8 +351,6 @@ ZOOM_OUT = 28
 缩小
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -424,8 +364,6 @@ MIDDLE_BTN_EAST = 29
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_WEST
@@ -437,8 +375,6 @@ MIDDLE_BTN_WEST = 30
 向西滚动
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -452,8 +388,6 @@ MIDDLE_BTN_SOUTH = 31
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH
@@ -465,8 +399,6 @@ MIDDLE_BTN_NORTH = 32
 向北滚动
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -480,8 +412,6 @@ MIDDLE_BTN_NORTH_SOUTH = 33
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH_EAST
@@ -493,8 +423,6 @@ MIDDLE_BTN_NORTH_EAST = 34
 向东北滚动
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -508,8 +436,6 @@ MIDDLE_BTN_NORTH_WEST = 35
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_SOUTH_EAST
@@ -521,8 +447,6 @@ MIDDLE_BTN_SOUTH_EAST = 36
 向东南滚动
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -536,8 +460,6 @@ MIDDLE_BTN_SOUTH_WEST = 37
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH_SOUTH_WEST_EAST
@@ -549,8 +471,6 @@ MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38
 四向锥形移动
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -564,8 +484,6 @@ HORIZONTAL_TEXT_CURSOR = 39
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## CURSOR_CROSS
@@ -577,8 +495,6 @@ CURSOR_CROSS = 40
 十字光标
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -592,8 +508,6 @@ CURSOR_CIRCLE = 41
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## LOADING
@@ -605,8 +519,6 @@ LOADING = 42
 正在载入动画光标
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -622,8 +534,6 @@ RUNNING = 43
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
@@ -638,8 +548,6 @@ MIDDLE_BTN_EAST_WEST = 44
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RUNNING_LEFT
@@ -651,8 +559,6 @@ RUNNING_LEFT = 45
 后台运行中动画光标(拓展1)
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -666,8 +572,6 @@ RUNNING_RIGHT = 46
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## AECH_DEVELOPER_DEFINED_ICON
@@ -679,8 +583,6 @@ AECH_DEVELOPER_DEFINED_ICON = 47
 圆形自定义光标
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -694,8 +596,6 @@ SCREENRECORDER_CURSOR = 48
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## LASER_CURSOR
@@ -704,11 +604,9 @@ SCREENRECORDER_CURSOR = 48
 LASER_CURSOR = 49
 ```
 
-悬浮光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。<br>空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
+悬浮光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -718,11 +616,9 @@ LASER_CURSOR = 49
 LASER_CURSOR_DOT = 50
 ```
 
-点击光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。<br>空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
+点击光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -732,11 +628,9 @@ LASER_CURSOR_DOT = 50
 LASER_CURSOR_DOT_RED = 51
 ```
 
-激光笔光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。<br>空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
+激光笔光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -749,7 +643,5 @@ DEVELOPER_DEFINED_ICON = -100
 自定义光标，开发者可使用 [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md)设置自定义光 标，不支持使用[setPointerStyle](arkts-input-pointer-setpointerstyle-f.md)直接设置。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer

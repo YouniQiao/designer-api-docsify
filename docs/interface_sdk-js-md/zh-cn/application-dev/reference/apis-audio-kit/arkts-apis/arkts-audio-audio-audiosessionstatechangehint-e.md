@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_RESUME
@@ -17,8 +15,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_RESUME = 0
 提示音频会话恢复，应用可主动触发开始渲染等操作。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_PAUSE = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_STOP
@@ -45,8 +39,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_STOP = 2
 提示音频会话因焦点被抢占而停止，彻底失去音频焦点。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -60,8 +52,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_TIME_OUT_STOP = 3
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_DUCK
@@ -73,8 +63,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4
 提示音频会话躲避开始，降低音量播放。如果已启用 [enableMuteSuggestionWhenMixWithOthers](./arkts-apis-audio-AudioSessionManager.md#enablemutesuggestionwhenmixwithothers) ，此时可以选择执行静音操作。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -88,8 +76,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK = 5
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION
@@ -101,8 +87,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_MUTE_SUGGESTION = 6
 静音播放建议。当其他应用程序开始播放不可混音的音频时，应用程序可以自行决定是否静音。此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -118,8 +102,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE_SUGGESTION = 7
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -134,8 +116,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_MUTE = 8
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -149,8 +129,6 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9
 提示音频会话解除静音，恢复播放。该提示仅在以下条件满足后才会收到：通过接口 [setAudioSessionBehavior](./arkts-apis-audio-AudioSessionManager.md#setaudiosessionbehavior)设置参数 [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md).MUTE_WHEN_INTERRUPTED，并已调用 [setAudioSessionScene](./arkts-apis-audio-AudioSessionManager.md#setaudiosessionscene)，且音频会话已激活。此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

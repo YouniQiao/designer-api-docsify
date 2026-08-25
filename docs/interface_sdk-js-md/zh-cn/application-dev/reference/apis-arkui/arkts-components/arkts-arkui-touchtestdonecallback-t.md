@@ -8,8 +8,6 @@ declare type TouchTestDoneCallback = (event: BaseGestureEvent, recognizers: Arra
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -20,5 +18,5 @@ declare type TouchTestDoneCallback = (event: BaseGestureEvent, recognizers: Arra
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [BaseGestureEvent](../arkts-apis/arkts-arkui-gesture-basegestureevent-i.md) | 是 |
-| recognizers | Array & lt;GestureRecognizer & gt; | 是 |
+| event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | 是 |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | 是 |

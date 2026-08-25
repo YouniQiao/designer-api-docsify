@@ -4,8 +4,6 @@ Represents the formatting options for the **RelativeTimeFormat** object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#return_value)
@@ -15,7 +13,7 @@ Represents the formatting options for the **RelativeTimeFormat** object.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## locale
@@ -29,8 +27,6 @@ Locale ID, including the language, script, and region.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 20
 
@@ -53,8 +49,6 @@ Numbering system. The value can be:
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numberingsystem)
@@ -75,8 +69,6 @@ Format of the output result. It determines whether numeric values are used to re
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numeric)
@@ -91,13 +83,11 @@ Format of the output result. It determines whether numeric values are used to re
 style: string
 ```
 
-Length of an internationalized message. The value can be **long**, **short**, or **narrow**.For details about their display effects, see [Table 24](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Length of an internationalized message. The value can be **number**, **short**, or **narrow**.For details about their display effects, see [Table 24](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 20
 

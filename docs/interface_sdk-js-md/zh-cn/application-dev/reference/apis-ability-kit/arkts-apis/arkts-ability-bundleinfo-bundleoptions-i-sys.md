@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -22,8 +20,6 @@ Ability名称。默认值为空字符串。 **模型约束：** 此接口仅可�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -33,16 +29,14 @@ Ability名称。默认值为空字符串。 **模型约束：** 此接口仅可�
 ## appIndex
 
 ```TypeScript
-appIndex?: int
+appIndex?: number
 ```
 
 应用分身ID。默认为0，表示主应用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -59,8 +53,6 @@ bundleName?: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,8 +72,6 @@ Ability所属的模块名称。默认值为空字符串。 **模型约束：** �
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -91,16 +81,14 @@ Ability所属的模块名称。默认值为空字符串。 **模型约束：** �
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 用户ID。默认为当前调用方所在的用户。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

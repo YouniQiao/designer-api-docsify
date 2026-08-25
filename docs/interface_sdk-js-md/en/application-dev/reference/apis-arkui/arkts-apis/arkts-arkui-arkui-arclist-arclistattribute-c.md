@@ -6,41 +6,13 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from 'kits/@kit.ArkUI';
 ```
-
-## attributeModifier
-
-```TypeScript
-default attributeModifier(modifier: AttributeModifier<ArcListAttribute> | AttributeModifier<CommonMethod> | undefined): this
-```
-
-Called attributeModifier.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Circle
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| modifier | AttributeModifier&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md)&gt; \| AttributeModifier & lt;CommonMethod & gt; \ | undefined | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| this |
 
 ## cachedCount
 
@@ -52,8 +24,6 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -62,7 +32,7 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| count | Optional & lt;number & gt; | Yes |
+| count | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
@@ -80,8 +50,6 @@ Sets whether to enable chained animations, which provide a visually connected, o
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -90,7 +58,7 @@ Sets whether to enable chained animations, which provide a visually connected, o
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 **Return value:**
 
@@ -108,8 +76,6 @@ Sets the size information of the child components of the **ArcList** component a
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -118,7 +84,7 @@ Sets the size information of the child components of the **ArcList** component a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| size | Optional & lt;ChildrenMainSize & gt; | Yes |
+| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | Yes |
 
 **Return value:**
 
@@ -136,8 +102,6 @@ Sets the sensitivity of the digital crown's event response.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -146,7 +110,7 @@ Sets the sensitivity of the digital crown's event response.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | Yes |
+| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -164,8 +128,6 @@ Sets whether to enable scroll gestures.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -174,7 +136,7 @@ Sets whether to enable scroll gestures.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 **Return value:**
 
@@ -192,8 +154,6 @@ Sets whether to enable the edge fading effect.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -202,7 +162,7 @@ Sets whether to enable the edge fading effect.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 **Return value:**
 
@@ -220,8 +180,6 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -230,7 +188,7 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| speed | Optional & lt;number & gt; | Yes |
+| speed | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
@@ -248,8 +206,6 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -258,7 +214,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [friction](#friction) | Optional & lt;number & gt; | Yes |
+| [friction](#friction) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
@@ -276,8 +232,6 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -286,7 +240,7 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional & lt;OnScrollCallback & gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -304,8 +258,6 @@ Triggered when the list reaches the end position. If the edge scrolling effect i
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -314,7 +266,7 @@ Triggered when the list reaches the end position. If the edge scrolling effect i
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional & lt;VoidCallback & gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -332,8 +284,6 @@ Triggered when the list reaches the start position. This event is triggered duri
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -342,7 +292,7 @@ Triggered when the list reaches the start position. This event is triggered duri
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional & lt;VoidCallback & gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -360,8 +310,6 @@ Triggered when a child component enters or leaves the visible area of the **ArcL
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -370,7 +318,7 @@ Triggered when a child component enters or leaves the visible area of the **ArcL
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional&lt;[ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md)&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -388,8 +336,6 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -398,7 +344,7 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional & lt;VoidCallback & gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -416,8 +362,6 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -426,7 +370,7 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional & lt;VoidCallback & gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -444,8 +388,6 @@ Triggered before each frame during list scrolling. The callback returns the offs
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -454,7 +396,7 @@ Triggered before each frame during list scrolling. The callback returns the offs
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | Optional & lt;OnWillScrollCallback & gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -472,8 +414,6 @@ Sets the state of the scrollbar.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -482,7 +422,7 @@ Sets the state of the scrollbar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| status | Optional & lt;BarState & gt; | Yes |
+| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -500,8 +440,6 @@ Sets the color of the scrollbar.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -510,7 +448,7 @@ Sets the color of the scrollbar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Optional&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | Yes |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | Yes |
 
 **Return value:**
 
@@ -528,8 +466,6 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -538,35 +474,7 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| width | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |
-
-## setArcListOptions
-
-```TypeScript
-default setArcListOptions(options?: ArkListOptions): this
-```
-
-Set ArcList options.
-
-**Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Circle
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| options | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | No |
+| width | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes |
 
 **Return value:**
 
@@ -584,8 +492,6 @@ Sets the spacing between list items.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -594,7 +500,7 @@ Sets the spacing between list items.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [space](#space) | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes |
+| [space](#space) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes |
 
 **Return value:**
 

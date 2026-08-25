@@ -4,8 +4,6 @@ Data struct describes geographic locations.@interface GeoAddress
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i.md)
@@ -17,7 +15,7 @@ Data struct describes geographic locations.@interface GeoAddress
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## addressUrl
@@ -31,8 +29,6 @@ Indicates website URL.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -54,8 +50,6 @@ Indicates administrative region name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [administrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#administrativearea)
@@ -75,8 +69,6 @@ Indicates country code.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -98,8 +90,6 @@ Indicates country name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [countryName](arkts-location-geolocationmanager-geoaddress-i.md#countryname)
@@ -119,8 +109,6 @@ Indicates additional information.
 **Type:** Array&lt;string&gt;
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -142,8 +130,6 @@ Indicates the amount of additional descriptive information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [descriptionsSize](arkts-location-geolocationmanager-geoaddress-i.md#descriptionssize)
@@ -163,8 +149,6 @@ Indicates latitude information. A positive value indicates north latitude, and a
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -186,8 +170,6 @@ Indicates language used for the location description. zh indicates Chinese, and 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [locale](arkts-location-geolocationmanager-geoaddress-i.md#locale)
@@ -207,8 +189,6 @@ Indicates locality information.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -230,8 +210,6 @@ Indicates longitude information. A positive value indicates east longitude , and
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-geoaddress-i.md#longitude)
@@ -251,8 +229,6 @@ Indicates phone number.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -274,8 +250,6 @@ Indicates landmark of the location.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [placeName](arkts-location-geolocationmanager-geoaddress-i.md#placename)
@@ -295,8 +269,6 @@ Indicates postal code.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -318,8 +290,6 @@ Indicates house information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [premises](arkts-location-geolocationmanager-geoaddress-i.md#premises)
@@ -339,8 +309,6 @@ Indicates road name.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -362,8 +330,6 @@ Indicates sub-administrative region name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [subAdministrativeArea](arkts-location-geolocationmanager-geoaddress-i.md#subadministrativearea)
@@ -384,8 +350,6 @@ Indicates sub-locality information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [subLocality](arkts-location-geolocationmanager-geoaddress-i.md#sublocality)
@@ -405,8 +369,6 @@ Indicates auxiliary road information.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

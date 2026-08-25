@@ -15,8 +15,6 @@ function registerMissionListener(listener: MissionListener): number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-ability-missionmanager-on-f-sys.md)
@@ -38,35 +36,3 @@ function registerMissionListener(listener: MissionListener): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-
-console.info('registerMissionListener');
-// 注册系统任务状态监听器
-let listenerId = missionManager.registerMissionListener({
-  onMissionCreated: (mission) => {
-    console.info('--------onMissionCreated-------');
-  },
-  onMissionDestroyed: (mission) => {
-    console.info('--------onMissionDestroyed-------');
-  },
-  onMissionSnapshotChanged: (mission) => {
-    console.info('--------onMissionSnapshotChanged-------');
-  },
-  onMissionMovedToFront: (mission) => {
-    console.info('--------onMissionMovedToFront-------');
-  },
-  onMissionIconUpdated: (mission, icon) => {
-    console.info('--------onMissionIconUpdated-------');
-  },
-  onMissionClosed: (mission) => {
-    console.info('--------onMissionClosed-------');
-  },
-  onMissionLabelUpdated: (mission) => {
-    console.info('--------onMissionLabelUpdated-------');
-  }
-});
-```

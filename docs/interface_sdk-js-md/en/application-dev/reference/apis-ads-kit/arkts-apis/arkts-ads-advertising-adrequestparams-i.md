@@ -4,14 +4,12 @@ Defines the ad request parameters.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## [key: string]
@@ -25,8 +23,6 @@ Custom parameter.<!--RP2--><!--RP2End-->
 **Type:** number \| boolean \| string \| undefined
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Number of ads requested. If not set, the business logic prevails.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -61,8 +55,6 @@ Expected creative height when requesting an ad, in vp (mandatory for banner ads)
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,8 +72,6 @@ Ad slot ID.Note: The getAdRequestBody API can omit this parameter.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -98,8 +88,6 @@ Ad keyword. Defaults to "" if not set.Note: Not supported for use currently.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -111,14 +99,17 @@ adType?: number
 ```
 
 Requested ad type.  
-- 1: Splash ad. - 3: Native ad. - 7: Rewarded ad. - 8: Banner ad. - 12: Interstitial ad - 60: Roll ad.  
+- 1: Splash ad.  
+- 3: Native ad.  
+- 7: Rewarded ad.  
+- 8: Banner ad.  
+- 12: Interstitial ad  
+- 60: Roll ad.  
 If not set, the default is the native ad type.
 
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -135,8 +126,6 @@ Expected creative width when requesting an ad, in vp (mandatory for banner ads).
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -15,8 +15,6 @@ function getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallba
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md)
@@ -35,38 +33,6 @@ function getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallba
 | numMax | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-
-// 获取所有任务信息
-missionManager.getMissionInfos('', 10, (error, missions) => {
-  if (error.code) {
-    console.error(`getMissionInfos failed, error.code: ${error.code}, error.message: ${error.message}`);
-    return;
-  }
-  console.info(`size = ${missions.length}`);
-  console.info(`missions = ${JSON.stringify(missions)}`);
-});
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  // 获取所有任务信息
-  missionManager.getMissionInfos('', 10).then((data) => {
-    console.info(`getMissionInfos successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getMissionInfos failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`getMissionInfos failed. Cause: ${error.message}`);
-}
-```
-
 
 ## getMissionInfos
 
@@ -77,8 +43,6 @@ function getMissionInfos(deviceId: string, numMax: number): Promise<Array<Missio
 获取所有任务信息。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -102,7 +66,3 @@ function getMissionInfos(deviceId: string, numMax: number): Promise<Array<Missio
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; |
-
-**示例**
-
-参见 [getMissionInfos](#getmissioninfos)

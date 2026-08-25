@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## getPointerColor
 
 ```TypeScript
-function getPointerColor(callback: AsyncCallback<int>): void
+function getPointerColor(callback: AsyncCallback<number>): void
 ```
 
 Obtains the mouse pointer color. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -26,7 +24,7 @@ Obtains the mouse pointer color. This API uses an asynchronous callback to retur
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
@@ -35,74 +33,16 @@ Obtains the mouse pointer color. This API uses an asynchronous callback to retur
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getPointerColor((error: BusinessError, color: number) => {
-              if (error) {
-                console.error(`getPointerColor error: ${JSON.stringify(error, [`code`, `message`])}`);
-              } else {
-                console.info(`getPointerColor success, color: ${JSON.stringify(color)}`);
-              }
-            });
-          } catch (error) {
-            console.error(`getPointerColor failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getPointerColor().then((color: number) => {
-              console.info(`getPointerColor success, color: ${JSON.stringify(color)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get pointer color failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getPointerColor failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## getPointerColor
 
 ```TypeScript
-function getPointerColor(): Promise<int>
+function getPointerColor(): Promise<number>
 ```
 
 Obtains the current mouse pointer color. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -112,14 +52,10 @@ Obtains the current mouse pointer color. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [getPointerColor](#getpointercolor)

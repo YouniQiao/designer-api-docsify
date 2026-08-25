@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## startShortcut
@@ -15,8 +15,6 @@ function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Prom
 拉起指定ShortcutInfo中的ability。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.START_SHORTCUT
 
@@ -46,33 +44,3 @@ function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Prom
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700065](../errorcode-bundle.md#17700065-shortcutinfo结构体中指定的want不支持被拉起) |
-
-**示例**
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data: Array<launcherBundleManager.ShortcutInfo> = launcherBundleManager.getShortcutInfoSync("com.example.demo");
-  console.info('data is ' + JSON.stringify(data));
-  if (data) {
-    try {
-      launcherBundleManager.startShortcut(data[0])
-        .then(() => {
-          console.info('startShortcut success');
-        }).catch((err: BusinessError) => {
-        console.error(`errData is errCode:${err.code}  message:${err.message}`);
-      });
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let message = (error as BusinessError).message;
-      console.error(`error is errCode:${code}  message:${message}`);
-    }
-  }
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```

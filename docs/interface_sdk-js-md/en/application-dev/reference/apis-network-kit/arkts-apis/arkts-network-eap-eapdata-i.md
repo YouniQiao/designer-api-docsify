@@ -4,14 +4,12 @@ Defines the EAP data.​
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## Modules to Import
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## bufferLen
@@ -25,8 +23,6 @@ Data length.
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
@@ -42,8 +38,6 @@ Raw EAP data starting from the EAP header, which is not encrypted.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 ## msgId
@@ -57,7 +51,5 @@ Pseudo random number used to associate the EAP data before and after processing.
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Eap

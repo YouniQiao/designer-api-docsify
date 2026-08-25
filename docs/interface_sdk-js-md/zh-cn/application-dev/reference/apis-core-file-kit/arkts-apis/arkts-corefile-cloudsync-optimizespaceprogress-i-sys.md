@@ -4,8 +4,6 @@
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## progress
 
 ```TypeScript
-progress: int
+progress: number
 ```
 
 优化进度百分比，范围[0,100]，单位：百分比。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -47,8 +43,6 @@ state: OptimizeState
 **类型：** [OptimizeState](arkts-corefile-cloudsync-optimizestate-e-sys.md)
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 

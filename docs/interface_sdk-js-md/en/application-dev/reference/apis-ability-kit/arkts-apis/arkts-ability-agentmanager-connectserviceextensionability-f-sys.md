@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## connectServiceExtensionAbility
 
 ```TypeScript
-function connectServiceExtensionAbility(context: AgentExtensionContext, want: Want, callback: ConnectOptions): long
+function connectServiceExtensionAbility(context: AgentExtensionContext, want: Want, callback: ConnectOptions): number
 ```
 
 Connects an AgentExtensionAbility to a ServiceExtensionAbility. If the target service extension ability is visible, you can connect to it. If the target service extension ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to connect to it. If the target service extension ability is on a remote device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +34,7 @@ Connects an AgentExtensionAbility to a ServiceExtensionAbility. If the target se
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **Error codes:**
 

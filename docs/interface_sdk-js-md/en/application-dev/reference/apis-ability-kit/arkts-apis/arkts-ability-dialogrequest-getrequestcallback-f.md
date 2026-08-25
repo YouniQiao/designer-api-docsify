@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRequestCallback
@@ -20,8 +20,6 @@ Obtains the request callback from Want.
 > obtained.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -42,19 +40,3 @@ Obtains the request callback from Want.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      let requestCallback = dialogRequest.getRequestCallback(want);
-    } catch(err) {
-      console.error(`getRequestInfo err= ${JSON.stringify(err)}`);
-    }
-  }
-}
-```

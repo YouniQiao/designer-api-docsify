@@ -4,8 +4,6 @@ Defines information about a registered device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
@@ -15,7 +13,7 @@ Defines information about a registered device.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@kit.CoreFileKit';
+import { userFileManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## deviceName
@@ -29,8 +27,6 @@ Name of the registered device.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -50,8 +46,6 @@ Whether the registered device is online. The value **true** means the registered
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.DistributedCore
@@ -69,8 +63,6 @@ Network ID of the registered device.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 

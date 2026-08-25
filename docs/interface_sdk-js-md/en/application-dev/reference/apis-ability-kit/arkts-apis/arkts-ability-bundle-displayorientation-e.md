@@ -8,8 +8,6 @@ Enumerates display orientations.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
@@ -25,8 +23,6 @@ UNSPECIFIED = 0
 Unspecified display orientation.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ Landscape orientation.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LANDSCAPE](arkts-ability-bundlemanager-displayorientation-e.md#landscape)
@@ -62,8 +56,6 @@ Portrait orientation.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PORTRAIT](arkts-ability-bundlemanager-displayorientation-e.md#portrait)
@@ -79,8 +71,6 @@ FOLLOW_RECENT = 3
 Orientation same as that of the nearest ability in the stack.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

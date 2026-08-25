@@ -4,8 +4,6 @@ Boids simulation plugin, providing static methods for obtaining the boids simula
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 Gets the Boids simulation world instance associated with the specified scene.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

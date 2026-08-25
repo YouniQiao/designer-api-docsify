@@ -4,14 +4,12 @@ Implements a paragraph builder that uses the builder pattern to construct paragr
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## addPlaceholder
@@ -24,8 +22,6 @@ Inserts a placeholder when building a text paragraph. After insertion, the place
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -36,61 +32,15 @@ Inserts a placeholder when building a text paragraph. After insertion, the place
 | --- | --- | --- |
 | placeholderSpan | [PlaceholderSpan](arkts-arkgraphics2d-text-placeholderspan-i.md) | Yes |
 
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc() {
-  let myParagraphStyle: text.ParagraphStyle = {
-    align: text.TextAlign.END,
-  };
-  let myPlaceholderSpan: text.PlaceholderSpan = {
-    width: 100,
-    height: 100,
-    align: text.PlaceholderAlignment.ABOVE_BASELINE,
-    baseline: text.TextBaseline.ALPHABETIC,
-    baselineOffset: 100
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addPlaceholder(myPlaceholderSpan);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
-
 ## addSymbol
 
-ArkTS-Dyn:
 ```TypeScript
 addSymbol(symbolId: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-addSymbol(symbolId: int): void
 ```
 
 Inserts a symbol into the paragraph being built.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -100,41 +50,7 @@ Inserts a symbol into the paragraph being built.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| symbolId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-
-**Examples**
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addSymbol(0xF0000);
-  let paragraph = paragraphBuilder.build();
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
+| symbolId | number | Yes |
 
 ## addText
 
@@ -146,8 +62,6 @@ Inserts a text string into the paragraph being built.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -157,42 +71,6 @@ Inserts a text string into the paragraph being built.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [text](arkts-graphics-text.md) | string | Yes |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addText("123666");
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## build
 
@@ -204,8 +82,6 @@ Builds a paragraph and generates a paragraph object that can be used for subsequ
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -215,41 +91,6 @@ Builds a paragraph and generates a paragraph object that can be used for subsequ
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md) |
-
-**Examples**
-
-```TypeScript
-import { drawing, text, common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color : {alpha: 255, red: 255, green: 0, blue: 0},
-    fontSize : 20,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle : myTextStyle,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addText("123456789");
-  let paragraph = paragraphBuilder.build();
-  paragraph.layoutSync(200);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## buildLineTypeset
 
@@ -261,8 +102,6 @@ Builds a line typesetter and generates a LineTypeset object that can be used for
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -272,35 +111,6 @@ Builds a line typesetter and generates a LineTypeset object that can be used for
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) |
-
-**Examples**
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function test() {
-  let myParagraphStyle: text.ParagraphStyle = {
-    align: text.TextAlign.JUSTIFY,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.addText("123456789");
-  let lineTypeset = paragraphBuilder.buildLineTypeset();
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = test;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## constructor
 
@@ -312,8 +122,6 @@ A constructor used to create a **ParagraphBuilder** object.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -324,38 +132,6 @@ A constructor used to create a **ParagraphBuilder** object.
 | --- | --- | --- |
 | paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Yes |
 | fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## popStyle
 
@@ -372,48 +148,9 @@ Restores the previous text style.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.pushStyle(myTextStyle);
-  paragraphBuilder.popStyle();
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
 
 ## pushStyle
 
@@ -428,8 +165,6 @@ Applies a new style to the current text blob.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -438,40 +173,4 @@ Applies a new style to the current text blob.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| textStyle | [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc() {
-  let myTextStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let myParagraphStyle: text.ParagraphStyle = {
-    textStyle: myTextStyle,
-    align: text.TextAlign.CENTER,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
-  paragraphBuilder.pushStyle(myTextStyle);
-}
-
-@Entry
-@Component
-struct Index {
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Button().onClick(() => {
-        this.fun();
-      })
-    }
-  }
-}
-```
+| textStyle | [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | Yes |

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connectToCandidateConfigWithUserAction
 
 ```TypeScript
-function connectToCandidateConfigWithUserAction(networkId: int): Promise<void>
+function connectToCandidateConfigWithUserAction(networkId: number): Promise<void>
 ```
 
 Connect to a specified candidate hotspot by networkId, and wait for user respond result. Only the configuration which is added by ourself is allowed to be connected. This method connect to a configuration at a time. The app must be in the foreground.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
@@ -28,7 +26,7 @@ Connect to a specified candidate hotspot by networkId, and wait for user respond
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| networkId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| networkId | number | Yes |
 
 **Return value:**
 
@@ -47,20 +45,3 @@ Connect to a specified candidate hotspot by networkId, and wait for user respond
 | [2501005](../errorcode-wifi.md#2501005-no-user-response-to-the-connection-request) |
 | [2501006](../errorcode-wifi.md#2501006-connection-request-rejected) |
 | [2501007](../errorcode-wifi.md#2501007-parameter-verification-failed) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  
-  try {
-    let networkId = 0; // Candidate network ID, which is generated when a candidate network is added.
-    wifiManager.connectToCandidateConfigWithUserAction(networkId).then(result => {
-      console.info("result:" + JSON.stringify(result));
-    }).catch((err:number) => {
-      console.error("failed:" + JSON.stringify(err));
-    });
-  }catch(error){  
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

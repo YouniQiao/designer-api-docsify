@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## queryOpenedEnterpriseDlpFiles
@@ -23,8 +23,6 @@ Queries the URIs of enterprise DLP files that have been opened and meet the spec
 > files) are returned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 

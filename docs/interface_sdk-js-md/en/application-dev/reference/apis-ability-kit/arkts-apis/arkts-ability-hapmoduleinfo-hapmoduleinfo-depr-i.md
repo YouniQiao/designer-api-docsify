@@ -8,8 +8,6 @@ The HapModuleInfo module provides information about an HAP module. Unless otherw
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [HapModuleInfo](#hapmoduleinfo)
@@ -29,8 +27,6 @@ Ability information.
 **Default:** Obtains configuration information about ability
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Module background image.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -71,8 +65,6 @@ Module description.
 **Default:** Describes the hapmodule
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -94,8 +86,6 @@ Module description ID.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** descriptionId
@@ -115,8 +105,6 @@ Device types supported by the module.
 **Default:** The device types that this hapmodule can run on
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -138,8 +126,6 @@ Module icon.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** icon
@@ -159,8 +145,6 @@ Module icon ID.
 **Default:** Indicates the icon id of this hapmodule
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -182,8 +166,6 @@ Whether installation-free is supported. **true** if supported, **false** otherwi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** installationFree
@@ -203,8 +185,6 @@ Module label.
 **Default:** Indicates the label of this hapmodule
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -226,8 +206,6 @@ Module label ID.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -248,8 +226,6 @@ Name of the main ability.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -267,8 +243,6 @@ Module name.
 **Default:** Indicates the name of the .hap package to which the capability belongs
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -290,8 +264,6 @@ Module name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** name
@@ -312,8 +284,6 @@ Capabilities required for module running.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -331,8 +301,6 @@ Running modes supported by the module.
 **Default:** Indicates the supported modes of this hapmodule
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELECTION_MENU
@@ -17,8 +15,6 @@ SELECTION_MENU = 0
 文本选择菜单。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,8 +31,6 @@ PREVIEW_MENU = 1
 图片预览菜单。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

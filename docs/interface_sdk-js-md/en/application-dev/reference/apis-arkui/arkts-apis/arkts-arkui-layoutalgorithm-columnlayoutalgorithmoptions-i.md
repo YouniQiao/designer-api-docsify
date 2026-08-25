@@ -4,8 +4,6 @@ Sets the spacing, main axis alignment method, cross axis alignment method, and m
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignItems
@@ -16,13 +14,11 @@ alignItems?: HorizontalAlign
 
 Horizontal alignment mode of all child components.Default value: **HorizontalAlign.Center**Invalid values are treated as the default value.
 
-**Type:** [HorizontalAlign](arkts-arkui-enums-horizontalalign-e.md)
+**Type:** [HorizontalAlign](arkts-arkui-horizontalalign-e.md)
 
 **Default:** HorizontalAlign.Center
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Whether to reverse the vertical arrangement of child components. **true** indica
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -64,13 +58,11 @@ justifyContent?: FlexAlign
 
 Vertical alignment mode of all child components.Default value: **FlexAlign.Start**Invalid values are treated as the default value.
 
-**Type:** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
+**Type:** [FlexAlign](arkts-arkui-flexalign-e.md)
 
 **Default:** FlexAlign.Start
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,8 +85,6 @@ Vertical spacing between elements in a vertical layout.Default value: **LengthMe
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Enumerates VCard versions.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## VERSION_21
@@ -17,8 +15,6 @@ VERSION_21 = 0
 VCard 2.1.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -32,8 +28,6 @@ VCard 3.0.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## VERSION_40
@@ -45,7 +39,5 @@ VERSION_40 = 2
 VCard 4.0.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService

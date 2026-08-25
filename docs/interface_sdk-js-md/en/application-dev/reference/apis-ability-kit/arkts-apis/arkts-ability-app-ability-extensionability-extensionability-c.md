@@ -6,8 +6,6 @@ ExtensionAbility is the base class for scenario-specific ExtensionAbilities. It 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -17,5 +15,5 @@ ExtensionAbility is the base class for scenario-specific ExtensionAbilities. It 
 ## Modules to Import
 
 ```TypeScript
-import { ExtensionAbility } from '@kit.AbilityKit';
+import { ExtensionAbility } from 'kits/@kit.AbilityKit';
 ```

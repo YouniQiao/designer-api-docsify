@@ -1,12 +1,10 @@
 # TextInput属性/事件
 
-除支持通用属性外，还支持以下属性。除支持通用事件外，还支持以下事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** TextInputAttribute extends CommonMethod<TextInputAttribute>
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ autoCapitalizationMode(mode: AutoCapitalizationMode)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ autoCapitalizationMode(mode: AutoCapitalizationMode)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mode | [AutoCapitalizationMode](#autocapitalizationmode) | 是 |
+| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) | 是 |
 
 ## barState
 
@@ -49,8 +45,6 @@ barState(value: BarState)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -61,7 +55,7 @@ barState(value: BarState)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [BarState](#barstate) | 是 |
+| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 |
 
 ## cancelButton
 
@@ -72,8 +66,6 @@ cancelButton(options: CancelButtonOptions)
 设置右侧清除按钮样式，仅支持图片类型的图标。不支持[TextInputStyle](arkts-arkui-textinputstyle-e.md)的内联模式。示例请参考 [示例4（设置右侧清除按钮样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#示例4设置右侧清除按钮样式)。未通过该接口设置 时，默认为{ style: CancelButtonStyle.INPUT }，Wearable设备上图标默认尺寸为28vp。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,8 +89,6 @@ cancelButton(symbolOptions: CancelButtonSymbolOptions)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -109,7 +99,7 @@ cancelButton(symbolOptions: CancelButtonSymbolOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| symbolOptions | [CancelButtonSymbolOptions](../arkts-apis/arkts-arkui-search-cancelbuttonsymboloptions-i.md) | 是 |
+| symbolOptions | [CancelButtonSymbolOptions](arkts-arkui-cancelbuttonsymboloptions-i.md) | 是 |
 
 ## caretColor
 
@@ -120,8 +110,6 @@ caretColor(value: ResourceColor)
 设置输入框光标颜色。未通过该接口设置时，默认为'#007DFF'（蓝色），Wearable设备上默认值为'#5EA1FF'（蓝色，比'#007DFF'颜色稍浅）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -142,8 +130,6 @@ caretPosition(value: number)
 设置光标位置。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -167,8 +153,6 @@ caretStyle(value: CaretStyle)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -179,7 +163,7 @@ caretStyle(value: CaretStyle)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [CaretStyle](#caretstyle) | 是 |
+| value | [CaretStyle](../arkts-apis/arkts-arkui-caretstyle-i.md) | 是 |
 
 ## compressLeadingPunctuation
 
@@ -194,8 +178,6 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -206,7 +188,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## contentType
 
@@ -217,8 +199,6 @@ contentType(value: ContentType)
 设置自动填充类型。<!--RP7--><!--RP7End-->
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -242,8 +222,6 @@ copyOption(value: CopyOptions)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -260,14 +238,12 @@ copyOption(value: CopyOptions)
 customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions)
 ```
 
-设置自定义键盘。当设置自定义键盘时，输入框激活后不会打开系统输入法，而是加载指定的自定义组件。自定义键盘的高度可以通过自定义组件根节点的height属性设置，宽度不可设置，使用系统默认值。自定义键盘采用覆盖原始界面的方式呈现，当没有开启避让模式或者输入框不需要避让的场景不会对应用原始界面产生压缩或者上提。自定义键盘无法获取焦点，但是会拦截手势事件。默认在输入控件失去焦点时，关闭自定义键盘，开发者也可以通过[TextInputController](arkts-arkui-textinputcontroller-c.md). [stopEditing](arkts-arkui-textinputcontroller-c.md#stopediting)方法控制键盘关闭。当设置自定义键盘时，可以通过绑定onKeyPreIme事件规避物理键盘的输入。从API version 23开始，自定义键盘可以通过 [setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至 其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
+设置自定义键盘。当设置自定义键盘时，输入框激活后不会打开系统输入法，而是加载指定的自定义组件。自定义键盘的高度可以通过自定义组件根节点的height属性设置，宽度不可设置，使用系统默认值。自定义键盘采用覆盖原始界面的方式呈现，当没有开启避让模式或者输入框不需要避让的场景不会对应用原始界面产生压缩或者上提。自定义键盘无法获取焦点，但是会拦截手势事件。默认在输入控件失去焦点时，关闭自定义键盘，开发者也可以通过[TextInputController](arkts-arkui-textinputcontroller-c.md). [stopEditing](arkts-arkui-textinputcontroller-c.md#stopediting)方法控制键盘关闭。当设置自定义键盘时，可以通过绑定[onKeyPreIme](arkts-arkui-commonmethod-c.md#onkeypreime)事件规避物理键盘的输入。从API version 23开始，自定义键盘可以通过 [setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)开启接续，在切换至 其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
 
 > **说明：**&gt;
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -279,7 +255,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | CustomBuilder \| ComponentContent \| undefined | 是 |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | 是 |
 | options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | 否 |
 
 ## decoration
@@ -292,8 +268,6 @@ decoration(value: TextDecorationOptions)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -304,7 +278,7 @@ decoration(value: TextDecorationOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [TextDecorationOptions](../arkts-apis/arkts-arkui-common-textdecorationoptions-i.md) | 是 |
+| value | [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | 是 |
 
 ## editMenuOptions
 
@@ -316,8 +290,6 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -328,7 +300,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| editMenu | [EditMenuOptions](#editmenuoptions) | 是 |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 |
 
 ## ellipsisMode
 
@@ -340,8 +312,6 @@ ellipsisMode(mode: Optional<EllipsisMode>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -352,7 +322,7 @@ ellipsisMode(mode: Optional<EllipsisMode>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mode | Optional & lt;EllipsisMode & gt; | 是 |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;EllipsisMode&gt; | 是 |
 
 ## enableAutoFill
 
@@ -363,8 +333,6 @@ enableAutoFill(value: boolean)
 设置是否启用自动填充。未通过该接口设置时，默认启用自动填充。<!--RP6--><!--RP6End-->
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -388,8 +356,6 @@ enableAutoFillAnimation(enabled: Optional<boolean>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -400,7 +366,7 @@ enableAutoFillAnimation(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## enableAutoSpacing
 
@@ -412,8 +378,6 @@ enableAutoSpacing(enabled: Optional<boolean>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -424,7 +388,7 @@ enableAutoSpacing(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## enableHapticFeedback
 
@@ -435,8 +399,6 @@ enableHapticFeedback(isEnabled: boolean)
 设置是否开启触控反馈。未通过该接口设置时，默认开启触控反馈。开启触控反馈时，需要在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段以开启振动权限，配置如 下：
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -460,8 +422,6 @@ enableKeyboardOnFocus(value: boolean)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -484,8 +444,6 @@ enablePreviewText(enable: boolean)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -504,11 +462,9 @@ enablePreviewText(enable: boolean)
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。未通过该接口设置时，默认开启选中文本实体识别，并识别所有类型的实体，同时启用AI菜单功能。当enableSelectedDataDetector设置为true时，默认识别所有类型的实体。启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。需要CopyOptions为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
+设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。未通过该接口设置时，默认开启选中文本实体识别，并识别所有类型的实体，同时启用AI菜单功能。当enableSelectedDataDetector设置为true时，默认识别所有类型的实体。启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。需要CopyOptions为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -532,8 +488,6 @@ enterKeyType(value: EnterKeyType)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -554,8 +508,6 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -566,7 +518,7 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## fontColor
 
@@ -577,8 +529,6 @@ fontColor(value: ResourceColor)
 设置字体颜色。未通过该接口设置时，默认颜色跟随主题，Wearable设备上默认值为'#dbffffff'（白色，不透明度为86%）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -600,8 +550,6 @@ fontFamily(value: ResourceStr)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -621,8 +569,6 @@ fontFeature(value: string)
 设置文字特性效果，比如数字等宽的特性。格式为：normal \| \&lt;feature-tag-value\&gt;\&lt;feature-tag-value\&gt;的格式为：\&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]\&lt;feature-tag-value\&gt;的个数可以有多个，中间用','隔开。例如，使用等宽数字的输入格式为："ss01" on。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -646,8 +592,6 @@ fontSize(value: Length)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -667,8 +611,6 @@ fontStyle(value: FontStyle)
 设置字体样式。未通过该接口设置时，默认为FontStyle.Normal。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -690,8 +632,6 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -712,8 +652,6 @@ halfLeading(halfLeading: Optional<boolean>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -724,7 +662,7 @@ halfLeading(halfLeading: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [halfLeading](#halfleading) | Optional & lt;boolean & gt; | 是 |
+| [halfLeading](#halfleading) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## heightAdaptivePolicy
 
@@ -739,8 +677,6 @@ heightAdaptivePolicy(value: TextHeightAdaptivePolicy)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -751,7 +687,7 @@ heightAdaptivePolicy(value: TextHeightAdaptivePolicy)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-enums-textheightadaptivepolicy-e.md) | 是 |
+| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | 是 |
 
 ## includeFontPadding
 
@@ -763,8 +699,6 @@ includeFontPadding(include: Optional<boolean>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -775,7 +709,7 @@ includeFontPadding(include: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| include | Optional & lt;boolean & gt; | 是 |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## inputFilter
 
@@ -786,8 +720,6 @@ inputFilter(value: ResourceStr, error?: Callback<string>)
 通过正则表达式设置输入过滤器。匹配表达式的输入允许显示，不匹配的输入将被过滤。单字符输入场景仅支持单字符匹配，多字符输入场景支持字符串匹配，例如粘贴。未通过该接口设置时，默认无输入过滤规则，所有输入都允许显示。从API version 11开始，设置inputFilter且输入的字符不为空字符，会导致[type](#type)接口附带的文本过滤效果失效。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -810,8 +742,6 @@ keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -822,7 +752,7 @@ keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| appearance | Optional & lt;KeyboardAppearance & gt; | 是 |
+| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | 是 |
 
 ## letterSpacing
 
@@ -833,8 +763,6 @@ letterSpacing(value: number | string | Resource)
 设置文本字符间距。设置该值为百分比时，按默认值显示。设置该值为0时，按默认值显示。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。当取值为负值时，文字会发生压缩，负值过小时会将组件内容区大小压缩为0，导致无内容显示。对每个字符生效，包括行尾字符。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -858,8 +786,6 @@ lineBreakStrategy(strategy: LineBreakStrategy)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -870,7 +796,7 @@ lineBreakStrategy(strategy: LineBreakStrategy)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| strategy | [LineBreakStrategy](#linebreakstrategy) | 是 |
+| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | 是 |
 
 ## lineHeight
 
@@ -886,8 +812,6 @@ lineHeight(value: number | string | Resource)
 > [lineHeight](#lineheight)不生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -911,8 +835,6 @@ maxFontScale(scale: Optional<number|Resource>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -923,7 +845,7 @@ maxFontScale(scale: Optional<number|Resource>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| scale | Optional & lt;number \ | Resource & gt; | 是 |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | 是 |
 
 ## maxFontSize
 
@@ -934,8 +856,6 @@ maxFontSize(value: number | string | Resource)
 设置文本最大显示字号。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。需配合[minFontSize](#minfontsize)以及[maxLines](#maxlines)(组件设置为内联输入风格且编 辑态时使用)或布局大小限制使用，单独设置不生效。自适应字号生效时，fontSize设置不生效。maxFontSize小于等于0或者maxFontSize小于minFontSize时，自适应字号不生效，此时按照[fontSize](#fontsize)属性的值生效，未设置时按照 其默认值生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -959,8 +879,6 @@ maxLength(value: number)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -980,8 +898,6 @@ maxLines(value: number)
 设置内联输入风格编辑态时文本可显示的最大行数。未通过该接口设置时，默认为3。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1005,8 +921,6 @@ minFontScale(scale: Optional<number|Resource>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1017,7 +931,7 @@ minFontScale(scale: Optional<number|Resource>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| scale | Optional & lt;number \ | Resource & gt; | 是 |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | 是 |
 
 ## minFontSize
 
@@ -1028,8 +942,6 @@ minFontSize(value: number | string | Resource)
 设置文本最小显示字号。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。需配合[maxFontSize](#maxfontsize)以及[maxLines](#maxlines)(组件设置为内联输入风格且编 辑态时使用)或布局大小限制使用，单独设置不生效。自适应字号生效时，fontSize设置不生效。minFontSize小于或等于0时，自适应字号不生效，此时按照[fontSize](#fontsize)属性的值生效，未设置时按照其默认值生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1053,8 +965,6 @@ onChange(callback: EditableTextOnChangeCallback)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -1074,8 +984,6 @@ onContentScroll(callback: OnContentScrollCallback)
 文本内容滚动时，触发该回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1099,8 +1007,6 @@ onCopy(callback: Callback<string>)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -1120,8 +1026,6 @@ onCut(callback: Callback<string>)
 进行剪切操作时，触发该回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1143,8 +1047,6 @@ onDidDelete(callback: Callback<DeleteValue>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1155,7 +1057,7 @@ onDidDelete(callback: Callback<DeleteValue>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Callback & lt;DeleteValue & gt; | 是 |
+| callback | Callback&lt;[DeleteValue](../arkts-apis/arkts-arkui-deletevalue-i.md)&gt; | 是 |
 
 ## onDidInsert
 
@@ -1167,8 +1069,6 @@ onDidInsert(callback: Callback<InsertValue>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1179,7 +1079,7 @@ onDidInsert(callback: Callback<InsertValue>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Callback & lt;InsertValue & gt; | 是 |
+| callback | Callback&lt;[InsertValue](../arkts-apis/arkts-arkui-insertvalue-i.md)&gt; | 是 |
 
 ## onEditChange
 
@@ -1190,8 +1090,6 @@ onEditChange(callback: Callback<boolean>)
 输入状态变化时，触发该回调。有光标时为编辑态，无光标时为非编辑态。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1212,8 +1110,6 @@ onEditChanged(callback: (isEditing: boolean) => void)
 输入状态变化时，触发该回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 8
 
@@ -1236,8 +1132,6 @@ onPaste(callback: OnPasteCallback)
 进行粘贴操作时，触发该回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1262,8 +1156,6 @@ onSecurityStateChange(callback: Callback<boolean>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1286,8 +1178,6 @@ onSubmit(callback: OnSubmitCallback)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -1308,8 +1198,6 @@ onTextSelectionChange(callback: OnTextSelectionChangeCallback)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1328,14 +1216,12 @@ onTextSelectionChange(callback: OnTextSelectionChangeCallback)
 onWillAttachIME(callback: Callback<IMEClient>)
 ```
 
-在输入框将要绑定输入法前触发该回调。<!--Del-->在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;从API version 22开始，调用IMEClient的setExtraConfig方法可以设置输入法扩展信息。在绑定输 入法成功后，输入法会收到扩展信息，输入法可以依据此信息实现自定义功能。IMEClient仅在onWillAttachIME执行期间有效，不可进行异步调用。
+在输入框将要绑定输入法前触发该回调。<!--Del-->在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;从API version 22开始，调用[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)的[setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfig)方法可以设置输入法扩展信息。在绑定输 入法成功后，输入法会收到扩展信息，输入法可以依据此信息实现自定义功能。IMEClient仅在onWillAttachIME执行期间有效，不可进行异步调用。
 
 > **说明：**&gt;
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1347,7 +1233,7 @@ onWillAttachIME(callback: Callback<IMEClient>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Callback & lt;IMEClient & gt; | 是 |
+| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; | 是 |
 
 ## onWillChange
 
@@ -1359,8 +1245,6 @@ onWillChange(callback: Callback<EditableTextChangeValue, boolean>)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -1371,7 +1255,7 @@ onWillChange(callback: Callback<EditableTextChangeValue, boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Callback & lt;EditableTextChangeValue, boolean & gt; | 是 |
+| callback | Callback&lt;[EditableTextChangeValue](../arkts-apis/arkts-arkui-editabletextchangevalue-i.md), boolean&gt; | 是 |
 
 ## onWillCopy
 
@@ -1388,8 +1272,6 @@ onWillCopy(callback: Callback<string, boolean>)
 > - 两者可以同时使用，onWillCopy用于拦截控制，onCopy用于获取复制结果。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1419,8 +1301,6 @@ onWillCut(callback: Callback<string, boolean>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1449,8 +1329,6 @@ onWillDelete(callback: Callback<DeleteValue, boolean>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1461,7 +1339,7 @@ onWillDelete(callback: Callback<DeleteValue, boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Callback & lt;DeleteValue, boolean & gt; | 是 |
+| callback | Callback&lt;[DeleteValue](../arkts-apis/arkts-arkui-deletevalue-i.md), boolean&gt; | 是 |
 
 ## onWillInsert
 
@@ -1479,8 +1357,6 @@ onWillInsert(callback: Callback<InsertValue, boolean>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1491,7 +1367,7 @@ onWillInsert(callback: Callback<InsertValue, boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Callback & lt;InsertValue, boolean & gt; | 是 |
+| callback | Callback&lt;[InsertValue](../arkts-apis/arkts-arkui-insertvalue-i.md), boolean&gt; | 是 |
 
 ## orphanCharOptimization
 
@@ -1503,8 +1379,6 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -1513,7 +1387,7 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## passwordIcon
 
@@ -1524,8 +1398,6 @@ passwordIcon(value: PasswordIcon)
 设置在密码模式下，输入框末尾的图标。未通过该接口设置时，默认使用系统提供的密码图标。支持jpg、png、bmp、heic和webp类型的图片格式。该图标的固定尺寸为24vp，Wearable设备上默认尺寸为28vp，若引用的图标过 大或过小，均显示为固定尺寸。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1549,8 +1421,6 @@ passwordRules(value: string)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1573,8 +1443,6 @@ placeholderColor(value: ResourceColor)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -1594,8 +1462,6 @@ placeholderFont(value?: Font)
 设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1617,8 +1483,6 @@ punctuationOverflow(enabled: Optional<boolean>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1629,7 +1493,7 @@ punctuationOverflow(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## selectAll
 
@@ -1640,8 +1504,6 @@ selectAll(value: boolean)
 设置初始状态时，是否全选文本。不支持[TextInputStyle](arkts-arkui-textinputstyle-e.md)的内联模式。未通过该接口设置时，默认不会全选文本。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1665,8 +1527,6 @@ selectedBackgroundColor(value: ResourceColor)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1689,8 +1549,6 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -1701,7 +1559,7 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | SelectedDragPreviewStyle \| undefined | 是 |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | 是 |
 
 ## selectionMenuHidden
 
@@ -1712,8 +1570,6 @@ selectionMenuHidden(value: boolean)
 设置是否隐藏系统文本选择菜单。未通过该接口设置时，默认显示系统文本选择菜单。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1741,8 +1597,6 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1753,7 +1607,7 @@ shaderStyle(shader: ShaderStyle | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| shader | ShaderStyle \| undefined | 是 |
+| shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) \| undefined | 是 |
 
 ## showCounter
 
@@ -1761,7 +1615,7 @@ shaderStyle(shader: ShaderStyle | undefined)
 showCounter(value: boolean, options?: InputCounterOptions)
 ```
 
-设置当通过InputCounterOptions输入的字符数超过阈值时显示计数器。未调用showCounter接口时，默认不显示计数器。参数value为true时，才能设置options，文本框开启计数下标功能，需要配合[maxLength](#maxlength)（设置最大字符限制）一起使用。字符计数器显示的效果是 当前输入字符数/最大可输入字符数。当输入字符数大于最大字符数乘百分比值时，显示字符计数器。如果用户设置计数器时不设置InputCounterOptions，那么当前输入字符数超过最大字符数时，边框和计数器下标将变为红色。用户同时设置参数value为true和 InputCounterOptions，当thresholdPercentage数值在有效区间内，且输入字符数超过最大字符数时，边框和计数器下标将变为红色，框体抖动。 highlightBorder设置为false，则不显示红色边框，计数器默认显示红色，框体抖动。  
+设置当通过InputCounterOptions输入的字符数超过阈值时显示计数器。未调用showCounter接口时，默认不显示计数器。参数value为true时，才能设置options，文本框开启计数下标功能，需要配合[maxLength](#maxlength)（设置最大字符限制）一起使用。字符计数器显示的效果是 当前输入字符数/最大可输入字符数。当输入字符数大于最大字符数乘百分比值时，显示字符计数器。如果用户设置计数器时不设置InputCounterOptions，那么当前输入字符数超过最大字符数时，边框和计数器下标将变为红色。用户同时设置参数value为true和 [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md)，当thresholdPercentage数值在有效区间内，且输入字符数超过最大字符数时，边框和计数器下标将变为红色，框体抖动。 highlightBorder设置为false，则不显示红色边框，计数器默认显示红色，框体抖动。  
 [TextInputStyle](arkts-arkui-textinputstyle-e.md)的内联模式、[密码模式](../../../ui/arkts-common-components-text-input.md#密码模式)下字符计数器不显 示。  
 [示例5（设置计数器）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#示例5设置计数器)展示了设置showCounter的效果。
 
@@ -1769,8 +1623,6 @@ showCounter(value: boolean, options?: InputCounterOptions)
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1783,7 +1635,7 @@ showCounter(value: boolean, options?: InputCounterOptions)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | boolean | 是 |
-| options | [InputCounterOptions](../arkts-apis/arkts-arkui-common-inputcounteroptions-i.md) | 否 |
+| options | [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) | 否 |
 
 ## showError
 
@@ -1795,8 +1647,6 @@ showError(value?: ResourceStr | undefined)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1807,7 +1657,7 @@ showError(value?: ResourceStr | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ResourceStr \| undefined | 否 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| undefined | 否 |
 
 ## showPassword
 
@@ -1819,8 +1669,6 @@ showPassword(visible: boolean)
 [密码模式](../../../ui/arkts-common-components-text-input.md#密码模式)时，由于输入框后端的状态和前端应用侧的状态管理变量会不一致，可能导致末尾图标的状态异常。建议在 [onSecurityStateChange](#onsecuritystatechange)上增加状态同步。参考 [示例1（设置与获取光标位置）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md#示例1设置与获取光标位置)。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1844,8 +1692,6 @@ showPasswordIcon(value: boolean)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -1865,8 +1711,6 @@ showUnderline(value: boolean)
 设置是否开启下划线。未通过该接口设置时，默认不开启下划线，下划线默认颜色为'#33182431'（深灰色，不透明度为20%），默认粗细为1px，文本框尺寸48vp，下划线只支持InputType.Normal类型。设置密码模式时， 下划线不生效。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1890,8 +1734,6 @@ showUnit(value: CustomBuilder)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1914,8 +1756,6 @@ stopBackPress(isStopped: Optional<boolean>)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -1926,7 +1766,7 @@ stopBackPress(isStopped: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isStopped | Optional & lt;boolean & gt; | 是 |
+| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## strokeColor
 
@@ -1938,8 +1778,6 @@ strokeColor(color: Optional<ResourceColor>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1950,7 +1788,7 @@ strokeColor(color: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | Optional & lt;ResourceColor & gt; | 是 |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## strokeJoinStyle
 
@@ -1962,8 +1800,6 @@ strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1974,7 +1810,7 @@ strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [strokeJoinStyle](#strokejoinstyle) | StrokeJoinStyle \| undefined | 是 |
+| [strokeJoinStyle](#strokejoinstyle) | [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md) \| undefined | 是 |
 
 ## strokeWidth
 
@@ -1986,8 +1822,6 @@ strokeWidth(width: Optional<LengthMetrics>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1998,7 +1832,7 @@ strokeWidth(width: Optional<LengthMetrics>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| width | Optional & lt;LengthMetrics & gt; | 是 |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 |
 
 ## style
 
@@ -2009,8 +1843,6 @@ style(value: TextInputStyle | TextContentStyle)
 设置输入框为默认风格或内联输入风格，内联输入风格只支持InputType.Normal类型。输入框类型介绍请参考[type](#type)接口。未通过该接口设置时，默认为TextInputStyle.Default。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2029,11 +1861,11 @@ textAlign(value: TextAlign)
 ```
 
 设置文本在输入框中的水平对齐方式。未通过该接口设置时，默认为TextAlign.Start。支持TextAlign.Start、TextAlign.Center和TextAlign.End。TextAlign.JUSTIFY的对齐方式按照TextAlign.Start处理。可通过align属性控制文本段落在垂直方向上的位置。此组件不支持通过align属性控制文本段落在水平方向上的位置。  
-- Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。 - Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。 - Alignment.BottomStart、Alignment.Bottom、Alignment.BottomEnd：内容底部对齐。
+- Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。  
+- Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。  
+- Alignment.BottomStart、Alignment.Bottom、Alignment.BottomEnd：内容底部对齐。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2054,8 +1886,6 @@ textDirection(direction: TextDirection | undefined)
 指定文本排版方向，未通过该接口设置时，默认文本排版方向遵循组件布局方向。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2079,8 +1909,6 @@ textIndent(value: Dimension)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -2103,8 +1931,6 @@ textOverflow(value: TextOverflow)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -2115,7 +1941,7 @@ textOverflow(value: TextOverflow)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [TextOverflow](#textoverflow) | 是 |
+| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | 是 |
 
 ## type
 
@@ -2126,8 +1952,6 @@ type(value: InputType)
 设置输入框类型。不同的InputType会拉起对应类型的键盘，同时限制输入。未通过该接口设置时，默认为InputType.Normal。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2149,8 +1973,6 @@ underlineColor(value: ResourceColor | UnderlineColor | undefined)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -2161,7 +1983,7 @@ underlineColor(value: ResourceColor | UnderlineColor | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ResourceColor \| [UnderlineColor](arkts-arkui-underlinecolor-i.md) \| undefined | 是 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [UnderlineColor](arkts-arkui-underlinecolor-i.md) \| undefined | 是 |
 
 ## wordBreak
 
@@ -2172,8 +1994,6 @@ wordBreak(value: WordBreak)
 设置文本断行规则。该属性在组件设置[TextInputStyle](arkts-arkui-textinputstyle-e.md)的内联模式时样式生效，但对placeholder文本无效。未通过该接口设置时，默认为 WordBreak.BREAK_WORD。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

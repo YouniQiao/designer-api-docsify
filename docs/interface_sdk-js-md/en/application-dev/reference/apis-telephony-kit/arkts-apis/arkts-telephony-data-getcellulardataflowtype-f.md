@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCellularDataFlowType
@@ -16,8 +16,6 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 22+: ohos.permission.GET_NETWORK_INFO
@@ -36,32 +34,6 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getCellularDataFlowType((err: BusinessError, contextData: data.DataFlowType) => {
-    if(err) {
-        console.error(`getCellularDataFlowType fail. code: ${err.code}, message: ${err.message}, contextData: ${contextData}`);
-    } else {
-        console.info(`getCellularDataFlowType success`);
-    }
-});
-```
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getCellularDataFlowType().then((contextData: data.DataFlowType) => {
-    console.info(`getCellularDataFlowType success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCellularDataFlowType fail. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getCellularDataFlowType
 
@@ -73,8 +45,6 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 22+: ohos.permission.GET_NETWORK_INFO
@@ -92,7 +62,3 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [getCellularDataFlowType](#getcellulardataflowtype)

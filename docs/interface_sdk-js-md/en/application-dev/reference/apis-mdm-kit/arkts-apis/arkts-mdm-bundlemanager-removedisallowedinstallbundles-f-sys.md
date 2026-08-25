@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedInstallBundles
@@ -15,8 +15,6 @@ function removeDisallowedInstallBundles(admin: Want, appIds: Array<string>, call
 Removes the applications that cannot be installed by the current user. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -48,70 +46,6 @@ Removes the applications that cannot be installed by the current user. This API 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, (err) => {
-  if (err) {
-    console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in removing disallowed install bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in removing disallowed install bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in removing disallowed install bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## removeDisallowedInstallBundles
 
@@ -122,8 +56,6 @@ function removeDisallowedInstallBundles(admin: Want, appIds: Array<string>, user
 Removes the applications that cannot be installed by the user specified by **userId**. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -156,10 +88,6 @@ Removes the applications that cannot be installed by the user specified by **use
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [removeDisallowedInstallBundles](#removedisallowedinstallbundles)
-
 
 ## removeDisallowedInstallBundles
 
@@ -170,8 +98,6 @@ function removeDisallowedInstallBundles(admin: Want, appIds: Array<string>, user
 Removes the applications that cannot be installed by the current or specified user. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -208,7 +134,3 @@ Removes the applications that cannot be installed by the current or specified us
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [removeDisallowedInstallBundles](#removedisallowedinstallbundles)

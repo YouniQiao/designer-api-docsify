@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## getDeviceIds
@@ -18,8 +18,6 @@ function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md)
@@ -31,56 +29,6 @@ function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          // 获取输入设备ID列表
-          inputDevice.getDeviceIds((error: BusinessError, ids: Array<number>) => {
-            if (error) {
-              console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-              return;
-            }
-            console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
-          });
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          // 获取输入设备ID列表
-          inputDevice.getDeviceIds().then((ids: Array<number>) => {
-            console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          })
-        })
-    }
-  }
-}
-```
 
 
 ## getDeviceIds
@@ -95,8 +43,6 @@ function getDeviceIds(): Promise<Array<number>>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md)
@@ -108,7 +54,3 @@ function getDeviceIds(): Promise<Array<number>>
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;number & gt; & gt; |
-
-**示例**
-
-参见 [getDeviceIds](#getdeviceids)

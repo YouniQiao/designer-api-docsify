@@ -4,14 +4,12 @@ DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建�
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
 ## 导入模块
 
 ```TypeScript
-import { DriverExtensionAbility, DriverExtensionContext } from '@kit.DriverDevelopmentKit';
+import { DriverExtensionAbility, DriverExtensionContext } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## onConnect
@@ -23,8 +21,6 @@ onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 Extension生命周期回调，会在[onCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)之后回调。返回一个 [RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象，用于客户端和服务端进行通信。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,59 +38,6 @@ Extension生命周期回调，会在[onCreate](../../apis-ability-kit/arkts-apis
 | --- |
 | rpc.RemoteObject \| Promise & lt;rpc.RemoteObject & gt; |
 
-**示例**
-
-```TypeScript
-import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
-import { rpc } from '@kit.IPCKit';
-import { Want } from '@kit.AbilityKit';
-
-class StubTest extends rpc.RemoteObject {
-    constructor(des: string) {
-        super(des);
-    }
-    onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
-      // 必须重写此接口
-      return true;
-    }
-}
-class DriverExt extends DriverExtensionAbility {
-  onConnect(want: Want) {
-    console.info(`onConnect , want: ${want.abilityName}`);
-    return new StubTest('test');
-  }
-}
-```
-
-如果生成返回值[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)依赖一个异步接口，可以使用异步生命周期：
-
-```TypeScript
-import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
-import { rpc } from '@kit.IPCKit';
-import { Want } from '@kit.AbilityKit';
-
-class StubTest extends rpc.RemoteObject {
-    constructor(des: string) {
-        super(des);
-    }
-    onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
-      // 必须重写此接口
-      return true;
-    }
-}
-async function getDescriptor() {
-    // 调用异步函数...
-    return 'asyncTest';
-}
-class DriverExt extends DriverExtensionAbility {
-  async onConnect(want: Want) {
-    console.info(`onConnect , want: ${want.abilityName}`);
-    let descriptor = await getDescriptor();
-    return new StubTest(descriptor);
-  }
-}
-```
-
 ## onDisconnect
 
 ```TypeScript
@@ -105,8 +48,6 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
@@ -116,65 +57,6 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
-import { Want } from '@kit.AbilityKit';
-
-class DriverExt extends DriverExtensionAbility {
-  onDisconnect(want: Want) {
-    console.info(`onDisconnect, want: ${want.abilityName}`);
-  }
-}
-```
-
-在执行完onDisconnect生命周期回调后，应用可能会退出，从而可能导致onDisconnect中的异步函数未能正确执行，比如异步写入数据库。可以使用异步生命周期，以确保异步onDisconnect完成后再继续后续的生命周期。
-
-```TypeScript
-import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
-import { Want } from '@kit.AbilityKit';
-
-class DriverExt extends DriverExtensionAbility {
-  async onDisconnect(want: Want) {
-    console.info(`onDisconnect, want: ${want.abilityName}`);
-    // 调用异步函数...
-  }
-}
-```
-
-## onDisconnect
-
-```TypeScript
-onDisconnect(want: Want): undefined | Promise<void>
-```
-
-Extension的生命周期回调，客户端执行断开连接服务时回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Driver.ExternalDevice
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| undefined \| Promise & lt;void & gt; |
-
-**示例**
-
-参见 [onDisconnect](#ondisconnect)
 
 ## onDump
 
@@ -185,8 +67,6 @@ onDump(params: Array<string>): Array<string>
 转储客户端信息时调用，建议不要转储敏感信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,17 +84,6 @@ onDump(params: Array<string>): Array<string>
 | --- |
 | Array & lt;string & gt; |
 
-**示例**
-
-```TypeScript
-class DriverExt extends DriverExtensionAbility {
-    onDump(params: Array<string>) {
-        console.info(`dump, params: ${JSON.stringify(params)}`);
-        return ['params'];
-    }
-}
-```
-
 ## onInit
 
 ```TypeScript
@@ -224,8 +93,6 @@ onInit(want: Want): void
 Extension生命周期回调，在创建时回调，执行初始化业务逻辑操作。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -237,19 +104,6 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 
-**示例**
-
-```TypeScript
-import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
-import { Want } from '@kit.AbilityKit';
-
-class DriverExt extends DriverExtensionAbility {
-  onInit(want: Want) {
-    console.info(`onInit, want: ${want.abilityName}`);
-  }
-}
-```
-
 ## onRelease
 
 ```TypeScript
@@ -260,21 +114,9 @@ Extension生命周期回调，在销毁时回调，执行资源清理等操作�
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
-
-**示例**
-
-```TypeScript
-class DriverExt extends DriverExtensionAbility {
-  onRelease() {
-    console.info('onRelease');
-  }
-}
-```
 
 ## context
 
@@ -287,8 +129,6 @@ DriverExtension的上下文环境，继承自ExtensionContext。
 **类型：** [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

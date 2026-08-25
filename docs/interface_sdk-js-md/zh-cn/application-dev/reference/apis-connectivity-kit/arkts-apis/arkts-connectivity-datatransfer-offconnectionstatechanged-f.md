@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## offConnectionStateChanged
@@ -15,8 +15,6 @@ function offConnectionStateChanged(callback?: Callback<ConnectionResult>): void
 取消订阅端口通道连接状态变更事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

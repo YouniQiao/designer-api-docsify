@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { StartupConfigEntry } from '@kit.AbilityKit';
+import { StartupConfigEntry } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

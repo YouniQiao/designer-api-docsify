@@ -4,29 +4,25 @@ Wi-Fi device configuration information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## configStatus
 
 ```TypeScript
-configStatus?: int
+configStatus?: number
 ```
 
 Device config status: 0 - enabled, 1 - disabled, 2 - permanent disabled, 3 - unknown.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -35,16 +31,14 @@ Device config status: 0 - enabled, 1 - disabled, 2 - permanent disabled, 3 - unk
 ## creatorUid
 
 ```TypeScript
-creatorUid?: int
+creatorUid?: number
 ```
 
 The UID of the Wi-Fi configuration creator.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -53,16 +47,14 @@ The UID of the Wi-Fi configuration creator.
 ## disableReason
 
 ```TypeScript
-disableReason?: int
+disableReason?: number
 ```
 
 Disable reason
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -71,16 +63,14 @@ Disable reason
 ## family
 
 ```TypeScript
-family?: int
+family?: number
 ```
 
 Static IP family: 0 - IPv4, 1 - Ipv6.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -98,8 +88,6 @@ IP Type
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -115,8 +103,6 @@ Allow auto connect config: false - not, true - yes.
 **Type:** boolean
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -134,8 +120,6 @@ Secure wifi detect config: false - not, true - yes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -143,16 +127,14 @@ Secure wifi detect config: false - not, true - yes.
 ## netId
 
 ```TypeScript
-netId?: int
+netId?: number
 ```
 
 Allocated networkId
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -170,8 +152,6 @@ Proxy config.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -188,8 +168,6 @@ Random mac address, the length is 6.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -197,16 +175,14 @@ Random mac address, the length is 6.
 ## randomMacType
 
 ```TypeScript
-randomMacType?: int
+randomMacType?: number
 ```
 
 Random mac type
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
@@ -224,8 +200,6 @@ IP config of static
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 **System API:** This is a system API.
@@ -241,8 +215,6 @@ IPv6 config of static
 **Type:** [Ipv6Config](arkts-connectivity-wifimanager-ipv6config-i-sys.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

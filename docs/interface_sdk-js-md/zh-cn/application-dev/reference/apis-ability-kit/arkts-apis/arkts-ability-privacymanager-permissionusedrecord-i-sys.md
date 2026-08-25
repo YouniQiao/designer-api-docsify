@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## accessCount
 
 ```TypeScript
-accessCount: int
+accessCount: number
 ```
 
 该权限访问总次数，表示在查询时间窗口内成功使用该权限的累计次数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -46,8 +42,6 @@ accessRecords: Array<UsedRecordDetail>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -64,8 +58,6 @@ enhancedIdentity?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.AccessToken
@@ -75,16 +67,14 @@ enhancedIdentity?: string
 ## lastAccessDuration
 
 ```TypeScript
-lastAccessDuration: long
+lastAccessDuration: number
 ```
 
 最后一次访问时长。 单位为：毫秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -93,16 +83,14 @@ lastAccessDuration: long
 ## lastAccessTime
 
 ```TypeScript
-lastAccessTime: long
+lastAccessTime: number
 ```
 
 最后一次访问时间。 单位为：毫秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -111,16 +99,14 @@ lastAccessTime: long
 ## lastRejectTime
 
 ```TypeScript
-lastRejectTime: long
+lastRejectTime: number
 ```
 
 最后一次拒绝时间。 单位为：毫秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -138,8 +124,6 @@ permissionName: Permissions
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -147,16 +131,14 @@ permissionName: Permissions
 ## rejectCount
 
 ```TypeScript
-rejectCount: int
+rejectCount: number
 ```
 
 该权限拒绝总次数，表示在查询时间窗口内权限访问失败或被拒绝的累计次数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -173,8 +155,6 @@ rejectRecords: Array<UsedRecordDetail>
 **类型：** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 

@@ -4,8 +4,6 @@ Describes the anchor point information used to maintain the relative position be
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the anchor point information used to maintain the relative position be
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## anchorType
@@ -28,8 +26,6 @@ Type of the anchor point used to maintain the relative position.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -39,18 +35,16 @@ Type of the anchor point used to maintain the relative position.
 ## offsetX
 
 ```TypeScript
-offsetX?: int
+offsetX?: number
 ```
 
 X-axis offset between the anchor points of the child window and the main window, in px. The value must be an integer. Floating-point numbers are rounded down. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** 0
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,18 +55,16 @@ X-axis offset between the anchor points of the child window and the main window,
 ## offsetY
 
 ```TypeScript
-offsetY?: int
+offsetY?: number
 ```
 
 Y-axis offset between the anchor points of the child window and the main window, in px. The value must be an integer. Floating-point numbers are rounded down. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** 0
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

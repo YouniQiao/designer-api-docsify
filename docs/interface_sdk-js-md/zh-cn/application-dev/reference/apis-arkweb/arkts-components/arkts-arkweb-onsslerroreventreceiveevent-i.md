@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -25,8 +23,6 @@ certChainData?: Array<Uint8Array>
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## error
@@ -40,8 +36,6 @@ error: SslError
 **类型：** [SslError](arkts-arkweb-sslerror-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -58,8 +52,6 @@ handler: SslErrorHandler
 **类型：** [SslErrorHandler](arkts-arkweb-sslerrorhandler-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

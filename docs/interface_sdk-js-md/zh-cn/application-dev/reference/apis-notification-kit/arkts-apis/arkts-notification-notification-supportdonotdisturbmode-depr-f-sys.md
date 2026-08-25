@@ -15,8 +15,6 @@ function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md)
@@ -33,32 +31,6 @@ function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let supportDoNotDisturbModeCallback = (err: Base.BusinessError, data: boolean) => {
-  if (err) {
-    console.error("supportDoNotDisturbMode failed " + JSON.stringify(err));
-  } else {
-    console.info("supportDoNotDisturbMode success");
-  }
-}
-
-Notification.supportDoNotDisturbMode(supportDoNotDisturbModeCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.supportDoNotDisturbMode().then((data: boolean) => {
-  console.info("supportDoNotDisturbMode success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`supportDoNotDisturbMode failed, code is ${err}`);
-});
-```
-
 
 ## supportDoNotDisturbMode
 
@@ -69,8 +41,6 @@ function supportDoNotDisturbMode(): Promise<boolean>
 查询是否支持免打扰功能（Promise形式）。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -87,7 +57,3 @@ function supportDoNotDisturbMode(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [supportDoNotDisturbMode](#supportdonotdisturbmode)

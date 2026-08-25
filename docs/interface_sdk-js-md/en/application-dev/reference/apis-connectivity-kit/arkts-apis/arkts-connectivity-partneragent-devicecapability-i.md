@@ -4,14 +4,12 @@ Describes the capability of a partner device.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@kit.ConnectivityKit';
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## supportBleAdvertiser
@@ -25,8 +23,6 @@ Whether the partner device supports the Bluetooth Low Energy (BLE) advertiser ca
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Whether the partner device supports the Bluetooth Basic Rate (BR) capability.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## PRIVATE_PIN
@@ -18,84 +16,6 @@ PRIVATE_PIN = 16
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: number = 16;
-  const randData: Uint8Array = rand?.generateRandomSync(len)?.data;
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PRIVATE_PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: '请输入密码',
-  };
-
-  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
-  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
-  userAuthInstance.on('result', {
-    onResult: (result) => {
-      console.info(`userAuthInstance callback result = ${result.result}`);
-    }
-  });
-  console.info('auth on successfully.');
-  userAuthInstance.start();
-  console.info('auth start successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: int = 16;
-  const randData: Uint8Array = rand?.generateRandomSync(len)?.data;
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PRIVATE_PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: '请输入密码',
-  };
-
-  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
-  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
-  userAuthInstance.onResult({
-    onResult: (result) => {
-      console.info(`userAuthInstance callback result = ${result.result}`);
-    }
-  });
-  console.info('auth on successfully.');
-  userAuthInstance.start();
-  console.info('auth start successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
-}
-```

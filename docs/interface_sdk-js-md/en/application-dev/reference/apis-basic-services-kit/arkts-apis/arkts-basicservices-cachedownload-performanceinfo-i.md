@@ -4,124 +4,108 @@ Describes the pre-downloaded performance information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## connectTime
 
 ```TypeScript
-readonly connectTime: double
+readonly connectTime: number
 ```
 
 Time taken from TCP startup to connection completion, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## dnsTime
 
 ```TypeScript
-readonly dnsTime: double
+readonly dnsTime: number
 ```
 
 Time taken from DNS startup to resolution completion, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## firstReceiveTime
 
 ```TypeScript
-readonly firstReceiveTime: double
+readonly firstReceiveTime: number
 ```
 
 Time taken from startup to receiving the first byte, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## firstSendTime
 
 ```TypeScript
-readonly firstSendTime: double
+readonly firstSendTime: number
 ```
 
 Time taken from startup to sending the first byte, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## redirectTime
 
 ```TypeScript
-readonly redirectTime: double
+readonly redirectTime: number
 ```
 
 Time taken from startup to redirection completion, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## tlsTime
 
 ```TypeScript
-readonly tlsTime: double
+readonly tlsTime: number
 ```
 
 Time taken from TLS startup to connection completion, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## totalTime
 
 ```TypeScript
-readonly totalTime: double
+readonly totalTime: number
 ```
 
 Time taken from startup to request completion, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent

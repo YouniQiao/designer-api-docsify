@@ -1,7 +1,5 @@
 # Atomics
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ add(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array |
 ```
 
 Adds a value to the value at the given position in the array, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -37,8 +33,6 @@ and(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array |
 
 Stores the bitwise AND of a value with the value at the given position in the array, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -58,8 +52,6 @@ compareExchange(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | 
 ```
 
 Replaces the value at the given position in the array if the original value equals the given expected value, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -82,8 +74,6 @@ exchange(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Ar
 
 Replaces the value at the given position in the array, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -104,8 +94,6 @@ isLockFree(size: number): boolean
 
 Returns a value indicating whether high-performance algorithms can use atomic operations (`true`) or must use locks (`false`) for the given number of bytes-per-element of a typed array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -123,8 +111,6 @@ load(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array 
 ```
 
 Returns the value at the given position in the array. Until this atomic operation completes, any other read or write operation against the array will block.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -144,8 +130,6 @@ notify(typedArray: Int32Array, index: number, count?: number): number
 ```
 
 Wakes up sleeping agents that are waiting on the given index of the array, returning the number of agents that were awoken.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -167,8 +151,6 @@ or(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | 
 
 Stores the bitwise OR of a value with the value at the given position in the array, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -188,8 +170,6 @@ store(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array
 ```
 
 Stores a value at the given position in the array, returning the new value. Until this atomic operation completes, any other read or write operation against the array will block.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -211,8 +191,6 @@ sub(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array |
 
 Subtracts a value from the value at the given position in the array, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -232,8 +210,6 @@ wait(typedArray: Int32Array, index: number, value: number, timeout?: number): "o
 ```
 
 If the value at the given position in the array is equal to the provided value, the current agent is put to sleep causing execution to suspend until the timeout expires (returning `"timed-out"`) or until the agent is awoken (returning `"ok"`); otherwise, returns `"not-equal"`.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -256,8 +232,6 @@ xor(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array |
 
 Stores the bitwise XOR of a value with the value at the given position in the array, returning the original value. Until this atomic operation completes, any other read or write operation against the array will block.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -277,5 +251,3 @@ readonly [Symbol.toStringTag]: "Atomics"
 ```
 
 **Type:** "Atomics"
-
-**ArkTS mode:** 

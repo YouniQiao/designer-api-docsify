@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## uninstallEnterpriseReSignatureCertificate
@@ -21,8 +21,6 @@ function uninstallEnterpriseReSignatureCertificate(admin: Want, certificateAlias
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -35,7 +33,7 @@ function uninstallEnterpriseReSignatureCertificate(admin: Want, certificateAlias
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 | certificateAlias | string | 是 |
-| accountId | int | 是 |
+| accountId | number | 是 |
 
 **错误码：**
 
@@ -46,28 +44,3 @@ function uninstallEnterpriseReSignatureCertificate(admin: Want, certificateAlias
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [9201008](../errorcode-enterpriseDeviceManager.md#9201008-企业重签名证书不存在) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let certificateAlias: string = 'test.cer';
-// 需根据实际情况进行替换
-let accountId: number = 100;
-try {
-  securityManager.uninstallEnterpriseReSignatureCertificate(
-    wantTemp, certificateAlias, accountId);
-  console.info('Success in uninstalling enterprise re signature certificate.');
-} catch (err) {
-  console.error(`Failed to uninstall enterprise re signature certificate.
-    Code: ${err.code}, message: ${err.message}`);
-};
-```

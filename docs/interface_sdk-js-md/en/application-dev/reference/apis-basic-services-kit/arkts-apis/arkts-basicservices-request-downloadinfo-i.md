@@ -4,14 +4,12 @@ Defines the download task information, which is the callback parameter of the [g
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## description
@@ -26,39 +24,33 @@ Description of the download task.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## downloadedBytes
 
 ```TypeScript
-downloadedBytes: long
+downloadedBytes: number
 ```
 
 Real-time download size, in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
 ## downloadId
 
 ```TypeScript
-downloadId: long
+downloadId: number
 ```
 
 Download task ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -74,39 +66,33 @@ Name of the download task.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## downloadTotalBytes
 
 ```TypeScript
-downloadTotalBytes: long
+downloadTotalBytes: number
 ```
 
 Total size of the files to download, in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
 ## failedReason
 
 ```TypeScript
-failedReason: int
+failedReason: number
 ```
 
 Cause of the download failure. The value can be any constant in [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -122,8 +108,6 @@ Name of the downloaded file.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## filePath
@@ -138,39 +122,33 @@ URI of the saved file.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## pausedReason
 
 ```TypeScript
-pausedReason: int
+pausedReason: number
 ```
 
 Cause of download pause. The value can be any constant in [Causes of Download Pause](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
 ## status
 
 ```TypeScript
-status: int
+status: number
 ```
 
 Download task status code. The value can be any constant in [Download Task Status Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -185,7 +163,5 @@ URI of the downloaded file.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download

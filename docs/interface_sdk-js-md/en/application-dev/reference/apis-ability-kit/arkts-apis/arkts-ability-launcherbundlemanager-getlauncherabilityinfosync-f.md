@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfoSync
 
 ```TypeScript
-function getLauncherAbilityInfoSync(bundleName: string, userId: int): Array<LauncherAbilityInfo>
+function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<LauncherAbilityInfo>
 ```
 
 Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -27,7 +25,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -43,19 +41,3 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = launcherBundleManager.getLauncherAbilityInfoSync("com.example.demo", 100);
-  console.info("data is " + JSON.stringify(data));
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```

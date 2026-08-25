@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## off('continuousTaskCancel')
@@ -15,8 +15,6 @@ function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCan
 Unsubscribes from continuous task cancellation events. This API uses an asynchronous callback to return the result.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -36,29 +34,6 @@ Unsubscribes from continuous task cancellation events. This API uses an asynchro
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-function callback(info: backgroundTaskManager.ContinuousTaskCancelInfo) {
-  console.info('continuousTaskCancel callback id ' + info.id);
-  console.info('continuousTaskCancel callback reason ' + info.reason);
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      backgroundTaskManager.off("continuousTaskCancel", callback);
-    } catch (error) {
-      console.error(`Operation onContinuousTaskCancel failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 
 ## off('continuousTaskSuspend')
 
@@ -69,8 +44,6 @@ function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSu
 Unregisters from the listener for continuous task suspension. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -90,30 +63,6 @@ Unregisters from the listener for continuous task suspension. This API uses an a
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
 
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-function callback(info: backgroundTaskManager.ContinuousTaskSuspendInfo) {
-  console.info('continuousTaskSuspend callback continuousTaskId: ' + info.continuousTaskId);
-  console.info('continuousTaskSuspend callback suspendState: ' + info.suspendState);
-  console.info('continuousTaskSuspend callback suspendReason: ' + info.suspendReason);
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      backgroundTaskManager.off("continuousTaskSuspend", callback);
-    } catch (error) {
-      console.error(`Operation offContinuousTaskSuspend failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 
 ## off('continuousTaskActive')
 
@@ -124,8 +73,6 @@ function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskAct
 Unregisters from the listener for continuous task activation. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -144,25 +91,3 @@ Unregisters from the listener for continuous task activation. This API uses an a
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-function callback(info: backgroundTaskManager.ContinuousTaskActiveInfo) {
-  console.info('continuousTaskActive callback id: ' + info.id);
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      backgroundTaskManager.off("continuousTaskActive", callback);
-    } catch (error) {
-      console.error(`Operation offContinuousTaskActive failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```

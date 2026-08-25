@@ -4,8 +4,6 @@ Web同层渲染的配置。用于配置Web同层渲染选项，包括支持固�
 
 **起始版本：** 16
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -27,8 +25,6 @@ supportCssDisplayChange?: boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## supportDefaultIntrinsicSize
@@ -44,7 +40,5 @@ supportDefaultIntrinsicSize?: boolean
 **默认值：** false
 
 **起始版本：** 16
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
 
 **系统能力：** SystemCapability.Web.Webview.Core

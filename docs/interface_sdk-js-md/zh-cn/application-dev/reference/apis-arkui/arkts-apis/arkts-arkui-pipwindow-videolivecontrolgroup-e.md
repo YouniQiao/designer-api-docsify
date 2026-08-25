@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## VIDEO_PLAY_PAUSE
@@ -17,8 +15,6 @@ VIDEO_PLAY_PAUSE = 401
 播放/暂停直播控件组。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -33,8 +29,6 @@ MUTE_SWITCH = 402
 静音控件组。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

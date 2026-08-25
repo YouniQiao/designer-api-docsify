@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## postQuerySync
@@ -15,8 +15,6 @@ function postQuerySync(handle: AssetMap): void
 Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md) together. This API returns the result synchronously.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -39,14 +37,3 @@ Performs postprocessing for the asset query. This API is used when user authenti
 | [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) |
 | [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) |
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-
-let handle: asset.AssetMap = new Map();
-// The new Uint8Array(32) is only an example. Pass in the challenge value returned by asset.preQuerySync.
-handle.set(asset.Tag.AUTH_CHALLENGE, new Uint8Array(32));
-asset.postQuerySync(handle)
-```

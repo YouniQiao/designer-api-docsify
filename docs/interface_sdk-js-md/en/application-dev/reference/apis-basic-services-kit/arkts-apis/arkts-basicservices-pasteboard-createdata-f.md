@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createData
@@ -15,8 +15,6 @@ function createData(mimeType: string, value: ValueType): PasteData
 Creates a **PasteData** object of the specified type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,8 +49,6 @@ function createData(data: Record<string, ValueType>): PasteData
 Creates a **PasteData** object that contains multiple types of data.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 

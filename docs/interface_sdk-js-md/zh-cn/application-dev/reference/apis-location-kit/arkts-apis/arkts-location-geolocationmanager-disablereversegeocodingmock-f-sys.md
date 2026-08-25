@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## disableReverseGeocodingMock
@@ -15,8 +15,6 @@ function disableReverseGeocodingMock(): void
 去使能逆地理编码模拟功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本20+：ohos.permission.MOCK_LOCATION
@@ -33,15 +31,3 @@ function disableReverseGeocodingMock(): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  geoLocationManager.disableReverseGeocodingMock();
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## updateDesktopShortcutInfo
 
 ```TypeScript
-function updateDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promise<void>
+function updateDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): Promise<void>
 ```
 
 Updates a shortcut for the given user. This API uses a promise to return the result.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS or (ohos.permission.MANAGE_SHORTCUTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -31,7 +29,7 @@ Updates a shortcut for the given user. This API uses a promise to return the res
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createHtmlTextRecord
@@ -15,8 +15,6 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 Creates a **PasteDataRecord** object of the HTML text type.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -35,10 +33,3 @@ Creates a **PasteDataRecord** object of the HTML text type.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
-
-**Examples**
-
-```TypeScript
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createHtmlTextRecord(html);
-```

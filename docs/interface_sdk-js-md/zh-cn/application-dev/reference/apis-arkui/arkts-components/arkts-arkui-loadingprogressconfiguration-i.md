@@ -1,12 +1,10 @@
 # LoadingProgressConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。
 
 **继承/实现关系：** LoadingProgressConfiguration extends CommonConfiguration<LoadingProgressConfiguration>
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,8 +24,6 @@ LoadingProgress动画是否显示。默认值：true，true表示显示LoadingPr
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

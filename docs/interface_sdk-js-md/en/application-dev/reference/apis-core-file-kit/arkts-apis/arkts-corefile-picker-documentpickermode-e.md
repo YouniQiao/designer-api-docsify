@@ -4,8 +4,6 @@ Enumerates the modes for saving documents.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Standard mode.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Download mode.
 **Note：**: The directories created in DOWNLOAD mode are used only to save files. There is no access isolation between directories. You are advised not to save sensitive application data.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

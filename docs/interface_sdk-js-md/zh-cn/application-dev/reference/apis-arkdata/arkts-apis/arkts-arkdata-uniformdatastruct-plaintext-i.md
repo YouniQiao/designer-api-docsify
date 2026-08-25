@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## abstract
@@ -25,8 +23,6 @@ abstract?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,26 +40,6 @@ details?: Record<string, string>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-## textAbstract
-
-```TypeScript
-textAbstract?: string
-```
-
-表示PlainText摘要.
-
-**类型：** string
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -79,8 +55,6 @@ textContent: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,57 +72,6 @@ readonly uniformDataType: 'general.plain-text'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-
-let plainTextDetails: Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2'
-};
-let plainText: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'This is plainText textContent example',
-  abstract: 'this is abstract',
-  details: plainTextDetails
-};
-console.info('plainText.uniformDataType: ' + plainText.uniformDataType);
-if (plainText.details != undefined) {
-  let plainTextDetailsObj: Record<string, string> = plainText.details;
-  for (let kv of Object.entries(plainTextDetailsObj)) {
-    console.info('plainText.details.attr: ' + kv[0] + ', value:' + kv[1]);
-  }
-}
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let plainTextDetails: Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2'
-};
-
-let plainText: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'This is plainText textContent example',
-  textAbstract: 'This is a text abstract',
-  details: plainTextDetails
-};
-console.info('plainText.uniformDataType: ' + plainText.uniformDataType);
-console.info('plainText.details: ' + JSON.stringify(plainText.details));
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-```

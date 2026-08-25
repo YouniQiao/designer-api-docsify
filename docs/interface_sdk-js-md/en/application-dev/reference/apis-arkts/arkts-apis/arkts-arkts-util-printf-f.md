@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## printf
@@ -15,8 +15,6 @@ function printf(format: string, ...args: Object[]): string
 Formats a string by replacing the placeholders in it.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -36,11 +34,3 @@ Formats a string by replacing the placeholders in it.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let res = util.printf("%s", "hello world!");
-console.info(res);
-// Output: hello world!
-```

@@ -4,14 +4,12 @@ Describe the interrupt data is received from remote host.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@kit.ConnectivityKit';
+import { hid } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## data
@@ -25,8 +23,6 @@ data of interrupt data.
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ id of interrupt data.
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

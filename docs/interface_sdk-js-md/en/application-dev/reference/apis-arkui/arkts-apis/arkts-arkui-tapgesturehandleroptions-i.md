@@ -6,8 +6,6 @@ Provides the parameters of the tap gesture handler. Inherits from [BaseHandlerOp
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,8 +29,6 @@ recognition fails.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -53,8 +49,6 @@ Movement threshold for the tap gesture. If the value is less than or equal to 0 
 **Default:** Infinity
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,8 +71,6 @@ is not pressed within 300 milliseconds after the first finger touches down, or w
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

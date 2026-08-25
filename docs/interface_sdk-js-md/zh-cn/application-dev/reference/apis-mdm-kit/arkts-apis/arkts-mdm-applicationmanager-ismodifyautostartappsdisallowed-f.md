@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isModifyAutoStartAppsDisallowed
@@ -15,8 +15,6 @@ function isModifyAutoStartAppsDisallowed(admin: Want, autoStartApp: Want, accoun
 查询指定用户是否禁止取消应用自启动。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -45,29 +43,3 @@ function isModifyAutoStartAppsDisallowed(admin: Want, autoStartApp: Want, accoun
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let autoStartApp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.autoStartApplication',
-  abilityName: 'EntryAbility'
-};
-
-try {
-  let res: boolean = applicationManager.isModifyAutoStartAppsDisallowed(wantTemp, autoStartApp, 100);
-  console.info(`Succeeded in getting disallow modify auto start app: ${JSON.stringify(res)}`);
-} catch (err) {
-  console.error(`Failed to get disallow modify auto start app. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -1,7 +1,5 @@
 # Int16ArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new (): Int16Array
 ```
-
-**ArkTS mode:** 
 
 **Return value:**
 

@@ -3,8 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## offFlashReminderStateChange
@@ -17,8 +17,6 @@ Unsubscribes from the state changes in flash alerts mode. This API uses an async
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -28,31 +26,3 @@ Unsubscribes from the state changes in flash alerts mode. This API uses an async
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe flashReminder state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.onFlashReminderStateChange(this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.offFlashReminderStateChange(this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```

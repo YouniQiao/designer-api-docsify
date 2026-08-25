@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryAbilityByWant
@@ -16,8 +16,6 @@ function queryAbilityByWant(want: Want,
 根据给定的意图获取指定用户下Ability信息，使用callback异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -34,67 +32,6 @@ function queryAbilityByWant(want: Want,
 | userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-import Want from '@ohos.app.ability.Want';
-
-let bundleFlags: number = 0;
-let userId: number = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-bundle.queryAbilityByWant(want, bundleFlags, userId)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import Want from '@ohos.app.ability.Want';
-
-let bundleFlags: number = 0;
-let userId: number = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-bundle.queryAbilityByWant(want, bundleFlags, userId, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import Want from '@ohos.app.ability.Want';
-
-let bundleFlags: number = 0;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-bundle.queryAbilityByWant(want, bundleFlags, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
 
 ## queryAbilityByWant
 
@@ -105,8 +42,6 @@ function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCall
 根据给定的意图获取Ability信息，使用callback异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -122,10 +57,6 @@ function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCall
 | bundleFlags | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | 是 |
 
-**示例**
-
-参见 [queryAbilityByWant](#queryabilitybywant)
-
 
 ## queryAbilityByWant
 
@@ -136,8 +67,6 @@ function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): P
 根据给定的意图获取Ability组件信息，使用Promise异步回调。获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -158,7 +87,3 @@ function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): P
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; |
-
-**示例**
-
-参见 [queryAbilityByWant](#queryabilitybywant)

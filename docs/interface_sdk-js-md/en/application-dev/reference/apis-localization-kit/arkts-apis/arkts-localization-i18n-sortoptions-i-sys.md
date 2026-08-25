@@ -4,8 +4,6 @@ Represents the language or country/region sorting option.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the language or country/region sorting option.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## isSuggestedFirst
@@ -27,8 +25,6 @@ Whether to move the recommended language or country/region to the top in the sor
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -46,8 +42,6 @@ Whether to use the local name for sorting. The value "true" means to use the loc
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Locale information, which consists of the language, script, and country/region, 
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 

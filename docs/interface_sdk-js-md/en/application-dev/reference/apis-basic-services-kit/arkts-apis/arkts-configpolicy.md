@@ -4,8 +4,6 @@ The **configPolicy** module provides APIs for obtaining the corresponding direct
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Customization.ConfigPolicy
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The **configPolicy** module provides APIs for obtaining the corresponding direct
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from '@kit.BasicServicesKit';
+import { configPolicy } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

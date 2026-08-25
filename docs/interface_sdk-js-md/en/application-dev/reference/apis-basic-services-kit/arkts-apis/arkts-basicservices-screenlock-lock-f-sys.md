@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## lock
@@ -15,8 +15,6 @@ function lock(callback: AsyncCallback<boolean>): void
 Lock the screen.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
@@ -39,30 +37,6 @@ Lock the screen.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screenLock.lock((err: BusinessError, data: Boolean) => {
-  if (err) {
-    console.error(`Failed to lock the screen, Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in locking the screen. result: ${data}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screenLock.lock().then((data: Boolean) => {
-  console.info(`Succeeded in locking the screen. result: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to lock the screen, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## lock
 
@@ -73,8 +47,6 @@ function lock(): Promise<boolean>
 Lock the screen.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
@@ -95,7 +67,3 @@ Lock the screen.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
-
-**Examples**
-
-See [lock](#lock)

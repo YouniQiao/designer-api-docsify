@@ -1,7 +1,7 @@
 # Menu
 
 The **Menu** component is a vertical list of items presented to the user.
-> **NOTE**>> - This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate> their>> - The **Menu** component must be used together with the> bindMenu or> bindContextMenu> method. It does not work when used alone.
+> **NOTE**>> - This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate> their>> - The **Menu** component must be used together with the> [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) or> [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)> method. It does not work when used alone.
 
 ## Child Components
 
@@ -37,8 +37,6 @@ Creates a fixed container for a menu. This API does not have any parameters.
 > shadow attribute
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

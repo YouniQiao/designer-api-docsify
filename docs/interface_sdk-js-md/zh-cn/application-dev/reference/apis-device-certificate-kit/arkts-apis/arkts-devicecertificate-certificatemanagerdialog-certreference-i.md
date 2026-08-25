@@ -4,14 +4,12 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
 ## 导入模块
 
 ```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## certType
@@ -25,8 +23,6 @@ certType: CertificateType
 **类型：** [CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,8 +39,6 @@ keyUri: string
 **类型：** string
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,10 +1,8 @@
 # TargetType（系统接口）
 
-Target type.@enum { int }
+Target type.@enum { number }
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -19,8 +17,6 @@ HUMAN_FACE = 0
 human Face type.
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 

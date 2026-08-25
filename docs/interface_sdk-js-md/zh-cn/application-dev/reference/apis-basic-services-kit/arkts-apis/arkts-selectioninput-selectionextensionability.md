@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
+import { SelectionExtensionAbility } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总

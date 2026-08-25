@@ -4,20 +4,18 @@ DatePickerComponentResult defines the selection result of the date time picker.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from 'kits/@kit.ArkUI';
 ```
 
 ## day
 
 ```TypeScript
-day?: int
+day?: number
 ```
 
 Day of the selected date. The value should be an integer.
@@ -25,8 +23,6 @@ Day of the selected date. The value should be an integer.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,7 +33,7 @@ Day of the selected date. The value should be an integer.
 ## hour
 
 ```TypeScript
-hour?: int
+hour?: number
 ```
 
 Hour part of the selected time. The value should be an integer.
@@ -45,8 +41,6 @@ Hour part of the selected time. The value should be an integer.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,7 +51,7 @@ Hour part of the selected time. The value should be an integer.
 ## minute
 
 ```TypeScript
-minute?: int
+minute?: number
 ```
 
 Minute part of the selected time. The value should be an integer.
@@ -65,8 +59,6 @@ Minute part of the selected time. The value should be an integer.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,7 +69,7 @@ Minute part of the selected time. The value should be an integer.
 ## month
 
 ```TypeScript
-month?: int
+month?: number
 ```
 
 Month index of the selected date, starting from 0, where 0 indicates January and 11 indicates December. The value should be an integer.
@@ -85,8 +77,6 @@ Month index of the selected date, starting from 0, where 0 indicates January and
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,7 +87,7 @@ Month index of the selected date, starting from 0, where 0 indicates January and
 ## second
 
 ```TypeScript
-second?: int
+second?: number
 ```
 
 Second part of the selected time. The value should be an integer.
@@ -105,8 +95,6 @@ Second part of the selected time. The value should be an integer.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,7 +105,7 @@ Second part of the selected time. The value should be an integer.
 ## year
 
 ```TypeScript
-year?: int
+year?: number
 ```
 
 Year of the selected date. The value should be an integer.
@@ -125,8 +113,6 @@ Year of the selected date. The value should be an integer.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

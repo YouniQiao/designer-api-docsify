@@ -4,8 +4,6 @@ Enumerates the system album types.This API will be deprecated. Use [AlbumType](a
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
@@ -24,8 +22,6 @@ Favorites.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#favorite)
@@ -43,8 +39,6 @@ TYPE_TRASH = 1
 Trash.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.NetSharing
 
 ## 导入模块
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## 汇总
@@ -37,12 +35,12 @@ import { sharing } from '@kit.NetworkKit';
 | [isSharing(网络共享管理)](arkts-network-sharing-issharing-f-sys.md) |
 | [isSharingSupported(网络共享管理)](arkts-network-sharing-issharingsupported-f-sys.md) |
 | [isSharingSupported(网络共享管理)](arkts-network-sharing-issharingsupported-f-sys.md) |
-| [off(网络共享管理)](arkts-network-sharing-off-f-sys.md#offsharingstatechange) |
-| [off(网络共享管理)](arkts-network-sharing-off-f-sys.md#offinterfacesharingstatechange) |
-| [off(网络共享管理)](arkts-network-sharing-off-f-sys.md#offsharingupstreamchange) |
-| [on(网络共享管理)](arkts-network-sharing-on-f-sys.md#onsharingstatechange) |
-| [on(网络共享管理)](arkts-network-sharing-on-f-sys.md#oninterfacesharingstatechange) |
-| [on(网络共享管理)](arkts-network-sharing-on-f-sys.md#onsharingupstreamchange) |
+| off(网络共享管理) |
+| off(网络共享管理) |
+| off(网络共享管理) |
+| on(网络共享管理) |
+| on(网络共享管理) |
+| on(网络共享管理) |
 | [startSharing(网络共享管理)](arkts-network-sharing-startsharing-f-sys.md) |
 | [startSharing(网络共享管理)](arkts-network-sharing-startsharing-f-sys.md) |
 | [stopSharing(网络共享管理)](arkts-network-sharing-stopsharing-f-sys.md) |

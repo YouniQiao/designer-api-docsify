@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
+import { PopupV2, PopupV2InitInfo, PopupV2Button } from 'kits/@kit.ArkUI';
 ```
 
 ## PopupV2
@@ -15,8 +15,6 @@ export declare function PopupV2(options: PopupV2InitInfo): void
 PopupV2用于显示特定样式的气泡，适用于提示信息、操作确认或信息通知等需要用户关注或响应的场景。该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现， 相较于[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)， 状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2）， 开发者可以通过该组件更灵活地控制显示特定样式的气泡，实现更高效的用户界面刷新。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

@@ -9,14 +9,12 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## bottom
@@ -30,8 +28,6 @@ bottom: number
 **类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,8 +47,6 @@ end: number
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -70,8 +64,6 @@ start: number
 **类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,71 +83,8 @@ top: number
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct SnapshotExample {
-  @State pixmap: image.PixelMap | undefined = undefined
-
-  build() {
-    Column() {
-      Row() {
-        Column() {
-          TextClock()
-          Button("Button ABCDE").type(ButtonType.Normal)
-          Row() {
-            Checkbox()
-            Text("√")
-            Text(" | ")
-            Checkbox()
-            Text("×")
-          }.align(Alignment.Start)
-
-          TextInput()
-        }
-        .align(Alignment.Start)
-        .id("component1")
-        .width("600px")
-        .height("600px")
-        .borderRadius(6)
-        .borderWidth(2)
-        .borderColor(Color.Green)
-
-      }
-
-      Button("get capture")
-        .onClick(() => {
-          try {
-            let pixelmap = this.getUIContext().getComponentSnapshot().getSync("component1",
-              {
-                scale: 2,
-                waitUntilRenderFinished: true,
-                region: {
-                  start: 20,
-                  top: 20,
-                  end: 200,
-                  bottom: 240
-                }
-              })
-            this.pixmap = pixelmap
-          } catch (error) {
-            console.error(`getSync errorCode:${error.code} message:${error.message}`)
-          }
-        }).margin(10)
-      Image(this.pixmap).border({ color: Color.Black, width: 2 }).width("600px")
-    }.width("100%").align(Alignment.Center)
-  }
-}
-```

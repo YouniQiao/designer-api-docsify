@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## connectPrinter
@@ -15,8 +15,6 @@ function connectPrinter(printerId: string, callback: AsyncCallback<void>): void
 Connects to a printer by printer ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -38,34 +36,6 @@ Connects to a printer by printer ID. This API uses an asynchronous callback to r
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId: string = 'printerId_32';
-print.connectPrinter(printerId, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to connect Printer because : ' + JSON.stringify(err));
-    } else {
-        console.info('start connect Printer success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId: string = 'printerId_32';
-print.connectPrinter(printerId).then(() => {
-    console.info('start connect Printer success');
-}).catch((error: BusinessError) => {
-    console.error('failed to connect Printer because : ' + JSON.stringify(error));
-})
-```
-
 
 ## connectPrinter
 
@@ -76,8 +46,6 @@ function connectPrinter(printerId: string): Promise<void>
 Connects to a printer by printer ID. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -103,7 +71,3 @@ Connects to a printer by printer ID. This API uses a promise to return the resul
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [connectPrinter](#connectprinter)

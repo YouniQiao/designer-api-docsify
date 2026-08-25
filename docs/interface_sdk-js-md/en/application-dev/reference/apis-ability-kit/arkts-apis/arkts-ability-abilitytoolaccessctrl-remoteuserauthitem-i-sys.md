@@ -4,8 +4,6 @@ Remote user authorization item.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -27,8 +25,6 @@ Authorization result.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **System capability:** SystemCapability.Security.Asset
 
 **System API:** This is a system API.
@@ -44,8 +40,6 @@ Permission name.
 **Type:** string
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **System capability:** SystemCapability.Security.Asset
 

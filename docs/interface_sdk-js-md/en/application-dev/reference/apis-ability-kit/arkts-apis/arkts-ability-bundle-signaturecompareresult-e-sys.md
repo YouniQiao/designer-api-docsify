@@ -4,8 +4,6 @@ Signature verification result.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -21,8 +19,6 @@ SIGNATURE_MATCHED = 0
 Signatures match.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -40,8 +36,6 @@ Signatures do not match.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -57,8 +51,6 @@ SIGNATURE_UNKNOWN_BUNDLE = 2
 The bundle corresponding to the signature is unknown.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## turnOnRadio
 
 ```TypeScript
-function turnOnRadio(slotId: int, callback: AsyncCallback<void>): void
+function turnOnRadio(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 Turn on the radio service.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Turn on the radio service.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -43,56 +41,16 @@ Turn on the radio service.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.turnOnRadio((err: BusinessError) => {
-    if (err) {
-        console.error(`turnOnRadio failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`turnOnRadio success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.turnOnRadio(slotId, (err: BusinessError) => {
-    if (err) {
-        console.error(`turnOnRadio failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`turnOnRadio success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.turnOnRadio(slotId).then(() => {
-    console.info(`turnOnRadio success.`);
-}).catch((err: BusinessError) => {
-    console.error(`turnOnRadio failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## turnOnRadio
 
 ```TypeScript
-function turnOnRadio(slotId?: int): Promise<void>
+function turnOnRadio(slotId?: number): Promise<void>
 ```
 
 Turn on the radio service.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -104,7 +62,7 @@ Turn on the radio service.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| slotId | number | No |
 
 **Return value:**
 
@@ -124,10 +82,6 @@ Turn on the radio service.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-See [turnOnRadio](#turnonradio)
-
 
 ## turnOnRadio
 
@@ -138,8 +92,6 @@ function turnOnRadio(callback: AsyncCallback<void>): void
 Turn on the radio service.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -164,7 +116,3 @@ Turn on the radio service.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [turnOnRadio](#turnonradio)

@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [ColorMode](arkts-form-forminfo-colormode-e.md)
@@ -21,8 +19,6 @@ MODE_AUTO = -1
 表示自动模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ MODE_DARK = 0
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [MODE_DARK](arkts-form-forminfo-colormode-e.md#mode_dark)
@@ -57,8 +51,6 @@ MODE_LIGHT = 1
 表示亮色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

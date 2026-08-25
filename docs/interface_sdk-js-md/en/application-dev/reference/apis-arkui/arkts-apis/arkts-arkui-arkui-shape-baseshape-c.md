@@ -6,14 +6,12 @@ This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapeme
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
 ```
 
 ## height
@@ -25,8 +23,6 @@ height(height: Length): T
 Sets the height of a shape.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,8 +54,6 @@ Sets the size of a shape.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -72,7 +66,7 @@ Sets the size of a shape.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [size](#size) | [SizeOptions](arkts-arkui-units-sizeoptions-i.md) | Yes |
+| [size](#size) | [SizeOptions](arkts-arkui-sizeoptions-i.md) | Yes |
 
 **Return value:**
 
@@ -89,8 +83,6 @@ width(width: Length): T
 Sets the width of a shape.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

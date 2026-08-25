@@ -4,8 +4,6 @@ WLAN站点信息。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ WLAN站点信息。
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## ipAddress
@@ -27,8 +25,6 @@ WLAN客户端的IP地址
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -46,8 +42,6 @@ WLAN客户端的MAC地址
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -64,8 +58,6 @@ WLAN客户端的MAC地址类型
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -81,8 +73,6 @@ WLAN客户端的网络名称
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 

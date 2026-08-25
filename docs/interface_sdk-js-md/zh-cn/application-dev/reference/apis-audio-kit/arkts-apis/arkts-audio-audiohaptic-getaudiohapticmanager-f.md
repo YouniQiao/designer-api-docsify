@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from 'kits/@kit.AudioKit';
 ```
 
 ## getAudioHapticManager
@@ -16,8 +16,6 @@ function getAudioHapticManager(): AudioHapticManager
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 **返回值：**
@@ -25,9 +23,3 @@ function getAudioHapticManager(): AudioHapticManager
 | 类型 |
 | --- |
 | [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) |
-
-**示例**
-
-```TypeScript
-let audioHapticManagerInstance: audioHaptic.AudioHapticManager = audioHaptic.getAudioHapticManager();
-```

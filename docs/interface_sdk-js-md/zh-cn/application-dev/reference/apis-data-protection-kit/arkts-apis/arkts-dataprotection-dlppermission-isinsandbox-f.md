@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## isInSandbox
@@ -15,8 +15,6 @@ function isInSandbox(): Promise<boolean>
 查询当前应用是否运行在DLP沙箱环境。使用Promise异步回调。该接口用于判断当前应用是否处于DLP沙箱环境，以便决定是否执行沙箱相关的操作或调用沙箱专用接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -33,30 +31,6 @@ function isInSandbox(): Promise<boolean>
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.isInSandbox().then((isInSandbox) => { // 是否在沙箱内。
-  console.info('isInSandbox', isInSandbox);
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.isInSandbox((err, isInSandbox) => {
-  if (err) {
-    console.error(`Failed to check sandbox status. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('isInSandbox：', JSON.stringify(isInSandbox));
-  }
-}); // 是否在沙箱内。
-```
-
 
 ## isInSandbox
 
@@ -67,8 +41,6 @@ function isInSandbox(callback: AsyncCallback<boolean>): void
 查询当前应用是否运行在DLP沙箱环境。使用callback异步回调。该接口用于判断当前应用是否处于DLP沙箱环境，以便决定是否执行沙箱相关的操作或调用沙箱专用接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -85,7 +57,3 @@ function isInSandbox(callback: AsyncCallback<boolean>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-参见 [isInSandbox](#isinsandbox)

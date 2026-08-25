@@ -4,29 +4,25 @@ Describes the size of a PiP window.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 Window height, in px. The value must be a positive integer and cannot be greater than the screen height.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -35,16 +31,14 @@ Window height, in px. The value must be a positive integer and cannot be greater
 ## scale
 
 ```TypeScript
-scale: double
+scale: number
 ```
 
 Scale factor of the window, representing the display size relative to the width and height. The value is a floating-point number in the range (0.0, 1.0]. The value **1** means that the window matches the specified width and height.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -53,16 +47,14 @@ Scale factor of the window, representing the display size relative to the width 
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 Window width, in px. The value must be a positive integer and cannot be greater than the screen width.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

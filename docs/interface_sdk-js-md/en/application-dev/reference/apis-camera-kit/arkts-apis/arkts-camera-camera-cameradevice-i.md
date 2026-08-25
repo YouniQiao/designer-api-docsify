@@ -4,14 +4,12 @@ Describes the camera device information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## automotiveCameraPosition
@@ -25,8 +23,6 @@ Automotive camera position attribute.
 **Type:** [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Camera ID.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -55,16 +49,14 @@ Camera ID.
 ## cameraOrientation
 
 ```TypeScript
-readonly cameraOrientation: int
+readonly cameraOrientation: number
 ```
 
 Camera installation angle, which does not change as the screen rotates. The value range is [0, 360], in degrees.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -82,8 +74,6 @@ Camera position.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -99,8 +89,6 @@ Camera type.
 **Type:** [CameraType](arkts-camera-camera-cameratype-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -118,8 +106,6 @@ Camera connection type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -135,8 +121,6 @@ List of physical cameras that form the logical camera.
 **Type:** Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt;
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,8 +140,6 @@ Remote device name. If no remote device is available, an empty value is returned
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -173,8 +155,6 @@ Remote device type.
 **Type:** [HostDeviceType](arkts-camera-camera-hostdevicetype-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -192,8 +172,6 @@ Whether a camera is a logical camera (consisting of multiple physical cameras). 
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -203,16 +181,14 @@ Whether a camera is a logical camera (consisting of multiple physical cameras). 
 ## lensDistortion
 
 ```TypeScript
-readonly lensDistortion?: Array<double>
+readonly lensDistortion?: Array<number>
 ```
 
 Array of lens distortion parameters.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -223,16 +199,14 @@ Array of lens distortion parameters.
 ## lensEquivalentFocalLength
 
 ```TypeScript
-readonly lensEquivalentFocalLength?: Array<int>
+readonly lensEquivalentFocalLength?: Array<number>
 ```
 
 Equivalent focal length of the camera lens.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -241,16 +215,14 @@ Equivalent focal length of the camera lens.
 ## lensFocalLength
 
 ```TypeScript
-readonly lensFocalLength?: double
+readonly lensFocalLength?: number
 ```
 
 Actual focal length of the lens.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -261,16 +233,14 @@ Actual focal length of the lens.
 ## lensIntrinsicCalibration
 
 ```TypeScript
-readonly lensIntrinsicCalibration?: Array<double>
+readonly lensIntrinsicCalibration?: Array<number>
 ```
 
 Array of lens intrinsic calibration parameters.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -281,16 +251,14 @@ Array of lens intrinsic calibration parameters.
 ## minimumFocusDistance
 
 ```TypeScript
-readonly minimumFocusDistance?: double
+readonly minimumFocusDistance?: number
 ```
 
 Minimum focus distance of the camera.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -310,8 +278,6 @@ Arrangement mode of the sensor color filter.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -321,16 +287,14 @@ Arrangement mode of the sensor color filter.
 ## sensorPhysicalSize
 
 ```TypeScript
-readonly sensorPhysicalSize?: Array<double>
+readonly sensorPhysicalSize?: Array<number>
 ```
 
 Physical dimensions (width and height) of the sensor.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -341,16 +305,14 @@ Physical dimensions (width and height) of the sensor.
 ## sensorPixelArraySize
 
 ```TypeScript
-readonly sensorPixelArraySize?: Array<int>
+readonly sensorPixelArraySize?: Array<number>
 ```
 
 Pixel array dimensions (width and height, in pixels) of the sensor.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

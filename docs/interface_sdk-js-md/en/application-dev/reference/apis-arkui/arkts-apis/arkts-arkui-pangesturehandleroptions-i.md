@@ -6,8 +6,6 @@ Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOp
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Pan direction. The value supports the AND (&) and OR (|) operations.Default valu
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -42,13 +38,11 @@ distance?: number
 ```
 
 Minimum pan distance to trigger the gesture, in vp.Default value: **8** for the stylus and **5** for other input sources  
-**NOTE：**If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.Value range: 0, +∞). If the value specified is less than 0, the default value is used.Since API version 19, the default value is **8**, in vp, for the stylus.When configuring this field with [gestureModifier, the unit is px.
+**NOTE：**If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.Value range: [0, +∞). If the value specified is less than 0, the default value is used.Since API version 19, the default value is **8**, in vp, for the stylus.When configuring this field with [gestureModifier](../arkts-components/arkts-arkui-commonmethod-c.md#gesturemodifier), the unit is px.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,11 +58,9 @@ distanceMap?: Map<SourceTool, number>
 
 Minimum pan distance for different input sources to trigger the gesture, in vp.Default value: **8** for the stylus and **5** for other input sources Value range: [0, +∞). If the value specified is less than 0, the default value is used.
 
-**Type:** Map&lt;SourceTool, number&gt;
+**Type:** Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt;
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 1
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

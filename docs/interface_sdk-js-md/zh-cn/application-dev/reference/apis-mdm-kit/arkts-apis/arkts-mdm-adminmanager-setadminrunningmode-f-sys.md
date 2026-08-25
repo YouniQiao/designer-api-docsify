@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setAdminRunningMode
@@ -15,8 +15,6 @@ function setAdminRunningMode(admin: Want, mode: RunningMode): void
 设置设备管理应用的运行模式。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -40,22 +38,3 @@ function setAdminRunningMode(admin: Want, mode: RunningMode): void
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let admin: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  adminManager.setAdminRunningMode(admin, adminManager.RunningMode.MULTI_USER);
-  console.info(`Succeeded in setting admin running mode.`);
-} catch(err) {
-  console.error(`Failed to set admin running mode. Code: ${err.code}, message: ${err.message}`);
-}
-```

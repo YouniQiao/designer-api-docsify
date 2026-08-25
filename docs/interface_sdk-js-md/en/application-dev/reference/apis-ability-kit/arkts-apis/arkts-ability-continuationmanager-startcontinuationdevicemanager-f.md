@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## startContinuationDeviceManager
@@ -15,8 +15,6 @@ function startContinuationDeviceManager(token: number, callback: AsyncCallback<v
 Starts the device selection module to show the list of available devices on the network. This API does not involve any filter parameters and uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 22
 
@@ -43,67 +41,6 @@ Starts the device selection module to show the list of available devices on the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
-
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-try {
-  continuationManager.startContinuationDeviceManager(token, (err) => {
-    if (err.code != 0) {
-      console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('startContinuationDeviceManager finished. ');
-  });
-} catch (err) {
-  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-try {
-  continuationManager.startContinuationDeviceManager(
-    token,
-    {
-      deviceType: ["00E"]
-    },
-    (err) => {
-      if (err.code != 0) {
-        console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-        return;
-      }
-      console.info('startContinuationDeviceManager finished. ');
-  });
-} catch (err) {
-  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-try {
-  continuationManager.startContinuationDeviceManager(
-    token,
-    {
-      deviceType: ["00E"]
-    }).then(() => {
-      console.info('startContinuationDeviceManager finished. ');
-    }).catch((err: BusinessError) => {
-      console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-    });
-} catch (err) {
-  console.error('startContinuationDeviceManager failed, cause: ' + JSON.stringify(err));
-}
-```
 
 
 ## startContinuationDeviceManager
@@ -120,8 +57,6 @@ Starts the device selection module to show the list of available devices on the 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -137,7 +72,7 @@ Starts the device selection module to show the list of available devices on the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | token | number | Yes |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -148,10 +83,6 @@ Starts the device selection module to show the list of available devices on the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
-
-**Examples**
-
-See [startContinuationDeviceManager](#startcontinuationdevicemanager)
 
 
 ## startContinuationDeviceManager
@@ -164,8 +95,6 @@ Starts the device selection module to show the list of available devices on the 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 22
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
@@ -181,7 +110,7 @@ Starts the device selection module to show the list of available devices on the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | token | number | Yes |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | No |
 
 **Return value:**
 
@@ -197,7 +126,3 @@ Starts the device selection module to show the list of available devices on the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
-
-**Examples**
-
-See [startContinuationDeviceManager](#startcontinuationdevicemanager)

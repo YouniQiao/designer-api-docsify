@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## cacheStrategy
@@ -25,8 +23,6 @@ cacheStrategy?: CacheStrategy
 **类型：** [CacheStrategy](arkts-basicservices-cachedownload-cachestrategy-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
@@ -42,8 +38,6 @@ CA证书路径。目前仅支持.pem格式证书，默认使用系统预设的CA
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## headers
@@ -58,8 +52,6 @@ headers?: Record<string, string>
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## retry
@@ -73,8 +65,6 @@ Task retry configuration.
 **类型：** [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,8 +82,6 @@ sslType?: SslType
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## timeout
@@ -107,8 +95,6 @@ Task timeout configuration.
 **类型：** [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

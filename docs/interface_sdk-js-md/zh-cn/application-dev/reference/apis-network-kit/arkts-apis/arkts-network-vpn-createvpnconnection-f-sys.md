@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## createVpnConnection
@@ -15,8 +15,6 @@ function createVpnConnection(context: AbilityContext): VpnConnection
 创建一个 VPN 连接对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -40,24 +38,3 @@ function createVpnConnection(context: AbilityContext): VpnConnection
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-Stage 模型示例：
-
-```TypeScript
-import { vpn } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
-  functiontest()
-  {
-    console.info("vpn createVpnConnection: " + JSON.stringify(this.VpnConnection));
-  }
-  build() {  }
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disableNfc
@@ -15,8 +15,6 @@ function disableNfc(): void
 Disables NFC. This API can be called only by system applications.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS
 

@@ -4,31 +4,27 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Test.UiTest
 
 ## 导入模块
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## bottom
 
 ```TypeScript
-bottom: int
+bottom: number
 ```
 
 控件边框的右下角的Y坐标，取值大于等于0的整数，单位：px。  
 **说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -37,16 +33,14 @@ bottom: int
 ## displayId
 
 ```TypeScript
-displayId?: int
+displayId?: number
 ```
 
 控件边框所属的屏幕ID，取值大于或等于0的整数。默认值为设备默认屏幕ID。从API version 20开始，该接口支持在原子化服务中使用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -55,17 +49,15 @@ displayId?: int
 ## left
 
 ```TypeScript
-left: int
+left: number
 ```
 
 控件边框的左上角的X坐标，取值大于等于0的整数，单位：px。  
 **说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,17 +66,15 @@ left: int
 ## right
 
 ```TypeScript
-right: int
+right: number
 ```
 
 控件边框的右下角的X坐标，取值大于等于0的整数，单位：px。  
 **说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -93,17 +83,15 @@ right: int
 ## top
 
 ```TypeScript
-top: int
+top: number
 ```
 
 控件边框的左上角的Y坐标，取值大于等于0的整数，单位：px。  
 **说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

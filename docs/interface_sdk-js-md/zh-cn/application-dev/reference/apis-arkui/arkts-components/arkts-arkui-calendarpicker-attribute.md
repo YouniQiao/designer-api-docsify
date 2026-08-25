@@ -6,8 +6,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ edgeAlign(alignType: CalendarAlign, offset?: Offset)
 设置选择器与入口组件的对齐方式。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +46,6 @@ edgeAlign(alignType: Optional<CalendarAlign>, offset?: Offset)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -62,7 +56,7 @@ edgeAlign(alignType: Optional<CalendarAlign>, offset?: Offset)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | Optional&lt;[CalendarAlign](arkts-arkui-calendaralign-e.md)&gt; | 是 |
+| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[CalendarAlign](arkts-arkui-calendaralign-e.md)&gt; | 是 |
 | offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 |
 
 ## markToday
@@ -74,8 +68,6 @@ markToday(enabled: boolean)
 设置日历选择器中系统当前日期是否保持高亮显示。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,8 +90,6 @@ onChange(callback: Callback<Date>)
 选择日期时触发该事件。不能通过双向绑定的状态变量触发。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,8 +116,6 @@ onChange(callback: Optional<Callback<Date>>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -138,7 +126,7 @@ onChange(callback: Optional<Callback<Date>>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional & lt;Callback & lt;Date & gt; & gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | 是 |
 
 ## textStyle
 
@@ -149,8 +137,6 @@ textStyle(value: PickerTextStyle)
 设置入口区的文本颜色、字号、字体粗细。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -174,8 +160,6 @@ textStyle(style: Optional<PickerTextStyle>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -186,4 +170,4 @@ textStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | 是 |

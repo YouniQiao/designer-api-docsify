@@ -4,8 +4,6 @@ The enum of profile connection state.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md)
@@ -21,8 +19,6 @@ STATE_DISCONNECTED = 0
 the current profile is disconnected
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ the current profile is being connected
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [STATE_CONNECTING](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_connecting)
@@ -58,8 +52,6 @@ the current profile is connected
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [STATE_CONNECTED](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md#state_connected)
@@ -75,8 +67,6 @@ STATE_DISCONNECTING = 3
 the current profile is being disconnected
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

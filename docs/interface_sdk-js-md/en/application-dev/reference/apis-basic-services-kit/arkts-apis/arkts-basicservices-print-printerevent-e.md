@@ -4,8 +4,6 @@ Enumerates printer-related events.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINTER_EVENT_ADDED
@@ -17,8 +15,6 @@ PRINTER_EVENT_ADDED = 0
 Printer added.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ Printer deleted.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINTER_EVENT_STATE_CHANGED
@@ -45,8 +39,6 @@ PRINTER_EVENT_STATE_CHANGED = 2
 Printer state changed.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -60,8 +52,6 @@ Printer information changed.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINTER_EVENT_PREFERENCE_CHANGED
@@ -74,8 +64,6 @@ Printer preferences changed.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINTER_EVENT_LAST_USED_PRINTER_CHANGED
@@ -87,7 +75,5 @@ PRINTER_EVENT_LAST_USED_PRINTER_CHANGED = 5
 The last used printer changed.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

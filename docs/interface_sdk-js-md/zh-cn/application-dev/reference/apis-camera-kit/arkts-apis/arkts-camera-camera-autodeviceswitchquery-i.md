@@ -5,14 +5,12 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isAutoDeviceSwitchSupported
@@ -24,8 +22,6 @@ isAutoDeviceSwitchSupported(): boolean
 查询设备是否支持自动切换镜头能力。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -42,15 +38,3 @@ isAutoDeviceSwitchSupported(): boolean
 | 错误码ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-// 本示例用于查询折叠屏设备是否支持自动切换相机镜头。
-// 当示例代码返回true时，可继续使用enableAutoDeviceSwitch使能自动切换摄像头能力。
-function isAutoDeviceSwitchSupported(session: camera.PhotoSession): boolean {
-  let isSupported = false;
-  isSupported = session.isAutoDeviceSwitchSupported();
-  return isSupported;
-}
-```

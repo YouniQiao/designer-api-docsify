@@ -4,8 +4,6 @@ Enumerates the reasons why the full download stops. The default value is **NO_ST
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## NO_STOP
@@ -17,8 +15,6 @@ NO_STOP = 0
 Downloading.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -32,8 +28,6 @@ Downloading. Mobile network and Wi-Fi are unavailable.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## LOCAL_STORAGE_FULL
@@ -45,8 +39,6 @@ LOCAL_STORAGE_FULL = 2
 Downloading. The device storage is full.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -60,8 +52,6 @@ Downloading. The device temperature exceeds the upper limit.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## USER_STOPPED
@@ -73,8 +63,6 @@ USER_STOPPED = 4
 Downloading. The user stops the download.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -88,8 +76,6 @@ Downloading. The application is uninstalled.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## OTHER_REASON
@@ -101,7 +87,5 @@ OTHER_REASON = 6
 Downloading. The download stops due to other reasons, for example, the cloud server does not respond.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager

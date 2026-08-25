@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -40,15 +38,9 @@ import { screen } from '@kit.ArkUI';
 | [off](arkts-arkui-screen-off-f-sys.md) |
 | [off](arkts-arkui-screen-off-f-sys.md) |
 | [off](arkts-arkui-screen-off-f-sys.md) |
-| [offChange](arkts-arkui-screen-offchange-f-sys.md) |
-| [offConnect](arkts-arkui-screen-offconnect-f-sys.md) |
-| [offDisconnect](arkts-arkui-screen-offdisconnect-f-sys.md) |
 | [on](arkts-arkui-screen-on-f-sys.md) |
 | [on](arkts-arkui-screen-on-f-sys.md) |
 | [on](arkts-arkui-screen-on-f-sys.md) |
-| [onChange](arkts-arkui-screen-onchange-f-sys.md) |
-| [onConnect](arkts-arkui-screen-onconnect-f-sys.md) |
-| [onDisconnect](arkts-arkui-screen-ondisconnect-f-sys.md) |
 | [resizeVirtualScreen](arkts-arkui-screen-resizevirtualscreen-f-sys.md) |
 | [setMultiScreenMode](arkts-arkui-screen-setmultiscreenmode-f-sys.md) |
 | [setMultiScreenRelativePosition](arkts-arkui-screen-setmultiscreenrelativeposition-f-sys.md) |

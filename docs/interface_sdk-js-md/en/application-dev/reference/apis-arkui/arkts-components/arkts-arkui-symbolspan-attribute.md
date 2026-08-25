@@ -6,8 +6,6 @@ The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-g
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Creates an attribute modifier.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -37,7 +33,7 @@ Creates an attribute modifier.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | AttributeModifier&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-attribute.md)&gt; | Yes |
+| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-attribute.md)&gt; | Yes |
 
 ## effectStrategy
 
@@ -51,8 +47,6 @@ Sets the symbol effect of the symbol span.
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,8 +75,6 @@ Sets the color of the symbol span.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -95,7 +87,7 @@ Sets the color of the symbol span.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Array & lt;ResourceColor & gt; | Yes |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## fontSize
 
@@ -109,8 +101,6 @@ Sets the size of the symbol span. When using the string type, numeric string val
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,8 +129,6 @@ Sets the weight of the symbol span. For the number type, the value ranges from 1
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -165,8 +153,6 @@ Used to set the font weight of SymbolSpan.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -180,7 +166,7 @@ Used to set the font weight of SymbolSpan.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
-| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No |
+| [fontWeightConfigs](../arkts-apis/arkts-arkui-fontconfigs-i.md) | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No |
 
 ## renderingStrategy
 
@@ -194,8 +180,6 @@ Sets the rendering strategy of the symbol span.
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

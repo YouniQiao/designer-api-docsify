@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableContextManager } from '@kit.AbilityKit';
+import { sendableContextManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## convertFromContext
@@ -15,8 +15,6 @@ function convertFromContext(context: common.Context): SendableContext
 将Context转换为SendableContext对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,40 +39,3 @@ function convertFromContext(context: common.Context): SendableContext
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, sendableContextManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { worker } from '@kit.ArkTS';
-
-@Sendable
-export class SendableObject {
-  constructor(sendableContext: sendableContextManager.SendableContext) {
-    this.sendableContext = sendableContext;
-  }
-
-  sendableContext: sendableContextManager.SendableContext;
-  // other sendable object
-}
-
-export default class EntryAbility extends UIAbility {
-  worker: worker.ThreadWorker = new worker.ThreadWorker('entry/ets/workers/Worker.ets');
-
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-
-    // convert and post
-    try {
-      let sendableContext: sendableContextManager.SendableContext =
-        sendableContextManager.convertFromContext(this.context);
-      let object: SendableObject = new SendableObject(sendableContext);
-      hilog.info(0x0000, 'testTag', '%{public}s', 'Ability post message');
-      this.worker.postMessageWithSharedSendable(object);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', `convertFromContext failed, error code: ${error.code}, error msg: ${error.message}`);
-    }
-  }
-}
-```

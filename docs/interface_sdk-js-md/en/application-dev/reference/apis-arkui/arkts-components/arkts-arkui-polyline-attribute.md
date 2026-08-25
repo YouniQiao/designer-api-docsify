@@ -1,12 +1,10 @@
 # Polyline properties/events
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** PolylineAttribute extends CommonShapeMethod<PolylineAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ points(value: Array<any>)
 Sets the list of coordinates through which the polyline passes. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

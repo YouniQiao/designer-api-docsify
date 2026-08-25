@@ -4,8 +4,6 @@ Defines the interaction information returned after the current intent execution 
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the interaction information returned after the current intent execution 
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@kit.AbilityKit';
+import { insightIntent } from 'kits/@kit.AbilityKit';
 ```
 
 ## interactionUI
@@ -27,8 +25,6 @@ Information of the interaction UI to be displayed after the current intent execu
 **Type:** [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

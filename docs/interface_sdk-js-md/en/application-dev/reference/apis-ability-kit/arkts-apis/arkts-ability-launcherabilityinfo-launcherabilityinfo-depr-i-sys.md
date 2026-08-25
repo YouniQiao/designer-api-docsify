@@ -9,8 +9,6 @@ The LauncherAbilityInfo module provides information about the launcher ability, 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LauncherAbilityInfo](#launcherabilityinfo-system-api)
@@ -30,8 +28,6 @@ Application information of the launcher ability.
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -53,8 +49,6 @@ Element name of the launcher ability.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** elementName
@@ -74,8 +68,6 @@ ID of the launcher ability icon.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -97,8 +89,6 @@ Timestamp when the launcher ability was installed, in milliseconds.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** installTime
@@ -119,8 +109,6 @@ ID of the launcher ability label.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -140,8 +128,6 @@ User ID of the launcher ability.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

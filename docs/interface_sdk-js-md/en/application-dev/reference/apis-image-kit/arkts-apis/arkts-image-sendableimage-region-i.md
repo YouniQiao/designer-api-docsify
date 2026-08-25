@@ -6,14 +6,12 @@ Describes the region information. It inherits from [lang.ISendable](../../../ark
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## size
@@ -27,8 +25,6 @@ Region size.
 **Type:** Size
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,8 +44,6 @@ X coordinate, in px.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -67,8 +61,6 @@ Y coordinate, in px.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

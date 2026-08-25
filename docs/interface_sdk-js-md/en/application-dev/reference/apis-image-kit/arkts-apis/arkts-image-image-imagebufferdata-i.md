@@ -4,14 +4,12 @@ Describes the image buffer data.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## byteBuffer
@@ -26,8 +24,6 @@ Image data buffer.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -35,16 +31,14 @@ Image data buffer.
 ## pixelStride
 
 ```TypeScript
-readonly pixelStride: int[]
+readonly pixelStride: number[]
 ```
 
 Pixel stride of each component.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,16 +47,14 @@ Pixel stride of each component.
 ## rowStride
 
 ```TypeScript
-readonly rowStride: int[]
+readonly rowStride: number[]
 ```
 
 Row stride of each component.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

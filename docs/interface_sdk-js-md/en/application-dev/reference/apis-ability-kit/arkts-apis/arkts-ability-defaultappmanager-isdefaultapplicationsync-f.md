@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
+import { defaultAppManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isDefaultApplicationSync
@@ -15,8 +15,6 @@ function isDefaultApplicationSync(type: string): boolean
 Checks whether this application is the default application of a system-defined application type or a [uniform data type](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). This API returns the result synchronously.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -38,16 +36,3 @@ Checks whether this application is the default application of a system-defined a
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-
-try {
-  let data = defaultAppManager.isDefaultApplicationSync(defaultAppManager.ApplicationType.BROWSER)
-  console.info('Operation successful. IsDefaultApplicationSync ? ' + JSON.stringify(data));
-} catch (error) {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-}
-```

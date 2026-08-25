@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## AV_IMAGE_QUERY_NEXT_SYNC
@@ -17,8 +15,6 @@ AV_IMAGE_QUERY_NEXT_SYNC = 0
 表示选取传入时间点或之后的关键帧。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -32,8 +28,6 @@ AV_IMAGE_QUERY_PREVIOUS_SYNC
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## AV_IMAGE_QUERY_CLOSEST_SYNC
@@ -46,8 +40,6 @@ AV_IMAGE_QUERY_CLOSEST_SYNC
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## AV_IMAGE_QUERY_CLOSEST
@@ -59,7 +51,5 @@ AV_IMAGE_QUERY_CLOSEST
 表示选取离传入时间点最近的帧，该帧不一定是关键帧。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator

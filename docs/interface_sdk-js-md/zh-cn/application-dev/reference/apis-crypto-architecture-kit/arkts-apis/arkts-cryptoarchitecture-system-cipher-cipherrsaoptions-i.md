@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## complete
@@ -27,8 +25,6 @@ complete: () => void
 接口调用结束的回调函数。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 11
 
@@ -45,8 +41,6 @@ fail: (data: string, code: number) => void
 接口调用失败的回调函数。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 11
 
@@ -70,8 +64,6 @@ success: (data: CipherResponse) => void
 接口调用成功的回调函数。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 11
 
@@ -99,8 +91,6 @@ action: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -118,8 +108,6 @@ key: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 11
 
@@ -139,8 +127,6 @@ text: string
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 11
 
 **替代接口：** Cipher
@@ -158,8 +144,6 @@ RSA算法的填充项，默认为RSA/None/OAEPWithSHA256AndMGF1Padding。
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 11
 

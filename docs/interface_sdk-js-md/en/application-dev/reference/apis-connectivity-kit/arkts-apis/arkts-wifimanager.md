@@ -4,14 +4,12 @@ Provides methods to operate or manage Wi-Fi. @namespace wifiManager
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -72,17 +70,6 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [off](arkts-connectivity-wifimanager-off-f.md#offp2ppeerdevicechange) |
 | [off](arkts-connectivity-wifimanager-off-f.md#offp2ppersistentgroupchange) |
 | [off](arkts-connectivity-wifimanager-off-f.md#offp2pdiscoverychange) |
-| [offHotspotStateChange](arkts-connectivity-wifimanager-offhotspotstatechange-f.md) |
-| [offP2pConnectionChange](arkts-connectivity-wifimanager-offp2pconnectionchange-f.md) |
-| [offP2pDeviceChange](arkts-connectivity-wifimanager-offp2pdevicechange-f.md) |
-| [offP2pDiscoveryChange](arkts-connectivity-wifimanager-offp2pdiscoverychange-f.md) |
-| [offP2pPeerDeviceChange](arkts-connectivity-wifimanager-offp2ppeerdevicechange-f.md) |
-| [offP2pPersistentGroupChange](arkts-connectivity-wifimanager-offp2ppersistentgroupchange-f.md) |
-| [offP2pStateChange](arkts-connectivity-wifimanager-offp2pstatechange-f.md) |
-| [offWifiConnectionChange](arkts-connectivity-wifimanager-offwificonnectionchange-f.md) |
-| [offWifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md) |
-| [offWifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md) |
-| [offWifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md) |
 | [on](arkts-connectivity-wifimanager-on-f.md#onwifistatechange) |
 | [on](arkts-connectivity-wifimanager-on-f.md#onwificonnectionchange) |
 | [on](arkts-connectivity-wifimanager-on-f.md#onwifiscanstatechange) |
@@ -94,17 +81,6 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [on](arkts-connectivity-wifimanager-on-f.md#onp2ppeerdevicechange) |
 | [on](arkts-connectivity-wifimanager-on-f.md#onp2ppersistentgroupchange) |
 | [on](arkts-connectivity-wifimanager-on-f.md#onp2pdiscoverychange) |
-| [onHotspotStateChange](arkts-connectivity-wifimanager-onhotspotstatechange-f.md) |
-| [onP2pConnectionChange](arkts-connectivity-wifimanager-onp2pconnectionchange-f.md) |
-| [onP2pDeviceChange](arkts-connectivity-wifimanager-onp2pdevicechange-f.md) |
-| [onP2pDiscoveryChange](arkts-connectivity-wifimanager-onp2pdiscoverychange-f.md) |
-| [onP2pPeerDeviceChange](arkts-connectivity-wifimanager-onp2ppeerdevicechange-f.md) |
-| [onP2pPersistentGroupChange](arkts-connectivity-wifimanager-onp2ppersistentgroupchange-f.md) |
-| [onP2pStateChange](arkts-connectivity-wifimanager-onp2pstatechange-f.md) |
-| [onWifiConnectionChange](arkts-connectivity-wifimanager-onwificonnectionchange-f.md) |
-| [onWifiRssiChange](arkts-connectivity-wifimanager-onwifirssichange-f.md) |
-| [onWifiScanStateChange](arkts-connectivity-wifimanager-onwifiscanstatechange-f.md) |
-| [onWifiStateChange](arkts-connectivity-wifimanager-onwifistatechange-f.md) |
 | [p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md) |
 | [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md) |
 | [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md) |
@@ -149,22 +125,14 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md) |
 | [isOpenSoftApAllowed](arkts-connectivity-wifimanager-isopensoftapallowed-f-sys.md) |
 | [isRandomMacDisabled](arkts-connectivity-wifimanager-israndommacdisabled-f-sys.md) |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offstreamchange) |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offdeviceconfigchange) |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstajoin) |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstaleave) |
-| [offDeviceConfigChange](arkts-connectivity-wifimanager-offdeviceconfigchange-f-sys.md) |
-| [offHotspotStaJoin](arkts-connectivity-wifimanager-offhotspotstajoin-f-sys.md) |
-| [offHotspotStaLeave](arkts-connectivity-wifimanager-offhotspotstaleave-f-sys.md) |
-| [offStreamChange](arkts-connectivity-wifimanager-offstreamchange-f-sys.md) |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#onstreamchange) |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#ondeviceconfigchange) |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstajoin) |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstaleave) |
-| [onDeviceConfigChange](arkts-connectivity-wifimanager-ondeviceconfigchange-f-sys.md) |
-| [onHotspotStaJoin](arkts-connectivity-wifimanager-onhotspotstajoin-f-sys.md) |
-| [onHotspotStaLeave](arkts-connectivity-wifimanager-onhotspotstaleave-f-sys.md) |
-| [onStreamChange](arkts-connectivity-wifimanager-onstreamchange-f-sys.md) |
+| off |
+| off |
+| off |
+| off |
+| on |
+| on |
+| on |
+| on |
 | [reassociate](arkts-connectivity-wifimanager-reassociate-f-sys.md) |
 | [reconnect](arkts-connectivity-wifimanager-reconnect-f-sys.md) |
 | [removeAllNetwork](arkts-connectivity-wifimanager-removeallnetwork-f-sys.md) |

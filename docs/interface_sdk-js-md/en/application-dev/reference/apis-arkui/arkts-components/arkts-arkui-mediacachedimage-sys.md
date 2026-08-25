@@ -12,8 +12,6 @@ Image resource to be obtained.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,7 +22,7 @@ Image resource to be obtained.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| DrawableDescriptor \| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Yes |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| DrawableDescriptor \| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | Yes |
 
 ## Summary
 

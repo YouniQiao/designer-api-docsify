@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SelectTitleBar, SelectTitleBarMenuItem } from '@kit.ArkUI';
+import { SelectTitleBar, SelectTitleBarMenuItem } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -19,9 +19,3 @@ import { SelectTitleBar, SelectTitleBarMenuItem } from '@kit.ArkUI';
 | 名称 |
 | --- |
 | [SelectTitleBar](arkts-arkui-arkui-advanced-selecttitlebar-selecttitlebar-s.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [OnSelectedCallback](arkts-arkui-onselectedcallback-t.md) |

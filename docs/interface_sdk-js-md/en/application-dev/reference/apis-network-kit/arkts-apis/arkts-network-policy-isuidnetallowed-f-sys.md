@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## isUidNetAllowed
@@ -16,8 +16,6 @@ Checks whether the application specified by a given UID is allowed to access a m
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -42,52 +40,6 @@ Checks whether the application specified by a given UID is allowed to access a m
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.isUidNetAllowed(11111, true, (error: BusinessError, data: boolean) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .isUidNetAllowed(11111, true)
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .isUidNetAllowed(11111, 'wlan0')
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
 
 
 ## isUidNetAllowed
@@ -100,8 +52,6 @@ Checks whether the application specified by a given UID is allowed to access a m
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -132,10 +82,6 @@ Checks whether the application specified by a given UID is allowed to access a m
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-See [isUidNetAllowed](#isuidnetallowed)
-
 
 ## isUidNetAllowed
 
@@ -146,8 +92,6 @@ function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boo
 Obtains whether the network of the specified iface can be accessed by the corresponding UID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -174,10 +118,6 @@ Obtains whether the network of the specified iface can be accessed by the corres
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-See [isUidNetAllowed](#isuidnetallowed)
-
 
 ## isUidNetAllowed
 
@@ -188,8 +128,6 @@ function isUidNetAllowed(uid: number, iface: string): Promise<boolean>
 Obtains whether the UID can access the network of the specified iface. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -220,7 +158,3 @@ Obtains whether the UID can access the network of the specified iface. This API 
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [isUidNetAllowed](#isuidnetallowed)

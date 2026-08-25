@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
+import { InsightIntentEntryExecutor } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

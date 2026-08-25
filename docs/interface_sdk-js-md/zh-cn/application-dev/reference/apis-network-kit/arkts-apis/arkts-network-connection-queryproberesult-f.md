@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## queryProbeResult
@@ -18,8 +18,6 @@ function queryProbeResult(destination: string, duration: number): Promise<ProbeR
 > 此接口用于对目标主机进行一段持续时间的网络探测，以获取丢包率和RTT信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -47,19 +45,3 @@ function queryProbeResult(destination: string, duration: number): Promise<ProbeR
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dest: string = "www.example.com";
-let duration: number = 10;
-
-connection.queryProbeResult(dest, duration).then((data: connection.ProbeResultInfo) => {
-    console.info(`Succeeded to get LossRate: ${data.lossRate}, Succeeded to getRTT: ${data.rtt}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to get request. Code:${err.code}, message:${err.message}`);
-});
-```

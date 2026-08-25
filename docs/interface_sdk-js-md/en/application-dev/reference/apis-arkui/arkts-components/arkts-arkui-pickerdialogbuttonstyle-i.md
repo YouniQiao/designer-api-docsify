@@ -4,8 +4,6 @@ Provide an interface for the button style of picker
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ backgroundColor?: ResourceColor
 
 Describes the button background color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ borderRadius?: Length | BorderRadiuses
 
 Describes the button border radius.
 
-**Type:** Length \| BorderRadiuses
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,11 +55,9 @@ fontColor?: ResourceColor
 
 Describes the button text color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +77,6 @@ Describes the button font family.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -101,11 +91,9 @@ fontSize?: Length
 
 Describes the button text size.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,8 +113,6 @@ Describes the button font style.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -144,8 +130,6 @@ Describes the button font weight.
 **Type:** FontWeight \| number \| string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,8 +149,6 @@ Define whether the button default to responding to the Enter key
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -181,11 +163,9 @@ role?: ButtonRole
 
 Describes the button role.
 
-**Type:** ButtonRole
+**Type:** [ButtonRole](arkts-arkui-buttonrole-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -201,11 +181,9 @@ style?: ButtonStyleMode
 
 Describes the button style.
 
-**Type:** ButtonStyleMode
+**Type:** [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,8 +202,6 @@ Describes the button type.
 **Type:** ButtonType
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

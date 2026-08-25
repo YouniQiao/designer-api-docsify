@@ -4,8 +4,6 @@ Widget information.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FormInfo](arkts-form-forminfo-forminfo-i.md)
@@ -29,8 +27,6 @@ Name of the ability to which the widget belongs.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [abilityName](arkts-form-forminfo-forminfo-i.md#abilityname)
@@ -48,8 +44,6 @@ Name of the bundle to which the widget belongs.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -69,8 +63,6 @@ Color mode of the widget.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [colorMode](arkts-form-forminfo-forminfo-i.md#colormode)
@@ -88,8 +80,6 @@ Custom data of the widget.
 **Type:** { [key: string]: [value: string] }
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -109,8 +99,6 @@ Default dimension of the widget.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [defaultDimension](arkts-form-forminfo-forminfo-i.md#defaultdimension)
@@ -128,8 +116,6 @@ Description of the widget.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -149,8 +135,6 @@ Configuration ability of the widget.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [formConfigAbility](arkts-form-forminfo-forminfo-i.md#formconfigability)
@@ -164,13 +148,12 @@ formVisibleNotify: boolean
 ```
 
 Whether to send a notification when the widget is visible.  
-- **true**: The widget provider is notified of the status change. - **false**: The widget provider is not notified of the status change.
+- **true**: The widget provider is notified of the status change.  
+- **false**: The widget provider is not notified of the status change.
 
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -185,13 +168,12 @@ isDefault: boolean
 ```
 
 Whether the widget is the default one.  
-- **true**: The widget is the default one. - **false**: The widget is not the default one.
+- **true**: The widget is the default one.  
+- **false**: The widget is not the default one.
 
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -211,8 +193,6 @@ Component name of the JS widget.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [jsComponentName](arkts-form-forminfo-forminfo-i.md#jscomponentname)
@@ -230,8 +210,6 @@ Name of the module to which the widget belongs.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -251,8 +229,6 @@ Widget name.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [name](arkts-form-forminfo-forminfo-i.md#name)
@@ -271,8 +247,6 @@ Name of the associated bundle to which the widget belongs.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Ability.Form
@@ -288,8 +262,6 @@ Time when the widget was updated.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -309,8 +281,6 @@ Dimensions supported by the widget.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [supportDimensions](arkts-form-forminfo-forminfo-i.md#supportdimensions)
@@ -328,8 +298,6 @@ Type of the widget. Currently, only JS widgets are supported.
 **Type:** FormType
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -349,8 +317,6 @@ Update period of the widget.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [updateDuration](arkts-form-forminfo-forminfo-i.md#updateduration)
@@ -364,13 +330,12 @@ updateEnabled: boolean
 ```
 
 Whether the widget is updatable.  
-- **true**: The widget can be updated periodically. - **false**: The widget cannot be updated periodically.
+- **true**: The widget can be updated periodically.  
+- **false**: The widget cannot be updated periodically.
 
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

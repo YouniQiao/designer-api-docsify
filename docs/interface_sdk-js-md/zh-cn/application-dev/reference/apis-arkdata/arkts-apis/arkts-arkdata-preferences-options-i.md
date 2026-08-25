@@ -4,14 +4,12 @@ Preferences实例配置选项。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块
 
 ```TypeScript
-import { preferences } from '@kit.ArkData';
+import { preferences } from 'kits/@kit.ArkData';
 ```
 
 ## dataGroupId
@@ -27,8 +25,6 @@ dataGroupId?: string | null | undefined
 **类型：** string \| null \| undefined
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ Preferences实例的名称。名称长度需大于零且小于等于255字节，
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -67,8 +61,6 @@ storageType?: StorageType | null | undefined
 **类型：** [StorageType](arkts-arkdata-preferences-storagetype-e.md) \| null \| undefined
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

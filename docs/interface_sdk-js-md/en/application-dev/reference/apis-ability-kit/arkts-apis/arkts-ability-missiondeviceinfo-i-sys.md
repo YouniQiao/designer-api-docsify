@@ -4,8 +4,6 @@ The module defines the parameters required for registering a listener. It can be
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Indicates the deviceId to start sync.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

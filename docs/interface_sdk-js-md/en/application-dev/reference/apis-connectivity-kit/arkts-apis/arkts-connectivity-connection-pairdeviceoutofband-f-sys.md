@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## pairDeviceOutOfBand
@@ -17,8 +17,6 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism. T
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -31,7 +29,7 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism. T
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [transport](arkts-connectivity-ble-gattsetting-i.md) | [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) | Yes |
+| [transport](arkts-connectivity-ble-gattsetting-i.md) | [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | Yes |
 | p192Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | Yes |
 | p256Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | Yes |
 
@@ -50,34 +48,3 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism. T
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let transport: connection.BluetoothTransport = connection.BluetoothTransport.TRANSPORT_LE;
-    let addressInfo: common.BluetoothAddress = {
-        "address": "11:22:33:44:55:66",
-        "addressType": common.BluetoothAddressType.REAL, // The value must be an actual MAC address.
-        "rawAddressType": common.BluetoothRawAddressType.RANDOM
-    };
-    let confirmHash: Uint8Array = new Uint8Array([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10]);
-    let randomHash: Uint8Array = new Uint8Array([0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x11]);
-    let oobData: connection.OobData = {
-        "deviceId": addressInfo,
-        "confirmationHash": confirmHash,
-        "randomizerHash": randomHash,
-        "deviceName": "testName",
-        "deviceRole": connection.DeviceRole.DEVICE_ROLE_PERIPHERAL_ONLY
-    }
-    connection.pairDeviceOutOfBand(transport, null, oobData).then(() => {
-        console.info('pairDeviceOufOfBand');
-    }, (err: BusinessError) => {
-        console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-    });
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```

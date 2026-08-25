@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## savePdfFileJob
 
 ```TypeScript
-function savePdfFileJob(jobId: string, fd: int): Promise<void>
+function savePdfFileJob(jobId: string, fd: number): Promise<void>
 ```
 
 保存打印作业的pdf文件。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -31,7 +29,7 @@ function savePdfFileJob(jobId: string, fd: int): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | jobId | string | 是 |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| fd | number | 是 |
 
 **返回值：**
 

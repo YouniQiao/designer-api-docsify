@@ -7,8 +7,6 @@ Checks whether a bundle has been installed.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -16,7 +14,7 @@ Checks whether a bundle has been installed.
 ## Modules to Import
 
 ```TypeScript
-import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
+import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from 'kits/@kit.AbilityKit';
 ```
 
 ## hasInstalled
@@ -29,8 +27,6 @@ Checks whether an application exists, or whether a native application has been i
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 9
 
 **Substitutes:** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md)
@@ -42,27 +38,3 @@ Checks whether an application exists, or whether a native application has been i
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import Package from '@system.package';
-
-@Entry
-@Component
-struct MainPage {
-  hasInstalled() {
-    Package.hasInstalled({
-      bundleName: 'com.example.bundlename',
-      success: (data) => {
-        console.log('package has installed: ' + data);
-      },
-      fail: (msg:string, code) => {
-        console.log('query package fail, code: ' + code + ', data: ' + msg);
-      },
-    });
-  }
-  build() {
-  }
-}
-```

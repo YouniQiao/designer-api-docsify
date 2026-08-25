@@ -1,12 +1,10 @@
 # RadioConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration.
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** RadioConfiguration extends CommonConfiguration<RadioConfiguration>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +26,6 @@ Whether the radio button is selected.Default value: **false**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -48,8 +44,6 @@ Changes the selected state of the radio button.The value **true** means that the
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -67,8 +61,6 @@ Current value of the radio button.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

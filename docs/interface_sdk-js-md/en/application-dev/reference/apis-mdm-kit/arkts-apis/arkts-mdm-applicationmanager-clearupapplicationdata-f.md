@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## clearUpApplicationData
@@ -15,8 +15,6 @@ function clearUpApplicationData(admin: Want, bundleName: string, appIndex: numbe
 Clears all application data.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -40,26 +38,3 @@ Clears all application data.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { applicationManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace it as required.
-let bundleName: string = 'com.example.exampleapplication';
-
-try {
-  // Replace it as required.
-  applicationManager.clearUpApplicationData(wantTemp, bundleName, 0, 100);
-  console.info('Succeeded in clearing up application data.');
-} catch (err) {
-  console.error(`Failed to clear up application data. Code is ${err.code}, message is ${err.message}`);
-}
-```

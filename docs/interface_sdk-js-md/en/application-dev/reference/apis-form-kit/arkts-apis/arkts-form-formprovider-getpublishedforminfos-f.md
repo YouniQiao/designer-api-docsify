@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## getPublishedFormInfos
@@ -19,8 +19,6 @@ Obtains the information of all widgets that have been added to the home screen o
 > [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md) instead.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Deprecated since:** 20
 
@@ -43,20 +41,3 @@ Obtains the information of all widgets that have been added to the home screen o
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-```TypeScript
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.getPublishedFormInfos().then((data: formInfo.FormInfo[]) => {
-    console.info(`formProvider getPublishedFormInfos, data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```

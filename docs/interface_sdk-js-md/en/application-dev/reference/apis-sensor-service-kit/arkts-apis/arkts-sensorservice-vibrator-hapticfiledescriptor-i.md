@@ -4,60 +4,52 @@ Describes the FD of a custom vibration configuration file. Ensure that the file 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## fd
 
 ```TypeScript
-fd: int
+fd: number
 ```
 
 FD of the custom vibration configuration file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## length
 
 ```TypeScript
-length?: long
+length?: number
 ```
 
 Resource length, in bytes. The default value is the length from the offset position to the end of the file, and the value cannot exceed the valid range of the file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## offset
 
 ```TypeScript
-offset?: long
+offset?: number
 ```
 
 Offset from the start position of the file, in bytes. The default value is the start position of the file, and the value cannot exceed the valid range of the file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice

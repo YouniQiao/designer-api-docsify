@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
+import { browser } from 'kits/@kit.MDMKit';
 ```
 
 ## getManagedBrowserPolicy
@@ -15,8 +15,6 @@ function getManagedBrowserPolicy(admin: Want, bundleName: string): ArrayBuffer
 Obtains the policy of a specified browser based on the application bundle name. This API is applicable to scenarios where the current browser policy configuration needs to be queried, for example, displaying policy details in an enterprise device administrator application and verifying whether a policy has taken effect.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,29 +39,3 @@ Obtains the policy of a specified browser based on the application bundle name. 
 | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { util } from '@kit.ArkTS';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.testbrowser';
-
-try {
-  let buffer: ArrayBuffer = browser.getManagedBrowserPolicy(wantTemp, bundleName);
-  let intBuffer: Uint8Array = new Uint8Array(buffer);
-  let decoder: util.TextDecoder = util.TextDecoder.create('utf-8');
-  let stringData: string = decoder.decodeToString(intBuffer);
-  console.info(`Succeeded in getting managed browser policy, result : ${stringData}`);
-} catch(err) {
-  console.error(`Failed to get managed browser policy. Code is ${err.code}, message is ${err.message}`);
-}
-```

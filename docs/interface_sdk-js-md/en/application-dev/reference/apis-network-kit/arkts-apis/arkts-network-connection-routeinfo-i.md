@@ -4,14 +4,12 @@ Defines network route information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## destination
@@ -25,8 +23,6 @@ Destination address.
 **Type:** LinkAddress
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -42,8 +38,6 @@ Gateway address.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## hasGateway
@@ -57,24 +51,6 @@ Whether a gateway is present. Whether a gateway is available. The value **true**
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
-**System capability:** SystemCapability.Communication.NetManager.Core
-
-## iface
-
-```TypeScript
-iface: string
-```
-
-Network card name.
-
-**Type:** string
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -90,8 +66,6 @@ NIC name.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## isDefaultRoute
@@ -106,8 +80,6 @@ Whether the route is the default one. Whether the route is the default route. Th
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## isExcludedRoute
@@ -121,7 +93,5 @@ Whether the route is excluded. The value **true** indicates that the route is ex
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Core

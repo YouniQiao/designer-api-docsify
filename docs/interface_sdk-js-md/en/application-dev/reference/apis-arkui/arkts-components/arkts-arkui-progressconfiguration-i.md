@@ -1,12 +1,10 @@
 # ProgressConfiguration
 
-Provides progress indicator configuration. Inherits from CommonConfiguration.
+Provides progress indicator configuration. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +26,6 @@ Total progress.Default value: **100**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -47,8 +43,6 @@ Current progress. Values less than 0 are adjusted to **0**. Values greater than 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

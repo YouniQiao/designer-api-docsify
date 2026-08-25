@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## springCurve
@@ -16,8 +16,6 @@ function springCurve(velocity: number, mass: number, stiffness: number, damping:
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -28,18 +26,11 @@ function springCurve(velocity: number, mass: number, stiffness: number, damping:
 | --- | --- | --- |
 | velocity | number | 是 |
 | mass | number | 是 |
-| stiffness | number | 是 |
-| damping | number | 是 |
+| [stiffness](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |
+| [damping](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**示例**
-
-```TypeScript
-import { curves } from '@kit.ArkUI';
-curves.springCurve(10, 1, 228, 30) // 创建一个弹簧插值曲线
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

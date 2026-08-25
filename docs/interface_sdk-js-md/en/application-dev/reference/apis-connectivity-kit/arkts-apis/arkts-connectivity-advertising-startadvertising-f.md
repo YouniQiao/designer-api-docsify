@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startAdvertising
@@ -16,8 +16,6 @@ Starts NearLink advertising. This API uses a promise to return the result. This 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -28,7 +26,7 @@ Starts NearLink advertising. This API uses a promise to return the result. This 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-advertising-advertisingparams-i.md) | Yes |
 
 **Return value:**
 

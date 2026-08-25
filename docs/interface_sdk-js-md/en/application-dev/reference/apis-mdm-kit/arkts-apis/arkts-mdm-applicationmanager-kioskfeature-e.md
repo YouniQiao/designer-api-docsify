@@ -4,8 +4,6 @@ Defines the features of the kiosk mode.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## ALLOW_NOTIFICATION_CENTER
@@ -17,8 +15,6 @@ ALLOW_NOTIFICATION_CENTER = 1
 Allow access to the notification center (by swiping down from the upper left corner with one finger).
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Allow access to the control panel (by swiping down from the upper right corner w
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -50,8 +44,6 @@ Allow access to the recent task bar (by swiping up from the bottom with one fing
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -65,8 +57,6 @@ ALLOW_SIDE_DOCK = 4
 Allow access to the side dock (by swiping inward from the edge with one finger and holding).
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Navigation type.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 13
 
 **Substitutes:** Navigation
@@ -22,8 +20,6 @@ Navigates to the specified page in the application.
 **NOTE：**This API is supported since API version 7 and deprecated since API version 13. You are advised to use pushPath instead.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 13
 
@@ -44,8 +40,6 @@ Returns to the specified page. If the specified page does not exist in the stack
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 13
 
 **Substitutes:** pop
@@ -64,8 +58,6 @@ Replaces the current page with another one in the application and destroys the c
 **NOTE：**This API is supported since API version 7 and deprecated since API version 13. You are advised to use replacePath instead.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 13
 

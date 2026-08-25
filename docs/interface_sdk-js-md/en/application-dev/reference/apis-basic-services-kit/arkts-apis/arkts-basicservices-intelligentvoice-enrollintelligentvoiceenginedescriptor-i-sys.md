@@ -4,8 +4,6 @@ Describes enroll intelligent voice engine.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes enroll intelligent voice engine.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## wakeupPhrase
@@ -27,8 +25,6 @@ Wakeup phrase.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

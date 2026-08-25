@@ -4,14 +4,12 @@ Defines the parameters for creating a PiP controller.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## componentController
@@ -22,11 +20,9 @@ componentController: XComponentController
 
 Original XComponent controller.
 
-**Type:** [XComponentController](arkts-arkui-xcomponent-xcomponentcontroller-c.md)
+**Type:** [XComponentController](../arkts-components/arkts-arkui-xcomponentcontroller-c.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -35,16 +31,14 @@ Original XComponent controller.
 ## contentHeight
 
 ```TypeScript
-contentHeight?: int
+contentHeight?: number
 ```
 
 Height of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in [typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is 1080. When the PiP controller is created [not in typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is the height of the XComponent.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +47,14 @@ Height of the original content, in px. It is used to determine the aspect ratio 
 ## contentWidth
 
 ```TypeScript
-contentWidth?: int
+contentWidth?: number
 ```
 
 Width of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in [typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is 1920. When the PiP controller is created [not in typeNode mode](arkts-arkui-pipwindow-create-f.md), the default value is the width of the XComponent.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,8 +72,6 @@ Context environment.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -97,8 +87,6 @@ A list of optional component groups of the PiP controller. An application can co
 **Type:** Array&lt;[PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -120,8 +108,6 @@ Whether the PiP window automatically snaps to screen corners. When this feature 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -138,8 +124,6 @@ Custom UI controller, which is used to implement the custom UI features on the P
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -147,7 +131,7 @@ Custom UI controller, which is used to implement the custom UI features on the P
 ## defaultWindowSizeType
 
 ```TypeScript
-defaultWindowSizeType?: int
+defaultWindowSizeType?: number
 ```
 
 Size of the PiP window that the current app starts for the first time.  
@@ -155,11 +139,9 @@ Size of the PiP window that the current app starts for the first time.
 **1**: small window.  
 **2**: large window.If no value is passed, **0** is used.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -168,18 +150,16 @@ Size of the PiP window that the current app starts for the first time.
 ## handleId
 
 ```TypeScript
-handleId?: int
+handleId?: number
 ```
 
 ID of the subpage under the **Navigation** component. After the Full-screen Window button is touched, the specified page is restored. This parameter applies only in scenarios where the UIAbility uses Navigation to manage pages. It can be set to any subpage ID within the Navigation hierarchy. The default value is **-1**, indicating that the topmost page in the Navigation stack is restored. You are advised to use getUniqueId() to obtain the page ID. When you use page routing provided by Navigation, you are advised to use the [system routing table](../../../ui/arkts-navigation-cross-package.md#system-routing-table). Otherwise, the page ID obtained by calling getUniqueId() may be incorrect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** -1
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -193,11 +173,9 @@ localStorage?: LocalStorage
 
 A page-level UI state storage unit. In multi-instance scenarios, it can be used to track the UI state storage object of the main window instance. If no value is passed, you cannot retrieve the main window's UI storage object through the PiP window.
 
-**Type:** [LocalStorage](arkts-arkui-localstorage-localstorage-c.md)
+**Type:** [LocalStorage](arkts-arkui-localstorage-c.md)
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
@@ -221,8 +199,6 @@ The original page can be restored from the PiP window.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -238,8 +214,6 @@ Template type, which is used to distinguish video playback, video call, video me
 **Type:** [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

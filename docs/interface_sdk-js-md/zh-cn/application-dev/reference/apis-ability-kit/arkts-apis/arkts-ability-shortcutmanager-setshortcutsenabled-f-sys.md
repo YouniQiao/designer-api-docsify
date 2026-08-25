@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setShortcutsEnabled
@@ -15,8 +15,6 @@ function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: bool
 设置启用或禁用传入的静态快捷方式。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SHORTCUTS
 
@@ -46,38 +44,3 @@ function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: bool
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) |
-
-**示例**
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 请开发者替换为实际的快捷方式id、bundleName。
-const bundleName = "com.example.myapplication";
-const arrShortcutInfo: Array<shortcutManager.ShortcutInfo> = [
-  {
-    id: "1",
-    bundleName: bundleName,
-    appIndex: 0,
-    sourceType: 1
-  },
-  {
-    id: "2",
-    bundleName: bundleName,
-    appIndex: 0,
-    sourceType: 1
-  }
-]
-
-try {
-  shortcutManager.setShortcutsEnabled(arrShortcutInfo, false)
-    .then(() => {
-      console.info('setShortcutsEnabled success');
-    }).catch((err: Error) => {
-    console.error(`setShortcutsEnabled errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-  });
-} catch (err) {
-  console.error(`setShortcutsEnabled errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-}
-```

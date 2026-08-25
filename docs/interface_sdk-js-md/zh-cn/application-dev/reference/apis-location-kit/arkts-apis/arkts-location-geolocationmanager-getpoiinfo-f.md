@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getPoiInfo
@@ -15,8 +15,6 @@ function getPoiInfo(): Promise<PoiInfo>
 获取当前位置附近的POI信息。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.1.0。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -38,21 +36,3 @@ function getPoiInfo(): Promise<PoiInfo>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  if (geoLocationManager.isPoiServiceSupported()) {
-    geoLocationManager.getPoiInfo().then((poiInfo) => {
-      if (poiInfo !== undefined) {
-        console.info("get PoiInfo:" + JSON.stringify(poiInfo));
-      }
-    })
-  }
-} catch (error) {
-  console.error("getPoiInfo errCode:" + error.code + ", errMessage:" + error.message);
-}
-```

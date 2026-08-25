@@ -4,8 +4,6 @@ Enumerates the widget locations.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## DESKTOP
@@ -17,8 +15,6 @@ DESKTOP = 0
 The widget is located on the home screen.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -34,8 +30,6 @@ The widget is located in the widget center of the home screen.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.Form
@@ -49,8 +43,6 @@ FORM_MANAGER = 2
 The widget is located in the widget manager of the home screen.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -66,8 +58,6 @@ The widget is located on the minus 1 screen.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.Form
@@ -81,8 +71,6 @@ SCREEN_LOCK = 6
 The widget is located on the locked screen.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -98,8 +86,6 @@ The widget is located in the area of AI Suggestions.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.Form
@@ -113,8 +99,6 @@ STANDBY = 8
 The widget is located on landscape standby screen.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

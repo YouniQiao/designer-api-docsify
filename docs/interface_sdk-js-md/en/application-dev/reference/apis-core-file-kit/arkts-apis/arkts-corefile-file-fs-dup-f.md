@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## dup
@@ -17,8 +17,6 @@ declare function dup(fd: number): File
 Duplicates the file descriptor and returns the corresponding **File** object.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -45,15 +43,3 @@ Duplicates the file descriptor and returns the corresponding **File** object.
 | 13900020 |
 | 13900022 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file1 = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-let fd: number = file1.fd;
-let file2 = fs.dup(fd);
-console.info("The name of the file2 is " + file2.name);
-fs.closeSync(file1);
-fs.closeSync(file2);
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## off('scanDeviceFound')
@@ -15,8 +15,6 @@ function off(type: 'scanDeviceFound', callback?: Callback<ScannerDevice>): void
 Unregisters a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -35,52 +33,6 @@ Unregisters a callback used to listen for the scanner discovery event. This API 
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-let callback = (device: scan.ScannerDevice) => {
-    console.info('scan device found: ' + JSON.stringify(device));
-};
-scan.on('scanDeviceFound', callback);
-// Unregister the callback.
-scan.off('scanDeviceFound', callback);
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-let callback = (device: scan.ScannerSyncDevice) => {
-    console.info('scan device sync: ' + JSON.stringify(device));
-};
-scan.on('scanDeviceSync', callback);
-// Unregister the callback.
-scan.off('scanDeviceSync', callback);
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-let callback = (device: scan.ScannerDevice) => {
-    console.info('scan device add: ' + JSON.stringify(device));
-};
-scan.on('scanDeviceAdd', callback);
-// Unregister the callback.
-scan.off('scanDeviceAdd', callback);
-```
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-let callback = (device: scan.ScannerDevice) => {
-    console.info('scan device delete: ' + JSON.stringify(device));
-};
-scan.on('scanDeviceDel', callback);
-// Unregister the callback.
-scan.off('scanDeviceDel', callback);
-```
-
 
 ## off('scanDeviceSync')
 
@@ -91,8 +43,6 @@ function off(type: 'scanDeviceSync', callback?: Callback<ScannerSyncDevice>): vo
 Unregisters a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -110,7 +60,3 @@ Unregisters a callback used to listen for the scanner sync event. This API uses 
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See off

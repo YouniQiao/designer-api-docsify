@@ -8,8 +8,6 @@ Describes the identity information of an application clone.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **Property type:** _BundleInfo.AppCloneIdentity

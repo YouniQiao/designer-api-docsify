@@ -4,8 +4,6 @@ Represents the device-cloud sync statistics.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Represents the device-cloud sync statistics.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## inserted
 
 ```TypeScript
-inserted: int
+inserted: number
 ```
 
 Number of data records that are added locally and have not been synced to the cloud. For example, the value **2** indicates that the table has two data records that are added locally but not synced to the cloud.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -37,16 +33,14 @@ Number of data records that are added locally and have not been synced to the cl
 ## normal
 
 ```TypeScript
-normal: int
+normal: number
 ```
 
 Number of consistent data records between the device and the cloud. For example, the value **2** indicates that table has two data records that are consistent between the device and the cloud.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -64,8 +58,6 @@ Name of the table queried. For example, the value **cloud_notes** indicates that
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Name of the table queried. For example, the value **cloud_notes** indicates that
 ## updated
 
 ```TypeScript
-updated: int
+updated: number
 ```
 
 Number of data records that are modified locally or on the cloud but have not been synced. For example, the value **2** indicates that the table has two data records that are updated locally or on the cloud but not synced.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 

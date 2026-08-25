@@ -6,14 +6,12 @@ UIExtensionAbility组件是带界面的ExtensionAbility组件，继承自 [Exten
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { UIExtensionAbility } from '@kit.AbilityKit';
+import { UIExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -26,26 +24,9 @@ onBackground(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-```TypeScript
-// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onBackground() {
-    console.info(TAG, `onBackground`);
-  }
-}
-```
 
 ## onCreate
 
@@ -57,8 +38,6 @@ onCreate(launchParam: AbilityConstant.LaunchParam): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -68,21 +47,6 @@ onCreate(launchParam: AbilityConstant.LaunchParam): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | launchParam | AbilityConstant.LaunchParam | 是 |
-
-**示例**
-
-```TypeScript
-// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility, AbilityConstant } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onCreate(launchParam: AbilityConstant.LaunchParam) {
-    console.info(TAG, `onCreate, launchParam: ${JSON.stringify(launchParam)}`);
-  }
-}
-```
 
 ## onDestroy
 
@@ -94,98 +58,9 @@ onDestroy(): void | Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-同步回调示例如下：
-
-```TypeScript
-// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onDestroy() {
-    console.info(TAG, `onDestroy`);
-  }
-}
-```
-
-异步回调示例如下：
-
-```TypeScript
-// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  // 实现异步回调需要使用async/await语法糖，通过async声明onDestroy是一个异步函数。
-  async onDestroy(): Promise<void> {
-    console.info(TAG, `onDestroy begin`);
-    try {
-      const result: string = await new Promise((resolve: Function) => {
-        setTimeout(() => {
-          resolve('Hello, world!');
-        }, 3000);
-      });
-      console.info(TAG, result); // result is 'Hello, world!'
-    } catch (e) {
-      console.error(TAG, `Get exception: ${e}`);
-    }
-    console.info(TAG, `onDestroy end`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-// UIExtensionAbility不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onDestroy(): Promise<void> | undefined {
-    console.info(TAG, `onDestroy`);
-    return undefined;
-  }
-}
-```
-
-## onDestroy
-
-```TypeScript
-onDestroy(): Promise<void> | undefined
-```
-
-UIExtensionAbility生命周期回调，在销毁时回调，执行资源清理等操作。 在执行完onDestroy生命周期回调后，应用可能会退出，从而可能导致onDestroy中的异步函数未能正确执行，比如异步写入数据库。可以使用异步生命周期，以确保异步onDestroy完成后再继续后续的生命周期。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;void & gt; \ | undefined |
-
-**示例**
-
-参见 [onDestroy](#ondestroy)
 
 ## onForeground
 
@@ -197,26 +72,9 @@ onForeground(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-```TypeScript
-// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onForeground() {
-    console.info(TAG, `onForeground`);
-  }
-}
-```
 
 ## onSessionCreate
 
@@ -227,8 +85,6 @@ onSessionCreate(want: Want, session: UIExtensionContentSession): void
 当[UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md)实例创建完成后，系统会触发该回调。开发者可在该回调中通过 UIExtensionContentSession实例加载页面。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -241,29 +97,6 @@ onSessionCreate(want: Want, session: UIExtensionContentSession): void
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
 
-**示例**
-
-```TypeScript
-// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    console.info(TAG, `onSessionCreate, want: ${JSON.stringify(want)}`);
-    try {
-      session.loadContent('pages/Index');
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let message = (error as BusinessError).message;
-      console.error(`Failed to load content, code: ${code}, msg: ${message}`);
-    }
-  }
-}
-```
-
 ## onSessionDestroy
 
 ```TypeScript
@@ -274,8 +107,6 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -285,21 +116,6 @@ onSessionDestroy(session: UIExtensionContentSession): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onSessionDestroy(session: UIExtensionContentSession) {
-    console.info(TAG, `onSessionDestroy`);
-  }
-}
-```
 
 ## context
 
@@ -312,8 +128,6 @@ UIExtensionAbility组件的上下文。
 **类型：** [UIExtensionContext](arkts-ability-uiextensioncontext-c.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

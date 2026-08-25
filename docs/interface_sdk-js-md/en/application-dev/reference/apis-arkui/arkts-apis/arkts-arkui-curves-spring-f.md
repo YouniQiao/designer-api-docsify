@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## spring
@@ -15,8 +15,6 @@ function spring(velocity: number, mass: number, stiffness: number, damping: numb
 Constructs a spring curve object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -30,8 +28,8 @@ Constructs a spring curve object.
 | --- | --- | --- |
 | velocity | number | Yes |
 | mass | number | Yes |
-| stiffness | number | Yes |
-| damping | number | Yes |
+| [stiffness](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |
+| [damping](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |
 
 **Return value:**
 

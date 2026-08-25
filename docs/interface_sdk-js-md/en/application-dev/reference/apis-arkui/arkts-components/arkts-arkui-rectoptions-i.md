@@ -9,8 +9,6 @@ Describes the options of the rectangle.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,11 +24,9 @@ height?: Length
 
 Height. Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,11 +42,9 @@ radius?: Length | Array<any>
 
 Radius of the rounded corner. You can set separate radii for the four rounded corners. The value must be greater than or equal to 0. This attribute takes precedence over **radiusWidth** and **radiusHeight** when used together. Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
-**Type:** Length \| Array&lt;any&gt;
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array&lt;any&gt;
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,11 +60,9 @@ width?: Length
 
 Width. Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

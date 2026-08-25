@@ -4,8 +4,6 @@ Defines the details for triggering a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Details about a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -31,16 +27,14 @@ Details about a geofence.
 ## displayTime
 
 ```TypeScript
-displayTime?:int
+displayTime?:number
 ```
 
 Display time of a live view, in seconds. The value ranges from 15 to 1800. The default value is **900**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -57,8 +51,6 @@ Trigger type.
 **Type:** [TriggerType](arkts-notification-notificationrequest-triggertype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

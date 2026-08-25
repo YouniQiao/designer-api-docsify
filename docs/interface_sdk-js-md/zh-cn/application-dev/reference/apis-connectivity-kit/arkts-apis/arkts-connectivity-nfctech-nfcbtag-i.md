@@ -6,28 +6,18 @@ NfcBTag 提供对NFC-B(ISO 14443-3B)技术的属性和I/O操作的访问，继�
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## getRespAppData
 
-ArkTS-Dyn:
 ```TypeScript
 getRespAppData(): number[]
-```
-
-ArkTS-Sta:
-```TypeScript
-getRespAppData(): int[]
 ```
 
 获取标签的应用程序数据。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -36,36 +26,18 @@ getRespAppData(): int[]
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcB
-let respAppData : number[] = nfcB.getRespAppData();
-console.info("nfcB respAppData: " + respAppData);
-```
+| number[] |
 
 ## getRespProtocol
 
-ArkTS-Dyn:
 ```TypeScript
 getRespProtocol(): number[]
-```
-
-ArkTS-Sta:
-```TypeScript
-getRespProtocol(): int[]
 ```
 
 获取标签的协议信息。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -74,14 +46,4 @@ getRespProtocol(): int[]
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 nfcB
-let respProtocol : number[] = nfcB.getRespProtocol();
-console.info("nfcB respProtocol: " + respProtocol);
-```
+| number[] |

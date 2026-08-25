@@ -4,8 +4,6 @@ Enumerates the reminder types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## REMINDER_TYPE_TIMER
@@ -17,8 +15,6 @@ REMINDER_TYPE_TIMER = 0
 Countdown reminder.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -32,8 +28,6 @@ Calendar reminder.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## REMINDER_TYPE_ALARM
@@ -45,7 +39,5 @@ REMINDER_TYPE_ALARM = 2
 Alarm reminder.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent

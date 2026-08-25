@@ -4,8 +4,6 @@ Describes the device power consumption information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Describes the device power consumption information.
 ## Modules to Import
 
 ```TypeScript
-import { batteryStats } from '@kit.BasicServicesKit';
+import { batteryStats } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## power
 
 ```TypeScript
-power: double
+power: number
 ```
 
 The power consumption, in unit of mAh.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
@@ -46,8 +42,6 @@ The power consumption type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ The power consumption type.
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 The uid related with the power consumption info.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## rejectCall
@@ -15,8 +15,6 @@ function rejectCall(callback: AsyncCallback<void>): void
 Rejects a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ANSWER_CALL or ohos.permission.MANAGE_CALL_FOR_DEVICES
 
@@ -39,72 +37,3 @@ Rejects a call. This API uses an asynchronous callback to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.rejectCall((err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.rejectCall(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rejectMessageOptions : call.RejectMessageOptions = {
-    messageContent: "Unknown number blocked"
-}
-call.rejectCall(1, rejectMessageOptions, (err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rejectMessageOptions: call.RejectMessageOptions = {
-    messageContent: "Unknown number blocked"
-}
-call.rejectCall(1, rejectMessageOptions).then(() => {
-    console.info(`rejectCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`rejectCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rejectMessageOptions: call.RejectMessageOptions = {
-    messageContent: "Unknown number blocked"
-}
-call.rejectCall(rejectMessageOptions, (err: BusinessError) => {
-    if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`rejectCall success.`);
-    }
-});
-```

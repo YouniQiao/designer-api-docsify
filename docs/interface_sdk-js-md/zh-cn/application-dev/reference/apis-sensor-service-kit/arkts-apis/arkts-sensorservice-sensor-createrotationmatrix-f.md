@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## createRotationMatrix
@@ -21,8 +21,6 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(rotationVector: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
@@ -35,65 +33,6 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 | --- | --- | --- |
 | rotationVector | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877],
-                            (err: BusinessError, data: Array<number>) => {
-  if (err) {
-    console.error(`Failed to register data. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  for (let i = 0; i < data.length; i++) {
-    console.info("Succeeded in getting data[" + i + "]: " + data[i]);
-  }
-})
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877]);
-promise.then((data: Array<number>) => {
-  console.info('Succeeded in getting createRotationMatrix_promise');
-  for (let i = 0; i < data.length; i++) {
-    console.info('data[' + i + ']: ' + data[i]);
-  }
-}).catch((reason: BusinessError) => {
-  console.info('Succeeded in getting promise::catch', reason);
-})
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.6096, -111.44444], 
-                            (err: BusinessError, data: sensor.RotationMatrixResponse) => {
-  if (err) {
-    console.error(`Failed to get create rotationMatrix. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(JSON.stringify(data));
-})
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.6096, -111.44444]);
-promise.then((data: sensor.RotationMatrixResponse) => {
-  console.info(JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get promise.`);
-})
-```
 
 
 ## createRotationMatrix
@@ -109,8 +48,6 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -130,10 +67,6 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 | --- |
 | Promise & lt;Array & lt;number & gt; & gt; |
 
-**示例**
-
-参见 [createRotationMatrix](#createrotationmatrix)
-
 
 ## createRotationMatrix
 
@@ -150,8 +83,6 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)(gravity: Array&lt;double&gt;, geomagnetic: Array&lt;double&gt;, callback: AsyncCallback&lt;RotationMatrixResponse&gt;)
@@ -165,10 +96,6 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 | gravity | Array & lt;number & gt; | 是 |
 | geomagnetic | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | 是 |
-
-**示例**
-
-参见 [createRotationMatrix](#createrotationmatrix)
 
 
 ## createRotationMatrix
@@ -184,8 +111,6 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -205,7 +130,3 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 | 类型 |
 | --- |
 | Promise&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; |
-
-**示例**
-
-参见 [createRotationMatrix](#createrotationmatrix)

@@ -8,8 +8,6 @@ The module provides application information. Unless otherwise specified, the inf
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ApplicationInfo](#applicationinfo)
@@ -29,8 +27,6 @@ Access token ID of the application.
 **Default:** Indicates the access token of the application
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -52,8 +48,6 @@ Installation directory of the application. Do not access resource files using co
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** codePath
@@ -73,8 +67,6 @@ Application description.
 **Default:** Description of application
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -96,8 +88,6 @@ ID of the application description.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** descriptionId
@@ -117,8 +107,6 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 **Default:** Indicates whether or not this application may be instantiated
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -140,8 +128,6 @@ Type of the application, for example, gaming, social networking, movies, and new
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -160,8 +146,6 @@ Path for storing application files. Do not access resource files using concatena
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -179,8 +163,6 @@ Application icon.
 **Default:** Indicates the icon of the application
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -202,8 +184,6 @@ ID of the application icon.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** iconId
@@ -223,8 +203,6 @@ Application label.
 **Default:** Indicates the label of the application
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -246,8 +224,6 @@ ID of the application label.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -267,8 +243,6 @@ Custom metadata of the application.The value is obtained by passing in GET_APPLI
 **Default:** Indicates the metadata of module
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -290,8 +264,6 @@ Application module information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** hapModulesInfo
@@ -312,8 +284,6 @@ Relative paths for storing application resources. Do not access resource files u
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -331,8 +301,6 @@ Application name.
 **Default:** Indicates the application name, which is the same as {@code bundleName}
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -354,8 +322,6 @@ Permissions required for accessing the application.The value is obtained by pass
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** permissions
@@ -375,8 +341,6 @@ Process name.
 **Default:** Process of application, if user do not set it ,the value equal bundleName
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -398,8 +362,6 @@ Whether the application is removable. **true** if removable, **false** otherwise
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** removable
@@ -420,8 +382,6 @@ Modes supported by the application. Currently, only the **drive** mode is define
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -439,8 +399,6 @@ Whether the application is a system application. **true** if yes, **false** othe
 **Default:** Indicates whether the application is a system application
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -461,8 +419,6 @@ UID of the application.
 **Default:** Indicates the uid of the application
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

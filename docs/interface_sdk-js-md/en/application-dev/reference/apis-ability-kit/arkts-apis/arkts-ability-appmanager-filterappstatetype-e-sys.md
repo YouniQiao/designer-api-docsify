@@ -4,8 +4,6 @@ Enumerates the types of application states to filter. It can be used with [AppSt
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ CREATE = 1 << 0
 The application is initializing. It corresponds to the state whose value is **0** in [AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#properties).
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,8 +32,6 @@ The application is running in the foreground. It corresponds to the state whose 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ The application is running in the background. It corresponds to the state whose 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ DESTROY = 1 << 3
 The application has exited. It corresponds to the state whose value is **5** in [AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#properties).
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -4,29 +4,25 @@ Describes the measurement information of a single line of text in the text layou
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## ascent
 
 ```TypeScript
-ascent: double
+ascent: number
 ```
 
 Text ascent height, which refers to the distance from the baseline to the top of characters, in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -35,16 +31,14 @@ Text ascent height, which refers to the distance from the baseline to the top of
 ## baseline
 
 ```TypeScript
-baseline: double
+baseline: number
 ```
 
 Y coordinate of the baseline in the line relative to the top of the paragraph, in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -53,16 +47,14 @@ Y coordinate of the baseline in the line relative to the top of the paragraph, i
 ## descent
 
 ```TypeScript
-descent: double
+descent: number
 ```
 
 Text descent height, which refers to the distance from the baseline to the bottom of characters, in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -71,16 +63,14 @@ Text descent height, which refers to the distance from the baseline to the botto
 ## endIndex
 
 ```TypeScript
-endIndex: int
+endIndex: number
 ```
 
 End index of the line in the text buffer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -89,16 +79,14 @@ End index of the line in the text buffer.
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
 Height of the current line, in physical pixels (px). The calculation method is `Math.round(ascent + descent)`.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -107,16 +95,14 @@ Height of the current line, in physical pixels (px). The calculation method is `
 ## left
 
 ```TypeScript
-left: double
+left: number
 ```
 
 Left edge position of a line, in physical pixels (px). The right edge is the value of **left** plus the value of **width**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -125,16 +111,14 @@ Left edge position of a line, in physical pixels (px). The right edge is the val
 ## lineNumber
 
 ```TypeScript
-lineNumber: int
+lineNumber: number
 ```
 
 Line number, starting from 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -143,16 +127,14 @@ Line number, starting from 0.
 ## runMetrics
 
 ```TypeScript
-runMetrics: Map<int, RunMetrics>
+runMetrics: Map<number, RunMetrics>
 ```
 
 Mapping between the text index range and the associated font measurement information.
 
-**Type:** ArkTS-Dyn: Map&lt;number, [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md)&gt;  <br>ArkTS-Sta：Map&lt;int, [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md)&gt;
+**Type:** Map&lt;number, [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -161,16 +143,14 @@ Mapping between the text index range and the associated font measurement informa
 ## startIndex
 
 ```TypeScript
-startIndex: int
+startIndex: number
 ```
 
 Start index of the line in the text buffer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -179,16 +159,14 @@ Start index of the line in the text buffer.
 ## topHeight
 
 ```TypeScript
-topHeight: double
+topHeight: number
 ```
 
 Height from the top to the current line, in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -197,16 +175,14 @@ Height from the top to the current line, in physical pixels (px).
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
 Width of a line, in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

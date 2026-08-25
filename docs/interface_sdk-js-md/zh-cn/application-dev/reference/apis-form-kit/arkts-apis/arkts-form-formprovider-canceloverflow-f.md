@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## cancelOverflow
@@ -20,8 +20,6 @@ function cancelOverflow(formId: string): Promise<void>
 > [热档位信息](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-thermal-thermallevel-e.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -51,47 +49,3 @@ function cancelOverflow(formId: string): Promise<void>
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 | [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
-
-try {
-  formProvider.cancelOverflow(formId).then(() => {
-    console.info('cancelOverflow succeed.');
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
-
-try {
-  formProvider.cancelOverflow(formId).then(() => {
-    console.info('testTag', 'cancelOverflow succeed');
-  }).catch((err: Error) => {
-    let error = err as BusinessError;
-    console.error('testTag', `cancelOverflow err: code is ${error.code}, message ${error.message}`);
-  })
-} catch (error) {
-  console.error('testTag',
-    `cancelOverflow err: code is ${error.code}, message ${error.message}`);
-}
-```

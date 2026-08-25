@@ -4,8 +4,6 @@ Defines device profile information filter options.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines device profile information filter options.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## deviceIdList
@@ -27,8 +25,6 @@ Device ID list.
 **Type:** Array&lt;string&gt;
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -45,8 +41,6 @@ Whether to request data from the cloud.
 **Type:** boolean
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 

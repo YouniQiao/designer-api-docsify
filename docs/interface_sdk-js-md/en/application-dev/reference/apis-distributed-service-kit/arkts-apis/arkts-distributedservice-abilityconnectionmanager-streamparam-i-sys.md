@@ -4,8 +4,6 @@ Streaming configuration parameters.@interface StreamParam
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Streaming configuration parameters.@interface StreamParam
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## bitrate
 
 ```TypeScript
-bitrate?: int
+bitrate?: number
 ```
 
 This value indicates video bitrate, default 80(kbps). Only valid on the sender side.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ The target color space for conversion. Currently, only BT709_LIMIT is supported.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -68,8 +62,6 @@ Stream name, the receive end must be consistent with the transmit end.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -87,8 +79,6 @@ Stream transmission role, which can be a receive stream or a transmit stream.
 **Type:** [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

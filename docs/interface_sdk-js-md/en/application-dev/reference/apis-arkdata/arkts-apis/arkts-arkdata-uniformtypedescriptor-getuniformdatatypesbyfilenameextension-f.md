@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 ```
 
 ## getUniformDataTypesByFilenameExtension
@@ -15,8 +15,6 @@ function getUniformDataTypesByFilenameExtension(filenameExtension: string, belon
 Obtains the uniform data type IDs based on the given file name extension and data type.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,31 +38,3 @@ Obtains the uniform data type IDs based on the given file name extension and dat
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let typeIds = uniformTypeDescriptor.getUniformDataTypesByFilenameExtension('.ts', 'general.source-code');
-    for (let typeId of typeIds) {
-        console.info(`typeId is ${typeId}`);
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypesByFilenameExtension throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-
-// If no uniform data type ID is found based on ".myts" and "general.plain-text", the types generated based on the input parameters are returned.
-try {
-    let flexTypeIds = uniformTypeDescriptor.getUniformDataTypesByFilenameExtension('.myts', 'general.plain-text');
-    for (let flexTypeId of flexTypeIds) {
-        console.info(`typeId is flex type, flex typeId is ${flexTypeId}`);
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypesByFilenameExtension throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```

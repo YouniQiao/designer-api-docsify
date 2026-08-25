@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DriverExtensionAbility, DriverExtensionContext } from '@kit.DriverDevelopmentKit';
+import { DriverExtensionAbility, DriverExtensionContext } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## Summary

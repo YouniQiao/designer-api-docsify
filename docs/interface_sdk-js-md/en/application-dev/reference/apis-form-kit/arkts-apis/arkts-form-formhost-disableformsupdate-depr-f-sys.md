@@ -15,8 +15,6 @@ Instructs the widget framework to make a widget not updatable. After this API is
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md)
@@ -34,30 +32,6 @@ Instructs the widget framework to make a widget not updatable. After this API is
 | formIds | Array & lt;string & gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string[] = ['12400633174999288'];
-formHost.disableFormsUpdate(formId, (error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost disableFormsUpdate, error: ${JSON.stringify(error)}`);
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string[] = ['12400633174999288'];
-formHost.disableFormsUpdate(formId).then(() => {
-  console.info('formHost disableFormsUpdate success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost disableFormsUpdate, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## disableFormsUpdate
 
@@ -68,8 +42,6 @@ function disableFormsUpdate(formIds: Array<string>): Promise<void>
 Instructs the widget framework to make a widget not updatable. After this API is called, the widget cannot receive updates from the widget provider. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -92,7 +64,3 @@ Instructs the widget framework to make a widget not updatable. After this API is
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [disableFormsUpdate](#disableformsupdate)

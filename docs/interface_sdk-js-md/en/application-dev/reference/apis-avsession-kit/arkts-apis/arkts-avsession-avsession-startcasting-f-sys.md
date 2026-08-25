@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## startCasting
@@ -15,8 +15,6 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo, callback:
 Cast resource to remote device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -42,50 +40,6 @@ Cast resource to remote device.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600108](../errorcode-avsession.md#6600108-device-connection-failure) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let myToken: avSession.SessionToken = {
-  sessionId: sessionId,
-}
-let castDevice: avSession.OutputDeviceInfo | undefined = undefined;
-avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
-  castDevice = device;
-  console.info(`on deviceAvailable  : ${device} `);
-  if (castDevice !== undefined) {
-    avSession.startCasting(myToken, castDevice, (err: BusinessError) => {
-      if (err) {
-        console.error(`startCasting BusinessError: code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info('startCasting successfully');
-      }
-    });
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let myToken: avSession.SessionToken = {
-  sessionId: sessionId,
-}
-let castDevice: avSession.OutputDeviceInfo | undefined = undefined;
-avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
-  castDevice = device;
-  console.info(`on deviceAvailable  : ${device} `);
-  if (castDevice !== undefined) {
-    avSession.startCasting(myToken, castDevice).then(() => {
-      console.info('startCasting successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startCasting BusinessError: code: ${err.code}, message: ${err.message}`);
-    });
-  }
-});
-```
-
 
 ## startCasting
 
@@ -96,8 +50,6 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<
 Cast resource to remote device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -127,7 +79,3 @@ Cast resource to remote device.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600108](../errorcode-avsession.md#6600108-device-connection-failure) |
-
-**Examples**
-
-See [startCasting](#startcasting)

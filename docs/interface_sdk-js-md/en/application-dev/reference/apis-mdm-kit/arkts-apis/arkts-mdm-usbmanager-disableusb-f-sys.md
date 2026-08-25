@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disableUsb
@@ -15,8 +15,6 @@ function disableUsb(admin: Want, disable: boolean): void
 Enables or disables USB.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -47,22 +45,3 @@ Enables or disables USB.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  usbManager.disableUsb(wantTemp, true);
-  console.info(`Succeeded in disabling USB`);
-} catch (err) {
-  console.error(`Failed to disable USB. Code: ${err.code}, message: ${err.message}`);
-}
-```

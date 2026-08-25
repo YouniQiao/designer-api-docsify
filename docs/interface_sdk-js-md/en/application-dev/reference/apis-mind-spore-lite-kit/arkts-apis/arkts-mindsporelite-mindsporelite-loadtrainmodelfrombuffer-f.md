@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
 ```
 
 ## loadTrainModelFromBuffer
@@ -18,8 +18,6 @@ function loadTrainModelFromBuffer(
 Load train model from buffer
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,26 +44,3 @@ Load train model from buffer
 | 1000001 |
 | 1000010 |
 | 1000011 |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let modelFile = 'xxx.ms';
-let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
-globalContext.getApplicationContext()
-  .resourceManager
-  .getRawFileContent(modelFile)
-  .then((buffer: Uint8Array) => {
-    let modelBuffer = buffer.buffer;
-    mindSporeLite.loadTrainModelFromBuffer(modelBuffer).then((mindSporeLiteModel: mindSporeLite.Model) => {
-      console.info("MSLITE trainMode: ", mindSporeLiteModel.trainMode);
-    })
-  })
-  .catch((error: BusinessError) => {
-    console.error("getRawFileContent promise error is " + error);
-  });
-```

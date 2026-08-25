@@ -5,23 +5,19 @@ Describes the window size.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## maxWindowHeight
 
 ```TypeScript
-readonly maxWindowHeight: long
+readonly maxWindowHeight: number
 ```
 
 Maximum height of the window in free window mode. The unit is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -30,16 +26,14 @@ Maximum height of the window in free window mode. The unit is vp.
 ## maxWindowRatio
 
 ```TypeScript
-readonly maxWindowRatio: double
+readonly maxWindowRatio: number
 ```
 
 Maximum aspect ratio of the window in free window mode. The value ranges from 0 to 1. An example value is 0.12.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,16 +42,14 @@ Maximum aspect ratio of the window in free window mode. The value ranges from 0 
 ## maxWindowWidth
 
 ```TypeScript
-readonly maxWindowWidth: long
+readonly maxWindowWidth: number
 ```
 
 Maximum width of the window in free window mode. The unit is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,16 +58,14 @@ Maximum width of the window in free window mode. The unit is vp.
 ## minWindowHeight
 
 ```TypeScript
-readonly minWindowHeight: long
+readonly minWindowHeight: number
 ```
 
 Minimum height of the window in free window mode. The unit is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,16 +74,14 @@ Minimum height of the window in free window mode. The unit is vp.
 ## minWindowRatio
 
 ```TypeScript
-readonly minWindowRatio: double
+readonly minWindowRatio: number
 ```
 
 Minimum aspect ratio of the window in free window mode. The value ranges from 0 to 1. An example value is 0.5.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -102,16 +90,14 @@ Minimum aspect ratio of the window in free window mode. The value ranges from 0 
 ## minWindowWidth
 
 ```TypeScript
-readonly minWindowWidth: long
+readonly minWindowWidth: number
 ```
 
 Minimum width of the window in free window mode. The unit is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

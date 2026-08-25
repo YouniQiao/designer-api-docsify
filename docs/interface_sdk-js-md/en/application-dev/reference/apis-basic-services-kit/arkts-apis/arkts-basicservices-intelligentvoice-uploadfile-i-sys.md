@@ -4,8 +4,6 @@ Describes upload file information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes upload file information.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## filesContent
@@ -27,8 +25,6 @@ Files content.
 **Type:** Array&lt;ArrayBuffer&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -46,8 +42,6 @@ Files description.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Report file type.
 **Type:** [UploadFileType](arkts-basicservices-intelligentvoice-uploadfiletype-e-sys.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

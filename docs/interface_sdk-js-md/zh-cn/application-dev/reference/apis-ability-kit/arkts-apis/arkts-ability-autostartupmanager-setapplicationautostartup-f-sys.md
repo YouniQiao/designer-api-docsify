@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setApplicationAutoStartup
@@ -15,8 +15,6 @@ function setApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallbac
 设置应用组件开机自启动。使用callback异步回调。 从API version 18开始，该接口仅在2in1和Wearable设备中可正常调用，在其他设备上返回16000050错误码。 对于API version 18之前版本，该接口仅在2in1设备中可正常调用，在其他设备上返回16000050错误码。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_APP_BOOT
 
@@ -44,52 +42,6 @@ function setApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallbac
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 设置应用组件开机自启动
-  autoStartupManager.setApplicationAutoStartup({
-    bundleName: 'com.example.autostartupapp',
-    abilityName: 'EntryAbility'
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`setApplicationAutoStartup failed, err code: ${err.code}, err msg: ${err.message}.`);
-      return;
-    }
-    console.info(`setApplicationAutoStartup success.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`setApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
-}
-```
-
-```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 设置应用组件开机自启动
-  autoStartupManager.setApplicationAutoStartup({
-    bundleName: 'com.example.autostartupapp',
-    abilityName: 'EntryAbility'
-  }).then((data: void) => {
-    console.info(`setApplicationAutoStartup success.`);
-  }).catch((err: BusinessError) => {
-    console.error(`setApplicationAutoStartup failed, err code: ${err.code}, err msg: ${err.message}.`);
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`setApplicationAutoStartup failed, err code: ${code}, err msg: ${msg}.`);
-}
-```
-
 
 ## setApplicationAutoStartup
 
@@ -100,8 +52,6 @@ function setApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 设置应用组件开机自启动。使用Promise异步回调。 从API version 18开始，该接口仅在2in1和Wearable设备中可正常调用，在其他设备上返回16000050错误码。 对于API version 18之前版本，该接口仅在2in1设备中可正常调用，在其他设备上返回16000050错误码。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_APP_BOOT
 
@@ -133,7 +83,3 @@ function setApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [setApplicationAutoStartup](#setapplicationautostartup)

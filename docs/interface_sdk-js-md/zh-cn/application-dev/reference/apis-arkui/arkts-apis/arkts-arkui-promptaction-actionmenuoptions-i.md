@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## buttons
@@ -33,8 +31,6 @@ buttons: [
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -45,15 +41,16 @@ buttons: [
 immersiveMode?: ImmersiveMode
 ```
 
-设置页面内菜单蒙层效果。 &lt;br /&gt;**说明：** &lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面内菜单蒙层效果。   
+**说明：**
+- 默认值：ImmersiveMode.DEFAULT
+- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,15 +64,13 @@ immersiveMode?: ImmersiveMode
 isModal?: boolean
 ```
 
-菜单是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与菜单周围其他控件进行交互，即蒙层区域无法事件透传。 值为false表示为非模态窗口且无蒙层，可以与菜单周围其他控件进行交互。 <br/>默认值：true
+菜单是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与菜单周围其他控件进行交互，即蒙层区域无法事件透传。 值为false表示为非模态窗口且无蒙层，可以与菜单周围其他控件进行交互。 默认值：true
 
 **类型：** boolean
 
 **默认值：** true
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -89,15 +84,16 @@ isModal?: boolean
 levelMode?: LevelMode
 ```
 
-设置菜单显示层级。 &lt;br /&gt;**说明：** &lt;br /&gt;- 默认值：LevelMode.OVERLAY &lt;br /&gt;- 当且仅当showInSubWindow属性设置为false时生效。
+设置菜单显示层级。   
+**说明：**
+- 默认值：LevelMode.OVERLAY
+- 当且仅当showInSubWindow属性设置为false时生效。
 
 **类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -111,13 +107,13 @@ levelMode?: LevelMode
 levelUniqueId?: number
 ```
 
-设置页面级菜单需要显示的层级下的节点UniqueID。 <br/>取值范围：大于等于0的数字。 &lt;br /&gt;**说明：** &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面级菜单需要显示的层级下的节点UniqueID。 取值范围：大于等于0的数字。   
+**说明：**
+- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -131,13 +127,14 @@ levelUniqueId?: number
 onDidAppear?: Callback<void>
 ```
 
-菜单弹出后的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 &lt;br /&gt;2.快速点击弹出，关闭菜单时，onWillDisappear在onDidAppear前生效。
+菜单弹出后的事件回调。   
+**说明：**
+1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 
+2.快速点击弹出，关闭菜单时，onWillDisappear在onDidAppear前生效。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -151,13 +148,13 @@ onDidAppear?: Callback<void>
 onDidDisappear?: Callback<void>
 ```
 
-菜单消失后的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+菜单消失后的事件回调。   
+**说明：**
+1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -171,13 +168,13 @@ onDidDisappear?: Callback<void>
 onWillAppear?: Callback<void>
 ```
 
-菜单显示动效前的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+菜单显示动效前的事件回调。   
+**说明：**
+1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -191,13 +188,13 @@ onWillAppear?: Callback<void>
 onWillDisappear?: Callback<void>
 ```
 
-菜单退出动效前的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+菜单退出动效前的事件回调。   
+**说明：**
+1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -211,15 +208,16 @@ onWillDisappear?: Callback<void>
 showInSubWindow?: boolean
 ```
 
-某操作菜单需要显示在主窗口之外时，是否在子窗口显示此菜单。值为true表示在子窗口显示菜单。 <br/>默认值：false，在子窗口不显示菜单。 <br/>**说明：** <br/> - showInSubWindow为true的菜单无法触发显示另一个showInSubWindow为true的菜单。 <br/> - 若在UIExtension中设置showInSubWindow为true, 菜单将基于UIExtension的宿主窗口对齐。
+某操作菜单需要显示在主窗口之外时，是否在子窗口显示此菜单。值为true表示在子窗口显示菜单。 默认值：false，在子窗口不显示菜单。   
+**说明：**
+- showInSubWindow为true的菜单无法触发显示另一个showInSubWindow为true的菜单。
+- 若在UIExtension中设置showInSubWindow为true, 菜单将基于UIExtension的宿主窗口对齐。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -233,13 +231,11 @@ showInSubWindow?: boolean
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。 <br/>默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。 设置undefined时与默认值保持一致。不同的材质具有不同的效果，可以影响弹窗的背景色、边框、阴影等视觉属性。
+设置弹窗的系统材质。 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。 设置undefined时与默认值保持一致。不同的材质具有不同的效果，可以影响弹窗的背景色、边框、阴影等视觉属性。
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -253,13 +249,11 @@ systemMaterial?: SystemUiMaterial
 title?: string | Resource
 ```
 
-标题文本。 <br/>默认值：undefined，取值为undefined默认不显示标题。
+标题文本。 默认值：undefined，取值为undefined默认不显示标题。
 
 **类型：** string \| Resource
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

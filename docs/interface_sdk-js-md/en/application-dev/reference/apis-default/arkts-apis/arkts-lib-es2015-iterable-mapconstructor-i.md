@@ -1,7 +1,5 @@
 # MapConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -13,8 +11,6 @@
 new(): Map<any, any>
 ```
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -24,8 +20,6 @@ new(): Map<any, any>
 ```TypeScript
 new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

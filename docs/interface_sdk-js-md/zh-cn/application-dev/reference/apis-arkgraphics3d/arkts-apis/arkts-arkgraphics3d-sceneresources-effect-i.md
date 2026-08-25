@@ -6,8 +6,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## getPropertyValue
@@ -19,8 +17,6 @@ getPropertyValue(propertyName: string): Object | null | undefined
 获取特定特效属性的值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,26 +34,6 @@ getPropertyValue(propertyName: string): Object | null | undefined
 | --- |
 | Object \| null \| undefined |
 
-**示例**
-
-```TypeScript
-import { SceneResourceFactory, Scene, Effect, EffectParameters } from '@kit.ArkGraphics3D';
-
-function getEffectProperty() {
-  let scene: Promise<Scene> = Scene.load();
-  scene.then(async (result: Scene | undefined) => {
-    if (!result) {
-      return;
-    }
-    let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-    // 特效ID，固定格式为'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'，比如'e68a7f45-2d21-4a0d-9aef-7d9c825d3f12'
-    let params: EffectParameters = {effectId: "e68a7f45-2d21-4a0d-9aef-7d9c825d3f12"};
-    let effect: Effect = await sceneFactory.createEffect(params);
-    effect.getPropertyValue('exposure');
-  });
-}
-```
-
 ## setPropertyValue
 
 ```TypeScript
@@ -67,8 +43,6 @@ setPropertyValue(propertyName: string, value: Object | undefined): boolean
 设置特定特效属性的值。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,26 +61,6 @@ setPropertyValue(propertyName: string, value: Object | undefined): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { SceneResourceFactory, Scene, Effect, EffectParameters } from '@kit.ArkGraphics3D';
-
-function setEffectProperty() {
-  let scene: Promise<Scene> = Scene.load();
-  scene.then(async (result: Scene | undefined) => {
-    if (!result) {
-      return;
-    }
-    let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-    // 特效ID，固定格式为'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'，比如'e68a7f45-2d21-4a0d-9aef-7d9c825d3f12'
-    let params: EffectParameters = {effectId: "e68a7f45-2d21-4a0d-9aef-7d9c825d3f12"};
-    let effect: Effect = await sceneFactory.createEffect(params);
-    effect.setPropertyValue('exposure', 1);
-  });
-}
-```
-
 ## effectId
 
 ```TypeScript
@@ -118,8 +72,6 @@ readonly effectId: string
 **类型：** string
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -134,7 +86,5 @@ enabled: boolean
 **类型：** boolean
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

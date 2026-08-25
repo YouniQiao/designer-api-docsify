@@ -2,8 +2,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showalertdialog)
@@ -30,8 +28,6 @@ Shows an alert dialog box.
 > instance.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 18
 

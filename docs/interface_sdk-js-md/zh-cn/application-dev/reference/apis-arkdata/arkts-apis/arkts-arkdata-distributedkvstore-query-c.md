@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## and
@@ -24,8 +22,6 @@ and(): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -35,25 +31,6 @@ and(): Query
 | 类型 |
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notEqualTo('field', 'value1');
-      query.and();
-      query.notEqualTo('field', 'value2');
-      console.info(`query is ` + query.getSqlLike());
-    }
-    query = null;
-} catch (err) {
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## beginGroup
 
@@ -65,8 +42,6 @@ beginGroup(): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -76,25 +51,6 @@ beginGroup(): Query
 | 类型 |
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.beginGroup();
-      query.isNotNull('field');
-      query.endGroup();
-      console.info(`query is ` + query.getSqlLike());
-    }
-    query = null;
-} catch (err) {
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## constructor
 
@@ -106,53 +62,9 @@ constructor()
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let child1 = new distributedKVStore.FieldNode('id');
-child1.type = distributedKVStore.ValueType.INTEGER;
-child1.nullable = false;
-child1.default = '1';
-let child2 = new distributedKVStore.FieldNode('name');
-child2.type = distributedKVStore.ValueType.STRING;
-child2.nullable = false;
-child2.default = 'zhangsan';
-
-let schema = new distributedKVStore.Schema();
-schema.root.appendChild(child1);
-schema.root.appendChild(child2);
-schema.indexes = ['$.id', '$.name'];
-schema.mode = 1;
-schema.skip = 0;
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let child1 = new distributedKVStore.FieldNode('id');
-child1.type = distributedKVStore.ValueType.LONG;
-child1.nullable = false;
-child1.defaultValue = '1';
-let child2 = new distributedKVStore.FieldNode('name');
-child2.type = distributedKVStore.ValueType.STRING;
-child2.nullable = false;
-child2.defaultValue = 'zhangsan';
-
-let schema = new distributedKVStore.Schema();
-schema.root.appendChild(child1);
-schema.root.appendChild(child2);
-schema.indexes = ['$.id', '$.name'];
-schema.mode = 1;
-schema.skip = 0;
-```
 
 ## deviceId
 
@@ -171,8 +83,6 @@ deviceId(deviceId: string): Query
 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -196,23 +106,6 @@ deviceId(deviceId: string): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.deviceId('deviceId');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## endGroup
 
 ```TypeScript
@@ -222,8 +115,6 @@ endGroup(): Query
 创建一个带有右括号的查询条件组。必须与[beginGroup()](#begingroup)成对使用，以形成完整的查询条件分组。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -235,35 +126,10 @@ endGroup(): Query
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.beginGroup();
-      query.isNotNull('field');
-      query.endGroup();
-      console.info(`query is ` + query.getSqlLike());
-    }
-    query = null;
-} catch (err) {
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## equalTo
 
-ArkTS-Dyn:
 ```TypeScript
 equalTo(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-equalTo(field: string, value: long | double | string | boolean): Query
 ```
 
 构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。
@@ -275,8 +141,6 @@ equalTo(field: string, value: long | double | string | boolean): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -286,7 +150,7 @@ equalTo(field: string, value: long | double | string | boolean): Query
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | ArkTS-Dyn: number \| number \| string \| boolean<br>ArkTS-Sta：long \ | double \| string \| boolean | 是 |
+| value | number \| number \| string \| boolean | 是 |
 
 **返回值：**
 
@@ -299,24 +163,6 @@ equalTo(field: string, value: long | double | string | boolean): Query
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.equalTo('field', 'value');
-    console.info(`query is ${query.getSqlLike()}`);
-  }
-  query = null;
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## getSqlLike
 
@@ -328,8 +174,6 @@ getSqlLike(): string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -340,32 +184,10 @@ getSqlLike(): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      let sql1 = query.getSqlLike();
-      console.info(`GetSqlLike sql= ${sql1}`);
-    }
-} catch (err) {
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## greaterThan
 
-ArkTS-Dyn:
 ```TypeScript
 greaterThan(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-greaterThan(field: string, value: long | double | string | boolean): Query
 ```
 
 构造一个Query对象以查询具有大于指定值的指定字段的条目。
@@ -377,8 +199,6 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -388,7 +208,7 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | ArkTS-Dyn: number \| number \| string \| boolean<br>ArkTS-Sta：long \ | double \| string \| boolean | 是 |
+| value | number \| number \| string \| boolean | 是 |
 
 **返回值：**
 
@@ -402,34 +222,10 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.greaterThan('field', 'value');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## greaterThanOrEqualTo
 
-ArkTS-Dyn:
 ```TypeScript
 greaterThanOrEqualTo(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-greaterThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
 构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。
@@ -441,8 +237,6 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -452,7 +246,7 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | ArkTS-Dyn: number \| number \| string<br>ArkTS-Sta：long \ | double \| string | 是 |
+| value | number \| number \| string | 是 |
 
 **返回值：**
 
@@ -466,34 +260,10 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.greaterThanOrEqualTo('field', 'value');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## inNumber
 
-ArkTS-Dyn:
 ```TypeScript
 inNumber(field: string, valueList: number[] | number[]): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-inNumber(field: string, valueList: long[] | double[]): Query
 ```
 
 构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。
@@ -505,8 +275,6 @@ inNumber(field: string, valueList: long[] | double[]): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -516,7 +284,7 @@ inNumber(field: string, valueList: long[] | double[]): Query
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| valueList | ArkTS-Dyn: number[] \| number[]<br>ArkTS-Sta：long[] \ | double[] | 是 |
+| valueList | number[] \| number[] | 是 |
 
 **返回值：**
 
@@ -529,24 +297,6 @@ inNumber(field: string, valueList: long[] | double[]): Query
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.inNumber('field', [0, 1]);
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## inString
 
@@ -562,8 +312,6 @@ inString(field: string, valueList: string[]): Query
 > 取键值数据库示例。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -588,24 +336,6 @@ inString(field: string, valueList: string[]): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.inString('field', ['test1', 'test2']);
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## isNotNull
 
 ```TypeScript
@@ -620,8 +350,6 @@ isNotNull(field: string): Query
 > 取键值数据库示例。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -644,24 +372,6 @@ isNotNull(field: string): Query
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.isNotNull('field');
-    console.info(`query is ${query.getSqlLike()}`);
-  }
-  query = null;
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isNull
 
@@ -678,8 +388,6 @@ isNull(field: string): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -702,34 +410,10 @@ isNull(field: string): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.isNull('field');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## lessThan
 
-ArkTS-Dyn:
 ```TypeScript
 lessThan(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-lessThan(field: string, value: long | double | string): Query
 ```
 
 构造一个Query对象以查询具有小于指定值的指定字段的条目。
@@ -741,8 +425,6 @@ lessThan(field: string, value: long | double | string): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -752,7 +434,7 @@ lessThan(field: string, value: long | double | string): Query
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | ArkTS-Dyn: number \| number \| string<br>ArkTS-Sta：long \ | double \| string | 是 |
+| value | number \| number \| string | 是 |
 
 **返回值：**
 
@@ -766,34 +448,10 @@ lessThan(field: string, value: long | double | string): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.lessThan('field', 'value');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## lessThanOrEqualTo
 
-ArkTS-Dyn:
 ```TypeScript
 lessThanOrEqualTo(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-lessThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
 构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。
@@ -805,8 +463,6 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -816,7 +472,7 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | ArkTS-Dyn: number \| number \| string<br>ArkTS-Sta：long \ | double \| string | 是 |
+| value | number \| number \| string | 是 |
 
 **返回值：**
 
@@ -829,24 +485,6 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.lessThanOrEqualTo('field', 'value');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## like
 
@@ -862,8 +500,6 @@ like(field: string, value: string): Query
 > 取键值数据库示例。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -888,41 +524,15 @@ like(field: string, value: string): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.like('field', 'value');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## limit
 
-ArkTS-Dyn:
 ```TypeScript
 limit(total: number, offset: number): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-limit(total: int, offset: int): Query
 ```
 
 构造一个Query对象来指定结果的数量和开始位置。该接口必须要在Query对象查询和升降序等操作之后调用，调用limit接口后，不可再对Query对象进行查询和升降序等操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -932,8 +542,8 @@ limit(total: int, offset: int): Query
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| total | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| total | number | 是 |
+| offset | number | 是 |
 
 **返回值：**
 
@@ -947,37 +557,10 @@ limit(total: int, offset: int): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let total = 10;
-let offset = 1;
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.notEqualTo('field', 'value');
-    query.limit(total, offset);
-    console.info(`query is ${query.getSqlLike()}`);
-  }
-  query = null;
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## notEqualTo
 
-ArkTS-Dyn:
 ```TypeScript
 notEqualTo(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-notEqualTo(field: string, value: long | double | string | boolean): Query
 ```
 
 构造一个Query对象以查询具有指定字段且值不等于指定值的条目。
@@ -989,8 +572,6 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1000,7 +581,7 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | ArkTS-Dyn: number \| number \| string \| boolean<br>ArkTS-Sta：long \ | double \| string \| boolean | 是 |
+| value | number \| number \| string \| boolean | 是 |
 
 **返回值：**
 
@@ -1014,34 +595,10 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.notEqualTo('field', 'value');
-    console.info(`query is ${query.getSqlLike()}`);
-  }
-  query = null;
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## notInNumber
 
-ArkTS-Dyn:
 ```TypeScript
 notInNumber(field: string, valueList: number[] | number[]): Query
-```
-
-ArkTS-Sta:
-```TypeScript
-notInNumber(field: string, valueList: long[] | double[]): Query
 ```
 
 构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。
@@ -1053,8 +610,6 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1064,7 +619,7 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| valueList | ArkTS-Dyn: number[] \| number[]<br>ArkTS-Sta：long[] \ | double[] | 是 |
+| valueList | number[] \| number[] | 是 |
 
 **返回值：**
 
@@ -1077,24 +632,6 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notInNumber('field', [0, 1]);
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## notInString
 
@@ -1110,8 +647,6 @@ notInString(field: string, valueList: string[]): Query
 > 取键值数据库示例。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1136,24 +671,6 @@ notInString(field: string, valueList: string[]): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notInString('field', ['test1', 'test2']);
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## or
 
 ```TypeScript
@@ -1164,8 +681,6 @@ or(): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1175,25 +690,6 @@ or(): Query
 | 类型 |
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notEqualTo('field', 'value1');
-      query.or();
-      query.notEqualTo('field', 'value2');
-      console.info(`query is ` + query.getSqlLike());
-    }
-    query = null;
-} catch (err) {
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## orderByAsc
 
@@ -1210,8 +706,6 @@ orderByAsc(field: string): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1233,25 +727,6 @@ orderByAsc(field: string): Query
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notEqualTo('field', 'value');
-      query.orderByAsc('field');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## orderByDesc
 
@@ -1268,8 +743,6 @@ orderByDesc(field: string): Query
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -1292,25 +765,6 @@ orderByDesc(field: string): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.notEqualTo('field', 'value');
-      query.orderByDesc('field');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## prefixKey
 
 ```TypeScript
@@ -1320,8 +774,6 @@ prefixKey(prefix: string): Query
 创建具有指定键前缀的查询条件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1345,25 +797,6 @@ prefixKey(prefix: string): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.prefixKey('$.name');
-      query.prefixKey('0');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## reset
 
 ```TypeScript
@@ -1373,8 +806,6 @@ reset(): Query
 重置Query对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1386,25 +817,6 @@ reset(): Query
 | --- |
 | [Query](arkts-arkdata-distributeddata-query-c.md) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-  if (query != null) {
-    query.equalTo('key', 'value');
-    console.info(`query is ` + query.getSqlLike());
-    query.reset();
-    console.info(`query is ` + query.getSqlLike());
-  }
-  query = null;
-} catch (err) {
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## setSuggestIndex
 
 ```TypeScript
@@ -1414,8 +826,6 @@ setSuggestIndex(index: string): Query
 设置一个指定的索引，将优先用于查询。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1439,25 +849,6 @@ setSuggestIndex(index: string): Query
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.setSuggestIndex('$.name');
-      query.setSuggestIndex('0');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## unlike
 
 ```TypeScript
@@ -1472,8 +863,6 @@ unlike(field: string, value: string): Query
 > 取键值数据库示例。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1497,21 +886,3 @@ unlike(field: string, value: string): Query
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let query: distributedKVStore.Query | null = new distributedKVStore.Query();
-    if (query != null) {
-      query.unlike('field', 'value');
-      console.info(`query is ${query.getSqlLike()}`);
-    }
-    query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
-}
-```

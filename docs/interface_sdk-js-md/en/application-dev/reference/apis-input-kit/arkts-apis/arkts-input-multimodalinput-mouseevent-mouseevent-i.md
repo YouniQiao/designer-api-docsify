@@ -6,14 +6,12 @@ Defines the mouse event.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { Action as MouseAction, Axis, AxisValue, Button, MouseEvent, ToolType as MouseToolType } from '@kit.InputKit';
+import { Action as MouseAction, Axis, AxisValue, Button, MouseEvent, ToolType as MouseToolType } from 'kits/@kit.InputKit';
 ```
 
 ## action
@@ -27,8 +25,6 @@ Enumerates mouse event types.
 **Type:** [Action](arkts-input-multimodalinput-mouseevent-action-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -44,8 +40,6 @@ Whether altKey is being pressed.The value **true** indicates that the key is pre
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## axes
@@ -59,8 +53,6 @@ Defines the mouse axis type and axis value.
 **Type:** [AxisValue](arkts-input-multimodalinput-mouseevent-axisvalue-i.md)[]
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -76,8 +68,6 @@ Enumerates mouse buttons.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## capsLock
@@ -91,8 +81,6 @@ Whether capsLock is enabled.The value **true** indicates that capsLock is enable
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -108,8 +96,6 @@ Whether ctrlKey is being pressed.The value **true** indicates that the key is pr
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## fnKey
@@ -124,39 +110,33 @@ Whether fnKey is being pressed.The value **true** indicates that the key is pres
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## globalX
 
 ```TypeScript
-globalX?: int
+globalX?: number
 ```
 
 X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## globalY
 
 ```TypeScript
-globalY?: int
+globalY?: number
 ```
 
 Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md) is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -172,8 +152,6 @@ Whether logoKey is being pressed.The value **true** indicates that the key is pr
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## numLock
@@ -187,8 +165,6 @@ Whether numLock is enabled.The value **true** indicates that numLock is enabled,
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -204,8 +180,6 @@ Button being pressed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## pressedKeys
@@ -220,71 +194,61 @@ List of pressed keys.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## rawDeltaX
 
 ```TypeScript
-rawDeltaX: int
+rawDeltaX: number
 ```
 
 X coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## rawDeltaY
 
 ```TypeScript
-rawDeltaY: int
+rawDeltaY: number
 ```
 
 Y coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## screenX
 
 ```TypeScript
-screenX: int
+screenX: number
 ```
 
 X coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## screenY
 
 ```TypeScript
-screenY: int
+screenY: number
 ```
 
 Y coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -300,8 +264,6 @@ Whether scrollLock is enabled.The value **true** indicates that scrollLock is en
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## shiftKey
@@ -315,8 +277,6 @@ Whether shiftKey is being pressed.The value **true** indicates that the key is p
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -332,38 +292,32 @@ Tool type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## windowX
 
 ```TypeScript
-windowX: int
+windowX: number
 ```
 
 X coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## windowY
 
 ```TypeScript
-windowY: int
+windowY: number
 ```
 
 Y coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core

@@ -4,21 +4,17 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## createHDRColor
 
 ```TypeScript
-static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics
+static createHDRColor(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
 使用ColorSpace和rgba格式颜色实例化支持HDR的ColorMetrics类。适用于无需调整曝光系数、直接指定HDR颜色分量的场景，如HDR纯色背景绘制、固定HDR色彩配置。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,15 +41,13 @@ static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: 
 ## createHDRColorWithLinearExposure
 
 ```TypeScript
-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,
-    red: double, green: double, blue: double, alpha?: double): ColorMetrics
+static createHDRColorWithLinearExposure(linearExposure: number, colorSpace: ColorSpace,
+    red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
 使用ColorSpace、线性曝光系数和rgba格式颜色实例化支持HDR的ColorMetrics类。如不需要通过曝光系数调节，可使用 [createHDRColor](#createhdrcolor)直接设置RGB分量值大于1.0来呈现HDR效果。适用于需要按线性比例均匀调整HDR亮度的场景，如HDR图像预览、视频播放器色彩调 节。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,15 +75,13 @@ static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: Colo
 ## createHDRColorWithLogExposure
 
 ```TypeScript
-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
-    red: double, green: double, blue: double, alpha?: double): ColorMetrics
+static createHDRColorWithLogExposure(exposure: number, colorSpace: ColorSpace,
+    red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
 使用ColorSpace、对数型曝光系数和rgba格式颜色实例化支持HDR的ColorMetrics类。与 [createHDRColorWithLinearExposure](#createhdrcolorwithlinearexposure)相比，两者均通过曝光系数创建HDR色彩，区别在于本方法使 用对数型曝光系数（指数级增加曝光程度），后者使用线性曝光系数（线性增加曝光程度），开发者可根据所需的曝光调节方式选择。如不需要通过曝光系数调节，可使用 [createHDRColor](#createhdrcolor)直接设置RGB分量值大于1.0来呈现HDR效果。适用于需要按对数关系调整HDR亮度（更贴近人眼感知）的场景，如HDR照片编辑、影 视后期调色。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,14 +109,12 @@ static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
 ## getBlueValue
 
 ```TypeScript
-getBlueValue(): double
+getBlueValue(): number
 ```
 
 获取ColorMetrics颜色的B分量（蓝色）。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,8 +138,6 @@ getColorSpace(): ColorSpace
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -165,14 +153,12 @@ getColorSpace(): ColorSpace
 ## getGreenValue
 
 ```TypeScript
-getGreenValue(): double
+getGreenValue(): number
 ```
 
 获取ColorMetrics颜色的G分量（绿色）。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -189,14 +175,12 @@ getGreenValue(): double
 ## getRedValue
 
 ```TypeScript
-getRedValue(): double
+getRedValue(): number
 ```
 
 获取ColorMetrics颜色的R分量（红色）。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -219,8 +203,6 @@ isHDR(): boolean
 获取ColorMetrics是否呈现了HDR色彩。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

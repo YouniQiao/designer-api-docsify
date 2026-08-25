@@ -4,14 +4,12 @@ AbilityStage是一个[Module](../../../quick-start/application-package-overview.
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
+import { AbilityStage } from 'kits/@kit.AbilityKit';
 ```
 
 ## onAboutToCreateAbility
@@ -24,24 +22,9 @@ onAboutToCreateAbility(): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onAboutToCreateAbility(): void {
-    console.info('About to create first ability, preparing...');
-    // 在此添加创建第一个Ability前的准备工作
-  }
-}
-```
 
 ## onAcceptWant
 
@@ -55,8 +38,6 @@ onAcceptWant(want: Want): string
 > 从API version 20开始，当[AbilityStage.onAcceptWantAsync](#onacceptwantasync)实现时，本回调函数将不会被触发。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,19 +57,6 @@ onAcceptWant(want: Want): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-import { AbilityStage, Want } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onAcceptWant(want: Want) {
-    console.info('MyAbilityStage.onAcceptWant called');
-    return 'com.example.test';
-  }
-}
-```
-
 ## onAcceptWantAsync
 
 ```TypeScript
@@ -98,8 +66,6 @@ onAcceptWantAsync(want: Want): Promise<string>
 当启动模式配置为[specified](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility被拉起时，会触发该回调，并返回一个 string作为待启动的UIAbility实例的唯一标识。使用Promise异步回调。如果系统中已经有相同标识的UIAbility实例存在，则复用已有实例，否则创建新的实例。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -119,22 +85,6 @@ onAcceptWantAsync(want: Want): Promise<string>
 | --- |
 | Promise & lt;string & gt; |
 
-**示例**
-
-```TypeScript
-import { AbilityStage, Want } from '@kit.AbilityKit';
-
-class MyAbilityStage extends AbilityStage {
-  async onAcceptWantAsync(want: Want): Promise<string> {
-    await new Promise<string>((res, rej) => {
-      setTimeout(res, 1000); // 延时1秒后执行
-      console.info(`onAcceptWantAsync, want: ${JSON.stringify(want)}`);
-    });
-    return 'default';
-  }
-}
-```
-
 ## onConfigurationUpdate
 
 ```TypeScript
@@ -150,8 +100,6 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -164,18 +112,6 @@ onConfigurationUpdate(newConfig: Configuration): void
 | --- | --- | --- |
 | newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 |
 
-**示例**
-
-```TypeScript
-import { AbilityStage, Configuration } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onConfigurationUpdate(config: Configuration) {
-    console.info(`MyAbilityStage.onConfigurationUpdate, language: ${config.language}`);
-  }
-}
-```
-
 ## onCreate
 
 ```TypeScript
@@ -186,25 +122,11 @@ onCreate(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onCreate() {
-    console.info('MyAbilityStage.onCreate is called');
-  }
-}
-```
 
 ## onDestroy
 
@@ -216,25 +138,11 @@ onDestroy(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onDestroy() {
-    console.info('MyAbilityStage.onDestroy is called');
-  }
-}
-```
 
 ## onLaunchFromHyperSnap
 
@@ -246,24 +154,9 @@ onLaunchFromHyperSnap(): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onLaunchFromHyperSnap(): void {
-    console.info('Launched from Hyper Snap, reinitializing resources...');
-    // 在此添加快启启动时的初始化逻辑
-  }
-}
-```
 
 ## onMemoryLevel
 
@@ -278,8 +171,6 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -291,18 +182,6 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | level | AbilityConstant.MemoryLevel | 是 |
-
-**示例**
-
-```TypeScript
-import { AbilityStage, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
-    console.info(`MyAbilityStage.onMemoryLevel, level: ${JSON.stringify(level)}`);
-  }
-}
-```
 
 ## onNewProcessRequest
 
@@ -320,8 +199,6 @@ onNewProcessRequest(want: Want): string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -338,19 +215,6 @@ onNewProcessRequest(want: Want): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-import { AbilityStage, Want } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onNewProcessRequest(want: Want) {
-    console.info('MyAbilityStage.onNewProcessRequest called');
-    return 'com.example.test';
-  }
-}
-```
-
 ## onNewProcessRequestAsync
 
 ```TypeScript
@@ -360,8 +224,6 @@ onNewProcessRequestAsync(want: Want): Promise<string>
 如果UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->配置了在独立进程中运行（即 [module.json5配置文件](../../../quick-start/module-configuration-file.md)中UIAbility<!--Del-->或UIExtensionAbility<!-- DelEnd-->的isolationProcess字段取值为true），当该UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->被拉起时，会触发该回调，并返回一个string作为 进程唯一标识。使用Promise异步回调。如果该应用已有相同标识的进程存在，则待启动的UIAbility<!--Del-->或UIExtensionAbility<!--DelEnd-->运行在此进程中，否则创建新的进程。<!--Del-->仅支持sys/commonUI类型的UIExtensionAbility组件在[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置 isolationProcess字段为true。<!--DelEnd-->
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -381,22 +243,6 @@ onNewProcessRequestAsync(want: Want): Promise<string>
 | --- |
 | Promise & lt;string & gt; |
 
-**示例**
-
-```TypeScript
-import { AbilityStage, Want } from '@kit.AbilityKit';
-
-class MyAbilityStage extends AbilityStage {
-  async onNewProcessRequestAsync(want: Want): Promise<string> {
-    await new Promise<string>((res, rej) => {
-      setTimeout(res, 1000); // 延时1秒后执行
-      console.info(`onNewProcessRequestAsync, want: ${JSON.stringify(want)}`);
-    });
-    return '';
-  }
-}
-```
-
 ## onPrepareTermination
 
 ```TypeScript
@@ -410,8 +256,6 @@ onPrepareTermination(): AbilityConstant.PrepareTermination
 > - 当[AbilityStage.onPrepareTerminationAsync](#onprepareterminationasync)实现时，本回调函数将不执行。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PREPARE_APP_TERMINATE
 
@@ -427,19 +271,6 @@ onPrepareTermination(): AbilityConstant.PrepareTermination
 | --- |
 | AbilityConstant.PrepareTermination |
 
-**示例**
-
-```TypeScript
-import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onPrepareTermination(): AbilityConstant.PrepareTermination {
-    console.info('MyAbilityStage.onPrepareTermination is called');
-    return AbilityConstant.PrepareTermination.CANCEL;
-  }
-}
-```
-
 ## onPrepareTerminationAsync
 
 ```TypeScript
@@ -453,8 +284,6 @@ onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>
 > - 若异步回调内发生crash，按超时处理，执行等待超过10秒未响应，应用将被强制关闭。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PREPARE_APP_TERMINATE
 
@@ -470,21 +299,6 @@ onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>
 | --- |
 | Promise & lt;AbilityConstant.PrepareTermination & gt; |
 
-**示例**
-
-```TypeScript
-import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  async onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination> {
-    await new Promise<AbilityConstant.PrepareTermination>((res, rej) => {
-      setTimeout(res, 3000); // 延时3秒后执行
-    });
-    return AbilityConstant.PrepareTermination.CANCEL;
-  }
-}
-```
-
 ## context
 
 ```TypeScript
@@ -496,8 +310,6 @@ AbilityStage上下文。
 **类型：** [AbilityStageContext](arkts-ability-abilitystagecontext-c.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

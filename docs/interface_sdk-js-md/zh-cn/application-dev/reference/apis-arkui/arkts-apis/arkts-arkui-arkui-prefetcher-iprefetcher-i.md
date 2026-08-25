@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI';
+import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from 'kits/@kit.ArkUI';
 ```
 
 ## setDataSource
@@ -23,8 +21,6 @@ setDataSource(dataSource: IDataSourcePrefetching): void
 设置支持预取的数据源以绑定到Prefetcher。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,40 +34,6 @@ setDataSource(dataSource: IDataSourcePrefetching): void
 | --- | --- | --- |
 | dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class MyPrefetcher implements IPrefetcher {
-  private dataSource?: IDataSourcePrefetching;
-
-  setDataSource(dataSource: IDataSourcePrefetching): void {
-    this.dataSource = dataSource;
-  }
-
-  visibleAreaChanged(minVisible: number, maxVisible: number): void {
-    this.dataSource?.prefetch(minVisible);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class MyPrefetcher<T> implements IPrefetcher<T> {
-  private dataSource?: IDataSourcePrefetching<T>;
-
-  setDataSource(dataSource: IDataSourcePrefetching<T>): void {
-    this.dataSource = dataSource;
-  }
-
-  visibleAreaChanged(minVisible: int, maxVisible: int): void {
-    this.dataSource?.prefetch(minVisible);
-  }
-}
-```
-
 ## visibleAreaChanged
 
 ```TypeScript
@@ -81,8 +43,6 @@ visibleAreaChanged(minVisible: number, maxVisible: number): void
 当可见区域边界发生改变时调用此方法，将当前可见区域范围通知给Prefetcher，使其据此决定预取或取消预取的数据项。调用此方法前需先通过setDataSource方法设置数据源。支持与`List`、`Grid`、 `WaterFlow`和`Swiper`组件配合使用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,37 +56,3 @@ visibleAreaChanged(minVisible: number, maxVisible: number): void
 | --- | --- | --- |
 | minVisible | number | 是 |
 | maxVisible | number | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class MyPrefetcher implements IPrefetcher {
-  private dataSource?: IDataSourcePrefetching;
-
-  setDataSource(dataSource: IDataSourcePrefetching): void {
-    this.dataSource = dataSource;
-  }
-
-  visibleAreaChanged(minVisible: number, maxVisible: number): void {
-    this.dataSource?.prefetch(minVisible);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class MyPrefetcher<T> implements IPrefetcher<T> {
-  private dataSource?: IDataSourcePrefetching<T>;
-
-  setDataSource(dataSource: IDataSourcePrefetching<T>): void {
-    this.dataSource = dataSource;
-  }
-
-  visibleAreaChanged(minVisible: int, maxVisible: int): void {
-    this.dataSource?.prefetch(minVisible);
-  }
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## formatPhoneNumber
@@ -15,8 +15,6 @@ function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, ca
 Formats a phone number based on specified formatting options. This API uses an asynchronous callback to return the result.A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -38,48 +36,6 @@ Formats a phone number based on specified formatting options. This API uses an a
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumber("138xxxxxxxx", (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`formatPhoneNumber fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.NumberFormatOptions = {
-    countryCode: "CN"
-}
-call.formatPhoneNumber("138xxxxxxxx", options, (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`formatPhoneNumber fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`formatPhoneNumber success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: call.NumberFormatOptions = {
-    countryCode: "CN"
-}
-call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
-    console.info(`formatPhoneNumber success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`formatPhoneNumber fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## formatPhoneNumber
 
@@ -90,8 +46,6 @@ function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): 
 Formats a phone number based on specified formatting options. This API uses a promise to return the result.A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -118,10 +72,6 @@ Formats a phone number based on specified formatting options. This API uses a pr
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-See [formatPhoneNumber](#formatphonenumber)
-
 
 ## formatPhoneNumber
 
@@ -132,8 +82,6 @@ function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>)
 Formats a phone number. This API uses an asynchronous callback to return the result.A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -153,7 +101,3 @@ Formats a phone number. This API uses an asynchronous callback to return the res
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [formatPhoneNumber](#formatphonenumber)

@@ -1,10 +1,8 @@
 # OsAccountSubProfileEventData (System API)
 
-Represents the event data of an OS account sub-profile.
+Defines the data of an OS account sub-profile event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -13,7 +11,7 @@ Represents the event data of an OS account sub-profile.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## event
@@ -22,13 +20,11 @@ import { osAccount } from '@kit.BasicServicesKit';
 event: OsAccountSubProfileEvent
 ```
 
-Event that occurred.
+Event that occurs.
 
 **Type:** [OsAccountSubProfileEvent](arkts-basicservices-osaccount-osaccountsubprofileevent-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,16 +35,14 @@ Event that occurred.
 ## osAccountLocalId
 
 ```TypeScript
-osAccountLocalId: int
+osAccountLocalId: number
 ```
 
-OS account local ID.
+Local ID of the OS account. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,16 +53,14 @@ OS account local ID.
 ## previousSubProfileId
 
 ```TypeScript
-previousSubProfileId?: int
+previousSubProfileId?: number
 ```
 
-Previous OS account sub-profile identifier.
+Previous OS account sub-profile ID. This parameter is valid only in the **SWITCHING** and **SWITCHED** events. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,16 +71,14 @@ Previous OS account sub-profile identifier.
 ## subProfileId
 
 ```TypeScript
-subProfileId: int
+subProfileId: number
 ```
 
-OS account sub-profile identifier.
+OS account sub-profile ID. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,14 +8,12 @@ The advertising module provides APIs for requesting and displaying ads.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## Summary

@@ -8,8 +8,6 @@ Callback triggered when the input method framework needs to display the text pre
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Parameters:**

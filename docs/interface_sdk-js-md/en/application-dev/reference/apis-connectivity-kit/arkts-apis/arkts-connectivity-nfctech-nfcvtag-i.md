@@ -7,28 +7,18 @@ Provides APIs to access NFC-V (ISO 15693) properties and perform I/O operations 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getDsfId
 
-ArkTS-Dyn:
 ```TypeScript
 getDsfId(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getDsfId(): int
 ```
 
 Obtains the data storage format identifier (DSFID) from this NFC-V tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -37,36 +27,18 @@ Obtains the data storage format identifier (DSFID) from this NFC-V tag.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// Obtain the correct nfcV tag by using the tag.TagInfo API in @ohos.nfc.tag.
-let dsfId : number = nfcV.getDsfId();
-console.info("nfcV dsfId: " + dsfId);
-```
+| number |
 
 ## getResponseFlags
 
-ArkTS-Dyn:
 ```TypeScript
 getResponseFlags(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getResponseFlags(): int
 ```
 
 Obtains the response flags from this NFC-V tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -75,14 +47,4 @@ Obtains the response flags from this NFC-V tag.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// Obtain the correct nfcV tag by using the tag.TagInfo API in @ohos.nfc.tag.
-let responseFlags : number = nfcV.getResponseFlags();
-console.info("nfcV responseFlags: " + responseFlags);
-```
+| number |

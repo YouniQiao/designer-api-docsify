@@ -4,8 +4,6 @@ Defines the window configuration corresponding to this ability. The configuratio
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## WINDOW_MODE_UNDEFINED
@@ -17,8 +15,6 @@ WINDOW_MODE_UNDEFINED = 0
 The PageAbility is in an undefined window display mode.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -34,8 +30,6 @@ The PageAbility is in full screen mode.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -49,8 +43,6 @@ WINDOW_MODE_SPLIT_PRIMARY = 100
 The left screen in horizontal direction or the upper screen in vertical direction is the primary window.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -66,8 +58,6 @@ The right screen in horizontal direction or the lower screen in vertical directi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -82,16 +72,6 @@ The PageAbility is displayed in floating window mode.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
-
-**Examples**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-featureAbility.AbilityWindowConfiguration.WINDOW_MODE_UNDEFINED
-```

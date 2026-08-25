@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 ```
 
 ## connectSystemChannel
@@ -15,8 +15,6 @@ function connectSystemChannel(): Promise<void>
 Connects to the system channel for communication between the input method system panel and the system-default input method application. This API can be called only by the input method system panel.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 

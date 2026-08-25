@@ -4,8 +4,6 @@ Flag indicating whether a module is associated with a widget or shortcut when it
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -21,8 +19,6 @@ FLAG_MODULE_NOT_USED_BY_FORM = 0
 Not used by a widget.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -40,8 +36,6 @@ Used by a widget.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -58,8 +52,6 @@ Not used by a shortcut.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -75,8 +67,6 @@ FLAG_MODULE_USED_BY_SHORTCUT = 3
 Used by a shortcut.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

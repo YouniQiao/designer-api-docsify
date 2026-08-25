@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## moveDir
@@ -20,8 +20,6 @@ Moves the source directory to the destination directory. This API uses a promise
 > This API is not supported in a distributed directory.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -63,55 +61,6 @@ Moves the source directory to the destination directory. This API uses a promise
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-fs.moveDir(srcPath, destPath, 1).then(() => {
-  console.info("move directory succeed");
-}).catch((err: BusinessError) => {
-  console.error("move directory failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, ConflictFiles } from '@kit.CoreFileKit';
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-fs.moveDir(srcPath, destPath, 1, (err: BusinessError<Array<ConflictFiles>>) => {
-  if (err && err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error("move directory failed with conflicting files: " + err.data[i].srcFile + " " + err.data[i].destFile);
-    }
-  } else if (err) {
-    console.error("move directory failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("move directory succeed");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, ConflictFiles } from '@kit.CoreFileKit';
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-fs.moveDir(srcPath, destPath, (err: BusinessError<Array<ConflictFiles>>) => {
-  if (err && err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error("move directory failed with conflicting files: " + err.data[i].srcFile + " " + err.data[i].destFile);
-    }
-  } else if (err) {
-    console.error("move directory failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("move directory succeed");
-  }
-});
-```
-
 
 ## moveDir
 
@@ -122,8 +71,6 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 Moves the source directory to the destination directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -157,10 +104,6 @@ Moves the source directory to the destination directory. This API uses an asynch
 | 13900033 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [moveDir](#movedir)
 
 
 ## moveDir
@@ -176,8 +119,6 @@ Moves the source directory to the destination directory. This API uses an asynch
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 **Parameters:**
@@ -194,10 +135,6 @@ Moves the source directory to the destination directory. This API uses an asynch
 | --- |
 | 13900015 |
 
-**Examples**
-
-See [moveDir](#movedir)
-
 
 ## moveDir
 
@@ -208,8 +145,6 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 Moves the source directory to the destination directory. You can set the move mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -245,10 +180,6 @@ Moves the source directory to the destination directory. You can set the move mo
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-See [moveDir](#movedir)
-
 
 ## moveDir
 
@@ -262,8 +193,6 @@ Moves the source directory to the destination directory. You can set the move mo
 > This API is not supported in a distributed directory.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -281,7 +210,3 @@ Moves the source directory to the destination directory. You can set the move mo
 | Error Code ID |
 | --- |
 | 13900015 |
-
-**Examples**
-
-See [moveDir](#movedir)

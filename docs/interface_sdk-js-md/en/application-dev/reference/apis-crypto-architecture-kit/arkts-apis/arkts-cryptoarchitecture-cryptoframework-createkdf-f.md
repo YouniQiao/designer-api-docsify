@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createKdf
@@ -12,11 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createKdf(algName: string): Kdf
 ```
 
-Creates a key derivation function instance.<br>For details about the supported specifications, see [Key Derivation Function Specifications](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md).
+Creates a key derivation function instance.
+
+For details about the supported specifications, see [Key Derivation Function Specifications](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md).
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,13 +43,3 @@ Creates a key derivation function instance.<br>For details about the supported s
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-
-**Examples**
-
-PBKDF2
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-```

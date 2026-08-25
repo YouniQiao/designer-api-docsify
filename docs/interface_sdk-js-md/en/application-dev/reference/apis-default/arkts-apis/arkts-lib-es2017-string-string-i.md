@@ -1,7 +1,5 @@
 # String
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ padEnd(maxLength: number, fillString?: string): string
 ```
 
 Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length. The padding is applied from the end (right) of the current string.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ padStart(maxLength: number, fillString?: string): string
 ```
 
 Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length. The padding is applied from the start (left) of the current string.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

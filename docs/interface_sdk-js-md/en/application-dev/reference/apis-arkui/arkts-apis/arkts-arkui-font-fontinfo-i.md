@@ -4,14 +4,12 @@ Information about the system font.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { font } from '@kit.ArkUI';
+import { font } from 'kits/@kit.ArkUI';
 ```
 
 ## family
@@ -25,8 +23,6 @@ Family of the system font.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Name of the system font.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +61,6 @@ Whether the system font is italic.Default value: **false**
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -88,8 +80,6 @@ Whether the system font is monospaced.Default value: **false**
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -107,8 +97,6 @@ File path of the system font.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,8 +116,6 @@ PostScript name of the system font.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -147,8 +133,6 @@ Subfamily of the system font.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -169,8 +153,6 @@ Whether the system font supports symbols.Default value: **false**
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -188,8 +170,6 @@ Weight of the system font.Value range: [100, 900], with intervals of 100, corres
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -209,47 +189,8 @@ Width of the system font.Value range: [1, 9], with intervals of 1, corresponding
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-Directly using font can lead to the issue of ambiguous UI context. To avoid this, obtain the [Font](arkts-apis-uicontext-font.md) object associated with the current UI context by using the [getFont](./arkts-apis-uicontext-uicontext.md#getfont) API in [UIContext](./arkts-apis-uicontext-uicontext.md).
-
-```TypeScript
-// xxx.ets
-import { font } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct FontExample {
-  fontList: Array<string> = new Array<string>();
-  uiFont = this.getUIContext().getFont();
-  fontInfo: font.FontInfo = this.uiFont.getFontByName(''); // You are advised to use the this.getUIContext().getFont().getFontByName() API.
-
-  build() {
-    Column() {
-      Button("getFontByName")
-        .onClick(() => {
-          this.fontInfo =
-            this.uiFont.getFontByName('HarmonyOS Sans Italic');
-          console.info("getFontByName(): path = " + this.fontInfo.path);
-          console.info("getFontByName(): postScriptName = " + this.fontInfo.postScriptName);
-          console.info("getFontByName(): fullName = " + this.fontInfo.fullName);
-          console.info("getFontByName(): family = " + this.fontInfo.family);
-          console.info("getFontByName(): subfamily = " + this.fontInfo.subfamily);
-          console.info("getFontByName(): weight = " + this.fontInfo.weight);
-          console.info("getFontByName(): width = " + this.fontInfo.width);
-          console.info("getFontByName(): italic = " + this.fontInfo.italic);
-          console.info("getFontByName(): monoSpace = " + this.fontInfo.monoSpace);
-          console.info("getFontByName(): symbolic = " + this.fontInfo.symbolic);
-        })
-    }.width('100%')
-  }
-}
-```

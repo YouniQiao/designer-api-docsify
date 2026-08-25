@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## importContactsViaUI
@@ -15,8 +15,6 @@ function importContactsViaUI(context: Context, contacts: Array<Contact>): Promis
 Imports multiple contacts through UI interaction.A maximum of 100 contacts can be imported at a time. Importing contact portraits is not supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,7 +33,7 @@ Imports multiple contacts through UI interaction.A maximum of 100 contacts can b
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise & lt;Array & lt;int & gt; & gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 

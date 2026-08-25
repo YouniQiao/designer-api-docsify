@@ -4,8 +4,6 @@ Describes a spatialization scene type group.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ DEFAULT = 0
 Audio Spatialization Scene Type Default.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -36,8 +32,6 @@ Audio Spatialization Scene Type Music.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Audio Spatialization Scene Type Movie.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ AUDIOBOOK = 3
 Audio Spatialization Scene Type Audio Book.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 

@@ -9,8 +9,6 @@ The module provides permission details defined in the configuration file.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PermissionDef](arkts-ability-permissiondef-i-sys.md)
@@ -32,8 +30,6 @@ ID of the permission description.
 **Default:** Indicates the descriptionId of this permission
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -57,8 +53,6 @@ Grant mode of the permission. The value **0** means that the system automaticall
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** grantMode
@@ -81,8 +75,6 @@ ID of the permission label.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -104,8 +96,6 @@ Name of the permission.
 **Default:** Indicates the name of this permission
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

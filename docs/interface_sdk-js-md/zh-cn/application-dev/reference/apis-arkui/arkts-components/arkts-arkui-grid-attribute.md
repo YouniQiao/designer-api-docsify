@@ -1,12 +1,10 @@
 # Grid属性/事件
 
-除支持通用属性和滚动组件通用属性外，还 支持以下属性：除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还 支持以下事件：
+除支持[通用属性](arkts-arkui-commonmethod-c.md)和[滚动组件通用属性](arkts-arkui-scrollablecommonmethod-c.md)外，还 支持以下属性：除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还 支持以下事件：
 
 **继承/实现关系：** GridAttribute extends ScrollableCommonMethod<GridAttribute>
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ alignItems(alignment: Optional<GridItemAlignment>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ alignItems(alignment: Optional<GridItemAlignment>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| alignment | Optional&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | 是 |
+| alignment | [Optional](arkts-arkui-optional-t.md)&lt;[GridItemAlignment](arkts-arkui-griditemalignment-e.md)&gt; | 是 |
 
 ## cachedCount
 
@@ -45,12 +41,10 @@ alignItems(alignment: Optional<GridItemAlignment>)
 cachedCount(value: number)
 ```
 
-设置主轴方向前后两侧分别预加载的网格行/列数，只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。<!--Del-->具体使用可参考 [减少应用白块说明](../../../performance/arkts-performance-improvement-recommendation.md#减少应用滑动白块)。<!--DelEnd-->设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。  
-[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)超出显示和缓存范围的GridItem会被释放。
+设置主轴方向前后两侧分别预加载的网格行/列数，只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll)开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。<!--Del-->具体使用可参考 [减少应用白块说明](../../../performance/arkts-performance-improvement-recommendation.md#减少应用滑动白块)。<!--DelEnd-->设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。  
+[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll)开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)超出显示和缓存范围的GridItem会被释放。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -68,11 +62,9 @@ cachedCount(value: number)
 cachedCount(count: number, show: boolean)
 ```
 
-设置主轴方向前后两侧分别预加载的网格行/列数，并配置是否显示预加载节点，只在 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。配合裁剪 clip或内容裁剪 clipContent属性可以显示出预加载节点。
+设置主轴方向前后两侧分别预加载的网格行/列数，并配置是否显示预加载节点，只在 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll)开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。配合裁剪 clip或内容裁剪 [clipContent](arkts-arkui-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,8 +94,6 @@ cellLength(value: number)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -123,8 +113,6 @@ columnsGap(value: Length)
 设置列与列的间距。设置为小于0的值时，按默认值显示。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -146,8 +134,6 @@ columnsTemplate(value: string)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -167,8 +153,6 @@ columnsTemplate(value: string | ItemFillPolicy)
 设置当前网格组件布局列的数量，不设置时默认1列。当value设置为string类型时，使用方法参考[columnsTemplate(value: string)](#columnstemplate)。当value设置为ItemFillPolicy类型时，将根据Grid组件宽度对应[断点类型](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)确定列数。例如，ItemFillPolicy.BREAKPOINT_DEFAULT在组件宽度属于sm及更小的断点区间时显示2列，属于md断点区间时显示3列，属于lg及更大的断点区间时显示5列，且每列均为1fr。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -192,8 +176,6 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -204,8 +186,8 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [EdgeEffect](#edgeeffect) | 是 |
-| options | [EdgeEffectOptions](../arkts-apis/arkts-arkui-common-edgeeffectoptions-i.md) | 否 |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 |
 
 ## editMode
 
@@ -219,8 +201,6 @@ editMode(value: boolean)
 > 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -242,8 +222,6 @@ editModeOptions(options?: EditModeOptions)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -254,7 +232,7 @@ editModeOptions(options?: EditModeOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [EditModeOptions](#editmodeoptions) | 否 |
+| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | 否 |
 
 ## enableEditMode
 
@@ -265,8 +243,6 @@ enableEditMode(enabled: boolean | undefined)
 设置Grid是否启用编辑模式，启用编辑模式后可以在Grid组件内滑动多选GridItem。未通过该接口设置时，不启用编辑模式。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,8 +266,6 @@ enableScrollInteraction(value: boolean)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -314,8 +288,6 @@ focusWrapMode(mode: Optional<FocusWrapMode>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -326,7 +298,7 @@ focusWrapMode(mode: Optional<FocusWrapMode>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mode | Optional & lt;FocusWrapMode & gt; | 是 |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[FocusWrapMode](../arkts-apis/arkts-arkui-focuswrapmode-e.md)&gt; | 是 |
 
 ## friction
 
@@ -337,8 +309,6 @@ friction(value: number | Resource)
 设置摩擦系数，手动滑动滚动区域时生效，仅影响惯性滚动过程，对惯性滚动过程中的链式效果有间接影响。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -365,8 +335,6 @@ layoutDirection(value: GridDirection)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -391,8 +359,6 @@ maxCount(value: number)
 当layoutDirection是Column/ColumnReverse时，表示可显示的最大行数。当maxCount小于minCount时，maxCount和minCount都按默认值处理。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -419,8 +385,6 @@ minCount(value: number)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -440,8 +404,6 @@ multiSelectable(value: boolean)
 设置是否开启鼠标框选。开启框选后，可以配合GridItem的selected属性和onSelect事件获取GridItem的选中状态，还可以通过[多态样式设置GridItem的选中态样式（ GridItem默认无选中态样式）。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -463,8 +425,6 @@ nestedScroll(value: NestedScrollOptions)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -475,7 +435,7 @@ nestedScroll(value: NestedScrollOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [NestedScrollOptions](../arkts-apis/arkts-arkui-common-nestedscrolloptions-i.md) | 是 |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 |
 
 ## onEditModeChange
 
@@ -486,8 +446,6 @@ onEditModeChange(callback: Callback<boolean> | undefined)
 [enableEditMode](#enableeditmode)编辑模式状态变化时触发。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -511,8 +469,6 @@ onItemDragEnter(event: (event: ItemDragInfo) => void)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -532,8 +488,6 @@ onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void)
 拖拽离开GridItem时触发。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -555,8 +509,6 @@ onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: numb
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -573,11 +525,9 @@ onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: numb
 onItemDragStart(event: OnItemDragStartCallback)
 ```
 
-开始拖拽GridItem时触发。手指长按GridItem时触发该事件。由于拖拽检测也需要长按，且事件处理机制优先触发子组件事件，GridItem上绑定[LongPressGesture](../arkts-apis/arkts-arkui-longpressgestureinterface-i.md)时无法触发拖拽。如有长按和拖拽同时使用的需求可以 使用通用拖拽事件。拖拽浮起的GridItem可在应用窗口内移动，若需限制移动范围，可通过自定义手势实现，具体参考 [示例16（实现GridItem自定义拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例16实现griditem自定义拖拽)。不支持拖动到Grid边缘时自动滚动，可使用通用拖拽实现，具体参考 [示例17（通过拖拽事件实现GridItem拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例17通过拖拽事件实现griditem拖拽)。从 API版本26.0.0开始，可以使用[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)、 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)的 onMove接口实现该效果，参考 [示例22（使用OnMove进行拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例22使用onmove进行拖拽)。它同时支持跨行跨列的 GridItem的拖拽，但需注意Grid必须是可滚动的。
+开始拖拽GridItem时触发。手指长按GridItem时触发该事件。由于拖拽检测也需要长按，且事件处理机制优先触发子组件事件，GridItem上绑定[LongPressGesture](../arkts-apis/arkts-arkui-longpressgestureinterface-i.md)时无法触发拖拽。如有长按和拖拽同时使用的需求可以 使用通用拖拽事件。拖拽浮起的GridItem可在应用窗口内移动，若需限制移动范围，可通过自定义手势实现，具体参考 [示例16（实现GridItem自定义拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例16实现griditem自定义拖拽)。不支持拖动到Grid边缘时自动滚动，可使用通用拖拽实现，具体参考 [示例17（通过拖拽事件实现GridItem拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例17通过拖拽事件实现griditem拖拽)。从 API版本26.0.0开始，可以使用[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)、 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)的 [onMove](arkts-arkui-dynamicnode-c.md#onmove)接口实现该效果，参考 [示例22（使用OnMove进行拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例22使用onmove进行拖拽)。它同时支持跨行跨列的 GridItem的拖拽，但需注意Grid必须是可滚动的。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -587,7 +537,7 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | 是 | GridItem拖拽开始时触发的回调。<br>API version 22及之前版本，该参数类型为(event: ItemDragInfo, itemIndex: number) = & gt; (() = & gt; any) \ |
+| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | 是 | GridItem拖拽开始时触发的回调。 API version 22及之前版本，该参数类型为(event: ItemDragInfo, itemIndex: number) = & gt; (() = & gt; any) \ |
 
 ## onItemDrop
 
@@ -600,8 +550,6 @@ onItemDrop(
 绑定该事件的网格元素可作为拖拽释放目标，当GridItem停止拖拽时触发。当拖拽释放位置在网格元素之内时，isSuccess会返回true；在网格元素之外时，isSuccess会返回false。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -622,8 +570,6 @@ onReachEnd(event: () => void)
 网格到达末尾位置时触发。当网格内容不满一屏，并且最后一个子组件末端在Grid内时触发。Grid边缘效果为弹簧效果时，滑动经过末尾位置时触发一次，回弹返回末尾位置时再触发一次。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -647,8 +593,6 @@ onReachStart(event: () => void)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -670,8 +614,6 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void)
 网格滑动时触发。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 12
 
@@ -698,8 +640,6 @@ onScrollBarUpdate(event: (index: number, offset: number) => ComputedBarAttribute
 在Grid每帧布局结束时触发，可通过该回调设置滚动条的位置及长度。该接口只用作设置Grid的滚动条位置，不建议开发者在此接口中做业务逻辑处理。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -730,8 +670,6 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -754,8 +692,6 @@ onScrollIndex(event: (first: number, last: number) => void)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -772,11 +708,9 @@ onScrollIndex(event: (first: number, last: number) => void)
 onScrollStart(event: () => void)
 ```
 
-网格滑动开始时触发。手指拖动网格或网格的滚动条触发的滑动开始时，会触发该事件。使用Scroller滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
+网格滑动开始时触发。手指拖动网格或网格的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -796,11 +730,9 @@ onScrollStart(event: () => void)
 onScrollStop(event: () => void)
 ```
 
-网格滑动停止时触发。手指拖动网格或网格的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用Scroller滑动控制器触发的带动画的滑动，动画停止会触发该事件。
+网格滑动停止时触发。手指拖动网格或网格的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -824,8 +756,6 @@ rowsGap(value: Length)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -845,8 +775,6 @@ rowsTemplate(value: string)
 设置当前网格布局行的数量、固定行高或最小行高值，不设置时默认1行。例如，&nbsp;'1fr&nbsp;1fr&nbsp;2fr'是将父组件分3行，将父组件允许的高分为4等份，第1行占1份，第2行占1份，第3行占2份。rowsTemplate('repeat(auto-fit, track-size)')是设置最小行高值为track-size，自动计算行数和实际行高。rowsTemplate('repeat(auto-fill, track-size)')是设置固定行高值为track-size，自动计算行数。rowsTemplate('repeat(auto-stretch, track-size)')是设置固定行高值为track-size，使用rowsGap为最小行间距，自动计算行数和实际行间距。其中repeat、auto-fit、auto-fill、auto-stretch为关键字。track-size为行高，支持的单位包括px、vp、%或有效数字，默认单位为vp，track-size至少包括一个有效行高。auto-fit模式和auto-stretch模式只支持track-size为一个有效行高值，并且auto-stretch模式中的track-size只支持px、vp和有效数字，不支持%。auto-fill模式支持一个或多个有效行 高，如rowsTemplate('repeat(auto-fill, 20)')、rowsTemplate('repeat(auto-fill, 20 80px)')。设置为'0fr'，则这一行的行高为0，这一行GridItem不显示。设置为其他非法值，按固定1行处理。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -868,8 +796,6 @@ scrollBar(value: BarState)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -890,8 +816,6 @@ scrollBarColor(value: Color | number | string)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -911,8 +835,6 @@ scrollBarColor(color: Color | number | string | Resource)
 设置滚动条的颜色。与[scrollBarColor](#scrollbarcolor)相比， 参数名改为color，并开始支持 Resource类型。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -936,8 +858,6 @@ scrollBarWidth(value: number | string)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -957,8 +877,6 @@ scrollBarWidth(value: number | string | Resource)
 设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过Grid组件主轴方向的可视尺寸，则滚动条的宽度会变为默认值4vp。支持Resource资源类型。未通过该接口设置时，设置滚动条的宽度为4vp。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -982,8 +900,6 @@ supportAnimation(value: boolean)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -1003,8 +919,6 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 设置当前Grid组件是否支持在LazyForEach或Repeat中使用if/else渲染控制语法生成不包含任何子组件的空分支节点。未设置时不支持空分支节点。此属性初次赋值后不支持更新，所以赋值后无法在支持空分支、不支持空分支行为 之间切换。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1027,8 +941,6 @@ syncLoad(enable: boolean)
 设置是否同步加载Grid区域内所有子组件。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

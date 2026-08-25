@@ -4,14 +4,12 @@ Describes the settings for filtering media files by type and size.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## photoViewMimeType
@@ -25,8 +23,6 @@ Media file types used for filtering.
 **Type:** PhotoViewMIMETypes
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -43,8 +39,6 @@ Media file size used for filtering.
 **Type:** [FileSizeFilter](arkts-medialibrary-photoaccesshelper-filesizefilter-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

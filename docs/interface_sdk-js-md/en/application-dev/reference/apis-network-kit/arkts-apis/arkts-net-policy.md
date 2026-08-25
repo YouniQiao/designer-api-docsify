@@ -4,14 +4,12 @@ The **policy** module provides APIs for managing network policies, which allow y
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary
@@ -48,16 +46,16 @@ import { policy } from '@kit.NetworkKit';
 | [isUidNetAllowed(Network Policy Management)](arkts-network-policy-isuidnetallowed-f-sys.md) |
 | [isUidNetAllowed(Network Policy Management)](arkts-network-policy-isuidnetallowed-f-sys.md) |
 | [isUidNetAllowed(Network Policy Management)](arkts-network-policy-isuidnetallowed-f-sys.md) |
-| [off(Network Policy Management)](arkts-network-policy-off-f-sys.md#offnetuidpolicychange) |
-| [off(Network Policy Management)](arkts-network-policy-off-f-sys.md#offnetuidrulechange) |
-| [off(Network Policy Management)](arkts-network-policy-off-f-sys.md#offnetmeteredifaceschange) |
-| [off(Network Policy Management)](arkts-network-policy-off-f-sys.md#offnetquotapolicychange) |
-| [off(Network Policy Management)](arkts-network-policy-off-f-sys.md#offnetbackgroundpolicychange) |
-| [on(Network Policy Management)](arkts-network-policy-on-f-sys.md#onnetuidpolicychange) |
-| [on(Network Policy Management)](arkts-network-policy-on-f-sys.md#onnetuidrulechange) |
-| [on(Network Policy Management)](arkts-network-policy-on-f-sys.md#onnetmeteredifaceschange) |
-| [on(Network Policy Management)](arkts-network-policy-on-f-sys.md#onnetquotapolicychange) |
-| [on(Network Policy Management)](arkts-network-policy-on-f-sys.md#onnetbackgroundpolicychange) |
+| off(Network Policy Management) |
+| off(Network Policy Management) |
+| off(Network Policy Management) |
+| off(Network Policy Management) |
+| off(Network Policy Management) |
+| on(Network Policy Management) |
+| on(Network Policy Management) |
+| on(Network Policy Management) |
+| on(Network Policy Management) |
+| on(Network Policy Management) |
 | [resetPolicies(Network Policy Management)](arkts-network-policy-resetpolicies-f-sys.md) |
 | [resetPolicies(Network Policy Management)](arkts-network-policy-resetpolicies-f-sys.md) |
 | [restoreAllPolicies(Network Policy Management)](arkts-network-policy-restoreallpolicies-f-sys.md) |

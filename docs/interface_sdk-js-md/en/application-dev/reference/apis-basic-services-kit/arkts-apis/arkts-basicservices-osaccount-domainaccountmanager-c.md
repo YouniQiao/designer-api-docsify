@@ -4,14 +4,12 @@ Provides APIs for domain account management.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## updateAccountInfo
@@ -23,8 +21,6 @@ static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: Doma
 Updates information of a domain account. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.MANAGE_DOMAIN_ACCOUNTS
 
@@ -53,24 +49,3 @@ Updates information of a domain account. This API uses a promise to return the r
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) |
 | [12300003](../errorcode-account.md#12300003-account-not-found) |
 | [12300004](../errorcode-account.md#12300004-account-already-exists) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let oldDomainInfo: osAccount.DomainAccountInfo =
-  {domain: 'testDomain', accountName: 'oldtestAccountName'};
-let newDomainInfo: osAccount.DomainAccountInfo =
-  {domain: 'testDomain', accountName: 'newtestAccountName'};
-try {
-  osAccount.DomainAccountManager.updateAccountInfo(oldDomainInfo, newDomainInfo).then(() => {
-    console.info('updateAccountInfo, success');
-  }).catch((err: BusinessError) => {
-    console.error('updateAccountInfo err: ' + err);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`updateAccountInfo exception: code is ${err.code}, message is ${err.message}`);
-}
-```

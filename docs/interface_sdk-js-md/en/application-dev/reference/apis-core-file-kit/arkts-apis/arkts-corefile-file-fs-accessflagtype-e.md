@@ -4,8 +4,6 @@ Enumerates the locations of the file to verify.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## LOCAL
@@ -17,7 +15,5 @@ LOCAL = 0
 The file is stored locally.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

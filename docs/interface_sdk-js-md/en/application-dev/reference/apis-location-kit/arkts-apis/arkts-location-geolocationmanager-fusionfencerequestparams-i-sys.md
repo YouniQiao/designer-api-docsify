@@ -4,8 +4,6 @@ Indicates fusion fence request params.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Indicates fusion fence request params.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## cellFences
@@ -28,8 +26,6 @@ Indicates CELL fence array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -39,16 +35,14 @@ Indicates CELL fence array.
 ## expirationMs
 
 ```TypeScript
-expirationMs: double
+expirationMs: number
 ```
 
 Indicates expiration of the circular fence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +62,6 @@ Indicates the callback for reporting the fence transition status.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -79,16 +71,14 @@ Indicates the callback for reporting the fence transition status.
 ## fenceType
 
 ```TypeScript
-fenceType: int
+fenceType: number
 ```
 
 Indicates fusion fence type. This field is in bitmap format. Multiple types of fences can be transferred. The definition of each bit is as follows: [FusionFenceType](arkts-location-geolocationmanager-fusionfencetype-e-sys.md). The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,8 +98,6 @@ Indicates GNSS fence array.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -128,8 +116,6 @@ Identifier of the fusion fence. The string format should be a valid unique ident
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -139,16 +125,14 @@ Identifier of the fusion fence. The string format should be a valid unique ident
 ## loiterTimeMs
 
 ```TypeScript
-loiterTimeMs: int
+loiterTimeMs: number
 ```
 
 Indicates time for which a device is dwelling in the geofence, in milliseconds. If the device dwelling time reaches the value specified by this parameter, a GEOFENCE_TRANSITION_EVENT_DWELL event is reported. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,16 +143,14 @@ Indicates time for which a device is dwelling in the geofence, in milliseconds. 
 ## monitorTransitionEvents
 
 ```TypeScript
-monitorTransitionEvents: int
+monitorTransitionEvents: number
 ```
 
 Indicates geofence transition status monitored. This field is in bitmap format. The definition of each bit is as follows [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md). The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +170,6 @@ Indicates the location of POI.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -207,8 +187,6 @@ Indicates the type of POI.
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,8 +206,6 @@ Indicates fusion fence scene.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -247,8 +223,6 @@ Indicates Wi-Fi fence array.
 **Type:** Array&lt;[WifiFence](arkts-location-geolocationmanager-wififence-i-sys.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 ## COLOR
@@ -17,8 +15,6 @@ COLOR = 14
 颜色传感器。用于订阅/取消订阅颜色传感器数据，上报数据为[ColorResponse](arkts-sensorservice-sensor-colorresponse-i-sys.md)对象，包含光照强度和色温信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -33,8 +29,6 @@ SAR = 15
 吸收比率传感器。用于订阅/取消订阅吸收比率传感器数据，上报数据为[SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md)对象，包含电磁波吸收率信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 

@@ -4,14 +4,12 @@ Enumerates the advertising parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## advertisingData
@@ -25,8 +23,6 @@ Advertising data packet.
 **Type:** [AdvertisingData](arkts-connectivity-advertising-advertisingdata-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Advertising settings.
 **Type:** [AdvertisingSettings](arkts-connectivity-advertising-advertisingsettings-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

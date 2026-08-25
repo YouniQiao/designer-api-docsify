@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setWatermarkImage
@@ -21,8 +21,6 @@ Sets a watermark policy for a specified application of a specified user. Current
 > 2. The watermark image will be tiled repeatedly to cover the entire application interface.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -47,29 +45,6 @@ Sets a watermark policy for a specified application of a specified user. Current
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-let source: string = '/data/storage/el1/base/test.png';
-let accountId: number = 100;
-try {
-    securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId);
-    console.info(`Succeeded in setting set watermarkImage policy.`);
-} catch(err) {
-    console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
 
 
 ## setWatermarkImage
@@ -98,8 +73,6 @@ Sets a watermark policy for a specified application of a specified user. Current
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -124,7 +97,3 @@ Sets a watermark policy for a specified application of a specified user. Current
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [setWatermarkImage](#setwatermarkimage)

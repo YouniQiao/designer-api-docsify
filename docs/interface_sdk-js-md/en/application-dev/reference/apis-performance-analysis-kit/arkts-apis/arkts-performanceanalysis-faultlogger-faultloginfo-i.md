@@ -4,8 +4,6 @@ Defines the data structure of the fault log information.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -13,7 +11,7 @@ Defines the data structure of the fault log information.
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## fullLog
@@ -27,8 +25,6 @@ Full log text.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 18
 
@@ -46,8 +42,6 @@ Module on which the fault occurred.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -63,8 +57,6 @@ Process ID of the faulty process.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 18
 
@@ -82,8 +74,6 @@ Reason for the fault.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -99,8 +89,6 @@ Summary of the fault.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 18
 
@@ -118,8 +106,6 @@ Millisecond-level timestamp when the log was generated.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -136,8 +122,6 @@ Fault type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **System capability:** SystemCapability.HiviewDFX.Hiview.FaultLogger
@@ -153,8 +137,6 @@ User ID of the faulty process.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 18
 

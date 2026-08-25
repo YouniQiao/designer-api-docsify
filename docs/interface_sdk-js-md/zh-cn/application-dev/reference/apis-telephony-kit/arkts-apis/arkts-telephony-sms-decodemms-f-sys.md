@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## decodeMms
 
 ```TypeScript
-function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback<MmsInformation>): void
+function decodeMms(mmsFilePathName: string | Array<number>, callback: AsyncCallback<MmsInformation>): void
 ```
 
 彩信解码。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -26,7 +24,7 @@ function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mmsFilePathName | ArkTS-Dyn: string \| Array & lt;number & gt;<br>ArkTS-Sta：string \ | Array & lt;int & gt; | 是 |
+| mmsFilePathName | string \| Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md)&gt; | 是 |
 
 **错误码：**
@@ -40,56 +38,16 @@ function decodeMms(mmsFilePathName: string | Array<int>, callback: AsyncCallback
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mmsFilePathName: string = "filename";
-sms.decodeMms(mmsFilePathName, (err: BusinessError, data: sms.MmsInformation) => {
-      console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-
-const mmsPdu: Array<number> = [0x8c, 0x80, 0x98, 0x31, 0x00, 0x8d, 0x92, 0x89, 0x09, 0x80, 0x07, 0xea, 0x31, 0x30, 0x30, 0x38, 0x36, 0x00, 0x97, 0x07, 0xea, 0x31, 0x30, 0x30,0x31, 0x30, 0x00, 0x84, 0x74, 0x79, 0x70, 0x65, 0x00, 0x00];
-sms.decodeMms(mmsPdu, (err: BusinessError, data: sms.MmsInformation) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mmsFilePathName: string = "filename";
-let promise = sms.decodeMms(mmsFilePathName);
-promise.then((data: sms.MmsInformation) => {
-    console.info(`decodeMms success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`decodeMms failed, promise: err->${JSON.stringify(err)}`);
-});
-
-const mmsPdu: Array<number> = [0x8c, 0x80, 0x98, 0x31, 0x00, 0x8d, 0x92, 0x89, 0x09, 0x80, 0x07, 0xea, 0x31, 0x30, 0x30, 0x38, 0x36, 0x00, 0x97, 0x07, 0xea, 0x31, 0x30, 0x30,0x31, 0x30, 0x00, 0x84, 0x74, 0x79, 0x70, 0x65, 0x00, 0x00];
-let promiseArr = sms.decodeMms(mmsPdu);
-promiseArr.then((data: sms.MmsInformation) => {
-    console.info(`decodeMms success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`decodeMms failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## decodeMms
 
 ```TypeScript
-function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation>
+function decodeMms(mmsFilePathName: string | Array<number>): Promise<MmsInformation>
 ```
 
 彩信解码。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
@@ -99,7 +57,7 @@ function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mmsFilePathName | ArkTS-Dyn: string \| Array & lt;number & gt;<br>ArkTS-Sta：string \ | Array & lt;int & gt; | 是 |
+| mmsFilePathName | string \| Array & lt;number & gt; | 是 |
 
 **返回值：**
 
@@ -117,7 +75,3 @@ function decodeMms(mmsFilePathName: string | Array<int>): Promise<MmsInformation
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [decodeMms](#decodemms)

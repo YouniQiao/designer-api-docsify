@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
+import { networkSecurity } from 'kits/@kit.NetworkKit';
 ```
 
 ## verifyCertChain
@@ -15,8 +15,6 @@ export function verifyCertChain(cert: CertBlob[], caCert?: CertBlob, hostname?: 
 Verifies the server certificate chain and returns a sorted chain.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

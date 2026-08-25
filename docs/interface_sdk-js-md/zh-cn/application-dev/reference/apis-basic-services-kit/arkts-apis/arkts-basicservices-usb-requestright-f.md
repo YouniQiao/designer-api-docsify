@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## requestRight
@@ -15,8 +15,6 @@ function requestRight(deviceName: string): Promise<boolean>
 请求软件包的临时权限以访问设备。使用Promise异步回调。系统应用默认拥有访问设备权限，无需调用此接口申请。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -35,12 +33,3 @@ function requestRight(deviceName: string): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-let devicesName= "1-1";
-usb.requestRight(devicesName).then((ret) => {
-  console.info(`requestRight = ${ret}`);
-});
-```

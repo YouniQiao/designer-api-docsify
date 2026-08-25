@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## on('steadyStandingDetect')
@@ -15,8 +15,6 @@ function on(type: 'steadyStandingDetect', callback: Callback<SteadyStandingStatu
 Subscribes to steady standing state events.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
@@ -34,15 +32,3 @@ Subscribes to steady standing state events.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [32500001](../errorcode-deviceStatus.md#32500001-abnormal-service) |
 | [32500002](../errorcode-deviceStatus.md#32500002-subscription-failed) |
-
-**Examples**
-
-```TypeScript
-try {
-   deviceStatus.on('steadyStandingDetect', (data:deviceStatus.SteadyStandingStatus) => {
-      console.info('succeed to get status, now status = ' + data);
-   });
-} catch (err) {
-   console.error('on failed, err = ' + err);
-}
-```

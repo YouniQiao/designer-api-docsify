@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('streamChange')
@@ -15,8 +15,6 @@ function on(type: 'streamChange', callback: Callback<number>): void
 Subscribe Wi-Fi stream change events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -52,8 +50,6 @@ Subscribe Wi-Fi device config change events.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **System capability:** SystemCapability.Communication.WiFi.STA
@@ -88,8 +84,6 @@ Subscribe Wi-Fi hotspot sta join events.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
@@ -123,8 +117,6 @@ function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 Subscribe Wi-Fi hotspot sta leave events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 

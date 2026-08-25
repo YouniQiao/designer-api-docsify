@@ -4,8 +4,6 @@ Enumerates the rendering modes of the **Web** component. By default, the asynchr
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ASYNC_RENDER
@@ -17,8 +15,6 @@ ASYNC_RENDER = 0
 Asynchronous rendering mode of the Web component. The ArkWeb component acts as a graphics surface node and independently outputs display. The maximum height of the Web component does not exceed 7,680 px (physical pixels).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,8 +29,6 @@ SYNC_RENDER = 1
 Synchronous rendering mode of the Web component. The ArkWeb component acts as a graphics canvas node and outputs display together with system components, allowing longer Web component content to be rendered. The maximum height of the Web component does not exceed 500,000 px (physical pixels).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

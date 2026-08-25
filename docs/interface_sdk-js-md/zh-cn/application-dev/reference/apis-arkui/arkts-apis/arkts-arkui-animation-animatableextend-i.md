@@ -1,3 +1,0 @@
-# AnimatableExtend
-
-**ArkTS模式：** 

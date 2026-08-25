@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## revokeSharedDirectoryPermission
@@ -15,8 +15,6 @@ function revokeSharedDirectoryPermission(): Promise<void>
 Revokes permission for application-shared directories
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_SHARED_FILE
 

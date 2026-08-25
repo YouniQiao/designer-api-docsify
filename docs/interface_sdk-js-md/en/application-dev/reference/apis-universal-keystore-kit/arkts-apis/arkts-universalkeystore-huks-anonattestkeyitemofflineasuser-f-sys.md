@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## anonAttestKeyItemOfflineAsUser
@@ -22,8 +22,6 @@ Obtains an anonymous key certificate in offline mode for a specified user. This 
 > verify the certificate expiration.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 

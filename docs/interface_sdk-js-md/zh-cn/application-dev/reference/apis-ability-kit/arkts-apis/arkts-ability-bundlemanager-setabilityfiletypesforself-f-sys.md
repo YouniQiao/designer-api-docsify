@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setAbilityFileTypesForSelf
@@ -15,8 +15,6 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 设置当前应用支持打开的文件类型。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SELF_SKILLS
 
@@ -41,23 +39,3 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 | [17700351](../errorcode-bundle.md#17700351-无效的文件类型) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName: string = "entry";
-let abilityName: string = "EntryAbility";
-let fileTypes: Array<string> = ["general.png", "general.jpeg"];
-
-try {
-  bundleManager.setAbilityFileTypesForSelf(moduleName, abilityName, fileTypes);
-  hilog.info(0x0000, 'testTag', 'setAbilityFileTypesForSelf successfully');
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setAbilityFileTypesForSelf failed. Cause: %{public}s', message);
-}
-```

@@ -8,8 +8,6 @@ Callback invoked when the WebSocketServer connection is closed.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Parameters:**

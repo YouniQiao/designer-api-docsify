@@ -7,8 +7,6 @@ The **batteryStatistics** module provides APIs for querying software and hardwar
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryStatistics
 
 **System API:** This is a system API.
@@ -16,7 +14,7 @@ The **batteryStatistics** module provides APIs for querying software and hardwar
 ## Modules to Import
 
 ```TypeScript
-import { batteryStats } from '@kit.BasicServicesKit';
+import { batteryStats } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

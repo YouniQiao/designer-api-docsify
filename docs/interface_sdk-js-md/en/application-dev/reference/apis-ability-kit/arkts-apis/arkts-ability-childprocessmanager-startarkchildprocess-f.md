@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from '@kit.AbilityKit';
+import { childProcessManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## startArkChildProcess
 
 ```TypeScript
-function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>
+function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<number>
 ```
 
 Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned.
@@ -23,8 +23,6 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 > created child process is also destroyed.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +40,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -53,75 +51,3 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 | [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
 | [16000062](../errorcode-ability.md#16000062-too-many-child-processes) |
-
-**Examples**
-
-Sample code for the child process:
-
-```TypeScript
-// Create the child process class DemoProcess.ets in src/main/ets/process of module1.
-// module1/src/main/ets/process/DemoProcess.ets
-import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
-
-export default class DemoProcess extends ChildProcess {
-
-  onStart(args?: ChildProcessArgs) {
-    let entryParams = args?.entryParams;
-    let fd = args?.fds?.key1;
-    // ..
-  }
-}
-```
-
-Sample code for the main process is provided below. For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-// Call childProcessManager.startArkChildProcess to start the child process.
-// module1/src/main/ets/tool/Tool.ets
-import { common, ChildProcessArgs, ChildProcessOptions, childProcessManager } from '@kit.AbilityKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import DemoProcess from '../process/DemoProcess';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Text('Click')
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            try {
-              DemoProcess.toString(); // Call any API of the DemoProcess class to prevent the code from being directly optimized by the compiler because it is not being referenced.
-              let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-              let path = context.filesDir + "/test.txt";
-              let file = fileIo.openSync(path, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
-              let args: ChildProcessArgs = {
-                entryParams: "testParam",
-                fds: {
-                  "key1": file.fd
-                }
-              };
-              let options: ChildProcessOptions = {
-                isolationMode: false
-              };
-              childProcessManager.startArkChildProcess("module1/ets/process/DemoProcess.ets", args, options)
-                .then((pid) => {
-                  console.info(`startChildProcess success, pid: ${pid}`);
-                })
-                .catch((err: BusinessError) => {
-                  console.error(`startChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
-                })
-            } catch (err) {
-              console.error(`startChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
-            }
-          });
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

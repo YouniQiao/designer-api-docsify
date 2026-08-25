@@ -4,8 +4,6 @@ Decide whether the width of select menu fit the trigger or content
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FIT_CONTENT
@@ -17,8 +15,6 @@ FIT_CONTENT = 'fit_content'
 The menu width fit the content.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ FIT_TRIGGER = 'fit_trigger'
 The menu width fit the trigger.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

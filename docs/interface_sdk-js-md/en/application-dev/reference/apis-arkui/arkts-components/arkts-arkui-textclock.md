@@ -1,7 +1,7 @@
 # TextClock
 
 The **TextClock** component displays the current system time in text format for different time zones. The time is accurate to seconds.
-When the component is invisible, the time change stops. The visible status of a component is processed based on onVisibleAreaChange. If the visible threshold **ratios** is greater than 0, the component is visible.
+When the component is invisible, the time change stops. The visible status of a component is processed based on [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange). If the visible threshold **ratios** is greater than 0, the component is visible.
 
 ## Child Components
 
@@ -16,8 +16,6 @@ TextClock(options?: TextClockOptions)
 Create TextClock component.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

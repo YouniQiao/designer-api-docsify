@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ GET_PACK_INFO_ALL = 0x00000000
 获取应用包pack.info的所有信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -36,8 +32,6 @@ GET_PACKAGES = 0x00000001
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ GET_BUNDLE_SUMMARY = 0x00000002
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ GET_MODULE_SUMMARY = 0x00000004
 获取应用包pack.info的module摘要信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

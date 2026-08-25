@@ -7,60 +7,52 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## 导入模块
 
 ```TypeScript
-import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from 'kits/@kit.AudioKit';
 ```
 
 ## fd
 
 ```TypeScript
-fd: int
+fd: number
 ```
 
 音振资源文件的文件描述符，通常大于等于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## length
 
 ```TypeScript
-length?: long
+length?: number
 ```
 
 读取数据的字节长度。默认情况下，长度为文件中从偏移量位置开始的剩余字节数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## offset
 
 ```TypeScript
-offset?: long
+offset?: number
 ```
 
 文件中数据读取的偏移量，单位为字节。默认情况下，偏移量为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## openNetworkManagerSettings
@@ -15,8 +15,6 @@ function openNetworkManagerSettings(context: Context): Promise<boolean>
 Open the network manager settings page.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -38,17 +36,3 @@ Open the network manager settings page.
 | --- |
 | [14800000](../errorcode-settings.md#14800000-parameter-check-failed) |
 | [14800010](../errorcode-settings.md#14800010-uiability-required) |
-
-**Examples**
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Redirect to the network manager settings page.
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-settings.openNetworkManagerSettings(context).then((status) => {
-  console.info(`callback:return whether settings is open.`);
-});
-```

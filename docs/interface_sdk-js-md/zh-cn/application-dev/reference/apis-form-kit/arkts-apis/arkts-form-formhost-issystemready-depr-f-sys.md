@@ -15,8 +15,6 @@ function isSystemReady(callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md)
@@ -31,30 +29,6 @@ function isSystemReady(callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.isSystemReady((error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost isSystemReady, error: ${JSON.stringify(error)}`);
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.isSystemReady().then(() => {
-  console.info('formHost isSystemReady success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost isSystemReady, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## isSystemReady
 
@@ -65,8 +39,6 @@ function isSystemReady(): Promise<void>
 检查系统是否准备好。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -81,7 +53,3 @@ function isSystemReady(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [isSystemReady](#issystemready)

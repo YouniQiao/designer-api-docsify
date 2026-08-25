@@ -4,8 +4,6 @@ Defines the AbsAlbum.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AbsAlbum](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md)
@@ -17,7 +15,7 @@ Defines the AbsAlbum.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@kit.CoreFileKit';
+import { userFileManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getPhotoAssets
@@ -29,8 +27,6 @@ getPhotoAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<FileAs
 Obtains image and video assets. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -55,166 +51,6 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | --- |
 | 13900020 |
 
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getPhotoAssets');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-
-  mgr.getPhotoAssets(fetchOptions, async (err, fetchResult) => {
-    if (fetchResult != undefined) {
-      console.info('fetchResult success');
-      let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-      if (fileAsset != undefined) {
-        console.info('fileAsset.displayName : ' + fileAsset.displayName);
-      }
-    } else {
-      console.error('fetchResult fail' + err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('getPhotoAssets');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    if (fetchResult != undefined) {
-      console.info('fetchResult success');
-      let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-      if (fileAsset != undefined) {
-        console.info('fileAsset.displayName :' + fileAsset.displayName);
-      }
-    }
-  } catch (err) {
-    console.error('getPhotoAssets failed, message = ', err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('albumGetFileAssetsDemoCallback');
-
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-  let album: userFileManager.Album = await albumList.getFirstObject();
-  album.getPhotoAssets(fetchOption, (err, albumFetchResult) => {
-    if (albumFetchResult != undefined) {
-      console.info('album getPhotoAssets successfully, getCount: ' + albumFetchResult.getCount());
-    } else {
-      console.error('album getPhotoAssets failed with error: ' + err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('albumGetFileAssetsDemoPromise');
-
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let albumFetchOptions: userFileManager.AlbumFetchOptions = {
-    predicates: predicates
-  };
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  const albumList: userFileManager.FetchResult<userFileManager.Album> = await mgr.getPhotoAlbums(albumFetchOptions);
-  const album: userFileManager.Album = await albumList.getFirstObject();
-  album.getPhotoAssets(fetchOption).then((albumFetchResult) => {
-    console.info('album getFileAssets successfully, getCount: ' + albumFetchResult.getCount());
-  }).catch((err: BusinessError) => {
-    console.error('album getFileAssets failed with error: ' + err);
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumGetFileAssetsDemoCallback');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  const trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  if (trashAlbum === undefined) {
-    console.error('trashAlbum is undefined');
-    return;
-  }
-  trashAlbum.getPhotoAssets(fetchOption, (err, fetchResult) => {
-    if (fetchResult != undefined) {
-      let count = fetchResult.getCount();
-      console.info('fetchResult.count = ', count);
-    } else {
-      console.error('getFileAssets failed, message = ', err);
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumGetFileAssetsDemoPromise');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  const trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
-  let count = fetchResult.getCount();
-  console.info('fetchResult.count = ', count);
-}
-```
-
 ## getPhotoAssets
 
 ```TypeScript
@@ -224,8 +60,6 @@ getPhotoAssets(options: FetchOptions): Promise<FetchResult<FileAsset>>
 Obtains image and video assets. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -255,10 +89,6 @@ Obtains image and video assets. This API uses a promise to return the result.
 | --- |
 | 13900020 |
 
-**Examples**
-
-See [getPhotoAssets](#getphotoassets)
-
 ## albumName
 
 ```TypeScript
@@ -273,8 +103,6 @@ Name of the album.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -296,8 +124,6 @@ Subtype of the album.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** albumSubType
@@ -317,8 +143,6 @@ Type of the album to obtain.
 **Type:** AlbumType
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -340,8 +164,6 @@ URI of the album.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [albumUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumuri)
@@ -361,8 +183,6 @@ Number of files in the album.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -387,8 +207,6 @@ URI of the cover file of the album.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [coverUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#coveruri)
@@ -408,8 +226,6 @@ Time when the album was modified. Unit: ms, The value must be an integer greater
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## stopStream
 
 ```TypeScript
-function stopStream(streamId: int): void
+function stopStream(streamId: number): void
 ```
 
-Stop Streaming
+停止指定传输流，使传输流停止发送或接收视频数据。需与startStream()方法配对使用， 在不需要传输数据时应调用此方法停止传输流，最后调用destroyStream()销毁传输流以释放资源。 使用场景包括视频通话暂停、用户关闭摄像头、切换前后摄像头等需要临时停止视频传输时调用。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -28,7 +26,7 @@ Stop Streaming
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamId | number | 是 |
 
 **错误码：**
 
@@ -36,14 +34,3 @@ Stop Streaming
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let streamId = 100;
-hilog.info(0x0000, 'testTag', 'stopStream called');
-abilityConnectionManager.stopStream(streamId)
-```

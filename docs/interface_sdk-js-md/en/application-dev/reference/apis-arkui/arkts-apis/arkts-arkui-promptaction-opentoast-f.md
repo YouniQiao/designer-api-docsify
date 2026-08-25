@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## openToast
@@ -25,8 +25,6 @@ Shows a toast. This API uses a promise to return the toast ID.
 > [openToast](arkts-arkui-arkui-uicontext-promptaction-c.md#opentoast) API through this object.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,50 +50,3 @@ Shows a toast. This API uses a promise to return the toast ID.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { PromptAction, UIContext } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct toastExample {
-  @State toastId: number = 0;
-  uiContext: UIContext = this.getUIContext();
-  promptAction: PromptAction = this.uiContext.getPromptAction();
-
-  build() {
-    Column() {
-      Button('Open Toast')
-        .height(100)
-        .type(ButtonType.Capsule)
-        .onClick(() => {
-          this.promptAction.openToast({
-            message: 'Toast Message',
-            duration: 10000,
-          }).then((toastId: number) => {
-            this.toastId = toastId;
-          })
-            .catch((error: BusinessError) => {
-              console.error(`openToast error code is ${error.code}, message is ${error.message}`);
-            })
-        })
-      Blank().height(50)
-      Button('Close Toast')
-        .height(100)
-        .type(ButtonType.Capsule)
-        .onClick(() => {
-          try {
-            this.promptAction.closeToast(this.toastId);
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`CloseToast error code is ${code}, message is ${message}`);
-          }
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```

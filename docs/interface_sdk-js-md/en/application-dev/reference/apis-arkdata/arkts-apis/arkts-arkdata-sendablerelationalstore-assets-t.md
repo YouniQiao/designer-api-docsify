@@ -8,8 +8,6 @@ Represent an array of [Assets](arkts-arkdata-sendablerelationalstore-asset-i.md)
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Property type:** collections.Array&lt;Asset&gt;

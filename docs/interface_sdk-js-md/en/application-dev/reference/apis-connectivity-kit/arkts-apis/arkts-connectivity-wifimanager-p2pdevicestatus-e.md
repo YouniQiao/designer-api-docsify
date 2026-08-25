@@ -1,10 +1,8 @@
 # P2pDeviceStatus
 
-P2P device status.@enum { int }
+P2P device status.@enum { number }
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -18,8 +16,6 @@ Indicate p2p device is connected.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## INVITED
@@ -31,8 +27,6 @@ INVITED = 1
 Indicate p2p device is invited.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -46,8 +40,6 @@ Indicate p2p device is failed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## AVAILABLE
@@ -60,8 +52,6 @@ Indicate p2p device is available.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## UNAVAILABLE
@@ -73,7 +63,5 @@ UNAVAILABLE = 4
 Indicate p2p device is unavailable.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P

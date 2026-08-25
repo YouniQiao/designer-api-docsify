@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
 ## 导入模块
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## themeColor
@@ -25,8 +23,6 @@ themeColor?: CustomColors
 **类型：** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 

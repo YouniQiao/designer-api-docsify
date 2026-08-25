@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## formatPhoneNumberToE164
@@ -15,8 +15,6 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callb
 Converts a phone number into the E.164 format. This API uses an asynchronous callback to return the result.The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -38,30 +36,6 @@ Converts a phone number into the E.164 format. This API uses an asynchronous cal
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumberToE164("138xxxxxxxx", "CN", (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`formatPhoneNumberToE164 fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`formatPhoneNumberToE164 success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumberToE164("138xxxxxxxx", "CN").then((data: string) => {
-    console.info(`formatPhoneNumberToE164 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`formatPhoneNumberToE164 fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## formatPhoneNumberToE164
 
@@ -72,8 +46,6 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Prom
 Converts a phone number into the E.164 format. This API uses a promise to return the result.The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned.All country codes are supported.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -99,7 +71,3 @@ Converts a phone number into the E.164 format. This API uses a promise to return
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [formatPhoneNumberToE164](#formatphonenumbertoe164)

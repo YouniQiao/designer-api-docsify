@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCellInformation
 
 ```TypeScript
-function getCellInformation(slotId: int, callback: AsyncCallback<Array<CellInformation>>): void
+function getCellInformation(slotId: number, callback: AsyncCallback<Array<CellInformation>>): void
 ```
 
 Get the current cell information.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -28,7 +26,7 @@ Get the current cell information.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | 是 |
 
 **错误码：**
@@ -43,56 +41,16 @@ Get the current cell information.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getCellInformation((err: BusinessError, data: Array<radio.CellInformation>) => {
-    if (err) {
-        console.error(`getCellInformation failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getCellInformation success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getCellInformation(slotId, (err: BusinessError, data: Array<radio.CellInformation>) => {
-    if (err) {
-        console.error(`getCellInformation failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getCellInformation success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getCellInformation(slotId).then((data: Array<radio.CellInformation>) => {
-    console.info(`getCellInformation success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCellInformation failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getCellInformation
 
 ```TypeScript
-function getCellInformation(slotId?: int): Promise<Array<CellInformation>>
+function getCellInformation(slotId?: number): Promise<Array<CellInformation>>
 ```
 
 Get the current cell information.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -104,7 +62,7 @@ Get the current cell information.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| slotId | number | 否 |
 
 **返回值：**
 
@@ -124,10 +82,6 @@ Get the current cell information.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-参见 [getCellInformation](#getcellinformation)
-
 
 ## getCellInformation
 
@@ -138,8 +92,6 @@ function getCellInformation(callback: AsyncCallback<Array<CellInformation>>): vo
 Get the current cell information.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -164,7 +116,3 @@ Get the current cell information.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getCellInformation](#getcellinformation)

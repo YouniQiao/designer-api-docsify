@@ -4,8 +4,6 @@ Enumerates vibration stop modes. This parameter is required for [vibrator.stopVi
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## VIBRATOR_STOP_MODE_TIME
@@ -18,8 +16,6 @@ The vibration to stop is in **duration** mode.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## VIBRATOR_STOP_MODE_PRESET
@@ -31,7 +27,5 @@ VIBRATOR_STOP_MODE_PRESET = 'preset'
 The vibration to stop is in **EffectId** mode.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice

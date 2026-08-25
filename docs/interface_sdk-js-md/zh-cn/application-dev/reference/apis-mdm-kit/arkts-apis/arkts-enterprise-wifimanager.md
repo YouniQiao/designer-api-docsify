@@ -2,9 +2,13 @@
 
 本模块提供企业设备Wi-Fi管理能力，包括查询Wi-Fi开启状态、配置Wi-Fi连接、管理Wi-Fi名单等。  
 **使用场景**：  
-- 企业设备批量配置Wi-Fi连接，简化设备初始化流程 - 控制设备可连接的Wi-Fi网络，实现网络访问合规管理 - 管理企业设备的Wi-Fi开关，统一网络策略  
+- 企业设备批量配置Wi-Fi连接，简化设备初始化流程  
+- 控制设备可连接的Wi-Fi网络，实现网络访问合规管理  
+- 管理企业设备的Wi-Fi开关，统一网络策略  
 **功能收益**：  
-- 提高企业网络管理效率，减少IT运维成本 - 确保设备仅连接安全的Wi-Fi网络，降低安全风险 - 实现网络策略统一管控，满足企业合规要求
+- 提高企业网络管理效率，减少IT运维成本  
+- 确保设备仅连接安全的Wi-Fi网络，降低安全风险  
+- 实现网络策略统一管控，满足企业合规要求
 
 > **说明：**&gt;
 > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。&gt;
@@ -13,8 +17,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -22,7 +24,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## 汇总

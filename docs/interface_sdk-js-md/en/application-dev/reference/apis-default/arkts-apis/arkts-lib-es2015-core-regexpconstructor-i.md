@@ -1,7 +1,5 @@
 # RegExpConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (pattern: RegExp | string, flags?: string): RegExp
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -31,8 +27,6 @@
 ```TypeScript
 new (pattern: RegExp | string, flags?: string): RegExp
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

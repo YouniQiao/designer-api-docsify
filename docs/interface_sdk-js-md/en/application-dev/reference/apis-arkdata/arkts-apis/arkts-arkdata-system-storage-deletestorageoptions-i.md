@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
@@ -23,8 +21,6 @@ Called when the execution is completed.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
@@ -40,8 +36,6 @@ fail?: (data: string, code: number) => void
 Called when the stored content fails to be deleted.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
@@ -66,8 +60,6 @@ Called when the stored content is deleted successfully.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
@@ -85,8 +77,6 @@ Content index. the value contains a maximum of 32 characters and cannot contain 
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 

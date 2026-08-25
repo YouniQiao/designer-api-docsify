@@ -13,14 +13,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -63,16 +61,13 @@ import { usbManager } from '@kit.BasicServicesKit';
 | [addDeviceAccessRight(USB管理)](arkts-basicservices-usbmanager-adddeviceaccessright-f-sys.md) |
 | [getCurrentFunctions(USB管理)](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md) |
 | [getDeviceFunctions(USB管理)](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md) |
-| [getDeviceFunctions(USB管理)](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md) |
 | [getFunctionsFromString(USB管理)](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md) |
 | [getPortList(USB管理)](arkts-basicservices-usbmanager-getportlist-f-sys.md) |
 | [getPorts(USB管理)](arkts-basicservices-usbmanager-getports-f-sys.md) |
 | [getPortSupportModes(USB管理)](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md) |
 | [getStringFromFunctions(USB管理)](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md) |
-| [getStringFromFunctions(USB管理)](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md) |
 | [getSupportedModes(USB管理)](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md) |
 | [setCurrentFunctions(USB管理)](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md) |
-| [setDeviceFunctions(USB管理)](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md) |
 | [setDeviceFunctions(USB管理)](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md) |
 | [setPortRoles(USB管理)](arkts-basicservices-usbmanager-setportroles-f-sys.md) |
 | [setPortRoleTypes(USB管理)](arkts-basicservices-usbmanager-setportroletypes-f-sys.md) |

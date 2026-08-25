@@ -4,14 +4,12 @@ Defines a vector that contains the x, y, z, and w coordinate values.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## w
 
 ```TypeScript
-w: double
+w: number
 ```
 
 W coordinate value of the vector.Value range: (-∞, +∞).
@@ -19,8 +17,6 @@ W coordinate value of the vector.Value range: (-∞, +∞).
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -31,7 +27,7 @@ W coordinate value of the vector.Value range: (-∞, +∞).
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 X coordinate value of the vector.Value range: (-∞, +∞).
@@ -39,8 +35,6 @@ X coordinate value of the vector.Value range: (-∞, +∞).
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,7 +45,7 @@ X coordinate value of the vector.Value range: (-∞, +∞).
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 Y coordinate value of the vector.Value range: (-∞, +∞).
@@ -59,8 +53,6 @@ Y coordinate value of the vector.Value range: (-∞, +∞).
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,7 +63,7 @@ Y coordinate value of the vector.Value range: (-∞, +∞).
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
 Z coordinate value of the vector.Value range: (-∞, +∞).
@@ -79,8 +71,6 @@ Z coordinate value of the vector.Value range: (-∞, +∞).
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

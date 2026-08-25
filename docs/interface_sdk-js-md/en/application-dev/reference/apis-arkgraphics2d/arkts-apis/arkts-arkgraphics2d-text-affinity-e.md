@@ -4,8 +4,6 @@ Enumerates the affinity modes.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## UPSTREAM
@@ -17,8 +15,6 @@ UPSTREAM = 0
 The position has affinity for the upstream side of the text position.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -33,8 +29,6 @@ DOWNSTREAM = 1
 The position has affinity for the downstream side of the text position.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

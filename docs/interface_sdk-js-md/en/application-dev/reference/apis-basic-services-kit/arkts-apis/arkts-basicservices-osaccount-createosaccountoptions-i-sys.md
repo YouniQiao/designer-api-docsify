@@ -4,8 +4,6 @@ Represents the optional parameter used to create an OS account.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the optional parameter used to create an OS account.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## allowedPreinstalledBundles
@@ -22,13 +20,11 @@ import { osAccount } from '@kit.BasicServicesKit';
 allowedPreinstalledBundles?: Array<string>
 ```
 
-Trustlist of the preinstalled applications, which can be installed on the device. The default value is **std:: nullopt**.
+Trustlist of the preinstalled applications, which can be installed on the device. The default value is **std::nullopt**.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -45,8 +41,6 @@ Forbidden list of the preinstalled applications, which cannot be installed on th
 **Type:** Array&lt;string&gt;
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -68,8 +62,6 @@ Short name of the account (used as the name of the personal folder).
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -85,8 +77,6 @@ Token obtained from the authentication management API. The value is left empty b
 **Type:** Uint8Array
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Account.OsAccount
 

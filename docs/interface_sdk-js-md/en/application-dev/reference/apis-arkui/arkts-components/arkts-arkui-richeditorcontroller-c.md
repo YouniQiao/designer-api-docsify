@@ -14,8 +14,6 @@ Implements the **RichEditor** component controller. Inherits from [RichEditorBas
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -57,8 +55,6 @@ Only the following universal attributes are supported: [size](../../../reference
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -87,8 +83,6 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 Adds an image span. If the caret in the component is blinking, the caret position is updated to be after the inserted image span.This API is a synchronous API. In a weak network environment, directly adding network images may block the UI thread and cause screen freezing. To avoid potential loading issues, do not directly add a network image.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,8 +113,6 @@ Adds a symbol span. If the caret in the component is blinking, the caret positio
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -149,8 +141,6 @@ addTextSpan(content: ResourceStr, options?: RichEditorTextSpanOptions): number
 Adds a text span. If the caret in the component is blinking, the caret position is updated to be after the inserted text span.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,8 +171,6 @@ Deletes the text and image spans in a specified range.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -204,8 +192,6 @@ fromStyledString(value: StyledString): Array<RichEditorSpan>
 Converts a styled string into a span.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -241,8 +227,6 @@ Obtains the paragraph information within a specified range.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -271,8 +255,6 @@ Obtains the range and span information of the selected content. If no text is se
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -294,8 +276,6 @@ getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorT
 Obtains span information.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -324,8 +304,6 @@ toStyledString(value: RichEditorRange): StyledString
 Convert the component content within the given range into a styled string. SymbolSpan and BuilderSpan cannot be converted.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -361,8 +339,6 @@ Updates the paragraph style.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -384,8 +360,6 @@ updateSpanStyle(value: RichEditorUpdateTextSpanStyleOptions | RichEditorUpdateIm
 Updates the text, image, or symbol span style.If only part of a span is updated, the span is split into multiple spans based on the updated part and the non- updated part.Calling this API will not close the custom context menu on selection by default.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

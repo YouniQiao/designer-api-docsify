@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## allocUninitialized
@@ -15,8 +15,6 @@ function allocUninitialized(size: number): FastBuffer
 创建指定大小未初始化的FastBuffer对象。调用[fill](arkts-arkts-fastbuffer-fastbuffer-c.md#fill)函数初始化该对象。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -33,13 +31,3 @@ function allocUninitialized(size: number): FastBuffer
 | 类型 |
 | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitialized(10);
-buf.fill(0);
-// "buf":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-```

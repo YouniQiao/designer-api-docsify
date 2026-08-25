@@ -10,14 +10,12 @@ Represents the performance test strategy.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Test.PerfTest
 
 ## Modules to Import
 
 ```TypeScript
-import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from 'kits/@kit.TestKit';
 ```
 
 ## actionCode
@@ -31,8 +29,6 @@ Code segment to test. The input parameter is a callback function, which needs to
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -50,8 +46,6 @@ Bundle name of the application to test. The format must be the same as that of *
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
@@ -59,16 +53,14 @@ Bundle name of the application to test. The format must be the same as that of *
 ## iterations
 
 ```TypeScript
-iterations?: int
+iterations?: number
 ```
 
 Number of test iterations. The value must be an integer greater than 0. The default value is **5**. An exception is thrown if the value is out of range.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -86,8 +78,6 @@ Array of performance metrics to test. If the array is empty, no performance metr
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
@@ -104,8 +94,6 @@ Code segment for resetting the environment after the test is complete. This para
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
@@ -113,16 +101,14 @@ Code segment for resetting the environment after the test is complete. This para
 ## timeout
 
 ```TypeScript
-timeout?: int
+timeout?: number
 ```
 
-resetCode**) at a time. The value is an integer greater than 0, in milliseconds. The default value is **10000**. If the execution of a test code segment takes a long time, you can increase the value of this parameter to prevent timeout. If a timeout occurs, an exception is triggered and the test execution is terminated.
+resetCode**) at a time. The value is an integer greater than 0, in milliseconds. The default value is **10000**. If the execution of a test code segment takes a number time, you can increase the value of this parameter to prevent timeout. If a timeout occurs, an exception is triggered and the test execution is terminated.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

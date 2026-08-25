@@ -1,7 +1,5 @@
 # Int8Array
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,5 +12,3 @@ readonly [Symbol.toStringTag]: "Int8Array"
 ```
 
 **Type:** "Int8Array"
-
-**ArkTS mode:** 

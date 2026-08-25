@@ -5,7 +5,7 @@ ArkTS language
 ## Modules to Import
 
 ```TypeScript
-import { lang, Retention, RetentionPolicy } from '@kit.ArkTS';
+import { lang, Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -16,11 +16,11 @@ import { lang, Retention, RetentionPolicy } from '@kit.ArkTS';
 | --- |
 | [lang](arkts-arkts-lang-n.md) |
 
-### Interfaces
+### Annotations
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [Retention](arkts-arkts-lang-retention-i.md) |
+| [Retention](arkts-arkts-lang-retention-a.md) |
 
 ### Enums
 

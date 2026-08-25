@@ -7,8 +7,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块

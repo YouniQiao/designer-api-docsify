@@ -8,14 +8,12 @@ Defines the network connection properties.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## dnses
@@ -29,8 +27,6 @@ Network address. For details, see [NetAddress](arkts-network-connection-netaddre
 **Type:** Array&lt;NetAddress&gt;
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -46,8 +42,6 @@ Domain name.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## interfaceName
@@ -62,8 +56,6 @@ Network interface card (NIC) name.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## isIPv4LinkValid
@@ -77,8 +69,6 @@ Whether IPv4 is available on the current network. **true**: IPv4 is available wh
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,8 +86,6 @@ Whether IPv6 is available on the current network. **true**: IPv6 is available wh
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -114,23 +102,19 @@ Network link information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## mtu
 
 ```TypeScript
-mtu: int
+mtu: number
 ```
 
 Maximum transmission unit (MTU).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -145,7 +129,5 @@ Network route information.
 **Type:** Array&lt;RouteInfo&gt;
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core

@@ -4,14 +4,12 @@ Describes the information about the context of exiting the PhotoPicker. It can b
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## albumUri
@@ -21,14 +19,13 @@ albumUri: string
 ```
 
 URI of the album in the media library when the user selects an image and exits.  
-- If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string. - If the user exits after selecting from search results, text recommendations, or avatar recommendations, the next restoration is not supported, and the returned **albumUri** is an empty string.  
-The default value is an empty string.
+- If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string.  
+- If the user exits after selecting from search results, text recommendations, or avatar recommendations, the  
+next restoration is not supported, and the returned **albumUri** is an empty string.The default value is an empty string.
 
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -46,8 +43,6 @@ File name of the top-left image in the grid interface when the user last selecte
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -55,16 +50,14 @@ File name of the top-left image in the grid interface when the user last selecte
 ## fileSize
 
 ```TypeScript
-fileSize?: int
+fileSize?: number
 ```
 
 File size of the top-left image in the grid interface when the user last selected an image. The default value is **0**. Unit: Byte, The value must be an integer greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,8 +77,6 @@ Level of the grid when the user exits last time.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -95,16 +86,14 @@ Level of the grid when the user exits last time.
 ## recommendationType
 
 ```TypeScript
-recommendationType: int
+recommendationType: number
 ```
 
 Enumerated value of the recommended content set by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).If no recommendation was set during the last selection, the default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -113,16 +102,14 @@ Enumerated value of the recommended content set by the user during the last sele
 ## selectedRecommendationType
 
 ```TypeScript
-selectedRecommendationType: int
+selectedRecommendationType: number
 ```
 
 Enumerated value of the recommended content selected by the user during the last selection. For details, see [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -140,8 +127,6 @@ Sorting rule of the grid interface when the user last selected an image. The def
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -151,18 +136,17 @@ Sorting rule of the grid interface when the user last selected an image. The def
 ## time
 
 ```TypeScript
-time: long
+time: number
 ```
 
 Time of the top-left image in the grid interface when the user last selected an image.  
-- For albums sorted by capture time, the capture time is returned. - For albums sorted by save time, the save time is returned. The default value is **0**.  
+- For albums sorted by capture time, the capture time is returned.  
+- For albums sorted by save time, the save time is returned. The default value is **0**.  
 Unit: ms, The value must be greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -171,16 +155,14 @@ Unit: ms, The value must be greater than or equal to 0.
 ## version
 
 ```TypeScript
-version: int
+version: number
 ```
 
 Version number of the state data, used to verify the compatibility of the state information data with the state recovery capability.The version number must be greater than or equal to 1.0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 

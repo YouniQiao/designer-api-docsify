@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## setPacUrl
@@ -19,8 +19,6 @@ Sets the URL of the system-level Proxy Auto Config (PAC) script.
 > the proxy, call the [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md) API.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.SET_PAC_URL
 
@@ -40,12 +38,3 @@ Sets the URL of the system-level Proxy Auto Config (PAC) script.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let pacUrl = "xxx";
-connection.setPacUrl(pacUrl);
-```

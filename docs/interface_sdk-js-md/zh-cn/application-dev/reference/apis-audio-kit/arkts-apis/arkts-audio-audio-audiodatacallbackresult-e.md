@@ -1,10 +1,8 @@
 # AudioDataCallbackResult
 
-表示音频数据回调结果的枚举。@enum { int }
+表示音频数据回调结果的枚举。@enum { number }
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -18,8 +16,6 @@ INVALID = -1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## VALID
@@ -31,7 +27,5 @@ VALID = 0
 表示该回调数据有效。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

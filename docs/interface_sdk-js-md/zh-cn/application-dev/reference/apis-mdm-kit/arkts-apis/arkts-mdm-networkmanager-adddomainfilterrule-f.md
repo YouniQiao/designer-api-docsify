@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDomainFilterRule
@@ -22,8 +22,6 @@ function addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): v
 > [Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -46,31 +44,3 @@ function addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): v
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let domainFilterRule: networkManager.DomainFilterRule = {
-  // 需根据实际情况进行替换
-  "domainName": "www.example.com",
-  "appUid": "9696",
-  "action": networkManager.Action.DENY,
-  "family": 1,
-  "logType": networkManager.LogType.NFLOG
-};
-
-try {
-  networkManager.addDomainFilterRule(wantTemp, domainFilterRule);
-  console.info('Succeeded in adding domain filter rules');
-} catch (err) {
-  console.error(`Failed to add domain filter rules. Code: ${err.code}, message: ${err.message}`);
-}
-```

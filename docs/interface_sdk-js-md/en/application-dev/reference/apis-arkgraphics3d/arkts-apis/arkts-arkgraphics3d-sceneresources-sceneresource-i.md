@@ -4,8 +4,6 @@ Describes a resource in a scene.@interface SceneResource
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## destroy
@@ -18,33 +16,7 @@ Destroys the scene resource and releases all associated resources or references.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
-
-**Examples**
-
-```TypeScript
-import { Shader, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
-
-function destroy(): void {
-  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result) {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      // Create shader resources. The path and file name can be customized based on the specific project resources.
-      let sceneResourceParameter: SceneResourceParameters = { name: "shaderResource",
-        uri: $rawfile("shaders/custom_shader/custom_material_sample.shader") };
-      let shader: Promise<Shader> = sceneFactory.createShader(sceneResourceParameter);
-      shader.then(async (shaderResult:Shader) => {
-         // Release the resource.
-         shaderResult.destroy();
-      });
-    }
-  });
-}
-```
 
 ## name
 
@@ -57,8 +29,6 @@ Name. There is no special format requirement.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -74,8 +44,6 @@ Scene resource type. The default value is undefined.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## uri
@@ -86,10 +54,8 @@ readonly uri?: ResourceStr
 
 Resource to load. The default value is undefined.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

@@ -7,8 +7,6 @@ The **file.trash** module provides APIs for querying, recovering, or permanently
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -20,7 +18,7 @@ The **file.trash** module provides APIs for querying, recovering, or permanently
 ## Modules to Import
 
 ```TypeScript
-import { trash } from '@kit.CoreFileKit';
+import { trash } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

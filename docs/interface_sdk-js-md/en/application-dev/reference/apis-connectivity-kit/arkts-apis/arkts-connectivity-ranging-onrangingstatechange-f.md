@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@kit.ConnectivityKit';
+import { ranging } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## onRangingStateChange
@@ -15,8 +15,6 @@ function onRangingStateChange(callback: Callback<RangingStateChangeInfo>): void
 Registers a callback to receive ranging state change notifications.Notifies state changes for both active ranging and passive ranging operations.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

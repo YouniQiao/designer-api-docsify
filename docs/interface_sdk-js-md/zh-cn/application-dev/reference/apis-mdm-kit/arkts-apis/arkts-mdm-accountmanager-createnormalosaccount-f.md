@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## createNormalOsAccount
@@ -19,8 +19,6 @@ function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsA
 > 创建系统账号对设备的性能影响较大，此接口仅支持12GB及以上运行内存的手机、平板设备使用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_LOCAL_ACCOUNTS
 
@@ -53,25 +51,3 @@ function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsA
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { osAccount } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 创建普通系统账号，需要传入账号名称
-accountManager.createNormalOsAccount(wantTemp, "TestAccountName").then((accountInfo: osAccount.OsAccountInfo) => {
-  console.info('Succeeded in creating normal os account, accountInfo: ' + JSON.stringify(accountInfo));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create normal os account: code is ${err.code}, message is ${err.message}`);
-});
-```

@@ -4,29 +4,25 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## bufferSizeKb
 
 ```TypeScript
-bufferSizeKb: int
+bufferSizeKb: number
 ```
 
 trace文件的缓存大小，以KB为单位。数值为32位无符号整型数字，超出有效范围将导致数值溢出。取值范围为[1024, 15360]，传入参数超过取值范围，参数将被设置为最近的边界值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,16 +33,14 @@ trace文件的缓存大小，以KB为单位。数值为32位无符号整型数�
 ## durationMs
 
 ```TypeScript
-durationMs: int
+durationMs: number
 ```
 
 trace采集时长，以ms为单位。数值为32位无符号整型数字，超出有效范围将导致数值溢出。取值范围为[1000, 15000]，传入参数超过取值范围，参数将被设置为最近的边界值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +60,6 @@ identifier: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -77,16 +69,14 @@ identifier: string
 ## reserved
 
 ```TypeScript
-reserved: int
+reserved: number
 ```
 
 预留字段，可以设置为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

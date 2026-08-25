@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## sendSystemControlCommand
@@ -15,8 +15,6 @@ function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCall
 Send system control command.The system automatically selects the recipient.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -42,60 +40,6 @@ Send system control command.The system automatically selects the recipient.
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
 
-**Examples**
-
-```TypeScript
-let cmd : avSession.AVControlCommandType = 'play';
-// let cmd : avSession.AVControlCommandType = 'pause';
-// let cmd : avSession.AVControlCommandType = 'stop';
-// let cmd : avSession.AVControlCommandType = 'playNext';
-// let cmd : avSession.AVControlCommandType = 'playPrevious';
-// let cmd : avSession.AVControlCommandType = 'fastForward';
-// let cmd : avSession.AVControlCommandType = 'rewind';
-let avcommand: avSession.AVControlCommand = {command:cmd};
-// let cmd : avSession.AVControlCommandType = 'seek';
-// let avcommand = {command:cmd, parameter:10};
-// let cmd : avSession.AVControlCommandType = 'setSpeed';
-// let avcommand = {command:cmd, parameter:2.6};
-// let cmd : avSession.AVControlCommandType = 'setLoopMode';
-// let avcommand = {command:cmd, parameter:avSession.LoopMode.LOOP_MODE_SINGLE};
-// let cmd : avSession.AVControlCommandType = 'toggleFavorite';
-// let avcommand = {command:cmd, parameter:"false"};
-avSession.sendSystemControlCommand(avcommand, (err) => {
-  if (err) {
-    console.error(`SendSystemControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('sendSystemControlCommand successfully');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cmd : avSession.AVControlCommandType = 'play';
-// let cmd : avSession.AVControlCommandType = 'pause';
-// let cmd : avSession.AVControlCommandType = 'stop';
-// let cmd : avSession.AVControlCommandType = 'playNext';
-// let cmd : avSession.AVControlCommandType = 'playPrevious';
-// let cmd : avSession.AVControlCommandType = 'fastForward';
-// let cmd : avSession.AVControlCommandType = 'rewind';
-let avcommand: avSession.AVControlCommand = {command:cmd};
-// let cmd : avSession.AVControlCommandType = 'seek';
-// let avcommand = {command:cmd, parameter:10};
-// let cmd : avSession.AVControlCommandType = 'setSpeed';
-// let avcommand = {command:cmd, parameter:2.6};
-// let cmd : avSession.AVControlCommandType = 'setLoopMode';
-// let avcommand = {command:cmd, parameter:avSession.LoopMode.LOOP_MODE_SINGLE};
-// let cmd : avSession.AVControlCommandType = 'toggleFavorite';
-// let avcommand = {command:cmd, parameter:"false"};
-avSession.sendSystemControlCommand(avcommand).then(() => {
-  console.info('SendSystemControlCommand successfully');
-}).catch((err: BusinessError) => {
-  console.error(`SendSystemControlCommand BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## sendSystemControlCommand
 
@@ -106,8 +50,6 @@ function sendSystemControlCommand(command: AVControlCommand): Promise<void>
 Send system control command.The system automatically selects the recipient.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -137,7 +79,3 @@ Send system control command.The system automatically selects the recipient.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
-
-**Examples**
-
-See [sendSystemControlCommand](#sendsystemcontrolcommand)

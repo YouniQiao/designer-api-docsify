@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## 汇总
@@ -71,9 +69,6 @@ import { backup } from '@kit.CoreFileKit';
 
 | 名称 |
 | --- |
-| [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md) |
 | [OnBackupSizeReport](arkts-corefile-backup-onbackupsizereport-t-sys.md) |
 | [OnFileReadyBatch](arkts-corefile-backup-onfilereadybatch-t-sys.md) |
-| [OnProcess](arkts-corefile-backup-onprocess-t-sys.md) |
-| [OnResultReport](arkts-corefile-backup-onresultreport-t-sys.md) |
 <!--DelEnd-->

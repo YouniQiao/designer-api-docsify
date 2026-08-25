@@ -1,7 +1,5 @@
 # NumberFormat
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 format(value: number): string
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@ format(value: number): string
 ```TypeScript
 resolvedOptions(): ResolvedNumberFormatOptions
 ```
-
-**ArkTS mode:** 
 
 **Return value:**
 

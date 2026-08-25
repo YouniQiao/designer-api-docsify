@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## connectPrinterByIdAndPpd
@@ -15,8 +15,6 @@ function connectPrinterByIdAndPpd(printerId: string, protocol: string, ppdName: 
 Query recommend printer drivers by printer ID.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 

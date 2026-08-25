@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceList
@@ -28,8 +26,6 @@ deviceList: string[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -39,16 +35,14 @@ deviceList: string[]
 ## reportFrequency
 
 ```TypeScript
-reportFrequency: int
+reportFrequency: number
 ```
 
 表示结果上报频率，单位：Hz，取值范围：[0,999999]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,8 +62,6 @@ reportMode: ReportingMode
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -87,8 +79,6 @@ techType: TechnologyType
 **类型：** [TechnologyType](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

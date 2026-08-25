@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## unlock
@@ -15,8 +15,6 @@ function unlock(callback: AsyncCallback<boolean>): void
 Unlock the screen.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -37,30 +35,6 @@ Unlock the screen.
 | [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
 | [13200003](../errorcode-screenlock.md#13200003-invalid-use) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screenLock.unlock((err: BusinessError, data: Boolean) => {
-  if (err) {
-    console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in unlocking the screen. result: ${data}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screenLock.unlock().then((data: Boolean) => {
-  console.info(`Succeeded in unlocking the screen. result: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## unlock
 
@@ -71,8 +45,6 @@ function unlock(): Promise<boolean>
 Unlock the screen.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -91,7 +63,3 @@ Unlock the screen.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
 | [13200003](../errorcode-screenlock.md#13200003-invalid-use) |
-
-**Examples**
-
-See [unlock](#unlock)

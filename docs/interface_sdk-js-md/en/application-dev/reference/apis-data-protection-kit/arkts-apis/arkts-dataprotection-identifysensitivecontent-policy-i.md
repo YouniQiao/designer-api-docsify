@@ -4,14 +4,12 @@ Defines the policy for sensitive content identification. In a single policy, key
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## keywords
@@ -26,8 +24,6 @@ Keyword set, which is used to match sensitive keywords in a file. The system sea
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## regex
@@ -36,13 +32,11 @@ Keyword set, which is used to match sensitive keywords in a file. The system sea
 regex: string
 ```
 
-Regular expression used to match sensitive content. The system performs pattern matching on the file content based on the regular expression. The matched content is returned. The value contains 0 to 512 characters. When entering a string, check whether some special characters (such as backslash (), double quotation marks ("), and newline characters) are automatically escaped to ensure the input effect of the string.
+Regular expression used to match sensitive content. The system performs pattern matching on the file content based on the regular expression. The matched content is returned. The value contains 0 to 512 characters. When entering a string, check whether some special characters (such as backslash (), number quotation marks ("), and newline characters) are automatically escaped to ensure the input effect of the string.
 
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -57,7 +51,5 @@ Label of an identification policy, which is used to identify and classify matchi
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention

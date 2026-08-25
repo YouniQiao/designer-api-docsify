@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## needReceiveStream
@@ -20,13 +18,11 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 needReceiveStream?: boolean
 ```
 
-接收流数据的配置选项。需要开启WiFi。
+true表示需要接收流（当本端需要从对端接收视频流时选择）， false表示不需要接收流（当本端只发送不接收时选择）。默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,13 +36,11 @@ needReceiveStream?: boolean
 needSendStream?: boolean
 ```
 
-发送流数据的配置选项。需要开启WiFi。
+true表示需要发送流（当本端需要向对端发送视频流时选择）， false表示不需要发送流（当本端只接收不发送时选择）。默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

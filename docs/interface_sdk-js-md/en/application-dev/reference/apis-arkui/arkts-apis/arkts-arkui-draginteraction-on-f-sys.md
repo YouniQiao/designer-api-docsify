@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragInteraction } from '@kit.ArkUI';
+import { dragInteraction } from 'kits/@kit.ArkUI';
 ```
 
 ## on('drag')
@@ -15,8 +15,6 @@ function on(type: 'drag', callback: Callback<DragState>): void
 Enables listening for dragging status changes.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -35,15 +33,3 @@ Enables listening for dragging status changes.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-try {
-  dragInteraction.on('drag', (data: dragInteraction.DragState) => {
-    console.info(`Drag interaction event: ${data}`);
-  });
-} catch (error) {
-  console.error(`Register failed, code: ${error.code}, message: ${error.message}`);
-}
-```

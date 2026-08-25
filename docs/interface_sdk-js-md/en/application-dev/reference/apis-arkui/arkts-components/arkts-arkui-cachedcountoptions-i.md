@@ -4,8 +4,6 @@ Describes the configuration options for child components to be preloaded.
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,8 +26,6 @@ Whether to calculate [cachedCount](arkts-arkui-swiper-attribute.md#cachedcount) 
 **Default:** false
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +50,6 @@ Whether to draw nodes within the preloading range.
 **Default:** false
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

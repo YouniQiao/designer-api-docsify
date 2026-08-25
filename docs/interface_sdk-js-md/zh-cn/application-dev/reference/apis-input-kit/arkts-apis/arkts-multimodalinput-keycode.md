@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { KeyCode } from '@kit.InputKit';
+import { KeyCode } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总

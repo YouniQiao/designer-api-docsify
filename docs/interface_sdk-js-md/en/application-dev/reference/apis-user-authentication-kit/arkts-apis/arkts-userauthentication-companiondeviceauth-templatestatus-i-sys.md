@@ -4,8 +4,6 @@ Describes the complete status information about a registered companion device au
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the complete status information about a registered companion device au
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## addedTime
@@ -27,8 +25,6 @@ Template adding time. Timestamp when the template is created. The value is a Uni
 **Type:** Date
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Device status information. It specifies the current status of the companion devi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -59,16 +53,14 @@ Device status information. It specifies the current status of the companion devi
 ## enabledBusinessIds
 
 ```TypeScript
-enabledBusinessIds: int[]
+enabledBusinessIds: number[]
 ```
 
 List of supported service IDs. It specifies the service scenarios where the template is enabled. You can update the service scenarios by calling the [updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md) API.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Data confirmation status. The value **true** indicates that the data is real-tim
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -108,8 +98,6 @@ Template validity. The value **true** indicates that the template is valid and c
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -119,16 +107,14 @@ Template validity. The value **true** indicates that the template is valid and c
 ## localUserId
 
 ```TypeScript
-localUserId: int
+localUserId: number
 ```
 
 Local user ID. It specifies the user ID associated with the template on the primary device. The value is a positive integer greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,8 +133,6 @@ Template ID. Unique ID of a companion device authentication template, which is u
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

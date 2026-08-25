@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getBluetoothScanMode
@@ -15,8 +15,6 @@ function getBluetoothScanMode(): ScanMode
 Obtains the Bluetooth scanning mode of a device.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -30,10 +28,4 @@ Obtains the Bluetooth scanning mode of a device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md) |
-
-**Examples**
-
-```TypeScript
-let scanMode : bluetooth.ScanMode = bluetooth.getBluetoothScanMode();
-```
+| [ScanMode](arkts-connectivity-connection-scanmode-e.md) |

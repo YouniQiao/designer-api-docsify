@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## removePrinterFromDiscovery
@@ -15,8 +15,6 @@ function removePrinterFromDiscovery(printerId: string): Promise<void>
 Removes a printer from the printer discovery list. This API uses a promise to return the result.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -40,17 +38,3 @@ Removes a printer from the printer discovery list. This API uses a promise to re
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId : string = 'testPrinterId';
-print.removePrinterFromDiscovery(printerId).then(() => {
-    console.info('removePrinterFromDiscovery success');
-}).catch((error: BusinessError) => {
-    console.error('removePrinterFromDiscovery error : ' + JSON.stringify(error));
-})
-```

@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -30,8 +28,6 @@ each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -52,14 +48,6 @@ each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-// arr是Array<string>类型的数组，为每个数据创建一个Text组件
-Repeat<string>(this.arr)
-  .each((repeatItem: RepeatItem<string>) => { Text(repeatItem.item) })
-```
-
 ## key
 
 ```TypeScript
@@ -72,8 +60,6 @@ key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,16 +81,6 @@ key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>
 | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-// arr是Array<string>类型的数组，为每个数据创建一个Text组件
-// 并将字符串的值作为其键值
-Repeat<string>(this.arr)
-  .each((repeatItem: RepeatItem<string>) => { Text(repeatItem.item) })
-  .key((obj: string) => obj)
-```
-
 ## template
 
 ```TypeScript
@@ -117,8 +93,6 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,22 +114,6 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-// arr是Array<string>类型的数组
-// 在List容器组件中使用Repeat，并打开virtualScroll
-// 创建模板temp，该模板为数据创建Text组件
-// 所有数据项都使用temp模板
-List() {
-  Repeat<string>(this.arr)
-    .each((repeatItem: RepeatItem<string>) => {})
-    .virtualScroll()
-    .template('temp', (repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
-    .templateId((item: string, index: number) => { return 'temp' })
-}
-```
-
 ## templateId
 
 ```TypeScript
@@ -168,8 +126,6 @@ templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -189,22 +145,6 @@ templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>
 | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-// arr是Array<string>类型的数组
-// 在List容器组件中使用Repeat，并打开virtualScroll
-// 创建模板temp，该模板为数据创建Text组件
-// 所有数据项都使用temp模板
-List() {
-  Repeat<string>(this.arr)
-    .each((repeatItem: RepeatItem<string>) => {})
-    .virtualScroll()
-    .template('temp', (repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
-    .templateId((item: string, index: number) => { return 'temp' })
-}
-```
-
 ## virtualScroll
 
 ```TypeScript
@@ -217,8 +157,6 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>
 > 该接口不支持在attributeModifier中调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -237,15 +175,3 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>
 | 类型 |
 | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |
-
-**示例**
-
-```TypeScript
-// arr是Array<string>类型的数组，为每个数据创建一个Text组件
-// 在List容器组件中使用Repeat，并打开virtualScroll
-List() {
-  Repeat<string>(this.arr)
-    .each((repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
-    .virtualScroll()
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wearDetection } from '@kit.ConnectivityKit';
+import { wearDetection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disableWearDetection
@@ -15,8 +15,6 @@ function disableWearDetection(deviceId: string, callback: AsyncCallback<void>): 
 Turn off the wearing detection switch.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -43,30 +41,6 @@ Turn off the wearing detection switch.
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-try {
-    wearDetection.disableWearDetection('XX:XX:XX:XX:XX:XX', (err) => {
-        if (err) {
-            console.error("disableWearDetection error");
-        }
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
-
-```TypeScript
-try {
-    wearDetection.disableWearDetection('XX:XX:XX:XX:XX:XX').then(() => {
-        console.info("disableWearDetection");
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
-
 
 ## disableWearDetection
 
@@ -77,8 +51,6 @@ function disableWearDetection(deviceId: string): Promise<void>
 Turn off the wearing detection switch.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -109,7 +81,3 @@ Turn off the wearing detection switch.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-See [disableWearDetection](#disableweardetection)

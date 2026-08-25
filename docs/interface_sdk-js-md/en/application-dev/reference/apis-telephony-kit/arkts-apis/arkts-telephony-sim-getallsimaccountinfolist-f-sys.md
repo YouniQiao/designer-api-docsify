@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getAllSimAccountInfoList
@@ -15,8 +15,6 @@ function getAllSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>
 Get the list of all SIM card account information.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -42,32 +40,6 @@ Get the list of all SIM card account information.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getAllSimAccountInfoList((err: BusinessError) => {
-    console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-async getAllSimAccountInfoList(): Promise<ResponseData<sim.IccAccountInfo[] | null>> {
-    try {
-      const accountInfoList: sim.IccAccountInfo[] =
-        await sim.getAllSimAccountInfoList();
-      return { success: true, code: CommonConstant.DEFAULT_SUCCESS_CODE, data: accountInfoList };
-    } catch (err) {
-      return this.handleError(this.getAllSimAccountInfoList.name, err);
-    }
-  }
-```
-
 
 ## getAllSimAccountInfoList
 
@@ -78,8 +50,6 @@ function getAllSimAccountInfoList(): Promise<Array<IccAccountInfo>>
 Get the list of all SIM card account information.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -103,7 +73,3 @@ Get the list of all SIM card account information.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getAllSimAccountInfoList](#getallsimaccountinfolist)

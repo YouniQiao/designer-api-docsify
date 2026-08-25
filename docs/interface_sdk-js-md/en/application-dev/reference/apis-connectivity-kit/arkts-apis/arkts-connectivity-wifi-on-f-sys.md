@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('streamChange')
@@ -15,8 +15,6 @@ function on(type: 'streamChange', callback: Callback<number>): void
 Subscribe Wi-Fi stream change events.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -46,8 +44,6 @@ Subscribe Wi-Fi hotspot sta join events.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** hotspotStaJoin
@@ -75,8 +71,6 @@ function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 Subscribe Wi-Fi hotspot sta leave events.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

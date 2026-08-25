@@ -9,8 +9,6 @@ Sets the spacing between child components of the **Row** component.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,11 +27,9 @@ Spacing between child components. This parameter does not take effect if the val
 > The value of **space** can be a number greater than or equal to 0, a string that can be converted to a number, or a
 > Resource type that can be converted to a number. Default value: **0**.
 
-**Type:** SpaceType
+**Type:** [SpaceType](arkts-arkui-spacetype-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

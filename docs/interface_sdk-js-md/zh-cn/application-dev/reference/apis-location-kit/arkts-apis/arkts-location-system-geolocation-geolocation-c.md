@@ -2,8 +2,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** [geoLocationManager/geoLocationManager](arkts-geolocationmanager.md)
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
+import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from 'kits/@kit.LocationKit';
 ```
 
 ## getLocation
@@ -25,8 +23,6 @@ static getLocation(options?: GetLocationOption): void
 获取设备的地理位置。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -54,8 +50,6 @@ static getLocationType(options?: GetLocationTypeOption): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
@@ -78,8 +72,6 @@ static getSupportedCoordTypes(): Array<string>
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **模型约束：** 此接口仅可在FA模型下使用。
@@ -99,8 +91,6 @@ static subscribe(options: SubscribeLocationOption): void
 订阅设备的地理位置信息。多次调用的话，只有最后一次的调用生效。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 
@@ -127,8 +117,6 @@ static unsubscribe(): void
 取消订阅设备的地理位置信息。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 9
 

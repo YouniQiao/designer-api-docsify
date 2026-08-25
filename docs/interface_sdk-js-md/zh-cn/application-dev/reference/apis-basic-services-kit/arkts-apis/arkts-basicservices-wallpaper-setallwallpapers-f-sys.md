@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setAllWallpapers
@@ -15,8 +15,6 @@ function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: W
 设置设备所有形态的壁纸。使用promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选）
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WALLPAPER
 
@@ -44,33 +42,3 @@ function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: W
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperInfos: Array<wallpaper.WallpaperInfo>;
-wallpaperInfos = [
-  {
-    foldState: wallpaper.FoldState.NORMAL,
-    rotateState: wallpaper.RotateState.PORTRAIT,
-    source: '/data/storage/el2/base/haps/entry/files/normal.jpeg'
-  },
-  {
-    foldState: wallpaper.FoldState.UNFOLD_ONCE_STATE,
-    rotateState: wallpaper.RotateState.LANDSCAPE,
-    source: '/data/storage/el2/base/haps/entry/files/unfold_once_state.jpeg'
-  },
-  {
-    foldState: wallpaper.FoldState.UNFOLD_TWICE_STATE,
-    rotateState: wallpaper.RotateState.PORTRAIT,
-    source: '/data/storage/el2/base/haps/entry/files/unfold_twice_state.jpeg'
-  }
-];
-wallpaper.setAllWallpapers(wallpaperInfos, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-  console.info(`success to setAllWallpapers.`);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to setAllWallpapers. Code: ${error.code}, Message: ${error.message}`);
-});
-```

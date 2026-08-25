@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setDistributedEnable
@@ -15,8 +15,6 @@ function setDistributedEnable(enable: boolean, callback: AsyncCallback<void>): v
 设置设备是否支持分布式通知。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -48,67 +46,6 @@ function setDistributedEnable(enable: boolean, callback: AsyncCallback<void>): v
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setDistributedEnableCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setDistributedEnable success');
-    }
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnable(enable, setDistributedEnableCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setDistributedEnableCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setDistributedEnable success');
-    }
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnable(enable, setDistributedEnableCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-notificationManager.setDistributedEnable(enable).then(() => {
-    console.info('setDistributedEnable success');
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-notificationManager.setDistributedEnable(enable).then(() => {
-    console.info('setDistributedEnable success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setDistributedEnable failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## setDistributedEnable
 
@@ -119,8 +56,6 @@ function setDistributedEnable(enable: boolean): Promise<void>
 设置设备是否支持分布式通知。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -156,7 +91,3 @@ function setDistributedEnable(enable: boolean): Promise<void>
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
-
-**示例**
-
-参见 [setDistributedEnable](#setdistributedenable)

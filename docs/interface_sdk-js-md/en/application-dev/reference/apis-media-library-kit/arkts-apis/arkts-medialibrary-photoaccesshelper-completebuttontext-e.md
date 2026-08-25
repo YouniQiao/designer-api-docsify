@@ -4,8 +4,6 @@ Enumerates the text displayed on the complete button.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## TEXT_DONE
@@ -17,8 +15,6 @@ TEXT_DONE = 0
 The text "Done" is displayed.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -34,8 +30,6 @@ The text "Send" is displayed.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -49,8 +43,6 @@ TEXT_ADD = 2
 The text "Add" is displayed.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

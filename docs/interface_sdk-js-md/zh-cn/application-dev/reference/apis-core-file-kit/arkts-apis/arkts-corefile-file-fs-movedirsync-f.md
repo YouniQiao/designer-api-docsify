@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## moveDirSync
@@ -20,8 +20,6 @@ declare function moveDirSync(src: string, dest: string, mode?: number): void
 > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -56,26 +54,3 @@ declare function moveDirSync(src: string, dest: string, mode?: number): void
 | 13900033 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ConflictFiles } from '@kit.CoreFileKit';
-
-let srcPath = pathDir + "/srcDir";
-let destPath = pathDir + "/destDir";
-try {
-  fileIo.moveDirSync(srcPath, destPath, 1);
-  console.info(`Succeeded in moving directory.`);
-} catch (error) {
-  let err: BusinessError<Array<ConflictFiles>> = error as BusinessError<Array<ConflictFiles>>;
-  if (err.code == 13900015 && err.data?.length !== undefined) {
-    for (let i = 0; i < err.data.length; i++) {
-      console.error(`Failed to move directory, with conflicting files: ${err.data[i].srcFile} ${err.data[i].destFile}`);
-    }
-  } else {
-    console.error(`Failed to move directory. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```

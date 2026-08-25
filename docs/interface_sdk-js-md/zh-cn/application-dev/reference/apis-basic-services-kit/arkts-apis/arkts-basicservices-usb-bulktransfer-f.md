@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## bulkTransfer
@@ -20,8 +20,6 @@ function bulkTransfer(
 批量传输。需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备信息列表以及endpoint；再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限； 然后调用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)接口得到返回数据devicepipe之后，再次获取接口 [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md)；再调用usb.bulkTransfer接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -43,14 +41,3 @@ function bulkTransfer(
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-```TypeScript
-//usb.getDevices 接口返回数据集合，取其中一个设备对象，并获取权限 。
-//把获取到的设备对象作为参数传入usb.connectDevice;当usb.connectDevice接口成功返回之后；
-//才可以调用第三个接口usb.claimInterface.当usb.claimInterface 调用成功以后,再调用该接口。
-usb.bulkTransfer(devicepipe, endpoint, buffer).then((ret) => {
- console.info(`bulkTransfer = ${ret}`);
-});
-```

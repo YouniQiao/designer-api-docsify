@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startPortalCertification
@@ -15,8 +15,6 @@ function startPortalCertification(): void
 Start Portal certification.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -33,15 +31,3 @@ Start Portal certification.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  wifiManager.startPortalCertification();
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

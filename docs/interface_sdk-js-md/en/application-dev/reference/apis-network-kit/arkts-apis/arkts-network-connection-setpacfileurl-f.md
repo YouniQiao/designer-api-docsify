@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## setPacFileUrl
@@ -24,8 +24,6 @@ Sets the URL of the Proxy Auto-Configuration Script (PAC) and enables the PAC pr
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Required permissions:** ohos.permission.SET_PAC_URL
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -42,12 +40,3 @@ Sets the URL of the Proxy Auto-Configuration Script (PAC) and enables the PAC pr
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let pacFileUrl = "http://example.com/proxy.pac";
-connection.setPacFileUrl(pacFileUrl);
-```

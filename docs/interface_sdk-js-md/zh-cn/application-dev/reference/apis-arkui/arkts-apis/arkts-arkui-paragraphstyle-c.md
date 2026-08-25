@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ constructor(value?: ParagraphStyleInterface)
 文本段落样式的构造函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,11 +41,9 @@ readonly leadingMargin?: number | LeadingMarginPlaceholder
 
 获取属性字符串文本段落的缩进。返回为number类型时，单位为vp。
 
-**类型：** number \| LeadingMarginPlaceholder
+**类型：** number \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,8 +63,6 @@ readonly leadingMarginSpan?: LeadingMarginSpan
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -89,8 +81,6 @@ readonly maxLines?: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -105,11 +95,9 @@ readonly overflow?: TextOverflow
 
 获取属性字符串文本段落超长时的显示方式。默认值：TextOverflow.None。需配合maxLines使用，单独设置不生效。不支持TextOverflow.MARQUEE。
 
-**类型：** TextOverflow
+**类型：** [TextOverflow](arkts-arkui-textoverflow-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -123,13 +111,11 @@ readonly overflow?: TextOverflow
 readonly paragraphSpacing?: number
 ```
 
-获取属性字符串文本段落的段落间距。单位：vp
+获取属性字符串文本段落的段落间距。单位：[vp](arkts-arkui-length-t.md)
 
 **类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,11 +132,9 @@ readonly shaderStyle?: ShaderStyle
 获取文本着色器效果。  
 **说明：** 该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [TextStyleInterface](arkts-arkui-textstyleinterface-i.md)中的fontColor。
 
-**类型：** ShaderStyle
+**类型：** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,14 +148,12 @@ readonly shaderStyle?: ShaderStyle
 readonly tailIndents?: Array<number>
 ```
 
-获取属性字符串文本段落的文本尾部缩进距离。单位：vp取值范围：[0, INT32_MAX]值为0时不做尾部缩进。  
+获取属性字符串文本段落的文本尾部缩进距离。单位：[vp](arkts-arkui-length-t.md)取值范围：[0, INT32_MAX]值为0时不做尾部缩进。  
 **说明：** tailIndents数组在同一段落内的每一行按数组索引依次取值做缩进；新的段落首行重新从tailIndents数组索引0位置开始取值做缩进。
 
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -192,8 +174,6 @@ readonly textAlign?: TextAlign
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -212,8 +192,6 @@ readonly textDirection?: TextDirection
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -226,13 +204,11 @@ readonly textDirection?: TextDirection
 readonly textIndent?: number
 ```
 
-获取属性字符串文本段落的首行文本缩进。单位：vp
+获取属性字符串文本段落的首行文本缩进。单位：[vp](arkts-arkui-length-t.md)
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -252,8 +228,6 @@ readonly textVerticalAlign?: TextVerticalAlign
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -271,8 +245,6 @@ readonly wordBreak?: WordBreak
 **类型：** WordBreak
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

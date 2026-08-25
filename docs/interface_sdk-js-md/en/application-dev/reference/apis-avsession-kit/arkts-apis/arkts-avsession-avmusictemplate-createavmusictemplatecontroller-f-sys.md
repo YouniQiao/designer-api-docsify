@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## createAVMusicTemplateController
@@ -15,8 +15,6 @@ function createAVMusicTemplateController(sessionId: string): AVMusicTemplateCont
 Create AVMusicTemplate controller instance.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 

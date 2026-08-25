@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getBluetoothScanMode
@@ -16,8 +16,6 @@ Obtains the Bluetooth scanning mode of a device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -28,7 +26,7 @@ Obtains the Bluetooth scanning mode of a device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md) |
+| [ScanMode](arkts-connectivity-connection-scanmode-e.md) |
 
 **Error codes:**
 
@@ -39,14 +37,3 @@ Obtains the Bluetooth scanning mode of a device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let scanMode: connection.ScanMode = connection.getBluetoothScanMode();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

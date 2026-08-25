@@ -7,14 +7,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -57,10 +55,8 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | [getPixelMap(壁纸)](arkts-basicservices-wallpaper-getpixelmap-f-sys.md) |
 | [getPixelMap(壁纸)](arkts-basicservices-wallpaper-getpixelmap-f-sys.md) |
 | [getWallpaperByState(壁纸)](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md) |
-| [off(壁纸)](arkts-basicservices-wallpaper-off-f-sys.md#offwallpaperchange) |
-| [offWallpaperChange(壁纸)](arkts-basicservices-wallpaper-offwallpaperchange-f-sys.md) |
-| [on(壁纸)](arkts-basicservices-wallpaper-on-f-sys.md#onwallpaperchange) |
-| [onWallpaperChange(壁纸)](arkts-basicservices-wallpaper-onwallpaperchange-f-sys.md) |
+| off(壁纸) |
+| on(壁纸) |
 | [restore(壁纸)](arkts-basicservices-wallpaper-restore-f-sys.md) |
 | [restore(壁纸)](arkts-basicservices-wallpaper-restore-f-sys.md) |
 | [setAllWallpapers(壁纸)](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md) |
@@ -101,9 +97,3 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | [RotateState(壁纸)](arkts-basicservices-wallpaper-rotatestate-e-sys.md) |
 | [WallpaperResourceType(壁纸)](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) |
 <!--DelEnd-->
-
-### 类型
-
-| 名称 |
-| --- |
-| [WallpaperChangeObserver(壁纸)](arkts-basicservices-wallpaper-wallpaperchangeobserver-t.md) |

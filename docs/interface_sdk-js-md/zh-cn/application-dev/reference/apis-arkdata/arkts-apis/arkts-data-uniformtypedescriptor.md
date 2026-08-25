@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 ```
 
 ## 汇总
@@ -22,7 +20,6 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 
 | 名称 |
 | --- |
-| [getTypeDescriptor(标准化数据定义与描述)](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md) |
 | [getTypeDescriptor(标准化数据定义与描述)](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md) |
 | [getUniformDataTypeByFilenameExtension(标准化数据定义与描述)](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md) |
 | [getUniformDataTypeByMIMEType(标准化数据定义与描述)](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md) |

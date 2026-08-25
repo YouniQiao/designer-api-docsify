@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isFeatureSupported
@@ -15,8 +15,6 @@ function isFeatureSupported(featureId: number): boolean
 Checks whether this device supports a specified feature.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -37,17 +35,3 @@ Checks whether this device supports a specified feature.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-	let featureId = 0;
-	let ret = wifi.isFeatureSupported(featureId);
-	console.info("isFeatureSupported:" + ret);
-}catch(error){
-	console.error("failed:" + JSON.stringify(error));
-}
-```

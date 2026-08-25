@@ -6,14 +6,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## emotion
@@ -28,8 +26,6 @@ readonly emotion: Emotion
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -37,16 +33,14 @@ readonly emotion: Emotion
 ## emotionConfidence
 
 ```TypeScript
-readonly emotionConfidence: double
+readonly emotionConfidence: number
 ```
 
 情绪检测置信度。取值范围为[0, 1]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -64,8 +58,6 @@ readonly leftEyeBoundingBox: Rect
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -73,16 +65,14 @@ readonly leftEyeBoundingBox: Rect
 ## pitchAngle
 
 ```TypeScript
-readonly pitchAngle: int
+readonly pitchAngle: number
 ```
 
 俯仰角度。取值范围为[-90, 90]，以向下为正方向。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -100,8 +90,6 @@ readonly rightEyeBoundingBox: Rect
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -109,16 +97,14 @@ readonly rightEyeBoundingBox: Rect
 ## rollAngle
 
 ```TypeScript
-readonly rollAngle: int
+readonly rollAngle: number
 ```
 
 平面内旋转角度。取值范围为[-180, 180]，以顺时针方向为正方向。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -127,16 +113,14 @@ readonly rollAngle: int
 ## yawAngle
 
 ```TypeScript
-readonly yawAngle: int
+readonly yawAngle: number
 ```
 
 左右旋转角度。取值范围为[-90, 90]，以向右为正方向。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

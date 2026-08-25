@@ -4,8 +4,6 @@ Provides APIs for managing DLP files. A **DLPFile** instance indicates a DLP fil
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides APIs for managing DLP files. A **DLPFile** instance indicates a DLP fil
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## addDLPLinkFile
@@ -25,8 +23,6 @@ addDLPLinkFile(linkFileName: string): Promise<void>
 Adds a link file to the Filesystem in Userspace (FUSE). FUSE allows you to implement custom logic of the file system in user space. The link file is a virtual file in the FUSE, which is used to map to the DLP file. The read and write on the link file will be synchronized to the actual DLP file. This API uses a promise to return the result.After calling **addDLPLinkFile** to add a link file, the system needs to call [deleteDLPLinkFile](#deletedlplinkfile) to remove the DLP link file.When a DLP application needs to access a DLP file using a standard file API, it can add a link file as the virtual plaintext file to map the DLP file, and then perform read and write on the link file as it does on a common file.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -58,90 +54,6 @@ Adds a link file to the Filesystem in Userspace (FUSE). FUSE allows you to imple
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-    return;
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  } finally {
-    dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
-      if (err !== undefined) {
-        console.error('addDLPLinkFile error,', err.code, err.message);
-      } else {
-        console.info('res', JSON.stringify(res));
-      }
-      await dlpFile?.closeDLPFile(); // Close the DLP object.
-      fileIo.closeSync(file);
-    });
-  } catch (err) {
-    console.error('addDLPLinkFile error,', (err as BusinessError).code, (err as BusinessError).message);
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
-
 ## addDLPLinkFile
 
 ```TypeScript
@@ -151,8 +63,6 @@ addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 Adds a link file to the FUSE. This API uses an asynchronous callback to return the result. After this API is successfully called, a virtual file used to map the DLP file is created in the FUSE.After calling **addDLPLinkFile** to add a link file, the system needs to call [deleteDLPLinkFile](#deletedlplinkfile) to remove the DLP link file.This API is called when a DLP application needs to access a DLP file using a standard file API.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -178,10 +88,6 @@ Adds a link file to the FUSE. This API uses an asynchronous callback to return t
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [addDLPLinkFile](#adddlplinkfile)
 
 ## closeDLPFile
 
@@ -196,8 +102,6 @@ Closes a **DLPFile** object. This API uses a promise to return the result.After 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -220,86 +124,6 @@ Closes a **DLPFile** object. This API uses a promise to return the result.After 
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  } finally {
-    dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    dlpFile.closeDLPFile((err, res) => {// Close the DLP file.
-      if (err !== undefined) {
-        console.error('closeDLPFile error,', err.code, err.message);
-      } else {
-        console.info('res', JSON.stringify(res));
-      }
-      fileIo.closeSync(file);
-    });
-  } catch (err) {
-    console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
 
 ## closeDLPFile
 
@@ -314,8 +138,6 @@ Closes a **DLPFile** object. This API uses an asynchronous callback to return th
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -339,10 +161,6 @@ Closes a **DLPFile** object. This API uses an asynchronous callback to return th
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [closeDLPFile](#closedlpfile)
 
 ## deleteDLPLinkFile
 
@@ -354,8 +172,6 @@ Deletes a link file from the FUSE. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -385,91 +201,6 @@ Deletes a link file from the FUSE. This API uses a promise to return the result.
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-    await dlpFile.deleteDLPLinkFile('test.txt.dlp.link'); // Delete a link file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  } finally {
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-    dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // Delete a link file.
-      if (err !== undefined) {
-        console.error('deleteDLPLinkFile error,', err.code, err.message);
-      } else {
-        console.info('res', JSON.stringify(res));
-      }
-      await dlpFile?.closeDLPFile(); // Close the DLP object.
-      fileIo.closeSync(file);
-    });
-  } catch (err) {
-    console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
 
 ## deleteDLPLinkFile
 
@@ -481,8 +212,6 @@ Deletes a link file from the FUSE. This API uses an asynchronous callback to ret
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -507,10 +236,6 @@ Deletes a link file from the FUSE. This API uses an asynchronous callback to ret
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [deleteDLPLinkFile](#deletedlplinkfile)
 
 ## recoverDLPFile
 
@@ -522,8 +247,6 @@ Recovers the plaintext of a DLP file. This API uses a promise to return the resu
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -559,100 +282,6 @@ Recovers the plaintext of a DLP file. This API uses a promise to return the resu
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let destFile: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    destFile = fileIo.openSync('destUri').fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    await dlpFile.recoverDLPFile(destFile); // Recover the plaintext of a DLP file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  } finally {
-    dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-    if (destFile) {
-      fileIo.closeSync(destFile);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let destFile: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    destFile = fileIo.openSync('destUri').fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    dlpFile.recoverDLPFile(destFile, async (err, res) => { // Recover the plaintext of a DLP file.
-      if (err !== undefined) {
-        console.error('recoverDLPFile error,', err.code, err.message);
-      } else {
-        console.info('res', JSON.stringify(res));
-      }
-      await dlpFile?.closeDLPFile(); // Close the DLP object.
-      fileIo.closeSync(file);
-      fileIo.closeSync(destFile);
-    });
-  } catch (err) {
-    console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-    if (destFile) {
-      fileIo.closeSync(destFile);
-    }
-  }
-}
-```
 
 ## recoverDLPFile
 
@@ -664,8 +293,6 @@ Recovers the plaintext of a DLP file. This API uses an asynchronous callback to 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -697,10 +324,6 @@ Recovers the plaintext of a DLP file. This API uses an asynchronous callback to 
 | [19100010](../errorcode-dlp.md#19100010-read-only-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-See [recoverDLPFile](#recoverdlpfile)
-
 ## replaceDLPLinkFile
 
 ```TypeScript
@@ -710,8 +333,6 @@ replaceDLPLinkFile(linkFileName: string): Promise<void>
 Replaces a link file. This API uses a promise to return the result. After the API is successfully called, the current link file is replaced with the new link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.When you need to access a different DLP file, you can replace the link file to change the file mapping.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -742,95 +363,6 @@ Replaces a link file. This API uses a promise to return the result. After the AP
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-    await dlpFile.stopFuseLink(); // Stop the read and write on the FUSE.
-    await dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link'); // Replace a link file.
-    await dlpFile.resumeFuseLink(); // Resume read/write on the link file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  } finally {
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-    await dlpFile.stopFuseLink(); // Stop the read and write on the FUSE.
-    dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // Replace a link file.
-      if (err !== undefined) {
-        console.error('replaceDLPLinkFile error,', err.code, err.message);
-      } else {
-        console.info('res', JSON.stringify(res));
-        await dlpFile?.resumeFuseLink(); // Resume the read and write on the FUSE.
-      }
-      await dlpFile?.closeDLPFile(); // Close the DLP object.
-      fileIo.closeSync(file);
-    });
-  } catch (err) {
-    console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
 
 ## replaceDLPLinkFile
 
@@ -842,8 +374,6 @@ Replaces a link file. This API uses an asynchronous callback to return the resul
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -869,10 +399,6 @@ Replaces a link file. This API uses an asynchronous callback to return the resul
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-See [replaceDLPLinkFile](#replacedlplinkfile)
-
 ## resumeFuseLink
 
 ```TypeScript
@@ -882,8 +408,6 @@ resumeFuseLink(): Promise<void>
 Resumes the read and write on the FUSE. This API uses a promise to return the result. After the API is successfully called, the read and write on the link file are resumed.This API can be called to resume read and write only after [stopFuseLink](#stopfuselink) is called to stop the read and write operations.After the link file is replaced, the read and write need to be resumed for normal file access.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -907,93 +431,6 @@ Resumes the read and write on the FUSE. This API uses a promise to return the re
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-    await dlpFile.stopFuseLink(); // Stop the read and write on the FUSE.
-    await dlpFile.resumeFuseLink(); // Resume read/write on the link file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  } finally {
-    dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-    await dlpFile.stopFuseLink(); // Stop the read and write on the FUSE.
-    dlpFile.resumeFuseLink(async (err, res) => {
-      if (err !== undefined) {
-        console.error('resumeFuseLink error,', err.code, err.message);
-      } else {
-        console.info('res', JSON.stringify(res));
-      }
-      await dlpFile?.closeDLPFile(); // Close the DLP object.
-      fileIo.closeSync(file);
-    });
-  } catch (err) {
-    console.error('resumeFuseLink error,', (err as BusinessError).code, (err as BusinessError).message);
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
 
 ## resumeFuseLink
 
@@ -1005,8 +442,6 @@ Resumes the read and write on the FUSE. This API uses an asynchronous callback t
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -1031,10 +466,6 @@ Resumes the read and write on the FUSE. This API uses an asynchronous callback t
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-See [resumeFuseLink](#resumefuselink)
-
 ## stopFuseLink
 
 ```TypeScript
@@ -1044,8 +475,6 @@ stopFuseLink(): Promise<void>
 Stops the read and write on the FUSE. This API uses a promise to return the result. After the API is successfully called, the read and write on the link file are stopped.After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call [resumeFuseLink](#resumefuselink) to resume the read and write operations.Before deleting a link file, stop the read and write to ensure secure file operations.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -1070,91 +499,6 @@ Stops the read and write on the FUSE. This API uses a promise to return the resu
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId) // Open a DLP file.
-    dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-    dlpFile.stopFuseLink(); // Stop read/write on the link file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  } finally {
-    dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-    dlpFile.stopFuseLink(async (err, res) => {
-      if (err !== undefined) {
-        console.error('stopFuseLink error,', err.code, err.message);
-      } else {
-        console.info('res', JSON.stringify(res));
-      }
-      await dlpFile?.closeDLPFile(); // Close the DLP object.
-      fileIo.closeSync(file);
-    });
-  } catch (err) {
-    console.error('stopFuseLink error,', (err as BusinessError).code, (err as BusinessError).message);
-    await dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
-
 ## stopFuseLink
 
 ```TypeScript
@@ -1164,8 +508,6 @@ stopFuseLink(callback: AsyncCallback<void>): void
 Stops the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are stopped.After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call [resumeFuseLink](#resumefuselink) to resume the read and write operations.Before deleting a link file, stop the read and write.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -1190,10 +532,6 @@ Stops the read and write on the FUSE. This API uses an asynchronous callback to 
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [stopFuseLink](#stopfuselink)
 
 ## dlpProperty
 
@@ -1206,8 +544,6 @@ Authorized user information.
 **Type:** [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 

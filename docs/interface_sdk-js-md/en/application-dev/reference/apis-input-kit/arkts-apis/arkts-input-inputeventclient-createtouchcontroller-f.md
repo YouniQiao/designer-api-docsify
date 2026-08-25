@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## createTouchController
@@ -15,8 +15,6 @@ function createTouchController(): Promise<TouchController>
 Creates a touch controller for simulating touch operations. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 

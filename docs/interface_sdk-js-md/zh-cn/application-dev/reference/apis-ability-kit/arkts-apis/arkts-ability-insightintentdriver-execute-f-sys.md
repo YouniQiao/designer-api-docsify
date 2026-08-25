@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 ```
 
 ## execute
@@ -15,8 +15,6 @@ function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.Exec
 执行意图调用的接口。使用callback异步回调。 当调用方在后台时，需要申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限。 当意图调用执行模式[ExecuteMode](arkts-ability-insightintent-executemode-e.md)取值为UI_ABILITY_BACKGROUND时，需要 申请`ohos.permission.ABILITY_BACKGROUND_COMMUNICATION`权限。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.EXECUTE_INSIGHT_INTENT
 
@@ -57,69 +55,6 @@ function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.Exec
 | [16000137](../errorcode-ability.md#16000137-跨设备执行意图连接失败) |
 | [16000138](../errorcode-ability.md#16000138-跨设备执行意图设备断连) |
 
-**示例**
-
-```TypeScript
-import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-function executeInsightIntentAsync() {
-
-  let param: insightIntentDriver.ExecuteParam = {
-    bundleName: 'com.ohos.intentexecutedemo',
-    moduleName: 'entry',
-    abilityName: 'EntryAbility',
-    insightIntentName: 'PlayMusic',
-    insightIntentParam: {
-      'songName': 'City Of Stars',
-    },
-    executeMode: insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND,
-  };
-
-  try {
-    insightIntentDriver.execute(param, (error, data: insightIntent.ExecuteResult | undefined) => {
-      const resultCode = data?.code ?? -1;
-      const resultData = data ? JSON.stringify(data) : 'null';
-      if (error) {
-        hilog.error(0x0000, 'testTag', 'execute insight intent failed with %{public}s', error);
-      } else {
-        hilog.info(0x0000, 'testTag', '%{public}s', 'execute insight intent succeed');
-      }
-      hilog.info(0x0000, 'testTag', 'execute insight intent return %{public}d', resultCode);
-      hilog.info(0x0000, 'testTag', 'execute insight intent result %{public}s', resultData);
-    })
-  } catch (error) {
-    hilog.error(0x0000, 'testTag', 'execute insight intent error caught %{public}s', error);
-  }
-}
-```
-
-```TypeScript
-import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-async function executeSearchMusicIntentPromise() {
-  let param: insightIntentDriver.ExecuteParam = {
-    bundleName: 'com.ohos.intentexecutedemo',
-    moduleName: 'entry',
-    abilityName: 'EntryAbility',
-    insightIntentName: 'PlayMusic',
-    insightIntentParam: {
-      'songName': 'City Of Stars',
-    },
-    executeMode: insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND,
-  };
-
-  try {
-    let resultData: insightIntent.ExecuteResult = await insightIntentDriver.execute(param);
-    hilog.info(0x0000, 'testTag', 'execute insight intent return %{public}d', resultData.code);
-    hilog.info(0x0000, 'testTag', 'execute insight intent result %{public}s', resultData.result);
-  } catch (error) {
-    hilog.error(0x0000, 'testTag', 'execute insight intent error caught %{public}s', error);
-  }
-}
-```
-
 
 ## execute
 
@@ -130,8 +65,6 @@ function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>
 执行意图调用的接口。使用Promise异步回调。 当调用方在后台时，需要申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限。 当意图调用执行模式[ExecuteMode](arkts-ability-insightintent-executemode-e.md)取值为UI_ABILITY_BACKGROUND时，需要 申请`ohos.permission.ABILITY_BACKGROUND_COMMUNICATION`权限。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.EXECUTE_INSIGHT_INTENT
 
@@ -176,7 +109,3 @@ function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>
 | [16000055](../errorcode-ability.md#16000055-免安装超时) |
 | [16000137](../errorcode-ability.md#16000137-跨设备执行意图连接失败) |
 | [16000138](../errorcode-ability.md#16000138-跨设备执行意图设备断连) |
-
-**示例**
-
-参见 [execute](#execute)

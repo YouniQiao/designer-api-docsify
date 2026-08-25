@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## on('attachStateChange')
@@ -15,8 +15,6 @@ function on(type: 'attachStateChange', callback: Callback<AttachStateChangeInfo>
 Subscribes to device attachment state change events.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -33,18 +31,6 @@ Subscribes to device attachment state change events.
 | --- |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
 
-**Examples**
-
-```TypeScript
-let callback = (result: mechanicManager.AttachStateChangeInfo) => {
-  console.info(`'callback result:' ${result}`);
-};
-
-console.info('Register');
-mechanicManager.on("attachStateChange", callback);
-console.info('Register: success');
-```
-
 
 ## on('trackingStateChange')
 
@@ -55,8 +41,6 @@ function on(type: 'trackingStateChange', callback: Callback<TrackingEventInfo>):
 Subscribes to tracking events.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -72,15 +56,3 @@ Subscribes to tracking events.
 | Error Code ID |
 | --- |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
-
-**Examples**
-
-```TypeScript
-let callback = (result: mechanicManager.TrackingEventInfo) => {
-  console.info(`'callback result:' ${result}`);
-};
-
-console.info('Register');
-mechanicManager.on("trackingStateChange", callback);
-console.info('Register: success');
-```

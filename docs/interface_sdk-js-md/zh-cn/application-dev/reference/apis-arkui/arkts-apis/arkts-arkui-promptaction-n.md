@@ -12,14 +12,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -93,9 +91,3 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 | [DialogOptionsBorderColor](arkts-arkui-promptaction-dialogoptionsbordercolor-t.md) |
 | [DialogOptionsBorderStyle](arkts-arkui-promptaction-dialogoptionsborderstyle-t.md) |
 | [DialogOptionsShadow](arkts-arkui-promptaction-dialogoptionsshadow-t.md) |
-| [PromptActionSingleButton](arkts-arkui-promptaction-promptactionsinglebutton-t.md) |
-| [PromptActionDoubleButtons](arkts-arkui-promptaction-promptactiondoublebuttons-t.md) |
-| [PromptActionTripleButtons](arkts-arkui-promptaction-promptactiontriplebuttons-t.md) |
-| [PromptActionQuadrupleButtons](arkts-arkui-promptaction-promptactionquadruplebuttons-t.md) |
-| [PromptActionQuintupleButtons](arkts-arkui-promptaction-promptactionquintuplebuttons-t.md) |
-| [PromptActionSextupleButtons](arkts-arkui-promptaction-promptactionsextuplebuttons-t.md) |

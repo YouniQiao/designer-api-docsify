@@ -2,11 +2,9 @@
 
 Defines Row Modifier@extends RowAttribute @implements AttributeModifier&lt;RowAttribute&gt;
 
-**Inheritance/Implementation:** RowModifier extends RowAttribute and implements AttributeModifier<RowAttribute>
+**Inheritance/Implementation:** RowModifier extends [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md#rowattribute) and implements AttributeModifier<RowAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: RowAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

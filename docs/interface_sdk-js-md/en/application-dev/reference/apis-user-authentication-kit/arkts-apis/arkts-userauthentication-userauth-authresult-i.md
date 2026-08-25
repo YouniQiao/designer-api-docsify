@@ -4,8 +4,6 @@ Represents the authentication result object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md)
@@ -15,7 +13,7 @@ Represents the authentication result object.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## freezingTime
@@ -29,8 +27,6 @@ Time for which the authentication operation is frozen. The unit is milliseconds.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Number of remaining authentication operations.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [remainAttempts](arkts-userauthentication-userauth-authresultinfo-i.md#remainattempts)
@@ -69,8 +63,6 @@ Authentication token information.
 **Type:** Uint8Array
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -4,8 +4,6 @@ This module provides constants for agent.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -13,7 +11,7 @@ This module provides constants for agent.
 ## Modules to Import
 
 ```TypeScript
-import { agentConstant } from '@kit.AbilityKit';
+import { agentConstant } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

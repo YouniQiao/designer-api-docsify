@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
@@ -26,8 +24,6 @@ fileList: Array<FileResponse>
 **类型：** Array&lt;[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)&gt;
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 

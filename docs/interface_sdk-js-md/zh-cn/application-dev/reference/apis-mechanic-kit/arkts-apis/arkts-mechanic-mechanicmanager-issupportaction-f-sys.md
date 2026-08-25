@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## isSupportAction
 
 ```TypeScript
-function isSupportAction(mechId: int, actionType: ActionType): boolean
+function isSupportAction(mechId: number, actionType: ActionType): boolean
 ```
 
 判断是否支持某个动作
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -26,8 +24,8 @@ function isSupportAction(mechId: int, actionType: ActionType): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| actionType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | 是 |
+| mechId | number | 是 |
+| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 |
 
 **返回值：**
 

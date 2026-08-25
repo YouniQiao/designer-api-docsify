@@ -4,8 +4,6 @@ Defines detailed information about a driver.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines detailed information about a driver.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## busType
@@ -27,8 +25,6 @@ Bus type.
 **Type:** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -46,8 +42,6 @@ Driver description.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Driver name.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -82,8 +74,6 @@ Driver size, in bytes.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -100,8 +90,6 @@ Driver UID.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Driver.ExternalDevice
 
 **System API:** This is a system API.
@@ -117,8 +105,6 @@ Driver version.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 

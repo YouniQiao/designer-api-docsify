@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## dialCall
@@ -15,8 +15,6 @@ function dialCall(phoneNumber: string, options: DialCallOptions, callback: Async
 Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -46,54 +44,6 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 | 8300006 |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.dialCall("138xxxxxxxx", (err: BusinessError) => {
-    if (err) {
-        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`dialCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialCallOptions: call.DialCallOptions = {
-    accountId: 0,
-    videoState: 0,
-    dialScene: 0,
-    dialType: 0
-}
-call.dialCall("138xxxxxxxx", dialCallOptions, (err: BusinessError) => {
-    if (err) {
-        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`dialCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialCallOptions: call.DialCallOptions = {
-    accountId: 0,
-    videoState: 0,
-    dialScene: 0,
-    dialType: 0
-}
-call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
-    console.info(`dialCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`dialCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## dialCall
 
@@ -104,8 +54,6 @@ function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
 Initiates a call. You can set call options as needed. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -140,10 +88,6 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 | 8300006 |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-See [dialCall](#dialcall)
-
 
 ## dialCall
 
@@ -154,8 +98,6 @@ function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
 Initiates a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -183,7 +125,3 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 | 8300005 |
 | 8300006 |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [dialCall](#dialcall)

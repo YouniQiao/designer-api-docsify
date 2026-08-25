@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setBadgeDisplayStatusByBundles
@@ -15,8 +15,6 @@ function setBadgeDisplayStatusByBundles(badges: Map<BundleOption, boolean>) : Pr
 Batch sets whether to display badges for specified applications. This API uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,21 +44,3 @@ Batch sets whether to display badges for specified applications. This API uses a
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let badges = new Map<notificationManager.BundleOption, boolean>();
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName',
-};
-badges.set(bundle, true);
-
-notificationManager.setBadgeDisplayStatusByBundles(badges).then(() => {
-    console.info('SetBadgeDisplayStatusByBundles success.');
-}).catch((err: BusinessError) => {
-    console.error(`SetBadgeDisplayStatusByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```

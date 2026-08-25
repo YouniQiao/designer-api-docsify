@@ -20,7 +20,7 @@ The text selection panel is an operation panel that pops up after a user selects
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
+import { PanelInfo, PanelType } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

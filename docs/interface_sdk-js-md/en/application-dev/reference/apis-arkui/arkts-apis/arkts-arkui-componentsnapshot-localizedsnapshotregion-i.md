@@ -11,14 +11,12 @@ Defines the rectangular region for capturing the component snapshot, with coordi
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## bottom
@@ -32,8 +30,6 @@ Y-coordinate of the lower right corner of the rectangular region.Unit: px.Value 
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,8 +49,6 @@ For LTR layouts: X-coordinate of the lower right corner of the rectangular regio
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -72,8 +66,6 @@ For LTR layouts: X-coordinate of the upper left corner of the rectangular region
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,71 +85,8 @@ For LTR layouts: Y-coordinate of the upper left corner of the rectangular region
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct SnapshotExample {
-  @State pixmap: image.PixelMap | undefined = undefined
-
-  build() {
-    Column() {
-      Row() {
-        Column() {
-          TextClock()
-          Button("Button ABCDE").type(ButtonType.Normal)
-          Row() {
-            Checkbox()
-            Text("√")
-            Text(" | ")
-            Checkbox()
-            Text("×")
-          }.align(Alignment.Start)
-
-          TextInput()
-        }
-        .align(Alignment.Start)
-        .id("component1")
-        .width("600px")
-        .height("600px")
-        .borderRadius(6)
-        .borderWidth(2)
-        .borderColor(Color.Green)
-
-      }
-
-      Button("get capture")
-        .onClick(() => {
-          try {
-            let pixelmap = this.getUIContext().getComponentSnapshot().getSync("component1",
-              {
-                scale: 2,
-                waitUntilRenderFinished: true,
-                region: {
-                  start: 20,
-                  top: 20,
-                  end: 200,
-                  bottom: 240
-                }
-              })
-            this.pixmap = pixelmap
-          } catch (error) {
-            console.error(`getSync errorCode:${error.code} message:${error.message}`)
-          }
-        }).margin(10)
-      Image(this.pixmap).border({ color: Color.Black, width: 2 }).width("600px")
-    }.width("100%").align(Alignment.Center)
-  }
-}
-```

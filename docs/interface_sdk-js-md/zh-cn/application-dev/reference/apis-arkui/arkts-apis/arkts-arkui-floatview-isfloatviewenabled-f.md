@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## isFloatViewEnabled
@@ -16,8 +16,6 @@ function isFloatViewEnabled(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -27,10 +25,3 @@ function isFloatViewEnabled(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let enable: boolean = floatView.isFloatViewEnabled();
-console.info('Float view enabled is: ' + enable);
-```

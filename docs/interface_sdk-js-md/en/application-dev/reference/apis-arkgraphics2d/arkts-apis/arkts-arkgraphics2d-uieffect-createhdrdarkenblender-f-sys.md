@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createHdrDarkenBlender
@@ -16,8 +16,6 @@ function createHdrDarkenBlender(hdrBrightnessRatio: number,
 Creates an HdrDarkenBlender instance for HDR layer darken blending effect.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

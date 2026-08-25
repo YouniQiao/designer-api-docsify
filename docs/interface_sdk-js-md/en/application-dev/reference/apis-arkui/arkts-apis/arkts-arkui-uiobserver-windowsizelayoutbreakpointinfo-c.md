@@ -4,14 +4,12 @@ Provides information about window size layout breakpoint changes.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## heightBreakpoint
@@ -22,11 +20,9 @@ readonly heightBreakpoint: HeightBreakpoint
 
 Layout breakpoint for window height.
 
-**Type:** HeightBreakpoint
+**Type:** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ readonly widthBreakpoint: WidthBreakpoint
 
 Layout breakpoint for window width.
 
-**Type:** WidthBreakpoint
+**Type:** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Represents the notification message.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Substitutes:** WatchEvent
@@ -17,7 +15,7 @@ Represents the notification message.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## type
@@ -31,8 +29,6 @@ Notification type.
 **Type:** NotifyType
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -55,8 +51,6 @@ URIs of the changed files. Currently, only one notification is supported. A coll
 **Type:** Array&lt;string&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 

@@ -10,8 +10,6 @@ const batteryCapacityLevel: BatteryCapacityLevel
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## batterySOC
@@ -23,8 +21,6 @@ const batterySOC: number
 表示当前设备剩余电池电量百分比，取值范围是[0，100]。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,8 +36,6 @@ const batteryTemperature: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## chargingStatus
@@ -53,8 +47,6 @@ const chargingStatus: BatteryChargeState
 表示当前设备电池的充电状态。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -70,8 +62,6 @@ const healthStatus: BatteryHealthState
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## isBatteryPresent
@@ -83,8 +73,6 @@ const isBatteryPresent: boolean
 表示当前设备是否支持电池以及电池是否在位。true表示设备支持电池且电池在位，false表示设备不支持电池或电池不在位，默认为false。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -98,8 +86,6 @@ const nowCurrent: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## pluggedType
@@ -111,8 +97,6 @@ const pluggedType: BatteryPluggedType
 表示当前设备连接的充电器类型。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -126,8 +110,6 @@ const technology: string
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
 
 ## voltage
@@ -139,7 +121,5 @@ const voltage: number
 表示当前设备电池的电压，单位微伏。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core

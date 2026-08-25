@@ -9,8 +9,6 @@ type ValueType = null | number | string | boolean | collections.Uint8Array | Ass
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 | 类型 |
@@ -20,7 +18,7 @@ type ValueType = null | number | string | boolean | collections.Uint8Array | Ass
 | string |
 | boolean |
 | collections.Uint8Array |
-| [Asset](arkts-arkdata-commontype-asset-i.md) |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) |
 | [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) |
 | collections.Float32Array |
 | bigint |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## getBackgroundTaskState
@@ -15,8 +15,6 @@ function getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthRes
 Obtains the authorization information of a continuous task.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **Required permissions:** ohos.permission.SET_BACKGROUND_TASK_STATE
 
@@ -36,7 +34,7 @@ Obtains the authorization information of a continuous task.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [UserAuthResult](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-userauthresult-i.md) |
+| [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) |
 
 **Error codes:**
 
@@ -46,23 +44,3 @@ Obtains the authorization information of a continuous task.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    // Update the parameters based on the actual situation.
-    let backgroundTaskStateInfo: backgroundTaskManager.BackgroundTaskStateInfo = {
-        userId: 100,
-        bundleName: 'com.example.continuoustask',
-        appIndex: 0
-    };
-    let auth = backgroundTaskManager.getBackgroundTaskState(backgroundTaskStateInfo);
-    console.info('Operation getBackgroundTaskState succeeded. data: ' + JSON.stringify(auth));
-} catch (error) {
-    console.error(`Operation getBackgroundTaskState failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

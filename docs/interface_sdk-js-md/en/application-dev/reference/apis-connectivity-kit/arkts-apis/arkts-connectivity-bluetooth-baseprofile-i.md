@@ -4,8 +4,6 @@ Base interface of profile.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md)
@@ -15,7 +13,7 @@ Base interface of profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getConnectionDevices
@@ -27,8 +25,6 @@ getConnectionDevices(): Array<string>
 Obtains the connected devices list of profile.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -44,13 +40,6 @@ Obtains the connected devices list of profile.
 | --- |
 | Array & lt;string & gt; |
 
-**Examples**
-
-```TypeScript
-let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
-let retArray : Array<string> = a2dpSrc.getConnectionDevices();
-```
-
 ## getDeviceState
 
 ```TypeScript
@@ -60,8 +49,6 @@ getDeviceState(device: string): ProfileConnectionState
 Obtains the profile state of device.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -81,11 +68,4 @@ Obtains the profile state of device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) |
-
-**Examples**
-
-```TypeScript
-let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
-let ret : bluetooth.ProfileConnectionState = a2dpSrc.getDeviceState('XX:XX:XX:XX:XX:XX');
-```
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) |

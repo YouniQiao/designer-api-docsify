@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## openFormManagerCrossBundle
@@ -15,8 +15,6 @@ function openFormManagerCrossBundle(want: Want): void
 Open the view of forms belonging to the specified bundle. Client to communication with FormManagerService.
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE
 
@@ -38,53 +36,3 @@ Open the view of forms belonging to the specified bundle. Client to communicatio
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-const want: Want = {
-  bundleName: 'com.example.formbutton',
-  abilityName: 'EntryFormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  },
-};
-try {
-  formProvider.openFormManagerCrossBundle(want);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-const want: Want = {
-  bundleName: 'com.example.formbutton',
-  abilityName: 'EntryFormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  } as Record<string, RecordData>
-};
-try {
-  formProvider.openFormManagerCrossBundle(want);
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```

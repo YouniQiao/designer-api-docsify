@@ -6,14 +6,12 @@ Basic face metadata detected by the camera, which is extended from [MetadataObje
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## leftEyeBoundingBox
@@ -28,8 +26,6 @@ Left eye area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -37,16 +33,14 @@ Left eye area.
 ## pitchAngle
 
 ```TypeScript
-readonly pitchAngle?: int
+readonly pitchAngle?: number
 ```
 
 Pitch angle. The value range is [-90, 90], with the positive direction being downwards.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -64,8 +58,6 @@ Right eye area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -73,16 +65,14 @@ Right eye area.
 ## rollAngle
 
 ```TypeScript
-readonly rollAngle?: int
+readonly rollAngle?: number
 ```
 
 Roll angle. The value range is [-180, 180], with the positive direction being clockwise.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -91,16 +81,14 @@ Roll angle. The value range is [-180, 180], with the positive direction being cl
 ## yawAngle
 
 ```TypeScript
-readonly yawAngle?: int
+readonly yawAngle?: number
 ```
 
 Yaw angle. The value range is [-90, 90], with the positive direction being rightwards.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

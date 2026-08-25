@@ -1,17 +1,15 @@
 # VMMemoryInfo
 
-Describes the VM memory information.@interface VMMemoryInfo
+Describes the VM memory information.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## allArraySize
@@ -25,8 +23,6 @@ Size of all array objects of the current VM, in KB.
 **Type:** bigint
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -42,8 +38,6 @@ Heap size used by the current VM, in KB.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## totalHeap
@@ -57,7 +51,5 @@ Total heap size of the current VM, in KB.
 **Type:** bigint
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug

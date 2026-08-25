@@ -4,8 +4,6 @@ Defines the settings for images of the ResourceStr type.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Image color filter of the styled string.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -45,8 +41,6 @@ Image layout.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -61,11 +55,9 @@ objectFit?: ImageFit
 
 Image scaling type. The **ImageFit.MATRIX** enum value is not supported.Default value: **ImageFit.Cover**
 
-**Type:** ImageFit
+**Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,11 +73,9 @@ resourceValue: Optional<ResourceStr>
 
 Image data source.
 
-**Type:** Optional&lt;ResourceStr&gt;
+**Type:** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,11 +91,9 @@ size?: SizeOptions
 
 Image size.
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,8 +114,6 @@ Whether to enable [enhanced SVG tag parsing capabilities](../../../reference/api
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -147,8 +133,6 @@ Whether to load the image synchronously. By default, the image is loaded asynchr
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -163,11 +147,9 @@ verticalAlign?: ImageSpanAlignment
 
 Alignment mode of the image with the text.Default value: **ImageSpanAlignment.BOTTOM**
 
-**Type:** ImageSpanAlignment
+**Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

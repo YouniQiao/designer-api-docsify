@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## unbind
@@ -16,8 +16,6 @@ function unbind(floatViewController: FloatViewController,
 解绑标准悬浮窗和闪控球。需要在[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和 [闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)均停止后才可解绑。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,34 +41,3 @@ function unbind(floatViewController: FloatViewController,
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) |
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
-
-**示例**
-
-```TypeScript
-// Entry.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { floatingBall } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private floatingBallController: floatingBall.FloatingBallController | undefined = undefined;
-  private floatViewController: floatView.FloatViewController | undefined = undefined;
-  // 创建控制器
-  // ...
-  public unbindController(): void {
-    try {
-      // 使用绑定时传入的闪控窗和闪控球控制器
-      if (this.floatViewController && this.floatingBallController) {
-        floatView.unbind(this.floatViewController!, this.floatingBallController!).then(() => {
-          console.info('Succeeded in unbinding float view and floating ball.');
-        }).catch((err: BusinessError): void => {
-          console.error(`Failed to unbind float view and floating ball. Cause:${err.code}, message:${err.message}`);
-        });
-      }
-    } catch(e) {
-      console.error(`Failed to unbind float view and floating ball. Cause:${e.code}, message:${e.message}`);
-    }
-  }
-}
-```

@@ -4,14 +4,12 @@ Represents a SSAP client class. It provides APIs for connecting to and transmitt
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## callMethod
@@ -23,8 +21,6 @@ callMethod(method: Method): Promise<Method>
 Describes the method for calling the server. For example, in a device control scenario, the client can call the configuration method provided by the server to remotely set device parameters or trigger specific operations. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -67,8 +63,6 @@ Unsubscribes from event notification events. This API uses an asynchronous callb
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -91,8 +85,6 @@ Subscribes to event notification events. For example, in a device status monitor
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -114,8 +106,6 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 Reads a server descriptor. This API can be used only after a connection is established by calling [connect](arkts-connectivity-ssap-client-i.md#connect). This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -157,8 +147,6 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 Enables or disables indication for property value change. When the property value changes, the server proactively sends a notification to the client. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -202,8 +190,6 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 Rewrites the server descriptor. This API uses a promise to return the result.This API does not support writing the client property configuration descriptor (**CLIENT_PROPERTY_CONFIG**). To configure the client property notification or indication, use [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or [setPropertyIndication](#setpropertyindication)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

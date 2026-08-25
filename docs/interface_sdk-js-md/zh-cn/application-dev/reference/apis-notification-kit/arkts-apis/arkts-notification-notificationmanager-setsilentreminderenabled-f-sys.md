@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setSilentReminderEnabled
@@ -16,8 +16,6 @@ function setSilentReminderEnabled(bundle: BundleOption, enabled: boolean): Promi
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function setSilentReminderEnabled(bundle: BundleOption, enabled: boolean): Promi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enabled | boolean | 是 |
 
 **返回值：**
@@ -48,34 +46,3 @@ function setSilentReminderEnabled(bundle: BundleOption, enabled: boolean): Promi
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName',
-};
-notificationManager.setSilentReminderEnabled(bundle, true).then(() => {
-    hilog.info(0x0000, 'testTag', '%{public}s', `setSilentReminderEnabled success.`);
-}).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', '%{public}s', `setSilentReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName',
-};
-try {
-    notificationManager.setSilentReminderEnabled(bundle, true);
-} catch (err) {
-    console.info(`setSilentReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
-}
-```

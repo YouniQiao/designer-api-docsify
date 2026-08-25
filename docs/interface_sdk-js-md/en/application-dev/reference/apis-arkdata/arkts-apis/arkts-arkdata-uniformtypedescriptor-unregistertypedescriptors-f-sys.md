@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 ```
 
 ## unregisterTypeDescriptors
@@ -15,8 +15,6 @@ function unregisterTypeDescriptors(typeIds: Array<string>): Promise<void>
 Unregister one or more type descriptors from the system by the given type IDs.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DYNAMIC_UTD_TYPE
 

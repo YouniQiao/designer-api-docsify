@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { inspector } from '@kit.ArkUI';
+import { inspector } from 'kits/@kit.ArkUI';
 ```
 
 ## off('layout')
@@ -23,8 +21,6 @@ off(type: 'layout', callback?: () => void): void
 通过句柄取消注册回调，当组件布局完成时不再触发指定的回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ off(type: 'draw', callback?: () => void): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -74,8 +68,6 @@ off(type: 'drawChildren', callback?: Callback<void>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -89,39 +81,15 @@ off(type: 'drawChildren', callback?: Callback<void>): void
 | type | 'drawChildren' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
-## offDraw
-
-```TypeScript
-offDraw(callback?: VoidCallback): void
-```
-
-通过句柄向对应的查询条件取消注册回调，当组件绘制送显完成时不再触发指定的回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 否 |
-
 ## offDrawChildren
 
 ```TypeScript
-offDrawChildren(callback?: Callback<int[]>): void
+offDrawChildren(callback?: Callback<number[]>): void
 ```
 
 取消注册drawChildren事件回调。要实现在子组件绘制送显完成后停止触发特定回调，只需通过ComponentObserver句柄，取消注册该回调即可。 如果组件树中存在多个drawChildren事件回调，取消最顶层的回调后，其余drawChildren事件回调也无法生效。
 
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为23。
+**起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -135,87 +103,6 @@ offDrawChildren(callback?: Callback<int[]>): void
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number[]&gt; | 否 |
 
-**示例**
-
-```TypeScript
-import { inspector } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct ImageExample {
-  build() {
-    Column() {
-      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start }) {
-        Row({ space: 5 }) {
-          Image($r('app.media.startIcon'))
-            .width(110)
-            .height(110)
-            .border({ width: 1 })
-            .id('IMAGE_ID')
-        }
-        .id('ROW_ID')
-      }
-    }.height(320).width(360).padding({ right: 10, top: 10 })
-  }
-
-  listenerForRow: inspector.ComponentObserver = this.getUIContext().getUIInspector().createComponentObserver('ROW_ID');
-
-  aboutToAppear() {
-    let onDrawChildrenCompleteUniqueId: (childIds: number[]) => void = (childIds: number[]): void => {
-      // 从API version 24开始，新增onDrawChildren接口。监听到DrawChildren事件后，用户可以自定义实现逻辑。
-    };
-
-    this.listenerForRow.onDrawChildren(onDrawChildrenCompleteUniqueId);
-  }
-  // 通过句柄取消注册回调，由开发者自行决定在何时调用。
-  // this.listenerForRow.offDrawChildren(onDrawChildrenCompleteUniqueId)
-}
-```
-
-## offDrawChildren
-
-```TypeScript
-offDrawChildren(callback?: Callback<int[]>): void
-```
-
-取消注册drawChildren事件回调。要实现在子组件绘制送显完成后停止触发特定回调，只需通过ComponentObserver句柄，取消注册该回调即可。 如果组件树中存在多个drawChildren事件回调，取消最顶层的回调后，其余drawChildren事件回调也无法生效。
-
-**起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | 否 |
-
-## offLayout
-
-```TypeScript
-offLayout(callback?: VoidCallback): void
-```
-
-通过句柄向对应的查询条件取消注册回调，当组件布局完成时不再触发指定的回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 否 |
-
 ## offLayoutChildren
 
 ```TypeScript
@@ -225,8 +112,6 @@ offLayoutChildren(callback?: Callback<void>): void
 取消注册layoutChildren事件回调。要实现在子组件布局完成后停止触发特定回调，只需通过ComponentObserver句柄，取消注册该回调即可。 如果组件树中存在多个layoutChildren事件回调，取消最顶层的回调后，其余layoutChildren事件回调也无法生效。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -240,75 +125,6 @@ offLayoutChildren(callback?: Callback<void>): void
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
-**示例**
-
-以下示例展示了inspector注册组件布局和组件绘制送显完成回调通知能力的基本用法。同时，通过[onLayoutChildren23+](#onlayoutchildren)接口监听子树中的节点完成布局时的回调事件。
-
-```TypeScript
-import { inspector } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct ImageExample {
-  build() {
-    Column() {
-      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start }) {
-        Row({ space: 5 }) {
-          Image($r('app.media.startIcon'))
-            .width(110)
-            .height(110)
-            .border({ width: 1 })
-            .id('IMAGE_ID')
-        }
-        .id('ROW_ID')
-      }
-    }.height(320).width(360).padding({ right: 10, top: 10 })
-  }
-
-  listenerForImage: inspector.ComponentObserver = this.getUIContext().getUIInspector().createComponentObserver('IMAGE_ID');
-  listenerForRow: inspector.ComponentObserver = this.getUIContext().getUIInspector().createComponentObserver('ROW_ID');
-
-  aboutToAppear() {
-    let onLayoutComplete: () => void = (): void => {
-      // 根据需要补充实现代码
-    };
-    let onDrawComplete: () => void = (): void => {
-      // 根据需要补充实现代码
-    };
-    let onDrawChildrenComplete: () => void = (): void => {
-      // 根据需要补充实现代码
-    };
-    // 绑定当前js实例
-    let funcLayout = onLayoutComplete;
-    let funcDraw = onDrawComplete;
-    let funcDrawChildren = onDrawChildrenComplete;
-    let offFuncLayout = onLayoutComplete;
-    let offFuncDraw = onDrawComplete;
-    let offFuncDrawChildren = onDrawChildrenComplete;
-
-    this.listenerForImage.on('layout', funcLayout);
-    this.listenerForImage.on('draw', funcDraw);
-    this.listenerForRow.on('drawChildren', funcDrawChildren);
-
-    // 通过句柄向对应的查询条件取消注册回调，由开发者自行决定在何时调用。
-    // this.listenerForImage.off('layout', offFuncLayout)
-    // this.listenerForImage.off('draw', offFuncDraw)
-    // this.listenerForRow.off('drawChildren', offFuncDrawChildren)
-
-    let onLayoutChildrenComplete: () => void = (): void => {
-      // 监听到LayoutChildren事件后，用户可以自定义实现逻辑。
-    };
-
-    let uniqueId: number = this.getUniqueId();
-    let listenerForUniqueId: inspector.ComponentObserver = this.getUIContext().getUIInspector().createComponentObserver(uniqueId.toString());
-    listenerForUniqueId.onLayoutChildren(onLayoutChildrenComplete);
-  }
-
-  // 通过句柄向对应的查询条件取消注册回调，由开发者自行决定在何时调用。
-  // listenerForUniqueId.offLayoutChildren(onLayoutChildrenComplete)
-}
-```
-
 ## on('layout')
 
 ```TypeScript
@@ -318,8 +134,6 @@ on(type: 'layout', callback: () => void): void
 通过句柄向对应的查询条件注册回调，当组件布局完成时会触发该回调。请注意，该接口无法监听窗口尺寸变化，相关需求请参考on('windowSizeChange')。此外，布局回调和窗口尺寸变化回调之间不存在确定的执行顺序依赖。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -344,8 +158,6 @@ on(type: 'draw', callback: () => void): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -369,8 +181,6 @@ on(type: 'drawChildren', callback: Callback<void>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -384,39 +194,15 @@ on(type: 'drawChildren', callback: Callback<void>): void
 | type | 'drawChildren' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
-## onDraw
-
-```TypeScript
-onDraw(callback: VoidCallback): void
-```
-
-通过句柄向对应的查询条件注册回调，当组件绘制送显完成时会触发该回调。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 |
-
 ## onDrawChildren
 
 ```TypeScript
-onDrawChildren(callback: Callback<int[]>): void
+onDrawChildren(callback: Callback<number[]>): void
 ```
 
 通过ComponentObserver注册drawChildren事件回调。使用callback异步回调。 与on('drawChildren')相比，本方法在回调中额外返回子组件的uniqueId信息（Callback&lt;number[]&gt;），便于开发者定位具体子组件。 如需获取子组件标识，建议使用本方法；若不需要子组件信息，两者均可使用。以当前注册事件回调的节点为根节点，当组件的子组件位于UI组件主树中且绘制送显完成时，会触发该回调。 如果组件树中存在多个drawChildren事件回调，只会触发最顶层的drawChildren事件回调。取消最顶层的回调后，其余drawChildren事件回调也无法生效。 当前节点注册事件回调后，不支持修改其在UI组件主树中的层级位置。如需调整，请先取消事件回调，再重新注册事件回调。
 
-**起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为23。
+**起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -430,87 +216,6 @@ onDrawChildren(callback: Callback<int[]>): void
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number[]&gt; | 是 |
 
-**示例**
-
-以下示例展示了inspector注册组件绘制送显完成回调通知能力的基本用法。通过[onDrawChildren24+](#ondrawchildren)接口注册回调，当子树内节点完成渲染时，回调返回该节点的uniqueId信息。
-
-```TypeScript
-import { inspector } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct ImageExample {
-  build() {
-    Column() {
-      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start }) {
-        Row({ space: 5 }) {
-          Image($r('app.media.startIcon'))
-            .width(110)
-            .height(110)
-            .border({ width: 1 })
-            .id('IMAGE_ID')
-        }
-        .id('ROW_ID')
-      }
-    }.height(320).width(360).padding({ right: 10, top: 10 })
-  }
-
-  listenerForRow: inspector.ComponentObserver = this.getUIContext().getUIInspector().createComponentObserver('ROW_ID');
-
-  aboutToAppear() {
-    let onDrawChildrenCompleteUniqueId: (childIds: number[]) => void = (childIds: number[]): void => {
-      // 从API version 24开始，新增onDrawChildren接口。监听到DrawChildren事件后，用户可以自定义实现逻辑。
-    };
-
-    this.listenerForRow.onDrawChildren(onDrawChildrenCompleteUniqueId);
-  }
-}
-```
-
-## onDrawChildren
-
-```TypeScript
-onDrawChildren(callback: Callback<int[]>): void
-```
-
-通过ComponentObserver注册drawChildren事件回调。使用callback异步回调。 与on('drawChildren')相比，本方法在回调中额外返回子组件的uniqueId信息（Callback&lt;int[]&gt;），便于开发者定位具体子组件。如需获取子组件标识，建议使用本方法；若不需要子组件信息，两者均可使用。
-
-**起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | 是 |
-
-## onLayout
-
-```TypeScript
-onLayout(callback: VoidCallback): void
-```
-
-通过句柄向对应的查询条件注册回调，当组件布局完成时会触发该回调。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 |
-
 ## onLayoutChildren
 
 ```TypeScript
@@ -520,8 +225,6 @@ onLayoutChildren(callback: Callback<void>): void
 通过ComponentObserver注册layoutChildren事件回调。使用callback异步回调。以当前注册事件回调的节点为根节点，当子树中的节点位于UI组件主树中且完成布局时，会触发该回调。 如果组件树中存在多个layoutChildren事件回调，只会触发最顶层的layoutChildren事件回调。通过offLayoutChildren取消最顶层的回调后，其余layoutChildren事件回调也无法生效。 当前节点注册回调后，不支持修改其在UI组件主树中的层级位置。如需调整，请先取消事件回调，再重新注册事件回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

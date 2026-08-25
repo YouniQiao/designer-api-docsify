@@ -6,11 +6,9 @@ Define the attribute functions of ability component.@extends CommonMethod&lt;Abi
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
-**Substitutes:** UIExtensionComponentAttribute
+**Substitutes:** [UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-attribute.md#uiextensioncomponentattribute-system-api)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

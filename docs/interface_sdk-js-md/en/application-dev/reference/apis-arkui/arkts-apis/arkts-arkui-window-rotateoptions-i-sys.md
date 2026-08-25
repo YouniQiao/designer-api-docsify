@@ -4,8 +4,6 @@ Describes the rotation parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Describes the rotation parameters.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## pivotX
 
 ```TypeScript
-pivotX?: double
+pivotX?: number
 ```
 
 X coordinate of the rotation center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,16 +33,14 @@ X coordinate of the rotation center. The value is a floating-point number in the
 ## pivotY
 
 ```TypeScript
-pivotY?: double
+pivotY?: number
 ```
 
 Y coordinate of the rotation center. The value is a floating-point number in the range [0.0, 1.0], and the default value is **0.5**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -55,16 +49,14 @@ Y coordinate of the rotation center. The value is a floating-point number in the
 ## x
 
 ```TypeScript
-x?: double
+x?: number
 ```
 
 Rotation angle around the x-axis. The value is a floating-point number, and the default value is **0.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -73,16 +65,14 @@ Rotation angle around the x-axis. The value is a floating-point number, and the 
 ## y
 
 ```TypeScript
-y?: double
+y?: number
 ```
 
 Rotation angle around the y-axis. The value is a floating-point number, and the default value is **0.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -91,16 +81,14 @@ Rotation angle around the y-axis. The value is a floating-point number, and the 
 ## z
 
 ```TypeScript
-z?: double
+z?: number
 ```
 
 Rotation angle around the z-axis. The value is a floating-point number, and the default value is **0.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

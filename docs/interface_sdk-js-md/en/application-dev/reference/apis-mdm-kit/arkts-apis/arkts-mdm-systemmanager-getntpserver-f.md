@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getNTPServer
@@ -15,8 +15,6 @@ function getNTPServer(admin: Want): string
 Obtains the NTP server information. This API is applicable to scenarios where you need to query the current NTP server address configured on the device, to verify whether the time synchronization configuration is correct, or to obtain the current configuration before making policy adjustments.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -44,22 +42,3 @@ Obtains the NTP server information. This API is applicable to scenarios where yo
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  systemManager.getNTPServer(wantTemp);
-  console.info('Succeeded in getting NTP server.');
-} catch (err) {
-  console.error(`Failed to get ntp server. Code is ${err.code}, message is ${err.message}`);
-}
-```

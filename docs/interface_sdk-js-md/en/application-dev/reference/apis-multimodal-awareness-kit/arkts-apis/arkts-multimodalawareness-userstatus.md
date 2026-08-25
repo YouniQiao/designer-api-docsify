@@ -4,14 +4,12 @@ The **UserStatus** module, designed for user state awareness, empowers the syste
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary
@@ -21,9 +19,7 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [off](arkts-multimodalawareness-userstatus-off-f.md#offuseragegroupdetected) |
-| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md) |
 | [on](arkts-multimodalawareness-userstatus-on-f.md#onuseragegroupdetected) |
-| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md) |
 
 <!--Del-->
 ### Functions(System API)

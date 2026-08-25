@@ -4,8 +4,6 @@ FlowItem分组配置信息。
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,11 +22,9 @@ onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 1. 同时使用onGetItemMainSizeByIndex和FlowItem的宽高属性时，主轴大小以onGetItemMainSizeByIndex返回结果为准，onGetItemMainSizeByIndex会覆盖FlowItem的主轴长度。
 2. 使用onGetItemMainSizeByIndex可以提高瀑布流跳转到指定位置或index时的效率，避免混用设置onGetItemMainSizeByIndex和未设置的分组，否则会导致布局异常。
 3. onGetItemMainSizeByIndex返回负数时，FlowItem主轴大小为0。
-4. 如果FlowItem主轴大小会随数据动态变化，应保证onGetItemMainSizeByIndex返回值与数据源保持一致。使用[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)时，数据变化后应调用onDataChange、onDataReloaded或onDatasetChange等方法通知框架数据已变化；使用[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)时，应按Repeat的数据更新规则修改状态数组。
+4. 如果FlowItem主轴大小会随数据动态变化，应保证onGetItemMainSizeByIndex返回值与数据源保持一致。使用[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)时，数据变化后应调用onDataChange、[onDataReloaded](arkts-arkui-datachangelistener-i.md#ondatareloaded)或[onDatasetChange](arkts-arkui-datachangelistener-i.md#ondatasetchange)等方法通知框架数据已变化；使用[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)时，应按Repeat的数据更新规则修改状态数组。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,11 +40,9 @@ columnsGap?: Dimension
 
 该分组的列间距，不设置该参数时默认使用瀑布流的[columnsGap](arkts-arkui-waterflow-attribute.md#columnsgap)，设置非法值时使用0vp。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,8 +64,6 @@ crossCount?: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -90,8 +82,6 @@ itemsCount: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -106,13 +96,11 @@ margin?: Margin | Dimension
 
 该分组的外边距参数为Length类型时，四个方向外边距同时生效。默认值：0单位：vp margin设置百分比时，上下左右外边距均以瀑布流的width作为基础值。
 
-**类型：** Margin \| Dimension
+**类型：** [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** {top: 0, right: 0, bottom: 0, left: 0}
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,11 +116,9 @@ rowsGap?: Dimension
 
 该分组的行间距，不设置该参数时默认使用瀑布流的[rowsGap](arkts-arkui-waterflow-attribute.md#rowsgap)，设置非法值时使用0vp。
 
-**类型：** Dimension
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

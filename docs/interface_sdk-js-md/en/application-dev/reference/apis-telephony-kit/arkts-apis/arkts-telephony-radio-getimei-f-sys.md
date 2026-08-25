@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getIMEI
 
 ```TypeScript
-function getIMEI(slotId: int, callback: AsyncCallback<string>): void
+function getIMEI(slotId: number, callback: AsyncCallback<string>): void
 ```
 
 Obtains the IMEI of a specified card slot of the device.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Obtains the IMEI of a specified card slot of the device.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
@@ -43,56 +41,16 @@ Obtains the IMEI of a specified card slot of the device.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getIMEI((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getIMEI failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getIMEI(slotId, (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getIMEI failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getIMEI(slotId).then((data: string) => {
-    console.info(`getIMEI success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getIMEI failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getIMEI
 
 ```TypeScript
-function getIMEI(slotId?: int): Promise<string>
+function getIMEI(slotId?: number): Promise<string>
 ```
 
 Obtains the IMEI of a specified card slot of the device.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -104,7 +62,7 @@ Obtains the IMEI of a specified card slot of the device.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| slotId | number | No |
 
 **Return value:**
 
@@ -124,10 +82,6 @@ Obtains the IMEI of a specified card slot of the device.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-See [getIMEI](#getimei)
-
 
 ## getIMEI
 
@@ -138,8 +92,6 @@ function getIMEI(callback: AsyncCallback<string>): void
 Obtains the IMEI of a specified card slot of the device.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -164,7 +116,3 @@ Obtains the IMEI of a specified card slot of the device.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getIMEI](#getimei)

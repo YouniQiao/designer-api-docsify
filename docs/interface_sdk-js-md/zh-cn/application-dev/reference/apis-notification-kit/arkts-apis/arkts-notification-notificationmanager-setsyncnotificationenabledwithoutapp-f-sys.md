@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setSyncNotificationEnabledWithoutApp
 
 ```TypeScript
-function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean, callback: AsyncCallback<void>): void
+function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
 设置是否将通知同步到未安装应用的设备(callback形式)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -30,7 +28,7 @@ function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean, call
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | enable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -47,87 +45,16 @@ function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean, call
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-let enable: boolean = true;
-let setSyncNotificationEnabledWithoutAppCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setSyncNotificationEnabledWithoutApp success');
-    }
-}
-notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSyncNotificationEnabledWithoutAppCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-let enable: boolean = true;
-let setSyncNotificationEnabledWithoutAppCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setSyncNotificationEnabledWithoutApp success');
-    }
-}
-notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSyncNotificationEnabledWithoutAppCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-let enable: boolean = true;
-notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
-    console.info('setSyncNotificationEnabledWithoutApp success');
-}).catch((err: BusinessError) => {
-    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-let enable: boolean = true;
-notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
-    console.info('setSyncNotificationEnabledWithoutApp success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## setSyncNotificationEnabledWithoutApp
 
 ```TypeScript
-function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean): Promise<void>
+function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean): Promise<void>
 ```
 
 设置是否将通知同步到未安装应用的设备(Promise形式)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -141,7 +68,7 @@ function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean): Pro
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | enable | boolean | 是 |
 
 **返回值：**
@@ -162,7 +89,3 @@ function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean): Pro
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
-
-**示例**
-
-参见 [setSyncNotificationEnabledWithoutApp](#setsyncnotificationenabledwithoutapp)

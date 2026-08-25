@@ -4,11 +4,9 @@
 export type MissionCallback = _MissionCallback
 ```
 
-作为可以 [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) 的入参，表示开始同步后，建立的回调函数。
+作为可以 [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) 的入参，用于监听任务状态变化的回调函数，包含任务列表变化通知、任务快照通知和断开连接通知等功能。表示注册监听后建立的回调函数。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

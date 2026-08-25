@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## DEVICE_NAME
@@ -17,8 +15,6 @@ DEVICE_NAME = 0
 设备名称。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,8 +29,6 @@ FLOATING_NAVIGATION = 1
 三键导航。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

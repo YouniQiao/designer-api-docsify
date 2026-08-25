@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
 
 ```TypeScript
-import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## [[Call]]
@@ -23,8 +21,6 @@ import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteS
 定义Callee的回调函数。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ Wi-Fi station information.@interface StationInfo
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md)
@@ -17,7 +15,7 @@ Wi-Fi station information.@interface StationInfo
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## ipAddress
@@ -31,8 +29,6 @@ The IP address of the Wi-Fi client
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -54,8 +50,6 @@ The MAC address of the Wi-Fi client
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [macAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#macaddress)
@@ -75,8 +69,6 @@ the network name of the Wi-Fi client
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

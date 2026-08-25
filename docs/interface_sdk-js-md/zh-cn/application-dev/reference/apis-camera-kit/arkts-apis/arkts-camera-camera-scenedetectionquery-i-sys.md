@@ -4,8 +4,6 @@ Provides the scene detection and query capabilities.
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ Provides the scene detection and query capabilities.
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isSceneFeatureSupported
@@ -25,8 +23,6 @@ isSceneFeatureSupported(type: SceneFeatureType): boolean
 Checks whether a scene feature is supported.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -50,12 +46,3 @@ Checks whether a scene feature is supported.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400101](../errorcode-camera.md#7400101-无效入参) |
-
-**示例**
-
-```TypeScript
-function isSceneFeatureSupported(photoSessionForSys: camera.PhotoSessionForSys, featureType: camera.SceneFeatureType): boolean {
-  let isSupported: boolean = photoSessionForSys.isSceneFeatureSupported(featureType);
-  return isSupported;
-}
-```

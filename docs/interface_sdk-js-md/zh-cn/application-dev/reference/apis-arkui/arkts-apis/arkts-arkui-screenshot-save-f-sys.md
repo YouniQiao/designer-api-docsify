@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'kits/@kit.ArkUI';
 ```
 
 ## save
@@ -15,8 +15,6 @@ function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap
 获取屏幕截图，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
@@ -42,173 +40,6 @@ function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let screenshotOptions: screenshot.ScreenshotOptions = {
-  screenRect: {
-    left: 200,
-    top: 100,
-    width: 200,
-    height: 200 },
-  imageSize: {
-    width: 300,
-    height: 300 },
-  rotation: 0,
-  displayId: 0,
-  isNotificationNeeded: true,
-  isCaptureFullOfScreen: true
-};
-// 调用save方法获取屏幕截图
-screenshot.save(screenshotOptions, (err: BusinessError, pixelMap: image.PixelMap) => {
-  if (err) {
-    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
-  pixelMap.release(); // PixelMap使用完后及时释放内存
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import  { image } from '@kit.ImageKit';
-
-let screenshotOptions: screenshot.ScreenshotOptions = {
-  "screenRect": {
-    "left": 200,
-    "top": 100,
-    "width": 200,
-    "height": 200 },
-  "imageSize": {
-    "width": 300,
-    "height": 300 },
-  "rotation": 0,
-  "displayId": 0,
-  "isNotificationNeeded": true,
-  "isCaptureFullOfScreen": true
-};
-screenshot.save(screenshotOptions, (err: BusinessError | null, pixelMap: image.PixelMap | undefined) => {
-  const errCode = err?.code;
-  if (errCode) {
-    console.error(`Failed to save screenshot. Code: ${err?.code}, message : ${err?.message}`);
-    return;
-  }
-  console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap?.getPixelBytesNumber()}`);
-  pixelMap?.release(); // PixelMap使用完后及时释放内存
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-// 调用save方法获取屏幕截图
-screenshot.save((err: BusinessError, pixelMap: image.PixelMap) => {
-  if (err) {
-    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
-  pixelMap.release(); // PixelMap使用完后及时释放内存
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-screenshot.save((err: BusinessError | null, pixelMap: image.PixelMap | undefined) => {
-  const errCode = err?.code;
-  if (errCode) {
-    console.error(`Failed to save screenshot. Code: ${err?.code}, message: ${err?.message}`);
-    return;
-  }
-  console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap?.getPixelBytesNumber()}`);
-  pixelMap?.release(); // PixelMap使用完后及时释放内存
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let screenshotOptions: screenshot.ScreenshotOptions = {
-  screenRect: {
-    left: 200,
-    top: 100,
-    width: 200,
-    height: 200 },
-  imageSize: {
-    width: 300,
-    height: 300 },
-  rotation: 0,
-  displayId: 0,
-  isNotificationNeeded: true,
-  isCaptureFullOfScreen: true
-};
-try {
-  let promise = screenshot.save(screenshotOptions);
-  promise.then((pixelMap: image.PixelMap) => {
-    let pixelBytesNumber = pixelMap.getPixelBytesNumber();
-    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelBytesNumber}`);
-    pixelMap.release(); // PixelMap使用完后及时释放内存
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let screenshotOptions: screenshot.ScreenshotOptions = {
-  "screenRect": {
-    "left": 200,
-    "top": 100,
-    "width": 200,
-    "height": 200 },
-  "imageSize": {
-    "width": 300,
-    "height": 300 },
-  "rotation": 0,
-  "displayId": 0,
-  "isNotificationNeeded": true,
-  "isCaptureFullOfScreen": true
-};
-try {
-  let promise = screenshot.save(screenshotOptions);
-  promise.then((pixelMap: image.PixelMap) => {
-    let pixelNumber = pixelMap.getPixelBytesNumber();
-    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelNumber}`);
-    pixelMap.release(); // PixelMap使用完后及时释放内存
-  }).catch((err: Error) => {
-    console.error(`Failed to save screenshot. Code: ${err?.code}, message: ${err?.message}`);
-  });
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to save screenshot. Code: ${error.code}, message: ${error.message}`);
-};
-```
-
 
 ## save
 
@@ -219,8 +50,6 @@ function save(callback: AsyncCallback<image.PixelMap>): void
 获取屏幕截图，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
@@ -244,10 +73,6 @@ function save(callback: AsyncCallback<image.PixelMap>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-参见 [save](#save)
-
 
 ## save
 
@@ -258,8 +83,6 @@ function save(options?: ScreenshotOptions): Promise<image.PixelMap>
 获取屏幕截图，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
@@ -289,7 +112,3 @@ function save(options?: ScreenshotOptions): Promise<image.PixelMap>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
-
-**示例**
-
-参见 [save](#save)

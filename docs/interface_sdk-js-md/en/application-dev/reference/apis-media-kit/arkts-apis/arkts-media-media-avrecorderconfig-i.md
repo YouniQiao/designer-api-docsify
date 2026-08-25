@@ -4,14 +4,12 @@ Describes the audio and video recording parameters.The **audioSourceType** and *
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## audioSourceType
@@ -20,13 +18,12 @@ import { media } from '@kit.MediaKit';
 audioSourceType?: AudioSourceType
 ```
 
-Type of the audio source to record. This parameter is mandatory for audio recording.<br>**Atomic service API**: This API can be used in atomic services since API version 12.
+Type of the audio source to record. This parameter is mandatory for audio recording.  
+**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** [AudioSourceType](arkts-media-media-audiosourcetype-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +41,6 @@ Mode for creating the file, which is used together with on('photoAssetAvailable'
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## location
@@ -54,13 +49,11 @@ Mode for creating the file, which is used together with on('photoAssetAvailable'
 location?: Location
 ```
 
-Geographical location of the recorded video. By default, the geographical location information is not recorded. <br>This API is supported since API version 6 and deprecated since API version 12. You are advised to use **AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
+Geographical location of the recorded video. By default, the geographical location information is not recorded. This API is supported since API version 6 and deprecated since API version 12. You are advised to use **AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
 
 **Type:** Location
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -71,16 +64,14 @@ Geographical location of the recorded video. By default, the geographical locati
 ## maxDuration
 
 ```TypeScript
-maxDuration?: int
+maxDuration?: number
 ```
 
 Maximum recording duration, in seconds. The value range is [1, 2^31-1]. If an invalid value is provided, it is reset to the maximum allowed duration. Once the recording reaches the specified duration, it stops automatically and notifies via the **stateChange** callback that the recording has stopped: AVRecorderState = 'stopped', StateChangeReason = BACKGROUND.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -96,8 +87,6 @@ Metadata. For details, see @AVMetadata.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 ## profile
@@ -106,13 +95,12 @@ Metadata. For details, see @AVMetadata.
 profile: AVRecorderProfile
 ```
 
-Recording profile. This parameter is mandatory.<br>**Atomic service API**: This API can be used in atomic services since API version 12.
+Recording profile. This parameter is mandatory.  
+**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** [AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -124,13 +112,11 @@ Recording profile. This parameter is mandatory.<br>**Atomic service API**: This 
 rotation?: number
 ```
 
-Rotation angle of the recorded video, in degrees. The value can be 0 (default), 90, 180, or 270 for MP4 videos. <br>This API is supported since API version 6 and deprecated since API version 12. You are advised to use. **AVMetadata.videoOrientation** instead. If both parameters are set, **AVMetadata.videoOrientation** is used.
+Rotation angle of the recorded video, in degrees. The value can be 0 (default), 90, 180, or 270 for MP4 videos. This API is supported since API version 6 and deprecated since API version 12. You are advised to use. **AVMetadata.videoOrientation** instead. If both parameters are set, **AVMetadata.videoOrientation** is used.
 
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -144,13 +130,12 @@ Rotation angle of the recorded video, in degrees. The value can be 0 (default), 
 url: string
 ```
 
-Recording output URL: fd://xx (fd number).<br>This parameter is mandatory.<br>**Atomic service API**: This API can be used in atomic services since API version 12.
+Recording output URL: fd://xx (fd number).This parameter is mandatory.  
+**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -167,7 +152,5 @@ Type of the video source to record. This parameter is mandatory for video record
 **Type:** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder

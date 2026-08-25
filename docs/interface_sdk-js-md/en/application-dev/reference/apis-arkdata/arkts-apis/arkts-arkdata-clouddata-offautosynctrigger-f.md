@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## offAutoSyncTrigger
@@ -15,8 +15,6 @@ function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void
 Describes unsubscribing from the device-cloud automatic synchronization trigger mode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

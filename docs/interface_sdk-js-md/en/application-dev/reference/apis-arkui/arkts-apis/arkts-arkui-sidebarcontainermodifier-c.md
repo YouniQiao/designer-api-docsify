@@ -2,11 +2,9 @@
 
 Defines SideBarContainer Modifier@extends SideBarContainerAttribute @implements AttributeModifier&lt;SideBarContainerAttribute&gt;
 
-**Inheritance/Implementation:** SideBarContainerModifier extends SideBarContainerAttribute and implements AttributeModifier<SideBarContainerAttribute>
+**Inheritance/Implementation:** SideBarContainerModifier extends [SideBarContainerAttribute](../arkts-components/arkts-arkui-sidebarcontainer-attribute.md#sidebarcontainerattribute) and implements AttributeModifier<SideBarContainerAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: SideBarContainerAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

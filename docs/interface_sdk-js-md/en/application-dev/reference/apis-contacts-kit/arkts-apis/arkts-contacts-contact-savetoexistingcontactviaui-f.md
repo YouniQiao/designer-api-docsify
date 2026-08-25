@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## saveToExistingContactViaUI
@@ -15,8 +15,6 @@ function saveToExistingContactViaUI(context: Context, contact: Contact): Promise
 Saves the information to an existing contact through UI interaction.. This API uses a promise to return the result.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -45,30 +43,3 @@ Saves the information to an existing contact through UI interaction.. This API u
 | [16700101](../errorcode-contacts.md#16700101-database-query-failed) |
 | [16700102](../errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) |
 | [16700103](../errorcode-contacts.md#16700103-operation-canceled) |
-
-**Examples**
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the context within the component.
-let contactInfo: contact.Contact = {
-  id: 1,
-  name: {
-    fullName: 'xxx'
-  },
-  phoneNumbers: [{
-    phoneNumber: '138xxxxxx'
-  }]
-}
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.saveToExistingContactViaUI(context, contactInfo);
-promise.then((data) => {
-    console.info(`Succeeded in save to existing Contact via UI.data->${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to save to existing Contact via UI. Code: ${err.code}, message: ${err.message}`);
-  });
-```

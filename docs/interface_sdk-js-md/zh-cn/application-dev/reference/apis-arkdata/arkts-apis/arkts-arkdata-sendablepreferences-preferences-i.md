@@ -6,14 +6,12 @@ Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块
 
 ```TypeScript
-import { sendablePreferences } from '@kit.ArkData';
+import { sendablePreferences } from 'kits/@kit.ArkData';
 ```
 
 ## clear
@@ -26,8 +24,6 @@ clear(): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -43,19 +39,6 @@ clear(): Promise<void>
 | 错误码ID |
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.clear();
-promise.then(() => {
-  console.info("Succeeded in clearing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to clear. code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## clearSync
 
@@ -67,8 +50,6 @@ clearSync(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -79,12 +60,6 @@ clearSync(): void
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-preferences.clearSync();
-```
-
 ## delete
 
 ```TypeScript
@@ -94,8 +69,6 @@ delete(key: string): Promise<void>
 从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，使用 Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -120,19 +93,6 @@ delete(key: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.delete('startup');
-promise.then(() => {
-  console.info("Succeeded in deleting the key 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to delete the key 'startup'. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## deleteSync
 
 ```TypeScript
@@ -142,8 +102,6 @@ deleteSync(key: string): void
 从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，此为同步接 口。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -161,12 +119,6 @@ deleteSync(key: string): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-```TypeScript
-preferences.deleteSync('startup');
-```
 
 ## flush
 
@@ -181,8 +133,6 @@ flush(): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -199,19 +149,6 @@ flush(): Promise<void>
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.flush();
-promise.then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## flushSync
 
 ```TypeScript
@@ -225,8 +162,6 @@ flushSync(): void
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -236,12 +171,6 @@ flushSync(): void
 | 错误码ID |
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-```TypeScript
-preferences.flushSync();
-```
 
 ## get
 
@@ -253,8 +182,6 @@ get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -278,21 +205,6 @@ get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { lang } from '@kit.ArkTS';
-
-let promise = preferences.get('startup', 'default');
-promise.then((data: lang.ISendable) => {
-  let dataStr = data as string;
-  console.info(`Succeeded in getting value of 'startup'. Data: ${dataStr}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get value of 'startup'. code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getAll
 
@@ -304,8 +216,6 @@ getAll(): Promise<lang.ISendable>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -322,22 +232,6 @@ getAll(): Promise<lang.ISendable>
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { lang } from '@kit.ArkTS';
-
-let promise = preferences.getAll();
-promise.then((keyValues: lang.ISendable) => {
-  for (let value of Object.keys(keyValues)) {
-    console.info("getAll " + JSON.stringify(value));
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get all key-values. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getAllSync
 
 ```TypeScript
@@ -347,8 +241,6 @@ getAllSync(): lang.ISendable
 获取缓存的Preferences实例中的所有键值数据，此为同步接口。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -366,17 +258,6 @@ getAllSync(): lang.ISendable
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { lang } from '@kit.ArkTS';
-
-let keyValues: lang.ISendable = preferences.getAllSync();
-for (let value of Object.keys(keyValues)) {
-  console.info("getAll " + JSON.stringify(value));
-}
-```
-
 ## getSync
 
 ```TypeScript
@@ -386,8 +267,6 @@ getSync(key: string, defValue: lang.ISendable): lang.ISendable
 从缓存的Preferences实例中获取键对应的值，如果值为null或者非默认值类型，返回默认数据defValue，此为同步接口。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -413,14 +292,6 @@ getSync(key: string, defValue: lang.ISendable): lang.ISendable
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { lang } from '@kit.ArkTS';
-
-let value: lang.ISendable = preferences.getSync('startup', 'default');
-```
-
 ## has
 
 ```TypeScript
@@ -430,8 +301,6 @@ has(key: string): Promise<boolean>
 检查缓存的Preferences实例中是否包含名为给定Key的存储键值对，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -456,23 +325,6 @@ has(key: string): Promise<boolean>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.has('startup');
-promise.then((val: boolean) => {
-  if (val) {
-    console.info("The key 'startup' is contained.");
-  } else {
-    console.info("The key 'startup' does not contain.");
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check the key 'startup'. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## hasSync
 
 ```TypeScript
@@ -482,8 +334,6 @@ hasSync(key: string): boolean
 检查缓存的Preferences实例中是否包含名为给定Key的存储键值对，此为同步接口。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -508,17 +358,6 @@ hasSync(key: string): boolean
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-let isExist: boolean = preferences.hasSync('startup');
-if (isExist) {
-  console.info("The key 'startup' is contained.");
-} else {
-  console.info("The key 'startup' does not contain.");
-}
-```
-
 ## off('change')
 
 ```TypeScript
@@ -528,8 +367,6 @@ off(type: 'change', callback?: Callback<string>): void
 取消订阅数据变更。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -549,24 +386,6 @@ off(type: 'change', callback?: Callback<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('change', observer);
-preferences.putSync('startup', 'auto');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-  preferences.off('change', observer);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## off('multiProcessChange')
 
 ```TypeScript
@@ -576,8 +395,6 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 取消订阅进程间数据变更。本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -597,24 +414,6 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'auto');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-  preferences.off('multiProcessChange', observer);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## off('dataChange')
 
 ```TypeScript
@@ -624,8 +423,6 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 取消精确订阅数据变更。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -645,27 +442,6 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { lang } from '@kit.ArkTS';
-
-let observer = (data: lang.ISendable) => {
-  console.info(`observer : ${data}`);
-};
-let keys = ['name', 'age'];
-preferences.on('dataChange', keys, observer);
-preferences.putSync('name', 'xiaohong');
-preferences.putSync('weight', 125);
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-  preferences.off('dataChange', keys, observer);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## on('change')
 
@@ -687,8 +463,6 @@ on(type: 'change', callback: Callback<string>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -707,23 +481,6 @@ on(type: 'change', callback: Callback<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('change', observer);
-preferences.putSync('startup', 'manual');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## on('multiProcessChange')
 
 ```TypeScript
@@ -739,8 +496,6 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 > [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -761,23 +516,6 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 | [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'manual');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## on('dataChange')
 
 ```TypeScript
@@ -792,8 +530,6 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 > [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)后需要重新订阅数据变更。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -814,26 +550,6 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { lang } from '@kit.ArkTS';
-
-let observer = (data: lang.ISendable) => {
-  console.info(`observer : ${data}`);
-};
-let keys = ['name', 'age'];
-preferences.on('dataChange', keys, observer);
-preferences.putSync('name', 'xiaohong');
-preferences.putSync('weight', 125);
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## put
 
 ```TypeScript
@@ -847,8 +563,6 @@ put(key: string, value: lang.ISendable): Promise<void>
 > 当对应的键已经存在时，put()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -874,19 +588,6 @@ put(key: string, value: lang.ISendable): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.put('startup', 'auto');
-promise.then(() => {
-  console.info("Succeeded in putting value of 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to put value of 'startup'. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## putSync
 
 ```TypeScript
@@ -900,8 +601,6 @@ putSync(key: string, value: lang.ISendable): void
 > 当对应的键已经存在时，putSync()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -920,9 +619,3 @@ putSync(key: string, value: lang.ISendable): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-```TypeScript
-preferences.putSync('startup', 'auto');
-```

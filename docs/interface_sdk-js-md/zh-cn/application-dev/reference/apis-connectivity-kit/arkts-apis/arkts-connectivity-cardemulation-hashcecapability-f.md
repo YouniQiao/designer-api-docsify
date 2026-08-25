@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cardEmulation } from '@kit.ConnectivityKit';
+import { cardEmulation } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## hasHceCapability
@@ -15,8 +15,6 @@ function hasHceCapability(): boolean
 判断设备是否支持HCE卡模拟功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_CARD_EMULATION
 
@@ -36,25 +34,3 @@ function hasHceCapability(): boolean
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-// 适用于除轻量级智能穿戴产品之外其他设备
-import { cardEmulation } from '@kit.ConnectivityKit';
-
-let hasHceCap: boolean = cardEmulation.hasHceCapability();
-if (!hasHceCap) {
-    console.error('this device hasHceCapability false, ignore it.');
-}
-```
-
-```TypeScript
-// 适用于轻量级智能穿戴设备
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-let hasHceCap = cardEmulation.hasHceCapability();
-if (!hasHceCap) {
-    console.error('this device hasHceCapability false, ignore it.');
-}
-```

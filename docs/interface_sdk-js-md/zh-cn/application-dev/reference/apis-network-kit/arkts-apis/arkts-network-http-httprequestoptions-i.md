@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## addressFamily
@@ -26,8 +24,6 @@ addressFamily?: AddressFamily
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## body
@@ -37,13 +33,13 @@ body?: string | Object | ArrayBuffer
 ```
 
 HTTP请求体内容。设置该字段后，框架会优先将该字段作为请求体发送。  
-- 支持string、Object、ArrayBuffer三种类型：string按原值发送，Object会序列化后发送，ArrayBuffer按二进制发送。 - 当body与extraData同时配置时，body优先，extraData会被忽略。 - 可与任意请求方法搭配使用，用于显式指定请求体。
+- 支持string、Object、ArrayBuffer三种类型：string按原值发送，Object会序列化后发送，ArrayBuffer按二进制发送。  
+- 当body与extraData同时配置时，body优先，extraData会被忽略。  
+- 可与任意请求方法搭配使用，用于显式指定请求体。
 
 **类型：** string \| Object \| ArrayBuffer
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,8 +57,6 @@ caData?: string
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -78,8 +72,6 @@ caPath?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -97,8 +89,6 @@ certificatePinning?: CertificatePinning | CertificatePinning[]
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## clientCert
@@ -112,8 +102,6 @@ clientCert?: ClientCert
 **类型：** ClientCert
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -129,8 +117,6 @@ clientEncCert?: ClientCert
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -138,16 +124,14 @@ clientEncCert?: ClientCert
 ## connectTimeout
 
 ```TypeScript
-connectTimeout?: int
+connectTimeout?: number
 ```
 
 连接超时时间。单位为毫秒（ms），默认为60000ms。传入值需为uint32_t范围内的整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -160,13 +144,13 @@ customMethod?: string
 ```
 
 支持自定义请求方法，例如实现WebDAV扩展协议，当与method同时配置时，customMethod优先级更高。  
-- 默认值为空字符串，最大长度128个字符，超出则不生效。 - 当customMethod符合WebDAV扩展协议请求方式，但服务器不支持时，本次请求的服务器响应码通常为405或501（实际结果与服务器具体行为有关）。 - 当customMethod不符合WebDAV扩展协议请求方式时，本次请求的服务器响应码通常为400或405（实际结果与服务器具体行为有关）。
+- 默认值为空字符串，最大长度128个字符，超出则不生效。  
+- 当customMethod符合WebDAV扩展协议请求方式，但服务器不支持时，本次请求的服务器响应码通常为405或501（实际结果与服务器具体行为有关）。  
+- 当customMethod不符合WebDAV扩展协议请求方式时，本次请求的服务器响应码通常为400或405（实际结果与服务器具体行为有关）。
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -183,8 +167,6 @@ dnsOverHttps?: string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## dnsServers
@@ -194,13 +176,12 @@ dnsServers?: Array<string>
 ```
 
 设置指定的DNS服务器进行DNS解析。  
-- 最多可以设置3个DNS解析服务器。如果有3个以上，只取前3个。 - 服务器必须是IPV4或者IPV6地址。
+- 最多可以设置3个DNS解析服务器。如果有3个以上，只取前3个。  
+- 服务器必须是IPV4或者IPV6地址。
 
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -215,8 +196,6 @@ enablePartialChain?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -233,8 +212,6 @@ expectDataType?: HttpDataType
 **类型：** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -256,8 +233,6 @@ extraData?: string | Object | ArrayBuffer
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -273,8 +248,6 @@ HTTP请求头字段。当请求方式为"POST" "PUT" "DELETE" 或者""时，默�
 **类型：** Object
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -293,8 +266,6 @@ inactivityMs?: number
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -311,8 +282,6 @@ maxLimit?: number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## maxRedirects
@@ -322,13 +291,12 @@ maxRedirects?: number
 ```
 
 支持针对HttpRequest指定最大跳转次数。  
-- 默认值为30次。 - 取值范围是：[0，2147483647]，设置0即为关闭重定向，当服务器的重定向次数超过设置的最大重定向次数时会返回错误码2300047。超出此范围该配置不生效，配置默认值30。
+- 默认值为30次。  
+- 取值范围是：[0，2147483647]，设置0即为关闭重定向，当服务器的重定向次数超过设置的最大重定向次数时会返回错误码2300047。超出此范围该配置不生效，配置默认值30。
 
 **类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -343,8 +311,6 @@ method?: RequestMethod
 **类型：** [RequestMethod](arkts-network-http-requestmethod-e.md)
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -362,8 +328,6 @@ multiFormDataList?: Array<MultiFormData>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## pathPreference
@@ -378,23 +342,19 @@ pathPreference?: PathPreference
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## priority
 
 ```TypeScript
-priority?: int
+priority?: number
 ```
 
 HTTP/HTTPS请求并发优先级，值越大优先级越高，范围[1,1000]，默认为1，超出范围将设置为默认值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -407,13 +367,13 @@ queryParams?: string | QueryParamObject
 ```
 
 附加到URL中的请求参数。  
-- 支持string和QueryParamObject两种形式：string会按原样拼接到URL（不重复编码）；QueryParamObject会由系统自动编码并序列化。 - 使用string时不需要携带前导`?`，多个参数用`&`分隔。 - 当queryParams与extraData同时配置时，queryParams优先，extraData中的URL参数补充逻辑会被忽略。
+- 支持string和QueryParamObject两种形式：string会按原样拼接到URL（不重复编码）；QueryParamObject会由系统自动编码并序列化。  
+- 使用string时不需要携带前导`?`，多个参数用`&`分隔。  
+- 当queryParams与extraData同时配置时，queryParams优先，extraData中的URL参数补充逻辑会被忽略。
 
 **类型：** string \| [QueryParamObject](arkts-network-http-queryparamobject-t.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -422,16 +382,14 @@ queryParams?: string | QueryParamObject
 ## readTimeout
 
 ```TypeScript
-readTimeout?: int
+readTimeout?: number
 ```
 
 读取超时时间。单位为毫秒（ms），默认为60000ms。传入值需为uint32_t范围内的整数。设置为0表示不会出现超时情况。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -449,8 +407,6 @@ remoteValidation?: RemoteValidation
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -462,13 +418,12 @@ resumeFrom?: number
 ```
 
 用于设置下载起始位置，该参数只能用于GET方法，不能用于其他。HTTP标准（RFC 7233第3.1节）允许服务器忽略范围请求。  
-- 使用HTTP PUT时，不能使用该选项，因为该选项可能与其他选项冲突。 - 取值范围是：[1，4294967296（4GB）]，超出范围则不生效。
+- 使用HTTP PUT时，不能使用该选项，因为该选项可能与其他选项冲突。  
+- 取值范围是：[1，4294967296（4GB）]，超出范围则不生效。
 
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -479,13 +434,12 @@ resumeTo?: number
 ```
 
 用于设置下载结束位置，该参数只能用于GET方法，不能用于其他。HTTP标准（RFC 7233第3.1节）允许服务器忽略范围请求。  
-- 使用HTTP PUT时，不能使用该选项，因为该选项可能与其他选项冲突。 - 取值范围是：[1，4294967296（4GB）]，超出范围则不生效。
+- 使用HTTP PUT时，不能使用该选项，因为该选项可能与其他选项冲突。  
+- 取值范围是：[1，4294967296（4GB）]，超出范围则不生效。
 
 **类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -502,8 +456,6 @@ HTTP请求是否复用连接。默认值为true，表示复用已有的连接；
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -519,8 +471,6 @@ serverAuthentication?: ServerAuthentication
 **类型：** [ServerAuthentication](arkts-network-http-serverauthentication-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -539,8 +489,6 @@ sniHostName?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## sslType
@@ -554,8 +502,6 @@ sslType?: SslType
 **类型：** SslType
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -573,8 +519,6 @@ TLS配置。
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -590,8 +534,6 @@ usingCache?: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -609,8 +551,6 @@ HTTP请求使用的协议版本。未指定时，由系统自动协商最适合�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -622,13 +562,13 @@ usingProxy?: boolean | HttpProxy
 ```
 
 HTTP代理配置，该项不配置时默认使用系统代理。  
-- 当usingProxy为布尔类型true时，使用默认网络代理，为false时，不使用代理。 - 当usingProxy为HttpProxy类型时，使用指定网络代理。从API version 22开始，HttpProxy支持指定username和password字段。 - 从API version 26.0.0开始，当usingSocks5Proxy被正确配置时，usingProxy项不生效。
+- 当usingProxy为布尔类型true时，使用默认网络代理，为false时，不使用代理。  
+- 当usingProxy为HttpProxy类型时，使用指定网络代理。从API version 22开始，HttpProxy支持指定username和password字段。  
+- 从API version 26.0.0开始，当usingSocks5Proxy被正确配置时，usingProxy项不生效。
 
 **类型：** boolean \| HttpProxy
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -645,8 +585,6 @@ SOCKS5代理配置，该项不配置时不启动SOCKS5代理。当该项被正�
 **类型：** Socks5Proxy
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

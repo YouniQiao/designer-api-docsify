@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## cancelMuted
@@ -15,8 +15,6 @@ function cancelMuted(callback: AsyncCallback<void>): void
 Cancels call muting. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -39,30 +37,6 @@ Cancels call muting. This API uses an asynchronous callback to return the result
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.cancelMuted((err: BusinessError) => {
-    if (err) {
-        console.error(`cancelMuted fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`cancelMuted success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.cancelMuted().then(() => {
-    console.info(`cancelMuted success.`);
-}).catch((err: BusinessError) => {
-    console.error(`cancelMuted fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## cancelMuted
 
@@ -73,8 +47,6 @@ function cancelMuted(): Promise<void>
 Cancels call muting. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -94,7 +66,3 @@ Cancels call muting. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [cancelMuted](#cancelmuted)

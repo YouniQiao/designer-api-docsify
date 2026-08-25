@@ -19,8 +19,6 @@ Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offsc
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -38,8 +36,6 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -54,47 +50,6 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 | height | number | Yes |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No |
 
-**Examples**
-
-The following example shows how to specify the unit mode during the creation of a CanvasRenderingContext2D object. The default unit mode is LengthMetricsUnit.DEFAULT, which corresponds to the default unit vp. Once set, this unit mode cannot be changed dynamically. For details, see LengthMetricsUnit.
-
-```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct LengthMetricsUnitDemo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
-  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.contextPX)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextPX.fillRect(10,10,100,100)
-          this.contextPX.clearRect(10,10,50,50)
-        })
-
-      Canvas(this.contextVP)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextVP.fillRect(10,10,100,100)
-          this.contextVP.clearRect(10,10,50,50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -104,8 +59,6 @@ constructor(width: number, height: number, settings?: RenderingContextSettings, 
 Creates an offscreen canvas object. You can configure the canvas width, canvas height, and parameters and their unit of the **OffscreenCanvasRenderingContext2D** object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,11 +75,7 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 | width | number | Yes |
 | height | number | Yes |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No |
-
-**Examples**
-
-See [constructor](#constructor)
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No |
 
 ## toDataURL
 
@@ -137,8 +86,6 @@ toDataURL(type?: string, quality?: any): string
 Creates a data URL that contains a representation of an image. This API involves time-consuming memory copy. Therefore, avoid frequent calls to it.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -159,65 +106,6 @@ Creates a data URL that contains a representation of an image. This API involves
 | --- |
 | string |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CanvasExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true)
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
-  @State toDataURL: string = ""
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width(100)
-        .height(100)
-        .onReady(() =>{
-          this.context.fillStyle = "#00ff00"
-          this.context.fillRect(0,0,100,100)
-          this.toDataURL = this.context.toDataURL("image/png", 0.92)
-        })
-      Text(this.toDataURL)
-    }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffff00')
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ToDataURL {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(100, 100);
-  @State dataURL: string = "";
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width(100)
-        .height(100)
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillRect(0,0,100,100)
-          this.dataURL = offContext.toDataURL()
-        })
-      Text(this.dataURL)
-    }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffff00')
-  }
-}
-```
-
 ## transferToImageBitmap
 
 ```TypeScript
@@ -227,8 +115,6 @@ transferToImageBitmap(): ImageBitmap
 Creates an **ImageBitmap** object from the most recently rendered image of the offscreen canvas.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -241,74 +127,3 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [ImageBitmap](arkts-arkui-imagebitmap-c.md) |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct OffscreenCanvasPage {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(400, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .borderWidth(5)
-        .borderColor('rgb(39,135,217)')
-        .backgroundColor('#FFFFFF')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillStyle = '#CDCDCD'
-          offContext.fillRect(0, 0, 400, 600)
-          offContext.fillStyle = '#000000'
-          offContext.font = '40px serif bold'
-          offContext.fillText("Offscreen : Hello World!", 20, 60)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct PutImageData {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(600, 600);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width('100%')
-        .height('100%')
-        .backgroundColor('rgb(213,213,213)')
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          let imageData = offContext.createImageData(100, 100)
-          for (let i = 0; i < imageData.data.length; i += 4) {
-            imageData.data[i + 0] = 112
-            imageData.data[i + 1] = 112
-            imageData.data[i + 2] = 112
-            imageData.data[i + 3] = 255
-          }
-          offContext.putImageData(imageData, 10, 10)
-          let image = this.offCanvas.transferToImageBitmap()
-          this.context.transferFromImageBitmap(image)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```

@@ -4,54 +4,13 @@ Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { Queue } from '@kit.ArkTS';
-import { QueueForEachCb } from '@kit.ArkTS';
-```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<T>
-```
-
-返回一个迭代器，每一项都是一个ArkTS对象。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
-
-**示例**
-
-```TypeScript
-let queue : Queue<int> = new Queue<int>();
-queue.add(2);
-queue.add(4);
-queue.add(5);
-queue.add(4);
-
-let iter = queue.$_iterator();
-let temp: IteratorResult<int> = iter.next();
-while(temp.value != undefined) {
-  console.info("value:" + temp.value);
-  temp = iter.next();
-}
+import { Queue } from 'kits/@kit.ArkTS';
+import { QueueForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -64,8 +23,6 @@ while(temp.value != undefined) {
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -74,46 +31,13 @@ while(temp.value != undefined) {
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-```TypeScript
-let queue = new Queue<number>();
-queue.add(2);
-queue.add(4);
-queue.add(5);
-queue.add(4);
-
-// 使用方法一：
-for (let value of queue) {
-  console.info("value:", value);
-}
-// value: 2
-// value: 4
-// value: 5
-// value: 4
-
-// 使用方法二：
-// 获取Queue的迭代器
-let iter = queue[Symbol.iterator]();
-// 通过迭代器的next方法遍历元素
-let temp: IteratorResult<number> = iter.next().value;
-while(temp != undefined) {
-  console.info("value: " + temp);
-  temp = iter.next().value;
-}
-// value: 2
-// value: 4
-// value: 5
-// value: 4
-```
 
 ## add
 
@@ -124,8 +48,6 @@ add(element: T): boolean
 在队列尾部插入元素，插入成功则返回true，队列长度增加，否则返回false。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -149,44 +71,6 @@ add(element: T): boolean
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class PersonInfo {
-  name: string = ""
-  age: string = ""
-}
-// 创建支持多种类型的Queue实例
-let queue = new Queue<number | string | PersonInfo | number[]>();
-// 向队列尾部添加元素
-queue.add("a");
-queue.add(1);
-let b = [1, 2, 3];
-queue.add(b);
-let c : PersonInfo = {name : "Dylan", age : "13"};
-queue.add(c);
-console.info("result:", queue.length);  // result: 4
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class PersonInfo {
-  name: string = "";
-  age: string = "";
-}
-let queue : Queue<int | string | C1 | int[]> = new Queue<int | string | C1 | int[]>();
-let result = queue.add("a");
-let result1 = queue.add(1);
-let b: int[] = [1, 2, 3];
-let result2 = queue.add(b);
-let c : C1 = {name : "Dylan", age : "13"};
-let result3 = queue.add(c);
-console.info("result:", queue.length);  // result: 4
-```
-
 ## constructor
 
 ```TypeScript
@@ -196,8 +80,6 @@ constructor()
 Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -209,22 +91,6 @@ Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue�
 | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 创建Queue实例
-let queue = new Queue<number | string | Object>();
-console.info("queue length:", queue.length);  // queue length: 0
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let queue : Queue<int | string | Object> = new Queue<int | string | Object>();
-```
-
 ## forEach
 
 ```TypeScript
@@ -234,8 +100,6 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 遍历Queue实例中的每个元素，并对每个元素执行回调函数。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -254,67 +118,6 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-```TypeScript
-let queue = new Queue<number>();
-queue.add(2);
-queue.add(4);
-queue.add(5);
-queue.add(4);
-// 遍历Queue中的每个元素，对每个元素执行回调函数
-queue.forEach((value: number, index: number): void => {
-  console.info("value:" + value, "index:" + index);
-});
-// value:2 index:0
-// value:4 index:1
-// value:5 index:2
-// value:4 index:3
-```
-
-```TypeScript
-import { QueueForEachCb } from '@kit.ArkTS';
-
-let queue : Queue<int> = new Queue<int>();
-queue.add(2);
-queue.add(4);
-queue.add(5);
-queue.add(4);
-let queueCb: QueueForEachCb<int> = (value: int, index: int, q: Queue<int>) : void => {
-  console.info("value:" + value, "index:" + index);
-};
-
-queue.forEach(queueCb);
-```
-
-## forEach
-
-```TypeScript
-forEach(callbackFn: QueueForEachCb<T>): void
-```
-
-在遍历队列对象中每一个元素的过程中，对每个元素执行回调函数。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | [QueueForEachCb](arkts-arkts-queueforeachcb-t.md)&lt;T&gt; | 是 |
-
-**示例**
-
-参见 [forEach](#foreach)
-
 ## getFirst
 
 ```TypeScript
@@ -324,8 +127,6 @@ getFirst(): T
 获取队列的头元素（不会删除队列的头元素）。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -343,33 +144,6 @@ getFirst(): T
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 | [10200010](../errorcode-utils.md#10200010-容器为空) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let queue = new Queue<number>();
-queue.add(2);
-queue.add(4);
-queue.add(5);
-queue.add(2);
-// 获取队列的头元素
-let result = queue.getFirst();
-console.info("result:", result);  // result: 2
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let queue = new Queue<int>();
-queue.add(2);
-queue.add(4);
-queue.add(5);
-queue.add(2);
-let result = queue.getFirst();
-console.info("result:", result);  // result: 2
-```
 
 ## pop
 
@@ -381,8 +155,6 @@ pop(): T
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -399,36 +171,6 @@ pop(): T
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 | [10200010](../errorcode-utils.md#10200010-容器为空) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let queue = new Queue<number>();
-queue.add(2);
-queue.add(4);
-queue.add(5);
-queue.add(2);
-queue.add(4);
-// 删除队头元素，并返回被删除元素
-let result = queue.pop();
-console.info("result:", result);  // result: 2
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let queue = new Queue<int>();
-queue.add(2);
-queue.add(4);
-queue.add(5);
-queue.add(2);
-queue.add(4);
-// 删除队列头部元素，并返回被删除元素
-let result = queue.pop();
-console.info("result:", result);  // result: 2
-```
 
 ## length
 
@@ -441,8 +183,6 @@ Queue的元素个数。
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

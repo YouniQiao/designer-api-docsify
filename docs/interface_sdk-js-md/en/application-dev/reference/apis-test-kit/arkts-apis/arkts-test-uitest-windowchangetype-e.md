@@ -4,8 +4,6 @@ Enumerates the window change event types that can be listened for.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Test.UiTest
 
 ## WINDOW_UNDEFINED
@@ -14,11 +12,9 @@ Enumerates the window change event types that can be listened for.
 WINDOW_UNDEFINED = 0
 ```
 
-Non-window change event. <br>Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
+Non-window change event. Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -34,8 +30,6 @@ Window adding event.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -50,8 +44,6 @@ Window removing event.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
@@ -65,8 +57,6 @@ WINDOW_BOUNDS_CHANGED = 3
 Window bounds change event.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -4,14 +4,12 @@ The request agent api. Supports "background" and "frontend" tasks as while. Thou
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -83,12 +81,6 @@ import { request } from '@kit.BasicServicesKit';
 | [State(Upload and Download)](arkts-basicservices-agent-state-e.md) |
 | [Faults(Upload and Download)](arkts-basicservices-agent-faults-e.md) |
 | [WaitingReason(Upload and Download)](arkts-basicservices-agent-waitingreason-e.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ProgressCallback(Upload and Download)](arkts-basicservices-agent-progresscallback-t.md) |
 
 ### Constants
 

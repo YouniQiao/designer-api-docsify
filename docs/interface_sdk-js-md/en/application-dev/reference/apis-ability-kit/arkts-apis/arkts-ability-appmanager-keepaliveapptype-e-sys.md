@@ -4,8 +4,6 @@ Enumerates the types of applications to be kept alive.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ ALL = 0
 Third-party and system applications. This value can be called only as an input parameter of [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md).
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -36,8 +32,6 @@ Third-party application.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ SYSTEM = 2
 System application.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

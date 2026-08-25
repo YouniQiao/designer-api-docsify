@@ -4,14 +4,12 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## bindTarget
@@ -23,8 +21,6 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 Binds a device. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -47,77 +43,6 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
 | [11600103](../errorcode-device-manager.md#11600103-authentication-unavailable) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  deviceId: string = '';
-}
-
-// Information about the device to authenticate. The information can be obtained from the device discovery result.
-let deviceId = 'XXXXXXXX';
-let bindParam: Record<string, string | number> = {
-  'bindType': 1, // Authentication type. The value 1 means PIN authentication.
-  'targetPkgName': 'xxxx',
-  'appName': 'xxxx',
-  'appOperation': 'xxxx',
-  'customDescription': 'xxxx'
-};
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.bindTarget(deviceId, bindParam, (err: BusinessError, data: Data) => {
-    if (err) {
-      console.error('bindTarget errCode:' + err.code + ',errMessage:' + err.message);
-      return;
-    }
-    console.info('bindTarget result:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('bindTarget errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## bindTarget
-
-```TypeScript
-bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: AsyncCallback<BindTargetResult>): void
-```
-
-Binds a device. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| deviceId | string | Yes |
-| bindParam | Record & lt;string, int \ | string & gt; | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [11600103](../errorcode-device-manager.md#11600103-authentication-unavailable) |
-
-**Examples**
-
-See [bindTarget](#bindtarget)
-
 ## getAvailableDeviceList
 
 ```TypeScript
@@ -127,8 +52,6 @@ getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 Obtains all trusted devices. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -147,39 +70,6 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.getAvailableDeviceList((err: BusinessError, data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
-    if (err) {
-      console.error('getAvailableDeviceList errCode:' + err.code + ',errMessage:' + err.message);
-      return;
-    }
-    console.info('get available device info: ' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getAvailableDeviceList errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
-  console.info('get available device info: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('getAvailableDeviceList errCode:' + err.code + ',errMessage:' + err.message);
-});
-```
-
 ## getAvailableDeviceList
 
 ```TypeScript
@@ -189,8 +79,6 @@ getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 Obtains all trusted devices. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -209,10 +97,6 @@ Obtains all trusted devices. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
 
-**Examples**
-
-See [getAvailableDeviceList](#getavailabledevicelist)
-
 ## getAvailableDeviceListSync
 
 ```TypeScript
@@ -222,8 +106,6 @@ getAvailableDeviceListSync(): Array<DeviceBasicInfo>
 Obtains all trusted devices synchronously.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -242,21 +124,6 @@ Obtains all trusted devices synchronously.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceInfoList: Array<distributedDeviceManager.DeviceBasicInfo> = dmInstance.getAvailableDeviceListSync();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getAvailableDeviceListSync errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## getDeviceName
 
 ```TypeScript
@@ -266,8 +133,6 @@ getDeviceName(networkId: string): string
 Obtains the device name based on the network ID of the specified device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -293,41 +158,15 @@ Obtains the device name based on the network ID of the specified device.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // Network ID of the device, which can be obtained from the trusted device list.
-  let networkId = 'xxxxxxx';
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceName: string = dmInstance.getDeviceName(networkId);
-  console.info('device name: ' + JSON.stringify(deviceName)); 
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getDeviceName errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## getDeviceType
 
-ArkTS-Dyn:
 ```TypeScript
 getDeviceType(networkId: string): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getDeviceType(networkId: string): int
 ```
 
 Obtains the device type based on the network ID of the specified device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -343,7 +182,7 @@ Obtains the device type based on the network ID of the specified device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -352,24 +191,6 @@ Obtains the device type based on the network ID of the specified device.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // Network ID of the device, which can be obtained from the trusted device list.
-  let networkId = 'xxxxxxx';
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceType: number = dmInstance.getDeviceType(networkId);
-  console.info('device type: ' + JSON.stringify(deviceType)); 
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getDeviceType errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## getLocalDeviceId
 
@@ -381,8 +202,6 @@ Obtains the local device ID. The value is the result of obfuscating the udid-has
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -399,22 +218,6 @@ Obtains the local device ID. The value is the result of obfuscating the udid-has
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceId: string = dmInstance.getLocalDeviceId();
-  console.info('local device id: ' + JSON.stringify(deviceId));
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getLocalDeviceId errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## getLocalDeviceName
 
@@ -426,8 +229,6 @@ Obtains the local device name.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -444,22 +245,6 @@ Obtains the local device name.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceName: string = dmInstance.getLocalDeviceName();
-  console.info('local device name: ' + JSON.stringify(deviceName));
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getLocalDeviceName errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## getLocalDeviceNetworkId
 
@@ -471,8 +256,6 @@ Obtains the network ID of the local device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -490,39 +273,15 @@ Obtains the network ID of the local device.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceNetworkId: string = dmInstance.getLocalDeviceNetworkId();
-  console.info('local device networkId: ' + JSON.stringify(deviceNetworkId));
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getLocalDeviceNetworkId errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## getLocalDeviceType
 
-ArkTS-Dyn:
 ```TypeScript
 getLocalDeviceType(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getLocalDeviceType(): int
 ```
 
 Obtains the local device type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -532,7 +291,7 @@ Obtains the local device type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -540,22 +299,6 @@ Obtains the local device type.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  let deviceType: number = dmInstance.getLocalDeviceType();
-  console.info('local device type: ' + JSON.stringify(deviceType));
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('getLocalDeviceType errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## off('deviceStateChange')
 
@@ -566,8 +309,6 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 Unsubscribes from the device state changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -587,33 +328,6 @@ Unsubscribes from the device state changes. This API uses an asynchronous callba
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  action: distributedDeviceManager.DeviceStateChange = 0;
-  device: distributedDeviceManager.DeviceBasicInfo = {
-    deviceId: '',
-    deviceName: '',
-    deviceType: '',
-    networkId: ''
-  };
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('deviceStateChange', (data: Data) => {
-    console.info('deviceStateChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceStateChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## off('discoverSuccess')
 
 ```TypeScript
@@ -623,8 +337,6 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -644,32 +356,6 @@ Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  device: distributedDeviceManager.DeviceBasicInfo = {
-    deviceId: '',
-    deviceName: '',
-    deviceType: '',
-    networkId: ''
-  };
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('discoverSuccess', (data: Data) => {
-    console.info('discoverSuccess' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverSuccess errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## off('deviceNameChange')
 
 ```TypeScript
@@ -679,8 +365,6 @@ off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): voi
 Unsubscribes from the device name changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -700,38 +384,15 @@ Unsubscribes from the device name changes. This API uses an asynchronous callbac
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  deviceName: string = '';
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('deviceNameChange', (data: Data) => {
-    console.info('deviceNameChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## off('discoverFailure')
 
 ```TypeScript
-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void
+off(type: 'discoverFailure', callback?: Callback<{ reason: number; }>): void
 ```
 
 Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -751,27 +412,6 @@ Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  reason: number = 0;
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('discoverFailure', (data: Data) => {
-    console.info('discoverFailure' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## off('serviceDie')
 
 ```TypeScript
@@ -781,8 +421,6 @@ off(type: 'serviceDie', callback?: Callback<{}>): void
 Unsubscribes from the dead events of the **DeviceManager** service. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -802,163 +440,6 @@ Unsubscribes from the dead events of the **DeviceManager** service. This API use
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('serviceDie', () => {
-    console.info('serviceDie off');
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('serviceDie errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## offDeviceNameChange
-
-```TypeScript
-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
-```
-
-UnRegister the device name change result callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
-## offDeviceStateChange
-
-```TypeScript
-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
-```
-
-UnRegister device state callback based on the application bundle name.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
-## offDiscoverFailure
-
-```TypeScript
-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
-```
-
-UnRegister the device discovery result callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
-## offDiscoverSuccess
-
-```TypeScript
-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
-```
-
-UnRegister the device discovery result callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
-## offServiceDie
-
-```TypeScript
-offServiceDie(callback?: Callback<ServiceDieData>): void
-```
-
-UnRegister the service error callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
 ## on('deviceStateChange')
 
 ```TypeScript
@@ -968,8 +449,6 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 Subscribes to the device state changes. The application (identified by the bundle name) will be notified when the device state changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -989,33 +468,6 @@ Subscribes to the device state changes. The application (identified by the bundl
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  action: distributedDeviceManager.DeviceStateChange = 0;
-  device: distributedDeviceManager.DeviceBasicInfo = {
-    deviceId: '',
-    deviceName: '',
-    deviceType: '',
-    networkId: ''
-  };
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('deviceStateChange', (data: Data) => {
-    console.info('deviceStateChange on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceStateChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## on('discoverSuccess')
 
 ```TypeScript
@@ -1025,8 +477,6 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 Subscribes to the **'discoverSuccess'** event. The application will be notified when a device is successfully discovered. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1046,32 +496,6 @@ Subscribes to the **'discoverSuccess'** event. The application will be notified 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  device: distributedDeviceManager.DeviceBasicInfo = {
-    deviceId: '',
-    deviceName: '',
-    deviceType: '',
-    networkId: ''
-  };
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('discoverSuccess', (data: Data) => {
-    console.info('discoverSuccess:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverSuccess errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## on('deviceNameChange')
 
 ```TypeScript
@@ -1081,8 +505,6 @@ on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
 Subscribes to device name changes. The application will be notified when the name of a device is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1102,38 +524,15 @@ Subscribes to device name changes. The application will be notified when the nam
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  deviceName: string = '';
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('deviceNameChange', (data: Data) => {
-    console.info('deviceNameChange on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## on('discoverFailure')
 
 ```TypeScript
-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void
+on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 ```
 
 Subscribes to the **'discoverFailure'** event. The application will be notified when a device fails to be discovered. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1153,27 +552,6 @@ Subscribes to the **'discoverFailure'** event. The application will be notified 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  reason: number = 0;
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('discoverFailure', (data: Data) => {
-    console.info('discoverFailure on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## on('serviceDie')
 
 ```TypeScript
@@ -1183,8 +561,6 @@ on(type: 'serviceDie', callback?: Callback<{}>): void
 Subscribes to the dead events of the **DeviceManager** service. The application will be notified when the **DeviceManager** service is terminated unexpectedly. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1204,163 +580,6 @@ Subscribes to the dead events of the **DeviceManager** service. The application 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('serviceDie', () => {
-    console.info('serviceDie on');
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('serviceDie errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## onDeviceNameChange
-
-```TypeScript
-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
-```
-
-Register a device name change callback so that the application can be notified when discovery success.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
-## onDeviceStateChange
-
-```TypeScript
-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
-```
-
-Register a device state callback so that the application can be notified upon device state changes based on the application bundle name.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
-## onDiscoverFailure
-
-```TypeScript
-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
-```
-
-Register a device discovery result callback so that the application can be notified when discover failed.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
-## onDiscoverSuccess
-
-```TypeScript
-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
-```
-
-Register a device discovery result callback so that the application can be notified when discovery success.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
-## onServiceDie
-
-```TypeScript
-onServiceDie(callback: Callback<ServiceDieData>): void
-```
-
-Register a serviceError callback so that the application can be notified when devicemanager service died
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-
 ## startDiscovering
 
 ```TypeScript
@@ -1370,8 +589,6 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 Starts to discover devices nearby. The discovery process takes 2 minutes. A maximum of 99 devices can be discovered. In Wi-Fi scenarios, only the devices in the same LAN can be discovered.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1393,74 +610,6 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 | [11600104](../errorcode-device-manager.md#11600104-discovery-unavailable) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface DiscoverParam {
-  discoverTargetType: number;
-}
-
-interface FilterOptions {
-  availableStatus: number;
-  discoverDistance: number;
-  authenticationStatus: number;
-  authorizationType: number;
-}
-
-let discoverParam: Record<string, number> = {
-  'discoverTargetType': 1
-};
-let filterOptions: Record<string, number> = {
-  'availableStatus': 0
-};
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.startDiscovering(discoverParam, filterOptions); // When devices are discovered, discoverSuccess is called to notify the application.
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('startDiscovering errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## startDiscovering
-
-```TypeScript
-startDiscovering(discoverParam: Record<string, int | string>, filterOptions?: Record<string, int | string>): void
-```
-
-Starts to discover devices nearby. The discovery process takes 2 minutes. A maximum of 99 devices can be discovered. In Wi-Fi scenarios, only the devices in the same LAN can be discovered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| discoverParam | Record & lt;string, int \ | string & gt; | Yes |
-| [filterOptions](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioplaybackcaptureconfig-i.md) | Record & lt;string, int \ | string & gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [11600104](../errorcode-device-manager.md#11600104-discovery-unavailable) |
-| [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
-
-**Examples**
-
-See [startDiscovering](#startdiscovering)
-
 ## stopDiscovering
 
 ```TypeScript
@@ -1471,8 +620,6 @@ Stops device discovery.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -1484,21 +631,6 @@ Stops device discovery.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.stopDiscovering();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('stopDiscovering errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## unbindTarget
 
 ```TypeScript
@@ -1508,8 +640,6 @@ unbindTarget(deviceId: string): void
 Unbinds a device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1528,19 +658,3 @@ Unbinds a device.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let deviceId = 'XXXXXXXX';
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.unbindTarget(deviceId);
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('unbindTarget errCode:' + e.code + ',errMessage:' + e.message);
-}
-```

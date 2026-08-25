@@ -4,8 +4,6 @@ Enumerates the collaboration request results. You can use it in multi-device col
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## ACCEPT
@@ -17,8 +15,6 @@ ACCEPT = 0
 Accepts the collaboration request.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,20 +30,6 @@ Rejects the collaboration request.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onCollaborate(wantParam: Record<string, Object>) {
-    return AbilityConstant.CollaborateResult.ACCEPT;
-  }
-}
-```

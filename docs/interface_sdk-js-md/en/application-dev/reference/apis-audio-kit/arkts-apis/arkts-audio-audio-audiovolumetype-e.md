@@ -4,8 +4,6 @@ Enumerates the audio volume types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## VOICE_CALL
@@ -17,8 +15,6 @@ VOICE_CALL = 0
 Audio volume type for voice calls.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -32,8 +28,6 @@ Audio volume type for ringtones.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## MEDIA
@@ -45,8 +39,6 @@ MEDIA = 3
 Audio volume type for media purpose.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -60,8 +52,6 @@ Audio volume type for alarming.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## ACCESSIBILITY
@@ -74,8 +64,6 @@ Audio volume type for accessibility.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## VOICE_ASSISTANT
@@ -87,7 +75,5 @@ VOICE_ASSISTANT = 9
 Audio volume type for voice assistant.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume

@@ -42,7 +42,7 @@ Program access control provides permission verification and management capabilit
 ## Modules to Import
 
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

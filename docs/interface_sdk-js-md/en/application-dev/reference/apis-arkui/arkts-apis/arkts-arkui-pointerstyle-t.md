@@ -4,14 +4,12 @@
 export type PointerStyle = pointer.PointerStyle
 ```
 
-Import the PointerStyle type object for setCursor.
+Defines the pointer style.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 **Property type:** pointer.PointerStyle

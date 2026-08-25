@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setResidentProcessEnabled
@@ -15,8 +15,6 @@ function setResidentProcessEnabled(bundleName: string, enable: boolean): Promise
 常驻进程支持按需启停。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -43,28 +41,3 @@ function setResidentProcessEnabled(bundleName: string, enable: boolean): Promise
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 | [16200006](../errorcode-ability.md#16200006-没有权限设置常驻进程使能状态) |
-
-**示例**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 设置常驻进程的包名
-  let residentProcessBundleName: string = 'com.xxx.xxxxxx';
-  let enable: boolean = false;
-  abilityManager.setResidentProcessEnabled(residentProcessBundleName, enable)
-    .then(() => {
-      console.info('setResidentProcessEnabled success.');
-    })
-    .catch((e: Error) => {
-      let err = e as BusinessError;
-      console.error(`setResidentProcessEnabled fail, err: ${err.message}`);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`setResidentProcessEnabled failed, code is ${code}, message is ${message}`);
-}
-```

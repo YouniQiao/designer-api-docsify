@@ -4,44 +4,38 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { displaySync } from '@kit.ArkGraphics2D';
+import { displaySync } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## targetTimestamp
 
 ```TypeScript
-targetTimestamp: long
+targetTimestamp: number
 ```
 
 下一帧预期到达的时间（单位：纳秒）。系统启动以来的单调递增时间，值应大于timestamp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 当前帧到达的时间（单位：纳秒）。系统启动以来的单调递增时间。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

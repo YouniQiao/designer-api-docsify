@@ -4,8 +4,6 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [missionManager/missionManager](arkts-app-ability-missionmanager.md)

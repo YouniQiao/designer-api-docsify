@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getSystemLocale
@@ -18,8 +18,6 @@ export function getSystemLocale(): string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getSystemLocale](arkts-localization-i18n-system-c.md#getsystemlocale)
@@ -31,17 +29,3 @@ export function getSystemLocale(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let systemLocale: string = i18n.System.getSystemLocale(); // 如果系统语言为简体中文、地区为中国，systemLocale = 'zh-Hans-CN'
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let locale: string = i18n.getSystemLocale();
-```

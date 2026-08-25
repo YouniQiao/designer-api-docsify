@@ -46,3 +46,11 @@
 | [IPropertySubscriber(System API)](arkts-arkui-ipropertysubscriber-i-sys.md) |
 | [ISinglePropertyChangeSubscriber(System API)](arkts-arkui-isinglepropertychangesubscriber-i-sys.md) |
 <!--DelEnd-->
+
+<!--Del-->
+### Properties(System API)
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [appStorage(System API)](arkts-arkui-commontsetsapi-p-sys.md) |
+<!--DelEnd-->

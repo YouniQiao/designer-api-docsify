@@ -4,14 +4,12 @@ Declare the options of ToolBarV2SymbolGlyph
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
+import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from 'kits/@kit.ArkUI';
 ```
 
 ## activated
@@ -22,11 +20,9 @@ activated?: SymbolGlyphModifier
 
 Modifier of toolbarV2's activated symbol.
 
-**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+**类型：** SymbolGlyphModifier
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +38,9 @@ normal: SymbolGlyphModifier
 
 Modifier of toolbarV2's normal symbol.
 
-**类型：** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
+**类型：** SymbolGlyphModifier
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

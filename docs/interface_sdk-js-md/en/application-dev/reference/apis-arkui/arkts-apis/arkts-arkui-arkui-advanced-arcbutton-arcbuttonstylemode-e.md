@@ -4,8 +4,6 @@ Enumerates the style modes that can be set for **ArcButton**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## EMPHASIZED_LIGHT
@@ -17,8 +15,6 @@ EMPHASIZED_LIGHT = 0
 Emphasized style in light color mode. Displayed as a blue background with white text.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -34,8 +30,6 @@ Warning style in dark color mode. Displayed as a red background with white text.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -49,8 +43,6 @@ NORMAL_LIGHT = 2
 Normal style in light color mode. Displayed as a dark blue background with blue text.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -66,8 +58,6 @@ Normal style in dark color mode. Displayed as a dark gray background with blue t
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -81,8 +71,6 @@ CUSTOM = 4
 Custom button color and font color.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

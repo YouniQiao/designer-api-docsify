@@ -6,14 +6,12 @@ Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。对焦类，�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getFocusAssist
@@ -25,8 +23,6 @@ getFocusAssist(): boolean
 Checks whether the focus assist is enabled.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -45,22 +41,6 @@ Checks whether the focus assist is enabled.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-function getFocusAssist(professionalPhotoSession: camera.ProfessionalPhotoSession): boolean {
-  let isFocusAssistOpened: boolean = false;
-  try {
-    isFocusAssistOpened = professionalPhotoSession.getFocusAssist();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getFocusAssist call failed. error code: ${err.code}`);
-  }
-  return isFocusAssistOpened;
-}
-```
-
 ## getFocusDriven
 
 ```TypeScript
@@ -70,8 +50,6 @@ getFocusDriven(): FocusDrivenType
 Obtains the focus drive type in use.
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -90,24 +68,6 @@ Obtains the focus drive type in use.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFocusDriven(session: camera.VideoSessionForSys): camera.FocusDrivenType | undefined {
-  let focusDrivenType: camera.FocusDrivenType | undefined = undefined;
-  try {
-    focusDrivenType = session.getFocusDriven();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getFocusDriven call failed. error code: ${err.code}`);
-  }
-  return focusDrivenType;
-}
-```
-
 ## getFocusRange
 
 ```TypeScript
@@ -117,8 +77,6 @@ getFocusRange(): FocusRangeType
 Obtains the focus range type in use.
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -137,24 +95,6 @@ Obtains the focus range type in use.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFocusRange(session: camera.VideoSessionForSys): camera.FocusRangeType | undefined {
-  let focusRangeType: camera.FocusRangeType | undefined = undefined;
-  try {
-    focusRangeType = session.getFocusRange();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The getFocusRange call failed. error code: ${err.code}`);
-  }
-  return focusRangeType;
-}
-```
-
 ## setFocusAssist
 
 ```TypeScript
@@ -164,8 +104,6 @@ setFocusAssist(enabled: boolean): void
 Sets the focus assist. Before the setting, call [isFocusAssistSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusassistsupported) to check whether the device supports the focus assist.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -185,22 +123,6 @@ Sets the focus assist. Before the setting, call [isFocusAssistSupported](arkts-c
 | [7400101](../errorcode-camera.md#7400101-无效入参) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFocusAssist(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
-  try {
-    professionalPhotoSession.setFocusAssist(false);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setFocusAssist call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## setFocusDriven
 
 ```TypeScript
@@ -210,8 +132,6 @@ setFocusDriven(type: FocusDrivenType): void
 Sets a focus drive type. Before the setting, call [isFocusDrivenTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusdriventypesupported) to check whether the focus drive type is supported.
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -233,22 +153,6 @@ Sets a focus drive type. Before the setting, call [isFocusDrivenTypeSupported](a
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFocusDriven(session: camera.VideoSessionForSys, type: camera.FocusDrivenType): void {
-  try {
-    session.setFocusDriven(type);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setFocusDriven call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## setFocusRange
 
 ```TypeScript
@@ -258,8 +162,6 @@ setFocusRange(type: FocusRangeType): void
 Sets a focus range type. Before the setting, call [isFocusRangeTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isfocusrangetypesupported) to check whether the focus range type is supported.
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -280,19 +182,3 @@ Sets a focus range type. Before the setting, call [isFocusRangeTypeSupported](ar
 | [7400102](../errorcode-camera.md#7400102-非法操作) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFocusRange(session: camera.VideoSessionForSys, type: camera.FocusRangeType): void {
-  try {
-    session.setFocusRange(type);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setFocusRange call failed. error code: ${err.code}`);
-  }
-}
-```

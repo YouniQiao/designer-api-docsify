@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 ## 导入模块
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## 汇总
@@ -37,8 +35,8 @@ import { ethernet } from '@kit.NetworkKit';
 | [isEthernetEnabled(以太网连接管理)](arkts-network-ethernet-isethernetenabled-f-sys.md) |
 | [isIfaceActive(以太网连接管理)](arkts-network-ethernet-isifaceactive-f-sys.md) |
 | [isIfaceActive(以太网连接管理)](arkts-network-ethernet-isifaceactive-f-sys.md) |
-| [off(以太网连接管理)](arkts-network-ethernet-off-f-sys.md#offinterfacestatechange) |
-| [on(以太网连接管理)](arkts-network-ethernet-on-f-sys.md#oninterfacestatechange) |
+| off(以太网连接管理) |
+| on(以太网连接管理) |
 | [setIfaceConfig(以太网连接管理)](arkts-network-ethernet-setifaceconfig-f-sys.md) |
 | [setIfaceConfig(以太网连接管理)](arkts-network-ethernet-setifaceconfig-f-sys.md) |
 <!--DelEnd-->

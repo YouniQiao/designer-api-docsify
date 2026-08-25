@@ -4,8 +4,6 @@ Enumerates the DistributedField.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ ORIGIN = '#_origin'
 Origin field. For details, see [DistributedOrigin](arkts-arkdata-relationalstore-distributedorigin-e-sys.md).
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,8 +34,6 @@ Origin device field. Indicates the data origin sources device ID.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -56,8 +50,6 @@ Cursor field.This parameter can be used as the input parameter of the predicate 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -73,8 +65,6 @@ DELETED_FLAG_FIELD = '#_deleted_flag'
 Indicates whether data has been deleted.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

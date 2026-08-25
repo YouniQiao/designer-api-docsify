@@ -4,8 +4,6 @@ Obtains the network selection mode option.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Obtains the network selection mode option.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## networkInformation
@@ -27,8 +25,6 @@ Indicates the network information.
 **Type:** [NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -46,8 +42,6 @@ Indicates whether to continue selecting the network selection mode.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Indicates the network search mode of the SIM card.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ Indicates the network search mode of the SIM card.
 ## slotId
 
 ```TypeScript
-slotId: int
+slotId: number
 ```
 
 Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

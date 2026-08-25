@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## clearPreloadedUIExtensionAbilities
@@ -15,8 +15,6 @@ function clearPreloadedUIExtensionAbilities(): Promise<void>
 清除当前进程中所有已经预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -39,25 +37,3 @@ function clearPreloadedUIExtensionAbilities(): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  abilityManager.clearPreloadedUIExtensionAbilities()
-    .then(() => {
-      console.info('clearPreloadedUIExtensionAbilities success.');
-    })
-    .catch((error: Error) => {
-      let err = error as BusinessError;
-      console.error(`clearPreloadedUIExtensionAbilities fail, err: ${JSON.stringify(err)}`);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`clearPreloadedUIExtensionAbilities failed, code is ${code}, message is ${message}`);
-}
-```

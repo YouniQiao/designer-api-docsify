@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## dial
@@ -18,8 +18,6 @@ function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback
 > 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -37,40 +35,6 @@ function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback
 | options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.dial("138xxxxxxxx", (err: BusinessError, data: boolean) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialOptions: call.DialOptions = {
-    extras: false
-};
-call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialOptions: call.DialOptions = {
-    extras: false
-};
-call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
-    console.info(`dial success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`dial fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
-
 
 ## dial
 
@@ -84,8 +48,6 @@ function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 > 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -108,10 +70,6 @@ function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 | --- |
 | Promise & lt;boolean & gt; |
 
-**示例**
-
-参见 [dial](#dial)
-
 
 ## dial
 
@@ -125,8 +83,6 @@ function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 > 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -142,7 +98,3 @@ function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 | --- | --- | --- |
 | phoneNumber | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-参见 [dial](#dial)

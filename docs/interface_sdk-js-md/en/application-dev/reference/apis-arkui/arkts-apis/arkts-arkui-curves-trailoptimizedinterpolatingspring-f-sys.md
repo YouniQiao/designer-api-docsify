@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## trailOptimizedInterpolatingSpring
@@ -15,8 +15,6 @@ function trailOptimizedInterpolatingSpring(velocity: number, mass: number, stiff
 Creates an interpolating spring curve animated from 0 to 1. The actual animation value is calculated based on the curve. The animation duration is subject to the curve parameters, rather than the **duration** parameter in **animation** or **animateTo**.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,12 +28,12 @@ Creates an interpolating spring curve animated from 0 to 1. The actual animation
 | --- | --- | --- |
 | velocity | number | Yes |
 | mass | number | Yes |
-| stiffness | number | Yes |
-| damping | number | Yes |
+| [stiffness](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |
+| [damping](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |
 | trail | [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

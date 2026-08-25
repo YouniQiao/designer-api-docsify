@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getFreezeExemptedApps
@@ -15,8 +15,6 @@ function getFreezeExemptedApps(admin: Want): Array<common.ApplicationInstance>
 Obtains the background freeze-exempt application list of all users on the current device.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -44,26 +42,6 @@ Obtains the background freeze-exempt application list of all users on the curren
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: Array<common.ApplicationInstance> = applicationManager.getFreezeExemptedApps(wantTemp);
-  console.info(`Succeeded in getting FreezeExempted applications, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get FreezeExempted applications. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getFreezeExemptedApps
 
@@ -74,8 +52,6 @@ function getFreezeExemptedApps(admin: Want | null): Array<common.ApplicationInst
 Obtains the background freeze-exempt application list of all users on the current device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -102,7 +78,3 @@ Obtains the background freeze-exempt application list of all users on the curren
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [getFreezeExemptedApps](#getfreezeexemptedapps)

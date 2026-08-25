@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from '@kit.AbilityKit';
+import { errorManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setDefaultResourceUsageObserver
@@ -15,8 +15,6 @@ function setDefaultResourceUsageObserver(defaultObserver?: ResourceUsageObserver
 Set the default resource usage observer. You can use it to implement chain calls. If an empty observer is set for a certain module, it will cause the call chain to be interrupted. This API must be called on the main thread.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

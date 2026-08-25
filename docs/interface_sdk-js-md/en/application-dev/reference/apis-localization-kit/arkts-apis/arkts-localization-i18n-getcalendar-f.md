@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getCalendar
@@ -15,8 +15,6 @@ export function getCalendar(locale: string, type?: string): Calendar
 Obtains the **Calendar** object for the specified locale and calendar type.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,11 +32,3 @@ Obtains the **Calendar** object for the specified locale and calendar type.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Calendar](arkts-localization-i18n-calendar-c.md) |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans', 'chinese'); // Obtain the Calendar object for the Chinese lunar calendar.
-```

@@ -17,8 +17,6 @@ Defines the constructor of TextArea.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -40,7 +38,6 @@ Defines the constructor of TextArea.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md) |
 
 ### Enums
 

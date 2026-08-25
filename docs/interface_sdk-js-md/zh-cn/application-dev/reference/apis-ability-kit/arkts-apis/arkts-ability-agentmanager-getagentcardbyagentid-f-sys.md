@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAgentCardByAgentId
@@ -15,8 +15,6 @@ function getAgentCardByAgentId(bundleName: string, agentId: string): Promise<Age
 获取指定应用agentId对应的AgentCard。使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.GET_AGENT_CARD
 

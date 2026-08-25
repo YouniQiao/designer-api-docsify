@@ -4,8 +4,6 @@ Describes the configuration of the water flow item section.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ or index in the **WaterFlow** component. Avoid mixing the use of **onGetItemMain
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,11 +41,9 @@ columnsGap?: Dimension
 
 Column gap of the section. If this parameter is not set, the [columnsGap](arkts-arkui-waterflow-attribute.md#columnsgap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,8 +65,6 @@ Number of columns (in vertical layout) or rows (in horizontal layout).Default va
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -91,8 +83,6 @@ Number of **FlowItem** components in a section. The value must be a non-negative
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -107,13 +97,11 @@ margin?: Margin | Dimension
 
 Margins of the section. A value of the **Length** type specifies the margins on all the four sides.Default value: **0**Unit: vp When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
 
-**Type:** Margin \| Dimension
+**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** {top: 0, right: 0, bottom: 0, left: 0}
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,11 +117,9 @@ rowsGap?: Dimension
 
 Row gap of the section. If this parameter is not set, the [rowsGap](arkts-arkui-waterflow-attribute.md#rowsgap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

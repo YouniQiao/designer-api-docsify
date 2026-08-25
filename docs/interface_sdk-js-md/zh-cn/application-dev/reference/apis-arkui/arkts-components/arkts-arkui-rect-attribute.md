@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ radius(value: Length | Array<any>)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -37,7 +33,7 @@ radius(value: Length | Array<any>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Length \| Array & lt;any & gt; | 是 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array & lt;any & gt; | 是 |
 
 ## radiusHeight
 
@@ -48,8 +44,6 @@ radiusHeight(value: Length)
 设置圆角的高度。仅设置radiusHeight时，圆角的高度和宽度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支 持attributeModifier动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -72,8 +66,6 @@ radiusWidth(value: Length)
 设置圆角的宽度。仅设置radiusWidth时，圆角的宽度和高度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支持 attributeModifier动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

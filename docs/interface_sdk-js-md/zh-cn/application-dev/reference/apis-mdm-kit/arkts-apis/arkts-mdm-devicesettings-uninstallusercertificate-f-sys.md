@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## uninstallUserCertificate
@@ -15,8 +15,6 @@ function uninstallUserCertificate(admin: Want, certUri: string, callback: AsyncC
 卸载用户证书，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -49,47 +47,6 @@ function uninstallUserCertificate(admin: Want, certUri: string, callback: AsyncC
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let aliasStr = "certName";
-deviceSettings.uninstallUserCertificate(wantTemp, aliasStr, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall user certificate. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in uninstalling user certificate`);
-});
-```
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let aliasStr = "certName"
-deviceSettings.uninstallUserCertificate(wantTemp, aliasStr).then(() => {
-  console.info(`Succeeded in uninstalling user certificate`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to uninstall user certificate. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## uninstallUserCertificate
 
@@ -100,8 +57,6 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 卸载用户证书，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -138,7 +93,3 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [uninstallUserCertificate](#uninstallusercertificate)

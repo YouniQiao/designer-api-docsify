@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setSmartReminderEnabled
@@ -15,8 +15,6 @@ function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<v
 设置设备是否与其他设备协同智能提醒。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -51,34 +49,3 @@ function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<v
 | [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceType: string = 'phone';
-let enable: boolean = true;
-notificationManager.setSmartReminderEnabled(deviceType, enable).then(() => {
-    console.info('setSmartReminderEnabled success');
-}).catch((err: BusinessError) => {
-    console.error(`setSmartReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceType: string = 'phone';
-let enable: boolean = true;
-notificationManager.setSmartReminderEnabled(deviceType, enable).then(() => {
-    console.info('setSmartReminderEnabled success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setSmartReminderEnabled failed, code is ${error.code}, message is ${error.message}`);
-});
-```

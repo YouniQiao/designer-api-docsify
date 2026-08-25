@@ -4,14 +4,12 @@ The **print** module provides APIs for basic print operations.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -28,9 +26,7 @@ import { print } from '@kit.BasicServicesKit';
 | [getPrinterInformationById](arkts-basicservices-print-getprinterinformationbyid-f.md) |
 | [notifyWatermarkComplete](arkts-basicservices-print-notifywatermarkcomplete-f.md) |
 | [off](arkts-basicservices-print-off-f.md#offprinterchange) |
-| [offPrinterChange](arkts-basicservices-print-offprinterchange-f.md) |
 | [on](arkts-basicservices-print-on-f.md#onprinterchange) |
-| [onPrinterChange](arkts-basicservices-print-onprinterchange-f.md) |
 | [print](arkts-basicservices-print-f.md) |
 | [print](arkts-basicservices-print-f.md) |
 | [print](arkts-basicservices-print-f.md) |
@@ -72,28 +68,18 @@ import { print } from '@kit.BasicServicesKit';
 | [getPrinterDefaultPreferences](arkts-basicservices-print-getprinterdefaultpreferences-f-sys.md) |
 | [getPrinterInfoById](arkts-basicservices-print-getprinterinfobyid-f-sys.md) |
 | [getSharedHosts](arkts-basicservices-print-getsharedhosts-f-sys.md) |
-| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md#notifyprintservicespooler_closed_for_cancelled-spooler_closed_for_started) |
-| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md#notifyprintservicespooler_closed_for_cancelled-spooler_closed_for_started) |
+| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md) |
+| [notifyPrintService](arkts-basicservices-print-notifyprintservice-f-sys.md) |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md) |
 | [notifyPrintServiceEvent](arkts-basicservices-print-notifyprintserviceevent-f-sys.md) |
-| [notifyPrintServiceSpoolerCloseForCancelled](arkts-basicservices-print-notifyprintservicespoolercloseforcancelled-f-sys.md) |
-| [notifyPrintServiceSpoolerCloseForCancelled](arkts-basicservices-print-notifyprintservicespoolercloseforcancelled-f-sys.md) |
-| [notifyPrintServiceSpoolerCloseForStarted](arkts-basicservices-print-notifyprintservicespoolercloseforstarted-f-sys.md) |
-| [notifyPrintServiceSpoolerCloseForStarted](arkts-basicservices-print-notifyprintservicespoolercloseforstarted-f-sys.md) |
-| [off](arkts-basicservices-print-off-f-sys.md#offprinterstatechange) |
-| [off](arkts-basicservices-print-off-f-sys.md#offjobstatechange) |
-| [off](arkts-basicservices-print-off-f-sys.md#offextinfochange) |
-| [offExtInfoChange](arkts-basicservices-print-offextinfochange-f-sys.md) |
-| [offJobStateChange](arkts-basicservices-print-offjobstatechange-f-sys.md) |
+| off |
+| off |
+| off |
 | [offPrinterInfoQuery](arkts-basicservices-print-offprinterinfoquery-f-sys.md) |
-| [offPrinterStateChange](arkts-basicservices-print-offprinterstatechange-f-sys.md) |
-| [on](arkts-basicservices-print-on-f-sys.md#onprinterstatechange) |
-| [on](arkts-basicservices-print-on-f-sys.md#onjobstatechange) |
-| [on](arkts-basicservices-print-on-f-sys.md#onextinfochange) |
-| [onExtInfoChange](arkts-basicservices-print-onextinfochange-f-sys.md) |
-| [onJobStateChange](arkts-basicservices-print-onjobstatechange-f-sys.md) |
+| on |
+| on |
+| on |
 | [onPrinterInfoQuery](arkts-basicservices-print-onprinterinfoquery-f-sys.md) |
-| [onPrinterStateChange](arkts-basicservices-print-onprinterstatechange-f-sys.md) |
 | [queryAllActivePrintJobs](arkts-basicservices-print-queryallactiveprintjobs-f-sys.md) |
 | [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md) |
 | [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md) |
@@ -195,8 +181,5 @@ import { print } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ExtInfoChangeCallback](arkts-basicservices-print-extinfochangecallback-t-sys.md) |
 | [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) |
-| [PrinterStateChangeCallback](arkts-basicservices-print-printerstatechangecallback-t-sys.md) |
-| [PrintJobStateChangeCallback](arkts-basicservices-print-printjobstatechangecallback-t-sys.md) |
 <!--DelEnd-->

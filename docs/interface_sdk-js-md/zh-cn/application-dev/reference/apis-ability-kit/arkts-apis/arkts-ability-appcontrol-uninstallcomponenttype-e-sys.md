@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ EXTENSION = 1
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ UI_EXTENSION = 2
 UI扩展能力类型。被拉起的UIExtensionAbility通过want中bundleName、moduleName、abilityName字段共同确定，同时want.parameters中的 ability.want.params.uiExtensionType字段需要配置为 [UIExtensionAbility](../../../application-models/uiextensionability-sys.md)的类型。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.AppControl
 

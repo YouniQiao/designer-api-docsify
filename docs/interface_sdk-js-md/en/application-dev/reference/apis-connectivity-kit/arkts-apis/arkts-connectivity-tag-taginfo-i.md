@@ -4,14 +4,12 @@ Before a card with tags is read or written, **[TagInfo](#taginfo)** must be obta
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## supportedProfiles
@@ -26,8 +24,6 @@ Supported profiles.Note: This parameter is supported since API version 7 and dep
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [technology](#technology)
@@ -39,16 +35,14 @@ Supported profiles.Note: This parameter is supported since API version 7 and dep
 ## technology
 
 ```TypeScript
-technology: int[]
+technology: number[]
 ```
 
 Supported tag technologies. Each number is a constant indicating the supported technology.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -59,16 +53,14 @@ Supported tag technologies. Each number is a constant indicating the supported t
 ## uid
 
 ```TypeScript
-uid: int[]
+uid: number[]
 ```
 
 Tag unique identifier (UID), which consists of hexadecimal numbers ranging from **0x00** to **0xFF**.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 

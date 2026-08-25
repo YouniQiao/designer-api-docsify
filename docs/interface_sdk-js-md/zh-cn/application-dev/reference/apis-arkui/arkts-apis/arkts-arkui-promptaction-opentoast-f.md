@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## openToast
@@ -23,8 +23,6 @@ function openToast(options: ShowToastOptions): Promise<number>
 > openToast实现。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,50 +48,3 @@ function openToast(options: ShowToastOptions): Promise<number>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { PromptAction, UIContext } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct toastExample {
-  @State toastId: number = 0;
-  uiContext: UIContext = this.getUIContext();
-  promptAction: PromptAction = this.uiContext.getPromptAction();
-
-  build() {
-    Column() {
-      Button('Open Toast')
-        .height(100)
-        .type(ButtonType.Capsule)
-        .onClick(() => {
-          this.promptAction.openToast({
-            message: 'Toast Message',
-            duration: 10000,
-          }).then((toastId: number) => {
-            this.toastId = toastId;
-          })
-            .catch((error: BusinessError) => {
-              console.error(`openToast error code is ${error.code}, message is ${error.message}`);
-            })
-        })
-      Blank().height(50)
-      Button('Close Toast')
-        .height(100)
-        .type(ButtonType.Capsule)
-        .onClick(() => {
-          try {
-            this.promptAction.closeToast(this.toastId);
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`CloseToast error code is ${code}, message is ${message}`);
-          }
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```

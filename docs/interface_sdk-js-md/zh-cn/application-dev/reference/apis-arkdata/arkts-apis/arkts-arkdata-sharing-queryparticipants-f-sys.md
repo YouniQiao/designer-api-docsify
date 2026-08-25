@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## queryParticipants
@@ -15,8 +15,6 @@ function queryParticipants(sharingResource: string, callback: AsyncCallback<Resu
 根据指定的共享资源标识查询当前共享的参与者，使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -37,30 +35,6 @@ function queryParticipants(sharingResource: string, callback: AsyncCallback<Resu
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.queryParticipants('sharing_resource_test').then((result) => {
-  console.info(`query participants succeeded, result: ${result}`);
-}).catch((err) => {
-  console.error(`query participants failed, code is ${err.code},message is ${err.message}`);
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.queryParticipants('sharing_resource_test', ((err: BusinessError|null, result) => {
-  if (err) {
-    console.error(`query participants failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info(`query participants succeeded, result: ${result}`);
-}))
-```
-
 
 ## queryParticipants
 
@@ -71,8 +45,6 @@ function queryParticipants(sharingResource: string): Promise<Result<Array<Partic
 根据指定的共享资源标识查询当前共享的参与者，使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -97,7 +69,3 @@ function queryParticipants(sharingResource: string): Promise<Result<Array<Partic
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [queryParticipants](#queryparticipants)

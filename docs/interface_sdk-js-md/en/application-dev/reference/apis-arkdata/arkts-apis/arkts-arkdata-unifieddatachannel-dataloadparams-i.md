@@ -4,14 +4,12 @@ Defines the data loading policy for the data sender in the lazy loading scenario
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## delayedDataLoadHandler
@@ -23,8 +21,6 @@ delayedDataLoadHandler?: DelayedDataLoadHandler
 Indicates the callback function for deferred and non-blocking data loading. This handler is optional. If it is provided, it will take precedence over the synchronous DataLoadHandler (i.e., DataLoadHandler will be ignored).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,8 +37,6 @@ loadHandler: DataLoadHandler
 Indicates the callback function for loading data.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,8 +55,6 @@ Indicates data loading information.
 **Type:** [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

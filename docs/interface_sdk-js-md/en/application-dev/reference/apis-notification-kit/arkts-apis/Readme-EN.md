@@ -206,13 +206,9 @@
   <!--Del-->
   - [offBadgeNumberQuery(system api)](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [offCheckNotification(system api)](arkts-notification-notificationmanager-offchecknotification-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [on(system api)](arkts-notification-notificationmanager-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onBadgeNumberQuery(system api)](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onCheckNotification(system api)](arkts-notification-notificationmanager-onchecknotification-f-sys.md)<!--DelEnd-->
   - [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md)
   - [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md)
   - [publish](arkts-notification-notificationmanager-publish-f.md)
@@ -559,8 +555,6 @@
     - [SubscribeCallbackData(system api)](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [VoiceContent(system api)](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [BadgeEnabledChangedCallback(system api)](arkts-notification-badgeenabledchangedcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->
     - [EnabledSilentReminderChangedCallback(system api)](arkts-notification-enabledsilentreminderchangedcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->

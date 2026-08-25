@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Notification, ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
+import { Notification, ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit';
 ```
 
 ## Summary

@@ -4,29 +4,25 @@ Defines the touch point information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from 'kits/@kit.InputKit';
 ```
 
 ## blobId
 
 ```TypeScript
-blobId?: int
+blobId?: number
 ```
 
 Touch point attribute ID. Currently, only single-finger touch is supported. The value **1** indicates left-hand touch, and the value **2** indicates right-hand touch.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,16 +33,14 @@ Touch point attribute ID. Currently, only single-finger touch is supported. The 
 ## fixedDisplayX
 
 ```TypeScript
-fixedDisplayX?: int
+fixedDisplayX?: number
 ```
 
 Corrected value of the screenX coordinate in one-hand mode, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -55,16 +49,14 @@ Corrected value of the screenX coordinate in one-hand mode, in px.
 ## fixedDisplayY
 
 ```TypeScript
-fixedDisplayY?: int
+fixedDisplayY?: number
 ```
 
 Corrected value of the screenY coordinate in one-hand mode, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

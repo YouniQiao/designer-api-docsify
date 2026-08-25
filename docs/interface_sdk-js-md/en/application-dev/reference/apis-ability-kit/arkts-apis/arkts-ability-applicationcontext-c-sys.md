@@ -9,8 +9,6 @@ ApplicationContext inherits from Context and provides application-level manageme
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## getProcessRunningInformation
@@ -22,8 +20,6 @@ getProcessRunningInformation(): Promise<Array<ProcessInformation>>
 Obtains information about the running processes. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -57,8 +53,6 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 Obtains information about the running processes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -94,8 +88,6 @@ Preloads a UIExtensionAbility instance. This API uses a promise to return the re
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -129,55 +121,15 @@ Preloads a UIExtensionAbility instance. This API uses a promise to return the re
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.ohos.uiextensionprovider',
-      abilityName: 'UIExtensionProvider',
-      moduleName: 'entry',
-      parameters: {
-        // The value must be the same as the value of type in the module.json5 file of the UIExtensionAbility.
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      }
-    };
-    try {
-      let applicationContext = this.context.getApplicationContext();
-      applicationContext.preloadUIExtensionAbility(want)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('preloadUIExtensionAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error('preloadUIExtensionAbility failed');
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`preloadUIExtensionAbility failed. code: ${code}, msg: ${message}`);
-    }
-  }
-}
-```
-
 ## registerAbilityLifecycleCallback
 
 ```TypeScript
 registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number
 ```
 
-Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result.<p>**NOTE：**: <br>It can be called only by the main thread. </p>
+Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result.<p>**NOTE：**: It can be called only by the main thread. </p>
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -211,8 +163,6 @@ Register environment callback.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [on](arkts-ability-applicationcontext-c.md#onenvironment)(type: 'environment', callback: EnvironmentCallback)
@@ -241,11 +191,9 @@ Register environment callback.
 unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result.<p>**NOTE：**: <br>It can be called only by the main thread. </p>
+Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result.<p>**NOTE：**: It can be called only by the main thread. </p>
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -270,11 +218,9 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 ```
 
-Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread.<p>**NOTE：**: <br>It can be called only by the main thread. </p>
+Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread.<p>**NOTE：**: It can be called only by the main thread. </p>
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -314,8 +260,6 @@ Unregisters the listener for system environment changes. This API uses an asynch
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [off](arkts-ability-applicationcontext-c.md#offenvironment)(type: 'environment', callbackId: number, callback: AsyncCallback&lt;void&gt;)
@@ -342,8 +286,6 @@ unregisterEnvironmentCallback(callbackId: number): Promise<void>
 Unregisters the listener for system environment changes. This API uses a promise to return the result. It can be called only on the main thread.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

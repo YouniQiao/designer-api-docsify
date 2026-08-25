@@ -1,7 +1,5 @@
 # Int16Array
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ includes(searchElement: number, fromIndex?: number): boolean
 ```
 
 Determines whether an array includes a certain element, returning true or false as appropriate.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

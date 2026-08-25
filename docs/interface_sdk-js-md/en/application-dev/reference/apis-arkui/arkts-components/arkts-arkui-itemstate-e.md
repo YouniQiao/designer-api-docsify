@@ -4,8 +4,6 @@ Display status of **nextLabel** in the stepper.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** Swiper
@@ -23,8 +21,6 @@ The button on the right is clickable and can navigate users to the next **Steppe
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** index
@@ -40,15 +36,13 @@ Disabled
 ```
 
 The button on the right is disabled.  
-**NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use indicatorInteractive instead.
+**NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use [indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive) instead.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
-**Substitutes:** indicatorInteractive
+**Substitutes:** [indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,8 +58,6 @@ The button on the right is not displayed, and a progress bar is displayed instea
 **NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use Swiper instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 
@@ -85,8 +77,6 @@ The button on the right reads "Skip" by default. You can define the processing l
 **NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use index instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 

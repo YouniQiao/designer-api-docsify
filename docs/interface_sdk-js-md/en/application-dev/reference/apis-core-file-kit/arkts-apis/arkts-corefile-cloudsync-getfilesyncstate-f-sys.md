@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getFileSyncState
@@ -15,8 +15,6 @@ function getFileSyncState(uri: Array<string>): Promise<Array<FileSyncState>>
 Obtains the file sync state. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -47,50 +45,6 @@ Obtains the file sync state. This API uses a promise to return the result.
 | 13900002 |
 | 14000002 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris).then((syncStates: Array<cloudSync.FileSyncState>) => {
-  for(let i = 0, len = syncStates.length; i < len; i++){
-    console.info("get file sync state successfully" + syncStates[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error("get file sync state failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSync.FileSyncState>) => {
-  if (err) {
-    console.error("get file sync state with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    for(let i = 0, len = syncStates.length; i < len; i++){
-      console.info("get file sync state successfully" + syncStates[i]);
-  }
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-try {
-  let state = cloudSync.getFileSyncState(uri);
-} catch (err) {
-  let error:BusinessError = err as BusinessError;
-  console.error("getFileSyncStatefailed with error:" + JSON.stringify(error));
-}
-```
-
 
 ## getFileSyncState
 
@@ -101,8 +55,6 @@ function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<File
 Obtains the file sync state. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -128,10 +80,6 @@ Obtains the file sync state. This API uses an asynchronous callback to return th
 | 13900002 |
 | 14000002 |
 
-**Examples**
-
-See [getFileSyncState](#getfilesyncstate)
-
 
 ## getFileSyncState
 
@@ -142,8 +90,6 @@ function getFileSyncState(uri: string): FileSyncState
 Obtains the file sync state.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -174,7 +120,3 @@ Obtains the file sync state.
 | 13900031 |
 | 13900042 |
 | 14000002 |
-
-**Examples**
-
-See [getFileSyncState](#getfilesyncstate)

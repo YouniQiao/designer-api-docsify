@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## activate
@@ -15,8 +15,6 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 启动键鼠穿越，使用Callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 
@@ -42,42 +40,6 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetNetworkId = "networkId";
-let inputDeviceId = 0;
-try {
-  cooperate.activate(targetNetworkId, inputDeviceId, (error: BusinessError) => {
-    if (error) {
-      console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Start Keyboard mouse crossing success.`);
-  });
-} catch (error) {
-  console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetNetworkId = "networkId";
-let inputDeviceId = 0;
-try {
-  cooperate.activate(targetNetworkId, inputDeviceId).then(() => {
-    console.info(`Start Keyboard mouse crossing success.`);
-  }, (error: BusinessError) => {
-    console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## activate
 
@@ -88,8 +50,6 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 启动键鼠穿越，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 
@@ -119,7 +79,3 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) |
-
-**示例**
-
-参见 [activate](#activate)

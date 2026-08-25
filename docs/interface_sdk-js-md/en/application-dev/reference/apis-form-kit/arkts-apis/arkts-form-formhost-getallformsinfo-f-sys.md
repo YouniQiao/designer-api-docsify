@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## getAllFormsInfo
@@ -15,8 +15,6 @@ function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): voi
 Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -41,38 +39,6 @@ Obtains the widget information provided by all applications on the device (exclu
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-
-try {
-  formHost.getAllFormsInfo((error: BusinessError, data: formInfo.FormInfo[]) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info('formHost getAllFormsInfo success.');
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-
-try {
-  formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
-    console.info('formHost getAllFormsInfo success.');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## getAllFormsInfo
 
@@ -83,8 +49,6 @@ function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>
 Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -107,7 +71,3 @@ Obtains the widget information provided by all applications on the device (exclu
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-See [getAllFormsInfo](#getallformsinfo)

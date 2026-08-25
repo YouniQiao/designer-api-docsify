@@ -2,11 +2,9 @@
 
 Defines Span Modifier@extends SpanAttribute @implements AttributeModifier&lt;SpanAttribute&gt;
 
-**Inheritance/Implementation:** SpanModifier extends SpanAttribute and implements AttributeModifier<SpanAttribute>
+**Inheritance/Implementation:** SpanModifier extends [SpanAttribute](../arkts-components/arkts-arkui-span-attribute.md#spanattribute) and implements AttributeModifier<SpanAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: SpanAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

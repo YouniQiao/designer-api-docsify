@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
@@ -21,8 +19,6 @@ SUCCESS = 0
 执行成功。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ FAIL = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [FAIL](arkts-userauthentication-userauth-userauthresultcode-e.md#fail)
@@ -57,8 +51,6 @@ GENERAL_ERROR = 2
 操作通用错误。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -76,8 +68,6 @@ CANCELED = 3
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [CANCELED](arkts-userauthentication-userauth-userauthresultcode-e.md#canceled)
@@ -93,8 +83,6 @@ TIMEOUT = 4
 操作超时。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -112,8 +100,6 @@ TYPE_NOT_SUPPORT = 5
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#type_not_support)
@@ -129,8 +115,6 @@ TRUST_LEVEL_NOT_SUPPORT = 6
 不支持的认证等级。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -148,8 +132,6 @@ BUSY = 7
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [BUSY](arkts-userauthentication-userauth-userauthresultcode-e.md#busy)
@@ -165,8 +147,6 @@ INVALID_PARAMETERS = 8
 无效参数。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -184,8 +164,6 @@ LOCKED = 9
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [LOCKED](arkts-userauthentication-userauth-userauthresultcode-e.md#locked)
@@ -201,8 +179,6 @@ NOT_ENROLLED = 10
 用户未录入认证信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

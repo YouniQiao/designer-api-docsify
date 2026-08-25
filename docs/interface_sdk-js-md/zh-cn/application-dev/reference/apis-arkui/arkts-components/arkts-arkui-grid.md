@@ -32,8 +32,6 @@ Grid(scroller?: Scroller, layoutOptions?: GridLayoutOptions)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -42,7 +40,7 @@ Grid(scroller?: Scroller, layoutOptions?: GridLayoutOptions)
 
 | 参数名 | [类型](#类型) | 必填 |
 | --- | --- | --- |
-| scroller | [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md) | 否 |
+| scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 |
 | layoutOptions | [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) | 否 |
 
 ## 汇总
@@ -56,9 +54,6 @@ Grid(scroller?: Scroller, layoutOptions?: GridLayoutOptions)
 
 | 名称 |
 | --- |
-| [OnGetStartIndexByIndexCallback](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md) |
-| [OnGetStartIndexByOffsetCallback](arkts-arkui-ongetstartindexbyoffsetcallback-t-sys.md) |
-| [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md) |
 
 ### 枚举
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Want } from '@kit.AbilityKit';
+import { Want } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

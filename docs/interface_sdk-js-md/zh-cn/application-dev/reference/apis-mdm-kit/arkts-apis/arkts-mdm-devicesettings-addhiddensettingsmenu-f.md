@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## addHiddenSettingsMenu
@@ -15,8 +15,6 @@ function addHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>):
 添加设置项至当前用户下的隐藏设置项列表。添加至隐藏设置项列表的设置项在当前用户的设置菜单中会被隐藏，隐藏后不可以在设置的搜索中搜索到。如果通过某种方式搜索到该设置项，点击后也无法打开。调用接口后即刻生效，无需重启设置应用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 
@@ -41,29 +39,3 @@ function addHiddenSettingsMenu(admin: Want, menusToHidden: Array<SettingsMenu>):
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let menusToHidden: Array<deviceSettings.SettingsMenu> = [
-  // 需根据实际情况进行替换或增加
-  deviceSettings.SettingsMenu.ACCOUNT_ID,
-  deviceSettings.SettingsMenu.WIFI
-];
-
-try {
-  deviceSettings.addHiddenSettingsMenu(wantTemp, menusToHidden);
-  console.info('Succeeded in adding hidden settings menu.');
-} catch (err) {
-  console.error(`Failed to add hidden settings menu. Code: ${err.code}, message: ${err.message}`);
-}
-```

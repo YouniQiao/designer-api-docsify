@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setHotspotConfig
@@ -15,8 +15,6 @@ function setHotspotConfig(config: HotspotConfig): boolean
 设置热点配置信息。<p>仅支持配置OPEN和WPA2 PSK热点。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -39,23 +37,3 @@ function setHotspotConfig(config: HotspotConfig): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let config:wifi.HotspotConfig = {
-        ssid: "****",
-        securityType: 3,
-        band: 0,
-        preSharedKey: "****",
-        maxConn: 0
-    }
-    let ret = wifi.setHotspotConfig(config);
-    console.info("result:" + ret);        
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

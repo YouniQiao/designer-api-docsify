@@ -4,14 +4,12 @@ Describes the heap memory threshold at which the registered callback is triggere
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## localHeapThreshold
@@ -25,8 +23,6 @@ This number is on a scale of 70 to 95, representing the percentage threshold of 
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ This number is on a scale of 70 to 95, representing the percentage threshold of 
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -61,8 +55,6 @@ This number is on a scale of 70 to 95, representing the percentage threshold of 
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

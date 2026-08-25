@@ -4,8 +4,6 @@ Defines the toolbar options.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Background blur style of the title bar. If this parameter is not set, the backgr
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -42,11 +38,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 Options for the title bar background blur style.  
 **NOTE：**This parameter is only effective when **backgroundBlurStyle** is set.Avoid using this API in conjunction with **backgroundEffect**.
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +56,9 @@ backgroundColor?: ResourceColor
 
 Background color of the title bar. If this parameter is not set, the default color is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,11 +75,9 @@ backgroundEffect?: BackgroundEffectOptions
 Title bar background properties, including blur radius, brightness, saturation, and color.  
 **NOTE：**Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,8 +98,6 @@ Layout style of the toolbar.Default value: **BarStyle.STANDARD**
 **Default:** BarStyle.STANDARD
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,8 +120,6 @@ Whether to hide the toolbar text.Default value: **false**
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -151,8 +137,6 @@ Options for the toolbar's more button menu.
 **Type:** [MoreButtonOptions](arkts-arkui-morebuttonoptions-i.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 

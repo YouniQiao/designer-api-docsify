@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## query
@@ -15,8 +15,6 @@ function query(query: AssetMap): Promise<Array<AssetMap>>
 查询一条或多条符合条件的关键资产。若查询需要用户认证的关键资产，则需要在本函数前调用[asset.preQuery](arkts-assetstore-asset-prequery-f.md)接口，在本函数后调用 [asset.postQuery](arkts-assetstore-asset-postquery-f.md)接口，开发步骤请参考[开发指导](../../../security/AssetStoreKit/asset-js-query-auth.md)。 使用Promise异步回调。如果未查询到符合条件的关键资产，将抛出“未找到关键资产”的异常，而非返回空的查询结果列表。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -52,28 +50,3 @@ function query(query: AssetMap): Promise<Array<AssetMap>>
 | [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
 | [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
 | [24000017](../errorcode-asset.md#24000017-该子功能不支持) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-// 如果只需要返回关键资产的属性，可以将RETURN_TYPE设置为ATTRIBUTES。返回属性不需解密，查询时间较短。
-query.set(asset.Tag.RETURN_TYPE, asset.ReturnType.ALL); // 此处表示需要返回关键资产的所有信息，即属性+明文。返回明文需要解密，查询时间较长。
-asset.query(query).then((res: Array<asset.AssetMap>) => {
-  for (let i = 0; i < res.length; i++) {
-    // 解析属性。
-    let accessibility: number = res[i].get(asset.Tag.ACCESSIBILITY) as number;
-    console.info(`Succeeded in getting accessibility, which is: ${accessibility}.`);
-  }
-  console.info(`Succeeded in querying Asset.`);
-});
-```

@@ -4,8 +4,6 @@ Enumerates socket proxy types.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## NONE
@@ -18,8 +16,6 @@ No proxy.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## SOCKS5
@@ -31,7 +27,5 @@ SOCKS5 = 1
 SOCKS5 proxy.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.NetStack

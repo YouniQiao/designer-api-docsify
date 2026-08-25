@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## acquireFormData
@@ -15,8 +15,6 @@ function acquireFormData(formId: string, callback: AsyncCallback<Record<string, 
 Requests data from the widget provider. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -45,41 +43,6 @@ Requests data from the widget provider. This API uses an asynchronous callback t
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-
-let formId: string = '12400633174999288';
-try {
-  formHost.acquireFormData(formId, (error, data) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info('formHost acquireFormData success.');
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formHost.acquireFormData(formId).then((data) => {
-    console.info('formHost acquireFormData success' + data);
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (e) {
-  console.error(`catch error, code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## acquireFormData
 
@@ -90,8 +53,6 @@ function acquireFormData(formId: string): Promise<Record<string, Object>>
 Requests data from the widget provider. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -125,7 +86,3 @@ Requests data from the widget provider. This API uses a promise to return the re
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-See [acquireFormData](#acquireformdata)

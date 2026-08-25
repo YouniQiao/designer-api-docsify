@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getPermissionUsedRecord
@@ -15,8 +15,6 @@ function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<Permis
 获取历史权限使用记录，可用于权限审计或安全监控场景，例如检查某应用在指定时间段内对敏感权限的使用情况。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -46,110 +44,6 @@ function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<Permis
 | [12100001](../errorcode-access-token.md#12100001-入参错误) |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let request: privacyManager.PermissionUsedRequest = {
-    'tokenId': 1, // 可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
-    'isRemote': false,
-    'deviceId': 'device',
-    'bundleName': 'bundle',
-    'permissionNames': [],
-    'beginTime': 0,
-    'endTime': 1,
-    'flag': privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
-};
-
-// 查询历史权限使用记录
-privacyManager.getPermissionUsedRecord(request).then((data) => {
-  console.info(`getPermissionUsedRecord success, result: ${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let request: privacyManager.PermissionUsedRequest = {
-    'tokenId': 1,
-    'isRemote': false,
-    'deviceId': 'device',
-    'bundleName': 'bundle',
-    'permissionNames': [],
-    'beginTime': 0,
-    'endTime': 1,
-    'flag':privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
-};
-
-privacyManager.getPermissionUsedRecord(request).then((data: privacyManager.PermissionUsedResponse) => {
-  console.info(`getPermissionUsedRecord success, result: ${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let request: privacyManager.PermissionUsedRequest = {
-    'tokenId': 1, // 可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
-    'isRemote': false,
-    'deviceId': 'device',
-    'bundleName': 'bundle',
-    'permissionNames': [],
-    'beginTime': 0,
-    'endTime': 1,
-    'flag': privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
-};
-
-// 查询历史权限使用记录
-privacyManager.getPermissionUsedRecord(request, (err: BusinessError, data: privacyManager.PermissionUsedResponse) => {
-  if (err) {
-    console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`getPermissionUsedRecord success, result: ${data}`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let request: privacyManager.PermissionUsedRequest = {
-    'tokenId': 1,
-    'isRemote': false,
-    'deviceId': 'device',
-    'bundleName': 'bundle',
-    'permissionNames': [],
-    'beginTime': 0,
-    'endTime': 1,
-    'flag':privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
-};
-
-privacyManager.getPermissionUsedRecord(request, (err: BusinessError | null, data: privacyManager.PermissionUsedResponse | undefined): void => {
-  if (err) {
-    console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`getPermissionUsedRecord success, result: ${data}`);
-  }
-});
-```
-
 
 ## getPermissionUsedRecord
 
@@ -162,8 +56,6 @@ function getPermissionUsedRecord(
 获取历史权限使用记录，可用于权限审计或安全监控场景，例如检查某应用在指定时间段内对敏感权限的使用情况。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -187,7 +79,3 @@ function getPermissionUsedRecord(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [12100001](../errorcode-access-token.md#12100001-入参错误) |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
-
-**示例**
-
-参见 [getPermissionUsedRecord](#getpermissionusedrecord)

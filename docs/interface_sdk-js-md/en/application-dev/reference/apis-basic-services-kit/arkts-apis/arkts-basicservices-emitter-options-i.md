@@ -4,14 +4,12 @@ Describes the event emit priority.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Emitter
 
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from '@kit.BasicServicesKit';
+import { emitter } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## priority
@@ -25,8 +23,6 @@ Event priority. The default value is **EventPriority.LOW**.
 **Type:** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

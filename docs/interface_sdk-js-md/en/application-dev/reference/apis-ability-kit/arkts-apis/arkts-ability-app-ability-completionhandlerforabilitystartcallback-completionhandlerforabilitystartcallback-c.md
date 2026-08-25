@@ -4,14 +4,12 @@ CompletionHandlerForAbilityStartCallback provides two callback functions, **onRe
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from 'kits/@kit.AbilityKit';
 ```
 
 ## onRequestFailure
@@ -23,8 +21,6 @@ onRequestFailure?: OnRequestFailureFn
 Callback invoked when launching the specified ability fails.This API can be used in atomic services since API version 21.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,8 +37,6 @@ onRequestSuccess?: OnRequestSuccessFn
 Callback invoked when the specified ability is successfully launched.This API can be used in atomic services since API version 21.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

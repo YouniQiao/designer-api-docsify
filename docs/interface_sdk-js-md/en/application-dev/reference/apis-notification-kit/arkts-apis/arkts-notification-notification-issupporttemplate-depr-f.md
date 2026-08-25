@@ -15,8 +15,6 @@ Checks whether a specified template is supported before using [NotificationTempl
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md)
@@ -30,34 +28,6 @@ Checks whether a specified template is supported before using [NotificationTempl
 | templateName | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let templateName: string = 'process';
-function isSupportTemplateCallback(err: Base.BusinessError, data: boolean) {
-  if (err) {
-    console.info("isSupportTemplate failed " + JSON.stringify(err));
-  } else {
-    console.info("isSupportTemplate success");
-  }
-}
-
-Notification.isSupportTemplate(templateName, isSupportTemplateCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let templateName: string = 'process';
-Notification.isSupportTemplate(templateName).then((data: boolean) => {
-  console.info("isSupportTemplate success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isSupportTemplate failed, code is ${err}`);
-});
-```
-
 
 ## isSupportTemplate
 
@@ -68,8 +38,6 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -88,7 +56,3 @@ Checks whether a specified template is supported before using [NotificationTempl
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [isSupportTemplate](#issupporttemplate)

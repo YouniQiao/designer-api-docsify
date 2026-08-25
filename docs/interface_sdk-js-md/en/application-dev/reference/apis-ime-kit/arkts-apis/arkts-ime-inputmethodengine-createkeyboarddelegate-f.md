@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## createKeyboardDelegate
@@ -16,8 +16,6 @@ Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md)()
@@ -29,9 +27,3 @@ Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) |
-
-**Examples**
-
-```TypeScript
-let keyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.createKeyboardDelegate();
-```

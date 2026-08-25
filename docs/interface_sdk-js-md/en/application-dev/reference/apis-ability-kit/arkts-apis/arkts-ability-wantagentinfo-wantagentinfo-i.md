@@ -4,8 +4,6 @@ Defines the information required for triggering a WantAgent object. The informat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## actionFlags
@@ -19,8 +17,6 @@ Array of flags for using the WantAgent object.
 **Type:** Array&lt;abilityWantAgent.WantAgentFlags&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,8 +34,6 @@ Operation type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -55,8 +49,6 @@ Extra information.
 **Type:** { [key: string]: any }
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,8 +66,6 @@ Extra information. You are advised to use this property to replace **extraInfo**
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -92,8 +82,6 @@ Operation type.This attribute is supported since API version 7 and deprecated si
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **Substitutes:** [actionType](#actiontype)
@@ -105,16 +93,14 @@ Operation type.This attribute is supported since API version 7 and deprecated si
 ## requestCode
 
 ```TypeScript
-requestCode: int
+requestCode: number
 ```
 
 Custom request code, which is used to identify the operation to execute.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -131,8 +117,6 @@ Array of flags for using the WantAgent object.This attribute is supported since 
 **Type:** Array&lt;wantAgent.WantAgentFlags&gt;
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -153,8 +137,6 @@ Array of all Want objects. Currently, only one Want is supported. The array is r
 **Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('streamChange')
@@ -15,8 +15,6 @@ function on(type: 'streamChange', callback: Callback<number>): void
 订阅WLAN数据流改变事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -46,8 +44,6 @@ function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** hotspotStaJoin
@@ -75,8 +71,6 @@ function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 订阅WLAN热点STA离开事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

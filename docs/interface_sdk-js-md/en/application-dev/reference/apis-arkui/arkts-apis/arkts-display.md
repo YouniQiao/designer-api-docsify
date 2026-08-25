@@ -4,14 +4,12 @@ The **Display** module provides APIs for managing displays, such as obtaining in
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -50,14 +48,6 @@ import { display } from '@kit.ArkUI';
 | [off](arkts-arkui-display-off-f.md#offcapturestatuschange) |
 | [off](arkts-arkui-display-off-f.md#offfolddisplaymodechange) |
 | [off](arkts-arkui-display-off-f.md#offbrightnessinfochange) |
-| [offAdd](arkts-arkui-display-offadd-f.md) |
-| [offBrightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md) |
-| [offCaptureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md) |
-| [offChange](arkts-arkui-display-offchange-f.md) |
-| [offFoldAngleChange](arkts-arkui-display-offfoldanglechange-f.md) |
-| [offFoldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md) |
-| [offFoldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md) |
-| [offRemove](arkts-arkui-display-offremove-f.md) |
 | [on](arkts-arkui-display-on-f.md#onadd-remove-change) |
 | [on](arkts-arkui-display-on-f.md#onadd-remove-change) |
 | [on](arkts-arkui-display-on-f.md#onadd-remove-change) |
@@ -66,15 +56,7 @@ import { display } from '@kit.ArkUI';
 | [on](arkts-arkui-display-on-f.md#oncapturestatuschange) |
 | [on](arkts-arkui-display-on-f.md#onfolddisplaymodechange) |
 | [on](arkts-arkui-display-on-f.md#onbrightnessinfochange) |
-| [onAdd](arkts-arkui-display-onadd-f.md) |
-| [onBrightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) |
-| [onCaptureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) |
-| [onChange](arkts-arkui-display-onchange-f.md) |
 | [onChangeWithAttribute](arkts-arkui-display-onchangewithattribute-f.md) |
-| [onFoldAngleChange](arkts-arkui-display-onfoldanglechange-f.md) |
-| [onFoldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) |
-| [onFoldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) |
-| [onRemove](arkts-arkui-display-onremove-f.md) |
 | [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md) |
 
 <!--Del-->
@@ -85,10 +67,8 @@ import { display } from '@kit.ArkUI';
 | [addVirtualScreenBlocklist](arkts-arkui-display-addvirtualscreenblocklist-f-sys.md) |
 | [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md) |
 | [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md) |
-| [off](arkts-arkui-display-off-f-sys.md#offprivatemodechange) |
-| [offPrivateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) |
-| [on](arkts-arkui-display-on-f-sys.md#onprivatemodechange) |
-| [onPrivateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) |
+| off |
+| on |
 | [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md) |
 | [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md) |
 | [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md) |

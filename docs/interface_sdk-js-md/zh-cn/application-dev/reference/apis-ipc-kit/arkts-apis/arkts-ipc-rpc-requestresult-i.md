@@ -4,29 +4,25 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## code
 
 ```TypeScript
-code: int
+code: number
 ```
 
 消息代码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -42,23 +38,19 @@ data: MessageSequence
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## errCode
 
 ```TypeScript
-errCode: int
+errCode: number
 ```
 
 错误码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -73,7 +65,5 @@ reply: MessageSequence
 **类型：** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core

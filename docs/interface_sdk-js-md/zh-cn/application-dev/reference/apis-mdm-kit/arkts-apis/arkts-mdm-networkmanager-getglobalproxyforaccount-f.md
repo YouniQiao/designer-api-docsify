@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getGlobalProxyForAccount
@@ -19,8 +19,6 @@ function getGlobalProxyForAccount(admin: Want | null, accountId: number): connec
 > [getGlobalProxySync](arkts-mdm-networkmanager-getglobalproxysync-f.md)接口。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -49,25 +47,3 @@ function getGlobalProxyForAccount(admin: Want | null, accountId: number): connec
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { connection } from '@kit.NetworkKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: connection.HttpProxy = networkManager.getGlobalProxyForAccount(wantTemp, 100);
-  console.info(`Succeeded in getting network global proxy, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get network global proxy. Code: ${err.code}, message: ${err.message}`);
-}
-```

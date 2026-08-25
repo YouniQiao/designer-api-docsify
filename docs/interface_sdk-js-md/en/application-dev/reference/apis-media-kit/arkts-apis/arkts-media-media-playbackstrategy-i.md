@@ -4,14 +4,12 @@ Provides preferred playback settings for player.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## enableSuperResolution
@@ -25,8 +23,6 @@ Enable super-resolution feature. default is false. Must enable super-resolution 
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -44,8 +40,6 @@ Indicates whether to keep the decoder working when closing the media, which is u
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -62,8 +56,6 @@ mute the specified media stream when playing.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## preferredAudioLanguage
@@ -78,8 +70,6 @@ Audio language.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -87,16 +77,14 @@ Audio language.
 ## preferredBufferDuration
 
 ```TypeScript
-preferredBufferDuration?: int
+preferredBufferDuration?: number
 ```
 
 Chooses a preferred buffer duration.<p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details, see Online Video Frame Freezing Optimization Practice.</p>
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -105,16 +93,14 @@ Chooses a preferred buffer duration.<p>The preferred buffer duration in the play
 ## preferredBufferDurationForPlaying
 
 ```TypeScript
-preferredBufferDurationForPlaying?: double
+preferredBufferDurationForPlaying?: number
 ```
 
 Customize the buffering threshold for start or restart playing. The unit is second.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -132,8 +118,6 @@ If true, the player should choose HDR stream if exist.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -141,16 +125,14 @@ If true, the player should choose HDR stream if exist.
 ## preferredHeight
 
 ```TypeScript
-preferredHeight?: int
+preferredHeight?: number
 ```
 
 Choose a stream with height close to it.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -168,8 +150,6 @@ Subtitle language.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -177,16 +157,14 @@ Subtitle language.
 ## preferredWidth
 
 ```TypeScript
-preferredWidth?: int
+preferredWidth?: number
 ```
 
 Choose a stream with width close to it.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -204,8 +182,6 @@ Show first frame on prepare.
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -213,16 +189,14 @@ Show first frame on prepare.
 ## thresholdForAutoQuickPlay
 
 ```TypeScript
-thresholdForAutoQuickPlay?: double
+thresholdForAutoQuickPlay?: number
 ```
 
 set max buffering threshold for liveStreaming or avplayer while change the speed. It is recommended that the value be 2 seconds greater than the starting waterline.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

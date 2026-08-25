@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## joinConference
 
 ```TypeScript
-function joinConference(mainCallId: int, callNumberList: Array<string>, callback: AsyncCallback<void>): void
+function joinConference(mainCallId: number, callNumberList: Array<string>, callback: AsyncCallback<void>): void
 ```
 
 加入会议。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -26,7 +24,7 @@ function joinConference(mainCallId: int, callNumberList: Array<string>, callback
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mainCallId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| mainCallId | number | 是 |
 | callNumberList | Array & lt;string & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -41,48 +39,16 @@ function joinConference(mainCallId: int, callNumberList: Array<string>, callback
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callNumberList: Array<string> = [
-    "138XXXXXXXX"
-];
-call.joinConference(1, callNumberList, (err: BusinessError) => {
-    if (err) {
-        console.error(`joinConference fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`joinConference success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callNumberList: Array<string> = [
-    "138XXXXXXXX"
-];
-call.joinConference(1, callNumberList).then(() => {
-    console.info(`joinConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`joinConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## joinConference
 
 ```TypeScript
-function joinConference(mainCallId: int, callNumberList: Array<string>): Promise<void>
+function joinConference(mainCallId: number, callNumberList: Array<string>): Promise<void>
 ```
 
 加入会议。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -92,7 +58,7 @@ function joinConference(mainCallId: int, callNumberList: Array<string>): Promise
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mainCallId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| mainCallId | number | 是 |
 | callNumberList | Array & lt;string & gt; | 是 |
 
 **返回值：**
@@ -111,7 +77,3 @@ function joinConference(mainCallId: int, callNumberList: Array<string>): Promise
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [joinConference](#joinconference)

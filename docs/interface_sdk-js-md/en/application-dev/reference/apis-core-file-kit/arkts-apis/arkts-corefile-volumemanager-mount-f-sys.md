@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## mount
@@ -15,8 +15,6 @@ function mount(volumeId: string, callback: AsyncCallback<void>): void
 Mounts a volume. This API uses an asynchronous callback to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file systems are supported.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -45,26 +43,6 @@ Mounts a volume. This API uses an asynchronous callback to return the result. Cu
 | 13600008 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-volumeManager.mount(volumeId).then(() => {
-  // Do something.
-}).catch((error: BusinessError) => {
-  console.error("mount failed");
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let volumeId: string = "";
-volumeManager.mount(volumeId, (error: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## mount
 
@@ -75,8 +53,6 @@ function mount(volumeId: string): Promise<void>
 Mounts a volume. This API uses a promise to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file systems are supported.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -109,7 +85,3 @@ Mounts a volume. This API uses a promise to return the result. Currently, only t
 | 13600005 |
 | 13600008 |
 | 13900042 |
-
-**Examples**
-
-See [mount](#mount)

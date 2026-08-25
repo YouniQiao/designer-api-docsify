@@ -10,8 +10,6 @@ Obtains the attributes of a **Text** node. If the node is not created using ArkT
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -29,48 +27,7 @@ Obtains the attributes of a **Text** node. If the node is not created using ArkT
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| TextAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// Implement a custom UI controller by extending NodeController.
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create a Text node.
-    let text = typeNode.createNode(uiContext, 'Text');
-    text.initialize("Hello");
-    // Obtain the Text node attributes.
-    typeNode.getAttribute(text, 'Text')?.fontColor(Color.Red)
-    col.appendChild(text);
-    // Create another text for comparison.
-    let text2 = typeNode.createNode(uiContext, 'Text');
-    text2.initialize("world");
-    col.appendChild(text2);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('Text sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
+| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -82,8 +39,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 Obtains the attributes of a **Column** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,47 +57,7 @@ Obtains the attributes of a **Column** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ColumnAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create a Column node.
-    let col1 = typeNode.createNode(uiContext, 'Column');
-    col1.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    // Obtain the attributes of the Column node.
-    typeNode.getAttribute(col1, 'Column')?.backgroundColor(Color.Blue).width("100%")
-    col.appendChild(col1);
-    // Create another Column node for comparison.
-    let col2 = typeNode.createNode(uiContext, 'Column');
-    col2.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    col.appendChild(col2);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('Column sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
+| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -154,8 +69,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 Obtains the attributes of a **Row** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,47 +87,7 @@ Obtains the attributes of a **Row** node. If the node is not created using ArkTS
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| RowAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create a Row node.
-    let row1 = typeNode.createNode(uiContext, 'Row');
-    row1.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    // Obtain the attributes of the Row node.
-    typeNode.getAttribute(row1, 'Row')?.backgroundColor(Color.Blue).width("100%")
-    col.appendChild(row1);
-    // Create another Row node for comparison.
-    let row2 = typeNode.createNode(uiContext, 'Row');
-    row2.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    col.appendChild(row2);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('Row sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
+| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -226,8 +99,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 Obtains the attributes of a **Stack** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,47 +117,7 @@ Obtains the attributes of a **Stack** node. If the node is not created using Ark
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| StackAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create a Stack node.
-    let stack1 = typeNode.createNode(uiContext, 'Stack');
-    stack1.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    // Obtain the Stack attributes.
-    typeNode.getAttribute(stack1, 'Stack')?.backgroundColor(Color.Blue).width("100%")
-    col.appendChild(stack1);
-    // Create another Stack node for comparison.
-    let stack2 = typeNode.createNode(uiContext, 'Stack');
-    stack2.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    col.appendChild(stack2);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('Row sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
+| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -298,8 +129,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 Obtains the Flex node attributes. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -318,47 +147,7 @@ Obtains the Flex node attributes. If the node is not created using ArkTS, cross-
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| FlexAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create a Flex.
-    let flex1 = typeNode.createNode(uiContext, 'Flex');
-    flex1.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    // Obtain the Flex attributes.
-    typeNode.getAttribute(flex1, 'Flex')?.backgroundColor(Color.Blue).width("100%")
-    col.appendChild(flex1);
-    // Create another Flex node for comparison.
-    let flex2 = typeNode.createNode(uiContext, 'Flex');
-    flex2.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    col.appendChild(flex2);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('Flex sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
+| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -370,8 +159,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 Obtains the attributes of a **Swiper** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -390,11 +177,7 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| SwiperAttribute \| undefined |
-
-**Examples**
-
-See the example for createNode('Swiper')12+.
+| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -406,8 +189,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 Obtains the attributes of a **Progress** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -426,46 +207,7 @@ Obtains the attributes of a **Progress** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ProgressAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// Implement a custom Progress controller by extending NodeController.
-class MyProgressNodeController extends NodeController {
-  public uiContext: UIContext | null = null;
-  public rootNode: FrameNode | null = null;
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.uiContext = uiContext;
-    this.rootNode = new FrameNode(uiContext);
-    let node = typeNode.createNode(uiContext, 'Progress');
-    node.initialize({
-      value: 15,
-      total: 200,
-      type: ProgressType.ScaleRing
-    }).width(100)
-      .height(100)
-    // Obtain the attributes of the Progress node.
-    typeNode.getAttribute(node, 'Progress');
-    this!.rootNode!.appendChild(node);
-    return this.rootNode;
-  }
-}
-
-@Entry
-@Component
-struct Sample {
-  build() {
-    Column({ space: 10 }) {
-      NodeContainer(new MyProgressNodeController()).margin(5)
-    }.width('100%').height('100%')
-
-  }
-}
-```
+| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -477,8 +219,6 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 Obtains the attributes of a **Scroll** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -497,11 +237,7 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ScrollAttribute \| undefined |
-
-**Examples**
-
-See the example for createNode('Scroll').
+| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -513,8 +249,6 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 Obtains the attributes of a **RelativeContainer** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -533,47 +267,7 @@ Obtains the attributes of a **RelativeContainer** node. If the node is not creat
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| RelativeContainerAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create a RelativeContainer node.
-    let relative1 = typeNode.createNode(uiContext, 'RelativeContainer');
-    relative1.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    // Obtain the attributes of the RelativeContainer node.
-    typeNode.getAttribute(relative1, 'RelativeContainer')?.backgroundColor(Color.Blue).width("100%")
-    col.appendChild(relative1);
-    // Create another RelativeContainer node for comparison.
-    let relative2 = typeNode.createNode(uiContext, 'RelativeContainer');
-    relative2.initialize().width("50%").height("20%").backgroundColor(Color.Pink);
-    col.appendChild(relative2);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('RelativeContainer sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
+| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -585,8 +279,6 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 Obtains the attributes of a LoadingProgress node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -605,44 +297,7 @@ Obtains the attributes of a LoadingProgress node. If the node is not created usi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| LoadingProgressAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// Implement a custom LoadingProgress controller by extending NodeController.
-class MyLoadingProgressNodeController extends NodeController {
-  public uiContext: UIContext | null = null;
-  public rootNode: FrameNode | null = null;
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.uiContext = uiContext;
-    this.rootNode = new FrameNode(uiContext);
-    let node = typeNode.createNode(uiContext, 'LoadingProgress');
-    node.initialize()
-      .width(100)
-      .height(100)
-      .color(Color.Red)
-      .enableLoading(true)
-    // Obtain the attributes of the LoadingProgress node.
-    typeNode.getAttribute(node, 'LoadingProgress');
-    this!.rootNode!.appendChild(node);
-    return this.rootNode;
-  }
-}
-
-@Entry
-@Component
-struct Sample {
-  build() {
-    Column({ space: 10 }) {
-      NodeContainer(new MyLoadingProgressNodeController()).margin(5)
-    }.width('100%').height('100%')
-  }
-}
-```
+| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -654,8 +309,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 Obtains the attributes of an **Image** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -674,53 +327,7 @@ Obtains the attributes of an **Image** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ImageAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// Implement a custom Image controller by extending NodeController.
-class MyImageController extends NodeController {
-  public uiContext: UIContext | null = null;
-  public rootNode: FrameNode | null = null;
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.uiContext = uiContext;
-    this.rootNode = new FrameNode(uiContext);
-    let imageNode = typeNode.createNode(uiContext, 'Image');
-    imageNode
-      // Replace $r('app.media.img') with the image resource file you use.
-      .initialize($r('app.media.img'))
-      .width(100)
-      .height(100)
-      .fillColor(Color.Red)
-      .objectFit(ImageFit.Contain)
-      .renderMode(ImageRenderMode.Template)
-      .fitOriginalSize(true)
-      .matchTextDirection(true)
-      .objectRepeat(ImageRepeat.X)
-      .autoResize(true)
-    // Obtain the attributes of the Image node.
-    typeNode.getAttribute(imageNode, 'Image');
-    this!.rootNode!.appendChild(imageNode);
-    return this.rootNode;
-
-  }
-}
-
-@Entry
-@Component
-struct Sample {
-  build() {
-    Column({ space: 10 }) {
-      NodeContainer(new MyImageController()).margin(5)
-    }.width('100%').height('100%')
-
-  }
-}
-```
+| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -732,8 +339,6 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 Obtains the attributes of a **List** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -752,11 +357,7 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ListAttribute \| undefined |
-
-**Examples**
-
-See the example for createNode('List').
+| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -768,8 +369,6 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 Obtains the attributes of a **ListItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -788,11 +387,7 @@ Obtains the attributes of a **ListItem** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ListItemAttribute \| undefined |
-
-**Examples**
-
-See the example for createNode('List').
+| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -804,8 +399,6 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 Obtains the attributes of a **TextInput** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -824,44 +417,7 @@ Obtains the attributes of a **TextInput** node. If the node is not created using
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| TextInputAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// Implement a custom UI controller by extending NodeController.
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create a TextInput.
-    let textInput = typeNode.createNode(uiContext, 'TextInput');
-    textInput.initialize({ placeholder: 'TextInput placeholderColor' });
-    // Obtain the attributes of the TextInput node.
-    typeNode.getAttribute(textInput, 'TextInput')?.placeholderColor(Color.Red);
-    col.appendChild(textInput);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('TextInput getAttribute sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
+| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -873,8 +429,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 Obtains the attributes of a **Button** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -893,50 +447,7 @@ Obtains the attributes of a **Button** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ButtonAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
-
-// Implement a custom Button controller by extending NodeController.
-class MyButtonController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext)
-    node.commonAttribute
-    let col = typeNode.createNode(uiContext, 'Column')
-    col.initialize({ space: 5 })
-      .width('100%')
-      .height('100%')
-    node.appendChild(col)
-    let button = typeNode.createNode(uiContext, 'Button')
-    button.initialize("This is Button")
-      .onClick(() => {
-        uiContext.getPromptAction().showToast({ message: "Button clicked" })
-      })
-    // Obtain the attributes of the Button node.
-    typeNode.getAttribute(button,'Button')?.buttonStyle(ButtonStyleMode.TEXTUAL)
-    col.appendChild(button)
-
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myButtonController: MyButtonController = new MyButtonController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('ButtonSample')
-      NodeContainer(this.myButtonController);
-
-    }.width('100%')
-  }
-}
-```
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -948,8 +459,6 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 Obtains the attributes of a **ListItemGroup** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -968,13 +477,7 @@ Obtains the attributes of a **ListItemGroup** node. If the node is not created u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ListItemGroupAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-typeNode.getAttribute(node, 'ListItemGroup');
-```
+| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -986,8 +489,6 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 Obtains the attributes of a **WaterFlow** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1006,11 +507,7 @@ Obtains the attributes of a **WaterFlow** node. If the node is not created using
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| WaterFlowAttribute \| undefined |
-
-**Examples**
-
-See the example for createNode('WaterFlow').
+| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -1022,8 +519,6 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 Obtains the attributes of a **FlowItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1042,11 +537,7 @@ Obtains the attributes of a **FlowItem** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| FlowItemAttribute \| undefined |
-
-**Examples**
-
-See the example for createNode('WaterFlow').
+| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -1058,8 +549,6 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 Obtain the attributes of an **XComponent** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1078,13 +567,7 @@ Obtain the attributes of an **XComponent** node. If the node is not created usin
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| XComponentAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-typeNode.getAttribute(node, 'XComponent');
-```
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -1096,8 +579,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 Obtains the attributes of a **Checkbox** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1116,52 +597,7 @@ Obtains the attributes of a **Checkbox** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| CheckboxAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
-
-// Implement a custom Checkbox controller by extending NodeController.
-class MyCheckboxController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext)
-    node.commonAttribute
-    let col = typeNode.createNode(uiContext, 'Column')
-    col.initialize({ space: 5 })
-      .width('100%')
-      .height('100%')
-    node.appendChild(col)
-    // Create a Checkbox node.
-    let checkbox = typeNode.createNode(uiContext, 'Checkbox')
-    checkbox.initialize({ name: 'checkbox1', group: 'checkboxGroup1' })
-
-    // Create another Checkbox node.
-    let checkbox1 = typeNode.createNode(uiContext, 'Checkbox')
-    checkbox1.initialize({ name: 'checkbox2', group: 'checkboxGroup1' })
-    // Set the shape property for the first Checkbox.
-    typeNode.getAttribute(checkbox1,'Checkbox')?.shape(CheckBoxShape.ROUNDED_SQUARE)
-    // Add the two Checkbox nodes to col for comparison.
-    col.appendChild(checkbox)
-    col.appendChild(checkbox1)
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myCheckboxController: MyCheckboxController = new MyCheckboxController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('CheckboxSample')
-      NodeContainer(this.myCheckboxController);
-    }.width('100%')
-  }
-}
-```
+| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -1173,8 +609,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 Obtains the attributes of a **Radio** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1193,51 +627,7 @@ Obtains the attributes of a **Radio** node. If the node is not created using Ark
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| RadioAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
-
-// Implement a custom Radio controller by extending NodeController.
-class MyRadioController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext)
-    node.commonAttribute
-    let col = typeNode.createNode(uiContext, 'Column')
-    col.initialize({ space: 5 })
-      .width('100%')
-      .height('100%')
-    node.appendChild(col)
-    // Create a Radio node.
-    let radio1 = typeNode.createNode(uiContext, 'Radio')
-    radio1.initialize({ value: 'radio1', group: 'radioGroup' })
-    typeNode.getAttribute(radio1,'Radio')?.checked(true)
-    // Create another Radio node for comparison.
-    let radio2 = typeNode.createNode(uiContext, 'Radio')
-    radio2.initialize({ value: 'radio2', group: 'radioGroup' })
-
-
-    col.appendChild(radio1)
-    col.appendChild(radio2)
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myRadioController: MyRadioController = new MyRadioController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('RadioSample')
-      NodeContainer(this.myRadioController);
-    }.width('100%')
-  }
-}
-```
+| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -1249,8 +639,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 Obtains the attributes of a **Slider** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1269,46 +657,7 @@ Obtains the attributes of a **Slider** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| SliderAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
-
-// Implement a custom Slider controller by extending NodeController.
-class MySliderController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext)
-    node.commonAttribute
-    let col = typeNode.createNode(uiContext, 'Column')
-    col.initialize({ space: 5 })
-      .width('100%')
-      .height('100%')
-    node.appendChild(col)
-    // Create a Slider node.
-    let slider = typeNode.createNode(uiContext, 'Slider')
-    slider.initialize({value:50})
-    typeNode.getAttribute(slider,'Slider')?.selectedColor(Color.Pink)
-    col.appendChild(slider)
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private mySliderController: MySliderController = new MySliderController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('SliderSample')
-      NodeContainer(this.mySliderController);
-
-    }.width('100%')
-  }
-}
-```
+| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -1320,8 +669,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 Obtains the attributes of a **Toggle** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1340,46 +687,7 @@ Obtains the attributes of a **Toggle** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ToggleAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
-
-// Implement a custom Toggle controller by extending NodeController.
-class MyToggleController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext)
-    node.commonAttribute
-    let col = typeNode.createNode(uiContext, 'Column')
-    col.initialize({ space: 5 })
-      .width('100%')
-      .height('100%')
-    node.appendChild(col)
-    // Create a Toggle node.
-    let toggleSwitch = typeNode.createNode(uiContext, 'Toggle')
-    toggleSwitch.initialize({ type: ToggleType.Switch })
-    typeNode.getAttribute(toggleSwitch,'Toggle')?.selectedColor(Color.Orange)
-    col.appendChild(toggleSwitch)
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myToggleController: MyToggleController = new MyToggleController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('ToggleSample')
-      NodeContainer(this.myToggleController);
-
-    }.width('100%')
-  }
-}
-```
+| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -1391,8 +699,6 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 Obtains the attributes of a **TextArea** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1411,44 +717,7 @@ Obtains the attributes of a **TextArea** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| TextAreaAttribute \| undefined |
-
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// Implement a custom UI controller by extending NodeController.
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create a TextArea node.
-    let textArea = typeNode.createNode(uiContext, 'TextArea');
-    textArea.initialize({ placeholder: 'TextArea placeholderColor' });
-    col.appendChild(textArea);
-    // Obtain the attributes of the TextArea node.
-    typeNode.getAttribute(textArea, 'TextArea')?.placeholderColor(Color.Red);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('TextArea getAttribute sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
+| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -1460,8 +729,6 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 Obtains the attributes of a **Grid** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1480,11 +747,7 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| GridAttribute \| undefined |
-
-**Examples**
-
-See the example for createNode('Grid').
+| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) \| undefined |
 
 
 ## getAttribute
@@ -1496,8 +759,6 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 Obtains the attributes of a **GridItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1516,8 +777,4 @@ Obtains the attributes of a **GridItem** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| GridItemAttribute \| undefined |
-
-**Examples**
-
-See the example for createNode('Grid').
+| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) \| undefined |

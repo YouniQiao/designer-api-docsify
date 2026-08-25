@@ -7,8 +7,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ShortcutInfo](#shortcutinfo)
@@ -26,8 +24,6 @@ Name of the bundle that contains the shortcut.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -47,8 +43,6 @@ Message displayed when the shortcut is disabled.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
@@ -64,8 +58,6 @@ Local ability information of the shortcut.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -85,8 +77,6 @@ Icon of the shortcut.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** icon
@@ -105,8 +95,6 @@ Icon ID of the shortcut.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** iconId
@@ -124,8 +112,6 @@ ID of the application to which the shortcut belongs.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -147,8 +133,6 @@ Whether the shortcut is enabled. **true** if enabled, **false** otherwise.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** visible
@@ -168,8 +152,6 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 **Default:** false
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -191,8 +173,6 @@ Whether the shortcut is static. **true** if static, **false** otherwise.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** sourceType
@@ -210,8 +190,6 @@ Name of the shortcut.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -231,8 +209,6 @@ Name ID of the shortcut.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** labelId
@@ -250,8 +226,6 @@ Want list for the shortcut.
 **Type:** Array&lt;[ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md)&gt;
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

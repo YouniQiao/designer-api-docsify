@@ -4,16 +4,14 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 ## 导入模块
 
 ```TypeScript
-import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
-import { BackupExtensionAbility } from '@kit.CoreFileKit';
-import { BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility, BundleVersion } from 'kits/@kit.CoreFileKit';
+import { BackupExtensionAbility } from 'kits/@kit.CoreFileKit';
+import { BundleVersion } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getBackupCompatibilityInfo
@@ -25,8 +23,6 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 在应用备份阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,35 +42,6 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 | --- |
 | Promise & lt;string & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class BackupExt extends BackupExtensionAbility {
-  async getBackupCompatibilityInfo(extInfo: string): Promise<string> {
-    let ret: string = '';
-    try {
-      // 此处仅以JSON为示范，相应判断逻辑及相应字段由应用自定义
-      if (!extInfo) {
-        ret = '{"dbVersion": "1.0", "isThemCardEnable": "true"}';
-      } else {
-        let extJson: Record<string, string> = JSON.parse(extInfo);
-        if (extJson?.requireCompatibility) {
-          ret = '{"isSupportBackup": "true"}';
-        } else {
-          ret = '{"isSupportBackup": "false"}';
-        }
-      }
-    } catch (error) {
-      let err: BusinessError = error as BusinessError;
-      console.error(`getBackupCompatibilityInfo failed with error. Code: ${err.code}, message: ${err.message}`);
-    }
-    return ret;
-  }
-}
-```
-
 ## getBackupInfo
 
 ```TypeScript
@@ -84,8 +51,6 @@ getBackupInfo(): string
 在调用方查询应用数据时执行，由应用返回自定义备份信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,18 +64,6 @@ getBackupInfo(): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-class BackupExt extends BackupExtensionAbility {
-  getBackupInfo(): string {
-    console.info('getBackupInfo ok');
-    let info = 'app diy info';
-    return info;
-  }
-}
-```
-
 ## getRestoreCompatibilityInfo
 
 ```TypeScript
@@ -120,8 +73,6 @@ getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 在应用恢复阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,32 +91,3 @@ getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 | 类型 |
 | --- |
 | Promise & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class BackupExt extends BackupExtensionAbility {
-  async getRestoreCompatibilityInfo(extInfo: string): Promise<string> {
-    let ret: string = '';
-    try {
-      // 此处仅以JSON为示范，相应判断逻辑及相应字段由应用自定义
-      if (!extInfo) {
-        ret = '{"dbVersion": "1.0", "isThemCardEnable": "true"}';
-      } else {
-        let extJson: Record<string, string> = JSON.parse(extInfo);
-        if (extJson?.requireCompatibility) {
-          ret = '{"isSupportRestore": "true"}';
-        } else {
-          ret = '{"isSupportRestore": "false"}';
-        }
-      }
-    } catch (error) {
-      let err: BusinessError = error as BusinessError;
-      console.error(`getRestoreCompatibilityInfo failed with error. Code: ${err.code}, message: ${err.message}`);
-    }
-    return ret;
-  }
-}
-```

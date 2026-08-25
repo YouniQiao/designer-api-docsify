@@ -2,8 +2,6 @@
 
 The type for the `assert` property of the optional second argument to `import()`.
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -16,5 +14,3 @@ The type for the `assert` property of the optional second argument to `import()`
 ```
 
 **Type:** string
-
-**ArkTS mode:** 

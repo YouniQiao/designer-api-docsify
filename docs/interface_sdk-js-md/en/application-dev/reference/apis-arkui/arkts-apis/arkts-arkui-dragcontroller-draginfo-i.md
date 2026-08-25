@@ -4,20 +4,18 @@ Defines the attributes required for initiating a drag action and information car
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'kits/@kit.ArkUI';
 ```
 
 ## autoHideComponentUniqueIds
 
 ```TypeScript
-autoHideComponentUniqueIds?: int | int[]
+autoHideComponentUniqueIds?: number | number[]
 ```
 
 Unique ID of the component that is automatically hidden by the system during proactive dragging. A single unique ID or an array of unique IDs can be passed.After the proactive dragging is successfully initiated, the system automatically hides the target component before displaying the drag preview window.If the proactive dragging source also needs to be hidden, its unique ID must be passed as well.The unique ID of a component can be obtained by using [UIContext.getFrameNodeById()](arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid) together with [FrameNode.getUniqueId()](arkts-arkui-framenode-c.md#getuniqueid).You need to restore the component display status as required in the drag end callback.
@@ -25,8 +23,6 @@ Unique ID of the component that is automatically hidden by the system during pro
 **Type:** number \| number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Data carried in the dragging process.The default value is null.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,8 +59,6 @@ Parameters for deferred data loading from the drag source. This API provides dat
 **Type:** unifiedDataChannel.DataLoadParams
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,8 +78,6 @@ Additional information about the drag action. Not supported currently.The defaul
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -106,8 +96,6 @@ ID of the touch point on the screen when dragging is started. The value is an in
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -122,11 +110,9 @@ previewOptions?: DragPreviewOptions
 
 Processing mode of the drag preview and the display of the number badge during dragging.
 
-**Type:** DragPreviewOptions
+**Type:** [DragPreviewOptions](../arkts-components/arkts-arkui-dragpreviewoptions-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,8 +131,6 @@ Coordinates of the touch point. If this parameter is not set, the touch point is
 **Type:** TouchPoint
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

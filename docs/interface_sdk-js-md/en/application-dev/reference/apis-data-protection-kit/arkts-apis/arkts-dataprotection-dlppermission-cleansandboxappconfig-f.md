@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## cleanSandboxAppConfig
@@ -15,8 +15,6 @@ function cleanSandboxAppConfig(): Promise<void>
 Clears the sandbox application configuration. After the API is successfully called, the sandbox application configuration is cleared and the default state is restored. This API uses a promise to return the result.This API clears the sandbox application configuration and restores the default state to prevent residual configurations from affecting subsequent use. This API can be called only in non-sandbox applications.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -35,16 +33,3 @@ Clears the sandbox application configuration. After the API is successfully call
 | [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 | [19100018](../errorcode-dlp.md#19100018-application-unauthorized) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.cleanSandboxAppConfig(); // Clean sandbox application configuration.
-} catch (err) {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-}
-```

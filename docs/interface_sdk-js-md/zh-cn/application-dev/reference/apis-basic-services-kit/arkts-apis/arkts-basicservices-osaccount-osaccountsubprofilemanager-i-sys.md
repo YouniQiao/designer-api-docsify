@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -13,26 +11,18 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile>
 ```
 
-ArkTS-Sta:
-```TypeScript
-createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>
-```
-
-创建一个系统账号子身份资料。
+创建一个系统账号子身份资料。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -46,7 +36,7 @@ createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| osAccountLocalId | number | 是 |
 
 **返回值：**
 
@@ -66,65 +56,15 @@ createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>
 | [12300010](../errorcode-account.md#12300010-账号服务忙碌) |
 | [12300402](../errorcode-account.md#12300402-系统账号下的子身份资料数量已达到上限) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: number = 100;
-try {
-  subProfileManager.createOsAccountSubProfile(osAccountLocalId).then((subProfile: osAccount.OsAccountSubProfile) => {
-    console.info('createOsAccountSubProfile successfully, subProfileId: ' + subProfile.id);
-  }).catch((err: BusinessError) => {
-    console.error(`createOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: int = 100;
-try {
-  subProfileManager.createOsAccountSubProfile(osAccountLocalId).then((subProfile: osAccount.OsAccountSubProfile) => {
-    console.info('createOsAccountSubProfile successfully, subProfileId: ' + subProfile.id);
-  }).catch((err: Error) => {
-    console.error(`createOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## deleteOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<void>
 ```
 
-ArkTS-Sta:
-```TypeScript
-deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>
-```
-
-删除一个系统账号子身份资料。
+删除一个系统账号子身份资料。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -138,8 +78,8 @@ deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| osAccountLocalId | number | 是 |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -159,67 +99,15 @@ deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 | [12300403](../errorcode-account.md#12300403-受限的系统账号子身份资料) |
 | [12300404](../errorcode-account.md#12300404-系统账号的前台子身份资料不允许被删除) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: number = 100;
-let subProfileId: number = 100001;
-try {
-  subProfileManager.deleteOsAccountSubProfile(osAccountLocalId, subProfileId).then(() => {
-    console.info('deleteOsAccountSubProfile successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`deleteOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`deleteOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: int = 100;
-let subProfileId: int = 100001;
-try {
-  subProfileManager.deleteOsAccountSubProfile(osAccountLocalId, subProfileId).then(() => {
-    console.info('deleteOsAccountSubProfile successfully');
-  }).catch((err: Error) => {
-    console.error(`deleteOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`deleteOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## getOsAccountForegroundSubProfileId
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountForegroundSubProfileId(): Promise<number>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountForegroundSubProfileId(): Promise<int>
-```
-
-获取调用方所属系统账号的前台子身份资料的标识符。
+获取调用方所属系统账号的前台子身份资料的标识符。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -231,7 +119,7 @@ getOsAccountForegroundSubProfileId(): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -241,103 +129,15 @@ getOsAccountForegroundSubProfileId(): Promise<int>
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 | [12300401](../errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-try {
-  subProfileManager.getOsAccountForegroundSubProfileId().then((subProfileId: number) => {
-    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-try {
-  subProfileManager.getOsAccountForegroundSubProfileId().then((subProfileId: int) => {
-    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
-  }).catch((err: Error) => {
-    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: number = 100;
-try {
-  subProfileManager.getOsAccountForegroundSubProfileId(osAccountLocalId).then((subProfileId: number) => {
-    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: int = 100;
-try {
-  subProfileManager.getOsAccountForegroundSubProfileId(osAccountLocalId).then((subProfileId: int) => {
-    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
-  }).catch((err: Error) => {
-    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## getOsAccountForegroundSubProfileId
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
-```
-
-获取指定系统账号的前台子身份资料标识符。
+获取指定系统账号的前台子身份资料标识符。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -349,13 +149,13 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| osAccountLocalId | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -366,27 +166,15 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
 | [12300003](../errorcode-account.md#12300003-账号不存在) |
 | [12300401](../errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
-**示例**
-
-参见 [getOsAccountForegroundSubProfileId](#getosaccountforegroundsubprofileid)
-
 ## getOsAccountLocalIdForSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountLocalIdForSubProfile(subProfileId: number): Promise<number>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>
-```
-
-获取子身份资料所属系统账号的本地标识符。
+获取子身份资料所属系统账号的本地标识符。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -398,13 +186,13 @@ getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -414,65 +202,15 @@ getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 | [12300401](../errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let subProfileId: number = 100001;
-try {
-  subProfileManager.getOsAccountLocalIdForSubProfile(subProfileId).then((osAccountLocalId: number) => {
-    console.info('getOsAccountLocalIdForSubProfile successfully, osAccountLocalId: ' + osAccountLocalId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountLocalIdForSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalIdForSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let subProfileId: int = 100001;
-try {
-  subProfileManager.getOsAccountLocalIdForSubProfile(subProfileId).then((osAccountLocalId: int) => {
-    console.info('getOsAccountLocalIdForSubProfile successfully, osAccountLocalId: ' + osAccountLocalId);
-  }).catch((err: Error) => {
-    console.error(`getOsAccountLocalIdForSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalIdForSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## getOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>
-```
-
-获取调用方所属系统账号的子身份资料对象信息。
+获取调用方所属系统账号的子身份资料对象信息。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNTS
 
@@ -486,7 +224,7 @@ getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -503,107 +241,15 @@ getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 | [12300401](../errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let subProfileId: number = 100001;
-try {
-  subProfileManager.getOsAccountSubProfile(subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
-    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let subProfileId: int = 100001;
-try {
-  subProfileManager.getOsAccountSubProfile(subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
-    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
-  }).catch((err: Error) => {
-    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: number = 100;
-let subProfileId: number = 100001;
-try {
-  subProfileManager.getOsAccountSubProfile(osAccountLocalId, subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
-    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: int = 100;
-let subProfileId: int = 100001;
-try {
-  subProfileManager.getOsAccountSubProfile(osAccountLocalId, subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
-    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
-  }).catch((err: Error) => {
-    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## getOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<OsAccountSubProfile>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAccountSubProfile>
-```
-
-获取指定系统账号的子身份资料对象信息。
+获取指定系统账号的子身份资料对象信息。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -617,8 +263,8 @@ getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAcco
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| osAccountLocalId | number | 是 |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -635,27 +281,15 @@ getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAcco
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 | [12300401](../errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
-**示例**
-
-参见 [getOsAccountSubProfile](#getosaccountsubprofile)
-
 ## getOsAccountSubProfileIds
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountSubProfileIds(): Promise<number[]>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountSubProfileIds(): Promise<int[]>
-```
-
-获取调用者所属系统账号的子身份资料标识符列表。
+获取调用方所属系统账号的子身份资料标识符列表。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
@@ -669,7 +303,7 @@ getOsAccountSubProfileIds(): Promise<int[]>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
+| Promise & lt;number[] & gt; |
 
 **错误码：**
 
@@ -679,103 +313,15 @@ getOsAccountSubProfileIds(): Promise<int[]>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-try {
-  subProfileManager.getOsAccountSubProfileIds().then((subProfileIds: number[]) => {
-    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-try {
-  subProfileManager.getOsAccountSubProfileIds().then((subProfileIds: int[]) => {
-    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
-  }).catch((err: Error) => {
-    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: number = 100;
-try {
-  subProfileManager.getOsAccountSubProfileIds(osAccountLocalId).then((subProfileIds: number[]) => {
-    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: int = 100;
-try {
-  subProfileManager.getOsAccountSubProfileIds(osAccountLocalId).then((subProfileIds: int[]) => {
-    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
-  }).catch((err: Error) => {
-    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## getOsAccountSubProfileIds
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
-```
-
-获取指定系统账号的子身份资料标识符列表。
+获取指定系统账号的子身份资料标识符列表。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
@@ -789,13 +335,13 @@ getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| osAccountLocalId | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
+| Promise & lt;number[] & gt; |
 
 **错误码：**
 
@@ -806,21 +352,15 @@ getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 | [12300003](../errorcode-account.md#12300003-账号不存在) |
 
-**示例**
-
-参见 [getOsAccountSubProfileIds](#getosaccountsubprofileids)
-
 ## offOsAccountSubProfileEvent
 
 ```TypeScript
 offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void
 ```
 
-取消订阅系统账号子身份资料的事件。
+取消订阅系统账号子身份资料的事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -841,38 +381,6 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-try {
-  subProfileManager.offOsAccountSubProfileEvent();
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`offOsAccountSubProfileEvent failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-try {
-  subProfileManager.offOsAccountSubProfileEvent();
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`offOsAccountSubProfileEvent failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## onOsAccountSubProfileEvent
 
 ```TypeScript
@@ -881,11 +389,9 @@ onOsAccountSubProfileEvent(
       callback: Callback<OsAccountSubProfileEventData>): void
 ```
 
-订阅系统账号子身份资料的事件。
+订阅系统账号子身份资料的事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -908,61 +414,15 @@ onOsAccountSubProfileEvent(
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 | [12300002](../errorcode-account.md#12300002-无效参数) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let events: osAccount.OsAccountSubProfileEvent[] = [osAccount.OsAccountSubProfileEvent.CREATED];
-try {
-  subProfileManager.onOsAccountSubProfileEvent(events, (data: osAccount.OsAccountSubProfileEventData) => {
-    console.info('onOsAccountSubProfileEvent, event: ' + data.event + ', localId: ' + data.osAccountLocalId);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`onOsAccountSubProfileEvent failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let events: osAccount.OsAccountSubProfileEvent[] = [osAccount.OsAccountSubProfileEvent.CREATED];
-try {
-  subProfileManager.onOsAccountSubProfileEvent(events, (data: osAccount.OsAccountSubProfileEventData) => {
-    console.info('onOsAccountSubProfileEvent, event: ' + data.event + ', localId: ' + data.osAccountLocalId);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`onOsAccountSubProfileEvent failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## switchOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<void>
 ```
 
-ArkTS-Sta:
-```TypeScript
-switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>
-```
-
-切换至一个系统账号子身份资料。
+切换至一个系统账号子身份资料。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -976,8 +436,8 @@ switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| osAccountLocalId | number | 是 |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -996,47 +456,3 @@ switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 | [12300401](../errorcode-account.md#12300401-系统账号子身份资料不存在) |
 | [12300403](../errorcode-account.md#12300403-受限的系统账号子身份资料) |
 | [12300405](../errorcode-account.md#12300405-已登录分布式账号的前台子身份不可直接切换到后台) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: number = 100;
-let subProfileId: number = 100001;
-try {
-  subProfileManager.switchOsAccountSubProfile(osAccountLocalId, subProfileId).then(() => {
-    console.info('switchOsAccountSubProfile successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`switchOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`switchOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import osAccount from '@ohos.account.osAccount';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
-let osAccountLocalId: int = 100;
-let subProfileId: int = 100001;
-try {
-  subProfileManager.switchOsAccountSubProfile(osAccountLocalId, subProfileId).then(() => {
-    console.info('switchOsAccountSubProfile successfully');
-  }).catch((err: Error) => {
-    console.error(`switchOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`switchOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
-}
-```

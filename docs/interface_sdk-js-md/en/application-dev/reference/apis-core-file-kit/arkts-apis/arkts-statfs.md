@@ -4,8 +4,6 @@ The **statfs** module provides APIs for obtaining file system information, inclu
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [statfs](arkts-file-statvfs.md)

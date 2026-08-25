@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## enableHotspot
@@ -15,8 +15,6 @@ function enableHotspot(): boolean
 Enables a Wi-Fi hotspot.<p>This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -33,15 +31,3 @@ Enables a Wi-Fi hotspot.<p>This method is asynchronous. After the Wi-Fi hotspot 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    wifi.enableHotspot();    
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

@@ -4,11 +4,9 @@
 
 > **说明：**&gt;
 > 若需要进行同步操作，数据库安全级别应不高于对端设备安全级别，具体可见
-> [跨设备同步访问控制机制](../../../database/sync-app-data-across-devices-overview.md#跨设备同步访问控制机制)。
+> [跨设备同步访问控制机制](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/database/sync-app-data-across-devices-overview.md#跨设备同步访问控制机制)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -22,8 +20,6 @@ S1 = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## S2
@@ -35,8 +31,6 @@ S2 = 2
 表示数据库的安全级别为中级别，当数据泄露时会产生较大影响。例如，包含录音、视频等用户生成数据或通话记录等信息的数据库。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -50,8 +44,6 @@ S3 = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## S4
@@ -63,7 +55,5 @@ S4 = 4
 表示数据库的安全级别为关键级别，当数据泄露时会产生严重影响。例如，包含认证凭据、财务数据等信息的数据库。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

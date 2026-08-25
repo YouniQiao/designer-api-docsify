@@ -4,8 +4,6 @@ Defines the field type of an elliptic curve. Currently, only the **Fp** field is
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -13,7 +11,7 @@ Defines the field type of an elliptic curve. Currently, only the **Fp** field is
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## fieldType
@@ -27,8 +25,6 @@ Type of the elliptic curve field. Currently, only **Fp** is supported.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

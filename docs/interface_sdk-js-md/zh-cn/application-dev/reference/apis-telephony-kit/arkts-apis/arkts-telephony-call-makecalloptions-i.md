@@ -4,14 +4,12 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Applications.Contacts
 
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isCustomAccessibility
@@ -26,8 +24,6 @@ isCustomAccessibility?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ isHideDialScreen?: boolean
 **类型：** boolean
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为24；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 

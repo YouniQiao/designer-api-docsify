@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setPermissionManagedState
@@ -20,8 +20,6 @@ function setPermissionManagedState(
 Sets the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) of a specified application. This is applicable to enterprise application batch deployment scenarios, such as granting permissions silently to reduce permission prompt interruptions, and unifying permission management policies for enterprise applications, thereby improving employee user experience and management efficiency.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION
 
@@ -47,29 +45,3 @@ Sets the management policy for the [user_grant permission](../../apis-ability-ki
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { securityManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let appInstanceTemp: securityManager.ApplicationInstance = {
-      // Replace with actual values.
-      appIdentifier: '736498586',
-      appIndex: 0,
-      accountId: 100
-};
-let permissionsTemp: Array<string> = ['ohos.permission.CAMERA', 'ohos.permission.LOCATION'];
-try {
-    securityManager.setPermissionManagedState(wantTemp, appInstanceTemp, permissionsTemp, securityManager.PermissionManagedState.GRANTED);
-    console.info('Succeeded in setting permission managed state.');
-} catch(err) {
-    console.error(`Failed to set permission managed state.  Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -4,8 +4,6 @@ Defines the options of blurStyle
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Adaptive color mode.Default value: **AdaptiveColor.DEFAULT**
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -49,8 +45,6 @@ Grayscale blur parameters.Default value: **grayscale: [0,0]**
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -70,8 +64,6 @@ Color mode used for the foreground blur.Default value: **ThemeColorMode.SYSTEM**
 **Default:** ThemeColorMode.SYSTEM
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,8 +86,6 @@ Foreground blur scale.Default value: **1.0**Value range: [0.0, 1.0]
 **Default:** 1.0
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

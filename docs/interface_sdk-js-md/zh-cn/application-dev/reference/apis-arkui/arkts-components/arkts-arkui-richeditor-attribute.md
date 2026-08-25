@@ -1,12 +1,10 @@
 # RichEditor属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持OnDidChangeCallback、 StyledStringChangedListener、 StyledStringChangeValue和以下事件：
+除支持通用属性外，还支持以下属性：除支持通用事件外，还支持[OnDidChangeCallback](../arkts-apis/arkts-arkui-ondidchangecallback-t.md)、 [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md)、 [StyledStringChangeValue](../arkts-apis/arkts-arkui-styledstringchangevalue-i.md)和以下事件：
 
 **继承/实现关系：** RichEditorAttribute extends CommonMethod<RichEditorAttribute>
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ aboutToDelete(callback: Callback<RichEditorDeleteValue, boolean>)
 输入法删除内容前，触发回调。适用于需要拦截删除操作的场景，如阻止删除关键内容、删除前保存历史记录以支持撤销等。与[onDeleteComplete](#ondeletecomplete)形成will/did时 序模式：aboutToDelete在删除前触发，onDeleteComplete在删除完成后触发；aboutToDelete返回false时，组件不执行删除操作，onDeleteComplete不会触发。两者可同时使用。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ aboutToIMEInput(callback: Callback<RichEditorInsertValue, boolean>)
 输入法输入内容前触发回调。可用于需要拦截输入内容的场景，如过滤敏感词、限制输入格式、实时校验输入合法性等。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,8 +70,6 @@ RichEditor滚动条的显示模式。
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -88,7 +80,7 @@ RichEditor滚动条的显示模式。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| state | [BarState](#barstate) | 是 |
+| state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 |
 
 ## bindSelectionMenu
 
@@ -100,8 +92,6 @@ bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, response
 设置自定义选择菜单。支持自定义菜单风格和触发条件，适合需要深度自定义菜单的场景。自定义菜单超长时，建议内部嵌套Scroll组件使用，避免键盘被遮挡。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,7 +105,7 @@ bindSelectionMenu(spanType: RichEditorSpanType, content: CustomBuilder, response
 | --- | --- | --- |
 | spanType | [RichEditorSpanType](arkts-arkui-richeditorspantype-e.md) | 是 |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 |
-| responseType | ResponseType \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | 是 |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) \| [RichEditorResponseType](arkts-arkui-richeditorresponsetype-e.md) | 是 |
 | options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | 否 |
 
 ## caretColor
@@ -127,8 +117,6 @@ caretColor(value: ResourceColor)
 设置输入框光标、手柄颜色。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,8 +144,6 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -168,7 +154,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## copyOptions
 
@@ -177,12 +163,12 @@ copyOptions(value: CopyOptions)
 ```
 
 设置组件是否支持复制和粘贴文本内容。从API version 20开始，RichEditor组件在执行复制或剪切操作时，会将HTML格式的内容添加到剪贴板中。  
-- 仅支持[TextSpan](arkts-arkui-richeditortextspanoptions-i.md)和[ImageSpan](arkts-arkui-richeditorimagespanoptions-i.md)向剪贴板中添加HTML内容，其他Span类 型（如[BuilderSpan](arkts-arkui-richeditorbuilderspanoptions-i.md)、[SymbolSpan](arkts-arkui-richeditorsymbolspanoptions-i.md)、 CustomSpan）则不能添加。 - 设置RichEditor组件的属性字符串时，请参考属性字符串toHtml接口文档，以了解支持转换为HTML的范围。  
+- 仅支持[TextSpan](arkts-arkui-richeditortextspanoptions-i.md)和[ImageSpan](arkts-arkui-richeditorimagespanoptions-i.md)向剪贴板中添加HTML内容，其他Span类  
+型（如[BuilderSpan](arkts-arkui-richeditorbuilderspanoptions-i.md)、[SymbolSpan](arkts-arkui-richeditorsymbolspanoptions-i.md)、 [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md)）则不能添加。  
+- 设置RichEditor组件的属性字符串时，请参考属性字符串[toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml)接口文档，以了解支持转换为HTML的范围。  
 copyOptions不为CopyOptions.None时，长按组件内容，会弹出文本选择菜单。如果通过 [bindSelectionMenu](#bindselectionmenu)等方式自定义文本选择菜单，则会弹出自定义的菜单。设置copyOptions为CopyOptions.None时，禁用复制、剪切、翻译、分享、搜索、帮写功能，且不支持拖拽操作，同时 [enableDataDetector](#enabledatadetector)的实体识别菜单和 [enableSelectedDataDetector](#enableselecteddatadetector)的AI菜单功能将受限。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -210,8 +196,6 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -222,7 +206,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | CustomBuilder \| ComponentContent \| undefined | 是 |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | 是 |
 | options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) \| undefined | 否 |
 
 ## dataDetectorConfig
@@ -236,8 +220,6 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 2.&nbsp;当A&nbsp;⊄&nbsp;B且B&nbsp;⊄&nbsp;A时，若A.start&nbsp;&lt;&nbsp;B.start，则保留A，反之则保留B。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -264,8 +246,6 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -276,7 +256,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| editMenu | [EditMenuOptions](#editmenuoptions) | 是 |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 |
 
 ## enableAutoSpacing
 
@@ -288,8 +268,6 @@ enableAutoSpacing(enable: Optional<boolean>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -300,7 +278,7 @@ enableAutoSpacing(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | 是 |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## enableDataDetector
 
@@ -311,8 +289,6 @@ enableDataDetector(enable: boolean)
 设置是否进行文本特殊实体识别，识别的类型包括电话号码、邮箱地址、网址链接、日期、地址等。具体识别类型可通过 [dataDetectorConfig](#datadetectorconfig)属性配置。该接口依赖设备系统具备文本实体识别能力，否则设置不会生效。当enableDataDetector设置为true且未指定[dataDetectorConfig](#datadetectorconfig)属性时，系统将默认识别所有类型的实体， 并将这些实体的color和decoration更改为预设样式：触摸点击或鼠标右键点击实体时，会根据实体类型弹出对应的实体操作菜单，鼠标左键点击实体会直接响应菜单的第一个选项。对[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan)的节点文本，该功能不会生效。当copyOptions设置为CopyOptions.None时，点击实体弹出的菜单没有选择文本和复制功能。<!--RP1--><!--RP1End-->
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -339,8 +315,6 @@ enableHapticFeedback(isEnabled: boolean)
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -365,8 +339,6 @@ enableKeyboardOnFocus(isEnabled: boolean)
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -393,8 +365,6 @@ enablePreviewText(enable: boolean)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -413,11 +383,9 @@ enablePreviewText(enable: boolean)
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-设置是否启用文本选择的AI菜单功能。启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括TextMenuItemId中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与TextMenuItemId中的askAI菜单项不同时出现。本功能仅在[copyOptions](#copyoptions)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时生效。该接口依赖设备底层具有文本识别能力，否则设置不会生效。
+设置是否启用文本选择的AI菜单功能。启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。本功能仅在[copyOptions](#copyoptions)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时生效。该接口依赖设备底层具有文本识别能力，否则设置不会生效。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -441,8 +409,6 @@ enterKeyType(value: EnterKeyType)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -465,8 +431,6 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -477,7 +441,7 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## horizontalScrolling
 
@@ -489,8 +453,6 @@ horizontalScrolling(enabled: Optional<boolean>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -501,7 +463,7 @@ horizontalScrolling(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## includeFontPadding
 
@@ -513,8 +475,6 @@ includeFontPadding(include: Optional<boolean>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -525,7 +485,7 @@ includeFontPadding(include: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| include | Optional & lt;boolean & gt; | 是 |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## keyboardAppearance
 
@@ -537,8 +497,6 @@ keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -549,7 +507,7 @@ keyboardAppearance(appearance: Optional<KeyboardAppearance>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| appearance | Optional & lt;KeyboardAppearance & gt; | 是 |
+| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | 是 |
 
 ## maxLength
 
@@ -561,8 +519,6 @@ maxLength(maxLength: Optional<number>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -573,7 +529,7 @@ maxLength(maxLength: Optional<number>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [maxLength](#maxlength) | Optional & lt;number & gt; | 是 |
+| [maxLength](#maxlength) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 ## maxLines
 
@@ -585,8 +541,6 @@ maxLines(maxLines: Optional<number>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -597,7 +551,7 @@ maxLines(maxLines: Optional<number>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [maxLines](#maxlines) | Optional & lt;number & gt; | 是 |
+| [maxLines](#maxlines) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 ## onCopy
 
@@ -608,8 +562,6 @@ onCopy(callback: Callback<CopyEvent>)
 复制时触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的复制。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，默认支持图文的复制。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -633,8 +585,6 @@ onCut(callback: Callback<CutEvent>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -656,8 +606,6 @@ onDeleteComplete(callback: Callback<void>)
 输入法删除内容后，触发回调。使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件不支持该回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -684,8 +632,6 @@ onDidChange(callback: OnDidChangeCallback) : RichEditorAttribute
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -711,8 +657,6 @@ onDidIMEInput(callback: Callback<TextRange>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -723,7 +667,7 @@ onDidIMEInput(callback: Callback<TextRange>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Callback & lt;TextRange & gt; | 是 |
+| callback | Callback&lt;[TextRange](../arkts-apis/arkts-arkui-textrange-i.md)&gt; | 是 |
 
 ## onEditingChange
 
@@ -734,8 +678,6 @@ onEditingChange(callback: Callback<boolean>)
 组件内容的编辑状态发生变化时触发该回调函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -759,8 +701,6 @@ onIMEInputComplete(callback: Callback<RichEditorTextSpanResult>)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -782,8 +722,6 @@ onPaste(callback: PasteEventCallback)
 粘贴完成前，触发回调。开发者可以通过该方法，覆盖系统默认行为，实现图文的粘贴。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -807,8 +745,6 @@ onReady(callback: Callback<void>)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -830,8 +766,6 @@ onSelect(callback: Callback<RichEditorSelection>)
 鼠标左键双击选中内容触发回调；松开鼠标左键再次触发回调。手指长按选中内容触发回调；松开手指再次触发回调。通过手指或鼠标连续修改选中区、三击选段场景，不回调onSelect。需要实时感知选中区变化的场景和使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构建的RichEditor组件，请使用 onSelectionChange接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -855,8 +789,6 @@ onSelectionChange(callback: Callback<RichEditorRange>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -879,8 +811,6 @@ onSubmit(callback: SubmitCallback)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -899,11 +829,9 @@ onSubmit(callback: SubmitCallback)
 onWillAttachIME(callback: Callback<IMEClient> | undefined)
 ```
 
-在组件绑定输入法前，触发回调。适用于需要定制输入法行为的场景，如设置输入法扩展配置以实现特定输入模式、自定义输入法功能等。调用IMEClient的setExtraConfig方法设置输入法扩展信息。在绑定输入法成功后，输入法会收到扩展信息，输入法 可以依据此信息实现自定义功能。<!--Del-->从API版本26.0.0开始，在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;
+在组件绑定输入法前，触发回调。适用于需要定制输入法行为的场景，如设置输入法扩展配置以实现特定输入模式、自定义输入法功能等。调用[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)的[setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfig)方法设置输入法扩展信息。在绑定输入法成功后，输入法会收到扩展信息，输入法 可以依据此信息实现自定义功能。<!--Del-->从API版本26.0.0开始，在输入框将要绑定输入法前，可以通过`UIContext`的系统接口 [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig)设置键盘的样式。&lt;!--DelEnd- -&gt;
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -915,7 +843,7 @@ onWillAttachIME(callback: Callback<IMEClient> | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Callback & lt;IMEClient & gt; \ | undefined | 是 |
+| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; \| undefined | 是 |
 
 ## onWillChange
 
@@ -929,8 +857,6 @@ onWillChange(callback: Callback<RichEditorChangeValue, boolean>) : RichEditorAtt
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -954,8 +880,6 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -964,7 +888,7 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## placeholder
 
@@ -978,8 +902,6 @@ placeholder(value: ResourceStr, style?: PlaceholderStyle)
 > 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1004,8 +926,6 @@ punctuationOverflow(enabled: Optional<boolean>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1016,7 +936,7 @@ punctuationOverflow(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## scrollBarColor
 
@@ -1028,8 +948,6 @@ scrollBarColor(color: Optional<ColorMetrics>)
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -1040,7 +958,7 @@ scrollBarColor(color: Optional<ColorMetrics>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | Optional & lt;ColorMetrics & gt; | 是 |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |
 
 ## selectedBackgroundColor
 
@@ -1051,8 +969,6 @@ selectedBackgroundColor(value: ResourceColor)
 设置文本选中的底板颜色。如果未设置不透明度，默认为20%不透明度。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1076,8 +992,6 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -1088,7 +1002,7 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | SelectedDragPreviewStyle \| undefined | 是 |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | 是 |
 
 ## singleLine
 
@@ -1102,8 +1016,6 @@ singleLine(isEnable: boolean | undefined)
 > 单行模式下换行符会显示为空格。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1127,8 +1039,6 @@ stopBackPress(isStopped: Optional<boolean>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1139,7 +1049,7 @@ stopBackPress(isStopped: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isStopped | Optional & lt;boolean & gt; | 是 |
+| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## undoStyle
 
@@ -1151,8 +1061,6 @@ undoStyle(style: Optional<UndoStyle>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1163,4 +1071,4 @@ undoStyle(style: Optional<UndoStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[UndoStyle](arkts-arkui-undostyle-e.md)&gt; | 是 |

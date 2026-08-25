@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## verifyAbc
@@ -15,8 +15,6 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callba
 Verifies an .abc file. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RUN_DYN_CODE
 
@@ -41,48 +39,6 @@ Verifies an .abc file. This API uses an asynchronous callback to return the resu
 | [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let abcPaths: Array<string> = ['/data/storage/el2/base/a.abc'];
-
-try {
-  bundleManager.verifyAbc(abcPaths, true, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'verifyAbc failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'verifyAbc successfully');
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'verifyAbc failed: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let abcPaths: Array<string> = ['/data/storage/el2/base/a.abc'];
-
-try {
-  bundleManager.verifyAbc(abcPaths, true).then((data) => {
-    hilog.info(0x0000, 'testTag', 'verifyAbc successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', message);
-}
-```
-
 
 ## verifyAbc
 
@@ -93,8 +49,6 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promi
 Verifies an .abc file. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RUN_DYN_CODE
 
@@ -123,7 +77,3 @@ Verifies an .abc file. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [verifyAbc](#verifyabc)

@@ -4,8 +4,6 @@ You can create a gradient object on the canvas by calling CanvasRenderingContext
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## addColorStop
@@ -17,8 +15,6 @@ addColorStop(offset: number, color: string): void
 Adds a color stop for the CanvasGradient object based on the specified offset and gradient color.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

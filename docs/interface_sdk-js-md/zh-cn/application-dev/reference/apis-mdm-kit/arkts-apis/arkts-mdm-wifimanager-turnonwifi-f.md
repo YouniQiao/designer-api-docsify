@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## turnOnWifi
@@ -15,8 +15,6 @@ function turnOnWifi(admin: Want, isForce: boolean): void
 打开Wi-Fi开关。适用于企业设备远程管理场景，例如管理员远程控制员工设备开启Wi-Fi或在特定策略执行时确保Wi-Fi已开启。以下情况下，通过本接口打开Wi-Fi开关，会打开失败并提示"系统功能被禁用"：​已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了Wi-Fi。需通过 [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口启用Wi-Fi，解决"系统功能被禁用"报错。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -39,23 +37,3 @@ function turnOnWifi(admin: Want, isForce: boolean): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { wifiManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  wifiManager.turnOnWifi(wantTemp, true);
-  console.info(`Succeeded in turning on Wi-Fi.`);
-} catch (err) {
-  console.error(`Failed to turn on Wi-Fi. Code: ${err.code}, message: ${err.message}`);
-}
-```

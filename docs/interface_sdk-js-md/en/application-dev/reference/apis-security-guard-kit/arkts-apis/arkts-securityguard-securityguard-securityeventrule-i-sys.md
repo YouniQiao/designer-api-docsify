@@ -4,8 +4,6 @@ Provides the conditions of querySecurityEvent.@interface SecurityEventRule
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides the conditions of querySecurityEvent.@interface SecurityEventRule
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## beginTime
@@ -27,8 +25,6 @@ The begin time, format is YYYYMMDDHHMMSS.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -46,8 +42,6 @@ The end time, format is YYYYMMDDHHMMSS.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ The security event ids.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ The query condition.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 

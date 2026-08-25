@@ -4,8 +4,6 @@ Defines the specific configuration parameters for the rendering context.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,13 +17,12 @@ Defines the specific configuration parameters for the rendering context.
 antialias?: boolean
 ```
 
-Indicates whether to enable anti-aliasing for the **RenderingContext**. <br>A value of **undefined** is treated as the default value. <br>**true**: Enable anti-aliasing. **false**: Disable anti-aliasing. <br>Default value: **false**
+Indicates whether to enable anti-aliasing for the **RenderingContext**. A value of **undefined** is treated as the default value.   
+**true**: Enable anti-aliasing. **false**: Disable anti-aliasing. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

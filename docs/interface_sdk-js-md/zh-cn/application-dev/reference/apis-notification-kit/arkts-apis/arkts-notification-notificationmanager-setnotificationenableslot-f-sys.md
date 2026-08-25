@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setNotificationEnableSlot
@@ -21,8 +21,6 @@ function setNotificationEnableSlot(
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -33,7 +31,7 @@ function setNotificationEnableSlot(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 |
 | enable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
@@ -52,120 +50,6 @@ function setNotificationEnableSlot(
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// setNotificationEnableSlot
-let setNotificationEnableSlotCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setNotificationEnableSlot success');
-    }
-};
-notificationManager.setNotificationEnableSlot(
-    { bundle: 'ohos.samples.notification', },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION,
-    true,
-    setNotificationEnableSlotCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// setNotificationEnableSlot
-let setNotificationEnableSlotCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setNotificationEnableSlot success');
-    }
-};
-notificationManager.setNotificationEnableSlot(
-    // 需根据实际情况进行替换
-    { bundle: 'bundleName1', },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION,
-    true,
-    setNotificationEnableSlotCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setNotificationEnableSlotCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setNotificationEnableSlot success');
-    }
-};
-
-notificationManager.setNotificationEnableSlot(
-    { bundle: 'ohos.samples.notification', },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION,
-    true,
-    false,
-    setNotificationEnableSlotCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setNotificationEnableSlotCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setNotificationEnableSlot success');
-    }
-};
-
-notificationManager.setNotificationEnableSlot(
-    // 需根据实际情况进行替换
-    { bundle: 'bundleName1', },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION,
-    true,
-    false,
-    setNotificationEnableSlotCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// setNotificationEnableSlot
-notificationManager.setNotificationEnableSlot({ bundle: 'ohos.samples.notification'},
-    notificationManager.SlotType.SOCIAL_COMMUNICATION, true).then(() => {
-    console.info('setNotificationEnableSlot success');
-}).catch((err: BusinessError) => {
-    console.error(`setNotificationEnableSlot failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.setNotificationEnableSlot({ bundle: 'ohos.samples.notification'},
-    notificationManager.SlotType.SOCIAL_COMMUNICATION, true).then(() => {
-    console.info('setNotificationEnableSlot success');
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setNotificationEnableSlot failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## setNotificationEnableSlot
 
@@ -183,8 +67,6 @@ function setNotificationEnableSlot(
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -195,7 +77,7 @@ function setNotificationEnableSlot(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 |
 | enable | boolean | 是 |
 | isForceControl | boolean | 是 |
@@ -215,10 +97,6 @@ function setNotificationEnableSlot(
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-参见 [setNotificationEnableSlot](#setnotificationenableslot)
-
 
 ## setNotificationEnableSlot
 
@@ -230,8 +108,6 @@ function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable:
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -242,7 +118,7 @@ function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable:
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 |
 | enable | boolean | 是 |
 | isForceControl | boolean | 否 |
@@ -266,7 +142,3 @@ function setNotificationEnableSlot(bundle: BundleOption, type: SlotType, enable:
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [setNotificationEnableSlot](#setnotificationenableslot)

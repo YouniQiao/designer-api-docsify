@@ -4,14 +4,12 @@ Defines the custom vibration effect.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## pattern
@@ -26,8 +24,6 @@ Vibration event array, which is the **VibratorPattern** object returned by **bui
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## type
@@ -41,7 +37,5 @@ If the value is **pattern**, the vibrator vibrates based on the specified patter
 **Type:** 'pattern'
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice

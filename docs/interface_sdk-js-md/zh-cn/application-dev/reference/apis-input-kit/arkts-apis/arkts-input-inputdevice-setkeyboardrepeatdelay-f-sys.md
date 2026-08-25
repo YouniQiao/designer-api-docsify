@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## setKeyboardRepeatDelay
 
 ```TypeScript
-function setKeyboardRepeatDelay(delay: int, callback: AsyncCallback<void>): void
+function setKeyboardRepeatDelay(delay: number, callback: AsyncCallback<void>): void
 ```
 
 设置键盘按键的重复时延，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -26,7 +24,7 @@ function setKeyboardRepeatDelay(delay: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| delay | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| delay | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -36,143 +34,16 @@ function setKeyboardRepeatDelay(delay: int, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置键盘重复延迟
-            inputDevice.setKeyboardRepeatDelay(350, (error: BusinessError) => {
-              if (error) {
-                console.error(`Failed to set keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-                return;
-              }
-              console.info(`Succeeded in setting keyboard repeat delay.`);
-            });
-          } catch (error) {
-            console.error(`Failed to set keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        });
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置键盘重复延迟
-           inputDevice.setKeyboardRepeatDelay(350, (error: BusinessError<void>|null, data: undefined)  => {
-              if (error) {
-                console.error(`Failed to set keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-                return;
-              }
-              console.info(`Succeeded in setting keyboard repeat delay.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置按键重复延迟350ms
-            inputDevice.setKeyboardRepeatDelay(350).then(() => {
-              console.info(`Succeeded in setting keyboard repeat delay.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set keyboard repeat rate, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError,AsyncCallback } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置按键重复延迟350ms
-            inputDevice.setKeyboardRepeatDelay(350).then(() => {
-              console.info(`Succeeded in setting keyboard repeat delay.`);
-            }).catch((error) => {
-              console.error(`Failed to set keyboard, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set keyboard, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## setKeyboardRepeatDelay
 
 ```TypeScript
-function setKeyboardRepeatDelay(delay: int): Promise<void>
+function setKeyboardRepeatDelay(delay: number): Promise<void>
 ```
 
 设置键盘按键的重复时延，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -182,7 +53,7 @@ function setKeyboardRepeatDelay(delay: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| delay | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| delay | number | 是 |
 
 **返回值：**
 
@@ -196,7 +67,3 @@ function setKeyboardRepeatDelay(delay: int): Promise<void>
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [setKeyboardRepeatDelay](#setkeyboardrepeatdelay)

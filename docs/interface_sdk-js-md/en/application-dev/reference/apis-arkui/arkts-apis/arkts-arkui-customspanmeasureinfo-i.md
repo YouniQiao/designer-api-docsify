@@ -4,8 +4,6 @@ Defines the CustomSpanMeasureInfo interface.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Text font size.Unit: fp
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -42,11 +38,9 @@ layoutPolicy?: LayoutPolicy
 Width layout policy of the parent component of the custom span.  
 **NOTE：**When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
 
-**Type:** LayoutPolicy
+**Type:** [LayoutPolicy](../arkts-components/arkts-arkui-layoutpolicy-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ Maximum width constraint of the custom span within the parent component's conten
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

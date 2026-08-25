@@ -4,14 +4,12 @@ Displays the identification result of sensitive content.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## matchContent
@@ -25,8 +23,6 @@ Matched sensitive content segment, that is, the text content matched by keyword 
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -42,8 +38,6 @@ Total number of matched items.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## sensitiveLabel
@@ -57,7 +51,5 @@ Label of an identification policy, which corresponds to sensitiveLabel in the in
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention

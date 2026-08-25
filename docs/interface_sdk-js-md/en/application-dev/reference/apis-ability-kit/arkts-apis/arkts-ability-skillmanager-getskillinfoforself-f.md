@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from '@kit.AbilityKit';
+import { skillManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getSkillInfoForSelf
@@ -15,8 +15,6 @@ function getSkillInfoForSelf(moduleName: string, skillName: string, flags: numbe
 Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

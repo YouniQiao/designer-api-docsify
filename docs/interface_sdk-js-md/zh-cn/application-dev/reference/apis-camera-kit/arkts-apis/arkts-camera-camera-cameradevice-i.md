@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## automotiveCameraPosition
@@ -25,8 +23,6 @@ Car设备摄像头位置。
 **类型：** [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ readonly cameraId: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -55,16 +49,14 @@ readonly cameraId: string
 ## cameraOrientation
 
 ```TypeScript
-readonly cameraOrientation: int
+readonly cameraOrientation: number
 ```
 
 相机安装角度，不会随着屏幕旋转而改变。取值范围为[0, 360]。单位：度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -82,8 +74,6 @@ readonly cameraPosition: CameraPosition
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -99,8 +89,6 @@ readonly cameraType: CameraType
 **类型：** [CameraType](arkts-camera-camera-cameratype-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -118,8 +106,6 @@ readonly connectionType: ConnectionType
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -135,8 +121,6 @@ readonly constituentCameraDevices?: Array<CameraDevice>
 **类型：** Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,8 +140,6 @@ readonly hostDeviceName: string
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -173,8 +155,6 @@ readonly hostDeviceType: HostDeviceType
 **类型：** [HostDeviceType](arkts-camera-camera-hostdevicetype-e.md)
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -192,8 +172,6 @@ readonly isLogicalCamera?: boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -203,16 +181,14 @@ readonly isLogicalCamera?: boolean
 ## lensDistortion
 
 ```TypeScript
-readonly lensDistortion?: Array<double>
+readonly lensDistortion?: Array<number>
 ```
 
 镜头畸变参数数组。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -223,16 +199,14 @@ readonly lensDistortion?: Array<double>
 ## lensEquivalentFocalLength
 
 ```TypeScript
-readonly lensEquivalentFocalLength?: Array<int>
+readonly lensEquivalentFocalLength?: Array<number>
 ```
 
 相机镜头等效焦距。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -241,16 +215,14 @@ readonly lensEquivalentFocalLength?: Array<int>
 ## lensFocalLength
 
 ```TypeScript
-readonly lensFocalLength?: double
+readonly lensFocalLength?: number
 ```
 
 镜头实际焦距。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -261,16 +233,14 @@ readonly lensFocalLength?: double
 ## lensIntrinsicCalibration
 
 ```TypeScript
-readonly lensIntrinsicCalibration?: Array<double>
+readonly lensIntrinsicCalibration?: Array<number>
 ```
 
 镜头内参标定参数数组。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -281,16 +251,14 @@ readonly lensIntrinsicCalibration?: Array<double>
 ## minimumFocusDistance
 
 ```TypeScript
-readonly minimumFocusDistance?: double
+readonly minimumFocusDistance?: number
 ```
 
 相机最小对焦距离。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -310,8 +278,6 @@ readonly sensorColorFilterArrangement?: SensorColorFilterArrangement
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -321,16 +287,14 @@ readonly sensorColorFilterArrangement?: SensorColorFilterArrangement
 ## sensorPhysicalSize
 
 ```TypeScript
-readonly sensorPhysicalSize?: Array<double>
+readonly sensorPhysicalSize?: Array<number>
 ```
 
 传感器物理尺寸（宽度和高度）。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -341,16 +305,14 @@ readonly sensorPhysicalSize?: Array<double>
 ## sensorPixelArraySize
 
 ```TypeScript
-readonly sensorPixelArraySize?: Array<int>
+readonly sensorPixelArraySize?: Array<number>
 ```
 
 传感器像素阵列尺寸（宽度和高度。单位：像素）。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

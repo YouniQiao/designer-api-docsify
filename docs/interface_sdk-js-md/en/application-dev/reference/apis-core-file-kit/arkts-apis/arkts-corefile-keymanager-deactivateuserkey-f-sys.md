@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { keyManager } from '@kit.CoreFileKit';
+import { keyManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## deactivateUserKey
 
 ```TypeScript
-function deactivateUserKey(userId: long):void
+function deactivateUserKey(userId: number):void
 ```
 
 When the screen is locked, the specified user key is uninstalled synchronously. **(Currently, this API is available only to lock screen applications.)**
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER_CRYPT
 
@@ -28,7 +26,7 @@ When the screen is locked, the specified user key is uninstalled synchronously. 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| userId | number | Yes |
 
 **Error codes:**
 
@@ -40,18 +38,3 @@ When the screen is locked, the specified user key is uninstalled synchronously. 
 | 13600001 |
 | 13600008 |
 | 13600009 |
-
-**Examples**
-
-```TypeScript
-import { keyManager } from "@kit.CoreFileKit";
-import { BusinessError } from '@kit.BasicServicesKit';
-let userId: number = 100;
-try {
-  keyManager.deactivateUserKey(userId);
-  console.info("deactivateUserKey success");
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("deactivateUserKey failed with error:" + JSON.stringify(error));
-}
-```

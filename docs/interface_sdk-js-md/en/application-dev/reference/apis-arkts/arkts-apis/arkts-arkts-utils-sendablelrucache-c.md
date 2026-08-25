@@ -4,14 +4,12 @@ Object used for store least recently used sendable Object.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@kit.ArkTS';
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
 ```
 
 ## clear
@@ -23,8 +21,6 @@ clear(): void
 Clear all key-value pairs from the SendableLruCache.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -39,8 +35,6 @@ constructor(capacity?: number)
 Default constructor.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -61,8 +55,6 @@ contains(key: K): boolean
 Check whether the given key exists in the SendableLruCache. If exists, returns true; otherwise, returns false.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -90,8 +82,6 @@ Returns an iterable of key-value pairs for each element in the SendableLruCache.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -100,7 +90,7 @@ Returns an iterable of key-value pairs for each element in the SendableLruCache.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[K, V] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## get
 
@@ -111,8 +101,6 @@ get(key: K): V | undefined
 Get the value associated with a specified key in the SendableLruCache.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -140,8 +128,6 @@ Get the Capacity of the SendableLruCache.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -161,8 +147,6 @@ getCreateCount(): number
 Get the number of times createDefault in the SendableLruCache.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -184,8 +168,6 @@ Get the number of times that the queried values are matched in the SendableLruCa
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -205,8 +187,6 @@ getMissCount(): number
 Get the number of times that the queried values are not matched in the SendableLruCache.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -228,8 +208,6 @@ Get the number of times that values are added to SendableLruCache.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -249,8 +227,6 @@ getRemoveCount(): number
 Get the number of times that values are removed from the SendableLruCache.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -272,8 +248,6 @@ Checks whether the SendableLruCache is empty.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -294,8 +268,6 @@ Returns a list of all keys in the SendableLruCache.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -315,8 +287,6 @@ put(key: K, value: V): V
 Adds a key-value pair to the SendableLruCache.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -345,8 +315,6 @@ Remove a specified key and its associated value from the SendableLruCache.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -373,8 +341,6 @@ Return the string representation of the object. The returned string format is: S
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -395,8 +361,6 @@ Update the capacity of the SendableLruCache.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -416,8 +380,6 @@ values(): V[]
 Returns a list of all values in the SendableLruCache.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -440,8 +402,6 @@ The length of the SendableLruCache.
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

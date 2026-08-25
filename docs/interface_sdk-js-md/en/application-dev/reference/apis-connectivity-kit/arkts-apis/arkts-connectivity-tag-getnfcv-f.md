@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getNfcV
@@ -15,8 +15,6 @@ function getNfcV(tagInfo: TagInfo): NfcVTag
 Obtains an **NfcVTag** object, which allows access to the tags that use the NFC-V technology.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

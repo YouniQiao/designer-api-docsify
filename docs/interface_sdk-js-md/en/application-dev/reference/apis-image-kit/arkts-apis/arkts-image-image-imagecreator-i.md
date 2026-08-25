@@ -4,14 +4,12 @@ The ImageCreator class provides APIs for applications to request an image data a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## dequeueImage
@@ -24,8 +22,6 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
 **Parameters:**
@@ -33,34 +29,6 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function DequeueImage(creator : image.ImageCreator) {
-  creator.dequeueImage((err: BusinessError, img: image.Image) => {
-    if (err) {
-      console.error(`Failed to dequeue the Image.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in dequeuing the Image.');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function DequeueImage(creator : image.ImageCreator) {
-  creator.dequeueImage().then((img: image.Image) => {
-    console.info('Succeeded in dequeuing the Image.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to dequeue the Image.code ${error.code},message is ${error.message}`);
-  })
-}
-```
 
 ## dequeueImage
 
@@ -72,8 +40,6 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
 **Return value:**
@@ -81,10 +47,6 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;Image & gt; |
-
-**Examples**
-
-See [dequeueImage](#dequeueimage)
 
 ## off('imageRelease')
 
@@ -96,8 +58,6 @@ Unregisters the callback function that is triggered when the buffer is released.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
 **Parameters:**
@@ -105,48 +65,6 @@ Unregisters the callback function that is triggered when the buffer is released.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'imageRelease' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
-
-**Examples**
-
-```TypeScript
-async function Off(creator : image.ImageCreator) {
-  let callbackFunc = ()=>{
-      // Implement the callback logic.
-  }
-  creator.on('imageRelease', callbackFunc)
-  creator.off('imageRelease', callbackFunc)
-}
-```
-
-```TypeScript
-async function Off(receiver : image.ImageReceiver) {
-  let callbackFunc = ()=>{
-      // Implement the callback logic.
-  };
-  receiver.on('imageArrival', callbackFunc);
-  receiver.off('imageArrival', callbackFunc);
-}
-```
-
-## offImageRelease
-
-```TypeScript
-offImageRelease(callback?: AsyncCallback<void>): void
-```
-
-Remove callback subscriptions when releasing buffer
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Image.ImageCreator
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
 
 ## on('imageRelease')
@@ -159,8 +77,6 @@ Listens for image release events. This API uses an asynchronous callback to retu
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
 **Parameters:**
@@ -168,50 +84,6 @@ Listens for image release events. This API uses an asynchronous callback to retu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'imageRelease' | Yes |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function On(creator : image.ImageCreator) {
-  creator.on('imageRelease', (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to get the imageRelease callback.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting imageRelease callback.');
-    }
-  })
-}
-```
-
-```TypeScript
-async function On(receiver : image.ImageReceiver) {
-  receiver.on('imageArrival', () => {
-    // Implement the callback logic when an image is received.
-  });
-}
-```
-
-## onImageRelease
-
-```TypeScript
-onImageRelease(callback: AsyncCallback<void>): void
-```
-
-Subscribe callback when releasing buffer
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Image.ImageCreator
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## queueImage
@@ -224,8 +96,6 @@ Places the drawn image in the queue. This API uses an asynchronous callback to r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
 **Parameters:**
@@ -234,58 +104,6 @@ Places the drawn image in the queue. This API uses an asynchronous callback to r
 | --- | --- | --- |
 | [image](arkts-multimedia-image.md) | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function QueueImage(creator : image.ImageCreator) {
-  creator.dequeueImage().then((img: image.Image) => {
-    // Draw the image.
-    img.getComponent(4).then((component : image.Component) => {
-      let bufferArr: Uint8Array = new Uint8Array(component.byteBuffer);
-      for (let i = 0; i < bufferArr.length; i += 4) {
-        bufferArr[i] = 0; // B
-        bufferArr[i + 1] = 0; // G
-        bufferArr[i + 2] = 255; // R
-        bufferArr[i + 3] = 255; // A
-      }
-    })
-    creator.queueImage(img, (err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to queue the Image.code ${err.code},message is ${err.message}`);
-      } else {
-        console.info('Succeeded in queuing the Image.');
-      }
-    })
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function QueueImage(creator : image.ImageCreator) {
-  creator.dequeueImage().then((img: image.Image) => {
-    // Draw the image.
-    img.getComponent(4).then((component: image.Component) => {
-      let bufferArr: Uint8Array = new Uint8Array(component.byteBuffer);
-      for (let i = 0; i < bufferArr.length; i += 4) {
-        bufferArr[i] = 0; // B
-        bufferArr[i + 1] = 0; // G
-        bufferArr[i + 2] = 255; // R
-        bufferArr[i + 3] = 255; // A
-      }
-    })
-    creator.queueImage(img).then(() => {
-      console.info('Succeeded in queuing the Image.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to queue the Image.code ${error.code},message is ${error.message}`);
-    })
-  })
-}
-```
 
 ## queueImage
 
@@ -297,8 +115,6 @@ Places the drawn image in the queue. This API uses a promise to return the resul
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
 **Parameters:**
@@ -313,10 +129,6 @@ Places the drawn image in the queue. This API uses a promise to return the resul
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [queueImage](#queueimage)
-
 ## release
 
 ```TypeScript
@@ -327,8 +139,6 @@ Releases this ImageCreator instance. This API uses an asynchronous callback to r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
 **Parameters:**
@@ -336,203 +146,6 @@ Releases this ImageCreator instance. This API uses an asynchronous callback to r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-async function Release(auxPictureObj: image.AuxiliaryPicture) {
-  let funcName = "Release";
-  if (auxPictureObj != null) {
-    auxPictureObj.release();
-    if (auxPictureObj.getType() == null) {
-      console.info(funcName, 'Success !');
-    } else {
-      console.error(funcName, 'Failed !');
-    }
-  } else {
-    console.error('PictureObj is null');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-async function Release(pictureObj : image.Picture) {
-  let funcName = "Release";
-  if (pictureObj != null) {
-    pictureObj.release();
-    if (pictureObj.getMainPixelmap() == null) {
-      console.info(funcName, 'Success !');
-    } else {
-      console.error(funcName, 'Failed !');
-    }
-  } else {
-    console.error('PictureObj is null');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(pixelMap:image.PixelMap) {
-  if (pixelMap != undefined) {
-    await pixelMap.release().then(() => {
-      console.info('Succeeded in releasing pixelmap object.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(pixelMap:image.PixelMap) {
-  if (pixelMap != undefined) {
-    pixelMap.release((err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to release pixelmap object. code is ${err.code}, message is ${err.message}`);
-        return;
-      } else {
-        console.info('Succeeded in releasing pixelmap object.');
-      }
-    })
-  }
-}
-```
 
 ## release
 
@@ -544,8 +157,6 @@ Releases this ImageCreator instance. This API uses a promise to return the resul
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
 **Return value:**
@@ -554,23 +165,17 @@ Releases this ImageCreator instance. This API uses a promise to return the resul
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [release](#release)
-
 ## capacity
 
 ```TypeScript
-readonly capacity: int
+readonly capacity: number
 ```
 
 Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator
 
@@ -585,7 +190,5 @@ Image format.
 **Type:** [ImageFormat](arkts-image-image-imageformat-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageCreator

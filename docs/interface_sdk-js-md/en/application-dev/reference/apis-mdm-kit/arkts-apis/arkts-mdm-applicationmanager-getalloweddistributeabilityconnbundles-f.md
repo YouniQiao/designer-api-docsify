@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllowedDistributeAbilityConnBundles
@@ -16,8 +16,6 @@ Obtains the cross-device application trustlist for a specific distributed servic
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
 **Model restriction:** This API can be used only in the stage model.
@@ -29,7 +27,7 @@ Obtains the cross-device application trustlist for a specific distributed servic
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes |
-| serviceType | [ServiceType](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-servicetype-e.md) | Yes |
+| serviceType | [ServiceType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-servicetype-e.md) | Yes |
 | accountId | number | Yes |
 
 **Return value:**

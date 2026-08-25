@@ -4,8 +4,6 @@ The site isolation mechanism isolates websites from different origins in differe
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## PARTIAL
@@ -18,8 +16,6 @@ Partial site isolation, that is, new sites are loaded in the same renderer proce
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## STRICT
@@ -31,7 +27,5 @@ STRICT = 1
 Strict site isolation. Iframes from different sites are switched to new render processes.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

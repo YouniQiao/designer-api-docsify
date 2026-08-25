@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## notifyLowCodeAgentComplete
@@ -15,8 +15,6 @@ function notifyLowCodeAgentComplete(agentId: string): Promise<void>
 Notifies that the specified LOW_CODE agent has completed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONNECT_AGENT
 

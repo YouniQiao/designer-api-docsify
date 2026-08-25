@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## access
@@ -17,8 +17,6 @@ declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 检查文件或目录是否存在，或校验操作权限。使用Promise异步回调。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -54,116 +52,6 @@ declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 | 13900033 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.access(filePath).then((res: boolean) => {
-  if (res) {
-    console.info(`Succeeded in checking file, file exists.`);
-  } else {
-    console.info(`Succeeded in checking file, file does not exist.`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to access. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.access(filePath).then((res: boolean) => {
-  if (res) {
-    console.info(`Succeeded in checking file, file exists.`);
-  } else {
-    console.info(`Succeeded in checking file, file does not exist.`);
-  }
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to access. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.access(filePath, fileIo.AccessModeType.EXIST, fileIo.AccessFlagType.LOCAL).then((res: boolean) => {
-  if (res) {
-    console.info(`Succeeded in checking file, file exists.`);
-  } else {
-    console.info(`Succeeded in checking file, file does not exist.`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to access. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.access(filePath,fileIo.AccessModeType.EXIST,fileIo.AccessFlagType.LOCAL).then((res: boolean) => {
-  if (res) {
-    console.info(`Succeeded in checking file, file exists.`);
-  } else {
-    console.info(`Succeeded in checking file, file does not exist.`);
-  }
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to access. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.access(filePath, (err: BusinessError, res: boolean) => {
-  if (err) {
-    console.error(`Failed to access. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (res) {
-      console.info(`Succeeded in checking file, file exists.`);
-    } else {
-      console.info(`Succeeded in checking file, file does not exist.`);
-    }
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.access(filePath, (err: BusinessError<void> | null, res: boolean | undefined) => {
-  if (err) {
-    console.error(`Failed to access. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (res) {
-      console.info(`Succeeded in checking file, file exists.`);
-    } else {
-      console.info(`Succeeded in checking file, file does not exist.`);
-    }
-  }
-});
-```
-
 
 ## access
 
@@ -174,8 +62,6 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 检查文件或目录是否存在。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -205,10 +91,6 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 | 13900033 |
 | 13900042 |
 
-**示例**
-
-参见 [access](#access)
-
 
 ## access
 
@@ -219,8 +101,6 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 检查文件或目录是否在本地，或校验操作权限。使用Promise异步回调。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -252,7 +132,3 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 | 13900023 |
 | 13900030 |
 | 13900033 |
-
-**示例**
-
-参见 [access](#access)

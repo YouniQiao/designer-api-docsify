@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## recoverForms
@@ -15,8 +15,6 @@ function recoverForms(formIds: Array<string>): Promise<void>
 Recovers recycled widgets and updates their status to non-recyclable, or updates the status of widgets to non- recyclable if the widgets are not recycled. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -49,40 +47,6 @@ Recovers recycled widgets and updates their status to non-recyclable, or updates
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 
-**Examples**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formIds: string[] = ['12400633174999288'];
-  formHost.recoverForms(formIds, (err: BusinessError) => {
-    if (err) {
-      console.error(`recoverForms error, code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formIds: string[] = ['12400633174999288'];
-  formHost.recoverForms(formIds).then(() => {
-    console.info('recover forms success');
-  }).catch((err: BusinessError) => {
-    console.error(`formHost recover forms error, code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  console.error(`catch error, code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## recoverForms
 
@@ -93,8 +57,6 @@ function recoverForms(formIds: Array<string>, callback: AsyncCallback<void>): vo
 Recovers widgets. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -121,7 +83,3 @@ Recovers widgets. This API uses an asynchronous callback to return the result.
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
-
-**Examples**
-
-See [recoverForms](#recoverforms)

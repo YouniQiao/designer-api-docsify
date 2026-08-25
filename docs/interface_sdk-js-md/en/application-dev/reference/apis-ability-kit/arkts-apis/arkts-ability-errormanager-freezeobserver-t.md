@@ -8,8 +8,6 @@ Defines an observer for the main thread freeze event of the application. It is u
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

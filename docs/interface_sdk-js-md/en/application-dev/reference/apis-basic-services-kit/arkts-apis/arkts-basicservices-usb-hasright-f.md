@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## hasRight
@@ -15,8 +15,6 @@ function hasRight(deviceName: string): boolean
 Checks whether the application has the permission to access the device.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -35,11 +33,3 @@ Checks whether the application has the permission to access the device.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let devicesName= "1-1";
-let bool = usb.hasRight(devicesName);
-console.info(`hasRight = ${bool}`);
-```

@@ -9,8 +9,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_SOFT
@@ -22,8 +20,6 @@ EFFECT_SOFT = 'haptic.effect.soft'
 较松散的振动效果，频率偏低。适用于轻柔触觉反馈场景。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -37,8 +33,6 @@ EFFECT_HARD = 'haptic.effect.hard'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_SHARP
@@ -50,8 +44,6 @@ EFFECT_SHARP = 'haptic.effect.sharp'
 较尖锐的振动效果，频率偏高。适用于警示触觉反馈场景。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -65,8 +57,6 @@ EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_NOTICE_FAILURE
@@ -79,8 +69,6 @@ EFFECT_NOTICE_FAILURE = 'haptic.notice.fail'
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## EFFECT_NOTICE_WARNING
@@ -92,7 +80,5 @@ EFFECT_NOTICE_WARNING = 'haptic.notice.warning'
 表达警告通知的振动效果。适用于风险警告提醒场景。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

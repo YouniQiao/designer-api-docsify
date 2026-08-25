@@ -4,8 +4,6 @@ Defines the callback information triggered when the web page requests to create 
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ handler: ControllerHandler
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -42,8 +38,6 @@ The value **true** indicates that a dialog box is requested to be created, and t
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -61,8 +55,6 @@ Whether the creation is triggered by the user. The value **true** means that the
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -78,8 +70,6 @@ Window opening mode when the web page requests a user to create a new window.
 **Type:** [NavigationPolicy](arkts-arkweb-navigationpolicy-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -97,8 +87,6 @@ URL to be opened in the new window.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -114,8 +102,6 @@ Feature information of the new window requested to be created by the web page.
 **Type:** [WindowFeatures](arkts-arkweb-windowfeatures-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

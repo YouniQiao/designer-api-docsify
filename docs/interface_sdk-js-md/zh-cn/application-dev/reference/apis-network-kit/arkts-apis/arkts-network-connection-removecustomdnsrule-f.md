@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## removeCustomDnsRule
@@ -18,8 +18,6 @@ function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void
 > 可调用[addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md)添加自定义规则。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -44,64 +42,6 @@ function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.removeCustomDnsRule("xxxx", (error: BusinessError, data: void) => {
-  if (error) {
-    console.error(`Failed to remove custom dns rule. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info(`Succeeded to get data: ${JSON.stringify(data)}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.removeCustomDnsRule("xxxx", (error: BusinessError|null) => {
-  if (error) {
-    console.error(`Failed to remove custom dns rule. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.removeCustomDnsRule("xxxx").then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.removeCustomDnsRule("xxxx").then(() => {
-  console.info("success");
-}).catch((error: Error) => {
-  let businessError = error as BusinessError;
-  console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-})
-```
-
 
 ## removeCustomDnsRule
 
@@ -115,8 +55,6 @@ function removeCustomDnsRule(host: string): Promise<void>
 > 可调用[addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md)添加自定义规则。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -145,7 +83,3 @@ function removeCustomDnsRule(host: string): Promise<void>
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [removeCustomDnsRule](#removecustomdnsrule)

@@ -6,8 +6,6 @@ WorkSchedulerExtensionContext是WorkSchedulerExtensionAbility的上下文环境�
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
 ## startServiceExtensionAbility
@@ -19,8 +17,6 @@ startServiceExtensionAbility(want: Want): Promise<void>
 启动ServiceExtensionAbility，使用Promise异步回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,65 +55,6 @@ startServiceExtensionAbility(want: Want): Promise<void>
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want : Want = {
-  bundleName: 'com.example.workscheduler',
-  abilityName: 'ServiceExtAbility'
-}
-
-export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
-  onWorkStart(workInfo: workScheduler.WorkInfo) {
-    console.info(`onWorkStart, workInfo = ${JSON.stringify(workInfo)}`);
-      // 拉起对应的service
-      this.context.startServiceExtensionAbility(want).then(() => {
-        console.info('succeeded in starting ServiceExtensionAbility.');
-      }).catch((err: BusinessError) => {
-        console.error(`failed to start ServiceExtensionAbility. Code: ${err.code}, message: ${err.message}`);
-      });
-  }
-
-  onWorkStop(workInfo: workScheduler.WorkInfo) {
-    console.info(`onWorkStop, workInfo is ${JSON.stringify(workInfo)}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';
-import { Want } from '@kit.AbilityKit';
-
-let want : Want = {
-  bundleName: 'com.example.workscheduler',
-  abilityName: 'ServiceExtAbility'
-}
-
-export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
-  onWorkStart(workInfo: workScheduler.WorkInfo): void {
-    console.info(`onWorkStart, workInfo = ${JSON.stringify(workInfo)}`);
-      // 拉起对应的service
-      this.context.startServiceExtensionAbility(want).then(() => {
-        console.info('succeeded in starting ServiceExtensionAbility.');
-      }).catch ((err) => {
-        console.error('failed to start ServiceExtensionAbility.');
-      });
-  }
-
-  onWorkStop(workInfo: workScheduler.WorkInfo): void {
-    console.info(`onWorkStop, workInfo is ${JSON.stringify(workInfo)}`);
-  }
-}
-```
-
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -127,8 +64,6 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 停止ServiceExtensionAbility，使用Promise异步回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -163,62 +98,3 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want : Want = {
-  bundleName: 'com.example.workscheduler',
-  abilityName: 'ServiceExtAbility'
-}
-
-export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
-  onWorkStart(workInfo: workScheduler.WorkInfo) {
-    console.info(`onWorkStart, workInfo = ${JSON.stringify(workInfo)}`);
-  }
-
-  onWorkStop(workInfo: workScheduler.WorkInfo) {
-    console.info(`onWorkStop, workInfo is ${JSON.stringify(workInfo)}`);
-      // 停止对应的service
-      this.context.stopServiceExtensionAbility(want).then(() => {
-        console.info('succeeded in stopping ServiceExtensionAbility.');
-      }).catch((err: BusinessError) => {
-        console.error(`failed to stop ServiceExtensionAbility. Code: ${err.code}, message: ${err.message}`);
-      });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';
-import { Want } from '@kit.AbilityKit';
-
-let want : Want = {
-  bundleName: 'com.example.workscheduler',
-  abilityName: 'ServiceExtAbility'
-}
-
-export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
-  onWorkStart(workInfo: workScheduler.WorkInfo): void {
-    console.info(`onWorkStart, workInfo = ${JSON.stringify(workInfo)}`);
-  }
-
-  onWorkStop(workInfo: workScheduler.WorkInfo): void {
-    console.info(`onWorkStop, workInfo is ${JSON.stringify(workInfo)}`);
-      // 停止对应的service
-      this.context.stopServiceExtensionAbility(want).then(() => {
-        console.info('succeeded in stopping ServiceExtensionAbility.');
-      }).catch ((err) => {
-        console.error('failed to stop ServiceExtensionAbility.');
-      });
-  }
-}
-```

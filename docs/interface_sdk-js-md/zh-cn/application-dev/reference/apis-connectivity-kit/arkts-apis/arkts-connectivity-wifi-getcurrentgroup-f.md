@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getCurrentGroup
@@ -15,8 +15,6 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 获取当前群组信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -32,24 +30,6 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 | --- |
 | Promise & lt;WifiP2pGroupInfo & gt; |
 
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getCurrentGroup((err, data:wifi.WifiP2pGroupInfo) => {
-   if (err) {
-       console.error("get current P2P group error");
-       return;
-   }
-  console.info("get current P2P group: " + JSON.stringify(data));
-});
-
-wifi.getCurrentGroup().then(data => {
-  console.info("get current P2P group: " + JSON.stringify(data));
-});
-```
-
 
 ## getCurrentGroup
 
@@ -60,8 +40,6 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 获取当前群组信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -76,7 +54,3 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | 是 |
-
-**示例**
-
-参见 [getCurrentGroup](#getcurrentgroup)

@@ -4,8 +4,6 @@ Enumerates the reverb modes of audio loopback.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## ORIGINAL
@@ -17,8 +15,6 @@ ORIGINAL = 1
 Maintains the original reverb without enhancement.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
@@ -32,8 +28,6 @@ Provides a Karaoke-style reverb effect.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## THEATER
@@ -46,8 +40,6 @@ Provides a theater-style reverb effect (default).
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 ## CONCERT
@@ -59,7 +51,5 @@ CONCERT = 4
 Provides a concert-style reverb effect.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer

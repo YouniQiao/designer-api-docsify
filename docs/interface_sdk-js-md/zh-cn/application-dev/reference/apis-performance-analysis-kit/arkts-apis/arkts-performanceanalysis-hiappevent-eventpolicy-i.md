@@ -4,14 +4,12 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 ## 导入模块
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## addressSanitizerPolicy
@@ -25,8 +23,6 @@ addressSanitizerPolicy?: AddressSanitizerPolicy
 **类型：** [AddressSanitizerPolicy](arkts-performanceanalysis-hiappevent-addresssanitizerpolicy-i.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ appCrashPolicy?: AppCrashPolicy
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
@@ -61,8 +55,6 @@ appFreezePolicy?: AppFreezePolicy
 **类型：** [AppFreezePolicy](arkts-performanceanalysis-hiappevent-appfreezepolicy-i.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -80,8 +72,6 @@ CPU高负载事件配置策略。
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
@@ -98,8 +88,6 @@ mainThreadJankPolicy?: MainThreadJankPolicy
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
@@ -115,8 +103,6 @@ resourceOverlimitPolicy?: ResourceOverlimitPolicy
 **类型：** [ResourceOverlimitPolicy](arkts-performanceanalysis-hiappevent-resourceoverlimitpolicy-i.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 

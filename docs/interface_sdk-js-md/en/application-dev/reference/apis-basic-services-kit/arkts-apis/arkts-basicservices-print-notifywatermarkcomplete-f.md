@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## notifyWatermarkComplete
@@ -15,8 +15,6 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 Notify watermark complete.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_PRINT
 

@@ -7,8 +7,6 @@ Describes the parameters of the time picker.Property modifications made to **Tim
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,8 +29,6 @@ End time of the time picker.Default value: **Date(0, 0, 0, 23, 59, 59)**.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -53,8 +49,6 @@ Time format.Default value: **TimePickerFormat.HOUR_MINUTE**
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -72,8 +66,6 @@ Time of the selected item.Default value: current system time Since API version 1
 **Type:** Date
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,8 +85,6 @@ Start time of the time picker.Default value: **Date(0, 0, 0, 0, 0, 0)**
 **Type:** Date
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## setReverseGeocodingMockInfo
@@ -15,8 +15,6 @@ function setReverseGeocodingMockInfo(mockInfos: Array<ReverseGeocodingMockInfo>)
 Set the configuration parameters for simulating reverse geocoding.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MOCK_LOCATION
@@ -40,88 +38,3 @@ Set the configuration parameters for simulating reverse geocoding.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let mockInfos: Array<geoLocationManager.ReverseGeocodingMockInfo> = [
-  {
-    "location": {
-      "locale": "zh",
-      "latitude": 30.12,
-      "longitude": 120.11,
-      "maxItems": 1
-    },
-    "geoAddress": {
-      "locale": "zh",
-      "latitude": 30.12,
-      "longitude": 120.11,
-      "isFromMock": true
-    }
-  },
-  {
-    "location": {
-      "locale": "zh",
-      "latitude": 31.12,
-      "longitude": 121.11,
-      "maxItems": 1
-    },
-    "geoAddress": {
-      "locale": "zh",
-      "latitude": 31.12,
-      "longitude": 121.11,
-      "isFromMock": true
-    }
-  },
-  {
-    "location": {
-      "locale": "zh",
-      "latitude": 32.12,
-      "longitude": 122.11,
-      "maxItems": 1
-    },
-    "geoAddress": {
-      "locale": "zh",
-      "latitude": 32.12,
-      "longitude": 122.11,
-      "isFromMock": true
-    }
-  },
-  {
-    "location": {
-      "locale": "zh",
-      "latitude": 33.12,
-      "longitude": 123.11,
-      "maxItems": 1
-    },
-    "geoAddress": {
-      "locale": "zh",
-      "latitude": 33.12,
-      "longitude": 123.11,
-      "isFromMock": true
-    }
-  },
-  {
-    "location": {
-      "locale": "zh",
-      "latitude": 34.12,
-      "longitude": 124.11,
-      "maxItems": 1
-    },
-    "geoAddress": {
-      "locale": "zh",
-      "latitude": 34.12,
-      "longitude": 124.11,
-      "isFromMock": true
-    }
-  },
-];
-try {
-  geoLocationManager.enableReverseGeocodingMock();
-  geoLocationManager.setReverseGeocodingMockInfo(mockInfos);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

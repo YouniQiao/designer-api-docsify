@@ -6,8 +6,6 @@ The context of the agent service extension. It provides resources and methods th
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## agentCard
@@ -21,8 +19,6 @@ Indicates the agent card of the current agent.
 **Type:** [AgentCard](arkts-ability-agentcard-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

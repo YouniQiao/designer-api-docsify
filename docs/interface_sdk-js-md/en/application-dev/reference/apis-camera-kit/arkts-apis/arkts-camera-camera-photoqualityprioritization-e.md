@@ -4,8 +4,6 @@ Enumerates the photo quality prioritization strategies.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## HIGH_QUALITY
@@ -17,8 +15,6 @@ HIGH_QUALITY = 0
 Focuses on image quality, which may increase the time required for capturing photos to ensure high-quality output.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -33,8 +29,6 @@ SPEED = 1
 Focuses on performance, trading off image quality for faster capture times.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 

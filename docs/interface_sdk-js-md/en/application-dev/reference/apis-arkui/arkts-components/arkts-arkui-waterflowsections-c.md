@@ -9,8 +9,6 @@ Describes the water flow item sections.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,8 +26,6 @@ A constructor used to create a **WaterFlowSections** object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,8 +41,6 @@ length(): number
 Obtains the number of sections in the **WaterFlow** component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ push(section: SectionOptions): boolean
 Adds the specified sections to the end of the **WaterFlow** component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,8 +92,6 @@ Changes sections by removing or replacing an existing section and/or adding a se
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -114,7 +104,7 @@ Changes sections by removing or replacing an existing section and/or adding a se
 | --- | --- | --- |
 | start | number | Yes |
 | deleteCount | number | No |
-| sections | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | No |
+| [sections](arkts-arkui-waterflowoptions-i.md) | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | No |
 
 **Return value:**
 
@@ -131,8 +121,6 @@ update(sectionIndex:number, section: SectionOptions): boolean
 Updates the configuration of a specified water flow item section.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,8 +150,6 @@ values(): Array<SectionOptions>
 Obtains the configuration of all sections in the **WaterFlow** component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

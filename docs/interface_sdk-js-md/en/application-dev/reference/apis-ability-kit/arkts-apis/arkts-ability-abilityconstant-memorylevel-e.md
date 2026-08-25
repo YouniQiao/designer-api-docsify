@@ -14,8 +14,6 @@ Enumerates the memory levels of the entire device. You can use it in [onMemoryLe
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## MEMORY_LEVEL_MODERATE
@@ -27,8 +25,6 @@ MEMORY_LEVEL_MODERATE = 0
 Indicates that the system has a moderate amount of available memory. Due to differences in system-wide memory thresholds across devices, the actual performance may vary by product. For details, please refer to the notes below.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Indicates that the system has low available memory. Due to differences in system
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -63,8 +57,6 @@ MEMORY_LEVEL_CRITICAL = 2
 Indicates that the system has critically low available memory. Due to differences in system-wide memory thresholds across devices, the actual performance may vary by product. For details, please refer to the notes below.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +74,6 @@ All UI elements of the process are hidden.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -99,8 +89,6 @@ MEMORY_LEVEL_BACKGROUND_MODERATE = 4
 The process is in the background and the available memory of the entire device is moderate.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,8 +106,6 @@ The process is in the background and the available memory of the entire device i
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -136,24 +122,8 @@ The process is in the background and the available memory of the entire device i
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyAbility extends UIAbility {
-  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
-    if (level === AbilityConstant.MemoryLevel.MEMORY_LEVEL_CRITICAL) {
-      console.info('The memory of device is critical, please release some memory.');
-    }
-  }
-}
-```

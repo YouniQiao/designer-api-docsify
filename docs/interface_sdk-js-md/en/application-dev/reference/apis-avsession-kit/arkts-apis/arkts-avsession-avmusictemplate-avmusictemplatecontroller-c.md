@@ -4,14 +4,12 @@ The definition of the AVMusicTemplateController.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## clearSearchHistory
@@ -23,8 +21,6 @@ clearSearchHistory(): Promise<OperResult>
 Clear search history.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,8 +51,6 @@ Destroy the controller.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -82,8 +76,6 @@ downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity):
 Download media entity.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,8 +113,6 @@ Execute action.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -158,8 +148,6 @@ favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Pr
 Favorite media entity.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,8 +185,6 @@ Handle member purchase.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -233,8 +219,6 @@ login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>
 Login.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,8 +256,6 @@ Unregister report current single callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -301,8 +283,6 @@ offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void
 Unregister report custom elements change callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,8 +312,6 @@ Unregister report dialog command callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -361,8 +339,6 @@ offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void
 Unregister report download media entity status callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -392,8 +368,6 @@ Unregister report extension ability callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -421,8 +395,6 @@ offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void
 Unregister report media entities change callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -452,8 +424,6 @@ Unregister report playlist callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -481,8 +451,6 @@ offReportExecuteAction(callback?: ReportExecuteActionEvent): void
 Unregister report execute action callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -512,8 +480,6 @@ Unregister report settings callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -541,8 +507,6 @@ offTabContentChange(callback?: ReportTabContentEvent): void
 Unregister report tab content callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -572,8 +536,6 @@ Unregister report user info callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -601,8 +563,6 @@ onCurrentSingleChange(callback: Callback<Single>): void
 Register report current single callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -632,8 +592,6 @@ Register report custom elements change callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -661,8 +619,6 @@ onDialogCommandChange(callback: ReportDialogCommandEvent): void
 Register report dialog command callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -692,8 +648,6 @@ Register report download media entity status callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -721,8 +675,6 @@ onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void
 Register report extension ability callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -752,8 +704,6 @@ Register report media entities change callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -781,8 +731,6 @@ onPlaylistChange(callback: Callback<PageMediaEntity>): void
 Register report playlist callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -812,8 +760,6 @@ Register report execute action callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -841,8 +787,6 @@ onSettingsChange(callback: Callback<SettingItem[]>): void
 Register report settings callback.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -872,8 +816,6 @@ Register report tab content callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -902,8 +844,6 @@ Register report user info callback.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -931,8 +871,6 @@ playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperRe
 Play for search.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -970,8 +908,6 @@ Play media entity.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -999,21 +935,13 @@ Play media entity.
 
 ## queryCompilation
 
-ArkTS-Dyn:
 ```TypeScript
 queryCompilation(compilationId: string, pageIndex: number): Promise<PageMediaEntity>
-```
-
-ArkTS-Sta:
-```TypeScript
-queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity>
 ```
 
 Query compilation.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1024,7 +952,7 @@ Query compilation.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | compilationId | string | Yes |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| pageIndex | number | Yes |
 
 **Return value:**
 
@@ -1050,8 +978,6 @@ queryCompilationByKeyword(keyword: string): Promise<Compilation[]>
 Query compilation by keyword.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1088,8 +1014,6 @@ Query current single.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1118,8 +1042,6 @@ queryCustomContent(queryType: CustomType[]): Promise<CustomElement>
 Query custom content.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1156,8 +1078,6 @@ Query hot words.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1186,8 +1106,6 @@ queryMainTabs(): Promise<MediaTab[]>
 Query main tabs.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1218,8 +1136,6 @@ Query media entity.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1247,21 +1163,13 @@ Query media entity.
 
 ## queryMediaEntityByKeyword
 
-ArkTS-Dyn:
 ```TypeScript
 queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: number): Promise<PageMediaEntity>
-```
-
-ArkTS-Sta:
-```TypeScript
-queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: int): Promise<PageMediaEntity>
 ```
 
 Query media entity by keyword.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1273,7 +1181,7 @@ Query media entity by keyword.
 | --- | --- | --- |
 | keyword | string | Yes |
 | searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | Yes |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| pageIndex | number | Yes |
 
 **Return value:**
 
@@ -1299,8 +1207,6 @@ queryMediaTabContent(tabId: string): Promise<MediaTabContent>
 Query media tab content.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1337,8 +1243,6 @@ Query member purchase.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1366,21 +1270,13 @@ Query member purchase.
 
 ## queryPlaylist
 
-ArkTS-Dyn:
 ```TypeScript
 queryPlaylist(pageIndex: number, sort: Sort): Promise<PageMediaEntity>
-```
-
-ArkTS-Sta:
-```TypeScript
-queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>
 ```
 
 Query playlist.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1390,7 +1286,7 @@ Query playlist.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| pageIndex | number | Yes |
 | sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Yes |
 
 **Return value:**
@@ -1417,8 +1313,6 @@ queryRecommendMediaEntityList(): Promise<MediaEntity[]>
 Query recommend media entity list.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1449,8 +1343,6 @@ Query search history.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1479,8 +1371,6 @@ reportProblemAndAdvice(advice: string): Promise<OperResult>
 Report problem and advice.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1516,8 +1406,6 @@ requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): 
 Request dialog info.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1555,8 +1443,6 @@ Send custom commands to AVMusicTemplate
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1591,8 +1477,6 @@ updateSettings(settingItem: SettingItem): Promise<SettingItem>
 Report settings change.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1631,8 +1515,6 @@ Mark the controller is or not destroy.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1648,8 +1530,6 @@ Unique id of the AVMusicTemplateController.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

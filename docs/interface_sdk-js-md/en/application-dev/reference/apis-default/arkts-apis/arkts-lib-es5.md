@@ -141,3 +141,38 @@
 | [ThisParameterType](arkts-thisparametertype-t.md) |
 | [Uncapitalize](arkts-uncapitalize-t.md) |
 | [Uppercase](arkts-uppercase-t.md) |
+
+### Properties
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Array](arkts-libes5-p.md) |
+| [ArrayBuffer](arkts-libes5-p.md) |
+| [Boolean](arkts-libes5-p.md) |
+| [DataView](arkts-libes5-p.md) |
+| [Date](arkts-libes5-p.md) |
+| [Error](arkts-libes5-p.md) |
+| [EvalError](arkts-libes5-p.md) |
+| [Float32Array](arkts-libes5-p.md) |
+| [Float64Array](arkts-libes5-p.md) |
+| [Function](arkts-libes5-p.md) |
+| [Infinity](arkts-libes5-p.md) |
+| [Int16Array](arkts-libes5-p.md) |
+| [Int32Array](arkts-libes5-p.md) |
+| [Int8Array](arkts-libes5-p.md) |
+| [JSON](arkts-libes5-p.md) |
+| [Math](arkts-libes5-p.md) |
+| [NaN](arkts-libes5-p.md) |
+| [Number](arkts-libes5-p.md) |
+| [Object](arkts-libes5-p.md) |
+| [RangeError](arkts-libes5-p.md) |
+| [ReferenceError](arkts-libes5-p.md) |
+| [RegExp](arkts-libes5-p.md) |
+| [String](arkts-libes5-p.md) |
+| [SyntaxError](arkts-libes5-p.md) |
+| [TypeError](arkts-libes5-p.md) |
+| [Uint16Array](arkts-libes5-p.md) |
+| [Uint32Array](arkts-libes5-p.md) |
+| [Uint8Array](arkts-libes5-p.md) |
+| [Uint8ClampedArray](arkts-libes5-p.md) |
+| [URIError](arkts-libes5-p.md) |

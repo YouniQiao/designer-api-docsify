@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## unsubscribeReminderState
@@ -15,8 +15,6 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 Unsubscribes from agent-powered reminder state changes. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,20 +37,3 @@ Unsubscribes from agent-powered reminder state changes. This API uses a promise 
 | Error Code ID |
 | --- |
 | [1700007](../errorcode-reminderAgentManager.md#1700007-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function reminderStateCallback(states: Array<reminderAgentManager.ReminderState>) {
-  console.info('length is : ' + states.length);
-}
-
-reminderAgentManager.unsubscribeReminderState(reminderStateCallback).then(() => {
-  console.info('unsubscribe succeed');
-}).catch((err: BusinessError) => {
-  console.error('promise err code:' + err.code + ' message:' + err.message);
-});
-```

@@ -4,8 +4,6 @@ Configuration stream result for AI-generated image tasks.@interface GenerateImag
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Configuration stream result for AI-generated image tasks.@interface GenerateImag
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'kits/@kit.ArkUI';
 ```
 
 ## imageData
@@ -28,8 +26,6 @@ Image data of the image corresponding to AI-generated image task, available in p
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -39,7 +35,7 @@ Image data of the image corresponding to AI-generated image task, available in p
 ## imageIndex
 
 ```TypeScript
-imageIndex?: int
+imageIndex?: number
 ```
 
 Sequence number of the image corresponding to AI-generated image task, available in partial and partial error result.
@@ -47,8 +43,6 @@ Sequence number of the image corresponding to AI-generated image task, available
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +62,6 @@ Information of the partial error corresponding to AI-generated image task, avail
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -79,7 +71,7 @@ Information of the partial error corresponding to AI-generated image task, avail
 ## totalCount
 
 ```TypeScript
-totalCount?: int
+totalCount?: number
 ```
 
 Total number of the image corresponding to AI-generated image task, available in completed result.
@@ -87,8 +79,6 @@ Total number of the image corresponding to AI-generated image task, available in
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,8 +97,6 @@ The type information used for AI-generated image task.
 **Type:** [PartialResultType](arkts-arkui-imagegeneration-partialresulttype-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

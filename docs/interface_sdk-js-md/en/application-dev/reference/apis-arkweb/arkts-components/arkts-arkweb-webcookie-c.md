@@ -4,8 +4,6 @@ Manages behavior of cookies in **Web** components. All **Web** components in an 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 23
 
 **Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
@@ -30,8 +28,6 @@ Constructs a **WebCookie** object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 23
 
 **Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
@@ -50,8 +46,6 @@ Saves the cookies in the memory to the drive. This API returns the result synchr
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [saveCookieAsync](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#savecookieasync)
@@ -67,8 +61,6 @@ setCookie()
 Sets the cookie. This API returns the result synchronously. **true** is returned if the operation is successful; otherwise, **false** is returned.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

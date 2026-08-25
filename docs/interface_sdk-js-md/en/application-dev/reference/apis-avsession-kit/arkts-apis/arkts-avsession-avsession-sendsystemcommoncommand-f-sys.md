@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## sendSystemCommonCommand
@@ -15,8 +15,6 @@ function sendSystemCommonCommand(command: string, args: ExtraInfo): Promise<stri
 Send system control command. The system automatically selects the recipient.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 

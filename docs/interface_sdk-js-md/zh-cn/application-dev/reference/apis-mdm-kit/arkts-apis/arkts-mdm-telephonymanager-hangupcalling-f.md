@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## hangupCalling
@@ -15,8 +15,6 @@ function hangupCalling(admin: Want): void
 挂断当前通话。仅支持运营商通话，不包括畅联等。例如，企业设备管理员可在企业安全管理场景中，强制挂断员工正在进行的不合规通话。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -38,22 +36,3 @@ function hangupCalling(admin: Want): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // 挂断当前通话
-  telephonyManager.hangupCalling(wantTemp);
-} catch (err) {
-  console.error(`Failed to hang up calling. Code: ${err.code}, message: ${err.message}`);
-}
-```

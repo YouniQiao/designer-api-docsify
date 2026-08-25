@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getBundleArchiveInfo
@@ -15,8 +15,6 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback
 获取有关HAP中包含的应用程序包的信息，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -30,38 +28,6 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback
 | bundleFlags | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let hapFilePath: string = "/data/storage/el2/base/test.hap";
-let bundleFlags: number = 0;
-
-bundle.getBundleArchiveInfo(hapFilePath, bundleFlags)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let hapFilePath: string = "/data/storage/el2/base/test.hap";
-let bundleFlags: number = 0;
-
-bundle.getBundleArchiveInfo(hapFilePath, bundleFlags, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
 
 ## getBundleArchiveInfo
 
@@ -72,8 +38,6 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number): Promise
 获取有关HAP中包含的应用程序包的信息，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -91,7 +55,3 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number): Promise
 | 类型 |
 | --- |
 | Promise&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; |
-
-**示例**
-
-参见 [getBundleArchiveInfo](#getbundlearchiveinfo)

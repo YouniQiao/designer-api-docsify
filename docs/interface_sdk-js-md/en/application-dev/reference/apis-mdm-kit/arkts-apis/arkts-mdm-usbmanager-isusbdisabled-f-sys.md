@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isUsbDisabled
@@ -15,8 +15,6 @@ function isUsbDisabled(admin: Want): boolean
 Queries whether the USB is disabled.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -51,22 +49,3 @@ Queries whether the USB is disabled.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let isDisabled = usbManager.isUsbDisabled(wantTemp);
-  console.info(`Succeeded in querying if USB is disabled: ${isDisabled}`);
-} catch (err) {
-  console.error(`Failed to query if USB is disabled. Code: ${err.code}, message: ${err.message}`);
-}
-```

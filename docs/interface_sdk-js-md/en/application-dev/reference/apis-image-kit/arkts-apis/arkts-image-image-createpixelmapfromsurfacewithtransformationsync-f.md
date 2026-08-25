@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createPixelMapFromSurfaceWithTransformationSync
@@ -15,8 +15,6 @@ function createPixelMapFromSurfaceWithTransformationSync(surfaceId: string, tran
 Creates a PixelMap object based on the ID of a Surface with transformation.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

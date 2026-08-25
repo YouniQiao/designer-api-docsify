@@ -18,14 +18,12 @@ The **ArcScrollBar** component is designed to be used together with scrollable c
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
+import { ArcScrollBar, ArcScrollBarAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -37,8 +35,6 @@ import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 A constructor used to create an **ArcScrollBar** instance.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

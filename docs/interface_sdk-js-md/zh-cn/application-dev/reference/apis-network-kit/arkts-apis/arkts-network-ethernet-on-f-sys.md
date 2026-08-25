@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## on('interfaceStateChange')
@@ -15,8 +15,6 @@ function on(type: 'interfaceStateChange', callback: Callback<InterfaceStateInfo>
 注册网卡热插拔事件，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -38,13 +36,3 @@ function on(type: 'interfaceStateChange', callback: Callback<InterfaceStateInfo>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-
-ethernet.on('interfaceStateChange', (data: object) => {
-  console.info('on interfaceSharingStateChange：' + JSON.stringify(data));
-});
-```

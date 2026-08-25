@@ -4,8 +4,6 @@ Encapsulates the success or failure status of function invocation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Encapsulates the success or failure status of function invocation.
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from '@kit.AbilityKit';
+import { functionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## data
@@ -27,8 +25,6 @@ The returned data on success. The type can be any JSON value. Only present when 
 **Type:** any
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ The error code on failure (numeric). Only present when [success](#success) is fa
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -68,8 +62,6 @@ The error description on failure. Only present when [success](#success) is false
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -87,8 +79,6 @@ Indicates whether the invocation was successful (at business logic level). true:
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedBluetoothProtocols
@@ -15,8 +15,6 @@ function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<
 获取指定用户的蓝牙协议禁用名单。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -45,53 +43,6 @@ function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 定义用户ID（需根据实际情况进行替换）
-let accountId: number = 100;
-try {
-  // 获取指定用户的蓝牙协议禁用名单
-  let result: Array<bluetoothManager.Protocol> = bluetoothManager.getDisallowedBluetoothProtocols(wantTemp, accountId);
-  console.info(`Succeeded in getting disallowed bluetooth protocols. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed bluetooth protocols. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 定义用户ID
-let accountId: number = 100;
-
-try {
-  // 获取指定用户指定传输策略下已禁用的蓝牙协议列表
-  let result: Array<bluetoothManager.Protocol> = bluetoothManager.getDisallowedBluetoothProtocols(wantTemp, accountId,
-    bluetoothManager.TransferPolicy.RECEIVE_SEND);
-  console.info(`Succeeded in getting disallowed bluetooth protocols, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getDisallowedBluetoothProtocols
 
@@ -106,8 +57,6 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 > 重载接口。本接口增加了policy参数，用于按传输策略查询对应的禁用配置。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -137,7 +86,3 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [getDisallowedBluetoothProtocols](#getdisallowedbluetoothprotocols)

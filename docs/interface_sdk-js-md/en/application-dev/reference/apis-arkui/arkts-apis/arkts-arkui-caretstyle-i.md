@@ -4,8 +4,6 @@ Defines the cursor style.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ color?: ResourceColor
 
 Caret color.Default value: **'#ff007dff'**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ width?: Length
 
 Caret size. It cannot be set in percentage.Default value: **'2vp'**
 
-**Type:** Length
+**Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

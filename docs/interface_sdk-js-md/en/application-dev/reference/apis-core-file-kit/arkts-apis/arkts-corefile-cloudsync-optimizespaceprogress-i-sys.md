@@ -4,8 +4,6 @@ Represents the space optimization states and optimization progress.
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Represents the space optimization states and optimization progress.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## progress
 
 ```TypeScript
-progress: int
+progress: number
 ```
 
 Optimization progress percentage. The value range is [0, 100].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -47,8 +43,6 @@ Enumerates the space optimization states.
 **Type:** [OptimizeState](arkts-corefile-cloudsync-optimizestate-e-sys.md)
 
 **Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 

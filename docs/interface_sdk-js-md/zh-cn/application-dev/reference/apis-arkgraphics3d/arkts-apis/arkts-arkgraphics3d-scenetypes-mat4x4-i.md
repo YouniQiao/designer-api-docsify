@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## w
@@ -19,8 +17,6 @@ w: Vec4
 **类型：** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -36,8 +32,6 @@ x: Vec4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -52,8 +46,6 @@ y: Vec4
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## z
@@ -67,7 +59,5 @@ z: Vec4
 **类型：** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## queryAllApns
@@ -15,8 +15,6 @@ function queryAllApns(): Promise<Array<ApnInfo>>
 异步获取默认移动数据的SIM卡的APN（access point name，接入点名称）信息。
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_APN_SETTING
 
@@ -33,16 +31,3 @@ function queryAllApns(): Promise<Array<ApnInfo>>
 | 错误码ID |
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.queryAllApns().then((apnInfos: Array<data.ApnInfo>) => {
-    console.info(`queryAllApns success, promise: apnInfos->${JSON.stringify(apnInfos)}`);
-}).catch((err: BusinessError) => {
-    console.error(`queryAllApns failed. code: ${err.code}, message: ${err.message}`);
-});
-```

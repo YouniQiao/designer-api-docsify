@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## getFormIdsByFormLocation
@@ -15,8 +15,6 @@ function getFormIdsByFormLocation(location: formInfo.FormLocation): Promise<Arra
 获取设备上指定卡片位置的卡片标识列表。使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -46,40 +44,3 @@ function getFormIdsByFormLocation(location: formInfo.FormLocation): Promise<Arra
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 | [16501016](../errorcode-form.md#16501016-卡片位置信息无效) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.getFormIdsByFormLocation(formInfo.FormLocation.DESKTOP).then((formIds: Array<string>) => {
-    console.info('formHost getFormIdsByFormLocation success.');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formHost, formInfo } from '@kit.FormKit';
-
-try {
-  formHost.getFormIdsByFormLocation(formInfo.FormLocation.DESKTOP).then((formIds: Array<string>) => {
-    console.info('formHost getFormIdsByFormLocation success.');
-  }).catch((error) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```

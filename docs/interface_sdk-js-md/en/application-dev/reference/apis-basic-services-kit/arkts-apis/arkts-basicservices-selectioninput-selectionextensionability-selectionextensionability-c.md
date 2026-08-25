@@ -1,7 +1,10 @@
 # SelectionExtensionAbility
 
 This module provides APIs for word selection extension, which can implement extended interactions such as searching and translating text using a mouse or touchpad. Word selection extension services can be customized by inheriting SelectionExtensionAbility. You need to declare this ExtensionAbility in the project configuration. For details, see [Developing a Word Selection Extension Ability](../../../basic-services/selectionInput/selection-services-application-guide.md). This module provides the following capabilities:  
-- Lifecycle management: Use the [onConnect](#onconnect) and [onDisconnect](#ondisconnect) callbacks to process the connection and disconnection logic. - **context**: You can use **context** to call [startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startability) to start the target ability in the same app, or use **context** as an input parameter of [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) to create a word selection panel.
+- Lifecycle management: Use the [onConnect](#onconnect) and  
+[onDisconnect](#ondisconnect) callbacks to process the connection and disconnection logic.  
+- **context**: You can use **context** to call  
+[startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startability) to start the target ability in the same app, or use **context** as an input parameter of [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) to create a word selection panel.
 
 > **NOTE：**&gt;
 > - This module is supported only on PCs/2-in-1 devices. You can use
@@ -10,14 +13,12 @@ This module provides APIs for word selection extension, which can implement exte
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 ## Modules to Import
 
 ```TypeScript
-import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
+import { SelectionExtensionAbility } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onConnect
@@ -29,8 +30,6 @@ onConnect(want: Want): rpc.RemoteObject
 Defines a callback triggered when the client connects to the **SelectionExtensionAbility**. You can return an RPC object in this callback to establish an IPC connection between the client and the server. You need to return a communication stub object that inherits **rpc.RemoteObject**. The system passes the stub object to the client, which then uses the stub object to communicate with the **SelectionExtensionAbility** through IPC.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,32 +47,6 @@ Defines a callback triggered when the client connects to the **SelectionExtensio
 | --- |
 | rpc.RemoteObject |
 
-**Examples**
-
-```TypeScript
-import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit';
-import { Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[SelectionExtensionAbility]';
-
-class StubTest extends rpc.RemoteObject {
-  constructor(des: string) {
-    super(des);
-  }
-  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
-  }
-}
-
-class ServiceExtAbility extends SelectionExtensionAbility {
-  onConnect(want: Want): rpc.RemoteObject {
-    hilog.info(0x0000, TAG, `onConnect, want: ${want.abilityName}`);
-    return new StubTest('test');
-  }
-}
-```
-
 ## onDisconnect
 
 ```TypeScript
@@ -84,26 +57,9 @@ Defines a callback triggered when the client disconnects from the **SelectionExt
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.SelectionInput.Selection
-
-**Examples**
-
-```TypeScript
-import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[SelectionExtensionAbility]';
-
-class ServiceExtAbility extends SelectionExtensionAbility {
-  onDisconnect(): void {
-    hilog.info(0x0000, TAG, `onDisconnect`);
-  }
-}
-```
 
 ## context
 
@@ -116,8 +72,6 @@ Context of the **SelectionExtensionAbility**. This context is inherited from [Ex
 **Type:** [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

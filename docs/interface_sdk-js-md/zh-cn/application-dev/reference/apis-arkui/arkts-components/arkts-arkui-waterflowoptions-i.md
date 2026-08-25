@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ footer?: CustomBuilder
 
 设置WaterFlow尾部组件，用于在瀑布流末尾显示自定义内容（如加载提示、底部标识等）。不设置时不显示尾部组件。
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,8 +38,6 @@ footerContent?: ComponentContent
 **类型：** ComponentContent
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ layoutMode?: WaterFlowLayoutMode
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -79,13 +71,11 @@ layoutMode?: WaterFlowLayoutMode
 scroller?: Scroller
 ```
 
-可滚动组件的控制器，与可滚动组件绑定。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>不允许和其他滚动类组件，如：ArcList、List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。 </p>
+可滚动组件的控制器，与可滚动组件绑定。<p>&lt;strong&gt;说明&lt;/strong&gt; 不允许和其他滚动类组件，如：ArcList、List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。 </p>
 
-**类型：** Scroller
+**类型：** [Scroller](arkts-arkui-scroller-c.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -97,13 +87,13 @@ scroller?: Scroller
 sections?: WaterFlowSections
 ```
 
-设置FlowItem分组，实现同一个瀑布流组件内部各分组使用不同列数混合布局。适用于需要在不同区域使用不同列数布局的场景。不设置时使用统一列数布局。<p>&lt;strong&gt;说明&lt;/strong&gt; <br>1. 使用分组混合布局时会忽略columnsTemplate和rowsTemplate属性。 <br>2. 使用分组混合布局时不支持单独设置footer，可以使用最后一个分组作为尾部组件。 </p>
+设置FlowItem分组，实现同一个瀑布流组件内部各分组使用不同列数混合布局。适用于需要在不同区域使用不同列数布局的场景。不设置时使用统一列数布局。<p>&lt;strong&gt;说明&lt;/strong&gt; 
+1. 使用分组混合布局时会忽略columnsTemplate和rowsTemplate属性。 
+2. 使用分组混合布局时不支持单独设置footer，可以使用最后一个分组作为尾部组件。 </p>
 
 **类型：** [WaterFlowSections](arkts-arkui-waterflowsections-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

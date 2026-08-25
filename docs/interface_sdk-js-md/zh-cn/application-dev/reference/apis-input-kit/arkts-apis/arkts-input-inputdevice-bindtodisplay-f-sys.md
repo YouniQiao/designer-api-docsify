@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## bindToDisplay
 
 ```TypeScript
-function bindToDisplay(inputDeviceId: int, displayId: int): Promise<void>
+function bindToDisplay(inputDeviceId: number, displayId: number): Promise<void>
 ```
 
 将输入设备绑定到显示器。 仅支持外接USB和蓝牙的鼠标、触摸板、键盘和游戏控手柄。 绑定后，设备将固定在指定显示器所在的显示器组上操作。 该接口使用promise返回结果。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
 
@@ -30,8 +28,8 @@ function bindToDisplay(inputDeviceId: int, displayId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| inputDeviceId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| inputDeviceId | number | 是 |
+| displayId | number | 是 |
 
 **返回值：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
+import { distributedBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRemoteAbilityInfo
@@ -16,8 +16,6 @@ Obtains information about the remote ability that matches the given element name
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
@@ -43,220 +41,6 @@ Obtains information about the remote ability that matches the given element name
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) |
-
-**Examples**
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo) => {
-            if (err) {
-                console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-            } else {
-                console.info('Operation succeed:' + JSON.stringify(data));
-            }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }).then((data: distributedBundleManager.RemoteAbilityInfo) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application1',
-                abilityName: 'EntryAbility1'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ], (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
-          if (err) {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application',
-                abilityName: 'EntryAbility'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ]).then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo) => {
-          if (err) {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        {
-            deviceId: '1',
-            bundleName: 'com.example.application',
-            abilityName: 'EntryAbility'
-        }, 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application1',
-                abilityName: 'EntryAbility1'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ], 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
-          if (err) {
-           console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-          } else {
-            console.info('Operation succeed:' + JSON.stringify(data));
-          }
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
-
-```TypeScript
-import { distributedBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    distributedBundleManager.getRemoteAbilityInfo(
-        [
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application',
-                abilityName: 'EntryAbility'
-            },
-            {
-                deviceId: '1',
-                bundleName: 'com.example.application2',
-                abilityName: 'EntryAbility'
-            }
-        ], 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
-            console.info('Operation succeed:' + JSON.stringify(data));
-        }).catch((err: BusinessError) => {
-            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
-        });
-} catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
-}
-```
 
 
 ## getRemoteAbilityInfo
@@ -269,8 +53,6 @@ Obtains information about the remote ability that matches the given element name
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
@@ -302,10 +84,6 @@ Obtains information about the remote ability that matches the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) |
 
-**Examples**
-
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -316,8 +94,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 Obtains information about the remote abilities that match the given element names. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -345,10 +121,6 @@ Obtains information about the remote abilities that match the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) |
 
-**Examples**
-
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -359,8 +131,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 Obtains information about the remote abilities that match the given element names. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -393,10 +163,6 @@ Obtains information about the remote abilities that match the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) |
 
-**Examples**
-
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -407,8 +173,6 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 Obtains information about the remote ability that matches the given element name and locale. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -437,10 +201,6 @@ Obtains information about the remote ability that matches the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) |
 
-**Examples**
-
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -451,8 +211,6 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise
 Obtains information about the remote ability that matches the given element name and locale. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -486,10 +244,6 @@ Obtains information about the remote ability that matches the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) |
 
-**Examples**
-
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -500,8 +254,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 Obtains information about the remote abilities that match the given element names and locale. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -530,10 +282,6 @@ Obtains information about the remote abilities that match the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) |
 
-**Examples**
-
-See [getRemoteAbilityInfo](#getremoteabilityinfo)
-
 
 ## getRemoteAbilityInfo
 
@@ -544,8 +292,6 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string):
 Obtains information about the remote abilities that match the given element names and locale. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -578,7 +324,3 @@ Obtains information about the remote abilities that match the given element name
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) |
-
-**Examples**
-
-See [getRemoteAbilityInfo](#getremoteabilityinfo)

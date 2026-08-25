@@ -4,16 +4,14 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## close
@@ -25,8 +23,6 @@ close(): void
 以同步方式关闭RandomAccessFile对象，关闭后不可再用于读写等操作。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -41,148 +37,6 @@ close(): void
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file).then(() => {
-  console.info(`Succeeded in closing file.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file).then(() => {
-  console.info(`Succeeded in closing file.`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in closing file.`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file, (err: BusinessError<void> | null) => {
-  if (err) {
-    console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in closing file.`);
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.close().then(() => {
-  console.info(`Succeeded in closing file stream.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.close().then(() => {
-  console.info(`Succeeded in closing file stream.`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.close((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in closing stream.`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.close((err: BusinessError<void> | null) => {
-  if (err) {
-    console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in closing stream.`);
-  }
-});
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-randomAccessFile.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const rs = fileIo.createReadStream(filePath);
-rs.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const ws = fileIo.createWriteStream(filePath);
-ws.close();
-```
-
 ## getReadStream
 
 ```TypeScript
@@ -192,8 +46,6 @@ getReadStream(): ReadStream
 获取当前RandomAccessFile的一个ReadStream实例，用于流式读取文件数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -214,16 +66,6 @@ getReadStream(): ReadStream
 | 13900020 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-const rs = randomAccessFile.getReadStream();
-rs.close();
-randomAccessFile.close();
-```
-
 ## getWriteStream
 
 ```TypeScript
@@ -233,8 +75,6 @@ getWriteStream(): WriteStream
 获取当前RandomAccessFile的一个WriteStream实例，用于流式写入文件数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -255,16 +95,6 @@ getWriteStream(): WriteStream
 | 13900020 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-const ws = randomAccessFile.getWriteStream();
-ws.close();
-randomAccessFile.close();
-```
-
 ## read
 
 ```TypeScript
@@ -277,8 +107,6 @@ read(
 从文件读取数据，返回实际读取的字节数。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -310,461 +138,6 @@ read(
 | 13900042 |
 | 13900044 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-let arrayBuffer = new ArrayBuffer(4096);
-fileIo.read(file.fd, arrayBuffer).then((readLen: number) => {
-  let buf = buffer.from(arrayBuffer, 0, readLen);
-  console.info(`Succeeded in reading file data. The content of file: ${buf.toString()}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read file data. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE);
-let arrayBuffer = new ArrayBuffer(4096);
-fileIo.read(file.fd, arrayBuffer).then((readLen: long) => {
-  console.info(`Succeeded in reading file data. The content of file: ${buf.toString()}`);
-  let buf = buffer.from(arrayBuffer, 0, readLen.toInt());
-  console.info(`The content of file: ${buf.toString()}`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to read file data. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-let arrayBuffer = new ArrayBuffer(4096);
-fileIo.read(file.fd, arrayBuffer, (err: BusinessError, readLen: number) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen);
-    console.info(`Succeeded in reading file data. The content of file: ${buf.toString()}`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE);
-let arrayBuffer = new ArrayBuffer(4096);
-fileIo.read(file.fd, arrayBuffer, (err: BusinessError<void> | null, readLen: long | undefined) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen?.toInt());
-    console.info(`Succeeded in reading file data. The content of file: ${buf.toString()}`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { buffer } from '@kit.ArkTS';
-  import { ReadOptions } from '@kit.CoreFileKit';
-
-  let filePath = pathDir + "/test.txt";
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-  let arrayBuffer = new ArrayBuffer(4096);
-  let readOption: ReadOptions = {
-    offset: 1,
-    length: 5
-  };
-  fileIo.read(file.fd, arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
-    if (err) {
-      console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      let buf = buffer.from(arrayBuffer, 0, readLen);
-      console.info(`Succeeded in reading file data. The content of file: ${buf.toString()}`);
-    }
-    fileIo.closeSync(file);
-  });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE);
-let arrayBuffer = new ArrayBuffer(4096);
-let readOption: ReadOptions = {
-  offset: 1,
-  length: 5
-};
-fileIo.read(file.fd, arrayBuffer, readOption, (err: BusinessError<void> | null, readLen: long | undefined) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen?.toInt());
-    console.info(`Succeeded in reading file data. The content of file: ${buf.toString()}`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-stream.read(arrayBuffer, readOption).then((readLen: number) => {
-  let buf = buffer.from(arrayBuffer, 0, readLen);
-  console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
-  stream.close();
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read data. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-stream.read(arrayBuffer, readOption).then((readLen: long) => {
-  console.info('Succeeded in reading data');
-  let buf = buffer.from(arrayBuffer, 0, readLen.toInt());
-  console.info(`The content of file: ${buf.toString()}`);
-  stream.close();
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to read data. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-
-stream.read(arrayBuffer, (err: BusinessError, readLen: number) => {
-  if (err) {
-    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen);
-    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
-    stream.close();
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-
-stream.read(arrayBuffer, (err: BusinessError<void> | null, readLen: long | undefined) => {
-  if (err) {
-    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in reading data');
-    let buf = buffer.from(arrayBuffer, 0, readLen?.toInt());
-    console.info(`The content of file: ${buf.toString()}`);
-    stream.close();
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-stream.read(arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
-  if (err) {
-    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen);
-    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
-    stream.close();
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-stream.read(arrayBuffer, readOption, (err: BusinessError<void> | null, readLen: long | undefined) => {
-  if (err) {
-    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in reading data');
-    let buf = buffer.from(arrayBuffer, 0, readLen?.toInt());
-    console.info(`The content of file: ${buf.toString()}`);
-    stream.close();
-  }
-});
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(100);
-let bytesRead = mapping.read(buffer);
-console.info(`Succeeded in reading data, size is: ${bytesRead}`);
-
-mapping.unmapSync();
-fileIo.closeSync(file);
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(100);
-let bytesRead = mapping.read(50, buffer, 50);
-console.info(`Succeeded in reading data, size is: ${bytesRead}`);
-
-mapping.unmapSync();
-fileIo.closeSync(file);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: number = 4096;
-let readOption: ReadOptions = {
-  offset: 1,
-  length: 5
-};
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.read(arrayBuffer, readOption).then((readLength: number) => {
-  console.info(`Succeeded in reading, read length: ${readLength}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: long = 4096;
-let readOption: ReadOptions = {
-  offset: 1,
-  length: 5
-};
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.read(arrayBuffer, readOption).then((readLength: long) => {
-  console.info(`Succeeded in reading, read length: ${readLength}`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: number = 20;
-
-let arrayBuffer = new ArrayBuffer(length);
-randomAccessFile.read(arrayBuffer, (err: BusinessError, readLength: number) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (readLength) {
-      console.info(`Succeeded in reading, size is: ${readLength}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: long = 20;
-
-let arrayBuffer = new ArrayBuffer(length);
-randomAccessFile.read(arrayBuffer, (err: BusinessError | null, readLength: long | undefined) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (readLength) {
-      console.info(`Succeeded in reading, size is: ${readLength}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: number = 20;
-let readOption: ReadOptions = {
-  offset: 1,
-  length: 5
-};
-let arrayBuffer = new ArrayBuffer(length);
-randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError, readLength: number) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (readLength) {
-      console.info(`Succeeded in reading, size is: ${readLength}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: long = 20;
-let readOption: ReadOptions = {
-  offset: 1,
-  length: 5
-};
-let arrayBuffer = new ArrayBuffer(length);
-randomAccessFile.read(arrayBuffer, readOption, (err: BusinessError | null, readLength: long | undefined) => {
-  if (err) {
-    console.error(`Failed to read. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (readLength) {
-      console.info(`Succeeded in reading, size is: ${readLength}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
 ## read
 
 ```TypeScript
@@ -774,8 +147,6 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 从文件读取数据，返回实际读取的字节数。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -800,10 +171,6 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 | 13900034 |
 | 13900042 |
 
-**示例**
-
-参见 [read](#read)
-
 ## read
 
 ```TypeScript
@@ -817,8 +184,6 @@ read(
 从文件读取数据，支持配置读取选项，返回实际读取的字节数。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -844,10 +209,6 @@ read(
 | 13900034 |
 | 13900042 |
 
-**示例**
-
-参见 [read](#read)
-
 ## readSync
 
 ```TypeScript
@@ -860,8 +221,6 @@ readSync(
 以同步方法从文件读取数据，返回实际读取的字节数。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -893,56 +252,6 @@ readSync(
 | 13900042 |
 | 13900044 |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE);
-let buf = new ArrayBuffer(4096);
-fileIo.readSync(file.fd, buf);
-fileIo.closeSync(file);
-```
-
-```TypeScript
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-let buf = new ArrayBuffer(4096);
-let num = stream.readSync(buf, readOption);
-stream.close();
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: number = 4096;
-let arrayBuffer = new ArrayBuffer(length);
-let readLength = randomAccessFile.readSync(arrayBuffer);
-randomAccessFile.close();
-fileIo.closeSync(file);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let length: long = 4096;
-let arrayBuffer = new ArrayBuffer(length);
-let readLength = randomAccessFile.readSync(arrayBuffer);
-randomAccessFile.close();
-fileIo.closeSync(file);
-```
-
 ## setFilePointer
 
 ```TypeScript
@@ -953,15 +262,13 @@ setFilePointer(filePointer: number): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [filePointer](#filepointer) | number | 是 |
+| [filePointer](arkts-corefile-file-fs-randomaccessfile-i.md) | number | 是 |
 
 **错误码：**
 
@@ -972,15 +279,6 @@ setFilePointer(filePointer: number): void
 | 13900008 |
 | 13900020 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-randomAccessFile.setFilePointer(1);
-randomAccessFile.close();
-```
 
 ## write
 
@@ -994,8 +292,6 @@ write(
 将数据写入文件。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -1029,443 +325,6 @@ write(
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-fileIo.write(file.fd, str).then((writeLen: number) => {
-  console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-fileIo.write(file.fd, str).then((writeLen: long) => {
-  console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-fileIo.write(file.fd, str, (err: BusinessError, writeLen: number) => {
-  if (err) {
-    console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-fileIo.write(file.fd, str, (err: BusinessError<void> | null, writeLen: long | undefined) => {
-  if (err) {
-    console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-let writeOptions: WriteOptions = {
-    offset: 1,
-    length: 5
-};
-fileIo.write(file.fd, str, writeOptions, (err: BusinessError, writeLen: number) => {
-  if (err) {
-    console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-let writeOptions: WriteOptions = {
-    offset: 1,
-    length: 5
-};
-fileIo.write(file.fd, str, writeOptions, (err: BusinessError<void> | null, writeLen: long | undefined) => {
-  if (err) {
-    console.error(`Failed to write data to file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-stream.write("hello, world", writeOption).then((number: number) => {
-  console.info(`Succeeded in writing, size is: ${number}`);
-  stream.close();
-}).catch((err: BusinessError) => {
-  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-stream.write("hello, world", writeOption).then((number: long) => {
-  console.info(`Succeeded in writing, size is: ${number}`);
-  stream.close();
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-
-stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  stream.close();
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-
-stream.write("hello, world", (err: BusinessError<void> | null, bytesWritten: long | undefined) => {
-  if (err) {
-    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-      stream.close();
-    }
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-stream.write("hello, world", writeOption, (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  stream.close();
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-stream.write("hello, world", writeOption, (err: BusinessError<void> | null, bytesWritten: long | undefined) => {
-  if (err) {
-    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-      stream.close();
-    }
-  }
-});
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(11);
-let bytesWritten = mapping.write(buffer);
-console.info(`Succeeded in writing data to file, size is: ${bytesWritten}`);
-
-mapping.msyncSync();
-mapping.unmapSync();
-fileIo.closeSync(file);
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
-
-let buffer = new ArrayBuffer(11);
-let bytesWritten = mapping.write(50, buffer);
-console.info(`Succeeded in writing data to file, size is: ${bytesWritten}`);
-
-mapping.msyncSync();
-mapping.unmapSync();
-fileIo.closeSync(file);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: number = 4096;
-let writeOption: WriteOptions = {
-  offset: 1,
-  length: 5,
-  encoding: 'utf-8'
-};
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.write(arrayBuffer, writeOption).then((bytesWritten: number) => {
-  console.info(`Succeeded in writing, bytes written: ${bytesWritten}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: number = 4096;
-let writeOption: WriteOptions = {
-  offset: 1,
-  length: 5,
-  encoding: 'utf-8'
-};
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.write(arrayBuffer, writeOption).then((bytesWritten: long) => {
-  console.info(`Succeeded in writing, bytes written: ${bytesWritten}`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: number = 4096;
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.write(arrayBuffer, (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: long = 4096;
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.write(arrayBuffer, (err: BusinessError | null, bytesWritten: long | undefined) => {
-  if (err) {
-    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: number = 4096;
-let writeOption: WriteOptions = {
-  offset: 1,
-  length: bufferLength,
-  encoding: 'utf-8'
-};
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.CREATE |fileIo.OpenMode.READ_WRITE);
-let randomAccessFile = fileIo.createRandomAccessFileSync(file);
-let bufferLength: long = 4096;
-let writeOption: WriteOptions = {
-  offset: 1,
-  length: bufferLength,
-  encoding: 'utf-8'
-};
-let arrayBuffer = new ArrayBuffer(bufferLength);
-randomAccessFile.write(arrayBuffer, writeOption, (err: BusinessError | null, bytesWritten: long | undefined) => {
-  if (err) {
-    console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  randomAccessFile.close();
-  fileIo.closeSync(file);
-});
-```
-
 ## write
 
 ```TypeScript
@@ -1475,8 +334,6 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 将数据写入文件。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -1504,10 +361,6 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-参见 [write](#write)
-
 ## write
 
 ```TypeScript
@@ -1521,8 +374,6 @@ write(
 将数据写入文件，支持配置写入选项。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -1551,10 +402,6 @@ write(
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-参见 [write](#write)
-
 ## writeSync
 
 ```TypeScript
@@ -1567,8 +414,6 @@ writeSync(
 以同步方法将数据写入文件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -1602,45 +447,6 @@ writeSync(
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-let str: string = "hello, world";
-let writeLen = fileIo.writeSync(file.fd, str);
-console.info(`Succeeded in writing data to file, size is: ${writeLen}`);
-fileIo.closeSync(file);
-```
-
-```TypeScript
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath,"r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-let num = stream.writeSync("hello, world", writeOption);
-stream.close();
-```
-
-```TypeScript
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-let bytesWritten = randomAccessFile.writeSync("hello, world", writeOption);
-randomAccessFile.close();
-```
-
 ## fd
 
 ```TypeScript
@@ -1652,8 +458,6 @@ readonly fd: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -1668,7 +472,5 @@ RandomAccessFile对象的偏移指针，表示当前读写位置，单位为Byte
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

@@ -4,14 +4,12 @@ CounterV2CommonOptions定义了CounterV2的共通属性和事件。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from 'kits/@kit.ArkUI';
 ```
 
 ## onHoverDecrease
@@ -24,8 +22,6 @@ onHoverDecrease?: OnCounterV2HoverCallback
 **说明：**该属性对列表型、紧凑型和数值内联型CounterV2生效。对日期内联型CounterV2不生效。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,8 +39,6 @@ onHoverIncrease?: OnCounterV2HoverCallback
 **说明：**该属性对列表型、紧凑型和数值内联型CounterV2生效。对日期内联型CounterV2不生效。默认值：undefined，表示不触发该回调。值为undefined时，按默认值处理。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,8 +61,6 @@ focusable?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -78,7 +70,7 @@ focusable?: boolean
 ## step
 
 ```TypeScript
-step?: int
+step?: number
 ```
 
 设置CounterV2的步长。  
@@ -89,8 +81,6 @@ step?: int
 **默认值：** 1
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

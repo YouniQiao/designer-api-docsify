@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## openUkeyAuthDialog
@@ -15,8 +15,6 @@ function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRe
 Opens the PIN authentication dialog box of the USB Key credential. On the displayed page, the user can enter the PIN to authorize the USB credential. After the call is successful, the USB key credential will be unlocked. The app can use the credential to perform operations such as signing and encryption. This API uses a promise to return the result.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -47,28 +45,3 @@ Opens the PIN authentication dialog box of the USB Key credential. On the displa
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
 | [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) |
 | [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
-
-**Examples**
-
-```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-
-/* context is application context information, which is obtained by the caller. The context here is only an example. */
-let context: common.Context = new UIContext().getHostContext() as common.Context;
-/* keyUri is the unique identifier of the credential. The invoker obtains the value by itself. The value here is only an example. */
-let keyUri: string = "test"
-let ukeyAuthRequest: certificateManagerDialog.UkeyAuthRequest = { keyUri: keyUri }
-try {
-    certificateManagerDialog.openUkeyAuthDialog(context, ukeyAuthRequest).then(() => {
-        console.info(`Success to open ukey authorization dialog`)
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to open ukey authorization dialog. Code: ${err.code}, message: ${err.message}`);
-    });
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Failed to open ukey authorization dialog. Code: ${error.code}, message: ${error.message}`);
-}
-```

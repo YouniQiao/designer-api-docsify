@@ -4,8 +4,6 @@ Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdev
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)
@@ -15,7 +13,7 @@ Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdev
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## attributes
@@ -29,8 +27,6 @@ Configuration attributes.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Unique ID of the USB configuration.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [id](arkts-basicservices-usbmanager-usbconfiguration-i.md#id)
@@ -69,8 +63,6 @@ Supported interface attributes.
 **Type:** Array&lt;USBInterface&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Support for remote wakeup.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isremotewakeup)
@@ -109,8 +99,6 @@ Support for independent power supplies.
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ Maximum power consumption, in mA.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxpower)
@@ -149,8 +135,6 @@ Configuration name, which can be left empty.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

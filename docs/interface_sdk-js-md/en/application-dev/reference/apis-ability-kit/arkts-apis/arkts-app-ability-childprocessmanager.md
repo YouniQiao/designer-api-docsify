@@ -4,14 +4,12 @@ The childProcessManager module provides the child process management capability.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from '@kit.AbilityKit';
+import { childProcessManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

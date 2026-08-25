@@ -15,8 +15,6 @@ global \$r function
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -35,37 +33,3 @@ global \$r function
 | 类型 |
 | --- |
 | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Page {
-  build() {
-    Row() {
-      Column() {
-        Text($r('app.string.app_name'))
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-@Entry
-@Component
-struct Page {
-  build() {
-    Row() {
-      Column() {
-        Text($r('app.string.app_name'))
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

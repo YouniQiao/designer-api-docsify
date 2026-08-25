@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getKeyProperties
@@ -21,8 +21,6 @@ function getKeyProperties(keyAlias: string, options: HuksOptions, callback: Asyn
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getKeyItemProperties](arkts-universalkeystore-huks-getkeyitemproperties-f.md)( keyAlias: string, options: HuksOptions,
@@ -37,31 +35,6 @@ function getKeyProperties(keyAlias: string, options: HuksOptions, callback: Asyn
 | keyAlias | string | 是 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-huks.getKeyProperties(keyAlias, emptyOptions, (err, data) => {
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.getKeyProperties(keyAlias, emptyOptions);
-```
 
 
 ## getKeyProperties
@@ -78,8 +51,6 @@ function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksR
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -99,7 +70,3 @@ function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksR
 | 类型 |
 | --- |
 | Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; |
-
-**示例**
-
-参见 [getKeyProperties](#getkeyproperties)

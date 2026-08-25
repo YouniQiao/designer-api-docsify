@@ -11,11 +11,9 @@
 declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => void): WrappedBuilder<Args>
 ```
 
-`wrapBuilder`用于封装全局[@Builder](../arkts-apis/arkts-arkui-builder-builder-i.md)，可以将全局`@Builder`函数作为参数传递，实现按引用传递和动态调用，提升代码复用性。 开发指南见：[wrapBuilder：封装全局@Builder](../../../ui/state-management/arkts-wrapBuilder.md)。
+`wrapBuilder`用于封装全局@Builder，可以将全局`@Builder`函数作为参数传递，实现按引用传递和动态调用，提升代码复用性。 开发指南见：[wrapBuilder：封装全局@Builder](../../../ui/state-management/arkts-wrapBuilder.md)。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,16 +30,3 @@ declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => 
 | 类型 |
 | --- |
 | [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; |
-
-**示例**
-
-```TypeScript
-@Builder
-function myBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-
-// 使用wrapBuilder封装myBuilder
-let builderVar: WrappedBuilder<[string, number]> = wrapBuilder(myBuilder);
-```

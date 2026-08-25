@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 ```
 
 ## subscribe
@@ -15,8 +15,6 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 订阅通知扩展。使用蓝牙模块相关接口获取蓝牙设备的唯一地址后方可订阅。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -48,38 +46,3 @@ getSubscribeInfo 获取应用通知扩展订阅信息。
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600023](../errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let infos: notificationExtensionSubscription.NotificationExtensionSubscriptionInfo[] = [
-  {
-    addr: '01:23:45:67:89:AB', // 使用动态获取的蓝牙地址
-    type: notificationExtensionSubscription.SubscribeType.BLUETOOTH
-  }
-];
-notificationExtensionSubscription.subscribe(infos).then(() => {
-  console.info(`subscribe success`);
-}).catch((err: BusinessError) => {
-  console.error(`subscribe fail, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let infos: notificationExtensionSubscription.NotificationExtensionSubscriptionInfo[] = [
-  {
-    addr: '01:23:45:67:89:AB', // 使用动态获取的蓝牙地址
-    type: notificationExtensionSubscription.SubscribeType.BLUETOOTH
-  }
-];
-notificationExtensionSubscription.subscribe(infos).then(() => {
-  console.info('subscribe success');
-}).catch((err: Error) => {
-  let error = err as BusinessError
-  console.error(`subscribe fail, code is ${error.code}, message is ${error.message}`);
-});
-```

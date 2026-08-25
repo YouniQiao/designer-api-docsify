@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
+import { omapi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('stateChanged')
@@ -15,8 +15,6 @@ function on(type: 'stateChanged', callback: Callback<ServiceState>): void
 Enables listening for service status change events.Call this API to register a callback after you use [omapi.newSEService](arkts-connectivity-omapi-newseservice-f.md#newseserviceservicestate) or [omapi.createService](arkts-connectivity-omapi-createservice-f.md) to create a service.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.SecureElement
 

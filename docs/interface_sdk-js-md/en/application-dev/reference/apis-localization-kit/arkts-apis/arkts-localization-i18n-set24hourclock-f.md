@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## set24HourClock
@@ -15,8 +15,6 @@ export function set24HourClock(option: boolean): boolean
 Sets the 24-hour clock.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -35,25 +33,3 @@ Sets the 24-hour clock.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-// Set the system time to the 24-hour clock.
-let success: boolean = i18n.set24HourClock(true);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-// Set the system time to the 24-hour clock.
-try {
-  i18n.System.set24HourClock(true);
-} catch(error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.set24HourClock failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```

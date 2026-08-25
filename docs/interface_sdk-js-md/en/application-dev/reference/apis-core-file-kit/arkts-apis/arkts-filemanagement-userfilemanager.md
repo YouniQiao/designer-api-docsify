@@ -4,8 +4,6 @@ The **userFileManager** module provides user data management capabilities, inclu
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)
@@ -17,7 +15,7 @@ The **userFileManager** module provides user data management capabilities, inclu
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@kit.CoreFileKit';
+import { userFileManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

@@ -4,8 +4,6 @@ Describes the settings for BLE advertising.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AdvertiseSetting](arkts-connectivity-bluetoothmanager-advertisesetting-i.md)
@@ -15,7 +13,7 @@ Describes the settings for BLE advertising.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connectable
@@ -29,8 +27,6 @@ Indicates whether the BLE is connectable, default is {@code true}
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Minimum slot value for the advertising interval, which is {@code 32} (20 ms) Max
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [interval](arkts-connectivity-bluetoothmanager-advertisesetting-i.md#interval)
@@ -69,8 +63,6 @@ Minimum transmission power level for advertising, which is {@code -127} Maximum 
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

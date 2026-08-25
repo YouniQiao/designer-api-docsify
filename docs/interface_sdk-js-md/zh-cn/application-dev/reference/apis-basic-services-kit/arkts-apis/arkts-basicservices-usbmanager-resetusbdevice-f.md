@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## resetUsbDevice
@@ -21,8 +21,6 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)得到devicepipe作为参数。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -48,33 +46,3 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 | [14400010](../errorcode-usb.md#14400010-无法识别的错误) |
 | [14400013](../errorcode-usb.md#14400013-参数合法性检查失败) |
 | [14400004](../errorcode-usb.md#14400004-服务异常) |
-
-**示例**
-
-```TypeScript
-async function resetUsbDevice() {
-  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-  if (!devicesList || devicesList.length == 0) {
-    console.error(`device list is empty`);
-    return;
-  }
-
-  let rightResult = await usbManager.requestRight(devicesList?.[0]?.name);
-  if (!rightResult) {
-    console.error(`request right failed`);
-    return;
-  }
-  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  if (devicePipe == undefined) {
-    console.error(`connect device failed`);
-    return;
-  }
-  try {
-    let ret: boolean = usbManager.resetUsbDevice(devicePipe);
-    console.info(`resetUsbDevice  = ${ret}`);
-  } catch (err) {
-    console.error(`Failed to reset USB device. Code: ${err.code}, message: ${err.message}`);
-  }
-  usbManager.closePipe(devicePipe);
-}
-```

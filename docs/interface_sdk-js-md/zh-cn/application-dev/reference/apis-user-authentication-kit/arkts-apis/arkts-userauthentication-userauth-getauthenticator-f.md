@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getAuthenticator
@@ -16,8 +16,6 @@ function getAuthenticator(): Authenticator
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
@@ -29,11 +27,3 @@ function getAuthenticator(): Authenticator
 | 类型 |
 | --- |
 | [Authenticator](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-appaccount-authenticator-c.md) |
-
-**示例**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let authenticator = userAuth.getAuthenticator();
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.Cert
 
 ## AES_128_CBC
@@ -17,8 +15,6 @@ AES_128_CBC = 0
 AES-128-CBC加密算法。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ AES-192-CBC加密算法。
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Cert
@@ -49,8 +43,6 @@ AES_256_CBC = 2
 AES-256-CBC加密算法。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 

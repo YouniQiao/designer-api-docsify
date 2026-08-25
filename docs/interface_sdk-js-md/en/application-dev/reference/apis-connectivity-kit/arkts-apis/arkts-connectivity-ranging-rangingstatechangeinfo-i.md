@@ -4,14 +4,12 @@ Describes the ranging state change information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@kit.ConnectivityKit';
+import { ranging } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## cause
@@ -25,8 +23,6 @@ Cause of ranging stop.
 **Type:** [RangingStoppedCause](arkts-connectivity-ranging-rangingstoppedcause-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Address of the ranging device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -62,8 +56,6 @@ Indicates the handle number of ranging monitoring. The value should be an intege
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -79,8 +71,6 @@ Ranging state.
 **Type:** [RangingState](arkts-connectivity-ranging-rangingstate-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

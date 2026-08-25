@@ -15,8 +15,6 @@ Changes the file owner based on its path. This API returns the result synchronou
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -28,11 +26,3 @@ Changes the file owner based on its path. This API returns the result synchronou
 | path | string | Yes |
 | uid | number | Yes |
 | gid | number | Yes |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let stat = fileio.statSync(filePath)
-fileio.chownSync(filePath, stat.uid, stat.gid);
-```

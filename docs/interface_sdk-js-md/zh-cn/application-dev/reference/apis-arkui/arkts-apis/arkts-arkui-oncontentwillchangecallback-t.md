@@ -8,8 +8,6 @@ export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: nu
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,7 +17,7 @@ export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: nu
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | currentIndex | number | 是 |
-| comingIndex | number | 是 |
+| [comingIndex](../arkts-components/arkts-arkui-swipercontentwillscrollresult-i.md) | number | 是 |
 
 **返回值：**
 

@@ -1,14 +1,12 @@
 # ValueType
 
 ```TypeScript
-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined
+type ValueType = number | number | number | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined
 ```
 
 Enumerates the data field types allowed in a unified data record.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

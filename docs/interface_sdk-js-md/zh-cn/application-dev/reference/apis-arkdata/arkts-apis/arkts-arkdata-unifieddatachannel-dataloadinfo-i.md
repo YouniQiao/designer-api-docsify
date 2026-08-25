@@ -1,33 +1,30 @@
 # DataLoadInfo
 
 用于描述被加载数据的类型与数量。  
-- 在**数据发送方**中使用，表示实际可提供的数据范围，必须设置该字段。 - 在**数据接收方**中使用，表示期望加载的数据类型与数量，可根据需要设置该字段。
+- 在**数据发送方**中使用，表示实际可提供的数据范围，必须设置该字段。  
+- 在**数据接收方**中使用，表示期望加载的数据类型与数量，可根据需要设置该字段。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## recordCount
 
 ```TypeScript
-recordCount?: long
+recordCount?: number
 ```
 
-表示期望或可提供的最大数据记录数，默认值为0，取值范围为[0, 2&lt;sup&gt;32&lt;/sup&gt;-1]。超过取值范围时会按默认值处理。设置为浮点数时，仅使用整数部分。当用于拖拽时，会作为角标数量显示，最大支持 2&lt;sup&gt;31&lt;/sup&gt;-1，超过此数值时不显示角标。作为角标数量时，优先级低于DragPreviewOptions中的numberBadge方法。
+表示期望或可提供的最大数据记录数，默认值为0，取值范围为[0, 2&lt;sup&gt;32&lt;/sup&gt;-1]。超过取值范围时会按默认值处理。设置为浮点数时，仅使用整数部分。当用于拖拽时，会作为角标数量显示，最大支持 2&lt;sup&gt;31&lt;/sup&gt;-1，超过此数值时不显示角标。作为角标数量时，优先级低于[DragPreviewOptions](../../apis-arkui/arkts-components/arkts-arkui-dragpreviewoptions-i.md)中的numberBadge方法。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +43,6 @@ types?: Set<string>
 **类型：** Set&lt;string&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

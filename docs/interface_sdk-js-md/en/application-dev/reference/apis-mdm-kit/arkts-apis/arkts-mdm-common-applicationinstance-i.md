@@ -4,14 +4,12 @@ Defines application instance data.It is used as an input parameter in the [addUs
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@kit.MDMKit';
+import { common } from 'kits/@kit.MDMKit';
 ```
 
 ## accountId
@@ -25,8 +23,6 @@ Account ID. The value is an integer greater than or equal to 0. You can obtain t
 **Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ appIdentifier: string
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -61,8 +55,6 @@ Index of the application clone. The value is an integer greater than or equal to
 **Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

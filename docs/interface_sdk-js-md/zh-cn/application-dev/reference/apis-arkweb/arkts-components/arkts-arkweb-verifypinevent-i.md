@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -25,8 +23,6 @@ handler: VerifyPinHandler
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## identity
@@ -40,7 +36,5 @@ identity: string
 **类型：** string
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core

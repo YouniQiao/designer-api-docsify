@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## componentController
@@ -22,11 +20,9 @@ componentController: XComponentController
 
 表示原始XComponent控制器。
 
-**类型：** [XComponentController](arkts-arkui-xcomponent-xcomponentcontroller-c.md)
+**类型：** [XComponentController](../arkts-components/arkts-arkui-xcomponentcontroller-c.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ componentController: XComponentController
 ## contentHeight
 
 ```TypeScript
-contentHeight?: int
+contentHeight?: number
 ```
 
 原始内容高度，单位为px。用于确定画中画窗口比例。当 [使用typeNode的方式](arkts-arkui-pipwindow-create-f.md)创建 PiPController时，不传值则默认为1080。当[不使用typeNode的方式](arkts-arkui-pipwindow-create-f.md)创建PiPController时，不传 值则默认为XComponent组件的高度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ contentHeight?: int
 ## contentWidth
 
 ```TypeScript
-contentWidth?: int
+contentWidth?: number
 ```
 
 原始内容宽度，单位为px。用于确定画中画窗口比例。当 [使用typeNode的方式](arkts-arkui-pipwindow-create-f.md)创建 PiPController时，不传值则默认为1920。当[不使用typeNode的方式](arkts-arkui-pipwindow-create-f.md)创建PiPController时，不传 值则默认为XComponent组件的宽度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -80,8 +72,6 @@ context: BaseContext
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -97,8 +87,6 @@ controlGroups?: Array<PiPControlGroup>
 **类型：** Array&lt;[PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -118,8 +106,6 @@ cornerAdsorptionEnabled?: boolean
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -136,8 +122,6 @@ customUIController?: NodeController
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -145,16 +129,14 @@ customUIController?: NodeController
 ## defaultWindowSizeType
 
 ```TypeScript
-defaultWindowSizeType?: int
+defaultWindowSizeType?: number
 ```
 
 当前应用第一次拉起画中画的窗口大小。0：代表不设置大小。按照上个应用的画中画关闭前的大小启动；1：代表小窗；2：代表大窗；不传值则为默认值0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -163,18 +145,16 @@ defaultWindowSizeType?: int
 ## handleId
 
 ```TypeScript
-handleId?: int
+handleId?: number
 ```
 
 navigation控件下的子页面ID，点击"恢复全屏窗口"按钮后，恢复到指定的页面。 只适用于UIAbility使用Navigation管理页面的场景，可以设置为Navigation下的子页面ID。 默认为-1，恢复Navigation栈顶页面。推荐使用方法getUniqueId()获取页面ID。 使用Navigation模块内页面路由时， 推荐使用[系统路由表](../../../ui/arkts-navigation-cross-package.md#系统路由表)， 否则可能会出现getUniqueId()获取页面ID不准确的情况。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **默认值：** -1
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -188,11 +168,9 @@ localStorage?: LocalStorage
 
 页面级别的UI状态存储单元。多实例下可用来跟踪主窗实例的UI状态存储对象，不传值则无法通过画中画窗口获取主窗的UI状态存储对象。
 
-**类型：** [LocalStorage](arkts-arkui-localstorage-localstorage-c.md)
+**类型：** [LocalStorage](arkts-arkui-localstorage-c.md)
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
@@ -210,8 +188,6 @@ navigation控件ID，不传值则默认不需要缓存页面。1、UIAbility使�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -227,8 +203,6 @@ templateType?: PiPTemplateType
 **类型：** [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

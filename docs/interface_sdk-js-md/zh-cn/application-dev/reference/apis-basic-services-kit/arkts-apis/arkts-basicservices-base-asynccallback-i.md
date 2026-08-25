@@ -4,15 +4,13 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **系统能力：** SystemCapability.Base
 
 ## 导入模块
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## [[Call]]
@@ -22,8 +20,6 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 ```
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

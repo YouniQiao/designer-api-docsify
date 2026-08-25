@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## on('networkStateChange')
@@ -16,8 +16,6 @@ function on(type: 'networkStateChange', callback: Callback<NetworkState>): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
@@ -39,14 +37,6 @@ function on(type: 'networkStateChange', callback: Callback<NetworkState>): void
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-observer.on('networkStateChange', (data: observer.NetworkState) => {
-    console.info("on networkStateChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('networkStateChange')
@@ -59,8 +49,6 @@ function on(type: 'networkStateChange', options: ObserverOptions, callback: Call
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
@@ -84,17 +72,6 @@ function on(type: 'networkStateChange', options: ObserverOptions, callback: Call
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('networkStateChange', options, (data: observer.NetworkState) => {
-    console.info("on networkStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('signalInfoChange')
 
@@ -105,8 +82,6 @@ function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation
 订阅信号状态变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -127,16 +102,6 @@ function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-observer.on('signalInfoChange', (data: Array<radio.SignalInformation>) => {
-    console.info("on signalInfoChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('signalInfoChange')
 
@@ -147,8 +112,6 @@ function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callba
 订阅指定卡槽位的信号状态变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -170,19 +133,6 @@ function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callba
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('signalInfoChange', options, (data: Array<radio.SignalInformation>) => {
-    console.info("on signalInfoChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('cellularDataConnectionStateChange')
 
@@ -193,8 +143,6 @@ function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataCo
 订阅蜂窝数据链路连接状态，使用callback方式作为异步方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -214,14 +162,6 @@ function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataCo
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-observer.on('cellularDataConnectionStateChange', (data: observer.DataConnectionStateInfo) => {
-    console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('cellularDataConnectionStateChange')
@@ -235,8 +175,6 @@ function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -257,17 +195,6 @@ function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('cellularDataConnectionStateChange', options, (data: observer.DataConnectionStateInfo) => {
-    console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('cellularDataFlowChange')
 
@@ -278,8 +205,6 @@ function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): v
 订阅蜂窝数据业务的上下行数据流状态，使用callback方式作为异步方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -299,16 +224,6 @@ function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): v
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-observer.on('cellularDataFlowChange', (data: data.DataFlowType) => {
-    console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('cellularDataFlowChange')
@@ -321,8 +236,6 @@ function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: 
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **参数：**
@@ -343,19 +256,6 @@ function on(type: 'cellularDataFlowChange', options: ObserverOptions, callback: 
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('cellularDataFlowChange', options, (data: data.DataFlowType) => {
-    console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('callStateChange')
 
@@ -366,8 +266,6 @@ function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void
 订阅通话状态变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -388,14 +286,6 @@ function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-observer.on('callStateChange', (data: observer.CallStateInfo) => {
-    console.info("on callStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('callStateChange')
 
@@ -406,8 +296,6 @@ function on(type: 'callStateChange', options: ObserverOptions, callback: Callbac
 订阅通话状态变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -429,17 +317,6 @@ function on(type: 'callStateChange', options: ObserverOptions, callback: Callbac
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('callStateChange', options, (data: observer.CallStateInfo) => {
-    console.info("on callStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('callStateChangeEx')
 
@@ -450,8 +327,6 @@ function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options
 订阅通话状态变化拓展事件，使用callback方式作为异步方法。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -472,22 +347,6 @@ function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options
 | [8800003](../errorcode-telephony.md#8800003-系统内部错误) |
 | [8800999](../errorcode-telephony.md#8800999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { call } from '@kit.TelephonyKit';
-
-let callback: (data: call.TelCallState) => void = (data: call.TelCallState) => {
-    console.info("on callStateChangeEx, data:" + JSON.stringify(data));
-}
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-
-observer.on('callStateChangeEx', callback, options);
-observer.on('callStateChangeEx', callback);
-```
-
 
 ## on('simStateChange')
 
@@ -501,8 +360,6 @@ function on(type: 'simStateChange', callback: Callback<SimStateData>): void
 > 此接口不包含sim卡的激活状态，具体请参见[sim.isSimActive](arkts-telephony-sim-issimactive-f.md)接口。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -523,14 +380,6 @@ function on(type: 'simStateChange', callback: Callback<SimStateData>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-observer.on('simStateChange', (data: observer.SimStateData) => {
-    console.info("on simStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('simStateChange')
 
@@ -541,8 +390,6 @@ function on(type: 'simStateChange', options: ObserverOptions, callback: Callback
 订阅指定卡槽位的sim状态更改事件，使用callback方式作为异步方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -564,17 +411,6 @@ function on(type: 'simStateChange', options: ObserverOptions, callback: Callback
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('simStateChange', options, (data: observer.SimStateData) => {
-    console.info("on simStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('iccAccountInfoChange')
 
@@ -585,8 +421,6 @@ function on(type: 'iccAccountInfoChange', callback: Callback<void>): void
 订阅卡帐户变化事件，使用callback方式作为异步方法。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -606,11 +440,3 @@ function on(type: 'iccAccountInfoChange', callback: Callback<void>): void
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-observer.on('iccAccountInfoChange', () => {
-    console.info("on iccAccountInfoChange success");
-});
-```

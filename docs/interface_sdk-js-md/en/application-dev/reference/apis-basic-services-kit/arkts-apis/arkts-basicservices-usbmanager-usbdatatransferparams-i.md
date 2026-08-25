@@ -4,14 +4,12 @@ As a USB data transfer interface, it is required for a client to initiate a tran
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## buffer
@@ -25,8 +23,6 @@ Buffer, which is used to store data for read or write requests.
 **Type:** Uint8Array
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -42,8 +38,6 @@ Information returned by the callback.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## devPipe
@@ -58,23 +52,19 @@ USB device pipe, which is used to determine the bus number and device address. Y
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## endpoint
 
 ```TypeScript
-endpoint: int
+endpoint: number
 ```
 
 Endpoint address, which is a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -90,55 +80,47 @@ USB transfer flag.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## isoPacketCount
 
 ```TypeScript
-isoPacketCount: int
+isoPacketCount: number
 ```
 
 Number of data packets during real-time transfer, used only for I/Os with real-time transfer endpoints. The value must be a non-negative number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
 ## length
 
 ```TypeScript
-length: int
+length: number
 ```
 
 Length of the data buffer.Unit: bytes. The value must be a non-negative number (expected length).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
 ## timeout
 
 ```TypeScript
-timeout: int
+timeout: number
 ```
 
 Timeout duration.Unit: milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -154,8 +136,6 @@ Transfer type.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## userData
@@ -169,7 +149,5 @@ User data.
 **Type:** Uint8Array
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager

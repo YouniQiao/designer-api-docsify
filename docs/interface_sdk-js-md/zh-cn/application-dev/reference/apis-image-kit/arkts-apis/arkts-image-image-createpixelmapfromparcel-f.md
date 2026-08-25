@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createPixelMapFromParcel
@@ -15,8 +15,6 @@ function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap
 Creates a PixelMap object based on MessageSequence parameter.
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -45,62 +43,3 @@ Creates a PixelMap object based on MessageSequence parameter.
 | [62980179](../errorcode-image.md#62980179-缓冲区大小异常) |
 | [62980180](../errorcode-image.md#62980180-文件描述符映射失败) |
 | [62980246](../errorcode-image.md#62980246-读取pixelmap失败) |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class MySequence implements rpc.Parcelable {
-  pixelMap: image.PixelMap;
-  constructor(pixelMap: image.PixelMap) {
-    this.pixelMap = pixelMap;
-  }
-  marshalling(messageSequence: rpc.MessageSequence) {
-    this.pixelMap.marshalling(messageSequence);
-    return true;
-  }
-  unmarshalling(messageSequence: rpc.MessageSequence) {
-    try {
-      this.pixelMap = image.createPixelMapFromParcel(messageSequence);
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`Failed to create the PixelMap from parcel. Code: ${err.code}, message: ${err.message}`);
-      return false;
-    }
-    return true;
-  }
-}
-
-async function createPixelMapFromParcel() {
-  const color: ArrayBuffer = new ArrayBuffer(96);
-  let bufferArr: Uint8Array = new Uint8Array(color);
-  for (let i = 0; i < bufferArr.length; i++) {
-    bufferArr[i] = 0x80;
-  }
-  let opts: image.InitializationOptions = {
-    editable: true,
-    pixelFormat: image.PixelMapFormat.BGRA_8888,
-    size: { height: 4, width: 6 },
-    alphaType: image.AlphaType.UNPREMUL
-  };
-  const pixelMap: image.PixelMap | undefined = await image.createPixelMap(color, opts);
-  if (pixelMap != undefined) {
-    // 序列化。
-    let parcelable: MySequence = new MySequence(pixelMap);
-    let data: rpc.MessageSequence = rpc.MessageSequence.create();
-    data.writeParcelable(parcelable);
-
-    // 反序列化rpc获取到data。
-    let seq: MySequence = new MySequence(pixelMap);
-    data.readParcelable(seq);
-
-    // 获取到PixelMap。
-    let newPixelMap = seq.pixelMap;
-    if (newPixelMap != undefined) {
-      console.info('Succeeded in getting the PixelMap.');
-    }
-  }
-}
-```

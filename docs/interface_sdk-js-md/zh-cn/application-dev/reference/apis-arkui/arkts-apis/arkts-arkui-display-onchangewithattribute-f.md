@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## onChangeWithAttribute
 
 ```TypeScript
-function onChangeWithAttribute(displayAttributeOption: Array<string>, callback: Callback<long>): void
+function onChangeWithAttribute(displayAttributeOption: Array<string>, callback: Callback<number>): void
 ```
 
 开启显示设备指定属性变化的监听。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -27,7 +25,7 @@ function onChangeWithAttribute(displayAttributeOption: Array<string>, callback: 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | displayAttributeOption | Array & lt;string & gt; | 是 |
-| callback | ArkTS-Dyn: [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 是 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -35,15 +33,3 @@ function onChangeWithAttribute(displayAttributeOption: Array<string>, callback: 
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let attributesChangeCallback: Callback<number> = (data: number) => {
-  console.info(`Listening enabled. Data: ${data}`);
-};
-let attributes: Array<string> = ['rotation', 'width'];
-display.onChangeWithAttribute(attributes, attributesChangeCallback);
-```

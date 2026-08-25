@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disallowAddLocalAccount
@@ -15,8 +15,6 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean, callback: Async
 禁止设备创建本地账号。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -48,45 +46,6 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean, callback: Async
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-accountManager.disallowAddLocalAccount(wantTemp, true, (err) => {
-  if (err) {
-    console.error(`Failed to disallow add local account. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in disallowing add local account');
-});
-```
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-accountManager.disallowAddLocalAccount(wantTemp, true).then(() => {
-  console.info('Succeeded in disallowing add local account');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to disallow add local account. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## disallowAddLocalAccount
 
@@ -97,8 +56,6 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean): Promise<void>
 禁止设备创建本地账号。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -134,7 +91,3 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [disallowAddLocalAccount](#disallowaddlocalaccount)

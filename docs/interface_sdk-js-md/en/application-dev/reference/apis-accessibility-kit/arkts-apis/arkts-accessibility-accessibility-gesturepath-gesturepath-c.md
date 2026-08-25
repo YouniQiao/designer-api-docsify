@@ -4,27 +4,23 @@ Represents gesture path information, used to simulate user touch gestures (such 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePath } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## constructor
 
 ```TypeScript
-constructor(durationTime: long)
+constructor(durationTime: number)
 ```
 
 Creates a gesture path object by passing in the total gesture duration. After creating a GesturePath instance, you must also set the required property points.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -35,14 +31,6 @@ Creates a gesture path object by passing in the total gesture duration. After cr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [durationTime](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | number | Yes |
-
-**Examples**
-
-```TypeScript
-import { GesturePath } from '@kit.AccessibilityKit';
-
-let gesturePath = new GesturePath(20);
-```
 
 ## durationTime
 
@@ -55,8 +43,6 @@ Total gesture duration, in ms. The value must be greater than 0.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -71,7 +57,5 @@ Sequence of touch points on the gesture path, used to form the movement trajecto
 **Type:** Array&lt;[GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

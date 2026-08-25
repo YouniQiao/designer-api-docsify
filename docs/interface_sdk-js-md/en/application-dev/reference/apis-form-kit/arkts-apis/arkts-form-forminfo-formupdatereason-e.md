@@ -4,8 +4,6 @@ Form update reason.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = -1
 The reason for the form update is unknown.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ FORM_NODE_REUSE = 0
 The reason for the form update is node reuse.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

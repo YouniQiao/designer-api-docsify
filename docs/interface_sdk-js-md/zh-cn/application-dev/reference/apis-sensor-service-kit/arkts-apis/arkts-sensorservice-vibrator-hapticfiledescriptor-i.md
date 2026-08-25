@@ -5,60 +5,52 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## 导入模块
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## fd
 
 ```TypeScript
-fd: int
+fd: number
 ```
 
 资源文件描述符。可通过[fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen)从沙箱路径获取或通过 [getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd) 从HAP资源获取。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## length
 
 ```TypeScript
-length?: long
+length?: number
 ```
 
 资源长度。单位：B（字节）。默认值：从偏移位置至文件结尾的长度。取值范围：不可超出文件有效范围。使用场景：适用于振动配置文件中包含多种振动效果、需要指定特定长度振动的场景。不填写时默认读取从偏移位置至文件结尾的全部内容。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
 ## offset
 
 ```TypeScript
-offset?: long
+offset?: number
 ```
 
 距文件起始位置的偏移量。单位：B（字节）。默认值：文件起始位置（0）。取值范围：不可超出文件有效范围。使用场景：适用于振动配置文件中包含多种振动效果、需要指定从特定偏移位置开始振动的场景。不填写时默认从文件起始位置开始。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

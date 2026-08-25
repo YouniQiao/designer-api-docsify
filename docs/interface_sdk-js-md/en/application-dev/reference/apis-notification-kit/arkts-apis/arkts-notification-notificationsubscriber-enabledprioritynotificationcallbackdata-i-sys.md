@@ -4,8 +4,6 @@ Returns the notification priority master switch state.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -16,13 +14,13 @@ Returns the notification priority master switch state.
 readonly enable: boolean
 ```
 
-Whether the priority notification is enabled. - **true**: The priority notification is enabled. - **false**: The priority notification is disabled.
+Whether the priority notification is enabled.  
+- **true**: The priority notification is enabled.  
+- **false**: The priority notification is disabled.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

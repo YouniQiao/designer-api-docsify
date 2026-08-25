@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getUserAuthInstance
@@ -21,8 +21,6 @@ Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-
 > or fails), the instance cannot be used again.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -49,41 +47,3 @@ Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 | [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
 | [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: number = 16;
-  let randData: Uint8Array | null = null;
-  let retryCount = 0;
-  while(retryCount < 3){
-    randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
-      break;
-    }
-    retryCount++;
-  }
-  if(!randData){
-    return;
-  }
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: 'Enter password',
-  };
-  let userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance success');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
-}
-```

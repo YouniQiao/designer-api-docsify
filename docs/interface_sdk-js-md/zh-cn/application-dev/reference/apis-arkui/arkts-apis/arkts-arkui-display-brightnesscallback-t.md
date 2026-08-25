@@ -8,8 +8,6 @@ type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**

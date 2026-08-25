@@ -4,14 +4,12 @@ Optional configuration for maximizing.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## acrossDisplayPresentation
@@ -27,8 +25,6 @@ The parameter controls the across-display mode policy of main windows. This para
 **Default:** AcrossDisplayPresentation.FOLLOW_ACROSS_DISPLAY_SETTING
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Layout when the window is maximized.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -65,8 +59,6 @@ The configuration of snapshot animation. If not specified, the system default an
 **Type:** [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

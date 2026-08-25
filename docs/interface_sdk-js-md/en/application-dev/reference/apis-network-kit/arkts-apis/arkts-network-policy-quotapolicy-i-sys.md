@@ -4,8 +4,6 @@ Defines the network quota policy.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the network quota policy.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## lastLimitRemind
@@ -27,8 +25,6 @@ Last time when the quota was exhausted. Default value: **-1**.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -46,8 +42,6 @@ Last time when an alarm was generated. Default value: **-1**.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Action to take when the data volume quota is reached.
 **Type:** [LimitAction](arkts-network-policy-limitaction-e-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -82,8 +74,6 @@ Data volume quota.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Whether the network is a metered network. The value **true** indicates that the 
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -118,8 +106,6 @@ Metering period for the quota limit. **D1**, **M1**, and **Y1** indicate one day
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -135,8 +121,6 @@ Data volume threshold for generating an alarm.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

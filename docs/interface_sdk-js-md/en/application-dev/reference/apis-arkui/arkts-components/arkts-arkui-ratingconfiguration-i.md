@@ -1,12 +1,10 @@
 # RatingConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration.
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** RatingConfiguration extends CommonConfiguration<RatingConfiguration>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,8 +25,6 @@ Whether the rating bar is used as an indicator. **true**: used as an indicator. 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -46,8 +42,6 @@ Value to rate.Default value: **0**Value range: [0, stars]Values less than 0 are 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +61,6 @@ Total number of ratings.Default value: **5**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -87,8 +79,6 @@ Step of an operation.Default value: **0.5**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -106,8 +96,6 @@ Callback triggered when the rating value changes.
 **Type:** Callback&lt;number&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

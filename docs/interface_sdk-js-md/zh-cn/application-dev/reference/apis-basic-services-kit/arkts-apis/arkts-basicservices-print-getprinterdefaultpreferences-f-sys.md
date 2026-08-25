@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getPrinterDefaultPreferences
@@ -15,8 +15,6 @@ function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPrefere
 按打印机ID获取默认首选项。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 

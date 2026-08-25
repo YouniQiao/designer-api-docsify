@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disallowAddOsAccountByUser
@@ -15,8 +15,6 @@ function disallowAddOsAccountByUser(admin: Want, userId: number, disallow: boole
 禁止用户添加账号。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -47,24 +45,3 @@ function disallowAddOsAccountByUser(admin: Want, userId: number, disallow: boole
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  accountManager.disallowAddOsAccountByUser(wantTemp, 100, true);
-  console.info(`Succeeded in disallowing user add os account`);
-} catch (err) {
-  console.error(`Failed to disallow user add os account. Code: ${err.code}, message: ${err.message}`);
-}
-```

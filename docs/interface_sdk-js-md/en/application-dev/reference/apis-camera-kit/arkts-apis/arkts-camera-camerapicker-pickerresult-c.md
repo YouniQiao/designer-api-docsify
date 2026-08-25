@@ -4,14 +4,12 @@ Defines the processing result of the camera picker.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from '@kit.CameraKit';
+import { cameraPicker } from 'kits/@kit.CameraKit';
 ```
 
 ## mediaType
@@ -26,8 +24,6 @@ Media type.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -35,16 +31,14 @@ Media type.
 ## resultCode
 
 ```TypeScript
-resultCode: int
+resultCode: number
 ```
 
 Result code. The value **0** means that the processing is successful, and **-1** means that the processing fails.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -61,8 +55,6 @@ URI of the result. If **saveUri** is empty, **resultUri** is a public media path
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

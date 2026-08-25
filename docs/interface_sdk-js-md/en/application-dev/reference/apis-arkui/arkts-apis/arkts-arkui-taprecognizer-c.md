@@ -6,8 +6,6 @@ Implements a tap gesture recognizer object. Inherits from [GestureRecognizer](ar
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ getTapCount(): number
 Obtains the number of consecutive taps required for the tap gesture to be recognized.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

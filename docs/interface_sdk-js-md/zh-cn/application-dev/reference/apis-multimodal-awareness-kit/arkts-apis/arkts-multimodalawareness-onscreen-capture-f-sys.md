@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## capture
@@ -16,8 +16,6 @@ function capture(capability: OnscreenAwarenessCap,
 主动触发屏幕内容感知，获取页面信息。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS

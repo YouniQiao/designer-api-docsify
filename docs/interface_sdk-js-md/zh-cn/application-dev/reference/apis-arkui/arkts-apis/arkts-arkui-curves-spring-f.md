@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## spring
@@ -19,8 +19,6 @@ function spring(velocity: number, mass: number, stiffness: number, damping: numb
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [springCurve](arkts-arkui-curves-springcurve-f.md)
@@ -33,8 +31,8 @@ function spring(velocity: number, mass: number, stiffness: number, damping: numb
 | --- | --- | --- |
 | velocity | number | 是 |
 | mass | number | 是 |
-| stiffness | number | 是 |
-| damping | number | 是 |
+| [stiffness](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |
+| [damping](../arkts-components/arkts-arkui-chainanimationoptions-i-sys.md) | number | 是 |
 
 **返回值：**
 

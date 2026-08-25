@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getExtensionAbilityResourceInfo
 
 ```TypeScript
-function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityType: bundleManager.ExtensionAbilityType, resourceFlags: int, appIndex?: int): Array<LauncherAbilityResourceInfo>
+function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityType: bundleManager.ExtensionAbilityType, resourceFlags: number, appIndex?: number): Array<LauncherAbilityResourceInfo>
 ```
 
 根据应用包名、扩展组件类型、资源信息标志、应用分身ID获取应用的扩展组件资源。使用同步方式返回。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
 
@@ -30,8 +28,8 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 | --- | --- | --- |
 | bundleName | string | 是 |
 | [extensionAbilityType](arkts-ability-extensionabilityinfo-i.md) | bundleManager.ExtensionAbilityType | 是 |
-| resourceFlags | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| resourceFlags | number | 是 |
+| appIndex | number | 否 |
 
 **返回值：**
 
@@ -47,25 +45,3 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-
-**示例**
-
-```TypeScript
-import { bundleManager, bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let extensionAbilityType = bundleManager.ExtensionAbilityType.INPUT_METHOD;
-let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  let resourceInfo =
-    bundleResourceManager.getExtensionAbilityResourceInfo(bundleName, extensionAbilityType, resourceFlag);
-  hilog.info(0x0000, 'testTag', 'getExtensionAbilityResourceInfo successfully. Data label: %{public}s',
-    JSON.stringify(resourceInfo[0].label));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  let code = (err as BusinessError).code;
-  hilog.error(0x0000, 'testTag', 'getExtensionAbilityResourceInfo failed: %{public}d %{public}s', code, message);
-}
-```

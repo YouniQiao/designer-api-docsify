@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from '@kit.ArkUI';
+import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

@@ -16,29 +16,25 @@ Describes the typographic boundaries of a text line. These boundaries depend on 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## ascent
 
 ```TypeScript
-ascent: double
+ascent: number
 ```
 
 Ascent height of a text line, which is a floating-point value in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -47,16 +43,14 @@ Ascent height of a text line, which is a floating-point value in physical pixels
 ## descent
 
 ```TypeScript
-descent: double
+descent: number
 ```
 
 Descent height of a text line, which is a floating-point value in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -65,16 +59,14 @@ Descent height of a text line, which is a floating-point value in physical pixel
 ## leading
 
 ```TypeScript
-leading: double
+leading: number
 ```
 
 Leading of a text line, which is a floating-point value in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -83,16 +75,14 @@ Leading of a text line, which is a floating-point value in physical pixels (px).
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
 Total width of the layout boundary, which is a floating-point value in physical pixels (px).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

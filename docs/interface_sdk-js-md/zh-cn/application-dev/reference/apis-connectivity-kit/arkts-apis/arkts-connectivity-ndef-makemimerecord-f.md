@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## makeMimeRecord
 
 ```TypeScript
-function makeMimeRecord(mimeType: string, mimeData: int[]): NdefRecord
+function makeMimeRecord(mimeType: string, mimeData: number[]): NdefRecord
 ```
 
 根据输入的MIME数据和类型，构建NDEF标签的Record。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -27,7 +25,7 @@ function makeMimeRecord(mimeType: string, mimeData: int[]): NdefRecord
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mimeType | string | 是 |
-| mimeData | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| mimeData | number[] | 是 |
 
 **返回值：**
 

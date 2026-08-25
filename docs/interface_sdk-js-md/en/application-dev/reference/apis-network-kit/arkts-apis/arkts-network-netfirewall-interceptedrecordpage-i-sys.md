@@ -4,8 +4,6 @@ Intercepted record page information.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Intercepted record page information.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## data
@@ -27,8 +25,6 @@ Page data: all records displayed on this page.
 **Type:** Array&lt;[InterceptedRecord](arkts-network-netfirewall-interceptedrecord-i-sys.md)&gt;
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
@@ -46,8 +42,6 @@ Current page number: indicates the page number of this query.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ Page size: maximum number of records on a page for this query.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ Total pages: total number of pages.
 **Type:** number
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 

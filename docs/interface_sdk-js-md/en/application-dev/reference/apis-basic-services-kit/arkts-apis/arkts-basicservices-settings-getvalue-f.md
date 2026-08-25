@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getValue
@@ -15,8 +15,6 @@ function getValue(dataAbilityHelper: DataAbilityHelper, name: string, callback: 
 Obtains the value of a specified character string in the database.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -34,70 +32,6 @@ Obtains the value of a specified character string in the database.
 | name | string | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, (err, value) => {
-  if (err) {
-    console.error(`Failed to get the setting. ${err.message} `);
-    return;
-  }
-  console.info(`callback:value -> ${value}`)
-});
-```
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS).then((value) => {
-  console.info(`promise:value -> ${value}`)
-});
-```
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the getValue API will update its value.)
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, settings.domainName.DEVICE_SHARED).then((value) => {
-  console.info(`Promise:value -> ${value}`);
-});
-```
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let uri:string = settings.getUriSync(settings.display.SCREEN_BRIGHTNESS_STATUS);
-let helper = featureAbility.acquireDataAbilityHelper(uri);
-settings.getValue(helper, settings.display.SCREEN_BRIGHTNESS_STATUS, (err:Error, value:string) => {
-    if (err) {
-        console.error(`Failed to get the setting. ${err.message} `);
-        return;
-    }
-    console.info(`callback:value -> ${JSON.stringify(value)}`)
-});
-```
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let uri:string = settings.getUriSync(settings.display.SCREEN_BRIGHTNESS_STATUS);
-let helper = featureAbility.acquireDataAbilityHelper(uri);
-settings.getValue(helper, settings.display.SCREEN_BRIGHTNESS_STATUS).then((value:string) => {
-    console.info(`promise:value -> ${JSON.stringify(value)}`)
-});
-```
-
 
 ## getValue
 
@@ -108,8 +42,6 @@ function getValue(dataAbilityHelper: DataAbilityHelper, name: string): Promise<o
 Obtains the value of a specified character string in the database.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -132,10 +64,6 @@ Obtains the value of a specified character string in the database.
 | --- |
 | Promise & lt;object & gt; |
 
-**Examples**
-
-See [getValue](#getvalue)
-
 
 ## getValue
 
@@ -146,8 +74,6 @@ function getValue(context: Context, name: string, callback: AsyncCallback<string
 Get value from settingsdata
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,10 +87,6 @@ Get value from settingsdata
 | name | string | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
-**Examples**
-
-See [getValue](#getvalue)
-
 
 ## getValue
 
@@ -175,8 +97,6 @@ function getValue(context: Context, name: string): Promise<string>
 Get value from settingsdata
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -195,10 +115,6 @@ Get value from settingsdata
 | --- |
 | Promise & lt;string & gt; |
 
-**Examples**
-
-See [getValue](#getvalue)
-
 
 ## getValue
 
@@ -209,8 +125,6 @@ function getValue(context: Context, name: string, domainName: string): Promise<s
 Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -229,7 +143,3 @@ Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SEC
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;string & gt; |
-
-**Examples**
-
-See [getValue](#getvalue)

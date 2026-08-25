@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## enableDynamicIcon
@@ -15,8 +15,6 @@ function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void
 Enables the dynamic icon based on the given bundle name and module name. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON
 
@@ -49,49 +47,6 @@ Enables the dynamic icon based on the given bundle name and module name. This AP
 | [17700304](../errorcode-bundle.md#17700304-failed-to-enable-the-dynamic-icon) |
 | [17700307](../errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName: string = 'com.ohos.demo';
-let moduleName: string = 'moduleTest';
-
-try {
-  bundleManager.enableDynamicIcon(bundleName, moduleName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'enableDynamicIcon successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName: string = 'com.ohos.demo';
-let moduleName: string = 'moduleTest';
-let option: bundleManager.BundleOptions = { 'userId': 100, 'appIndex': 0 };
-
-try {
-  bundleManager.enableDynamicIcon(bundleName, moduleName, option).then(() => {
-    hilog.info(0x0000, 'testTag', 'enableDynamicIcon successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
-}
-```
-
 
 ## enableDynamicIcon
 
@@ -102,8 +57,6 @@ function enableDynamicIcon(bundleName: string, moduleName: string, option?: Bund
 Enables the dynamic icon based on the given bundle name, module name, and bundle options. This API uses a promise to return the result.To enable the dynamic icon for the current user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON permission.To enable the dynamic icon for another user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -137,7 +90,3 @@ Enables the dynamic icon based on the given bundle name, module name, and bundle
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
 | [17700304](../errorcode-bundle.md#17700304-failed-to-enable-the-dynamic-icon) |
 | [17700307](../errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) |
-
-**Examples**
-
-See [enableDynamicIcon](#enabledynamicicon)

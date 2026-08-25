@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllDisposedRules
@@ -15,8 +15,6 @@ function getAllDisposedRules(): Array<DisposedRuleConfiguration>
 获取当前用户下已设置的所有拦截规则。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 
@@ -37,18 +35,3 @@ function getAllDisposedRules(): Array<DisposedRuleConfiguration>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = appControl.getAllDisposedRules();
-  console.info('getAllDisposedRules successfully. Data: ' + JSON.stringify(data));
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('getAllDisposedRules failed ' + message);
-}
-```

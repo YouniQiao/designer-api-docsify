@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## openDLPFile
@@ -15,8 +15,6 @@ function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>
 DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用Promise异步回调。调用openDLPFile()成功后返回DLPFile对象，必须在使用完毕后调用[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile)释放资源。DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先打开文件获取管理对象。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -56,66 +54,6 @@ DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile�
 | [19100019](../errorcode-dlp.md#19100019-dlp文件已过期) |
 | [19100020](../errorcode-dlp.md#19100020-网络未连接) |
 
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId; // appId通过应用包信息获取
-
-  file = fileIo.openSync(uri).fd; // file通过文件打开获取fd
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
-  await dlpFile?.closeDLPFile(); // 关闭DLP对象。
-
-  if (file) {
-    fileIo.closeSync(file);
-  }
-}
-
-ExampleFunction();
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-let file: number | undefined = undefined;
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-let appId = '';
-let bundleName = 'com.ohos.note';
-let userId = 100;
-
-let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-appId = data.signatureInfo.appId; // appId通过应用包信息获取
-
-file = fileIo.openSync(uri).fd; // file通过文件打开获取fd
-dlpPermission.openDLPFile(file, appId, async (err, res) => { // 打开DLP文件。
-  if (err) {
-    console.error(`Failed to open DLPFile. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('res', JSON.stringify(res));
-  }
-  await res?.closeDLPFile(); // 关闭DLP对象。
-  if (file) {
-    fileIo.closeSync(file);
-  }
-});
-```
-
 
 ## openDLPFile
 
@@ -126,8 +64,6 @@ function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallbac
 DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用完DLPFile对象后，应调用closeDLPFile释放对象，避免资 源泄露。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -161,7 +97,3 @@ DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。
 | [19100018](../errorcode-dlp.md#19100018-应用未授权) |
 | [19100019](../errorcode-dlp.md#19100019-dlp文件已过期) |
 | [19100020](../errorcode-dlp.md#19100020-网络未连接) |
-
-**示例**
-
-参见 [openDLPFile](#opendlpfile)

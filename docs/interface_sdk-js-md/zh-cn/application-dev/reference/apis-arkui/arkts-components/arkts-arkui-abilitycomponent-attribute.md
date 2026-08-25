@@ -6,11 +6,9 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 10
 
-**替代接口：** UIExtensionComponentAttribute
+**替代接口：** [UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-attribute.md#uiextensioncomponentattribute系统接口)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

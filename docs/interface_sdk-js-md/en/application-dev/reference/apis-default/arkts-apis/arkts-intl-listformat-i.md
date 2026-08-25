@@ -1,7 +1,5 @@
 # ListFormat
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ format(list: Iterable<string>): string
 ```
 
 Returns a string with a language-specific representation of the list.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -36,8 +32,6 @@ formatToParts(list: Iterable<string>): { type: "element" | "literal", value: str
 ```
 
 Returns an Array of objects representing the different components that can be used to format a list of values in a locale-aware fashion.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

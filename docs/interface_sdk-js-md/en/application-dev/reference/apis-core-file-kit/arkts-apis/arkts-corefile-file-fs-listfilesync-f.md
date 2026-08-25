@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## listFileSync
@@ -20,8 +20,6 @@ declare function listFileSync(
 Lists the names of all files and directories in the current directory. This API returns the result synchronously. Filtering is supported.You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,23 +47,3 @@ Lists the names of all files and directories in the current directory. This API 
 | 13900011 |
 | 13900018 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-import { fileIo as fs, Filter, ListFileOptions} from '@kit.CoreFileKit';
-let listFileOption: ListFileOptions = {
-  recursion: false,
-  listNum: 0,
-  filter: {
-    suffix: [".png", ".jpg", ".jpeg"],
-    displayName: ["*abc", "efg*"],
-    fileSizeOver: 1024
-  }
-};
-let filenames = fs.listFileSync(pathDir, listFileOption);
-console.info("listFile succeed");
-for (let i = 0; i < filenames.length; i++) {
-  console.info("filename: %s", filenames[i]);
-}
-```

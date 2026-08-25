@@ -40,4 +40,4 @@
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [Repeat(Defines Repeat component.)](arkts-arkui-repeat-con.md#repeat) |
+| [Repeat(Defines Repeat component.)](arkts-arkui-repeat-con.md) |

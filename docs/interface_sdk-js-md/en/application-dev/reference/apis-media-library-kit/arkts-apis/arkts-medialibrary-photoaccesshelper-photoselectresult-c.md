@@ -4,14 +4,12 @@ Defines information about the images or videos selected.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## contextRecoveryInfo
@@ -25,8 +23,6 @@ Information about the context of exiting the PhotoPicker. This information is re
 **Type:** [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
@@ -44,8 +40,6 @@ Whether the selected media file is the original image. **true** if yes, **false*
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -62,8 +56,6 @@ Array of moving photo badge states for the media files selected from Gallery.If 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -79,8 +71,6 @@ URIs of the media files selected.This URI array can be used only by calling the 
 **Type:** Array&lt;string&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

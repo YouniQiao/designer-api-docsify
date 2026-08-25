@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## acquireAuthorization
@@ -25,8 +23,6 @@ acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): 
 为当前进程获取授权。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.ACQUIRE_LOCAL_ACCOUNT_AUTHORIZATION
 
@@ -58,30 +54,6 @@ acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): 
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 | [12300002](../errorcode-account.md#12300002-无效参数) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();
-let privilege: string = 'testPrivilege';
-let options: osAccount.AcquireAuthorizationOptions = {
-  challenge: new Uint8Array([1, 2, 3]),
-  isReuseNeeded: true,
-  isInteractionAllowed: true,
-};
-try {
-  authorizationManager.acquireAuthorization(privilege, options).then((result: osAccount.AcquireAuthorizationResult) => {
-    console.info(`acquireAuthorization successfully, resultCode: ${result.resultCode}`);
-  }).catch((err: BusinessError) => {
-    console.error(`acquireAuthorization failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`acquireAuthorization exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## hasAuthorization
 
 ```TypeScript
@@ -91,8 +63,6 @@ hasAuthorization(privilege: string): Promise<boolean>
 检查当前进程是否已获得指定特权的授权。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,27 +90,6 @@ hasAuthorization(privilege: string): Promise<boolean>
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 | [12300002](../errorcode-account.md#12300002-无效参数) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();
-let privilege: string = 'testPrivilege';
-
-try {
-  authorizationManager.hasAuthorization(privilege).then((isAuthorized: boolean) => {
-    console.info(`Privilege: ${privilege} has been authorized: ${isAuthorized}`);
-  }).catch((e:Error) => {
-    const err = e as BusinessError;
-    console.error(`hasAuthorization failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`hasAuthorization exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## releaseAuthorization
 
 ```TypeScript
@@ -150,8 +99,6 @@ releaseAuthorization(privilege: string): Promise<void>
 为当前进程撤销指定特权的授权。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -178,24 +125,3 @@ releaseAuthorization(privilege: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) |
 | [12300002](../errorcode-account.md#12300002-无效参数) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();
-let privilege: string = 'testPrivilege';
-
-try {
-  authorizationManager.releaseAuthorization(privilege).then(() => {
-    console.info('releaseAuthorization success');
-  }).catch((e:Error) => {
-    const err = e as BusinessError;
-    console.error(`releaseAuthorization failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`releaseAuthorization exception: code is ${err.code}, message is ${err.message}`);
-}
-```

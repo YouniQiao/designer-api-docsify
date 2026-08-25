@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## off('navDestinationUpdate')
@@ -15,8 +15,6 @@ export function off(type: 'navDestinationUpdate', options: { navigationId: Resou
 取消监听NavDestination组件的状态变化。与uiObserver.off相比，新增了options参数，即支持指定监听的Navigation的id。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,8 +41,6 @@ export function off(type: 'navDestinationUpdate', callback?: Callback<NavDestina
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -68,8 +64,6 @@ export function off(type: 'scrollEvent', options: ObserverOptions, callback?: Ca
 Removes a callback function that was previously registered with `on()`.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,8 +90,6 @@ Removes a callback function that was previously registered with `on()`.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -122,8 +114,6 @@ export function off(type: 'routerPageUpdate', context: UIAbilityContext | UICont
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -135,7 +125,7 @@ export function off(type: 'routerPageUpdate', context: UIAbilityContext | UICont
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'routerPageUpdate' | 是 |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RouterPageInfo&gt; | 否 |
 
 
@@ -149,8 +139,6 @@ export function off(type: 'densityUpdate', context: UIContext, callback?: Callba
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -162,7 +150,7 @@ export function off(type: 'densityUpdate', context: UIContext, callback?: Callba
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'densityUpdate' | 是 |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)&gt; | 否 |
 
 
@@ -176,8 +164,6 @@ export function off(type: 'willDraw', context: UIContext, callback?: Callback<vo
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -189,7 +175,7 @@ export function off(type: 'willDraw', context: UIContext, callback?: Callback<vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'willDraw' | 是 |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 
@@ -203,8 +189,6 @@ export function off(type: 'didLayout', context: UIContext, callback?: Callback<v
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -216,7 +200,7 @@ export function off(type: 'didLayout', context: UIContext, callback?: Callback<v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'didLayout' | 是 |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 
@@ -229,8 +213,6 @@ export function off(type: 'tabContentUpdate', options: ObserverOptions, callback
 取消监听指定Tabs组件id的TabContent页面切换事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -256,8 +238,6 @@ export function off(type: 'tabContentUpdate', callback?: Callback<TabContentInfo
 取消监听TabContent页面的切换事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -287,8 +267,6 @@ export function off(
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -300,7 +278,7 @@ export function off(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'navDestinationSwitch' | 是 |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | 否 |
 
 
@@ -319,8 +297,6 @@ export function off(
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -332,6 +308,6 @@ export function off(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'navDestinationSwitch' | 是 |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
 | observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | 否 |

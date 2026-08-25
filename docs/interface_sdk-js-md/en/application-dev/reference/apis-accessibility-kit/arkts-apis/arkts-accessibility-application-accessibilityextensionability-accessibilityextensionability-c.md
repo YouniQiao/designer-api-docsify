@@ -5,15 +5,13 @@ AccessibilityExtensionAbility provides accessibility extension capabilities base
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## onAccessibilityEvent
@@ -26,8 +24,6 @@ Called when an accessibility event occurs. In this API, you can implement event-
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -37,21 +33,6 @@ Called when an accessibility event occurs. In this API, you can implement event-
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { AccessibilityExtensionAbility, AccessibilityEvent } from '@kit.AccessibilityKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onAccessibilityEvent(event: AccessibilityEvent): void {
-    console.info('AxExtensionAbility onAccessibilityEvent');
-    if (event.eventType === 'click') {
-      console.info('AxExtensionAbility onAccessibilityEvent: click');
-    }
-  }
-}
-```
 
 ## onConnect
 
@@ -63,23 +44,9 @@ Called when the **AccessibilityExtensionAbility** is enabled and connected to th
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
-
-**Examples**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onConnect(): void {
-    console.info('AxExtensionAbility onConnect');
-  }
-}
-```
 
 ## onDisconnect
 
@@ -91,23 +58,9 @@ Called when the **AccessibilityExtensionAbility** is disabled and disconnected f
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
-
-**Examples**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onDisconnect(): void {
-    console.info('AxExtensionAbility onDisconnect');
-  }
-}
-```
 
 ## onKeyEvent
 
@@ -118,8 +71,6 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 Called when a physical key is pressed. In this API, you can determine whether to consume the event based on the service. This API can be overridden as required.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -137,24 +88,6 @@ Called when a physical key is pressed. In this API, you can determine whether to
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-import { KeyEvent } from '@kit.InputKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onKeyEvent(keyEvent: KeyEvent): boolean {
-    console.info('AxExtensionAbility onKeyEvent');
-    if (keyEvent.key.code === 16) {
-      console.info('AxExtensionAbility onKeyEvent: intercept 16');
-      return true;
-    }
-    return false;
-  }
-}
-```
-
 ## context
 
 ```TypeScript
@@ -166,7 +99,5 @@ Indicates the context of the accessibility extension.
 **Type:** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

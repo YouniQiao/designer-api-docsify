@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## read
@@ -15,8 +15,6 @@ function read(): Promise<number[]>
 Reads the content of this active tag. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -36,31 +34,6 @@ Reads the content of this active tag. This API uses a promise to return the resu
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) |
 
-**Examples**
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connectedTag.read().then((data) => {
-    console.info("connectedTag read Promise data = " + data);
-}).catch((err: BusinessError)=> {
-    console.error("connectedTag read Promise err: " + err);
-});
-```
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-connectedTag.read((err, data)=> {
-    if (err) {
-        console.error("connectedTag read AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag read AsyncCallback data: " + data);
-    }
-});
-```
-
 
 ## read
 
@@ -71,8 +44,6 @@ function read(callback: AsyncCallback<number[]>): void
 Reads the content of this active tag. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -91,7 +62,3 @@ Reads the content of this active tag. This API uses an asynchronous callback to 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) |
-
-**Examples**
-
-See [read](#read)

@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from 'kits/@kit.ArkTS';
 ```
 
 ## addEventListener
@@ -23,8 +21,6 @@ addEventListener(type: string, listener: WorkerEventListener): void
 向Worker线程的实例对象添加事件监听。该接口与on9+接口功能一致。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,46 +40,6 @@ addEventListener(type: string, listener: WorkerEventListener): void
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 | [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
 
-**示例**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-
-workerInstance.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-
-// 执行 alert 事件类型的回调
-workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  })
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-```
-
 ## dispatchEvent
 
 ```TypeScript
@@ -93,8 +49,6 @@ dispatchEvent(event: Event): boolean
 分发定义在Worker线程的事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -118,79 +72,6 @@ dispatchEvent(event: Event): boolean
 | --- |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 
-**示例**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-
-workerInstance.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-
-let result: boolean = workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
-
-console.info("dispatchEvent result is: ", result);
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert_add", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.dispatchEvent({type: 'alert_add', timeStamp: 0}); // timeStamp暂未支持
-```
-
-分发事件（dispatchEvent）可与监听接口（addEventListener）搭配使用，示例如下：
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (): void => {
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.dispatchEvent({type:"alert", timeStamp:0}); // timeStamp暂未支持
-}
-```
-
 ## removeAllListener
 
 ```TypeScript
@@ -200,8 +81,6 @@ removeAllListener(): void
 移除Worker线程的实例对象所有的事件监听。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -213,47 +92,6 @@ removeAllListener(): void
 | --- |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
 
-**示例**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-workerInstance.addEventListener("alert", () => {
-    console.info("alert listener callback");
-})
-workerInstance.removeAllListener();
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.removeAllListener();
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert_add", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.removeAllListener();
-```
-
 ## removeEventListener
 
 ```TypeScript
@@ -263,8 +101,6 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 移除Worker线程实例对象中类型为type的事件监听。该接口与off9+接口功能一致。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -282,48 +118,3 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 | 错误码ID |
 | --- |
 | [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-
-**示例**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-
-workerInstance.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-
-workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未支持
-
-workerInstance.removeEventListener("alert");
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.removeEventListener("alert");
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-
-workerPort.removeEventListener('alert');
-```

@@ -4,8 +4,6 @@ Color of the navigation divider and the upper and lower margins of the **Navigat
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ color?: ResourceColor
 
 Color of the divider.Default value: **#33000000**, indicating gray
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ endMargin?: Length
 
 Distance between the divider and the bottom of the sidebar.Default value: **0**Unit: vp Value range: [0, +��)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,11 +55,9 @@ startMargin?: Length
 
 Distance between the divider and the top of the sidebar.Default value: **0**Unit: vp Value range: [0, +��)
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

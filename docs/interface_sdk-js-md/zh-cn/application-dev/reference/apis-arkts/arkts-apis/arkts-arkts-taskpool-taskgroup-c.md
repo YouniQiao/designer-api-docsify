@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## addTask
@@ -23,8 +21,6 @@ addTask(func: Function, ...args: Object[]): void
 将待执行的函数添加到任务组中。使用该方法前需要先构造**TaskGroup**实例。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -43,31 +39,6 @@ addTask(func: Function, ...args: Object[]): void
 | --- |
 | [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
 
-**示例**
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
-taskGroup.addTask(printArgs, 100); // 100: test number
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): number {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup();
-let task: taskpool.Task = new taskpool.Task(printArgs, 200); // 200: test number
-taskGroup.addTask(task);
-```
-
 ## addTask
 
 ```TypeScript
@@ -77,8 +48,6 @@ addTask(task: Task): void
 将创建好的任务添加到任务组中。使用此方法前需要先构造**TaskGroup**实例。任务组不能添加其他任务组中的任务、串行队列任务、 异步队列任务、有依赖关系的任务、长时任务、周期任务和已执行的任务。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,10 +67,6 @@ addTask(task: Task): void
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
 
-**示例**
-
-参见 [addTask](#addtask)
-
 ## constructor
 
 ```TypeScript
@@ -112,97 +77,9 @@ TaskGroup的构造函数。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let task: taskpool.Task = new taskpool.Task(printArgs, "this is my first Task");
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.Task(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-@Concurrent
-function testWithThreeParams(a: number, b: string, c: number): string {
-  return b;
-}
-
-@Concurrent
-function testWithArray(args: [number, string]): string {
-  return "success";
-}
-
-let task1: taskpool.Task = new taskpool.GenericsTask<[string], string>(printArgs, "this is my first GenericsTask");
-
-let task2: taskpool.Task = new taskpool.GenericsTask<[number, string, number], string>(testWithThreeParams, 100, "test", 100);
-
-let task3: taskpool.Task = new taskpool.GenericsTask<[[number, string]], string>(testWithArray, [100, "test"]);
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: string): string {
-  console.info("printArgs: " + args);
-  return args;
-}
-
-let taskName: string = "taskName";
-let task: taskpool.Task = new taskpool.GenericsTask<[string], string>(taskName, printArgs, "this is my first Task");
-let name: string = task.name;
-```
-
-```TypeScript
-let taskGroup = new taskpool.TaskGroup();
-```
-
-```TypeScript
-let taskGroupName: string = "groupName";
-let taskGroup: taskpool.TaskGroup = new taskpool.TaskGroup(taskGroupName);
-let name: string = taskGroup.name;
-```
-
-```TypeScript
-let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
-```
-
-```TypeScript
-let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
-```
-
-```TypeScript
-let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
-```
-
-```TypeScript
-let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
-```
 
 ## constructor
 
@@ -214,8 +91,6 @@ TaskGroup的构造函数，支持指定任务组名称。
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -225,10 +100,6 @@ TaskGroup的构造函数，支持指定任务组名称。
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [name](#name) | string | 是 |
-
-**示例**
-
-参见 [constructor](#constructor)
 
 ## name
 
@@ -241,8 +112,6 @@ name: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

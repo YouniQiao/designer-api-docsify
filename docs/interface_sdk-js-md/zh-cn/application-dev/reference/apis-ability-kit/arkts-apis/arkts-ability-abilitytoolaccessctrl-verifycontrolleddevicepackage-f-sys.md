@@ -15,8 +15,6 @@ export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): 
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 **系统能力：** SystemCapability.Security.Asset
@@ -45,21 +43,3 @@ export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): 
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) |
 | [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) |
 | [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) |
-
-**示例**
-
-```TypeScript
-import { abilityToolAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ticketInfo: Array<abilityToolAccessCtrl.RemoteAuthPackage> = [{
-  remoteMessage: 'test_message',
-  challenge: 'test_challenge',
-  ticket: 'test_ticket'
-}];
-abilityToolAccessCtrl.verifyControlledDevicePackage(ticketInfo).then((data: Array<boolean>) => {
-  console.info('verifyControlledDevicePackage success, data: ' + JSON.stringify(data));
-}).catch((err: BusinessError): void => {
-  console.error(`verifyControlledDevicePackage fail, code: ${err.code}, message: ${err.message}`);
-});
-```

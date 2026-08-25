@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## getInputMethodSetting
@@ -16,8 +16,6 @@ Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) i
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getSetting](arkts-ime-inputmethod-getsetting-f.md)
@@ -29,9 +27,3 @@ Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) i
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) |
-
-**Examples**
-
-```TypeScript
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getInputMethodSetting();
-```

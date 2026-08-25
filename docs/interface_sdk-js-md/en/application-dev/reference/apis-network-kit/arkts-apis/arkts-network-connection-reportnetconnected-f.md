@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## reportNetConnected
@@ -21,8 +21,6 @@ Reports the network availability to the network management module. This API uses
 > **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
@@ -45,29 +43,6 @@ Reports the network availability to the network management module. This API uses
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  connection.reportNetConnected(netHandle, (error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  connection.reportNetConnected(netHandle).then(() => {
-    console.info(`report success`);
-  });
-});
-```
-
 
 ## reportNetConnected
 
@@ -79,8 +54,6 @@ Reports that the network is available to the network management module. This API
 **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
@@ -107,7 +80,3 @@ Reports that the network is available to the network management module. This API
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [reportNetConnected](#reportnetconnected)

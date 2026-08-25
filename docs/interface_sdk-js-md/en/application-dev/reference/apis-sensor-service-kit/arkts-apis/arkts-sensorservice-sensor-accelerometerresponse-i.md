@@ -6,29 +6,25 @@ Describes the acceleration sensor data. It extends from [Response](arkts-sensors
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 Acceleration along the x-axis of the device, in m/s?. The value is equal to the reported physical quantity.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,16 +33,14 @@ Acceleration along the x-axis of the device, in m/s?. The value is equal to the 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 Acceleration along the y-axis of the device, in m/s?. The value is equal to the reported physical quantity.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,16 +49,14 @@ Acceleration along the y-axis of the device, in m/s?. The value is equal to the 
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
 Acceleration along the z-axis of the device, in m/s?. The value is equal to the reported physical quantity.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

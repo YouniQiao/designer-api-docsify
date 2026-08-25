@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getTimezone
@@ -15,8 +15,6 @@ function getTimezone(callback: AsyncCallback<string>): void
 Obtains the system time zone. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -36,40 +34,6 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 | --- |
 | -1 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getTimezone((error: BusinessError, data: string) => {
-    if (error) {
-      console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting timezone : ${data}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getTimezone().then((data: string) => {
-    console.info(`Succeeded in getting timezone: ${data}`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## getTimezone
 
@@ -80,8 +44,6 @@ function getTimezone(): Promise<string>
 Obtains the system time zone. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -100,7 +62,3 @@ Obtains the system time zone. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | -1 |
-
-**Examples**
-
-See [getTimezone](#gettimezone)

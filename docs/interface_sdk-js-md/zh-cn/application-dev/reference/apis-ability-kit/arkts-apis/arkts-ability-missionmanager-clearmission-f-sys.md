@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { missionManager } from '@kit.AbilityKit';
+import { missionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## clearMission
 
 ```TypeScript
-function clearMission(missionId: int, callback: AsyncCallback<void>): void
+function clearMission(missionId: number, callback: AsyncCallback<void>): void
 ```
 
 清理指定任务ID的任务，无论该任务是否被锁定。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -28,7 +26,7 @@ function clearMission(missionId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| missionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| missionId | number | 是 |
 | callback | AsyncCallback & lt;void & gt; | 是 |
 
 **错误码：**
@@ -39,61 +37,16 @@ function clearMission(missionId: int, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
-let testMissionId = 2;
-
-try {
-  missionManager.clearMission(testMissionId, (err: BusinessError | null, data: undefined) => {
-    if (err) {
-      console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
-    } else {
-      console.info(`clearMission successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
-let testMissionId = 2;
-
-try {
-  missionManager.clearMission(testMissionId).then((data) => {
-    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: Error) => {
-    let err: BusinessError = error as BusinessError;
-    console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
-
 
 ## clearMission
 
 ```TypeScript
-function clearMission(missionId: int): Promise<void>
+function clearMission(missionId: number): Promise<void>
 ```
 
 清理指定任务ID的任务，无论该任务是否被锁定。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -105,7 +58,7 @@ function clearMission(missionId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| missionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| missionId | number | 是 |
 
 **返回值：**
 
@@ -120,7 +73,3 @@ function clearMission(missionId: int): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [clearMission](#clearmission)

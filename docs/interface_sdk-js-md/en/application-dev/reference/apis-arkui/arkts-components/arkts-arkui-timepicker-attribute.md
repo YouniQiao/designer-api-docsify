@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ dateTimeOptions(value: DateTimeOptions)
 Sets whether to display a leading zero for the hours, minutes, and seconds.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Sets whether to display a leading zero for the hours, minutes, and seconds. Comp
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -61,7 +55,7 @@ Sets whether to display a leading zero for the hours, minutes, and seconds. Comp
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| timeFormat | Optional&lt;[DateTimeOptions](arkts-arkui-datetimeoptions-t.md)&gt; | Yes |
+| timeFormat | [Optional](arkts-arkui-optional-t.md)&lt;[DateTimeOptions](arkts-arkui-datetimeoptions-t.md)&gt; | Yes |
 
 ## digitalCrownSensitivity
 
@@ -73,8 +67,6 @@ Sets the sensitivity to the digital crown rotation.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -85,7 +77,7 @@ Sets the sensitivity to the digital crown rotation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | Yes |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
 
 ## disappearTextStyle
 
@@ -96,8 +88,6 @@ disappearTextStyle(value: PickerTextStyle)
 Sets the text color, font size, and font weight of edge items (the second item above or below the selected item).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,8 +111,6 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -133,7 +121,7 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
 
 ## enableCascade
 
@@ -144,8 +132,6 @@ enableCascade(enabled: boolean)
 Sets whether the AM/PM indicator automatically switches based on the hour value. Only takes effect when [useMilitaryTime](#usemilitarytime) is set to **false**.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,8 +158,6 @@ Sets whether to enable haptic feedback.To enable haptic feedback, you must decla
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -196,8 +180,6 @@ Sets whether to enable haptic feedback. Compared with [enableHapticFeedback&lt;s
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -208,7 +190,7 @@ Sets whether to enable haptic feedback. Compared with [enableHapticFeedback&lt;s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## loop
 
@@ -219,8 +201,6 @@ loop(value: boolean)
 Sets whether to enable loop scrolling.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,8 +224,6 @@ Sets whether to enable loop scrolling. Compared with [loop&lt;sup&gt;11+&lt;/sup
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -256,7 +234,7 @@ Sets whether to enable loop scrolling. Compared with [loop&lt;sup&gt;11+&lt;/sup
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isLoop | Optional & lt;boolean & gt; | Yes |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## onChange
 
@@ -267,8 +245,6 @@ onChange(callback: (value: TimePickerResult) => void)
 Triggered when the time picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -290,8 +266,6 @@ Triggered when the time picker snaps to the selected item. This event cannot be 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -302,7 +276,7 @@ Triggered when the time picker snaps to the selected item. This event cannot be 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[OnTimePickerChangeCallback](arkts-arkui-ontimepickerchangecallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnTimePickerChangeCallback](arkts-arkui-ontimepickerchangecallback-t.md)&gt; | Yes |
 
 ## onEnterSelectedArea
 
@@ -316,8 +290,6 @@ Triggered during the scrolling of the time picker when an item enters the divide
 > This API cannot be called within attributeModifier.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -341,8 +313,6 @@ Sets the text color, font size, and font weight of the selected item.Default val
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -365,8 +335,6 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -377,7 +345,7 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
 
 ## textStyle
 
@@ -388,8 +356,6 @@ textStyle(value: PickerTextStyle)
 Sets the text color, font size, and font weight of candidate items (the item immediately adjacent to the selected item, above or below).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,8 +379,6 @@ Sets the text color, font size, and font weight of candidate items (the item imm
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -425,7 +389,7 @@ Sets the text color, font size, and font weight of candidate items (the item imm
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional & lt;PickerTextStyle & gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)&gt; | Yes |
 
 ## useMilitaryTime
 
@@ -436,8 +400,6 @@ useMilitaryTime(value: boolean)
 Sets whether the time is displayed in 24-hour format. If this attribute is not specified, the system time format is used by default.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -459,8 +421,6 @@ Sets whether the time is displayed in 24-hour format. If this attribute is not s
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -471,4 +431,4 @@ Sets whether the time is displayed in 24-hour format. If this attribute is not s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isMilitaryTime | Optional & lt;boolean & gt; | Yes |
+| isMilitaryTime | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |

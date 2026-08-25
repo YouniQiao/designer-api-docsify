@@ -1,14 +1,12 @@
 # NotifySnapshotCallback (System API)
 
 ```TypeScript
-type NotifySnapshotCallback = (deviceId: string, mission: int) => void
+type NotifySnapshotCallback = (deviceId: string, mission: number) => void
 ```
 
 Callback function on snapshot changed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -21,4 +19,4 @@ Callback function on snapshot changed.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | deviceId | string | Yes |
-| mission | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| mission | number | Yes |

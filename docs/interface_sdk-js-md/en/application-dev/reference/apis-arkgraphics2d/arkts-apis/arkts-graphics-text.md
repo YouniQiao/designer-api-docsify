@@ -1,18 +1,29 @@
 # @ohos.graphics.text
 
 The Text module provides a set of APIs for text layout and font management. It aims to deliver high-quality typesetting through features like character-to-glyph conversion, kerning, line breaking, alignment, and text measurement. Additionally, it provides font management capabilities, including font registration, font descriptors, and font collection management.This module provides the following classes for creating complex text paragraphs:  
-- [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md): defines the font type, size, spacing, and other text properties. - [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md): manages a collection of different fonts. - [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md): provides information about font descriptors. - [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md): controls line break and word break strategies for the entire paragraph. - [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md): used to create different paragraph objects. - [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md): created by calling [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the **ParagraphBuilder** class. - [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md): created by calling [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) of the **ParagraphBuilder** class. - [TextLine](arkts-arkgraphics2d-text-textline-c.md): paragraph text on a line-by-line basis, obtained by calling [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines) of the **Paragraph** class. - [Run](arkts-arkgraphics2d-text-run-c.md): text typesetting unit, obtained by calling [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the **TextLine** class.
+- [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md): defines the font type, size, spacing, and other text properties.  
+- [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md): manages a collection of different fonts.  
+- [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md): provides information about font descriptors.  
+- [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md): controls line break and word break strategies for the entire  
+paragraph.  
+- [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md): used to create different paragraph objects.  
+- [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md): created by calling [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the  
+**ParagraphBuilder** class.  
+- [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md): created by calling  
+[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) of the **ParagraphBuilder** class.  
+- [TextLine](arkts-arkgraphics2d-text-textline-c.md): paragraph text on a line-by-line basis, obtained by calling  
+[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines) of the **Paragraph** class.  
+- [Run](arkts-arkgraphics2d-text-run-c.md): text typesetting unit, obtained by calling  
+[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the **TextLine** class.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## Summary

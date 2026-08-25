@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## chdir
@@ -15,8 +15,6 @@ function chdir(dir: string): void
 Change current directory
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 

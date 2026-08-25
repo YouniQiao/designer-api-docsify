@@ -4,14 +4,12 @@ Defines the return result of intent execution. The [generic type](../../../quick
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@kit.AbilityKit';
+import { insightIntent } from 'kits/@kit.AbilityKit';
 ```
 
 ## interactionInfo
@@ -25,8 +23,6 @@ Interaction information returned after the intent execution completes.
 **Type:** [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

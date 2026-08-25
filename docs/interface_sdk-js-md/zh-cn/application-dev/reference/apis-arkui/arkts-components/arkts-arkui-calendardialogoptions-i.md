@@ -10,8 +10,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -28,8 +26,6 @@ onCancel?: VoidCallback
 点击弹窗中的“取消”按钮时触发该回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,8 +55,6 @@ onDidAppear?: VoidCallback
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -79,8 +73,6 @@ onDidDisappear?: VoidCallback
 > 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,8 +94,6 @@ onWillAppear?: VoidCallback
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -123,8 +113,6 @@ onWillDisappear?: VoidCallback
 > 2. 快速连续触发弹出与关闭时，存在onWillDisappear在onDidAppear前生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,11 +134,9 @@ acceptButtonStyle?: PickerDialogButtonStyle
 > ROUNDED_RECTANGLE，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮
 > Capsule的样式。
 
-**类型：** PickerDialogButtonStyle
+**类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -178,8 +164,6 @@ backgroundBlurStyle?: BlurStyle
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -197,11 +181,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 > **说明：**&gt;
 > 未设置时沿用backgroundBlurStyle的默认效果（BlurStyle.COMPONENT_ULTRA_THICK）。
 
-**类型：** BackgroundBlurStyleOptions
+**类型：** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -222,13 +204,11 @@ backgroundColor?: ResourceColor
 > **说明：**&gt;
 > 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则背景颜色显示效果不符合预期。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Transparent
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -242,17 +222,15 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。 默认值请参考BackgroundEffectOptions。
+背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。 默认值请参考[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)。
 
 > **说明：**&gt;
 > 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
 > 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
 
-**类型：** BackgroundEffectOptions
+**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -274,11 +252,9 @@ cancelButtonStyle?: PickerDialogButtonStyle
 > ROUNDED_RECTANGLE，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮
 > Capsule的样式。
 
-**类型：** PickerDialogButtonStyle
+**类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -293,7 +269,8 @@ enableHoverMode?: boolean
 ```
 
 设置弹窗是否响应悬停态，适用于折叠屏等支持悬停模式的设备。  
-- true：弹窗响应悬停态，在折叠屏悬停模式下会自适应调整布局区域，提供更好的多任务体验。 - false：弹窗不响应悬停态，在悬停模式下保持默认布局。  
+- true：弹窗响应悬停态，在折叠屏悬停模式下会自适应调整布局区域，提供更好的多任务体验。  
+- false：弹窗不响应悬停态，在悬停模式下保持默认布局。  
 默认值：false
 
 **类型：** boolean
@@ -301,8 +278,6 @@ enableHoverMode?: boolean
 **默认值：** false
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -320,13 +295,11 @@ hoverModeArea?: HoverModeAreaType
 
 > 默认值：HoverModeAreaType.BOTTOM_SCREEN
 
-**类型：** HoverModeAreaType
+**类型：** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -341,7 +314,8 @@ markToday?: boolean
 ```
 
 设置日历选择器弹窗中系统当前日期是否保持高亮显示。  
-- true：系统当前日期在日历选择器弹窗内保持高亮显示。 - false：系统当前日期在日历选择器弹窗内不保持高亮显示。
+- true：系统当前日期在日历选择器弹窗内保持高亮显示。  
+- false：系统当前日期在日历选择器弹窗内不保持高亮显示。
 
 > 默认值：false
 
@@ -350,8 +324,6 @@ markToday?: boolean
 **默认值：** false
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -371,8 +343,6 @@ onAccept?: Callback<Date>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -391,8 +361,6 @@ onChange?: Callback<Date>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -407,11 +375,9 @@ shadow?: ShadowOptions | ShadowStyle
 
 设置弹窗背板的阴影。当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。
 
-**类型：** ShadowOptions \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -437,11 +403,9 @@ systemMaterial?: SystemUiMaterial
 > borderColor、边框宽度borderWidth、阴影
 > shadow，当设置系统材质时，上述接口不生效。
 
-**类型：** SystemUiMaterial
+**类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

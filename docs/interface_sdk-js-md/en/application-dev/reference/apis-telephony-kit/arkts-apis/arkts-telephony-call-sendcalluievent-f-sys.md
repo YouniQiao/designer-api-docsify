@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendCallUiEvent
 
 ```TypeScript
-function sendCallUiEvent(callId: int, eventName: string): Promise<void>
+function sendCallUiEvent(callId: number, eventName: string): Promise<void>
 ```
 
 Sends a call UI event. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Sends a call UI event. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | eventName | string | Yes |
 
 **Return value:**
@@ -48,16 +46,3 @@ Sends a call UI event. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callId: number = 0;
-call.sendCallUiEvent(callId, 'eventName').then(() => {
-    console.info(`sendCallUiEvent success.`);
-}).catch((err: BusinessError) => {
-    console.error(`sendCallUiEvent fail, promise: err->${JSON.stringify(err)}`);
-});
-```

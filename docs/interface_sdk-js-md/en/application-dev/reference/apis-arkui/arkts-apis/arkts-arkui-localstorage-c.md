@@ -4,8 +4,6 @@ For details about how to use LocalStorage on the UI, see [LocalStorage: UI State
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Deletes all properties from [LocalStorage](../../../ui/state-management/arkts-lo
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -37,19 +33,6 @@ Deletes all properties from [LocalStorage](../../../ui/state-management/arkts-lo
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let res: boolean = AppStorage.clear(); // true: There are no subscribers.
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let res: boolean = storage.clear(); // true: There are no subscribers.
-```
-
 ## constructor
 
 ```TypeScript
@@ -59,8 +42,6 @@ constructor(initializingProperties?: Object)
 Creates a [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance and initializes it using the properties and values returned by **Object.keys(initializingProperties)**.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -73,13 +54,6 @@ Creates a [LocalStorage](../../../ui/state-management/arkts-localstorage.md) ins
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | initializingProperties | Object | No |
-
-**Examples**
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-```
 
 ## delete
 
@@ -99,8 +73,6 @@ of **SubscribedAbstractProperty** returned by **link**, **prop**, **setAndLink**
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -119,27 +91,6 @@ of **SubscribedAbstractProperty** returned by **link**, **prop**, **setAndLink**
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-AppStorage.link<number>('PropA');
-let res: boolean = AppStorage.delete('PropA'); // false: PropA still has subscribers.
-
-AppStorage.setOrCreate('PropB', 48);
-let res1: boolean = AppStorage.delete('PropB'); // true: PropB is successfully deleted from AppStorage.
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-storage.link<number>('PropA');
-let res: boolean = storage.delete('PropA'); // false: PropA still has subscribers.
-let res1: boolean = storage.delete('PropB'); // false: PropB does not exist in LocalStorage.
-storage.setOrCreate('PropB', 48);
-let res2: boolean = storage.delete('PropB'); // true: PropB is successfully deleted from LocalStorage.
-```
-
 ## get
 
 ```TypeScript
@@ -149,8 +100,6 @@ get<T>(propName: string): T | undefined
 Obtains the value of the property corresponding to **propName** from [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -170,31 +119,6 @@ Obtains the value of the property corresponding to **propName** from [LocalStora
 | --- |
 | T \| undefined |
 
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let value: number = AppStorage.get('PropA') as number; // 47
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let value: number = storage.get('PropA') as number; // 47
-```
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-ref1?.get(); //  ref1.get()=47
-```
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47); 
-let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');    
-prop1.get(); //  prop1.get()=47
-```
-
 ## GetShared
 
 ```TypeScript
@@ -204,8 +128,6 @@ static GetShared(): LocalStorage
 Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance shared across the current stage.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -223,12 +145,6 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 | --- |
 | [LocalStorage](arkts-arkui-localstorage-c.md) |
 
-**Examples**
-
-```TypeScript
-let storage: LocalStorage = LocalStorage.GetShared();
-```
-
 ## getShared
 
 ```TypeScript
@@ -244,8 +160,6 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -275,8 +189,6 @@ Checks whether the property corresponding to **propName** exists in [LocalStorag
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -295,18 +207,6 @@ Checks whether the property corresponding to **propName** exists in [LocalStorag
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-AppStorage.has('simpleProp');
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-storage.has('PropA'); // true
-```
-
 ## keys
 
 ```TypeScript
@@ -316,8 +216,6 @@ keys(): IterableIterator<string>
 Obtains all property names in [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -329,33 +227,7 @@ Obtains all property names in [LocalStorage](../../../ui/state-management/arkts-
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;string & gt; |
-
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropB', 48);
-let keys: IterableIterator<string> = AppStorage.keys();
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let keys: IterableIterator<string> = storage.keys();
-```
-
-```TypeScript
-let keys: Array<string> = PersistentStorage.keys();
-```
-
-```TypeScript
-Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.keys(); // keys contains accessibilityEnabled, languageCode, and prop.
-```
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
 
 ## link
 
@@ -366,8 +238,6 @@ link<T>(propName: string): SubscribedAbstractProperty<T>
 Establishes a two-way data binding with the property corresponding to **propName** in [LocalStorage](../../../ui/state-management/arkts-localstorage.md). If the given property exists in LocalStorage, this API returns the two-way bound data for the property.Any update of the data is synchronized back to LocalStorage, which then synchronizes the update to all data and components bound to the property.If the given property does not exist in LocalStorage, **undefined** is returned.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -387,23 +257,6 @@ Establishes a two-way data binding with the property corresponding to **propName
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
-let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
-linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let linkToPropA1: SubscribedAbstractProperty<number> = storage.link('PropA');
-let linkToPropA2: SubscribedAbstractProperty<number> = storage.link('PropA'); // linkToPropA2.get() == 47
-linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48
-```
-
 ## prop
 
 ```TypeScript
@@ -413,8 +266,6 @@ prop<S>(propName: string): SubscribedAbstractProperty<S>
 Establishes a one-way data binding with the property corresponding to **propName** in [LocalStorage](../../../ui/state-management/arkts-localstorage.md). If the given property exists in LocalStorage, this API returns the one-way bound data for the property. If the given property does not exist in LocalStorage, **undefined** is returned. Updates of the one-way bound data are not synchronized back to LocalStorage.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -434,23 +285,6 @@ Establishes a one-way data binding with the property corresponding to **propName
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; |
 
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
-let prop2: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
-prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get() returns 47.
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let prop1: SubscribedAbstractProperty<number> = storage.prop('PropA');
-let prop2: SubscribedAbstractProperty<number> = storage.prop('PropA');
-prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get() returns 47.
-```
-
 ## ref
 
 ```TypeScript
@@ -460,8 +294,6 @@ public ref<T>(propName: string): AbstractProperty<T> | undefined
 Returns a reference to the property corresponding to **propName** in [LocalStorage](../../../ui/state-management/arkts-localstorage.md). If the provided **propName** does not exist, this API returns **undefined**.This API is similar to [link](#link) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md) type.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -478,23 +310,6 @@ Returns a reference to the property corresponding to **propName** in [LocalStora
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined |
-
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let refToPropA1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA'); // refToPropA2.get() == 47
-refToPropA1?.set(48); // Synchronously modify AppStorage: refToPropA1.get() == refToPropA2.get() == 48.
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let refToPropA1: AbstractProperty<number> | undefined = storage.ref('PropA');
-let refToPropA2: AbstractProperty<number> | undefined = storage.ref('PropA'); // refToPropA2.get() == 47
-refToPropA1?.set(48); // refToPropA1.get() == refToPropA2.get() == 48
-```
 
 ## set
 
@@ -515,8 +330,6 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -535,56 +348,6 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 48);
-let res: boolean = AppStorage.set('PropA', 47) // true
-let res1: boolean = AppStorage.set('PropB', 47) // false
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let res: boolean = storage.set('PropA', 47); // true
-let res1: boolean = storage.set('PropB', 47); // false
-```
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-ref1?.set(1); //  ref1.get()=1
-let a: Map<string, number> = new Map([['1', 0]]);
-let ref2 = AppStorage.setAndRef('MapA', a);
-ref2.set(a);
-let b: Set<string> = new Set('1');
-let ref3 = AppStorage.setAndRef('SetB', b);
-ref3.set(b);
-let c: Date = new Date('2024');
-let ref4 = AppStorage.setAndRef('DateC', c);
-ref4.set(c);
-ref2.set(null);
-ref3.set(undefined);
-```
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
-prop1.set(1); //  prop1.get()=1
-// Since API version 12, the Map, Set, Date types, as well as null, undefined, and union types are supported.
-let a: Map<string, number> = new Map([['1', 0]]);
-let prop2 = AppStorage.setAndProp('MapA', a);
-prop2.set(a);
-let b: Set<string> = new Set('1');
-let prop3 = AppStorage.setAndProp('SetB', b);
-prop3.set(b);
-let c: Date = new Date('2024');
-let prop4 = AppStorage.setAndProp('DateC', c);
-prop4.set(c);
-prop2.set(null);
-prop3.set(undefined);
-```
 
 ## setAndLink
 
@@ -605,8 +368,6 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -625,21 +386,6 @@ Similar to the [link](#link) API, establishes a two-way data binding with the pr
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
-
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // Create PropB with the default value 49.
-let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA already exists with the value 47.
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let link1: SubscribedAbstractProperty<number> = storage.setAndLink('PropB', 49); // Create PropB with the default value 49.
-let link2: SubscribedAbstractProperty<number> = storage.setAndLink('PropA', 50); // PropA already exists with the value 47.
-```
 
 ## setAndProp
 
@@ -660,8 +406,6 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -680,19 +424,6 @@ Similar to the [prop](#prop) API, establishes a one-way data binding with the pr
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; |
-
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let prop: SubscribedAbstractProperty<number> = AppStorage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let prop: SubscribedAbstractProperty<number> = storage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
-```
 
 ## setAndRef
 
@@ -713,8 +444,6 @@ Similar to the [ref](arkts-arkui-appstorage-c.md#ref) API, returns a reference t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -731,21 +460,6 @@ Similar to the [ref](arkts-arkui-appstorage-c.md#ref) API, returns a reference t
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; |
-
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // Create PropB with the default value 49.
-let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA already exists with the value 47.
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let ref1: AbstractProperty<number> = storage.setAndRef('PropB', 49); // Create PropB with the default value 49.
-let ref2: AbstractProperty<number> = storage.setAndRef('PropA', 50); // PropA already exists with the value 47.
-```
 
 ## setOrCreate
 
@@ -766,8 +480,6 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -787,20 +499,6 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('simpleProp', 121);
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let res: boolean = storage.setOrCreate('PropA', 121); // true
-let res1: boolean = storage.setOrCreate('PropB', 111); // true
-let res2: boolean = storage.setOrCreate('PropB', null); // true (API version 12 and later) or false (API version 11 and earlier)
-```
-
 ## size
 
 ```TypeScript
@@ -810,8 +508,6 @@ size(): number
 Obtains the number of properties in [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -824,16 +520,3 @@ Obtains the number of properties in [LocalStorage](../../../ui/state-management/
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropB', 48);
-let res: number = AppStorage.size(); // 1
-```
-
-```TypeScript
-let para: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(para);
-let res: number = storage.size(); // 1
-```

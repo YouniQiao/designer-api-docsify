@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## getAllActiveIfaces
@@ -15,8 +15,6 @@ function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void
 Obtains the active network interface. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -39,38 +37,6 @@ Obtains the active network interface. This API uses an asynchronous callback to 
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.getAllActiveIfaces((error: BusinessError, value: string[]) => {
-  if (error) {
-    console.error("getAllActiveIfaces callback error = " + JSON.stringify(error));
-  } else {
-    console.info("getAllActiveIfaces callback value.length = " + JSON.stringify(value.length));
-    for (let i = 0; i < value.length; i++) {
-      console.info("getAllActiveIfaces callback = " + JSON.stringify(value[i]));
-    }
-  }
-});
-```
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.getAllActiveIfaces().then((data: string[]) => {
-  console.info("getAllActiveIfaces promise data.length = " + JSON.stringify(data.length));
-  for (let i = 0; i < data.length; i++) {
-    console.info("getAllActiveIfaces promise  = " + JSON.stringify(data[i]));
-  }
-}).catch((error:BusinessError) => {
-  console.error("getAllActiveIfaces promise error = " + JSON.stringify(error));
-});
-```
-
 
 ## getAllActiveIfaces
 
@@ -81,8 +47,6 @@ function getAllActiveIfaces(): Promise<Array<string>>
 Obtains the active network interface. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -104,7 +68,3 @@ Obtains the active network interface. This API uses a promise to return the resu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
-
-**Examples**
-
-See [getAllActiveIfaces](#getallactiveifaces)

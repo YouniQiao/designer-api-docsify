@@ -4,8 +4,6 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Driver](arkts-test-uitest-driver-c.md)
@@ -15,8 +13,8 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 ## Modules to Import
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -28,8 +26,6 @@ assertComponentExist(by: By): Promise<void>
 Asserts that a component that matches the given attributes exists on the current page. If the component does not exist, the API throws a JS exception, causing the current test case to fail. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -57,28 +53,6 @@ Asserts that a component that matches the given attributes exists on the current
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 | [17000003](../errorcode-uitest.md#17000003-assertion-failure) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.assertComponentExist(ON.text('next page'));
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.assertComponentExist(BY.text('next page'));
-}
-```
-
 ## click
 
 ```TypeScript
@@ -88,8 +62,6 @@ click(x: number, y: number): Promise<void>
 Clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -110,50 +82,6 @@ Clicks a specific point of this **UiDriver** object based on the given coordinat
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, ON, Component } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.click();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.click(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, Driver, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.click();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.click(100, 100);
-}
-```
-
 ## create
 
 ```TypeScript
@@ -168,8 +96,6 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [create](arkts-test-uitest-driver-c.md#create)
@@ -182,35 +108,6 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 | --- |
 | [UiDriver](arkts-test-uitest-uidriver-c.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { PointerMatrix } from '@kit.TestKit';
-
-async function demo() {
-  let pointerMatrix: PointerMatrix = PointerMatrix.create(2, 3);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-}
-```
-
 ## delayMs
 
 ```TypeScript
@@ -220,8 +117,6 @@ delayMs(duration: number): Promise<void>
 Delays a duration of time. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -241,28 +136,6 @@ Delays a duration of time. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.delayMs(1000);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.delayMs(1000);
-}
-```
-
 ## doubleClick
 
 ```TypeScript
@@ -272,8 +145,6 @@ doubleClick(x: number, y: number): Promise<void>
 Double-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -294,50 +165,6 @@ Double-clicks a specific point of this **UiDriver** object based on the given co
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.doubleClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.doubleClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.doubleClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.doubleClick(100, 100);
-}
-```
-
 ## findComponent
 
 ```TypeScript
@@ -347,8 +174,6 @@ findComponent(by: By): Promise<UiComponent>
 Searches this **UiDriver** object for the target component that matches the given attributes. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -368,28 +193,6 @@ Searches this **UiDriver** object for the target component that matches the give
 | --- |
 | Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.text('next page'));
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.text('next page'));
-}
-```
-
 ## findComponents
 
 ```TypeScript
@@ -399,8 +202,6 @@ findComponents(by: By): Promise<Array<UiComponent>>
 Searches this **UiDriver** object for all components that match the given attributes. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -420,28 +221,6 @@ Searches this **UiDriver** object for all components that match the given attrib
 | --- |
 | Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let buttonList: Array<Component> = await driver.findComponents(ON.text('next page'));
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let buttonList: Array<UiComponent> = await driver.findComponents(BY.text('next page'));
-}
-```
-
 ## longClick
 
 ```TypeScript
@@ -451,8 +230,6 @@ longClick(x: number, y: number): Promise<void>
 Long-clicks a specific point of this **UiDriver** object based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -473,50 +250,6 @@ Long-clicks a specific point of this **UiDriver** object based on the given coor
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.longClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.longClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.longClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.longClick(100, 100);
-}
-```
-
 ## pressBack
 
 ```TypeScript
@@ -526,8 +259,6 @@ pressBack(): Promise<void>
 Presses the Back button on this **UiDriver** object. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -541,38 +272,6 @@ Presses the Back button on this **UiDriver** object. This API uses a promise to 
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressBack(0);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.pressBack();
-}
-```
-
 ## screenCap
 
 ```TypeScript
@@ -582,8 +281,6 @@ screenCap(savePath: string): Promise<boolean>
 Captures the current screen of this **UiDriver** object and saves it as a PNG image to the given save path. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -603,38 +300,6 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 | --- |
 | Promise & lt;boolean & gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.screenCap('/data/storage/el2/base/cache/1.png');
-}
-```
-
 ## swipe
 
 ```TypeScript
@@ -644,8 +309,6 @@ swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>
 Swipes on this **UiDriver** object from the start point to the end point based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -668,28 +331,6 @@ Swipes on this **UiDriver** object from the start point to the end point based o
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.swipe(100, 100, 200, 200, 600);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.swipe(100, 100, 200, 200);
-}
-```
-
 ## triggerKey
 
 ```TypeScript
@@ -699,8 +340,6 @@ triggerKey(keyCode: number): Promise<void>
 Triggers a key event by passing the key code value. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -719,38 +358,3 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // Back button
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDriver } from '@kit.TestKit';
-import { KeyCode } from '@kit.InputKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
-}
-```

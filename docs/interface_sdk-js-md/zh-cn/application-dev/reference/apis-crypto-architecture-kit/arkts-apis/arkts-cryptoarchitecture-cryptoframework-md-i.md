@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
 - API版本9-11：SystemCapability.Security.CryptoFramework
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## digest
@@ -25,8 +23,6 @@ digest(callback: AsyncCallback<DataBlob>): void
 返回Md的计算结果。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -51,143 +47,6 @@ digest(callback: AsyncCallback<DataBlob>): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function mdByCallback() {
-  let md = cryptoFramework.createMd('SHA256');
-  md.update({ data: new Uint8Array(buffer.from("mdTestMessage", 'utf-8').buffer) }, (err) => {
-    md.digest((err, digestOutput) => {
-      console.info('[Callback]: MD result: ' + digestOutput.data);
-      console.info('[Callback]: MD len: ' + md.getMdLength());
-    });
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function mdByCallback() {
-  let md = cryptoFramework.createMd('SHA256');
-  md.update({ data: new Uint8Array(buffer.from("mdTestMessage", 'utf-8').buffer) }, (err) => {
-    md.digest((err, digestOutput) => {
-      if (digestOutput != undefined) {
-        console.info('[Callback]: MD result: ' + digestOutput.data);
-        console.info('[Callback]: MD len: ' + md.getMdLength());
-      }
-    });
-  });
-}
-```
-
-ArkTS示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function mdByPromise() {
-  let md = cryptoFramework.createMd('SHA256');
-  await md.update({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
-  let mdOutput = await md.digest();
-  console.info('[Promise]: MD result: ' + mdOutput.data);
-  console.info('[Promise]: MD len: ' + md.getMdLength());
-}
-```
-
-JS示例：
-
-```TypeScript
-<div class="container">
-    <text class="TestTitle">Crypto测试</text>
-    <input class="btn" @click="MdTest">Md异步测试</input>
-</div>
-```
-
-```TypeScript
-.container {
-  width: 100%;
-  height: 2000px;
-  align-items: center;
-  background-color: #fffefcfc;
-  flex-direction: column;
-  display: flex;
-}
-
-.TestTitle {
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  background-color: white;
-  color: #fff61515;
-  font-size: 15fp;
-}
-
-.btn {
-  width: 90%;
-  height: 80px;
-  text-align: center;
-  background-color: #fff17f04;
-  margin-top: 3px;
-  color: white;
-  font-size: 20fp;
-}
-```
-
-```TypeScript
-import cryptoFramework from '@ohos.security.cryptoFramework';
-
-function StringToUint8Array(str) {
-    let arr = [];
-    for (let i = 0, j = str.length; i < j; ++i) {
-        arr.push(str.charCodeAt(i));
-    }
-    return new Uint8Array(arr);
-}
-
-let plainText = "123456";
-
-function mdTest() {
-    let inData = StringToUint8Array(plainText);
-    let md = cryptoFramework.createMd('SHA256');
-    console.info('createMd ' + typeof md);
-
-    md.update({data: inData}, function (finishErr) {
-        if (finishErr) {
-            console.error('Digest update failed. Code: ' + finishErr.code + " : " + finishErr.message);
-        } else {
-            console.info('Digest update successfully.');
-        }
-    })
-
-    md.digest(function (finishErr, digestOutput){
-        if (finishErr) {
-            console.error('Digest failed. Code: ' + finishErr.code + " : " + finishErr.message);
-        } else {
-            console.info('Digest successfully:' + digestOutput);
-        }
-    })
-}
-
-export default {
-    data: {
-        result: ''
-    },
-    MdTest() {
-        mdTest();
-    }
-};
-```
-
 ## digest
 
 ```TypeScript
@@ -197,8 +56,6 @@ digest(): Promise<DataBlob>
 生成消息摘要。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -221,21 +78,17 @@ digest(): Promise<DataBlob>
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 
-**示例**
-
-参见 [digest](#digest)
-
 ## digestSync
 
 ```TypeScript
 digestSync(): DataBlob
 ```
 
-生成消息摘要，通过同步方式返回摘要计算结果。<br><br>**说明：** <br>建议优先使用异步API，[digest](#digest)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+生成消息摘要，通过同步方式返回摘要计算结果。
+
+**说明：** 建议优先使用异步API，[digest](#digest)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -245,7 +98,7 @@ digestSync(): DataBlob
 
 | 类型 |
 | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) |
 
 **错误码：**
 
@@ -256,111 +109,15 @@ digestSync(): DataBlob
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 
-**示例**
-
-ArkTS示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function mdBySync() {
-  let md = cryptoFramework.createMd('SHA256');
-  md.updateSync({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
-  let mdOutput = md.digestSync();
-  console.info('[Sync]: MD result: ' + mdOutput.data);
-  console.info('[Sync]: MD len: ' + md.getMdLength());
-}
-```
-
-JS示例：
-
-```TypeScript
-<div class="container">
-    <text class="TestTitle">Crypto测试</text>
-    <input class="btn" @click="MdTestSync">Md同步测试</input>
-</div>
-```
-
-```TypeScript
-.container {
-  width: 100%;
-  height: 2000px;
-  align-items: center;
-  background-color: #fffefcfc;
-  flex-direction: column;
-  display: flex;
-}
-
-.TestTitle {
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  background-color: white;
-  color: #fff61515;
-  font-size: 15fp;
-}
-
-.btn {
-  width: 90%;
-  height: 80px;
-  text-align: center;
-  background-color: #fff17f04;
-  margin-top: 3px;
-  color: white;
-  font-size: 20fp;
-}
-```
-
-```TypeScript
-import cryptoFramework from '@ohos.security.cryptoFramework';
-
-function StringToUint8Array(str) {
-    let arr = [];
-    for (let i = 0, j = str.length; i < j; ++i) {
-        arr.push(str.charCodeAt(i));
-    }
-    return new Uint8Array(arr);
-}
-
-function mdTestSync() {
-    let mdAlgName = 'SHA256';
-    let message = 'mdTestMessage';
-    let md = cryptoFramework.createMd(mdAlgName);
-    md.updateSync({ data: StringToUint8Array(message) });
-    let mdResult = md.digestSync();
-    console.info('Digest successfully. result:' + mdResult.data);
-    let mdLen = md.getMdLength();
-    console.info('Digest successfully. md len: ' + mdLen);
-}
-
-export default {
-    data: {
-        result: ''
-    },
-    MdTestSync() {
-        mdTestSync();
-    }
-};
-```
-
 ## getMdLength
 
-ArkTS-Dyn:
 ```TypeScript
 getMdLength(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getMdLength(): int
 ```
 
 获取消息摘要的字节长度，单位为字节。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -376,24 +133,13 @@ getMdLength(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function getLength() {
-  let md = cryptoFramework.createMd('SHA256');
-  console.info('[Promise]: MD len: ' + md.getMdLength());
-}
-```
 
 ## update
 
@@ -409,8 +155,6 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
 - API版本9-11：此接口仅可在Stage模型下使用。
@@ -425,7 +169,7 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -450,8 +194,6 @@ update(input: DataBlob): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -464,7 +206,7 @@ update(input: DataBlob): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 |
 
 **返回值：**
 
@@ -491,11 +233,10 @@ updateSync(input: DataBlob): void
 > **说明：**&gt;
 > Md算法多次调用updateSync更新的代码示例详见开发指导
 > [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
-<br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+
+**说明：** 建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -505,7 +246,7 @@ updateSync(input: DataBlob): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 |
 
 **错误码：**
 
@@ -526,8 +267,6 @@ readonly algName: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

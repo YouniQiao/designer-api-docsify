@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## connect
 
 ```TypeScript
-function connect(sessionId: int): Promise<ConnectResult>
+function connect(sessionId: number): Promise<ConnectResult>
 ```
 
-创建协同会话成功并获得会话ID后，设备A上可进行UIAbility的连接。使用Promise异步回调。
+创建协同会话成功并获得会话ID后，设备A上可进行UIAbility的连接。调用此接口前， 需先在两端设备分别创建协同会话。connect接口通过底层分布式通信服务建立连接， 必须与设备B的acceptConnect配合使用才能建立成功连接，调用connect会拉起设备B应用。 连接过程会触发'connect'事件通知状态变化。使用Promise异步回调。 连接失败时，返回的ConnectResult对象中的errorCode字段包含具体的错误信息， 可参考ConnectErrorCode枚举了解错误原因。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -26,7 +24,7 @@ function connect(sessionId: int): Promise<ConnectResult>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| sessionId | number | 是 |
 
 **返回值：**
 
@@ -39,39 +37,3 @@ function connect(sessionId: int): Promise<ConnectResult>
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let sessionId = 100;
-abilityConnectionManager.connect(sessionId).then((ConnectResult) => {
-  if (!ConnectResult.isConnected) {
-    hilog.info(0x0000, 'testTag', 'connect failed');
-    return;
-  }
-}).catch(() => {
-  hilog.error(0x0000, 'testTag', "connect failed");
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
-import hilog from '@ohos.hilog';
-
-let sessionId = 100;
-abilityConnectionManager.connect(sessionId).then((ConnectResult) => {
-  if (!ConnectResult.isConnected) {
-    hilog.info(0x0000, 'testTag', 'connect failed');
-    return ConnectResult;
-  }
-}).catch(() => {
-  hilog.error(0x0000, 'testTag', "connect failed");
-})
-```

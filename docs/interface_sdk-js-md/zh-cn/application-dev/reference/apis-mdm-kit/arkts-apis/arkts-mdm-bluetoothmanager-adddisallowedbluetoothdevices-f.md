@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedBluetoothDevices
@@ -17,8 +17,6 @@ function addDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>): v
 2. 已经通过[addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md)接口添加了蓝牙设备可用名单。通过[removeAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-removeallowedbluetoothdevices-f.md)移除蓝牙设备可用名单后，可解除冲突。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -41,26 +39,3 @@ function addDisallowedBluetoothDevices(admin: Want, deviceIds: Array<string>): v
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 定义蓝牙设备MAC地址数组（需根据实际情况进行替换）
-let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E", "AA:BB:CC:DD:EE:FF"];
-try {
-  // 添加蓝牙设备禁用名单
-  bluetoothManager.addDisallowedBluetoothDevices(wantTemp,deviceIds);
-  console.info(`Succeeded in adding disallowed bluetooth devices.`);
-} catch (err) {
-  console.error(`Failed to add disallowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
-}
-```

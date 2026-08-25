@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDelegatedPolicies
@@ -15,8 +15,6 @@ function getDelegatedPolicies(admin: Want, bundleName: string): Array<string>
 Queries the list of policies that can be accessed by the delegated application.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_DELEGATED_POLICY
 
@@ -45,24 +43,3 @@ Queries the list of policies that can be accessed by the delegated application.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let admin: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let policies: Array<string> = adminManager.getDelegatedPolicies(admin, "com.example.enterprise.xxx");
-  console.info(`Succeeded in getting delegated policies.${JSON.stringify(policies)}`);
-} catch (err) {
-  console.error(`Failed to get delegated policies. Code: ${err.code}, message: ${err.message}`);
-}
-```

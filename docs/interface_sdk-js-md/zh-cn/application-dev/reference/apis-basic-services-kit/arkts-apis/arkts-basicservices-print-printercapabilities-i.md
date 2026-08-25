@@ -4,14 +4,12 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## options
@@ -25,8 +23,6 @@ options?: string
 **类型：** string
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -42,8 +38,6 @@ supportedColorModes: Array<PrintColorMode>
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## supportedDuplexModes
@@ -57,8 +51,6 @@ supportedDuplexModes: Array<PrintDuplexMode>
 **类型：** Array&lt;[PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)&gt;
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -74,8 +66,6 @@ supportedMediaTypes?: Array<string>
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## supportedOrientations
@@ -89,8 +79,6 @@ supportedOrientations?: Array<PrintOrientationMode>
 **类型：** Array&lt;[PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)&gt;
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -106,8 +94,6 @@ supportedPageSizes: Array<PrintPageSize>
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## supportedQualities
@@ -121,7 +107,5 @@ supportedQualities?: Array<PrintQuality>
 **类型：** Array&lt;[PrintQuality](arkts-basicservices-print-printquality-e.md)&gt;
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework

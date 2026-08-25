@@ -3,8 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## getCaptionsManager
@@ -17,8 +17,6 @@ function getCaptionsManager(): CaptionsManager
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
@@ -28,11 +26,3 @@ function getCaptionsManager(): CaptionsManager
 | 类型 |
 | --- |
 | [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) |
-
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-let captionsManager = accessibility.getCaptionsManager();
-```

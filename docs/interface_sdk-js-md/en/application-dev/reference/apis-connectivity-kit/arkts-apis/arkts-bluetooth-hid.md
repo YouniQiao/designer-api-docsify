@@ -4,14 +4,12 @@ Provides methods to accessing bluetooth HID(Human Interface Device)-related capa
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@kit.ConnectivityKit';
+import { hid } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

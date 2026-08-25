@@ -6,14 +6,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -26,8 +24,6 @@ close(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **错误码：**
@@ -35,31 +31,6 @@ close(): void
 | 错误码ID |
 | --- |
 | 14000011 |
-
-**示例**
-
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('fetchResultCloseDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    fetchResult.close();
-    console.info('close succeed.');
-  } catch (err) {
-    console.error(`close fail. error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## getAllObjects
 
@@ -70,8 +41,6 @@ getAllObjects(): Promise<Array<T>>
 获取文件检索结果中的所有文件资产。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -87,27 +56,6 @@ getAllObjects(): Promise<Array<T>>
 | --- |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getAllObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<sendablePhotoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  console.info('photoAssetList length: ', photoAssetList.length);
-}
-```
-
 ## getCount
 
 ```TypeScript
@@ -117,8 +65,6 @@ getCount(): number
 获取文件检索结果中的文件总数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -134,27 +80,6 @@ getCount(): number
 | --- |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getCountDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let fetchCount = fetchResult.getCount();
-  console.info('fetchCount = ', fetchCount);
-}
-```
-
 ## getFirstObject
 
 ```TypeScript
@@ -164,8 +89,6 @@ getFirstObject(): Promise<T>
 获取文件检索结果中的第一个文件资产。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -180,27 +103,6 @@ getFirstObject(): Promise<T>
 | 错误码ID |
 | --- |
 | 14000011 |
-
-**示例**
-
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getFirstObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-  console.info('photoAsset displayName: ', photoAsset.displayName);
-}
-```
 
 ## getLastObject
 
@@ -212,8 +114,6 @@ getLastObject(): Promise<T>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
@@ -227,27 +127,6 @@ getLastObject(): Promise<T>
 | 错误码ID |
 | --- |
 | 14000011 |
-
-**示例**
-
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getLastObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getLastObject();
-  console.info('photoAsset displayName: ', photoAsset.displayName);
-}
-```
 
 ## getNextObject
 
@@ -259,8 +138,6 @@ getNextObject(): Promise<T>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **返回值：**
@@ -275,28 +152,6 @@ getNextObject(): Promise<T>
 | --- |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getNextObjectDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  await fetchResult.getFirstObject();
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getNextObject();
-  console.info('photoAsset displayName: ', photoAsset.displayName);
-}
-```
-
 ## getObjectByPosition
 
 ```TypeScript
@@ -306,8 +161,6 @@ getObjectByPosition(index: number): Promise<T>
 获取文件检索结果中具有指定索引的文件资产。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -330,27 +183,6 @@ getObjectByPosition(index: number): Promise<T>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  console.info('getObjectByPositionDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getObjectByPosition(0);
-  console.info('photoAsset displayName: ', photoAsset.displayName);
-}
-```
-
 ## isAfterLast
 
 ```TypeScript
@@ -360,8 +192,6 @@ isAfterLast(): boolean
 检查结果集是否指向最后一行。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -376,29 +206,3 @@ isAfterLast(): boolean
 | 错误码ID |
 | --- |
 | 14000011 |
-
-**示例**
-
-phAccessHelper的创建请参考sendablePhotoAccessHelper.getPhotoAccessHelper的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let fetchCount = fetchResult.getCount();
-  console.info('count:' + fetchCount);
-  let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getLastObject();
-  if (fetchResult.isAfterLast()) {
-    console.info('photoAsset isAfterLast displayName = ', photoAsset.displayName);
-  } else {
-    console.info('photoAsset not isAfterLast.');
-  }
-}
-```

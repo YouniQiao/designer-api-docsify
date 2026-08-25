@@ -5,15 +5,13 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供无障碍扩�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## 导入模块
 
 ```TypeScript
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
-import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## onAccessibilityEvent
@@ -26,8 +24,6 @@ onAccessibilityEvent(event: AccessibilityEvent): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -37,21 +33,6 @@ onAccessibilityEvent(event: AccessibilityEvent): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { AccessibilityExtensionAbility, AccessibilityEvent } from '@kit.AccessibilityKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onAccessibilityEvent(event: AccessibilityEvent): void {
-    console.info('AxExtensionAbility onAccessibilityEvent');
-    if (event.eventType === 'click') {
-      console.info('AxExtensionAbility onAccessibilityEvent: click');
-    }
-  }
-}
-```
 
 ## onConnect
 
@@ -63,23 +44,9 @@ onConnect(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-
-**示例**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onConnect(): void {
-    console.info('AxExtensionAbility onConnect');
-  }
-}
-```
 
 ## onDisconnect
 
@@ -91,23 +58,9 @@ onDisconnect(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
-
-**示例**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onDisconnect(): void {
-    console.info('AxExtensionAbility onDisconnect');
-  }
-}
-```
 
 ## onKeyEvent
 
@@ -118,8 +71,6 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 在按键按下时回调此接口，可在该方法中根据业务判断是否消费事件。该方法可选择性重写。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -137,24 +88,6 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
-import { KeyEvent } from '@kit.InputKit';
-
-class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
-  onKeyEvent(keyEvent: KeyEvent): boolean {
-    console.info('AxExtensionAbility onKeyEvent');
-    if (keyEvent.key.code === 16) {
-      console.info('AxExtensionAbility onKeyEvent: intercept 16');
-      return true;
-    }
-    return false;
-  }
-}
-```
-
 ## context
 
 ```TypeScript
@@ -166,7 +99,5 @@ context: AccessibilityExtensionContext
 **类型：** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

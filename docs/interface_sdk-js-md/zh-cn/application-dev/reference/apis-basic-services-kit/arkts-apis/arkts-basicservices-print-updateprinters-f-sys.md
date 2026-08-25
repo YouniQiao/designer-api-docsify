@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## updatePrinters
@@ -15,8 +15,6 @@ function updatePrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<vo
 更新特定打印机的信息，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -39,50 +37,6 @@ function updatePrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<vo
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerInfo : print.PrinterInfo = {
-    printerId : '3232',
-    printerName : 'hhhhh',
-    printerState : 0,
-    printerIcon : 12,
-    description : 'str',
-    capability : undefined,
-    options : 'opt'
-};
-print.updatePrinters([printerInfo], (err: BusinessError) => {
-    if (err) {
-        console.error('updataPrinters failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('updataPrinters success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerInfo : print.PrinterInfo = {
-    printerId : '3232',
-    printerName : 'hhhhh',
-    printerState : 0,
-    printerIcon : 12,
-    description : 'str',
-    capability : undefined,
-    options : 'opt'
-};
-print.updatePrinters([printerInfo]).then(() => {
-    console.info('update printers success');
-}).catch((error: BusinessError) => {
-    console.error('update printers error : ' + JSON.stringify(error));
-})
-```
-
 
 ## updatePrinters
 
@@ -93,8 +47,6 @@ function updatePrinters(printers: Array<PrinterInfo>): Promise<void>
 更新特定打印机的信息，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -121,7 +73,3 @@ function updatePrinters(printers: Array<PrinterInfo>): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [updatePrinters](#updateprinters)

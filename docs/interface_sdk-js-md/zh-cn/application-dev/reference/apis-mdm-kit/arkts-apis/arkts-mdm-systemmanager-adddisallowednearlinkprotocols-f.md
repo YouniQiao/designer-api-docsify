@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedNearLinkProtocols
@@ -15,8 +15,6 @@ function addDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLinkPr
 为指定用户添加禁用的星闪协议名单。NearLink Kit（星闪服务）提供一种低功耗、高速率的短距离通信服务，支持星闪设备之间的连接、数据交互。本接口对键盘、手写笔等系统服务和系统应用 不生效。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -41,30 +39,3 @@ function addDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLinkPr
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-let protocols: systemManager.NearLinkProtocol[] = [systemManager.NearLinkProtocol.SSAP,
-  systemManager.NearLinkProtocol.DATA_TRANSFER];
-
-// 需根据实际情况进行替换
-let accountId: number = 100;
-
-try {
-  systemManager.addDisallowedNearLinkProtocols(wantTemp, protocols, accountId);
-  console.info('Succeeded in adding the disabled Starlink protocol list for the specified user.');
-} catch (err) {
-  console.error(`Failed to add the disabled Starlink protocol list for the specified user. Code is ${err.code}, message is ${err.message}`);
-}
-```

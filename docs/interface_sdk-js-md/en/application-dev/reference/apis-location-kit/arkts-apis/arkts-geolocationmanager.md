@@ -4,15 +4,13 @@ Provides interfaces for acquiring location information, managing location switch
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 11 and later: SystemCapability.Location.Location.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## Summary
@@ -62,15 +60,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [off](arkts-location-geolocationmanager-off-f.md#offgnssfencestatuschange) |
 | [off](arkts-location-geolocationmanager-off-f.md#offcountrycodechange) |
 | [off](arkts-location-geolocationmanager-off-f.md#offbluetoothscanresultchange) |
-| [offBluetoothScanResultChange](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md) |
-| [offCachedGnssLocationsChange](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md) |
-| [offCountryCodeChange](arkts-location-geolocationmanager-offcountrycodechange-f.md) |
-| [offGnssFenceStatusChange](arkts-location-geolocationmanager-offgnssfencestatuschange-f.md) |
 | [offLocationChange](arkts-location-geolocationmanager-offlocationchange-f.md) |
-| [offLocationEnabledChange](arkts-location-geolocationmanager-offlocationenabledchange-f.md) |
-| [offLocationError](arkts-location-geolocationmanager-offlocationerror-f.md) |
-| [offNmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md) |
-| [offSatelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md) |
 | [on](arkts-location-geolocationmanager-on-f.md#onlocationchange) |
 | [on](arkts-location-geolocationmanager-on-f.md#onlocationerror) |
 | [on](arkts-location-geolocationmanager-on-f.md#onlocationenabledchange) |
@@ -80,15 +70,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [on](arkts-location-geolocationmanager-on-f.md#ongnssfencestatuschange) |
 | [on](arkts-location-geolocationmanager-on-f.md#oncountrycodechange) |
 | [on](arkts-location-geolocationmanager-on-f.md#onbluetoothscanresultchange) |
-| [onBluetoothScanResultChange](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md) |
-| [onCachedGnssLocationsChange](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md) |
-| [onCountryCodeChange](arkts-location-geolocationmanager-oncountrycodechange-f.md) |
-| [onGnssFenceStatusChange](arkts-location-geolocationmanager-ongnssfencestatuschange-f.md) |
 | [onLocationChange](arkts-location-geolocationmanager-onlocationchange-f.md) |
-| [onLocationEnabledChange](arkts-location-geolocationmanager-onlocationenabledchange-f.md) |
-| [onLocationError](arkts-location-geolocationmanager-onlocationerror-f.md) |
-| [onNmeaMessage](arkts-location-geolocationmanager-onnmeamessage-f.md) |
-| [onSatelliteStatusChange](arkts-location-geolocationmanager-onsatellitestatuschange-f.md) |
 | [removeBeaconFence](arkts-location-geolocationmanager-removebeaconfence-f.md) |
 | [removeGnssGeofence](arkts-location-geolocationmanager-removegnssgeofence-f.md) |
 | [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md) |
@@ -116,14 +98,10 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [isFusionFenceSupported](arkts-location-geolocationmanager-isfusionfencesupported-f-sys.md) |
 | [isLocationEnabledByUserId](arkts-location-geolocationmanager-islocationenabledbyuserid-f-sys.md) |
 | [isLocationPrivacyConfirmed](arkts-location-geolocationmanager-islocationprivacyconfirmed-f-sys.md) |
-| [off](arkts-location-geolocationmanager-off-f-sys.md#offlocatingrequireddatachange) |
-| [off](arkts-location-geolocationmanager-off-f-sys.md#offlocationiconstatuschange) |
-| [offLocatingRequiredDataChange](arkts-location-geolocationmanager-offlocatingrequireddatachange-f-sys.md) |
-| [offLocationIconStatusChange](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md) |
-| [on](arkts-location-geolocationmanager-on-f-sys.md#onlocatingrequireddatachange) |
-| [on](arkts-location-geolocationmanager-on-f-sys.md#onlocationiconstatuschange) |
-| [onLocatingRequiredDataChange](arkts-location-geolocationmanager-onlocatingrequireddatachange-f-sys.md) |
-| [onLocationIconStatusChange](arkts-location-geolocationmanager-onlocationiconstatuschange-f-sys.md) |
+| off |
+| off |
+| on |
+| on |
 | [removeFusionFence](arkts-location-geolocationmanager-removefusionfence-f-sys.md) |
 | [setLocationPrivacyConfirmStatus](arkts-location-geolocationmanager-setlocationprivacyconfirmstatus-f-sys.md) |
 | [setLocationSwitchIgnored](arkts-location-geolocationmanager-setlocationswitchignored-f-sys.md) |

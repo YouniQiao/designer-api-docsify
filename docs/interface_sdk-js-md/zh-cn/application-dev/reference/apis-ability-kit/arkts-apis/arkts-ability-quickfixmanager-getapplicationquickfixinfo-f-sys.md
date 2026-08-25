@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getApplicationQuickFixInfo
@@ -15,8 +15,6 @@ function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<
 获取应用的快速修复信息。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -41,42 +39,6 @@ function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<
 | [18500001](../errorcode-ability.md#18500001-指定的包名无效) |
 | [18500008](../errorcode-ability.md#18500008-快速修复内部错误) |
 
-**示例**
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = 'bundleName';
-  quickFixManager.getApplicationQuickFixInfo(bundleName, (error, data) => {
-    if (error) {
-      console.error(`getApplicationQuickFixInfo error: ${error}`);
-    } else {
-      console.info(`getApplicationQuickFixInfo success: ${data}`);
-    }
-  });
-} catch (paramError) {
-  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = 'bundleName';
-  quickFixManager.getApplicationQuickFixInfo(bundleName).then((data) => {
-    console.info(`getApplicationQuickFixInfo success: ${data}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getApplicationQuickFixInfo err: ${error}`);
-  });
-} catch (paramError) {
-  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-}
-```
-
 
 ## getApplicationQuickFixInfo
 
@@ -87,8 +49,6 @@ function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuic
 获取应用的快速修复信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -117,7 +77,3 @@ function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuic
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [18500001](../errorcode-ability.md#18500001-指定的包名无效) |
 | [18500008](../errorcode-ability.md#18500008-快速修复内部错误) |
-
-**示例**
-
-参见 [getApplicationQuickFixInfo](#getapplicationquickfixinfo)

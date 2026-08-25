@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setPowerKeyFilteringStrategy
@@ -15,8 +15,6 @@ function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md)接口。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.POWER_MANAGER
 
@@ -37,13 +35,3 @@ function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [4900101](../errorcode-power.md#4900101-连接服务失败) |
-
-**示例**
-
-```TypeScript
-try {
-    power.setPowerKeyFilteringStrategy(power.PowerKeyFilteringStrategy.LONG_PRESS_FILTERING_ONCE);
-} catch(err) {
-    console.error('setPowerKeyFilteringStrategy failed, err: ' + err);
-}
-```

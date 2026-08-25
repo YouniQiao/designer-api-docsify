@@ -6,14 +6,12 @@ VideoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## canPreconfig
@@ -25,8 +23,6 @@ canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boo
 查询当前Session是否支持指定的预配置类型。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -51,38 +47,6 @@ canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boo
 | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testCanPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    let result = photoSession.canPreconfig(preconfigType, preconfigRatio);
-    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The canPreconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testCanPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    let result = videoSession.canPreconfig(preconfigType, preconfigRatio);
-    console.info(`canPreconfig ${preconfigType} ${preconfigRatio} result is : ${result}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The canPreconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## off('error')
 
 ```TypeScript
@@ -92,8 +56,6 @@ off(type: 'error', callback?: ErrorCallback): void
 注销监听普通录像会话的错误事件，通过注册回调函数获取结果。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -116,8 +78,6 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -138,8 +98,6 @@ off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): 
 注销监听相机平滑变焦的状态变化。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -162,8 +120,6 @@ off(type: 'controlCenterEffectStatusChange', callback?: AsyncCallback<ControlCen
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -184,8 +140,6 @@ off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void
 注销相机微距状态变化的监听。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -214,8 +168,6 @@ off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwi
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -237,8 +189,6 @@ off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLe
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -250,80 +200,6 @@ off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLe
 | type | 'systemPressureLevelChange' | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 |
 
-## offAutoDeviceSwitchStatusChange
-
-```TypeScript
-offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void
-```
-
-Unsubscribes to auto device switch status event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 否 |
-
-## offControlCenterEffectStatusChange
-
-```TypeScript
-offControlCenterEffectStatusChange(callback?: AsyncCallback<ControlCenterStatusInfo>): void
-```
-
-Unsubscribes to control center effect status change callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 否 |
-
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes from error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-function unregisterCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
-   cameraInput.offError(camera);
-}
-```
-
-```TypeScript
-function unregisterMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.offError();
-}
-```
-
 ## offExposureInfoChange
 
 ```TypeScript
@@ -333,8 +209,6 @@ offExposureInfoChange(callback?: Callback<ExposureInfo>): void
 取消订阅曝光信息变化事件回调。如果订阅了曝光信息，请在释放相机前取消订阅。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -348,40 +222,6 @@ offExposureInfoChange(callback?: Callback<ExposureInfo>): void
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | 否 |
 
-**示例**
-
-```TypeScript
-function offExposureInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.offExposureInfoChange();
-}
-```
-
-```TypeScript
-function offExposureInfoChange(videoSession: camera.VideoSession): void {
-  videoSession.offExposureInfoChange();
-}
-```
-
-## offFocusStateChange
-
-```TypeScript
-offFocusStateChange(callback?: AsyncCallback<FocusState>): void
-```
-
-Unsubscribes from focus state change event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 |
-
 ## offIsoInfoChange
 
 ```TypeScript
@@ -391,8 +231,6 @@ offIsoInfoChange(callback?: Callback<IsoInfo>): void
 取消监听相机感光度（ISO）状态的变化。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -406,88 +244,6 @@ offIsoInfoChange(callback?: Callback<IsoInfo>): void
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | 否 |
 
-**示例**
-
-```TypeScript
-function offIsoInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.offIsoInfoChange();
-}
-```
-
-```TypeScript
-function callback(isoInfo: camera.IsoInfo): void {
-  console.info(`Iso : ${isoInfo}`);
-}
-
-function unregisterIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.offIsoInfoChange(callback);
-}
-
-function unregisterAllIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.offIsoInfoChange();
-}
-```
-
-## offMacroStatusChanged
-
-```TypeScript
-offMacroStatusChanged(callback?: AsyncCallback<boolean>): void
-```
-
-Unsubscribes camera macro status event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 |
-
-## offSmoothZoomInfoAvailable
-
-```TypeScript
-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
-```
-
-Unsubscribes from zoom info event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 |
-
-## offSystemPressureLevelChange
-
-```TypeScript
-offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void
-```
-
-Unsubscribes to system pressure level event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 |
-
 ## on('error')
 
 ```TypeScript
@@ -500,8 +256,6 @@ on(type: 'error', callback: ErrorCallback): void
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -527,8 +281,6 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -552,8 +304,6 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -579,8 +329,6 @@ on(type: 'controlCenterEffectStatusChange', callback: AsyncCallback<ControlCente
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -601,8 +349,6 @@ on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void
 监听相机微距状态变化，通过注册回调函数获取结果。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -634,8 +380,6 @@ on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitc
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -660,8 +404,6 @@ on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLeve
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -673,92 +415,6 @@ on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLeve
 | type | 'systemPressureLevelChange' | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 |
 
-## onAutoDeviceSwitchStatusChange
-
-```TypeScript
-onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void
-```
-
-Subscribes to auto device switch status event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 是 |
-
-## onControlCenterEffectStatusChange
-
-```TypeScript
-onControlCenterEffectStatusChange(callback: AsyncCallback<ControlCenterStatusInfo>): void
-```
-
-Subscribes to control center effect status change callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ControlCenterStatusInfo](arkts-camera-camera-controlcenterstatusinfo-i.md)&gt; | 是 |
-
-## onError
-
-```TypeScript
-onError(callback: ErrorCallback): void
-```
-
-Subscribes to error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError): void {
-  console.error(`Camera input error code: ${err.code}`);
-}
-
-function registerCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
-   cameraInput.onError(camera, callback);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(metadataOutputError: BusinessError): void {
-  console.error(`Metadata output error code: ${metadataOutputError.code}`);
-}
-
-function registerMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
-   metadataOutput.onError(callback);
-}
-```
-
 ## onExposureInfoChange
 
 ```TypeScript
@@ -768,8 +424,6 @@ onExposureInfoChange(callback: Callback<ExposureInfo>): void
 订阅曝光信息变化事件回调。曝光参数更改后，系统将返回更新后的曝光信息。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -783,44 +437,6 @@ onExposureInfoChange(callback: Callback<ExposureInfo>): void
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-function onExposureInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
-    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
-  });
-}
-```
-
-```TypeScript
-function onExposureInfoChange(videoSession: camera.VideoSession): void {
-  videoSession.onExposureInfoChange((exposureInfo: camera.ExposureInfo) => {
-    console.info(`Exposure info changed, exposureTime: ${exposureInfo.exposureTime}`);
-  });
-}
-```
-
-## onFocusStateChange
-
-```TypeScript
-onFocusStateChange(callback: AsyncCallback<FocusState>): void
-```
-
-Subscribes focus state change event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 |
-
 ## onIsoInfoChange
 
 ```TypeScript
@@ -830,8 +446,6 @@ onIsoInfoChange(callback: Callback<IsoInfo>): void
 监听相机感光度（ISO）状态变化，通过注册回调函数获取最新ISO值。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -845,86 +459,6 @@ onIsoInfoChange(callback: Callback<IsoInfo>): void
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-function onIsoInfoChange(photoSession: camera.PhotoSession): void {
-  photoSession.onIsoInfoChange((isoInfo: camera.IsoInfo) => {
-    console.info(`ISO info changed, iso: ${isoInfo.iso}`);
-  });
-}
-```
-
-```TypeScript
-function callback(isoInfo: camera.IsoInfo): void {
-  console.info(`Iso : ${isoInfo}`);
-}
-
-function registerIsoInfoChanged(videoSession: camera.VideoSession): void {
-  videoSession.onIsoInfoChange(callback);
-}
-```
-
-## onMacroStatusChanged
-
-```TypeScript
-onMacroStatusChanged(callback: AsyncCallback<boolean>): void
-```
-
-Subscribes camera macro status event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-## onSmoothZoomInfoAvailable
-
-```TypeScript
-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
-```
-
-Subscribes zoom info event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 |
-
-## onSystemPressureLevelChange
-
-```TypeScript
-onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void
-```
-
-Subscribes to system pressure level event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 |
-
 ## preconfig
 
 ```TypeScript
@@ -934,8 +468,6 @@ preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
 对当前Session进行预配置。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -954,38 +486,6 @@ preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
 | --- |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testPreconfig(photoSession: camera.PhotoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    photoSession.preconfig(preconfigType, preconfigRatio);
-    console.info(`preconfig success preconfigType: ${preconfigType}, preconfigRatio: ${preconfigRatio}`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The preconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testPreconfig(videoSession: camera.VideoSession, preconfigType: camera.PreconfigType,
-  preconfigRatio: camera.PreconfigRatio): void {
-  try {
-    videoSession.preconfig(preconfigType, preconfigRatio);
-    console.info(`preconfig ${preconfigType} ${preconfigRatio} success`);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`The preconfig call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## setQualityPrioritization
 
 ```TypeScript
@@ -1000,8 +500,6 @@ setQualityPrioritization(quality: QualityPrioritization): void
 > [start](arkts-camera-camera-session-i.md#start)之间调用。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -1019,19 +517,3 @@ setQualityPrioritization(quality: QualityPrioritization): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setQualityPrioritization(videoSession: camera.VideoSession): void {
-  try {
-    videoSession.setQualityPrioritization(camera.QualityPrioritization.POWER_BALANCE);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The setQualityPrioritization call failed. error code: ${err.code}`);
-  }
-}
-```

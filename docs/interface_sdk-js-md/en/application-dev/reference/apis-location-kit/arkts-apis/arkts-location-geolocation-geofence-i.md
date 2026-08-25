@@ -4,8 +4,6 @@ Circular fence information.@interface Geofence
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
@@ -17,7 +15,7 @@ Circular fence information.@interface Geofence
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## expiration
@@ -29,8 +27,6 @@ expiration: number
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ latitude: number
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [latitude](arkts-location-geolocationmanager-geofence-i.md#latitude)
@@ -66,8 +60,6 @@ longitude: number
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [longitude](arkts-location-geolocationmanager-geofence-i.md#longitude)
@@ -83,8 +75,6 @@ radius: number
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

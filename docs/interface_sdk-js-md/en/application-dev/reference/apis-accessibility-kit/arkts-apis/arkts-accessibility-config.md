@@ -4,8 +4,6 @@ The **accessibility.config** module provides APIs for configuring system accessi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The **accessibility.config** module provides APIs for configuring system accessi
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## Summary
@@ -29,15 +27,11 @@ import { config } from '@kit.AccessibilityKit';
 | [enableAbility(System Accessibility Configuration)](arkts-accessibility-config-enableability-f-sys.md) |
 | [enableAbilityWithCallback(System Accessibility Configuration)](arkts-accessibility-config-enableabilitywithcallback-f-sys.md) |
 | [getSeniorModeStateForApp(System Accessibility Configuration)](arkts-accessibility-config-getseniormodestateforapp-f-sys.md) |
-| [off(System Accessibility Configuration)](arkts-accessibility-config-off-f-sys.md#offenabledaccessibilityextensionlistchange) |
-| [off(System Accessibility Configuration)](arkts-accessibility-config-off-f-sys.md#offinstalledaccessibilitylistchange) |
-| [offEnabledAccessibilityExtensionListChange(System Accessibility Configuration)](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md) |
-| [offInstalledAccessibilityListChange(System Accessibility Configuration)](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md) |
+| off(System Accessibility Configuration) |
+| off(System Accessibility Configuration) |
 | [offSeniorModeStateChangeForApp(System Accessibility Configuration)](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md) |
-| [on(System Accessibility Configuration)](arkts-accessibility-config-on-f-sys.md#onenabledaccessibilityextensionlistchange) |
-| [on(System Accessibility Configuration)](arkts-accessibility-config-on-f-sys.md#oninstalledaccessibilitylistchange) |
-| [onEnabledAccessibilityExtensionListChange(System Accessibility Configuration)](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md) |
-| [onInstalledAccessibilityListChange(System Accessibility Configuration)](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md) |
+| on(System Accessibility Configuration) |
+| on(System Accessibility Configuration) |
 | [onSeniorModeStateChangeForApp(System Accessibility Configuration)](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md) |
 | [setMagnificationState(System Accessibility Configuration)](arkts-accessibility-config-setmagnificationstate-f-sys.md) |
 | [setSeniorModeStateForApp(System Accessibility Configuration)](arkts-accessibility-config-setseniormodestateforapp-f-sys.md) |

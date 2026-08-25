@@ -1,7 +1,5 @@
 # Uint8ClampedArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new(length: number): Uint8ClampedArray
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -31,8 +27,6 @@ new(length: number): Uint8ClampedArray
 new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -48,8 +42,6 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray
 ```TypeScript
 new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8ClampedArray
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -71,8 +63,6 @@ from(arrayLike: ArrayLike<number>): Uint8ClampedArray
 
 Creates an array from an array-like or iterable object.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -90,8 +80,6 @@ from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: a
 ```
 
 Creates an array from an array-like or iterable object.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -113,8 +101,6 @@ of(...items: number[]): Uint8ClampedArray
 
 Returns a new array from a set of elements.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -135,8 +121,6 @@ The size in bytes of each element in the array.
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## prototype
 
 ```TypeScript
@@ -144,5 +128,3 @@ readonly prototype: Uint8ClampedArray
 ```
 
 **Type:** [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md)
-
-**ArkTS mode:** 

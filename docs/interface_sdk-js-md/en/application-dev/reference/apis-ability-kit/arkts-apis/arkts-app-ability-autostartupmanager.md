@@ -4,14 +4,12 @@ The autoStartupManager module provides APIs for an application to query whether 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
+import { autoStartupManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -30,10 +28,8 @@ import { autoStartupManager } from '@kit.AbilityKit';
 | --- |
 | [cancelApplicationAutoStartup](arkts-ability-autostartupmanager-cancelapplicationautostartup-f-sys.md) |
 | [cancelApplicationAutoStartup](arkts-ability-autostartupmanager-cancelapplicationautostartup-f-sys.md) |
-| [off](arkts-ability-autostartupmanager-off-f-sys.md#offsystemautostartup) |
-| [offSystemAutoStartup](arkts-ability-autostartupmanager-offsystemautostartup-f-sys.md) |
-| [on](arkts-ability-autostartupmanager-on-f-sys.md#onsystemautostartup) |
-| [onSystemAutoStartup](arkts-ability-autostartupmanager-onsystemautostartup-f-sys.md) |
+| off |
+| on |
 | [queryAllAutoStartupApplications](arkts-ability-autostartupmanager-queryallautostartupapplications-f-sys.md) |
 | [queryAllAutoStartupApplications](arkts-ability-autostartupmanager-queryallautostartupapplications-f-sys.md) |
 | [setApplicationAutoStartup](arkts-ability-autostartupmanager-setapplicationautostartup-f-sys.md) |

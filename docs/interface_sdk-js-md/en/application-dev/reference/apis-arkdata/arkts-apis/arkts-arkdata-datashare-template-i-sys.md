@@ -4,8 +4,6 @@ Defines the struct of the template used in a subscription.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the struct of the template used in a subscription.
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## predicates
@@ -27,8 +25,6 @@ Predicates to use. When **on** is called, the predicates are used to generate da
 **Type:** Record&lt;string, string&gt;
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Template scheduler SQL, which is embedded with a custom function. Currently, the
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -69,8 +63,6 @@ Update SQL statement of a specified template. The default value is an empty stri
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

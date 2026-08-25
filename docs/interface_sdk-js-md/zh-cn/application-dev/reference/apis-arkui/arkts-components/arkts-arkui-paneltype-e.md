@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,8 +17,6 @@ Minibar = 0
 提供minibar和类全屏展示切换效果。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 12
 
@@ -38,8 +34,6 @@ Foldable = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 12
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -56,8 +50,6 @@ Temporary = 2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 12
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -73,8 +65,6 @@ CUSTOM = 3
 配置自适应内容高度，不支持尺寸切换效果。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 12
 

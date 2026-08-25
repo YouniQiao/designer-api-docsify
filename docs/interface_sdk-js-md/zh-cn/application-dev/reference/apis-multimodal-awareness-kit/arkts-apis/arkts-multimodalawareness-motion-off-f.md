@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## off('operatingHandChanged')
@@ -15,8 +15,6 @@ function off(type: 'operatingHandChanged', callback?: Callback<OperatingHandStat
 取消订阅触控操作手感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('operatingHandChanged')：订阅触控操作手感知事件。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** 
 - API版本20+：ohos.permission.ACTIVITY_MOTION 或 ohos.permission.DETECT_GESTURE
@@ -41,20 +39,6 @@ function off(type: 'operatingHandChanged', callback?: Callback<OperatingHandStat
 | [31500001](../errorcode-motion.md#31500001-服务异常) |
 | [31500003](../errorcode-motion.md#31500003-取消订阅失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    motion.off('operatingHandChanged');
-    console.info("off succeeded");
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Failed to unsubscribe operatingHandChanged. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## off('holdingHandChanged')
 
@@ -65,8 +49,6 @@ function off(type: 'holdingHandChanged', callback?: Callback<HoldingHandStatus>)
 取消订阅握持手状态变化感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('holdingHandChanged')：订阅握持手状态变化感知事件。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.DETECT_GESTURE
 
@@ -87,17 +69,3 @@ function off(type: 'holdingHandChanged', callback?: Callback<HoldingHandStatus>)
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [31500001](../errorcode-motion.md#31500001-服务异常) |
 | [31500003](../errorcode-motion.md#31500003-取消订阅失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  motion.off('holdingHandChanged'); // 移除所有同类订阅
-  console.info('off succeeded');
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to unsubscribe holdingHandChanged. Code: ${error.code}, message: ${error.message}`);
-}
-```

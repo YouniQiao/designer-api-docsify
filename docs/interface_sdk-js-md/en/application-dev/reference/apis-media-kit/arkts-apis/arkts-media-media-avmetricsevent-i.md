@@ -4,14 +4,12 @@ Describes the information of an Metrics Event.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## details
@@ -25,8 +23,6 @@ The detailed information of the event.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Type of the metrics event.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -53,31 +47,27 @@ Type of the metrics event.
 ## playbackPosition
 
 ```TypeScript
-playbackPosition: int
+playbackPosition: number
 ```
 
 The playback progress position when the event occurs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## timeStamp
 
 ```TypeScript
-timeStamp: long
+timeStamp: number
 ```
 
 Absolute timestamp when the event occurred.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer

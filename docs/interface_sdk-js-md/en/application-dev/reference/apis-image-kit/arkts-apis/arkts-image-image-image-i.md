@@ -4,14 +4,12 @@ The **Image** class is used to obtain image content.An Image instance is returne
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## getBufferData
@@ -28,8 +26,6 @@ Obtains ImageBufferData from an image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -39,19 +35,6 @@ Obtains ImageBufferData from an image.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null |
-
-**Examples**
-
-```TypeScript
-function GetBufferData(img: image.Image) {
-  const bufferData = img.getBufferData();
-  if (bufferData == null) {
-    console.error('Failed to get the bufferData: bufferData is null.');
-    return;
-  }
-  console.info('Succeeded in getting bufferData.');
-}
-```
 
 ## getComponent
 
@@ -63,8 +46,6 @@ Obtains the component buffer from the Image instance based on the color componen
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -73,34 +54,6 @@ Obtains the component buffer from the Image instance based on the color componen
 | --- | --- | --- |
 | componentType | [ComponentType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetComponent(img : image.Image) {
-  img.getComponent(image.ComponentType.JPEG, (err: BusinessError, component: image.Component) => {
-    if (err) {
-      console.error(`Failed to get the component.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting component.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetComponent(img : image.Image) {
-  img.getComponent(image.ComponentType.JPEG).then((component: image.Component) => {
-    console.info('Succeeded in getting component.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get the component.code ${error.code},message is ${error.message}`);
-  })
-}
-```
 
 ## getComponent
 
@@ -111,8 +64,6 @@ getComponent(componentType: ComponentType): Promise<Component>
 Obtains the component buffer from the Image instance based on the color component type. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -128,10 +79,6 @@ Obtains the component buffer from the Image instance based on the color componen
 | --- |
 | Promise & lt;Component & gt; |
 
-**Examples**
-
-See [getComponent](#getcomponent)
-
 ## getMetadata
 
 ```TypeScript
@@ -141,8 +88,6 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 Obtains the HDR metadata from an image based on the HDR metadata type.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,74 +112,6 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
 
-**Examples**
-
-```TypeScript
-async function GetAuxPictureObjMetadata(auxPictureObj: image.AuxiliaryPicture) {
-  if (auxPictureObj != null) {
-    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-    let auxPictureObjMetaData: image.Metadata | null = await auxPictureObj.getMetadata(metadataType);
-    if (auxPictureObjMetaData != null) {
-      console.info('Get AuxPictureObj Metadata success' );
-    } else {
-      console.error('Get AuxPictureObj Metadata failed');
-    }
-  } else {
-    console.error('Get AuxPictureObj is null.');
-  }
-}
-```
-
-```TypeScript
-async function GetMetadata(img : image.Image) {
-  try {
-    let staticMetadata = img.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
-    console.info(`getMetadata:${staticMetadata}`);
-  } catch (err) {
-    console.error('getMetadata failed' + err);
-  }
-}
-```
-
-```TypeScript
-async function GetPictureObjMetadataProperties(pictureObj : image.Picture) {
-  if (pictureObj != null) {
-    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-    let pictureObjMetaData: image.Metadata = await pictureObj.getMetadata(metadataType);
-    if (pictureObjMetaData != null) {
-      console.info('get picture metadata success');
-    } else {
-      console.error('get picture metadata is failed');
-    }
-  } else {
-    console.error(" pictureObj is null");
-  }
-}
-```
-
-```TypeScript
-async function GetMetadata(context: Context) {
-  // Replace app.media.startIcon with a local HDR image.
-  let img = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id);
-  let imageSource = image.createImageSource(img.buffer.slice(0));
-  let decodingOptions: image.DecodingOptions = {
-    desiredDynamicRange: image.DecodingDynamicRange.AUTO
-  };
-  let pixelmap = imageSource.createPixelMapSync(decodingOptions);
-  if (pixelmap != undefined) {
-    console.info('Succeeded in creating pixelMap object.');
-    try {
-      let staticMetadata = pixelmap.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
-      console.info(`getMetadata:${staticMetadata}`);
-    } catch (e) {
-      console.error('pixelmap create failed' + e);
-    }
-  } else {
-    console.error('Failed to create pixelMap.');
-  }
-}
-```
-
 ## release
 
 ```TypeScript
@@ -245,8 +122,6 @@ Releases this Image instance. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
@@ -254,203 +129,6 @@ Releases this Image instance. This API uses an asynchronous callback to return t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-async function Release(auxPictureObj: image.AuxiliaryPicture) {
-  let funcName = "Release";
-  if (auxPictureObj != null) {
-    auxPictureObj.release();
-    if (auxPictureObj.getType() == null) {
-      console.info(funcName, 'Success !');
-    } else {
-      console.error(funcName, 'Failed !');
-    }
-  } else {
-    console.error('PictureObj is null');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-async function Release(pictureObj : image.Picture) {
-  let funcName = "Release";
-  if (pictureObj != null) {
-    pictureObj.release();
-    if (pictureObj.getMainPixelmap() == null) {
-      console.info(funcName, 'Success !');
-    } else {
-      console.error(funcName, 'Failed !');
-    }
-  } else {
-    console.error('PictureObj is null');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(pixelMap:image.PixelMap) {
-  if (pixelMap != undefined) {
-    await pixelMap.release().then(() => {
-      console.info('Succeeded in releasing pixelmap object.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(pixelMap:image.PixelMap) {
-  if (pixelMap != undefined) {
-    pixelMap.release((err: BusinessError) => {
-      if (err) {
-        console.error(`Failed to release pixelmap object. code is ${err.code}, message is ${err.message}`);
-        return;
-      } else {
-        console.info('Succeeded in releasing pixelmap object.');
-      }
-    })
-  }
-}
-```
 
 ## release
 
@@ -462,8 +140,6 @@ Releases this Image instance. This API uses a promise to return the result.The c
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
@@ -471,10 +147,6 @@ Releases this Image instance. This API uses a promise to return the result.The c
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [release](#release)
 
 ## clipRect
 
@@ -487,8 +159,6 @@ Image area to be cropped.
 **Type:** Region
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -504,8 +174,6 @@ Color space of the image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -513,16 +181,14 @@ Color space of the image.
 ## format
 
 ```TypeScript
-readonly format: int
+readonly format: number
 ```
 
 Image format. For details, see OH_NativeBuffer_Format.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -538,22 +204,18 @@ Image size.If the Image object stores camera preview stream data (YUV image data
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## timestamp
 
 ```TypeScript
-readonly timestamp: long
+readonly timestamp: number
 ```
 
 Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty) to read the related Exif information.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core

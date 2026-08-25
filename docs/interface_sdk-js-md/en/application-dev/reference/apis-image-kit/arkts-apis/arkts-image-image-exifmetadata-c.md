@@ -6,14 +6,12 @@ ExifMetadata implements Metadata Exchangeable Image File Format (Exif) metadata.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## clone
@@ -26,8 +24,6 @@ Clones the Exif metadata. This API returns the result asynchronously through a p
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -37,133 +33,6 @@ Clones the Exif metadata. This API returns the result asynchronously through a p
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[ExifMetadata](arkts-image-image-exifmetadata-c.md)&gt; |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Clone(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("exif.jpg"); // An image containing Exif metadata is required.
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    let new_metadata: image.Metadata = await metaData.clone();
-    new_metadata.getProperties(["ImageWidth"]).then((data1) => {
-      console.info(`Clone new_metadata and get Properties: ${data1}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Clone new_metadata failed, error : ${err}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataClone(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    let new_metadata = await metaData.exifMetadata.clone();
-    new_metadata.getProperties(["ImageWidth"]).then((data1) => {
-      console.info(`Clone new_metadata and get Properties: ${data1}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Clone new_metadata failed, error : ${err}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiClone(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    let new_metadata = await metaData.makerNoteHuaweiMetadata.clone();
-    new_metadata.getProperties(["HwMnoteIsXmageSupported"]).then((data1) => {
-      console.info(`Clone new_metadata and get Properties: ${data1}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Clone new_metadata failed, error : ${err}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataClone(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    let new_metadata = await metaData.heifsMetadata.clone();
-    new_metadata.getProperties(["HeifsDelayTime"]).then((data1) => {
-      console.info(`Clone new_metadata and get Properties: ${data1}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Clone new_metadata failed, error : ${err}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Clone(pixelMap:image.PixelMap) {
-  if (pixelMap != undefined) {
-    pixelMap.clone().then((clonePixelMap: image.PixelMap) => {
-      console.info('Succeeded clone pixelmap.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to clone pixelmap. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
 
 ## createInstance
 
@@ -175,8 +44,6 @@ Creates an empty [ExifMetadata](#exifmetadata) instance.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -186,35 +53,6 @@ Creates an empty [ExifMetadata](#exifmetadata) instance.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [ExifMetadata](arkts-image-image-exifmetadata-c.md) |
-
-**Examples**
-
-```TypeScript
-async function exifMetadataCreateInstance(context: Context) {
-  let exifMetadata = image.ExifMetadata.createInstance();
-  if (exifMetadata != undefined) {
-    console.info("createInstance success");
-  }
-}
-```
-
-```TypeScript
-async function makerNoteHuaweiCreateInstance(context: Context) {
-  let makerNoteHuaweiMetadata = image.MakerNoteHuaweiMetadata.createInstance();
-  if (makerNoteHuaweiMetadata != undefined) {
-    console.info("createInstance success");
-  }
-}
-```
-
-```TypeScript
-async function heifsMetadataCreateInstance(context: Context) {
-  let heifsMetadata = image.HeifsMetadata.createInstance();
-  if (heifsMetadata != undefined) {
-    console.info("createInstance success");
-  }
-}
-```
 
 ## getAllProperties
 
@@ -226,8 +64,6 @@ Obtains all properties and their values from the image metadata. This API return
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -237,122 +73,6 @@ Obtains all properties and their values from the image metadata. This API return
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetAllProperties(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("exif.jpg"); // An image containing Exif metadata is required.
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    await metaData.getAllProperties().then((data2) => {
-      const count = Object.keys(data2).length;
-      console.info('Metadata have ', count, ' properties');
-      console.info(`Get metadata all properties: ${data2}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Get metadata all properties failed error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataGetAllProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    await metaData.exifMetadata.getAllProperties().then((data) => {
-      const count = Object.keys(data).length;
-      console.info('Metadata have ', count, ' properties');
-      console.info(`Get metadata all properties: ${data}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Get metadata all properties failed error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiGetAllProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    await metaData.makerNoteHuaweiMetadata.getAllProperties().then((data) => {
-      const count = Object.keys(data).length;
-      console.info(`Get metadata all properties: ${data}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Get metadata all properties failed error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataGetAllProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    await metaData.heifsMetadata.getAllProperties().then((data) => {
-      const count = Object.keys(data).length;
-      console.info('Metadata have ', count, ' properties');
-      console.info(`Get metadata all properties: ${data}`);
-    }).catch((error: BusinessError) => {
-      console.error(`Get metadata all properties failed error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
 
 ## getBlob
 
@@ -364,8 +84,6 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -376,102 +94,6 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 | --- |
 | Promise & lt;ArrayBuffer & gt; |
 
-**Examples**
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg'; // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function GetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let pictureObj: image.Picture = await imageSource.createPicture();
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    let blob = await metaData.getBlob();
-    if (blob != undefined) {
-      console.info("get blob success");
-    }
-  }
-}
-```
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataGetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    let blob = await metaData.exifMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("get blob success");
-    }
-  }
-}
-```
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiGetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("get blob success");
-    }
-  }
-}
-```
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataGetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    let blob = await metaData.heifsMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("get blob success");
-    }
-  }
-}
-```
-
 ## getProperties
 
 ```TypeScript
@@ -481,8 +103,6 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 Obtains the property values from image metadata. This API returns the result asynchronously through a promise.For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -506,115 +126,6 @@ Obtains the property values from image metadata. This API returns the result asy
 | --- |
 | [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetProperties(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("exif.jpg"); // An image containing Exif metadata is required.
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    await metaData.getProperties(["ImageWidth", "ImageLength"]).then((data2) => {
-      console.info('Get properties ',JSON.stringify(data2));
-    }).catch((error: BusinessError) => {
-      console.error(`Get properties failed error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataGetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    await metaData.exifMetadata.getProperties(["ImageWidth", "ImageLength"]).then((data) => {
-      console.info('Get properties ',JSON.stringify(data));
-    }).catch((error: BusinessError) => {
-      console.error(`Get properties failed error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiGetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    await metaData.makerNoteHuaweiMetadata.getProperties(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]).then((data) => {
-      console.info('Get properties ',JSON.stringify(data));
-    }).catch((error: BusinessError) => {
-      console.error(`Get properties failed error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataGetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    await metaData.heifsMetadata.getProperties(["HeifsDelayTime"]).then((data) => {
-      console.info('Get properties ',JSON.stringify(data));
-    }).catch((error: BusinessError) => {
-      console.error(`Get properties failed error.code is ${error.code}, error.message is ${error.message}`);
-    });
-  } else {
-    console.error('Metadata is null.');
-  }
-}
-```
-
 ## setBlob
 
 ```TypeScript
@@ -624,8 +135,6 @@ setBlob(blob: ArrayBuffer): Promise<void>
 Replaces the current metadata with binary data. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -649,122 +158,6 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
-**Examples**
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function setBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let pictureObj: image.Picture = await imageSource.createPicture();
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    let blob = await metaData.getBlob();
-    if (blob != undefined) {
-      console.info("get blob success");
-      metaData.setBlob(blob);
-    }
-    let new_blob = metaData.getBlob();
-    if (new_blob != undefined) {
-      console.info("new_blob is not undefined");
-    }
-  }
-}
-```
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataSetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    let blob = await metaData.exifMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("get blob success");
-      metaData.exifMetadata.setBlob(blob);
-    }
-    let new_blob = metaData.exifMetadata.getBlob();
-    if (new_blob != undefined) {
-      console.info("new_blob is not undefined");
-    }
-  }
-}
-```
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiSetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    let blob = await metaData.makerNoteHuaweiMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("get blob success");
-      metaData.makerNoteHuaweiMetadata.setBlob(blob);
-    }
-    let new_blob = metaData.makerNoteHuaweiMetadata.getBlob();
-    if (new_blob != undefined) {
-      console.info("new_blob is not undefined");
-    }
-  }
-}
-```
-
-```TypeScript
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataSetBlob(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    let blob = await metaData.heifsMetadata.getBlob();
-    if (blob != undefined) {
-      console.info("get blob success");
-      metaData.heifsMetadata.setBlob(blob);
-    }
-    let new_blob = metaData.heifsMetadata.getBlob();
-    if (new_blob != undefined) {
-      console.info("new_blob is not undefined");
-    }
-  }
-}
-```
-
 ## setProperties
 
 ```TypeScript
@@ -774,8 +167,6 @@ setProperties(records: Record<string, string | null>): Promise<void>
 Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -799,143 +190,17 @@ Sets the values of specified properties in image metadata in batches. This API r
 | --- |
 | [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function SetProperties(context: Context) {
-  const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("exif.jpg"); // An image containing Exif metadata is required.
-  let ops: image.SourceOptions = {
-    sourceDensity: 98,
-  }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
-  let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
-  let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
-  let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-  let metaData: image.Metadata | null = await pictureObj.getMetadata(metadataType);
-  if (metaData != null) {
-    let setkey: Record<string, string | null> = {
-      "ImageWidth": "200",
-      "ImageLength": "300"
-    };
-    await metaData.setProperties(setkey).then(async () => {
-      console.info('Set AuxPictureObj properties success.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to set metadata Properties. code is ${error.code}, message is ${error.message}`);
-    })
-  } else {
-    console.error('AuxPictureObj metadata is null. ');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function exifMetadataSetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["ImageWidth", "ImageLength"]);
-  if (metaData != undefined && metaData.exifMetadata != undefined) {
-    let setkey: Record<string, string | null> = {
-      "ImageWidth": "200",
-      "ImageLength": "300"
-    };
-    await metaData.exifMetadata.setProperties(setkey).then(async () => {
-      console.info('Set properties success.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to set metadata Properties. code is ${error.code}, message is ${error.message}`);
-    })
-  } else {
-    console.error('metadata is null. ');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/exif.jpg';  // An image containing Exif metadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function makerNoteHuaweiSetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HwMnoteIsXmageSupported", "HwMnoteXmageMode"]);
-  if (metaData != undefined && metaData.makerNoteHuaweiMetadata != undefined) {
-    let setkey: Record<string, string | null> = {
-      "HwMnoteIsXmageSupported": "1",
-      "HwMnoteXmageMode": "9"
-    };
-    await metaData.makerNoteHuaweiMetadata.setProperties(setkey).then(async () => {
-      console.info('Set properties success.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to set metadata Properties. code is ${error.code}, message is ${error.message}`);
-    })
-  } else {
-    console.error('metadata is null. ');
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
-
-function getFileFd(context: Context): number | undefined {
-  const filePath: string = context.cacheDir + '/heifs.heic';  // An image containing HeifsMetadata is required.
-  const file: fs.File = fs.openSync(filePath, fs.OpenMode.READ_WRITE);
-  const fd: number = file?.fd;
-  return fd;
-}
-
-async function heifsMetadataSetProperties(context: Context) {
-  let fd = getFileFd(context);
-  let imageSource = image.createImageSource(fd);
-  let metaData = await imageSource.readImageMetadata(["HeifsDelayTime"]);
-  if (metaData != undefined && metaData.heifsMetadata != undefined) {
-    let setkey: Record<string, string | null> = {
-      "HeifsDelayTime": "200",
-    };
-    await metaData.heifsMetadata.setProperties(setkey).then(async () => {
-      console.info('Set properties success.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to set metadata Properties. code is ${error.code}, message is ${error.message}`);
-    })
-  } else {
-    console.error('metadata is null. ');
-  }
-}
-```
-
 ## apertureValue
 
 ```TypeScript
-apertureValue?: double
+apertureValue?: number
 ```
 
 Lens aperture. The unit is APEX.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -953,8 +218,6 @@ Name of the person who creates the image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -962,16 +225,14 @@ Name of the person who creates the image.
 ## bitsPerSample
 
 ```TypeScript
-bitsPerSample?: int[]
+bitsPerSample?: number[]
 ```
 
 Number of bits for each pixel component. For example, RGB has 3 components with a format of 8,8,8.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -989,8 +250,6 @@ Serial number of the camera body.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -998,16 +257,14 @@ Serial number of the camera body.
 ## brightnessValue
 
 ```TypeScript
-brightnessValue?: double
+brightnessValue?: number
 ```
 
 Image brightness. The unit is APEX.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1025,8 +282,6 @@ Name of the camera owner.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1043,8 +298,6 @@ Color filter array (CFA) geometric pattern of the image sensor.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1052,16 +305,14 @@ Color filter array (CFA) geometric pattern of the image sensor.
 ## colorSpace
 
 ```TypeScript
-colorSpace?: int
+colorSpace?: number
 ```
 
 Color space information, which is usually recorded as a color space descriptor. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1079,8 +330,6 @@ Information about the compressed data.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1088,16 +337,14 @@ Information about the compressed data.
 ## compositeImage
 
 ```TypeScript
-compositeImage?: int
+compositeImage?: number
 ```
 
 Whether the image is a composite image. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1106,16 +353,14 @@ Whether the image is a composite image. The value range is all integers.
 ## compressedBitsPerPixel
 
 ```TypeScript
-compressedBitsPerPixel?: double
+compressedBitsPerPixel?: number
 ```
 
 Image compression scheme. The unit is bit/pixel.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1124,16 +369,14 @@ Image compression scheme. The unit is bit/pixel.
 ## compression
 
 ```TypeScript
-compression?: int
+compression?: number
 ```
 
 Algorithm standard for image compression. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1142,16 +385,14 @@ Algorithm standard for image compression. The value range is all integers.
 ## contrast
 
 ```TypeScript
-contrast?: int
+contrast?: number
 ```
 
 Contrast optimization policy applied by the camera. For example, standard processing and contrast reduction. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1169,8 +410,6 @@ Copyright notice of the image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1178,16 +417,14 @@ Copyright notice of the image.
 ## customRendered
 
 ```TypeScript
-customRendered?: int
+customRendered?: number
 ```
 
 Special processing of image data, such as HDR composition and AI scene enhancement. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1205,8 +442,6 @@ Date and time when the image is created. In this standard, it refers to the file
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1222,8 +457,6 @@ Date and time when the image is stored as digital data. For example, if a DSC ca
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1241,8 +474,6 @@ Date and time when the original image data is generated. For a digital still cam
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1259,8 +490,6 @@ Capture condition information of a specific camera model.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1268,16 +497,14 @@ Capture condition information of a specific camera model.
 ## digitalZoomRatio
 
 ```TypeScript
-digitalZoomRatio?: double
+digitalZoomRatio?: number
 ```
 
 Digital zoom ratio used when the image is captured.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1295,8 +522,6 @@ Version of the supported Exif standard.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1304,16 +529,14 @@ Version of the supported Exif standard.
 ## exposureBiasValue
 
 ```TypeScript
-exposureBiasValue?: double
+exposureBiasValue?: number
 ```
 
 Exposure bias.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1322,16 +545,14 @@ Exposure bias.
 ## exposureIndex
 
 ```TypeScript
-exposureIndex?: double
+exposureIndex?: number
 ```
 
 Exposure index selected at the time the image is captured.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1340,16 +561,14 @@ Exposure index selected at the time the image is captured.
 ## exposureMode
 
 ```TypeScript
-exposureMode?: int
+exposureMode?: number
 ```
 
 Exposure mode. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1358,16 +577,14 @@ Exposure mode. The value range is all integers.
 ## exposureProgram
 
 ```TypeScript
-exposureProgram?: int
+exposureProgram?: number
 ```
 
 Class used for exposure setting when the camera captures a photo. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1376,16 +593,14 @@ Class used for exposure setting when the camera captures a photo. The value rang
 ## exposureTime
 
 ```TypeScript
-exposureTime?: double
+exposureTime?: number
 ```
 
 Exposure time.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1403,8 +618,6 @@ Image source.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1412,16 +625,14 @@ Image source.
 ## flash
 
 ```TypeScript
-flash?: int
+flash?: number
 ```
 
 Flash. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1430,16 +641,14 @@ Flash. The value range is all integers.
 ## flashEnergy
 
 ```TypeScript
-flashEnergy?: double
+flashEnergy?: number
 ```
 
 Flash energy at the time the image is captured. The unit is beam candlepower seconds (BCPS).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1457,8 +666,6 @@ FlashPix format version supported by the FlashPix Extension Resource (FPXR), whi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1466,16 +673,14 @@ FlashPix format version supported by the FlashPix Extension Resource (FPXR), whi
 ## fNumber
 
 ```TypeScript
-fNumber?: double
+fNumber?: number
 ```
 
 F number, for example, f/1.8.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1484,16 +689,14 @@ F number, for example, f/1.8.
 ## focalLength
 
 ```TypeScript
-focalLength?: double
+focalLength?: number
 ```
 
 Focal length of the lens, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1502,16 +705,14 @@ Focal length of the lens, in milliseconds.
 ## focalLengthIn35mmFilm
 
 ```TypeScript
-focalLengthIn35mmFilm?: int
+focalLengthIn35mmFilm?: number
 ```
 
 Focal length of the 35 mm film. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1520,16 +721,14 @@ Focal length of the 35 mm film. The value should be an integer.
 ## focalPlaneResolutionUnit
 
 ```TypeScript
-focalPlaneResolutionUnit?: int
+focalPlaneResolutionUnit?: number
 ```
 
 Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1538,16 +737,14 @@ Measurement unit of **FocalPlaneXResolution** and **FocalPlaneYResolution**. The
 ## focalPlaneXResolution
 
 ```TypeScript
-focalPlaneXResolution?: double
+focalPlaneXResolution?: number
 ```
 
 Number of pixels per unit physical length in the X-axis of the sensor's physical plane.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1556,16 +753,14 @@ Number of pixels per unit physical length in the X-axis of the sensor's physical
 ## focalPlaneYResolution
 
 ```TypeScript
-focalPlaneYResolution?: double
+focalPlaneYResolution?: number
 ```
 
 Number of pixels per unit physical length in the Y-axis of the sensor's physical plane.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1574,16 +769,14 @@ Number of pixels per unit physical length in the Y-axis of the sensor's physical
 ## gainControl
 
 ```TypeScript
-gainControl?: int
+gainControl?: number
 ```
 
 Degree of overall image gain adjustment. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1592,16 +785,14 @@ Degree of overall image gain adjustment. The value range is all integers.
 ## gamma
 
 ```TypeScript
-gamma?: double
+gamma?: number
 ```
 
 Gamma value of each component.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1610,16 +801,14 @@ Gamma value of each component.
 ## gpsAltitude
 
 ```TypeScript
-gpsAltitude?: double
+gpsAltitude?: number
 ```
 
 GPS altitude based on **GPSAltitudeRef**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1628,16 +817,14 @@ GPS altitude based on **GPSAltitudeRef**.
 ## gpsAltitudeRef
 
 ```TypeScript
-gpsAltitudeRef?: int
+gpsAltitudeRef?: number
 ```
 
 GPS altitude reference. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1655,8 +842,6 @@ String of the GPS area name.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1673,8 +858,6 @@ GPS date stamp.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1682,16 +865,14 @@ GPS date stamp.
 ## gpsDestBearing
 
 ```TypeScript
-gpsDestBearing?: double
+gpsDestBearing?: number
 ```
 
 Bearing to the destination.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1709,8 +890,6 @@ Bearing reference to the destination.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1718,16 +897,14 @@ Bearing reference to the destination.
 ## gpsDestDistance
 
 ```TypeScript
-gpsDestDistance?: double
+gpsDestDistance?: number
 ```
 
 Distance to the destination.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1745,8 +922,6 @@ Unit used to express the distance to the destination.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1754,16 +929,14 @@ Unit used to express the distance to the destination.
 ## gpsDestLatitude
 
 ```TypeScript
-gpsDestLatitude?: double[]
+gpsDestLatitude?: number[]
 ```
 
 Latitude of the destination.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1781,8 +954,6 @@ Latitude reference of the destination.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1790,16 +961,14 @@ Latitude reference of the destination.
 ## gpsDestLongitude
 
 ```TypeScript
-gpsDestLongitude?: double[]
+gpsDestLongitude?: number[]
 ```
 
 Longitude of the destination.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1817,8 +986,6 @@ Longitude reference of the destination.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1826,16 +993,14 @@ Longitude reference of the destination.
 ## gpsDifferential
 
 ```TypeScript
-gpsDifferential?: int
+gpsDifferential?: number
 ```
 
 Whether differential correction has been applied to the GPS data, which is crucial for precise positioning accuracy. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1844,16 +1009,14 @@ Whether differential correction has been applied to the GPS data, which is cruci
 ## gpsDop
 
 ```TypeScript
-gpsDop?: double
+gpsDop?: number
 ```
 
 Dilution of Precision (DOP) of the GPS data.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1862,16 +1025,14 @@ Dilution of Precision (DOP) of the GPS data.
 ## gpsHPositioningError
 
 ```TypeScript
-gpsHPositioningError?: double
+gpsHPositioningError?: number
 ```
 
 Horizontal positioning error, in meters.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1880,16 +1041,14 @@ Horizontal positioning error, in meters.
 ## gpsImgDirection
 
 ```TypeScript
-gpsImgDirection?: double
+gpsImgDirection?: number
 ```
 
 Image orientation at the time of capture.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1907,8 +1066,6 @@ Reference of the image orientation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1916,16 +1073,14 @@ Reference of the image orientation.
 ## gpsLatitude
 
 ```TypeScript
-gpsLatitude?: double[]
+gpsLatitude?: number[]
 ```
 
 GPS latitude. The latitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format. When using degrees and minutes, the minutes are stored with up to two decimal places, in the **dd/1, mmmm/100, 0/1** format.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1943,8 +1098,6 @@ GPS latitude reference. For example, **N** indicates north latitude, and **S** i
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1952,16 +1105,14 @@ GPS latitude reference. For example, **N** indicates north latitude, and **S** i
 ## gpsLongitude
 
 ```TypeScript
-gpsLongitude?: double[]
+gpsLongitude?: number[]
 ```
 
 GPS longitude. The longitude is represented by three RATIONAL values (numeric values stored in fractional form), corresponding to degrees, minutes, and seconds, in the **dd/1, mm/1, ss/1** format. When using degrees and minutes, the minutes are stored with up to two decimal places, in the **dd/1, mmmm/100, 0/1** format.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1979,8 +1130,6 @@ GPS longitude reference. For example, **E** indicates east longitude, and **W** 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1996,8 +1145,6 @@ Geodetic data used by the GPS receiver.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2015,8 +1162,6 @@ GPS measurement mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2032,8 +1177,6 @@ Name of the positioning method.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2051,8 +1194,6 @@ GPS satellite used for measurement. Generally, the value is the GPS satellite's 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2060,16 +1201,14 @@ GPS satellite used for measurement. Generally, the value is the GPS satellite's 
 ## gpsSpeed
 
 ```TypeScript
-gpsSpeed?: double
+gpsSpeed?: number
 ```
 
 Speed of the GPS receiver.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2087,8 +1226,6 @@ Speed unit of the GPS receiver.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2105,8 +1242,6 @@ Status of the GPS receiver when the image is recorded.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2114,16 +1249,14 @@ Status of the GPS receiver when the image is recorded.
 ## gpsTimestamp
 
 ```TypeScript
-gpsTimestamp?: double[]
+gpsTimestamp?: number[]
 ```
 
 GPS timestamp.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2132,16 +1265,14 @@ GPS timestamp.
 ## gpsTrack
 
 ```TypeScript
-gpsTrack?: double
+gpsTrack?: number
 ```
 
 Movement direction of the GPS receiver.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2159,8 +1290,6 @@ Reference for the GPS receiver movement direction.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2168,16 +1297,14 @@ Reference for the GPS receiver movement direction.
 ## gpsVersionID
 
 ```TypeScript
-gpsVersionID?: int[]
+gpsVersionID?: number[]
 ```
 
 GPS information format version identifier.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2195,8 +1322,6 @@ Image description.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2204,16 +1329,14 @@ Image description.
 ## imageLength
 
 ```TypeScript
-imageLength?: int
+imageLength?: number
 ```
 
 Image length. The unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2231,8 +1354,6 @@ Unique ID assigned to each image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2240,16 +1361,14 @@ Unique ID assigned to each image.
 ## imageWidth
 
 ```TypeScript
-imageWidth?: int
+imageWidth?: number
 ```
 
 Image width. The unit is px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2258,16 +1377,14 @@ Image width. The unit is px.
 ## isoSpeedLatitudeyyy
 
 ```TypeScript
-isoSpeedLatitudeyyy?: int
+isoSpeedLatitudeyyy?: number
 ```
 
 Maximum dynamic range recordable by the camera sensor in a single exposure. The unit is EV. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2276,16 +1393,14 @@ Maximum dynamic range recordable by the camera sensor in a single exposure. The 
 ## isoSpeedLatitudezzz
 
 ```TypeScript
-isoSpeedLatitudezzz?: int
+isoSpeedLatitudezzz?: number
 ```
 
 Highlight retention capacity of the camera sensor in overexposure. The unit is EV. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2294,16 +1409,14 @@ Highlight retention capacity of the camera sensor in overexposure. The unit is E
 ## isoSpeedRatings
 
 ```TypeScript
-isoSpeedRatings?: int
+isoSpeedRatings?: number
 ```
 
 ISO speed and latitude of the camera or input device, which are specified in ISO 12232. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2312,16 +1425,14 @@ ISO speed and latitude of the camera or input device, which are specified in ISO
 ## jpegInterchangeFormat
 
 ```TypeScript
-jpegInterchangeFormat?: int
+jpegInterchangeFormat?: number
 ```
 
 Start of Image (SOI) marker of the JPEG bitstream in interchange format. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2330,16 +1441,14 @@ Start of Image (SOI) marker of the JPEG bitstream in interchange format. The val
 ## jpegInterchangeFormatLength
 
 ```TypeScript
-jpegInterchangeFormatLength?: int
+jpegInterchangeFormatLength?: number
 ```
 
 Number of bytes in the JPEG stream. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2357,8 +1466,6 @@ Manufacturer of the lens.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2374,8 +1481,6 @@ Model of the lens.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2393,8 +1498,6 @@ Serial number of the lens.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2402,16 +1505,14 @@ Serial number of the lens.
 ## lensSpecification
 
 ```TypeScript
-lensSpecification?: double[]
+lensSpecification?: number[]
 ```
 
 Specifications of the lens.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2420,16 +1521,14 @@ Specifications of the lens.
 ## lightSource
 
 ```TypeScript
-lightSource?: int
+lightSource?: number
 ```
 
 Light source. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2447,8 +1546,6 @@ Manufacturer name of the capture device.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2465,8 +1562,6 @@ Information required by the Exif/Design rule for Camera File system (DCF) writer
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2474,16 +1569,14 @@ Information required by the Exif/Design rule for Camera File system (DCF) writer
 ## maxApertureValue
 
 ```TypeScript
-maxApertureValue?: double
+maxApertureValue?: number
 ```
 
 Minimum aperture value of the lens.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2492,16 +1585,14 @@ Minimum aperture value of the lens.
 ## meteringMode
 
 ```TypeScript
-meteringMode?: int
+meteringMode?: number
 ```
 
 Metering mode. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2519,8 +1610,6 @@ Camera model.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2528,16 +1617,14 @@ Camera model.
 ## newSubfileType
 
 ```TypeScript
-newSubfileType?: int
+newSubfileType?: number
 ```
 
 Data type of a subfile (for example, basic types such as text or image, rather than specific storage formats). The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2555,8 +1642,6 @@ Opto-Electric Conversion Function (OECF) specified in ISO 14524.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2572,8 +1657,6 @@ Geographical time zone of the device.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2591,8 +1674,6 @@ Coordinated Universal Time (UTC) offset at the time of image digitization, which
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2608,8 +1689,6 @@ Geographical time zone of the device.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2627,8 +1706,6 @@ Image orientation.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2636,16 +1713,14 @@ Image orientation.
 ## photographicSensitivity
 
 ```TypeScript
-photographicSensitivity?: int[]
+photographicSensitivity?: number[]
 ```
 
 Sensitivity of the camera or input device during image capture.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2654,16 +1729,14 @@ Sensitivity of the camera or input device during image capture.
 ## photometricInterpretation
 
 ```TypeScript
-photometricInterpretation?: int
+photometricInterpretation?: number
 ```
 
 Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-difference Chroma, Red-difference Chroma). The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2672,16 +1745,14 @@ Pixel composition, such as RGB (Red, Green, Blue) and YCbCr (Luma, Blue-differen
 ## photoMode
 
 ```TypeScript
-photoMode?: int
+photoMode?: number
 ```
 
 Image mode. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2690,16 +1761,14 @@ Image mode. The value range is all integers.
 ## pixelXDimension
 
 ```TypeScript
-pixelXDimension?: int
+pixelXDimension?: number
 ```
 
 Image size on the X axis (horizontal axis in a two-dimensional coordinate system). The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2708,16 +1777,14 @@ Image size on the X axis (horizontal axis in a two-dimensional coordinate system
 ## pixelYDimension
 
 ```TypeScript
-pixelYDimension?: int
+pixelYDimension?: number
 ```
 
 Image size on the Y axis (vertical axis in a two-dimensional coordinate system). The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2726,16 +1793,14 @@ Image size on the Y axis (vertical axis in a two-dimensional coordinate system).
 ## planarConfiguration
 
 ```TypeScript
-planarConfiguration?: int
+planarConfiguration?: number
 ```
 
 Whether the pixel components are recorded in chunked or planar format. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2744,16 +1809,14 @@ Whether the pixel components are recorded in chunked or planar format. The value
 ## primaryChromaticities
 
 ```TypeScript
-primaryChromaticities?: double[]
+primaryChromaticities?: number[]
 ```
 
 Chromaticity of the image primaries.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2762,16 +1825,14 @@ Chromaticity of the image primaries.
 ## recommendedExposureIndex
 
 ```TypeScript
-recommendedExposureIndex?: int
+recommendedExposureIndex?: number
 ```
 
 GPS measurement mode. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2780,16 +1841,14 @@ GPS measurement mode. The value range is all integers.
 ## referenceBlackWhite
 
 ```TypeScript
-referenceBlackWhite?: double[]
+referenceBlackWhite?: number[]
 ```
 
 Reference black point value and white point value.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2807,8 +1866,6 @@ Name of the audio file related to the image data.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2816,16 +1873,14 @@ Name of the audio file related to the image data.
 ## resolutionUnit
 
 ```TypeScript
-resolutionUnit?: int
+resolutionUnit?: number
 ```
 
 Unit of the image resolution in the width and height directions. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2834,16 +1889,14 @@ Unit of the image resolution in the width and height directions. The value range
 ## rowsPerStrip
 
 ```TypeScript
-rowsPerStrip?: int
+rowsPerStrip?: number
 ```
 
 Number of rows per image strip. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2852,16 +1905,14 @@ Number of rows per image strip. The value range is all integers.
 ## samplesPerPixel
 
 ```TypeScript
-samplesPerPixel?: int
+samplesPerPixel?: number
 ```
 
 Number of color components per pixel, applicable to RGB and YCbCr color models. Since both the models are three-component models (three color channels, or one luminance component plus two chroma components), the standard value for this property is 3. For JPEG-compressed images, this property will be replaced by the corresponding JPEG marker. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2870,16 +1921,14 @@ Number of color components per pixel, applicable to RGB and YCbCr color models. 
 ## saturation
 
 ```TypeScript
-saturation?: int
+saturation?: number
 ```
 
 Color saturation adjustment policy applied by the camera. For example, standard processing and saturation reduction. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2888,16 +1937,14 @@ Color saturation adjustment policy applied by the camera. For example, standard 
 ## sceneCaptureType
 
 ```TypeScript
-sceneCaptureType?: int
+sceneCaptureType?: number
 ```
 
 Type of the scene that is captured. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2915,8 +1962,6 @@ Scene type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -2924,16 +1969,14 @@ Scene type.
 ## sensingMethod
 
 ```TypeScript
-sensingMethod?: int
+sensingMethod?: number
 ```
 
 Type of the image sensor on the camera. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2942,16 +1985,14 @@ Type of the image sensor on the camera. The value range is all integers.
 ## sensitivityType
 
 ```TypeScript
-sensitivityType?: int
+sensitivityType?: number
 ```
 
 Sensitivity type. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2960,16 +2001,14 @@ Sensitivity type. The value range is all integers.
 ## sharpness
 
 ```TypeScript
-sharpness?: int
+sharpness?: number
 ```
 
 Edge enhancement processing method applied by the camera. For example, weak sharpening and standard sharpening. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2978,16 +2017,14 @@ Edge enhancement processing method applied by the camera. For example, weak shar
 ## shutterSpeedValue
 
 ```TypeScript
-shutterSpeedValue?: double
+shutterSpeedValue?: number
 ```
 
 Shutter speed, expressed as an Additive System of Photographic Exposure (APEX) value.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3005,8 +2042,6 @@ Name and version number of the software used to create the image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -3023,8 +2058,6 @@ Exposure time of source images for the composite image, for example, 1/33 s.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -3032,16 +2065,14 @@ Exposure time of source images for the composite image, for example, 1/33 s.
 ## sourceImageNumberOfCompositeImage
 
 ```TypeScript
-sourceImageNumberOfCompositeImage?: int[]
+sourceImageNumberOfCompositeImage?: number[]
 ```
 
 Number of source images of the composite image.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3059,8 +2090,6 @@ Spatial frequency table of the camera or input device.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -3077,8 +2106,6 @@ Spectral sensitivity of each channel of the camera.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -3086,16 +2113,14 @@ Spectral sensitivity of each channel of the camera.
 ## standardOutputSensitivity
 
 ```TypeScript
-standardOutputSensitivity?: int
+standardOutputSensitivity?: number
 ```
 
 Standard output sensitivity. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3104,16 +2129,14 @@ Standard output sensitivity. The value range is all integers.
 ## stripByteCounts
 
 ```TypeScript
-stripByteCounts?: int[]
+stripByteCounts?: number[]
 ```
 
 Number of bytes in each strip after compression.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3122,16 +2145,14 @@ Number of bytes in each strip after compression.
 ## stripOffsets
 
 ```TypeScript
-stripOffsets?: int[]
+stripOffsets?: number[]
 ```
 
 Strip storage offset of the image data, in bytes. To improve the efficiency of large image access, the original pixel data is divided into multiple contiguous blocks (called strips). This property stores the starting offset of each strip in the file sequentially.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3140,16 +2161,14 @@ Strip storage offset of the image data, in bytes. To improve the efficiency of l
 ## subfileType
 
 ```TypeScript
-subfileType?: int
+subfileType?: number
 ```
 
 Data type of a subfile. It has been deprecated. Use **newSubfileType** instead. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3158,16 +2177,14 @@ Data type of a subfile. It has been deprecated. Use **newSubfileType** instead. 
 ## subjectArea
 
 ```TypeScript
-subjectArea?: int[]
+subjectArea?: number[]
 ```
 
 Location and area of the main object in the entire scene.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3176,16 +2193,14 @@ Location and area of the main object in the entire scene.
 ## subjectDistance
 
 ```TypeScript
-subjectDistance?: double
+subjectDistance?: number
 ```
 
 Distance from the capture device to the photographed object, in meters.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3194,16 +2209,14 @@ Distance from the capture device to the photographed object, in meters.
 ## subjectDistanceRange
 
 ```TypeScript
-subjectDistanceRange?: int
+subjectDistanceRange?: number
 ```
 
 Distance range to the object. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3212,16 +2225,14 @@ Distance range to the object. The value range is all integers.
 ## subjectLocation
 
 ```TypeScript
-subjectLocation?: int[]
+subjectLocation?: number[]
 ```
 
 Pixel coordinates of the primary object in the image (based on the origin in the upper left corner).
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3239,8 +2250,6 @@ Second fraction of **DateTime**.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -3256,8 +2265,6 @@ Second of **DateTimeDigitized**.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3275,8 +2282,6 @@ Second of **DateTimeOriginal**.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -3292,8 +2297,6 @@ Transfer function for the image, which is usually used for color correction.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3311,8 +2314,6 @@ User comments.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -3320,16 +2321,14 @@ User comments.
 ## whiteBalance
 
 ```TypeScript
-whiteBalance?: int
+whiteBalance?: number
 ```
 
 White balance. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3338,16 +2337,14 @@ White balance. The value range is all integers.
 ## whitePoint
 
 ```TypeScript
-whitePoint?: double[]
+whitePoint?: number[]
 ```
 
 Chromaticity of the image white point.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3356,16 +2353,14 @@ Chromaticity of the image white point.
 ## xResolution
 
 ```TypeScript
-xResolution?: double
+xResolution?: number
 ```
 
 Image resolution in the width direction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3374,16 +2369,14 @@ Image resolution in the width direction.
 ## yCbCrCoefficients
 
 ```TypeScript
-yCbCrCoefficients?: double[]
+yCbCrCoefficients?: number[]
 ```
 
 Transformation matrix coefficients for converting RGB image data to YCbCr image data.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3392,16 +2385,14 @@ Transformation matrix coefficients for converting RGB image data to YCbCr image 
 ## yCbCrPositioning
 
 ```TypeScript
-yCbCrPositioning?: int
+yCbCrPositioning?: number
 ```
 
 Position of chroma components relative to the luminance component. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3410,16 +2401,14 @@ Position of chroma components relative to the luminance component. The value ran
 ## yCbCrSubSampling
 
 ```TypeScript
-yCbCrSubSampling?: int[]
+yCbCrSubSampling?: number[]
 ```
 
 Sampling ratios of the chroma components and luminance component.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3428,16 +2417,14 @@ Sampling ratios of the chroma components and luminance component.
 ## yResolution
 
 ```TypeScript
-yResolution?: double
+yResolution?: number
 ```
 
 Image resolution in the height direction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

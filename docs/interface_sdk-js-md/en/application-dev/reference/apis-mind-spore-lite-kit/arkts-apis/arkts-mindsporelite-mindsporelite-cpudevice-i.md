@@ -4,14 +4,12 @@ Provides the CPU device info
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.MindSporeLite
 
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
 ```
 
 ## precisionMode
@@ -26,8 +24,6 @@ The precision mode
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -35,16 +31,14 @@ The precision mode
 ## threadAffinityCoreList
 
 ```TypeScript
-threadAffinityCoreList?: int[]
+threadAffinityCoreList?: number[]
 ```
 
 The thread affinity core list
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +56,6 @@ The thread affinity mode
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
@@ -71,29 +63,15 @@ The thread affinity mode
 ## threadNum
 
 ```TypeScript
-threadNum?: int
+threadNum?: number
 ```
 
 The thread num
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.AI.MindSporeLite
-
-**Examples**
-
-```TypeScript
-let context: mindSporeLite.Context = {};
-context.cpu = {};
-context.target = ['cpu'];
-context.cpu.threadNum = 2;
-context.cpu.threadAffinityMode = 0;
-context.cpu.precisionMode = 'preferred_fp16';
-context.cpu.threadAffinityCoreList = [0, 1, 2];
-```

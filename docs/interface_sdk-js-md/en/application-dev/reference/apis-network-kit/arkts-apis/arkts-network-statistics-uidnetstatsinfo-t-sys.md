@@ -2,13 +2,11 @@
 
 ```TypeScript
 export type UidNetStatsInfo = {
-    [uid: int]: NetStatsInfo;
+    [uid: number]: NetStatsInfo;
   }
 ```
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

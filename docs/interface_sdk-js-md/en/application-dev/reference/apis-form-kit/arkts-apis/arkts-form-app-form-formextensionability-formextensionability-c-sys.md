@@ -4,14 +4,12 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## Modules to Import
 
 ```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
+import { FormExtensionAbility } from 'kits/@kit.FormKit';
 ```
 
 ## onAcquireFormData
@@ -24,8 +22,6 @@ Called when the system acquire the form data.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
@@ -44,45 +40,6 @@ Called when the system acquire the form data.
 | --- |
 | object |
 | Record & lt;string, Object & gt; |
-
-**Examples**
-
-```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
-
-export default class MyFormExtensionAbility extends FormExtensionAbility {
-  onAcquireFormData(formId: string) {
-    console.info(`FormExtensionAbility onAcquireFormData, formId: ${formId}`);
-    let wantParams: Record<string, Object> = {
-      'temperature': '20',
-      'time': '2022-8-8 09:59',
-    };
-    return wantParams;
-  }
-};
-```
-
-## onAcquireFormData
-
-```TypeScript
-onAcquireFormData?: OnAcquireFormDataFn
-```
-
-Called when the system acquire the form data.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.Form
-
-**System API:** This is a system API.
-
-**Examples**
-
-See [onAcquireFormData](#onacquireformdata)
 
 ## onShareForm
 
@@ -94,8 +51,6 @@ Called when the system shares the form.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
@@ -114,42 +69,3 @@ Called when the system shares the form.
 | --- |
 | object |
 | Record & lt;string, Object & gt; |
-
-**Examples**
-
-```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
-
-export default class MyFormExtensionAbility extends FormExtensionAbility {
-  onShareForm(formId: string) {
-    console.info(`FormExtensionAbility onShareForm, formId: ${formId}`);
-    let wantParams: Record<string, Object> = {
-      'temperature': '20',
-      'time': '2022-8-8 09:59',
-    };
-    return wantParams;
-  }
-};
-```
-
-## onShareForm
-
-```TypeScript
-onShareForm?: OnShareFormFn
-```
-
-Called when the system shares the form.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.Form
-
-**System API:** This is a system API.
-
-**Examples**
-
-See [onShareForm](#onshareform)

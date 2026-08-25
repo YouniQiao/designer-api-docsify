@@ -4,14 +4,12 @@ Socket的连接信息。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## address
@@ -26,8 +24,6 @@ address: string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## family
@@ -37,14 +33,13 @@ family: 'IPv4' | 'IPv6'
 ```
 
 网络协议类型，可选类型：  
-- IPv4 - IPv6  
+- IPv4  
+- IPv6  
 默认为IPv4。
 
 **类型：** 'IPv4' \| 'IPv6'
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -60,8 +55,6 @@ port: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## size
@@ -75,7 +68,5 @@ size: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Communication.NetStack

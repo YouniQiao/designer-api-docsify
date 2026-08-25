@@ -4,14 +4,12 @@ This parameter specifies the selection result of a filtering dimension. The inde
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
+import { Filter, FilterParams, FilterResult, FilterType } from 'kits/@kit.ArkUI';
 ```
 
 ## index
@@ -25,8 +23,6 @@ index: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,11 +39,9 @@ name: ResourceStr
 筛选项维度名称。默认值：空字符串。  
 **说明：**如果文本大于列宽时，文本被截断。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,11 +58,9 @@ value: ResourceStr
 该维度筛选项选中项目的值。默认值：空字符串。  
 **说明：**如果文本大于列宽时，文本被截断。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md)
@@ -21,8 +19,6 @@ USB_REQUEST_TARGET_DEVICE = 0
 设备。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ USB_REQUEST_TARGET_INTERFACE = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [USB_REQUEST_TARGET_INTERFACE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_interface)
@@ -58,8 +52,6 @@ USB_REQUEST_TARGET_ENDPOINT = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [USB_REQUEST_TARGET_ENDPOINT](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_endpoint)
@@ -75,8 +67,6 @@ USB_REQUEST_TARGET_OTHER = 3
 其他。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

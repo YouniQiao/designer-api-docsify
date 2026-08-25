@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createMediaSourceWithStreamData
@@ -16,8 +16,6 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
@@ -26,51 +24,10 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 |
+| streams | Array&lt;[MediaStream](arkts-media-media-mediastream-i.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) |
-
-**示例**
-
-```TypeScript
-let streams : Array<media.MediaStream> = [];
-streams.push({url: "http://xxx/480p.flv", width: 854, height: 480, bitrate: 800000});
-streams.push({url: "http://xxx/720p.flv", width: 1280, height: 720, bitrate: 2000000});
-streams.push({url: "http://xxx/1080p.flv", width: 1920, height: 1080, bitrate: 2000000});
-let mediaSource : media.MediaSource = media.createMediaSourceWithStreamData(streams);
-```
-
-
-## createMediaSourceWithStreamData
-
-```TypeScript
-function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource | undefined
-```
-
-Creates a multi-bitrate media source for streaming media. Currently, only the HTTP-FLV multi-bitrate media source is supported.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined |
-
-**示例**
-
-参见 [createMediaSourceWithStreamData](#createmediasourcewithstreamdata)
+| [MediaSource](arkts-media-media-mediasource-i.md) |

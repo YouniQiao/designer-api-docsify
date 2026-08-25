@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getTotalSizeSync
 
 ```TypeScript
-function getTotalSizeSync(): long
+function getTotalSizeSync(): number
 ```
 
 Obtains the total space of the built-in storage, in bytes. This API returns the result synchronously.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 10 - 14: ohos.permission.STORAGE_MANAGER
@@ -27,7 +25,7 @@ Obtains the total space of the built-in storage, in bytes. This API returns the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **Error codes:**
 
@@ -37,16 +35,3 @@ Obtains the total space of the built-in storage, in bytes. This API returns the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  let number = storageStatistics.getTotalSizeSync();
-  console.info("getTotalSizeSync successfully:" + JSON.stringify(number));
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("getTotalSizeSync failed with error:" + JSON.stringify(error));
-}
-```

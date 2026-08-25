@@ -4,8 +4,6 @@ The enum of a2dp playing state.@enum { number }
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PlayingState](arkts-connectivity-a2dp-playingstate-e.md)
@@ -22,8 +20,6 @@ Not playing.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [STATE_NOT_PLAYING](arkts-connectivity-a2dp-playingstate-e.md#state_not_playing)
@@ -39,8 +35,6 @@ STATE_PLAYING = 1
 Playing.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

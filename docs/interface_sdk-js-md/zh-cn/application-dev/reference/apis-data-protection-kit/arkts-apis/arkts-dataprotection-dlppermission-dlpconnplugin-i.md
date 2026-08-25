@@ -8,14 +8,12 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## connectServer
@@ -30,8 +28,6 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 > connectServer接口代表系统能力侧向前端通信的一次调用。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -53,24 +49,3 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { Callback } from '@kit.BasicServicesKit';
-
-export default class DataCapsulePlugin implements dlpPermission.DlpConnPlugin {
-  constructor() {
-  }
-
-  connectServer(requestId: string, requestData: string, callback: Callback<string>): void {
-    let callbackJson = JSON.stringify({
-      'requestId': requestId,
-    }); // 构造回调JSON数据。
-    callback(callbackJson);  // 调用回调函数返回结果。
-  }
-}
-
-let plugin: dlpPermission.DlpConnPlugin = new DataCapsulePlugin();
-```

@@ -4,8 +4,6 @@ Defines information about the images or videos selected.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 12
 
 **Substitutes:** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)
@@ -15,7 +13,7 @@ Defines information about the images or videos selected.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## isOriginalPhoto
@@ -29,8 +27,6 @@ Whether the selected image is the original one. The value **true** means the sel
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -51,8 +47,6 @@ URIs of the media files selected. This URI array can be used only by [photoAcces
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 

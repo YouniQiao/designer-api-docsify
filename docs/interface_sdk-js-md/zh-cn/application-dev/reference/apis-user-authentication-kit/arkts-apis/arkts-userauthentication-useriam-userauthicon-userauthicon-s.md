@@ -1,35 +1,19 @@
 # UserAuthIcon
 
 **userAuthIcon**模块是OpenHarmony用户身份认证体系（UserIAM）的UI组件模块，提供了一个开箱即用的身份认证图标组件（UserAuthIcon）。该组件用于在应用UI中展示人脸认证或指纹认证的图标，支持自 定义图标颜色和尺寸，点击图标可启动系统身份认证弹窗组件。该模块主要用于以下场景：  
-- 在应用界面中快速集成人脸或指纹认证入口。 - 需要统一风格的生物特征认证图标展示。 - 点击图标可触发系统级身份认证流程。
+- 在应用界面中快速集成人脸或指纹认证入口。  
+- 需要统一风格的生物特征认证图标展示。  
+- 点击图标可触发系统级身份认证流程。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块
 
 ```TypeScript
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from 'kits/@kit.UserAuthenticationKit';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-构造函数。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## onAuthResult
 
@@ -41,8 +25,6 @@ onAuthResult: (result: userAuth.UserAuthResult) => void
 **注意：** 应用需申请`ohos.permission.ACCESS_BIOMETRIC`权限，否则应用将仅展示图标，无法正常拉起身份认证控件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -64,8 +46,6 @@ onIconClick?: () => void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -82,8 +62,6 @@ authParam: userAuth.AuthParam
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -96,13 +74,11 @@ iconColor?: ResourceColor
 
 图标颜色。设置认证图标的颜色，支持颜色值、资源引用等多种格式。默认使用系统激活色，开发者可根据应用主题自定义颜色，如使用Color.Blue或\$r('app.color.primary')。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** $r('sys.color.ohos_id_color_activated')
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -116,34 +92,13 @@ iconHeight?: Dimension
 
 图标高度。设置认证图标的高度，宽高比为1:1。不支持百分比字符串。建议根据界面布局选择合适的大小。
 
-**类型：** Dimension
+**类型：** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 
 **默认值：** 64fp
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.UserIAM.UserAuth.Core
-
-## onAuthResult
-
-```TypeScript
-onAuthResult: userAuth.AuthCallbackOnResultFunc
-```
-
-认证结果回调。用户完成认证后触发此回调，回调参数包含认证结果码（result）、认证令牌（token）、认证类型（authType）等信息。应用需在此回调中处理认证结果，如认证通过时获取token用于后续安全操作，认证失败时提示用 户重新尝试。  
-**注意：** 应用需申请`ohos.permission.ACCESS_BIOMETRIC`权限，否则应用将仅展示图标，无法正常拉起身份认证控件。
-
-**类型：** userAuth.AuthCallbackOnResultFunc
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -158,8 +113,6 @@ widgetParam: userAuth.WidgetParam
 **类型：** userAuth.WidgetParam
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

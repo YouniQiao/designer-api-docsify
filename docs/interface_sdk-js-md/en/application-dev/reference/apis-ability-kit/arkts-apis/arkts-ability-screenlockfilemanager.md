@@ -9,14 +9,12 @@ This module provides the capability to protect app sensitive data under the lock
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.ScreenLockFileManager
 
 ## Modules to Import
 
 ```TypeScript
-import { screenLockFileManager } from '@kit.AbilityKit';
+import { screenLockFileManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

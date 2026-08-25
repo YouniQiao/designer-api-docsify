@@ -4,8 +4,6 @@ Enumerates the types of ability components.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## PAGE
@@ -17,8 +15,6 @@ PAGE = 1
 Ability that has the UI. FA developed using the Page template to provide the capability of interacting with users.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -34,8 +30,6 @@ Ability of the background service type, without the UI. PA developed using the S
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -49,8 +43,6 @@ DATA = 3
 PA developed using the Data template to provide unified data access for external systems.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the FA model.
 

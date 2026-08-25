@@ -4,8 +4,6 @@ Enumerates the visibility statuses of the UIAbility after it is started. If the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STARTUP_HIDE
@@ -17,8 +15,6 @@ STARTUP_HIDE = 0
 The target UIAbility is hidden after it is started in the new process. The **onForeground** lifecycle of the UIAbility is not invoked.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,12 +30,6 @@ The target UIAbility is displayed normally after it is started in the new proces
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-See ContextConstant.ProcessMode.

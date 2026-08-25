@@ -4,8 +4,6 @@ Provides detailed information about the **param** element embedded in the same-l
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ ID of the **param** element.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## name
@@ -40,8 +36,6 @@ Name of the **param** element.
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -57,8 +51,6 @@ Status change type of the **param** element.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## value
@@ -72,7 +64,5 @@ Value of the **param** element.
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core

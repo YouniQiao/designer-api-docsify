@@ -4,14 +4,12 @@ Represents the connection result, which is returned after the client calls **con
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## deviceId
@@ -26,8 +24,6 @@ ID of the peer device. If the connection is successful, the device ID of the pee
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -35,18 +31,18 @@ ID of the peer device. If the connection is successful, the device ID of the pee
 ## reason
 
 ```TypeScript
-reason: int
+reason: number
 ```
 
 Number indicating the result code. If the connection is successful, **0** is returned. If the connection fails, an error code is returned:  
-- 32390200: The client connection times out. - 32390201: The server service is not started. - 32390300: Internal error.  
+- 32390200: The client connection times out.  
+- 32390201: The server service is not started.  
+- 32390300: Internal error.  
 For details about the error codes, see [Link Enhancement Error Codes](../errorcode-link-enhance.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,8 +59,6 @@ Connection result. The value **true** indicates that the connection is successfu
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

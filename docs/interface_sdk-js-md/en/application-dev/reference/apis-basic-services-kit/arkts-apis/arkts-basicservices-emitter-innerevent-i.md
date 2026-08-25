@@ -4,29 +4,25 @@ Describes an event to subscribe to or emit. The **EventPriority** settings do no
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Emitter
 
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from '@kit.BasicServicesKit';
+import { emitter } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## eventId
 
 ```TypeScript
-eventId: long
+eventId: number
 ```
 
 Event ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,8 +39,6 @@ Event priority. The default value is **EventPriority.LOW**.
 **Type:** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

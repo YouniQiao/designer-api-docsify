@@ -13,8 +13,8 @@ Stack基于数组的数据结构实现，特点是先进后出，只能在一端
 ## 导入模块
 
 ```TypeScript
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
+import { Stack } from 'kits/@kit.ArkTS';
+import { StackForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -24,9 +24,3 @@ import { StackForEachCb } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [Stack](arkts-arkts-util-stack-stack-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [StackForEachCb](arkts-arkts-stackforeachcb-t.md) |

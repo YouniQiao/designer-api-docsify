@@ -4,15 +4,13 @@ Provides information about an accessibility application.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## abilityTypes
@@ -26,8 +24,6 @@ Accessibility application type.
 **Type:** Array&lt;AbilityType&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -47,8 +43,6 @@ Bundle name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -66,8 +60,6 @@ Capabilities list of the accessibility application.
 **Type:** Array&lt;Capability&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -87,8 +79,6 @@ Description of the accessibility application.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -106,8 +96,6 @@ List of events that the accessibility application focuses on.
 **Type:** Array&lt;EventType&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -127,8 +115,6 @@ Ability ID.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -146,8 +132,6 @@ Name of the accessibility app in the extended service list.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -167,8 +151,6 @@ Ability name.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -187,8 +169,6 @@ Whether the auxiliary application is hidden in the list of installed extended se
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
@@ -206,8 +186,6 @@ Name of the target bundle.
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

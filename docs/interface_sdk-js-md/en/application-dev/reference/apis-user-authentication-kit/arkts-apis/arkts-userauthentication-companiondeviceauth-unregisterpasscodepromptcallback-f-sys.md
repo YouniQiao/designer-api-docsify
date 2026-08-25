@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## unregisterPasscodePromptCallback
@@ -15,8 +15,6 @@ function unregisterPasscodePromptCallback(): void
 Unregisters the callback used to prompt for a companion device passcode.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 

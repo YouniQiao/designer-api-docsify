@@ -5,8 +5,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## 导入模块
@@ -79,8 +77,6 @@ static fetch(options: {
 Obtains data through the network.
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **系统能力：** SystemCapability.Communication.NetStack
 

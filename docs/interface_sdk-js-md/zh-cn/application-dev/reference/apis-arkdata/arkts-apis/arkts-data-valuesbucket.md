@@ -6,7 +6,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ValueType, ValuesBucket } from '@kit.ArkData';
+import { ValueType, ValuesBucket } from 'kits/@kit.ArkData';
 ```
 
 ## 汇总

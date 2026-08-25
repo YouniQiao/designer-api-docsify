@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## bind
@@ -25,8 +25,6 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 > 准悬浮窗窗口和闪控球窗口，并触发对应窗口已注册的状态回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.USE_FLOAT_BALL and ohos.permission.FLOAT_VIEW
 
@@ -57,39 +55,3 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 | [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) |
 | [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) |
 | [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
-
-**示例**
-
-```TypeScript
-// Entry.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { floatingBall } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private floatingBallController: floatingBall.FloatingBallController | undefined = undefined;
-  private floatViewController: floatView.FloatViewController | undefined = undefined;
-  // 创建控制器
-  // ...
-  public bindController(): void {
-    let floatingBallParams: floatingBall.FloatingBallParams = {
-      template: floatingBall.FloatingBallTemplate.EMPHATIC,
-      title: 'title',
-      content: 'content'
-    };
-
-    try {
-      if (this.floatViewController && this.floatingBallController) {
-        floatView.bind(this.floatViewController!, this.floatingBallController!, floatingBallParams).then(() => {
-          console.info('Succeeded in binding float view and floating ball.');
-        }).catch((err: BusinessError): void => {
-          console.error(`Failed to bind float view and floating ball. Cause:${err.code}, message:${err.message}`);
-        });
-      }
-    } catch(e) {
-      console.error(`Failed to bind float view and floating ball. Cause:${e.code}, message:${e.message}`);
-    }
-  }
-}
-```

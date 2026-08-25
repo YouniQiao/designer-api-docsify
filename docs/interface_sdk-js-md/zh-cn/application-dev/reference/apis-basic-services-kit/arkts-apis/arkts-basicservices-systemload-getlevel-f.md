@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemLoad } from '@kit.BasicServicesKit';
+import { systemLoad } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getLevel
@@ -16,8 +16,6 @@ function getLevel(): Promise<SystemLoadLevel>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
 **返回值：**
@@ -25,16 +23,3 @@ function getLevel(): Promise<SystemLoadLevel>
 | 类型 |
 | --- |
 | Promise&lt;[SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)&gt; |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { systemLoad } from '@kit.BasicServicesKit';
-
-systemLoad.getLevel().then((res: systemLoad.SystemLoadLevel) => {
-    console.info(`getLevel promise succeeded. result: ` + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-    console.error(`getLevel promise failed. code is ${err.code} message is ${err.message}`);
-})
-```

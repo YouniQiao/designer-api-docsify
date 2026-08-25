@@ -4,14 +4,12 @@ Represents data of the home screen icon type defined by the system.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## abilityName
@@ -25,8 +23,6 @@ Application ability name corresponding to the icon.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Image ID of the icon.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -61,8 +55,6 @@ ID of the application, for which the icon is used.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +72,6 @@ Label ID corresponding to the icon name.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -97,8 +87,6 @@ Name of the application, for which the icon is used.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +104,6 @@ Bundle name corresponding to the icon.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -125,16 +111,14 @@ Bundle name corresponding to the icon.
 ## details
 
 ```TypeScript
-details?: Record<string, int | long | double | string | Uint8Array>
+details?: Record<string, number | number | number | string | Uint8Array>
 ```
 
 Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
-**Type:** ArkTS-Dyn: Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**Type:** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,32 +136,6 @@ Uniform data type, which has a fixed value of **openharmony.app-item**. For deta
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-let appItemDetails : Record<string, number | string | Uint8Array> = {
-  'appItemKey1': 123,
-  'appItemKey2': 'appItemValue',
-  'appItemKey3': u8Array
-}
-let appItem : uniformDataStruct.OpenHarmonyAppItem = {
-  uniformDataType:'openharmony.app-item',
-  appId : 'MyAppId',
-  appName : 'MyAppName',
-  appIconId : 'MyAppIconId',
-  appLabelId : 'MyAppLabelId',
-  bundleName : 'MyBundleName',
-  abilityName : 'MyAbilityName',
-  details : appItemDetails
-}
-console.info('appItem.uniformDataType: ' + appItem.uniformDataType);
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_APP_ITEM, appItem);
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
+import { formObserver } from 'kits/@kit.FormKit';
 ```
 
 ## getRunningFormInfos
@@ -15,8 +15,6 @@ function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormI
 获取设备上正在运行的所有非临时卡片信息。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -40,178 +38,6 @@ function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormI
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos((error: BusinessError, data: formInfo.RunningFormInfo[]) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      data.forEach(item => {
-        console.info(`formObserver getRunningFormInfos, formId: ${item.formId}`);
-      });
-    }
-  }, 'com.example.ohos.formjsdemo');
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { AsyncCallback } from '@ohos.base';
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const DOMAIN: int = 0x0000;
-const TAG: string = 'testTag formAgentTest';
-
-try {
-  let callback: AsyncCallback<Array<formInfo.RunningFormInfo>> = (error: BusinessError | null, data: Array<formInfo.RunningFormInfo> | undefined) => {
-    if (error?.code != 0) {
-      console.error(`error, code: ${error?.code}, message: ${error?.message}`);
-    } else {
-      console.info(`formObserver getRunningFormInfos, item count: ${data?.length}`);
-    }
-  };
-  formObserver.getRunningFormInfos(callback, 'com.example.ohos.formjsdemo');
-} catch(error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos((error: BusinessError, data: formInfo.RunningFormInfo[]) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      data.forEach(item => {
-        console.info(`formObserver getRunningFormInfos, formId: ${item.formId}`);
-      });
-    }
-  }, true, 'com.example.ohos.formjsdemo');
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos((error: BusinessError | null, data: formInfo.RunningFormInfo[] | undefined) => {
-    if (error?.code != 0) {
-      console.error(`error, code: ${error?.code}, message: ${error?.message}`);
-    } else {
-      if (data !== undefined) {
-        for (let runningFormInfo of data) {
-          console.info(`formObserver getRunningFormInfos, hostBundleName : ${runningFormInfo.hostBundleName}`);
-        }
-      }
-    }
-  }, true, 'com.example.ohos.formjsdemo');
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos('com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
-    console.info('formObserver getRunningFormInfos success.');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos('com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
-    for (let runningFormInfo of data) {
-      console.info(`formObserver getRunningFormInfos, hostBundleName : ${runningFormInfo.hostBundleName}`);
-    }
-  }).catch((error) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos(true, 'com.example.ohos.formjsdemo').then((data: formInfo.RunningFormInfo[]) => {
-    console.info('formObserver getRunningFormInfos success.');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formObserver.getRunningFormInfos(true, 'com.example.ohos.formjsdemo')
-    .then((data: Array<formInfo.RunningFormInfo>) => {
-      console.info(`formObserver getRunningFormInfos, item count: ${data?.length}`);
-    })
-    .catch((error) => {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
 
 
 ## getRunningFormInfos
@@ -228,8 +54,6 @@ function getRunningFormInfos(
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -254,10 +78,6 @@ function getRunningFormInfos(
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
 
-**示例**
-
-参见 [getRunningFormInfos](#getrunningforminfos)
-
 
 ## getRunningFormInfos
 
@@ -268,8 +88,6 @@ function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.Ru
 获取设备上正在运行的所有非临时卡片信息。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -299,10 +117,6 @@ function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.Ru
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
 
-**示例**
-
-参见 [getRunningFormInfos](#getrunningforminfos)
-
 
 ## getRunningFormInfos
 
@@ -316,8 +130,6 @@ function getRunningFormInfos(
 获取设备上正在运行的所有非临时卡片信息。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -347,7 +159,3 @@ function getRunningFormInfos(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
-
-**示例**
-
-参见 [getRunningFormInfos](#getrunningforminfos)

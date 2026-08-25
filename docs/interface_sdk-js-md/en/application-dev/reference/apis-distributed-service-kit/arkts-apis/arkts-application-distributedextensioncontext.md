@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
+import { DistributedExtensionContext } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## Summary

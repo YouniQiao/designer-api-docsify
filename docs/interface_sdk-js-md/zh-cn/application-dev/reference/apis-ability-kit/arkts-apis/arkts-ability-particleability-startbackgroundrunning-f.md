@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
+import { particleAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## startBackgroundRunning
@@ -15,8 +15,6 @@ function startBackgroundRunning(id: number, request: NotificationRequest, callba
 向系统申请长时任务。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -36,88 +34,6 @@ function startBackgroundRunning(id: number, request: NotificationRequest, callba
 | request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { particleAbility, wantAgent } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import notification from '@ohos.notification';
-
-function callback(error: BusinessError, data: void) {
-  if (error && error.code !== 0) {
-    console.error(`Operation failed error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`Operation succeeded, data: ${data}`);
-  }
-}
-
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    }
-  ],
-  operationType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0,
-  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
-  let id = 1;
-  particleAbility.startBackgroundRunning(id, {
-    content:
-    {
-      contentType: notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-      normal:
-      {
-        title: 'title',
-        text: 'text'
-      }
-    },
-    wantAgent: wantAgentObj
-  }, callback);
-});
-```
-
-```TypeScript
-import { particleAbility, wantAgent } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import notification from '@ohos.notification';
-
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    }
-  ],
-  operationType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0,
-  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
-  let id = 1;
-  particleAbility.startBackgroundRunning(id, {
-    content:
-    {
-      contentType: notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-      normal:
-      {
-        title: 'title',
-        text: 'text'
-      }
-    },
-    wantAgent: wantAgentObj
-  }).then(() => {
-    console.info('Operation succeeded');
-  }).catch((err: BusinessError) => {
-    console.error(`Operation failed cause: ${JSON.stringify(err)}`);
-  });
-});
-```
-
 
 ## startBackgroundRunning
 
@@ -128,8 +44,6 @@ function startBackgroundRunning(id: number, request: NotificationRequest): Promi
 向系统申请长时任务。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -153,7 +67,3 @@ function startBackgroundRunning(id: number, request: NotificationRequest): Promi
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [startBackgroundRunning](#startbackgroundrunning)

@@ -1,10 +1,8 @@
 # MaterialType
 
-场景中物体材质类型枚举，定义材质的渲染方式。@enum { int }
+场景中物体材质类型枚举，定义材质的渲染方式。@enum { number }
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -17,8 +15,6 @@ UNLIT_SHADOW_ALPHA = 100
 仅对阴影进行绘制，当材质开启Blend属性，与背景融合模拟透明材质效果。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ Creates an **AtomicServiceMenuBar** object based on the context of the current a
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Creates an **AtomicServiceMenuBar** object based on the context of the current a
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceMenuBar } from '@kit.ArkUI';
+import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
 ```
 
 ## constructor
@@ -25,8 +23,6 @@ constructor(uiContext: UIContext)
 A constructor used to create an **AtomicServiceMenuBar** object.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +36,7 @@ A constructor used to create an **AtomicServiceMenuBar** object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
 
 ## setVisible
 
@@ -51,8 +47,6 @@ public setVisible(visible: boolean): void
 Sets whether to display or hide the menu function capsule of the current atomic service.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

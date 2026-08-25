@@ -1,12 +1,12 @@
 # PubKey
 
-公钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在非对称加密、签名验证、密钥协商时需要将其对象作为输入使用。<br>公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md)来生成。
+公钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在非对称加密、签名验证、密钥协商时需要将其对象作为输入使用。
+
+公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md)来生成。
 
 **继承/实现关系：** PubKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -15,26 +15,18 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## getAsyKeySpec
 
-ArkTS-Dyn:
 ```TypeScript
 getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | number
-```
-
-ArkTS-Sta:
-```TypeScript
-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int
 ```
 
 获取密钥参数。此API以同步方式返回结果。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -52,7 +44,7 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: bigint \| string \| number<br>ArkTS-Sta：bigint \ | string \| int |
+| bigint \| string \| number |
 
 **错误码：**
 
@@ -63,158 +55,6 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-// 根据关键规范构造EccCommonSpec结构体。EccCommonSpec结构体定义了ECC私钥和公钥的公共参数。
-function genEccCommonSpec(): cryptoFramework.ECCCommonParamsSpec {
-  let fieldFp: cryptoFramework.ECFieldFp = {
-    fieldType: 'Fp',
-    p: BigInt('0xffffffffffffffffffffffffffffffff000000000000000000000001')
-  }
-  let G: cryptoFramework.Point = {
-    x: BigInt('0xb70e0cbd6bb4bf7f321390b94a03c1d356c21122343280d6115c1d21'),
-    y: BigInt('0xbd376388b5f723fb4c22dfe6cd4375a05a07476444d5819985007e34')
-  }
-  let eccCommonSpec: cryptoFramework.ECCCommonParamsSpec = {
-    algName: 'ECC',
-    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
-    field: fieldFp,
-    a: BigInt('0xfffffffffffffffffffffffffffffffefffffffffffffffffffffffe'),
-    b: BigInt('0xb4050a850c04b3abf54132565044b0b7d7bfd8ba270b39432355ffb4'),
-    g: G,
-    n: BigInt('0xffffffffffffffffffffffffffff16a2e0b8f03e13dd29455c5c2a3d'),
-    h: 1
-  }
-  return eccCommonSpec;
-}
-
-async function testgetAsyKeySpec() {
-  let commKeySpec = genEccCommonSpec(); // 使用参数属性，构造ECC公私钥公共密钥参数对象。
-  let generatorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(commKeySpec); // 使用密钥参数对象创建生成器。
-  let keyPair = await generatorBySpec.generateKeyPair();
-  let pubKey = keyPair.pubKey;
-  let eccPrimeP = pubKey.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_FP_P_BN);
-  console.info('ecc item --- p: ' + eccPrimeP.toString(16));
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-// 根据关键规范构造EccCommonSpec结构体。EccCommonSpec结构体定义了ECC私钥和公钥的公共参数。
-function genEccCommonSpec(): cryptoFramework.ECCCommonParamsSpec {
-  let fieldFp: cryptoFramework.ECFieldFp = {
-    fieldType: 'Fp',
-    p: BigInt('26959946667150639794667015087019630673557916260026308143510066298881')
-  }
-  let G: cryptoFramework.Point = {
-    x: BigInt('19277929113566293071110308034699488026831934219452440156649784352033'),
-    y: BigInt('19926808758034470970197974370888749184205991990603949537637343198772')
-  }
-  let eccCommonSpec: cryptoFramework.ECCCommonParamsSpec = {
-    algName: 'ECC',
-    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
-    field: fieldFp,
-    a: BigInt('26959946667150639794667015087019630673557916260026308143510066298878'),
-    b: BigInt('18958286285566608000408668544493926415504680968679321075787234672564'),
-    g: G,
-    n: BigInt('26959946667150639794667015087019625940457807714424391721682722368061'),
-    h: 1
-  }
-  return eccCommonSpec;
-}
-
-async function testgetAsyKeySpec() {
-  let commKeySpec = genEccCommonSpec(); // 使用参数属性，构造ECC公私钥公共密钥参数对象。
-  let generatorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(commKeySpec); // 使用密钥参数对象创建生成器。
-  let keyPair = await generatorBySpec.generateKeyPair();
-  let key = keyPair.pubKey;
-  let p = key.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_FP_P_BN);
-  console.info('ecc item --- p: ' + p.toString());
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-// 根据关键规范构造EccCommonSpec结构体。EccCommonSpec结构体定义了ECC私钥和公钥的公共参数。
-function genEccCommonSpec(): cryptoFramework.ECCCommonParamsSpec {
-  let fieldFp: cryptoFramework.ECFieldFp = {
-    fieldType: 'Fp',
-    p: BigInt('0xffffffffffffffffffffffffffffffff000000000000000000000001')
-  }
-  let G: cryptoFramework.Point = {
-    x: BigInt('0xb70e0cbd6bb4bf7f321390b94a03c1d356c21122343280d6115c1d21'),
-    y: BigInt('0xbd376388b5f723fb4c22dfe6cd4375a05a07476444d5819985007e34')
-  }
-  let eccCommonSpec: cryptoFramework.ECCCommonParamsSpec = {
-    algName: 'ECC',
-    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
-    field: fieldFp,
-    a: BigInt('0xfffffffffffffffffffffffffffffffefffffffffffffffffffffffe'),
-    b: BigInt('0xb4050a850c04b3abf54132565044b0b7d7bfd8ba270b39432355ffb4'),
-    g: G,
-    n: BigInt('0xffffffffffffffffffffffffffff16a2e0b8f03e13dd29455c5c2a3d'),
-    h: 1
-  }
-  return eccCommonSpec;
-}
-
-async function testgetAsyKeySpec() {
-  let commKeySpec = genEccCommonSpec(); // 使用参数属性，构造ECC公私钥公共密钥参数对象。
-  let generatorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(commKeySpec); // 使用密钥参数对象创建生成器。
-  let keyPair = await generatorBySpec.generateKeyPair();
-  let pirKey = keyPair.priKey;
-  let eccPrimeP = pirKey.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_FP_P_BN);
-  console.info('ecc item --- p: ' + eccPrimeP.toString(16));
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-// 根据关键规范构造EccCommonSpec结构体。EccCommonSpec结构体定义了ECC私钥和公钥的公共参数。
-function genEccCommonSpec(): cryptoFramework.ECCCommonParamsSpec {
-  let fieldFp: cryptoFramework.ECFieldFp = {
-    fieldType: 'Fp',
-    p: BigInt('26959946667150639794667015087019630673557916260026308143510066298881')
-  }
-  let G: cryptoFramework.Point = {
-    x: BigInt('19277929113566293071110308034699488026831934219452440156649784352033'),
-    y: BigInt('19926808758034470970197974370888749184205991990603949537637343198772')
-  }
-  let eccCommonSpec: cryptoFramework.ECCCommonParamsSpec = {
-    algName: 'ECC',
-    specType: cryptoFramework.AsyKeySpecType.COMMON_PARAMS_SPEC,
-    field: fieldFp,
-    a: BigInt('26959946667150639794667015087019630673557916260026308143510066298878'),
-    b: BigInt('18958286285566608000408668544493926415504680968679321075787234672564'),
-    g: G,
-    n: BigInt('26959946667150639794667015087019625940457807714424391721682722368061'),
-    h: 1
-  }
-  return eccCommonSpec;
-}
-
-async function testgetAsyKeySpec() {
-  let commKeySpec = genEccCommonSpec(); // 使用参数属性，构造ECC公私钥公共密钥参数对象。
-  let generatorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(commKeySpec); // 使用密钥参数对象创建生成器。
-  let keyPair = await generatorBySpec.generateKeyPair();
-  let key = keyPair.priKey;
-  let p = key.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_FP_P_BN);
-  console.info('ecc item --- p: ' + p.toString());
-}
-```
 
 ## getEncodedDer
 
@@ -231,8 +71,6 @@ getEncodedDer(format: string): DataBlob
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -247,7 +85,7 @@ getEncodedDer(format: string): DataBlob
 
 | 类型 |
 | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) |
 
 **错误码：**
 
@@ -258,37 +96,6 @@ getEncodedDer(format: string): DataBlob
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function testGetEncodedDer() {
-  let pkData = new Uint8Array([48, 90, 48, 20, 6, 7, 42, 134, 72, 206, 61, 2, 1, 6, 9, 43, 36, 3, 3, 2, 8, 1, 1, 7, 3, 66, 0, 4, 143, 39, 57, 249, 145, 50, 63, 222, 35, 70, 178, 121, 202, 154, 21, 146, 129, 75, 76, 63, 8, 195, 157, 111, 40, 217, 215, 148, 120, 224, 205, 82, 83, 92, 185, 21, 211, 184, 5, 19, 114, 33, 86, 85, 228, 123, 242, 206, 200, 98, 178, 184, 130, 35, 232, 45, 5, 202, 189, 11, 46, 163, 156, 152]);
-  let pubKeyBlob: cryptoFramework.DataBlob = { data: pkData };
-  let generator = cryptoFramework.createAsyKeyGenerator('ECC_BrainPoolP256r1');
-  let keyPair = await generator.convertKey(pubKeyBlob, null);
-  let key = keyPair.pubKey;
-  let returnBlob = key.getEncodedDer('X509|UNCOMPRESSED');
-  console.info('returnBlob data: ' + returnBlob.data);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function testGetEncodedDer() {
-  let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
-  // 使用密钥生成器随机生成非对称密钥对。
-  let keyGenPromise = eccGenerator.generateKeyPair();
-  keyGenPromise.then(keyPair => {
-    let priKey = keyPair.priKey;
-    let returnBlob = priKey.getEncodedDer('PKCS8');
-    console.info('returnBlob data: ' + returnBlob.data);
-  });
-}
-```
-
 ## getEncodedPem
 
 ```TypeScript
@@ -298,8 +105,6 @@ getEncodedPem(format: string): string
 获取PEM编码的密钥数据。此API以同步方式返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -326,89 +131,6 @@ getEncodedPem(format: string): string
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let publicPkcs1Str1024: string =
-  '-----BEGIN RSA PUBLIC KEY-----\n'
-    + 'MIGJAoGBALAg3eavbX433pOjGdWdpL7HIr1w1EAeIcaCtuMfDpECPdX6X5ZjrwiE\n'
-    + 'h7cO51WXMT2gyN45DCQySr/8cLE2UiUVHo7qlrSatdLA9ETtgob3sJ4qTaBg5Lxg\n'
-    + 'SHy2gC+bvEpuIuRe64yXGuM/aP+ZvmIj9QBIVI9mJD8jLEOvQBBpAgMBAAE=\n'
-    + '-----END RSA PUBLIC KEY-----\n';
-
-function TestPubKeyPkcs1ToX509BySync1024() {
-  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
-  let keyPair = rsaGenerator.convertPemKeySync(publicPkcs1Str1024, null);
-  let pubPemKey = keyPair.pubKey;
-  let pubString = pubPemKey.getEncodedPem('X509');
-  console.info('[sync]TestPubKeyPkcs1ToX509BySync1024 pubString output = ' + pubString);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let priKeyPkcs1Str1024: string =
-  '-----BEGIN RSA PRIVATE KEY-----\n'
-    + 'MIICXQIBAAKBgQCwIN3mr21+N96ToxnVnaS+xyK9cNRAHiHGgrbjHw6RAj3V+l+W\n'
-    + 'Y68IhIe3DudVlzE9oMjeOQwkMkq//HCxNlIlFR6O6pa0mrXSwPRE7YKG97CeKk2g\n'
-    + 'YOS8YEh8toAvm7xKbiLkXuuMlxrjP2j/mb5iI/UASFSPZiQ/IyxDr0AQaQIDAQAB\n'
-    + 'AoGAEvBFzBNa+7J4PXnRQlYEK/tvsd0bBZX33ceacMubHl6WVZbphltLq+fMTBPP\n'
-    + 'LjXmtpC+aJ7Lvmyl+wTi/TsxE9vxW5JnbuRT48rnZ/Xwq0eozDeEeIBRrpsr7Rvr\n'
-    + '7ctrgzr4m4yMHq9aDgpxj8IR7oHkfwnmWr0wM3FuiVlj650CQQDineeNZ1hUTkj4\n'
-    + 'D3O+iCi3mxEVEeJrpqrmSFolRMb+iozrIRKuJlgcOs+Gqi2fHfOTTL7LkpYe8SVg\n'
-    + 'e3JxUdVLAkEAxvcZXk+byMFoetrnlcMR13VHUpoVeoV9qkv6CAWLlbMdgf7uKmgp\n'
-    + 'a1Yp3QPDNQQqkPvrqtfR19JWZ4uy1qREmwJALTU3BjyBoH/liqb6fh4HkWk75Som\n'
-    + 'MzeSjFIOubSYxhq5tgZpBZjcpvUMhV7Zrw54kwASZ+YcUJvmyvKViAm9NQJBAKF7\n'
-    + 'DyXSKrem8Ws0m1ybM7HQx5As6l3EVhePDmDQT1eyRbKp+xaD74nkJpnwYdB3jyyY\n'
-    + 'qc7A1tj5J5NmeEFolR0CQQCn76Xp8HCjGgLHw9vg7YyIL28y/XyfFyaZAzzK+Yia\n'
-    + 'akNwQ6NeGtXSsuGCcyyfpacHp9xy8qXQNKSkw03/5vDO\n'
-    + '-----END RSA PRIVATE KEY-----\n';
-
-function TestPriKeyPkcs1ToPkcs8BySync1024() {
-  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
-  let keyPair = rsaGenerator.convertPemKeySync(null, priKeyPkcs1Str1024);
-  let priPemKey = keyPair.priKey;
-  let priString = priPemKey.getEncodedPem('PKCS8');
-  console.info('[sync]TestPriKeyPkcs1ToPkcs8BySync1024 priString output = ' + priString);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let priKeyPkcs1Str1024: string =
-  '-----BEGIN RSA PRIVATE KEY-----\n'
-    + 'MIICXQIBAAKBgQCwIN3mr21+N96ToxnVnaS+xyK9cNRAHiHGgrbjHw6RAj3V+l+W\n'
-    + 'Y68IhIe3DudVlzE9oMjeOQwkMkq//HCxNlIlFR6O6pa0mrXSwPRE7YKG97CeKk2g\n'
-    + 'YOS8YEh8toAvm7xKbiLkXuuMlxrjP2j/mb5iI/UASFSPZiQ/IyxDr0AQaQIDAQAB\n'
-    + 'AoGAEvBFzBNa+7J4PXnRQlYEK/tvsd0bBZX33ceacMubHl6WVZbphltLq+fMTBPP\n'
-    + 'LjXmtpC+aJ7Lvmyl+wTi/TsxE9vxW5JnbuRT48rnZ/Xwq0eozDeEeIBRrpsr7Rvr\n'
-    + '7ctrgzr4m4yMHq9aDgpxj8IR7oHkfwnmWr0wM3FuiVlj650CQQDineeNZ1hUTkj4\n'
-    + 'D3O+iCi3mxEVEeJrpqrmSFolRMb+iozrIRKuJlgcOs+Gqi2fHfOTTL7LkpYe8SVg\n'
-    + 'e3JxUdVLAkEAxvcZXk+byMFoetrnlcMR13VHUpoVeoV9qkv6CAWLlbMdgf7uKmgp\n'
-    + 'a1Yp3QPDNQQqkPvrqtfR19JWZ4uy1qREmwJALTU3BjyBoH/liqb6fh4HkWk75Som\n'
-    + 'MzeSjFIOubSYxhq5tgZpBZjcpvUMhV7Zrw54kwASZ+YcUJvmyvKViAm9NQJBAKF7\n'
-    + 'DyXSKrem8Ws0m1ybM7HQx5As6l3EVhePDmDQT1eyRbKp+xaD74nkJpnwYdB3jyyY\n'
-    + 'qc7A1tj5J5NmeEFolR0CQQCn76Xp8HCjGgLHw9vg7YyIL28y/XyfFyaZAzzK+Yia\n'
-    + 'akNwQ6NeGtXSsuGCcyyfpacHp9xy8qXQNKSkw03/5vDO\n'
-    + '-----END RSA PRIVATE KEY-----\n';
-
-function TestPriKeyPkcs1Encoded() {
-  let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
-  let keyPair = rsaGenerator.convertPemKeySync(null, priKeyPkcs1Str1024);
-  let options: cryptoFramework.KeyEncodingConfig = {
-    password: '123456',
-    cipherName: 'AES-128-CBC'
-  }
-  let priPemKey = keyPair.priKey;
-  let priString = priPemKey.getEncodedPem('PKCS1', options);
-  console.info('[sync]TestPriKeyPkcs1Encoded priString output = ' + priString);
-}
-```
-
 ## getKeyData
 
 ```TypeScript
@@ -418,8 +140,6 @@ getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>
 获取指定的密钥数据类型对应的公钥数据。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -448,41 +168,17 @@ getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function eccGetKeyDataTest() {
-  let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC_BrainPoolP256r1');
-  let keyPair = await eccGenerator.generateKeyPair();
-  let returnBlob = await keyPair.pubKey.getKeyData(cryptoFramework.AsyKeyDataItem.EC_PUBLIC_X_Y);
-  console.info('EC_PUBLIC_X_Y data: ' + returnBlob);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function eccGetKeyDataTest() {
-  let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC_BrainPoolP256r1');
-  let keyPair = await eccGenerator.generateKeyPair();
-  let returnBlob = await keyPair.priKey.getKeyData(cryptoFramework.AsyKeyDataItem.EC_PRIVATE_04_X_Y_K);
-  console.info('EC_PRIVATE_04_X_Y_K data: ' + returnBlob);
-}
-```
-
 ## getKeyDataSync
 
 ```TypeScript
 getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 ```
 
-获取指定的密钥数据类型对应的公钥数据。此API以同步方式返回结果。<br><br>**说明：** <br>建议优先使用异步API，getKeyData。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+获取指定的密钥数据类型对应的公钥数据。此API以同步方式返回结果。
+
+**说明：** 建议优先使用异步API，getKeyData。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -510,27 +206,3 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function eccGetKeyDataTest() {
-  let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC_BrainPoolP256r1');
-  let keyPair = eccGenerator.generateKeyPairSync();
-  let returnBlob = keyPair.pubKey.getKeyDataSync(cryptoFramework.AsyKeyDataItem.EC_PUBLIC_X_Y);
-  console.info('EC_PUBLIC_X_Y data: ' + returnBlob);
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-function eccGetKeyDataTest() {
-  let eccGenerator = cryptoFramework.createAsyKeyGenerator('ECC_BrainPoolP256r1');
-  let keyPair = eccGenerator.generateKeyPairSync();
-  let returnBlob = keyPair.priKey.getKeyDataSync(cryptoFramework.AsyKeyDataItem.EC_PRIVATE_04_X_Y_K);
-  console.info('EC_PRIVATE_04_X_Y_K data: ' + returnBlob);
-}
-```

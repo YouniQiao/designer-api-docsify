@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -21,8 +19,6 @@ INVALID_TYPE = -1
 设备没有认证。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 
@@ -40,8 +36,6 @@ PEER_TO_PEER = 0
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -58,8 +52,6 @@ IDENTICAL_ACCOUNT = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -75,8 +67,6 @@ ACROSS_ACCOUNT = 2
 设备跨账号认证。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 

@@ -2,8 +2,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -11,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## appUsagePriorityGroup
@@ -25,8 +23,6 @@ The usage priority group of the application.
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ The bundle name.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -61,8 +55,6 @@ The shortcut ID.
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -80,8 +72,6 @@ The class name.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -92,13 +82,11 @@ The class name.
 stateOccurredTime?: number
 ```
 
-The time when this state occurred, in milliseconds. <br> Unit:ms
+The time when this state occurred, in milliseconds. Unit:ms
 
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -115,8 +103,6 @@ The state type.
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

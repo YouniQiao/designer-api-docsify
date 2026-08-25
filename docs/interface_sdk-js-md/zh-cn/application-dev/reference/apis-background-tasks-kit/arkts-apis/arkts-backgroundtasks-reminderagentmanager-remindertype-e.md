@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## REMINDER_TYPE_TIMER
@@ -17,8 +15,6 @@ REMINDER_TYPE_TIMER = 0
 表示提醒类型：倒计时。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -32,8 +28,6 @@ REMINDER_TYPE_CALENDAR = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## REMINDER_TYPE_ALARM
@@ -45,7 +39,5 @@ REMINDER_TYPE_ALARM = 2
 表示提醒类型：闹钟。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

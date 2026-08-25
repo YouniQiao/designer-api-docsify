@@ -4,14 +4,12 @@ Implements an **OfflineResourceMap** object, which is used to set information re
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## resource
@@ -25,8 +23,6 @@ Content of a local offline resource.
 **Type:** Uint8Array
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -42,8 +38,6 @@ HTTP response headers corresponding to the resources. The Cache-Control or Expir
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## type
@@ -58,8 +52,6 @@ Type of the resources. Currently, only JavaScript, image, and CSS resources are 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## urlList
@@ -73,7 +65,5 @@ List of network addresses corresponding to the local offline resources. The firs
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

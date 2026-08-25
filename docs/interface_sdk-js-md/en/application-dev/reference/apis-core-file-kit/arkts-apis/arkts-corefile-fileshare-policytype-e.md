@@ -1,10 +1,8 @@
 # PolicyType
 
-Indicates the policy type of the path.@enum { int } policyType
+Indicates the policy type of the path.@enum { number } policyType
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -18,8 +16,6 @@ Indicates that the policy is temporary.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## PERSISTENT_TYPE
@@ -31,7 +27,5 @@ PERSISTENT_TYPE = 1
 Indicates that the policy is persistent.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization

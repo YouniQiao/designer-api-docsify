@@ -4,29 +4,25 @@ Defines the location attributes of a modal dialog box.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from 'kits/@kit.AbilityKit';
 ```
 
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 Height of the dialog box, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,16 +31,14 @@ Height of the dialog box, in px.
 ## left
 
 ```TypeScript
-left: int
+left: number
 ```
 
 X-coordinate of the upper left corner of the dialog box.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,16 +47,14 @@ X-coordinate of the upper left corner of the dialog box.
 ## top
 
 ```TypeScript
-top: int
+top: number
 ```
 
 Y-coordinate of the upper left corner of the dialog box.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,16 +63,14 @@ Y-coordinate of the upper left corner of the dialog box.
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 Width of the dialog box, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

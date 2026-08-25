@@ -5,8 +5,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
@@ -79,8 +77,6 @@ static fetch(options: {
 Obtains data through the network.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **System capability:** SystemCapability.Communication.NetStack
 

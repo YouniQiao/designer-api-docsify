@@ -4,8 +4,6 @@ Represents an error message.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Represents an error message.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## errorCode
 
 ```TypeScript
-errorCode: int
+errorCode: number
 ```
 
 Error code, which identifies an error type. You can quickly locate the cause of the upgrade failure based on **errorCode** and take corresponding measures. For example, **201** indicates the permission error, **401** indicates the parameter error, and **11500104** indicates the IPC error.Use scenarios: In the callback of **EVENT_UPGRADE_FAIL**, use **errorCode** to determine the failure cause and handle the error or notify the user. You are advised to analyze and handle the error based on **errorMessage**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -45,8 +41,6 @@ Error message, which provides detailed description of the error. **errorMessage*
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

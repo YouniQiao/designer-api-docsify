@@ -4,8 +4,6 @@ Web页面场景下，全局滚动条模式。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## OVERLAY_LAYOUT_SCROLLBAR
@@ -17,8 +15,6 @@ OVERLAY_LAYOUT_SCROLLBAR = 0
 非常驻滚动条，可以拖拽。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ FORCE_DISPLAY_SCROLLBAR = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## OVERLAY_VISUAL_SCROLLBAR
@@ -45,8 +39,6 @@ OVERLAY_VISUAL_SCROLLBAR = 2
 非常驻滚动条，不可以拖拽。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

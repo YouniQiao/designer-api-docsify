@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [SatelliteStatusInfo](arkts-location-geolocationmanager-satellitestatusinfo-i.md)
@@ -17,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## altitudes
@@ -31,8 +29,6 @@ altitudes: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -52,8 +48,6 @@ azimuths: Array<number>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [azimuths](arkts-location-geolocationmanager-satellitestatusinfo-i.md#azimuths)
@@ -71,8 +65,6 @@ carrierFrequencies: Array<number>
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -92,8 +84,6 @@ carrierToNoiseDensitys: Array<number>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [carrierToNoiseDensitys](arkts-location-geolocationmanager-satellitestatusinfo-i.md#carriertonoisedensitys)
@@ -112,8 +102,6 @@ satelliteIds: Array<number>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [satelliteIds](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satelliteids)
@@ -131,8 +119,6 @@ satellitesNumber: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

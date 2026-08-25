@@ -4,8 +4,6 @@ Represents a USB device pipe, which is used to determine a USB device.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
@@ -15,7 +13,7 @@ Represents a USB device pipe, which is used to determine a USB device.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## busNum
@@ -29,8 +27,6 @@ Bus address.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -49,8 +45,6 @@ Device address.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

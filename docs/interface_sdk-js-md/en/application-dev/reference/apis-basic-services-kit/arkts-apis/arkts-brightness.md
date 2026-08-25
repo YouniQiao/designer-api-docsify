@@ -7,8 +7,6 @@ The **brightness** module provides an API for setting the screen brightness.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager
 
 **System API:** This is a system API.
@@ -16,7 +14,7 @@ The **brightness** module provides an API for setting the screen brightness.
 ## Modules to Import
 
 ```TypeScript
-import { brightness } from '@kit.BasicServicesKit';
+import { brightness } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

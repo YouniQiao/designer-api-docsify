@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
+import { particleAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## startAbility
@@ -20,8 +20,6 @@ Starts a ParticleAbility. This API uses an asynchronous callback to return the r
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -32,57 +30,6 @@ Starts a ParticleAbility. This API uses an asynchronous callback to return the r
 | --- | --- | --- |
 | parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { particleAbility, wantConstant } from '@kit.AbilityKit';
-
-particleAbility.startAbility(
-  {
-    want:
-    {
-      action: 'ohos.want.action.home',
-      entities: ['entity.system.home'],
-      type: 'MIMETYPE',
-      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
-      deviceId: '',
-      bundleName: 'com.example.Data',
-      abilityName: 'com.example.Data.EntryAbility',
-      uri: ''
-    },
-  },
-  (error, data) => {
-    if (error && error.code !== 0) {
-      console.error(`startAbility fail, error: ${JSON.stringify(error)}`);
-    } else {
-      console.info(`startAbility success, data: ${JSON.stringify(data)}`);
-    }
-  },
-);
-```
-
-```TypeScript
-import { particleAbility, wantConstant } from '@kit.AbilityKit';
-
-particleAbility.startAbility(
-  {
-    want:
-    {
-      action: 'ohos.want.action.home',
-      entities: ['entity.system.home'],
-      type: 'MIMETYPE',
-      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
-      deviceId: '',
-      bundleName: 'com.example.Data',
-      abilityName: 'com.example.Data.EntryAbility',
-      uri: ''
-    },
-  },
-).then(() => {
-  console.info('particleAbility startAbility');
-});
-```
 
 
 ## startAbility
@@ -99,8 +46,6 @@ Starts a ParticleAbility. This API uses a promise to return the result.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -116,7 +61,3 @@ Starts a ParticleAbility. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [startAbility](#startability)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedRunningBundles
@@ -15,8 +15,6 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, callbac
 添加应用至应用运行禁止名单，添加至禁止名单的应用不允许在当前用户下运行，不在禁止名单中的应用允许运行。使用callback异步回调。从API version 21开始，如果应用运行允许名单 [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md)非空，就不能再通过本接口添加应用运行禁止名单，否则会报9200010冲突错误 码。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -49,70 +47,6 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, callbac
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.addDisallowedRunningBundles(wantTemp, appIds, (err) => {
-  if (err) {
-    console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in adding disallowed running bundles');
-});
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in adding disallowed running bundles');
-});
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in adding disallowed running bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## addDisallowedRunningBundles
 
@@ -123,8 +57,6 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId:
 添加应用至应用运行禁止名单，添加至禁止名单的应用不允许在指定用户（通过userId指定）下运行，不在禁止名单中的应用允许运行。使用callback异步回调。从API version 21开始，如果应用运行允许名单 [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md)非空，就不能再通过本接口添加应用运行禁止名单，否则会报9200010冲突错误 码。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -158,10 +90,6 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId:
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 
-**示例**
-
-参见 [addDisallowedRunningBundles](#adddisallowedrunningbundles)
-
 
 ## addDisallowedRunningBundles
 
@@ -172,8 +100,6 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?
 添加应用至应用运行禁止名单，添加至禁止名单的应用不允许在当前/指定用户下运行。使用Promise异步回调。从API version 21开始，如果应用运行允许名单 [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md)非空，就不能再通过本接口添加应用运行禁止名单，否则会报9200010冲突错误 码。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -211,7 +137,3 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
-
-**示例**
-
-参见 [addDisallowedRunningBundles](#adddisallowedrunningbundles)

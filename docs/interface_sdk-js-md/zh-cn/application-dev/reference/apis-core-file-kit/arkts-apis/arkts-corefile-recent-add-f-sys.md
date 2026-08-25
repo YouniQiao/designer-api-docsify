@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { recent } from '@kit.CoreFileKit';
+import { recent } from 'kits/@kit.CoreFileKit';
 ```
 
 ## add
@@ -15,8 +15,6 @@ function add(uri: string): void
 将uri对应的文件加入最近访问列表。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 23
 
@@ -41,10 +39,3 @@ function add(uri: string): void
 | 13900002 |
 | 13900020 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let uri = 'file://docs/storage/Users/currentUser/<publicPath>';
-recent.add(uri);
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## isSharingSupported
@@ -15,8 +15,6 @@ function isSharingSupported(callback: AsyncCallback<boolean>): void
 Checks whether network sharing is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -40,32 +38,6 @@ Checks whether network sharing is supported. This API uses an asynchronous callb
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) |
 
-**Examples**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing.isSharingSupported((error: BusinessError, data: boolean) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing
-  .isSharingSupported()
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## isSharingSupported
 
@@ -76,8 +48,6 @@ function isSharingSupported(): Promise<boolean>
 Checks whether network sharing is supported. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -100,7 +70,3 @@ Checks whether network sharing is supported. This API uses a promise to return t
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) |
-
-**Examples**
-
-See [isSharingSupported](#issharingsupported)

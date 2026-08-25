@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## removeAppShareOptions
@@ -15,8 +15,6 @@ function removeAppShareOptions(intention: Intention): void
 Removes the data control information set by [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md).
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 14+: ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION
@@ -38,16 +36,3 @@ Removes the data control information set by [setAppShareOptions](arkts-arkdata-u
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  unifiedDataChannel.removeAppShareOptions(unifiedDataChannel.Intention.DRAG);
-  console.info(`[UDMF]removeAppShareOptions success. `);
-}catch (e){
-  let error: BusinessError = e as BusinessError;
-  console.error(`[UDMF]removeAppShareOptions throws an exception. code is ${error.code}, message is ${error.message} `);
-}
-```

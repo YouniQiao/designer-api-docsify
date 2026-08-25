@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setPriorityEnabledByBundles
@@ -15,8 +15,6 @@ function setPriorityEnabledByBundles(switches: Map<BundleOption, boolean>): Prom
 批量设置应用通知优先级开关状态。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -48,35 +46,3 @@ function setPriorityEnabledByBundles(switches: Map<BundleOption, boolean>): Prom
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const bundleOption : notificationManager.BundleOption = { bundle: 'bundleName', uid: 1000 };
-let switches: Map<notificationManager.BundleOption, boolean> = new Map([[bundleOption, false]]);
-notificationManager.setPriorityEnabledByBundles(switches).then(() => {
-  hilog.info(0x0000, 'testTag', `setPriorityEnabledByBundles success`);
-}).catch((err: BusinessError) => {
-  hilog.error(0x0000, 'testTag', `setPriorityEnabledByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const bundleOption : notificationManager.BundleOption = { bundle: 'bundleName', uid: 1000 };
-let switches: Map<notificationManager.BundleOption, boolean> = new Map<notificationManager.BundleOption, boolean>([[bundleOption, false]]);
-notificationManager.setPriorityEnabledByBundles(switches).then(() => {
-    console.info(`setPriorityEnabledByBundles success`);
-}).catch((err: Error) => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setPriorityEnabledByBundles failed, code is ${error.code}, message is ${error.message}`);
-});
-```

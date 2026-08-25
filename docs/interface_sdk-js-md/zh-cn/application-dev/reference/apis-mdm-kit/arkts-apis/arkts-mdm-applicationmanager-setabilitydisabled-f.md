@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setAbilityDisabled
@@ -15,8 +15,6 @@ function setAbilityDisabled(admin: Want, bundleName: string, accountId: number, 
 设置是否禁用指定应用（系统应用和三方应用均支持）的Ability组件。当前仅支持UIAbility类型，禁用后无法拉起此Ability组件的用户界面。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -42,27 +40,3 @@ function setAbilityDisabled(admin: Want, bundleName: string, accountId: number, 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 需根据实际情况进行替换
-  let bundleName: string = "com.example.exampleapplication";
-  let accountId: number = 100;
-  let abilityName: string = "EntryAbility";
-  applicationManager.setAbilityDisabled(wantTemp, bundleName, accountId, abilityName, true);
-  console.info('Succeeded in setting ability disabled');
-} catch (err) {
-  console.error(`Failed to set ability disabled. Code: ${err.code}, message: ${err.message}`);
-}
-```

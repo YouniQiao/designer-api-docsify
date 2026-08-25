@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## 导入模块
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## 汇总
@@ -28,17 +26,9 @@ import { observer } from '@kit.TelephonyKit';
 | [off(电话服务状态监听)](arkts-telephony-observer-off-f.md#offcallstatechangeex) |
 | [off(电话服务状态监听)](arkts-telephony-observer-off-f.md#offsimstatechange) |
 | [off(电话服务状态监听)](arkts-telephony-observer-off-f.md#officcaccountinfochange) |
-| [offCallStateChange(电话服务状态监听)](arkts-telephony-observer-offcallstatechange-f.md) |
-| [offCallStateChangeEx(电话服务状态监听)](arkts-telephony-observer-offcallstatechangeex-f.md) |
 | [offCCallStateChange(电话服务状态监听)](arkts-telephony-observer-offccallstatechange-f.md) |
-| [offCellularDataConnectionStateChange(电话服务状态监听)](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md) |
-| [offCellularDataFlowChange(电话服务状态监听)](arkts-telephony-observer-offcellulardataflowchange-f.md) |
 | [offCommunicationStateChange(电话服务状态监听)](arkts-telephony-observer-offcommunicationstatechange-f.md) |
 | [offGetSimActiveState(电话服务状态监听)](arkts-telephony-observer-offgetsimactivestate-f.md) |
-| [offIccAccountInfoChange(电话服务状态监听)](arkts-telephony-observer-officcaccountinfochange-f.md) |
-| [offNetworkStateChange(电话服务状态监听)](arkts-telephony-observer-offnetworkstatechange-f.md) |
-| [offSignalInfoChange(电话服务状态监听)](arkts-telephony-observer-offsignalinfochange-f.md) |
-| [offSimStateChange(电话服务状态监听)](arkts-telephony-observer-offsimstatechange-f.md) |
 | [on(电话服务状态监听)](arkts-telephony-observer-on-f.md#onnetworkstatechange) |
 | [on(电话服务状态监听)](arkts-telephony-observer-on-f.md#onnetworkstatechange) |
 | [on(电话服务状态监听)](arkts-telephony-observer-on-f.md#onsignalinfochange) |
@@ -53,35 +43,18 @@ import { observer } from '@kit.TelephonyKit';
 | [on(电话服务状态监听)](arkts-telephony-observer-on-f.md#onsimstatechange) |
 | [on(电话服务状态监听)](arkts-telephony-observer-on-f.md#onsimstatechange) |
 | [on(电话服务状态监听)](arkts-telephony-observer-on-f.md#oniccaccountinfochange) |
-| [onCallStateChange(电话服务状态监听)](arkts-telephony-observer-oncallstatechange-f.md) |
-| [onCallStateChange(电话服务状态监听)](arkts-telephony-observer-oncallstatechange-f.md) |
-| [onCallStateChangeEx(电话服务状态监听)](arkts-telephony-observer-oncallstatechangeex-f.md) |
 | [onCCallStateChange(电话服务状态监听)](arkts-telephony-observer-onccallstatechange-f.md) |
-| [onCellularDataConnectionStateChange(电话服务状态监听)](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) |
-| [onCellularDataConnectionStateChange(电话服务状态监听)](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md) |
-| [onCellularDataFlowChange(电话服务状态监听)](arkts-telephony-observer-oncellulardataflowchange-f.md) |
-| [onCellularDataFlowChange(电话服务状态监听)](arkts-telephony-observer-oncellulardataflowchange-f.md) |
 | [onCommunicationStateChange(电话服务状态监听)](arkts-telephony-observer-oncommunicationstatechange-f.md) |
 | [onGetSimActiveState(电话服务状态监听)](arkts-telephony-observer-ongetsimactivestate-f.md) |
-| [onIccAccountInfoChange(电话服务状态监听)](arkts-telephony-observer-oniccaccountinfochange-f.md) |
-| [onNetworkStateChange(电话服务状态监听)](arkts-telephony-observer-onnetworkstatechange-f.md) |
-| [onNetworkStateChange(电话服务状态监听)](arkts-telephony-observer-onnetworkstatechange-f.md) |
-| [onSignalInfoChange(电话服务状态监听)](arkts-telephony-observer-onsignalinfochange-f.md) |
-| [onSignalInfoChange(电话服务状态监听)](arkts-telephony-observer-onsignalinfochange-f.md) |
-| [onSimStateChange(电话服务状态监听)](arkts-telephony-observer-onsimstatechange-f.md) |
-| [onSimStateChange(电话服务状态监听)](arkts-telephony-observer-onsimstatechange-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [off(电话服务状态监听)](arkts-telephony-observer-off-f-sys.md#offcellinfochange) |
-| [offCellInfoChange(电话服务状态监听)](arkts-telephony-observer-offcellinfochange-f-sys.md) |
-| [on(电话服务状态监听)](arkts-telephony-observer-on-f-sys.md#oncellinfochange) |
-| [on(电话服务状态监听)](arkts-telephony-observer-on-f-sys.md#oncellinfochange) |
-| [onCellInfoChange(电话服务状态监听)](arkts-telephony-observer-oncellinfochange-f-sys.md) |
-| [onCellInfoChange(电话服务状态监听)](arkts-telephony-observer-oncellinfochange-f-sys.md) |
+| off(电话服务状态监听) |
+| on(电话服务状态监听) |
+| on(电话服务状态监听) |
 <!--DelEnd-->
 
 ### 接口

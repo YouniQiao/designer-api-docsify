@@ -4,8 +4,6 @@ Enumerates the usage of a credential.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## PURPOSE_DEFAULT
@@ -17,8 +15,6 @@ PURPOSE_DEFAULT = 0
 Default usage, which is used for credential signing.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -32,8 +28,6 @@ Query of all credentials.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## PURPOSE_SIGN
@@ -46,8 +40,6 @@ Credential signing.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## PURPOSE_ENCRYPT
@@ -59,7 +51,5 @@ PURPOSE_ENCRYPT = 3
 Credential encryption.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

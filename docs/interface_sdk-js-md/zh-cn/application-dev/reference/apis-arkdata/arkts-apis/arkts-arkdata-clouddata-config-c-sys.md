@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## batchQueryLastSyncInfo
@@ -28,8 +26,6 @@ static batchQueryLastSyncInfo(
 批量查询上一次端云同步的信息，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -61,29 +57,6 @@ static batchQueryLastSyncInfo(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountId: string = "accountId";
-const bundleInfos: Array<cloudData.BundleInfo> = [
-  { bundleName: "bundleName1", storeId: "storeId1" },
-  { bundleName: "bundleName2" }
-];
-
-try {
-  cloudData.Config.batchQueryLastSyncInfo(accountId, bundleInfos).then((result) => {
-    console.info(`Succeeded in querying last sync info. Result is ${JSON.stringify(result)}`);
-  }).catch((err) => {
-    console.error(`Failed to query last sync info. Error code is ${err.code}, message is ${err.message}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -98,8 +71,6 @@ static changeAppCloudSwitch(
 修改单个应用端云协同开关，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -125,72 +96,6 @@ static changeAppCloudSwitch(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeded in changing App cloud switch');
-    } else {
-      console.error(`Failed to change App cloud switch. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true).then(() => {
-    console.info('Succeeded in changing App cloud switch');
-  }).catch((err) => {
-    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-let config: cloudData.SwitchConfig = {
-  dbInfo: {
-    'test_storeName1': {
-      enable: true,
-      tableInfo: {
-        'test_tableName1': true,
-        'test_tableName2': false
-      }
-    }
-  }
-}
-try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, config).then(() => {
-    console.info('Succeeded in changing App cloud switch');
-  }).catch((err) => {
-    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -200,8 +105,6 @@ static changeAppCloudSwitch(accountId: string, bundleName: string, status: boole
 修改单个应用端云协同开关，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -232,10 +135,6 @@ static changeAppCloudSwitch(accountId: string, bundleName: string, status: boole
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-参见 [changeAppCloudSwitch](#changeappcloudswitch)
-
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -250,8 +149,6 @@ static changeAppCloudSwitch(
 修改单个应用端云协同开关，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -284,10 +181,6 @@ static changeAppCloudSwitch(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-参见 [changeAppCloudSwitch](#changeappcloudswitch)
-
 ## clear
 
 ```TypeScript
@@ -301,8 +194,6 @@ static clear(
 清除本地下载的云端数据，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -327,85 +218,6 @@ static clear(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-type dataType = Record<string, cloudData.ClearAction>
-let appActions: dataType = {
-  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
-};
-try {
-  cloudData.Config.clear(account, appActions, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeding in clearing cloud data');
-    } else {
-      console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-type dataType = Record<string, cloudData.ClearAction>;
-let appActions: dataType = {
-  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
-};
-try {
-  cloudData.Config.clear(account, appActions).then(() => {
-    console.info('Succeeding in clearing cloud data');
-  }).catch((err) => {
-    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-let appActions: Record<string, cloudData.ClearAction> = {
-  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
-  'test_bundleName3': cloudData.ClearAction.CLEAR_CLOUD_NONE,
-};
-let config: Record<string, cloudData.ClearConfig> = {
-  'test_bundleName': {
-    dbInfo: {
-      'test_storeName': {
-        action: cloudData.ClearAction.CLEAR_CLOUD_INFO,
-        tableInfo: {
-          'test_tableName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-          'test_tableName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
-        }
-      }
-    }
-  }
-}
-try {
-  cloudData.Config.clear(account, appActions, config).then(() => {
-    console.info('Succeeding in clearing cloud data');
-  }).catch((err) => {
-    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-```
-
 ## clear
 
 ```TypeScript
@@ -415,8 +227,6 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 清除本地下载的云端数据，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -446,10 +256,6 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-参见 [clear](#clear)
-
 ## clear
 
 ```TypeScript
@@ -463,8 +269,6 @@ static clear(
 清除本地下载的云端数据，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -496,10 +300,6 @@ static clear(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-参见 [clear](#clear)
-
 ## cloudSync
 
 ```TypeScript
@@ -514,8 +314,6 @@ static cloudSync(
 对指定应用的数据进行端云同步，使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -547,26 +345,6 @@ static cloudSync(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { relationalStore } from '@kit.ArkData';
-
-try{
-  cloudData.Config.cloudSync("bundleName", "storeId", relationalStore.SyncMode.SYNC_MODE_TIME_FIRST, (progress) => {
-    console.info('Succeeded in getting progress details.');
-  }).then(() => {
-      console.info('Succeeded in syncing cloud data.');
-  }).catch((err) => {
-      console.error(`Failed to sync cloud data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to sync cloud data. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 ## cloudSyncEx
 
 ```TypeScript
@@ -580,8 +358,6 @@ static cloudSyncEx(
 对指定应用的数据按照云同步配置信息进行端云同步，当 [CloudSyncConfig](../../../reference/apis-arkdata/js-apis-data-relationalStore-sys.md#cloudsyncconfig)中的 downloadOnly为true时，端云同步仅把云侧数据同步到本地，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -614,38 +390,6 @@ static cloudSyncEx(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
 
-**示例**
-
-```TypeScript
-import { cloudData } from '@kit.ArkData';
-import { relationalStore } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-let bundleInfo: bundleManager.BundleInfo = {
-  name: 'com.example.myapplication',
-  // 其他BundleInfo字段...
-};
-
-let config: relationalStore.CloudSyncConfig = {
-  mode: relationalStore.SyncMode.SYNC_MODE_TIME_FIRST,
-  enablePredicate: true
-};
-
-try {
-  cloudData.Config.cloudSyncEx(bundleInfo, config, (progressDetails: relationalStore.ProgressDetails) => {
-    console.info(`Cloud sync progress: ${progressDetails.schedule}, code: ${progressDetails.code}`);
-  }).then(() => {
-    console.info('Succeeded in cloud sync');
-  }).catch((err) => {
-    console.error(`Failed to cloud sync. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## disableCloud
 
 ```TypeScript
@@ -655,8 +399,6 @@ static disableCloud(accountId: string, callback: AsyncCallback<void>): void
 关闭端云协同，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -680,42 +422,6 @@ static disableCloud(accountId: string, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-try {
-  cloudData.Config.disableCloud(account, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeded in disabling cloud');
-    } else {
-      console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-try {
-  cloudData.Config.disableCloud(account).then(() => {
-    console.info('Succeeded in disabling cloud');
-  }).catch((err) => {
-    console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## disableCloud
 
 ```TypeScript
@@ -725,8 +431,6 @@ static disableCloud(accountId: string): Promise<void>
 关闭端云协同，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -754,10 +458,6 @@ static disableCloud(accountId: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [disableCloud](#disablecloud)
 
 ## enableCloud
 
@@ -773,8 +473,6 @@ static enableCloud(
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -797,44 +495,6 @@ static enableCloud(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
-try {
-  cloudData.Config.enableCloud(account, switches, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeded in enabling cloud');
-    } else {
-      console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
-try {
-  cloudData.Config.enableCloud(account, switches).then(() => {
-    console.info('Succeeded in enabling cloud');
-  }).catch((err) => {
-    console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## enableCloud
 
@@ -846,8 +506,6 @@ static enableCloud(accountId: string, switches: Record<string, boolean>): Promis
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -876,27 +534,15 @@ static enableCloud(accountId: string, switches: Record<string, boolean>): Promis
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-参见 [enableCloud](#enablecloud)
-
 ## notifyDataChange
 
-ArkTS-Dyn:
 ```TypeScript
 static notifyDataChange(extInfo: ExtraData, userId?: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>
 ```
 
 通知云端的数据变更，可以通过extInfo中的extraData字段指定变更的数据库名和表名，可通过userId指定用户ID，使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -909,7 +555,7 @@ static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | extInfo | [ExtraData](../../apis-core-file-kit/arkts-apis/arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| userId | number | 否 |
 
 **返回值：**
 
@@ -925,157 +571,6 @@ static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = 'test_id';
-let bundleName: string = 'test_bundleName';
-try {
-  cloudData.Config.notifyDataChange(account, bundleName).then(() => {
-    console.info('Succeeded in notifying the change of data');
-  }).catch((err) => {
-    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-let userId: number = 100;
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, userId, (err: BusinessError|null) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@ohos.base;
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-let userId: int = 100;
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, userId, (err: BusinessError|null, data) => {
-    if (err === undefined || null) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err?.code}, message: ${err?.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-let userId: number = 100;
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, userId).then(() => {
-    console.info('Succeeded in notifying the change of data');
-  }).catch((err) => {
-    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTs-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@ohos.base;
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-let userId: int = 100;
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, userId).then(() => {
-    console.info('Succeeded in notifying the change of data');
-  }).catch((err) => {
-    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## notifyDataChange
 
@@ -1087,8 +582,6 @@ static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -1111,28 +604,16 @@ static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-参见 [notifyDataChange](#notifydatachange)
-
 ## notifyDataChange
 
-ArkTS-Dyn:
 ```TypeScript
 static notifyDataChange(extInfo: ExtraData, userId: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback<void>): void
 ```
 
 通知云端的数据变更，可以通过extInfo中的extraData字段指定变更的数据库名和表名，可通过userId指定用户ID，使用callback异步回调。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -1144,7 +625,7 @@ static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | extInfo | [ExtraData](../../apis-core-file-kit/arkts-apis/arkts-corefile-cloudsyncmanager-extradata-i-sys.md) | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -1155,10 +636,6 @@ static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -1169,8 +646,6 @@ static notifyDataChange(accountId: string, bundleName: string): Promise<void>
 通知云端的数据变更，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -1200,10 +675,6 @@ static notifyDataChange(accountId: string, bundleName: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-参见 [notifyDataChange](#notifydatachange)
-
 ## notifyDataChange
 
 ```TypeScript
@@ -1213,8 +684,6 @@ static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCa
 通知云端的数据变更，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -1238,10 +707,6 @@ static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCa
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [notifyDataChange](#notifydatachange)
 
 ## offSyncInfoChanged
 
@@ -1255,8 +720,6 @@ static offSyncInfoChanged(
 取消订阅应用同步信息变化，使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -1282,45 +745,6 @@ static offSyncInfoChanged(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const bundleInfos: Array<cloudData.BundleInfo> = [
-  { bundleName: "bundleName1", storeId: "storeId1" },
-  { bundleName: "bundleName2" }
-];
-
-const progressCallback = (result: Record<string, Record<string, cloudData.SyncInfo>>) => {
-  console.info(`Sync info changed. Result is ${JSON.stringify(result)}`);
-};
-
-// 订阅同步信息变化
-try {
-  cloudData.Config.onSyncInfoChanged(bundleInfos, progressCallback);
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-
-// 取消订阅指定的回调
-try {
-  cloudData.Config.offSyncInfoChanged(bundleInfos, progressCallback);
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-
-// 取消所有订阅
-try {
-  cloudData.Config.offSyncInfoChanged(bundleInfos);
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## onSyncInfoChanged
 
 ```TypeScript
@@ -1333,8 +757,6 @@ static onSyncInfoChanged(
 订阅应用同步信息变化，使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -1360,26 +782,6 @@ static onSyncInfoChanged(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const bundleInfos: Array<cloudData.BundleInfo> = [
-  { bundleName: "bundleName1", storeId: "storeId1" },
-  { bundleName: "bundleName2" }
-];
-
-try {
-  cloudData.Config.onSyncInfoChanged(bundleInfos, (result) => {
-    console.info(`Sync info changed. Result is ${JSON.stringify(result)}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## queryLastSyncInfo
 
 ```TypeScript
@@ -1393,8 +795,6 @@ static queryLastSyncInfo(
 查询上一次端云同步信息，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -1425,26 +825,6 @@ static queryLastSyncInfo(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountId:string = "accountId";
-const bundleName:string = "bundleName";
-const storeId:string = "storeId";
-try {
-    cloudData.Config.queryLastSyncInfo(accountId, bundleName, storeId).then((result) => {
-    	console.info(`Succeeded in querying last syncinfo. Info is ${JSON.stringify(result)}`);
-	}).catch((err) => {
-    	console.error(`Failed to query last syncinfo. Error code is ${err.code}, message is ${err.message}`);
-	});
-} catch(e) {
-    let error = e as BusinessError;
-  	console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## queryStatistics
 
 ```TypeScript
@@ -1458,8 +838,6 @@ static queryStatistics(
 查询端云统计信息，返回未同步、已同步且端云信息一致和已同步且端云信息不一致的统计信息，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -1490,22 +868,6 @@ static queryStatistics(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountId:string = "accountId";
-const bundleName:string = "bundleName";
-const storeId:string = "storeId";
-
-cloudData.Config.queryStatistics(accountId, bundleName, storeId).then((result) => {
-    console.info(`Succeeded in querying statistics. Info is ${JSON.stringify(result)}`);
-}).catch((err) => {
-    console.error(`Failed to query statistics. Error code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## setGlobalCloudStrategy
 
 ```TypeScript
@@ -1515,8 +877,6 @@ static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.V
 设置全局云同步策略，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -1546,18 +906,6 @@ static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.V
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.Config.setGlobalCloudStrategy(cloudData.StrategyType.NETWORK, [cloudData.NetWorkStrategy.WIFI]).then(() => {
-    console.info('Succeeded in setting the global cloud strategy');
-}).catch((err) => {
-    console.error(`Failed to set global cloud strategy. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## stopCloudSync
 
 ```TypeScript
@@ -1567,8 +915,6 @@ static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>
 停止与云端的数据同步，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.CLOUDDATA_CONFIG
 
@@ -1598,27 +944,3 @@ static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-
-**示例**
-
-```TypeScript
-import { cloudData } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-let bundleInfos: Array<bundleManager.BundleInfo> = [
-  { name: 'com.example.myapplication1' },
-  { name: 'com.example.myapplication2' }
-];
-
-try {
-  cloudData.Config.stopCloudSync(bundleInfos).then(() => {
-    console.info('Succeeded in stopping cloud sync');
-  }).catch((err) => {
-    console.error(`Failed to stop cloud sync. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from '@kit.BasicServicesKit';
+import { runningLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## create
@@ -15,8 +15,6 @@ function create(name: string, type: RunningLockType, callback: AsyncCallback<Run
 Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -37,28 +35,6 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
-    if (typeof err === 'undefined') {
-        console.info('created running lock: ' + lock);
-    } else {
-        console.error('create running lock failed, err: ' + err);
-    }
-});
-```
-
-```TypeScript
-runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL)
-.then((lock: runningLock.RunningLock) => {
-    console.info('created running lock: ' + lock);
-})
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
-});
-```
-
 
 ## create
 
@@ -69,8 +45,6 @@ function create(name: string, type: RunningLockType): Promise<RunningLock>
 Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -95,7 +69,3 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [create](#create)

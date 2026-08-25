@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## downloadMms
@@ -15,8 +15,6 @@ function downloadMms(context: Context, mmsParams: MmsParams, callback: AsyncCall
 Downloads an MMS message. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_MMS
 
@@ -44,166 +42,6 @@ Downloads an MMS message. This API uses an asynchronous callback to return the r
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-FA model:
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common, featureAbility } from '@kit.AbilityKit';
-
-// Obtain the context.
-let context: common.BaseContext = featureAbility.getContext();
-
-// Configure the path for storing the PDU of the MMS message.
-const sandBoxPath: string = '/data/storage/el2/base/files/';
-let filePath: string = sandBoxPath + 'RetrieveConf.mms';
-
-// Parse the MMS URL from the WAP Push message.
-let wapPushUrl: string = 'URL';
-
-// Configure the parameters (including the callback) for downloading MMS messages.
-let mmsPars: sms.MmsParams = {
-  slotId: 0,
-  mmsc: wapPushUrl,
-  data: filePath,
-  mmsConfig: {
-   userAgent:'ua',
-   userAgentProfile: 'uaprof'
-  }
-};
-
-// Call the downloadMms API.
-sms.downloadMms(context, mmsPars, async(err: BusinessError) =>{
-  if (err) {
-      console.error(`downloadMms fail, err : ${JSON.stringify(err)}`);
-      return;
-  }
-  console.info(`downloadMms Success`);
-})
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-// Configure the path for storing the PDU of the MMS message.
-const sandBoxPath = '/data/storage/el2/base/files/';
-let filePath  = sandBoxPath + 'RetrieveConf.mms';
-
-// Parse the MMS URL from the WAP Push message.
-let wapPushUrl  = 'URL';
-
-// Configure the MMS user agent and profile. The default values are ua and uaprof, respectively. The configuration is subject to the carrier's requirements. 
-let mmsConf: sms.MmsConfig = {
-  userAgent:'ua',
-  userAgentProfile: 'uaprof'
-};
-
-// Configure the parameters (including the callback) for downloading MMS messages.
-let mmsPars: sms.MmsParams = {
-  slotId : 0,
-  mmsc: wapPushUrl,
-  data: filePath,
-  mmsConfig: mmsConf
-};
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-    sms.downloadMms(this.context, mmsPars, async(err: BusinessError) =>{
-        if (err) {
-            console.error(`downloadMms fail, err : ${JSON.stringify(err)}`);
-            return;
-        }
-        console.info(`downloadMms Success`);
-        });
-    }
-}
-```
-
-FA model:
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common, featureAbility } from '@kit.AbilityKit';
-
-// Obtain the context.
-let context: common.BaseContext = featureAbility.getContext();
-
-// Configure the path for storing the PDU of the MMS message.
-const sandBoxPath: string = '/data/storage/el2/base/files/';
-let filePath: string = sandBoxPath + 'RetrieveConf.mms';
-
-// Parse the MMS URL from the WAP Push message.
-let wapPushUrl: string = 'URL';
-
-// Configure the parameters (including the callback) for downloading MMS messages.
-let mmsPars: sms.MmsParams = {
-  slotId: 0,
-  mmsc: wapPushUrl,
-  data: filePath,
-  mmsConfig: {
-   userAgent:'ua',
-   userAgentProfile: 'uaprof'
-  }
-};
-
-// Call the sendMms API.
-let promise = sms.downloadMms(context, mmsPars);
-promise.then(() => {
-    console.info(`downloadMms success`);
-}).catch((err: BusinessError) => {
-    console.error(`downloadMms failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-// Configure the path for storing the PDU of the MMS message.
-const sandBoxPath = '/data/storage/el2/base/files/';
-let filePath  = sandBoxPath + 'RetrieveConf.mms';
-
-// Parse the MMS URL from the WAP Push message.
-let wapPushUrl  = 'URL';
-
-// Configure the MMS user agent and profile. The default values are ua and uaprof, respectively. The configuration is subject to the carrier's requirements. 
-let mmsConf: sms.MmsConfig = {
-  userAgent:'ua',
-  userAgentProfile: 'uaprof'
-};
-
-// Configure the parameters (including the callback) for downloading MMS messages.
-let mmsPars: sms.MmsParams = {
-  slotId : 0,
-  mmsc: wapPushUrl,
-  data: filePath,
-  mmsConfig: mmsConf
-};
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-    let promise = sms.downloadMms(this.context, mmsPars);
-    promise.then(() => {
-        console.info(`downloadMms success`);
-    }).catch((err: BusinessError) => {
-        console.error(`downloadMms failed, promise: err->${JSON.stringify(err)}`);
-    });
-    }
-}
-```
-
 
 ## downloadMms
 
@@ -214,8 +52,6 @@ function downloadMms(context: Context, mmsParams: MmsParams): Promise<void>
 Downloads an MMS message. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_MMS
 
@@ -247,7 +83,3 @@ Downloads an MMS message. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [downloadMms](#downloadmms)

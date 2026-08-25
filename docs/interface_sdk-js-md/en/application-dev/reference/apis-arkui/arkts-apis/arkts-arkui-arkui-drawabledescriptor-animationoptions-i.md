@@ -4,14 +4,12 @@ Provides the configuration options for animation playback, including the playbac
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
 ```
 
 ## autoPlay
@@ -28,8 +26,6 @@ Whether to enable autoplay.
 **Default:** true
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Total playback duration for the image sequence.For **PixelMap** arrays, the defa
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -69,8 +63,6 @@ Per-frame playback duration. The setting overrides **duration** if specified.If 
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -88,8 +80,6 @@ Number of playback times for the image sequence.A value of **-1** indicates infi
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,63 +101,8 @@ Sets the stop mode for an animation.The default value is **AnimationStopMode.FIR
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-import { AnimationOptions, AnimatedDrawableDescriptor } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct Example {
-  pixelMaps: Array<image.PixelMap> = [];
-  // Configure animation options for an array of four images.
-  options: AnimationOptions = {
-    duration: 2000,
-    iterations: 1,
-    frameDurations: [20, 30, 40, 50],
-    autoPlay: true
-  };
-  @State animated?: DrawableDescriptor = undefined;
-
-  aboutToAppear() {
-    // Replace $r('app.media.png1') with the image resource file you use.
-    this.pixelMaps.push(this.getPixmapFromMedia($r('app.media.png1')));
-     // Replace $r('app.media.png2') with the image resource file you use.
-    this.pixelMaps.push(this.getPixmapFromMedia($r('app.media.png2')));
-     // Replace $r('app.media.png3') with the image resource file you use.
-    this.pixelMaps.push(this.getPixmapFromMedia($r('app.media.png3')));
-     // Replace $r('app.media.png4') with the image resource file you use.
-    this.pixelMaps.push(this.getPixmapFromMedia($r('app.media.png4')));
-    this.animated = new AnimatedDrawableDescriptor(this.pixelMaps, this.options);
-  }
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.animated)
-          .width(100)
-          .height(100)
-      }
-    }
-  }
-
-  private getPixmapFromMedia(resource: Resource) {
-    let unit8Array = this.getUIContext().getHostContext()?.resourceManager?.getMediaContentSync(resource.id);
-    let imageSource = image.createImageSource(unit8Array?.buffer.slice(0, unit8Array.buffer.byteLength));
-    let pixelMap: image.PixelMap = imageSource.createPixelMapSync({
-      desiredPixelFormat: image.PixelMapFormat.RGBA_8888
-    });
-    imageSource.release();
-    return pixelMap;
-  }
-}
-```

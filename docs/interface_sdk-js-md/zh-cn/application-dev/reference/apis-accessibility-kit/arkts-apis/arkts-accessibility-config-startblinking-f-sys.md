@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## startBlinking
@@ -15,8 +15,6 @@ function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkRes
 启用闪光灯或屏幕以进行闪烁提醒。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -46,16 +44,3 @@ function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkRes
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-try {
-  let code: config.BlinkResultCode = config.startBlinking(config.BlinkingMode.SINGLE_BLINK, config.BlinkingScenario.ALARM);
-  console.info(`Succeeded in startBlinking, result code: ${code}`);
-} catch (err) {
-  console.error(`Failed to call startBlinking, code is ${err.code}, message is ${err.message}`);
-}
-```

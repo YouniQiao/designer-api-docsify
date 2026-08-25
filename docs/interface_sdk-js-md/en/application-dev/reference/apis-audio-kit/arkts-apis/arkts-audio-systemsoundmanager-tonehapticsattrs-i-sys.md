@@ -4,8 +4,6 @@ Haptics attributes in tone scenario.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Haptics attributes in tone scenario.
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from '@kit.AudioKit';
+import { systemSoundManager } from 'kits/@kit.AudioKit';
 ```
 
 ## getFileName
@@ -26,8 +24,6 @@ Get file name of haptics.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -43,16 +39,6 @@ Get file name of haptics.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-toneAttrs.getFileName();
-```
-
-```TypeScript
-toneHapticsAttrs.getFileName();
-```
 
 ## getGentleFileName
 
@@ -64,8 +50,6 @@ Get file name of gentle haptics.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -81,12 +65,6 @@ Get file name of gentle haptics.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-toneHapticsAttrs.getGentleFileName();
-```
 
 ## getGentleTitle
 
@@ -98,8 +76,6 @@ Get title of gentle haptics.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -115,12 +91,6 @@ Get title of gentle haptics.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-toneHapticsAttrs.getGentleTitle();
-```
 
 ## getGentleUri
 
@@ -132,8 +102,6 @@ Get gentle haptics URI.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -150,12 +118,6 @@ Get gentle haptics URI.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-toneHapticsAttrs.getGentleUri();
-```
-
 ## getTitle
 
 ```TypeScript
@@ -165,8 +127,6 @@ getTitle(): string
 Get title of haptics.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -183,16 +143,6 @@ Get title of haptics.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-toneAttrs.getTitle();
-```
-
-```TypeScript
-toneHapticsAttrs.getTitle();
-```
 
 ## getUri
 
@@ -204,8 +154,6 @@ Get haptics uri.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 **System API:** This is a system API.
@@ -221,13 +169,3 @@ Get haptics uri.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-toneAttrs.getUri();
-```
-
-```TypeScript
-toneHapticsAttrs.getUri();
-```

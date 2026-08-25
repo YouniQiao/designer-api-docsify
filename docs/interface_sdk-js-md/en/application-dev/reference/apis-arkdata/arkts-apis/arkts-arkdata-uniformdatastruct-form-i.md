@@ -4,14 +4,12 @@ Represents data of the widget type defined by the system.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## abilityName
@@ -25,8 +23,6 @@ Ability name corresponding to the widget.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Bundle to which the widget belongs.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -53,16 +47,14 @@ Bundle to which the widget belongs.
 ## details
 
 ```TypeScript
-details?: Record<string, int | long | double | string | Uint8Array>
+details?: Record<string, number | number | number | string | Uint8Array>
 ```
 
 Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
-**Type:** ArkTS-Dyn: Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**Type:** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,16 +63,14 @@ Object of the dictionary type used to describe the icon. The key is of the strin
 ## formId
 
 ```TypeScript
-formId: int
+formId: number
 ```
 
 Widget ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +88,6 @@ Widget name.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -115,8 +103,6 @@ Module to which the widget belongs.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,31 +120,6 @@ Uniform data type, which has a fixed value of **openharmony.form**. For details,
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-let formDetails : Record<string, number | string | Uint8Array> = {
-  'formKey1': 123,
-  'formKey2': 'formValue',
-  'formKey3': u8Array
-}
-let form : uniformDataStruct.Form = {
-  uniformDataType : 'openharmony.form',
-  formId : 1,
-  formName : 'formName',
-  bundleName : 'com.xx.app',
-  abilityName : 'abilityName',
-  module : 'module',
-  details : formDetails
-}
-console.info('form.uniformDataType: ' + form.uniformDataType);
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.OPENHARMONY_FORM, form);
-```

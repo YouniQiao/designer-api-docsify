@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## remove
@@ -15,8 +15,6 @@ function remove(query: AssetMap): Promise<void>
 删除符合条件的一条或多条关键资产。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -49,21 +47,3 @@ function remove(query: AssetMap): Promise<void>
 | [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
 | [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
 | [24000015](../errorcode-asset.md#24000015-获取系统时间失败) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-asset.remove(query).then(() => {
-  console.info(`Succeeded in removing Asset.`);
-});
-```

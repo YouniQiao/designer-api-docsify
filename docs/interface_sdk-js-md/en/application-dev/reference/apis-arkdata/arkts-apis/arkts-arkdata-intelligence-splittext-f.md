@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from '@kit.ArkData';
+import { intelligence } from 'kits/@kit.ArkData';
 ```
 
 ## splitText
@@ -15,8 +15,6 @@ function splitText(text: string, config: SplitConfig): Promise<Array<string>>
 Splits text.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
@@ -40,23 +38,3 @@ Splits text.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [31300000](../errorcode-intelligence.md#31300000-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let splitConfig: intelligence.SplitConfig = {
-  size: 10,
-  overlapRatio: 0.1
-}
-let splitText = 'text';
-
-intelligence.splitText(splitText, splitConfig)
-  .then((data: Array<string>) => {
-    console.info("Succeeded in splitting Text");
-  })
-  .catch((err: BusinessError) => {
-    console.error("Failed to split Text and code is " + err.code);
-  })
-```

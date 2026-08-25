@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
+import { application } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAppPreloadType
@@ -22,8 +22,6 @@ Obtains the preloading type of the current application process.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -33,15 +31,3 @@ Obtains the preloading type of the current application process.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) |
-
-**Examples**
-
-```TypeScript
-import { AbilityStage, application } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage{
-  onCreate() {
-    let appPreloadType = application.getAppPreloadType();
-  }
-}
-```

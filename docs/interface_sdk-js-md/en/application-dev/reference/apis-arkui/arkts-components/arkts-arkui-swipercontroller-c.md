@@ -4,8 +4,6 @@ Implements the controller for the **Swiper** component. Bind this object to a **
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ changeIndex(index: number, useAnimation?: boolean)
 Goes to a specified page.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,8 +51,6 @@ Moves to a specific page.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -81,8 +75,6 @@ constructor()
 A constructor used to create a **SwiperController** object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -114,8 +106,6 @@ Sets the drag distance of drag simulation.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -146,8 +136,6 @@ Stops an animation.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -169,8 +157,6 @@ isFakeDragging(): boolean
 Obtains whether drag simulation is enabled.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -200,8 +186,6 @@ Preloads child nodes for **Swiper**. After this API is called, all specified chi
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -214,7 +198,7 @@ Preloads child nodes for **Swiper**. After this API is called, all specified chi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| indices | Optional & lt;Array & lt;number & gt; & gt; | Yes |
+| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes |
 
 **Return value:**
 
@@ -239,8 +223,6 @@ Turns to the next page. The page turning includes a transition animation, with t
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -256,8 +238,6 @@ showPrevious()
 Turns to the previous page. The page turning includes a transition animation, with the duration set by the [duration](arkts-arkui-swiper-attribute.md#duration) attribute of the **Swiper** component.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -279,8 +259,6 @@ Enables drag simulation.
 > - Simulated drag cannot trigger nested scrolling.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -308,8 +286,6 @@ Disables drag simulation.
 > After drag simulation is enabled, it will end if a real drag gesture is received.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

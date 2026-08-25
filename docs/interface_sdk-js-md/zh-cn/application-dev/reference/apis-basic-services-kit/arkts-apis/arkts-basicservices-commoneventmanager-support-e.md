@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_BOOT_COMPLETED
@@ -17,8 +15,6 @@ COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'
 表示用户已完成引导并加载系统。在设备上指定用户已完成引导并加载系统，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.RECEIVER_STARTUP_COMPLETED权限（该权限仅系统应用可申请）
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -32,8 +28,6 @@ COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_SHUTDOWN
@@ -45,8 +39,6 @@ COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'
 表示设备正在关闭并将继续最终关闭的公共事件的操作。当设备正在关闭并将继续最终关闭时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -60,8 +52,6 @@ COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_BATTERY_LOW
@@ -73,8 +63,6 @@ COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 表示电池电量低的公共事件的动作。当电池电量低于设备设置的低电量百分比值时，将会触发事件通知服务发布该系统公共事件。<!--Del-->设备设置低电量百分比值请参考 电量等级定制开发指导。<!--DelEnd-->
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -88,8 +76,6 @@ COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_POWER_CONNECTED
@@ -101,8 +87,6 @@ COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 表示设备连接到外部电源的公共事件的动作。当设备连接到外部可识别的充电器类型充电时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -116,8 +100,6 @@ COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_SCREEN_OFF
@@ -129,8 +111,6 @@ COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'
 表示由电源服务发起的设备灭屏完成的普通事件的动作。当由电源服务发起的设备灭屏完成时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -144,8 +124,6 @@ COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_THERMAL_LEVEL_CHANGED
@@ -157,8 +135,6 @@ COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'
 表示设备热状态的公共事件的动作。当设备热等级变化时，将会触发事件通知服务发布该系统公共事件。<!--Del-->设备热等级配置请参考 热等级定制开发指导。<!--DelEnd-->
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -172,8 +148,6 @@ COMMON_EVENT_ENTER_FORCE_SLEEP = 'usual.event.ENTER_FORCE_SLEEP'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_EXIT_FORCE_SLEEP
@@ -185,8 +159,6 @@ COMMON_EVENT_EXIT_FORCE_SLEEP = 'usual.event.EXIT_FORCE_SLEEP'
 表示设备退出强制睡眠模式的公共事件的动作。当设备退出强制睡眠模式时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -200,8 +172,6 @@ COMMON_EVENT_ENTER_HIBERNATE = 'usual.event.ENTER_HIBERNATE'
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_EXIT_HIBERNATE
@@ -214,8 +184,6 @@ COMMON_EVENT_EXIT_HIBERNATE = 'usual.event.EXIT_HIBERNATE'
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USER_PRESENT
@@ -227,8 +195,6 @@ COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'
 用户解锁设备的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -244,8 +210,6 @@ COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_TIME_CHANGED
@@ -257,8 +221,6 @@ COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'
 设置系统时间的公共事件的动作。当设置系统时间时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -272,8 +234,6 @@ COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_TIMEZONE_CHANGED
@@ -286,8 +246,6 @@ COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_CLOSE_SYSTEM_DIALOGS
@@ -299,8 +257,6 @@ COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 （预留事件，暂未支持）表示用户关闭临时系统对话框的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -317,8 +273,6 @@ COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_PACKAGE_REPLACED
@@ -330,8 +284,6 @@ COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'
 （预留事件，暂未支持）表示设备上安装了新版本的应用程序包并替换了旧版本的动作。数据包含包的名称。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -345,8 +297,6 @@ COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_PACKAGE_REMOVED
@@ -358,8 +308,6 @@ COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'
 表示现有的应用程序包从设备中移除的事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -373,8 +321,6 @@ COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_PACKAGE_FULLY_REMOVED
@@ -386,8 +332,6 @@ COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'
 表示现有的应用程序包从设备上完全删除的事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -404,8 +348,6 @@ COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_PACKAGE_RESTARTED
@@ -420,8 +362,6 @@ COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 > 三方应用只能监听自身应用的重启事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -438,8 +378,6 @@ COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_PACKAGE_CACHE_CLEARED
@@ -455,8 +393,6 @@ COMMON_EVENT_PACKAGE_CACHE_CLEARED = 'usual.event.PACKAGE_CACHE_CLEARED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_PACKAGES_SUSPENDED
@@ -468,8 +404,6 @@ COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 （预留事件，暂未支持）表示包已经被挂起。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -483,8 +417,6 @@ COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_MY_PACKAGE_SUSPENDED
@@ -496,8 +428,6 @@ COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 （预留事件，暂未支持）发送到已被系统挂起的包。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -511,8 +441,6 @@ COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_UID_REMOVED
@@ -524,8 +452,6 @@ COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'
 （预留事件，暂未支持）表示用户ID已从系统中删除的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -539,8 +465,6 @@ COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION
@@ -552,8 +476,6 @@ COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATIO
 （预留事件，暂未支持）当一个包需要被验证时，由系统包验证者发送。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -567,8 +489,6 @@ COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE
@@ -580,8 +500,6 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATION
 （预留事件，暂未支持）表示安装在外部存储上的应用程序对系统可用的公共事件的操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -595,8 +513,6 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATI
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_CONFIGURATION_CHANGED
@@ -608,8 +524,6 @@ COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'
 （预留事件，暂未支持）表示设备状态（例如，方向和区域设置）已更改的公共事件的操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -623,8 +537,6 @@ COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_MANAGE_PACKAGE_STORAGE
@@ -636,8 +548,6 @@ COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'
 通知用户低内存状态并且应该启动包管理。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -651,8 +561,6 @@ COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_HOME_MODE
@@ -664,8 +572,6 @@ COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'
 （预留事件，暂未支持）表示系统处于HOME模式的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -679,8 +585,6 @@ COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USER_STARTED
@@ -692,8 +596,6 @@ COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'
 （预留事件，暂未支持）表示用户已启动的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -707,8 +609,6 @@ COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USER_FOREGROUND
@@ -720,8 +620,6 @@ COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 （预留事件，暂未支持）表示用户已被带到前台的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -735,8 +633,6 @@ COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USER_STARTING
@@ -748,8 +644,6 @@ COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 （预留事件，暂未支持）表示要启动用户的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -763,8 +657,6 @@ COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USER_STOPPING
@@ -776,8 +668,6 @@ COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 （预留事件，暂未支持）表示要停止用户的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -791,8 +681,6 @@ COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN
@@ -804,8 +692,6 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN = 'common.event.DISTRIBUTED_ACCOUNT_LOGIN
 表示分布式账号登录成功的动作。分布式账号登录成功时会触发事件通知服务发布该系统公共事件，事件携带系统账号ID和子身份ID。与这个公共事件相关的接口：setOsAccountDistributedInfo、updateOsAccountDistributedInfo(已废弃)，这些为公共API， setOsAccountDistributedInfoByLocalId为系统API，具体参看[分布式账号接口文档](../../../reference/js-apis-distributed-account.md)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -821,8 +707,6 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGO
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -836,8 +720,6 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = 'common.event.DISTRIBUTED_ACCOU
 表示分布式账号token令牌无效的动作。分布式账号的token令牌无效时会触发事件通知服务发布该系统公共事件，事件携带系统账号ID和子身份ID。与这个公共事件相关的接口：setOsAccountDistributedInfo、updateOsAccountDistributedInfo(已废弃)，这些为公共API， setOsAccountDistributedInfoByLocalId为系统API，具体参看[分布式账号接口文档](../../../reference/js-apis-distributed-account.md)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -853,8 +735,6 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGO
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -869,8 +749,6 @@ Wi-Fi状态变化。当Wi-Fi状态发生变化时（如启用、禁用Wi-Fi）�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_WIFI_SCAN_FINISHED
@@ -882,8 +760,6 @@ COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'
 表示Wi-Fi接入点已被扫描并证明可用的动作。当Wi-Fi接入点已被扫描并证明可用，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.LOCATION权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -897,8 +773,6 @@ COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_WIFI_CONN_STATE
@@ -910,8 +784,6 @@ COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'
 Wi-Fi连接状态发生改变。当Wi-Fi连接状态发生变化，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -925,8 +797,6 @@ COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_WIFI_AP_STA_JOIN
@@ -938,8 +808,6 @@ COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'
 表示客户端加入当前设备Wi-Fi热点。当客户端加入当前设备Wi-Fi热点，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -953,8 +821,6 @@ COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE
@@ -966,8 +832,6 @@ COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 表示MPLink（增强Wi-Fi功能）状态已更改。当MPLink（增强Wi-Fi功能）状态发生变化，将会触发事件通知服务发布该系统公共事件（暂不支持）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -981,8 +845,6 @@ COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_WIFI_P2P_STATE_CHANGED
@@ -994,8 +856,6 @@ COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'
 表示Wi-Fi P2P状态变化。当Wi-Fi P2P状态发生变化，将会触发事件通知服务发布该系统公共事件。状态值：2：P2P正在打开，3：P2P已启动，4：P2P正在关闭，5：P2P已关闭。要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1009,8 +869,6 @@ COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED
@@ -1022,8 +880,6 @@ COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER
 表示Wi-Fi P2P发现状态变化。当Wi-Fi P2P发现状态变化，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1037,8 +893,6 @@ COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRE
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED
@@ -1050,8 +904,6 @@ COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CH
 表示Wi-Fi P2P群组信息已更改。当Wi-Fi P2P群组信息发生变化，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1065,8 +917,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE =
 （预留事件，暂未支持）蓝牙免提通信连接状态公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1085,8 +935,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1102,8 +950,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1118,8 +964,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE =
 （预留事件，暂未支持）蓝牙A2DP连接状态公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1138,8 +982,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1155,8 +997,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1171,8 +1011,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE =
 （预留事件，暂未支持）表示蓝牙A2DP的AVRCP连接状态已更改的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1191,8 +1029,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **替代接口：** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE](#common_event_bluetooth_a2dpsource_codec_value_change)
@@ -1210,8 +1046,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1227,8 +1061,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1243,8 +1075,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED =
 （预留事件，暂未支持）表示已与远程蓝牙设备建立低级别（ACL）连接的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1263,8 +1093,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE](#common_event_bluetooth_remotedevice_acl_state_change)
@@ -1282,8 +1110,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1298,8 +1124,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE =
 （预留事件，暂未支持）远程蓝牙设备连接状态更改的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1318,8 +1142,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1334,8 +1156,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT =
 （预留事件，暂未支持）远程蓝牙设备SDP状态公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1352,8 +1172,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1368,8 +1186,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ =
 （预留事件，暂未支持）表示远程蓝牙设备配对请求的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.DISCOVER_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1386,8 +1202,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1402,8 +1216,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ =
 （预留事件，暂未支持）表示远程蓝牙设备连接请求的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1420,8 +1232,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1436,8 +1246,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL =
 （预留事件，暂未支持）表示取消与远程蓝牙设备的连接的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1454,8 +1262,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1470,8 +1276,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE =
 （预留事件，暂未支持）表示蓝牙免提音频状态已更改的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1488,8 +1292,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1504,8 +1306,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE =
 （预留事件，暂未支持）表示蓝牙免提呼叫状态已更改的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1522,8 +1322,6 @@ COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1539,8 +1337,6 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1554,8 +1350,6 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 （预留事件，暂未支持）表示用户打开蓝牙请求的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1572,8 +1366,6 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1588,8 +1380,6 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE =
 （预留事件，暂未支持）设备蓝牙扫描模式更改的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1606,8 +1396,6 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_CHANGE =
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED
@@ -1620,8 +1408,6 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED =
 设备上已启动蓝牙扫描的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1638,8 +1424,6 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1654,8 +1438,6 @@ COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE =
 表示设备蓝牙适配器名称已更改的公共事件的操作。要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1672,8 +1454,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1688,8 +1468,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE =
 （预留事件，暂未支持）蓝牙A2DP播放状态改变的普通事件的动作。要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 20
 
@@ -1706,8 +1484,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE =
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -1722,8 +1498,6 @@ COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED
@@ -1735,8 +1509,6 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_
 检测到NFC场强进入的公共事件。当检测到NFC场强进入时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1750,8 +1522,6 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_DISCHARGING
@@ -1763,8 +1533,6 @@ COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'
 表示系统停止为电池充电的公共事件的动作。当系统停止为电池充电时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1778,8 +1546,6 @@ COMMON_EVENT_CHARGING = 'usual.event.CHARGING'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED
@@ -1791,8 +1557,6 @@ COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'
 表示设备上待机状态变化，触发公共事件发布动作。如果用户一段时间没有使用设备且屏幕已经关闭情况下，系统延迟后台应用程序CPU和网络访问，将会触发公共事件服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1806,8 +1570,6 @@ COMMON_EVENT_CHARGE_IDLE_MODE_CHANGED = 'usual.event.CHARGE_IDLE_MODE_CHANGED'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_POWER_SAVE_MODE_CHANGED
@@ -1819,8 +1581,6 @@ COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'
 表示系统节能模式更改的公共事件的动作。当系统节能模式更改时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1834,8 +1594,6 @@ COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USER_REMOVED
@@ -1847,8 +1605,6 @@ COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'
 表示用户已从系统中删除的公共事件的动作。删除系统账号将会触发事件通知服务发布该系统公共事件，事件携带系统账号ID。与这个公共事件相关的接口：removeOsAccount, 为系统API，具体参看[@ohos.account.osAccount](../../../reference/js-apis-osAccount.md)。要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1862,8 +1618,6 @@ COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_ABILITY_REMOVED
@@ -1875,8 +1629,6 @@ COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 （预留事件，暂未支持）表示已删除能力的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1890,8 +1642,6 @@ COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_LOCATION_MODE_STATE_CHANGED
@@ -1903,8 +1653,6 @@ COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHAN
 （预留事件，暂未支持）表示系统定位模式已更改的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1918,8 +1666,6 @@ COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_IVI_PAUSE
@@ -1931,8 +1677,6 @@ COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'
 （预留事件，暂未支持）表示IVI已休眠，并通知应用程序停止播放。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1946,8 +1690,6 @@ COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_IVI_LASTMODE_SAVE
@@ -1959,8 +1701,6 @@ COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'
 （预留事件，暂未支持）表示第三方应用保存其最后一个模式的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -1974,8 +1714,6 @@ COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_IVI_HIGH_TEMPERATURE
@@ -1987,8 +1725,6 @@ COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'
 （预留事件，暂未支持）表示IVI温度过高。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2002,8 +1738,6 @@ COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL
@@ -2015,8 +1749,6 @@ COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 （预留事件，暂未支持）表示车载系统具有极端温度的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2030,8 +1762,6 @@ COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_IVI_TEMPERATURE_RECOVERY
@@ -2043,8 +1773,6 @@ COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'
 （预留事件，暂未支持）表示车载系统温度恢复正常的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2058,8 +1786,6 @@ COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USB_STATE
@@ -2071,8 +1797,6 @@ COMMON_EVENT_USB_STATE = 'usual.event.hardware.usb.action.USB_STATE'
 表示USB设备状态发生变化。当USB断开或者连接时状态发生变化，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2086,8 +1810,6 @@ COMMON_EVENT_USB_PORT_CHANGED = 'usual.event.hardware.usb.action.USB_PORT_CHANGE
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USB_DEVICE_ATTACHED
@@ -2099,8 +1821,6 @@ COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_A
 当用户设备作为USB主机时，提示USB设备已挂载。当USB连接时状态发生变化，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2114,8 +1834,6 @@ COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_D
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USB_ACCESSORY_ATTACHED
@@ -2127,8 +1845,6 @@ COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCES
 表示已连接USB配件的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2142,8 +1858,6 @@ COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCES
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_DISK_REMOVED
@@ -2155,8 +1869,6 @@ COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 （预留事件，暂未支持）外部存储设备状态变更为移除时发送此公共事件。要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2170,8 +1882,6 @@ COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_DISK_MOUNTED
@@ -2183,8 +1893,6 @@ COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 （预留事件，暂未支持）外部存储设备状态变更为挂载时发送此公共事件。要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2198,8 +1906,6 @@ COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_DISK_UNMOUNTABLE
@@ -2211,8 +1917,6 @@ COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 （预留事件，暂未支持）外部存储设备状态变更为插卡情况下无法挂载时发送此公共事件。要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2226,8 +1930,6 @@ COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_VOLUME_REMOVED
@@ -2239,8 +1941,6 @@ COMMON_EVENT_VOLUME_REMOVED = 'usual.event.data.VOLUME_REMOVED'
 表示外部存储设备正常移除的公共事件。当外部存储设备处于卸载状态，移除该设备时，会发送此公共事件。要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2254,8 +1954,6 @@ COMMON_EVENT_VOLUME_UNMOUNTED = 'usual.event.data.VOLUME_UNMOUNTED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_VOLUME_MOUNTED
@@ -2267,8 +1965,6 @@ COMMON_EVENT_VOLUME_MOUNTED = 'usual.event.data.VOLUME_MOUNTED'
 表示外部存储设备状态变更为挂载的公共事件。当用户插入外部存储设备自动挂载成功或者将处于卸载状态的外部存储设备调用mount接口进行挂载成功后，会发送此公共事件。要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2282,8 +1978,6 @@ COMMON_EVENT_VOLUME_BAD_REMOVAL = 'usual.event.data.VOLUME_BAD_REMOVAL'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_VOLUME_EJECT
@@ -2295,8 +1989,6 @@ COMMON_EVENT_VOLUME_EJECT = 'usual.event.data.VOLUME_EJECT'
 表示外部存储设备即将被弹出的公共事件。当外部存储设备处于挂载状态时，用户选择通过调用unmount接口或者直接移除设备的方法弹出该设备时，会发送此公共事件。要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2310,8 +2002,6 @@ COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDAT
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_ACCOUNT_DELETED
@@ -2323,8 +2013,6 @@ COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 （预留事件，暂未支持）删除账户的公共事件的动作。要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2338,8 +2026,6 @@ COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_AIRPLANE_MODE_CHANGED
@@ -2352,8 +2038,6 @@ COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_SPLIT_SCREEN
@@ -2365,8 +2049,6 @@ COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'
 表示分屏行为的公共事件。启动最近任务窗口、创建或销毁分屏条，都会触发通知服务发布这个系统公共事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2382,8 +2064,6 @@ COMMON_EVENT_SLOT_CHANGE = 'usual.event.SLOT_CHANGE'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_SPN_INFO_CHANGED
@@ -2395,8 +2075,6 @@ COMMON_EVENT_SPN_INFO_CHANGED = 'usual.event.SPN_INFO_CHANGED'
 表示spn显示信息已更新的公共事件的动作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2413,8 +2091,6 @@ COMMON_EVENT_QUICK_FIX_APPLY_RESULT = 'usual.event.QUICK_FIX_APPLY_RESULT'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_QUICK_FIX_REVOKE_RESULT
@@ -2426,8 +2102,6 @@ COMMON_EVENT_QUICK_FIX_REVOKE_RESULT = 'usual.event.QUICK_FIX_REVOKE_RESULT'
 表示撤销快速修复。在设备上撤销快速修复时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2441,8 +2115,6 @@ COMMON_EVENT_USER_INFO_UPDATED = 'usual.event.USER_INFO_UPDATED'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_HTTP_PROXY_CHANGE
@@ -2454,8 +2126,6 @@ COMMON_EVENT_HTTP_PROXY_CHANGE = 'usual.event.HTTP_PROXY_CHANGE'
 表示网络Http代理配置信息更新。在系统全局代理或者各类网络（以太网、Wi-Fi、蜂窝等）Http代理配置信息发生变化时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2469,8 +2139,6 @@ COMMON_EVENT_SIM_STATE_CHANGED = 'usual.event.SIM_STATE_CHANGED'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_CALL_STATE_CHANGED
@@ -2482,8 +2150,6 @@ COMMON_EVENT_CALL_STATE_CHANGED = 'usual.event.CALL_STATE_CHANGED'
 提示呼叫状态更新。在设备呼叫状态更新时，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.GET_TELEPHONY_STATE权限（该权限仅系统应用可申请）。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2497,8 +2163,6 @@ COMMON_EVENT_NETWORK_STATE_CHANGED = 'usual.event.NETWORK_STATE_CHANGED'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_SIGNAL_INFO_CHANGED
@@ -2511,8 +2175,6 @@ COMMON_EVENT_SIGNAL_INFO_CHANGED = 'usual.event.SIGNAL_INFO_CHANGED'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_SCREEN_UNLOCKED
@@ -2524,8 +2186,6 @@ COMMON_EVENT_SCREEN_UNLOCKED = 'usual.event.SCREEN_UNLOCKED'
 表示屏幕解锁的公共事件。当锁屏解锁时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2540,8 +2200,6 @@ COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'
 表示屏幕锁定的公共事件。当锁屏锁定时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2566,8 +2224,6 @@ COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -2583,8 +2239,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE =
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_MINORSMODE_ON
@@ -2596,8 +2250,6 @@ COMMON_EVENT_MINORSMODE_ON = 'usual.event.MINORSMODE_ON'
 表示用户开启未成年人模式。在设备上开启未成年人模式，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2613,8 +2265,6 @@ COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -2628,8 +2278,6 @@ COMMON_EVENT_DATA_SHARE_READY = 'usual.event.DATA_SHARE_READY'
 表示datashare服务可用。datashare服务启动完成后，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2646,8 +2294,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE =
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE
@@ -2660,8 +2306,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE =
 表示蓝牙AVRCP连接状态变化的公共事件的操作。当蓝牙AVRCP连接状态变化时，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2676,8 +2320,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE =
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAY_STATE_CHANGE
@@ -2690,8 +2332,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAY_STATE_CHANGE =
 表示蓝牙媒体A2DP播放状态变化的公共事件的操作。当蓝牙媒体A2DP播放状态变化时，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2708,8 +2348,6 @@ COMMON_EVENT_BLUETOOTH_SCO_CONNECT_STATE_CHANGE =
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -2725,8 +2363,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE =
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE
@@ -2740,8 +2376,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE =
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED
@@ -2753,8 +2387,6 @@ COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED = 'usual.event.MANAGED_BROWSER_POLIC
 表示浏览器托管策略已更改。当浏览器托管策略发生变化，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2768,8 +2400,6 @@ COMMON_EVENT_KIOSK_MODE_ON = 'usual.event.KIOSK_MODE_ON'
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_KIOSK_MODE_OFF
@@ -2781,8 +2411,6 @@ COMMON_EVENT_KIOSK_MODE_OFF = 'usual.event.KIOSK_MODE_OFF'
 退出Kiosk模式时，事件通知服务将触发并发布系统公共事件。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -2796,8 +2424,6 @@ COMMON_EVENT_TABLET_MODE_CHANGED = 'usual.event.TABLET_MODE_CHANGED'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_LID_STATE_CHANGED
@@ -2810,8 +2436,6 @@ COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_VOLUME_DECRYPTED
@@ -2823,8 +2447,6 @@ COMMON_EVENT_VOLUME_DECRYPTED = 'usual.event.VOLUME_DECRYPTED'
 表示设备上的特定卷已被解密。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2840,8 +2462,6 @@ COMMON_EVENT_VOLUME_ENCRYPTED = 'usual.event.VOLUME_ENCRYPTED'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -2855,8 +2475,6 @@ COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = 'usual.event.VOLUME_ENCRYPTION_POLIC
 表示设备上的特定卷已设置其加密策略。要订阅此事件，您的应用必须具备ohos.permission.QUERY_VOLUME_ENCRYPTION_STATUS权限.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

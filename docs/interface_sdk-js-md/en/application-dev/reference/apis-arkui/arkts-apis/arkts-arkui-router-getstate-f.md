@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## getState
@@ -22,8 +22,6 @@ Obtains state information about the page at the top of the navigation stack.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **Substitutes:** [getState](arkts-arkui-arkui-uicontext-router-c.md#getstate)
@@ -36,13 +34,4 @@ Obtains state information about the page at the top of the navigation stack.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RouterState](arkts-arkui-router-routerstate-i.md) |
-
-**Examples**
-
-```TypeScript
-let page = this.getUIContext().getRouter().getState();
-console.info('current index = ' + page.index);
-console.info('current name = ' + page.name);
-console.info('current path = ' + page.path);
-```
+| [RouterState](arkts-arkui-system-router-routerstate-i.md) |

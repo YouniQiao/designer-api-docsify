@@ -4,8 +4,6 @@ Enumerates the playback metric keys.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## PREPARE_DURATION
@@ -17,8 +15,6 @@ PREPARE_DURATION = 'prepare_duration'
 Preparation duration, in milliseconds.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -32,8 +28,6 @@ Duration for establishing a resource connection, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## FIRST_FRAME_DECAPSULATION_DURATION
@@ -45,8 +39,6 @@ FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'
 Duration for decapsulating the first frame, in milliseconds.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
@@ -60,8 +52,6 @@ Total playback duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## DOWNLOAD_REQUESTS_COUNT
@@ -73,8 +63,6 @@ DOWNLOAD_REQUESTS_COUNT  = 'loading_requests_count'
 Total number of requests.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,8 +78,6 @@ Total loading duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## TOTAL_DOWNLOAD_SIZE
@@ -103,8 +89,6 @@ TOTAL_DOWNLOAD_SIZE  = 'total_loading_bytes'
 Total loading size, in bytes.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,8 +104,6 @@ Total number of stalling times.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## TOTAL_STALLING_TIME
@@ -134,8 +116,6 @@ Total stalling duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## LIP_ASYNC_COUNT
@@ -147,8 +127,6 @@ LIP_ASYNC_COUNT  = 'lip_async_count'
 Cumulative lip async count.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,8 +141,6 @@ TOTAL_LIP_ASYNC_TIME  = 'total_lip_async_time'
 Total lip async duration during the playback, in milliseconds.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

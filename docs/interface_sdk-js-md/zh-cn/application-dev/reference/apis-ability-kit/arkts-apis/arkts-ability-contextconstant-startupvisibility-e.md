@@ -4,8 +4,6 @@ UIAbility启动后是否可见。 当用户设置目标UIAbility为不可见时�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## STARTUP_HIDE
@@ -17,8 +15,6 @@ STARTUP_HIDE = 0
 目标UIAbility启动后，进入隐藏状态。不会调用UIAbility的onForeground生命周期。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,12 +30,6 @@ STARTUP_SHOW = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-参见ContextConstant.ProcessMode。

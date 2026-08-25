@@ -5,20 +5,19 @@ An array-like object that can be concatenated. This API extends **ISendable**.
 > **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
-- T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).
+- T: type, which can be any of the
+[sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).
 
 **Inheritance/Implementation:** ConcatArray extends [ISendable](arkts-arkts-collections-isendable-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## join
@@ -30,8 +29,6 @@ join(separator?: string): string
 Concatenates all elements in this array into a string, with a given separator.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -58,8 +55,6 @@ slice(start?: number, end?: number): ConcatArray<T>
 Selects a range of elements in this array to create an array.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,8 +85,6 @@ Returns the element at a given index in this ConcatArray.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## length
@@ -105,8 +98,6 @@ Number of elements in a ConcatArray.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

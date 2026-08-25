@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
+import { freeInstall } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDispatchInfo
@@ -15,8 +15,6 @@ function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 Obtains the dispatch information. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -38,39 +36,6 @@ Obtains the dispatch information. This API uses an asynchronous callback to retu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-
-try {
-  freeInstall.getDispatchInfo((err, data) => {
-    if (err) {
-      console.error('Operation failed:' + JSON.stringify(err));
-    } else {
-      console.info('Operation succeed:' + JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  freeInstall.getDispatchInfo().then(data => {
-    console.info('Operation succeed:' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
 
 ## getDispatchInfo
 
@@ -81,8 +46,6 @@ function getDispatchInfo(): Promise<DispatchInfo>
 Obtains the dispatch information. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -103,7 +66,3 @@ Obtains the dispatch information. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [getDispatchInfo](#getdispatchinfo)

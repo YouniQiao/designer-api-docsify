@@ -4,14 +4,12 @@ Provides methods to operate or manage Wi-Fi. @namespace wifi
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -93,12 +91,12 @@ import { wifi } from '@kit.ConnectivityKit';
 | [getSupportedFeatures](arkts-connectivity-wifi-getsupportedfeatures-f-sys.md) |
 | [isHotspotActive](arkts-connectivity-wifi-ishotspotactive-f-sys.md) |
 | [isHotspotDualBandSupported](arkts-connectivity-wifi-ishotspotdualbandsupported-f-sys.md) |
-| [off](arkts-connectivity-wifi-off-f-sys.md#offstreamchange) |
-| [off](arkts-connectivity-wifi-off-f-sys.md#offhotspotstajoin) |
-| [off](arkts-connectivity-wifi-off-f-sys.md#offhotspotstaleave) |
-| [on](arkts-connectivity-wifi-on-f-sys.md#onstreamchange) |
-| [on](arkts-connectivity-wifi-on-f-sys.md#onhotspotstajoin) |
-| [on](arkts-connectivity-wifi-on-f-sys.md#onhotspotstaleave) |
+| off |
+| off |
+| off |
+| on |
+| on |
+| on |
 | [reassociate](arkts-connectivity-wifi-reassociate-f-sys.md) |
 | [reconnect](arkts-connectivity-wifi-reconnect-f-sys.md) |
 | [removeAllNetwork](arkts-connectivity-wifi-removeallnetwork-f-sys.md) |

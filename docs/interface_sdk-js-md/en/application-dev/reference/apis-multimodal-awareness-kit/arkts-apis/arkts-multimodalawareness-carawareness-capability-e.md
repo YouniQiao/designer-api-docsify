@@ -4,8 +4,6 @@ CarAwareness Capability.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
 ## SPATIAL_MOTION
@@ -17,8 +15,6 @@ SPATIAL_MOTION = 'SpatialMotion'
 spatial motion specific capability
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ realtime weather specific capability
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
@@ -49,8 +43,6 @@ REFUELING = 'Refueling'
 refueling specific capability
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

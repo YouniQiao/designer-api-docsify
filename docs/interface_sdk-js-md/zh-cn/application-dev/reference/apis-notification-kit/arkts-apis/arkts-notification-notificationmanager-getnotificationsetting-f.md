@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getNotificationSetting
@@ -15,8 +15,6 @@ function getNotificationSetting(): Promise<NotificationSetting>
 获取应用的通知设置，包括锁屏通知、横幅通知、桌面角标、振动、铃声等 开关状态。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -39,30 +37,3 @@ isNotificationEnabled 获取指定应用的通知使能状态。
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getNotificationSetting().then((data: notificationManager.NotificationSetting) => {
-    console.info(`getNotificationSetting success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNotificationSetting failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getNotificationSetting().then((data: notificationManager.NotificationSetting) => {
-    console.info(`getNotificationSetting success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getNotificationSetting failed, code is ${error.code}, message is ${error.message}`);
-});
-```

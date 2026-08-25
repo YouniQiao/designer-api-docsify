@@ -8,8 +8,6 @@ Describes the application scenario and timing for using the permission.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [UsedScene](#usedscene)
@@ -30,8 +28,6 @@ Abilities that use the permission.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** abilities
@@ -51,8 +47,6 @@ Time when the permission is used.
 **Default:** Indicates the time when the permission is used
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

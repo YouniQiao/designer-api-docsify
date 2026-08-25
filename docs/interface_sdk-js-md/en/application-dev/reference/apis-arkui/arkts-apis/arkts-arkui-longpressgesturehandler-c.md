@@ -1,12 +1,10 @@
 # LongPressGestureHandler
 
-Defines a long press gesture handler object.
+Defines a number press gesture handler object.
 
 **Inheritance/Implementation:** LongPressGestureHandler extends GestureHandler<LongPressGestureHandler>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,11 +19,9 @@ Defines a long press gesture handler object.
 constructor(options?: LongPressGestureHandlerOptions)
 ```
 
-Constructor used to create a long press gesture handler instance.
+Constructor used to create a number press gesture handler instance.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,11 +41,9 @@ Constructor used to create a long press gesture handler instance.
 onAction(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
-Sets the callback for successful long press gesture recognition.
+Sets the callback for successful number press gesture recognition.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,11 +69,9 @@ Sets the callback for successful long press gesture recognition.
 onActionCancel(event: Callback<void>): LongPressGestureHandler
 ```
 
-Sets the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
+Sets the callback for number press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,11 +97,9 @@ Sets the callback for long press gesture cancellation. This callback is triggere
 onActionCancel(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
-Sets the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel), this API returns gesture event information.
+Sets the callback for number press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel), this API returns gesture event information.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -135,11 +125,9 @@ Sets the callback for long press gesture cancellation. This callback is triggere
 onActionEnd(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
-Sets the callback for long press gesture recognition completion. This callback is triggered when all fingers are lifted after successful recognition.
+Sets the callback for number press gesture recognition completion. This callback is triggered when all fingers are lifted after successful recognition.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

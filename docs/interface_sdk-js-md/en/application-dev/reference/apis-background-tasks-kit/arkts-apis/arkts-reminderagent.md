@@ -4,8 +4,6 @@ The **reminderAgent** module provides APIs for publishing scheduled reminders th
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [reminderAgentManager](arkts-reminderagentmanager.md)
@@ -15,7 +13,7 @@ The **reminderAgent** module provides APIs for publishing scheduled reminders th
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## Summary

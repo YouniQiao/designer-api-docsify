@@ -4,8 +4,6 @@ OffscreenCanvas provides a Canvas object that can be rendered off-screen. It wor
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -17,8 +15,6 @@ constructor(width: number, height: number)
 The width of the offScreen Canvas object The height of the offScreen Canvas object
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -43,8 +39,6 @@ Gets the context object for off-screen drawing.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -62,7 +56,7 @@ Gets the context object for off-screen drawing.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md) |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-viewmodel-offscreencanvasrenderingcontext2d-i.md) |
 
 ## toDataURL
 
@@ -73,8 +67,6 @@ toDataURL(type?: string, quality?: number): string
 Converts the draw contents of the current off-screen draw object to a string in the form of a Blob.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -105,8 +97,6 @@ Converts the draw content in the current off-screen draw object to a Bitmap obje
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -131,8 +121,6 @@ The height of the offScreen Canvas object
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -150,8 +138,6 @@ The width of the offScreen Canvas object
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the FA model.
 

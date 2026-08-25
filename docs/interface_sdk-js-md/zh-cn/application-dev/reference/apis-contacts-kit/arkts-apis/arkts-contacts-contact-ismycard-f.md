@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## isMyCard
@@ -15,8 +15,6 @@ function isMyCard(id: number, callback: AsyncCallback<boolean>): void
 判断是否为“我的名片”。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -33,64 +31,6 @@ function isMyCard(id: number, callback: AsyncCallback<boolean>): void
 | id | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.isMyCard(context, 1, (err: BusinessError, data) => {
-    if (err) {
-      console.error(`Failed to isMyCard. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
-  });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 判断id为1的名片是否为“我的名片”
-contact.isMyCard(1, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to isMyCard. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
-});
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  let promise = contact.isMyCard(context, 1);
-  promise.then((data) => {
-    console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
-  });
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// 判断id为1的名片是否为“我的名片”
-let promise = contact.isMyCard(1);
-promise.then((data) => {
-  console.info(`Succeeded in isMyCard. data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## isMyCard
 
@@ -101,8 +41,6 @@ function isMyCard(context: Context, id: number, callback: AsyncCallback<boolean>
 判断是否为“我的名片”。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -123,10 +61,6 @@ function isMyCard(context: Context, id: number, callback: AsyncCallback<boolean>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
-**示例**
-
-参见 [isMyCard](#ismycard)
-
 
 ## isMyCard
 
@@ -137,8 +71,6 @@ function isMyCard(id: number): Promise<boolean>
 判断是否为“我的名片”。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -160,10 +92,6 @@ function isMyCard(id: number): Promise<boolean>
 | --- |
 | Promise & lt;boolean & gt; |
 
-**示例**
-
-参见 [isMyCard](#ismycard)
-
 
 ## isMyCard
 
@@ -174,8 +102,6 @@ function isMyCard(context: Context, id: number): Promise<boolean>
 判断是否为“我的名片”。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -200,7 +126,3 @@ function isMyCard(context: Context, id: number): Promise<boolean>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-**示例**
-
-参见 [isMyCard](#ismycard)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## off('rotationAxesStatusChange')
@@ -15,8 +15,6 @@ function off(type: 'rotationAxesStatusChange', callback?: Callback<RotationAxesS
 Unregister a listener for axis state changes.
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -35,13 +33,3 @@ Unregister a listener for axis state changes.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) |
-
-**示例**
-
-```TypeScript
-console.info('Unregister Axis Status listener');
-mechanicManager.off("rotationAxesStatusChange", (result: mechanicManager.RotationAxesStateChangeInfo) => {
-  console.info(`'result:' ${result}`);
-});
-console.info('Unregister successfully');
-```

@@ -4,8 +4,6 @@ Configuring parameters in geo fence requests@interface GeofenceRequest
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md)
@@ -17,7 +15,7 @@ Configuring parameters in geo fence requests@interface GeofenceRequest
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## geofence
@@ -29,8 +27,6 @@ geofence: Geofence
 **Type:** Geofence
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ priority: LocationRequestPriority
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** priority
@@ -65,8 +59,6 @@ scenario: LocationRequestScenario
 **Type:** LocationRequestScenario
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

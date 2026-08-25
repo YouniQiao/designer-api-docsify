@@ -13,23 +13,21 @@ UIContext实例对象。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## addLocalInputEventMonitor
 
 ```TypeScript
-addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEventMonitor
+addLocalInputEventMonitor(eventMask: number, listener: InputEventListener): InputEventMonitor
 ```
 
 注册本地输入事件监视器。接口名中的“Local”表示监视器只在当前UIContext内有效。 并且不影响其他UIContext实例。每个UIContext都维护自己独立的监视器列表。
@@ -50,8 +48,6 @@ addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEv
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -69,91 +65,7 @@ addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEv
 
 | 类型 |
 | --- |
-| [InputEventMonitor](arkts-arkui-common-inputeventmonitor-i.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-@Entry
-@Component
-struct InputEventMonitorSample {
-  private uiContext: UIContext | undefined = undefined;
-  private monitor: InputEventMonitor | null = null;
-  aboutToAppear() {
-    this.uiContext = this.getUIContext();
-    // 监听鼠标左键按下事件
-    this.monitor = this.uiContext.addLocalInputEventMonitor(
-      InputEventSubTypeMask.LEFT_MOUSE_DOWN,
-      (wrapper: RawInputEventWrapper) => {
-        if (wrapper.isMouseEvent()) {
-          const event = wrapper.asMouseEvent()!;
-          console.info(`Mouse down at (${event.windowX}, ${event.windowY})`);
-          return { action: InputEventInterceptAction.CONTINUE };  // 允许事件继续传递
-        }
-        return { action: InputEventInterceptAction.BLOCK };  // 阻止事件传递
-      }
-    );
-  }
-  aboutToDisappear() {
-    if (this.monitor && this.uiContext) {
-      this.uiContext.removeLocalInputEventMonitor(this.monitor);
-    }
-  }
-  build() {
-    Column() {
-      Text('Input Event Monitor Sample')
-        .fontSize(20)
-        .margin(20)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, Column, Component, Button, UIContext, InputEventSubTypeMask, RawInputEventWrapper, InputEventInterceptAction, InputEventMonitor, InputEventListener } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct InputEventMonitorSample {
-  private uiContext: UIContext | undefined = undefined;
-  private monitor: InputEventMonitor | undefined = undefined;
-  aboutToAppear() {
-    this.uiContext = this.getUIContext();
-    // 监听鼠标左键按下事件
-    this.monitor = this.uiContext?.addLocalInputEventMonitor(
-      InputEventSubTypeMask.LEFT_MOUSE_DOWN,
-      (wrapper: RawInputEventWrapper) => {
-        if (wrapper.isMouseEvent()) {
-          const event = wrapper.asMouseEvent()!;
-          console.info(`Mouse down at (${event.windowX}, ${event.windowY})`);
-          return { action: InputEventInterceptAction.CONTINUE };  // 允许事件继续传递
-        }
-        return { action: InputEventInterceptAction.BLOCK };  // 阻止事件传递
-      }
-    );
-  }
-  aboutToDisappear() {
-    if (this.monitor && this.uiContext) {
-      this.uiContext!.removeLocalInputEventMonitor(this.monitor as InputEventMonitor);
-    }
-  }
-  build() {
-    Column() {
-      Text('Input Event Monitor Sample')
-        .fontSize(20)
-        .margin(20)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) |
 
 ## animateTo
 
@@ -175,12 +87,10 @@ animateTo(value: AnimateParam, event: () => void): void
 > 果。&gt;
 > - 某些场景下，在[状态管理V2](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)中使用animateTo动画，会产生异常效果，
 > 具体可参考：[在状态管理V2中使用animateTo动画效果异常](../../../ui/state-management/arkts-new-local.md#在状态管理v2中使用animateto动画效果异常)。&gt;
-> - UIAbility从前台切换至后台时会立即结束仍在步进中的有限循环动画，从而触发动画播放完成回调onFinish。&gt;
+> - UIAbility从前台切换至后台时会立即结束仍在步进中的有限循环动画，从而触发动画播放完成回调[onFinish](../arkts-components/arkts-arkui-animateparam-i.md)。&gt;
 > - 在设置的开发者选项中关闭过渡动画，动画会当帧结束，onFinish动画播放完成回调会立即执行，请避免在回调中加入时序相关的功能逻辑。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -192,88 +102,8 @@ animateTo(value: AnimateParam, event: () => void): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [AnimateParam](arkts-arkui-common-animateparam-i.md) | 是 |
+| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 |
 | event | () = & gt; void | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct AnimateToExample {
-  @State widthSize: number = 250;
-  @State heightSize: number = 100;
-  @State rotateAngle: number = 0;
-  private flag: boolean = true;
-  uiContext: UIContext | undefined = undefined;
-
-  aboutToAppear() {
-    this.uiContext = this.getUIContext();
-    if (!this.uiContext) {
-      console.warn("no uiContext");
-      return;
-    }
-  }
-
-  build() {
-    Column() {
-      Button('change size')
-        .width(this.widthSize)
-        .height(this.heightSize)
-        .margin(30)
-        .onClick(() => {
-          if (this.flag) {
-            this.uiContext?.animateTo({
-              duration: 2000,
-              curve: Curve.EaseOut,
-              iterations: 3,
-              playMode: PlayMode.Normal,
-              onFinish: () => {
-                console.info('play end');
-              }
-            }, () => {
-              this.widthSize = 150;
-              this.heightSize = 60;
-            });
-          } else {
-            this.uiContext?.animateTo({}, () => {
-              this.widthSize = 250;
-              this.heightSize = 100;
-            });
-          }
-          this.flag = !this.flag;
-        })
-      Button('stop rotating')
-        .margin(50)
-        .rotate({ x: 0, y: 0, z: 1, angle: this.rotateAngle })
-        .onAppear(() => {
-          // 组件出现时开始做动画
-          this.uiContext?.animateTo({
-            duration: 1200,
-            curve: Curve.Friction,
-            delay: 500,
-            iterations: -1, // 设置-1表示动画无限循环
-            playMode: PlayMode.Alternate,
-            expectedFrameRateRange: {
-              min: 10,
-              max: 120,
-              expected: 60,
-            }
-          }, () => {
-            this.rotateAngle = 90
-          });
-        })
-        .onClick(() => {
-          this.uiContext?.animateTo({ duration: 0 }, () => {
-            // this.rotateAngle之前为90，在duration为0的动画中修改属性，可以停止该属性之前的动画，按新设置的属性显示
-            this.rotateAngle = 0;
-          });
-        })
-    }.width('100%').margin({ top: 5 })
-  }
-}
-```
 
 ## animateToImmediately
 
@@ -285,8 +115,6 @@ animateToImmediately(param: AnimateParam, processor: Callback<void>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -297,69 +125,8 @@ animateToImmediately(param: AnimateParam, processor: Callback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| param | [AnimateParam](arkts-arkui-common-animateparam-i.md) | 是 |
+| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 |
 | processor | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-该示例通过UIContext对象获取显式立即动画，并调用animateToImmediately接口实现参数定义的动画效果。
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct AnimateToImmediatelyExample {
-  @State widthSize: number = 250
-  @State heightSize: number = 100
-  @State opacitySize: number = 0
-  private flag: boolean = true
-  uiContext: UIContext | null | undefined = this.getUIContext();
-
-  build() {
-    Column() {
-      Column()
-        .width(this.widthSize)
-        .height(this.heightSize)
-        .backgroundColor(Color.Green)
-        .opacity(this.opacitySize)
-      Button('change size')
-        .margin(30)
-        .onClick(() => {
-          if (this.flag) {
-            this.uiContext?.animateToImmediately({
-              delay: 0,
-              duration: 1000
-            }, () => {
-              this.opacitySize = 1
-            })
-            this.uiContext?.animateTo({
-              delay: 1000,
-              duration: 1000
-            }, () => {
-              this.widthSize = 150
-              this.heightSize = 60
-            })
-          } else {
-            this.uiContext?.animateToImmediately({
-              delay: 0,
-              duration: 1000
-            }, () => {
-              this.widthSize = 250
-              this.heightSize = 100
-            })
-            this.uiContext?.animateTo({
-              delay: 1000,
-              duration: 1000
-            }, () => {
-              this.opacitySize = 0
-            })
-          }
-          this.flag = !this.flag
-        })
-    }.width('100%').margin({ top: 5 })
-  }
-}
-```
 
 ## bindTabsToNestedScrollable
 
@@ -371,8 +138,6 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -383,13 +148,9 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| tabsController | [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | 是 |
-| parentScroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
-| childScroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
-
-**示例**
-
-参考[bindTabsToScrollable](#bindtabstoscrollable)接口示例。
+| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | 是 |
+| parentScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
+| childScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
 
 ## bindTabsToScrollable
 
@@ -401,8 +162,6 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -413,105 +172,8 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| tabsController | [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | 是 |
-| scroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct TabsExample {
-  private arr: string[] = [];
-  private parentTabsController: TabsController = new TabsController();
-  private childTabsController: TabsController = new TabsController();
-  private listScroller: Scroller = new Scroller();
-  private parentScroller: Scroller = new Scroller();
-  private childScroller: Scroller = new Scroller();
-
-  aboutToAppear(): void {
-    for (let i = 0; i < 20; i++) {
-      this.arr.push(i.toString());
-    }
-    let context = this.getUIContext();
-    context.bindTabsToScrollable(this.parentTabsController, this.listScroller);
-    context.bindTabsToScrollable(this.childTabsController, this.listScroller);
-    context.bindTabsToNestedScrollable(this.parentTabsController, this.parentScroller, this.childScroller);
-  }
-
-  aboutToDisappear(): void {
-    let context = this.getUIContext();
-    context.unbindTabsFromScrollable(this.parentTabsController, this.listScroller);
-    context.unbindTabsFromScrollable(this.childTabsController, this.listScroller);
-    context.unbindTabsFromNestedScrollable(this.parentTabsController, this.parentScroller, this.childScroller);
-  }
-
-  build() {
-    Tabs({ barPosition: BarPosition.End, controller: this.parentTabsController }) {
-      TabContent() {
-        Tabs({ controller: this.childTabsController }) {
-          TabContent() {
-            List({ space: 20, initialIndex: 0, scroller: this.listScroller }) {
-              ForEach(this.arr, (item: string) => {
-                ListItem() {
-                  Text(item)
-                    .width('100%')
-                    .height(100)
-                    .fontSize(16)
-                    .textAlign(TextAlign.Center)
-                    .borderRadius(10)
-                    .backgroundColor(Color.Gray)
-                }
-              }, (item: string) => item)
-            }
-            .scrollBar(BarState.Off)
-            .width('90%')
-            .height('100%')
-            .contentStartOffset(56)
-            .contentEndOffset(52)
-          }.tabBar(SubTabBarStyle.of('顶部页签'))
-        }
-        .width('100%')
-        .height('100%')
-        .barOverlap(true) // 使TabBar叠加在TabContent上，当TabBar向上或向下隐藏后，原位置处不为空白
-        .clip(true) // 对超出Tabs组件范围的子组件进行裁剪，防止TabBar向上或向下隐藏后误触TabBar
-      }.tabBar(BottomTabBarStyle.of($r('app.media.startIcon'), 'scroller联动多个TabsController'))
-
-      TabContent() {
-        Scroll(this.parentScroller) {
-            List({ space: 20, initialIndex: 0, scroller: this.childScroller }) {
-              ForEach(this.arr, (item: string) => {
-                ListItem() {
-                  Text(item)
-                    .width('100%')
-                    .height(100)
-                    .fontSize(16)
-                    .textAlign(TextAlign.Center)
-                    .borderRadius(10)
-                    .backgroundColor(Color.Gray)
-                }
-              }, (item: string) => item)
-            }
-            .scrollBar(BarState.Off)
-            .width('90%')
-            .height('100%')
-            .contentEndOffset(52)
-            .nestedScroll({ scrollForward: NestedScrollMode.SELF_FIRST, scrollBackward: NestedScrollMode.SELF_FIRST })
-        }
-        .width('100%')
-        .height('100%')
-        .scrollBar(BarState.Off)
-        .scrollable(ScrollDirection.Vertical)
-        .edgeEffect(EdgeEffect.Spring)
-      }.tabBar(BottomTabBarStyle.of($r('app.media.startIcon'), '嵌套的scroller联动TabsController'))
-    }
-    .width('100%')
-    .height('100%')
-    .barOverlap(true) // 使TabBar叠加在TabContent上，当TabBar向上或向下隐藏后，原位置处不为空白
-    .clip(true) // 对超出Tabs组件范围的子组件进行裁剪，防止TabBar向上或向下隐藏后误触TabBar
-  }
-}
-```
+| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | 是 |
+| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
 
 ## closeBindSheet
 
@@ -525,8 +187,6 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 > 使用此接口关闭半模态页面时，不会触发shouldDismiss回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -554,95 +214,6 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 | [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) |
 | [120003](../errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) |
 
-**示例**
-
-```TypeScript
-import { FrameNode, ComponentContent } from "@kit.ArkUI";
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Params {
-  text: string = "";
-
-  constructor(text: string) {
-    this.text = text;
-  }
-}
-
-let contentNode: ComponentContent<Params>;
-let gUIContext: UIContext;
-
-@Builder
-function buildText(params: Params) {
-  Column() {
-    Text(params.text)
-    Button('Update BindSheet')
-      .fontSize(20)
-      .onClick(() => {
-        gUIContext.updateBindSheet(contentNode, {
-          backgroundColor: Color.Pink,
-        }, true)
-          .then(() => {
-            console.info('updateBindSheet success');
-          })
-          .catch((err: BusinessError) => {
-            console.error('updateBindSheet error: ' + err.code + ' ' + err.message);
-          })
-      })
-
-    Button('Close BindSheet')
-      .fontSize(20)
-      .onClick(() => {
-        gUIContext.closeBindSheet(contentNode)
-          .then(() => {
-            console.info('closeBindSheet success');
-          })
-          .catch((err: BusinessError) => {
-            console.error('closeBindSheet error: ' + err.code + ' ' + err.message);
-          })
-      })
-  }
-}
-
-@Entry
-@Component
-struct UIContextBindSheet {
-  @State message: string = 'BindSheet';
-
-  aboutToAppear() {
-    gUIContext = this.getUIContext();
-    contentNode = new ComponentContent(this.getUIContext(), wrapBuilder(buildText), new Params(this.message));
-  }
-
-  build() {
-    RelativeContainer() {
-      Column() {
-        Button('Open BindSheet')
-          .fontSize(20)
-          .onClick(() => {
-            let uiContext = this.getUIContext();
-            let uniqueId = this.getUniqueId();
-            let frameNode: FrameNode | null = uiContext.getFrameNodeByUniqueId(uniqueId);
-            let targetId = frameNode?.getFirstChild()?.getUniqueId();
-            uiContext.openBindSheet(contentNode, {
-              height: SheetSize.MEDIUM,
-              backgroundColor: Color.Green,
-              title: { title: "Title", subtitle: "subtitle" }
-            }, targetId)
-              .then(() => {
-                console.info('openBindSheet success');
-              })
-              .catch((err: BusinessError) => {
-                console.error('openBindSheet error: ' + err.code + ' ' + err.message);
-              })
-          })
-      }
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -656,83 +227,11 @@ constructor()
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-function GetUIContextByAtomicInterface(): UIContext {
-  let callingScopeUIContext = UIContext.getCallingScopeUIContext();
-  if (callingScopeUIContext) {
-    hilog.info(0x00, 'testTag', `Get UIContext of calling scope.`)
-    return callingScopeUIContext;
-  }
-  let allContexts = UIContext.getAllUIContexts();
-  let length = allContexts.length;
-  if (length === 1) {
-    hilog.info(0x00, 'testTag', `Get UIContext of unique UI instance.`)
-    return allContexts[0];
-  }
-  let lastFocusedUIContext = UIContext.getLastFocusedUIContext();
-  if (lastFocusedUIContext) {
-    hilog.info(0x00, 'testTag', `Get UIContext of last focused instance.`)
-    return lastFocusedUIContext;
-  }
-  let lastForegroundUIContext = UIContext.getLastForegroundUIContext();
-  if (lastForegroundUIContext) {
-    hilog.info(0x00, 'testTag', `Get UIContext of last foregrounded instance.`)
-    return lastForegroundUIContext;
-  }
-  if (length !== 0) {
-    hilog.info(0x00, 'testTag', `Get UIContext with maximum instanceId.`)
-    return allContexts[length - 1];
-  }
-  hilog.info(0x00, 'testTag', `Get UIContext of undefined calling scope.`)
-  return new UIContext();
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  aboutToAppear() {
-    let uiContext = this.getUIContext();
-    hilog.info(0x00, 'testTag', `aboutToAppear UIContext: ${uiContext.getId()}`)
-  }
-
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          let resolvedUIContext = UIContext.resolveUIContext();
-          let contextByAtomicInterface = GetUIContextByAtomicInterface();
-          hilog.info(0x00, 'testTag',
-            `UIContext id: ${resolvedUIContext.getId()}, strategy: ${resolvedUIContext.strategy}, contextByAtomicInterface: ${contextByAtomicInterface.getId()}`);
-          this.message = 'Welcome';
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
 
 ## createAnimator
 
@@ -743,8 +242,6 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 定义Animator类。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -770,65 +267,6 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { AnimatorOptions, window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // 创建主窗口，设置此功能的主页
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', err.message);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
-      let uiContext = windowStage.getMainWindowSync().getUIContext();
-      let options:AnimatorOptions = {
-        duration: 1500,
-        easing: "friction",
-        delay: 0,
-        fill: "forwards",
-        direction: "normal",
-        iterations: 3,
-        begin: 200.0,
-        end: 400.0
-      };
-      uiContext.createAnimator(options);
-    });
-  }
-}
-```
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { SimpleAnimatorOptions, window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // 创建主窗口，设置此功能的主页
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', err.message);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
-      let uiContext = windowStage.getMainWindowSync().getUIContext();
-      let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(2000);
-      uiContext.createAnimator(options);
-    });
-  }
-}
-```
-
 ## createAnimator
 
 ```TypeScript
@@ -838,8 +276,6 @@ createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 创建animator动画结果对象（AnimatorResult）。与[createAnimator](#createanimator)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -865,10 +301,6 @@ createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [createAnimator](#createanimator)
-
 ## createUIContextWithoutWindow
 
 ```TypeScript
@@ -881,8 +313,6 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 > 返回的UI上下文只可用于创建[自定义节点](../../../ui/arkts-user-defined-node.md)，不能执行其他UI操作。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -909,24 +339,6 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { UIContext } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    let uiContext: UIContext | undefined = UIContext.createUIContextWithoutWindow(this.context);
-  }
-
-  // ......
-}
-```
-
 ## destroyUIContextWithoutWindow
 
 ```TypeScript
@@ -937,32 +349,11 @@ static destroyUIContextWithoutWindow(): void
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { UIContext } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    let uiContext: UIContext | undefined = UIContext.createUIContextWithoutWindow(this.context);
-    UIContext.destroyUIContextWithoutWindow();
-  }
-
-  // ......
-}
-```
 
 ## dispatchKeyEvent
 
@@ -973,8 +364,6 @@ dispatchKeyEvent(node: number | string, event: KeyEvent): boolean
 Dispach keyboard event to the frameNode with inspector key.
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -987,55 +376,13 @@ Dispach keyboard event to the frameNode with inspector key.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | number \| string | 是 |
-| event | [KeyEvent](arkts-arkui-common-keyevent-i.md) | 是 |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Row() {
-        Button('Button1').id('Button1').onKeyEvent((event) => {
-          console.info("Button1");
-          return true;
-        })
-        Button('Button2').id('Button2').onKeyEvent((event) => {
-          console.info("Button2");
-          return true;
-        })
-      }
-      .width('100%')
-      .height('100%')
-      .id('Row1')
-      .onKeyEventDispatch((event) => {
-        let context = this.getUIContext();
-        context.getFocusController().requestFocus('Button1');
-        return context.dispatchKeyEvent('Button1', event);
-      })
-
-    }
-    .height('100%')
-    .width('100%')
-    .onKeyEventDispatch((event) => {
-      if (event.type == KeyType.Down) {
-        let context = this.getUIContext();
-        context.getFocusController().requestFocus('Row1');
-        return context.dispatchKeyEvent('Row1', event);
-      }
-      return true;
-    })
-  }
-}
-```
 
 ## enableEventPassthrough
 
@@ -1046,8 +393,6 @@ enableEventPassthrough(enabled: boolean, eventType: RawInputEventType): void
 是否启用或禁用事件直通。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1060,49 +405,7 @@ enableEventPassthrough(enabled: boolean, eventType: RawInputEventType): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | enabled | boolean | 是 |
-| eventType | [RawInputEventType](arkts-arkui-enums-rawinputeventtype-e.md) | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('Enable Event Passthrough')
-        .onClick(() => {
-          this.getUIContext()?.enableEventPassthrough(true, RawInputEventType.TOUCH);
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Column, Component, Button, RawInputEventType } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('Enable Event Passthrough')
-        .onClick(() => {
-          this.getUIContext()?.enableEventPassthrough(true, RawInputEventType.TOUCH);
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| eventType | [RawInputEventType](arkts-arkui-rawinputeventtype-e.md) | 是 |
 
 ## enableSwipeBack
 
@@ -1114,8 +417,6 @@ whether to enable or disable swipe to back event.
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -1124,28 +425,7 @@ whether to enable or disable swipe to back event.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  @State isEnable: boolean = true;
-
-  build() {
-    RelativeContainer() {
-      Button(`enable swipe back: ${this.isEnable}`).onClick(() => {
-        this.isEnable = !this.isEnable;
-        this.getUIContext().enableSwipeBack(this.isEnable);
-      })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
+| enabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## fp2px
 
@@ -1161,8 +441,6 @@ fp2px(value: number): number
 > 调用此接口，否则无法返回准确结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1180,32 +458,6 @@ fp2px(value: number): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct MatrixExample {
-  build() {
-    Column({ space: 100 }) {
-      Text('Hello1')
-        .textAlign(TextAlign.Center)
-        .width(100)
-        .height(60)
-        .backgroundColor(0xAFEEEE)
-        .borderWidth(1)
-        .rotate({
-          z: 1,
-          angle: 90,
-          centerX: this.getUIContext().fp2px(50),
-          centerY: this.getUIContext().fp2px(30)
-        })
-    }.width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## getAllUIContexts
 
 ```TypeScript
@@ -1215,8 +467,6 @@ static getAllUIContexts(): UIContext[]
 获取所有当前有效的UIContext实例。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1230,37 +480,6 @@ static getAllUIContexts(): UIContext[]
 | --- |
 | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] |
 
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          this.message = 'Welcome';
-          let uiContexts = UIContext.getAllUIContexts();
-          hilog.info(0x00, 'testTag', `There are ${uiContexts.length} UIContext(s)`);
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## getAtomicServiceBar
 
 ```TypeScript
@@ -1270,8 +489,6 @@ getAtomicServiceBar(): Nullable<AtomicServiceBar>
 Get AtomicServiceBar.
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1285,30 +502,6 @@ Get AtomicServiceBar.
 | --- |
 | [Nullable](arkts-arkui-nullable-t.md)&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { UIContext, AtomicServiceBar, window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // Main window is created, set main page for this ability
-    console.info('Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
-      let atomicServiceBar: Nullable<AtomicServiceBar> = uiContext.getAtomicServiceBar();
-      if (atomicServiceBar != undefined) {
-        console.info('Get AtomServiceBar Successfully.');
-      } else {
-        console.error('Get AtomicServiceBar failed.');
-      }
-    });
-  }
-}
-```
-
 ## getAttachedFrameNodeById
 
 ```TypeScript
@@ -1318,8 +511,6 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 通过组件的id获取当前窗口上的实体节点。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1339,35 +530,6 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 | --- |
 | FrameNode \| null |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct MyComponent {
-  @State message: string = 'Hello World';
-
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          let node = this.getUIContext().getAttachedFrameNodeById("HelloWorld");
-          console.info(`Find HelloWorld Tag:${node!.getNodeType()} id:${node!.getUniqueId()}`);
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## getCallingScopeUIContext
 
 ```TypeScript
@@ -1381,8 +543,6 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -1395,37 +555,6 @@ static getCallingScopeUIContext(): UIContext | undefined
 | --- |
 | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined |
 
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          this.message = 'Welcome';
-          let uiContext = UIContext.getCallingScopeUIContext();
-          hilog.info(0x00, 'testTag', 'Current calling UIContext is : ' + uiContext?.isAvailable());
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## getComponentSnapshot
 
 ```TypeScript
@@ -1435,8 +564,6 @@ getComponentSnapshot(): ComponentSnapshot
 获取组件快照。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1450,10 +577,6 @@ getComponentSnapshot(): ComponentSnapshot
 | --- |
 | [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) |
 
-**示例**
-
-完整示例请参考[ComponentSnapshot](arkts-apis-uicontext-componentsnapshot.md)中的示例。
-
 ## getComponentUtils
 
 ```TypeScript
@@ -1463,8 +586,6 @@ getComponentUtils(): ComponentUtils
 get object ComponentUtils.
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1478,10 +599,6 @@ get object ComponentUtils.
 | --- |
 | [ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md) |
 
-**示例**
-
-完整示例请参考示例1（获取ComponentUtils对象）。
-
 ## getContextMenuController
 
 ```TypeScript
@@ -1491,8 +608,6 @@ getContextMenuController(): ContextMenuController
 Get object context menu controller.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1516,8 +631,6 @@ Get object cursor controller.
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1530,10 +643,6 @@ Get object cursor controller.
 | --- |
 | [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) |
 
-**示例**
-
-完整示例请参考[CursorController](arkts-apis-uicontext-cursorcontroller.md)中的示例。
-
 ## getDialogPresenter
 
 ```TypeScript
@@ -1543,8 +652,6 @@ getDialogPresenter(): DialogPresenter
 获取Dialog对象。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1568,8 +675,6 @@ Get DragController.
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1582,10 +687,6 @@ Get DragController.
 | --- |
 | [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) |
 
-**示例**
-
-完整示例请参考[DragController](./arkts-apis-uicontext-dragcontroller.md)中的示例。
-
 ## getFilteredInspectorTree
 
 ```TypeScript
@@ -1595,8 +696,6 @@ getFilteredInspectorTree(filters?: Array<string>): string
 get the filtered attributes of the component tree.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1622,72 +721,6 @@ get the filtered attributes of the component tree.
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-uiContext.getFilteredInspectorTree(['id', 'src', 'content']);
-```
-
-```TypeScript
-// xxx.ets
-import { UIContext } from '@kit.ArkUI';
-@Entry
-@Component
-struct ComponentPage {
-  loopConsole(inspectorStr: string, i: string) {
-    console.info(`InsTree ${i}| type: ${JSON.parse(inspectorStr).$type}, ID: ${JSON.parse(inspectorStr).$ID}`);
-    if (JSON.parse(inspectorStr).$children) {
-      i += '-';
-      for (let index = 0; index < JSON.parse(inspectorStr).$children.length; index++) {
-        this.loopConsole(JSON.stringify(JSON.parse(inspectorStr).$children[index]), i);
-      }
-    }
-  }
-
-  build() {
-    Column() {
-      Button('content').onClick(() => {
-        const uiContext: UIContext = this.getUIContext();
-        let inspectorStr = uiContext.getFilteredInspectorTree(['content']);
-        console.info(`InsTree : ${inspectorStr}`);
-        inspectorStr = JSON.stringify(JSON.parse(inspectorStr));
-        this.loopConsole(inspectorStr, '-');
-      })
-      Button('isLayoutInspector').onClick(() => {
-        const uiContext: UIContext = this.getUIContext();
-        let inspectorStr = uiContext.getFilteredInspectorTree(['isLayoutInspector']);
-        console.info(`InsTree : ${inspectorStr}`);
-        inspectorStr = JSON.stringify(JSON.parse(inspectorStr).content);
-        this.loopConsole(inspectorStr, '-');
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-当传入"content"过滤字段时，返回的JSON字符串结构如下：
-
-```TypeScript
-InsTree : {"$type":"root","width":"720.000000","height":"1280.000000","$resolution":"1.500000","$children":[{"$type":"Column","$ID":15,"type":"build-in","$rect":"[0.00, 72.00],[720.00,1208.00]","$debugLine":"","$attrs":{},"$children":[{"$type":"Button","$ID":16,"type":"build-in","$rect":"[293.00, 72.00],[427.00,132.00]","$debugLine":"","$attrs":{}},{"$type":"Button","$ID":18,"type":"build-in","$rect":"[237.00, 132.00],[484.00,192.00]","$debugLine":"","$attrs":{}}]}]}\
-InsTree -| type: root, ID: undefined
-InsTree --| type: Column, ID: 15
-InsTree ---| type: Button, ID: 16
-InsTree ---| type: Button, ID: 18
-```
-
-从API version 20开始，当传入"isLayoutInspector"过滤字段时，返回的JSON字符串结构新增外层结构"type"与"content"，其中"content"包含未增加该字段时的原有JSON字符串结构；同时，返回值结构中增添自定义组件。返回的JSON字符串结构如下：
-
-```TypeScript
-InsTree : {"type":"root","content":{"$type":"root","width":"720.000000","height":"1280.000000","$resolution":"1.500000","$children":[{"$type":"JsView","$ID":13,"type":"custom","state":{"observedPropertiesInfo":[],"viewInfo":{"componentName":"ComponentPage","id":14,"isV2":false,"isViewActive_":true}},"$rect":"[0.00, 72.00],[720.00,1208.00]","$debugLine":"{\"$line\":\"(0:0)\"}","viewTag":"ComponentPage","$attrs":{"viewKey":"13"},"$children":[{"$type":"Column","$ID":15, "type":"build-in","$rect":"[0.00, 72.00],[720.00,1208.00]","$debugLine":"","$attrs":{ ...
-InsTree -| type: root, ID: undefined
-InsTree --| type: JsView, ID: 13
-InsTree ---| type: Column, ID: 15
-InsTree ----| type: Button, ID: 16
-InsTree ----| type: Button, ID: 18
-```
-
 ## getFilteredInspectorTreeById
 
 ```TypeScript
@@ -1697,8 +730,6 @@ getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>)
 get the filtered attributes of the component tree with the specified id and depth
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1726,51 +757,6 @@ get the filtered attributes of the component tree with the specified id and dept
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-uiContext.getFilteredInspectorTreeById('testId', 0, ['id', 'src', 'content']);
-```
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-@Entry
-@Component
-struct ComponentPage {
-  build() {
-    Column() {
-      Text("Hello World")
-        .fontSize(20)
-        .id("TEXT")
-      Button('getFilteredInspectorTreeById').onClick(() => {
-        const uiContext: UIContext = this.getUIContext();
-        try {
-          let inspectorStr = uiContext.getFilteredInspectorTreeById('TEXT', 1, ["id", "src"]);
-          console.info(`result1: ${inspectorStr}`);
-          inspectorStr = JSON.stringify(JSON.parse(inspectorStr)['$children'][0]);
-          console.info(`result2: ${inspectorStr}`);
-          inspectorStr = uiContext.getFilteredInspectorTreeById('TEXT', 1, ["src"]);
-          inspectorStr = JSON.stringify(JSON.parse(inspectorStr)['$children'][0]);
-          console.info(`result3: ${inspectorStr}`);
-        } catch(e) {
-          console.error(`getFilteredInspectorTreeById error: ${e}`);
-        }
-      })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-返回的JSON字符串结构如下：
-
-```TypeScript
-result1: {"$type":"root","width":"1260.000000","height":"2720.000000","$resolution":"3.250000","$children":[{"$type":"Text","$ID":6,"type":"build-in","$rect":"[457.00, 123.00],[804.00,199.00]","$debugLine":"","$attrs":{"id":"TEXT","isLayoutDirtyMarked":false,"isRenderDirtyMarked":false,"isMeasureBoundary":false,"hasPendingRequest":false,"isFirstBuilding":false}}]}
-result2: {"$type":"Text","$ID":6,"type":"build-in","$rect":"[457.00, 123.00],[804.00,199.00]","$debugLine":"","$attrs":{"id":"TEXT","isLayoutDirtyMarked":false,"isRenderDirtyMarked":false,"isMeasureBoundary":false,"hasPendingRequest":false,"isFirstBuilding":false}}
-result3: {"$type":"Text","$ID":6,"type":"build-in","$rect":"[457.00, 123.00],[804.00,199.00]","$debugLine":"","$attrs":{"isLayoutDirtyMarked":false,"isRenderDirtyMarked":false,"isMeasureBoundary":false,"hasPendingRequest":false,"isFirstBuilding":false}}
-```
-
 ## getFocusController
 
 ```TypeScript
@@ -1780,8 +766,6 @@ getFocusController(): FocusController
 获取焦点控制器。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1795,10 +779,6 @@ getFocusController(): FocusController
 | --- |
 | [FocusController](arkts-arkui-arkui-uicontext-focuscontroller-c.md) |
 
-**示例**
-
-完整示例请参考[FocusController](arkts-apis-uicontext-focuscontroller.md)中的示例。
-
 ## getFont
 
 ```TypeScript
@@ -1808,8 +788,6 @@ getFont(): Font
 获取Font对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1823,10 +801,6 @@ getFont(): Font
 | --- |
 | [Font](arkts-arkui-arkui-uicontext-font-c.md) |
 
-**示例**
-
-完整示例请参考[Font](arkts-apis-uicontext-font.md)中的示例。
-
 ## getFrameNodeById
 
 ```TypeScript
@@ -1836,8 +810,6 @@ getFrameNodeById(id: string): FrameNode | null
 通过组件的id获取组件树的实体节点。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1857,10 +829,6 @@ getFrameNodeById(id: string): FrameNode | null
 | --- |
 | FrameNode \| null |
 
-**示例**
-
-完整示例请参考获取根节点示例。
-
 ## getFrameNodeByUniqueId
 
 ```TypeScript
@@ -1870,12 +838,11 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 通过组件的uniqueId获取组件树的实体节点。
 1. 当uniqueId对应的是系统组件时，返回组件所对应的FrameNode；
 2. 当uniqueId对应的是自定义组件时：  
-- 若其有渲染内容，且没有被[@Reusable装饰器](../../../ui/state-management/arkts-reusable.md)修饰时，返回该自定义组件的根节点，类型为__Common__。 - 若其无渲染内容，或者被[@Reusable装饰器](../../../ui/state-management/arkts-reusable.md)修饰时，在该自定义组件的子组件创建完成前调用此接口，将返回null；在该自定义组件的子组件创建完成后调用，返回其第一个子组件的FrameNode。  
+- 若其有渲染内容，且没有被[@Reusable装饰器](../../../ui/state-management/arkts-reusable.md)修饰时，返回该自定义组件的根节点，类型为__Common__。  
+- 若其无渲染内容，或者被[@Reusable装饰器](../../../ui/state-management/arkts-reusable.md)修饰时，在该自定义组件的子组件创建完成前调用此接口，将返回null；在该自定义组件的子组件创建完成后调用，返回其第一个子组件的FrameNode。  
 3. 当uniqueId无对应的组件时，返回null。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1895,28 +862,6 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 | --- |
 | FrameNode \| null |
 
-**示例**
-
-```TypeScript
-import { UIContext, FrameNode } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct MyComponent {
-  aboutToAppear() {
-    let uniqueId: number = this.getUniqueId();
-    let uiContext: UIContext = this.getUIContext();
-    if (uiContext) {
-      let node: FrameNode | null = uiContext.getFrameNodeByUniqueId(uniqueId);
-    }
-  }
-
-  build() {
-    // ...
-  }
-}
-```
-
 ## getHostContext
 
 ```TypeScript
@@ -1926,8 +871,6 @@ getHostContext(): Context | undefined
 获得当前元能力的Context。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1941,33 +884,6 @@ getHostContext(): Context | undefined
 | --- |
 | [Context](arkts-arkui-context-t.md) \| undefined |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  uiContext = this.getUIContext();
-
-  build() {
-    Row() {
-      Column() {
-        Text("cacheDir='" + this.uiContext?.getHostContext()?.cacheDir + "'")
-          .fontSize(25)
-          .border({ color: Color.Red, width: 2 })
-          .padding(50)
-        Text("bundleCodeDir='" + this.uiContext?.getHostContext()?.bundleCodeDir + "'")
-          .fontSize(25)
-          .border({ color: Color.Red, width: 2 })
-          .padding(50)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## getId
 
 ```TypeScript
@@ -1977,8 +893,6 @@ getId(): number
 获取UI实例对象唯一标识，多实例场景下，开发者可使用此唯一标识区分多个UI实例对象，便于管理。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1992,23 +906,6 @@ getId(): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index{
-  build(){
-    Column()
-      .width("100%")
-      .height("100%")
-      .onClick(()=>{
-      console.info(`id:${this.getUIContext()?.getId()}`);
-    })
-  }
-}
-```
-
 ## getKeyboardAvoidMode
 
 ```TypeScript
@@ -2018,8 +915,6 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 返回虚拟键盘抬起时页面的避让模式。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2033,26 +928,6 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 | --- |
 | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) |
 
-**示例**
-
-完整示例请参考[示例4（设置键盘避让模式为压缩）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例4设置键盘避让模式为压缩)、[示例5（设置键盘避让模式为上抬）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例5设置键盘避让模式为上抬)以及[示例6（切换避让模式）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例6切换避让模式)。
-
-```TypeScript
-// EntryAbility.ets
-import { KeyboardAvoidMode, UIContext } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility{
-  onWindowStageCreate(windowStage: window.WindowStage) {
-
-      windowStage.loadContent('pages/Index', (err, data) => {
-        let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
-        let currentKeyboardAvoidMode = uiContext.getKeyboardAvoidMode();
-        console.info("KeyboardAvoidMode:", JSON.stringify(currentKeyboardAvoidMode));
-      });
-    }
-}
-```
-
 ## getLastFocusedUIContext
 
 ```TypeScript
@@ -2062,8 +937,6 @@ static getLastFocusedUIContext(): UIContext | undefined
 获取最近一次切换到获焦状态的UI实例的UIContext。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2076,37 +949,6 @@ static getLastFocusedUIContext(): UIContext | undefined
 | 类型 |
 | --- |
 | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined |
-
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          this.message = 'Welcome';
-          let uiContext = UIContext.getLastFocusedUIContext();
-          hilog.info(0x00, 'testTag', 'Current calling UIContext is : ' + uiContext?.isAvailable());
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
 
 ## getLastForegroundUIContext
 
@@ -2118,8 +960,6 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -2132,37 +972,6 @@ static getLastForegroundUIContext(): UIContext | undefined
 | --- |
 | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined |
 
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    RelativeContainer() {
-      Text(this.message)
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          this.message = 'Welcome';
-          let uiContext = UIContext.getLastForegroundUIContext();
-          hilog.info(0x00, 'testTag', 'Current calling UIContext is : ' + uiContext?.isAvailable());
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## getMagnifier
 
 ```TypeScript
@@ -2172,8 +981,6 @@ getMagnifier(): Magnifier
 获取[Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md)对象，可控制放大镜显示和隐藏。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2187,52 +994,6 @@ getMagnifier(): Magnifier
 | --- |
 | [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) |
 
-**示例**
-
-```TypeScript
-import { Entry, Component, Column, Image, $r, TouchEvent, TouchType, SourceTool } from '@kit.ArkUI';
-import { Magnifier } from '@ohos.arkui.UIContext';
-
-@Entry
-@Component
-struct MagnifierExample {
-  private magnifier: Magnifier = this.getUIContext().getMagnifier();
-
-  build() {
-    Column() {
-      Image($r('app.media.startIcon'))
-        .width(200)
-        .height(200)
-        .margin(50)
-        .id('image')
-        .onTouch((event?: TouchEvent) => {
-          if (!event || event.sourceTool !== SourceTool.Finger) {
-            return;
-          }
-
-          if (event.type === TouchType.Down) {
-            console.info('[MagnifierExample] Screen touch down.');
-            this.magnifier.bind('image');
-          } else if (event.type === TouchType.Move) {
-            console.info('[MagnifierExample] Screen touch moving.');
-            let x = event.touches[0].x;
-            let y = event.touches[0].y;
-            this.magnifier.show(x, y)
-          } else if (event.type === TouchType.Up) {
-            console.info('[MagnifierExample] Screen touch up.');
-            this.magnifier.unbind()
-          } else if (event.type === TouchType.Cancel) {
-            console.info('[MagnifierExample] Screen touch cancel.');
-            this.magnifier.unbind()
-          }
-        })
-    }
-  }
-}
-```
-
-参考[Magnifier](arkts-apis-uicontext-magnifier.md)的bind接口示例。
-
 ## getMaxFontScale
 
 ```TypeScript
@@ -2242,8 +1003,6 @@ getMaxFontScale(): number
 Get the max font scale.
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2257,24 +1016,6 @@ Get the max font scale.
 | --- |
 | number |
 
-**示例**
-
-参考[configuration标签](../../../quick-start/app-configuration-file.md#configuration标签)，配置fontSizeMaxScale的值为“1.75”。
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('getMaxFontScale').onClick(() => {
-        console.info('getMaxFontScale', this.getUIContext().getMaxFontScale().toFixed(2));
-      });
-    }
-  }
-}
-```
-
 ## getMeasureUtils
 
 ```TypeScript
@@ -2284,8 +1025,6 @@ getMeasureUtils(): MeasureUtils
 允许用户通过UIContext对象，获取MeasureUtils对象进行文本计算。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2299,10 +1038,6 @@ getMeasureUtils(): MeasureUtils
 | --- |
 | [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) |
 
-**示例**
-
-完整示例请参考[MeasureUtils](arkts-apis-uicontext-measureutils.md)中的示例。
-
 ## getMediaQuery
 
 ```TypeScript
@@ -2312,8 +1047,6 @@ getMediaQuery(): MediaQuery
 get object mediaQuery.
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2327,10 +1060,6 @@ get object mediaQuery.
 | --- |
 | [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) |
 
-**示例**
-
-完整示例请参考mediaquery示例。
-
 ## getNavigationInfoByUniqueId
 
 ```TypeScript
@@ -2340,8 +1069,6 @@ getNavigationInfoByUniqueId(id: number): observer.NavigationInfo | undefined
 Get navigation information of the frameNode with uniqueId.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2361,10 +1088,6 @@ Get navigation information of the frameNode with uniqueId.
 | --- |
 | observer.NavigationInfo \| undefined |
 
-**示例**
-
-请参考[getPageInfoByUniqueId](#getpageinfobyuniqueid)的示例。
-
 ## getOverlayManager
 
 ```TypeScript
@@ -2374,8 +1097,6 @@ getOverlayManager(): OverlayManager
 Obtains the OverlayManager object.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2389,10 +1110,6 @@ Obtains the OverlayManager object.
 | --- |
 | [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) |
 
-**示例**
-
-完整示例请参考[OverlayManager](arkts-apis-uicontext-overlaymanager.md)中的示例。
-
 ## getOverlayManagerOptions
 
 ```TypeScript
@@ -2402,8 +1119,6 @@ getOverlayManagerOptions(): OverlayManagerOptions
 Get object OverlayManagerOptions.
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2417,10 +1132,6 @@ Get object OverlayManagerOptions.
 | --- |
 | [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) |
 
-**示例**
-
-完整示例请参考[OverlayManager](arkts-apis-uicontext-overlaymanager.md)中的示例。
-
 ## getPageInfoByUniqueId
 
 ```TypeScript
@@ -2430,8 +1141,6 @@ getPageInfoByUniqueId(id: number): PageInfo
 通过组件的uniqueId获取该节点对应的Router和NavDestination页面信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2451,53 +1160,6 @@ getPageInfoByUniqueId(id: number): PageInfo
 | --- |
 | [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) |
 
-**示例**
-
-```TypeScript
-import { UIContext, PageInfo } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct PageInfoExample {
-  @Provide('pageInfos') pageInfos: NavPathStack = new NavPathStack();
-
-  build() {
-    Column() {
-      Navigation(this.pageInfos) {
-        NavDestination() {
-          MyComponent()
-        }
-      }.id('navigation')
-    }
-  }
-}
-
-@Component
-struct MyComponent {
-  @State content: string = '';
-
-  build() {
-    Column() {
-      Text('PageInfoExample')
-      Button('click').onClick(() => {
-        const uiContext: UIContext = this.getUIContext();
-        const uniqueId: number = this.getUniqueId();
-        const pageInfo: PageInfo = uiContext.getPageInfoByUniqueId(uniqueId);
-        console.info('pageInfo: ' + JSON.stringify(pageInfo));
-        console.info('navigationInfo: ' + JSON.stringify(uiContext.getNavigationInfoByUniqueId(uniqueId)));
-      })
-      TextArea({
-        text: this.content
-      })
-      .width('100%')
-      .height(100)
-    }
-    .width('100%')
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-```
-
 ## getPageRootNode
 
 ```TypeScript
@@ -2507,8 +1169,6 @@ getPageRootNode(): FrameNode | null
 获取UIContext对应页面的根节点。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -2526,133 +1186,6 @@ getPageRootNode(): FrameNode | null
 | --- |
 | [120007](../errorcode-uicontext.md#120007-实例不存在) |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct NavigationExample {
-  @Provide('pageInfos') pageInfos: NavPathStack = new NavPathStack()
-  private arr: number[] = [1, 2, 3];
-  @State pageRootNode: FrameNode | null = null;
-
-  @Builder
-  pageMap(name: string) {
-    if (name === 'NavDestinationTitle1') {
-      pageOneTmp();
-    } else if (name === 'NavDestinationTitle2') {
-      pageTwoTmp();
-    } else if (name === 'NavDestinationTitle3') {
-      pageThreeTmp();
-    }
-  }
-
-  onPageShow(): void {
-    setTimeout(() => {
-      this.pageRootNode = this.getUIContext()?.getPageRootNode();
-      console.info('NavigationExample' + JSON.stringify(this.getUIContext().getPageRootNode()));
-    })
-  }
-
-  build() {
-    Column() {
-      Navigation(this.pageInfos) {
-        Text(`CurrentPageRootNode info: Tag ${this.pageRootNode?.getNodeType()}, NodeId： ${this.pageRootNode?.getUniqueId()}`)
-          .width('90%')
-          .height(40)
-          .backgroundColor('#FFFFFF')
-        List({ space: 12 }) {
-          ForEach(this.arr, (item: number) => {
-            ListItem() {
-              Text('Page' + item)
-                .width('100%')
-                .height(72)
-                .backgroundColor('#FFFFFF')
-                .borderRadius(24)
-                .fontSize(16)
-                .fontWeight(500)
-                .textAlign(TextAlign.Center)
-                .onClick(() => {
-                  this.pageInfos.pushPath({ name: 'NavDestinationTitle' + item });
-                })
-            }
-          }, (item: number) => item.toString())
-        }
-        .width('100%')
-        .margin({ top: 12 })
-      }
-      .title('主标题')
-      .mode(NavigationMode.Stack)
-      .navDestination(this.pageMap)
-    }
-    .height('100%')
-    .width('100%')
-    .backgroundColor('#F1F3F5')
-  }
-}
-
-@Component
-export struct pageOneTmp {
-  @Consume('pageInfos') pageInfos: NavPathStack;
-
-  aboutToDisappear(): void {
-    console.info('pageOneTmp', 'aboutToDisappear')
-  }
-
-  build() {
-    NavDestination() {
-      Column() {
-        Text('pageOneTmp')
-        Text(`CurrentPageRootNode info: Tag ${this.getUIContext()?.getPageRootNode()?.getNodeType()}, NodeId： ${this.getUIContext()?.getPageRootNode()?.getUniqueId()}`)
-      }.width('100%').height('100%')
-    }.title('NavDestinationTitle1')
-    .onBackPressed(() => {
-      const popDestinationInfo = this.pageInfos.pop(); // 弹出路由栈栈顶元素。
-      console.info('pop' + '返回值' + JSON.stringify(popDestinationInfo));
-      return true;
-    })
-  }
-}
-
-@Component
-export struct pageTwoTmp {
-  @Consume('pageInfos') pageInfos: NavPathStack;
-
-  build() {
-    NavDestination() {
-      Column() {
-        Text('pageTwoTmp')
-        Text(`CurrentPageRootNode info: Tag ${this.getUIContext()?.getPageRootNode()?.getNodeType()}, NodeId： ${this.getUIContext()?.getPageRootNode()?.getUniqueId()}`)
-      }.width('100%').height('100%')
-    }.title('NavDestinationTitle2')
-    .onBackPressed(() => {
-      const popDestinationInfo = this.pageInfos.pop(); // 弹出路由栈栈顶元素。
-      console.info('pop' + '返回值' + JSON.stringify(popDestinationInfo));
-      return true;
-    })
-  }
-}
-
-@Component
-export struct pageThreeTmp {
-  @Consume('pageInfos') pageInfos: NavPathStack;
-
-  build() {
-    NavDestination() {
-      Column() {
-        Text('pageThreeTmp')
-        Text(`CurrentPageRootNode info: Tag ${this.getUIContext()?.getPageRootNode()?.getNodeType()}, NodeId： ${this.getUIContext()?.getPageRootNode()?.getUniqueId()}`)
-      }.width('100%').height('100%')
-    }.title('NavDestinationTitle3')
-    .onBackPressed(() => {
-      const popDestinationInfo = this.pageInfos.pop(); // 弹出路由栈栈顶元素。
-      console.info('pop' + '返回值' + JSON.stringify(popDestinationInfo));
-      return true;
-    })
-  }
-}
-```
-
 ## getPixelRoundMode
 
 ```TypeScript
@@ -2662,8 +1195,6 @@ getPixelRoundMode(): PixelRoundMode
 获取当前应用的像素取整模式。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2675,24 +1206,7 @@ getPixelRoundMode(): PixelRoundMode
 
 | 类型 |
 | --- |
-| [PixelRoundMode](arkts-arkui-enums-pixelroundmode-e.md) |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIContext } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility{
-  onWindowStageCreate(windowStage: window.WindowStage) {
-
-      windowStage.loadContent('pages/Index', (err, data) => {
-        let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
-        console.info("pixelRoundMode : " + uiContext.getPixelRoundMode().valueOf());
-      });
-    }
-}
-```
+| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) |
 
 ## getPromptAction
 
@@ -2703,8 +1217,6 @@ getPromptAction(): PromptAction
 get object PromptAction.
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2718,10 +1230,6 @@ get object PromptAction.
 | --- |
 | [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) |
 
-**示例**
-
-完整示例请参考[PromptAction](arkts-apis-uicontext-promptaction.md)中的示例。
-
 ## getRouter
 
 ```TypeScript
@@ -2731,8 +1239,6 @@ getRouter(): Router
 Obtains a Router object.
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2746,10 +1252,6 @@ Obtains a Router object.
 | --- |
 | [Router](arkts-arkui-arkui-uicontext-router-c.md) |
 
-**示例**
-
-完整示例请参考pushUrl。
-
 ## getSharedLocalStorage
 
 ```TypeScript
@@ -2759,8 +1261,6 @@ getSharedLocalStorage(): LocalStorage | undefined
 获取当前stage共享的LocalStorage实例。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2772,50 +1272,7 @@ getSharedLocalStorage(): LocalStorage | undefined
 
 | 类型 |
 | --- |
-| [LocalStorage](arkts-arkui-localstorage-localstorage-c.md) \| undefined |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  storage: LocalStorage = new LocalStorage();
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    windowStage.loadContent('pages/Index', this.storage);
-  }
-}
-```
-
-```TypeScript
-// Index.ets
-
-@Entry
-@Component
-struct SharedLocalStorage {
-  localStorage = this.getUIContext().getSharedLocalStorage();
-
-  build() {
-    Row() {
-      Column() {
-        Button("Change Local Storage to 47")
-          .onClick(() => {
-            this.localStorage?.setOrCreate("propA", 47);
-          })
-        Button("Get Local Storage")
-          .onClick(() => {
-            console.info(`localStorage: ${this.localStorage?.get("propA")}`);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| [LocalStorage](arkts-arkui-localstorage-c.md) \| undefined |
 
 ## getSmartGestureController
 
@@ -2826,8 +1283,6 @@ getSmartGestureController(): SmartGestureController
 获取对象智能手势控制器。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2841,10 +1296,6 @@ getSmartGestureController(): SmartGestureController
 | --- |
 | [SmartGestureController](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) |
 
-**示例**
-
-参考智慧手势控制器示例1（启用智慧手势并自定义动作处理）。
-
 ## getTextMenuController
 
 ```TypeScript
@@ -2854,8 +1305,6 @@ getTextMenuController(): TextMenuController
 获取[TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md)对象，可通过该对象控制文本选择菜单。
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2869,10 +1318,6 @@ getTextMenuController(): TextMenuController
 | --- |
 | [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) |
 
-**示例**
-
-参考[TextMenuController](arkts-apis-uicontext-textmenucontroller.md)接口示例。
-
 ## getUIInspector
 
 ```TypeScript
@@ -2882,8 +1327,6 @@ getUIInspector(): UIInspector
 获取UIInspector对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2897,10 +1340,6 @@ getUIInspector(): UIInspector
 | --- |
 | [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) |
 
-**示例**
-
-完整示例请参考[UIInspector](./arkts-apis-uicontext-uiinspector.md)中的示例。
-
 ## getUIObserver
 
 ```TypeScript
@@ -2910,8 +1349,6 @@ getUIObserver(): UIObserver
 获取UIObserver对象。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2925,65 +1362,15 @@ getUIObserver(): UIObserver
 | --- |
 | [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) |
 
-**示例**
-
-```TypeScript
-@Component
-struct PageOne {
-  build() {
-    NavDestination() {
-      Text("pageOne")
-    }.title("pageOne")
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  private stack: NavPathStack = new NavPathStack();
-
-  @Builder
-  PageBuilder(name: string) {
-    PageOne()
-  }
-
-  aboutToAppear() {
-    this.getUIContext().getUIObserver().on('navDestinationUpdate', (info) => {
-      console.info('NavDestination state update', JSON.stringify(info));
-    });
-  }
-
-  aboutToDisappear() {
-    this.getUIContext().getUIObserver().off('navDestinationUpdate');
-  }
-
-  build() {
-    Column() {
-      Navigation(this.stack) {
-        Button("push").onClick(() => {
-          this.stack.pushPath({ name: "pageOne" });
-        })
-      }
-      .title("Navigation")
-      .navDestination(this.PageBuilder)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## getWindowHeightBreakpoint
 
 ```TypeScript
 getWindowHeightBreakpoint(): HeightBreakpoint
 ```
 
-获取当前实例所在窗口的高度断点。具体枚举值根据窗口高宽比确定，详见 HeightBreakpoint。
+获取当前实例所在窗口的高度断点。具体枚举值根据窗口高宽比确定，详见 [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2995,41 +1382,7 @@ getWindowHeightBreakpoint(): HeightBreakpoint
 
 | 类型 |
 | --- |
-| [HeightBreakpoint](arkts-arkui-enums-heightbreakpoint-e.md) |
-
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-        Button() {
-          Text('test')
-            .fontSize(30)
-        }
-        .onClick(() => {
-          let uiContext: UIContext = this.getUIContext();
-          let heightBp: HeightBreakpoint = uiContext.getWindowHeightBreakpoint();
-          let widthBp: WidthBreakpoint = uiContext.getWindowWidthBreakpoint();
-          console.info(`Window heightBP: ${heightBp}, widthBp: ${widthBp}`);
-        })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) |
 
 ## getWindowId
 
@@ -3045,8 +1398,6 @@ getWindowId(): number | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -3059,35 +1410,6 @@ getWindowId(): number | undefined
 | --- |
 | number \| undefined |
 
-**示例**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  aboutToAppear() {
-    const windowId = this.getUIContext().getWindowId();
-    hilog.info(0x0000, 'testTag', 'current window id: %{public}d', windowId);
-  }
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## getWindowName
 
 ```TypeScript
@@ -3097,8 +1419,6 @@ getWindowName(): string | undefined
 获取当前实例所在窗口的名称。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3112,49 +1432,15 @@ getWindowName(): string | undefined
 | --- |
 | string \| undefined |
 
-**示例**
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  aboutToAppear() {
-    const windowName = this.getUIContext().getWindowName();
-    console.info('WindowName ' + windowName);
-    const currWindow = window.findWindow(windowName);
-    const windowProperties = currWindow.getWindowProperties();
-    console.info(`Window width ${windowProperties.windowRect.width}, height ${windowProperties.windowRect.height}`);
-  }
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## getWindowWidthBreakpoint
 
 ```TypeScript
 getWindowWidthBreakpoint(): WidthBreakpoint
 ```
 
-获取当前实例所在窗口的宽度断点枚举值。具体枚举值根据窗口宽度vp值确定，详见 WidthBreakpoint。
+获取当前实例所在窗口的宽度断点枚举值。具体枚举值根据窗口宽度vp值确定，详见 [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3166,40 +1452,7 @@ getWindowWidthBreakpoint(): WidthBreakpoint
 
 | 类型 |
 | --- |
-| [WidthBreakpoint](arkts-arkui-enums-widthbreakpoint-e.md) |
-
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-        Button() {
-          Text('test')
-            .fontSize(30)
-        }
-        .onClick(() => {
-          let uiContext: UIContext = this.getUIContext();
-          let widthBp: WidthBreakpoint = uiContext.getWindowWidthBreakpoint();
-          console.info(`Window widthBp: ${widthBp}`);
-        })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) |
 
 ## isAvailable
 
@@ -3210,8 +1463,6 @@ isAvailable(): boolean
 判断UIContext对象对应的UI实例是否有效。使用 getUIContext方法获取UIContext对象。后端UI实例存在时， 该UI实例有效。通过new UIContext()创建的UIContext对象无对应的UI实例；多次 [loadContent](arkts-arkui-window-window-i.md#loadcontent)后，旧的UI实例会失效。多窗口应用场景，当窗口关闭后，该窗 口的UI实例失效。总而言之，当UIContext对象没有对应的后端UI实例时，该对象是无效的。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3225,66 +1476,6 @@ isAvailable(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct UIContextCompare {
-  @State result1: string = ""
-  @State result2: string = ""
-
-  build() {
-    Column() {
-      Text("getUIContext() 结果: " + this.result1)
-        .fontSize(20)
-        .margin(10)
-
-      Text("new UIContext() 结果: " + this.result2)
-        .fontSize(20)
-        .margin(10)
-
-      Divider().margin(20)
-
-      Button("getUIContext()")
-        .width("70%")
-        .height(50)
-        .margin(10)
-        .onClick(() => {
-          try {
-            const ctx: UIContext = this.getUIContext();
-            const available: boolean = ctx.isAvailable();
-            this.result1 = `可用状态: ${available} UI实例有效 `;
-            console.info("getUIContext测试:", available);
-          } catch (e) {
-            this.result1 = "错误: " + (e instanceof Error ? e.message : String(e));
-          }
-        })
-
-      Button("new UIContext()")
-        .width("70%")
-        .height(50)
-        .margin(10)
-        .onClick(() => {
-          try {
-            const ctx: UIContext = new UIContext();
-            const available: boolean = ctx.isAvailable();
-            this.result2 = `可用状态: ${available} UI实例无效`;
-            console.info("new UIContext测试:", available);
-          } catch (e) {
-            this.result2 = "错误: " + (e instanceof Error ? e.message : String(e));
-          }
-        })
-    }
-    .width("100%")
-    .height("100%")
-    .padding(20)
-  }
-}
-```
-
 ## isEasySplit
 
 ```TypeScript
@@ -3294,8 +1485,6 @@ isEasySplit(): boolean
 检查当前UI实例是否处于分栏模式。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3309,30 +1498,6 @@ isEasySplit(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  @State isEasySplit: boolean = false;
-
-  build() {
-    Column() {
-      Text(`${this.isEasySplit ? 'current is easy split mode' : 'current is not easy split mode'}`)
-        .fontSize(20)
-        .margin(10)
-      Button('Check EasySplit')
-        .onClick(() => {
-          this.isEasySplit = this.getUIContext()?.isEasySplit();
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## isFollowingSystemFontScale
 
 ```TypeScript
@@ -3342,8 +1507,6 @@ isFollowingSystemFontScale(): boolean
 Checks whether current font scale follows the system.
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3357,24 +1520,6 @@ Checks whether current font scale follows the system.
 | --- |
 | boolean |
 
-**示例**
-
-参考[configuration标签](../../../quick-start/app-configuration-file.md#configuration标签)，配置fontSizeScale的值为“followSystem”。
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('isFollowingSystemFontScale').onClick(() => {
-        console.info('isFollowingSystemFontScale', this.getUIContext().isFollowingSystemFontScale());
-      });
-    }
-  }
-}
-```
-
 ## keyframeAnimateTo
 
 ```TypeScript
@@ -3384,8 +1529,6 @@ keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>):
 产生关键帧动画。该接口的使用说明请参考keyframeAnimateTo。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3397,68 +1540,8 @@ keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>):
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| param | [KeyframeAnimateParam](arkts-arkui-common-keyframeanimateparam-i.md) | 是 |
-| keyframes | Array&lt;[KeyframeState](arkts-arkui-common-keyframestate-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { UIContext } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct KeyframeDemo {
-  @State myScale: number = 1.0;
-  uiContext: UIContext | undefined = undefined;
-
-  aboutToAppear() {
-    this.uiContext = this.getUIContext();
-  }
-
-  build() {
-    Column() {
-      Circle()
-        .width(100)
-        .height(100)
-        .fill("#46B1E3")
-        .margin(100)
-        .scale({ x: this.myScale, y: this.myScale })
-        .onClick(() => {
-          if (!this.uiContext) {
-            console.error("no uiContext, keyframe failed");
-            return;
-          }
-          this.myScale = 1;
-          // 设置关键帧动画整体播放3次
-          this.uiContext.keyframeAnimateTo({
-              iterations: 3,
-              expectedFrameRateRange: {
-                min: 10,
-                max: 120,
-                expected: 60,
-              }
-            }, [
-            {
-              // 第一段关键帧动画时长为800ms，scale属性做从1到1.5的动画
-              duration: 800,
-              event: () => {
-                this.myScale = 1.5;
-              }
-            },
-            {
-              // 第二段关键帧动画时长为500ms，scale属性做从1.5到1的动画
-              duration: 500,
-              event: () => {
-                this.myScale = 1;
-              }
-            }
-          ]);
-        })
-    }.width('100%').margin({ top: 5 })
-  }
-}
-```
+| param | [KeyframeAnimateParam](../arkts-components/arkts-arkui-keyframeanimateparam-i.md) | 是 |
+| keyframes | Array&lt;[KeyframeState](../arkts-components/arkts-arkui-keyframestate-i.md)&gt; | 是 |
 
 ## lpx2px
 
@@ -3474,8 +1557,6 @@ lpx2px(value: number): number
 > 调用此接口，否则无法返回准确结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3493,32 +1574,6 @@ lpx2px(value: number): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct MatrixExample {
-  build() {
-    Column({ space: 100 }) {
-      Text('Hello1')
-        .textAlign(TextAlign.Center)
-        .width(100)
-        .height(60)
-        .backgroundColor(0xAFEEEE)
-        .borderWidth(1)
-        .rotate({
-          z: 1,
-          angle: 90,
-          centerX: this.getUIContext().lpx2px(50),
-          centerY: this.getUIContext().lpx2px(30)
-        })
-    }.width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## openBindSheet
 
 ```TypeScript
@@ -3535,8 +1590,6 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -3548,7 +1601,7 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bindSheetContent | ComponentContent & lt;T & gt; | 是 |
-| sheetOptions | [SheetOptions](arkts-arkui-common-sheetoptions-i.md) | 否 |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 否 |
 | targetId | number | 否 |
 
 **返回值：**
@@ -3568,95 +1621,6 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 | [120005](../errorcode-bindSheet.md#120005-指定的targetid对应的节点未挂载在组件树上) |
 | [120006](../errorcode-bindSheet.md#120006-指定的targetid对应的节点并不是page节点或navdestination节点的子节点) |
 
-**示例**
-
-```TypeScript
-import { FrameNode, ComponentContent } from "@kit.ArkUI";
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Params {
-  text: string = "";
-
-  constructor(text: string) {
-    this.text = text;
-  }
-}
-
-let contentNode: ComponentContent<Params>;
-let gUIContext: UIContext;
-
-@Builder
-function buildText(params: Params) {
-  Column() {
-    Text(params.text)
-    Button('Update BindSheet')
-      .fontSize(20)
-      .onClick(() => {
-        gUIContext.updateBindSheet(contentNode, {
-          backgroundColor: Color.Pink,
-        }, true)
-          .then(() => {
-            console.info('updateBindSheet success');
-          })
-          .catch((err: BusinessError) => {
-            console.error('updateBindSheet error: ' + err.code + ' ' + err.message);
-          })
-      })
-
-    Button('Close BindSheet')
-      .fontSize(20)
-      .onClick(() => {
-        gUIContext.closeBindSheet(contentNode)
-          .then(() => {
-            console.info('closeBindSheet success');
-          })
-          .catch((err: BusinessError) => {
-            console.error('closeBindSheet error: ' + err.code + ' ' + err.message);
-          })
-      })
-  }
-}
-
-@Entry
-@Component
-struct UIContextBindSheet {
-  @State message: string = 'BindSheet';
-
-  aboutToAppear() {
-    gUIContext = this.getUIContext();
-    contentNode = new ComponentContent(this.getUIContext(), wrapBuilder(buildText), new Params(this.message));
-  }
-
-  build() {
-    RelativeContainer() {
-      Column() {
-        Button('Open BindSheet')
-          .fontSize(20)
-          .onClick(() => {
-            let uiContext = this.getUIContext();
-            let uniqueId = this.getUniqueId();
-            let frameNode: FrameNode | null = uiContext.getFrameNodeByUniqueId(uniqueId);
-            let targetId = frameNode?.getFirstChild()?.getUniqueId();
-            uiContext.openBindSheet(contentNode, {
-              height: SheetSize.MEDIUM,
-              backgroundColor: Color.Green,
-              title: { title: "Title", subtitle: "subtitle" }
-            }, targetId)
-              .then(() => {
-                console.info('openBindSheet success');
-              })
-              .catch((err: BusinessError) => {
-                console.error('openBindSheet error: ' + err.code + ' ' + err.message);
-              })
-          })
-      }
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## postDelayedFrameCallback
 
 ```TypeScript
@@ -3666,8 +1630,6 @@ postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void
 注册一个回调，在延迟一段时间后的下一帧进行渲染时执行。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3682,38 +1644,6 @@ postDelayedFrameCallback(frameCallback: FrameCallback, delayTime: number): void
 | frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 |
 | delayTime | number | 是 |
 
-**示例**
-
-```TypeScript
-import { FrameCallback } from '@kit.ArkUI';
-
-class MyFrameCallback extends FrameCallback {
-  private tag: string;
-
-  constructor(tag: string) {
-    super();
-    this.tag = tag;
-  }
-
-  onFrame(frameTimeNanos: number) {
-    console.info('MyFrameCallback ' + this.tag + ' ' + frameTimeNanos.toString());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Button('点击触发postDelayedFrameCallback')
-        .onClick(() => {
-          this.getUIContext().postDelayedFrameCallback(new MyFrameCallback("delayTask"), 5);
-        })
-    }
-  }
-}
-```
-
 ## postFrameCallback
 
 ```TypeScript
@@ -3723,8 +1653,6 @@ postFrameCallback(frameCallback: FrameCallback): void
 注册一个回调，仅在下一帧渲染时调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3737,38 +1665,6 @@ postFrameCallback(frameCallback: FrameCallback): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { FrameCallback } from '@kit.ArkUI';
-
-class MyFrameCallback extends FrameCallback {
-  private tag: string;
-
-  constructor(tag: string) {
-    super();
-    this.tag = tag;
-  }
-
-  onFrame(frameTimeNanos: number) {
-    console.info('MyFrameCallback ' + this.tag + ' ' + frameTimeNanos.toString());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Button('点击触发postFrameCallback')
-        .onClick(() => {
-          this.getUIContext().postFrameCallback(new MyFrameCallback("normTask"));
-        })
-    }
-  }
-}
-```
 
 ## px2fp
 
@@ -3785,8 +1681,6 @@ px2fp(value: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -3802,32 +1696,6 @@ px2fp(value: number): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct MatrixExample {
-  build() {
-    Column({ space: 100 }) {
-      Text('Hello1')
-        .textAlign(TextAlign.Center)
-        .width(100)
-        .height(60)
-        .backgroundColor(0xAFEEEE)
-        .borderWidth(1)
-        .rotate({
-          z: 1,
-          angle: 90,
-          centerX: this.getUIContext().px2fp(50),
-          centerY: this.getUIContext().px2fp(30)
-        })
-    }.width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## px2lpx
 
@@ -3844,8 +1712,6 @@ px2lpx(value: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -3861,32 +1727,6 @@ px2lpx(value: number): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct MatrixExample {
-  build() {
-    Column({ space: 100 }) {
-      Text('Hello1')
-        .textAlign(TextAlign.Center)
-        .width(100)
-        .height(60)
-        .backgroundColor(0xAFEEEE)
-        .borderWidth(1)
-        .rotate({
-          z: 1,
-          angle: 90,
-          centerX: this.getUIContext().px2lpx(50),
-          centerY: this.getUIContext().px2lpx(30)
-        })
-    }.width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## px2vp
 
@@ -3905,8 +1745,6 @@ px2vp(value: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -3923,32 +1761,6 @@ px2vp(value: number): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct MatrixExample {
-  build() {
-    Column({ space: 100 }) {
-      Text('Hello1')
-        .textAlign(TextAlign.Center)
-        .width(100)
-        .height(60)
-        .backgroundColor(0xAFEEEE)
-        .borderWidth(1)
-        .rotate({
-          z: 1,
-          angle: 90,
-          centerX: this.getUIContext().px2vp(50),
-          centerY: this.getUIContext().px2vp(30)
-        })
-    }.width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## removeLocalInputEventMonitor
 
 ```TypeScript
@@ -3960,8 +1772,6 @@ removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -3972,89 +1782,7 @@ removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| monitor | [InputEventMonitor](arkts-arkui-common-inputeventmonitor-i.md) | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-@Entry
-@Component
-struct RemoveMonitorSample {
-  private uiContext: UIContext | undefined = undefined;
-  private monitor: InputEventMonitor | null = null;
-  aboutToAppear() {
-    this.uiContext = this.getUIContext();
-    this.monitor = this.uiContext.addLocalInputEventMonitor(
-      InputEventSubTypeMask.LEFT_MOUSE_DOWN,
-      (wrapper: RawInputEventWrapper) => {
-        return { action: InputEventInterceptAction.CONTINUE };
-      }
-    );
-  }
-  aboutToDisappear() {
-    // 组件销毁时移除监听器
-    if (this.monitor && this.uiContext) {
-      this.uiContext.removeLocalInputEventMonitor(this.monitor);
-    }
-  }
-  build() {
-    Column() {
-      Button('Remove Monitor')
-        .onClick(() => {
-          if (this.monitor && this.uiContext) {
-            this.uiContext.removeLocalInputEventMonitor(this.monitor);
-            this.monitor = null;
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Text, Column, Component, Button, UIContext, InputEventSubTypeMask, RawInputEventWrapper, InputEventInterceptAction, InputEventMonitor, InputEventListener } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct RemoveMonitorSample {
-  private uiContext: UIContext | undefined = undefined;
-  private monitor: InputEventMonitor | undefined = undefined;
-  aboutToAppear() {
-    this.uiContext = this.getUIContext();
-    this.monitor = this.uiContext?.addLocalInputEventMonitor(
-      InputEventSubTypeMask.LEFT_MOUSE_DOWN,
-      (wrapper: RawInputEventWrapper) => {
-        return { action: InputEventInterceptAction.CONTINUE };
-      }
-    );
-  }
-  aboutToDisappear() {
-    // 组件销毁时移除监听器
-    if (this.monitor && this.uiContext) {
-      this.uiContext!.removeLocalInputEventMonitor(this.monitor as InputEventMonitor);
-    }
-  }
-  build() {
-    Column() {
-      Button('Remove Monitor')
-        .onClick(() => {
-          if (this.monitor && this.uiContext) {
-            this.uiContext!.removeLocalInputEventMonitor(this.monitor as InputEventMonitor);
-            this.monitor = undefined;
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| monitor | [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) | 是 |
 
 ## requireDynamicSyncScene
 
@@ -4065,8 +1793,6 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 请求组件的动态帧率场景，用于自定义场景相关帧率配置。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4085,56 +1811,6 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 | 类型 |
 | --- |
 | Array&lt;[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; |
-
-**示例**
-
-```TypeScript
-import { SwiperDynamicSyncSceneType, SwiperDynamicSyncScene } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Frame {
-  @State ANIMATION: ExpectedFrameRateRange = { min: 0, max: 120, expected: 90 };
-  @State GESTURE: ExpectedFrameRateRange = { min: 0, max: 120, expected: 30 };
-  private scenes: SwiperDynamicSyncScene[] = [];
-
-  build() {
-    Column() {
-      Text("动画" + JSON.stringify(this.ANIMATION))
-      Text("跟手" + JSON.stringify(this.GESTURE))
-      Row() {
-        Swiper() {
-          Text("one")
-          Text("two")
-          Text("three")
-        }
-        .width('100%')
-        .height('300vp')
-        .id("dynamicSwiper")
-        .backgroundColor(Color.Blue)
-        .autoPlay(true)
-        .onAppear(() => {
-          this.scenes = this.getUIContext().requireDynamicSyncScene("dynamicSwiper") as SwiperDynamicSyncScene[];
-        })
-      }
-
-      Button("set frame")
-        .onClick(() => {
-          this.scenes.forEach((scenes: SwiperDynamicSyncScene) => {
-
-            if (scenes.type == SwiperDynamicSyncSceneType.ANIMATION) {
-              scenes.setFrameRateRange(this.ANIMATION);
-            }
-
-            if (scenes.type == SwiperDynamicSyncSceneType.GESTURE) {
-              scenes.setFrameRateRange(this.GESTURE);
-            }
-          });
-        })
-    }
-  }
-}
-```
 
 ## resolveUIContext
 
@@ -4156,8 +1832,6 @@ static resolveUIContext(): ResolvedUIContext
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -4170,28 +1844,6 @@ static resolveUIContext(): ResolvedUIContext
 | --- |
 | [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) |
 
-**示例**
-
-```TypeScript
-import { UIContext } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('click').onClick(() => {
-        let resolvedUIContext = UIContext.resolveUIContext();
-        hilog.info(0x00, 'testTag', `UIContext id: ${resolvedUIContext.getId()}, strategy: ${resolvedUIContext.strategy}}`);
-      })
-    }
-    .width(UIContext.resolveUIContext().px2vp(100))
-    .height('100%')
-  }
-}
-```
-
 ## runScopedTask
 
 ```TypeScript
@@ -4201,8 +1853,6 @@ runScopedTask(callback: () => void): void
 在当前UIContext对应的UI实例作用域内执行传入的回调函数。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4216,30 +1866,6 @@ runScopedTask(callback: () => void): void
 | --- | --- | --- |
 | callback | () = & gt; void | 是 |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  uiContext = this.getUIContext();
-
-  build() {
-    Row() {
-      Column() {
-        Button("run task").onClick(() => {
-          this.uiContext.runScopedTask(() => {
-            // do something
-          })
-        })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## setCustomKeyboardContinueFeature
 
 ```TypeScript
@@ -4249,8 +1875,6 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 设置自定义键盘接续特性。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4264,113 +1888,6 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 | --- | --- | --- |
 | [feature](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { CustomKeyboardContinueFeature } from '@ohos.arkui.UIContext';
-
-@Entry
-@Component
-struct Index {
-  controller: TextInputController = new TextInputController();
-  controller2: TextInputController = new TextInputController();
-  @State inputValue: string = '';
-  @State inputValue2: string = '';
-  @State supportAvoidance: boolean = true;
-  @State isValue: CustomKeyboardContinueFeature = CustomKeyboardContinueFeature.DISABLED;
-  @State str: string = '否';
-
-  // 自定义键盘组件
-  @Builder
-  CustomKeyboardBuilder() {
-    Column() {
-      Row() {
-        Button('x').onClick(() => {
-          // 关闭自定义键盘
-          this.controller.stopEditing();
-        }).margin(10)
-        Button('delete').onClick(() => {
-          this.inputValue = this.inputValue.slice(0, -1);
-        }).margin(10)
-      }
-
-      Grid() {
-        ForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, '*', 0, '#'], (item: number | string) => {
-          GridItem() {
-            Button(item + '')
-              .width(110).onClick(() => {
-              this.inputValue += item;
-            })
-          }
-        })
-      }.maxCount(3).columnsGap(10).rowsGap(10).padding(5)
-    }.backgroundColor('rgb(213, 213, 213)').height(300)
-  }
-
-  // 自定义键盘组件
-  @Builder
-  CustomKeyboardBuilder2() {
-    Column() {
-      Row() {
-        Button('x').onClick(() => {
-          // 关闭自定义键盘
-          this.controller2.stopEditing();
-        }).margin(10)
-        Button('delete').onClick(() => {
-          this.inputValue2 = this.inputValue2.slice(0, -1);
-        }).margin(10)
-      }
-
-      Grid() {
-        ForEach([1, 2, 3, 4, 5, 6, 7, 8, 9, '*', 0, '#'], (item: number | string) => {
-          GridItem() {
-            Button(item + '')
-              .width(110).onClick(() => {
-              this.inputValue2 += item;
-            })
-          }
-        })
-      }.maxCount(3).columnsGap(10).rowsGap(10).padding(5)
-    }.backgroundColor('rgb(227, 248, 249)').height(150)
-  }
-
-  build() {
-    Scroll() {
-      Column() {
-        Button('是否接续：' + this.str).onClick(() => {
-          if (this.isValue == CustomKeyboardContinueFeature.ENABLED) {
-            this.isValue = CustomKeyboardContinueFeature.DISABLED
-            this.str = '否'
-          } else {
-            this.isValue = CustomKeyboardContinueFeature.ENABLED
-            this.str = '是'
-          }
-          this.getUIContext().setCustomKeyboardContinueFeature(this.isValue);
-        }).fontSize(20).width('80%').key('button')
-
-        TextInput({
-          placeholder: 'TextInput1 bind CustomKeyboardBuilder',
-          controller: this.controller,
-          text: this.inputValue
-        })// 绑定自定义键盘
-          .customKeyboard(this.CustomKeyboardBuilder(), { supportAvoidance: this.supportAvoidance })
-          .margin(10)
-          .border({ width: 1 })
-        TextInput({
-          placeholder: 'TextInput2 bind CustomKeyboardBuilder2',
-          controller: this.controller2,
-          text: this.inputValue2
-        })// 绑定自定义键盘
-          .customKeyboard(this.CustomKeyboardBuilder2(), { supportAvoidance: this.supportAvoidance })
-          .margin(10)
-          .border({ width: 1 })
-      }
-    }
-  }
-}
-```
-
 ## setImageCacheCount
 
 ```TypeScript
@@ -4380,8 +1897,6 @@ setImageCacheCount(value: number): void
 设置内存中缓存解码后图片的数量上限，提升再次加载同源图片的加载速度。如果不设置则默认为0，不进行缓存。缓存采用内置的LRU策略，新图片加载后，如果超过缓存上限，会删除最久未再次加载的缓存。 建议根据应用内存需求，设置合理缓存数量，数字过大可能导致内存使用过高。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4394,32 +1909,6 @@ setImageCacheCount(value: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | number | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Index {
-  onPageShow() {
-    // 设置解码后图片内存缓存上限为100张
-    this.getUIContext().setImageCacheCount(100);
-    console.info('Application onPageShow');
-  }
-  onDestroy() {
-    console.info('Application onDestroy');
-  }
-
-  build() {
-    Row(){
-      Image('https://www.example.com/xxx.png') // 请填写一个具体的网络图片地址
-        .width(200)
-        .height(50)
-    }.width('100%')
-  }
-}
-```
 
 ## setImageRawDataCacheSize
 
@@ -4431,8 +1920,6 @@ setImageRawDataCacheSize(value: number): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -4444,32 +1931,6 @@ setImageRawDataCacheSize(value: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | number | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct Index {
-  onPageShow() {
-    // 设置解码前图片数据内存缓存上限为100MB (100MB=100*1024*1024B=104857600B)
-    this.getUIContext().setImageRawDataCacheSize(104857600); 
-    console.info('Application onPageShow');
-  }
-  onDestroy() {
-    console.info('Application onDestroy');
-  }
-
-  build() {
-    Row(){
-      Image('https://www.example.com/xxx.png') // 请填写一个具体的网络图片地址
-        .width(200)
-        .height(50)
-    }.width('100%')
-  }
-}
-```
 
 ## setKeyboardAvoidMode
 
@@ -4486,8 +1947,6 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -4500,25 +1959,6 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 | --- | --- | --- |
 | value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | 是 |
 
-**示例**
-
-完整示例请参考[示例4（设置键盘避让模式为压缩）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例4设置键盘避让模式为压缩)、[示例5（设置键盘避让模式为上抬）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例5设置键盘避让模式为上抬)以及[示例6（切换避让模式）](../arkui-ts/ts-universal-attributes-expand-safe-area.md#示例6切换避让模式)。
-
-```TypeScript
-// EntryAbility.ets
-import { KeyboardAvoidMode, UIContext } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility{
-  onWindowStageCreate(windowStage: window.WindowStage) {
-
-      windowStage.loadContent('pages/Index', (err, data) => {
-        let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
-        uiContext.setKeyboardAvoidMode(KeyboardAvoidMode.RESIZE);
-      });
-    }
-}
-```
-
 ## setOverlayManagerOptions
 
 ```TypeScript
@@ -4528,8 +1968,6 @@ setOverlayManagerOptions(options: OverlayManagerOptions): boolean
 Init OverlayManager.
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4549,10 +1987,6 @@ Init OverlayManager.
 | --- |
 | boolean |
 
-**示例**
-
-完整示例请参考[OverlayManager](arkts-apis-uicontext-overlaymanager.md)中的示例。
-
 ## setPixelRoundMode
 
 ```TypeScript
@@ -4562,8 +1996,6 @@ setPixelRoundMode(mode: PixelRoundMode): void
 设置当前页面的像素取整模式。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4575,24 +2007,7 @@ setPixelRoundMode(mode: PixelRoundMode): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mode | [PixelRoundMode](arkts-arkui-enums-pixelroundmode-e.md) | 是 |
-
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIContext } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-
-    windowStage.loadContent('pages/Index', (err, data) => {
-      let uiContext: UIContext = windowStage.getMainWindowSync().getUIContext();
-      uiContext.setPixelRoundMode(PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH);
-    });
-  }
-}
-```
+| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 是 |
 
 ## setResourceManagerCacheMaxCountForHSP
 
@@ -4603,8 +2018,6 @@ static setResourceManagerCacheMaxCountForHSP(count: number): void
 设置HSP资源管理对象的缓存数量上限。如果缓存的上限设置得过高，可能会导致内存开销过大，存在内存过载的风险。 建议根据实际需求进行配置。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4626,31 +2039,6 @@ static setResourceManagerCacheMaxCountForHSP(count: number): void
 | [100102](../errorcode-uicontext.md#100102-参数类型错误) |
 | [100103](../errorcode-uicontext.md#100103-调用线程错误) |
 
-**示例**
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { UIContext, window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // Main window is created, set main page for this ability
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', err.message);
-        return;
-      }
-      UIContext.setResourceManagerCacheMaxCountForHSP(5);
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
-    });
-  }
-}
-```
-
 ## setTextSelectionClearPolicy
 
 ```TypeScript
@@ -4660,8 +2048,6 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 设置文本组件的文本选择清除策略。 默认策略：**TextSelectionClearPolicy.KEEP_ON_EXTERNAL_CLICK**。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4675,84 +2061,6 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 | --- | --- | --- |
 | policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { TextSelectionClearPolicy } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'Hello World';
-
-  build() {
-    Column() {
-      Text(this.message)
-        .fontSize(20)
-        .margin(10)
-        .copyOption(CopyOptions.LocalDevice)
-      Button('Set Clear Policy')
-        .onClick(() => {
-          this.getUIContext()?.setTextSelectionClearPolicy(TextSelectionClearPolicy.CLEAR_SELECTED_TEXT_ON_EXTERNAL_TOUCH);
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Text, Column, ClickEvent, Button, CopyOptions, TextSelectionClearPolicy } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  message: string = 'Hello World';
-
-  build() {
-    Column() {
-      Text(this.message)
-        .fontSize(20)
-        .margin(10)
-        .copyOption(CopyOptions.LocalDevice)
-      Button('Set Clear Policy')
-        .onClick((e: ClickEvent) => {
-          this.getUIContext()?.setTextSelectionClearPolicy(TextSelectionClearPolicy.CLEAR_SELECTED_TEXT_ON_EXTERNAL_TOUCH);
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-## setUIStates
-
-```TypeScript
-setUIStates(callback: VoidCallback): void
-```
-
-线程安全的UI状态变量更新接口。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 |
-
 ## showActionSheet
 
 ```TypeScript
@@ -4762,8 +2070,6 @@ showActionSheet(value: ActionSheetOptions): void
 Shows an action sheet in the given settings.
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4775,61 +2081,7 @@ Shows an action sheet in the given settings.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [ActionSheetOptions](arkts-arkui-actionsheet-actionsheetoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  uiContext: UIContext = this.getUIContext()
-
-  build() {
-    Column() {
-      Button('showActionSheet')
-        .onClick(() => {
-          this.uiContext.showActionSheet({
-            title: 'ActionSheet title',
-            message: 'message',
-            autoCancel: true,
-            confirm: {
-              value: 'Confirm button',
-              action: () => {
-                console.info('Get ActionSheet handled');
-              }
-            },
-            cancel: () => {
-              console.info('ActionSheet canceled');
-            },
-            alignment: DialogAlignment.Bottom,
-            offset: { dx: 0, dy: -10 },
-            sheets: [
-              {
-                title: 'apples',
-                action: () => {
-                  console.info('apples');
-                }
-              },
-              {
-                title: 'bananas',
-                action: () => {
-                  console.info('bananas');
-                }
-              },
-              {
-                title: 'pears',
-                action: () => {
-                  console.info('pears');
-                }
-              }
-            ]
-          });
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
+| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | 是 |
 
 ## showAlertDialog
 
@@ -4841,8 +2093,6 @@ alertDialog display.
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -4853,44 +2103,7 @@ alertDialog display.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialog-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialog-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialog-alertdialogparamwithoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  uiContext: UIContext = this.getUIContext()
-
-  build() {
-    Column() {
-      Button('showAlertDialog')
-        .onClick(() => {
-          this.uiContext.showAlertDialog(
-            {
-              title: 'title',
-              message: 'text',
-              autoCancel: true,
-              alignment: DialogAlignment.Bottom,
-              offset: { dx: 0, dy: -20 },
-              gridCount: 3,
-              confirm: {
-                value: 'button',
-                action: () => {
-                  console.info('Button-clicking callback');
-                }
-              },
-              cancel: () => {
-                console.info('Closed callbacks');
-              }
-            }
-          );
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
+| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 是 |
 
 ## showDatePickerDialog
 
@@ -4902,8 +2115,6 @@ datePickerDialog display.
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -4914,60 +2125,7 @@ datePickerDialog display.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [DatePickerDialogOptions](arkts-arkui-datepicker-datepickerdialogoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DatePickerDialogExample {
-  selectedDate: Date = new Date("2010-1-1");
-
-  build() {
-    Row(){
-      Column() {
-        Button("DatePickerDialog")
-          .margin(20)
-          .onClick(() => {
-            this.getUIContext().showDatePickerDialog({
-              start: new Date("2000-1-1"),
-              end: new Date("2100-12-31"),
-              selected: this.selectedDate,
-              showTime: true,
-              useMilitaryTime: false,
-              dateTimeOptions: { hour: "numeric", minute: "2-digit" },
-              onDateAccept: (value: Date) => {
-                // 通过Date的setFullYear方法设置按下确定按钮时的日期，这样当弹窗再次弹出时显示选中的是上一次确定的日期
-                this.selectedDate = value;
-                console.info("DatePickerDialog:onDateAccept()" + value.toString());
-              },
-              onCancel: () => {
-                console.info("DatePickerDialog:onCancel()");
-              },
-              onDateChange: (value: Date) => {
-                console.info("DatePickerDialog:onDateChange()" + value.toString());
-              },
-              onDidAppear: () => {
-                console.info("DatePickerDialog:onDidAppear()");
-              },
-              onDidDisappear: () => {
-                console.info("DatePickerDialog:onDidDisappear()");
-              },
-              onWillAppear: () => {
-                console.info("DatePickerDialog:onWillAppear()");
-              },
-              onWillDisappear: () => {
-                console.info("DatePickerDialog:onWillDisappear()");
-              }
-            })
-          })
-      }.width('100%')
-    }.height('100%')
-  }
-}
-```
+| options | [DatePickerDialogOptions](../arkts-components/arkts-arkui-datepickerdialogoptions-i.md) | 是 |
 
 ## showTextPickerDialog
 
@@ -4979,8 +2137,6 @@ textPickerDialog display.
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -4991,62 +2147,7 @@ textPickerDialog display.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [TextPickerDialogOptions](arkts-arkui-textpicker-textpickerdialogoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-
-class SelectedValue{
-  select: number = 2;
-  set(val: number){
-    this.select = val;
-  }
-}
-class SelectedArray{
-  select: number[] = [];
-  set(val: number[]){
-    this.select = val;
-  }
-}
-@Entry
-@Component
-struct TextPickerDialogExample {
-  @State selectTime: Date = new Date('2023-12-25T08:30:00');
-  private fruits: string[] = ['apple1', 'orange2', 'peach3', 'grape4', 'banana5'];
-  private select: number  = 0;
-  build() {
-    Row(){
-      Column() {
-        Button('showTextPickerDialog')
-          .margin(30)
-          .onClick(() => {
-            this.getUIContext().showTextPickerDialog({
-              range: this.fruits,
-              selected: this.select,
-              onAccept: (value: TextPickerResult) => {
-                // 设置select为按下确定按钮时候的选中项index，这样当弹窗再次弹出时显示选中的是上一次确定的选项
-                let selectedVal = new SelectedValue();
-                let selectedArr = new SelectedArray();
-                if (value.index){
-                  value.index instanceof Array?selectedArr.set(value.index) : selectedVal.set(value.index);
-                }
-                console.info("TextPickerDialog:onAccept()" + JSON.stringify(value));
-              },
-              onCancel: () => {
-                console.info("TextPickerDialog:onCancel()");
-              },
-              onChange: (value: TextPickerResult) => {
-                console.info("TextPickerDialog:onChange()" + JSON.stringify(value));
-              }
-            });
-          })
-      }.width('100%').margin({ top: 5 })
-    }.height('100%')
-  }
-}
-```
+| options | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) | 是 |
 
 ## showTextPickerDialog
 
@@ -5058,8 +2159,6 @@ textPickerDialog display.
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -5070,11 +2169,7 @@ textPickerDialog display.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | [TextPickerDialogOptions](arkts-arkui-textpicker-textpickerdialogoptions-i.md) \| [TextPickerDialogOptionsExt](arkts-arkui-textpicker-textpickerdialogoptionsext-i.md) | 是 |
-
-**示例**
-
-参见 [showTextPickerDialog](#showtextpickerdialog)
+| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) \| [TextPickerDialogOptionsExt](../arkts-components/arkts-arkui-textpickerdialogoptionsext-i.md) | 是 |
 
 ## showTimePickerDialog
 
@@ -5086,8 +2181,6 @@ timePickerDialog display.
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -5098,52 +2191,7 @@ timePickerDialog display.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [TimePickerDialogOptions](arkts-arkui-timepicker-timepickerdialogoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-
-class SelectTime{
-  selectTime: Date = new Date('2020-12-25T08:30:00');
-  hours(h:number,m:number){
-    this.selectTime.setHours(h, m);
-  }
-}
-
-@Entry
-@Component
-struct TimePickerDialogExample {
-  @State selectTime: Date = new Date('2023-12-25T08:30:00');
-
-  build() {
-    Column() {
-      Button('showTimePickerDialog')
-        .margin(30)
-        .onClick(() => {
-          this.getUIContext().showTimePickerDialog({
-            selected: this.selectTime,
-            onAccept: (value: TimePickerResult) => {
-              // 设置selectTime为按下确定按钮时的时间，这样当弹窗再次弹出时显示选中的为上一次确定的时间
-              let time = new SelectTime();
-              if(value.hour && value.minute){
-                time.hours(value.hour, value.minute);
-              }
-              console.info("TimePickerDialog:onAccept()" + JSON.stringify(value));
-            },
-            onCancel: () => {
-              console.info("TimePickerDialog:onCancel()");
-            },
-            onChange: (value: TimePickerResult) => {
-              console.info("TimePickerDialog:onChange()" + JSON.stringify(value));
-            }
-          });
-        })
-    }.width('100%').margin({ top: 5 })
-  }
-}
-```
+| options | [TimePickerDialogOptions](../arkts-components/arkts-arkui-timepickerdialogoptions-i.md) | 是 |
 
 ## unbindTabsFromNestedScrollable
 
@@ -5155,8 +2203,6 @@ Unbind tabs from nested scrollable container components.
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -5167,13 +2213,9 @@ Unbind tabs from nested scrollable container components.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| tabsController | [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | 是 |
-| parentScroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
-| childScroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
-
-**示例**
-
-参考[bindTabsToScrollable](#bindtabstoscrollable)接口示例。
+| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | 是 |
+| parentScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
+| childScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
 
 ## unbindTabsFromScrollable
 
@@ -5185,8 +2227,6 @@ Unbind tabs from scrollable container component.
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -5197,12 +2237,8 @@ Unbind tabs from scrollable container component.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| tabsController | [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | 是 |
-| scroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 |
-
-**示例**
-
-参考[bindTabsToScrollable](#bindtabstoscrollable)接口示例。
+| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | 是 |
+| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
 
 ## updateBindSheet
 
@@ -5217,8 +2253,6 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -5230,7 +2264,7 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bindSheetContent | ComponentContent & lt;T & gt; | 是 |
-| sheetOptions | [SheetOptions](arkts-arkui-common-sheetoptions-i.md) | 是 |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 是 |
 | partialUpdate | boolean | 否 |
 
 **返回值：**
@@ -5246,95 +2280,6 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) |
 | [120003](../errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) |
-
-**示例**
-
-```TypeScript
-import { FrameNode, ComponentContent } from "@kit.ArkUI";
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Params {
-  text: string = "";
-
-  constructor(text: string) {
-    this.text = text;
-  }
-}
-
-let contentNode: ComponentContent<Params>;
-let gUIContext: UIContext;
-
-@Builder
-function buildText(params: Params) {
-  Column() {
-    Text(params.text)
-    Button('Update BindSheet')
-      .fontSize(20)
-      .onClick(() => {
-        gUIContext.updateBindSheet(contentNode, {
-          backgroundColor: Color.Pink,
-        }, true)
-          .then(() => {
-            console.info('updateBindSheet success');
-          })
-          .catch((err: BusinessError) => {
-            console.error('updateBindSheet error: ' + err.code + ' ' + err.message);
-          })
-      })
-
-    Button('Close BindSheet')
-      .fontSize(20)
-      .onClick(() => {
-        gUIContext.closeBindSheet(contentNode)
-          .then(() => {
-            console.info('closeBindSheet success');
-          })
-          .catch((err: BusinessError) => {
-            console.error('closeBindSheet error: ' + err.code + ' ' + err.message);
-          })
-      })
-  }
-}
-
-@Entry
-@Component
-struct UIContextBindSheet {
-  @State message: string = 'BindSheet';
-
-  aboutToAppear() {
-    gUIContext = this.getUIContext();
-    contentNode = new ComponentContent(this.getUIContext(), wrapBuilder(buildText), new Params(this.message));
-  }
-
-  build() {
-    RelativeContainer() {
-      Column() {
-        Button('Open BindSheet')
-          .fontSize(20)
-          .onClick(() => {
-            let uiContext = this.getUIContext();
-            let uniqueId = this.getUniqueId();
-            let frameNode: FrameNode | null = uiContext.getFrameNodeByUniqueId(uniqueId);
-            let targetId = frameNode?.getFirstChild()?.getUniqueId();
-            uiContext.openBindSheet(contentNode, {
-              height: SheetSize.MEDIUM,
-              backgroundColor: Color.Green,
-              title: { title: "Title", subtitle: "subtitle" }
-            }, targetId)
-              .then(() => {
-                console.info('openBindSheet success');
-              })
-              .catch((err: BusinessError) => {
-                console.error('openBindSheet error: ' + err.code + ' ' + err.message);
-              })
-          })
-      }
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
 
 ## vp2px
 
@@ -5353,8 +2298,6 @@ vp2px(value: number): number
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -5370,29 +2313,3 @@ vp2px(value: number): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct MatrixExample {
-  build() {
-    Column({ space: 100 }) {
-      Text('Hello1')
-        .textAlign(TextAlign.Center)
-        .width(100)
-        .height(60)
-        .backgroundColor(0xAFEEEE)
-        .borderWidth(1)
-        .rotate({
-          z: 1,
-          angle: 90,
-          centerX: this.getUIContext().vp2px(50),
-          centerY: this.getUIContext().vp2px(30)
-        })
-    }.width('100%')
-    .height('100%')
-  }
-}
-```

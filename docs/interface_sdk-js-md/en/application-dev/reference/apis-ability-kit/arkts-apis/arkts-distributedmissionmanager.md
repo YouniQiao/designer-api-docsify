@@ -4,8 +4,6 @@ The distributedMissionManager module implements mission management across device
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -15,7 +13,7 @@ The distributedMissionManager module implements mission management across device
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -29,10 +27,8 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) |
-| [off](arkts-ability-distributedmissionmanager-off-f-sys.md#offcontinuestatechange) |
-| [offContinueStateChange](arkts-ability-distributedmissionmanager-offcontinuestatechange-f-sys.md) |
-| [on](arkts-ability-distributedmissionmanager-on-f-sys.md#oncontinuestatechange) |
-| [onContinueStateChange](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md) |
+| off |
+| on |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) |
 | [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md) |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## bulkTransfer
@@ -20,8 +20,6 @@ function bulkTransfer(
 Performs bulk transfer.Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list and endpoints, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md) to claim the USB interface.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -43,14 +41,3 @@ Performs bulk transfer.Before you do this, call [usb.getDevices](arkts-basicserv
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;number & gt; |
-
-**Examples**
-
-```TypeScript
-// Call usb.getDevices to obtain a data set. Then, obtain a USB device and its access permission.
-// Pass the obtained USB device as a parameter to usb.connectDevice. Then, call usb.connectDevice to connect the USB device.
-// Call usb.claimInterface to claim the USB interface. After that, call usb.bulkTransfer to start bulk transfer.
-usb.bulkTransfer(devicepipe, endpoint, buffer).then((ret) => {
- console.info(`bulkTransfer = ${ret}`);
-});
-```

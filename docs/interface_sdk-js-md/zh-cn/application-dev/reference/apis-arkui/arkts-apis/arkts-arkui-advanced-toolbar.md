@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
+import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -33,9 +33,3 @@ import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } fr
 | 名称 |
 | --- |
 | [ItemState](arkts-arkui-arkui-advanced-toolbar-itemstate-e.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [ToolBarOptions](arkts-arkui-toolbaroptions-t.md) |

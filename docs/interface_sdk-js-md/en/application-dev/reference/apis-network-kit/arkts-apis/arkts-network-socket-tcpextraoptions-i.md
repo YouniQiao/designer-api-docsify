@@ -6,14 +6,12 @@ Defines other properties of the **TCPSocket** object. This object is inherited f
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## keepAlive
@@ -27,8 +25,6 @@ Whether to keep the connection alive. The default value is **false**. The value 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -44,8 +40,6 @@ Whether to enable OOBInline. The default value is **false**. The value **true** 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## socketLinger
@@ -55,14 +49,14 @@ socketLinger?: {on: boolean, linger: number}
 ```
 
 Socket linger.  
-- **on**: whether to enable socket linger. The value true means to enable socket linger and false means the opposite. - **linger**: linger time, in ms. The value ranges from **0** to **65535**.  
+- **on**: whether to enable socket linger. The value true means to enable socket linger and false means the  
+opposite.  
+- **linger**: linger time, in ms. The value ranges from **0** to **65535**.  
 Specify this parameter only when **on** is set to **true**.
 
 **Type:** {on: boolean, linger: number}
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -77,8 +71,6 @@ Whether to enable TCP Fast Open (TFO) in the TCP socket connection. This functio
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,7 +87,5 @@ Whether to enable no-delay on the TCP socket connection. The default value is **
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack

@@ -3,21 +3,19 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## switchToProfile
 
 ```TypeScript
-function switchToProfile(slotId: int, portIndex: int, iccid: string,
+function switchToProfile(slotId: number, portIndex: number, iccid: string,
                            forceDisableProfile: boolean): Promise<ResultCode>
 ```
 
 Switches to the specified profile. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
@@ -29,8 +27,8 @@ Switches to the specified profile. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| portIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
+| portIndex | number | Yes |
 | iccid | string | Yes |
 | [forceDisableProfile](arkts-telephony-esim-downloadconfiguration-i-sys.md) | boolean | Yes |
 
@@ -50,16 +48,3 @@ Switches to the specified profile. This API uses a promise to return the result.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { eSIM } from '@kit.TelephonyKit';
-
-eSIM.switchToProfile(1, 0, 'testId', true).then(() => {
-    console.info(`switchToProfile invoking succeeded.`);
-}).catch((err: BusinessError<void>) => {
-    console.error(`switchToProfile, ErrorState: err->${JSON.stringify(err)}`);
-});
-```

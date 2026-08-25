@@ -4,8 +4,6 @@ Enumerates the remote camera types.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## UNKNOWN_TYPE
@@ -17,8 +15,6 @@ UNKNOWN_TYPE = 0
 Unknown type.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -34,8 +30,6 @@ Mobile phone.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -49,8 +43,6 @@ TABLET = 0x11
 Tablet.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

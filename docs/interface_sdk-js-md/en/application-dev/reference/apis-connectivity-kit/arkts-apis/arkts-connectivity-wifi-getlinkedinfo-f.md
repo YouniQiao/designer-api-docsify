@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getLinkedInfo
@@ -15,8 +15,6 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 Obtains information about a Wi-Fi connection.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -32,26 +30,6 @@ Obtains information about a Wi-Fi connection.
 | --- |
 | Promise & lt;WifiLinkedInfo & gt; |
 
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-wifi.getLinkedInfo((err, data:wifi.WifiLinkedInfo) => {
-    if (err) {
-        console.error("get linked info error");
-        return;
-    }
-    console.info("get wifi linked info: " + JSON.stringify(data));
-});
-
-wifi.getLinkedInfo().then(data => {
-    console.info("get wifi linked info: " + JSON.stringify(data));
-}).catch((error:number) => {
-    console.info("get linked info error");
-});
-```
-
 
 ## getLinkedInfo
 
@@ -62,8 +40,6 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 Obtains information about a Wi-Fi connection.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -78,7 +54,3 @@ Obtains information about a Wi-Fi connection.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | Yes |
-
-**Examples**
-
-See [getLinkedInfo](#getlinkedinfo)

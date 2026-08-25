@@ -4,8 +4,6 @@ Describes the layout and alignment of child components within the **Flex** compo
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ alignContent?: FlexAlign
 
 Alignment mode of multiple lines when there is extra space along the cross axis. This parameter is valid only when **wrap** is set to **Wrap** or **WrapReverse**. If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
 
-**Type:** FlexAlign
+**Type:** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -41,11 +37,9 @@ alignItems?: ItemAlign
 
 Alignment mode of the child components in the **Flex** component along the cross axis. If an invalid value is passed, the default value will be used. Default value: **ItemAlign.Start**.
 
-**Type:** ItemAlign
+**Type:** [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -61,11 +55,9 @@ direction?: FlexDirection
 
 Direction in which child components are arranged in the **Flex** component, that is, the direction of the main axis. If an invalid value is passed, the default value will be used. Default value: **FlexDirection.Row**.
 
-**Type:** FlexDirection
+**Type:** [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -81,11 +73,9 @@ justifyContent?: FlexAlign
 
 Alignment mode of the child components in the **Flex** component along the main axis. If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
 
-**Type:** FlexAlign
+**Type:** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -105,8 +95,6 @@ Spacing between child components along the main axis or cross axis of the **Flex
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -124,11 +112,9 @@ Whether the **Flex** component has a single line or multiple lines. If an invali
 > When wrapped onto multiple lines, the child elements on the new line are stacked in the direction based on the
 > cross axis direction. Default value: **FlexWrap.NoWrap**.
 
-**Type:** FlexWrap
+**Type:** [FlexWrap](../arkts-apis/arkts-arkui-flexwrap-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

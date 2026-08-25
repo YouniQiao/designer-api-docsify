@@ -6,14 +6,12 @@ CloseOptions用于定义Chip组件默认的关闭图标功能属性，包括无�
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
+import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## fontSize
@@ -24,11 +22,9 @@ fontSize?: Dimension
 
 设置Chip组件默认关闭图标的字体大小，不支持百分比，传入百分比时按默认值处理。默认值：size为ChipSize.SMALL时，`\$r('sys.float.chip_small_font_size')`其他情况：`\$r('sys.float.chip_normal_font_size')`单位：fp传入负数时，按默认值处理。值为undefined时，按默认值处理。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

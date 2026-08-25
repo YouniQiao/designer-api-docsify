@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getAllExtBundleStats
 
 ```TypeScript
-function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>
+function getAllExtBundleStats(userId: number): Promise<Array<ExtBundleStats>>
 ```
 
 获取指定用户下所有系统应用或系统服务的空间占用详情。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -30,7 +28,7 @@ function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -47,31 +45,3 @@ function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>
 | 13600001 |
 | 13600010 |
 | 13600013 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 100;
-storageStatistics.getAllExtBundleStats(userId).then((bundleStatsList: storageStatistics.ExtBundleStats[]) => {
-  console.info("getAllExtBundleStats successfully");
-}).catch((err: BusinessError) => {
-  console.error(`getAllExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: int = 100;
-storageStatistics.getAllExtBundleStats(userId).then((bundleStatsList: storageStatistics.ExtBundleStats[]) => {
-  console.info("getAllExtBundleStats successfully");
-}).catch((err: BusinessError): void => {
-  console.error(`getAllExtBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```

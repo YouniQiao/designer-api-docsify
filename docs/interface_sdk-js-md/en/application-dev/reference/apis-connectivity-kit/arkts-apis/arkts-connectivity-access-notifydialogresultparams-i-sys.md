@@ -4,8 +4,6 @@ Describes the result of bluetooth dialog.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the result of bluetooth dialog.
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## dialogResult
@@ -27,8 +25,6 @@ The result of bluetooth dialog. The value true indicates that the user approves 
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -45,8 +41,6 @@ The type of bluetooth dialog.
 **Type:** DialogType
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

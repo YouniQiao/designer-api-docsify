@@ -32,8 +32,6 @@ Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-in
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -47,8 +45,6 @@ GET_FULL_INSIGHT_INTENT = 0x00000001
 Used to query all intent information (except entities) in [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md). To query entities information, use **GET_ENTITY_INFO**.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +62,6 @@ Used to query brief intent information in [InsightIntentInfo](arkts-ability-insi
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -83,8 +77,6 @@ GET_ENTITY_INFO = 0x00000004
 Used to query [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md). It must be used together with **GET_FULL_INSIGHT_INTENT** or **GET_SUMMARY_INSIGHT_INTENT**. Example usage: `GET_FULL_INSIGHT_INTENT | GET_ENTITY_INFO`.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

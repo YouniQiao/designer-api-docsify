@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connectToDevice
@@ -15,8 +15,6 @@ function connectToDevice(config: WifiDeviceConfig): boolean
 连接到指定网络。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -39,35 +37,3 @@ function connectToDevice(config: WifiDeviceConfig): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let config:wifi.WifiDeviceConfig = {
-        ssid : "****",
-        bssid:  "****",
-        preSharedKey: "****",
-        isHiddenSsid: false,
-        securityType: 3,
-        creatorUid: 0,
-        disableReason: 0,
-        netId: 0,
-        randomMacType: 0,
-        randomMacAddr:  "****",
-        ipType: 0,
-        staticIp: {
-            ipAddress: "",
-            gateway: "",
-            dnsServers: [],
-            domains: []
-        }
-    }
-    wifi.connectToDevice(config);
-            
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

@@ -6,28 +6,18 @@ MifareClassicTag提供对MIFARE Classic属性和I/O操作的访问，继承自[T
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## authenticateSector
 
-ArkTS-Dyn:
 ```TypeScript
 authenticateSector(sectorIndex: number, key: number[], isKeyA: boolean): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>
 ```
 
 使用密钥对扇区进行身份验证，只有身份验证成功的扇区可以进行操作。使用Promise异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -38,8 +28,8 @@ authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sectorIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| key | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| sectorIndex | number | 是 |
+| key | number[] | 是 |
 | isKeyA | boolean | 是 |
 
 **返回值：**
@@ -57,86 +47,16 @@ authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean): Promise<void>
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let sectorIndex = 1; // 将其更改为正确的 index
-        let key = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06]  // 必须是6个字节，将其更改为正确的key
-        mifareClassic.authenticateSector(sectorIndex, key, true).then(() => {
-            console.info("mifareClassic authenticateSector Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error("mifareClassic authenticateSector Promise errCode: ${err.code}, " + "message: ${err.message}");
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic authenticateSector Promise catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let sectorIndex = 1; // 将其更改为正确的 index
-        let key = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06]  // 必须是6个字节，将其更改为正确的key
-        mifareClassic.authenticateSector(sectorIndex, key, true, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic authenticateSector AsyncCallback errCode: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic authenticateSector AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic authenticateSector AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
 ## authenticateSector
 
-ArkTS-Dyn:
 ```TypeScript
 authenticateSector(sectorIndex: number, key: number[], isKeyA: boolean, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: AsyncCallback<void>): void
 ```
 
 使用密钥对扇区进行身份验证，只有身份验证成功的扇区可以进行操作。使用callback异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -147,8 +67,8 @@ authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: Asyn
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sectorIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| key | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| sectorIndex | number | 是 |
+| key | number[] | 是 |
 | isKeyA | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -161,27 +81,15 @@ authenticateSector(sectorIndex: int, key: int[], isKeyA: boolean, callback: Asyn
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-参见 [authenticateSector](#authenticatesector)
-
 ## decrementBlock
 
-ArkTS-Dyn:
 ```TypeScript
 decrementBlock(blockIndex: number, value: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-decrementBlock(blockIndex: int, value: int): Promise<void>
 ```
 
 对指定块的内容，减少指定的数值，并将结果存储在内部传输缓冲器中。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -193,8 +101,8 @@ decrementBlock(blockIndex: int, value: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
+| value | number | 是 |
 
 **返回值：**
 
@@ -211,86 +119,15 @@ decrementBlock(blockIndex: int, value: int): Promise<void>
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        let value = 0x20; // 将其更改为正确的数据
-        mifareClassic.decrementBlock(blockIndex, value).then(() => {
-            console.info("mifareClassic decrementBlock Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error("mifareClassic decrementBlock Promise errCode: ${err.code}, message: ${err.message}");
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic decrementBlock Promise catch businessError: Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        let value = 0x20; // 将其更改为正确的数据
-        mifareClassic.decrementBlock(blockIndex, value, (err : BusinessError)=> {
-            if (err) {
-                console.error("mifareClassic decrementBlock AsyncCallback errCode:" + 
-                  "${err.code}, message: ${err.message}");
-            } else {
-                console.info("mifareClassic decrementBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic decrementBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
 ## decrementBlock
 
-ArkTS-Dyn:
 ```TypeScript
 decrementBlock(blockIndex: number, value: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 ```
 
 对指定块的内容，减少指定的数值。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -302,8 +139,8 @@ decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
+| value | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -315,28 +152,16 @@ decrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-参见 [decrementBlock](#decrementblock)
-
 ## getBlockCountInSector
 
-ArkTS-Dyn:
 ```TypeScript
 getBlockCountInSector(sectorIndex: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getBlockCountInSector(sectorIndex: int): int
 ```
 
 获取指定扇区中的块数。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -345,13 +170,13 @@ getBlockCountInSector(sectorIndex: int): int
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sectorIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| sectorIndex | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -359,41 +184,16 @@ getBlockCountInSector(sectorIndex: int): int
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-try {
-    let sectorIndex = 1; // 将其更改为正确的 index
-    let blockCnt : number = mifareClassic.getBlockCountInSector(sectorIndex);
-    console.info("mifareClassic blockCnt: " + blockCnt);
-} catch (businessError) {
-    console.error(`mifareClassic getBlockCountInSector catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-}
-```
-
 ## getBlockIndex
 
-ArkTS-Dyn:
 ```TypeScript
 getBlockIndex(sectorIndex: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getBlockIndex(sectorIndex: int): int
 ```
 
 获取特定扇区的第一个块的序号。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -402,13 +202,13 @@ getBlockIndex(sectorIndex: int): int
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sectorIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| sectorIndex | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -416,41 +216,16 @@ getBlockIndex(sectorIndex: int): int
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-try {
-    let sectorIndex = 1; // 将其更改为正确的 index
-    let blockIndex : number = mifareClassic.getBlockIndex(sectorIndex);
-    console.info("mifareClassic blockIndex: " + blockIndex);
-} catch (businessError) {
-    console.error(`mifareClassic getBlockIndex catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-}
-```
-
 ## getSectorCount
 
-ArkTS-Dyn:
 ```TypeScript
 getSectorCount(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getSectorCount(): int
 ```
 
 获取MIFARE Classic标签中的扇区数。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -459,36 +234,17 @@ getSectorCount(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-let sectorCount : number = mifareClassic.getSectorCount();
-console.info("mifareClassic sectorCount: " + sectorCount);
-```
+| number |
 
 ## getSectorIndex
 
-ArkTS-Dyn:
 ```TypeScript
 getSectorIndex(blockIndex: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getSectorIndex(blockIndex: int): int
 ```
 
 获取包含指定块号的扇区序号。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -498,13 +254,13 @@ getSectorIndex(blockIndex: int): int
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -512,40 +268,15 @@ getSectorIndex(blockIndex: int): int
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-try {
-    let blockIndex = 1; // 将其更改为正确的 index
-    let sectorIndex : number = mifareClassic.getSectorIndex(blockIndex);
-    console.info("mifareClassic sectorIndex: " + sectorIndex);
-} catch (businessError) {
-    console.error(`mifareClassic getSectorIndex catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-}
-```
-
 ## getTagSize
 
-ArkTS-Dyn:
 ```TypeScript
 getTagSize(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getTagSize(): int
 ```
 
 获取标签的存储空间大小，具体请参见[MifareClassicSize](arkts-connectivity-tag-mifareclassicsize-e.md)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -555,18 +286,7 @@ getTagSize(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-let tagSize : number = mifareClassic.getTagSize();
-console.info("mifareClassic tagSize: " + tagSize);
-```
+| number |
 
 ## getType
 
@@ -578,8 +298,6 @@ getType(): tag.MifareClassicType
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -590,41 +308,15 @@ getType(): tag.MifareClassicType
 | --- |
 | tag.MifareClassicType |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-let getType : tag.MifareClassicType = mifareClassic.getType();
-console.info("mifareClassic getType: " + getType);
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareUltralight
-let getType : tag.MifareUltralightType = mifareUltralight.getType();
-console.info("mifareUltralight getType: " + getType);
-```
-
 ## incrementBlock
 
-ArkTS-Dyn:
 ```TypeScript
 incrementBlock(blockIndex: number, value: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-incrementBlock(blockIndex: int, value: int): Promise<void>
 ```
 
 对指定块的内容，增加指定的数值，并将结果存储在内部传输缓冲器中。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -636,8 +328,8 @@ incrementBlock(blockIndex: int, value: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
+| value | number | 是 |
 
 **返回值：**
 
@@ -654,85 +346,15 @@ incrementBlock(blockIndex: int, value: int): Promise<void>
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        let value = 0x20; // 将其更改为正确的数据
-        mifareClassic.incrementBlock(blockIndex, value).then(() => {
-            console.info("mifareClassic incrementBlock Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error(`mifareClassic incrementBlock Promise err Code: ${err.code}, message: ${err.message}`);
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic incrementBlock Promise catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        let value = 0x20; // 将其更改为正确的数据
-        mifareClassic.incrementBlock(blockIndex, value, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic incrementBlock AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic incrementBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic incrementBlock AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
 ## incrementBlock
 
-ArkTS-Dyn:
 ```TypeScript
 incrementBlock(blockIndex: number, value: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 ```
 
 对指定块的内容，增加指定的数值，并将结果存储在内部传输缓冲器中。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -744,8 +366,8 @@ incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| value | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
+| value | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -756,10 +378,6 @@ incrementBlock(blockIndex: int, value: int, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
-
-**示例**
-
-参见 [incrementBlock](#incrementblock)
 
 ## isEmulatedTag
 
@@ -771,8 +389,6 @@ isEmulatedTag(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -783,35 +399,16 @@ isEmulatedTag(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-let isEmulatedTag : boolean = mifareClassic.isEmulatedTag();
-console.info("mifareClassic isEmulatedTag: " + isEmulatedTag);
-```
-
 ## readSingleBlock
 
-ArkTS-Dyn:
 ```TypeScript
 readSingleBlock(blockIndex: number): Promise<number[]>
-```
-
-ArkTS-Sta:
-```TypeScript
-readSingleBlock(blockIndex: int): Promise<int[]>
 ```
 
 读取标签中一个块存储的内容，一个块大小为16字节。使用Promise异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -822,13 +419,13 @@ readSingleBlock(blockIndex: int): Promise<int[]>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
+| Promise & lt;number[] & gt; |
 
 **错误码：**
 
@@ -839,84 +436,16 @@ readSingleBlock(blockIndex: int): Promise<int[]>
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        mifareClassic.readSingleBlock(blockIndex).then((data : number[]) => {
-            console.info("mifareClassic readSingleBlock Promise data: " + data);
-        }).catch((err : BusinessError)=> {
-            console.error(`mifareClassic readSingleBlock Promise errCode: ${err.code}, message: ${err.message}`);
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic readSingleBlock Promise catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1;  // 将其更改为正确的 index
-        mifareClassic.readSingleBlock(blockIndex, (err : BusinessError, data : number[])=> {
-            if (err) {
-                console.error("mifareClassic readSingleBlock AsyncCallback err: " + err);
-            } else {
-                console.info("mifareClassic readSingleBlock AsyncCallback data: " + data);
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic readSingleBlock AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
 ## readSingleBlock
 
-ArkTS-Dyn:
 ```TypeScript
 readSingleBlock(blockIndex: number, callback: AsyncCallback<number[]>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void
 ```
 
 读取标签中一个块存储的内容，一个块大小为16字节。使用callback异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -927,8 +456,8 @@ readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | 是 |
+| blockIndex | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | 是 |
 
 **错误码：**
 
@@ -939,28 +468,16 @@ readSingleBlock(blockIndex: int, callback: AsyncCallback<int[]>): void
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-参见 [readSingleBlock](#readsingleblock)
-
 ## restoreFromBlock
 
-ArkTS-Dyn:
 ```TypeScript
 restoreFromBlock(blockIndex: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-restoreFromBlock(blockIndex: int): Promise<void>
 ```
 
 将指定块的值复制到临时寄存器。使用Promise异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -971,7 +488,7 @@ restoreFromBlock(blockIndex: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
 
 **返回值：**
 
@@ -988,84 +505,16 @@ restoreFromBlock(blockIndex: int): Promise<void>
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }   
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        mifareClassic.restoreFromBlock(blockIndex).then(() => {
-            console.info("mifareClassic restoreFromBlock Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error(`mifareClassic restoreFromBlock Promise errCode: ${err.code}, message: ${err.message}`);
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic restoreFromBlock Promise catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        mifareClassic.restoreFromBlock(blockIndex, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic restoreFromBlock AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic restoreFromBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic restoreFromBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
 ## restoreFromBlock
 
-ArkTS-Dyn:
 ```TypeScript
 restoreFromBlock(blockIndex: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void
 ```
 
 将指定块的值复制到临时寄存器。使用callback异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1076,7 +525,7 @@ restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -1088,28 +537,16 @@ restoreFromBlock(blockIndex: int, callback: AsyncCallback<void>): void
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-参见 [restoreFromBlock](#restorefromblock)
-
 ## transferToBlock
 
-ArkTS-Dyn:
 ```TypeScript
 transferToBlock(blockIndex: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-transferToBlock(blockIndex: int): Promise<void>
 ```
 
 将临时寄存器的值转移到指定的块。使用Promise异步异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1120,7 +557,7 @@ transferToBlock(blockIndex: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
 
 **返回值：**
 
@@ -1137,84 +574,16 @@ transferToBlock(blockIndex: int): Promise<void>
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        mifareClassic.transferToBlock(blockIndex).then(() => {
-            console.info("mifareClassic transferToBlock Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error(`mifareClassic transferToBlock Promise err Code: ${err.code}, message: ${err.message}`);
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic transferToBlock Promise catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        mifareClassic.transferToBlock(blockIndex, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic transferToBlock AsyncCallback errCode: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic transferToBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic transferToBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
 ## transferToBlock
 
-ArkTS-Dyn:
 ```TypeScript
 transferToBlock(blockIndex: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void
 ```
 
 将临时寄存器的值转移到指定的块。使用callback异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1225,7 +594,7 @@ transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| blockIndex | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -1237,27 +606,15 @@ transferToBlock(blockIndex: int, callback: AsyncCallback<void>): void
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-参见 [transferToBlock](#transfertoblock)
-
 ## writeSingleBlock
 
-ArkTS-Dyn:
 ```TypeScript
 writeSingleBlock(blockIndex: number, data: number[]): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-writeSingleBlock(blockIndex: int, data: int[]): Promise<void>
 ```
 
 向标签中一个块存储写入内容，一个块大小为16字节。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -1269,8 +626,8 @@ writeSingleBlock(blockIndex: int, data: int[]): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| blockIndex | number | 是 |
+| data | number[] | 是 |
 
 **返回值：**
 
@@ -1287,87 +644,15 @@ writeSingleBlock(blockIndex: int, data: int[]): Promise<void>
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        let rawData = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A,
-            0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10]; // 必须是16个字节，将其更改为正确的key
-        mifareClassic.writeSingleBlock(blockIndex, rawData).then(() => {
-            console.info("mifareClassic writeSingleBlock Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error("mifareClassic writeSingleBlock Promise errCode: ${err.code}, message: ${err.message}");
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic writeSingleBlock Promise catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 mifareClassic
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!mifareClassic.isTagConnected()) {
-        if (!mifareClassic.connectTag()) {
-            console.error("mifareClassic connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let blockIndex = 1; // 将其更改为正确的 index
-        let rawData = [0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A,
-            0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10]; // 必须是16个字节，将其更改为正确的data
-        mifareClassic.writeSingleBlock(blockIndex, rawData, (err : BusinessError)=> {
-            if (err) {
-                console.error(`mifareClassic writeSingleBlock AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareClassic writeSingleBlock AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareClassic writeSingleBlock AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
 ## writeSingleBlock
 
-ArkTS-Dyn:
 ```TypeScript
 writeSingleBlock(blockIndex: number, data: number[], callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): void
 ```
 
 向标签中一个块存储写入内容，一个块大小为16字节。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -1379,8 +664,8 @@ writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blockIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| data | ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] | 是 |
+| blockIndex | number | 是 |
+| data | number[] | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -1391,7 +676,3 @@ writeSingleBlock(blockIndex: int, data: int[], callback: AsyncCallback<void>): v
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
-
-**示例**
-
-参见 [writeSingleBlock](#writesingleblock)

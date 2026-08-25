@@ -15,8 +15,6 @@ function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVMana
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** createKVManager
@@ -30,51 +28,6 @@ function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVMana
 | config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | 是 |
 
-**示例**
-
-```TypeScript
-let kvManager;
-try {
-    const kvManagerConfig = {
-        bundleName : 'com.example.datamanagertest',
-        userInfo : {
-            userId : '0',
-            userType : distributedData.UserType.SAME_USER_ID
-        }
-    }
-    distributedData.createKVManager(kvManagerConfig, function (err, manager) {
-        if (err) {
-            console.log("Failed to create KVManager: "  + JSON.stringify(err));
-            return;
-        }
-        console.log("Succeeded in creating KVManager");
-        kvManager = manager;
-    });
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
-```TypeScript
-try {
-  const kvManagerConfig = {
-    bundleName: 'com.example.datamanagertest',
-    userInfo: {
-      userId: '0',
-      userType: distributedData.UserType.SAME_USER_ID
-    }
-  }
-  distributedData.createKVManager(kvManagerConfig).then((manager) => {
-    console.log("Succeeded in creating KVManager");
-    kvManager = manager;
-  }).catch((err) => {
-    console.error("Failed to create KVManager: " + JSON.stringify(err));
-  });
-} catch (e) {
-  console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
 
 ## createKVManager
 
@@ -85,8 +38,6 @@ function createKVManager(config: KVManagerConfig): Promise<KVManager>
 创建一个KVManager对象实例，用于管理数据库对象，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -105,7 +56,3 @@ function createKVManager(config: KVManagerConfig): Promise<KVManager>
 | 类型 |
 | --- |
 | Promise & lt;KVManager & gt; |
-
-**示例**
-
-参见 [createKVManager](#createkvmanager)

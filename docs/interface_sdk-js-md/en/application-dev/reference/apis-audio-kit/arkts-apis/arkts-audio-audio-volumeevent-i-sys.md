@@ -4,14 +4,12 @@ Describes the event received by the application when the volume is changed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## networkId
@@ -26,8 +24,6 @@ Device network id
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
@@ -35,16 +31,14 @@ Device network id
 ## percentage
 
 ```TypeScript
-percentage?: int
+percentage?: number
 ```
 
 Volume percentage, which is an integer ranging from [0, 100].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -53,16 +47,14 @@ Volume percentage, which is an integer ranging from [0, 100].
 ## volumeGroupId
 
 ```TypeScript
-volumeGroupId: int
+volumeGroupId: number
 ```
 
 volumeGroup id
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

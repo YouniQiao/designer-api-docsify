@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getIpNeighTable
@@ -19,8 +19,6 @@ function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 > 开发者可使用此接口排查网络异常、解析IP地址与MAC地址映射。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO and ohos.permission.GET_IP_MAC_INFO
 
@@ -39,20 +37,3 @@ function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getIpNeighTable().then((data: connection.NetIpMacInfo[]) => {
-  if (data.length !== 0) {
-    console.info(`Succeeded to get ipAddress: ${JSON.stringify(data.ipAddress)}`);
-    console.info(`Succeeded to get iface: ${JSON.stringify(data.iface)}`);
-    console.info(`Succeeded to get macAddress: ${JSON.stringify(data.macAddress)}`);
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get ip neigh table. Code:${error.code}, message:${error.message}`);
-});
-```

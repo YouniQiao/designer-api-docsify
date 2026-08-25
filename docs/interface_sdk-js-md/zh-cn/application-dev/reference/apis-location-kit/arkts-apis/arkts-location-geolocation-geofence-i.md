@@ -4,8 +4,6 @@ GNSS围栏的配置参数。目前只支持圆形围栏。@interface Geofence
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [Geofence](arkts-location-geolocationmanager-geofence-i.md)
@@ -17,7 +15,7 @@ GNSS围栏的配置参数。目前只支持圆形围栏。@interface Geofence
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## expiration
@@ -31,8 +29,6 @@ expiration: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -52,8 +48,6 @@ latitude: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [latitude](arkts-location-geolocationmanager-geofence-i.md#latitude)
@@ -72,8 +66,6 @@ longitude: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [longitude](arkts-location-geolocationmanager-geofence-i.md#longitude)
@@ -91,8 +83,6 @@ radius: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

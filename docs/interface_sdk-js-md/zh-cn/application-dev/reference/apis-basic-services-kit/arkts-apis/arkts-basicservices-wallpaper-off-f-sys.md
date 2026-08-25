@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## off('wallpaperChange')
@@ -18,8 +18,6 @@ function off(
 取消订阅壁纸变化通知事件。不支持多线程并发调用。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -38,35 +36,3 @@ function off(
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let listener = (wallpaperType: wallpaper.WallpaperType, resourceType: wallpaper.WallpaperResourceType): void => {
-    console.info(`wallpaper changed.`);
-};
-try {
-    wallpaper.on('wallpaperChange', listener);
-} catch (error: BusinessError) {
-    let err = error as BusinessError;
-    console.error(`Failed to on. Code: ${err.code}, message: ${err.message}`);
-}
-
-try {
-    // 取消订阅listener
-    wallpaper.off('wallpaperChange', listener);
-} catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to off. Code: ${err.code}, message: ${err.message}`);
-}
-
-try {
-    // 取消所有'wallpaperChange'类型的订阅
-    wallpaper.off('wallpaperChange');
-} catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to off. Code: ${err.code}, message: ${err.message}`);
-}
-```

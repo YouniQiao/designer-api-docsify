@@ -4,8 +4,6 @@ Enumerates the album keys.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## URI
@@ -17,8 +15,6 @@ URI = 'uri'
 URI of the album.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,8 +28,6 @@ Name of the album.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## ALBUM_LPATH
@@ -43,11 +37,12 @@ ALBUM_LPATH = 'lpath'
 ```
 
 Virtual path of the album.Albums and their virtual path values:  
-- Camera application album: '/DCIM/Camera'- Screenshot application album: '/Pictures/Screenshots'- Screen recording application album: '/Pictures/Screenrecords'- User-created album: '/Pictures/Users/{Custom album name}'
+- Camera application album: '/DCIM/Camera'  
+- Screenshot application album: '/Pictures/Screenshots'  
+- Screen recording application album: '/Pictures/Screenrecords'  
+- User-created album: '/Pictures/Users/{Custom album name}'
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,7 +55,5 @@ CHANGE_TIME = 'change_time'
 Time when the album is changed.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getConnectOwnerUid
@@ -24,8 +24,6 @@ Queries the UID of the application that initiates a specified network connection
 > **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -54,19 +52,3 @@ Queries the UID of the application that initiates a specified network connection
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100301](../errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-non-vpn-application) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let protocol = connection.ProtocolType.PROTO_TYPE_TCP;
-let local: connection.NetAddress = { address: '192.168.1.100', family: 1, port: 6666 };
-let remote: connection.NetAddress = { address: '192.168.1.200', family: 1, port: 8888 };
-connection.getConnectOwnerUid(protocol, local, remote).then((uid) => {
-  console.info(`uid: ${uid}`);
-}).catch((error: BusinessError) => {
-  console.error(`getConnectOwnerUid failed. errorCode: ${error.code} message:${error.message}`);
-});
-```

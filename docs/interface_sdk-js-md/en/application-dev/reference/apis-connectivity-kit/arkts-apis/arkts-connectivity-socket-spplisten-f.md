@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.ConnectivityKit';
+import { socket } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## sppListen
@@ -15,8 +15,6 @@ function sppListen(name: string, options: SppOptions, callback: AsyncCallback<nu
 Creates a Bluetooth server listening socket.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -41,28 +39,3 @@ Creates a Bluetooth server listening socket.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let serverNumber = -1;
-let serverSocket = (code: BusinessError, number: number) => {
-  if (code) {
-    console.error('sppListen error, code is ' + code);
-    return;
-  } else {
-    serverNumber = number;
-    console.info('sppListen success, serverNumber = ' + serverNumber);
-  }
-}
-
-// Use the RFCOMM socket as an example.
-let sppOption:socket.SppOptions = {uuid: '00001810-0000-1000-8000-00805F9B34FB', secure: false, type: socket.SppType.SPP_RFCOMM};
-try {
-    socket.sppListen('server1', sppOption, serverSocket);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

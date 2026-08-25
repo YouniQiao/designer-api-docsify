@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## CONTRAST
@@ -17,8 +15,6 @@ CONTRAST = 'contrast'
 从组件背景中提取平均颜色，并转换为对比鲜明的黑色或白色。子组件可以通过 Color（'foreground'） 使用此颜色。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

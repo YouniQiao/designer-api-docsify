@@ -6,14 +6,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## setHidden
@@ -25,8 +23,6 @@ setHidden(hiddenState: boolean): void
 将文件设置为隐藏文件。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -46,108 +42,6 @@ setHidden(hiddenState: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setHiddenDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let asset = await fetchResult.getFirstObject();
-  asset.setHidden(true, (err) => {
-    if (err === undefined) {
-      console.info('setHidden successfully');
-    } else {
-      console.error(`setHidden failed with error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  // 示例代码为将文件从隐藏相册中恢复，需要先在隐藏相册预置资源。
-  console.info('setHiddenDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.HIDDEN);
-  let album = await albumList.getFirstObject();
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOption);
-  let asset = await fetchResult.getFirstObject();
-  asset.setHidden(false).then(() => {
-    console.info('setHidden successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setHidden failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setHiddenDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let asset = await fetchResult.getFirstObject();
-  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
-  assetChangeRequest.setHidden(true);
-  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
-    console.info('apply setHidden successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setHidden failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setHiddenDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
-  assetsChangeRequest.setHidden(true);
-  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
-    console.info('apply setHidden successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setHidden failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## setIsRecentShow
 
 ```TypeScript
@@ -157,8 +51,6 @@ setIsRecentShow(isRencentShow: boolean): void
 设置当前资产是否在“最近”列表中显示。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -178,33 +70,6 @@ setIsRecentShow(isRencentShow: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setIsRecentShowDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
-  assetsChangeRequest.setIsRecentShow(true);
-  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
-    console.info('apply setIsRecentShow successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setIsRecentShow failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## setUserComment
 
 ```TypeScript
@@ -214,8 +79,6 @@ setUserComment(userComment: string): void
 修改媒体资产的备注信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -235,124 +98,17 @@ setUserComment(userComment: string): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('setUserCommentDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let userComment = 'test_set_user_comment';
-    await photoAsset.setUserComment(userComment);
-  } catch (err) {
-    console.error(`setUserCommentDemoPromise failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('setUserCommentDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let userComment = 'test_set_user_comment';
-    photoAsset.setUserComment(userComment, (err) => {
-      if (err === undefined) {
-        console.info('setUserComment successfully');
-      } else {
-        console.error(`setUserComment failed with error: ${err.code}, ${err.message}`);
-      }
-    });
-  } catch (err) {
-    console.error(`setUserCommentDemoCallback failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setUserCommentDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let asset = await fetchResult.getFirstObject();
-  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
-  let userComment: string = 'test_set_user_comment';
-  assetChangeRequest.setUserComment(userComment);
-  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
-    console.info('apply setUserComment successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setUserComment failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setUserCommentDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let photoAssetList: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-  let assetsChangeRequest: photoAccessHelper.MediaAssetsChangeRequest = new photoAccessHelper.MediaAssetsChangeRequest(photoAssetList);
-  assetsChangeRequest.setUserComment('test_set_user_comment');
-  phAccessHelper.applyChanges(assetsChangeRequest).then(() => {
-    console.info('apply setUserComment successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setUserComment failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
-
 ## comment
 
 ```TypeScript
 readonly comment: string
 ```
 
-用于[MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) 类型校验。 <br>如果类（如MediaAssetsChangeRequest）对象可以访问，就说明该类是MediaChangeRequest的实现类。
+用于[MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) 类型校验。 如果类（如MediaAssetsChangeRequest）对象可以访问，就说明该类是MediaChangeRequest的实现类。
 
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

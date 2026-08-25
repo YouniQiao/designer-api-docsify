@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { effectKit } from '@kit.ArkGraphics2D';
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createEffect
@@ -15,8 +15,6 @@ function createEffect(source: image.PixelMap): Filter
 通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果， 最终通过[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -35,23 +33,3 @@ function createEffect(source: image.PixelMap): Filter
 | 类型 |
 | --- |
 | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
-
-**示例**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  let headFilter = effectKit.createEffect(pixelMap);
-})
-```

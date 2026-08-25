@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getUsbStorageDeviceAccessPolicy
@@ -15,8 +15,6 @@ function getUsbStorageDeviceAccessPolicy(admin: Want): UsbPolicy
 获取USB存储设备（baseClass = 0x08）访问策略。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
@@ -47,37 +45,6 @@ function getUsbStorageDeviceAccessPolicy(admin: Want): UsbPolicy
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let result: usbManager.UsbPolicy = usbManager.getUsbStorageDeviceAccessPolicy(wantTemp);
-  console.info(`Succeeded in getting USB storage device access policy. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get USB storage device access policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: usbManager.UsbPolicy = usbManager.getUsbStorageDeviceAccessPolicy(null);
-  console.info(`Succeeded in getting USB storage device access policy. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get USB storage device access policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getUsbStorageDeviceAccessPolicy
 
@@ -88,8 +55,6 @@ function getUsbStorageDeviceAccessPolicy(admin: Want | null): UsbPolicy
 获取USB存储设备（baseClass = 0x08）访问策略。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 
@@ -117,7 +82,3 @@ function getUsbStorageDeviceAccessPolicy(admin: Want | null): UsbPolicy
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getUsbStorageDeviceAccessPolicy](#getusbstoragedeviceaccesspolicy)

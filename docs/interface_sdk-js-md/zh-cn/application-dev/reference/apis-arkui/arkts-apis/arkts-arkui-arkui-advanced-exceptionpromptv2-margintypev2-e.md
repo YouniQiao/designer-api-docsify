@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## DEFAULT_MARGIN
@@ -17,8 +15,6 @@ DEFAULT_MARGIN = 0
 默认边距：左边距：引用\$r('sys.float.ohos_id_card_margin_start')。右边距：引用\$r('sys.float.ohos_id_card_margin_end')。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,8 +31,6 @@ FIT_MARGIN = 1
 可适配边距：左边距：引用\$r('sys.float.ohos_id_max_padding_start')。右边距：引用\$r('sys.float.ohos_id_max_padding_end')。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

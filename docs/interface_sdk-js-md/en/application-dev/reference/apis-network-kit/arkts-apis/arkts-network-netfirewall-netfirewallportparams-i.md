@@ -4,14 +4,12 @@ Defines the port parameters of a firewall rule.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## endPort
@@ -26,8 +24,6 @@ End port number.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
 
 ## startPort
@@ -41,7 +37,5 @@ Start port number.
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall

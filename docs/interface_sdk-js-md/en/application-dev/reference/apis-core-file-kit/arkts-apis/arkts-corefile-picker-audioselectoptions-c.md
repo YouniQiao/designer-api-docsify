@@ -4,14 +4,12 @@ Defines the options for selecting audio clips.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## maxSelectNumber
@@ -25,8 +23,6 @@ Maximum number of audio clips that can be selected.Default value: **1**Value ran
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

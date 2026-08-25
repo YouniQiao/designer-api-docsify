@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disallowAddLocalAccount
@@ -15,8 +15,6 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean, callback: Async
 Forbids the creation of local accounts on the device. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -48,45 +46,6 @@ Forbids the creation of local accounts on the device. This API uses an asynchron
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-accountManager.disallowAddLocalAccount(wantTemp, true, (err) => {
-  if (err) {
-    console.error(`Failed to disallow add local account. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in disallowing add local account');
-});
-```
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-accountManager.disallowAddLocalAccount(wantTemp, true).then(() => {
-  console.info('Succeeded in disallowing add local account');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to disallow add local account. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## disallowAddLocalAccount
 
@@ -97,8 +56,6 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean): Promise<void>
 Forbids the creation of local accounts on the device. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -134,7 +91,3 @@ Forbids the creation of local accounts on the device. This API uses a promise to
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [disallowAddLocalAccount](#disallowaddlocalaccount)

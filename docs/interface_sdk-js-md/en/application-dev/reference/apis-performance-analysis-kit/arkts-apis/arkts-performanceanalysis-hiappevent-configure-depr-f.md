@@ -15,8 +15,6 @@ Configures the application event logging function, such as setting the event log
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [configure](arkts-performanceanalysis-hiappevent-configure-f.md)
@@ -34,19 +32,3 @@ Configures the application event logging function, such as setting the event log
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// Set the application event logging switch.
-let config1: hiAppEvent.ConfigOption = {
-  disable: true,
-};
-hiAppEvent.configure(config1);
-
-// Configure the maximum size of the directory that stores the event logging files.
-let config2: hiAppEvent.ConfigOption = {
-  maxStorage: '100M',
-};
-hiAppEvent.configure(config2);
-```

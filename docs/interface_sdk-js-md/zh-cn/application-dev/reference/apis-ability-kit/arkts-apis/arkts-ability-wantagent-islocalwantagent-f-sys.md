@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
 ```
 
 ## isLocalWantAgent
@@ -15,8 +15,6 @@ function isLocalWantAgent(agent: WantAgent): boolean
 判断WantAgent实例是否为本地实例。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,48 +39,3 @@ function isLocalWantAgent(agent: WantAgent): boolean
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-
-// 声明wantAgent实例
-let wantAgentData: WantAgent;
-// 创建LocalWantAgentInfo实例
-let localWantAgentInfo: wantAgent.LocalWantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters:
-      {
-        mykey0: 2222,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'ssssssssssssssssssssssssss',
-        mykey4: [false, true, false],
-        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        mykey6: true,
-      }
-    } as Want
-  ],
-  operationType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0
-};
-
-// 创建WantAgent实例并获取是否为本地WantAgent实例
-try {
-  wantAgentData = wantAgent.createLocalWantAgent(localWantAgentInfo);
-  // 判断WantAgent实例是否为本地实例
-  let isLocal: boolean = wantAgent.isLocalWantAgent(wantAgentData);
-} catch (err) {
-  console.error('call isLocalWantAgent failed');
-}
-```

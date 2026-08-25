@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## finish
@@ -20,27 +18,7 @@ finish(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-
-**示例**
-
-```TypeScript
-import { Animation, Scene } from '@kit.ArkGraphics3D';
-
-function finish(): void {
-  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result && result.animations && result.animations[0]) {
-      let anim: Animation = result.animations[0];
-      // 直接跳转到动画的最后，并将动画的进度设置为1。
-      anim.finish();
-    }
-  });
-}
-```
 
 ## onFinished
 
@@ -52,8 +30,6 @@ onFinished(callback: Callback<void>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -61,26 +37,6 @@ onFinished(callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { Animation, Scene } from '@kit.ArkGraphics3D';
-
-function onFinished(): void {
-  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result && result.animations && result.animations[0]) {
-      let anim: Animation = result.animations[0];
-      // 注册回调函数
-      anim.onFinished(()=>{
-        console.info("onFinished");  
-      });
-    }
-  });
-}
-```
 
 ## onStarted
 
@@ -92,8 +48,6 @@ onStarted(callback: Callback<void>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 **参数：**
@@ -101,26 +55,6 @@ onStarted(callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { Animation, Scene } from '@kit.ArkGraphics3D';
-
-function onStarted(): void {
-  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result && result.animations && result.animations[0]) {
-      let anim: Animation = result.animations[0];
-      // 注册回调函数
-      anim.onStarted(()=>{
-        console.info("onStarted");  
-      });
-    }
-  });
-}
-```
 
 ## pause
 
@@ -132,27 +66,7 @@ pause(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-
-**示例**
-
-```TypeScript
-import { Animation, Scene } from '@kit.ArkGraphics3D';
-
-function pause(): void {
-  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result && result.animations && result.animations[0]) {
-      let anim: Animation = result.animations[0];
-      // 暂停动画
-      anim.pause();
-    }
-  });
-}
-```
 
 ## restart
 
@@ -164,45 +78,17 @@ restart(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-
-**示例**
-
-```TypeScript
-import { Animation, Scene } from '@kit.ArkGraphics3D';
-
-function restart(): void {
-  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result && result.animations && result.animations[0]) {
-      let anim: Animation = result.animations[0];
-      // 重启动画
-      anim.restart();
-    }
-  });
-}
-```
 
 ## seek
 
-ArkTS-Dyn:
 ```TypeScript
 seek(position: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-seek(position: double): void
 ```
 
 将动画进度跳转到指定位置，不改变动画的播放状态（已播放仍继续播放，已暂停仍暂停）。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -210,25 +96,7 @@ seek(position: double): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| position | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-
-**示例**
-
-```TypeScript
-import { Animation, Scene } from '@kit.ArkGraphics3D';
-
-function seek(): void {
-  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result && result.animations && result.animations[0]) {
-      let anim: Animation = result.animations[0];
-      // 指定动画的播放进度到10%
-      anim.seek(0.1);
-    }
-  });
-}
-```
+| position | number | 是 |
 
 ## start
 
@@ -240,27 +108,7 @@ start(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-
-**示例**
-
-```TypeScript
-import { Animation, Scene } from '@kit.ArkGraphics3D';
-
-function start(): void {
-  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result && result.animations && result.animations[0]) {
-      let anim: Animation = result.animations[0];
-      // 开始动画
-      anim.start();
-    }
-  });
-}
-```
 
 ## stop
 
@@ -272,41 +120,19 @@ stop(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-
-**示例**
-
-```TypeScript
-import { Animation, Scene } from '@kit.ArkGraphics3D';
-
-function stop(): void {
-  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result && result.animations && result.animations[0]) {
-      let anim: Animation = result.animations[0];
-      // 停止播放动画，并将动画的进度设置为0
-      anim.stop();
-    }
-  });
-}
-```
 
 ## duration
 
 ```TypeScript
-readonly duration: double
+readonly duration: number
 ```
 
 动画持续时间，单位为秒（s），取值范围大于等于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -322,23 +148,19 @@ enabled: boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## progress
 
 ```TypeScript
-readonly progress: double
+readonly progress: number
 ```
 
 动画进度状态，取值区间为[0, 1]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -354,22 +176,18 @@ readonly running: boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## speed
 
 ```TypeScript
-speed?: double
+speed?: number
 ```
 
 动画的播放速度因子。默认值为1.0，表示正常速度播放。如果设置为负值，动画将以反向速度播放。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

@@ -6,14 +6,12 @@ Defines additional options for selecting media assets from Gallery. It inherits 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## completeButtonText
@@ -27,8 +25,6 @@ Text displayed on the complete button.The complete button is located in the lowe
 **Type:** [CompleteButtonText](arkts-medialibrary-photoaccesshelper-completebuttontext-e.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -46,8 +42,6 @@ Information for restoring the PhotoPicker's state from the last exit.When the se
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -63,8 +57,6 @@ Whether destruction with Navigation is supported. **true** if supported, **false
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,8 +76,6 @@ Whether the image can be edited. **true** if editable, **false** otherwise.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -102,8 +92,6 @@ Whether to display the button for selecting the original image. **true** to disp
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -119,8 +107,6 @@ Whether to automatically switch to the full image preview mode after a photo is 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,8 +126,6 @@ Support displaying index numbers.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -160,8 +144,6 @@ Support selection order adjustment.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -171,16 +153,14 @@ Support selection order adjustment.
 ## maxPhotoSelectNumber
 
 ```TypeScript
-maxPhotoSelectNumber?: int
+maxPhotoSelectNumber?: number
 ```
 
 Maximum number of photos that can be selected.A maximum of 500 photos can be selected. The default value is **500**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,16 +171,14 @@ Maximum number of photos that can be selected.A maximum of 500 photos can be sel
 ## maxVideoSelectNumber
 
 ```TypeScript
-maxVideoSelectNumber?: int
+maxVideoSelectNumber?: number
 ```
 
 Maximum number of videos that can be selected.A maximum of 500 videos can be selected. The default value is **500**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,8 +198,6 @@ Picker color mode. Dark/light color mode of all content within the Picker. The d
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -240,19 +216,6 @@ Name of the child window.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Examples**
-
-```TypeScript
-async function photoPicker() {
-    let picker = new photoAccessHelper.PhotoViewPicker();
-    let option = new photoAccessHelper.PhotoSelectOptions();
-    option.userId = 101;
-    picker.select(option);
-  }
-```

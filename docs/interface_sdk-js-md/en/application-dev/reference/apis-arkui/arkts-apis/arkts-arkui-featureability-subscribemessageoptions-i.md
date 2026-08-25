@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -17,8 +15,6 @@ fail?: (data: string, code: number) => void
 Called when the messages fail to be sent.
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 
@@ -40,8 +36,6 @@ success?: (data: SubscribeMessageResponse) => void
 Called when the messages are sent successfully.
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 

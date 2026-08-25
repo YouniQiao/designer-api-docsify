@@ -4,8 +4,6 @@ Represents the optional parameters of [DataShareHelper](#datasharehelperoptions-
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the optional parameters of [DataShareHelper](#datasharehelperoptions-
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## isProxy
@@ -30,8 +28,6 @@ Whether the [DataShareHelper](#datasharehelperoptions-system-api) is in proxy mo
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -41,18 +37,16 @@ Whether the [DataShareHelper](#datasharehelperoptions-system-api) is in proxy mo
 ## waitTime
 
 ```TypeScript
-waitTime?: int
+waitTime?: number
 ```
 
 Waiting time for starting the data provider process, in seconds. The default value is **2**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** 2
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

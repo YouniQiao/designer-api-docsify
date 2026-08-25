@@ -4,8 +4,6 @@ EventHub is an event communication mechanism based on the publish-subscribe patt
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## emit
@@ -17,8 +15,6 @@ emit(event: string, ...args: Object[]): void
 Trigger the event callbacks.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,68 +35,6 @@ Trigger the event callbacks.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    this.context.eventHub.on('myEvent', this.eventFunc);
-  }
-
-  onDestroy() {
-    try {
-      // Result
-      // eventFunc is called,undefined,undefined
-      this.context.eventHub.emit('myEvent');
-      // Result
-      // eventFunc is called,1,undefined
-      this.context.eventHub.emit('myEvent', 1);
-      // Result
-      // eventFunc is called,1,2
-      this.context.eventHub.emit('myEvent', 1, 2);
-    } catch (e) {
-      let code: number = (e as BusinessError).code;
-      let msg: string = (e as BusinessError).message;
-      console.error(`EventHub emit error, code: ${code}, msg: ${msg}`);
-    }
-  }
-
-  eventFunc(argOne: number, argTwo: number) {
-    console.info(`eventFunc is called, ${argOne}, ${argTwo}`);
-  }
-}
-```
-
-## emit
-
-```TypeScript
-emit(event: string, ...args: (Object|null|undefined)[]): void
-```
-
-Trigger the event callbacks.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| event | string | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | (Object \| null \| undefined)[] | Yes |
-
-**Examples**
-
-See [emit](#emit)
-
 ## off
 
 ```TypeScript
@@ -108,11 +42,10 @@ off(event: string, callback?: Function): void
 ```
 
 Unsubscribes from an event.  
-- If **callback** is specified, this API unsubscribes from the given event with the specified callback. - If **callback** is not specified, this API unsubscribes from the given event with all callbacks.
+- If **callback** is specified, this API unsubscribes from the given event with the specified callback.  
+- If **callback** is not specified, this API unsubscribes from the given event with all callbacks.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,37 +66,6 @@ Unsubscribes from an event.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    try {
-      this.context.eventHub.on('myEvent', this.eventFunc1);
-      this.context.eventHub.off('myEvent', this.eventFunc1); // Unsubscribe from the myEvent event with the callback eventFunc1.
-      this.context.eventHub.on('myEvent', this.eventFunc1);
-      this.context.eventHub.on('myEvent', this.eventFunc2);
-      this.context.eventHub.off('myEvent'); // Unsubscribe from the myEvent event with all the callbacks (eventFunc1 and eventFunc2).
-    } catch (e) {
-      let code: number = (e as BusinessError).code;
-      let msg: string = (e as BusinessError).message;
-      console.error(`EventHub emit error, code: ${code}, msg: ${msg}`);
-    }
-  }
-
-  eventFunc1() {
-    console.info('eventFunc1 is called');
-  }
-
-  eventFunc2() {
-    console.info('eventFunc2 is called');
-  }
-}
-```
-
 ## on
 
 ```TypeScript
@@ -177,8 +79,6 @@ Subscribes to an event.
 > **this** in **callback**, use an arrow function.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

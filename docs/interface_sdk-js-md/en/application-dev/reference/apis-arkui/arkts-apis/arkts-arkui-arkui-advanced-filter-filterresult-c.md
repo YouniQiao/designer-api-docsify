@@ -4,14 +4,12 @@ This parameter specifies the selection result of a filtering dimension. The inde
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
+import { Filter, FilterParams, FilterResult, FilterType } from 'kits/@kit.ArkUI';
 ```
 
 ## index
@@ -25,8 +23,6 @@ result index.
 **Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ name: ResourceStr
 
 result name.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +56,9 @@ value: ResourceStr
 
 result value.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

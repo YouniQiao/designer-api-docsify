@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## isDefaultNetMeteredSync
@@ -16,8 +16,6 @@ Checks whether the data traffic over the current network is metered. For example
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -36,11 +34,3 @@ Checks whether the data traffic over the current network is metered. For example
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let isMetered = connection.isDefaultNetMeteredSync();
-```

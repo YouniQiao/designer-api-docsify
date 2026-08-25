@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getOpProcess
 
 ```TypeScript
-function getOpProcess(volumeId: string): Promise<int>
+function getOpProcess(volumeId: string): Promise<number>
 ```
 
 Gets the operation progress of a volume. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -36,7 +34,7 @@ Gets the operation progress of a volume. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 

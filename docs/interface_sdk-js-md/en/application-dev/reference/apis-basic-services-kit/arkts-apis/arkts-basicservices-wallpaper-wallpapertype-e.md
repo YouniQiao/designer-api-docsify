@@ -1,10 +1,8 @@
 # WallpaperType
 
-Indicates wallpaper type.@enum { int } WallpaperType
+Indicates wallpaper type.@enum { number } WallpaperType
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -18,8 +16,6 @@ Indicates the home screen wallpaper.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 ## WALLPAPER_LOCKSCREEN
@@ -31,7 +27,5 @@ WALLPAPER_LOCKSCREEN
 Indicates the lock screen wallpaper.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper

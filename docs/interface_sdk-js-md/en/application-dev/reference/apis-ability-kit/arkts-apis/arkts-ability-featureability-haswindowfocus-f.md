@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## hasWindowFocus
@@ -16,8 +16,6 @@ Checks whether the main window of this ability has the focus. This API uses an a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -27,28 +25,6 @@ Checks whether the main window of this ability has the focus. This API uses an a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-featureAbility.hasWindowFocus((error, data) => {
-  if (error && error.code !== 0) {
-    console.error(`hasWindowFocus fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`hasWindowFocus success, data: ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-featureAbility.hasWindowFocus().then((data) => {
-  console.info(`hasWindowFocus data: ${JSON.stringify(data)}`);
-});
-```
 
 
 ## hasWindowFocus
@@ -61,8 +37,6 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -72,7 +46,3 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [hasWindowFocus](#haswindowfocus)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## offConnectionStateChanged
@@ -15,8 +15,6 @@ function offConnectionStateChanged(callback?: Callback<ConnectionResult>): void
 Unsubscribes from the connection state change event of the port channel. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

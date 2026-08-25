@@ -4,14 +4,12 @@ Defines the animator result.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## cancel
@@ -24,19 +22,9 @@ Cancels the animation, triggering the [onCancel](../../../reference/apis-arkui/j
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-animator.cancel();
-```
 
 ## finish
 
@@ -48,19 +36,9 @@ Ends the animation, triggering the [onFinish](../../../reference/apis-arkui/js-a
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-animator.finish();
-```
 
 ## oncancel
 
@@ -71,8 +49,6 @@ oncancel: () => void
 Called when this animation is canceled.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 12
 
@@ -92,8 +68,6 @@ Called when this animation is canceled.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -109,8 +83,6 @@ onfinish: () => void
 Called when this animation is finished.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 12
 
@@ -130,8 +102,6 @@ Called when this animation is finished.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -147,8 +117,6 @@ onframe: (progress: number) => void
 Called when a frame is received.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 12
 
@@ -175,8 +143,6 @@ Called when a frame is received.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -199,8 +165,6 @@ Called when this animation repeats.Note: This API is supported since API version
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 12
 
 **Substitutes:** onRepeat
@@ -219,8 +183,6 @@ Called when this animation repeats.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -237,19 +199,9 @@ Pauses this animation.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-animator.pause();
-```
 
 ## play
 
@@ -261,19 +213,9 @@ Plays this animation. The animation retains the previous playback state. For exa
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-animator.play();
-```
 
 ## reset
 
@@ -284,8 +226,6 @@ reset(options: AnimatorOptions): void
 Resets the animation parameters of this animator.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -304,68 +244,6 @@ Resets the animation parameters of this animator.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { AnimatorResult } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct AnimatorTest {
-  private animatorResult: AnimatorResult | undefined = undefined;
-
-  create() {
-    this.animatorResult = this.getUIContext().createAnimator({
-      duration: 1500,
-      easing: "friction",
-      delay: 0,
-      fill: "forwards",
-      direction: "normal",
-      iterations: 3,
-      begin: 200.0,
-      end: 400.0
-    })
-    this.animatorResult.reset({
-      duration: 1500,
-      easing: "friction",
-      delay: 0,
-      fill: "forwards",
-      direction: "normal",
-      iterations: 5,
-      begin: 200.0,
-      end: 400.0
-    });
-  }
-
-  build() {
-    // ......
-  }
-}
-```
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-import { Animator as animator, AnimatorResult, AnimatorOptions, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-let options: AnimatorOptions = {
-  duration: 1500,
-  easing: "ease",
-  delay: 0,
-  fill: "forwards",
-  direction: "normal",
-  iterations: 1,
-  begin: 100,
-  end: 200
-};
-let optionsNew: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200)
-  .duration(2000)
-  .iterations(3)
-  .delay(1000)
-let animatorResult: AnimatorResult = animator.create(options);
-animatorResult.reset(optionsNew);
-```
-
 ## reset
 
 ```TypeScript
@@ -375,8 +253,6 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 Resets the animation parameters of this animator. Compared with [reset](#reset), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -397,10 +273,6 @@ Resets the animation parameters of this animator. Compared with [reset](#reset),
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
 
-**Examples**
-
-See [reset](#reset)
-
 ## reverse
 
 ```TypeScript
@@ -411,19 +283,9 @@ Plays this animation in reverse order. This API does not take effect when the in
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-animator.reverse();
-```
 
 ## setExpectedFrameRateRange
 
@@ -434,8 +296,6 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 Sets the expected frame rate range.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -449,42 +309,6 @@ Sets the expected frame rate range.
 | --- | --- | --- |
 | rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes |
 
-**Examples**
-
-```TypeScript
-import { AnimatorResult } from '@kit.ArkUI';
-
-let expectedFrameRate: ExpectedFrameRateRange = {
-  min: 0,
-  max: 120,
-  expected: 30
-}
-
-@Entry
-@Component
-struct AnimatorTest {
-  private backAnimator: AnimatorResult | undefined = undefined
-
-  create() {
-    this.backAnimator = this.getUIContext().createAnimator({
-      duration: 2000,
-      easing: "ease",
-      delay: 0,
-      fill: "forwards",
-      direction: "normal",
-      iterations: 1,
-      begin: 100, // Start point of the animation interpolation.
-      end: 200 // End point of the animation interpolation.
-    })
-    this.backAnimator.setExpectedFrameRateRange(expectedFrameRate);
-  }
-
-  build() {
-    // ......
-  }
-}
-```
-
 ## update
 
 ```TypeScript
@@ -494,8 +318,6 @@ update(options: AnimatorOptions): void
 Updates this animator.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -508,11 +330,3 @@ Updates this animator.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes |
-
-**Examples**
-
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-animator.update(options);
-```

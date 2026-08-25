@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## getModelResult
@@ -15,8 +15,6 @@ function getModelResult(rule: ModelRule): Promise<ModelResult>
 Request security model result from security guard.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.QUERY_SECURITY_MODEL_RESULT
 

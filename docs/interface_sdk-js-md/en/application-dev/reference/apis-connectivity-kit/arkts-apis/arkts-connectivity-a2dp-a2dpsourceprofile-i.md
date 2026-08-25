@@ -6,14 +6,12 @@ Manager a2dp source profile.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from '@kit.ConnectivityKit';
+import { a2dp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getPlayingState
@@ -25,8 +23,6 @@ getPlayingState(deviceId: string): PlayingState
 Obtains the playing state of device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -55,15 +51,3 @@ Obtains the playing state of device.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile();
-    let state = a2dpSrc.getPlayingState('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

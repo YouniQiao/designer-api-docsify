@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 ```
 
 ## setUserGrantedBundleState
@@ -17,8 +17,6 @@ Sets the enabling state of device notification access for the specified applicat
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -29,8 +27,8 @@ Sets the enabling state of device notification access for the specified applicat
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| targetBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
-| enabledBundles | [BundleOption[]](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| targetBundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| enabledBundles | [BundleOption[]](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | enabled | boolean | Yes |
 
 **Return value:**
@@ -48,24 +46,3 @@ Sets the enabling state of device notification access for the specified applicat
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) |
-
-**Examples**
-
-```TypeScript
-let targetBundle: notificationExtensionSubscription.BundleOption =
-  {
-    // Use the actual target application information.
-    bundle: 'com.example.testnotification',
-  };
-let enabledBundles: notificationExtensionSubscription.BundleOption[] = [
-  // Use the actual source application information.
-  { bundle: 'com.example.xxx', uid: 11111111 },
-  { bundle: 'com.example.xxxx', uid: 11111111 },
-  { bundle: 'com.example.xxxxx' },
-];
-notificationExtensionSubscription.setUserGrantedBundleState(targetBundle, enabledBundles, true).then(() => {
-  console.info(`setUserGrantedBundleState successfully.`);
-}).catch((err: BusinessError) => {
-  console.error(`setUserGrantedBundleState fail: ${JSON.stringify(err)}`);
-});
-```

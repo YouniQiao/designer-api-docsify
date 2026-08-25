@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## clear
@@ -22,8 +22,6 @@ Clears all historical pages in the stack and retains only the current page at th
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **Substitutes:** [clear](arkts-arkui-arkui-uicontext-router-c.md#clear)
@@ -31,9 +29,3 @@ Clears all historical pages in the stack and retains only the current page at th
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Examples**
-
-```TypeScript
-this.getUIContext().getRouter().clear();
-```

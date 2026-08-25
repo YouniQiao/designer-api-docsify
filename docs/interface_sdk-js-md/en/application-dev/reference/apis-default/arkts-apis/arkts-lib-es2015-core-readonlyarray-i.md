@@ -1,7 +1,5 @@
 # ReadonlyArray
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ find<S extends T>(predicate: (this: void, value: T, index: number, obj: readonly
 ```
 
 Returns the value of the first element in the array where predicate is true, and undefined otherwise.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -33,8 +29,6 @@ Returns the value of the first element in the array where predicate is true, and
 ```TypeScript
 find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg?: any): T | undefined
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -54,8 +48,6 @@ findIndex(predicate: (value: T, index: number, obj: readonly T[]) => unknown, th
 ```
 
 Returns the index of the first element in the array where predicate is true, and -1 otherwise.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
+import { uiAppearance } from 'kits/@kit.ArkUI';
 ```
 
 ## getFontScale
@@ -23,8 +23,6 @@ Obtains the current font size scale factor.<!--Del-->
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Required permissions:** 
 - API version 12 - 19: ohos.permission.UPDATE_CONFIGURATION
 
@@ -43,18 +41,3 @@ Obtains the current font size scale factor.<!--Del-->
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [500001](../errorcode-uiappearance.md#500001-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let fontScale = uiAppearance.getFontScale();
-  console.info('Get fontScale ' + fontScale);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('Get fontScale failed, ' + message);
-}
-```

@@ -6,14 +6,12 @@
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getWhiteBalanceGains
@@ -25,8 +23,6 @@ getWhiteBalanceGains(): WhiteBalanceGains
 Gets RGB white balance gain values.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,8 +52,6 @@ setWhiteBalanceGains(gains: WhiteBalanceGains): void
 Sets RGB white balance gain values.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

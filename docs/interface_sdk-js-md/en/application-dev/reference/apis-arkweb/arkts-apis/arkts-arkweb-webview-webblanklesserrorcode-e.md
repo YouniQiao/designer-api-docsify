@@ -4,8 +4,6 @@ Enumerates the error codes of the blankless loading.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## SUCCESS
@@ -17,8 +15,6 @@ SUCCESS = 0
 Operation successful.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ Unknown error or internal status error.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ERR_INVALID_PARAM
@@ -45,8 +39,6 @@ ERR_INVALID_PARAM = -2
 Invalid parameter.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,8 +52,6 @@ ERR_CONTROLLER_NOT_INITED = -3
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ERR_KEY_NOT_MATCH
@@ -73,8 +63,6 @@ ERR_KEY_NOT_MATCH = -4
 No key value is matched. [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) must be used with [getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey) and their key values must be the same. Otherwise, this error code is returned.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -88,8 +76,6 @@ The similarity is low, and the system determines that the scene change is too la
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ERR_DURATION_OUT_OF_RANGE
@@ -101,8 +87,6 @@ ERR_DURATION_OUT_OF_RANGE = -6
 The frame interpolation duration set in [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) is out of range.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,8 +101,6 @@ ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 The historical frame expiration time set in [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) is out of range.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Ability } from '@kit.AbilityKit';
+import { Ability } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

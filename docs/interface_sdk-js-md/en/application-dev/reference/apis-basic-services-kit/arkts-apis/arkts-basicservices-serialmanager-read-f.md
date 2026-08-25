@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from '@kit.BasicServicesKit';
+import { serialManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## read
 
 ```TypeScript
-function read(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>
+function read(portId: number, buffer: Uint8Array, timeout?: number): Promise<number>
 ```
 
 Reads data from the serial port device asynchronously. This API uses a promise to return the result.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -24,15 +22,15 @@ Reads data from the serial port device asynchronously. This API uses a promise t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | Yes |
 | buffer | Uint8Array | Yes |
-| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| timeout | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -44,52 +42,3 @@ Reads data from the serial port device asynchronously. This API uses a promise t
 | [31400005](../errorcode-usb.md#31400005-device-not-opened) |
 | [31400006](../errorcode-usb.md#31400006-data-transfer-timeout) |
 | [31400007](../errorcode-usb.md#31400007-io-exception) |
-
-**Examples**
-
-The following sample code shows the basic process for calling the read API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
-
-```TypeScript
-import { JSON } from '@kit.ArkTS';
-import { serialManager } from '@kit.BasicServicesKit';
-
-// Obtain the serial port list.
-function read() {
-  let portList: serialManager.SerialPort[] = serialManager.getPortList();
-  console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (portList === undefined || portList.length === 0) {
-    console.info('usbSerial portList is empty');
-    return;
-  }
-  let portId: number = portList[0].portId;
-
-  // Check whether the device can be accessed by the application.
-  if (!serialManager.hasSerialRight(portId)) {
-    serialManager.requestSerialRight(portId).then(result => {
-      if (!result) {
-        // If the application does not have the access permission and is not granted by the user, the application exits.
-        console.info('user is not granted the operation  permission');
-        return;
-      } else {
-        console.info('grant permission successfully');
-      }
-    });
-  }
-
-  // Open a serial port device.
-  try {
-    serialManager.open(portId)
-    console.info('open usbSerial success, portId: ' + portId);
-  } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
-  }
-
-  // Read data asynchronously.
-  let readBuffer: Uint8Array = new Uint8Array(64);
-  serialManager.read(portId, readBuffer, 2000).then((size: number) => {
-    console.info('read usbSerial success, readBuffer: ' + readBuffer.toString());
-  }).catch((error: Error) => {
-    console.error('read usbSerial error, ' + JSON.stringify(error));
-  })
-}
-```

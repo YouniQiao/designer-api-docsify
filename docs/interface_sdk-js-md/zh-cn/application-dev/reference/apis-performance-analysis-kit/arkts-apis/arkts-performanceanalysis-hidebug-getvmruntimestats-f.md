@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getVMRuntimeStats
@@ -16,8 +16,6 @@ function getVMRuntimeStats(): GcStats
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **返回值：**
@@ -25,16 +23,3 @@ function getVMRuntimeStats(): GcStats
 | 类型 |
 | --- |
 | [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) |
-
-**示例**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-
-let vMRuntimeStats: hidebug.GcStats = hidebug.getVMRuntimeStats();
-console.info(`gc-count: ${vMRuntimeStats['ark.gc.gc-count']}`);
-console.info(`gc-time: ${vMRuntimeStats['ark.gc.gc-time']}`);
-console.info(`gc-bytes-allocated: ${vMRuntimeStats['ark.gc.gc-bytes-allocated']}`);
-console.info(`gc-bytes-freed: ${vMRuntimeStats['ark.gc.gc-bytes-freed']}`);
-console.info(`fullgc-longtime-count: ${vMRuntimeStats['ark.gc.fullgc-longtime-count']}`);
-```

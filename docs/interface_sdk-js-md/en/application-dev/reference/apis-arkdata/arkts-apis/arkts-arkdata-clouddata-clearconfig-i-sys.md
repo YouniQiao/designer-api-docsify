@@ -4,8 +4,6 @@ Defines the clearance configuration of a device-cloud synergy database.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the clearance configuration of a device-cloud synergy database.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## dbInfo
@@ -27,8 +25,6 @@ Information about the database whose data is to be cleared and the clearance rul
 **Type:** Record&lt;string, [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

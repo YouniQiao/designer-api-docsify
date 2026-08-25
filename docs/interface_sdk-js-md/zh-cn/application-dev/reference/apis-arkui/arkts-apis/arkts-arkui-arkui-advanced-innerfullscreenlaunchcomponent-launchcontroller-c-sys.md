@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
+import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkUI';
 ```
 
 ## launchAtomicService
@@ -25,8 +23,6 @@ public launchAtomicService: LaunchAtomicServiceCallback
 拉起原子化服务。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

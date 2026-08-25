@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## getUserRestricted
@@ -15,8 +15,6 @@ function getUserRestricted(admin: Want, settingsItem: string): boolean
 Obtains the disabled status of a setting item.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Deprecated since:** 26.0.0
 
@@ -49,27 +47,6 @@ Obtains the disabled status of a setting item.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { restrictions } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace input parameters with actual values.
-  let result: boolean = restrictions.getUserRestricted(wantTemp, 'setEthernetIp');
-  console.info('Succeeded in getting user restricted');
-} catch (err) {
-  console.error(`Failed to get user restricted. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getUserRestricted
 
@@ -80,8 +57,6 @@ function getUserRestricted(admin: Want | null, settingsItem: SettingsForDevice):
 Obtains the disabled status of the specified device setting item.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -110,7 +85,3 @@ Obtains the disabled status of the specified device setting item.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [getUserRestricted](#getuserrestricted)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getDnsAscii
@@ -28,8 +28,6 @@ Converts the host name from Unicode to ASCII and controls the conversion behavio
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
@@ -52,14 +50,3 @@ Converts the host name from Unicode to ASCII and controls the conversion behavio
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let result = connection.getDnsAscii("www.example.com," connection.ConversionProcess.NO_CONFIGURATION);
-console.info(result);  // Expected result: www.xn--fsq092h.com
-let result = connection.getDnsAscii("www.example.com", connection.ConversionProcess.NO_CONFIGURATION);
-console.info(result);  // Expected result: www.example.com
-```

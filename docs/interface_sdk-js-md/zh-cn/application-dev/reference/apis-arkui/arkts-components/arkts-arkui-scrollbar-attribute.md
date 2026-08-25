@@ -6,8 +6,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ enableNestedScroll(enabled: Optional<boolean>)
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ enableNestedScroll(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | 是 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## scrollBarColor
 
@@ -49,8 +45,6 @@ scrollBarColor(color: Optional<ColorMetrics>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -61,4 +55,4 @@ scrollBarColor(color: Optional<ColorMetrics>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | Optional & lt;ColorMetrics & gt; | 是 |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ColorMetrics&gt; | 是 |

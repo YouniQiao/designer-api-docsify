@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getAllVolumes
@@ -15,8 +15,6 @@ function getAllVolumes(callback: AsyncCallback<Array<Volume>>): void
 Obtains information about all volumes of this external storage device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -40,24 +38,6 @@ Obtains information about all volumes of this external storage device. This API 
 | 13600001 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  // do something with volumes, which is an array
-}).catch((error: BusinessError) => {
-  console.error("getAllVolumes failed");
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-volumeManager.getAllVolumes((error: BusinessError, volumes: Array<volumeManager.Volume>) => {
-  // Do something.
-});
-```
-
 
 ## getAllVolumes
 
@@ -68,8 +48,6 @@ function getAllVolumes(): Promise<Array<Volume>>
 Obtains information about all volumes of this external storage device. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -92,7 +70,3 @@ Obtains information about all volumes of this external storage device. This API 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 | 13900042 |
-
-**Examples**
-
-See [getAllVolumes](#getallvolumes)

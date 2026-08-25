@@ -4,8 +4,6 @@ Enumerates the constraints on the source rectangle. It is used to specify whethe
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## STRICT
@@ -18,8 +16,6 @@ The sampling range is strictly confined to the source rectangle, resulting in a 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## FAST
@@ -31,7 +27,5 @@ FAST = 1
 The sampling range is not limited to the source rectangle and can extend beyond it, allowing for a high sampling speed.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

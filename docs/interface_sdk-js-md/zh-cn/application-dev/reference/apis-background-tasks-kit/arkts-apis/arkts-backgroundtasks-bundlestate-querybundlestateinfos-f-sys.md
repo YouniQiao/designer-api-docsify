@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStateInfos
@@ -15,8 +15,6 @@ function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallba
 Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -34,35 +32,6 @@ Queries usage information about each bundle within a specified period.This metho
 | end | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
-
-bundleState.queryBundleStateInfos(0, 20000000000000, (err: BusinessError ,
-  res: bundleState.BundleActiveInfoResponse ) => {
-  if (err) {
-    console.error('BUNDLE_ACTIVE queryBundleStateInfos callback failed, because: ' + err.code);
-  } else {
-    console.info('BUNDLE_ACTIVE queryBundleStateInfos callback success.');
-    console.info('BUNDLE_ACTIVE queryBundleStateInfos callback result ' + JSON.stringify(res));
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
-
-bundleState.queryBundleStateInfos(0, 20000000000000).then((res: bundleState.BundleActiveInfoResponse) => {
-  console.info('BUNDLE_ACTIVE queryBundleStateInfos promise success.');
-  console.info('BUNDLE_ACTIVE queryBundleStateInfos promise result ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryBundleStateInfos promise failed, because: ' + err.code);
-});
-```
-
 
 ## queryBundleStateInfos
 
@@ -73,8 +42,6 @@ function queryBundleStateInfos(begin: number, end: number): Promise<BundleActive
 Queries usage information about each bundle within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -96,7 +63,3 @@ Queries usage information about each bundle within a specified period.This metho
 | 类型 |
 | --- |
 | Promise&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; |
-
-**示例**
-
-参见 [queryBundleStateInfos](#querybundlestateinfos)

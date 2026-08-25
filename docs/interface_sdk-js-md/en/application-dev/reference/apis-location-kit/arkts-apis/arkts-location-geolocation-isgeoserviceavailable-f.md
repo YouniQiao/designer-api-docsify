@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## isGeoServiceAvailable
@@ -15,8 +15,6 @@ function isGeoServiceAvailable(callback: AsyncCallback<boolean>): void
 Obtain geocode service status
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -32,27 +30,6 @@ Obtain geocode service status
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.isGeoServiceAvailable((err, data) => {
-    if (err) {
-        console.info('isGeoServiceAvailable: err=' + JSON.stringify(err));
-    }
-    if (data) {
-        console.info('isGeoServiceAvailable: data=' + JSON.stringify(data));
-    }
-});
-```
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.isGeoServiceAvailable().then((result) => {
-    console.info('promise, isGeoServiceAvailable: ' + JSON.stringify(result));
-});
-```
-
 
 ## isGeoServiceAvailable
 
@@ -63,8 +40,6 @@ function isGeoServiceAvailable(): Promise<boolean>
 Obtain geocode service status
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -79,7 +54,3 @@ Obtain geocode service status
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [isGeoServiceAvailable](#isgeoserviceavailable)

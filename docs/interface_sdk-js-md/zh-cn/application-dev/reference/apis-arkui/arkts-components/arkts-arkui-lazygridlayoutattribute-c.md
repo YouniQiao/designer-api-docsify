@@ -6,8 +6,6 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ columnsGap(value: LengthMetrics): T
 设置列与列的间距。设置为小于0的值时，按默认值显示。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,8 +51,6 @@ footer(builder: CustomBuilder | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -67,7 +61,7 @@ footer(builder: CustomBuilder | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 |
 
 **返回值：**
 
@@ -89,8 +83,6 @@ header(builder: CustomBuilder | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -101,7 +93,7 @@ header(builder: CustomBuilder | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 |
 
 **返回值：**
 
@@ -124,8 +116,6 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -136,7 +126,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | OnVisibleIndexesChangeCallback \| undefined | 是 |
+| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 |
 
 **返回值：**
 
@@ -153,8 +143,6 @@ rowsGap(value: LengthMetrics): T
 设置行与行的间距。设置为小于0的值时，按默认值显示。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -184,8 +172,6 @@ sticky(sticky: StickyStyle | undefined): T
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -196,7 +182,7 @@ sticky(sticky: StickyStyle | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [sticky](#sticky) | StickyStyle \| undefined | 是 |
+| [sticky](#sticky) | [StickyStyle](arkts-arkui-stickystyle-e.md) \| undefined | 是 |
 
 **返回值：**
 

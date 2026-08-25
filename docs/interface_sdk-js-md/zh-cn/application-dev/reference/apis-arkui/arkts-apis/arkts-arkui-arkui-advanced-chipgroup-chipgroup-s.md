@@ -4,47 +4,13 @@ ChipGroup组件提供操作块群组能力，支持单选或多选模式，可�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
+import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-build函数用于构造ChipGroup高级组件。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## suffix
-
-```TypeScript
-suffix?: ChipGroupSuffixBuilder
-```
-
-支持开发者自定义builder，如需在组件最右侧显示自定义内容可配置suffix属性，使用属性suffix需引用[IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md)接口。默认不传入时，没有suffix。值为undefined时，没有suffix。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundSystemMaterial
 
@@ -52,13 +18,11 @@ suffix?: ChipGroupSuffixBuilder
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、 border、shadow视觉属性。设置自 动反色的系统材质时，fontColor如果使用系统预定义的可反色颜色资源（如`\$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。默认值：undefined值为undefined时，不应用材质样式。
+设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、 [border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow视觉属性。设置自 动反色的系统材质时，fontColor如果使用系统预定义的可反色颜色资源（如`\$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。默认值：undefined值为undefined时，不应用材质样式。
 
 **类型：** uiMaterial.Material
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,8 +42,6 @@ chipGroupPadding?: ChipGroupPaddingOptions
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -97,8 +59,6 @@ chipGroupSpace?: ChipGroupSpaceOptions
 **类型：** [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -118,8 +78,6 @@ items: ChipGroupItemOptions[]
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -137,8 +95,6 @@ itemStyle?: ChipItemStyle
 **类型：** [ChipItemStyle](arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,8 +114,6 @@ multiple?: boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -178,8 +132,6 @@ Chip状态改变时的回调方法，用于监听Chip选中状态的变更。该
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -192,13 +144,11 @@ Chip状态改变时的回调方法，用于监听Chip选中状态的变更。该
 selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件选中状态的系统材质样式。不同材质具有不同的效果，能够影响组件选中时的backgroundColor、 border、shadow视觉属性。设置自 动反色的系统材质时，selectedFontColor如果使用系统预定义的可反色颜色资源（如`\$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。当设置 selectedBackgroundSystemMaterial时，应将selectedBackgroundColor设为Color.Transparent，否则会与系统材质冲突。默认值：undefined值为undefined时，不应用选中状态的材质样式。
+设置组件选中状态的系统材质样式。不同材质具有不同的效果，能够影响组件选中时的backgroundColor、 [border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow视觉属性。设置自 动反色的系统材质时，selectedFontColor如果使用系统预定义的可反色颜色资源（如`\$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。当设置 selectedBackgroundSystemMaterial时，应将selectedBackgroundColor设为Color.Transparent，否则会与系统材质冲突。默认值：undefined值为undefined时，不应用选中状态的材质样式。
 
 **类型：** uiMaterial.Material
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -218,8 +168,6 @@ selectedIndexes?: Array<number>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -237,8 +185,6 @@ suffix?: Callback<void>
 **类型：** Callback&lt;void&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

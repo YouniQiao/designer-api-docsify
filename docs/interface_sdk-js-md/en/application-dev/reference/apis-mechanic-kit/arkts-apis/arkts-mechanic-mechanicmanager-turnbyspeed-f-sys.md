@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## turnBySpeed
 
 ```TypeScript
-function turnBySpeed(mechId: int, angleSpeed: double, duration: int): Promise<Result>
+function turnBySpeed(mechId: number, angleSpeed: number, duration: number): Promise<Result>
 ```
 
 Rotate in place according to the speed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -26,9 +24,9 @@ Rotate in place according to the speed.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| angleSpeed | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
-| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| mechId | number | Yes |
+| angleSpeed | number | Yes |
+| duration | number | Yes |
 
 **Return value:**
 

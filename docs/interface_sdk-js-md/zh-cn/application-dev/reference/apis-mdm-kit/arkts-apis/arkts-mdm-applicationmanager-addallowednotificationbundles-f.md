@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedNotificationBundles
@@ -25,8 +25,6 @@ function addAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, 
 > 4.支持跨用户设置，设置后跨用户立即生效。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -51,25 +49,3 @@ function addAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, 
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let bundleNames: Array<string> = ['com.example.notificationapp'];
-
-try {
-  applicationManager.addAllowedNotificationBundles(wantTemp, bundleNames, 100);
-  console.info('Succeeded in adding allowed notification bundles.');
-} catch (err) {
-  console.error(`Failed to add allowed notification bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```

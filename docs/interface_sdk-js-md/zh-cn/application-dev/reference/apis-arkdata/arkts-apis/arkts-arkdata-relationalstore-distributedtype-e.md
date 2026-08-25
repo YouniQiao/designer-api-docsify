@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## DISTRIBUTED_DEVICE
@@ -18,8 +16,6 @@ DISTRIBUTED_DEVICE = 0
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## DISTRIBUTED_CLOUD
@@ -31,8 +27,6 @@ DISTRIBUTED_CLOUD = 1
 表示在设备和云端之间分布式的数据库表。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本10 - 11：ohos.permission.DISTRIBUTED_DATASYNC

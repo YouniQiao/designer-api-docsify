@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## INPUT_TIMEOUT
@@ -18,8 +16,6 @@ INPUT_TIMEOUT = 0
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## NAVIGATION_COMMIT_TIMEOUT
@@ -31,7 +27,5 @@ NAVIGATION_COMMIT_TIMEOUT = 1
 新的网页加载导航响应超时。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Web.Webview.Core

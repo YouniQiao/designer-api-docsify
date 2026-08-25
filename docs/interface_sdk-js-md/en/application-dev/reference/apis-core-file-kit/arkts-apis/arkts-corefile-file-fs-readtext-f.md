@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## readText
@@ -20,8 +20,6 @@ declare function readText(
 Reads the text content of a file. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -59,37 +57,6 @@ Reads the text content of a file. This API uses a promise to return the result.
 | 13900042 |
 | 13900044 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-fs.readText(filePath).then((str: string) => {
-  console.info("readText succeed:" + str);
-}).catch((err: BusinessError) => {
-  console.error("readText failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, ReadTextOptions } from '@kit.CoreFileKit';
-let filePath = pathDir + "/test.txt";
-let stat = fs.statSync(filePath);
-let readTextOption: ReadTextOptions = {
-    offset: 1,
-    length: stat.size,
-    encoding: 'utf-8'
-};
-fs.readText(filePath, readTextOption, (err: BusinessError, str: string) => {
-  if (err) {
-    console.error("readText failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("readText succeed:" + str);
-  }
-});
-```
-
 
 ## readText
 
@@ -100,8 +67,6 @@ declare function readText(filePath: string, callback: AsyncCallback<string>): vo
 Reads the text content of a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -132,10 +97,6 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-See [readText](#readtext)
-
 
 ## readText
 
@@ -150,8 +111,6 @@ declare function readText(
 Reads the text content of a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -182,7 +141,3 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 | 13900034 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [readText](#readtext)

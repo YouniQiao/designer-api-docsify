@@ -4,8 +4,6 @@ SIM卡锁类型。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## SIM_NONE
@@ -17,8 +15,6 @@ SIM_NONE = 0
 无锁。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -32,8 +28,6 @@ PIN锁。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PUK
@@ -45,8 +39,6 @@ SIM_PUK = 2
 PUK锁。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -60,8 +52,6 @@ SIM_PN_PIN = 3
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PN_PUK
@@ -73,8 +63,6 @@ SIM_PN_PUK = 4
 网络PUK锁。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -88,8 +76,6 @@ SIM_PU_PIN = 5
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PU_PUK
@@ -101,8 +87,6 @@ SIM_PU_PUK = 6
 子网PUK锁。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -116,8 +100,6 @@ SIM_PP_PIN = 7
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PP_PUK
@@ -129,8 +111,6 @@ SIM_PP_PUK = 8
 服务提供商PUK锁。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -144,8 +124,6 @@ SIM_PC_PIN = 9
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PC_PUK
@@ -157,8 +135,6 @@ SIM_PC_PUK = 10
 组织PUK锁。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
@@ -172,8 +148,6 @@ SIM PIN锁。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## SIM_SIM_PUK
@@ -185,7 +159,5 @@ SIM_SIM_PUK = 12
 SIM PUK锁。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry

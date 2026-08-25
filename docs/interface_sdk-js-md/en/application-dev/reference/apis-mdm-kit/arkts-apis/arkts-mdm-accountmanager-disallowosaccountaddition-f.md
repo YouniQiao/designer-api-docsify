@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disallowOsAccountAddition
@@ -15,8 +15,6 @@ function disallowOsAccountAddition(admin: Want, disallow: boolean, accountId?: n
 Users are not allowed to add accounts. After the API is successfully called, the system forbids the specified user or all users from adding new accounts. This API is applicable to enterprise device management scenarios, such as preventing employees from creating local accounts and enhancing device security management.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
@@ -40,24 +38,3 @@ Users are not allowed to add accounts. After the API is successfully called, the
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  accountManager.disallowOsAccountAddition(wantTemp, true, 100);
-  console.info('Succeeded in disallowing os account addition.');
-} catch (err) {
-  console.error(`Failed to disallow os account addition. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -8,8 +8,6 @@ Enumerates the authentication types.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 8
 
 **Substitutes:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)

@@ -4,8 +4,6 @@ Indicates the personalized lock types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ PN_PIN_LOCK = 0
 Indicates network personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -36,8 +32,6 @@ Indicates network personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ PU_PIN_LOCK = 2
 Indicates network subset personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -68,8 +60,6 @@ Indicates network subset personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ PP_PIN_LOCK = 4
 Indicates service provider personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -100,8 +88,6 @@ Indicates service provider personalization of PUK lock(refer 3GPP TS 22.022 [33]
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ PC_PIN_LOCK = 6
 Indicates corporate personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -132,8 +116,6 @@ Indicates corporate personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -148,8 +130,6 @@ Indicates SIM/USIM personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -163,8 +143,6 @@ SIM_PUK_LOCK = 9
 Indicates SIM/USIM personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

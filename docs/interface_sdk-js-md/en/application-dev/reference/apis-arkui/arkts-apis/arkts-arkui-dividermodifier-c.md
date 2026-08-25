@@ -2,11 +2,9 @@
 
 Defines Divider Modifier@extends DividerAttribute @implements AttributeModifier&lt;DividerAttribute&gt;
 
-**Inheritance/Implementation:** DividerModifier extends DividerAttribute and implements AttributeModifier<DividerAttribute>
+**Inheritance/Implementation:** DividerModifier extends [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md#dividerattribute) and implements AttributeModifier<DividerAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,8 +18,6 @@ Defines the normal update attribute function.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -32,4 +28,4 @@ Defines the normal update attribute function.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| instance | [DividerAttribute](arkts-arkui-divider-dividerattribute-i.md) | Yes |
+| instance | [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md) | Yes |

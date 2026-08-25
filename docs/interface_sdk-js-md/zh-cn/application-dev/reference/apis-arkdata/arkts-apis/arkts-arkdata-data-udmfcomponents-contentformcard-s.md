@@ -4,31 +4,13 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { ContentFormCard, FormType } from '@kit.ArkData';
+import { ContentFormCard, FormType } from 'kits/@kit.ArkData';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-构建组件的方法。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## contentFormData
 
@@ -42,8 +24,6 @@ contentFormData: uniformDataStruct.ContentForm
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -51,7 +31,7 @@ contentFormData: uniformDataStruct.ContentForm
 ## formHeight
 
 ```TypeScript
-formHeight?: double
+formHeight?: number
 ```
 
 卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认 宽度的0.4 ~ 1.2倍之间。单位为vp。省略时使用内容卡片类型的默认高度。
@@ -59,8 +39,6 @@ formHeight?: double
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,8 +56,6 @@ formType: FormType
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -87,7 +63,7 @@ formType: FormType
 ## formWidth
 
 ```TypeScript
-formWidth?: double
+formWidth?: number
 ```
 
 卡片宽度，其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。省略时使用内容卡片类型的默认宽度。
@@ -95,8 +71,6 @@ formWidth?: double
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -113,8 +87,6 @@ handleOnClick?: Function
 **类型：** Function
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

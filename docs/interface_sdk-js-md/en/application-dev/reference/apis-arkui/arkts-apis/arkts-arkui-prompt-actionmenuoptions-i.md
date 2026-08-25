@@ -4,8 +4,6 @@ Defines the option of ShowActionMenu.@interface ActionMenuOptions
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md)
@@ -15,7 +13,7 @@ Defines the option of ShowActionMenu.@interface ActionMenuOptions
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'kits/@kit.ArkUI';
 ```
 
 ## buttons
@@ -29,8 +27,6 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 **Type:** [Button, Button?, Button?, Button?, Button?, Button?]
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -49,8 +45,6 @@ Title of the text to display.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

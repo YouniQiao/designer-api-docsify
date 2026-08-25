@@ -4,8 +4,6 @@ Defines virtual screen parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines virtual screen parameters.
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## density
 
 ```TypeScript
-density: double
+density: number
 ```
 
 Density of the virtual screen, in px. The value must be a floating-point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -37,16 +33,14 @@ Density of the virtual screen, in px. The value must be a floating-point number.
 ## height
 
 ```TypeScript
-height: long
+height: number
 ```
 
 Height of the virtual screen, in px. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -64,8 +58,6 @@ Name of a virtual screen.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ Whether the virtual screen is focusable. **true** if focusable; **false** otherw
 **Type:** boolean
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -100,8 +90,6 @@ Surface ID of the virtual screen.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -109,16 +97,14 @@ Surface ID of the virtual screen.
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 User ID of the virtual screen, which is an integer. The default value is **-1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,16 +115,14 @@ User ID of the virtual screen, which is an integer. The default value is **-1**.
 ## width
 
 ```TypeScript
-width: long
+width: number
 ```
 
 Width of the virtual screen, in px. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

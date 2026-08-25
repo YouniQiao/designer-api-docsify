@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getStations
@@ -15,8 +15,6 @@ function getStations(): Array<StationInfo>
 Obtain the list of stations that are connected to the Wi-Fi hotspot. This method can only be used on a device that serves as a Wi-Fi hotspot.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -38,16 +36,3 @@ Obtain the list of stations that are connected to the Wi-Fi hotspot. This method
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let stations = wifiManager.getStations();
-  console.info("result:" + JSON.stringify(stations));    
-}catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

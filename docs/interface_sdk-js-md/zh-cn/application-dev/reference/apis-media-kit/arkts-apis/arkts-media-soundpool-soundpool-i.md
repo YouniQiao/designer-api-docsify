@@ -23,20 +23,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## load
 
-ArkTS-Dyn:
 ```TypeScript
 load(uri: string, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-load(uri: string, callback: AsyncCallback<int>): void
 ```
 
 加载音频资源。使用callback异步回调。通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。
@@ -47,8 +39,6 @@ load(uri: string, callback: AsyncCallback<int>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -56,7 +46,7 @@ load(uri: string, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -68,14 +58,8 @@ load(uri: string, callback: AsyncCallback<int>): void
 
 ## load
 
-ArkTS-Dyn:
 ```TypeScript
 load(uri: string): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-load(uri: string): Promise<int>
 ```
 
 加载音频资源。使用Promise异步回调。通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。
@@ -86,8 +70,6 @@ load(uri: string): Promise<int>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -100,7 +82,7 @@ load(uri: string): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -112,14 +94,8 @@ load(uri: string): Promise<int>
 
 ## load
 
-ArkTS-Dyn:
 ```TypeScript
 load(fd: number, offset: number, length: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 ```
 
 加载音频资源。使用callback异步回调。通过callback异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
@@ -130,18 +106,16 @@ load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| length | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
+| fd | number | 是 |
+| offset | number | 是 |
+| length | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -153,14 +127,8 @@ load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 
 ## load
 
-ArkTS-Dyn:
 ```TypeScript
 load(fd: number, offset: number, length: number): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-load(fd: int, offset: long, length: long): Promise<int>
 ```
 
 加载音频资源。使用Promise异步回调。通过Promise异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
@@ -171,23 +139,21 @@ load(fd: int, offset: long, length: long): Promise<int>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
-| length | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| fd | number | 是 |
+| offset | number | 是 |
+| length | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -207,8 +173,6 @@ off(type: 'loadComplete'): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -226,8 +190,6 @@ off(type: 'playFinished'): void
 取消监听音频池资源播放完成。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -247,8 +209,6 @@ off(type: 'error'): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -267,8 +227,6 @@ off(type: 'playFinishedWithStreamId'): void
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -280,14 +238,12 @@ off(type: 'playFinishedWithStreamId'): void
 ## off('errorOccurred')
 
 ```TypeScript
-off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
+off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void
 ```
 
 取消监听音频池的错误事件。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -298,93 +254,15 @@ off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
 | type | 'errorOccurred' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 |
 
-## offError
-
-```TypeScript
-offError(): void
-```
-
-Unsubscribes from error events of this **SoundPool** instance.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-## offErrorOccurred
-
-```TypeScript
-offErrorOccurred(callback?:Callback<ErrorInfo>): void
-```
-
-Unsubscribes from errorOccurred events of this **SoundPool** instance.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 |
-
-## offLoadComplete
-
-```TypeScript
-offLoadComplete(): void
-```
-
-Unsubscribes from events indicating that a sound finishes loading.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-## offPlayFinished
-
-```TypeScript
-offPlayFinished(): void
-```
-
-Unsubscribes from events indicating that a sound finishes playing.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-## offPlayFinishedWithStreamId
-
-```TypeScript
-offPlayFinishedWithStreamId(): void
-```
-
-Unsubscribes from events indicating that a sound finishes playing.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
 ## on('loadComplete')
 
 ```TypeScript
-on(type: 'loadComplete', callback: Callback<int>): void
+on(type: 'loadComplete', callback: Callback<number>): void
 ```
 
 音频池资源加载完成监听。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -405,8 +283,6 @@ on(type: 'playFinished', callback: Callback<void>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -426,8 +302,6 @@ on(type: 'error', callback: ErrorCallback): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
@@ -440,14 +314,12 @@ on(type: 'error', callback: ErrorCallback): void
 ## on('playFinishedWithStreamId')
 
 ```TypeScript
-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
+on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 ```
 
 音频池资源播放完成监听，同时返回播放结束的音频的streamId。使用callback异步回调。当仅单独注册on('playFinished')事件回调或者 on('playFinishedWithStreamId')事件回调 时，当音频播放完成的时候，都会触发注册的回调。当同时注册on('playFinished')事件回调和 on('playFinishedWithStreamId')事件回调 时，当音频播放完成的时候，仅会触发'playFinishedWithStreamId'事件回调，不会触发'playFinished'事件回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -461,14 +333,12 @@ on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
 ## on('errorOccurred')
 
 ```TypeScript
-on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
+on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 ```
 
 监听[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，并返回包含错误码、错误发 生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -479,133 +349,25 @@ on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
 | type | 'errorOccurred' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 |
 
-## onError
-
-```TypeScript
-onError(callback: ErrorCallback): void
-```
-
-Subscribes to error events of this **SoundPool** instance. This event is used only for error prompt. This event can be triggered by both user operations and the system.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-## onErrorOccurred
-
-```TypeScript
-onErrorOccurred(callback:Callback<ErrorInfo>): void
-```
-
-Subscribes to errorOccurred events of this **SoundPool** instance.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 |
-
-## onLoadComplete
-
-```TypeScript
-onLoadComplete(callback: Callback<int>): void
-```
-
-Subscribes to events indicating that a sound finishes loading. This event is triggered when a sound is loaded.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 |
-
-## onPlayFinished
-
-```TypeScript
-onPlayFinished(callback: Callback<void>): void
-```
-
-Subscribes to events indicating that a sound finishes playing. This event is triggered when a sound finishes playing.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
-
-## onPlayFinishedWithStreamId
-
-```TypeScript
-onPlayFinishedWithStreamId(callback: Callback<int>): void
-```
-
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing.When only onPlayFinished or onPlayFinishedWithStreamId is subscribed to, the registered callback is triggered when the audio playback is complete.When both onPlayFinished and onPlayFinishedWithStreamId are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Media.SoundPool
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 |
-
 ## play
 
-ArkTS-Dyn:
 ```TypeScript
 play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void
 ```
 
 播放音频资源，获取音频流streamID。使用callback异步回调。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| soundID | number | 是 |
 | params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | 是 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -617,30 +379,22 @@ play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void
 
 ## play
 
-ArkTS-Dyn:
 ```TypeScript
 play(soundID: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-play(soundID: int, callback: AsyncCallback<int>): void
 ```
 
 使用默认参数播放音频资源，获取音频流streamID。使用callback异步回调。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
+| soundID | number | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -652,21 +406,13 @@ play(soundID: int, callback: AsyncCallback<int>): void
 
 ## play
 
-ArkTS-Dyn:
 ```TypeScript
 play(soundID: number, params?: PlayParameters): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-play(soundID: int, params?: PlayParameters): Promise<int>
 ```
 
 播放音频资源，获取音频流streamID。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -674,14 +420,14 @@ play(soundID: int, params?: PlayParameters): Promise<int>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| soundID | number | 是 |
 | params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -700,8 +446,6 @@ release(callback: AsyncCallback<void>): void
 释放音频池实例。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -727,8 +471,6 @@ release(): Promise<void>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **返回值：**
@@ -753,8 +495,6 @@ setInterruptMode(interruptMode: media.SoundInterruptMode): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
@@ -767,21 +507,13 @@ setInterruptMode(interruptMode: media.SoundInterruptMode): void
 
 ## setLoop
 
-ArkTS-Dyn:
 ```TypeScript
 setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void
 ```
 
 设置循环模式。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -789,8 +521,8 @@ setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| loop | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamID | number | 是 |
+| loop | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -803,30 +535,22 @@ setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void
 
 ## setLoop
 
-ArkTS-Dyn:
 ```TypeScript
 setLoop(streamID: number, loop: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setLoop(streamID: int, loop: int): Promise<void>
 ```
 
 设置循环模式。使用Promise异步回调。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| loop | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamID | number | 是 |
+| loop | number | 是 |
 
 **返回值：**
 
@@ -844,30 +568,22 @@ setLoop(streamID: int, loop: int): Promise<void>
 
 ## setPriority
 
-ArkTS-Dyn:
 ```TypeScript
 setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void
 ```
 
 设置音频流播放的优先级。使用callback异步回调。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| priority | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamID | number | 是 |
+| priority | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -880,30 +596,22 @@ setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void
 
 ## setPriority
 
-ArkTS-Dyn:
 ```TypeScript
 setPriority(streamID: number, priority: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setPriority(streamID: int, priority: int): Promise<void>
 ```
 
 设置音频流优先级。使用Promise异步回调。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| priority | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamID | number | 是 |
+| priority | number | 是 |
 
 **返回值：**
 
@@ -921,29 +629,21 @@ setPriority(streamID: int, priority: int): Promise<void>
 
 ## setRate
 
-ArkTS-Dyn:
 ```TypeScript
 setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void
 ```
 
 设置音频流播放速率。使用callback异步回调。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamID | number | 是 |
 | rate | audio.AudioRendererRate | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -957,21 +657,13 @@ setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<vo
 
 ## setRate
 
-ArkTS-Dyn:
 ```TypeScript
 setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>
 ```
 
 设置音频流的播放速率。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -979,7 +671,7 @@ setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamID | number | 是 |
 | rate | audio.AudioRendererRate | 是 |
 
 **返回值：**
@@ -998,21 +690,13 @@ setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>
 
 ## setVolume
 
-ArkTS-Dyn:
 ```TypeScript
 setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void
 ```
 
 设置音频流播放音量。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1020,9 +704,9 @@ setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: Asyn
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| [leftVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-| [rightVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| streamID | number | 是 |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | number | 是 |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -1035,21 +719,13 @@ setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: Asyn
 
 ## setVolume
 
-ArkTS-Dyn:
 ```TypeScript
 setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>
 ```
 
 设置音频流的播放音量。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1057,9 +733,9 @@ setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| [leftVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-| [rightVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| streamID | number | 是 |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | number | 是 |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | number | 是 |
 
 **返回值：**
 
@@ -1077,21 +753,13 @@ setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>
 
 ## stop
 
-ArkTS-Dyn:
 ```TypeScript
 stop(streamID: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-stop(streamID: int, callback: AsyncCallback<void>): void
 ```
 
 停止播放音频资源。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1099,7 +767,7 @@ stop(streamID: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamID | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -1112,21 +780,13 @@ stop(streamID: int, callback: AsyncCallback<void>): void
 
 ## stop
 
-ArkTS-Dyn:
 ```TypeScript
 stop(streamID: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-stop(streamID: int): Promise<void>
 ```
 
 停止streamID对应的音频播放。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1134,7 +794,7 @@ stop(streamID: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamID | number | 是 |
 
 **返回值：**
 
@@ -1152,21 +812,13 @@ stop(streamID: int): Promise<void>
 
 ## unload
 
-ArkTS-Dyn:
 ```TypeScript
 unload(soundID: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-unload(soundID: int, callback: AsyncCallback<void>): void
 ```
 
 卸载音频资源。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1174,7 +826,7 @@ unload(soundID: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| soundID | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -1187,21 +839,13 @@ unload(soundID: int, callback: AsyncCallback<void>): void
 
 ## unload
 
-ArkTS-Dyn:
 ```TypeScript
 unload(soundID: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-unload(soundID: int): Promise<void>
 ```
 
 卸载音频资源。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1209,7 +853,7 @@ unload(soundID: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| soundID | number | 是 |
 
 **返回值：**
 

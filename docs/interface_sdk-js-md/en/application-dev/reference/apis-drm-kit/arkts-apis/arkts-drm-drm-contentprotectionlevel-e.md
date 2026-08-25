@@ -4,8 +4,6 @@ Enumerates the content protection levels.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
 ## CONTENT_PROTECTION_LEVEL_UNKNOWN
@@ -17,8 +15,6 @@ CONTENT_PROTECTION_LEVEL_UNKNOWN = 0
 Unknown content protection level.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Software-based content protection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
@@ -49,8 +43,6 @@ CONTENT_PROTECTION_LEVEL_HW_CRYPTO = 2
 Hardware-based content protection.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ Enhanced hardware-based content protection.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
@@ -81,8 +71,6 @@ CONTENT_PROTECTION_LEVEL_MAX = 4
 Maximum content protection level.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

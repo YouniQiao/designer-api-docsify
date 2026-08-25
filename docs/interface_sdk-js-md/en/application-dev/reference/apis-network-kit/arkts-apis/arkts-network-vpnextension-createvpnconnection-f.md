@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## createVpnConnection
@@ -18,8 +18,6 @@ Creates a **VpnConnection** object.
 > Before calling **createVpnConnection**, call **startVpnExtensionAbility** to enable the VPN function.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

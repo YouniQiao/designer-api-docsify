@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## connectDevice
@@ -15,8 +15,6 @@ function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<Att
 Connecting devices based on addresses
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONNECT_MECHANIC_HARDWARE
 

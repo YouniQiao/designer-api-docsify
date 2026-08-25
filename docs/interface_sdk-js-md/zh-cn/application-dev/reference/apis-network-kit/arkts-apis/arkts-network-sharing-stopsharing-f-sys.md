@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## stopSharing
@@ -15,8 +15,6 @@ function stopSharing(type: SharingIfaceType, callback: AsyncCallback<void>): voi
 关闭指定类型共享，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -46,33 +44,6 @@ function stopSharing(type: SharingIfaceType, callback: AsyncCallback<void>): voi
 | [2202006](../errorcode-net-sharing.md#2202006-蓝牙共享失败) |
 | [2202011](../errorcode-net-sharing.md#2202011-无法获取网络共享配置) |
 
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing.stopSharing(SHARING_WIFI, (error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .stopSharing(SHARING_WIFI)
-  .then(() => {
-    console.info('stop wifi sharing successful');
-  })
-  .catch((error: BusinessError) => {
-    console.error('stop wifi sharing failed');
-  });
-```
-
 
 ## stopSharing
 
@@ -83,8 +54,6 @@ function stopSharing(type: SharingIfaceType): Promise<void>
 关闭指定类型共享，使用 Promise 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -118,7 +87,3 @@ function stopSharing(type: SharingIfaceType): Promise<void>
 | [2202005](../errorcode-net-sharing.md#2202005-wifi共享失败) |
 | [2202006](../errorcode-net-sharing.md#2202006-蓝牙共享失败) |
 | [2202011](../errorcode-net-sharing.md#2202011-无法获取网络共享配置) |
-
-**示例**
-
-参见 [stopSharing](#stopsharing)

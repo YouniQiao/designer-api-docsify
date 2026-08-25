@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## clearId
@@ -16,17 +16,4 @@ function clearId(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
-
-**示例**
-
-```TypeScript
-// 业务开始前，尝试清除跟踪标识。
-hiTraceChain.clearId();
-// 开始跟踪，跟踪标志是DEFAULT。
-let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.DEFAULT);
-// 若干业务逻辑完成后，结束跟踪。
-hiTraceChain.end(traceId);
-```

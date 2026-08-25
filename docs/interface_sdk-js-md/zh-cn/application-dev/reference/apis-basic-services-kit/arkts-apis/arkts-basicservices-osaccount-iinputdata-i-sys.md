@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onSetData
@@ -25,8 +23,6 @@ onSetData(authSubType: AuthSubType, data: Uint8Array): void
 通知设置数据。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -46,19 +42,3 @@ onSetData(authSubType: AuthSubType, data: Uint8Array): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [12300002](../errorcode-account.md#12300002-无效参数) |
-
-**示例**
-
-```TypeScript
-let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0]);
-let passwordNumber: Uint8Array = new Uint8Array([1, 2, 3, 4]);
-let inputer: osAccount.IInputer = {
-  onGetData: (authSubType: osAccount.AuthSubType, callback: osAccount.IInputData) => {
-      if (authSubType == osAccount.AuthSubType.PIN_NUMBER) {
-        callback.onSetData(authSubType, passwordNumber);
-      } else {
-        callback.onSetData(authSubType, password);
-      }
-  }
-};
-```

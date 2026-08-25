@@ -4,8 +4,6 @@ UDMF已经支持的数据通路枚举类型。其主要用途是标识各种UDMF
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## DATA_HUB
@@ -18,8 +16,6 @@ DATA_HUB = 'DataHub'
 **适用场景：** 适用于在公共数据共享场景下使用UDMF来跨应用数据共享。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,8 +34,6 @@ DRAG = 'Drag'
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -54,8 +48,6 @@ SYSTEM_SHARE = 'SystemShare'
 **适用场景：** 适用于在系统分享场景下使用UDMF来跨应用数据共享。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,8 +64,6 @@ Picker类型数据通道。
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -88,8 +78,6 @@ MENU = 'Menu'
 **适用场景：** 适用于在右键菜单场景下使用UDMF来跨应用数据共享。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

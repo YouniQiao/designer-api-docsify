@@ -4,27 +4,23 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## 导入模块
 
 ```TypeScript
-import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePath } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## constructor
 
 ```TypeScript
-constructor(durationTime: long)
+constructor(durationTime: number)
 ```
 
 通过传入手势总耗时创建手势路径对象。创建GesturePath实例后，还需设置必填属性points。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 12
 
@@ -35,17 +31,6 @@ constructor(durationTime: long)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [durationTime](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | number | 是 |
-
-**示例**
-
-```TypeScript
-import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
-
-let gesturePath = new GesturePath(20);
-let startPoint = new GesturePoint(100, 100);
-let endPoint = new GesturePoint(200, 200);
-gesturePath.points = [startPoint, endPoint];
-```
 
 ## durationTime
 
@@ -58,8 +43,6 @@ durationTime: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -74,7 +57,5 @@ points: Array<GesturePoint>
 **类型：** Array&lt;[GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

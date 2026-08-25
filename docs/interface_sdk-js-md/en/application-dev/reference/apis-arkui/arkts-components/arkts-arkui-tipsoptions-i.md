@@ -4,8 +4,6 @@ Defines the parameters of the tooltip.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Delay before the tooltip appears. The maximum delay is 4000 ms. Values exceeding
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -45,8 +41,6 @@ Delay before the tooltip appears when multiple tooltips are displayed consecutiv
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -62,13 +56,11 @@ arrowHeight?: Dimension
 Height of the tooltip arrow.Default value: **8**.Unit: vp.  
 **NOTE：**Percentage values are not supported.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 8.0_vp.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,11 +76,9 @@ arrowPointPosition?: ArrowPointPosition
 
 Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and **End**, in both vertical and horizontal directions. These positions are within the parent component area and do not exceed its boundaries or cover rounded corners.Default value: **ArrowPointPosition.CENTER**.
 
-**Type:** ArrowPointPosition
+**Type:** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,13 +95,11 @@ arrowWidth?: Dimension
 Width of the tooltip arrow. If the set width exceeds the length of the edge minus twice the tooltip's corner radius, the arrow is not drawn.Default value: **16**.Unit: vp.  
 **NOTE：**Percentage values are not supported.
 
-**Type:** Dimension
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 16.0_vp.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,8 +119,6 @@ Delay before the tooltip disappears. The maximum delay is 4000 ms. Values exceed
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -150,8 +136,6 @@ Delay before the tooltip disappears when multiple tooltips are displayed consecu
 **Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -175,8 +159,6 @@ Whether to display the tooltip arrow.Default value: **true**.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -192,11 +174,9 @@ showAtAnchor?: TipsAnchorType
 Anchor type of the tooltip.Default value: **TipsAnchorType.TARGET**.  
 **NOTE：**If the anchor type of the tooltip is **TipsAnchorType.CURSOR**, the tooltip does not display an arrow.
 
-**Type:** TipsAnchorType
+**Type:** [TipsAnchorType](../arkts-apis/arkts-arkui-tipsanchortype-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,8 +195,6 @@ Set system-styled materials for tips. Different materials have different effects
 **Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

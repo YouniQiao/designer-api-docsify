@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
@@ -21,8 +19,6 @@ authInfo?: Record<string, Object>
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 
@@ -44,8 +40,6 @@ continuationMode?: continuationManager.ContinuationMode
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -65,8 +59,6 @@ description?: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 
@@ -88,8 +80,6 @@ deviceType?: Array<string>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -110,8 +100,6 @@ filter?: any
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -131,8 +119,6 @@ targetBundle?: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 

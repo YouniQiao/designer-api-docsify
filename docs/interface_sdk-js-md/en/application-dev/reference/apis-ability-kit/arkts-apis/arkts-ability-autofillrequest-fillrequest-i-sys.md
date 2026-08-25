@@ -4,8 +4,6 @@ Defines the information about an auto-fill request.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## customData
@@ -19,8 +17,6 @@ Custom data.
 **Type:** [CustomData](arkts-ability-customdata-i-sys.md)
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,8 +37,6 @@ Whether a dialog box is displayed for the auto-fill request.
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

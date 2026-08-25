@@ -4,8 +4,6 @@ Enumerates the pixel densities of the screen, which are used in the [Configurati
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## SCREEN_DENSITY_NOT_SET
@@ -17,8 +15,6 @@ SCREEN_DENSITY_NOT_SET = 0
 The screen pixel density is not set.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ The pixel density of the screen is 'SDPI'.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -49,8 +43,6 @@ SCREEN_DENSITY_MDPI = 160
 The pixel density of the screen is 'MDPI'.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,8 +58,6 @@ The pixel density of the screen is 'LDPI'.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -81,8 +71,6 @@ SCREEN_DENSITY_XLDPI = 320
 The pixel density of the screen is 'XLDPI'.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,8 +86,6 @@ The pixel density of the screen is 'XXLDPI'.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -113,8 +99,6 @@ SCREEN_DENSITY_XXXLDPI = 640
 The pixel density of the screen is 'XXXLDPI'.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

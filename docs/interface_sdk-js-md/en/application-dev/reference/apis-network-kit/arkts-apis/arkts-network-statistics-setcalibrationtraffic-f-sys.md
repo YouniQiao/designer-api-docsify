@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## setCalibrationTraffic
@@ -15,8 +15,6 @@ function setCalibrationTraffic(simId: number, remainTraffic: number, totalTraffi
 Sets traffic calibration data. You can use this API to set traffic data during traffic calibration. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
@@ -50,18 +48,3 @@ Sets traffic calibration data. You can use this API to set traffic data during t
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { connection, statistics } from '@kit.NetworkKit';
-
-let simId:number = 1;
-let remainData:number = 600*1024*1024;   // The remaining traffic is 600 MB.
-let totalData:number = 1024*1024*1024;   // The total traffic is 1 GB.
-statistics.setCalibrationTraffic(simId, remainData, totalData).then(() => {
-  console.info(`setCalibrationTraffic succ`);
-}).catch((error: BusinessError) => {
-  console.info(`setCalibrationTraffic error. code:${error.code}, message:${error.message}`);
-});
-```

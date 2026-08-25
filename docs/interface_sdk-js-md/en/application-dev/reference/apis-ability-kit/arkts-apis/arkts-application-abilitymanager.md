@@ -4,8 +4,6 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [abilityManager/abilityManager](arkts-app-ability-abilitymanager.md)

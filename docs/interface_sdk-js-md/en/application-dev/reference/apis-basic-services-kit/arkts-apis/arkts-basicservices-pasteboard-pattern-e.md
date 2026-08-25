@@ -4,8 +4,6 @@ Describes the patterns supported by the pasteboard.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## URL
@@ -17,8 +15,6 @@ URL = 0
 URL.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -32,8 +28,6 @@ Number.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## EMAIL_ADDRESS
@@ -46,8 +40,6 @@ Email address.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## HTTP_URL
@@ -59,8 +51,6 @@ HTTP_URL = 3
 HTTP URL. This API can be used only in the stage model.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,8 +65,6 @@ FLIGHT_NUMBER = 4
 Flight number. This API can be used only in the stage model.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

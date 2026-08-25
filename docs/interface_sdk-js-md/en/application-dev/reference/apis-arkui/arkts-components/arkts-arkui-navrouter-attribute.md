@@ -6,11 +6,9 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 13
 
-**Substitutes:** NavPathStack
+**Substitutes:** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,8 +28,6 @@ Sets the route mode used for redirecting the user from the **NavRouter** compone
 > **NOTE：**
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 13
 
@@ -61,11 +57,9 @@ Called when the component activation status changes. **onStateChange(true)** is 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 13
 
-**Substitutes:** onShown
+**Substitutes:** [onShown](arkts-arkui-navdestination-attribute.md#onshown)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

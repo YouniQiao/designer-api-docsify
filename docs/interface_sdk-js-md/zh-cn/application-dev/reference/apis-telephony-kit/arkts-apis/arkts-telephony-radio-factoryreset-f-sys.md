@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## factoryReset
 
 ```TypeScript
-function factoryReset(slotId: int): Promise<void>
+function factoryReset(slotId: number): Promise<void>
 ```
 
 Reset all network settings of telephony.
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Reset all network settings of telephony.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -47,16 +45,3 @@ Reset all network settings of telephony.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.factoryReset(slotId).then(() => {
-    console.info(`factoryReset success`);
-}).catch((err: BusinessError) => {
-    console.error(`factoryReset failed, promise: err->${JSON.stringify(err)}`);
-});
-```

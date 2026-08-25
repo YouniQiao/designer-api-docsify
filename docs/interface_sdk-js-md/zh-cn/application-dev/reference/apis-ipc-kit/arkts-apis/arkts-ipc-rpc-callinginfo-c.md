@@ -4,14 +4,12 @@ IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## callerPid
@@ -27,8 +25,6 @@ readonly callerPid: number
 **默认值：** -1
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -46,8 +42,6 @@ readonly callerTokenId: number
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## callerUid
@@ -63,8 +57,6 @@ readonly callerUid: number
 **默认值：** -1
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -82,8 +74,6 @@ readonly isLocalCalling: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## localDeviceId
@@ -98,8 +88,6 @@ readonly localDeviceId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## remoteDeviceId
@@ -113,7 +101,5 @@ readonly remoteDeviceId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core

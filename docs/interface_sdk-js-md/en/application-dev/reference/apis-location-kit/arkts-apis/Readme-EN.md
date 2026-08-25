@@ -90,35 +90,11 @@
   - [off](arkts-location-geolocationmanager-off-f.md)
   <!--Del-->
   - [off(system api)](arkts-location-geolocationmanager-off-f-sys.md)<!--DelEnd-->
-  - [offBluetoothScanResultChange](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md)
-  - [offCachedGnssLocationsChange](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md)
-  - [offCountryCodeChange](arkts-location-geolocationmanager-offcountrycodechange-f.md)
-  - [offGnssFenceStatusChange](arkts-location-geolocationmanager-offgnssfencestatuschange-f.md)
-  <!--Del-->
-  - [offLocatingRequiredDataChange(system api)](arkts-location-geolocationmanager-offlocatingrequireddatachange-f-sys.md)<!--DelEnd-->
   - [offLocationChange](arkts-location-geolocationmanager-offlocationchange-f.md)
-  - [offLocationEnabledChange](arkts-location-geolocationmanager-offlocationenabledchange-f.md)
-  - [offLocationError](arkts-location-geolocationmanager-offlocationerror-f.md)
-  <!--Del-->
-  - [offLocationIconStatusChange(system api)](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md)<!--DelEnd-->
-  - [offNmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md)
-  - [offSatelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md)
   - [on](arkts-location-geolocationmanager-on-f.md)
   <!--Del-->
   - [on(system api)](arkts-location-geolocationmanager-on-f-sys.md)<!--DelEnd-->
-  - [onBluetoothScanResultChange](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md)
-  - [onCachedGnssLocationsChange](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md)
-  - [onCountryCodeChange](arkts-location-geolocationmanager-oncountrycodechange-f.md)
-  - [onGnssFenceStatusChange](arkts-location-geolocationmanager-ongnssfencestatuschange-f.md)
-  <!--Del-->
-  - [onLocatingRequiredDataChange(system api)](arkts-location-geolocationmanager-onlocatingrequireddatachange-f-sys.md)<!--DelEnd-->
   - [onLocationChange](arkts-location-geolocationmanager-onlocationchange-f.md)
-  - [onLocationEnabledChange](arkts-location-geolocationmanager-onlocationenabledchange-f.md)
-  - [onLocationError](arkts-location-geolocationmanager-onlocationerror-f.md)
-  <!--Del-->
-  - [onLocationIconStatusChange(system api)](arkts-location-geolocationmanager-onlocationiconstatuschange-f-sys.md)<!--DelEnd-->
-  - [onNmeaMessage](arkts-location-geolocationmanager-onnmeamessage-f.md)
-  - [onSatelliteStatusChange](arkts-location-geolocationmanager-onsatellitestatuschange-f.md)
   - [removeBeaconFence](arkts-location-geolocationmanager-removebeaconfence-f.md)
   <!--Del-->
   - [removeFusionFence(system api)](arkts-location-geolocationmanager-removefusionfence-f-sys.md)<!--DelEnd-->

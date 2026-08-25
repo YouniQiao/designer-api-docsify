@@ -8,8 +8,6 @@ Custom menu extension item.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Deprecated since:** 20
 
 **Substitutes:** [editMenuOptions](arkts-arkweb-web-attribute.md#editmenuoptions)
@@ -31,11 +29,9 @@ Callback invoked when the user selects a menu extension item. The callback param
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Deprecated since:** 20
 
-**Substitutes:** EditMenuOptions
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -55,15 +51,13 @@ content: ResourceStr
 
 Display content.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Deprecated since:** 20
 
-**Substitutes:** EditMenuOptions
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -77,15 +71,13 @@ startIcon?: ResourceStr
 
 Display icon. The default value is empty, and no icon is displayed.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Deprecated since:** 20
 
-**Substitutes:** EditMenuOptions
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

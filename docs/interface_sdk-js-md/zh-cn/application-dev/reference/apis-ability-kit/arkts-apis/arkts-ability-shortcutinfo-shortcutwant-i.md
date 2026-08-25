@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## parameters
@@ -19,8 +17,6 @@ parameters?: Array<ParameterItem>
 **类型：** Array&lt;[ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
@@ -36,8 +32,6 @@ targetAbility: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## targetBundle
@@ -52,8 +46,6 @@ targetBundle: string
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
 ## targetModule
@@ -67,7 +59,5 @@ targetModule?: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher

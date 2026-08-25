@@ -4,8 +4,6 @@ Session category for different scenes.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ CATEGORY_ACTIVE = 1
 The active session category which can be shown on system control entrance.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
@@ -36,8 +32,6 @@ The session category which is partially integrated with AVSession function.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ The all session category including all the applications using AVSession.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ CATEGORY_HIPLAY = 4
 The session category for HiPlay casting AVSession.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

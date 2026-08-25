@@ -4,33 +4,23 @@ Filter effect class, used to apply corresponding effects to specified components
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## blur
 
-ArkTS-Dyn:
 ```TypeScript
 blur(blurRadius: number): Filter
-```
-
-ArkTS-Sta:
-```TypeScript
-blur(blurRadius: double): Filter
 ```
 
 Adds a blur effect to the component.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -38,7 +28,7 @@ Adds a blur effect to the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | Yes |
 
 **Return value:**
 
@@ -46,45 +36,10 @@ Adds a blur effect to the component.
 | --- |
 | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
-**Examples**
-
-```TypeScript
-// xxx.ts
-import { uiEffect } from '@kit.ArkGraphics2D';
-
-let filter: uiEffect.Filter = uiEffect.createFilter();
-filter.blur(10);
-
-@Entry
-@Component
-struct UIEffectFilterExample {
-    build(){
-        Column({ space: 15 }) {
-            Text('UIEffectFilter').fontSize(20).width('75%').fontColor('#DCDCDC')
-            Image($r('app.media.foreground'))
-                .width(100)
-                .height(100)
-                .backgroundImage($r('app.media.background'))
-                .backgroundImagePosition(Alignment.Center)
-                .backgroundImageSize({ width: 90, height: 90 })
-                .backgroundFilter(filter)
-        }
-        .height('100%')
-        .width('100%')
-    }
-}
-```
-
 ## hdrBrightnessRatio
 
-ArkTS-Dyn:
 ```TypeScript
 hdrBrightnessRatio(ratio: number): Filter
-```
-
-ArkTS-Sta:
-```TypeScript
-hdrBrightnessRatio(ratio: double): Filter
 ```
 
 Adds an HDR (High Dynamic Range) brightening effect to the component content. Nesting is not recommended, as forced nesting may cause overexposure.The brightening effect requires the HDR rendering pipeline to be enabled to take effect. In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline, for example, when the device hardware specifications do not support HDR.The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance.
@@ -95,8 +50,6 @@ Adds an HDR (High Dynamic Range) brightening effect to the component content. Ne
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Required permissions:** 
 - API version 24+: ohos.permission.HDR_BRIGHTNESS
 
@@ -106,7 +59,7 @@ Adds an HDR (High Dynamic Range) brightening effect to the component content. Ne
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [ratio](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [ratio](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | Yes |
 
 **Return value:**
 
@@ -120,9 +73,3 @@ Adds an HDR (High Dynamic Range) brightening effect to the component content. Ne
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-filter.hdrBrightnessRatio(2.0)
-```

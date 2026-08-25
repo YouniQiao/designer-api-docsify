@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## unregisterShutdownCallback
@@ -15,8 +15,6 @@ function unregisterShutdownCallback(callback?: Callback<void>): void
 取消订阅电源关机或重启的回调提醒。使用callback同步回调。 此方法与power.registerShutdownCallback配对使用，必须在先调用registerShutdownCallback订阅回调后，再调用此方法取消订阅。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.REBOOT
 
@@ -37,16 +35,3 @@ function unregisterShutdownCallback(callback?: Callback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [4900101](../errorcode-power.md#4900101-连接服务失败) |
-
-**示例**
-
-```TypeScript
-try {
-    power.unregisterShutdownCallback(() => {
-        console.info('unsubscribe shutdown success.');
-    });
-    console.info('unregister shutdown callback success.');
-} catch(err) {
-    console.error('unregister shutdown callback failed, err: ' + err);
-}
-```

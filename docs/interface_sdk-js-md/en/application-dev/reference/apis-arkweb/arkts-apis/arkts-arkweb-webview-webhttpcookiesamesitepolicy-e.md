@@ -4,8 +4,6 @@ Enumerates the policies for sending cookies in cross-site requests.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 Cookies can be carried in cross-site requests, but the **secure** attribute must be set.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ Cookies can be carried in specific cross-site requests, such as navigation scena
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## STRICT
@@ -45,7 +39,5 @@ STRICT = 2
 Cookies cannot be carried in cross-site requests.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

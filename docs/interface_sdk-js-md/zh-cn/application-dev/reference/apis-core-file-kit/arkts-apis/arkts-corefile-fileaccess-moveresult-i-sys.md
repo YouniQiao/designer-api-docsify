@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **废弃版本：** 23
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## destUri
@@ -29,8 +27,6 @@ destUri: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 23
 
@@ -54,8 +50,6 @@ errCode: number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
@@ -78,8 +72,6 @@ errMsg: string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **废弃版本：** 23
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
@@ -101,8 +93,6 @@ sourceUri: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 23
 

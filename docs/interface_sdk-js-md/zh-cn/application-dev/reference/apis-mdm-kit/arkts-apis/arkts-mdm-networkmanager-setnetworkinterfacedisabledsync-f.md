@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setNetworkInterfaceDisabledSync
@@ -15,8 +15,6 @@ function setNetworkInterfaceDisabledSync(admin: Want, networkInterface: string, 
 禁止设备使用指定网络接口。适用于企业网络安全管控场景，例如禁用高风险网络接口、限制设备使用特定网络连接、防止通过网络接口进行数据泄露，帮助企业降低网络安全风险，防止通过特定网络接口进行的攻击或数据外泄。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -40,24 +38,3 @@ function setNetworkInterfaceDisabledSync(admin: Want, networkInterface: string, 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  networkManager.setNetworkInterfaceDisabledSync(wantTemp, 'eth0', true);
-  console.info(`Succeeded in setting network interface disabled`);
-} catch (err) {
-  console.error(`Failed to set network interface disabled. Code: ${err.code}, message: ${err.message}`);
-}
-```

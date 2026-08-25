@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md)
@@ -21,8 +19,6 @@ ONE_TIME_FLAG = 0
 WantAgent仅能使用一次。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -42,8 +38,6 @@ NO_BUILD_FLAG
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [NO_BUILD_FLAG](arkts-ability-wantagent-wantagentflags-e.md#no_build_flag)
@@ -61,8 +55,6 @@ CANCEL_PRESENT_FLAG
 在生成一个新的WantAgent对象前取消已存在的一个WantAgent对象。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -82,8 +74,6 @@ UPDATE_PRESENT_FLAG
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [UPDATE_PRESENT_FLAG](arkts-ability-wantagent-wantagentflags-e.md#update_present_flag)
@@ -101,8 +91,6 @@ CONSTANT_FLAG
 WantAgent是不可变的。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -122,8 +110,6 @@ REPLACE_ELEMENT
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [REPLACE_ELEMENT](arkts-ability-wantagent-wantagentflags-e.md#replace_element)
@@ -141,8 +127,6 @@ REPLACE_ACTION
 当前Want中的action属性可被WantAgent.trigger()中Want的action属性取代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -162,8 +146,6 @@ REPLACE_URI
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [REPLACE_URI](arkts-ability-wantagent-wantagentflags-e.md#replace_uri)
@@ -182,8 +164,6 @@ REPLACE_ENTITIES
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [REPLACE_ENTITIES](arkts-ability-wantagent-wantagentflags-e.md#replace_entities)
@@ -201,8 +181,6 @@ REPLACE_BUNDLE
 当前Want中的bundleName属性可被WantAgent.trigger()中Want的bundleName属性取代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

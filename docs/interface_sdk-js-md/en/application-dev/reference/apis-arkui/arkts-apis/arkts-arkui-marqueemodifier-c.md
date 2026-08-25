@@ -2,11 +2,9 @@
 
 Defines Marquee Modifier
 
-**Inheritance/Implementation:** MarqueeModifier extends MarqueeAttribute and implements AttributeModifier<MarqueeAttribute>
+**Inheritance/Implementation:** MarqueeModifier extends [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md#marqueeattribute) and implements AttributeModifier<MarqueeAttribute>
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,8 +18,6 @@ Defines the normal update attribute function.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -32,4 +28,4 @@ Defines the normal update attribute function.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| instance | [MarqueeAttribute](arkts-arkui-marquee-marqueeattribute-i.md) | Yes |
+| instance | [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md) | Yes |

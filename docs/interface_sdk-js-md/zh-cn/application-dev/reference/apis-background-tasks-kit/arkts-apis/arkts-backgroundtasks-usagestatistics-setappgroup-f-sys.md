@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## setAppGroup
@@ -15,8 +15,6 @@ function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCal
 将指定bundleName应用的分组设置为newGroup，仅支持当前应用为其他应用设置，使用CallBack异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -47,38 +45,6 @@ function setAppGroup(bundleName: string, newGroup: GroupType, callback: AsyncCal
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-应用分组信息操作重复) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-let bundleName: string = 'com.example.deviceUsageStatistics';
-let newGroup = usageStatistics.GroupType.DAILY_GROUP;
-
-usageStatistics.setAppGroup(bundleName, newGroup).then( () => {
-  console.info('BUNDLE_ACTIVE setAppGroup promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE setAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-let bundleName: string = 'com.example.deviceUsageStatistics';
-let newGroup = usageStatistics.GroupType.DAILY_GROUP;
-
-usageStatistics.setAppGroup(bundleName, newGroup, (err: BusinessError) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE setAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE setAppGroup callback succeeded.');
-  }
-});
-```
-
 
 ## setAppGroup
 
@@ -89,8 +55,6 @@ function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>
 将指定bundleName应用的分组设置为newGroup，仅支持当前应用为其他应用设置，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -125,7 +89,3 @@ function setAppGroup(bundleName: string, newGroup: GroupType): Promise<void>
 | [10000004](../errorcode-DeviceUsageStatistics.md#10000004-通信失败) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) |
 | [10100001](../errorcode-DeviceUsageStatistics.md#10100001-应用分组信息操作重复) |
-
-**示例**
-
-参见 [setAppGroup](#setappgroup)

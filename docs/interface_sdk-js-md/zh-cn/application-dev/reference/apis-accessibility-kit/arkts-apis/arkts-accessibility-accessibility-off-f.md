@@ -3,8 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## off('accessibilityStateChange')
@@ -16,8 +16,6 @@ function off(type: 'accessibilityStateChange', callback?: Callback<boolean>): vo
 取消监听辅助应用启用状态变化事件。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -38,34 +36,6 @@ function off(type: 'accessibilityStateChange', callback?: Callback<boolean>): vo
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe accessibility state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.on('accessibilityStateChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.off('accessibilityStateChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
 
 ## off('touchGuideStateChange')
 
@@ -76,8 +46,6 @@ function off(type: 'touchGuideStateChange', callback?: Callback<boolean>): void
 取消监听触摸浏览启用状态变化事件。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -98,34 +66,6 @@ function off(type: 'touchGuideStateChange', callback?: Callback<boolean>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe touch guide state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.on('touchGuideStateChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.off('touchGuideStateChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
 
 ## off('screenReaderStateChange')
 
@@ -136,8 +76,6 @@ function off(type: 'screenReaderStateChange', callback?: Callback<boolean>): voi
 取消监听屏幕朗读启用状态变化事件。使用callback异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -158,34 +96,6 @@ function off(type: 'screenReaderStateChange', callback?: Callback<boolean>): voi
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe screen reader state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.on('screenReaderStateChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.off('screenReaderStateChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
 
 ## off('touchModeChange')
 
@@ -196,8 +106,6 @@ function off(type: 'touchModeChange', callback?: Callback<string>): void
 取消监听触摸浏览功能下的单击/双击操作模式变化事件。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -217,31 +125,3 @@ function off(type: 'touchModeChange', callback?: Callback<string>): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (mode: string) => void = this.eventCallback;
-  eventCallback(mode: string): void {
-    console.info(`current touch mode: ${JSON.stringify(mode)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.on('touchModeChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.off('touchModeChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```

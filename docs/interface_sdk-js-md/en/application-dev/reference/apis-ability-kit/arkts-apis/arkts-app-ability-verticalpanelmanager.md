@@ -5,7 +5,7 @@ Defines a vertical domain panel manager.@namespace verticalPanelManager
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from '@kit.AbilityKit';
+import { verticalPanelManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

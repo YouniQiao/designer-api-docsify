@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,12 +20,11 @@ canLoop(isLoop: Optional<boolean>)
 ```
 
 Sets whether the option list can loop scrolling.  
-- true: Loop scrolling is enabled. - false: Loop scrolling is disabled.  
+- true: Loop scrolling is enabled.  
+- false: Loop scrolling is disabled.  
 Default value: true If the value of isLoop is undefined, the default value is used. If the number of child components is less than 8, loop scrolling will not occur regardless of whether isLoop is set to true or false.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,19 +36,17 @@ Default value: true If the value of isLoop is undefined, the default value is us
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isLoop | Optional & lt;boolean & gt; | Yes |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## displayedItemCount
 
 ```TypeScript
-displayedItemCount(count: Optional<int>)
+displayedItemCount(count: Optional<number>)
 ```
 
 Sets the total number of visible items.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,7 +58,7 @@ Sets the total number of visible items.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| count | Optional & lt;number & gt; | Yes |
+| count | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 ## enableHapticFeedback
 
@@ -72,12 +67,11 @@ enableHapticFeedback(enable: Optional<boolean>)
 ```
 
 Sets whether to enable haptic feedback.To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project.  
-- true: Enable haptic feedback. - false: Disable haptic feedback.  
+- true: Enable haptic feedback.  
+- false: Disable haptic feedback.  
 Default value: true If the value of enable is undefined, the default value is used. After this function is enabled, whether haptic feedback is available depends on the hardware support of the system.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,7 +83,7 @@ Default value: true If the value of enable is undefined, the default value is us
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## itemHeight
 
@@ -101,8 +95,6 @@ Sets the height of each item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -113,7 +105,7 @@ Sets the height of each item.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| height | Optional & lt;LengthMetrics & gt; | Yes |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes |
 
 ## onChange
 
@@ -123,11 +115,10 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 
 Triggered when the selected item changes.If callback is set to undefined, the callback is not used.NOTE  
 - If more than half of an option's area enters the selected item area, the option becomes the selected item.  
-- The selected item area can be identified by setting [selectionIndicator](#selectionindicator). If the selected item indicator is set to the background, the background area is the selected item area. If the selected item indicator is set to the divider, the area between the center lines of the upper and lower dividers is the selected item area.
+- The selected item area can be identified by setting  
+[selectionIndicator](#selectionindicator). If the selected item indicator is set to the background, the background area is the selected item area. If the selected item indicator is set to the divider, the area between the center lines of the upper and lower dividers is the selected item area.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,7 +130,7 @@ Triggered when the selected item changes.If callback is set to undefined, the ca
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes |
 
 ## onScrollStop
 
@@ -151,8 +142,6 @@ Triggered when the picker scrolling stops. The picker scrolling stops when the s
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -163,7 +152,7 @@ Triggered when the picker scrolling stops. The picker scrolling stops when the s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes |
 
 ## selectionIndicator
 
@@ -175,8 +164,6 @@ Sets the style of the selected item indicator.Default value: { type: PickerIndic
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -187,4 +174,4 @@ Sets the style of the selected item indicator.Default value: { type: PickerIndic
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | Yes |

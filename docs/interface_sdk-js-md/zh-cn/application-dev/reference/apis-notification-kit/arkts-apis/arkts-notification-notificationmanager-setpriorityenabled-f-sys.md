@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setPriorityEnabled
@@ -15,8 +15,6 @@ function setPriorityEnabled(enable: boolean): Promise<void>
 设置通知优先级总开关。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -45,31 +43,3 @@ function setPriorityEnabled(enable: boolean): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-notificationManager.setPriorityEnabled(false).then(() => {
-    hilog.info(0x0000, 'testTag', `setPriorityEnabled success`);
-}).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', `setPriorityEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.setPriorityEnabled(false).then(() => {
-  console.info(`setPriorityEnabled success`);
-}).catch((err: Error) => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setPriorityEnabled failed, code is ${error.code}, message is ${error.message}`);
-});
-```

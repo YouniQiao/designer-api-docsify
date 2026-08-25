@@ -1,10 +1,11 @@
 # @ohos.fontManager(Font Management)
 
-This module provides system applications with the capabilities to install and uninstall third-party fonts and migrate font data. Specifically: <br>- Installing font files from a specified path (.ttf and .ttc formats are supported). <br>- Uninstalling installed fonts by font name. <br>- Starting a font data migration task during device upgrades, and providing callbacks for migration progress and results.
+This module provides system applications with the capabilities to install and uninstall third-party fonts and migrate font data. Specifically:   
+- Installing font files from a specified path (.ttf and .ttc formats are supported).   
+- Uninstalling installed fonts by font name.   
+- Starting a font data migration task during device upgrades, and providing callbacks for migration progress and results.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -13,7 +14,7 @@ This module provides system applications with the capabilities to install and un
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## Summary

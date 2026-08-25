@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## clearPreloadedUIExtensionAbilities
@@ -15,8 +15,6 @@ function clearPreloadedUIExtensionAbilities(): Promise<void>
 Clears all preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instances in the current process. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -39,24 +37,3 @@ Clears all preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  abilityManager.clearPreloadedUIExtensionAbilities()
-    .then(() => {
-      console.info('clearPreloadedUIExtensionAbilities success.');
-    })
-    .catch((err: BusinessError) => {
-      console.error(`clearPreloadedUIExtensionAbilities fail, err: ${JSON.stringify(err)}`);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`clearPreloadedUIExtensionAbilities failed, code is ${code}, message is ${message}`);
-}
-```

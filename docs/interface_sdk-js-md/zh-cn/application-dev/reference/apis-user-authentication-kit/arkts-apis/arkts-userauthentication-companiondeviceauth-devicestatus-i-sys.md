@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## deviceKey
@@ -27,8 +25,6 @@ deviceKey: DeviceKey
 **类型：** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ deviceModelInfo: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -67,8 +61,6 @@ deviceName: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,8 +80,6 @@ deviceUserName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -108,8 +98,6 @@ isOnline: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -119,16 +107,14 @@ isOnline: boolean
 ## supportedBusinessIds
 
 ```TypeScript
-supportedBusinessIds: int[]
+supportedBusinessIds: number[]
 ```
 
 设备支持的业务ID列表。表示该设备支持的业务场景范围，如解锁锁屏、解锁应用锁等。不同设备因认证安全性差异，支持的业务范围不同。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

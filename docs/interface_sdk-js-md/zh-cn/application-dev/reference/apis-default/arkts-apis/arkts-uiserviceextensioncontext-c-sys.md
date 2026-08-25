@@ -9,22 +9,14 @@ UIServiceExtensionContext模块是 [UIServiceExtension](../../apis-ability-kit/a
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
 
 ## connectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
-```
-
-ArkTS-Sta:
-```TypeScript
-connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
 连接到[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)，返回连接id。
@@ -33,8 +25,6 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,7 +43,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **错误码：**
 
@@ -74,86 +64,15 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 | [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
 
-**示例**
-
-```TypeScript
-import { common, Want } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[Page_ServiceExtensionAbility]';
-const DOMAIN_NUMBER: number = 0xFF00;
-
-// connectionId需从connectServiceExtensionAbility接口的返回值获取并保存
-let connectionId: number = 0; // 示例值，实际需使用connectServiceExtensionAbility返回的连接id
-// 设置要连接的后台服务Ability信息
-let want: Want = {
-  deviceId: '',
-  bundleName: 'com.samples.stagemodelabilitydevelop',
-  abilityName: 'ServiceExtAbility'
-  };
-
-// 设置连接选项回调
-let options: common.ConnectOptions = {
-  // 连接成功回调
-  onConnect(elementName, remote: rpc.IRemoteObject): void {
-    hilog.info(DOMAIN_NUMBER, TAG, 'onConnect callback');
-  },
-  // 断开连接回调
-  onDisconnect(elementName): void {
-    hilog.info(DOMAIN_NUMBER, TAG, 'onDisconnect callback');
-  },
-  // 连接失败回调
-  onFailed(code: number): void {
-    hilog.info(DOMAIN_NUMBER, TAG, `onFailed callback, ${code}`);
-  }
-};
-
-@Entry
-@Component
-struct Page_UIServiceExtensionAbility {
-  build() {
-    Column() {
-      List({ initialIndex: 0 }) {
-        ListItem() {
-          Row() {
-          }
-          .onClick(() => {
-            let context: common.UIServiceExtensionContext =
-              this.getUIContext().getHostContext() as common.UIServiceExtensionContext;
-            // 连接成功后返回的ID需保存，用于后续断开连接
-            connectionId = context.connectServiceExtensionAbility(want, options);
-            // The background service is connected.
-            this.getUIContext().getPromptAction().showToast({
-              message: 'SuccessfullyConnectBackendService'
-            });
-            // connectionId = context.connectAbility(want, options);
-            hilog.info(DOMAIN_NUMBER, TAG, `connectionId is : ${connectionId}`);
-          })
-        }
-      }
-    }
-  }
-}
-```
-
 ## disconnectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 disconnectServiceExtensionAbility(connectionId: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 ```
 
 断开与[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的连接，与 [connectServiceExtensionAbility](#connectserviceextensionability)功能相反。使用Promise异步回调。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -165,7 +84,7 @@ disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| connectionId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| connectionId | number | 是 |
 
 **返回值：**
 
@@ -181,50 +100,6 @@ disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const TAG: string = '[Page_ServiceExtensionAbility]';
-const DOMAIN_NUMBER: number = 0xFF00;
-
-// connectionId需从connectServiceExtensionAbility接口的返回值获取并保存
-let connectionId: number = 0; // 示例值，实际需使用connectServiceExtensionAbility返回的连接id
-
-@Entry
-@Component
-struct Page_UIServiceExtensionAbility {
-  build() {
-    Column() {
-      List({ initialIndex: 0 }) {
-        ListItem() {
-          Row() {
-          }
-          .onClick(() => {
-            let context: common.UIServiceExtensionContext =
-              this.getUIContext().getHostContext() as common.UIServiceExtensionContext;
-            // connectionId为调用connectServiceExtensionAbility接口时的返回值，需开发者自行维护
-            context.disconnectServiceExtensionAbility(connectionId).then(() => {
-              hilog.info(DOMAIN_NUMBER, TAG, 'disconnectServiceExtensionAbility success');
-              // 成功断连后台服务
-              this.getUIContext().getPromptAction().showToast({
-                message: 'SuccessfullyDisconnectBackendService'
-              });
-            }).catch((err: BusinessError) => {
-              hilog.error(DOMAIN_NUMBER, TAG,
-                `disconnectServiceExtensionAbility failed, err code: ${err.code}, err msg: ${err.message}`);
-            });
-          })
-        }
-      }
-    }
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -237,8 +112,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -282,42 +155,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-```TypeScript
-import { UIServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class UIEntryAbility extends UIServiceExtensionAbility {
-  onCreate() {
-    // 设置启动Ability的Want参数
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MyAbility'
-    };
-    // 设置启动选项参数
-    let options: StartOptions = {
-      windowMode: 0,
-    };
-
-    try {
-      this.context.startAbility(want, options)
-        .then((data: void) => {
-          // 执行正常业务
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // 处理入参错误异常
-      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-    }
-  }
-}
-```
-
 ## startAbilityByType
 
 ```TypeScript
@@ -331,8 +168,6 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -361,116 +196,6 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const TAG: string = '[Extension_Sub] ';
-
-@Entry
-@Component
-struct SubIndex {
-  build() {
-    Row() {
-      Column() {
-        Button("startAbilityByType")
-          .fontSize(10)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            let context = this.getUIContext().getHostContext() as common.UIServiceExtensionContext;
-            let startWant: Record<string, Object> = {
-              'sceneType': 1,
-              'email': [encodeURI('xxx@example.com'),
-                encodeURI('xxx@example.com')], // 收件人邮箱地址，多值以逗号分隔，对数组内容使用encodeURI()方法进行url编码
-              'cc': [encodeURI('xxx@example.com'),
-                encodeURI('xxx@example.com')], // 抄收人邮箱地址，多值以逗号分隔，对数组内容使用encodeURI()方法进行url编码
-              'bcc': [encodeURI('xxx@example.com'),
-                encodeURI('xxx@example.com')], // 密送人邮箱地址，多值以逗号分隔，对数组内容使用encodeURI()方法进行url编码
-              'subject': encodeURI('邮件主题'), // 邮件主题，对内容使用encodeURI()方法进行url编码
-              'body': encodeURI('邮件正文'), // 邮件正文，对内容使用encodeURI()方法进行url编码
-              'ability.params.stream': [encodeURI('附件uri1'),
-                encodeURI('附件uri2')], // 附件uri，多值以逗号分隔，对数组内容使用encodeURI()方法进行url编码
-              'ability.want.params.uriPermissionFlag': 1
-            };
-            // 定义启动结果回调对象
-            let abilityStartCallback: common.AbilityStartCallback = {
-              // 处理启动失败的错误回调
-              onError: (code: number, name: string, message: string) => {
-                console.error(TAG + `code: ${code}  name:${name}  message:${message}`);
-              }
-            };
-            try {
-              // 按目标ability的类型启动UIAbility或UIExtensionAbility
-              context.startAbilityByType("mail", startWant, abilityStartCallback)
-                .then(() => {
-                  console.info(TAG + `Succeeded in windows starting ability`);
-                }).catch((err: BusinessError) => {
-                console.error(TAG +
-                  `Failed to windows starting ability, Code is ${err.code}, message is ${err.message}.`);
-              })
-            } catch (err) {
-              let code = (err as BusinessError).code;
-              let msg = (err as BusinessError).message;
-              console.error(TAG + `Failed to windows starting ability, Code is ${code}, message is ${msg}.`);
-            }
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-## startAbilityByType
-
-```TypeScript
-startAbilityByType(type: string, wantParam: Record<string, RecordData>,
-    abilityStartCallback: AbilityStartCallback): Promise<void>
-```
-
-按目标ability的类型启动[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或 [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。仅支持处于前台的应用调用。使用Promise异步回调 。
-
-> **说明：**&gt;
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | string | 是 |
-| wantParam | Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |
-| abilityStartCallback | [AbilityStartCallback](../../apis-ability-kit/arkts-apis/arkts-ability-abilitystartcallback-i.md) | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;void & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [startAbilityByType](#startabilitybytype)
-
 ## terminateSelf
 
 ```TypeScript
@@ -481,8 +206,6 @@ terminateSelf(): Promise<void>
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -494,23 +217,3 @@ terminateSelf(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-import { UIServiceExtensionAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class UIEntryAbility extends UIServiceExtensionAbility {
-  onCreate() {
-    // 销毁UIServiceExtension
-    this.context.terminateSelf().then(() => {
-      // 执行正常业务
-      console.info('terminateSelf succeed');
-    }).catch((error: BusinessError) => {
-      // 处理业务逻辑错误
-      console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
-    });
-  }
-}
-```

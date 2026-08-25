@@ -9,8 +9,6 @@ The **hardwareManager** module provides the capability of controlling distribute
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
@@ -18,7 +16,7 @@ The **hardwareManager** module provides the capability of controlling distribute
 ## Modules to Import
 
 ```TypeScript
-import { hardwareManager } from '@kit.DistributedServiceKit';
+import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## Summary

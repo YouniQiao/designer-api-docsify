@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## cancel
@@ -24,19 +22,9 @@ cancel(): void
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
-```TypeScript
-animator.cancel();
-```
 
 ## finish
 
@@ -48,19 +36,9 @@ finish(): void
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
-```TypeScript
-animator.finish();
-```
 
 ## oncancel
 
@@ -72,8 +50,6 @@ oncancel: () => void
 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onCancel。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 12
 
@@ -93,8 +69,6 @@ onCancel: () => void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -111,8 +85,6 @@ onfinish: () => void
 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFinish。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 12
 
@@ -132,8 +104,6 @@ onFinish: () => void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -150,8 +120,6 @@ onframe: (progress: number) => void
 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFrame。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 12
 
@@ -177,8 +145,6 @@ onFrame: (progress: number) => void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -202,8 +168,6 @@ onrepeat: () => void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 12
 
 **替代接口：** onRepeat
@@ -222,8 +186,6 @@ onRepeat: () => void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -240,19 +202,9 @@ pause(): void
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
-```TypeScript
-animator.pause();
-```
 
 ## play
 
@@ -264,19 +216,9 @@ play(): void
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
-```TypeScript
-animator.play();
-```
 
 ## reset
 
@@ -287,8 +229,6 @@ reset(options: AnimatorOptions): void
 重置当前animator动画参数。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -307,68 +247,6 @@ reset(options: AnimatorOptions): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-```TypeScript
-import { AnimatorResult } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct AnimatorTest {
-  private animatorResult: AnimatorResult | undefined = undefined;
-
-  create() {
-    this.animatorResult = this.getUIContext().createAnimator({
-      duration: 1500,
-      easing: "friction",
-      delay: 0,
-      fill: "forwards",
-      direction: "normal",
-      iterations: 3,
-      begin: 200.0,
-      end: 400.0
-    })
-    this.animatorResult.reset({
-      duration: 1500,
-      easing: "friction",
-      delay: 0,
-      fill: "forwards",
-      direction: "normal",
-      iterations: 5,
-      begin: 200.0,
-      end: 400.0
-    });
-  }
-
-  build() {
-    // ......
-  }
-}
-```
-
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
-```TypeScript
-import { Animator as animator, AnimatorResult, AnimatorOptions, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-let options: AnimatorOptions = {
-  duration: 1500,
-  easing: "ease",
-  delay: 0,
-  fill: "forwards",
-  direction: "normal",
-  iterations: 1,
-  begin: 100,
-  end: 200
-};
-let optionsNew: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200)
-  .duration(2000)
-  .iterations(3)
-  .delay(1000);
-let animatorResult: AnimatorResult = animator.create(options);
-animatorResult.reset(optionsNew);
-```
-
 ## reset
 
 ```TypeScript
@@ -378,8 +256,6 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 重置当前animator动画参数。与[reset](#reset)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -400,10 +276,6 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-参见 [reset](#reset)
-
 ## reverse
 
 ```TypeScript
@@ -414,19 +286,9 @@ reverse(): void
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
-```TypeScript
-animator.reverse();
-```
 
 ## setExpectedFrameRateRange
 
@@ -438,8 +300,6 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -450,43 +310,7 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { AnimatorResult } from '@kit.ArkUI';
-
-let expectedFrameRate: ExpectedFrameRateRange = {
-  min: 0,
-  max: 120,
-  expected: 30
-}
-
-@Entry
-@Component
-struct AnimatorTest {
-  private backAnimator: AnimatorResult | undefined = undefined
-
-  create() {
-    this.backAnimator = this.getUIContext().createAnimator({
-      duration: 2000,
-      easing: "ease",
-      delay: 0,
-      fill: "forwards",
-      direction: "normal",
-      iterations: 1,
-      begin: 100, // 动画插值起点
-      end: 200 // 动画插值终点
-    })
-    this.backAnimator.setExpectedFrameRateRange(expectedFrameRate);
-  }
-
-  build() {
-    // ......
-  }
-}
-```
+| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | 是 |
 
 ## update
 
@@ -501,8 +325,6 @@ update(options: AnimatorOptions): void
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [reset](#reset)(options: AnimatorOptions)
@@ -514,11 +336,3 @@ update(options: AnimatorOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 |
-
-**示例**
-
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
-```TypeScript
-animator.update(options);
-```

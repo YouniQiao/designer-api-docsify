@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllNewPreinstalledApplicationInfo
@@ -15,8 +15,6 @@ function getAllNewPreinstalledApplicationInfo(): Promise<Array<PreinstalledAppli
 Obtains PreinstalledApplicationInfo of all newly added preinstalled applications during device OTA upgrade.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

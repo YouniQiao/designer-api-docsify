@@ -4,14 +4,12 @@ Sets a foreground blur effect.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radius
 
 ```TypeScript
-radius: double
+radius: number
 ```
 
 Blur radius. The value range is [0, +∞). The default value is **0**. A negative value, **NaN**, and **Infinity** are invalid and treated as the default value. A larger value indicates a more obvious foreground blur effect. If the value is **0**, the foreground is not blurred.
@@ -19,8 +17,6 @@ Blur radius. The value range is [0, +∞). The default value is **0**. A negativ
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

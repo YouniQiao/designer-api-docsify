@@ -4,29 +4,25 @@ WebP metadata.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## canvasHeight
 
 ```TypeScript
-readonly canvasHeight?: int
+readonly canvasHeight?: number
 ```
 
 Canvas Height. Unit: px, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,16 +31,14 @@ Canvas Height. Unit: px, The value should be an integer.
 ## canvasWidth
 
 ```TypeScript
-readonly canvasWidth?: int
+readonly canvasWidth?: number
 ```
 
 Canvas Width. Unit: px, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,16 +47,14 @@ Canvas Width. Unit: px, The value should be an integer.
 ## delayTime
 
 ```TypeScript
-readonly delayTime?: int
+readonly delayTime?: number
 ```
 
 Delay of each frame. Unit: ms, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,16 +63,14 @@ Delay of each frame. Unit: ms, The value should be an integer.
 ## loopCount
 
 ```TypeScript
-readonly loopCount?: int
+readonly loopCount?: number
 ```
 
 WebP图片动画循环的次数。如果取值为0，则表示不限次数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -89,16 +79,14 @@ WebP图片动画循环的次数。如果取值为0，则表示不限次数。
 ## unclampedDelayTime
 
 ```TypeScript
-readonly unclampedDelayTime?: int
+readonly unclampedDelayTime?: number
 ```
 
 Unclamped delay of each frame. Unit: ms, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

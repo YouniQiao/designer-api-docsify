@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getUriSync
@@ -15,8 +15,6 @@ function getUriSync(name: string): string
 Get settingsdata uri (synchronous method)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -33,10 +31,3 @@ Get settingsdata uri (synchronous method)
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-// Obtain the URI of a data item.
-let uriVar:string = settings.getUriSync(settings.display.SCREEN_BRIGHTNESS_STATUS);
-```

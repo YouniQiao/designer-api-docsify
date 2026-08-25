@@ -4,8 +4,6 @@ Enumerates the file location.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md)
@@ -23,8 +21,6 @@ LOCAL = 1
 Stored only on a local device.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -44,8 +40,6 @@ Stored only on the cloud.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#cloud)
@@ -63,8 +57,6 @@ BOTH = 3
 Stored both on a local device and the cloud.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 

@@ -4,8 +4,6 @@ HttpAuthHandler is a handler class used by the Web component to process HTTP aut
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -23,34 +21,9 @@ Cancels HTTP authentication as requested by the user.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onDataResubmitted((event) => {
-          console.info('onDataResubmitted');
-          event.handler.cancel();
-        })
-    }
-  }
-}
-```
 
 ## confirm
 
@@ -61,8 +34,6 @@ confirm(userName: string, password: string): boolean
 Performs HTTP authentication with the user name and password provided by the user.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -91,8 +62,6 @@ Constructs an **HttpAuthHandler**.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -106,8 +75,6 @@ isHttpAuthInfoSaved(): boolean
 Checks whether the credentials stored for the current host are applicable. The credentials are not applicable if they have been rejected by the server in the current request.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

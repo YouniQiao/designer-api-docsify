@@ -4,14 +4,12 @@ Defines the response interface to receive the device status.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## Modules to Import
 
 ```TypeScript
-import { stationary } from '@kit.MultimodalAwarenessKit';
+import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## state
@@ -25,7 +23,5 @@ New device status.
 **Type:** [ActivityState](arkts-multimodalawareness-stationary-activitystate-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary

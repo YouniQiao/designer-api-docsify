@@ -4,14 +4,12 @@ Policy information to manager permissions on a path.@interface PathPolicyInfo
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## operationMode
@@ -26,8 +24,6 @@ Indicates the mode of operation for the path.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## path
@@ -41,7 +37,5 @@ Indicates the path of the policy information.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization

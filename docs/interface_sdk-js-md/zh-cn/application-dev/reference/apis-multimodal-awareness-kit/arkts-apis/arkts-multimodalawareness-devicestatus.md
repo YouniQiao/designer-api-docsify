@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 
 ## 导入模块
 
 ```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## 汇总
@@ -21,9 +19,7 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 | 名称 |
 | --- |
 | [off(设备状态感知)](arkts-multimodalawareness-devicestatus-off-f.md#offsteadystandingdetect) |
-| [offSteadyStandingDetect(设备状态感知)](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md) |
 | [on(设备状态感知)](arkts-multimodalawareness-devicestatus-on-f.md#onsteadystandingdetect) |
-| [onSteadyStandingDetect(设备状态感知)](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）

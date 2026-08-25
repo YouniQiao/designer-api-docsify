@@ -22,8 +22,8 @@ Double-Ended Queue (Deque) is a data structure implemented based on a circular q
 ## Modules to Import
 
 ```TypeScript
-import { Deque } from '@kit.ArkTS';
-import { DequeForEachCb } from '@kit.ArkTS';
+import { Deque } from 'kits/@kit.ArkTS';
+import { DequeForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -33,9 +33,3 @@ import { DequeForEachCb } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [Deque](arkts-arkts-util-deque-deque-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DequeForEachCb](arkts-arkts-dequeforeachcb-t.md) |

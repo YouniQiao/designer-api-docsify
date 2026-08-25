@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getUserAuthInstance
@@ -18,8 +18,6 @@ function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): Us
 > 每个UserAuthInstance只能进行一次认证，需要再次认证时，必须重新获取UserAuthInstance。认证完成后（无论成功或失败），该实例将无法再次使用。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -46,41 +44,3 @@ function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): Us
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 | [12500005](../errorcode-useriam.md#12500005-认证类型不支持) |
 | [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: number = 16;
-  let randData: Uint8Array | null = null;
-  let retryCount = 0;
-  while (retryCount < 3) {
-    randData = rand?.generateRandomSync(len)?.data;
-    if (randData) {
-      break;
-    }
-    retryCount++;
-  }
-  if (!randData) {
-    return;
-  }
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: '请输入密码',
-  };
-  let userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`Failed to auth. Code: ${err.code}, message: ${err.message}`);
-}
-```

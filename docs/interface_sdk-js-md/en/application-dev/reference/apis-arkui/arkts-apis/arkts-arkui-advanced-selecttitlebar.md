@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SelectTitleBar, SelectTitleBarMenuItem } from '@kit.ArkUI';
+import { SelectTitleBar, SelectTitleBarMenuItem } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -19,9 +19,3 @@ import { SelectTitleBar, SelectTitleBarMenuItem } from '@kit.ArkUI';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [SelectTitleBar](arkts-arkui-arkui-advanced-selecttitlebar-selecttitlebar-s.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnSelectedCallback](arkts-arkui-onselectedcallback-t.md) |

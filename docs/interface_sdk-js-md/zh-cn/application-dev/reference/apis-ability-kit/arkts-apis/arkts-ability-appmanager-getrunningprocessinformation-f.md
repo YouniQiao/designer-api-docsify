@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRunningProcessInformation
@@ -19,8 +19,6 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 > - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本9 - 10：ohos.permission.GET_RUNNING_INFO
@@ -41,31 +39,6 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 | --- |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.getRunningProcessInformation().then((data) => {
-  console.info(`The running process information is: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-  console.error(`code: ${error.code}, msg:${error.message}`);
-});
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.getRunningProcessInformation((err, data) => {
-  if (err) {
-    console.error(`getRunningProcessInformation fail, code: ${err.code}, msg:${err.message}`);
-  } else {
-    console.info(`The running process information is: ${JSON.stringify(data)}`);
-  }
-});
-```
-
 
 ## getRunningProcessInformation
 
@@ -80,8 +53,6 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 > - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本9 - 10：ohos.permission.GET_RUNNING_INFO
@@ -102,7 +73,3 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [getRunningProcessInformation](#getrunningprocessinformation)

@@ -8,8 +8,6 @@ type OnRequestEventCallback = (source: Want, name: string, data: KVObject) => Re
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -27,23 +25,3 @@ type OnRequestEventCallback = (source: Want, name: string, data: KVObject) => Re
 | 类型 |
 | --- |
 | [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) |
-
-**示例**
-
-```TypeScript
-import { pluginComponentManager } from '@kit.ArkUI';
-import { Want } from '@kit.AbilityKit';
-
-const onRequestListener = (source: Want, name: string, data: pluginComponentManager.KVObject) => {
-  console.info("onRequestListener");
-  console.info("onRequestListener source=" + JSON.stringify(source));
-  console.info("onRequestListener name=" + name);
-  console.info("onRequestListener data=" + JSON.stringify(data));
-  // 构建Request事件回调的返回数据，指定组件模板路径并携带请求数据返回给请求方
-  let returnData: Record<string, string | pluginComponentManager.KVObject> = {
-    "template": "ets/pages/plugin.js",
-    "data": data,
-  }
-  return returnData;
-}
-```

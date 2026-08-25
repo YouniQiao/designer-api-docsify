@@ -4,29 +4,13 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## 导入模块
 
 ```TypeScript
-import { AVVolumePanel, AVVolumePanelParameter } from '@kit.AudioKit';
+import { AVVolumePanel, AVVolumePanelParameter } from 'kits/@kit.AudioKit';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-用于构造组件的建造接口。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## volumeLevel
 
@@ -39,8 +23,6 @@ volumeLevel?: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -57,8 +39,6 @@ volumeParameter?: AVVolumePanelParameter
 **类型：** [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

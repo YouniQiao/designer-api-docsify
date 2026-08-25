@@ -6,8 +6,6 @@ Defines the Web attribute functions.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,8 +22,6 @@ aiSessionOptions(aiSessions: Array<AISessionEvent>)
 Configures custom frontend AI sessions for the **Web** component, used to register multiple custom AI sessions.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,8 +55,6 @@ Sets whether to allow a new window to automatically open through JavaScript.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -70,94 +64,6 @@ Sets whether to allow a new window to automatically open through JavaScript.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | flag | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-// There are two Web components on the same page. When the WebComponent object opens a new window, the NewWebViewComp object is displayed.
-@CustomDialog
-struct NewWebViewComp {
-    controller?: CustomDialogController;
-    webviewController1: webview.WebviewController = new webview.WebviewController();
-
-    build() {
-        Column() {
-            Web({ src: "", controller: this.webviewController1 })
-                .javaScriptAccess(true)
-                .multiWindowAccess(false)
-                .onWindowExit(() => {
-                    console.info("NewWebViewComp onWindowExit");
-                    if (this.controller) {
-                        this.controller.close();
-                    }
-                })
-                .onActivateContent(() => {
-                    // To display the web page to the foreground, the application should perform a tab or window switch.
-                    console.info("NewWebViewComp onActivateContent")
-                })
-        }
-    }
-}
-
-@Entry
-@Component
-struct WebComponent {
-    controller: webview.WebviewController = new webview.WebviewController();
-    dialogController: CustomDialogController | null = null;
-
-    build() {
-        Column() {
-            Web({ src: $rawfile("index.html"), controller: this.controller })
-                .javaScriptAccess(true)
-                // MultiWindowAccess needs to be enabled.
-                .multiWindowAccess(true)
-                .allowWindowOpenMethod(true)
-                .onWindowNew((event) => {
-                    if (this.dialogController) {
-                        this.dialogController.close()
-                    }
-                    let popController: webview.WebviewController = new webview.WebviewController();
-                    this.dialogController = new CustomDialogController({
-                        builder: NewWebViewComp({ webviewController1: popController }),
-                        // Set isModal to false to prevent the new window from being destroyed, so that the onActivateContent callback can be triggered.
-                        isModal: false
-                    })
-                    this.dialogController.open();
-                    // Return the WebviewController object corresponding to the new window to the web kernel.
-                    // If the event.handler.setWebController API is not called, the render process will be blocked.
-                    // If no new window is created, set the value of event.handler.setWebController to null to notify the Web component that no new window is created.
-                    event.handler.setWebController(popController);
-                })
-        }
-    }
-}
-```
-
-Example of the HTML file
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<body>
-<div>
-    <button type="button" onclick="delayOpenwindow(5000)">delayOpenwindow_5s</button>
-</div>
-
-<script>
-    function openwindowAll(){
-        open("https://www.example.com","_blank","height=400,width=600,top=100,left=100,scrollbars=no")
-    }
-    function delayOpenwindow(t){
-        setTimeout(openwindowAll, t);
-    }
-</script>
-</body>
-</html>
-```
 
 ## backToTop
 
@@ -169,8 +75,6 @@ Sets whether to enable the back-to-top feature for the **Web** component when th
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -178,63 +82,6 @@ Sets whether to enable the back-to-top feature for the **Web** component when th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [backToTop](#backtotop) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .backToTop(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .blue {
-          background-color: lightblue;
-        }
-        .green {
-          background-color: lightgreen;
-        }
-        .blue, .green {
-         font-size:16px;
-         height:200px;
-         text-align: center;       /* Horizontally centered */
-         line-height: 200px;       /* Vertically centered (the height matches the container height) */
-        }
-    </style>
-</head>
-<body>
-<div class="blue" >webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-</body>
-</html>
-```
 
 ## bindSelectionMenu
 
@@ -247,8 +94,6 @@ Sets the custom selection menu.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -259,324 +104,6 @@ Sets the custom selection menu.
 | content | [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md) | Yes |
 | responseType | [WebResponseType](arkts-arkweb-webresponsetype-e.md) | Yes |
 | options | [SelectionMenuOptionsExt](arkts-arkweb-selectionmenuoptionsext-i.md) | No |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { pasteboard } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface PreviewBuilderParam {
-  width: number;
-  height: number;
-  url:Resource | string | undefined;
-}
-
-interface PreviewBuilderParamForImage {
-  previewImage: Resource | string | undefined;
-  width: number;
-  height: number;
-}
-
-
-@Builder function PreviewBuilderGlobalForImage($$: PreviewBuilderParamForImage) {
-  Column() {
-    Image($$.previewImage)
-      .objectFit(ImageFit.Fill)
-      .autoResize(true)
-  }.width($$.width).height($$.height)
-}
-
-@Entry
-@Component
-struct SelectionMenuLongPress {
-  controller: webview.WebviewController = new webview.WebviewController();
-  previewController: webview.WebviewController = new webview.WebviewController();
-  @Builder PreviewBuilder($$: PreviewBuilderParam){
-    Column() {
-      Stack(){
-        Text("") // Select whether to display the URL.
-          .padding(5)
-          .width('100%')
-          .textAlign(TextAlign.Start)
-          .backgroundColor(Color.White)
-          .copyOption(CopyOptions.LocalDevice)
-          .maxLines(1)
-          .textOverflow({overflow:TextOverflow.Ellipsis})
-        Progress({ value: this.progressValue, total: 100, type: ProgressType.Linear }) // Display the progress bar.
-          .style({ strokeWidth: 3, enableSmoothEffect: true })
-          .backgroundColor(Color.White)
-          .opacity(this.progressVisible?1:0)
-          .backgroundColor(Color.White)
-      }.alignContent(Alignment.Bottom)
-      Web({src:$$.url,controller: new webview.WebviewController()})
-        .javaScriptAccess(true)
-        .fileAccess(true)
-        .onlineImageAccess(true)
-        .imageAccess(true)
-        .domStorageAccess(true)
-        .onPageBegin(()=>{
-          this.progressValue = 0;
-          this.progressVisible = true;
-        })
-        .onProgressChange((event)=>{
-          this.progressValue = event.newProgress;
-        })
-        .onPageEnd(()=>{
-          this.progressVisible = false;
-        })
-        .hitTestBehavior(HitTestMode.None) // Disable the gesture response during web page preview.
-    }.width($$.width).height($$.height) // Set the preview width and height.
-  }
-
-  private result: WebContextMenuResult | undefined = undefined;
-  @State previewImage: Resource | string | undefined = undefined;
-  @State previewWidth: number = 1;
-  @State previewHeight: number = 1;
-  @State previewWidthImage: number = 1;
-  @State previewHeightImage: number = 1;
-  @State linkURL:string = "";
-  @State progressValue:number = 0;
-  @State progressVisible:boolean = true;
-  uiContext: UIContext = this.getUIContext();
-  enablePaste = false;
-
-  clearSelection() {
-    try {
-      this.controller.runJavaScript(
-        'clearSelection()',
-        (error, result) => {
-          if (error) {
-            console.error(`run clearSelection JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-            return;
-          }
-          if (result) {
-            console.info(`The clearSelection() return value is: ${result}`);
-          }
-        });
-    } catch (error) {
-      console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-    }
-  }
-
-
-  @Builder
-  LinkMenuBuilder() {
-    Menu() {
-      MenuItem({ content: 'Copy Link', })
-        .onClick(() => {
-          const pasteboardData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, this.linkURL);
-          const systemPasteboard = pasteboard.getSystemPasteboard();
-          systemPasteboard.setData(pasteboardData);
-        })
-      MenuItem({content:'Open Link'})
-        .onClick(()=>{
-          this.controller.loadUrl(this.linkURL);
-        })
-    }
-  }
-  @Builder
-  ImageMenuBuilder() {
-    Menu() {
-      MenuItem({ content: 'Copy Image', })
-        .onClick(() => {
-          this.result?.copyImage();
-          this.result?.closeContextMenu();
-        })
-    }
-  }
-  @Builder
-  TextMenuBuilder() {
-    Menu() {
-      MenuItem({ content: 'Copy', })
-        .onClick(() => {
-          try {
-            this.controller.runJavaScript(
-              'copySelectedText()',
-              (error, result) => {
-                if (error) {
-                  console.error(`run copySelectedText JavaScript error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                  return;
-                }
-                if (result) {
-                  console.info(`The copySelectedText() return value is: ${result}`);
-                }
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-          this.clearSelection()
-        }).backgroundColor(Color.Pink)
-    }
-  }
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .javaScriptAccess(true)
-        .fileAccess(true)
-        .onlineImageAccess(true)
-        .imageAccess(true)
-        .domStorageAccess(true)
-        .bindSelectionMenu(WebElementType.TEXT, this.TextMenuBuilder, WebResponseType.LONG_PRESS,
-          {
-            onAppear: () => {},
-            onDisappear: () => {},
-            menuType: MenuType.SELECTION_MENU,
-          })
-        .bindSelectionMenu(WebElementType.LINK, this.LinkMenuBuilder, WebResponseType.LONG_PRESS,
-          {
-            onAppear: () => {},
-            onDisappear: () => {
-              this.result?.closeContextMenu();
-            },
-            preview: this.PreviewBuilder({
-              width: 500,
-              height: 400,
-              url:this.linkURL
-            }),
-            menuType: MenuType.PREVIEW_MENU
-          })
-        .bindSelectionMenu(WebElementType.IMAGE, this.ImageMenuBuilder, WebResponseType.LONG_PRESS,
-          {
-            onAppear: () => {},
-            onDisappear: () => {
-              this.result?.closeContextMenu();
-            },
-            preview: PreviewBuilderGlobalForImage({
-              previewImage: this.previewImage,
-              width: this.previewWidthImage,
-              height: this.previewHeightImage,
-            }),
-            menuType: MenuType.PREVIEW_MENU,
-          })
-        .zoomAccess(true)
-        .onContextMenuShow((event) => {
-          if (event) {
-            this.result = event.result;
-            this.previewWidthImage = this.uiContext!.px2vp(event.param.getPreviewWidth());
-            this.previewHeightImage = this.uiContext!.px2vp(event.param.getPreviewHeight());
-            if (event.param.getSourceUrl().indexOf("resource://rawfile/") == 0) {
-              this.previewImage = $rawfile(event.param.getSourceUrl().substring(19));
-            } else {
-              this.previewImage = event.param.getSourceUrl();
-            }
-            this.linkURL = event.param.getLinkUrl()
-            return true;
-          }
-          return false;
-        })
-    }
-
-  }
-  // Swipe back
-  onBackPress(): boolean | void {
-    if (this.controller.accessStep(-1)) {
-      this.controller.backward();
-      return true;
-    } else {
-      return false;
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Touch and hold to copy text</title>
-    <style>
-        .container {
-            background-color: white;
-            padding: 30px;
-            margin: 20px 0;
-        }
-
-        .context {
-            line-height: 1.8;
-            font-size: 18px;
-        }
-
-        .context span {
-            border-radius: 8px;
-            background-color: #f8f9fa;
-        }
-
-        .context a {
-            color: #3498db;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            padding: 12px 24px;
-            border: 2px solid #3498db;
-            border-radius: 30px;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .context img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 20px;
-        }
-
-        .context:hover img {
-            transform: scale(1.05);
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-
-    <div class="context">
-        <!--img.png is in the same directory as the html file-->
-        <img src="img.png">
-    </div>
-
-    <div class="context">
-        <a  href="https://www.example.com">Touch and hold the link to display the menu</a>
-    </div>
-
-    <div class="context">
-        <span>In this digital age, the text copying functionality has grown increasingly important. Whether quoting famous remarks, saving key information, or sharing interesting content, copying text is an integral part of our daily operations.</span>
-    </div>
-
-</div>
-<br>
-
-<script>
-    function copySelectedText() {
-        const selectedText = window.getSelection().toString();
-        if (selectedText.length > 0) {
-            // Use the Clipboard API to copy text.
-            navigator.clipboard.writeText(selectedText)
-                .then(() => {
-                    showNotification();
-                })
-                .catch(err => {
-                    console.error('Copy failed:', err);
-                });
-        }
-    }
-     function clearSelection() {
-        if (window.getSelection) {
-            window.getSelection().removeAllRanges();
-        }
-    }
-</script>
-</body>
-</html>
-```
 
 ## blankScreenDetectionConfig
 
@@ -596,8 +123,6 @@ Sets the blank screen detection configuration, such as whether to enable the det
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -605,36 +130,6 @@ Sets the blank screen detection configuration, such as whether to enable the det
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | detectConfig | [BlankScreenDetectionConfig](arkts-arkweb-blankscreendetectionconfig-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// blankScreenDetectionConfig.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .blankScreenDetectionConfig({
-          enable: true,
-          detectionTiming: [2, 4, 6, 8],
-          contentfulNodesCountThreshold: 4,
-          detectionMethods:[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEEN]
-        })
-        .onDetectedBlankScreen((event: BlankScreenDetectionEventInfo)=>{
-          console.info(`Found blank screen on ${event.url}.`);
-          console.info(`The blank screen reason is ${event.blankScreenReason}.`);
-          console.info(`The blank screen detail is ${event.blankScreenDetails?.detectedContentfulNodesCount}.`);
-        })
-    }
-  }
-}
-```
 
 ## blockNetwork
 
@@ -646,8 +141,6 @@ Sets whether to block online downloads. When this attribute is not explicitly ca
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -657,27 +150,6 @@ Sets whether to block online downloads. When this attribute is not explicitly ca
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | block | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State block: boolean = true;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .blockNetwork(this.block)
-    }
-  }
-}
-```
 
 ## blurOnKeyboardHideMode
 
@@ -689,8 +161,6 @@ Sets the blur mode for **Web** elements when the soft keyboard is dismissed. If 
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -700,48 +170,6 @@ Sets the blur mode for **Web** elements when the soft keyboard is dismissed. If 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mode | [BlurOnKeyboardHideMode](arkts-arkweb-bluronkeyboardhidemode-e.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State blurMode: BlurOnKeyboardHideMode = BlurOnKeyboardHideMode.BLUR;
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .blurOnKeyboardHideMode(this.blurMode)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>Test Web Page</title>
-  </head>
-  <body>
-    <h1>blurOnKeyboardHideMode Demo</h1>
-    <input type="text" id="input_a">
-    <script>
-      const inputElement = document.getElementById('input_a');
-      inputElement.addEventListener('blur', function() {
-        console.info('Input has lost focus');
-      });
-    </script>
-  </body>
-</html>
-```
 
 ## bypassVsyncCondition
 
@@ -753,8 +181,6 @@ Sets the rendering process to bypass vsync (vertical synchronization) scheduling
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -762,31 +188,6 @@ Sets the rendering process to bypass vsync (vertical synchronization) scheduling
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | condition | [WebBypassVsyncCondition](arkts-arkweb-webbypassvsynccondition-e.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  condition: WebBypassVsyncCondition = WebBypassVsyncCondition.SCROLLBY_FROM_ZERO_OFFSET;
-
-  build() {
-    Column() {
-      Button('scrollBy')
-        .onClick(() => {
-          this.controller.scrollBy(0, 5);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .bypassVsyncCondition(this.condition)
-    }
-  }
-}
-```
 
 ## cacheMode
 
@@ -798,8 +199,6 @@ Sets the cache mode. When this attribute is not explicitly called, the default v
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -809,27 +208,6 @@ Sets the cache mode. When this attribute is not explicitly called, the default v
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [cacheMode](#cachemode) | [CacheMode](arkts-arkweb-cachemode-e.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State mode: CacheMode = CacheMode.None;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .cacheMode(this.mode)
-    }
-  }
-}
-```
 
 ## copyOptions
 
@@ -847,8 +225,6 @@ Sets the clipboard copy scope option. If this attribute is not explicitly called
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -858,26 +234,6 @@ Sets the clipboard copy scope option. If this attribute is not explicitly called
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [CopyOptions](#copyoptions) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .copyOptions(CopyOptions.None)
-    }
-  }
-}
-```
 
 ## darkMode
 
@@ -889,8 +245,6 @@ Sets the dark mode of the **Web** component. If this attribute is not explicitly
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -900,27 +254,6 @@ Sets the dark mode of the **Web** component. If this attribute is not explicitly
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mode | [WebDarkMode](arkts-arkweb-webdarkmode-e.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State mode: WebDarkMode = WebDarkMode.On;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .darkMode(this.mode)
-    }
-  }
-}
-```
 
 ## databaseAccess
 
@@ -937,8 +270,6 @@ Sets whether to enable the Web SQL Database storage API permission. If this perm
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -948,26 +279,6 @@ Sets whether to enable the Web SQL Database storage API permission. If this perm
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [databaseAccess](#databaseaccess) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .databaseAccess(true)
-    }
-  }
-}
-```
 
 ## dataDetectorConfig
 
@@ -982,8 +293,6 @@ than that of B (A.start &lt; B.start), then A is retained; otherwise, B is retai
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -991,55 +300,6 @@ than that of B (A.start &lt; B.start), then A is retained; otherwise, B is retai
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | config | [TextDataDetectorConfig](../../apis-arkui/arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .enableDataDetector(true)
-        .dataDetectorConfig({
-          types: [
-            TextDataDetectorType.PHONE_NUMBER,
-            TextDataDetectorType.EMAIL
-          ],
-          color: Color.Red,
-          decoration: {
-            type: TextDecorationType.LineThrough,
-            color: Color.Green,
-            style: TextDecorationStyle.WAVY
-          }
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Example dataDetectorConfig</title>;
-</head>
-<body>
-    <p> Telephone: 400-123-4567 </p>
-    <p> Email: 12345678901@example.com </p>
-    <p> Website: www.example.com (cannot be identified) </p>
-</body>
-</html>
-```
 
 ## defaultFixedFontSize
 
@@ -1051,8 +311,6 @@ Sets the default fixed font size for the web page. For HTML elements that use th
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1062,27 +320,6 @@ Sets the default fixed font size for the web page. For HTML elements that use th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | size | number | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State fontSize: number = 16;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .defaultFixedFontSize(this.fontSize)
-    }
-  }
-}
-```
 
 ## defaultFontSize
 
@@ -1094,8 +331,6 @@ Sets the default font size for the web page. For HTML elements that use non-mono
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1105,27 +340,6 @@ Sets the default font size for the web page. For HTML elements that use non-mono
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | size | number | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State fontSize: number = 13;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .defaultFontSize(this.fontSize)
-    }
-  }
-}
-```
 
 ## defaultTextEncodingFormat
 
@@ -1137,8 +351,6 @@ Sets the default text encoding format for the web page. When this attribute is n
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1148,45 +360,6 @@ Sets the default text encoding format for the web page. When this attribute is n
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | textEncodingFormat | string | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        // Set the height.
-        .height(500)
-        .defaultTextEncodingFormat("UTF-8")
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>My test html5 page</title>
-</head>
-<body>
-    <p>Hello world!</p>
-</body>
-</html>
-```
 
 ## domStorageAccess
 
@@ -1198,8 +371,6 @@ Sets whether to enable the DOM Storage API permission. If this attribute is not 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1209,26 +380,6 @@ Sets whether to enable the DOM Storage API permission. If this attribute is not 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [domStorageAccess](#domstorageaccess) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .domStorageAccess(true)
-    }
-  }
-}
-```
 
 ## editMenuOptions
 
@@ -1251,141 +402,13 @@ You can use onCreateMenu to modify, add, and delete menu options. If you do not 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| editMenu | [EditMenuOptions](#editmenuoptions) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-let selectText:string = '';
-class TestClass {
-  setSelectText(param: String) {
-    selectText = param.toString();
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State testObj: TestClass = new TestClass();
-
-  onCreateMenu(menuItems: Array<TextMenuItem>): Array<TextMenuItem> {
-    let items = menuItems.filter((menuItem) => {
-      // Filter the menu items as required.
-      return (
-        menuItem.id.equals(TextMenuItemId.CUT) ||
-        menuItem.id.equals(TextMenuItemId.COPY) ||
-        menuItem.id.equals((TextMenuItemId.PASTE)) ||
-        menuItem.id.equals((TextMenuItemId.TRANSLATE)) ||
-        menuItem.id.equals((TextMenuItemId.SEARCH)) ||
-        menuItem.id.equals((TextMenuItemId.AI_WRITER))
-      )
-    });
-    let customItem1: TextMenuItem = {
-      content: 'customItem1',
-      id: TextMenuItemId.of('customItem1'),
-      icon: $r('app.media.icon')
-    };
-    let customItem2: TextMenuItem = {
-      content: $r('app.string.customItem2'),
-      id: TextMenuItemId.of('customItem2'),
-      icon: $r('app.media.icon')
-    };
-    items.push(customItem1);// Add an item to the end of the item list.
-    items.unshift(customItem2);// Add an item to the beginning of the item list.
-
-    return items;
-  }
-
-  onMenuItemClick(menuItem: TextMenuItem, textRange: TextRange): boolean {
-    if (menuItem.id.equals(TextMenuItemId.CUT)) {
-      // Custom behavior
-      console.info("Intercept ID: CUT")
-      return true; // Return true to not execute the system callback.
-    } else if (menuItem.id.equals(TextMenuItemId.COPY)) {
-      // Custom behavior
-      console.info("Not intercept ID: COPY")
-      return false; // Return false to execute the system callback.
-    } else if (menuItem.id.equals(TextMenuItemId.of('customItem1'))) {
-      // Custom behavior
-      console.info("Intercept ID: customItem1")
-      return true;// Custom menu item. If true is returned, the menu is not closed after being clicked. If false is returned, the menu is closed.
-    } else if (menuItem.id.equals((TextMenuItemId.of($r('app.string.customItem2'))))){
-      // Custom behavior
-      console.info("Intercept ID: app.string.customItem2")
-      return true;
-    }
-    return false;// Return the default value false.
-  }
-
-   onPrepareMenu = (menuItems: Array<TextMenuItem>) => {
-    let item1: TextMenuItem = {
-      content: 'prepare1',
-      id: TextMenuItemId.of('prepareMenu1'),
-    };
-    let item2: TextMenuItem = {
-      content: 'prepare2' + selectText,
-      id: TextMenuItemId.of('prepareMenu2'),
-    };
-    menuItems.push(item1);// Add an item to the end of the item list.
-    menuItems.unshift(item2);// Add an item to the beginning of the item list.
-
-    return menuItems;
-  }
-
-  @State EditMenuOptions: EditMenuOptions =
-    { onCreateMenu: this.onCreateMenu, onMenuItemClick: this.onMenuItemClick, onPrepareMenu:this.onPrepareMenu }
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .editMenuOptions(this.EditMenuOptions)
-        .javaScriptProxy({
-          object: this.testObj,
-          name: "testObjName",
-          methodList: ["setSelectText"],
-          controller: this.controller,
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>Test Web Page</title>
-  </head>
-  <body>
-    <h1>editMenuOptions Demo</h1>
-    <span>edit menu options</span>
-    <script>
-      document.addEventListener('selectionchange', () => {
-        var selection = window.getSelection();
-        if (selection.rangeCount > 0) {
-          var selectedText = selection.toString();
-          testObjName.setSelectText(selectedText);
-        }
-      });
-  </script>
-  </body>
-</html>
-```
+| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes |
 
 ## enableAutoFill
 
@@ -1401,8 +424,6 @@ Sets whether to enable web page autofill. By default, this feature is enabled.<!
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -1410,53 +431,6 @@ Sets whether to enable web page autofill. By default, this feature is enabled.<!
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .enableAutoFill(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
-    <title>Autofill test</title>
-  </head>
-  <body>
-    <h4 align="center">Autofill test</h4>
-    <form method="post" action="">
-      <div align="center">
-        <label for="name" style="width: 120px; display: inline-block; text-align: end;">Name:</label>
-        <input type="text" id="name" autocomplete="name"/><br/><br/>
-        <label for="tel-national" style="width: 120px; display: inline-block; text-align: end;">Mobile number:</label>
-        <input type="text" id="tel-national" autocomplete="tel-national"/><br/><br/>
-      </div>
-      <div align="center">
-        <button type="submit" style="width: 80px">Submit</button>
-      </div>
-    </form>
-  </body>
-</html>
-```
 
 ## enableDataDetector
 
@@ -1473,11 +447,9 @@ Sets whether to recognize special entities of web texts, such as emails, phone n
 > If **enableDataDetector** is set to **true** and [dataDetectorConfig](#datadetectorconfig) is
 > not set, all types of entities will be recognized, and the **color** and **decoration** attributes of the
 > recognized entities will be changed to the following styles:
-<!--code_no_check-->When **enableDataDetector** is set to **true** and [copyOptions](#copyoptions) is set to **CopyOptions.LocalDevice**, the AI menu feature is activated. In this case, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule reminder) from TextMenuItemId.When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in TextMenuItemId do not appear at the same time.For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
+<!--code_no_check-->When **enableDataDetector** is set to **true** and [copyOptions](#copyoptions) is set to **CopyOptions.LocalDevice**, the AI menu feature is activated. In this case, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule reminder) from [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md).When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md) do not appear at the same time.For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -1486,42 +458,6 @@ Sets whether to recognize special entities of web texts, such as emails, phone n
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enable | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .enableDataDetector(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Example enableDataDetector</title>;
-</head>
-<body>
-    <p> Telephone: 400-123-4567 </p>
-    <p>Email: example@example.com </p>
-</body>
-</html>
-```
 
 ## enableDefaultContextMenu
 
@@ -1538,8 +474,6 @@ Sets whether to enable the default right-click context menu. If this method is n
 > you can customize the menu options.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1560,8 +494,6 @@ enableDrag(value: boolean)
 Sets whether to enable the drag function. If this attribute is not explicitly called, the web page drag function is enabled by default.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1587,34 +519,13 @@ Sets whether the **Web** component can change the font weight according to the s
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| follow | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Web({ src: "www.example.com", controller: this.controller })
-        .enableFollowSystemFontWeight(true)
-    }
-  }
-}
-```
+| [follow](../../apis-arkui/arkts-components/arkts-arkui-geometrytransitionoptions-i.md) | boolean | Yes |
 
 ## enableFullscreenVideoOverlay
 
@@ -1629,8 +540,6 @@ Sets whether to enable the overlay fullscreen playback feature for the **Web** c
 > - Only fullscreen requests initiated by video elements are responded to.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1648,11 +557,9 @@ Sets whether to enable the overlay fullscreen playback feature for the **Web** c
 enableHapticFeedback(enabled: boolean)
 ```
 
-Sets whether to enable haptic feedback for long-pressed text in the **Web** component. The **ohos.permission.VIBRATE** permission must be declared. When this attribute is not explicitly called, haptic feedback is enabled by default.
+Sets whether to enable haptic feedback for number-pressed text in the **Web** component. The **ohos.permission.VIBRATE** permission must be declared. When this attribute is not explicitly called, haptic feedback is enabled by default.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -1661,42 +568,6 @@ Sets whether to enable haptic feedback for long-pressed text in the **Web** comp
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enabled | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-      .enableHapticFeedback(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>Test Web Page</title>
-  </head>
-  <body>
-    <h1>enableHapticFeedback Demo</h1>
-    <span>enable haptic feedback</span>
-  </body>
-</html>
-```
 
 ## enableImageAnalyzer
 
@@ -1707,15 +578,13 @@ enableImageAnalyzer(enable: boolean)
 Sets whether to enable AI analysis of web page images. Currently, the image text recognition feature is supported. If this attribute is not explicitly called, this feature is enabled by default.
 
 > **NOTE：**&gt;
-> When you long-press or hover the mouse over the image text, AI analyzer is triggered and the text in the image
+> When you number-press or hover the mouse over the image text, AI analyzer is triggered and the text in the image
 > can be selected. The specifications of images that can trigger analyzer are as follows:&gt;
 > - The original width and height of the image are greater than or equal to 100 pixels.&gt;
 > - For [devices](../../../quick-start/module-configuration-file.md#devicetypes) other than 2-in-1 devices, the
 > image rendering width must exceed 80% of the web page width.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -1724,53 +593,6 @@ Sets whether to enable AI analysis of web page images. Currently, the image text
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enable | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .enableImageAnalyzer(true) // To disable the image analyzer, set this parameter to false.
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .image-container {
-      width: 90%;
-    }
-    .image-container img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-  <div class="image-container">
-    <!--example.jpg is in the same directory as the HTML file-->
-    <img src="example.jpg" alt="Image to be analyzed by AI">
-  </div>
-</body>
-</html>
-```
 
 ## enableMediaNetworkProxy
 
@@ -1784,8 +606,6 @@ Sets whether to enable the media resource network request proxy feature for the 
 > - Currently, only HLS streaming media videos are supported.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1811,8 +631,6 @@ Sets whether to enable the same-layer rendering feature. When this method is not
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1822,25 +640,6 @@ Sets whether to enable the same-layer rendering feature. When this method is not
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enabled | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .enableNativeEmbedMode(true)
-    }
-  }
-}
-```
 
 ## enableNativeMediaPlayer
 
@@ -1852,8 +651,6 @@ Sets whether to enable the [application to take over web page media playback](..
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -1864,26 +661,6 @@ Sets whether to enable the [application to take over web page media playback](..
 | --- | --- | --- |
 | config | [NativeMediaPlayerConfig](arkts-arkweb-nativemediaplayerconfig-i.md) | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .enableNativeMediaPlayer({enable: true, shouldOverlay: false})
-    }
-  }
-}
-```
-
 ## enableScrollDirectionalLock
 
 ```TypeScript
@@ -1893,8 +670,6 @@ enableScrollDirectionalLock(value: boolean, type: ScrollDirectionalLockType)
 Sets the scroll direction lock for the **Web** component to prevent simultaneous horizontal and vertical scrolling when the user swipes diagonally, thereby improving the scrolling experience. If this method is not explicitly called, scroll direction lock is supported by default in nested scrolling scenarios. The **ALL** mode applies to all scenarios where scroll locking is needed, while the **NESTED_SCROLL** mode applies only to nested scrolling scenarios.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1913,11 +688,9 @@ Sets the scroll direction lock for the **Web** component to prevent simultaneous
 enableSelectedDataDetector(enable: boolean)
 ```
 
-Sets whether to enable the AI menu feature for text selection menu. After the AI menu feature is enabled, the email, phone number, website, date, and address in the selection can be identified, and the corresponding AI menu items are displayed in the text selection menu. By default, the AI menu feature is enabled.When the AI menu feature is enabled, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule) from TextMenuItemId.When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in TextMenuItemId do not appear at the same time.For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
+Sets whether to enable the AI menu feature for text selection menu. After the AI menu feature is enabled, the email, phone number, website, date, and address in the selection can be identified, and the corresponding AI menu items are displayed in the text selection menu. By default, the AI menu feature is enabled.When the AI menu feature is enabled, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule) from [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md).When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md) do not appear at the same time.For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -1926,42 +699,6 @@ Sets whether to enable the AI menu feature for text selection menu. After the AI
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enable | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .enableSelectedDataDetector(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>enableSelectedDataDetector Example</title>
-</head>
-<body>
-    <p> Telephone: 400-123-4567 </p>
-    <p>Email: example@example.com </p>
-</body>
-</html>
-```
 
 ## enableWebAVSession
 
@@ -1973,8 +710,6 @@ Sets whether to support an application to connect to media controller. If this a
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -1982,44 +717,6 @@ Sets whether to support an application to connect to media controller. If this a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enabled | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .enableWebAVSession(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Video Playback Page</title>
-</head>
-<body>
-    <h1>Video Playback</h1>
-    <video id="testVideo" controls>
-        <!--Save an MP4 media file in the rawfile directory of resources and name it example.mp4.-->
-        <source src="example.mp4" type="video/mp4">
-    </video>
-</body>
-</html>
-```
 
 ## fileAccess
 
@@ -2031,8 +728,6 @@ Sets whether to enable access to the file system in the application. This settin
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2042,26 +737,6 @@ Sets whether to enable access to the file system in the application. This settin
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [fileAccess](#fileaccess) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .fileAccess(true)
-    }
-  }
-}
-```
 
 ## forceDarkAccess
 
@@ -2073,8 +748,6 @@ Sets whether to enable forcible dark mode for the web page. This API is applicab
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2084,29 +757,6 @@ Sets whether to enable forcible dark mode for the web page. This API is applicab
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | access | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State mode: WebDarkMode = WebDarkMode.On;
-  @State access: boolean = true;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .darkMode(this.mode)
-        .forceDarkAccess(this.access)
-    }
-  }
-}
-```
 
 ## forceDisplayScrollBar
 
@@ -2126,8 +776,6 @@ Sets whether the scroll bar is always visible. Under the always-visible settings
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2137,51 +785,6 @@ Sets whether the scroll bar is always visible. Under the always-visible settings
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enabled | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .forceDisplayScrollBar(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
-    <style>
-      body {
-        width:2560px;
-        height:2560px;
-        padding-right:170px;
-        padding-left:170px;
-        border:5px solid blueviolet;
-      }
-    </style>
-</head>
-<body>
-Scroll Test
-</body>
-</html>
-```
 
 ## forceEnableZoom
 
@@ -2193,8 +796,6 @@ Sets whether to enable the forcible zoom functionality for the **Web** component
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -2202,43 +803,6 @@ Sets whether to enable the forcible zoom functionality for the **Web** component
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enable | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .forceEnableZoom(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-  <title>Test Web Page</title>
-</head>
-<body>
-  <h1>forceEnableZoom Demo</h1>
-  <span>You can scale page when forceEnableZoom is true.</span>
-</body>
-</html>
-```
 
 ## geolocationAccess
 
@@ -2250,8 +814,6 @@ Sets whether to enable the geolocation permission. If this attribute is not expl
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2261,26 +823,6 @@ Sets whether to enable the geolocation permission. If this attribute is not expl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [geolocationAccess](#geolocationaccess) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .geolocationAccess(true)
-    }
-  }
-}
-```
 
 ## gestureFocusMode
 
@@ -2292,8 +834,6 @@ Sets the gesture focus mode of the **Web** component, which controls the focus r
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -2301,41 +841,6 @@ Sets the gesture focus mode of the **Web** component, which controls the focus r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mode | [GestureFocusMode](arkts-arkweb-gesturefocusmode-e.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State mode: GestureFocusMode = GestureFocusMode.DEFAULT;
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .gestureFocusMode(this.mode)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Test Web Page</title>
-</head>
-<body>
-  <input type="text" placeholder="Text">
-</body>
-</html>
-```
 
 ## horizontalScrollBarAccess
 
@@ -2356,8 +861,6 @@ Sets whether to display the horizontal scrollbar, including the system default s
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2367,70 +870,6 @@ Sets whether to display the horizontal scrollbar, including the system default s
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | horizontalScrollBar | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State isShow: boolean = true;
-  @State btnMsg: string ="Hide the scrollbar";
-
-  build() {
-    Column() {
-      // If an @State decorated variable is used to control the horizontal scrollbar visibility, controller.refresh() must be called for the settings to take effect.
-      Button('refresh')
-        .onClick(() => {
-          if(this.isShow){
-            this.isShow = false;
-            this.btnMsg="Display the scrollbar";
-          }else{
-            this.isShow = true;
-            this.btnMsg="Hide the scrollbar";
-          }
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        }).height("10%").width("40%")
-      Web({ src: $rawfile('index.html'), controller: this.controller }).height("90%")
-        .horizontalScrollBarAccess(this.isShow)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Demo</title>
-    <style>
-        body {
-          width:3000px;
-          height:6000px;
-          padding-right:170px;
-          padding-left:170px;
-          border:5px solid blueviolet;
-        }
-    </style>
-</head>
-<body>
-Scroll Test
-</body>
-</html>
-```
 
 ## imageAccess
 
@@ -2442,8 +881,6 @@ Sets whether to allow automatic loading of image resources. If this attribute is
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2453,26 +890,6 @@ Sets whether to allow automatic loading of image resources. If this attribute is
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [imageAccess](#imageaccess) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .imageAccess(true)
-    }
-  }
-}
-```
 
 ## initialScale
 
@@ -2484,8 +901,6 @@ Sets the zoom percentage of the entire page. If this attribute is not explicitly
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2495,27 +910,6 @@ Sets the zoom percentage of the entire page. If this attribute is not explicitly
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | percent | number | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State percent: number = 100;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .initialScale(this.percent)
-    }
-  }
-}
-```
 
 ## javaScriptAccess
 
@@ -2527,8 +921,6 @@ Sets whether to allow execution of JavaScript scripts. If this attribute is not 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2538,25 +930,6 @@ Sets whether to allow execution of JavaScript scripts. If this attribute is not 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [javaScriptAccess](#javascriptaccess) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .javaScriptAccess(true)
-    }
-  }
-}
-```
 
 ## javaScriptOnDocumentEnd
 
@@ -2577,8 +950,6 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2588,50 +959,6 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController();
-  private jsStr: string =
-    "window.document.getElementById(\"result\").innerHTML = 'this is msg from javaScriptOnDocumentEnd'";
-  @State scripts: Array<ScriptItem> = [
-    { script: this.jsStr, scriptRules: ["*"] }
-  ];
-
-  build() {
-    Column({ space: 20 }) {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-        .domStorageAccess(true)
-        .backgroundColor(Color.Grey)
-        .javaScriptOnDocumentEnd(this.scripts)
-        .width('100%')
-        .height('100%')
-    }
-  }
-}
-```
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-</head>
-<body style="font-size: 30px;">
-Hello world!
-<div id="result">test msg</div>
-</body>
-</html>
-```
 
 ## javaScriptOnDocumentStart
 
@@ -2652,8 +979,6 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 > - You are advised to use [runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) instead.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2685,8 +1010,6 @@ Registers the ArkTS object in **javaScriptProxy** with the **Web** component. Th
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2697,62 +1020,6 @@ Registers the ArkTS object in **javaScriptProxy** with the **Web** component. Th
 | --- | --- | --- |
 | [javaScriptProxy](#javascriptproxy) | [JavaScriptProxy](arkts-arkweb-javascriptproxy-i.md) | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestObj {
-  constructor() {
-  }
-
-  test(data1: string, data2: string, data3: string): string {
-    console.info("data1:" + data1);
-    console.info("data2:" + data2);
-    console.info("data3:" + data3);
-    return "AceString";
-  }
-
-  asyncTest(data: string): void {
-    console.info("async data:" + data);
-  }
-
-  toString(): void {
-    console.info('toString' + "interface instead.");
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  testObj = new TestObj();
-  build() {
-    Column() {
-      Button('deleteJavaScriptRegister')
-        .onClick(() => {
-          try {
-            this.controller.deleteJavaScriptRegister("objName");
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .javaScriptAccess(true)
-        .javaScriptProxy({
-          object: this.testObj,
-          name: "objName",
-          methodList: ["test", "toString"],
-          asyncMethodList: ["asyncTest"],
-          controller: this.controller,
-      })
-    }
-  }
-}
-```
-
 ## keyboardAppearance
 
 ```TypeScript
@@ -2762,8 +1029,6 @@ keyboardAppearance(mode: WebKeyboardAppearanceMode)
 Sets the keyboard appearance mode, which controls the appearance style of the keyboard that pops up for input boxes in the **Web** component, including immersive and non-immersive modes. If this method is not explicitly called, the system immersive mode is followed by default.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2785,8 +1050,6 @@ Sets the custom soft keyboard avoidance mode.If the keyboard avoidance mode set 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2796,42 +1059,6 @@ Sets the custom soft keyboard avoidance mode.If the keyboard avoidance mode set 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mode | [WebKeyboardAvoidMode](arkts-arkweb-webkeyboardavoidmode-e.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State avoidMode: WebKeyboardAvoidMode = WebKeyboardAvoidMode.RESIZE_VISUAL;
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-      .keyboardAvoidMode(this.avoidMode)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Test Web Page</title>
-</head>
-<body>
-  <input type="text" placeholder="Text">
-</body>
-</html>
-```
 
 ## layoutMode
 
@@ -2863,8 +1090,6 @@ Sets the layout mode of the **Web** component. If this attribute is not explicit
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2874,52 +1099,6 @@ Sets the layout mode of the **Web** component. If this attribute is not explicit
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mode | [WebLayoutMode](arkts-arkweb-weblayoutmode-e.md) | Yes |
-
-**Examples**
-
-After specifying the layoutMode to WebLayoutMode.FIT_CONTENT, you need to explicitly specify the renderMode to RenderMode.SYNC_RENDER. Otherwise, rendering errors may occur when the viewport height exceeds 7680 px in the default RenderMode.ASYNC_RENDER.
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  mode: WebLayoutMode = WebLayoutMode.FIT_CONTENT;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller, renderMode: RenderMode.SYNC_RENDER })
-        .layoutMode(this.mode)
-    }
-  }
-}
-```
-
-After specifying the layoutMode to WebLayoutMode.FIT_CONTENT, you are advised to specify [overScrollMode](#overscrollmode) to OverScrollMode.NEVER. Otherwise, when the web page scrolls to the edge in the nested scrolling scenario, the rebounding effect is triggered first, which affects user experience.
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  layoutMode: WebLayoutMode = WebLayoutMode.FIT_CONTENT;
-  @State overScrollMode: OverScrollMode = OverScrollMode.NEVER;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller, renderMode: RenderMode.SYNC_RENDER })
-        .layoutMode(this.layoutMode)
-        .overScrollMode(this.overScrollMode)
-    }
-  }
-}
-```
 
 ## mediaOptions
 
@@ -2938,8 +1117,6 @@ Sets the web-based media playback policy, including the validity period for auto
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2949,27 +1126,6 @@ Sets the web-based media playback policy, including the validity period for auto
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [WebMediaOptions](arkts-arkweb-webmediaoptions-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State options: WebMediaOptions = {resumeInterval: 10, audioExclusive: true};
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .mediaOptions(this.options)
-    }
-  }
-}
-```
 
 ## mediaPlayGestureAccess
 
@@ -2981,8 +1137,6 @@ Sets whether autoplay of audible videos requires a user tap. Muted video playbac
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -2992,47 +1146,6 @@ Sets whether autoplay of audible videos requires a user tap. Muted video playbac
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | access | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State access: boolean = true;
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .mediaPlayGestureAccess(this.access)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Video Playback Page</title>
-</head>
-<body>
-<h1>Video Playback</h1>
-<video id="testVideo" controls autoplay>
-    // Configure the autoplay attribute in the video tag to allow automatic video playback.
-    // Save an MP4 media file in the rawfile directory of resources and name it example.mp4.
-    <source src="example.mp4" type="video/mp4">
-</video>
-</body>
-</html>
-```
 
 ## metaViewport
 
@@ -3050,8 +1163,6 @@ Sets whether the **viewport** attribute of the **meta** tag is enabled. When thi
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3061,41 +1172,6 @@ Sets whether the **viewport** attribute of the **meta** tag is enabled. When thi
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | enabled | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .metaViewport(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <p>Hello world!</p>
-</body>
-</html>
-```
 
 ## minFontSize
 
@@ -3107,8 +1183,6 @@ Sets the minimum font size for the web page. If the font size of HTML elements i
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3118,27 +1192,6 @@ Sets the minimum font size for the web page. If the font size of HTML elements i
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | size | number | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State fontSize: number = 13;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .minFontSize(this.fontSize)
-    }
-  }
-}
-```
 
 ## minLogicalFontSize
 
@@ -3153,8 +1206,6 @@ When this attribute is not explicitly called, the default minimum logical font s
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3164,27 +1215,6 @@ When this attribute is not explicitly called, the default minimum logical font s
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | size | number | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State fontSize: number = 13;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .minLogicalFontSize(this.fontSize)
-    }
-  }
-}
-```
 
 ## mixedMode
 
@@ -3196,8 +1226,6 @@ Sets the behavior when a secure source attempts to load resources from an insecu
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3208,26 +1236,6 @@ Sets the behavior when a secure source attempts to load resources from an insecu
 | --- | --- | --- |
 | [mixedMode](#mixedmode) | [MixedMode](arkts-arkweb-mixedmode-e.md) | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State mode: MixedMode = MixedMode.All;
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .mixedMode(this.mode)
-    }
-  }
-}
-```
-
 ## multiWindowAccess
 
 ```TypeScript
@@ -3237,8 +1245,6 @@ multiWindowAccess(multiWindow: boolean)
 Sets whether to enable the multi-window permission. If this attribute is not explicitly called, the permission is disabled by default.Enabling the multi-window permission requires implementation of the **onWindowNew** event. For the sample code, see [onWindowNew](#onwindownew).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3260,8 +1266,6 @@ Sets the same-layer rendering configuration. This attribute takes effect only wh
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -3269,45 +1273,6 @@ Sets the same-layer rendering configuration. This attribute takes effect only wh
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [EmbedOptions](arkts-arkweb-embedoptions-i.md) | No |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  options: EmbedOptions = {supportDefaultIntrinsicSize: true};
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .enableNativeEmbedMode(true)
-        .nativeEmbedOptions(this.options)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Same-Layer Rendered Fixed-Size HTML Test</title>
-</head>
-<body>
-<div>
-    <embed id="input" type = "native/view" style = "background-color:red"/>
-</div>
-</body>
-</html>
-```
 
 ## nestedScroll
 
@@ -3322,15 +1287,13 @@ Sets nested scrolling options.
 > implement scrolling linkage with the parent component.&gt;
 > - Containers that support nested scrolling: Grid, List, Scroll,
 > Swiper, Tabs, WaterFlow, Refresh and
-> bindSheet.&gt;
+> [bindSheet](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindsheet).&gt;
 > - Input sources that support nested scrolling: gestures, mouse device, and touchpad.&gt;
 > - In nested scrolling scenarios, since the **Web** component's over-scrolling to the edge will trigger the over-
 > scroll bounce effect first, it is recommended that you set [overScrollMode](#overscrollmode) to
 > **OverScrollMode.NEVER** to avoid undermining user experience.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3340,93 +1303,7 @@ Sets nested scrolling options.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | NestedScrollOptions \| [NestedScrollOptionsExt](arkts-arkweb-nestedscrolloptionsext-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .nestedScroll({
-          scrollForward: NestedScrollMode.SELF_FIRST,
-          scrollBackward: NestedScrollMode.SELF_FIRST,
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController()
-  build() {
-    Scroll(){
-      Column() {
-        Text("Nested Web")
-          .height("25%")
-          .width("100%")
-          .fontSize(30)
-          .backgroundColor(Color.Yellow)
-        Web({ src: $rawfile('index.html'),
-              controller: this.controller })
-          .nestedScroll({
-            scrollUp: NestedScrollMode.SELF_FIRST,
-            scrollDown: NestedScrollMode.PARENT_FIRST,
-            scrollLeft: NestedScrollMode.SELF_FIRST,
-            scrollRight: NestedScrollMode.SELF_FIRST,
-          })
-      }
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .blue {
-          background-color: lightblue;
-        }
-        .green {
-          background-color: lightgreen;
-        }
-        .blue, .green {
-        font-size:16px;
-        height:200px;
-        text-align: center;       /* Horizontally centered */
-        line-height: 200px;       /* Vertically centered (the height matches the container height) */
-        }
-    </style>
-</head>
-<body>
-<div class="blue" >webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-<div class="green">webArea</div>
-<div class="blue">webArea</div>
-</body>
-</html>
-```
+| value | [NestedScrollOptions](../../apis-arkui/arkts-components/arkts-arkui-nestedscrolloptions-i.md) \| [NestedScrollOptionsExt](arkts-arkweb-nestedscrolloptionsext-i.md) | Yes |
 
 ## onActivateContent
 
@@ -3446,8 +1323,6 @@ Triggered to check whether a bound **Web** instance exists based on the name whe
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -3455,89 +1330,6 @@ Triggered to check whether a bound **Web** instance exists based on the name whe
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback & lt;void & gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-// There are two Web components on the same page. When the WebComponent object opens a new window, the NewWebViewComp object is displayed.
-@CustomDialog
-struct NewWebViewComp {
-  controller?: CustomDialogController;
-  webviewController1: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: "https://www.example.com", controller: this.webviewController1 })
-        .javaScriptAccess(true)
-        .multiWindowAccess(false)
-        .onWindowExit(() => {
-          if (this.controller) {
-            this.controller.close();
-          }
-        })
-        .onActivateContent(() => {
-          //The Web component needs to be displayed in the front. It is recommended that the application switch between tabs or windows to display the Web component.
-          console.info("NewWebViewComp onActivateContent")
-        })
-    }.height("50%")
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  dialogController: CustomDialogController | null = null;
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("window.html"), controller: this.controller })
-        .javaScriptAccess(true)
-        .allowWindowOpenMethod(true)
-        // MultiWindowAccess needs to be enabled.
-        .multiWindowAccess(true)
-        .onWindowNew((event) => {
-          if (this.dialogController) {
-            this.dialogController.close()
-          }
-          let popController: webview.WebviewController = new webview.WebviewController();
-          this.dialogController = new CustomDialogController({
-            builder: NewWebViewComp({ webviewController1: popController }),
-            isModal: false
-          })
-          this.dialogController.open();
-          // Return the WebviewController object corresponding to the new window to the web kernel.
-          // If the event.handler.setWebController API is not called, the render process will be blocked.
-          event.handler.setWebController(popController);
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-<!-- Code of the window.html page -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ActivateContentEvent</title>
-</head>
-<body>
-<a href="#" onclick="openNewWindow('https://www.example.com')">Open a new page</a>
-<script type="text/javascript">
-    function openNewWindow(url) {
-      window.open(url, 'example');
-      return false;
-    }
-</script>
-</body>
-</html>
-```
 
 ## onAdsBlocked
 
@@ -3549,8 +1341,6 @@ Called after an ad is blocked on the web page to notify the user of detailed inf
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3560,34 +1350,6 @@ Called after an ad is blocked on the web page to notify the user of detailed inf
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnAdsBlockedCallback](arkts-arkweb-onadsblockedcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  @State totalAdsBlockCounts: number = 0;
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'https://www.example.com', controller: this.controller })
-      .onAdsBlocked((details: AdsBlockedDetails) => {
-        if (details) {
-          console.info(' Blocked ' + details.adsBlocked.length + ' in ' + details.url);
-          let adList: Array<string> = Array.from(new Set(details.adsBlocked));
-          this.totalAdsBlockCounts += adList.length;
-          console.info('Total blocked counts :' + this.totalAdsBlockCounts);
-        }
-      })
-    }
-  }
-}
-```
 
 ## onAlert
 
@@ -3599,8 +1361,6 @@ Triggered when **alert()** is invoked to display an alert dialog box on the web 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3610,67 +1370,6 @@ Triggered when **alert()** is invoked to display an alert dialog box on the web 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnAlertEvent](arkts-arkweb-onalertevent-i.md), boolean&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .onAlert((event) => {
-          if (event) {
-            console.info("event.url:" + event.url);
-            console.info("event.message:" + event.message);
-            this.uiContext.showAlertDialog({
-              title: 'onAlert',
-              message: 'text',
-              primaryButton: {
-                value: 'ok',
-                action: () => {
-                  event.result.handleConfirm();
-                }
-              },
-              cancel: () => {
-                event.result.handleCancel();
-              }
-            })
-          }
-          return true;
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <h1>WebView onAlert Demo</h1>
-  <button onclick="myFunction()">Click here</button>
-  <script>
-    function myFunction() {
-      alert("Hello World");
-    }
-  </script>
-</body>
-</html>
-```
 
 ## onAudioStateChanged
 
@@ -3682,8 +1381,6 @@ Triggered when the audio playback status on the web page changes.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3693,30 +1390,6 @@ Triggered when the audio playback status on the web page changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnAudioStateChangedEvent](arkts-arkweb-onaudiostatechangedevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State playing: boolean = false;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onAudioStateChanged(event => {
-          this.playing = event.playing;
-          console.info('onAudioStateChanged playing: ' + this.playing);
-        })
-    }
-  }
-}
-```
 
 ## onBeforeUnload
 
@@ -3732,8 +1405,6 @@ Called when the page refresh is about to complete or the current page is closed.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3743,74 +1414,6 @@ Called when the page refresh is about to complete or the current page is closed.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnBeforeUnloadEvent](arkts-arkweb-onbeforeunloadevent-i.md), boolean&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .onBeforeUnload((event) => {
-          if (event) {
-            console.info("event.url:" + event.url);
-            console.info("event.message:" + event.message);
-            console.info("event.isReload:" + event?.isReload ?? 'false');
-            this.uiContext.showAlertDialog({
-              title: 'onBeforeUnload',
-              message: 'text',
-              primaryButton: {
-                value: 'cancel',
-                action: () => {
-                  event.result.handleCancel();
-                }
-              },
-              secondaryButton: {
-                value: 'ok',
-                action: () => {
-                  event.result.handleConfirm();
-                }
-              },
-              cancel: () => {
-                event.result.handleCancel();
-              }
-            })
-          }
-          return true;
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body onbeforeunload="return myFunction()">
-  <h1>WebView onBeforeUnload Demo</h1>
-  <a href="https://www.example.com">Click here</a>
-  <script>
-    function myFunction() {
-      return "onBeforeUnload Event";
-    }
-  </script>
-</body>
-</html>
-```
 
 ## onCameraCaptureStateChange
 
@@ -3827,8 +1430,6 @@ Triggered to notify the user of the camera state on the current web page, which 
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -3836,120 +1437,6 @@ Triggered to notify the user of the camera state on the current web page, which 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnCameraCaptureStateChangeCallback](arkts-arkweb-oncameracapturestatechangecallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { abilityAccessCtrl, PermissionRequestResult, common } from '@kit.AbilityKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  aboutToAppear(): void {
-    let context: Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-    atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: BusinessError, data: PermissionRequestResult) => {
-      console.info('data:' + JSON.stringify(data));
-      console.info('data permissions:' + data.permissions);
-      console.info('data authResults:' + data.authResults);
-    })
-  }
-
-  build() {
-    Column() {
-      Button("startCamera").onClick(() => {
-        try {
-          this.controller.startCamera();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("stopCamera").onClick(() => {
-        try {
-          this.controller.stopCamera();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("closeCamera").onClick(() => {
-        try {
-          this.controller.closeCamera();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onPermissionRequest((event) => {
-          if (event) {
-            this.uiContext.showAlertDialog({
-              title: 'title',
-              message: 'text',
-              primaryButton: {
-                value: 'deny',
-                action: () => {
-                  event.request.deny();
-                }
-              },
-              secondaryButton: {
-                value: 'onConfirm',
-                action: () => {
-                  event.request.grant(event.request.getAccessibleResource());
-                }
-              },
-              cancel: () => {
-                event.request.deny();
-              }
-            })
-          }
-        })
-       .onCameraCaptureStateChange((event: CameraCaptureStateChangeInfo) => {
-          console.info("CameraCapture from ", event.originalState, " to ", event.newState);
-       })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
- <head>
-   <meta charset="UTF-8">
- </head>
- <body>
-   <video id="video" width="400px" height="400px" autoplay="autoplay">
-   </video>
-   <input type="button" title="HTML5 Camera" value="Enable Camera" onclick="getMedia()" />
-   <script>
-     function getMedia() {
-       let constraints = {
-         video: {
-           width: 500,
-           height: 500
-         },
-         audio: true
-       }
-       let video = document.getElementById("video");
-       let promise = navigator.mediaDevices.getUserMedia(constraints);
-       promise.then(function(MediaStream) {
-         video.srcObject = MediaStream;
-         video.play();
-       })
-     }
-   </script>
- </body>
-</html>
-```
 
 ## onClientAuthenticationRequest
 
@@ -3971,8 +1458,6 @@ Triggered when an SSL client certificate request is received.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -3982,235 +1467,6 @@ Triggered when an SSL client certificate request is received.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnClientAuthenticationEvent](arkts-arkweb-onclientauthenticationevent-i.md)&gt; | Yes |
-
-**Examples**
-
-Install a private credential to implement two-way authentication.
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { common } from '@kit.AbilityKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { promptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  controller: WebviewController = new webview.WebviewController();
-  uiContext : UIContext = this.getUIContext();
-  context : Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-  uri: string = ''
-
-  aboutToAppear(): void {
-    webview.WebviewController.setRenderProcessMode(webview.RenderProcessMode.MULTIPLE)
-  }
-
-  build() {
-    Column() {
-      Button("installPrivateCertificate").onClick(() => {
-        if (!this.context) {
-          return;
-        }
-
-        //Note: Replace badssl.com-client.p12 with the actual certificate file.
-        let value: Uint8Array = this.context.resourceManager.getRawFileContentSync("badssl.com-client.p12");
-        certificateManager.installPrivateCertificate(value, 'badssl.com', "1",
-          async (err: BusinessError, data: certificateManager.CMResult) => {
-            console.info(`installPrivateCertificate, uri==========${JSON.stringify(data.uri)}`)
-            if (!err && data.uri) {
-              this.uri = data.uri;
-            }
-          });
-      })
-      Button('Load the website that requires the client SSL certificate')
-        .onClick(() => {
-          this.controller.loadUrl("https://client.badssl.com")
-        })
-      Web({
-        src: "https://www.bing.com/",
-        controller: this.controller,
-      }).domStorageAccess(true)
-        .fileAccess(true)
-        .onPageBegin(event => {
-          console.info("extensions onpagebegin url " + event.url);
-        })
-        .onClientAuthenticationRequest((event) => {
-          console.info("onClientAuthenticationRequest ");
-          event.handler.confirm(this.uri);
-          return true;
-        })
-        .onSslErrorEventReceive(e => {
-          console.info(`onSslErrorEventReceive->${e.error.toString()}`);
-        })
-        .onErrorReceive((event) => {
-          if (event) {
-            this.getUIContext().getPromptAction().showToast({
-              message: `ErrorCode: ${event.error.getErrorCode()}, ErrorInfo: ${event.error.getErrorInfo()}`,
-              alignment: Alignment.Center
-            })
-            console.info('getErrorInfo:' + event.error.getErrorInfo());
-            console.info('getErrorCode:' + event.error.getErrorCode());
-            console.info('url:' + event.request.getRequestUrl());
-          }
-        })
-        .onTitleReceive(event  => {
-          console.info("title received " + event.title);
-        })
-
-    }
-  }
-}
-```
-
-Construct the singleton object GlobalContext.
-
-```TypeScript
-// GlobalContext.ets
-export class GlobalContext {
-  private constructor() {}
-  private static instance: GlobalContext;
-  private _objects = new Map<string, Object>();
-
-  public static getContext(): GlobalContext {
-    if (!GlobalContext.instance) {
-      GlobalContext.instance = new GlobalContext();
-    }
-    return GlobalContext.instance;
-  }
-
-  getObject(value: string): Object | undefined {
-    return this._objects.get(value);
-  }
-
-  setObject(key: string, objectClass: Object): void {
-    this._objects.set(key, objectClass);
-  }
-}
-```
-
-Construct a CertManagerService object to interconnect with certificate management.
-
-```TypeScript
-// CertMgrService.ets
-import { bundleManager, common, Want } from "@kit.AbilityKit";
-import { BusinessError } from "@kit.BasicServicesKit";
-import { GlobalContext } from './GlobalContext';
-
-export default class CertManagerService {
-  private static sInstance: CertManagerService;
-  private authUri = "";
-  private appUid = "";
-
-  public static getInstance(): CertManagerService {
-    if (CertManagerService.sInstance == null) {
-      CertManagerService.sInstance = new CertManagerService();
-    }
-    return CertManagerService.sInstance;
-  }
-
-  async grantAppPm(): Promise<string> {
-    let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT | bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION;
-    // Note: Replace com.example.myapplication with the actual application name.
-    try {
-      const data = await bundleManager.getBundleInfoForSelf(bundleFlags)
-        .catch((err: BusinessError) => {
-          console.error('getBundleInfoForSelf failed. Cause: %{public}s', err.message);
-          return null;
-        });
-      this.appUid = data?.appInfo?.uid?.toString() ?? '';
-      console.info('getBundleInfoForSelf successfully. Data: %{public}s', JSON.stringify(data));
-    } catch (err) {
-      let message = (err as BusinessError).message;
-      console.error('getBundleInfoForSelf failed: %{public}s', message);
-    }
-
-    // Note: Add GlobalContext.getContext().setObject("AbilityContext", this.context) to the onCreate function in the MainAbility.ts file.
-    let abilityContext = GlobalContext.getContext().getObject("AbilityContext") as common.UIAbilityContext;
-    await abilityContext.startAbilityForResult(
-      {
-        bundleName: "com.ohos.certmanager",
-        abilityName: "MainAbility",
-        uri: "requestAuthorize",
-        parameters: {
-          appUid: this.appUid, // Pass the UID of the requesting application.
-        }
-      } as Want)
-      .then((data: common.AbilityResult) => {
-        if (!data.resultCode && data.want) {
-          if (data.want.parameters) {
-            this.authUri = data.want.parameters.authUri as string; // Obtain the returned authUri after successful authorization.
-          }
-        }
-      })
-    return this.authUri;
-  }
-}
-```
-
-Implement two-way authentication.
-
-```TypeScript
-import { webview } from '@kit.ArkWeb';
-import CertManagerService from './CertMgrService';
-import { promptAction } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  controller: WebviewController = new webview.WebviewController();
-  certManager = CertManagerService.getInstance();
-
-  aboutToAppear(): void {
-    webview.WebviewController.setRenderProcessMode(webview.RenderProcessMode.MULTIPLE)
-  }
-
-  build() {
-    Column() {
-      Button('Load the website that requires the client SSL certificate')
-        .onClick(() => {
-          this.controller.loadUrl("https://client.badssl.com")
-        })
-      Web({
-        src: "https://www.bing.com/",
-        controller: this.controller,
-      }).domStorageAccess(true)
-        .fileAccess(true)
-        .onPageBegin(event => {
-          console.info("extensions onpagebegin url " + event.url);
-        })
-        .onClientAuthenticationRequest((event) => {
-          console.info("onClientAuthenticationRequest ");
-
-          this.certManager.grantAppPm().then(result => {
-            console.info(`grantAppPm, URI==========${result}`);
-            event.handler.confirm(result);
-          })
-          return true;
-        })
-        .onSslErrorEventReceive(e => {
-          console.info(`onSslErrorEventReceive->${e.error.toString()}`);
-        })
-        .onErrorReceive((event) => {
-          if (event) {
-            this.getUIContext().getPromptAction().showToast({
-              message: `ErrorCode: ${event.error.getErrorCode()}, ErrorInfo: ${event.error.getErrorInfo()}`,
-              alignment: Alignment.Center
-            })
-            console.info('getErrorInfo:' + event.error.getErrorInfo());
-            console.info('getErrorCode:' + event.error.getErrorCode());
-            console.info('url:' + event.request.getRequestUrl());
-          }
-        })
-        .onTitleReceive(event  => {
-          console.info("title received " + event.title);
-        })
-
-    }
-  }
-}
-```
 
 ## onConfirm
 
@@ -4222,8 +1478,6 @@ Triggered when **confirm()** is invoked by the web page. Call the [handleCancel]
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -4233,82 +1487,6 @@ Triggered when **confirm()** is invoked by the web page. Call the [handleCancel]
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnConfirmEvent](arkts-arkweb-onconfirmevent-i.md), boolean&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .onConfirm((event) => {
-          if (event) {
-            console.info("event.url:" + event.url);
-            console.info("event.message:" + event.message);
-            this.uiContext.showAlertDialog({
-              title: 'onConfirm',
-              message: 'text',
-              primaryButton: {
-                value: 'cancel',
-                action: () => {
-                  event.result.handleCancel();
-                }
-              },
-              secondaryButton: {
-                value: 'ok',
-                action: () => {
-                  event.result.handleConfirm();
-                }
-              },
-              cancel: () => {
-                event.result.handleCancel();
-              }
-            })
-          }
-          return true;
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-  <h1>WebView onConfirm Demo</h1>
-  <button onclick="myFunction()">Click here</button>
-  <p id="demo"></p>
-  <script>
-    function myFunction() {
-      let x;
-      let r = confirm("click button!");
-      if (r == true) {
-        x = "ok";
-      } else {
-        x = "cancel";
-      }
-      document.getElementById("demo").innerHTML = x;
-    }
-  </script>
-</body>
-</html>
-```
 
 ## onConsole
 
@@ -4320,8 +1498,6 @@ Triggered to notify the host application of a JavaScript console message.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -4332,66 +1508,15 @@ Triggered to notify the host application of a JavaScript console message.
 | --- | --- | --- |
 | callback | Callback&lt;[OnConsoleEvent](arkts-arkweb-onconsoleevent-i.md), boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('onconsole message')
-        .onClick(() => {
-          this.controller.runJavaScript('myFunction()');
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onConsole((event) => {
-          if (event) {
-            console.info('getMessage:' + event.message.getMessage());
-            console.info('getSourceId:' + event.message.getSourceId());
-            console.info('getLineNumber:' + event.message.getLineNumber());
-            console.info('getMessageLevel:' + event.message.getMessageLevel());
-            console.info('getSource:' + event.message.getSource());
-          }
-          return false;
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<body>
-<script>
-    function myFunction() {
-        console.info("onconsole printf");
-    }
-</script>
-</body>
-</html>
-```
-
 ## onContextMenuHide
 
 ```TypeScript
 onContextMenuHide(callback: OnContextMenuHideCallback)
 ```
 
-Triggered when a context menu is hidden after the user clicks the right mouse button or long presses a specific element, such as an image or a link.
+Triggered when a context menu is hidden after the user clicks the right mouse button or number presses a specific element, such as an image or a link.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4403,39 +1528,15 @@ Triggered when a context menu is hidden after the user clicks the right mouse bu
 | --- | --- | --- |
 | callback | [OnContextMenuHideCallback](arkts-arkweb-oncontextmenuhidecallback-t.md) | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onContextMenuHide(() => {
-          console.info("onContextMenuHide callback");
-        })
-    }
-  }
-}
-```
-
 ## onContextMenuShow
 
 ```TypeScript
 onContextMenuShow(callback: Callback<OnContextMenuShowEvent, boolean>)
 ```
 
-Triggered when a context menu is displayed after the user clicks the right mouse button or long presses a specific element, such as an image or a link.
+Triggered when a context menu is displayed after the user clicks the right mouse button or number presses a specific element, such as an image or a link.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4447,175 +1548,6 @@ Triggered when a context menu is displayed after the user clicks the right mouse
 | --- | --- | --- |
 | callback | Callback&lt;[OnContextMenuShowEvent](arkts-arkweb-oncontextmenushowevent-i.md), boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { pasteboard } from '@kit.BasicServicesKit';
-
-const TAG = 'ContextMenu';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  private result: WebContextMenuResult | undefined = undefined;
-  @State linkUrl: string = '';
-  @State offsetX: number = 0;
-  @State offsetY: number = 0;
-  @State showMenu: boolean = false;
-  uiContext: UIContext = this.getUIContext();
-
-  @Builder
-  // Build and trigger a custom menu.
-  MenuBuilder() {
-    // A component that is used to present a vertical list of items to the user.
-    Menu() {
-      // A component that is used to represent an item in a menu.
-      MenuItem({
-        content: 'Cancel',
-      })
-        .width(100)
-        .height(50)
-        .onClick(() => {
-          this.result?.undo();
-          this.showMenu = false;
-        })
-      MenuItem({
-        content: 'Redo',
-      })
-        .width(100)
-        .height(50)
-        .onClick(() => {
-          this.result?.redo();
-          this.showMenu = false;
-        })
-      MenuItem({
-        content: 'Paste as plain text',
-      })
-        .width(100)
-        .height(50)
-        .onClick(() => {
-          this.result?.pasteAndMatchStyle();
-          this.showMenu = false;
-        })
-      MenuItem({
-        content: 'Copy image',
-      })
-        .width(100)
-        .height(50)
-        .onClick(() => {
-          this.result?.copyImage();
-          this.showMenu = false;
-        })
-      MenuItem({
-        content: 'Cut',
-      })
-        .width(100)
-        .height(50)
-        .onClick(() => {
-          this.result?.cut();
-          this.showMenu = false;
-        })
-      MenuItem({
-        content: 'Copy',
-      })
-        .width(100)
-        .height(50)
-        .onClick(() => {
-          this.result?.copy();
-          this.showMenu = false;
-        })
-      MenuItem({
-        content: 'Paste',
-      })
-        .width(100)
-        .height(50)
-        .onClick(() => {
-          this.result?.paste();
-          this.showMenu = false;
-        })
-      MenuItem({
-        content: 'Copy link',
-      })
-        .width(100)
-        .height(50)
-        .onClick(() => {
-          let pasteData = pasteboard.createData('text/plain', this.linkUrl);
-          pasteboard.getSystemPasteboard().setData(pasteData, (error) => {
-            if (error) {
-              return;
-            }
-          })
-          this.showMenu = false;
-        })
-      MenuItem({
-        content: 'Select all',
-      })
-        .width(100)
-        .height(50)
-        .onClick(() => {
-          this.result?.selectAll();
-          this.showMenu = false;
-        })
-    }
-    .width(150)
-    .height(450)
-  }
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        // Trigger a custom dialog box.
-        .onContextMenuShow((event) => {
-          if (event) {
-            this.result = event.result
-            console.info(TAG + "x coord = " + event.param.x());
-            console.info(TAG + "link url = " + event.param.getLinkUrl());
-            this.linkUrl = event.param.getLinkUrl();
-          }
-          console.info(TAG, `x: ${this.offsetX}, y: ${this.offsetY}`);
-          this.showMenu = true;
-          this.offsetX = 0;
-          this.offsetY = Math.max(this.uiContext!.px2vp(event?.param.y() ?? 0) - 0, 0);
-          return true;
-        })
-        .bindPopup(this.showMenu,
-          {
-            builder: this.MenuBuilder(),
-            enableArrow: false,
-            placement: Placement.LeftTop,
-            offset: { x: this.offsetX, y: this.offsetY },
-            mask: false,
-            onStateChange: (e) => {
-              if (!e.isVisible) {
-                this.showMenu = false;
-                this.result!.closeContextMenu();
-              }
-            }
-          })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
-<body>
-  <h1>onContextMenuShow</h1>
-  <a href="http://www.example.com" style="font-size:27px">URL www.example.com</a>
-  <!-- Place any image in the rawfile directory and name it example.png. -->
-  <div><img src="example.png"></div>
-  <p>Right-click text to display the context menu</p>
-</body>
-</html>
-```
-
 ## onControllerAttached
 
 ```TypeScript
@@ -4625,8 +1557,6 @@ onControllerAttached(callback: () => void)
 Triggered when the controller is successfully bound to the **Web** component. The controller must be **WebviewController**. Do not call APIs related to the **Web** component before this callback event. Otherwise, a js-error exception will be thrown.The web page has not been loaded when the callback is called. Therefore, APIs related to web page operations, such as [zoomIn](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomin), [zoomOut](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomout), cannot be used in the callback. You can use APIs irrelevant to web page operations, such as [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl), [getWebId](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getwebid).For details about the component lifecycle, see [Lifecycle of the Web Component](../../../web/web-event-sequence.md).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4638,72 +1568,6 @@ Triggered when the controller is successfully bound to the **Web** component. Th
 | --- | --- | --- |
 | callback | () = & gt; void | Yes |
 
-**Examples**
-
-The following example uses loadUrl in the callback to load the web page.
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: '', controller: this.controller })
-        .onControllerAttached(() => {
-          this.controller.loadUrl($rawfile("index.html"));
-        })
-    }
-  }
-}
-```
-
-The following example uses getWebId in the callback.
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .onControllerAttached(() => {
-          try {
-            let id = this.controller.getWebId();
-            console.info("id: " + id);
-          } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`ErrorCode: ${code},  Message: ${message}`);
-          }
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-    <body>
-        <p>Hello World</p>
-    </body>
-</html>
-```
-
 ## onDataResubmitted
 
 ```TypeScript
@@ -4714,8 +1578,6 @@ Triggered when the web form data can be resubmitted.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -4725,57 +1587,6 @@ Triggered when the web form data can be resubmitted.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnDataResubmittedEvent](arkts-arkweb-ondataresubmittedevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      // After you click Submit on the web page, you can click Refresh to trigger the function again.
-      Button('refresh')
-        .onClick(() => {
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onDataResubmitted((event) => {
-          console.info('onDataResubmitted');
-          event.handler.resend();
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
- <!DOCTYPE html>
- <html>
- <head>
-   <meta charset="utf-8">
- </head>
- <body>
-   <form action="http://httpbin.org/post" method="post">
-     <input type="text" name="username">
-     <input type="submit" name="Submit">
-   </form>
- </body>
- </html>
-```
 
 ## onDetectedBlankScreen
 
@@ -4792,8 +1603,6 @@ Called when the **Web** component detects a blank screen.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -4801,36 +1610,6 @@ Called when the **Web** component detects a blank screen.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnDetectBlankScreenCallback](arkts-arkweb-ondetectblankscreencallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// onDetectedBlankScreen.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .blankScreenDetectionConfig({
-          enable: true,
-          detectionTiming: [2, 4, 6, 8],
-          contentfulNodesCountThreshold: 4,
-          detectionMethods:[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEEN]
-        })
-        .onDetectedBlankScreen((event: BlankScreenDetectionEventInfo)=>{
-          console.info(`Found blank screen on ${event.url}.`);
-          console.info(`The blank screen reason is ${event.blankScreenReason}.`);
-          console.info(`The blank screen detail is ${event.blankScreenDetails?.detectedContentfulNodesCount}.`);
-        })
-    }
-  }
-}
-```
 
 ## onDownloadStart
 
@@ -4842,8 +1621,6 @@ Triggered to instruct the main application to start downloading a file.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -4853,34 +1630,6 @@ Triggered to instruct the main application to start downloading a file.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnDownloadStartEvent](arkts-arkweb-ondownloadstartevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onDownloadStart((event) => {
-          if (event) {
-            console.info('url:' + event.url)
-            console.info('userAgent:' + event.userAgent)
-            console.info('contentDisposition:' + event.contentDisposition)
-            console.info('contentLength:' + event.contentLength)
-            console.info('mimetype:' + event.mimetype)
-          }
-        })
-    }
-  }
-}
-```
 
 ## onErrorReceive
 
@@ -4892,8 +1641,6 @@ Triggered when an error occurs during web page loading. The error may occur on t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -4903,41 +1650,6 @@ Triggered when an error occurs during web page loading. The error may occur on t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnErrorReceiveEvent](arkts-arkweb-onerrorreceiveevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onErrorReceive((event) => {
-          if (event) {
-            console.info('getErrorInfo:' + event.error.getErrorInfo());
-            console.info('getErrorCode:' + event.error.getErrorCode());
-            console.info('url:' + event.request.getRequestUrl());
-            console.info('isMainFrame:' + event.request.isMainFrame());
-            console.info('isRedirect:' + event.request.isRedirect());
-            console.info('isRequestGesture:' + event.request.isRequestGesture());
-            console.info('getRequestHeader_headerKey:' + event.request.getRequestHeader().toString());
-            let result = event.request.getRequestHeader();
-            console.info('The request header result size is ' + result.length);
-            for (let i of result) {
-              console.info('The request header key is : ' + i.headerKey + ', value is : ' + i.headerValue);
-            }
-          }
-        })
-    }
-  }
-}
-```
 
 ## onFaviconReceived
 
@@ -4949,8 +1661,6 @@ Triggered when this web page receives a new favicon.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -4960,31 +1670,6 @@ Triggered when this web page receives a new favicon.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnFaviconReceivedEvent](arkts-arkweb-onfaviconreceivedevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State icon: image.PixelMap | undefined = undefined;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onFaviconReceived((event) => {
-          console.info('onFaviconReceived');
-          this.icon = event.favicon;
-        })
-    }
-  }
-}
-```
 
 ## onFileSelectorShow
 
@@ -4996,11 +1681,9 @@ Triggered to process an HTML form whose input type is **file**, in response to t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** onShowFileSelector
+**Substitutes:** [onShowFileSelector](#onshowfileselector)
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -5020,8 +1703,6 @@ Triggered when the first content paint occurs on the web page.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5031,32 +1712,6 @@ Triggered when the first content paint occurs on the web page.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnFirstContentfulPaintEvent](arkts-arkweb-onfirstcontentfulpaintevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onFirstContentfulPaint(event => {
-          if (event) {
-            console.info("onFirstContentfulPaint:" + "[navigationStartTick]:" +
-            event.navigationStartTick + ", [firstContentfulPaintMs]:" +
-            event.firstContentfulPaintMs);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onFirstMeaningfulPaint
 
@@ -5068,8 +1723,6 @@ Triggered when the first meaningful paint occurs on the web page.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5079,29 +1732,6 @@ Triggered when the first meaningful paint occurs on the web page.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnFirstMeaningfulPaintCallback](arkts-arkweb-onfirstmeaningfulpaintcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onFirstMeaningfulPaint((details) => {
-          console.info("onFirstMeaningfulPaint: [navigationStartTime]= " + details.navigationStartTime +
-            ", [firstMeaningfulPaintTime]=" + details.firstMeaningfulPaintTime);
-        })
-    }
-  }
-}
-```
 
 ## onFirstScreenPaint
 
@@ -5127,8 +1757,6 @@ Triggered when the first screen paint of a web page is complete.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -5136,30 +1764,6 @@ Triggered when the first screen paint of a web page is complete.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnFirstScreenPaintCallback](arkts-arkweb-onfirstscreenpaintcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// onFirstScreenPaint.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onFirstScreenPaint((event: FirstScreenPaint)=>{
-          console.info(`Found first screen paint on ${event.url}.`);
-          console.info(`The navigation start time is ${event.navigationStartTime}.`);
-          console.info(`The first screen paint time is ${event.firstScreenPaintTime}.`);
-        })
-    }
-  }
-}
-```
 
 ## onFullScreenEnter
 
@@ -5171,8 +1775,6 @@ Triggered when the **Web** component enters full screen mode.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5182,32 +1784,6 @@ Triggered when the **Web** component enters full screen mode.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnFullScreenEnterCallback](arkts-arkweb-onfullscreenentercallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  handler: FullScreenExitHandler | null = null;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onFullScreenEnter((event) => {
-          console.info("onFullScreenEnter videoWidth: " + event.videoWidth +
-            ", videoHeight: " + event.videoHeight);
-          // The application can proactively exit fullscreen mode by calling this.handler.exitFullScreen().
-          this.handler = event.handler;
-        })
-    }
-  }
-}
-```
 
 ## onFullScreenExit
 
@@ -5219,8 +1795,6 @@ Triggered when the **Web** component exits full screen mode.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5230,35 +1804,6 @@ Triggered when the **Web** component exits full screen mode.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | () = & gt; void | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  handler: FullScreenExitHandler | null = null;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onFullScreenExit(() => {
-          console.info("onFullScreenExit...")
-          if (this.handler) {
-            this.handler.exitFullScreen();
-          }
-        })
-        .onFullScreenEnter((event) => {
-          this.handler = event.handler;
-        })
-    }
-  }
-}
-```
 
 ## onGeolocationHide
 
@@ -5270,8 +1815,6 @@ Triggered to notify the user that the request for obtaining the geolocation info
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5281,29 +1824,6 @@ Triggered to notify the user that the request for obtaining the geolocation info
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | () = & gt; void | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .geolocationAccess(true)
-        .onGeolocationHide(() => {
-          console.info("onGeolocationHide...");
-        })
-    }
-  }
-}
-```
 
 ## onGeolocationShow
 
@@ -5315,8 +1835,6 @@ Called to notify the user that the geolocation information obtaining request is 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5326,91 +1844,6 @@ Called to notify the user that the geolocation information obtaining request is 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnGeolocationShowEvent](arkts-arkweb-ongeolocationshowevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { abilityAccessCtrl, common } from '@kit.AbilityKit';
-
-let atManager = abilityAccessCtrl.createAtManager();
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  // Component lifecycle function, which is triggered after a component instance is created.
-  aboutToAppear(): void {
-    let context : Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-    if (!context) {
-      console.error("context is undefined");
-      return;
-    }
-    // Request the location permission from the user.
-    atManager.requestPermissionsFromUser(context, ["ohos.permission.LOCATION", "ohos.permission.APPROXIMATELY_LOCATION"]).then((data) => {
-      console.info('data:' + JSON.stringify(data));
-      console.info('data permissions:' + data.permissions);
-      console.info('data authResults:' + data.authResults);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to request permissions from user. Code is ${error.code}, message is ${error.message}`);
-    })  
-  }
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .geolocationAccess(true)
-        .onGeolocationShow((event) => {
-          if (event) {
-            this.uiContext.showAlertDialog({
-              title: 'title',
-              message: 'text',
-              confirm: {
-                value: 'onConfirm',
-                action: () => {
-                  // The third parameter of invoke indicates whether to remember the selection status of the current dialog box. If the value is true, the dialog box will not be displayed next time.
-                  event.geolocation.invoke(event.origin, true, false);
-                }
-              },
-              cancel: () => {
-                // The third parameter of invoke indicates whether to remember the selection status of the current dialog box. If the value is true, the dialog box will not be displayed next time.
-                event.geolocation.invoke(event.origin, false, false);
-              }
-            })
-          }
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!DOCTYPE html>
-<html>
-<body>
-<p id="locationInfo">Location information</p>
-<button onclick="getLocation()">Obtain Location</button>
-<script>
-var locationInfo=document.getElementById("locationInfo");
-function getLocation(){
-  if (navigator.geolocation) {
-    // Access to the device location by the frontend page
-    navigator.geolocation.getCurrentPosition(showPosition);
-  }
-}
-function showPosition(position){
-  locationInfo.innerHTML="Latitude: " + position.coords.latitude + "<br />Longitude: " + position.coords.longitude;
-}
-</script>
-</body>
-</html>
-```
 
 ## onHttpAuthRequest
 
@@ -5422,8 +1855,6 @@ Triggered when an HTTP authentication request is received.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5433,60 +1864,6 @@ Triggered when an HTTP authentication request is received.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnHttpAuthRequestEvent](arkts-arkweb-onhttpauthrequestevent-i.md), boolean&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-  httpAuth: boolean = false;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onHttpAuthRequest((event) => {
-          if (event) {
-            this.uiContext.showAlertDialog({
-              title: 'onHttpAuthRequest',
-              message: 'text',
-              primaryButton: {
-                value: 'cancel',
-                action: () => {
-                  event.handler.cancel();
-                }
-              },
-              secondaryButton: {
-                value: 'ok',
-                action: () => {
-                  this.httpAuth = event.handler.isHttpAuthInfoSaved();
-                  if (this.httpAuth == false) {
-                    webview.WebDataBase.saveHttpAuthCredentials(
-                      event.host,
-                      event.realm,
-                      "2222",
-                      "2222"
-                    )
-                    event.handler.cancel();
-                  }
-                }
-              },
-              cancel: () => {
-                event.handler.cancel();
-              }
-            })
-          }
-          return true;
-        })
-    }
-  }
-}
-```
 
 ## onHttpErrorReceive
 
@@ -5498,8 +1875,6 @@ Called when an HTTP error (the response code is greater than or equal to 400) oc
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5510,48 +1885,6 @@ Called when an HTTP error (the response code is greater than or equal to 400) oc
 | --- | --- | --- |
 | callback | Callback&lt;[OnHttpErrorReceiveEvent](arkts-arkweb-onhttperrorreceiveevent-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onHttpErrorReceive((event) => {
-          if (event) {
-            console.info('url:' + event.request.getRequestUrl());
-            console.info('isMainFrame:' + event.request.isMainFrame());
-            console.info('isRedirect:' + event.request.isRedirect());
-            console.info('isRequestGesture:' + event.request.isRequestGesture());
-            console.info('getResponseData:' + event.response.getResponseData());
-            console.info('getResponseEncoding:' + event.response.getResponseEncoding());
-            console.info('getResponseMimeType:' + event.response.getResponseMimeType());
-            console.info('getResponseCode:' + event.response.getResponseCode());
-            console.info('getReasonMessage:' + event.response.getReasonMessage());
-            let result = event.request.getRequestHeader();
-            console.info('The request header result size is ' + result.length);
-            for (let i of result) {
-              console.info('The request header key is : ' + i.headerKey + ' , value is : ' + i.headerValue);
-            }
-            let resph = event.response.getResponseHeader();
-            console.info('The response header result size is ' + resph.length);
-            for (let i of resph) {
-              console.info('The response header key is : ' + i.headerKey + ' , value is : ' + i.headerValue);
-            }
-          }
-        })
-    }
-  }
-}
-```
-
 ## onInputmethodAttached
 
 ```TypeScript
@@ -5561,8 +1894,6 @@ onInputmethodAttached(callback: OnInputmethodAttachedCallback)
 The callback is triggered when the inputmethod is attached to the IMF.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5584,8 +1915,6 @@ Triggered when the intelligent tracking prevention feature is enabled and the tr
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5595,39 +1924,6 @@ Triggered when the intelligent tracking prevention feature is enabled and the tr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnIntelligentTrackingPreventionCallback](arkts-arkweb-onintelligenttrackingpreventioncallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      // The onIntelligentTrackingPreventionResult callback is triggered only when the intelligent tracking prevention feature is enabled.
-      Button('enableIntelligentTrackingPrevention')
-        .onClick(() => {
-          try {
-            this.controller.enableIntelligentTrackingPrevention(true);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code}, Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onIntelligentTrackingPreventionResult((details) => {
-          console.info("onIntelligentTrackingPreventionResult: [websiteHost]= " + details.host +
-            ", [trackerHost]=" + details.trackerHost);
-        })
-    }
-  }
-}
-```
 
 ## onInterceptKeyboardAttach
 
@@ -5639,8 +1935,6 @@ Triggered before any editable element (such as the **input** tag) on the web pag
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5650,171 +1944,6 @@ Triggered before any editable element (such as the **input** tag) on the web pag
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [WebKeyboardCallback](arkts-arkweb-webkeyboardcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { inputMethodEngine } from '@kit.IMEKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  webKeyboardController: WebKeyboardController = new WebKeyboardController()
-  inputAttributeMap: Map<string, number> = new Map([
-      ['UNSPECIFIED', inputMethodEngine.ENTER_KEY_TYPE_UNSPECIFIED],
-      ['GO', inputMethodEngine.ENTER_KEY_TYPE_GO],
-      ['SEARCH', inputMethodEngine.ENTER_KEY_TYPE_SEARCH],
-      ['SEND', inputMethodEngine.ENTER_KEY_TYPE_SEND],
-      ['NEXT', inputMethodEngine.ENTER_KEY_TYPE_NEXT],
-      ['DONE', inputMethodEngine.ENTER_KEY_TYPE_DONE],
-      ['PREVIOUS', inputMethodEngine.ENTER_KEY_TYPE_PREVIOUS]
-    ])
-
-    /**
-     * Builder for a custom keyboard component.
-     */
-    @Builder
-    customKeyboardBuilder() {
-        // Implement a custom keyboard component and connect it to WebKeyboardController to implement operations such as input, deletion, and close.
-      Row() {
-        Text("Finish")
-          .fontSize(20)
-          .fontColor(Color.Blue)
-          .onClick(() => {
-            this.webKeyboardController.close();
-          })
-        // Insert characters.
-        Button("insertText").onClick(() => {
-          this.webKeyboardController.insertText('insert ');
-        }).margin({
-          bottom: 200,
-        })
-        // Delete characters from the end to the beginning for the length specified by the length parameter.
-        Button("deleteForward").onClick(() => {
-          this.webKeyboardController.deleteForward(1);
-        }).margin({
-          bottom: 200,
-        })
-        // Delete characters from the beginning to the end for the length specified by the length parameter.
-        Button("deleteBackward").onClick(() => {
-          this.webKeyboardController.deleteBackward(1);
-        }).margin({
-          left: -220,
-        })
-        // Insert a function key.
-        Button("sendFunctionKey").onClick(() => {
-          this.webKeyboardController.sendFunctionKey(6);
-        })
-      }
-    }
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-      .onInterceptKeyboardAttach((KeyboardCallbackInfo) => {
-        // Initialize option. By default, the default keyboard is used.
-        let option: WebKeyboardOptions = {
-          useSystemKeyboard: true,
-        };
-        if (!KeyboardCallbackInfo) {
-          return option;
-        }
-
-        // Save the WebKeyboardController. When a custom keyboard is used, this handler is required to control behaviors such as input, deletion, and closing of the keyboard.
-        this.webKeyboardController = KeyboardCallbackInfo.controller
-        let attributes: Record<string, string> = KeyboardCallbackInfo.attributes
-        // Traverse attributes.
-        let attributeKeys = Object.keys(attributes)
-        for (let i = 0; i < attributeKeys.length; i++) {
-          console.info('WebCustomKeyboard key = ' + attributeKeys[i] + ', value = ' + attributes[attributeKeys[i]])
-        }
-
-        if (attributes) {
-          if (attributes['data-keyboard'] == 'customKeyboard') {
-            // Determine the soft keyboard to use based on the attributes of editable HTML elements. For example, if the attribute includes data-keyboard and its value is customKeyboard, custom keyboard is used.
-            console.info('WebCustomKeyboard use custom keyboard')
-            option.useSystemKeyboard = false;
-            // Set the custom keyboard builder.
-            option.customKeyboard = () => {
-              this.customKeyboardBuilder()
-            }
-            return option;
-          }
-
-          if (attributes['keyboard-return'] != undefined) {
-            // Determine the soft keyboard to use based on the attributes of editable HTML elements. For example, if the attribute includes keyboard-return, use the system keyboard and specify the type of the system soft keyboard's Enter key.
-            option.useSystemKeyboard = true;
-            let enterKeyType: number | undefined = this.inputAttributeMap.get(attributes['keyboard-return'])
-            if (enterKeyType != undefined) {
-              option.enterKeyType = enterKeyType
-            }
-            return option;
-          }
-        }
-
-        return option;
-      })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-  <!DOCTYPE html>
-  <html>
-
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
-  </head>
-
-  <body>
-
-  <p style="font-size:12px">input tag. Original default behavior: </p>
-  <input type="text" style="width: 300px; height: 20px"><br>
-  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-  <p style="font-size:12px">input tag. System keyboard with enterKeyType as UNSPECIFIED: </p>
-  <input type="text" keyboard-return="UNSPECIFIED" style="width: 300px; height: 20px"><br>
-  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-  <p style="font-size:12px">input tag. System keyboard with enterKeyType as GO: </p>
-  <input type="text" keyboard-return="GO" style="width: 300px; height: 20px"><br>
-  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-  <p style="font-size:12px">input tag. System keyboard with enterKeyType as SEARCH: </p>
-  <input type="text" keyboard-return="SEARCH" style="width: 300px; height: 20px"><br>
-  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-  <p style="font-size:12px">input tag. System keyboard with enterKeyType as SEND: </p>
-  <input type="text" keyboard-return="SEND" style="width: 300px; height: 20px"><br>
-  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-  <p style="font-size:12px">input tag. System keyboard with enterKeyType as NEXT: </p>
-  <input type="text" keyboard-return="NEXT" style="width: 300px; height: 20px"><br>
-  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-  <p style="font-size:12px">input tag. System keyboard with enterKeyType as DONE: </p>
-  <input type="text" keyboard-return="DONE" style="width: 300px; height: 20px"><br>
-  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-  <p style="font-size:12px">input tag. System keyboard with enterKeyType as PREVIOUS: </p>
-  <input type="text" keyboard-return="PREVIOUS" style="width: 300px; height: 20px"><br>
-  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-  <p style="font-size:12px">input tag. Custom keyboard: </p>
-  <input type="text" data-keyboard="customKeyboard" style="width: 300px; height: 20px"><br>
-
-  </body>
-
-  </html>
-```
 
 ## onInterceptKeyEvent
 
@@ -5826,8 +1955,6 @@ Triggered when the key event is intercepted and before it is consumed by the web
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5837,32 +1964,6 @@ Triggered when the key event is intercepted and before it is consumed by the web
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | (event: KeyEvent) = & gt; boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onInterceptKeyEvent((event) => {
-          if (event.keyCode == 2017 || event.keyCode == 2018) {
-            console.info(`onInterceptKeyEvent get event.keyCode ${event.keyCode}`);
-            return true;
-          }
-          return false;
-        })
-    }
-  }
-}
-```
 
 ## onInterceptRequest
 
@@ -5874,8 +1975,6 @@ Triggered when the **Web** component is about to access a URL. This API is used 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5885,68 +1984,6 @@ Triggered when the **Web** component is about to access a URL. This API is used 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnInterceptRequestEvent](arkts-arkweb-oninterceptrequestevent-i.md), [WebResourceResponse](arkts-arkweb-webresourceresponse-c.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  responseWeb: WebResourceResponse = new WebResourceResponse();
-  heads: Header[] = new Array();
-  webData: string = "<!DOCTYPE html>\n" +
-    "<html>\n" +
-    "<head>\n" +
-    "<title>intercept test</title>\n" +
-    "</head>\n" +
-    "<body>\n" +
-    "<h1>intercept test</h1>\n" +
-    "</body>\n" +
-    "</html>";
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onInterceptRequest((event) => {
-          if (event) {
-            console.info('url:' + event.request.getRequestUrl());
-          }
-          let head1: Header = {
-            headerKey: "Connection",
-            headerValue: "keep-alive"
-          }
-          let head2: Header = {
-            headerKey: "Cache-Control",
-            headerValue: "no-cache"
-          }
-          // Add a new element to the end of the array and return the length of the new array.
-          let length = this.heads.push(head1);
-          length = this.heads.push(head2);
-          console.info('The response header result length is :' + length);
-          const promise: Promise<String> = new Promise((resolve: Function, reject: Function) => {
-            this.responseWeb.setResponseHeader(this.heads);
-            this.responseWeb.setResponseData(this.webData);
-            this.responseWeb.setResponseEncoding('utf-8');
-            this.responseWeb.setResponseMimeType('text/html');
-            this.responseWeb.setResponseCode(200);
-            this.responseWeb.setReasonMessage('OK');
-            resolve("success");
-          })
-          promise.then(() => {
-            console.info("prepare response ready");
-            this.responseWeb.setResponseIsReady(true);
-          })
-          this.responseWeb.setResponseIsReady(false);
-          return this.responseWeb;
-        })
-    }
-  }
-}
-```
 
 ## onLargestContentfulPaint
 
@@ -5958,8 +1995,6 @@ Triggered when the largest content paint occurs on the web page.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -5969,33 +2004,6 @@ Triggered when the largest content paint occurs on the web page.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnLargestContentfulPaintCallback](arkts-arkweb-onlargestcontentfulpaintcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onLargestContentfulPaint((details) => {
-          console.info("onLargestContentfulPaint: [navigationStartTime]= " + details.navigationStartTime +
-            ", [largestImagePaintTime]=" + details.largestImagePaintTime +
-            ", [largestTextPaintTime]=" + details.largestTextPaintTime +
-            ", [largestImageLoadStartTime]=" + details.largestImageLoadStartTime +
-            ", [largestImageLoadEndTime]=" + details.largestImageLoadEndTime +
-            ", [imageBPP]=" + details.imageBPP);
-        })
-    }
-  }
-}
-```
 
 ## onlineImageAccess
 
@@ -6007,8 +2015,6 @@ Sets whether to allow loading of image resources from the network (resources acc
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -6018,26 +2024,6 @@ Sets whether to allow loading of image resources from the network (resources acc
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [onlineImageAccess](#onlineimageaccess) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onlineImageAccess(true)
-    }
-  }
-}
-```
 
 ## onLoadFinished
 
@@ -6058,8 +2044,6 @@ Triggered to notify the host application that the page has been loaded. This met
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -6067,30 +2051,6 @@ Triggered to notify the host application that the page has been loaded. This met
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnLoadFinishedEvent](arkts-arkweb-onloadfinishedevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onLoadFinished((event) => {
-          if (event) {
-            console.info('url:' + event.url);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onLoadIntercept
 
@@ -6102,8 +2062,6 @@ Triggered when the **Web** component is about to access a URL. This API is used 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -6113,32 +2071,6 @@ Triggered when the **Web** component is about to access a URL. This API is used 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnLoadInterceptEvent](arkts-arkweb-onloadinterceptevent-i.md), boolean&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onLoadIntercept((event) => {
-          console.info('url:' + event.data.getRequestUrl());
-          console.info('isMainFrame:' + event.data.isMainFrame());
-          console.info('isRedirect:' + event.data.isRedirect());
-          console.info('isRequestGesture:' + event.data.isRequestGesture());
-          return true;
-        })
-    }
-  }
-}
-```
 
 ## onLoadStarted
 
@@ -6155,8 +2087,6 @@ Triggered to notify the host application that the page loading starts. This meth
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -6164,30 +2094,6 @@ Triggered to notify the host application that the page loading starts. This meth
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnLoadStartedEvent](arkts-arkweb-onloadstartedevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onLoadStarted((event) => {
-          if (event) {
-            console.info('url:' + event.url);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onMicrophoneCaptureStateChange
 
@@ -6214,8 +2120,6 @@ Triggered to notify the user of the microphone state on the current web page, wh
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -6223,120 +2127,6 @@ Triggered to notify the user of the microphone state on the current web page, wh
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnMicrophoneCaptureStateChangeCallback](arkts-arkweb-onmicrophonecapturestatechangecallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { abilityAccessCtrl, PermissionRequestResult, common } from '@kit.AbilityKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  aboutToAppear(): void {
-    let context: Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-    atManager.requestPermissionsFromUser(context, ['ohos.permission.MICROPHONE'], (err: BusinessError, data: PermissionRequestResult) => {
-      console.info('data:' + JSON.stringify(data));
-      console.info('data permissions:' + data.permissions);
-      console.info('data authResults:' + data.authResults);
-    })
-  }
-
-  build() {
-    Column() {
-      Button("resumeMicrophone").onClick(() => {
-        try {
-          this.controller.resumeMicrophone();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("pauseMicrophone").onClick(() => {
-        try {
-          this.controller.pauseMicrophone();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Button("stopMicrophone").onClick(() => {
-        try {
-          this.controller.stopMicrophone();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onPermissionRequest((event) => {
-          if (event) {
-            this.uiContext.showAlertDialog({
-              title: 'title',
-              message: 'text',
-              primaryButton: {
-                value: 'deny',
-                action: () => {
-                  event.request.deny();
-                }
-              },
-              secondaryButton: {
-                value: 'onConfirm',
-                action: () => {
-                  event.request.grant(event.request.getAccessibleResource());
-                }
-              },
-              cancel: () => {
-                event.request.deny();
-              }
-            })
-          }
-        })
-        .onMicrophoneCaptureStateChange((event: MicrophoneCaptureStateChangeInfo) => {
-          console.info("MicrophoneCapture from ", event.originalState, " to ", event.newState);
-      })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
- <head>
-   <meta charset="UTF-8">
- </head>
- <body>
-   <video id="video" width="400px" height="400px" autoplay="autoplay">
-   </video>
-   <input type="button" title="HTML5 Microphone" value="Enable Microphone" onclick="getMedia()" />
-   <script>
-     function getMedia() {
-       let constraints = {
-         video: {
-           width: 500,
-           height: 500
-         },
-         audio: true
-       }
-       let video = document.getElementById("video");
-       let promise = navigator.mediaDevices.getUserMedia(constraints);
-       promise.then(function(MediaStream) {
-         video.srcObject = MediaStream;
-         video.play();
-       })
-     }
-   </script>
- </body>
-</html>
-```
 
 ## onNativeEmbedGestureEvent
 
@@ -6348,8 +2138,6 @@ Triggered when a finger touches a same-layer tag.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -6359,154 +2147,6 @@ Triggered when a finger touches a same-layer tag.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | (event: NativeEmbedTouchInfo) = & gt; void | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { NodeController, BuilderNode, NodeRenderType, FrameNode, UIContext } from "@kit.ArkUI";
-
-declare class Params {
-  text: string;
-  width: number;
-  height: number;
-}
-
-declare class NodeControllerParams {
-  surfaceId: string;
-  renderType: NodeRenderType;
-  width: number;
-  height: number;
-}
-
-class MyNodeController extends NodeController {
-  private rootNode: BuilderNode<[Params]> | undefined | null;
-  private surfaceId_: string = "";
-  private renderType_: NodeRenderType = NodeRenderType.RENDER_TYPE_DISPLAY;
-  private width_: number = 0;
-  private height_: number = 0;
-
-  setRenderOption(params: NodeControllerParams) {
-    this.surfaceId_ = params.surfaceId;
-    this.renderType_ = params.renderType;
-    this.width_ = params.width;
-    this.height_ = params.height;
-  }
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.rootNode = new BuilderNode(uiContext, { surfaceId: this.surfaceId_, type: this.renderType_ });
-    this.rootNode.build(wrapBuilder(ButtonBuilder), { text: "myButton", width: this.width_, height: this.height_ });
-    return this.rootNode.getFrameNode();
-  }
-
-  postEvent(event: TouchEvent | undefined): boolean {
-    return this.rootNode?.postTouchEvent(event) as boolean;
-  }
-}
-
-@Component
-struct ButtonComponent {
-  @Prop params: Params;
-  @State bkColor: Color = Color.Red;
-
-  build() {
-    Column() {
-      Button(this.params.text)
-        .height(50)
-        .width(200)
-        .border({ width: 2, color: Color.Red })
-        .backgroundColor(this.bkColor)
-
-    }
-    .width(this.params.width)
-    .height(this.params.height)
-  }
-}
-
-@Builder
-function ButtonBuilder(params: Params) {
-  ButtonComponent({ params: params })
-    .backgroundColor(Color.Green)
-}
-
-@Entry
-@Component
-struct WebComponent {
-  @State eventType: string = '';
-  controller: webview.WebviewController = new webview.WebviewController();
-  private nodeController: MyNodeController = new MyNodeController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Stack() {
-        NodeContainer(this.nodeController)
-        Web({ src: $rawfile("index.html"), controller: this.controller })
-          .enableNativeEmbedMode(true)
-          .onNativeEmbedLifecycleChange((embed) => {
-            if (embed.status == NativeEmbedStatus.CREATE) {
-              this.nodeController.setRenderOption({
-                surfaceId: embed.surfaceId as string,
-                renderType: NodeRenderType.RENDER_TYPE_TEXTURE,
-                width: this.uiContext!.px2vp(embed.info?.width),
-                height: this.uiContext!.px2vp(embed.info?.height)
-              });
-              this.nodeController.rebuild();
-            }
-          })
-          .onNativeEmbedGestureEvent((event) => {
-            if (event && event.touchEvent) {
-              if (event.touchEvent.type == TouchType.Down) {
-                this.eventType = 'Down'
-              }
-              if (event.touchEvent.type == TouchType.Up) {
-                this.eventType = 'Up'
-              }
-              if (event.touchEvent.type == TouchType.Move) {
-                this.eventType = 'Move'
-              }
-              if (event.touchEvent.type == TouchType.Cancel) {
-                this.eventType = 'Cancel'
-              }
-              let ret = this.nodeController.postEvent(event.touchEvent)
-              if (event.result) {
-                event.result.setGestureEventResult(ret, true);
-              }
-              console.info("embedId = " + event.embedId);
-              console.info("touchType = " + this.eventType);
-              console.info("x = " + event.touchEvent.touches[0].x);
-              console.info("y = " + event.touchEvent.touches[0].y);
-              console.info("Component globalPos:(" + event.touchEvent.target.area.globalPosition.x + "," + event.touchEvent.target.area.globalPosition.y + ")");
-              console.info("width = " + event.touchEvent.target.area.width);
-              console.info("height = " + event.touchEvent.target.area.height);
-            }
-          })
-      }
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Same-Layer Rendering Test HTML</title>
-    <meta name="viewport">
-</head>
-<body>
-<div>
-    <div id="bodyId">
-       <embed id="nativeButton" type = "native/button" width="800" height="800" src="test?params1=1" style = "background-color:red"/>
-    </div>
-</div>
-</body>
-</html>
-```
 
 ## onNativeEmbedLifecycleChange
 
@@ -6518,8 +2158,6 @@ Triggered when the lifecycle of the same-layer tag changes.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -6530,169 +2168,6 @@ Triggered when the lifecycle of the same-layer tag changes.
 | --- | --- | --- |
 | callback | (event: NativeEmbedDataInfo) = & gt; void | Yes |
 
-**Examples**
-
-```TypeScript
-// EntryAbility.ets
-
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { window } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    // Added in API version 12: feature to enable the back/forward cache for same-layer rendering.
-    let features = new webview.BackForwardCacheSupportedFeatures();
-    features.nativeEmbed = true;
-    features.mediaTakeOver = true;
-    webview.WebviewController.enableBackForwardCache(features);
-    webview.WebviewController.initializeWebEngine();
-  }
-
-  onDestroy(): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // Main window is created, set main page for this ability
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
-        return;
-      }
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content.');
-    });
-  }
-
-  onWindowStageDestroy(): void {
-    // Main window is destroyed, release UI related resources
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
-  }
-
-  onForeground(): void {
-    // Ability has brought to foreground
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onForeground');
-  }
-
-  onBackground(): void {
-    // Ability has back to background
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onBackground');
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  @State embedStatus: string = '';
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      // Default behavior: Click the button to navigate to a new page, close the index page, and destroy the same-layer tag.
-      // Added in API version 12: When BFCache is enabled for the page that supports same-layer rendering, clicking the button navigates to a new page, closes the index page, and puts the same-layer tag into BFCache.
-      Button('Destroy')
-      .onClick(() => {
-        try {
-          this.controller.loadUrl("www.example.com");
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-
-      // Added in API version 12: When BFCache is enabled for the page that supports same-layer rendering, clicking the button to return to the page causes the same-layer tag to exit BFCache.
-      Button('backward')
-      .onClick(() => {
-        try {
-          this.controller.backward();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-
-      // Added in API version 12: When BFCache is enabled for the page that supports same-layer rendering, clicking a button to advance to the next page causes the same-layer tag to enter BFCache.
-      Button('forward')
-      .onClick(() => {
-        try {
-          this.controller.forward();
-        } catch (error) {
-          console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-        }
-      })
-
-
-      // Added in API version 12: The web kernel does not allow web pages loaded with non-HTTP and non-HTTPS protocols to enter BFCache.
-      // Therefore, to test the ENTER_BFCACHE/LEAVE_BFCACHE states, you need to place the index.html on a web server and load it using the HTTP or HTTPS protocol. Example:
-      // Web({ src: "http://xxxx/index.html", controller: this.controller })
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .enableNativeEmbedMode(true)
-        .onNativeEmbedLifecycleChange((event) => {
-          // The Create event is triggered when the same-layer tag is detected on the loaded page.
-          if (event.status == NativeEmbedStatus.CREATE) {
-            this.embedStatus = 'Create';
-          }
-          // The Update event is triggered when the same-layer tag on the page is moved or scaled.
-          if (event.status == NativeEmbedStatus.UPDATE) {
-            this.embedStatus = 'Update';
-          }
-          // The Destroy event is triggered when a user exit the page.
-          if (event.status == NativeEmbedStatus.DESTROY) {
-            this.embedStatus = 'Destroy';
-          }
-          // The Enter BFCache event is triggered when the page with the same-layer tag enters BFCache.
-          if (event.status == NativeEmbedStatus.ENTER_BFCACHE) {
-            this.embedStatus = 'Enter BFCache';
-          }
-          // The Leave BFCache event is triggered when the page with the same-layer tag leaves BFCache.
-          if (event.status == NativeEmbedStatus.LEAVE_BFCACHE) {
-            this.embedStatus = 'Leave BFCache';
-          }
-          console.info("status = " + this.embedStatus);
-          console.info("surfaceId = " + event.surfaceId);
-          console.info("embedId = " + event.embedId);
-          if (event.info) {
-            console.info("id = " + event.info.id);
-            console.info("type = " + event.info.type);
-            console.info("src = " + event.info.src);
-            console.info("width = " + event.info.width);
-            console.info("height = " + event.info.height);
-            console.info("url = " + event.info.url);
-          }
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Same-Layer Rendering Test HTML</title>
-    <meta name="viewport">
-</head>
-<body>
-<div>
-    <div id="bodyId">
-        <embed id="nativeButton" type = "native/button" width="800" height="800" src="test? params1=1" style = "background-color:red"/>
-    </div>
-</div>
-</body>
-</html>
-```
-
 ## onNativeEmbedMouseEvent
 
 ```TypeScript
@@ -6700,11 +2175,10 @@ onNativeEmbedMouseEvent(callback: MouseInfoCallback)
 ```
 
 Triggered when the following operations are performed on the same-layer tag:  
-- Tapping or holding with the left, middle, or right mouse button. - Tapping or holding the left, middle, or right mouse button using the touchpad.
+- Tapping or holding with the left, middle, or right mouse button.  
+- Tapping or holding the left, middle, or right mouse button using the touchpad.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -6713,136 +2187,6 @@ Triggered when the following operations are performed on the same-layer tag:
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [MouseInfoCallback](arkts-arkweb-mouseinfocallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { NodeController, BuilderNode, NodeRenderType, FrameNode, UIContext } from "@kit.ArkUI";
-
-declare class Params {
-  text: string;
-  width: number;
-  height: number;
-}
-
-declare class NodeControllerParams {
-  surfaceId: string;
-  renderType: NodeRenderType;
-  width: number;
-  height: number;
-}
-
-class MyNodeController extends NodeController {
-  private rootNode: BuilderNode<[Params]> | undefined | null;
-  private surfaceId_: string = "";
-  private renderType_: NodeRenderType = NodeRenderType.RENDER_TYPE_DISPLAY;
-  private width_: number = 0;
-  private height_: number = 0;
-
-  setRenderOption(params: NodeControllerParams) {
-    this.surfaceId_ = params.surfaceId;
-    this.renderType_ = params.renderType;
-    this.width_ = params.width;
-    this.height_ = params.height;
-  }
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.rootNode = new BuilderNode(uiContext, { surfaceId: this.surfaceId_, type: this.renderType_ });
-    this.rootNode.build(wrapBuilder(ButtonBuilder), { text: "myButton", width: this.width_, height: this.height_ });
-    return this.rootNode.getFrameNode();
-  }
-
-  postInputEvent(event: TouchEvent | MouseEvent | undefined): boolean {
-    return this.rootNode?.postInputEvent(event) as boolean;
-  }
-}
-
-@Component
-struct ButtonComponent {
-  @Prop params: Params;
-  @State bkColor: Color = Color.Red;
-
-  build() {
-    Column() {
-      Button(this.params.text)
-        .height(50)
-        .width(200)
-        .border({ width: 2, color: Color.Red })
-        .backgroundColor(this.bkColor)
-
-    }
-    .width(this.params.width)
-    .height(this.params.height)
-  }
-}
-
-@Builder
-function ButtonBuilder(params: Params) {
-  ButtonComponent({ params: params })
-    .backgroundColor(Color.Green)
-}
-
-@Entry
-@Component
-struct WebComponent {
-  @State mouseAction: string = '';
-  @State mouseButton: string = '';
-  controller: webview.WebviewController = new webview.WebviewController();
-  private nodeController: MyNodeController = new MyNodeController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Stack() {
-        NodeContainer(this.nodeController)
-        Web({ src: $rawfile("index.html"), controller: this.controller })
-          .enableNativeEmbedMode(true)
-          .onNativeEmbedLifecycleChange((embed) => {
-            if (embed.status == NativeEmbedStatus.CREATE) {
-              this.nodeController.setRenderOption({
-                surfaceId: embed.surfaceId as string,
-                renderType: NodeRenderType.RENDER_TYPE_TEXTURE,
-                width: this.uiContext!.px2vp(embed.info?.width),
-                height: this.uiContext!.px2vp(embed.info?.height)
-              });
-              this.nodeController.rebuild();
-            }
-          })
-          .onNativeEmbedMouseEvent((event) => {
-            if (event && event.mouseEvent) {
-              let ret = this.nodeController.postInputEvent(event.mouseEvent)
-              if (event.result) {
-                event.result.setMouseEventResult(ret, true);
-              }
-            }
-          })
-      }
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Same-Layer Rendering Test</title>
-    <meta name="viewport">
-</head>
-<body>
-<div>
-    <div id="bodyId">
-        <embed id="nativeButton" type ="native/button" width="800" height="800" style="background-color:red"/>
-    </div>
-</div>
-</body>
-</html>
-```
 
 ## onNativeEmbedObjectParamChange
 
@@ -6854,8 +2198,6 @@ Called when the **param** element embedded in the same-layer rendering tag **obj
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -6863,138 +2205,6 @@ Called when the **param** element embedded in the same-layer rendering tag **obj
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnNativeEmbedObjectParamChangeCallback](arkts-arkweb-onnativeembedobjectparamchangecallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-  import { webview } from '@kit.ArkWeb';
-  import { NodeController, BuilderNode, NodeRenderType, FrameNode, UIContext } from '@kit.ArkUI';
-
-  declare class Params {
-    text: string;
-    width: number;
-    height: number;
-  }
-
-  declare class NodeControllerParams {
-    surfaceId: string;
-    renderType: NodeRenderType;
-    width: number;
-    height: number;
-  }
-
-  class MyNodeController extends NodeController {
-    private rootNode: BuilderNode<[Params]> | undefined | null;
-    private surfaceId_: string = "";
-    private renderType_: NodeRenderType = NodeRenderType.RENDER_TYPE_DISPLAY;
-    private width_: number = 0;
-    private height_: number = 0;
-
-    setRenderOption(params: NodeControllerParams) {
-      this.surfaceId_ = params.surfaceId;
-      this.renderType_ = params.renderType;
-      this.width_ = params.width;
-      this.height_ = params.height;
-    }
-
-    makeNode(uiContext: UIContext): FrameNode | null {
-      this.rootNode = new BuilderNode(uiContext, { surfaceId: this.surfaceId_, type: this.renderType_ });
-      this.rootNode.build(wrapBuilder(ButtonBuilder), { text: "myButton", width: this.width_, height: this.height_ });
-      return this.rootNode.getFrameNode();
-    }
-
-    postInputEvent(event: TouchEvent | MouseEvent | undefined): boolean {
-      return this.rootNode?.postInputEvent(event) as boolean;
-    }
-  }
-
-  @Component
-  struct ButtonComponent {
-    @Prop params: Params;
-    @State bkColor: Color = Color.Red;
-
-    build() {
-      Column() {
-        Button(this.params.text)
-          .height(50)
-          .width(200)
-          .border({ width: 2, color: Color.Red })
-          .backgroundColor(this.bkColor)
-
-      }
-      .width(this.params.width)
-      .height(this.params.height)
-    }
-  }
-
-  @Builder
-  function ButtonBuilder(params: Params) {
-    ButtonComponent({ params: params })
-      .backgroundColor(Color.Green)
-  }
-
-  @Entry
-  @Component
-  struct WebComponent {
-    controller: webview.WebviewController = new webview.WebviewController();
-    private nodeController: MyNodeController = new MyNodeController();
-    uiContext: UIContext = this.getUIContext();
-
-    build() {
-      Column() {
-        Stack() {
-          NodeContainer(this.nodeController)
-          Web({ src: $rawfile('index.html'), controller: this.controller })
-            .enableNativeEmbedMode(true)
-            .registerNativeEmbedRule("object", "native")
-            .onNativeEmbedLifecycleChange((embed) => {
-              if (embed.status == NativeEmbedStatus.CREATE) {
-                this.nodeController.setRenderOption({
-                  surfaceId: embed.surfaceId as string,
-                  renderType: NodeRenderType.RENDER_TYPE_TEXTURE,
-                  width: this.uiContext!.px2vp(embed.info?.width),
-                  height: this.uiContext!.px2vp(embed.info?.height)
-                });
-                this.nodeController.rebuild();
-              }
-            })
-            .onNativeEmbedObjectParamChange((event) => {
-              console.info("embed id: " + event.embedId);
-              let paramItems = event.paramItems;
-              if (paramItems) {
-                for (let i = 0; i < paramItems.length; ++i) {
-                  console.info("param info: " + JSON.stringify(paramItems[i]));
-                }
-              }
-            })
-        }
-      }
-    }
-  }
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Same-Layer Rendering Test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<div>
-    <div id="bodyId">
-        <object id="nativeButton" type ="native/button" width="300" height="300" style="background-color:red">
-          <param id="param-1" name="name-1" value="value1"/>
-        </object>
-    </div>
-</div>
-</body>
-</html>
-```
 
 ## onNativeEmbedVisibilityChange
 
@@ -7006,8 +2216,6 @@ Triggered when the visibility of a same-layer tag (such as an **\&lt;embed&gt;**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -7015,136 +2223,6 @@ Triggered when the visibility of a same-layer tag (such as an **\&lt;embed&gt;**
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnNativeEmbedVisibilityChangeCallback](arkts-arkweb-onnativeembedvisibilitychangecallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { NodeController, BuilderNode, NodeRenderType, FrameNode, UIContext } from "@kit.ArkUI";
-
-declare class Params {
-  text: string;
-  width: number;
-  height: number;
-}
-
-declare class NodeControllerParams {
-  surfaceId: string;
-  renderType: NodeRenderType;
-  width: number;
-  height: number;
-}
-
-class MyNodeController extends NodeController {
-  private rootNode: BuilderNode<[Params]> | undefined | null;
-  private surfaceId_: string = "";
-  private renderType_: NodeRenderType = NodeRenderType.RENDER_TYPE_DISPLAY;
-  private width_: number = 0;
-  private height_: number = 0;
-
-  setRenderOption(params: NodeControllerParams) {
-    this.surfaceId_ = params.surfaceId;
-    this.renderType_ = params.renderType;
-    this.width_ = params.width;
-    this.height_ = params.height;
-  }
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.rootNode = new BuilderNode(uiContext, { surfaceId: this.surfaceId_, type: this.renderType_ });
-    this.rootNode.build(wrapBuilder(ButtonBuilder), { text: "myButton", width: this.width_, height: this.height_ });
-    return this.rootNode.getFrameNode();
-  }
-
-  postEvent(event: TouchEvent | undefined): boolean {
-    return this.rootNode?.postTouchEvent(event) as boolean;
-  }
-}
-
-@Component
-struct ButtonComponent {
-  @Prop params: Params;
-  @State bkColor: Color = Color.Red;
-
-  build() {
-    Column() {
-      Button(this.params.text)
-        .height(50)
-        .width(200)
-        .border({ width: 2, color: Color.Red })
-        .backgroundColor(this.bkColor)
-
-    }
-    .width(this.params.width)
-    .height(this.params.height)
-  }
-}
-
-@Builder
-function ButtonBuilder(params: Params) {
-  ButtonComponent({ params: params })
-    .backgroundColor(Color.Green)
-}
-
-@Entry
-@Component
-struct WebComponent {
-  @State embedVisibility: string = '';
-  controller: webview.WebviewController = new webview.WebviewController();
-  private nodeController: MyNodeController = new MyNodeController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Stack() {
-        NodeContainer(this.nodeController)
-        Web({ src: $rawfile("index.html"), controller: this.controller })
-          .enableNativeEmbedMode(true)
-          .onNativeEmbedLifecycleChange((embed) => {
-            if (embed.status == NativeEmbedStatus.CREATE) {
-              this.nodeController.setRenderOption({
-                surfaceId: embed.surfaceId as string,
-                renderType: NodeRenderType.RENDER_TYPE_TEXTURE,
-                width: this.uiContext!.px2vp(embed.info?.width),
-                height: this.uiContext!.px2vp(embed.info?.height)
-              });
-              this.nodeController.rebuild();
-            }
-          })
-          .onNativeEmbedVisibilityChange((embed) => {
-            if (embed.visibility) {
-              this.embedVisibility = 'Visible';
-            } else {
-              this.embedVisibility = 'Hidden';
-            }
-            console.info("embedId = " + embed.embedId);
-            console.info("visibility = " + embed.visibility);
-          })
-      }
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Same-Layer Rendering Test HTML</title>
-    <meta name="viewport">
-</head>
-<body>
-<div>
-    <div id="bodyId">
-        <embed id="nativeButton" type = "native/button" width="800" height="800" src="test?params1=1" style = "background-color:red"/>
-    </div>
-</div>
-</body>
-</html>
-```
 
 ## onNavigationEntryCommitted
 
@@ -7156,8 +2234,6 @@ Triggered when a web page redirection request is submitted.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7167,32 +2243,6 @@ Triggered when a web page redirection request is submitted.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnNavigationEntryCommittedCallback](arkts-arkweb-onnavigationentrycommittedcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onNavigationEntryCommitted((details) => {
-          console.info("onNavigationEntryCommitted: [isMainFrame]= " + details.isMainFrame +
-            ", [isSameDocument]=" + details.isSameDocument +
-            ", [didReplaceEntry]=" + details.didReplaceEntry +
-            ", [navigationType]=" + details.navigationType +
-            ", [url]=" + details.url);
-        })
-    }
-  }
-}
-```
 
 ## onOverrideErrorPage
 
@@ -7211,8 +2261,6 @@ Triggered when an error occurs during web page loading of main resources. You ca
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -7220,35 +2268,6 @@ Triggered when an error occurs during web page loading of main resources. You ca
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnOverrideErrorPageCallback](arkts-arkweb-onoverrideerrorpagecallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  build() {
-    Column() {
-      Web({ src: "www.error-test.com", controller: this.controller })
-       .onControllerAttached(() => {
-            this.controller.setErrorPageEnabled(true);
-            if (!this.controller.getErrorPageEnabled()) {
-                this.controller.setErrorPageEnabled(true);
-            }
-        })
-        .onOverrideErrorPage(event => {
-              let htmlStr = "<html><h1>error occur : ";
-              htmlStr += event.error.getErrorCode();
-              htmlStr += "</h1></html>";
-              return htmlStr;
-        })
-    }
-  }
-}
-```
 
 ## onOverrideUrlLoading
 
@@ -7268,8 +2287,6 @@ Triggered when the URL is about to be loaded in the current web page, allowing t
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7279,47 +2296,6 @@ Triggered when the URL is about to be loaded in the current web page, allowing t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnOverrideUrlLoadingCallback](arkts-arkweb-onoverrideurlloadingcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .onOverrideUrlLoading((webResourceRequest: WebResourceRequest) => {
-          if (webResourceRequest && webResourceRequest.getRequestUrl() == "about:blank") {
-            return true;
-          }
-          return false;
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Test Web Page</title>
-</head>
-<body>
-  <h1>onOverrideUrlLoading Demo</h1>
-  <a href="about:blank">Click here</a>// to visit about:blank.
-</body>
-</html>
-```
 
 ## onOverScroll
 
@@ -7331,8 +2307,6 @@ Triggered when the web page is overscrolled. It is used to notify the applicatio
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7342,29 +2316,6 @@ Triggered when the web page is overscrolled. It is used to notify the applicatio
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnOverScrollEvent](arkts-arkweb-onoverscrollevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onOverScroll((event) => {
-          console.info("x = " + event.xOffset);
-          console.info("y = " + event.yOffset);
-        })
-    }
-  }
-}
-```
 
 ## onPageBegin
 
@@ -7376,8 +2327,6 @@ Triggered when the web page starts to be loaded. This callback is called only fo
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7387,30 +2336,6 @@ Triggered when the web page starts to be loaded. This callback is called only fo
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnPageBeginEvent](arkts-arkweb-onpagebeginevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onPageBegin((event) => {
-          if (event) {
-            console.info('url:' + event.url);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onPageEnd
 
@@ -7422,8 +2347,6 @@ Triggered when the web page loading is finished. This callback is called only fo
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7433,30 +2356,6 @@ Triggered when the web page loading is finished. This callback is called only fo
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnPageEndEvent](arkts-arkweb-onpageendevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onPageEnd((event) => {
-          if (event) {
-            console.info('url:' + event.url);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onPageVisible
 
@@ -7468,8 +2367,6 @@ Triggered when the old page is not displayed and the new page is about to be vis
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7479,28 +2376,6 @@ Triggered when the old page is not displayed and the new page is about to be vis
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnPageVisibleEvent](arkts-arkweb-onpagevisibleevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onPageVisible((event) => {
-          console.info('onPageVisible url:' + event.url);
-        })
-    }
-  }
-}
-```
 
 ## onPdfLoadEvent
 
@@ -7512,8 +2387,6 @@ Called to notify the user of whether the PDF page is successfully loaded.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -7521,29 +2394,6 @@ Called to notify the user of whether the PDF page is successfully loaded.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnPdfLoadEvent](arkts-arkweb-onpdfloadevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      // Replace 'https://www.example.com/xxx.pdf' with the actual accessible address.
-      Web({ src: 'https://www.example.com/xxx.pdf', controller: this.controller })
-        .onPdfLoadEvent((eventInfo: OnPdfLoadEvent) => {
-          console.info(`Load event callback called. url: ${eventInfo.url}, result: ${eventInfo.result}.`)
-        })
-    }
-  }
-}
-```
 
 ## onPdfScrollAtBottom
 
@@ -7555,8 +2405,6 @@ Called to notify the user that the PDF page has been scrolled to the bottom.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -7564,29 +2412,6 @@ Called to notify the user that the PDF page has been scrolled to the bottom.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnPdfScrollEvent](arkts-arkweb-onpdfscrollevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      // Replace 'https://www.example.com/xxx.pdf' with the actual accessible address.
-      Web({ src: 'https://www.example.com/xxx.pdf', controller: this.controller })
-        .onPdfScrollAtBottom((eventInfo: OnPdfScrollEvent) => {
-          console.info(`Scroll at bottom callback called. url: ${eventInfo.url}.`)
-        })
-    }
-  }
-}
-```
 
 ## onPermissionRequest
 
@@ -7598,8 +2423,6 @@ Triggered when a permission request is received. To call this API, you need to d
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7609,103 +2432,6 @@ Triggered when a permission request is received. To call this API, you need to d
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnPermissionRequestEvent](arkts-arkweb-onpermissionrequestevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  aboutToAppear() {
-    // Enable web frontend page debugging.
-    webview.WebviewController.setWebDebuggingAccess(true);
-    let atManager = abilityAccessCtrl.createAtManager();
-    atManager.requestPermissionsFromUser(this.uiContext.getHostContext(), ['ohos.permission.CAMERA', 'ohos.permission.MICROPHONE'])
-      .then((data) => {
-        console.info('data:' + JSON.stringify(data));
-        console.info('data permissions:' + data.permissions);
-        console.info('data authResults:' + data.authResults);
-      }).catch((error: BusinessError) => {
-      console.error(`Failed to request permissions from user. Code is ${error.code}, message is ${error.message}`);
-    })
-  }
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onPermissionRequest((event) => {
-          if (event) {
-            this.uiContext.showAlertDialog({
-              title: 'title',
-              message: 'text',
-              primaryButton: {
-                value: 'deny',
-                action: () => {
-                  event.request.deny();
-                }
-              },
-              secondaryButton: {
-                value: 'onConfirm',
-                action: () => {
-                  event.request.grant(event.request.getAccessibleResource());
-                }
-              },
-              cancel: () => {
-                event.request.deny();
-              }
-            })
-          }
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
- <!DOCTYPE html>
- <html>
- <head>
-   <meta charset="UTF-8">
- </head>
- <body>
- <video id="video" width="500px" height="500px" autoplay></video>
- <canvas id="canvas" width="500px" height="500px"></canvas>
- <br>
- <input type="button" title="HTML5 Camera" value="Enable Camera" onclick="getMedia()"/>
- <script>
-   function getMedia()
-   {
-     let constraints = {
-       video: {width: 500, height: 500},
-       audio: true
-     };
-     // Obtain the video camera area.
-     let video = document.getElementById("video");
-     // Returned Promise object.
-     let promise = navigator.mediaDevices.getUserMedia(constraints);
-     // then() is asynchronous. Invoke the MediaStream object as a parameter.
-     promise.then(function (MediaStream) {
-       video.srcObject = MediaStream;
-       video.play();
-     }).catch(function(error) {
-       console.error("Error accessing media devices.", error);
-     });
-   }
- </script>
- </body>
- </html>
-```
 
 ## onProgressChange
 
@@ -7717,8 +2443,6 @@ Triggered when the web page loading progress changes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7728,29 +2452,6 @@ Triggered when the web page loading progress changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnProgressChangeEvent](arkts-arkweb-onprogresschangeevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onProgressChange((event) => {
-          if (event) {
-            console.info('newProgress:' + event.newProgress);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onPrompt
 
@@ -7762,8 +2463,6 @@ Triggered when **prompt()** is invoked by the web page. Call the [handleCancel](
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7773,112 +2472,6 @@ Triggered when **prompt()** is invoked by the web page. Call the [handleCancel](
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnPromptEvent](arkts-arkweb-onpromptevent-i.md), boolean&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { CustomContentDialog } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  @State message: string = 'Hello World';
-  @State title: string = 'Hello World';
-  @State result: JsResult | null = null;
-  promptResult: string = '';
-  webviewController: webview.WebviewController = new webview.WebviewController();
-  dialogController: CustomDialogController = new CustomDialogController({
-    builder: CustomContentDialog({
-      primaryTitle: this.title,
-      contentBuilder: () => {
-        this.buildContent();
-      },
-      buttons: [
-        {
-          value: 'Cancel',
-          buttonStyle: ButtonStyleMode.TEXTUAL,
-          action: () => {
-            console.info('Callback when the button is clicked');
-            this.result?.handleCancel()
-          }
-        },
-        {
-          value: 'OK',
-          buttonStyle: ButtonStyleMode.TEXTUAL,
-          action: () => {
-            this.result?.handlePromptConfirm(this.promptResult);
-          }
-        }
-      ],
-    }),
-    onWillDismiss: () => {
-      this.result?.handleCancel();
-      this.dialogController.close();
-    }
-  });
-
-  // Content area of the custom dialog box
-  @Builder
-  buildContent(): void {
-    Column() {
-      Text(this.message)
-      TextInput()
-        .onChange((value) => {
-          this.promptResult = value;
-        })
-        .defaultFocus(true)
-    }
-    .width('100%')
-  }
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.webviewController })
-        .onPrompt((event) => {
-          if (event) {
-            console.info("event.url:" + event.url);
-            console.info("event.message:" + event.message);
-            console.info("event.value:" + event.value);
-            this.title = "Message from" + event.url + "";
-            this.message = event.message;
-            this.promptResult = event.value;
-            this.result = event.result;
-            this.dialogController.open();
-          }
-          return true;
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-  <h1>WebView onPrompt Demo</h1>
-  <button onclick="myFunction()">Click here</button>
-  <p id="demo"></p>
-  <script>
-    function myFunction() {
-      let message = prompt("Message info", "Hello World");
-      if (message != null && message != "") {
-        document.getElementById("demo").innerHTML = message;
-      }
-    }
-  </script>
-</body>
-</html>
-```
 
 ## onRefreshAccessedHistory
 
@@ -7890,8 +2483,6 @@ Triggered for the application to update its access history when the navigation i
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7901,31 +2492,6 @@ Triggered for the application to update its access history when the navigation i
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnRefreshAccessedHistoryEvent](arkts-arkweb-onrefreshaccessedhistoryevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onRefreshAccessedHistory((event) => {
-          if (event) {
-            console.info('url:' + event.url + ' isReload:' + event.isRefreshed);
-            console.info('isMainFrame:' + event.isMainFrame);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onRenderExited
 
@@ -7937,8 +2503,6 @@ Triggered when the rendering process exits abnormally.A rendering process may be
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -7948,30 +2512,6 @@ Triggered when the rendering process exits abnormally.A rendering process may be
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnRenderExitedEvent](arkts-arkweb-onrenderexitedevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'chrome://crash/', controller: this.controller })
-        .onRenderExited((event) => {
-          if (event) {
-            console.info('reason:' + event.renderExitReason);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onRenderExited
 
@@ -7983,11 +2523,9 @@ Triggered when the rendering process exits due to an error or crash.A rendering 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** onRenderExited
+**Substitutes:** [onRenderExited](#onrenderexited)
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -7996,10 +2534,6 @@ Triggered when the rendering process exits due to an error or crash.A rendering 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | (event?: { detail: object }) = & gt; boolean | Yes |
-
-**Examples**
-
-See [onRenderExited](#onrenderexited)
 
 ## onRenderProcessNotResponding
 
@@ -8011,8 +2545,6 @@ Triggered when the rendering process does not respond. If the **Web** component 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -8020,29 +2552,6 @@ Triggered when the rendering process does not respond. If the **Web** component 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnRenderProcessNotRespondingCallback](arkts-arkweb-onrenderprocessnotrespondingcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onRenderProcessNotResponding((data) => {
-          console.info("onRenderProcessNotResponding: [jsStack]= " + data.jsStack +
-            ", [process]=" + data.pid + ", [reason]=" + data.reason);
-        })
-    }
-  }
-}
-```
 
 ## onRenderProcessResponding
 
@@ -8054,8 +2563,6 @@ Triggered when the rendering process transitions back to a normal operating stat
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -8063,28 +2570,6 @@ Triggered when the rendering process transitions back to a normal operating stat
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnRenderProcessRespondingCallback](arkts-arkweb-onrenderprocessrespondingcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onRenderProcessResponding(() => {
-          console.info("onRenderProcessResponding again");
-        })
-    }
-  }
-}
-```
 
 ## onRequestSelected
 
@@ -8096,8 +2581,6 @@ Triggered when the **Web** component obtains the focus. If the **Web** component
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8107,28 +2590,6 @@ Triggered when the **Web** component obtains the focus. If the **Web** component
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | () = & gt; void | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onRequestSelected(() => {
-          console.info('onRequestSelected');
-        })
-    }
-  }
-}
-```
 
 ## onResourceLoad
 
@@ -8140,8 +2601,6 @@ Triggered to notify the **Web** component of the URL of the resource file to loa
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8151,28 +2610,6 @@ Triggered to notify the **Web** component of the URL of the resource file to loa
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnResourceLoadEvent](arkts-arkweb-onresourceloadevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onResourceLoad((event) => {
-          console.info('onResourceLoad: ' + event.url);
-        })
-    }
-  }
-}
-```
 
 ## onSafeBrowsingCheckFinish
 
@@ -8184,8 +2621,6 @@ Called when the safe browsing check is complete.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -8193,29 +2628,6 @@ Called when the safe browsing check is complete.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnSafeBrowsingCheckResultCallback](arkts-arkweb-onsafebrowsingcheckresultcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onSafeBrowsingCheckFinish((callback) => {
-          let json: ThreatType = JSON.parse(JSON.stringify(callback)).threatType;
-          console.info("onSafeBrowsingCheckFinish: [threatType]= " + json);
-        })
-    }
-  }
-}
-```
 
 ## onSafeBrowsingCheckResult
 
@@ -8227,8 +2639,6 @@ Called when the safe browsing check result is received.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8238,29 +2648,6 @@ Called when the safe browsing check result is received.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnSafeBrowsingCheckResultCallback](arkts-arkweb-onsafebrowsingcheckresultcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onSafeBrowsingCheckResult((callback) => {
-          let json: ThreatType = JSON.parse(JSON.stringify(callback)).threatType;
-          console.info("onSafeBrowsingCheckResult: [threatType]= " + json);
-        })
-    }
-  }
-}
-```
 
 ## onScaleChange
 
@@ -8272,8 +2659,6 @@ Called when the page display scale changes.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8283,28 +2668,6 @@ Called when the page display scale changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnScaleChangeEvent](arkts-arkweb-onscalechangeevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onScaleChange((event) => {
-          console.info('onScaleChange changed from ' + event.oldScale + ' to ' + event.newScale);
-        })
-    }
-  }
-}
-```
 
 ## onScreenCaptureRequest
 
@@ -8316,8 +2679,6 @@ Triggered when a screen capture request is received.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8327,49 +2688,6 @@ Triggered when a screen capture request is received.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnScreenCaptureRequestEvent](arkts-arkweb-onscreencapturerequestevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onScreenCaptureRequest((event) => {
-          if (event) {
-            this.uiContext.showAlertDialog({
-              title: 'title: ' + event.handler.getOrigin(),
-              message: 'text',
-              primaryButton: {
-                value: 'deny',
-                action: () => {
-                  event.handler.deny();
-                }
-              },
-              secondaryButton: {
-                value: 'onConfirm',
-                action: () => {
-                  event.handler.grant({ captureMode: WebCaptureMode.HOME_SCREEN });
-                }
-              },
-              cancel: () => {
-                event.handler.deny();
-              }
-            })
-          }
-        })
-    }
-  }
-}
-```
 
 ## onScroll
 
@@ -8388,8 +2706,6 @@ Triggered to notify the global scrolling position of the web page.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8399,29 +2715,6 @@ Triggered to notify the global scrolling position of the web page.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnScrollEvent](arkts-arkweb-onscrollevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onScroll((event) => {
-          console.info("x = " + event.xOffset);
-          console.info("y = " + event.yOffset);
-        })
-    }
-  }
-}
-```
 
 ## onSearchResultReceive
 
@@ -8433,8 +2726,6 @@ Triggered to notify the caller of the search result on the web page.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8444,31 +2735,6 @@ Triggered to notify the caller of the search result on the web page.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnSearchResultReceiveEvent](arkts-arkweb-onsearchresultreceiveevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onSearchResultReceive(ret => {
-          if (ret) {
-            console.info("on search result receive:" + "[cur]" + ret.activeMatchOrdinal +
-              "[total]" + ret.numberOfMatches + "[isDone]" + ret.isDoneCounting);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onShowFileSelector
 
@@ -8480,8 +2746,6 @@ Triggered to process an HTML form whose input type is **file**. If this function
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8491,150 +2755,6 @@ Triggered to process an HTML form whose input type is **file**. If this function
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnShowFileSelectorEvent](arkts-arkweb-onshowfileselectorevent-i.md), boolean&gt; | Yes |
-
-**Examples**
-
-Start the file selector.
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { picker } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController()
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onShowFileSelector((event) => {
-          console.info('MyFileUploader onShowFileSelector invoked')
-          const documentSelectOptions = new picker.DocumentSelectOptions();
-          let uri: string | null = null;
-          const documentViewPicker = new picker.DocumentViewPicker();
-          documentViewPicker.select(documentSelectOptions).then((documentSelectResult) => {
-            uri = documentSelectResult[0];
-            console.info('documentViewPicker.select to file succeed and uri is:' + uri);
-            if (event) {
-              event.result.handleFileList([uri]);
-            }
-          }).catch((err: BusinessError) => {
-            console.error(`Invoke documentViewPicker.select failed, code is ${err.code},  message is ${err.message}`);
-          })
-          return true;
-        })
-    }
-  }
-}
-```
-
-Start the photo selector.
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { picker } from '@kit.CoreFileKit';
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  async selectFile(result: FileSelectorResult): Promise<void> {
-    let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
-    let photoPicker = new photoAccessHelper.PhotoViewPicker();
-    // Set the mime file type to IMAGE_VIDEO.
-    photoSelectOptions.MIMEType = photoAccessHelper.PhotoViewMIMETypes.IMAGE_VIDEO_TYPE;
-    // Set the maximum number of media files that can be selected.
-    photoSelectOptions.maxSelectNumber = 5;
-    let chooseFile: photoAccessHelper.PhotoSelectResult = await photoPicker.select(photoSelectOptions);
-    // Obtain the list of selected files.
-    result.handleFileList(chooseFile.photoUris);
-  }
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onShowFileSelector((event) => {
-          if (event) {
-            this.selectFile(event.result);
-          }
-          return true;
-        })
-    }
-  }
-}
-```
-
-Start the camera picker.
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { cameraPicker, camera } from '@kit.CameraKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-async function openCamera(callback: Callback<string>, uiContext: UIContext) {
- let mContext = uiContext.getHostContext() as common.Context;
-  try {
-    let pickerProfile: cameraPicker.PickerProfile = {
-      cameraPosition: camera.CameraPosition.CAMERA_POSITION_BACK
-    };
-    let pickerResult: cameraPicker.PickerResult = await cameraPicker.pick(mContext,
-      [cameraPicker.PickerMediaType.PHOTO, cameraPicker.PickerMediaType.VIDEO], pickerProfile);
-    callback(pickerResult.resultUri);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`the pick call failed. error code: ${err.code}`);
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onShowFileSelector((event) => {
-          openCamera((result) => {
-            if (event) {
-              console.info('Title is ' + event.fileSelector.getTitle());
-              console.info('Mode is ' + event.fileSelector.getMode());
-              console.info('Accept types are ' + event.fileSelector.getAcceptType());
-              console.info('Capture is ' + event.fileSelector.isCapture());
-              console.info('Mime types are ' + event.fileSelector.getMimeTypes());
-              event.result.handleFileList([result]);
-            }
-          }, this.getUIContext())
-          return true;
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <form id="upload-form" enctype="multipart/form-data">
-    <input type="file" id="upload" name="upload" accept="image/*, video/*"/>
-    </form>
-</body>
-</html>
-```
 
 ## onSslErrorEvent
 
@@ -8651,8 +2771,6 @@ Triggered to notify users when an SSL error occurs during the loading of main-fr
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8662,97 +2780,6 @@ Triggered to notify users when an SSL error occurs during the loading of main-fr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnSslErrorEventCallback](arkts-arkweb-onsslerroreventcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { cert } from '@kit.DeviceCertificateKit';
-
-function LogCertInfo(certChainData : Array<Uint8Array> | undefined) {
-  if (!(certChainData instanceof Array)) {
-    console.error('failed, cert chain data type is not array');
-    return;
-  }
-
-  for (let i = 0; i < certChainData.length; i++) {
-    let encodeBlobData: cert.EncodingBlob = {
-      data: certChainData[i],
-      encodingFormat: cert.EncodingFormat.FORMAT_DER
-    }
-    cert.createX509Cert(encodeBlobData, (error, x509Cert) => {
-      if (error) {
-        console.error('Index : ' + i + ',createX509Cert failed, errCode: ' + error.code + ', errMsg: ' + error.message);
-      } else {
-        console.info('createX509Cert success');
-        console.info(ParseX509CertInfo(x509Cert));
-      }
-    });
-  }
-  return;
-}
-
-function Uint8ArrayToString(dataArray: Uint8Array) {
-  let dataString = '';
-  for (let i = 0; i < dataArray.length; i++) {
-    dataString += String.fromCharCode(dataArray[i]);
-  }
-  return dataString;
-}
-
-function ParseX509CertInfo(x509Cert: cert.X509Cert) {
-  let res: string = 'getCertificate success, '
-    + 'issuer name = '
-    + Uint8ArrayToString(x509Cert.getIssuerName().data) + ', subject name = '
-    + Uint8ArrayToString(x509Cert.getSubjectName().data) + ', valid start = '
-    + x509Cert.getNotBeforeTime()
-    + ', valid end = ' + x509Cert.getNotAfterTime();
-  return res;
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onSslErrorEvent((event: SslErrorEvent) => {
-          console.info("onSslErrorEvent url: " + event.url);
-          console.info("onSslErrorEvent error: " + event.error);
-          console.info("onSslErrorEvent originalUrl: " + event.originalUrl);
-          console.info("onSslErrorEvent referrer: " + event.referrer);
-          console.info("onSslErrorEvent isFatalError: " + event.isFatalError);
-          console.info("onSslErrorEvent isMainFrame: " + event.isMainFrame);
-          LogCertInfo(event.certChainData);
-          this.uiContext.showAlertDialog({
-            title: 'onSslErrorEvent',
-            message: 'text',
-            primaryButton: {
-              value: 'confirm',
-              action: () => {
-                event.handler.handleConfirm();
-              }
-            },
-            secondaryButton: {
-              value: 'cancel',
-              action: () => {
-                // The value true indicates that the page loading is stopped and the current page is displayed. The value false indicates that the page loading is continued and an error page is displayed.
-                event.handler.handleCancel(true);
-              }
-            },
-            cancel: () => {
-              event.handler.handleCancel();
-            }
-          })
-        })
-    }
-  }
-}
-```
 
 ## onSslErrorEventReceive
 
@@ -8774,8 +2801,6 @@ Triggered to notify the host application when an SSL error occurs while loading 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8785,90 +2810,6 @@ Triggered to notify the host application when an SSL error occurs while loading 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnSslErrorEventReceiveEvent](arkts-arkweb-onsslerroreventreceiveevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { cert } from '@kit.DeviceCertificateKit';
-
-function LogCertInfo(certChainData : Array<Uint8Array> | undefined) {
-  if (!(certChainData instanceof Array)) {
-    console.error('failed, cert chain data type is not array');
-    return;
-  }
-
-  for (let i = 0; i < certChainData.length; i++) {
-    let encodeBlobData: cert.EncodingBlob = {
-      data: certChainData[i],
-      encodingFormat: cert.EncodingFormat.FORMAT_DER
-    }
-    cert.createX509Cert(encodeBlobData, (error, x509Cert) => {
-      if (error) {
-        console.error('Index : ' + i + ',createX509Cert failed, errCode: ' + error.code + ', errMsg: ' + error.message);
-      } else {
-        console.info('createX509Cert success');
-        console.info(ParseX509CertInfo(x509Cert));
-      }
-    });
-  }
-  return;
-}
-
-function Uint8ArrayToString(dataArray: Uint8Array) {
-  let dataString = '';
-  for (let i = 0; i < dataArray.length; i++) {
-    dataString += String.fromCharCode(dataArray[i]);
-  }
-  return dataString;
-}
-
-function ParseX509CertInfo(x509Cert: cert.X509Cert) {
-  let res: string = 'getCertificate success, '
-    + 'issuer name = '
-    + Uint8ArrayToString(x509Cert.getIssuerName().data) + ', subject name = '
-    + Uint8ArrayToString(x509Cert.getSubjectName().data) + ', valid start = '
-    + x509Cert.getNotBeforeTime()
-    + ', valid end = ' + x509Cert.getNotAfterTime();
-  return res;
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onSslErrorEventReceive((event) => {
-          LogCertInfo(event.certChainData);
-          this.uiContext.showAlertDialog({
-            title: 'onSslErrorEventReceive',
-            message: 'text',
-            primaryButton: {
-              value: 'confirm',
-              action: () => {
-                event.handler.handleConfirm();
-              }
-            },
-            secondaryButton: {
-              value: 'cancel',
-              action: () => {
-                event.handler.handleCancel();
-              }
-            },
-            cancel: () => {
-              event.handler.handleCancel();
-            }
-          })
-        })
-    }
-  }
-}
-```
 
 ## onSslErrorReceive
 
@@ -8880,11 +2821,9 @@ Triggered when an SSL error occurs during resource loading.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
-**Substitutes:** onSslErrorEventReceive
+**Substitutes:** [onSslErrorEventReceive](#onsslerroreventreceive)
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -8910,8 +2849,6 @@ Triggered when the text selection of the **Web** component changes. This API use
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -8919,43 +2856,6 @@ Triggered when the text selection of the **Web** component changes. This API use
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [TextSelectionChangeCallback](arkts-arkweb-textselectionchangecallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// onTextSelectionChange.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onTextSelectionChange((selectionText: string) => {
-          console.info(`Selected text is ${selectionText}.`);
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Example page</title>
-</head>
-<body>
-    Sample text
-</body>
-</html>
-```
 
 ## onTitleReceive
 
@@ -8967,8 +2867,6 @@ Called when the **\&lt;title&gt;** element of the page document changes. If no t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -8978,31 +2876,6 @@ Called when the **\&lt;title&gt;** element of the page document changes. If no t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnTitleReceiveEvent](arkts-arkweb-ontitlereceiveevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onTitleReceive((event) => {
-          if (event) {
-            console.info('title:' + event.title);
-            console.info('isRealTitle:' + event.isRealTitle);
-          }
-        })
-    }
-  }
-}
-```
 
 ## onTouchIconUrlReceived
 
@@ -9014,8 +2887,6 @@ Triggered when an apple-touch-icon URL is received.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -9026,28 +2897,6 @@ Triggered when an apple-touch-icon URL is received.
 | --- | --- | --- |
 | callback | Callback&lt;[OnTouchIconUrlReceivedEvent](arkts-arkweb-ontouchiconurlreceivedevent-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.baidu.com', controller: this.controller })
-        .onTouchIconUrlReceived((event) => {
-          console.info('onTouchIconUrlReceived:' + JSON.stringify(event));
-        })
-    }
-  }
-}
-```
-
 ## onUrlLoadIntercept
 
 ```TypeScript
@@ -9057,8 +2906,6 @@ onUrlLoadIntercept(callback: (event?: { data: string | WebResourceRequest }) => 
 Triggered when the **Web** component is about to access a URL. This API is used to determine whether to block the access.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -9072,31 +2919,6 @@ Triggered when the **Web** component is about to access a URL. This API is used 
 | --- | --- | --- |
 | callback | (event?: { data: string \| WebResourceRequest }) = & gt; boolean | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onUrlLoadIntercept((event) => {
-          if (event) {
-            console.info('onUrlLoadIntercept ' + event.data.toString());
-          }
-          return true
-        })
-    }
-  }
-}
-```
-
 ## onVerifyPin
 
 ```TypeScript
@@ -9107,8 +2929,6 @@ Triggered to notify the user of PIN verification. This API uses an asynchronous 
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -9116,99 +2936,6 @@ Triggered to notify the user of PIN verification. This API uses an asynchronous 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnVerifyPinCallback](arkts-arkweb-onverifypincallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { common } from '@kit.AbilityKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  controller: WebviewController = new webview.WebviewController();
-  uiContext : UIContext = this.getUIContext();
-  context : Context | undefined = this.uiContext.getHostContext() as common.UIAbilityContext;
-
-  aboutToAppear(): void {
-    webview.WebviewController.setRenderProcessMode(webview.RenderProcessMode.MULTIPLE)
-  }
-
-  build() {
-    Column() {
-      Button('Load the website that requires the client SSL certificate')
-        .onClick(() => {
-          this.controller.loadUrl("https://client.badssl.com")
-        })
-      Web({
-        src: "https://www.bing.com/",
-        controller: this.controller,
-      }).domStorageAccess(true)
-        .fileAccess(true)
-        .onPageBegin(event => {
-          console.info("extensions onpagebegin url " + event.url);
-        })
-        .onClientAuthenticationRequest((event) => {
-          // Receive the client certificate request event.
-          console.info(`onClientAuthenticationRequest`);
-          try {
-            let certTypes: Array<certificateManagerDialog.CertificateType> = [
-              certificateManagerDialog.CertificateType.CREDENTIAL_UKEY
-            ];
-            // Invoke the certificate management to open the certificate selection dialog box.
-            certificateManagerDialog.openAuthorizeDialog(this.context, { certTypes: certTypes })
-              .then((data: certificateManagerDialog.CertReference) => {
-                console.info(`openAuthorizeDialog request cred auth success`)
-                // Notify the web page that the UKey certificate is selected.
-                event.handler.confirm(data.keyUri, CredentialType.CREDENTIAL_UKEY);
-              }).catch((err: BusinessError) => {
-              console.error(`openAuthorizeDialog request cred auth failed, err: ${JSON.stringify(err)}`);
-            })
-          } catch (e) {
-            console.error(`openAuthorizeDialog request cred auth failed, err: ${JSON.stringify(e)}`);
-          }
-          return true;
-        })
-        .onVerifyPin((event) => {
-          // Receive the PIN verification request event.
-          console.info(`onVerifyPin`);
-          // Invoke the certificate management to open the PIN input box.
-          certificateManagerDialog.openUkeyAuthDialog(this.context, {keyUri: event.identity})
-            .then(() => {
-              // Notify the web page that the PIN verification is successful.
-              console.info(`onVerifyPin success`);
-              event.handler.confirm(PinVerifyResult.PIN_VERIFICATION_SUCCESS);
-            }).catch((err: BusinessError) => {
-            // Notify the web page that the PIN verification fails.
-            console.info(`onVerifyPin fail`);
-            event.handler.confirm(PinVerifyResult.PIN_VERIFICATION_FAILED);
-          })
-        })
-        .onSslErrorEventReceive(e => {
-          console.info(`onSslErrorEventReceive->${e.error.toString()}`);
-        })
-        .onErrorReceive((event) => {
-          if (event) {
-            this.getUIContext().getPromptAction().showToast({
-              message: `ErrorCode: ${event.error.getErrorCode()}, ErrorInfo: ${event.error.getErrorInfo()}`,
-              alignment: Alignment.Center
-            })
-            console.info('getErrorInfo:' + event.error.getErrorInfo());
-            console.info('getErrorCode:' + event.error.getErrorCode());
-            console.info('url:' + event.request.getRequestUrl());
-          }
-        })
-        .onTitleReceive(event  => {
-          console.info("title received " + event.title);
-        })
-
-    }
-  }
-}
-```
 
 ## onViewportFitChanged
 
@@ -9220,8 +2947,6 @@ Triggered when the **viewport-fit** configuration in the web page's **meta** tag
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -9231,51 +2956,6 @@ Triggered when the **viewport-fit** configuration in the web page's **meta** tag
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [OnViewportFitChangedCallback](arkts-arkweb-onviewportfitchangedcallback-t.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .onViewportFitChanged((data) => {
-          let jsonData = JSON.stringify(data);
-          let viewportFit: ViewportFit = JSON.parse(jsonData).viewportFit;
-          if (viewportFit === ViewportFit.COVER) {
-            // The index.html web page supports immersive layout. You can call expandSafeArea to adjust the Web component layout viewport to cover the safe area (status bar or navigation bar).
-          } else if (viewportFit === ViewportFit.CONTAINS) {
-            // The index.html web page does not support immersive layout. You can call expandSafeArea to adjust the Web component layout viewport as a safe area.
-          } else {
-            // Default value. No processing is required.
-          }
-        })
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!-- index.html -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width,viewport-fit=cover">
-  </head>
-  <body>
-    <div style="position: absolute; bottom: 0; margin-bottom: env(safe-area-inset-bottom)"></div>
-  </body>
-</html>
-```
 
 ## onWindowExit
 
@@ -9287,8 +2967,6 @@ Triggered when this window is closed. This API works in the same way as [onWindo
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -9298,28 +2976,6 @@ Triggered when this window is closed. This API works in the same way as [onWindo
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | () = & gt; void | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .onWindowExit(() => {
-          console.info("onWindowExit...");
-        })
-    }
-  }
-}
-```
 
 ## onWindowNew
 
@@ -9331,8 +2987,6 @@ Triggered to notify the user of a new window creation request, when **multiWindo
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -9342,85 +2996,6 @@ Triggered to notify the user of a new window creation request, when **multiWindo
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnWindowNewEvent](arkts-arkweb-onwindownewevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-// There are two Web components on the same page. When the WebComponent object opens a new window, the NewWebViewComp object is displayed.
-@CustomDialog
-struct NewWebViewComp {
-  controller?: CustomDialogController;
-  webviewController1: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: "www.example.com", controller: this.webviewController1 })
-        .javaScriptAccess(true)
-        .multiWindowAccess(false)
-        .onWindowExit(() => {
-          console.info("NewWebViewComp onWindowExit");
-          if (this.controller) {
-            this.controller.close();
-          }
-        })
-    }
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  dialogController: CustomDialogController | null = null;
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("window.html"), controller: this.controller })
-        .javaScriptAccess(true)
-        // MultiWindowAccess needs to be enabled.
-        .multiWindowAccess(true)
-        .allowWindowOpenMethod(true)
-        .onWindowNew((event) => {
-          if (this.dialogController) {
-            this.dialogController.close();
-          }
-          let popController: webview.WebviewController = new webview.WebviewController();
-          this.dialogController = new CustomDialogController({
-            builder: NewWebViewComp({ webviewController1: popController })
-          })
-          this.dialogController.open();
-          // Return the WebviewController object corresponding to the new window to the web kernel.
-          // If the event.handler.setWebController API is not called, the render process will be blocked.
-          // If no new window is created, set the value of event.handler.setWebController to null to notify the Web component that no new window is created.
-          event.handler.setWebController(popController);
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-<!-- Code of the window.html page -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<a href="#" onclick="openNewWindow('https://www.example.com')">Open a new page</a>
-<script type="text/javascript">
-    function openNewWindow(url) {
-      window.open(url, 'example');
-      return false;
-    }
-</script>
-</body>
-</html>
-```
 
 ## onWindowNewExt
 
@@ -9444,8 +3019,6 @@ Triggered to notify the user of a new window creation request when [multiWindowA
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -9455,89 +3028,6 @@ Triggered to notify the user of a new window creation request when [multiWindowA
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Callback&lt;[OnWindowNewExtEvent](arkts-arkweb-onwindownewextevent-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-// There are two Web components on the same page. When the WebComponent object opens a new window, the NewWebViewComp object is displayed.
-@CustomDialog
-struct NewWebViewComp {
-controller?: CustomDialogController;
-webviewController1: webview.WebviewController = new webview.WebviewController();
-
-build() {
-  Column() {
-    Web({ src: "www.example.com", controller: this.webviewController1 })
-      .javaScriptAccess(true)
-      .multiWindowAccess(false)
-      .onWindowExit(() => {
-        console.info("NewWebViewComp onWindowExit");
-        if (this.controller) {
-          this.controller.close();
-        }
-      })
-    }
-  }
-}
-
-@Entry
-@Component
-struct WebComponent {
-controller: webview.WebviewController = new webview.WebviewController();
-dialogController: CustomDialogController | null = null;
-
-build() {
-  Column() {
-    Web({ src: $rawfile("window.html"), controller: this.controller })
-      .javaScriptAccess(true)
-      // Enable multiWindowAccess.
-      .multiWindowAccess(true)
-      .allowWindowOpenMethod(true)
-      .onWindowNewExt((event) => {
-        // Open a new window using the event.navigationPolicy request.
-        console.info("navigationAction: ", event.navigationPolicy)
-        // Create a new window based on the size and position information in event.windowFeatures.
-        console.info("windowFeatures: ", JSON.stringify(event.windowFeatures))
-        if (this.dialogController) {
-          this.dialogController.close();
-        }
-        let popController: webview.WebviewController = new webview.WebviewController();
-        this.dialogController = new CustomDialogController({
-          builder: NewWebViewComp({ webviewController1: popController })
-        })
-        this.dialogController.open();
-        // Return the WebviewController object corresponding to the new window to the web kernel.
-        // If the event.handler.setWebController API is not called, the render process will be blocked.
-        // If no new window is created, set the value of event.handler.setWebController to null to notify the Web component that no new window is created.
-        event.handler.setWebController(popController);
-      })
-    }
-  }
-}
-```
-
-```TypeScript
-<!-- Code of the window.html page -->
-  <!DOCTYPE html>
-  <html>
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-  <a href="#" onclick="openNewWindow('https://www.example.com')">Open a new page</a>
-  <script type="text/javascript">
-      function openNewWindow(url) {
-        window.open(url, 'example', 'left=60,top=80,width=800,height=600');
-        return false;
-      }
-  </script>
-  </body>
-  </html>
-```
 
 ## optimizeParserBudget
 
@@ -9549,8 +3039,6 @@ Sets whether to enable segment-based HTML parsing optimization. If no attribute 
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -9558,25 +3046,6 @@ Sets whether to enable segment-based HTML parsing optimization. If no attribute 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [optimizeParserBudget](#optimizeparserbudget) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController()
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .optimizeParserBudget(true)
-    }
-  }
-}
-```
 
 ## overScrollMode
 
@@ -9588,8 +3057,6 @@ Sets the over-scroll mode of the **Web** component. When enabled, if the user sc
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -9599,26 +3066,6 @@ Sets the over-scroll mode of the **Web** component. When enabled, if the user sc
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mode | [OverScrollMode](arkts-arkweb-overscrollmode-e.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State mode: OverScrollMode = OverScrollMode.ALWAYS;
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .overScrollMode(this.mode)
-    }
-  }
-}
-```
 
 ## overviewModeAccess
 
@@ -9630,8 +3077,6 @@ Sets whether to load web pages by using the overview mode. That is, zoom out the
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -9642,26 +3087,6 @@ Sets whether to load web pages by using the overview mode. That is, zoom out the
 | --- | --- | --- |
 | [overviewModeAccess](#overviewmodeaccess) | boolean | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .overviewModeAccess(true)
-    }
-  }
-}
-```
-
 ## password
 
 ```TypeScript
@@ -9671,8 +3096,6 @@ password(password: boolean)
 Sets whether to save the password. This API is an empty API.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -9696,8 +3119,6 @@ Sets whether to enable pinch smooth mode for the web page. When this attribute i
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -9708,26 +3129,6 @@ Sets whether to enable pinch smooth mode for the web page. When this attribute i
 | --- | --- | --- |
 | isEnabled | boolean | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .pinchSmooth(true)
-    }
-  }
-}
-```
-
 ## registerNativeEmbedRule
 
 ```TypeScript
@@ -9737,8 +3138,6 @@ registerNativeEmbedRule(tag: string, type:string)
 Registers the HTML tag name and type for same-layer rendering. The tag name only supports &lt;object\&gt; and &lt;embed\&gt;. The tag type only supports visible ASCII characters.If the specified type is the same as the W3C standard &lt;object\&gt; or &lt;embed\&gt; type, the ArkWeb kernel identifies the type as a non-same-layer tag.This API is also controlled by **enableNativeEmbedMode** and does not take effect when same-layer rendering is disabled. When this API is not used, the ArkWeb kernel recognizes the &lt;embed\&gt; tags with the "native/" prefix as same-layer tags.For details, see [Using Same-Layer Rendering](../../../web/web-same-layer.md#rendering-text-boxes-at-the-same-layer-on-web-pages).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -9751,130 +3150,6 @@ Registers the HTML tag name and type for same-layer rendering. The tag name only
 | tag | string | Yes |
 | type | string | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { NodeController, BuilderNode, NodeRenderType, FrameNode, UIContext } from '@kit.ArkUI';
-
-declare class Params {
-  text: string;
-  width: number;
-  height: number;
-}
-
-declare class NodeControllerParams {
-  surfaceId: string;
-  renderType: NodeRenderType;
-  width: number;
-  height: number;
-}
-
-class MyNodeController extends NodeController {
-  private rootNode: BuilderNode<[Params]> | undefined | null;
-  private surfaceId_: string = "";
-  private renderType_: NodeRenderType = NodeRenderType.RENDER_TYPE_DISPLAY;
-  private width_: number = 0;
-  private height_: number = 0;
-
-  setRenderOption(params: NodeControllerParams) {
-    this.surfaceId_ = params.surfaceId;
-    this.renderType_ = params.renderType;
-    this.width_ = params.width;
-    this.height_ = params.height;
-  }
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.rootNode = new BuilderNode(uiContext, { surfaceId: this.surfaceId_, type: this.renderType_ });
-    this.rootNode.build(wrapBuilder(ButtonBuilder), { text: "myButton", width: this.width_, height: this.height_ });
-    return this.rootNode.getFrameNode();
-  }
-
-  postInputEvent(event: TouchEvent | MouseEvent | undefined): boolean {
-    return this.rootNode?.postInputEvent(event) as boolean;
-  }
-}
-
-@Component
-struct ButtonComponent {
-  @Prop params: Params;
-  @State bkColor: Color = Color.Red;
-
-  build() {
-    Column() {
-      Button(this.params.text)
-        .height(50)
-        .width(200)
-        .border({ width: 2, color: Color.Red })
-        .backgroundColor(this.bkColor)
-    }
-    .width(this.params.width)
-    .height(this.params.height)
-  }
-}
-
-@Builder
-function ButtonBuilder(params: Params) {
-  ButtonComponent({ params: params })
-    .backgroundColor(Color.Green)
-}
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  private nodeController: MyNodeController = new MyNodeController();
-  uiContext: UIContext = this.getUIContext();
-
-  build() {
-    Column() {
-      Stack() {
-        NodeContainer(this.nodeController)
-        Web({ src: $rawfile('index.html'), controller: this.controller })
-           // Enable same-layer rendering.
-          .enableNativeEmbedMode(true)
-           // Register the same-layer tag of <object> and type of "native."
-          .registerNativeEmbedRule("object", "native")
-           // Obtain the lifecycle change data of the <object> tag.
-          .onNativeEmbedLifecycleChange((object) => {
-            if (object.status == NativeEmbedStatus.CREATE) {
-              this.nodeController.setRenderOption({
-                surfaceId: object.surfaceId as string,
-                renderType: NodeRenderType.RENDER_TYPE_TEXTURE,
-                width: this.uiContext!.px2vp(object.info?.width),
-                height: this.uiContext!.px2vp(object.info?.height)
-              });
-              this.nodeController.rebuild();
-            }
-          })
-      }
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Same-Layer Rendering Test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<div>
-    <div id="bodyId">
-        <object id="nativeButton" type ="native/button" width="300" height="300" style="background-color:red">
-        </object>
-    </div>
-</div>
-</body>
-</html>
-```
-
 ## rotateRenderEffect
 
 ```TypeScript
@@ -9885,8 +3160,6 @@ Sets how the final state of the **Web** component's content is rendered during i
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -9894,41 +3167,6 @@ Sets how the final state of the **Web** component's content is rendered during i
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | effect | [WebRotateEffect](arkts-arkweb-webrotateeffect-e.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State effect: WebRotateEffect = WebRotateEffect.TOPLEFT_EFFECT;
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .rotateRenderEffect(this.effect)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Test Web Page</title>
-</head>
-<body>
-  <p>Test Web Page</p>
-</body>
-</html>
-```
 
 ## runJavaScriptOnDocumentEnd
 
@@ -9947,8 +3185,6 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -9956,52 +3192,6 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController();
-  private jsStr: string =
-    "window.document.getElementById(\"result\").innerHTML = 'this is msg from runJavaScriptOnDocumentEnd'";
-  private jsStr2: string = "console.info('runJavaScriptOnDocumentEnd urlRegexRules Matching succeeded.')";
-  @State scripts: Array<ScriptItem> = [
-    { script: this.jsStr, scriptRules: ["*"] },
-    { script: this.jsStr2, scriptRules: [], urlRegexRules: [{secondLevelDomain: "", rule: ".*index.html"}] }
-  ];
-
-  build() {
-    Column({ space: 20 }) {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-        .domStorageAccess(true)
-        .backgroundColor(Color.Grey)
-        .runJavaScriptOnDocumentEnd(this.scripts)
-        .width('100%')
-        .height('100%')
-    }
-  }
-}
-```
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-</head>
-<body style="font-size: 30px;">
-Hello world!
-<div id="result">test msg</div>
-</body>
-</html>
-```
 
 ## runJavaScriptOnDocumentStart
 
@@ -10019,8 +3209,6 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 > or notification, and the **scriptRules** from the first injection are used.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -10045,8 +3233,6 @@ Injects a JavaScript script into the **Web** component. When the **head** tag of
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -10054,52 +3240,6 @@ Injects a JavaScript script into the **Web** component. When the **head** tag of
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct Index {
-  controller: webview.WebviewController = new webview.WebviewController();
-  private jsStr: string =
-    "window.document.getElementById(\"result\").innerHTML = 'this is msg from runJavaScriptOnHeadEnd'";
-  private jsStr2: string = "console.info('runJavaScriptOnHeadEnd urlRegexRules Matching succeeded.')";
-  @State scripts: Array<ScriptItem> = [
-    { script: this.jsStr, scriptRules: ["*"] },
-    { script: this.jsStr2, scriptRules: [], urlRegexRules: [{secondLevelDomain: "", rule: ".*index.html"}] }
-  ];
-
-  build() {
-    Column({ space: 20 }) {
-      Web({ src: $rawfile('index.html'), controller: this.controller })
-        .javaScriptAccess(true)
-        .domStorageAccess(true)
-        .backgroundColor(Color.Grey)
-        .runJavaScriptOnHeadEnd(this.scripts)
-        .width('100%')
-        .height('100%')
-    }
-  }
-}
-```
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-</head>
-<body style="font-size: 30px;">
-Hello world!
-<div id="result">test msg</div>
-</body>
-</html>
-```
 
 ## scrollbarLayoutPolicy
 
@@ -10110,8 +3250,6 @@ scrollbarLayoutPolicy(policy: ScrollbarLayoutPolicy)
 Selects the layout mode of the vertical scrollbar within the **Web** component, used to adapt to the writing direction of different languages. The **CONTENT** mode is suitable for scenarios where the web page CSS **direction** attribute needs to be followed, while the **SYSTEM** mode is suitable for scenarios in multilingual apps where the system language direction needs to be followed, such as for right-to-left languages like Arabic and Hebrew.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -10136,8 +3274,6 @@ Sets the extended options of the custom context menu on selection, including the
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Deprecated since:** 20
 
 **Substitutes:** editMenuOptions
@@ -10150,50 +3286,6 @@ Sets the extended options of the custom context menu on selection, including the
 | --- | --- | --- |
 | [expandedMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Array&lt;[ExpandedMenuItemOptions](arkts-arkweb-expandedmenuitemoptions-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State menuOptionArray: Array<ExpandedMenuItemOptions> = [
-    {content: 'Apple', startIcon: $r('app.media.icon'), action: (selectedText) => {
-      console.info('select info ' + selectedText.toString());
-    }},
-    {content: 'Banana', startIcon: $r('app.media.icon'), action: (selectedText) => {
-      console.info('select info ' + selectedText.toString());
-    }}
-  ];
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-      .selectionMenuOptions(this.menuOptionArray)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Test Web Page</title>
-</head>
-<body>
-  <h1>selectionMenuOptions Demo</h1>
-  <span>selection menu options</span>
-</body>
-</html>
-```
-
 ## tableData
 
 ```TypeScript
@@ -10203,8 +3295,6 @@ tableData(tableData: boolean)
 Sets whether to save form data. When this attribute is not explicitly called, the **Web** component is allowed to save form data by default. This API is an empty API.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -10236,8 +3326,6 @@ Sets whether to enable automatic font sizing for the **Web** component. When no 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -10248,26 +3336,6 @@ Sets whether to enable automatic font sizing for the **Web** component. When no 
 | --- | --- | --- |
 | [textAutosizing](#textautosizing) | boolean | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .textAutosizing(false)
-    }
-  }
-}
-```
-
 ## textZoomAtio
 
 ```TypeScript
@@ -10277,8 +3345,6 @@ textZoomAtio(textZoomAtio: number)
 Sets the text zoom ratio of the page.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -10292,24 +3358,6 @@ Sets the text zoom ratio of the page.
 | --- | --- | --- |
 | [textZoomAtio](#textzoomatio) | number | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct WebComponent {
-  controller: WebController = new WebController()
-  @State ratio: number = 150
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .textZoomAtio(this.ratio)
-    }
-  }
-}
-```
-
 ## textZoomRatio
 
 ```TypeScript
@@ -10319,8 +3367,6 @@ textZoomRatio(textZoomRatio: number)
 Sets the text zoom ratio of the page. When this attribute is not explicitly called, the default zoom ratio is 100%.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -10332,27 +3378,6 @@ Sets the text zoom ratio of the page. When this attribute is not explicitly call
 | --- | --- | --- |
 | [textZoomRatio](#textzoomratio) | number | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State ratio: number = 150;
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .textZoomRatio(this.ratio)
-    }
-  }
-}
-```
-
 ## userAgent
 
 ```TypeScript
@@ -10362,8 +3387,6 @@ userAgent(userAgent: string)
 Sets the user agent.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -10376,27 +3399,6 @@ Sets the user agent.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [userAgent](#useragent) | string | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State userAgent:string = 'Mozilla/5.0 (Phone; OpenHarmony 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 ArkWeb/4.1.6.1 Mobile DemoApp';
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .userAgent(this.userAgent)
-    }
-  }
-}
-```
 
 ## verticalScrollBarAccess
 
@@ -10414,8 +3416,6 @@ Sets whether to display the vertical scrollbar, including the system default scr
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -10425,70 +3425,6 @@ Sets whether to display the vertical scrollbar, including the system default scr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | verticalScrollBar | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State isShow: boolean = true;
-  @State btnMsg: string ="Hide the scrollbar";
-
-  build() {
-    Column() {
-      // If an @State decorated variable is used to control the vertical scrollbar visibility, controller.refresh() must be called for the settings to take effect.
-      Button(this.btnMsg)
-        .onClick(() => {
-          if(this.isShow){
-            this.isShow = false;
-            this.btnMsg="Display the scrollbar";
-          }else{
-            this.isShow = true;
-            this.btnMsg="Hide the scrollbar";
-          }
-          try {
-            this.controller.refresh();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        }).height("10%").width("40%")
-      Web({ src: $rawfile('index.html'), controller: this.controller }).height("90%")
-        .verticalScrollBarAccess(this.isShow)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Demo</title>
-    <style>
-        body {
-          width:3000px;
-          height:6000px;
-          padding-right:170px;
-          padding-left:170px;
-          border:5px solid blueviolet;
-        }
-    </style>
-</head>
-<body>
-Scroll Test
-</body>
-</html>
-```
 
 ## webCursiveFont
 
@@ -10500,8 +3436,6 @@ Sets the cursive font family of the web page to render HTML elements that use th
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -10511,27 +3445,6 @@ Sets the cursive font family of the web page to render HTML elements that use th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | family | string | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State family: string = "cursive";
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .webCursiveFont(this.family)
-    }
-  }
-}
-```
 
 ## webFantasyFont
 
@@ -10543,8 +3456,6 @@ Sets the fantasy font family of the web page to render HTML elements that use th
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -10554,26 +3465,6 @@ Sets the fantasy font family of the web page to render HTML elements that use th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | family | string | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State family: string = "fantasy";
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .webFantasyFont(this.family)
-    }
-  }
-}
-```
 
 ## webFixedFont
 
@@ -10585,8 +3476,6 @@ Sets the fixed font family of the web page to render HTML elements that use the 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -10596,27 +3485,6 @@ Sets the fixed font family of the web page to render HTML elements that use the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | family | string | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State family: string = "monospace";
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .webFixedFont(this.family)
-    }
-  }
-}
-```
 
 ## webSansSerifFont
 
@@ -10628,8 +3496,6 @@ Sets the sans-serif font family of the web page to render HTML elements that use
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -10639,27 +3505,6 @@ Sets the sans-serif font family of the web page to render HTML elements that use
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | family | string | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State family: string = "sans-serif";
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .webSansSerifFont(this.family)
-    }
-  }
-}
-```
 
 ## webSerifFont
 
@@ -10671,8 +3516,6 @@ Sets the serif font family of the web page to render HTML elements that use the 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -10682,27 +3525,6 @@ Sets the serif font family of the web page to render HTML elements that use the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | family | string | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State family: string = "serif";
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .webSerifFont(this.family)
-    }
-  }
-}
-```
 
 ## webStandardFont
 
@@ -10714,8 +3536,6 @@ Sets the standard font family of the web page to render HTML elements whose font
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -10726,27 +3546,6 @@ Sets the standard font family of the web page to render HTML elements whose font
 | --- | --- | --- |
 | family | string | Yes |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State family: string = "sans-serif";
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .webStandardFont(this.family)
-    }
-  }
-}
-```
-
 ## wideViewModeAccess
 
 ```TypeScript
@@ -10756,8 +3555,6 @@ wideViewModeAccess(wideViewModeAccess: boolean)
 Sets whether to support the **viewport** attribute of the HTML **\&lt;meta&gt;** tag. This API is an empty API.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -10781,8 +3578,6 @@ Sets whether to support zoom gestures. If this attribute is not explicitly calle
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -10792,26 +3587,6 @@ Sets whether to support zoom gestures. If this attribute is not explicitly calle
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [zoomAccess](#zoomaccess) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-        .zoomAccess(true)
-    }
-  }
-}
-```
 
 ## zoomControlAccess
 
@@ -10823,8 +3598,6 @@ Sets whether to allow zooming by pressing **Ctrl + '-/+'** or **Ctrl** + mouse w
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -10832,40 +3605,3 @@ Sets whether to allow zooming by pressing **Ctrl + '-/+'** or **Ctrl** + mouse w
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [zoomControlAccess](#zoomcontrolaccess) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Web({ src: $rawfile("index.html"), controller: this.controller })
-        .zoomControlAccess(true)
-    }
-  }
-}
-```
-
-HTML file to be loaded:
-
-```TypeScript
-<!--index.html-->
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Web Page</title>
-</head>
-<body>
-  <h1>zoomControlAccess Demo</h1>
-  <span>You can zoom in/out page when zoomControlAccess is true.</span>
-</body>
-</html>
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## createConnection
@@ -15,8 +15,6 @@ function createConnection(deviceId: string, name: string): Connection
 作为客户端的设备创建连接对象。创建Connection对象后，订阅on('connectResult')，然后调用connect()方法向服务端设备发起连接，连接成功后，可通过sendData()发送数据，当连接不需要使用，可调用 close()销毁连接对象释放资源。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -44,24 +42,3 @@ function createConnection(deviceId: string, name: string): Connection
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [32390206](../errorcode-link-enhance.md#32390206-参数非法) |
-
-**示例**
-
-在客户端设备上，应用需要主动调用createConnection()接口创建连接对象。
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55"; // BLE MAC地址，需通过蓝牙扫描获取，详见参数说明
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```

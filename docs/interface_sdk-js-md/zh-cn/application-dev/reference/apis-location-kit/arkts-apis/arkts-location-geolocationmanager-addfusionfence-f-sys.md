@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## addFusionFence
@@ -15,8 +15,6 @@ function addFusionFence(fenceRequestParams: FusionFenceRequestParams): Promise<v
 添加一个融合围栏，并订阅围栏事件。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **需要权限：** ohos.permission.LOCATION
 

@@ -4,20 +4,18 @@ Defines the size limit of a component screenshot.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'kits/@kit.ArkUI';
 ```
 
 ## maxHeight
 
 ```TypeScript
-maxHeight: int
+maxHeight: number
 ```
 
 Maximum height of a component screenshot.Value range: (-∞, +∞)Unit: px.
@@ -25,8 +23,6 @@ Maximum height of a component screenshot.Value range: (-∞, +∞)Unit: px.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,7 +33,7 @@ Maximum height of a component screenshot.Value range: (-∞, +∞)Unit: px.
 ## maxWidth
 
 ```TypeScript
-maxWidth: int
+maxWidth: number
 ```
 
 Maximum width of a component screenshot.Value range: (-∞, +∞)Unit: px.
@@ -45,8 +41,6 @@ Maximum width of a component screenshot.Value range: (-∞, +∞)Unit: px.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

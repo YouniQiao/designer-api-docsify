@@ -1,7 +1,5 @@
 # Array
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -17,8 +15,6 @@ flat<A, D extends number = 1>(
 ```
 
 Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -41,8 +37,6 @@ flatMap<U, This = undefined> (
 ```
 
 Calls a defined callback function on each element of an array. Then, flattens the result into a new array. This is identical to a map followed by flat with depth 1.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

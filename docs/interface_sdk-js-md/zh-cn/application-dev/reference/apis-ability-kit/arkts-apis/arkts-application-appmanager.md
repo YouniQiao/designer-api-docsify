@@ -4,8 +4,6 @@ appManager模块提供应用管理的能力，包括查询当前系统是否处�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [appManager/appManager](arkts-app-ability-appmanager.md)

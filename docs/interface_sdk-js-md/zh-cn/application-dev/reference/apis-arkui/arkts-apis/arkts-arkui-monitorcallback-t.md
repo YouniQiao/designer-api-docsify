@@ -1,16 +1,16 @@
 # MonitorCallback
 
 ```TypeScript
-export type MonitorCallback = (iMonitor: IMonitor) => void
+export declare type MonitorCallback = (monitorValue: IMonitor) => void
 ```
 
-触发监听时被调用的回调函数。
+参数为[IMonitor](../arkts-components/arkts-arkui-imonitor-i.md)类型的监听回调函数。
 
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
+**起始版本：** 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,4 +18,4 @@ export type MonitorCallback = (iMonitor: IMonitor) => void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| iMonitor | [IMonitor](arkts-arkui-decorator-imonitor-i.md) | 是 |
+| monitorValue | [IMonitor](../arkts-components/arkts-arkui-imonitor-i.md) | 是 |

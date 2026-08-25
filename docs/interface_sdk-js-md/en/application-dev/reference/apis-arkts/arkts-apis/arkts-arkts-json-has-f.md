@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from '@kit.ArkTS';
+import { JSON } from 'kits/@kit.ArkTS';
 ```
 
 ## has
@@ -15,8 +15,6 @@ function has(obj: object, property: string): boolean
 Checks whether an ArkTS object contains a key. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,15 +32,3 @@ Checks whether an ArkTS object contains a key. This API can be used for related 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { JSON } from '@kit.ArkTS';
-
-const jsonText = '{"name": "John", "age": 30, "city": "ChongQing"}';
-let inputObj = JSON.parse(jsonText);
-let result = JSON.has(inputObj, "name");
-console.info("result = " + result);
-// Output: result = true
-```

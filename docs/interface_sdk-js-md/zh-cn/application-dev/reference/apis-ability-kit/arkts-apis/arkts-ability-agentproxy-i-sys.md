@@ -4,8 +4,6 @@ AgentExtensionAbility的代理对象，用于向AgentExtensionAbility等发送�
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ authorize(handshakeData: string): void
 向AgentExtensionAbility发送鉴权。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ sendData(data: string): void
 向AgentExtensionAbility发送数据。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## condition
@@ -27,8 +25,6 @@ condition?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -46,8 +42,6 @@ domain: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ names: string[]
 **类型：** string[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

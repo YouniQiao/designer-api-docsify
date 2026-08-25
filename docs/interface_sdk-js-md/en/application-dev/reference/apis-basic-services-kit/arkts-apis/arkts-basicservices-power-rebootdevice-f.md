@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## rebootDevice
@@ -15,8 +15,6 @@ function rebootDevice(reason: string): void
 Restarts the system.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -31,9 +29,3 @@ Restarts the system.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | reason | string | Yes |
-
-**Examples**
-
-```TypeScript
-power.rebootDevice('reboot_test');
-```

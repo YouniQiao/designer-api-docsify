@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## CURSOR_FIELD
@@ -17,8 +15,6 @@ CURSOR_FIELD = '#_cursor'
 用于cursor查找的字段名。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -32,8 +28,6 @@ ORIGIN_FIELD = '#_origin'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## DELETED_FLAG_FIELD
@@ -45,8 +39,6 @@ DELETED_FLAG_FIELD = '#_deleted_flag'
 用于cursor查找的结果集返回时填充的字段，表示云端删除的数据同步到本地后数据是否清理。返回的结果集中，该字段对应的value为false表示数据未清理，true表示数据已清理。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -60,8 +52,6 @@ DATA_STATUS_FIELD = '#_data_status'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## OWNER_FIELD
@@ -73,8 +63,6 @@ OWNER_FIELD = '#_cloud_owner'
 用于共享表中查找owner时，返回的结果集中填充的字段，表示当前共享记录的共享发起者。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -88,8 +76,6 @@ PRIVILEGE_FIELD = '#_cloud_privilege'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## SHARING_RESOURCE_FIELD
@@ -101,7 +87,5 @@ SHARING_RESOURCE_FIELD = '#_sharing_resource_field'
 用于数据共享查找共享数据的共享资源时，返回的结果集中填充的字段，表示共享数据的共享资源标识。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client

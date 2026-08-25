@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## updateSession
@@ -16,8 +16,6 @@ updateSession操作密钥接口。使用callback异步回调。huks.initSession�
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Core
@@ -26,7 +24,7 @@ updateSession操作密钥接口。使用callback异步回调。huks.initSession�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handle | long | 是 |
+| handle | number | 是 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 |
 
@@ -71,8 +69,6 @@ Updates the key operation by segment. This API uses an asynchronous callback to 
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -81,7 +77,7 @@ Updates the key operation by segment. This API uses an asynchronous callback to 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handle | long | 是 |
+| handle | number | 是 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
 | token | Uint8Array | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 |
@@ -118,8 +114,6 @@ updateSession操作密钥接口。使用Promise异步回调。huks.initSession�
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -128,7 +122,7 @@ updateSession操作密钥接口。使用Promise异步回调。huks.initSession�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handle | long | 是 |
+| handle | number | 是 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
 | token | Uint8Array | 否 |
 

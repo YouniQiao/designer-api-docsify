@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0
 默认值，图片内容复杂度未知。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -36,8 +32,6 @@ PURE_PICTURE = 1
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ MODERATE_COMPLEXITY_PICTURE = 2
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ VERY_FLOWERY_PICTURE = 3
 图片内容复杂度为复杂。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

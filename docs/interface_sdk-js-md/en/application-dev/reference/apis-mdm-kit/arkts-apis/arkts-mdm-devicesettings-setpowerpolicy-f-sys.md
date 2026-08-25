@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## setPowerPolicy
@@ -15,8 +15,6 @@ function setPowerPolicy(admin: Want, powerScene: PowerScene, powerPolicy: PowerP
 Sets the power policy.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -47,26 +45,3 @@ Sets the power policy.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let delayTime = 0;
-  let powerScene: deviceSettings.PowerScene = deviceSettings.PowerScene.TIME_OUT;
-  let powerPolicyAction: deviceSettings.PowerPolicyAction = deviceSettings.PowerPolicyAction.AUTO_SUSPEND;
-  let powerPolicy: deviceSettings.PowerPolicy = {powerPolicyAction, delayTime};
-  deviceSettings.setPowerPolicy(wantTemp, powerScene, powerPolicy);
-  console.info(`Succeeded in setting power policy`);
-} catch (err) {
-  console.error(`Failed to set power policy. Code: ${err.code}, message: ${err.message}`);
-}
-```

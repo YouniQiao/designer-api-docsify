@@ -4,8 +4,6 @@ The **NotificationSlot** module provides APIs for defining the notification slot
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## badgeFlag
@@ -15,13 +13,12 @@ badgeFlag?: boolean
 ```
 
 Whether to display the badge. The default value is **true**.  
-- **true**: Display the badge. - **false**: Do not display the badge.
+- **true**: Display the badge.  
+- **false**: Do not display the badge.
 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,13 +29,12 @@ bypassDnd?: boolean
 ```
 
 Whether to bypass Do Not Disturb mode in the system. The default value is **false**.  
-- **true**: Bypass Do Not Disturb mode, and notifications will still be alerted in Do Not Disturb mode. - **false**: Do not bypass Do Not Disturb mode, and notifications will not be alerted in Do Not Disturb mode.
+- **true**: Bypass Do Not Disturb mode, and notifications will still be alerted in Do Not Disturb mode.  
+- **false**: Do not bypass Do Not Disturb mode, and notifications will not be alerted in Do Not Disturb mode.
 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -54,8 +50,6 @@ Description of the notification channel. The size cannot exceed 243 bytes, and t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## enabled
@@ -65,13 +59,12 @@ readonly enabled?: boolean
 ```
 
 Whether to allow notifications of this slot type to be published.  
-- **true**: yes. - **false**: no.
+- **true**: yes.  
+- **false**: no.
 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -87,8 +80,6 @@ Notification level.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 20
 
 **Substitutes:** [notificationLevel](#notificationlevel)
@@ -98,16 +89,14 @@ Notification level.
 ## lightColor
 
 ```TypeScript
-lightColor?: int
+lightColor?: number
 ```
 
 Indicator color of the notification. This is a reserved capability and is not supported currently.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -118,29 +107,26 @@ lightEnabled?: boolean
 ```
 
 Whether to enable the light. The default value is **false**.  
-- **true**: yes. - **false**: no.
+- **true**: yes.  
+- **false**: no.
 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## lockscreenVisibility
 
 ```TypeScript
-lockscreenVisibility?: int
+lockscreenVisibility?: number
 ```
 
 Mode for displaying the notification on the lock screen. This is a reserved capability and is not supported currently.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -156,8 +142,6 @@ Notification level, which is used to describe the display priority and alert int
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## notificationType
@@ -171,8 +155,6 @@ Slot type. Different slot types have different notification reminder types.
 **Type:** notificationManager.SlotType
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -188,8 +170,6 @@ File name of the custom ringtone for notifications from this channel. The file i
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## type
@@ -204,8 +184,6 @@ Channel type.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **Substitutes:** [notificationType](#notificationtype)
@@ -219,28 +197,25 @@ vibrationEnabled?: boolean
 ```
 
 Whether to enable vibration. The default value is **false**.  
-- **true**: yes. - **false**: no.
+- **true**: yes.  
+- **false**: no.
 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## vibrationValues
 
 ```TypeScript
-vibrationValues?: Array<long>
+vibrationValues?: Array<number>
 ```
 
 Vibration mode of the notification. This is a reserved capability and is not supported currently.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

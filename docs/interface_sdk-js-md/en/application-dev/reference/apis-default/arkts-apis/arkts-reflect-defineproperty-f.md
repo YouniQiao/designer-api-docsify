@@ -13,8 +13,6 @@ function defineProperty(target: object, propertyKey: PropertyKey, attributes: Pr
 
 Adds a property to an object, or modifies attributes of an existing property.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |

@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ blockBorderColor(value: ResourceColor)
 设置滑块描边颜色。当滑块形状设置为SliderBlockType.DEFAULT时，blockBorderColor可设置默认圆形滑块描边颜色。当滑块形状设置为SliderBlockType.IMAGE时，滑块无描边，设置blockBorderColor不生效。当滑块形状设置为SliderBlockType.SHAPE时，blockBorderColor可设置自定义形状中线的颜色。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +45,6 @@ blockBorderWidth(value: Length)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -72,8 +66,6 @@ blockColor(value: ResourceColor)
 设置滑块的颜色。当滑块形状设置为SliderBlockType.DEFAULT时，blockColor可设置默认圆形滑块颜色。当滑块形状设置为SliderBlockType.IMAGE时，滑块无填充，设置blockColor不生效。当滑块形状设置为SliderBlockType.SHAPE时，blockColor可设置自定义形状的填充颜色。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -97,8 +89,6 @@ blockColor(value: ResourceColor | LinearGradient)
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -111,7 +101,7 @@ blockColor(value: ResourceColor | LinearGradient)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 |
 
 ## blockSize
 
@@ -123,8 +113,6 @@ blockSize(value: SizeOptions)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -135,7 +123,7 @@ blockSize(value: SizeOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md) | 是 |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |
 
 ## blockStyle
 
@@ -146,8 +134,6 @@ blockStyle(value: SliderBlockStyle)
 设置滑块形状参数。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -171,8 +157,6 @@ contentModifier(modifier: ContentModifier<SliderConfiguration>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -183,7 +167,7 @@ contentModifier(modifier: ContentModifier<SliderConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[SliderConfiguration](arkts-arkui-sliderconfiguration-i.md)&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[SliderConfiguration](arkts-arkui-sliderconfiguration-i.md)&gt; | 是 |
 
 ## digitalCrownSensitivity
 
@@ -198,8 +182,6 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -210,7 +192,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sensitivity | Optional & lt;CrownSensitivity & gt; | 是 |
+| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
 
 ## enableHapticFeedback
 
@@ -221,8 +203,6 @@ enableHapticFeedback(enabled: boolean)
 设置是否开启触控反馈。开启触控反馈时，需要在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配置如 下：
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -249,8 +229,6 @@ maxLabel(value: string)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** max
@@ -276,8 +254,6 @@ minLabel(value: string)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** min
@@ -299,8 +275,6 @@ minResponsiveDistance(value: number)
 设置滑块开始滑动的最小响应距离。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -324,8 +298,6 @@ Slider拖动或点击时触发事件回调。Begin和End状态在点击时触发
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -347,8 +319,6 @@ prefix(content: ComponentContent, options?: SliderPrefixOptions)
 设置滑动条的前缀。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -373,8 +343,6 @@ selectedBorderRadius(value: Dimension)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -396,8 +364,6 @@ selectedColor(value: ResourceColor)
 设置滑轨的已滑动部分颜色。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -421,8 +387,6 @@ selectedColor(selectedColor: ResourceColor | LinearGradient)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -435,7 +399,7 @@ selectedColor(selectedColor: ResourceColor | LinearGradient)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [selectedColor](#selectedcolor) | ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 |
+| [selectedColor](#selectedcolor) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 |
 
 ## showSteps
 
@@ -446,8 +410,6 @@ showSteps(value: boolean)
 设置是否显示步长刻度值。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -470,8 +432,6 @@ showSteps(value: boolean, options?: SliderShowStepOptions)
 设置当前是否显示步长刻度值。支持设置每个刻度点的无障碍文本信息，不设置时默认使用当前刻度点的值作为无障碍文本信息。当显示步长时，设置的刻度点无障碍文本信息生效。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -498,8 +458,6 @@ showTips(value: boolean, content?: ResourceStr)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -523,8 +481,6 @@ slideRange(value: SlideRange)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -546,8 +502,6 @@ sliderInteractionMode(value: SliderInteraction)
 设置用户与滑动条组件交互方式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -571,8 +525,6 @@ stepColor(value: ResourceColor)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -595,8 +547,6 @@ stepSize(value: Length)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -618,8 +568,6 @@ suffix(content: ComponentContent, options?: SliderSuffixOptions)
 设置滑动条的后缀。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -644,8 +592,6 @@ trackBorderRadius(value: Length)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -668,8 +614,6 @@ trackColor(value: ResourceColor | LinearGradient)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -680,7 +624,7 @@ trackColor(value: ResourceColor | LinearGradient)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | 是 |
 
 ## trackColorMetrics
 
@@ -691,8 +635,6 @@ trackColorMetrics(color: ColorMetricsLinearGradient)
 设置滑轨轨道的线性渐变背景颜色。与trackColorMetrics相比，使用ColorMetricsLinearGradient类型支持指定色域的渐变。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -715,8 +657,6 @@ trackThickness(value: Length)
 设置滑轨的粗细。设置小于等于0的值时，取默认值。为保证滑块和滑轨的[SliderStyle](arkts-arkui-sliderstyle-e.md)样式，[blockSize](#blocksize)跟随trackThickness同比例增减。当style为[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet时，trackThickness ：[blockSize](#blocksize) = 1 ： 4，当style为[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet时，trackThickness ：[blockSize](#blocksize) = 5 ： 3。trackThickness或[blockSize](#blocksize)的大小超过Slider组件的宽度或高度时，取默认值。当[SliderStyle](arkts-arkui-sliderstyle-e.md)设置为OutSet时，尽管trackThickness的大小没超过Slider组件的宽度或高度，但是 [blockSize](#blocksize)超过了，取默认值。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -4,8 +4,6 @@ Enumerates the metered network rules.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ NET_RULE_NONE = 0
 Default rule.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -36,8 +32,6 @@ Applications running in the foreground are allowed to access a metered network.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ NET_RULE_ALLOW_METERED = 1 << 1
 Applications are allowed to access a metered network.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -68,8 +60,6 @@ Applications are not allowed to access a metered network.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -84,8 +74,6 @@ Applications are allowed to access all networks (metered or non-metered).
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -99,8 +87,6 @@ NET_RULE_REJECT_ALL = 1 << 6
 Applications are not allowed to access any networks (metered or non-metered).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

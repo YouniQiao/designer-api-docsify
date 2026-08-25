@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## closeUnfinishedUssd
 
 ```TypeScript
-function closeUnfinishedUssd(slotId: int, callback: AsyncCallback<void>): void
+function closeUnfinishedUssd(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 取消未激活完成的非结构化补充数据业务。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function closeUnfinishedUssd(slotId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -43,44 +41,16 @@ function closeUnfinishedUssd(slotId: int, callback: AsyncCallback<void>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.closeUnfinishedUssd(slotId, (err: BusinessError) => {
-    if (err) {
-        console.error(`closeUnfinishedUssd fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`closeUnfinishedUssd success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.closeUnfinishedUssd(slotId).then(() => {
-    console.info(`closeUnfinishedUssd success.`);
-}).catch((err: BusinessError) => {
-    console.error(`closeUnfinishedUssd fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## closeUnfinishedUssd
 
 ```TypeScript
-function closeUnfinishedUssd(slotId: int): Promise<void>
+function closeUnfinishedUssd(slotId: number): Promise<void>
 ```
 
 取消未激活完成的非结构化补充数据业务。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -92,7 +62,7 @@ function closeUnfinishedUssd(slotId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -111,7 +81,3 @@ function closeUnfinishedUssd(slotId: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [closeUnfinishedUssd](#closeunfinishedussd)

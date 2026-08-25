@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from 'kits/@kit.ArkTS';
 ```
 
 ## [[Call]]
@@ -28,8 +26,6 @@ import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, E
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** ohos.worker.WorkerEventListener.(event: Event)
@@ -41,15 +37,3 @@ import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, E
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | evt | [Event](arkts-arkts-worker-event-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.addEventListener("alert", ()=>{
-    console.info("alert listener callback");
-})
-```

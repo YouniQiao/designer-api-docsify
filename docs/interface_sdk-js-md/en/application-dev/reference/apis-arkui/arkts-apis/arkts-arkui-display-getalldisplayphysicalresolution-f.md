@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## getAllDisplayPhysicalResolution
@@ -15,8 +15,6 @@ function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolut
 Obtains all the display modes supported by the current device, along with the physical screen resolutions for each mode. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,22 +31,3 @@ Obtains all the display modes supported by the current device, along with the ph
 | Error Code ID |
 | --- |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let promise = display.getAllDisplayPhysicalResolution();
-promise.then((resolutionObjects) => {
-  console.info('Obtaining physical resolution length: ' + resolutionObjects.length);
-  for (let i = 0; i < resolutionObjects.length; i++) {
-     console.info(`resolutionObjects[${i}].foldDisplayMode: ${resolutionObjects[i].foldDisplayMode}`);
-     console.info(`resolutionObjects[${i}].physicalWidth: ${resolutionObjects[i].physicalWidth}`); 
-     console.info(`resolutionObjects[${i}].physicalHeight: ${resolutionObjects[i].physicalHeight}`); 
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain physical resolution. Code: ${err.code}, message: ${err.message}`);
-});
-```

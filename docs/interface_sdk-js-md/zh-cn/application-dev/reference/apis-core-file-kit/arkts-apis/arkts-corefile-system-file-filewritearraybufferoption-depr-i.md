@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
@@ -25,8 +23,6 @@ complete?: () => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
@@ -40,8 +36,6 @@ fail?: (data: string, code: number) => void
 接口调用失败的回调函数。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 
@@ -64,8 +58,6 @@ success?: () => void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
@@ -81,8 +73,6 @@ append?: boolean
 **类型：** boolean
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 
@@ -100,8 +90,6 @@ buffer: Uint8Array
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
@@ -117,8 +105,6 @@ position?: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 
@@ -137,8 +123,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 

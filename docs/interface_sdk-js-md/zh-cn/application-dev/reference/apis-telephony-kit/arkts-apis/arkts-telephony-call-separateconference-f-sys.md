@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## separateConference
 
 ```TypeScript
-function separateConference(callId: int, callback: AsyncCallback<void>): void
+function separateConference(callId: number, callback: AsyncCallback<void>): void
 ```
 
 分离会议电话。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function separateConference(callId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -44,42 +42,16 @@ function separateConference(callId: int, callback: AsyncCallback<void>): void
 | 8300008 |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.separateConference(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`separateConference fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`separateConference success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.separateConference(1).then(() => {
-    console.info(`separateConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`separateConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## separateConference
 
 ```TypeScript
-function separateConference(callId: int): Promise<void>
+function separateConference(callId: number): Promise<void>
 ```
 
 分离会议电话。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -91,7 +63,7 @@ function separateConference(callId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 
 **返回值：**
 
@@ -111,7 +83,3 @@ function separateConference(callId: int): Promise<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | 8300008 |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [separateConference](#separateconference)

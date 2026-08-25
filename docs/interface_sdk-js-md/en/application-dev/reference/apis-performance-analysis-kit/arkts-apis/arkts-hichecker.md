@@ -4,14 +4,12 @@ The HiChecker module allows you to check issues that may be easily ignored durin
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from '@kit.PerformanceAnalysisKit';
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

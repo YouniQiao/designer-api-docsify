@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createBrightnessBlender
@@ -15,8 +15,6 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 Creates a BrightnessBlender instance for adding a brightness effect to a component.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -35,11 +33,3 @@ Creates a BrightnessBlender instance for adding a brightness effect to a compone
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) |
-
-**Examples**
-
-```TypeScript
-let blender : uiEffect.BrightnessBlender =
-  uiEffect.createBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
-    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
-```

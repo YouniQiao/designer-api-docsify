@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getPermissionUsedRecordToggleStatus
@@ -15,8 +15,6 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 A system application can call this API to obtain the current user's permission usage record toggle status, for example, to display the current toggle setting status on the permission management interface. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -39,24 +37,6 @@ A system application can call this API to obtain the current user's permission u
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
-**Examples**
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-privacyManager.getPermissionUsedRecordToggleStatus().then((res) => {
-  console.info('getPermissionUsedRecordToggleStatus success');
-  if (res == true) {
-    console.info('get status is TRUE');
-  } else {
-    console.info('get status is FALSE');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getPermissionUsedRecordToggleStatus
 
@@ -67,8 +47,6 @@ function getPermissionUsedRecordToggleStatus(subProfileId: number): Promise<bool
 A system application can call this API to obtain the permission usage record toggle status for a specified sub-profile, for example, to display the current toggle setting status on the permission management interface. This API uses a promise to return the result.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -99,7 +77,3 @@ A system application can call this API to obtain the permission usage record tog
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
-
-**Examples**
-
-See [getPermissionUsedRecordToggleStatus](#getpermissionusedrecordtogglestatus)

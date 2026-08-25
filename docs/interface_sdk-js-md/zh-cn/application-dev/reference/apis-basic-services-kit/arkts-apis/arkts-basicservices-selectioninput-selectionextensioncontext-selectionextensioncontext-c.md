@@ -9,14 +9,12 @@ SelectionExtensionContext是 [SelectionExtensionAbility](arkts-basicservices-sel
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 ## 导入模块
 
 ```TypeScript
-import { SelectionExtensionContext } from '@kit.BasicServicesKit';
+import { SelectionExtensionContext } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## startAbility
@@ -28,8 +26,6 @@ startAbility(want: Want): Promise<void>
 拉起同应用内的目标Ability，适用于在划词扩展场景中需要跳转至应用内其他Ability的情况。系统根据Want对象中指定的bundleName和abilityName匹配并调度启动目标Ability。使用Promise异步回 调。关于Ability启动机制，请参见[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,94 +67,3 @@ startAbility(want: Want): Promise<void>
 | [16000070](../../apis-ability-kit/errorcode-ability.md#16000070-严格模式下不允许该类型extension启动指定serviceextensionability) |
 | [16000083](../../apis-ability-kit/errorcode-ability.md#16000083-不允许该类型extensionability启动指定ability) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { SelectionExtensionAbility, BusinessError } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit';
-import { Want } from '@kit.AbilityKit';
-
-class SelectionAbilityStub extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(
-    code: number,
-    data: rpc.MessageSequence,
-    reply: rpc.MessageSequence,
-    options: rpc.MessageOption
-  ): boolean | Promise<boolean> {
-    console.info(`onRemoteMessageRequest code: ${code}`);
-    return true;
-  }
-}
-
-class SelectionExtAbility extends SelectionExtensionAbility {
-  onConnect(want: Want): rpc.RemoteObject {
-    try {
-      // 构造Want对象，指定要拉起的目标Ability信息
-      let wantAbility: Want = {
-        bundleName: 'com.selection.selectionapplication',
-        abilityName: 'EntryAbility',
-      };
-      // 拉起目标Ability，this.context由SelectionExtensionAbility实例自动提供，无需额外获取
-      this.context.startAbility(wantAbility).then(() => {
-        console.info(`startAbility success`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to startAbility. Error code: ${err.code}, error message: ${err.message}`);
-      });
-    } catch (err) {
-      console.error(`Failed to startAbility. Error code: ${err.code}, error message: ${err.message}`);
-    }
-    return new SelectionAbilityStub('remote');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import SelectionExtensionAbility from '@ohos.selectionInput.SelectionExtensionAbility';
-import rpc from '@ohos.rpc';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class SelectionAbilityStub extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(
-    code: number,
-    data: rpc.MessageSequence,
-    reply: rpc.MessageSequence,
-    options: rpc.MessageOption
-  ): boolean | Promise<boolean> {
-    console.info(`onRemoteMessageRequest code: ${code}`);
-    return true;
-  }
-}
-
-class SelectionExtAbility extends SelectionExtensionAbility {
-  onConnect(want: Want): rpc.RemoteObject {
-    try {
-      // 构造Want对象，指定要拉起的目标Ability信息
-      let wantAbility: Want = {
-        bundleName: "com.selection.selectionapplication",
-        abilityName: "EntryAbility",
-      };
-      // 拉起目标Ability，this.context由SelectionExtensionAbility实例自动提供，无需额外获取
-      this.context.startAbility(wantAbility).then(() => {
-        console.info(`startAbility success`);
-      }).catch((err) => {
-        console.error(`Failed to startAbility. Error code: ${err.code}, error message: ${err.message}`);
-      })
-    } catch (err) {
-      console.error(`Failed to startAbility. Error code: ${err.code}, error message: ${err.message}`);
-    }
-    return new SelectionAbilityStub('remote');
-  }
-}
-```

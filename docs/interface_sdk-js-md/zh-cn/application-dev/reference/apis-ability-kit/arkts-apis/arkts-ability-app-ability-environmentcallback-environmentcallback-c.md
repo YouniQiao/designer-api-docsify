@@ -4,14 +4,12 @@ EnvironmentCallback模块提供对系统环境变化监听回调的能力。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { EnvironmentCallback } from '@kit.AbilityKit';
+import { EnvironmentCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdated
@@ -23,8 +21,6 @@ onConfigurationUpdated(config: Configuration): void
 [注册系统环境变化的监听](arkts-ability-applicationcontext-c.md#onenvironment) 后，在系统环境变化时触发回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,10 +34,6 @@ onConfigurationUpdated(config: Configuration): void
 | --- | --- | --- |
 | config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 |
 
-**示例**
-
-参见EnvironmentCallback使用。
-
 ## onMemoryLevel
 
 ```TypeScript
@@ -51,8 +43,6 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 [注册系统环境变化的监听](arkts-ability-applicationcontext-c.md#onenvironment) 后，在系统内存变化时触发回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,7 +55,3 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | level | AbilityConstant.MemoryLevel | 是 |
-
-**示例**
-
-参见EnvironmentCallback使用。

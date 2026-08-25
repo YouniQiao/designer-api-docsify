@@ -4,8 +4,6 @@ Returns the file read, including the file content.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -26,8 +24,6 @@ Data read.
 **Type:** Uint8Array
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 

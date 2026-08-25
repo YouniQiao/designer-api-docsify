@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getIpv6Info
@@ -15,8 +15,6 @@ function getIpv6Info(): Ipv6Info
 获取WLAN连接的IPv6信息。 IPv6信息包括主机IP地址、网关地址和DNS信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -35,16 +33,3 @@ function getIpv6Info(): Ipv6Info
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let info = wifiManager.getIpv6Info();
-    console.info("info:" + JSON.stringify(info));
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

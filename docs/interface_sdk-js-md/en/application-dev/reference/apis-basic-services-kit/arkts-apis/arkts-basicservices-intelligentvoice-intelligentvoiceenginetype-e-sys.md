@@ -4,8 +4,6 @@ Enumerates intelligent voice engine type. @enum {number}
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ ENROLL_ENGINE_TYPE = 0
 Enroll engine.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -36,8 +32,6 @@ Wakeup engine.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ UPDATE_ENGINE_TYPE = 2
 Update engine.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

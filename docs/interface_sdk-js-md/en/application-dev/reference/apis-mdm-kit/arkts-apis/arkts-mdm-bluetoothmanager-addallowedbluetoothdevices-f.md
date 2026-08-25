@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedBluetoothDevices
@@ -19,8 +19,6 @@ In this case, you can call [setDisallowedPolicy](arkts-mdm-restrictions-setdisal
 You can resolve the conflict by removing disallowed Bluetooth devices through [removeDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-removedisallowedbluetoothdevices-f.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -44,24 +42,3 @@ You can resolve the conflict by removing disallowed Bluetooth devices through [r
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace it as required.
-let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E","AA:BB:CC:DD:EE:FF"];
-try {
-    bluetoothManager.addAllowedBluetoothDevices(wantTemp,deviceIds);
-    console.info(`Succeeded in adding allowed bluetooth devices.`);
-} catch(err) {
-    console.error(`Failed to add allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
-}
-```

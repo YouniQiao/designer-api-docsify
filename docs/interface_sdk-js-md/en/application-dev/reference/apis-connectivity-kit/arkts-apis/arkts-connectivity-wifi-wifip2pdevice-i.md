@@ -4,8 +4,6 @@ P2P device information.@interface WifiP2pDevice
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)
@@ -15,7 +13,7 @@ P2P device information.@interface WifiP2pDevice
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceAddress
@@ -29,8 +27,6 @@ Device mac address
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Device name
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [deviceName](arkts-connectivity-wifimanager-wifip2pdevice-i.md#devicename)
@@ -69,8 +63,6 @@ Device status
 **Type:** P2pDeviceStatus
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Device group capabilities
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** groupCapabilitys
@@ -109,8 +99,6 @@ Primary device type
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

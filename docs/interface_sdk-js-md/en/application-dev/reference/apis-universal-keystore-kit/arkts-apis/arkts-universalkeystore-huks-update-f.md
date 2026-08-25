@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## update
@@ -15,8 +15,6 @@ function update(handle: number, token?: Uint8Array, options: HuksOptions, callba
 Updates the key operation data by segment. This API uses an asynchronous callback to return the result.The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -44,8 +42,6 @@ function update(handle: number, token?: Uint8Array, options: HuksOptions): Promi
 Updates the key operation data by segment. This API uses a promise to return the result.The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

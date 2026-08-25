@@ -4,8 +4,6 @@ Defines the network registration status of the device.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## REG_STATE_NO_SERVICE
@@ -17,8 +15,6 @@ REG_STATE_NO_SERVICE = 0
 The device cannot use any services, including data, SMS, and call services.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -32,8 +28,6 @@ The device can use services properly, including data, SMS, and call services.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## REG_STATE_EMERGENCY_CALL_ONLY
@@ -46,8 +40,6 @@ The device can use only the emergency call service.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## REG_STATE_POWER_OFF
@@ -59,7 +51,5 @@ REG_STATE_POWER_OFF = 3
 The device cannot communicate with the network because the cellular radio service is disabled or the modem is powered off.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService

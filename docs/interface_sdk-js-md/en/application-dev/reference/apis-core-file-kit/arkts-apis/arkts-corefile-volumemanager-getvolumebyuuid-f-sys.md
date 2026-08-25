@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getVolumeByUuid
@@ -15,8 +15,6 @@ function getVolumeByUuid(uuid: string, callback: AsyncCallback<Volume>): void
 Obtains information about a volume based on the UUID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -42,26 +40,6 @@ Obtains information about a volume based on the UUID. This API uses an asynchron
 | 13600008 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let uuid: string = "";
-volumeManager.getVolumeByUuid(uuid).then((volume: volumeManager.Volume) => {
-  console.info("getVolumeByUuid successfully:" + JSON.stringify(volume));
-}).catch((error: BusinessError) => {
-  console.error("getVolumeByUuid failed with error:" + JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let uuid: string = "";
-volumeManager.getVolumeByUuid(uuid, (error: BusinessError, volume: volumeManager.Volume) => {
-  // Do something.   
-});
-```
-
 
 ## getVolumeByUuid
 
@@ -72,8 +50,6 @@ function getVolumeByUuid(uuid: string): Promise<Volume>
 Obtains information about a volume based on the universally unique identifier (UUID). This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -103,7 +79,3 @@ Obtains information about a volume based on the universally unique identifier (U
 | 13600001 |
 | 13600008 |
 | 13900042 |
-
-**Examples**
-
-See [getVolumeByUuid](#getvolumebyuuid)

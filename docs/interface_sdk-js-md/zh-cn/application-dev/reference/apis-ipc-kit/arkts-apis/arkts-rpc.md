@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## 汇总
@@ -47,9 +45,3 @@ import { rpc } from '@kit.IPCKit';
 | --- |
 | [ErrorCode(RPC通信)](arkts-ipc-rpc-errorcode-e.md) |
 | [TypeCode(RPC通信)](arkts-ipc-rpc-typecode-e.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [OnRemoteDiedFunc(RPC通信)](arkts-ipc-rpc-onremotediedfunc-t.md) |

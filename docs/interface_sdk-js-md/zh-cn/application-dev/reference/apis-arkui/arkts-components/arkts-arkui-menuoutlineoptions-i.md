@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ color?: ResourceColor | EdgeColors
 
 设置外描边颜色。默认值：#19ffffff
 
-**类型：** ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md)
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,11 +37,9 @@ width?: Dimension | EdgeOutlineWidths
 
 设置外描边宽度，不支持百分比。默认值：0
 
-**类型：** Dimension \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md)
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

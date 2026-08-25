@@ -4,29 +4,25 @@ Describes a rectangle. The coordinate system for the returned detection points i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
 Height of the rectangle, in the range of [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -35,16 +31,14 @@ Height of the rectangle, in the range of [0, 1].
 ## topLeftX
 
 ```TypeScript
-topLeftX: double
+topLeftX: number
 ```
 
 X coordinate of the top-left corner of the rectangle, in the range of [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -53,16 +47,14 @@ X coordinate of the top-left corner of the rectangle, in the range of [0, 1].
 ## topLeftY
 
 ```TypeScript
-topLeftY: double
+topLeftY: number
 ```
 
 Y coordinate of the top-left corner of the rectangle, in the range of [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -71,16 +63,14 @@ Y coordinate of the top-left corner of the rectangle, in the range of [0, 1].
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
 Width of the rectangle, in the range of [0, 1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

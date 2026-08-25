@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
+import { application } from 'kits/@kit.AbilityKit';
 ```
 
 ## createBundleContext
@@ -21,8 +21,6 @@ export function createBundleContext(context: Context, bundleName: string): Promi
 > 的属性值。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -52,26 +50,3 @@ export function createBundleContext(context: Context, bundleName: string): Promi
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { UIAbility, application, common, Context } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    let moduleContext: common.Context;
-    try {
-      application.createBundleContext(this.context, 'bundlename').then((data: common.Context) => {
-        moduleContext = data;
-        console.info('createBundleContext success!');
-      }).catch((error: Error) => {
-        console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-      })
-    } catch (error) {
-      console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```

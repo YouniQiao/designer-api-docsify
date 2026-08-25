@@ -4,8 +4,6 @@ Callback provided when enabling an accessibility extension app through the [conf
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Callback provided when enabling an accessibility extension app through the [conf
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## onDisconnect
@@ -25,8 +23,6 @@ onDisconnect: OnDisconnectCallback
 Callback invoked when the connection to the accessibility extension app is disconnected.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

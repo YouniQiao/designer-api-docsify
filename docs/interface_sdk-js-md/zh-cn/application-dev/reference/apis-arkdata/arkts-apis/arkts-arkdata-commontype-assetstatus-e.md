@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 ## ASSET_NORMAL
@@ -17,8 +15,6 @@ ASSET_NORMAL
 表示资产状态正常。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
@@ -32,8 +28,6 @@ ASSET_INSERT
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 ## ASSET_UPDATE
@@ -45,8 +39,6 @@ ASSET_UPDATE
 表示资产需要更新到云端。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
@@ -60,8 +52,6 @@ ASSET_DELETE
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 ## ASSET_ABNORMAL
@@ -74,8 +64,6 @@ ASSET_ABNORMAL
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 ## ASSET_DOWNLOADING
@@ -87,7 +75,5 @@ ASSET_DOWNLOADING
 表示资产正在下载到本地设备。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CommonType

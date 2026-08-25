@@ -10,8 +10,6 @@ Battery level of the device.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## batterySOC
@@ -23,8 +21,6 @@ const batterySOC: number
 Battery state of charge (SoC) of the device, in unit of percentage, which ranges from 0 to 100.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,8 +36,6 @@ Battery temperature of the device, in unit of 0.1°C.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## chargingStatus
@@ -53,8 +47,6 @@ const chargingStatus: BatteryChargeState
 Battery charging state of the current device.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -70,8 +62,6 @@ Battery health status of the device.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## isBatteryPresent
@@ -83,8 +73,6 @@ const isBatteryPresent: boolean
 Whether the battery is supported or present. The value **true** means that the battery is supported or present; **false** means the opposite.Default value: **false**.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -98,8 +86,6 @@ Battery current of the device, in unit of mA.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## pluggedType
@@ -111,8 +97,6 @@ const pluggedType: BatteryPluggedType
 Charger type of the device.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -126,8 +110,6 @@ Battery technology of the device.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## voltage
@@ -139,7 +121,5 @@ const voltage: number
 Battery voltage of the device, in unit of microvolt.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

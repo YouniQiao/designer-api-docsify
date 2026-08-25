@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from '@kit.ArkUI';
+import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu, SelectionMenuOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## content
@@ -22,11 +20,9 @@ content?: RichEditorSelection
 
 选中的内容信息，包含选中的文本或图片片段（spans）及选择范围（selection）。
 
-**类型：** [RichEditorSelection](arkts-arkui-richeditor-richeditorselection-i.md)
+**类型：** [RichEditorSelection](../arkts-components/arkts-arkui-richeditorselection-i.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

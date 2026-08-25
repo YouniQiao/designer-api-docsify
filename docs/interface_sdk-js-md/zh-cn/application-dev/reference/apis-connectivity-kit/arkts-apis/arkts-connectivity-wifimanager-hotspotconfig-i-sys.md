@@ -4,8 +4,6 @@ WLAN热点配置信息。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ WLAN热点配置信息。
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## band
 
 ```TypeScript
-band: int
+band: number
 ```
 
 WLAN热点的频段
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -37,16 +33,14 @@ WLAN热点的频段
 ## channel
 
 ```TypeScript
-channel?: int
+channel?: number
 ```
 
 WLAN热点的信道。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -64,8 +58,6 @@ DHCP服务器的IP地址，为字符串形式，例如192.168.43.1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ DHCP服务器的IP地址，为字符串形式，例如192.168.43.1
 ## maxConn
 
 ```TypeScript
-maxConn: int
+maxConn: number
 ```
 
 WLAN热点允许的最大连接数
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -100,8 +90,6 @@ WLAN热点的密码
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -118,8 +106,6 @@ WLAN热点的加密方式
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
 **系统接口：** 此接口为系统接口。
@@ -135,8 +121,6 @@ WLAN热点的SSID
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 

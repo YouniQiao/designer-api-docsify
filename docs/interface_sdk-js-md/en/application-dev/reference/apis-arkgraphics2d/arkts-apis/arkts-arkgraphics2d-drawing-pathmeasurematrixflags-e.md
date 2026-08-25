@@ -4,8 +4,6 @@ Enumerates the dimensions of matrix information in path measurement. It is often
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## GET_POSITION_MATRIX
@@ -17,8 +15,6 @@ GET_POSITION_MATRIX = 0
 Matrix corresponding to the position information.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ Matrix corresponding to the tangent information.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## GET_POSITION_AND_TANGENT_MATRIX
@@ -45,7 +39,5 @@ GET_POSITION_AND_TANGENT_MATRIX = 2
 Matrix corresponding to the position and tangent information.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

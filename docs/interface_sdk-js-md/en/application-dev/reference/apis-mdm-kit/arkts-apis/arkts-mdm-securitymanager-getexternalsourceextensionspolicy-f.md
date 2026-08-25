@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getExternalSourceExtensionsPolicy
@@ -15,8 +15,6 @@ function getExternalSourceExtensionsPolicy(admin: Want): common.ManagedPolicy
 Obtains the management policy for extensions from external sources.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -45,26 +43,6 @@ Obtains the management policy for extensions from external sources.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { common, securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-    let result: common.ManagedPolicy = securityManager.getExternalSourceExtensionsPolicy(wantTemp);
-    console.info(`Succeeded in getting managed policy, result : ${result}`);
-} catch(err) {
-    console.error(`Failed to get managed policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getExternalSourceExtensionsPolicy
 
@@ -75,8 +53,6 @@ function getExternalSourceExtensionsPolicy(admin: Want | null): common.ManagedPo
 Obtains the management policy for extensions from external sources.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -104,7 +80,3 @@ Obtains the management policy for extensions from external sources.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [getExternalSourceExtensionsPolicy](#getexternalsourceextensionspolicy)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## responsiveSpringMotion
@@ -15,8 +15,6 @@ function responsiveSpringMotion(response?: number, dampingFraction?: number, ove
 Creates a responsive spring animation curve. It is a special case of [springMotion](arkts-arkui-curves-springmotion-f.md), with the only difference in the default values. It can be used together with **springMotion**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,11 +32,4 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**Examples**
-
-```TypeScript
-import { curves } from '@kit.ArkUI'
-curves.responsiveSpringMotion() // Create a responsive spring animation curve with default settings.
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

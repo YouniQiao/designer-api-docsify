@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getGeofenceSupportedCoordTypes
@@ -15,8 +15,6 @@ function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>
 Obtains the coordinate system types supported by geofence.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geofence
 
@@ -32,16 +30,3 @@ Obtains the coordinate system types supported by geofence.
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  let supportedCoordTypes: Array<geoLocationManager.CoordinateSystemType> = geoLocationManager.getGeofenceSupportedCoordTypes();
-  console.info("getGeofenceSupportedCoordTypes return:" + JSON.stringify(supportedCoordTypes));
-} catch (error) {
-  console.error("getGeofenceSupportedCoordTypes: error=" + JSON.stringify(error));
-}
-```

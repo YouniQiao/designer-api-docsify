@@ -4,29 +4,25 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## currentHeadroom
 
 ```TypeScript
-readonly currentHeadroom: double
+readonly currentHeadroom: number
 ```
 
 当前亮度动态余量，该参数为大于0的浮点数。默认值为1.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ readonly currentHeadroom: double
 ## maxHeadroom
 
 ```TypeScript
-readonly maxHeadroom: double
+readonly maxHeadroom: number
 ```
 
 当前最大亮度余量，该参数为大于0的浮点数。默认值为1.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ readonly maxHeadroom: double
 ## sdrNits
 
 ```TypeScript
-readonly sdrNits: double
+readonly sdrNits: number
 ```
 
 屏幕的亮度，该参数为大于0的浮点数。默认值为500.0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

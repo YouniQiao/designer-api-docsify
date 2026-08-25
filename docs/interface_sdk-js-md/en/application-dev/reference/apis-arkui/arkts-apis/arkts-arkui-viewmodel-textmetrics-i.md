@@ -4,8 +4,6 @@ TextMetrics@interface TextMetrics
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## height
@@ -17,8 +15,6 @@ height: number
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -33,8 +29,6 @@ width: number
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

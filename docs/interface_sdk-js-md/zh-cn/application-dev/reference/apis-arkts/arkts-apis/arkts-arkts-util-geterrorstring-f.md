@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## getErrorString
@@ -15,8 +15,6 @@ function getErrorString(errno: number): string
 获取系统错误码的详细信息。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -35,12 +33,3 @@ function getErrorString(errno: number): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-let errnum = -1; // -1 : a system error number
-let result = util.getErrorString(errnum);
-console.info("result = " + result);
-// 输出结果：result = operation not permitted
-```

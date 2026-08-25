@@ -4,8 +4,6 @@ Implements wakeup management.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Implements wakeup management.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## clearUserData
@@ -25,8 +23,6 @@ clearUserData(): Promise<void>
 Clears user data.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -48,20 +44,6 @@ Clears user data.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupManager != null) {
-  (wakeupManager as intelligentVoice.WakeupManager).clearUserData().then(() => {
-    console.info(`Succeeded in clearing user data.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to clear user data, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
 ## enrollWithWakeupFilesForResult
 
 ```TypeScript
@@ -71,8 +53,6 @@ enrollWithWakeupFilesForResult(wakeupFiles: Array<WakeupSourceFile>, wakeupInfo:
 Enrolls with wakeup files for result. This method uses a promise to return the enroll result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -104,27 +84,6 @@ Enrolls with wakeup files for result. This method uses a promise to return the e
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filesInfo: Array<intelligentVoice.WakeupSourceFile> = [];
-filesInfo[0] = {filePath: "", fileContent: new ArrayBuffer(100)};
-let wakeupInfo: string = "version: 123"
-
-if (wakeupManager != null) {
-  (wakeupManager as intelligentVoice.WakeupManager).enrollWithWakeupFilesForResult(
-    filesInfo, wakeupInfo).then(
-    (data: intelligentVoice.EnrollResult) => {
-      let param: intelligentVoice.EnrollResult = data;
-      console.info(`Succeeded in enrolling with wakeup files for result, param:${param}`);
-    }).catch((err: BusinessError) => {
-    console.error(`Failed to enroll with wakeup files for result, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
 ## getParameter
 
 ```TypeScript
@@ -134,8 +93,6 @@ getParameter(key: string): Promise<string>
 Obtains the value of an intelligent voice parameter. This method uses a promise to return the query result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -165,94 +122,15 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupManager != null) {
-  (wakeupManager as intelligentVoice.WakeupManager).getParameter('isEnrolled').then((data: string) => {
-    let param: string = data;
-    console.info(`Succeeded in getting parameter, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getParameter('key', (err: BusinessError, data: string) => {
-    if (err) {
-      console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-    } else {
-      let param: string = data;
-      console.info(`Succeeded in getting parameter, param:${param}`);
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getParameter('key').then((data: string) => {
-    let param: string = data;
-    console.info(`Succeeded in getting parameter, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getParameter('key', (err: BusinessError, data: string) => {
-    if (err) {
-      console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-    } else {
-      let param: string = data;
-      console.info(`Succeeded in getting parameter, param:${param}`);
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).getParameter('key').then((data: string) => {
-    let param: string = data;
-    console.info(`Succeeded in getting parameter, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
 ## getUploadFiles
 
-ArkTS-Dyn:
 ```TypeScript
 getUploadFiles (maxCount: number): Promise<Array<UploadFile>>
-```
-
-ArkTS-Sta:
-```TypeScript
-getUploadFiles (maxCount: int): Promise<Array<UploadFile>>
 ```
 
 Obtains files needed to upload. This method uses a promise to return the files needed to upload.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -264,7 +142,7 @@ Obtains files needed to upload. This method uses a promise to return the files n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| maxCount | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| maxCount | number | Yes |
 
 **Return value:**
 
@@ -283,21 +161,6 @@ Obtains files needed to upload. This method uses a promise to return the files n
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupManager != null) {
-  (wakeupManager as intelligentVoice.WakeupManager).getUploadFiles(2).then((data: Array<intelligentVoice.UploadFile>) => {
-    let param: Array<intelligentVoice.UploadFile> = data;
-    console.info(`Succeeded in getting upload files, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get upload files, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
 ## getWakeupSourceFiles
 
 ```TypeScript
@@ -307,8 +170,6 @@ getWakeupSourceFiles(): Promise<Array<WakeupSourceFile>>
 Obtains wakeup source files. This method uses a promise to return the wakeup source files.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -331,22 +192,6 @@ Obtains wakeup source files. This method uses a promise to return the wakeup sou
 | [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupManager != null) {
-  (wakeupManager as intelligentVoice.WakeupManager).getWakeupSourceFiles().then(
-    (data: Array<intelligentVoice.WakeupSourceFile>) => {
-    let param: Array<intelligentVoice.WakeupSourceFile> = data;
-    console.info(`Succeeded in getting wakeup source files, param:${param}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get wakeup source files, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
 ## setParameter
 
 ```TypeScript
@@ -356,8 +201,6 @@ setParameter(key: string, value: string): Promise<void>
 Sets an intelligent voice parameter. This method uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -387,69 +230,3 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupManager != null) {
-  (wakeupManager as intelligentVoice.WakeupManager).setParameter('wakeup_phrase', 'xiaohuaxiaohua').then(() => {
-    console.info(`Succeeded in setting parameter`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setParameter('scene', '0', (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-    } else {
-      console.info(`Succeeded in setting parameter`);
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
-    console.info(`Succeeded in setting parameter`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setParameter('scene', '0', (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-    } else {
-      console.info(`Succeeded in setting parameter`);
-    }
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (wakeupIntelligentVoiceEngine != null) {
-  (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
-    console.info(`Succeeded in setting parameter`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
-  });
-}
-```

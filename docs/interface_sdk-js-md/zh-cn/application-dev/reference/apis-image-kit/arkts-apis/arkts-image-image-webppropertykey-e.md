@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CANVAS_WIDTH
@@ -17,8 +15,6 @@ CANVAS_WIDTH = 'WebPCanvasWidth'
 WebP图片的画布像素宽度。单位：像素（px）。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,8 +30,6 @@ WebP图片的画布像素高度。单位：像素（px）。
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -49,8 +43,6 @@ DELAY_TIME = 'WebPDelayTime'
 WebP图片钳制后的帧延迟时长。钳制范围为[100, 65535]。单位：毫秒（ms）。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +58,6 @@ WebP图片未钳制的帧延迟时长。单位：毫秒（ms）。
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -81,8 +71,6 @@ LOOP_COUNT = 'WebPLoopCount'
 WebP图片动画循环的次数。如果取值为0，则表示不限次数。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

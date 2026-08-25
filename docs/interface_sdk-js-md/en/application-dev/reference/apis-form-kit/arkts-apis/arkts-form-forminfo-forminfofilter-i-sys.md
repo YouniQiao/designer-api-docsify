@@ -4,14 +4,12 @@ The optional options used as filters to ask getFormsInfo to return formInfos fro
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'kits/@kit.FormKit';
 ```
 
 ## bundleName
@@ -26,8 +24,6 @@ optional bundleName that used to ask getFormsInfo to return form infos with the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -35,16 +31,14 @@ optional bundleName that used to ask getFormsInfo to return form infos with the 
 ## supportedDimensions
 
 ```TypeScript
-supportedDimensions?: Array<int>
+supportedDimensions?: Array<number>
 ```
 
 optional supportedDimensions that used to ask getFormsInfo to return form infos with the same supportedDimensions. The minimum length is 1, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md).
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -53,16 +47,14 @@ optional supportedDimensions that used to ask getFormsInfo to return form infos 
 ## supportedShapes
 
 ```TypeScript
-supportedShapes?: Array<int>
+supportedShapes?: Array<number>
 ```
 
 optional supportedShapes that used to ask getFormsInfo to return form infos with the same supportedShapes. The minimum length is 1, Refer to [FormShape](arkts-form-forminfo-formshape-e.md).
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 

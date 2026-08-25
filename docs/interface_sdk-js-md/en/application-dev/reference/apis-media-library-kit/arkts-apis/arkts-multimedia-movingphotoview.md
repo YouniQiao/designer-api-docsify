@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from '@kit.MediaLibraryKit';
+import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## Summary
@@ -64,5 +64,5 @@ import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, P
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [MovingPhotoView(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoview) |
+| [MovingPhotoView(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-con.md) |
 | [MovingPhotoViewInstance(A component which support applications to show moving photo data)](arkts-medialibrary-multimedia-movingphotoview-con.md#movingphotoviewinstance) |

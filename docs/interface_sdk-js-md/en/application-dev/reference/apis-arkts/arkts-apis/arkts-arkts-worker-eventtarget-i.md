@@ -4,8 +4,6 @@ Specific event features.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
@@ -15,7 +13,7 @@ Specific event features.
 ## Modules to Import
 
 ```TypeScript
-import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from 'kits/@kit.ArkTS';
 ```
 
 ## addEventListener
@@ -27,8 +25,6 @@ addEventListener(type: string, listener: EventListener): void
 Adds an event listener to the worker.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -43,46 +39,6 @@ Adds an event listener to the worker.
 | type | string | Yes |
 | listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes |
 
-**Examples**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-
-workerInstance.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-
-// Execute the callback of the alert type.
-workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  })
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-```
-
 ## dispatchEvent
 
 ```TypeScript
@@ -92,8 +48,6 @@ dispatchEvent(event: Event): boolean
 Dispatches the event defined for the worker.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -113,79 +67,6 @@ Dispatches the event defined for the worker.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-
-workerInstance.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-
-let result: Boolean = workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
-
-console.info("dispatchEvent result is: ", result);
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert_add", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.dispatchEvent({type: 'alert_add', timeStamp: 0}); // timeStamp is not supported yet.
-```
-
-The dispatchEvent API can be used together with the addEventListener API. The sample code is as follows:
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (): void => {
-    console.info("receive data from worker.ets");
-}
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.dispatchEvent({type:"alert", timeStamp:0}); // timeStamp is not supported yet.
-}
-```
-
 ## removeAllListener
 
 ```TypeScript
@@ -196,54 +77,11 @@ Removes all event listeners for the worker.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** removeAllListener
 
 **System capability:** SystemCapability.Utils.Lang
-
-**Examples**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-workerInstance.addEventListener("alert", () => {
-    console.info("alert listener callback");
-})
-workerInstance.removeAllListener();
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.removeAllListener();
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert_add", ()=>{
-  console.info("alert listener callback");
-})
-
-workerPort.removeAllListener();
-```
 
 ## removeEventListener
 
@@ -254,8 +92,6 @@ removeEventListener(type: string, callback?: EventListener): void
 Removes an event defined for the worker.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -269,48 +105,3 @@ Removes an event defined for the worker.
 | --- | --- | --- |
 | type | string | Yes |
 | callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No |
-
-**Examples**
-
-```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.ThreadWorker("entry/ets/workers/worker.ets");
-
-workerInstance.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-
-workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
-
-workerInstance.removeEventListener("alert");
-```
-
-```TypeScript
-// worker.ets
-import { ErrorEvent, MessageEvents, ThreadWorkerGlobalScope, worker } from '@kit.ArkTS';
-
-const workerPort: ThreadWorkerGlobalScope = worker.workerPort;
-
-workerPort.onmessage = (event: MessageEvents) => {
-  workerPort.addEventListener("alert", () => {
-    console.info("alert listener callback");
-  });
-
-  workerPort.removeEventListener("alert");
-};
-```
-
-```TypeScript
-// worker.ets
-import { DedicatedWorkerGlobalScope, ErrorEvent, MessageEvents, worker } from '@kit.ArkTS';
-
-const workerPort: DedicatedWorkerGlobalScope = worker.parentPort;
-
-workerPort.addEventListener("alert", () => {
-  console.info("alert listener callback");
-})
-
-workerPort.removeEventListener('alert');
-```

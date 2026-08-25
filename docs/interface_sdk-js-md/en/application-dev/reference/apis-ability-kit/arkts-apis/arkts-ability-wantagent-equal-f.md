@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
 ```
 
 ## equal
@@ -15,8 +15,6 @@ function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<
 Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,136 +34,6 @@ Checks whether two WantAgent objects are equal, so as to determine whether the s
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// WantAgent object.
-let wantAgent1: WantAgent;
-let wantAgent2: WantAgent;
-// WantAgentInfo object.
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters:
-      {
-        mykey0: 2222,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'ssssssssssssssssssssssssss',
-        mykey4: [false, true, false],
-        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        mykey6: true,
-      }
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0,
-  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-// getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
-  if (err) {
-    console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
-  } else {
-    wantAgent1 = data;
-    wantAgent2 = data;
-  }
-  // equal callback
-  let equalCallback = (err: BusinessError, data: boolean) => {
-    if (err) {
-      console.error(`equal failed! ${err.code} ${err.message}`);
-    } else {
-      console.info(`equal ok! ${JSON.stringify(data)}`);
-    }
-  }
-  try {
-    wantAgent.equal(wantAgent1, wantAgent2, equalCallback);
-  } catch (err) {
-    console.error(`equal failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
-  }
-}
-
-try {
-  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
-} catch (err) {
-  console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// WantAgent object.
-let wantAgent1: WantAgent;
-let wantAgent2: WantAgent;
-// WantAgentInfo object.
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters:
-      {
-        mykey0: 2222,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'ssssssssssssssssssssssssss',
-        mykey4: [false, true, false],
-        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        mykey6: true,
-      }
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0,
-  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-// getWantAgent callback.
-function getWantAgentCallback(err: BusinessError, data: WantAgent) {
-  if (err) {
-    console.error(`getWantAgent failed, code: ${JSON.stringify(err.code)}, message: ${JSON.stringify(err.message)}`);
-  } else {
-    wantAgent1 = data;
-    wantAgent2 = data;
-  }
-  try {
-    wantAgent.equal(wantAgent1, wantAgent2).then((data) => {
-      console.info(`equal ok! ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`equal failed! ${err.code} ${err.message}`);
-    })
-  } catch (err) {
-    console.error(`equal failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
-  }
-}
-
-try {
-  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
-} catch (err) {
-  console.error(`getWantAgent failed! ${(err as BusinessError).code} ${(err as BusinessError).message}`);
-}
-```
-
 
 ## equal
 
@@ -176,8 +44,6 @@ function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -201,7 +67,3 @@ Checks whether two WantAgent objects are equal, so as to determine whether the s
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [equal](#equal)

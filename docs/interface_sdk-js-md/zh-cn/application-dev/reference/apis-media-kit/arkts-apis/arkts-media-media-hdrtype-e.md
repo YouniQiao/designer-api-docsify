@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## AV_HDR_TYPE_NONE
@@ -18,8 +16,6 @@ AV_HDR_TYPE_NONE = 0
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
 ## AV_HDR_TYPE_VIVID
@@ -31,7 +27,5 @@ AV_HDR_TYPE_VIVID = 1
 表示为HDR VIVID类型。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

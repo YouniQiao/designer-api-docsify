@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## removeGroup
@@ -15,8 +15,6 @@ function removeGroup(): boolean
 移除P2P群组。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -31,15 +29,3 @@ function removeGroup(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-  wifi.removeGroup();  
-}catch(error){
-  console.error("failed:" + JSON.stringify(error));
-}
-```

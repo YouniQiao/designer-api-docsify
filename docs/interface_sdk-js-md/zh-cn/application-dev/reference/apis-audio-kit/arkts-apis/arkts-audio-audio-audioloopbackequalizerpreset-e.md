@@ -1,10 +1,8 @@
 # AudioLoopbackEqualizerPreset
 
-表示返听均衡器类型的枚举。@enum { int }
+表示返听均衡器类型的枚举。@enum { number }
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -18,8 +16,6 @@ FLAT = 1
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## FULL
@@ -32,8 +28,6 @@ FULL = 2
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## BRIGHT
@@ -45,7 +39,5 @@ BRIGHT = 3
 使人声更明亮。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer

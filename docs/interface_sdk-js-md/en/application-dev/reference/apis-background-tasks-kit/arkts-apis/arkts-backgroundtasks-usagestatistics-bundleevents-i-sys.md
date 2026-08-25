@@ -2,8 +2,6 @@
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -11,22 +9,20 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## appGroup
 
 ```TypeScript
-appGroup?: int
+appGroup?: number
 ```
 
 The usage group of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -44,8 +40,6 @@ The bundle name.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -53,16 +47,14 @@ The bundle name.
 ## eventId
 
 ```TypeScript
-eventId?: int
+eventId?: number
 ```
 
 The event id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -71,16 +63,14 @@ The event id.
 ## eventOccurredTime
 
 ```TypeScript
-eventOccurredTime?: long
+eventOccurredTime?: number
 ```
 
-The time when this state occurred, in milliseconds. <br> Unit:ms
+The time when this state occurred, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -98,8 +88,6 @@ The shortcut ID.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -115,8 +103,6 @@ The class name.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 

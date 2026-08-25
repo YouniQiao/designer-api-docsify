@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getSignalLevel
@@ -15,8 +15,6 @@ function getSignalLevel(rssi: number, band: number): number
 查询WLAN信号强度。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -38,18 +36,3 @@ function getSignalLevel(rssi: number, band: number): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-  let rssi = 0;
-  let band = 0;
-  let level = wifi.getSignalLevel(rssi,band);
-  console.info("level:" + JSON.stringify(level));
-}catch(error){
-  console.error("failed:" + JSON.stringify(error));
-}
-```

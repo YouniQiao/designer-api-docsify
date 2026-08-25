@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## createMicInAudioCapturer
@@ -21,8 +21,6 @@ function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<Aud
 > ，其他类型的音源输入将被系统拒绝。此外，当应用处于后台运行状态时，不允许创建该采集器实例。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MICROPHONE
 
@@ -53,44 +51,3 @@ function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<Aud
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioEcStreamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // 采样率。
-  channels: audio.AudioChannel.CHANNEL_2, // 通道。
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // 采样格式。
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // 编码格式。
-};
-
-let audioCapturerInfo: audio.AudioCapturerInfo = {
-  source: audio.SourceType.SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT, // 音源类型：Mic音频源。SourceType需为SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT。
-  capturerFlags: 0 // 音频采集器标志。
-};
-
-let audioMicInStreamInfo: audio.AudioStreamInfo = {
-  samplingRate: audio.AudioSamplingRate.SAMPLE_RATE_48000, // 采样率。
-  channels: audio.AudioChannel.CHANNEL_2, // 通道。
-  sampleFormat: audio.AudioSampleFormat.SAMPLE_FORMAT_S16LE, // 采样格式。
-  encodingType: audio.AudioEncodingType.ENCODING_TYPE_RAW // 编码格式。
-};
-
-let audioCapturerMicInConfig: audio.AudioCapturerMicInConfig = {
-  ecStreamInfo: audioEcStreamInfo,
-  capturerInfo: audioCapturerInfo,
-  micInStreamInfo: audioMicInStreamInfo
-};
-
-let audioCapturer: audio.AudioCapturer | null = null;
-
-audio.createMicInAudioCapturer(audioCapturerMicInConfig).then((data) => {
-  audioCapturer = data;
-  console.info('AudioCapturer Created : SUCCESS');
-}).catch((err: BusinessError) => {
-  console.error(`AudioCapturer Created : ERROR : ${err}`);
-});
-```

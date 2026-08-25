@@ -4,8 +4,6 @@ Enumerates the encryption algorithms for the database. Use the enum name rather 
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## AES_256_GCM
@@ -17,8 +15,6 @@ AES_256_GCM = 0
 AES_256_GCM: Database is encrypted using AES_256_GCM.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -32,8 +28,6 @@ AES_256_CBC: Database is encrypted using AES_256_CBC.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## PLAIN_TEXT
@@ -45,7 +39,5 @@ PLAIN_TEXT = 2
 PLAIN_TEXT: Database is unencrypted.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

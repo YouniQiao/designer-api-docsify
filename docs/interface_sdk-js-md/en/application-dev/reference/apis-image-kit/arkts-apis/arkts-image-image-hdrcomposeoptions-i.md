@@ -4,14 +4,12 @@ Describes compose parameters.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## desiredPixelFormat
@@ -25,8 +23,6 @@ Pixel format used for composite image, RGBA_1010102\YCBCR_P010\YCRCB_P010 are su
 **Type:** PixelMapFormat
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

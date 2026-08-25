@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 ## ACCESS_DENIED
@@ -18,8 +16,6 @@ ACCESS_DENIED = -1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
 ## ACCESS_GRANTED
@@ -31,7 +27,5 @@ ACCESS_GRANTED = 0
 申请锁屏下敏感数据访问权限被允许。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.ScreenLockFileManager

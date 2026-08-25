@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 ## 导入模块
 
 ```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
+import { videoProcessingEngine } from 'kits/@kit.ImageKit';
 ```
 
 ## 汇总

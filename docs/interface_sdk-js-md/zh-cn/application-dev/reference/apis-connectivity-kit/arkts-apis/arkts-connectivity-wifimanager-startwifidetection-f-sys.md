@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startWifiDetection
@@ -15,8 +15,6 @@ function startWifiDetection(): void
 发起WLAN网络探测。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -33,15 +31,3 @@ function startWifiDetection(): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
 | [2501001](../errorcode-wifi.md#2501001-sta功能未打开) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  wifiManager.startWifiDetection();
-}catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

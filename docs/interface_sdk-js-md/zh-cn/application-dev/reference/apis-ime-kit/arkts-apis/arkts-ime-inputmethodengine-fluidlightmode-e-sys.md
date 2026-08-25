@@ -1,10 +1,9 @@
 # FluidLightMode（系统接口）
 
-枚举，输入法流光模式。 <br> | 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | NONE | 0 | 不使用流光模式。 | | BACKGROUND_FLUID_LIGHT | 1 | 开启背景流光模式。系统面板变为透明，流光效果由编辑框宿主应用实现。 |
+枚举，输入法流光模式。   
+| 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | [NONE](#none) | 0 | 不使用流光模式。 | | [BACKGROUND_FLUID_LIGHT](#background_fluid_light) | 1 |
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -20,8 +19,6 @@ NONE = 0
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +32,6 @@ BACKGROUND_FLUID_LIGHT = 1
 开启背景流光模式。系统面板变为透明，流光效果由编辑框宿主应用实现。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 

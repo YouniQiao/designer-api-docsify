@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## on('networkStateChange')
@@ -17,8 +17,6 @@ Registers an observer for network status change events. This API uses an asynchr
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -40,14 +38,6 @@ Registers an observer for network status change events. This API uses an asynchr
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-observer.on('networkStateChange', (data: observer.NetworkState) => {
-    console.info("on networkStateChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('networkStateChange')
@@ -61,8 +51,6 @@ Registers an observer for network status change events of the SIM card in the sp
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 **System capability:** SystemCapability.Telephony.StateRegistry
@@ -86,17 +74,6 @@ Registers an observer for network status change events of the SIM card in the sp
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('networkStateChange', options, (data: observer.NetworkState) => {
-    console.info("on networkStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('signalInfoChange')
 
@@ -107,8 +84,6 @@ function on(type: 'signalInfoChange', callback: Callback<Array<SignalInformation
 Registers an observer for signal status change events. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -129,16 +104,6 @@ Registers an observer for signal status change events. This API uses an asynchro
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-observer.on('signalInfoChange', (data: Array<radio.SignalInformation>) => {
-    console.info("on signalInfoChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('signalInfoChange')
 
@@ -149,8 +114,6 @@ function on(type: 'signalInfoChange', options: ObserverOptions, callback: Callba
 Registers an observer for signal status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -172,19 +135,6 @@ Registers an observer for signal status change events of the SIM card in the spe
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('signalInfoChange', options, (data: Array<radio.SignalInformation>) => {
-    console.info("on signalInfoChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('cellularDataConnectionStateChange')
 
@@ -195,8 +145,6 @@ function on(type: 'cellularDataConnectionStateChange', callback: Callback<DataCo
 Registers an observer for connection status change events of the cellular data link. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -216,14 +164,6 @@ Registers an observer for connection status change events of the cellular data l
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-observer.on('cellularDataConnectionStateChange', (data: observer.DataConnectionStateInfo) => {
-    console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('cellularDataConnectionStateChange')
@@ -237,8 +177,6 @@ Registers an observer for connection status change events of the cellular data l
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -259,17 +197,6 @@ Registers an observer for connection status change events of the cellular data l
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('cellularDataConnectionStateChange', options, (data: observer.DataConnectionStateInfo) => {
-    console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('cellularDataFlowChange')
 
@@ -280,8 +207,6 @@ function on(type: 'cellularDataFlowChange', callback: Callback<DataFlowType>): v
 Registers an observer for the uplink and downlink data flow status change events of the cellular data service. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -301,16 +226,6 @@ Registers an observer for the uplink and downlink data flow status change events
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-observer.on('cellularDataFlowChange', (data: data.DataFlowType) => {
-    console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('cellularDataFlowChange')
@@ -323,8 +238,6 @@ Registers an observer for the uplink and downlink data flow status change events
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 **Parameters:**
@@ -345,19 +258,6 @@ Registers an observer for the uplink and downlink data flow status change events
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('cellularDataFlowChange', options, (data: data.DataFlowType) => {
-    console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('callStateChange')
 
@@ -368,8 +268,6 @@ function on(type: 'callStateChange', callback: Callback<CallStateInfo>): void
 Registers an observer for call status change events. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -390,14 +288,6 @@ Registers an observer for call status change events. This API uses an asynchrono
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-observer.on('callStateChange', (data: observer.CallStateInfo) => {
-    console.info("on callStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('callStateChange')
 
@@ -408,8 +298,6 @@ function on(type: 'callStateChange', options: ObserverOptions, callback: Callbac
 Registers an observer for call status change events. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -431,17 +319,6 @@ Registers an observer for call status change events. This API uses an asynchrono
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('callStateChange', options, (data: observer.CallStateInfo) => {
-    console.info("on callStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('callStateChangeEx')
 
@@ -452,8 +329,6 @@ function on(type: 'callStateChangeEx', callback: Callback<TelCallState>, options
 Registers an observer for extended call status change events. This API uses an asynchronous callback to return the execution result.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -474,22 +349,6 @@ Registers an observer for extended call status change events. This API uses an a
 | [8800003](../errorcode-telephony.md#8800003-system-internal-error) |
 | [8800999](../errorcode-telephony.md#8800999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { call } from '@kit.TelephonyKit';
-
-let callback: (data: call.TelCallState) => void = (data: call.TelCallState) => {
-    console.info("on callStateChangeEx, data:" + JSON.stringify(data));
-}
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-
-observer.on('callStateChangeEx', callback, options);
-observer.on('callStateChangeEx', callback);
-```
-
 
 ## on('simStateChange')
 
@@ -504,8 +363,6 @@ Registers an observer for SIM card status change events. This API uses an asynch
 > [sim.isSimActive](arkts-telephony-sim-issimactive-f.md).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -526,14 +383,6 @@ Registers an observer for SIM card status change events. This API uses an asynch
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-observer.on('simStateChange', (data: observer.SimStateData) => {
-    console.info("on simStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('simStateChange')
 
@@ -544,8 +393,6 @@ function on(type: 'simStateChange', options: ObserverOptions, callback: Callback
 Registers an observer for status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -567,17 +414,6 @@ Registers an observer for status change events of the SIM card in the specified 
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('simStateChange', options, (data: observer.SimStateData) => {
-    console.info("on simStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('iccAccountInfoChange')
 
@@ -588,8 +424,6 @@ function on(type: 'iccAccountInfoChange', callback: Callback<void>): void
 Registers an observer for account information change events of the SIM card. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -609,11 +443,3 @@ Registers an observer for account information change events of the SIM card. Thi
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-observer.on('iccAccountInfoChange', () => {
-    console.info("on iccAccountInfoChange success");
-});
-```

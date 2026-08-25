@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## sppConnect
@@ -15,8 +15,6 @@ function sppConnect(device: string, option: SppOption, callback: AsyncCallback<n
 Connects to a remote device over the socket. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -47,25 +45,3 @@ Connects to a remote device over the socket. On API 10 and above, the permission
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let clientNumber = -1;
-function clientSocket(code: BusinessError, number: number) {
-  if (code == null || code.code != 0) {
-    return;
-  }
-  console.info(`bluetooth serverSocket Number: ${number}`);
-  // The obtained clientNumber is used as the socket ID for subsequent read/write operations on the client.
-  clientNumber = number;
-}
-let sppOption: bluetoothManager.SppOption = {uuid: '00001810-0000-1000-8000-00805F9B34FB', secure: false, type: 0};
-try {
-    bluetoothManager.sppConnect('XX:XX:XX:XX:XX:XX', sppOption, clientSocket);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```

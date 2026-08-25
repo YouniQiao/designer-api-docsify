@@ -4,8 +4,6 @@ Describes the parameters of the calendar picker.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,11 +25,9 @@ the entire date range does not take effect.
 3. When users select a date and adjust it with the up or down arrow keys,
 the system skips over all dates in the disabled date range.
 
-**Type:** DateRange[]
+**Type:** [DateRange](arkts-arkui-daterange-i.md)[]
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,6 @@ End date.Default value: **Date('5000-12-31')**.Value range: [Date('0001-01-01'),
 **Default:** Date('5000-12-31')
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +70,6 @@ Style of the background of the selected state.Value range: [0.0, 16.0]Unit: vp.D
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -98,8 +90,6 @@ Date of the selected item. If the value is not set or does not comply with the d
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -119,8 +109,6 @@ Start date.Default value: **Date('0001-01-01')**Value range: [Date('0001-01-01')
 **Default:** Date('0001-01-01')
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedRunningBundles
@@ -24,8 +24,6 @@ function addAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>, ac
 > 3. 本接口仅对三方应用生效，系统应用不受该名单管控，默认可以运行。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -50,25 +48,3 @@ function addAllowedRunningBundles(admin: Want, appIdentifiers: Array<string>, ac
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIdentifiers: Array<string> = ['0123456789123456789'];
-
-try {
-  applicationManager.addAllowedRunningBundles(wantTemp, appIdentifiers, 100);
-  console.info('Succeeded in adding allowed running bundles.');
-} catch (err) {
-  console.error(`Failed to add allowed running bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```

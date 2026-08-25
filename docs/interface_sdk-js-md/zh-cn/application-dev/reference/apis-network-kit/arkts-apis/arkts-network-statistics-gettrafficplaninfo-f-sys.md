@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getTrafficPlanInfo
@@ -15,8 +15,6 @@ function getTrafficPlanInfo(simId: number, planParam: TrafficPlanParam): Promise
 获取流量计划信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 

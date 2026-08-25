@@ -4,8 +4,6 @@ Defines the authentication widget manager. It is used to register the custom aut
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the authentication widget manager. It is used to register the custom aut
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## off('command')
@@ -26,8 +24,6 @@ Unsubscribes from command events from the user authentication framework. The aut
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -37,165 +33,6 @@ Unsubscribes from command events from the user authentication framework. The aut
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'command' | Yes |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: number = 16;
-  let randData: Uint8Array | null = null;
-  let retryCount = 0;
-  while(retryCount < 3){
-    randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
-      break;
-    }
-    retryCount++;
-  }
-  if(!randData){
-    return;
-  }
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: 'Enter password',
-  };
-  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance success');
-  userAuthInstance.off('result', {
-    onResult (result) {
-      console.info(`auth off result = ${JSON.stringify(result)}`);
-    }
-  });
-  console.info('auth off success');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: number = 16;
-  let randData: Uint8Array | null = null;
-  let retryCount = 0;
-  while(retryCount < 3){
-    randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
-      break;
-    }
-    retryCount++;
-  }
-  if(!randData){
-    return;
-  }
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: 'Enter password',
-  };
-  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance success');
-  userAuthInstance.off('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
-    console.info(`userAuthInstance callback authTipInfo = ${JSON.stringify(authTipInfo)}`);
-  });
-  console.info('auth off success');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
-}
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  // Subscribe to the authentication result.
-  auth.on('result', {
-    callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`authV9 result ${result.result}`);
-      console.info(`authV9 token ${result.token}`);
-      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
-      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
-    }
-  });
-  // Unsubscribe from the authentication result.
-  auth.off('result');
-  console.info('cancel subscribe authentication event success');
-} catch (error) {
-  console.error(`cancel subscribe authentication event failed, error = ${error}`);
-  // do error.
-}
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const userAuthWidgetMgrVersion = 1;
-try {
-  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
-  console.info('get userAuthWidgetMgr instance success');
-  userAuthWidgetMgr.off('command', {
-    sendCommand(cmdData) {
-      console.info(`The cmdData is ${cmdData}`);
-    }
-  })
-  console.info('cancel subscribe authentication event success');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`userAuth widgetMgr catch error: Code is ${err?.code}, message is ${err?.message}`);
-}
-```
-
-## offCommand
-
-```TypeScript
-offCommand(callback?: IAuthWidgetCallback): void
-```
-
-Unsubscribes from commands sent from the user authentication framework.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | No |
 
 **Error codes:**
@@ -215,8 +52,6 @@ Subscribes to command events from the user authentication framework. The authent
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -226,140 +61,6 @@ Subscribes to command events from the user authentication framework. The authent
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'command' | Yes |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  const rand = cryptoFramework.createRandom();
-  const len: number = 16;
-  let randData: Uint8Array | null = null;
-  let retryCount = 0;
-  while(retryCount < 3){
-    randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
-      break;
-    }
-    retryCount++;
-  }
-  if(!randData){
-    return;
-  }
-  const authParam: userAuth.AuthParam = {
-    challenge: randData,
-    authType: [userAuth.UserAuthType.PIN],
-    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
-  };
-  const widgetParam: userAuth.WidgetParam = {
-    title: 'Enter password',
-  };
-  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance success');
-  // The intermediate authentication status is returned by onAuthTip only after the authentication is started by start() of UserAuthInstance.
-  userAuthInstance.on('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
-    console.info(`userAuthInstance callback authTipInfo = ${JSON.stringify(authTipInfo)}`);
-  });
-  console.info('auth on success');
-  userAuthInstance.start();
-  console.info('auth start success');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
-}
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  // Subscribe to the authentication result.
-  auth.on('result', {
-    callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`authV9 result ${result.result}`);
-      console.info(`authV9 token ${result.token}`);
-      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
-      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
-    }
-  });
-  // Subscribe to authentication tip information.
-  auth.on('tip', {
-    callback : (result : userAuth.TipInfo) => {
-      switch (result.tip) {
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
-          // Do something.
-          break;
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
-          // Do something.
-          break;
-        default:
-          // do others.
-      }
-    }
-  } as userAuth.AuthEvent);
-  auth.start();
-  console.info('authV9 start success');
-} catch (error) {
-  console.error(`authV9 error = ${error}`);
-  // do error.
-}
-```
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const userAuthWidgetMgrVersion = 1;
-try {
-  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
-  console.info('get userAuthWidgetMgr instance success');
-  userAuthWidgetMgr.on('command', {
-    sendCommand(cmdData) {
-      console.info(`The cmdData is ${cmdData}`);
-    }
-  })
-  console.info('subscribe authentication event success');
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`userAuth widgetMgr catch error: Code is ${err?.code}, message is ${err?.message}`);
-}
-```
-
-## onCommand
-
-```TypeScript
-onCommand(callback: IAuthWidgetCallback): void
-```
-
-Subscribes to commands from the user authentication framework for the user authentication widget.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | Yes |
 
 **Error codes:**

@@ -8,8 +8,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
@@ -25,8 +23,6 @@ GET_BUNDLE_DEFAULT = 0x00000000
 获取默认的应用信息。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ GET_BUNDLE_WITH_ABILITIES = 0x00000001
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [GET_BUNDLE_INFO_WITH_ABILITY](arkts-ability-bundlemanager-bundleflag-e.md#get_bundle_info_with_ability)
@@ -61,8 +55,6 @@ GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002
 获取包括权限的Ability信息。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -80,8 +72,6 @@ GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [GET_ABILITY_INFO_WITH_APPLICATION](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_application)
@@ -98,8 +88,6 @@ GET_APPLICATION_INFO_WITH_PERMISSION = 0x00000008
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -113,8 +101,6 @@ GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010
 获取包括所需权限的包信息。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -132,8 +118,6 @@ GET_ALL_APPLICATION_INFO = 0xFFFF0000
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -147,8 +131,6 @@ GET_ABILITY_INFO_WITH_METADATA = 0x00000020
 获取ability的元数据信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -166,8 +148,6 @@ GET_APPLICATION_INFO_WITH_METADATA = 0x00000040
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -181,8 +161,6 @@ GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080
 获取仅包括系统应用的ability信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -200,8 +178,6 @@ GET_ABILITY_INFO_WITH_DISABLE = 0x00000100
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [GET_ABILITY_INFO_WITH_DISABLE](arkts-ability-bundlemanager-abilityflag-e.md#get_ability_info_with_disable)
@@ -217,8 +193,6 @@ GET_APPLICATION_INFO_WITH_DISABLE = 0x00000200
 缺少卸载权限。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

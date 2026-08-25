@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## content
@@ -26,8 +24,6 @@ content?: ContentType
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 10
 
 **替代接口：** usage
@@ -37,16 +33,14 @@ content?: ContentType
 ## rendererFlags
 
 ```TypeScript
-rendererFlags: int
+rendererFlags: number
 ```
 
 播放流行为标志。设置为0即可。SystemCapability.Multimedia.Audio.Core从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -64,8 +58,6 @@ usage: StreamUsage
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -81,7 +73,5 @@ volumeMode?: AudioVolumeMode
 **类型：** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume

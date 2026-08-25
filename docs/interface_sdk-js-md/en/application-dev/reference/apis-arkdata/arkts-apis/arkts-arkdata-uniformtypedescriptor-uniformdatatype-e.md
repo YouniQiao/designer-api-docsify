@@ -4,8 +4,6 @@ Enumerates the uniform data types. Some data types are related. For example, the
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## ENTITY
@@ -17,8 +15,6 @@ ENTITY = 'general.entity'
 Generic physical storage type.This type is uncategorized.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Generic logical content type.This type is uncategorized.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -50,8 +44,6 @@ Generic composite content type. For example, a PDF file that contains text and i
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -65,8 +57,6 @@ TEXT = 'general.text'
 Generic text type.This type belongs to **OBJECT**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,8 +74,6 @@ Text without specific encoding or identifier.This type belongs to **TEXT**.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -101,8 +89,6 @@ HTML = 'general.html'
 HTML.This type belongs to **TEXT**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,8 +106,6 @@ Hyperlink.This type belongs to **TEXT**.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -138,8 +122,6 @@ XML.This type belongs to **TEXT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -153,8 +135,6 @@ XHTML = 'general.xhtml'
 XHTML.This type belongs to **XML**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,8 +150,6 @@ RSS.This type belongs to **XML**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -185,8 +163,6 @@ SMIL = 'com.real.smil'
 Synchronized Multimedia Integration Language (SMIL).This type belongs to **XML**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,8 +178,6 @@ Generic source code type.This type belongs to **TEXT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -217,8 +191,6 @@ SCRIPT = 'general.script'
 Source code in any scripting language.This type belongs to **SOURCE_CODE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -234,8 +206,6 @@ Shell script.This type belongs to **SCRIPT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -249,8 +219,6 @@ CSH_SCRIPT = 'general.csh-script'
 C shell script.This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,8 +234,6 @@ Perl script.This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -281,8 +247,6 @@ PHP_SCRIPT = 'general.php-script'
 PHP script.This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -298,8 +262,6 @@ Python script.This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -313,8 +275,6 @@ RUBY_SCRIPT = 'general.ruby-script'
 Ruby script.This type belongs to **SHELL_SCRIPT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -330,8 +290,6 @@ TypeScript source code.This type belongs to **SOURCE_CODE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -345,8 +303,6 @@ JAVA_SCRIPT = 'general.java-script'
 JavaScript source code.This type belongs to **SOURCE_CODE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -362,8 +318,6 @@ CSS.This type belongs to **SCRIPT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -377,8 +331,6 @@ C_HEADER = 'general.c-header'
 Header file in C.This type belongs to **SOURCE_CODE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -394,8 +346,6 @@ Source code in C.This type belongs to **SOURCE_CODE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -409,8 +359,6 @@ C_PLUS_PLUS_HEADER = 'general.c-plus-plus-header'
 Header file in C++.This type belongs to **SOURCE_CODE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -426,8 +374,6 @@ Source code in C++.This type belongs to **SOURCE_CODE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -441,8 +387,6 @@ JAVA_SOURCE = 'general.java-source'
 Source code in Java.This type belongs to **SOURCE_CODE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -458,8 +402,6 @@ Source code in TEX format.This type belongs to **SOURCE_CODE**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -473,8 +415,6 @@ MARKDOWN = 'general.markdown'
 Markdown.This type belongs to **TEXT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -490,8 +430,6 @@ ASCII.This type belongs to **TEXT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -505,8 +443,6 @@ RICH_TEXT = 'general.rich-text'
 Rich text.This type belongs to **TEXT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -522,8 +458,6 @@ Generic type of all delimited value texts.This type belongs to **TEXT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -537,8 +471,6 @@ COMMA_SEPARATED_VALUES_TEXT = 'general.comma-separated-values-text'
 Comma-separated values (CSV).This type belongs to **DELIMITED_VALUES_TEXT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -554,8 +486,6 @@ Tab-separated values (TSV).This type belongs to **DELIMITED_VALUES_TEXT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -569,8 +499,6 @@ EBOOK = 'general.ebook'
 Generic eBook file format type.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -586,8 +514,6 @@ Electronic publication (EPUB).This type belongs to **EBOOK**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -601,8 +527,6 @@ AZW = 'com.amazon.azw'
 AZW.This type belongs to **EBOOK**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -618,8 +542,6 @@ AZW3.This type belongs to **EBOOK**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -633,8 +555,6 @@ KFX = 'com.amazon.kfx'
 KFX.This type belongs to **EBOOK**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -650,8 +570,6 @@ MOBI.This type belongs to **EBOOK**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -666,8 +584,6 @@ Generic media type.This type belongs to **OBJECT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -681,8 +597,6 @@ IMAGE = 'general.image'
 Image.This type belongs to **MEDIA**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -700,8 +614,6 @@ JPEG.This type belongs to **IMAGE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -715,8 +627,6 @@ PNG = 'general.png'
 PNG.This type belongs to **IMAGE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -732,8 +642,6 @@ Raw image.This type belongs to **IMAGE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -747,8 +655,6 @@ TIFF = 'general.tiff'
 TIFF.This type belongs to **IMAGE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -764,8 +670,6 @@ BMP.This type belongs to **IMAGE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -779,8 +683,6 @@ ICO = 'com.microsoft.ico'
 Windows icon.This type belongs to **IMAGE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -796,8 +698,6 @@ Adobe Photoshop image.This type belongs to **IMAGE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -811,8 +711,6 @@ AI_IMAGE = 'com.adobe.illustrator.ai-image'
 Adobe Illustrator image (.ai).This type belongs to **IMAGE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -828,8 +726,6 @@ Generic type of the fax.This type belongs to **IMAGE**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -843,8 +739,6 @@ JFX_FAX = 'com.j2.jfx-fax'
 J2 jConnect fax file format.This type belongs to **FAX**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -860,8 +754,6 @@ EFX file format.This type belongs to **FAX**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -875,8 +767,6 @@ XBITMAP_IMAGE = 'general.xbitmap-image'
 X BitMAP (XBM) used in the X Window system (X11).This type belongs to **IMAGE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -892,8 +782,6 @@ GIF.This type belongs to **IMAGE**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -907,8 +795,6 @@ TGA_IMAGE = 'com.truevision.tga-image'
 Tagged Graphics (TGA) format.This type belongs to **IMAGE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -924,8 +810,6 @@ Silicon Graphics image (SGI) format.This type belongs to **IMAGE**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -939,8 +823,6 @@ OPENEXR_IMAGE = 'com.ilm.openexr-image'
 OpenXR image format.This type belongs to **IMAGE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -956,8 +838,6 @@ FlashPix image format.This type belongs to **IMAGE**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -971,8 +851,6 @@ WORD_DOC = 'com.microsoft.word.doc'
 Microsoft Word.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -988,8 +866,6 @@ Microsoft Excel.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1003,8 +879,6 @@ PPT = 'com.microsoft.powerpoint.ppt'
 Microsoft PowerPoint presentation format.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1020,8 +894,6 @@ Microsoft Word template.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1035,8 +907,6 @@ POWERPOINT_PPS = 'com.microsoft.powerpoint.pps'
 Microsoft PowerPoint slide show format.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1052,8 +922,6 @@ Microsoft PowerPoint template.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1067,8 +935,6 @@ EXCEL_XLT = 'com.microsoft.excel.xlt'
 Microsoft Excel template.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1084,8 +950,6 @@ Microsoft Visio.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1099,8 +963,6 @@ PDF = 'com.adobe.pdf'
 PDF.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1116,8 +978,6 @@ PostScript.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1132,8 +992,6 @@ Encapsulated PostScript.This type belongs to **POSTSCRIPT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1147,8 +1005,6 @@ VIDEO = 'general.video'
 Generic video type.This type belongs to **MEDIA**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1166,8 +1022,6 @@ AVI.This type belongs to **VIDEO**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1181,8 +1035,6 @@ MPEG = 'general.mpeg'
 MPEG-1 or MPEG-2.This type belongs to **VIDEO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1198,8 +1050,6 @@ MPEG-4.This type belongs to **VIDEO**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1213,8 +1063,6 @@ VIDEO_3GPP = 'general.3gpp'
 3GP (3GPP file format).This type belongs to **VIDEO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1230,8 +1078,6 @@ VIDEO_3GPP2 = 'general.3gpp2'
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1245,8 +1091,6 @@ TS = 'general.ts'
 MPEG-TS.This type belongs to **VIDEO**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1262,8 +1106,6 @@ MPEG video playlist format.This type belongs to **VIDEO**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1277,8 +1119,6 @@ WINDOWS_MEDIA_WM = 'com.microsoft.windows-media-wm'
 Windows WM format.This type belongs to **VIDEO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1294,8 +1134,6 @@ Windows WMV format.This type belongs to **VIDEO**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1309,8 +1147,6 @@ WINDOWS_MEDIA_WMP = 'com.microsoft.windows-media-wmp'
 Windows WMP format.This type belongs to **VIDEO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1326,8 +1162,6 @@ Windows WVX format.This type belongs to **VIDEO**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1341,8 +1175,6 @@ WINDOWS_MEDIA_WMX = 'com.microsoft.windows-media-wmx'
 Windows WMX format.This type belongs to **VIDEO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1358,8 +1190,6 @@ RealMedia format.This type belongs to **VIDEO**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1373,8 +1203,6 @@ MATROSKA_VIDEO = 'org.matroska.mkv'
 MKV.This type belongs to **VIDEO**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1390,8 +1218,6 @@ Flash.This type belongs to **VIDEO**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1405,8 +1231,6 @@ AUDIO = 'general.audio'
 Generic audio type.This type belongs to **MEDIA**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1424,8 +1248,6 @@ AAC.This type belongs to **AUDIO**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1439,8 +1261,6 @@ AIFF = 'general.aiff'
 AIFF.This type belongs to **AUDIO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1456,8 +1276,6 @@ ALAC.This type belongs to **AUDIO**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1471,8 +1289,6 @@ FLAC = 'general.flac'
 FLAC.This type belongs to **AUDIO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1488,8 +1304,6 @@ MP3.This type belongs to **AUDIO**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1503,8 +1317,6 @@ OGG = 'general.ogg'
 OGG.This type belongs to **AUDIO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1520,8 +1332,6 @@ PCM.This type belongs to **AUDIO**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1535,8 +1345,6 @@ WINDOWS_MEDIA_WMA = 'com.microsoft.windows-media-wma'
 Windows WMA.This type belongs to **AUDIO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1552,8 +1360,6 @@ Windows Waveform.This type belongs to **AUDIO**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1567,8 +1373,6 @@ WINDOWS_MEDIA_WAX = 'com.microsoft.windows-media-wax'
 Windows WAX.This type belongs to **AUDIO**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1584,8 +1388,6 @@ AU format.This type belongs to **AUDIO**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1599,8 +1401,6 @@ AIFC_AUDIO = 'general.aifc-audio'
 AIFC.This type belongs to **AUDIO**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1616,8 +1416,6 @@ MPEG audio playlist format.This type belongs to **AUDIO**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1631,8 +1429,6 @@ MPEG_4_AUDIO = 'general.mpeg-4-audio'
 MPEG-4.This type belongs to **AUDIO**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1648,8 +1444,6 @@ MP2.This type belongs to **AUDIO**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1663,8 +1457,6 @@ MPEG_AUDIO = 'general.mpeg-audio'
 MPEG audio format.This type belongs to **AUDIO**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1680,8 +1472,6 @@ ULAW.This type belongs to **AUDIO**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1695,8 +1485,6 @@ SD2_AUDIO = 'com.digidesign.sd2-audio'
 Digidesign Sound Designer II (SDII).This type belongs to **AUDIO**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1712,8 +1500,6 @@ RealAudio.This type belongs to **AUDIO**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1728,8 +1514,6 @@ MKA.This type belongs to **AUDIO**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1743,8 +1527,6 @@ FILE = 'general.file'
 Generic file type.This type belongs to **ENTITY**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1762,8 +1544,6 @@ Generic directory type.This type belongs to **ENTITY**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1777,8 +1557,6 @@ FOLDER = 'general.folder'
 Generic folder type.This type belongs to **DIRECTORY**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1796,8 +1574,6 @@ Generic symbolic type.This type belongs to **ENTITY**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1811,8 +1587,6 @@ ARCHIVE = 'general.archive'
 Generic archive file type.This type belongs to **OBJECT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1828,8 +1602,6 @@ BZ2.This type belongs to **ARCHIVE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1843,8 +1615,6 @@ OPG = 'general.opg'
 OPG.This type belongs to **ARCHIVE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1860,8 +1630,6 @@ TAR.This type belongs to **TAR_ARCHIVE**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1875,8 +1643,6 @@ WEB_ARCHIVE = 'general.web-archive'
 MHTML format for web page archiving.This type belongs to **ARCHIVE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1892,8 +1658,6 @@ Generic type of any file that can be mounted as a volume.This type belongs to **
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1907,8 +1671,6 @@ ISO = 'general.iso'
 ISO image (optical disk image) format.This type belongs to **DISK_IMAGE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1924,8 +1686,6 @@ TAR.This type belongs to ARCHIVE.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1939,8 +1699,6 @@ ZIP_ARCHIVE = 'general.zip-archive'
 ZIP.This type belongs to **ARCHIVE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1956,8 +1714,6 @@ JAR (Java archive).This type belongs to **ARCHIVE** and **EXECUTABLE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -1971,8 +1727,6 @@ GNU_TAR_ARCHIVE = 'org.gnu.gnu-tar-archive'
 GNU.This type belongs to **ARCHIVE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1988,8 +1742,6 @@ GZIP archive.This type belongs to **ARCHIVE**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2003,8 +1755,6 @@ GNU_ZIP_TAR_ARCHIVE = 'org.gnu.gnu-zip-tar-archive'
 GZIP TAR.This type belongs to **ARCHIVE**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2020,8 +1770,6 @@ OpenXML base type.This type belongs to **ARCHIVE**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2035,8 +1783,6 @@ WORDPROCESSINGML_DOCUMENT = 'org.openxmlformats.wordprocessingml.document'
 WordProcessingML format.This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2052,8 +1798,6 @@ SpreadsheetML format.This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2067,8 +1811,6 @@ PRESENTATIONML_PRESENTATION = 'org.openxmlformats.presentationml.presentation'
 PresentationML format.This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2084,8 +1826,6 @@ DrawingML file format of Office Open XML (OOXML).This type belongs to **OPENXML*
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2099,8 +1839,6 @@ DRAWINGML_TEMPLATE = 'org.openxmlformats.drawingml.template'
 DrawingML template format of OOXML.This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2116,8 +1854,6 @@ WordProcessingML template format of OOXML.This type belongs to **OPENXML** and *
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2131,8 +1867,6 @@ PRESENTATIONML_TEMPLATE = 'org.openxmlformats.presentationml.template'
 PresentationML template format of OOXML.This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2148,8 +1882,6 @@ PresentationML slide show format of OOXML.This type belongs to **OPENXML** and *
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2163,8 +1895,6 @@ SPREADSHEETML_TEMPLATE = 'org.openxmlformats.spreadsheetml.template'
 SpreadsheetML template format of OOXML.This type belongs to **OPENXML** and **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2180,8 +1910,6 @@ OpenDocument format for Office applications.This type belongs to **ARCHIVE**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2195,8 +1923,6 @@ OPENDOCUMENT_TEXT = 'org.oasis.opendocument.text'
 OpenDocument format for word processing (text) documents.This type belongs to **OPENDOCUMENT** and **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2212,8 +1938,6 @@ OpenDocument format for spreadsheets.This type belongs to **OPENDOCUMENT** and *
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2227,8 +1951,6 @@ OPENDOCUMENT_PRESENTATION = 'org.oasis.opendocument.presentation'
 OpenDocument format for presentations.This type belongs to **OPENDOCUMENT** and **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2244,8 +1966,6 @@ OpenDocument format for graphics.This type belongs to **OPENDOCUMENT** and **COM
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2259,8 +1979,6 @@ OPENDOCUMENT_FORMULA = 'org.oasis.opendocument.formula'
 OpenDocument format for formula.This type belongs to **OPENDOCUMENT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2276,8 +1994,6 @@ Stuffit compression format (stuffit archive).This type belongs to **ARCHIVE**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2291,8 +2007,6 @@ RAR_ARCHIVE = 'com.rarlab.rar-archive'
 WinRAR.This type belongs to **ARCHIVE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2308,8 +2022,6 @@ SEVEN_ZIP_ARCHIVE = 'org.7-zip.7-zip-archive'
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2323,8 +2035,6 @@ CALENDAR = 'general.calendar'
 Generic calendar type.This type belongs to **OBJECT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2340,8 +2050,6 @@ VCalendar (VCS) format.This type belongs to **CALENDAR** and **TEXT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2355,8 +2063,6 @@ ICS = 'general.ics'
 Internet Calendaring and Scheduling (ICS) format.This type belongs to **CALENDAR** and **TEXT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2372,8 +2078,6 @@ Generic contact type.This type belongs to **OBJECT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2387,8 +2091,6 @@ DATABASE = 'general.database'
 Generic database file type.This type belongs to **OBJECT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2404,8 +2106,6 @@ Generic message type.This type belongs to **OBJECT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2419,8 +2119,6 @@ EXECUTABLE = 'general.executable'
 Generic type of all executable files.This type belongs to **OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2436,8 +2134,6 @@ Microsoft Windows portable executable format.This type belongs to **EXECUTABLE**
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2451,8 +2147,6 @@ SUN_JAVA_CLASS = 'com.sun.java-class'
 Java class file format.This type belongs to **EXECUTABLE**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2468,8 +2162,6 @@ Generic electronic business card type.This type belongs to **OBJECT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2483,8 +2175,6 @@ NAVIGATION = 'general.navigation'
 Generic navigation data type.This type belongs to **OBJECT**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2500,8 +2190,6 @@ Location data.This type belongs to **NAVIGATION**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2515,8 +2203,6 @@ FONT = 'general.font'
 Basic type of fonts.This type belongs to **OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2532,8 +2218,6 @@ TrueType font format.This type belongs to **FONT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2547,8 +2231,6 @@ TRUETYPE_COLLECTION_FONT = 'general.truetype-collection-font'
 TrueType Collection font format.This type belongs to **FONT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2564,8 +2246,6 @@ OpenType font format.This type belongs to **FONT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2579,8 +2259,6 @@ POSTSCRIPT_FONT = 'com.adobe.postscript-font'
 PostScript font format.This type belongs to **FONT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2596,8 +2274,6 @@ PostScript Font Binary font format.This type belongs to **FONT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2612,8 +2288,6 @@ Adobe Type 1 font format.This type belongs to **FONT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2627,8 +2301,6 @@ OPENHARMONY_FORM = 'openharmony.form'
 Widget defined for the system.This type belongs to **OBJECT**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2646,8 +2318,6 @@ Home screen icon defined for the system.This type belongs to **OBJECT**.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -2663,8 +2333,6 @@ OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'
 Pixel map defined for the system.This type belongs to **IMAGE**.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2682,8 +2350,6 @@ Atomic service type defined for the system.This type belongs to **OBJECT**.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2697,8 +2363,6 @@ OPENHARMONY_PACKAGE = 'openharmony.package'
 Package (compressed folder) defined for the system.This type belongs to **DIRECTORY**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2714,8 +2378,6 @@ Ability package defined for the system.This type belongs to **OPENHARMONY_PACKAG
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2729,8 +2391,6 @@ OPENHARMONY_HDOC = 'openharmony.hdoc'
 Memo format defined for the system.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2746,8 +2406,6 @@ Note format defined for the system.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2761,8 +2419,6 @@ OPENHARMONY_STYLED_STRING = 'openharmony.styled-string'
 Style string type defined for the system.This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2778,8 +2434,6 @@ Want defined for the system.This type belongs to **OBJECT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2793,8 +2447,6 @@ OFD = 'general.ofd'
 Open Fixed-layout Document (OFD).This type belongs to **COMPOSITE_OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2810,8 +2462,6 @@ Generic type of all computer-aided design types.This type belongs to **OBJECT**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2825,8 +2475,6 @@ OCTET_STREAM = 'general.octet-stream'
 Any binary data type.This type belongs to **OBJECT**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2842,8 +2490,6 @@ File address type.This type belongs to **TEXT**.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -2857,8 +2503,6 @@ CONTENT_FORM = 'general.content-form'
 Content widget type.This type belongs to **OBJECT**.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Provides a 2D rendering context for the drawing surface of the &lt; Canvas &gt; 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## arc
@@ -17,8 +15,6 @@ arc(radius: number, x: number, y: number, startAngle: number, endAngle: number, 
 Draw an arc.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -45,8 +41,6 @@ Draws an arc from the beginning to the end.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -71,8 +65,6 @@ Creates a drawing path.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -86,8 +78,6 @@ bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number,
 Draw a third order Bezier curve.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -114,8 +104,6 @@ Clears the contents of the specified rectangular area.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -139,8 +127,6 @@ Crop the current canvas.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -155,8 +141,6 @@ Closing the current path.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -170,8 +154,6 @@ createImageData(sw: number, sh: number): ImageData
 Create an ImageData object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -200,8 +182,6 @@ Create an ImageData object.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -227,8 +207,6 @@ createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGrad
 Creates a linear gradient color.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -259,8 +237,6 @@ Creates a path that is later used by the CanvasRenderingContext2D object.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -286,8 +262,6 @@ createPath2D(cmds?: string): Path2D
 Creates a path that is later used by the CanvasRenderingContext2D object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -315,8 +289,6 @@ Create a drawing style template.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -343,8 +315,6 @@ createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number,
 Create a radial tween object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -376,8 +346,6 @@ drawImage(image: Image, dx: number, dy: number, dw: number, dh: number): void
 Draw an Image object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -413,8 +381,6 @@ Draw an Image object.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -442,8 +408,6 @@ drawImage(image: image.PixelMap, dx: number, dy: number, dw: number, dh: number)
 Draw an Image object.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -478,8 +442,6 @@ drawImage(
 Draw an Image object.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -518,8 +480,6 @@ Draw an ellipse.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -547,8 +507,6 @@ Fills the current canvas with color.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -562,8 +520,6 @@ fillRect(x: number, y: number, w: number, h: number): void
 Fills a rectangular area.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -588,8 +544,6 @@ Stroke a rectangular area.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -611,8 +565,6 @@ getImageData(sx: number, sy: number, sw: number, sh: number): ImageData
 Get an ImageData object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -643,8 +595,6 @@ Get an PixelMap object.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -674,8 +624,6 @@ Check whether the specified coordinate point is on the Path.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -702,8 +650,6 @@ isPointInPath(path: Path2D, x: number, y: number): boolean
 Check whether the specified coordinate point is on the Path.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -733,8 +679,6 @@ Checks whether the specified coordinate point is on the stroke edge.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -761,8 +705,6 @@ isPointInStroke(path: Path2D, x: number, y: number): boolean
 Checks whether the specified coordinate point is on the stroke edge.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -792,8 +734,6 @@ Draw a straight line.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -814,8 +754,6 @@ measureText(text: string): TextMetrics
 Returns a TextMetrics object used to obtain the width of specified text.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -843,8 +781,6 @@ Moves the current canvas to the specified coordinate point.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -865,8 +801,6 @@ putImageData(imageData: ImageData, dx: number, dy: number): void
 Draws the specified ImageData object to the canvas.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -898,8 +832,6 @@ Draws the specified ImageData object to the canvas.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -926,8 +858,6 @@ Draw a second order Bezier curve.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -950,8 +880,6 @@ rect(x: number, y: number, w: number, h: number): void
 Draw a rectangle.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -976,8 +904,6 @@ Resets the current matrix transformation effect.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -992,8 +918,6 @@ Restores the configuration information of the last saved canvas context.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1007,8 +931,6 @@ rotate(angle: number): void
 Adds a rotation effect to the current canvas.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1030,8 +952,6 @@ Saves configuration information for the current canvas context.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1045,8 +965,6 @@ scale(x: number, y: number): void
 Adds a zoom effect to the current canvas.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1069,8 +987,6 @@ Sets the dotted spacing of a line.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1091,8 +1007,6 @@ Set the rotation, pan, and zoom effects.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1106,7 +1020,7 @@ Set the rotation, pan, and zoom effects.
 | c | number | Yes |
 | [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 | [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
-| [f](../../apis-arkts/arkts-apis/arkts-arkts-float-c.md) | number | Yes |
+| f | number | Yes |
 
 ## stroke
 
@@ -1117,8 +1031,6 @@ stroke(): void
 Stroke draws the current path.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1133,8 +1045,6 @@ stroke(path: Path2D): void
 Stroke draws the current path.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1155,8 +1065,6 @@ strokeRect(x: number, y: number, w: number, h: number): void
 Stroke a rectangular area.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1181,8 +1089,6 @@ Draws the stroke of a text string.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1205,8 +1111,6 @@ Set the rotation, pan, and zoom effects.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1220,7 +1124,7 @@ Set the rotation, pan, and zoom effects.
 | c | number | Yes |
 | [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 | [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
-| [f](../../apis-arkts/arkts-apis/arkts-arkts-float-c.md) | number | Yes |
+| f | number | Yes |
 
 ## translate
 
@@ -1231,8 +1135,6 @@ translate(x: number, y: number): void
 Adds a pan effect to the current canvas.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1257,8 +1159,6 @@ Fill style attribute. Paint color used to fill the area. Canvas gradient object 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1275,8 +1175,6 @@ Gets the dotted spacing of a line. Returns the current line segment style array 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1292,8 +1190,6 @@ Sets the stroke paint style. Color of the stroke paint. Canvas gradient object u
 **Type:** string \| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) \| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 

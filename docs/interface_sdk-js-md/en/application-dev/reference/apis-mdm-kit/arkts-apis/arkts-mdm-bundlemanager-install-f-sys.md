@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## install
@@ -15,8 +15,6 @@ function install(admin: Want, hapFilePaths: Array<string>, callback: AsyncCallba
 Installs specified applications. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -49,104 +47,6 @@ Installs specified applications. This API uses an asynchronous callback to retur
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Install the application for the current user.
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-
-bundleManager.install(wantTemp, hapFilePaths).then(() => {
-  console.info('Succeeded in installing bundles.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Install the application for all users.
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-const params: Record<string, string> = {
-  'ohos.bms.param.enterpriseForAllUser': 'true'
-};
-let installParam: bundleManager.InstallParam = {
-  // Replace with actual values.
-  userId: 100,
-  installFlag: 0,
-  parameters: params
-};
-bundleManager.install(wantTemp, hapFilePaths, installParam).then(() => {
-  console.info('Succeeded in installing bundles.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-
-bundleManager.install(wantTemp, hapFilePaths, (err) => {
-  if (err) {
-    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in installing bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-let installParam: bundleManager.InstallParam = {
-  userId: 100,
-  installFlag: 1,
-};
-
-bundleManager.install(wantTemp, hapFilePaths, installParam, (err) => {
-  if (err) {
-    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in installing bundles');
-});
-```
-
 
 ## install
 
@@ -157,8 +57,6 @@ function install(admin: Want, hapFilePaths: Array<string>, installParam: Install
 Installs applications with specified parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -191,7 +89,3 @@ Installs applications with specified parameters. This API uses an asynchronous c
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [install](#install)

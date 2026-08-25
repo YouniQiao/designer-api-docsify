@@ -4,8 +4,6 @@ Sets the nested scrolling rules of the **Web** component, supporting scrolling o
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -21,11 +19,9 @@ scrollDown?: NestedScrollMode
 
 Nested scrolling options when the component scrolls down.Default value: **NestedScrollMode.SELF_FIRST**.
 
-**Type:** NestedScrollMode
+**Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -37,11 +33,9 @@ scrollLeft?: NestedScrollMode
 
 Nested scrolling options when the component scrolls left.Default value: **NestedScrollMode.SELF_FIRST**.
 
-**Type:** NestedScrollMode
+**Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -53,11 +47,9 @@ scrollRight?: NestedScrollMode
 
 Nested scrolling options when the component scrolls right.Default value: **NestedScrollMode.SELF_FIRST**.
 
-**Type:** NestedScrollMode
+**Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -69,10 +61,8 @@ scrollUp?: NestedScrollMode
 
 Nested scrolling options when the component scrolls up.Default value: **NestedScrollMode.SELF_FIRST**.
 
-**Type:** NestedScrollMode
+**Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.Web.Webview.Core

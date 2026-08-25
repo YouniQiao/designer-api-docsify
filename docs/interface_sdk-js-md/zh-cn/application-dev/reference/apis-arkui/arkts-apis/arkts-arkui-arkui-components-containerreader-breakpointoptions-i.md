@@ -4,29 +4,26 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@kit.ArkUI';
+import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height?: Array<double>
+height?: Array<number>
 ```
 
-高度断点值数组，高度断点值是组件高度与宽度的比值。无单位。数组必须为单调递增数组。<br/>默认值：[0.8, 1.2]，与窗口高度断点默认值一致。<br/>**说明：**<br/>最多支持3个断点，即数组最大长度为2。
+高度断点值数组，高度断点值是组件高度与宽度的比值。无单位。数组必须为单调递增数组。默认值：[0.8, 1.2]，与窗口高度断点默认值一致。  
+**说明：**最多支持3个断点，即数组最大长度为2。
 
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,16 +36,15 @@ height?: Array<double>
 ## width
 
 ```TypeScript
-width?: Array<double>
+width?: Array<number>
 ```
 
-宽度断点值数组。数组必须为单调递增数组。<br/>默认值：[320, 600, 840, 1440]，单位vp，与窗口宽度断点默认值一致。<br/>**说明：**<br/>最多可支持5个断点，即数组最大长度为4。
+宽度断点值数组。数组必须为单调递增数组。默认值：[320, 600, 840, 1440]，单位vp，与窗口宽度断点默认值一致。  
+**说明：**最多可支持5个断点，即数组最大长度为4。
 
 **类型：** Array&lt;number&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

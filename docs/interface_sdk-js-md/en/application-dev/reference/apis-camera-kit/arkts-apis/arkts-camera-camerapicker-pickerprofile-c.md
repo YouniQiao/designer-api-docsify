@@ -4,14 +4,12 @@ Defines the configuration information about the camera picker.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from '@kit.CameraKit';
+import { cameraPicker } from 'kits/@kit.CameraKit';
 ```
 
 ## cameraPosition
@@ -25,8 +23,6 @@ Camera position.
 **Type:** camera.CameraPosition
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ URI for saving the configuration information. For details about the default valu
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -53,16 +47,14 @@ URI for saving the configuration information. For details about the default valu
 ## videoDuration
 
 ```TypeScript
-videoDuration?: int
+videoDuration?: number
 ```
 
 Maximum video duration, in seconds. The default value is **0**, indicating that the maximum video duration is not set.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

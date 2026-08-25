@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getSelfTrafficStats
@@ -22,8 +22,6 @@ Obtains the traffic statistics of the specified application on the specified net
 > - This API may take some time to execute. Do not call it frequently.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -48,23 +46,3 @@ Obtains the traffic statistics of the specified application on the specified net
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) |
 | [2103019](../errorcode-net-statistics.md#2103019-invalid-timestamp) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { connection, statistics } from '@kit.NetworkKit';
-
-let networkInfo: statistics.NetworkInfo = {
-    type: connection.NetBearType.BEARER_CELLULAR,
-    startTime: Math.floor(Date.now() / 1000) - 86400 * 31,
-    endTime: Math.floor(Date.now() / 1000),
-    simId: 1,
-}
-
-statistics.getSelfTrafficStats(networkInfo).then((stats: statistics.NetStatsInfo) => {
-    console.info('getSelfTrafficStats success : ' + JSON.stringify(stats));
-}).catch((err: BusinessError) => {
-    console.error('getSelfTrafficStats error. code: ' + `${err.code}` + ', message: ' + `${err.message}`);
-});
-```

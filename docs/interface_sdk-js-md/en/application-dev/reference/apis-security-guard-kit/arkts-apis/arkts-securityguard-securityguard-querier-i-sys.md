@@ -4,8 +4,6 @@ Definition callback of receiving the query data.@interface Querier
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Definition callback of receiving the query data.@interface Querier
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## onComplete
@@ -25,8 +23,6 @@ onComplete: () => void
 Triggered when data is complete.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -41,8 +37,6 @@ onError: (message: string) => void
 Triggered when error.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 
@@ -63,8 +57,6 @@ onQuery: (events: Array<SecurityEvent>) => void
 Triggered when data is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 

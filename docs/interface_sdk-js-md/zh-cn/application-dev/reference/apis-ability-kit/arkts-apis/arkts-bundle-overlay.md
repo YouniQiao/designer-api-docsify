@@ -7,14 +7,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
 ## 导入模块
 
 ```TypeScript
-import { overlay } from '@kit.AbilityKit';
+import { overlay } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

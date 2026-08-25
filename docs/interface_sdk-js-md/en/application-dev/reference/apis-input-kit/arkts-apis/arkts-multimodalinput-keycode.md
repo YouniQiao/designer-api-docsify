@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { KeyCode } from '@kit.InputKit';
+import { KeyCode } from 'kits/@kit.InputKit';
 ```
 
 ## Summary

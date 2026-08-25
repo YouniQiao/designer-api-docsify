@@ -4,9 +4,7 @@ Implements imaging mode.
 
 **Inheritance/Implementation:** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md)
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**Since:** 26.1.0
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -15,7 +13,7 @@ Implements imaging mode.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getImagingMode
@@ -26,9 +24,7 @@ getImagingMode(): CameraImagingMode
 
 Gets current imaging mode.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,9 +53,7 @@ setImagingMode(mode: CameraImagingMode): void
 
 Sets imaging mode.
 
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,14 +4,12 @@ Describes the parameters in the callback of the action event of the PiP controll
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'kits/@kit.ArkUI';
 ```
 
 ## controlType
@@ -25,8 +23,6 @@ Type of the action event of the PiP controller. The application performs process
 **Type:** [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,8 +39,6 @@ Status of a component that can be switched. For example, for a microphone on/off
 **Type:** [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

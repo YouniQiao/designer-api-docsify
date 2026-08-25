@@ -6,14 +6,12 @@ Provides APIs for obtaining and modifying **Preferences** instances. **Preferenc
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from '@kit.ArkData';
+import { sendablePreferences } from 'kits/@kit.ArkData';
 ```
 
 ## clear
@@ -26,8 +24,6 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -43,19 +39,6 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 | Error Code ID |
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.clear();
-promise.then(() => {
-  console.info("Succeeded in clearing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to clear. code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## clearSync
 
@@ -67,8 +50,6 @@ Clears this **Preferences** instance. This API returns the result synchronously.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -78,12 +59,6 @@ Clears this **Preferences** instance. This API returns the result synchronously.
 | Error Code ID |
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
-
-**Examples**
-
-```TypeScript
-preferences.clearSync();
-```
 
 ## delete
 
@@ -95,8 +70,6 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -119,19 +92,6 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.delete('startup');
-promise.then(() => {
-  console.info("Succeeded in deleting the key 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to delete the key 'startup'. code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## deleteSync
 
@@ -143,8 +103,6 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -162,12 +120,6 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-preferences.deleteSync('startup');
-```
-
 ## flush
 
 ```TypeScript
@@ -177,8 +129,6 @@ flush(): Promise<void>
 Flushes the data in this **Preferences** instance to the persistent file. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -196,19 +146,6 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.flush();
-promise.then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## flushSync
 
 ```TypeScript
@@ -218,8 +155,6 @@ flushSync(): void
 Flushes the data in the cached **Preferences** instance to the persistent file.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -231,12 +166,6 @@ Flushes the data in the cached **Preferences** instance to the persistent file.
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-preferences.flushSync();
-```
-
 ## get
 
 ```TypeScript
@@ -246,8 +175,6 @@ get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 Obtains the value of a key from this **Preferences** instance. This API uses a promise to return the result. If the value is null or is not of the default value type, **defValue** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -272,21 +199,6 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { lang } from '@kit.ArkTS';
-
-let promise = preferences.get('startup', 'default');
-promise.then((data: lang.ISendable) => {
-  let dataStr = data as string;
-  console.info(`Succeeded in getting value of 'startup'. Data: ${dataStr}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get value of 'startup'. code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getAll
 
@@ -298,8 +210,6 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -316,22 +226,6 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { lang } from '@kit.ArkTS';
-
-let promise = preferences.getAll();
-promise.then((keyValues: lang.ISendable) => {
-  for (let value of Object.keys(keyValues)) {
-    console.info("getAll " + JSON.stringify(value));
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get all key-values. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getAllSync
 
 ```TypeScript
@@ -341,8 +235,6 @@ getAllSync(): lang.ISendable
 Obtains all KV pairs from this **Preferences** instance. This API returns the result synchronously.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -360,17 +252,6 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 | --- |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { lang } from '@kit.ArkTS';
-
-let keyValues: lang.ISendable = preferences.getAllSync();
-for (let value of Object.keys(keyValues)) {
-  console.info("getAll " + JSON.stringify(value));
-}
-```
-
 ## getSync
 
 ```TypeScript
@@ -380,8 +261,6 @@ getSync(key: string, defValue: lang.ISendable): lang.ISendable
 Obtains the value of a key from this **Preferences** instance. This API returns the result synchronously. If the value is null or is not of the default value type, **defValue** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -407,13 +286,6 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { lang } from '@kit.ArkTS';
-let value: lang.ISendable = preferences.getSync('startup', 'default');
-```
-
 ## has
 
 ```TypeScript
@@ -423,8 +295,6 @@ has(key: string): Promise<boolean>
 Checks whether this **Preferences** instance contains the KV pair of the given key. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -449,23 +319,6 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.has('startup');
-promise.then((val: boolean) => {
-  if (val) {
-    console.info("The key 'startup' is contained.");
-  } else {
-    console.error("The key 'startup' does not contain.");
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check the key 'startup'. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## hasSync
 
 ```TypeScript
@@ -475,8 +328,6 @@ hasSync(key: string): boolean
 Checks whether this **Preferences** instance contains the KV pair of the given key. This API returns the result synchronously.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -501,17 +352,6 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-let isExist: boolean = preferences.hasSync('startup');
-if (isExist) {
-  console.info("The key 'startup' is contained.");
-} else {
-  console.error("The key 'startup' does not contain.");
-}
-```
-
 ## off('change')
 
 ```TypeScript
@@ -521,8 +361,6 @@ off(type: 'change', callback?: Callback<string>): void
 Unsubscribes from data changes.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -542,24 +380,6 @@ Unsubscribes from data changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('change', observer);
-preferences.putSync('startup', 'auto');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-  preferences.off('change', observer);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## off('multiProcessChange')
 
 ```TypeScript
@@ -569,8 +389,6 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 Unsubscribes from inter-process data changes. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -590,24 +408,6 @@ Unsubscribes from inter-process data changes. This API is provided for applicati
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'auto');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-  preferences.off('multiProcessChange', observer);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## off('dataChange')
 
 ```TypeScript
@@ -617,8 +417,6 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 Unsubscribes from changes of specific data.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -639,27 +437,6 @@ Unsubscribes from changes of specific data.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { lang } from '@kit.ArkTS';
-
-let observer = (data: lang.ISendable) => {
-  console.info(`observer : ${data}`);
-};
-let keys = ['name', 'age'];
-preferences.on('dataChange', keys, observer);
-preferences.putSync('name', 'xiaohong');
-preferences.putSync('weight', 125);
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-  preferences.off('dataChange', keys, observer);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## on('change')
 
 ```TypeScript
@@ -669,8 +446,6 @@ on(type: 'change', callback: Callback<string>): void
 Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](#flush).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -690,23 +465,6 @@ Subscribes to data changes. The registered callback will be invoked to return th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('change', observer);
-preferences.putSync('startup', 'manual');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## on('multiProcessChange')
 
 ```TypeScript
@@ -716,8 +474,6 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](#flush) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -738,23 +494,6 @@ Subscribes to data changes between processes. When multiple processes hold the s
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 | [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'manual');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## on('dataChange')
 
 ```TypeScript
@@ -764,8 +503,6 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](#flush).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -786,26 +523,6 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { lang } from '@kit.ArkTS';
-
-let observer = (data: lang.ISendable) => {
-  console.info(`observer : ${data}`);
-};
-let keys = ['name', 'age'];
-preferences.on('dataChange', keys, observer);
-preferences.putSync('name', 'xiaohong');
-preferences.putSync('weight', 125);
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## put
 
 ```TypeScript
@@ -815,8 +532,6 @@ put(key: string, value: lang.ISendable): Promise<void>
 Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -842,19 +557,6 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = preferences.put('startup', 'auto');
-promise.then(() => {
-  console.info("Succeeded in putting value of 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to put value of 'startup'. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## putSync
 
 ```TypeScript
@@ -864,8 +566,6 @@ putSync(key: string, value: lang.ISendable): void
 Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -884,9 +584,3 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
-
-**Examples**
-
-```TypeScript
-preferences.putSync('startup', 'auto');
-```

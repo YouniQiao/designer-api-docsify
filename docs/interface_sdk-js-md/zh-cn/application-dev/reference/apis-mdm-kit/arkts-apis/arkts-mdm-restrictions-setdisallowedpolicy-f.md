@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## setDisallowedPolicy
@@ -19,8 +19,6 @@ function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): v
 > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **废弃版本：** 26.0.0
 
@@ -52,45 +50,6 @@ function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): v
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [9200013](../errorcode-enterpriseDeviceManager.md#9200013-管控未实时生效) |
 
-**示例**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  restrictions.setDisallowedPolicy(wantTemp, 'printer', true);
-  console.info('Succeeded in setting printer disabled');
-} catch (err) {
-  console.error(`Failed to set printer disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  restrictions.setDisallowedPolicy(wantTemp, restrictions.FeatureForDevice.WIFI_P2P, true);
-  console.info('Succeeded in setting Wi-Fi P2P disabled');
-} catch (err) {
-  console.error(`Failed to set Wi-Fi P2P disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## setDisallowedPolicy
 
@@ -101,8 +60,6 @@ function setDisallowedPolicy(admin: Want, feature: FeatureForDevice, disallow: b
 设置禁用/启用指定设备特性，禁用后相关设备特性无法被使用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 
@@ -128,7 +85,3 @@ function setDisallowedPolicy(admin: Want, feature: FeatureForDevice, disallow: b
 | [9200013](../errorcode-enterpriseDeviceManager.md#9200013-管控未实时生效) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [setDisallowedPolicy](#setdisallowedpolicy)

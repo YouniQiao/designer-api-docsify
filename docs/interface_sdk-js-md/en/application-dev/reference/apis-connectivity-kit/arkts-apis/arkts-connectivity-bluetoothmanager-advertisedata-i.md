@@ -4,8 +4,6 @@ Describes the advertising data.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
@@ -15,7 +13,7 @@ Describes the advertising data.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## manufactureData
@@ -29,8 +27,6 @@ The specified manufacturer data list to this advertisement
 **Type:** Array&lt;ManufactureData&gt;
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,8 +46,6 @@ The specified service data list to this advertisement
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [serviceData](arkts-connectivity-ble-advertisedata-i.md#servicedata)
@@ -69,8 +63,6 @@ The specified service UUID list to this advertisement
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

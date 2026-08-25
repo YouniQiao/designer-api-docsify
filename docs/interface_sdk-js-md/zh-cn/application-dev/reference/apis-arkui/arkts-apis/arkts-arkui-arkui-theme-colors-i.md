@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from 'kits/@kit.ArkUI';
 ```
 
 ## alert
@@ -25,8 +23,6 @@ alert: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ backgroundEmphasize: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -65,8 +59,6 @@ backgroundFourth: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,8 +78,6 @@ backgroundPrimary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -105,8 +95,6 @@ backgroundSecondary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,8 +114,6 @@ backgroundTertiary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -145,8 +131,6 @@ brand: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -166,8 +150,6 @@ compBackgroundEmphasize: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -185,8 +167,6 @@ compBackgroundFocus: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -206,8 +186,6 @@ compBackgroundGray: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -225,8 +203,6 @@ compBackgroundNeutral: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -246,8 +222,6 @@ compBackgroundPrimary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -265,8 +239,6 @@ compBackgroundPrimaryContrary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -286,8 +258,6 @@ compBackgroundPrimaryTran: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -305,8 +275,6 @@ compBackgroundSecondary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -326,8 +294,6 @@ compBackgroundTertiary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -345,8 +311,6 @@ compCommonContrary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -366,8 +330,6 @@ compDivider: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -385,8 +347,6 @@ compEmphasizeSecondary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -406,8 +366,6 @@ compEmphasizeTertiary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -425,8 +383,6 @@ compFocusedPrimary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -446,8 +402,6 @@ compFocusedSecondary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -465,8 +419,6 @@ compFocusedTertiary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -486,8 +438,6 @@ compForegroundPrimary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -505,8 +455,6 @@ confirm: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -526,8 +474,6 @@ container?: ResourceColor
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -545,8 +491,6 @@ fontEmphasize: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -566,8 +510,6 @@ fontFourth: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -586,8 +528,6 @@ fontOnFourth: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -600,13 +540,11 @@ fontOnFourth: ResourceColor
 fontOnPrimary: ResourceColor
 ```
 
-一级文本反转颜色，用于彩色背景。&lt;/br&gt;**影响组件：** [Badge](arkts-arkui-tabcontent-tabbaroptions-i.md#badge)、Button、 Chip
+一级文本反转颜色，用于彩色背景。&lt;/br&gt;**影响组件：** Badge、Button、 Chip
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -626,8 +564,6 @@ fontOnSecondary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -645,8 +581,6 @@ fontOnTertiary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -666,8 +600,6 @@ fontPrimary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -685,8 +617,6 @@ fontSecondary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -706,8 +636,6 @@ fontTertiary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -725,8 +653,6 @@ iconEmphasize: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -746,8 +672,6 @@ iconFourth: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -765,8 +689,6 @@ iconOnFourth: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -786,8 +708,6 @@ iconOnPrimary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -805,8 +725,6 @@ iconOnSecondary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -826,8 +744,6 @@ iconOnTertiary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -845,8 +761,6 @@ iconPrimary: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -866,8 +780,6 @@ iconSecondary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -885,8 +797,6 @@ iconSubEmphasize: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -906,8 +816,6 @@ iconTertiary: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -925,8 +833,6 @@ interactiveActive: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -946,8 +852,6 @@ interactiveClick: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -965,8 +869,6 @@ interactiveFocus: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -986,8 +888,6 @@ interactiveHover: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1005,8 +905,6 @@ interactivePressed: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1026,8 +924,6 @@ interactiveSelect: ResourceColor
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1045,8 +941,6 @@ onPrimary?: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1066,8 +960,6 @@ primary?: ResourceColor
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1080,13 +972,11 @@ primary?: ResourceColor
 warning: ResourceColor
 ```
 
-一级警示色。&lt;/br&gt;**影响组件：** [TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、 [AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、 [CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、&lt;/br&gt;[Badge](arkts-arkui-tabcontent-tabbaroptions-i.md#badge)、 Button
+一级警示色。&lt;/br&gt;**影响组件：** [TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、 [AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、 [CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、&lt;/br&gt;Badge、 Button
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

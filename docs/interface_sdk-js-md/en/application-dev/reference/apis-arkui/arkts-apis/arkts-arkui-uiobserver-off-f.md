@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## off('navDestinationUpdate')
@@ -15,8 +15,6 @@ export function off(type: 'navDestinationUpdate', options: { navigationId: Resou
 Unsubscribes from status changes of the **NavDestination** component. Compared with uiObserver.off, this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +41,6 @@ Unsubscribes from status changes of the **NavDestination** component.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -69,8 +65,6 @@ Removes a callback function that was previously registered with `on()`.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,75 +79,6 @@ Removes a callback function that was previously registered with `on()`.
 | options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | No |
 
-**Examples**
-
-```TypeScript
-import { uiObserver } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct Index {
-  scroller: Scroller = new Scroller();
-  options: uiObserver.ObserverOptions = { id: 'testId' };
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7]
-
-  build() {
-    Column() {
-      Column() {
-        Scroll(this.scroller) {
-          Column() {
-            ForEach(this.arr, (item: number) => {
-              Text(item.toString())
-                .width('90%')
-                .height(150)
-                .backgroundColor(0xFFFFFF)
-                .borderRadius(15)
-                .fontSize(16)
-                .textAlign(TextAlign.Center)
-                .margin({ top: 10 })
-            }, (item: string) => item)
-          }.width('100%')
-        }
-        .id('testId')
-        .height('80%')
-      }
-      .width('100%')
-
-      Row() {
-        Button('UIObserver on')
-          .onClick(() => {
-            // Register a listener.
-            uiObserver.on('scrollEvent', (info) => {
-              console.info(`scrollEventInfo ${JSON.stringify(info)}`);
-            });
-          })
-        Button('UIObserver off')
-          .onClick(() => {
-            // Unregister the listener.
-            uiObserver.off('scrollEvent');
-          })
-      }
-
-      Row() {
-        Button('UIObserverWithId on')
-          .onClick(() => {
-            // Register a listener with the specified component ID.
-            uiObserver.on('scrollEvent', this.options, (info) => {
-              console.info(`scrollEventInfo ${JSON.stringify(info)}`);
-            });
-          })
-        Button('UIObserverWithId off')
-          .onClick(() => {
-            // Unregister the listener.
-            uiObserver.off('scrollEvent',this.options);
-          })
-      }
-    }
-    .height('100%')
-  }
-}
-```
-
 
 ## off('scrollEvent')
 
@@ -164,8 +89,6 @@ export function off(type: 'scrollEvent', callback?: Callback<ScrollEventInfo>): 
 Removes a callback function that was previously registered with `on()`.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,8 +114,6 @@ Unsubscribes from state changes of the page during routing.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -204,35 +125,8 @@ Unsubscribes from state changes of the page during routing.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'routerPageUpdate' | Yes |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RouterPageInfo&gt; | No |
-
-**Examples**
-
-```TypeScript
-// used in UIAbility
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { uiObserver, UIContext } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  // Before actual use, uiContext must be assigned a value. For details, see the example for uiObserver.on('routerPageUpdate').
-  private uiContext: UIContext | null = null;
-
-  onDestroy(): void {
-    // Unregister all callbacks for the routerPageUpdate event under the current ability context.
-    uiObserver.off('routerPageUpdate', this.context)
-  }
-
-  onWindowStageDestroy(): void {
-    // Unregister all callbacks for the routerPageUpdate event under the UI context.
-    if (this.uiContext) {
-      uiObserver.off('routerPageUpdate', this.uiContext);
-    }
-  }
-
-  // ... other function in EntryAbility
-}
-```
 
 
 ## off('densityUpdate')
@@ -245,8 +139,6 @@ Unregisters the listener for screen pixel density changes.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -258,7 +150,7 @@ Unregisters the listener for screen pixel density changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'densityUpdate' | Yes |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)&gt; | No |
 
 
@@ -272,8 +164,6 @@ Unregisters the listener for drawing instruction dispatch in each frame.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -285,7 +175,7 @@ Unregisters the listener for drawing instruction dispatch in each frame.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'willDraw' | Yes |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
 
 
@@ -299,8 +189,6 @@ Unregisters the listener for layout completion status in each frame.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -312,7 +200,7 @@ Unregisters the listener for layout completion status in each frame.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'didLayout' | Yes |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
 
 
@@ -325,8 +213,6 @@ export function off(type: 'tabContentUpdate', options: ObserverOptions, callback
 Unsubscribes from **TabContent** page switching events for the specified **Tabs** component identified by its ID.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -352,8 +238,6 @@ export function off(type: 'tabContentUpdate', callback?: Callback<TabContentInfo
 Unsubscribes from the **TabContent** switching event.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -383,8 +267,6 @@ Unsubscribes from **Navigation** component page switching events.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -396,7 +278,7 @@ Unsubscribes from **Navigation** component page switching events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | No |
 
 
@@ -415,8 +297,6 @@ Unsubscribes from **Navigation** component page switching events. Compared with 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -428,6 +308,6 @@ Unsubscribes from **Navigation** component page switching events. Compared with 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
 | observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | No |

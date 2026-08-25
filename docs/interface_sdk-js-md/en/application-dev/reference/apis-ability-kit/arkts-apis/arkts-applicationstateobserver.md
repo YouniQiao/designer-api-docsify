@@ -8,12 +8,6 @@
 | --- |
 | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) |
 
-### Interfaces
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ApplicationStateObserver](arkts-ability-applicationstateobserver-i.md) |
-
 ### Types
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |

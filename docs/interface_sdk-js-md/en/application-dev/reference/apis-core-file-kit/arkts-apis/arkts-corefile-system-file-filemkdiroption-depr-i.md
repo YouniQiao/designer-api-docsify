@@ -4,8 +4,6 @@ Defines the options used in mkdir().
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -25,8 +23,6 @@ Callback invoked when the API call is complete.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -40,8 +36,6 @@ fail?: (data: string, code: number) => void
 Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
@@ -64,8 +58,6 @@ Callback invoked when the API call is successful.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 10
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
@@ -81,8 +73,6 @@ Whether to recursively create the upper-level directory of the specified directo
 **Type:** boolean
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 
@@ -101,8 +91,6 @@ URI of the directory. Restricted by the underlying file system of lite wearables
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 10
 

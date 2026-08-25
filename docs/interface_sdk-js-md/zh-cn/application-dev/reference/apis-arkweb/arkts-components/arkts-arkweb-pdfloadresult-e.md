@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## LOAD_SUCCESS
@@ -17,8 +15,6 @@ LOAD_SUCCESS = 0
 PDF页面加载成功。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ PDF文件加载失败。
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## PARSE_ERROR_FORMAT
@@ -45,8 +39,6 @@ PARSE_ERROR_FORMAT = 2
 PDF文件格式不支持。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -60,8 +52,6 @@ PDF文件密码不正确。
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## PARSE_ERROR_HANDLER
@@ -73,7 +63,5 @@ PARSE_ERROR_HANDLER = 4
 PDF文件处理失败。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core

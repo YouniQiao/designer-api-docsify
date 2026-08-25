@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## isConcurrent
@@ -15,8 +15,6 @@ function isConcurrent(func: Function): boolean
 检查函数是否为并发函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -33,13 +31,3 @@ function isConcurrent(func: Function): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-@Concurrent
-function emptyFunc(): void {}
-
-let result: boolean = taskpool.isConcurrent(emptyFunc);
-console.info("result is: " + result);
-```

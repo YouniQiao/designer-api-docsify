@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
 ```
 
 ## subscribe
@@ -15,8 +15,6 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 Subscribes to notifications of all applications under this user. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -46,67 +44,6 @@ Subscribes to notifications of all applications under this user. This API uses a
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// subscribe callback
-let subscribeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("subscribe success");
-  }
-}
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-// Bundle names are not verified. You need to determine the target bundle names.
-let info: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ["bundleName1","bundleName2"]
-};
-notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subscribeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("subscribe success");
-  }
-}
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-notificationSubscribe.subscribe(subscriber, subscribeCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-notificationSubscribe.subscribe(subscriber).then(() => {
-  console.info("subscribe success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribe fail: ${JSON.stringify(err)}`);
-});
-```
 
 
 ## subscribe
@@ -123,8 +60,6 @@ Subscribes to a notification with the subscription information specified. This A
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md)
@@ -140,7 +75,7 @@ Subscribes to a notification with the subscription information specified. This A
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes |
-| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | Yes |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -155,10 +90,6 @@ Subscribes to a notification with the subscription information specified. This A
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
 
-**Examples**
-
-See [subscribe](#subscribe)
-
 
 ## subscribe
 
@@ -169,8 +100,6 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 Subscribes to a notification with the subscription information specified. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -187,7 +116,7 @@ Subscribes to a notification with the subscription information specified. This A
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes |
-| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribe-notificationsubscribeinfo-t-sys.md) | No |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | No |
 
 **Return value:**
 
@@ -206,7 +135,3 @@ Subscribes to a notification with the subscription information specified. This A
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-
-**Examples**
-
-See [subscribe](#subscribe)

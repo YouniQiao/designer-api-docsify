@@ -3,29 +3,27 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getInclination
 
 ```TypeScript
-function getInclination(inclinationMatrix: Array<double>, callback: AsyncCallback<double>): void
+function getInclination(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void
 ```
 
 根据倾斜矩阵计算地磁倾角。使用callback异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| inclinationMatrix | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; | 是 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 |
+| inclinationMatrix | Array & lt;number & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -34,144 +32,30 @@ function getInclination(inclinationMatrix: Array<double>, callback: AsyncCallbac
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sensor } from '@kit.SensorServiceKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  // inclinationMatrix可以为3*3，或者4*4
-  let inclinationMatrix = [
-    1, 0, 0,
-    0, 1, 0,
-    0, 0, 1
-  ]
-  sensor.getInclination(inclinationMatrix, (err, data) => {
-    let error = err as BusinessError;
-    let dataValue = data as number;
-    if (error) {
-      console.error(`Failed to get inclination. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info('Succeeded in getting inclination: ' + dataValue);
-  })
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sensor } from '@kit.SensorServiceKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  // inclinationMatrix可以为3*3，或者4*4
-  let inclinationMatrix = [
-    1, 0, 0,
-    0, 1, 0,
-    0, 0, 1
-  ]
-  sensor.getInclination(inclinationMatrix, (err, data) => {
-    let error = err as BusinessError;
-    let dataValue = data as double;
-    if (error) {
-      console.error(`Failed to get inclination. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info('Succeeded in getting inclination: ' + dataValue);
-  })
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sensor } from '@kit.SensorServiceKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  // inclinationMatrix可以为3*3，或者4*4
-  let inclinationMatrix = [
-    1, 0, 0,
-    0, 1, 0,
-    0, 0, 1
-  ]
-  const promise = sensor.getInclination(inclinationMatrix);
-  promise.then((data: number) => {
-    console.info('Succeeded in getting inclination: ' + data);
-  }, (err: BusinessError) => {
-    console.error(`Failed to get inclination. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sensor } from '@kit.SensorServiceKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  // inclinationMatrix可以为3*3，或者4*4
-  let inclinationMatrix = [
-    1, 0, 0,
-    0, 1, 0,
-    0, 0, 1
-  ]
-  const promise = sensor.getInclination(inclinationMatrix);
-  promise.then((data: double) => {
-    console.info('Succeeded in getting inclination: ' + data);
-  }, (err: BusinessError) => {
-    console.error(`Failed to get inclination. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## getInclination
 
 ```TypeScript
-function getInclination(inclinationMatrix: Array<double>): Promise<double>
+function getInclination(inclinationMatrix: Array<number>): Promise<number>
 ```
 
 根据倾斜矩阵计算地磁倾角。使用Promise异步回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Sensors.Sensor
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| inclinationMatrix | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; | 是 |
+| inclinationMatrix | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;double & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -179,7 +63,3 @@ function getInclination(inclinationMatrix: Array<double>): Promise<double>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
-
-**示例**
-
-参见 [getInclination](#getinclination)

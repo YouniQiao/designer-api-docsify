@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setRttCapability
 
 ```TypeScript
-function setRttCapability(accountId: int, isEnable: boolean): Promise<void>
+function setRttCapability(accountId: number, isEnable: boolean): Promise<void>
 ```
 
 Set rtt capability.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -28,7 +26,7 @@ Set rtt capability.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 | isEnable | boolean | Yes |
 
 **Return value:**

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## sppCloseServerSocket
@@ -15,8 +15,6 @@ function sppCloseServerSocket(socket: number): void
 Disables an spp server socket and releases related resources.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -38,22 +36,3 @@ Disables an spp server socket and releases related resources.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900001 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let serverNumber = -1;
-function serverSocket(code: BusinessError, number: number) {
-  console.info(`bluetooth error code: ${code.code}`);
-  if (code.code == 0) {
-    console.info(`bluetooth serverSocket Number: ${number}`);
-    serverNumber = number;
-  }
-}
-try {
-    bluetoothManager.sppCloseServerSocket(serverNumber);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```

@@ -6,14 +6,12 @@ Manager pan host profile.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { pan } from '@kit.ConnectivityKit';
+import { pan } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -25,8 +23,6 @@ connect(deviceId: string): void
 Initiate the PAN connection with the remote device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -63,8 +59,6 @@ Disconnect the PAN connection with the remote device.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -92,18 +86,6 @@ Disconnect the PAN connection with the remote device.
 | 2900004 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let panProfile: pan.PanProfile = pan.createPanProfile();
-    panProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## setTethering
 
 ```TypeScript
@@ -113,8 +95,6 @@ setTethering(enable: boolean): void
 Enable bluetooth tethering.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -142,15 +122,3 @@ Enable bluetooth tethering.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let panProfile: pan.PanProfile = pan.createPanProfile();
-    panProfile.setTethering(false);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

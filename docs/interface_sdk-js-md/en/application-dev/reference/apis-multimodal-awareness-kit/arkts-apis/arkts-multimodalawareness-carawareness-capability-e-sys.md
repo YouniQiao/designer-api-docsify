@@ -4,8 +4,6 @@ CarAwareness Capability.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
 ## SPATIAL_POINT
@@ -17,8 +15,6 @@ SPATIAL_POINT = 'SpatialPoint'
 spatial point specific capability
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ spatial gesture specific capability
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
@@ -53,8 +47,6 @@ CAR_STATUS = 'CarStatus'
 car status specific capability
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +64,6 @@ car config specific capability
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
@@ -89,8 +79,6 @@ HABIT_RECOMMENDATION = 'HabitRecommendation'
 habit recommendation specific capability
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,8 +6,6 @@ Provides APIs for managing the system albums.This API will be deprecated. Use [A
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md)
@@ -19,7 +17,7 @@ Provides APIs for managing the system albums.This API will be deprecated. Use [A
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@kit.CoreFileKit';
+import { userFileManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## delete
@@ -32,8 +30,6 @@ Deletes a file from the system album. Only the files in the trash can be deleted
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** deleteAlbumsWithUri
@@ -50,122 +46,6 @@ Deletes a file from the system album. Only the files in the trash can be deleted
 | --- | --- | --- |
 | uri | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('deleteAssetDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    const fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-
-
-    if (asset == undefined) {
-      console.error('asset not exist');
-      return;
-    }
-    mgr.delete(asset.uri, (err) => {
-      if (err == undefined) {
-        console.info('delete successfully');
-      } else {
-        console.error('delete failed with error: ' + err);
-      }
-    });
-  } catch (err) {
-    console.error('fetch failed, message =', err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('deleteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    const fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await mgr.getPhotoAssets(fetchOptions);
-    let asset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-    if (asset == undefined) {
-      console.error('asset not exist');
-      return;
-    }
-    await mgr.delete(asset.uri);
-    console.info('delete successfully');
-  } catch (err) {
-    console.error('delete failed with error: ' + err);
-  }
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumDeleteCallback');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  let deleteFileUri = fileAsset.uri;
-  trashAlbum.delete(deleteFileUri, (err) => {
-    if (err != undefined) {
-      console.error('trashAlbum.delete failed, message = ', err);
-    } else {
-      console.info('trashAlbum.delete successfully');
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumDeleteDemoPromise');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  let deleteFileUri = fileAsset.uri;
-  trashAlbum.delete(deleteFileUri).then(() => {
-    console.info('trashAlbum.delete successfully');
-  }).catch((err: BusinessError) => {
-    console.error('trashAlbum.delete failed, message = ', err);
-  });
-}
-```
 
 ## delete
 
@@ -177,8 +57,6 @@ Deletes a file from the system album. Only the files in the trash can be deleted
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** deleteAlbumsWithUri
@@ -201,10 +79,6 @@ Deletes a file from the system album. Only the files in the trash can be deleted
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [delete](#delete)
-
 ## recover
 
 ```TypeScript
@@ -214,8 +88,6 @@ recover(uri: string, callback: AsyncCallback<void>): void
 Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous callback to return the result.This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverphotoassets) instead.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -234,69 +106,6 @@ Recovers a file in the system album. Only the files in the trash can be recovere
 | uri | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumRecoverDemoCallback');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  if (trashAlbum === undefined) {
-    console.error('privateAlbumRecoverDemoCallback trashAlbum is undefined');
-    return;
-  }
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  if (fileAsset === undefined) {
-    console.error('privateAlbumRecoverDemoCallback fileAsset is undefined');
-    return;
-  }
-  let recoverFileUri: string = fileAsset.uri;
-  trashAlbum.recover(recoverFileUri, (err) => {
-    if (err != undefined) {
-      console.error('trashAlbum.recover failed, message = ', err);
-    } else {
-      console.info('trashAlbum.recover successfully');
-    }
-  });
-}
-```
-
-For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(mgr: userFileManager.UserFileManager) {
-  console.info('privateAlbumRecoverDemoPromise');
-  let albumList: userFileManager.FetchResult<userFileManager.PrivateAlbum> = await mgr.getPrivateAlbum(userFileManager.PrivateAlbumType.TYPE_TRASH);
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: userFileManager.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let trashAlbum: userFileManager.PrivateAlbum = await albumList.getFirstObject();
-  let fetchResult: userFileManager.FetchResult<userFileManager.FileAsset> = await trashAlbum.getPhotoAssets(fetchOption);
-  let fileAsset: userFileManager.FileAsset = await fetchResult.getFirstObject();
-  let recoverFileUri: string = fileAsset.uri;
-  trashAlbum.recover(recoverFileUri).then(() => {
-    console.info('trashAlbum.recover successfully');
-  }).catch((err: BusinessError) => {
-    console.error('trashAlbum.recover failed, message = ', err);
-  });
-}
-```
-
 ## recover
 
 ```TypeScript
@@ -306,8 +115,6 @@ recover(uri: string): Promise<void>
 Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to return the result.This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverphotoassets) instead.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -330,7 +137,3 @@ Recovers a file in the system album. Only the files in the trash can be recovere
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [recover](#recover)

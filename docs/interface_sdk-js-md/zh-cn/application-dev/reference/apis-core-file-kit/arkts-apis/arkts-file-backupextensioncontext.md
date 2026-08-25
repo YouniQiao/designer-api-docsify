@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { BackupExtensionContext } from '@kit.CoreFileKit';
+import { BackupExtensionContext } from 'kits/@kit.CoreFileKit';
 ```
 
 ## 汇总

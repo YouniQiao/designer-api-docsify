@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## changeConfirmation
@@ -15,8 +15,6 @@ function changeConfirmation(sharingResource: string, state: State, callback: Asy
 Changes the invitation confirmation state based on the shared resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -38,30 +36,6 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED).then((result) => {
-  console.info(`change confirmation succeeded, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED, ((err: BusinessError, result) => {
-  if (err) {
-    console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info(`change confirmation succeeded, result: ${result}`);
-}))
-```
-
 
 ## changeConfirmation
 
@@ -72,8 +46,6 @@ function changeConfirmation(sharingResource: string, state: State): Promise<Resu
 Changes the invitation confirmation state based on the shared resource ID. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -99,7 +71,3 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [changeConfirmation](#changeconfirmation)

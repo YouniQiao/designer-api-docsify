@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## setCertificateStatus
@@ -15,8 +15,6 @@ function setCertificateStatus(certUri: string, certType: CertType, enabled: bool
 设置CA证书的状态，当前仅支持设置用户CA证书状态，仅证书管理应用调用。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_USER_TRUSTED_CERT
 
@@ -49,23 +47,3 @@ function setCertificateStatus(certUri: string, certType: CertType, enabled: bool
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) |
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) |
-
-**示例**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let certUri: string = 'test'; /* 用户CA证书的唯一标识符 */
-try {
-  /* 设置用户CA证书状态为启用 */
-  certificateManager.setCertificateStatus(certUri, certificateManager.CertType.CA_CERT_USER, true).then(() => {
-    console.info('Succeeded in setting certificate status.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to set certificate status. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to set certificate status. Code: ${error.code}, message: ${error.message}`);
-}
-```

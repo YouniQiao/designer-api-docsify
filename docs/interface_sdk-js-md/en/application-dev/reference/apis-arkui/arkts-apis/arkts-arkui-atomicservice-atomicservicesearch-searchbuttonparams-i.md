@@ -4,14 +4,12 @@ Sets the search button located next to the search text box.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from 'kits/@kit.ArkUI';
 ```
 
 ## options
@@ -22,11 +20,9 @@ options?: SearchButtonOptions
 
 Font of the search text box. Default value: **{fontSize: '16fp',fontColor: '#ff3f97e9'}**
 
-**Type:** SearchButtonOptions
+**Type:** [SearchButtonOptions](../arkts-components/arkts-arkui-searchbuttonoptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -40,11 +36,9 @@ searchButtonValue: ResourceStr
 
 Text on the search button located next to the search text box.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

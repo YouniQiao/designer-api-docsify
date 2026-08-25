@@ -4,8 +4,6 @@ Defines the callback of remote authentication. This API is used in remote authen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the callback of remote authentication. This API is used in remote authen
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## onGetRemoteAuthWidgetParam
@@ -25,8 +23,6 @@ onGetRemoteAuthWidgetParam: WidgetParamCallback
 Callback triggered to obtain remote authentication page parameters. When a remote device initiates an authentication request, the system calls this callback to obtain the configuration parameters on the authentication page.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ onRemoteAuthResult: ResultCallback
 Callback triggered to return the remote authentication result. After remote authentication is complete, the system calls this callback to return the authentication result to the initiator.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

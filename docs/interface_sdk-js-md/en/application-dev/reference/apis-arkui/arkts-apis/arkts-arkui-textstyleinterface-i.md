@@ -4,8 +4,6 @@ TextStyleInterface
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ fontColor?: ResourceColor
 
 Font color.Default value: theme color.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,13 +35,11 @@ Font color.Default value: theme color.
 fontConfigs?: FontConfigs
 ```
 
-Font configuration. The default value is inherited from FontConfigs.
+Font configuration. The default value is inherited from [FontConfigs](arkts-arkui-fontconfigs-i.md).
 
-**Type:** FontConfigs
+**Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,11 +55,9 @@ fontFamily?: ResourceStr
 
 Font family.Default value: theme font.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +77,6 @@ Font size.Default value: 16 fp.If **unit** of **LengthMetrics** is percent, the 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -104,8 +94,6 @@ Font style.Default value: **FontStyle.Normal**.
 **Type:** FontStyle
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,8 +114,6 @@ Variable font attributes.Default value: **undefined**, indicating that variable 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -146,8 +132,6 @@ Font weight.For the number type, the value ranges from 100 to 900, at an interva
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -162,11 +146,9 @@ strokeColor?: ResourceColor
 
 Text stroke color.Default value: text color. If invalid values are provided, the text color is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -183,11 +165,9 @@ strokeJoinStyle?: StrokeJoinStyle
 Text stroke join style.Default value: **StrokeJoinStyle.MITER_JOIN**.  
 **Since**: 26.0.0.
 
-**Type:** StrokeJoinStyle
+**Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -207,8 +187,6 @@ Text stroke width. If **unit** of **LengthMetrics** is percent, the setting does
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -223,11 +201,9 @@ superscript?: SuperscriptStyle
 
 Superscript or subscript for the text.Default value: **SuperscriptStyle.NORMAL**.
 
-**Type:** SuperscriptStyle
+**Type:** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

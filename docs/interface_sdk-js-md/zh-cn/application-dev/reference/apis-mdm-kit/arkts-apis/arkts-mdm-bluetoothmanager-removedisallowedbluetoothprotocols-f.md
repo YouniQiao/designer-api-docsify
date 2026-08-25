@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedBluetoothProtocols
@@ -15,8 +15,6 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 移除蓝牙协议禁用名单。若移除禁用名单中某个用户的部分蓝牙协议，则该用户不能使用禁用名单内剩余的蓝牙协议向其他设备外发文件。若移除禁用名单中某个用户的所有蓝牙协议，则该用户可以使用任意蓝牙协议向其他设备外发文件。若移除禁用名单中不存 在的蓝牙协议，接口可调用成功，但不会移除禁用名单中不存在的蓝牙协议。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -40,61 +38,6 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 定义用户ID（需根据实际情况进行替换）
-let accountId: number = 100;
-// 定义蓝牙协议数组（需根据实际情况进行替换）
-let protocols: Array<bluetoothManager.Protocol> = [bluetoothManager.Protocol.GATT, bluetoothManager.Protocol.SPP];
-try {
-  // 移除蓝牙协议禁用名单
-  bluetoothManager.removeDisallowedBluetoothProtocols(wantTemp, accountId, protocols);
-  console.info('Succeeded in removing disallowed bluetooth protocols policy.');
-} catch (err) {
-  console.error(`Failed to remove disallowed bluetooth protocols. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-// 创建企业设备管理扩展组件
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 定义用户ID
-let accountId: number = 100;
-// 定义蓝牙协议数组
-let protocols: Array<bluetoothManager.Protocol> = [
-  bluetoothManager.Protocol.GATT,
-  bluetoothManager.Protocol.SPP,
-  bluetoothManager.Protocol.OPP
-];
-
-try {
-  // 移除蓝牙协议禁用名单，指定传输策略为禁止发送和接收
-  bluetoothManager.removeDisallowedBluetoothProtocols(wantTemp, accountId,protocols,
-    bluetoothManager.TransferPolicy.RECEIVE_SEND);
-  console.info('Succeeded in removing disallowed bluetooth protocols.');
-} catch (err) {
-  console.error(`Failed to remove disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## removeDisallowedBluetoothProtocols
 
@@ -111,8 +54,6 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 > 载接口。本接口增加了policy参数，用于按传输策略移除禁用配置。若同一协议通过两个接口分别配置了不同策略的禁用，调用本接口仅移除对应策略的禁用配置，其他策略的禁用配置仍生效。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -137,7 +78,3 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [removeDisallowedBluetoothProtocols](#removedisallowedbluetoothprotocols)

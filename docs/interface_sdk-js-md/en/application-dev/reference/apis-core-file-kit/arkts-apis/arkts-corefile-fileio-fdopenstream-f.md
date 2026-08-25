@@ -15,8 +15,6 @@ Opens a stream based on the file descriptor. This API uses a promise to return t
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md)
@@ -36,28 +34,6 @@ Opens a stream based on the file descriptor. This API uses a promise to return t
 | --- |
 | Promise&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fdopenStream(fd, "r+").then((stream: fileio.Stream) => {
-  console.info("openStream succeed");
-}).catch((err: BusinessError) => {
-  console.error("openStream failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.fdopenStream(fd, "r+", (err: BusinessError, stream: fileio.Stream) => {
-  // Do something.
-});
-```
-
 
 ## fdopenStream
 
@@ -68,8 +44,6 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 Opens a stream based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -84,7 +58,3 @@ Opens a stream based on the file descriptor. This API uses an asynchronous callb
 | fd | number | Yes |
 | mode | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; | Yes |
-
-**Examples**
-
-See [fdopenStream](#fdopenstream)

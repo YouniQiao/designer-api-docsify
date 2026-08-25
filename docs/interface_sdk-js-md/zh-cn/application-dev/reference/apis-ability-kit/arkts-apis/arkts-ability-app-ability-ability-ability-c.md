@@ -4,14 +4,12 @@ Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-abil
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
 
 ```TypeScript
-import { Ability } from '@kit.AbilityKit';
+import { Ability } from 'kits/@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate
@@ -29,8 +27,6 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -42,19 +38,6 @@ onConfigurationUpdate(newConfig: Configuration): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-// Ability是顶层基类，不支持开发者直接继承。故以派生类UIAbility举例说明。
-import { UIAbility, Configuration } from '@kit.AbilityKit';
-
-class MyUIAbility extends UIAbility {
-  onConfigurationUpdate(config: Configuration) {
-    console.info(`onConfigurationUpdate, config: ${JSON.stringify(config)}`);
-  }
-}
-```
 
 ## onMemoryLevel
 
@@ -69,8 +52,6 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -82,17 +63,3 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | level | AbilityConstant.MemoryLevel | 是 |
-
-**示例**
-
-```TypeScript
-// Ability是顶层基类，不支持开发者直接继承。故以派生类UIAbility举例说明。
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-class MyUIAbility extends UIAbility {
-  // 接收系统内存级别变化回调
-  onMemoryLevel(level: AbilityConstant.MemoryLevel) {
-    console.info(`onMemoryLevel, level: ${JSON.stringify(level)}`);
-  }
-}
-```

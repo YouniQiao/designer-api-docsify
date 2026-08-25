@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## uninstall
@@ -21,8 +21,6 @@ Uninstalls an application of the current user without retaining the bundle data.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
@@ -52,103 +50,6 @@ Uninstalls an application of the current user without retaining the bundle data.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-bundleManager.uninstall(wantTemp, 'bundleName', 100, true).then(() => {
-  console.info('Succeeded in uninstalling bundles.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.uninstall(wantTemp, 'bundleName', 100, true, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in uninstalling bundles');
-});
-```
 
 
 ## uninstall
@@ -166,8 +67,6 @@ Uninstalls an application of the specified user without retaining the bundle dat
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
@@ -198,10 +97,6 @@ Uninstalls an application of the specified user without retaining the bundle dat
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [uninstall](#uninstall)
 
 
 ## uninstall
@@ -219,8 +114,6 @@ Uninstalls an application of the current user. The **isKeepData** parameter spec
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
@@ -252,10 +145,6 @@ Uninstalls an application of the current user. The **isKeepData** parameter spec
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [uninstall](#uninstall)
-
 
 ## uninstall
 
@@ -271,8 +160,6 @@ Uninstalls an application of the specified user. The **isKeepData** parameter sp
 > [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -305,7 +192,3 @@ Uninstalls an application of the specified user. The **isKeepData** parameter sp
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [uninstall](#uninstall)

@@ -4,36 +4,26 @@ An image effect class used to add a specified effect to the effect chain through
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from '@kit.ArkGraphics2D';
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## blur
 
-ArkTS-Dyn:
 ```TypeScript
 blur(radius: number): Filter
 ```
 
-ArkTS-Sta:
-```TypeScript
-blur(radius: double): Filter
-```
-
-Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: double, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
+Adds the blur effect to the effect chain and returns the instance of the chain. The shader tile mode uses DECAL. To specify the tile mode, use the blur(radius: number, tileMode: TileMode) API. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
 
 > **NOTE：**&gt;
 > This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,7 +35,7 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| radius | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| radius | number | Yes |
 
 **Return value:**
 
@@ -53,140 +43,10 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 | --- |
 | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-import { common } from '@kit.AbilityKit';
-// Pass the image data to be read.
-function ImageBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
-      let radius = 5;
-      let headFilter = effectKit.createEffect(pixelMap);
-      if (headFilter != null) {
-        // Add an effect flag to the image.
-        headFilter.blur(radius);
-      }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
-}
-
-@Entry
-@Component
-struct Index {
-  @State imagePixelMap: image.PixelMap | null = null;
-  private imageBuffer: ArrayBuffer | undefined = undefined;
-  // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
-  async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
-      const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-      const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
-      const buffer: ArrayBuffer = fileData.buffer.slice(0);
-      return buffer;
-    }catch (err){
-      return undefined
-    }
-  }
-
-  async aboutToAppear(): Promise<void>{
-    this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
-      return;
-    }
-    // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageBlur(this.imageBuffer);
-  }
-
-  build() {
-    Column() {
-      Image(this.imagePixelMap)
-        .width(304)
-        .height(305)
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-import { common } from '@kit.AbilityKit';
-// Pass the image data to be read.
-function ImageBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
-      let radius = 30;
-      let headFilter = effectKit.createEffect(pixelMap);
-      if (headFilter != null) {
-        // Add an effect flag to the image.
-        headFilter.blur(radius, effectKit.TileMode.DECAL);
-      }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
-}
-
-@Entry
-@Component
-struct Index {
-  @State imagePixelMap: image.PixelMap | null = null;
-  private imageBuffer: ArrayBuffer | undefined = undefined;
-  // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
-  async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
-      const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-      const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
-      const buffer: ArrayBuffer = fileData.buffer.slice(0);
-      return buffer;
-    }catch (err){
-      return undefined
-    }
-  }
-
-  async aboutToAppear(): Promise<void>{
-    this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
-      return;
-    }
-    // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageBlur(this.imageBuffer);
-  }
-
-  build() {
-    Column() {
-      Image(this.imagePixelMap)
-        .width(304)
-        .height(305)
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## blur
 
-ArkTS-Dyn:
 ```TypeScript
 blur(radius: number, tileMode: TileMode): Filter
-```
-
-ArkTS-Sta:
-```TypeScript
-blur(radius: double, tileMode: TileMode): Filter
 ```
 
 Adds the blur effect to the effect chain and returns the instance of the chain. It supports selecting the shader effect tile mode. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
@@ -196,15 +56,13 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| radius | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| radius | number | Yes |
 | tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
 
 **Return value:**
@@ -213,27 +71,15 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 | --- |
 | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
-**Examples**
-
-See [blur](#blur)
-
 ## brightness
 
-ArkTS-Dyn:
 ```TypeScript
 brightness(bright: number): Filter
-```
-
-ArkTS-Sta:
-```TypeScript
-brightness(bright: double): Filter
 ```
 
 Adds the brightness effect to the effect chain and returns the instance of the chain. This method achieves a brightness effect by adjusting the image brightness. It is commonly used in scenarios such as dark image brightening, image preview brightness enhancement, and night mode image adaptation.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -245,76 +91,13 @@ Adds the brightness effect to the effect chain and returns the instance of the c
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bright | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| bright | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
-
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-import { common } from '@kit.AbilityKit';
-// Pass the image data to be read.
-function ImageBrightness(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
-      let bright = 0.5;
-      let headFilter = effectKit.createEffect(pixelMap);
-      if (headFilter != null) {
-        // Add an effect flag to the image.
-        headFilter.brightness(bright);
-      }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
-}
-
-@Entry
-@Component
-struct Index {
-  @State imagePixelMap: image.PixelMap | null = null;
-  private imageBuffer: ArrayBuffer | undefined = undefined;
-  // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
-  async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
-      const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-      const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
-      const buffer: ArrayBuffer = fileData.buffer.slice(0);
-      return buffer;
-    }catch (err){
-      return undefined
-    }
-  }
-
-  async aboutToAppear(): Promise<void>{
-    this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
-      return;
-    }
-    // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageBrightness(this.imageBuffer);
-  }
-
-  build() {
-    Column() {
-      Image(this.imagePixelMap)
-        .width(304)
-        .height(305)
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
 
 ## getEffectPixelMap
 
@@ -329,8 +112,6 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -343,48 +124,6 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 | --- |
 | Promise & lt;image.PixelMap & gt; |
 
-**Examples**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-};
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createEffect(pixelMap).grayscale().getEffectPixelMap().then(data => {
-    console.info('getPixelBytesNumber = ', data.getPixelBytesNumber());
-  })
-})
-```
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-};
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createEffect(pixelMap).grayscale().getEffectPixelMap(false).then(data => {
-    console.info('getPixelBytesNumber = ', data.getPixelBytesNumber());
-  })
-})
-```
-
 ## getEffectPixelMap
 
 ```TypeScript
@@ -394,8 +133,6 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 Obtains image.PixelMap of the source image with the linked list effect. The rendering mode (CPU rendering or GPU rendering) can be specified. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -415,10 +152,6 @@ Obtains image.PixelMap of the source image with the linked list effect. The rend
 | --- |
 | Promise & lt;image.PixelMap & gt; |
 
-**Examples**
-
-See [getEffectPixelMap](#geteffectpixelmap)
-
 ## getPixelMap
 
 ```TypeScript
@@ -432,8 +165,6 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **Substitutes:** [getEffectPixelMap](#geteffectpixelmap)
@@ -446,27 +177,6 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 | --- |
 | image.PixelMap |
 
-**Examples**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-};
-image.createPixelMap(color, opts).then((pixelMap) => {
-  let pixel = effectKit.createEffect(pixelMap).grayscale().getPixelMap();
-  console.info('getPixelBytesNumber = ', pixel.getPixelBytesNumber());
-})
-```
-
 ## grayscale
 
 ```TypeScript
@@ -476,8 +186,6 @@ grayscale(): Filter
 Adds the grayscale effect to the effect chain and returns the instance of the chain. This method converts a color image into a grayscale image by calculating the grayscale value through weighted RGB values. It is commonly used in scenarios such as black-and-white style photo generation, image preprocessing decolorization, and grayscale icon creation.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -491,68 +199,6 @@ Adds the grayscale effect to the effect chain and returns the instance of the ch
 | --- |
 | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-import { common } from '@kit.AbilityKit';
-// Pass the image data to be read.
-function ImageGrayscale(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
-      let headFilter = effectKit.createEffect(pixelMap);
-      if (headFilter != null) {
-        // Add an effect flag to the image.
-        headFilter.grayscale();
-      }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
-}
-
-@Entry
-@Component
-struct Index {
-  @State imagePixelMap: image.PixelMap | null = null;
-  private imageBuffer: ArrayBuffer | undefined = undefined;
-  // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
-  async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
-      const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-      const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
-      const buffer: ArrayBuffer = fileData.buffer.slice(0);
-      return buffer;
-    }catch (err){
-      return undefined
-    }
-  }
-
-  async aboutToAppear(): Promise<void>{
-    this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
-      return;
-    }
-    // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageGrayscale(this.imageBuffer);
-  }
-
-  build() {
-    Column() {
-      Image(this.imagePixelMap)
-        .width(304)
-        .height(305)
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## invert
 
 ```TypeScript
@@ -563,8 +209,6 @@ Adds the invert effect to the effect chain and returns the instance of the chain
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Return value:**
@@ -573,85 +217,15 @@ Adds the invert effect to the effect chain and returns the instance of the chain
 | --- |
 | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-import { common } from '@kit.AbilityKit';
-// Pass the image data to be read.
-function ImageInvert(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
-      let headFilter = effectKit.createEffect(pixelMap);
-      if (headFilter != null) {
-        // Add an effect flag to the image.
-        headFilter.invert();
-      }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
-}
-
-@Entry
-@Component
-struct Index {
-  @State imagePixelMap: image.PixelMap | null = null;
-  private imageBuffer: ArrayBuffer | undefined = undefined;
-  // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
-  async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
-      const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-      const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
-      const buffer: ArrayBuffer = fileData.buffer.slice(0);
-      return buffer;
-    }catch (err){
-      return undefined
-    }
-  }
-
-  async aboutToAppear(): Promise<void>{
-    this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
-      return;
-    }
-    // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageInvert(this.imageBuffer);
-  }
-
-  build() {
-    Column() {
-      Image(this.imagePixelMap)
-        .width(304)
-        .height(305)
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 ## setColorMatrix
 
-ArkTS-Dyn:
 ```TypeScript
 setColorMatrix(colorMatrix: Array<number>): Filter
-```
-
-ArkTS-Sta:
-```TypeScript
-setColorMatrix(colorMatrix: Array<double>): Filter
 ```
 
 Performs color transformation on the image using a custom color matrix, adds the effect to the effect chain, and returns the instance of the chain. It is commonly used in scenarios such as implementing custom color effects not supported by preset filters, such as vintage tones and warm/cool tone adjustments.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -659,7 +233,7 @@ Performs color transformation on the image using a custom color matrix, adds the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| colorMatrix | ArkTS-Dyn: Array & lt;number & gt;<br>ArkTS-Sta：Array & lt;double & gt; | Yes |
+| colorMatrix | Array & lt;number & gt; | Yes |
 
 **Return value:**
 
@@ -672,71 +246,3 @@ Performs color transformation on the image using a custom color matrix, adds the
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-import { common } from '@kit.AbilityKit';
-// Pass the image data to be read.
-function ImageColorFilter(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
-      let colorMatrix:Array<number> = [
-      0.2126,0.7152,0.0722,0,0,
-      0.2126,0.7152,0.0722,0,0,
-      0.2126,0.7152,0.0722,0,0,
-      0,0,0,1,0
-      ];
-      let headFilter = effectKit.createEffect(pixelMap);
-      if (headFilter != null) {
-        // Add an effect flag to the image.
-        headFilter.setColorMatrix(colorMatrix);
-      }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
-}
-
-@Entry
-@Component
-struct Index {
-  @State imagePixelMap: image.PixelMap | null = null;
-  private imageBuffer: ArrayBuffer | undefined = undefined;
-  // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
-  async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
-      const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-      const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
-      const buffer: ArrayBuffer = fileData.buffer.slice(0);
-      return buffer;
-    }catch (err){
-      return undefined
-    }
-  }
-
-  async aboutToAppear(): Promise<void>{
-    this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
-      return;
-    }
-    // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageColorFilter(this.imageBuffer);
-  }
-
-  build() {
-    Column() {
-      Image(this.imagePixelMap)
-        .width(304)
-        .height(305)
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```

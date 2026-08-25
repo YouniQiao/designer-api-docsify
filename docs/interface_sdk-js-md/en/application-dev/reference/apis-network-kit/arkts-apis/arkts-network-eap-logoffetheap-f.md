@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## logOffEthEap
@@ -15,8 +15,6 @@ function logOffEthEap(netId: number): void
 Revokes the EAP-authenticated state of an Ethernet NIC.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
@@ -38,16 +36,3 @@ Revokes the EAP-authenticated state of an Ethernet NIC.
 | [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
 | [33200010](../errorcode-net-eap.md#33200010-invalid-eap-status) |
 | [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
-
-**Examples**
-
-```TypeScript
-import {eap} from '@kit.NetworkKit';
-let netId = 100;    
-try{
-  eap.logOffEthEap(netId);
-  console.info("logOffEthEap success");
-} catch (err) {
-  console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```

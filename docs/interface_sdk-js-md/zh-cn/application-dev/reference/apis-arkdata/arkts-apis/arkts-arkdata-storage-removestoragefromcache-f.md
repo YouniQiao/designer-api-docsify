@@ -15,8 +15,6 @@ function removeStorageFromCache(path: string, callback: AsyncCallback<void>): vo
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** removePreferencesFromCache
@@ -28,45 +26,6 @@ function removeStorageFromCache(path: string, callback: AsyncCallback<void>): vo
 | path | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-  path = filePath;
-  console.info("======================>getFilesDirPromise====================>");
-
-  data_storage.removeStorageFromCache(path + '/mystore', function (err) {
-    if (err) {
-      console.info("Failed to remove storage from cache with err: " + err);
-      return;
-    }
-    console.info("Succeeded in removing storage from cache.");
-  })
-});
-```
-
-```TypeScript
-import featureAbility from '@ohos.ability.featureAbility';
-
-let path;
-let context = featureAbility.getContext();
-context.getFilesDir().then((filePath) => {
-  path = filePath;
-  console.info("======================>getFilesDirPromise====================>");
-
-  let promiserevSt = data_storage.removeStorageFromCache(path + '/mystore')
-  promiserevSt.then(() => {
-    console.info("Succeeded in removing storage from cache.");
-  }).catch((err) => {
-    console.info("Failed to remove storage from cache with err: " + err);
-  })
-});
-```
-
 
 ## removeStorageFromCache
 
@@ -77,8 +36,6 @@ function removeStorageFromCache(path: string): Promise<void>
 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。使用Promise方式返回结果，此方法为异步方法。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -95,7 +52,3 @@ function removeStorageFromCache(path: string): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [removeStorageFromCache](#removestoragefromcache)

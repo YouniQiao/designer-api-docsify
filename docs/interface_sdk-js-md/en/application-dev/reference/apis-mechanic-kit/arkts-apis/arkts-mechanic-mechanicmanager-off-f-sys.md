@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## off('rotationAxesStatusChange')
@@ -15,8 +15,6 @@ function off(type: 'rotationAxesStatusChange', callback?: Callback<RotationAxesS
 Unregister a listener for axis state changes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -35,13 +33,3 @@ Unregister a listener for axis state changes.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
-
-**Examples**
-
-```TypeScript
-console.info('Unregister Axis Status listener');
-mechanicManager.off("rotationAxesStatusChange", (result: mechanicManager.RotationAxesStateChangeInfo) => {
-  console.info(`'result:' ${result}`);
-});
-console.info('Unregister successfully');
-```

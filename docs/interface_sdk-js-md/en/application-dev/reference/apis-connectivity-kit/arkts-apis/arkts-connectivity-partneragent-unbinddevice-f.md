@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@kit.ConnectivityKit';
+import { partnerAgent } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## unbindDevice
@@ -15,8 +15,6 @@ function unbindDevice(deviceAddress: PartnerDeviceAddress): Promise<void>
 Unbinds a partner device.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

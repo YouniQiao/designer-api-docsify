@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceBatteryInfo
@@ -15,8 +15,6 @@ function getRemoteDeviceBatteryInfo(deviceId: string): Promise<BatteryInfo>
 Get remote device battery information.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -44,17 +42,3 @@ Get remote device battery information.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2900001 |
 | 2900003 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    connection.getRemoteDeviceBatteryInfo('11:22:33:AA:BB:FF').then((data: connection.BatteryInfo) => {
-        console.info('getRemoteDeviceBatteryInfo success, DeviceType:' + JSON.stringify(data));
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

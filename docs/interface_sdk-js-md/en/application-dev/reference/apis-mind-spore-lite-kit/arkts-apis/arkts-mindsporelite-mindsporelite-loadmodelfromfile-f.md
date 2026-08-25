@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
 ```
 
 ## loadModelFromFile
@@ -17,8 +17,6 @@ function loadModelFromFile(
 Create a Model instance from file path
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,46 +44,6 @@ Create a Model instance from file path
 | 1000002 |
 | 1000003 |
 
-**Examples**
-
-```TypeScript
-let modelFile: string = '/path/to/xxx.ms';
-mindSporeLite.loadModelFromFile(modelFile, (mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
-  } else {
-    console.info(modelInputs[0].name);
-  }
-})
-```
-
-```TypeScript
-let context: mindSporeLite.Context = {};
-context.target = ['cpu'];
-let modelFile: string = '/path/to/xxx.ms';
-mindSporeLite.loadModelFromFile(modelFile, context, (mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
-  } else {
-    console.info(modelInputs[0].name);
-  }
-})
-```
-
-```TypeScript
-let modelFile = '/path/to/xxx.ms';
-mindSporeLite.loadModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
-  } else {
-    console.info(modelInputs[0].name);
-  }
-})
-```
-
 
 ## loadModelFromFile
 
@@ -97,8 +55,6 @@ function loadModelFromFile(
 Create a Model instance from file path.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,10 +76,6 @@ Create a Model instance from file path.
 | 1000002 |
 | 1000003 |
 
-**Examples**
-
-See [loadModelFromFile](#loadmodelfromfile)
-
 
 ## loadModelFromFile
 
@@ -136,8 +88,6 @@ function loadModelFromFile(
 Create a Model instance from file path.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,7 +109,3 @@ Create a Model instance from file path.
 | 1000001 |
 | 1000002 |
 | 1000003 |
-
-**Examples**
-
-See [loadModelFromFile](#loadmodelfromfile)

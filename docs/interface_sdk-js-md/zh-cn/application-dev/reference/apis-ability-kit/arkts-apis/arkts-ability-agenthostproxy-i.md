@@ -8,8 +8,6 @@ AgentHostProxy用于从 [AgentExtensionAbility](arkts-ability-app-agent-agentext
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## authorize
@@ -21,8 +19,6 @@ authorize(handshakeData: string): void
 从[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)服务端给客户端发送安全认证请求。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,8 +47,6 @@ sendData(data: string): void
 从[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)服务端给客户端发送数据。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,14 +4,12 @@ The lifecycle of a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.m
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## Modules to Import
 
 ```TypeScript
-import { AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { AbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## onAbilityBackground
@@ -24,8 +22,6 @@ Called after the [onBackground](arkts-ability-app-ability-uiability-uiability-c.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -37,10 +33,6 @@ Called after the [onBackground](arkts-ability-app-ability-uiability-uiability-c.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
 
 ## onAbilityContinue
 
@@ -52,8 +44,6 @@ Called after the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -65,10 +55,6 @@ Called after the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
 
 ## onAbilityCreate
 
@@ -80,8 +66,6 @@ Called after the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#o
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -93,10 +77,6 @@ Called after the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#o
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
 
 ## onAbilityDestroy
 
@@ -108,8 +88,6 @@ Called after the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -121,10 +99,6 @@ Called after the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
 
 ## onAbilityForeground
 
@@ -136,8 +110,6 @@ Called after the [onForeground](arkts-ability-app-ability-uiability-uiability-c.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -149,10 +121,6 @@ Called after the [onForeground](arkts-ability-app-ability-uiability-uiability-c.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
 
 ## onAbilitySaveState
 
@@ -164,8 +132,6 @@ Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.m
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -177,30 +143,6 @@ Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.m
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onAbilitySaveState
-
-```TypeScript
-onAbilitySaveState?: OnAbilitySaveStateFn
-```
-
-Called after the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onAbilitySaveState](#onabilitysavestate)
 
 ## onAbilityWillBackground
 
@@ -212,8 +154,6 @@ Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -225,30 +165,6 @@ Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onAbilityWillBackground
-
-```TypeScript
-onAbilityWillBackground?: OnAbilityWillBackgroundFn
-```
-
-Called before the [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onAbilityWillBackground](#onabilitywillbackground)
 
 ## onAbilityWillContinue
 
@@ -260,8 +176,6 @@ Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.m
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -273,30 +187,6 @@ Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.m
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onAbilityWillContinue
-
-```TypeScript
-onAbilityWillContinue?: OnAbilityWillContinueFn
-```
-
-Called before the [onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onAbilityWillContinue](#onabilitywillcontinue)
 
 ## onAbilityWillCreate
 
@@ -308,8 +198,6 @@ Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -321,30 +209,6 @@ Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onAbilityWillCreate
-
-```TypeScript
-onAbilityWillCreate?: OnAbilityWillCreateFn
-```
-
-Called before the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onAbilityWillCreate](#onabilitywillcreate)
 
 ## onAbilityWillDestroy
 
@@ -356,8 +220,6 @@ Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -369,30 +231,6 @@ Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onAbilityWillDestroy
-
-```TypeScript
-onAbilityWillDestroy?: OnAbilityWillDestroyFn
-```
-
-Called before the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onAbilityWillDestroy](#onabilitywilldestroy)
 
 ## onAbilityWillForeground
 
@@ -404,8 +242,6 @@ Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -417,30 +253,6 @@ Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onAbilityWillForeground
-
-```TypeScript
-onAbilityWillForeground?: OnAbilityWillForegroundFn
-```
-
-Called before the [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onAbilityWillForeground](#onabilitywillforeground)
 
 ## onAbilityWillSaveState
 
@@ -452,8 +264,6 @@ Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -465,30 +275,6 @@ Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onAbilityWillSaveState
-
-```TypeScript
-onAbilityWillSaveState?: OnAbilityWillSaveStateFn
-```
-
-Called before the [onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onAbilityWillSaveState](#onabilitywillsavestate)
 
 ## onNewWant
 
@@ -500,8 +286,6 @@ Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -513,30 +297,6 @@ Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onNewWant
-
-```TypeScript
-onNewWant?: OnNewWantFn
-```
-
-Called after the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onNewWant](#onnewwant)
 
 ## onWillNewWant
 
@@ -548,8 +308,6 @@ Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -561,30 +319,6 @@ Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onWillNewWant
-
-```TypeScript
-onWillNewWant?: OnWillNewWantFn
-```
-
-Called before the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onWillNewWant](#onwillnewwant)
 
 ## onWindowStageActive
 
@@ -596,8 +330,6 @@ Called when the main window of the UIAbility gains focus.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -610,10 +342,6 @@ Called when the main window of the UIAbility gains focus.
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
 | windowStage | window.WindowStage | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
 
 ## onWindowStageCreate
 
@@ -625,8 +353,6 @@ Called after the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiabi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -639,10 +365,6 @@ Called after the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiabi
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
 | windowStage | window.WindowStage | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
 
 ## onWindowStageDestroy
 
@@ -654,8 +376,6 @@ Called after the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiab
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -668,10 +388,6 @@ Called after the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiab
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
 | windowStage | window.WindowStage | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
 
 ## onWindowStageInactive
 
@@ -683,8 +399,6 @@ Called when the main window of the UIAbility loses focus.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -698,10 +412,6 @@ Called when the main window of the UIAbility loses focus.
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
 | windowStage | window.WindowStage | Yes |
 
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
 ## onWindowStageRestore
 
 ```TypeScript
@@ -711,8 +421,6 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore) callback of the UIAbility is triggered.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -726,30 +434,6 @@ Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiab
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
 | windowStage | window.WindowStage | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onWindowStageRestore
-
-```TypeScript
-onWindowStageRestore?: OnWindowStageRestoreFn
-```
-
-Called after the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onWindowStageRestore](#onwindowstagerestore)
 
 ## onWindowStageWillCreate
 
@@ -761,8 +445,6 @@ Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiab
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -775,30 +457,6 @@ Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiab
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
 | windowStage | window.WindowStage | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onWindowStageWillCreate
-
-```TypeScript
-onWindowStageWillCreate?: OnWindowStageWillCreateFn
-```
-
-Called before the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onWindowStageWillCreate](#onwindowstagewillcreate)
 
 ## onWindowStageWillDestroy
 
@@ -810,8 +468,6 @@ Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uia
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -824,30 +480,6 @@ Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uia
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
 | windowStage | window.WindowStage | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onWindowStageWillDestroy
-
-```TypeScript
-onWindowStageWillDestroy?: OnWindowStageWillDestroyFn
-```
-
-Called before the [onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onWindowStageWillDestroy](#onwindowstagewilldestroy)
 
 ## onWindowStageWillRestore
 
@@ -859,8 +491,6 @@ Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uia
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -873,27 +503,3 @@ Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uia
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes |
 | windowStage | window.WindowStage | Yes |
-
-**Examples**
-
-For details, see AbilityLifecycleCallback Usage Example.
-
-## onWindowStageWillRestore
-
-```TypeScript
-onWindowStageWillRestore?: OnWindowStageWillRestoreFn
-```
-
-Called before the [onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore) callback of the UIAbility is triggered.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-See [onWindowStageWillRestore](#onwindowstagewillrestore)

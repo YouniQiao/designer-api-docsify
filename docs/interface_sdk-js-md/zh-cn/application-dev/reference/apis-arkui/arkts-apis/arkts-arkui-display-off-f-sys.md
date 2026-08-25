@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## off('privateModeChange')
@@ -15,8 +15,6 @@ function off(type: 'privateModeChange', callback?: Callback<boolean>): void
 关闭屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -35,14 +33,3 @@ function off(type: 'privateModeChange', callback?: Callback<boolean>): void
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-try {
-  // 取消隐私模式变化监听
-  display.off('privateModeChange');
-} catch (exception) {
-  console.error(`Failed to unregister callback. Code: ${exception.code}, message: ${exception.message}`);
-}
-```

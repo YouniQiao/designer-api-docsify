@@ -6,7 +6,7 @@
 ## 导入模块
 
 ```TypeScript
-import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总

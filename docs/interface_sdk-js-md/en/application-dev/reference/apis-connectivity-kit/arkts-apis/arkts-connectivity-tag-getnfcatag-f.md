@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getNfcATag
@@ -19,8 +19,6 @@ Obtains an **NfcATag** object, which allows access to the tags that use the NFC-
 > [tag.getNfcA](arkts-connectivity-tag-getnfca-f.md) instead.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

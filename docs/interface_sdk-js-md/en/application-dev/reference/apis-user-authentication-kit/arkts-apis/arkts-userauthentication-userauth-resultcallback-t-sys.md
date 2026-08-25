@@ -8,8 +8,6 @@ Triggered to return the remote authentication result. This callback type is used
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -21,4 +19,4 @@ Triggered to return the remote authentication result. This callback type is used
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | challenge | Uint8Array | Yes |
-| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes |
+| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Yes |

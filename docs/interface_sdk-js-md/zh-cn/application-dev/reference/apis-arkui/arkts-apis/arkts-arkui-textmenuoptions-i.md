@@ -4,8 +4,6 @@
 
 **起始版本：** 16
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ showMode?: TextMenuShowMode
 **类型：** [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md)
 
 **起始版本：** 16
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

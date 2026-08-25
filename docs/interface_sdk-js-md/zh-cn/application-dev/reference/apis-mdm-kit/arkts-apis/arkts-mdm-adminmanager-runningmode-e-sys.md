@@ -4,8 +4,6 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ DEFAULT = 0
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ MULTI_USER = 1
 多用户运行模式，表示应用能够在多个用户下同时运行。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 

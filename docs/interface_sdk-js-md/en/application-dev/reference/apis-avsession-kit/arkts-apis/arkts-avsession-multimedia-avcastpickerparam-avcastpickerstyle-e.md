@@ -1,10 +1,8 @@
 # AVCastPickerStyle
 
-Definition of av cast picker style @enum { int }
+Definition of av cast picker style @enum { number }
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -17,8 +15,6 @@ STYLE_PANEL
 The picker shows in a panel style.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,8 +29,6 @@ STYLE_MENU
 The picker shows in a menu style.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## supportedProfiles
@@ -27,8 +25,6 @@ supportedProfiles: number[]
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [technology](#technology)
@@ -40,16 +36,14 @@ supportedProfiles: number[]
 ## technology
 
 ```TypeScript
-technology: int[]
+technology: number[]
 ```
 
 支持的技术类型，每个number值表示所支持技术类型的常量值。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -60,16 +54,14 @@ technology: int[]
 ## uid
 
 ```TypeScript
-uid: int[]
+uid: number[]
 ```
 
 标签的uid，每个number值是十六进制表示，范围是0x00~0xFF。
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** number[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 

@@ -4,8 +4,6 @@ Carrier call state code.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## CCALL_STATE_UNKNOWN
@@ -17,8 +15,6 @@ CCALL_STATE_UNKNOWN = -1
 The call status fails to be obtained and is unknown.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -32,8 +28,6 @@ The call is connected.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## CCALL_STATE_HOLDING
@@ -45,8 +39,6 @@ CCALL_STATE_HOLDING = 1
 The call is on hold.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -60,8 +52,6 @@ The outgoing call is in the dialing process, and the peer end has not received t
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## CCALL_STATE_ALERTING
@@ -73,8 +63,6 @@ CCALL_STATE_ALERTING = 3
 The outgoing call is in the ringing process, and the peer end is ringing.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -88,8 +76,6 @@ Indicates that an incoming call is received.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## CCALL_STATE_WAITING
@@ -101,8 +87,6 @@ CCALL_STATE_WAITING = 5
 Indicates that another incoming call is received when there is an ongoing call in the same card slot.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -116,8 +100,6 @@ Indicates that the call has been released.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## CCALL_STATE_DISCONNECTING
@@ -129,8 +111,6 @@ CCALL_STATE_DISCONNECTING = 7
 Indicates that the call is being released.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager
 
@@ -144,8 +124,6 @@ No call is in progress.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## CCALL_STATE_ANSWERED
@@ -157,7 +135,5 @@ CCALL_STATE_ANSWERED = 9
 The incoming call is answered.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager

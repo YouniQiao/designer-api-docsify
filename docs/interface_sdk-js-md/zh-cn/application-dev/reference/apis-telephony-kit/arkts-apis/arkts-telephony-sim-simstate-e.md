@@ -4,8 +4,6 @@ SIM卡状态。
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## SIM_STATE_UNKNOWN
@@ -17,8 +15,6 @@ SIM_STATE_UNKNOWN = 0
 SIM卡状态未知，即无法获取准确的状态。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -32,8 +28,6 @@ SIM_STATE_NOT_PRESENT = 1
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## SIM_STATE_LOCKED
@@ -45,8 +39,6 @@ SIM_STATE_LOCKED = 2
 表示SIM卡处于locked状态，即SIM卡被PIN、PUK或网络锁锁定。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -60,8 +52,6 @@ SIM_STATE_NOT_READY = 3
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## SIM_STATE_READY
@@ -74,8 +64,6 @@ SIM_STATE_READY = 4
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## SIM_STATE_LOADED
@@ -87,7 +75,5 @@ SIM_STATE_LOADED = 5
 表示SIM卡处于loaded状态，即SIM卡在位且所有卡文件加载完毕。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService

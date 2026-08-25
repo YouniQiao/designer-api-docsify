@@ -8,8 +8,6 @@ remoteAbility信息。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [RemoteAbilityInfo](#remoteabilityinfo系统接口)
@@ -31,8 +29,6 @@ ability元素资源信息。
 **默认值：** Indicates the ability information
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -56,8 +52,6 @@ readonly icon: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** icon
@@ -79,8 +73,6 @@ readonly label: string
 **默认值：** Indicates the label of the ability
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## cleanBundleCacheFilesForSelf
@@ -16,8 +16,6 @@ function cleanBundleCacheFilesForSelf(): Promise<void>
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
@@ -27,14 +25,3 @@ function cleanBundleCacheFilesForSelf(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-bundleManager.cleanBundleCacheFilesForSelf().then(() => {
-  hilog.info(0x0000, 'testTag', 'cleanBundleCacheFilesForSelf complete.');
-});
-```

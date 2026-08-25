@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getAltitude
@@ -15,8 +15,6 @@ function getAltitude(seaPressure: number, currentPressure: number, callback: Asy
 Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -32,33 +30,6 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 | currentPressure | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.getAltitude(0, 200, (err: BusinessError, data: number) => {
-  if (err) {
-    console.error(`Failed to operate. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info("Succeeded in getting getAltitude interface get data: " + data);
-});
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getAltitude(0, 200);
-promise.then((data: number) => {
-  console.info('Succeeded in getting sensor_getAltitude_Promise success', data);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
-
 
 ## getAltitude
 
@@ -69,8 +40,6 @@ function getAltitude(seaPressure: number, currentPressure: number): Promise<numb
 Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,7 +59,3 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;number & gt; |
-
-**Examples**
-
-See [getAltitude](#getaltitude)

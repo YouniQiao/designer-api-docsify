@@ -13,17 +13,15 @@ UIContext实例对象。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## clearResourceCache
@@ -35,8 +33,6 @@ clearResourceCache(): void
 清除跨模块（[HSP](../../../quick-start/in-app-hsp.md)包）访问资源时生成的资源对象缓存。清除缓存后，下次访问该模块资源的加载时间会增加。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,24 +48,6 @@ clearResourceCache(): void
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct MyStateSample {
-  build() {
-    Column() {
-      Button("clearResourceCache")
-        .onClick((event: ClickEvent) => {
-          this.getUIContext().clearResourceCache()
-        })
-        .width('100%')
-    }
-  }
-}
-```
-
 ## freezeUINode
 
 ```TypeScript
@@ -79,8 +57,6 @@ freezeUINode(id: string, isFrozen: boolean): void
 通过id设置组件冻结状态，防止组件被标记为脏从而触发布局更新。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -111,8 +87,6 @@ freezeUINode(uniqueId: number, isFrozen: boolean): void
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -142,8 +116,6 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -162,10 +134,6 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 | --- |
 | [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) \| undefined |
 
-**示例**
-
-参考[offBackgroundLuminanceChange](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#offbackgroundluminancechange)接口的示例。
-
 ## recycleInvisibleImageMemory
 
 ```TypeScript
@@ -175,8 +143,6 @@ recycleInvisibleImageMemory(enabled: boolean): void
 设置不可见Image节点内存回收配置开关，由系统应用配置，默认不开启；开启后，在应用退后台不可见页面下挂载的Image节点会进行内存回收。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -189,30 +155,6 @@ recycleInvisibleImageMemory(enabled: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | enabled | boolean | 是 |
-
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct ImageRecycleSample {
-  build() {
-    Column({ space: 12 }) {
-      Button('Enable recycle invisible image memory')
-        .onClick(() => {
-          this.getUIContext().recycleInvisibleImageMemory(true)
-        })
-
-      Button('Disable recycle invisible image memory')
-        .onClick(() => {
-          this.getUIContext().recycleInvisibleImageMemory(false)
-        })
-    }
-    .width('100%')
-    .padding(16)
-  }
-}
-```
 
 ## setDynamicDimming
 
@@ -227,8 +169,6 @@ setDynamicDimming(id: string, value: number): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -242,28 +182,6 @@ setDynamicDimming(id: string, value: number): void
 | id | string | 是 |
 | value | number | 是 |
 
-**示例**
-
-```TypeScript
-@Entry
-@Component
-struct Index {
-  @State
-  myCount : number = 100
-
-  build() {
-    Column(){
-      Image($r('app.media.testImage')).width(500).height(800).id("test")
-    }.width("100%").height("100%").onClick(()=>{
-      this.getUIContext().setDynamicDimming("test",1)
-      this.getUIContext()?.animateTo({duration:5000 },()=>{
-        this.getUIContext().setDynamicDimming("test",0)
-      })
-    })
-  }
-}
-```
-
 ## setKeyboardAppearanceConfig
 
 ```TypeScript
@@ -273,8 +191,6 @@ setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig):
 在输入框绑定输入法前设置键盘样式配置
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -287,7 +203,7 @@ setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uniqueId | number | 是 |
-| config | [KeyboardAppearanceConfig](arkts-arkui-textcommon-keyboardappearanceconfig-i-sys.md) | 是 |
+| config | [KeyboardAppearanceConfig](arkts-arkui-keyboardappearanceconfig-i-sys.md) | 是 |
 
 **错误码：**
 

@@ -6,33 +6,23 @@ ManualIso object.
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getIso
 
-ArkTS-Dyn:
 ```TypeScript
 getIso(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getIso(): int
 ```
 
 Gets current ISO.
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -42,7 +32,7 @@ Gets current ISO.
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -54,21 +44,13 @@ Gets current ISO.
 
 ## setIso
 
-ArkTS-Dyn:
 ```TypeScript
 setIso(iso: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setIso(iso: int): void
 ```
 
 Sets ISO sensitivity value, within the range of getSupportedIsoRange. This control can not be effective if ExposureMode is set to EXPOSURE_MODE_LOCKED.
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -78,7 +60,7 @@ Sets ISO sensitivity value, within the range of getSupportedIsoRange. This contr
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [iso](arkts-camera-camera-isoinfo-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [iso](arkts-camera-camera-isoinfo-i.md) | number | 是 |
 
 **错误码：**
 

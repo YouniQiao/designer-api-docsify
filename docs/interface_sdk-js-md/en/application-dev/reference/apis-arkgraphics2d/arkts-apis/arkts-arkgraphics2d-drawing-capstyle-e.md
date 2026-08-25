@@ -4,8 +4,6 @@ Enumerates the cap styles of a pen. The cap style defines the style of both ends
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## FLAT_CAP
@@ -17,8 +15,6 @@ FLAT_CAP = 0
 There is no cap style. Both ends of the line segment are cut off square.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -32,8 +28,6 @@ Square cap style. Both ends have a square, the height of which is half of the wi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## ROUND_CAP
@@ -45,7 +39,5 @@ ROUND_CAP = 2
 Round cap style. Both ends have a semicircle centered, the diameter of which is the same as the width of the line segment.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Graphics.Drawing

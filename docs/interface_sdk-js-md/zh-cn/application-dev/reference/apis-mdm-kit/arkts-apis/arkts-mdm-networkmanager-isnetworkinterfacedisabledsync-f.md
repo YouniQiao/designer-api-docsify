@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isNetworkInterfaceDisabledSync
@@ -15,8 +15,6 @@ function isNetworkInterfaceDisabledSync(admin: Want, networkInterface: string): 
 查询指定网络接口是否被禁用。适用于企业网络管理场景，例如检查网络接口状态、审计网络接口使用情况、验证网络策略执行效果，帮助企业确认网络接口管理策略是否生效，便于策略调整和问题排查。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -46,40 +44,6 @@ function isNetworkInterfaceDisabledSync(admin: Want, networkInterface: string): 
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: boolean = networkManager.isNetworkInterfaceDisabledSync(wantTemp, 'eth0');
-  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  // 参数需根据实际情况进行替换
-  let result: boolean = networkManager.isNetworkInterfaceDisabledSync(null, 'eth0');
-  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## isNetworkInterfaceDisabledSync
 
@@ -90,8 +54,6 @@ function isNetworkInterfaceDisabledSync(admin: Want | null, networkInterface: st
 查询指定网络接口是否被禁用。适用于企业网络管理场景，例如检查网络接口状态、审计网络接口使用情况、验证网络策略执行效果，帮助企业确认网络接口管理策略是否生效，便于策略调整和问题排查。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -120,7 +82,3 @@ function isNetworkInterfaceDisabledSync(admin: Want | null, networkInterface: st
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [isNetworkInterfaceDisabledSync](#isnetworkinterfacedisabledsync)

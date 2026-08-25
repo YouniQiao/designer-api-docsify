@@ -4,29 +4,25 @@ Describes a coordinate position in the relative coordinate system, with the orig
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## displayId
 
 ```TypeScript
-displayId: long
+displayId: number
 ```
 
 Display ID for the relative coordinates. Only integers are supported, and the value must be greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -41,7 +37,5 @@ Coordinates with the top-left corner of the screen specified by **displayId** as
 **Type:** Position
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

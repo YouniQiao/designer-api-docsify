@@ -4,8 +4,6 @@ System common events are events published by system services or system apps. Sub
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USER_LOCKING
@@ -17,8 +15,6 @@ COMMON_EVENT_USER_LOCKING = 'usual.event.USER_LOCKING'
 Indicates that a user is about to be locked.Before a user is locked, the common event service is triggered to publish this event carrying the system account ID.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -34,8 +30,6 @@ Indicates that a user is locked.After a user is locked, the common event service
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -49,8 +43,6 @@ COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_CREATED = 'usual.event.OS_ACCOUNT_SUB_PROFIL
 Indicates an OS account sub-profile is created.After an OS account sub-profile is created, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +60,6 @@ Indicates an OS account sub-profile is deleted.After an OS account sub-profile i
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -85,8 +75,6 @@ COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_SWITCHING = 'usual.event.OS_ACCOUNT_SUB_PROF
 Indicates an OS account sub-profile is switching.After an OS account sub-profile is switching, the common event service is triggered to publish this event carrying the OS account local ID, the sub-profile ID switching to and the previous sub-profile ID switching from.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +92,6 @@ Indicates an OS account sub-profile is switched.After an OS account sub-profile 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -121,8 +107,6 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_BOUND = 'usual.event.DISTRIBUTED_ACCOUNT_BOUND'
 Indicates a distributed account is bound.After a distributed account is bound, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,8 +124,6 @@ Indicates a distributed account is unbound.After a distributed account is unboun
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -158,8 +140,6 @@ Indicates that the system charging type has changed.When the system charging typ
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -174,8 +154,6 @@ Indicates that the exemption list for resource usage restrictions has been updat
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -189,8 +167,6 @@ COMMON_EVENT_USB_CONTROL_DATA = 'usual.event.hardware.usb.action.USB_CONTROL_DAT
 Indicates that the local host receives a user-defined control transmission request from the USB host. This is a protected common event that can only be sent by system.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,8 +184,6 @@ Indicates that the state of a system data disk volume has changed.This common ev
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -225,8 +199,6 @@ COMMON_EVENT_APP_FIRST_LAUNCH = 'usual.event.APP_FIRST_LAUNCH'
 Indicates that when the application is launched for the first time after installation, the common event service is triggered to publish this system common event.Model constraint: This API can be used only in the stage model.To subscribe to this common event, your application must have the ohos.permission.INSTALL_BUNDLE permission.(This permission is available only for system applications.)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -244,8 +216,6 @@ Indicates that an SMS message is received.When the device receives an SMS messag
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -259,8 +229,6 @@ COMMON_EVENT_SMS_EMERGENCY_CB_RECEIVE_COMPLETED = 'usual.event.SMS_EMERGENCY_CB_
 Indicates that an emergency cell broadcast message is received.When the device receives an emergency cell broadcast message, the common event service is triggered to publish this event.To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -276,8 +244,6 @@ Indicates that a cell broadcast message is received.When the device receives a c
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -291,8 +257,6 @@ COMMON_EVENT_STK_COMMAND = 'usual.event.STK_COMMAND'
 (Reserved, not supported yet) Indicates that an STK command is sent.When an STK command is sent, the common event service is triggered to publish this event.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -308,8 +272,6 @@ COMMON_EVENT_STK_SESSION_END = 'usual.event.STK_SESSION_END'
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -323,8 +285,6 @@ COMMON_EVENT_STK_CARD_STATE_CHANGED = 'usual.event.STK_CARD_STATE_CHANGED'
 (Reserved, not supported yet) Indicates that the STK card state has been updated.When the STK card state is updated, the common event service is triggered to publish this event.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -340,8 +300,6 @@ COMMON_EVENT_STK_ALPHA_IDENTIFIER = 'usual.event.STK_ALPHA_IDENTIFIER'
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -355,8 +313,6 @@ COMMON_EVENT_SMS_WAPPUSH_RECEIVE_COMPLETED = 'usual.event.SMS_WAPPUSH_RECEIVE_CO
 (Reserved, not supported yet) Indicates that a WAP push message is received.When the device receives a WAP push message, the common event service is triggered to publish this event.To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -372,8 +328,6 @@ Indicates that the carrier configuration has been updated.When the carrier confi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -387,8 +341,6 @@ COMMON_EVENT_SIM_CARD_DEFAULT_SMS_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAUL
 Indicates that the default primary SIM card for the SMS service has been updated.When the default primary SIM card for the SMS service is updated, the common event service is triggered to publish this event.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -404,8 +356,6 @@ Indicates that the default primary SIM card for the data service has been update
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -419,8 +369,6 @@ COMMON_EVENT_SIM_CARD_DEFAULT_MAIN_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAU
 Indicates that the default primary SIM card of the device has been updated.When the default primary SIM card of the device is updated, the common event service is triggered to publish this event.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -436,8 +384,6 @@ Indicates that the status of the action for setting the primary SIM card changes
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -451,8 +397,6 @@ COMMON_EVENT_PRIMARY_SLOT_ROAMING = 'usual.event.PRIMARY_SLOT_ROAMING'
 Indicates that the roaming status of the default primary SIM card is updated.When the roaming status of the default primary SIM card changes, the common event service is triggered to publish this event.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -468,8 +412,6 @@ Indicates that the default primary SIM card for the voice service has been updat
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -483,8 +425,6 @@ COMMON_EVENT_CELLULAR_DATA_STATE_CHANGED = 'usual.event.CELLULAR_DATA_STATE_CHAN
 Indicates that the cellular data state has been updated.When the cellular data state of the device is updated, the common event service is triggered to publish this event.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -500,8 +440,6 @@ Indicates that an incoming call is missed.When an incoming call is missed on the
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -515,8 +453,6 @@ COMMON_EVENT_RADIO_STATE_CHANGE = 'usual.event.RADIO_STATE_CHANGE'
 Indicates that the radio state of the device modem has changed.When there is a change in the radio state of the device modem, the common event service is triggered to publish this event.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -532,8 +468,6 @@ Indicates that domain account status changes.When a domain user account is authe
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -547,8 +481,6 @@ COMMON_EVENT_SCREEN_LOCK_EXITING = 'usual.event.SCREEN_LOCK_EXITING'
 This commonEvent means when the screen lock is exiting.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -566,8 +498,6 @@ Indicates that a secret code is sent successfully.When a secret code is successf
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -581,8 +511,6 @@ COMMON_EVENT_AUDIO_QUALITY_CHANGE = 'usual.event.AUDIO_QUALITY_CHANGE'
 Indicates that the audio quality has changed.When there is a change in the audio quality of the device, the common event service is triggered to publish this event.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -598,8 +526,6 @@ Indicates the privacy state has been changed.When a user taps the agree button i
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -613,8 +539,6 @@ COMMON_EVENT_PACKAGE_INSTALLATION_STARTED = 'usual.event.PACKAGE_INSTALLATION_ST
 Indicates that a package is sent by the system verifier when the package is verified.When a new application starts to be installed by a specified user on the device, the common event service is triggered to publish this event.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -630,8 +554,6 @@ This common event means an application package enables or disables a dynamic ico
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -645,8 +567,6 @@ COMMON_EVENT_BUNDLE_RESOURCES_CHANGED = 'usual.event.BUNDLE_RESOURCES_CHANGED'
 Indicates that the bundle management resource data has updated.This common event is sent when the bundle management resource data is updated in scenarios such as language or theme switching.To subscribe to this common event, your application must have the ohos.permission.GET_BUNDLE_RESOURCES permission.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -662,8 +582,6 @@ Indicates the common event that the VPN connection status has changed.This commo
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -677,8 +595,6 @@ COMMON_EVENT_RESTORE_START = 'usual.event.RESTORE_START'
 Indicates that an application starts to be restored.When a data migration application starts the backup and restore framework to perform a restoration task, the common event service is triggered to publish this event.To subscribe to this common event, your application must have the ohos.permission.START_RESTORE_NOTIFICATION permission.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -694,8 +610,6 @@ Indicates that the default application for opening a file has changed.This commo
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -709,8 +623,6 @@ COMMON_EVENT_SHORTCUT_CHANGED = 'usual.event.SHORTCUT_CHANGED'
 Indicates that the application shortcut has changed.This common event is sent when the shortcut is changed (for example, when [shortcutManager.setShortcutVisibleForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md) of the shortcutManager module is successfully called).To subscribe to this common event, your application must have the ohos.permission.MANAGE_SHORTCUTS permission.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -726,8 +638,6 @@ Indicates that the configuration directory level and system parameters of a devi
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -741,8 +651,6 @@ COMMON_EVENT_CUSTOM_ROAMING_REGION_UPDATED = 'usual.event.CUSTOM_ROAMING_REGION_
 Indicates that the roaming area of a device is updated.When the attributes such as network injection, persistent connection, and GPS location of a device change, the system identifies the roaming area and updates the parameters if the roaming area changes. After the update is complete, this common event is sent.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -758,8 +666,6 @@ Indicates that a screen sharing event has occurred in the system.This is a prote
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -773,8 +679,6 @@ COMMON_EVENT_RESTORE_END = 'usual.event.RESTORE_END'
 Represents the common event indicating the restore is complete for an application. When a data migration application starts the backup and restore framework to perform a restoration task, this common event is sent when the restore is complete.To subscribe to this common event, your application must have the ohos.permission.RESTORE_END_NOTIFICATION permission.(This permission is available only for system applications.)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -790,8 +694,6 @@ Indicates that the sync root of the cloud disk has been updated.When the sync ro
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **System API:** This is a system API.
@@ -805,8 +707,6 @@ COMMON_EVENT_SANDBOX_BUNDLE_ADDED = 'usual.event.SANDBOX_BUNDLE_ADDED'
 Indicates that the sandbox application has been installed on the device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -823,8 +723,6 @@ COMMON_EVENT_SANDBOX_BUNDLE_REMOVED = 'usual.event.SANDBOX_BUNDLE_REMOVED'
 Indicates that the sandbox application has been uninstalled on the device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

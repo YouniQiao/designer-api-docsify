@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## queryContactSyncInfo
@@ -15,8 +15,6 @@ function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 Queries information about ongoing contact synchronization for the calling application.If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or the contact synchronization is complete.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 

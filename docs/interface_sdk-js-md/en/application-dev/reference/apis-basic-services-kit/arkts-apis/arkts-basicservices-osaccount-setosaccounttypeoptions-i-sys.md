@@ -4,8 +4,6 @@ Defines the options for setting the OS account type.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the options for setting the OS account type.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## token
@@ -22,13 +20,11 @@ import { osAccount } from '@kit.BasicServicesKit';
 token?: Uint8Array
 ```
 
-Token obtained from the authentication management API. The value is left empty by default.
+Token obtained from the authentication management API. This parameter is left empty by default.
 
 **Type:** Uint8Array
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.Account.OsAccount
 

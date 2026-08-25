@@ -4,8 +4,6 @@ Represents control transfer parameters.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md)
@@ -15,7 +13,7 @@ Represents control transfer parameters.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## data
@@ -29,8 +27,6 @@ Buffer for writing or reading data.
 **Type:** Uint8Array
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Index of the request parameter value.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [index](arkts-basicservices-usbmanager-usbcontrolparams-i.md#index)
@@ -69,8 +63,6 @@ Control request type.
 **Type:** USBControlRequestType
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Request type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [request](arkts-basicservices-usbmanager-usbcontrolparams-i.md#request)
@@ -110,8 +100,6 @@ Request target type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [target](arkts-basicservices-usbmanager-usbcontrolparams-i.md#target)
@@ -129,8 +117,6 @@ Request parameter value.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

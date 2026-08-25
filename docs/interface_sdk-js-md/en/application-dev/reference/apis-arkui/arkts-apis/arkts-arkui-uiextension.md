@@ -4,8 +4,6 @@ The **uiExtension** module provides APIs for the [EmbeddedUIExtensionAbility](..
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -13,7 +11,7 @@ The **uiExtension** module provides APIs for the [EmbeddedUIExtensionAbility](..
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from '@kit.ArkUI';
+import { uiExtension } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

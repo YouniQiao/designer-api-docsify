@@ -4,29 +4,25 @@ Describes the window properties.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## brightness
 
 ```TypeScript
-brightness: double
+brightness: number
 ```
 
 Screen brightness of the window. The brightness can be set by calling [setWindowBrightness()](arkts-arkui-window-window-i.md#setwindowbrightness). The value is a floating-point number. Valid values are in the range [0.0, 1.0] (where **1.0** means the brightest) or the special value **-1.0** (which means that the brightness follows the system). If no value is passed, the brightness follows the system. In this case, the obtained brightness value is **-1.0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ Dimness of the window that is not on top. The value is a floating-point number i
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -53,16 +47,14 @@ Dimness of the window that is not on top. The value is a floating-point number i
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
 ID of the screen where the window is located. By default, the ID of the main screen is returned. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,8 +72,6 @@ Size of the rectangle that can be drawn in the window. The upper boundary and le
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -97,8 +87,6 @@ Whether the window is focusable. **true** if focusable, **false** otherwise.
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,23 +104,19 @@ Window size in the global coordinate system. In extended screen scenarios, the t
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 Window ID. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -150,8 +134,6 @@ Whether the status bar is hidden when **isLayoutFullScreen** is set to **true**.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -167,8 +149,6 @@ Whether the screen is always on. **true** if always on, **false** otherwise.
 **Type:** boolean
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -186,8 +166,6 @@ Whether an [immersive layout](../../../windowmanager/window-terminology.md#immer
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -203,8 +181,6 @@ Whether the window is in privacy mode. **true** if the window is in privacy mode
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -222,8 +198,6 @@ Whether the window has rounded corners. **true** if the window has rounded corne
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -239,8 +213,6 @@ Whether the window background is transparent. **true** if transparent, **false**
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -258,8 +230,6 @@ Window name. The default value is an empty string.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -276,8 +246,6 @@ Whether the window is touchable. **true** if touchable, **false** otherwise.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -293,8 +261,6 @@ Window type.
 **Type:** WindowType
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -316,8 +282,6 @@ Window size, which can be obtained from the page lifecycle onPageShow or the app
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -333,8 +297,6 @@ Window type
 **Type:** WindowType
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

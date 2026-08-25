@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## getAudioParameter
@@ -27,8 +25,6 @@ getAudioParameter(key: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -39,30 +35,6 @@ getAudioParameter(key: string, callback: AsyncCallback<string>): void
 | --- | --- | --- |
 | key | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getAudioParameter('key_example', (err: BusinessError, value: string) => {
-  if (err) {
-    console.error(`Failed to obtain the audio parameter. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the audio parameter, value: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getAudioParameter('key_example').then((value: string) => {
-  console.info(`Succeeded in obtaining the audio parameter, value: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the audio parameter. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getAudioParameter
 
@@ -76,8 +48,6 @@ getAudioParameter(key: string): Promise<string>
 > 从API version 7开始支持，从API version 11开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -95,10 +65,6 @@ getAudioParameter(key: string): Promise<string>
 | --- |
 | Promise & lt;string & gt; |
 
-**示例**
-
-参见 [getAudioParameter](#getaudioparameter)
-
 ## getAudioScene
 
 ```TypeScript
@@ -109,8 +75,6 @@ getAudioScene(callback: AsyncCallback<AudioScene>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **参数：**
@@ -118,30 +82,6 @@ getAudioScene(callback: AsyncCallback<AudioScene>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getAudioScene((err: BusinessError, value: audio.AudioScene) => {
-  if (err) {
-    console.error(`Failed to obtain the audio scene mode. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the audio scene mode, audioScene: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getAudioScene().then((value: audio.AudioScene) => {
-  console.info(`Succeeded in obtaining the audio scene mode, audioScene: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the audio scene mode. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getAudioScene
 
@@ -153,8 +93,6 @@ getAudioScene(): Promise<AudioScene>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **返回值：**
@@ -162,10 +100,6 @@ getAudioScene(): Promise<AudioScene>
 | 类型 |
 | --- |
 | Promise&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; |
-
-**示例**
-
-参见 [getAudioScene](#getaudioscene)
 
 ## getAudioSceneSync
 
@@ -177,8 +111,6 @@ getAudioSceneSync(): AudioScene
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 **返回值：**
@@ -186,20 +118,6 @@ getAudioSceneSync(): AudioScene
 | 类型 |
 | --- |
 | [AudioScene](arkts-audio-audio-audioscene-e.md) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value: audio.AudioScene = audioManager.getAudioSceneSync();
-  console.info(`Succeeded in obtaining the audio scene mode, audioScene: ${value}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the audio scene mode. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## getDebuggingManager
 
@@ -210,8 +128,6 @@ getDebuggingManager(): AudioDebuggingManager
 获取音频调试管理器实例。该实例为单例，获取后可重复使用。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -232,8 +148,6 @@ getDeviceEnhanceManager(): AudioDeviceEnhanceManager
 获取音频设备增强管理器实例。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -261,8 +175,6 @@ getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptor
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getDevices
@@ -275,52 +187,6 @@ getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptor
 | --- | --- | --- |
 | deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG, (err: BusinessError, value: audio.AudioDeviceDescriptors) => {
-  if (err) {
-    console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the device list, devices: ${JSON.stringify(value)}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data: audio.AudioDeviceDescriptors) => {
-  console.info(`Succeeded in obtaining the device list, devices: ${JSON.stringify(data)}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG, (err: BusinessError, audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
-  if (err) {
-    console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the device list, deviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((audioDeviceDescriptors: audio.AudioDeviceDescriptors) => {
-  console.info(`Succeeded in obtaining the device list, deviceDescriptors: ${JSON.stringify(audioDeviceDescriptors)}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the device list. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getDevices
 
@@ -337,8 +203,6 @@ getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 > 替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -358,10 +222,6 @@ getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>
 | --- |
 | Promise&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; |
 
-**示例**
-
-参见 [getDevices](#getdevices)
-
 ## getMaxVolume
 
 ```TypeScript
@@ -379,8 +239,6 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getMaxVolume
@@ -393,52 +251,6 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getMaxVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
-  if (err) {
-    console.error(`Failed to obtain the maximum volume. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the maximum volume, maxVolume: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getMaxVolume(audio.AudioVolumeType.MEDIA).then((data: number) => {
-  console.info(`Succeeded in obtaining the maximum volume, maxVolume: ${data}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the maximum volume. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.getMaxVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, maxVolume) => {
-  if (err) {
-    console.error(`Failed to obtain the maximum volume. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the maximum volume, maxVolume: ${maxVolume}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.getMaxVolume(audio.AudioVolumeType.MEDIA).then((maxVolume) => {
-  console.info(`Succeeded in obtaining the maximum volume, maxVolume: ${maxVolume}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the maximum volume. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getMaxVolume
 
@@ -457,8 +269,6 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getMaxVolume
@@ -477,10 +287,6 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 | --- |
 | Promise & lt;number & gt; |
 
-**示例**
-
-参见 [getMaxVolume](#getmaxvolume)
-
 ## getMinVolume
 
 ```TypeScript
@@ -498,8 +304,6 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getMinVolume
@@ -512,52 +316,6 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getMinVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
-  if (err) {
-    console.error(`Failed to obtain the minimum volume. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the minimum volume, minVolume: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getMinVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
-  console.info(`Succeeded in obtaining the minimum volume, minVolume: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the minimum volume. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.getMinVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, minVolume) => {
-  if (err) {
-    console.error(`Failed to obtain the minimum volume. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the minimum volume, minVolume: ${minVolume}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.getMinVolume(audio.AudioVolumeType.MEDIA).then((minVolume) => {
-  console.info(`Succeeded in obtaining the minimum volume, minVolume: ${minVolume}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the minimum volume. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getMinVolume
 
@@ -576,8 +334,6 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getMinVolume
@@ -596,10 +352,6 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 | --- |
 | Promise & lt;number & gt; |
 
-**示例**
-
-参见 [getMinVolume](#getminvolume)
-
 ## getRingerMode
 
 ```TypeScript
@@ -616,8 +368,6 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getRingerMode
@@ -629,52 +379,6 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getRingerMode((err: BusinessError, value: audio.AudioRingMode) => {
-  if (err) {
-    console.error(`Failed to obtain the ringer mode. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the ringer mode, ringerMode: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getRingerMode().then((value: audio.AudioRingMode) => {
-  console.info(`Succeeded in obtaining the ringer mode, ringerMode: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the ringer mode. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.getRingerMode((err: BusinessError, ringerMode: audio.AudioRingMode) => {
-  if (err) {
-    console.error(`Failed to obtain the ringer mode. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the ringer mode, ringerMode: ${ringerMode}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.getRingerMode().then((ringerMode: audio.AudioRingMode) => {
-  console.info(`Succeeded in obtaining the ringer mode, ringerMode: ${ringerMode}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the ringer mode. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getRingerMode
 
@@ -692,8 +396,6 @@ getRingerMode(): Promise<AudioRingMode>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getRingerMode
@@ -706,10 +408,6 @@ getRingerMode(): Promise<AudioRingMode>
 | --- |
 | Promise&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; |
 
-**示例**
-
-参见 [getRingerMode](#getringermode)
-
 ## getRoutingManager
 
 ```TypeScript
@@ -720,8 +418,6 @@ getRoutingManager(): AudioRoutingManager
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
 **返回值：**
@@ -729,12 +425,6 @@ getRoutingManager(): AudioRoutingManager
 | 类型 |
 | --- |
 | [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i.md) |
-
-**示例**
-
-```TypeScript
-let audioRoutingManager: audio.AudioRoutingManager = audioManager.getRoutingManager();
-```
 
 ## getSessionManager
 
@@ -746,8 +436,6 @@ getSessionManager(): AudioSessionManager
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -757,12 +445,6 @@ getSessionManager(): AudioSessionManager
 | 类型 |
 | --- |
 | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) |
-
-**示例**
-
-```TypeScript
-let audioSessionManager: audio.AudioSessionManager = audioManager.getSessionManager();
-```
 
 ## getSpatializationManager
 
@@ -774,8 +456,6 @@ getSpatializationManager(): AudioSpatializationManager
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **返回值：**
@@ -783,12 +463,6 @@ getSpatializationManager(): AudioSpatializationManager
 | 类型 |
 | --- |
 | [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i.md) |
-
-**示例**
-
-```TypeScript
-let audioSpatializationManager: audio.AudioSpatializationManager = audioManager.getSpatializationManager();
-```
 
 ## getStreamManager
 
@@ -800,8 +474,6 @@ getStreamManager(): AudioStreamManager
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **返回值：**
@@ -809,12 +481,6 @@ getStreamManager(): AudioStreamManager
 | 类型 |
 | --- |
 | [AudioStreamManager](arkts-audio-audio-audiostreammanager-i.md) |
-
-**示例**
-
-```TypeScript
-let audioStreamManager: audio.AudioStreamManager = audioManager.getStreamManager();
-```
 
 ## getVolume
 
@@ -833,8 +499,6 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** getVolume
@@ -847,64 +511,6 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: number) => {
-  if (err) {
-    console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the volume, volume: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.getVolume(audio.AudioVolumeType.MEDIA).then((value: number) => {
-  console.info(`Succeeded in obtaining the volume, volume: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let value = audioRenderer.getVolume();
-  console.info(`Indicate that the volume is obtained ${value}.`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to obtain the volume, error ${error}.`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.getVolume(audio.AudioVolumeType.MEDIA, (err: BusinessError, volume) => {
-  if (err) {
-    console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the volume, volume: ${volume}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.getVolume(audio.AudioVolumeType.MEDIA).then((volume) => {
-  console.info(`Succeeded in obtaining the volume, volume: ${volume}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the volume. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## getVolume
 
@@ -922,8 +528,6 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 > [getVolumeByStream](arkts-audio-audio-audiovolumemanager-i.md#getvolumebystream)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -943,10 +547,6 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 | --- |
 | Promise & lt;number & gt; |
 
-**示例**
-
-参见 [getVolume](#getvolume)
-
 ## getVolumeManager
 
 ```TypeScript
@@ -957,8 +557,6 @@ getVolumeManager(): AudioVolumeManager
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
@@ -968,12 +566,6 @@ getVolumeManager(): AudioVolumeManager
 | 类型 |
 | --- |
 | [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md) |
-
-**示例**
-
-```TypeScript
-let audioVolumeManager: audio.AudioVolumeManager = audioManager.getVolumeManager();
-```
 
 ## isActive
 
@@ -992,8 +584,6 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** isActive
@@ -1006,52 +596,6 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
-  if (err) {
-    console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
-  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
-  if (err) {
-    console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioStreamManager.isActive(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
-  console.info(`Succeeded in checking whether the stream is active, isActive: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the stream is active. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## isActive
 
@@ -1070,8 +614,6 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** isActive
@@ -1090,10 +632,6 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 | --- |
 | Promise & lt;boolean & gt; |
 
-**示例**
-
-参见 [isActive](#isactive)
-
 ## isDeviceActive
 
 ```TypeScript
@@ -1110,8 +648,6 @@ isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): 
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#iscommunicationdeviceactive)
@@ -1124,30 +660,6 @@ isDeviceActive(deviceType: ActiveDeviceType, callback: AsyncCallback<boolean>): 
 | --- | --- | --- |
 | deviceType | [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.isDeviceActive(audio.ActiveDeviceType.SPEAKER, (err: BusinessError, value: boolean) => {
-  if (err) {
-    console.error(`Failed to check whether the device is active. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking whether the device is active, isActive: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.isDeviceActive(audio.ActiveDeviceType.SPEAKER).then((value: boolean) => {
-  console.info(`Succeeded in checking whether the device is active, isActive: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the device is active. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## isDeviceActive
 
@@ -1165,8 +677,6 @@ isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isCommunicationDeviceActive](arkts-audio-audio-audioroutingmanager-i.md#iscommunicationdeviceactive)
@@ -1185,10 +695,6 @@ isDeviceActive(deviceType: ActiveDeviceType): Promise<boolean>
 | --- |
 | Promise & lt;boolean & gt; |
 
-**示例**
-
-参见 [isDeviceActive](#isdeviceactive)
-
 ## isMicrophoneMute
 
 ```TypeScript
@@ -1205,8 +711,6 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** isMicrophoneMute
@@ -1220,52 +724,6 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.isMicrophoneMute((err: BusinessError, value: boolean) => {
-  if (err) {
-    console.error(`Failed to check whether the microphone is muted. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking whether the microphone is muted, isMuted: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.isMicrophoneMute().then((value: boolean) => {
-  console.info(`Succeeded in checking whether the microphone is muted, isMuted: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the microphone is muted. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.isMicrophoneMute((err: BusinessError, isMute: boolean) => {
-  if (err) {
-    console.error(`Failed to check whether the microphone is muted. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking whether the microphone is muted, isMuted: ${isMute}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.isMicrophoneMute().then((isMute: boolean) => {
-  console.info(`Succeeded in checking whether the microphone is muted, isMuted: ${isMute}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the microphone is muted. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## isMicrophoneMute
 
@@ -1283,8 +741,6 @@ isMicrophoneMute(): Promise<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** isMicrophoneMute
@@ -1298,10 +754,6 @@ isMicrophoneMute(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isMicrophoneMute](#ismicrophonemute)
 
 ## isMute
 
@@ -1320,8 +772,6 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** isMute
@@ -1334,52 +784,6 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.isMute(audio.AudioVolumeType.MEDIA, (err: BusinessError, value: boolean) => {
-  if (err) {
-    console.error(`Failed to check whether the stream is muted. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking whether the stream is muted, isMuted: ${value}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.isMute(audio.AudioVolumeType.MEDIA).then((value: boolean) => {
-  console.info(`Succeeded in checking whether the stream is muted, isMuted: ${value}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the stream is muted. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.isMute(audio.AudioVolumeType.MEDIA, (err: BusinessError, isMute: boolean) => {
-  if (err) {
-    console.error(`Failed to check whether the stream is muted. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in checking whether the stream is muted, isMuted: ${isMute}.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.isMute(audio.AudioVolumeType.MEDIA).then((isMute: boolean) => {
-  console.info(`Succeeded in checking whether the stream is muted, isMuted: ${isMute}.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether the stream is muted. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## isMute
 
@@ -1397,8 +801,6 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 > [isSystemMutedForStream](arkts-audio-audio-audiovolumemanager-i.md#issystemmutedforstream)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -1418,10 +820,6 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 | --- |
 | Promise & lt;boolean & gt; |
 
-**示例**
-
-参见 [isMute](#ismute)
-
 ## mute
 
 ```TypeScript
@@ -1437,8 +835,6 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
@@ -1452,48 +848,6 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 |
 | [mute](#mute) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to mute the stream. ${err}`);
-    return;
-  }
-  console.info('Callback invoked to indicate that the stream is muted.');
-});
-```
-
-```TypeScript
-audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
-  console.info('Promise returned to indicate that the stream is muted.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to mute the stream. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in muting the stream.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
-  console.info('Succeeded in muting the stream.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to mute the stream. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## mute
 
@@ -1509,8 +863,6 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 > 替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -1531,10 +883,6 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [mute](#mute)
-
 ## off('audioSceneChange')
 
 ```TypeScript
@@ -1544,8 +892,6 @@ off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
 取消监听音频场景变化事件。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -1570,8 +916,6 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 > [off('deviceChange')](arkts-audio-audio-audioroutingmanager-i.md#offdevicechange)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -1601,8 +945,6 @@ off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptA
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **替代接口：** audioInterrupt
@@ -1617,42 +959,6 @@ off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptA
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 否 |
 
-## offAudioSceneChange
-
-```TypeScript
-offAudioSceneChange(callback?: Callback<AudioScene>): void
-```
-
-取消监听音频场景变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Audio.Communication
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 否 |
-
-**示例**
-
-```TypeScript
-// 取消该事件的所有监听。
-audioManager.offAudioSceneChange();
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let audioSceneChangeCallback = (audioScene: audio.AudioScene) => {
-  console.info(`Audio scene changed, audioScene: ${audioScene}.`);
-};
-
-audioManager.onAudioSceneChange(audioSceneChangeCallback);
-
-audioManager.offAudioSceneChange(audioSceneChangeCallback);
-```
-
 ## on('audioSceneChange')
 
 ```TypeScript
@@ -1662,8 +968,6 @@ on(type: 'audioSceneChange', callback: Callback<AudioScene>): void
 监听音频场景变化事件。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -1688,8 +992,6 @@ on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void
 > [on('deviceChange')](arkts-audio-audio-audioroutingmanager-i.md#ondevicechange)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -1719,8 +1021,6 @@ on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAct
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **替代接口：** audioInterrupt
@@ -1735,34 +1035,6 @@ on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAct
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 是 |
 
-## onAudioSceneChange
-
-```TypeScript
-onAudioSceneChange(callback: Callback<AudioScene>): void
-```
-
-监听音频场景变化事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Audio.Communication
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-audioManager.onAudioSceneChange((audioScene: audio.AudioScene) => {
-  console.info(`Audio scene changed, audioScene: ${audioScene}.`);
-});
-```
-
 ## setAudioParameter
 
 ```TypeScript
@@ -1775,8 +1047,6 @@ setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): vo
 > 从API version 7开始支持，从API version 11开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -1792,30 +1062,6 @@ setAudioParameter(key: string, value: string, callback: AsyncCallback<void>): vo
 | value | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setAudioParameter('key_example', 'value_example', (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the audio parameter. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the audio parameter.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setAudioParameter('key_example', 'value_example').then(() => {
-  console.info('Succeeded in setting the audio parameter.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the audio parameter. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setAudioParameter
 
 ```TypeScript
@@ -1828,8 +1074,6 @@ setAudioParameter(key: string, value: string): Promise<void>
 > 从API version 7开始支持，从API version 11开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -1849,10 +1093,6 @@ setAudioParameter(key: string, value: string): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [setAudioParameter](#setaudioparameter)
 
 ## setDeviceActive
 
@@ -1870,8 +1110,6 @@ setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCa
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setcommunicationdevice)
@@ -1885,30 +1123,6 @@ setDeviceActive(deviceType: ActiveDeviceType, active: boolean, callback: AsyncCa
 | deviceType | [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | 是 |
 | active | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setDeviceActive(audio.ActiveDeviceType.SPEAKER, true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the active status of the device. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the active status of the device.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setDeviceActive(audio.ActiveDeviceType.SPEAKER, true).then(() => {
-  console.info('Succeeded in setting the active status of the device.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the active status of the device. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## setDeviceActive
 
@@ -1926,8 +1140,6 @@ setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setCommunicationDevice](arkts-audio-audio-audioroutingmanager-i.md#setcommunicationdevice)
@@ -1947,10 +1159,6 @@ setDeviceActive(deviceType: ActiveDeviceType, active: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setDeviceActive](#setdeviceactive)
-
 ## setMicrophoneMute
 
 ```TypeScript
@@ -1964,8 +1172,6 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MICROPHONE
@@ -1978,52 +1184,6 @@ setMicrophoneMute(mute: boolean, callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | [mute](#mute) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setMicrophoneMute(true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to mute the microphone. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in muting the microphone.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setMicrophoneMute(true).then(() => {
-  console.info('Succeeded in muting the microphone.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to mute the microphone. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.setMicrophoneMute(true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to mute the microphone. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in muting the microphone.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.setMicrophoneMute(true).then(() => {
-  console.info('Succeeded in muting the microphone.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to mute the microphone. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## setMicrophoneMute
 
@@ -2038,8 +1198,6 @@ setMicrophoneMute(mute: boolean): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **需要权限：** ohos.permission.MICROPHONE
@@ -2058,10 +1216,6 @@ setMicrophoneMute(mute: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setMicrophoneMute](#setmicrophonemute)
-
 ## setRingerMode
 
 ```TypeScript
@@ -2074,8 +1228,6 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 > 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -2090,48 +1242,6 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 | mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the ringer mode. ${err}`);
-    return;
-  }
-  console.info('Callback invoked to indicate a successful setting of the ringer mode.');
-});
-```
-
-```TypeScript
-audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
-  console.info('Promise returned to indicate a successful setting of the ringer mode.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the ringer mode. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the ringer mode.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
-  console.info('Succeeded in setting the ringer mode.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the ringer mode. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## setRingerMode
 
 ```TypeScript
@@ -2144,8 +1254,6 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 > 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -2164,10 +1272,6 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [setRingerMode](#setringermode)
 
 ## setVolume
 
@@ -2184,8 +1288,6 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
@@ -2202,70 +1304,6 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 | volume | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the volume. ${err}`);
-    return;
-  }
-  console.info('Callback invoked to indicate a successful volume setting.');
-});
-```
-
-```TypeScript
-audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
-  console.info('Promise returned to indicate a successful volume setting.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set the volume. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the volume.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
-  console.info('Succeeded in setting the volume.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the volume. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setVolume(0.5).then(() => {
-  console.info('setVolume Success!');
-}).catch((err: BusinessError) => {
-  console.error(`setVolume Fail: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioRenderer.setVolume(0.5, (err: BusinessError) => {
-  if(err){
-    console.error(`setVolume Fail: ${err}`);
-    return;
-  }
-  console.info('setVolume Success!');
-});
-```
-
 ## setVolume
 
 ```TypeScript
@@ -2280,8 +1318,6 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 > 替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -2303,7 +1339,3 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [setVolume](#setvolume)

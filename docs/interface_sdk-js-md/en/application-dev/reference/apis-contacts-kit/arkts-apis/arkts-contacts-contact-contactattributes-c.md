@@ -4,14 +4,12 @@ Provides a list of contact attributes, which are generally used as arguments. If
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## attributes
@@ -26,22 +24,6 @@ Indicates the contact attributes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Create contact data in JSON format:
-
-```TypeScript
-let contactAttributes: contact.ContactAttributes = {
-    attributes: [
-        contact.Attribute.ATTR_EMAIL,
-        contact.Attribute.ATTR_NAME,
-        contact.Attribute.ATTR_PHONE
-    ]
-};
-```

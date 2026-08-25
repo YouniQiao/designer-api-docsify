@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,8 +28,6 @@ Sets whether to enable the AI image analyzer, which supports subject recognition
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -50,11 +46,9 @@ Sets whether to enable the AI image analyzer, which supports subject recognition
 onReady(event: VoidCallback)
 ```
 
-Triggered when the **Canvas** component is initialized or when its size changes.When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the onAreaChange event is triggered, not the **onReady** event. The onAreaChange event is triggered after the **onReady** event.
+Triggered when the **Canvas** component is initialized or when its size changes.When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event is triggered after the **onReady** event.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,11 +68,9 @@ Triggered when the **Canvas** component is initialized or when its size changes.
 onReady(event: Callback<DrawingRenderingContext | undefined> | undefined)
 ```
 
-Triggered when the **Canvas** component is initialized or when its size changes.When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the onAreaChange event is triggered, not the **onReady** event. The onAreaChange event is triggered after the **onReady** event.
+Triggered when the **Canvas** component is initialized or when its size changes.When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event is triggered after the **onReady** event.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,4 +84,4 @@ Triggered when the **Canvas** component is initialized or when its size changes.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | Callback&lt;[DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) \| undefined & gt; \ | undefined | Yes | Triggered when the **Canvas** component is initialized or when its size changes.<br>Constraints on input parameters of the Callback & lt;DrawingRenderingContext \ |
+| event | Callback&lt;[DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) \| undefined & gt; \ | undefined | Yes | Triggered when the **Canvas** component is initialized or when its size changes. Constraints on input parameters of the Callback & lt;DrawingRenderingContext \ |

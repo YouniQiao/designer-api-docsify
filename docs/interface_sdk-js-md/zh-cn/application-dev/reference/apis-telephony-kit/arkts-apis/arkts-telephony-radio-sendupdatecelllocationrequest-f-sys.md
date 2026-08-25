@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendUpdateCellLocationRequest
 
 ```TypeScript
-function sendUpdateCellLocationRequest(slotId: int, callback: AsyncCallback<void>): void
+function sendUpdateCellLocationRequest(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 Actively requests to update location information.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -28,7 +26,7 @@ Actively requests to update location information.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -43,56 +41,16 @@ Actively requests to update location information.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.sendUpdateCellLocationRequest((err: BusinessError) => {
-    if (err) {
-        console.error(`sendUpdateCellLocationRequest failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`sendUpdateCellLocationRequest success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.sendUpdateCellLocationRequest(slotId, (err: BusinessError) => {
-    if (err) {
-        console.error(`sendUpdateCellLocationRequest failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`sendUpdateCellLocationRequest success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.sendUpdateCellLocationRequest(slotId).then(() => {
-    console.info(`sendUpdateCellLocationRequest success.`);
-}).catch((err: BusinessError) => {
-    console.error(`sendUpdateCellLocationRequest failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## sendUpdateCellLocationRequest
 
 ```TypeScript
-function sendUpdateCellLocationRequest(slotId?: int): Promise<void>
+function sendUpdateCellLocationRequest(slotId?: number): Promise<void>
 ```
 
 Actively requests to update location information.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -104,7 +62,7 @@ Actively requests to update location information.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| slotId | number | 否 |
 
 **返回值：**
 
@@ -124,10 +82,6 @@ Actively requests to update location information.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-参见 [sendUpdateCellLocationRequest](#sendupdatecelllocationrequest)
-
 
 ## sendUpdateCellLocationRequest
 
@@ -138,8 +92,6 @@ function sendUpdateCellLocationRequest(callback: AsyncCallback<void>): void
 Actively requests to update location information.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -164,7 +116,3 @@ Actively requests to update location information.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [sendUpdateCellLocationRequest](#sendupdatecelllocationrequest)

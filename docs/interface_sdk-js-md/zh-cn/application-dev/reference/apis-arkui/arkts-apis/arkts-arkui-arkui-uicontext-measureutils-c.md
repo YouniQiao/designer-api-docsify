@@ -10,17 +10,15 @@ MeasureUtils提供文本宽度、高度等相关计算能力，适用于文本�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## getParagraphs
@@ -33,8 +31,6 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -44,285 +40,13 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
-| options | [TextLayoutOptions](arkts-arkui-textcommon-textlayoutoptions-i.md) | 否 |
+| options | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Array & lt;Paragraph & gt; |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { LengthMetrics } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class MyCustomSpan extends CustomSpan {
-  constructor(word: string, width: number, height: number, context: UIContext) {
-    super();
-    this.word = word;
-    this.width = width;
-    this.height = height;
-    this.context = context;
-  }
-
-  onMeasure(measureInfo: CustomSpanMeasureInfo): CustomSpanMetrics {
-    return { width: this.width, height: this.height };
-  }
-
-  onDraw(context: DrawContext, options: CustomSpanDrawInfo) {
-    let canvas = context.canvas;
-    const brush = new drawing.Brush();
-    brush.setColor({
-      alpha: 255,
-      red: 0,
-      green: 74,
-      blue: 175
-    });
-    const font = new drawing.Font();
-    font.setSize(25);
-    const textBlob = drawing.TextBlob.makeFromString(this.word, font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
-    canvas.attachBrush(brush);
-    canvas.drawRect({
-      left: options.x + 10,
-      right: options.x + this.context.vp2px(this.width) - 10,
-      top: options.lineTop + 10,
-      bottom: options.lineBottom - 10
-    });
-    brush.setColor({
-      alpha: 255,
-      red: 23,
-      green: 169,
-      blue: 141
-    });
-    canvas.attachBrush(brush);
-    canvas.drawTextBlob(textBlob, options.x + 20, options.lineBottom - 15);
-    canvas.detachBrush();
-  }
-
-  setWord(word: string) {
-    this.word = word;
-  }
-
-  width: number = 160;
-  word: string = 'drawing';
-  height: number = 10;
-  context: UIContext;
-}
-
-@Entry
-@Component
-struct Index {
-  str: string =
-    'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.';
-  mutableStr2 = new MutableStyledString(this.str, [
-    {
-      start: 0,
-      length: 3,
-      styledKey: StyledStringKey.FONT,
-      styledValue: new TextStyle({ fontSize: LengthMetrics.px(20) })
-    },
-    {
-      start: 3,
-      length: 3,
-      styledKey: StyledStringKey.FONT,
-      styledValue: new TextStyle({ fontColor: Color.Brown })
-    }
-  ]);
-
-  // 测算属性字符串在指定宽度下能显示的行数
-  getLineNum(styledString: StyledString, width: LengthMetrics) {
-    let paragraphArr = this.getUIContext().getMeasureUtils().getParagraphs(styledString, { constraintWidth: width });
-    // getParagraphs在参数异常或内部计算失败时会返回undefined，使用时需做判空处理
-    if (!paragraphArr) {
-      return 0;
-    }
-    let lineCount = 0;
-    for (let i = 0; i < paragraphArr.length; ++i) {
-      lineCount += paragraphArr[i].getLineCount();
-    }
-    return lineCount;
-  }
-
-  // 测算属性字符串显示maxLines行时最多可以显示的字数
-  getCorrectIndex(styledString: MutableStyledString, maxLines: number, width: LengthMetrics) {
-    let low = 0;
-    let high = styledString.length - 1;
-    // 使用二分查找
-    while (low <= high) {
-      let mid = (low + high) >> 1;
-      console.info('demo: get ' + low + ' ' + high + ' ' + mid);
-      let moreStyledString = new MutableStyledString('... 全文', [{
-        start: 4,
-        length: 2,
-        styledKey: StyledStringKey.FONT,
-        styledValue: new TextStyle({ fontColor: Color.Blue })
-      }]);
-      moreStyledString.insertStyledString(0, styledString.subStyledString(0, mid));
-      let lineNum = this.getLineNum(moreStyledString, width);
-      if (lineNum <= maxLines) {
-        low = mid + 1;
-      } else {
-        high = mid - 1;
-      }
-    }
-    return high;
-  }
-
-  mutableStrAllContent = new MutableStyledString(this.str, [
-    {
-      start: 0,
-      length: 3,
-      styledKey: StyledStringKey.FONT,
-      styledValue: new TextStyle({ fontSize: LengthMetrics.px(40) })
-    },
-    {
-      start: 3,
-      length: 3,
-      styledKey: StyledStringKey.FONT,
-      styledValue: new TextStyle({ fontColor: Color.Brown })
-    }
-  ]);
-  customSpan1: MyCustomSpan = new MyCustomSpan('Hello', 120, 10, this.getUIContext());
-  mutableStrAllContent2 = new MutableStyledString(this.str, [
-    {
-      start: 0,
-      length: 3,
-      styledKey: StyledStringKey.FONT,
-      styledValue: new TextStyle({ fontSize: LengthMetrics.px(100) })
-    },
-    {
-      start: 3,
-      length: 3,
-      styledKey: StyledStringKey.FONT,
-      styledValue: new TextStyle({ fontColor: Color.Brown })
-    }
-  ]);
-  controller: TextController = new TextController();
-  controller2: TextController = new TextController();
-  textController: TextController = new TextController();
-  textController2: TextController = new TextController();
-
-  aboutToAppear() {
-    this.mutableStrAllContent2.insertStyledString(0, new StyledString(this.customSpan1));
-    this.mutableStr2.insertStyledString(0, new StyledString(this.customSpan1));
-  }
-
-  build() {
-    Scroll() {
-      Column() {
-        Text('原文')
-        Text(undefined, { controller: this.controller }).width('500px').onAppear(() => {
-          this.controller.setStyledString(this.mutableStrAllContent);
-        })
-        Divider().strokeWidth(8).color('#F1F3F5')
-        Text('排版后')
-        Text(undefined, { controller: this.textController }).onAppear(() => {
-          let correctIndex = this.getCorrectIndex(this.mutableStrAllContent, 3, LengthMetrics.px(500));
-          if (correctIndex != this.mutableStrAllContent.length - 1) {
-            let moreStyledString = new MutableStyledString('... 全文', [{
-              start: 4,
-              length: 2,
-              styledKey: StyledStringKey.FONT,
-              styledValue: new TextStyle({ fontColor: Color.Blue })
-            }]);
-            moreStyledString.insertStyledString(0, this.mutableStrAllContent.subStyledString(0, correctIndex));
-            this.textController.setStyledString(moreStyledString);
-          } else {
-            this.textController.setStyledString(this.mutableStrAllContent);
-          }
-        })
-          .width('500px')
-        Divider().strokeWidth(8).color('#F1F3F5')
-        Text('原文')
-        Text(undefined, { controller: this.controller2 }).width('500px').onAppear(() => {
-          this.controller2.setStyledString(this.mutableStrAllContent2);
-        })
-        Divider().strokeWidth(8).color('#F1F3F5')
-        Text('排版后')
-        Text(undefined, { controller: this.textController2 }).onAppear(() => {
-          let correctIndex = this.getCorrectIndex(this.mutableStrAllContent2, 3, LengthMetrics.px(500));
-          let moreStyledString = new MutableStyledString('... 全文', [{
-            start: 4,
-            length: 2,
-            styledKey: StyledStringKey.FONT,
-            styledValue: new TextStyle({ fontColor: Color.Blue })
-          }]);
-          moreStyledString.insertStyledString(0, this.mutableStrAllContent2.subStyledString(0, correctIndex));
-          this.textController2.setStyledString(moreStyledString);
-        })
-          .width('500px')
-      }.width('100%')
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import {
-  Entry, Component,Text, Column, Button, FontWeight, LengthMetrics, MutableStyledString, TextStyle, TextController, StyleOptions, State, StyledStringKey
-} from '@kit.ArkUI';
-
-@Entry
-@Component
-struct GetParagraphsDemo {
-  @State testStr: string = 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.';
-
-  testStyledString: MutableStyledString = new MutableStyledString(this.testStr, [{
-    start: 0,
-    length: 3,
-    styledKey: StyledStringKey.FONT,
-    styledValue: { fontSize: 20 } as TextStyle
-  } as StyleOptions]);
-
-  @State paragraphInfo: string = '';
-  textController: TextController = new TextController();
-
-  getParagraphsInfo(constraintWidth: LengthMetrics) {
-    const paragraphs = this.getUIContext().getMeasureUtils().getParagraphs(this.testStyledString, { constraintWidth });
-
-    let info = `总段落数：${paragraphs.length}\n`;
-    paragraphs.forEach((para, index) => {
-      info += `第${index+1}段行数：${para.getLineCount()}\n`;
-    });
-    this.paragraphInfo = info;
-
-    this.textController.setStyledString(this.testStyledString);
-  }
-
-  build() {
-    Column() {
-      Button('点击获取 Paragraphs 信息')
-        .onClick(() => this.getParagraphsInfo(LengthMetrics.px(500)))
-        .margin(10)
-
-      Text('Paragraphs 信息：')
-        .fontSize(16)
-        .fontWeight(FontWeight.Bold)
-
-      Text(this.paragraphInfo)
-        .fontSize(14)
-        .margin(5)
-        .width('100%')
-
-      Text('实际文本排版：')
-        .fontSize(16)
-        .fontWeight(FontWeight.Bold)
-
-      Text(undefined, { controller: this.textController })
-        .width('500px')
-        .fontSize(20)
-    }
-    .width('100%')
-    .padding(20)
-  }
-}
-```
 
 ## measureText
 
@@ -337,8 +61,6 @@ measureText(options: MeasureOptions): number
 > - measureText接口的计算结果始终是单行文本的宽度，入参options中配置的布局约束（如constraintWidth、maxLines）对measureText的结果没有影响。如果需要计算布局约束下的宽度，请使用[measureTextSize](#measuretextsize)方法。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -358,36 +80,6 @@ measureText(options: MeasureOptions): number
 | --- |
 | number |
 
-**示例**
-
-通过MeasureUtils的measureText方法获取"Hello World"文字的宽度。
-
-```TypeScript
-import { MeasureUtils } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State uiContext: UIContext = this.getUIContext();
-  @State uiContextMeasure: MeasureUtils = this.uiContext.getMeasureUtils();
-  @State textWidth: number = this.uiContextMeasure.measureText({
-    textContent: 'Hello World',
-    fontSize: '50px'
-  });
-
-  build() {
-    Row() {
-      Column() {
-        // measureText在参数异常或内部计算失败时会返回undefined，使用时需做判空处理
-        Text(`The width of 'Hello World': ${this.textWidth ?? 0}`)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## measureTextSize
 
 ```TypeScript
@@ -400,8 +92,6 @@ measureTextSize(options: MeasureOptions): SizeOptions
 > 调用此接口时，应避免同时使用[ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale)设置应用字体大小缩放比例。为了确保时序正确性，建议开发者自行监听字体缩放变化，以保证测算结果的准确性。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -419,4 +109,4 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 | 类型 |
 | --- |
-| [SizeOptions](arkts-arkui-units-sizeoptions-i.md) |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) |

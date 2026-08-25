@@ -7,8 +7,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## DIFFERENCE
@@ -20,8 +18,6 @@ DIFFERENCE = 0
 两个区域的相减操作，从第一个区域中减去第二个区域。适用于需要裁剪掉特定区域的场景。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -35,8 +31,6 @@ INTERSECT = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## UNION
@@ -48,8 +42,6 @@ UNION = 2
 两个区域的联合操作，合并两个区域的所有部分。适用于需要合并区域的场景。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -63,8 +55,6 @@ XOR = 3
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## REVERSE_DIFFERENCE
@@ -77,8 +67,6 @@ REVERSE_DIFFERENCE = 4
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## REPLACE
@@ -90,7 +78,5 @@ REPLACE = 5
 两个区域替换操作，用第二个区域完全替换第一个区域。适用于需要完全覆盖的场景。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing

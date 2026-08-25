@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setCallRestrictionPassword
 
 ```TypeScript
-function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string, callback: AsyncCallback<void>): void
+function setCallRestrictionPassword(slotId: number, oldPassword: string, newPassword: string, callback: AsyncCallback<void>): void
 ```
 
 修改呼叫限制密码。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | oldPassword | string | 是 |
 | newPassword | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
@@ -45,42 +43,16 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setCallRestrictionPassword(0, "123456", "654321", (err: BusinessError) => {
-    if (err) {
-        console.error(`setCallRestrictionPassword fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`setCallRestrictionPassword success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.setCallRestrictionPassword(0, "123456", "654321").then(() => {
-    console.info(`setCallRestrictionPassword success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCallRestrictionPassword fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setCallRestrictionPassword
 
 ```TypeScript
-function setCallRestrictionPassword(slotId: int, oldPassword: string, newPassword: string): Promise<void>
+function setCallRestrictionPassword(slotId: number, oldPassword: string, newPassword: string): Promise<void>
 ```
 
 修改呼叫限制密码。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -92,7 +64,7 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | oldPassword | string | 是 |
 | newPassword | string | 是 |
 
@@ -113,7 +85,3 @@ function setCallRestrictionPassword(slotId: int, oldPassword: string, newPasswor
 | [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
-
-**示例**
-
-参见 [setCallRestrictionPassword](#setcallrestrictionpassword)

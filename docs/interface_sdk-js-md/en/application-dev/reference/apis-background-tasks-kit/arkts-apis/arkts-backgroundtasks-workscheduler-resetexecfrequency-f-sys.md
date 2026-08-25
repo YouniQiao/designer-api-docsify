@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## resetExecFrequency
@@ -15,8 +15,6 @@ function resetExecFrequency(uid: number): void
 Reset the execution frequency.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Required permissions:** ohos.permission.SET_WORK_SCHEDULER_PROPERTY
 

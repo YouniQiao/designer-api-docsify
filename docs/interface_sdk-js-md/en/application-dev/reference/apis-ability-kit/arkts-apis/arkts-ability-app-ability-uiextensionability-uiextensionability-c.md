@@ -6,14 +6,12 @@ UIExtensionAbility is an ExtensionAbility component with a User Interface (UI). 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { UIExtensionAbility } from '@kit.AbilityKit';
+import { UIExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -26,26 +24,9 @@ Called when a UIExtensionAbility transitions from the foreground to the backgrou
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onBackground() {
-    console.info(TAG, `onBackground`);
-  }
-}
-```
 
 ## onCreate
 
@@ -57,8 +38,6 @@ Called when a UIExtensionAbility instance is created. You can execute initializa
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -68,21 +47,6 @@ Called when a UIExtensionAbility instance is created. You can execute initializa
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | launchParam | AbilityConstant.LaunchParam | Yes |
-
-**Examples**
-
-```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { ShareExtensionAbility, AbilityConstant } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onCreate(launchParam: AbilityConstant.LaunchParam) {
-    console.info(TAG, `onCreate, launchParam: ${JSON.stringify(launchParam)}`);
-  }
-}
-```
 
 ## onDestroy
 
@@ -94,81 +58,9 @@ Called when a UIExtensionAbility is destroyed. You can clear resources and save 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-A synchronous callback example is as follows:
-
-```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onDestroy() {
-    console.info(TAG, `onDestroy`);
-  }
-}
-```
-
-An asynchronous callback example is as follows:
-
-```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  // Use the async/await syntax to implement an asynchronous callback. The async keyword declares that onDestroy is an asynchronous function.
-  async onDestroy(): Promise<void> {
-    console.info(TAG, `onDestroy begin`);
-    try {
-      const result: string = await new Promise((resolve: Function) => {
-        setTimeout(() => {
-          resolve('Hello, world!');
-        }, 3000);
-      });
-      console.info(TAG, result); // result is 'Hello, world!'
-    } catch (e) {
-      console.error(TAG, `Get exception: ${e}`);
-    }
-    console.info(TAG, `onDestroy end`);
-  }
-}
-```
-
-## onDestroy
-
-```TypeScript
-onDestroy(): Promise<void> | undefined
-```
-
-Called back before an UI extension is destroyed.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;void & gt; \ | undefined |
-
-**Examples**
-
-See [onDestroy](#ondestroy)
 
 ## onForeground
 
@@ -180,26 +72,9 @@ Called when a UIExtensionAbility is initially launched into the foreground or tr
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Examples**
-
-```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onForeground() {
-    console.info(TAG, `onForeground`);
-  }
-}
-```
 
 ## onSessionCreate
 
@@ -210,8 +85,6 @@ onSessionCreate(want: Want, session: UIExtensionContentSession): void
 Called when a [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) instance is created. You can load a page through the UIExtensionContentSession instance within this callback.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,29 +97,6 @@ Called when a [UIExtensionContentSession](arkts-ability-app-ability-uiextensionc
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
 
-**Examples**
-
-```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { ShareExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    console.info(TAG, `onSessionCreate, want: ${JSON.stringify(want)}`);
-    try {
-      session.loadContent('pages/Index');
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let message = (error as BusinessError).message;
-      console.error(`Failed to load content, code: ${code}, msg: ${message}`);
-    }
-  }
-}
-```
-
 ## onSessionDestroy
 
 ```TypeScript
@@ -257,8 +107,6 @@ Called when a UIExtensionContentSession is destroyed. It informs applications th
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -268,21 +116,6 @@ Called when a UIExtensionContentSession is destroyed. It informs applications th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes |
-
-**Examples**
-
-```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { ShareExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onSessionDestroy(session: UIExtensionContentSession) {
-    console.info(TAG, `onSessionDestroy`);
-  }
-}
-```
 
 ## context
 
@@ -295,8 +128,6 @@ Context of the UIExtensionAbility.
 **Type:** [UIExtensionContext](arkts-ability-uiextensioncontext-c.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

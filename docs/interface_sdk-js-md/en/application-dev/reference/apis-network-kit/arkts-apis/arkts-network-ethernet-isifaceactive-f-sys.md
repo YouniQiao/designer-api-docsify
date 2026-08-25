@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## isIfaceActive
@@ -15,8 +15,6 @@ function isIfaceActive(iface: string, callback: AsyncCallback<number>): void
 Checks whether the interface is activated. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -43,32 +41,6 @@ Checks whether the interface is activated. This API uses an asynchronous callbac
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.isIfaceActive("eth0", (error: BusinessError, value: number) => {
-  if (error) {
-    console.error("whether2Activate callback error = " + JSON.stringify(error));
-  } else {
-    console.info("whether2Activate callback = " + JSON.stringify(value));
-  }
-});
-```
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.isIfaceActive("eth0").then((data: number) => {
-  console.info("isIfaceActive promise = " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error("isIfaceActive promise error = " + JSON.stringify(error));
-});
-```
-
 
 ## isIfaceActive
 
@@ -79,8 +51,6 @@ function isIfaceActive(iface: string): Promise<number>
 Checks whether the interface is activated. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -111,7 +81,3 @@ Checks whether the interface is activated. This API uses a promise to return the
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) |
-
-**Examples**
-
-See [isIfaceActive](#isifaceactive)

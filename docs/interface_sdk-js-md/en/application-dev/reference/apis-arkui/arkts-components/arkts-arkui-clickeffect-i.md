@@ -4,8 +4,6 @@ Defines the click effect.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,13 +20,11 @@ level: ClickEffectLevel
 Click feedback effect of the component.Default value: **ClickEffectLevel.LIGHT**  
 **NOTE：**When **level** is **undefined** or **null**, **ClickEffect** uses the effect corresponding to **ClickEffectLevel.LIGHT** with a scaling ratio as described below.
 
-**Type:** ClickEffectLevel
+**Type:** [ClickEffectLevel](../arkts-apis/arkts-arkui-clickeffectlevel-e.md)
 
 **Default:** ClickEffectLevel.LIGHT
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,8 +47,6 @@ Custom scaling ratio for fine-tuning the click feedback effect.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

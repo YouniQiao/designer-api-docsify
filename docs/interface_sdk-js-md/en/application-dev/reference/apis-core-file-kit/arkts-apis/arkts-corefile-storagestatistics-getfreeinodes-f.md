@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getFreeInodes
 
 ```TypeScript
-function getFreeInodes(): Promise<long>
+function getFreeInodes(): Promise<number>
 ```
 
 Get the free inodes.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,7 +24,7 @@ Get the free inodes.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -34,15 +32,3 @@ Get the free inodes.
 | --- |
 | 13600001 |
 | 13600016 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-storageStatistics.getFreeInodes().then((freeInodes: number) => {
-  console.info("getFreeInodes successfully: " + freeInodes);
-}).catch((err: BusinessError) => {
-  console.error(`getFreeInodes failed. Code: ${err.code}, Message: ${err.message}`);
-});
-```

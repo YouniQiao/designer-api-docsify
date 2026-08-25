@@ -8,7 +8,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isEmbeddedOpenAllowed
@@ -15,8 +15,6 @@ function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean
 Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) can be started in embedded mode. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,26 +41,3 @@ Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuia
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { abilityManager, UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let appId: string = '6918661953712445909';
-    try {
-      abilityManager.isEmbeddedOpenAllowed(this.context, appId).then((data) => {
-        console.info(`isEmbeddedOpenAllowed data: ${JSON.stringify(data)}`);
-      }).catch((err: BusinessError) => {
-        console.error(`isEmbeddedOpenAllowed failed, code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      console.error(`param is invalid, code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```

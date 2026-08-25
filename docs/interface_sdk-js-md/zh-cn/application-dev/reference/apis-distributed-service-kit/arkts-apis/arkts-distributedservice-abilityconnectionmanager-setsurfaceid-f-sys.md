@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## setSurfaceId
 
 ```TypeScript
-function setSurfaceId(streamId: int, surfaceId: string, param: SurfaceParam): void
+function setSurfaceId(streamId: number, surfaceId: string, param: SurfaceParam): void
 ```
 
-Sets the transmission surface.
+设置传输流与Surface的绑定关系。Surface用于承载音视频数据的显示或采集， 绑定后传输流的音视频数据将直接渲染到Surface上或从Surface采集数据。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -28,7 +26,7 @@ Sets the transmission surface.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streamId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| streamId | number | 是 |
 | surfaceId | string | 是 |
 | param | [SurfaceParam](arkts-distributedservice-abilityconnectionmanager-surfaceparam-i-sys.md) | 是 |
 
@@ -38,23 +36,3 @@ Sets the transmission surface.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hilog.info(0x0000, 'testTag', 'setSurfaceId');
-let sessionId = 100;
-abilityConnectionManager.createStream(sessionId ,{name: 'receive', role: 0}).then(async (streamId) => {
-  let surfaceParam: abilityConnectionManager.SurfaceParam = {
-    width: 640,
-    height: 480,
-    format: 1
-  }
-  let surfaceId = abilityConnectionManager.getSurfaceId(streamId, surfaceParam);
-  // 设置传输流与Surface的绑定关系
-  abilityConnectionManager.setSurfaceId(streamId, surfaceId, surfaceParam);
-})
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## activateOsAccount
@@ -15,8 +15,6 @@ function activateOsAccount(admin: Want, accountId: number): Promise<void>
 切换系统账号。当前仅支持手机、平板设备使用，只能在[createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md)创建的普通系统账号和默认系统账号 (ID为10 0) 之间切换。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -49,30 +47,3 @@ function activateOsAccount(admin: Want, accountId: number): Promise<void>
 | [9201046](../errorcode-enterpriseDeviceManager.md#9201046-已登录系统账号数量达到上限) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { osAccount } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 创建普通系统账号
-accountManager.createNormalOsAccount(wantTemp, "TestAccountName").then((accountInfo: osAccount.OsAccountInfo) => {
-  console.info('Succeeded in creating normal os account, accountInfo: ' + JSON.stringify(accountInfo));
-  // 根据系统账号ID切换账号
-  let accountId: number = accountInfo.localId;
-  return accountManager.activateOsAccount(wantTemp, accountId);
-}).then(() => {
-  console.info('Succeeded in activating os account');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create and activate normal os account: code is ${err.code}, message is ${err.message}`);
-});
-```

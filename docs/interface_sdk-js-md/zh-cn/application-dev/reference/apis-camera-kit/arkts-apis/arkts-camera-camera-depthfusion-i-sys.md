@@ -6,8 +6,6 @@ Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-dept
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
@@ -15,7 +13,7 @@ Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-dept
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableDepthFusion
@@ -27,8 +25,6 @@ enableDepthFusion(enabled: boolean): void
 Enables depth fusion.
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -49,23 +45,6 @@ Enables depth fusion.
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableDepthFusion(DepthFusion: camera.DepthFusion): void {
-  try {
-    let enabled: boolean = true;
-    DepthFusion.enableDepthFusion(enabled);
-    console.info('Promise returned to indicate that enableDepthFusion method execution success.');
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to depth fusion enableDepthFusion, error code: ${err.code}.`);
-  };
-}
-```
-
 ## isDepthFusionEnabled
 
 ```TypeScript
@@ -75,8 +54,6 @@ isDepthFusionEnabled(): boolean
 Checks whether depth fusion is enabled.
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -94,21 +71,3 @@ Checks whether depth fusion is enabled.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isDepthFusionEnabled(DepthFusion: camera.DepthFusion): boolean {
-  let isEnable: boolean = false;
-  try {
-    isEnable = DepthFusion.isDepthFusionEnabled();
-    console.info('Promise returned to indicate that isDepthFusionEnabled method execution success.');
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to depth fusion isDepthFusionEnabled, error code: ${err.code}.`);
-  };
-  return isEnable;
-}
-```

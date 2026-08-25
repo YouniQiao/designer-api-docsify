@@ -4,8 +4,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## NOT_EXPAND
@@ -17,8 +15,6 @@ NOT_EXPAND = 0
 表示不展开当前FrameNode的子节点。如果FrameNode包含LazyForEach子节点，获取在主节点树上的子节点时，不展 开当前FrameNode的子节点。子节点序列号按在主节点树上的子节点计算。使用场景：仅需获取主节点树上已展开子节点且不触发展开操作的场景。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ EXPAND = 1
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -54,8 +48,6 @@ LAZY_EXPAND = 2
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -71,8 +63,6 @@ LAZY_NOT_EXPAND = 3
 表示不展开当前FrameNode的子节点，如果FrameNode包含LazyForEach子节点，对于已经展开的子节点，可以直接返 回，获取未展开的子节点时，仅创建对应位置的节点，而不展开所有子节点。子节点序列号按所有子节点计算。使用场景：需要按位置精确获取子节点但不批量展开懒加载子节点的场景。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

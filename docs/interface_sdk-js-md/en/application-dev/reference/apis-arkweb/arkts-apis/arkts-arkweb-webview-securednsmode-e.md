@@ -4,8 +4,6 @@ Enumerates the modes in which the **Web** component uses HTTPDNS.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## OFF
@@ -17,8 +15,6 @@ OFF = 0
 HTTPDNS is not used. It can be used to revoke the previously used HTTPDNS configuration.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ HTTPDNS is used in automatic mode. If the specified HTTPDNS server is unavailabl
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -49,8 +43,6 @@ SECURE_ONLY = 2
 The specified HTTPDNS server is forcibly used for DNS resolution.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,8 +4,6 @@ Describes the criteria for filtering scanning results can be set.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [ScanFilter](arkts-connectivity-ble-scanfilter-i.md)
@@ -15,7 +13,7 @@ Describes the criteria for filtering scanning results can be set.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -29,8 +27,6 @@ The address of a BLE peripheral device
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,8 +46,6 @@ Manufacture data.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [manufactureData](arkts-connectivity-ble-scanfilter-i.md#manufacturedata)
@@ -69,8 +63,6 @@ Manufacture data mask.
 **Type:** ArrayBuffer
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -90,8 +82,6 @@ Manufacture id.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [manufactureId](arkts-connectivity-ble-scanfilter-i.md#manufactureid)
@@ -109,8 +99,6 @@ The name of a BLE peripheral device
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -130,8 +118,6 @@ Service data.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [serviceData](arkts-connectivity-ble-scanfilter-i.md#servicedata)
@@ -149,8 +135,6 @@ Service data mask.
 **Type:** ArrayBuffer
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -170,8 +154,6 @@ Service solicitation UUID.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [serviceSolicitationUuid](arkts-connectivity-ble-scanfilter-i.md#servicesolicitationuuid)
@@ -189,8 +171,6 @@ Service solicitation UUID mask.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -210,8 +190,6 @@ The service UUID of a BLE peripheral device
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [serviceUuid](arkts-connectivity-ble-scanfilter-i.md#serviceuuid)
@@ -229,8 +207,6 @@ Service UUID mask.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

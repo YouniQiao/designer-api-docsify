@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formAgent } from '@kit.FormKit';
+import { formAgent } from 'kits/@kit.FormKit';
 ```
 
 ## updateFormCrossBundle
@@ -15,8 +15,6 @@ function updateFormCrossBundle(formId: string, formBindingData: formBindingData.
 Updates a widget by cross bundle. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.UPDATE_FORM_CROSS_BUNDLE
 

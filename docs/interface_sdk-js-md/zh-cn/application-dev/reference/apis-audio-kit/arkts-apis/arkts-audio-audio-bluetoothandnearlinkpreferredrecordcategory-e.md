@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## PREFERRED_NONE
@@ -17,8 +15,6 @@ PREFERRED_NONE = 0
 无指定设备偏好。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
@@ -32,8 +28,6 @@ PREFERRED_DEFAULT = 1
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## PREFERRED_LOW_LATENCY
@@ -46,8 +40,6 @@ PREFERRED_LOW_LATENCY = 2
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## PREFERRED_HIGH_QUALITY
@@ -59,7 +51,5 @@ PREFERRED_HIGH_QUALITY = 3
 更偏好使用蓝牙或星闪高质量模式进行录音。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core

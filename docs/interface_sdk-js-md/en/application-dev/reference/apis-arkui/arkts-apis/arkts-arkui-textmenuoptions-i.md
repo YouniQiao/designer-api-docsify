@@ -4,8 +4,6 @@ Provides the options for customizing the context menu on selection.
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ Menu display mode.Default value: **TextMenuShowMode.DEFAULT**
 **Type:** [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md)
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Model restriction:** This API can be used only in the stage model.
 

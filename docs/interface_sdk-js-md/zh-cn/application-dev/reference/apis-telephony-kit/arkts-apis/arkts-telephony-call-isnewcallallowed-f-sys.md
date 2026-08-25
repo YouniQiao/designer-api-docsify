@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isNewCallAllowed
@@ -15,8 +15,6 @@ function isNewCallAllowed(callback: AsyncCallback<boolean>): void
 判断是否允许再拨打一通新电话。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -39,30 +37,6 @@ function isNewCallAllowed(callback: AsyncCallback<boolean>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isNewCallAllowed((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isNewCallAllowed fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`isNewCallAllowed success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isNewCallAllowed().then((data: boolean) => {
-    console.info(`isNewCallAllowed success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNewCallAllowed fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## isNewCallAllowed
 
@@ -73,8 +47,6 @@ function isNewCallAllowed(): Promise<boolean>
 判断是否允许再拨打一通新电话。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -94,7 +66,3 @@ function isNewCallAllowed(): Promise<boolean>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [isNewCallAllowed](#isnewcallallowed)

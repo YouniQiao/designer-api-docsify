@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getRadioTechSync
 
 ```TypeScript
-function getRadioTechSync(slotId: int): NetworkRadioTech
+function getRadioTechSync(slotId: number): NetworkRadioTech
 ```
 
 获取当前接入的CS域和PS域无线接入技术。CS域为电路交换域，PS为分组交换域。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
@@ -26,7 +24,7 @@ function getRadioTechSync(slotId: int): NetworkRadioTech
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -44,11 +42,3 @@ function getRadioTechSync(slotId: int): NetworkRadioTech
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-let slotId: number = 0;
-let networkRadioTech: radio.NetworkRadioTech = radio.getRadioTechSync(slotId);
-console.info(`getRadioTechSync success, NetworkRadioTech->${JSON.stringify(networkRadioTech)}`);
-```

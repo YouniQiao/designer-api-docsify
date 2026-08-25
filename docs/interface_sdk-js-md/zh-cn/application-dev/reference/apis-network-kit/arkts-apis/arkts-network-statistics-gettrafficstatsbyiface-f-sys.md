@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getTrafficStatsByIface
@@ -15,8 +15,6 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<Ne
 获取指定网卡历史流量信息，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
@@ -43,62 +41,6 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<Ne
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { statistics } from '@kit.NetworkKit';
-
-let iFaceInfo: statistics.IfaceInfo | null = null;
-if (iFaceInfo) {
-  statistics.getTrafficStatsByIface(iFaceInfo as statistics.IfaceInfo, (error: BusinessError, statsInfo: statistics.NetStatsInfo) => {
-    console.error(JSON.stringify(error));
-    console.info(
-      "getTrafficStatsByIface bytes of received = " +
-      JSON.stringify(statsInfo.rxBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface bytes of sent = " +
-      JSON.stringify(statsInfo.txBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of received = " +
-      JSON.stringify(statsInfo.rxPackets)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of sent = " +
-      JSON.stringify(statsInfo.txPackets)
-    );
-  });
-}
-```
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-let iFaceInfo: statistics.IfaceInfo | null = null;
-if (iFaceInfo) {
-  statistics.getTrafficStatsByIface(iFaceInfo as statistics.IfaceInfo).then((statsInfo: statistics.NetStatsInfo) => {
-    console.info(
-      "getTrafficStatsByIface bytes of received = " +
-      JSON.stringify(statsInfo.rxBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface bytes of sent = " +
-      JSON.stringify(statsInfo.txBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of received = " +
-      JSON.stringify(statsInfo.rxPackets)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of sent = " +
-      JSON.stringify(statsInfo.txPackets)
-    );
-  });
-}
-```
-
 
 ## getTrafficStatsByIface
 
@@ -110,8 +52,6 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>
 | 参数名 | 类型 | 必填 | 说明 | | --------- | ------------------------- | ---- | --------------------------------------------------- | | [ifaceInfo](arkts-network-statistics-uidinfo-i-sys.md) | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | 是 |
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
@@ -142,7 +82,3 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) |
-
-**示例**
-
-参见 [getTrafficStatsByIface](#gettrafficstatsbyiface)

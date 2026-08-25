@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## switchCurrentInputMethodAndSubtype
@@ -19,8 +19,6 @@ function switchCurrentInputMethodAndSubtype(
 切换至指定输入法的指定子类型，适用于跨输入法切换子类型。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本9 - 10：ohos.permission.CONNECT_IME_ABILITY
@@ -44,88 +42,6 @@ function switchCurrentInputMethodAndSubtype(
 | [12800005](../errorcode-inputmethod-framework.md#12800005-配置持久化失败) |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
-inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodAndSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodAndSubtype.');
-  }
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme = inputMethod.getCurrentInputMethod();
-let imSubType = inputMethod.getCurrentInputMethodSubtype();
-
-inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType, (err: BusinessError | null, result: boolean | undefined) => {
-  if (err) {
-    console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodAndSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodAndSubtype.');
-  }
-});.
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
-inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodAndSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodAndSubtype.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme = inputMethod.getCurrentInputMethod();
-let imSubType = inputMethod.getCurrentInputMethodSubtype();
-
-inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodAndSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodAndSubtype.');
-  }
-}).catch((err: BusinessError): void=> {
-  console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
-})
-```
-
 
 ## switchCurrentInputMethodAndSubtype
 
@@ -139,8 +55,6 @@ function switchCurrentInputMethodAndSubtype(
 切换至指定输入法的指定子类型，适用于跨输入法切换子类型。使用promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本9 - 10：ohos.permission.CONNECT_IME_ABILITY
@@ -168,7 +82,3 @@ function switchCurrentInputMethodAndSubtype(
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [12800005](../errorcode-inputmethod-framework.md#12800005-配置持久化失败) |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
-
-**示例**
-
-参见 [switchCurrentInputMethodAndSubtype](#switchcurrentinputmethodandsubtype)

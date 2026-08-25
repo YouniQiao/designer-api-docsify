@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## onActiveSessionChanged
@@ -15,8 +15,6 @@ function onActiveSessionChanged(callback: Callback<Array<AVSessionDescriptor>>):
 允许在系统控制入口显示的会话变更的监听事件。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 

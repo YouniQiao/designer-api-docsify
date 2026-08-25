@@ -4,14 +4,12 @@ Describes the parameters of a response send by the server to a specified read or
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -26,8 +24,6 @@ Indicates the address of the client to which to send the response
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -37,16 +33,14 @@ Indicates the address of the client to which to send the response
 ## offset
 
 ```TypeScript
-offset: int
+offset: number
 ```
 
 Indicates the byte offset of the start position for reading or writing operation
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,16 +51,14 @@ Indicates the byte offset of the start position for reading or writing operation
 ## status
 
 ```TypeScript
-status: int
+status: number
 ```
 
 Indicates the status of the read or write request, set this parameter to '0' in normal cases
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,16 +69,14 @@ Indicates the status of the read or write request, set this parameter to '0' in 
 ## transId
 
 ```TypeScript
-transId: int
+transId: number
 ```
 
 The Id of the write request
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,8 +95,6 @@ Indicates the value to be sent
 **Type:** ArrayBuffer
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

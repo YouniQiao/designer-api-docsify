@@ -4,8 +4,6 @@ Defines the authentication token data. It indicates the parsed **AuthToken** dat
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the authentication token data. It indicates the parsed **AuthToken** dat
 ## Modules to Import
 
 ```TypeScript
-import { userAccessCtrl } from '@kit.UserAuthenticationKit';
+import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## authTrustLevel
@@ -27,8 +25,6 @@ Authentication trust level. It indicates the security strength level of the curr
 **Type:** userAuth.AuthTrustLevel
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -46,8 +42,6 @@ Credential type for the identity authentication. It indicates the authentication
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Random challenge value for the authentication. It is used to prevent replay atta
 **Type:** Uint8Array
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -82,8 +74,6 @@ Credential ID. It indicates the ID of the credential that is successfully matche
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Credential enrollment ID. It indicates the original value of **credentialDigest*
 **Type:** bigint
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -118,8 +106,6 @@ Secure user ID. It indicates the security ID of a user, which is used internally
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -135,8 +121,6 @@ Time elapsed since the **AuthToken** was issued, in milliseconds.
 **Type:** bigint
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -154,8 +138,6 @@ Authentication token type. It identifies the source of the token, such as local 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 **System API:** This is a system API.
@@ -163,16 +145,14 @@ Authentication token type. It identifies the source of the token, such as local 
 ## userId
 
 ```TypeScript
-userId: int
+userId: number
 ```
 
 User ID. It indicates the ID of the user who has completed authentication. The value is a non-negative integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

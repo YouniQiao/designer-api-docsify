@@ -4,8 +4,6 @@ Defines the callback information triggered when the web page receives an SSL err
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Certificate chain data.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## error
@@ -40,8 +36,6 @@ Error code.
 **Type:** [SslError](arkts-arkweb-sslerror-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -58,8 +52,6 @@ User operation.
 **Type:** [SslErrorHandler](arkts-arkweb-sslerrorhandler-c.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

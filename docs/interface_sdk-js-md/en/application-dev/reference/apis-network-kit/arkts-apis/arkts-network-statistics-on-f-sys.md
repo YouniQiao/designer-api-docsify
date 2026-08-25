@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## on('netStatsChange')
@@ -15,8 +15,6 @@ function on(type: 'netStatsChange', callback: Callback<NetStatsChangeInfo>): voi
 Subscribes to traffic change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
@@ -40,17 +38,3 @@ Subscribes to traffic change events. This API uses an asynchronous callback to r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-class IFace {
-  iface: string = ""
-  uid?: number = 0
-}
-statistics.on('netStatsChange', (data: IFace) => {
-  console.info('on netStatsChange' + JSON.stringify(data));
-});
-```

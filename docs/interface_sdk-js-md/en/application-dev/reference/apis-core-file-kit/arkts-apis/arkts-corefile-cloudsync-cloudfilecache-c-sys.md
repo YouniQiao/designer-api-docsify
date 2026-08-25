@@ -4,14 +4,12 @@ Provides APIs for the file manager application to download files from the Drive 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## cleanCache
@@ -23,8 +21,6 @@ cleanCache(uri: string): void
 Deletes a cache file. This API returns the result synchronously.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -49,24 +45,6 @@ Deletes a cache file. This API returns the result synchronously.
 | 13900002 |
 | 14000002 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let fileCache = new cloudSync.CloudFileCache();
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-
-try {
-  fileCache.cleanCache(uri);
-} catch (err) {
-  let error:BusinessError = err as BusinessError;
-  console.error("clean cache failed with error message: " + err.message + ", error code: " + err.code);
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -76,8 +54,6 @@ constructor(bundleName: string)
 A constructor used to create a CloudFileCache object.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,24 +73,6 @@ A constructor used to create a CloudFileCache object.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-let fileSync = new cloudSync.FileSync()
-```
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync()
-```
-
-```TypeScript
-let download = new cloudSync.Download()
-```
-
-```TypeScript
-let fileSync = new cloudSync.FileSync("com.ohos.demo")
-```
-
 ## getDownloadList
 
 ```TypeScript
@@ -124,8 +82,6 @@ getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>
 Query the download state of the cloud file list.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 

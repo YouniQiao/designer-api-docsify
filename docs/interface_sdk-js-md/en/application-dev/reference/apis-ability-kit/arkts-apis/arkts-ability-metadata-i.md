@@ -4,8 +4,6 @@ The module defines a metadata object. An application can obtain the metadata thr
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## name
@@ -19,8 +17,6 @@ Indicates the metadata name
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,8 +34,6 @@ Indicates the metadata resource
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -56,8 +50,6 @@ Indicates the metadata value
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -65,16 +57,14 @@ Indicates the metadata value
 ## valueId
 
 ```TypeScript
-readonly valueId?: long
+readonly valueId?: number
 ```
 
 Indicates the value id of the metadata
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

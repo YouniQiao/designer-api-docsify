@@ -4,8 +4,6 @@ Enumerates the HDR formats.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 Unsupported HDR type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Videos in Hybrid Log-Gamma (HLG) format.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -49,8 +43,6 @@ VIDEO_HDR10 = 2
 Videos in HDR10 format.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ Videos in HDR_VIVID format.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -81,8 +71,6 @@ IMAGE_HDR_VIVID_DUAL = 4
 Images in HDR_VIVID format, stored in dual JPEG format.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +86,6 @@ Images in HDR_VIVID format, stored in single HEIF format.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -113,8 +99,6 @@ IMAGE_HDR_ISO_DUAL = 6
 Images in HDR_ISO format, stored in dual JPEG format.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,8 +114,6 @@ Images in HDR_ISO format, stored in single HEIF format.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -145,8 +127,6 @@ VIDEO_AIHDR = 8
 Videos in AIHDR format.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

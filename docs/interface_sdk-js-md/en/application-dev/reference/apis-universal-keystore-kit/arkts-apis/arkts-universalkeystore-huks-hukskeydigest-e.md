@@ -4,8 +4,6 @@ Enumerates the digest algorithms.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
 - API version 8 to 11: SystemCapability.Security.Huks.Extension
@@ -19,8 +17,6 @@ HUKS_DIGEST_NONE = 0
 No digest algorithm
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,8 +34,6 @@ MD5
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -55,8 +49,6 @@ HUKS_DIGEST_SM3 = 2
 SM3
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,8 +66,6 @@ SHA-1
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -91,8 +81,6 @@ HUKS_DIGEST_SHA224 = 11
 SHA-224
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -110,8 +98,6 @@ SHA-256
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -128,8 +114,6 @@ SHA-384
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -145,8 +129,6 @@ HUKS_DIGEST_SHA512 = 14
 SHA-512
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

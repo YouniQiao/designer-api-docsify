@@ -4,8 +4,6 @@ AbilityStateData是Ability状态信息的数据结构。使用 [on](arkts-abilit
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## abilityName
@@ -20,39 +18,33 @@ Ability名称。
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## abilityType
 
 ```TypeScript
-abilityType: int
+abilityType: number
 ```
 
 [Ability类型](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability类型)： [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)或 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)等。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## appCloneIndex
 
 ```TypeScript
-appCloneIndex?: int
+appCloneIndex?: number
 ```
 
 应用包的[分身](../../../quick-start/app-clone.md)索引标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -68,8 +60,6 @@ bundleName: string
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## callerBundleName
@@ -83,8 +73,6 @@ Ability创建时的拉起方Bundle名称。
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -100,8 +88,6 @@ isAtomicService: boolean
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## moduleName
@@ -116,55 +102,50 @@ Ability所属的模块名称。
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## pid
 
 ```TypeScript
-pid: int
+pid: number
 ```
 
 进程ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## state
 
 ```TypeScript
-state: int
+state: number
 ```
 
 Ability状态。  
-- [Stage模型](../../../application-models/ability-terminology.md#stage模型)： [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)的状态参见 [UIAbility状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiability状态)； [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的状态参见 [ExtensionAbility状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#extensionability状态) ；[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的状态参见 [UIExtensionAbility状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiextensionability状态) 。 - [FA模型](../../../application-models/ability-terminology.md#fa模型)：参见 [Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)。
+- [Stage模型](../../../application-models/ability-terminology.md#stage模型)：  
+[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)的状态参见 [UIAbility状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiability状态)； [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的状态参见 [ExtensionAbility状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#extensionability状态) ；[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的状态参见 [UIExtensionAbility状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiextensionability状态) 。  
+- [FA模型](../../../application-models/ability-terminology.md#fa模型)：参见  
+[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## uid
 
 ```TypeScript
-uid: int
+uid: number
 ```
 
 所属应用程序的UID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

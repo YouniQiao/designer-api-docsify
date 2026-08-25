@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## getUidForName
@@ -15,8 +15,6 @@ function getUidForName(v: string): number
 根据指定的用户名，从系统的用户数据库中获取该用户的 uid。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -35,16 +33,3 @@ function getUidForName(v: string): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-let pres = process.getUidForName("tool");
-```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// 根据用户名获取uid
-let pres = processManager.getUidForName("tool");
-```

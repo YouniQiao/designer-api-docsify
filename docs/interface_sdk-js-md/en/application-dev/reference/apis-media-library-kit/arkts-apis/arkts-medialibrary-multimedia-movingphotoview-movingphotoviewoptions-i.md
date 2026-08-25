@@ -4,14 +4,12 @@ Defines the moving photo view options.@interface MovingPhotoViewOptions
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from '@kit.MediaLibraryKit';
+import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## controller
@@ -26,8 +24,6 @@ controller of MovingPhotoView.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -40,11 +36,9 @@ imageAIOptions?: ImageAIOptions
 
 image ai options of MovingPhotoView.
 
-**Type:** ImageAIOptions
+**Type:** [ImageAIOptions](../../apis-arkui/arkts-apis/arkts-arkui-imageaioptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -61,8 +55,6 @@ moving photo data.
 **Type:** photoAccessHelper.MovingPhoto
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

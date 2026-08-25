@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setPermissionUsedRecordToggleStatus
@@ -15,8 +15,6 @@ function setPermissionUsedRecordToggleStatus(status: boolean): Promise<void>
 设置是否记录当前用户的权限使用情况。系统应用调用此接口，可以设置当前用户的权限使用记录开关状态。使用Promise异步回调。status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)接口可以正常添加使用记录；status为false时， [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)接口不产生权限使用记录，并且删除当前用户的历史记录。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PERMISSION_RECORD_TOGGLE
 
@@ -47,32 +45,6 @@ function setPermissionUsedRecordToggleStatus(status: boolean): Promise<void>
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 | [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
 
-**示例**
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 设置权限使用记录开关状态
-privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
-  console.info('setPermissionUsedRecordToggleStatus success');
-}).catch((err: BusinessError): void => {
-  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
-  console.info('setPermissionUsedRecordToggleStatus success');
-}).catch((err: BusinessError): void => {
-  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## setPermissionUsedRecordToggleStatus
 
@@ -83,8 +55,6 @@ function setPermissionUsedRecordToggleStatus(status: boolean, subProfileId: numb
 设置是否记录指定子身份资料的权限使用情况。系统应用调用此接口，可以设置指定子身份资料的权限使用记录开关状态。使用Promise异步回调。status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)接口可以正常添加使用记录；status为false时，addPermissionUsedRecord][addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)接口不产生权限使用记录，并且删除指定子身份资料的历史记录。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **需要权限：** ohos.permission.PERMISSION_RECORD_TOGGLE
 
@@ -118,7 +88,3 @@ function setPermissionUsedRecordToggleStatus(status: boolean, subProfileId: numb
 | [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 | [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-
-**示例**
-
-参见 [setPermissionUsedRecordToggleStatus](#setpermissionusedrecordtogglestatus)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## cleanAllBundleCache
@@ -15,8 +15,6 @@ function cleanAllBundleCache(): Promise<void>
 Clears the global cache. This API uses a promise to return the result.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
@@ -36,22 +34,3 @@ Clears the global cache. This API uses a promise to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  bundleManager.cleanAllBundleCache().then((data) => {
-    hilog.info(0x0000, 'testTag', 'cleanAllBundleCache successful.');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'cleanAllBundleCache failed: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'cleanAllBundleCache failed: %{public}s', message);
-}
-```

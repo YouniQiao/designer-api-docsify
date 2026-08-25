@@ -4,8 +4,6 @@ ListItem吸顶效果枚举。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [list/StickyStyle](arkts-arkui-stickystyle-e.md)
@@ -22,8 +20,6 @@ None
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -38,8 +34,6 @@ Normal mode
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -53,8 +47,6 @@ Opacity
 Set opacity.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

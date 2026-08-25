@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ErrorCode } from '@kit.AbilityKit';
+import { ErrorCode } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

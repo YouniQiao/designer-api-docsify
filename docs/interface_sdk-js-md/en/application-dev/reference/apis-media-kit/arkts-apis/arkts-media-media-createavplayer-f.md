@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createAVPlayer
@@ -26,8 +26,6 @@ Creates an AVPlayer instance. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -43,69 +41,6 @@ Creates an AVPlayer instance. This API uses an asynchronous callback to return t
 | Error Code ID |
 | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avPlayer: media.AVPlayer;
-media.createAVPlayer((error: BusinessError, video: media.AVPlayer) => {
-  if (video) {
-    avPlayer = video;
-    console.info('Succeeded in creating AVPlayer');
-  } else {
-    console.error(`Failed to create AVPlayer, error message:${error.message}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avPlayer: media.AVPlayer;
-media.createAVPlayer().then((video: media.AVPlayer) => {
-  if (video) {
-    avPlayer = video;
-    console.info('Succeeded in creating AVPlayer');
-  } else {
-    console.error('Failed to create AVPlayer');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create AVPlayer, error message:${error.message}`);
-});
-```
-
-
-## createAVPlayer
-
-```TypeScript
-function createAVPlayer(callback: AsyncCallback<AVPlayer | undefined>): void
-```
-
-Creates an **AVPlayer** instance. This API uses an asynchronous callback to return the result. <br>**NOTE:**<br> You are advised to create a maximum of 16 **AVPlayer** instances for an application in both audio and video playback scenarios.The actual number of instances that can be created may be different. It depends on the specifications of the device chip in use.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined & gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-
-**Examples**
-
-See [createAVPlayer](#createavplayer)
 
 
 ## createAVPlayer
@@ -128,8 +63,6 @@ Creates an AVPlayer instance. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -145,38 +78,3 @@ Creates an AVPlayer instance. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-
-**Examples**
-
-See [createAVPlayer](#createavplayer)
-
-
-## createAVPlayer
-
-```TypeScript
-function createAVPlayer(): Promise<AVPlayer | undefined>
-```
-
-Creates an **AVPlayer** instance. This API uses a promise to return the result. <br>**NOTE:**<br> You are advised to create a maximum of 16 **AVPlayer** instances for an application in both audio and video playback scenarios.The actual number of instances that can be created may be different. It depends on the specifications of the device chip in use.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.AVPlayer
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined & gt; |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-
-**Examples**
-
-See [createAVPlayer](#createavplayer)

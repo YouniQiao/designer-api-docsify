@@ -8,8 +8,6 @@ Defines a callback that takes the printer event and printer information as param
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 **Parameters:**

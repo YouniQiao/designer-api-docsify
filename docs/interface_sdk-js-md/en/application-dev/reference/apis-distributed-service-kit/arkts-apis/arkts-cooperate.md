@@ -4,8 +4,6 @@ The **cooperate** module implements screen hopping for two or more networked dev
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The **cooperate** module implements screen hopping for two or more networked dev
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## Summary
@@ -36,16 +34,12 @@ import { cooperate } from '@kit.DistributedServiceKit';
 | [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md) |
 | [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) |
 | [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md) |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#offcooperate) |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#offcooperatemessage) |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#offcooperatemouse) |
-| [offCooperateMessage](arkts-distributedservice-cooperate-offcooperatemessage-f-sys.md) |
-| [offCooperateMouseEvent](arkts-distributedservice-cooperate-offcooperatemouseevent-f-sys.md) |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#oncooperate) |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#oncooperatemessage) |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#oncooperatemouse) |
-| [onCooperateMessage](arkts-distributedservice-cooperate-oncooperatemessage-f-sys.md) |
-| [onCooperateMouseEvent](arkts-distributedservice-cooperate-oncooperatemouseevent-f-sys.md) |
+| off |
+| [off](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) |
+| off |
+| on |
+| [on](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md) |
+| on |
 | [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) |
 | [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md) |
 | [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md) |

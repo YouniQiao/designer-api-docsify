@@ -4,14 +4,12 @@ The **vibrator** module allows precise control over the vibration of device vibr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## Summary
@@ -27,9 +25,7 @@ import { vibrator } from '@kit.SensorServiceKit';
 | [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md) |
 | [isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md) |
 | [off](arkts-sensorservice-vibrator-off-f.md#offvibratorstatechange) |
-| [offVibratorStateChange](arkts-sensorservice-vibrator-offvibratorstatechange-f.md) |
 | [on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange) |
-| [onVibratorStateChange](arkts-sensorservice-vibrator-onvibratorstatechange-f.md) |
 | [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) |
 | [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) |
 | [stop](arkts-sensorservice-vibrator-stop-f.md) |

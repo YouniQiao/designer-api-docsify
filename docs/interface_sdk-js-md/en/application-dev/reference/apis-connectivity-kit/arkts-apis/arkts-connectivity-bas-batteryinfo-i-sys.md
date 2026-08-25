@@ -4,8 +4,6 @@ Describe the contents of the battery information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describe the contents of the battery information.
 ## Modules to Import
 
 ```TypeScript
-import { bas } from '@kit.ConnectivityKit';
+import { bas } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## batteryLevel
@@ -27,8 +25,6 @@ battery value of the device. {@code -1} means no power information.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Identify of the discovery device.
 **Type:** BluetoothAddress
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

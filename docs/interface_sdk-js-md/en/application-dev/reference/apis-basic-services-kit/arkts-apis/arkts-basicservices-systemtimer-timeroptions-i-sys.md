@@ -4,8 +4,6 @@ Defines the initialization options for the system timer.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the initialization options for the system timer.
 ## Modules to Import
 
 ```TypeScript
-import { systemTimer } from '@kit.BasicServicesKit';
+import { systemTimer } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## callback
@@ -25,8 +23,6 @@ callback?: () => void
 Callback to be executed by the user.The default value is empty.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -44,8 +40,6 @@ Whether the timer is restored after the device is restarted.The value **true** m
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -53,16 +47,14 @@ Whether the timer is restored after the device is restarted.The value **true** m
 ## interval
 
 ```TypeScript
-interval?: long
+interval?: number
 ```
 
 Interval between two consecutive timers, in milliseconds.For a repeating timer, the minimum value of **interval** is 1s and the maximum value is 365 days. It is recommended that the value be greater than or equal to 5000 ms.For a one-shot timer, the value is **0**.Default value: **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -80,8 +72,6 @@ Timer name, with a maximum length of 64 bytes.A UID cannot contain two timers wi
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -98,8 +88,6 @@ Whether the timer is a repeating timer. The value **true** means that the timer 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Time
 
 **System API:** This is a system API.
@@ -107,16 +95,14 @@ Whether the timer is a repeating timer. The value **true** means that the timer 
 ## type
 
 ```TypeScript
-type: int
+type: number
 ```
 
 Timer types. Use pipe (|) symbol
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 
@@ -133,8 +119,6 @@ wantAgent?: WantAgent
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Time
 

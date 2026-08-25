@@ -4,8 +4,6 @@ Defines the mouse pointer position for screen hopping.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the mouse pointer position for screen hopping.
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## displayHeight
 
 ```TypeScript
-displayHeight: int
+displayHeight: number
 ```
 
 Screen height, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -37,16 +33,14 @@ Screen height, in pixels.
 ## displayWidth
 
 ```TypeScript
-displayWidth: int
+displayWidth: number
 ```
 
 Screen width, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -55,16 +49,14 @@ Screen width, in pixels.
 ## displayX
 
 ```TypeScript
-displayX: int
+displayX: number
 ```
 
 Position of the mouse pointer on the X coordinate of the screen.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 
@@ -73,16 +65,14 @@ Position of the mouse pointer on the X coordinate of the screen.
 ## displayY
 
 ```TypeScript
-displayY: int
+displayY: number
 ```
 
 Position of the mouse pointer on the Y coordinate of the screen.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

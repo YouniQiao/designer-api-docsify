@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## openResource
@@ -15,8 +15,6 @@ function openResource(resourceId: string, params?: HuksExternalCryptoParam[]): P
 Open resource by specific resource ID. NOTE: The opened resource must be closed using closeResource.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

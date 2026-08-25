@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## restartSelfAtomicService
@@ -22,8 +22,6 @@ function restartSelfAtomicService(context: Context): void
 > 6000064。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,22 +44,3 @@ function restartSelfAtomicService(context: Context): void
 | [16000064](../errorcode-ability.md#16000064-重启应用频繁) |
 | [16000086](../errorcode-ability.md#16000086-传入的context不是uiabilitycontext) |
 | [16000090](../errorcode-ability.md#16000090-调用方不是原子化服务) |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, EmbeddableUIAbility, Want, abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends EmbeddableUIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      // 重启当前原子化服务
-      abilityManager.restartSelfAtomicService(this.context);
-    } catch (e) {
-      let error=e as BusinessError;
-      console.error(`restartSelfAtomicService error: ${error.code} ${error.message}`);
-    }
-  }
-}
-```

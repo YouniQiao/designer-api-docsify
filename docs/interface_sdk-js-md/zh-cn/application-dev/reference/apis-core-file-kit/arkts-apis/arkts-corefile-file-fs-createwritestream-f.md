@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## createWriteStream
@@ -17,8 +17,6 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 以同步方法打开文件可写流。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -57,44 +55,3 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 创建文件可读流
-const rs = fileIo.createReadStream(`${pathDir}/read.txt`);
-// 创建文件可写流
-const ws = fileIo.createWriteStream(`${pathDir}/write.txt`);
-// 暂停模式拷贝文件
-rs.on('readable', () => {
-  const data = rs.read();
-  if (!data) {
-    return;
-  }
-  ws.write(data);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 创建文件可读流
-const rs = fileIo.createReadStream(`${pathDir}/read.txt`);
-// 创建文件可写流
-const ws = fileIo.createWriteStream(`${pathDir}/write.txt`);
-// 暂停模式拷贝文件
-rs.on('readable', () => {
-  const data = rs.read();
-  if (data == undefined) {
-    return;
-  }
-  if (data instanceof String) {
-    ws.write(data);
-  }
-  if (data instanceof buffer.Buffer) {
-    ws.write(data.toString())
-  }
-});
-```

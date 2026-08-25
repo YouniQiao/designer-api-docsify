@@ -6,8 +6,6 @@ Manager pan profile.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [PanProfile](arkts-connectivity-pan-panprofile-i.md)
@@ -17,7 +15,7 @@ Manager pan profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## off('connectionStateChange')
@@ -29,8 +27,6 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 Unsubscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -64,8 +60,6 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 Subscribe the event reported when the profile connection state changes. On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

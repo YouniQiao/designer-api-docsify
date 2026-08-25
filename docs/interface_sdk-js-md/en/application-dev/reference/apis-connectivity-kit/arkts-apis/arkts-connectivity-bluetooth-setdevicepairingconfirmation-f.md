@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setDevicePairingConfirmation
@@ -15,8 +15,6 @@ function setDevicePairingConfirmation(device: string, accept: boolean): boolean
 Sets the confirmation of pairing with a certain device.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -38,14 +36,3 @@ Sets the confirmation of pairing with a certain device.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// Subscribe to the pinRequired event and configure the pairing confirmation after receiving a pairing request from the remote device.
-function onReceivePinRequiredEvent(data : bluetooth.PinRequiredParam) { // data is the input parameter for the pairing request.
-    console.info('pin required  = '+ JSON.stringify(data));
-    bluetooth.setDevicePairingConfirmation(data.deviceId, true);
-}
-bluetooth.on("pinRequired", onReceivePinRequiredEvent);
-```

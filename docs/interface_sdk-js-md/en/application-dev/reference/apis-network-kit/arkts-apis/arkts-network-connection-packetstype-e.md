@@ -4,8 +4,6 @@ Defines the type of network probe data packets.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## NETCONN_PACKETS_ICMP
@@ -17,8 +15,6 @@ NETCONN_PACKETS_ICMP = 0
 ICMP packet type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,8 +29,6 @@ NETCONN_PACKETS_UDP = 1
 UDP packet type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

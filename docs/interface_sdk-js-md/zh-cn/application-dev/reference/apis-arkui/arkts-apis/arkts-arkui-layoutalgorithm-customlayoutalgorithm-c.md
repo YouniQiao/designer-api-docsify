@@ -10,8 +10,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## onLayout
@@ -29,8 +27,6 @@ onLayout(self: FrameNode, position: Position): void
 > 示例1（自定义布局算法实现瀑布流布局）。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,8 +59,6 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 > 示例1（自定义布局算法实现瀑布流布局）。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

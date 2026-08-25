@@ -7,28 +7,18 @@ Provides APIs to access NFC-A (ISO 14443-3A) properties and perform I/O operatio
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getAtqa
 
-ArkTS-Dyn:
 ```TypeScript
 getAtqa(): number[]
-```
-
-ArkTS-Sta:
-```TypeScript
-getAtqa(): int[]
 ```
 
 Obtains the ATQA value of this NFC-A tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -37,36 +27,18 @@ Obtains the ATQA value of this NFC-A tag.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number[]<br>ArkTS-Sta：int[] |
-
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// Obtain the correct nfcA tag by using the tag.TagInfo API in @ohos.nfc.tag.
-let atqa : number[] = nfcA.getAtqa();
-console.info("nfcA atqa: " + atqa);
-```
+| number[] |
 
 ## getSak
 
-ArkTS-Dyn:
 ```TypeScript
 getSak(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getSak(): int
 ```
 
 Obtains the SAK value of this NFC-A tag.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -75,14 +47,4 @@ Obtains the SAK value of this NFC-A tag.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// Obtain the correct nfcA tag by using the tag.TagInfo API in @ohos.nfc.tag.
-let sak : number = nfcA.getSak();
-console.info("nfcA sak: " + sak);
-```
+| number |

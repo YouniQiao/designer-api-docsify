@@ -7,14 +7,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isFocusModeSupported
@@ -26,8 +24,6 @@ isFocusModeSupported(afMode: FocusMode): boolean
 检测对焦模式是否支持。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -51,40 +47,6 @@ isFocusModeSupported(afMode: FocusMode): boolean
 | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isFocusModeSupported(captureSession: camera.CaptureSession): boolean {
-  let status: boolean = false;
-  try {
-    status = captureSession.isFocusModeSupported(camera.FocusMode.FOCUS_MODE_AUTO);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isFocusModeSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isFocusModeSupported(photoSession: camera.PhotoSession): boolean {
-  let status: boolean = false;
-  try {
-    status = photoSession.isFocusModeSupported(camera.FocusMode.FOCUS_MODE_AUTO);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isFocusModeSupported call failed. error code: ${err.code}`);
-  }
-  return status;
-}
-```
-
 ## isLockFocusTrackingSupported
 
 ```TypeScript
@@ -94,8 +56,6 @@ isLockFocusTrackingSupported(): boolean
 检查设备是否支持锁定焦点跟踪的功能。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,21 +74,3 @@ isLockFocusTrackingSupported(): boolean
 | 错误码ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isLockFocusTrackSupported(photoSession: camera.PhotoSession): boolean {
-  let isSupported: boolean = false;
-  try {
-    isSupported = photoSession.isLockFocusTrackingSupported();
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The isLockFocusTrackingSupported call failed. error code: ${err.code}`);
-  }
-  return isSupported;
-}
-```

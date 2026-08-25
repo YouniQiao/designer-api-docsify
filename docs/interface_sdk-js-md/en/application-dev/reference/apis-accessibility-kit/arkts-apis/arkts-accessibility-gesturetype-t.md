@@ -17,8 +17,6 @@ Enumerates the gesture event types. A gesture event is triggered by the accessib
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

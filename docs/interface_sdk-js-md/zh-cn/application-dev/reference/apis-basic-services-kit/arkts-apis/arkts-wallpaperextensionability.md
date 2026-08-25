@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
+import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总

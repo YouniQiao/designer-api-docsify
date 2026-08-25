@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setCBConfigList
@@ -15,8 +15,6 @@ function setCBConfigList(configs: CBConfigListConfigs): Promise<void>
 Turn on Cell BroadCast by list.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 

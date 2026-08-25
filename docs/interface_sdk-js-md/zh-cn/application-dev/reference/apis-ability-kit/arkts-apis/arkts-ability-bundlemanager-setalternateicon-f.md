@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setAlternateIcon
@@ -15,8 +15,6 @@ function setAlternateIcon(alternateIconName: string): Promise<void>
 根据给定的备用图标名称设置调用方自身的备用图标。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,25 +39,3 @@ function setAlternateIcon(alternateIconName: string): Promise<void>
 | [17700308](../errorcode-bundle.md#17700308-备用图标名称没有在配置文件中配置) |
 | [17700309](../errorcode-bundle.md#17700309-当前没有设置备用图标) |
 | [17700310](../errorcode-bundle.md#17700310-设置备用图标失败) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// alternateIconName需要替换为要设置的备用图标名称
-let alternateIconName: string = 'com.ohos.demo';
-
-try {
-  bundleManager.setAlternateIcon(alternateIconName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'setAlternateIcon successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'setAlternateIcon failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setAlternateIcon failed. Cause: %{public}s', message);
-}
-```

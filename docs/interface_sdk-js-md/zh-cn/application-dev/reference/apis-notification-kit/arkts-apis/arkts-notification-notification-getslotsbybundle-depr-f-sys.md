@@ -15,8 +15,6 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md)
@@ -31,41 +29,8 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-let getSlotsByBundleCallback = (err: Base.BusinessError, data: NotificationManager.NotificationSlot[]) => {
-  if (err) {
-    console.error("getSlotsByBundle failed " + JSON.stringify(err));
-  } else {
-    console.info("getSlotsByBundle success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.getSlotsByBundle(bundle, getSlotsByBundleCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.getSlotsByBundle(bundle).then((data: NotificationManager.NotificationSlot[]) => {
-  console.info("getSlotsByBundle success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`getSlotsByBundle failed, code is ${err}`);
-});
-```
 
 
 ## getSlotsByBundle
@@ -78,8 +43,6 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md)
@@ -94,14 +57,10 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; |
-
-**示例**
-
-参见 [getSlotsByBundle](#getslotsbybundle)

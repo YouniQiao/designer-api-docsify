@@ -4,8 +4,6 @@ Enumerates control request types.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USBControlRequestType](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md)
@@ -21,8 +19,6 @@ USB_REQUEST_TYPE_STANDARD = 0
 Standard.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Class.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [USB_REQUEST_TYPE_CLASS](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md#usb_request_type_class)
@@ -57,8 +51,6 @@ USB_REQUEST_TYPE_VENDOR = 2
 Vendor.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

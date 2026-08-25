@@ -4,14 +4,12 @@ The **systemload** module allows the system to determine the system load level b
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.SystemLoad
 
 ## Modules to Import
 
 ```TypeScript
-import { systemLoad } from '@kit.BasicServicesKit';
+import { systemLoad } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -22,9 +20,7 @@ import { systemLoad } from '@kit.BasicServicesKit';
 | --- |
 | [getLevel(System Load Level Management)](arkts-basicservices-systemload-getlevel-f.md) |
 | [off(System Load Level Management)](arkts-basicservices-systemload-off-f.md#offsystemloadchange) |
-| [offSystemLoadChange(System Load Level Management)](arkts-basicservices-systemload-offsystemloadchange-f.md) |
 | [on(System Load Level Management)](arkts-basicservices-systemload-on-f.md#onsystemloadchange) |
-| [onSystemLoadChange(System Load Level Management)](arkts-basicservices-systemload-onsystemloadchange-f.md) |
 
 ### Enums
 

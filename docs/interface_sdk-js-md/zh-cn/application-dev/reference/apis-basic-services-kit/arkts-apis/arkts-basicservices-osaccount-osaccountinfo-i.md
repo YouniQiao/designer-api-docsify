@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## constraints
@@ -20,29 +18,25 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraints: Array<string>
 ```
 
-系统账号[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)，默认为空。
+系统账号[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)，默认为空。
 
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## createTime
 
 ```TypeScript
-createTime: long
+createTime: number
 ```
 
 系统账号创建时间，以Unix时间戳格式表示，单位为s。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -58,8 +52,6 @@ distributedInfo: distributedAccount.DistributedInfo
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## domainInfo
@@ -73,8 +65,6 @@ domainInfo: DomainAccountInfo
 **类型：** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -90,8 +80,6 @@ isActivated: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## isActived
@@ -106,8 +94,6 @@ isActived: boolean
 **类型：** boolean
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 11
 
@@ -127,8 +113,6 @@ isCreateCompleted: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## isUnlocked
@@ -142,8 +126,6 @@ isUnlocked: boolean
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -160,8 +142,6 @@ isVerified: boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 11
 
 **替代接口：** [isUnlocked](#isunlocked)
@@ -171,32 +151,28 @@ isVerified: boolean
 ## lastLoginTime
 
 ```TypeScript
-lastLoginTime: long
+lastLoginTime: number
 ```
 
 系统账号最后一次登录时间，以Unix时间戳格式表示，单位为s。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## localId
 
 ```TypeScript
-localId: int
+localId: number
 ```
 
 系统账号ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -212,8 +188,6 @@ localName: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## photo
@@ -228,23 +202,19 @@ photo: string
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## serialNumber
 
 ```TypeScript
-serialNumber: long
+serialNumber: number
 ```
 
 系统账号SN码。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount
 
@@ -259,7 +229,5 @@ type: OsAccountType
 **类型：** [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Account.OsAccount

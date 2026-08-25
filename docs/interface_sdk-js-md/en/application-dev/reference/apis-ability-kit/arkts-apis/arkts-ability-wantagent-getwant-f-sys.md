@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
 ```
 
 ## getWant
@@ -15,8 +15,6 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 Obtains the Want in a WantAgent object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -38,138 +36,6 @@ Obtains the Want in a WantAgent object. This API uses an asynchronous callback t
 | [16000015](../errorcode-ability.md#16000015-service-timeout) |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
 
-**Examples**
-
-```TypeScript
-import { wantAgent, WantAgent as _WantAgent, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// WantAgent object.
-let wantAgentData: _WantAgent;
-// WantAgentInfo object.
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters:
-      {
-        mykey0: 2222,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'ssssssssssssssssssssssssss',
-        mykey4: [false, true, false],
-        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        mykey6: true,
-      }
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITIES,
-  requestCode: 0,
-  wantAgentFlags:[wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-// getWantAgent callback
-function getWantAgentCallback(err: BusinessError, data: _WantAgent) {
-  if (err) {
-    console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
-  } else {
-    wantAgentData = data;
-  }
-  // getWant callback
-  let getWantCallback = (err: BusinessError, data: Want) => {
-    if(err.code) {
-      console.error(`getWant failed, code: ${err.code}, message: ${err.message}.`);
-    } else {
-      console.info(`getWant success, data: ${JSON.stringify(data)}.`);
-    }
-  }
-  try {
-    wantAgent.getWant(wantAgentData, getWantCallback);
-  } catch(err) {
-    let code = (err as BusinessError).code;
-    let msg = (err as BusinessError).message;
-    console.error(`getWant failed, code: ${code}, message: ${msg}.`);
-  }
-}
-
-try {
-  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
-} catch(err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`getWantAgent failed, code: ${code}, message: ${msg}.`);
-}
-```
-
-```TypeScript
-import { wantAgent, WantAgent as _WantAgent, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// WantAgent object.
-let wantAgentData: _WantAgent;
-// WantAgentInfo object.
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters:
-      {
-        mykey0: 2222,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'ssssssssssssssssssssssssss',
-        mykey4: [false, true, false],
-        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        mykey6: true,
-      }
-    } as Want
-  ],
-  actionType: wantAgent.OperationType.START_ABILITIES,
-  requestCode: 0,
-  wantAgentFlags:[wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-// getWantAgent callback
-function getWantAgentCallback(err: BusinessError, data: _WantAgent) {
-  if (err) {
-    console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}`);
-  } else {
-    wantAgentData = data;
-  }
-  try {
-    wantAgent.getWant(wantAgentData).then((data)=>{
-      console.info(`getWant success, data: ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError)=>{
-      console.error(`getWant failed, code: ${err.code}, message: ${err.message}.`);
-    });
-  } catch(err){
-    let code = (err as BusinessError).code;
-    let msg = (err as BusinessError).message;
-    console.error(`getWant failed, code: ${code}, message: ${msg}.`);
-  }
-}
-
-try {
-  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
-} catch(err) {
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`getWantAgent failed, code: ${code}, message: ${msg}.`);
-}
-```
-
 
 ## getWant
 
@@ -180,8 +46,6 @@ function getWant(agent: WantAgent): Promise<Want>
 Obtains the Want in a WantAgent object. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -207,7 +71,3 @@ Obtains the Want in a WantAgent object. This API uses a promise to return the re
 | [16000007](../errorcode-ability.md#16000007-service-unresponsive) |
 | [16000015](../errorcode-ability.md#16000015-service-timeout) |
 | [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
-
-**Examples**
-
-See [getWant](#getwant)

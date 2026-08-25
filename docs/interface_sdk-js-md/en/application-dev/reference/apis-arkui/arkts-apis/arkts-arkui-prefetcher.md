@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI';
+import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

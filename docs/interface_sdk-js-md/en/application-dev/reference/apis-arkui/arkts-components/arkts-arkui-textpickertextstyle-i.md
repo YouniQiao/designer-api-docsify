@@ -1,12 +1,10 @@
 # TextPickerTextStyle
 
-Defines the text style options for the text picker. Inherits from PickerTextStyle.
+Defines the text style options for the text picker. Inherits from [PickerTextStyle](arkts-arkui-pickertextstyle-i.md).
 
-**Inheritance/Implementation:** TextPickerTextStyle extends PickerTextStyle
+**Inheritance/Implementation:** TextPickerTextStyle extends [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,8 +25,6 @@ Maximum font size for the text. For details, see maxFontSize.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -47,8 +43,6 @@ Minimum font size for the text. Used with **maxFontSize** to enable font scaling
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -63,11 +57,9 @@ overflow?: TextOverflow
 
 Text overflow behavior. This property has no effect when set to **MARQUEE**. For details, see textOverflow.
 
-**Type:** TextOverflow
+**Type:** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

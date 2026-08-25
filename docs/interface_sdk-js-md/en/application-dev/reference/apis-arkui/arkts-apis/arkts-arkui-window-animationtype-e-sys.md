@@ -4,8 +4,6 @@ Enumerates the types of window animations.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## FADE_IN
@@ -17,8 +15,6 @@ FADE_IN = 1
 Fade-in animation, which takes effect during window display.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 

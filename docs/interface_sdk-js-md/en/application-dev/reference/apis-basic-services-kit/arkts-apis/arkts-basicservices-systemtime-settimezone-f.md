@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setTimezone
@@ -15,8 +15,6 @@ function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 Sets the system time zone. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -39,40 +37,6 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 | --- |
 | -1 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.setTimezone('Asia/Shanghai', (error: BusinessError) => {
-    if (error) {
-      console.info(`Failed to setting timezone. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in setting timezone.`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.setTimezone('Asia/Shanghai').then(() => {
-    console.info(`Succeeded in setting timezone.`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to setting timezone. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## setTimezone
 
@@ -83,8 +47,6 @@ function setTimezone(timezone: string): Promise<void>
 Sets the system time zone. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -111,7 +73,3 @@ Sets the system time zone. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | -1 |
-
-**Examples**
-
-See [setTimezone](#settimezone)

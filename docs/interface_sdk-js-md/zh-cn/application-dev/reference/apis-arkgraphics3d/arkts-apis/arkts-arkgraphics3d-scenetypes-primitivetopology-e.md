@@ -1,10 +1,8 @@
 # PrimitiveTopology
 
-图元拓扑枚举，在顶点处理过程中，指定顶点的不同处理方式。@enum { int }
+图元拓扑枚举，在顶点处理过程中，指定顶点的不同处理方式。@enum { number }
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ TRIANGLE_LIST = 0
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## TRIANGLE_STRIP
@@ -31,7 +27,5 @@ TRIANGLE_STRIP = 1
 每个顶点和前一个三角形的一条边构成新的三角形。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getBundlesLocalFilePresentStatus
@@ -15,8 +15,6 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 对接入云盘的应用，检测其在云盘存储空间内是否存在未上云文件，支持同时查询多个应用。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -46,35 +44,3 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 | 13900010 |
 | 13900020 |
 | 22400005 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundles: Array<string> = ['com.example.app1', 'com.example.app2'];
-cloudSyncManager.getBundlesLocalFilePresentStatus(bundles).then((results: Array<cloudSyncManager.LocalFilePresentStatus>) => {
-  results.forEach((item) => {
-    console.info(`bundle: ${item.bundleName}, hasLocalUncloudedFiles: ${item.isLocalFilePresent}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`getBundlesLocalFilePresentStatus failed, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundles: Array<string> = ['com.example.app1', 'com.example.app2'];
-cloudSyncManager.getBundlesLocalFilePresentStatus(bundles).then<void>((results: Array<cloudSyncManager.LocalFilePresentStatus>): void => {
-  results.forEach((item: cloudSyncManager.LocalFilePresentStatus): void => {
-    console.info(`bundle: ${item.bundleName}, hasLocalUncloudedFiles: ${item.isLocalFilePresent}`);
-  });
-}).catch((err: BusinessError<void>): void => {
-  console.error(`getBundlesLocalFilePresentStatus failed, code: ${err.code}, message: ${err.message}`);
-});
-```

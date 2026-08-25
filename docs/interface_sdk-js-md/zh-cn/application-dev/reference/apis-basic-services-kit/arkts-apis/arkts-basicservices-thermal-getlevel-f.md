@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { thermal } from '@kit.BasicServicesKit';
+import { thermal } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getLevel
@@ -16,8 +16,6 @@ function getLevel(): ThermalLevel
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.PowerManager.ThermalManager
 
 **返回值：**
@@ -25,10 +23,3 @@ function getLevel(): ThermalLevel
 | 类型 |
 | --- |
 | [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) |
-
-**示例**
-
-```TypeScript
-let level = thermal.getLevel();
-console.info('thermal level is: ' + level);
-```

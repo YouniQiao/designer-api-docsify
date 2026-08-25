@@ -4,8 +4,6 @@
 
 **起始版本：** 16
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## CAR_KEY
@@ -20,7 +18,5 @@ CAR_KEY = 1
 2. 不支持通过[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md)接口更新为此类型长时任务。
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

@@ -4,8 +4,6 @@ Enumerates the options for checking the certificate revocation status.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## REVOCATION_CHECK_OPTION_PREFER_OCSP
@@ -17,8 +15,6 @@ REVOCATION_CHECK_OPTION_PREFER_OCSP = 0
 Use OCSP over CRL (default).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Obtain the CRL/OCSP response over the network. By default, it is disabled. Only 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -50,8 +44,6 @@ This parameter is valid when the **ACCESS_NETWORK** option is enabled. It allows
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -65,8 +57,6 @@ REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3
 This parameter is valid when the **ACCESS_NETWORK** option is enabled. It allows the locally configured CRL/OCSP response to be used to check the certificate revocation status if the online CRL/OCSP response cannot be used due to network problems.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -86,8 +76,6 @@ This parameter is valid when the **ACCESS_NETWORK** option is enabled. If this c
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
@@ -106,8 +94,6 @@ If this capability is enabled, the system checks the revocation status of the le
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Security.Cert
@@ -121,8 +107,6 @@ REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6
 If this capability is enabled, the system ignores the network unreachable error when obtaining the CRL or OCSP response over the network for revocation status check. This capability is disabled by default. By default, the network unreachable error may cause certificate chain validation failure.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

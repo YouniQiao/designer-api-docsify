@@ -4,8 +4,6 @@ Wi-Fi station information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Wi-Fi station information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## ipAddress
@@ -27,8 +25,6 @@ The IP address of the Wi-Fi client
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -46,8 +42,6 @@ The MAC address of the Wi-Fi client
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -64,8 +58,6 @@ The MAC address type of the Wi-Fi client
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ The network name of the Wi-Fi client
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 

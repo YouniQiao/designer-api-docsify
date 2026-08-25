@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## addContact
@@ -15,8 +15,6 @@ function addContact(contact: Contact, callback: AsyncCallback<number>): void
 添加联系人。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -33,95 +31,6 @@ function addContact(contact: Contact, callback: AsyncCallback<number>): void
 | [contact](arkts-contact.md) | [Contact](arkts-contacts-contact-contact-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { common } from '@kit.AbilityKit';
-  import { contact } from '@kit.ContactsKit';
-
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.addContact(context, {
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, (err: BusinessError, data) => {
-    if (err) {
-      console.error(`Failed to add Contact. Code:${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
-  });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import { contact } from '@kit.ContactsKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.addContact(context, {
-  name: {
-    fullName: 'xxx'
-  },
-  phoneNumbers: [{
-    phoneNumber: '138xxxxxxxx'
-  }]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to add Contact. Code:${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
-});
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  let promise = contact.addContact(context, {
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  });
-  promise.then((data) => {
-    console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
-  });
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// Promise 成功时返回添加成功后的数据。
-let promise = contact.addContact({
-  name: {
-    fullName: 'xxx'
-  },
-  phoneNumbers: [{
-    phoneNumber: '138xxxxxxxx'
-  }]
-});
-// 成功回调：Promise resolve 时执行
-promise.then((data) => {
-  console.info(`Succeeded in adding Contact. data: ${JSON.stringify(data)}`);
-});
-```
-
 
 ## addContact
 
@@ -132,8 +41,6 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 添加联系人。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -156,10 +63,6 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
-**示例**
-
-参见 [addContact](#addcontact)
-
 
 ## addContact
 
@@ -170,8 +73,6 @@ function addContact(contact: Contact): Promise<number>
 添加联系人。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -193,10 +94,6 @@ function addContact(contact: Contact): Promise<number>
 | --- |
 | Promise & lt;number & gt; |
 
-**示例**
-
-参见 [addContact](#addcontact)
-
 
 ## addContact
 
@@ -207,8 +104,6 @@ function addContact(context: Context, contact: Contact): Promise<number>
 添加联系人。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -235,7 +130,3 @@ function addContact(context: Context, contact: Contact): Promise<number>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-**示例**
-
-参见 [addContact](#addcontact)

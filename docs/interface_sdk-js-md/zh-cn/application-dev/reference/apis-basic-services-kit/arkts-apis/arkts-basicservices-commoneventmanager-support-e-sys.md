@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## COMMON_EVENT_USER_LOCKING
@@ -17,8 +15,6 @@ COMMON_EVENT_USER_LOCKING = 'usual.event.USER_LOCKING'
 表示用户即将被锁定的公共事件的动作。锁定用户前将会触发事件通知服务发布该系统公共事件，事件携带系统账号ID。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -34,8 +30,6 @@ COMMON_EVENT_USER_LOCKED = 'usual.event.USER_LOCKED'
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -49,8 +43,6 @@ COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_CREATED = 'usual.event.OS_ACCOUNT_SUB_PROFIL
 表示创建系统账号子身份。系统账号子身份创建成功时，会触发公共事件服务发布该事件，携带系统账号ID和子身份ID。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,8 +60,6 @@ COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_DELETED = 'usual.event.OS_ACCOUNT_SUB_PROFIL
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -85,8 +75,6 @@ COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_SWITCHING = 'usual.event.OS_ACCOUNT_SUB_PROF
 表示系统账号子身份开始切换。系统账号子身份开始切换时，触发公共事件服务发布该事件，携带系统账号ID、切换到的子身份ID和切换前的子身份ID。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,8 +92,6 @@ COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_SWITCHED = 'usual.event.OS_ACCOUNT_SUB_PROFI
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -121,8 +107,6 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_BOUND = 'usual.event.DISTRIBUTED_ACCOUNT_BOUND'
 表示绑定分布式账号。分布式账号绑定时，会触发公共事件服务发布该事件，携带系统账号ID和子身份ID。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,8 +124,6 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_UNBOUND = 'usual.event.DISTRIBUTED_ACCOUNT_UNBO
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -158,8 +140,6 @@ COMMON_EVENT_CHARGE_TYPE_CHANGED = 'usual.event.CHARGE_TYPE_CHANGED'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -174,8 +154,6 @@ COMMON_EVENT_DEVICE_IDLE_EXEMPTION_LIST_UPDATED = 'usual.event.DEVICE_IDLE_EXEMP
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -189,8 +167,6 @@ COMMON_EVENT_DISK_VOLUME_STATE_CHANGE = 'usual.event.data.DISK_VOLUME_STATE_CHAN
 表示系统数据盘卷状态发生变化的公共事件。当系统数据盘卷在格式化或修复等操作过程中状态发生变化（如操作开始、成功或失败）时，会发送此公共事件。要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -209,8 +185,6 @@ COMMON_EVENT_APP_FIRST_LAUNCH = 'usual.event.APP_FIRST_LAUNCH'
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -227,8 +201,6 @@ COMMON_EVENT_SMS_RECEIVE_COMPLETED = 'usual.event.SMS_RECEIVE_COMPLETED'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -242,8 +214,6 @@ COMMON_EVENT_SMS_EMERGENCY_CB_RECEIVE_COMPLETED = 'usual.event.SMS_EMERGENCY_CB_
 提示紧急小区广播短信接收完成。在设备接收到紧急小区广播短信时，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -259,8 +229,6 @@ COMMON_EVENT_SMS_CB_RECEIVE_COMPLETED = 'usual.event.SMS_CB_RECEIVE_COMPLETED'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -274,8 +242,6 @@ COMMON_EVENT_STK_COMMAND = 'usual.event.STK_COMMAND'
 （预留事件，暂未支持）提示STK命令。在发送STK命令时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -291,8 +257,6 @@ COMMON_EVENT_STK_SESSION_END = 'usual.event.STK_SESSION_END'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -306,8 +270,6 @@ COMMON_EVENT_STK_CARD_STATE_CHANGED = 'usual.event.STK_CARD_STATE_CHANGED'
 （预留事件，暂未支持）提示STK卡状态已更新。在STK卡状态更新时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -323,8 +285,6 @@ COMMON_EVENT_STK_ALPHA_IDENTIFIER = 'usual.event.STK_ALPHA_IDENTIFIER'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -338,8 +298,6 @@ COMMON_EVENT_SMS_WAPPUSH_RECEIVE_COMPLETED = 'usual.event.SMS_WAPPUSH_RECEIVE_CO
 （预留事件，暂未支持）提示服务信息短信接收完成。在设备接收服务信息短信完成时，将会触发事件通知服务发布该系统公共事件。要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -355,8 +313,6 @@ COMMON_EVENT_OPERATOR_CONFIG_CHANGED = 'usual.event.OPERATOR_CONFIG_CHANGED'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -370,8 +326,6 @@ COMMON_EVENT_SIM_CARD_DEFAULT_SMS_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAUL
 提示SIM卡默认短信主卡已更新。在设备SIM卡默认短信主卡更新时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -387,8 +341,6 @@ COMMON_EVENT_SIM_CARD_DEFAULT_DATA_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAU
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -402,8 +354,6 @@ COMMON_EVENT_SIM_CARD_DEFAULT_MAIN_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAU
 提示SIM卡默认主卡已更新。在设备SIM卡默认主卡更新时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -419,8 +369,6 @@ COMMON_EVENT_SET_PRIMARY_SLOT_STATUS = 'usual.event.SET_PRIMARY_SLOT_STATUS'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -434,8 +382,6 @@ COMMON_EVENT_PRIMARY_SLOT_ROAMING = 'usual.event.PRIMARY_SLOT_ROAMING'
 提示SIM卡默认主卡的漫游状态已更新。在设备SIM卡默认主卡的漫游状态发生变化时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -451,8 +397,6 @@ COMMON_EVENT_SIM_CARD_DEFAULT_VOICE_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFA
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -466,8 +410,6 @@ COMMON_EVENT_CELLULAR_DATA_STATE_CHANGED = 'usual.event.CELLULAR_DATA_STATE_CHAN
 提示蜂窝数据状态更新。在设备蜂窝数据状态更新时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -483,8 +425,6 @@ COMMON_EVENT_INCOMING_CALL_MISSED = 'usual.event.INCOMING_CALL_MISSED'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -498,8 +438,6 @@ COMMON_EVENT_RADIO_STATE_CHANGE = 'usual.event.RADIO_STATE_CHANGE'
 提示设备modem上下电状态变化。在设备modem上下电状态变化时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -515,8 +453,6 @@ COMMON_EVENT_DOMAIN_ACCOUNT_STATUS_CHANGED = 'usual.event.DOMAIN_ACCOUNT_STATUS_
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -530,8 +466,6 @@ COMMON_EVENT_SPECIAL_CODE = 'common.event.SPECIAL_CODE'
 提示暗码发送成功。在设备上发送暗码成功时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -547,8 +481,6 @@ COMMON_EVENT_AUDIO_QUALITY_CHANGE = 'usual.event.AUDIO_QUALITY_CHANGE'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -562,8 +494,6 @@ COMMON_EVENT_PRIVACY_STATE_CHANGED = 'usual.event.PRIVACY_STATE_CHANGED'
 表示隐私签署结果的公共事件。隐私弹框场景下，用户点击同意，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -579,8 +509,6 @@ COMMON_EVENT_PACKAGE_INSTALLATION_STARTED = 'usual.event.PACKAGE_INSTALLATION_ST
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -594,8 +522,6 @@ COMMON_EVENT_DYNAMIC_ICON_CHANGED = 'usual.event.DYNAMIC_ICON_CHANGED'
 表示应用动态图标发生变化的公共事件。在应用的动态图标发生变更时，会发送此公共事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -611,8 +537,6 @@ COMMON_EVENT_BUNDLE_RESOURCES_CHANGED = 'usual.event.BUNDLE_RESOURCES_CHANGED'
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -626,8 +550,6 @@ COMMON_EVENT_VPN_CONNECTION_STATUS_CHANGED = 'usual.event.VPN_CONNECTION_STATUS_
 表示VPN连接状态的公共事件。当VPN连接或者断开时会发送此公共事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -643,8 +565,6 @@ COMMON_EVENT_RESTORE_START = 'usual.event.RESTORE_START'
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -658,8 +578,6 @@ COMMON_EVENT_DEFAULT_APPLICATION_CHANGED = 'usual.event.DEFAULT_APPLICATION_CHAN
 表示文件默认打开应用发生变更的公共事件。在文件默认打开应用发生变更时，会发送此公共事件。要订阅此事件，您的应用必须具备ohos.permission.CHANGE_DEFAULT_APPLICATION权限
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -675,8 +593,6 @@ COMMON_EVENT_SHORTCUT_CHANGED = 'usual.event.SHORTCUT_CHANGED'
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -690,8 +606,6 @@ COMMON_EVENT_CUSTOM_CONFIG_POLICY_UPDATED = 'usual.event.CUSTOM_CONFIG_POLICY_UP
 表示设备的配置目录层级与系统参数发生变化的公共事件。在系统对设备的归属区域和漫游区域识别完成后，会对设备的配置目录层级与系统参数进行刷新，刷新完成后会发送此公共事件。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -707,8 +621,6 @@ COMMON_EVENT_CUSTOM_ROAMING_REGION_UPDATED = 'usual.event.CUSTOM_ROAMING_REGION_
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -722,8 +634,6 @@ COMMON_EVENT_SCREEN_SHARE = 'usual.event.SCREEN_SHARE'
 表示系统中发生了屏幕共享事件。这是一个受保护的公共事件，只能由系统发送。要订阅此事件，您的应用必须具备ohos.permission.RECEIVE_SMS权限（该权限仅系统应用可申请）
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -739,8 +649,6 @@ COMMON_EVENT_RESTORE_END = 'usual.event.RESTORE_END'
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -755,8 +663,6 @@ COMMON_EVENT_CLOUD_DISK_STATE_CHANGED = 'usual.event.CLOUD_DISK_STATE_CHANGED'
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 **系统接口：** 此接口为系统接口。
@@ -770,8 +676,6 @@ COMMON_EVENT_SCREEN_LOCK_EXITING = 'usual.event.SCREEN_LOCK_EXITING'
 表示锁屏退出的事件。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -789,8 +693,6 @@ COMMON_EVENT_SANDBOX_BUNDLE_ADDED = 'usual.event.SANDBOX_BUNDLE_ADDED'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -806,8 +708,6 @@ COMMON_EVENT_SANDBOX_BUNDLE_REMOVED = 'usual.event.SANDBOX_BUNDLE_REMOVED'
 表示设备上安装的沙箱应用被卸载的公共事件.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

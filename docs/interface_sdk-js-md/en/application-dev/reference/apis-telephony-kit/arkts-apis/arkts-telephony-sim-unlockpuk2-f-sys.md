@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## unlockPuk2
 
 ```TypeScript
-function unlockPuk2(slotId: int, newPin2: string, puk2: string, callback: AsyncCallback<LockStatusResponse>): void
+function unlockPuk2(slotId: number, newPin2: string, puk2: string, callback: AsyncCallback<LockStatusResponse>): void
 ```
 
 Unlock the SIM card password in the specified card slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Unlock the SIM card password in the specified card slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | newPin2 | string | Yes |
 | puk2 | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes |
@@ -47,44 +45,16 @@ Unlock the SIM card password in the specified card slot.
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let puk2: string = '1xxxxxxx';
-let newPin2: string = '1235';
-sim.unlockPuk2(0, newPin2, puk2, (err: BusinessError, data: sim.LockStatusResponse) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let puk2: string = '1xxxxxxx';
-let newPin2: string = '1235';
-sim.unlockPuk2(0, newPin2, puk2).then((data: sim.LockStatusResponse) => {
-    console.info(`unlockPuk2 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`unlockPuk2 failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## unlockPuk2
 
 ```TypeScript
-function unlockPuk2(slotId: int, newPin2: string, puk2: string): Promise<LockStatusResponse>
+function unlockPuk2(slotId: number, newPin2: string, puk2: string): Promise<LockStatusResponse>
 ```
 
 Unlock the SIM card password in the specified card slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -96,7 +66,7 @@ Unlock the SIM card password in the specified card slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | newPin2 | string | Yes |
 | puk2 | string | Yes |
 
@@ -119,7 +89,3 @@ Unlock the SIM card password in the specified card slot.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
-
-**Examples**
-
-See [unlockPuk2](#unlockpuk2)

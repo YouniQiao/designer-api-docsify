@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## SEEK_SET
@@ -17,8 +15,6 @@ SEEK_SET = 0
 文件起始位置处。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -32,8 +28,6 @@ SEEK_CUR = 1
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## SEEK_END
@@ -45,7 +39,5 @@ SEEK_END = 2
 文件末尾位置处。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

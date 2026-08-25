@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { identifySensitiveContent } from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## scanFile
@@ -15,8 +15,6 @@ function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Ar
 根据设置的策略，识别指定文件中的敏感内容，返回识别的结果数组，包含匹配的敏感标签、匹配内容及匹配数量。使用Promise异步回调。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **需要权限：** ohos.permission.ENTERPRISE_DATA_IDENTIFY_FILE
 
@@ -45,35 +43,3 @@ function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Ar
 | [19110002](../errorcode-dlp.md#19110002-文件敏感信息识别超时) |
 | [19110003](../errorcode-dlp.md#19110003-文件不支持) |
 | [19110004](../errorcode-dlp.md#19110004-系统功能运行异常) |
-
-**示例**
-
-```TypeScript
-import { identifySensitiveContent } from '@kit.DataProtectionKit';
-
-// 定义待扫描的文件物理路径
-let filePath = "/data/service/el2/100/hmdfs/account/files/Docs/Documents/test.txt";
-
-// 配置敏感内容识别策略
-let policies: Array<identifySensitiveContent.Policy> = [
-  {"sensitiveLabel":"name", "keywords":["姓名"], "regex":""},
-  {"sensitiveLabel":"phone", "keywords":[], "regex":"电话"},
-  {"sensitiveLabel":"address", "keywords":["地址"], "regex":"xx省xx市"}
-];
-try {
-  identifySensitiveContent.scanFile(filePath, policies).then(records => {
-    console.info('scanFile finish');
-    for (let i = 0; i < records.length; ++i) {
-      const sensitiveLabel = records[i].sensitiveLabel;
-      const matchContent = records[i].matchContent;
-      const matchNumber = records[i].matchNumber;
-      console.info(`scanFile result sensitiveLabel: ${sensitiveLabel} matchNumber ${matchNumber} matchContent ${matchContent}`);
-    }
-  }).catch((err: BusinessError) => {
-    // 处理识别失败
-    console.error(`Failed to scanFile. Code:${err.code}, message:${err.message}`);
-  })
-} catch (err) {
-  console.error('error message', err.message);
-}
-```

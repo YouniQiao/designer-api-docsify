@@ -4,8 +4,6 @@ A class used for cloud media asset management. It is used to manage download tas
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ A class used for cloud media asset management. It is used to manage download tas
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## cancelDownloadCloudMedia
@@ -25,8 +23,6 @@ cancelDownloadCloudMedia(): Promise<void>
 Cancels a task that downloads cloud media assets.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -48,21 +44,6 @@ Cancels a task that downloads cloud media assets.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('cancelDownloadCloudMediaDemo');
-  try {
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    await cloudMediaAssetManagerInstance.cancelDownloadCloudMedia();
-  } catch (err) {
-    console.error(`cancelDownloadCloudMediaDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## cancelDownloadSpecificCloudMedia
 
 ```TypeScript
@@ -72,8 +53,6 @@ cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 Cancels a batch download for the specified cloud media assets. This API uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -102,23 +81,6 @@ Cancels a batch download for the specified cloud media assets. This API uses a p
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('CancelDownloadSpecificCloudMediaDemo');
-  try {
-    let assetURIs: Array<string> = [
-       'file://media/Photo/12/IMG_1755046662_091/IMG_20250801_175331.jpg'];
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    await cloudMediaAssetManagerInstance.cancelDownloadSpecificCloudMedia(assetURIs);
-  } catch (err) {
-    console.error(`failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## getCloudMediaAssetManagerInstance
 
 ```TypeScript
@@ -128,8 +90,6 @@ static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManag
 Obtains a CloudMediaAssetManager instance.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -155,61 +115,6 @@ Obtains a CloudMediaAssetManager instance.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000011 |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('getCloudMediaAssetManagerInstanceDemo');
-  try {
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    await cloudMediaAssetManagerInstance.pauseDownloadCloudMedia();
-  } catch (err) {
-    console.error(`getCloudMediaAssetManagerInstanceDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-## getCloudMediaAssetManagerInstance
-
-```TypeScript
-static getCloudMediaAssetManagerInstance(context: Context): CloudMediaAssetManager | null
-```
-
-Obtains a CloudMediaAssetManager instance.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| [CloudMediaAssetManager](arkts-medialibrary-photoaccesshelper-cloudmediaassetmanager-c-sys.md) \| null |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
-
-**Examples**
-
-See [getCloudMediaAssetManagerInstance](#getcloudmediaassetmanagerinstance)
-
 ## getCloudMediaAssetStatus
 
 ```TypeScript
@@ -219,8 +124,6 @@ getCloudMediaAssetStatus(): Promise<CloudMediaAssetStatus>
 Obtains the status of a task that downloads cloud media assets.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -242,26 +145,6 @@ Obtains the status of a task that downloads cloud media assets.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('getCloudMediaAssetStatusDemo');
-  try {
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    const cloudMediaAssetStatus: photoAccessHelper.CloudMediaAssetStatus = await cloudMediaAssetManagerInstance.getCloudMediaAssetStatus();
-    let taskStatus = cloudMediaAssetStatus.taskStatus;
-    let taskInfo = cloudMediaAssetStatus.taskInfo;
-    let errorCode = cloudMediaAssetStatus.errorCode;
-    let message = `taskStatus: ${taskStatus}, taskInfo: ${taskInfo}, errorCode: ${errorCode}`;
-    console.info(message);
-  } catch (err) {
-    console.error(`getCloudMediaAssetStatusDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## offDownloadProgressChange
 
 ```TypeScript
@@ -271,8 +154,6 @@ offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): 
 Unregisters a callback to monitor changes in the progress of a batch download for cloud media assets.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -294,21 +175,6 @@ Unregisters a callback to monitor changes in the progress of a batch download fo
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('OffDownloadProgressChangeDemo');
-  try {
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    cloudMediaAssetManagerInstance.offDownloadProgressChange();
-  } catch (err) {
-    console.error(`failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## onDownloadProgressChange
 
 ```TypeScript
@@ -318,8 +184,6 @@ onDownloadProgressChange(callback: Callback<CloudAssetDownloadProgressInfo>): vo
 Registers a callback to monitor changes in the progress of a batch download for cloud media assets.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -341,25 +205,6 @@ Registers a callback to monitor changes in the progress of a batch download for 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-let onCallback = (changeData: photoAccessHelper.CloudAssetDownloadProgressInfo) => {
-  console.info('batchdownload downloadProgressChange onCallback success, changData: ' + JSON.stringify(changeData));
-}
-async function example(context: Context) {
-  console.info('OnDownloadProgressChangeDemo');
-  try {
-      let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-        = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-      // Register onCallback.
-      cloudMediaAssetManagerInstance.onDownloadProgressChange(onCallback);
-  } catch (err) {
-    console.error(`failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## pauseDownloadCloudMedia
 
 ```TypeScript
@@ -369,8 +214,6 @@ pauseDownloadCloudMedia(): Promise<void>
 Suspends a task that downloads cloud media assets.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -392,21 +235,6 @@ Suspends a task that downloads cloud media assets.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('pauseDownloadCloudMediaDemo');
-  try {
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    await cloudMediaAssetManagerInstance.pauseDownloadCloudMedia();
-  } catch (err) {
-    console.error(`pauseDownloadCloudMediaDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## pauseDownloadSpecificCloudMedia
 
 ```TypeScript
@@ -416,8 +244,6 @@ pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 Pauses a batch download for the specified cloud media assets. This API uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -446,23 +272,6 @@ Pauses a batch download for the specified cloud media assets. This API uses a pr
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('PauseDownloadSpecificCloudMediaDemo');
-  try {
-    let assetURIs: Array<string> = [
-       'file://media/Photo/12/IMG_1755046662_091/IMG_20250801_175331.jpg'];
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    await cloudMediaAssetManagerInstance.pauseDownloadSpecificCloudMedia(assetURIs);
-  } catch (err) {
-    console.error(`failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## queryDownloadSpecificCloudMediaDetails
 
 ```TypeScript
@@ -472,8 +281,6 @@ queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataShare
 Obtains the details of a batch download for cloud media assets. This API uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -501,43 +308,15 @@ Obtains the details of a batch download for cloud media assets. This API uses a 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-async function example(context: Context) {
-  console.info('QueryDownloadSpecificCloudMediaDetailsDemo');
-  try {
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.orderByAsc("file_id");
-    let taskListStatus : photoAccessHelper.CloudAssetDownloadStatus =
-       await cloudMediaAssetManagerInstance.queryDownloadSpecificCloudMediaDetails(predicates);
-  } catch (err) {
-    console.error(`failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## queryDownloadSpecificCloudMediaTaskCount
 
-ArkTS-Dyn:
 ```TypeScript
 queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSharePredicates): Promise<int>
 ```
 
 Obtains the number of batch download tasks for cloud media assets. This API uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -555,7 +334,7 @@ Obtains the number of batch download tasks for cloud media assets. This API uses
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -564,26 +343,6 @@ Obtains the number of batch download tasks for cloud media assets. This API uses
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-async function example(context: Context) {
-  console.info('QueryDownloadSpecificCloudMediaTaskCountDemo');
-  try {
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.orderByAsc("file_id");
-    let count : number =
-       await cloudMediaAssetManagerInstance.queryDownloadSpecificCloudMediaTaskCount(predicates);
-  } catch (err) {
-    console.error(`failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
 
 ## resumeDownloadSpecificCloudMedia
 
@@ -594,8 +353,6 @@ resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 Resumes a batch download for the specified cloud media assets. This API uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -624,23 +381,6 @@ Resumes a batch download for the specified cloud media assets. This API uses a p
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('ResumeDownloadSpecificCloudMediaDemo');
-  try {
-    let assetURIs: Array<string> = [
-       'file://media/Photo/12/IMG_1755046662_091/IMG_20250801_175331.jpg'];
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    await cloudMediaAssetManagerInstance.resumeDownloadSpecificCloudMedia(assetURIs);
-  } catch (err) {
-    console.error(`failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## retainCloudMediaAsset
 
 ```TypeScript
@@ -650,8 +390,6 @@ retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>
 Deletes local metadata and files of cloud media assets.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -680,21 +418,6 @@ Deletes local metadata and files of cloud media assets.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000011 |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('retainCloudMediaAssetDemo');
-  try {
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    await cloudMediaAssetManagerInstance.retainCloudMediaAsset(photoAccessHelper.CloudMediaRetainType.RETAIN_FORCE);
-  } catch (err) {
-    console.error(`retainCloudMediaAssetDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## startDownloadCloudMedia
 
 ```TypeScript
@@ -704,8 +427,6 @@ startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>
 Starts or resumes a task to download cloud media assets.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -734,21 +455,6 @@ Starts or resumes a task to download cloud media assets.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000011 |
 
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('startDownloadCloudMediaDemo');
-  try {
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    await cloudMediaAssetManagerInstance.startDownloadCloudMedia(photoAccessHelper.CloudMediaDownloadType.DOWNLOAD_FORCE);
-  } catch (err) {
-    console.error(`startDownloadCloudMediaDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## startDownloadSpecificCloudMedia
 
 ```TypeScript
@@ -758,8 +464,6 @@ startDownloadSpecificCloudMedia(assetUris: string[]): Promise<Map<string, CloudA
 Starts a batch download for the specified cloud media assets. This API uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -787,21 +491,3 @@ Starts a batch download for the specified cloud media assets. This API uses a pr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-async function example(context: Context) {
-  console.info('StartDownloadSpecificCloudMediaDemo');
-  try {
-    let assetURIs: Array<string> = [
-       'file://media/Photo/12/IMG_1755046662_091/IMG_20250801_175331.jpg'];
-    let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
-      = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
-    let taskRespMap : Map<string, photoAccessHelper.CloudAssetDownloadCode> =
-      await cloudMediaAssetManagerInstance.startDownloadSpecificCloudMedia(assetURIs, 2);
-  } catch (err) {
-    console.error(`failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```

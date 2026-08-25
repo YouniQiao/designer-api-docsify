@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## badgeFlag
@@ -15,13 +13,12 @@ badgeFlag?: boolean
 ```
 
 是否显示角标。默认值为true。  
-- true：显示角标。 - false：不显示角标。
+- true：显示角标。  
+- false：不显示角标。
 
 **类型：** boolean
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -32,13 +29,12 @@ bypassDnd?: boolean
 ```
 
 是否在系统中绕过免打扰模式。默认值为false。  
-- true：绕过免打扰模式，免打扰模式下仍会提醒。 - false：不绕过免打扰模式，免打扰模式下不提醒。
+- true：绕过免打扰模式，免打扰模式下仍会提醒。  
+- false：不绕过免打扰模式，免打扰模式下不提醒。
 
 **类型：** boolean
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -54,8 +50,6 @@ desc?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## enabled
@@ -65,13 +59,12 @@ readonly enabled?: boolean
 ```
 
 是否允许发布此通知渠道类型的通知。  
-- true：允许发布通知。 - false：禁止发布通知。
+- true：允许发布通知。  
+- false：禁止发布通知。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -87,8 +80,6 @@ level?: notification.SlotLevel
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **替代接口：** [notificationLevel](#notificationlevel)
@@ -98,16 +89,14 @@ level?: notification.SlotLevel
 ## lightColor
 
 ```TypeScript
-lightColor?: int
+lightColor?: number
 ```
 
 通知灯颜色。预留能力，暂不支持。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -118,29 +107,26 @@ lightEnabled?: boolean
 ```
 
 是否闪灯。默认值为false。  
-- true：闪灯。 - false：不闪灯。
+- true：闪灯。  
+- false：不闪灯。
 
 **类型：** boolean
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 ## lockscreenVisibility
 
 ```TypeScript
-lockscreenVisibility?: int
+lockscreenVisibility?: number
 ```
 
 在锁定屏幕上显示通知的模式。预留能力，暂不支持。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -156,8 +142,6 @@ notificationLevel?: notificationManager.SlotLevel
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## notificationType
@@ -171,8 +155,6 @@ notificationType?: notificationManager.SlotType
 **类型：** notificationManager.SlotType
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -188,8 +170,6 @@ sound?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## type
@@ -204,8 +184,6 @@ type?: notification.SlotType
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 11
 
 **替代接口：** [notificationType](#notificationtype)
@@ -219,28 +197,25 @@ vibrationEnabled?: boolean
 ```
 
 是否可振动。默认值为false。  
-- true：可振动。 - false：不可振动。
+- true：可振动。  
+- false：不可振动。
 
 **类型：** boolean
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
 ## vibrationValues
 
 ```TypeScript
-vibrationValues?: Array<long>
+vibrationValues?: Array<number>
 ```
 
 通知振动样式。预留能力，暂不支持。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification

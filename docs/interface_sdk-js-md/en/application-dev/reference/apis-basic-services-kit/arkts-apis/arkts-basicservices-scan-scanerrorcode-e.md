@@ -4,8 +4,6 @@ Enumerates the scan error codes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_ERROR_NO_PERMISSION
@@ -17,8 +15,6 @@ SCAN_ERROR_NO_PERMISSION = 201
 No permission.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ Non-system application.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_ERROR_INVALID_PARAMETER
@@ -45,8 +39,6 @@ SCAN_ERROR_INVALID_PARAMETER = 401
 Invalid parameter.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -60,8 +52,6 @@ Generic failure.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_ERROR_RPC_FAILURE
@@ -73,8 +63,6 @@ SCAN_ERROR_RPC_FAILURE = 13100002
 RPC failure.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -88,8 +76,6 @@ Service failure.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_ERROR_UNSUPPORTED
@@ -101,8 +87,6 @@ SCAN_ERROR_UNSUPPORTED = 13100004
 Unsupported operation.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -116,8 +100,6 @@ Operation canceled.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_ERROR_DEVICE_BUSY
@@ -129,8 +111,6 @@ SCAN_ERROR_DEVICE_BUSY = 13100006
 Device busy.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -144,8 +124,6 @@ Invalid operation.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_ERROR_JAMMED
@@ -157,8 +135,6 @@ SCAN_ERROR_JAMMED = 13100008
 Paper jammed.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -172,8 +148,6 @@ Out of paper.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_ERROR_COVER_OPEN
@@ -185,8 +159,6 @@ SCAN_ERROR_COVER_OPEN = 13100010
 Cover open.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -200,8 +172,6 @@ I/O error.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## SCAN_ERROR_NO_MEMORY
@@ -213,7 +183,5 @@ SCAN_ERROR_NO_MEMORY = 13100012
 Insufficient memory.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

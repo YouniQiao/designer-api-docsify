@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## getNetworkAccessPolicy
@@ -15,8 +15,6 @@ function getNetworkAccessPolicy(uid: number): Promise<NetworkAccessPolicy>
 Obtains whether the application with the specified UID can access the network. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -47,51 +45,6 @@ Obtains whether the application with the specified UID can access the network. T
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getNetworkAccessPolicy(11111)
-  .then((data: policy.NetworkAccessPolicy) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getNetworkAccessPolicy()
-  .then((data: policy.UidNetworkAccessPolicy) => {
-    let keyMap: Map<string, object> = new Map<string, object>(Object.entries(data));
-    let uid:number = 0;
-    let allowWiFi: string = "";
-    let allowCellular: string = "";
-
-    keyMap.forEach((value:object, key:string) => {
-      let valueMap: Map<string, string> = new Map<string, string>(Object.entries(value));
-      uid = Number.parseInt(key);
-      valueMap.forEach((value:string, key:string)=>{
-        if (key == "allowWiFi") {
-          allowWiFi = value;
-        }
-        if (key == "allowCellular") {
-          allowCellular = value;
-        }
-      })
-    })
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## getNetworkAccessPolicy
 
@@ -102,8 +55,6 @@ function getNetworkAccessPolicy(): Promise<UidNetworkAccessPolicy>
 Obtains the network access policy of all applications under the current user. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -125,7 +76,3 @@ Obtains the network access policy of all applications under the current user. Th
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [getNetworkAccessPolicy](#getnetworkaccesspolicy)

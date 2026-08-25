@@ -4,14 +4,12 @@ Describes the display mode of a device and the corresponding physical screen res
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## foldDisplayMode
@@ -26,8 +24,6 @@ Display mode of the device. The value is **0** for non-foldable devices.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
@@ -35,16 +31,14 @@ Display mode of the device. The value is **0** for non-foldable devices.
 ## physicalHeight
 
 ```TypeScript
-physicalHeight: long
+physicalHeight: number
 ```
 
 Height of the device, in px. The value is an integer greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +47,14 @@ Height of the device, in px. The value is an integer greater than 0.
 ## physicalWidth
 
 ```TypeScript
-physicalWidth: long
+physicalWidth: number
 ```
 
 Width of the device, in px. The value is an integer greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

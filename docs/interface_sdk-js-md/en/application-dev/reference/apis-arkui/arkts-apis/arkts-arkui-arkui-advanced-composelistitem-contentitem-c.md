@@ -4,14 +4,12 @@ Defines elements for the left and center areas of the **ComposeListItem** compon
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
+import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from 'kits/@kit.ArkUI';
 ```
 
 ## description
@@ -23,11 +21,9 @@ description?: ResourceStr
 Description of the element in the center.If this parameter is not set or is set to **undefined**, the description is not displayed.  
 **Text processing rules**: Text will wrap to a new line when it exceeds the length limit.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +39,9 @@ icon?: ResourceStr
 
 Icon resource of the element on the left.If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +61,6 @@ Icon style of the element on the left.If this parameter is not set or is set to 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -84,11 +76,9 @@ primaryText?: ResourceStr
 Primary text of the element in the center.If this parameter is not set or is set to **undefined**, the primary text is not displayed.  
 **Text processing rules**: Text will wrap to a new line when it exceeds the length limit.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,11 +95,9 @@ secondaryText?: ResourceStr
 Secondary text of the element in the center.If this parameter is not set or is set to **undefined**, the secondary text is not displayed.  
 **Text processing rules**: Text will wrap to a new line when it exceeds the length limit.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,8 +116,6 @@ Symbol icon resource of the element on the left, which has higher priority than 
 **Type:** SymbolGlyphModifier
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

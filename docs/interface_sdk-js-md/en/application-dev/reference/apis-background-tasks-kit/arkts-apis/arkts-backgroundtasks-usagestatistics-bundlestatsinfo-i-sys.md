@@ -2,8 +2,6 @@
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -11,22 +9,20 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## abilityInFgTotalTime
 
 ```TypeScript
-abilityInFgTotalTime?: long
+abilityInFgTotalTime?: number
 ```
 
-The total duration, in milliseconds. <br> Unit:ms
+The total duration, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -35,16 +31,14 @@ The total duration, in milliseconds. <br> Unit:ms
 ## abilityPrevAccessTime
 
 ```TypeScript
-abilityPrevAccessTime?: long
+abilityPrevAccessTime?: number
 ```
 
-The last time when the application was accessed, in milliseconds. <br> Unit:ms
+The last time when the application was accessed, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -53,16 +47,14 @@ The last time when the application was accessed, in milliseconds. <br> Unit:ms
 ## abilityPrevSeenTime
 
 ```TypeScript
-abilityPrevSeenTime?: long
+abilityPrevSeenTime?: number
 ```
 
-The last time when the application was visible in the foreground, in milliseconds. <br> Unit:ms
+The last time when the application was visible in the foreground, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -71,16 +63,14 @@ The last time when the application was visible in the foreground, in millisecond
 ## abilitySeenTotalTime
 
 ```TypeScript
-abilitySeenTotalTime?: long
+abilitySeenTotalTime?: number
 ```
 
-The total duration, in milliseconds. <br> Unit:ms
+The total duration, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -89,16 +79,14 @@ The total duration, in milliseconds. <br> Unit:ms
 ## appIndex
 
 ```TypeScript
-appIndex?: int
+appIndex?: number
 ```
 
 The app index of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -116,8 +104,6 @@ The bundle name of the application.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -125,16 +111,14 @@ The bundle name of the application.
 ## fgAbilityAccessTotalTime
 
 ```TypeScript
-fgAbilityAccessTotalTime?: long
+fgAbilityAccessTotalTime?: number
 ```
 
-The total duration, in milliseconds. <br> Unit:ms
+The total duration, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -143,16 +127,14 @@ The total duration, in milliseconds. <br> Unit:ms
 ## fgAbilityPrevAccessTime
 
 ```TypeScript
-fgAbilityPrevAccessTime?: long
+fgAbilityPrevAccessTime?: number
 ```
 
-The last time when the foreground application was accessed, in milliseconds. <br> Unit:ms
+The last time when the foreground application was accessed, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -161,16 +143,14 @@ The last time when the foreground application was accessed, in milliseconds. <br
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 The identifier of BundleStatsInfo.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -179,16 +159,14 @@ The identifier of BundleStatsInfo.
 ## infosBeginTime
 
 ```TypeScript
-infosBeginTime?: long
+infosBeginTime?: number
 ```
 
-The time of the first bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. <br> Unit:ms
+The time of the first bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -197,16 +175,14 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 ## infosEndTime
 
 ```TypeScript
-infosEndTime?: long
+infosEndTime?: number
 ```
 
-The time of the last bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. <br> Unit:ms
+The time of the last bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 

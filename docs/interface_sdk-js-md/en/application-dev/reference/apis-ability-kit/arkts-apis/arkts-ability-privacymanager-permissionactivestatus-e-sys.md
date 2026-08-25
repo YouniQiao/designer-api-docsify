@@ -4,8 +4,6 @@ Enumerates the types of permission usage status changes. It is used to describe 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ PERM_INACTIVE = 0
 The permission is not used.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -36,8 +32,6 @@ The permission is being used by an application running in the foreground.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ PERM_ACTIVE_IN_BACKGROUND = 2
 The permission is being used by an application running in the background.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 

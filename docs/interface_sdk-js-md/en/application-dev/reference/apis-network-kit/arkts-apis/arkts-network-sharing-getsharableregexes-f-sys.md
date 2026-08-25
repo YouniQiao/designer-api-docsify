@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## getSharableRegexes
@@ -15,8 +15,6 @@ function getSharableRegexes(type: SharingIfaceType, callback: AsyncCallback<Arra
 Obtains regular expressions of NICs of a specified type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -42,34 +40,6 @@ Obtains regular expressions of NICs of a specified type. This API uses an asynch
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing.getSharableRegexes(SHARING_WIFI, (error: BusinessError, data: string[]) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .getSharableRegexes(SHARING_WIFI)
-  .then((data: string[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## getSharableRegexes
 
@@ -80,8 +50,6 @@ function getSharableRegexes(type: SharingIfaceType): Promise<Array<string>>
 Obtains regular expressions of NICs of a specified type. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -111,7 +79,3 @@ Obtains regular expressions of NICs of a specified type. This API uses a promise
 | [2200001](../errorcode-net-ethernet.md#2200001-invalid-parameter-value) |
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
-
-**Examples**
-
-See [getSharableRegexes](#getsharableregexes)

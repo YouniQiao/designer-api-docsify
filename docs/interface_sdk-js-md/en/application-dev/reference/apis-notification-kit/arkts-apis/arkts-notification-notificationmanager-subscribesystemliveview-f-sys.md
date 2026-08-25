@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## subscribeSystemLiveView
@@ -15,8 +15,6 @@ function subscribeSystemLiveView(subscriber: SystemLiveViewSubscriber): Promise<
 Subscribes to the system live view notification. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -45,21 +43,3 @@ Subscribes to the system live view notification. This API uses a promise to retu
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onResponseCallback = (id:number, option:notificationManager.ButtonOptions) => {
-    console.info(`notificationId: ${id},onResponseCallback: ${JSON.stringify(option)}`);
-}
-let subscriber: notificationManager.SystemLiveViewSubscriber  = {
-    onResponse: onResponseCallback,
-};
-notificationManager.subscribeSystemLiveView(subscriber).then(() => {
-    console.info("subscribeSystemLiveView success");
-}).catch((err: BusinessError) => {
-    console.error(`subscribeSystemLiveView failed, code is ${err.code}, message is ${err.message}`);
-});
-```

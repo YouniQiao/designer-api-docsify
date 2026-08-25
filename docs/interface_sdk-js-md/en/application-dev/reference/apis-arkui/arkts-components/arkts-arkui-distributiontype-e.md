@@ -4,8 +4,6 @@ Enumerates the color distribution types of a particle.@enum { number }
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## UNIFORM
@@ -17,8 +15,6 @@ UNIFORM = 0
 The initial color random values are distributed uniformly.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ GAUSSIAN = 1
 The initial color random values are distributed according to a Gaussian distribution.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

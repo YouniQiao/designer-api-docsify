@@ -1,10 +1,8 @@
 # GetInputDataOptions (System API)
 
-Represents a set of optional parameters for [onGetData](../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8).
+Represents a set of optional parameters for [onGetData](arkts-basicservices-osaccount-iinputer-i-sys.md#ongetdata).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -13,7 +11,7 @@ Represents a set of optional parameters for [onGetData](../../../reference/apis-
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## challenge
@@ -27,8 +25,6 @@ Challenge value, which is **undefined** by default.
 **Type:** Uint8Array
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

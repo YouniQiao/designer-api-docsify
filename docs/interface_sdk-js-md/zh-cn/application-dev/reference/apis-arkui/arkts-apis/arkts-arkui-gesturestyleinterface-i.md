@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ onClick?: Callback<ClickEvent>
 
 设置点击事件。
 
-**类型：** Callback&lt;ClickEvent&gt;
+**类型：** Callback&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,11 +37,9 @@ onLongPress?: Callback<GestureEvent>
 
 设置长按事件。
 
-**类型：** Callback&lt;GestureEvent&gt;
+**类型：** Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,8 +58,6 @@ onTouch?: Callback<TouchEvent>
 **类型：** Callback&lt;TouchEvent&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

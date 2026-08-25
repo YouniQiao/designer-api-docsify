@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## searchTarget
@@ -15,8 +15,6 @@ function searchTarget(target: TargetInfo, params: SearchParams): Promise<SearchR
 Searching for a specified target.
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -44,18 +42,3 @@ Searching for a specified target.
 | [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
 | [33300003](../errorcode-mechanic.md#33300003-功能不支持) |
 | 33300004 |
-
-**示例**
-
-```TypeScript
-let targetInfo: mechanicManager.TargetInfo = {
-    targetType: mechanicManager.TargetType.HUMAN_FACE
-};
-let searchParams: mechanicManager.SearchParams = {
-    direction: mechanicManager.SearchDirection.DEFAULT
-}
-mechanicManager.searchTarget(targetInfo,
-    searchParams).then((searchResult) => {
-    console.info(`'result:' ${searchResult}`);
-});
-```

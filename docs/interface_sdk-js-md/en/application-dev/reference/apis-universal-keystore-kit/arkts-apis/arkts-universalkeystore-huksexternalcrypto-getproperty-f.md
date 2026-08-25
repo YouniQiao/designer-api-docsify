@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## getProperty
@@ -13,11 +13,12 @@ function getProperty(resourceId: string, propertyId: string, params?: Array<Huks
 ```
 
 Obtains a property value. This API uses a promise to return the result.The **propertyId** indicates the ID of the property to be queried. Currently, only the SKF API names defined in GMT 0016-2023 can be used as property IDs. The supported IDs are as follows:  
-- SKF_EnumDev - SKF_GetDevInfo - SKF_EnumApplication - SKF_EnumContainer
+- SKF_EnumDev  
+- SKF_GetDevInfo  
+- SKF_EnumApplication  
+- SKF_EnumContainer
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,34 +53,3 @@ Obtains a property value. This API uses a promise to return the result.The **pro
 | [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) |
 | [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) |
 | [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) |
-
-**Examples**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-const testResourceId = JSON.stringify({
-  providerName: "testProviderName",
-  bundleName: "com.example.cryptoapplication",
-  abilityName: "CryptoExtension",
-  index: {
-    key: "testKey"
-  } as ESObject
-});
-
-let propertyId = "SKF_EnumDev";
-const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [];
-
-console.info(`promise: await huksExternalCrypto getProperty`);
-async function testFunction() : Promise<void>
-{
-  try {
-    await huksExternalCrypto.getProperty(testResourceId, propertyId, extProperties)
-      .then((data) => {
-        console.info(`promise: getProperty success, data: ` + JSON.stringify(data));
-      });
-  } catch (error) {
-    console.error(`promise: getProperty failed, errCode : ${error.code}, errMsg : ${error.message}`);
-  }
-}
-```

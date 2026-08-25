@@ -1,10 +1,8 @@
 # SettingType
 
-Enumeration of setting type.@enum { int }
+Enumeration of setting type.@enum { number }
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -17,8 +15,6 @@ SWITCH = 0
 Switch, the type of setting is used to control the on/off status of a function.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ List, this type of setting is used for selecting one option from multiple choice
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -49,8 +43,6 @@ JUMP = 2
 Jump, this type of setting is used to jump to another interface.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

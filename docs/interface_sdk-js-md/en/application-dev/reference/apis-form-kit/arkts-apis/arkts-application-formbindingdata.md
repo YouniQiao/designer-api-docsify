@@ -4,8 +4,6 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [formBindingData](arkts-app-form-formbindingdata.md)

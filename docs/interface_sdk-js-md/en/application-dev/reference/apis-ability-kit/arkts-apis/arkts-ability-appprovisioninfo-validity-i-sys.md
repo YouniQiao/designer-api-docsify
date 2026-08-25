@@ -4,8 +4,6 @@ Validity period in the configuration file.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -13,16 +11,14 @@ Validity period in the configuration file.
 ## notAfter
 
 ```TypeScript
-readonly notAfter: long
+readonly notAfter: number
 ```
 
 End time of the validity period of the configuration file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -31,16 +27,14 @@ End time of the validity period of the configuration file.
 ## notBefore
 
 ```TypeScript
-readonly notBefore: long
+readonly notBefore: number
 ```
 
 Start time of the validity period of the configuration file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

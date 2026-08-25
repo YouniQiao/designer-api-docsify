@@ -4,8 +4,6 @@ Message authentication code (MAC) interface, defining methods for calculating MA
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -13,7 +11,7 @@ Message authentication code (MAC) interface, defining methods for calculating MA
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## doFinal
@@ -25,8 +23,6 @@ doFinal(callback: AsyncCallback<DataBlob>): void
 Finishes the MAC computation and obtains the MAC computation result. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -47,50 +43,6 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 
-**Examples**
-
-For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function hmacByCallback() {
-  let mac = cryptoFramework.createMac('SHA256');
-  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  symKeyGenerator.convertKey(keyBlob, (err, symKey) => {
-    mac.init(symKey, (err) => {
-      mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) }, (err) => {
-        mac.doFinal((err, output) => {
-          console.info('[Callback]: HMAC result: ' + output.data);
-          console.info('[Callback]: MAC len: ' + mac.getMacLength());
-        });
-      });
-    });
-  });
-}
-```
-
-For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function hmacByPromise() {
-  let mac = cryptoFramework.createMac('SHA256');
-  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let symKey = await symKeyGenerator.convertKey(keyBlob);
-  await mac.init(symKey);
-  await mac.update({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
-  let macOutput = await mac.doFinal();
-  console.info('[Promise]: HMAC result: ' + macOutput.data);
-  console.info('[Promise]: MAC len: ' + mac.getMacLength());
-}
-```
-
 ## doFinal
 
 ```TypeScript
@@ -100,8 +52,6 @@ doFinal(): Promise<DataBlob>
 Finishes the MAC computation and obtains the MAC computation result. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -122,21 +72,17 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 
-**Examples**
-
-See [doFinal](#dofinal)
-
 ## doFinalSync
 
 ```TypeScript
 doFinalSync(): DataBlob
 ```
 
-Finishes the MAC computation. This API returns the result synchronously.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Finishes the MAC computation. This API returns the result synchronously.
+
+**NOTE：**It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -146,7 +92,7 @@ Finishes the MAC computation. This API returns the result synchronously.<br><br>
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) |
 
 **Error codes:**
 
@@ -157,44 +103,15 @@ Finishes the MAC computation. This API returns the result synchronously.<br><br>
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 
-**Examples**
-
-For more HMAC operation examples, see [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment).
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function hmacBySync() {
-  let mac = cryptoFramework.createMac('SHA256');
-  let keyBlob: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from('12345678abcdefgh', 'utf-8').buffer) };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let symKey = symKeyGenerator.convertKeySync(keyBlob);
-  mac.initSync(symKey);
-  mac.updateSync({ data: new Uint8Array(buffer.from('hmacTestMessage', 'utf-8').buffer) });
-  let macOutput = mac.doFinalSync();
-  console.info('[Sync]: HMAC result: ' + macOutput.data);
-  console.info('[Sync]: MAC len: ' + mac.getMacLength());
-}
-```
-
 ## getMacLength
 
-ArkTS-Dyn:
 ```TypeScript
 getMacLength(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getMacLength(): int
 ```
 
 Obtains the MAC length, in bytes.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -206,50 +123,13 @@ Obtains the MAC length, in bytes.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function testGetMacLength() {
-  let mac = cryptoFramework.createMac('SHA256');
-  console.info('Mac algName is: ' + mac.algName);
-  let keyData = new Uint8Array([83, 217, 231, 76, 28, 113, 23, 219, 250, 71, 209, 210, 205, 97, 32, 159]);
-  let keyBlob: cryptoFramework.DataBlob = { data: keyData };
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let promiseConvertKey = symKeyGenerator.convertKey(keyBlob);
-  promiseConvertKey.then(symKey => {
-    let promiseMacInit = mac.init(symKey);
-    return promiseMacInit;
-  })
-    .then(() => {
-      let blob: cryptoFramework.DataBlob = { data: new Uint8Array([83]) };
-      let promiseMacUpdate = mac.update(blob);
-      return promiseMacUpdate;
-    })
-    .then(() => {
-      let promiseMacDoFinal = mac.doFinal();
-      return promiseMacDoFinal;
-    })
-    .then(macOutput => {
-      console.info('[Promise]: HMAC result: ' + macOutput.data);
-      let macLen = mac.getMacLength();
-      console.info('MAC len: ' + macLen);
-    })
-    .catch((error: BusinessError) => {
-      console.error(`[Promise] failed: errCode: ${error.code}, errMsg: ${error.message}`);
-    });
-}
-```
 
 ## init
 
@@ -260,8 +140,6 @@ init(key: SymKey, callback: AsyncCallback<void>): void
 Initializes the MAC computation using a symmetric key. This API uses an asynchronous callback to return the result. **init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -293,8 +171,6 @@ init(key: SymKey): Promise<void>
 Initializes the MAC computation using a symmetric key. This API uses a promise to return the result. **init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -328,11 +204,11 @@ Initializes the MAC computation using a symmetric key. This API uses a promise t
 initSync(key: SymKey): void
 ```
 
-Initializes the MAC computation using a symmetric key. This API returns the result synchronously. **initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Initializes the MAC computation using a symmetric key. This API returns the result synchronously. **initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.
+
+**NOTE：**It is recommended to prioritize the use of asynchronous API, init. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -367,8 +243,6 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -379,7 +253,7 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -405,8 +279,6 @@ Updates the MAC status. This API uses a promise to return the result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -417,7 +289,7 @@ Updates the MAC status. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes |
 
 **Return value:**
 
@@ -445,11 +317,10 @@ Updates the MAC status. This API returns the result synchronously.
 > For details about the sample code for calling **updateSync** multiple times in an HMAC operation, see
 > [Generating an HMAC by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#generating-an-hmac-by-passing-in-data-by-segment)
 > .
-<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+
+**NOTE：**It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -459,7 +330,7 @@ Updates the MAC status. This API returns the result synchronously.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| input | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes |
+| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes |
 
 **Error codes:**
 
@@ -480,8 +351,6 @@ Indicates the algorithm name.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

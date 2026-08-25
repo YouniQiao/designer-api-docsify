@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## removeDoNotDisturbProfile
@@ -15,8 +15,6 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>): Promi
 删除勿扰模式配置。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -49,93 +47,16 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>): Promi
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templates: Array<notificationManager.DoNotDisturbProfile> = [
-  {
-    id: 3,
-    name: '工作模式'
-  }
-]
-notificationManager.removeDoNotDisturbProfile(templates).then(() => {
-  console.info('removeDoNotDisturbProfile success.');
-}).catch((err: BusinessError) => {
-  console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templates: Array<notificationManager.DoNotDisturbProfile> = [
-  {
-    id: 3,
-    name: '工作模式'
-  }
-]
-notificationManager.removeDoNotDisturbProfile(templates).then(() => {
-  console.info('removeDoNotDisturbProfile success.');
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`removeDoNotDisturbProfile failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId : number = 100;
-let templates: Array<notificationManager.DoNotDisturbProfile> = [
-  {
-    id: 3,
-    name: '工作模式'
-  }
-]
-notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
-  console.info('removeDoNotDisturbProfile success.');
-}).catch((err: BusinessError) => {
-  console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let userId : int = 100;
-let templates: Array<notificationManager.DoNotDisturbProfile> = [
-  {
-    id: 3,
-    name: '工作模式'
-  }
-]
-notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
-  console.info(`removeDoNotDisturbProfile success. userId: ${userId}, templates: ${JSON.stringify(templates)}`);
-}).catch((err: Error | undefined): void => {
-  console.info(`removeDoNotDisturbProfile error, code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 
 ## removeDoNotDisturbProfile
 
 ```TypeScript
-function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId: int): Promise<void>
+function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId: number): Promise<void>
 ```
 
 删除指定用户的勿扰模式配置。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -150,7 +71,7 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | templates | Array&lt;[DoNotDisturbProfile](arkts-notification-notificationmanager-donotdisturbprofile-i-sys.md)&gt; | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -170,7 +91,3 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600008](../errorcode-notification.md#1600008-用户不存在) |
 | [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-
-**示例**
-
-参见 [removeDoNotDisturbProfile](#removedonotdisturbprofile)

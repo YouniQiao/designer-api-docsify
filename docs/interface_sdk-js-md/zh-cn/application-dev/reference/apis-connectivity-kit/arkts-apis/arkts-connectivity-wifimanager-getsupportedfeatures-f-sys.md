@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getSupportedFeatures
 
 ```TypeScript
-function getSupportedFeatures(): long
+function getSupportedFeatures(): number
 ```
 
 查询设备支持的特性。 检查此设备是否支持指定特性。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -28,7 +26,7 @@ function getSupportedFeatures(): long
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **错误码：**
 
@@ -38,16 +36,3 @@ function getSupportedFeatures(): long
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2401000](../errorcode-wifi.md#2401000-sta内部异常) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-    let ret = wifiManager.getSupportedFeatures();
-    console.info("supportedFeatures:" + ret);
-} catch (error) {
-    console.error("failed:" + JSON.stringify(error));
-}
-```

@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## getSharedPhotoAssets
@@ -23,8 +21,6 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 获取共享的照片资产。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
@@ -53,30 +49,6 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 14000011 |
 
-**示例**
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-
-  try {
-    console.info('getSharedPhotoAssets test start');
-    phAccessHelper.getSharedPhotoAssets(fetchOptions);
-    console.info('getSharedPhotoAssets test end');
-  } catch (err) {
-    console.error(`getSharedPhotoAssets failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
 ## coverUriSource
 
 ```TypeScript
@@ -88,8 +60,6 @@ readonly coverUriSource?: CoverUriSource
 **类型：** [CoverUriSource](arkts-medialibrary-photoaccesshelper-coverurisource-e-sys.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -106,8 +76,6 @@ readonly hidden?: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,8 +94,6 @@ readonly uploadStatus: boolean
 **类型：** boolean
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

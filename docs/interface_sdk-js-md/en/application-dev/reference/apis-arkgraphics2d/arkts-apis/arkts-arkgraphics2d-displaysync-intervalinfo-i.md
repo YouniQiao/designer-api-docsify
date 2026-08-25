@@ -4,44 +4,38 @@ You can obtain the timestamp information from the event callback, including the 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { displaySync } from '@kit.ArkGraphics2D';
+import { displaySync } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## targetTimestamp
 
 ```TypeScript
-targetTimestamp: long
+targetTimestamp: number
 ```
 
 Expected arrival time of the next frame, in nanoseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Time when the current frame arrives, in nanoseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

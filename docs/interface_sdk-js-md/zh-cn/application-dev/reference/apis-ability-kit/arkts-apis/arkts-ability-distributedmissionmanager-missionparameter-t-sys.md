@@ -4,11 +4,9 @@
 export type MissionParameter = _MissionParameter
 ```
 
-作为 [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md) 的入参，表示同步时所需参数的枚举。
+作为 [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md) 的入参，表示同步远端设备任务列表时所需的参数对象，包含deviceId、fixConflict和tag等字段。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

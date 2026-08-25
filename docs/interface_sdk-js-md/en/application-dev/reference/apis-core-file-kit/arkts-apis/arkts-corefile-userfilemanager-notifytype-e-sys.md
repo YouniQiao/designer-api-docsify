@@ -4,8 +4,6 @@ Enumerates the notification event types.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [NotifyType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md)
@@ -23,8 +21,6 @@ NOTIFY_ADD = 0
 A file asset or album is added.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -44,8 +40,6 @@ A file asset or album is updated.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [NOTIFY_UPDATE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_update)
@@ -63,8 +57,6 @@ NOTIFY_REMOVE = 2
 A file asset or album is removed.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -84,8 +76,6 @@ A file asset is added to the album.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [NOTIFY_ALBUM_ADD_ASSET](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-notifytype-e.md#notify_album_add_asset)
@@ -103,8 +93,6 @@ NOTIFY_ALBUM_REMOVE_ASSET = 4
 A file asset is removed from the album.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 

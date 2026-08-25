@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.CommonType
 
 ## 导入模块
 
 ```TypeScript
-import { commonType } from '@kit.ArkData';
+import { commonType } from 'kits/@kit.ArkData';
 ```
 
 ## 汇总

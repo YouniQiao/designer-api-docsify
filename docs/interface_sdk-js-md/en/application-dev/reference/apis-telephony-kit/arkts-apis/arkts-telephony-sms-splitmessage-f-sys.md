@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## splitMessage
@@ -15,8 +15,6 @@ function splitMessage(content: string, callback: AsyncCallback<Array<string>>): 
 Splits an SMS message into multiple segments. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
@@ -43,31 +41,6 @@ Splits an SMS message into multiple segments. This API uses an asynchronous call
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let content: string = "long message";
-sms.splitMessage(content, (err: BusinessError, data: string[]) => {
-      console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let content: string = "long message";
-let promise = sms.splitMessage(content);
-promise.then((data: string[]) => {
-    console.info(`splitMessage success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`splitMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## splitMessage
 
@@ -78,8 +51,6 @@ function splitMessage(content: string): Promise<Array<string>>
 Splits an SMS message into multiple segments. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
@@ -110,7 +81,3 @@ Splits an SMS message into multiple segments. This API uses a promise to return 
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [splitMessage](#splitmessage)

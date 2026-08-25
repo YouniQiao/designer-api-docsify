@@ -1,7 +1,7 @@
 # Span
 
 As a child of the Text and ContainerSpan components, the **Span** component is used to display inline text.
-> **NOTE**>> This component is supported since API version 10. It can inherit attribute settings from its parent component> **Text**. This means that, if an attribute is not set in this component, it takes the value (if any) of the> attribute from its parent component. Only the following attributes can be inherited: **fontColor**, **fontSize**,> **fontStyle**, **fontWeight**, **decoration**, **letterSpacing**, **textCase**, **fontFamily**, and **textShadow**.>> The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not> supported. To set universal attributes, use Text for configuration or use> CustomSpan in the Styled String for custom drawing.>> Among [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), only> onClick click events and> onHover hover events are supported.
+> **NOTE**>> This component is supported since API version 10. It can inherit attribute settings from its parent component> **Text**. This means that, if an attribute is not set in this component, it takes the value (if any) of the> attribute from its parent component. Only the following attributes can be inherited: **fontColor**, **fontSize**,> **fontStyle**, **fontWeight**, **decoration**, **letterSpacing**, **textCase**, **fontFamily**, and **textShadow**.>> The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not> supported. To set universal attributes, use Text for configuration or use> [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md) in the Styled String for custom drawing.>> Among [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), only> onClick click events and> onHover hover events are supported.
 
 ## Child Components
 
@@ -16,8 +16,6 @@ Span(value: string | Resource)
 Defines the constructor of Span.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

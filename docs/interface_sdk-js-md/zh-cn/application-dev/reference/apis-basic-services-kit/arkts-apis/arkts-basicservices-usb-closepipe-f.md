@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## closePipe
@@ -15,8 +15,6 @@ function closePipe(pipe: USBDevicePipe): number
 关闭设备消息控制通道。需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备列表；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限；调用 [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)得到devicepipe作为参数。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -35,10 +33,3 @@ function closePipe(pipe: USBDevicePipe): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-let ret = usb.closePipe(devicepipe);
-console.info(`closePipe = ${ret}`);
-```

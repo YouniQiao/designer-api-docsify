@@ -4,14 +4,12 @@ Before a card with tags is read or written, **[TagInfo](arkts-connectivity-tag-t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## extrasData
@@ -25,8 +23,6 @@ Extended attribute value of the tag technology.
 **Type:** [PacMap](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-pacmap-i.md)[]
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -46,8 +42,6 @@ Remote object of the NFC service process used for interface communication betwee
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **System capability:** SystemCapability.Communication.NFC.Tag
@@ -57,16 +51,14 @@ Remote object of the NFC service process used for interface communication betwee
 ## tagRfDiscId
 
 ```TypeScript
-tagRfDiscId: int
+tagRfDiscId: number
 ```
 
 ID allocated when the tag is discovered.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 

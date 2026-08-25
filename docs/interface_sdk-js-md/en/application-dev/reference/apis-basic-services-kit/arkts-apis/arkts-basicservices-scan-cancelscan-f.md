@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## cancelScan
@@ -15,8 +15,6 @@ function cancelScan(scannerId: string): Promise<void>
 Cancels scanning. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -39,17 +37,3 @@ Cancels scanning. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let scannerId: string = 'scanner_001';
-scan.cancelScan(scannerId).then(() => {
-    console.info('cancel scan success');
-}).catch((error: BusinessError) => {
-    console.error('cancel scan failed: ' + JSON.stringify(error));
-})
-```

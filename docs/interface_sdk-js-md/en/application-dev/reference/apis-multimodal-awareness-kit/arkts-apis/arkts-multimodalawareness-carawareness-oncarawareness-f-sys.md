@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onCarAwareness
@@ -16,8 +16,6 @@ function onCarAwareness(capability: Capability, callback: Callback<CarAwarenessI
 Enables vehicle awareness and subscribes to vehicle awareness results. If this function is not supported, no callback will be triggered. You can use the getAllCapacityList method to obtain the supported capabilities.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

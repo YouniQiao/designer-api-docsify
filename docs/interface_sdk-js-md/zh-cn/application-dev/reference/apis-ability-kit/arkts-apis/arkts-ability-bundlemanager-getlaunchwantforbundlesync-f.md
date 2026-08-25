@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getLaunchWantForBundleSync
 
 ```TypeScript
-function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want
+function getLaunchWantForBundleSync(bundleName: string, userId?: number): Want
 ```
 
 根据给定的包名和用户ID，获取用于启动应用程序的Want参数。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本24+：ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
@@ -29,7 +27,7 @@ function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| userId | number | 否 |
 
 **返回值：**
 
@@ -47,42 +45,3 @@ function getLaunchWantForBundleSync(bundleName: string, userId?: int): Want
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
-
-**示例**
-
-```TypeScript
-// 示例接口含有userId参数，获取用于启动指定用户下的应用程序所需的Want参数
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-let userId = 100;
-
-try {
-  let want: Want = bundleManager.getLaunchWantForBundleSync(bundleName, userId);
-  hilog.info(0x0000, 'testTag', 'getLaunchWantForBundleSync successfully. Data: %{public}s', JSON.stringify(want));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getLaunchWantForBundleSync failed. Cause: %{public}s', message);
-}
-```
-
-```TypeScript
-// 示例接口不含userId参数，获取用于启动当前用户下的应用程序所需的Want参数
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-
-try {
-  let want: Want = bundleManager.getLaunchWantForBundleSync(bundleName);
-  hilog.info(0x0000, 'testTag', 'getLaunchWantForBundleSync successfully. Data: %{public}s', JSON.stringify(want));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getLaunchWantForBundleSync failed. Cause: %{public}s', message);
-}
-```

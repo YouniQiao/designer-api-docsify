@@ -4,8 +4,6 @@ Enumerates intelligent voice error code. @enum {number}
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ INTELLIGENT_VOICE_NO_MEMORY = 22700101
 No memory.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -36,8 +32,6 @@ Invalid parameter.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ INTELLIGENT_VOICE_INIT_FAILED = 22700103
 Init failed.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -68,8 +60,6 @@ Failed to commit the enrollment.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ INTELLIGENT_VOICE_START_CAPTURER_FAILED = 22700105
 Start capturer failed.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -100,8 +88,6 @@ Read failed.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ INTELLIGENT_VOICE_SYSTEM_ERROR = 22700107
 System error.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

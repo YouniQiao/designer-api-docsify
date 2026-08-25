@@ -4,14 +4,12 @@ Provides methods to accessing bluetooth audio related capabilities.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from '@kit.ConnectivityKit';
+import { a2dp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

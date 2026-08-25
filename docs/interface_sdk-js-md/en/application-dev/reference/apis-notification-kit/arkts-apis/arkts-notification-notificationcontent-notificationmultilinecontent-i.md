@@ -16,8 +16,6 @@ Describes the multi-line text notification. This API is inherited from Notificat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## briefText
@@ -31,8 +29,6 @@ Notification summary content, which is a summary of the notification content and
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -48,8 +44,6 @@ List of multi-line text displayed after the notification is expanded. Each line 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## longTitle
@@ -63,7 +57,5 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

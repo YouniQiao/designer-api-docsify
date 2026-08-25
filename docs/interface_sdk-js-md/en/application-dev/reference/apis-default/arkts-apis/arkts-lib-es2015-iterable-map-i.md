@@ -1,7 +1,5 @@
 # Map
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -15,8 +13,6 @@
 
 Returns an iterable of entries in the map.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -28,8 +24,6 @@ entries(): IterableIterator<[K, V]>
 ```
 
 Returns an iterable of key, value pairs for every entry in the map.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -43,8 +37,6 @@ keys(): IterableIterator<K>
 
 Returns an iterable of keys in the map
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -56,8 +48,6 @@ values(): IterableIterator<V>
 ```
 
 Returns an iterable of values in the map
-
-**ArkTS mode:** 
 
 **Return value:**
 

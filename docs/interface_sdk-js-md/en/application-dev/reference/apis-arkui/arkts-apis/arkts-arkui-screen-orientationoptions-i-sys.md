@@ -4,8 +4,6 @@ The parameters for setting orientation
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The parameters for setting orientation
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## ignoreRotationLock
@@ -29,8 +27,6 @@ Whether to ignore rotation lock. The value true means allowing the screen to rot
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,8 +47,6 @@ Whether to need animation. The value true means rotating the screen with animati
 **Default:** true
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

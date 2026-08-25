@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## kill
@@ -15,8 +15,6 @@ function kill(signal: number, pid: number): boolean
 发送信号到指定进程，结束该进程。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -36,19 +34,3 @@ function kill(signal: number, pid: number): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let pid = process.pid;
-let result = process.kill(28, pid);
-```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// 获取当前进程pid
-let pres = process.pid;
-// 发送信号28结束当前进程
-let result = processManager.kill(28, pres);
-```

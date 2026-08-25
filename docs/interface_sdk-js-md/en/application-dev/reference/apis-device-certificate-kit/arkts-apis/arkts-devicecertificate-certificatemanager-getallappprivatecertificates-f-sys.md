@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getAllAppPrivateCertificates
@@ -15,8 +15,6 @@ function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void
 Obtains all private credentials. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
@@ -39,53 +37,6 @@ Obtains all private credentials. This API uses an asynchronous callback to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-
-try {
-  certificateManager.getAllAppPrivateCertificates((err, cmResult) => {
-    if (err != null) {
-      console.error(`Failed to get all app private certificates. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      if (cmResult === undefined) { // If the number of private credentials is 0, return undefined in cmResult.
-        console.info('The count of the app private certificates is 0.');
-      } else if (cmResult.credentialList == undefined) {
-        console.info('The result of getting all app private certificates is undefined.');
-      } else {
-        let list = cmResult.credentialList;
-        console.info('Succeeded in getting all app private certificates.');
-      }
-    }
-  });
-} catch (error) {
-  console.error(`Failed to get all app private certificates. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  certificateManager.getAllAppPrivateCertificates().then((cmResult) => {
-    if (cmResult === undefined) { // If the number of private credentials is 0, return undefined in cmResult.
-      console.info('The count of the app private certificates is 0.');
-    } else if (cmResult.credentialList == undefined) {
-      console.info('The result of getting all app private certificates is undefined.');
-    } else {
-      let list = cmResult.credentialList;
-      console.info('Succeeded in getting all app private certificates.');
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get all app private certificates. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to get all app private certificates. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## getAllAppPrivateCertificates
 
@@ -96,8 +47,6 @@ function getAllAppPrivateCertificates(): Promise<CMResult>
 Obtains all private credentials. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
@@ -118,7 +67,3 @@ Obtains all private credentials. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
-
-**Examples**
-
-See [getAllAppPrivateCertificates](#getallappprivatecertificates)

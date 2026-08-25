@@ -4,14 +4,12 @@ Defines image source initialization options.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## svgResourceLimitLevel
@@ -25,8 +23,6 @@ SVG resource limit level used when parsing and rendering an SVG image. The limit
 **Type:** [SVGResourceLimitLevel](arkts-image-image-svgresourcelimitlevel-e-sys.md)
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## onTemplateFormDetailInfoChange
@@ -15,8 +15,6 @@ function onTemplateFormDetailInfoChange(callback: formInfo.TemplateFormDetailInf
 Subscribes to changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -39,22 +37,3 @@ Subscribes to changes in the static configuration information of template widget
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
-
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const callback: formInfo.TemplateFormDetailInfoCallback = (info: formInfo.TemplateFormDetailInfo[]) => {
-    for (let templateFormDetailInfo of info) {
-      console.info(`TemplateFormDetailInfoCallback bundleName: ${templateFormDetailInfo.bundleName}, moduleName: ${templateFormDetailInfo.moduleName}, formName: ${templateFormDetailInfo.formName}`);
-    }
-  };
-  formHost.onTemplateFormDetailInfoChange(callback);
-  console.info(`onTemplateFormDetailInfoChange success`);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```

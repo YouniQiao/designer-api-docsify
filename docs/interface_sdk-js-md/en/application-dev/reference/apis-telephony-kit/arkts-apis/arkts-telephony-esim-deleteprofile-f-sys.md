@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## deleteProfile
 
 ```TypeScript
-function deleteProfile(slotId: int, iccid: string): Promise<ResultCode>
+function deleteProfile(slotId: number, iccid: string): Promise<ResultCode>
 ```
 
 Deletes a profile. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
@@ -28,7 +26,7 @@ Deletes a profile. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | iccid | string | Yes |
 
 **Return value:**
@@ -47,16 +45,3 @@ Deletes a profile. This API uses a promise to return the result.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
 | [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { eSIM } from '@kit.TelephonyKit';
-
-eSIM.deleteProfile(1, 'testId').then(() => {
-    console.info(`deleteProfile invoking succeeded.`);
-}).catch((err: BusinessError<void>) => {
-    console.error(`deleteProfile, ErrorState: err->${JSON.stringify(err)}`);
-});
-```

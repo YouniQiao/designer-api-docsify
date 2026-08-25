@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## 汇总
@@ -29,15 +27,9 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 | [off](arkts-backgroundtasks-backgroundtaskmanager-off-f.md#offcontinuoustaskcancel) |
 | [off](arkts-backgroundtasks-backgroundtaskmanager-off-f.md#offcontinuoustasksuspend) |
 | [off](arkts-backgroundtasks-backgroundtaskmanager-off-f.md#offcontinuoustaskactive) |
-| [offContinuousTaskActive](arkts-backgroundtasks-backgroundtaskmanager-offcontinuoustaskactive-f.md) |
-| [offContinuousTaskCancel](arkts-backgroundtasks-backgroundtaskmanager-offcontinuoustaskcancel-f.md) |
-| [offContinuousTaskSuspend](arkts-backgroundtasks-backgroundtaskmanager-offcontinuoustasksuspend-f.md) |
 | [on](arkts-backgroundtasks-backgroundtaskmanager-on-f.md#oncontinuoustaskcancel) |
 | [on](arkts-backgroundtasks-backgroundtaskmanager-on-f.md#oncontinuoustasksuspend) |
 | [on](arkts-backgroundtasks-backgroundtaskmanager-on-f.md#oncontinuoustaskactive) |
-| [onContinuousTaskActive](arkts-backgroundtasks-backgroundtaskmanager-oncontinuoustaskactive-f.md) |
-| [onContinuousTaskCancel](arkts-backgroundtasks-backgroundtaskmanager-oncontinuoustaskcancel-f.md) |
-| [onContinuousTaskSuspend](arkts-backgroundtasks-backgroundtaskmanager-oncontinuoustasksuspend-f.md) |
 | [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md) |
 | [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md) |
 | [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md) |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedRunningBundles
@@ -15,8 +15,6 @@ function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<
 获取当前用户下的应用运行禁止名单。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -47,64 +45,6 @@ function getDisallowedRunningBundles(admin: Want, callback: AsyncCallback<Array<
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-});
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-});
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getDisallowedRunningBundles
 
@@ -115,8 +55,6 @@ function getDisallowedRunningBundles(admin: Want, userId: number, callback: Asyn
 获取指定用户（通过userId指定）下的应用运行禁止名单。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -148,10 +86,6 @@ function getDisallowedRunningBundles(admin: Want, userId: number, callback: Asyn
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [getDisallowedRunningBundles](#getdisallowedrunningbundles)
-
 
 ## getDisallowedRunningBundles
 
@@ -162,8 +96,6 @@ function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Arra
 获取当前/指定用户下的应用运行禁止名单，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -199,7 +131,3 @@ function getDisallowedRunningBundles(admin: Want, userId?: number): Promise<Arra
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getDisallowedRunningBundles](#getdisallowedrunningbundles)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## getDevice
@@ -20,8 +20,6 @@ Obtains the information about the input device with the specified ID. This API u
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** getDeviceInfo
@@ -34,56 +32,6 @@ Obtains the information about the input device with the specified ID. This API u
 | --- | --- | --- |
 | deviceId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          // Obtain the name of the device whose ID is 1.
-          inputDevice.getDevice(1, (error: BusinessError, deviceData: inputDevice.InputDeviceData) => {
-            if (error) {
-              console.error(`Failed to get device info, error: ${JSON.stringify(error, [`code`, `message`])}`);
-              return;
-            }
-            console.info(`Device info: ${JSON.stringify(deviceData)}`);
-          });
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          // Obtain the name of the device whose ID is 1.
-          inputDevice.getDevice(1).then((deviceData: inputDevice.InputDeviceData) => {
-            console.info(`Device info: ${JSON.stringify(deviceData)}`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to get device info, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          })
-        })
-    }
-  }
-}
-```
 
 
 ## getDevice
@@ -99,8 +47,6 @@ Obtains the information about the input device with the specified ID. This API u
 > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md) instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -119,7 +65,3 @@ Obtains the information about the input device with the specified ID. This API u
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; |
-
-**Examples**
-
-See [getDevice](#getdevice)

@@ -4,31 +4,13 @@ Defines a content form card.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { ContentFormCard, FormType } from '@kit.ArkData';
+import { ContentFormCard, FormType } from 'kits/@kit.ArkData';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## contentFormData
 
@@ -42,8 +24,6 @@ Data of the form card.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -51,7 +31,7 @@ Data of the form card.
 ## formHeight
 
 ```TypeScript
-formHeight?: double
+formHeight?: number
 ```
 
 Height of the content form card. The unit of measurement is vp.
@@ -59,8 +39,6 @@ Height of the content form card. The unit of measurement is vp.
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,8 +56,6 @@ Type of the form card.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -87,7 +63,7 @@ Type of the form card.
 ## formWidth
 
 ```TypeScript
-formWidth?: double
+formWidth?: number
 ```
 
 Width of the content form card. The unit of measurement is vp.
@@ -95,8 +71,6 @@ Width of the content form card. The unit of measurement is vp.
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,8 +87,6 @@ Callback to be invoked when the form card is tapped.
 **Type:** Function
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

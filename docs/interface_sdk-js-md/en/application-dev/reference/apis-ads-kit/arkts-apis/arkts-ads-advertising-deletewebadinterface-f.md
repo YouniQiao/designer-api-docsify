@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## deleteWebAdInterface
@@ -15,8 +15,6 @@ function deleteWebAdInterface(controller: web_webview.WebviewController, needRef
 Deletes the ad JavaScript object injected through **registerWebAdInterface** (this API is only open to some pre-installed system applications).
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
@@ -35,29 +33,3 @@ Deletes the ad JavaScript object injected through **registerWebAdInterface** (th
 | --- |
 | [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | [21800001](../errorcode-ads.md#21800001-internal-system-error) |
-
-**Examples**
-
-```TypeScript
-import { advertising } from '@kit.AdsKit';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct Index {
-  private webViewController: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteWebAdInterface')
-        .onClick(() => {
-          advertising.deleteWebAdInterface(this.webViewController, true);
-        })
-
-      Web({ src: 'https://www.example.com', controller: this.webViewController })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```

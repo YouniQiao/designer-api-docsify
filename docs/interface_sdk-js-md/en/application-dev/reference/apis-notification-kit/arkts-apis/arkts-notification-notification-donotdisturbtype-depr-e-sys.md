@@ -4,8 +4,6 @@ Defines the DND time type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
@@ -23,8 +21,6 @@ TYPE_NONE = 0
 Non-DND.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ One-shot DND at the specified time segment (only considering the hour and minute
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [TYPE_ONCE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_once)
@@ -64,8 +58,6 @@ Daily DND at the specified time segment (only considering the hour and minute).
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [TYPE_DAILY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_daily)
@@ -83,8 +75,6 @@ TYPE_CLEARLY = 3
 DND at the specified time segment (considering the year, month, day, hour, and minute).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -6,14 +6,12 @@ Sendable PixelMap instance.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## applyColorSpace
@@ -25,8 +23,6 @@ applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<
 Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result.This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -51,24 +47,6 @@ Apply color space of pixelmap, the pixels will be changed by input color space. 
 | [62980108](../errorcode-image.md#62980108-image-color-conversion-error) |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-    let colorSpaceName = colorSpaceManager.ColorSpace.SRGB; // The colorSpaceManager.ColorSpace object is supported only on 2-in-1 devices/PCs.
-    let targetColorSpace: colorSpaceManager.ColorSpaceManager = colorSpaceManager.create(colorSpaceName);
-    pixelMap.applyColorSpace(targetColorSpace).then(() => {
-        console.info('Succeeded in applying color space for pixelmap object.');
-    }).catch((error: BusinessError) => {
-        console.error(`Failed to apply color space for pixelmap object. code is ${error.code}, message is ${error.message}`); 
-    })
-}
-```
-
 ## createAlphaPixelmap
 
 ```TypeScript
@@ -78,8 +56,6 @@ createAlphaPixelmap(): Promise<PixelMap>
 Obtains new pixelmap with alpha information. This method uses a promise to return the information.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -91,23 +67,6 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 | --- |
 | Promise & lt;PixelMap & gt; |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  if (pixelMap != undefined) {
-    pixelMap.createAlphaPixelmap().then((alphaPixelMap: sendableImage.PixelMap) => {
-      console.info('Succeeded in creating alpha pixelmap.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to create alpha pixelmap. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
-
 ## createAlphaPixelmapSync
 
 ```TypeScript
@@ -117,8 +76,6 @@ createAlphaPixelmapSync(): PixelMap
 Obtains new pixelmap with alpha information.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -137,17 +94,6 @@ Obtains new pixelmap with alpha information.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let resPixelMap : sendableImage.PixelMap = pixelMap.createAlphaPixelmapSync();
-  return resPixelMap;
-}
-```
-
 ## crop
 
 ```TypeScript
@@ -157,8 +103,6 @@ crop(region: image.Region): Promise<void>
 Crop the image. This method uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -175,26 +119,6 @@ Crop the image. This method uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
-  if (pixelMap != undefined) {
-    pixelMap.crop(region).then(() => {
-      console.info('Succeeded in cropping pixelmap.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to crop pixelmap. code is ${err.code}, message is ${err.message}`);
-
-    });
-  }
-}
-```
 
 ## cropSync
 
@@ -206,8 +130,6 @@ Crop the image.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -225,20 +147,6 @@ Crop the image.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let region : image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
-  if (pixelMap != undefined) {
-    pixelMap.cropSync(region);
-  }
-}
-```
-
 ## flip
 
 ```TypeScript
@@ -248,8 +156,6 @@ flip(horizontal: boolean, vertical: boolean): Promise<void>
 Image flipping. This method uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -268,26 +174,6 @@ Image flipping. This method uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let horizontal: boolean = true;
-  let vertical: boolean = false;
-  if (pixelMap != undefined) {
-    pixelMap.flip(horizontal, vertical).then(() => {
-      console.info('Succeeded in flipping pixelmap.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to flip pixelmap. code is ${err.code}, message is ${err.message}`);
-
-    })
-  }
-}
-```
-
 ## flipSync
 
 ```TypeScript
@@ -297,8 +183,6 @@ flipSync(horizontal: boolean, vertical: boolean): void
 Image flipping.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -318,20 +202,6 @@ Image flipping.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let horizontal : boolean = true;
-  let vertical : boolean = false;
-  if (pixelMap != undefined) {
-    pixelMap.flipSync(horizontal, vertical);
-  }
-}
-```
-
 ## getBytesNumberPerRow
 
 ```TypeScript
@@ -341,8 +211,6 @@ getBytesNumberPerRow(): number
 Obtains the number of bytes in each line of the image pixelmap.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -354,16 +222,6 @@ Obtains the number of bytes in each line of the image pixelmap.
 | --- |
 | number |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let rowCount: number = pixelMap.getBytesNumberPerRow();
-}
-```
-
 ## getColorSpace
 
 ```TypeScript
@@ -373,8 +231,6 @@ getColorSpace(): colorSpaceManager.ColorSpaceManager
 Get color space of pixelmap.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -392,18 +248,6 @@ Get color space of pixelmap.
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  if (pixelMap != undefined) {
-    let csm = pixelMap.getColorSpace();
-  }
-}
-```
-
 ## getDensity
 
 ```TypeScript
@@ -413,8 +257,6 @@ getDensity(): number
 Obtains the density of the image pixelmap.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -426,16 +268,6 @@ Obtains the density of the image pixelmap.
 | --- |
 | number |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let getDensity: number = pixelMap.getDensity();
-}
-```
-
 ## getImageInfo
 
 ```TypeScript
@@ -445,8 +277,6 @@ getImageInfo(): Promise<image.ImageInfo>
 Obtains pixelmap information about this image. This method uses a promise to return the information.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -458,26 +288,6 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 | --- |
 | Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  if (pixelMap != undefined) {
-    pixelMap.getImageInfo().then((imageInfo: image.ImageInfo) => {
-      if (imageInfo != undefined) {
-        console.info("Succeeded in obtaining the image pixel map information."+ imageInfo.size.height);
-      }
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to obtain the image pixel map information. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
-
 ## getImageInfoSync
 
 ```TypeScript
@@ -487,8 +297,6 @@ getImageInfoSync(): image.ImageInfo
 Get image information from image source.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -506,19 +314,6 @@ Get image information from image source.
 | --- |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  if (pixelMap != undefined) {
-    let imageInfo : image.ImageInfo = pixelMap.getImageInfoSync();
-  }
-}
-```
-
 ## getPixelBytesNumber
 
 ```TypeScript
@@ -528,8 +323,6 @@ getPixelBytesNumber(): number
 Obtains the total number of bytes of the image pixelmap.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -541,16 +334,6 @@ Obtains the total number of bytes of the image pixelmap.
 | --- |
 | number |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let pixelBytesNumber: number = pixelMap.getPixelBytesNumber();
-}
-```
-
 ## marshalling
 
 ```TypeScript
@@ -560,8 +343,6 @@ marshalling(sequence: rpc.MessageSequence): void
 Marshalling PixelMap and write into MessageSequence.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -578,65 +359,6 @@ Marshalling PixelMap and write into MessageSequence.
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
 | [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-import { rpc } from '@kit.IPCKit';
-
-class MySequence implements rpc.Parcelable {
-  pixel_map: sendableImage.PixelMap;
-  constructor(conPixelMap : sendableImage.PixelMap) {
-    this.pixel_map = conPixelMap;
-  }
-  marshalling(messageSequence : rpc.MessageSequence) {
-    this.pixel_map.marshalling(messageSequence);
-    console.info('marshalling');
-    return true;
-  }
-  unmarshalling(messageSequence : rpc.MessageSequence) {
-    sendableImage.createPixelMap(new ArrayBuffer(96), {size: { height:4, width: 6}}).then((pixelParcel: sendableImage.PixelMap) => {
-      pixelParcel.unmarshalling(messageSequence).then(async (pixelMap: sendableImage.PixelMap) => {
-        this.pixel_map = pixelMap;
-        pixelMap.getImageInfo().then((imageInfo: image.ImageInfo) => {
-          console.info("unmarshalling information h:" + imageInfo.size.height + "w:" + imageInfo.size.width);
-        })
-      })
-    });
-    return true;
-  }
-}
-
-async function Demo() {
-  const color: ArrayBuffer = new ArrayBuffer(96);
-  let bufferArr: Uint8Array = new Uint8Array(color);
-  for (let i = 0; i < bufferArr.length; i++) {
-    bufferArr[i] = 0x80;
-  }
-  let opts: image.InitializationOptions = {
-    editable: true,
-    pixelFormat: 4,
-    size: { height: 4, width: 6 },
-    alphaType: 3
-  }
-  let pixelMap: sendableImage.PixelMap | undefined = undefined;
-  await sendableImage.createPixelMap(color, opts).then((srcPixelMap: sendableImage.PixelMap) => {
-    pixelMap = srcPixelMap;
-  })
-  if (pixelMap != undefined) {
-    // Implement serialization.
-    let parcelable: MySequence = new MySequence(pixelMap);
-    let data: rpc.MessageSequence = rpc.MessageSequence.create();
-    data.writeParcelable(parcelable);
-
-    // Implement deserialization to obtain data through the RPC.
-    let ret: MySequence = new MySequence(pixelMap);
-    data.readParcelable(ret);
-  }
-}
-```
-
 ## opacity
 
 ```TypeScript
@@ -646,8 +368,6 @@ opacity(rate: number): Promise<void>
 Set the transparent rate of pixelmap. This method uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -664,24 +384,6 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let rate: number = 0.5;
-  if (pixelMap != undefined) {
-    pixelMap.opacity(rate).then(() => {
-      console.info('Succeeded in setting opacity.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to set opacity. code is ${err.code}, message is ${err.message}`);
-    })
-  }
-}
-```
 
 ## opacitySync
 
@@ -693,8 +395,6 @@ Set the transparent rate of pixelmap.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -712,19 +412,6 @@ Set the transparent rate of pixelmap.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let rate : number = 0.5;
-  if (pixelMap != undefined) {
-    pixelMap.opacitySync(rate);
-  }
-}
-```
-
 ## readPixels
 
 ```TypeScript
@@ -734,8 +421,6 @@ readPixels(area: image.PositionArea): Promise<void>
 Reads image pixelmap data in an area. This method uses a promise to return the data read.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -752,30 +437,6 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  const area: image.PositionArea = {
-    pixels: new ArrayBuffer(8),
-    offset: 0,
-    stride: 8,
-    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
-  };
-  if (pixelMap != undefined) {
-    pixelMap.readPixels(area).then(() => {
-      console.info('Succeeded in reading the image data in the area.'); // Called if the condition is met.
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to read the image data in the area. code is ${error.code}, message is ${error.message}`); // Called if no condition is met.
-    })
-  }
-}
-```
 
 ## readPixelsSync
 
@@ -787,8 +448,6 @@ Reads image pixelmap data in an area.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -806,25 +465,6 @@ Reads image pixelmap data in an area.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  const area : image.PositionArea = {
-    pixels: new ArrayBuffer(8),
-    offset: 0,
-    stride: 8,
-    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
-  };
-  if (pixelMap != undefined) {
-    pixelMap.readPixelsSync(area);
-  }
-}
-```
-
 ## readPixelsToBuffer
 
 ```TypeScript
@@ -834,8 +474,6 @@ readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 Reads image pixelmap data and writes the data to an ArrayBuffer. This method uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -852,24 +490,6 @@ Reads image pixelmap data and writes the data to an ArrayBuffer. This method use
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  const readBuffer: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
-  if (pixelMap != undefined) {
-    pixelMap.readPixelsToBuffer(readBuffer).then(() => {
-      console.info('Succeeded in reading image pixel data.'); // Called if the condition is met.
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to read image pixel data. code is ${error.code}, message is ${error.message}`); // Called if no condition is met.
-    })
-  }
-}
-```
 
 ## readPixelsToBufferSync
 
@@ -881,8 +501,6 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -900,20 +518,6 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap: sendableImage.PixelMap) {
-  const bufferSize = pixelMap.getPixelBytesNumber();
-  const readBuffer: ArrayBuffer = new ArrayBuffer(bufferSize);
-  if (pixelMap != undefined) {
-    pixelMap.readPixelsToBufferSync(readBuffer);
-  }
-}
-```
-
 ## release
 
 ```TypeScript
@@ -924,8 +528,6 @@ Releases this PixelMap object. This method uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -935,77 +537,6 @@ Releases this PixelMap object. This method uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap: sendableImage.PixelMap) {
-  if (pixelMap != undefined) {
-    await pixelMap.release().then(() => {
-      console.info('Succeeded in releasing pixelmap object.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to release pixelmap object. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(context : Context) {
-  const path: string = context.cacheDir + "/test.jpg";
-  const sendableImageSourceObj: sendableImage.ImageSource = sendableImage.createImageSource(path);
-  sendableImageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Demo() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  let img = await receiver.readNextImage();
-  img.release().then(() => {
-    console.info('release succeeded.');
-  }).catch((error: BusinessError) => {
-    console.error(`release failed. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-async function Demo() {
-  let size: image.Size = {
-    height: 8192,
-    width: 8
-  }
-  let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-  receiver.release().then(() => {
-    console.info('release succeeded.');
-  }).catch((error: BusinessError) => {
-    console.error(`release failed. code ${error.code}, message is ${error.message}`);
-  })
-}
-```
 
 ## rotate
 
@@ -1017,8 +548,6 @@ Image rotation. This method uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1034,24 +563,6 @@ Image rotation. This method uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let angle: number = 90.0;
-  if (pixelMap != undefined) {
-    pixelMap.rotate(angle).then(() => {
-      console.info('Succeeded in rotating pixelmap.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to rotate pixelmap. code is ${err.code}, message is ${err.message}`);
-    })
-  }
-}
-```
 
 ## rotateSync
 
@@ -1063,8 +574,6 @@ Image rotation.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1082,19 +591,6 @@ Image rotation.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let angle : number = 90.0;
-  if (pixelMap != undefined) {
-    pixelMap.rotateSync(angle);
-  }
-}
-```
-
 ## scale
 
 ```TypeScript
@@ -1104,8 +600,6 @@ scale(x: number, y: number): Promise<void>
 Image zoom in width and height. This method uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1124,26 +618,6 @@ Image zoom in width and height. This method uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let scaleX: number = 2.0;
-  let scaleY: number = 1.0;
-  if (pixelMap != undefined) {
-    pixelMap.scale(scaleX, scaleY).then(() => {
-      console.info('Succeeded in scaling pixelmap.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to scale pixelmap. code is ${err.code}, message is ${err.message}`);
-
-    })
-  }
-}
-```
-
 ## scaleSync
 
 ```TypeScript
@@ -1153,8 +627,6 @@ scaleSync(x: number, y: number): void
 Image zoom in width and height.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1174,20 +646,6 @@ Image zoom in width and height.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let scaleX: number = 2.0;
-  let scaleY: number = 1.0;
-  if (pixelMap != undefined) {
-    pixelMap.scaleSync(scaleX, scaleY);
-  }
-}
-```
-
 ## setColorSpace
 
 ```TypeScript
@@ -1197,8 +655,6 @@ setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 Set color space of pixelmap.This method is only used to set the colorspace property of PixelMap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1215,21 +671,6 @@ Set color space of pixelmap.This method is only used to set the colorspace prope
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let colorSpaceName = colorSpaceManager.ColorSpace.SRGB; // The colorSpaceManager.ColorSpace object is supported only on 2-in-1 devices/PCs.
-  let csm: colorSpaceManager.ColorSpaceManager = colorSpaceManager.create(colorSpaceName);
-  if (pixelMap != undefined) {
-    pixelMap.setColorSpace(csm);
-  }
-}
-```
-
 ## translate
 
 ```TypeScript
@@ -1239,8 +680,6 @@ translate(x: number, y: number): Promise<void>
 Image position transformation. This method uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1259,25 +698,6 @@ Image position transformation. This method uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let translateX: number = 50.0;
-  let translateY: number = 10.0;
-  if (pixelMap != undefined) {
-    pixelMap.translate(translateX, translateY).then(() => {
-      console.info('Succeeded in translating pixelmap.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to translate pixelmap. code is ${err.code}, message is ${err.message}`);
-    })
-  }
-}
-```
-
 ## translateSync
 
 ```TypeScript
@@ -1287,8 +707,6 @@ translateSync(x: number, y: number): void
 Image position transformation.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1308,20 +726,6 @@ Image position transformation.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  let translateX : number = 50.0;
-  let translateY : number = 10.0;
-  if (pixelMap != undefined) {
-    pixelMap.translateSync(translateX, translateY);
-  }
-}
-```
-
 ## unmarshalling
 
 ```TypeScript
@@ -1331,8 +735,6 @@ unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>
 Creates a PixelMap object based on MessageSequence parameter.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1356,65 +758,6 @@ Creates a PixelMap object based on MessageSequence parameter.
 | [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
 | [62980096](../errorcode-image.md#62980096-operation-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-import { rpc } from '@kit.IPCKit';
-
-class MySequence implements rpc.Parcelable {
-  pixel_map: sendableImage.PixelMap;
-  constructor(conPixelMap: sendableImage.PixelMap) {
-    this.pixel_map = conPixelMap;
-  }
-  marshalling(messageSequence: rpc.MessageSequence) {
-    this.pixel_map.marshalling(messageSequence);
-    console.info('marshalling');
-    return true;
-  }
-  unmarshalling(messageSequence: rpc.MessageSequence) {
-    sendableImage.createPixelMap(new ArrayBuffer(96), {size: { height:4, width: 6}}).then((pixelParcel : sendableImage.PixelMap) => {
-      pixelParcel.unmarshalling(messageSequence).then(async (pixelMap : sendableImage.PixelMap) => {
-        this.pixel_map = pixelMap;
-        pixelMap.getImageInfo().then((imageInfo : image.ImageInfo) => {
-          console.info("unmarshalling information h:" + imageInfo.size.height + "w:" + imageInfo.size.width);
-        })
-      })
-    });
-    return true;
-  }
-}
-
-async function Demo() {
-  const color: ArrayBuffer = new ArrayBuffer(96);
-  let bufferArr: Uint8Array = new Uint8Array(color);
-  for (let i = 0; i < bufferArr.length; i++) {
-    bufferArr[i] = 0x80;
-  }
-  let opts: image.InitializationOptions = {
-    editable: true,
-    pixelFormat: 4,
-    size: { height: 4, width: 6 },
-    alphaType: 3
-  }
-  let pixelMap: sendableImage.PixelMap | undefined = undefined;
-  await sendableImage.createPixelMap(color, opts).then((srcPixelMap : sendableImage.PixelMap) => {
-    pixelMap = srcPixelMap;
-  })
-  if (pixelMap != undefined) {
-    // Implement serialization.
-    let parcelable: MySequence = new MySequence(pixelMap);
-    let data : rpc.MessageSequence = rpc.MessageSequence.create();
-    data.writeParcelable(parcelable);
-
-    // Implement deserialization to obtain data through the RPC.
-    let ret : MySequence = new MySequence(pixelMap);
-    data.readParcelable(ret);
-  }
-}
-```
-
 ## writeBufferToPixels
 
 ```TypeScript
@@ -1424,8 +767,6 @@ writeBufferToPixels(src: ArrayBuffer): Promise<void>
 Reads image data in an ArrayBuffer and writes the data to a PixelMap object. This method uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1442,28 +783,6 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
-  let bufferArr: Uint8Array = new Uint8Array(color);
-  for (let i = 0; i < bufferArr.length; i++) {
-    bufferArr[i] = i + 1;
-  }
-  if (pixelMap != undefined) {
-    pixelMap.writeBufferToPixels(color).then(() => {
-      console.info("Succeeded in writing data from a buffer to a PixelMap.");
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to write data from a buffer to a PixelMap. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
 
 ## writeBufferToPixelsSync
 
@@ -1475,8 +794,6 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -1494,24 +811,6 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-
-async function Demo(pixelMap: sendableImage.PixelMap) {
-  const bufferSize = pixelMap.getPixelBytesNumber();
-  const color : ArrayBuffer = new ArrayBuffer(bufferSize);
-  let bufferArr : Uint8Array = new Uint8Array(color);
-  for (let i = 0; i < bufferArr.length; i++) {
-    bufferArr[i] = i + 1;
-  }
-  if (pixelMap != undefined) {
-    pixelMap.writeBufferToPixelsSync(color);
-  }
-}
-```
-
 ## writePixels
 
 ```TypeScript
@@ -1521,8 +820,6 @@ writePixels(area: image.PositionArea): Promise<void>
 Writes image pixelmap data to the specified area. This method uses a promise to return the operation result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1540,34 +837,6 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  const area: image.PositionArea = {
-    pixels: new ArrayBuffer(8),
-    offset: 0,
-    stride: 8,
-    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
-  };
-  let bufferArr: Uint8Array = new Uint8Array(area.pixels);
-  for (let i = 0; i < bufferArr.length; i++) {
-    bufferArr[i] = i + 1;
-  }
-  if (pixelMap != undefined) {
-    pixelMap.writePixels(area).then(() => {
-      console.info('Succeeded to write pixelmap into the specified area.');
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to write pixelmap into the specified area. code is ${error.code}, message is ${error.message}`);
-    })
-  }
-}
-```
-
 ## writePixelsSync
 
 ```TypeScript
@@ -1577,8 +846,6 @@ writePixelsSync(area: image.PositionArea): void
 Writes image pixelmap data to the specified area.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1596,29 +863,6 @@ Writes image pixelmap data to the specified area.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [501](../errorcode-image.md#501-api-call-failed) |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-
-async function Demo(pixelMap : sendableImage.PixelMap) {
-  const area: image.PositionArea = {
-    pixels: new ArrayBuffer(8),
-    offset: 0,
-    stride: 8,
-    region: { size: { height: 1, width: 2 }, x: 0, y: 0 }
-  };
-  let bufferArr: Uint8Array = new Uint8Array(area.pixels);
-  for (let i = 0; i < bufferArr.length; i++) {
-    bufferArr[i] = i + 1;
-  }
-  if (pixelMap != undefined) {
-    pixelMap.writePixelsSync(area);
-  }
-}
-```
 
 ## isEditable
 
@@ -1631,8 +875,6 @@ Whether the image pixelmap can be edited.
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1649,7 +891,5 @@ Is it stride Alignment
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core

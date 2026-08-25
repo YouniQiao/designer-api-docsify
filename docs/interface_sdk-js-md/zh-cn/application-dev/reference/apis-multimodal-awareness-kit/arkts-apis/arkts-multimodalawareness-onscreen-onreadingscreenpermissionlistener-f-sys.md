@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onReadingScreenPermissionListener
@@ -15,8 +15,6 @@ function onReadingScreenPermissionListener(callback: Callback<ReadingScreenPermi
 开启屏幕内容访问权限监测，实时返回授权状态。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.GET_SCREEN_CONTENT
 
@@ -40,16 +38,3 @@ function onReadingScreenPermissionListener(callback: Callback<ReadingScreenPermi
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [34000001](../errorcode-carAwareness.md#34000001-服务异常) |
-
-**示例**
-
-```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
-try {
-   onScreen.onReadingScreenPermissionListener((info: onScreen.ReadingScreenPermissionStatus) => {
-      console.info(`onReadingScreenPermissionListener succeeded, readingState: ${info.readingState}`);
-   });
-} catch (err) {
-   console.error(`onReadingScreenPermissionListener failed, Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## freq
@@ -29,8 +27,6 @@ freq: ExchangeFreq
 **类型：** [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 11
 
@@ -50,8 +46,6 @@ mode: DiscoverMode
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -70,8 +64,6 @@ publishId: number
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -89,8 +81,6 @@ ranging: boolean
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 11
 

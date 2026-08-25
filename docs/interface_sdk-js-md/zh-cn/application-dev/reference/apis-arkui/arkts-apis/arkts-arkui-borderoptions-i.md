@@ -4,8 +4,6 @@ Defines the options of border.@interface BorderOptions
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Defines the border color.
 
-**类型：** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**类型：** EdgeColors \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -41,11 +37,9 @@ dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 Defines the gap of dash when BorderStyle is dashed.
 
-**类型：** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** EdgeWidths \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,11 +55,9 @@ dashWidth?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 Defines the length of dash when BorderStyle is dashed.
 
-**类型：** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** EdgeWidths \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,11 +73,9 @@ radius?: BorderRadiuses | Length | LocalizedBorderRadiuses
 
 Defines the border radius.
 
-**类型：** BorderRadiuses \| [Length](arkts-arkui-length-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
+**类型：** [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [Length](arkts-arkui-length-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -101,11 +91,9 @@ style?: EdgeStyles | BorderStyle
 
 Defines the border style.
 
-**类型：** [EdgeStyles](arkts-arkui-units-edgestyles-i.md) \| BorderStyle
+**类型：** EdgeStyles \| [BorderStyle](arkts-arkui-borderstyle-e.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -121,11 +109,9 @@ width?: EdgeWidths | Length | LocalizedEdgeWidths
 
 Defines the border width.
 
-**类型：** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [Length](arkts-arkui-length-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**类型：** EdgeWidths \| [Length](arkts-arkui-length-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

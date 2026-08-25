@@ -4,8 +4,6 @@ Defines the data summary of the dragged object.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the data summary of the dragged object.
 ## Modules to Import
 
 ```TypeScript
-import { dragInteraction } from '@kit.ArkUI';
+import { dragInteraction } from 'kits/@kit.ArkUI';
 ```
 
 ## dataSize
 
 ```TypeScript
-dataSize: int
+dataSize: number
 ```
 
 Data length of the dragged object.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -45,8 +41,6 @@ Type of the dragged object.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Drag
 

@@ -8,8 +8,6 @@ Defines the type for image color filter settings.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -19,4 +17,4 @@ Defines the type for image color filter settings.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [ColorFilter](arkts-arkui-colorfilter-c.md) |
-| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) |
+| [DrawingColorFilter](../arkts-components/arkts-arkui-drawingcolorfilter-t.md) |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getUserTrustedCertificate
@@ -15,8 +15,6 @@ function getUserTrustedCertificate(certUri: string): Promise<CMResult>
 Obtains the detailed information about a user root CA certificate. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -42,26 +40,3 @@ Obtains the detailed information about a user root CA certificate. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let certUri: string = 'testUserCert'; /* The user needs to use the unique identifier of the CA certificate to obtain the user root CA certificate details, which is not elaborated here. */
-try {
-  certificateManager.getUserTrustedCertificate(certUri).then((cmResult) => {
-    if (cmResult?.certInfo == undefined) {
-      console.info('The result of getting user trusted certificate is undefined.');
-    } else {
-      let cert = cmResult.certInfo;
-      console.info('Succeeded in getting user trusted certificate.');
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get user trusted certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to get user trusted certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```

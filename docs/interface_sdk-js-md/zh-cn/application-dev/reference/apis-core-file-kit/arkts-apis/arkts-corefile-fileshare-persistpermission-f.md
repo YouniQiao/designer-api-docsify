@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## persistPermission
@@ -15,8 +15,6 @@ function persistPermission(policies: Array<PolicyInfo>): Promise<void>
 对所选择的多个文件或目录URI进行持久化授权，使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.FILE_ACCESS_PERSIST
 
@@ -43,43 +41,3 @@ function persistPermission(policies: Array<PolicyInfo>): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 13900001 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { picker } from '@kit.CoreFileKit';
-
-async function persistPermissionExample() {
-  try {
-    let documentSelectOptions = new picker.DocumentSelectOptions();
-    let documentPicker = new picker.DocumentViewPicker();
-    let uris = await documentPicker.select(documentSelectOptions);
-    if (uris.length === 0) {
-      console.error('No file selected');
-      return;
-    }
-    let policyInfo: fileShare.PolicyInfo = {
-      uri: uris[0],
-      // 可以组合授予多个权限，例如读写权限可使用 fileShare.OperationMode.READ_MODE | fileShare.OperationMode.WRITE_MODE
-      operationMode: fileShare.OperationMode.READ_MODE
-    };
-    let policies: Array<fileShare.PolicyInfo> = [policyInfo];
-    fileShare.persistPermission(policies).then(() => {
-      console.info('persistPermission successfully');
-    }).catch((err: BusinessError<Array<fileShare.PolicyErrorResult>>) => {
-      console.error(`persistPermission failed with error message: ${err.message}, error code: ${err.code}`);
-      if (err.code === 13900001 && err.data) {
-        for (let i = 0; i < err.data.length; i++) {
-          console.error(`error code: ${JSON.stringify(err.data[i].code)}`);
-          console.error(`error URI: ${JSON.stringify(err.data[i].uri)}`);
-          console.error(`error reason: ${JSON.stringify(err.data[i].message)}`);
-        }
-      }
-    });
-  } catch (error) {
-    let err: BusinessError = error as BusinessError;
-    console.error(`persistPermission failed with err: ${JSON.stringify(err)}`);
-  }
-}
-```

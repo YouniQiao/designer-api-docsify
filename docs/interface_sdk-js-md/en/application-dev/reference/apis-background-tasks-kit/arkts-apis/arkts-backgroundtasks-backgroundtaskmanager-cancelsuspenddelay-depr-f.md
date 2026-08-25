@@ -15,8 +15,6 @@ Cancels the suspension delay.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-f.md)
@@ -28,10 +26,3 @@ Cancels the suspension delay.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | requestId | number | Yes |
-
-**Examples**
-
-```TypeScript
-let delayInfo = backgroundTaskManager.requestSuspendDelay("test", () => {});
-backgroundTaskManager.cancelSuspendDelay(delayInfo.requestId);
-```

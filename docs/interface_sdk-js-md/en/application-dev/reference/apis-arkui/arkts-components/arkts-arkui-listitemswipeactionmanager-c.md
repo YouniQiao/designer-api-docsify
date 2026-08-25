@@ -4,8 +4,6 @@ Implements the swipe action menu manager for list items.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ static collapse(node: FrameNode): void
 Collapses the swipe action menu for the specified list item.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,8 +49,6 @@ static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 Expands the swipe action menu for the specified list item.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Model restriction:** This API can be used only in the stage model.
 

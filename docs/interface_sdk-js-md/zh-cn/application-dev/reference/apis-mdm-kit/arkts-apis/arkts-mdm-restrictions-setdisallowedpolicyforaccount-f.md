@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## setDisallowedPolicyForAccount
@@ -15,8 +15,6 @@ function setDisallowedPolicyForAccount(admin: Want, feature: string, disallow: b
 设置禁用/启用指定用户的某特性。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **废弃版本：** 26.0.0
 
@@ -46,46 +44,6 @@ function setDisallowedPolicyForAccount(admin: Want, feature: string, disallow: b
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  restrictions.setDisallowedPolicyForAccount(wantTemp, 'fingerprint', true, 100);
-  console.info('Succeeded in setting fingerprint disabled');
-} catch (err) {
-  console.error(`Failed to set fingerprint disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  restrictions.setDisallowedPolicyForAccount(wantTemp, restrictions.FeatureForAccount.SUPER_HUB, true, 100);
-  console.info('Succeeded in setting super hub disabled');
-} catch (err) {
-  console.error(`Failed to set super hub disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## setDisallowedPolicyForAccount
 
@@ -96,8 +54,6 @@ function setDisallowedPolicyForAccount(admin: Want, feature: FeatureForAccount, 
 设置禁用/启用指定用户的某特性。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -124,7 +80,3 @@ function setDisallowedPolicyForAccount(admin: Want, feature: FeatureForAccount, 
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount)

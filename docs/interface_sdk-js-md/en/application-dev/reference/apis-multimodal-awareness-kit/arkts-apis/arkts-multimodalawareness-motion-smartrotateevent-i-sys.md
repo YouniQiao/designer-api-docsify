@@ -4,8 +4,6 @@ The basic data structure of the smart rotate sensor event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The basic data structure of the smart rotate sensor event.
 ## Modules to Import
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## logicalOrientation
@@ -27,8 +25,6 @@ The logical orientation adjusted by smart algorithms.
 **Type:** [LogicalOrientation](arkts-multimodalawareness-motion-logicalorientation-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ The physical orientation reported by the gravity sensor.
 **Type:** [PhysicalOrientation](arkts-multimodalawareness-motion-physicalorientation-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

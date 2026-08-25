@@ -4,8 +4,6 @@ Declares group type.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ ALIVE_GROUP = 10
 Indicates the alive group.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -36,8 +32,6 @@ Indicates the daily group.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ FIXED_GROUP = 30
 Indicates the fixed group.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
@@ -68,8 +60,6 @@ Indicates the rare group.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -84,8 +74,6 @@ Indicates the limit group.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -99,8 +87,6 @@ NEVER_GROUP = 60
 Indicates the never group.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 

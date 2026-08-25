@@ -4,14 +4,12 @@ The convertxml module provides APIs for converting XML text into JavaScript obje
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from '@kit.ArkTS';
+import { convertxml } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary

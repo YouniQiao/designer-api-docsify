@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## requestOverflow
@@ -20,8 +20,6 @@ function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): P
 > [热档位信息](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-thermal-thermallevel-e.md)。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -52,67 +50,3 @@ function requestOverflow(formId: string, overflowInfo: formInfo.OverflowInfo): P
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 | [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
-let overflowInfo: formInfo.OverflowInfo = {
-  area: {
-    left: -10,
-    top: -10,
-    width: 180,
-    height: 180
-  },
-  duration: 1000,
-  useDefaultAnimation: false,
-};
-
-try {
-  formProvider.requestOverflow(formId, overflowInfo).then(() => {
-    console.info('requestOverflow succeed.');
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288'; // 表示卡片formId，根据实际formId调整
-
-try {
-  let rect: formInfo.Rect = {
-    left: -30,
-    top: -30,
-    width: 200,
-    height: 200
-  };
-  let overflowInfo: formInfo.OverflowInfo = {
-    area: rect,
-    duration: 3500,
-    useDefaultAnimation: false
-  };
-  formProvider.requestOverflow(formId, overflowInfo).then(() => {
-    console.info('testTag', 'requestOverflow succeed');
-  }).catch((error) => {
-    console.info('testTag', `requestOverflow err: code is ${error.code}, message ${error.message}`);
-  })
-} catch (error) {
-  console.info('testTag',
-    `requestOverflow err: code is ${error.code}, message ${error.message}`);
-}
-```

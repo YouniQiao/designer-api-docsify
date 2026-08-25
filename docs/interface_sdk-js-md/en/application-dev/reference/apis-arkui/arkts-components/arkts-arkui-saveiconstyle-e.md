@@ -4,8 +4,6 @@ Enumerates icon styles of the **SaveButton** component.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FULL_FILLED
@@ -17,8 +15,6 @@ FULL_FILLED = 0
 Filled style icon.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ LINES = 1
 Line style icon.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

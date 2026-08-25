@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## touch
@@ -15,8 +15,6 @@ function touch(id: string, token: string, callback: AsyncCallback<TaskInfo>): vo
 Queries the task details based on the task ID and token. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -46,8 +44,6 @@ function touch(id: string, token: string): Promise<TaskInfo>
 Queries the task details based on the task ID and token. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 

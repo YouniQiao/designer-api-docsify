@@ -21,8 +21,6 @@ Enumerates the layout policies for component width and height.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -41,8 +39,6 @@ When the component adapts to its child components (content), its size equals the
 **Type:** [LayoutPolicy](arkts-arkui-layoutpolicy-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,8 +60,6 @@ When the component adapts to the parent component's layout, its size equals the 
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -85,8 +79,6 @@ When the component adapts to its child components (content), its size equals the
 **Type:** [LayoutPolicy](arkts-arkui-layoutpolicy-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

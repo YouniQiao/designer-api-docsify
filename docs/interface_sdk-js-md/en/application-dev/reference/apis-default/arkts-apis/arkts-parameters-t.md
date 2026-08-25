@@ -6,6 +6,4 @@ type Parameters<T extends (...args: any) => any> = T extends (...args: infer P) 
 
 Obtain the parameters of a function type in a tuple
 
-**ArkTS mode:** 
-
 **Property type:** T extends (...args: infer P) =&gt; any ? P : never

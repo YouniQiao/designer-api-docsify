@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## off('uninstallDLPSandbox')
@@ -15,8 +15,6 @@ function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>):
 取消监听DLP沙箱卸载事件。调用成功后，应用不再接收DLP沙箱卸载事件的回调通知。必须在调用on注册监听后才能调用此方法取消 监听。DLP管理应用退出或不再需要追踪沙箱状态变化时，取消事件订阅以释放监听资源。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -40,13 +38,3 @@ function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>):
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.off('uninstallDLPSandbox', (info: dlpPermission.DLPSandboxState) => {
-  console.info('uninstallDLPSandbox event', info.appIndex, info.bundleName)
-}); // 取消订阅。
-```

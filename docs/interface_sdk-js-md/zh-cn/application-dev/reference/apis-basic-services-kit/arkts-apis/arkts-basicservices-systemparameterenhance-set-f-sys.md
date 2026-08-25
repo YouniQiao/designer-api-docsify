@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemParameterEnhance } from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## set
@@ -15,8 +15,6 @@ function set(key: string, value: string, callback: AsyncCallback<void>): void
 设置系统参数key对应的值，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -39,39 +37,6 @@ function set(key: string, value: string, callback: AsyncCallback<void>): void
 | [14700103](../errorcode-device-info.md#14700103-操作因权限被拒绝) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemParameterEnhance.set('test.parameter.key', 'testValue', (err: BusinessError, data: void) => {
-    if (err) {
-      console.error(`Failed to set test.parameter.key value. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('set test.parameter.key value success');
-    }
-  });
-} catch (e) {
-  console.error('set unexpected error: ' + e);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise: Promise<void> = systemParameterEnhance.set('test.parameter.key', 'testValue');
-  promise.then((value: void) => {
-    console.info('set test.parameter.key success: ' + value);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set test.parameter.key. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  console.error('set unexpected error: ' + e);
-}
-```
-
 
 ## set
 
@@ -82,8 +47,6 @@ function set(key: string, value: string): Promise<void>
 设置系统参数key对应的值，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -110,7 +73,3 @@ function set(key: string, value: string): Promise<void>
 | [14700102](../errorcode-system-parameterV9.md#14700102-系统参数值无效) |
 | [14700103](../errorcode-device-info.md#14700103-操作因权限被拒绝) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
-
-**示例**
-
-参见 [set](#set)

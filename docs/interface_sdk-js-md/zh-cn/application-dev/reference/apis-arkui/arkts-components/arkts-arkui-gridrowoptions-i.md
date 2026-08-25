@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ breakpoints?: BreakPoints
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -40,14 +36,13 @@ columns?: number | GridRowColumnOption
 ```
 
 设置布局列数。取值为大于0的整数。  
-- API version 20之前：默认值为12。 - API version 20及之后：默认值为{ xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }  
+- API version 20之前：默认值为12。  
+- API version 20及之后：默认值为{ xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }  
 非法值：按默认值处理。
 
 **类型：** number \| [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -67,8 +62,6 @@ direction?: GridRowDirection
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -83,11 +76,9 @@ gutter?: Length | GutterOption
 
 栅格布局间距。默认值：0vp非法值：按默认值处理。单位：vp
 
-**类型：** Length \| [GutterOption](arkts-arkui-gutteroption-i.md)
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GutterOption](arkts-arkui-gutteroption-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDockApp
@@ -19,8 +19,6 @@ Removes an application from the shortcut bar.
 > Center, Files, and Recycle Bin. Otherwise, error code 9201018 will be reported.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 

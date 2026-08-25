@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## startBluetoothSearch
@@ -16,8 +16,6 @@ function startBluetoothSearch(
 启动蓝牙扫描并查找指定的蓝牙设备，仅当扫描到的蓝牙设备满足入参BluetoothSearchRequestParams指定的条件时，才通过callback异步返回该蓝牙设备信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -42,31 +40,3 @@ function startBluetoothSearch(
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
 | [3301800](../errorcode-geoLocationManager.md#3301800-启动wi-fi或蓝牙扫描失败) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-private callback = (bluetoothScanResult: geoLocationManager.BluetoothScanResult) => {
-  if (bluetoothScanResult) {
-    console.info('bluetoothScanResult: deviceId=' + bluetoothScanResult.deviceId);
-      try {
-         // 开发者需要考虑在合适的时机调用stopBluetoothSearch停止蓝牙扫描以节省功耗，本代码仅作为参考
-         geoLocationManager.stopBluetoothSearch(this.callback);
-      } catch (err) {
-         console.error("errCode:" + err.code + ", message:" + err.message);
-      }
-  }
-};
-let request: geoLocationManager.BluetoothSearchRequestParams = {
-  'rssiThreshold': -=100,
-  'deviceIdArray': ['98:56:07:E6:AA:46','4E:E6:D2:02:27:F9']
-};
- 
-try {
-  geoLocationManager.startBluetoothSearch(request, this.callback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

@@ -4,14 +4,12 @@ Provides methods to accessing bluetooth PBAP(Phone Book Access Profile)-related 
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { pbap } from '@kit.ConnectivityKit';
+import { pbap } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

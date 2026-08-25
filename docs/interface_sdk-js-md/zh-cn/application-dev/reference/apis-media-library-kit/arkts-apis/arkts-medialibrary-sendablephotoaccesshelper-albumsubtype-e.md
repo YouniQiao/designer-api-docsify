@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## USER_GENERIC
@@ -17,8 +15,6 @@ USER_GENERIC = 1
 用户相册。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,8 +28,6 @@ FAVORITE = 1025
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## VIDEO
@@ -45,8 +39,6 @@ VIDEO = 1026
 视频相册。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -60,8 +52,6 @@ IMAGE = 1031
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## ANY
@@ -73,7 +63,5 @@ ANY = 2147483647
 任意相册。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

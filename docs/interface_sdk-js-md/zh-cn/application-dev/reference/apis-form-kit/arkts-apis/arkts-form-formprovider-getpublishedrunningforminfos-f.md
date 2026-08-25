@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## getPublishedRunningFormInfos
@@ -15,8 +15,6 @@ function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>
 获取所有已加桌的卡片信息，使用Promise异步回调。适用于卡片管理、批量操作、统计等场景，例如查看应用所有已添加到桌面的卡片信息、批量更新卡片状态等。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -35,41 +33,3 @@ function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.getPublishedRunningFormInfos().then((data: formInfo.RunningFormInfo[]) => {
-    console.info(`formProvider getPublishedRunningFormInfos, data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formInfo, formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.getPublishedRunningFormInfos().then((data: Array<formInfo.RunningFormInfo>) => {
-    console.info(`formProvider getPublishedRunningFormInfos`);
-  }).catch((error) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```

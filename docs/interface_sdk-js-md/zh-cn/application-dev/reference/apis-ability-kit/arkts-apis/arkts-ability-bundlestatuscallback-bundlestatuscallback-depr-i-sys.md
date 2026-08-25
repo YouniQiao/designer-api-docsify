@@ -8,8 +8,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [bundleMonitor/bundleMonitor](arkts-bundle-bundlemonitor.md)
@@ -29,8 +27,6 @@ add: (bundleName: string, userId: number) => void
 获取应用安装时的信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -59,8 +55,6 @@ remove: (bundleName: string, userId: number) => void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)
@@ -87,8 +81,6 @@ update: (bundleName: string, userId: number) => void
 获取应用更新时的信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

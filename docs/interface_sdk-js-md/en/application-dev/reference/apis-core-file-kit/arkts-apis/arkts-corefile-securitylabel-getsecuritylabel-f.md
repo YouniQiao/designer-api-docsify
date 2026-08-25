@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from '@kit.CoreFileKit';
+import { securityLabel } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getSecurityLabel
@@ -15,8 +15,6 @@ function getSecurityLabel(path: string): Promise<string>
 Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned by default. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -45,30 +43,6 @@ Obtains the data security level of a file or directory. If no data security leve
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + '/test.txt';
-securityLabel.getSecurityLabel(filePath).then((type: string) => {
-  console.info("getSecurityLabel successfully, Label: " + type);
-}).catch((err: BusinessError) => {
-  console.error("getSecurityLabel failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + '/test.txt';
-securityLabel.getSecurityLabel(filePath, (err: BusinessError, type: string) => {
-  if (err) {
-    console.error("getSecurityLabel failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("getSecurityLabel successfully, Label: " + type);
-  }
-});
-```
-
 
 ## getSecurityLabel
 
@@ -79,8 +53,6 @@ function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned by default. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -103,7 +75,3 @@ Obtains the data security level of a file or directory. If no data security leve
 | 13900037 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [getSecurityLabel](#getsecuritylabel)

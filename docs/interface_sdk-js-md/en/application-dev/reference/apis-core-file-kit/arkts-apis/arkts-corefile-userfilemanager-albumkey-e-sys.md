@@ -4,8 +4,6 @@ Defines the key album information.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AlbumKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md)
@@ -23,8 +21,6 @@ URI = 0
 URI of the album.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -44,8 +40,6 @@ Type of the file.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md)
@@ -63,8 +57,6 @@ ALBUM_NAME = 2
 Name of the album.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -84,8 +76,6 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#date_modified)
@@ -103,8 +93,6 @@ DATE_MODIFIED = 4
 Date when the file content (not the file name) was last modified. The value is the number of seconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 

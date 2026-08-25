@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAppClonePreference
@@ -15,8 +15,6 @@ function getAppClonePreference(bundleName: string): Promise<AppClonePreference>
 Obtains the application clone preference configuration based on the given bundle name.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MANAGE_CLONE_BUNDLE_PREFERENCES
 

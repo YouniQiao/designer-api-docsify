@@ -4,8 +4,6 @@
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## PARITY_NONE
@@ -17,8 +15,6 @@ PARITY_NONE = 0
 无校验。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -32,8 +28,6 @@ PARITY_ODD = 1
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## PARITY_EVEN
@@ -45,8 +39,6 @@ PARITY_EVEN = 2
 偶校验。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -60,8 +52,6 @@ PARITY_MARK = 3
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
 ## PARITY_SPACE
@@ -73,7 +63,5 @@ PARITY_SPACE = 4
 固定为0。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial

@@ -4,14 +4,12 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## data
@@ -20,13 +18,11 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 data?: ArrayBuffer
 ```
 
-表示接收的字节流。
+表示接收的字节流。触发receiveData事件时存在，包含接收到的二进制数据。其他事件类型下不存在。
 
 **类型：** ArrayBuffer
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,13 +34,11 @@ data?: ArrayBuffer
 msg?: string
 ```
 
-表示接收的消息。
+表示接收的消息。触发receiveMessage事件时存在，包含接收到的文本消息内容。其他事件类型下不存在。
 
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,13 +50,11 @@ msg?: string
 reason?: DisconnectReason
 ```
 
-表示断连原因。
+表示断连原因。触发disconnect事件时存在，用于标识具体的断连原因。其他事件类型下不存在。
 
 **类型：** [DisconnectReason](arkts-distributedservice-abilityconnectionmanager-disconnectreason-e.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,16 +63,14 @@ reason?: DisconnectReason
 ## sessionId
 
 ```TypeScript
-sessionId: int
+sessionId: number
 ```
 
 表示当前事件对应的协同会话ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

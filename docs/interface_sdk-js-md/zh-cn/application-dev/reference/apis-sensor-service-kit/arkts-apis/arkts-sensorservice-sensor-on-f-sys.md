@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## on
@@ -12,11 +12,9 @@ import { sensor } from '@kit.SensorServiceKit';
 function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: Options): void
 ```
 
-订阅颜色传感器数据变化。通过回调函数异步上报颜色传感器数据，数据格式为ColorResponse对象，包含lightIntensity（光照强度）和colorTemperature（色温）两个number类型字段。 <br>当开发者需要获取环境光照强度和色温信息以实现屏幕自动亮度调节、拍照色温补偿、环境光线监测等功能时，使用此接口。 <br>该接口为异步回调方式，传感器数据变化时通过callback回调上报，无Promise返回值。
+订阅颜色传感器数据变化。通过回调函数异步上报颜色传感器数据，数据格式为ColorResponse对象，包含lightIntensity（光照强度）和colorTemperature（色温）两个number类型字段。 当开发者需要获取环境光照强度和色温信息以实现屏幕自动亮度调节、拍照色温补偿、环境光线监测等功能时，使用此接口。 该接口为异步回调方式，传感器数据变化时通过callback回调上报，无Promise返回值。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -38,26 +36,6 @@ function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: O
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-  sensor.on(sensor.SensorId.COLOR, (data: sensor.ColorResponse) => {
-    console.info('Succeeded in getting the intensity of light: ' + data.lightIntensity);
-    console.info('Succeeded in getting the color temperature: ' + data.colorTemperature);
-  }, { interval: 100000000 });
-  setTimeout(() => {
-        sensor.off(sensor.SensorId.COLOR);
-  }, 500);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke on. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## on
 
@@ -65,11 +43,9 @@ try{
 function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void
 ```
 
-订阅吸收比率传感器数据变化。通过回调函数异步上报SAR传感器数据，数据格式为SarResponse对象，包含absorptionRatio（吸收率）一个number类型字段。 <br>当开发者需要监测设备电磁波吸收率以实现通信安全监测、辐射检测等功能时，使用此接口。 <br>该接口为异步回调方式，传感器数据变化时通过callback回调上报，无Promise返回值。
+订阅吸收比率传感器数据变化。通过回调函数异步上报SAR传感器数据，数据格式为SarResponse对象，包含absorptionRatio（吸收率）一个number类型字段。 当开发者需要监测设备电磁波吸收率以实现通信安全监测、辐射检测等功能时，使用此接口。 该接口为异步回调方式，传感器数据变化时通过callback回调上报，无Promise返回值。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -90,22 +66,3 @@ function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Optio
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  sensor.on(sensor.SensorId.SAR, (data: sensor.SarResponse) => {
-    console.info('Succeeded in getting specific absorption rate : ' + data.absorptionRatio);
-  }, { interval: 100000000 });
-  setTimeout(() => {
-    sensor.off(sensor.SensorId.SAR);
-  }, 500);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke on. Code: ${e.code}, message: ${e.message}`);
-}
-```

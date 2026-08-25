@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## getDefaultDisplay
@@ -15,8 +15,6 @@ function getDefaultDisplay(callback: AsyncCallback<Display>): void
 获取当前默认的Display对象，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -30,36 +28,6 @@ function getDefaultDisplay(callback: AsyncCallback<Display>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Display](arkts-arkui-display-display-i.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-display.getDefaultDisplay((err: BusinessError, data: display.Display) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to obtain the default display object. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in obtaining the default display object. Data: ${JSON.stringify(data)}`);
-  displayClass = data;
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-let promise: Promise<display.Display> = display.getDefaultDisplay();
-promise.then((data: display.Display) => {
-  displayClass = data;
-  console.info(`Succeeded in obtaining the default display object. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain the default display object. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getDefaultDisplay
 
@@ -70,8 +38,6 @@ function getDefaultDisplay(): Promise<Display>
 获取当前默认的Display对象，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -84,7 +50,3 @@ function getDefaultDisplay(): Promise<Display>
 | 类型 |
 | --- |
 | Promise&lt;[Display](arkts-arkui-display-display-i.md)&gt; |
-
-**示例**
-
-参见 [getDefaultDisplay](#getdefaultdisplay)

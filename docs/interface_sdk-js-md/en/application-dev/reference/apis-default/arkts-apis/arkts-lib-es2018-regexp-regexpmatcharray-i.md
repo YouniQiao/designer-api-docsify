@@ -1,7 +1,5 @@
 # RegExpMatchArray
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -16,5 +14,3 @@ groups?: {
 ```
 
 **Type:** {         [key: string]: string     }
-
-**ArkTS mode:** 

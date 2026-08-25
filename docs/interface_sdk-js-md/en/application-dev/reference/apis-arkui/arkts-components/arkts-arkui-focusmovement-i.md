@@ -11,8 +11,6 @@ Sets the target component for focus movement based on key presses. If it is not 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,8 +30,6 @@ ID of the component to focus on when **Shift+Tab** is pressed.The default value 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -51,8 +47,6 @@ ID of the component to focus on when the down arrow key is pressed.The default v
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +66,6 @@ ID of the component to focus on when the **Tab** key is pressed.The default valu
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -91,8 +83,6 @@ ID of the component to focus on when the left arrow key is pressed.The default v
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,8 +102,6 @@ ID of the component to focus on when the right arrow key is pressed.The default 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -131,8 +119,6 @@ ID of the component to focus on when the up arrow key is pressed.The default val
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

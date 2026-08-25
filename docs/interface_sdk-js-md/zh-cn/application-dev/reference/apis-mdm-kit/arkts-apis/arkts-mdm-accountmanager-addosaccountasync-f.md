@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addOsAccountAsync
@@ -18,8 +18,6 @@ function addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountT
 > 创建账号的流程比较耗时，当调用此接口后，后续如果在应用主线程调用其他同步接口时需要等待该接口异步返回。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
@@ -50,24 +48,3 @@ function addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountT
 | [9201003](../errorcode-enterpriseDeviceManager.md#9201003-创建账号失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError, osAccount } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 参数需根据实际情况进行替换
-accountManager.addOsAccountAsync(wantTemp, "TestAccountName", osAccount.OsAccountType.NORMAL).then((info) => {
-  console.info(`Succeeded in creating os account: ${JSON.stringify(info)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create os account. Code: ${err.code}, message: ${err.message}`);
-});
-```

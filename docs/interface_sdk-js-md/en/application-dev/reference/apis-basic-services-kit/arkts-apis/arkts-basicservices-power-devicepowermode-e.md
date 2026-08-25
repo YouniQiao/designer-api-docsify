@@ -4,8 +4,6 @@ Enumerates power modes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 ## MODE_NORMAL
@@ -17,8 +15,6 @@ MODE_NORMAL = 600
 Standard mode. It is the default value.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
@@ -32,8 +28,6 @@ Power saving mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 ## MODE_PERFORMANCE
@@ -45,8 +39,6 @@ MODE_PERFORMANCE
 Performance mode.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
@@ -60,8 +52,6 @@ Ultra power saving mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 ## MODE_CUSTOM_POWER_SAVE
@@ -73,7 +63,5 @@ MODE_CUSTOM_POWER_SAVE = 650
 Custom power saving mode.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core

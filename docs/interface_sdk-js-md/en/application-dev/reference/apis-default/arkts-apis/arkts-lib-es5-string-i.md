@@ -1,7 +1,5 @@
 # String
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ charAt(pos: number): string
 ```
 
 Returns the character at the specified index.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ charCodeAt(index: number): number
 
 Returns the Unicode value of the character at the specified location.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -55,8 +49,6 @@ concat(...strings: string[]): string
 
 Returns a string that contains the concatenation of two or more strings.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -74,8 +66,6 @@ indexOf(searchString: string, position?: number): number
 ```
 
 Returns the position of the first occurrence of a substring.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -96,8 +86,6 @@ lastIndexOf(searchString: string, position?: number): number
 
 Returns the last occurrence of a substring in the string.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -116,8 +104,6 @@ localeCompare(that: string, locales?: string | string[], options?: Intl.Collator
 ```
 
 Determines whether two strings are equivalent in the current or specified locale.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -139,8 +125,6 @@ match(regexp: string | RegExp): RegExpMatchArray | null
 
 Matches a string with a regular expression, and returns an array containing the results of that search.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -158,8 +142,6 @@ replace(searchValue: string | RegExp, replaceValue: string): string
 ```
 
 Replaces text in a string, using a regular expression or search string.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -180,8 +162,6 @@ replace(searchValue: string | RegExp, replacer: (substring: string, ...args: any
 
 Replaces text in a string, using a regular expression or search string.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -201,8 +181,6 @@ search(regexp: string | RegExp): number
 
 Finds the first substring match in a regular expression search.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -220,8 +198,6 @@ slice(start?: number, end?: number): string
 ```
 
 Returns a section of a string.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -242,8 +218,6 @@ split(separator: string | RegExp, limit?: number): string[]
 
 Split a string into substrings using the specified separator and return them as an array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -262,8 +236,6 @@ substr(from: number, length?: number): string
 ```
 
 Gets a substring beginning at the specified location and having the specified length.
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -286,8 +258,6 @@ substring(start: number, end?: number): string
 
 Returns the substring at the specified location within a String object.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -307,8 +277,6 @@ toLocaleLowerCase(locales?: string | string[]): string
 
 Converts all alphabetic characters to lowercase, taking into account the host environment's current locale.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -326,8 +294,6 @@ toLocaleUpperCase(locales?: string | string[]): string
 ```
 
 Returns a string where all alphabetic characters have been converted to uppercase, taking into account the host environment's current locale.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -347,8 +313,6 @@ toLowerCase(): string
 
 Converts all the alphabetic characters in a string to lowercase.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -360,8 +324,6 @@ toString(): string
 ```
 
 Returns a string representation of a string.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -375,8 +337,6 @@ toUpperCase(): string
 
 Converts all the alphabetic characters in a string to uppercase.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -388,8 +348,6 @@ trim(): string
 ```
 
 Removes the leading and trailing white space and line terminator characters from a string.
-
-**ArkTS mode:** 
 
 **Return value:**
 
@@ -403,8 +361,6 @@ valueOf(): string
 
 Returns the primitive value of the specified object.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -417,8 +373,6 @@ readonly [index: number]: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 ## length
 
 ```TypeScript
@@ -428,5 +382,3 @@ readonly length: number
 Returns the length of a String object.
 
 **Type:** number
-
-**ArkTS mode:** 

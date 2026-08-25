@@ -1,10 +1,8 @@
 # AudioLoopbackStatus
 
-表示返听状态的枚举。@enum { int }
+表示返听状态的枚举。@enum { number }
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -18,8 +16,6 @@ UNAVAILABLE_DEVICE = -2
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## UNAVAILABLE_SCENE
@@ -31,8 +27,6 @@ UNAVAILABLE_SCENE = -1
 表示返听由于音频场景而不可用（如音频焦点、低时延管控）。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -46,8 +40,6 @@ AVAILABLE_IDLE = 0
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## AVAILABLE_RUNNING
@@ -59,7 +51,5 @@ AVAILABLE_RUNNING = 1
 表示返听运行中。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer

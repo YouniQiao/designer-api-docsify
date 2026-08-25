@@ -8,8 +8,6 @@ Provide an interface for the IsolatedComponent, which is used to render UI of ot
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

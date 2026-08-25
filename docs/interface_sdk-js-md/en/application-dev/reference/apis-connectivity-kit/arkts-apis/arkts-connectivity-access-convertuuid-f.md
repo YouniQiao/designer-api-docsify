@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from '@kit.ConnectivityKit';
+import { access } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## convertUuid
@@ -15,8 +15,6 @@ function convertUuid(uuid: string): string
 Convert 2-byte and 4-byte UUID strings to the 16-byte UUID string standard used in Bluetooth.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -31,17 +29,3 @@ Convert 2-byte and 4-byte UUID strings to the 16-byte UUID string standard used 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let inputUuid: string = '1801';
-    let convertedUuid: string = access.convertUuid(inputUuid);
-    console.info("convertedUuid: " + convertedUuid);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

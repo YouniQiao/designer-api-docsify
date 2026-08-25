@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## getAllEfficiencyResources
@@ -15,8 +15,6 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 Obtains all information about the requested efficiency resources, including the resource type. This API uses a promise to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -36,20 +34,3 @@ Obtains all information about the requested efficiency resources, including the 
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) |
 | [18700002](../errorcode-backgroundTaskMgr.md#18700002-parcel-operation-failure) |
 | [18700004](../errorcode-backgroundTaskMgr.md#18700004-system-service-failure) |
-
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    backgroundTaskManager.getAllEfficiencyResources().then((res: backgroundTaskManager.EfficiencyResourcesInfo[]) => {
-        console.info(`Operation getAllEfficiencyResources succeeded. data: ` + JSON.stringify(res));
-    }).catch((error : BusinessError) => {
-        console.error(`Operation getAllEfficiencyResources failed. code is ${error.code} message is ${error.message}`);
-    });
-} catch (error) {
-    console.error(`Operation getAllEfficiencyResources failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

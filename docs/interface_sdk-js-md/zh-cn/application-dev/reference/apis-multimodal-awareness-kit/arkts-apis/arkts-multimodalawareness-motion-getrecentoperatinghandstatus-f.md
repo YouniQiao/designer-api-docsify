@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## getRecentOperatingHandStatus
@@ -15,8 +15,6 @@ function getRecentOperatingHandStatus(): OperatingHandStatus
 获取最新触控操作手状态。该方法直接返回最新的操作手状态，无需订阅事件即可调用。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本20+：ohos.permission.ACTIVITY_MOTION 或 ohos.permission.DETECT_GESTURE
@@ -37,17 +35,3 @@ function getRecentOperatingHandStatus(): OperatingHandStatus
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [31500001](../errorcode-motion.md#31500001-服务异常) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let data:motion.OperatingHandStatus = motion.getRecentOperatingHandStatus();
-    console.info('get succeeded' + data);
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Failed to get recent operating hand status. Code: ${error.code}, message: ${error.message}`);
-}
-```

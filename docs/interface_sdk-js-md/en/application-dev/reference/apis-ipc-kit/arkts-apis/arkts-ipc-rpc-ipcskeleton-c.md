@@ -4,14 +4,12 @@ Obtains IPC context, including the UID and PID, local and remote device IDs, and
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## flushCmdBuffer
@@ -23,8 +21,6 @@ static flushCmdBuffer(object: IRemoteObject): void
 Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -40,33 +36,6 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-try {
-  let remoteObject = new TestRemoteObject("aaa");
-  rpc.IPCSkeleton.flushCmdBuffer(remoteObject);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorMessage ' + e.message);
-}
-```
-
 ## flushCommands
 
 ```TypeScript
@@ -76,8 +45,6 @@ static flushCommands(object: IRemoteObject): number
 Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API is a static method. You are advised to call this API before performing any sensitive operation.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -97,33 +64,6 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 | --- |
 | number |
 
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-try {
-  let remoteObject = new TestRemoteObject("aaa");
-  let ret = rpc.IPCSkeleton.flushCommands(remoteObject);
-  hilog.info(0x0000, 'testTag', 'RpcServer: flushCommands result: ' + ret);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'proxy flushCmdBuffer fail, errorMessage ' + e.message);
-}
-```
-
 ## getCallingDeviceID
 
 ```TypeScript
@@ -134,8 +74,6 @@ Obtains the ID of the device hosting the caller's process. This API is a static 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -144,207 +82,59 @@ Obtains the ID of the device hosting the caller's process. This API is a static 
 | --- |
 | string |
 
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callerDeviceID = rpc.IPCSkeleton.getCallingDeviceID();
-      hilog.info(0x0000, 'testTag', 'RpcServer: callerDeviceID is ' + callerDeviceID);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
-
 ## getCallingPid
 
-ArkTS-Dyn:
 ```TypeScript
 static getCallingPid(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-static getCallingPid(): int
 ```
 
 Obtains the PID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the PID of the process will be returned.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callerPid = rpc.IPCSkeleton.getCallingPid();
-      hilog.info(0x0000, 'testTag', 'RpcServer: getCallingPid result: ' + callerPid);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  hilog.info(0x0000, 'testTag', 'RpcServer: getCallingPid: ' + testRemoteObject.getCallingPid());
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error: ' + error);
-}
-```
+| number |
 
 ## getCallingTokenId
 
-ArkTS-Dyn:
 ```TypeScript
 static getCallingTokenId(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-static getCallingTokenId(): long
 ```
 
 Obtains the caller's token ID, which is used to verify the caller identity.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callerTokenId = rpc.IPCSkeleton.getCallingTokenId();
-      hilog.info(0x0000, 'testTag', 'RpcServer: getCallingTokenId result: ' + callerTokenId);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
+| number |
 
 ## getCallingUid
 
-ArkTS-Dyn:
 ```TypeScript
 static getCallingUid(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-static getCallingUid(): int
 ```
 
 Obtains the UID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the UID of the process will be returned.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callerUid = rpc.IPCSkeleton.getCallingUid();
-      hilog.info(0x0000, 'testTag', 'RpcServer: getCallingUid result: ' + callerUid);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    // Process services based on the actual service logic.
-    return true;
-  }
-}
-try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  hilog.info(0x0000, 'testTag', 'RpcServer: getCallingUid: ' + testRemoteObject.getCallingUid());
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error: ' + error);
-}
-```
+| number |
 
 ## getContextObject
 
@@ -356,8 +146,6 @@ Obtains the system capability manager. This API is a static method.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -365,20 +153,6 @@ Obtains the system capability manager. This API is a static method.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let samgr = rpc.IPCSkeleton.getContextObject();
-  hilog.info(0x0000, 'testTag', 'RpcServer: getContextObject result: ' + samgr);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
 
 ## getLocalDeviceID
 
@@ -390,8 +164,6 @@ Obtains the local device ID. This API is a static method.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -399,26 +171,6 @@ Obtains the local device ID. This API is a static method.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let localDeviceID = rpc.IPCSkeleton.getLocalDeviceID();
-      hilog.info(0x0000, 'testTag', 'RpcServer: localDeviceID is ' + localDeviceID);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
 
 ## isLocalCalling
 
@@ -430,8 +182,6 @@ Checks whether the peer process is a process of the local device. This API is a 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -439,26 +189,6 @@ Checks whether the peer process is a process of the local device. This API is a 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let isLocalCalling = rpc.IPCSkeleton.isLocalCalling();
-      hilog.info(0x0000, 'testTag', 'RpcServer: isLocalCalling is ' + isLocalCalling);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
 
 ## resetCallingIdentity
 
@@ -470,8 +200,6 @@ Resets the UID and PID of the remote user to those of the local user. This API i
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 **Return value:**
@@ -479,26 +207,6 @@ Resets the UID and PID of the remote user to those of the local user. This API i
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callingIdentity = rpc.IPCSkeleton.resetCallingIdentity();
-      hilog.info(0x0000, 'testTag', 'RpcServer: callingIdentity is ' + callingIdentity);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
 
 ## restoreCallingIdentity
 
@@ -509,8 +217,6 @@ static restoreCallingIdentity(identity: string): void
 Restores the UID and PID of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -526,27 +232,6 @@ Restores the UID and PID of the remote user. This API is a static method. It is 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callingIdentity = rpc.IPCSkeleton.resetCallingIdentity();
-      hilog.info(0x0000, 'testTag', 'RpcServer: callingIdentity is ' + callingIdentity);
-      rpc.IPCSkeleton.restoreCallingIdentity(callingIdentity);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```
-
 ## setCallingIdentity
 
 ```TypeScript
@@ -556,8 +241,6 @@ static setCallingIdentity(identity: string): boolean
 Sets the UID and PID of the remote user. This API is a static method. It is usually called after **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are required.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -576,25 +259,3 @@ Sets the UID and PID of the remote user. This API is a static method. It is usua
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class Stub extends rpc.RemoteObject {
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    try {
-      let callingIdentity = rpc.IPCSkeleton.resetCallingIdentity();
-      hilog.info(0x0000, 'testTag', 'RpcServer: callingIdentity is ' + callingIdentity);
-      let ret = rpc.IPCSkeleton.setCallingIdentity(callingIdentity);
-      hilog.info(0x0000, 'testTag', 'RpcServer: setCallingIdentity is ' + ret);
-    } catch (error) {
-      hilog.error(0x0000, 'testTag', 'error ' + error);
-    }
-    return true;
-  }
-}
-```

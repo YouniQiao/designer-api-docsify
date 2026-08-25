@@ -1,12 +1,10 @@
 # Line properties/events
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** LineAttribute extends CommonShapeMethod<LineAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ endPoint(value: Array<any>)
 Sets the coordinates (relative coordinates) of the end point of the line. This attribute can be dynamically set using attributeModifier. Invalid values are treated as the default value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,8 +44,6 @@ startPoint(value: Array<any>)
 Sets the coordinates (relative coordinates) of the start point of the line. This attribute can be dynamically set using attributeModifier. Invalid values are treated as the default value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,8 +4,6 @@ Enumerates the authentication result codes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
@@ -21,8 +19,6 @@ SUCCESS = 0
 The operation is successful.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ The authentication failed.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FAIL](arkts-userauthentication-userauth-userauthresultcode-e.md#fail)
@@ -57,8 +51,6 @@ GENERAL_ERROR = 2
 A general operation error occurred.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ The authentication is canceled.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CANCELED](arkts-userauthentication-userauth-userauthresultcode-e.md#canceled)
@@ -93,8 +83,6 @@ TIMEOUT = 4
 The authentication timed out.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -112,8 +100,6 @@ The authentication type is not supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-userauthresultcode-e.md#type_not_support)
@@ -129,8 +115,6 @@ TRUST_LEVEL_NOT_SUPPORT = 6
 The authentication trust level is not supported.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -148,8 +132,6 @@ The system is busy.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [BUSY](arkts-userauthentication-userauth-userauthresultcode-e.md#busy)
@@ -165,8 +147,6 @@ INVALID_PARAMETERS = 8
 Invalid parameters are detected.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -184,8 +164,6 @@ The authentication executor is locked.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LOCKED](arkts-userauthentication-userauth-userauthresultcode-e.md#locked)
@@ -201,8 +179,6 @@ NOT_ENROLLED = 10
 The user has not enrolled the authentication information.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

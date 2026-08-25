@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getDistributedSessionController
@@ -15,8 +15,6 @@ function getDistributedSessionController(distributedSessionType: DistributedSess
 根据远端会话类型，获取远端分布式会话控制器。结果通过Promise异步回调方式返回。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -44,11 +42,3 @@ function getDistributedSessionController(distributedSessionType: DistributedSess
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
-
-**示例**
-
-```TypeScript
-avSession.getDistributedSessionController(avSession.DistributedSessionType.TYPE_SESSION_REMOTE).then((sessionControllers: Array<avSession.AVSessionController>) => {
-  console.info(`Succeeded in getting distributed session controller, length: ${sessionControllers.length}`);
-});
-```

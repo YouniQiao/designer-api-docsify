@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hardwareManager } from '@kit.DistributedServiceKit';
+import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## stopDistributedHardware
@@ -15,8 +15,6 @@ function stopDistributedHardware(description: HardwareDescriptor): Promise<void>
 Stops the distributed hardware service on the controlled device. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
@@ -45,25 +43,3 @@ Stops the distributed hardware service on the controlled device. This API uses a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 24200101 |
 | 24200102 |
-
-**Examples**
-
-```TypeScript
-import { hardwareManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let description: hardwareManager.HardwareDescriptor = {
-    type: 1,
-    srcNetworkId: '1111'
-  };
-  hardwareManager.stopDistributedHardware(description).then(() => {
-    console.info('stop distributed hardware successfully');
-  }).catch((error: BusinessError) => {
-    console.error('stop distributed hardware failed, cause:' + error);
-  })
-  console.info('stop distributed hardware successfully');
-} catch (error) {
-  console.error('stop distributed hardware failed:' + error);
-}
-```

@@ -4,8 +4,6 @@ The **logLibrary** module provides APIs for obtaining various system maintenance
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The **logLibrary** module provides APIs for obtaining various system maintenance
 ## Modules to Import
 
 ```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

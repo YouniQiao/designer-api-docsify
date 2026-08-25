@@ -4,8 +4,6 @@ Enumerates the type of area in hover mode.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP_SCREEN
@@ -17,8 +15,6 @@ TOP_SCREEN = 0
 Layout top half screen when the phone in hover mode.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ BOTTOM_SCREEN = 1
 Layout bottom half screen when the phone in hover mode.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 

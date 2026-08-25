@@ -4,8 +4,6 @@ The childprocess object can be used to create a new process.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The childprocess object can be used to create a new process.
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## close
@@ -25,8 +23,6 @@ close(): void
 Close the target process
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -41,8 +37,6 @@ getErrorOutput(): Promise<Uint8Array>
 Return it as 'Uint8Array of the stderr until EOF
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -64,8 +58,6 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -86,8 +78,6 @@ Send a signal to process
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -98,19 +88,6 @@ Send a signal to process
 | --- | --- | --- |
 | [signal](arkts-arkts-locks-asynclockoptions-c.md) | number \| string | Yes |
 
-**Examples**
-
-```TypeScript
-let pres = process.pid;
-let result = process.kill(28, pres);
-```
-
-```TypeScript
-let pro = new process.ProcessManager();
-let pres = process.pid;
-let result = pro.kill(28, pres);
-```
-
 ## wait
 
 ```TypeScript
@@ -120,8 +97,6 @@ wait(): Promise<number>
 Return 'number' is the target process exit code
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -145,8 +120,6 @@ Return exitCode is the exit code of the current child process
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -162,8 +135,6 @@ Return boolean is whether the current process signal is sent successfully
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -181,8 +152,6 @@ Return pid is the pid of the current process
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -198,8 +167,6 @@ Return ppid is the pid of the current child process
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Utils.Lang
 

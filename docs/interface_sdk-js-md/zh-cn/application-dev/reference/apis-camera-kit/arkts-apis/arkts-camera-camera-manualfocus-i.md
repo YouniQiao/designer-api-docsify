@@ -6,33 +6,23 @@ ManualFocus object.
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getFocusDistance
 
-ArkTS-Dyn:
 ```TypeScript
 getFocusDistance(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getFocusDistance(): double
 ```
 
 Gets current focus distance, ranging from 0.0 to 1.0, with 0.0 being shortest distance at which the lens can focus and 1.0 the furthest. The default value is 1.0.
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -42,7 +32,7 @@ Gets current focus distance, ranging from 0.0 to 1.0, with 0.0 being shortest di
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
@@ -54,21 +44,13 @@ Gets current focus distance, ranging from 0.0 to 1.0, with 0.0 being shortest di
 
 ## setFocusDistance
 
-ArkTS-Dyn:
 ```TypeScript
 setFocusDistance(distance: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setFocusDistance(distance: double): void
 ```
 
 Sets focus distance. Possible distance values range from 0.0 to 1.0, with 0.0 being shortest distance at which the lens can focus and 1.0 the furthest. The default value is 1.0.
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -78,7 +60,7 @@ Sets focus distance. Possible distance values range from 0.0 to 1.0, with 0.0 be
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| distance | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| distance | number | 是 |
 
 **错误码：**
 

@@ -4,8 +4,6 @@ Provides the information about the component corresponding to the gesture recogn
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Obtains the ID of this component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -40,14 +36,12 @@ Obtains the ID of this component.
 ## getUniqueId
 
 ```TypeScript
-getUniqueId(): int
+getUniqueId(): number
 ```
 
 Returns the unique ID of the current component.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createGroup
@@ -16,8 +16,6 @@ Create a P2P group.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
@@ -26,7 +24,7 @@ Create a P2P group.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| config | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | Yes |
+| config | [WifiP2PConfig](arkts-connectivity-wifi-wifip2pconfig-i.md) | Yes |
 
 **Error codes:**
 
@@ -37,23 +35,3 @@ Create a P2P group.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 | [2801001](../errorcode-wifi.md#2801001-p2p-module-error) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let config:wifiManager.WifiP2PConfig = {
-      deviceAddress: "****",
-      netId: 0,
-      passphrase: "*****",
-      groupName: "****",
-      goBand: 0
-    }
-    wifiManager.createGroup(config);  
-    
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

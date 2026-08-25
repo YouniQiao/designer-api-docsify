@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setDefaultCellularDataSlotId
 
 ```TypeScript
-function setDefaultCellularDataSlotId(slotId: int, callback: AsyncCallback<void>): void
+function setDefaultCellularDataSlotId(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 Sets the default slot of the SIM card used for mobile data. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Sets the default slot of the SIM card used for mobile data. This API uses an asy
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -45,44 +43,16 @@ Sets the default slot of the SIM card used for mobile data. This API uses an asy
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301001](../errorcode-telephony.md#8301001-sim-card-not-activated) |
 
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.setDefaultCellularDataSlotId(0, (err: BusinessError) => {
-    if(err) {
-        console.error(`setDefaultCellularDataSlotId fail. code: ${err.code}, message: ${err.message}`);
-    } else {
-        console.info(`setDefaultCellularDataSlotId success`);
-    }
-});
-```
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.setDefaultCellularDataSlotId(0).then(() => {
-    console.info(`setDefaultCellularDataSlotId success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setDefaultCellularDataSlotId fail. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## setDefaultCellularDataSlotId
 
 ```TypeScript
-function setDefaultCellularDataSlotId(slotId: int): Promise<void>
+function setDefaultCellularDataSlotId(slotId: number): Promise<void>
 ```
 
 Sets the default slot of the SIM card used for mobile data. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -94,7 +64,7 @@ Sets the default slot of the SIM card used for mobile data. This API uses a prom
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -115,7 +85,3 @@ Sets the default slot of the SIM card used for mobile data. This API uses a prom
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 | [8301001](../errorcode-telephony.md#8301001-sim-card-not-activated) |
-
-**Examples**
-
-See [setDefaultCellularDataSlotId](#setdefaultcellulardataslotid)

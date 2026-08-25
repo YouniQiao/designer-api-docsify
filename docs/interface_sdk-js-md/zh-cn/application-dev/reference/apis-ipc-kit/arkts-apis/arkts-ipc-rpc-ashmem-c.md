@@ -1,18 +1,21 @@
 # Ashmem
 
 提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。共享内存只适用与本设备内跨进程通信。  
-- 大数据传输：传输大量数据(如图片、文件)时使用共享内存提升效率。 - 跨进程数据共享：多个进程需要共享访问同一块内存数据。 - 传输效率问题：大数据通过共享内存传输避免序列化开销，提升传输效率。 - 内存复用问题：多进程可共享访问同一内存，避免数据拷贝。 - 提升传输性能：共享内存机制大幅提升大数据传输效率。 - 减少内存占用：避免数据多次拷贝，节省内存资源。
+- 大数据传输：传输大量数据(如图片、文件)时使用共享内存提升效率。  
+- 跨进程数据共享：多个进程需要共享访问同一块内存数据。  
+- 传输效率问题：大数据通过共享内存传输避免序列化开销，提升传输效率。  
+- 内存复用问题：多进程可共享访问同一内存，避免数据拷贝。  
+- 提升传输性能：共享内存机制大幅提升大数据传输效率。  
+- 减少内存占用：避免数据多次拷贝，节省内存资源。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## closeAshmem
@@ -28,41 +31,17 @@ closeAshmem(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.closeAshmem();
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
 
 ## create
 
-ArkTS-Dyn:
 ```TypeScript
 static create(name: string, size: number): Ashmem
-```
-
-ArkTS-Sta:
-```TypeScript
-static create(name: string, size: int): Ashmem
 ```
 
 静态方法，根据指定的名称和大小创建Ashmem对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -71,7 +50,7 @@ static create(name: string, size: int): Ashmem
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| size | number | 是 |
 
 **返回值：**
 
@@ -85,75 +64,6 @@ static create(name: string, size: int): Ashmem
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = rpc.MessageSequence.create();
-  hilog.info(0x0000, 'testTag', 'data is ' + data);
-
-  // 当MessageSequence对象不再使用，由业务主动调用reclaim方法去释放资源。
-  data.reclaim();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let data = rpc.MessageParcel.create();
-  hilog.info(0x0000, 'testTag', 'data is ' + data);
-
-  // 当MessageParcel对象不再使用，由业务主动调用reclaim方法去释放资源。
-  data.reclaim();
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  hilog.info(0x0000, 'testTag', 'create ashmem: ' + ashmem);
-  let size = ashmem.getAshmemSize();
-  hilog.info(0x0000, 'testTag',  'size is ' + size);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let ashmem2 = rpc.Ashmem.create(ashmem);
-  let size = ashmem2.getAshmemSize();
-  hilog.info(0x0000, 'testTag', 'size is ' + size);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## create
 
 ```TypeScript
@@ -163,8 +73,6 @@ static create(ashmem: Ashmem): Ashmem
 静态方法，通过复制现有Ashmem对象的文件描述符(fd)来创建Ashmem对象。两个Ashmem对象指向同一个共享内存区域。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -186,10 +94,6 @@ static create(ashmem: Ashmem): Ashmem
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [create](#create)
-
 ## createAshmem
 
 ```TypeScript
@@ -199,8 +103,6 @@ static createAshmem(name: string, size: number): Ashmem
 静态方法，根据指定的名称和大小创建Ashmem对象。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -221,22 +123,6 @@ static createAshmem(name: string, size: number): Ashmem
 | --- |
 | [Ashmem](arkts-ipc-rpc-ashmem-c.md) |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.createAshmem("ashmem", 1024*1024);
-  hilog.info(0x0000, 'testTag', 'create ashmem: ' + ashmem);
-  let size = ashmem.getAshmemSize();
-  hilog.info(0x0000, 'testTag',  'size is ' + size);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
-
 ## createAshmemFromExisting
 
 ```TypeScript
@@ -246,8 +132,6 @@ static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 静态方法，通过复制现有Ashmem对象的文件描述符(fd)来创建Ashmem对象。两个Ashmem对象指向同一个共享内存区域。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -267,39 +151,15 @@ static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 | --- |
 | [Ashmem](arkts-ipc-rpc-ashmem-c.md) |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let ashmem2 = rpc.Ashmem.createAshmemFromExisting(ashmem);
-  let size = ashmem2.getAshmemSize();
-  hilog.info(0x0000, 'testTag', 'size is ' + size);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
-
 ## getAshmemSize
 
-ArkTS-Dyn:
 ```TypeScript
 getAshmemSize(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getAshmemSize(): int
 ```
 
 获取Ashmem对象的内存大小。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -307,22 +167,7 @@ getAshmemSize(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let size = ashmem.getAshmemSize();
-  hilog.info(0x0000, 'testTag', ' size is ' + size);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
+| number |
 
 ## mapAshmem
 
@@ -333,8 +178,6 @@ mapAshmem(mapType: number): boolean
 在此进程的虚拟地址空间上创建共享文件映射，映射区域大小由此Ashmem对象指定。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -354,21 +197,6 @@ mapAshmem(mapType: number): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let mapReadAndWrite = ashmem.mapAshmem(rpc.Ashmem.PROT_READ | rpc.Ashmem.PROT_WRITE);
-  hilog.info(0x0000, 'testTag', 'map ashmem result is ' + mapReadAndWrite);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
-
 ## mapReadAndWriteAshmem
 
 ```TypeScript
@@ -378,8 +206,6 @@ mapReadAndWriteAshmem(): boolean
 在此进程虚拟地址空间上创建可读写的共享文件映射。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -393,21 +219,6 @@ mapReadAndWriteAshmem(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let mapResult = ashmem.mapReadAndWriteAshmem();
-  hilog.info(0x0000, 'testTag', 'map ashmem result is ' + mapResult);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
-
 ## mapReadOnlyAshmem
 
 ```TypeScript
@@ -417,8 +228,6 @@ mapReadOnlyAshmem(): boolean
 在此进程虚拟地址空间上创建只读的共享文件映射。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -432,21 +241,6 @@ mapReadOnlyAshmem(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let mapResult = ashmem.mapReadOnlyAshmem();
-  hilog.info(0x0000, 'testTag', 'Ashmem mapReadOnlyAshmem result is ' + mapResult);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
-
 ## mapReadonlyAshmem
 
 ```TypeScript
@@ -457,8 +251,6 @@ mapReadonlyAshmem(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **错误码：**
@@ -466,23 +258,6 @@ mapReadonlyAshmem(): void
 | 错误码ID |
 | --- |
 | [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadonlyAshmem();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ## mapReadWriteAshmem
 
@@ -494,8 +269,6 @@ mapReadWriteAshmem(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **错误码：**
@@ -504,40 +277,15 @@ mapReadWriteAshmem(): void
 | --- |
 | [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadWriteAshmem();
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## mapTypedAshmem
 
-ArkTS-Dyn:
 ```TypeScript
 mapTypedAshmem(mapType: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-mapTypedAshmem(mapType: int): void
 ```
 
 在此进程的虚拟地址空间上创建共享文件映射，映射区域大小由此Ashmem对象指定。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -545,7 +293,7 @@ mapTypedAshmem(mapType: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mapType | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| mapType | number | 是 |
 
 **错误码：**
 
@@ -553,23 +301,6 @@ mapTypedAshmem(mapType: int): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapTypedAshmem(rpc.Ashmem.PROT_READ | rpc.Ashmem.PROT_WRITE);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ## readAshmem
 
@@ -583,8 +314,6 @@ readAshmem(size: number, offset: number): number[]
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 11
 
@@ -612,91 +341,10 @@ readAshmem(size: number, offset: number): number[]
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let ashmem = rpc.Ashmem.create("ashmem", 1024);
-  // ashmem里写入数据
-  let buffer = new ArrayBuffer(1024);
-  let int32View = new Int32Array(buffer);
-  for (let i = 0; i < int32View.length; i++) {
-    int32View[i] = i * 2 + 1;
-  }
-  let size = buffer.byteLength;
-  ashmem.mapReadWriteAshmem();
-  ashmem.writeDataToAshmem(buffer, size, 0);
-  // 将传递的数据大小写入messageSequence对象中
-  sequence.writeInt(size);
-  // 将ashmem对象写入messageSequence对象中
-  sequence.writeAshmem(ashmem);
-
-  // 读取传递的数据大小
-  let dataSize = sequence.readInt();
-  // 从messageSequence对象中读取ashmem对象
-  let ashmem1 = sequence.readAshmem();
-  // 从ashmem对象中读取数据
-  ashmem1.mapReadWriteAshmem();
-  let readResult = ashmem1.readDataFromAshmem(dataSize, 0);
-  let readInt32View = new Int32Array(readResult);
-  hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readInt32View);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let parcel = new rpc.MessageParcel();
-  let ashmem = rpc.Ashmem.createAshmem("ashmem", 1024);
-  let isWriteSuccess = parcel.writeAshmem(ashmem);
-  hilog.info(0x0000, 'testTag', 'write ashmem to result is ' + isWriteSuccess);
-  let readAshmem = parcel.readAshmem();
-  hilog.info(0x0000, 'testTag', 'read ashmem to result is ' + readAshmem);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadWriteAshmem();
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  ashmem.writeAshmem(ByteArrayVar, 5, 0);
-  let readResult = ashmem.readAshmem(5, 0);
-  hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readResult);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## readDataFromAshmem
 
-ArkTS-Dyn:
 ```TypeScript
 readDataFromAshmem(size: number, offset: number): ArrayBuffer
-```
-
-ArkTS-Sta:
-```TypeScript
-readDataFromAshmem(size: int, offset: int): ArrayBuffer
 ```
 
 从此Ashmem对象关联的共享文件中读取数据。
@@ -706,16 +354,14 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| size | number | 是 |
+| offset | number | 是 |
 
 **返回值：**
 
@@ -730,33 +376,6 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let buffer = new ArrayBuffer(1024);
-  let int32View = new Int32Array(buffer);
-  for (let i = 0; i < int32View.length; i++) {
-    int32View[i] = i * 2 + 1;
-  }
-  let size = buffer.byteLength;
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadWriteAshmem();
-  ashmem.writeDataToAshmem(buffer, size, 0);
-  let readResult = ashmem.readDataFromAshmem(size, 0);
-  let readInt32View = new Int32Array(readResult);
-  hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readInt32View);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
 ## readFromAshmem
 
 ```TypeScript
@@ -769,8 +388,6 @@ readFromAshmem(size: number, offset: number): number[]
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -791,26 +408,6 @@ readFromAshmem(size: number, offset: number): number[]
 | --- |
 | number[] |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let mapResult = ashmem.mapReadAndWriteAshmem();
-  hilog.info(0x0000, 'testTag', 'RpcTest map ashmem result is ' + mapResult);
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  let writeResult = ashmem.writeToAshmem(ByteArrayVar, 5, 0);
-  hilog.info(0x0000, 'testTag', 'write to Ashmem result is ' + writeResult);
-  let readResult = ashmem.readFromAshmem(5, 0);
-  hilog.info(0x0000, 'testTag', 'read to Ashmem result is ' + readResult);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
-
 ## setProtection
 
 ```TypeScript
@@ -820,8 +417,6 @@ setProtection(protectionType: number): boolean
 设置映射内存区域的保护等级。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -841,39 +436,15 @@ setProtection(protectionType: number): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let result = ashmem.setProtection(rpc.Ashmem.PROT_READ);
-  hilog.info(0x0000, 'testTag', 'Ashmem setProtection result is ' + result);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
-
 ## setProtectionType
 
-ArkTS-Dyn:
 ```TypeScript
 setProtectionType(protectionType: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setProtectionType(protectionType: int): void
 ```
 
 设置映射内存区域的保护等级。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -881,7 +452,7 @@ setProtectionType(protectionType: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| protectionType | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| protectionType | number | 是 |
 
 **错误码：**
 
@@ -889,23 +460,6 @@ setProtectionType(protectionType: int): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1900002](../errorcode-rpc.md#1900002-系统调用ioctl失败) |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.setProtectionType(rpc.Ashmem.PROT_READ);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'Rpc set protection type fail, errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'Rpc set protection type fail, errorMessage ' + e.message);
-}
-```
 
 ## unmapAshmem
 
@@ -917,23 +471,7 @@ unmapAshmem(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.unmapAshmem();
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
 
 ## writeAshmem
 
@@ -947,8 +485,6 @@ writeAshmem(buf: number[], size: number, offset: number): void
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 11
 
@@ -971,77 +507,10 @@ writeAshmem(buf: number[], size: number, offset: number): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let sequence = rpc.MessageSequence.create();
-  let ashmem = rpc.Ashmem.create("ashmem", 1024);
-  // ashmem里写入数据
-  let buffer = new ArrayBuffer(1024);
-  let int32View = new Int32Array(buffer);
-  for (let i = 0; i < int32View.length; i++) {
-    int32View[i] = i * 2 + 1;
-  }
-  let size = buffer.byteLength;
-  ashmem.mapReadWriteAshmem();
-  ashmem.writeDataToAshmem(buffer, size, 0);
-  // 将ashmem对象写入messageSequence对象中
-  sequence.writeAshmem(ashmem);
-  // 将传递的数据大小写入messageSequence对象中
-  sequence.writeInt(size);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let parcel = new rpc.MessageParcel();
-  let ashmem = rpc.Ashmem.createAshmem("ashmem", 1024);
-  let isWriteSuccess = parcel.writeAshmem(ashmem);
-  hilog.info(0x0000, 'testTag', 'write ashmem to result is ' + isWriteSuccess);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadWriteAshmem();
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  ashmem.writeAshmem(ByteArrayVar, 5, 0);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'Rpc write to ashmem fail, errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'Rpc write to ashmem fail, errorMessage ' + e.message);
-}
-```
-
 ## writeDataToAshmem
 
-ArkTS-Dyn:
 ```TypeScript
 writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 ```
 
 将数据写入此Ashmem对象关联的共享文件。
@@ -1051,8 +520,6 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **参数：**
@@ -1060,8 +527,8 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | buf | ArrayBuffer | 是 |
-| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| size | number | 是 |
+| offset | number | 是 |
 
 **错误码：**
 
@@ -1069,30 +536,6 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) |
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let buffer = new ArrayBuffer(1024);
-  let int32View = new Int32Array(buffer);
-  for (let i = 0; i < int32View.length; i++) {
-    int32View[i] = i * 2 + 1;
-  }
-  let size = buffer.byteLength;
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  ashmem.mapReadWriteAshmem();
-  ashmem.writeDataToAshmem(buffer, size, 0);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
-  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
-}
-```
 
 ## writeToAshmem
 
@@ -1106,8 +549,6 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapreadwriteashmem)进行映射。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1129,24 +570,6 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
-  let mapResult = ashmem.mapReadAndWriteAshmem();
-  hilog.info(0x0000, 'testTag', 'RpcTest map ashmem result is ' + mapResult);
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  let writeResult = ashmem.writeToAshmem(ByteArrayVar, 5, 0);
-  hilog.info(0x0000, 'testTag', 'write to Ashmem result is ' + writeResult);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error is ' + error);
-}
-```
-
 ## PROT_EXEC
 
 ```TypeScript
@@ -1160,8 +583,6 @@ static readonly PROT_EXEC: number
 **默认值：** 4
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
@@ -1179,8 +600,6 @@ static readonly PROT_NONE: number
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## PROT_READ
@@ -1197,8 +616,6 @@ static readonly PROT_READ: number
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## PROT_WRITE
@@ -1214,7 +631,5 @@ static readonly PROT_WRITE: number
 **默认值：** 2
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.IPC.Core

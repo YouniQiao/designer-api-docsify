@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## stopCastDeviceDiscovery
@@ -15,8 +15,6 @@ function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void
 Stop device discovery.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -34,30 +32,6 @@ Stop device discovery.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.stopCastDeviceDiscovery((err: BusinessError) => {
-  if (err) {
-    console.error(`stopCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('stopCastDeviceDiscovery successfully');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.stopCastDeviceDiscovery().then(() => {
-  console.info('stopCastDeviceDiscovery successfully');
-}).catch((err: BusinessError) => {
-  console.error(`stopCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## stopCastDeviceDiscovery
 
@@ -68,8 +42,6 @@ function stopCastDeviceDiscovery(): Promise<void>
 Stop device discovery.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -86,7 +58,3 @@ Stop device discovery.
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [stopCastDeviceDiscovery](#stopcastdevicediscovery)

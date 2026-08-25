@@ -4,93 +4,81 @@ Satellite status information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## altitudes
 
 ```TypeScript
-altitudes: Array<double>
+altitudes: Array<number>
 ```
 
 Satellite altitude array.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## azimuths
 
 ```TypeScript
-azimuths: Array<double>
+azimuths: Array<number>
 ```
 
 Satellite azimuth array.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## carrierFrequencies
 
 ```TypeScript
-carrierFrequencies: Array<double>
+carrierFrequencies: Array<number>
 ```
 
 Satellite carrier frequency array.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## carrierToNoiseDensitys
 
 ```TypeScript
-carrierToNoiseDensitys: Array<double>
+carrierToNoiseDensitys: Array<number>
 ```
 
 Carrier to noise density array.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## satelliteAdditionalInfo
 
 ```TypeScript
-satelliteAdditionalInfo?: Array<int>
+satelliteAdditionalInfo?: Array<number>
 ```
 
 Satellite additional information array.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -106,38 +94,32 @@ Satellite constellation type array.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## satelliteIds
 
 ```TypeScript
-satelliteIds: Array<int>
+satelliteIds: Array<number>
 ```
 
 Satellite ID array.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
 ## satellitesNumber
 
 ```TypeScript
-satellitesNumber: int
+satellitesNumber: number
 ```
 
 Number of satellites.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Gnss

@@ -4,27 +4,23 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createTruncatedLine
 
 ```TypeScript
-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine
+createTruncatedLine(width: number, ellipsisMode: EllipsisMode, ellipsis: string): TextLine
 ```
 
 创建一个截断的文本行对象。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -35,7 +31,7 @@ createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | width | number | 是 |
-| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | 是 |
+| ellipsisMode | [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | 是 |
 | [ellipsis](arkts-arkgraphics2d-text-textstyle-i.md) | string | 是 |
 
 **返回值：**
@@ -43,127 +39,6 @@ createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string)
 | 类型 |
 | --- |
 | [TextLine](arkts-arkgraphics2d-text-textline-c.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing, text } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  let truncatedTextLine = lines[0].createTruncatedLine(100, text.EllipsisMode.START, "...");
-  truncatedTextLine.paint(canvas, 0, 100);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions =
-            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, Image, ClickEvent} from '@ohos.arkui.component'
-import { State } from '@ohos.arkui.stateManagement'
-import { drawing, text, common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit';
-
-function textFunc(pixelmap?: image.PixelMap) {
-  if (pixelmap) {
-    let canvas = new drawing.Canvas(pixelmap);
-    let textStyle: text.TextStyle = {
-      color: { alpha: 255, red: 255, green: 0, blue: 0 },
-      fontSize: 33,
-    };
-    let paragraphStyle: text.ParagraphStyle = {
-      textStyle: textStyle,
-      align: text.TextAlign.END,
-    };
-    let fontCollection = new text.FontCollection();
-    let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
-    paragraphBuilder.addText("Hello World");
-    let paragraph = paragraphBuilder.build();
-    let lines = paragraph.getTextLines();
-    let truncatedTextLine = lines[0].createTruncatedLine(100, text.EllipsisMode.START, "...");
-    if (truncatedTextLine != undefined) {
-      truncatedTextLine.paint(canvas, 0, 100);
-    }
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: image.PixelMap = undefined;
-  fun: (pixelmap?: image.PixelMap) => void = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button("Click").onClick((e: ClickEvent) => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions =
-            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
-
-## createTruncatedLine
-
-```TypeScript
-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine | undefined
-```
-
-创建一个截断的文本行对象。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| width | double | 是 |
-| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | 是 |
-| [ellipsis](arkts-arkgraphics2d-text-textstyle-i.md) | string | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [TextLine](arkts-arkgraphics2d-text-textline-c.md) \| undefined |
-
-**示例**
-
-参见 [createTruncatedLine](#createtruncatedline)
 
 ## enumerateCaretOffsets
 
@@ -175,8 +50,6 @@ enumerateCaretOffsets(callback: CaretOffsetsCallback): void
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -187,43 +60,15 @@ enumerateCaretOffsets(callback: CaretOffsetsCallback): void
 | --- | --- | --- |
 | callback | [CaretOffsetsCallback](arkts-arkgraphics2d-text-caretoffsetscallback-t.md) | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-lines[0].enumerateCaretOffsets((offset: number, index: number, leadingEdge: boolean): boolean => {
-  console.info('textLine: offset: ' + offset + ', index: ' + index + ', leadingEdge: ' + leadingEdge);
-  return index > 50;
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-lines[0].enumerateCaretOffsets((offset: double, index: int, leadingEdge: boolean): boolean => {
-  console.info('textLine: offset: ' + offset + ', index: ' + index + ', leadingEdge: ' + leadingEdge);
-  return index > 50;
-});
-```
-
 ## getAlignmentOffset
 
-ArkTS-Dyn:
 ```TypeScript
 getAlignmentOffset(alignmentFactor: number, alignmentWidth: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getAlignmentOffset(alignmentFactor: double, alignmentWidth: double): double
 ```
 
 获取文本行根据对齐因子和对齐宽度计算的对齐所需偏移量。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -233,38 +78,24 @@ getAlignmentOffset(alignmentFactor: double, alignmentWidth: double): double
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| alignmentFactor | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-| alignmentWidth | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| alignmentFactor | number | 是 |
+| alignmentWidth | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
-
-**示例**
-
-```TypeScript
-let alignmentOffset = lines[0].getAlignmentOffset(0.5, 500);
-```
+| number |
 
 ## getGlyphCount
 
-ArkTS-Dyn:
 ```TypeScript
 getGlyphCount(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getGlyphCount(): int
 ```
 
 获取文本行中字形的数量。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -274,17 +105,7 @@ getGlyphCount(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-```TypeScript
-let glyphCount = lines[0].getGlyphCount();
-```
-
-```TypeScript
-let glyphs = runs[0].getGlyphCount();
-```
+| number |
 
 ## getGlyphRuns
 
@@ -296,8 +117,6 @@ getGlyphRuns(): Array<Run>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -307,12 +126,6 @@ getGlyphRuns(): Array<Run>
 | 类型 |
 | --- |
 | Array&lt;[Run](arkts-arkgraphics2d-text-run-c.md)&gt; |
-
-**示例**
-
-```TypeScript
-let runs = lines[0].getGlyphRuns();
-```
 
 ## getImageBounds
 
@@ -330,8 +143,6 @@ getImageBounds(): common2D.Rect
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -342,33 +153,15 @@ getImageBounds(): common2D.Rect
 | --- |
 | common2D.Rect |
 
-**示例**
-
-```TypeScript
-let imageBounds = lines[0].getImageBounds();
-```
-
-```TypeScript
-let bounds = runs[0].getImageBounds();
-```
-
 ## getOffsetForStringIndex
 
-ArkTS-Dyn:
 ```TypeScript
 getOffsetForStringIndex(index: number): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getOffsetForStringIndex(index: int): double
 ```
 
 获取文本行中给定字符串索引处的偏移量。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -378,37 +171,23 @@ getOffsetForStringIndex(index: int): double
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| index | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
-
-**示例**
-
-```TypeScript
-let offset = lines[0].getOffsetForStringIndex(3);
-```
+| number |
 
 ## getStringIndexForPosition
 
-ArkTS-Dyn:
 ```TypeScript
 getStringIndexForPosition(point: common2D.Point): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getStringIndexForPosition(point: common2D.Point): int
 ```
 
 获取给定位置在原始字符串中的字符索引。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -424,14 +203,7 @@ getStringIndexForPosition(point: common2D.Point): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-```TypeScript
-let point : common2D.Point = { x: 15.0, y: 2.0 };
-let index = lines[0].getStringIndexForPosition(point);
-```
+| number |
 
 ## getTextRange
 
@@ -443,8 +215,6 @@ getTextRange(): Range
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -455,29 +225,15 @@ getTextRange(): Range
 | --- |
 | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) |
 
-**示例**
-
-```TypeScript
-let textRange = lines[0].getTextRange();
-```
-
 ## getTrailingSpaceWidth
 
-ArkTS-Dyn:
 ```TypeScript
 getTrailingSpaceWidth(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getTrailingSpaceWidth(): double
 ```
 
 获取文本行尾部空白字符的宽度。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -487,13 +243,7 @@ getTrailingSpaceWidth(): double
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
-
-**示例**
-
-```TypeScript
-let trailingSpaceWidth = lines[0].getTrailingSpaceWidth();
-```
+| number |
 
 ## getTypographicBounds
 
@@ -512,8 +262,6 @@ getTypographicBounds(): TypographicBounds
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -524,34 +272,15 @@ getTypographicBounds(): TypographicBounds
 | --- |
 | [TypographicBounds](arkts-arkgraphics2d-text-typographicbounds-i.md) |
 
-**示例**
-
-```TypeScript
-let bounds = lines[0].getTypographicBounds();
-console.info('textLine ascent:' + bounds.ascent + ', descent:' + bounds.descent + ', leading:' + bounds.leading + ', width:' + bounds.width);
-```
-
-```TypeScript
-let typographicBounds = runs[0].getTypographicBounds();
-```
-
 ## paint
 
-ArkTS-Dyn:
 ```TypeScript
 paint(canvas: drawing.Canvas, x: number, y: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
 在画布上以坐标点(x, y)为左上角位置绘制该文本行。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -562,186 +291,5 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | canvas | drawing.Canvas | 是 |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-
-**示例**
-
-```TypeScript
-const color: ArrayBuffer = new ArrayBuffer(160000);
-let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
-let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-let canvas = new drawing.Canvas(pixelMap);
-paragraph.paint(canvas, 0, 0);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  lines[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions =
-            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, Image, ClickEvent} from '@ohos.arkui.component'
-import { State } from '@ohos.arkui.stateManagement'
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from "@kit.ArkGraphics2D"
-import { image } from '@kit.ImageKit';
-
-function textFunc(pixelmap?: image.PixelMap) {
-  if (pixelmap) {
-    let canvas = new drawing.Canvas(pixelmap);
-    let textStyle: text.TextStyle = {
-      color: { alpha: 255, red: 255, green: 0, blue: 0 },
-      fontSize: 33,
-    };
-    let paragraphStyle: text.ParagraphStyle = {
-      textStyle: textStyle,
-      align: text.TextAlign.END,
-    };
-    let fontCollection = new text.FontCollection();
-    let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
-    paragraphBuilder.addText("Hello World");
-    let paragraph = paragraphBuilder.build();
-    let lines = paragraph.getTextLines();
-    lines[0].paint(canvas, 0, 0);
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: image.PixelMap = undefined;
-  fun: (pixelmap?: image.PixelMap) => void = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button("Click").onClick((e: ClickEvent) => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions =
-            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
-
-function textFunc(pixelmap: PixelMap) {
-  let canvas = new drawing.Canvas(pixelmap);
-  runs[0].paint(canvas, 0, 0);
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: PixelMap = undefined;
-  fun: Function = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button().onClick(() => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions =
-            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { Entry, Component, Column, Button, Image, ClickEvent} from '@ohos.arkui.component'
-import { State } from '@ohos.arkui.stateManagement'
-import { drawing } from '@kit.ArkGraphics2D'
-import { text } from "@kit.ArkGraphics2D"
-import { image } from '@kit.ImageKit';
-
-function textFunc(pixelmap?: image.PixelMap) {
-  if (pixelmap) {
-    let canvas = new drawing.Canvas(pixelmap);
-    let textStyle: text.TextStyle = {
-      color: { alpha: 255, red: 255, green: 0, blue: 0 },
-      fontSize: 33,
-    };
-    let paragraphStyle: text.ParagraphStyle = {
-      textStyle: textStyle,
-      align: text.TextAlign.END,
-    };
-    let fontCollection = new text.FontCollection();
-    let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
-    paragraphBuilder.addText("Hello World");
-    let paragraph = paragraphBuilder.build();
-    let lines = paragraph.getTextLines();
-    let runs = lines[0].getGlyphRuns();
-    runs[0].paint(canvas, 0, 0);
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  @State pixelmap?: image.PixelMap = undefined;
-  fun: (pixelmap?: image.PixelMap) => void = textFunc;
-  build() {
-    Column() {
-      Image(this.pixelmap).width(200).height(200);
-      Button("Click").onClick((e: ClickEvent) => {
-        if (this.pixelmap == undefined) {
-          const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions =
-            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
-          this.pixelmap = image.createPixelMapSync(color, opts);
-        }
-        this.fun(this.pixelmap);
-      })
-    }
-  }
-}
-```
+| x | number | 是 |
+| y | number | 是 |

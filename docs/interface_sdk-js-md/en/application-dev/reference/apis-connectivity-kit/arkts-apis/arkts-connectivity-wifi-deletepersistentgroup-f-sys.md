@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deletePersistentGroup
@@ -15,8 +15,6 @@ function deletePersistentGroup(netId: number): boolean
 Deletes the persistent P2P group with the specified network ID.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -39,16 +37,3 @@ Deletes the persistent P2P group with the specified network ID.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let netId = 0;
-    wifi.deletePersistentGroup(netId);    
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

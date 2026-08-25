@@ -4,14 +4,12 @@ Defines the APN information.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CellularData
 
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## apn
@@ -25,8 +23,6 @@ APN.
 **Type:** string
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -42,8 +38,6 @@ APN name.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CellularData
 
 ## mcc
@@ -57,8 +51,6 @@ Mobile country code (MCC) of the SIM card.
 **Type:** string
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -74,8 +66,6 @@ Multimedia messaging service (MMS) proxy.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CellularData
 
 ## mnc
@@ -89,8 +79,6 @@ Mobile network code (MNC) of the SIM card.
 **Type:** string
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -106,8 +94,6 @@ Proxy address.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CellularData
 
 ## type
@@ -122,8 +108,6 @@ APN type.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CellularData
 
 ## user
@@ -137,7 +121,5 @@ User name.
 **Type:** string
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CellularData

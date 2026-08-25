@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setRttCapability
 
 ```TypeScript
-function setRttCapability(accountId: int, isEnable: boolean): Promise<void>
+function setRttCapability(accountId: number, isEnable: boolean): Promise<void>
 ```
 
 设置rtt功能
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -28,7 +26,7 @@ function setRttCapability(accountId: int, isEnable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| accountId | number | 是 |
 | isEnable | boolean | 是 |
 
 **返回值：**

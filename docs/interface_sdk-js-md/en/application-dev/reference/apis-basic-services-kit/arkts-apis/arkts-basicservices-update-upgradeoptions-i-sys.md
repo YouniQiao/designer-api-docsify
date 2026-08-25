@@ -4,8 +4,6 @@ Defines the upgrade options, which are used to specify the upgrade operation typ
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the upgrade options, which are used to specify the upgrade operation typ
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## order
@@ -27,8 +25,6 @@ Upgrade command, which specifies the execution mode of the upgrade operation. Th
 **Type:** [Order](arkts-basicservices-update-order-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

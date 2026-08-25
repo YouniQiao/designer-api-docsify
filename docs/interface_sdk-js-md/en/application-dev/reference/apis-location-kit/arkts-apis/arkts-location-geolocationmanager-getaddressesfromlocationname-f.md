@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getAddressesFromLocationName
@@ -16,15 +16,13 @@ Obtain latitude and longitude info from location address.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Yes |
+| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes |
 
 **Error codes:**
@@ -35,43 +33,6 @@ Obtain latitude and longitude info from location address.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [3301400](../errorcode-geoLocationManager.md#3301400-query-failed-during-geocoding) |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let geocodeRequest: geoLocationManager.GeoCodeRequest = { "description": "No. xx, xx Road, Pudong District, Shanghai", "maxItems": 1};
-try {
-  geoLocationManager.getAddressesFromLocationName(geocodeRequest, (err, data) => {
-    if (err) {
-      console.error('getAddressesFromLocationName: err=' + JSON.stringify(err));
-    }
-    if (data) {
-      console.info('getAddressesFromLocationName: data=' + JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let geocodeRequest: geoLocationManager.GeoCodeRequest = { "description": "No. xx, xx Road, Pudong District, Shanghai", "maxItems": 1};
-try {
-  geoLocationManager.getAddressesFromLocationName(geocodeRequest).then((result) => {
-    console.info('getAddressesFromLocationName: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getAddressesFromLocationName: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
 
 
 ## getAddressesFromLocationName
@@ -84,15 +45,13 @@ Obtain latitude and longitude info from location address.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Yes |
+| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | Yes |
 
 **Return value:**
 
@@ -108,7 +67,3 @@ Obtain latitude and longitude info from location address.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [3301400](../errorcode-geoLocationManager.md#3301400-query-failed-during-geocoding) |
-
-**Examples**
-
-See [getAddressesFromLocationName](#getaddressesfromlocationname)

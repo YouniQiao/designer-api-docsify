@@ -6,8 +6,6 @@ Defines AppearSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ constructor(scope?: EffectScope)
 A constructor used to create an **AppearSymbolEffect** instance, which comes with an appear animation effect.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,6 @@ Effect scope.Default value: **EffectScope.LAYER**
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

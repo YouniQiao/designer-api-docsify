@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createCipher
@@ -12,7 +12,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createCipher(transformation: string): Cipher
 ```
 
-Creates a **Cipher** instance.<br>For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
+Creates a **Cipher** instance.
+
+For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
 
 > **NOTE：**&gt;
 > 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding
@@ -28,8 +30,6 @@ Creates a **Cipher** instance.<br>For details about the supported specifications
 > encryption and decryption.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -47,7 +47,7 @@ Creates a **Cipher** instance.<br>For details about the supported specifications
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Cipher](arkts-cryptoarchitecture-system-cipher-cipher-c.md) |
+| [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) |
 
 **Error codes:**
 
@@ -56,19 +56,3 @@ Creates a **Cipher** instance.<br>For details about the supported specifications
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cipherAlgName = '3DES192|ECB|PKCS7';
-try {
-  let cipher = cryptoFramework.createCipher(cipherAlgName);
-  console.info('cipher algName: ' + cipher.algName);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```

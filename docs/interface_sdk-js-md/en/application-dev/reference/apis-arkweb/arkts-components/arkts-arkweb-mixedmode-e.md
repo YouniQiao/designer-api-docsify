@@ -4,8 +4,6 @@ Enumerates the mixed content modes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## All
@@ -17,8 +15,6 @@ All = 0
 Loose mode: HTTP and HTTPS hybrid content can be loaded. This means that all insecure content can be loaded.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ Compatible mode. Allows some HTTP content to be loaded on an HTTPS page.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -49,8 +43,6 @@ None = 2
 Strict mode: HTTP and HTTPS hybrid content cannot be loaded.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

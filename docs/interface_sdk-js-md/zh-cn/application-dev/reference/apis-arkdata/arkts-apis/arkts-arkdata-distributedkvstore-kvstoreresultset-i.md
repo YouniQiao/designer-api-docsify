@@ -7,33 +7,23 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## 导入模块
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## getCount
 
-ArkTS-Dyn:
 ```TypeScript
 getCount(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getCount(): int
 ```
 
 获取结果集中的总行数。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,51 +33,7 @@ getCount(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let count: number;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    count = resultSet.getCount();
-    console.info(`getCount succeed:` + count);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to get count. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let count: int;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    count = resultSet.getCount();
-    console.info(`getCount succeed:` + count);
-  }).catch((err) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to get count. Code: ${error.code}, message: ${error.message}`);
-}
-```
+| number |
 
 ## getEntry
 
@@ -99,8 +45,6 @@ getEntry(): Entry
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -109,68 +53,18 @@ getEntry(): Entry
 
 | 类型 |
 | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    let entry = resultSet.getEntry();
-    console.info(`getEntry succeed:` + JSON.stringify(entry));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to get entry. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    let entry = resultSet.getEntry();
-    console.info(`getEntry succeed:` + JSON.stringify(entry));
-  }).catch((err) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to get entry. Code: ${error.code}, message: ${error.message}`);
-}
-```
+| [Entry](arkts-arkdata-distributeddata-entry-i.md) |
 
 ## getPosition
 
-ArkTS-Dyn:
 ```TypeScript
 getPosition(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getPosition(): int
 ```
 
 获取结果集中当前的读取位置。读取位置会因[moveToFirst](#movetofirst)、 [moveToLast](#movetolast)等操作而发生变化。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -179,51 +73,7 @@ getPosition(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let position: number;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeeded.');
-    resultSet = result;
-    position = resultSet.getPosition();
-    console.info(`getPosition succeed:` + position);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to get position. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let position: int;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeeded.');
-    resultSet = result;
-    position = resultSet.getPosition();
-    console.info(`getPosition succeed:` + position);
-  }).catch((err) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to get position. Code: ${error.code}, message: ${error.message}`);
-}
-```
+| number |
 
 ## isAfterLast
 
@@ -235,8 +85,6 @@ isAfterLast(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -246,48 +94,6 @@ isAfterLast(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    let isAfterLast = resultSet.isAfterLast();
-    console.info(`Check isAfterLast succeed:` + isAfterLast);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to check isAfterLast. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    let isafterlast = resultSet.isAfterLast();
-    console.info(`Check isAfterLast succeed:` + isafterlast);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to check isAfterLast. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isBeforeFirst
 
@@ -299,8 +105,6 @@ isBeforeFirst(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -310,48 +114,6 @@ isBeforeFirst(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    let isBeforeFirst = resultSet.isBeforeFirst();
-    console.info(`Check isBeforeFirst succeed: ` + isBeforeFirst);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to check isBeforeFirst. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    let isbeforefirst = resultSet.isBeforeFirst();
-    console.info(`Check isBeforeFirst succeed: ` + isbeforefirst);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to check isBeforeFirst. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isFirst
 
@@ -363,8 +125,6 @@ isFirst(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -374,50 +134,6 @@ isFirst(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let isFirst: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    isFirst = resultSet.isFirst();
-    console.info(`Check isFirst succeed:` + isFirst);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to check isFirst. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let isfirst: boolean;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    isfirst = resultSet.isFirst();
-    console.info(`Check isFirst succeed:` + isfirst);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to check isFirst. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## isLast
 
@@ -429,8 +145,6 @@ isLast(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -441,67 +155,15 @@ isLast(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let isLast: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    isLast = resultSet.isLast();
-    console.info(`Check isLast succeed: ` + isLast);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to check isLast. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let islast: boolean;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    islast = resultSet.isLast();
-    console.info(`Check isLast succeed: ` + islast);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to check isLast. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## move
 
-ArkTS-Dyn:
 ```TypeScript
 move(offset: number): boolean
-```
-
-ArkTS-Sta:
-```TypeScript
-move(offset: int): boolean
 ```
 
 将读取位置移动到当前位置的相对偏移量。即当前游标位置向下偏移 offset 行。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -511,7 +173,7 @@ move(offset: int): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| offset | number | 是 |
 
 **返回值：**
 
@@ -524,52 +186,6 @@ move(offset: int): boolean
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting resultSet');
-    resultSet = result;
-    moved = resultSet.move(2); // 若当前位置为0，将读取位置从绝对位置为0的位置移动2行，即移动到绝对位置为2，行数为3的位置
-    console.info(`Succeeded in moving.moved = ${moved}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting resultSet');
-    resultSet = result;
-    moved = resultSet.move(2); // 若当前位置为0，将读取位置从绝对位置为0的位置移动2行，即移动到绝对位置为2，行数为3的位置
-    console.info(`Succeeded in moving.moved = ${moved}`);
-  }).catch((err) => {
-    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## moveToFirst
 
@@ -581,8 +197,6 @@ moveToFirst(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -592,50 +206,6 @@ moveToFirst(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    moved = resultSet.moveToFirst();
-    console.info(`moveToFirst succeed: ` + moved);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move to first. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    moved = resultSet.moveToFirst();
-    console.info(`moveToFirst succeed: ` + moved);
-  }).catch((err) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move to first. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## moveToLast
 
@@ -647,8 +217,6 @@ moveToLast(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -658,50 +226,6 @@ moveToLast(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    moved = resultSet.moveToLast();
-    console.info(`moveToLast succeed:` + moved);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move to last. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    moved = resultSet.moveToLast();
-    console.info(`moveToLast succeed:` + moved);
-  }).catch((err) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move to last. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## moveToNext
 
@@ -713,8 +237,6 @@ moveToNext(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -725,71 +247,15 @@ moveToNext(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    do {
-      moved = resultSet.moveToNext();
-      console.info(`moveToNext succeed: ` + moved);
-    } while (moved);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move to next. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    do {
-      moved = resultSet.moveToNext();
-      console.info(`moveToNext succeed: ` + moved);
-    } while (moved)
-  }).catch((err) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move to next. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## moveToPosition
 
-ArkTS-Dyn:
 ```TypeScript
 moveToPosition(position: number): boolean
-```
-
-ArkTS-Sta:
-```TypeScript
-moveToPosition(position: int): boolean
 ```
 
 将读取位置从 0 移动到绝对位置。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -799,7 +265,7 @@ moveToPosition(position: int): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| position | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| position | number | 是 |
 
 **返回值：**
 
@@ -813,52 +279,6 @@ moveToPosition(position: int): boolean
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting resultSet');
-    resultSet = result;
-    moved = resultSet.moveToPosition(1);
-    console.info(`Succeeded in moving to position.moved=${moved}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move to position. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting resultSet');
-    resultSet = result;
-    moved = resultSet.moveToPosition(1);
-    console.info(`Succeeded in moving to position.moved=${moved}`);
-  }).catch((err) => {
-    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move to position. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## moveToPrevious
 
 ```TypeScript
@@ -869,8 +289,6 @@ moveToPrevious(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
@@ -880,49 +298,3 @@ moveToPrevious(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    moved = resultSet.moveToLast();
-    moved = resultSet.moveToPrevious();
-    console.info(`moveToPrevious succeed:` + moved);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move to previous. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    moved = resultSet.moveToLast();
-    moved = resultSet.moveToPrevious();
-    console.info(`moveToPrevious succeed:` + moved);
-  }).catch((err) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move to previous. Code: ${error.code}, message: ${error.message}`);
-}
-```

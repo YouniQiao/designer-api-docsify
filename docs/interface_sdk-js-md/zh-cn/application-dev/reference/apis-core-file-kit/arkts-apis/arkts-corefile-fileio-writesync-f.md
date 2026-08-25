@@ -24,8 +24,6 @@ declare function writeSync(
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [writeSync](arkts-corefile-file-fs-writesync-f.md)
@@ -45,27 +43,3 @@ declare function writeSync(
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath, 0o100 | 0o2, 0o666);
-let num = fileio.writeSync(fd, "hello, world");
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath,"r+");
-class Option {
-  offset: number = 0;
-  length: number = 4096;
-  position: number = 0;
-  encoding: string = 'utf-8';
-}
-let option = new Option();
-option.offset = 1;
-option.length = 5;
-option.position = 5;
-let num = ss.writeSync("hello, world", option);
-```

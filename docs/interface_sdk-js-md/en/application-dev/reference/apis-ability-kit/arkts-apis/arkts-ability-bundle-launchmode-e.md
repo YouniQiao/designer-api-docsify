@@ -8,8 +8,6 @@ Enumerates the ability launch modes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [LaunchType](arkts-ability-bundlemanager-launchtype-e.md)
@@ -26,8 +24,6 @@ The ability has only one instance.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SINGLETON](arkts-ability-bundlemanager-launchtype-e.md#singleton)
@@ -43,8 +39,6 @@ STANDARD = 1
 The ability can have multiple instances.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

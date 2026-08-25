@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## createPixelMapFromParcel
@@ -15,8 +15,6 @@ function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap
 Creates a PixelMap object based on MessageSequence parameter.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -45,63 +43,3 @@ Creates a PixelMap object based on MessageSequence parameter.
 | [62980179](../errorcode-image.md#62980179-abnormal-buffer-size) |
 | [62980180](../errorcode-image.md#62980180-failure-in-mapping-the-file-descriptor) |
 | [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) |
-
-**Examples**
-
-```TypeScript
-import { sendableImage } from '@kit.ImageKit';
-import { image } from '@kit.ImageKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class MySequence implements rpc.Parcelable {
-  pixel_map: sendableImage.PixelMap;
-  constructor(conPixelmap: sendableImage.PixelMap) {
-    this.pixel_map = conPixelmap;
-  }
-  marshalling(messageSequence: rpc.MessageSequence) {
-    this.pixel_map.marshalling(messageSequence);
-    return true;
-  }
-  unmarshalling(messageSequence: rpc.MessageSequence) {
-    try {
-      this.pixel_map = sendableImage.createPixelMapFromParcel(messageSequence);
-    } catch(e) {
-      let error = e as BusinessError;
-      console.error(`createPixelMapFromParcel error. code is ${error.code}, message is ${error.message}`);
-      return false;
-    }
-    return true;
-  }
-}
-async function Demo() {
-  const color: ArrayBuffer = new ArrayBuffer(96);
-  let bufferArr: Uint8Array = new Uint8Array(color);
-  for (let i = 0; i < bufferArr.length; i++) {
-    bufferArr[i] = 0x80;
-  }
-  let opts: image.InitializationOptions = {
-    editable: true,
-    pixelFormat: 4,
-    size: { height: 4, width: 6 },
-    alphaType: 3
-  }
-  let pixelMap: sendableImage.PixelMap | undefined = undefined;
-  await sendableImage.createPixelMap(color, opts).then((srcPixelMap: sendableImage.PixelMap) => {
-    pixelMap = srcPixelMap;
-  })
-  if (pixelMap != undefined) {
-    // Implement serialization.
-    let parcelable: MySequence = new MySequence(pixelMap);
-    let data: rpc.MessageSequence = rpc.MessageSequence.create();
-    data.writeParcelable(parcelable);
-
-    // Implement deserialization to obtain data through the RPC.
-    let ret: MySequence = new MySequence(pixelMap);
-    data.readParcelable(ret);
-
-    // Obtain the PixelMap object.
-    let newPixelMap = ret.pixel_map;
-  }
-}
-```

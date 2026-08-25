@@ -7,14 +7,12 @@ GeolocationPermissions is the geolocation permission management object for the W
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## allowGeolocation
@@ -27,8 +25,6 @@ Allows the specified origin to use the geolocation APIs. It is used to pre-autho
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -46,35 +42,6 @@ Allows the specified origin to use the geolocation APIs. It is used to pre-autho
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = "file:///";
-
-  build() {
-    Column() {
-      Button('allowGeolocation')
-        .onClick(() => {
-          try {
-            webview.GeolocationPermissions.allowGeolocation(this.origin);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## deleteAllGeolocation
 
@@ -86,8 +53,6 @@ Clears the geolocation permission status of all origins. It is used to revoke ge
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -98,34 +63,6 @@ Clears the geolocation permission status of all origins. It is used to revoke ge
 | --- | --- | --- |
 | incognito | boolean | No |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteAllGeolocation')
-        .onClick(() => {
-          try {
-            webview.GeolocationPermissions.deleteAllGeolocation();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## deleteGeolocation
 
 ```TypeScript
@@ -135,8 +72,6 @@ static deleteGeolocation(origin: string, incognito?: boolean): void
 Clears the geolocation permission status of the specified origin. It is used to revoke the geolocation authorization of a specified website, or to provide an app with the ability to manage permissions by origin.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -156,35 +91,6 @@ Clears the geolocation permission status of the specified origin. It is used to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = "file:///";
-
-  build() {
-    Column() {
-      Button('deleteGeolocation')
-        .onClick(() => {
-          try {
-            webview.GeolocationPermissions.deleteGeolocation(this.origin);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getAccessibleGeolocation
 
 ```TypeScript
@@ -194,8 +100,6 @@ static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<bo
 Obtains the geolocation permission status of the specified origin. This API uses a promise to return the result. It is used to query the geolocation authorization result of a specified website, such as displaying the permission status on a settings page or verifying authorization before access.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -221,73 +125,6 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = "file:///";
-
-  build() {
-    Column() {
-      Button('getAccessibleGeolocation')
-        .onClick(() => {
-          try {
-            webview.GeolocationPermissions.getAccessibleGeolocation(this.origin, (error, result) => {
-              if (error) {
-                console.error(`getAccessibleGeolocationAsync error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              console.info('getAccessibleGeolocationAsync result: ' + result);
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  origin: string = "file:///";
-
-  build() {
-    Column() {
-      Button('getAccessibleGeolocation')
-        .onClick(() => {
-          try {
-            webview.GeolocationPermissions.getAccessibleGeolocation(this.origin)
-              .then(result => {
-                console.info('getAccessibleGeolocationPromise result: ' + result);
-              }).catch((error: BusinessError) => {
-              console.error(`getAccessibleGeolocationPromise error, ErrorCode: ${error.code},  Message: ${error.message}`);
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getAccessibleGeolocation
 
 ```TypeScript
@@ -297,8 +134,6 @@ static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>
 Obtains the geolocation permission status of the specified origin. This API uses an asynchronous callback to return the result. It is used to query the geolocation authorization result of a specified website, such as displaying the permission status on a settings page or verifying authorization before access.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -319,10 +154,6 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
-**Examples**
-
-See [getAccessibleGeolocation](#getaccessiblegeolocation)
-
 ## getStoredGeolocation
 
 ```TypeScript
@@ -332,8 +163,6 @@ static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>
 Obtains the geolocation permission status of all origins. This API uses a promise to return the result. It is used to obtain a list of websites that have been granted geolocation permission, such as displaying on a privacy settings page or batch management on a permission management page.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -357,73 +186,6 @@ Obtains the geolocation permission status of all origins. This API uses a promis
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getStoredGeolocation')
-        .onClick(() => {
-          try {
-            webview.GeolocationPermissions.getStoredGeolocation((error, origins) => {
-              if (error) {
-                console.error(`getStoredGeolocationAsync error, ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              let origins_str: string = origins.join();
-              console.info('getStoredGeolocationAsync origins: ' + origins_str);
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getStoredGeolocation')
-        .onClick(() => {
-          try {
-            webview.GeolocationPermissions.getStoredGeolocation()
-              .then(origins => {
-                let origins_str: string = origins.join();
-                console.info('getStoredGeolocationPromise origins: ' + origins_str);
-              }).catch((error: BusinessError) => {
-              console.error(`getStoredGeolocationPromise error, ErrorCode: ${error.code},  Message: ${error.message}`);
-            });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## getStoredGeolocation
 
 ```TypeScript
@@ -433,8 +195,6 @@ static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: 
 Obtains the geolocation permission status of all origins. This API uses an asynchronous callback to return the result. It is used to obtain a list of websites that have been granted geolocation permission, such as displaying on a privacy settings page or batch management on a permission management page.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -452,7 +212,3 @@ Obtains the geolocation permission status of all origins. This API uses an async
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getStoredGeolocation](#getstoredgeolocation)

@@ -4,14 +4,12 @@ The **DataAbility** module provides APIs to create predicates for querying data 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from '@kit.ArkData';
+import { dataAbility } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

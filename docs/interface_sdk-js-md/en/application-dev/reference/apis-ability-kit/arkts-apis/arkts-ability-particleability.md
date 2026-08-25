@@ -4,8 +4,6 @@ The particleAbility module provides APIs for operating a DataAbility and Service
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -13,7 +11,7 @@ The particleAbility module provides APIs for operating a DataAbility and Service
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
+import { particleAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

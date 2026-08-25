@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## on('cooperate')
@@ -15,8 +15,6 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 Enables listening for screen hopping status change events.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -51,8 +49,6 @@ Enables listening for screen hopping status change events.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
@@ -84,8 +80,6 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 Registers a listener for the mouse cursor position of a device.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 

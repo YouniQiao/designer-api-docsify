@@ -4,8 +4,6 @@
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ RUNNING = 0
 正在优化空间。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -36,8 +32,6 @@ COMPLETED = 1
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ FAILED = 2
 
 **起始版本：** 17
 
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ STOPPED = 3
 优化空间停止。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

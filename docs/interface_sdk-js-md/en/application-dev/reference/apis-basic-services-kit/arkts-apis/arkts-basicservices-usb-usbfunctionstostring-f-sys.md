@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## usbFunctionsToString
@@ -15,8 +15,6 @@ function usbFunctionsToString(funcs: FunctionType): string
 Converts the USB function list in the numeric mask format to a string in Device mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -37,10 +35,3 @@ Converts the USB function list in the numeric mask format to a string in Device 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let funcs = usb.FunctionType.ACM | usb.FunctionType.ECM;
-let ret = usb.usbFunctionsToString(funcs);
-```

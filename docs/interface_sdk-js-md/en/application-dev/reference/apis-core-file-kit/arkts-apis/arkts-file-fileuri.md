@@ -4,14 +4,12 @@ Provides fileUri APIS@namespace fileUri
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
+import { fileUri } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

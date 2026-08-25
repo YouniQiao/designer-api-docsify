@@ -4,29 +4,25 @@ A color class used to store the color picking result. It is suitable for scenari
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from '@kit.ArkGraphics2D';
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## alpha
 
 ```TypeScript
-alpha: int
+alpha: number
 ```
 
 Alpha component value. Value range: [0x0, 0xFF].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -37,16 +33,14 @@ Alpha component value. Value range: [0x0, 0xFF].
 ## blue
 
 ```TypeScript
-blue: int
+blue: number
 ```
 
 Blue component value. Value range: [0x0, 0xFF].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -57,16 +51,14 @@ Blue component value. Value range: [0x0, 0xFF].
 ## green
 
 ```TypeScript
-green: int
+green: number
 ```
 
 Green component value. Value range: [0x0, 0xFF].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -77,16 +69,14 @@ Green component value. Value range: [0x0, 0xFF].
 ## red
 
 ```TypeScript
-red: int
+red: number
 ```
 
 Red component value. Value range: [0x0, 0xFF].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

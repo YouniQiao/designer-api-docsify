@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@kit.ConnectivityKit';
+import { ranging } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## stopPassiveRanging
@@ -15,8 +15,6 @@ function stopPassiveRanging(handle: number, capabilityType: RangingTypes): void
 Stops passive ranging mode.Stops the passive ranging broadcast and cleans up associated resources based on the specified handle and ranging capability type.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

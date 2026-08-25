@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## offScanModeChange
@@ -15,8 +15,6 @@ function offScanModeChange(callback?: Callback<ScanMode>): void
 Unsubscribe to an event indicating that the scanning mode of the local device has changed.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -37,16 +35,3 @@ Unsubscribe to an event indicating that the scanning mode of the local device ha
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-function ScanModeChangeEvent(scanMode: connection.ScanMode) {
-    console.info(`Scan mode has changed, new mode: ${scanMode}`);
-}
-try {
-    connection.offScanModeChange(ScanModeChangeEvent);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## unsubscribeContinuousTaskState
@@ -15,8 +15,6 @@ function unsubscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): v
 解注册长时任务变化回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.GET_BACKGROUND_TASK_INFO
 
@@ -40,29 +38,3 @@ function unsubscribeContinuousTaskState(subscriber: BackgroundTaskSubscriber): v
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
-
-**示例**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let backgroundTaskSubscriber: backgroundTaskManager.BackgroundTaskSubscriber = {
-  onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-  },
-  onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-  },
-  onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-  }
-}
-
-try {
-  backgroundTaskManager.unsubscribeContinuousTaskState(backgroundTaskSubscriber);
-  console.info('Operation unsubscribeContinuousTaskState succeeded');
-} catch (error) {
-  console.error(`Operation unsubscribeContinuousTaskState failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from '@kit.DistributedServiceKit';
+import { conversation } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## postConversationData
@@ -20,8 +20,6 @@ function postConversationData(
 Sends session data to the target device. The target device must be a trusted device under the same account. The network ID or UDID of the target device is used for device addressing. Data is sent to the app with the registered listener on the target device based on the specified bundle name and ability name. Typical use scenarios include sending collaboration commands across devices.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.sec.ACCESS_UDID
 

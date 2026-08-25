@@ -4,8 +4,6 @@ The power Mode enumeration.@enum { number } PowerMode
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
 ## SLEEPING
@@ -17,8 +15,6 @@ SLEEPING = 0
 Sleeping Mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -32,8 +28,6 @@ General Mode.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## THROUGH_WALL
@@ -45,7 +39,5 @@ THROUGH_WALL = 2
 Through wall Mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

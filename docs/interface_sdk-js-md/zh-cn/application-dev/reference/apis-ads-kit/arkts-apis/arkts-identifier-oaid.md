@@ -7,14 +7,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Advertising.OAID
 
 ## 导入模块
 
 ```TypeScript
-import { identifier } from '@kit.AdsKit';
+import { identifier } from 'kits/@kit.AdsKit';
 ```
 
 ## 汇总

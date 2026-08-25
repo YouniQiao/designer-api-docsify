@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getPersistentPolicy
 
 ```TypeScript
-function getPersistentPolicy(tokenID: int): Promise<Array<PolicyInfo>>
+function getPersistentPolicy(tokenID: number): Promise<Array<PolicyInfo>>
 ```
 
 Get all persistence permissions for the application.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_FILE_ACCESS_PERSIST
 
@@ -30,7 +28,7 @@ Get all persistence permissions for the application.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| tokenID | number | Yes |
 
 **Return value:**
 

@@ -6,14 +6,12 @@ The class of agent extension ability. This class cannot be used in Harmony Archi
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AgentExtensionAbility } from '@kit.AbilityKit';
+import { AgentExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## onAgentInvoked
@@ -25,8 +23,6 @@ onAgentInvoked(agentId: string): void
 Called back when a LOW_CODE agent is invoked.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

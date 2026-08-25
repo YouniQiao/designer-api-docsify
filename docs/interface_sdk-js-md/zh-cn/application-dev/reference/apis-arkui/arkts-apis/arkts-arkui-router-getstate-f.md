@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## getState
@@ -25,8 +25,6 @@ function getState(): RouterState
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 18
 
 **替代接口：** [getState](arkts-arkui-arkui-uicontext-router-c.md#getstate)
@@ -39,13 +37,4 @@ function getState(): RouterState
 
 | 类型 |
 | --- |
-| [RouterState](arkts-arkui-router-routerstate-i.md) |
-
-**示例**
-
-```TypeScript
-let page = this.getUIContext().getRouter().getState();
-console.info('current index = ' + page.index);
-console.info('current name = ' + page.name);
-console.info('current path = ' + page.path);
-```
+| [RouterState](arkts-arkui-system-router-routerstate-i.md) |

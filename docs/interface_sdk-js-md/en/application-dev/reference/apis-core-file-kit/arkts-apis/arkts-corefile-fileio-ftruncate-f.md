@@ -15,8 +15,6 @@ Truncates a file based on the file descriptor. This API uses a promise to return
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md)
@@ -36,29 +34,6 @@ Truncates a file based on the file descriptor. This API uses a promise to return
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-fileio.ftruncate(fd, 5).then(() => {
-  console.info("truncate file succeed");
-}).catch((err: BusinessError) => {
-  console.error("truncate file failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-let len = 5;
-fileio.ftruncate(fd, 5, (err: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## ftruncate
 
@@ -69,8 +44,6 @@ declare function ftruncate(fd: number, callback: AsyncCallback<void>): void
 Truncates a file based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -85,10 +58,6 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 | fd | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-See [ftruncate](#ftruncate)
-
 
 ## ftruncate
 
@@ -99,8 +68,6 @@ declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void
 Truncates a file based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -115,7 +82,3 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 | fd | number | Yes |
 | len | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [ftruncate](#ftruncate)

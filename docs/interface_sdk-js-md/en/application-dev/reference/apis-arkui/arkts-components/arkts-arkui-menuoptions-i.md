@@ -6,8 +6,6 @@ Configues menu item information, which is inherited from [ContextMenuOptions](ar
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,8 +29,6 @@ Whether to show the menu in a subwindow.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -48,11 +44,9 @@ title?: ResourceStr
 Menu title.  
 **NOTE：**This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt;.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

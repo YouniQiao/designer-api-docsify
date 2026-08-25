@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAbilityIcon
@@ -20,8 +20,6 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 > 替代。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -55,54 +53,6 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
 | [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) |
 
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// 需要替换为要查询的应用Bundle名称、Module名称和Ability组件名
-let bundleName: string = "com.example.myapplication";
-let moduleName: string = "entry";
-let abilityName: string = "EntryAbility";
-
-try {
-  bundleManager.getAbilityIcon(bundleName, moduleName, abilityName).then((data) => {
-    hilog.info(0x0000,'testTag', 'getAbilityIcon successful. Data: %{public}s',JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    hilog.error(0x0000,'testTag', 'getAbilityIcon failed. Cause: %{public}s',error.message);
-  })
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAbilityIcon failed. Cause: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// 需要替换为要查询的应用Bundle名称、Module名称和Ability组件名
-let bundleName: string = "com.example.myapplication";
-let moduleName: string = "entry";
-let abilityName: string = "EntryAbility";
-
-try {
-  bundleManager.getAbilityIcon(bundleName, moduleName, abilityName, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getAbilityIcon failed: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getAbilityIcon successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAbilityIcon failed: %{public}s', message);
-}
-```
-
 
 ## getAbilityIcon
 
@@ -118,8 +68,6 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 > 替代。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -157,7 +105,3 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
 | [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) |
-
-**示例**
-
-参见 [getAbilityIcon](#getabilityicon)

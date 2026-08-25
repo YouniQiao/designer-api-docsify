@@ -4,8 +4,6 @@ Non current day style.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 20
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -25,11 +23,9 @@ nonCurrentMonthDayColor?: ResourceColor
 
 Non-current month day color.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -47,11 +43,9 @@ nonCurrentMonthLunarColor?: ResourceColor
 
 Lunar style of non-current month.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -69,11 +63,9 @@ nonCurrentMonthOffDayMarkColor?: ResourceColor
 
 Non-Current Month Off Day Marker Color.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 
@@ -91,11 +83,9 @@ nonCurrentMonthWorkDayMarkColor?: ResourceColor
 
 Non-Current Month Workday Marker Color.
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 20
 

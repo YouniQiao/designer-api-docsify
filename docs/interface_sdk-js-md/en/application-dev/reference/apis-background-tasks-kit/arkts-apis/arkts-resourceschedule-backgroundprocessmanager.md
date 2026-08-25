@@ -4,14 +4,12 @@ The **backgroundProcessManager** module provides APIs for background child proce
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Resourceschedule.BackgroundProcessManager
 
 ## Modules to Import
 
 ```TypeScript
-import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## Summary

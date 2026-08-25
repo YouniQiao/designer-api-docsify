@@ -4,14 +4,12 @@ Represents data of the plain text type.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## abstract
@@ -25,8 +23,6 @@ Text abstract. It is an empty string by default.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,26 +40,6 @@ Object of the dictionary type used to describe the attributes of the text conten
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## textAbstract
-
-```TypeScript
-textAbstract?: string
-```
-
-Indicates the abstract of the PlainText.
-
-**Type:** string
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -79,8 +55,6 @@ Plaintext content.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,32 +72,6 @@ Uniform data type, which has a fixed value of **general.plain-text**. For detail
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-let plainTextDetails : Record<string, string> = {
-  'attr1': 'value1',
-  'attr2': 'value2'
-}
-let plainText : uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent : 'This is plainText textContent example',
-  abstract : 'this is abstract',
-  details : plainTextDetails
-}
-console.info('plainText.uniformDataType: ' + plainText.uniformDataType);
-if(plainText.details != undefined){
-  let plainTextDetailsObj : Record<string, string> = plainText.details;
-  for(let kv of Object.entries(plainTextDetailsObj)) {
-    console.info('plainText.details.attr: ' + kv[0] + ', value:' + kv[1]);
-  }
-}
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-```

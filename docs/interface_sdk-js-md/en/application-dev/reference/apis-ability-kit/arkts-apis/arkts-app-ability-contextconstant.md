@@ -4,8 +4,6 @@ The ContextConstant module defines context-related enums, including the file enc
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,7 +11,7 @@ The ContextConstant module defines context-related enums, including the file enc
 ## Modules to Import
 
 ```TypeScript
-import { contextConstant } from '@kit.AbilityKit';
+import { contextConstant } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

@@ -4,8 +4,6 @@ Provides interfaces for initiating location requests, ending the location servic
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [geoLocationManager](arkts-geolocationmanager.md)
@@ -17,7 +15,7 @@ Provides interfaces for initiating location requests, ending the location servic
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## Summary

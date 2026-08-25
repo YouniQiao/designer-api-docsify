@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getMifareUltralight
@@ -15,8 +15,6 @@ function getMifareUltralight(tagInfo: TagInfo): MifareUltralightTag
 Obtains a **MifareUltralightTag** object, which allows access to the tags that use MIFARE Ultralight.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +30,7 @@ Obtains a **MifareUltralightTag** object, which allows access to the tags that u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [MifareUltralightTag](arkts-connectivity-tag-mifareultralighttag-t.md) |
+| [MifareUltralightTag](arkts-connectivity-nfctech-mifareultralighttag-i.md) |
 
 **Error codes:**
 

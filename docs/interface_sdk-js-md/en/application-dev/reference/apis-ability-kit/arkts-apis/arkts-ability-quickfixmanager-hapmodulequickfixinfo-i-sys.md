@@ -4,8 +4,6 @@ Defines the quick fix information at the HAP file level.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the quick fix information at the HAP file level.
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## moduleName
@@ -27,8 +25,6 @@ Name of the HAP file.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
@@ -46,8 +42,6 @@ Hash value of the HAP file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Installation path of the quick fix patch file.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 

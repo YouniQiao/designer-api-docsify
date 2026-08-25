@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## addSysVpnConfig
@@ -15,8 +15,6 @@ function addSysVpnConfig(config: SysVpnConfig): Promise<void>
 Add a system VPN network configuration.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 

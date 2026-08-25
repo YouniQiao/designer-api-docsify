@@ -12,8 +12,6 @@ Parameters of the shared element transition animation.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -35,8 +33,6 @@ Animation curve.You are advised to specify the curve using the **Curve** or **IC
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -54,8 +50,6 @@ Delay of animation playback.Default value: **0**Unit: ms
 **Default:** 0
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -75,8 +69,6 @@ Animation duration.Default value: **1000**Unit: ms Value range: [0, +∞)
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -93,8 +85,6 @@ Motion path.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -107,13 +97,11 @@ type?: SharedTransitionEffectType
 
 Animation type.Default value: **SharedTransitionEffectType.Exchange**
 
-**Type:** SharedTransitionEffectType
+**Type:** [SharedTransitionEffectType](../arkts-apis/arkts-arkui-sharedtransitioneffecttype-e.md)
 
 **Default:** SharedTransitionEffectType.Exchange
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,8 +118,6 @@ Z-axis.Value range: (-∞, +∞)Default value: **0**
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

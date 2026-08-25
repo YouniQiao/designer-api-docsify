@@ -1,10 +1,8 @@
 # WallpaperResourceType (System API)
 
-Indicates the resource type of the wallpaper.@enum { int } WallpaperResourceType
+Indicates the resource type of the wallpaper.@enum { number } WallpaperResourceType
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -20,8 +18,6 @@ Indicates the default wallpaper resource.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ PICTURE
 Indicates the picture wallpaper resource.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -52,8 +46,6 @@ Indicates the video wallpaper resource.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ PACKAGE
 Indicates the package wallpaper resource.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## addSlots
@@ -15,8 +15,6 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 Adds an array of notification slots. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,48 +41,6 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// addSlots callback
-let addSlotsCallBack = (err: BusinessError): void => {
-    if (err) {
-        console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("addSlots success");
-    }
-}
-// NotificationSlot object
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-// NotificationSlotArray object
-let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
-notificationSlotArray[0] = notificationSlot;
-
-notificationManager.addSlots(notificationSlotArray, addSlotsCallBack);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// NotificationSlot object
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-// NotificationSlotArray object
-let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
-notificationSlotArray[0] = notificationSlot;
-
-notificationManager.addSlots(notificationSlotArray).then(() => {
-    console.info("addSlots success");
-}).catch((err: BusinessError) => {
-    console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## addSlots
 
@@ -95,8 +51,6 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 Adds an array of notification slots. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -127,7 +81,3 @@ Adds an array of notification slots. This API uses a promise to return the resul
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-
-**Examples**
-
-See [addSlots](#addslots)

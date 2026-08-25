@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## isMicrophoneDisabled
@@ -15,8 +15,6 @@ function isMicrophoneDisabled(admin: Want): boolean
 Queries whether the microphone is disabled.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -51,23 +49,3 @@ Queries whether the microphone is disabled.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result = restrictions.isMicrophoneDisabled(wantTemp);
-  console.info(`Succeeded in querying is microphone disabled : ${result}`);
-} catch (err) {
-  console.error(`Failed to query is microphone disabled or not. Code is ${err.code}, message is ${err.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setDefaultPrinter
@@ -15,8 +15,6 @@ function setDefaultPrinter(printerId: string, type: DefaultPrinterType): Promise
 设置默认打印机，使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -44,18 +42,3 @@ function setDefaultPrinter(printerId: string, type: DefaultPrinterType): Promise
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let printerId : string = '1';
-let type : print.DefaultPrinterType = print.DefaultPrinterType.DEFAULT_PRINTER_TYPE_SET_BY_USER;
-print.setDefaultPrinter(printerId, type).then(() => {
-    console.info('setDefaultPrinter success');
-}).catch((error: BusinessError) => {
-    console.error('setDefaultPrinter error : ' + JSON.stringify(error));
-})
-```

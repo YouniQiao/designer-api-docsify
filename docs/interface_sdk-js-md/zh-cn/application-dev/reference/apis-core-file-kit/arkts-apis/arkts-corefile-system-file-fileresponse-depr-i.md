@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
@@ -27,8 +25,6 @@ lastModifiedTime: number
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
@@ -44,8 +40,6 @@ length: number
 **类型：** number
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 
@@ -63,8 +57,6 @@ subFiles?: Array<FileResponse>
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
@@ -81,8 +73,6 @@ type: 'dir' | 'file'
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
@@ -98,8 +88,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 10
 

@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## closePipe
 
 ```TypeScript
-function closePipe(pipe: USBDevicePipe): int
+function closePipe(pipe: USBDevicePipe): number
 ```
 
 Closes a USB device pipe.
@@ -18,8 +18,6 @@ Closes a USB device pipe.
 3. Call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain **devicepipe** as an input parameter.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -33,7 +31,7 @@ Closes a USB device pipe.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -41,20 +39,3 @@ Closes a USB device pipe.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-function closePipe() {
-  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-  if (!devicesList || devicesList.length == 0) {
-    console.info(`device list is empty`);
-    return;
-  }
-
-  usbManager.requestRight(devicesList[0].name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
-  let ret: number = usbManager.closePipe(devicepipe);
-  console.info(`closePipe = ${ret}`);
-}
-```

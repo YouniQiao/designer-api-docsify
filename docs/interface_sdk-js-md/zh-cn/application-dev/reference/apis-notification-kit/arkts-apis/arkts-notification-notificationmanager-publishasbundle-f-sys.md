@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## publishAsBundle
@@ -12,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function publishAsBundle(
     request: NotificationRequest,
     representativeBundle: string,
-    userId: int,
+    userId: number,
     callback: AsyncCallback<void>
   ): void
 ```
@@ -20,8 +20,6 @@ function publishAsBundle(
 发布代理通知。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -35,7 +33,7 @@ function publishAsBundle(
 | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 |
 | [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -65,198 +63,16 @@ function publishAsBundle(
 | [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publishAsBundle回调
-let callback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('publishAsBundle success');
-    }
-}
-// 被代理应用的包名
-let representativeBundle: string = 'com.example.demo';
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-// NotificationRequest对象
-let request: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-notificationManager.publishAsBundle(request, representativeBundle, userId, callback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-//publishAsBundle回调
-let callback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('publishAsBundle success');
-    }
-}
-// 被代理应用的包名
-let representativeBundle: string = 'bundleName1';
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-// NotificationRequest对象
-let request: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-notificationManager.publishAsBundle(request, representativeBundle, userId, callback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 被代理应用的包名
-let representativeBundle: string = 'com.example.demo';
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-// NotificationRequest对象
-let request: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-notificationManager.publishAsBundle(request, representativeBundle, userId).then(() => {
-    console.info('publishAsBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 被代理应用的包名
-let representativeBundle: string = 'bundleName1';
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-// NotificationRequest对象
-let request: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-notificationManager.publishAsBundle(request, representativeBundle, userId).then(() => {
-    console.info('publishAsBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`publishAsBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 被代理应用的包信息
-let representativeBundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-// NotificationRequest对象
-let request: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-notificationManager.publishAsBundle(representativeBundle, request).then(() => {
-    console.info('publishAsBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 被代理应用的包信息
-let representativeBundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-// NotificationRequest对象
-let request: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-notificationManager.publishAsBundle(representativeBundle, request).then(() => {
-    console.info('publishAsBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`publishAsBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## publishAsBundle
 
 ```TypeScript
-function publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: int): Promise<void>
+function publishAsBundle(request: NotificationRequest, representativeBundle: string, userId: number): Promise<void>
 ```
 
 发布代理通知。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -270,7 +86,7 @@ function publishAsBundle(request: NotificationRequest, representativeBundle: str
 | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 |
 | [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | string | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -305,10 +121,6 @@ function publishAsBundle(request: NotificationRequest, representativeBundle: str
 | [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) |
 
-**示例**
-
-参见 [publishAsBundle](#publishasbundle)
-
 
 ## publishAsBundle
 
@@ -320,8 +132,6 @@ function publishAsBundle(representativeBundle: BundleOption, request: Notificati
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -332,7 +142,7 @@ function publishAsBundle(representativeBundle: BundleOption, request: Notificati
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| [representativeBundle](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 |
 
 **返回值：**
@@ -367,7 +177,3 @@ function publishAsBundle(representativeBundle: BundleOption, request: Notificati
 | [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) |
 | [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) |
-
-**示例**
-
-参见 [publishAsBundle](#publishasbundle)

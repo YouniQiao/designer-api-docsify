@@ -4,8 +4,6 @@ The **formHost** module provides APIs related to the widget host, which is an ap
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The **formHost** module provides APIs related to the widget host, which is an ap
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## Summary
@@ -61,31 +59,21 @@ import { formHost } from '@kit.FormKit';
 | [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md) |
 | [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md) |
 | [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md) |
-| [off](arkts-form-formhost-off-f-sys.md#offformuninstall) |
-| [off](arkts-form-formhost-off-f-sys.md#offformoverflow) |
-| [off](arkts-form-formhost-off-f-sys.md#offchangesceneanimationstate) |
-| [off](arkts-form-formhost-off-f-sys.md#offgetformrect) |
-| [off](arkts-form-formhost-off-f-sys.md#offgetliveformstatus) |
-| [offChangeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) |
+| off |
+| off |
+| off |
+| [off](arkts-form-formprovider-getformrect-f.md) |
+| off |
 | [offDeleteFormsCallback](arkts-form-formhost-offdeleteformscallback-f-sys.md) |
-| [offFormOverflow](arkts-form-formhost-offformoverflow-f-sys.md) |
-| [offFormUninstall](arkts-form-formhost-offformuninstall-f-sys.md) |
-| [offGetFormRect](arkts-form-formhost-offgetformrect-f-sys.md) |
-| [offGetLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md) |
 | [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md) |
 | [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md) |
 | [offUpdateFormsConfigCallback](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md) |
-| [on](arkts-form-formhost-on-f-sys.md#onformuninstall) |
-| [on](arkts-form-formhost-on-f-sys.md#onformoverflow) |
-| [on](arkts-form-formhost-on-f-sys.md#onchangesceneanimationstate) |
-| [on](arkts-form-formhost-on-f-sys.md#ongetformrect) |
-| [on](arkts-form-formhost-on-f-sys.md#ongetliveformstatus) |
-| [onChangeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) |
+| on |
+| on |
+| on |
+| [on](arkts-form-formprovider-getformrect-f.md) |
+| on |
 | [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md) |
-| [onFormOverflow](arkts-form-formhost-onformoverflow-f-sys.md) |
-| [onFormUninstall](arkts-form-formhost-onformuninstall-f-sys.md) |
-| [onGetFormRect](arkts-form-formhost-ongetformrect-f-sys.md) |
-| [onGetLiveFormStatus](arkts-form-formhost-ongetliveformstatus-f-sys.md) |
 | [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md) |
 | [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md) |
 | [onUpdateFormsConfigCallback](arkts-form-formhost-onupdateformsconfigcallback-f-sys.md) |

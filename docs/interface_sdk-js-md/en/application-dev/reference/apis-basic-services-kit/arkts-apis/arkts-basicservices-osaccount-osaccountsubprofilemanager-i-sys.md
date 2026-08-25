@@ -1,10 +1,8 @@
 # OsAccountSubProfileManager (System API)
 
-Defines the OS account sub-profile manager class.
+Defines an OS account sub-profile manager.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -13,26 +11,18 @@ Defines the OS account sub-profile manager class.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile>
 ```
 
-ArkTS-Sta:
-```TypeScript
-createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>
-```
-
-Creates an OS account sub-profile.
+Creates an OS account sub-profile. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -46,7 +36,7 @@ Creates an OS account sub-profile.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| osAccountLocalId | number | Yes |
 
 **Return value:**
 
@@ -68,21 +58,13 @@ Creates an OS account sub-profile.
 
 ## deleteOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<void>
 ```
 
-ArkTS-Sta:
-```TypeScript
-deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>
-```
-
-Deletes an OS account sub-profile.
+Deletes an OS account sub-profile. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -96,8 +78,8 @@ Deletes an OS account sub-profile.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| osAccountLocalId | number | Yes |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | Yes |
 
 **Return value:**
 
@@ -119,21 +101,13 @@ Deletes an OS account sub-profile.
 
 ## getOsAccountForegroundSubProfileId
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountForegroundSubProfileId(): Promise<number>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountForegroundSubProfileId(): Promise<int>
-```
-
-Gets the foreground sub-profile ID of the OS account to which the caller belongs.
+Obtains the foreground sub-profile ID of the OS account of the caller. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,7 +119,7 @@ Gets the foreground sub-profile ID of the OS account to which the caller belongs
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -157,21 +131,13 @@ Gets the foreground sub-profile ID of the OS account to which the caller belongs
 
 ## getOsAccountForegroundSubProfileId
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
-```
-
-Gets the foreground sub-profile ID of a specified OS account.
+Obtains the foreground sub-profile ID of the specified OS account. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -183,13 +149,13 @@ Gets the foreground sub-profile ID of a specified OS account.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| osAccountLocalId | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -202,21 +168,13 @@ Gets the foreground sub-profile ID of a specified OS account.
 
 ## getOsAccountLocalIdForSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountLocalIdForSubProfile(subProfileId: number): Promise<number>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>
-```
-
-Obtains the local ID of the OS account to which a sub-profile belongs.
+Obtains the local ID of the OS account of a sub-profile. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,13 +186,13 @@ Obtains the local ID of the OS account to which a sub-profile belongs.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -246,21 +204,13 @@ Obtains the local ID of the OS account to which a sub-profile belongs.
 
 ## getOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>
-```
-
-Gets the sub-profile object information of the OS account to which the caller belongs.
+Obtains the sub-profile of the OS account of the caller. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNTS
 
@@ -274,7 +224,7 @@ Gets the sub-profile object information of the OS account to which the caller be
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | Yes |
 
 **Return value:**
 
@@ -293,21 +243,13 @@ Gets the sub-profile object information of the OS account to which the caller be
 
 ## getOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<OsAccountSubProfile>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAccountSubProfile>
-```
-
-Gets the sub-profile object information of the specified OS account.
+Obtains the sub-profile of the specified OS account. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -321,8 +263,8 @@ Gets the sub-profile object information of the specified OS account.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| osAccountLocalId | number | Yes |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | Yes |
 
 **Return value:**
 
@@ -341,21 +283,13 @@ Gets the sub-profile object information of the specified OS account.
 
 ## getOsAccountSubProfileIds
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountSubProfileIds(): Promise<number[]>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountSubProfileIds(): Promise<int[]>
-```
-
-Gets the ID list of sub-profile of the OS account to which the caller belongs.
+Obtains the sub-profile IDs of the OS account of the caller. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
@@ -369,7 +303,7 @@ Gets the ID list of sub-profile of the OS account to which the caller belongs.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
+| Promise & lt;number[] & gt; |
 
 **Error codes:**
 
@@ -381,21 +315,13 @@ Gets the ID list of sub-profile of the OS account to which the caller belongs.
 
 ## getOsAccountSubProfileIds
 
-ArkTS-Dyn:
 ```TypeScript
 getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
-```
-
-Gets the ID list of sub-profile of a specified OS account.
+Obtains the sub-profile IDs of the specified OS account. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
@@ -409,13 +335,13 @@ Gets the ID list of sub-profile of a specified OS account.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| osAccountLocalId | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number[] & gt;<br>ArkTS-Sta：Promise & lt;int[] & gt; |
+| Promise & lt;number[] & gt; |
 
 **Error codes:**
 
@@ -432,11 +358,9 @@ Gets the ID list of sub-profile of a specified OS account.
 offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void
 ```
 
-Unsubscribes from OS account sub-profile events.
+Unsubscribes from OS account sub-profile events. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -465,11 +389,9 @@ onOsAccountSubProfileEvent(
       callback: Callback<OsAccountSubProfileEventData>): void
 ```
 
-Subscribes to OS account sub-profile events.
+Subscribes to OS account sub-profile events. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -494,21 +416,13 @@ Subscribes to OS account sub-profile events.
 
 ## switchOsAccountSubProfile
 
-ArkTS-Dyn:
 ```TypeScript
 switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<void>
 ```
 
-ArkTS-Sta:
-```TypeScript
-switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<void>
-```
-
-Switches to an OS account sub-profile.
+Switches to an OS account sub-profile. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -522,8 +436,8 @@ Switches to an OS account sub-profile.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| osAccountLocalId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| osAccountLocalId | number | Yes |
+| [subProfileId](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | Yes |
 
 **Return value:**
 

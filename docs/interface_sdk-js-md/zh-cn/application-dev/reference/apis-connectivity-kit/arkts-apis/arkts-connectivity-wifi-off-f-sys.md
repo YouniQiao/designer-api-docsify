@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## off('streamChange')
@@ -15,8 +15,6 @@ function off(type: 'streamChange', callback?: Callback<number>): void
 取消订阅WLAN数据流改变事件。<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -46,8 +44,6 @@ function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** hotspotStaJoin
@@ -75,8 +71,6 @@ function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void
 取消订阅WLAN热点STA离开事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

@@ -6,8 +6,6 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Sets the foreground color of the progress indicator.Since API version 10, Linear
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -37,7 +33,7 @@ Sets the foreground color of the progress indicator.Since API version 10, Linear
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [value](#value) | ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
+| [value](#value) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes |
 
 ## contentModifier
 
@@ -49,8 +45,6 @@ Creates a content modifier.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -61,7 +55,7 @@ Creates a content modifier.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[ProgressConfiguration](arkts-arkui-progressconfiguration-i.md)&gt; | Yes |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ProgressConfiguration](arkts-arkui-progressconfiguration-i.md)&gt; | Yes |
 
 ## privacySensitive
 
@@ -76,8 +70,6 @@ Sets whether to enable privacy-sensitive mode.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -90,7 +82,7 @@ Sets whether to enable privacy-sensitive mode.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isPrivacySensitiveMode | Optional & lt;boolean & gt; | Yes |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## style
 
@@ -101,8 +93,6 @@ style(value: Style)
 Sets the component style.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -125,8 +115,6 @@ value(value: number)
 Current progress. Values less than 0 are adjusted to **0**, and values greater than the **total** value are capped at the **total** value. Invalid values do not take effect.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

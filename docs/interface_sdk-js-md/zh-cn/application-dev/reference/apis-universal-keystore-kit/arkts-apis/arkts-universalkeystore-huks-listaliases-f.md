@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## listAliases
@@ -15,8 +15,6 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 查询密钥别名集接口。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,31 +42,3 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 | [12000012](../errorcode-huks.md#12000012-外部错误) |
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
-
-**示例**
-
-```TypeScript
-/* 以查询DE类密钥的别名集为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-
-async function testListAliases() {
-  let queryProperties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_AUTH_STORAGE_LEVEL,
-      value: huks.HuksAuthStorageLevel.HUKS_AUTH_STORAGE_LEVEL_DE
-    }
-  ];
-  let queryOptions: huks.HuksOptions = {
-    properties: queryProperties
-  };
-
-  try{
-    await huks.listAliases(queryOptions)
-      .then((data) => {
-      console.info(`promise: listAliases success, data: ` + JSON.stringify(data));
-    });
-  } catch (error) {
-    console.error(`promise: listAliases failed, errCode : ${error.code}, errMsg : ${error.message}`);
-  }
-}
-```

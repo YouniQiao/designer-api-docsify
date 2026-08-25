@@ -4,8 +4,6 @@ Describes the DLP settings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the DLP settings.
 ## Modules to Import
 
 ```TypeScript
-import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
+import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## isSuccess
@@ -27,8 +25,6 @@ Whether the DLP setting is successful. The value **true** indicates that the set
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

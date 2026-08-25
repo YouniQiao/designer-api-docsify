@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## off('streamChange')
@@ -15,8 +15,6 @@ function off(type: 'streamChange', callback?: Callback<number>): void
 Unsubscribe Wi-Fi stream change events. All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -41,22 +39,6 @@ Unsubscribe Wi-Fi stream change events. All callback functions will be deregiste
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-let recvStreamChangeFunc = (result:number) => {
-    console.info("Receive stream change event: " + result);
-}
-
-// Register an event.
-wifiManager.on("streamChange", recvStreamChangeFunc);
-
-// Unregister an event.
-wifiManager.off("streamChange", recvStreamChangeFunc);
-```
-
 
 ## off('deviceConfigChange')
 
@@ -67,8 +49,6 @@ function off(type: 'deviceConfigChange', callback?: Callback<number>): void
 Subscribe Wi-Fi device config change events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -93,22 +73,6 @@ Subscribe Wi-Fi device config change events.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-let recvDeviceConfigChangeFunc = (result:number) => {
-    console.info("Receive device config change event: " + result);
-}
-
-// Register an event.
-wifiManager.on("deviceConfigChange", recvDeviceConfigChangeFunc);
-
-// Unregister an event.
-wifiManager.off("deviceConfigChange", recvDeviceConfigChangeFunc);
-```
-
 
 ## off('hotspotStaJoin')
 
@@ -119,8 +83,6 @@ function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 Unsubscribe Wi-Fi hotspot sta join events. All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -145,22 +107,6 @@ Unsubscribe Wi-Fi hotspot sta join events. All callback functions will be deregi
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
 
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-let recvHotspotStaJoinFunc = (result:wifiManager.StationInfo) => {
-    console.info("Receive hotspot sta join event: " + result);
-}
-
-// Register an event.
-wifiManager.on("hotspotStaJoin", recvHotspotStaJoinFunc);
-
-// Unregister an event.
-wifiManager.off("hotspotStaJoin", recvHotspotStaJoinFunc);
-```
-
 
 ## off('hotspotStaLeave')
 
@@ -171,8 +117,6 @@ function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void
 Unsubscribe Wi-Fi hotspot sta leave events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -196,19 +140,3 @@ Unsubscribe Wi-Fi hotspot sta leave events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-let recvHotspotStaLeaveFunc = (result:wifiManager.StationInfo) => {
-    console.info("Receive hotspot sta leave event: " + result);
-}
-
-// Register an event.
-wifiManager.on("hotspotStaLeave", recvHotspotStaLeaveFunc);
-
-// Unregister an event.
-wifiManager.off("hotspotStaLeave", recvHotspotStaLeaveFunc);
-```

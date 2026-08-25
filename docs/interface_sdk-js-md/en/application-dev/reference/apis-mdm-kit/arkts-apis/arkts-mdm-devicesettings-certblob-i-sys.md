@@ -4,8 +4,6 @@ Represents the certificate information.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 26.0.0
 
 **Substitutes:** [CertBlob](arkts-mdm-securitymanager-certblob-i.md)
@@ -17,7 +15,7 @@ Represents the certificate information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## alias
@@ -31,8 +29,6 @@ Certificate alias. The value length must be less than 40 characters.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -55,8 +51,6 @@ Binary content of the certificate.
 **Type:** Uint8Array
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 

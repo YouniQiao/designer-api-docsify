@@ -4,8 +4,6 @@ Describes the structure of the data required for locating.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the structure of the data required for locating.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## bluetoothData
@@ -27,8 +25,6 @@ Bluetooth scan info.
 **Type:** [BluetoothScanInfo](arkts-location-geolocationmanager-bluetoothscaninfo-i-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -45,8 +41,6 @@ Indicates camped cell information.
 **Type:** [CellInfo](arkts-location-geolocationmanager-cellinfo-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +60,6 @@ Indicates neighboring cell information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -77,16 +69,14 @@ Indicates neighboring cell information.
 ## slotId
 
 ```TypeScript
-slotId?: int
+slotId?: number
 ```
 
 Indicates the card slot index number. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,8 +95,6 @@ WiFi scan info.
 **Type:** WifiScanInfo
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 

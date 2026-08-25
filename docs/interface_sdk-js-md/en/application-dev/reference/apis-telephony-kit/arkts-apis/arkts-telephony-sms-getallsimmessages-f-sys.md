@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getAllSimMessages
 
 ```TypeScript
-function getAllSimMessages(slotId: int, callback: AsyncCallback<Array<SimShortMessage>>): void
+function getAllSimMessages(slotId: number, callback: AsyncCallback<Array<SimShortMessage>>): void
 ```
 
 Obtains all SIM card messages. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 
@@ -28,7 +26,7 @@ Obtains all SIM card messages. This API uses an asynchronous callback to return 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[SimShortMessage](arkts-telephony-sms-simshortmessage-i-sys.md)&gt;&gt; | Yes |
 
 **Error codes:**
@@ -43,43 +41,16 @@ Obtains all SIM card messages. This API uses an asynchronous callback to return 
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-sms.getAllSimMessages(slotId, (err: BusinessError, data: sms.SimShortMessage[]) => {
-      console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.getAllSimMessages(slotId);
-promise.then((data: sms.SimShortMessage[]) => {
-    console.info(`getAllSimMessages success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getAllSimMessages failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getAllSimMessages
 
 ```TypeScript
-function getAllSimMessages(slotId: int): Promise<Array<SimShortMessage>>
+function getAllSimMessages(slotId: number): Promise<Array<SimShortMessage>>
 ```
 
 Obtains all SIM card messages. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 
@@ -91,7 +62,7 @@ Obtains all SIM card messages. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -110,7 +81,3 @@ Obtains all SIM card messages. This API uses a promise to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getAllSimMessages](#getallsimmessages)

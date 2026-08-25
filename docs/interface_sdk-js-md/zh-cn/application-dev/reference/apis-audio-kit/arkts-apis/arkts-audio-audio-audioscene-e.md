@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 ## AUDIO_SCENE_DEFAULT
@@ -17,8 +15,6 @@ AUDIO_SCENE_DEFAULT = 0
 默认音频场景。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
@@ -32,8 +28,6 @@ AUDIO_SCENE_RINGING = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 ## AUDIO_SCENE_PHONE_CALL
@@ -46,8 +40,6 @@ AUDIO_SCENE_PHONE_CALL = 2
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Communication
 
 ## AUDIO_SCENE_VOICE_CHAT
@@ -59,7 +51,5 @@ AUDIO_SCENE_VOICE_CHAT = 3
 语音聊天模式。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Communication

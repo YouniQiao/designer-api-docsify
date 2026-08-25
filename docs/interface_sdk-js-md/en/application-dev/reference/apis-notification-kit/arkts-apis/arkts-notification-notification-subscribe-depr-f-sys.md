@@ -15,8 +15,6 @@ Subscribes to notifications of all applications under this user. This API uses a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md)
@@ -34,69 +32,6 @@ Subscribes to notifications of all applications under this user. This API uses a
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationSubscribe from '@ohos.notificationSubscribe';
-
-// subscribe callback
-let subscribeCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("subscribe failed " + JSON.stringify(err));
-  } else {
-    console.info("subscribe success");
-  }
-}
-let onConsumeCallback = (data: NotificationSubscribe.SubscribeCallbackData) => {
-  console.info("Consume callback: " + JSON.stringify(data));
-}
-let subscriber: NotificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-let info: NotificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ["bundleName1", "bundleName2"]
-};
-Notification.subscribe(subscriber, info, subscribeCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationSubscribe from '@ohos.notificationSubscribe';
-
-let subscribeCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("subscribe failed " + JSON.stringify(err));
-  } else {
-    console.info("subscribe success");
-  }
-}
-function onConsumeCallback(data: NotificationSubscribe.SubscribeCallbackData) {
-  console.info("Consume callback: " + JSON.stringify(data));
-}
-let subscriber: NotificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-Notification.subscribe(subscriber, subscribeCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationSubscribe from '@ohos.notificationSubscribe';
-
-function onConsumeCallback(data: NotificationSubscribe.SubscribeCallbackData) {
-  console.info("Consume callback: " + JSON.stringify(data));
-}
-let subscriber: NotificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-Notification.subscribe(subscriber).then(() => {
-  console.info("subscribe success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`subscribe failed, code is ${err}`);
-});
-```
-
 
 ## subscribe
 
@@ -111,8 +46,6 @@ function subscribe(
 Subscribes to a notification with the subscription information specified. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -132,10 +65,6 @@ Subscribes to a notification with the subscription information specified. This A
 | info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-See [subscribe](#subscribe)
-
 
 ## subscribe
 
@@ -146,8 +75,6 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 Subscribes to a notification with the subscription information specified. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -171,7 +98,3 @@ Subscribes to a notification with the subscription information specified. This A
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [subscribe](#subscribe)

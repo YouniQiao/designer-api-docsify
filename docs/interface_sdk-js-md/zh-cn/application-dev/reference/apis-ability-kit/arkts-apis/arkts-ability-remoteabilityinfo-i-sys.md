@@ -7,8 +7,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -24,8 +22,6 @@ readonly elementName: ElementName
 **类型：** [ElementName](arkts-ability-elementname-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -43,8 +39,6 @@ readonly icon: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 
 **系统接口：** 此接口为系统接口。
@@ -60,8 +54,6 @@ readonly label: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.DistributedBundleFramework
 

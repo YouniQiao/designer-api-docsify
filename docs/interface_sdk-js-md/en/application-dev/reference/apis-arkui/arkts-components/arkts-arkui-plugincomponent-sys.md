@@ -16,8 +16,6 @@ Creates a **PluginComponent** to display the UI provided by an external applicat
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -39,4 +37,3 @@ Creates a **PluginComponent** to display the UI provided by an external applicat
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) |

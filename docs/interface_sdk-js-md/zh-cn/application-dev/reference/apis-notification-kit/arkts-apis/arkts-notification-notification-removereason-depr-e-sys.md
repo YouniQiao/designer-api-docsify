@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md)
@@ -24,8 +22,6 @@ CLICK_REASON_REMOVE = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [CLICK_REASON_REMOVE](arkts-notification-notificationsubscribe-removereason-e-sys.md#click_reason_remove)
@@ -43,8 +39,6 @@ CANCEL_REASON_REMOVE = 2
 用户删除通知。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

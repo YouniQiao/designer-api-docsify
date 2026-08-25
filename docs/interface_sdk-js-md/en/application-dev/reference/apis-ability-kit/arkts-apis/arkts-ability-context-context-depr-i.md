@@ -6,8 +6,6 @@ The context of an ability or an application. It allows access to application-spe
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## getAbilityInfo
@@ -19,8 +17,6 @@ getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 Checks the detailed information of this ability.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,8 +38,6 @@ Checks the detailed information of this ability.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -63,8 +57,6 @@ getApplicationContext(): Context
 Obtains the context of this application.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -86,8 +78,6 @@ Obtains information about the current application.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -107,8 +97,6 @@ getApplicationInfo(): Promise<ApplicationInfo>
 Obtains information about the current application.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -130,8 +118,6 @@ Obtains the application type.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -151,8 +137,6 @@ getAppType(): Promise<string>
 Obtains the application type.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -174,8 +158,6 @@ Obtains the application version information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -195,8 +177,6 @@ getAppVersionInfo(): Promise<AppVersionInfo>
 Obtains the application version information.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -218,8 +198,6 @@ Obtains the bundle name of the current ability.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -239,8 +217,6 @@ getBundleName(): Promise<string>
 Obtains the bundle name of the current ability.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -262,8 +238,6 @@ Obtains the cache directory of this application on the internal storage.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -283,8 +257,6 @@ getCacheDir(): Promise<string>
 Obtains the cache directory of this application on the internal storage.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -306,8 +278,6 @@ Obtains the bundle name of the ability that called the current ability.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -327,8 +297,6 @@ getCallingBundle(): Promise<string>
 Obtains the bundle name of the ability that called the current ability.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -350,8 +318,6 @@ Obtains the current display orientation of this ability.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -371,8 +337,6 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 Obtains the current display orientation of this ability.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -394,8 +358,6 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -416,8 +378,6 @@ Obtains the ohos.bundle.ElementName object of the current ability.This method is
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -437,8 +397,6 @@ getExternalCacheDir(callback: AsyncCallback<string>): void
 Obtains the absolute path to the application-specific cache directory
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 7
 
@@ -462,8 +420,6 @@ Obtains the absolute path to the application-specific cache directory
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 7
 
 **Model restriction:** This API can be used only in the FA model.
@@ -486,8 +442,6 @@ Obtains the file directory of this application on the internal storage.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -507,8 +461,6 @@ getFilesDir(): Promise<string>
 Obtains the file directory of this application on the internal storage.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -530,8 +482,6 @@ Obtains the ModuleInfo object for this application.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -551,8 +501,6 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 Obtains the ModuleInfo object for this application.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -574,8 +522,6 @@ Obtains the distributed file path for storing ability or application data files.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -595,8 +541,6 @@ getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 Obtains the distributed file path for storing ability or application data files. If the distributed file path does not exist, the system will create a path and return the created path.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -618,8 +562,6 @@ Get the local root dir of an app. If it is the first call, the dir will be creat
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -639,8 +581,6 @@ getOrCreateLocalDir(callback: AsyncCallback<string>): void
 Get the local root dir of an app. If it is the first call, the dir will be created. If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -662,8 +602,6 @@ Obtains information about the current process, including the process ID and name
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -683,8 +621,6 @@ getProcessInfo(): Promise<ProcessInfo>
 Obtains information about the current process, including the process ID and name.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -706,8 +642,6 @@ Obtains the name of the current process.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -727,8 +661,6 @@ getProcessName(): Promise<string>
 Obtains the name of the current process.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -750,8 +682,6 @@ Checks whether the configuration of this ability is changing.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -771,8 +701,6 @@ isUpdatingConfigurations(): Promise<boolean>
 Checks whether the configuration of this ability is changing.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -794,8 +722,6 @@ Inform the system of the time required for drawing this Page ability.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -815,8 +741,6 @@ printDrawnCompleted(): Promise<void>
 Inform the system of the time required for drawing this Page ability.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -842,8 +766,6 @@ Requests certain permissions from the system.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -865,8 +787,6 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 Requests certain permissions from the system.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -895,8 +815,6 @@ Sets the display orientation of the current ability.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -917,8 +835,6 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 Sets the display orientation of the current ability.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -946,11 +862,7 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
-
-**Substitutes:** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -973,11 +885,7 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
-
-**Substitutes:** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1005,8 +913,6 @@ Sets whether to wake up the screen when this ability is restored.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 12
 
 **Substitutes:** setWakeUpScreen
@@ -1031,8 +937,6 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 Sets whether to wake up the screen when this ability is restored.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 12
 
@@ -1064,8 +968,6 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -1093,8 +995,6 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -1116,8 +1016,6 @@ verifyPermission(permission: string, callback: AsyncCallback<number>): void
 Verify whether the specified permission is allowed for a particular pid and uid running in the system. Pid and uid are optional. If you do not pass in pid and uid, it will check your own permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -1,11 +1,12 @@
 # PropertyKey
 
 Enumerates the types of Exchangeable Image File Format (Exif) data of an image.  
-- The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for example, **image.PropertyKey.NEW_SUBFILE_TYPE**). - The format example is used only to show how to modify values and read results. For details about how to use them, see [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty) (to modify a single Exif field), [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties) (to modify multiple Exif fields), [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty) (to read a single Exif field), and [getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) (to read multiple Exif fields).
+- The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for  
+example, **image.PropertyKey.NEW_SUBFILE_TYPE**).  
+- The format example is used only to show how to modify values and read results. For details about how to use them,  
+see [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty) (to modify a single Exif field), [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties) (to modify multiple Exif fields), [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty) (to read a single Exif field), and [getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) (to read multiple Exif fields).
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -20,8 +21,6 @@ Number of bits per sample. For example, for RGB, which has three components, the
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ORIENTATION
@@ -34,8 +33,6 @@ Image orientation.1: **Top-left**: The image is not rotated.2: **Top-right**: Th
 **Read/Write capability**: readable and writable.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -50,8 +47,6 @@ Image length.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## IMAGE_WIDTH
@@ -64,8 +59,6 @@ Image width.
 **Read/Write capability**: readable and writable.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -80,8 +73,6 @@ Image latitude. The value must be in the format of degree,minute,second, for exa
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_LONGITUDE
@@ -94,8 +85,6 @@ Image longitude. The value must be in the format of degree,minute,second, for ex
 **Read/Write capability**: readable and writable.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -110,8 +99,6 @@ Latitude reference (Northern or Southern Hemisphere) of the image capture locati
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_LONGITUDE_REF
@@ -124,8 +111,6 @@ Longitude reference (Eastern or Western Hemisphere) of the image capture locatio
 **Read/Write capability**: readable and writable.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -140,8 +125,6 @@ Time when the original image data was generated, for example, 2022:09:06 15:48:0
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_TIME
@@ -154,8 +137,6 @@ Exposure time, for example, 1/33 seconds.
 **Read/Write capability**: readable and writable.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -170,8 +151,6 @@ Type of the scene, for example, portrait, scenery, motion, and night.1: "Directl
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ISO_SPEED_RATINGS
@@ -184,8 +163,6 @@ ISO sensitivity or ISO speed, for example, 400.
 **Read/Write capability**: readable and writable.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -200,8 +177,6 @@ F number, for example, f/1.8.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DATE_TIME
@@ -214,8 +189,6 @@ Date and time of image creation.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -230,8 +203,6 @@ GPS timestamp.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DATE_STAMP
@@ -244,8 +215,6 @@ GPS date stamp.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -260,8 +229,6 @@ Image description.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## MAKE
@@ -274,8 +241,6 @@ Manufacturer.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -290,8 +255,6 @@ Device model.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PHOTO_MODE
@@ -304,8 +267,6 @@ Photographing mode.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -320,8 +281,6 @@ Sensitivity type.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## STANDARD_OUTPUT_SENSITIVITY
@@ -334,8 +293,6 @@ Standard output sensitivity.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -350,8 +307,6 @@ Recommended exposure index.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ISO_SPEED
@@ -364,8 +319,6 @@ ISO speed.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -380,8 +333,6 @@ Lens aperture. An example in the correct format is 4/1.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_BIAS_VALUE
@@ -394,8 +345,6 @@ Exposure bias.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -410,8 +359,6 @@ Metering mode.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## LIGHT_SOURCE
@@ -424,8 +371,6 @@ Light source. An example value is **Fluorescent**.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -440,8 +385,6 @@ Flash status.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FOCAL_LENGTH
@@ -454,8 +397,6 @@ Focal length of the lens.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -470,8 +411,6 @@ User comments.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PIXEL_X_DIMENSION
@@ -484,8 +423,6 @@ Pixel X dimension.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -500,8 +437,6 @@ Pixel Y dimension.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## WHITE_BALANCE
@@ -514,8 +449,6 @@ White balance.0: "Auto white balance."1: "Manual white balance."
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -530,8 +463,6 @@ Focal length in 35mm film.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE
@@ -544,8 +475,6 @@ Capture mode.
 **Read/Write capability**: readable and writable.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -560,8 +489,6 @@ Physical aperture.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ROLL_ANGLE
@@ -574,8 +501,6 @@ Roll angle.
 **Read/Write capability**: read-only
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -590,8 +515,6 @@ Pitch angle.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_FOOD_CONF
@@ -604,8 +527,6 @@ Photographing scene: food.
 **Read/Write capability**: read-only
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -620,8 +541,6 @@ Photographing scene: stage.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_BLUE_SKY_CONF
@@ -634,8 +553,6 @@ Photographing scene: blue sky.
 **Read/Write capability**: read-only
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -650,8 +567,6 @@ Photographing scene: green plant.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_BEACH_CONF
@@ -664,8 +579,6 @@ Photographing scene: beach.
 **Read/Write capability**: read-only
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -680,8 +593,6 @@ Photographing scene: snow.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_SUNSET_CONF
@@ -694,8 +605,6 @@ Photographing scene: sunset.
 **Read/Write capability**: read-only
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -710,8 +619,6 @@ Photographing scene: flowers.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_NIGHT_CONF
@@ -724,8 +631,6 @@ Photographing scene: night.
 **Read/Write capability**: read-only
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -740,8 +645,6 @@ Photographing scene: text.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FACE_COUNT
@@ -754,8 +657,6 @@ Number of faces.
 **Read/Write capability**: read-only
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -770,8 +671,6 @@ Focus mode.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## COMPRESSION
@@ -784,8 +683,6 @@ Compression scheme used on the image data.1: "Uncompressed".2: "CCITT RLE".3: "T
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -800,8 +697,6 @@ Color space of the image data, for example, RGB or YCbCr.0: "Reversed mono".1: "
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## STRIP_OFFSETS
@@ -814,8 +709,6 @@ Byte offset of each strip.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -830,8 +723,6 @@ Number of components per pixel. The value is **3** for RGB and YCbCr images. The
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ROWS_PER_STRIP
@@ -844,8 +735,6 @@ Number of rows per strip.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -860,8 +749,6 @@ Number of bytes in each strip after compression.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## X_RESOLUTION
@@ -874,8 +761,6 @@ Number of pixels per ResolutionUnit in the image width (X) direction.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -890,8 +775,6 @@ Number of pixels per ResolutionUnit in the image height (Y) direction.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PLANAR_CONFIGURATION
@@ -904,8 +787,6 @@ Storage format of components of each pixel, which can be chunky or planar.1: "Ch
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -920,8 +801,6 @@ Unit of measurement for XResolution and YResolution, in inches or centimeters.2:
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## TRANSFER_FUNCTION
@@ -934,8 +813,6 @@ Transfer function for the image, which is usually used for color correction.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -950,8 +827,6 @@ Name and version number of the software used to create the image.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ARTIST
@@ -964,8 +839,6 @@ Person who created the image.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -980,8 +853,6 @@ Chromaticity coordinates of the white point, the reference for "white", in the c
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## PRIMARY_CHROMATICITIES
@@ -994,8 +865,6 @@ Chromaticities of the primaries of the image.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1010,8 +879,6 @@ Coefficients for the conversion matrix that transforms image data from RGB to YC
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## YCBCR_SUB_SAMPLING
@@ -1024,8 +891,6 @@ Subsampling factors used for the chrominance components of a YCbCr image.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1040,8 +905,6 @@ Positioning of subsampled chrominance components relative to luminance samples.1
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## REFERENCE_BLACK_WHITE
@@ -1054,8 +917,6 @@ Reference values for black and white points.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1070,8 +931,6 @@ Copyright notice of the image.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## JPEG_INTERCHANGE_FORMAT
@@ -1084,8 +943,6 @@ Offset of the SOI marker of a JPEG interchange format bitstream.
 **Read/Write capability**: read-only
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1100,8 +957,6 @@ Number of bytes of the JPEG stream.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_PROGRAM
@@ -1114,8 +969,6 @@ Class of the program used by the camera to set exposure when the image was captu
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1130,8 +983,6 @@ Spectral sensitivity of each channel of the camera.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## OECF
@@ -1144,8 +995,6 @@ Opto-Electric Conversion Function (OECF) specified in ISO 14524.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1160,8 +1009,6 @@ Version of the supported Exif standard.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DATE_TIME_DIGITIZED
@@ -1174,8 +1021,6 @@ Date and time when the image was stored as digital data, in the format of YYYY:M
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1190,8 +1035,6 @@ Specific information about compressed data.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SHUTTER_SPEED
@@ -1204,8 +1047,6 @@ Shutter speed, expressed in Additive System of Photographic Exposure (APEX) valu
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1220,8 +1061,6 @@ Value of brightness, expressed in APEX values.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## MAX_APERTURE_VALUE
@@ -1234,8 +1073,6 @@ Smallest F number of the lens.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1250,8 +1087,6 @@ Distance to the subject, in meters.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SUBJECT_AREA
@@ -1264,8 +1099,6 @@ Location and area of the main subject in the entire scene.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1280,8 +1113,6 @@ Marker used by Exif/DCF manufacturers to record any required information.This fi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SUBSEC_TIME
@@ -1294,8 +1125,6 @@ Tag used to record fractions of seconds for the **DateTime** tag.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1310,8 +1139,6 @@ Tag used to record fractions of seconds for the **DateTimeOriginal** tag.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SUBSEC_TIME_DIGITIZED
@@ -1324,8 +1151,6 @@ Tag used to record fractions of seconds for the **DateTimeDigitized** tag.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1340,8 +1165,6 @@ FlashPix format version supported by an FPXR file. It is used to enhance device 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## COLOR_SPACE
@@ -1354,8 +1177,6 @@ Color space information, which is usually recorded as a color space specifier.1:
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1370,8 +1191,6 @@ Name of an audio file related to the image data.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FLASH_ENERGY
@@ -1384,8 +1203,6 @@ Strobe energy at the time the image was captured, in Beam Candle Power Seconds (
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1400,8 +1217,6 @@ Spatial frequency table of the camera or input device.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FOCAL_PLANE_X_RESOLUTION
@@ -1414,8 +1229,6 @@ Number of pixels in the image width (X) direction per FocalPlaneResolutionUnit.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1430,8 +1243,6 @@ Number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FOCAL_PLANE_RESOLUTION_UNIT
@@ -1444,8 +1255,6 @@ Unit for measuring FocalPlaneXResolution and FocalPlaneYResolution.2: "Inch": me
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1460,8 +1269,6 @@ Location of the main subject relative to the left edge.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_INDEX
@@ -1474,8 +1281,6 @@ Exposure index selected at the time the image is captured.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1490,8 +1295,6 @@ Type of the image sensor on the camera.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FILE_SOURCE
@@ -1504,8 +1307,6 @@ Image source.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1520,8 +1321,6 @@ Color Filter Array (CFA) geometric pattern of the image sensor.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CUSTOM_RENDERED
@@ -1534,8 +1333,6 @@ Special processing on image data.0: "Normal process", indicating normal processi
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1550,8 +1347,6 @@ Exposure mode set when the image was captured.0: "Auto exposure."1: "Manual expo
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DIGITAL_ZOOM_RATIO
@@ -1564,8 +1359,6 @@ Digital zoom ratio when the image was captured.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1580,8 +1373,6 @@ Type of the scene that was captured.0: "Standard."1: "Landscape."2: "Portrait."3
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GAIN_CONTROL
@@ -1594,8 +1385,6 @@ Degree of overall image gain adjustment.0: "Normal", no gain control.1: "Low gai
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1610,8 +1399,6 @@ Direction of contrast processing used by the camera.0: "Normal", normal contrast
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SATURATION
@@ -1624,8 +1411,6 @@ Direction of saturation processing used by the camera.0:"Normal": normal saturat
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1640,8 +1425,6 @@ Direction of sharpness processing used by the camera.0:"Normal": normal sharpnes
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DEVICE_SETTING_DESCRIPTION
@@ -1654,8 +1437,6 @@ Information about the photographing conditions of a specific camera model.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1670,8 +1451,6 @@ Distance to the subject.0: "Unknown."1: "Macro."2: "Close view."3: "Distant view
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## IMAGE_UNIQUE_ID
@@ -1684,8 +1463,6 @@ Unique identifier assigned to each image.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1700,8 +1477,6 @@ GPS information version.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_ALTITUDE_REF
@@ -1714,8 +1489,6 @@ Whether the latitude is north or south latitude.0: Sea level, which is above sea
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1730,8 +1503,6 @@ Altitude based on the reference in GPSAltitudeRef.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_SATELLITES
@@ -1744,8 +1515,6 @@ GPS satellites used for measurement.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1760,8 +1529,6 @@ Status of the GPS receiver when the image was recorded.'A': "Measurement in prog
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_MEASURE_MODE
@@ -1774,8 +1541,6 @@ GPS measurement pmode. Whether the 2D (planar) or 3D (with height) measurement m
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1790,8 +1555,6 @@ GPS Dilution of Precision (DOP), which reflects the precision of GPS measurement
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_SPEED_REF
@@ -1804,8 +1567,6 @@ Unit used to express the movement speed of the GPS receiver.'K': "km/h".'M': "mp
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1820,8 +1581,6 @@ Movement speed of the GPS receiver.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_TRACK_REF
@@ -1834,8 +1593,6 @@ Which type of "North" is used as the reference for the direction angle.'T': "Tru
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1850,8 +1607,6 @@ Movement direction of the GPS receiver. Direction of movement (heading) of the c
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_IMG_DIRECTION_REF
@@ -1864,8 +1619,6 @@ Reference of the direction of the image when it was captured.'T': "True directio
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1880,8 +1633,6 @@ Direction of the image when it was captured.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_MAP_DATUM
@@ -1894,8 +1645,6 @@ Geodetic survey data used by the GPS receiver.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1910,8 +1659,6 @@ Whether the latitude of the destination point is north or south latitude.78: "No
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_LATITUDE
@@ -1924,8 +1671,6 @@ Latitude of the destination point.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1940,8 +1685,6 @@ Whether the longitude of the destination point is east or west longitude.69: "Ea
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_LONGITUDE
@@ -1954,8 +1697,6 @@ Longitude of the destination point.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -1970,8 +1711,6 @@ Reference of the bearing to the destination point.'T': "True direction", which i
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_BEARING
@@ -1984,8 +1723,6 @@ Bearing to the destination point.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2000,8 +1737,6 @@ Unit used to express the distance to the destination point.'K': "km."'M': "miles
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_DISTANCE
@@ -2014,8 +1749,6 @@ Distance to the destination point.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2030,8 +1763,6 @@ String that records the name of the method used for positioning.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_AREA_INFORMATION
@@ -2044,8 +1775,6 @@ String that records the name of the GPS area.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2060,8 +1789,6 @@ Whether differential correction is applied to the GPS receiver. It is critical t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## BODY_SERIAL_NUMBER
@@ -2074,8 +1801,6 @@ Serial number of the camera body.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2090,8 +1815,6 @@ Name of the camera owner.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## COMPOSITE_IMAGE
@@ -2104,8 +1827,6 @@ Whether the image is a composite image.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2120,8 +1841,6 @@ Number of bits per pixel. It is specific to compressed data.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## DNG_VERSION
@@ -2134,8 +1853,6 @@ DNG version. It encodes the DNG 4-tier version number.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2150,8 +1867,6 @@ Size of the final image area, in raw image coordinates, taking into account extr
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GAMMA
@@ -2164,8 +1879,6 @@ Gamma value.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2180,8 +1893,6 @@ ISO speed latitude yyy value of the camera or input device, which is defined in 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## ISO_SPEED_LATITUDE_ZZZ
@@ -2194,8 +1905,6 @@ ISO speed latitude zzz value of the camera or input device, which is defined in 
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2210,8 +1919,6 @@ Manufacturer of the lens.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## LENS_MODEL
@@ -2224,8 +1931,6 @@ Model of the lens.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2240,8 +1945,6 @@ Serial number of the lens.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## LENS_SPECIFICATION
@@ -2254,8 +1957,6 @@ Specifications of the lens.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2270,8 +1971,6 @@ Data type of a subfile, such as a full-resolution image, a thumbnail, or a part 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## OFFSET_TIME
@@ -2284,8 +1983,6 @@ Time with an offset from UTC when the image was captured.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2300,8 +1997,6 @@ Time with an offset from UTC when the image was digitized. It helps to accuratel
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## OFFSET_TIME_ORIGINAL
@@ -2314,8 +2009,6 @@ Time with an offset from UTC when the original image was created. It is critical
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2330,8 +2023,6 @@ Exposure time of source images of the composite image.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE
@@ -2344,8 +2035,6 @@ Number of source images of the composite image.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2360,8 +2049,6 @@ Type of data contained in this subfile. This tag has been deprecated. Use **NewS
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GPS_H_POSITIONING_ERROR
@@ -2374,8 +2061,6 @@ Horizontal positioning error, in meters.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2390,8 +2075,6 @@ ISO sensitivity (ISO speed) used when the image was captured. It is the recommen
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## BURST_NUMBER
@@ -2404,8 +2087,6 @@ Number of burst shooting times.
 **Read/Write capability**: read-only
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2420,8 +2101,6 @@ Face confidence.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FACE_LEYE_CENTER
@@ -2434,8 +2113,6 @@ Left eye centered.
 **Read/Write capability**: read-only
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2450,8 +2127,6 @@ Mouth centered.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FACE_POINTER
@@ -2464,8 +2139,6 @@ Face pointer.
 **Read/Write capability**: read-only
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2480,8 +2153,6 @@ Face rectangle.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FACE_REYE_CENTER
@@ -2494,8 +2165,6 @@ Right eye centered.
 **Read/Write capability**: read-only
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2510,8 +2179,6 @@ Smile score of for faces.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## FACE_VERSION
@@ -2524,8 +2191,6 @@ Facial recognition algorithm version.
 **Read/Write capability**: read-only
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2540,8 +2205,6 @@ Whether the front camera is used to take a selfie.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_POINTER
@@ -2554,8 +2217,6 @@ Pointer to the scene.
 **Read/Write capability**: read-only
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2570,8 +2231,6 @@ Scene algorithm version.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## IS_XMAGE_SUPPORTED
@@ -2584,8 +2243,6 @@ Whether XMAGE is supported.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2600,8 +2257,6 @@ XMAGE watermark mode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## XMAGE_LEFT
@@ -2614,8 +2269,6 @@ X1 coordinate of the watermark region.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2630,8 +2283,6 @@ Y1 coordinate of the watermark region.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## XMAGE_RIGHT
@@ -2644,8 +2295,6 @@ X2 coordinate of the watermark region.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2660,8 +2309,6 @@ Y2 coordinate of the watermark region.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CLOUD_ENHANCEMENT_MODE
@@ -2674,8 +2321,6 @@ Cloud enhancement mode.
 **Read/Write capability**: readable and writable.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -2690,8 +2335,6 @@ Motion snapshot mode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GIF_LOOP_COUNT
@@ -2704,7 +2347,5 @@ Number of GIF loops. The value **0** means an infinite loop, and other values me
 **Read/Write capability**: read-only
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core

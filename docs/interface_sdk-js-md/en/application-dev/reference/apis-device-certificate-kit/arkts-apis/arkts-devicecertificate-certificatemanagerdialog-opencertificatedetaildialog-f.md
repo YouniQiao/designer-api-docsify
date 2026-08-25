@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## openCertificateDetailDialog
@@ -15,8 +15,6 @@ function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, p
 Opens the Certificate Management dialog box to display the certificate details. After the interface is invoked successfully, detailed information about the certificate, such as the basic information, validity period, issuer, and user, is displayed. Use Promise asynchronous callback.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -47,31 +45,3 @@ Opens the Certificate Management dialog box to display the certificate details. 
 | [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
 | [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
 | [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) |
-
-**Examples**
-
-```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-import { UIContext } from '@kit.ArkUI';
-
-/* context is application context information, which is obtained by the caller. The context here is only an example. */
-let context: common.Context = new UIContext().getHostContext() as common.Context;
-/* The CA certificate data must be assigned by the service. In this example, the data is not CA certificate data. */
-let caCert: Uint8Array = new Uint8Array([
-  0x30, 0x82, 0x0b, 0xc1, 0x02, 0x01,
-]);
-let property: certificateManagerDialog.CertificateDialogProperty = {
-  showInstallButton: false /* Do not display the button for installing the certificate.*/
-};
-try {
-  certificateManagerDialog.openCertificateDetailDialog(context, caCert, property).then(() => {
-    console.info('Succeeded opening certificate detail dialog.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to open certificate detail dialog. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to open certificate detail dialog. Code: ${error.code}, message: ${error.message}`);
-}
-```

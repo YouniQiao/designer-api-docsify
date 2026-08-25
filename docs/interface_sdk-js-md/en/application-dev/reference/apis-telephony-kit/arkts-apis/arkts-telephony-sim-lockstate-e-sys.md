@@ -4,8 +4,6 @@ Indicates the lock states.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ Indicates that the lock state card is in the &lt;b&gt;off&lt;/b&gt; state.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ LOCK_ON = 1
 Indicates that the lock state card is in the &lt;b&gt;on&lt;/b&gt; state.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

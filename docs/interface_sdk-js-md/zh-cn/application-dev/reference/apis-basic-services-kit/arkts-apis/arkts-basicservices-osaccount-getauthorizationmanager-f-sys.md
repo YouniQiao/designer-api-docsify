@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getAuthorizationManager
@@ -15,8 +15,6 @@ function getAuthorizationManager(): AuthorizationManager
 获取系统账号授权管理器。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,9 +33,3 @@ function getAuthorizationManager(): AuthorizationManager
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-let authorizationManager: osAccount.AuthorizationManager = osAccount.getAuthorizationManager();
-```

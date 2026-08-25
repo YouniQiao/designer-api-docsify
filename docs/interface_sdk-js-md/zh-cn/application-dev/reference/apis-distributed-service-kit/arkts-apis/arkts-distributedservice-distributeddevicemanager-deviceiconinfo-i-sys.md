@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## icon
@@ -27,8 +25,6 @@ icon: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -46,8 +42,6 @@ imageType: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ internalModel?: string
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -82,8 +74,6 @@ productId: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -95,13 +85,12 @@ specName: string
 ```
 
 图片规格名称。取值范围：  
-- lg：大图，尺寸为1016064px。 - sm：小图，尺寸为65536px。
+- lg：大图，尺寸为1016064px。  
+- sm：小图，尺寸为65536px。
 
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
@@ -119,8 +108,6 @@ subProductId?: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
 **系统接口：** 此接口为系统接口。
@@ -136,8 +123,6 @@ URL。
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

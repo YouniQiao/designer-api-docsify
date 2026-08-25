@@ -4,8 +4,6 @@ Enumerates the audio playback channels for the custom prompt tone.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## RING_CHANNEL_ALARM
@@ -17,8 +15,6 @@ RING_CHANNEL_ALARM = 0
 Alarm channel.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -32,8 +28,6 @@ Media channel.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## RING_CHANNEL_NOTIFICATION
@@ -45,7 +39,5 @@ RING_CHANNEL_NOTIFICATION = 2
 Notification slot.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent

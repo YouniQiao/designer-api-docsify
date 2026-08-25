@@ -4,76 +4,66 @@ Represents the keyboard area on the panel.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## bottom
 
 ```TypeScript
-bottom: int
+bottom: number
 ```
 
 Distance between the lower boundary of the keyboard area and the lower boundary of the panel area, in pixels. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## left
 
 ```TypeScript
-left: int
+left: number
 ```
 
 Distance between the left boundary of the keyboard area and the left boundary of the panel area, in pixels. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## right
 
 ```TypeScript
-right: int
+right: number
 ```
 
 Distance between the right border of the keyboard area and the right border of the panel area, in pixels. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## top
 
 ```TypeScript
-top: int
+top: number
 ```
 
 Distance between the upper boundary of the keyboard area and the upper boundary of the panel area, in pixels. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

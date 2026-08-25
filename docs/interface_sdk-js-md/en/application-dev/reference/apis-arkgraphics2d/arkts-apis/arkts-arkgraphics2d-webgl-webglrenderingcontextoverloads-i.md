@@ -4,8 +4,6 @@ WebGL 1.0
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
 ## bufferData
@@ -17,8 +15,6 @@ bufferData(target: GLenum, size: GLsizeiptr, usage: GLenum): void
 Sets buffer data
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,8 +38,6 @@ Sets buffer data from BufferSource
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -65,8 +59,6 @@ bufferSubData(target: GLenum, offset: GLintptr, data: BufferSource): void
 Sets buffer sub data
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -98,8 +90,6 @@ Compressed texture image 2D
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -113,8 +103,8 @@ Compressed texture image 2D
 | internalformat | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| data | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 
 ## compressedTexSubImage2D
 
@@ -135,8 +125,6 @@ Compressed texture sub image 2D
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -152,7 +140,7 @@ Compressed texture sub image 2D
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| data | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 
 ## readPixels
 
@@ -172,8 +160,6 @@ Reads pixels from the framebuffer
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -188,7 +174,7 @@ Reads pixels from the framebuffer
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | ArrayBufferView \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage2D
 
@@ -210,8 +196,6 @@ Sets texture image 2D from pixels
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -225,10 +209,10 @@ Sets texture image 2D from pixels
 | internalformat | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
-| border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
+| [border](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | ArrayBufferView \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage2D
 
@@ -246,8 +230,6 @@ texImage2D(
 Sets texture image 2D from TexImageSource
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -284,8 +266,6 @@ Sets texture sub image 2D from pixels
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -302,7 +282,7 @@ Sets texture sub image 2D from pixels
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | ArrayBufferView \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texSubImage2D
 
@@ -321,8 +301,6 @@ texSubImage2D(
 Sets texture sub image 2D from TexImageSource
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -350,8 +328,6 @@ Sets uniform1fv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -372,8 +348,6 @@ uniform1iv(location: WebGLUniformLocation | null, v: Int32List): void
 Sets uniform1iv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -396,8 +370,6 @@ Sets uniform2fv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -418,8 +390,6 @@ uniform2iv(location: WebGLUniformLocation | null, v: Int32List): void
 Sets uniform2iv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -442,8 +412,6 @@ Sets uniform3fv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -464,8 +432,6 @@ uniform3iv(location: WebGLUniformLocation | null, v: Int32List): void
 Sets uniform3iv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -488,8 +454,6 @@ Sets uniform4fv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -511,8 +475,6 @@ Sets uniform4iv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -533,8 +495,6 @@ uniformMatrix2fv(location: WebGLUniformLocation | null, transpose: GLboolean, va
 Sets uniformMatrix2fv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -558,8 +518,6 @@ Sets uniformMatrix3fv value
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -581,8 +539,6 @@ uniformMatrix4fv(location: WebGLUniformLocation | null, transpose: GLboolean, va
 Sets uniformMatrix4fv value
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 

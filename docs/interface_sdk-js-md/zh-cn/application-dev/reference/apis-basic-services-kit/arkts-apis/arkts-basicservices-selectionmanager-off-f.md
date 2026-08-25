@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## off('selectionCompleted')
@@ -16,8 +16,6 @@ function off(type: 'selectionCompleted', callback?: Callback<SelectionInfo>): vo
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **参数：**
@@ -26,23 +24,3 @@ function off(type: 'selectionCompleted', callback?: Callback<SelectionInfo>): vo
 | --- | --- | --- |
 | type | 'selectionCompleted' | 是 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | 否 |
-
-**示例**
-
-```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
-
-// 定义划词完成事件回调函数，用于订阅和取消订阅
-let selectionChangeCallback = (info: selectionManager.SelectionInfo) => {
-  console.info('Enter the callback function.');
-};
-
-// 先订阅划词完成事件回调，为后续取消订阅做准备
-selectionManager.on('selectionCompleted', selectionChangeCallback);
-try {
-  // 取消订阅划词完成事件
-  selectionManager.off('selectionCompleted', selectionChangeCallback);
-} catch (err) {
-  console.error(`Failed to unregister selectionCompleted. Error code: ${err.code}, error message: ${err.message}`);
-}
-```

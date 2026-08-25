@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ autoPlay(value: boolean)
 Sets whether to enable automatic playback for child components, with the direction from the smallest to largest index.If [loop](#loop) is set to **false**, the automatic playback stops at the last page and resumes after navigated away from the last page using gestures. If the **Swiper** component becomes invisible, the playback stops.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,8 +44,6 @@ autoPlay(autoPlay: boolean, options: AutoPlayOptions)
 Sets whether to enable automatic playback for child components, with **options** controlling whether child components stop automatic playback when the screen is pressed by fingers, a mouse device, or other input devices.If [loop](#loop) is set to **false**, automatic playback stops at the last page and resumes after navigated away from the last page using gestures. Automatic playback also stops when the **Swiper** component is not visible.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,8 +80,6 @@ Sets the number of child components to be preloaded (cached), which are needed f
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -114,8 +106,6 @@ Sets the number of child components to be cached.
 > scenarios.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,8 +148,6 @@ Sets the number of child components to be prloaded and configuration options.
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -185,8 +173,6 @@ Sets the animation curve. The interpolating spring curve is used by default. For
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -197,7 +183,7 @@ Sets the animation curve. The interpolating spring curve is used by default. For
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Curve \| string \| [ICurve](../arkts-apis/arkts-arkui-curves-icurve-i.md) | Yes |
+| value | Curve \| string \| [ICurve](arkts-arkui-icurve-i.md) | Yes |
 
 ## customContentTransition
 
@@ -216,8 +202,6 @@ the callback is invoked for all pages in a group if any page in the group is wit
 is still effective. If you do not want the page to scroll, you can set the **translate** property on the main axis to offset the page scrolling. For example, if the value of **displayCount** is **2** and there are two pages whose subscripts are 0 and 1 within the viewport, you can set the **translate** property on the main axis to the following on a frame-by-frame basis: **translate** for page 0 = **-position** x **mainAxisLength**; **translate** for page 1 = **-(position - 1)** x **mainAxisLength**
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,8 +226,6 @@ disableSwipe(value: boolean)
 Sets whether to disable the swipe feature.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -270,8 +252,6 @@ Sets the arrow style of the navigation indicator.
 > **Swiper** component displays only that screen without any left or right page-turning arrows.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -319,8 +299,6 @@ When the navigation indicator is set to dot style and the number of child elemen
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -348,8 +326,6 @@ Sets the number of elements to display per page.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -375,8 +351,6 @@ Sets the mode in which elements are displayed along the main axis. This API take
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -400,8 +374,6 @@ Sets the duration of the animation for child component switching.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -422,8 +394,6 @@ Edge sliding effect. This parameter takes effect only when [loop](#loop) is set 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -434,7 +404,7 @@ Edge sliding effect. This parameter takes effect only when [loop](#loop) is set 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-enums-edgeeffect-e.md) | Yes |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes |
 
 ## index
 
@@ -445,8 +415,6 @@ index(value: number)
 Sets the index of the child component currently displayed in the container.Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -469,8 +437,6 @@ indicator(value: DotIndicator | DigitIndicator | boolean)
 Sets the style of the navigation indicator.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -499,8 +465,6 @@ Sets the navigation indicator for the component.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -513,7 +477,7 @@ Sets the navigation indicator for the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [indicator](#indicator) | IndicatorComponentController \| [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) \| boolean | Yes |
+| [indicator](#indicator) | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) \| [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) \| boolean | Yes |
 
 ## indicatorInteractive
 
@@ -524,8 +488,6 @@ indicatorInteractive(value: boolean)
 Sets whether the navigation indicator is interactive.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -549,8 +511,6 @@ Sets the style of the navigation indicator.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 10
 
 **Substitutes:** [indicator](#indicator)(value: DotIndicator | DigitIndicator | boolean)
@@ -572,8 +532,6 @@ interval(value: number)
 Sets the interval for automatic playback.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -597,8 +555,6 @@ Sets the space between child components. Percentage values are not supported.If 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -621,8 +577,6 @@ Sets whether to enable loop playback. In **LazyForEach** mode, it is recommended
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -641,11 +595,9 @@ Sets whether to enable loop playback. In **LazyForEach** mode, it is recommended
 maintainVisibleContentPosition(enabled: boolean)
 ```
 
-Sets whether to maintain the visible content position when data is inserted or deleted above or ahead of the viewport. This applies to **Swiper** components using a single [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) as the child node, where the data source is modified using **LazyForEach** API such as onDataAdd or onDataDelete. In other scenarios, the position of the visible content changes when data is inserted or deleted above or before the display area.When **swipeByGroup** in [displayCount](#displaycount) is set to **true**, the visible content position remains unchanged only if the amount of data inserted or deleted above or before the display area is a multiple of the group size. Otherwise, the visible content position may change during group recalculation.
+Sets whether to maintain the visible content position when data is inserted or deleted above or ahead of the viewport. This applies to **Swiper** components using a single [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) as the child node, where the data source is modified using **LazyForEach** API such as [onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd) or [onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete). In other scenarios, the position of the visible content changes when data is inserted or deleted above or before the display area.When **swipeByGroup** in [displayCount](#displaycount) is set to **true**, the visible content position remains unchanged only if the amount of data inserted or deleted above or before the display area is a multiple of the group size. Otherwise, the visible content position may change during group recalculation.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -678,8 +630,6 @@ Sets the nested scrolling mode of the **Swiper** component and its parent contai
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -705,8 +655,6 @@ Sets the trailing margin to reveal a portion of the next item. For the implement
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -729,8 +677,6 @@ onAnimationEnd(event: OnSwiperAnimationEndCallback)
 Triggered when the page transition animation ends.This event is triggered when the switching animation of the **Swiper** component ends, whether it is caused by gesture interruption or by calling **finishAnimation** through **SwiperController**.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -763,8 +709,6 @@ Triggered when the page transition animation starts.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -789,8 +733,6 @@ Triggered when the index of the currently displayed element changes. The return 
 > If the index change is caused by an animation, this callback is triggered when the animation ends.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -820,8 +762,6 @@ the callback is invoked for all pages in a group if any page in the group is wit
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -850,8 +790,6 @@ the event is triggered once per page turning. The system uses the return value t
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -876,8 +814,6 @@ Triggered on a frame-by-frame basis when the page is turned by a swipe.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -900,8 +836,6 @@ Defines the callback of the swipe state change event for the **Swiper** componen
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -914,7 +848,7 @@ Defines the callback of the swipe state change event for the **Swiper** componen
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | Callback & lt;ScrollState & gt; | Yes |
+| event | Callback&lt;[ScrollState](arkts-arkui-scrollstate-e.md)&gt; | Yes |
 
 ## onSelected
 
@@ -925,8 +859,6 @@ onSelected(event: Callback<number>)
 Triggered when the selected element changes. The index of the currently selected element is returned.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -952,8 +884,6 @@ Triggered when the selected element changes. The index of the element that is ab
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -978,8 +908,6 @@ Sets the mode for flipping pages using the mouse wheel. If this API is not used,
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -992,7 +920,7 @@ Sets the mode for flipping pages using the mouse wheel. If this API is not used,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | Optional & lt;PageFlipMode & gt; | Yes |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[PageFlipMode](../arkts-apis/arkts-arkui-pageflipmode-e.md)&gt; | Yes |
 
 ## prevMargin
 
@@ -1006,8 +934,6 @@ Sets the leading margin to reveal a portion of the previous item. For the implem
 > This API cannot be called within attributeModifier.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1031,8 +957,6 @@ vertical(value: boolean)
 Sets whether vertical swiping is used.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

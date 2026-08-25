@@ -4,8 +4,6 @@ Enumerates the device states.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **Substitutes:** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
@@ -23,8 +21,6 @@ ONLINE = 0
 The device is physically online.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -44,8 +40,6 @@ The information between devices has been synchronized in the Distributed Data Se
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **Substitutes:** [AVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#available)
@@ -64,8 +58,6 @@ The device is physically offline.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **Substitutes:** [UNAVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#unavailable)
@@ -83,8 +75,6 @@ CHANGE = 3
 The device information is changed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 

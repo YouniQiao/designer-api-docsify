@@ -4,8 +4,6 @@ Mouse pointer style types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 Default
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -32,8 +28,6 @@ East arrow
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## WEST
@@ -45,8 +39,6 @@ WEST = 2
 West arrow
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -60,8 +52,6 @@ South arrow
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH
@@ -73,8 +63,6 @@ NORTH = 4
 North arrow
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -88,8 +76,6 @@ West-east arrow
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_SOUTH
@@ -101,8 +87,6 @@ NORTH_SOUTH = 6
 North-south arrow
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -116,8 +100,6 @@ North-east arrow
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_WEST
@@ -129,8 +111,6 @@ NORTH_WEST = 8
 North-west arrow
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -144,8 +124,6 @@ South-east arrow
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SOUTH_WEST
@@ -157,8 +135,6 @@ SOUTH_WEST = 10
 South-west arrow
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -172,8 +148,6 @@ North-east and south-west adjustment
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## NORTH_WEST_SOUTH_EAST
@@ -185,8 +159,6 @@ NORTH_WEST_SOUTH_EAST = 12
 North-west and south-east adjustment
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -200,8 +172,6 @@ Cross (accurate selection)
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## CURSOR_COPY
@@ -213,8 +183,6 @@ CURSOR_COPY = 14
 Copy
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -228,8 +196,6 @@ Forbid
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## COLOR_SUCKER
@@ -241,8 +207,6 @@ COLOR_SUCKER = 16
 Color picker
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -256,8 +220,6 @@ Grabbing hand
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## HAND_OPEN
@@ -269,8 +231,6 @@ HAND_OPEN = 18
 Opening hand
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -284,8 +244,6 @@ Hand-shaped pointer
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## HELP
@@ -297,8 +255,6 @@ HELP = 20
 Help
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -312,8 +268,6 @@ Move
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RESIZE_LEFT_RIGHT
@@ -325,8 +279,6 @@ RESIZE_LEFT_RIGHT = 22
 Left and right resizing
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -340,8 +292,6 @@ Up and down resizing
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## SCREENSHOT_CHOOSE
@@ -353,8 +303,6 @@ SCREENSHOT_CHOOSE = 24
 Screenshot crosshair
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -368,8 +316,6 @@ Screenshot
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TEXT_CURSOR
@@ -381,8 +327,6 @@ TEXT_CURSOR = 26
 Text selection
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -396,8 +340,6 @@ Zoom in
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## ZOOM_OUT
@@ -409,8 +351,6 @@ ZOOM_OUT = 28
 Zoom out
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -424,8 +364,6 @@ Scrolling east
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_WEST
@@ -437,8 +375,6 @@ MIDDLE_BTN_WEST = 30
 Scrolling west
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -452,8 +388,6 @@ Scrolling south
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH
@@ -465,8 +399,6 @@ MIDDLE_BTN_NORTH = 32
 Scrolling north
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -480,8 +412,6 @@ Scrolling north-south
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH_EAST
@@ -493,8 +423,6 @@ MIDDLE_BTN_NORTH_EAST = 34
 Scrolling north-east
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -508,8 +436,6 @@ Scrolling north-west
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_SOUTH_EAST
@@ -521,8 +447,6 @@ MIDDLE_BTN_SOUTH_EAST = 36
 Scrolling south-east
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -536,8 +460,6 @@ Scrolling south-west
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## MIDDLE_BTN_NORTH_SOUTH_WEST_EAST
@@ -549,8 +471,6 @@ MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38
 Moving as a cone in four directions
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -564,8 +484,6 @@ Horizontal text selection
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## CURSOR_CROSS
@@ -577,8 +495,6 @@ CURSOR_CROSS = 40
 Cross
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -592,8 +508,6 @@ Circle
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## LOADING
@@ -605,8 +519,6 @@ LOADING = 42
 Animation loading
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -622,8 +534,6 @@ Animation running in the background
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
@@ -638,8 +548,6 @@ Scrolling east-west
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## RUNNING_LEFT
@@ -651,8 +559,6 @@ RUNNING_LEFT = 45
 Running in the background (extension 1)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -666,8 +572,6 @@ Running in the background (extension 2)
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## AECH_DEVELOPER_DEFINED_ICON
@@ -679,8 +583,6 @@ AECH_DEVELOPER_DEFINED_ICON = 47
 Custom circular pointer
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -694,8 +596,6 @@ Screen recording
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## LASER_CURSOR
@@ -707,8 +607,6 @@ LASER_CURSOR = 49
 Floating This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -722,8 +620,6 @@ Click This pointer can be used only when the stylus enters the air mouse mode an
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## LASER_CURSOR_DOT_RED
@@ -736,8 +632,6 @@ Laser pointer This pointer can be used only when the stylus enters the air mouse
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
 ## DEVELOPER_DEFINED_ICON
@@ -749,7 +643,5 @@ DEVELOPER_DEFINED_ICON = -100
 Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md).
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer

@@ -9,8 +9,6 @@ The module provides information about a remote ability.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [RemoteAbilityInfo](#remoteabilityinfo-system-api)
@@ -32,8 +30,6 @@ Element name information of the ability.
 **Default:** Indicates the ability information
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -57,8 +53,6 @@ Icon of the ability.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** icon
@@ -80,8 +74,6 @@ Ability name.
 **Default:** Indicates the label of the ability
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -4,14 +4,12 @@ Defines the playback mode of the moving photo in different scenarios.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## playMode
@@ -25,8 +23,6 @@ Whether to support automatic playback of the moving photo.
 **Type:** PlayMode
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Scene of the moving photo playback.
 **Type:** [SceneType](arkts-medialibrary-photoaccesshelper-scenetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ FormBindingData提供卡片数据绑定的能力，用于存储卡片需要展�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md)
@@ -28,8 +26,6 @@ JS卡片要展示的数据。可以是包含若干键值对的Object或者 json 
 **类型：** Object
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

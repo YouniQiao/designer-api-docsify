@@ -4,14 +4,12 @@ Describe the type of Bluetooth address.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@kit.ConnectivityKit';
+import { common } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## address
@@ -25,8 +23,6 @@ The string of the Bluetooth address.
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -42,8 +38,6 @@ The type of the Bluetooth address.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## rawAddressType
@@ -57,7 +51,5 @@ Address type defined by the Bluetooth Core Specification. It is used only when t
 **Type:** [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

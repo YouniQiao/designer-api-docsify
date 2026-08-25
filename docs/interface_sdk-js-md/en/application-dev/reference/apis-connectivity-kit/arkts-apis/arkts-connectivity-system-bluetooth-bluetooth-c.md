@@ -4,14 +4,12 @@ Provides methods to manage BLE scan.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## Modules to Import
 
 ```TypeScript
-import { Bluetooth, BLEFoundResponse, BluetoothDevice, StartBLEScanOptions, StopBLEScanOptions, SubscribeBLEFoundOptions } from '@kit.ConnectivityKit';
+import { Bluetooth, BLEFoundResponse, BluetoothDevice, StartBLEScanOptions, StopBLEScanOptions, SubscribeBLEFoundOptions } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startBLEScan
@@ -23,8 +21,6 @@ static startBLEScan(options: StartBLEScanOptions): void
 Start BLE scan
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,8 +42,6 @@ Stop BLE scan
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
@@ -68,8 +62,6 @@ Subscribe BLE found
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
@@ -89,8 +81,6 @@ static unsubscribeBLEFound(): void
 Stop the subscription of BLE found
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 

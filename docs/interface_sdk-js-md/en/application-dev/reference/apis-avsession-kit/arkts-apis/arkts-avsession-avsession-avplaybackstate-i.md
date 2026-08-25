@@ -4,29 +4,25 @@ Used to indicate the playback state of the current media. If the playback state 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## activeItemId
 
 ```TypeScript
-activeItemId?: int
+activeItemId?: number
 ```
 
 Current active item id
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -35,16 +31,14 @@ Current active item id
 ## bufferedTime
 
 ```TypeScript
-bufferedTime?: long
+bufferedTime?: number
 ```
 
 The current buffered time, the maximum playable position, described by milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +47,14 @@ The current buffered time, the maximum playable position, described by milliseco
 ## duration
 
 ```TypeScript
-duration?: int
+duration?: number
 ```
 
 The duration of this media asset, described by milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -77,8 +69,6 @@ Current custom media packets
 **Type:** {[key: string]: Object}
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,8 +86,6 @@ Current Favorite Status
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -114,8 +102,6 @@ Current playback loop mode. See [LoopMode](arkts-avsession-avsession-loopmode-e.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -123,16 +109,14 @@ Current playback loop mode. See [LoopMode](arkts-avsession-avsession-loopmode-e.
 ## maxVolume
 
 ```TypeScript
-maxVolume?: int
+maxVolume?: number
 ```
 
 maximum volume
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -150,8 +134,6 @@ Current muted status
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -168,8 +150,6 @@ Current playback position of this media. See [PlaybackPosition](arkts-avsession-
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -177,16 +157,14 @@ Current playback position of this media. See [PlaybackPosition](arkts-avsession-
 ## speed
 
 ```TypeScript
-speed?: double
+speed?: number
 ```
 
 Current playback speed
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -204,8 +182,6 @@ Current playback state. See [PlaybackState](arkts-avsession-avsession-playbackst
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -213,16 +189,14 @@ Current playback state. See [PlaybackState](arkts-avsession-avsession-playbackst
 ## videoHeight
 
 ```TypeScript
-videoHeight?: int
+videoHeight?: number
 ```
 
 The video height of this media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -231,16 +205,14 @@ The video height of this media asset.
 ## videoWidth
 
 ```TypeScript
-videoWidth?: int
+videoWidth?: number
 ```
 
 The video width of this media asset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -249,16 +221,14 @@ The video width of this media asset.
 ## volume
 
 ```TypeScript
-volume?: int
+volume?: number
 ```
 
 Current player volume
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getAppNet
@@ -15,8 +15,6 @@ function getAppNet(callback: AsyncCallback<NetHandle>): void
 Obtains the network handle bound to an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -34,32 +32,6 @@ Obtains the network handle bound to an application. This API uses an asynchronou
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getAppNet((error: BusinessError, data: connection.NetHandle) => {
-  if (error) {
-    console.error(`Failed to get App net. Code:${error.code}, message:${error.message}`);
-    return;
-  }
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-})
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getAppNet().then((data: connection.NetHandle) => {
-  console.info(JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.info(JSON.stringify(error));
-});
-```
-
 
 ## getAppNet
 
@@ -70,8 +42,6 @@ function getAppNet(): Promise<NetHandle>
 Obtains the network information bound to an application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -87,7 +57,3 @@ Obtains the network information bound to an application. This API uses a promise
 | --- |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [getAppNet](#getappnet)

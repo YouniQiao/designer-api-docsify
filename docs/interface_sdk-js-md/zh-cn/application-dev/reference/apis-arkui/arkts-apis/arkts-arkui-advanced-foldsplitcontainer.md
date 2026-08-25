@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from '@kit.ArkUI';
+import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -35,4 +35,3 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 | 名称 |
 | --- |
 | [OnHoverStatusChangeHandler(Defines FoldSplitContainer component.)](arkts-arkui-onhoverstatuschangehandler-t.md) |
-| [RegionBuilder(Defines FoldSplitContainer component.)](arkts-arkui-regionbuilder-t.md) |

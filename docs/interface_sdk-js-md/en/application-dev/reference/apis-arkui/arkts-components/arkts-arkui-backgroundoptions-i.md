@@ -4,8 +4,6 @@ Defines background options.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,13 +19,11 @@ align?: Alignment
 
 Set the alignment of the custom background and component.Anonymous Object Rectification.
 
-**Type:** Alignment
+**Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **Default:** Alignment.Center
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ The set of edges for which to ignore layout safe area. To respect safe area inse
 **Default:** The default value is LayoutSafeAreaEdge.ALL when background is ResourceColor, otherwise it is an empty array [].
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

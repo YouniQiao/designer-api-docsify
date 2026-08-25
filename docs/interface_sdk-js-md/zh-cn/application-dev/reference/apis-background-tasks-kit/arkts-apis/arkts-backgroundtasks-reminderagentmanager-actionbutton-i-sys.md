@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## dataShareUpdate
@@ -25,8 +23,6 @@ dataShareUpdate?: DataShareUpdate
 **类型：** [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -43,8 +39,6 @@ wantAgent?: WantAgent
 **类型：** WantAgent
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

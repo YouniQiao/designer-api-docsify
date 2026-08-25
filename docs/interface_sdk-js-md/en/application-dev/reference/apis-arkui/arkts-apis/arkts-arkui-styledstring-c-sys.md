@@ -4,8 +4,6 @@ StyledString
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 Marshals a styled string by defining a callback to marshal [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +50,6 @@ Marshals a styled string.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -83,8 +77,6 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 Unmarshals a styled string by defining a callback to [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,8 +113,6 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 Unmarshals a buffer to obtain a styled string.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 

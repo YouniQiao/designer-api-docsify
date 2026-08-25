@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## LOAD_ERROR
@@ -18,8 +16,6 @@ LOAD_ERROR = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
 ## PLAY_ERROR
@@ -31,7 +27,5 @@ PLAY_ERROR = 2
 表示播放资源时发生错误。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool

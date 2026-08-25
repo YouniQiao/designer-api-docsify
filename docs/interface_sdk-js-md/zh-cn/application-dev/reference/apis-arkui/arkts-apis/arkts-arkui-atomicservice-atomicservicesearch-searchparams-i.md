@@ -4,14 +4,12 @@ AtomicServiceSearch中“搜索区”的可选属性。
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from 'kits/@kit.ArkUI';
 ```
 
 ## onChange
@@ -23,8 +21,6 @@ onChange?: EditableTextOnChangeCallback
 输入内容发生变化时，触发该回调。默认值为`undefined`。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -40,8 +36,6 @@ onContentScroll?: OnContentScrollCallback
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -56,8 +50,6 @@ onPaste?: OnPasteCallback
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -71,8 +63,6 @@ onTextSelectionChange?: OnTextSelectionChangeCallback
 文本选择的位置发生变化或编辑状态下光标位置发生变化时，触发该回调。默认值为`undefined`。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -90,8 +80,6 @@ cancelIcon?: IconOptions
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -104,11 +92,9 @@ caretStyle?: CaretStyle
 
 光标样式。默认值：`{width: '1.5vp', color: '#007DFF'}`。
 
-**类型：** CaretStyle
+**类型：** [CaretStyle](arkts-arkui-caretstyle-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -122,11 +108,9 @@ componentBackgroundColor?: ResourceColor
 
 设置组件的背景色。默认值：`\$r('sys.color.ohos_id_color_text_field_sub_bg')`。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -144,8 +128,6 @@ copyOptions?: CopyOptions
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -158,11 +140,9 @@ decoration?: TextDecorationOptions
 
 文本装饰线对象。默认值：`{type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID}`。
 
-**类型：** TextDecorationOptions
+**类型：** [TextDecorationOptions](../arkts-components/arkts-arkui-textdecorationoptions-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -176,11 +156,9 @@ editMenuOptions?: EditMenuOptions
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。默认值为`undefined`。
 
-**类型：** EditMenuOptions
+**类型：** [EditMenuOptions](arkts-arkui-editmenuoptions-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -198,8 +176,6 @@ enableHapticFeedback?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -215,8 +191,6 @@ Search获焦时，是否主动拉起软键盘。true表示Search获焦时主动�
 **类型：** boolean
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -234,8 +208,6 @@ enablePreviewText?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -252,8 +224,6 @@ enterKeyType?: EnterKeyType
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -266,11 +236,9 @@ fontColor?: ResourceColor
 
 输入文本的字体颜色。默认值：`\$r('sys.color.ohos_id_color_text_secondary')`。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -284,11 +252,9 @@ fontFeature?: ResourceStr
 
 设置文字特性效果，比如数字等宽的特性。格式为：normal | &lt;feature-tag-value&gt;&lt;feature-tag-value&gt;的格式为：&lt;string&gt; [ &lt;integer&gt; | on | off ]&lt;feature-tag-value&gt;的个数可以有多个，中间用','隔开。例如，使用等宽数字的输入格式为："ss01" on。默认值为`undefined`。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -305,8 +271,6 @@ hideSelectionMenu?: boolean
 **类型：** boolean
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -326,8 +290,6 @@ inputFilter?: InputFilterParams
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -343,8 +305,6 @@ letterSpacing?: number | string | Resource
 **类型：** number \| string \| Resource
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -362,8 +322,6 @@ maxFontSize?: number | string | Resource
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -379,8 +337,6 @@ maxLength?: number
 **类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -398,8 +354,6 @@ minFontSize?: number | string | Resource
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -415,8 +369,6 @@ onCopy?: Callback<string>
 **类型：** Callback&lt;string&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -434,8 +386,6 @@ onCut?: Callback<string>
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -448,11 +398,9 @@ onDidDelete?: Callback<DeleteValue>
 
 在删除完成时触发该回调，在onWillDelete之后触发。当onWillDelete返回false拦截删除操作时，该回调不触发。默认值为`undefined`。
 
-**类型：** Callback&lt;DeleteValue&gt;
+**类型：** Callback&lt;[DeleteValue](arkts-arkui-deletevalue-i.md)&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -466,11 +414,9 @@ onDidInsert?: Callback<InsertValue>
 
 在输入完成时触发该回调，在onWillInsert之后触发。当onWillInsert返回false拦截插入操作时，该回调不触发。默认值为`undefined`。 当enablePreviewText为true时，不触发本回调。
 
-**类型：** Callback&lt;InsertValue&gt;
+**类型：** Callback&lt;[InsertValue](arkts-arkui-insertvalue-i.md)&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -488,8 +434,6 @@ onEditChange?: Callback<boolean>
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -502,11 +446,9 @@ onSubmit?: Callback<string> | SearchSubmitCallback
 
 点击搜索图标、搜索按钮或者按下软键盘搜索按钮时触发该回调。string为当前搜索框中输入的文本内容。默认值为`undefined`。
 
-**类型：** Callback&lt;string&gt; \| SearchSubmitCallback
+**类型：** Callback&lt;string&gt; \| [SearchSubmitCallback](../arkts-components/arkts-arkui-searchsubmitcallback-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -520,11 +462,9 @@ onWillDelete?: Callback<DeleteValue, boolean>
 
 在将要删除时，触发该回调。true表示正常删除，false表示不删除。默认值为`undefined`。
 
-**类型：** Callback&lt;DeleteValue, boolean&gt;
+**类型：** Callback&lt;[DeleteValue](arkts-arkui-deletevalue-i.md), boolean&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -538,11 +478,9 @@ onWillInsert?: Callback<InsertValue, boolean>
 
 在将要输入时，触发该回调。true表示将输入内容正常插入结果字符串，false表示不插入。默认值为`undefined`。 当enablePreviewText为true时，不触发本回调。
 
-**类型：** Callback&lt;InsertValue, boolean&gt;
+**类型：** Callback&lt;[InsertValue](arkts-arkui-insertvalue-i.md), boolean&gt;
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -556,11 +494,9 @@ placeholderColor?: ResourceColor
 
 placeholder文本颜色。默认值：`\$r('sys.color.ohos_id_color_text_secondary')`。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -578,8 +514,6 @@ placeholderFont?: Font
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -592,11 +526,9 @@ pressedBackgroundColor?: ResourceColor
 
 设置组件按压态的背景色。默认值：`\$r('sys.color.ohos_id_color_click_effect')`。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -616,8 +548,6 @@ searchButton?: SearchButtonParams
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -634,8 +564,6 @@ searchIcon?: IconOptions | SymbolGlyphModifier
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -648,11 +576,9 @@ searchKey?: ResourceStr
 
 用作标识内部search组件的唯一键值，便于外部通过该键值引用或查找对应的Search组件。默认值：`undefined`。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -666,11 +592,9 @@ selectedBackgroundColor?: ResourceColor
 
 文本选中底板颜色。默认值：系统默认底板颜色，20%不透明度。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -688,8 +612,6 @@ textAlign?: TextAlign
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -706,8 +628,6 @@ textFont?: Font
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -720,11 +640,9 @@ textIndent?: Dimension
 
 首行文本缩进。默认值：`0`。单位：vp。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -738,11 +656,9 @@ type?: SearchType
 
 输入框类型。默认值：`SearchType.Normal`。
 
-**类型：** SearchType
+**类型：** [SearchType](../arkts-components/arkts-arkui-searchtype-e.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

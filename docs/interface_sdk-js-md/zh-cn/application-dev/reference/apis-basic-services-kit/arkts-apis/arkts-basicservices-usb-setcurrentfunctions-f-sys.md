@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setCurrentFunctions
@@ -15,8 +15,6 @@ function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 在设备模式下，设置当前的USB功能列表。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -37,14 +35,3 @@ function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-let funcs : number = usb.FunctionType.HDC;
-usb.setCurrentFunctions(funcs).then(() => {
-    console.info('usb setCurrentFunctions successfully.');
-}).catch((err : BusinessError) => {
-    console.error('usb setCurrentFunctions failed: ' + err.code + ' message: ' + err.message);
-});
-```

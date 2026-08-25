@@ -4,8 +4,6 @@ The **certificateManagerDialog** module provides APIs for opening the certificat
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.CertificateManagerDialog
@@ -13,7 +11,7 @@ The **certificateManagerDialog** module provides APIs for opening the certificat
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## Summary

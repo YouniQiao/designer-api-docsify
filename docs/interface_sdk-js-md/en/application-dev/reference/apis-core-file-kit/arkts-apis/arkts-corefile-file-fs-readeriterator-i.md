@@ -4,16 +4,14 @@ Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**,
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## next
@@ -25,8 +23,6 @@ next(): ReaderIteratorResult
 Obtains the **ReaderIterator** result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -43,21 +39,3 @@ Obtains the **ReaderIterator** result.
 | 13900005 |
 | 13900037 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs, Options } from '@kit.CoreFileKit';
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-fs.readLines(filePath, options).then((readerIterator: fs.ReaderIterator) => {
-  for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-    console.info("content: " + it.value);
-  }
-}).catch((err: BusinessError) => {
-  console.error("readLines failed with error message: " + err.message + ", error code: " + err.code);
-});
-```

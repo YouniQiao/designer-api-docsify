@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## back
@@ -26,8 +26,6 @@ function back(options?: RouterOptions): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 18
 
 **替代接口：** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(options?: router.RouterOptions)
@@ -41,20 +39,6 @@ function back(options?: RouterOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-this.getUIContext().getRouter().back({ url: 'pages/detail' });
-```
-
-```TypeScript
-this.getUIContext().getRouter().back(1);
-```
-
-```TypeScript
-this.getUIContext().getRouter().back(1, { info: '来自Home页' }); // 携带参数返回
-```
 
 
 ## back
@@ -77,8 +61,6 @@ function back(index: number, params?: Object): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **废弃版本：** 18
 
 **替代接口：** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(index: number, params?: Object)
@@ -95,7 +77,3 @@ function back(index: number, params?: Object): void
 | --- | --- | --- |
 | index | number | 是 |
 | params | Object | 否 |
-
-**示例**
-
-参见 [back](#back)

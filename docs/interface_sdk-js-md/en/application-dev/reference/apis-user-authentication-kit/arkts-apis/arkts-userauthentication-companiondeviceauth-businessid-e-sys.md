@@ -4,8 +4,6 @@ Enumerates service IDs. A service ID uniquely identifies a service scenario supp
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ DEFAULT = 0
 Default service ID. It is system-defined and used for basic authentication scenarios.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ VENDOR_BEGIN = 10000
 Start value of the vendor-defined service ID. The vendor can extend service IDs based on this value. The actual value must be greater than or equal to 10000 to avoid conflicts with the reserved system values [0-9999].
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

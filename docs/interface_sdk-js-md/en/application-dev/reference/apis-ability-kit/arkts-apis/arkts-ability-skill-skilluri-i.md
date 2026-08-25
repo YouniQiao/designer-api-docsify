@@ -4,8 +4,6 @@ Indicates the uris of the skill
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## host
@@ -19,8 +17,6 @@ Indicates the host of the skillUri
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,8 +34,6 @@ Indicates the linkFeature of the skillUri
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -47,16 +41,14 @@ Indicates the linkFeature of the skillUri
 ## maxFileSupported
 
 ```TypeScript
-readonly maxFileSupported: int
+readonly maxFileSupported: number
 ```
 
 Indicates the maxFileSupported of the skillUri
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,8 +66,6 @@ Indicates the path of the skillUri
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -91,8 +81,6 @@ Indicates the pathRegex of the skillUri
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -110,8 +98,6 @@ Indicates the pathStartWith of the skillUri
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -119,7 +105,7 @@ Indicates the pathStartWith of the skillUri
 ## port
 
 ```TypeScript
-readonly port: int
+readonly port: number
 ```
 
 Indicates the port of the skillUri
@@ -127,8 +113,6 @@ Indicates the port of the skillUri
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -146,8 +130,6 @@ Indicates the scheme of the skillUri
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -164,8 +146,6 @@ Indicates the type of the skillUri
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -181,8 +161,6 @@ Indicates the utd of the skillUri
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

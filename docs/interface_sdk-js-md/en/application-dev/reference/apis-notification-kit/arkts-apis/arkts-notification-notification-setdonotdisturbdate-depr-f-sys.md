@@ -15,8 +15,6 @@ Sets the DND time. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md)
@@ -33,82 +31,6 @@ Sets the DND time. This API uses an asynchronous callback to return the result.
 | --- | --- | --- |
 | date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let setDoNotDisturbDateCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("setDoNotDisturbDate failed " + JSON.stringify(err));
-  } else {
-    console.info("setDoNotDisturbDate success");
-  }
-}
-
-let doNotDisturbDate: Notification.DoNotDisturbDate = {
-  type: Notification.DoNotDisturbType.TYPE_ONCE,
-  begin: new Date(),
-  end: new Date(2021, 11, 15, 18, 0)
-};
-
-Notification.setDoNotDisturbDate(doNotDisturbDate, setDoNotDisturbDateCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let doNotDisturbDate: Notification.DoNotDisturbDate = {
-    type: Notification.DoNotDisturbType.TYPE_ONCE,
-    begin: new Date(),
-    end: new Date(2021, 11, 15, 18, 0)
-};
-Notification.setDoNotDisturbDate(doNotDisturbDate).then(() => {
-  console.info("setDoNotDisturbDate success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`setDoNotDisturbDate failed, code is ${err}`);
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let setDoNotDisturbDateCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("setDoNotDisturbDate failed " + JSON.stringify(err));
-  } else {
-    console.info("setDoNotDisturbDate success");
-  }
-}
-
-let doNotDisturbDate: Notification.DoNotDisturbDate = {
-  type: Notification.DoNotDisturbType.TYPE_ONCE,
-  begin: new Date(),
-  end: new Date(2021, 11, 15, 18, 0)
-};
-
-let userId: number = 1;
-Notification.setDoNotDisturbDate(doNotDisturbDate, userId, setDoNotDisturbDateCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let doNotDisturbDate: Notification.DoNotDisturbDate = {
-  type: Notification.DoNotDisturbType.TYPE_ONCE,
-  begin: new Date(),
-  end: new Date(2021, 11, 15, 18, 0)
-};
-
-let userId: number = 1;
-
-Notification.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
-  console.info("setDoNotDisturbDate success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`setDoNotDisturbDate failed, code is ${err}`);
-});
-```
 
 
 ## setDoNotDisturbDate
@@ -121,8 +43,6 @@ Sets the DND time. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [setDoNotDisturbDate](arkts-notification-notificationmanager-setdonotdisturbdate-f-sys.md)
@@ -145,10 +65,6 @@ Sets the DND time. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [setDoNotDisturbDate](#setdonotdisturbdate)
-
 
 ## setDoNotDisturbDate
 
@@ -159,8 +75,6 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 Sets the DND time for a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -180,10 +94,6 @@ Sets the DND time for a specified user. This API uses an asynchronous callback t
 | userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-See [setDoNotDisturbDate](#setdonotdisturbdate)
-
 
 ## setDoNotDisturbDate
 
@@ -194,8 +104,6 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 Sets the DND time for a specified user. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -219,7 +127,3 @@ Sets the DND time for a specified user. This API uses a promise to return the re
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [setDoNotDisturbDate](#setdonotdisturbdate)

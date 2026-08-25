@@ -15,8 +15,6 @@ Changes the file permissions based on the file descriptor. This API returns the 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -27,12 +25,3 @@ Changes the file permissions based on the file descriptor. This API returns the 
 | --- | --- | --- |
 | fd | number | Yes |
 | mode | number | Yes | Permissions on the file. You can specify multiple permissions, separated using a bitwise OR operator (\|
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-let mode: number = 0o700;
-fileio.fchmodSync(fd, mode);
-```

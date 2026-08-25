@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## flushCachedGnssLocations
@@ -15,8 +15,6 @@ function flushCachedGnssLocations(callback: AsyncCallback<void>): void
 All prepared GNSS locations are returned to the application through the callback function, and the bottom-layer buffer is cleared.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -39,38 +37,6 @@ All prepared GNSS locations are returned to the application through the callback
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  geoLocationManager.flushCachedGnssLocations((err) => {
-    if (err) {
-      console.error('flushCachedGnssLocations: err=' + JSON.stringify(err));
-    }
-  });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  geoLocationManager.flushCachedGnssLocations().then(() => {
-    console.info('promise, flushCachedGnssLocations success');
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, flushCachedGnssLocations: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## flushCachedGnssLocations
 
@@ -81,8 +47,6 @@ function flushCachedGnssLocations(): Promise<void>
 All prepared GNSS locations are returned to the application, and the bottom-layer buffer is cleared.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -103,7 +67,3 @@ All prepared GNSS locations are returned to the application, and the bottom-laye
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) |
-
-**Examples**
-
-See [flushCachedGnssLocations](#flushcachedgnsslocations)

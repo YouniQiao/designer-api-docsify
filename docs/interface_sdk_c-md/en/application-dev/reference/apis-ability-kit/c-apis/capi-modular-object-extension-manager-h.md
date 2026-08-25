@@ -195,7 +195,7 @@ Gets elementName from modular object extension info.
 | Parameter | Description |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionInfoHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioninfo8h.md) extensionInfo | The modular object extension info to get the element name from. |
-| AbilityBase_Element *element | The element name obtained from the extension info. |
+| [AbilityBase_Element](capi-abilitybase-abilitybase-element.md) *element | The element name obtained from the extension info. |
 
 **Returns**:
 
@@ -348,7 +348,7 @@ Connect to a modular object extension ability.
 
 | Parameter | Description |
 | -- | -- |
-| AbilityBase_Want *want | Indicates the modular object extension ability to connect.For details, see [AbilityBase_Want](capi-abilitybase-abilitybase-want.md). |
+| [AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | Indicates the modular object extension ability to connect.For details, see [AbilityBase_Want](capi-abilitybase-abilitybase-want.md). |
 | OH_AbilityRuntime_ConnectOptions *connectOptions | Indicates the connection options. |
 | int64_t *connectionId | Indicates the connection id that is a output param. |
 

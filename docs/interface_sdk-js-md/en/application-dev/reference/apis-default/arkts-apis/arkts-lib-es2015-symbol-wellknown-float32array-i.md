@@ -1,7 +1,5 @@
 # Float32Array
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,5 +12,3 @@ readonly [Symbol.toStringTag]: "Float32Array"
 ```
 
 **Type:** "Float32Array"
-
-**ArkTS mode:** 

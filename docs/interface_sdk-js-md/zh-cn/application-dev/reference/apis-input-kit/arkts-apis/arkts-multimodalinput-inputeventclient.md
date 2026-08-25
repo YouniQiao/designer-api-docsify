@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## 导入模块
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总
@@ -29,7 +27,6 @@ import { inputEventClient } from '@kit.InputKit';
 
 | 名称 |
 | --- |
-| [injectEvent(输入事件注入)](arkts-input-inputeventclient-injectevent-f-sys.md) |
 | [injectEvent(输入事件注入)](arkts-input-inputeventclient-injectevent-f-sys.md) |
 | [injectKeyEvent(输入事件注入)](arkts-input-inputeventclient-injectkeyevent-f-sys.md) |
 | [injectMouseEvent(输入事件注入)](arkts-input-inputeventclient-injectmouseevent-f-sys.md) |

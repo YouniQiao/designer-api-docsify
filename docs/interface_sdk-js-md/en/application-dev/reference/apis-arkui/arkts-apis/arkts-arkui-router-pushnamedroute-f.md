@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## pushNamedRoute
@@ -21,8 +21,6 @@ Navigates to a page using the named route. This API uses a promise to return the
 > with the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -50,136 +48,6 @@ Navigates to a page using the named route. This API uses a promise to return the
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-})
-  .then(() => {
-    console.error(`pushNamedRoute finish`);
-  })
-  .catch((err: ESObject) => {
-    console.error(`pushNamedRoute failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
-  })
-```
-
-```TypeScript
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, (err) => {
-  if (err) {
-    console.error(`pushNamedRoute failed, code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('pushNamedRoute success');
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str
-    this.data2 = new innerParams(tuple)
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.error(`pushNamedRoute finish`);
-  })
-  .catch((err: ESObject) => {
-    console.error(`pushNamedRoute failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
-  })
-```
-
-```TypeScript
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`pushNamedRoute failed, code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('pushNamedRoute success');
-})
-```
-
 
 ## pushNamedRoute
 
@@ -196,8 +64,6 @@ Navigates to a page using the named route. This API uses a promise to return the
 > with the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -230,10 +96,6 @@ Navigates to a page using the named route. This API uses a promise to return the
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) |
 
-**Examples**
-
-See [pushNamedRoute](#pushnamedroute)
-
 
 ## pushNamedRoute
 
@@ -250,8 +112,6 @@ Navigates to a page using the named route. This API uses a promise to return the
 > with the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -280,10 +140,6 @@ Navigates to a page using the named route. This API uses a promise to return the
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) |
 
-**Examples**
-
-See [pushNamedRoute](#pushnamedroute)
-
 
 ## pushNamedRoute
 
@@ -300,8 +156,6 @@ Navigates to a page using the named route. This API uses a promise to return the
 > with the current UI context.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 18
 
@@ -334,7 +188,3 @@ Navigates to a page using the named route. This API uses a promise to return the
 | [100001](../errorcode-internal.md#100001-internal-error) |
 | [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) |
-
-**Examples**
-
-See [pushNamedRoute](#pushnamedroute)

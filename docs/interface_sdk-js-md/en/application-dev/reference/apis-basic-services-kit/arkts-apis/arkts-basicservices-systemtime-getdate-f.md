@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getDate
@@ -15,8 +15,6 @@ function getDate(callback: AsyncCallback<Date>): void
 Obtains the current system date. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -36,40 +34,6 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 | --- |
 | -1 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getDate((error: BusinessError, date: Date) => {
-    if (error) {
-      console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting date : ${date}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getDate().then((date: Date) => {
-    console.info(`Succeeded in getting date : ${date}`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## getDate
 
@@ -80,8 +44,6 @@ function getDate(): Promise<Date>
 Obtains the current system date. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -100,7 +62,3 @@ Obtains the current system date. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | -1 |
-
-**Examples**
-
-See [getDate](#getdate)

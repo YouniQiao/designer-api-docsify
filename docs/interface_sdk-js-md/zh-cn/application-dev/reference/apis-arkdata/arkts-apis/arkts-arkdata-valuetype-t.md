@@ -1,14 +1,12 @@
 # ValueType
 
 ```TypeScript
-export type ValueType = long | double | string | boolean
+export type ValueType = number | number | string | boolean
 ```
 
 该类型用于表示数据库允许的数据字段类型。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

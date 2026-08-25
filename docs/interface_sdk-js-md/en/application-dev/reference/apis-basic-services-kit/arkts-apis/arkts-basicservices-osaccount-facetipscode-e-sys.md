@@ -4,8 +4,6 @@ Enumerates the tip codes for facial authentication.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ FACE_AUTH_TIP_TOO_BRIGHT = 1
 The obtained face image is too bright.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -36,8 +32,6 @@ The obtained face image is too dark.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ FACE_AUTH_TIP_TOO_CLOSE = 3
 The face is too close to the device.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -68,8 +60,6 @@ The face is too far away from the device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -80,11 +70,9 @@ The face is too far away from the device.
 FACE_AUTH_TIP_TOO_HIGH = 5
 ```
 
-Only the upper part of the face is captured because the device is angled too high.
+Only the upper part of the face is captured because the device is too high.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -96,11 +84,9 @@ Only the upper part of the face is captured because the device is angled too hig
 FACE_AUTH_TIP_TOO_LOW = 6
 ```
 
-Only the lower part of the face is captured because the device is angled too low.
+Only the lower part of the face is captured because the device is too low.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -112,11 +98,9 @@ Only the lower part of the face is captured because the device is angled too low
 FACE_AUTH_TIP_TOO_RIGHT = 7
 ```
 
-Only the right part of the face is captured because the device is angled too much to the right.
+Only the right part of the face is captured because the device is deviated too much to the right.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -128,11 +112,9 @@ Only the right part of the face is captured because the device is angled too muc
 FACE_AUTH_TIP_TOO_LEFT = 8
 ```
 
-Only the left part of the face is captured because the device is angled too much to the left.
+Only the left part of the face is captured because the device is deviated too much to the left.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -148,8 +130,6 @@ The face moves too fast during facial information collection.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -164,8 +144,6 @@ The face is not facing the device.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -179,8 +157,6 @@ FACE_AUTH_TIP_NOT_DETECTED = 11
 No face is detected.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

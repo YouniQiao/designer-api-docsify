@@ -4,14 +4,12 @@ UserAgentMetadata是ArkWeb框架中用于配置User-Agent Client Hints（UA客�
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getArchitecture
@@ -24,8 +22,6 @@ getArchitecture(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -35,10 +31,6 @@ getArchitecture(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getBitness
 
@@ -50,8 +42,6 @@ getBitness(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -61,10 +51,6 @@ getBitness(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getBrandVersionList
 
@@ -76,8 +62,6 @@ getBrandVersionList(): Array<UserAgentBrandVersion>
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -87,10 +71,6 @@ getBrandVersionList(): Array<UserAgentBrandVersion>
 | 类型 |
 | --- |
 | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getFormFactors
 
@@ -102,8 +82,6 @@ getFormFactors(): Array<UserAgentFormFactor>
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -113,10 +91,6 @@ getFormFactors(): Array<UserAgentFormFactor>
 | 类型 |
 | --- |
 | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getFullVersion
 
@@ -128,8 +102,6 @@ getFullVersion(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -139,12 +111,6 @@ getFullVersion(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getMobile
 
@@ -156,8 +122,6 @@ getMobile(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -167,10 +131,6 @@ getMobile(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getModel
 
@@ -182,8 +142,6 @@ getModel(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -193,10 +151,6 @@ getModel(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getPlatform
 
@@ -208,8 +162,6 @@ getPlatform(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -219,10 +171,6 @@ getPlatform(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getPlatformVersion
 
@@ -234,8 +182,6 @@ getPlatformVersion(): string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -245,10 +191,6 @@ getPlatformVersion(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## getWow64
 
@@ -260,8 +202,6 @@ getWow64(): boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -271,10 +211,6 @@ getWow64(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setArchitecture
 
@@ -286,8 +222,6 @@ setArchitecture(arch: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -297,10 +231,6 @@ setArchitecture(arch: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | arch | string | 是 |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setBitness
 
@@ -312,8 +242,6 @@ setBitness(bitness: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -323,10 +251,6 @@ setBitness(bitness: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bitness | string | 是 |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setBrandVersionList
 
@@ -338,8 +262,6 @@ setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -349,10 +271,6 @@ setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setFormFactors
 
@@ -364,8 +282,6 @@ setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -375,10 +291,6 @@ setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setFullVersion
 
@@ -390,8 +302,6 @@ setFullVersion(fullVersion: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -401,12 +311,6 @@ setFullVersion(fullVersion: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | fullVersion | string | 是 |
-
-**示例**
-
-完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setMobile
 
@@ -418,8 +322,6 @@ setMobile(isMobile: boolean): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -429,10 +331,6 @@ setMobile(isMobile: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | isMobile | boolean | 是 |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setModel
 
@@ -444,8 +342,6 @@ setModel(model: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -455,10 +351,6 @@ setModel(model: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | model | string | 是 |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setPlatform
 
@@ -470,8 +362,6 @@ setPlatform(platform: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -481,10 +371,6 @@ setPlatform(platform: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | platform | string | 是 |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setPlatformVersion
 
@@ -496,8 +382,6 @@ setPlatformVersion(platformVersion: string): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -507,10 +391,6 @@ setPlatformVersion(platformVersion: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | platformVersion | string | 是 |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。
 
 ## setWow64
 
@@ -522,8 +402,6 @@ setWow64(isWow64: boolean): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -533,7 +411,3 @@ setWow64(isWow64: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | isWow64 | boolean | 是 |
-
-**示例**
-
-ArkTS-Dyn的完整示例代码参考[setUserAgentClientHintsEnabled](./arkts-apis-webview-WebviewController.md#setuseragentclienthintsenabled)。

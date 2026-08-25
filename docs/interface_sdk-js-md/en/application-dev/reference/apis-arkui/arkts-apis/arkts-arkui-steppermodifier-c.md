@@ -6,8 +6,6 @@ Defines Stepper Modifier@extends StepperAttribute @implements AttributeModifier&
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Deprecated since:** 22
 
 **Substitutes:** [SwiperModifier](arkts-arkui-swipermodifier-c.md)
@@ -23,8 +21,6 @@ applyNormalAttribute?(instance: StepperAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Deprecated since:** 22
 

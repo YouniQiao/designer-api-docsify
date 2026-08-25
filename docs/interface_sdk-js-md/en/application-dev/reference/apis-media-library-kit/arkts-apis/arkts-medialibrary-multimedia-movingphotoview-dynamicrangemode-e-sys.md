@@ -1,10 +1,8 @@
 # DynamicRangeMode (System API)
 
-Dynamic range mode of moving photo.@enum { int }
+Dynamic range mode of moving photo.@enum { number }
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,8 +18,6 @@ Restrict the image content to dynamic range to the standard range
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -36,8 +32,6 @@ Allow image content to use some extended range
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ HIGH = 0
 Allow image content to use an unrestricted extended range
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

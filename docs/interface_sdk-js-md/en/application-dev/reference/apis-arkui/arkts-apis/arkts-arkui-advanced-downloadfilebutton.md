@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, DownloadDescription, DownloadContentOptions, DownloadStyleOptions } from '@kit.ArkUI';
+import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, DownloadDescription, DownloadContentOptions, DownloadStyleOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

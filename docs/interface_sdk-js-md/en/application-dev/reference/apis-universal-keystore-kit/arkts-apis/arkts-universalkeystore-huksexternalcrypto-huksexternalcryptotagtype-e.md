@@ -4,8 +4,6 @@ Enumerates the external encrypted data types.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_TYPE_INT
@@ -18,8 +16,6 @@ The tag value is an integer.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_TYPE_BYTES
@@ -31,7 +27,5 @@ HUKS_EXT_CRYPTO_TAG_TYPE_BYTES = 5 << 28
 The tag value is a byte array.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension

@@ -16,7 +16,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
+import { WindowExtensionAbility, WindowExtensionContext } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

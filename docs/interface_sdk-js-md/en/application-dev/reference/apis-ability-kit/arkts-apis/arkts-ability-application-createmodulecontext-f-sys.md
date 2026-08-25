@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
+import { application } from 'kits/@kit.AbilityKit';
 ```
 
 ## createModuleContext
@@ -25,8 +25,6 @@ Creates the context for a module. This API uses a promise to return the result.
 > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -57,51 +55,3 @@ Creates the context for a module. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, application, common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let moduleContext: common.Context;
-    try {
-      application.createModuleContext(this.context, 'entry').then((data: Context) => {
-        moduleContext = data;
-        console.info('createModuleContext success!');
-      }).catch((error: BusinessError) => {
-        let code: number = (error as BusinessError).code;
-        let message: string = (error as BusinessError).message;
-        console.error(`createModuleContext failed, error.code: ${code}, error.message: ${message}`);
-      });
-    } catch (error) {
-      let code: number = (error as BusinessError).code;
-      let message: string = (error as BusinessError).message;
-      console.error(`createModuleContext failed, error.code: ${code}, error.message: ${message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { UIAbility, application, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    let moduleContext: common.Context;
-    try {
-      application.createModuleContext(this.context, 'bundlename', 'entry').then((data: Context)=>{
-        moduleContext = data;
-        console.info('createModuleContext success!');
-      }).catch((error : BusinessError)=>{
-        console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-      })
-    } catch (error) {
-      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
-    }
-  }
-}
-```

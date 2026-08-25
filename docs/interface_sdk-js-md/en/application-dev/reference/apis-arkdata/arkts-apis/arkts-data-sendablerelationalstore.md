@@ -4,14 +4,12 @@ The **sendableRelationalStore** module provides APIs for obtaining **ValuesBucke
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from '@kit.ArkData';
+import { sendableRelationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

@@ -7,8 +7,6 @@ UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [Component](arkts-test-uitest-component-c.md)
@@ -18,8 +16,8 @@ UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属�
 ## 导入模块
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## click
@@ -35,8 +33,6 @@ click(): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [click](arkts-test-uitest-component-c.md#click)
@@ -48,52 +44,6 @@ click(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Driver, ON, Component } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button) {
-    await button.click();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.click(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.click();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.click(100, 100);
-}
-```
 
 ## doubleClick
 
@@ -108,8 +58,6 @@ doubleClick(): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [doubleClick](arkts-test-uitest-component-c.md#doubleclick)
@@ -121,52 +69,6 @@ doubleClick(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button) {
-    await button.doubleClick();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.doubleClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.doubleClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.doubleClick(100, 100);
-}
-```
 
 ## getId
 
@@ -181,8 +83,6 @@ getId(): Promise<number>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getId](arkts-test-uitest-component-c.md#getid)
@@ -194,32 +94,6 @@ getId(): Promise<number>
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button) {
-    let id = await button.getId();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  let id = await button.getId();
-}
-```
 
 ## getKey
 
@@ -234,8 +108,6 @@ getKey(): Promise<string>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getId](arkts-test-uitest-component-c.md#getid)
@@ -247,19 +119,6 @@ getKey(): Promise<string>
 | 类型 |
 | --- |
 | Promise & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  let str_key = await button.getKey();
-}
-```
 
 ## getText
 
@@ -274,8 +133,6 @@ getText(): Promise<string>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getText](arkts-test-uitest-component-c.md#gettext)
@@ -287,32 +144,6 @@ getText(): Promise<string>
 | 类型 |
 | --- |
 | Promise & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button) {
-    let text = await button.getText();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  let text = await button.getText();
-}
-```
 
 ## getType
 
@@ -327,8 +158,6 @@ getType(): Promise<string>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getType](arkts-test-uitest-component-c.md#gettype)
@@ -340,32 +169,6 @@ getType(): Promise<string>
 | 类型 |
 | --- |
 | Promise & lt;string & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button) {
-    let type = await button.getType();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  let type = await button.getType();
-}
-```
 
 ## inputText
 
@@ -379,8 +182,6 @@ inputText(text: string): Promise<void>
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[inputText&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#inputtext)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -400,82 +201,6 @@ inputText(text: string): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let text: Component | null = await driver.findComponent(ON.text('hello world'));
-  if (text) {
-    await text.inputText('123');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function mode_demo() {
-  let driver: Driver = Driver.create();
-  let text: Component | null = await driver.findComponent(ON.text('hello world'));
-  if (text) {
-    await text.inputText('123', { paste: true, addition: false });
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
-  if (text) {
-    let point = await text.getBoundsCenter();
-    await driver.inputText(point, '123');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
-  if (text) {
-    let point = await text.getBoundsCenter();
-    await driver.inputText(point, '123', { paste: true, addition: false });
-  }
-}
-
-async function demo_Chinese() {
-  let driver: Driver = Driver.create();
-  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
-  if (text) {
-    let point = await text.getBoundsCenter();
-    await driver.inputText(point, '中文&', { paste: false, addition: true });
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let text: UiComponent = await driver.findComponent(BY.text('hello world'));
-  await text.inputText('123');
-}
-```
-
 ## isClickable
 
 ```TypeScript
@@ -489,8 +214,6 @@ isClickable(): Promise<boolean>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isClickable](arkts-test-uitest-component-c.md#isclickable)
@@ -502,40 +225,6 @@ isClickable(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button && await button.isClickable()) {
-    console.info('This button can be Clicked');
-  } else {
-    console.info('This button can not be Clicked');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent | null = await driver.findComponent(BY.type('Button'));
-  if (button) {
-    if (await button.isLongClickable()) {
-      console.info('This button supports long click');
-    } else {
-      console.info('This button can not support long click');
-    }
-  }
-}
-```
 
 ## isEnabled
 
@@ -550,8 +239,6 @@ isEnabled(): Promise<boolean>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isEnabled](arkts-test-uitest-component-c.md#isenabled)
@@ -563,38 +250,6 @@ isEnabled(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button && await button.isEnabled()) {
-    console.info('This button can be operated');
-  } else {
-    console.info('This button can not be operated');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  if (await button.isEnabled()) {
-    console.info('This button can be operated');
-  } else {
-    console.info('This button can not be operated');
-  }
-}
-```
 
 ## isFocused
 
@@ -609,8 +264,6 @@ isFocused(): Promise<boolean>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isFocused](arkts-test-uitest-component-c.md#isfocused)
@@ -622,58 +275,6 @@ isFocused(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button && await button.isFocused()) {
-    console.info('This button is focused');
-  } else {
-    console.info('This button is not focused');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver, UiWindow } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let window: UiWindow | null = await driver.findWindow({ active: true });
-  if (window) {
-    let focused = await window.isFocused();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  if (button) {
-    if (await button.isFocused()) {
-      console.info('This button is focused');
-    } else {
-      console.info('This button is not focused');
-    }
-    if (await button.isSelected()) {
-      console.info('This button is selected');
-    } else {
-      console.info('This button is not selected');
-    }
-  }
-}
-```
 
 ## isScrollable
 
@@ -688,8 +289,6 @@ isScrollable(): Promise<boolean>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isScrollable](arkts-test-uitest-component-c.md#isscrollable)
@@ -701,40 +300,6 @@ isScrollable(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let scrollBar: Component | null = await driver.findComponent(ON.scrollable(true));
-  if (scrollBar && await scrollBar.isScrollable()) {
-    console.info('This scrollBar can be operated');
-  } else {
-    console.info('This scrollBar can not be operated');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let scrollBar: UiComponent | null = await driver.findComponent(BY.scrollable(true));
-  if (scrollBar) {
-    if (await scrollBar.isScrollable()) {
-      console.info('This scrollBar can be operated');
-    } else {
-      console.info('This scrollBar can not be operated');
-    }
-  }
-}
-```
 
 ## isSelected
 
@@ -749,8 +314,6 @@ isSelected(): Promise<boolean>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [isSelected](arkts-test-uitest-component-c.md#isselected)
@@ -762,38 +325,6 @@ isSelected(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button && await button.isSelected()) {
-    console.info('This button is selected');
-  } else {
-    console.info('This button is not selected');
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  if (await button.isSelected()) {
-    console.info('This button is selected');
-  } else {
-    console.info('This button is not selected');
-  }
-}
-```
 
 ## longClick
 
@@ -808,8 +339,6 @@ longClick(): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [longClick](arkts-test-uitest-component-c.md#longclick)
@@ -821,52 +350,6 @@ longClick(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let button: Component | null = await driver.findComponent(ON.type('Button'));
-  if (button) {
-    await button.longClick();
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.longClick(100, 100);
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  await button.longClick();
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  await driver.longClick(100, 100);
-}
-```
 
 ## scrollSearch
 
@@ -880,8 +363,6 @@ scrollSearch(by: By): Promise<UiComponent>
 > 从API version 8开始支持，从API version 9开始废弃，建议使用[scrollSearch&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#scrollsearch)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -900,59 +381,3 @@ scrollSearch(by: By): Promise<UiComponent>
 | 类型 |
 | --- |
 | Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
-  if (scrollBar) {
-  let button = await scrollBar.scrollSearch(ON.text('next page'));
-    if (button) {
-      await button.click();
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
-  if (scrollBar) {
-  let button = await scrollBar.scrollSearch(ON.text('next page'));
-    if (button) {
-      await button.click();
-    }
-  }
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
-  let button = await scrollBar.scrollSearch(ON.text('next page'));
-}
-```
-
-```TypeScript
-// xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
-
-async function demo() {
-  let driver: UiDriver = UiDriver.create();
-  let scrollBar: UiComponent = await driver.findComponent(BY.type('Scroll'));
-  let button = await scrollBar.scrollSearch(BY.text('next page'));
-}
-```

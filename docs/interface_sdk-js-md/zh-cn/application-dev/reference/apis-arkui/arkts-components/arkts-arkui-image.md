@@ -1,7 +1,7 @@
 # Image
 
-Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)、 ResourceStr和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的数据源，支持png、jpg、jpeg、bmp、svg、webp、gif 、heif和tiff类型的图片格式，不支持apng和svga格式。
-> **说明：**>> - 从API version 23开始，图片类型新增支持tiff格式。>> - 该组件从API版本26.0.0开始支持WithTheme。>> - 使用快捷组合键对Image组件复制时，Image组件必须处于获焦状态，如何获焦请参考[设置组件是否可获焦](../../../ui/arkts-common-events-focus-event.md#设置组件是否可获焦)。> Image组件默认不获焦，需将focusable属性设置为true，即可使用Tab键将焦点切换到组件上，再将> focusOnTouch属性设置为true，即可实现点击获焦。>> - 图片格式支持SVG图源，SVG标签文档请参考SVG标签说明。>> - 动图的播放依赖于Image节点的可见性变化，其默认行为是不播放的。当节点可见时，通过回调启动动画，当节点不可见时，停止动画。可见性状态的判断是通过> onVisibleAreaChange> 事件触发的，当可见阈值ratios大于0时，表明Image处于可见状态。>> - Image组件播放GIF动图时，帧时长取自GIF文件中各帧的delay time字段。当某帧的时长值小于等于0时，系统会将其修正为100ms；当某帧的时长值大于0时，系统直接使用该原始值，不做最小帧时长限制。
+Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)、 [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的数据源，支持png、jpg、jpeg、bmp、svg、webp、gif 、heif和tiff类型的图片格式，不支持apng和svga格式。
+> **说明：**>> - 从API version 23开始，图片类型新增支持tiff格式。>> - 该组件从API版本26.0.0开始支持WithTheme。>> - 使用快捷组合键对Image组件复制时，Image组件必须处于获焦状态，如何获焦请参考[设置组件是否可获焦](../../../ui/arkts-common-events-focus-event.md#设置组件是否可获焦)。> Image组件默认不获焦，需将focusable属性设置为true，即可使用Tab键将焦点切换到组件上，再将> [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch)属性设置为true，即可实现点击获焦。>> - 图片格式支持SVG图源，SVG标签文档请参考SVG标签说明。>> - 动图的播放依赖于Image节点的可见性变化，其默认行为是不播放的。当节点可见时，通过回调启动动画，当节点不可见时，停止动画。可见性状态的判断是通过> [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)> 事件触发的，当可见阈值ratios大于0时，表明Image处于可见状态。>> - Image组件播放GIF动图时，帧时长取自GIF文件中各帧的delay time字段。当某帧的时长值小于等于0时，系统会将其修正为100ms；当某帧的时长值大于0时，系统直接使用该原始值，不做最小帧时长限制。
 需要权限
 使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 子组件
@@ -32,8 +32,6 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -44,7 +42,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor)
 
 | 参数名 | [类型](#类型) | 必填 |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
 
 ## Image
 
@@ -55,8 +53,6 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent)
 src新增[ImageContent](arkts-arkui-imagecontent-e.md)类型，可指定对应的图形内容。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,7 +66,7 @@ src新增[ImageContent](arkts-arkui-imagecontent-e.md)类型，可指定对应�
 
 | 参数名 | [类型](#类型) | 必填 |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |
 
 ## Image
 
@@ -81,8 +77,6 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey
 获取图片，支持通过reloadKey参数触发图片重新加载。当reloadKey的值发生变化时，将不使用缓存重新加载图片。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,7 +90,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey
 
 | 参数名 | [类型](#类型) | 必填 |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |
 | reloadKey | string | 否 |
 
 ## Image
@@ -105,11 +99,9 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey
 Image(src: PixelMap | ResourceStr | DrawableDescriptor, imageAIOptions: ImageAIOptions)
 ```
 
-Image新增ImageAIOptions参数，为组件设置AI分析选项。
+Image新增[ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)参数，为组件设置AI分析选项。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -121,8 +113,8 @@ Image新增ImageAIOptions参数，为组件设置AI分析选项。
 
 | 参数名 | [类型](#类型) | 必填 |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
-| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imagecommon-imageaioptions-i.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
+| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | 是 |
 
 ## Image
 
@@ -131,11 +123,9 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
       imageAIOptions?: ImageAIOptions, reloadKey?: string)
 ```
 
-获取图片，支持通过ImageAIOptions参数设置AI分析选项。当reloadKey的值发生变化时，将不使用缓存重新加载图片。
+获取图片，支持通过[ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)参数设置AI分析选项。当reloadKey的值发生变化时，将不使用缓存重新加载图片。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -147,8 +137,8 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
 
 | 参数名 | [类型](#类型) | 必填 |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
-| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
+| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | 否 |
 | reloadKey | string | 否 |
 
 ## 汇总
@@ -162,12 +152,6 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
 
 | 名称 |
 | --- |
-| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) |
-| [DrawingLattice](arkts-arkui-drawinglattice-t.md) |
-| [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) |
-| [ImageMatrix](arkts-arkui-imagematrix-t.md) |
-| [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md) |
-| [ResolutionQuality](arkts-arkui-resolutionquality-t-sys.md) |
 
 ### 枚举
 

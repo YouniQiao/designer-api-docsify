@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## addPrinters
@@ -15,8 +15,6 @@ function addPrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>
 Adds printers. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -39,50 +37,6 @@ Adds printers. This API uses an asynchronous callback to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerInfo : print.PrinterInfo = {
-    printerId : '3232',
-    printerName : 'hhhhh',
-    printerState : 0,
-    printerIcon : 12,
-    description : 'str',
-    capability : undefined,
-    options : 'opt'
-};
-print.addPrinters([printerInfo], (err: BusinessError) => {
-    if (err) {
-        console.error('addPrinters failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('addPrinters success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerInfo : print.PrinterInfo = {
-    printerId : '3232',
-    printerName : 'hhhhh',
-    printerState : 0,
-    printerIcon : 12,
-    description : 'str',
-    capability : undefined,
-    options : 'opt'
-};
-print.addPrinters([printerInfo]).then(() => {
-    console.info('add printers success.');
-}).catch((error: BusinessError) => {
-    console.error('add printers error : ' + JSON.stringify(error));
-})
-```
-
 
 ## addPrinters
 
@@ -93,8 +47,6 @@ function addPrinters(printers: Array<PrinterInfo>): Promise<void>
 Adds printers. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -121,7 +73,3 @@ Adds printers. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [addPrinters](#addprinters)

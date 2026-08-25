@@ -4,8 +4,6 @@ Defines the notification source type.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SourceType](arkts-notification-notificationmanager-sourcetype-e-sys.md)
@@ -23,8 +21,6 @@ TYPE_NORMAL = 0
 Normal notification.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ Continuous notification.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [TYPE_CONTINUOUS](arkts-notification-notificationmanager-sourcetype-e-sys.md#type_continuous)
@@ -63,8 +57,6 @@ TYPE_TIMER = 2
 Timed notification.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

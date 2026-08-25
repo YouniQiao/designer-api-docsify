@@ -1,12 +1,12 @@
 # ECCCommonParamsSpec
 
-Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) used to specify the common parameters of the public and private keys in the ECC algorithm. It can be used to randomly generate a public or private key.<br>To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md) to create a key generator.
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) used to specify the common parameters of the public and private keys in the ECC algorithm. It can be used to randomly generate a public or private key.
+
+To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md) to create a key generator.
 
 **Inheritance/Implementation:** ECCCommonParamsSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -15,7 +15,7 @@ Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-a
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## a
@@ -29,8 +29,6 @@ First coefficient **a** of the elliptic curve.
 **Type:** bigint
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -50,8 +48,6 @@ Second coefficient **b** of the elliptic curve.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -69,8 +65,6 @@ Field of the elliptic curve. Currently, only **Fp** is supported.
 **Type:** [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,8 +84,6 @@ Base point g.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -101,16 +93,14 @@ Base point g.
 ## h
 
 ```TypeScript
-h: int
+h: number
 ```
 
 Cofactor **h**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -129,8 +119,6 @@ Order **n** of the base point **g** in the ECC algorithm.
 **Type:** bigint
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

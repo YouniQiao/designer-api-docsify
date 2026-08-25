@@ -4,8 +4,6 @@ P2P group owner band.@enum { number } GroupOwnerBand
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md)
@@ -21,8 +19,6 @@ GO_BAND_AUTO = 0
 default band.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ GO_BAND_2GHZ = 1
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [GO_BAND_2GHZ](arkts-connectivity-wifimanager-groupownerband-e.md#go_band_2ghz)
@@ -57,8 +51,6 @@ GO_BAND_5GHZ = 2
 5G band.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

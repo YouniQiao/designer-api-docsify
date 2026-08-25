@@ -4,8 +4,6 @@ ChangeSceneAnimationStateRequest
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ ChangeSceneAnimationStateRequest
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'kits/@kit.FormKit';
 ```
 
 ## formId
@@ -28,8 +26,6 @@ The form id about request change scene animation state
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ The form id about request change scene animation state
 ## state
 
 ```TypeScript
-state: int
+state: number
 ```
 
 The state of scene animation. 0 means deactivate, 1 means activate The value must be an integer within [0,1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 

@@ -4,8 +4,6 @@ Key agreement interface, defining methods for generating shared secrets based on
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -13,7 +11,7 @@ Key agreement interface, defining methods for generating shared secrets based on
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## generateSecret
@@ -25,8 +23,6 @@ generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>
 Generates a shared secret based on the given private key and public key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -51,96 +47,6 @@ Generates a shared secret based on the given private key and public key. This AP
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 
-**Examples**
-
-PBKDF2
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-kdf.generateSecret(spec, (err, secret) => {
-  if (err) {
-    console.error('key derivation result: fail.');
-    return;
-  }
-  console.info('key derivation output = ' + secret.data);
-});
-```
-
-HKDF
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-kdf.generateSecret(spec, (err, secret) => {
-  if (err) {
-    console.error('key derivation result: fail.');
-    return;
-  }
-  console.info('key derivation output = ' + secret.data);
-});
-```
-
-PBKDF2
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-let kdfPromise = kdf.generateSecret(spec);
-kdfPromise.then(secret => {
-  console.info('key derivation output = ' + secret.data);
-}).catch((error: BusinessError) => {
-  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
-
-HKDF
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-let kdfPromise = kdf.generateSecret(spec);
-kdfPromise.then(secret => {
-  console.info('key derivation output = ' + secret.data);
-}).catch((error: BusinessError) => {
-  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
-
 ## generateSecret
 
 ```TypeScript
@@ -150,8 +56,6 @@ generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>
 Generates a shared secret based on the given private key and public key. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -181,21 +85,17 @@ Generates a shared secret based on the given private key and public key. This AP
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 
-**Examples**
-
-See [generateSecret](#generatesecret)
-
 ## generateSecretSync
 
 ```TypeScript
 generateSecretSync(priKey: PriKey, pubKey: PubKey): DataBlob
 ```
 
-Generates a shared secret based on the given private key and public key. This API returns the shared secret generated synchronously.<br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, generateSecret. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Generates a shared secret based on the given private key and public key. This API returns the shared secret generated synchronously.
+
+**NOTE：**It is recommended to prioritize the use of asynchronous API, generateSecret. Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -212,7 +112,7 @@ Generates a shared secret based on the given private key and public key. This AP
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) |
 
 **Error codes:**
 
@@ -222,42 +122,6 @@ Generates a shared secret based on the given private key and public key. This AP
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-
-**Examples**
-
-PBKDF2
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-let secret = kdf.generateSecretSync(spec);
-console.info('[Sync]key derivation output = ' + secret.data);
-```
-
-HKDF
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-let secret = kdf.generateSecretSync(spec);
-console.info('[Sync]key derivation output = ' + secret.data);
-```
 
 ## algName
 
@@ -270,8 +134,6 @@ Indicates the algorithm name.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

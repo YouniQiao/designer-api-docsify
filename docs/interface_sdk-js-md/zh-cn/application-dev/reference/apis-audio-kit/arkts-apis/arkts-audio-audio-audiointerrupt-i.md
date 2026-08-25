@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md)
@@ -18,7 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## contentType
@@ -32,8 +30,6 @@ contentType: ContentType
 **类型：** ContentType
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -53,8 +49,6 @@ pauseWhenDucked: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
@@ -72,8 +66,6 @@ streamUsage: StreamUsage
 **类型：** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

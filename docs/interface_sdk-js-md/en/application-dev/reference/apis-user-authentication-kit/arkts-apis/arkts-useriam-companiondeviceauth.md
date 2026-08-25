@@ -1,11 +1,13 @@
 # @ohos.userIAM.companionDeviceAuth(Companion Device Authentication)
 
 The **companionDeviceAuth** module is an important part of the OpenHarmony user identity and access management (UserIAM) system. It is dedicated to companion device authentication management. This module provides the system application with capabilities such as querying and subscribing to companion devices, and managing the service scope.This module applies to the following scenarios:  
-- Managing the authentication relationship between a companion device and the primary device. - Querying and subscribing to the status changes of a companion device. - Managing the service scope supported by a companion device. - Implementing continuous authentication. - Processing device selection and registration.
+- Managing the authentication relationship between a companion device and the primary device.  
+- Querying and subscribing to the status changes of a companion device.  
+- Managing the service scope supported by a companion device.  
+- Implementing continuous authentication.  
+- Processing device selection and registration.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -16,7 +18,7 @@ The **companionDeviceAuth** module is an important part of the OpenHarmony user 
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## Summary

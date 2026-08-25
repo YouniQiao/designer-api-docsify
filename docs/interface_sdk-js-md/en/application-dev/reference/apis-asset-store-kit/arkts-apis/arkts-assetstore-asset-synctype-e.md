@@ -4,8 +4,6 @@ Enumerates the sync types supported by an asset.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## NEVER
@@ -17,8 +15,6 @@ NEVER = 0
 Asset sync is not allowed.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -35,8 +31,6 @@ Asset sync is allowed only on the local device, for example, in data restore on 
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -50,8 +44,6 @@ TRUSTED_DEVICE = 1 << 1
 Asset sync is allowed only between trusted devices, for example, in the case of cloning.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -67,8 +59,6 @@ Asset sync is allowed only between the devices that are logged in with trusted a
 **Note：**: This field is reserved for future use and is not supported currently.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

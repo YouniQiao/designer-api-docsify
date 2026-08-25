@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## 导入模块
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## number
@@ -26,8 +24,6 @@ number: string
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 ## state
@@ -41,23 +37,5 @@ state: CallState
 **类型：** CallState
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Telephony.StateRegistry
-
-## teleNumber
-
-```TypeScript
-teleNumber: string
-```
-
-Indicates call number.
-
-**类型：** string
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry

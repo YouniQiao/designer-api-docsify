@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## setUnlockWallpaper
@@ -15,8 +15,6 @@ function setUnlockWallpaper(admin: Want, fd: number):  Promise<void>
 Sets the lock screen wallpaper. This API uses a promise to return the result. Enterprise device administrator applications can use this API to uniformly set the lock screen wallpaper for enterprise devices, for purposes such as corporate branding or security control.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_WALLPAPER
 
@@ -45,30 +43,3 @@ Sets the lock screen wallpaper. This API uses a promise to return the result. En
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs }  from '@kit.CoreFileKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-// Replace parameters with actual values.
-let filename: string = "lockwallpaper.jpg";
-let filePath: string = context.filesDir + '/' + filename;
-let fd: number = fs.openSync(filePath, fs.OpenMode.READ_WRITE).fd;
-deviceSettings.setUnlockWallpaper(wantTemp, fd).then(() => {
-  console.info('Succeeded in setting lock wallpaper');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set lock wallpaper. Code: ${err.code}, message: ${err.message}`);
-});
-```

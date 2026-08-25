@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startDiscoverDevices
@@ -15,8 +15,6 @@ function startDiscoverDevices(): void
 Start discover Wi-Fi P2P devices.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -30,15 +28,3 @@ Start discover Wi-Fi P2P devices.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
 | [2801001](../errorcode-wifi.md#2801001-p2p-module-error) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    wifiManager.startDiscoverDevices();  
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

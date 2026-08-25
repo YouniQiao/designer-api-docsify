@@ -4,8 +4,6 @@ Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ changeIndex(value: number): void
 控制Tabs切换到指定页签。在需要通过按钮、下拉菜单或其他控件实现页签跳转功能时使用，例如点击“上一页”/“下一页”按钮切换页签。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ constructor()
 TabsController的构造函数。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -68,8 +62,6 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -80,7 +72,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| indices | Optional & lt;Array & lt;number & gt; & gt; | 是 |
+| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 |
 
 **返回值：**
 
@@ -112,8 +104,6 @@ setTabBarOpacity(opacity: number): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -144,8 +134,6 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -156,4 +144,4 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| translate | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | 是 |
+| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 |

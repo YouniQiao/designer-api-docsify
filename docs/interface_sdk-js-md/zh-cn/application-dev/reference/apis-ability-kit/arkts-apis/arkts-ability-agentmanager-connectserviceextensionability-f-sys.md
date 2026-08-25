@@ -3,13 +3,13 @@
 ## 导入模块
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## connectServiceExtensionAbility
 
 ```TypeScript
-function connectServiceExtensionAbility(context: AgentExtensionContext, want: Want, callback: ConnectOptions): long
+function connectServiceExtensionAbility(context: AgentExtensionContext, want: Want, callback: ConnectOptions): number
 ```
 
 将AgentExtensionAbility连接到ServiceExtensionAbility。若目标ServiceExtensionAbility可见，可直接连接；若不可见，需申请 `ohos.permission.START_INVISIBLE_ABILITY`权限；若目标ServiceExtensionAbility位于远程设备上，需申请 `ohos.permission.DISTRIBUTED_DATASYNC`权限。
@@ -18,8 +18,6 @@ function connectServiceExtensionAbility(context: AgentExtensionContext, want: Wa
 > 该接口不支持在多线程和子进程中调用。在多线程中调用将引发CppCrash；在子进程中调用将返回16000050错误码。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,7 +37,7 @@ function connectServiceExtensionAbility(context: AgentExtensionContext, want: Wa
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **错误码：**
 

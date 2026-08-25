@@ -12,8 +12,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 ## FOLD_STATUS_UNKNOWN
@@ -25,8 +23,6 @@ FOLD_STATUS_UNKNOWN = 0
 表示设备当前折叠状态无法确定或设备本身不可折叠。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,8 +38,6 @@ FOLD_STATUS_EXPANDED = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -57,8 +51,6 @@ FOLD_STATUS_FOLDED = 2
 表示设备当前折叠状态为折叠。如果是双折轴设备，则表示折轴一和折轴二的折叠状态均为折叠。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -74,8 +66,6 @@ FOLD_STATUS_HALF_FOLDED = 3
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -89,8 +79,6 @@ FOLD_STATUS_EXPANDED_WITH_SECOND_EXPANDED = 11
 表示双折轴设备折轴一和折轴二的折叠状态均为完全展开。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -106,8 +94,6 @@ FOLD_STATUS_EXPANDED_WITH_SECOND_HALF_FOLDED = 21
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -121,8 +107,6 @@ FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22
 表示双折轴设备折轴一折叠状态为折叠，折轴二折叠状态为半折叠。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -138,8 +122,6 @@ FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -154,8 +136,6 @@ FOLD_STATUS_FOLDED_WITH_SECOND_EXPANDED = 12
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -169,8 +149,6 @@ FOLD_STATUS_HALF_FOLDED_WITH_SECOND_EXPANDED = 13
 表示双折轴设备折轴一折叠状态为半折叠，折轴二折叠状态为完全展开。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

@@ -4,30 +4,26 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## authenticationStatus
 
 ```TypeScript
-authenticationStatus?: int
+authenticationStatus?: number
 ```
 
 播放设备是否可信。默认为0。0代表设备不可信，1代表设备可信。  
 **系统接口：** 该接口为系统接口。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -44,8 +40,6 @@ HiPlay设备类型定义
 **类型：** [HiPlayDeviceInfo](arkts-avsession-avsession-hiplaydeviceinfo-i-sys.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +60,6 @@ ipAddress?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -85,8 +77,6 @@ isLegacy?: boolean
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -94,17 +84,15 @@ isLegacy?: boolean
 ## mediumTypes
 
 ```TypeScript
-mediumTypes?: int
+mediumTypes?: number
 ```
 
 用于发现设备的介质类型。1：蓝牙低功耗（BLE），用于蓝牙设备的发现和链接。2：受限应用协议（COAP），用于局域网内的设备发现。  
 **系统接口：** 该接口为系统接口。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -123,8 +111,6 @@ networkId?: string
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **系统接口：** 此接口为系统接口。
@@ -132,17 +118,15 @@ networkId?: string
 ## providerId
 
 ```TypeScript
-providerId?: int
+providerId?: number
 ```
 
 播放设备提供商。  
 **系统接口：** 该接口为系统接口。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 

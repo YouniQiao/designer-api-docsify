@@ -4,8 +4,6 @@
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ constructor()
 Constructs a two-dimensional transformation matrix object. The default value is a matrix whose attributes are all 0.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Constructs a two-dimensional transformation matrix object. The default value is 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -57,7 +51,7 @@ Constructs a two-dimensional transformation matrix object. The default value is 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Yes |
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes |
 
 ## identity
 
@@ -68,8 +62,6 @@ identity(): Matrix2D
 Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational translation scaling effect)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,8 +85,6 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -116,8 +106,6 @@ multiply(other?: Matrix2D): Matrix2D
 The matrix is superimposed in right multiplication mode. When the input parameter is empty, the matrix is superimposed.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -146,8 +134,6 @@ rotate(rx?: number, ry?: number): Matrix2D
 Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -179,8 +165,6 @@ rotate(degree: number, rx?: number, ry?: number): Matrix2D
 Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,8 +198,6 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -245,8 +227,6 @@ Performs a left multiplication translation operation on this matrix.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -272,13 +252,11 @@ Performs a left multiplication translation operation on this matrix.
 rotateX?: number
 ```
 
-Horizontal skew coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+Horizontal skew coefficient. The value range is not limited.If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -292,13 +270,11 @@ Horizontal skew coefficient. The value range is not limited.<br>If the value is 
 rotateY?: number
 ```
 
-Vertical skew coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+Vertical skew coefficient. The value range is not limited.If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -312,13 +288,11 @@ Vertical skew coefficient. The value range is not limited.<br>If the value is un
 scaleX?: number
 ```
 
-Horizontal scaling coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+Horizontal scaling coefficient. The value range is not limited.If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -332,13 +306,11 @@ Horizontal scaling coefficient. The value range is not limited.<br>If the value 
 scaleY?: number
 ```
 
-Vertical scaling coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+Vertical scaling coefficient. The value range is not limited.If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -352,13 +324,11 @@ Vertical scaling coefficient. The value range is not limited.<br>If the value is
 translateX?: number
 ```
 
-Horizontal translation distance. The value range is unlimited. <br>The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. <br>Default unit: vp.
+Horizontal translation distance. The value range is unlimited. The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. Default unit: vp.
 
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -372,13 +342,11 @@ Horizontal translation distance. The value range is unlimited. <br>The abnormal 
 translateY?: number
 ```
 
-Vertical translation distance. The value range is unlimited. <br>The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. <br>Default unit: vp.
+Vertical translation distance. The value range is unlimited. The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. Default unit: vp.
 
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

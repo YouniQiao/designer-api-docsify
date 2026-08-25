@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## bannerEnabled
@@ -19,8 +17,6 @@ bannerEnabled?: NotificationFlagStatus
 **类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,8 +32,6 @@ lockScreenEnabled?: NotificationFlagStatus
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## soundEnabled
@@ -52,8 +46,6 @@ soundEnabled?: NotificationFlagStatus
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Notification
 
 ## vibrationEnabled
@@ -67,7 +59,5 @@ vibrationEnabled?: NotificationFlagStatus
 **类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification

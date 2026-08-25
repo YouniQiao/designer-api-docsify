@@ -7,11 +7,9 @@ Describes the badge style. It includes the font color, font size, badge color, b
 > badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes
 > the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is
 > recommended that you use the Text component with its
-> outline attribute instead of the **Badge** component.
+> [outline](arkts-arkui-commonmethod-c.md#outline) attribute instead of the **Badge** component.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,13 +26,11 @@ badgeColor?: ResourceColor
 
 Badge color.Default value: **Color.Red**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Red
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,13 +50,11 @@ Badge size. The value of this parameter is a string of the number type. The unit
 2. If **fontSize** is set and **badgeSize** is smaller than fontSize, **badgeSize** will take effect based on the
 value of **fontSize**.
 
-**Type:** number \| ResourceStr
+**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Default:** 16vp
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,13 +70,11 @@ borderColor?: ResourceColor
 
 Color of the background border.Default value: **Color.Red**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Red
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,13 +91,11 @@ borderWidth?: Length
 Width of the background border.Default value: **1**Unit: vp  
 **NOTE：**Percentage values are not supported. If a percentage value is set, the default value is used.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** 1vp
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,13 +111,11 @@ color?: ResourceColor
 
 Font color.Default value: **Color.White**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.White
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -154,8 +142,6 @@ of the outer border.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -172,13 +158,11 @@ Font size. The value of this parameter is a string of the number type. The unit 
 **NOTE：**
 1. Percentage values are not supported. If a percentage value is set, the default value is used.
 
-**Type:** number \| ResourceStr
+**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Default:** 10vp
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -195,11 +179,9 @@ fontWeight?: number | FontWeight | ResourceStr
 Font weight of the text. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a bolder font. For the number type, if the value is not within the range, the default value **400** is used. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.Default value: **FontWeight.Normal**  
 **NOTE：**Percentage values are not supported. If a percentage value is set, the default value is used. The ResourceStr type is supported since API version 20.
 
-**Type:** number \| FontWeight \| ResourceStr
+**Type:** number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,13 +197,11 @@ outerBorderColor?: ResourceColor
 
 Color of the background outer border.Default value: **Color.White**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.White
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,8 +222,6 @@ Width of the background outer border.Default value: **0**.Unit: vp Percentage va
 **Default:** 0vp
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -15,8 +15,6 @@ function updateId(uri: string, id: number): string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [updateId](arkts-ability-datauriutils-updateid-f.md)
@@ -35,15 +33,3 @@ function updateId(uri: string, id: number): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-import dataUriUtils from '@ohos.ability.dataUriUtils';
-
-let id = 1122;
-let uri = dataUriUtils.updateId(
-    'com.example.dataUriUtils/1221',
-	id
-);
-```

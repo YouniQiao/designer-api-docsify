@@ -4,14 +4,12 @@ Represents the user authorization information.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## authAccount
@@ -25,8 +23,6 @@ Account of the user who can access the DLP file. The value contains a maximum of
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -42,8 +38,6 @@ Type of the account.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## dlpFileAccess
@@ -58,8 +52,6 @@ Permission granted to the user.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## permExpiryTime
@@ -73,7 +65,5 @@ Time when the authorization expires. The value must be greater than or equal to 
 **Type:** number
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention

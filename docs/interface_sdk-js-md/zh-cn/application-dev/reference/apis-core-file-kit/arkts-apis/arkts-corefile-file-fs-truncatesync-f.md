@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## truncateSync
@@ -17,8 +17,6 @@ declare function truncateSync(file: string | number, len?: number): void
 以同步方法截断文件内容，将文件大小调整为指定长度，超出部分的内容将被删除。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -51,21 +49,3 @@ declare function truncateSync(file: string | number, len?: number): void
 | 13900030 |
 | 13900033 |
 | 13900042 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let len: number = 5;
-fileIo.truncateSync(filePath, len);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let len: long = 5;
-fileIo.truncateSync(filePath, len);
-```

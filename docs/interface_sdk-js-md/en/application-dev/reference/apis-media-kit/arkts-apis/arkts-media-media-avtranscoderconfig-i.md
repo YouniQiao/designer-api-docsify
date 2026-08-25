@@ -4,29 +4,25 @@ Describes the video transcoding parameters.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## audioBitrate
 
 ```TypeScript
-audioBitrate?: int
+audioBitrate?: number
 ```
 
 Bitrate of the output audio, in bit/s. The value range is [1-500000]. The default value is 48 kbit/s.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -44,8 +40,6 @@ Encoding format of the output audio. Currently, only AAC is supported. The defau
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
@@ -61,8 +55,6 @@ Encoding format of the output audio. If the specified format is not supported, p
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +74,6 @@ Indicates whether to enable B Frame Encoding for reduce file size.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
@@ -100,8 +90,6 @@ Container format of the output video file. Currently, only MP4 is supported.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
@@ -109,16 +97,14 @@ Container format of the output video file. Currently, only MP4 is supported.
 ## videoBitrate
 
 ```TypeScript
-videoBitrate?: int
+videoBitrate?: number
 ```
 
 Bitrate of the output video, in bit/s. The default bitrate depends on the resolution of the output video. The default bitrate is 1 Mbit/s for the resolution in the range [240p, 480P], 2 Mbit/s for the range (480P,720P], 4 Mbit/s for the range (720P,1080P], and 8 Mbit/s for 1080p or higher.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -136,8 +122,6 @@ Encoding format of the output video. Currently, only AVC and HEVC are supported.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Multimedia.Media.AVTranscoder
@@ -145,16 +129,14 @@ Encoding format of the output video. Currently, only AVC and HEVC are supported.
 ## videoFrameHeight
 
 ```TypeScript
-videoFrameHeight?: int
+videoFrameHeight?: number
 ```
 
 Height of the output video frame, in px. The value range is [240 - 2160]. The default value is the height of the source video frame.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -163,16 +145,14 @@ Height of the output video frame, in px. The value range is [240 - 2160]. The de
 ## videoFrameWidth
 
 ```TypeScript
-videoFrameWidth?: int
+videoFrameWidth?: number
 ```
 
 Width of the output video frame, in px. The value range is [240 - 3840]. The default value is the width of the source video frame.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

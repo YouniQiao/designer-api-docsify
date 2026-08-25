@@ -4,8 +4,6 @@ Enumerates data role types.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md)
@@ -23,8 +21,6 @@ NONE = 0
 None
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ USB host.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [HOST](arkts-basicservices-usbmanager-dataroletype-e-sys.md#host)
@@ -63,8 +57,6 @@ DEVICE = 2
 USB device.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 

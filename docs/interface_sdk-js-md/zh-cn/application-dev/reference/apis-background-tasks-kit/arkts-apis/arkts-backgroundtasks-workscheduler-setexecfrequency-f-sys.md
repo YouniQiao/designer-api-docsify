@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## setExecFrequency
@@ -15,8 +15,6 @@ function setExecFrequency(info: FrequencyInfo): void
 设置执行频率信息.
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **需要权限：** ohos.permission.SET_WORK_SCHEDULER_PROPERTY
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [ContentType](arkts-notification-notificationmanager-contenttype-e.md)
@@ -21,8 +19,6 @@ NOTIFICATION_CONTENT_BASIC_TEXT
 普通类型通知。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ NOTIFICATION_CONTENT_LONG_TEXT
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [NOTIFICATION_CONTENT_LONG_TEXT](arkts-notification-notificationmanager-contenttype-e.md#notification_content_long_text)
@@ -57,8 +51,6 @@ NOTIFICATION_CONTENT_PICTURE
 图片类型通知。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -76,8 +68,6 @@ NOTIFICATION_CONTENT_CONVERSATION
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [NOTIFICATION_CONTENT_CONVERSATION](arkts-notification-notificationmanager-contenttype-e.md#notification_content_conversation)
@@ -93,8 +83,6 @@ NOTIFICATION_CONTENT_MULTILINE
 多行文本类型通知。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

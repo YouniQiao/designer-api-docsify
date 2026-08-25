@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## removeAllSlots
@@ -15,8 +15,6 @@ function removeAllSlots(callback: AsyncCallback<void>): void
 Removes all notification slots for this application. This API uses an asynchronous callback to return the result.After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -43,31 +41,6 @@ removeSlots removes all notification slots
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllSlotsCallback = (err: BusinessError): void => {
-  if (err) {
-    console.error(`Failed to remove all slots. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in removing all slots.`);
-  }
-}
-notificationManager.removeAllSlots(removeAllSlotsCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.removeAllSlots().then(() => {
-  console.info(`Succeeded in removing all slots.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove all slots. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## removeAllSlots
 
@@ -78,8 +51,6 @@ function removeAllSlots(): Promise<void>
 Removes all notification slots for this application. This API uses a promise to return the result.After deletion, all notification slots and their configurations of the current application will be permanently removed. When notifications are published subsequently, the system will automatically create slots of the corresponding types. Notifications already published through these slots are not affected and can still be viewed in the notification center. This is suitable for scenarios where all slot configurations need to be cleared at once.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -104,7 +75,3 @@ removeSlot removes a notification
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-See [removeAllSlots](#removeallslots)

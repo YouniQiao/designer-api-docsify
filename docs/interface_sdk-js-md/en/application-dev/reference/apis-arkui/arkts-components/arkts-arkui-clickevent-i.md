@@ -6,8 +6,6 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -37,7 +33,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-units-coordinate2d-i.md) |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
 
 ## preventDefault
 
@@ -48,8 +44,6 @@ preventDefault: () => void
 Blocks the default event.Note: This API is only supported by the following components: **RichEditor** and **Hyperlink**. An exception is thrown when this API is used with unsupported components. Currently, asynchronous calls and Modifier APIs are not supported.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,8 +69,6 @@ X coordinate of the click position in the coordinate system of the current appli
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -94,8 +86,6 @@ Y coordinate of the click position in the coordinate system of the current appli
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,8 +105,6 @@ X coordinate of the click position in the [global coordinate system](../../../wi
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -135,8 +123,6 @@ Y coordinate of the click position in the [global coordinate system](../../../wi
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -151,11 +137,9 @@ hand?: InteractionHand
 
 Whether the event is triggered by a left-hand or right-hand tap.
 
-**Type:** InteractionHand
+**Type:** [InteractionHand](../arkts-apis/arkts-arkui-interactionhand-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -175,8 +159,6 @@ X coordinate of the click position in the coordinate system of the current appli
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [windowX](#windowx)
@@ -194,8 +176,6 @@ Y coordinate of the click position in the coordinate system of the current appli
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -215,8 +195,6 @@ X coordinate of the click position in the coordinate system of the current appli
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -234,8 +212,6 @@ Y coordinate of the click position in the coordinate system of the current appli
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -255,8 +231,6 @@ X coordinate of the click position in the [component coordinate system](../../..
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -274,8 +248,6 @@ Y coordinate of the click position in the [component coordinate system](../../..
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

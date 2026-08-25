@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## ipsecCaCertConfig
@@ -27,8 +25,6 @@ ipsecCaCertConfig?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -44,8 +40,6 @@ ipsecCaCertFilePath?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -59,8 +53,6 @@ ipsecConfig?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -76,8 +68,6 @@ ipsecIdentifier?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -91,8 +81,6 @@ ipsecPreSharedKey?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -108,8 +96,6 @@ ipsecPrivateServerCertConfig?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -123,8 +109,6 @@ ipsecPrivateServerCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -140,8 +124,6 @@ ipsecPrivateUserCertConfig?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -155,8 +137,6 @@ ipsecPrivateUserCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -172,8 +152,6 @@ ipsecPublicServerCertConfig?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -187,8 +165,6 @@ ipsecPublicServerCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -204,8 +180,6 @@ ipsecPublicUserCertConfig?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -219,8 +193,6 @@ ipsecPublicUserCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -236,8 +208,6 @@ ipsecSecrets?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -251,8 +221,6 @@ l2tpSharedKey?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -268,8 +236,6 @@ optionsL2tpdClient?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -284,8 +250,6 @@ strongSwanConfig?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -299,8 +263,6 @@ xl2tpdConfig?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

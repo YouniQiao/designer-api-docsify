@@ -4,14 +4,12 @@ Describes the options for showing the action menu.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## buttons
@@ -33,8 +31,6 @@ Array of menu item buttons. The array structure is **{text:'button', color: '\#6
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -45,15 +41,16 @@ Array of menu item buttons. The array structure is **{text:'button', color: '\#6
 immersiveMode?: ImmersiveMode
 ```
 
-Overlay effect for the page-level menu. <br>**NOTE：**<br>- Default value: **ImmersiveMode.DEFAULT** <br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Overlay effect for the page-level menu.   
+**NOTE：**
+- Default value: **ImmersiveMode.DEFAULT**
+- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,15 +64,15 @@ Overlay effect for the page-level menu. <br>**NOTE：**<br>- Default value: **Im
 isModal?: boolean
 ```
 
-Whether the menu is a modal, which has a mask applied and does not allow for interaction with other components around the menu. <br>**true**: The menu is a modal. <br>**false**: The menu is not a modal. <br>Default value: **true**.
+Whether the menu is a modal, which has a mask applied and does not allow for interaction with other components around the menu.   
+**true**: The menu is a modal.   
+**false**: The menu is not a modal. Default value: **true**.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,15 +86,16 @@ Whether the menu is a modal, which has a mask applied and does not allow for int
 levelMode?: LevelMode
 ```
 
-Display level mode of the menu. <br>**NOTE：**<br>- Default value: **LevelMode.OVERLAY** <br>- This parameter takes effect only when **showInSubWindow** is set to **false**.
+Display level mode of the menu.   
+**NOTE：**
+- Default value: **LevelMode.OVERLAY**
+- This parameter takes effect only when **showInSubWindow** is set to **false**.
 
 **Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,13 +109,13 @@ Display level mode of the menu. <br>**NOTE：**<br>- Default value: **LevelMode.
 levelUniqueId?: number
 ```
 
-Unique ID of the node under the display level for the page-level menu. <br>Value range: a number no less than 0 <br>**NOTE：**<br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Unique ID of the node under the display level for the page-level menu. Value range: a number no less than 0   
+**NOTE：**
+- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,13 +129,14 @@ Unique ID of the node under the display level for the page-level menu. <br>Value
 onDidAppear?: Callback<void>
 ```
 
-Callback invoked after the menu appears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. <br>2. When a menu is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.
+Callback invoked after the menu appears.   
+**NOTE：**
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. 
+2. When a menu is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -151,13 +150,13 @@ Callback invoked after the menu appears. <br>**NOTE：**<br>1. The normal timing
 onDidDisappear?: Callback<void>
 ```
 
-Callback invoked after the menu disappears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
+Callback invoked after the menu disappears.   
+**NOTE：**
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,13 +170,13 @@ Callback invoked after the menu disappears. <br>**NOTE：**<br>1. The normal tim
 onWillAppear?: Callback<void>
 ```
 
-Callback invoked before the menu appearance animation.<br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
+Callback invoked before the menu appearance animation.  
+**NOTE：**
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,13 +190,13 @@ Callback invoked before the menu appearance animation.<br>**NOTE：**<br>1. The 
 onWillDisappear?: Callback<void>
 ```
 
-Callback invoked before the menu disappearance animation. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
+Callback invoked before the menu disappearance animation.   
+**NOTE：**
+1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -211,15 +210,17 @@ Callback invoked before the menu disappearance animation. <br>**NOTE：**<br>1. 
 showInSubWindow?: boolean
 ```
 
-Whether to show the menu in a subwindow when the menu needs to be displayed outside the main window. <br>**true**: The menu is shown in a subwindow. <br>Default value: **false**, indicating that the dialog box is not displayed in a subwindow.<br>**NOTE：**<br> - A menu whose **showInSubWindow** attribute is **true** cannot trigger the display of another menu whose **showInSubWindow** attribute is also **true**. <br> - If **showInSubWindow** is set to **true** in **UIExtension**, the menu is aligned with the host window based on **UIExtension**.
+Whether to show the menu in a subwindow when the menu needs to be displayed outside the main window.   
+**true**: The menu is shown in a subwindow. Default value: **false**, indicating that the dialog box is not displayed in a subwindow.  
+**NOTE：**
+- A menu whose **showInSubWindow** attribute is **true** cannot trigger the display of another menu whose **showInSubWindow** attribute is also **true**.
+- If **showInSubWindow** is set to **true** in **UIExtension**, the menu is aligned with the host window based on **UIExtension**.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -235,11 +236,9 @@ systemMaterial?: SystemUiMaterial
 
 System material of the dialog box. Different materials have different effects and can affect visual attributes such as the background color, border, and shadow of the dialog box.
 
-**Type:** SystemUiMaterial
+**Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -253,13 +252,11 @@ System material of the dialog box. Different materials have different effects an
 title?: string | Resource
 ```
 
-Title of the dialog box.<br>Default value: **undefined**, which indicates that no title is not displayed by default.
+Title of the dialog box.Default value: **undefined**, which indicates that no title is not displayed by default.
 
 **Type:** string \| Resource
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from '@kit.BasicServicesKit';
+import { runningLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## isSupported
@@ -15,8 +15,6 @@ function isSupported(type: RunningLockType): boolean
 Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) is supported.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
@@ -37,14 +35,3 @@ Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-try {
-    let isSupported = runningLock.isSupported(runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL);
-    console.info('BACKGROUND type supported: ' + isSupported);
-} catch(err) {
-    console.error('check supported failed, err: ' + err);
-}
-```

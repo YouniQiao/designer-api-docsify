@@ -4,14 +4,12 @@ This module provides the capabilities of managing the system pasteboard to suppo
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

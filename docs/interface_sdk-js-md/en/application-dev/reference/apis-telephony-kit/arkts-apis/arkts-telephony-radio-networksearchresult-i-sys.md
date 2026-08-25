@@ -4,8 +4,6 @@ Obtains the network search results.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Obtains the network search results.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isNetworkSearchSuccess
@@ -27,8 +25,6 @@ Indicates whether the network search was successful.
 **Type:** boolean
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -45,8 +41,6 @@ Obtains the network search results.
 **Type:** Array&lt;[NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)&gt;
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

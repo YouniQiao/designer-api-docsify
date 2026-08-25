@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## encapsulate
@@ -16,8 +16,6 @@ function encapsulate(keyAlias: string, params: HuksParam[],
 Post-Quantum Cryptography key encapsulation operation, supporting key management by HUKS or by the application itself. If the application chooses to manage the key, the symmetric key is carried in the outData field of HuksReturnResult.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

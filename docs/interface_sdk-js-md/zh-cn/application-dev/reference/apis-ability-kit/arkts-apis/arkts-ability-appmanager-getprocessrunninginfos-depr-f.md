@@ -19,8 +19,6 @@ function getProcessRunningInfos(): Promise<Array<ProcessRunningInfo>>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
@@ -34,31 +32,6 @@ function getProcessRunningInfos(): Promise<Array<ProcessRunningInfo>>
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; |
-
-**示例**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-appManager.getProcessRunningInfos().then((data) => {
-  console.info(`The process running infos is: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
-});
-```
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-
-appManager.getProcessRunningInfos((error, data) => {
-  if (error && error.code !== 0) {
-    console.error(`getProcessRunningInfos fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`getProcessRunningInfos success, data: ${JSON.stringify(data)}`);
-  }
-});
-```
 
 
 ## getProcessRunningInfos
@@ -75,8 +48,6 @@ function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessRunningInfo
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
@@ -90,7 +61,3 @@ function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessRunningInfo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | 是 |
-
-**示例**
-
-参见 [getProcessRunningInfos](#getprocessrunninginfos)

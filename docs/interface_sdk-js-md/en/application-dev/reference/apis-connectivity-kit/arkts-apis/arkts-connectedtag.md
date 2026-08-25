@@ -4,14 +4,12 @@ The **connectedTag** module provides APIs for using active tags. You can use the
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

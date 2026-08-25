@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLockFileManager } from '@kit.AbilityKit';
+import { screenLockFileManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## acquireAccess
@@ -15,8 +15,6 @@ function acquireAccess(dataType: DataType): AccessStatus
 Requests the permission to access a specified type of sensitive data under the lock screen synchronously. After the request is successful, the reference count of the sensitive data key increases, preventing the key from being destroyed after the screen has been locked for the system-configured duration threshold. This method must be used in pair with [releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md).Before calling this API, ensure that the app has enabled the sensitive data protection under lock screen feature and that the key state queried through the [queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md) API is KEY_EXIST.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_MEDIA_DATA or ohos.permission.ACCESS_SCREEN_LOCK_ALL_DATA
 
@@ -48,39 +46,3 @@ Requests the permission to access a specified type of sensitive data under the l
 | [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) |
 | [29300003](../errorcode-screenLockFileManager.md#29300003-sensitive-data-access-management-under-lock-screen-is-not-enabled) |
 | [29300004](../errorcode-screenLockFileManager.md#29300004-permission-to-access-sensitive-data-on-the-lock-screen-has-been-revoked) |
-
-**Examples**
-
-```TypeScript
-// Request the permission to access sensitive data on the lock screen.
-import { screenLockFileManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-    let acquireStatus = screenLockFileManager.acquireAccess();
-    if (acquireStatus === screenLockFileManager.AccessStatus.ACCESS_GRANTED) {
-        hilog.info(0x0000, 'testTag', 'acquireAccess successfully.');
-    }
-} catch (err) {
-    let message = (err as BusinessError).message;
-    hilog.error(0x0000, 'testTag', 'acquireAccess failed: %{public}s', message);
-}
-```
-
-```TypeScript
-// Request the permission to access media data on the lock screen.
-import { screenLockFileManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-    let acquireStatus = screenLockFileManager.acquireAccess(screenLockFileManager.DataType.MEDIA_DATA);
-    if (acquireStatus === screenLockFileManager.AccessStatus.ACCESS_GRANTED) {
-        hilog.info(0x0000, 'testTag', 'acquireAccess successfully.');
-    }
-} catch (err) {
-    let message = (err as BusinessError).message;
-    hilog.error(0x0000, 'testTag', 'acquireAccess failed: %{public}s', message);
-}
-```

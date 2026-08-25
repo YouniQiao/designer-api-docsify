@@ -4,8 +4,6 @@ Defines a unique network ID.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines a unique network ID.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## rule
@@ -27,8 +25,6 @@ Rule that specifies whether the application specified by a given UID is allowed 
 **Type:** [NetUidRule](arkts-network-policy-netuidrule-e-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -45,8 +41,6 @@ Traffic alarm threshold. The default value is **DATA_USAGE_UNKNOWN**.
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

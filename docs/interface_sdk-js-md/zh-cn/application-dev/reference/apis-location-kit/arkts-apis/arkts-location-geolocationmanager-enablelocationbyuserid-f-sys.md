@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## enableLocationByUserId
 
 ```TypeScript
-function enableLocationByUserId(userId: int): Promise<void>
+function enableLocationByUserId(userId: number): Promise<void>
 ```
 
 打开指定系统账号的定位开关，使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS and ohos.permission.CONTROL_LOCATION_SWITCH
 
@@ -28,7 +26,7 @@ function enableLocationByUserId(userId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -44,23 +42,3 @@ function enableLocationByUserId(userId: int): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 打开指定系统账号的位置开关，如：处于ID为101的账号下，可以打开ID为100的账号的位置开关
-  let userId: number = 100;
-  geoLocationManager.enableLocationByUserId(userId).then(() => {
-    console.info('promise, enableLocationByUserId succeed');
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, enableLocationByUserId: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

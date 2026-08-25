@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## startAdminProvision
@@ -15,8 +15,6 @@ function startAdminProvision(admin: Want, type: AdminType, context: common.Conte
 Enables the device administrator application to open a page for the BYOD administrator to perform activation.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.START_PROVISIONING_MESSAGE
 
@@ -39,30 +37,3 @@ Enables the device administrator application to open a page for the BYOD adminis
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let recordParameters: Record<string, string> = {
-  // Replace with actual values.
-  "activateId": "activateId testValue",
-  "customizedInfo": "customizedInfo testValue"
-};
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  console.info('context:' + JSON.stringify(context));
-  adminManager.startAdminProvision(wantTemp, adminManager.AdminType.ADMIN_TYPE_BYOD, context, recordParameters);
-  console.info('startAdminProvision::success');
-} catch (error) {
-  console.error('startAdminProvision::errorCode: ' + error.code + ' errorMessage: ' + error.message);
-}
-```

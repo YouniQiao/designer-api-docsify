@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## confirmInvitation
@@ -15,8 +15,6 @@ function confirmInvitation(invitationCode: string, state: State, callback: Async
 Confirms the invitation based on the sharing invitation code and obtains the shared resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -38,34 +36,6 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let shareResource: string | undefined;
-cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED).then((result: cloudData.sharing.Result<string>) => {
-  console.info(`confirm invitation succeeded, result: ${result}`);
-  shareResource = result.value;
-}).catch((err: BusinessError) => {
-  console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let shareResource: string;
-cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED, ((err: BusinessError, result) => {
-  if (err) {
-    console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info(`confirm invitation succeeded, result: ${result}`);
-  shareResource = result.value;
-}))
-```
-
 
 ## confirmInvitation
 
@@ -76,8 +46,6 @@ function confirmInvitation(invitationCode: string, state: State): Promise<Result
 Confirms the invitation based on the sharing invitation code and obtains the shared resource ID. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -103,7 +71,3 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [confirmInvitation](#confirminvitation)

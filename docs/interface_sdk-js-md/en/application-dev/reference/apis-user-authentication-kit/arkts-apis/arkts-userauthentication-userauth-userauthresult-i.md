@@ -4,14 +4,12 @@ Represents the user authentication result. If the authentication is successful, 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## authType
@@ -25,8 +23,6 @@ Authentication type that is actually used when the authentication is successful.
 **Type:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Enrolled credential status returned when the authentication is successful. It co
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -53,18 +47,21 @@ Enrolled credential status returned when the authentication is successful. It co
 ## result
 
 ```TypeScript
-result: int
+result: number
 ```
 
 User authentication result. If the operation is successful, **SUCCESS(12500000)** is returned. If the operation fails, the corresponding error code is returned. The error codes are as follows:  
-- **FAIL(12500001)**: The authentication fails. - **CANCELED(12500003)**: The authentication is canceled. - **TIMEOUT(12500004)**: The authentication times out. - **LOCKED(12500009)**: The authenticator is locked. - **NOT_ENROLLED(12500010)**: The credential is not registered. - **PIN_EXPIRED(12500013)**: The screen lock PIN has expired.  
+- **FAIL(12500001)**: The authentication fails.  
+- **CANCELED(12500003)**: The authentication is canceled.  
+- **TIMEOUT(12500004)**: The authentication times out.  
+- **LOCKED(12500009)**: The authenticator is locked.  
+- **NOT_ENROLLED(12500010)**: The credential is not registered.  
+- **PIN_EXPIRED(12500013)**: The screen lock PIN has expired.  
 For details about the complete error code list, see [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -81,8 +78,6 @@ Token information returned when the authentication is successful. The token cont
 **Type:** Uint8Array
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

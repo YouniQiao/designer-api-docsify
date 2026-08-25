@@ -4,14 +4,12 @@ The **hiTraceChain** module implements call chain trace throughout a service pro
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

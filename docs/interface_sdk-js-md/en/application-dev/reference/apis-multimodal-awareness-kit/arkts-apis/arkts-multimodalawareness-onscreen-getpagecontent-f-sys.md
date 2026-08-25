@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## getPageContent
@@ -15,8 +15,6 @@ function getPageContent(options?: ContentOptions): Promise<PageContent>
 Obtains the onscreen content when a window is displayed on the screen.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_SCREEN_CONTENT
 
@@ -48,24 +46,3 @@ Obtains the onscreen content when a window is displayed on the screen.
 | [34000003](../errorcode-onScreen.md#34000003-invalid-window-id) |
 | [34000004](../errorcode-onScreen.md#34000004-page-not-ready) |
 | [34000006](../errorcode-onScreen.md#34000006-request-timeout) |
-
-**Examples**
-
-```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: onScreen.ContentOptions = {
-   contentUnderstand: true,
-   pageLink: true
-};
-try {
-   onScreen.getPageContent(options).then((pageContent: onScreen.PageContent) => {
-      console.info("get page content succeed, bundleName = " + pageContent.bundleName);
-   }).catch((err: BusinessError) => {
-      console.error("get page content failed, errCode = " + err.code);
-   });
-} catch (err) {
-   console.error('get page content failed, errCode = ' + err.code);
-}
-```

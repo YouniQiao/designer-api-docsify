@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.ConnectivityKit';
+import { socket } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## sppReadAsync
@@ -15,8 +15,6 @@ function sppReadAsync(clientSocket: number): Promise<ArrayBuffer>
 Asynchronous interface for reading data from the socket.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -39,27 +37,3 @@ Asynchronous interface for reading data from the socket.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901054 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// clientNumber is obtained via sppAccept or sppConnect.
-async function readAsync(clientNumber: number) {
-  let flag = 1;
-  try {
-    while (flag) { // Call the API cyclically to read data. This example is for reference only. You need to change the implementation based on the service requirements. 
-      let buffer = await socket.sppReadAsync(clientNumber); // Use await to ensure sequential reading.
-      let data = new Uint8Array(buffer);
-      if (data) {
-        console.info('sppRead success, data length = ' + data.byteLength);
-        // Process the received data.
-      }
-    }
-  } catch (err) {
-    console.error('startSppRead errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    socket.sppCloseClientSocket(clientNumber); // Close the connection when an error occurs.
-  }
-}
-```

@@ -2,14 +2,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## 汇总
@@ -38,13 +36,8 @@ import { avSession } from '@kit.AVSessionKit';
 | --- |
 | [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) |
 | [castAudio](arkts-avsession-avsession-castaudio-f-sys.md) |
-| [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md) |
-| [castAudioSession](arkts-avsession-avsession-castaudiosession-f-sys.md) |
-| [castAudioSessionAll](arkts-avsession-avsession-castaudiosessionall-f-sys.md) |
 | [createController](arkts-avsession-avsession-createcontroller-f-sys.md) |
 | [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md) |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md) |
 | [getDistributedSessionController](arkts-avsession-avsession-getdistributedsessioncontroller-f-sys.md) |
@@ -54,41 +47,29 @@ import { avSession } from '@kit.AVSessionKit';
 | [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) |
 | [getSessionDescriptors](arkts-avsession-avsession-getsessiondescriptors-f-sys.md) |
 | [getSessionDescriptorsForAudioZone](arkts-avsession-avsession-getsessiondescriptorsforaudiozone-f-sys.md) |
-| [off](arkts-avsession-avsession-off-f-sys.md#offsessioncreate) |
-| [off](arkts-avsession-avsession-off-f-sys.md#offsessiondestroy) |
-| [off](arkts-avsession-avsession-off-f-sys.md#offtopsessionchange) |
-| [off](arkts-avsession-avsession-off-f-sys.md#offsessionservicedie) |
-| [off](arkts-avsession-avsession-off-f-sys.md#offdistributedsessionchange) |
-| [off](arkts-avsession-avsession-off-f-sys.md#offdeviceavailable) |
-| [off](arkts-avsession-avsession-off-f-sys.md#offdeviceoffline) |
-| [off](arkts-avsession-avsession-off-f-sys.md#offdevicelogevent) |
-| [off](arkts-avsession-avsession-off-f-sys.md#offdevicestatechanged) |
+| off |
+| off |
+| off |
+| off |
+| off |
+| off |
+| off |
+| off |
+| off |
 | [offActiveSessionChanged](arkts-avsession-avsession-offactivesessionchanged-f-sys.md) |
 | [offAudioZoneSessionChange](arkts-avsession-avsession-offaudiozonesessionchange-f-sys.md) |
-| [offDeviceAvailable](arkts-avsession-avsession-offdeviceavailable-f-sys.md) |
-| [offDeviceLogEvent](arkts-avsession-avsession-offdevicelogevent-f-sys.md) |
-| [offDeviceOffline](arkts-avsession-avsession-offdeviceoffline-f-sys.md) |
-| [offDeviceStateChanged](arkts-avsession-avsession-offdevicestatechanged-f-sys.md) |
-| [offDistributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md) |
-| [offSessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md) |
 | [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md) |
-| [on](arkts-avsession-avsession-on-f-sys.md#onsessioncreate) |
-| [on](arkts-avsession-avsession-on-f-sys.md#onsessiondestroy) |
-| [on](arkts-avsession-avsession-on-f-sys.md#ontopsessionchange) |
-| [on](arkts-avsession-avsession-on-f-sys.md#onsessionservicedie) |
-| [on](arkts-avsession-avsession-on-f-sys.md#ondistributedsessionchange) |
-| [on](arkts-avsession-avsession-on-f-sys.md#ondeviceavailable) |
-| [on](arkts-avsession-avsession-on-f-sys.md#ondeviceoffline) |
-| [on](arkts-avsession-avsession-on-f-sys.md#ondevicelogevent) |
-| [on](arkts-avsession-avsession-on-f-sys.md#ondevicestatechanged) |
+| on |
+| on |
+| on |
+| on |
+| on |
+| on |
+| on |
+| on |
+| on |
 | [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md) |
 | [onAudioZoneSessionChange](arkts-avsession-avsession-onaudiozonesessionchange-f-sys.md) |
-| [onDeviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md) |
-| [onDeviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md) |
-| [onDeviceOffline](arkts-avsession-avsession-ondeviceoffline-f-sys.md) |
-| [onDeviceStateChanged](arkts-avsession-avsession-ondevicestatechanged-f-sys.md) |
-| [onDistributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md) |
-| [onSessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md) |
 | [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md) |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) |
@@ -200,10 +181,7 @@ import { avSession } from '@kit.AVSessionKit';
 | [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md) |
 | [AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md) |
 | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) |
-| [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) |
-| [EventProcess](arkts-avsession-avsession-eventprocess-t.md) |
 | [ExtraInfo](arkts-avsession-avsession-extrainfo-t.md) |
 | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) |
 | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) |
 | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md) |
-| [VideoSizeEvent](arkts-avsession-avsession-videosizeevent-t.md) |

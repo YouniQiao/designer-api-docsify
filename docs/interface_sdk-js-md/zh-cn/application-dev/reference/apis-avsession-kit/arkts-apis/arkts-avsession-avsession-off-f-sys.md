@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## off('sessionCreate')
@@ -15,8 +15,6 @@ function off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) =>
 注销会话创建事件监听。注销后，不再接收该事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -37,12 +35,6 @@ function off(type: 'sessionCreate', callback?: (session: AVSessionDescriptor) =>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avSession.off('sessionCreate');
-```
-
 
 ## off('sessionDestroy')
 
@@ -53,8 +45,6 @@ function off(type: 'sessionDestroy', callback?: (session: AVSessionDescriptor) =
 注销会话销毁事件监听。注销后，不再监听该事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -75,12 +65,6 @@ function off(type: 'sessionDestroy', callback?: (session: AVSessionDescriptor) =
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avSession.off('sessionDestroy');
-```
-
 
 ## off('topSessionChange')
 
@@ -91,8 +75,6 @@ function off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor)
 注销最新播放会话变更事件监听。注销后，不再进行该事件的监听。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -113,12 +95,6 @@ function off(type: 'topSessionChange', callback?: (session: AVSessionDescriptor)
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avSession.off('topSessionChange');
-```
-
 
 ## off('sessionServiceDie')
 
@@ -129,8 +105,6 @@ function off(type: 'sessionServiceDie', callback?: () => void): void
 取消会话服务死亡监听，取消后，不再进行服务死亡监听。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -151,12 +125,6 @@ function off(type: 'sessionServiceDie', callback?: () => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avSession.off('sessionServiceDie');
-```
-
 
 ## off('distributedSessionChange')
 
@@ -167,8 +135,6 @@ function off(type: 'distributedSessionChange', distributedSessionType: Distribut
 取消最新分布式远端会话变更的监听事件，取消后，不再进行该事件的监听。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -189,12 +155,6 @@ function off(type: 'distributedSessionChange', distributedSessionType: Distribut
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avSession.off('distributedSessionChange', avSession.DistributedSessionType.TYPE_SESSION_REMOTE);
-```
-
 
 ## off('deviceAvailable')
 
@@ -205,8 +165,6 @@ function off(type: 'deviceAvailable', callback?: (device: OutputDeviceInfo) => v
 取消设备发现回调的监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -226,12 +184,6 @@ function off(type: 'deviceAvailable', callback?: (device: OutputDeviceInfo) => v
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-avSession.off('deviceAvailable');
-```
-
 
 ## off('deviceOffline')
 
@@ -242,8 +194,6 @@ function off(type: 'deviceOffline', callback?: (deviceId: string) => void): void
 取消设备下线回调的监听。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -263,12 +213,6 @@ function off(type: 'deviceOffline', callback?: (deviceId: string) => void): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-avSession.off('deviceOffline');
-```
-
 
 ## off('deviceLogEvent')
 
@@ -279,8 +223,6 @@ function off(type: 'deviceLogEvent', callback?: Callback<DeviceLogEventCode>): v
 取消监听日志事件的回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -302,12 +244,6 @@ function off(type: 'deviceLogEvent', callback?: Callback<DeviceLogEventCode>): v
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) |
 
-**示例**
-
-```TypeScript
-avSession.off('deviceLogEvent');
-```
-
 
 ## off('deviceStateChanged')
 
@@ -318,8 +254,6 @@ function off(type: 'deviceStateChanged', callback?: Callback<DeviceState>): void
 取消投播设备连接状态的监听。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 

@@ -4,14 +4,12 @@ Represents asset (such as a file, image, or video) information.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## Modules to Import
 
 ```TypeScript
-import { commonType } from '@kit.ArkData';
+import { commonType } from 'kits/@kit.ArkData';
 ```
 
 ## createTime
@@ -25,8 +23,6 @@ Time when the asset was created.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -42,8 +38,6 @@ Time when the asset was last modified.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## name
@@ -57,8 +51,6 @@ Asset name.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -74,8 +66,6 @@ Application sandbox path of the asset.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## size
@@ -89,8 +79,6 @@ Size of the asset. If this field changes, the asset is considered to have change
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
@@ -106,8 +94,6 @@ Asset status. The default value is ASSET_NORMAL.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## uri
@@ -121,7 +107,5 @@ Asset URI, which is an absolute path in the system.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CommonType

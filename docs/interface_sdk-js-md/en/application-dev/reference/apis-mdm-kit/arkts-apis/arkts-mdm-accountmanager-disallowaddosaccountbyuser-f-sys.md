@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disallowAddOsAccountByUser
@@ -15,8 +15,6 @@ function disallowAddOsAccountByUser(admin: Want, userId: number, disallow: boole
 Disallows a user to add accounts.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -47,24 +45,3 @@ Disallows a user to add accounts.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  accountManager.disallowAddOsAccountByUser(wantTemp, 100, true);
-  console.info(`Succeeded in disallowing user add os account`);
-} catch (err) {
-  console.error(`Failed to disallow user add os account. Code: ${err.code}, message: ${err.message}`);
-}
-```

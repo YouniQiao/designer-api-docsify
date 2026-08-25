@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
+import { bundleResourceManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityResourceInfoList
 
 ```TypeScript
-function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, resourceFlags: int): Promise<Array<LauncherAbilityResourceInfo>>
+function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, resourceFlags: number): Promise<Array<LauncherAbilityResourceInfo>>
 ```
 
 根据传入的optionsList获取列表中每个BundleOptions元素对应的应用的LauncherAbilityResourceInfo。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
 
@@ -31,7 +29,7 @@ function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, r
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | optionsList | Array&lt;[BundleOptions](arkts-ability-bundleinfo-bundleoptions-i-sys.md)&gt; | 是 |
-| resourceFlags | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| resourceFlags | number | 是 |
 
 **返回值：**
 
@@ -50,34 +48,3 @@ function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, r
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-
-**示例**
-
-```TypeScript
-import { bundleManager, bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// 请开发者替换为实际要查询的应用的信息
-let option: bundleManager.BundleOptions = {
-  bundleName: 'com.example.demo',
-  moduleName: 'entry',
-  abilityName: 'EntryAbility',
-  appIndex: 0
-};
-
-let optionsList: Array<bundleManager.BundleOptions> = [];
-optionsList.push(option);
-let resourceFlag = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  bundleResourceManager.getLauncherAbilityResourceInfoList(optionsList, resourceFlag).then(data => {
-    hilog.info(0x0000, 'testTag', 'getLauncherAbilityResourceInfoList successfully. Data length: %{public}s',
-      JSON.stringify(data.length));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getLauncherAbilityResourceInfoList failed. err: %{public}s', err.message);
-  })
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getLauncherAbilityResourceInfoList failed: %{public}s', message);
-}
-```

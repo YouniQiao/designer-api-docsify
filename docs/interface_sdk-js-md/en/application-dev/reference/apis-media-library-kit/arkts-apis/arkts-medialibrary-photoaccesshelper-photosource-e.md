@@ -1,10 +1,8 @@
 # PhotoSource
 
-Enumeration of PhotoSource type@enum { int } PhotoSource
+Enumeration of PhotoSource type@enum { number } PhotoSource
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -17,8 +15,6 @@ ALL = 0
 Images and videos from all sources.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -34,8 +30,6 @@ Image or video taken by the camera.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -49,8 +43,6 @@ SCREENSHOT = 2
 Screenshot or screen capture video.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

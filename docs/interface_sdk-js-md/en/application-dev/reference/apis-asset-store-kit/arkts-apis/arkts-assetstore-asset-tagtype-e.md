@@ -4,8 +4,6 @@ Enumerates the asset attribute types.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## BOOL
@@ -17,8 +15,6 @@ BOOL = 0x01 << 28
 Boolean.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -34,8 +30,6 @@ Number.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Security.Asset
@@ -49,8 +43,6 @@ BYTES = 0x03 << 28
 Byte array.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

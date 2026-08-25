@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## exit
@@ -16,8 +16,6 @@ function exit(code: number): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [exit](arkts-arkts-process-processmanager-c.md#exit)
@@ -29,14 +27,3 @@ function exit(code: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | code | number | 是 |
-
-**示例**
-
-```TypeScript
-process.exit(0);
-```
-
-```TypeScript
-let processManager = new process.ProcessManager();
-processManager.exit(0);
-```

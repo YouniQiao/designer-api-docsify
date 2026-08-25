@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'kits/@kit.ArkUI';
 ```
 
 ## getFloatViewLimits
@@ -15,8 +15,6 @@ function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimit
 Obtains the limits of the float view based on the passed template type. The unit is px.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

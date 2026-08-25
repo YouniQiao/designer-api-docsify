@@ -4,14 +4,12 @@ beacon围栏的参数配置。
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## beaconFenceInfoType
@@ -25,8 +23,6 @@ beacon围栏信息类型。
 **类型：** [BeaconFenceInfoType](arkts-location-geolocationmanager-beaconfenceinfotype-e.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ beacon围栏标识。可自行定义，如："123", "beaconName"。
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
@@ -61,8 +55,6 @@ beacon设备制造商数据。
 **类型：** [BeaconManufactureData](arkts-location-geolocationmanager-beaconmanufacturedata-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

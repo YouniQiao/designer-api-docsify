@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## offDeleteFormsCallback
@@ -15,8 +15,6 @@ function offDeleteFormsCallback(callback?: formInfo.DeleteFormsCallback): void
 取消订阅删除卡片事件。使用callback异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

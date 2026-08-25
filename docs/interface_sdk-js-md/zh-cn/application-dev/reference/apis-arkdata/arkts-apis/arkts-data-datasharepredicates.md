@@ -4,7 +4,7 @@
 
 > **说明：**
 > 谓词(DataSharePredicates)的使用场景如下：
-> - 用于在媒体文件管理服务作为检索条件使用，参考相册管理模块检索条件FetchOptions from '@kit.ArkData';
+> - 用于在媒体文件管理服务作为检索条件使用，参考相册管理模块检索条件FetchOptions from 'kits/@kit.ArkData';
 ```
 
 ## 汇总

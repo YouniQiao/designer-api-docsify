@@ -4,8 +4,6 @@ Enumerates the types of rotation information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## WINDOW_ORIENTATION
@@ -17,8 +15,6 @@ WINDOW_ORIENTATION = 0
 Window's screen orientation, based on how the Window module defines landscape/portrait modes.Note that it maps to the **orientation** parameter in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md).
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,8 +28,6 @@ Physical screen orientation, based on how the Display module defines landscape/p
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## DISPLAY_ROTATION
@@ -45,7 +39,5 @@ DISPLAY_ROTATION = 2
 Physical rotation angle of the device's screen (in degrees, clockwise).It maps to the **rotation** property of the [display](arkts-arkui-display-displaystate-e.md) object.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

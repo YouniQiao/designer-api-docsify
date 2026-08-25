@@ -1,7 +1,5 @@
 # Uint8ClampedArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new (): Uint8ClampedArray
 ```
-
-**ArkTS mode:** 
 
 **Return value:**
 

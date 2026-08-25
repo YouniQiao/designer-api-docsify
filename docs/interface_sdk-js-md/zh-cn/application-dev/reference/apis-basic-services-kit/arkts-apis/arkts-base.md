@@ -11,17 +11,11 @@
 ## 导入模块
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
-
-### 类
-
-| 名称 |
-| --- |
-| [BusinessError(公共回调信息)](arkts-basicservices-base-businesserror-c.md) |
 
 ### 接口
 
@@ -31,12 +25,3 @@ import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } fro
 | [BusinessError(公共回调信息)](arkts-basicservices-base-businesserror-i.md) |
 | [Callback(公共回调信息)](arkts-basicservices-base-callback-i.md) |
 | [ErrorCallback(公共回调信息)](arkts-basicservices-base-errorcallback-i.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [AsyncCallback(公共回调信息)](arkts-basicservices-asynccallback-t.md) |
-| [Callback(公共回调信息)](arkts-basicservices-callback-t.md) |
-| [ErrorCallback(公共回调信息)](arkts-basicservices-errorcallback-t.md) |
-| [RecordData(公共回调信息)](arkts-basicservices-recorddata-t.md) |

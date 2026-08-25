@@ -4,8 +4,6 @@ Enumerates the types of user authentication supported by an asset.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Security.Asset
 
 ## PRIVATE_PIN
@@ -17,8 +15,6 @@ PRIVATE_PIN = 0x100
 Private PIN type, supports only system applications.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Asset
 

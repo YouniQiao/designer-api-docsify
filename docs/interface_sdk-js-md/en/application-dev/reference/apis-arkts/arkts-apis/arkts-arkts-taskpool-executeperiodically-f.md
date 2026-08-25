@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## executePeriodically
@@ -15,8 +15,6 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 Executes a task periodically. In this execution mode, you can set the task priority and call **cancel()** to cancel the execution. A periodic task cannot be a task in a task group, serial queue, or asynchronous queue. It cannot call **execute()** again or have a dependency relationship.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,86 +38,6 @@ Executes a task periodically. In this execution mode, you can set the task prior
 | [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
 | [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
 
-**Examples**
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): void {
-  console.info("printArgs: " + args);
-}
-
-@Concurrent
-function testExecutePeriodically(args: number): void {
-  let t = Date.now();
-  while ((Date.now() - t) < args) {
-    continue;
-  }
-  taskpool.Task.sendData(args); // Send a message to the host thread.
-}
-
-function printResult(data: number): void {
-  console.info("taskpool: data is: " + data);
-}
-
-function taskpoolTest() {
-  try {
-    let task: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-    taskpool.executePeriodically(1000, task); // 1000: period is 1000ms
-  } catch (e) {
-    console.error(`taskpool execute-1: Code: ${e.code}, message: ${e.message}`);
-  }
-
-  try {
-    let periodicTask: taskpool.Task = new taskpool.Task(testExecutePeriodically, 200); // 200: test number
-    periodicTask.onReceiveData(printResult);
-    taskpool.executePeriodically(1000, periodicTask); // 1000: period is 1000ms
-  } catch (e) {
-    console.error(`taskpool execute-2: Code: ${e.code}, message: ${e.message}`);
-  }
-}
-
-taskpoolTest();
-```
-
-```TypeScript
-@Concurrent
-function printArgs(args: number): void {
-  console.info("printArgs: " + args);
-}
-
-@Concurrent
-function testExecutePeriodically(args: number): void {
-  let t = Date.now();
-  while ((Date.now() - t) < args) {
-    continue;
-  }
-  taskpool.Task.sendData(args); // Send a message to the host thread.
-}
-
-function printResult(data: number): void {
-  console.info("taskpool: data is: " + data);
-}
-
-function taskpoolTest() {
-  try {
-    let task: taskpool.Task = new taskpool.GenericsTask<[number], void>(printArgs, 100); // 100: test number
-    taskpool.executePeriodically<[number], void>(1000, task); // 1000: period is 1000ms
-  } catch (e) {
-    console.error(`taskpool execute-1: Code: ${e.code}, message: ${e.message}`);
-  }
-
-  try {
-    let periodicTask: taskpool.Task = new taskpool.GenericsTask<[number], void>(testExecutePeriodically, 200); // 200: test number
-    periodicTask.onReceiveData(printResult);
-    taskpool.executePeriodically<[number], void>(1000, periodicTask); // 1000: period is 1000ms
-  } catch (e) {
-    console.error(`taskpool execute-2: Code: ${e.code}, message: ${e.message}`);
-  }
-}
-
-taskpoolTest();
-```
-
 
 ## executePeriodically
 
@@ -130,8 +48,6 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 Executes a generic task periodically, without verifying the parameter type and return value type of the task. The verification of the **executePeriodically** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -154,7 +70,3 @@ Executes a generic task periodically, without verifying the parameter type and r
 | [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
 | [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
 | [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-
-**Examples**
-
-See [executePeriodically](#executeperiodically)

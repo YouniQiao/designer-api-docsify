@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hardwareManager } from '@kit.DistributedServiceKit';
+import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## pauseDistributedHardware
@@ -15,8 +15,6 @@ function pauseDistributedHardware(description: HardwareDescriptor): Promise<void
 暂停被控端分布式硬件业务。使用promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
@@ -45,25 +43,3 @@ function pauseDistributedHardware(description: HardwareDescriptor): Promise<void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | 24200101 |
 | 24200102 |
-
-**示例**
-
-```TypeScript
-import { hardwareManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let description: hardwareManager.HardwareDescriptor = {
-    type: 1, // 分布式硬件类型，1表示相机
-    srcNetworkId: '1111' // 源端设备网络ID
-  };
-  hardwareManager.pauseDistributedHardware(description).then(() => { // 暂停分布式硬件业务
-    console.info('pause distributed hardware successfully');
-  }).catch((error: BusinessError) => {
-    console.error(`pause distributed hardware failed, cause: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  const err: BusinessError = error as BusinessError;
-  console.error(`pause distributed hardware failed, code: ${err.code}, message: ${err.message}`);
-}
-```

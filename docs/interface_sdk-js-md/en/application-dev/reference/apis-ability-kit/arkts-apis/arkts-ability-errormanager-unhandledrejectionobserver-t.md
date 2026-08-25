@@ -8,8 +8,6 @@ Defines an observer to capture the cause of a rejected promise.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 24.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

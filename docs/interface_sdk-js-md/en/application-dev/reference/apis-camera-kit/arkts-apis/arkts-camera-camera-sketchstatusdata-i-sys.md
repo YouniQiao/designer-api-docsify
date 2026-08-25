@@ -4,8 +4,6 @@ Defines the PiP status data.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the PiP status data.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## centerPointOffset
@@ -28,8 +26,6 @@ Offset of PiP.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Offset of PiP.
 ## sketchRatio
 
 ```TypeScript
-sketchRatio: double
+sketchRatio: number
 ```
 
 Zoom ratio of PiP.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -55,16 +49,14 @@ Zoom ratio of PiP.
 ## status
 
 ```TypeScript
-status: int
+status: number
 ```
 
 Status of PiP. The options are 0 (stopped), 1 (started), 2 (stopping), and 3 (starting).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

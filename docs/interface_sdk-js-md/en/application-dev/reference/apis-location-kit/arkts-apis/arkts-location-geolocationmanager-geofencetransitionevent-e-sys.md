@@ -4,8 +4,6 @@ Enum for geofence transition status.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE
@@ -17,8 +15,6 @@ GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8
 The device is approaching the geofence.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ The device is leaving the geofence.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Geofence
@@ -50,11 +44,9 @@ The device is leaving the geofence.
 GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32
 ```
 
-The device is approaching the fence from the outside and already very near to it for long time.
+The device is approaching the fence from the outside and already very near to it for number time.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

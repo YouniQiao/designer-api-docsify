@@ -6,108 +6,94 @@ Describes the uncalibrated acceleration sensor data. It extends from [Response](
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## biasX
 
 ```TypeScript
-biasX: double
+biasX: number
 ```
 
 Uncalibrated acceleration bias along the x-axis of the device, in m/s?.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## biasY
 
 ```TypeScript
-biasY: double
+biasY: number
 ```
 
 Uncalibrated acceleration bias along the y-axis of the device, in m/s?.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## biasZ
 
 ```TypeScript
-biasZ: double
+biasZ: number
 ```
 
 Uncalibrated acceleration bias along the z-axis of the device, in m/s?.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
 Uncalibrated acceleration along the x-axis of the device, in m/s?.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
 Uncalibrated acceleration along the y-axis of the device, in m/s?.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
 Uncalibrated acceleration along the z-axis of the device, in m/s?.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor

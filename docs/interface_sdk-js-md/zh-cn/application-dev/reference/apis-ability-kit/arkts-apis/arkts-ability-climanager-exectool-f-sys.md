@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## execTool
@@ -16,8 +16,6 @@ function execTool(toolName: string, subCommand: string, args: Record<string, Obj
 执行CLI命令
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.EXEC_CLI_TOOL
 

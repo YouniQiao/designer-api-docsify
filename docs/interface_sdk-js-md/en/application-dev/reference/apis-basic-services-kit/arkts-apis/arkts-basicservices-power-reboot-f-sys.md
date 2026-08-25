@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## reboot
@@ -15,8 +15,6 @@ function reboot(reason: string): void
 Reboots a device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REBOOT
 
@@ -38,13 +36,3 @@ Reboots a device.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [4900101](../errorcode-power.md#4900101-service-connection-failure) |
-
-**Examples**
-
-```TypeScript
-try {
-    power.reboot('reboot_test');
-} catch(err) {
-    console.error('reboot failed, err: ' + err);
-}
-```

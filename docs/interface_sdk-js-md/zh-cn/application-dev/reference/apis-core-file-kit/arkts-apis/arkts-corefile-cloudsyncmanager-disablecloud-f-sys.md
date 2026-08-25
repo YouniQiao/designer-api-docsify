@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## disableCloud
@@ -15,8 +15,6 @@ function disableCloud(accountId: string): Promise<void>
 异步方法去使能端云协同能力。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -44,64 +42,6 @@ function disableCloud(accountId: string): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId).then(() => {
-  console.info("disableCloud successfully");
-}).catch((err: BusinessError) => {
-  console.error(`disableCloud failed with error message: ${err.message}, error code: ${err.code}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId).then<void>((): void => {
-  console.info("disableCloud successfully");
-}).catch((err: BusinessError<void>): void => {
-  console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId, (err: BusinessError) => {
-  if (err) {
-    console.error(`disableCloud failed with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    console.info("disableCloud successfully");
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId, (err: BusinessError<void> | null): void => {
-  if (err && err.code) {
-    console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("disableCloud successfully");
-  }
-});
-```
-
 
 ## disableCloud
 
@@ -112,8 +52,6 @@ function disableCloud(accountId: string, callback: AsyncCallback<void>): void
 异步方法去使能端云协同能力。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -135,7 +73,3 @@ function disableCloud(accountId: string, callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [disableCloud](#disablecloud)

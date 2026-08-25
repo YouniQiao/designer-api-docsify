@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [SlotType](arkts-notification-notificationmanager-slottype-e.md)
@@ -21,8 +19,6 @@ UNKNOWN_TYPE = 0
 未知类型。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ SOCIAL_COMMUNICATION = 1
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#social_communication)
@@ -57,8 +51,6 @@ SERVICE_INFORMATION = 2
 服务类型。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -76,8 +68,6 @@ CONTENT_INFORMATION = 3
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [CONTENT_INFORMATION](arkts-notification-notificationmanager-slottype-e.md#content_information)
@@ -93,8 +83,6 @@ OTHER_TYPES = 0xFFFF
 其他类型。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getLockState
 
 ```TypeScript
-function getLockState(slotId: int, lockType: LockType, callback: AsyncCallback<LockState>): void
+function getLockState(slotId: number, lockType: LockType, callback: AsyncCallback<LockState>): void
 ```
 
 Get the lock status of the SIM card in the specified slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Get the lock status of the SIM card in the specified slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | lockType | [LockType](arkts-telephony-sim-locktype-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockState](arkts-telephony-sim-lockstate-e-sys.md)&gt; | 是 |
 
@@ -46,40 +44,16 @@ Get the lock status of the SIM card in the specified slot.
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 | [8301002](../errorcode-telephony.md#8301002-sim卡读取数据或者更新数据失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getLockState(0, 1, (err: BusinessError, data: sim.LockState) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getLockState(0, 1).then((data: sim.LockState) => {
-    console.info(`getLockState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getLockState failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getLockState
 
 ```TypeScript
-function getLockState(slotId: int, lockType: LockType): Promise<LockState>
+function getLockState(slotId: number, lockType: LockType): Promise<LockState>
 ```
 
 Get the lock status of the SIM card in the specified slot.
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -91,7 +65,7 @@ Get the lock status of the SIM card in the specified slot.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | lockType | [LockType](arkts-telephony-sim-locktype-e-sys.md) | 是 |
 
 **返回值：**
@@ -113,7 +87,3 @@ Get the lock status of the SIM card in the specified slot.
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 | [8301002](../errorcode-telephony.md#8301002-sim卡读取数据或者更新数据失败) |
-
-**示例**
-
-参见 [getLockState](#getlockstate)

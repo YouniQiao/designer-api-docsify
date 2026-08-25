@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
+import { particleAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## disconnectAbility
@@ -16,8 +16,6 @@ function disconnectAbility(connection: number, callback: AsyncCallback<void>): v
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -29,65 +27,6 @@ function disconnectAbility(connection: number, callback: AsyncCallback<void>): v
 | [connection](../../apis-network-kit/arkts-apis/arkts-net-connection.md) | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-
-let connId = particleAbility.connectAbility(
-  {
-    bundleName: 'com.ix.ServiceAbility',
-    abilityName: 'ServiceAbilityA',
-  },
-  {
-    onConnect: (element, remote) => {
-      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
-    },
-    onDisconnect: (element) => {
-      console.info(`ConnectAbility onDisconnect element.deviceId: ${element.deviceId}`);
-    },
-    onFailed: (code) => {
-      console.error(`particleAbilityTest ConnectAbility onFailed errCode: ${code}`);
-    },
-  },
-);
-
-particleAbility.disconnectAbility(connId, (err) => {
-  console.error(`particleAbilityTest disconnectAbility err: ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let connId = particleAbility.connectAbility(
-  {
-    bundleName: 'com.ix.ServiceAbility',
-    abilityName: 'ServiceAbilityA',
-  },
-  {
-    onConnect: (element, remote) => {
-      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
-    },
-    onDisconnect: (element) => {
-      console.info(`ConnectAbility onDisconnect element.deviceId: ${element.deviceId}`);
-    },
-    onFailed: (code) => {
-      console.error(`particleAbilityTest ConnectAbility onFailed errCode: ${code}`);
-    },
-  },
-);
-
-particleAbility.disconnectAbility(connId).then(() => {
-  console.info('disconnectAbility success');
-}).catch((error: BusinessError) => {
-  console.error(`particleAbilityTest result errCode : ${error.code}`);
-});
-```
-
 
 ## disconnectAbility
 
@@ -98,8 +37,6 @@ function disconnectAbility(connection: number): Promise<void>
 断开当前ability与指定ServiceAbility的连接。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -116,7 +53,3 @@ function disconnectAbility(connection: number): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [disconnectAbility](#disconnectability)

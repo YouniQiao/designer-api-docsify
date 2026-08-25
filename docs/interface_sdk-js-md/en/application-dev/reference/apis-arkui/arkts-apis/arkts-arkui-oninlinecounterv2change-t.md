@@ -1,14 +1,12 @@
 # OnInlineCounterV2Change
 
 ```TypeScript
-export type OnInlineCounterV2Change = (value: int) => void
+export type OnInlineCounterV2Change = (value: number) => void
 ```
 
 The change callback of the inline CounterV2.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

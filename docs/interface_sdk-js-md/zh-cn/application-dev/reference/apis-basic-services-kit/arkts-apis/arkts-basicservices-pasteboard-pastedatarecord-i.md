@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## addEntry
@@ -23,8 +21,6 @@ addEntry(type: string, value: ValueType): void
 往一个PasteDataRecord中额外添加一种样式的数据。此方式添加的MIME类型都不是Record的默认类型， 粘贴时只能使用[getData](#getdata)接口读取对应数据。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -41,15 +37,6 @@ addEntry(type: string, value: ValueType): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
-```
-
 ## convertToText
 
 ```TypeScript
@@ -59,8 +46,6 @@ convertToText(callback: AsyncCallback<string>): void
 将一个PasteData中的内容强制转换为文本内容，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -80,32 +65,6 @@ convertToText(callback: AsyncCallback<string>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
-record.convertToText((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`Failed to convert to text. Cause: ${err.message}`);
-        return;
-    }
-    console.info(`Succeeded in converting to text. Data: ${data}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
-record.convertToText().then((data: string) => {
-    console.info(`Succeeded in converting to text. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to convert to text. Cause: ${err.message}`);
-});
-```
-
 ## convertToText
 
 ```TypeScript
@@ -115,8 +74,6 @@ convertToText(): Promise<string>
 将一个PasteData中的内容强制转换为文本内容，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -130,10 +87,6 @@ convertToText(): Promise<string>
 | --- |
 | Promise & lt;string & gt; |
 
-**示例**
-
-参见 [convertToText](#converttotext)
-
 ## getData
 
 ```TypeScript
@@ -143,8 +96,6 @@ getData(type: string): Promise<ValueType>
 从PasteDataRecord中获取指定MIME类型的自定义数据，使用Promise异步回调。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -166,78 +117,6 @@ getData(type: string): Promise<ValueType>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
-record.getData(pasteboard.MIMETYPE_TEXT_PLAIN).then((value: pasteboard.ValueType) => {
-    let textPlainContent = value as string;
-    console.info('Success to get text/plain value. value is: ' + textPlainContent);
-}).catch((err: BusinessError) => {
-    console.error('Failed to get text/plain value. Cause: ' + err.message);
-});
-record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) => {
-    let uri = value as string;
-    console.info('Success to get text/uri value. value is: ' + uri);
-}).catch((err: BusinessError) => {
-    console.error('Failed to get text/uri value. Cause: ' + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
-record.getData(pasteboard.MIMETYPE_TEXT_PLAIN).then((value: pasteboard.ValueType) => {
-    let textPlainContent = value as string;
-    console.info('Success to get text/plain value. value is: ' + textPlainContent);
-}).catch((err: BusinessError): void => {
-    console.error('Failed to get text/plain value. Cause: ' + err.message);
-});
-record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) => {
-    let uri = value as string;
-    console.info('Success to get text/uri value. value is: ' + uri);
-}).catch((err: BusinessError): void => {
-    console.error('Failed to get text/uri value. Cause: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
-    if (err) {
-        console.error('Failed to get PasteData. Cause: ' + err.message);
-        return;
-    }
-    let text: string = pasteData.getPrimaryText();
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
-    let text: string = pasteData.getPrimaryText();
-}).catch((err: BusinessError) => {
-    console.error('Failed to get PasteData. Cause: ' + err.message);
-});
-```
-
 ## getValidTypes
 
 ```TypeScript
@@ -247,8 +126,6 @@ getValidTypes(types: Array<string>): Array<string>
 根据传入的MIME类型，返回传入的MIME类型和剪贴板中数据的MIME类型的交集。在粘贴前，检查剪贴板数据是否包含应用支持的格式。 例如，若应用仅支持纯文本和HTML格式，可调用此接口检查剪贴板数据是否包含这些格式，并根据返回结果决定是否执行粘贴操作。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -270,22 +147,6 @@ getValidTypes(types: Array<string>): Array<string>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
-let types: string[] = record.getValidTypes([
-    pasteboard.MIMETYPE_TEXT_PLAIN,
-    pasteboard.MIMETYPE_TEXT_HTML,
-    pasteboard.MIMETYPE_TEXT_URI,
-    pasteboard.MIMETYPE_TEXT_WANT,
-    pasteboard.MIMETYPE_PIXELMAP
-]);
-```
-
 ## toPlainText
 
 ```TypeScript
@@ -296,8 +157,6 @@ toPlainText(): string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -307,14 +166,6 @@ toPlainText(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_HTML, '<html>hello</html>');
-let text: string = record.toPlainText();
-console.info(`Succeeded in converting to text. Text: ${text}`);
-```
 
 ## data
 
@@ -327,8 +178,6 @@ data: Record<string, ArrayBuffer>
 **类型：** Record&lt;string, ArrayBuffer&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -346,8 +195,6 @@ HTML内容，需符合标准HTML格式。 对此属性的修改无效，如需�
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -363,8 +210,6 @@ mimeType: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -382,8 +227,6 @@ PixelMap内容。对此属性的修改无效，如需刷新属性值，请使用
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -399,8 +242,6 @@ plainText: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -418,8 +259,6 @@ URI内容，需符合标准URI格式。对此属性的修改无效，如需刷�
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -435,8 +274,6 @@ Want内容。对此属性的修改无效，如需刷新属性值，请使用[add
 **类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

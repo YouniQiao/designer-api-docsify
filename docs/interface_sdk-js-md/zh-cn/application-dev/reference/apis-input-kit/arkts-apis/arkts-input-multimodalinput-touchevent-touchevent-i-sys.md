@@ -6,14 +6,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
 
 ```TypeScript
-import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from 'kits/@kit.InputKit';
 ```
 
 ## fixedMode
@@ -27,8 +25,6 @@ fixedMode?: FixedMode
 **类型：** [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -45,8 +41,6 @@ isInject?: boolean
 **类型：** boolean
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

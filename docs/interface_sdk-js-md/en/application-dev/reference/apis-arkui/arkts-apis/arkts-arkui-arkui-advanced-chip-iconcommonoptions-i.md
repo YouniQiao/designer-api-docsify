@@ -7,14 +7,12 @@ Defines the common icon options of the chip.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
+import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## activatedFillColor
@@ -25,11 +23,9 @@ activatedFillColor?: ResourceColor
 
 Icon fill color when the chip is activated.Default value: **\$r('sys.color.chip_active_icon_color')**If the value is **undefined**, the default value is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,11 +41,9 @@ fillColor?: ResourceColor
 
 Icon fill color.Default value: **\$r('sys.color.chip_usually_icon_color')**If the value is **undefined**, the default value is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,14 +58,14 @@ size?: SizeOptions
 ```
 
 Icon size. This parameter cannot be set in percentage.Default value:  
-- When **ChipSize.SMALL** is used: **{width: \$r('sys.float.chip_small_icon_size'), height: \$r('sys.float.chip_small_icon_size')}**. - When **ChipSize.NORMAL** is used: **{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}**.  
-Unit: vp.If the value is **undefined**, the default value is used.
+- When **ChipSize.SMALL** is used:  
+**{width: \$r('sys.float.chip_small_icon_size'), height: \$r('sys.float.chip_small_icon_size')}**.  
+- When **ChipSize.NORMAL** is used:  
+**{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}**.Unit: vp.If the value is **undefined**, the default value is used.
 
-**Type:** SizeOptions
+**Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,11 +81,9 @@ src: ResourceStr
 
 Icon source, which can be a specific image path or an image reference.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

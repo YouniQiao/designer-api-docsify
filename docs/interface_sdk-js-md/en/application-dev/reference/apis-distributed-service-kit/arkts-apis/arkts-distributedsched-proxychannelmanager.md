@@ -13,8 +13,6 @@
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -22,7 +20,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## Summary
@@ -34,12 +32,8 @@ import { proxyChannelManager } from '@kit.DistributedServiceKit';
 | [closeProxyChannel(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md) |
 | [off(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-off-f.md#offreceivedata) |
 | [off(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-off-f.md#offchannelstatechange) |
-| [offChannelStateChange(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-offchannelstatechange-f.md) |
-| [offReceiveData(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-offreceivedata-f.md) |
 | [on(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-on-f.md#onreceivedata) |
 | [on(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-on-f.md#onchannelstatechange) |
-| [onChannelStateChange(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-onchannelstatechange-f.md) |
-| [onReceiveData(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-onreceivedata-f.md) |
 | [openProxyChannel(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md) |
 | [sendData(Proxy Channel Management)](arkts-distributedservice-proxychannelmanager-senddata-f.md) |
 

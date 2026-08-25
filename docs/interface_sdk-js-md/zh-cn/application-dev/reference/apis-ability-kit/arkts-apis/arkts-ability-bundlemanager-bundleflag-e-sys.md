@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 ## GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY
@@ -18,8 +16,6 @@ GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
 **系统API：** 该标记仅支持在系统API中使用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -36,8 +32,6 @@ GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -53,8 +47,6 @@ GET_BUNDLE_INFO_EXCLUDE_CLONE = 0x00004000
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
 **系统接口：** 此接口为系统接口。
@@ -69,8 +61,6 @@ GET_BUNDLE_INFO_WITH_CLOUD_KIT = 0x00008000
 **系统API：** 该标记仅支持在系统API中使用。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

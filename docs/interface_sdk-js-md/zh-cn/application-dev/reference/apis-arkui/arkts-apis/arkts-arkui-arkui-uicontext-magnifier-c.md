@@ -8,17 +8,15 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## bind
@@ -34,8 +32,6 @@ bind(id: string): void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -47,49 +43,6 @@ bind(id: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | id | string | 是 |
-
-**示例**
-
-该示例通过监听onTouch事件控制放大镜对图片进行放大显示。
-
-```TypeScript
-import { Magnifier } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct MagnifierExample {
-  private magnifier: Magnifier = this.getUIContext().getMagnifier();
-
-  build() {
-    Column() {
-      // $r('app.media.startIcon')需要替换为开发者所需的图像资源文件。
-      Image($r('app.media.startIcon'))
-        .draggable(false)
-        .width(200)
-        .height(200)
-        .margin(50)
-        .id('image')
-        .onTouch((event: TouchEvent) => {
-          if (event && event.sourceTool === SourceTool.Finger) {
-            if (event.type === TouchType.Down) {
-              this.magnifier.bind('image');
-            } else if (event.type === TouchType.Move) {
-              let touchX = event.touches[0].x;
-              let touchY = event.touches[0].y;
-              this.magnifier.show(touchX, touchY);
-            } else if (event.type === TouchType.Up) {
-              this.magnifier.unbind();
-            } else if (event.type === TouchType.Cancel) {
-              this.magnifier.unbind();
-            }
-          }
-        })
-    }
-  }
-}
-```
-
-请参考[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
 
 ## show
 
@@ -106,8 +59,6 @@ show(x: number, y: number): void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -121,12 +72,6 @@ show(x: number, y: number): void
 | x | number | 是 |
 | y | number | 是 |
 
-**示例**
-
-请参考[bind](#bind)示例。
-
-请参考[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
-
 ## unbind
 
 ```TypeScript
@@ -137,16 +82,8 @@ unbind(): void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-请参考[bind](#bind)示例。
-
-请参考[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。

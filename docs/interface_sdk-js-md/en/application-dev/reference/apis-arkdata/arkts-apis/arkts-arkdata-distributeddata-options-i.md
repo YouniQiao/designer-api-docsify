@@ -4,8 +4,6 @@ Provides KV store configuration.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** Options
@@ -29,8 +27,6 @@ Whether to automatically synchronize database files. The default value is **fals
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** autoSync
@@ -51,8 +47,6 @@ Whether to back up the KV store. The default value is **true**, which means to b
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** backup
@@ -70,8 +64,6 @@ Whether to create a KV store if the database file does not exist. The default va
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -91,8 +83,6 @@ Whether to encrypt the KV store. The default value is **false**, which means the
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** encrypt
@@ -110,8 +100,6 @@ Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, w
 **Type:** KVStoreType
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -131,8 +119,6 @@ Schema that defines the values stored in the KV store. The default value is **un
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** schema
@@ -150,8 +136,6 @@ Security level (S1 to S4) of the KV store.
 **Type:** SecurityLevel
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

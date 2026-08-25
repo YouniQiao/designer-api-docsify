@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceControl } from '@kit.MDMKit';
+import { deviceControl } from 'kits/@kit.MDMKit';
 ```
 
 ## shutdown
@@ -15,8 +15,6 @@ function shutdown(admin: Want): void
 Shuts down the device.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -45,22 +43,3 @@ Shuts down the device.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { deviceControl } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  deviceControl.shutdown(wantTemp);
-} catch (err) {
-  console.error(`Failed to shutdown device. Code is ${err.code}, message is ${err.message}`);
-}
-```

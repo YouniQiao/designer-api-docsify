@@ -8,8 +8,6 @@ Defines the keyword of the authentication event type. It is used as a parameter 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core

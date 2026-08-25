@@ -4,14 +4,12 @@ Provides methods for managing device standby, including the methods for querying
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from '@kit.BackgroundTasksKit';
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## Summary

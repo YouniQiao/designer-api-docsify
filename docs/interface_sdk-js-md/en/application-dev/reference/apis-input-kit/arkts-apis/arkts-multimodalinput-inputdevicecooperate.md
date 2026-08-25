@@ -4,8 +4,6 @@ The **inputDeviceCooperate** module implements screen hopping for two or more ne
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Substitutes:** [cooperate/cooperate](../../apis-distributed-service-kit/arkts-apis/arkts-cooperate.md)
@@ -15,7 +13,7 @@ The **inputDeviceCooperate** module implements screen hopping for two or more ne
 ## Modules to Import
 
 ```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
@@ -29,8 +27,8 @@ import { inputDeviceCooperate } from '@kit.InputKit';
 | [enable(Screen Hopping)](arkts-input-inputdevicecooperate-enable-f-sys.md) |
 | [getState(Screen Hopping)](arkts-input-inputdevicecooperate-getstate-f-sys.md) |
 | [getState(Screen Hopping)](arkts-input-inputdevicecooperate-getstate-f-sys.md) |
-| [off(Screen Hopping)](arkts-input-inputdevicecooperate-off-f-sys.md#offcooperation) |
-| [on(Screen Hopping)](arkts-input-inputdevicecooperate-on-f-sys.md#oncooperation) |
+| off(Screen Hopping) |
+| on(Screen Hopping) |
 | [start(Screen Hopping)](arkts-input-inputdevicecooperate-start-f-sys.md) |
 | [start(Screen Hopping)](arkts-input-inputdevicecooperate-start-f-sys.md) |
 | [stop(Screen Hopping)](arkts-input-inputdevicecooperate-stop-f-sys.md) |

@@ -1,12 +1,10 @@
 # ToggleConfiguration
 
-You need a custom class to implement the **ContentModifier** API. This API inherits from CommonConfiguration.
+You need a custom class to implement the **ContentModifier** API. This API inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,8 +26,6 @@ Whether the toggle is enabled for state switching.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -49,8 +45,6 @@ Whether the toggle is turned on.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -69,8 +63,6 @@ Callback invoked when the toggle's state changes.
 **Type:** Callback&lt;boolean&gt;
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

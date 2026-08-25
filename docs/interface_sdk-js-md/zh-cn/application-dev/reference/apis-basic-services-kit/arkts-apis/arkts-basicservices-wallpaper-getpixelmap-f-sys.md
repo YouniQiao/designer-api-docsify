@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getPixelMap
@@ -18,8 +18,6 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 > 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -36,32 +34,6 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError, data: image.PixelMap) => {
-  if (error) {
-    console.error(`Failed to getPixelMap. Code: ${error.code}, message: ${error.message}`);
-    return;
-  }
-  console.info(`success to getPixelMap: ${JSON.stringify(data.getImageInfoSync())}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: image.PixelMap) => {
-  console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to getPixelMap. Code: ${error.code}, Message: ${error.message}`);
-});
-```
-
 
 ## getPixelMap
 
@@ -75,8 +47,6 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 > 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -97,7 +67,3 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 | 类型 |
 | --- |
 | Promise & lt;image.PixelMap & gt; |
-
-**示例**
-
-参见 [getPixelMap](#getpixelmap)

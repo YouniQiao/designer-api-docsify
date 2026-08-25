@@ -1,10 +1,9 @@
 # RequestKeyboardReason
 
-枚举，请求键盘输入的原因。 <br> | 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | NONE | 0 | 表示没有特定的原因触发键盘请求。 | | MOUSE | 1 | 表示键盘请求是由鼠标操作触发的。 | | TOUCH | 2 | 表示键盘请求是由触摸操作触发的。 | | OTHER | 20 | 表示键盘请求是由其他原因触发的。 |
+枚举，请求键盘输入的原因。   
+| 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | [NONE](#none) | 0 | 表示没有特定的原因触发键盘请求。 | | [MOUSE](#mouse) | 1 | 表示键盘请求是由鼠标操作触发的。 | | [TOUCH](#touch) | 2 | 表示键盘请求是由触摸操作触发的。 | | [OTHER](#other) | 20 |
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -18,8 +17,6 @@ NONE = 0
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## MOUSE
@@ -31,8 +28,6 @@ MOUSE = 1
 表示键盘请求是由鼠标操作触发的。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -46,8 +41,6 @@ TOUCH = 2
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## OTHER
@@ -59,7 +52,5 @@ OTHER = 20
 表示键盘请求是由其他原因触发的。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

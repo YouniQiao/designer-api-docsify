@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## off("formUninstall")
@@ -18,8 +18,6 @@ function off(type: "formUninstall", callback?: Callback<string>): void
 > 卡片卸载与卡片移除不同。当应用卸载时，对应的卡片会自动卸载。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -50,8 +48,6 @@ function off(type: 'formOverflow', callback?: Callback<formInfo.OverflowRequest>
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -69,21 +65,6 @@ function off(type: 'formOverflow', callback?: Callback<formInfo.OverflowRequest>
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.off('formOverflow', (request: formInfo.OverflowRequest) => {
-    console.info(`formHost off formOverflow, formId is ${request.formId}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## off('changeSceneAnimationState')
 
@@ -95,8 +76,6 @@ function off(type: 'changeSceneAnimationState',
 取消订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用 callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -115,21 +94,6 @@ function off(type: 'changeSceneAnimationState',
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.off('changeSceneAnimationState', (request: formInfo.ChangeSceneAnimationStateRequest): void => {
-    console.info(`formHost off changeSceneAnimationState, formId is ${request.formId}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## off('getFormRect')
 
@@ -140,8 +104,6 @@ function off(type: 'getFormRect', callback?: formInfo.GetFormRectInfoCallback): 
 取消订阅卡片位置尺寸查询请求事件。使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -160,19 +122,6 @@ function off(type: 'getFormRect', callback?: formInfo.GetFormRectInfoCallback): 
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.off('getFormRect');
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## off('getLiveFormStatus')
 
@@ -184,8 +133,6 @@ function off(type: 'getLiveFormStatus',
 Cancels Listening to the event of get live form status.
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Ability.Form
 

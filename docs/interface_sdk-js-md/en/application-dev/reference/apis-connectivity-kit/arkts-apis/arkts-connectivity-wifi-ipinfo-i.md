@@ -4,8 +4,6 @@ Wi-Fi IP information.@interface IpInfo
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md)
@@ -15,7 +13,7 @@ Wi-Fi IP information.@interface IpInfo
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## gateway
@@ -29,8 +27,6 @@ The gateway of the Wi-Fi connection
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ The IP address of the Wi-Fi connection
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ipAddress](arkts-connectivity-wifimanager-ipinfo-i.md#ipaddress)
@@ -69,8 +63,6 @@ The IP address lease duration of the Wi-Fi connection
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ The network mask of the Wi-Fi connection
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [netmask](arkts-connectivity-wifimanager-ipinfo-i.md#netmask)
@@ -109,8 +99,6 @@ The primary DNS server IP address of the Wi-Fi connection
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ T he secondary DNS server IP address of the Wi-Fi connection
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [secondDns](arkts-connectivity-wifimanager-ipinfo-i.md#seconddns)
@@ -149,8 +135,6 @@ The DHCP server IP address of the Wi-Fi connection
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

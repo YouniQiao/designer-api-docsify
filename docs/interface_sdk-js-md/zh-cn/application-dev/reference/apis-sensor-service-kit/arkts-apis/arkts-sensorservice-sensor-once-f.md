@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## once
@@ -15,8 +15,6 @@ function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResp
 获取一次加速度传感器数据。适用于无需持续监听、仅需一次性获取当前加速度数据的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -37,25 +35,6 @@ function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResp
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.ACCELEROMETER, (data: sensor.AccelerometerResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -66,8 +45,6 @@ function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<Acce
 获取一次未校准加速度传感器数据。适用于仅需一次性获取原始加速度及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -88,28 +65,6 @@ function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<Acce
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, (data: sensor.AccelerometerUncalibratedResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
-    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
-    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -120,8 +75,6 @@ function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): 
 获取一次环境光传感器数据。适用于仅需一次性获取当前环境光强度的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -139,23 +92,6 @@ function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.AMBIENT_LIGHT, (data: sensor.LightResponse) => {
-    console.info('Succeeded in invoking once. the ambient light intensity: ' + data.intensity);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -166,8 +102,6 @@ function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemp
 获取一次温度传感器数据。适用于仅需一次性获取当前环境温度的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -185,23 +119,6 @@ function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemp
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.AMBIENT_TEMPERATURE, (data: sensor.AmbientTemperatureResponse) => {
-    console.info('Succeeded in invoking once. Temperature: ' + data.temperature);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -212,8 +129,6 @@ function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): 
 获取一次气压计传感器数据。适用于仅需一次性获取当前气压值的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -231,23 +146,6 @@ function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.BAROMETER, (data: sensor.BarometerResponse) => {
-    console.info('Succeeded in invoking once. Atmospheric pressure: ' + data.pressure);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -258,8 +156,6 @@ function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void
 获取一次重力传感器数据。适用于仅需一次性获取当前重力分量的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -277,25 +173,6 @@ function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.GRAVITY, (data: sensor.GravityResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -306,8 +183,6 @@ function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): 
 获取一次陀螺仪传感器数据。适用于仅需一次性获取当前旋转角速度的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -328,25 +203,6 @@ function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.GYROSCOPE, (data: sensor.GyroscopeResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -357,8 +213,6 @@ function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<Gyroscop
 获取一次未校准陀螺仪传感器数据。适用于仅需一次性获取原始角速度及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -379,28 +233,6 @@ function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<Gyroscop
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.GYROSCOPE_UNCALIBRATED, (data: sensor.GyroscopeUncalibratedResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
-    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
-    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -411,8 +243,6 @@ function once(type: SensorId.HALL, callback: Callback<HallResponse>): void
 获取一次霍尔传感器数据。适用于仅需一次性检测当前霍尔状态的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -430,23 +260,6 @@ function once(type: SensorId.HALL, callback: Callback<HallResponse>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.HALL, (data: sensor.HallResponse) => {
-    console.info('Succeeded in invoking once. Status: ' + data.status);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -457,8 +270,6 @@ function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>):
 获取一次心率传感器数据。适用于仅需一次性获取当前心率值的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -479,23 +290,6 @@ function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>):
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.HEART_RATE, (data: sensor.HeartRateResponse) => {
-    console.info('Succeeded in invoking once. Heart rate: ' + data.heartRate);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -506,8 +300,6 @@ function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): vo
 获取一次湿度传感器数据。适用于仅需一次性获取当前环境湿度的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -525,23 +317,6 @@ function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): vo
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.HUMIDITY, (data: sensor.HumidityResponse) => {
-    console.info('Succeeded in invoking once. Humidity: ' + data.humidity);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -552,8 +327,6 @@ function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAcce
 获取一次线性加速度传感器数据。适用于仅需一次性获取当前线性加速度（不含重力分量）的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -574,25 +347,6 @@ function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAcce
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.LINEAR_ACCELEROMETER, (data: sensor.LinearAccelerometerResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -603,8 +357,6 @@ function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldRes
 获取一次磁场传感器数据。适用于仅需一次性获取当前磁场分量的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -622,25 +374,6 @@ function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldRes
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.MAGNETIC_FIELD, (data: sensor.MagneticFieldResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -651,8 +384,6 @@ function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<Mag
 获取一次未经校准的磁场传感器数据。适用于仅需一次性获取原始磁场及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -670,28 +401,6 @@ function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<Mag
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, (data: sensor.MagneticFieldUncalibratedResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
-    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
-    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -702,8 +411,6 @@ function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse
 获取一次方向传感器数据。适用于仅需一次性获取当前设备方向的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -721,25 +428,6 @@ function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.ORIENTATION, (data: sensor.OrientationResponse) => {
-    console.info('Succeeded in the device rotating at an angle around the X axis: ' + data.beta);
-    console.info('Succeeded in the device rotating at an angle around the Y axis: ' + data.gamma);
-    console.info('Succeeded in the device rotating at an angle around the Z axis: ' + data.alpha);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -753,8 +441,6 @@ function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): 
 > 计步器传感器数据仅在设备重启时清零，不会每天清零，重启前上报的步数数据为累加值。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -775,23 +461,6 @@ function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.PEDOMETER, (data: sensor.PedometerResponse) => {
-    console.info('Succeeded in invoking once. Step count: ' + data.steps);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -802,8 +471,6 @@ function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDe
 获取一次计步检测器传感器数据。适用于仅需一次性检测计步事件的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -824,23 +491,6 @@ function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDe
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.PEDOMETER_DETECTION, (data: sensor.PedometerDetectionResponse) => {
-    console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -851,8 +501,6 @@ function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): 
 获取一次接近光传感器数据。适用于仅需一次性检测当前接近状态的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -870,23 +518,6 @@ function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.PROXIMITY, (data: sensor.ProximityResponse) => {
-    console.info('Succeeded in invoking once. Distance: ' + data.distance);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -897,8 +528,6 @@ function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorR
 获取一次旋转矢量传感器数据。适用于仅需一次性获取当前设备姿态的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -916,26 +545,6 @@ function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorR
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.ROTATION_VECTOR, (data: sensor.RotationVectorResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-    console.info('Succeeded in invoking once. Scalar quantity: ' + data.w);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -946,8 +555,6 @@ function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantM
 获取一次有效运动传感器数据。适用于仅需一次性检测有效运动的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -965,23 +572,6 @@ function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantM
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.SIGNIFICANT_MOTION, (data: sensor.SignificantMotionResponse) => {
-    console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -992,8 +582,6 @@ function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionRes
 获取一次佩戴检测传感器数据。适用于仅需一次性检测佩戴状态的场景。调用后，callback仅触发一次，自动取消订阅。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -1011,23 +599,6 @@ function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionRes
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.WEAR_DETECTION, (data: sensor.WearDetectionResponse) => {
-    console.info('Succeeded in invoking once. Wear status: ' + data.value);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -1043,8 +614,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1077,8 +646,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callba
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;)
@@ -1110,8 +677,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;)
@@ -1140,8 +705,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Cal
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1172,8 +735,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Baro
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;)
@@ -1203,8 +764,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<Gravit
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;)
@@ -1233,8 +792,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyro
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1267,8 +824,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: 
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;)
@@ -1300,8 +855,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespo
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;)
@@ -1330,8 +883,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Hea
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1364,8 +915,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humid
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)
@@ -1394,8 +943,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Cal
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1428,8 +975,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;)
@@ -1458,8 +1003,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callb
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1490,8 +1033,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Or
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;)
@@ -1520,8 +1061,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedo
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1554,8 +1093,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Cal
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;)
@@ -1587,8 +1124,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Prox
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)
@@ -1617,8 +1152,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callbac
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1649,8 +1182,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Call
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [once](#once)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;)
@@ -1679,8 +1210,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

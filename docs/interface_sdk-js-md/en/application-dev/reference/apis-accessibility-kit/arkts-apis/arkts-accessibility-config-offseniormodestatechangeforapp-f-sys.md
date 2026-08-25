@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## offSeniorModeStateChangeForApp
@@ -15,8 +15,6 @@ function offSeniorModeStateChangeForApp(callback?: Callback<AppSeniorModeInfo>):
 Cancels the listener for senior mode state change events of all apps. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.READ_ACCESSIBILITY_CONFIG
 

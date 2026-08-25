@@ -4,8 +4,6 @@ Represents the distributed hardware information.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents the distributed hardware information.
 ## Modules to Import
 
 ```TypeScript
-import { hardwareManager } from '@kit.DistributedServiceKit';
+import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## srcNetworkId
@@ -27,8 +25,6 @@ Source device. If this parameter is not specified, it indicates all source devic
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
@@ -47,8 +43,6 @@ Type of the distributed hardware.
 **Type:** [DistributedHardwareType](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 

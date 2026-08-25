@@ -6,33 +6,23 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getPhysicalAperture
 
-ArkTS-Dyn:
 ```TypeScript
 getPhysicalAperture(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getPhysicalAperture(): double
 ```
 
 获取当前物理光圈值。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -42,7 +32,7 @@ getPhysicalAperture(): double
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **错误码：**
 
@@ -54,21 +44,13 @@ getPhysicalAperture(): double
 
 ## setPhysicalAperture
 
-ArkTS-Dyn:
 ```TypeScript
 setPhysicalAperture(aperture: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setPhysicalAperture(aperture: double): void
 ```
 
 设置物理光圈值。需要先通过getSupportedPhysicalApertures接口获取不同焦段支持的可设置光圈值，再通过调整焦段范围，设置支持的物理光圈值。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -78,7 +60,7 @@ setPhysicalAperture(aperture: double): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [aperture](arkts-camera-camera-apertureinfo-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| [aperture](arkts-camera-camera-apertureinfo-i-sys.md) | number | 是 |
 
 **错误码：**
 

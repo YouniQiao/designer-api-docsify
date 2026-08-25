@@ -4,8 +4,6 @@ In the following API examples, you must first use on('inputStart') to obtain a *
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [InputClient](arkts-ime-inputmethodengine-inputclient-i.md)
@@ -15,7 +13,7 @@ In the following API examples, you must first use on('inputStart') to obtain a *
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## deleteBackward
@@ -27,8 +25,6 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 Deletes the fixed-length text after the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -43,72 +39,6 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 | length | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error(`Failed to deleteBackward.`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.deleteBackward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteBackward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting backward.');
-  } else {
-    console.error('Failed to deleteBackward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## deleteBackward
 
 ```TypeScript
@@ -118,8 +48,6 @@ deleteBackward(length: number): Promise<boolean>
 Deletes the fixed-length text after the cursor. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -139,10 +67,6 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 | --- |
 | Promise & lt;boolean & gt; |
 
-**Examples**
-
-See [deleteBackward](#deletebackward)
-
 ## deleteForward
 
 ```TypeScript
@@ -152,8 +76,6 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 Deletes the fixed-length text before the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -168,72 +90,6 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 | length | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error(`Failed to deleteForward.`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.deleteForward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to delete Forward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to deleteForward.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.deleteForward(length).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in deleting forward.');
-  } else {
-    console.error('Failed to delete forward.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## deleteForward
 
 ```TypeScript
@@ -243,8 +99,6 @@ deleteForward(length: number): Promise<boolean>
 Deletes the fixed-length text before the cursor. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -264,10 +118,6 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 | --- |
 | Promise & lt;boolean & gt; |
 
-**Examples**
-
-See [deleteForward](#deleteforward)
-
 ## getBackward
 
 ```TypeScript
@@ -277,8 +127,6 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 Obtains the specific-length text after the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -293,56 +141,6 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 | length | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.getBackward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting backward, text: ' + text);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.getBackward(length).then((text: string) => {
-  console.info('Succeeded in getting backward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getBackward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting backward, text: ' + text);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getBackward(length).then((text: string) => {
-  console.info(`'Succeeded in getting backward: ${text}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## getBackward
 
 ```TypeScript
@@ -352,8 +150,6 @@ getBackward(length: number): Promise<string>
 Obtains the specific-length text after the cursor. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -373,10 +169,6 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 | --- |
 | Promise & lt;string & gt; |
 
-**Examples**
-
-See [getBackward](#getbackward)
-
 ## getEditorAttribute
 
 ```TypeScript
@@ -386,8 +178,6 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 Obtains the attribute of the edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -401,58 +191,6 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethodEngine.EditorAttribute) => {
-  if (err) {
-    console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
-  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-
-textInputClient.getEditorAttribute((err: BusinessError,
-  editorAttribute: inputMethodEngine.EditorAttribute) => {
-  if (err) {
-    console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
-  console.info(`editorAttribute.inputPattern: ${editorAttribute.inputPattern}`);
-  console.info(`editorAttribute.enterKeyType: ${editorAttribute.enterKeyType}}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## getEditorAttribute
 
 ```TypeScript
@@ -462,8 +200,6 @@ getEditorAttribute(): Promise<EditorAttribute>
 Obtains the attribute of the edit box. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -477,10 +213,6 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 | --- |
 | Promise&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; |
 
-**Examples**
-
-See [getEditorAttribute](#geteditorattribute)
-
 ## getForward
 
 ```TypeScript
@@ -490,8 +222,6 @@ getForward(length: number, callback: AsyncCallback<string>): void
 Obtains the specific-length text before the cursor. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -506,56 +236,6 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 | length | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.getForward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting forward, text: ' + text);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-inputClient.getForward(length).then((text: string) => {
-  console.info('Succeeded in getting forward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getForward(length, (err: BusinessError, text: string) => {
-  if (err) {
-    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting forward, text: ' + text);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let length: number = 1;
-textInputClient.getForward(length).then((text: string) => {
-  console.info('Succeeded in getting forward, text: ' + text);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## getForward
 
 ```TypeScript
@@ -565,8 +245,6 @@ getForward(length: number): Promise<string>
 Obtains the specific-length text before the cursor. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -586,10 +264,6 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 | --- |
 | Promise & lt;string & gt; |
 
-**Examples**
-
-See [getForward](#getforward)
-
 ## insertText
 
 ```TypeScript
@@ -599,8 +273,6 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 Inserts text. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -615,69 +287,6 @@ Inserts text. This API uses an asynchronous callback to return the result.
 | text | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-
-inputClient.insertText('test', (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.insertText('test').then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-textInputClient.insertText('test').then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in inserting text.');
-  } else {
-    console.error('Failed to insertText.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## insertText
 
 ```TypeScript
@@ -687,8 +296,6 @@ insertText(text: string): Promise<boolean>
 Inserts text. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -708,10 +315,6 @@ Inserts text. This API uses a promise to return the result.
 | --- |
 | Promise & lt;boolean & gt; |
 
-**Examples**
-
-See [insertText](#inserttext)
-
 ## sendKeyFunction
 
 ```TypeScript
@@ -721,8 +324,6 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 Sends the function key. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -737,73 +338,6 @@ Sends the function key. This API uses an asynchronous callback to return the res
 | action | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-
-inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-inputClient.sendKeyFunction(action).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-textInputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
-  if (err) {
-    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let action: number = 1;
-textInputClient.sendKeyFunction(action).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in sending key function.');
-  } else {
-    console.error('Failed to sendKeyFunction.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendKeyFunction:. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 ## sendKeyFunction
 
 ```TypeScript
@@ -813,8 +347,6 @@ sendKeyFunction(action: number): Promise<boolean>
 Sends the function key. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -833,7 +365,3 @@ Sends the function key. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [sendKeyFunction](#sendkeyfunction)

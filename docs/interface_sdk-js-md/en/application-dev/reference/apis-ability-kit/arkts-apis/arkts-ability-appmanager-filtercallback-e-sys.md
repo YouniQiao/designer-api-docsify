@@ -4,8 +4,6 @@ Enumerates the callbacks to filter. It can be used with [AppStateFilter](arkts-a
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ ON_FOREGROUND_APPLICATION_CHANGED = 1 << 0
 Corresponds to the [ApplicationStateObserver.onForegroundApplicationChanged](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronforegroundapplicationchanged) callback, which is executed when the application's foreground/background state changes.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -36,8 +32,6 @@ Corresponds to the [ApplicationStateObserver.onAbilityStateChanged](../../../ref
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ ON_PROCESS_CREATED = 1 << 2
 Corresponds to the [ApplicationStateObserver.onProcessCreated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocesscreated) callback, which is executed when a process is created.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -68,8 +60,6 @@ Corresponds to the [ApplicationStateObserver.onProcessDied](../../../reference/a
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ ON_PROCESS_STATE_CHANGED = 1 << 4
 Corresponds to the [ApplicationStateObserver.onProcessStateChanged](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocessstatechanged) callback, which is executed when the process state is updated.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -100,8 +88,6 @@ Corresponds to the [ApplicationStateObserver.onAppStarted](../../../reference/ap
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -115,8 +101,6 @@ ON_APP_STOPPED = 1 << 6
 Corresponds to the [ApplicationStateObserver.onAppStopped](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronappstopped) callback, which is executed when the application's last process is destroyed.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

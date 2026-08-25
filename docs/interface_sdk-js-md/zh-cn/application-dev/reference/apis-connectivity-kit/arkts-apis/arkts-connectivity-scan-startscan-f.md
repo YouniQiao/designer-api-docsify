@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from '@kit.ConnectivityKit';
+import { scan } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startScan
@@ -15,8 +15,6 @@ function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promis
 发起星闪扫描。使用Promise异步回调。需先调用[scan.onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md)订阅扫描结果回调，本接口发起扫描后，扫描到的设备信息通过 [scan.onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md)回调上报。扫描完成后可调用[scan.stopScan](arkts-connectivity-scan-stopscan-f.md)停止扫描。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 

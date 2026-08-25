@@ -8,14 +8,12 @@ Implements an upload or download task. Before using this API, you must obtain a 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## off
@@ -32,8 +30,6 @@ Unsubscribes from task progress events.
 > .
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,8 +64,6 @@ Unsubscribes from task completion events.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -102,8 +96,6 @@ Unsubscribes from task failure events.
 > .
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -138,8 +130,6 @@ Unsubscribes from the foreground task pause event.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -169,8 +159,6 @@ Unsubscribes from foreground task resume events.
 > .
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -202,8 +190,6 @@ Unsubscribes from the task removal event.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -233,8 +219,6 @@ Unsubscribes from task response headers.
 > .
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -268,8 +252,6 @@ Unsubscribes from task failure events.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -300,8 +282,6 @@ Unsubscribes from task waiting events.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -317,186 +297,6 @@ Unsubscribes from task waiting events.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-## offCompleted
-
-```TypeScript
-offCompleted(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No |
-
-## offFailed
-
-```TypeScript
-offFailed(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No |
-
-## offFaultOccur
-
-```TypeScript
-offFaultOccur(callback?: Callback<Faults>): void
-```
-
-Disables the 'faultOccur' callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No |
-
-## offPause
-
-```TypeScript
-offPause(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No |
-
-## offProgress
-
-```TypeScript
-offProgress(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No |
-
-## offRemove
-
-```TypeScript
-offRemove(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No |
-
-## offResponse
-
-```TypeScript
-offResponse(callback?: Callback<HttpResponse>): void
-```
-
-Disables the response callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No |
-
-## offResume
-
-```TypeScript
-offResume(callback?: ProgressCallback): void
-```
-
-Disables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | No |
-
-## offWait
-
-```TypeScript
-offWait(callback?: Callback<WaitingReason>): void
-```
-
-Disables the wait callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No |
-
 ## on
 
 ```TypeScript
@@ -511,8 +311,6 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 > .
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -547,8 +345,6 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
@@ -581,8 +377,6 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 > .
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -617,8 +411,6 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -648,8 +440,6 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 > .
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -681,8 +471,6 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -712,8 +500,6 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 > .
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -747,8 +533,6 @@ Subscribes to task failure events. This API uses a callback to return the result
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -779,8 +563,6 @@ Subscribes to task wait events. This API uses a callback to return the result.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
@@ -796,186 +578,6 @@ Subscribes to task wait events. This API uses a callback to return the result.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-## onCompleted
-
-```TypeScript
-onCompleted(callback: ProgressCallback): void
-```
-
-Enables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes |
-
-## onFailed
-
-```TypeScript
-onFailed(callback: ProgressCallback): void
-```
-
-Enables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes |
-
-## onFaultOccur
-
-```TypeScript
-onFaultOccur(callback: Callback<Faults>): void
-```
-
-Enables the 'faultOccur' callback. This callback is triggered when the task failed. The returned `Faults` will contain the reason why the task failed.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes |
-
-## onPause
-
-```TypeScript
-onPause(callback: ProgressCallback): void
-```
-
-Enables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes |
-
-## onProgress
-
-```TypeScript
-onProgress(callback: ProgressCallback): void
-```
-
-Enables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes |
-
-## onRemove
-
-```TypeScript
-onRemove(callback: ProgressCallback): void
-```
-
-Enables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes |
-
-## onResponse
-
-```TypeScript
-onResponse(callback: Callback<HttpResponse>): void
-```
-
-Enables the response callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes |
-
-## onResume
-
-```TypeScript
-onResume(callback: ProgressCallback): void
-```
-
-Enables the specified callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ProgressCallback](arkts-basicservices-agent-progresscallback-t.md) | Yes |
-
-## onWait
-
-```TypeScript
-onWait(callback: Callback<WaitingReason>): void
-```
-
-Enables the wait callback. This callback is triggered when the task changes from other states to the waiting state. The returned `WaitingReason` will contain the reason why the task enters waiting state.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes |
-
 ## pause
 
 ```TypeScript
@@ -985,8 +587,6 @@ pause(callback: AsyncCallback<void>): void
 Pauses a task that is waiting, running, or retrying. A paused task can be resumed by [resume](#resume). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -1003,118 +603,6 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | [13400003](../errorcode-request.md#13400003-service-error) |
 | [21900005](../errorcode-request.md#21900005-task-mode-error) |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-
-**Examples**
-
-```TypeScript
-downloadTask.pause().then(() => {    
-  console.info('Succeeded in pausing the download task.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-downloadTask.pause((err: BusinessError) => {
-  if(err) {
-    console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in pausing the download task.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskPauseTest',
-  description: 'Sample code for pause the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.pause((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in pausing a download task. `);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskPauseTest',
-  description: 'Sample code for pause the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.pause().then(() => {
-    console.info(`Succeeded in pausing a download task. `);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to pause the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## pause
 
@@ -1126,8 +614,6 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Return value:**
@@ -1144,10 +630,6 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 | [21900005](../errorcode-request.md#21900005-task-mode-error) |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
 
-**Examples**
-
-See [pause](#pause)
-
 ## resume
 
 ```TypeScript
@@ -1157,8 +639,6 @@ resume(callback: AsyncCallback<void>): void
 Resumes a paused task. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1179,128 +659,6 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 | [21900005](../errorcode-request.md#21900005-task-mode-error) |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
 
-**Examples**
-
-```TypeScript
-downloadTask.resume().then(() => {
-  console.info('Succeeded in resuming the download task.')
-}).catch((err: BusinessError) => {
-  console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-downloadTask.resume((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in resuming the download task.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskResumeTest',
-  description: 'Sample code for resume the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.pause();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.resume((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in resuming a download task. `);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskResumeTest',
-  description: 'Sample code for resume the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.pause();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.resume().then(() => {
-    console.info(`Succeeded in resuming a download task. `);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to resume the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## resume
 
 ```TypeScript
@@ -1310,8 +668,6 @@ resume(): Promise<void>
 Resumes a paused task. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1332,27 +688,15 @@ Resumes a paused task. This API uses a promise to return the result.
 | [21900005](../errorcode-request.md#21900005-task-mode-error) |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
 
-**Examples**
-
-See [resume](#resume)
-
 ## setMaxSpeed
 
-ArkTS-Dyn:
 ```TypeScript
 setMaxSpeed(speed: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setMaxSpeed(speed: long): Promise<void>
 ```
 
 Sets the maximum number of bytes that can be transmitted by a task per second. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -1360,7 +704,7 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| speed | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| speed | number | Yes |
 
 **Return value:**
 
@@ -1374,31 +718,6 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [13400003](../errorcode-request.md#13400003-service-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  saveas: "./",
-};
-request.agent.create(context, config).then((task: request.agent.Task) => {
-  // Set the maximum transmission speed.
-  task.setMaxSpeed(10 * 1024 * 1024).then(() => {
-    console.info(`Succeeded in setting the max speed of the task. result: ${task.tid}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the max speed of the task. result: ${task.tid}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## start
 
@@ -1417,8 +736,6 @@ Starts a task. This API uses an asynchronous callback to return the result.Tasks
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1438,90 +755,6 @@ Starts a task. This API uses an asynchronous callback to return the result.Tasks
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [13400003](../errorcode-request.md#13400003-service-error) |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskStartTest',
-  description: 'Sample code for start the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then((task: request.agent.Task) => {
-  task.start((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to start the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in starting a download task.`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskStartTest',
-  description: 'Sample code for start the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then((task: request.agent.Task) => {
-  task.start().then(() => {
-    console.info(`Succeeded in starting a download task.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to start the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## start
 
@@ -1540,8 +773,6 @@ Starts a task. This API uses a promise to return the result.Tasks in the followi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1562,10 +793,6 @@ Starts a task. This API uses a promise to return the result.Tasks in the followi
 | [13400003](../errorcode-request.md#13400003-service-error) |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
 
-**Examples**
-
-See [start](#start)
-
 ## stop
 
 ```TypeScript
@@ -1575,8 +802,6 @@ stop(callback: AsyncCallback<void>): void
 Stops a task that is running, waiting, or retrying. A paused task can be resumed by [start](#start). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1595,100 +820,6 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 | [13400003](../errorcode-request.md#13400003-service-error) |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskStopTest',
-  description: 'Sample code for stop the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.stop((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to stop the download task, Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in stopping a download task. `);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let config: request.agent.Config = {
-  action: request.agent.Action.DOWNLOAD,
-  url: 'http://127.0.0.1', // Replace the URL with the HTTP address of the real server.
-  title: 'taskStopTest',
-  description: 'Sample code for stop the download task',
-  mode: request.agent.Mode.BACKGROUND,
-  overwrite: false,
-  method: "GET",
-  data: "",
-  saveas: "./",
-  network: request.agent.Network.CELLULAR,
-  metered: false,
-  roaming: true,
-  retry: true,
-  redirect: true,
-  index: 0,
-  begins: 0,
-  ends: -1,
-  gauge: false,
-  precise: false,
-  token: "it is a secret"
-};
-request.agent.create(context, config).then(async (task: request.agent.Task) => {
-  task.start();
-  // Wait for 1 second before executing the next step to prevent asynchronous out-of-order.
-  await new Promise<void>((resolve) => {
-    setTimeout(() => resolve(),1000)
-  })
-  task.stop().then(() => {
-    console.info(`Succeeded in stopping a download task. `);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to stop the download task, Code: ${err.code}, message: ${err.message}`);
-  });
-  console.info(`Succeeded in creating a download task. result: ${task.tid}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## stop
 
 ```TypeScript
@@ -1698,8 +829,6 @@ stop(): Promise<void>
 Stops a task that is running, waiting, or retrying. A paused task can be resumed by [start](#start). This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1718,10 +847,6 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 | [13400003](../errorcode-request.md#13400003-service-error) |
 | [21900007](../errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
 
-**Examples**
-
-See [stop](#stop)
-
 ## config
 
 ```TypeScript
@@ -1733,8 +858,6 @@ Task configuration.
 **Type:** Config
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1751,8 +874,6 @@ Task ID, which is unique and automatically generated by the system.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

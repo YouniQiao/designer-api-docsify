@@ -6,14 +6,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## audioUri
@@ -28,29 +26,8 @@ set audioUri(value: string)
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-**示例**
-
-```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
-import { fileUri } from '@kit.CoreFileKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let context = this.context;
-    let pathDir = context.filesDir;
-    let audio = new unifiedDataChannel.Audio();
-    let filePath = pathDir + '/test.mp3';
-    audio.audioUri = fileUri.getUriFromPath(filePath);
-  }
-}
-```

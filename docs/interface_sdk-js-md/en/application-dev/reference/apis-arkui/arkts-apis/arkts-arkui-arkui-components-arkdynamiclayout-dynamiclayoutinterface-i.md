@@ -4,14 +4,12 @@ Defines the dynamic layout container.
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
+import { DynamicLayout, DynamicLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -23,8 +21,6 @@ import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 Defines the dynamic layout container.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

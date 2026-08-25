@@ -4,14 +4,12 @@ Provides attributes of the measured text.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { MeasureText, MeasureOptions } from '@kit.ArkUI';
+import { MeasureText, MeasureOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## baselineOffset
@@ -25,8 +23,6 @@ Baseline offset of the measured text.Default value: **0**
 **Type:** number \| string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,11 +39,9 @@ constraintWidth?: number | string | Resource
 Layout width of the measured text.  
 **NOTE：**The default unit is vp. The value cannot be a percentage. If this parameter is not set, the value of **SizeOptions** is the maximum width allowed for the single-line text.
 
-**Type:** number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** number \| string \| Resource
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,11 +57,9 @@ fontFamily?: string | Resource
 
 Font family of the measured text. Default value: **'HarmonyOS Sans'**Only the default font is supported.
 
-**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** string \| Resource
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,11 +74,9 @@ fontSize?: number | string | Resource
 Font size of the text to be measured. When **fontSize** is of the number type, the unit is vp.Default value: **16**  
 **NOTE：**The value cannot be a percentage.Since API version 12, the fp unit is used when **fontSize** is of the number type.
 
-**Type:** number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** number \| string \| Resource
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,8 +94,6 @@ Font style of the measured text.Default value: **FontStyle.Normal**Value range f
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -121,8 +109,6 @@ Font width of the measured text. For the number type, the value ranges from 100 
 **Type:** number \| string \| FontWeight
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -140,8 +126,6 @@ Letter spacing of the measured text.Default value: **0**
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -154,11 +138,9 @@ lineHeight?: number | string | Resource
 
 Line height of the measured text.
 
-**Type:** number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** number \| string \| Resource
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,8 +160,6 @@ Maximum number of lines in the measured text.Value range: [0, *INT32_MAX*]
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -192,13 +172,11 @@ Maximum number of lines in the measured text.Value range: [0, *INT32_MAX*]
 overflow?: number | TextOverflow
 ```
 
-Display mode when the measured text is too long.Default value: **1**Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextOverflow** enum
+Display mode when the measured text is too number.Default value: **1**Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextOverflow** enum
 
-**Type:** number \| TextOverflow
+**Type:** number \| [TextOverflow](arkts-arkui-textoverflow-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -218,8 +196,6 @@ Horizontal alignment mode of the measured text.Default value: **TextAlign.Start*
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -234,11 +210,9 @@ textCase?: number | TextCase
 
 Case of the measured text.Default value: **TextCase.Normal**Value range for the number type: [0, 2], with intervals of 1, corresponding to the values in the **TextCase** enum
 
-**Type:** number \| TextCase
+**Type:** number \| [TextCase](arkts-arkui-textcase-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -254,11 +228,9 @@ textContent: string | Resource
 
 Content of the measured text.
 
-**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** string \| Resource
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -275,8 +247,6 @@ Indentation of the first line. Default value: **0**.
 **Type:** number \| string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -296,8 +266,6 @@ Line break rule.Default value: **WordBreak.BREAK_WORD**
 **Type:** WordBreak
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

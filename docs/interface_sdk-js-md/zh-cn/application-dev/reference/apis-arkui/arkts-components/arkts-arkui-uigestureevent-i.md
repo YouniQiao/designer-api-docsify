@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,8 +21,6 @@ addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: Ges
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -35,8 +31,8 @@ addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: Ges
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| gesture | GestureHandler & lt;T & gt; | 是 |
-| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesture-gesturepriority-e.md) | 否 |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | 是 |
+| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | 否 |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 |
 
 ## addParallelGesture
@@ -49,8 +45,6 @@ addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -61,7 +55,7 @@ addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| gesture | GestureHandler & lt;T & gt; | 是 |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | 是 |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 |
 
 ## clearGestures
@@ -73,8 +67,6 @@ clearGestures(): void
 清除该组件上通过modifier绑定的所有手势。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,8 +83,6 @@ removeGestureByTag(tag: string): void
 移除该组件上通过modifier绑定的设置为指定标志的手势。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

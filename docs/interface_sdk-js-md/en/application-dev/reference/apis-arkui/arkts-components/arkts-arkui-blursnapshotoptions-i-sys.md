@@ -4,8 +4,6 @@ Defines the options for blur snapshot optimization. Setting this object enables 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -28,8 +26,6 @@ Whether to enable freeze optimization for the blur snapshot. When enabled, freez
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

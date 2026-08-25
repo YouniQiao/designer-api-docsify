@@ -4,8 +4,6 @@ Provides methods to operate or manage Bluetooth.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -13,7 +11,7 @@ Provides methods to operate or manage Bluetooth.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -46,11 +44,6 @@ import { connection } from '@kit.ConnectivityKit';
 | [off](arkts-connectivity-connection-off-f.md#offpinrequired) |
 | [off](arkts-connectivity-connection-off-f.md#offbatterychange) |
 | [offAclStateChange](arkts-connectivity-connection-offaclstatechange-f.md) |
-| [offBatteryChange](arkts-connectivity-connection-offbatterychange-f.md) |
-| [offBluetoothDeviceFind](arkts-connectivity-connection-offbluetoothdevicefind-f.md) |
-| [offBondStateChange](arkts-connectivity-connection-offbondstatechange-f.md) |
-| [offDiscoveryResult](arkts-connectivity-connection-offdiscoveryresult-f.md) |
-| [offPinRequired](arkts-connectivity-connection-offpinrequired-f.md) |
 | [offScanModeChange](arkts-connectivity-connection-offscanmodechange-f.md) |
 | [on](arkts-connectivity-connection-on-f.md#onbluetoothdevicefind) |
 | [on](arkts-connectivity-connection-on-f.md#ondiscoveryresult) |
@@ -58,11 +51,6 @@ import { connection } from '@kit.ConnectivityKit';
 | [on](arkts-connectivity-connection-on-f.md#onpinrequired) |
 | [on](arkts-connectivity-connection-on-f.md#onbatterychange) |
 | [onAclStateChange](arkts-connectivity-connection-onaclstatechange-f.md) |
-| [onBatteryChange](arkts-connectivity-connection-onbatterychange-f.md) |
-| [onBluetoothDeviceFind](arkts-connectivity-connection-onbluetoothdevicefind-f.md) |
-| [onBondStateChange](arkts-connectivity-connection-onbondstatechange-f.md) |
-| [onDiscoveryResult](arkts-connectivity-connection-ondiscoveryresult-f.md) |
-| [onPinRequired](arkts-connectivity-connection-onpinrequired-f.md) |
 | [onScanModeChange](arkts-connectivity-connection-onscanmodechange-f.md) |
 | [pairDevice](arkts-connectivity-connection-pairdevice-f.md) |
 | [pairDevice](arkts-connectivity-connection-pairdevice-f.md) |

@@ -6,14 +6,12 @@ The context of an ability or an application. It allows access to application-spe
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 ## Modules to Import
 
 ```TypeScript
-import { BackupExtensionContext } from '@kit.CoreFileKit';
+import { BackupExtensionContext } from 'kits/@kit.CoreFileKit';
 ```
 
 ## backupDir
@@ -27,8 +25,6 @@ Indicates backup dir.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -17,7 +17,7 @@ The **AlbumPickerComponent** embedded in the UI of an application allows the app
 ## Modules to Import
 
 ```TypeScript
-import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from '@kit.MediaLibraryKit';
+import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## Summary
@@ -40,5 +40,4 @@ import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCall
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [AlbumClickCallback(AlbumPickerComponent)](arkts-medialibrary-albumclickcallback-t.md) |
 | [EmptyAreaClickCallback(AlbumPickerComponent)](arkts-medialibrary-emptyareaclickcallback-t.md) |

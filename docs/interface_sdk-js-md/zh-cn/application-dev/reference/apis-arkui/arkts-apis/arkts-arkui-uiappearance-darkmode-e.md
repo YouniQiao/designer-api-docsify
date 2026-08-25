@@ -5,8 +5,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 ## ALWAYS_DARK
@@ -19,8 +17,6 @@ Always display with dark mode.
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.UiAppearance
 
 ## ALWAYS_LIGHT
@@ -32,7 +28,5 @@ ALWAYS_LIGHT = 1
 Always display with light mode.
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUI.UiAppearance

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## addDesktopShortcutInfo
 
 ```TypeScript
-function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: int): Promise<void>
+function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): Promise<void>
 ```
 
 Adds a shortcut for the given user. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS
 
@@ -29,7 +27,7 @@ Adds a shortcut for the given user. This API uses a promise to return the result
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -49,48 +47,3 @@ Adds a shortcut for the given user. This API uses a promise to return the result
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
 | [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) |
-
-**Examples**
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct ShortcutExample {
-  build() {
-    Column({ space: 20 }) {
-      Row({ space: 20 }) {
-        Button('add').onClick(() => {
-          let data: shortcutManager.ShortcutInfo = {
-            id: "test1",
-            bundleName: "com.example.myapplication",
-            moduleName: "hello",
-            hostAbility: "hello",
-            icon: "hello",
-            iconId: 1,
-            label: "hello",
-            labelId: 1,
-            wants: [],
-            appIndex: 0,
-            sourceType: 0,
-          }
-          try {
-            shortcutManager.addDesktopShortcutInfo(data, 100)
-              .then(() => {
-                console.info("addDesktopShortcutInfo success");
-              }).catch((err: BusinessError) => {
-              console.error(`addDesktopShortcutInfo errData is errCode:${err.code}  message:${err.message}`);
-            });
-          } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`addDesktopShortcutInfo error is errCode:${code}  message:${message}`);
-          }
-        })
-      }
-    }
-  }
-}
-```

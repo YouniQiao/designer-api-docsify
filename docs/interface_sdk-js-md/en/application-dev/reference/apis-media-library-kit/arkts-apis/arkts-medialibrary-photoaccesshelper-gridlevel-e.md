@@ -1,10 +1,8 @@
 # GridLevel
 
-Enumeration type of grid level.@enum { int } GridLevel
+Enumeration type of grid level.@enum { number } GridLevel
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -17,8 +15,6 @@ SPACIOUS = 0
 Spacious grid level. This level is the number of standard grid columns minus 1.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ Standard grid level. The number of standard grid columns varies with the device 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -53,8 +47,6 @@ COMPACT = 2
 Compact grid level. This level is the number of standard grid columns plus 1.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

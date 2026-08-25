@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setPowerMode
@@ -15,8 +15,6 @@ function setPowerMode(mode: PowerMode): void
 Set the current Wi-Fi power mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -37,16 +35,3 @@ Set the current Wi-Fi power mode.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) |
-
-**Examples**
-
-```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
-
-  try {
-      let model = 0;
-      wifiManagerExt.setPowerMode(model);
-  }catch(error){
-      console.error("failed: " + JSON.stringify(error));
-  }
-```

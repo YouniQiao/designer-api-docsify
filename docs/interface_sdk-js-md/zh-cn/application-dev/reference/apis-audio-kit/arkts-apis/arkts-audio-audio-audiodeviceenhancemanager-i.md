@@ -7,14 +7,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
 
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## isEnhancedRoutingSupported
@@ -31,8 +29,6 @@ isEnhancedRoutingSupported(): boolean
 > - 当系统不支持增强路由能力时，调用相关接口不会生效，并会为应用或音频流选择默认的输入输出设备。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +61,6 @@ selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
@@ -90,66 +84,6 @@ selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.INPUT_DEVICE,
-  deviceType : audio.DeviceType.MIC,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function selectInputDevice(){
-  audioRoutingManager.selectInputDevice(inputAudioDeviceDescriptor, (err: BusinessError) => {
-    if (err) {
-      console.error(`Result ERROR: ${err}`);
-    } else {
-      console.info('Select input devices result callback: SUCCESS');
-    }
-  });
-}
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.INPUT_DEVICE,
-  deviceType : audio.DeviceType.MIC,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function getRoutingManager(){
-  audioRoutingManager.selectInputDevice(inputAudioDeviceDescriptor).then(() => {
-    console.info('Select input devices result promise: SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`Result ERROR: ${err}`);
-  });
-}
-```
-
 ## selectInputDeviceForAudioCapturer
 
 ```TypeScript
@@ -165,8 +99,6 @@ selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDev
 > - 当系统不支持此功能时，会为该音频录制流选择默认输入设备。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -213,8 +145,6 @@ selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Audio.DeviceEnhance
@@ -238,65 +168,6 @@ selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 | [6800101](../errorcode-audio.md#6800101-无效入参) |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.SPEAKER,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function selectOutputDevice(){
-  audioRoutingManager.selectOutputDevice(outputAudioDeviceDescriptor, (err: BusinessError) => {
-    if (err) {
-      console.error(`Result ERROR: ${err}`);
-    } else {
-      console.info('Select output devices result callback: SUCCESS'); }
-  });
-}
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let outputAudioDeviceDescriptor: audio.AudioDeviceDescriptors = [{
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.SPEAKER,
-  id : 1,
-  name : "",
-  address : "",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : "",
-}];
-
-async function selectOutputDevice(){
-  audioRoutingManager.selectOutputDevice(outputAudioDeviceDescriptor).then(() => {
-    console.info('Select output devices result promise: SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`Result ERROR: ${err}`);
-  });
-}
-```
-
 ## selectOutputDeviceForAudioRenderer
 
 ```TypeScript
@@ -312,8 +183,6 @@ selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioD
 > - 当系统不支持此功能时，会为该音频播放流选择默认输出设备。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

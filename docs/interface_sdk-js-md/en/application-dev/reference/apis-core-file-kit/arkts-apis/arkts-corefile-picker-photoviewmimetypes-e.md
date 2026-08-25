@@ -4,8 +4,6 @@ Enumerates the media file types that can be selected.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 12
 
 **Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
@@ -21,8 +19,6 @@ IMAGE_TYPE = 'image/*'
 Image.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -42,8 +38,6 @@ Video.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 18
 
 **Substitutes:** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#video_type)
@@ -61,8 +55,6 @@ IMAGE_VIDEO_TYPE = '*/*'
 Image and video.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 

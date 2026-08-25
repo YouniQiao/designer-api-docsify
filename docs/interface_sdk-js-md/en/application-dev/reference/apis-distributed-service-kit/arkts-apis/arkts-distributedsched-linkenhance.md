@@ -4,8 +4,6 @@ The **linkEnhance** module delivers highly efficient Bluetooth connectivity and 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
@@ -13,7 +11,7 @@ The **linkEnhance** module delivers highly efficient Bluetooth connectivity and 
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## Summary

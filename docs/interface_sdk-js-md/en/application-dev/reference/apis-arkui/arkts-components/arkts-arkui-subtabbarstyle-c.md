@@ -4,8 +4,6 @@ Implements the subtab style. A transition animation is played when the user swit
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ board(value: BoardStyle): SubTabBarStyle
 Sets the background style (board style) of the selected subtab. It takes effect only in the horizontal layout.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,8 +49,6 @@ Constructor used to create a **SubTabBarStyle** instance.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -75,8 +69,6 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -87,7 +79,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | ResourceStr \| [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes |
 
 ## id
 
@@ -98,8 +90,6 @@ id(value: string): SubTabBarStyle
 Sets the ID of the subtab.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,8 +119,6 @@ Sets the indicator style of the selected subtab. It takes effect only in the hor
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -155,11 +143,9 @@ Sets the indicator style of the selected subtab. It takes effect only in the hor
 indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
-Sets the indicator style of the selected subtab. Compared with [indicator](#indicator), the image format is added. For details about the display effect of the image, see ImageFit.Cover. It takes effect only in the horizontal layout.
+Sets the indicator style of the selected subtab. Compared with [indicator](#indicator), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md). It takes effect only in the horizontal layout.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -189,8 +175,6 @@ Sets the style of the label text and font for the subtab.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -218,8 +202,6 @@ static of(content: ResourceStr): SubTabBarStyle
 Static constructor used to create a **SubTabBarStyle** instance.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -249,8 +231,6 @@ Static constructor used to create a **SubTabBarStyle** instance. You can set cus
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -261,7 +241,7 @@ Static constructor used to create a **SubTabBarStyle** instance. You can set cus
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | ResourceStr \| [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes |
 
 **Return value:**
 
@@ -279,8 +259,6 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -291,7 +269,7 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
+| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes |
 
 **Return value:**
 
@@ -309,8 +287,6 @@ Sets the padding of the subtab. This API supports mirroring but does not support
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -321,7 +297,7 @@ Sets the padding of the subtab. This API supports mirroring but does not support
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [padding](#padding) | [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes |
+| [padding](#padding) | [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes |
 
 **Return value:**
 
@@ -338,8 +314,6 @@ selectedMode(value: SelectedMode): SubTabBarStyle
 Sets the display mode of the selected subtab. It takes effect only in the horizontal layout.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

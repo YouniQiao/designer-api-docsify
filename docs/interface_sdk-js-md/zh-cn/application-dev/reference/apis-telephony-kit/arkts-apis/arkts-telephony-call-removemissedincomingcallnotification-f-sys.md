@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## removeMissedIncomingCallNotification
@@ -15,8 +15,6 @@ function removeMissedIncomingCallNotification(callback: AsyncCallback<void>): vo
 删除未接来电通知。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE and ohos.permission.READ_CALL_LOG and ohos.permission.WRITE_CALL_LOG
 
@@ -41,30 +39,6 @@ function removeMissedIncomingCallNotification(callback: AsyncCallback<void>): vo
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.removeMissedIncomingCallNotification((err: BusinessError) => {
-    if (err) {
-        console.error(`removeMissedIncomingCallNotification failed, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`removeMissedIncomingCallNotification success`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.removeMissedIncomingCallNotification().then(() => {
-    console.info(`removeMissedIncomingCallNotification success`);
-}).catch((err: BusinessError) => {
-    console.error(`removeMissedIncomingCallNotification failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## removeMissedIncomingCallNotification
 
@@ -75,8 +49,6 @@ function removeMissedIncomingCallNotification(): Promise<void>
 删除未接来电通知。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE and ohos.permission.READ_CALL_LOG and ohos.permission.WRITE_CALL_LOG
 
@@ -99,7 +71,3 @@ function removeMissedIncomingCallNotification(): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [removeMissedIncomingCallNotification](#removemissedincomingcallnotification)

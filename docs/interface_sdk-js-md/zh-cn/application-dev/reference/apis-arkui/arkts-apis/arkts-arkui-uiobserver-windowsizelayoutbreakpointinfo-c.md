@@ -4,14 +4,12 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## heightBreakpoint
@@ -22,11 +20,9 @@ readonly heightBreakpoint: HeightBreakpoint
 
 窗口高度所在的布局断点枚举。
 
-**类型：** HeightBreakpoint
+**类型：** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +38,9 @@ readonly widthBreakpoint: WidthBreakpoint
 
 窗口宽度所在的布局断点枚举。
 
-**类型：** WidthBreakpoint
+**类型：** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

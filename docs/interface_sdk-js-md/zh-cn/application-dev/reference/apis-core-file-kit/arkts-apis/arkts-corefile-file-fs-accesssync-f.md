@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## accessSync
@@ -17,8 +17,6 @@ declare function accessSync(path: string, mode?: AccessModeType): boolean
 以同步方法检查文件或目录是否存在，或校验操作权限。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -54,42 +52,6 @@ declare function accessSync(path: string, mode?: AccessModeType): boolean
 | 13900033 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-try {
-  let res = fileIo.accessSync(filePath);
-  if (res) {
-    console.info(`Succeeded in checking file, file exists.`);
-  } else {
-    console.info(`Succeeded in checking file, file does not exist.`);
-  }
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to accessSync. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-try {
-  let res = fileIo.accessSync(filePath, fileIo.AccessModeType.EXIST, fileIo.AccessFlagType.LOCAL);
-  if (res) {
-    console.info(`Succeeded in checking file, file exists.`);
-  } else {
-    console.info(`Succeeded in checking file, file does not exist.`);
-  }
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to accessSync. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## accessSync
 
@@ -100,8 +62,6 @@ declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlag
 以同步方法检查文件或目录是否在本地，或校验操作权限。校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -133,7 +93,3 @@ declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlag
 | 13900023 |
 | 13900030 |
 | 13900033 |
-
-**示例**
-
-参见 [accessSync](#accesssync)

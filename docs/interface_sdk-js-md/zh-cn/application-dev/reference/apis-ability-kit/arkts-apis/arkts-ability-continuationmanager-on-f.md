@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('deviceSelected')
@@ -15,8 +15,6 @@ function on(type: 'deviceSelected', token: number, callback: Callback<Array<Cont
 异步方法，监听设备连接状态，使用Callback形式返回连接的设备信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 22
 
@@ -48,26 +46,6 @@ function on(type: 'deviceSelected', token: number, callback: Callback<Array<Cont
 | [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) |
 | [16600004](../errorcode-DistributedSchedule.md#16600004-指定的callback已注册) |
 
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-try {
-  continuationManager.on("deviceSelected", token, (data) => {
-    console.info('onDeviceSelected len: ' + data.length);
-    for (let i = 0; i < data.length; i++) {
-      console.info('onDeviceSelected deviceId: ' + JSON.stringify(data[i].id));
-      console.info('onDeviceSelected deviceType: ' + JSON.stringify(data[i].type));
-      console.info('onDeviceSelected deviceName: ' + JSON.stringify(data[i].name));
-    }
-  });
-} catch (err) {
-  console.error('on failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## on('deviceUnselected')
 
@@ -78,8 +56,6 @@ function on(type: 'deviceUnselected', token: number, callback: Callback<Array<Co
 异步方法，监听设备断开状态，使用Callback形式返回断开的设备信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 22
 
@@ -111,27 +87,6 @@ function on(type: 'deviceUnselected', token: number, callback: Callback<Array<Co
 | [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) |
 | [16600004](../errorcode-DistributedSchedule.md#16600004-指定的callback已注册) |
 
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-try {
-  continuationManager.on("deviceUnselected", token, (data) => {
-    console.info('onDeviceUnselected len: ' + data.length);
-    for (let i = 0; i < data.length; i++) {
-      console.info('onDeviceUnselected deviceId: ' + JSON.stringify(data[i].id));
-      console.info('onDeviceUnselected deviceType: ' + JSON.stringify(data[i].type));
-      console.info('onDeviceUnselected deviceName: ' + JSON.stringify(data[i].name));
-    }
-    console.info('onDeviceUnselected finished.');
-  });
-} catch (err) {
-  console.error('on failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## on('deviceConnect')
 
@@ -142,8 +97,6 @@ function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void
 异步方法，监听设备连接状态，使用Callback形式返回连接的设备信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -160,18 +113,6 @@ function on(type: 'deviceConnect', callback: Callback<ContinuationResult>): void
 | type | 'deviceConnect' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-continuationManager.on("deviceConnect", (data) => {
-  console.info('onDeviceConnect deviceId: ' + JSON.stringify(data.id));
-  console.info('onDeviceConnect deviceType: ' + JSON.stringify(data.type));
-  console.info('onDeviceConnect deviceName: ' + JSON.stringify(data.name));
-});
-```
-
 
 ## on('deviceDisconnect')
 
@@ -182,8 +123,6 @@ function on(type: 'deviceDisconnect', callback: Callback<string>): void
 异步方法，监听设备断开状态，使用Callback形式返回断开的设备信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -199,13 +138,3 @@ function on(type: 'deviceDisconnect', callback: Callback<string>): void
 | --- | --- | --- |
 | type | 'deviceDisconnect' | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-continuationManager.on("deviceDisconnect", (data) => {
-  console.info('onDeviceDisconnect deviceId: ' + JSON.stringify(data));
-});
-```

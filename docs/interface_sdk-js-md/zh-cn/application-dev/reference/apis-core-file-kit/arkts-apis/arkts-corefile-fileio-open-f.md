@@ -15,8 +15,6 @@ declare function open(path: string, flags?: number, mode?: number): Promise<numb
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [open](arkts-corefile-file-fs-open-f.md)
@@ -37,26 +35,6 @@ declare function open(path: string, flags?: number, mode?: number): Promise<numb
 | --- |
 | Promise & lt;number & gt; |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.open(filePath, 0o1, 0o0200).then((number: number) => {
-  console.info("open file succeed");
-}).catch((err: BusinessError) => {
-  console.error("open file failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.open(filePath, 0, (err: BusinessError, fd: number) => {
-  // do something
-});
-```
-
 
 ## open
 
@@ -67,8 +45,6 @@ declare function open(path: string, callback: AsyncCallback<number>): void
 打开文件，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -83,10 +59,6 @@ declare function open(path: string, callback: AsyncCallback<number>): void
 | path | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-参见 [open](#open)
-
 
 ## open
 
@@ -97,8 +69,6 @@ declare function open(path: string, flags: number, callback: AsyncCallback<numbe
 打开文件，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -114,10 +84,6 @@ declare function open(path: string, flags: number, callback: AsyncCallback<numbe
 | flags | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-参见 [open](#open)
-
 
 ## open
 
@@ -128,8 +94,6 @@ declare function open(path: string, flags: number, mode: number, callback: Async
 打开文件，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -145,7 +109,3 @@ declare function open(path: string, flags: number, mode: number, callback: Async
 | flags | number | 是 |
 | mode | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-参见 [open](#open)

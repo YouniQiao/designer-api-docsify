@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDeviceEncryptionStatus
@@ -15,8 +15,6 @@ function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus
 查询设备文件系统加密状态。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -51,23 +49,3 @@ function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: securityManager.DeviceEncryptionStatus = securityManager.getDeviceEncryptionStatus(wantTemp);
-  console.info(`Succeeded in getting device encryption status. isEncrypted: ${result.isEncrypted}`);
-} catch(err) {
-  console.error(`Failed to get device encryption status. Code: ${err.code}, message: ${err.message}`);
-}
-```

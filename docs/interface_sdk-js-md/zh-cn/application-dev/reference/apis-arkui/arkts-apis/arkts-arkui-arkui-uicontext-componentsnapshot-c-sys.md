@@ -9,17 +9,15 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## getWithRange
@@ -35,8 +33,6 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 > start对应的组件和end对应的组件必须为同一棵组件树上的组件，且start对应的组件需要为end对应的组件的祖先组件。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,77 +62,3 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) |
-
-**示例**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct SnapshotExample {
-  @State pixmap: image.PixelMap | undefined = undefined
-
-  build() {
-    Column() {
-      Row() {
-        Row() {
-          Row() {
-            Column() {
-              Text('Text1').id('text1')
-              Text('Text2').id('text2')
-              Row() {
-                Text('Text3').id('text3')
-              }.id('root5').backgroundColor('#E4E8F0')
-            }
-            .width('80%')
-            .height('80%')
-            .justifyContent(FlexAlign.SpaceAround)
-            .backgroundColor('#C1D1F0')
-            .id('root4')
-          }
-          .width('80%')
-          .height('80%')
-          .justifyContent(FlexAlign.Center)
-          .backgroundColor('#FFEEF0')
-          .id('root3')
-          .backgroundBlurStyle(BlurStyle.Thin, { colorMode: ThemeColorMode.LIGHT })
-        }
-        .width('80%')
-        .height('80%')
-        .justifyContent(FlexAlign.Center)
-        .backgroundColor('#D5D5D5')
-        .id('root2')
-      }
-      .width('50%')
-      .height('50%')
-      .justifyContent(FlexAlign.Center)
-      .backgroundColor('#E4E8F0')
-      .id('root1')
-
-      Row() {
-        Button("getWithRange")
-          .onClick(() => {
-            this.getUIContext()
-              .getComponentSnapshot()
-              .getWithRange('root2', 'root4', true)
-              .then((pixmap: image.PixelMap) => {
-                this.pixmap = pixmap
-              })
-              .catch((err: Error) => {
-                console.error("error: " + err)
-              })
-          }).margin(10)
-      }.justifyContent(FlexAlign.SpaceAround)
-
-      Row() {
-        Image(this.pixmap).width(200).height(300).border({ color: Color.Black, width: 2 }).margin(5)
-      }.justifyContent(FlexAlign.SpaceAround)
-    }
-    .id('root')
-    .width('100%')
-    .height('100%')
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-```

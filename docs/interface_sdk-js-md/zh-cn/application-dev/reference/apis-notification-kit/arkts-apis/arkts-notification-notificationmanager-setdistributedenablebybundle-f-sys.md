@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setDistributedEnableByBundle
@@ -15,8 +15,6 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, cal
 设置指定应用是否支持分布式通知。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -32,7 +30,7 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, cal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -50,81 +48,6 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, cal
 | [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setDistributedEnableByBundleCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setDistributedEnableByBundle success');
-    }
-};
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnableByBundle(bundle, enable, setDistributedEnableByBundleCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setDistributedEnableByBundleCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setDistributedEnableByBundle success');
-    }
-};
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnableByBundle(bundle, enable, setDistributedEnableByBundleCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
-    console.info('setDistributedEnableByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
-    console.info('setDistributedEnableByBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setDistributedEnableByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## setDistributedEnableByBundle
 
@@ -135,8 +58,6 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Pr
 设置指定应用是否支持分布式通知。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 26.0.0
 
@@ -152,7 +73,7 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Pr
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 
 **返回值：**
@@ -174,7 +95,3 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Pr
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [1600010](../errorcode-notification.md#1600010-分布式操作失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [setDistributedEnableByBundle](#setdistributedenablebybundle)

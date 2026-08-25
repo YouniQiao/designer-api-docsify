@@ -4,8 +4,6 @@ Describes the start animation configuration. This API works only for full-screen
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the start animation configuration. This API works only for full-screen
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## animationConfig
@@ -27,8 +25,6 @@ Configuration for the window animation. The default animation curve is **WindowA
 **Type:** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -45,8 +41,6 @@ Type of the window animation.
 **Type:** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 

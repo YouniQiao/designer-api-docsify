@@ -4,8 +4,6 @@ USB设备侧功能。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md)
@@ -23,8 +21,6 @@ NONE = 0
 没有功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ acm功能。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [ACM](arkts-basicservices-usbmanager-functiontype-e-sys.md#acm)
@@ -63,8 +57,6 @@ ECM = 2
 ecm功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -84,8 +76,6 @@ hdc功能。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [HDC](arkts-basicservices-usbmanager-functiontype-e-sys.md#hdc)
@@ -103,8 +93,6 @@ MTP = 8
 媒体传输。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -124,8 +112,6 @@ PTP = 16
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [PTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#ptp)
@@ -143,8 +129,6 @@ RNDIS = 32
 网络共享。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -164,8 +148,6 @@ midi功能。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [MIDI](arkts-basicservices-usbmanager-functiontype-e-sys.md#midi)
@@ -184,8 +166,6 @@ AUDIO_SOURCE = 128
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 9
 
 **替代接口：** [AUDIO_SOURCE](arkts-basicservices-usbmanager-functiontype-e-sys.md#audio_source)
@@ -203,8 +183,6 @@ NCM = 256
 ncm传输。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## registerWatermarkCallback
@@ -15,8 +15,6 @@ function registerWatermarkCallback(callback: WatermarkCallback): void
 Register to listen for watermark handling.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_PRINT
 

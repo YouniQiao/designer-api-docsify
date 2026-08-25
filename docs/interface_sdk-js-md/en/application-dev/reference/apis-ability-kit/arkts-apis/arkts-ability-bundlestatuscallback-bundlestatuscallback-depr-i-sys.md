@@ -9,8 +9,6 @@
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [bundleMonitor/bundleMonitor](arkts-bundle-bundlemonitor.md)
@@ -30,8 +28,6 @@ add: (bundleName: string, userId: number) => void
 Used to obtain information when a bundle is installed.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -60,8 +56,6 @@ Used to obtain information when a bundle is uninstalled.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)
@@ -88,8 +82,6 @@ update: (bundleName: string, userId: number) => void
 Used to obtain information when a bundle is updated.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

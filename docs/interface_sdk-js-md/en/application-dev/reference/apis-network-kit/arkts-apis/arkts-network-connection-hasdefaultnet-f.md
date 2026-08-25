@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## hasDefaultNet
@@ -16,8 +16,6 @@ Checks whether there is an available network. This API uses an asynchronous call
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -38,26 +36,6 @@ Checks whether there is an available network. This API uses an asynchronous call
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.hasDefaultNet((error: BusinessError, data: boolean) => {
-  console.error(JSON.stringify(error));
-  console.info('data: ' + data);
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.hasDefaultNet().then((data: boolean) => {
-  console.info('data: ' + data);
-});
-```
-
 
 ## hasDefaultNet
 
@@ -69,8 +47,6 @@ Checks whether there is an available network. This API uses a promise to return 
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -89,7 +65,3 @@ Checks whether there is an available network. This API uses a promise to return 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [hasDefaultNet](#hasdefaultnet)

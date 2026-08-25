@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mdns } from '@kit.NetworkKit';
+import { mdns } from 'kits/@kit.NetworkKit';
 ```
 
 ## createDiscoveryService
@@ -15,8 +15,6 @@ function createDiscoveryService(context: Context, serviceType: string): Discover
 返回一个DiscoveryService对象，该对象用于发现指定服务类型（serviceType）的MDNS服务。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,19 +38,3 @@ function createDiscoveryService(context: Context, serviceType: string): Discover
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-Stage模型示例：
-
-```TypeScript
-import { mdns } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// 获取context。
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-let serviceType = "_print._tcp";
-let discoveryService : Object = mdns.createDiscoveryService(context, serviceType);
-```

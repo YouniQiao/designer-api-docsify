@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## exit
@@ -15,8 +15,6 @@ function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): v
 根据指定的共享资源标识退出共享，使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -37,30 +35,6 @@ function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): v
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.exit('sharing_resource_test').then((result) => {
-  console.info(`exit share success, result: ${result}`);
-}).catch((err) => {
-  console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
-})
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.exit('sharing_resource_test', ((err: BusinessError|null, result) => {
-  if (err) {
-    console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info(`exit share succeeded, result: ${result}`);
-}))
-```
-
 
 ## exit
 
@@ -71,8 +45,6 @@ function exit(sharingResource: string): Promise<Result<void>>
 根据指定的共享资源标识退出共享，使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -97,7 +69,3 @@ function exit(sharingResource: string): Promise<Result<void>>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-参见 [exit](#exit)

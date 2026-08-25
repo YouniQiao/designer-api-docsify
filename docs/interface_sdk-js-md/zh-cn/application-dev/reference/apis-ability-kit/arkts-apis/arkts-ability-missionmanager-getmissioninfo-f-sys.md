@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { missionManager } from '@kit.AbilityKit';
+import { missionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getMissionInfo
 
 ```TypeScript
-function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallback<MissionInfo>): void
+function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCallback<MissionInfo>): void
 ```
 
 获取任务信息。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -29,7 +27,7 @@ function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | deviceId | string | 是 |
-| missionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| missionId | number | 是 |
 | callback | AsyncCallback & lt;MissionInfo & gt; | 是 |
 
 **错误码：**
@@ -40,81 +38,16 @@ function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallbac
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let testMissionId = 1;
-
-// 获取所有任务信息
-missionManager.getMissionInfos('', 10)
-  .then((allMissions: Array<missionManager.MissionInfo>) => {
-    try {
-      if (allMissions && allMissions.length > 0) {
-        testMissionId = allMissions[0].missionId;
-      }
-
-      missionManager.getMissionInfo('', testMissionId,
-        (error: BusinessError | null, mission: missionManager.MissionInfo | undefined) => {
-          if (error) {
-            console.error(`getMissionInfo failed, error.code: ${error.code}, error.message: ${error.message}`);
-          } else {
-            console.info(`mission.missionId = ${mission?.missionId}`);
-            console.info(`mission.runningState = ${mission?.runningState}`);
-            console.info(`mission.lockedState = ${mission?.lockedState}`);
-            console.info(`mission.timestamp = ${mission?.timestamp}`);
-            console.info(`mission.label = ${mission?.label}`);
-            console.info(`mission.iconPath = ${mission?.iconPath}`);
-          }
-        });
-    } catch (paramError) {
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`error: ${code}, ${message} `);
-    }
-  })
-  .catch((err: Error) => {
-    console.error(`getMissionInfos failed, Code: ${err.code}, message: ${err.message}.`);
-  });
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let testMissionId = 1;
-
-try {
-  missionManager.getMissionInfo('', testMissionId)
-    .then((data: missionManager.MissionInfo) => {
-      console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
-    })
-    .catch((e: Error) => {
-    let error = e as BusinessError;
-      console.error(`getMissionInfo failed. Code: ${error.code}, message: ${error.message}`);
-    });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`getMissionInfo failed. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getMissionInfo
 
 ```TypeScript
-function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>
+function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInfo>
 ```
 
 获取任务信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -127,7 +60,7 @@ function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | deviceId | string | 是 |
-| missionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| missionId | number | 是 |
 
 **返回值：**
 
@@ -142,7 +75,3 @@ function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getMissionInfo](#getmissioninfo)

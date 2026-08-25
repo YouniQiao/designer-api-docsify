@@ -4,8 +4,6 @@ Enumerates trace point types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 ## CS
@@ -17,8 +15,6 @@ CS = 0
 CS trace point.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -32,8 +28,6 @@ CR trace point.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 ## SS
@@ -45,8 +39,6 @@ SS = 2
 SS trace point.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
@@ -60,8 +52,6 @@ SR trace point.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 ## GENERAL
@@ -73,7 +63,5 @@ GENERAL = 4
 General type, which identifies the trace points except the CS, CR, SS, and SR trace points.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace

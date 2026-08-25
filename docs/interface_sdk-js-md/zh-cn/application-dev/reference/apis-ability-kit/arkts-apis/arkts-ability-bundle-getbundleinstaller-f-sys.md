@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getBundleInstaller
@@ -15,8 +15,6 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 获取用于安装包的接口，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -34,31 +32,6 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-bundle.getBundleInstaller().then((data) => {
-  console.info('getBundleInstaller successfully.');
-}).catch((error: BusinessError) => {
-  console.error('getBundleInstaller failed.');
-});
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-bundle.getBundleInstaller((err, data) => {
-  if (err.code == 0) {
-    console.error('getBundleInstaller successfully.');
-  } else {
-    console.info('getBundleInstaller failed.');
-  }
-});
-```
-
 
 ## getBundleInstaller
 
@@ -69,8 +42,6 @@ function getBundleInstaller(): Promise<BundleInstaller>
 获取用于安装包的接口，使用Promise异步回调，返回安装接口对象。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -87,7 +58,3 @@ function getBundleInstaller(): Promise<BundleInstaller>
 | 类型 |
 | --- |
 | Promise&lt;[BundleInstaller](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)&gt; |
-
-**示例**
-
-参见 [getBundleInstaller](#getbundleinstaller)

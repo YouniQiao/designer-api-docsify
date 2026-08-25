@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 默认值，表示当前上下文菜单不关联任何媒体类型（例如右键文本或空白区域）。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ IMAGE = 1
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## VIDEO
@@ -45,8 +39,6 @@ VIDEO = 2
 视频类型。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -60,8 +52,6 @@ AUDIO = 3
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## CANVAS
@@ -73,7 +63,5 @@ CANVAS = 4
 Canvas类型。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Web.Webview.Core

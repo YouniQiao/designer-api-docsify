@@ -3,21 +3,22 @@
 ## 导入模块
 
 ```TypeScript
-import { serialManager } from '@kit.BasicServicesKit';
+import { serialManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## writeSync
 
 ```TypeScript
-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int
+function writeSync(portId: number, buffer: Uint8Array, timeout?: number): number
 ```
 
 向串口设备同步写数据，使用前需先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口设备。每次写入数据长度不超过4KB，数据过大会导致数据丢失，长数据建议分包写入。适用于需要阻塞式等待写入完成、发送重要指令 、或对写入顺序有严格要求的场景。  
-**前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限 - 需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口
+**前置条件：**  
+- 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md)获取端口号  
+- 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)申请访问权限  
+- 需要先调用[open](arkts-basicservices-serialmanager-open-f.md)打开串口
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
@@ -25,15 +26,15 @@ function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
 | buffer | Uint8Array | 是 |
-| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| timeout | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -45,63 +46,3 @@ function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int
 | [31400005](../errorcode-usb.md#31400005-设备未打开) |
 | [31400006](../errorcode-usb.md#31400006-传输超时) |
 | [31400007](../errorcode-usb.md#31400007-io异常) |
-
-**示例**
-
-以下示例代码只是调用writeSync接口的必要流程，需要放入具体的方法中执行。实际调用时，设备开发者需要遵循设备相关协议进行调用。
-
-```TypeScript
-import serialManager from '@ohos.usbManager.serial';
-import { BusinessError } from '@ohos.base';
-import buffer from '@ohos.buffer';
-
-// 获取串口列表
-async function writeSyncExample() {
-  let portList: serialManager.SerialPort[] = serialManager.getPortList();
-  console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (portList === undefined || portList.length === 0) {
-    console.error('usbSerial portList is empty');
-    return;
-  }
-  let portId: int = portList[0].portId;
-
-  // 检测设备是否可被应用访问
-  if (!serialManager.hasSerialRight(portId)) {
-    let result = await serialManager.requestSerialRight(portId);
-    if (!result) {
-      // 没有访问设备的权限且用户不授权则退出
-      console.error('user is not granted the operation permission');
-    } else {
-      console.info('grant permission successfully');
-    }
-  }
-
-  // 打开设备
-  try {
-    serialManager.open(portId);
-    console.info('open usbSerial success, portId: ' + portId);
-  } catch (error) {
-    const err: BusinessError = error as BusinessError;
-    console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
-  }
-
-  // 同步写入
-  let writeSyncBuffer: Uint8Array = new Uint8Array(buffer.from('Hello World', 'utf-8').buffer);
-  try {
-    serialManager.writeSync(portId, writeSyncBuffer, 2000);
-    console.info('writeSync usbSerial success, writeSyncBuffer: ' + writeSyncBuffer.toString());
-  } catch (error) {
-    const err: BusinessError = error as BusinessError;
-    console.error(`Failed to writeSync usbSerial. Code: ${err.code}, message: ${err.message}`);
-  }
-
-  // 关闭串口
-  try {
-    serialManager.close(portId);
-    console.info('close usbSerial success, portId: ' + portId);
-  } catch (error) {
-    const err: BusinessError = error as BusinessError;
-    console.error(`Failed to close usbSerial. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```

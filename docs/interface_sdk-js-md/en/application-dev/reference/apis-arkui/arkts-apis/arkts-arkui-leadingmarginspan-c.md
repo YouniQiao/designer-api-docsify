@@ -4,8 +4,6 @@ Defines custom indentation for text paragraphs. Only a base class is provided; t
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ abstract getLeadingMargin(): LengthMetrics
 Returns the indentation distance for a text paragraph.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void
 Draws a custom pattern. This API is triggered once for each line of text in a paragraph.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

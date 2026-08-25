@@ -4,14 +4,12 @@ The **storageStatistics** module provides APIs for obtaining storage space infor
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

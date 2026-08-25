@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## register
@@ -16,8 +16,6 @@ Registers the continuation management service and obtains a token. This API does
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
@@ -31,54 +29,6 @@ Registers the continuation management service and obtains a token. This API does
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-continuationManager.register((err, data) => {
-  if (err.code != 0) {
-    console.error('register failed, cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('register finished, ' + JSON.stringify(data));
-  token = data;
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = -1;
-continuationManager.register(
-  {
-    deviceType: ["00E"]
-  },
-  (err, data) => {
-    if (err.code != 0) {
-      console.error('register failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('register finished, ' + JSON.stringify(data));
-    token = data;
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-continuationManager.register(
-  { deviceType: ["00E"] }).then((data) => {
-    console.info('register finished, ' + JSON.stringify(data));
-    token = data;
-  }).catch((err: BusinessError) => {
-    console.error('register failed, cause: ' + JSON.stringify(err));
-});
-```
 
 
 ## register
@@ -91,8 +41,6 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
@@ -105,12 +53,8 @@ Registers the continuation management service and obtains a token. This API uses
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
-
-**Examples**
-
-See [register](#register)
 
 
 ## register
@@ -123,8 +67,6 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
@@ -137,14 +79,10 @@ Registers the continuation management service and obtains a token. This API uses
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;number & gt; |
-
-**Examples**
-
-See [register](#register)

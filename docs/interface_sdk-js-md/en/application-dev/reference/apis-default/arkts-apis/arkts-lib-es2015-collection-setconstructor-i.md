@@ -1,7 +1,5 @@
 # SetConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new <T = any>(values?: readonly T[] | null): Set<T>
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -32,5 +28,3 @@ readonly prototype: Set<any>
 ```
 
 **Type:** Set&lt;any&gt;
-
-**ArkTS mode:** 

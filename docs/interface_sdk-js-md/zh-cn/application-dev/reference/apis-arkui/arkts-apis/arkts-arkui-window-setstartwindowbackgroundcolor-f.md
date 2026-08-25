@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## setStartWindowBackgroundColor
@@ -16,8 +16,6 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -28,7 +26,7 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 | --- | --- | --- |
 | moduleName | string | 是 |
 | abilityName | string | 是 |
-| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) | 是 |
+| color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 |
 
 **返回值：**
 
@@ -43,21 +41,3 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ColorMetrics, window } from '@kit.ArkUI';
-
-try {
-  let promise = window.setStartWindowBackgroundColor('entry', 'EntryAbility', ColorMetrics.numeric(0xff000000));
-  promise.then(() => {
-    console.info('Succeeded in setting the starting window color.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the starting window color. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the starting window color. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```

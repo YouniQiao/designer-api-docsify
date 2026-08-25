@@ -6,8 +6,6 @@ ShareExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-uie
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -15,5 +13,5 @@ ShareExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-uie
 ## 导入模块
 
 ```TypeScript
-import { ShareExtensionAbility } from '@kit.AbilityKit';
+import { ShareExtensionAbility } from 'kits/@kit.AbilityKit';
 ```

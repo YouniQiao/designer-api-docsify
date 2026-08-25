@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createImageCreator
@@ -18,8 +18,6 @@ function createImageCreator(width: number, height: number, format: number, capac
 > 从API version 9开始支持，从API version 11废弃，建议使用[createImageCreator](#createimagecreator)代替。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 11
 
@@ -42,32 +40,16 @@ function createImageCreator(width: number, height: number, format: number, capac
 | --- |
 | [ImageCreator](arkts-image-image-imagecreator-i.md) |
 
-**示例**
-
-```TypeScript
-let size: image.Size = {
-  height: 8192,
-  width: 8192
-}
-let creator: image.ImageCreator = image.createImageCreator(size, image.ImageFormat.JPEG, 8);
-```
-
-```TypeScript
-let creator: image.ImageCreator = image.createImageCreator(8192, 8192, image.ImageFormat.JPEG, 8);
-```
-
 
 ## createImageCreator
 
 ```TypeScript
-function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator
+function createImageCreator(size: Size, format: ImageFormat, capacity: number): ImageCreator
 ```
 
 通过图片大小、图片格式、容量创建ImageCreator实例。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法 及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
@@ -77,7 +59,7 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: int): Ima
 | --- | --- | --- |
 | size | Size | 是 |
 | format | [ImageFormat](arkts-image-image-imageformat-e.md) | 是 |
-| capacity | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| capacity | number | 是 |
 
 **返回值：**
 
@@ -90,7 +72,3 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: int): Ima
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [createImageCreator](#createimagecreator)

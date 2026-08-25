@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## kill
@@ -15,8 +15,6 @@ function kill(signal: number, pid: number): boolean
 Sends a signal to a specified process to terminate it.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -36,16 +34,3 @@ Sends a signal to a specified process to terminate it.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let pres = process.pid;
-let result = process.kill(28, pres);
-```
-
-```TypeScript
-let pro = new process.ProcessManager();
-let pres = process.pid;
-let result = pro.kill(28, pres);
-```

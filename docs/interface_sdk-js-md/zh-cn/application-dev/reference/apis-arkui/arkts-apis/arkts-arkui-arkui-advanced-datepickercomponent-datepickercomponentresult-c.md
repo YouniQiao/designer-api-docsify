@@ -4,20 +4,18 @@ DatePickerComponentResult定义日期时间选择器的选择结果，包含用�
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from 'kits/@kit.ArkUI';
 ```
 
 ## day
 
 ```TypeScript
-day?: int
+day?: number
 ```
 
 所选日期的日。
@@ -25,8 +23,6 @@ day?: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,7 +33,7 @@ day?: int
 ## hour
 
 ```TypeScript
-hour?: int
+hour?: number
 ```
 
 所选时间的小时部分。
@@ -45,8 +41,6 @@ hour?: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,7 +51,7 @@ hour?: int
 ## minute
 
 ```TypeScript
-minute?: int
+minute?: number
 ```
 
 所选时间的分钟部分。
@@ -65,8 +59,6 @@ minute?: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,7 +69,7 @@ minute?: int
 ## month
 
 ```TypeScript
-month?: int
+month?: number
 ```
 
 所选日期的月份索引，从0开始，0表示1月，11表示12月。
@@ -85,8 +77,6 @@ month?: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,7 +87,7 @@ month?: int
 ## second
 
 ```TypeScript
-second?: int
+second?: number
 ```
 
 所选时间的秒部分。
@@ -105,8 +95,6 @@ second?: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,7 +105,7 @@ second?: int
 ## year
 
 ```TypeScript
-year?: int
+year?: number
 ```
 
 所选日期的年份。
@@ -125,8 +113,6 @@ year?: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

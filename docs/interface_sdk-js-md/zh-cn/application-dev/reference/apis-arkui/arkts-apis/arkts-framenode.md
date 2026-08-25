@@ -16,14 +16,12 @@ typeNode提供创建具体类型的FrameNode能力，可通过FrameNode的基础
 | --- |
 | [FrameNode](arkts-arkui-framenode-c.md) |
 | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) |
-| [TypedFrameNode](arkts-arkui-framenode-typedframenode-c.md) |
 
 ### 接口
 
 | 名称 |
 | --- |
 | [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) |
-| [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) |
 | [InteractionEventBindingInfo](arkts-arkui-framenode-interactioneventbindinginfo-i.md) |
 | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) |
 | [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) |

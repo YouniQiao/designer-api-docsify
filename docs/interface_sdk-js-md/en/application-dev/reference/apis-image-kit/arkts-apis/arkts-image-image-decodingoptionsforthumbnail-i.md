@@ -4,14 +4,12 @@ Describes thumbnail decoding parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## generateThumbnailIfAbsent
@@ -20,13 +18,13 @@ import { image } from '@kit.ImageKit';
 generateThumbnailIfAbsent?: boolean
 ```
 
-Flag to specify whether the thumbnail should be generated, if the image does not have a thumbnail.<br>Default value: true.
+Flag to specify whether the thumbnail should be generated, if the image does not have a thumbnail.
+
+Default value: true.
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,16 +33,14 @@ Flag to specify whether the thumbnail should be generated, if the image does not
 ## maxGeneratedPixelDimension
 
 ```TypeScript
-maxGeneratedPixelDimension?: int
+maxGeneratedPixelDimension?: number
 ```
 
-This parameter is valid only when generateThumbnailIfAbsent is set to true. The width and height of the image cannot exceed the value of this parameter. The value should be an integer. <br>Unit:px. <br>Default value:512.
+This parameter is valid only when generateThumbnailIfAbsent is set to true. The width and height of the image cannot exceed the value of this parameter. The value should be an integer. Unit:px. Default value:512.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

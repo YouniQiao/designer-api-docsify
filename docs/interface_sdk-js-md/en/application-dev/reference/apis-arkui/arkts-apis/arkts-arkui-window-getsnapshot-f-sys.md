@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## getSnapshot
 
 ```TypeScript
-function getSnapshot(windowId: int): Promise<image.PixelMap>
+function getSnapshot(windowId: number): Promise<image.PixelMap>
 ```
 
 Obtains a snapshot of the same size as the specified window. This API uses a promise to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)), taking a screenshot will result in a blank screen.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,7 +24,7 @@ Obtains a snapshot of the same size as the specified window. This API uses a pro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| windowId | number | Yes |
 
 **Return value:**
 
@@ -42,24 +40,3 @@ Obtains a snapshot of the same size as the specified window. This API uses a pro
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-try {
-  // This is only an example. Use getWindowProperties to obtain the window ID.
-  let windowId: number = 40;
-  let promise = window.getSnapshot(windowId);
-  promise.then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in getting snapshot window. Pixel bytes number:' + pixelMap.getPixelBytesNumber());
-    pixelMap.release();
-  }).catch((err: BusinessError) =>{
-    console.error(`Failed to get snapshot. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to get snapshot. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## startEthEap
@@ -15,8 +15,6 @@ function startEthEap(netId: number, profile: EthEapProfile): void
 Starts EAP authentication on an Ethernet NIC.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
@@ -39,34 +37,3 @@ Starts EAP authentication on an Ethernet NIC.
 | [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
 | [33200010](../errorcode-net-eap.md#33200010-invalid-eap-status) |
 | [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
-
-**Examples**
-
-```TypeScript
-import {eap} from '@kit.NetworkKit';
-let netId = 100;
-let profile: eap.EthEapProfile = {
-  eapMethod: eap.EapMethod.EAP_TTLS,
-  phase2Method: eap.Phase2Method.PHASE2_AKA_PRIME,
-  identity: "identity",
-  anonymousIdentity: "anonymousIdentity",
-  password: "password",
-  caCertAliases: "caCertAliases",
-  caPath: "caPath",
-  clientCertAliases: "clientCertAliases",
-  certEntry: new Uint8Array([5,6,7,8,9,10]),
-  certPassword: "certPassword",
-  altSubjectMatch: "altSubjectMatch",
-  domainSuffixMatch: "domainSuffixMatch",
-  realm: "realm",
-  plmn: "plmn",
-  eapSubId: 1
-};
-    
-try {
-  eap.startEthEap(netId, profile);
-  console.info('startEthEap success');
-} catch (err) {
-  console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```

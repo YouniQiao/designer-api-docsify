@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## stopDiscoverPrinter
@@ -15,8 +15,6 @@ function stopDiscoverPrinter(callback: AsyncCallback<void>): void
 停止发现打印机，使用callback异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -37,32 +35,6 @@ function stopDiscoverPrinter(callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.stopDiscoverPrinter((err: BusinessError) => {
-    if (err) {
-        console.error('failed to stop Discover Printer because : ' + JSON.stringify(err));
-    } else {
-        console.info('stop Discover Printer success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-print.stopDiscoverPrinter().then(() => {
-    console.info('stop Discovery success');
-}).catch((error: BusinessError) => {
-    console.error('failed to stop Discovery because : ' + JSON.stringify(error));
-})
-```
-
 
 ## stopDiscoverPrinter
 
@@ -73,8 +45,6 @@ function stopDiscoverPrinter(): Promise<void>
 停止发现打印机，使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本20+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
@@ -94,7 +64,3 @@ function stopDiscoverPrinter(): Promise<void>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [stopDiscoverPrinter](#stopdiscoverprinter)

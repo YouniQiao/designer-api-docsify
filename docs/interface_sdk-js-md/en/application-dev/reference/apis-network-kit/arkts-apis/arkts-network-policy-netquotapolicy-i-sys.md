@@ -4,8 +4,6 @@ Defines the quota policy for the specified network.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the quota policy for the specified network.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## networkMatchRule
@@ -27,8 +25,6 @@ Network for which the quota policy is set.
 **Type:** [NetworkMatchRule](arkts-network-policy-networkmatchrule-i-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -45,8 +41,6 @@ Network quota policy.
 **Type:** [QuotaPolicy](arkts-network-policy-quotapolicy-i-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

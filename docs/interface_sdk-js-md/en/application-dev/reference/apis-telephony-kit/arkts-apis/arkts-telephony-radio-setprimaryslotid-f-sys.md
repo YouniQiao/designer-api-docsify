@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setPrimarySlotId
 
 ```TypeScript
-function setPrimarySlotId(slotId: int, callback: AsyncCallback<void>): void
+function setPrimarySlotId(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 Set the index number of the main SIM card slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Set the index number of the main SIM card slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -44,44 +42,16 @@ Set the index number of the main SIM card slot.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.setPrimarySlotId(slotId, (err: BusinessError) => {
-    if (err) {
-        console.error(`setPrimarySlotId failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`setPrimarySlotId success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.setPrimarySlotId(slotId).then(() => {
-    console.info(`setPrimarySlotId success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setPrimarySlotId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setPrimarySlotId
 
 ```TypeScript
-function setPrimarySlotId(slotId: int): Promise<void>
+function setPrimarySlotId(slotId: number): Promise<void>
 ```
 
 Set the index number of the main SIM card slot.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -93,7 +63,7 @@ Set the index number of the main SIM card slot.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -113,7 +83,3 @@ Set the index number of the main SIM card slot.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [setPrimarySlotId](#setprimaryslotid)

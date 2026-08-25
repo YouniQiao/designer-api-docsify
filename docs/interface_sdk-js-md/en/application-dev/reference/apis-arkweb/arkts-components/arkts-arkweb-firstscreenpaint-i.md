@@ -4,8 +4,6 @@ Provides the event information when the first screen paint is detected, includin
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Time when the first screen paint is completed for the page pointed to by url.Uni
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## navigationStartTime
@@ -41,8 +37,6 @@ Time when navigation starts for the page pointed to by url.Unit: ms.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## url
@@ -56,7 +50,5 @@ URL of the first screen paint statistics.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

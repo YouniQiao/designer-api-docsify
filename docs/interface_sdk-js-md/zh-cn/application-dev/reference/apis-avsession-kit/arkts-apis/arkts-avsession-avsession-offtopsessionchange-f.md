@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## offTopSessionChange
@@ -15,8 +15,6 @@ function offTopSessionChange(callback?: Callback<AVSessionDescriptor>): void
 Unregister top session changed callback
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
 
@@ -34,31 +32,3 @@ Unregister top session changed callback
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.offTopSessionChange((descriptor: avSession.AVSessionDescriptor) => {
-            });
-            avSession.offTopSessionChange();
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-avSession.offTopSessionChange();
-```

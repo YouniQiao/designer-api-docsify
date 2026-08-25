@@ -6,8 +6,6 @@ The &lt;menu&gt; component provides menus as temporary pop-up windows to display
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## show
@@ -19,8 +17,6 @@ show(position: { x: number; y: number }): void
 Displays the menu. x and y specify the position of the displayed menu. x indicates the X-axis coordinate from the left edge of the visible area, and does not include any scrolling offset. y indicates the Y-axis coordinate from the upper edge of the visible area, and does not include any scrolling offset or a status bar. The menu is preferentially displayed in the lower right corner. When the visible space on the right is insufficient, the menu is moved leftward. When the visible space in the lower part is insufficient, the menu is moved upward.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

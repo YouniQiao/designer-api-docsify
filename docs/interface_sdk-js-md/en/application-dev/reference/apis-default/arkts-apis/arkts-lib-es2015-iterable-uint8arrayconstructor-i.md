@@ -1,7 +1,5 @@
 # Uint8ArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new (elements: Iterable<number>): Uint8Array
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -32,8 +28,6 @@ from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, this
 ```
 
 Creates an array from an array-like or iterable object.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## cancelRetentionState
@@ -15,8 +15,6 @@ function cancelRetentionState(docUris: Array<string>): Promise<void>
 Cancels the sandbox retention state, that is, allows the sandbox application to be automatically uninstalled when the DLP file is closed. This API uses a promise to return the result.This API is used to cancel the retention state for sandbox application and restore the default behavior to release system resources. It is applicable to scenarios where the DLP file is no longer frequently accessed.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -41,38 +39,6 @@ Cancels the sandbox retention state, that is, allows the sandbox application to 
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-try {
-  dlpPermission.cancelRetentionState([uri]); // Cancel the retention state for a sandbox application.
-} catch (err) {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-try {
-  dlpPermission.cancelRetentionState([uri], (err, res) => {
-    if (err != undefined) {
-      console.error('cancelRetentionState error,', err.code, err.message);
-    } else {
-      console.info('cancelRetentionState success');
-    }
-  }); // Cancel the sandbox retention state.
-} catch (err) {
-  console.error('cancelRetentionState error,', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
-
 
 ## cancelRetentionState
 
@@ -83,8 +49,6 @@ function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<vo
 Cancels the sandbox retention state, that is, allows the sandbox application to be automatically uninstalled when the DLP file is closed. This API uses an asynchronous callback to return the result.This API is used to cancel the retention state for sandbox application and restore the default behavior to release system resources. It is applicable to scenarios where the DLP file is no longer frequently accessed.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -103,7 +67,3 @@ Cancels the sandbox retention state, that is, allows the sandbox application to 
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [cancelRetentionState](#cancelretentionstate)

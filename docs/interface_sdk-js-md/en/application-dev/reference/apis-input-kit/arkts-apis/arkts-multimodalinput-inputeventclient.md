@@ -4,14 +4,12 @@ The **inputEventClient** module provides the capability of injecting key, mouse/
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## Summary
@@ -29,7 +27,6 @@ import { inputEventClient } from '@kit.InputKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [injectEvent(Input Event Injection)](arkts-input-inputeventclient-injectevent-f-sys.md) |
 | [injectEvent(Input Event Injection)](arkts-input-inputeventclient-injectevent-f-sys.md) |
 | [injectKeyEvent(Input Event Injection)](arkts-input-inputeventclient-injectkeyevent-f-sys.md) |
 | [injectMouseEvent(Input Event Injection)](arkts-input-inputeventclient-injectmouseevent-f-sys.md) |

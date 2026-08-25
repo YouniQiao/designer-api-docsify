@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## reboot
@@ -15,8 +15,6 @@ function reboot(reason: string): void
 重启设备。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REBOOT
 
@@ -38,13 +36,3 @@ function reboot(reason: string): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [4900101](../errorcode-power.md#4900101-连接服务失败) |
-
-**示例**
-
-```TypeScript
-try {
-    power.reboot('reboot_test');
-} catch(err) {
-    console.error('reboot failed, err: ' + err);
-}
-```

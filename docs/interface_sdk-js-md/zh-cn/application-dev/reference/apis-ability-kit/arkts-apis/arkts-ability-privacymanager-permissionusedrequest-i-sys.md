@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -13,24 +11,22 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## beginTime
 
 ```TypeScript
-beginTime?: long
+beginTime?: number
 ```
 
 查询的起始时间。 单位为：毫秒。默认值：0，表示不限制起始时间。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **默认值：** 0
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -48,8 +44,6 @@ bundleName?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -66,8 +60,6 @@ deviceId?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -75,18 +67,16 @@ deviceId?: string
 ## endTime
 
 ```TypeScript
-endTime?: long
+endTime?: number
 ```
 
 查询的终止时间，不早于beginTime，否则返回错误码12100001。 单位为：毫秒。默认值：0，表示不限制终止时间。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **默认值：** 0
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -103,8 +93,6 @@ flag: PermissionUsageFlag
 **类型：** [PermissionUsageFlag](arkts-ability-privacymanager-permissionusageflag-e-sys.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -124,8 +112,6 @@ isRemote?: boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -142,8 +128,6 @@ permissionNames?: Array<Permissions>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -151,16 +135,14 @@ permissionNames?: Array<Permissions>
 ## tokenId
 
 ```TypeScript
-tokenId?: int
+tokenId?: number
 ```
 
-目标应用的身份标识。目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的 [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。默认值：0，查询所有应用。
+目标应用的身份标识。目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的 [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。默认值：0，查询所有应用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 

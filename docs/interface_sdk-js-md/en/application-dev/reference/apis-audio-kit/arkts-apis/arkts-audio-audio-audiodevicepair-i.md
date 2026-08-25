@@ -4,14 +4,12 @@ Describes an audio device pair including both input and output devices.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## inputDevice
@@ -25,8 +23,6 @@ Input audio device descriptor.
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Output audio device descriptor.
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ The enum of bond state.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [BondState](arkts-connectivity-connection-bondstate-e.md)
@@ -21,8 +19,6 @@ BOND_STATE_INVALID = 0
 Indicate the bond state is invalid
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -40,8 +36,6 @@ Indicate the bond state is bonding
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [BOND_STATE_BONDING](arkts-connectivity-connection-bondstate-e.md#bond_state_bonding)
@@ -57,8 +51,6 @@ BOND_STATE_BONDED = 2
 Indicate the bond state is bonded
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

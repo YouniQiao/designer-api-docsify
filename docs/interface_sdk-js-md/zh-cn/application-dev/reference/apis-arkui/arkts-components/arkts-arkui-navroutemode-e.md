@@ -4,11 +4,9 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 13
 
-**替代接口：** NavPathStack
+**替代接口：** [NavPathStack](arkts-arkui-navpathstack-c.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,8 +19,6 @@ PUSH_WITH_RECREATE
 跳转到新的NavDestination页面时，替换当前显示的NavDestination页面，页面销毁，但该页面信息仍保留在路由栈中。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 13
 
@@ -42,8 +38,6 @@ PUSH
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 13
 
 **替代接口：** LaunchMode
@@ -61,8 +55,6 @@ REPLACE
 ```
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 13
 

@@ -4,14 +4,12 @@ Defines the button attributes and events.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from '@kit.ArkUI';
+import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## action
@@ -24,29 +22,9 @@ Click callback of the button.By default, no operation is performed.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## action
-
-```TypeScript
-action?: VoidCallback
-```
-
-Set the button callback.
-
-**Type:** VoidCallback
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,11 +36,9 @@ fontColor?: ResourceColor
 
 Font color of the button text.Default value: **\$r('sys.color.ohos_id_color_text_primary_activated')**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +58,6 @@ Font size of the button text.Default value: **\$r('sys.float.ohos_id_text_size_b
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -98,11 +72,9 @@ text: ResourceStr
 
 Text of the button.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

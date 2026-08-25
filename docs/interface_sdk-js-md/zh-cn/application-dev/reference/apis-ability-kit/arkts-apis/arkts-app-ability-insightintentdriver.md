@@ -9,8 +9,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -20,7 +18,7 @@
 ## 导入模块
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -36,7 +34,6 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md) |
 | [getInsightIntentInfoByFilter](arkts-ability-insightintentdriver-getinsightintentinfobyfilter-f-sys.md) |
 | [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md) |
-| [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md) |
 | [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md) |
 <!--DelEnd-->
 

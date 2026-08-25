@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## subscribe
@@ -17,8 +17,6 @@ function subscribe(capability: OnscreenAwarenessCap,
 Enables proactive awareness on screen content and subscribes to a screen awareness result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
@@ -47,31 +45,3 @@ Enables proactive awareness on screen content and subscribes to a screen awarene
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [34000001](../errorcode-onScreen.md#34000001-service-exception) |
 | [34000002](../errorcode-onScreen.md#34000002-unsupported-application-or-page) |
-
-**Examples**
-
-```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
-let onscreenAwarenessCap: onScreen.OnscreenAwarenessCap = {
-   capList: [
-      'contentUiTree',
-      'scenarioReading'
-   ],
-   description: 'reading scenario'
-}
-
-let onscreenAwarenessOptions: onScreen.OnscreenAwarenessOptions = {
-   parameters: {
-      "windowId": 12,
-      "controlByPolicy": 1
-   } as Record<string, Object>
-}
-
-try {
-   onScreen.subscribe(onscreenAwarenessCap, (info: onScreen.OnscreenAwarenessInfo) => {
-      console.info(`subscribe resultCode: ${info.resultCode}`);
-   }, onscreenAwarenessOptions);
-} catch (err) {
-   console.error('subscribe failed, errCode = ' + err.code);
-}
-```

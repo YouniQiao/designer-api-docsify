@@ -7,14 +7,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## 汇总
@@ -31,10 +29,10 @@ import { vpn } from '@kit.NetworkKit';
 | [getConnectedVpnAppInfo(VPN管理)](arkts-network-vpn-getconnectedvpnappinfo-f-sys.md) |
 | [getSysVpnConfig(VPN管理)](arkts-network-vpn-getsysvpnconfig-f-sys.md) |
 | [getSysVpnConfigList(VPN管理)](arkts-network-vpn-getsysvpnconfiglist-f-sys.md) |
-| [off(VPN管理)](arkts-network-vpn-off-f-sys.md#offconnect) |
-| [off(VPN管理)](arkts-network-vpn-off-f-sys.md#offconnectmulti) |
-| [on(VPN管理)](arkts-network-vpn-on-f-sys.md#onconnect) |
-| [on(VPN管理)](arkts-network-vpn-on-f-sys.md#onconnectmulti) |
+| off(VPN管理) |
+| off(VPN管理) |
+| on(VPN管理) |
+| on(VPN管理) |
 <!--DelEnd-->
 
 <!--Del-->

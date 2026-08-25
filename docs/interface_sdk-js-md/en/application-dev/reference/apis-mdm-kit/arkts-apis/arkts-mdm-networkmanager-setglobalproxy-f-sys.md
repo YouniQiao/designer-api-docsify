@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setGlobalProxy
@@ -15,8 +15,6 @@ function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy, callback: 
 Sets the global network proxy. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -48,65 +46,6 @@ Sets the global network proxy. This API uses an asynchronous callback to return 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { connection } from '@kit.NetworkKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-let exclusionStr: string = "192.168,baidu.com"
-let exclusionArray: Array<string> = exclusionStr.split(',');
-let httpProxy: connection.HttpProxy = {
-  host: "192.168.xx.xxx",
-  port: 8080,
-  exclusionList: exclusionArray
-};
-
-networkManager.setGlobalProxy(wantTemp, httpProxy, (err) => {
-  if (err) {
-    console.error(`Failed to set network global proxy. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in setting network global proxy`);
-});
-```
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { connection } from '@kit.NetworkKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace with actual values.
-let exclusionStr: string = "192.168,baidu.com"
-let exclusionArray: Array<string> = exclusionStr.split(',');
-let httpProxy: connection.HttpProxy = {
-  host: "192.168.xx.xxx",
-  port: 8080,
-  exclusionList: exclusionArray
-};
-
-networkManager.setGlobalProxy(wantTemp, httpProxy).then(() => {
-  console.info(`Succeeded in setting network global proxy`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set network global proxy. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## setGlobalProxy
 
@@ -117,8 +56,6 @@ function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy): Promise<v
 Sets the global network proxy. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -154,7 +91,3 @@ Sets the global network proxy. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [setGlobalProxy](#setglobalproxy)

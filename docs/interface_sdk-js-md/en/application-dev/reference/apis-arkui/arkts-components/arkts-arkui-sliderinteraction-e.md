@@ -1,11 +1,9 @@
 # SliderInteraction
 
 Interaction mode between the user and the slider.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) |Description | | ------ | -- | ----------------------------- | | [SLIDE_AND_CLICK](#slide_and_click) | 0 | Users can drag the slider or touch the track to move the slider. The slider moves as soon as the mouse or finger is pressed.| | [SLIDE_ONLY](#slide_only) | 1 | Users are not allowed to move the slider by touching the slider.| | [SLIDE_AND_CLICK_UP](#slide_and_click_up) | 2 |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) |Description | | ------ | -- | ----------------------------- | | [SLIDE_AND_CLICK](arkts-arkui-sliderinteraction-e.md) | 0 | Users can drag the slider or touch the track to move the slider. The slider moves as soon as the mouse or finger is pressed.| | [SLIDE_ONLY](arkts-arkui-sliderinteraction-e.md) | 1 | Users are not allowed to move the slider by touching the slider.| | [SLIDE_AND_CLICK_UP](arkts-arkui-sliderinteraction-e.md) | 2 |
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,8 +16,6 @@ SLIDE_AND_CLICK = 0
 Users can drag the slider or touch the track to move the slider. The slider moves as soon as the mouse or finger is pressed.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ Users are not allowed to move the slider by touching the slider.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -54,8 +48,6 @@ SLIDE_AND_CLICK_UP = 2
 Users can drag the slider or touch the track to move the slider. The slider moves when the mouse is released or finger is lifted, if the release/lift position coincides with the screen press position.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

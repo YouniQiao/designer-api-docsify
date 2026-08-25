@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundle } from '@kit.AbilityKit';
+import { distributedBundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRemoteAbilityInfo
@@ -15,8 +15,6 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 Obtains the information about the remote ability that matches the given element name. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -45,8 +43,6 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 Obtains the information about the remote ability that matches the given element name. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

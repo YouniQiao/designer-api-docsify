@@ -4,8 +4,6 @@ Defines the device status information. It describes the current status of the co
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the device status information. It describes the current status of the co
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## deviceKey
@@ -27,8 +25,6 @@ Key device information. It uniquely identifies a device, including the device ID
 **Type:** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Device model information. It identifies the device model, such as the product mo
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -67,8 +61,6 @@ Device name. It is the name or alias of a device, and is displayed to the user i
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Device user name. It is the display name of the current user on the device, and 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -108,8 +98,6 @@ Device online status. The value **true** indicates that the device is online and
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -119,16 +107,14 @@ Device online status. The value **true** indicates that the device is online and
 ## supportedBusinessIds
 
 ```TypeScript
-supportedBusinessIds: int[]
+supportedBusinessIds: number[]
 ```
 
 List of service IDs supported by the device. It indicates the service scenarios supported by the device, such as unlocking the screen lock and unlocking the application lock. The service scenarios supported by a device vary depending on the authentication security.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Configures the web dark mode, which controls the dark theme display of web conte
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Off
@@ -17,8 +15,6 @@ Off = 0
 The web dark mode is disabled.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ The web dark mode is enabled.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -49,8 +43,6 @@ Auto = 2
 The Web dark mode follows the system. This mode is applicable to scenarios where the Web component theme needs to stay consistent with the system. It is recommended to use this mode to provide a consistent user experience.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

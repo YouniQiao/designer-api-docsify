@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ TONE_TYPE_DIAL_0 = 0
 键0的DTMF音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -36,8 +32,6 @@ TONE_TYPE_DIAL_1 = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ TONE_TYPE_DIAL_2 = 2
 键2的DTMF音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -68,8 +60,6 @@ TONE_TYPE_DIAL_3 = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ TONE_TYPE_DIAL_4 = 4
 键4的DTMF音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -100,8 +88,6 @@ TONE_TYPE_DIAL_5 = 5
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +101,6 @@ TONE_TYPE_DIAL_6 = 6
 键6的DTMF音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -132,8 +116,6 @@ TONE_TYPE_DIAL_7 = 7
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -147,8 +129,6 @@ TONE_TYPE_DIAL_8 = 8
 键8的DTMF音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -164,8 +144,6 @@ TONE_TYPE_DIAL_9 = 9
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -179,8 +157,6 @@ TONE_TYPE_DIAL_S = 10
 键*的DTMF音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -196,8 +172,6 @@ TONE_TYPE_DIAL_P = 11
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -211,8 +185,6 @@ TONE_TYPE_DIAL_A = 12
 键A的DTMF音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -228,8 +200,6 @@ TONE_TYPE_DIAL_B = 13
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -243,8 +213,6 @@ TONE_TYPE_DIAL_C = 14
 键C的DTMF音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -260,8 +228,6 @@ TONE_TYPE_DIAL_D = 15
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -275,8 +241,6 @@ TONE_TYPE_COMMON_SUPERVISORY_DIAL = 100
 呼叫监管音调，拨号音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -292,8 +256,6 @@ TONE_TYPE_COMMON_SUPERVISORY_BUSY = 101
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -307,8 +269,6 @@ TONE_TYPE_COMMON_SUPERVISORY_CONGESTION = 102
 呼叫监管音调，拨号音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -324,8 +284,6 @@ TONE_TYPE_COMMON_SUPERVISORY_RADIO_ACK = 103
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -339,8 +297,6 @@ TONE_TYPE_COMMON_SUPERVISORY_RADIO_NOT_AVAILABLE = 104
 呼叫监管音调，无线电不可用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -356,8 +312,6 @@ TONE_TYPE_COMMON_SUPERVISORY_CALL_WAITING = 106
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -371,8 +325,6 @@ TONE_TYPE_COMMON_SUPERVISORY_RINGTONE = 107
 呼叫监管音调，铃声。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -388,8 +340,6 @@ TONE_TYPE_COMMON_SUPERVISORY_CALL_HOLDING = 108
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -403,8 +353,6 @@ TONE_TYPE_COMMON_PROPRIETARY_BEEP = 200
 专有声调，一般蜂鸣声。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
@@ -420,8 +368,6 @@ TONE_TYPE_COMMON_PROPRIETARY_ACK = 201
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -436,8 +382,6 @@ TONE_TYPE_COMMON_PROPRIETARY_PROMPT = 203
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 
 **系统接口：** 此接口为系统接口。
@@ -451,8 +395,6 @@ TONE_TYPE_COMMON_PROPRIETARY_DOUBLE_BEEP = 204
 专有声调，双重蜂鸣声。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Tone
 

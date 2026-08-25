@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
@@ -11,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Notification, ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
+import { Notification, ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit';
 ```
 
 ## abilityName
@@ -25,8 +23,6 @@ Name of the application ability to which the notification will be redirected aft
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 
@@ -44,8 +40,6 @@ Name of the application bundle to which the notification will be redirected afte
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 7
 
 **System capability:** SystemCapability.Notification.Notification
@@ -61,8 +55,6 @@ URI of the page to be redirected to.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 7
 

@@ -7,8 +7,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 
 **系统接口：** 此接口为系统接口。
@@ -16,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragInteraction } from '@kit.ArkUI';
+import { dragInteraction } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -27,10 +25,8 @@ import { dragInteraction } from '@kit.ArkUI';
 | 名称 |
 | --- |
 | [getDataSummary](arkts-arkui-draginteraction-getdatasummary-f-sys.md) |
-| [off](arkts-arkui-draginteraction-off-f-sys.md#offdrag) |
-| [offDragStateChange](arkts-arkui-draginteraction-offdragstatechange-f-sys.md) |
-| [on](arkts-arkui-draginteraction-on-f-sys.md#ondrag) |
-| [onDragStateChange](arkts-arkui-draginteraction-ondragstatechange-f-sys.md) |
+| [off](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) |
+| [on](../../apis-test-kit/arkts-apis/arkts-test-uitest-driver-c.md#drag) |
 | [setAppDragSwitchState](arkts-arkui-draginteraction-setappdragswitchstate-f-sys.md) |
 | [setDragSwitchState](arkts-arkui-draginteraction-setdragswitchstate-f-sys.md) |
 <!--DelEnd-->

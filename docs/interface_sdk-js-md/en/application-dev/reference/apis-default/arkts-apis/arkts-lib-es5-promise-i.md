@@ -2,8 +2,6 @@
 
 Represents the completion of an asynchronous operation
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -16,8 +14,6 @@ catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TRes
 ```
 
 Attaches a callback for only the rejection of the Promise.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -36,8 +32,6 @@ then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | Pro
 ```
 
 Attaches callbacks for the resolution and/or rejection of the Promise.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

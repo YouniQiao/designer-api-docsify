@@ -4,14 +4,12 @@ Represents the extension information of an input method.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtraConfig } from '@kit.IMEKit';
+import { InputMethodExtraConfig } from 'kits/@kit.IMEKit';
 ```
 
 ## customSettings
@@ -25,7 +23,5 @@ Input method extension information, which is used to store custom key-value pair
 **Type:** Record&lt;string, [CustomValueType](arkts-ime-customvaluetype-t.md)&gt;
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

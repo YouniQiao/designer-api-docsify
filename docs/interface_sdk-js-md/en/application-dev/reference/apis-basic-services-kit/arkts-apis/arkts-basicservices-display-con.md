@@ -10,8 +10,6 @@ Indicates the scaling factor for the animation duration.<p>This affects the star
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -26,21 +24,17 @@ Specifies whether automatic screen brightness adjustment is enabled.<p>If the va
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## AUTO_SCREEN_BRIGHTNESS_MODE
 
 ```TypeScript
-const AUTO_SCREEN_BRIGHTNESS_MODE: int
+const AUTO_SCREEN_BRIGHTNESS_MODE: number
 ```
 
 Indicates the value of {@code AUTO_SCREEN_BRIGHTNESS} when automatic screen brightness adjustment is used.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -53,8 +47,6 @@ const DEFAULT_SCREEN_ROTATION: string
 Indicates the screen rotation when no other policy is available.<p>This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following values are available:&lt;ul&gt; &lt;li&gt;{@code 0} - The screen rotates 0 degrees. &lt;li&gt;{@code 1} - The screen rotates 90 degrees. &lt;li&gt;{@code 2} - The screen rotates 180 degrees. &lt;li&gt;{@code 3} - The screen rotates 270 degrees. &lt;/ul&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
@@ -70,8 +62,6 @@ Specifies whether display color inversion is enabled.<p>If the value is {@code 1
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Deprecated since:** 21
 
 **System capability:** SystemCapability.Applications.Settings.Core
@@ -86,21 +76,17 @@ Indicates the scaling factor of fonts, which is a float number.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## MANUAL_SCREEN_BRIGHTNESS_MODE
 
 ```TypeScript
-const MANUAL_SCREEN_BRIGHTNESS_MODE: int
+const MANUAL_SCREEN_BRIGHTNESS_MODE: number
 ```
 
 Indicates the value of {@code AUTO_SCREEN_BRIGHTNESS} when manual screen brightness adjustment is used.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Applications.Settings.Core
 
@@ -114,8 +100,6 @@ Indicates the screen brightness. The value ranges from 0 to 255.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## SCREEN_OFF_TIMEOUT
@@ -128,8 +112,6 @@ Indicates the duration that the device waits before going to sleep after a perio
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Applications.Settings.Core
 
 ## TRANSITION_ANIMATION_SCALE
@@ -141,8 +123,6 @@ const TRANSITION_ANIMATION_SCALE: string
 Indicates the scaling factor for transition animations. If the value is {@code 0}, transition animations are disabled.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 
@@ -157,8 +137,6 @@ const WINDOW_ANIMATION_SCALE: string
 Indicates the scaling factor for normal window animations. If the value is {@code 0}, window animations are disabled.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Deprecated since:** 21
 

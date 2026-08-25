@@ -1,10 +1,8 @@
 # OsAccountSubProfileEvent (System API)
 
-Enumerates the events of an OS account sub-profile.
+Enumerates OS account sub-profile events.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -16,11 +14,9 @@ Enumerates the events of an OS account sub-profile.
 CREATED = 0
 ```
 
-CREATED event. Triggered when an OS account sub-profile creation is completed.
+A sub-profile has been created. This event is triggered when an OS account sub-profile is created.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +30,9 @@ CREATED event. Triggered when an OS account sub-profile creation is completed.
 DELETED = 1
 ```
 
-DELETED event. Triggered when an OS account sub-profile deletion is completed.
+A sub-profile has been deleted. This event is triggered when an OS account sub-profile is deleted.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,11 +46,9 @@ DELETED event. Triggered when an OS account sub-profile deletion is completed.
 SWITCHING = 2
 ```
 
-SWITCHING event. Triggered when an OS account sub-profile switch is about to happen.
+A sub-profile is about to be switched. This event is triggered when the switching of an OS account sub-profile starts.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +62,9 @@ SWITCHING event. Triggered when an OS account sub-profile switch is about to hap
 SWITCHED = 3
 ```
 
-SWITCHED event. Triggered when an OS account sub-profile switch is completed.
+A sub-profile has been switched. This event is triggered when the switching of an OS account sub-profile is complete.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

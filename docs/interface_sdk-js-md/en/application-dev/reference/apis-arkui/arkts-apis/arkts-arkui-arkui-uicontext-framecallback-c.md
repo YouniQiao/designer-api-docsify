@@ -10,17 +10,15 @@ Implements the API for setting the task that needs to be executed during the nex
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## onFrame
@@ -32,8 +30,6 @@ onFrame(frameTimeInNano: number): void
 Called when the next frame is rendered.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,46 +43,6 @@ Called when the next frame is rendered.
 | --- | --- | --- |
 | frameTimeInNano | number | Yes |
 
-**Examples**
-
-```TypeScript
-import { FrameCallback } from '@kit.ArkUI';
-
-class MyFrameCallback extends FrameCallback {
-  private tag: string;
-
-  constructor(tag: string) {
-    super();
-    this.tag = tag;
-  }
-
-  onFrame(frameTimeNanos: number) {
-    console.info('MyFrameCallback ' + this.tag + ' ' + frameTimeNanos.toString());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button('Invoke postFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postFrameCallback(new MyFrameCallback("normTask"));
-          })
-        Button('Invoke postDelayedFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postDelayedFrameCallback(new MyFrameCallback("delayTask"), 5);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## onIdle
 
 ```TypeScript
@@ -96,8 +52,6 @@ onIdle(timeLeftInNano: number): void
 Called after the rendering of the subsequent frame has finished and there is more than 1 millisecond left before the next VSync signal. If the time left is not more than 1 millisecond, the execution of this API will be deferred to a later frame.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,43 +64,3 @@ Called after the rendering of the subsequent frame has finished and there is mor
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | timeLeftInNano | number | Yes |
-
-**Examples**
-
-```TypeScript
-import { FrameCallback } from '@kit.ArkUI';
-
-class MyIdleCallback extends FrameCallback {
-  private tag: string;
-
-  constructor(tag: string) {
-    super();
-    this.tag = tag;
-  }
-
-  onIdle(timeLeftInNano: number) {
-    console.info('MyIdleCallback ' + this.tag + ' ' + timeLeftInNano.toString());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button('Invoke postFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postFrameCallback(new MyIdleCallback("normTask"));
-          })
-        Button('Invoke postDelayedFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postDelayedFrameCallback(new MyIdleCallback("delayTask"), 5);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

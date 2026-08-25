@@ -4,8 +4,6 @@ Interface for distance measurement result @interface DistanceMeasurementResponse
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Interface for distance measurement result @interface DistanceMeasurementResponse
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## confidence
@@ -27,8 +25,6 @@ indicates confidence of distance measurement
 **Type:** float
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ indicates the ID of the remote ranging device
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -68,8 +62,6 @@ indicates distance result
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -87,8 +79,6 @@ indicates distance rank
 **Type:** [DistanceRank](arkts-multimodalawareness-spatialawareness-distancerank-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

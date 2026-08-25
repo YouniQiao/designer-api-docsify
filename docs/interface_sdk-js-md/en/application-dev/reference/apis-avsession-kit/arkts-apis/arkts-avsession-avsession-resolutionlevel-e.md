@@ -4,8 +4,6 @@ The defination of suggested resolution.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## RESOLUTION_480P
@@ -17,8 +15,6 @@ RESOLUTION_480P = 0
 Defination of 480P which typically resolution is 640*480.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -34,8 +30,6 @@ Defination of 720P which typically resolution is 1280*720.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -49,8 +43,6 @@ RESOLUTION_1080P = 2
 Defination of 1080P which typically resolution is 1920*1080.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -66,8 +58,6 @@ Defination of 2K which typically resolution is 2560*1440.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -81,8 +71,6 @@ RESOLUTION_4K = 4
 Defination of 4K which typically resolution is 4096*3840.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

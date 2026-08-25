@@ -9,8 +9,6 @@ Called before scroll to allow developer to control real offset the Scrollable ca
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -23,7 +21,7 @@ Called before scroll to allow developer to control real offset the Scrollable ca
 | --- | --- | --- |
 | scrollOffset | number | Yes |
 | scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes |
-| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-enums-scrollsource-e.md) | Yes |
+| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-scrollsource-e.md) | Yes |
 
 **Return value:**
 

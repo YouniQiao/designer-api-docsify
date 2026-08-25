@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'kits/@kit.TelephonyKit';
 ```
 
 ## onGetSimActiveState
 
 ```TypeScript
-function onGetSimActiveState(slotId: int, callback: Callback<boolean>): void
+function onGetSimActiveState(slotId: number, callback: Callback<boolean>): void
 ```
 
 SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -26,7 +24,7 @@ SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
@@ -38,16 +36,3 @@ SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let slotId = 0;
-let simActiveState: Callback<boolean> = (isSimActive: boolean) => {
-    console.info(`simActiveState slotId ${JSON.stringify(isSimActive)}`);
-}
-observer.onGetSimActiveState(slotId, simActiveState);
-```

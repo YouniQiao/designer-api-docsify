@@ -4,8 +4,6 @@ Enumerates the camera error codes,which are returned when an API call is incorre
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## DEVICE_FREQUENTLY_SWITCHED
@@ -17,8 +15,6 @@ DEVICE_FREQUENTLY_SWITCHED = 7400111
 Camera frequently switched.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -33,8 +29,6 @@ CAMERA_LENS_RETRACTED = 7400112
 Camera lens retracted.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

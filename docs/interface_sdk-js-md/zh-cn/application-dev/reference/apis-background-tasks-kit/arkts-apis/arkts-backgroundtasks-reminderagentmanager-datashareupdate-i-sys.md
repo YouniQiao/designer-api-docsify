@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## equalTo
 
 ```TypeScript
-equalTo: Record<string, double | string | boolean>
+equalTo: Record<string, number | string | boolean>
 ```
 
 指示筛选条件，当前仅支持通过等于筛选。
 
-**类型：** ArkTS-Dyn: Record&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：Record&lt;string, double \| string \| boolean&gt;
+**类型：** Record&lt;string, number \| string \| boolean&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -46,8 +42,6 @@ uri: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ value: ValuesBucket
 **类型：** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 

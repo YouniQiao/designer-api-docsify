@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getMinWidthSync
 
 ```TypeScript
-function getMinWidthSync(): int
+function getMinWidthSync(): number
 ```
 
 获取壁纸的最小宽度值。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -26,24 +24,10 @@ function getMinWidthSync(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let minWidth = wallpaper.getMinWidthSync();
-    console.info(`success to getMinWidthSync: ${JSON.stringify(minWidth)}`);
-} catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to getMinWidthSync. Code: ${err.code}, message: ${err.message}`);
-}
-```

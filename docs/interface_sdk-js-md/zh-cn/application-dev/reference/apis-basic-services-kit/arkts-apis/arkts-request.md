@@ -6,7 +6,7 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setPortRoles
@@ -15,8 +15,6 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 设置指定的端口支持的角色模式，包含充电角色、数据传输角色。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -31,7 +29,7 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
-| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | 是 |
+| powerRole | [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md) | 是 |
 | dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | 是 |
 
 **返回值：**
@@ -39,14 +37,3 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-```TypeScript
-let portId = 1;
-usb.setPortRoles(portId, usb.PowerRoleType.SOURCE, usb.DataRoleType.HOST).then(() => {
-    console.info('usb setPortRoles successfully.');
-}).catch((err : BusinessError) => {
-    console.error('usb setPortRoles failed: ' + err.code + ' message: ' + err.message);
-});
-```

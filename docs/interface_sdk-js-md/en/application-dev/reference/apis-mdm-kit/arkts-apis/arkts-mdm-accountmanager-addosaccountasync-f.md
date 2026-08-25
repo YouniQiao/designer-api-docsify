@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addOsAccountAsync
@@ -19,8 +19,6 @@ Adds an account in the background. This API uses a promise to return the result.
 > for the asynchronous return of this API.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
@@ -51,24 +49,3 @@ Adds an account in the background. This API uses a promise to return the result.
 | [9201003](../errorcode-enterpriseDeviceManager.md#9201003-failed-to-add-an-account) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError, osAccount } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-accountManager.addOsAccountAsync(wantTemp, "TestAccountName", osAccount.OsAccountType.NORMAL).then((info) => {
-  console.info(`Succeeded in creating os account: ${JSON.stringify(info)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to creating os account. Code: ${err.code}, message: ${err.message}`);
-});
-```

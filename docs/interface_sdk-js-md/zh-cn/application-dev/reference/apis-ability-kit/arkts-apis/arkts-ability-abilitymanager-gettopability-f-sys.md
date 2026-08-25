@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getTopAbility
@@ -15,8 +15,6 @@ function getTopAbility(): Promise<ElementName>
 获取窗口焦点所在的Ability。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -35,33 +33,6 @@ function getTopAbility(): Promise<ElementName>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-abilityManager.getTopAbility((err: BusinessError | null, data) => {
-  if (err) {
-    console.error(`getTopAbility fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`getTopAbility success, data: ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-abilityManager.getTopAbility().then(() => {
-  console.info(`getTopAbility success}`);
-}).catch((e: Error) => {
-  let err = e as BusinessError;
-  console.error(`getTopAbility fail, err: ${JSON.stringify(err)}`);
-});
-```
-
 
 ## getTopAbility
 
@@ -72,8 +43,6 @@ function getTopAbility(callback: AsyncCallback<ElementName>): void
 获取窗口焦点所在的Ability。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -92,7 +61,3 @@ function getTopAbility(callback: AsyncCallback<ElementName>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [getTopAbility](#gettopability)

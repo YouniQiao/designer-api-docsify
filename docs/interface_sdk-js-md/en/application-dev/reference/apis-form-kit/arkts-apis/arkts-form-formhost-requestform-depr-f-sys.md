@@ -15,8 +15,6 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [requestForm](arkts-form-formhost-requestform-f-sys.md)
@@ -34,30 +32,6 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 | formId | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.requestForm(formId, (error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost requestForm, error: ${JSON.stringify(error)}`);
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.requestForm(formId).then(() => {
-  console.info('formHost requestForm success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost requestForm, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## requestForm
 
@@ -68,8 +42,6 @@ function requestForm(formId: string): Promise<void>
 Requests a widget update. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -92,7 +64,3 @@ Requests a widget update. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [requestForm](#requestform)

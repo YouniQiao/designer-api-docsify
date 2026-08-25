@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## publish
@@ -15,8 +15,6 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 Publishes a notification. This API uses an asynchronous callback to return the result.After a notification is published, it will be displayed as a notification widget in the device's notification center, status bar, etc. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -55,109 +53,6 @@ cancelAll cancels all
 | [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publish callback
-let publishCallback = (err: BusinessError): void => {
-  if (err) {
-    console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in publishing notification.`);
-  }
-}
-// NotificationRequest object
-let notificationRequest: notificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
-    }
-  }
-};
-notificationManager.publish(notificationRequest, publishCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// NotificationRequest object
-let notificationRequest: notificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
-    }
-  }
-};
-notificationManager.publish(notificationRequest).then(() => {
-  console.info(`Succeeded in publishing notification.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publish callback
-let publishCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("publish success");
-    }
-}
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-// NotificationRequest object
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
-        }
-    }
-};
-notificationManager.publish(notificationRequest, userId, publishCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
-        }
-    }
-};
-
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-
-notificationManager.publish(notificationRequest, userId).then(() => {
-    console.info("publish success");
-}).catch((err: BusinessError) => {
-    console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## publish
 
@@ -168,8 +63,6 @@ function publish(request: NotificationRequest): Promise<void>
 Publishes a notification. This API uses a promise to return the result.After a notification is published, it will be displayed as a notification card in the device's notification center, status bar, and other locations. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -212,7 +105,3 @@ cancelAll cancels all notifications of
 | [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) |
 | [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-
-**Examples**
-
-See [publish](#publish)

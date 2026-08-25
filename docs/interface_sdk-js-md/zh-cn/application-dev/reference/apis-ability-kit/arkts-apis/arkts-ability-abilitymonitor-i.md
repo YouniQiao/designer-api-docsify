@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onAbilityBackground
@@ -17,8 +15,6 @@ onAbilityBackground?: (ability: UIAbility) => void
 UIAbility对象状态变成后台时，触发该回调函数。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,8 +36,6 @@ UIAbility对象被创建时，触发该回调函数。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -61,8 +55,6 @@ onAbilityDestroy?: (ability: UIAbility) => void
 UIAbility对象被销毁前，触发该回调函数。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -84,8 +76,6 @@ UIAbility对象状态变成前台时，触发该回调函数。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -105,8 +95,6 @@ onWindowStageCreate?: (ability: UIAbility) => void
 当WindowStage实例被创建时，触发该回调函数。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -128,8 +116,6 @@ onWindowStageDestroy?: (ability: UIAbility) => void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -149,8 +135,6 @@ onWindowStageRestore?: (ability: UIAbility) => void
 当UIAbility跨端迁移时，目标端UIAbility恢复页面栈时，触发该回调函数。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -174,8 +158,6 @@ abilityName: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -192,33 +174,6 @@ moduleName?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function onAbilityCreateCallback(data: UIAbility) {
-  console.info(`onAbilityCreateCallback, data: ${JSON.stringify(data)}`);
-}
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityname',
-  moduleName: 'moduleName',
-  onAbilityCreate: onAbilityCreateCallback
-}
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.addAbilityMonitor(monitor, (err: BusinessError<void> | null) => {
-  if (err) {
-    console.error(`Failed to add ability monitor. Code: ${error.code}, message: ${error.message}`);
-  }
-})
-```

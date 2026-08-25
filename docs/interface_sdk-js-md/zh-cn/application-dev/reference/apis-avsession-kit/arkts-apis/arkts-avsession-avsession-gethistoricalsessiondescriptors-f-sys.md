@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getHistoricalSessionDescriptors
 
 ```TypeScript
-function getHistoricalSessionDescriptors(maxSize: int, callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void
+function getHistoricalSessionDescriptors(maxSize: number, callback: AsyncCallback<Array<Readonly<AVSessionDescriptor>>>): void
 ```
 
 获取所有已被销毁的会话相关描述。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -28,7 +26,7 @@ function getHistoricalSessionDescriptors(maxSize: int, callback: AsyncCallback<A
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| maxSize | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| maxSize | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Readonly&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md)&gt;&gt;&gt; | 是 |
 
 **错误码：**
@@ -40,46 +38,16 @@ function getHistoricalSessionDescriptors(maxSize: int, callback: AsyncCallback<A
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avSession.getHistoricalSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
-  console.info(`Succeeded in getting historical session descriptors, length: ${descriptors.length}`);
-  if (descriptors.length > 0 && descriptors[0]) {
-    console.info(`Succeeded in getting historical session descriptor, isActive: ${descriptors[0].isActive}`);
-    console.info(`Succeeded in getting historical session descriptor, type: ${descriptors[0].type}`);
-    console.info(`Succeeded in getting historical session descriptor, sessionTag: ${descriptors[0].sessionTag}`);
-    console.info(`Succeeded in getting historical session descriptor, sessionId: ${descriptors[0].sessionId}`);
-    console.info(`Succeeded in getting historical session descriptor, bundleName: ${descriptors[0].elementName.bundleName}`);
-  }
-});
-```
-
-```TypeScript
-avSession.getHistoricalSessionDescriptors(1, (descriptors: avSession.AVSessionDescriptor[]) => { 
-    console.info(`Succeeded in getting historical session descriptors, length: ${descriptors.length}`); 
-    if (descriptors.length > 0 ) { 
-      console.info(`Succeeded in getting historical session descriptor, isActive: ${descriptors[0].isActive}`); 
-      console.info(`Succeeded in getting historical session descriptor, type: ${descriptors[0].type}`); 
-      console.info(`Succeeded in getting historical session descriptor, sessionTag: ${descriptors[0].sessionTag}`); 
-      console.info(`Succeeded in getting historical session descriptor, sessionId: ${descriptors[0].sessionId}`); 
-      console.info(`Succeeded in getting historical session descriptor, bundleName: ${descriptors[0].elementName.bundleName}`); 
-    } 
-});
-```
-
 
 ## getHistoricalSessionDescriptors
 
 ```TypeScript
-function getHistoricalSessionDescriptors(maxSize?: int): Promise<Array<Readonly<AVSessionDescriptor>>>
+function getHistoricalSessionDescriptors(maxSize?: number): Promise<Array<Readonly<AVSessionDescriptor>>>
 ```
 
 获取所有已被销毁的会话相关描述。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -91,7 +59,7 @@ function getHistoricalSessionDescriptors(maxSize?: int): Promise<Array<Readonly<
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| maxSize | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| maxSize | number | 否 |
 
 **返回值：**
 
@@ -107,7 +75,3 @@ function getHistoricalSessionDescriptors(maxSize?: int): Promise<Array<Readonly<
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-参见 [getHistoricalSessionDescriptors](#gethistoricalsessiondescriptors)

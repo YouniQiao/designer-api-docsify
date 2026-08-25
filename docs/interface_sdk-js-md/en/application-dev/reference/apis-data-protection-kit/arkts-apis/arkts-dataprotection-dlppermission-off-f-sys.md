@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## off('uninstallDLPSandbox')
@@ -15,8 +15,6 @@ function off(type: 'uninstallDLPSandbox', listener?: Callback<DLPSandboxState>):
 Unsubscribes from the DLP sandbox uninstall event. After the API is successfully called, the application will no longer receive callback notifications for the DLP sandbox uninstall event.This API can be called only after a listener is registered using on.When the DLP management application exits or no longer needs to track sandbox status changes, unregister the listener to release resources.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -41,18 +39,3 @@ Unsubscribes from the DLP sandbox uninstall event. After the API is successfully
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.off('uninstallDLPSandbox', (info: dlpPermission.DLPSandboxState) => {
-    console.info('uninstallDLPSandbox event', info.appIndex, info.bundleName)
-  }); // Unsubscribe from the DLP sandbox application uninstall event.
-} catch (err) {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-}
-```

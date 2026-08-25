@@ -4,44 +4,38 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 ## 导入模块
 
 ```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
+import { infraredEmitter } from 'kits/@kit.InputKit';
 ```
 
 ## max
 
 ```TypeScript
-max: long
+max: number
 ```
 
 最大支持频率，单位：Hz。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
 ## min
 
 ```TypeScript
-min: long
+min: number
 ```
 
 最小支持频率，单位：Hz。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter

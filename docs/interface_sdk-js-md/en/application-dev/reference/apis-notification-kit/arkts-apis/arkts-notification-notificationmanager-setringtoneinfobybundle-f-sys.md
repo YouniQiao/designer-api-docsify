@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setRingtoneInfoByBundle
@@ -16,8 +16,6 @@ Sets the custom ringtone information for an application. This API uses a promise
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ Sets the custom ringtone information for an application. This API uses a promise
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | ringtoneInfo | [RingtoneInfo](arkts-notification-notificationmanager-ringtoneinfo-i-sys.md) | Yes |
 
 **Return value:**
@@ -46,36 +44,3 @@ Sets the custom ringtone information for an application. This API uses a promise
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    try {
-      let bundle: notificationManager.BundleOption = {
-        bundle: "bundleName",
-      };
-      let ringtoneInfo: notificationManager.RingtoneInfo = {
-        ringtoneType: notificationManager.RingtoneType.RINGTONE_TYPE_SYSTEM,
-        ringtoneTitle: "ringtoneName",
-        ringtoneFileName: "ringtonePath",
-        ringtoneUri: "ringtoneUri",
-      }
-      notificationManager.setRingtoneInfoByBundle(bundle, ringtoneInfo).then(() => {
-        console.info(`setRingtoneInfoByBundle bundle: ${JSON.stringify(bundle)}', ringtoneInfoJSON: ' ${JSON.stringify(ringtoneInfo)}`);
-      }).catch((err: BusinessError) => {
-         console.error(`setRingtoneInfoByBundle failed, code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      console.error(`setRingtoneInfoByBundle failed, code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```

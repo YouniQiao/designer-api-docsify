@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## authUkeyPin
@@ -15,8 +15,6 @@ function authUkeyPin(resourceId: string, params: Array<HuksExternalCryptoParam>)
 PIN码认证。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -51,34 +49,3 @@ PIN码认证。使用Promise异步回调。
 | [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) |
 | [12000022](../errorcode-huks.md#12000022-ukey-pin码错误) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
-
-**示例**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-function stringToUint8Array(str: string) {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let uid: number = 3511;
-const testResourceId = "{\"providerName\":\"testProviderName\", \"bundleName\":\"com.example.cryptoapplication\", \"abilityName\":\"CryptoExtension\",\"index\":{\"key\":\"testKey\"}}";
-const pin = "123456"; // 此处为示例，实际业务中应替换为真实的用户PIN码
-const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [
-  {
-    tag: huksExternalCrypto.HuksExternalCryptoTag.HUKS_EXT_CRYPTO_TAG_UID,
-    value: uid
-  }, {
-    tag: huksExternalCrypto.HuksExternalCryptoTag.HUKS_EXT_CRYPTO_TAG_UKEY_PIN,
-    value: stringToUint8Array(pin)
-  }
-];
-huksExternalCrypto.authUkeyPin(testResourceId, extProperties)
-    .then(() => {
-        console.info(`promise: authUkeyPin success`);
-    });
-```

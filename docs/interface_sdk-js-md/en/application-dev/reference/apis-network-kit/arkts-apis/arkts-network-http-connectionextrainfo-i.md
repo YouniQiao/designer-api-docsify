@@ -4,14 +4,12 @@ Defines the detailed information about the HTTP request interaction.
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## cipherSuite
@@ -25,8 +23,6 @@ Cipher suite used in the request. It is returned only when the TLS protocol is u
 **Type:** [CipherSuite](arkts-network-http-ciphersuite-t.md)
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Whether the local cache is hit in the request process. **true**: yes; **false**:
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -61,8 +55,6 @@ Whether to use a proxy in the request process. **true**: yes; **false**: no.
 **Type:** boolean
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +72,6 @@ Whether to reuse the connection in the request process. **true**: yes; **false**
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -97,8 +87,6 @@ IP address of the client in the request process.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +104,6 @@ Port number of the client in the request process. The value ranges from 1 to 655
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -133,8 +119,6 @@ HTTP version used in the [request](arkts-network-http-httprequest-i.md#request),
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,8 +136,6 @@ Number of redirections in the request process.
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -169,8 +151,6 @@ IP address of the server in the request process.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +168,6 @@ Port number of the server in the request process. The value ranges from 1 to 655
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -205,8 +183,6 @@ TLS version used in the request. It is returned only when the TLS protocol is us
 **Type:** [TlsVersion](arkts-network-http-tlsversion-e.md)
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

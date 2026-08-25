@@ -4,8 +4,6 @@ Describes wakeup intelligent voice engine callback information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes wakeup intelligent voice engine callback information.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## context
@@ -27,8 +25,6 @@ Describes wakeup event context.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -46,8 +42,6 @@ Wakeup event id.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Is success.
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

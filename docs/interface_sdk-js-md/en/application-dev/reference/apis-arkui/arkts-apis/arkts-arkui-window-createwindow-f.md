@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## createWindow
@@ -15,8 +15,6 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 Creates a child window or system window. This API uses an asynchronous callback to return the result.In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.In freeform window mode, the child window created uses an immersive layout when [decorEnabled](arkts-arkui-window-configuration-i.md) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 12+: ohos.permission.SYSTEM_FLOAT_WINDOW
@@ -46,65 +44,6 @@ Creates a child window or system window. This API uses an asynchronous callback 
 | [1300008](../errorcode-window.md#1300008-display-device-exception) |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
 
-**Examples**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let windowClass: window.Window | undefined = undefined;
-    let config: window.Configuration = {
-      name: "test",
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config, (err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-          return;
-        }
-        windowClass = data;
-        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(data));
-        windowClass.resize(500, 1000);
-      });
-    } catch (exception) {
-      console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    let config: window.Configuration = {
-      name: "test",
-      windowType: window.WindowType.TYPE_DIALOG,
-      ctx: this.context
-    };
-    try {
-      window.createWindow(config).then((value:window.Window) => {
-        console.info('Succeeded in creating the window. Data: ' + JSON.stringify(value));
-        value.resize(500, 1000);
-      }).catch((err:BusinessError)=> {
-        console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (exception) {
-      console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
-    }
-  }
-}
-```
-
 
 ## createWindow
 
@@ -115,8 +54,6 @@ function createWindow(config: Configuration): Promise<Window>
 Creates a child window or system window. This API uses a promise to return the result.In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.In freeform window mode, the child window created uses an immersive layout when [decorEnabled](arkts-arkui-window-configuration-i.md) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 12+: ohos.permission.SYSTEM_FLOAT_WINDOW
@@ -150,7 +87,3 @@ Creates a child window or system window. This API uses a promise to return the r
 | [1300006](../errorcode-window.md#1300006-abnormal-window-context) |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) |
 | [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
-
-**Examples**
-
-See [createWindow](#createwindow)

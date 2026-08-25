@@ -4,14 +4,12 @@ Serial port object, which provides information and communication capabilities of
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.BusManager.Serial
 
 ## Modules to Import
 
 ```TypeScript
-import { serial } from '@kit.BasicServicesKit';
+import { serial } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## close
@@ -23,8 +21,6 @@ close(): Promise<void>
 Closes the serial port device. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,6 @@ drain(): Promise<void>
 Waits until all write requests are complete. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,8 +77,6 @@ Flushes the serial port buffer. This API returns the result asynchronously throu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -112,8 +104,6 @@ getCts(): Promise<boolean>
 Obtains the CTS signal status. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,8 +133,6 @@ Obtains the DSR signal status. This API returns the result asynchronously throug
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -173,8 +161,6 @@ Cancels listening for data receiving events on the serial port.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -202,8 +188,6 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -230,8 +214,6 @@ onDataRead(callback: Callback<Uint8Array>): void
 Listens for data received by the serial port. This API uses an asynchronous callback to return the result. When [close](#close) is called, all callbacks are cleared.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -261,8 +243,6 @@ This interface is used to listen to the disconnection event of the USB virtual s
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -289,8 +269,6 @@ open(config?: SerialConfigs): Promise<void>
 Enables the port. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -328,8 +306,6 @@ Sends a BRK signal. This API returns the result asynchronously through a promise
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -357,8 +333,6 @@ setDtr(enable: boolean): Promise<void>
 Sets the DTR signal status. Use Promise asynchronous callbacks.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -394,8 +368,6 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -422,21 +394,13 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 
 ## write
 
-ArkTS-Dyn:
 ```TypeScript
 write(data: Uint8Array, timeout?: number): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-write(data: Uint8Array, timeout?: int): Promise<int>
 ```
 
 Sends data. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -447,13 +411,13 @@ Sends data. This API returns the result asynchronously through a promise.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | data | Uint8Array | Yes |
-| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| timeout | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -476,8 +440,6 @@ Serial port information.
 **Type:** [SerialPortInfo](arkts-basicservices-serial-serialportinfo-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

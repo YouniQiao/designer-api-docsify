@@ -2,8 +2,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -11,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## appUsagePriorityGroup
@@ -25,8 +23,6 @@ The usage priority group of the application.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ The bundle name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -61,8 +55,6 @@ The shortcut ID.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -80,8 +72,6 @@ The class name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -92,13 +82,11 @@ The class name.
 stateOccurredTime?: number
 ```
 
-The time when this state occurred, in milliseconds. <br> Unit:ms
+The time when this state occurred, in milliseconds. Unit:ms
 
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -115,8 +103,6 @@ The state type.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

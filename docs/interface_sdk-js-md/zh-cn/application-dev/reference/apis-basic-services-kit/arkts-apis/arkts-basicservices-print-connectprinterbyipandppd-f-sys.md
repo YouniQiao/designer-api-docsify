@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## connectPrinterByIpAndPpd
@@ -15,8 +15,6 @@ function connectPrinterByIpAndPpd(printerIp: string, protocol: string, ppdName: 
 通过打印机IP和ppd连接打印机。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 

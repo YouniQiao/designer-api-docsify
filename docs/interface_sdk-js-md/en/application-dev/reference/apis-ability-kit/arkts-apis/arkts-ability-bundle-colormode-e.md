@@ -7,8 +7,6 @@ Enumerates the color modes of applications and widgets.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** null
@@ -24,8 +22,6 @@ AUTO_MODE = -1
 Auto mode.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -43,8 +39,6 @@ Dark mode.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#color_mode_dark)
@@ -60,8 +54,6 @@ LIGHT_MODE = 1
 Light mode.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

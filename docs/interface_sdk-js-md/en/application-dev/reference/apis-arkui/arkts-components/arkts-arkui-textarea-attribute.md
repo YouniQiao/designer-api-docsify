@@ -6,8 +6,6 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Sets the auto-capitalization text mode. This API provides the capability, but ac
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -37,7 +33,7 @@ Sets the auto-capitalization text mode. This API provides the capability, but ac
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | [AutoCapitalizationMode](#autocapitalizationmode) | Yes |
+| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) | Yes |
 
 ## barState
 
@@ -49,8 +45,6 @@ Sets the scrollbar display mode.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -61,7 +55,7 @@ Sets the scrollbar display mode.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [BarState](#barstate) | Yes |
+| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes |
 
 ## caretColor
 
@@ -72,8 +66,6 @@ caretColor(value: ResourceColor)
 Sets the color of the caret in the text box.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -95,8 +87,6 @@ Sets the caret style.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -107,7 +97,7 @@ Sets the caret style.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [CaretStyle](#caretstyle) | Yes |
+| value | [CaretStyle](../arkts-apis/arkts-arkui-caretstyle-i.md) | Yes |
 
 ## compressLeadingPunctuation
 
@@ -124,8 +114,6 @@ Sets whether to enable leading punctuation compression.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -136,7 +124,7 @@ Sets whether to enable leading punctuation compression.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## contentType
 
@@ -147,8 +135,6 @@ contentType(contentType: ContentType)
 Sets the content type for autofill.<!--RP3--><!--RP3End-->
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,8 +158,6 @@ Sets whether the input text can be copied. If this attribute is set to **CopyOpt
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -190,14 +174,12 @@ Sets whether the input text can be copied. If this attribute is set to **CopyOpt
 customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: KeyboardOptions)
 ```
 
-Sets the custom keyboard.When a custom keyboard is set, activating the text box opens the specified custom component, instead of the system input method.The height of the custom keyboard can be set using the **height** property of the custom component's root node, while the width uses the system default value.The custom keyboard is presented by overlaying the original screen, which is not compressed or lifted if avoid mode is not enabled or avoidance is not needed for the text box.The custom keyboard cannot obtain the focus, but it blocks gesture events.By default, the custom keyboard is closed when the input component loses the focus. You can also use the [TextAreaController](arkts-arkui-textareacontroller-c.md).[stopEditing](arkts-arkui-textareacontroller-c.md#stopediting) API to close the keyboard.When setting a custom keyboard, you can bind the onKeyPrelme event to prevent input from the physical keyboard.From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
+Sets the custom keyboard.When a custom keyboard is set, activating the text box opens the specified custom component, instead of the system input method.The height of the custom keyboard can be set using the **height** property of the custom component's root node, while the width uses the system default value.The custom keyboard is presented by overlaying the original screen, which is not compressed or lifted if avoid mode is not enabled or avoidance is not needed for the text box.The custom keyboard cannot obtain the focus, but it blocks gesture events.By default, the custom keyboard is closed when the input component loses the focus. You can also use the [TextAreaController](arkts-arkui-textareacontroller-c.md).[stopEditing](arkts-arkui-textareacontroller-c.md#stopediting) API to close the keyboard.When setting a custom keyboard, you can bind the [onKeyPrelme](arkts-arkui-commonmethod-c.md#onkeypreime) event to prevent input from the physical keyboard.From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
 
 > **NOTE：**&gt;
 > This API cannot be called within attributeModifier.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -209,7 +191,7 @@ Sets the custom keyboard.When a custom keyboard is set, activating the text box 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | CustomBuilder \| ComponentContent \| undefined | Yes |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| ComponentContent \| undefined | Yes |
 | options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | No |
 
 ## decoration
@@ -222,8 +204,6 @@ Sets the color, type, and style of the text decorative line.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -234,7 +214,7 @@ Sets the color, type, and style of the text decorative line.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [TextDecorationOptions](../arkts-apis/arkts-arkui-common-textdecorationoptions-i.md) | Yes |
+| value | [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | Yes |
 
 ## editMenuOptions
 
@@ -247,8 +227,6 @@ Sets the extended options of the custom context menu on selection, including the
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -259,7 +237,7 @@ Sets the extended options of the custom context menu on selection, including the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| editMenu | [EditMenuOptions](#editmenuoptions) | Yes |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes |
 
 ## ellipsisMode
 
@@ -272,8 +250,6 @@ Sets the ellipsis position. For the settings to work, [textOverflow](#textoverfl
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -284,7 +260,7 @@ Sets the ellipsis position. For the settings to work, [textOverflow](#textoverfl
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | Optional & lt;EllipsisMode & gt; | Yes |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;EllipsisMode&gt; | Yes |
 
 ## enableAutoFill
 
@@ -295,8 +271,6 @@ enableAutoFill(value: boolean)
 Sets whether to enable autofill.<!--RP2--><!--RP2End--><!--RP6--><!--RP6End-->
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -320,8 +294,6 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -332,7 +304,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## enableHapticFeedback
 
@@ -343,8 +315,6 @@ enableHapticFeedback(isEnabled: boolean)
 Specifies whether to enable haptic feedback.To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -368,8 +338,6 @@ Sets whether to pop up the soft keyboard when the **TextArea** component obtains
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -392,8 +360,6 @@ Sets whether to enable preview text.The preview content is defined as a temporar
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -415,8 +381,6 @@ enableSelectedDataDetector(enable: boolean | undefined)
 Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition.When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default.This feature is only effective when CopyOptions is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -443,8 +407,6 @@ Sets the type of the Enter key.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -467,8 +429,6 @@ Adapts the line height to the actual text height for overlapped multi-line text.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -479,7 +439,7 @@ Adapts the line height to the actual text height for overlapped multi-line text.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## fontColor
 
@@ -490,8 +450,6 @@ fontColor(value: ResourceColor)
 Sets the font color.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -513,8 +471,6 @@ Sets the font family.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -534,8 +490,6 @@ fontFeature(value: string)
 Sets the font feature, for example, monospaced digits.Format: normal \| \&lt;feature-tag-value\&gt;Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,).For example, the input format for monospaced clock fonts is "ss01" on.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -559,8 +513,6 @@ Sets the text size.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -580,8 +532,6 @@ fontStyle(value: FontStyle)
 Sets the font style.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -603,8 +553,6 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -625,8 +573,6 @@ Enables half leading for text, which splits the leading equally between the top 
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -637,7 +583,7 @@ Enables half leading for text, which splits the leading equally between the top 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [halfLeading](#halfleading) | Optional & lt;boolean & gt; | Yes |
+| [halfLeading](#halfleading) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## heightAdaptivePolicy
 
@@ -649,8 +595,6 @@ Sets how the adaptive height is determined for the text.When this attribute is s
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -661,7 +605,7 @@ Sets how the adaptive height is determined for the text.When this attribute is s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-enums-textheightadaptivepolicy-e.md) | Yes |
+| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | Yes |
 
 ## horizontalScrolling
 
@@ -679,8 +623,6 @@ Sets whether to enable horizontal scrolling when the text is wider than the view
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -691,7 +633,7 @@ Sets whether to enable horizontal scrolling when the text is wider than the view
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## includeFontPadding
 
@@ -703,8 +645,6 @@ Sets whether to add spacing to the first and last lines to avoid text truncation
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -715,7 +655,7 @@ Sets whether to add spacing to the first and last lines to avoid text truncation
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| include | Optional & lt;boolean & gt; | Yes |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## inputFilter
 
@@ -726,8 +666,6 @@ inputFilter(value: ResourceStr, error?: (value: string) => void)
 Sets the regular expression for input filtering. Only inputs that comply with the regular expression can be displayed. Other inputs are filtered out.For single-character input scenarios, only single-character matching is supported; for multi-character input scenarios (such as pasting), string matching is supported.Starting from API version 11, setting **inputFilter** with a non-empty string invalidates the text filtering effect attached to the [type](#type) API.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -750,8 +688,6 @@ Sets the keyboard appearance for the text box. This setting takes effect only af
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -762,7 +698,7 @@ Sets the keyboard appearance for the text box. This setting takes effect only af
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| appearance | Optional & lt;KeyboardAppearance & gt; | Yes |
+| appearance | [Optional](arkts-arkui-optional-t.md)&lt;[KeyboardAppearance](../arkts-apis/arkts-arkui-keyboardappearance-e.md)&gt; | Yes |
 
 ## letterSpacing
 
@@ -773,8 +709,6 @@ letterSpacing(value: number | string | Resource)
 Sets the letter spacing for a text style. Percentage values follow default display behavior. If the value specified is **0**, the default value is used. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.If the value specified is a negative value, the text is compressed. A negative value too small may result in the text being compressed to 0 and no content being displayed.This setting applies to every character, including those at line endings.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -798,8 +732,6 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -810,7 +742,7 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| strategy | [LineBreakStrategy](#linebreakstrategy) | Yes |
+| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | Yes |
 
 ## lineHeight
 
@@ -821,8 +753,6 @@ lineHeight(value: number | string | Resource)
 Text line height. If the value is less than or equal to 0, the line height is not limited and the font size is adaptive.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -846,8 +776,6 @@ Sets the line spacing of the text. If the value specified is less than or equal 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -869,8 +797,6 @@ lineSpacing(value: LengthMetrics, options?: LineSpacingOptions)
 Sets the line spacing for text. When **LineSpacingOptions** is not specified, line spacing is applied above the first line and below the last line by default.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -895,8 +821,6 @@ Sets the maximum font scale factor for text.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -907,7 +831,7 @@ Sets the maximum font scale factor for text.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| scale | Optional & lt;number \ | Resource & gt; | Yes |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes |
 
 ## maxFontSize
 
@@ -918,8 +842,6 @@ maxFontSize(value: number | string | Resource)
 Sets the maximum font size. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.For the setting to take effect, this attribute must be used together with [minFontSize](#minfontsize) and [maxLines](#maxlines), or layout constraint settings.When the adaptive font size is used, the **fontSize** settings do not take effect.If the value of **maxFontSize** is less than or equal to 0 or is less than the value of **minFontSize**, the adaptive font sizing feature is disabled. In such cases, the [fontSize](#fontsize) attribute is used instead. If **fontSize** is not explicitly set, its default value will apply.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -943,8 +865,6 @@ Sets the maximum number of characters for text input. By default, there is no ma
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -967,8 +887,6 @@ Sets the maximum number of lines that can be displayed. When **textOverflow** is
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -988,11 +906,10 @@ maxLines(lines: number, options: MaxLinesOptions)
 ```
 
 Sets the maximum number of visible lines when used with [textOverflow](#textoverflow). Excess content can be truncated or made scrollable based on configuration. Without **textOverflow**:  
-- With focus in inline mode: Text exceeding the **maxLines** limit becomes scrollable. - Without focus in inline mode: **maxLines** has no effect.
+- With focus in inline mode: Text exceeding the **maxLines** limit becomes scrollable.  
+- Without focus in inline mode: **maxLines** has no effect.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1017,8 +934,6 @@ Sets the minimum font scale factor for text.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -1029,7 +944,7 @@ Sets the minimum font scale factor for text.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| scale | Optional & lt;number \ | Resource & gt; | Yes |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes |
 
 ## minFontSize
 
@@ -1040,8 +955,6 @@ minFontSize(value: number | string | Resource)
 Sets the minimum font size. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.For the setting to take effect, this attribute must be used together with [maxFontSize](#maxfontsize) and [maxLines](#maxlines), or layout constraint settings.When the adaptive font size is used, the **fontSize** settings do not take effect.If the value of **minFontSize** is less than or equal to 0, the adaptive font sizing feature is disabled. In such cases, the [fontSize](#fontsize) attribute is used instead. If **fontSize** is not explicitly set, its default value will apply.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1065,8 +978,6 @@ Sets the minimum number of lines displayed for the component. When constraintSiz
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1077,7 +988,7 @@ Sets the minimum number of lines displayed for the component. When constraintSiz
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [lines](../../apis-notification-kit/arkts-apis/arkts-notification-notificationcontent-notificationmultilinecontent-i.md) | Optional & lt;number & gt; | Yes |
+| [lines](../../apis-notification-kit/arkts-apis/arkts-notification-notificationcontent-notificationmultilinecontent-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 ## onChange
 
@@ -1085,11 +996,9 @@ Sets the minimum number of lines displayed for the component. When constraintSiz
 onChange(callback: EditableTextOnChangeCallback)
 ```
 
-Called when the input in the text box changes.In this callback, if caret operations are performed, you must adjust the caret logic based on the **previewText** parameter of EditableTextOnChangeCallback to ensure it works seamlessly within the preview display scenario.
+Called when the input in the text box changes.In this callback, if caret operations are performed, you must adjust the caret logic based on the **previewText** parameter of [EditableTextOnChangeCallback](../arkts-apis/arkts-arkui-editabletextonchangecallback-t.md) to ensure it works seamlessly within the preview display scenario.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1110,8 +1019,6 @@ onContentScroll(callback: (totalOffsetX: number, totalOffsetY: number) => void)
 Called when the text content is scrolled.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1135,8 +1042,6 @@ Called when a copy operation is performed.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1156,8 +1061,6 @@ onCut(callback: (value: string) => void)
 Called when a copy operation is performed.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1179,8 +1082,6 @@ Called when text is deleted.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1191,7 +1092,7 @@ Called when text is deleted.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Callback & lt;DeleteValue & gt; | Yes |
+| callback | Callback&lt;[DeleteValue](../arkts-apis/arkts-arkui-deletevalue-i.md)&gt; | Yes |
 
 ## onDidInsert
 
@@ -1203,8 +1104,6 @@ Called when text is inserted.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1215,7 +1114,7 @@ Called when text is inserted.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Callback & lt;InsertValue & gt; | Yes |
+| callback | Callback&lt;[InsertValue](../arkts-apis/arkts-arkui-insertvalue-i.md)&gt; | Yes |
 
 ## onEditChange
 
@@ -1226,8 +1125,6 @@ onEditChange(callback: (isEditing: boolean) => void)
 Called when the input state changes. The text box is in the editing state when it has the caret placed in it, and is in the non-editing state otherwise.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1251,8 +1148,6 @@ Called when a paste operation is performed.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1272,8 +1167,6 @@ onSubmit(callback: (enterKey: EnterKeyType) => void)
 Called when the Enter key on the soft keyboard is pressed.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1297,8 +1190,6 @@ Called when the Enter key on the soft keyboard is pressed, providing methods to 
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -1321,8 +1212,6 @@ Called when the text selection changes or the caret position changes during edit
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1341,12 +1230,10 @@ Called when the text selection changes or the caret position changes during edit
 onWillAttachIME(callback: Callback<IMEClient> | undefined)
 ```
 
-Called when the input box is about to be bound to an input method.<!--Del-->Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->From API version 22, the setExtraConfig method of IMEClient can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality.  
+Called when the input box is about to be bound to an input method.<!--Del-->Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig) API of **UIContext** to set the keyboard style.<!--DelEnd-->From API version 22, the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfig) method of [IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md) can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality.  
 **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1358,7 +1245,7 @@ Called when the input box is about to be bound to an input method.<!--Del-->Befo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Callback & lt;IMEClient & gt; \ | undefined | Yes |
+| callback | Callback&lt;[IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)&gt; \| undefined | Yes |
 
 ## onWillChange
 
@@ -1370,8 +1257,6 @@ Called when the text content is about to change.This callback is triggered after
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -1382,7 +1267,7 @@ Called when the text content is about to change.This callback is triggered after
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Callback & lt;EditableTextChangeValue, boolean & gt; | Yes |
+| callback | Callback&lt;[EditableTextChangeValue](../arkts-apis/arkts-arkui-editabletextchangevalue-i.md), boolean&gt; | Yes |
 
 ## onWillCopy
 
@@ -1393,8 +1278,6 @@ onWillCopy(callback: Callback<string, boolean>)
 Called before a copy operation is performed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1418,8 +1301,6 @@ Called before a cut operation is performed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1442,8 +1323,6 @@ Called when text is about to be deleted.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1454,7 +1333,7 @@ Called when text is about to be deleted.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Callback & lt;DeleteValue, boolean & gt; | Yes |
+| callback | Callback&lt;[DeleteValue](../arkts-apis/arkts-arkui-deletevalue-i.md), boolean&gt; | Yes |
 
 ## onWillInsert
 
@@ -1466,8 +1345,6 @@ Called when text is about to be inserted.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1478,7 +1355,7 @@ Called when text is about to be inserted.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Callback & lt;InsertValue, boolean & gt; | Yes |
+| callback | Callback&lt;[InsertValue](../arkts-apis/arkts-arkui-insertvalue-i.md), boolean&gt; | Yes |
 
 ## orphanCharOptimization
 
@@ -1491,8 +1368,6 @@ Sets whether to enable orphan character optimization during text layout. If this
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1501,7 +1376,7 @@ Sets whether to enable orphan character optimization during text layout. If this
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## placeholderColor
 
@@ -1512,8 +1387,6 @@ placeholderColor(value: ResourceColor)
 Sets the placeholder text color.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1538,8 +1411,6 @@ Placeholder text style, including the font size, font weight, font family, and f
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -1560,8 +1431,6 @@ Whether to enable punctuation overflow at line ends.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1572,7 +1441,7 @@ Whether to enable punctuation overflow at line ends.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enabled | Optional & lt;boolean & gt; | Yes |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## scrollBarColor
 
@@ -1583,8 +1452,6 @@ scrollBarColor(thumbColor: ColorMetrics | undefined)
 Sets the color of the scrollbar.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1608,8 +1475,6 @@ Sets the background color of the selected text. If the opacity is not set, a 20%
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1632,8 +1497,6 @@ Sets the drag preview style for text being dragged in the multi-line text box.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -1644,7 +1507,7 @@ Sets the drag preview style for text being dragged in the multi-line text box.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | SelectedDragPreviewStyle \| undefined | Yes |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | Yes |
 
 ## selectionMenuHidden
 
@@ -1655,8 +1518,6 @@ selectionMenuHidden(value: boolean)
 Sets whether to hide the system text selection menu.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1686,8 +1547,6 @@ Sets the text shader style, such as linear gradient or radial gradient.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1698,7 +1557,7 @@ Sets the text shader style, such as linear gradient or radial gradient.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| shader | ShaderStyle \| undefined | Yes |
+| shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) \| undefined | Yes |
 
 ## showCounter
 
@@ -1712,8 +1571,6 @@ Sets the character counter displayed when the number of characters entered excee
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1725,7 +1582,7 @@ Sets the character counter displayed when the number of characters entered excee
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | boolean | Yes |
-| options | [InputCounterOptions](../arkts-apis/arkts-arkui-common-inputcounteroptions-i.md) | No |
+| options | [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) | No |
 
 ## stopBackPress
 
@@ -1737,8 +1594,6 @@ Sets whether to prevent the back key event from being propagated.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -1749,7 +1604,7 @@ Sets whether to prevent the back key event from being propagated.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isStopped | Optional & lt;boolean & gt; | Yes |
+| isStopped | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## strokeColor
 
@@ -1761,8 +1616,6 @@ Sets the text stroke color.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1773,7 +1626,7 @@ Sets the text stroke color.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Optional & lt;ResourceColor & gt; | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## strokeJoinStyle
 
@@ -1786,8 +1639,6 @@ Sets the join style of the text stroke.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1798,7 +1649,7 @@ Sets the join style of the text stroke.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [strokeJoinStyle](#strokejoinstyle) | StrokeJoinStyle \| undefined | Yes |
+| [strokeJoinStyle](#strokejoinstyle) | [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md) \| undefined | Yes |
 
 ## strokeWidth
 
@@ -1810,8 +1661,6 @@ Sets the text stroke width.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1822,7 +1671,7 @@ Sets the text stroke width.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| width | Optional & lt;LengthMetrics & gt; | Yes |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes |
 
 ## style
 
@@ -1833,8 +1682,6 @@ style(value: TextContentStyle)
 Sets the polymorphic style of the text box. The inline input style is only available for the **TextAreaType.NORMAL** type.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1855,12 +1702,12 @@ textAlign(value: TextAlign)
 ```
 
 Sets the horizontal alignment of the text.Available options are **TextAlign.Start**, **TextAlign.Center**, and **TextAlign.End**. **TextAlign.JUSTIFY** is available since API version 11.The vertical position of the text paragraph can be controlled by the align attribute, but the horizontal position cannot be controlled by **align** in this component.  
-- **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top. - **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically. - **Alignment.BottomStart**, **Alignment.Bottom**, **Alignment.BottomEnd:** Content aligns to the bottom.  
+- **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top.  
+- **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically.  
+- **Alignment.BottomStart**, **Alignment.Bottom**, **Alignment.BottomEnd:** Content aligns to the bottom.  
 When **textAlign** is set to **TextAlign.JUSTIFY**, the text in the last line is horizontally aligned with the start edge.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1881,8 +1728,6 @@ textDirection(direction: TextDirection | undefined)
 Specifies the text layout direction. If this attribute is not set, the default text layout direction follows the component layout direction.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1906,8 +1751,6 @@ Sets the indent of the first line text.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1926,15 +1769,13 @@ Sets the indent of the first line text.
 textOverflow(value: TextOverflow)
 ```
 
-Sets the display mode when the text is too long.In inline style, the effect of truncating text according to [maxLines](#maxlines) only applies when **textOverflow** is set.Text is clipped at the transition between words. To clip text in the middle of a word, set wordBreak to **WordBreak.BREAK_ALL**.If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**, this attribute must be used with [maxLines](#maxlines) for the settings to take effect. **TextOverflow.None** produces the same effect as **TextOverflow.Clip**.
+Sets the display mode when the text is too number.In inline style, the effect of truncating text according to [maxLines](#maxlines) only applies when **textOverflow** is set.Text is clipped at the transition between words. To clip text in the middle of a word, set wordBreak to **WordBreak.BREAK_ALL**.If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**, this attribute must be used with [maxLines](#maxlines) for the settings to take effect. **TextOverflow.None** produces the same effect as **TextOverflow.Clip**.
 
 > **NOTE：**&gt;
 > The **TextArea** component does not support the **TextOverflow.MARQUEE** mode. If this attribute is set to
 > **TextOverflow.MARQUEE**, **TextOverflow.Clip** is used instead.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1946,7 +1787,7 @@ Sets the display mode when the text is too long.In inline style, the effect of t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [TextOverflow](#textoverflow) | Yes |
+| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | Yes |
 
 ## type
 
@@ -1957,8 +1798,6 @@ type(value: TextAreaType)
 Sets the text box type.Different **TextAreaType** values trigger corresponding keyboard types and enforce input restrictions.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1981,8 +1820,6 @@ wordBreak(value: WordBreak)
 Sets the word break rule. This attribute does not take effect for the placeholder text.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

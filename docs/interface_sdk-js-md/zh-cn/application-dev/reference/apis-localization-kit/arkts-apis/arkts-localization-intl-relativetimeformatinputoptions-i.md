@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#options)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## localeMatcher
@@ -29,8 +27,6 @@ localeMatcher?: string
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 20
 
@@ -52,8 +48,6 @@ numeric?: string
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 20
 
 **替代接口：** [Intl.RelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#numeric)
@@ -68,13 +62,11 @@ numeric?: string
 style?: string
 ```
 
-国际化消息的长度，取值包括："long", "short", "narrow"。默认值：long。不同取值的显示效果请参考[附录表24](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+国际化消息的长度，取值包括："number", "short", "narrow"。默认值：number。不同取值的显示效果请参考[附录表24](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 20
 

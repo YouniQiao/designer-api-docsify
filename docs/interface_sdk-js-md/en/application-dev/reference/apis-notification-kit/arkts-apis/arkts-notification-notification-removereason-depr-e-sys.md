@@ -4,8 +4,6 @@ Reason for removing the notification.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md)
@@ -24,8 +22,6 @@ The notification is removed after a click on it.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CLICK_REASON_REMOVE](arkts-notification-notificationsubscribe-removereason-e-sys.md#click_reason_remove)
@@ -43,8 +39,6 @@ CANCEL_REASON_REMOVE = 2
 The notification is removed by the user.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

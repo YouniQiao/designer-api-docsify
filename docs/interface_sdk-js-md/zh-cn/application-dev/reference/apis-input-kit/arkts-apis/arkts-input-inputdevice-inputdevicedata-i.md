@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## axisRanges
@@ -26,39 +24,33 @@ axisRanges: Array<AxisRange>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## bus
 
 ```TypeScript
-bus: int
+bus: number
 ```
 
 输入设备的总线类型，该值以输入设备上报为准。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## displayId
 
 ```TypeScript
-displayId?: int
+displayId?: number
 ```
 
 绑定的目标displayId。如果bindToDisplay接口没有调用过，则不填此值
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,16 +59,14 @@ displayId?: int
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 输入设备的唯一标识，同一个物理设备反复插拔，设备ID可能会发生变化。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -86,13 +76,11 @@ id: int
 isLocal?: boolean
 ```
 
-输入设备是否为本地设备。<br>true表示是本地设备，false表示是非本地设备。当该字段不存在时，默认值为false。
+输入设备是否为本地设备。true表示是本地设备，false表示是非本地设备。当该字段不存在时，默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -102,13 +90,11 @@ isLocal?: boolean
 isVirtual?: boolean
 ```
 
-输入设备是否为虚拟设备。<br>true表示是虚拟设备，false表示是非虚拟设备。当该字段不存在时，默认值为false。
+输入设备是否为虚拟设备。true表示是虚拟设备，false表示是非虚拟设备。当该字段不存在时，默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -124,8 +110,6 @@ name: string
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## phys
@@ -140,23 +124,19 @@ phys: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## product
 
 ```TypeScript
-product: int
+product: number
 ```
 
 输入设备的产品信息。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
@@ -172,8 +152,6 @@ sources: Array<SourceType>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## uniq
@@ -188,38 +166,32 @@ uniq: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## vendor
 
 ```TypeScript
-vendor: int
+vendor: number
 ```
 
 输入设备的厂商信息。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 ## version
 
 ```TypeScript
-version: int
+version: number
 ```
 
 输入设备的版本信息。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice

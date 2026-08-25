@@ -6,16 +6,14 @@ Defines a readable stream. You need to use [fileIo.createReadStream](../../../re
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## close
@@ -27,8 +25,6 @@ close(): void
 Closes this readable stream.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -43,74 +39,6 @@ Closes this readable stream.
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath);
-fs.close(file).then(() => {
-  console.info("close file succeed");
-}).catch((err: BusinessError) => {
-  console.error("close file failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath);
-fs.close(file, (err: BusinessError) => {
-  if (err) {
-    console.error("close file failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("close file succeed");
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let stream = fs.createStreamSync(filePath, "r+");
-stream.close().then(() => {
-  console.info("close fileStream succeed");
-}).catch((err: BusinessError) => {
-  console.error("close fileStream  failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let stream = fs.createStreamSync(filePath, "r+");
-stream.close((err: BusinessError) => {
-  if (err) {
-    console.error("close stream failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("close stream succeed");
-  }
-});
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let randomAccessFile = fs.createRandomAccessFileSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
-randomAccessFile.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const rs = fs.createReadStream(filePath);
-rs.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const ws = fs.createWriteStream(filePath);
-ws.close();
-```
-
 ## constructor
 
 ```TypeScript
@@ -120,8 +48,6 @@ constructor()
 The ReadStream constructor.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -134,8 +60,6 @@ seek(offset: number, whence?: WhenceType): number
 Adjusts the position of the readable stream offset pointer.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -161,24 +85,6 @@ Adjusts the position of the readable stream offset pointer.
 | 13900026 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const rs = fs.createReadStream(filePath);
-const curOff = rs.seek(5, fs.WhenceType.SEEK_SET);
-console.info(`current offset is ${curOff}`);
-rs.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const ws = fs.createWriteStream(filePath);
-const curOff = ws.seek(5, fs.WhenceType.SEEK_SET);
-console.info(`current offset is ${curOff}`);
-ws.close();
-```
-
 ## bytesRead
 
 ```TypeScript
@@ -190,8 +96,6 @@ Number of bytes read by the readable stream.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -206,7 +110,5 @@ Path of the file corresponding to the readable stream.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

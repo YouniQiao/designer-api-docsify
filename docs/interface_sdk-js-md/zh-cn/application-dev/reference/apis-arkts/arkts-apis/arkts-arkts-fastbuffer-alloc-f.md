@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## alloc
@@ -15,8 +15,6 @@ function alloc(size: number, fill?: string | FastBuffer | number, encoding?: Buf
 创建指定字节长度的FastBuffer对象并初始化。调用后，FastBuffer对象的每个字节将被填充为指定的fill值，未指定fill时默认填充为0。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -35,22 +33,3 @@ function alloc(size: number, fill?: string | FastBuffer | number, encoding?: Buf
 | 类型 |
 | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-// 创建长度为5的FastBuffer对象，默认填充0
-let buf1 = fastbuffer.alloc(5);
-console.info(buf1.toString());
-// 输出结果：00000
-// 创建长度为5的FastBuffer对象，填充字符'a'
-let buf2 = fastbuffer.alloc(5, 'a');
-// 创建长度为11的FastBuffer对象，使用base64编码填充
-let buf3 = fastbuffer.alloc(11, 'aGVsbG8gd29ybGQ=', 'base64');
-console.info(buf2.toString());
-// 输出结果：aaaaa
-console.info(buf3.toString());
-// 输出结果：hello world
-```

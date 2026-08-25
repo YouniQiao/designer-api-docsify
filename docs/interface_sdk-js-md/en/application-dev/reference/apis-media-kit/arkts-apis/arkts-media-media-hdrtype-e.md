@@ -4,8 +4,6 @@ Enumerates the HDR types.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## AV_HDR_TYPE_NONE
@@ -18,8 +16,6 @@ No HDR.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## AV_HDR_TYPE_VIVID
@@ -31,7 +27,5 @@ AV_HDR_TYPE_VIVID = 1
 HDR VIVID.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core

@@ -4,8 +4,6 @@ Defines the configuration options of the text picker.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,8 +29,6 @@ or **Null[]**.
 **Default:** Each column has equal width, calculated by dividing the total component width by the number of columns.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,8 +56,6 @@ or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -85,8 +79,6 @@ Index of the selected item in the data list. The index is zero-based.Default val
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -104,16 +96,14 @@ Value of the selected item. The priority of this parameter is lower than that of
 2. The Resource type is supported since API version 20.
 3. This parameter works only when the picker contains text only.
 It does not work when the picker contains images or mixed content.
-4. Single-column pickers: ResourceStr
-5. Multi-column pickers: ResourceStr[]
+4. Single-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+5. Multi-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
-**Type:** ResourceStr \| ResourceStr[]
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)[]
 
 **Default:** value of the first item [since 8 - 9]
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

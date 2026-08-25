@@ -4,8 +4,6 @@ Defines the scenario types for scroll direction locking.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ALL
@@ -17,8 +15,6 @@ ALL = 0
 Scroll locking is supported in all scenarios.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,8 +29,6 @@ NESTED_SCROLL = 1
 Scroll locking is supported in nested scroll scenarios.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

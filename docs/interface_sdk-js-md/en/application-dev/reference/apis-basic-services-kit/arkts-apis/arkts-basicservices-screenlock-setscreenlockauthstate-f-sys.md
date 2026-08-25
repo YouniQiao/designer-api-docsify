@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setScreenLockAuthState
 
 ```TypeScript
-function setScreenLockAuthState(state: AuthState, userId: int, authToken: Uint8Array): Promise<boolean>
+function setScreenLockAuthState(state: AuthState, userId: number, authToken: Uint8Array): Promise<boolean>
 ```
 
 Set the screen lock authentication state for os account local userId.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK_INNER
 
@@ -29,7 +27,7 @@ Set the screen lock authentication state for os account local userId.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | state | [AuthState](arkts-basicservices-screenlock-authstate-e-sys.md) | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | authToken | Uint8Array | Yes |
 
 **Return value:**

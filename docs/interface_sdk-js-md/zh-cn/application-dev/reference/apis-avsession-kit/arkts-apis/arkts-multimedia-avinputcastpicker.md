@@ -6,7 +6,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AVInputCastPicker } from '@kit.AVSessionKit';
+import { AVInputCastPicker } from 'kits/@kit.AVSessionKit';
 ```
 
 ## 汇总

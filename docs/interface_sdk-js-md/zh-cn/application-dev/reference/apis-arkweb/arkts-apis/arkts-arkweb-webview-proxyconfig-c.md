@@ -4,14 +4,12 @@ ProxyConfig是ArkWeb框架中用于配置网络代理规则的类，配合[Proxy
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## bypassHostnamesWithoutPeriod
@@ -24,15 +22,9 @@ bypassHostnamesWithoutPeriod(): void
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
 
 ## clearImplicitRules
 
@@ -44,15 +36,9 @@ clearImplicitRules(): void
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
 
 ## enableReverseBypass
 
@@ -63,8 +49,6 @@ enableReverseBypass(reverse: boolean): void
 反转bypass规则。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -82,10 +66,6 @@ enableReverseBypass(reverse: boolean): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
 ## getBypassRules
 
 ```TypeScript
@@ -95,8 +75,6 @@ getBypassRules(): Array<string>
 获取不使用代理的URL列表。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -108,10 +86,6 @@ getBypassRules(): Array<string>
 | --- |
 | Array & lt;string & gt; |
 
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
 ## getProxyRules
 
 ```TypeScript
@@ -121,8 +95,6 @@ getProxyRules(): Array<ProxyRule>
 获取代理规则。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -134,10 +106,6 @@ getProxyRules(): Array<ProxyRule>
 | --- |
 | Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; |
 
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
 ## insertBypassRule
 
 ```TypeScript
@@ -147,8 +115,6 @@ insertBypassRule(bypassRule: string): void
 插入一条bypass规则，指明哪些URL应该绕过代理并直接连接到服务器。当[enableReverseBypass](#enablereversebypass)设置为true 时，与bypassRule匹配的URL会使用代理而非绕过代理。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -166,10 +132,6 @@ insertBypassRule(bypassRule: string): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
 ## insertDirectRule
 
 ```TypeScript
@@ -185,8 +147,6 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 > 直连的URL范围选择合适的方法。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -204,10 +164,6 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
 ## insertProxyRule
 
 ```TypeScript
@@ -215,11 +171,15 @@ insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 ```
 
 插入一条代理规则，与schemeFilter匹配的URL都会使用指定代理。如果未指定schemeFilter参数，将使用默认值MATCH_ALL_SCHEMES，所有URL都将使用指定代理。代理格式为[scheme://]host[:port]。scheme是可选的，必须是HTTP、HTTPS或SOCKS。scheme默认值为HTTP。host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多个标签。端口号是可选的，默认HTTP为80、HTTPS为443、SOCKS为1080。例如：  
-- example.com host: example.com - https://example.com scheme: https host: example.com - example.com:8888 host: example.com port: 8888 - https://example.com:8888 scheme: https host: example.com port: 8888 - 192.168.1.1 host: 192.168.1.1 - 192.168.1.1:8888 host: 192.168.1.1 port: 8888 - [10:20:30:40:50:60:70:80]
+- example.com host: example.com  
+- https://example.com scheme: https host: example.com  
+- example.com:8888 host: example.com port: 8888  
+- https://example.com:8888 scheme: https host: example.com port: 8888  
+- 192.168.1.1 host: 192.168.1.1  
+- 192.168.1.1:8888 host: 192.168.1.1 port: 8888  
+- [10:20:30:40:50:60:70:80]
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -238,10 +198,6 @@ insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。
-
 ## isReverseBypassEnabled
 
 ```TypeScript
@@ -252,8 +208,6 @@ isReverseBypassEnabled(): boolean
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -263,7 +217,3 @@ isReverseBypassEnabled(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-完整示例代码参考[removeProxyOverride](./arkts-apis-webview-ProxyController.md#removeproxyoverride)。

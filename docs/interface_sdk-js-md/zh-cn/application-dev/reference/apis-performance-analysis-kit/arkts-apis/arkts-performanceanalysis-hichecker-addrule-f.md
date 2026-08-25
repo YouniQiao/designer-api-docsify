@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hichecker } from '@kit.PerformanceAnalysisKit';
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## addRule
@@ -19,8 +19,6 @@ function addRule(rule: bigint): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md)
@@ -32,14 +30,3 @@ function addRule(rule: bigint): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | rule | bigint | 是 |
-
-**示例**
-
-```TypeScript
-// 添加一条规则
-hichecker.addRule(hichecker.RULE_CAUTION_PRINT_LOG);
-
-// 添加多条规则
-hichecker.addRule(
-          hichecker.RULE_CAUTION_PRINT_LOG | hichecker.RULE_CAUTION_TRIGGER_CRASH);
-```

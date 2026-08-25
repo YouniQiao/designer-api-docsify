@@ -4,8 +4,6 @@ Describes the configurations for setting disposed rules in batches.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the configurations for setting disposed rules in batches.
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## appId
@@ -30,8 +28,6 @@ appId or appIdentifier of the target application. Identical appId and appIdentif
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -39,16 +35,14 @@ appId or appIdentifier of the target application. Identical appId and appIdentif
 ## appIndex
 
 ```TypeScript
-appIndex: int
+appIndex: number
 ```
 
 Index of the application clone. The default value is **0**.The value **0** means to set the disposed rule for the main application. A value greater than 0 means to set the disposed rule for the application clone with the specified index.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
@@ -65,8 +59,6 @@ Disposal rule of the application, including the type of the ability to be starte
 **Type:** [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 

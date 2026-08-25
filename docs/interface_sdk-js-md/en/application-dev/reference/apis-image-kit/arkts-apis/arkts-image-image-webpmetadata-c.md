@@ -4,29 +4,25 @@ WebP metadata.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## canvasHeight
 
 ```TypeScript
-readonly canvasHeight?: int
+readonly canvasHeight?: number
 ```
 
 Canvas Height. Unit: px, The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,16 +31,14 @@ Canvas Height. Unit: px, The value should be an integer.
 ## canvasWidth
 
 ```TypeScript
-readonly canvasWidth?: int
+readonly canvasWidth?: number
 ```
 
 Canvas Width. Unit: px, The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,16 +47,14 @@ Canvas Width. Unit: px, The value should be an integer.
 ## delayTime
 
 ```TypeScript
-readonly delayTime?: int
+readonly delayTime?: number
 ```
 
 Delay of each frame. Unit: ms, The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,16 +63,14 @@ Delay of each frame. Unit: ms, The value should be an integer.
 ## loopCount
 
 ```TypeScript
-readonly loopCount?: int
+readonly loopCount?: number
 ```
 
 Loop count.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,16 +79,14 @@ Loop count.
 ## unclampedDelayTime
 
 ```TypeScript
-readonly unclampedDelayTime?: int
+readonly unclampedDelayTime?: number
 ```
 
 Unclamped delay of each frame. Unit: ms, The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

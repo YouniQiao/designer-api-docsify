@@ -4,8 +4,6 @@ Enumerates USB port mode types.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
@@ -23,8 +21,6 @@ NONE = 0
 None
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ Upstream facing port, which functions as the sink of power supply.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [UFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#ufp)
@@ -63,8 +57,6 @@ DFP = 2
 Downstream facing port, which functions as the source of power supply.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -84,8 +76,6 @@ Dynamic reconfiguration port (DRP), which can function as the DFP (host) or UFP 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DRP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#drp)
@@ -103,8 +93,6 @@ NUM_MODES = 4
 Not supported currently.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 

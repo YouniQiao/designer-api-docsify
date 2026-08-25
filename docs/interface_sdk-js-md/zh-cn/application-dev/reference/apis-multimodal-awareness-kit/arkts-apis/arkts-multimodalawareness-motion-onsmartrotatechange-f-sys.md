@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onSmartRotateChange
@@ -15,8 +15,6 @@ function onSmartRotateChange(callback: Callback<SmartRotateEvent>): void
 订阅智能旋转传感器事件。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

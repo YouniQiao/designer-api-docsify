@@ -4,8 +4,6 @@ Enum for user activity scenario.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## NAVIGATION
@@ -17,8 +15,6 @@ NAVIGATION = 0x401
 Navigation scenario. High positioning precision and real-time performance are required.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ Sport scenario. High positioning precision is required.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -50,8 +44,6 @@ Transport scenario. High positioning precision and real-time performance are req
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -65,8 +57,6 @@ DAILY_LIFE_SERVICE = 0x404
 Daily life scenarios. Low requirements on positioning precision.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

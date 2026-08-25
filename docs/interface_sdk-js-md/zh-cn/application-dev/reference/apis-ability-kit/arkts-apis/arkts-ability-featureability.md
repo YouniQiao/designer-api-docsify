@@ -4,8 +4,6 @@ FeatureAbility模块提供与用户进行交互的Ability的能力，包括启�
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -13,7 +11,7 @@ FeatureAbility模块提供与用户进行交互的Ability的能力，包括启�
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

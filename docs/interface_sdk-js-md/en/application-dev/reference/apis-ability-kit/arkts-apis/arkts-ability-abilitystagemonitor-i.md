@@ -4,8 +4,6 @@ The module provides the capability to listen for a specified [AbilityStage](arkt
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## moduleName
@@ -19,8 +17,6 @@ Module name of the AbilityStage object.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,28 +34,6 @@ Source path of the AbilityStage object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let monitor: abilityDelegatorRegistry.AbilityStageMonitor = {
-  moduleName: 'feature_as1',
-  srcEntrance: './ets/Application/MyAbilityStage.ts',
-}
-
-let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityStageMonitor(monitor, (error, data) => {
-  if (error) {
-    console.error(`waitAbilityStageMonitor fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`waitAbilityStageMonitor success, data: ${JSON.stringify(data)}`);
-  }
-});
-```

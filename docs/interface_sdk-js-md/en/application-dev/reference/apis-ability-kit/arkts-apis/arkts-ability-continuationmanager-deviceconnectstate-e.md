@@ -4,8 +4,6 @@ Device connection state.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
@@ -19,8 +17,6 @@ IDLE = 0
 The device is in the initial state.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 
@@ -40,8 +36,6 @@ The device is being connected.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -60,8 +54,6 @@ The device is connected.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Model restriction:** This API can be used only in the stage model.
@@ -79,8 +71,6 @@ DISCONNECTING = 3
 The device is being disconnected.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 

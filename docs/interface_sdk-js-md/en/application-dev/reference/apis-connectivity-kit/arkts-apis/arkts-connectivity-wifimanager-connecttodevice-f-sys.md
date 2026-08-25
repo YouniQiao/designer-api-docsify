@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connectToDevice
@@ -15,8 +15,6 @@ function connectToDevice(config: WifiDeviceConfig): void
 Connect to Wi-Fi hotspot by WifiDeviceConfig.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -40,21 +38,3 @@ Connect to Wi-Fi hotspot by WifiDeviceConfig.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let config:wifiManager.WifiDeviceConfig = {
-      ssid : "****",
-      preSharedKey : "****",
-      securityType : 3
-    }
-    wifiManager.connectToDevice(config);
-        
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

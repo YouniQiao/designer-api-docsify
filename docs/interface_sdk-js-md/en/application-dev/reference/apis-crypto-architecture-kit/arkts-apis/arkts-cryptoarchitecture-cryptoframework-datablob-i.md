@@ -7,14 +7,12 @@ Encapsulates binary data. The core field **data** is of the Uint8Array type.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## data
@@ -28,8 +26,6 @@ Binary data array.
 **Type:** Uint8Array
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.

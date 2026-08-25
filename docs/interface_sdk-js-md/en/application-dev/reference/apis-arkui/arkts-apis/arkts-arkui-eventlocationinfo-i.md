@@ -4,8 +4,6 @@ Provides coordinate information for tap gestures.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -35,7 +31,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Coordinate2D](arkts-arkui-units-coordinate2d-i.md) |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) |
 
 ## displayX
 
@@ -48,8 +44,6 @@ X coordinate relative to the upper left corner of the screen.Value range: [0, +â
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ Y coordinate relative to the upper left corner of the screen.Value range: [0, +â
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -88,8 +80,6 @@ X coordinate in the coordinate system with the upper left corner of the main scr
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,8 +99,6 @@ Y coordinate in the coordinate system with the upper left corner of the main scr
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -128,8 +116,6 @@ X coordinate relative to the upper left corner of the window.Value range: [0, +â
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,8 +135,6 @@ Y coordinate relative to the upper left corner of the window.Value range: [0, +â
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -169,8 +153,6 @@ X coordinate relative to the upper left corner of the component.Value range: [0,
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -188,8 +170,6 @@ Y coordinate relative to the upper left corner of the component.Value range: [0,
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

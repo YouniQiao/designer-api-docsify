@@ -4,8 +4,6 @@ Enumerates the default application types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## BROWSER
@@ -17,8 +15,6 @@ BROWSER = "Web Browser"
 Default browser.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -32,8 +28,6 @@ Default image viewer.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## AUDIO
@@ -45,8 +39,6 @@ AUDIO = "Audio Player"
 Default audio player.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -60,8 +52,6 @@ Default video player.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## PDF
@@ -73,8 +63,6 @@ PDF = "PDF Viewer"
 Default PDF reader.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -88,8 +76,6 @@ Default Word viewer.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## EXCEL
@@ -101,8 +87,6 @@ EXCEL = "Excel Viewer"
 Default Excel viewer.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
@@ -116,8 +100,6 @@ Default PowerPoint viewer.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
 ## EMAIL
@@ -129,7 +111,5 @@ EMAIL = 'Email'
 Default email.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.DefaultApp

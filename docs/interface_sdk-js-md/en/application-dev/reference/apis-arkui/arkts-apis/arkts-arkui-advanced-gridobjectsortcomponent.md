@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GridObjectSortComponentType, GridObjectSortComponentItem, GridObjectSortComponentOptions, GridObjectSortComponent } from '@kit.ArkUI';
+import { GridObjectSortComponentType, GridObjectSortComponentItem, GridObjectSortComponentOptions, GridObjectSortComponent } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

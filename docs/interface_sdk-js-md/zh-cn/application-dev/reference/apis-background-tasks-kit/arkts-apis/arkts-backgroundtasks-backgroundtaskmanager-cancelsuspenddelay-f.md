@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## cancelSuspendDelay
 
 ```TypeScript
-function cancelSuspendDelay(requestId: int): void
+function cancelSuspendDelay(requestId: number): void
 ```
 
 取消短时任务。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
@@ -24,7 +22,7 @@ function cancelSuspendDelay(requestId: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| requestId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| requestId | number | 是 |
 
 **错误码：**
 
@@ -37,17 +35,3 @@ function cancelSuspendDelay(requestId: int): void
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [9900001](../errorcode-backgroundTaskMgr.md#9900001-短时任务调用方信息校验失败) |
 | [9900002](../errorcode-backgroundTaskMgr.md#9900002-短时任务校验失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-let requestId = 1;
-try {
-  backgroundTaskManager.cancelSuspendDelay(requestId);
-} catch (error) {
-  console.error(`cancelSuspendDelay failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

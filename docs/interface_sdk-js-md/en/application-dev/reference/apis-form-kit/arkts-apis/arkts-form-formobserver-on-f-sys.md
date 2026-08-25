@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
+import { formObserver } from 'kits/@kit.FormKit';
 ```
 
 ## on('formAdd')
@@ -15,8 +15,6 @@ function on(type: 'formAdd', observerCallback: Callback<formInfo.RunningFormInfo
 Listens to the event of add form. <p>You can use this method to listen to the event of add form.</p>
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -48,8 +46,6 @@ function on(type: 'formAdd', hostBundleName: string, observerCallback: Callback<
 Listens to the event of add form. <p>You can use this method to listen to the event of add form for a particular card host.</p>
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -83,8 +79,6 @@ Listens to the event of remove form. <p>You can use this method to listen to the
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -115,8 +109,6 @@ function on(type: 'formRemove', hostBundleName: string, observerCallback: Callba
 Listens to the event of remove form. <p>You can use this method to listen to the event of remove form for a particular card host.</p>
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -149,8 +141,6 @@ function on(type: 'notifyVisible', observerCallback: Callback<Array<formInfo.Run
 Listens to the event of notifyVisible type change. <p>You can use this method to listen to the event of notifyVisible type change.</p>
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -187,8 +177,6 @@ Listens to the event of notifyVisible type change. <p>You can use this method to
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -220,8 +208,6 @@ function on(type: 'notifyInvisible', observerCallback: Callback<Array<formInfo.R
 Listens to the event of notifyInvisible type change. <p>You can use this method to listen to the event of notifyInvisible type change.</p>
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -258,8 +244,6 @@ Listens to the event of notifyInvisible type change. <p>You can use this method 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -292,8 +276,6 @@ Router event listening in registered form. <p>This interface requires permission
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -324,8 +306,6 @@ function on(type: 'router', hostBundleName: string, observerCallback: Callback<f
 Router event listening in registered form. <p>This interface requires permission to receive callback.</p>
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -359,8 +339,6 @@ Message event listening in registered form. <p>This interface requires permissio
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -391,8 +369,6 @@ function on(type: 'message', hostBundleName: string, observerCallback: Callback<
 Message event listening in registered form. <p>This interface requires permission to receive callback.</p>
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -426,8 +402,6 @@ Call event listening in registered form. <p>This interface requires permission t
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -458,8 +432,6 @@ function on(type: 'call', hostBundleName: string, observerCallback: Callback<for
 Call event listening in registered form. <p>This interface requires permission to receive callback.</p>
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 

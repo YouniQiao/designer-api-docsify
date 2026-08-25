@@ -15,8 +15,6 @@ export function requestToolPermissions(permissionQuery: PermissionQuery): Promis
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 **系统能力：** SystemCapability.Security.Asset
@@ -46,27 +44,3 @@ export function requestToolPermissions(permissionQuery: PermissionQuery): Promis
 | [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) |
 | [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) |
 | [24010006](../errorcode-abilityToolAccessCtrl-sys.md#24010006-设备处于锁屏状态时不允许执行操作) |
-
-**示例**
-
-```TypeScript
-import { abilityToolAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let permissionQuery: abilityToolAccessCtrl.PermissionQuery = {
-  operationInfo: [{
-    operationType: abilityToolAccessCtrl.OperationType.CLI,
-    info: {
-      cliCmdName: 'ohos-displayManager',
-      subCliCmdName: 'set-brightness'
-    }
-  }],
-  needTicket: true,
-  ticketExpireTimeMs: 10000,
-};
-abilityToolAccessCtrl.requestToolPermissions(permissionQuery).then((data: abilityToolAccessCtrl.PermissionQueryResult) => {
-  console.info('requestToolPermissions success, data: ' + JSON.stringify(data));
-}).catch((err: BusinessError): void => {
-  console.error(`requestToolPermissions fail, code: ${err.code}, message: ${err.message}`);
-});
-```

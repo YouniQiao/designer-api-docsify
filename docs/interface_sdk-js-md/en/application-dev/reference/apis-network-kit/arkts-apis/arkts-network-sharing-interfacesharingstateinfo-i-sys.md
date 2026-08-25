@@ -4,8 +4,6 @@ Wakes up the listener for network sharing state changes of an NIC.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Wakes up the listener for network sharing state changes of an NIC.
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## iface
@@ -27,8 +25,6 @@ NIC name.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -46,8 +42,6 @@ Network sharing state of the NIC.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Enumerates the network sharing types of an NIC.
 **Type:** [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 

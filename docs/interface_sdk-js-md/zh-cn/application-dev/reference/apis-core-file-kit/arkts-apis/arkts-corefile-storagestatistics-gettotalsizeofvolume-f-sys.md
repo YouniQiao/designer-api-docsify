@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getTotalSizeOfVolume
 
 ```TypeScript
-function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>): void
+function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<number>): void
 ```
 
 异步获取外置存储设备中指定卷设备的总空间大小（单位为Byte），以callback方式返回。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -29,7 +27,7 @@ function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | volumeUuid | string | 是 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -42,98 +40,16 @@ function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>)
 | 13600008 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  let uuid: string = volumes[0].uuid;
-  storageStatistics.getTotalSizeOfVolume(uuid).then((totalSize: number) => {
-    console.info("getTotalSizeOfVolume successfully:" + totalSize);
-  }).catch((err: BusinessError) => {
-    console.error(`getTotalSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  let uuid: string = volumes[0].uuid;
-  storageStatistics.getTotalSizeOfVolume(uuid).then((totalSize: long) => {
-    console.info("getTotalSizeOfVolume successfully:" + totalSize);
-  }).catch((err: BusinessError): void => {
-    console.error(`getTotalSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
-  });
-}).catch((err: BusinessError): void => {
-  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  let uuid: string = volumes[0].uuid;
-  storageStatistics.getTotalSizeOfVolume(uuid, (error: BusinessError, totalSize: number) => {
-    if (error) {
-      console.error(`getTotalSizeOfVolume failed with err, code is: ${error.code}, message is: ${error.message}`);
-    } else {
-      // do something
-      console.info("getTotalSizeOfVolume successfully:" + totalSize);
-    }
-  });
-}).catch((err: BusinessError) => {
-  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  let uuid: string = volumes[0].uuid;
-  storageStatistics.getTotalSizeOfVolume(uuid, (error: BusinessError, totalSize: long): void => {
-    if (error) {
-      console.error(`getTotalSizeOfVolume failed with err, code is: ${error.code}, message is: ${error.message}`);
-    } else {
-      // do something
-      console.info("getTotalSizeOfVolume successfully:" + totalSize);
-    }
-  });
-}).catch((err: BusinessError): void => {
-  console.error("getAllVolumes failed with err:" + JSON.stringify(err));
-});
-```
-
 
 ## getTotalSizeOfVolume
 
 ```TypeScript
-function getTotalSizeOfVolume(volumeUuid: string): Promise<long>
+function getTotalSizeOfVolume(volumeUuid: string): Promise<number>
 ```
 
 异步获取外置存储设备中指定卷设备的总空间大小（单位为Byte），以Promise方式返回。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -151,7 +67,7 @@ function getTotalSizeOfVolume(volumeUuid: string): Promise<long>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -163,7 +79,3 @@ function getTotalSizeOfVolume(volumeUuid: string): Promise<long>
 | 13600001 |
 | 13600008 |
 | 13900042 |
-
-**示例**
-
-参见 [getTotalSizeOfVolume](#gettotalsizeofvolume)

@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## 导入模块
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'kits/@kit.DrmKit';
 ```
 
 ## data
@@ -25,8 +23,6 @@ data: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ defaultURL: string
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
@@ -61,8 +55,6 @@ mediaKeyRequestType: MediaKeyRequestType
 **类型：** [MediaKeyRequestType](arkts-drm-drm-mediakeyrequesttype-e.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

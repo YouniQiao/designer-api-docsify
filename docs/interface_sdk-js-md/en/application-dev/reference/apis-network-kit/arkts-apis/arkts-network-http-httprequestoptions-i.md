@@ -4,14 +4,12 @@ Defines the options for initiating an HTTP request.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## addressFamily
@@ -26,8 +24,6 @@ IP address family. You can specify an address type for domain name resolution.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## body
@@ -37,14 +33,15 @@ body?: string | Object | ArrayBuffer
 ```
 
 HTTP request body. After this field is set, the framework preferentially sends this field as the request body.  
-- The value can be a string, an object, or an **ArrayBuffer**. A string is sent as the original value, an object is serialized before being sent, and an **ArrayBuffer** is sent in binary format. - If both **body** and **extraData** are configured, **body** takes precedence and **extraData** will be ignored. - This field can be used with any request method to explicitly specify the request body.  
+- The value can be a string, an object, or an **ArrayBuffer**. A string is sent as the original value, an object  
+is serialized before being sent, and an **ArrayBuffer** is sent in binary format.  
+- If both **body** and **extraData** are configured, **body** takes precedence and **extraData** will be ignored.  
+- This field can be used with any request method to explicitly specify the request body.  
 **Since**: 26.0.0
 
 **Type:** string \| Object \| ArrayBuffer
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +59,6 @@ CA certificate data. If this parameter is set and the certificate is valid, the 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -79,8 +74,6 @@ CA certificate data. If this parameter is set and the certificate is valid, the 
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,8 +91,6 @@ Dynamic configuration of certificate pinning. One or more certificate PINs can b
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## clientCert
@@ -113,8 +104,6 @@ Client certificate.
 **Type:** ClientCert
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -130,8 +119,6 @@ Client certificate, which is used by the server to verify the client identity.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -139,16 +126,14 @@ Client certificate, which is used by the server to verify the client identity.
 ## connectTimeout
 
 ```TypeScript
-connectTimeout?: int
+connectTimeout?: number
 ```
 
 Connection timeout interval. The default value is **60000**, in ms. The input value must be an uint32_t integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -161,13 +146,16 @@ customMethod?: string
 ```
 
 Custom request method. For example, when the WebDAV extension protocol is implemented, **customMethod** has a higher priority than **method**.  
-- The default value is an empty string. The value can contain a maximum of 128 characters. If the value exceeds 1 28 characters, the setting does not take effect. - If **customMethod** meets the WebDAV extension protocol request requirements but the server does not support the request, the server response code of the request is usually 405 or 501 (the actual result depends on the server behavior). - If **customMethod** does not meet the WebDAV extension protocol request requirements, the server response code of the request is usually 400 or 405 (the actual result depends on the server behavior).
+- The default value is an empty string. The value can contain a maximum of 128 characters. If the value exceeds 1  
+28 characters, the setting does not take effect.  
+- If **customMethod** meets the WebDAV extension protocol request requirements but the server does not support  
+the request, the server response code of the request is usually 405 or 501 (the actual result depends on the server behavior).  
+- If **customMethod** does not meet the WebDAV extension protocol request requirements, the server response code  
+of the request is usually 400 or 405 (the actual result depends on the server behavior).
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -184,8 +172,6 @@ Whether to use an HTTPS server for DNS resolution.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## dnsServers
@@ -195,13 +181,13 @@ dnsServers?: Array<string>
 ```
 
 Array of DNS servers used for DNS resolution.  
-- A maximum of three DNS servers can be set. If there are more than three DNS servers, only the first three DNS servers are used. - The DNS servers must be expressed as IPv4 or IPv6 addresses.
+- A maximum of three DNS servers can be set. If there are more than three DNS servers, only the first three DNS  
+servers are used.  
+- The DNS servers must be expressed as IPv4 or IPv6 addresses.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -216,8 +202,6 @@ Indicates whether to enable partial chain verification. The default value is tru
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -235,8 +219,6 @@ Type of the returned data. This parameter is not used by default. If this parame
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -249,15 +231,14 @@ extraData?: string | Object | ArrayBuffer
 
 Additional data for sending a request. This parameter is not used by default. Since API version 26, you are advised to use the **body** and **queryParams** parameters preferentially.  
 **Note：**: Do not add this parameter if no extra data is available. If this parameter must be added, set it to **undefined** or **null**. Do not pass the parameter as "".
-- If the HTTP request uses a POST, PUT, or DELETE method, this field serves as the content of the HTTP request and is encoded in UTF-8 format.
-Example:(1) If **content-Type** is **application/x-www-form-urlencoded**, the data in the request body must be encoded in the format of **key1=value1&key2=value2&key3=value3** after URL transcoding (**encodeURIComponent/encodeURI**) and this field is usually in the String format.(2) If **content-Type** is **text/xml**, this field is usually in the String format.(3) If **content-Type** is **application/json**, this field is usually in the Object format.(4) If **content-Type** is **application/octet-stream**, this field is usually in the ArrayBuffer format.(5) If **content-Type** is **multipart/form-data** and the content to be uploaded is a file, this field is usually in the ArrayBuffer format.The preceding information is for reference only and may vary according to the actual situation.  
-- If the HTTP request uses the GET, OPTIONS, TRACE, or CONNECT method, this parameter serves as a supplement to HTTP request parameters. Parameters of the string type need to be encoded before being passed to the HTTP request. Parameters of the object type do not need to be precoded and will be directly concatenated to the URL. Parameters of the ArrayBuffer type will not be concatenated to the URL.
+- If the HTTP request uses a POST, PUT, or DELETE method, this field serves as the content of the HTTP request
+and is encoded in UTF-8 format.Example:(1) If **content-Type** is **application/x-www-form-urlencoded**, the data in the request body must be encoded in the format of **key1=value1&key2=value2&key3=value3** after URL transcoding (**encodeURIComponent/encodeURI**) and this field is usually in the String format.(2) If **content-Type** is **text/xml**, this field is usually in the String format.(3) If **content-Type** is **application/json**, this field is usually in the Object format.(4) If **content-Type** is **application/octet-stream**, this field is usually in the ArrayBuffer format.(5) If **content-Type** is **multipart/form-data** and the content to be uploaded is a file, this field is usually in the ArrayBuffer format.The preceding information is for reference only and may vary according to the actual situation.  
+- If the HTTP request uses the GET, OPTIONS, TRACE, or CONNECT method, this parameter serves as a supplement to  
+HTTP request parameters. Parameters of the string type need to be encoded before being passed to the HTTP request. Parameters of the object type do not need to be precoded and will be directly concatenated to the URL. Parameters of the ArrayBuffer type will not be concatenated to the URL.
 
 **Type:** string \| Object \| ArrayBuffer
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -275,8 +256,6 @@ HTTP request header. If the request method is POST, PUT, DELETE, or null, the de
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -288,14 +267,13 @@ inactivityMs?: number
 ```
 
 Maximum idle time of a connection in the connection pool. If this value is exceeded, the connection is closed. The unit is ms. The default value is 118s. The system calculates the connection idle time, rounds it down to seconds, and then compares it with the configured value.  
-- The value range is (0, 2147483647]. If a value less than or equal to 0 is passed, the system uses the default value 118s. This parameter does not take effect when **reuseConnections** is set to **false**.  
+- The value range is (0, 2147483647]. If a value less than or equal to 0 is passed, the system uses the default  
+value 118s. This parameter does not take effect when **reuseConnections** is set to **false**.  
 **Since**: 26.0.0
 
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -313,8 +291,6 @@ Maximum number of bytes in a response.The default value is 5*1024*1024, in bytes
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## maxRedirects
@@ -324,13 +300,13 @@ maxRedirects?: number
 ```
 
 The maximum number of redirections can be specified for HttpRequest.  
-- The default value is 30. - The value range is [0, 2147483647]. If the value is set to **0**, redirection is disabled. If the number of redirections on the server exceeds the maximum number of redirections, error code 2300047 is returned. If the value is out of the range, the default value **30** takes effect.
+- The default value is 30.  
+- The value range is [0, 2147483647]. If the value is set to **0**, redirection is disabled. If the number of  
+redirections on the server exceeds the maximum number of redirections, error code 2300047 is returned. If the value is out of the range, the default value **30** takes effect.
 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -345,8 +321,6 @@ Request method. The default value is **GET**.
 **Type:** [RequestMethod](arkts-network-http-requestmethod-e.md)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -364,8 +338,6 @@ Form data list. This field is valid when **content-Type** is set to **multipart/
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## pathPreference
@@ -380,23 +352,19 @@ Used to specify the network to be activated in an HTTP request.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## priority
 
 ```TypeScript
-priority?: int
+priority?: number
 ```
 
 Priority of concurrent HTTP/HTTPS requests. A larger value indicates a higher priority. The value range is [1, 1000]. The default value is **1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -409,14 +377,16 @@ queryParams?: string | QueryParamObject
 ```
 
 Request parameters appended to the URL.  
-- The value can be a string or a **QueryParamObject**. A string is directly appended to the URL (without repeated encoding). A **QueryParamObject** is automatically encoded and serialized by the system. - When a string is used, the leading **?** is not required. Use **&** to separate multiple parameters. - If both **queryParams** and **extraData** are configured, **queryParams** takes precedence, and the URL parameter supplementation logic in **extraData** is ignored.  
+- The value can be a string or a **QueryParamObject**. A string is directly appended to the URL (without repeated  
+encoding). A **QueryParamObject** is automatically encoded and serialized by the system.  
+- When a string is used, the leading **?** is not required. Use **&** to separate multiple parameters.  
+- If both **queryParams** and **extraData** are configured, **queryParams** takes precedence, and the URL  
+parameter supplementation logic in **extraData** is ignored.  
 **Since**: 26.0.0
 
 **Type:** string \| [QueryParamObject](arkts-network-http-queryparamobject-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -425,16 +395,14 @@ Request parameters appended to the URL.
 ## readTimeout
 
 ```TypeScript
-readTimeout?: int
+readTimeout?: number
 ```
 
 Read timeout duration. The default value is **60000**, in ms. The input value must be an uint32_t integer.The value **0** indicates no timeout.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -452,8 +420,6 @@ Certificate authority (CA), which is used to verify the identity of a remote ser
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -465,13 +431,13 @@ resumeFrom?: number
 ```
 
 Download start position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 723 3, servers are allowed to ignore range requests.  
-- If the HTTP PUT method is used, do not use this option because it may conflict with other options. - The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not take effect.
+- If the HTTP PUT method is used, do not use this option because it may conflict with other options.  
+- The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not  
+take effect.
 
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -482,13 +448,13 @@ resumeTo?: number
 ```
 
 Download end position. This field can be used only for the GET method. As stipulated in section 3.1 of RFC 7233, servers are allowed to ignore range requests.  
-- If the HTTP PUT method is used, do not use this option because it may conflict with other options. - The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not take effect.
+- If the HTTP PUT method is used, do not use this option because it may conflict with other options.  
+- The value ranges from **1** to **4294967296** (4 GB). If the value is out of this range, this field does not  
+take effect.
 
 **Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -499,14 +465,13 @@ reuseConnections?: boolean
 ```
 
 Whether to reuse the connection for an HTTP request. The default value is **true**, meaning to reuse the existing connection. The value **false** means the opposite. This field can be used together with the **inactivityMs** field to customize the connection timeout interval.  
-- Connection reuse means that after an HTTP request is completed, the underlying TCP connection is not immediately closed. Instead, it remains in the connection pool. If subsequent HTTP requests have the same target address, the connection can be reused, reducing the overhead of TCP and TLS handshakes and improving performance.  
+- Connection reuse means that after an HTTP request is completed, the underlying TCP connection is not  
+immediately closed. Instead, it remains in the connection pool. If subsequent HTTP requests have the same target address, the connection can be reused, reducing the overhead of TCP and TLS handshakes and improving performance.  
 **Since**: 26.0.0
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -524,8 +489,6 @@ Whether to verify the server identity during a secure connection. The identity i
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -537,13 +500,12 @@ sniHostName?: string
 ```
 
 Used to allow the client to declare the target domain name to the server in the TLS handshake phase by configuring the server name indication (SNI). In this way, the server can select the corresponding SSL/TLS certificate based on the domain name for encrypted communication.  
-- The default value is an empty string. The value of **sniHostName** can contain a maximum of 255 characters. If the length limit is exceeded or the value is an empty string, the setting does not take effect.
+- The default value is an empty string. The value of **sniHostName** can contain a maximum of 255 characters. If  
+the length limit is exceeded or the value is an empty string, the setting does not take effect.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -558,8 +520,6 @@ Security communication protocol. You can use TLS (default) or TLCP. If TLCP is u
 **Type:** SslType
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -577,8 +537,6 @@ TLS configuration.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -594,8 +552,6 @@ Whether to use the cache. The value **true** indicates that the cache is prefere
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -613,8 +569,6 @@ Protocol. The default value is automatically specified by the system.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -626,13 +580,14 @@ usingProxy?: boolean | HttpProxy
 ```
 
 HTTP proxy configuration. If this item is not configured, the system proxy is used by default.  
-- If **usingProxy** is set to **true**, the default network proxy is used. If **usingProxy** is set to **false**, no proxy is used. - If **usingProxy** is of the **HttpProxy** type, the specified network proxy is used. The HttpProxy supports the **username** and **password** fields from API version 22.
+- If **usingProxy** is set to **true**, the default network proxy is used. If **usingProxy** is set to **false**,  
+no proxy is used.  
+- If **usingProxy** is of the **HttpProxy** type, the specified network proxy is used. The HttpProxy supports the  
+**username** and **password** fields from API version 22.
 
 **Type:** boolean \| HttpProxy
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -649,8 +604,6 @@ Specifies the use of a SOCKS5 proxy. Note that this configuration takes preceden
 **Type:** Socks5Proxy
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -15,8 +15,6 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md)
@@ -31,48 +29,9 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | [slot](arkts-notification-notificationsorting-notificationsorting-i-sys.md) | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-let setSlotByBundleCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("setSlotByBundle failed " + JSON.stringify(err));
-  } else {
-    console.info("setSlotByBundle success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-let notificationSlot: NotificationManager.NotificationSlot = {
-  type: Notification.SlotType.SOCIAL_COMMUNICATION
-};
-Notification.setSlotByBundle(bundle, notificationSlot, setSlotByBundleCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-let notificationSlot: NotificationManager.NotificationSlot = {
-  type: Notification.SlotType.SOCIAL_COMMUNICATION
-};
-Notification.setSlotByBundle(bundle, notificationSlot).then(() => {
-  console.info("setSlotByBundle success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`setSlotByBundle failed, code is ${err}`);
-});
-```
 
 
 ## setSlotByBundle
@@ -85,8 +44,6 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setSlotByBundle](arkts-notification-notificationmanager-setslotbybundle-f-sys.md)
@@ -101,7 +58,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | [slot](arkts-notification-notificationsorting-notificationsorting-i-sys.md) | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | 是 |
 
 **返回值：**
@@ -109,7 +66,3 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [setSlotByBundle](#setslotbybundle)

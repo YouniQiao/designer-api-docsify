@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getShortcutInfo
@@ -15,8 +15,6 @@ function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<Short
 查询当前用户下指定应用的快捷方式信息ShortcutInfo，只支持查询主应用的ShortcutInfo，查询分身应用请使用 [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md)。使用callback异步回调。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -42,98 +40,6 @@ function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<Short
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getShortcutInfo("com.example.demo",
-    (errData: BusinessError, data: launcherBundleManager.ShortcutInfo[]) => {
-      if (errData !== null) {
-        console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-      } else {
-        console.info('data is ' + JSON.stringify(data));
-      }
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-// 开发者需传入实际工程的bundleName。
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getShortcutInfo("com.example.demo",
-    (errData: BusinessError | null, data: launcherBundleManager.ShortcutInfo[] | undefined) => {
-      if (errData !== null) {
-        console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-      } else {
-        console.info('data is ' + JSON.stringify(data));
-      }
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getShortcutInfo("com.example.demo")
-    .then((data: launcherBundleManager.ShortcutInfo[]) => {
-      console.info('data is ' + JSON.stringify(data));
-    }).catch((errData: BusinessError) => {
-      console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-// 开发者需传入实际工程的bundleName。
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getShortcutInfo("com.example.demo")
-    .then((data: launcherBundleManager.ShortcutInfo[]) => {
-      console.info('data is ' + JSON.stringify(data));
-    }).catch ((errData: Error) => {
-      console.error(`errData is errCode:${(errData as BusinessError).code}  message:${(errData as BusinessError).message}`);
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
 
 ## getShortcutInfo
 
@@ -144,8 +50,6 @@ function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>
 查询当前用户下指定应用的快捷方式信息ShortcutInfo，只支持查询主应用的ShortcutInfo，查询分身应用请使用 [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md)。使用Promise异步回调。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -175,7 +79,3 @@ function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
-
-**示例**
-
-参见 [getShortcutInfo](#getshortcutinfo)

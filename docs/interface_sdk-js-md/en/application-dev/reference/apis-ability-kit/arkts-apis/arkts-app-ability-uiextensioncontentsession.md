@@ -13,7 +13,7 @@ UIExtensionContentSession is the UI operation class for the
 ## Modules to Import
 
 ```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -30,13 +30,4 @@ import { UIExtensionContentSession } from '@kit.AbilityKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) |
-<!--DelEnd-->
-
-<!--Del-->
-### Types(System API)
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) |
-| [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) |
 <!--DelEnd-->

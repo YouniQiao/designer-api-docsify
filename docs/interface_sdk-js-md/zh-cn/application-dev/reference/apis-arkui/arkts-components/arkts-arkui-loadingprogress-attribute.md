@@ -1,12 +1,10 @@
 # LoadingProgress属性/事件
 
-除支持通用属性外，还支持以下属性。支持通用事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。支持[通用事件](arkts-arkui-commonmethod-c.md)。
 
 **继承/实现关系：** LoadingProgressAttribute extends CommonMethod<LoadingProgressAttribute>
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ color(value: ResourceColor)
 设置加载进度条前景色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,8 +45,6 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -61,7 +55,7 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md)&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md)&gt; | 是 |
 
 ## enableLoading
 
@@ -69,11 +63,9 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>)
 enableLoading(value: boolean)
 ```
 
-设置LoadingProgress动画是否显示。LoadingProgress动画不显示时，该组件依旧占位。通用属性Visibility.Hidden隐藏的是包括 border、padding等整个组件范围，而enableLoading=false只隐藏 LoadingProgress本身动画内容，不包括border等。
+设置LoadingProgress动画是否显示。LoadingProgress动画不显示时，该组件依旧占位。通用属性Visibility.Hidden隐藏的是包括 [border](arkts-arkui-commonmethod-c.md#border)、padding等整个组件范围，而enableLoading=false只隐藏 LoadingProgress本身动画内容，不包括border等。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## [key: string]
@@ -19,8 +17,6 @@
 **类型：** number \| string \| boolean \| Array&lt;string \| number \| boolean&gt; \| null
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **模型约束：** 
 - API版本7-10：此接口仅可在FA模型下使用。

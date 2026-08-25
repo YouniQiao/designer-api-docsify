@@ -4,108 +4,94 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## 导入模块
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## bothFileCount
 
 ```TypeScript
-bothFileCount: int
+bothFileCount: number
 ```
 
 本地已上传云端的文件总个数，取值范围[0, INT32_MAX]，单位：个。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## bothFileTotalSize
 
 ```TypeScript
-bothFileTotalSize: long
+bothFileTotalSize: number
 ```
 
 本地已上传云端的文件总大小，取值范围[0, INT64_MAX]，单位：Byte。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## cloudFileCount
 
 ```TypeScript
-cloudFileCount: int
+cloudFileCount: number
 ```
 
 本地未下载的云端文件总个数，取值范围[0, INT32_MAX]，单位：个。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## cloudFileTotalSize
 
 ```TypeScript
-cloudFileTotalSize: long
+cloudFileTotalSize: number
 ```
 
 本地未下载的云端文件总大小，取值范围[0, INT64_MAX]，单位：Byte。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## localFileCount
 
 ```TypeScript
-localFileCount: int
+localFileCount: number
 ```
 
 本地未上传云端的文件总个数，取值范围[0, INT32_MAX]，单位：个。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 ## localFileTotalSize
 
 ```TypeScript
-localFileTotalSize: long
+localFileTotalSize: number
 ```
 
 本地未上传云端的文件总大小，取值范围[0, INT64_MAX]，单位：Byte。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager

@@ -4,14 +4,12 @@ Defines the MovingPhotoView controller.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from '@kit.MediaLibraryKit';
+import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## enableAutoPlay
@@ -23,8 +21,6 @@ enableAutoPlay(enabled: boolean)
 Dynamically refresh the autoplay property, which will force to play after moving photo is initialized
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -54,8 +50,6 @@ Enable or disable the zoom transition effect and can be set during initializatio
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -84,8 +78,6 @@ Notify the component to execute the picture transition animation.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -105,8 +97,6 @@ pausePlayback()
 Pause moving photo and show current frame, start playing from the current frame when playing again
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -130,8 +120,6 @@ Reset moving photo playback options as default.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -154,8 +142,6 @@ Restart to play the video with current options.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -171,14 +157,12 @@ Restart to play the video with current options.
 ## setPlaybackPeriod
 
 ```TypeScript
-setPlaybackPeriod(startTime: double, endTime: double)
+setPlaybackPeriod(startTime: number, endTime: number)
 ```
 
 Set moving photo playback period
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

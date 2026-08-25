@@ -7,14 +7,12 @@ WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## clearAllCookies
@@ -27,8 +25,6 @@ static clearAllCookies(): Promise<void>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -44,134 +40,6 @@ static clearAllCookies(): Promise<void>
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearAllCookies')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearAllCookies((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearAllCookies')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearAllCookies((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearAllCookies')
-        .onClick(() => {
-          webview.WebCookieManager.clearAllCookies()
-            .then(() => {
-              console.info("clearAllCookies success!");
-            })
-            .catch((error: BusinessError) => {
-              console.error("error: " + error);
-            });
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearAllCookies')
-        .onClick(() => {
-          webview.WebCookieManager.clearAllCookies()
-            .then(() => {
-              console.info("clearAllCookies success!");
-            })
-            .catch((error: Error) => {
-              console.error("error: " + error);
-            });
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## clearAllCookies
 
@@ -183,8 +51,6 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -201,10 +67,6 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [clearAllCookies](#clearallcookies)
-
 ## clearAllCookiesSync
 
 ```TypeScript
@@ -214,8 +76,6 @@ static clearAllCookiesSync(incognito?: boolean): void
 清除所有cookie（包括会话cookie和持久化cookie）。如需仅清除会话cookie，请使用 [clearSessionCookieSync](#clearsessioncookiesync)。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -227,56 +87,6 @@ static clearAllCookiesSync(incognito?: boolean): void
 | --- | --- | --- |
 | incognito | boolean | 否 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearAllCookiesSync')
-        .onClick(() => {
-          webview.WebCookieManager.clearAllCookiesSync();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearAllCookiesSync')
-        .onClick(() => {
-          webview.WebCookieManager.clearAllCookiesSync();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearSessionCookie
 
 ```TypeScript
@@ -286,8 +96,6 @@ static clearSessionCookie(): Promise<void>
 清除所有会话cookie。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -305,142 +113,6 @@ static clearSessionCookie(): Promise<void>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSessionCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearSessionCookie((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearSessionCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearSessionCookie((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSessionCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearSessionCookie()
-              .then(() => {
-                console.info("clearSessionCookie success!");
-              })
-              .catch((error: BusinessError) => {
-                console.error("error: " + error);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearSessionCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.clearSessionCookie()
-              .then(() => {
-                console.info("clearSessionCookie success!");
-              })
-              .catch((error: Error) => {
-                console.error("error: " + error);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## clearSessionCookie
 
 ```TypeScript
@@ -450,8 +122,6 @@ static clearSessionCookie(callback: AsyncCallback<void>): void
 清除所有会话cookie。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -469,10 +139,6 @@ static clearSessionCookie(callback: AsyncCallback<void>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [clearSessionCookie](#clearsessioncookie)
-
 ## clearSessionCookieSync
 
 ```TypeScript
@@ -483,61 +149,9 @@ static clearSessionCookieSync(): void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('clearSessionCookieSync')
-        .onClick(() => {
-          webview.WebCookieManager.clearSessionCookieSync();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('clearSessionCookieSync')
-        .onClick(() => {
-          webview.WebCookieManager.clearSessionCookieSync();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## configCookie
 
@@ -559,8 +173,6 @@ static configCookie(url: string, value: string): Promise<void>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -586,211 +198,6 @@ static configCookie(url: string, value: string): Promise<void>
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', "a=b", (error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', "a=b", (error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', 'a=b')
-              .then(() => {
-                console.info('configCookie success!');
-              })
-              .catch((error: BusinessError) => {
-                console.info('error: ' + JSON.stringify(error));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', 'a=b')
-              .then(() => {
-                console.info('configCookie success!');
-              })
-              .catch((error: Error) => {
-                console.info('error: ' + JSON.stringify(error));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', 'a=b', false, false)
-              .then(() => {
-                console.info('configCookie success!');
-              })
-              .catch((error: BusinessError) => {
-                console.info('error: ' + JSON.stringify(error));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('configCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookie('https://www.example.com', 'a=b', false, false)
-              .then(() => {
-                console.info('configCookie success!');
-              })
-              .catch((error: Error) => {
-                console.info('error: ' + JSON.stringify(error));
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## configCookie
 
 ```TypeScript
@@ -809,8 +216,6 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 > - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -836,10 +241,6 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
-
-**示例**
-
-参见 [configCookie](#configcookie)
 
 ## configCookie
 
@@ -861,8 +262,6 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -882,10 +281,6 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
-
-**示例**
-
-参见 [configCookie](#configcookie)
 
 ## configCookieSync
 
@@ -907,8 +302,6 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -928,126 +321,6 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookieSync')
-        .onClick(() => {
-          try {
-            // configCookieSync每次仅支持设置单个cookie值。
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('configCookieSync')
-        .onClick(() => {
-          try {
-            // configCookieSync每次仅支持设置单个cookie值。
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('configCookieSync')
-        .onClick(() => {
-          try {
-            // 仅支持设置单个cookie值。
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b', false, false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('configCookieSync')
-        .onClick(() => {
-          try {
-            // 仅支持设置单个cookie值。
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b', false, false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## configCookieSync
 
@@ -1068,8 +341,6 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -1089,10 +360,6 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
 
-**示例**
-
-参见 [configCookieSync](#configcookiesync)
-
 ## deleteEntireCookie
 
 ```TypeScript
@@ -1103,36 +370,11 @@ static deleteEntireCookie(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **替代接口：** [clearAllCookiesSync](#clearallcookiessync)
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteEntireCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteEntireCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## deleteSessionCookie
 
@@ -1144,36 +386,11 @@ static deleteSessionCookie(): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **替代接口：** [clearSessionCookieSync](#clearsessioncookiesync)
 
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('deleteSessionCookie')
-        .onClick(() => {
-          webview.WebCookieManager.deleteSessionCookie();
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## existCookie
 
@@ -1184,8 +401,6 @@ static existCookie(incognito?: boolean): boolean
 判断是否存在cookie。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1203,58 +418,6 @@ static existCookie(incognito?: boolean): boolean
 | --- |
 | boolean |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('existCookie')
-        .onClick(() => {
-          let result = webview.WebCookieManager.existCookie();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('existCookie')
-        .onClick(() => {
-          let result = webview.WebCookieManager.existCookie();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## fetchAllCookies
 
 ```TypeScript
@@ -1264,8 +427,6 @@ static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 获取所有cookie，使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1281,91 +442,6 @@ static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 | --- |
 | Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController()
-
-  build() {
-    Row() {
-      Column() {
-        Button('Config Cookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-
-        Button('Get All Cookies')
-        .onClick(() => {
-          webview.WebCookieManager.fetchAllCookies(false).then((cookies) => {
-            for (let i = 0; i < cookies.length; i++) {
-              console.info('fetchAllCookies cookie[' + i + '].name = ' + cookies[i].name);
-              console.info('fetchAllCookies cookie[' + i + '].value = ' + cookies[i].value);
-            }
-          })
-        })
-
-        Web({ src: 'https://www.example.com', controller: this.controller})
-      }
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, Row, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined)
-
-  build() {
-    Row() {
-      Column() {
-        Button('Config Cookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-
-        Button('Get All Cookies')
-        .onClick(() => {
-          webview.WebCookieManager.fetchAllCookies(false).then((cookies) => {
-            for (let i: int = 0; i < cookies.length; i++) {
-              console.info('fetchAllCookies cookie[' + i + '].name = ' + cookies[i].name);
-              console.info('fetchAllCookies cookie[' + i + '].value = ' + cookies[i].value);
-            }
-          })
-        })
-
-        Web({ src: 'https://www.example.com', controller: this.controller})
-      }
-    }
-  }
-}
-```
-
 ## fetchCookie
 
 ```TypeScript
@@ -1375,8 +451,6 @@ static fetchCookie(url: string): Promise<string>
 获取指定url对应cookie的值。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1401,288 +475,6 @@ static fetchCookie(url: string): Promise<string>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', (error, cookie) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-                return;
-              }
-              if (cookie) {
-                console.info('fetchCookie cookie = ' + cookie);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', (error, cookie) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-                return;
-              }
-              if (cookie) {
-                console.info('fetchCookie cookie = ' + cookie);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com')
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: BusinessError) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com')
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: Error) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', false)
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: BusinessError) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', false)
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: Error) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', false, true)
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: BusinessError) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static';
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('fetchCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.fetchCookie('https://www.example.com', false, true)
-              .then(cookie => {
-                console.info("fetchCookie cookie = " + cookie);
-              })
-              .catch((error: Error) => {
-                console.error(`ErrorCode: ${error.code},  Message: ${error.message}`);
-              })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller})
-    }
-  }
-}
-```
-
 ## fetchCookie
 
 ```TypeScript
@@ -1692,8 +484,6 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 获取指定url对应cookie的值。使用Promise异步回调。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -1717,10 +507,6 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-参见 [fetchCookie](#fetchcookie)
-
 ## fetchCookie
 
 ```TypeScript
@@ -1731,8 +517,6 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 26.0.0
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1758,10 +542,6 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 | --- |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-参见 [fetchCookie](#fetchcookie)
-
 ## fetchCookie
 
 ```TypeScript
@@ -1771,8 +551,6 @@ static fetchCookie(url: string, callback: AsyncCallback<string>): void
 获取指定url对应cookie的值。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1792,10 +570,6 @@ static fetchCookie(url: string, callback: AsyncCallback<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-参见 [fetchCookie](#fetchcookie)
-
 ## fetchCookieSync
 
 ```TypeScript
@@ -1810,8 +584,6 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 > - fetchCookieSync用于获取所有的cookie值，每条cookie值之间会通过"; "进行分隔，但无法单独获取某一条特定的cookie值。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1837,127 +609,6 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookieSync')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-            console.info("fetchCookieSync cookie = " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('fetchCookieSync')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-            console.info("fetchCookieSync cookie = " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('fetchCookieSync')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.fetchCookieSync('https://www.example.com', false, true);
-            console.info("fetchCookieSync cookie = " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static';
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { Entry, Column, Component, Web, Button } from '@kit.ArkUI';
-
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('fetchCookieSync')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.fetchCookieSync('https://www.example.com', false, true);
-            console.info("fetchCookieSync cookie = " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller})
-    }
-  }
-}
-```
-
 ## fetchCookieSync
 
 ```TypeScript
@@ -1972,8 +623,6 @@ static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCooki
 > - fetchCookieSync用于获取所有的cookie值，每条cookie值之间会通过"; "进行分隔，但无法单独获取某一条特定的cookie值。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1999,10 +648,6 @@ static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCooki
 | --- |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-参见 [fetchCookieSync](#fetchcookiesync)
-
 ## getCookie
 
 ```TypeScript
@@ -2012,8 +657,6 @@ static getCookie(url: string): string
 获取指定url对应cookie的值。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 11
 
@@ -2040,35 +683,6 @@ static getCookie(url: string): string
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('getCookie')
-        .onClick(() => {
-          try {
-            let value = webview.WebCookieManager.getCookie('https://www.example.com');
-            console.info("value: " + value);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## isCookieAllowed
 
 ```TypeScript
@@ -2079,8 +693,6 @@ static isCookieAllowed(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -2090,58 +702,6 @@ static isCookieAllowed(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isCookieAllowed')
-        .onClick(() => {
-          let result = webview.WebCookieManager.isCookieAllowed();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('isCookieAllowed')
-        .onClick(() => {
-          let result = webview.WebCookieManager.isCookieAllowed();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## isThirdPartyCookieAllowed
 
@@ -2153,8 +713,6 @@ static isThirdPartyCookieAllowed(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -2164,58 +722,6 @@ static isThirdPartyCookieAllowed(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('isThirdPartyCookieAllowed')
-        .onClick(() => {
-          let result = webview.WebCookieManager.isThirdPartyCookieAllowed();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('isThirdPartyCookieAllowed')
-        .onClick(() => {
-          let result = webview.WebCookieManager.isThirdPartyCookieAllowed();
-          console.info("result: " + result);
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## putAcceptCookieEnabled
 
@@ -2227,8 +733,6 @@ static putAcceptCookieEnabled(accept: boolean): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -2244,65 +748,6 @@ static putAcceptCookieEnabled(accept: boolean): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('putAcceptCookieEnabled')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.putAcceptCookieEnabled(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('putAcceptCookieEnabled')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.putAcceptCookieEnabled(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## putAcceptThirdPartyCookieEnabled
 
@@ -2314,8 +759,6 @@ static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -2331,65 +774,6 @@ static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('putAcceptThirdPartyCookieEnabled')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.putAcceptThirdPartyCookieEnabled(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('putAcceptThirdPartyCookieEnabled')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.putAcceptThirdPartyCookieEnabled(false);
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## saveCookieAsync
 
@@ -2404,8 +788,6 @@ static saveCookieAsync(): Promise<void>
 > cookie写入磁盘。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2423,142 +805,6 @@ static saveCookieAsync(): Promise<void>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('saveCookieAsync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieAsync((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('saveCookieAsync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieAsync((error) => {
-              if (error) {
-                console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-              }
-            })
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('saveCookieAsync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieAsync()
-              .then(() => {
-                console.info("saveCookieAsync success!");
-              })
-              .catch((error: BusinessError) => {
-                console.error("error: " + error);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('saveCookieAsync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieAsync()
-              .then(() => {
-                console.info("saveCookieAsyncCallback success!");
-              })
-              .catch((error: Error) => {
-                console.error("error: " + error);
-              });
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## saveCookieAsync
 
 ```TypeScript
@@ -2572,8 +818,6 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 > cookie写入磁盘。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2591,10 +835,6 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [saveCookieAsync](#savecookieasync)
-
 ## saveCookieSync
 
 ```TypeScript
@@ -2610,68 +850,7 @@ static saveCookieSync(): void
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('saveCookieSync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieSync();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  build() {
-    Column() {
-      Button('saveCookieSync')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.saveCookieSync();
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as Error).code},  Message: ${(error as Error).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
 
 ## setCookie
 
@@ -2682,8 +861,6 @@ static setCookie(url: string, value: string): void
 为指定url设置单个cookie的值。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 11
 
@@ -2706,34 +883,6 @@ static setCookie(url: string, value: string): void
 | [17100002](../errorcode-webview.md#17100002-url格式错误) |
 | [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  build() {
-    Column() {
-      Button('setCookie')
-        .onClick(() => {
-          try {
-            webview.WebCookieManager.setCookie('https://www.example.com', 'a=b');
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## setLazyInitializeWebEngine
 
 ```TypeScript
@@ -2749,8 +898,6 @@ static setLazyInitializeWebEngine(lazy: boolean): void
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **参数：**
@@ -2758,59 +905,3 @@ static setLazyInitializeWebEngine(lazy: boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | lazy | boolean | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-
-webview.WebCookieManager.setLazyInitializeWebEngine(true);
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-
-  aboutToAppear(): void {
-    webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-    webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// xxx.ets
-'use static'
-import { Button, Column, Component, Entry, State, Web } from '@kit.ArkUI';
-import { webview } from '@kit.ArkWeb';
-
-webview.WebCookieManager.setLazyInitializeWebEngine(true);
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController(undefined);
-
-  aboutToAppear(): void {
-    webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
-    webview.WebCookieManager.fetchCookieSync('https://www.example.com');
-  }
-
-  build() {
-    Column() {
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```

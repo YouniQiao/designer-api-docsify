@@ -5,14 +5,12 @@ Audio-haptic enables users to get rhythmic auditory and haptic feedback while ha
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from 'kits/@kit.AudioKit';
 ```
 
 ## Summary

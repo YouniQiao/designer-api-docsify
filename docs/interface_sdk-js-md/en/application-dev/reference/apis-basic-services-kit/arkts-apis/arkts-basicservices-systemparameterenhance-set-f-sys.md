@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameterEnhance } from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## set
@@ -15,8 +15,6 @@ function set(key: string, value: string, callback: AsyncCallback<void>): void
 Sets a value of the specified key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -39,38 +37,6 @@ Sets a value of the specified key. This API uses an asynchronous callback to ret
 | [14700103](../errorcode-device-info.md#14700103-operation-permission-denied) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    systemParameterEnhance.set("test.parameter.key", "testValue", (err: BusinessError, data: void) => {
-    if (err == undefined) {
-        console.info("set test.parameter.key value success :" + data)
-    } else {
-        console.error("set test.parameter.key value err:" + err.code)
-    }});
-} catch(e) {
-    console.error("set unexpected error: " + e);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let p: Promise<void>  = systemParameterEnhance.set("test.parameter.key", "testValue");
-    p.then((value: void) => {
-        console.info("set test.parameter.key success: " + value);
-    }).catch((err: BusinessError) => {
-        console.error(" set test.parameter.key error: " + err.code);
-    });
-} catch(e) {
-    console.error("set unexpected error: " + e);
-}
-```
-
 
 ## set
 
@@ -81,8 +47,6 @@ function set(key: string, value: string): Promise<void>
 Sets a value of the specified key. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
@@ -109,7 +73,3 @@ Sets a value of the specified key. This API uses a promise to return the result.
 | [14700102](../errorcode-system-parameterV9.md#14700102-invalid-system-parameter-value) |
 | [14700103](../errorcode-device-info.md#14700103-operation-permission-denied) |
 | [14700104](../errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) |
-
-**Examples**
-
-See [set](#set)

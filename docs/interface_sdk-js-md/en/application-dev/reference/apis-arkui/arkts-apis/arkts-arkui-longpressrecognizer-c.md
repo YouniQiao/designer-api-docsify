@@ -1,12 +1,10 @@
 # LongPressRecognizer
 
-Implements a long press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
+Implements a number press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
 
 **Inheritance/Implementation:** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,11 +19,9 @@ Implements a long press gesture recognizer. Inherits from [GestureRecognizer](ar
 getAllowableMovement(): number
 ```
 
-Obtains the maximum movement distance allowed for gesture recognition by the long press gesture recognizer.
+Obtains the maximum movement distance allowed for gesture recognition by the number press gesture recognizer.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,11 +41,9 @@ Obtains the maximum movement distance allowed for gesture recognition by the lon
 getDuration(): number
 ```
 
-Obtains the minimum duration required for the long press gesture to be recognized.
+Obtains the minimum duration required for the number press gesture to be recognized.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,11 +63,9 @@ Obtains the minimum duration required for the long press gesture to be recognize
 isRepeat(): boolean
 ```
 
-Checks whether the long press gesture recognizer is set to trigger repeated callbacks.
+Checks whether the number press gesture recognizer is set to trigger repeated callbacks.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isOsAccountAdditionDisallowed
@@ -15,8 +15,6 @@ function isOsAccountAdditionDisallowed(admin: Want, accountId?: number): boolean
 Queries whether a user is not allowed to add an account.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
@@ -46,27 +44,6 @@ Queries whether a user is not allowed to add an account.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let isDisallowed: boolean = accountManager.isOsAccountAdditionDisallowed(wantTemp, 100);
-  console.info(`Succeeded in querying the os account addition or not: ${isDisallowed}`);
-} catch (err) {
-  console.error(`Failed to query the os account addition or not. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## isOsAccountAdditionDisallowed
 
@@ -77,8 +54,6 @@ function isOsAccountAdditionDisallowed(admin: Want | null, accountId?: number): 
 Queries whether a user is not allowed to add an account. This API is applicable to enterprise audit and compliance check scenarios, helping administrators confirm the execution of account policies.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
@@ -107,7 +82,3 @@ Queries whether a user is not allowed to add an account. This API is applicable 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [isOsAccountAdditionDisallowed](#isosaccountadditiondisallowed)

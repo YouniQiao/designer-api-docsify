@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setDistributedEnable
@@ -15,8 +15,6 @@ function setDistributedEnable(enable: boolean, callback: AsyncCallback<void>): v
 Sets whether to enable distributed notification on this device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -48,33 +46,6 @@ Sets whether to enable distributed notification on this device. This API uses an
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setDistributedEnableCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("setDistributedEnable success");
-    }
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnable(enable, setDistributedEnableCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-notificationManager.setDistributedEnable(enable).then(() => {
-    console.info("setDistributedEnable success");
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## setDistributedEnable
 
@@ -85,8 +56,6 @@ function setDistributedEnable(enable: boolean): Promise<void>
 Sets whether to enable distributed notification on this device. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -122,7 +91,3 @@ Sets whether to enable distributed notification on this device. This API uses a 
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
-
-**Examples**
-
-See [setDistributedEnable](#setdistributedenable)

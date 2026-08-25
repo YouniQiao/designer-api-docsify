@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## pushUrl
@@ -25,8 +25,6 @@ function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -52,144 +50,6 @@ function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) |
 
-**示例**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushUrl({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-})
-  .then(() => {
-    console.info(`pushUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushUrl({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-}, (err) => {
-  if (err) {
-    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('pushUrl success');
-})
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushUrl({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`pushUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class innerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: innerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new innerParams(tuple);
-  }
-}
-
-router.pushUrl({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('pushUrl success');
-})
-```
-
 
 ## pushUrl
 
@@ -210,8 +70,6 @@ function pushUrl(options: RouterOptions): Promise<void>
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -242,10 +100,6 @@ function pushUrl(options: RouterOptions): Promise<void>
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) |
 
-**示例**
-
-参见 [pushUrl](#pushurl)
-
 
 ## pushUrl
 
@@ -266,8 +120,6 @@ function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallba
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -294,10 +146,6 @@ function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallba
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) |
 
-**示例**
-
-参见 [pushUrl](#pushurl)
-
 
 ## pushUrl
 
@@ -318,8 +166,6 @@ function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -350,7 +196,3 @@ function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) |
 | [100003](../errorcode-router.md#100003-路由压入的page过多) |
-
-**示例**
-
-参见 [pushUrl](#pushurl)

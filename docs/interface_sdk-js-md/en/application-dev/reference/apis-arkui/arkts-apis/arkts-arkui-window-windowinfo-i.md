@@ -4,14 +4,12 @@ Describes the window information.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## abilityName
@@ -25,8 +23,6 @@ abilityName of window
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -42,23 +38,19 @@ Bundle name of the application.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## displayId
 
 ```TypeScript
-displayId?: int
+displayId?: number
 ```
 
 Indicates the ID of the display where the window is located.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,8 +68,6 @@ Window size in the global coordinate system. In extended screen scenarios, the t
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## globalRect
@@ -91,8 +81,6 @@ Indicates the actual display size and position of the window.
 **Type:** Rect
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,8 +98,6 @@ Whether the window gains focus. **true** if the window gains focus, **false** ot
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## rect
@@ -126,23 +112,19 @@ Window size.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 Window ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -157,7 +139,5 @@ Window mode.
 **Type:** WindowStatusType
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

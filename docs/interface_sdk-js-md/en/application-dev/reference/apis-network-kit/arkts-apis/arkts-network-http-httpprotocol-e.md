@@ -4,8 +4,6 @@ Enumerates HTTP protocol versions.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## HTTP1_1
@@ -17,8 +15,6 @@ HTTP1_1 = 0
 HTTP1.1.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ HTTP2.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -50,7 +44,5 @@ HTTP3. If the system or server does not support HTTP3, the HTTP protocol of an e
 **Note：**: This parameter takes effect only for HTTPS URLs. If this parameter is set to HTTP, the request will fail.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetStack

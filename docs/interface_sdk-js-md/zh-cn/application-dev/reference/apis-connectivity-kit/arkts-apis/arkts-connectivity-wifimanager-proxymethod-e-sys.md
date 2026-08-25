@@ -1,10 +1,8 @@
 # ProxyMethod（系统接口）
 
-WLAN代理方式。 @enum { int }
+WLAN代理方式。 @enum { number }
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -20,8 +18,6 @@ METHOD_NONE = 0
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -36,8 +32,6 @@ METHOD_AUTO = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ METHOD_MANUAL = 2
 使用手动配置的代理。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

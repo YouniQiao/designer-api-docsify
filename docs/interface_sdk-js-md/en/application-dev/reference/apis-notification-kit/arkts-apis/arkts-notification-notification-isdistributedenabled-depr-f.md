@@ -15,8 +15,6 @@ Checks whether this device supports distributed notifications. This API uses an 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md)
@@ -29,32 +27,6 @@ Checks whether this device supports distributed notifications. This API uses an 
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let isDistributedEnabledCallback = (err: Base.BusinessError, data: boolean) => {
-  if (err) {
-    console.info("isDistributedEnabled failed " + JSON.stringify(err));
-  } else {
-    console.info("isDistributedEnabled success " + JSON.stringify(data));
-  }
-};
-
-Notification.isDistributedEnabled(isDistributedEnabledCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.isDistributedEnabled().then((data: boolean) => {
-    console.info("isDistributedEnabled success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isDistributedEnabled failed, code is ${err}`);
-});
-```
-
 
 ## isDistributedEnabled
 
@@ -65,8 +37,6 @@ function isDistributedEnabled(): Promise<boolean>
 Checks whether this device supports distributed notifications. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -79,7 +49,3 @@ Checks whether this device supports distributed notifications. This API uses a p
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [isDistributedEnabled](#isdistributedenabled)

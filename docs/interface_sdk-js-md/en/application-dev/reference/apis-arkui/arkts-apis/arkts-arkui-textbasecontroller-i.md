@@ -4,8 +4,6 @@ Defines a text selection controller.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Closes the custom or default text selection menu.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -40,8 +36,6 @@ getLayoutManager(): LayoutManager
 Obtains a **LayoutManager** object.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,8 +64,6 @@ the menu remains open and its position remains unchanged.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -84,4 +76,4 @@ the menu remains open and its position remains unchanged.
 | --- | --- | --- |
 | selectionStart | number | Yes |
 | selectionEnd | number | Yes |
-| options | [SelectionOptions](arkts-arkui-common-selectionoptions-i.md) | No |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No |

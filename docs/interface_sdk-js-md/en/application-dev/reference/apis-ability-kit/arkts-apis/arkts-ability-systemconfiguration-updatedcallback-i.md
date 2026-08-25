@@ -4,14 +4,12 @@ System configuration updated callback.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { systemConfiguration } from '@kit.AbilityKit';
+import { systemConfiguration } from 'kits/@kit.AbilityKit';
 ```
 
 ## onColorModeUpdated
@@ -23,8 +21,6 @@ onColorModeUpdated?: OnColorModeUpdatedFn
 Called when system's color mode is updated.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,8 +38,6 @@ Called when system's font style is updated.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -59,8 +53,6 @@ onFontSizeScaleUpdated?: OnFontSizeScaleUpdatedFn
 Called when system's font size is updated.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,8 +70,6 @@ Called when system's font weight is updated.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -95,8 +85,6 @@ onHasPointerDeviceUpdated?: OnHasPointerDeviceUpdatedFn
 Called when a pointing device is connected, such as a mouse, keyboard, or touchpad.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,8 +102,6 @@ Called when system's language is updated.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -131,8 +117,6 @@ onLocaleUpdated?: OnLocaleUpdatedFn
 Called when locale info is updated.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,8 +134,6 @@ Called when mobile country code is updated.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -167,8 +149,6 @@ onMNCUpdated?: OnMNCUpdatedFn
 Called when mobile network code is updated.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

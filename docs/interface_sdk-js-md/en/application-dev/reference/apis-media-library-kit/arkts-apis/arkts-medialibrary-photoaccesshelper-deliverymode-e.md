@@ -4,8 +4,6 @@ Enumerates the asset delivery modes.These modes are used for segmented photo or 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## FAST_MODE
@@ -17,8 +15,6 @@ FAST_MODE = 0
 Fast mode.For segmented photo or video delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it returns the callback for the low- quality version right away.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,8 +28,6 @@ High-quality mode.For segmented photo or video delivery, if a high-quality versi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## BALANCE_MODE
@@ -43,10 +37,11 @@ BALANCE_MODE = 2
 ```
 
 Balance mode.  
-- For segmented photo delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version, starts a task to generate a high-quality version, and returns the callback for the high-quality version once that version is ready. - For segmented video delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version right away.
+- For segmented photo delivery, if a high-quality version is available, it quickly returns the callback for that  
+high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version, starts a task to generate a high-quality version, and returns the callback for the high-quality version once that version is ready.  
+- For segmented video delivery, if a high-quality version is available, it quickly returns the callback for that  
+high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version right away.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

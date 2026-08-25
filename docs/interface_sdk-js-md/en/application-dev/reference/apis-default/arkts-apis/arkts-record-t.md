@@ -8,8 +8,6 @@ type Record<K extends keyof any, T> = {
 
 Construct a type with a set of properties K of type T
 
-**ArkTS mode:** 
-
 **Property type:** {
     [P in K]: T;
 }

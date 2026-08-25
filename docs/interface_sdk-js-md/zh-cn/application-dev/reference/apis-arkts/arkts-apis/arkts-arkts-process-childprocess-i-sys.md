@@ -4,8 +4,6 @@ childprocess 对象可用于创建新的进程。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ childprocess 对象可用于创建新的进程。
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## close
@@ -25,8 +23,6 @@ close(): void
 关闭目标进程。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -41,8 +37,6 @@ getErrorOutput(): Promise<Uint8Array>
 返回子进程的标准错误输出，以 Uint8Array 形式返回直到 EOF。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -64,8 +58,6 @@ getOutput(): Promise<Uint8Array>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
@@ -86,8 +78,6 @@ kill(signal: number | string): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
@@ -98,22 +88,6 @@ kill(signal: number | string): void
 | --- | --- | --- |
 | [signal](arkts-arkts-locks-asynclockoptions-c.md) | number \| string | 是 |
 
-**示例**
-
-```TypeScript
-let pid = process.pid;
-let result = process.kill(28, pid);
-```
-
-```TypeScript
-// 创建ProcessManager实例
-let processManager = new process.ProcessManager();
-// 获取当前进程pid
-let pres = process.pid;
-// 发送信号28结束当前进程
-let result = processManager.kill(28, pres);
-```
-
 ## wait
 
 ```TypeScript
@@ -123,8 +97,6 @@ wait(): Promise<number>
 返回 number 表示目标进程的退出码。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -148,8 +120,6 @@ readonly exitCode: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
@@ -165,8 +135,6 @@ readonly killed: boolean
 **类型：** boolean
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -184,8 +152,6 @@ readonly pid: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
@@ -201,8 +167,6 @@ readonly ppid: number
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.Utils.Lang
 

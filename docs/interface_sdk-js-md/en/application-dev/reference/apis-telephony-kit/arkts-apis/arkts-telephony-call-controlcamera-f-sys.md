@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## controlCamera
 
 ```TypeScript
-function controlCamera(callId: int, cameraId: string): Promise<void>
+function controlCamera(callId: number, cameraId: string): Promise<void>
 ```
 
 Uses the specified camera to make a video call. If **cameraId** is left empty, the camera is disabled. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Uses the specified camera to make a video call. If **cameraId** is left empty, t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 | [cameraId](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameradevice-i.md) | string | Yes |
 
 **Return value:**
@@ -48,15 +46,3 @@ Uses the specified camera to make a video call. If **cameraId** is left empty, t
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.controlCamera(1, "1").then(() => {
-    console.info(`controlCamera success.`);
-}).catch((err: BusinessError) => {
-    console.error(`controlCamera fail, promise: err->${JSON.stringify(err)}`);
-});
-```

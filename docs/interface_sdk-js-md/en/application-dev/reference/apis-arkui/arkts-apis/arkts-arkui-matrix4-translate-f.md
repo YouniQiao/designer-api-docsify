@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from '@kit.ArkUI';
+import { matrix4 } from 'kits/@kit.ArkUI';
 ```
 
 ## translate
@@ -15,8 +15,6 @@ function translate(options: TranslateOption): Matrix4Transit
 Translates this matrix object along the x, y, and z axes.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -34,26 +32,4 @@ Translates this matrix object along the x, y, and z axes.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) |
-
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity().translate({ x: 100, y: 200, z: 30 });
-
-  build() {
-    Column() {
-      // Replace $r("app.media.bg1") with the image resource file you use.
-      Image($r("app.media.bg1")).transform(this.matrix1)
-        .width("40%")
-        .height(100)
-    }
-  }
-}
-```
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |

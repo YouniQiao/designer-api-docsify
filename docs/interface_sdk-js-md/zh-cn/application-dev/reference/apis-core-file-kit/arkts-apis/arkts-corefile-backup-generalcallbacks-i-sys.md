@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## onBackupSizeReport
@@ -25,8 +23,6 @@ onBackupSizeReport?: OnBackupSizeReport
 备份服务返回结果或进度信息时触发的回调。 返回框架扫描到的应用待备份数据量信息。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -41,8 +37,6 @@ onFileReadyBatch?: OnFileReadyBatch
 备份服务向客户端发送文件时触发的回调。 File参数表示发送给客户端的文件。 返回的文件归备份服务所有，客户端关闭文件句柄后由备份服务清理。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,8 +64,6 @@ onProcess(bundleName: string, process: string): void
 备份服务返回结果或进度信息时触发的回调。 返回应用的处理结果或进度信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,54 +93,6 @@ onProcess(bundleName: string, process: string): void
 | 13900020 |
 | 13900025 |
 
-**示例**
-
-```TypeScript
-import { backup } from '@kit.CoreFileKit';
-
-onProcess: (bundleName: string, process: string) => {
-  console.info('onProcess bundleName : ' + bundleName);
-  console.info('onProcess processInfo : ' + process);
-}
-```
-
-## onProcess
-
-```TypeScript
-onProcess: OnProcess
-```
-
-备份服务返回结果或进度信息时触发的回调。 返回应用的处理结果或进度信息。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.FileManagement.StorageService.Backup
-
-**系统接口：** 此接口为系统接口。
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 13500006 |
-| 13500008 |
-| 13600001 |
-| 13900001 |
-| 13900005 |
-| 13900011 |
-| 13900020 |
-| 13900025 |
-
-**示例**
-
-参见 [onProcess](#onprocess)
-
 ## onResultReport
 
 ```TypeScript
@@ -158,8 +102,6 @@ onResultReport(bundleName: string, result: string): void
 备份服务返回结果信息时触发的回调。 第一个字符串参数表示触发回调的应用名称。 第二个字符串参数表示应用的处理结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,51 +128,6 @@ onResultReport(bundleName: string, result: string): void
 | 13900025 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-import { backup } from '@kit.CoreFileKit';
-
-onResultReport: (bundleName: string, result: string) => {
-  console.info('onResultReport bundleName : ' + bundleName);
-  console.info('onResultReport result : ' + result);
-}
-```
-
-## onResultReport
-
-```TypeScript
-onResultReport: OnResultReport
-```
-
-备份服务返回结果信息时触发的回调。 第一个字符串参数表示触发回调的应用名称。 第二个字符串参数表示应用的处理结果。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.FileManagement.StorageService.Backup
-
-**系统接口：** 此接口为系统接口。
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| 13600001 |
-| 13900005 |
-| 13900011 |
-| 13900025 |
-| 13900042 |
-
-**示例**
-
-参见 [onResultReport](#onresultreport)
-
 ## onAllBundlesEnd
 
 ```TypeScript
@@ -242,8 +139,6 @@ onAllBundlesEnd: AsyncCallback<undefined>
 **类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;undefined&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -261,8 +156,6 @@ onBackupServiceDied: Callback<undefined>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -278,8 +171,6 @@ onBundleBegin: AsyncCallback<string, void | string>
 **类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -297,8 +188,6 @@ onBundleEnd: AsyncCallback<string, void | string>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -315,8 +204,6 @@ onFileReady: AsyncCallback<File>
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
 **系统接口：** 此接口为系统接口。
@@ -332,8 +219,6 @@ onMigrateResult?: AsyncCallback<string, void | string>
 **类型：** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

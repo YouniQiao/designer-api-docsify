@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## getFontPathsByType
@@ -15,8 +15,6 @@ function getFontPathsByType(fontType: SystemFontType): Array<string>
 Obtains the paths of all font files of a specified font type.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -33,28 +31,3 @@ Obtains the paths of all font files of a specified font type.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Array & lt;string & gt; |
-
-**Examples**
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct GetFontPathsByTypeTest {
-  build() {
-    Column({ space: 10 }) {
-      Button("get font path")
-        .onClick(() => {
-          let fontList = text.getFontPathsByType(text.SystemFontType.ALL)
-          console.info("file count: " + fontList.length)
-          for (let index = 0; index < fontList.length; index++) {
-            console.info("file path: " + fontList[index])
-          }
-        })
-    }.width("100%")
-    .height("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```

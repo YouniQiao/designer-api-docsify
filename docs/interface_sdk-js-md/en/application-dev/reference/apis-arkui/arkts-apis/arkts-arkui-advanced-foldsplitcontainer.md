@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from '@kit.ArkUI';
+import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -35,4 +35,3 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [OnHoverStatusChangeHandler(Defines FoldSplitContainer component.)](arkts-arkui-onhoverstatuschangehandler-t.md) |
-| [RegionBuilder(Defines FoldSplitContainer component.)](arkts-arkui-regionbuilder-t.md) |

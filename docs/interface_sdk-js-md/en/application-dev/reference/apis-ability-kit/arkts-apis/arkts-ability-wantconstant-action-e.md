@@ -4,8 +4,6 @@ Enumerates the action constants of the Want object. **action** specifies the ope
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## ACTION_SEND_TO_DATA
@@ -17,8 +15,6 @@ ACTION_SEND_TO_DATA = 'ohos.want.action.sendToData'
 Action of launching the UI for sending a message to a specified recipient.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

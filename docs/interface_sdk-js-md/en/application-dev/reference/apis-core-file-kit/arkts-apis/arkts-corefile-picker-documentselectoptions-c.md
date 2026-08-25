@@ -4,14 +4,12 @@ Defines the options for selecting documents.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## allowsMulFolderSelection
@@ -25,8 +23,6 @@ Whether to support for selecting folders, Only 2-in-1 devices are supported. The
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Whether to start Picker.Default value: **false**. If **authMode** is **true**, *
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.UserFileService.FolderSelection
@@ -63,8 +57,6 @@ URI of the file or directory that can be selected. It is empty by default (the r
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,8 +74,6 @@ Suffix of the document to select.The value is a string array. Each element speci
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -99,8 +89,6 @@ Whether to support encryption (only files are supported). The default value is *
 **Type:** boolean
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -118,8 +106,6 @@ Maximum number of files that can be selected.In API version 20 and earlier versi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -135,8 +121,6 @@ Whether to enable the aggregation view mode for a file management application. T
 **Type:** [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -154,8 +138,6 @@ Whether to enable the batch authorization mode.The value **false** (default) mea
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -172,8 +154,6 @@ Whether to pass the URIs for batch authorization (only files are supported). Thi
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -189,8 +169,6 @@ Type of the document selected by Picker. The default value is **FILE** (file typ
 **Type:** [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

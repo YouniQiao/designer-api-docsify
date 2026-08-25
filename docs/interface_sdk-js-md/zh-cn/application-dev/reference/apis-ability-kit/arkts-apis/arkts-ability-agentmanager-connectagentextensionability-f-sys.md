@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## connectAgentExtensionAbility
@@ -26,8 +26,6 @@ function connectAgentExtensionAbility(want: Want, agentId: string,
 > - 同一个AgentExtensionAbility中，不允许重复连接同一个LOW_CODE类型的Agent。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **需要权限：** ohos.permission.CONNECT_AGENT
 

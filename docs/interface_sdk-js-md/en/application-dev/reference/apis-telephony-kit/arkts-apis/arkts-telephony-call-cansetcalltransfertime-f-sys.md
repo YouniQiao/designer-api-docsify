@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## canSetCallTransferTime
 
 ```TypeScript
-function canSetCallTransferTime(slotId: int, callback: AsyncCallback<boolean>): void
+function canSetCallTransferTime(slotId: number, callback: AsyncCallback<boolean>): void
 ```
 
 Checks whether the call forwarding time can be set. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Checks whether the call forwarding time can be set. This API uses an asynchronou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
@@ -43,44 +41,16 @@ Checks whether the call forwarding time can be set. This API uses an asynchronou
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.canSetCallTransferTime(slotId, (err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`canSetCallTransferTime fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`canSetCallTransferTime success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.canSetCallTransferTime(slotId).then((data: boolean) => {
-    console.info(`canSetCallTransferTime success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`canSetCallTransferTime fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## canSetCallTransferTime
 
 ```TypeScript
-function canSetCallTransferTime(slotId: int): Promise<boolean>
+function canSetCallTransferTime(slotId: number): Promise<boolean>
 ```
 
 Checks whether the call forwarding time can be set. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -92,7 +62,7 @@ Checks whether the call forwarding time can be set. This API uses a promise to r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -111,7 +81,3 @@ Checks whether the call forwarding time can be set. This API uses a promise to r
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [canSetCallTransferTime](#cansetcalltransfertime)

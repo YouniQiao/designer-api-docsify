@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllowedRunningBundles
@@ -15,8 +15,6 @@ function getAllowedRunningBundles(admin: Want, accountId: number): Array<string>
 Obtains the list of applications allowed to run by a specified user.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -45,26 +43,6 @@ Obtains the list of applications allowed to run by a specified user.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: Array<string> = applicationManager.getAllowedRunningBundles(wantTemp, 100);
-  console.info(`Succeeded in getting allowed running bundles, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get allowed running bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getAllowedRunningBundles
 
@@ -75,8 +53,6 @@ function getAllowedRunningBundles(admin: Want | null, accountId: number): Array<
 Obtains the application running trustlist of a specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -104,7 +80,3 @@ Obtains the application running trustlist of a specified user.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [getAllowedRunningBundles](#getallowedrunningbundles)

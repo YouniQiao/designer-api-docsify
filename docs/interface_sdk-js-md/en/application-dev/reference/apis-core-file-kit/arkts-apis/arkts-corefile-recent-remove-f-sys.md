@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { recent } from '@kit.CoreFileKit';
+import { recent } from 'kits/@kit.CoreFileKit';
 ```
 
 ## remove
@@ -15,8 +15,6 @@ function remove(uri: string): void
 Removes the file of the specified URI from the recent file list.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -41,10 +39,3 @@ Removes the file of the specified URI from the recent file list.
 | 13900002 |
 | 13900020 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-let uri = 'file://docs/storage/Users/currentUser/<publicPath>';
-recent.remove(uri);
-```

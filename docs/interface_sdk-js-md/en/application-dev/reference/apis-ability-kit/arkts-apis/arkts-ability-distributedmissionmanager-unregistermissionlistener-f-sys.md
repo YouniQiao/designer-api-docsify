@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## unRegisterMissionListener
@@ -15,8 +15,6 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo, callback: Async
 Unregisters a mission status listener. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -40,42 +38,6 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.unRegisterMissionListener(
-    { deviceId: "" },
-    (error: BusinessError) => {
-      if (error) {
-          console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
-          return;
-      }
-      console.info('unRegisterMissionListener finished');
-  })
-} catch (error) {
-    console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  distributedMissionManager.unRegisterMissionListener({deviceId: ""}).then(() => {
-    console.info('unRegisterMissionListener finished successfully');
-  }).catch((error: BusinessError) => {
-      console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
-  })
-} catch (error) {
-    console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
-}
-```
-
 
 ## unRegisterMissionListener
 
@@ -86,8 +48,6 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo): Promise<void>
 Unregisters a mission status listener. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -115,7 +75,3 @@ Unregisters a mission status listener. This API uses a promise to return the res
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [unRegisterMissionListener](#unregistermissionlistener)

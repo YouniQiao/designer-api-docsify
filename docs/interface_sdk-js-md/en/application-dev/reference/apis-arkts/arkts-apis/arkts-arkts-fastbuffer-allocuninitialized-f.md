@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## allocUninitialized
@@ -15,8 +15,6 @@ function allocUninitialized(size: number): FastBuffer
 Allocates a new un-pooled FastBuffer for a fixed size bytes. The FastBuffer will not be initially filled.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -33,13 +31,3 @@ Allocates a new un-pooled FastBuffer for a fixed size bytes. The FastBuffer will
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
-
-**Examples**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitialized(10);
-buf.fill(0);
-// "buf":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllBundleInfo
@@ -15,8 +15,6 @@ function getAllBundleInfo(bundleFlag: BundleFlag, userId: number, callback: Asyn
 Obtains the information of all bundles of the specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -32,52 +30,6 @@ Obtains the information of all bundles of the specified user. This API uses an a
 | userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleFlag: number = 0;
-let userId: number = 100;
-
-bundle.getAllBundleInfo(bundleFlag, userId)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleFlag: number = 0;
-
-bundle.getAllBundleInfo(bundleFlag, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleFlag: number = 0;
-let userId: number = 100;
-
-bundle.getAllBundleInfo(bundleFlag, userId, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
 
 ## getAllBundleInfo
 
@@ -88,8 +40,6 @@ function getAllBundleInfo(bundleFlag: BundleFlag, callback: AsyncCallback<Array<
 Obtains the information of all bundles of the current user. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -104,10 +54,6 @@ Obtains the information of all bundles of the current user. This API uses an asy
 | bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes |
 
-**Examples**
-
-See [getAllBundleInfo](#getallbundleinfo)
-
 
 ## getAllBundleInfo
 
@@ -118,8 +64,6 @@ function getAllBundleInfo(bundleFlag: BundleFlag, userId?: number): Promise<Arra
 Obtains the information of all bundles of the specified user. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -139,7 +83,3 @@ Obtains the information of all bundles of the specified user. This API uses a pr
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; |
-
-**Examples**
-
-See [getAllBundleInfo](#getallbundleinfo)

@@ -9,8 +9,6 @@ Defines the ArkTS Array reduction function, which is used by the 'some' and 'eve
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang

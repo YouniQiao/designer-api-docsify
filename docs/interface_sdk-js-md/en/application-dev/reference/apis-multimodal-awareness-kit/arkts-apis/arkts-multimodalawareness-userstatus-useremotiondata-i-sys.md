@@ -6,8 +6,6 @@ Defines user emotion data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -15,22 +13,20 @@ Defines user emotion data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## confidence
 
 ```TypeScript
-confidence?: int
+confidence?: number
 ```
 
 User emotion confidence. The value ranges from 0 to 100. A larger value indicates a higher confidence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,16 +37,14 @@ User emotion confidence. The value ranges from 0 to 100. A larger value indicate
 ## emotionNonRealTime
 
 ```TypeScript
-emotionNonRealTime ?: int[]
+emotionNonRealTime ?: number[]
 ```
 
 User non-real-time emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm, 3: A little unhappy, 4: Angry, 5: Crying.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,16 +55,14 @@ User non-real-time emotion level. The value ranges from 0 to 5. 0: Very happy, 1
 ## emotionRealTime
 
 ```TypeScript
-emotionRealTime ?: int
+emotionRealTime ?: number
 ```
 
 User real-time emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm, 3: A little unhappy, 4: Angry, 5: Crying.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,16 +73,14 @@ User real-time emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A 
 ## gravityAcceleration
 
 ```TypeScript
-gravityAcceleration?: double[]
+gravityAcceleration?: number[]
 ```
 
 Gravity acceleration of user motion status, in m/s².
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,8 +100,6 @@ Whether emotion data is real-time.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
@@ -121,16 +109,14 @@ Whether emotion data is real-time.
 ## linearAcceleration
 
 ```TypeScript
-linearAcceleration?: double[][]
+linearAcceleration?: number[][]
 ```
 
 Linear acceleration of user motion status, in m/s².
 
-**Type:** ArkTS-Dyn: number[][]  <br>ArkTS-Sta：double[][]
+**Type:** number[][]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

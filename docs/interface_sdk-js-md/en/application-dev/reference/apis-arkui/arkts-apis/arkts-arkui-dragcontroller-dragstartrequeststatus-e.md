@@ -4,8 +4,6 @@ Enumerates the states defining whether an application can initiate a drag operat
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## WAITING
@@ -17,8 +15,6 @@ WAITING = 0
 The application is preparing data and cannot initiate a drag operation yet.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ READY = 1
 The application has completed data preparation and is ready to initiate a drag operation.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onSpatialMotion
@@ -15,8 +15,6 @@ function onSpatialMotion(callback: Callback<SpatialMotionInfo>): void
 Enables spatial motion awareness and subscribes to spatial motion awareness results. If the capability is not supported, no callback will be triggered. You can obtain the supported capabilities by calling the getAllCapacityList method.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Required permissions:** ohos.permission.vehicle.MMA_SPATIALACTION
 

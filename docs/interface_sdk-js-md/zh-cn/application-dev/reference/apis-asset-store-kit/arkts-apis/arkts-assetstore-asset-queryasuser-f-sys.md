@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## queryAsUser
@@ -15,8 +15,6 @@ function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>
 在指定用户空间中查询一条或多条符合条件的关键资产。若查询需要用户认证的关键资产，则需要在本函数前调用[asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md)接口，在本函数后调用 [asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md)接口，开发步骤请参考 [开发指导](../../../security/AssetStoreKit/asset-js-query-auth.md)。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -57,27 +55,3 @@ function queryAsUser(userId: number, query: AssetMap): Promise<Array<AssetMap>>
 | [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
 | [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
 | [24000017](../errorcode-asset.md#24000017-该子功能不支持) |
-
-**示例**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let userId: number = 100;
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-asset.queryAsUser(userId, query).then((res: Array<asset.AssetMap>) => {
-  for (let i = 0; i < res.length; i++) {
-    // 解析属性。
-    let accessibility: number = res[i].get(asset.Tag.ACCESSIBILITY) as number;
-    console.info(`Succeeded in getting accessibility, which is: ${accessibility}.`);
-  }
-  console.info(`Succeeded in querying Asset from user space.`);
-});
-```

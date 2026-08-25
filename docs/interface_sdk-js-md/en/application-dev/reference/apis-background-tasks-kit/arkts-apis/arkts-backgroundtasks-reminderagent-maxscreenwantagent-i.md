@@ -4,8 +4,6 @@ Provides the information about the target package and ability to start automatic
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
@@ -15,7 +13,7 @@ Provides the information about the target package and ability to start automatic
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -29,8 +27,6 @@ Name of the ability that is automatically started when the reminder arrives and 
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -49,8 +45,6 @@ Name of the HAP that is automatically started when the reminder arrives and the 
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

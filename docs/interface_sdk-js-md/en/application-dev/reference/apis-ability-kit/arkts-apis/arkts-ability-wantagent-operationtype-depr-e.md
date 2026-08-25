@@ -4,8 +4,6 @@ Identifies the operation for using a WantAgent, such as starting an ability or s
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [OperationType](arkts-ability-wantagent-operationtype-e.md)
@@ -21,8 +19,6 @@ UNKNOWN_TYPE = 0
 Unknown operation.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -42,8 +38,6 @@ Starts an ability with a UI.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [START_ABILITY](arkts-ability-wantagent-operationtype-e.md#start_ability)
@@ -61,8 +55,6 @@ START_ABILITIES
 Starts multiple abilities with a UI.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -82,8 +74,6 @@ Starts an ability without a UI.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [START_SERVICE](arkts-ability-wantagent-operationtype-e.md#start_service)
@@ -101,8 +91,6 @@ SEND_COMMON_EVENT
 Sends a common event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

@@ -4,8 +4,6 @@ Enumerates SMS message sending results.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## SEND_SMS_SUCCESS
@@ -17,8 +15,6 @@ SEND_SMS_SUCCESS = 0
 The SMS message is sent successfully.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -32,8 +28,6 @@ Failed to send the SMS message due to an unknown reason.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## SEND_SMS_FAILURE_RADIO_OFF
@@ -46,8 +40,6 @@ Failed to send the SMS message because the modem is shut down.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## SEND_SMS_FAILURE_SERVICE_UNAVAILABLE
@@ -59,7 +51,5 @@ SEND_SMS_FAILURE_SERVICE_UNAVAILABLE = 3
 Failed to send the SMS message because the network is unavailable or SMS message sending or receiving is not supported.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms

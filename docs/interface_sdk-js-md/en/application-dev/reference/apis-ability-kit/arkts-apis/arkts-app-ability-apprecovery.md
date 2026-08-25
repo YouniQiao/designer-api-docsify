@@ -4,14 +4,12 @@ The appRecovery module provides APIs for recovering faulty applications.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { appRecovery } from '@kit.AbilityKit';
+import { appRecovery } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

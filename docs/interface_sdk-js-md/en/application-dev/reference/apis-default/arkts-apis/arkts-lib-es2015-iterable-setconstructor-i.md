@@ -1,7 +1,5 @@
 # SetConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new <T>(iterable?: Iterable<T> | null): Set<T>
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

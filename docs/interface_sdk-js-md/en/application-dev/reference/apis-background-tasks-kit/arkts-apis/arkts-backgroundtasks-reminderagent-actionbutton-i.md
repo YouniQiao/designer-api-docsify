@@ -4,8 +4,6 @@ Defines a button displayed in the reminder notification.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md)
@@ -15,7 +13,7 @@ Defines a button displayed in the reminder notification.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## title
@@ -29,8 +27,6 @@ Text on the button.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -49,8 +45,6 @@ Button type.
 **Type:** ActionButtonType
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

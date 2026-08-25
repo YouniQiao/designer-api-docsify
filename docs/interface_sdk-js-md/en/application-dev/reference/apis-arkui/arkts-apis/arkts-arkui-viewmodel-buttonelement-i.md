@@ -6,8 +6,6 @@ The &lt;button&gt; component includes capsule, circle, text, arc, and download b
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## setProgress
@@ -19,8 +17,6 @@ setProgress(param: { progress: number }): void
 Progress bar of the download button. The value ranges from 0 to 100. The progress bar is displayed if the value is greater than 0. If the value is greater than or equal to 100, the progress bar is not displayed. NOTE The text displayed on the progress bar is changed based on the value.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -1,10 +1,8 @@
 # PolygonMode
 
-Enumerates the polygon drawing mode.@enum { int }
+Enumerates the polygon drawing mode.@enum { number }
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ Draws each face of the polygon.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## LINE
@@ -32,8 +28,6 @@ Draws only the wireframe of the polygon.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## POINT
@@ -45,7 +39,5 @@ POINT = 2
 Draws only the vertices of the polygon.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

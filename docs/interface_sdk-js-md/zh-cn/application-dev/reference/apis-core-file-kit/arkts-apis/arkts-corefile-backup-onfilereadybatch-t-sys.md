@@ -8,8 +8,6 @@ type OnFileReadyBatch = (error: BusinessError<void>, files: Array<File>) => void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
@@ -22,21 +20,3 @@ type OnFileReadyBatch = (error: BusinessError<void>, files: Array<File>) => void
 | --- | --- | --- |
 | error | BusinessError & lt;void & gt; | 是 |
 | files | Array & lt;File & gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
-
-const onFileReadyBatch: backup.OnFileReadyBatch = (error: BusinessError<void>, files: Array<backup.File>): void => {
-  if (error) {
-    console.error(`onFileReadyBatch failed. Code: ${error.code}, message: ${error.message}`);
-    return;
-  }
-  for (let file of files) {
-    console.info(`onFileReadyBatch success with file: ${file.bundleName}, ${file.uri}`);
-    fileIo.closeSync(file.fd);
-  }
-};
-```

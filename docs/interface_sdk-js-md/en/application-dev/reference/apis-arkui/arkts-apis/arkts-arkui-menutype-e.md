@@ -4,8 +4,6 @@ Enumerates the menu types.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## SELECTION_MENU
@@ -17,8 +15,6 @@ SELECTION_MENU = 0
 Text selection menu.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ PREVIEW_MENU = 1
 Preview menu.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 

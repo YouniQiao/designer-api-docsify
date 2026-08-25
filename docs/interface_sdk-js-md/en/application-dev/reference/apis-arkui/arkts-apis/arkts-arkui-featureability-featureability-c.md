@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **Substitutes:** FeatureAbility
@@ -19,8 +17,6 @@ static callAbility(param: CallAbilityParam): Promise<string>
 Calls an AA.
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 
@@ -48,8 +44,6 @@ Start FA migration.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -69,8 +63,6 @@ static finishWithResult(param: FinishWithResultParams): Promise<Result>
 FA call the interface to destroy itself and set the result as parameters.
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 
@@ -100,8 +92,6 @@ Get device information list.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -128,8 +118,6 @@ Sends messages to the destination device.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -149,8 +137,6 @@ static startAbility(request: RequestParams): Promise<Result>
 Start a FA without callback result.
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 
@@ -180,8 +166,6 @@ Start a FA with callback result.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **Substitutes:** startAbilityForResult
@@ -210,8 +194,6 @@ Subscribe to events of an AA.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -239,8 +221,6 @@ Listens for messages sent from other devices.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -260,8 +240,6 @@ static unsubscribeAbilityEvent(param: SubscribeAbilityEventParam): Promise<strin
 Unsubscribe from events of an AA.
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 
@@ -288,8 +266,6 @@ static unsubscribeMsg(): void
 Cancel the listening for messages sent from other devices.
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 

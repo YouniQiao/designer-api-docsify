@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
+import { videoProcessingEngine } from 'kits/@kit.ImageKit';
 ```
 
 ## create
@@ -15,8 +15,6 @@ function create(): ImageProcessor
 创建图像处理实例。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -35,14 +33,3 @@ function create(): ImageProcessor
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [29200003](../errorcode-videoprocessingengine.md#29200003-创建失败) |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-内存不足) |
-
-**示例**
-
-```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
-
-async function create() {
-  await videoProcessingEngine.initializeEnvironment();
-  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
-}
-```

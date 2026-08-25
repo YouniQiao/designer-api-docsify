@@ -15,8 +15,6 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getAllActiveNotifications](arkts-notification-notificationmanager-getallactivenotifications-f-sys.md)
@@ -33,34 +31,6 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-function getAllActiveNotificationsCallback(err: Base.BusinessError, data: NotificationManager.NotificationRequest[]) {
-  if (err) {
-    console.error("getAllActiveNotifications failed " + JSON.stringify(err));
-  } else {
-    console.info("getAllActiveNotifications success");
-  }
-}
-
-Notification.getAllActiveNotifications(getAllActiveNotificationsCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-import NotificationManager from '@ohos.notificationManager';
-
-Notification.getAllActiveNotifications().then((data: NotificationManager.NotificationRequest[]) => {
-  console.info("getAllActiveNotifications success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`getAllActiveNotifications failed, code is ${err}`);
-});
-```
-
 
 ## getAllActiveNotifications
 
@@ -71,8 +41,6 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 获取当前未删除的所有通知（Promise形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -89,7 +57,3 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; |
-
-**示例**
-
-参见 [getAllActiveNotifications](#getallactivenotifications)

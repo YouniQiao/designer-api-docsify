@@ -4,77 +4,67 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## colorMode
 
 ```TypeScript
-colorMode: int
+colorMode: number
 ```
 
 表示色彩模式。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## copyNumber
 
 ```TypeScript
-copyNumber: int
+copyNumber: number
 ```
 
 表示文件列表副本。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## duplexMode
 
 ```TypeScript
-duplexMode: int
+duplexMode: number
 ```
 
 表示单双面打印模式。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## fdList
 
 ```TypeScript
-fdList: Array<int>
+fdList: Array<number>
 ```
 
 表示待打印文件fd列表。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -90,8 +80,6 @@ isLandscape: boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## isSequential
@@ -105,8 +93,6 @@ isSequential: boolean
 **类型：** boolean
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -122,8 +108,6 @@ jobId: string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## jobState
@@ -137,8 +121,6 @@ jobState: PrintJobState
 **类型：** [PrintJobState](arkts-basicservices-print-printjobstate-e.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -154,8 +136,6 @@ jobSubstate: PrintJobSubState
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## margin
@@ -169,8 +149,6 @@ margin?: PrintMargin
 **类型：** [PrintMargin](arkts-basicservices-print-printmargin-i.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -186,8 +164,6 @@ options?: Object
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## pageRange
@@ -201,8 +177,6 @@ pageRange: PrinterRange
 **类型：** [PrinterRange](arkts-basicservices-print-printerrange-i.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -218,8 +192,6 @@ pageSize: PrintPageSize
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## preview
@@ -234,8 +206,6 @@ preview?: PreviewAttribute
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## printerId
@@ -249,7 +219,5 @@ printerId: string
 **类型：** string
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework

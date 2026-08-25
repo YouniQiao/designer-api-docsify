@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## off('enabledAccessibilityExtensionListChange')
@@ -15,8 +15,6 @@ function off(type: 'enabledAccessibilityExtensionListChange', callback?: Callbac
 取消启用的辅助扩展的列表变化监听。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -39,18 +37,6 @@ function off(type: 'enabledAccessibilityExtensionListChange', callback?: Callbac
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-let callback = (data: boolean) => {
-  console.info(`subscribe highContrastText success, result: ${JSON.stringify(data)}`);
-};
-config.highContrastText.on(callback);
-config.highContrastText.off(callback);
-```
-
 
 ## off('installedAccessibilityListChange')
 
@@ -61,8 +47,6 @@ function off(type: 'installedAccessibilityListChange', callback?: Callback<void>
 取消已安装的辅助扩展的列表变化监听。使用callback异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.READ_ACCESSIBILITY_CONFIG
 
@@ -84,7 +68,3 @@ function off(type: 'installedAccessibilityListChange', callback?: Callback<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 off

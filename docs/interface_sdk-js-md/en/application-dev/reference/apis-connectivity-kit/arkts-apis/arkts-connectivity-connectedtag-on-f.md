@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on("notify")
@@ -15,8 +15,6 @@ function on(type: "notify", callback: Callback<number>): void
 Registers the NFC field strength state events.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Required permissions:** ohos.permission.NFC_TAG
 

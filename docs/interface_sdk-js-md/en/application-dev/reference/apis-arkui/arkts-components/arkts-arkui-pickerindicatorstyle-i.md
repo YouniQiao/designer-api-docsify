@@ -4,8 +4,6 @@ Sets parameters of the selected item indicator style.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,13 +20,11 @@ backgroundColor?: ResourceColor
 Background color of the selected item.Default value: 'sys.color.comp_background_tertiary'  
 **NOTE：**This parameter takes effect only when **type** is set to **PickerIndicatorType.BACKGROUND**.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** 'sys.color.comp_background_tertiary'
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,17 +42,15 @@ Background border radius of the selected item.Value range: no more than half of 
 1. This parameter takes effect only when **type** is set to **PickerIndicatorType.BACKGROUND**.
 2. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md): Sets the size and unit of the four corner radii
 in a unified manner.
-3. BorderRadiuses: Sets the size (unit: vp) of the four corner radii individually.
-4. LocalizedBorderRadiuses: Sets the size and unit of the four corner radii
+3. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md): Sets the size (unit: vp) of the four corner radii individually.
+4. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md): Sets the size and unit of the four corner radii
 individually.
 
-**Type:** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { value:12, unit:LengthUnit.vp }
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,13 +67,11 @@ dividerColor?: ResourceColor
 Color of the divider.Default value: 'sys.color.comp_divider'  
 **NOTE：**This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** $r('sys.color.comp_divider')
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,8 +94,6 @@ Distance between the divider and the end edge of the **UIPickerComponent** conta
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -123,8 +113,6 @@ Distance between the divider and the start edge of the **UIPickerComponent** con
 **Default:** 0
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,8 +137,6 @@ as 0 vp.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -170,8 +156,6 @@ Type of the selected item indicator.Default value: PickerIndicatorType.BACKGROUN
 **Default:** PickerIndicatorType.BACKGROUND
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

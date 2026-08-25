@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@kit.ArkTS';
+import { ArkTSUtils } from 'kits/@kit.ArkTS';
 ```
 
 ## isSendable
@@ -15,8 +15,6 @@ function isSendable(value: Object | null | undefined): boolean
 Checks whether an ArkTS value is sendable.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

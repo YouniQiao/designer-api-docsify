@@ -15,8 +15,6 @@ Requests delayed suspension after the application switches to the background.The
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md)
@@ -35,22 +33,3 @@ Requests delayed suspension after the application switches to the background.The
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) |
-
-**Examples**
-
-```TypeScript
-import backgroundTaskManager from '@ohos.backgroundTaskManager';
-import { BusinessError } from '@ohos.base';
-
-// Set the reason for delayed suspension.
-let myReason = 'test requestSuspendDelay';
-// Request delayed suspension.
-let delayInfo = backgroundTaskManager.requestSuspendDelay(myReason, () => {
-    console.info("Request suspension delay will time out.");
-})
-// Print the delayed suspension information.
-let id = delayInfo.requestId;
-let time = delayInfo.actualDelayTime;
-console.info("The requestId is: " + id);
-console.info("The actualDelayTime is: " + time);
-```

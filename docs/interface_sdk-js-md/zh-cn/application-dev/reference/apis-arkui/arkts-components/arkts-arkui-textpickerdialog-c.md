@@ -4,8 +4,6 @@ Defines TextPickerDialog which uses show method to show TextPicker dialog.
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -26,8 +24,6 @@ static show(options?: TextPickerDialogOptions)
 > [showTextPickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showtextpickerdialog)来明确UI的执行上下文。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 18
 

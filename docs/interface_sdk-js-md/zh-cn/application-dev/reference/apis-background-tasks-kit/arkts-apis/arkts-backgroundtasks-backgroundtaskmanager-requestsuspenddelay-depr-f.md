@@ -15,8 +15,6 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md)
@@ -35,21 +33,3 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 | 类型 |
 | --- |
 | [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) |
-
-**示例**
-
-```TypeScript
-import backgroundTaskManager from '@ohos.backgroundTaskManager';
-
-// 设置延迟任务挂起的原因
-let myReason = 'test requestSuspendDelay';
-// 申请延迟任务
-let delayInfo = backgroundTaskManager.requestSuspendDelay(myReason, () => {
-  console.info('Request suspension delay will time out.');
-})
-// 打印延迟任务信息
-let id = delayInfo.requestId;
-let time = delayInfo.actualDelayTime;
-console.info('The requestId is: ' + id);
-console.info('The actualDelayTime is: ' + time);
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Global.FontManager
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## progressPercentage
 
 ```TypeScript
-progressPercentage: int
+progressPercentage: number
 ```
 
 数据迁移百分比进度，进度值根据已迁移的字体文件数量或大小计算，可能不是均匀增长。当progressPercentage为100时，迁移任务即将完成，onResult回调即将被调用。 取值范围为[0, 100]。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -37,16 +33,14 @@ progressPercentage: int
 ## timeRemaining
 
 ```TypeScript
-timeRemaining: int
+timeRemaining: number
 ```
 
 预计剩余时间，可能因设备性能、文件大小、系统负载等因素而有所差异。 取值范围为非负整数，最小值为0。 单位为s。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.Global.FontManager
 

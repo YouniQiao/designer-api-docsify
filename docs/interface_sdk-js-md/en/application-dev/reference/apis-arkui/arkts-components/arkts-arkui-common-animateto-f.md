@@ -37,8 +37,6 @@ Defines an explicit animation. When an animation is required, call this API expl
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 18
 
 **Substitutes:** animateTo

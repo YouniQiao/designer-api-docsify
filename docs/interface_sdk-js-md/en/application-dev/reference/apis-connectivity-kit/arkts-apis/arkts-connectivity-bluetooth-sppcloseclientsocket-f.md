@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## sppCloseClientSocket
@@ -16,8 +16,6 @@ Disables an spp client socket and releases related resources.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [sppCloseClientSocket](arkts-connectivity-bluetoothmanager-sppcloseclientsocket-f.md)
@@ -29,19 +27,3 @@ Disables an spp client socket and releases related resources.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | socket | number | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let clientNumber = -1;
-function clientSocket(code : BusinessError, number : number) {
-  if (code == null || code.code != 0) {
-    return;
-  }
-  console.info(`bluetooth serverSocket Number: ${number}`);
-  // The obtained clientNumber is used as the socket ID for subsequent read/write operations on the client.
-  clientNumber = number;
-}
-bluetooth.sppCloseClientSocket(clientNumber);
-```

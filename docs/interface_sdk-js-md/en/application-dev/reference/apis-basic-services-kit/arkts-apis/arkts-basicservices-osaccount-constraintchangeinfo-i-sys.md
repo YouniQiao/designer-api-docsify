@@ -4,8 +4,6 @@ Defines the constraint change information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the constraint change information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## constraint
@@ -22,13 +20,11 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraint: string
 ```
 
-[Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) that has been changed.
+[Constraint](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) that has been changed.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -45,8 +41,6 @@ Enabling state of the changed constraint. The default value is **false**.The val
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

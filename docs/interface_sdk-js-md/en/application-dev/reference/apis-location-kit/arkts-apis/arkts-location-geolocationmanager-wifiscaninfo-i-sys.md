@@ -4,8 +4,6 @@ Describes the scanned WiFi information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the scanned WiFi information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## bssid
@@ -28,8 +26,6 @@ WiFi bssid(MAC): the length is 6.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ WiFi bssid(MAC): the length is 6.
 ## frequency
 
 ```TypeScript
-frequency: int
+frequency: number
 ```
 
 Frequency
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -55,16 +49,14 @@ Frequency
 ## rssi
 
 ```TypeScript
-rssi: int
+rssi: number
 ```
 
 Received signal strength indicator (RSSI).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -82,8 +74,6 @@ WiFi SSID: the maximum length is 32.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -91,16 +81,14 @@ WiFi SSID: the maximum length is 32.
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 Time stamp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 

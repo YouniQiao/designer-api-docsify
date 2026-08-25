@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from 'kits/@kit.AbilityKit';
 ```
 
 ## createAtManager
@@ -16,8 +16,6 @@ Creates a program access control management instance for scenarios such as permi
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -27,9 +25,3 @@ Creates a program access control management instance for scenarios such as permi
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) |
-
-**Examples**
-
-```TypeScript
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-```

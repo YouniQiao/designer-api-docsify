@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedNearLinkProtocols
@@ -15,8 +15,6 @@ function getDisallowedNearLinkProtocols(admin: Want, accountId: number): Array<N
 获取指定用户下禁用的星闪协议名单。适用于需要查询用户当前星闪协议访问限制的场景，帮助企业管理员验证策略是否正确下发，或在进行策略调整前获取当前配置。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -45,26 +43,3 @@ function getDisallowedNearLinkProtocols(admin: Want, accountId: number): Array<N
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-let accountId: number = 100;
-
-try {
-  let result: systemManager.NearLinkProtocol[] = systemManager.getDisallowedNearLinkProtocols(wantTemp, accountId);
-  console.info(`Succeeded in querying the disabled Starlink protocol list for the specified user: ${result}`);
-} catch (err) {
-  console.error(`Failed to query the disabled Starlink protocol list for the specified user. Code is ${err.code}, message is ${err.message}`);
-}
-```

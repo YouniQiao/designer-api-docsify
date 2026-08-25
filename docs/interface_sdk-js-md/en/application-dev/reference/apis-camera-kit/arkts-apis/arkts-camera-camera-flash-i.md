@@ -6,14 +6,12 @@
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getFlashMode
@@ -25,8 +23,6 @@ getFlashMode(): FlashMode
 Obtains the flash mode in use.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -44,40 +40,6 @@ Obtains the flash mode in use.
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFlashMode(captureSession: camera.CaptureSession): camera.FlashMode | undefined {
-  let flashMode: camera.FlashMode | undefined = undefined;
-  try {
-    flashMode = captureSession.getFlashMode();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getFlashMode call failed.error code: ${err.code}`);
-  }
-  return flashMode;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFlashMode(photoSession: camera.PhotoSession): camera.FlashMode | undefined {
-  let flashMode: camera.FlashMode | undefined = undefined;
-  try {
-    flashMode = photoSession.getFlashMode();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getFlashMode call failed.error code: ${err.code}`);
-  }
-  return flashMode;
-}
-```
-
 ## offFlashStateChange
 
 ```TypeScript
@@ -87,8 +49,6 @@ offFlashStateChange(callback?: Callback<FlashState>): void
 Unsubscribes from flash light status change events.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,8 +71,6 @@ onFlashStateChange(callback: Callback<FlashState>): void
 Subscribes to flash light status change events.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,8 +96,6 @@ Sets a flash mode.Before the setting, do the following checks:
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -155,33 +111,3 @@ Sets a flash mode.Before the setting, do the following checks:
 | Error Code ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFlashMode(captureSession: camera.CaptureSession): void {
-  try {
-    captureSession.setFlashMode(camera.FlashMode.FLASH_MODE_AUTO);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setFlashMode call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFlashMode(photoSession: camera.PhotoSession): void {
-  try {
-    photoSession.setFlashMode(camera.FlashMode.FLASH_MODE_AUTO);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setFlashMode call failed. error code: ${err.code}`);
-  }
-}
-```

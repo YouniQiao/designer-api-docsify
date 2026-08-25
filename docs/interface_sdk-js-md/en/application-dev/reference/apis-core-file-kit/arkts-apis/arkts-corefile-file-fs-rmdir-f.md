@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## rmdir
@@ -20,8 +20,6 @@ Removes a directory and all its subdirectories and files. This API uses a promis
 > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,30 +54,6 @@ Removes a directory and all its subdirectories and files. This API uses a promis
 | 13900032 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let dirPath = pathDir + "/testDir";
-fs.rmdir(dirPath).then(() => {
-  console.info("rmdir succeed");
-}).catch((err: BusinessError) => {
-  console.error("rmdir failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let dirPath = pathDir + "/testDir";
-fs.rmdir(dirPath, (err: BusinessError) => {
-  if (err) {
-    console.error("rmdir failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("rmdir succeed");
-  }
-});
-```
-
 
 ## rmdir
 
@@ -93,8 +67,6 @@ Removes a directory and all its subdirectories and files. This API uses an async
 > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -123,7 +95,3 @@ Removes a directory and all its subdirectories and files. This API uses an async
 | 13900030 |
 | 13900032 |
 | 13900042 |
-
-**Examples**
-
-See [rmdir](#rmdir)

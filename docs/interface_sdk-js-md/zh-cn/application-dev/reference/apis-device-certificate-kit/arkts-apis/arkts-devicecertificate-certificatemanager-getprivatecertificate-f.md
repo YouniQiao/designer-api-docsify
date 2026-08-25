@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getPrivateCertificate
@@ -15,8 +15,6 @@ function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>
 获取私有凭据的详细信息，使用Callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -38,52 +36,6 @@ function getPrivateCertificate(keyUri: string, callback: AsyncCallback<CMResult>
 | [17500001](../errorcode-certManager.md#17500001-内部错误) |
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) |
 
-**示例**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-
-let uri: string = 'test'; /* 业务获取私有凭据详情，需要使用凭据的唯一标识符，此处省略 */
-try {
-  certificateManager.getPrivateCertificate(uri, (err, cmResult) => {
-    if (err != null) {
-      console.error(`Failed to get private certificate. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      if (cmResult?.credential == undefined) {
-        console.info('The result of getting private certificate is undefined.');
-      } else {
-        let list = cmResult?.credential;
-        console.info('Succeeded in getting private certificate.');
-      }
-    }
-  });
-} catch (error) {
-  console.error(`Failed to get private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri: string = 'test'; /* 业务获取私有凭据详情，需要使用凭据的唯一标识符，此处省略 */
-try {
-  certificateManager.getPrivateCertificate(uri).then((cmResult) => {
-    if (cmResult?.credential == undefined) {
-      console.info('The result of getting private certificate is undefined.');
-    } else {
-      let list = cmResult.credential;
-      console.info('Succeeded in getting private certificate.');
-    }
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to get private certificate. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  console.error(`Failed to get private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## getPrivateCertificate
 
@@ -94,8 +46,6 @@ function getPrivateCertificate(keyUri: string): Promise<CMResult>
 获取私有凭据详情。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -121,7 +71,3 @@ function getPrivateCertificate(keyUri: string): Promise<CMResult>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) |
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) |
-
-**示例**
-
-参见 [getPrivateCertificate](#getprivatecertificate)

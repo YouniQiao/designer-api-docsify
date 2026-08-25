@@ -4,8 +4,6 @@ Enumerates the audio scenes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 ## AUDIO_SCENE_DEFAULT
@@ -17,8 +15,6 @@ AUDIO_SCENE_DEFAULT = 0
 Default audio scene.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -32,8 +28,6 @@ Ringing audio scene.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 ## AUDIO_SCENE_PHONE_CALL
@@ -46,8 +40,6 @@ Phone call audio scene.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
 ## AUDIO_SCENE_VOICE_CHAT
@@ -59,7 +51,5 @@ AUDIO_SCENE_VOICE_CHAT = 3
 Voice chat audio scene.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication

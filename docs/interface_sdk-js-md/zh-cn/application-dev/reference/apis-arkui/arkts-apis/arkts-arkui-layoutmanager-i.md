@@ -15,8 +15,6 @@ let layoutManager: LayoutManager = this.controller.getLayoutManager();
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -38,8 +36,6 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,8 +66,6 @@ getCharacterPositionAtCoordinate(
 根据指定编码类型，获取距离指定坐标最近的字符位置信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,8 +102,6 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -137,8 +129,6 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 根据指定编码类型和文本字形范围，获取字符范围以及实际的字形范围。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -174,8 +164,6 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -210,8 +198,6 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -239,8 +225,6 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 根据指定编码类型和文本字符范围，获取字形范围以及实际的字符范围。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -274,8 +258,6 @@ getLineCount(): number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -300,8 +282,6 @@ getLineMetrics(lineNumber: number): LineMetrics
 > 文本内容变更后，需等待布局完成才可获取到最新的行信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -333,8 +313,6 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 > 文本内容变更后，需等待布局完成才可获取到最新的绘制区域信息。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

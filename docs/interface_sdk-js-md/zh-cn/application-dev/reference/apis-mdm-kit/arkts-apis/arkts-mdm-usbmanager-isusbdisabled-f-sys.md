@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isUsbDisabled
@@ -15,8 +15,6 @@ function isUsbDisabled(admin: Want): boolean
 查询USB是否禁用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 26.0.0
 
@@ -51,22 +49,3 @@ function isUsbDisabled(admin: Want): boolean
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let isDisabled = usbManager.isUsbDisabled(wantTemp);
-  console.info(`Succeeded in querying if USB is disabled: ${isDisabled}`);
-} catch (err) {
-  console.error(`Failed to query if USB is disabled. Code: ${err.code}, message: ${err.message}`);
-}
-```

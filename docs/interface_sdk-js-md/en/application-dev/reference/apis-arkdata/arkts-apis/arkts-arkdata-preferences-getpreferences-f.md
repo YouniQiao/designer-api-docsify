@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from '@kit.ArkData';
+import { preferences } from 'kits/@kit.ArkData';
 ```
 
 ## getPreferences
@@ -16,8 +16,6 @@ Obtains a **Preferences** instance. This API uses an asynchronous callback to re
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -36,179 +34,6 @@ Obtains a **Preferences** instance. This API uses an asynchronous callback to re
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
-
-**Examples**
-
-FA model:
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-let dataPreferences: preferences.Preferences | null = null;
-
-preferences.getPreferences(context, 'myStore', (err: BusinessError, val: preferences.Preferences) => {
-  if (err) {
-    console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  dataPreferences = val;
-  console.info("Succeeded in getting preferences.");
-})
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | null = null;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    preferences.getPreferences(this.context, 'myStore', (err: BusinessError, val: preferences.Preferences) => {
-      if (err) {
-        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      dataPreferences = val;
-      console.info("Succeeded in getting preferences.");
-    })
-  }
-}
-```
-
-FA model:
-
-```TypeScript
-// Obtain the context.
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let dataPreferences: preferences.Preferences | null = null;
-let promise = preferences.getPreferences(context, 'myStore');
-promise.then((object: preferences.Preferences) => {
-  dataPreferences = object;
-  console.info("Succeeded in getting preferences.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-})
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | null = null;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let promise = preferences.getPreferences(this.context, 'myStore');
-    promise.then((object: preferences.Preferences) => {
-      dataPreferences = object;
-      console.info("Succeeded in getting preferences.");
-    }).catch((err: BusinessError) => {
-      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
-
-FA model:
-
-```TypeScript
-// Obtain the context.
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-let dataPreferences: preferences.Preferences | null = null;
-
-let options: preferences.Options = { name: 'myStore' };
-preferences.getPreferences(context, options, (err: BusinessError, val: preferences.Preferences) => {
-  if (err) {
-    console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  dataPreferences = val;
-  console.info("Succeeded in getting preferences.");
-})
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | null = null;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    preferences.getPreferences(this.context, options, (err: BusinessError, val: preferences.Preferences) => {
-      if (err) {
-        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      dataPreferences = val;
-      console.info("Succeeded in getting preferences.");
-    })
-  }
-}
-```
-
-FA model:
-
-```TypeScript
-// Obtain the context.
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let dataPreferences: preferences.Preferences | null = null;
-let options: preferences.Options = { name: 'myStore' };
-let promise = preferences.getPreferences(context, options);
-promise.then((object: preferences.Preferences) => {
-  dataPreferences = object;
-  console.info("Succeeded in getting preferences.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-})
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | null = null;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    let promise = preferences.getPreferences(this.context, options);
-    promise.then((object: preferences.Preferences) => {
-      dataPreferences = object;
-      console.info("Succeeded in getting preferences.");
-    }).catch((err: BusinessError) => {
-      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
 
 
 ## getPreferences
@@ -221,8 +46,6 @@ Obtains a **Preferences** instance. This API uses an asynchronous callback to re
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
@@ -245,10 +68,6 @@ Obtains a **Preferences** instance. This API uses an asynchronous callback to re
 | [15501002](../errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-See [getPreferences](#getpreferences)
-
 
 ## getPreferences
 
@@ -259,8 +78,6 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 Obtains a **Preferences** instance. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -286,10 +103,6 @@ Obtains a **Preferences** instance. This API uses a promise to return the result
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
-**Examples**
-
-See [getPreferences](#getpreferences)
-
 
 ## getPreferences
 
@@ -300,8 +113,6 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 Obtains a **Preferences** instance. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -329,7 +140,3 @@ Obtains a **Preferences** instance. This API uses a promise to return the result
 | [15501001](../errorcode-preferences.md#15501001-stage-model-required) |
 | [15501002](../errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) |
-
-**Examples**
-
-See [getPreferences](#getpreferences)

@@ -4,62 +4,54 @@ Defines the network information.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## endTime
 
 ```TypeScript
-endTime: int
+endTime: number
 ```
 
 End timestamp, in seconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## simId
 
 ```TypeScript
-simId?: int
+simId?: number
 ```
 
 SIM card ID. The default value is the maximum value of the uint32_t type.  
 **Note：**: If **type** is set to **cellular**, this field must be specified.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## startTime
 
 ```TypeScript
-startTime: int
+startTime: number
 ```
 
 Start timestamp, in seconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -75,7 +67,5 @@ Network type.
 **Type:** NetBearType
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core

@@ -4,14 +4,12 @@ AVPlayer is a playback management class. It provides APIs to manage and play med
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## enableCameraPostprocessing
@@ -23,8 +21,6 @@ enableCameraPostprocessing(): Promise<void>
 Enable the post-processing function of Camera for video playback.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,8 +54,6 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -70,7 +64,7 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| force | boolean | Yes |
+| [force](../../apis-arkui/arkts-components/arkts-arkui-historicalpoint-i.md) | boolean | Yes |
 
 **Return value:**
 
@@ -95,8 +89,6 @@ Whether a slower synchronization policy is used at the start of playback to redu
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

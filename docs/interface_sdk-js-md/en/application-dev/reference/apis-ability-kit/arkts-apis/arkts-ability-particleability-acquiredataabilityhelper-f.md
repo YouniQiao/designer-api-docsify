@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
+import { particleAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## acquireDataAbilityHelper
@@ -22,8 +22,6 @@ Obtains a dataAbilityHelper object.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -39,12 +37,3 @@ Obtains a dataAbilityHelper object.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) |
-
-**Examples**
-
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-
-let uri = '';
-particleAbility.acquireDataAbilityHelper(uri);
-```

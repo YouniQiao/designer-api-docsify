@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## createVpnConnection
@@ -15,8 +15,6 @@ function createVpnConnection(context: AbilityContext): VpnConnection
 Creates a VPN connection.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -40,24 +38,3 @@ Creates a VPN connection.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-Stage model:
-
-```TypeScript
-import { vpn } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
-  functiontest()
-  {
-    console.info("vpn createVpnConnection: " + JSON.stringify(this.VpnConnection));
-  }
-  build() {  }
-}
-```

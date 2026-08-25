@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## anonAttestKeyItemOfflineAsUser
@@ -22,8 +22,6 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 > -离线匿名密钥证明要求本地时间准确。否则，可能导致对端无法正常工作。验证证书过期。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -66,94 +64,3 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 | [12000027](../errorcode-huks.md#12000027-网络不可用) |
-
-**示例**
-
-以下代码示例接口调用的前置条件同上文generateKeyItemAsUser的前置条件
-
-```TypeScript
-/* 以ECC离线匿名密钥证明为例 */
-import { huks } from '@kit.UniversalKeystoreKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function stringToUint8Array(str: string) {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-const userId = 100;
-const userIdStorageLevel = huks.HuksAuthStorageLevel.HUKS_AUTH_STORAGE_LEVEL_CE;
-const keyAliasString = "key anon local attest as user";
-
-const challenge = stringToUint8Array('challenge_data');
-
-/* 1. 生成密钥 */
-async function generateKey(alias: string) {
-  let properties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
-      value: huks.HuksKeyAlg.HUKS_ALG_ECC
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_KEY_SIZE,
-      value: huks.HuksKeySize.HUKS_ECC_KEY_SIZE_256
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PURPOSE,
-      value: huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_SIGN | huks.HuksKeyPurpose.HUKS_KEY_PURPOSE_VERIFY
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_DIGEST,
-      value: huks.HuksKeyDigest.HUKS_DIGEST_SHA256
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_PADDING,
-      value: huks.HuksKeyPadding.HUKS_PADDING_NONE
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_AUTH_STORAGE_LEVEL,
-      value: userIdStorageLevel,
-    }
-  ];
-  let options: huks.HuksOptions = {
-    properties: properties
-  };
-
-  await huks.generateKeyItemAsUser(userId, alias, options);
-}
-
-/* 2. 离线获取匿名化密钥证书 */
-async function anonAttestKeyItemOfflineAsUser() {
-  let aliasString = keyAliasString;
-  let aliasUint8 = stringToUint8Array(aliasString);
-  let properties: Array<huks.HuksParam> = [
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_CHALLENGE,
-      value: challenge
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_ATTESTATION_ID_ALIAS,
-      value: aliasUint8
-    },
-    {
-      tag: huks.HuksTag.HUKS_TAG_AUTH_STORAGE_LEVEL,
-      value: userIdStorageLevel,
-    }
-  ];
-
-  await generateKey(aliasString);
-  await huks.anonAttestKeyItemOfflineAsUser(userId, aliasString, properties).then((data) => {
-    console.info('anonAttestationOffline ok!')
-    console.debug(`'CERT:${JSON.stringify(data)}`)
-    for (let i = 0; data?.certChains?.length && i < data?.certChains?.length; ++i) {
-      console.info(`CERT${i}是${data.certChains[i]}`)
-    }
-    console.info("anonAttestationOffline Success")
-  }).catch((err: BusinessError) => {
-    console.error("anonAttestationOffline fail，erroCode： " + err.code + " erroInfo： " + err.message)
-  })
-}
-```

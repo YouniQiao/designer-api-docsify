@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getPrinterInformationById
@@ -15,8 +15,6 @@ function getPrinterInformationById(printerId: string): Promise<PrinterInformatio
 Obtains printer information based on the printer ID. This API uses a promise to return the result.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -40,17 +38,3 @@ Obtains printer information based on the printer ID. This API uses a promise to 
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId : string = 'testPrinterId';
-print.getPrinterInformationById(printerId).then((printerInformation : print.PrinterInformation) => {
-    console.info('getPrinterInformationById data : ' + JSON.stringify(printerInformation));
-}).catch((error: BusinessError) => {
-    console.error('getPrinterInformationById error : ' + JSON.stringify(error));
-})
-```

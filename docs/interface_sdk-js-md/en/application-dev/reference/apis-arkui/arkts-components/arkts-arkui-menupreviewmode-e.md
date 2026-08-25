@@ -4,8 +4,6 @@ Defines the preview style of a menu.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 No preview is displayed.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,11 +28,9 @@ No preview is displayed.
 IMAGE = 1
 ```
 
-The preview is a screenshot of the component on which a long-press triggers the context menu.
+The preview is a screenshot of the component on which a number-press triggers the context menu.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

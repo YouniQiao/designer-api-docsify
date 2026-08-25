@@ -1,10 +1,8 @@
 # P2pConnectState
 
-P2P connection status.@enum { int }
+P2P connection status.@enum { number }
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -18,8 +16,6 @@ p2p is disconnected
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
 ## CONNECTED
@@ -31,7 +27,5 @@ CONNECTED = 1
 p2p is connected
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.P2P

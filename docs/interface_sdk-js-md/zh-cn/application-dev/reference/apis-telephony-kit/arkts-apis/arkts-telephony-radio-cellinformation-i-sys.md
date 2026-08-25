@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## data
@@ -26,8 +24,6 @@ Obtains signal strength under different network formats.
 **类型：** [CdmaCellInformation](arkts-telephony-radio-cdmacellinformation-i-sys.md) \| [GsmCellInformation](arkts-telephony-radio-gsmcellinformation-i-sys.md) \| [LteCellInformation](arkts-telephony-radio-ltecellinformation-i-sys.md) \| [NrCellInformation](arkts-telephony-radio-nrcellinformation-i-sys.md) \| [TdscdmaCellInformation](arkts-telephony-radio-tdscdmacellinformation-i-sys.md) \| [WcdmaCellInformation](arkts-telephony-radio-wcdmacellinformation-i-sys.md)
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -45,8 +41,6 @@ Obtains the camp-on status of the serving cell.Returns {@code true} if the user 
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -54,16 +48,14 @@ Obtains the camp-on status of the serving cell.Returns {@code true} if the user 
 ## timeStamp
 
 ```TypeScript
-timeStamp: int
+timeStamp: number
 ```
 
 Obtains the timestamp when the cell information is obtained.Returns a timestamp since boot, in nanoseconds.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

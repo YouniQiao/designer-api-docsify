@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## write
@@ -15,8 +15,6 @@ function write(info: SysEventInfo): Promise<void>
 Writes event information to the event file. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -48,66 +46,6 @@ Writes event information to the event file. This API uses a promise to return th
 | [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
 | [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
 
-**Examples**
-
-```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let customizedParams: Record<string, string | number> = {
-    'PID': 487,
-    'UID': 103,
-    'PACKAGE_NAME': "com.ohos.hisysevent.test",
-    'PROCESS_NAME': "syseventservice",
-    'MSG': "no msg."
-  };
-  let eventInfo: hiSysEvent.SysEventInfo = {
-    domain: "RELIABILITY",
-    name: "STACK",
-    eventType: hiSysEvent.EventType.FAULT,
-    params: customizedParams
-  };
-  hiSysEvent.write(eventInfo, (err: BusinessError) => {
-    // do something here.
-  });
-} catch (err) {
-  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let customizedParams: Record<string, string | number> = {
-    'PID': 487,
-    'UID': 103,
-    'PACKAGE_NAME': "com.ohos.hisysevent.test",
-    'PROCESS_NAME': "syseventservice",
-    'MSG': "no msg."
-  };
-  let eventInfo: hiSysEvent.SysEventInfo = {
-    domain: "RELIABILITY",
-    name: "STACK",
-    eventType: hiSysEvent.EventType.FAULT,
-    params: customizedParams
-  };
-  hiSysEvent.write(eventInfo).then(
-    () => {
-      // do something here.
-    }
-  ).catch(
-    (err: BusinessError) => {
-      console.error(`error code: ${err.code}, error msg: ${err.message}`);
-    }
-  );
-} catch (err) {
-  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
-}
-```
-
 
 ## write
 
@@ -118,8 +56,6 @@ function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 Writes event information to the event file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -145,7 +81,3 @@ Writes event information to the event file. This API uses an asynchronous callba
 | [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) |
 | [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
 | [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
-
-**Examples**
-
-See [write](#write)

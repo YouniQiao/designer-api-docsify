@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## getVisibleWindowInfo
@@ -15,8 +15,6 @@ function getVisibleWindowInfo(): Promise<Array<WindowInfo>>
 Obtains information about visible main windows on the current screen. Visible main windows are main windows that are not returned to the background. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 18+: ohos.permission.VISIBLE_WINDOW_INFO
@@ -37,31 +35,3 @@ Obtains information about visible main windows on the current screen. Visible ma
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-
-**Examples**
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.getVisibleWindowInfo();
-  promise.then((data) => {
-    data.forEach(windowInfo=>{
-      console.info(`left:${windowInfo.rect.left}`);
-      console.info(`top:${windowInfo.rect.top}`);
-      console.info(`width:${windowInfo.rect.width}`);
-      console.info(`height:${windowInfo.rect.height}`);
-      console.info(`windowId:${windowInfo.windowId}`);
-      console.info(`windowStatusType:${windowInfo.windowStatusType}`);
-      console.info(`abilityName:${windowInfo.abilityName}`);
-      console.info(`bundleName:${windowInfo.bundleName}`);
-      console.info(`isFocused:${windowInfo.isFocused}`);
-    })
-  }).catch((err: BusinessError) => {
-    console.error('Failed to getWindowInfo. Cause: ' + JSON.stringify(err));
-  });
-} catch (exception) {
-  console.error(`Failed to get visible window info. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```

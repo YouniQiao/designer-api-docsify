@@ -4,8 +4,6 @@ Defines the information returned when the file copy operation fails. If the copy
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -15,7 +13,7 @@ Defines the information returned when the file copy operation fails. If the copy
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## destUri
@@ -29,8 +27,6 @@ URI of the conflicting file. If the error is not caused by a file conflict, **de
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -54,8 +50,6 @@ Error code.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -78,8 +72,6 @@ Error message.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
@@ -101,8 +93,6 @@ URI of the source file or directory.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 

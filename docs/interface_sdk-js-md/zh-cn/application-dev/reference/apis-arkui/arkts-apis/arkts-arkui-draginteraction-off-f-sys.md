@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragInteraction } from '@kit.ArkUI';
+import { dragInteraction } from 'kits/@kit.ArkUI';
 ```
 
 ## off('drag')
@@ -15,8 +15,6 @@ function off(type: 'drag', callback?: Callback<DragState>): void
 取消监听拖拽状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
 
@@ -35,33 +33,3 @@ function off(type: 'drag', callback?: Callback<DragState>): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-// 取消注册单个回调函数
-function single_callback(event: dragInteraction.DragState) {
-  console.info(`Drag interaction event: ${event}`);
-  return false;
-}
-try {
-  dragInteraction.on('drag', single_callback);
-  dragInteraction.off("drag", single_callback);
-} catch (error) {
-  console.error(`Execute failed, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-// 取消注册所有回调函数
-function all_callback(event: dragInteraction.DragState) {
-  console.info(`Drag interaction event: ${event}`);
-  return false;
-}
-try {
-  dragInteraction.on('drag', all_callback);
-  dragInteraction.off("drag");
-} catch (error) {
-  console.error(`Execute failed, code: ${error.code}, message: ${error.message}`);
-}
-```

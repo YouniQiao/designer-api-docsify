@@ -4,8 +4,6 @@ Enumerates the certificate types.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CA_CERT_SYSTEM
@@ -18,8 +16,6 @@ System CA certificate.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CA_CERT_USER
@@ -31,7 +27,5 @@ CA_CERT_USER = 1
 User CA certificate.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

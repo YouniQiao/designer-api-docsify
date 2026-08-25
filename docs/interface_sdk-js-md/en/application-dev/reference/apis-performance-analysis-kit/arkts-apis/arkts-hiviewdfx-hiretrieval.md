@@ -4,14 +4,12 @@ Provide interfaces and functions for HiRetrieval feature.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.HiviewDFX.HiRetrieval
 
 ## Modules to Import
 
 ```TypeScript
-import { hiRetrieval } from '@kit.PerformanceAnalysisKit';
+import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

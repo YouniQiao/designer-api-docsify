@@ -4,8 +4,6 @@ Enumerates matching rule types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ WHOLE_WORD = 1
 Whole word matching.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -36,8 +32,6 @@ Prefix matching.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ REGULAR = 3
 Regular expression matching.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 

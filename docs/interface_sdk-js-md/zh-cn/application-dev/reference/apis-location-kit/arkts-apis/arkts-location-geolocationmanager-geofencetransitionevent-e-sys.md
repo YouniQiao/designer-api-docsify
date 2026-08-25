@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE
@@ -17,8 +15,6 @@ GEOFENCE_TRANSITION_EVENT_APPROACHING_GEOFENCE = 8
 该事件表示设备正在接近地理围栏区域。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +32,6 @@ GEOFENCE_TRANSITION_EVENT_LEAVING_GEOFENCE = 16
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
@@ -53,8 +47,6 @@ GEOFENCE_TRANSITION_EVENT_NEAR_WANDER = 32
 该事件表示设备正在接近地理围栏区域，且持续徘徊超过15分钟。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

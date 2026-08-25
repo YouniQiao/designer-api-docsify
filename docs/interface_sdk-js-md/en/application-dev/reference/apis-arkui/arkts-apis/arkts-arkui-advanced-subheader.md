@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
+import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

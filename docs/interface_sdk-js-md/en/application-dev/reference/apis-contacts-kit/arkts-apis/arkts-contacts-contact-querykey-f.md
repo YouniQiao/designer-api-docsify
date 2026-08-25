@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## queryKey
@@ -15,8 +15,6 @@ function queryKey(id: number, callback: AsyncCallback<string>): void
 Queries the key of a contact based on the specified contact ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -33,109 +31,6 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 | id | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
-**Examples**
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context within the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryKey(context, 1, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-contact.queryKey(1, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context within the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryKey(context, 1, {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-contact.queryKey(1, {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context within the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryKey(context, 1, {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = contact.queryKey(1, {
-  holderId: 1,
-  bundleName: "",
-  displayName: ""
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## queryKey
 
@@ -146,8 +41,6 @@ function queryKey(context: Context, id: number, callback: AsyncCallback<string>)
 Queries the key of a contact based on the specified contact ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -168,10 +61,6 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
 
-**Examples**
-
-See [queryKey](#querykey)
-
 
 ## queryKey
 
@@ -182,8 +71,6 @@ function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): 
 Queries the key of a contact based on the specified contact ID and holder. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -201,10 +88,6 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
-**Examples**
-
-See [queryKey](#querykey)
-
 
 ## queryKey
 
@@ -215,8 +98,6 @@ function queryKey(context: Context, id: number, holder: Holder, callback: AsyncC
 Queries the key of a contact based on the specified contact ID and holder. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -238,10 +119,6 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
 
-**Examples**
-
-See [queryKey](#querykey)
-
 
 ## queryKey
 
@@ -252,8 +129,6 @@ function queryKey(id: number, holder?: Holder): Promise<string>
 Queries the key of a contact based on the specified contact ID and holder. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -276,10 +151,6 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 | --- |
 | Promise & lt;string & gt; |
 
-**Examples**
-
-See [queryKey](#querykey)
-
 
 ## queryKey
 
@@ -290,8 +161,6 @@ function queryKey(context: Context, id: number, holder?: Holder): Promise<string
 Queries the key of a contact based on the specified contact ID and holder. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -317,7 +186,3 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
-
-**Examples**
-
-See [queryKey](#querykey)

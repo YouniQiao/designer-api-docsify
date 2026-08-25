@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## color
@@ -26,8 +24,6 @@ color: common2D.Color
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -35,16 +31,14 @@ color: common2D.Color
 ## leftBottomRadius
 
 ```TypeScript
-leftBottomRadius: double
+leftBottomRadius: number
 ```
 
 矩形框的左下半径，单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ leftBottomRadius: double
 ## leftTopRadius
 
 ```TypeScript
-leftTopRadius: double
+leftTopRadius: number
 ```
 
 矩形框的左上半径，单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -71,16 +63,14 @@ leftTopRadius: double
 ## rightBottomRadius
 
 ```TypeScript
-rightBottomRadius: double
+rightBottomRadius: number
 ```
 
 矩形框的右下半径，单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -89,16 +79,14 @@ rightBottomRadius: double
 ## rightTopRadius
 
 ```TypeScript
-rightTopRadius: double
+rightTopRadius: number
 ```
 
 矩形框的右上半径，单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

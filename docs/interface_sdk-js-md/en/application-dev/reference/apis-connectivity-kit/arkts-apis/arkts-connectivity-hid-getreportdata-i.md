@@ -4,14 +4,12 @@ Describe the GET_REPORT data is received from remote host.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@kit.ConnectivityKit';
+import { hid } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## bufferSize
@@ -25,8 +23,6 @@ bufferSize of GET_REPORT data, maximum number of octets to transfer during data 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ id of GET_REPORT data.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -61,8 +55,6 @@ reportType of GET_REPORT data.
 **Type:** ReportType
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

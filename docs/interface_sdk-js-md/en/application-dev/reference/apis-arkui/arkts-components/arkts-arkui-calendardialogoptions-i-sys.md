@@ -11,8 +11,6 @@ Defines the configuration options of the calendar picker dialog box.Inherits fro
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,13 +26,11 @@ distortionMode?: DistortionMode
 
 Sets the distortion animation mode for the dialog.Default Value: DistortionMode.DISTORTION_AUTO
 
-**Type:** DistortionMode
+**Type:** [DistortionMode](arkts-arkui-distortionmode-e-sys.md)
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,13 +46,11 @@ edgeLightMode?: EdgeLightMode
 
 Sets the edge light animation mode for the dialog.Default value: EdgeLightMode.EDGELIGHT_AUTO
 
-**Type:** EdgeLightMode
+**Type:** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -15,8 +15,6 @@ Creates a stream based on the file path. This API uses a promise to return the r
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [createStream](arkts-corefile-file-fs-createstream-f.md)
@@ -36,26 +34,6 @@ Creates a stream based on the file path. This API uses a promise to return the r
 | --- |
 | Promise&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.createStream(filePath, "r+").then((stream: fileio.Stream) => {
-  console.info("createStream succeed");
-}).catch((err: BusinessError) => {
-  console.error("createStream failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let filePath = pathDir + "/test.txt";
-fileio.createStream(filePath, "r+", (err: BusinessError, stream: fileio.Stream) => {
-  // Do something.
-});
-```
-
 
 ## createStream
 
@@ -66,8 +44,6 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 Creates a stream based on the file path. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -82,7 +58,3 @@ Creates a stream based on the file path. This API uses an asynchronous callback 
 | path | string | Yes |
 | mode | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; | Yes |
-
-**Examples**
-
-See [createStream](#createstream)

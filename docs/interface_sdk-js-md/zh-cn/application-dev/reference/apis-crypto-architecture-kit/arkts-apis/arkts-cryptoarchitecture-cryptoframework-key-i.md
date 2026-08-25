@@ -1,10 +1,10 @@
 # Key
 
-密钥（父类），在运行密码算法（如加解密）时需要提前生成其子类对象，并传入[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。<br>密钥通过子类密钥生成器来生成，详见子类描述。具体子类有： [SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)、[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)、 [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)。
+密钥（父类），在运行密码算法（如加解密）时需要提前生成其子类对象，并传入[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。
+
+密钥通过子类密钥生成器来生成，详见子类描述。具体子类有： [SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)、[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)、 [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key
@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## getEncoded
@@ -29,8 +29,6 @@ getEncoded(): DataBlob
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** 
@@ -41,7 +39,7 @@ getEncoded(): DataBlob
 
 | 类型 |
 | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) |
 
 **错误码：**
 
@@ -51,36 +49,15 @@ getEncoded(): DataBlob
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
 
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function testGenerateAesKey() {
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES256');
-  let symKey = await symKeyGenerator.generateSymKey();
-  let encodedKey = symKey.getEncoded();
-  console.info('key hex: ' + encodedKey.data);
-}
-```
-
 ## getKeySize
 
-ArkTS-Dyn:
 ```TypeScript
 getKeySize(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getKeySize(): int
 ```
 
 获取密钥大小，单位为bits。密钥可以是对称密钥、公钥或私钥。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,7 +69,7 @@ getKeySize(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -101,19 +78,6 @@ getKeySize(): int
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function testGenerateAesKey() {
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES256');
-  let symKey = await symKeyGenerator.generateSymKey();
-  let symKeyLen = symKey.getKeySize();
-  console.info('keysize is: ' + symKeyLen);
-}
-```
 
 ## algName
 
@@ -126,8 +90,6 @@ readonly algName: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -146,8 +108,6 @@ readonly format: string
 **类型：** string
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

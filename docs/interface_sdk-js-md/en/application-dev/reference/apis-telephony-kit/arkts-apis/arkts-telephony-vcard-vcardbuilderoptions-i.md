@@ -4,14 +4,12 @@ Defines the VCard information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## Modules to Import
 
 ```TypeScript
-import { vcard } from '@kit.TelephonyKit';
+import { vcard } from 'kits/@kit.TelephonyKit';
 ```
 
 ## cardType
@@ -26,8 +24,6 @@ VCard version. The default value is **VERSION_21**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## charset
@@ -41,7 +37,5 @@ VCard encoding type. The default value is **UTF-8**.
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService

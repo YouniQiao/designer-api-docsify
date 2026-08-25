@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setHotspotConfig
@@ -15,8 +15,6 @@ function setHotspotConfig(config: HotspotConfig): void
 Set the hotspot configuration for the device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
@@ -39,24 +37,3 @@ Set the hotspot configuration for the device.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let config:wifiManager.HotspotConfig = {
-    ssid: "****",
-    securityType: 3,
-    band: 0,
-    channel: 0,
-    preSharedKey: "****",
-    maxConn: 0
-  }
-  let ret = wifiManager.setHotspotConfig(config);
-  console.info("result:" + ret);    
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

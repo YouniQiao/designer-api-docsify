@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from '@kit.BasicServicesKit';
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setTimezone
@@ -15,8 +15,6 @@ function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 Sets the system time zone. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
@@ -40,40 +38,6 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.setTimezone('Asia/Shanghai', (error: BusinessError) => {
-    if (error) {
-      console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in setting timezone.`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.setTimezone('Asia/Shanghai').then(() => {
-    console.info(`Succeeded in setting timezone.`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## setTimezone
 
@@ -84,8 +48,6 @@ function setTimezone(timezone: string): Promise<void>
 Sets the system time zone. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
@@ -113,7 +75,3 @@ Sets the system time zone. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) |
-
-**Examples**
-
-See [setTimezone](#settimezone)

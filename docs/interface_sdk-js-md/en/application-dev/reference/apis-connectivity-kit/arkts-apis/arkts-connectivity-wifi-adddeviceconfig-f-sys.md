@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## addDeviceConfig
@@ -15,8 +15,6 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 Adds Wi-Fi connection configuration to the device.<p>The configuration will be updated when the configuration is added.</p>
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -40,70 +38,6 @@ Adds Wi-Fi connection configuration to the device.<p>The configuration will be u
 | --- |
 | Promise & lt;number & gt; |
 
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let config:wifi.WifiDeviceConfig = {
-        ssid : "****",
-        bssid:  "****",
-        preSharedKey: "****",
-        isHiddenSsid: false,
-        securityType: 0,
-        creatorUid: 0,
-        disableReason: 0,
-        netId: 0,
-        randomMacType: 0,
-        randomMacAddr:  "****",
-        ipType: 0,
-        staticIp: {
-            ipAddress: "",
-            gateway: "",
-            dnsServers: [],
-            domains: []
-        }
-    }
-    wifi.addDeviceConfig(config).then(result => {
-        console.info("result:" + JSON.stringify(result));
-    });    
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let config:wifi.WifiDeviceConfig = {
-        ssid : "****",
-        bssid:  "****",
-        preSharedKey: "****",
-        isHiddenSsid: false,
-        securityType: 0,
-        creatorUid: 0,
-        disableReason: 0,
-        netId: 0,
-        randomMacType: 0,
-        randomMacAddr:  "****",
-        ipType: 0,
-        staticIp: {
-            ipAddress: "",
-            gateway: "",
-            dnsServers: [],
-            domains: []
-        }
-    }
-    wifi.addDeviceConfig(config,(error,result) => {
-        console.info("result:" + JSON.stringify(result));
-    });    
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```
-
 
 ## addDeviceConfig
 
@@ -114,8 +48,6 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 Adds Wi-Fi connection configuration to the device.<p>The configuration will be updated when the configuration is added.</p>
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -133,7 +65,3 @@ Adds Wi-Fi connection configuration to the device.<p>The configuration will be u
 | --- | --- | --- |
 | config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
-
-**Examples**
-
-See [addDeviceConfig](#adddeviceconfig)

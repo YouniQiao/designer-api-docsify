@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## cancelCallUpgrade
 
 ```TypeScript
-function cancelCallUpgrade(callId: int): Promise<void>
+function cancelCallUpgrade(callId: number): Promise<void>
 ```
 
 Cancels the upgrade of a video call. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -28,7 +26,7 @@ Cancels the upgrade of a video call. This API uses a promise to return the resul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| callId | number | Yes |
 
 **Return value:**
 
@@ -47,15 +45,3 @@ Cancels the upgrade of a video call. This API uses a promise to return the resul
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.cancelCallUpgrade(1).then(() => {
-    console.info(`cancelCallUpgrade success.`);
-}).catch((err: BusinessError) => {
-    console.error(`cancelCallUpgrade fail, promise: err->${JSON.stringify(err)}`);
-});
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
+import { dateTimeManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setDateTime
@@ -15,8 +15,6 @@ function setDateTime(admin: Want, time: number, callback: AsyncCallback<void>): 
 Sets the system time. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -48,47 +46,6 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace with actual values.
-dateTimeManager.setDateTime(wantTemp, 1526003846000, (err) => {
-  if (err) {
-    console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting date time');
-})
-```
-
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace with actual values.
-dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
-  console.info('Succeeded in setting date time');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
-})
-```
-
 
 ## setDateTime
 
@@ -99,8 +56,6 @@ function setDateTime(admin: Want, time: number): Promise<void>
 Sets the system time. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -136,7 +91,3 @@ Sets the system time. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [setDateTime](#setdatetime)

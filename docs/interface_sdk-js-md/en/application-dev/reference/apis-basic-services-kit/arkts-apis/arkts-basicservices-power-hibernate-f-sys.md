@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## hibernate
@@ -15,8 +15,6 @@ function hibernate(clearMemory: boolean): void
 Hibernates a device.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 19+: ohos.permission.POWER_MANAGER
@@ -39,13 +37,3 @@ Hibernates a device.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [4900101](../errorcode-power.md#4900101-service-connection-failure) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-try {
-    power.hibernate(true);
-} catch(err) {
-    console.error('hibernate failed, err: ' + err);
-}
-```

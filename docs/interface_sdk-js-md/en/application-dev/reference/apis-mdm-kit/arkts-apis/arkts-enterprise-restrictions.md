@@ -2,11 +2,22 @@
 
 This **restrictions** module provides APIs for disallowing general features of devices. You can globally disable and re-enable features such as Bluetooth, HDC, USB, Wi-Fi, cellular data, camera, and microphone.  
 **Use cases**  
-- In enterprise device management scenarios, administrators need to restrict functions on employee devices to prevent data leaks or unauthorized use. - In Bring Your Own Device (BYOD) scenarios, the enterprise space needs to restrict device functions to comply with enterprise security policies. - In device security control scenarios, specific functions need to be disabled to protect sensitive enterprise information.  
+- In enterprise device management scenarios, administrators need to restrict functions on employee devices to prevent  
+data leaks or unauthorized use.  
+- In Bring Your Own Device (BYOD) scenarios, the enterprise space needs to restrict device functions to comply with  
+enterprise security policies.  
+- In device security control scenarios, specific functions need to be disabled to protect sensitive enterprise  
+information.  
 **Problems that can be solved**  
-- Prevent employees from transferring sensitive enterprise data via Bluetooth, USB, or other means. - Restrict device debugging capabilities (HDC) to enhance device security. - Control network access (Wi-Fi, cellular data, and so on) to comply with enterprise network policies. - Manage device multimedia capabilities (camera, microphone, and so on) to protect privacy and enterprise confidentiality  
+- Prevent employees from transferring sensitive enterprise data via Bluetooth, USB, or other means.  
+- Restrict device debugging capabilities (HDC) to enhance device security.  
+- Control network access (Wi-Fi, cellular data, and so on) to comply with enterprise network policies.  
+- Manage device multimedia capabilities (camera, microphone, and so on) to protect privacy and enterprise  
+confidentiality  
 **Benefits**  
-- Enhance enterprise device security and reduces the risk of data leaks. - Meet compliance requirements and align with security audit standards. - Enable fine-grained device function control, balancing security and user experience.
+- Enhance enterprise device security and reduces the risk of data leaks.  
+- Meet compliance requirements and align with security audit standards.  
+- Enable fine-grained device function control, balancing security and user experience.
 
 > **NOTE：**&gt;
 > The APIs of this module can be called only by a device administrator application that is enabled. For details, see
@@ -14,14 +25,12 @@ This **restrictions** module provides APIs for disallowing general features of d
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## Summary

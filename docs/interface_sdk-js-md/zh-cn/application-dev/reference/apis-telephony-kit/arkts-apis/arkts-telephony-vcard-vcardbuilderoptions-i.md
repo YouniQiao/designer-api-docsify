@@ -4,14 +4,12 @@ VCard版本和编码信息。
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## 导入模块
 
 ```TypeScript
-import { vcard } from '@kit.TelephonyKit';
+import { vcard } from 'kits/@kit.TelephonyKit';
 ```
 
 ## cardType
@@ -26,8 +24,6 @@ VCard版本类型 (默认值为VERSION_21)。
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 ## charset
@@ -41,7 +37,5 @@ VCard编码类型（默认值为'UTF-8'）。
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## getSharingState
@@ -15,8 +15,6 @@ function getSharingState(type: SharingIfaceType, callback: AsyncCallback<Sharing
 获取指定类型网络共享状态，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -42,34 +40,6 @@ function getSharingState(type: SharingIfaceType, callback: AsyncCallback<Sharing
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing.getSharingState(SHARING_WIFI, (error: BusinessError, data: sharing.SharingIfaceState) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .getSharingState(SHARING_WIFI)
-  .then((data: sharing.SharingIfaceState) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## getSharingState
 
@@ -80,8 +50,6 @@ function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>
 获取指定类型网络共享状态，使用 Promise 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -111,7 +79,3 @@ function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>
 | [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) |
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
-
-**示例**
-
-参见 [getSharingState](#getsharingstate)

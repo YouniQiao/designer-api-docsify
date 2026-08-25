@@ -4,29 +4,25 @@ Gif metadata.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## canvasHeight
 
 ```TypeScript
-readonly canvasHeight?: int
+readonly canvasHeight?: number
 ```
 
 Canvas height. Unit: px, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,16 +31,14 @@ Canvas height. Unit: px, The value should be an integer.
 ## canvasWidth
 
 ```TypeScript
-readonly canvasWidth?: int
+readonly canvasWidth?: number
 ```
 
 Canvas width. Unit: px, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,16 +47,14 @@ Canvas width. Unit: px, The value should be an integer.
 ## delayTime
 
 ```TypeScript
-readonly delayTime?: int
+readonly delayTime?: number
 ```
 
 Delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,16 +63,14 @@ Delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 ## disposalType
 
 ```TypeScript
-readonly disposalType?: int
+readonly disposalType?: number
 ```
 
 Disposal type of each frame in the image. 0 - No disposal specified. 1 - Do not dispose. 2 - Restore to background color. 3 - Restore to previous. The value range is all integers.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,8 +88,6 @@ whether the GIF image has a global color map.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -107,16 +95,14 @@ whether the GIF image has a global color map.
 ## loopCount
 
 ```TypeScript
-readonly loopCount?: int
+readonly loopCount?: number
 ```
 
 Loop count. The value range is all integers.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -125,16 +111,14 @@ Loop count. The value range is all integers.
 ## unclampedDelayTime
 
 ```TypeScript
-readonly unclampedDelayTime?: int
+readonly unclampedDelayTime?: number
 ```
 
 Unclamped delay of each frame in milliseconds. Unit: ms, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ Enumerates power role types.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md)
@@ -23,8 +21,6 @@ NONE = 0
 None
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 
@@ -44,8 +40,6 @@ External power supply.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SOURCE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#source)
@@ -63,8 +57,6 @@ SINK = 2
 Internal power supply.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 9
 

@@ -4,8 +4,6 @@ Enumerates battery levels.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_NONE
@@ -17,8 +15,6 @@ LEVEL_NONE
 Unknown battery level.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -32,8 +28,6 @@ Full battery level.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_HIGH
@@ -45,8 +39,6 @@ LEVEL_HIGH
 High battery level.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -60,8 +52,6 @@ Normal battery level.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_LOW
@@ -73,8 +63,6 @@ LEVEL_LOW
 Low battery level.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -88,8 +76,6 @@ Alarm battery level.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_CRITICAL
@@ -102,8 +88,6 @@ Ultra-low battery level.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## LEVEL_SHUTDOWN
@@ -115,7 +99,5 @@ LEVEL_SHUTDOWN
 Power-down battery level.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

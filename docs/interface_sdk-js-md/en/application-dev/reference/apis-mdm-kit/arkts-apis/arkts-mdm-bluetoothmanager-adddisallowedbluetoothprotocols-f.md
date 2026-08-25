@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedBluetoothProtocols
@@ -15,8 +15,6 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number,  protoc
 Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed Bluetooth protocols to send files to other devices. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and system applications. When the SPP protocol is passed, both the receiving and sending functions are disabled.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -39,28 +37,6 @@ Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed B
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace it as required.
-let accountId: number = 100;
-let protocols: Array<bluetoothManager.Protocol> = [bluetoothManager.Protocol.GATT, bluetoothManager.Protocol.SPP];
-try{
-    bluetoothManager.addDisallowedBluetoothProtocols(wantTemp, accountId, protocols);
-    console.info('Succeeded in adding disallowed bluetooth protocols policy.');
-} catch (err) {
-    console.error(`Failed to add disallowed bluetooth protocols. Code: ${err.code}, message: ${err.message}`);
-}
-```
 
 
 ## addDisallowedBluetoothProtocols
@@ -85,8 +61,6 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -110,7 +84,3 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [addDisallowedBluetoothProtocols](#adddisallowedbluetoothprotocols)

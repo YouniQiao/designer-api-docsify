@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getDirection
@@ -21,8 +21,6 @@ function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Arr
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getOrientation](arkts-sensorservice-sensor-getorientation-f.md)(rotationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
@@ -35,39 +33,6 @@ function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Arr
 | --- | --- | --- |
 | rotationMatrix | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.getDirection([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data: Array<number>) => {
-  if (err) {
-    console.error(`Failed to register data. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info("Succeeded in getting getDirection interface get data: " + data);
-  for (let i = 1; i < data.length; i++) {
-    console.info("Succeeded in getting sensor_getDirection_callback" + data[i]);
-  }
-})
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getDirection([1, 0, 0, 0, 1, 0, 0, 0, 1]);
-promise.then((data: Array<number>) => {
-  console.info('Succeeded in getting sensor_getDirection_Promise', data);
-  for (let i = 1; i < data.length; i++) {
-    console.info('Succeeded in getting sensor_getDirection_promise' + data[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get promise.`);
-})
-```
 
 
 ## getDirection
@@ -83,8 +48,6 @@ function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 > [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -103,7 +66,3 @@ function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;number & gt; & gt; |
-
-**示例**
-
-参见 [getDirection](#getdirection)

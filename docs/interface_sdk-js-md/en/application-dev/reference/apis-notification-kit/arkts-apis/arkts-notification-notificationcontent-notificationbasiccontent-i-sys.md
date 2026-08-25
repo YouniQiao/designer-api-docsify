@@ -1,10 +1,8 @@
 # NotificationBasicContent
 
-Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as long text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis.
+Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as number text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -19,8 +17,6 @@ Structured notification. Currently, only service reminder messages can be displa
 **Type:** Map&lt;string, string&gt;
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

@@ -15,8 +15,6 @@ function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCall
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md)
@@ -31,40 +29,9 @@ function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let displayBadgeCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("displayBadge failed " + JSON.stringify(err));
-  } else {
-    console.info("displayBadge success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.displayBadge(bundle, false, displayBadgeCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.displayBadge(bundle, false).then(() => {
-  console.info("displayBadge success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`displayBadge failed, code is ${err}`);
-});
-```
 
 
 ## displayBadge
@@ -77,8 +44,6 @@ function displayBadge(bundle: BundleOption, enable: boolean): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md)
@@ -93,7 +58,7 @@ function displayBadge(bundle: BundleOption, enable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 
 **返回值：**
@@ -101,7 +66,3 @@ function displayBadge(bundle: BundleOption, enable: boolean): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [displayBadge](#displaybadge)

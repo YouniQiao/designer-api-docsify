@@ -12,8 +12,6 @@ Navigation导航控制器，以栈的数据结构管理Navigation中所有的子
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -30,8 +28,6 @@ clear(animated?: boolean): void
 清除栈中所有页面。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,8 +51,6 @@ constructor()
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -72,8 +66,6 @@ disableAnimation(value: boolean): void
 关闭（true）或打开（false）当前Navigation中所有转场动画。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,8 +89,6 @@ getAllPathName(): Array<string>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -120,8 +110,6 @@ getIndexByName(name: string): Array<number>
 获取全部名为name的NavDestination页面的位置索引。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -151,8 +139,6 @@ getParamByIndex(index: number): unknown | undefined
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -180,8 +166,6 @@ getParamByName(name: string): Array<unknown>
 获取所有名为name的NavDestination页面的参数信息，按页面索引从小到大排序。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -211,8 +195,6 @@ getParent(): NavPathStack | null
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -234,8 +216,6 @@ getPathStack(): Array<NavPathInfo>
 获取当前路由栈中的路由页面信息数组。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -259,8 +239,6 @@ moveIndexToTop(index: number, animated?: boolean): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -283,8 +261,6 @@ moveToTop(name: string, animated?: boolean): number
 将由栈底开始第一个名为name的NavDestination页面移到栈顶。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -334,8 +310,6 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -383,8 +357,6 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -414,8 +386,6 @@ popToIndex(index: number, animated?: boolean): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -438,8 +408,6 @@ popToIndex(index: number, result: Object, animated?: boolean): void
 回退路由栈到index指定的NavDestination页面，并触发onPop回调传入页面处理结果。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -464,8 +432,6 @@ popToName(name: string, animated?: boolean): number
 回退路由栈到栈底第一个名为name的NavDestination页面。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -496,8 +462,6 @@ popToName(name: string, result: Object, animated?: boolean): number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -527,8 +491,6 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -568,8 +530,6 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -607,8 +567,6 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 将name指定的NavDestination页面信息入栈，传递的数据为param，使用Promise异步回调返回接口调用结果。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -649,8 +607,6 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -663,7 +619,7 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 | --- | --- | --- |
 | name | string | 是 |
 | param | Object | 是 |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 |
+| [onPop](arkts-arkui-navpathinfo-c.md) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 |
 | animated | boolean | 否 |
 
 **返回值：**
@@ -691,8 +647,6 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -716,8 +670,6 @@ pushPath(info: NavPathInfo, options?: NavigationOptions): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -740,8 +692,6 @@ pushPathByName(name: string, param: unknown, animated?: boolean): void
 将name指定的NavDestination页面信息入栈，传递的数据为param。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -767,8 +717,6 @@ pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').C
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -781,7 +729,7 @@ pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').C
 | --- | --- | --- |
 | name | string | 是 |
 | param | Object | 是 |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 |
+| [onPop](arkts-arkui-navpathinfo-c.md) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 |
 | animated | boolean | 否 |
 
 ## removeByIndexes
@@ -793,8 +741,6 @@ removeByIndexes(indexes: Array<number>): number
 将路由栈内索引值在indexes中的NavDestination页面删除。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -824,8 +770,6 @@ removeByName(name: string): number
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -854,8 +798,6 @@ removeByNavDestinationId(navDestinationId: string): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -883,8 +825,6 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 替换路由栈操作。使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -924,8 +864,6 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -949,8 +887,6 @@ replacePath(info: NavPathInfo, options?: NavigationOptions): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -973,8 +909,6 @@ replacePathByName(name: string, param: Object, animated?: boolean): void
 将当前路由栈栈顶退出，将name指定的页面入栈。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1000,8 +934,6 @@ setInterception(interception: NavigationInterception): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1012,7 +944,7 @@ setInterception(interception: NavigationInterception): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | 是 |
+| [interception](arkts-arkui-navigationinterception-i.md) | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | 是 |
 
 ## setPathStack
 
@@ -1030,8 +962,6 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 > 有页面。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1055,8 +985,6 @@ size(): number
 获取栈大小。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

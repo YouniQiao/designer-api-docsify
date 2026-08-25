@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## cancelPrintJob
@@ -15,8 +15,6 @@ function cancelPrintJob(jobId: string, callback: AsyncCallback<void>): void
 Cancels the specified print job, which is on the print queue of the printer. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -39,34 +37,6 @@ Cancels the specified print job, which is on the print queue of the printer. Thi
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobId : string = '121212';
-print.cancelPrintJob(jobId, (err: BusinessError) => {
-    if (err) {
-        console.error('cancelPrintJob failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('cancelPrintJob success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobId : string = '121212';
-print.cancelPrintJob(jobId).then(() => {
-    console.info('cancelPrintJob success');
-}).catch((error: BusinessError) => {
-    console.error('cancelPrintJob failed, because : ' + JSON.stringify(error));
-})
-```
-
 
 ## cancelPrintJob
 
@@ -77,8 +47,6 @@ function cancelPrintJob(jobId: string): Promise<void>
 Cancels the specified print job, which is on the print queue of the printer. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -105,7 +73,3 @@ Cancels the specified print job, which is on the print queue of the printer. Thi
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [cancelPrintJob](#cancelprintjob)

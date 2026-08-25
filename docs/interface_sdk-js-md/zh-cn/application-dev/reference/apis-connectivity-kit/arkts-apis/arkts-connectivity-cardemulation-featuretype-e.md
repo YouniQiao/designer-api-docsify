@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
@@ -21,8 +19,6 @@ HCE = 0
 HCE 卡模拟。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -42,8 +38,6 @@ SIM 卡模拟。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
@@ -61,8 +55,6 @@ ESE = 2
 ESE 卡模拟。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

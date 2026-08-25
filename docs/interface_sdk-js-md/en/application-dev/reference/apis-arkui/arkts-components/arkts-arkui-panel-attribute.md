@@ -6,8 +6,6 @@ Pane Attribute.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,8 +24,6 @@ backgroundMask(color: ResourceColor)
 Called when the panel background mask is requested.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -51,8 +47,6 @@ Sets the height. It is valid only when PanelType is set to Custom.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -63,7 +57,7 @@ Sets the height. It is valid only when PanelType is set to Custom.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Dimension \| [PanelHeight](arkts-arkui-panelheight-e.md) | Yes |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [PanelHeight](arkts-arkui-panelheight-e.md) | Yes |
 
 ## dragBar
 
@@ -74,8 +68,6 @@ dragBar(value: boolean)
 Called when determining whether dragbar exists.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 12
 
@@ -99,8 +91,6 @@ Called when the height in the full state is specified.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -122,8 +112,6 @@ halfHeight(value: number | string)
 Called when the height in the half state is specified.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 12
 
@@ -147,8 +135,6 @@ Called when the height in the mini state is specified.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -170,8 +156,6 @@ mode(value: PanelMode)
 Called when the initial state of the slidable panel is set.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 12
 
@@ -230,8 +214,6 @@ Called when the state of the slidable panel changes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -253,8 +235,6 @@ onHeightChange(callback: (value: number) => void)
 Called when height of the panel is changed
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -278,8 +258,6 @@ Called when the panel slidable panel pops up.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -302,8 +280,6 @@ Called when the panel show close icon.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -325,8 +301,6 @@ type(value: PanelType)
 Called when the slidable panel type is set.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 12
 

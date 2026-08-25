@@ -15,7 +15,7 @@ The RecentPhotoComponent embedded in the UI of an application allows the applica
 ## Modules to Import
 
 ```TypeScript
-import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoInfo, RecentPhotoCheckInfoCallback, RecentPhotoClickCallback, RecentPhotoOptions, PhotoSource } from '@kit.MediaLibraryKit';
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoInfo, RecentPhotoCheckInfoCallback, RecentPhotoClickCallback, RecentPhotoOptions, PhotoSource } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## Summary

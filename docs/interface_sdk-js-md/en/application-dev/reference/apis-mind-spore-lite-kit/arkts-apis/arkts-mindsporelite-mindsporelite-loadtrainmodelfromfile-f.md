@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
 ```
 
 ## loadTrainModelFromFile
@@ -18,8 +18,6 @@ function loadTrainModelFromFile(
 Load train model from file
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,17 +44,3 @@ Load train model from file
 | 1000001 |
 | 1000008 |
 | 1000009 |
-
-**Examples**
-
-```TypeScript
-let modelFile = '/path/to/xxx.ms';
-mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error('MS_LITE_ERR: getInputs failed.')
-  } else {
-    console.info(modelInputs[0].name);
-  }
-})
-```

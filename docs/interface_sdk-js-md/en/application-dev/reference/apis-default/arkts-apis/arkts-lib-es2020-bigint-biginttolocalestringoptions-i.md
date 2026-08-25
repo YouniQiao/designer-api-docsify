@@ -1,7 +1,5 @@
 # BigIntToLocaleStringOptions
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -17,8 +15,6 @@ used only when notation is "compact"
 
 **Type:** string
 
-**ArkTS mode:** 
-
 ## currency
 
 ```TypeScript
@@ -28,8 +24,6 @@ currency?: string
 The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as "USD" for the US dollar, "EUR" for the euro, or "CNY" for the Chinese RMB — see the Current currency & funds code list. There is no default value; if the style is "currency", the currency property must be provided. It is only used when [[Style]] has the value "currency".
 
 **Type:** string
-
-**ArkTS mode:** 
 
 ## currencyDisplay
 
@@ -41,8 +35,6 @@ How to display the currency in currency formatting. It is only used when [[Style
 
 **Type:** string
 
-**ArkTS mode:** 
-
 ## localeMatcher
 
 ```TypeScript
@@ -52,8 +44,6 @@ localeMatcher?: string
 The locale matching algorithm to use.The default is "best fit". For information about this option, see the Locale_negotiation Intl page.
 
 **Type:** string
-
-**ArkTS mode:** 
 
 ## maximumFractionDigits
 
@@ -65,8 +55,6 @@ The maximum number of fraction digits to use. Possible values are from 0 to 20; 
 
 **Type:** 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20
 
-**ArkTS mode:** 
-
 ## maximumSignificantDigits
 
 ```TypeScript
@@ -76,8 +64,6 @@ maximumSignificantDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
 The maximum number of significant digits to use. Possible values are from 1 to 21; the default is 21.
 
 **Type:** 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20 \| 21
-
-**ArkTS mode:** 
 
 ## minimumFractionDigits
 
@@ -89,8 +75,6 @@ The minimum number of fraction digits to use. Possible values are from 0 to 20; 
 
 **Type:** 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20
 
-**ArkTS mode:** 
-
 ## minimumIntegerDigits
 
 ```TypeScript
@@ -100,8 +84,6 @@ minimumIntegerDigits?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 1
 The minimum number of integer digits to use. Possible values are from 1 to 21; the default is 1.
 
 **Type:** 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20 \| 21
-
-**ArkTS mode:** 
 
 ## minimumSignificantDigits
 
@@ -113,8 +95,6 @@ The minimum number of significant digits to use. Possible values are from 1 to 2
 
 **Type:** 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9 \| 10 \| 11 \| 12 \| 13 \| 14 \| 15 \| 16 \| 17 \| 18 \| 19 \| 20 \| 21
 
-**ArkTS mode:** 
-
 ## notation
 
 ```TypeScript
@@ -125,8 +105,6 @@ The formatting that should be displayed for the number, the defaults is "standar
 
 **Type:** string
 
-**ArkTS mode:** 
-
 ## numberingSystem
 
 ```TypeScript
@@ -134,8 +112,6 @@ numberingSystem?: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 ## style
 
@@ -147,8 +123,6 @@ The formatting style to use , the default is "decimal".
 
 **Type:** string
 
-**ArkTS mode:** 
-
 ## unit
 
 ```TypeScript
@@ -158,8 +132,6 @@ unit?: string
 The unit to use in unit formatting, Possible values are core unit identifiers, defined in UTS #35, Part 2, Section 6. A subset of units from the full list was selected for use in ECMAScript. Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the style is "unit", the unit property must be provided.
 
 **Type:** string
-
-**ArkTS mode:** 
 
 ## unitDisplay
 
@@ -171,8 +143,6 @@ The unit formatting style to use in unit formatting, the defaults is "short".
 
 **Type:** string
 
-**ArkTS mode:** 
-
 ## useGrouping
 
 ```TypeScript
@@ -182,5 +152,3 @@ useGrouping?: boolean
 Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators. The default is true.
 
 **Type:** boolean
-
-**ArkTS mode:** 

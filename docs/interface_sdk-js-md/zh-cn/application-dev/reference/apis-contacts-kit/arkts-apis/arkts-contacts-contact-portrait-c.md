@@ -14,14 +14,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Applications.ContactsData
 
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## photo
@@ -35,8 +33,6 @@ PixelMap格式的联系人头像。
 **类型：** image.PixelMap
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -54,30 +50,6 @@ uri格式联系人头像。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Applications.ContactsData
-
-**示例**
-
-使用JSON格式创建数据。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { image } from '@kit.ImageKit';
-
-async function SetPortraitUri(uri: string) {
-  let portrait: contact.Portrait = {
-    uri: uri
-  };
-}
-
-async function SetPortraitPixelMap(photo: image.PixelMap) {
-  let portrait: contact.Portrait = {
-    uri: '',
-    photo: photo
-  };
-}
-```

@@ -4,8 +4,6 @@ Defines the lite settings capability for wearables.
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
@@ -13,7 +11,7 @@ Defines the lite settings capability for wearables.
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from '@kit.BasicServicesKit';
+import { settingsLite } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -6,14 +6,12 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## amPMSymbol
@@ -27,8 +25,6 @@ AM and PM symbol of date time period part, such as "PM" of "2:23 PM". First para
 **Type:** string[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

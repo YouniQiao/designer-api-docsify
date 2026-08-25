@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getCurrentTime
@@ -15,8 +15,6 @@ function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void
 获取自Unix纪元以来经过的时间，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -37,57 +35,6 @@ function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void
 | --- |
 | -1 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getCurrentTime(true, (error: BusinessError, time: number) => {
-    if (error) {
-      console.info(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting currentTime: ${time}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getCurrentTime((error: BusinessError, time: number) => {
-    if (error) {
-      console.info(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting currentTime : ${time}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getCurrentTime().then((time: number) => {
-    console.info(`Succeeded in getting currentTime : ${time}`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.info(`Failed to get currentTime. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## getCurrentTime
 
@@ -98,8 +45,6 @@ function getCurrentTime(callback: AsyncCallback<number>): void
 获取自Unix纪元以来经过的时间，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -119,10 +64,6 @@ function getCurrentTime(callback: AsyncCallback<number>): void
 | --- |
 | -1 |
 
-**示例**
-
-参见 [getCurrentTime](#getcurrenttime)
-
 
 ## getCurrentTime
 
@@ -133,8 +74,6 @@ function getCurrentTime(isNano?: boolean): Promise<number>
 获取自Unix纪元以来经过的时间，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -159,7 +98,3 @@ function getCurrentTime(isNano?: boolean): Promise<number>
 | 错误码ID |
 | --- |
 | -1 |
-
-**示例**
-
-参见 [getCurrentTime](#getcurrenttime)

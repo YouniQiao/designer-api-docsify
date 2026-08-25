@@ -4,8 +4,6 @@ Color mode.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 20
 
 **System capability:** SystemCapability.Ability.Form
@@ -19,8 +17,6 @@ MODE_AUTO = -1
 Automatic mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 20
 
@@ -38,8 +34,6 @@ Dark mode.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -55,8 +49,6 @@ MODE_LIGHT = 1
 Light mode.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 20
 

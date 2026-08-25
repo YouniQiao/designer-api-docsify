@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## generateDlpFileForEnterprise
@@ -19,8 +19,6 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **需要权限：** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -32,7 +30,7 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 | plaintextFd | number | 是 |
 | dlpFd | number | 是 |
 | property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | 是 |
-| customProperty | [CustomProperty](../../apis-arkui/arkts-apis/arkts-arkui-customproperty-t.md) | 是 |
+| [customProperty](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) | 是 |
 
 **返回值：**
 
@@ -54,41 +52,3 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 | [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 | [19100014](../errorcode-dlp.md#19100014-账号未登录) |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-let plaintextFd: number | undefined = undefined;
-let dlpFd: number | undefined = undefined;
-let plainFilePath: string = 'file://docs/storage/Users/currentUser/Documents/test.txt';
-let dlpFilePath: string = "file://docs/storage/Users/currentUser/Documents/test.txt.dlp";
-plaintextFd = fileIo.openSync(plainFilePath, fileIo.OpenMode.READ_ONLY).fd; // 打开明文文件。
-dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE).fd; // 打开DLP文件。
-let dlpProperty: dlpPermission.DLPProperty = {
-  ownerAccount: 'zhangsan',
-  ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
-  authUserList: [],
-  contactAccount: 'zhangsan',
-  offlineAccess: true,
-  ownerAccountID: 'xxxxxxx',
-  everyoneAccessList: []
-};
-let customProperty: dlpPermission.CustomProperty = {
-  enterprise: 'customProperty'
-};
-dlpPermission.generateDlpFileForEnterprise(plaintextFd, dlpFd, dlpProperty, customProperty).then((res) => {
-  console.info('Successfully generate DLP file for enterprise.');
-}).catch((error: BusinessError)=> {
-  console.error(`Failed to generate DLP file for enterprise. Code: ${error.code}, message: ${error.message}`);
-}).finally(()=>{
-  if (dlpFd) {
-    fileIo.closeSync(dlpFd);
-  }
-  if (plaintextFd) {
-    fileIo.closeSync(plaintextFd);
-  }
-});
-```

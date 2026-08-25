@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## getAvailableArea
@@ -23,8 +21,6 @@ getAvailableArea(): Promise<Rect>
 获取当前设备屏幕的可用区域，使用Promise异步回调。可用区域是扣除系统UI（如状态栏、Dock栏）后，可供应用程序自由使用的区域。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -43,48 +39,6 @@ getAvailableArea(): Promise<Rect>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  let promise = displayClass.getAvailableArea();
-  promise.then((data) => {
-    console.info(`Succeeded in getting the available area in this display. data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get the available area in this display. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to obtain the default display object. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  let promise = displayClass.getAvailableArea();
-  promise.then((data: display.Rect) => {
-    console.info(`Succeeded get the available area in this display. data: ${JSON.stringify(data)}`);
-  }).catch((err: Error) => {
-    console.error(`Failed to get the available area in this display. Code: ${err?.code}, message: ${err?.message}`);
-  })
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to obtain the default display object. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getCutoutInfo
 
 ```TypeScript
@@ -94,8 +48,6 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 获取挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。使用callback异步回调。建议应用布局规避该区域。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -113,69 +65,6 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 | --- |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-
-displayClass.getCutoutInfo((err: BusinessError, data: display.CutoutInfo) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to get cutoutInfo. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-
-displayClass.getCutoutInfo().then((data: display.CutoutInfo) => {
-  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
-}).catch((err: Error) => {
-  console.error(`Failed to get cutoutInfo. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-let promise: Promise<display.CutoutInfo> = displayClass.getCutoutInfo();
-promise.then((data: display.CutoutInfo) => {
-  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get cutoutInfo. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-let promise: Promise<display.CutoutInfo> = displayClass.getCutoutInfo();
-promise.then((data: display.CutoutInfo) => {
-  console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
-}).catch((err: Error) => {
-  console.error(`Failed to obtain all the display objects. Code: ${err?.code}, message: ${err?.message}`);
-});
-```
-
 ## getCutoutInfo
 
 ```TypeScript
@@ -185,8 +74,6 @@ getCutoutInfo(): Promise<CutoutInfo>
 获取挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。使用Promise异步回调。建议应用布局规避该区域。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -204,10 +91,6 @@ getCutoutInfo(): Promise<CutoutInfo>
 | --- |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
-**示例**
-
-参见 [getCutoutInfo](#getcutoutinfo)
-
 ## getDisplayCapability
 
 ```TypeScript
@@ -217,8 +100,6 @@ getDisplayCapability(): string
 Get current display capability, including foldstatus, displaymode, rotation, and orientation information.
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -248,8 +129,6 @@ getLiveCreaseRegion(): FoldCreaseRegion
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **返回值：**
@@ -265,37 +144,6 @@ getLiveCreaseRegion(): FoldCreaseRegion
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  let data: display.FoldCreaseRegion = displayClass.getLiveCreaseRegion();
-  console.info(`Succeeded in getting the live crease region. Data: ${JSON.stringify(data)}`);
-} catch (exception) {
-  console.error(`Failed to get the live crease region. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  let data: display.FoldCreaseRegion = displayClass.getLiveCreaseRegion();
-  console.info(`Succeeded in getting the live crease region. Data: ${JSON.stringify(data)}`);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to get the live crease region. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## getRoundedCorner
 
 ```TypeScript
@@ -305,8 +153,6 @@ getRoundedCorner(): Array<RoundedCorner>
 获取屏幕的圆角信息。屏幕圆角信息由产品配置决定，只有配置了屏幕圆角半径的物理屏幕才能返回圆角信息，否则返回空数组，虚拟屏同样返回空数组。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -326,21 +172,6 @@ getRoundedCorner(): Array<RoundedCorner>
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  let data = displayClass.getRoundedCorner();
-  console.info(`Succeeded in getting rounded corner. Data: ${JSON.stringify(data)}`);
-} catch (error) {
-  console.error(`Failed to get rounded corner. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## off('availableAreaChange')
 
 ```TypeScript
@@ -350,8 +181,6 @@ off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 关闭当前设备屏幕可用区域变化的监听。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -371,69 +200,6 @@ off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<display.Rect> = (data: display.Rect) => {
-  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
-};
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  displayClass.off('availableAreaChange', callback);
-} catch (exception) {
-  console.error(`Failed to unregister callback. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-## offAvailableAreaChange
-
-```TypeScript
-offAvailableAreaChange(callback?: Callback<Rect>): void
-```
-
-Unregister the callback for available area changes.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let callback: Callback<display.Rect> = (data: display.Rect) => {
-  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
-};
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  displayClass.offAvailableAreaChange(callback);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to unregister callback. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## on('availableAreaChange')
 
@@ -445,8 +211,6 @@ on(type: 'availableAreaChange', callback: Callback<Rect>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -465,69 +229,6 @@ on(type: 'availableAreaChange', callback: Callback<Rect>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let callback: Callback<display.Rect> = (data: display.Rect) => {
-  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
-};
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  displayClass.on('availableAreaChange', callback);
-} catch (exception) {
-  console.error(`Failed to register callback. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-## onAvailableAreaChange
-
-```TypeScript
-onAvailableAreaChange(callback: Callback<Rect>): void
-```
-
-Register the callback for available area changes.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let callback: Callback<display.Rect> = (data: display.Rect) => {
-  console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
-};
-let displayClass: display.Display | null = null;
-try {
-  displayClass = display.getDefaultDisplaySync();
-  displayClass.onAvailableAreaChange(callback);
-} catch (exception) {
-  let error = exception as BusinessError;
-  console.error(`Failed to register callback. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## alive
 
@@ -541,8 +242,6 @@ alive: boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -550,16 +249,14 @@ alive: boolean
 ## availableHeight
 
 ```TypeScript
-availableHeight: long
+availableHeight: number
 ```
 
 显示设备的可用区域高度，单位为px，该参数为大于0的整数。SystemCapability.WindowManager.WindowManager.Core该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过height属性获取当前设备屏幕的可用区域高度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -568,16 +265,14 @@ availableHeight: long
 ## availableWidth
 
 ```TypeScript
-availableWidth: long
+availableWidth: number
 ```
 
 显示设备的可用区域宽度，单位为px，该参数为大于0的整数。SystemCapability.WindowManager.WindowManager.Core该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过width属性获取当前设备屏幕的可用区域宽度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -595,8 +290,6 @@ colorSpaces: Array<colorSpaceManager.ColorSpace>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -604,16 +297,14 @@ colorSpaces: Array<colorSpaceManager.ColorSpace>
 ## densityDPI
 
 ```TypeScript
-densityDPI: double
+densityDPI: number
 ```
 
 显示设备的物理像素密度，表示每英寸上的像素点数。该参数为浮点数，单位为px。一般取值160.0、480.0等，实际能取到的值取决于不同设备设置里提供的可选值。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -622,16 +313,14 @@ densityDPI: double
 ## densityPixels
 
 ```TypeScript
-densityPixels: double
+densityPixels: number
 ```
 
 显示设备逻辑像素的密度，代表物理像素与逻辑像素的缩放系数，计算方式为：该参数为浮点数，受densityDPI范围限制，取值范围在[0.5，4.0]。一般取值1.0、3.0等，实际取值取决于不同设备提供的densityDPI。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -649,8 +338,6 @@ hdrFormats: Array<hdrCapability.HDRFormat>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -658,16 +345,14 @@ hdrFormats: Array<hdrCapability.HDRFormat>
 ## height
 
 ```TypeScript
-height: long
+height: number
 ```
 
 显示设备的屏幕高度，单位为px，该参数为整数。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -676,16 +361,14 @@ height: long
 ## id
 
 ```TypeScript
-id: long
+id: number
 ```
 
 显示设备的屏幕ID，该参数为大于等于0的整数。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -703,8 +386,6 @@ name: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -721,8 +402,6 @@ orientation: Orientation
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -730,16 +409,14 @@ orientation: Orientation
 ## refreshRate
 
 ```TypeScript
-refreshRate: int
+refreshRate: number
 ```
 
 显示设备当前采用的刷新率，该参数为整数，单位为Hz。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -748,16 +425,14 @@ refreshRate: int
 ## rotation
 
 ```TypeScript
-rotation: int
+rotation: number
 ```
 
 显示设备的屏幕顺时针旋转角度。值为0时，表示显示设备屏幕顺时针旋转为0°，表示显示设备的标准显示方向；值为1时，表示显示设备屏幕顺时针旋转为90°；值为2时，表示显示设备屏幕顺时针旋转为180°；值为3时，表示显示设备屏幕顺时针旋转为270°。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -766,16 +441,14 @@ rotation: int
 ## scaledDensity
 
 ```TypeScript
-scaledDensity: double
+scaledDensity: number
 ```
 
 显示设备上的字体的缩放因子。该参数为浮点数，通常与densityPixels相同。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -793,8 +466,6 @@ screenShape?: ScreenShape
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -810,8 +481,6 @@ sourceMode?: DisplaySourceMode
 **类型：** [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md)
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -829,8 +498,6 @@ state: DisplayState
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -838,16 +505,14 @@ state: DisplayState
 ## supportedRefreshRates
 
 ```TypeScript
-supportedRefreshRates?: Array<int>
+supportedRefreshRates?: Array<number>
 ```
 
 显示设备支持的所有刷新率，从小到大排序。刷新率值为正整数，单位为Hz。默认为空。SystemCapability.Window.SessionManager
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -856,16 +521,14 @@ supportedRefreshRates?: Array<int>
 ## width
 
 ```TypeScript
-width: long
+width: number
 ```
 
 显示设备的屏幕宽度，单位为px，该参数为整数。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -874,16 +537,14 @@ width: long
 ## x
 
 ```TypeScript
-x?: long
+x?: number
 ```
 
 显示设备左上角相对于原点的y轴坐标，原点为主屏左上角，单位为px，该参数为整数，默认值为0。仅DisplaySourceMode为MAIN和EXTEND时返回实际值，其余默认返回默认值0。SystemCapability.Window.SessionManager
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -892,16 +553,14 @@ x?: long
 ## xDPI
 
 ```TypeScript
-xDPI: double
+xDPI: number
 ```
 
 x轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -910,16 +569,14 @@ x轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。S
 ## y
 
 ```TypeScript
-y?: long
+y?: number
 ```
 
 显示设备左上角相对于原点的y轴坐标，原点为主屏左上角，单位为px，该参数为整数，默认值为0。仅DisplaySourceMode为MAIN和EXTEND时返回实际值，其余默认返回默认值0。SystemCapability.Window.SessionManager
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -928,16 +585,14 @@ y?: long
 ## yDPI
 
 ```TypeScript
-yDPI: double
+yDPI: number
 ```
 
 y轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。SystemCapability.WindowManager.WindowManager.Core
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

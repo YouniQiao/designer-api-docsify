@@ -4,8 +4,6 @@ Enumerates the update modes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ REGULAR_OTA = 0
 Regular OTA. In this mode, download the complete upgrade package to the local device and then install the package. This mode applies to most regular upgrade scenarios.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -36,8 +32,6 @@ Streaming OTA. In this mode, the upgrade is performed while the package is being
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Regular A/B OTA. This mode applies to devices with A/B partitions. For details, 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ AB_STREAM_OTA = 3
 Streaming A/B OTA. This mode applies to devices with A/B partitions. For details, see Upgrading Service Terms
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

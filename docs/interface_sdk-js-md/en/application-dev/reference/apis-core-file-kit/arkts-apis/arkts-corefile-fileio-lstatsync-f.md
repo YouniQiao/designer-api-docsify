@@ -15,8 +15,6 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [lstatSync](arkts-corefile-file-fs-lstatsync-f.md)
@@ -34,10 +32,3 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Stat](arkts-corefile-fileio-stat-depr-i.md) |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let stat = fileio.lstatSync(filePath);
-```

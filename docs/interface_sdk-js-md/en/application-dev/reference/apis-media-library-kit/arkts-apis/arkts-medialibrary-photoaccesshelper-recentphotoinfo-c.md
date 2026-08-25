@@ -4,29 +4,25 @@ Recent photo info
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## dateTaken
 
 ```TypeScript
-dateTaken?: long
+dateTaken?: number
 ```
 
 Time when the recent image or video was shot (in milliseconds since January 1, 1970). The unit is ms.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -43,8 +39,6 @@ Hash value of the name of the recent image or video, which is used to help the a
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

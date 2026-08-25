@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 ## TYPE_INPUT_METHOD
@@ -18,8 +16,6 @@ TYPE_INPUT_METHOD
 **说明：** 从API version 9开始支持，从API version 13开始废弃，无替代窗口类型，输入法相关控制都请调用 [输入法框架侧接口](../../../inputmethod/inputmethod-application-guide.md)执行。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 13
 
@@ -39,8 +35,6 @@ TYPE_STATUS_BAR = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -56,8 +50,6 @@ TYPE_PANEL = 4
 表示通知栏。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,8 +67,6 @@ TYPE_KEYGUARD = 5
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -92,8 +82,6 @@ TYPE_VOLUME_OVERLAY = 6
 表示音量条。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -111,8 +99,6 @@ TYPE_NAVIGATION_BAR = 7
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -128,8 +114,6 @@ TYPE_WALLPAPER = 9
 表示壁纸。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -147,8 +131,6 @@ TYPE_DESKTOP = 10
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -164,8 +146,6 @@ TYPE_LAUNCHER_RECENT = 11
 表示多任务中心。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -183,8 +163,6 @@ TYPE_LAUNCHER_DOCK = 12
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -200,8 +178,6 @@ TYPE_VOICE_INTERACTION = 13
 表示智慧语音。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -219,8 +195,6 @@ TYPE_POINTER = 14
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -236,8 +210,6 @@ TYPE_FLOAT_CAMERA = 15
 表示相机类型悬浮窗。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -255,8 +227,6 @@ TYPE_SCREENSHOT = 17
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -272,8 +242,6 @@ TYPE_SYSTEM_TOAST = 18
 表示顶层提示窗口。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -291,8 +259,6 @@ TYPE_DIVIDER = 19
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
@@ -308,8 +274,6 @@ TYPE_GLOBAL_SEARCH = 20
 表示全局搜索窗口。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -327,8 +291,6 @@ TYPE_HANDWRITE = 21
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -344,8 +306,6 @@ TYPE_WALLET_SWIPE_CARD = 22
 表示钱包刷卡窗口。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -363,8 +323,6 @@ TYPE_SCREEN_CONTROL = 23
 
 **起始版本：** 15
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -380,8 +338,6 @@ TYPE_FLOAT_NAVIGATION = 22
 TYPE_FLOAT_NAVIGATION.
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -399,8 +355,6 @@ TYPE_DYNAMIC = 25
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -416,8 +370,6 @@ TYPE_MUTISCREEN_COLLABORATION = 26
 表示多屏协同窗口。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

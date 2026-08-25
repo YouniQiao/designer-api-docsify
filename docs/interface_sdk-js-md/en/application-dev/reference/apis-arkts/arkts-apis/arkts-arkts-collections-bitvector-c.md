@@ -8,35 +8,13 @@ A linear data structure that is implemented on arrays. A bit vector stores bit v
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<int>
-```
-
-Returns an iterator that iterates over bit vector.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| IterableIterator & lt;int & gt; |
 
 ## [Symbol.iterator]
 
@@ -48,8 +26,6 @@ Returns an iterator that iterates over bit vector.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -58,7 +34,7 @@ Returns an iterator that iterates over bit vector.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;number & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
@@ -75,8 +51,6 @@ constructor(length: number)
 Constructor used to create a bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -97,8 +71,6 @@ flipBitByIndex(index: number): void
 Flips the bit value (from 0 to 1 or from 1 to 0) at a given index in this bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -128,8 +100,6 @@ Flips the bit values (from 0 to 1 or from 1 to 0) in a given range in this bit v
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -158,8 +128,6 @@ getBitCountByRange(element: number, fromIndex: number, toIndex: number): number
 Counts the number of bit values in a given range of this bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -197,8 +165,6 @@ Obtains bit values within a given range of this bit vector.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -233,8 +199,6 @@ getIndexOf(element: number, fromIndex: number, toIndex: number): number
 Returns the index of the first occurrence of a bit value in this bit vector. If the bit value is not found, **-1** is returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -272,8 +236,6 @@ Returns the index of the last occurrence of a bit value in this bit vector. If t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -309,8 +271,6 @@ has(element: number, fromIndex: number, toIndex: number): boolean
 Checks whether a bit value is included in a given range of this bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -348,8 +308,6 @@ Removes the last element from this bit vector.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -376,8 +334,6 @@ push(element: number): boolean
 Adds an element at the end of this bit vector.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -412,8 +368,6 @@ Resizes this bit vector. If **size** is greater than the length of the existing 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -441,8 +395,6 @@ Sets all elements in this bit vector to a bit value.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -469,8 +421,6 @@ setBitsByRange(element: number, fromIndex: number, toIndex: number): void
 Sets elements in a given range in this bit vector to a bit value.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -502,8 +452,6 @@ Returns an iterator object that contains the value of each element in this bit v
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -512,7 +460,7 @@ Returns an iterator object that contains the value of each element in this bit v
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;number & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
@@ -520,22 +468,6 @@ Returns an iterator object that contains the value of each element in this bit v
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
-
-## [index: int]
-
-```TypeScript
-[index: int]: int
-```
-
-Accesses or sets the element at the specified index in the BitVector.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Utils.Lang
 
 ## [index: number]
 
@@ -548,8 +480,6 @@ Returns the item at that index.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -566,8 +496,6 @@ Number of elements in a bit vector.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

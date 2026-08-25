@@ -12,8 +12,6 @@ Sets the page entrance animation.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,8 +31,6 @@ PageTransitionEnter(event: PageTransitionCallback)
 Invoked on a per-frame basis until the entrance animation is complete, with the **progress** parameter changing from 0 to 1.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,7 +53,6 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) |
 
 ### Enums
 

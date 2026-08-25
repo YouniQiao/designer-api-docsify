@@ -4,23 +4,19 @@ Defines the information required for triggering a WantAgent object. The informat
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 User ID.The value must be greater than or equal to 0.The default value is the user ID of the caller.This API can be used only in the stage model.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

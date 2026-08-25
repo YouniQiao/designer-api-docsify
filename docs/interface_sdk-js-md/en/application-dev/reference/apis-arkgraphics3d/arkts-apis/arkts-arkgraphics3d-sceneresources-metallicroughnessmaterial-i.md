@@ -6,8 +6,6 @@ Material resource for creating realistic appearances, using the Metallic-Roughne
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## ambientOcclusion
@@ -21,8 +19,6 @@ Ambient occlusion map, which is used to simulate the occlusion of ambient light 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -38,8 +34,6 @@ Base color map, which is used to represent the material's color in the absence o
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## clearCoat
@@ -53,8 +47,6 @@ Clear coat, similar to car paint, carbon fiber, or a wet surface, which requires
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -70,8 +62,6 @@ Normal map of the clear coat.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## clearCoatRoughness
@@ -85,8 +75,6 @@ Roughness of the clear coat.
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -102,8 +90,6 @@ Emissive color, which is the color of the material as a light source.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## material
@@ -117,8 +103,6 @@ Metal material parameters. Roughness: strength of reflection caused by the fine 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -134,8 +118,6 @@ Normal map, which is used to represent the surface structure details of an objec
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## sheen
@@ -150,8 +132,6 @@ Gentle, widespread shine of microfiber materials, ideal for representing fabrics
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## specular
@@ -165,7 +145,5 @@ Specular reflection of non-metallic materials, showing the intensity of traditio
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

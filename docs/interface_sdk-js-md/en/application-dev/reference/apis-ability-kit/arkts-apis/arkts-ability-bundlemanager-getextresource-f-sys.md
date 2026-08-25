@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getExtResource
@@ -15,8 +15,6 @@ function getExtResource(bundleName: string): Promise<Array<string>>
 Obtains the module names corresponding to the extended resources based on the given bundle name. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -45,26 +43,3 @@ Obtains the module names corresponding to the extended resources based on the gi
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700303](../errorcode-bundle.md#17700303-failed-to-obtain-extended-resources) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName: string = 'com.ohos.demo';
-
-try {
-  bundleManager.getExtResource(bundleName).then((modules: Array<string>) => {
-    for (let i = 0; i < modules.length; i++) {
-      hilog.info(0x0000, 'testTag', 'getExtResource item: %s', modules[i]);
-    }
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getExtResource failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getExtResource failed. Cause: %{public}s', message);
-}
-```

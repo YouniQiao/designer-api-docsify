@@ -1,10 +1,8 @@
 # TargetType (System API)
 
-Target type.@enum { int }
+Target type.@enum { number }
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -19,8 +17,6 @@ HUMAN_FACE = 0
 human Face type.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 

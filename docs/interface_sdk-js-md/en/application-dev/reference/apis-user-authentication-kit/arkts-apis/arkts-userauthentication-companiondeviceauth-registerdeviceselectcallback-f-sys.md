@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## registerDeviceSelectCallback
@@ -15,8 +15,6 @@ function registerDeviceSelectCallback(callback: DeviceSelectCallback): void
 Registers a callback for companion device selection. When the system requires the user to select a companion device, this callback is triggered. The application needs to return the information about the selected device in the callback. Through this callback, the application can implement custom device selection logic, for example, displaying a device selection screen for the user to select a device.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -39,37 +37,3 @@ Registers a callback for companion device selection. When the system requires th
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  companionDeviceAuth.registerDeviceSelectCallback((purpose) => {
-    const addDeviceId = 'addDeviceId';
-    const otherDeviceId = 'otherDeviceId';
-    const addDeviceUserId = 100;
-    const otherDeviceUserId = 100;
-    if (purpose === companionDeviceAuth.SelectPurpose.SELECT_ADD_DEVICE) {
-      return {
-        deviceKeys: [{
-          deviceIdType: companionDeviceAuth.DeviceIdType.UNIFIED_DEVICE_ID,
-          deviceId: addDeviceId,
-          deviceUserId: addDeviceUserId
-        }]
-      };
-    }
-    return {
-      deviceKeys: [{
-        deviceIdType: companionDeviceAuth.DeviceIdType.UNIFIED_DEVICE_ID,
-        deviceId: otherDeviceId,
-        deviceUserId: otherDeviceUserId
-      }]
-    };
-  })
-} catch (error) {
-  const err = error as BusinessError;
-  console.error(`error has been captured: ${err.code} ${err.message}`);
-}
-```

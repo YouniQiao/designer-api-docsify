@@ -7,8 +7,6 @@ type LocalesArgument = UnicodeBCP47LocaleIdentifier | Locale | readonly (Unicode
 The locale(s) to use  
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
-**ArkTS mode:** 
-
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [UnicodeBCP47LocaleIdentifier](arkts-intl-unicodebcp47localeidentifier-t.md) |

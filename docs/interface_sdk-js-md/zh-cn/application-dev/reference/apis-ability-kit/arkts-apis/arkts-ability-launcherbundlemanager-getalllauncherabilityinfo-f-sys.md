@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAllLauncherAbilityInfo
 
 ```TypeScript
-function getAllLauncherAbilityInfo(userId: int, callback: AsyncCallback<Array<LauncherAbilityInfo>>) : void
+function getAllLauncherAbilityInfo(userId: number, callback: AsyncCallback<Array<LauncherAbilityInfo>>) : void
 ```
 
 查询指定用户下所有应用的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -28,7 +26,7 @@ function getAllLauncherAbilityInfo(userId: int, callback: AsyncCallback<Array<La
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | 是 |
 
 **错误码：**
@@ -41,109 +39,16 @@ function getAllLauncherAbilityInfo(userId: int, callback: AsyncCallback<Array<La
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getAllLauncherAbilityInfo(100,
-    (errData: BusinessError, data: launcherBundleManager.LauncherAbilityInfo[]) => {
-      if (errData !== null) {
-        console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-      } else {
-        console.info('data is ' + JSON.stringify(data));
-      }
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 代码中使用的useId需为应用实际的用户ID。
-try {
-  launcherBundleManager.getAllLauncherAbilityInfo(100, (errData, data) => {
-    if (errData !== null) {
-      console.error(`getAllLauncherAbilityInfo errData is errCode:${errData.code}  message:${errData.message}`);
-    } else {
-      console.info('getAllLauncherAbilityInfo data is ' + JSON.stringify(data));
-    }
-  });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`getAllLauncherAbilityInfo errData is errCode:${code}  message:${message}`);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getAllLauncherAbilityInfo(100)
-    .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
-      console.info('data is ' + JSON.stringify(data));
-    }).catch((errData: BusinessError) => {
-      console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 代码中使用的useId需为应用实际的用户ID。
-try {
-  launcherBundleManager.getAllLauncherAbilityInfo(100)
-    .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
-      console.info('getAllLauncherAbilityInfo data is ' + JSON.stringify(data));
-    }).catch ((errData: Error) => {
-      console.error(`getAllLauncherAbilityInfo errData is errCode:${(errData as BusinessError).code}  message:${(errData as BusinessError).message}`);
-    });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`getAllLauncherAbilityInfo errData is errCode:${code}  message:${message}`);
-}
-```
-
 
 ## getAllLauncherAbilityInfo
 
 ```TypeScript
-function getAllLauncherAbilityInfo(userId: int) : Promise<Array<LauncherAbilityInfo>>
+function getAllLauncherAbilityInfo(userId: number) : Promise<Array<LauncherAbilityInfo>>
 ```
 
 查询指定用户下所有应用的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -155,7 +60,7 @@ function getAllLauncherAbilityInfo(userId: int) : Promise<Array<LauncherAbilityI
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -172,7 +77,3 @@ function getAllLauncherAbilityInfo(userId: int) : Promise<Array<LauncherAbilityI
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-
-**示例**
-
-参见 [getAllLauncherAbilityInfo](#getalllauncherabilityinfo)

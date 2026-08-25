@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## 汇总
@@ -21,14 +19,12 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | 名称 |
 | --- |
 | [getPhotoAccessHelper(MediaAssetManager)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md) |
-| [getPhotoAccessHelper(MediaAssetManager)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [getPhotoAccessHelper(MediaAssetManager)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md) |
 | [getPhotoAccessHelper(MediaAssetManager)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md) |
 <!--DelEnd-->
 

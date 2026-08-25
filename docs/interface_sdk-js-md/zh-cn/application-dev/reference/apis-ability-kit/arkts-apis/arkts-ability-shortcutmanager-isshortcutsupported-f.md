@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isShortcutSupported
@@ -16,8 +16,6 @@ function isShortcutSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
@@ -27,18 +25,3 @@ function isShortcutSupported(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let data = shortcutManager.isShortcutSupported();
-  console.info('isShortcutSupported data is' + JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  console.error(`isShortcutSupported errData is errCode:${err.code}  message:${err.message}`);
-}
-```

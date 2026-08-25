@@ -1,10 +1,8 @@
 # OutputType
 
-Enumerates output type of hilog.@enum { int }
+Enumerates output type of hilog.@enum { number }
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -17,8 +15,6 @@ DEFAULT = 0
 DEFAULT Default output type, equivalent to CONSOLE_ONLY.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -34,8 +30,6 @@ CONSOLE_ONLY Hilog is output to the console only, equivalent to DEFAULT.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
@@ -49,8 +43,6 @@ PRIVATE_SANDBOX_ONLY = 1
 PRIVATE_SANDBOX_ONLY Hilog is output to files in its own private sandbox.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -66,8 +58,6 @@ SHARE_SANDBOX_ONLY Hilog is output to files in its own sandbox, accessible to it
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
@@ -82,8 +72,6 @@ PRIVATE_SANDBOX_WITH_CONSOLE Enable both CONSOLE_ONLY and PRIVATE_SANDBOX_ONLY a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
@@ -97,8 +85,6 @@ SHARE_SANDBOX_WITH_CONSOLE = 4
 SHARE_SANDBOX_WITH_CONSOLE Enable both CONSOLE_ONLY and SHARE_SANGBOX_ONLY at the same time.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

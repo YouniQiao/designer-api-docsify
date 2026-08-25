@@ -17,8 +17,6 @@ use new function to set the value. Anonymous Object Rectification.
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -40,8 +38,6 @@ Ellipse(options?: EllipseOptions)
 用于绘制椭圆的构造函数。调用后创建一个Ellipse对象，可设置宽高属性。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

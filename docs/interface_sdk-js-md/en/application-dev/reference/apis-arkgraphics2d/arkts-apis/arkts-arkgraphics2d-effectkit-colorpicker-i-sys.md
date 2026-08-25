@@ -4,14 +4,12 @@ A color picker class used to obtain the main color from image data. It is suitab
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from '@kit.ArkGraphics2D';
+import { effectKit } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## discriminatePictureLightDegree
@@ -23,8 +21,6 @@ discriminatePictureLightDegree(): PictureLightDegree
 Discriminates the light and dark degree of the picture. When the light and dark degree cannot be determined, UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE is returned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,21 +38,13 @@ Discriminates the light and dark degree of the picture. When the light and dark 
 
 ## getAlphaZeroTransparentProportion
 
-ArkTS-Dyn:
 ```TypeScript
 getAlphaZeroTransparentProportion(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getAlphaZeroTransparentProportion(): double
 ```
 
 Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
@@ -68,41 +56,13 @@ Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-        let percentage: number = colorPicker.getAlphaZeroTransparentProportion();
-      console.info('Get proportion of fully transparent pixels: ' + percentage);
-    }
-  })
-})
-```
 
 ## getComplexityDegree
 
@@ -113,8 +73,6 @@ getComplexityDegree(): PictureComplexityDegree
 Obtains the complexity degree of the image. When the complexity degree cannot be determined, the default value UNKNOWN_COMPLEXITY_DEGREE_PICTURE is returned.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -134,34 +92,6 @@ Obtains the complexity degree of the image. When the complexity degree cannot be
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let complexityDegree: effectKit.PictureComplexityDegree = colorPicker.getComplexityDegree();
-      console.info('The complexity degree of the image is ' + complexityDegree);
-    }
-  })
-})
-```
-
 ## getDeepenImmersionColor
 
 ```TypeScript
@@ -171,8 +101,6 @@ getDeepenImmersionColor(): Color
 Generates a stronger immersion color that merges with the background color and is deeper than the background color, and writes the result to a Color instance. This API uses a color mixing algorithm to create a color that is both harmonious with the background color and has a stronger immersive effect.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,7 +114,7 @@ Generates a stronger immersion color that merges with the background color and i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getImmersiveBackgroundColor
 
@@ -198,8 +126,6 @@ Generates an immersive background color that creates an immersive visual effect,
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -212,7 +138,7 @@ Generates an immersive background color that creates an immersive visual effect,
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getImmersiveForegroundColor
 
@@ -224,8 +150,6 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -238,7 +162,7 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getMorandiShadowColor
 
@@ -250,8 +174,6 @@ Obtains the Morandi shadow color from the dominant color of the image and writes
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -264,7 +186,7 @@ Obtains the Morandi shadow color from the dominant color of the image and writes
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getReverseColor
 
@@ -276,8 +198,6 @@ Generates a reverse color based on the image brightness discrimination result, a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -290,7 +210,7 @@ Generates a reverse color based on the image brightness discrimination result, a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
 
 ## getShadeDegree
 
@@ -301,8 +221,6 @@ getShadeDegree(): PictureShadeDegree
 Obtains the shade degree of the image. When the shade degree cannot be determined, the default value UNKNOWN_SHADE_DEGREE_PICTURE is returned.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -322,51 +240,15 @@ Obtains the shade degree of the image. When the shade degree cannot be determine
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let shadeDegree: effectKit.PictureShadeDegree = colorPicker.getShadeDegree();
-      console.info('The shade degree of the image is ' + shadeDegree);
-    }
-  })
-})
-```
-
 ## getTopProportionColorsAndPercentage
 
-ArkTS-Dyn:
 ```TypeScript
 getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, number | null>
-```
-
-ArkTS-Sta:
-```TypeScript
-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>
 ```
 
 Synchronously returns the top proportion colors and their corresponding percentages from the image, with the number specified by colorCount.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -378,46 +260,16 @@ Synchronously returns the top proportion colors and their corresponding percenta
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| colorCount | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| colorCount | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Map & lt;Color \ | null, number \| null & gt;<br>ArkTS-Sta：Map & lt;Color \ | null, double \| null & gt; |
+| Map & lt;Color \ | null, number \| null & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let colors: Map<effectKit.Color | null, number | null> = colorPicker.getTopProportionColorsAndPercentage(2);
-      colors.forEach((value: number | null, key: effectKit.Color | null) => {
-        console.info('get top proportion colors and percentages: color ' + key + ', percentage ' + value);
-      })
-    }
-  })
-})
-```

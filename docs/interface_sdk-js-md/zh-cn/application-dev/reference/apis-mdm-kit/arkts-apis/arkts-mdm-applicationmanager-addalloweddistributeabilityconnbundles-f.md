@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedDistributeAbilityConnBundles
@@ -22,8 +22,6 @@ function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Arr
 > 2.当向其他设备传输数据的设备间单向传输数据的能力被解除禁用时，通过本接口设置的允许使用特定分布式业务的应用名单会被同步清除。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -49,39 +47,3 @@ function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Arr
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [9201043](../errorcode-enterpriseDeviceManager.md#9201043-api调用的前置条件未满足) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager, restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-// 如果要在100用户下，禁止设备上除了指定应用以外的其他应用向其他设备传输数据，需要执行两个步骤：
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let accountId: number = 100;
-
-// 步骤1. 禁用100用户下的设备间单向传输数据能力（若之前已经设置过设备间单向传输数据能力的禁用，此处无需重复设置）
-try {
-  restrictions.setDisallowedPolicyForAccount(wantTemp, restrictions.FeatureForAccount.DISTRIBUTED_TRANSMISSION_OUTGOING, true, accountId);
-  console.info('Succeeded in setting distributedTransmissionOutgoing disabled');
-} catch (err) {
-  console.error(`Failed to set distributedTransmissionOutgoing disabled. Code is ${err.code}, message is ${err.message}`);
-}
-
-// 步骤2. 设置100用户下允许使用某种分布式业务（例如协同业务）的应用名单
-try {
-  // 需根据实际情况进行替换
-  let appIdentifiers: Array<string> = ['6917****3569'];
-  applicationManager.addAllowedDistributeAbilityConnBundles(wantTemp, appIdentifiers,
-    applicationManager.ServiceType.COLLABORATION_SERVICE, accountId);
-  console.info('Succeeded in adding allowed distribute ability conn bundles.');
-} catch (err) {
-  console.error(`Failed to add allowed distribute ability conn bundles. Code: ${err.code}, message: ${err.message}`);
-}
-// 执行以上两个步骤后，在100用户下，仅应用6917****3569可以通过协同业务向其他设备传输数据，其他应用无法向其他设备传输数据。
-// 注意：禁用某用户下的设备间单向传输数据能力后，是否需要添加允许使用协同业务的应用名单，应根据实际业务需求判断。
-```

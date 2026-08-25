@@ -4,8 +4,6 @@ class of wallpaper extension ability.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
@@ -15,7 +13,7 @@ class of wallpaper extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
+import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onCreate
@@ -27,8 +25,6 @@ onCreate(want: object): void
 Called once to initialize the extension ability.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -44,19 +40,6 @@ Called once to initialize the extension ability.
 | --- | --- | --- |
 | want | object | Yes |
 
-**Examples**
-
-```TypeScript
-import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-class WallpaperExt extends WallpaperExtensionAbility {
-    onCreate(want: Want): void {
-        console.info('onCreate, want:' + want.abilityName);
-    }
-}
-```
-
 ## onDestroy
 
 ```TypeScript
@@ -67,8 +50,6 @@ Called once to destroy the extension ability.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
@@ -76,18 +57,6 @@ Called once to destroy the extension ability.
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
-
-class WallpaperExt extends WallpaperExtensionAbility {
-    onDestroy(): void {
-        console.info('onDestroy');
-    }
-}
-```
 
 ## onWallpaperChange
 
@@ -98,8 +67,6 @@ onWallpaperChange(wallpaperType: number): void
 The onWallpaperChange callback is triggered when the user modifies the wallpaper settings.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -114,16 +81,3 @@ The onWallpaperChange callback is triggered when the user modifies the wallpaper
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | wallpaperType | number | Yes |
-
-**Examples**
-
-```TypeScript
-import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
-import { wallpaper } from '@kit.BasicServicesKit';
-
-class WallpaperExt extends WallpaperExtensionAbility {
-    onWallpaperChange(wallpaperType: wallpaper.WallpaperType): void {
-        console.info('onWallpaperChange, wallpaperType:' + wallpaperType);
-    }
-}
-```

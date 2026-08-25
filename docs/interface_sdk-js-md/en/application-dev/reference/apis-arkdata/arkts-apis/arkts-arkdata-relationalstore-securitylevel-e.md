@@ -9,8 +9,6 @@ Enumerates the KV store security levels. Use the enum name rather than the enum 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## S1
@@ -22,8 +20,6 @@ S1 = 1
 The RDB store security level is low. If data leakage occurs, minor impact will be caused on the database. An example would be a graph store containing non-sensitive system data such as wallpapers.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -37,8 +33,6 @@ The RDB store security level is medium. If data leakage occurs, moderate impact 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## S3
@@ -51,8 +45,6 @@ The RDB store security level is high. If data leakage occurs, major impact will 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## S4
@@ -64,7 +56,5 @@ S4 = 4
 The RDB store security level is critical. If data leakage occurs, severe impact will be caused on the database. An example would be a graph store containing authentication credentials and financial data.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

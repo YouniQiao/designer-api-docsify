@@ -4,8 +4,6 @@ Provides detailed information about the unresponsive rendering process. It is su
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ JavaScript call stack information of the web page.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## pid
@@ -41,8 +37,6 @@ Process ID of the web page.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## reason
@@ -56,7 +50,5 @@ Reason why the rendering process does not respond.
 **Type:** [RenderProcessNotRespondingReason](arkts-arkweb-renderprocessnotrespondingreason-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core

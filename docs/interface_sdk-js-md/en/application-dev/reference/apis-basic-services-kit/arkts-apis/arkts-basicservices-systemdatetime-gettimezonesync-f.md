@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from '@kit.BasicServicesKit';
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getTimezoneSync
@@ -16,8 +16,6 @@ Obtains the system time zone in synchronous mode.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Time
 
 **Return value:**
@@ -25,16 +23,3 @@ Obtains the system time zone in synchronous mode.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let timezone: string = systemDateTime.getTimezoneSync();
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```

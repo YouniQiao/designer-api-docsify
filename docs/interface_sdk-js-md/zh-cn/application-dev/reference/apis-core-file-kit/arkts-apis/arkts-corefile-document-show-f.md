@@ -15,8 +15,6 @@ declare function show(uri: string, type: string): Promise<void>
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
@@ -34,22 +32,6 @@ declare function show(uri: string, type: string): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-let type: string = "";
-let uri: string = "";
-document.show(uri, type);
-```
-
-```TypeScript
-let type: string = "";
-let uri: string = "";
-document.show(uri, type, (err: TypeError) => {
-  //do something
-});
-```
-
 
 ## show
 
@@ -60,8 +42,6 @@ declare function show(uri: string, type: string, callback: AsyncCallback<void>):
 异步打开URI对应的文件，使用callback形式返回结果。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -74,7 +54,3 @@ declare function show(uri: string, type: string, callback: AsyncCallback<void>):
 | uri | string | 是 |
 | type | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [show](#show)

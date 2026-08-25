@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeUserNonStopApps
@@ -15,8 +15,6 @@ function removeUserNonStopApps(admin: Want, applicationInstances: Array<common.A
 Removes the non-stoppable application list for a specified user. After the removal, the user can stop the applications on the device. If the parameter list includes uninstalled applications, the removal will still succeed. Installed applications will be removed from the list, while uninstalled ones will not impact the removal process.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -39,32 +37,3 @@ Removes the non-stoppable application list for a specified user. After the remov
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let applicationInstances: Array<common.ApplicationInstance> = [
-  // Replace it as required.
-  {
-    appIdentifier: '0123456789123456789',
-    accountId: 100,
-    appIndex: 0
-  }
-];
-
-try {
-  applicationManager.removeUserNonStopApps(wantTemp, applicationInstances);
-  console.info('Succeeded in removing UserNonStop applications.');
-} catch(err) {
-  console.error(`Failed to remove UserNonStop applications. Code: ${err.code}, message: ${err.message}`);
-}
-```

@@ -1,10 +1,8 @@
 # WifiSecurityType
 
-描述WLAN加密类型。 @enum { int }
+描述WLAN加密类型。 @enum { number }
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
@@ -18,8 +16,6 @@ WIFI_SEC_TYPE_INVALID = 0
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_OPEN
@@ -31,8 +27,6 @@ WIFI_SEC_TYPE_OPEN = 1
 开放
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -48,8 +42,6 @@ WIFI_SEC_TYPE_WEP = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_PSK
@@ -61,8 +53,6 @@ WIFI_SEC_TYPE_PSK = 3
 预共享密钥（PSK）
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
@@ -76,8 +66,6 @@ WIFI_SEC_TYPE_SAE = 4
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_EAP
@@ -89,8 +77,6 @@ WIFI_SEC_TYPE_EAP = 5
 EAP认证。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
@@ -104,8 +90,6 @@ SUITE_B_192 192位级别。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_OWE
@@ -117,8 +101,6 @@ WIFI_SEC_TYPE_OWE = 7
 机会性无线加密。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
@@ -132,8 +114,6 @@ WIFI_SEC_TYPE_WAPI_CERT = 8
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_WAPI_PSK
@@ -145,7 +125,5 @@ WIFI_SEC_TYPE_WAPI_PSK = 9
 指定WAPI预共享密钥。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.Core

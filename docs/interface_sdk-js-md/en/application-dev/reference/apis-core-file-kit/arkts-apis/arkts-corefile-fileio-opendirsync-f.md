@@ -15,8 +15,6 @@ Opens a directory. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [listFileSync](arkts-corefile-file-fs-listfilesync-f.md)
@@ -34,11 +32,3 @@ Opens a directory. This API returns the result synchronously.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Dir](arkts-corefile-fileio-dir-depr-i.md) |
-
-**Examples**
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-// Example code in Dir struct
-// Use read/readSync/close.
-```

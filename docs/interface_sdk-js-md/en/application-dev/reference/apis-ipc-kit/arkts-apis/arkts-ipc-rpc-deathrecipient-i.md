@@ -4,14 +4,12 @@ Subscribes to death notifications of a remote object. When the remote object is 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## onRemoteDied
@@ -24,37 +22,4 @@ Called to perform subsequent operations when a death notification of the remote 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.IPC.Core
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyDeathRecipient implements rpc.DeathRecipient {
-  onRemoteDied() {
-    hilog.info(0x0000, 'testTag', 'server died');
-  }
-}
-```
-
-## onRemoteDied
-
-```TypeScript
-onRemoteDied: OnRemoteDiedFunc
-```
-
-Called to perform subsequent operations when a death notification of the remote object is received.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Examples**
-
-See [onRemoteDied](#onremotedied)

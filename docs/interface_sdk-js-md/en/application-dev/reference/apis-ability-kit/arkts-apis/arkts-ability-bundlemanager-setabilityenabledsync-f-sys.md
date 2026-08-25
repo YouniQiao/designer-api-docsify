@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setAbilityEnabledSync
@@ -15,8 +15,6 @@ function setAbilityEnabledSync(info: AbilityInfo, isEnabled: boolean): void
 Enables or disables an ability. This API returns the result synchronously.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -40,39 +38,3 @@ Enables or disables an ability. This API returns the result synchronously.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    try {
-      bundleManager.setAbilityEnabledSync(info, false);
-      hilog.info(0x0000, "testTag", "setAbilityEnabledSync successfully.");
-    } catch (err) {
-      let message = (err as BusinessError).message;
-      hilog.error(0x0000, 'testTag', 'setAbilityEnabledSync failed: %{public}s', message);
-    }
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```

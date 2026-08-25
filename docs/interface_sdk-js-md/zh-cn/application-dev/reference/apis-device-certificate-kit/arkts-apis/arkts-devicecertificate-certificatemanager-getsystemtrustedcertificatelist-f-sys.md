@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getSystemTrustedCertificateList
@@ -15,8 +15,6 @@ function getSystemTrustedCertificateList(): Promise<CMResult>
 获取系统信任的CA证书列表，仅证书管理应用调用。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
@@ -39,28 +37,3 @@ function getSystemTrustedCertificateList(): Promise<CMResult>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) |
-
-**示例**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  certificateManager.getSystemTrustedCertificateList().then((cmResult: certificateManager.CMResult) => {
-    if (cmResult === undefined) { // 系统信任CA证书个数为0时，返回cmResult为undefined。
-      console.info('The count of system trusted certificates is 0.');
-    } else if (cmResult.certList == undefined) {
-      console.info('The result of getting system trusted certificates is undefined.');
-    } else {
-      let list: Array<certificateManager.CertAbstract> = cmResult.certList;
-      console.info('Succeeded in getting system trusted certificates.');
-    }
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to get system trusted certificates. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to get system trusted certificates. Code: ${error.code}, message: ${error.message}`);
-}
-```

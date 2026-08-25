@@ -1,18 +1,51 @@
 # @ohos.multimedia.image
 
 The module provides capabilities for image decoding, encoding, editing, metadata processing, and image receiving. This module contains the following classes:  
-- [ImageSource](arkts-image-image-imagesource-i.md): provides the capabilities of obtaining [image information](arkts-image-image-imageinfo-i.md), decoding images to PixelMaps or Pictures, and reading and modifying [image properties](arkts-image-image-propertykey-e.md). Supported image formats for decoding include png, jpeg, bmp, gif, webp, dng, and heic&lt;sup&gt;12+&lt;/sup&gt;. - [ImagePacker](arkts-image-image-imagepacker-i.md): provides the capability of encoding images into compressed data streams or files. Encoding requires the ImageSource, PixelMap, or Picture of an image as the input. Supported image formats for encoding include jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. - [PixelMap](arkts-image-image-pixelmap-i.md): contains pixel data and [image information](arkts-image-image-imageinfo-i.md). It can be used for reading/writing pixel data and performing operations such as cropping, scaling, translating, rotating, and mirroring. It can also be directly passed to the [Image component](arkts-image-image-image-i.md) for display. Additionally, it provides APIs for obtaining and setting the color gamut and HDR metadata of images. - [Picture](arkts-image-image-picture-i.md): a multi-picture object composed of a main picture, auxiliary pictures, and metadata. The main picture contains the primary image information; auxiliary pictures store additional information related to the main picture; metadata stores other information related to the image. Picture provides methods for obtaining the main picture, compositing HDR images, obtaining and setting auxiliary pictures, and obtaining and setting metadata. - [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md): used to display special information alongside the main picture, enriching the overall content of the image. The supported types of auxiliary pictures can be found in [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md). - [Metadata](arkts-image-image-metadata-i.md): used to store image metadata. The supported metadata types can be found in [MetadataType](arkts-image-image-metadatatype-e.md). It includes Exif metadata and watermark cropping metadata, both stored in Key-Value pairs. The keys for Exif metadata can be found in [PropertyKey](arkts-image-image-propertykey-e.md), and the keys for watermark cropping metadata can be found in [FragmentPropertyKey](arkts-image-image-fragmentmappropertykey-e.md). - [ImageReceiver](arkts-image-image-imagereceiver-i.md): acts as a consumer of images, used for receiving and reading images from a surface. - [ImageCreator](arkts-image-image-imagecreator-i.md): acts as a producer of images, used for writing images into a surface. - [Image](arkts-image-image-image-i.md): used by ImageReceiver and ImageCreator for transferring image objects, with the actual content determined by the producer. For example, the Image object provided by a camera preview stream contains YUV data, whereas the Image object provided by a camera photo contains a JPEG file.
+- [ImageSource](arkts-image-image-imagesource-i.md): provides the capabilities of obtaining  
+[image information](arkts-image-image-imageinfo-i.md), decoding images to PixelMaps or Pictures, and reading and modifying [image properties](arkts-image-image-propertykey-e.md). [Supported image formats for decoding](arkts-image-image-imagesource-i.md#supportedformats) include png, jpeg, bmp, gif, webp, dng, and heic&lt;sup&gt;12+&lt;/sup&gt;.  
+- [ImagePacker](arkts-image-image-imagepacker-i.md): provides the capability of encoding images into  
+compressed data streams or files. Encoding requires the ImageSource, PixelMap, or Picture of an image as the input. [Supported image formats for encoding](arkts-image-image-imagepacker-i.md#supportedformats) include jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;.  
+- [PixelMap](arkts-image-image-pixelmap-i.md): contains pixel data and  
+[image information](arkts-image-image-imageinfo-i.md). It can be used for reading/writing pixel data and performing operations such as cropping, scaling, translating, rotating, and mirroring. It can also be directly passed to the [Image component](arkts-image-image-image-i.md) for display. Additionally, it provides APIs for obtaining and setting the color gamut and HDR metadata of images.  
+- [Picture](arkts-image-image-picture-i.md): a multi-picture object composed of a main picture,  
+auxiliary pictures, and metadata. The main picture contains the primary image information; auxiliary pictures store additional information related to the main picture; metadata stores other information related to the image. Picture provides methods for obtaining the main picture, compositing HDR images, obtaining and setting auxiliary pictures, and obtaining and setting metadata.  
+- [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md): used to display special information  
+alongside the main picture, enriching the overall content of the image. The supported types of auxiliary pictures can be found in [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md).  
+- [Metadata](arkts-image-image-metadata-i.md): stores image metadata in key-value format. The supported  
+metadata types can be found in [MetadataType](arkts-image-image-metadatatype-e.md), including Exif metadata, fragment map metadata, and HEIF sequence image metadata. For details about the keys of Exif metadata, fragment map metadata, and HEIF sequence image metadata, see [PropertyKey](arkts-image-image-propertykey-e.md), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md), respectively.  
+- [ExifMetadata](arkts-image-image-exifmetadata-c.md): stores Exif metadata of images in key-value format. For details about  
+the keys of Exif metadata, see [PropertyKey](arkts-image-image-propertykey-e.md).  
+- [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md): stores photo metadata defined by Huawei cameras  
+in key-value format. For details about keys of HUAWEI camera-defined photo metadata, see [PropertyKey](arkts-image-image-propertykey-e.md).  
+- [HeifsMetadata](arkts-image-image-makernotehuaweimetadata-c.md): stores HEIF sequence image metadata of images in key-value  
+format. For details about keys of HEIF sequence image metadata, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).  
+- [WebPMetadata](arkts-image-image-webpmetadata-c.md): stores WebP image metadata in key-value format. For details about keys  
+in WebP image metadata, see [WebPPropertyKey](arkts-image-image-webppropertykey-e.md).  
+- [GifMetadata](arkts-image-image-gifmetadata-c.md): stores GIF image metadata in key-value format. For details about keys in  
+GIF image metadata, see [GifPropertyKey](arkts-image-image-gifpropertykey-e.md).  
+- [JfifMetadata](arkts-image-image-jfifmetadata-c.md): stores JFIF image metadata in key-value format. For details about keys  
+in JFIF image metadata, see [JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md).  
+- [TiffMetadata](arkts-image-image-tiffmetadata-c.md): stores TIFF image metadata in key-value format. For details about keys  
+in TIFF image metadata, see [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md).  
+- [PngMetadata](arkts-image-image-pngmetadata-c.md): stores PNG image metadata in key-value format. For details about keys in  
+PNG image metadata, see [PngPropertyKey](arkts-image-image-pngpropertykey-e.md).  
+- [AvisMetadata](arkts-image-image-avismetadata-c.md): stores AVIS image metadata in key-value format. For details about keys  
+in AVIS image metadata, see [AvisPropertyKey](arkts-image-image-avispropertykey-e.md).  
+- [ImageReceiver](arkts-image-image-imagereceiver-i.md): acts as a consumer of images, used for receiving  
+and reading images from a surface.  
+- [ImageCreator](arkts-image-image-imagecreator-i.md): acts as a producer of images, used for writing  
+images into a surface.  
+- [Image](arkts-image-image-image-i.md): used by ImageReceiver and ImageCreator for transferring image  
+objects, with the actual content determined by the producer. For example, the Image object provided by a camera preview stream contains YUV data, whereas the Image object provided by a camera photo contains a JPEG file.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## Summary
@@ -30,14 +63,6 @@ import { image } from '@kit.ImageKit';
 | [createImageReceiver](arkts-image-image-createimagereceiver-f.md) |
 | [createImageReceiver](arkts-image-image-createimagereceiver-f.md) |
 | [createImageReceiver](arkts-image-image-createimagereceiver-f.md) |
-| [createImageReceiver](arkts-image-image-createimagereceiver-f.md) |
-| [createImageSource](arkts-image-image-createimagesource-f.md) |
-| [createImageSource](arkts-image-image-createimagesource-f.md) |
-| [createImageSource](arkts-image-image-createimagesource-f.md) |
-| [createImageSource](arkts-image-image-createimagesource-f.md) |
-| [createImageSource](arkts-image-image-createimagesource-f.md) |
-| [createImageSource](arkts-image-image-createimagesource-f.md) |
-| [createImageSource](arkts-image-image-createimagesource-f.md) |
 | [createImageSource](arkts-image-image-createimagesource-f.md) |
 | [createImageSource](arkts-image-image-createimagesource-f.md) |
 | [createImageSource](arkts-image-image-createimagesource-f.md) |
@@ -46,9 +71,7 @@ import { image } from '@kit.ImageKit';
 | [createImageSource](arkts-image-image-createimagesource-f.md) |
 | [createImageSource](arkts-image-image-createimagesource-f.md) |
 | [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
-| [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
 | [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
-| [createIncrementalSource](arkts-image-image-createincrementalsource-f.md) |
 | [createPicture](arkts-image-image-createpicture-f.md) |
 | [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md) |
 | [createPixelMap](arkts-image-image-createpixelmap-f.md) |

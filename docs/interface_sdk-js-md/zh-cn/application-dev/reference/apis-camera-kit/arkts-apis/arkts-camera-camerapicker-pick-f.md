@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cameraPicker } from '@kit.CameraKit';
+import { cameraPicker } from 'kits/@kit.CameraKit';
 ```
 
 ## pick
@@ -18,8 +18,6 @@ function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfil
 > 当应用在阔折叠设备上运行时，如果已在设备展开态下启动相机picker，将设备由展开态切换到折叠态，相机picker被自动推至后台。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,25 +36,3 @@ function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfil
 | 类型 |
 | --- |
 | Promise&lt;[PickerResult](arkts-camera-camerapicker-pickerresult-c.md)&gt; |
-
-**示例**
-
-```TypeScript
-import { cameraPicker } from '@kit.CameraKit';
-import { camera } from '@kit.CameraKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function demo(context: Context) {
-  try {
-    let pickerProfile: cameraPicker.PickerProfile = {
-      cameraPosition: camera.CameraPosition.CAMERA_POSITION_BACK
-    };
-    let pickerResult: cameraPicker.PickerResult = await cameraPicker.pick(context,
-      [cameraPicker.PickerMediaType.PHOTO, cameraPicker.PickerMediaType.VIDEO], pickerProfile);
-    console.info("the pick pickerResult is:" + JSON.stringify(pickerResult));
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`the pick call failed. error code: ${err.code}`);
-  }
-}
-```

@@ -4,8 +4,6 @@ Manages the distributed info of the table.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Manages the distributed info of the table.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## flag
@@ -27,8 +25,6 @@ Specifies the data origin sources.
 **Type:** [DistributedOrigin](arkts-arkdata-relationalstore-distributedorigin-e-sys.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ Specifies the data origin sources device ID.
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStateInfoByInterval
@@ -20,8 +20,6 @@ function queryBundleStateInfoByInterval(
 Queries usage information about each bundle within a specified period at a specified interval.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -40,40 +38,6 @@ Queries usage information about each bundle within a specified period at a speci
 | end | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
-
-bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED, 0, 20000000000000, (err: BusinessError, res: Array<bundleState.BundleStateInfo>) => {
-  if (err) {
-    console.error('BUNDLE_ACTIVE queryBundleStateInfoByInterval callback failed, because: ' + err.code);
-  } else {
-    console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval callback success.');
-    for (let i = 0; i < res.length; i++) {
-      console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval callback number : ' + (i + 1));
-      console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval callback result ' + JSON.stringify(res[i]));
-    }
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
-
-bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED, 0, 20000000000000).then((res: Array<bundleState.BundleStateInfo>) => {
-  console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise success.');
-  for (let i = 0; i < res.length; i++) {
-    console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise number : ' + (i + 1));
-    console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise result ' + JSON.stringify(res[i]));
-  }
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise failed, because: ' + err.code);
-});
-```
-
 
 ## queryBundleStateInfoByInterval
 
@@ -88,8 +52,6 @@ function queryBundleStateInfoByInterval(
 Queries usage information about each bundle within a specified period at a specified interval.
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -112,7 +74,3 @@ Queries usage information about each bundle within a specified period at a speci
 | 类型 |
 | --- |
 | Promise&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; |
-
-**示例**
-
-参见 [queryBundleStateInfoByInterval](#querybundlestateinfobyinterval)

@@ -4,8 +4,6 @@ This module provides APIs for collecting statistics on device usage.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
@@ -13,7 +11,7 @@ This module provides APIs for collecting statistics on device usage.
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## Summary

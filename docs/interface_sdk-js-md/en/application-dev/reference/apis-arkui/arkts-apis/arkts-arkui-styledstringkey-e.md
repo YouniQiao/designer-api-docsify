@@ -4,8 +4,6 @@ Sets the style for a range styled string.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FONT
@@ -17,8 +15,6 @@ FONT = 0
 Font style key, applicable to [TextStyle](arkts-arkui-textstyle-c.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ Text decorative line style key, applicable to [DecorationStyle](arkts-arkui-deco
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -53,8 +47,6 @@ BASELINE_OFFSET = 2
 Text baseline offset style key, applicable to [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +64,6 @@ Text letter spacing style key, applicable to [LetterSpacingStyle](arkts-arkui-le
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -89,8 +79,6 @@ TEXT_SHADOW = 4
 Text shadow style key, applicable to [TextShadowStyle](arkts-arkui-textshadowstyle-c.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,8 +96,6 @@ Text line height style key, applicable to [LineHeightStyle](arkts-arkui-lineheig
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -126,8 +112,6 @@ Text background color style key, applicable to [BackgroundColorStyle](arkts-arku
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -143,8 +127,6 @@ URL = 7
 Hyperlink style key, applicable to [UrlStyle](arkts-arkui-urlstyle-c.md).
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,8 +145,6 @@ Text line spacing style key, applicable to [LineSpacingStyle](arkts-arkui-linesp
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -180,8 +160,6 @@ GESTURE = 100
 Gesture key, applicable to [GestureStyle](arkts-arkui-gesturestyle-c.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -199,8 +177,6 @@ Paragraph style key, applicable to [ParagraphStyle](arkts-arkui-paragraphstyle-c
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -216,8 +192,6 @@ IMAGE = 300
 Image key, applicable to [ImageAttachment](arkts-arkui-imageattachment-c.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -235,8 +209,6 @@ Custom span key, applicable to [CustomSpan](arkts-arkui-customspan-c.md).
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -252,8 +224,6 @@ USER_DATA = 500
 User data span key, applicable to [UserDataSpan](arkts-arkui-userdataspan-c.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

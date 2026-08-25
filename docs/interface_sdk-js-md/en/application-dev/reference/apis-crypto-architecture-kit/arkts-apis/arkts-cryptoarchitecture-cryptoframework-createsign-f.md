@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createSign
@@ -12,11 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createSign(algName: string): Sign
 ```
 
-Creates a **Sign** instance.<br>For details about the supported specifications, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md).
+Creates a **Sign** instance.
+
+For details about the supported specifications, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,19 +43,3 @@ Creates a **Sign** instance.<br>For details about the supported specifications, 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-
-**Examples**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let signer1 = cryptoFramework.createSign('RSA1024|PKCS1|SHA256');
-
-let signer2 = cryptoFramework.createSign('RSA1024|PSS|SHA256|MGF1_SHA256');
-
-let signer3 = cryptoFramework.createSign('ECC224|SHA256');
-
-let signer4 = cryptoFramework.createSign('DSA2048|SHA256');
-
-let signer5 = cryptoFramework.createSign('RSA1024|PKCS1|SHA256|OnlySign');
-```

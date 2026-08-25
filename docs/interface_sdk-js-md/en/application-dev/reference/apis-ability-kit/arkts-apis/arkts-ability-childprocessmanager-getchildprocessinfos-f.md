@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from '@kit.AbilityKit';
+import { childProcessManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getChildProcessInfos
@@ -19,8 +19,6 @@ Obtains the information about the child processes of the current application. Th
 > If no child processes exist, an empty array is returned.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

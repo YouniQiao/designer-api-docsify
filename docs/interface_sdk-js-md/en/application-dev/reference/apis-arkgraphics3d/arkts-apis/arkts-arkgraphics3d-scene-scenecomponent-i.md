@@ -4,8 +4,6 @@ Represents a basic scene component, which is used to describe the component info
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## name
@@ -20,23 +18,19 @@ Name of the scene component, which is customizable.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## property
 
 ```TypeScript
-readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneResource | boolean | double[] |
+readonly property: Record<string, string | number | Vec2 | Vec3 | Vec4 | SceneResource | boolean | number[] |
   string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>
 ```
 
 A set of component properties stored in key-value pairs. It supports multiple basic and complex types to describe various properties of the scene component. The unit and value range depend on the specific scene component.
 
-**Type:** ArkTS-Dyn: Record&lt;string, string \| number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) \| boolean \| number[] \| string[] \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)[] \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)[] \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[] \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)[] \| null \| undefined&gt;  <br>ArkTS-Sta：Record&lt;string, string \| double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) \| boolean \| double[] \| string[] \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)[] \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)[] \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[] \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)[] \| null \| undefined&gt;
+**Type:** Record&lt;string, string \| number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) \| boolean \| number[] \| string[] \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)[] \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)[] \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[] \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)[] \| null \| undefined&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

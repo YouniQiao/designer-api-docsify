@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { serial } from '@kit.BasicServicesKit';
+import { serial } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getSerialPortList
@@ -15,8 +15,6 @@ function getSerialPortList(): Promise<SerialPort[]>
 Obtains the serial port list. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

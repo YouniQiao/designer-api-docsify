@@ -1,21 +1,19 @@
 # InputMethodSubtype
 
-The **InputMethodSubtype** module provides APIs for managing the attributes of input method subtypes. The input method subtype allows the input method to switch to a specific mode or language, for example, the Chinese or English keyboard. <br> <br>   
-> **NOTE：**&lt;br
-&gt; 
-> &lt;br
-&gt; &gt;The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version.
+The **InputMethodSubtype** module provides APIs for managing the attributes of input method subtypes. The input method subtype allows the input method to switch to a specific mode or language, for example, the Chinese or English keyboard.   
+> **NOTE：**
+   
+> 
+> The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
+import { InputMethodSubtype } from 'kits/@kit.IMEKit';
 ```
 
 ## extra
@@ -24,13 +22,14 @@ import { InputMethodSubtype } from '@kit.IMEKit';
 extra?: object
 ```
 
-Extra information of the input method subtype. <br> <br> **NOTE：**<br> <br> - This parameter is optional since API version 10. <br> - This parameter is reserved and currently has no specific meaning.
+Extra information of the input method subtype.   
+**NOTE：**
+- This parameter is optional since API version 10.
+- This parameter is reserved and currently has no specific meaning.
 
 **Type:** object
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -46,23 +45,19 @@ Optional. Icon of the input method subtype. It can be obtained by using **iconId
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## iconId
 
 ```TypeScript
-readonly iconId?: double
+readonly iconId?: number
 ```
 
 Optional. Icon ID of the input method subtype.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -78,8 +73,6 @@ Mandatory. ID of the input method subtype.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## label
@@ -94,23 +87,19 @@ Optional. Label of the input method subtype.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## labelId
 
 ```TypeScript
-readonly labelId?: double
+readonly labelId?: number
 ```
 
 Optional. Label ID of the input method subtype.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -126,8 +115,6 @@ Mandatory. Language of the input method subtype.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## locale
@@ -141,8 +128,6 @@ Mandatory. Locale of the input method subtype.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -158,8 +143,6 @@ Optional. Mode of the input method subtype, including **upper** (uppercase) and 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## name
@@ -173,7 +156,5 @@ Mandatory. Bundle name of the application to which the input method subtype belo
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

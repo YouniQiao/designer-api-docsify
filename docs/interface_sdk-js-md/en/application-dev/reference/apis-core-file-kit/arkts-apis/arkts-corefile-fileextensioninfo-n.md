@@ -4,8 +4,6 @@ The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileIn
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -15,7 +13,7 @@ The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileIn
 ## Modules to Import
 
 ```TypeScript
-import { fileExtensionInfo } from '@kit.CoreFileKit';
+import { fileExtensionInfo } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

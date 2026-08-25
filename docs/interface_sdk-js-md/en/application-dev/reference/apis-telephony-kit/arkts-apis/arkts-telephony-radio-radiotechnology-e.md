@@ -4,8 +4,6 @@ Enumerates radio access technologies.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_UNKNOWN
@@ -17,8 +15,6 @@ RADIO_TECHNOLOGY_UNKNOWN = 0
 Unknown RAT
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -32,8 +28,6 @@ Global System for Mobile Communication (GSM)
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_1XRTT
@@ -45,8 +39,6 @@ RADIO_TECHNOLOGY_1XRTT = 2
 Single-Carrier Radio Transmission Technology (1XRTT)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -60,8 +52,6 @@ Wideband Code Division Multiple Access (WCDMA)
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_HSPA
@@ -73,8 +63,6 @@ RADIO_TECHNOLOGY_HSPA = 4
 High Speed Packet Access (HSPA)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -88,8 +76,6 @@ Evolved High Speed Packet Access (HSPA+)
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_TD_SCDMA
@@ -101,8 +87,6 @@ RADIO_TECHNOLOGY_TD_SCDMA = 6
 TD-SCDMA.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -116,8 +100,6 @@ Evolution-Data Optimized (EVDO)
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_EHRPD
@@ -129,8 +111,6 @@ RADIO_TECHNOLOGY_EHRPD = 8
 Evolved High Rate Package Data (EHRPD)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -144,8 +124,6 @@ Long Term Evolution (LTE)
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_LTE_CA
@@ -157,8 +135,6 @@ RADIO_TECHNOLOGY_LTE_CA = 10
 Long Term Evolution_Carrier Aggregation (LTE_CA)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -172,8 +148,6 @@ Industrial Wireless LAN (IWLAN)
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## RADIO_TECHNOLOGY_NR
@@ -185,7 +159,5 @@ RADIO_TECHNOLOGY_NR = 12
 New Radio (NR)
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService

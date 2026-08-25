@@ -4,8 +4,6 @@ Describes the service data.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ServiceData](arkts-connectivity-bluetoothmanager-servicedata-i.md)
@@ -15,7 +13,7 @@ Describes the service data.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## serviceUuid
@@ -29,8 +27,6 @@ Indicates the UUID of the service data to add
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -49,8 +45,6 @@ Indicates the service data to add
 **Type:** ArrayBuffer
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

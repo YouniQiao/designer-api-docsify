@@ -6,14 +6,12 @@ AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { AppServiceExtensionAbility } from '@kit.AbilityKit';
+import { AppServiceExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## onConnect
@@ -26,8 +24,6 @@ onConnect(want: Want): rpc.RemoteObject
 **设备行为差异**：该接口仅在PC/2in1设备中可正常执行回调，在其他设备上不执行回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,61 +41,6 @@ onConnect(want: Want): rpc.RemoteObject
 | --- |
 | rpc.RemoteObject |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[AppServiceExtAbility]';
-
-class StubTest extends rpc.RemoteObject {
-  constructor(des: string) {
-    super(des);
-  }
-
-  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
-  }
-}
-
-export default class AppServiceExtAbility extends AppServiceExtensionAbility {
-  onConnect(want: Want) {
-    hilog.info(0x0000, TAG, `onConnect, want: ${want.abilityName}`);
-    return new StubTest('test');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import rpc from '@ohos.rpc';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[AppServiceExtAbility]';
-
-class StubTest extends rpc.RemoteObject {
-  constructor(des: string) {
-    super(des);
-  }
-
-  onConnect(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
-  }
-}
-
-class AppServiceExtAbility extends AppServiceExtensionAbility {
-  onConnect(want: Want) {
-    hilog.info(0x0000, TAG, `onConnect, want: ${want.abilityName}`);
-    return new StubTest('test');
-  }
-}
-```
-
 ## onCreate
 
 ```TypeScript
@@ -114,8 +55,6 @@ onCreate(want: Want): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -125,21 +64,6 @@ onCreate(want: Want): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[AppServiceExtAbility]';
-
-export default class AppServiceExtAbility extends AppServiceExtensionAbility {
-  onCreate(want: Want) {
-    hilog.info(0x0000, TAG, `onCreate, want: ${want.abilityName}`);
-  }
-}
-```
 
 ## onDestroy
 
@@ -152,26 +76,9 @@ onDestroy(): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { AppServiceExtensionAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[AppServiceExtAbility]';
-
-export default class AppServiceExtAbility extends AppServiceExtensionAbility {
-  onDestroy() {
-    hilog.info(0x0000, TAG, `onDestroy`);
-  }
-}
-```
 
 ## onDisconnect
 
@@ -184,8 +91,6 @@ onDisconnect(want: Want): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -196,31 +101,10 @@ onDisconnect(want: Want): void
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 
-**示例**
-
-```TypeScript
-import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[AppServiceExtAbility]';
-
-export default class AppServiceExtAbility extends AppServiceExtensionAbility {
-  onDisconnect(want: Want) {
-    hilog.info(0x0000, TAG, `onDisconnect, want: ${want.abilityName}`);
-  }
-}
-```
-
 ## onRequest
 
-ArkTS-Dyn:
 ```TypeScript
 onRequest(want: Want, startId: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onRequest(want: Want, startId: int): void
 ```
 
 调用方每次使用 [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability) 拉起AppServiceExtensionAbility实例时，系统都会触发该回调。  
@@ -228,8 +112,6 @@ onRequest(want: Want, startId: int): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -239,22 +121,7 @@ onRequest(want: Want, startId: int): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| startId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-```TypeScript
-import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[AppServiceExtAbility]';
-
-export default class AppServiceExtAbility extends AppServiceExtensionAbility {
-  onRequest(want: Want, startId: number) {
-    hilog.info(0x0000, TAG, `onRequest, want: ${want.abilityName}, startId: ${startId}`);
-  }
-}
-```
+| startId | number | 是 |
 
 ## context
 
@@ -267,8 +134,6 @@ AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts
 **类型：** [AppServiceExtensionContext](../../apis-default/arkts-apis/arkts-appserviceextensioncontext-c.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

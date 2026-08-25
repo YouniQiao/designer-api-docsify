@@ -6,16 +6,14 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## close
@@ -27,8 +25,6 @@ close(): void
 关闭可读流。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -43,148 +39,6 @@ close(): void
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file).then(() => {
-  console.info(`Succeeded in closing file.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file).then(() => {
-  console.info(`Succeeded in closing file.`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in closing file.`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath);
-fileIo.close(file, (err: BusinessError<void> | null) => {
-  if (err) {
-    console.error(`Failed to close file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in closing file.`);
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.close().then(() => {
-  console.info(`Succeeded in closing file stream.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.close().then(() => {
-  console.info(`Succeeded in closing file stream.`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.close((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in closing stream.`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.close((err: BusinessError<void> | null) => {
-  if (err) {
-    console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in closing stream.`);
-  }
-});
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-randomAccessFile.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const rs = fileIo.createReadStream(filePath);
-rs.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const ws = fileIo.createWriteStream(filePath);
-ws.close();
-```
-
 ## constructor
 
 ```TypeScript
@@ -194,8 +48,6 @@ constructor()
 构造一个文件可读流.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -208,8 +60,6 @@ seek(offset: number, whence?: WhenceType): number
 调整可读流偏移指针位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -235,24 +85,6 @@ seek(offset: number, whence?: WhenceType): number
 | 13900026 |
 | 13900042 |
 
-**示例**
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const rs = fileIo.createReadStream(filePath);
-const curOff = rs.seek(5, fileIo.WhenceType.SEEK_SET);
-console.info(`Succeeded in seeking, current offset is ${curOff}`);
-rs.close();
-```
-
-```TypeScript
-const filePath = pathDir + "/test.txt";
-const ws = fileIo.createWriteStream(filePath);
-const curOff = ws.seek(5, fileIo.WhenceType.SEEK_SET);
-console.info(`Succeeded in seeking, current offset is ${curOff}`);
-ws.close();
-```
-
 ## bytesRead
 
 ```TypeScript
@@ -264,8 +96,6 @@ readonly bytesRead: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -280,7 +110,5 @@ readonly path: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

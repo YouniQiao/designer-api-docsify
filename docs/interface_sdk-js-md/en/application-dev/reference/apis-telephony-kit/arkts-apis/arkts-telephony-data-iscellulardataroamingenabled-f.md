@@ -3,21 +3,19 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## isCellularDataRoamingEnabled
 
 ```TypeScript
-function isCellularDataRoamingEnabled(slotId: int, callback: AsyncCallback<boolean>): void
+function isCellularDataRoamingEnabled(slotId: number, callback: AsyncCallback<boolean>): void
 ```
 
 Checks whether roaming is enabled for the cellular data service. This API uses an asynchronous callback to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -27,7 +25,7 @@ Checks whether roaming is enabled for the cellular data service. This API uses a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
@@ -41,45 +39,17 @@ Checks whether roaming is enabled for the cellular data service. This API uses a
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.isCellularDataRoamingEnabled(0, (err: BusinessError, contextData: boolean) => {
-    if(err) {
-        console.error(`isCellularDataRoamingEnabled fail. code: ${err.code}, message: ${err.message}, contextData: ${contextData}`);
-    } else {
-        console.info(`isCellularDataRoamingEnabled success`);
-    }
-});
-```
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.isCellularDataRoamingEnabled(0).then((contextData: boolean) => {
-    console.info(`isCellularDataRoamingEnabled success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`isCellularDataRoamingEnabled fail. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## isCellularDataRoamingEnabled
 
 ```TypeScript
-function isCellularDataRoamingEnabled(slotId: int): Promise<boolean>
+function isCellularDataRoamingEnabled(slotId: number): Promise<boolean>
 ```
 
 Checks whether roaming is enabled for the cellular data service. This API uses a promise to return the result.  
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -89,7 +59,7 @@ Checks whether roaming is enabled for the cellular data service. This API uses a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
@@ -107,7 +77,3 @@ Checks whether roaming is enabled for the cellular data service. This API uses a
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [isCellularDataRoamingEnabled](#iscellulardataroamingenabled)

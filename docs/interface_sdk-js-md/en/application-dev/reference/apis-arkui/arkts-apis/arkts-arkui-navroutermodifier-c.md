@@ -6,8 +6,6 @@ Defines NavRouter Modifier@extends NavRouterAttribute @implements AttributeModif
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Deprecated since:** 20
 
 **Substitutes:** [NavigationModifier](arkts-arkui-navigationmodifier-c.md)
@@ -23,8 +21,6 @@ applyNormalAttribute?(instance: NavRouterAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Deprecated since:** 20
 

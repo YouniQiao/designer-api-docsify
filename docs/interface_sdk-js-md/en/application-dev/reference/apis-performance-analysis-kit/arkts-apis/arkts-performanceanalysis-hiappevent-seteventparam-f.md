@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setEventParam
@@ -15,8 +15,6 @@ function setEventParam(params: Record<string, ParamType>, domain: string, name?:
 Sets custom event parameters. This API uses a promise to return the result. During the same lifecycle, system events and application events can be associated through event domain and event name.System events only support crash, freeze and resource leak events.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -47,22 +45,3 @@ Sets custom event parameters. This API uses a promise to return the result. Duri
 | [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
 | [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
 | [11101007](../errorcode-hiappevent.md#11101007-invalid-number-of-custom-event-parameters) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let params: Record<string, hiAppEvent.ParamType> = {
-  "int_data": 100,
-  "str_data": "strValue",
-};
-
-// Add custom parameters to the application event.
-hiAppEvent.setEventParam(params, "test_domain", "test_event").then(() => {
-  hilog.info(0x0000, 'hiAppEvent', `success to set event param`);
-}).catch((err: BusinessError) => {
-  hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
-});
-```

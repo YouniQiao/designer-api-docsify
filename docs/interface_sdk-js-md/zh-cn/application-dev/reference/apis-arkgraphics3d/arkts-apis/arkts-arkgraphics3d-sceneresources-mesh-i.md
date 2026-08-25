@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## aabb
@@ -21,8 +19,6 @@ readonly aabb: Aabb
 **类型：** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -38,8 +34,6 @@ materialOverride?: Material
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## subMeshes
@@ -53,7 +47,5 @@ readonly subMeshes: SubMesh[]
 **类型：** [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md)[]
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

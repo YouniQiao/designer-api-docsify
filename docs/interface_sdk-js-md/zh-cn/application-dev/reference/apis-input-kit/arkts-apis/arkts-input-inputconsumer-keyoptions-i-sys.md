@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## finalKey
 
 ```TypeScript
-finalKey: int
+finalKey: number
 ```
 
-最终按键，此项必填，最终按键触发上报回调函数。<br>如组合按键Ctrl+Alt+A中，A称为最终按键。
+最终按键，此项必填，最终按键触发上报回调函数。如组合按键Ctrl+Alt+A中，A称为最终按键。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -37,16 +33,14 @@ finalKey: int
 ## finalKeyDownDuration
 
 ```TypeScript
-finalKeyDownDuration: int
+finalKeyDownDuration: number
 ```
 
-最终按键保持按下持续时间，单位为微秒（μs）。<br>当finalKeyDownDuration为0时，立即触发回调函数。<br>当finalKeyDownDuration大于0时，isFinalKeyDown为true，则最终按键按下超过设置时长后触发回调函数； isFinalKeyDown为false，则最终按键按下到抬起时间小于设置时长时触发回调函数。
+最终按键保持按下持续时间，单位为微秒（μs）。当finalKeyDownDuration为0时，立即触发回调函数。当finalKeyDownDuration大于0时，isFinalKeyDown为true，则最终按键按下超过设置时长后触发回调函数； isFinalKeyDown为false，则最终按键按下到抬起时间小于设置时长时触发回调函数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -58,13 +52,11 @@ finalKeyDownDuration: int
 isFinalKeyDown: boolean
 ```
 
-最终按键状态。<br>true表示按键按下，false表示按键抬起。
+最终按键状态。true表示按键按下，false表示按键抬起。
 
 **类型：** boolean
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -82,8 +74,6 @@ isRepeat?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 **系统接口：** 此接口为系统接口。
@@ -91,16 +81,14 @@ isRepeat?: boolean
 ## preKeys
 
 ```TypeScript
-preKeys: Array<int>
+preKeys: Array<number>
 ```
 
-前置按键集合，数量范围[0, 4]，前置按键无顺序要求。<br>如组合键Ctrl+Alt+A中，Ctrl+Alt称为前置按键。
+前置按键集合，数量范围[0, 4]，前置按键无顺序要求。如组合键Ctrl+Alt+A中，Ctrl+Alt称为前置按键。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -117,8 +105,6 @@ triggerType?: KeyCommandTriggerType
 **类型：** [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

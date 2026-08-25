@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNetErrorList } from 'kits/@kit.ArkWeb';
 ```
 
 ## 汇总

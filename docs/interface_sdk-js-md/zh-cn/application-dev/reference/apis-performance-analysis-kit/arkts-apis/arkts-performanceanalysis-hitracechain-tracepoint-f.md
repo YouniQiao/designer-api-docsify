@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## tracepoint
@@ -16,8 +16,6 @@ function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType,
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**
@@ -28,14 +26,3 @@ function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType,
 | type | [HiTraceTracepointType](arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md) | 是 |
 | id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 |
 | msg | string | 否 |
-
-**示例**
-
-```TypeScript
-// 开始跟踪，跟踪标志是INCLUDE_ASYNC与DONOT_CREATE_SPAN的并集。
-let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.INCLUDE_ASYNC | hiTraceChain.HiTraceFlag.DONOT_CREATE_SPAN);
-// 若干业务逻辑完成后，触发信息埋点操作。
-hiTraceChain.tracepoint(hiTraceChain.HiTraceCommunicationMode.THREAD, hiTraceChain.HiTraceTracepointType.SS, traceId, "Just an example");
-// 业务结束，结束跟踪。
-hiTraceChain.end(traceId);
-```

@@ -12,8 +12,6 @@ Called when the panel slidable panel pops up.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 11.

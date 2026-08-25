@@ -4,8 +4,6 @@ Enumerates the data sources. Use the enum name rather than the enum value.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## LOCAL
@@ -17,8 +15,6 @@ LOCAL = 0
 Indicates the data source is local.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -32,8 +28,6 @@ Indicates the data source is cloud.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## REMOTE
@@ -45,7 +39,5 @@ REMOTE = 2
 Indicates the data source is remote.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client

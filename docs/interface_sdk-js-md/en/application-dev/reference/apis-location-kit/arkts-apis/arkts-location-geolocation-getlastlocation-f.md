@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## getLastLocation
@@ -15,8 +15,6 @@ function getLastLocation(callback: AsyncCallback<Location>): void
 Obtain last known location
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -32,27 +30,6 @@ Obtain last known location
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.getLastLocation((err, data) => {
-    if (err) {
-        console.info('getLastLocation: err=' + JSON.stringify(err));
-    }
-    if (data) {
-        console.info('getLastLocation: data=' + JSON.stringify(data));
-    }
-});
-```
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.getLastLocation().then((result) => {
-    console.info('getLastLocation: result: ' + JSON.stringify(result));
-});
-```
-
 
 ## getLastLocation
 
@@ -63,8 +40,6 @@ function getLastLocation(): Promise<Location>
 Obtain last known location
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -79,7 +54,3 @@ Obtain last known location
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;Location & gt; |
-
-**Examples**
-
-See [getLastLocation](#getlastlocation)

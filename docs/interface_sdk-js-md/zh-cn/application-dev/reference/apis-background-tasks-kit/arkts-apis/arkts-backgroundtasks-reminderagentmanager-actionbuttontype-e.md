@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## ACTION_BUTTON_TYPE_CLOSE
@@ -18,8 +16,6 @@ ACTION_BUTTON_TYPE_CLOSE = 0
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## ACTION_BUTTON_TYPE_SNOOZE
@@ -31,7 +27,5 @@ ACTION_BUTTON_TYPE_SNOOZE = 1
 表示延时提醒的按钮，提醒次数和间隔通过[ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)中snoozeTimes和timeInterval设置。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

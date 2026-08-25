@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## removeUntrustedConfig
@@ -15,8 +15,6 @@ function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 移除不可信网络配置，使用Promise异步回调。<p>该方法一次移除一个配置。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -38,70 +36,6 @@ function removeUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 | --- |
 | Promise & lt;boolean & gt; |
 
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-  let config:wifi.WifiDeviceConfig = {
-    ssid : "****",
-    bssid:  "****",
-    preSharedKey: "****",
-    isHiddenSsid: false,
-    securityType: 0,
-    creatorUid: 0,
-    disableReason: 0,
-    netId: 0,
-    randomMacType: 0,
-    randomMacAddr:  "****",
-    ipType: 0,
-    staticIp: {
-      ipAddress: 0,
-      gateway: 0,
-      dnsServers: [],
-      domains: []
-    }
-  }
-  wifi.removeUntrustedConfig(config).then(result => {
-    console.info("result:" + JSON.stringify(result));
-  });  
-}catch(error){
-  console.error("failed:" + JSON.stringify(error));
-}
-```
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-  let config:wifi.WifiDeviceConfig = {
-    ssid : "****",
-    bssid:  "****",
-    preSharedKey: "****",
-    isHiddenSsid: false,
-    securityType: 0,
-    creatorUid: 0,
-    disableReason: 0,
-    netId: 0,
-    randomMacType: 0,
-    randomMacAddr:  "****",
-    ipType: 0,
-    staticIp: {
-      ipAddress: 0,
-      gateway: 0,
-      dnsServers: [],
-      domains: []
-    }
-  }
-  wifi.removeUntrustedConfig(config,(error,result) => {
-  console.info("result:" + JSON.stringify(result));
-  });  
-}catch(error){
-  console.error("failed:" + JSON.stringify(error));
-}
-```
-
 
 ## removeUntrustedConfig
 
@@ -112,8 +46,6 @@ function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback
 移除不可信网络配置，使用callback异步回调。<p>该方法一次移除一个配置。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -129,7 +61,3 @@ function removeUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback
 | --- | --- | --- |
 | config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-参见 [removeUntrustedConfig](#removeuntrustedconfig)

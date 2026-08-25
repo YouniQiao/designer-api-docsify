@@ -10,8 +10,6 @@ The **usb** module provides USB device management functions, including USB devic
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [usbManager](arkts-usbmanager.md)
@@ -21,7 +19,7 @@ The **usb** module provides USB device management functions, including USB devic
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

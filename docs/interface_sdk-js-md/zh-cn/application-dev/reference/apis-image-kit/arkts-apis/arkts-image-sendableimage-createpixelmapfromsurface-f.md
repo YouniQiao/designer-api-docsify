@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'kits/@kit.ImageKit';
 ```
 
 ## createPixelMapFromSurface
@@ -15,8 +15,6 @@ function createPixelMapFromSurface(surfaceId: string, region: image.Region): Pro
 Creates a PixelMap object from surface id.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -40,19 +38,3 @@ Creates a PixelMap object from surface id.
 | [62980115](../errorcode-image.md#62980115-图片无效参数) |
 | [62980105](../errorcode-image.md#62980105-图片获取数据错误) |
 | [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
-
-**示例**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapFromSurface(surfaceId: string) {
-  let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
-  sendableImage.createPixelMapFromSurface(surfaceId, region).then((pixelMap: sendableImage.PixelMap) => {
-    console.info('Succeeded in creating the PixelMap from Surface.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```

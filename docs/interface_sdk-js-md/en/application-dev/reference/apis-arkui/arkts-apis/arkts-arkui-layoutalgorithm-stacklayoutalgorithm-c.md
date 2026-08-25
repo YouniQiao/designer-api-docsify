@@ -12,8 +12,6 @@ Stack layout algorithm class.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -25,8 +23,6 @@ constructor(option?: StackLayoutAlgorithmOptions)
 Constructs the stack layout algorithm class.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,11 +46,9 @@ public alignContent?: LocalizedAlignment
 
 Alignment mode of child components in the stack layout algorithm.Default value: **LocalizedAlignment.CENTER**Invalid values are treated as the default value.
 
-**Type:** [LocalizedAlignment](arkts-arkui-enums-localizedalignment-e.md)
+**Type:** [LocalizedAlignment](arkts-arkui-localizedalignment-e.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

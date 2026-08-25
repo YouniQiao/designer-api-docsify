@@ -10,8 +10,6 @@ The module provides APIs for the Home Screen application.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [launcherBundleManager](arkts-bundle-launcherbundlemanager.md)
@@ -23,7 +21,7 @@ The module provides APIs for the Home Screen application.
 ## Modules to Import
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -35,10 +33,10 @@ import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 | --- |
 | [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
 | [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md) |
-| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) |
-| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) |
-| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) |
-| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) |
+| on |
+| on |
+| off |
+| off |
 | [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
 | [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md) |
 | [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md) |

@@ -4,29 +4,25 @@ Describes the region of the screen to capture.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'kits/@kit.ArkUI';
 ```
 
 ## height
 
 ```TypeScript
-height: long
+height: number
 ```
 
 Height of the screen region to capture, in px. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -35,16 +31,14 @@ Height of the screen region to capture, in px. The value must be a positive inte
 ## left
 
 ```TypeScript
-left: long
+left: number
 ```
 
 Left boundary of the screen region to capture, in px. The value must be a non-negative integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,16 +47,14 @@ Left boundary of the screen region to capture, in px. The value must be a non-ne
 ## top
 
 ```TypeScript
-top: long
+top: number
 ```
 
 Top boundary of the screen region to capture, in px. The value must be a non-negative integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -71,16 +63,14 @@ Top boundary of the screen region to capture, in px. The value must be a non-neg
 ## width
 
 ```TypeScript
-width: long
+width: number
 ```
 
 Width of the screen region to capture, in px. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

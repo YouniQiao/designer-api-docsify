@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getActiveNotificationByFilter
@@ -16,8 +16,6 @@ function getActiveNotificationByFilter(filter: NotificationFilter, callback: Asy
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function getActiveNotificationByFilter(filter: NotificationFilter, callback: Asy
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | 是 |
+| filter | [NotificationFilter](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest&gt; | 是 |
 
 **错误码：**
@@ -38,159 +36,6 @@ function getActiveNotificationByFilter(filter: NotificationFilter, callback: Asy
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
-
-let bundleOption: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-    id: 11,
-    label: ''
-};
-let filter: notificationManager.NotificationFilter = {
-    bundle: bundleOption,
-    notificationKey: notificationKey,
-    extraInfoKeys: ['event']
-}
-let getActiveNotificationByFilterCallback = (err: BusinessError, data: notificationManager.NotificationRequest): void => {
-    if (err) {
-        console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('getActiveNotificationByFilter success');
-    }
-}
-notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationByFilterCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
-
-let bundleOption: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-    // 需根据实际情况进行替换
-    id: 0,
-    label: 'text'
-};
-let filter: notificationManager.NotificationFilter = {
-    bundle: bundleOption,
-    notificationKey: notificationKey,
-    // 需根据实际情况进行替换
-    extraInfoKeys: ['event']
-}
-let getActiveNotificationByFilterCallback = (err: BusinessError | null, data: notificationManager.NotificationRequest | null | undefined): void => {
-    if (err) {
-        console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('getActiveNotificationByFilter success');
-    }
-}
-notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationByFilterCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
-
-let bundleOption: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-    id: 11,
-    label: ''
-};
-let filter: notificationManager.NotificationFilter = {
-    bundle: bundleOption,
-    notificationKey: notificationKey,
-    extraInfoKeys: ['event']
-}
-notificationManager.getActiveNotificationByFilter(filter).then((data: notificationManager.NotificationRequest) => {
-    console.info(`getActiveNotificationByFilter success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
-
-let bundleOption: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-    // 需根据实际情况进行替换
-    id: 0,
-    label: 'text'
-};
-let filter: notificationManager.NotificationFilter = {
-    bundle: bundleOption,
-    notificationKey: notificationKey,
-    // 需根据实际情况进行替换
-    extraInfoKeys: ['event']
-}
-notificationManager.getActiveNotificationByFilter(filter).then((data: notificationManager.NotificationRequest | null | undefined) => {
-    console.info(`getActiveNotificationByFilter success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`getActiveNotificationByFilter failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
-
-## getActiveNotificationByFilter
-
-```TypeScript
-function getActiveNotificationByFilter(filter: NotificationFilter, callback: AsyncCallback<NotificationRequest|null>): void
-```
-
-获取满足条件的普通实况通知信息。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
-
-**系统能力：** SystemCapability.Notification.Notification
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest \| null & gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [getActiveNotificationByFilter](#getactivenotificationbyfilter)
 
 
 ## getActiveNotificationByFilter
@@ -203,8 +48,6 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -215,7 +58,7 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | 是 |
+| filter | [NotificationFilter](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | 是 |
 
 **返回值：**
 
@@ -230,50 +73,3 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [1600007](../errorcode-notification.md#1600007-通知不存在) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [getActiveNotificationByFilter](#getactivenotificationbyfilter)
-
-
-## getActiveNotificationByFilter
-
-```TypeScript
-function getActiveNotificationByFilter(filter: NotificationFilter): Promise<NotificationRequest|null>
-```
-
-获取满足条件的普通实况通知信息。使用Promise异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
-
-**系统能力：** SystemCapability.Notification.Notification
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | [NotificationFilter](arkts-notification-notificationmanager-notificationfilter-t-sys.md) | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;NotificationRequest \ | null & gt; |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) |
-| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [getActiveNotificationByFilter](#getactivenotificationbyfilter)

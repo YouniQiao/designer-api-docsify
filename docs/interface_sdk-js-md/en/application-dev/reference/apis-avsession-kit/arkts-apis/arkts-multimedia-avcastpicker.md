@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPicker } from '@kit.AVSessionKit';
+import { AVCastPicker } from 'kits/@kit.AVSessionKit';
 ```
 
 ## Summary
@@ -13,9 +13,3 @@ import { AVCastPicker } from '@kit.AVSessionKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md) |

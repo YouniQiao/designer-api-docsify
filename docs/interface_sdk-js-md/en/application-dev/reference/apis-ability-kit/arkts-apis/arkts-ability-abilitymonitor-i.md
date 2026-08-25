@@ -4,8 +4,6 @@ The module provides the capability of listening for lifecycle state changes of a
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onAbilityBackground
@@ -17,8 +15,6 @@ onAbilityBackground?: (ability: UIAbility) => void
 Callback invoked when the UIAbility object transitions to the background.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,8 +36,6 @@ Callback invoked when the UIAbility object is created.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -61,8 +55,6 @@ onAbilityDestroy?: (ability: UIAbility) => void
 Callback invoked when the UIAbility object is destroyed.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,8 +76,6 @@ Callback invoked when the UIAbility object transitions to the foreground.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -105,8 +95,6 @@ onWindowStageCreate?: (ability: UIAbility) => void
 Callback invoked when a WindowStage instance is created.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -128,8 +116,6 @@ Callback invoked when the WindowStage instance is destroyed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -149,8 +135,6 @@ onWindowStageRestore?: (ability: UIAbility) => void
 Callback invoked when the page stack is restored for the target UIAbility during cross-device migration.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -174,8 +158,6 @@ Name of the UIAbility object to be listened.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -192,33 +174,6 @@ Module name of the UIAbility object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function onAbilityCreateCallback(data: UIAbility) {
-  console.info(`onAbilityCreateCallback, data: ${JSON.stringify(data)}`);
-}
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityname',
-  moduleName: "moduleName",
-  onAbilityCreate: onAbilityCreateCallback
-}
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.addAbilityMonitor(monitor, (error: BusinessError) => {
-  if (error) {
-    console.error(`addAbilityMonitor fail, error: ${JSON.stringify(error)}`);
-  }
-});
-```

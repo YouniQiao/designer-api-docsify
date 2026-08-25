@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { stationary } from '@kit.MultimodalAwarenessKit';
+import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## off
@@ -16,8 +16,6 @@ function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<A
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
 **参数：**
@@ -27,9 +25,3 @@ function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<A
 | activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 |
 | event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 否 |
-
-**示例**
-
-```TypeScript
-stationary.off('still', stationary.ActivityEvent.ENTER);
-```

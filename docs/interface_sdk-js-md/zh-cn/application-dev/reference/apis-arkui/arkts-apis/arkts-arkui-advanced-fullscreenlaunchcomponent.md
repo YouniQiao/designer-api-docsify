@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { FullScreenLaunchComponent } from '@kit.ArkUI';
+import { FullScreenLaunchComponent } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -21,9 +21,3 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 | 名称 |
 | --- |
 | [FullScreenLaunchComponent(Defines the fullScreen launch component)](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [ContentBuilder(Defines the fullScreen launch component)](arkts-arkui-contentbuilder-t.md) |

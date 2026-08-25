@@ -4,14 +4,12 @@ Represents a custom vibration pattern. It is supported only by certain devices. 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## hapticFd
@@ -26,8 +24,6 @@ File descriptor (FD) of the vibration configuration file.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.MiscDevice
 
 ## type
@@ -41,7 +37,5 @@ The value **file** means vibration according to a vibration configuration file.
 **Type:** 'file'
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice

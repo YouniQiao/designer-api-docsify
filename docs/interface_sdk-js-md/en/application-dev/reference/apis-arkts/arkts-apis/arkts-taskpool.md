@@ -1,18 +1,20 @@
 # @ohos.taskpool
 
 TaskPool provides a multi-thread running environment for applications. It helps reduce resource consumption and improve system performance. It also frees you from caring about the thread lifecycle. You can use the TaskPool APIs to create background tasks and perform operations on them, for example, executing or canceling a task. Theoretically, you can create an unlimited number of tasks, but this is not recommended due to memory limitations. In addition, you are not advised performing blocking operations in a task, especially indefinite blocking. Long-time blocking operations occupy worker threads and may block other task scheduling, adversely affecting your application performance. You can determine the execution sequence of tasks with the same priority. They are executed in the same sequence as you call the task execution APIs. The default task priority is MEDIUM. If the number of tasks to be executed is greater than the number of worker threads in the task pool, the task pool scales out based on load balancing to minimize the waiting duration. Similarly, when the number of tasks to be executed falls below the number of worker threads, the task pool scales in to reduce the number of worker threads. For details about the error codes returned by TaskPool APIs, see [Utils Error Codes](../errorcode-utils.md). For details about the precautions for using TaskPool, see [Precautions for TaskPool](../../../arkts-utils/taskpool-introduction.md#precautions-for-taskpool). The following concepts are used in this topic:  
-- Task group task: task in a [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md). - Serial queue task: task in a [SequenceRunner](arkts-arkts-taskpool-sequencerunner-c.md). - Asynchronous queue task: task in an [AsyncRunner](arkts-arkts-taskpool-asyncrunner-c.md). - Periodic task: task executed by calling [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md).
+- Task group task: task in a [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md).  
+- Serial queue task: task in a [SequenceRunner](arkts-arkts-taskpool-sequencerunner-c.md).  
+- Asynchronous queue task: task in an [AsyncRunner](arkts-arkts-taskpool-asyncrunner-c.md).  
+- Periodic task: task executed by calling  
+[executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary

@@ -4,14 +4,12 @@ APN信息。
 
 **起始版本：** 16
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CellularData
 
 ## 导入模块
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## apn
@@ -25,8 +23,6 @@ APN。
 **类型：** string
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -42,8 +38,6 @@ APN名称。
 
 **起始版本：** 16
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CellularData
 
 ## mcc
@@ -57,8 +51,6 @@ Sim卡的mcc。
 **类型：** string
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -74,8 +66,6 @@ mmsproxy?: string
 
 **起始版本：** 16
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CellularData
 
 ## mnc
@@ -89,8 +79,6 @@ Sim卡的mnc。
 **类型：** string
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData
 
@@ -106,8 +94,6 @@ proxy?: string
 
 **起始版本：** 16
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CellularData
 
 ## type
@@ -122,8 +108,6 @@ APN类型。
 
 **起始版本：** 16
 
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CellularData
 
 ## user
@@ -137,7 +121,5 @@ user?: string
 **类型：** string
 
 **起始版本：** 16
-
-**ArkTS模式：** ArkTS-Dyn起始版本为16；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CellularData

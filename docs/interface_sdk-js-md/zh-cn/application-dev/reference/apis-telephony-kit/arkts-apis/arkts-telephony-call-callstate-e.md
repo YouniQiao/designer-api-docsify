@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## CALL_STATE_UNKNOWN
@@ -17,8 +15,6 @@ CALL_STATE_UNKNOWN = -1
 无效状态，当获取呼叫状态失败时返回。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -32,8 +28,6 @@ CALL_STATE_IDLE = 0
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## CALL_STATE_RINGING
@@ -45,8 +39,6 @@ CALL_STATE_RINGING = 1
 表示来电正在振铃或等待。
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -60,8 +52,6 @@ CALL_STATE_OFFHOOK = 2
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CallManager
 
 ## CALL_STATE_ANSWERED
@@ -73,7 +63,5 @@ CALL_STATE_ANSWERED = 3
 表示来电已经接听。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager

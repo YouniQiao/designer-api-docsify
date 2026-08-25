@@ -6,8 +6,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -28,8 +26,6 @@ arrowModifier(modifier: Optional<SymbolGlyphModifier>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -40,7 +36,7 @@ arrowModifier(modifier: Optional<SymbolGlyphModifier>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | Optional & lt;SymbolGlyphModifier & gt; | 是 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;SymbolGlyphModifier&gt; | 是 |
 
 ## arrowPosition
 
@@ -51,8 +47,6 @@ arrowPosition(value: ArrowPosition)
 设置下拉菜单项的文本与箭头之间的对齐方式。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,8 +70,6 @@ arrowPosition(position: Optional<ArrowPosition>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -88,7 +80,7 @@ arrowPosition(position: Optional<ArrowPosition>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| position | Optional&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | 是 |
+| position | [Optional](arkts-arkui-optional-t.md)&lt;[ArrowPosition](arkts-arkui-arrowposition-e.md)&gt; | 是 |
 
 ## avoidance
 
@@ -99,8 +91,6 @@ avoidance(mode: AvoidanceMode)
 设置下拉菜单的避让模式。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,8 +114,6 @@ controlSize(value: ControlSize)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -136,7 +124,7 @@ controlSize(value: ControlSize)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [value](#value) | [ControlSize](#controlsize) | 是 |
+| [value](#value) | [ControlSize](arkts-arkui-controlsize-e.md) | 是 |
 
 ## controlSize
 
@@ -148,8 +136,6 @@ controlSize(size: Optional<ControlSize>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -160,7 +146,7 @@ controlSize(size: Optional<ControlSize>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| size | Optional & lt;ControlSize & gt; | 是 |
+| size | [Optional](arkts-arkui-optional-t.md)&lt;[ControlSize](arkts-arkui-controlsize-e.md)&gt; | 是 |
 
 ## divider
 
@@ -172,8 +158,6 @@ divider(options: Optional<DividerOptions> | null)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -184,7 +168,7 @@ divider(options: Optional<DividerOptions> | null)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | Optional & lt;DividerOptions & gt; \ | null | 是 |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md)&gt; \| null | 是 |
 
 ## dividerStyle
 
@@ -196,8 +180,6 @@ dividerStyle(style: Optional<DividerStyleOptions>)
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -208,7 +190,7 @@ dividerStyle(style: Optional<DividerStyleOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;DividerStyleOptions & gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md)&gt; | 是 |
 
 ## font
 
@@ -219,8 +201,6 @@ font(value: Font)
 设置下拉按钮本身的文本样式。当size为0时，文本不显示，当size为负值时，文本的size按照默认值显示。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -242,8 +222,6 @@ font(selectFont: Optional<Font>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -254,7 +232,7 @@ font(selectFont: Optional<Font>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| selectFont | Optional & lt;Font & gt; | 是 |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | 是 |
 
 ## fontColor
 
@@ -265,8 +243,6 @@ fontColor(value: ResourceColor)
 设置下拉按钮本身的文本颜色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -288,8 +264,6 @@ fontColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -300,7 +274,7 @@ fontColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | 是 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## keyboardAvoidMode
 
@@ -312,8 +286,6 @@ keyboardAvoidMode(mode: Optional<MenuKeyboardAvoidMode>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -324,7 +296,7 @@ keyboardAvoidMode(mode: Optional<MenuKeyboardAvoidMode>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mode | Optional & lt;MenuKeyboardAvoidMode & gt; | 是 |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[MenuKeyboardAvoidMode](arkts-arkui-menukeyboardavoidmode-e.md)&gt; | 是 |
 
 ## menuAlign
 
@@ -335,8 +307,6 @@ menuAlign(alignType: MenuAlignType, offset?: Offset)
 设置下拉按钮与下拉菜单间的对齐方式。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -361,8 +331,6 @@ menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -373,7 +341,7 @@ menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | Optional&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | 是 |
+| [alignType](../arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | 是 |
 | offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 |
 
 ## menuBackgroundBlurStyle
@@ -388,8 +356,6 @@ menuBackgroundBlurStyle(value: BlurStyle)
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -413,8 +379,6 @@ menuBackgroundBlurStyle(style: Optional<BlurStyle>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -425,7 +389,7 @@ menuBackgroundBlurStyle(style: Optional<BlurStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional & lt;BlurStyle & gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | 是 |
 
 ## menuBackgroundBlurStyleOptions
 
@@ -437,8 +401,6 @@ menuBackgroundBlurStyleOptions(blurStyle: Optional<BackgroundBlurStyleOptions>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -449,7 +411,7 @@ menuBackgroundBlurStyleOptions(blurStyle: Optional<BackgroundBlurStyleOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blurStyle | Optional & lt;BackgroundBlurStyleOptions & gt; | 是 |
+| [blurStyle](arkts-arkui-sheetoptions-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)&gt; | 是 |
 
 ## menuBackgroundColor
 
@@ -463,8 +425,6 @@ menuBackgroundColor(value: ResourceColor)
 > 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -488,8 +448,6 @@ menuBackgroundColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -500,7 +458,7 @@ menuBackgroundColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | 是 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## menuBackgroundEffect
 
@@ -512,8 +470,6 @@ menuBackgroundEffect(effect: Optional<BackgroundEffectOptions>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -524,7 +480,7 @@ menuBackgroundEffect(effect: Optional<BackgroundEffectOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| effect | Optional & lt;BackgroundEffectOptions & gt; | 是 |
+| effect | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)&gt; | 是 |
 
 ## menuItemContentModifier
 
@@ -539,8 +495,6 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -551,7 +505,7 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt; | 是 |
 
 ## menuItemContentModifier
 
@@ -566,8 +520,6 @@ menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -578,7 +530,7 @@ menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | 是 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md)&gt;&gt; | 是 |
 
 ## menuOutline
 
@@ -590,8 +542,6 @@ menuOutline(outline: MenuOutlineOptions)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -602,7 +552,7 @@ menuOutline(outline: MenuOutlineOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | 是 |
+| [outline](arkts-arkui-commonmethod-c.md) | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | 是 |
 
 ## minKeyboardAvoidDistance
 
@@ -614,8 +564,6 @@ minKeyboardAvoidDistance(distance: Optional<LengthMetrics>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -626,7 +574,7 @@ minKeyboardAvoidDistance(distance: Optional<LengthMetrics>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| distance | Optional & lt;LengthMetrics & gt; | 是 |
+| distance | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 |
 
 ## onSelect
 
@@ -637,8 +585,6 @@ onSelect(callback: (index: number, value: string) => void)
 下拉菜单选中某一项时，会触发回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -660,8 +606,6 @@ onSelect(callback: Optional<OnSelectCallback>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -672,7 +616,7 @@ onSelect(callback: Optional<OnSelectCallback>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | 是 |
 
 ## optionBgColor
 
@@ -683,8 +627,6 @@ optionBgColor(value: ResourceColor)
 设置下拉菜单项的背景色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -706,8 +648,6 @@ optionBgColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -718,7 +658,7 @@ optionBgColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | 是 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## optionFont
 
@@ -729,8 +669,6 @@ optionFont(value: Font)
 设置下拉菜单项的文本样式。当size为0的时候，文本不显示，当size为负值的时候，文本的size按照默认值显示。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -752,8 +690,6 @@ optionFont(selectFont: Optional<Font>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -764,7 +700,7 @@ optionFont(selectFont: Optional<Font>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| selectFont | Optional & lt;Font & gt; | 是 |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | 是 |
 
 ## optionFontColor
 
@@ -775,8 +711,6 @@ optionFontColor(value: ResourceColor)
 设置下拉菜单项的文本颜色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -798,8 +732,6 @@ optionFontColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -810,7 +742,7 @@ optionFontColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | 是 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## optionHeight
 
@@ -821,8 +753,6 @@ optionHeight(value: Dimension)
 设置下拉菜单显示的最大高度，不支持设置百分比。默认最大高度是屏幕可用高度的80%，设置的菜单最大高度不能超过默认最大高度。当设置为无效值或零时，属性不生效。如果下拉菜单所有选项的实际高度小于设定的高度，下拉菜单的高度按实际高度显示。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -846,8 +776,6 @@ optionHeight(height: Optional<Dimension>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -858,7 +786,7 @@ optionHeight(height: Optional<Dimension>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| height | Optional & lt;Dimension & gt; | 是 |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt; | 是 |
 
 ## optionTextModifier
 
@@ -873,8 +801,6 @@ optionTextModifier(modifier: Optional<TextModifier>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -885,7 +811,7 @@ optionTextModifier(modifier: Optional<TextModifier>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 |
 
 ## optionWidth
 
@@ -897,8 +823,6 @@ optionWidth(value: Dimension | OptionWidthMode )
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -909,7 +833,7 @@ optionWidth(value: Dimension | OptionWidthMode )
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [value](#value) | Dimension \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md) | 是 |
+| [value](#value) | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md) | 是 |
 
 ## optionWidth
 
@@ -921,8 +845,6 @@ optionWidth(width: Optional<Dimension | OptionWidthMode> )
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -933,7 +855,7 @@ optionWidth(width: Optional<Dimension | OptionWidthMode> )
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| width | Optional & lt;Dimension \ | OptionWidthMode & gt; | 是 |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [OptionWidthMode](../arkts-apis/arkts-arkui-optionwidthmode-e.md)&gt; | 是 |
 
 ## selected
 
@@ -944,8 +866,6 @@ selected(value: number | Resource)
 设置下拉菜单初始选项的索引，第一项的索引为0。当不设置selected属性、或设置为负数、非整数、超出索引范围等异常值时，默认选中值为-1，菜单项不选中；当设置为undefined、null时，选中第一项。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -967,8 +887,6 @@ selected(numCount: Optional<number | Resource>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -979,7 +897,7 @@ selected(numCount: Optional<number | Resource>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| numCount | Optional & lt;number \ | Resource & gt; | 是 |
+| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | 是 |
 
 ## selectedOptionBgColor
 
@@ -990,8 +908,6 @@ selectedOptionBgColor(value: ResourceColor)
 设置下拉菜单选中项的背景色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1013,8 +929,6 @@ selectedOptionBgColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1025,7 +939,7 @@ selectedOptionBgColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | 是 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## selectedOptionFont
 
@@ -1036,8 +950,6 @@ selectedOptionFont(value: Font)
 设置下拉菜单选中项的文本样式。当size为0的时候，文本不显示，当size为负值的时候，文本的size按照默认值显示。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1059,8 +971,6 @@ selectedOptionFont(selectFont: Optional<Font>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1071,7 +981,7 @@ selectedOptionFont(selectFont: Optional<Font>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| selectFont | Optional & lt;Font & gt; | 是 |
+| selectFont | [Optional](arkts-arkui-optional-t.md)&lt;Font&gt; | 是 |
 
 ## selectedOptionFontColor
 
@@ -1082,8 +992,6 @@ selectedOptionFontColor(value: ResourceColor)
 设置下拉菜单选中项的文本颜色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1105,8 +1013,6 @@ selectedOptionFontColor(resColor: Optional<ResourceColor>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1117,7 +1023,7 @@ selectedOptionFontColor(resColor: Optional<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resColor | Optional & lt;ResourceColor & gt; | 是 |
+| resColor | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## selectedOptionTextModifier
 
@@ -1132,8 +1038,6 @@ selectedOptionTextModifier(modifier: Optional<TextModifier>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1144,7 +1048,7 @@ selectedOptionTextModifier(modifier: Optional<TextModifier>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 |
 
 ## showDefaultSelectedIcon
 
@@ -1155,8 +1059,6 @@ showDefaultSelectedIcon(show: boolean)
 设置是否显示默认选择的图标。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1180,8 +1082,6 @@ showInSubWindow(showInSubWindow: Optional<boolean>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1192,7 +1092,7 @@ showInSubWindow(showInSubWindow: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [showInSubWindow](#showinsubwindow) | Optional & lt;boolean & gt; | 是 |
+| [showInSubWindow](#showinsubwindow) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## space
 
@@ -1203,8 +1103,6 @@ space(value: Length)
 设置下拉菜单项的文本与箭头的间距。不支持设置百分比。将间距设置为null、undefined，或者小于等于8的值时，取默认值。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1228,8 +1126,6 @@ space(spaceLength: Optional<Length>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1240,7 +1136,7 @@ space(spaceLength: Optional<Length>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| spaceLength | Optional & lt;Length & gt; | 是 |
+| spaceLength | [Optional](arkts-arkui-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | 是 |
 
 ## textModifier
 
@@ -1255,8 +1151,6 @@ textModifier(modifier: Optional<TextModifier>)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1267,7 +1161,7 @@ textModifier(modifier: Optional<TextModifier>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | Optional&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[TextModifier](../arkts-apis/arkts-arkui-textmodifier-c.md)&gt; | 是 |
 
 ## value
 
@@ -1278,8 +1172,6 @@ value(value: ResourceStr)
 设置下拉按钮的文本内容。选中菜单项后，按钮文本将自动更新为选中的菜单项文本。从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1301,8 +1193,6 @@ value(resStr: Optional<ResourceStr>)
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1313,4 +1203,4 @@ value(resStr: Optional<ResourceStr>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resStr | Optional & lt;ResourceStr & gt; | 是 |
+| resStr | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)&gt; | 是 |

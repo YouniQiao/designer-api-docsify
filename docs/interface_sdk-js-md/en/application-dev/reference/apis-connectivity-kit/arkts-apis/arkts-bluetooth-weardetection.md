@@ -4,14 +4,12 @@ Provides methods to manage the wearing detection function.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { wearDetection } from '@kit.ConnectivityKit';
+import { wearDetection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

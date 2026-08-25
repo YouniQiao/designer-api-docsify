@@ -4,14 +4,12 @@ Defines the VPN configuration.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'kits/@kit.NetworkKit';
 ```
 
 ## addresses
@@ -25,8 +23,6 @@ IP addresses of vNICs. Before API version 23, a maximum of 64 IP addresses are s
 **Type:** Array&lt;LinkAddress&gt;
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -43,8 +39,6 @@ List of blocked applications, which are represented by bundle names of the strin
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## dnsAddresses
@@ -58,8 +52,6 @@ IP address of the DNS server. After the IP address is configured, when the VPN i
 **Type:** Array&lt;string&gt;
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -75,8 +67,6 @@ Whether the blocking mode is used. The value **true** indicates that the blockin
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## isInternal
@@ -90,8 +80,6 @@ Whether the built-in VPN is supported. The value **true** indicates that the bui
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -107,8 +95,6 @@ Whether IPv4 is supported. The value **true** indicates that the IPv4 is support
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## isIPv6Accepted
@@ -122,8 +108,6 @@ Whether IPv6 is supported. The value **true** indicates that the IPV6 is support
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -139,8 +123,6 @@ Maximum transmission unit (MTU), in bytes. The value range is [576,1500].
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## routes
@@ -155,8 +137,6 @@ Route information of the vNIC. Before API version 23, a maximum of 1024 routes c
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## searchDomains
@@ -170,8 +150,6 @@ List of DNS search domains.
 **Type:** Array&lt;string&gt;
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -188,8 +166,6 @@ List of trusted applications, which are represented by bundle names of the strin
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 ## vpnId
@@ -204,47 +180,4 @@ Unique VPN ID.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
-
-**Examples**
-
-```TypeScript
-import { vpnExtension} from '@kit.NetworkKit';
-
-let vpnConfig: vpnExtension.VpnConfig = {
-  addresses: [],
-  vpnId: '123',
-  routes: [{
-    interface: "eth0",
-    destination: {
-      address: {
-        address:'',
-        family:1,
-        port:8080
-      },
-      prefixLength:1
-    },
-    gateway: {
-      address:'',
-      family:1,
-      port:8080
-    },
-    hasGateway: true,
-    isDefaultRoute: true,
-  }],
-  mtu: 1400,
-  dnsAddresses: ["223.5.5.5", "223.6.6.6"],
-  trustedApplications: [],
-  blockedApplications: [],
-}
-let context: vpnExtension.VpnExtensionContext;
-
-function vpnCreate(){
-  let vpnConnection: vpnExtension.VpnConnection = vpnExtension.createVpnConnection(context);
-  vpnConnection.create(vpnConfig).then((data) => {
-    console.info("VPN create " + JSON.stringify(data));
-  })
-}
-```

@@ -6,33 +6,23 @@
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getFocalLength
 
-ArkTS-Dyn:
 ```TypeScript
 getFocalLength(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getFocalLength(): double
 ```
 
 Obtains the focal length in use.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,49 +32,13 @@ Obtains the focal length in use.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFocalLength(captureSession: camera.CaptureSession): number {
-  const invalidValue: number = -1;
-  let focalLength: number = invalidValue;
-  try {
-    focalLength = captureSession.getFocalLength();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getFocalLength call failed. error code: ${err.code}`);
-  }
-  return focalLength;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFocalLength(photoSession: camera.PhotoSession): number {
-  const invalidValue: number = -1;
-  let focalLength: number = invalidValue;
-  try {
-    focalLength = photoSession.getFocalLength();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getFocalLength call failed. error code: ${err.code}`);
-  }
-  return focalLength;
-}
-```
 
 ## getFocusMode
 
@@ -95,8 +49,6 @@ getFocusMode(): FocusMode
 Obtains the focus mode in use.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -114,40 +66,6 @@ Obtains the focus mode in use.
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFocusMode(captureSession: camera.CaptureSession): camera.FocusMode | undefined {
-  let afMode: camera.FocusMode | undefined = undefined;
-  try {
-    afMode = captureSession.getFocusMode();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getFocusMode call failed. error code: ${err.code}`);
-  }
-  return afMode;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFocusMode(photoSession: camera.PhotoSession): camera.FocusMode | undefined {
-  let afMode: camera.FocusMode | undefined = undefined;
-  try {
-    afMode = photoSession.getFocusMode();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getFocusMode call failed. error code: ${err.code}`);
-  }
-  return afMode;
-}
-```
-
 ## getFocusPoint
 
 ```TypeScript
@@ -158,8 +76,6 @@ Obtains the focal point in use.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -168,47 +84,13 @@ Obtains the focal point in use.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Point](arkts-camera-camera-point-i.md) |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFocusPoint(captureSession: camera.CaptureSession): camera.Point | undefined {
-  let point: camera.Point | undefined = undefined;
-  try {
-    point = captureSession.getFocusPoint();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getFocusPoint call failed. error code: ${err.code}`);
-  }
-  return point;
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getFocusPoint(photoSession: camera.PhotoSession): camera.Point | undefined {
-  let point: camera.Point | undefined = undefined;
-  try {
-    point = photoSession.getFocusPoint();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getFocusPoint call failed. error code: ${err.code}`);
-  }
-  return point;
-}
-```
 
 ## lockFocusTracking
 
@@ -220,8 +102,6 @@ Lock focus tracking.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -232,7 +112,7 @@ Lock focus tracking.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| focusPoint | [Point](arkts-camera-camera-point-i.md) | Yes |
+| focusPoint | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes |
 
 **Error codes:**
 
@@ -251,8 +131,6 @@ Sets a focus mode.Before the setting, call [isFocusModeSupported](arkts-camera-c
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -269,36 +147,6 @@ Sets a focus mode.Before the setting, call [isFocusModeSupported](arkts-camera-c
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFocusMode(captureSession: camera.CaptureSession): void {
-  try {
-    captureSession.setFocusMode(camera.FocusMode.FOCUS_MODE_AUTO);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setFocusMode call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFocusMode(photoSession: camera.PhotoSession): void {
-  try {
-    photoSession.setFocusMode(camera.FocusMode.FOCUS_MODE_AUTO);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setFocusMode call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## setFocusPoint
 
 ```TypeScript
@@ -309,8 +157,6 @@ Sets the focal point. The focal point must be in the coordinate system (0-1), wh
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -319,45 +165,13 @@ Sets the focal point. The focal point must be in the coordinate system (0-1), wh
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| point | [Point](arkts-camera-camera-point-i.md) | Yes |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFocusPoint(captureSession: camera.CaptureSession): void {
-  const focusPoint: camera.Point = {x: 1, y: 1};
-  try {
-    captureSession.setFocusPoint(focusPoint);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setFocusPoint call failed. error code: ${err.code}`);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setFocusPoint(photoSession: camera.PhotoSession): void {
-  const focusPoint: camera.Point = {x: 1, y: 1};
-  try {
-    photoSession.setFocusPoint(focusPoint);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setFocusPoint call failed. error code: ${err.code}`);
-  }
-}
-```
 
 ## unlockFocusTracking
 
@@ -368,8 +182,6 @@ unlockFocusTracking(): void
 Unlock focus tracking.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

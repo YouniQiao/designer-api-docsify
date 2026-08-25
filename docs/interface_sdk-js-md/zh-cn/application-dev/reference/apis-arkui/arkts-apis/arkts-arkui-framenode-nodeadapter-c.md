@@ -7,8 +7,6 @@ NodeAdapter提供FrameNode的数据懒加载能力，通过LazyForEach实现接�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## attachNodeAdapter
@@ -23,8 +21,6 @@ static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 > 支持绑定的组件：Column、Row、Stack、GridRow、Flex、Swiper、RelativeContainer、List、ListItemGroup、WaterFlow、Grid。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,72 +51,11 @@ NodeAdapter的构造函数。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import { Row, NodeContainer, Entry, Component, Color, UIContext } from '@ohos.arkui.component';
-import { FrameNode, NodeController, typeNode } from '@ohos.arkui.node';
-
-class MultiThreadNodeController extends NodeController {
-  private rootNode: FrameNode | null = null;
-  private uiContext: UIContext | null = null;
-  private worker: EAWorker = new EAWorker();
-
-  constructor() {
-    super();
-  }
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    if (!this.rootNode) {
-      this.rootNode = typeNode.createColumnNode(uiContext);
-      const frameNode = new FrameNode(uiContext); // 创建普通FrameNode（不支持多线程）
-      frameNode!.commonAttribute.width(100).height(100).backgroundColor(Color.Black);
-      this.rootNode!.append(frameNode);
-      this.uiContext = uiContext;
-      this.createNodeInMultiThreadAndMount(this.rootNode!);
-    }
-    return this.rootNode;
-  }
-
-  createNodeInMultiThreadAndMount(rootNode: FrameNode): void {
-    this.worker.start();
-    this.worker.postTask(() => {
-      const frameNode = new FrameNode(this.uiContext!, { supportMultiThread: true }); // 创建支持多线程操作的FrameNode
-      frameNode.commonAttribute.width(150).height(150).backgroundColor(Color.Pink);
-      frameNode.commonEvent.setOnClick((event: ClickEvent) => {
-        console.info(`click frameNode: ${JSON.stringfy(event)}`);
-      });
-      const mainWorker = EAWorker.main(); // 获取主线程的worker
-      if (mainWorker) {
-        mainWorker.postTask(() => {
-          rootNode.appendChild(frameNode); // 上树在主线程中执行
-        });
-      }
-    })
-    this.worker.quit();
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  private multiThreadNodeController: MultiThreadNodeController = new MultiThreadNodeController();
-
-  build() {
-    Row() {
-      NodeContainer(this.multiThreadNodeController)
-    }
-  }
-}
-```
 
 ## detachNodeAdapter
 
@@ -131,8 +66,6 @@ static detachNodeAdapter(node: FrameNode): void
 解除绑定操作，解除FrameNode节点绑定的NodeAdapter。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,101 +89,11 @@ dispose(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import { NodeController, FrameNode, BuilderNode } from '@kit.ArkUI';
-
-@Component
-struct TestComponent {
-  build() {
-    Column() {
-      Text('This is a BuilderNode.')
-        .fontSize(16)
-        .fontWeight(FontWeight.Bold)
-    }
-    .width('100%')
-    .backgroundColor(Color.Gray)
-  }
-
-  aboutToAppear() {
-    console.info('aboutToAppear');
-  }
-
-  aboutToDisappear() {
-    console.info('aboutToDisappear');
-  }
-}
-
-@Builder
-function buildComponent() {
-  TestComponent()
-}
-
-// 继承NodeController实现自定义UI控制器
-class MyNodeController extends NodeController {
-  private rootNode: FrameNode | null = null;
-  private builderNode: BuilderNode<[]> | null = null;
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    this.rootNode = new FrameNode(uiContext);
-    this.builderNode = new BuilderNode(uiContext, { selfIdealSize: { width: 200, height: 100 } });
-    this.builderNode.build(new WrappedBuilder(buildComponent));
-
-    const rootRenderNode = this.rootNode.getRenderNode();
-    if (rootRenderNode !== null) {
-      rootRenderNode.size = { width: 200, height: 200 };
-      rootRenderNode.backgroundColor = 0xffd5d5d5;
-      rootRenderNode.appendChild(this.builderNode!.getFrameNode()!.getRenderNode());
-    }
-
-    return this.rootNode;
-  }
-
-  disposeFrameNode() {
-    if (this.rootNode !== null && this.builderNode !== null) {
-      // 解除rootNode对实体FrameNode节点的引用关系前，移除rootNode的所有子节点
-      this.rootNode.removeChild(this.builderNode.getFrameNode());
-      // 解除builderNode对实体FrameNode节点的引用关系
-      this.builderNode.dispose();
-      // 解除rootNode对实体FrameNode节点的引用关系
-      this.rootNode.dispose();
-    }
-  }
-
-  removeBuilderNode() {
-    const rootRenderNode = this.rootNode!.getRenderNode();
-    if (rootRenderNode !== null && this.builderNode !== null && this.builderNode.getFrameNode() !== null) {
-      rootRenderNode.removeChild(this.builderNode!.getFrameNode()!.getRenderNode());
-    }
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 4 }) {
-      NodeContainer(this.myNodeController)
-      Button('FrameNode dispose')
-        .onClick(() => {
-          this.myNodeController.disposeFrameNode();
-        })
-        .width('100%')
-    }
-  }
-}
-```
 
 ## getAllAvailableItems
 
@@ -261,8 +104,6 @@ getAllAvailableItems(): Array<FrameNode>
 获取所有有效数据。有效节点数据包括显示在屏幕上的节点以及预加载的节点。其中预加载节点的数量可依照LazyForEach的 [使用限制](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#使用限制)，调整父容器的cachedCount属性进行设置。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -285,8 +126,6 @@ insertItem(start: number, count: number): void
 从索引值开始新增指定数量的节点数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -311,8 +150,6 @@ isDisposed(): boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -325,12 +162,6 @@ isDisposed(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-请参考[检验FrameNode是否有效示例。
-
-请参考检验NodeAdapter是否有效示例。
-
 ## moveItem
 
 ```TypeScript
@@ -340,8 +171,6 @@ moveItem(from: number, to: number): void
 将数据从原始索引移动到目的索引。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -373,8 +202,6 @@ FrameNode绑定NodeAdapter时回调。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -396,8 +223,6 @@ onCreateChild?(index: number): FrameNode
 节点首次加载或新节点滑入时回调。建议开发者在添加子组件时，遵循声明式组件中子组件的约束。例如，WaterFlow支持添加FlowItem子节点。父节点根据子节点的索引与key值判断是否触发了节点首次加载或新节点滑入。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -427,8 +252,6 @@ onDetachFromNode?(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -444,8 +267,6 @@ onDisposeChild?(id: number, node: FrameNode): void
 子节点即将销毁时回调。既不显示在屏幕上，也不处于预加载范围内的节点都属于即将销毁的节点。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -469,8 +290,6 @@ onGetChildId?(index: number): number
 节点首次加载或新节点滑入时回调。传入的index参数用于自定义生成Id，需要开发者自行保证根据不同index生成Id的唯一性。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -500,8 +319,6 @@ onUpdateChild?(id: number, node: FrameNode): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -521,11 +338,9 @@ onUpdateChild?(id: number, node: FrameNode): void
 reloadAllItems(): void
 ```
 
-重新加载全部数据操作。实际调用了LazyForEach中的onDataReloaded接口通知组件重新加载所有数据。
+重新加载全部数据操作。实际调用了LazyForEach中的[onDataReloaded](../arkts-components/arkts-arkui-datachangelistener-i.md#ondatareloaded)接口通知组件重新加载所有数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -542,8 +357,6 @@ reloadItem(start: number, count: number): void
 从索引值开始重新加载指定数量的节点数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -567,8 +380,6 @@ removeItem(start: number, count: number): void
 从索引值开始删除指定数量的节点数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -595,14 +406,8 @@ Get the total number of node count.
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-请参考[NodeAdapter使用示例。

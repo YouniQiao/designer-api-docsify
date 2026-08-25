@@ -6,14 +6,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -25,8 +23,6 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 获取色域类型。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -42,13 +38,6 @@ getColorSpaceName(): colorSpaceManager.ColorSpace
 | --- |
 | [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
-**示例**
-
-```TypeScript
-// 获取色域类型
-let spaceName: colorSpaceManager.ColorSpace = colorSpace.getColorSpaceName();
-```
-
 ## getGamma
 
 ```TypeScript
@@ -58,8 +47,6 @@ getGamma(): number
 获取色域gamma值。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -75,13 +62,6 @@ getGamma(): number
 | --- |
 | [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
-**示例**
-
-```TypeScript
-// 获取色域gamma值
-let gamma: number = colorSpace.getGamma();
-```
-
 ## getWhitePoint
 
 ```TypeScript
@@ -91,8 +71,6 @@ getWhitePoint(): collections.Array<number>
 获取色域白点值，返回色度坐标[x, y]，表示色彩空间中白色点的坐标位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -107,11 +85,3 @@ getWhitePoint(): collections.Array<number>
 | 错误码ID |
 | --- |
 | [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
-
-**示例**
-
-```TypeScript
-import { collections } from '@kit.ArkTS';
-// 获取色域白点值[x, y]
-let point: collections.Array<number> = colorSpace.getWhitePoint();
-```

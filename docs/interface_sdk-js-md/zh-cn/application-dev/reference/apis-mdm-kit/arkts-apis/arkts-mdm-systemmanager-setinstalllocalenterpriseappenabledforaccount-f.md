@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setInstallLocalEnterpriseAppEnabledForAccount
@@ -20,8 +20,6 @@ function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: bo
 > 2. 已通过本接口设置当前用户支持本地安装企业应用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -46,25 +44,3 @@ function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: bo
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let isEnable: boolean = true;
-let accountId: number = 100;
-try {
-  systemManager.setInstallLocalEnterpriseAppEnabledForAccount(wantTemp, isEnable, accountId);
-  console.info('Succeeded in setting InstallLocalEnterpriseAppEnabledForAccount.');
-} catch (err) {
-  console.error(`Failed to set installLocalEnterpriseAppEnabledForAccount. Code is ${err.code}, message is ${err.message}`);
-}
-```

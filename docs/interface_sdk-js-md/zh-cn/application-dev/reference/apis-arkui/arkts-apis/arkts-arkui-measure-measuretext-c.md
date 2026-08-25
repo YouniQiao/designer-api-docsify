@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { MeasureText, MeasureOptions } from '@kit.ArkUI';
+import { MeasureText, MeasureOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## measureText
@@ -35,8 +33,6 @@ static measureText(options: MeasureOptions): number
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **废弃版本：** 18
 
 **替代接口：** measureText
@@ -57,32 +53,6 @@ static measureText(options: MeasureOptions): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-import { MeasureText } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State textWidth: number = MeasureText.measureText({
-    // 建议使用 this.getUIContext().getMeasureUtils().measureText()接口
-    textContent: "Hello World",
-    fontSize: '50px'
-  });
-
-  build() {
-    Row() {
-      Column() {
-        Text(`The width of 'Hello World': ${this.textWidth}`)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## measureTextSize
 
 ```TypeScript
@@ -101,8 +71,6 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 > 联的[MeasureUtils](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 18
 
@@ -124,31 +92,4 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 | 类型 |
 | --- |
-| [SizeOptions](arkts-arkui-units-sizeoptions-i.md) |
-
-**示例**
-
-```TypeScript
-import { MeasureText } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  textSize: SizeOptions = MeasureText.measureTextSize({
-    // 建议使用 this.getUIContext().getMeasureUtils().measureTextSize()接口
-    textContent: "Hello World",
-    fontSize: '50px'
-  });
-
-  build() {
-    Row() {
-      Column() {
-        Text(`The width of 'Hello World': ${this.textSize.width}`)
-        Text(`The height of 'Hello World': ${this.textSize.height}`)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) |

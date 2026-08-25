@@ -1,7 +1,5 @@
 # Array
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ copyWithin(target: number, start: number, end?: number): this
 ```
 
 Returns the this object after copying a section of the array identified by start and end to the same array starting at position target
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -37,8 +33,6 @@ fill(value: T, start?: number, end?: number): this
 
 Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -59,8 +53,6 @@ find<S extends T>(predicate: (this: void, value: T, index: number, obj: T[]) => 
 
 Returns the value of the first element in the array where predicate is true, and undefined otherwise.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -77,8 +69,6 @@ Returns the value of the first element in the array where predicate is true, and
 ```TypeScript
 find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): T | undefined
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -98,8 +88,6 @@ findIndex(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: a
 ```
 
 Returns the index of the first element in the array where predicate is true, and -1 otherwise.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

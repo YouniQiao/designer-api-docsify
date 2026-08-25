@@ -12,14 +12,12 @@ The **mediaquery** module provides different styles for different media types.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from '@kit.ArkUI';
+import { mediaquery } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

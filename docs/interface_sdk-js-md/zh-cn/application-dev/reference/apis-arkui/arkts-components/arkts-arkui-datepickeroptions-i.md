@@ -3,7 +3,7 @@
 日期选择器组件的参数说明。
 
 > **说明：**&gt;
-> - Date的使用请参考TimePickerOptions。&gt;
+> - Date的使用请参考[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。&gt;
 > - 在DatePicker组件滑动过程中修改DatePickerOptions中的属性，会导致这些属性无法生效。&gt;
 > - 如果需要设置的起止日期范围在\[Date('1900-01-31'), Date('2100-12-31')]之外，推荐使用
 > [DatePickerComponent](../arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponent-s.md)。
@@ -27,8 +27,6 @@
 > 先处理起始日期与结束日期的异常情形，再处理选中日期的异常情形。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,8 +56,6 @@ end?: Date
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -77,11 +73,10 @@ mode?: DatePickerMode
 
 **类型：** [DatePickerMode](arkts-arkui-datepickermode-e.md)
 
-**默认值：** DatePickerMode.DATE - which means to display three columns: year, month, and day. <br>Decimal values are rounded off.
+**默认值：** DatePickerMode.DATE - which means to display three columns: year, month, and day. 
+Decimal values are rounded off.
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,8 +105,6 @@ selected?: Date
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -136,8 +129,6 @@ start?: Date
 **默认值：** Date('1970-1-1') [since 11]
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

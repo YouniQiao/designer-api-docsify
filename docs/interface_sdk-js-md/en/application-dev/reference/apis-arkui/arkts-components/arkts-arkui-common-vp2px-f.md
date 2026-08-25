@@ -15,8 +15,6 @@ Converts a value in vp units to a value in px. By default, the virtual pixel rat
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Deprecated since:** 18
 
 **Substitutes:** vp2px

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDomainFilterRule
@@ -29,8 +29,6 @@ Adds domain name filtering rules for the device.In API version 21 and earlier ve
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -52,31 +50,3 @@ Adds domain name filtering rules for the device.In API version 21 and earlier ve
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let domainFilterRule: networkManager.DomainFilterRule = {
-  // Replace with actual values.
-  "domainName": "www.example.com",
-  "appUid": "9696",
-  "action": networkManager.Action.DENY,
-  "family": 1,
-  "logType": networkManager.LogType.NFLOG
-};
-
-try {
-  networkManager.addDomainFilterRule(wantTemp, domainFilterRule);
-  console.info('Succeeded in adding domain filter rules');
-} catch (err) {
-  console.error(`Failed to add domain filter rules. Code: ${err.code}, message: ${err.message}`);
-}
-```

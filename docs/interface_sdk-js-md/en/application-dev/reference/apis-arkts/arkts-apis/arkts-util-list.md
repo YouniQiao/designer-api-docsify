@@ -22,10 +22,10 @@ List is implemented based on the singly linked list. Each node has a reference p
 ## Modules to Import
 
 ```TypeScript
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
+import { List } from 'kits/@kit.ArkTS';
+import { ListComparatorFn } from 'kits/@kit.ArkTS';
+import { ListForEachCb } from 'kits/@kit.ArkTS';
+import { ListReplaceCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -41,5 +41,3 @@ import { ListReplaceCb } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md) |
-| [ListForEachCb](arkts-arkts-listforeachcb-t.md) |
-| [ListReplaceCb](arkts-arkts-listreplacecb-t.md) |

@@ -4,8 +4,6 @@ Enumerates reasons for the activation state changes of the **NavDestination** co
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TRANSITION
@@ -17,8 +15,6 @@ TRANSITION = 0
 Activation state changes due to page navigation.
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,8 +32,6 @@ Activation state changes due to the opening or closing of a modal page.
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -53,8 +47,6 @@ SHEET = 2
 Activation state changes due to the opening or closing of a sheet.
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,8 +64,6 @@ Activation state changes due to the opening or closing of a custom dialog box.
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -90,8 +80,6 @@ Activation state changes due to the opening or closing of an overlay using **Ove
 
 **Since:** 17
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -107,8 +95,6 @@ APP_STATE = 5
 Activation state changes due to switching between foreground and background states of the application.
 
 **Since:** 17
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 

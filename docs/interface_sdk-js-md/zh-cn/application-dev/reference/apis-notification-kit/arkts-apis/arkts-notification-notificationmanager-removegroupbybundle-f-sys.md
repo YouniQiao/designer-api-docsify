@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## removeGroupByBundle
@@ -16,8 +16,6 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | groupName | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -44,79 +42,6 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeGroupByBundleCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('removeGroupByBundle success');
-    }
-}
-
-let bundleOption: notificationManager.BundleOption = { bundle: 'Bundle' };
-let groupName: string = 'GroupName';
-
-notificationManager.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeGroupByBundleCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('removeGroupByBundle success');
-    }
-}
-
-let bundleOption: notificationManager.BundleOption = { bundle: 'bundleName1' };
-let groupName: string = 'GroupName';
-
-notificationManager.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleOption: notificationManager.BundleOption = { bundle: 'Bundle' };
-let groupName: string = 'GroupName';
-
-notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
-    console.info('removeGroupByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 需根据实际情况进行替换
-let bundleOption: notificationManager.BundleOption = { bundle: 'bundleName1' };
-// 需根据实际情况进行替换
-let groupName: string = 'GroupName';
-
-notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
-    console.info('removeGroupByBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`removeGroupByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## removeGroupByBundle
 
@@ -128,8 +53,6 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -140,7 +63,7 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | groupName | string | 是 |
 
 **返回值：**
@@ -160,7 +83,3 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [removeGroupByBundle](#removegroupbybundle)

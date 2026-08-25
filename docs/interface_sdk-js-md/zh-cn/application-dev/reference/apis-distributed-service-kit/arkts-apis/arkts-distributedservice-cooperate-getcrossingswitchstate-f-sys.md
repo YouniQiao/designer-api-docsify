@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## getCrossingSwitchState
@@ -15,8 +15,6 @@ function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boole
 获取目标设备键鼠穿越开关的状态，使用Callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 
@@ -40,40 +38,6 @@ function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boole
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor = "networkId";
-try {
-  cooperate.getCrossingSwitchState(deviceDescriptor, (error: BusinessError, data: boolean) => {
-    if (error) {
-      console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-      return;
-    }
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor = "networkId";
-try {
-  cooperate.getCrossingSwitchState(deviceDescriptor).then((data: boolean) => {
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  }, (error: BusinessError) => {
-    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
-
 
 ## getCrossingSwitchState
 
@@ -84,8 +48,6 @@ function getCrossingSwitchState(networkId: string): Promise<boolean>
 获取目标设备键鼠穿越开关的状态，使用Promise异步方式返回结果。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 11
 
@@ -113,7 +75,3 @@ function getCrossingSwitchState(networkId: string): Promise<boolean>
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getCrossingSwitchState](#getcrossingswitchstate)

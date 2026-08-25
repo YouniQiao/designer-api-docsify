@@ -6,28 +6,24 @@ Describes the fusion pressure sensor data. It extends from [Response](arkts-sens
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Sensors.Sensor
 
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## fusionPressure
 
 ```TypeScript
-fusionPressure: double
+fusionPressure: number
 ```
 
 Pressure percentage on the fused pressure sensor, in percentage (%)
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor

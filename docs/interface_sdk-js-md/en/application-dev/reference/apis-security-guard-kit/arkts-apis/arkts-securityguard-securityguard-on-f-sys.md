@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## on('securityEventOccur')
@@ -15,8 +15,6 @@ function on(type: 'securityEventOccur', securityEventInfo: SecurityEventInfo, ca
 Subscribe the security event.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.QUERY_SECURITY_EVENT
 

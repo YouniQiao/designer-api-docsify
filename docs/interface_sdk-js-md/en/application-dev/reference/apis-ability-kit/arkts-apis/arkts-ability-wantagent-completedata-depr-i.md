@@ -4,8 +4,6 @@ Describes the data returned by after wantAgent.trigger is called.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CompleteData](arkts-ability-wantagent-completedata-i.md)
@@ -29,8 +27,6 @@ Extra data collected by the common event.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [extraInfo](arkts-ability-wantagent-completedata-i.md#extrainfo)
@@ -50,8 +46,6 @@ Request code used to trigger the WantAgent.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -73,8 +67,6 @@ Final data collected by the common event.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [finalData](arkts-ability-wantagent-completedata-i.md#finaldata)
@@ -95,8 +87,6 @@ Triggered WantAgent.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [info](arkts-ability-wantagent-completedata-i.md#info)
@@ -116,8 +106,6 @@ Existing Want that is triggered.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

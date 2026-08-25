@@ -26,8 +26,6 @@ Defines the options of the **Refresh** component.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -43,11 +41,9 @@ builder?: CustomBuilder
 
 Custom content in the refreshing area. NOTE In API version 10 and earlier versions, there is a height limit of 64 vp on custom components. This restriction is removed since API version 11. When a custom component is set with a fixed height, it will be displayed below the refreshing area at that fixed height; when the custom component does not have a height set, its height will adapt to the height of the refreshing area, which may result in the height of the custom component changing to 0 along with the refreshing area. To maintain the intended layout, configure a minimum height constraint for a custom component, which ensures that the component's height does not fall below a certain threshold. For details about how to apply this constraint, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-3-customizing-the-refreshing-area-content-with-builder). Since API version 12, use **refreshingContent** instead of **builder** for customizing the content of the refreshing area, to avoid animation interruptions caused by the destruction and re-creation of the custom component during the refreshing process.
 
-**Type:** CustomBuilder
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +58,13 @@ friction?: number | string
 ```
 
 Coefficient of friction, which indicates the component's sensitivity to the pull-down gesture. The value ranges from 0 to 100. Default value: 62  
-- 0 indicates that the component is not sensitive to the pull-down gesture. - 100 indicates that the component is highly sensitive to the pull-down gesture. - A larger value indicates a more sensitive response of the component to the pull-down gesture.
+- 0 indicates that the component is not sensitive to the pull-down gesture.  
+- 100 indicates that the component is highly sensitive to the pull-down gesture.  
+- A larger value indicates a more sensitive response of the component to the pull-down gesture.
 
 **Type:** number \| string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -88,8 +84,6 @@ Distance from the pull-down starting point to the top of the component. Default 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -102,11 +96,9 @@ promptText?: ResourceStr
 
 Custom text displayed at the bottom of the refreshing area. NOTE When setting the text, follow the constraints on the **Text** components. If you are using **builder** or **refreshingContent** to customize the content displayed in the refreshing area, the text set with **promptText** will not be displayed. When **promptText** is set and effective, the refreshOffset attribute defaults to 96 vp. The maximum font scale factor for the custom text, as specified by maxFontScale, is 2.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,8 +118,6 @@ Whether the component is being refreshed. The value **true** means that the comp
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -143,8 +133,6 @@ Custom content in the refreshing area. NOTE If this parameter and the **builder*
 **Type:** ComponentContent
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'kits/@kit.DrmKit';
 ```
 
 ## getMediaKeySystemUuid
@@ -15,8 +15,6 @@ function getMediaKeySystemUuid(name: string): string
 获取DRM解决方案支持的DRM内容保护系统唯一标识。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -41,12 +39,3 @@ function getMediaKeySystemUuid(name: string): string
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [24700101](../errorcode-drm.md#24700101-未知错误) |
 | [24700201](../errorcode-drm.md#24700201-服务异常) |
-
-**示例**
-
-```TypeScript
-import { drm } from '@kit.DrmKit';
-
-let uuid: string = drm.getMediaKeySystemUuid('com.clearplay.drm');
-console.info("getMediaKeySystemUuid: ", uuid);
-```

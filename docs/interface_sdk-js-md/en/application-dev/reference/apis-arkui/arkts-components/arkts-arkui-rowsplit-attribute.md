@@ -1,12 +1,10 @@
 # RowSplit properties/events
 
-In addition to the universal attributes, the following attributes are supported.The universal events are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** RowSplitAttribute extends CommonMethod<RowSplitAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,8 +25,6 @@ Sets whether the divider can be dragged.
 > extent that the resultant width falls within the maximum and minimum widths of the child components.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

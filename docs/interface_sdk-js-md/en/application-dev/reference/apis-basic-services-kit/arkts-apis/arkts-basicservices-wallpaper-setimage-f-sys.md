@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setImage
@@ -15,8 +15,6 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType,
 Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
@@ -40,74 +38,6 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-// The source type is string.
-let wallpaperPath = "/data/storage/el2/base/haps/entry/files/js.jpeg";
-wallpaper.setImage(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError) => {
-    if (error) {
-        console.error(`failed to setImage. Code: ${error.code}, Message: ${error.message}`);
-        return;
-     }
-    console.info(`success to setImage.`);
-});
-  
-// The source type is image.PixelMap.
-let imageSource = image.createImageSource("file://" + wallpaperPath);
-let opts: image.DecodingOptions = {
-    desiredSize: {
-        height: 3648,
-        width: 2736
-    }
-};
-imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
-    wallpaper.setImage(pixelMap, wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError) => {
-        if (error) {
-            console.error(`failed to setImage. Code: ${error.code}, Message: ${error.message}`);
-            return;
-        }
-        console.info(`success to setImage.`);
-    });
-}).catch((error: BusinessError) => {
-    console.error(`failed to createPixelMap. Code: ${error.code}, Message: ${error.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-// The source type is string.
-let wallpaperPath = "/data/storage/el2/base/haps/entry/files/js.jpeg";
-wallpaper.setImage(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-    console.info(`success to setImage.`);
-}).catch((error: BusinessError) => {
-    console.error(`failed to setImage. Code: ${error.code}, Message: ${error.message}`);
-});
-
-// The source type is image.PixelMap.
-let imageSource = image.createImageSource("file://" + wallpaperPath);
-let opts: image.DecodingOptions = {
-    desiredSize: {
-        height: 3648,
-        width: 2736
-    }
-};
-imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
-    wallpaper.setImage(pixelMap, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-        console.info(`success to setImage.`);
-    }).catch((error: BusinessError) => {
-        console.error(`failed to setImage. Code: ${error.code}, Message: ${error.message}`);
-    });
-}).catch((error: BusinessError) => {
-    console.error(`failed to createPixelMap. Code: ${error.code}, Message: ${error.message}`);
-});
-```
-
 
 ## setImage
 
@@ -118,8 +48,6 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType)
 Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
@@ -147,7 +75,3 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [setImage](#setimage)

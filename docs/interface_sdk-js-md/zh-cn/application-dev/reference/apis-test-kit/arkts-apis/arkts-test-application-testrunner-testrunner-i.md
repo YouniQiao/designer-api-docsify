@@ -4,14 +4,12 @@ TestRunner模块提供了框架测试的能力。包括准备单元测试环境�
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { TestRunner } from '@kit.TestKit';
+import { TestRunner } from 'kits/@kit.TestKit';
 ```
 
 ## onPrepare
@@ -24,48 +22,9 @@ onPrepare(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { TestRunner } from '@kit.TestKit';
-
-// 实现自定义测试运行器
-export default class UserTestRunner implements TestRunner {
-  // 准备单元测试环境
-  onPrepare() {
-    console.info('Trigger onPrepare');
-  }
-
-  onRun() {
-  }
-}
-```
-
-## onPrepare
-
-```TypeScript
-onPrepare: OnPrepareFn
-```
-
-为运行测试用例准备单元测试环境。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-参见 [onPrepare](#onprepare)
 
 ## onRun
 
@@ -77,55 +36,9 @@ onRun(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { TestRunner } from '@kit.TestKit';
-
-// 实现自定义测试运行器
-export default class UserTestRunner implements TestRunner {
-  // 准备单元测试环境
-  onPrepare() {
-    console.info('Trigger onPrepare');
-  }
-
-  // 运行测试用例
-  onRun() {
-    console.info('Trigger onRun');
-  }
-
-  // 测试完成时的回调处理
-  onStop() {
-    console.info('Trigger onStop');
-  }
-}
-```
-
-## onRun
-
-```TypeScript
-onRun: OnRunFn
-```
-
-运行测试用例。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-参见 [onRun](#onrun)
 
 ## onStop
 
@@ -137,33 +50,8 @@ onStop?: OnStopFn
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { TestRunner } from '@kit.TestKit';
-
-export default class UserTestRunner implements TestRunner {
-  public onPrepare: () => void = () => {
-    console.info('Trigger onPrepare');
-  }
-
-  public onRun: () => void = () => {
-    console.info('Trigger onRun');
-  }
-
-  public onStop?: () => void = () => {
-    console.info('Trigger onStop');
-  }
-}
-```

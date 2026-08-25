@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** KVManager
@@ -27,8 +25,6 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCa
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** closeKVStore
@@ -43,62 +39,6 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCa
 | [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-let kvManager;
-const options = {
-    createIfMissing: true,
-    encrypt: false,
-    backup: false,
-    autoSync: false,
-    kvStoreType: distributedData.KVStoreType.SINGLE_VERSION,
-    schema: undefined,
-    securityLevel: distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('storeId', options, async function (err, store) {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.closeKVStore('appId', 'storeId', kvStore, function (err, data) {
-            console.log('closeKVStore success');
-        });
-    });
-} catch (e) {
-    console.log('closeKVStore e ' + e);
-}
-```
-
-```TypeScript
-let kvManager;
-let kvStore;
-const options = {
-    createIfMissing: true,
-    encrypt: false,
-    backup: false,
-    autoSync: false,
-    kvStoreType: distributedData.KVStoreType.SINGLE_VERSION,
-    schema: undefined,
-    securityLevel: distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.closeKVStore('appId', 'storeId', kvStore).then(() => {
-            console.log('closeKVStore success');
-        }).catch((err) => {
-            console.log('closeKVStore err ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('CloseKVStore getKVStore err ' + JSON.stringify(err));
-    });
-} catch (e) {
-    console.log('closeKVStore e ' + e);
-}
-```
 
 ## closeKVStore
 
@@ -110,8 +50,6 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** closeKVStore
@@ -132,10 +70,6 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [closeKVStore](#closekvstore)
-
 ## deleteKVStore
 
 ```TypeScript
@@ -145,8 +79,6 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 通过storeId的值删除指定的KVStore数据库，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -162,62 +94,6 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 | [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-let kvManager;
-let kvStore;
-const options = {
-    createIfMissing : true,
-    encrypt : false,
-    backup : false,
-    autoSync : true,
-    kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-    schema : undefined,
-    securityLevel : distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('store', options, async function (err, store) {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.deleteKVStore('appId', 'storeId', function (err, data) {
-            console.log('deleteKVStore success');
-        });
-    });
-} catch (e) {
-    console.log('DeleteKVStore e ' + e);
-}
-```
-
-```TypeScript
-let kvManager;
-let kvStore;
-const options = {
-    createIfMissing : true,
-    encrypt : false,
-    backup : false,
-    autoSync : true,
-    kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-    schema : undefined,
-    securityLevel : distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.deleteKVStore('appId', 'storeId').then(() => {
-            console.log('deleteKVStore success');
-        }).catch((err) => {
-            console.log('deleteKVStore err ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('getKVStore err ' + JSON.stringify(err));
-    });
-} catch (e) {
-    console.log('deleteKVStore e ' + e);
-}
-```
-
 ## deleteKVStore
 
 ```TypeScript
@@ -227,8 +103,6 @@ deleteKVStore(appId: string, storeId: string): Promise<void>
 通过storeId的值删除指定的KVStore数据库，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -249,10 +123,6 @@ deleteKVStore(appId: string, storeId: string): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [deleteKVStore](#deletekvstore)
-
 ## getAllKVStoreId
 
 ```TypeScript
@@ -262,8 +132,6 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 获取所有通过 getKVStore 方法创建的且没有调用 [deleteKVStore](#deletekvstore) 方法删除的KVStore数据库的storeId，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -278,35 +146,6 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 | appId | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | 是 |
 
-**示例**
-
-```TypeScript
-let kvManager;
-try {
-    kvManager.getAllKVStoreId('appId', function (err, data) {
-        console.log('GetAllKVStoreId success');
-        console.log('GetAllKVStoreId size = ' + data.length);
-    });
-} catch (e) {
-    console.log('GetAllKVStoreId e ' + e);
-}
-```
-
-```TypeScript
-let kvManager;
-try {
-    console.log('GetAllKVStoreId');
-    kvManager.getAllKVStoreId('appId').then((data) => {
-        console.log('getAllKVStoreId success');
-        console.log('size = ' + data.length);
-    }).catch((err) => {
-        console.log('getAllKVStoreId err ' + JSON.stringify(err));
-    });
-} catch(e) {
-    console.log('getAllKVStoreId e ' + e);
-}
-```
-
 ## getAllKVStoreId
 
 ```TypeScript
@@ -316,8 +155,6 @@ getAllKVStoreId(appId: string): Promise<string[]>
 获取所有通过 getKVStore 方法创建的且没有调用 [deleteKVStore](#deletekvstore) 方法删除的KVStore数据库的storeId，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -337,10 +174,6 @@ getAllKVStoreId(appId: string): Promise<string[]>
 | --- |
 | Promise & lt;string[] & gt; |
 
-**示例**
-
-参见 [getAllKVStoreId](#getallkvstoreid)
-
 ## getKVStore
 
 ```TypeScript
@@ -350,8 +183,6 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 通过指定Options和storeId，创建并获取KVStore数据库，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -372,56 +203,6 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 | --- |
 | Promise & lt;T & gt;, & lt;T extends KVStore & gt; |
 
-**示例**
-
-```TypeScript
-let kvStore;
-let kvManager;
-try {
-    const options = {
-        createIfMissing : true,
-        encrypt : false,
-        backup : false,
-        autoSync : true,
-        kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-        securityLevel : distributedData.SecurityLevel.S3,
-    };
-    kvManager.getKVStore('storeId', options, function (err, store) {
-        if (err) {
-            console.log("getKVStore err: "  + JSON.stringify(err));
-            return;
-        }
-        console.log("getKVStore success");
-        kvStore = store;
-    });
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
-```TypeScript
-let kvStore;
-let kvManager;
-try {
-    const options = {
-        createIfMissing : true,
-        encrypt : false,
-        backup : false,
-        autoSync : true,
-        kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-        securityLevel : distributedData.SecurityLevel.S3,
-    };
-    kvManager.getKVStore('storeId', options).then((store) => {
-        console.log("getKVStore success");
-        kvStore = store;
-    }).catch((err) => {
-        console.log("getKVStore err: "  + JSON.stringify(err));
-    });
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
 ## getKVStore
 
 ```TypeScript
@@ -431,8 +212,6 @@ getKVStore<T extends KVStore>(storeId: string, options: Options, callback: Async
 通过指定Options和storeId，创建并获取KVStore数据库，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -448,10 +227,6 @@ getKVStore<T extends KVStore>(storeId: string, options: Options, callback: Async
 | options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 |
 
-**示例**
-
-参见 [getKVStore](#getkvstore)
-
 ## off
 
 ```TypeScript
@@ -461,8 +236,6 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 取消订阅服务状态变更通知。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -477,21 +250,6 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 | event | 'distributedDataServiceDie' | 是 |
 | deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
-**示例**
-
-```TypeScript
-let kvManager;
-try {
-    console.log('KVManagerOff');
-    const deathCallback = function () {
-        console.log('death callback call');
-    }
-    kvManager.off('distributedDataServiceDie', deathCallback);
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
 ## on
 
 ```TypeScript
@@ -501,8 +259,6 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 订阅服务状态变更通知。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -516,18 +272,3 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 | --- | --- | --- |
 | event | 'distributedDataServiceDie' | 是 |
 | deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvManager;
-try {
-    console.log('KVManagerOn');
-    const deathCallback = function () {
-        console.log('death callback call');
-    }
-    kvManager.on('distributedDataServiceDie', deathCallback);
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```

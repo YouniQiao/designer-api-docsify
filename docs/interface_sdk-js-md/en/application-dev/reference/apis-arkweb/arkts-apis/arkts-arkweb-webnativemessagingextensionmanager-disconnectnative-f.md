@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
 ```
 
 ## disconnectNative
@@ -15,8 +15,6 @@ function disconnectNative(connectionId: number): Promise<void>
 Disconnects the connection of a specified web native message extension.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.WEB_NATIVE_MESSAGING
 
@@ -44,31 +42,3 @@ Disconnects the connection of a specified web native message extension.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
-
-export default class EntryAbility extends UIAbility {
-  async disconnect() {
-    try {
-        let connectionId = 1;
-        // Assume that the connection has been established and connectionId has been obtained.
-        await webNativeMessagingExtensionManager.disconnectNative(connectionId).then(() => {
-            console.info('disconnectNative success');
-        })
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`disconnectNative failed, code is ${code}, message is ${message}`);
-    }
-  }
-  onForeground() {
-    this.disconnect();
-  }
-}
-```

@@ -19,8 +19,6 @@ Obtains information about the running processes. This API uses a promise to retu
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
@@ -58,8 +56,6 @@ Obtains information about the running processes. This API uses an asynchronous c
 > @link @ohos.app.ability.appManager:appManager.getRunningProcessInformation()} instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

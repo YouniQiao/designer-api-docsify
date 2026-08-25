@@ -4,8 +4,6 @@ Enumerates the tip codes used during the fingerprint authentication process.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -19,8 +17,6 @@ FINGERPRINT_AUTH_TIP_GOOD = 0
 The obtained fingerprint image is in good condition.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -36,8 +32,6 @@ Large fingerprint image noise is detected due to suspicious or detected dirt on 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -51,8 +45,6 @@ FINGERPRINT_AUTH_TIP_INSUFFICIENT = 2
 The noise of the fingerprint image is too large to be processed.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -68,8 +60,6 @@ Incomplete fingerprint image is detected.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -84,8 +74,6 @@ The fingerprint image is incomplete due to fast movement.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -99,8 +87,6 @@ FINGERPRINT_AUTH_TIP_TOO_SLOW = 5
 Failed to obtain the fingerprint image because the finger seldom moves.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 

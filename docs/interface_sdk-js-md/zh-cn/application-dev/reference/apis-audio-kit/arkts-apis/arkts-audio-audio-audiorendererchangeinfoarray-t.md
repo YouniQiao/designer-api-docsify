@@ -8,8 +8,6 @@ type AudioRendererChangeInfoArray = Array<Readonly<AudioRendererChangeInfo>>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **属性类型：** Array&lt;Readonly&lt;[AudioRendererChangeInfo](arkts-audio-audio-audiorendererchangeinfo-i.md)&gt;&gt;

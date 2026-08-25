@@ -15,8 +15,6 @@ Cancels all notifications. This API uses an asynchronous callback to return the 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [cancelAll](arkts-notification-notificationmanager-cancelall-f.md)
@@ -29,32 +27,6 @@ Cancels all notifications. This API uses an asynchronous callback to return the 
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-// cancel callback
-let cancelAllCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("cancelAll failed " + JSON.stringify(err));
-  } else {
-    console.info("cancelAll success");
-  }
-}
-Notification.cancelAll(cancelAllCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.cancelAll().then(() => {
-  console.info("cancelAll success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`cancelAll failed, code is ${err}`);
-});
-```
-
 
 ## cancelAll
 
@@ -65,8 +37,6 @@ function cancelAll(): Promise<void>
 Cancels all notifications. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -79,7 +49,3 @@ Cancels all notifications. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [cancelAll](#cancelall)

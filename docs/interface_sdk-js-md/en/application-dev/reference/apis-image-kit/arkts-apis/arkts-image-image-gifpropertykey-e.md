@@ -4,8 +4,6 @@ Enumerates the GIF image information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GIF_DELAY_TIME
@@ -17,8 +15,6 @@ GIF_DELAY_TIME = 'GifDelayTime'
 Duration for playing each frame of a GIF image, in milliseconds.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,8 +28,6 @@ Disposal type of each frame in a GIF image.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## GIF_HAS_GLOBAL_COLOR_MAP
@@ -45,8 +39,6 @@ GIF_HAS_GLOBAL_COLOR_MAP = 'GifHasGlobalColorMap'
 Whether the GIF image has a global color map.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +54,6 @@ Canvas width.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -77,8 +67,6 @@ GIF_CANVAS_HEIGHT = 'GifCanvasHeight'
 Canvas height.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,8 +82,6 @@ Loop count.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -109,8 +95,6 @@ GIF_UNCLAMPED_DELAY_TIME = 'GifUnclampedDelayTime'
 Unclamped delay of each frame in milliseconds.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

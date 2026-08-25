@@ -1,18 +1,17 @@
 # CreateOptions
 
 Options for creating an image or video asset.The title must meet the following requirements:  
-- It must not contain a file name extension. - The total length of the file name must be between 1 and 255 characters.
+- It must not contain a file name extension.  
+- The total length of the file name must be between 1 and 255 characters.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## subtype
@@ -26,8 +25,6 @@ Subtype of the image or video file.
 **Type:** PhotoSubtype
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +41,6 @@ Title of the image or video.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

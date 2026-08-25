@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 22
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -26,8 +24,6 @@ constructor(start: number, end: number, velocity: number, prop: SpringProp)
 构造器参数。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 22
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## queryContact
@@ -15,8 +15,6 @@ function queryContact(key: string, callback: AsyncCallback<Contact>): void
 根据联系人唯一标识符key查询联系人。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -33,196 +31,6 @@ function queryContact(key: string, callback: AsyncCallback<Contact>): void
 | key | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
-**示例**
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContact(context, 'xxx', (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contact. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 查询key='xxx'的联系人
-contact.queryContact('xxx', (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contact. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-});
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContact(context, 'xxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contact. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 查询key='xxx'，holderId为1的联系人
-contact.queryContact('xxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contact. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-});
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContact(context, 'xxx', {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contact. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 传入key='xxx'以及联系人的属性列表查询
-contact.queryContact('xxx', {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contact. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-});
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // 请在组件内获取context。
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.queryContact(context, 'xxx', {
-    holderId: 1,
-    bundleName: '',
-    displayName: ''
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  }, (err: BusinessError, data) => {
-    if (err) {
-      console.error(`Failed to query Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-  });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// 查询key,holder,attrs满足条件的联系人
-contact.queryContact('xxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contact. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-});
-```
-
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryContact(context, 'xxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// 异步回调，查询联系人
-let promise = contact.queryContact('xxx', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contact. data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## queryContact
 
@@ -233,8 +41,6 @@ function queryContact(context: Context, key: string, callback: AsyncCallback<Con
 根据key查询联系人。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -255,10 +61,6 @@ function queryContact(context: Context, key: string, callback: AsyncCallback<Con
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
-**示例**
-
-参见 [queryContact](#querycontact)
-
 
 ## queryContact
 
@@ -269,8 +71,6 @@ function queryContact(key: string, holder: Holder, callback: AsyncCallback<Conta
 根据key和holder查询联系人。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -288,10 +88,6 @@ function queryContact(key: string, holder: Holder, callback: AsyncCallback<Conta
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
-**示例**
-
-参见 [queryContact](#querycontact)
-
 
 ## queryContact
 
@@ -302,8 +98,6 @@ function queryContact(context: Context, key: string, holder: Holder, callback: A
 根据key和holder查询联系人。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -325,10 +119,6 @@ function queryContact(context: Context, key: string, holder: Holder, callback: A
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
-**示例**
-
-参见 [queryContact](#querycontact)
-
 
 ## queryContact
 
@@ -339,8 +129,6 @@ function queryContact(key: string, attrs: ContactAttributes, callback: AsyncCall
 根据key和指定属性(attrs)查询联系人。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -358,10 +146,6 @@ function queryContact(key: string, attrs: ContactAttributes, callback: AsyncCall
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
-**示例**
-
-参见 [queryContact](#querycontact)
-
 
 ## queryContact
 
@@ -372,8 +156,6 @@ function queryContact(context: Context, key: string, attrs: ContactAttributes, c
 根据key和attrs查询联系人。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -395,10 +177,6 @@ function queryContact(context: Context, key: string, attrs: ContactAttributes, c
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
-**示例**
-
-参见 [queryContact](#querycontact)
-
 
 ## queryContact
 
@@ -409,8 +187,6 @@ function queryContact(key: string, holder: Holder, attrs: ContactAttributes, cal
 根据key、holder和attrs查询联系人。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -429,10 +205,6 @@ function queryContact(key: string, holder: Holder, attrs: ContactAttributes, cal
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
-**示例**
-
-参见 [queryContact](#querycontact)
-
 
 ## queryContact
 
@@ -443,8 +215,6 @@ function queryContact(context: Context, key: string, holder: Holder, attrs: Cont
 根据key、holder和attrs查询联系人。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -467,10 +237,6 @@ function queryContact(context: Context, key: string, holder: Holder, attrs: Cont
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
 
-**示例**
-
-参见 [queryContact](#querycontact)
-
 
 ## queryContact
 
@@ -481,8 +247,6 @@ function queryContact(key: string, holder?: Holder, attrs?: ContactAttributes): 
 根据key、holder和attrs查询联系人。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -506,10 +270,6 @@ function queryContact(key: string, holder?: Holder, attrs?: ContactAttributes): 
 | --- |
 | Promise&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; |
 
-**示例**
-
-参见 [queryContact](#querycontact)
-
 
 ## queryContact
 
@@ -520,8 +280,6 @@ function queryContact(context: Context, key: string, holder?: Holder, attrs?: Co
 根据key、holder和attrs查询联系人。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -548,7 +306,3 @@ function queryContact(context: Context, key: string, holder?: Holder, attrs?: Co
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-**示例**
-
-参见 [queryContact](#querycontact)

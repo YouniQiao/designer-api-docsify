@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## usbFunctionsFromString
@@ -15,8 +15,6 @@ function usbFunctionsFromString(funcs: string): number
 在设备模式下，将字符串形式的USB功能列表转化为数字掩码。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 9
 
@@ -37,10 +35,3 @@ function usbFunctionsFromString(funcs: string): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-let funcs = "acm";
-let ret = usb.usbFunctionsFromString(funcs);
-```

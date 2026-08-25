@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setDomainAccountPolicy
@@ -15,8 +15,6 @@ function setDomainAccountPolicy(admin: Want, domainAccountInfo: osAccount.Domain
 设置域账号策略。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
@@ -40,57 +38,3 @@ function setDomainAccountPolicy(admin: Want, domainAccountInfo: osAccount.Domain
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError, osAccount } from '@kit.BasicServicesKit';
-
-async function setDomainAccountPolicy() {
-  let wantTemp: Want = {
-    // 需根据实际情况进行替换
-    bundleName: 'com.example.myapplication',
-    abilityName: 'EnterpriseAdminAbility'
-  };
-  let policy: accountManager.DomainAccountPolicy = {
-    // 需根据实际情况进行替换
-    authenticationValidityPeriod: 300,
-    passwordValidityPeriod: 420,
-    passwordExpirationNotification: 60
-  };
-  // 设置全局域账号策略
-  let accountInfo: osAccount.DomainAccountInfo = {
-    domain: '',
-    accountName: '',
-    serverConfigId: ''
-  };
-  try {
-    accountManager.setDomainAccountPolicy(wantTemp, accountInfo, policy);
-    console.info('Succeeded in setting global domainAccount policy.');
-  } catch (err) {
-    console.error(`Failed to set domainAccount policy. Code: ${err.code}, message: ${err.message}`);
-  }
-  // 设置指定域账号策略
-  let accountInfo2: osAccount.DomainAccountInfo = {
-    domain: '',
-    accountName: '',
-    serverConfigId: ''
-  };
-  // 需根据实际情况替换
-  let userId: number = 100;
-  await osAccount.getAccountManager().getOsAccountDomainInfo(userId)
-    .then((domainAccountInfo: osAccount.DomainAccountInfo) => {
-      accountInfo2 = domainAccountInfo;
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to get account domain info. Code: ${err.code}, message: ${err.message}`);
-    });
-  try {
-    accountManager.setDomainAccountPolicy(wantTemp, accountInfo2, policy);
-    console.info('Succeeded in setting domain account policy.');
-  } catch (err) {
-    console.error(`Failed to set domain account policy. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```

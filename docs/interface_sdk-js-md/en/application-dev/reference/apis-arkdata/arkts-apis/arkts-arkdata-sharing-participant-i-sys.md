@@ -4,8 +4,6 @@ Represents information about a participant of device-cloud sharing.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents information about a participant of device-cloud sharing.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## attachInfo
@@ -27,8 +25,6 @@ Additional information, such as the verification code used for participant ident
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -46,8 +42,6 @@ ID of the participant.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Permissions on the shared data. The Privilege defaults are used by default.
 **Type:** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -82,8 +74,6 @@ Role of the participant, inviter or invitee. The default value is undefined.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ State of the device-cloud sharing. The default value is undefined.
 **Type:** State
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 

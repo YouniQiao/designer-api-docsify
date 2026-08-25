@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 ## ERR_DISTRIBUTED_SCHEDULE_FAILED
@@ -18,8 +16,6 @@ ERR_DISTRIBUTED_SCHEDULE_FAILED = 37
 **系统接口**: 此接口为系统接口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 

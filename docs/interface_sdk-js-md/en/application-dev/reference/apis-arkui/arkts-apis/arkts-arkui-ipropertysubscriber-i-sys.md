@@ -4,8 +4,6 @@ Provides an interface for attribute subscribers.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,8 +23,6 @@ Called when the object is about to be destroyed.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -37,14 +33,6 @@ Called when the object is about to be destroyed.
 | --- | --- | --- |
 | owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No |
 
-**Examples**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let link = AppStorage.setAndLink('PropB', 49); // PropA -> 47, PropB -> 49
-link.aboutToBeDeleted();
-```
-
 ## id
 
 ```TypeScript
@@ -54,8 +42,6 @@ id(): number
 Obtains the ID.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

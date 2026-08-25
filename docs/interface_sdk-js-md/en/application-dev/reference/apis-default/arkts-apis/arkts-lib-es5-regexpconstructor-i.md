@@ -1,7 +1,5 @@
 # RegExpConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (pattern: RegExp | string): RegExp
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@
 ```TypeScript
 (pattern: string, flags?: string): RegExp
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -50,8 +44,6 @@
 new(pattern: RegExp | string): RegExp
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -67,8 +59,6 @@ new(pattern: RegExp | string): RegExp
 ```TypeScript
 new(pattern: string, flags?: string): RegExp
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -89,8 +79,6 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility 
 
 ## "$'"
@@ -100,8 +88,6 @@ new(pattern: string, flags?: string): RegExp
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -113,8 +99,6 @@ new(pattern: string, flags?: string): RegExp
 
 **Type:** string
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility 
 
 ## "$`"
@@ -124,8 +108,6 @@ new(pattern: string, flags?: string): RegExp
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -137,8 +119,6 @@ $1: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility 
 
 ## $2
@@ -148,8 +128,6 @@ $2: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -161,8 +139,6 @@ $3: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility 
 
 ## $4
@@ -172,8 +148,6 @@ $4: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -185,8 +159,6 @@ $5: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility 
 
 ## $6
@@ -196,8 +168,6 @@ $6: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -209,8 +179,6 @@ $7: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility 
 
 ## $8
@@ -220,8 +188,6 @@ $8: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -233,8 +199,6 @@ $9: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility 
 
 ## $_
@@ -244,8 +208,6 @@ $_: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -257,8 +219,6 @@ input: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility 
 
 ## lastMatch
@@ -268,8 +228,6 @@ lastMatch: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -281,8 +239,6 @@ lastParen: string
 
 **Type:** string
 
-**ArkTS mode:** 
-
 **Deprecated since:** legacy feature for browser compatibility 
 
 ## leftContext
@@ -292,8 +248,6 @@ leftContext: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 
 
@@ -305,8 +259,6 @@ readonly prototype: RegExp
 
 **Type:** RegExp
 
-**ArkTS mode:** 
-
 ## rightContext
 
 ```TypeScript
@@ -314,7 +266,5 @@ rightContext: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 
 
 **Deprecated since:** legacy feature for browser compatibility 

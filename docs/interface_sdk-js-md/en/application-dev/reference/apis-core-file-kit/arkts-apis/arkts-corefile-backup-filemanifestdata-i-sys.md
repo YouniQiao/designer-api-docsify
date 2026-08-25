@@ -4,8 +4,6 @@ Manifest file information in incremental data. FileManifestData is useful when d
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Manifest file information in incremental data. FileManifestData is useful when d
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## manifestFd
 
 ```TypeScript
-manifestFd: int
+manifestFd: number
 ```
 
 A file descriptor for the manifest file that holds the data
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 

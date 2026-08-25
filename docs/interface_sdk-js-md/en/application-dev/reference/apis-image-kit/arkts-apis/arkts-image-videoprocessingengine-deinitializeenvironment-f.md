@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
+import { videoProcessingEngine } from 'kits/@kit.ImageKit';
 ```
 
 ## deinitializeEnvironment
@@ -15,8 +15,6 @@ function deinitializeEnvironment(): Promise<void>
 Deinitialize global environment for image processing.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
@@ -33,14 +31,3 @@ Deinitialize global environment for image processing.
 | Error Code ID |
 | --- |
 | [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
-
-**Examples**
-
-```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
-
-async function deinitializeEnvironment() {
-  videoProcessingEngine.initializeEnvironment();
-  videoProcessingEngine.deinitializeEnvironment();
-}
-```

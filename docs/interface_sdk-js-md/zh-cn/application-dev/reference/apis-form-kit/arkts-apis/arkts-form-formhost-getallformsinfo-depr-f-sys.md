@@ -15,8 +15,6 @@ function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): voi
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md)
@@ -33,32 +31,6 @@ function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): voi
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getAllFormsInfo((error: Base.BusinessError, data: formInfo.FormInfo[]) => {
-  if (error.code) {
-    console.error(`formHost getAllFormsInfo, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`formHost getAllFormsInfo, data: ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
-  console.info(`formHost getAllFormsInfo data: ${JSON.stringify(data)}`);
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost getAllFormsInfo, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## getAllFormsInfo
 
@@ -69,8 +41,6 @@ function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>
 获取设备上所有应用提供的卡片信息。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -87,7 +57,3 @@ function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |
-
-**示例**
-
-参见 [getAllFormsInfo](#getallformsinfo)

@@ -4,29 +4,25 @@ Describes the attributes that describe the font size and layout. A typeface has 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphics.Drawing
 
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## ascent
 
 ```TypeScript
-ascent: double
+ascent: number
 ```
 
 Distance from the baseline to the highest coordinate of the text. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -35,16 +31,14 @@ Distance from the baseline to the highest coordinate of the text. The value is a
 ## avgCharWidth
 
 ```TypeScript
-avgCharWidth?: double
+avgCharWidth?: number
 ```
 
 Average character width.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -53,16 +47,14 @@ Average character width.
 ## bottom
 
 ```TypeScript
-bottom: double
+bottom: number
 ```
 
 Maximum distance from the baseline to the lowest coordinate of the text. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -71,16 +63,14 @@ Maximum distance from the baseline to the lowest coordinate of the text. The val
 ## capHeight
 
 ```TypeScript
-capHeight?: double
+capHeight?: number
 ```
 
 Height of a capital letter. The value is usually a negative value.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -89,16 +79,14 @@ Height of a capital letter. The value is usually a negative value.
 ## descent
 
 ```TypeScript
-descent: double
+descent: number
 ```
 
 Distance from the baseline to the lowest coordinate of the text. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -116,8 +104,6 @@ Font measurement flags that are valid.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -125,16 +111,14 @@ Font measurement flags that are valid.
 ## leading
 
 ```TypeScript
-leading: double
+leading: number
 ```
 
 Interline spacing, that is, the distance from the descent of one line of text to the ascent of the next line. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -143,16 +127,14 @@ Interline spacing, that is, the distance from the descent of one line of text to
 ## maxCharWidth
 
 ```TypeScript
-maxCharWidth?: double
+maxCharWidth?: number
 ```
 
 Maximum character width.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -161,16 +143,14 @@ Maximum character width.
 ## strikethroughPosition
 
 ```TypeScript
-strikethroughPosition?: double
+strikethroughPosition?: number
 ```
 
 Vertical distance from the baseline to the bottom of the strikethrough. The value is usually a negative value.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -179,16 +159,14 @@ Vertical distance from the baseline to the bottom of the strikethrough. The valu
 ## strikethroughThickness
 
 ```TypeScript
-strikethroughThickness?: double
+strikethroughThickness?: number
 ```
 
 Thickness of the strikethrough.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -197,16 +175,14 @@ Thickness of the strikethrough.
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
 Maximum distance from the baseline to the highest coordinate of the text. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -215,16 +191,14 @@ Maximum distance from the baseline to the highest coordinate of the text. The va
 ## underlinePosition
 
 ```TypeScript
-underlinePosition?: double
+underlinePosition?: number
 ```
 
 Vertical distance from the baseline to the top of the underline. The value is usually a positive number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -233,16 +207,14 @@ Vertical distance from the baseline to the top of the underline. The value is us
 ## underlineThickness
 
 ```TypeScript
-underlineThickness?: double
+underlineThickness?: number
 ```
 
 Thickness of the underline.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -251,16 +223,14 @@ Thickness of the underline.
 ## xHeight
 
 ```TypeScript
-xHeight?: double
+xHeight?: number
 ```
 
 Height of the lowercase letter x. The value is usually a negative value.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -269,16 +239,14 @@ Height of the lowercase letter x. The value is usually a negative value.
 ## xMax
 
 ```TypeScript
-xMax?: double
+xMax?: number
 ```
 
 Horizontal distance from the rightmost edge of any glyph bounding box to the origin. The value is a positive number, indicating the maximum horizontal coordinate across all glyph bounding boxes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -287,16 +255,14 @@ Horizontal distance from the rightmost edge of any glyph bounding box to the ori
 ## xMin
 
 ```TypeScript
-xMin?: double
+xMin?: number
 ```
 
 Horizontal distance from the leftmost edge of any glyph bounding box to the origin. This value is usually less than 0, indicating the minimum horizontal coordinate across all glyph bounding boxes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

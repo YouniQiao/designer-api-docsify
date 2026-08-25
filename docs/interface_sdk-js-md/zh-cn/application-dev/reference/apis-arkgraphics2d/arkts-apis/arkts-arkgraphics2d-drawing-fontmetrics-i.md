@@ -4,29 +4,25 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## ascent
 
 ```TypeScript
-ascent: double
+ascent: number
 ```
 
 文字最高处到基线之间的距离，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -35,16 +31,14 @@ ascent: double
 ## avgCharWidth
 
 ```TypeScript
-avgCharWidth?: double
+avgCharWidth?: number
 ```
 
 平均字符宽度，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -53,16 +47,14 @@ avgCharWidth?: double
 ## bottom
 
 ```TypeScript
-bottom: double
+bottom: number
 ```
 
 字体中任意字形边界框超出基线下方的最大距离，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -71,16 +63,14 @@ bottom: double
 ## capHeight
 
 ```TypeScript
-capHeight?: double
+capHeight?: number
 ```
 
 大写字母顶部相对于基线的垂直偏移量，浮点数，通常为负值。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -89,16 +79,14 @@ capHeight?: double
 ## descent
 
 ```TypeScript
-descent: double
+descent: number
 ```
 
 基线到文字最低处之间的距离，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -116,8 +104,6 @@ flags?: FontMetricsFlags
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -125,16 +111,14 @@ flags?: FontMetricsFlags
 ## leading
 
 ```TypeScript
-leading: double
+leading: number
 ```
 
 行间距，从上一行文字descent到下一行文字ascent之间的距离，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -143,16 +127,14 @@ leading: double
 ## maxCharWidth
 
 ```TypeScript
-maxCharWidth?: double
+maxCharWidth?: number
 ```
 
 最大字符宽度，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -161,16 +143,14 @@ maxCharWidth?: double
 ## strikethroughPosition
 
 ```TypeScript
-strikethroughPosition?: double
+strikethroughPosition?: number
 ```
 
 文本基线到删除线的垂直距离，浮点数，通常为负值。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -179,16 +159,14 @@ strikethroughPosition?: double
 ## strikethroughThickness
 
 ```TypeScript
-strikethroughThickness?: double
+strikethroughThickness?: number
 ```
 
 文本删除线的厚度，即贯穿文本字符的水平线的宽度，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -197,16 +175,14 @@ strikethroughThickness?: double
 ## top
 
 ```TypeScript
-top: double
+top: number
 ```
 
 字体中任意字形边界框超出基线上方的最大距离，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -215,16 +191,14 @@ top: double
 ## underlinePosition
 
 ```TypeScript
-underlinePosition?: double
+underlinePosition?: number
 ```
 
 文本基线到下划线顶部的垂直距离，浮点数，通常是正数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -233,16 +207,14 @@ underlinePosition?: double
 ## underlineThickness
 
 ```TypeScript
-underlineThickness?: double
+underlineThickness?: number
 ```
 
 下划线的厚度，浮点数。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -251,16 +223,14 @@ underlineThickness?: double
 ## xHeight
 
 ```TypeScript
-xHeight?: double
+xHeight?: number
 ```
 
 小写字母x顶部相对于基线的垂直偏移量，浮点数，通常为负值。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -269,16 +239,14 @@ xHeight?: double
 ## xMax
 
 ```TypeScript
-xMax?: double
+xMax?: number
 ```
 
 字体中任意字形边界框最右边沿到原点的水平距离，浮点数，此值多为正数，指示了字形在水平方向上的最大延伸范围。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -287,16 +255,14 @@ xMax?: double
 ## xMin
 
 ```TypeScript
-xMin?: double
+xMin?: number
 ```
 
 字体中任意字形边界框最左边沿到原点的水平距离，这个值往往小于零，意味着字形在水平方向上的最小边界。单位为物理像素px。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

@@ -11,14 +11,12 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## checkSpecialScenarioAuth
@@ -31,8 +29,6 @@ checkSpecialScenarioAuth(context: Context): Promise<UserAuthResult>
 
 **起始版本：** 22
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
-
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -58,56 +54,6 @@ checkSpecialScenarioAuth(context: Context): Promise<UserAuthResult>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    try {
-      // 创建长时任务请求对象
-      let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-      continuousTaskRequest.checkSpecialScenarioAuth(this.context).then((res: backgroundTaskManager.UserAuthResult) => {
-        console.info('Operation checkSpecialScenarioAuth succeeded. data: ' + JSON.stringify(res));
-      }).catch((error: BusinessError) => {
-        console.error(`Operation checkSpecialScenarioAuth failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation checkSpecialScenarioAuth failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      // 创建长时任务请求对象
-      let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-      continuousTaskRequest.checkSpecialScenarioAuth(this.context).then((res: backgroundTaskManager.UserAuthResult) => {
-        console.info('Operation checkSpecialScenarioAuth succeeded. data: ' + JSON.stringify(res));
-      }).catch((error) => {
-        console.error(`Operation checkSpecialScenarioAuth failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation checkSpecialScenarioAuth failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
 
 ## checkSpecialScenarioAuthResult
 
@@ -119,8 +65,6 @@ checkSpecialScenarioAuthResult(context: Context): Promise<UserAuthResult>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -147,56 +91,6 @@ checkSpecialScenarioAuthResult(context: Context): Promise<UserAuthResult>
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    try {
-      // 创建长时任务请求对象
-      let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-      continuousTaskRequest.checkSpecialScenarioAuthResult(this.context).then((res: backgroundTaskManager.UserAuthResult) => {
-        console.info('Operation checkSpecialScenarioAuthResult succeeded. data: ' + JSON.stringify(res));
-      }).catch((error: BusinessError) => {
-        console.error(`Operation checkSpecialScenarioAuthResult failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation checkSpecialScenarioAuthResult failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      // 创建长时任务请求对象
-      let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-      continuousTaskRequest.checkSpecialScenarioAuthResult(this.context).then((res: backgroundTaskManager.UserAuthResult) => {
-        console.info('Operation checkSpecialScenarioAuthResult succeeded. data: ' + JSON.stringify(res));
-      }).catch((error) => {
-        console.error(`Operation checkSpecialScenarioAuthResult failed. code is ${error.code} message is ${error.message}`);
-      });
-    } catch (error) {
-      console.error(`Operation checkSpecialScenarioAuthResult failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 ## isModeSupported
 
 ```TypeScript
@@ -206,8 +100,6 @@ isModeSupported(): boolean
 查询当前[ContinuousTaskRequest](#continuoustaskrequest)设置的长时任务主类型，是否支持申请长时任务。是否支持申请长时任务请参考 [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)的说明。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -228,56 +120,6 @@ isModeSupported(): boolean
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    let isModeSupported: boolean = false; 
-    // 创建长时任务请求对象
-    let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-    let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_TASK_KEEPING];
-    continuousTaskRequest.backgroundTaskModes = modeList;
-    try {
-      isModeSupported = continuousTaskRequest.isModeSupported();
-      console.info(`Operation isModeSupported succeeded. isModeSupported is ${isModeSupported}`);
-    } catch (error) {
-      console.error(`Operation isModeSupported failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let isModeSupported: boolean = false; 
-    // 创建长时任务请求对象
-    let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-    let modeList: Array<backgroundTaskManager.BackgroundTaskMode> = [backgroundTaskManager.BackgroundTaskMode.MODE_TASK_KEEPING];
-    continuousTaskRequest.backgroundTaskModes = modeList;
-    try {
-      isModeSupported = continuousTaskRequest.isModeSupported();
-      console.info(`Operation isModeSupported succeeded. isModeSupported is ${isModeSupported}`);
-    } catch (error) {
-      console.error(`Operation isModeSupported failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 ## requestAuthFromUser
 
 ```TypeScript
@@ -287,8 +129,6 @@ requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 请求用户授权是否能在后台长时间运行，使用callback异步回调。接口调用成功会弹出用户授权弹框，建议应用在前台时调用该接口，提示用户进行授权。仅适用于特殊场景类型 [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)的长时任务。
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为24。
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -310,66 +150,6 @@ requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callbackAuth = (authResult: backgroundTaskManager.UserAuthResult) => {
-  console.info('Operation requestAuthFromUser success. auth result: ' + JSON.stringify(authResult));
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    // 创建长时任务请求对象
-    let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-    let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_SPECIAL_SCENARIO_PROCESSING];
-    continuousTaskRequest.backgroundTaskModes = modeList;
-    let subModeList: Array<number> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION];
-    continuousTaskRequest.backgroundTaskSubmodes = subModeList;
-    try {
-      continuousTaskRequest.requestAuthFromUser(this.context, callbackAuth);
-      console.info('Operation requestAuthFromUser succeeded.');
-    } catch (error) {
-      console.error(`Operation requestAuthFromUser failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callbackAuth(authResult: backgroundTaskManager.UserAuthResult) {
-  console.info('Operation requestAuthFromUser success. auth result: ' + JSON.stringify(authResult));
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    // 创建长时任务请求对象
-    let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-    let modeList: Array<backgroundTaskManager.BackgroundTaskMode> = [backgroundTaskManager.BackgroundTaskMode.MODE_SPECIAL_SCENARIO_PROCESSING];
-    continuousTaskRequest.backgroundTaskModes = modeList;
-    let subModeList: Array<backgroundTaskManager.BackgroundTaskSubmode> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION];
-    continuousTaskRequest.backgroundTaskSubmodes = subModeList;
-    try {
-      continuousTaskRequest.requestAuthFromUser(this.context, callbackAuth);
-      console.info('Operation requestAuthFromUser succeeded.');
-    } catch (error) {
-      console.error(`Operation requestAuthFromUser failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
 
 ## requestAuthFromUserByDialog
 
@@ -381,8 +161,6 @@ requestAuthFromUserByDialog(context: Context, callback: Callback<UserAuthResult>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -403,78 +181,6 @@ requestAuthFromUserByDialog(context: Context, callback: Callback<UserAuthResult>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const callbackAuth = (authResult: backgroundTaskManager.UserAuthResult) => {
-  console.info('Operation requestAuthFromUserByDialog success. auth result: ' + JSON.stringify(authResult));
-}
-
-export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (err) => {
-      if (err.code) {
-        return;
-      }
-      try {
-        // 创建长时任务请求对象
-        let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-        let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_SPECIAL_SCENARIO_PROCESSING];
-        continuousTaskRequest.backgroundTaskModes = modeList;
-        let subModeList: Array<number> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION];
-        continuousTaskRequest.backgroundTaskSubmodes = subModeList;
-        continuousTaskRequest.requestAuthFromUserByDialog(this.context, callbackAuth);
-        console.info('Operation requestAuthFromUserByDialog succeeded.');
-      } catch (error) {
-        console.error(`Operation requestAuthFromUserByDialog failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-      }
-    });
-  }
-};
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callbackAuth(authResult: backgroundTaskManager.UserAuthResult) {
-  console.info('Operation requestAuthFromUserByDialog success. auth result: ' + JSON.stringify(authResult));
-}
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (err: BusinessError<void> | null): void => {
-      if (err && err.code) {
-        return;
-      }
-      try {
-        // 创建长时任务请求对象
-        let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
-        let modeList: Array<backgroundTaskManager.BackgroundTaskMode> = [backgroundTaskManager.BackgroundTaskMode.MODE_SPECIAL_SCENARIO_PROCESSING];
-        continuousTaskRequest.backgroundTaskModes = modeList;
-        let subModeList: Array<backgroundTaskManager.BackgroundTaskSubmode> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_MEDIA_PROCESS_NORMAL_NOTIFICATION];
-        continuousTaskRequest.backgroundTaskSubmodes = subModeList;
-        continuousTaskRequest.requestAuthFromUserByDialog(this.context, callbackAuth);
-        console.info('Operation requestAuthFromUserByDialog succeeded.');
-      } catch (error) {
-        console.error(`Operation requestAuthFromUserByDialog failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-      }
-    });
-  }
-};
-```
 
 ## backgroundTaskModes
 
@@ -488,8 +194,6 @@ set backgroundTaskModes(value: BackgroundTaskMode[])
 **类型：** [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)[]
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -508,8 +212,6 @@ set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -526,8 +228,6 @@ combinedTaskNotification?: boolean
 **类型：** boolean
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -546,8 +246,6 @@ continuousTaskId?: number
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -564,8 +262,6 @@ progressInfo?: ProgressInfo
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -581,8 +277,6 @@ set wantAgent(value: WantAgent)
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

@@ -2,11 +2,9 @@
 
 RichEditor组件控制器基类。
 
-**继承/实现关系：** RichEditorBaseController implements TextEditControllerEx
+**继承/实现关系：** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-texteditcontrollerex-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ closeSelectionMenu(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -43,8 +39,6 @@ deleteBackward(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -60,8 +54,6 @@ getCaretOffset(): number
 返回当前光标所在位置。当无法获取光标位置时（例如controller未与组件绑定时），该接口返回-1。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,8 +77,6 @@ getCaretRect(): RectResult | undefined
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -97,7 +87,7 @@ getCaretRect(): RectResult | undefined
 
 | 类型 |
 | --- |
-| RectResult \| undefined |
+| [RectResult](arkts-arkui-rectresult-i.md) \| undefined |
 
 ## getLayoutManager
 
@@ -108,8 +98,6 @@ getLayoutManager(): LayoutManager
 获取布局管理器对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -133,8 +121,6 @@ getPreviewText(): PreviewText
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -156,8 +142,6 @@ getTypingStyle(): RichEditorTextStyle
 获取用户预设的文本样式。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -181,8 +165,6 @@ isEditing(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -205,8 +187,6 @@ scrollToVisible(range?: TextRange): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -226,8 +206,6 @@ setCaretOffset(offset: number): boolean
 设置光标位置。当controller未绑定组件或绑定controller的组件被释放时，该接口返回false，设置不成功。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -260,8 +238,6 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -274,7 +250,7 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 | --- | --- | --- |
 | selectionStart | number | 是 |
 | selectionEnd | number | 是 |
-| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | 否 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 |
 
 ## setStyledPlaceholder
 
@@ -285,8 +261,6 @@ setStyledPlaceholder(styledString: StyledString): void
 设置无输入时的属性字符串样式的提示文本。
 
 **起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -310,8 +284,6 @@ setTypingParagraphStyle(style: RichEditorParagraphStyle): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -334,8 +306,6 @@ setTypingStyle(value: RichEditorTextStyle): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -357,8 +327,6 @@ stopEditing(): void
 退出编辑态。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

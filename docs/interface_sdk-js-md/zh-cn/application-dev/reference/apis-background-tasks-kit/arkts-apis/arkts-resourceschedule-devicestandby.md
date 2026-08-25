@@ -7,14 +7,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
 ## 导入模块
 
 ```TypeScript
-import { deviceStandby } from '@kit.BackgroundTasksKit';
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## 汇总

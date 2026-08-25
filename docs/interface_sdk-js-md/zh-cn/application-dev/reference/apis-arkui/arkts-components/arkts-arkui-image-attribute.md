@@ -1,6 +1,6 @@
 # Image属性/事件
 
-Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)、 ResourceStr和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的数据源， 支持png、jpg、jpeg、bmp、 svg、webp、gif、heif和tiff类型的图片格式，不支持apng和svga格式。
+Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)、 [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的数据源， 支持png、jpg、jpeg、bmp、 svg、webp、gif、heif和tiff类型的图片格式，不支持apng和svga格式。
 
 > **说明：**
 
@@ -9,12 +9,12 @@ Image为图片组件，常用于在应用中显示图片。Image支持加载[Pix
 > - 使用快捷组合键对Image组件复制时，Image组件必须处于获焦状态，如何获焦请参考[设置组件是否可获焦]
 > (../../../ui/arkts-common-events-focus-event.md#设置组件是否可获焦)。Image组件默认不获焦，
 > 需将focusable属性设置为true，即可使用Tab键将焦点切换到组件上，再将
-> focusOnTouch属性设置为true，即可实现点击获焦。&gt;
+> [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch)属性设置为true，即可实现点击获焦。&gt;
 > - 图片格式支持SVG图源，SVG标签文档请参考SVG标签说明。&gt;
 > - 动图的播放依赖于Image节点的可见性变化，其默认行为是不播放的。当节点可见时，
 > 通过回调启动动画，当节点不可见时，停止动画。
 > 可见性状态的判断是通过[onVisibleAreaChange]
-> onVisibleAreaChange
+> [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)
 > 事件触发的，当可见阈值ratios大于0时，表明Image处于可见状态。&gt;
 > - Image组件播放GIF动图时，帧时长取自GIF文件中各帧的delay time字段。当某帧的时长值小于等于0时，
 > 系统会将其修正为100ms；
@@ -24,8 +24,6 @@ Image为图片组件，常用于在应用中显示图片。Image支持加载[Pix
 **继承/实现关系：** ImageAttribute extends CommonMethod<ImageAttribute>
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,8 +41,6 @@ alt(value: string | Resource | PixelMap)
 设置图片加载过程中显示的占位图。占位图支持使用[objectFit](#objectfit)设置填充效果，与图片的填充效果一致。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -73,8 +69,6 @@ alt(src: ResourceStr | PixelMap | ImageAlt)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -87,7 +81,7 @@ alt(src: ResourceStr | PixelMap | ImageAlt)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | ResourceStr \| PixelMap \| [ImageAlt](arkts-arkui-imagealt-i.md) | 是 |
+| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [ImageAlt](arkts-arkui-imagealt-i.md) | 是 |
 
 ## antialiased
 
@@ -104,8 +98,6 @@ antialiased(isAntialiased: Optional<boolean>)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -116,7 +108,7 @@ antialiased(isAntialiased: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isAntialiased | Optional & lt;boolean & gt; | 是 |
+| isAntialiased | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## autoResize
 
@@ -127,8 +119,6 @@ autoResize(value: boolean)
 设置图片解码过程中是否对图源自动缩放。降采样解码时图片的部分信息丢失，因此可能会导致图片质量的下降（如：出现锯齿），这时可以选择把autoResize设为false，按原图尺寸解码，提升显示效果，但会增加内存占用。原图尺寸和显示尺寸不匹配时，图片都会出现些许的失真、模糊。最佳清晰度配置建议：图片缩小显示时：.autoResize(false) + .interpolation(.Medium)图片放大显示时：.interpolation(.High)当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)和SVG时设置该属性不生 效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -155,8 +145,6 @@ colorFilter(value: ColorFilter | DrawingColorFilter)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -175,11 +163,9 @@ colorFilter(value: ColorFilter | DrawingColorFilter)
 colorFilter(value: ColorFilter | DrawingColorFilter | ResourceColor)
 ```
 
-为图像设置颜色滤镜效果。设置该属性时，[renderMode](#rendermode)属性设置不生效。当值为ResourceColor类型时，它将被转换为带有混合模式的[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md)。
+为图像设置颜色滤镜效果。设置该属性时，[renderMode](#rendermode)属性设置不生效。当值为[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)类型时，它将被转换为带有混合模式的[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md)。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -205,8 +191,6 @@ contentTransition(transition: ContentTransitionEffect)
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -228,8 +212,6 @@ copyOption(value: CopyOptions)
 设置图片是否可复制。当copyOption设置为非CopyOptions.None时，支持使用长按、鼠标右击、快捷组合键'CTRL+C'等方式进行复制。SVG图片不支持复制。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -253,8 +235,6 @@ draggable(value: boolean)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -275,8 +255,6 @@ dynamicRangeMode(value: DynamicRangeMode)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -295,16 +273,14 @@ dynamicRangeMode(value: DynamicRangeMode)
 enableAnalyzer(enable: boolean)
 ```
 
-设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。<!--RP3--><!--RP3End-->不能和overlay属性同时使用，两者同时设置时overlay中 CustomBuilder属性将失效。该特性依赖设备能力。分析图像要求是静态非矢量图，即svg、gif等图像类型不支持分析，支持传入[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)进行分析，目前仅支持 [RGBA_8888](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmapformat-e.md)类型，使用方式见 [示例5（开启图像AI分析）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例5开启图像ai分析)。  
-[alt](#alt)占位图不支持分析， [objectRepeat](#objectrepeat)属性仅在取值为ImageRepeat.NoRepeat时支持分析，隐私遮罩属性 obscured打开时不支持分析。基于完整原始图像进行分析，设置clip、margin、 borderRadius、 position和[objectFit](#objectfit)属性导致图像显示不完整，或使用 [renderMode](#rendermode)设置蒙层，仍基于完整原始图像进行分析。 [copyOption](#copyoption)属性不影响 AI分析功能。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
+设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。<!--RP3--><!--RP3End-->不能和overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](arkts-arkui-custombuilder-t.md)属性将失效。该特性依赖设备能力。分析图像要求是静态非矢量图，即svg、gif等图像类型不支持分析，支持传入[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)进行分析，目前仅支持 [RGBA_8888](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmapformat-e.md)类型，使用方式见 [示例5（开启图像AI分析）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例5开启图像ai分析)。  
+[alt](#alt)占位图不支持分析， [objectRepeat](#objectrepeat)属性仅在取值为ImageRepeat.NoRepeat时支持分析，隐私遮罩属性 [obscured](arkts-arkui-commonmethod-c.md#obscured)打开时不支持分析。基于完整原始图像进行分析，设置clip、margin、 borderRadius、 position和[objectFit](#objectfit)属性导致图像显示不完整，或使用 [renderMode](#rendermode)设置蒙层，仍基于完整原始图像进行分析。 [copyOption](#copyoption)属性不影响 AI分析功能。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 > **说明：**&gt;
 > - 需要配置权限：ohos.permission.INTERNET。&gt;
 > - 从API version 12开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -328,8 +304,6 @@ fillColor(value: ResourceColor)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -352,8 +326,6 @@ fillColor(color: ResourceColor | ColorContent)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -364,7 +336,7 @@ fillColor(color: ResourceColor | ColorContent)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | ResourceColor \| [ColorContent](arkts-arkui-colorcontent-c.md) | 是 |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColorContent](arkts-arkui-colorcontent-c.md) | 是 |
 
 ## fillColor
 
@@ -376,8 +348,6 @@ fillColor(color: ResourceColor | ColorContent | ColorMetrics)
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -388,7 +358,7 @@ fillColor(color: ResourceColor | ColorContent | ColorMetrics)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | ResourceColor \| [ColorContent](arkts-arkui-colorcontent-c.md) \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md) | 是 |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColorContent](arkts-arkui-colorcontent-c.md) \| [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | 是 |
 
 ## fitOriginalSize
 
@@ -399,8 +369,6 @@ fitOriginalSize(value: boolean)
 设置图片的显示尺寸是否跟随图源尺寸。图片组件已设置width、height属性时，fitOriginalSize属性不生效。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -424,8 +392,6 @@ hdrBrightness(brightness: number)
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -447,8 +413,6 @@ imageMatrix(matrix: ImageMatrix)
 设置图片的变换矩阵。通过[ImageMatrix](#imagematrix)对象使用平移、旋转、缩放等函数，实现宫格缩略图的最佳呈现。SVG类型图源不支持该属性。设置[resizable](#resizable)、[objectRepeat](#objectrepeat)属性时，该属性设置不生效。该属性只针对图 源做处理，不会触发Image组件的回调事件。该属性与[objectFit](#objectfit)属性强关联，仅在[objectFit](#objectfit)属性设置为 ImageFit.MATRIX时生效。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -472,8 +436,6 @@ interpolation(value: ImageInterpolation)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -495,8 +457,6 @@ matchTextDirection(value: boolean)
 设置图片是否跟随系统语言方向，在RTL语言环境下显示镜像翻转显示效果。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -520,8 +480,6 @@ objectFit(value: ImageFit)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -543,8 +501,6 @@ objectRepeat(value: ImageRepeat)
 设置图片的重复样式，从中心点向两边重复，剩余空间不足放下一张图片时会截断。SVG类型图源不支持该属性。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。设置合法的[resizable](#resizable)时，该属性不生效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -838,11 +794,9 @@ onComplete(
   )
 ```
 
-Triggered when an image is successfully loaded or decoded. The size of the image source that is successfully loaded is returned, in pixels.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This event is not triggered if the parameter type of the component is AnimatedDrawableDescriptor. </p>
+Triggered when an image is successfully loaded or decoded. The size of the image source that is successfully loaded is returned, in pixels.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: This event is not triggered if the parameter type of the component is AnimatedDrawableDescriptor. </p>
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -866,8 +820,6 @@ onError(callback: ImageErrorCallback)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -890,8 +842,6 @@ onFinish(event: () => void)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -913,8 +863,6 @@ orientation(orientation: ImageRotateOrientation) : ImageAttribute
 设置图像内容的显示方向。该属性对[alt](#alt)占位图不生效。设置合法的[resizable](#resizable)时，该属性不生效。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -940,8 +888,6 @@ privacySensitive(supported: boolean)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -965,8 +911,6 @@ renderMode(value: ImageRenderMode)
 设置图片的渲染模式。SVG类型图源不支持该属性。设置[ColorFilter](#colorfilter)时，该属性设置不生效。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -993,8 +937,6 @@ resizable(value: ResizableOptions)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1017,8 +959,6 @@ sourceSize(value: ImageSourceSize)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -1040,8 +980,6 @@ supportSvg2(enable: boolean) : ImageAttribute
 开启或关闭SVG标签解析能力增强功能，开启后相关SVG图片显示效果会有变化。Image组件创建后，不支持动态修改该属性的值。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1066,8 +1004,6 @@ syncLoad(value: boolean)
 设置是否同步加载图片。建议加载尺寸较小的本地图片时将syncLoad设为true，因为耗时较短，在主线程上执行即可。不建议对网络图片使用同步加载，应使用异步加载，或将网络下载与Image的显示剥离，避免阻塞UI线程导致 AppFreeze。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。如果加载图片时出现闪烁，设置syncLoad为true。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

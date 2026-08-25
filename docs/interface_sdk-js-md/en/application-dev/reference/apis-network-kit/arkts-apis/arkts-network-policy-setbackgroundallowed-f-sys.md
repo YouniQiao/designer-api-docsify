@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## setBackgroundAllowed
@@ -15,8 +15,6 @@ function setBackgroundAllowed(isAllowed: boolean, callback: AsyncCallback<void>)
 Sets whether background applications are allowed to access the network. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -42,26 +40,6 @@ Sets whether background applications are allowed to access the network. This API
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.setBackgroundAllowed(true, (error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.setBackgroundAllowed(true).then(() => {
-  console.info("setBackgroundAllowed success");
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 
 ## setBackgroundAllowed
 
@@ -72,8 +50,6 @@ function setBackgroundAllowed(isAllowed: boolean): Promise<void>
 Sets whether background applications are allowed to access the network. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -103,7 +79,3 @@ Sets whether background applications are allowed to access the network. This API
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [setBackgroundAllowed](#setbackgroundallowed)

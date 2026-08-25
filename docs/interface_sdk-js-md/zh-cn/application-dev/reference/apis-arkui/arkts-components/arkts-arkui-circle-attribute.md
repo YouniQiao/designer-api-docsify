@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ fill(value: ResourceColor | ColorMetrics)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -37,7 +33,7 @@ fill(value: ResourceColor | ColorMetrics)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ResourceColor \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md) | 是 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | 是 |
 
 ## stroke
 
@@ -49,8 +45,6 @@ stroke(value: ResourceColor | ColorMetrics)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -61,4 +55,4 @@ stroke(value: ResourceColor | ColorMetrics)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ResourceColor \| [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md) | 是 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | 是 |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## unregisterPasscodePromptCallback
@@ -15,8 +15,6 @@ function unregisterPasscodePromptCallback(): void
 取消注册用于提示输入辅助设备密码的回调。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 

@@ -6,14 +6,12 @@ Represent the asset (such as a document, image, or video). **Asset** inherits fr
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from '@kit.ArkData';
+import { sendableRelationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## createTime
@@ -27,8 +25,6 @@ Time when the asset was created.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -44,8 +40,6 @@ Time when the asset was last modified.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## name
@@ -59,8 +53,6 @@ Asset name.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -76,8 +68,6 @@ Application sandbox path of the asset.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## size
@@ -91,8 +81,6 @@ Size of the asset.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -108,8 +96,6 @@ Asset status. For details, see [relationalStore.AssetStatus](arkts-arkdata-relat
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## uri
@@ -123,7 +109,5 @@ Asset URI, which is an absolute path in the system.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

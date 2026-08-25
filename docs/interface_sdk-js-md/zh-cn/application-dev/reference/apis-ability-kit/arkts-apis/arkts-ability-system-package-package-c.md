@@ -7,8 +7,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
@@ -16,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
+import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from 'kits/@kit.AbilityKit';
 ```
 
 ## hasInstalled
@@ -29,8 +27,6 @@ static hasInstalled(options: CheckPackageHasInstalledOptions): void
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 9
 
 **替代接口：** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md)
@@ -42,27 +38,3 @@ static hasInstalled(options: CheckPackageHasInstalledOptions): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import Package from '@system.package';
-
-@Entry
-@Component
-struct MainPage {
-  hasInstalled() {
-    Package.hasInstalled({
-      bundleName: 'com.example.bundlename',
-      success: (data) => {
-        console.info('package has installed: ' + data);
-      },
-      fail: (msg:string, code) => {
-        console.error('query package fail, code: ' + code + ', data: ' + msg);
-      },
-    });
-  }
-  build() {
-  }
-}
-```

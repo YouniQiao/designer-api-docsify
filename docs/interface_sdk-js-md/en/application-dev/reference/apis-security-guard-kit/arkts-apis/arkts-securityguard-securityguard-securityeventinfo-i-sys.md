@@ -4,8 +4,6 @@ Provides the conditions of on/off.@interface SecurityEventInfo
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Security.SecurityGuard
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides the conditions of on/off.@interface SecurityEventInfo
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## eventId
@@ -27,8 +25,6 @@ The security event id.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Security.SecurityGuard
 

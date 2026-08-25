@@ -4,8 +4,6 @@ The enum of scan duty.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [ScanDuty](arkts-connectivity-ble-scanduty-e.md)
@@ -21,8 +19,6 @@ SCAN_MODE_LOW_POWER = 0
 low power mode
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -40,8 +36,6 @@ balanced power mode
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [SCAN_MODE_BALANCED](arkts-connectivity-ble-scanduty-e.md#scan_mode_balanced)
@@ -57,8 +51,6 @@ SCAN_MODE_LOW_LATENCY = 2
 Scan using highest duty cycle
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
+import { dateTimeManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setDateTime
@@ -15,8 +15,6 @@ function setDateTime(admin: Want, time: number, callback: AsyncCallback<void>): 
 设置系统时间。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 26.0.0
 
@@ -48,47 +46,6 @@ function setDateTime(admin: Want, time: number, callback: AsyncCallback<void>): 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-dateTimeManager.setDateTime(wantTemp, 1526003846000, (err) => {
-  if (err) {
-    console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting date time');
-})
-```
-
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
-  console.info('Succeeded in setting date time');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
-})
-```
-
 
 ## setDateTime
 
@@ -99,8 +56,6 @@ function setDateTime(admin: Want, time: number): Promise<void>
 设置系统时间。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 26.0.0
 
@@ -136,7 +91,3 @@ function setDateTime(admin: Want, time: number): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [setDateTime](#setdatetime)

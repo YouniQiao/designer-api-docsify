@@ -1,7 +1,5 @@
 # Math
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ acosh(x: number): number
 ```
 
 Returns the inverse hyperbolic cosine of a number.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ asinh(x: number): number
 
 Returns the inverse hyperbolic sine of a number.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -54,8 +48,6 @@ atanh(x: number): number
 ```
 
 Returns the inverse hyperbolic tangent of a number.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -75,8 +67,6 @@ cbrt(x: number): number
 
 Returns an implementation-dependent approximation to the cube root of number.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -94,8 +84,6 @@ clz32(x: number): number
 ```
 
 Returns the number of leading zero bits in the 32-bit binary representation of a number.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -115,8 +103,6 @@ cosh(x: number): number
 
 Returns the hyperbolic cosine of a number.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -134,8 +120,6 @@ expm1(x: number): number
 ```
 
 Returns the result of (e^x - 1), which is an implementation-dependent approximation to subtracting 1 from the exponential function of x (e raised to the power of x, where e is the base of the natural logarithms).
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -155,8 +139,6 @@ fround(x: number): number
 
 Returns the nearest single precision float representation of a number.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -175,8 +157,6 @@ hypot(...values: number[]): number
 
 Returns the square root of the sum of squares of its arguments.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -194,8 +174,6 @@ imul(x: number, y: number): number
 ```
 
 Returns the result of 32-bit multiplication of two numbers.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -216,8 +194,6 @@ log10(x: number): number
 
 Returns the base 10 logarithm of a number.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -235,8 +211,6 @@ log1p(x: number): number
 ```
 
 Returns the natural logarithm of 1 + x.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -256,8 +230,6 @@ log2(x: number): number
 
 Returns the base 2 logarithm of a number.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -275,8 +247,6 @@ sign(x: number): number
 ```
 
 Returns the sign of the x, indicating whether x is positive, negative or zero.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -296,8 +266,6 @@ sinh(x: number): number
 
 Returns the hyperbolic sine of a number.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -316,8 +284,6 @@ tanh(x: number): number
 
 Returns the hyperbolic tangent of a number.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -335,8 +301,6 @@ trunc(x: number): number
 ```
 
 Returns the integral part of the a numeric expression, x, removing any fractional digits. If x is already an integer, the result is x.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

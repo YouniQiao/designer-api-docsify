@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedListForAccount
@@ -15,8 +15,6 @@ function getDisallowedListForAccount(admin: Want, feature: string, accountId: nu
 获取指定用户禁止使用某特性的应用名单。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -46,24 +44,3 @@ function getDisallowedListForAccount(admin: Want, feature: string, accountId: nu
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: Array<string> = restrictions.getDisallowedListForAccount(wantTemp, 'snapshotSkip', 100);
-  console.info('Succeeded in querying disallowed list for account');
-} catch (err) {
-  console.error(`Failed to query disallowed list for account. Code is ${err.code}, message is ${err.message}`);
-}
-```

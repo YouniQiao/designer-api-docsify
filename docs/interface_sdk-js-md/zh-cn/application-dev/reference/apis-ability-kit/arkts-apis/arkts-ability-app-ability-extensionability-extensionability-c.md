@@ -6,8 +6,6 @@ ExtensionAbility是特定场景扩展能力的基类，继承自[Ability](arkts-
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -17,5 +15,5 @@ ExtensionAbility是特定场景扩展能力的基类，继承自[Ability](arkts-
 ## 导入模块
 
 ```TypeScript
-import { ExtensionAbility } from '@kit.AbilityKit';
+import { ExtensionAbility } from 'kits/@kit.AbilityKit';
 ```

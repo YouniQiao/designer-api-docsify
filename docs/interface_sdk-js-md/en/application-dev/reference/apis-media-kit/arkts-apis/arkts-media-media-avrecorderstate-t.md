@@ -8,8 +8,6 @@ Enumerates the AVRecorder states. You can obtain the state through the **state**
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder

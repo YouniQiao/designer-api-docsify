@@ -9,17 +9,15 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## onFrame
@@ -31,8 +29,6 @@ onFrame(frameTimeInNano: number): void
 在下一帧进行渲染时，该方法将被执行。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,46 +42,6 @@ onFrame(frameTimeInNano: number): void
 | --- | --- | --- |
 | frameTimeInNano | number | 是 |
 
-**示例**
-
-```TypeScript
-import { FrameCallback } from '@kit.ArkUI';
-
-class MyFrameCallback extends FrameCallback {
-  private tag: string;
-
-  constructor(tag: string) {
-    super();
-    this.tag = tag;
-  }
-
-  onFrame(frameTimeNanos: number) {
-    console.info('MyFrameCallback ' + this.tag + ' ' + frameTimeNanos.toString());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button('点击触发postFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postFrameCallback(new MyFrameCallback("normTask"));
-          })
-        Button('点击触发postDelayedFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postDelayedFrameCallback(new MyFrameCallback("delayTask"), 5);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## onIdle
 
 ```TypeScript
@@ -95,8 +51,6 @@ onIdle(timeLeftInNano: number): void
 在下一帧渲染结束时，如果距离下一个Vsync信号到来还有1ms以上的剩余时间，该方法将被执行，否则将顺延至后面的帧。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,43 +63,3 @@ onIdle(timeLeftInNano: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | timeLeftInNano | number | 是 |
-
-**示例**
-
-```TypeScript
-import { FrameCallback } from '@kit.ArkUI';
-
-class MyIdleCallback extends FrameCallback {
-  private tag: string;
-
-  constructor(tag: string) {
-    super();
-    this.tag = tag;
-  }
-
-  onIdle(timeLeftInNano: number) {
-    console.info('MyIdleCallback ' + this.tag + ' ' + timeLeftInNano.toString());
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button('点击触发postFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postFrameCallback(new MyIdleCallback("normTask"));
-          })
-        Button('点击触发postDelayedFrameCallback')
-          .onClick(() => {
-            this.getUIContext().postDelayedFrameCallback(new MyIdleCallback("delayTask"), 5);
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

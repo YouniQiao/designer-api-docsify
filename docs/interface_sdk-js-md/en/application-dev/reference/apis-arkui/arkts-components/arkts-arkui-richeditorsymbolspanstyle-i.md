@@ -4,8 +4,6 @@ Sets the symbol span style.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ effectStrategy?: SymbolEffectStrategy
 
 Effect strategy of the symbol span.Default value: **SymbolEffectStrategy.NONE**
 
-**Type:** SymbolEffectStrategy
+**Type:** [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ fontColor?: Array<ResourceColor>
 
 Color of the symbol span.Default value: depending on the rendering strategy
 
-**Type:** Array&lt;ResourceColor&gt;
+**Type:** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt;
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,8 +59,6 @@ Size of the symbol span. The default unit is fp.The default value follows the th
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,8 +77,6 @@ Weight of the symbol span.For the number type, the value ranges from 100 to 900,
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -101,11 +91,9 @@ renderingStrategy?: SymbolRenderingStrategy
 
 Rendering strategy of the symbol span.Default value: **SymbolRenderingStrategy.SINGLE**
 
-**Type:** SymbolRenderingStrategy
+**Type:** [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

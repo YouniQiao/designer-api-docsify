@@ -4,8 +4,6 @@ Defines the configuration of a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Coordinate system type of the center point.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -31,16 +27,14 @@ Coordinate system type of the center point.
 ## delayTime
 
 ```TypeScript
-delayTime?:int
+delayTime?:number
 ```
 
 Delay time of the geofence, in seconds. That is, the delay time before the geofence is triggered after entering the geofence. Value range: [0, 300]. Default value: **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -49,16 +43,14 @@ Delay time of the geofence, in seconds. That is, the delay time before the geofe
 ## latitude
 
 ```TypeScript
-latitude:double
+latitude:number
 ```
 
 Latitude of the geofence center. The value ranges from -90 to 90.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -67,16 +59,14 @@ Latitude of the geofence center. The value ranges from -90 to 90.
 ## longitude
 
 ```TypeScript
-longitude:double
+longitude:number
 ```
 
 Longitude of the geofence center. The value ranges from -180 to 180.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -94,8 +84,6 @@ Event type for monitoring a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -103,16 +91,14 @@ Event type for monitoring a geofence.
 ## radius
 
 ```TypeScript
-radius:double
+radius:number
 ```
 
 Radius of the geofence, in meters. Value range: [200, 2000].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 

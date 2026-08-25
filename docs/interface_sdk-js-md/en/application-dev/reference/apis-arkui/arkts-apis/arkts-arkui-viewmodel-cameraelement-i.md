@@ -6,8 +6,6 @@ The &lt;camera&gt; component provides preview and photographing functions.@exten
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## takePhoto
@@ -19,8 +17,6 @@ takePhoto(options: CameraTakePhotoOptions): void
 Take photos with specified parameters.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 

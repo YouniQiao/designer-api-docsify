@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getTrafficStatsByIface
@@ -15,8 +15,6 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<Ne
 Obtains the historical data traffic of the specified NIC. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
@@ -43,62 +41,6 @@ Obtains the historical data traffic of the specified NIC. This API uses an async
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { statistics } from '@kit.NetworkKit';
-
-let iFaceInfo: statistics.IfaceInfo | null = null;
-if (iFaceInfo) {
-  statistics.getTrafficStatsByIface(iFaceInfo as statistics.IfaceInfo, (error: BusinessError, statsInfo: statistics.NetStatsInfo) => {
-    console.error(JSON.stringify(error));
-    console.info(
-      "getTrafficStatsByIface bytes of received = " +
-      JSON.stringify(statsInfo.rxBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface bytes of sent = " +
-      JSON.stringify(statsInfo.txBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of received = " +
-      JSON.stringify(statsInfo.rxPackets)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of sent = " +
-      JSON.stringify(statsInfo.txPackets)
-    );
-  });
-}
-```
-
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-let iFaceInfo: statistics.IfaceInfo | null = null;
-if (iFaceInfo) {
-  statistics.getTrafficStatsByIface(iFaceInfo as statistics.IfaceInfo).then((statsInfo: statistics.NetStatsInfo) => {
-    console.info(
-      "getTrafficStatsByIface bytes of received = " +
-      JSON.stringify(statsInfo.rxBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface bytes of sent = " +
-      JSON.stringify(statsInfo.txBytes)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of received = " +
-      JSON.stringify(statsInfo.rxPackets)
-    );
-    console.info(
-      "getTrafficStatsByIface packets of sent = " +
-      JSON.stringify(statsInfo.txPackets)
-    );
-  });
-}
-```
-
 
 ## getTrafficStatsByIface
 
@@ -110,8 +52,6 @@ Obtains the historical data traffic of the specified NIC. This API uses a promis
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory| Description | | --------- | ------------------------- | ---- | --------------------------------------------------- | | [ifaceInfo](arkts-network-statistics-uidinfo-i-sys.md) | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Yes |
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_NETWORK_STATS
 
@@ -142,7 +82,3 @@ Obtains the historical data traffic of the specified NIC. This API uses a promis
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) |
-
-**Examples**
-
-See [getTrafficStatsByIface](#gettrafficstatsbyiface)

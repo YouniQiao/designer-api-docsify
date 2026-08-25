@@ -9,8 +9,6 @@ The **SystemParameter** module provides system services with easy access to key-
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 **System API:** This is a system API.
@@ -18,7 +16,7 @@ The **SystemParameter** module provides system services with easy access to key-
 ## Modules to Import
 
 ```TypeScript
-import { systemParameterEnhance } from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

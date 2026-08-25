@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 ```
 
 ## enable
@@ -15,8 +15,6 @@ function enable(enable: boolean, callback: AsyncCallback<void>): void
 开启、关闭键鼠穿越，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 
@@ -40,58 +38,6 @@ function enable(enable: boolean, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-           inputDeviceCooperate.enable(true, (error: BusinessError) => {
-              if (error) {
-                console.error(`Failed to enable keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-                return;
-              }
-              console.info(`Succeeded in enabling keyboard mouse crossing.`);
-            });
-          } catch (error) {
-            console.error(`Failed to enable keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          inputDeviceCooperate.enable(true).then(() => {
-            console.info(`Succeeded in enabling keyboard mouse crossing.`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to enable keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          });
-        })
-    }
-  }
-}
-```
-
 
 ## enable
 
@@ -102,8 +48,6 @@ function enable(enable: boolean): Promise<void>
 开启、关闭键鼠穿越，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 23
 
@@ -131,7 +75,3 @@ function enable(enable: boolean): Promise<void>
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-参见 [enable](#enable)

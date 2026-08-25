@@ -15,8 +15,6 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md)
@@ -29,32 +27,6 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let getActiveNotificationCountCallback = (err: Base.BusinessError, data: number) => {
-  if (err) {
-    console.error("getActiveNotificationCount failed " + JSON.stringify(err));
-  } else {
-    console.info("getActiveNotificationCount success");
-  }
-}
-
-Notification.getActiveNotificationCount(getActiveNotificationCountCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.getActiveNotificationCount().then((data: number) => {
-  console.info("getActiveNotificationCount success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`getActiveNotificationCount failed, code is ${err}`);
-});
-```
-
 
 ## getActiveNotificationCount
 
@@ -65,8 +37,6 @@ function getActiveNotificationCount(): Promise<number>
 获取当前应用未删除的通知数（Promise形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -79,7 +49,3 @@ function getActiveNotificationCount(): Promise<number>
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-参见 [getActiveNotificationCount](#getactivenotificationcount)

@@ -4,8 +4,6 @@ Indicates the personalized lock types.
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ PN_PIN_LOCK = 0
 Indicates network personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -36,8 +32,6 @@ Indicates network personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ PU_PIN_LOCK = 2
 Indicates network subset personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -68,8 +60,6 @@ Indicates network subset personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ PP_PIN_LOCK = 4
 Indicates service provider personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -100,8 +88,6 @@ Indicates service provider personalization of PUK lock(refer 3GPP TS 22.022 [33]
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -115,8 +101,6 @@ PC_PIN_LOCK = 6
 Indicates corporate personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
@@ -132,8 +116,6 @@ Indicates corporate personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -148,8 +130,6 @@ Indicates SIM/USIM personalization of PIN lock(refer 3GPP TS 22.022 [33]).
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -163,8 +143,6 @@ SIM_PUK_LOCK = 9
 Indicates SIM/USIM personalization of PUK lock(refer 3GPP TS 22.022 [33]).
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService
 

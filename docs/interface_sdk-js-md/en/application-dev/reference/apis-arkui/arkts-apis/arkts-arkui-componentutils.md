@@ -4,8 +4,6 @@ The **componentUtils** module provides API for obtaining the coordinates and siz
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -13,7 +11,7 @@ The **componentUtils** module provides API for obtaining the coordinates and siz
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

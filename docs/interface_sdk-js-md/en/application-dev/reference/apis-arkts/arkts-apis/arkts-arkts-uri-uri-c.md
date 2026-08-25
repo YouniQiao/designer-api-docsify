@@ -4,14 +4,12 @@ URI Represents a Uniform Resource Identifier (URI) reference.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { uri } from '@kit.ArkTS';
+import { uri } from 'kits/@kit.ArkTS';
 ```
 
 ## addEncodedSegment
@@ -23,8 +21,6 @@ addEncodedSegment(pathSegment: string): URI
 Appends an encoded field to the path component of this URI to create a new URI and returns the new URI, while keeping the existing URI unchanged.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,14 +38,6 @@ Appends an encoded field to the path component of this URI to create a new URI a
 | --- |
 | [URI](arkts-arkts-uri-uri-c.md) |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("http://www.test.com");
-const newRoute = uriInstance.addEncodedSegment("my%20image.jpg");
-console.info(newRoute.toString()); // http://www.test.com/my%20image.jpg
-```
-
 ## addQueryValue
 
 ```TypeScript
@@ -59,8 +47,6 @@ addQueryValue(key: string, value: string): URI
 Adds a query parameter to this URI to create a new URI, while keeping the existing URI unchanged.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -79,14 +65,6 @@ Adds a query parameter to this URI to create a new URI, while keeping the existi
 | --- |
 | [URI](arkts-arkts-uri-uri-c.md) |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("https://www.test.com");
-const newRoute = uriInstance.addQueryValue("param1", "hello world");
-console.info(newRoute.toString()); // https://www.test.com?param1=hello%20world
-```
-
 ## addSegment
 
 ```TypeScript
@@ -96,8 +74,6 @@ addSegment(pathSegment: string): URI
 Encodes a given field, appends it to the path component of this URI to create a new URI, and returns the new URI, while keeping the existing URI unchanged.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -115,14 +91,6 @@ Encodes a given field, appends it to the path component of this URI to create a 
 | --- |
 | [URI](arkts-arkts-uri-uri-c.md) |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("http://www.test.com");
-const newRoute = uriInstance.addSegment("my image.jpg");
-console.info(newRoute.toString()); // http://www.test.com/my%20image.jpg
-```
-
 ## checkHierarchical
 
 ```TypeScript
@@ -133,8 +101,6 @@ Checks whether this URI is a hierarchical URI. The URI that starts with a slash 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -144,15 +110,6 @@ Checks whether this URI is a hierarchical URI. The URI that starts with a slash 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("http://www.test.com/images/pic.jpg");
-console.info(`${uriInstance.checkHierarchical()}`); // true
-const uriInstance1 = new uri.URI("mailto:user@example.com");
-console.info(`${uriInstance1.checkHierarchical()}`); // false
-```
 
 ## checkIsAbsolute
 
@@ -164,8 +121,6 @@ Checks whether this URI is an absolute URI (whether the scheme component is defi
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -175,15 +130,6 @@ Checks whether this URI is an absolute URI (whether the scheme component is defi
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI('https://username:password@www.qwer.com:8080?query=pppppp');
-console.info(`${uriInstance.checkIsAbsolute()}`); // true
-const uriInstance1 = new uri.URI('xxx.com/suppliers.htm');
-console.info(`${uriInstance1.checkIsAbsolute()}`); // false
-```
 
 ## checkOpaque
 
@@ -195,8 +141,6 @@ Checks whether this URI is an opaque URI. The URI that does not start with a sla
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -206,15 +150,6 @@ Checks whether this URI is an opaque URI. The URI that does not start with a sla
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("http://www.test.com/images/pic.jpg");
-console.info(`${uriInstance.checkOpaque()}`); // false
-const uriInstance1 = new uri.URI("mailto:user@example.com");
-console.info(`${uriInstance1.checkOpaque()}`); // true
-```
 
 ## checkRelative
 
@@ -226,8 +161,6 @@ Determine whether URI is Relative.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -237,15 +170,6 @@ Determine whether URI is Relative.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("https://username:password@www.qwer.com:8080?query=p");
-console.info(`${uriInstance.checkRelative()}`); // false
-const uriInstance1 = new uri.URI("/images/pic.jpg");
-console.info(`${uriInstance1.checkRelative()}`); // true
-```
 
 ## clearQuery
 
@@ -257,8 +181,6 @@ Clears the query component of this URI to create a new URI, while keeping the ex
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -269,13 +191,6 @@ Clears the query component of this URI to create a new URI, while keeping the ex
 | --- |
 | [URI](arkts-arkts-uri-uri-c.md) |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("https://www.test.com?param1=value1");
-console.info(uriInstance.clearQuery().toString()); // https://www.test.com
-```
-
 ## constructor
 
 ```TypeScript
@@ -285,8 +200,6 @@ constructor(uri: string)
 A constructor used to create a URI instance.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -304,17 +217,6 @@ A constructor used to create a URI instance.
 | --- |
 | [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
 
-**Examples**
-
-```TypeScript
-let mm = 'https://username:password@host:8080/directory/file?foo=1&bar=2#fragment';
-new uri.URI(mm);
-```
-
-```TypeScript
-new uri.URI('https://username:password@host:8080');
-```
-
 ## createFromParts
 
 ```TypeScript
@@ -324,8 +226,6 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 Creates a URI based on the provided scheme, scheme-specific-part, and fragment components.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -345,13 +245,6 @@ Creates a URI based on the provided scheme, scheme-specific-part, and fragment c
 | --- |
 | [URI](arkts-arkts-uri-uri-c.md) |
 
-**Examples**
-
-```TypeScript
-const uriInstance = uri.URI.createFromParts("mailto", "no body", "top");
-console.info(uriInstance.toString()); // mailto:no%20body#top
-```
-
 ## equals
 
 ```TypeScript
@@ -361,8 +254,6 @@ equals(other: URI): boolean
 Check whether this URI is equivalent to other URI objects.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -382,14 +273,6 @@ Check whether this URI is equivalent to other URI objects.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-const uriInstance1 = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-uriInstance.equals(uriInstance1); // true
-```
-
 ## equalsTo
 
 ```TypeScript
@@ -399,8 +282,6 @@ equalsTo(other: URI): boolean
 Checks whether this URI is the same as another URI object.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -418,14 +299,6 @@ Checks whether this URI is the same as another URI object.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-const uriInstance1 = new uri.URI('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-let result = uriInstance.equalsTo(uriInstance1); // true
-```
-
 ## getBooleanQueryValue
 
 ```TypeScript
@@ -435,8 +308,6 @@ getBooleanQueryValue(key: string, defaultValue: boolean): boolean
 Obtains the value of the Boolean type of a query parameter in this URI.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -455,21 +326,6 @@ Obtains the value of the Boolean type of a query parameter in this URI.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("https://www.test.com/search?active=true");
-console.info(`${uriInstance.getBooleanQueryValue("active", false)}`); // true
-const uriInstance1 = new uri.URI("https://www.test.com/search");
-console.info(`${uriInstance1.getBooleanQueryValue("active", false)}`); // false
-const uriInstance2 = new uri.URI("https://www.test.com/search?active=aa&active=false");
-console.info(`${uriInstance2.getBooleanQueryValue("active", false)}`); // true
-const uriInstance3 = new uri.URI("https://www.test.com/search?active=0");
-console.info(`${uriInstance3.getBooleanQueryValue("active", true)}`); // false
-const uriInstance4 = new uri.URI("https://www.test.com/search");
-console.info(`${uriInstance4.getBooleanQueryValue("active", true)}`); // true
-```
-
 ## getLastSegment
 
 ```TypeScript
@@ -480,8 +336,6 @@ Obtains the last segment of this URI.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -491,13 +345,6 @@ Obtains the last segment of this URI.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("content://com.test.provider/files/image.jpg");
-console.info(uriInstance.getLastSegment()); // image.jpg
-```
 
 ## getQueryNames
 
@@ -509,8 +356,6 @@ Obtains all non-repeated keys in the query component of this URI.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -520,14 +365,6 @@ Obtains all non-repeated keys in the query component of this URI.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string[] |
-
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("https://www.test.com?param1=value1&param2=value2");
-const paramNames = uriInstance.getQueryNames();
-console.info(paramNames.toString()); // param1,param2
-```
 
 ## getQueryValue
 
@@ -539,8 +376,6 @@ Obtains the first value of a given key from the query component of this URI. If 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -556,48 +391,6 @@ Obtains the first value of a given key from the query component of this URI. If 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("https://www.com?param1=value1&param2=value2");
-console.info(uriInstance.getQueryValue("param1")); // value1
-let uriInstance1 = new uri.URI('https://www.zyy.ss?sa%3D=po%7E');
-console.info(uriInstance1.getQueryValue('sa=')) // po~
-console.info(uriInstance1.getQueryValue('abc')) // null
-```
-
-## getQueryValue
-
-```TypeScript
-getQueryValue(key: string): string | null
-```
-
-Obtains the first value of a given key from the query component of this URI. If the query component contains encoded content, this API decodes the key before obtaining the value.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | string | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| string \| null |
-
-**Examples**
-
-See [getQueryValue](#getqueryvalue)
 
 ## getQueryValues
 
@@ -609,8 +402,6 @@ Obtains the values of a given key from the query component of this URI.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -627,14 +418,6 @@ Obtains the values of a given key from the query component of this URI.
 | --- |
 | string[] |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("https://www.test.com/search?query=name&query=my");
-console.info(uriInstance.getQueryValues("query").toString()); // name,my
-console.info(JSON.stringify(uriInstance.getQueryValues("abc"))); // []
-```
-
 ## getSegment
 
 ```TypeScript
@@ -644,8 +427,6 @@ getSegment(): string[]
 Gets the decoded path segments.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -657,13 +438,6 @@ Gets the decoded path segments.
 | --- |
 | string[] |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI("http://www.test.com/path/to/image.jpg");
-console.info(uriInstance.getSegment().toString()); // path,to,image.jpg
-```
-
 ## normalize
 
 ```TypeScript
@@ -673,8 +447,6 @@ normalize(): URI
 Normalizes the path of this URI.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -686,21 +458,6 @@ Normalizes the path of this URI.
 | --- |
 | [URI](arkts-arkts-uri-uri-c.md) |
 
-**Examples**
-
-```TypeScript
-const uriInstance = new uri.URI('https://username:password@www.qwer.com:8080/path/path1/../path2/./path3?query=pppppp');
-console.info(uriInstance.path); // /path/path1/../path2/./path3
-// Following path normalization, all . (dot) segments are removed. If a .. (double-dot) segment is immediately preceded by a segment that is not .., both segments are removed.
-let uriInstance1 = uriInstance.normalize();
-console.info(uriInstance1.path); // /path/path2/path3
-let uri1 = new uri.URI('http://www.test.com/../../patch/path1/../path2/path3/./path4/../');
-console.info(uri1.path); // /../../patch/path1/../path2/path3/./path4/../
-// If normalization result in a path starting with a .. (double-dot) segment, it indicates that there were insufficient preceding non-.. segments for removal. As a result, the path will start with a .. segment.
-let uri2 = uri1.normalize();
-console.info(uri2.path); // /../../patch/path2/path3
-```
-
 ## toString
 
 ```TypeScript
@@ -711,8 +468,6 @@ Converts this URI into an encoded string.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -722,13 +477,6 @@ Converts this URI into an encoded string.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-const result = new uri.URI('https://username:password@host:8080/directory/file?ab=pppppp#qwer da');
-let result1 = result.toString(); // https://username:password@host:8080/directory/file?ab=pppppp#qwer%20da
-```
 
 ## authority
 
@@ -741,8 +489,6 @@ Gets/Sets the decoding permission component part of this URI.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -760,8 +506,6 @@ Gets/Sets the encoded authority part of this URI.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -777,8 +521,6 @@ Gets/Sets the encoded fragment part of this URI, everything after the '#'.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -796,8 +538,6 @@ Gets/Sets the encoded path portion of the URI.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -813,8 +553,6 @@ Gets/Sets the encoded query component from this URI.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -832,8 +570,6 @@ Gets/Sets the scheme-specific part of this URI, i.e. everything between the sche
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -849,8 +585,6 @@ Gets/Sets Obtains the encoded user information part of the URI.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -868,8 +602,6 @@ Gets/Sets the fragment part of the URI.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -885,8 +617,6 @@ Gets the hostname portion of the URI without a port.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -904,8 +634,6 @@ Gets/Sets the path portion of the URI.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -921,8 +649,6 @@ Gets the port portion of the URI.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -940,8 +666,6 @@ Gets/Sets the query portion of the URI
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -957,8 +681,6 @@ Gets/Sets the protocol part of the URI.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -976,8 +698,6 @@ Gets/Sets the decoding scheme-specific part of the URI.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -993,8 +713,6 @@ Gets/Sets Obtains the user information part of the URI.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

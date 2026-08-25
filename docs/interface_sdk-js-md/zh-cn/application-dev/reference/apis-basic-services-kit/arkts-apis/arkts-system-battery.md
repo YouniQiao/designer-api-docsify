@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKit';
+import { Battery, BatteryResponse, GetStatusOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总

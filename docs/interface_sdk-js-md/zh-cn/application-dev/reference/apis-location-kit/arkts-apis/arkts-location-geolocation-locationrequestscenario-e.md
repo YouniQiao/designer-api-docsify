@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
@@ -24,8 +22,6 @@ UNSET = 0x300
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [UNSET](arkts-location-geolocationmanager-locationrequestscenario-e.md#unset)
@@ -41,8 +37,6 @@ NAVIGATION
 表示导航场景。 适用于在户外定位设备实时位置的场景，如车载、步行导航。 在此场景下，为保证系统提供位置结果精度最优，主要使用GNSS定位技术提供定位服务。 此场景默认以最小1秒间隔上报定位结果。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -60,8 +54,6 @@ TRAJECTORY_TRACKING
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#trajectory_tracking)
@@ -77,8 +69,6 @@ CAR_HAILING
 表示打车场景。 适用于用户出行打车时定位当前位置的场景，如网约车类应用。 此场景默认以最小1秒间隔上报定位结果。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -96,8 +86,6 @@ DAILY_LIFE_SERVICE
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [DAILY_LIFE_SERVICE](arkts-location-geolocationmanager-locationrequestscenario-e.md#daily_life_service)
@@ -113,8 +101,6 @@ NO_POWER
 表示无功耗功场景，这种场景下不会主动触发定位，会在其他应用定位时，才给当前应用返回位置。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

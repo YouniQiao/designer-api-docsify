@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getFirewallRules
@@ -16,8 +16,6 @@ Queries firewall rules of a device. This API is suitable for enterprise network 
 [LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -45,23 +43,3 @@ Queries firewall rules of a device. This API is suitable for enterprise network 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let firewallRule: Array<networkManager.FirewallRule>;
-try {
-  firewallRule = networkManager.getFirewallRules(wantTemp);
-  console.info('Succeeded in getting firewall rules');
-} catch (err) {
-  console.error(`Failed to get firewall rules. Code: ${err.code}, message: ${err.message}`);
-}
-```

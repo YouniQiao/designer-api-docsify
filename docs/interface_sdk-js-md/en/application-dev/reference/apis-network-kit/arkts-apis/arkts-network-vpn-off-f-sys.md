@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## off('connect')
@@ -15,8 +15,6 @@ function off(type: 'connect', callback?: Callback<VpnConnectState>): void
 Unsubscribes from vpn connect state changes.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
@@ -52,8 +50,6 @@ function off(type: 'connectMulti', callback?: Callback<MultiVpnConnectState>): v
 Unsubscribes from vpn connect state changes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## unmount
@@ -15,8 +15,6 @@ function unmount(volumeId: string, callback: AsyncCallback<void>): void
 卸载指定卷设备，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -45,68 +43,6 @@ function unmount(volumeId: string, callback: AsyncCallback<void>): void
 | 13600008 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-volumeManager.unmount(volumeId).then(() => {
-  // 卸载指定卷设备成功后的回调
-}).catch((error: BusinessError) => {
-  console.error(`Failed to unmount. Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-volumeManager.unmount(volumeId).then(() => {
-  // 卸载指定卷设备成功后的回调
-}).catch((error: BusinessError): void => {
-  console.error(`Failed to unmount. Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-volumeManager.unmount(volumeId, (error: BusinessError) => {
-  if (error) {
-    console.error(`unmount failed, code is: ${error.code}, message is: ${error.message}`);
-    return;
-  }
-  // 卸载指定卷设备成功后的回调
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// volumeId可通过getAllVolumes()接口获取
-let volumeId: string = "";
-volumeManager.unmount(volumeId, (error: BusinessError | null) => {
-  if (error) {
-    console.error(`unmount failed, code is: ${error.code}, message is: ${error.message}`);
-    return;
-  }
-  // 卸载指定卷设备成功后的回调
-});
-```
-
 
 ## unmount
 
@@ -117,8 +53,6 @@ function unmount(volumeId: string): Promise<void>
 卸载指定卷设备，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -151,7 +85,3 @@ function unmount(volumeId: string): Promise<void>
 | 13600005 |
 | 13600008 |
 | 13900042 |
-
-**示例**
-
-参见 [unmount](#unmount)

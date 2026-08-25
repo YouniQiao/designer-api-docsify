@@ -4,8 +4,6 @@ Enumerates the system sound effect types.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
 ## PHOTO_SHUTTER
@@ -17,8 +15,6 @@ PHOTO_SHUTTER = 0
 The sound indicates image capture.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ The sound indicates the beginning of video recording.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -49,8 +43,6 @@ VIDEO_RECORDING_END = 2
 The sound indicates the end of video recording.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

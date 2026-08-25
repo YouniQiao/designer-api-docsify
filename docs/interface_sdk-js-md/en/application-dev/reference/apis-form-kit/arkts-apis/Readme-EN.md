@@ -16,12 +16,6 @@
   - [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)
   <!--Del-->
   - [FormExtensionAbility(system api)](arkts-form-app-form-formextensionability-formextensionability-c-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [OnAcquireFormDataFn(system api)](arkts-form-onacquireformdatafn-t-sys.md)<!--DelEnd-->
-  - [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md)
-  <!--Del-->
-  - [OnShareFormFn(system api)](arkts-form-onshareformfn-t-sys.md)<!--DelEnd-->
-  - [OnStopFn](arkts-form-onstopfn-t.md)
 <!--Del-->
 - [@ohos.app.form.formHost](arkts-app-form-formhost.md)<!--DelEnd-->
   <!--Del-->
@@ -67,17 +61,7 @@
   <!--Del-->
   - [off(system api)](arkts-form-formhost-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [offChangeSceneAnimationState(system api)](arkts-form-formhost-offchangesceneanimationstate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [offDeleteFormsCallback(system api)](arkts-form-formhost-offdeleteformscallback-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offFormOverflow(system api)](arkts-form-formhost-offformoverflow-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offFormUninstall(system api)](arkts-form-formhost-offformuninstall-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offGetFormRect(system api)](arkts-form-formhost-offgetformrect-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offGetLiveFormStatus(system api)](arkts-form-formhost-offgetliveformstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offGetWantParamsCallback(system api)](arkts-form-formhost-offgetwantparamscallback-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -87,17 +71,7 @@
   <!--Del-->
   - [on(system api)](arkts-form-formhost-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [onChangeSceneAnimationState(system api)](arkts-form-formhost-onchangesceneanimationstate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [onDeleteFormsCallback(system api)](arkts-form-formhost-ondeleteformscallback-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFormOverflow(system api)](arkts-form-formhost-onformoverflow-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFormUninstall(system api)](arkts-form-formhost-onformuninstall-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onGetFormRect(system api)](arkts-form-formhost-ongetformrect-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onGetLiveFormStatus(system api)](arkts-form-formhost-ongetliveformstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onGetWantParamsCallback(system api)](arkts-form-formhost-ongetwantparamscallback-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -206,35 +180,7 @@
   <!--Del-->
   - [off(system api)](arkts-form-formobserver-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [offCall(system api)](arkts-form-formobserver-offcall-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offFormAdd(system api)](arkts-form-formobserver-offformadd-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offFormRemove(system api)](arkts-form-formobserver-offformremove-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offMessage(system api)](arkts-form-formobserver-offmessage-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offNotifyInvisible(system api)](arkts-form-formobserver-offnotifyinvisible-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offNotifyVisible(system api)](arkts-form-formobserver-offnotifyvisible-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offRouter(system api)](arkts-form-formobserver-offrouter-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [on(system api)](arkts-form-formobserver-on-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onCall(system api)](arkts-form-formobserver-oncall-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFormAdd(system api)](arkts-form-formobserver-onformadd-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onFormRemove(system api)](arkts-form-formobserver-onformremove-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onMessage(system api)](arkts-form-formobserver-onmessage-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onNotifyInvisible(system api)](arkts-form-formobserver-onnotifyinvisible-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onNotifyVisible(system api)](arkts-form-formobserver-onnotifyvisible-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onRouter(system api)](arkts-form-formobserver-onrouter-f-sys.md)<!--DelEnd-->
 - [@ohos.app.form.formProvider](arkts-app-form-formprovider.md)
   <!--Del-->
   - [activateSceneAnimation(system api)](arkts-form-formprovider-activatesceneanimation-f-sys.md)<!--DelEnd-->

@@ -4,8 +4,6 @@ Enumeration of different types of EmbeddedWindowModeFollowStrategy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOLLOW_HOST_WINDOW_MODE
@@ -17,8 +15,6 @@ FOLLOW_HOST_WINDOW_MODE = 0
 Followed the host Window Mode.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE = 1
 Followed the EmbeddedUIExtensionAbility.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

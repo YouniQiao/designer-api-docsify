@@ -7,8 +7,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,13 +22,11 @@ color?: ResourceColor
 
 分割线颜色。默认值：0x08000000
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** 0x08000000 [since 18]
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -47,13 +43,11 @@ endMargin?: Length
 分割线与列表侧边结束端的距离。默认值：0单位：vp  
 **说明：**设置为负数或者百分比时，按默认值处理。endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0vp [since 18]
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -70,13 +64,11 @@ startMargin?: Length
 分割线与列表侧边起始端的距离。默认值：0单位：vp  
 **说明：**设置为负数或者百分比时，按默认值处理。endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0vp [since 18]
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -93,11 +85,9 @@ strokeWidth: Length
 分割线的线宽。单位：vp  
 **说明：**设置为负数，百分比，或者大于等于List内容区长度时，按0处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

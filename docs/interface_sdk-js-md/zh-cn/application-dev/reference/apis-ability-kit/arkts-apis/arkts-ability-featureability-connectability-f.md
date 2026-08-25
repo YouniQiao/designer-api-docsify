@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## connectAbility
@@ -21,8 +21,6 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -39,30 +37,3 @@ function connectAbility(request: Want, options: ConnectOptions): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-
-// 连接ServiceAbility
-let connectId = featureAbility.connectAbility(
-  {
-    deviceId: '',
-    bundleName: 'com.ix.ServiceAbility',
-    abilityName: 'com.ix.ServiceAbility.ServiceAbilityA',
-  },
-  {
-    onConnect: (element, remote) => {
-      console.info(`ConnectAbility onConnect remote is proxy: ${(remote instanceof rpc.RemoteProxy)}`);
-    },
-    onDisconnect: (element) => {
-      console.info(`ConnectAbility onDisconnect element.deviceId : ${element.deviceId}`);
-    },
-    onFailed: (code) => {
-      console.error(`featureAbilityTest ConnectAbility onFailed errCode : ${code}`);
-    },
-  },
-);
-```

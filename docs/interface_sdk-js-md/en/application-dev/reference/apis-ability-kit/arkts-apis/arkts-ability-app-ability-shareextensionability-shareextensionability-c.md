@@ -6,8 +6,6 @@ ShareExtensionAbility provides extended capabilities for integrating a share det
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -15,5 +13,5 @@ ShareExtensionAbility provides extended capabilities for integrating a share det
 ## Modules to Import
 
 ```TypeScript
-import { ShareExtensionAbility } from '@kit.AbilityKit';
+import { ShareExtensionAbility } from 'kits/@kit.AbilityKit';
 ```

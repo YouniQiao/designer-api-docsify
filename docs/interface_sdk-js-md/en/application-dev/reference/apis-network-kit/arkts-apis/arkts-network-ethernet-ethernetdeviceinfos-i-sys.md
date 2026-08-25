@@ -4,8 +4,6 @@ Defines Ethernet device information.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines Ethernet device information.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## connectionMode
@@ -27,8 +25,6 @@ Device connection mode.
 **Type:** [DeviceConnectionType](arkts-network-ethernet-deviceconnectiontype-e-sys.md)
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -46,8 +42,6 @@ Device name.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Interface name.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -82,8 +74,6 @@ Maximum connection rate.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Product name.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
@@ -118,8 +106,6 @@ Supplier ID.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 **System API:** This is a system API.
@@ -135,8 +121,6 @@ Vendor name.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 

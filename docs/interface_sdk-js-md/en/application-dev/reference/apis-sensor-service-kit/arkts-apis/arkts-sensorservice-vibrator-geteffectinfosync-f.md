@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getEffectInfoSync
@@ -15,8 +15,6 @@ function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectI
 Obtains the preset vibration effect based on the device ID and vibrator ID to determine whether the preset vibration effect is supported.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -38,19 +36,3 @@ Obtains the preset vibration effect based on the device ID and vibrator ID to de
 | Error Code ID |
 | --- |
 | [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
-
-**Examples**
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  const effectInfo: vibrator.EffectInfo = vibrator.getEffectInfoSync('haptic.clock.timer', { deviceId: 1, vibratorId: 3});
-  console.info(`isEffectSupported: ${effectInfo.isEffectSupported}`);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```

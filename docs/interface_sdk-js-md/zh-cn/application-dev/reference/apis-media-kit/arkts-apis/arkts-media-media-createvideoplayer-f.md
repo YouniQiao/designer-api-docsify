@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## createVideoPlayer
@@ -21,8 +21,6 @@ function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md)(callback: AsyncCallback&lt;AVPlayer&gt;)
@@ -33,39 +31,7 @@ function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoPlayer](arkts-media-multimedia-media-videoplayer-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoPlayer: media.VideoPlayer;
-media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
-  if (video) {
-    videoPlayer = video;
-    console.info('Succeeded in creating VideoPlayer');
-  } else {
-    console.error(`Failed to create VideoPlayer, error:${error}`);
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoPlayer: media.VideoPlayer;
-media.createVideoPlayer().then((video: media.VideoPlayer) => {
-  if (video) {
-    videoPlayer = video;
-    console.info('Succeeded in creating VideoPlayer');
-  } else {
-    console.error('Failed to create VideoPlayer');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create VideoPlayer, error:${error}`);
-});
-```
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; | 是 |
 
 
 ## createVideoPlayer
@@ -82,8 +48,6 @@ function createVideoPlayer(): Promise<VideoPlayer>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md)()
@@ -94,8 +58,4 @@ function createVideoPlayer(): Promise<VideoPlayer>
 
 | 类型 |
 | --- |
-| Promise&lt;[VideoPlayer](arkts-media-multimedia-media-videoplayer-i.md)&gt; |
-
-**示例**
-
-参见 [createVideoPlayer](#createvideoplayer)
+| Promise&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; |

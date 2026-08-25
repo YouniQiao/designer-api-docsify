@@ -8,8 +8,6 @@ This callback is triggered when the camera device state of the page changes.
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**

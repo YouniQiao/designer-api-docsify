@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -28,8 +26,6 @@ onWillHide(event: VoidCallback)
 > 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,8 +53,6 @@ onWillShow(event: VoidCallback)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -81,8 +75,6 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -91,7 +83,7 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | string \| Resource \| CustomBuilder \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 |
+| options | string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 |
 
 ## tabBar
 
@@ -109,8 +101,6 @@ tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 > 主导航（如首页、发现、推荐）。侧边页签适用于宽屏场景，可设置vertical(true)启用纵向布局，让页签在侧边显示，默认左侧显示。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -133,8 +123,6 @@ tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string |
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -145,4 +133,4 @@ tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string |
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | ComponentContent \| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) \| string \| Resource \| CustomBuilder \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 |
+| content | ComponentContent \| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) \| string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 |

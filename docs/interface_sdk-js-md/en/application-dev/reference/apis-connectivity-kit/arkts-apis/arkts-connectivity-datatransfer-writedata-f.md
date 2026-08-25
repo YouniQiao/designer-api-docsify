@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## writeData
@@ -15,8 +15,6 @@ function writeData(params: DataParams): Promise<void>
 Sends data to a remote device using the device address and UUID. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

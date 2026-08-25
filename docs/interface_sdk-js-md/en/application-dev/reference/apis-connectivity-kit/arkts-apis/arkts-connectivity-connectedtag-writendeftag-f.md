@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## writeNdefTag
@@ -19,8 +19,6 @@ Writes data to this active tag. This API uses a promise to return the result.
 > [connectedTag.write](arkts-connectivity-connectedtag-write-f.md) instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -42,33 +40,6 @@ Writes data to this active tag. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rawData = "010203"; // change it to be correct.
-connectedTag.writeNdefTag(rawData).then(() => {
-    console.info("connectedTag.writeNdefTag Promise success.");
-}).catch((err: BusinessError)=> {
-    console.error("connectedTag.writeNdefTag Promise err: " + err);
-});
-```
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-let rawData = "010203"; // change it to be correct.
-connectedTag.writeNdefTag(rawData, (err)=> {
-    if (err) {
-        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag.writeNdefTag AsyncCallback success.");
-    }
-});
-```
-
 
 ## writeNdefTag
 
@@ -84,8 +55,6 @@ Writes data to this active tag. This API uses an asynchronous callback to return
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [write](arkts-connectivity-connectedtag-write-f.md)
@@ -100,7 +69,3 @@ Writes data to this active tag. This API uses an asynchronous callback to return
 | --- | --- | --- |
 | data | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [writeNdefTag](#writendeftag)

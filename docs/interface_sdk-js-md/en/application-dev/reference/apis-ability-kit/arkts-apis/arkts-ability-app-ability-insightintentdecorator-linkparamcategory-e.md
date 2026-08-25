@@ -4,8 +4,6 @@ Enumerates the intent parameter categories available for the [@InsightIntentLink
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## LINK
@@ -17,8 +15,6 @@ LINK = 'link'
 Category of link. Intent parameters are appended to the end of a URI link and passed to the application via the URI.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ WANT = 'want'
 Category of want. Intent parameters are passed to the application through the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

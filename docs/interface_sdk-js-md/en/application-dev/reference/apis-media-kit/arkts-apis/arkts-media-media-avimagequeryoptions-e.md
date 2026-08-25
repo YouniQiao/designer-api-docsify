@@ -4,8 +4,6 @@ Enumerates the relationship between the video frame and the time at which the vi
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## AV_IMAGE_QUERY_NEXT_SYNC
@@ -17,8 +15,6 @@ AV_IMAGE_QUERY_NEXT_SYNC = 0
 The key frame at or next to the specified time is selected.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -32,8 +28,6 @@ The key frame at or prior to the specified time is selected.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## AV_IMAGE_QUERY_CLOSEST_SYNC
@@ -46,8 +40,6 @@ The key frame closest to the specified time is selected.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
 ## AV_IMAGE_QUERY_CLOSEST
@@ -59,7 +51,5 @@ AV_IMAGE_QUERY_CLOSEST
 The frame (not necessarily a key frame) closest to the specified time is selected.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator

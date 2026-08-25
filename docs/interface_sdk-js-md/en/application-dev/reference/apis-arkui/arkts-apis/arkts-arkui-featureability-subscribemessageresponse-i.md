@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -19,8 +17,6 @@ Peer ability name, which is case sensitive.
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 
@@ -38,8 +34,6 @@ Name of the bundle where the peer ability has been located. The name is case sen
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -56,8 +50,6 @@ Peer device ID.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -73,8 +65,6 @@ Messages received from the device.
 **Type:** string
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 

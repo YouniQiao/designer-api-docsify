@@ -10,8 +10,6 @@ AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,8 +27,6 @@ static Clear(): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** [clear](#clear)
@@ -43,13 +39,6 @@ static Clear(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-let res: boolean = AppStorage.Clear(); // true，已经没有订阅者
-```
-
 ## clear
 
 ```TypeScript
@@ -59,8 +48,6 @@ static clear(): boolean
 删除[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有属性。仅当AppStorage没有任何订阅者时可删除成功并返回true；如果有订阅者， clear不会生效并返回false。订阅者的含义参考[delete](#delete)。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -72,19 +59,6 @@ static clear(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let res: boolean = AppStorage.clear(); // true，已经没有订阅者
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: boolean = storage.clear(); // true，已经没有订阅者
-```
-
 ## Delete
 
 ```TypeScript
@@ -94,8 +68,6 @@ static Delete(propName: string): boolean
 在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中删除propName对应的属性。仅当AppStorage中该属性没有任何订阅者时可删除成功并返回true；如果有订阅者，则返回false。属性的订阅者为[Link](#link)、[Prop](#prop)等接口返回的实例，以及 [@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink)和 [@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)装饰的变量。如果\@StorageLink('propName')、\@ StorageProp('propName')装饰的变量或SubscribedAbstractProperty实例依旧对propName有同步关系，则该属性不能从AppStorage中删除。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -115,17 +87,6 @@ static Delete(propName: string): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-AppStorage.Link('PropA');
-let res: boolean = AppStorage.Delete('PropA'); // false，PropA 还存在订阅者
-
-AppStorage.SetOrCreate('PropB', 48);
-let res1: boolean = AppStorage.Delete('PropB'); // true，PropB 已从AppStorage成功删除
-```
-
 ## delete
 
 ```TypeScript
@@ -140,8 +101,6 @@ static delete(propName: string): boolean
 2. 对link、prop、setAndLink、setAndProp接口返回的SubscribedAbstractProperty的实例调用[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted)接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -159,27 +118,6 @@ static delete(propName: string): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-AppStorage.link<number>('PropA');
-let res: boolean = AppStorage.delete('PropA'); // false，PropA 还存在订阅者
-
-AppStorage.setOrCreate('PropB', 48);
-let res1: boolean = AppStorage.delete('PropB'); // true，PropB 已从AppStorage成功删除
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-storage.link<number>('PropA');
-let res: boolean = storage.delete('PropA'); // false，PropA 还存在订阅者
-let res1: boolean = storage.delete('PropB'); // false，PropB 不存在于storage中
-storage.setOrCreate('PropB', 48);
-let res2: boolean = storage.delete('PropB'); // true，PropB 已从storage成功删除
-```
-
 ## Get
 
 ```TypeScript
@@ -189,8 +127,6 @@ static Get<T>(propName: string): T | undefined
 获取propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的属性值。如果不存在则返回undefined。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -210,13 +146,6 @@ static Get<T>(propName: string): T | undefined
 | --- |
 | T \| undefined |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-let value: number = AppStorage.Get('PropA') as number; // 47
-```
-
 ## get
 
 ```TypeScript
@@ -226,8 +155,6 @@ static get<T>(propName: string): T | undefined
 获取propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的属性值。如果不存在则返回undefined。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -245,31 +172,6 @@ static get<T>(propName: string): T | undefined
 | --- |
 | T \| undefined |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let value: number = AppStorage.get('PropA') as number; // 47
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let value: number = storage.get('PropA') as number; // 47
-```
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-ref1?.get(); // ref1.get()=47
-```
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47); 
-let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');    
-prop1.get(); // prop1.get()=47
-```
-
 ## Has
 
 ```TypeScript
@@ -279,8 +181,6 @@ static Has(propName: string): boolean
 判断propName对应的属性是否在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -300,12 +200,6 @@ static Has(propName: string): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-AppStorage.Has('simpleProp');
-```
-
 ## has
 
 ```TypeScript
@@ -315,8 +209,6 @@ static has(propName: string): boolean
 判断propName对应的属性是否在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -333,18 +225,6 @@ static has(propName: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-AppStorage.has('simpleProp');
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-storage.has('PropA'); // true
-```
 
 ## IsMutable
 
@@ -359,8 +239,6 @@ static IsMutable(propName: string): boolean
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -377,13 +255,6 @@ static IsMutable(propName: string): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-let res: boolean = AppStorage.IsMutable('PropA');
-```
-
 ## Keys
 
 ```TypeScript
@@ -393,8 +264,6 @@ static Keys(): IterableIterator<string>
 返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有的属性名。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -406,27 +275,7 @@ static Keys(): IterableIterator<string>
 
 | 类型 |
 | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; |
-
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropB', 48);
-let keys: IterableIterator<string> = AppStorage.Keys();
-```
-
-```TypeScript
-let keys: Array<string> = PersistentStorage.Keys();
-```
-
-```TypeScript
-Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.Keys(); // keys 包含 accessibilityEnabled、languageCode、prop
-```
+| IterableIterator & lt;string & gt; |
 
 ## keys
 
@@ -438,8 +287,6 @@ static keys(): IterableIterator<string>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -448,33 +295,7 @@ static keys(): IterableIterator<string>
 
 | 类型 |
 | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; |
-
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropB', 48);
-let keys: IterableIterator<string> = AppStorage.keys();
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let keys: IterableIterator<string> = storage.keys();
-```
-
-```TypeScript
-let keys: Array<string> = PersistentStorage.keys();
-```
-
-```TypeScript
-Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
-  key: 'languageCode',
-  defaultValue: 'en'
-}, { key: 'prop', defaultValue: 'hhhh' }]);
-
-let keys: Array<string> = Environment.keys(); // keys 包含 accessibilityEnabled、languageCode、prop
-```
+| IterableIterator & lt;string & gt; |
 
 ## Link
 
@@ -485,8 +306,6 @@ static Link(propName: string): any
 与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立双向数据绑定。如果给定的propName在AppStorage中存在，返回 与AppStorage中propName对应属性的双向绑定数据。双向绑定数据的修改会同步回AppStorage中，AppStorage会将变化同步到所有绑定该propName的数据和自定义组件中。如果AppStorage中不存在propName，则返回undefined。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -506,15 +325,6 @@ static Link(propName: string): any
 | --- |
 | any |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.Link('PropA');
-let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.Link('PropA'); // linkToPropA2.get() == 47
-linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get() == 48
-```
-
 ## link
 
 ```TypeScript
@@ -524,8 +334,6 @@ static link<T>(propName: string): SubscribedAbstractProperty<T>
 与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立双向数据绑定。如果给定的propName在AppStorage中存在，返回 AppStorage中propName对应属性的双向绑定数据。与[prop](#prop)的单向数据绑定不同，link的修改会同步回AppStorage，AppStorage会将变化同步到所有绑定该 propName的数据和自定义组件中。如果AppStorage中不存在propName，则返回undefined。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -543,23 +351,6 @@ static link<T>(propName: string): SubscribedAbstractProperty<T>
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
-let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
-linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get() == 48
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let linkToPropA1: SubscribedAbstractProperty<number> = storage.link('PropA');
-let linkToPropA2: SubscribedAbstractProperty<number> = storage.link('PropA'); // linkToPropA2.get() == 47
-linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get() == 48
-```
-
 ## Prop
 
 ```TypeScript
@@ -572,8 +363,6 @@ static Prop(propName: string): any
 > Prop仅支持S类型（number、boolean、string）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -593,15 +382,6 @@ static Prop(propName: string): any
 | --- |
 | any |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-let prop1: SubscribedAbstractProperty<number> = AppStorage.Prop('PropA');
-let prop2: SubscribedAbstractProperty<number> = AppStorage.Prop('PropA');
-prop1.set(1); // 单向同步：prop1.get()的值为1，prop2.get()的值为47
-```
-
 ## prop
 
 ```TypeScript
@@ -611,8 +391,6 @@ static prop<T>(propName: string): SubscribedAbstractProperty<T>
 与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立单向数据绑定。如果给定的propName在AppStorage中存在，则返 回与AppStorage中propName对应属性的单向绑定数据。如果AppStorage中不存在propName，则返回undefined。单向绑定数据的修改不会同步回AppStorage中。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -630,23 +408,6 @@ static prop<T>(propName: string): SubscribedAbstractProperty<T>
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
-let prop2: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
-prop1.set(1); // 单向同步：prop1.get()的值为1，prop2.get()的值为47
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let prop1: SubscribedAbstractProperty<number> = storage.prop('PropA');
-let prop2: SubscribedAbstractProperty<number> = storage.prop('PropA');
-prop1.set(1); // 单向同步：prop1.get()的值为1，prop2.get()的值为47
-```
-
 ## ref
 
 ```TypeScript
@@ -656,8 +417,6 @@ static ref<T>(propName: string): AbstractProperty<T> | undefined
 如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回AppStorage中propName对应属性的引用。否则，返 回undefined。与[link](#link)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md)类型的变量。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -675,23 +434,6 @@ static ref<T>(propName: string): AbstractProperty<T> | undefined
 | --- |
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let refToPropA1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA'); // refToPropA2.get() == 47
-refToPropA1?.set(48); // 同步修改AppStorage：refToPropA1.get() == refToPropA2.get() == 48
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let refToPropA1: AbstractProperty<number> | undefined = storage.ref('PropA');
-let refToPropA2: AbstractProperty<number> | undefined = storage.ref('PropA'); // refToPropA2.get() == 47
-refToPropA1?.set(48); // refToPropA1.get() == refToPropA2.get() == 48
-```
-
 ## Set
 
 ```TypeScript
@@ -701,8 +443,6 @@ static Set<T>(propName: string, newValue: T): boolean
 在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则不做赋值 操作，状态变量不会通知UI刷新propName对应属性的值。与[SetOrCreate](#setorcreate)不同，Set仅在propName已存在时生效，propName不存在时返回 false。从API version 12开始，newValue可以为null或undefined。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -723,14 +463,6 @@ static Set<T>(propName: string, newValue: T): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 48);
-let res: boolean = AppStorage.Set('PropA', 47); // true
-let res1: boolean = AppStorage.Set('PropB', 47); // false
-```
-
 ## set
 
 ```TypeScript
@@ -740,8 +472,6 @@ static set<T>(propName: string, newValue: T): boolean
 在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则不做赋值 操作，状态变量不会通知UI刷新propName对应属性的值。与[setOrCreate](#setorcreate)不同，set仅在propName已存在时生效，propName不存在时返回 false。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -760,56 +490,6 @@ static set<T>(propName: string, newValue: T): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 48);
-let res: boolean = AppStorage.set('PropA', 47); // true
-let res1: boolean = AppStorage.set('PropB', 47); // false
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: boolean = storage.set('PropA', 47); // true
-let res1: boolean = storage.set('PropB', 47); // false
-```
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
-ref1?.set(1); // ref1.get()=1
-let mapValue: Map<string, number> = new Map([['1', 0]]);
-let ref2 = AppStorage.setAndRef('MapA', mapValue);
-ref2.set(mapValue);
-let setValue: Set<string> = new Set(['1']);
-let ref3 = AppStorage.setAndRef('SetB', setValue);
-ref3.set(setValue);
-let dateValue: Date = new Date('2024');
-let ref4 = AppStorage.setAndRef('DateC', dateValue);
-ref4.set(dateValue);
-ref2.set(null);
-ref3.set(undefined);
-```
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
-prop1.set(1); // prop1.get()=1
-// 从API version 12开始支持Map、Set、Date类型，支持null、undefined以及联合类型。
-let mapValue: Map<string, number> = new Map([['1', 0]]);
-let prop2 = AppStorage.setAndProp('MapA', mapValue);
-prop2.set(mapValue);
-let setValue: Set<string> = new Set(['1']);
-let prop3 = AppStorage.setAndProp('SetB', setValue);
-prop3.set(setValue);
-let dateValue: Date = new Date('2024');
-let prop4 = AppStorage.setAndProp('DateC', dateValue);
-prop4.set(dateValue);
-prop2.set(null);
-prop3.set(undefined);
-```
-
 ## SetAndLink
 
 ```TypeScript
@@ -819,8 +499,6 @@ static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 与[Link](#link)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存 在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其双向绑定数据。defaultValue必须为T类型，且不能为 null或undefined。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -841,14 +519,6 @@ static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-let link1: SubscribedAbstractProperty<number> = AppStorage.SetAndLink('PropB', 49); // 用默认值49创建PropB
-let link2: SubscribedAbstractProperty<number> = AppStorage.SetAndLink('PropA', 50); // PropA已存在，值为47
-```
-
 ## setAndLink
 
 ```TypeScript
@@ -858,8 +528,6 @@ static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 与[link](#link)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存 在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其双向绑定数据。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -878,21 +546,6 @@ static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // 用默认值49创建PropB
-let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA已存在，值为47
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let link1: SubscribedAbstractProperty<number> = storage.setAndLink('PropB', 49); // 用默认值49创建PropB
-let link2: SubscribedAbstractProperty<number> = storage.setAndLink('PropA', 50); // PropA已存在，值为47
-```
-
 ## SetAndProp
 
 ```TypeScript
@@ -902,8 +555,6 @@ static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractPrope
 与[Prop](#prop)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存 在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其单向绑定数据。defaultValue必须为S类型，且不能为 null或undefined。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -924,13 +575,6 @@ static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractPrope
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropA', 47);
-let prop: SubscribedAbstractProperty<number> = AppStorage.SetAndProp('PropB', 49); // PropA -> 47, PropB -> 49
-```
-
 ## setAndProp
 
 ```TypeScript
@@ -940,8 +584,6 @@ static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 与[prop](#prop)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存 在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其单向绑定数据。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -960,19 +602,6 @@ static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let prop: SubscribedAbstractProperty<number> = AppStorage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let prop: SubscribedAbstractProperty<number> = storage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
-```
-
 ## setAndRef
 
 ```TypeScript
@@ -982,8 +611,6 @@ static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 与[ref](#ref)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则 返回AppStorage中propName对应属性的引用。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其引用。与[setAndLink](#setandlink)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md) 类型的变量。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1002,21 +629,6 @@ static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 | --- |
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropA', 47);
-let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // 用默认值49创建PropB
-let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA已存在，值为47
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let ref1: AbstractProperty<number> = storage.setAndRef('PropB', 49); // 用默认值49创建PropB
-let ref2: AbstractProperty<number> = storage.setAndRef('PropA', 50); // PropA已存在，值为47
-```
-
 ## SetOrCreate
 
 ```TypeScript
@@ -1026,8 +638,6 @@ static SetOrCreate<T>(propName: string, newValue: T): void
 如果propName已经在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，并且newValue和propName对应属性的值不同，则设置 propName对应属性的值为newValue，否则状态变量不会通知UI刷新propName对应属性的值。如果不存在，则创建propName属性，值为newValue。从API version 12开始，newValue可以为 null或undefined。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -1042,12 +652,6 @@ static SetOrCreate<T>(propName: string, newValue: T): void
 | propName | string | 是 |
 | newValue | T | 是 |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('simpleProp', 121);
-```
-
 ## setOrCreate
 
 ```TypeScript
@@ -1057,8 +661,6 @@ static setOrCreate<T>(propName: string, newValue: T): void
 如果propName已经在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，并且newValue和propName对应属性的值不同，则设置 propName对应属性的值为newValue，否则状态变量不会通知UI刷新propName对应属性的值。如果propName不存在，则创建propName属性，值为newValue。setOrCreate仅可创建单个AppStorage的键值对，如需创建多个AppStorage键值对，可多次调用此方法。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1071,20 +673,6 @@ static setOrCreate<T>(propName: string, newValue: T): void
 | propName | string | 是 |
 | newValue | T | 是 |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('simpleProp', 121);
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: boolean = storage.setOrCreate('PropA', 121); // true
-let res1: boolean = storage.setOrCreate('PropB', 111); // true
-let res2: boolean = storage.setOrCreate('PropB', null); // true（API version 12及之后返回true，API version 11及之前返回false）
-```
-
 ## Size
 
 ```TypeScript
@@ -1094,8 +682,6 @@ static Size(): number
 返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中的属性数量。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -1109,13 +695,6 @@ static Size(): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-AppStorage.SetOrCreate('PropB', 48);
-let res: number = AppStorage.Size(); // 1
-```
-
 ## size
 
 ```TypeScript
@@ -1125,8 +704,6 @@ static size(): number
 返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中的属性数量。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1138,19 +715,6 @@ static size(): number
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-AppStorage.setOrCreate('PropB', 48);
-let res: number = AppStorage.size(); // 1
-```
-
-```TypeScript
-let initialData: Record<string, number> = { 'PropA': 47 };
-let storage: LocalStorage = new LocalStorage(initialData);
-let res: number = storage.size(); // 1
-```
-
 ## staticClear
 
 ```TypeScript
@@ -1160,8 +724,6 @@ static staticClear(): boolean
 删除[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有属性。仅当AppStorage没有任何订阅者时可删除成功并返回true；如果有订阅者， staticClear不会生效并返回false。订阅者的含义参考[delete](#delete)。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -1174,9 +736,3 @@ static staticClear(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let clearResult = AppStorage.staticClear();
-```

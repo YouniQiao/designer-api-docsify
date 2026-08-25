@@ -7,8 +7,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,11 +22,9 @@ backgroundUri: ResourceStr
 
 未选中的星级的图片路径，可由用户自定义或使用系统默认图片。从API version 20开始，该接口支持设置Resource资源。参考 示例3（通过Resource资源设置评分的样式） 代码。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,11 +40,9 @@ foregroundUri: ResourceStr
 
 选中的星级的图片路径，可由用户自定义或使用系统默认图片。从API version 20开始，该接口支持设置Resource资源。参考 示例3（通过Resource资源设置评分的样式） 代码。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -64,11 +58,9 @@ secondaryUri?: ResourceStr
 
 部分选中的星级的图片路径，可由用户自定义或使用系统默认图片。未设置时将优先使用backgroundUri，效果等同于仅设置foregroundUri和backgroundUri。从API version 20开始，该接口支持设置Resource资源。参考 示例3（通过Resource资源设置评分的样式） 代码。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

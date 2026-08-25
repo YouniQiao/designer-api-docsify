@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## getParams
@@ -24,8 +24,6 @@ Obtains the parameters passed from the page that initiates redirection to the cu
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **Substitutes:** [getParams](arkts-arkui-arkui-uicontext-router-c.md#getparams)
@@ -39,9 +37,3 @@ Obtains the parameters passed from the page that initiates redirection to the cu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Object |
-
-**Examples**
-
-```TypeScript
-this.getUIContext().getRouter().getParams();
-```

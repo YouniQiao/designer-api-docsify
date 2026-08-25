@@ -4,8 +4,6 @@ Describes the text line spacing style.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ A constructor used to create a text line spacing style.
 **Since**: 26.0.0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,13 +41,11 @@ A constructor used to create a text line spacing style.
 readonly lineSpacing: number
 ```
 
-Text line spacing.Value range: [0, +∞)Unit: [vp
+Text line spacing.Value range: 0, +∞)Unit: [vp
 
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,11 +61,9 @@ readonly options?: LineSpacingOptions
 
 Line spacing options.
 
-**Type:** LineSpacingOptions
+**Type:** [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

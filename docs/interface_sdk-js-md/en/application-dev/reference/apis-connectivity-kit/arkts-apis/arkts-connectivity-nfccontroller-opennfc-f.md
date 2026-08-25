@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## openNfc
@@ -19,8 +19,6 @@ Opens NFC.
 > [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md) instead.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

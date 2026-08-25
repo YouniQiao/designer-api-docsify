@@ -4,14 +4,12 @@ CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onat
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAtomicService, FailureCode } from 'kits/@kit.AbilityKit';
 ```
 
 ## onAtomicServiceRequestFailure
@@ -23,8 +21,6 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 打开原子化服务失败时的回调函数。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,39 +36,6 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 | failureCode | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | 是 |
 | failureMessage | string | 是 |
 
-**示例**
-
-```TypeScript
-import { AbilityConstant, AtomicServiceOptions, common, UIAbility, Want, CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    let completionHandler: CompletionHandlerForAtomicService = {
-      // 定义原子化服务请求成功的回调函数
-      onAtomicServiceRequestSuccess(appId: string) {
-        hilog.info(0x0000, 'testTag', `appId:${appId}`);
-      },
-      // 定义原子化服务请求失败的回调函数
-      onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMessage: string) {
-        hilog.info(0x0000, 'testTag', `appId:${appId}, failureCode:${failureCode}, failureMessage:${failureMessage}`);
-      }
-    };
-    // 创建原子化服务对象
-    let options: AtomicServiceOptions = {
-      completionHandlerForAtomicService: completionHandler
-    };
-    let appId: string = '5765880207853275489'; // 根据实际appId修改此值
-    this.context.openAtomicService(appId, options).then((result: common.AbilityResult) => {
-      hilog.info(0x0000, 'testTag', `openAtomicService succeed:${JSON.stringify(result)}`);
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', `openAtomicService failed:${JSON.stringify(err)}`);
-    });
-  }
-}
-```
-
 ## onAtomicServiceRequestSuccess
 
 ```TypeScript
@@ -82,8 +45,6 @@ onAtomicServiceRequestSuccess(appId: string): void
 打开原子化服务成功时的回调函数。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,7 +57,3 @@ onAtomicServiceRequestSuccess(appId: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-
-**示例**
-
-参见[onAtomicServiceRequestFailure](#onatomicservicerequestfailure)接口的示例。

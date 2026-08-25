@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isWifiActive
@@ -15,8 +15,6 @@ function isWifiActive(): boolean
 查询WLAN开关是否已使能。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -34,16 +32,3 @@ function isWifiActive(): boolean
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let isWifiActive = wifiManager.isWifiActive();
-    console.info("isWifiActive:" + isWifiActive);
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

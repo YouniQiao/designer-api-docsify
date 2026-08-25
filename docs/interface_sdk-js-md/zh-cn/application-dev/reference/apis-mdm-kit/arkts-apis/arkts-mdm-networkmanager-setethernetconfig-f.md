@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setEthernetConfig
@@ -15,8 +15,6 @@ function setEthernetConfig(admin: Want, networkInterface: string, config: Interf
 设置特定以太网网络接口的IP地址。适用于企业网络管理场景，例如配置设备静态IP地址、统一管理企业网络设备IP分配、设置网络参数，帮助企业集中管理网络配置，确保设备网络参数符合企业网络管理策略。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -41,31 +39,3 @@ function setEthernetConfig(admin: Want, networkInterface: string, config: Interf
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [9201010](../errorcode-enterpriseDeviceManager.md#9201010-以太网网络接口配置失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { networkManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let config: networkManager.InterfaceConfig = {
-  // 需根据实际情况进行替换
-  "ipSetMode": networkManager.IpSetMode.STATIC,
-  "ipAddress": "192.168.1.121",
-  "gateway": "192.168.1.1",
-  "netMask": "255.255.255.0",
-  "dnsServers": "192.168.1.1"
-};
-let networkInterface: string = "eth0"; // 需根据实际情况进行替换
-try {
-  networkManager.setEthernetConfig(wantTemp, networkInterface, config);
-  console.info('Succeeded in setting ethernet config.');
-} catch (err) {
-  console.error(`Failed to set ethernet config. Code: ${err.code}, message: ${err.message}`);
-}
-```

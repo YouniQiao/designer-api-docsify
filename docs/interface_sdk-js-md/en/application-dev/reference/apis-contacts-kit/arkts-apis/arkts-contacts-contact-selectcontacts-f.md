@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## selectContacts
@@ -16,8 +16,6 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -33,56 +31,6 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 | Error Code ID |
 | --- |
 | [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-contact.selectContacts((err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = contact.selectContacts();
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-contact.selectContacts({
-  isMultiSelect:false
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = contact.selectContacts({isMultiSelect:false});
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-});
-```
 
 
 ## selectContacts
@@ -95,8 +43,6 @@ Selects a contact. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -106,10 +52,6 @@ Selects a contact. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
-
-**Examples**
-
-See [selectContacts](#selectcontacts)
 
 
 ## selectContacts
@@ -121,8 +63,6 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -141,10 +81,6 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 | --- |
 | [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
 
-**Examples**
-
-See [selectContacts](#selectcontacts)
-
 
 ## selectContacts
 
@@ -155,8 +91,6 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -179,7 +113,3 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 | Error Code ID |
 | --- |
 | [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
-
-**Examples**
-
-See [selectContacts](#selectcontacts)

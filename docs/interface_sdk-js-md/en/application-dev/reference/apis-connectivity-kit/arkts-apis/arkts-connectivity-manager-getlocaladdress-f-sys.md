@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { manager } from '@kit.ConnectivityKit';
+import { manager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getLocalAddress
@@ -15,8 +15,6 @@ function getLocalAddress(): string
 Queries the MAC address of the local device.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.GET_NEARLINK_LOCAL_MAC
 

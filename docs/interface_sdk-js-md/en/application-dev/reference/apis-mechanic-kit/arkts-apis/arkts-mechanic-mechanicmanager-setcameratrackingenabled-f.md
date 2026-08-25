@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## setCameraTrackingEnabled
@@ -15,8 +15,6 @@ function setCameraTrackingEnabled(isEnabled: boolean): void
 Enables or disables camera tracking.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -33,11 +31,3 @@ Enables or disables camera tracking.
 | [33300001](../errorcode-mechanic.md#33300001-system-error) |
 | [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
 | [33300003](../errorcode-mechanic.md#33300003-function-not-supported) |
-
-**Examples**
-
-```TypeScript
-console.info('Enable tracing');
-mechanicManager.setCameraTrackingEnabled(true);
-console.info('Enable Tracking Success');
-```

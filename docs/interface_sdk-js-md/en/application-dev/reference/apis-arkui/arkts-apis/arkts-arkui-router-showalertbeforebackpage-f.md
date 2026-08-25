@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## showAlertBeforeBackPage
@@ -21,8 +21,6 @@ Enables the display of a confirm dialog box before returning to the previous pag
 > with the current UI context.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -44,17 +42,3 @@ Enables the display of a confirm dialog box before returning to the previous pag
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  this.getUIContext().getRouter().showAlertBeforeBackPage({
-    message: 'Message Info'
-  });
-} catch (err) {
-  console.error(`showAlertBeforeBackPage failed, code is ${(err as BusinessError).code}, message is ${(err as BusinessError).message}`);
-}
-```

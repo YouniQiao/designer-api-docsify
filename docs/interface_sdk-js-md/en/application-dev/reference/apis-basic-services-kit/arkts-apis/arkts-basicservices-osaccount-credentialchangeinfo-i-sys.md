@@ -4,8 +4,6 @@ Defines the credential change information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the credential change information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## accountId
 
 ```TypeScript
-accountId: int
+accountId: number
 ```
 
 OS account ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -40,13 +36,11 @@ OS account ID.
 addedCredentialId?: Uint8Array
 ```
 
-Credential ID. An ID is returned when a credential is added or updated. which is **undefined** by default.
+Credential ID. An ID is returned when a credential is added or updated. The default value is **undefined**.
 
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -64,8 +58,6 @@ Credential change type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -82,8 +74,6 @@ Credential type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -94,13 +84,11 @@ Credential type.
 deletedCredentialId?: Uint8Array
 ```
 
-Credential ID. An ID is returned when a credential is deleted or updated. which is **undefined** by default.
+Credential ID. An ID is returned when a credential is deleted or updated. The default value is **undefined**.
 
 **Type:** Uint8Array
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -117,8 +105,6 @@ Whether the change is silent. A silent change is automatically initiated by the 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

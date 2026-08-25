@@ -6,29 +6,25 @@ ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## repeatCount
 
 ```TypeScript
-repeatCount?: int
+repeatCount?: number
 ```
 
 Number of repetitions. The default value is **0**, indicating infinite repetitions. This parameter must be used together with **repeatInterval**.The value range is [0, +∞). If the value is out of range, error code 401 is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,16 +33,14 @@ Number of repetitions. The default value is **0**, indicating infinite repetitio
 ## repeatInterval
 
 ```TypeScript
-repeatInterval?: long
+repeatInterval?: number
 ```
 
 Repeat interval. There is no default value. If no value is set, there is no repeat interval. This parameter must be used together with **repeatCount**.The value range is [86400, +∞), in seconds. If the value is out of range, error code 401 is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,15 +49,13 @@ Repeat interval. There is no default value. If no value is set, there is no repe
 ## triggerTimeInSeconds
 
 ```TypeScript
-triggerTimeInSeconds: long
+triggerTimeInSeconds: number
 ```
 
 Number of seconds in the countdown timer.Unit: s
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent

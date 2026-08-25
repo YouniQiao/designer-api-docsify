@@ -4,14 +4,12 @@ Session的实例表示在某个SE Reader实例上创建连接会话。通过[Rea
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.SecureElement
 
 ## 导入模块
 
 ```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
+import { omapi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## close
@@ -24,8 +22,6 @@ close(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **错误码：**
@@ -34,37 +30,6 @@ close(): void
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3300101](../errorcode-se.md#3300101-se服务状态异常) |
-
-**示例**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-
-// 在使用seSession之前，需要对seSession进行初始化
-
-try {
-    seSession.close();
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'close error %{public}s', JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seChannel : omapi.Channel;
-
-// 在使用seChannel之前，需要对seChannel进行初始化
-try {
-    seChannel.close();
-} catch (exception) {
-    hilog.error(0x0000, 'testTag', 'close exception %{public}s', JSON.stringify(exception));
-}
-```
 
 ## closeChannels
 
@@ -76,8 +41,6 @@ closeChannels(): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **错误码：**
@@ -86,23 +49,6 @@ closeChannels(): void
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3300101](../errorcode-se.md#3300101-se服务状态异常) |
-
-**示例**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-
-// 在使用seSession之前，需要对seSession进行初始化
-
-try {
-    seSession.closeChannels();
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'closeChannels error %{public}s', JSON.stringify(error));
-}
-```
 
 ## getATR
 
@@ -113,8 +59,6 @@ getATR(): number[]
 获取该SE的ATR。如果该SE的ATR不可用，则应返回空数组。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -131,24 +75,6 @@ getATR(): number[]
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [3300101](../errorcode-se.md#3300101-se服务状态异常) |
 
-**示例**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-
-// 在使用seSession之前，需要对seSession进行初始化
-
-try {
-    let atr = seSession.getATR();
-    hilog.info(0x0000, 'testTag', 'atr %{public}s', JSON.stringify(atr));
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'getATR error %{public}s', JSON.stringify(error));
-}
-```
-
 ## getReader
 
 ```TypeScript
@@ -158,8 +84,6 @@ getReader(): Reader
 获取提供此Session的Reader实例。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -175,36 +99,6 @@ getReader(): Reader
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seReaders : omapi.Reader[];
-let seSession : omapi.Session;
-let reader : omapi.Reader;
-
-// 在使用seReaders之前，需要对seReaders进行初始化
-function secureElementDemo() {
-    try {
-        reader = seReaders[0]; // 将其更改为所选的reader：eSE、SIM、SIM2
-        seSession = reader.openSession();
-    } catch (error) {
-        hilog.error(0x0000, 'testTag', 'openSession error %{public}s', JSON.stringify(error));
-    }
-    if (seSession == undefined) {
-        hilog.error(0x0000, 'testTag', 'seSession invalid.');
-        return;
-    }
-    try {
-        let sessionReader = seSession.getReader();
-    } catch (error) {
-        hilog.error(0x0000, 'testTag', 'getReader error %{public}s', JSON.stringify(error));
-    }
-}
-```
-
 ## isClosed
 
 ```TypeScript
@@ -212,8 +106,6 @@ isClosed(): boolean
 ```
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -229,39 +121,6 @@ isClosed(): boolean
 | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
-**示例**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-
-// 在使用seSession之前，需要对seSession进行初始化
-
-try {
-    let isClosed = seSession.isClosed();
-    hilog.info(0x0000, 'testTag', 'isClosed %{public}s', JSON.stringify(isClosed));
-} catch (error) {
-    hilog.error(0x0000, 'testTag', 'isClosed error %{public}s', JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seChannel : omapi.Channel;
-
-// 在使用seChannel之前，需要对seChannel进行初始化
-try {
-    let isClosed = seChannel.isClosed();
-    hilog.info(0x0000, 'testTag', 'isClosed = %{public}s', JSON.stringify(isClosed));
-} catch (exception) {
-    hilog.error(0x0000, 'testTag', 'isClosed exception %{public}s', JSON.stringify(exception));
-}
-```
-
 ## openBasicChannel
 
 ```TypeScript
@@ -271,8 +130,6 @@ openBasicChannel(aid: number[]): Promise<Channel>
 打开基础通道，参考[ISO 7816-4]协议，返回基础Channel实例对象。SE不能提供基础Channel或应用程序没有访问SE的权限时，返回null。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -298,122 +155,6 @@ openBasicChannel(aid: number[]): Promise<Channel>
 | [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
 | [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
 | [3300104](../errorcode-se.md#3300104-se芯片io异常) |
-
-**示例**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-
-// 在使用seSession之前，需要对seSession进行初始化
-function secureElementDemo() {
-    try {
-        // 改为在此channel上选择的App的aid
-        seSession.openBasicChannel(aidArray).then((data) => {
-            seChannel = data;
-        }).catch((error : BusinessError)=> {
-            hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-
-// 在使用seSession之前，需要对seSession进行初始化
-function secureElementDemo() {
-    try {
-        // 改为在此channel上选择的App的aid
-        seSession.openBasicChannel(aidArray, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// 在使用seSession之前，需要对seSession进行初始化
-function secureElementDemo() {
-    try {
-        // 改为在此channel上选择的App的aid
-        seSession.openBasicChannel(aidArray, p2).then((data) => {
-            seChannel = data;
-        }).catch((error : BusinessError)=> {
-            hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// 在使用seSession之前，需要对seSession进行初始化
-function secureElementDemo() {
-    try {
-        // 改为在此channel上选择的App的aid
-        seSession.openBasicChannel(aidArray, p2, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
 
 ## openBasicChannel
 
@@ -425,8 +166,6 @@ openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
@@ -446,10 +185,6 @@ openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void
 | [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
 | [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
 | [3300104](../errorcode-se.md#3300104-se芯片io异常) |
-
-**示例**
-
-参见 [openBasicChannel](#openbasicchannel)
 
 ## openBasicChannel
 
@@ -461,8 +196,6 @@ openBasicChannel(aid: number[], p2: number): Promise<Channel>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
@@ -488,10 +221,6 @@ openBasicChannel(aid: number[], p2: number): Promise<Channel>
 | [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
 | [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
 | [3300104](../errorcode-se.md#3300104-se芯片io异常) |
-
-**示例**
-
-参见 [openBasicChannel](#openbasicchannel)
 
 ## openBasicChannel
 
@@ -503,8 +232,6 @@ openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): v
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
@@ -525,10 +252,6 @@ openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): v
 | [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
 | [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
 | [3300104](../errorcode-se.md#3300104-se芯片io异常) |
-
-**示例**
-
-参见 [openBasicChannel](#openbasicchannel)
 
 ## openLogicalChannel
 
@@ -540,8 +263,6 @@ openLogicalChannel(aid: number[]): Promise<Channel>
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
@@ -566,122 +287,6 @@ openLogicalChannel(aid: number[]): Promise<Channel>
 | [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
 | [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
 | [3300104](../errorcode-se.md#3300104-se芯片io异常) |
-
-**示例**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-
-// 在使用seSession之前，需要对seSession进行初始化
-function secureElementDemo() {
-    try {
-        // 改为在此channel上选择的App的aid
-        seSession.openLogicalChannel(aidArray).then((data) => {
-            seChannel = data;
-        }).catch((error : BusinessError)=> {
-            hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-
-// 在使用seSession之前，需要对seSession进行初始化
-function secureElementDemo() {
-    try {
-        // 改为在此channel上选择的App的aid
-        seSession.openLogicalChannel(aidArray, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// 在使用seSession之前，需要对seSession进行初始化
-function secureElementDemo() {
-    try {
-        // 改为在此channel上选择的App的aid
-        seSession.openLogicalChannel(aidArray, p2).then((data) => {
-            seChannel = data;
-        }).catch((error : BusinessError)=> {
-            hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// 在使用seSession之前，需要对seSession进行初始化
-function secureElementDemo() {
-    try {
-    // 改为在此channel上选择的App的aid
-        seSession.openLogicalChannel(aidArray, p2, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
 
 ## openLogicalChannel
 
@@ -693,8 +298,6 @@ openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.SecureElement
 
 **参数：**
@@ -715,10 +318,6 @@ openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void
 | [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
 | [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
-**示例**
-
-参见 [openLogicalChannel](#openlogicalchannel)
-
 ## openLogicalChannel
 
 ```TypeScript
@@ -728,8 +327,6 @@ openLogicalChannel(aid: number[], p2: number): Promise<Channel>
 打开逻辑通道，参考[ISO 7816-4]协议，返回逻辑Channel实例对象。SE不能提供逻辑Channel或应用程序没有访问SE的权限时，返回null。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -757,10 +354,6 @@ openLogicalChannel(aid: number[], p2: number): Promise<Channel>
 | [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
 | [3300104](../errorcode-se.md#3300104-se芯片io异常) |
 
-**示例**
-
-参见 [openLogicalChannel](#openlogicalchannel)
-
 ## openLogicalChannel
 
 ```TypeScript
@@ -770,8 +363,6 @@ openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>):
 打开逻辑通道，参考[ISO 7816-4]协议，返回Channel实例对象。SE不能提供逻辑Channel或应用程序没有访问SE的权限时，返回null。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.SecureElement
 
@@ -793,7 +384,3 @@ openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>):
 | [3300102](../errorcode-se.md#3300102-找不到对应se安全单元异常) |
 | [3300103](../errorcode-se.md#3300103-无法获取访问控制规则异常) |
 | [3300104](../errorcode-se.md#3300104-se芯片io异常) |
-
-**示例**
-
-参见 [openLogicalChannel](#openlogicalchannel)

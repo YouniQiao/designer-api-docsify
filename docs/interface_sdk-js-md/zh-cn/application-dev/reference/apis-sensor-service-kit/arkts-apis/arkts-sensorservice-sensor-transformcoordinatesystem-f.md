@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## transformCoordinateSystem
@@ -23,8 +23,6 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
@@ -38,40 +36,6 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 | inRotationVector | Array & lt;number & gt; | 是 |
 | [coordinates](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontvariationinstance-i.md) | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 }, 
-                                 (err: BusinessError, data: Array<number>) => {
-  if (err) {
-    console.error(`Failed to operate. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info("Succeeded in starting Operation. Data obtained: " + data);
-  for (let i = 0; i < data.length; i++) {
-    console.info("Succeeded in getting transformCoordinateSystem data[ " + i + "] = " + data[i]);
-  }
-})
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 });
-promise.then((data: Array<number>) => {
-  console.info("Succeeded in starting Operation");
-  for (let i = 0; i < data.length; i++) {
-    console.info("Succeeded in getting transformCoordinateSystem data[ " + i + "] = " + data[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
 
 
 ## transformCoordinateSystem
@@ -88,8 +52,6 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 > 替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -109,7 +71,3 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 | 类型 |
 | --- |
 | Promise & lt;Array & lt;number & gt; & gt; |
-
-**示例**
-
-参见 [transformCoordinateSystem](#transformcoordinatesystem)

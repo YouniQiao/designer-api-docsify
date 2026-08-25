@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## subscribeManagedEvent
@@ -15,8 +15,6 @@ function subscribeManagedEvent(admin: Want, managedEvents: Array<ManagedEvent>, 
 Subscribes to system management events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -48,46 +46,6 @@ Subscribes to system management events. This API uses an asynchronous callback t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED, adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
-
-adminManager.subscribeManagedEvent(wantTemp, events, (err) => {
-  if (err) {
-    console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in subscribing managed event');
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED, adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
-
-adminManager.subscribeManagedEvent(wantTemp, events).then(() => {
-}).catch((err: BusinessError) => {
-  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
-})
-```
-
 
 ## subscribeManagedEvent
 
@@ -98,8 +56,6 @@ function subscribeManagedEvent(admin: Want, managedEvents: Array<ManagedEvent>):
 Subscribes to system management events. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 26.0.0
 
@@ -135,7 +91,3 @@ Subscribes to system management events. This API uses a promise to return the re
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [subscribeManagedEvent](#subscribemanagedevent)

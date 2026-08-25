@@ -9,14 +9,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createColorShader
@@ -28,8 +26,6 @@ static createColorShader(color: number): ShaderEffect
 创建具有单一颜色的着色器。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -51,60 +47,6 @@ static createColorShader(color: number): ShaderEffect
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let shaderEffect = drawing.ShaderEffect.createColorShader(0xFFFF0000);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let shaderEffect = drawing.ShaderEffect.createColorShader((0xFFFF0000).toInt());
-```
-
-## createColorShader
-
-```TypeScript
-static createColorShader(color: int): ShaderEffect | undefined
-```
-
-创建具有单一颜色的着色器。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| color | int | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [createColorShader](#createcolorshader)
-
 ## createComposeShader
 
 ```TypeScript
@@ -116,8 +58,6 @@ static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: Shade
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -126,7 +66,7 @@ static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: Shade
 | --- | --- | --- |
 | dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 |
 | srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 |
-| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 |
+| [blendMode](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md) | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | 是 |
 
 **返回值：**
 
@@ -140,76 +80,6 @@ static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: Shade
 | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let dstShader = drawing.ShaderEffect.createColorShader(0xFF0000FF);
-let srcShader = drawing.ShaderEffect.createColorShader(0xFFFF0000);
-let shader = drawing.ShaderEffect.createComposeShader(dstShader, srcShader, drawing.BlendMode.SRC);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-import { RenderNode,DrawContext } from "@ohos.arkui.node"
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    let dstShader = drawing.ShaderEffect.createColorShader(0xFF0000FF.toInt());
-    let srcShader = drawing.ShaderEffect.createColorShader(0xFFFF0000.toInt());
-    if (dstShader == undefined || srcShader == undefined)
-    {
-      return;
-    }
-    let shader = drawing.ShaderEffect.createComposeShader(dstShader, srcShader, drawing.BlendMode.SRC);
-  }
-}
-```
-
-## createComposeShader
-
-```TypeScript
-static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: ShaderEffect,
-        blendMode: BlendMode): ShaderEffect | undefined
-```
-
-按照指定的混合模式对两个着色器进行叠加，生成一个新的着色器。
-
-**起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 |
-| srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 是 |
-| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
-
-**示例**
-
-参见 [createComposeShader](#createcomposeshader)
-
 ## createConicalGradient
 
 ```TypeScript
@@ -221,8 +91,6 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
 创建着色器，在给定两个圆之间生成锥形渐变。锥形渐变是指颜色在起始圆和结束圆之间，按照一定比例进行插值过渡形成的渐变效果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -251,73 +119,6 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let startPt: common2D.Point = { x: 100, y: 100 };
-let endPt: common2D.Point = { x: 200, y: 200 };
-let shaderEffect = drawing.ShaderEffect.createConicalGradient(startPt, 100, endPt, 50, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common2D,drawing } from '@kit.ArkGraphics2D';
-
-let startPt: common2D.Point = { x: 100, y: 100 };
-let endPt: common2D.Point = {x: 200, y: 200};
-let shaderEffect = drawing.ShaderEffect.createConicalGradient(startPt, 100, endPt, 50, [(0xFF00FF00).toInt(), (0xFFFF0000).toInt()], drawing.TileMode.REPEAT);
-```
-
-## createConicalGradient
-
-```TypeScript
-static createConicalGradient(startPt: common2D.Point, startRadius: double, endPt: common2D.Point,
-        endRadius: double, colors: Array<int>, mode: TileMode,
-        pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect | undefined
-```
-
-创建着色器，在给定两个圆之间生成锥形渐变。锥形渐变是指颜色在起始圆和结束圆之间，按照一定比例进行插值过渡形成的渐变效果。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| startPt | common2D.Point | 是 |
-| startRadius | double | 是 |
-| endPt | common2D.Point | 是 |
-| endRadius | double | 是 |
-| colors | Array & lt;int & gt; | 是 |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
-| pos | Array & lt;double & gt; \ | null | 否 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [createConicalGradient](#createconicalgradient)
-
 ## createImageShader
 
 ```TypeScript
@@ -328,8 +129,6 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
 基于图片创建一个着色器。此接口不建议用于录制类型的画布（即用于记录绘制指令而非直接渲染的Canvas对象），会影响性能。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -355,100 +154,16 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
 | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) |
 
-**示例**
-
-```TypeScript
-import { RenderNode,DrawContext, DrawContext } from "@ohos.arkui.node"
-import { image } from '@kit.ImageKit';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const width = 1000;
-    const height = 1000;
-    const bufferSize = width * height * 4;
-    const color: ArrayBuffer = new ArrayBuffer(bufferSize);
-
-    const colorData = new Uint8Array(color);
-    for (let i = 0; i < colorData.length; i += 4) {
-      colorData[i] = 255;
-      colorData[i + 1] = 156;
-      colorData[i + 2] = 0;
-      colorData[i + 3] = 255;
-    }
-
-  let opts: image.InitializationOptions = {
-      editable: true,
-      pixelFormat: image.PixelMapFormat.ARGB_8888,
-      size: { height, width }
-    };
-
-    let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
-    let matrix = new drawing.Matrix();
-    let options = new drawing.SamplingOptions(drawing.FilterMode.FILTER_MODE_NEAREST);
-    if (pixelMap != null) {
-      let imageShader =
-        drawing.ShaderEffect.createImageShader(pixelMap, drawing.TileMode.REPEAT, drawing.TileMode.MIRROR, options,
-          matrix);
-    }
-    pixelMap.release();
-  }
-}
-```
-
-## createImageShader
-
-```TypeScript
-static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileMode,
-        samplingOptions: SamplingOptions, matrix?: Matrix | null): ShaderEffect | undefined
-```
-
-基于图片创建一个着色器。此接口不建议用于录制类型的画布（即用于记录绘制指令而非直接渲染的Canvas对象），会影响性能。
-
-**起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| pixelmap | image.PixelMap | 是 |
-| tileX | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
-| tileY | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
-| samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | 是 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
-
-**示例**
-
-参见 [createImageShader](#createimageshader)
-
 ## createLinearGradient
 
 ```TypeScript
-static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colors: Array<int>,
-        mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect
+static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colors: Array<number>,
+        mode: TileMode, pos?: Array<number> | null, matrix?: Matrix | null): ShaderEffect
 ```
 
 创建着色器，在两个指定点之间生成线性渐变。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -475,82 +190,16 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let startPt: common2D.Point = { x: 100, y: 100 };
-let endPt: common2D.Point = { x: 300, y: 300 };
-let shaderEffect = drawing.ShaderEffect.createLinearGradient(startPt, endPt, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common2D,drawing } from '@kit.ArkGraphics2D';
-
-let startPt: common2D.Point = { x: 100, y: 100 };
-let endPt: common2D.Point = { x: 300, y: 300 };
-let shaderEffect = drawing.ShaderEffect.createLinearGradient(startPt, endPt, [(0xFF00FF00).toInt(), (0xFFFF0000).toInt()], drawing.TileMode.REPEAT);
-```
-
-## createLinearGradient
-
-```TypeScript
-static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colors: Array<int>,
-        mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect | undefined
-```
-
-创建着色器，在两个指定点之间生成线性渐变。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| startPt | common2D.Point | 是 |
-| endPt | common2D.Point | 是 |
-| colors | Array & lt;int & gt; | 是 |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
-| pos | Array & lt;double & gt; \ | null | 否 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [createLinearGradient](#createlineargradient)
-
 ## createRadialGradient
 
 ```TypeScript
-static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Array<int>,
-      mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect
+static createRadialGradient(centerPt: common2D.Point, radius: number, colors: Array<number>,
+      mode: TileMode, pos?: Array<number> | null, matrix?: Matrix | null): ShaderEffect
 ```
 
 创建着色器，使用给定的圆心和半径生成径向渐变。径向渐变是指颜色从圆心逐渐向外扩散形成的渐变。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -577,68 +226,6 @@ static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Ar
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let centerPt: common2D.Point = { x: 100, y: 100 };
-let shaderEffect = drawing.ShaderEffect.createRadialGradient(centerPt, 100, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common2D,drawing } from '@kit.ArkGraphics2D';
-
-let centerPt: common2D.Point = { x: 100, y: 100 };
-let shaderEffect = drawing.ShaderEffect.createRadialGradient(centerPt, 100, [(0xFF00FF00).toInt(), (0xFFFF0000).toInt()], drawing.TileMode.REPEAT);
-```
-
-## createRadialGradient
-
-```TypeScript
-static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Array<int>,
-      mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect | undefined
-```
-
-创建着色器，使用给定的圆心和半径生成径向渐变。径向渐变是指颜色从圆心逐渐向外扩散形成的渐变。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| centerPt | common2D.Point | 是 |
-| radius | double | 是 |
-| colors | Array & lt;int & gt; | 是 |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
-| pos | Array & lt;double & gt; \ | null | 否 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [createRadialGradient](#createradialgradient)
-
 ## createSweepGradient
 
 ```TypeScript
@@ -650,8 +237,6 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
 创建着色器。该着色器以给定中心点为圆心，在起始角度和结束角度之间沿顺时针或逆时针方向生成颜色扇形渐变。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -678,67 +263,3 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let centerPt: common2D.Point = { x: 100, y: 100 };
-let shaderEffect = drawing.ShaderEffect.createSweepGradient(centerPt, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT, 100, 200);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common2D,drawing } from '@kit.ArkGraphics2D';
-
-let centerPt: common2D.Point = { x: 100, y: 100 };
-let shaderEffect = drawing.ShaderEffect.createSweepGradient(centerPt, [(0xFF00FF00).toInt(), (0xFFFF0000).toInt()], drawing.TileMode.REPEAT, 100, 200);
-```
-
-## createSweepGradient
-
-```TypeScript
-static createSweepGradient(centerPt: common2D.Point, colors: Array<int>,
-      mode: TileMode, startAngle: double, endAngle: double, pos?: Array<double> | null,
-      matrix?: Matrix | null): ShaderEffect | undefined
-```
-
-创建着色器。该着色器以给定中心点为圆心，在起始角度和结束角度之间沿顺时针或逆时针方向生成颜色扇形渐变。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| centerPt | common2D.Point | 是 |
-| colors | Array & lt;int & gt; | 是 |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
-| startAngle | double | 是 |
-| endAngle | double | 是 |
-| pos | Array & lt;double & gt; \ | null | 否 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [createSweepGradient](#createsweepgradient)

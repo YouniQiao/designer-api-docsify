@@ -4,8 +4,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## 导入模块
@@ -21,11 +19,9 @@ menuType?: MenuType
 
 自定义选择菜单类型。默认值：`MenuType.SELECTION_MENU`。从API version 20起，`MenuType.PREVIEW_MENU`支持超链接预览。
 
-**类型：** MenuType
+**类型：** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -41,8 +37,6 @@ onAppear?: Callback<void>
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## onDisappear
@@ -56,8 +50,6 @@ onDisappear?: Callback<void>
 **类型：** Callback&lt;void&gt;
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -73,8 +65,6 @@ onMenuHide?: Callback<void>
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## onMenuShow
@@ -89,8 +79,6 @@ onMenuShow?: Callback<void>
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为21。
-
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## preview
@@ -101,11 +89,9 @@ preview?: CustomBuilder
 
 自定义选择菜单的预览内容样式，未配置时无预览内容。
 
-**类型：** CustomBuilder
+**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -120,7 +106,5 @@ previewMenuOptions?: PreviewMenuOptions
 **类型：** [PreviewMenuOptions](arkts-arkweb-previewmenuoptions-i.md)
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Web.Webview.Core

@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## createWriteStream
@@ -17,8 +17,6 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 Creates a writeable stream. This API returns the result synchronously.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -57,20 +55,3 @@ Creates a writeable stream. This API returns the result synchronously.
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-// Create a readable stream.
-const rs = fs.createReadStream(`${pathDir}/read.txt`);
-// Create a writeable stream.
-const ws = fs.createWriteStream(`${pathDir}/write.txt`);
-// Copy files in paused mode.
-rs.on('readable', () => {
-  const data = rs.read();
-  if (!data) {
-    return;
-  }
-  ws.write(data);
-});
-```

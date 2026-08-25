@@ -1,7 +1,5 @@
 # Boolean
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ valueOf(): boolean
 ```
 
 Returns the primitive value of the specified object.
-
-**ArkTS mode:** 
 
 **Return value:**
 

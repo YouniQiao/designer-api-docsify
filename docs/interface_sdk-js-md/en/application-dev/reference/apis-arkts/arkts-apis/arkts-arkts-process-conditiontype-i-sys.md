@@ -4,8 +4,6 @@ Provides the ConditionType type,including timeout, killSignal, maxBuffer.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides the ConditionType type,including timeout, killSignal, maxBuffer.
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## killSignal
@@ -27,8 +25,6 @@ Signal sent to the child process when the running time of a child process exceed
 **Type:** number \| string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -46,8 +42,6 @@ Maximum buffer size for the standard input and output of the child process.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Maximum running time (in ms) of the child process.
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Utils.Lang
 

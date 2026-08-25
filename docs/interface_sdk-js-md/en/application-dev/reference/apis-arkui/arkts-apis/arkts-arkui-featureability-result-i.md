@@ -2,8 +2,6 @@
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -20,8 +18,6 @@ Result code.
 
 **Since:** 5
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
-
 **Deprecated since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -37,8 +33,6 @@ Returned data.
 **Type:** object
 
 **Since:** 5
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 5.
 
 **Deprecated since:** 8
 

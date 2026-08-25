@@ -7,8 +7,6 @@ Provides APIs for formatting NDEF formattable tags. This class inherits from **T
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## format
@@ -21,8 +19,6 @@ Formats this tag as an NDEF tag, and writes an NDEF message to it. This API uses
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -49,73 +45,6 @@ Formats this tag as an NDEF tag, and writes an NDEF message to it. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
-
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the correct NDEF formattable tag by using the tag.TagInfo API in @ohos.nfc.tag.
-
-function nfcTechDemo() {
-    // Connect the tag if it has not been connected.
-    if (!ndefFormatable.isTagConnected()) {
-        if (!ndefFormatable.connectTag()) {
-            console.error("ndefFormatable connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        // ndefMessage created from the raw data. For example:
-        let ndefMessage = tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]);  
-        // The NDEF data must be resolvable.
-        // Or create ndefMessage from tag.ndef.createNdefMessage (ndefRecords:NdefRecord[]).
-
-        ndefFormatable.format(ndefMessage).then(() => {
-            console.info("ndefFormatable format Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error(`ndefFormatable format Promise err Code: ${err.code}, message: ${err.message}`);
-        });
-    } catch (businessError) {
-        console.error(`ndefFormatable format Promise catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the correct NDEF formattable tag by using the tag.TagInfo API in @ohos.nfc.tag.
-
-function nfcTechDemo() {
-    // Connect the tag if it has not been connected.
-    if (!ndefFormatable.isTagConnected()) {
-        if (!ndefFormatable.connectTag()) {
-            console.error("ndefFormatable connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        // ndefMessage created from the raw data. For example:
-        let ndefMessage = tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]);  // The NDEF data must be resolvable.
-        // Or create ndefMessage from tag.ndef.createNdefMessage (ndefRecords:NdefRecord[]).
-
-        ndefFormatable.format(ndefMessage, (err : BusinessError)=> {
-            if (err) {
-                console.error(`ndefFormatable format AsyncCallback Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("ndefFormatable format AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`ndefFormatable format AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
 
 ## format
 
@@ -127,8 +56,6 @@ Formats this tag as an NDEF tag, and writes an NDEF message to it. This API uses
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NFC_TAG
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -151,10 +78,6 @@ Formats this tag as an NDEF tag, and writes an NDEF message to it. This API uses
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
 
-**Examples**
-
-See [format](#format)
-
 ## formatReadOnly
 
 ```TypeScript
@@ -164,8 +87,6 @@ formatReadOnly(message: NdefMessage): Promise<void>
 Formats this tag as an NDEF tag, writes an NDEF message to it, and then sets the tag to read-only. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -194,74 +115,6 @@ Formats this tag as an NDEF tag, writes an NDEF message to it, and then sets the
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
 
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the correct NDEF formattable tag by using the tag.TagInfo API in @ohos.nfc.tag.
-
-function nfcTechDemo() {
-    // Connect the tag if it has not been connected.
-    if (!ndefFormatable.isTagConnected()) {
-        if (!ndefFormatable.connectTag()) {
-            console.error("ndefFormatable connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        // ndefMessage created from the raw data. For example:
-        let ndefMessage = tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]);
-        // The NDEF data must be resolvable.
-        // Or create ndefMessage from tag.ndef.createNdefMessage (ndefRecords:NdefRecord[]).
-
-        ndefFormatable.formatReadOnly(ndefMessage).then(() => {
-            console.info("ndefFormatable formatReadOnly Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error(`ndefFormatable formatReadOnly Promise Code: ${err.code}, message: ${err.message}`);
-        });
-    } catch (businessError) {
-        console.error(`ndefFormatable formatReadOnly Promise catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the correct NDEF formattable tag by using the tag.TagInfo API in @ohos.nfc.tag.
-
-function nfcTechDemo() {
-    // Connect the tag if it has not been connected.
-    if (!ndefFormatable.isTagConnected()) {
-        if (!ndefFormatable.connectTag()) {
-            console.error("ndefFormatable connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        // ndefMessage created from the raw data. For example:
-        let ndefMessage = tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]);
-        // The NDEF data must be resolvable.
-        // Or create ndefMessage from tag.ndef.createNdefMessage (ndefRecords:NdefRecord[]).
-
-        ndefFormatable.formatReadOnly(ndefMessage, (err : BusinessError)=> {
-            if (err) {
-                console.error(`ndefFormatable formatReadOnly AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("ndefFormatable formatReadOnly AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`ndefFormatable formatReadOnly AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
 ## formatReadOnly
 
 ```TypeScript
@@ -271,8 +124,6 @@ formatReadOnly(message: NdefMessage, callback: AsyncCallback<void>): void
 Formats this tag as an NDEF tag, writes an NDEF message to the NDEF tag, and then sets the tag to read-only. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -295,7 +146,3 @@ Formats this tag as an NDEF tag, writes an NDEF message to the NDEF tag, and the
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
-
-**Examples**
-
-See [formatReadOnly](#formatreadonly)

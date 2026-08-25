@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## createEffect
@@ -16,8 +16,6 @@ function createEffect(): VisualEffect
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -27,9 +25,3 @@ function createEffect(): VisualEffect
 | 类型 |
 | --- |
 | [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) |
-
-**示例**
-
-```TypeScript
-let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect()
-```

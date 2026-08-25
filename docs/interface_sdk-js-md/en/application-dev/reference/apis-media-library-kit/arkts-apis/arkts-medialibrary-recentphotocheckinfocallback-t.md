@@ -8,8 +8,6 @@ Called to return whether the recent image or video exists and the information ab
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

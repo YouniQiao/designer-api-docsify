@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## setNetQuotaPolicies
@@ -15,8 +15,6 @@ function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>, callback: Asy
 设置计量网络策略，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -42,65 +40,6 @@ function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>, callback: Asy
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netQuotaPolicyList: Array<policy.NetQuotaPolicy> = [];
-let netQuotaPolicy: policy.NetQuotaPolicy = {
-  networkMatchRule: {
-    netType: connection.NetBearType.BEARER_CELLULAR,
-    identity: '',
-    simId: '1'
-  },
-  quotaPolicy: {
-    periodDuration: 'M1',
-    warningBytes: 40000,
-    limitBytes: 50000,
-    metered: true,
-    limitAction: policy.LimitAction.LIMIT_ACTION_NONE
-  }
-}
-netQuotaPolicyList.push(netQuotaPolicy);
-
-policy.setNetQuotaPolicies(netQuotaPolicyList, (error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netQuotaPolicyList: Array<policy.NetQuotaPolicy> = [];
-let netQuotaPolicy: policy.NetQuotaPolicy = {
-  networkMatchRule: {
-    netType: connection.NetBearType.BEARER_CELLULAR,
-    identity: '',
-    simId: '1'
-  },
-  quotaPolicy: {
-    periodDuration: 'M1',
-    warningBytes: 40000,
-    limitBytes: 50000,
-    metered: true,
-    limitAction: policy.LimitAction.LIMIT_ACTION_NONE
-  }
-}
-netQuotaPolicyList.push(netQuotaPolicy);
-
-policy
-  .setNetQuotaPolicies(netQuotaPolicyList)
-  .then(() => {
-    console.info('setNetQuotaPolicies success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## setNetQuotaPolicies
 
@@ -111,8 +50,6 @@ function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>): Promise<void
 设置计量网络策略，使用 Promise 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -142,7 +79,3 @@ function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>): Promise<void
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [setNetQuotaPolicies](#setnetquotapolicies)

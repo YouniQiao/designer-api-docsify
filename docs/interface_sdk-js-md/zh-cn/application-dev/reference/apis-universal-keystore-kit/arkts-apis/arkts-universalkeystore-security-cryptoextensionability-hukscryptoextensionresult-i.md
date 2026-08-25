@@ -4,14 +4,12 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## 导入模块
 
 ```TypeScript
-import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
+import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## authState
@@ -22,11 +20,9 @@ authState?: number
 
 认证状态。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -42,8 +38,6 @@ certs?: Array<HuksCryptoExtensionCertInfo>
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## errInfo
@@ -57,8 +51,6 @@ errInfo?: huksExternalCrypto.HuksExternalErrorInfo
 **类型：** huksExternalCrypto.HuksExternalErrorInfo
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,8 +68,6 @@ handle?: string
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## outData
@@ -92,8 +82,6 @@ outData?: Uint8Array
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
 ## property
@@ -107,8 +95,6 @@ property?: Array<huksExternalCrypto.HuksExternalCryptoParam>
 **类型：** Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt;
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -126,8 +112,6 @@ resourceId?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -140,11 +124,9 @@ resultCode: number
 
 返回值的错误码。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
@@ -156,10 +138,8 @@ retryCount?: number
 
 重试次数。
 
-**类型：** int
+**类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension

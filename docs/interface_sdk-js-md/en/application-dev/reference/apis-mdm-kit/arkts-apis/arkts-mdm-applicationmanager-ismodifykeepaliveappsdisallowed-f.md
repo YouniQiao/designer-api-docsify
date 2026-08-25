@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isModifyKeepAliveAppsDisallowed
@@ -15,8 +15,6 @@ function isModifyKeepAliveAppsDisallowed(admin: Want, accountId: number, bundleN
 Checks whether the application is forbidden to cancel the keep-alive status.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -45,26 +43,3 @@ Checks whether the application is forbidden to cancel the keep-alive status.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace it as required.
-let keepAliveApp: string = 'com.example.keepAliveApplication';
-
-try {
-  let res: boolean = applicationManager.isModifyKeepAliveAppsDisallowed(wantTemp, 100, keepAliveApp);
-  console.info(`Succeeded in getting disallow modify keep alive app: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to get disallow modify keep alive app. Code: ${err.code}, message: ${err.message}`);
-}
-```

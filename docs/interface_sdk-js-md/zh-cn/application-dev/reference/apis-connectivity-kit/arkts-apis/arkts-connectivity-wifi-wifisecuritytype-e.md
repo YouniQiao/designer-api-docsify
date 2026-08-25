@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md)
@@ -21,8 +19,6 @@ WIFI_SEC_TYPE_INVALID = 0
 无效的加密类型
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ WIFI_SEC_TYPE_OPEN = 1
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [WIFI_SEC_TYPE_OPEN](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_open)
@@ -57,8 +51,6 @@ WIFI_SEC_TYPE_WEP = 2
 有线等效保密(WEP)
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -76,8 +68,6 @@ WIFI_SEC_TYPE_PSK = 3
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [WIFI_SEC_TYPE_PSK](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_psk)
@@ -93,8 +83,6 @@ WIFI_SEC_TYPE_SAE = 4
 等同认证(SAE)
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

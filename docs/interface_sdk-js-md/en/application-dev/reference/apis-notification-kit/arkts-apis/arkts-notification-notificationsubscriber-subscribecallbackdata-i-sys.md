@@ -4,8 +4,6 @@ Returns notification information carrying system property values.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Notification classification information. It exists only when **enableClassificat
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
@@ -33,17 +29,16 @@ Notification classification information. It exists only when **enableClassificat
 ## reason
 
 ```TypeScript
-readonly reason?: int
+readonly reason?: number
 ```
 
 Reason for deletion. The options are as follows:  
-- **1**: The notification is deleted after being tapped. - **2**: The notification is deleted by the user.
+- **1**: The notification is deleted after being tapped.  
+- **2**: The notification is deleted by the user.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -61,8 +56,6 @@ Notification content.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -78,8 +71,6 @@ Notification sorting information.
 **Type:** [NotificationSortingMap](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -97,8 +88,6 @@ Notification sound.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -106,16 +95,14 @@ Notification sound.
 ## vibrationValues
 
 ```TypeScript
-readonly vibrationValues?: Array<long>
+readonly vibrationValues?: Array<number>
 ```
 
 Notification vibration.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -132,8 +119,6 @@ Voice broadcast content of the notification.
 **Type:** [VoiceContent](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

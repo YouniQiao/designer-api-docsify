@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## isLocationPrivacyConfirmed
@@ -15,8 +15,6 @@ function isLocationPrivacyConfirmed(type: LocationPrivacyType): boolean
 Querying location privacy protocol confirmation status.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -42,15 +40,3 @@ Querying location privacy protocol confirmation status.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  let isConfirmed = geoLocationManager.isLocationPrivacyConfirmed(1);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

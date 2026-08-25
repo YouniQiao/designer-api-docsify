@@ -4,8 +4,6 @@ Describes the priority type of a notification.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## OTHER
@@ -17,8 +15,6 @@ OTHER = 'OTHER'
 Default.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,8 +28,6 @@ Primary contact.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## AT_ME
@@ -45,8 +39,6 @@ AT_ME = 'AT_ME'
 Message that mentions me.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -60,8 +52,6 @@ Urgent message.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## SCHEDULE_REMINDER
@@ -73,7 +63,5 @@ SCHEDULE_REMINDER = 'SCHEDULE_REMINDER'
 Schedule reminder.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

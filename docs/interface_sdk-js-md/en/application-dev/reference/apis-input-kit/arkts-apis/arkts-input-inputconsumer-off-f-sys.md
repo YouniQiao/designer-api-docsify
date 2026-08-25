@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## off('key')
@@ -15,8 +15,6 @@ function off(type: 'key', keyOptions: KeyOptions, callback?: Callback<KeyOptions
 Disables listening for system hotkey change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -36,65 +34,3 @@ Disables listening for system hotkey change events. This API uses an asynchronou
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { inputConsumer } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let leftAltKey = 2045;
-          let tabKey = 2049;
-          // Disable listening for a single callback.
-          let callback = (keyOptions: inputConsumer.KeyOptions) => {
-            console.info(`keyOptions: ${JSON.stringify(keyOptions)}`);
-          }
-          let keyOption: inputConsumer.KeyOptions = {preKeys: [leftAltKey], finalKey: tabKey, isFinalKeyDown: true, finalKeyDownDuration: 0};
-          try {
-            inputConsumer.on("key", keyOption, callback);
-            inputConsumer.off("key", keyOption, callback);
-            console.info(`Unsubscribe success`);
-          } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { inputConsumer } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let leftAltKey = 2045;
-          let tabKey = 2049;
-          // Disable listening for all callbacks.
-          let callback = (keyOptions: inputConsumer.KeyOptions) => {
-            console.info(`keyOptions: ${JSON.stringify(keyOptions)}`);
-          }
-          let keyOption: inputConsumer.KeyOptions = {preKeys: [leftAltKey], finalKey: tabKey, isFinalKeyDown: true, finalKeyDownDuration: 0};
-          try {
-            inputConsumer.on("key", keyOption, callback);
-            inputConsumer.off("key", keyOption);
-            console.info(`Unsubscribe success`);
-          } catch (error) {
-            console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```

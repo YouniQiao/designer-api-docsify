@@ -4,14 +4,12 @@ JsMessageExt is a data class in the ArkWeb framework used to encapsulate the res
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getArray
@@ -23,8 +21,6 @@ getArray(): Array<string | number | boolean>
 Obtains array-type data of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,8 +48,6 @@ Obtains raw binary data of the data object. For details about the sample code, s
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -79,8 +73,6 @@ getBoolean(): boolean
 Obtains Boolean-type data of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,8 +100,6 @@ Obtains the error information about the JavaScript execution. For details about 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -127,8 +117,6 @@ getNumber(): number
 Obtains number-type data of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -156,8 +144,6 @@ Obtains string-type data of the data object. For details about the sample code, 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -183,8 +169,6 @@ getType(): JsMessageType
 Obtains the type of the data object. For details about the sample code, see [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runjavascriptext).
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

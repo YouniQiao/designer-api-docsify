@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getInstallLocalEnterpriseAppEnabledForAccount
@@ -15,8 +15,6 @@ function getInstallLocalEnterpriseAppEnabledForAccount(admin: Want | null, accou
 Checks whether local installation of enterprise applications is supported for a specified user. This API is applicable to scenarios where there is a need to verify whether local installation of enterprise applications is enabled for a specific user, helping enterprise administrators confirm the policy configuration status and ensure that users can normally install enterprise applications.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 

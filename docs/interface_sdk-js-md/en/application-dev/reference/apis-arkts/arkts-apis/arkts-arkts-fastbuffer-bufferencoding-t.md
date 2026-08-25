@@ -8,8 +8,6 @@ This parameter specifies the type of a common encoding format.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang

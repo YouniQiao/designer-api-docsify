@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## listIptablesFilterRules
@@ -15,8 +15,6 @@ function listIptablesFilterRules(admin: Want, callback: AsyncCallback<string>): 
 获取网络包过滤规则，仅支持IPv4。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -43,45 +41,6 @@ function listIptablesFilterRules(admin: Want, callback: AsyncCallback<string>): 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.listIptablesFilterRules(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to get iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting iptables filter rule, result : ${result}`);
-});
-```
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.listIptablesFilterRules(wantTemp).then((result) => {
-  console.info(`Succeeded in getting iptables filter rule, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## listIptablesFilterRules
 
@@ -92,8 +51,6 @@ function listIptablesFilterRules(admin: Want): Promise<string>
 获取网络包过滤规则，仅支持IPv4。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -124,7 +81,3 @@ function listIptablesFilterRules(admin: Want): Promise<string>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [listIptablesFilterRules](#listiptablesfilterrules)

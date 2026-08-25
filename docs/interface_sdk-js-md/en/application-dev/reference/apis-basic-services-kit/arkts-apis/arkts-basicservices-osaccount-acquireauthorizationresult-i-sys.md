@@ -4,8 +4,6 @@ Defines the result of the authorization.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the result of the authorization.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## isReused
@@ -29,8 +27,6 @@ Whether the authorization result is reused. The default value is **undefined**.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -43,13 +39,11 @@ Whether the authorization result is reused. The default value is **undefined**.
 privilege: string
 ```
 
-Permission associated with the authorization.
+Privilege associated with the authorization.
 
 **Type:** string
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,13 +57,11 @@ Permission associated with the authorization.
 resultCode: AuthorizationResultCode
 ```
 
-Authorization result code. If the authorization is successful, AuthorizationResultCode#AUTHORIZATION_SUCCESS is returned. Otherwise, an error code is returned. For details, see AuthorizationResultCode.
+Authorization result code.
 
 **Type:** [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,8 +81,6 @@ Authorization token. The default value is **undefined**.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -100,16 +90,14 @@ Authorization token. The default value is **undefined**.
 ## validityPeriod
 
 ```TypeScript
-validityPeriod?: int
+validityPeriod?: number
 ```
 
 Validity period of the authorization, in seconds. The default value is **300**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

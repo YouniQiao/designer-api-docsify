@@ -6,8 +6,6 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGradient, number]>)
 ```
 
-Sets the colors of the gauge.Since API version 11, this API follows the following rules:If the data type is ResourceColor, the ring is of the monochrome type.If the data type is LinearGradient, the ring is of the gradient type.If the data type is Array, the ring is of the gradient type. The first parameter indicates the color value. If it is set to a non-color value, the color of 0xFFE84026 is used. The second parameter indicates the color weight. If it is set to a negative number or a non-numeric value, the color weight is 0.A ring of the gradient type contains a maximum of nine color segments. If there are more than nine segments, the excess is not displayed.
+Sets the colors of the gauge.Since API version 11, this API follows the following rules:If the data type is [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md), the ring is of the monochrome type.If the data type is LinearGradient, the ring is of the gradient type.If the data type is Array, the ring is of the gradient type. The first parameter indicates the color value. If it is set to a non-color value, the color of 0xFFE84026 is used. The second parameter indicates the color weight. If it is set to a negative number or a non-numeric value, the color weight is 0.A ring of the gradient type contains a maximum of nine color segments. If there are more than nine segments, the excess is not displayed.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,7 +33,7 @@ Sets the colors of the gauge.Since API version 11, this API follows the followin
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [colors](#colors) | ResourceColor \| LinearGradient \| Array & lt;[ResourceColor \ | LinearGradient, number] & gt; | Yes |
+| [colors](#colors) | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient \| Array & lt;[ResourceColor \ | LinearGradient, number] & gt; | Yes |
 
 ## contentModifier
 
@@ -49,8 +45,6 @@ Creates a content modifier.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -61,7 +55,7 @@ Creates a content modifier.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md)&gt; | Yes |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md)&gt; | Yes |
 
 ## description
 
@@ -72,8 +66,6 @@ description(value: CustomBuilder)
 Sets the description of the gauge.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,8 +91,6 @@ Sets the end angle of the gauge. Ensure an appropriate difference between the st
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -122,8 +112,6 @@ indicator(value: GaugeIndicatorOptions)
 Sets the indicator style of the gauge.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,8 +140,6 @@ Sets whether to enable privacy mode.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -166,7 +152,7 @@ Sets whether to enable privacy mode.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isPrivacySensitiveMode | Optional & lt;boolean & gt; | Yes |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## startAngle
 
@@ -177,8 +163,6 @@ startAngle(angle: number)
 Sets the start angle of the gauge.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,8 +186,6 @@ Sets the stroke width of the gauge.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -225,8 +207,6 @@ trackShadow(value: GaugeShadowOptions)
 Sets the shadow style of the gauge.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,8 +231,6 @@ value(value: number)
 Sets the value of the gauge.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

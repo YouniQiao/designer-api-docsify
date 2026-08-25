@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## appMessageId
@@ -26,8 +24,6 @@ appMessageId?: string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -39,13 +35,12 @@ isAlertOnce?: boolean
 ```
 
 发布或更新该通知时，是否只进行一次通知提醒，默认为false。具体请参考 [NotificationRequest.isAlertOnce](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md)。  
-- true：仅首次发布通知时进行提醒，后续更新该通知时，提醒方式变更为[LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slotlevel-e.md). - false：每次均按照配置的通知提醒方式进行提醒。
+- true：仅首次发布通知时进行提醒，后续更新该通知时，提醒方式变更为[LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slotlevel-e.md).  
+- false：每次均按照配置的通知提醒方式进行提醒。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ Provides APIs to manage data in a KV store, for example, adding or deleting data
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** SingleKVStore
@@ -27,8 +25,6 @@ Commits the transaction in this KV store. This API uses an asynchronous callback
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** commit
@@ -40,36 +36,6 @@ Commits the transaction in this KV store. This API uses an asynchronous callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.commit(function (err,data) {
-        if (err == undefined) {
-            console.log('commit success');
-        } else {
-            console.log('commit fail');
-        }
-    });
-}catch(e) {
-    console.log('Commit e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.commit().then(async (err) => {
-        console.log('commit success');
-    }).catch((err) => {
-        console.log('commit fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('Commit e ' + e);
-}
-```
 
 ## commit
 
@@ -81,8 +47,6 @@ Commits the transaction in this KV store. This API uses a promise to return the 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** commit
@@ -95,10 +59,6 @@ Commits the transaction in this KV store. This API uses a promise to return the 
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [commit](#commit)
-
 ## delete
 
 ```TypeScript
@@ -108,8 +68,6 @@ delete(key: string, callback: AsyncCallback<void>): void
 Deletes a KV pair from this KV store. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -123,52 +81,6 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 | --- | --- | --- |
 | key | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, function (err,data) {
-        if (err != undefined) {
-            console.log("put err: " + JSON.stringify(err));
-            return;
-        }
-        console.log("put success");
-        kvStore.delete(KEY_TEST_STRING_ELEMENT, function (err,data) {
-            if (err != undefined) {
-                console.log("delete err: " + JSON.stringify(err));
-                return;
-            }
-            console.log("delete success");
-        });
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.log("put success: " + JSON.stringify(data));
-        kvStore.delete(KEY_TEST_STRING_ELEMENT).then((data) => {
-            console.log("delete success");
-        }).catch((err) => {
-            console.log("delete err: " + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
 
 ## delete
 
@@ -180,8 +92,6 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** delete
@@ -200,10 +110,6 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [delete](#delete)
-
 ## deleteBatch
 
 ```TypeScript
@@ -213,8 +119,6 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 Deletes KV pairs in batches from this KV store. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -228,70 +132,6 @@ Deletes KV pairs in batches from this KV store. This API uses an asynchronous ca
 | --- | --- | --- |
 | keys | string[] | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    let keys = [];
-    for (var i = 0; i < 5; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-        keys.push(key + i);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
-        kvStore.deleteBatch(keys, async function (err,data) {
-            console.log('deleteBatch success');
-        });
-    });
-}catch(e) {
-    console.log('DeleteBatch e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    let keys = [];
-    for (var i = 0; i < 5; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-        keys.push(key + i);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-        kvStore.deleteBatch(keys).then((err) => {
-            console.log('deleteBatch success');
-        }).catch((err) => {
-            console.log('deleteBatch fail ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('DeleteBatch e ' + e);
-}
-```
 
 ## deleteBatch
 
@@ -303,8 +143,6 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** deleteBatch
@@ -323,10 +161,6 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [deleteBatch](#deletebatch)
-
 ## enableSync
 
 ```TypeScript
@@ -336,8 +170,6 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 Sets data sync, which can be enabled or disabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -352,36 +184,6 @@ Sets data sync, which can be enabled or disabled. This API uses an asynchronous 
 | enabled | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.enableSync(true, function (err,data) {
-        if (err == undefined) {
-            console.log('enableSync success');
-        } else {
-            console.log('enableSync fail');
-        }
-    });
-}catch(e) {
-    console.log('EnableSync e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.enableSync(true).then((err) => {
-        console.log('enableSync success');
-    }).catch((err) => {
-        console.log('enableSync fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('EnableSync e ' + e);
-}
-```
-
 ## enableSync
 
 ```TypeScript
@@ -391,8 +193,6 @@ enableSync(enabled: boolean): Promise<void>
 Sets data sync, which can be enabled or disabled. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -412,10 +212,6 @@ Sets data sync, which can be enabled or disabled. This API uses a promise to ret
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [enableSync](#enablesync)
-
 ## off
 
 ```TypeScript
@@ -425,8 +221,6 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 Unsubscribes from data changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -441,27 +235,6 @@ Unsubscribes from data changes.
 | event | 'dataChange' | Yes |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No |
 
-**Examples**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.log("dataChange: " + data);
-    }
-    subscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_REMOTE, this.call);
-        }
-    }
-    unsubscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.off('dataChange', this.call);
-        }
-    }
-}
-```
-
 ## off
 
 ```TypeScript
@@ -471,8 +244,6 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 Unsubscribes from sync completion events.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -487,27 +258,6 @@ Unsubscribes from sync completion events.
 | event | 'syncComplete' | Yes |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No |
 
-**Examples**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.log("syncComplete: " + data);
-    }
-    subscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.on('syncComplete', this.call);
-        }
-    }
-    unsubscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.off('syncComplete', this.call);
-        }
-    }
-}
-```
-
 ## on
 
 ```TypeScript
@@ -517,8 +267,6 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 Subscribes to data changes of the specified type.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -531,17 +279,8 @@ Subscribes to data changes of the specified type.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'dataChange' | Yes |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes |
+| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | Yes |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, function (data) {
-    console.log("dataChange callback call data: " + JSON.stringify(data));
-});
-```
 
 ## on
 
@@ -552,8 +291,6 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 Subscribes to sync completion events.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -568,15 +305,6 @@ Subscribes to sync completion events.
 | event | 'syncComplete' | Yes |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-let kvStore;
-kvStore.on('syncComplete', function (data) {
-    console.log("callback call data: " + data);
-});
-```
-
 ## put
 
 ```TypeScript
@@ -586,8 +314,6 @@ put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncC
 Adds a KV pair of the specified type to this KV store. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -602,40 +328,6 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 | key | string | Yes |
 | value | Uint8Array \| string \| number \| boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, function (err,data) {
-        if (err != undefined) {
-            console.log("put err: " + JSON.stringify(err));
-            return;
-        }
-        console.log("put success");
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.log("put success: " + JSON.stringify(data));
-    }).catch((err) => {
-        console.log("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
 
 ## put
 
@@ -647,8 +339,6 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** put
@@ -668,10 +358,6 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [put](#put)
-
 ## putBatch
 
 ```TypeScript
@@ -681,8 +367,6 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 Inserts KV pairs in batches to this KV store. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -694,71 +378,8 @@ Inserts KV pairs in batches to this KV store. This API uses an asynchronous call
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| entries | [Entry[]](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | Yes |
+| entries | [Entry[]](arkts-arkdata-distributeddata-entry-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
-        kvStore.getEntries('batch_test_string_key', function (err,entries) {
-            console.log('getEntries success');
-            console.log('entries.length: ' + entries.length);
-            console.log('entries[0]: ' + JSON.stringify(entries[0]));
-        });
-    });
-}catch(e) {
-    console.log('PutBatch e ' + JSON.stringify(e));
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-        kvStore.getEntries('batch_test_string_key').then((entries) => {
-            console.log('getEntries success');
-            console.log('PutBatch ' + JSON.stringify(entries));
-        }).catch((err) => {
-            console.log('getEntries fail ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('PutBatch e ' + JSON.stringify(e));
-}
-```
 
 ## putBatch
 
@@ -770,8 +391,6 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** putBatch
@@ -782,17 +401,13 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| entries | [Entry[]](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | Yes |
+| entries | [Entry[]](arkts-arkdata-distributeddata-entry-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [putBatch](#putbatch)
 
 ## rollback
 
@@ -804,8 +419,6 @@ Rolls back the transaction in this KV store. This API uses an asynchronous callb
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** rollback
@@ -817,36 +430,6 @@ Rolls back the transaction in this KV store. This API uses an asynchronous callb
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.rollback(function (err,data) {
-        if (err == undefined) {
-            console.log('commit success');
-        } else {
-            console.log('commit fail');
-        }
-    });
-}catch(e) {
-    console.log('Rollback e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.rollback().then(async (err) => {
-        console.log('rollback success');
-    }).catch((err) => {
-        console.log('rollback fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('Rollback e ' + e);
-}
-```
 
 ## rollback
 
@@ -858,8 +441,6 @@ Rolls back the transaction in this KV store. This API uses a promise to return t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** rollback
@@ -872,10 +453,6 @@ Rolls back the transaction in this KV store. This API uses a promise to return t
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [rollback](#rollback)
-
 ## setSyncRange
 
 ```TypeScript
@@ -885,8 +462,6 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 Sets the data sync range. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -901,36 +476,6 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 | localLabels | string[] | Yes |
 | remoteSupportLabels | string[] | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-try {
-    const localLabels = ['A', 'B'];
-    const remoteSupportLabels = ['C', 'D'];
-    kvStore.setSyncRange(localLabels, remoteSupportLabels, function (err,data) {
-        console.log('SetSyncRange put success');
-    });
-}catch(e) {
-    console.log('SetSyncRange e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    const localLabels = ['A', 'B'];
-    const remoteSupportLabels = ['C', 'D'];
-    kvStore.setSyncRange(localLabels, remoteSupportLabels).then((err) => {
-        console.log('setSyncRange success');
-    }).catch((err) => {
-        console.log('delete fail ' + err);
-    });
-}catch(e) {
-    console.log('SetSyncRange e ' + e);
-}
-```
 
 ## setSyncRange
 
@@ -942,8 +487,6 @@ Sets the data sync range. This API uses a promise to return the result.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** setSyncRange
@@ -963,10 +506,6 @@ Sets the data sync range. This API uses a promise to return the result.
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-See [setSyncRange](#setsyncrange)
-
 ## startTransaction
 
 ```TypeScript
@@ -976,8 +515,6 @@ startTransaction(callback: AsyncCallback<void>): void
 Starts the transaction in this KV store. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -991,61 +528,6 @@ Starts the transaction in this KV store. This API uses an asynchronous callback 
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-let kvStore;
-function putBatchString(len, prefix) {
-    let entries = [];
-    for (var i = 0; i < len; i++) {
-        var entry = {
-            key : prefix + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    return entries;
-}
-try {
-    var count = 0;
-    kvStore.on('dataChange', 0, function (data) {
-        console.log('startTransaction 0' + data)
-        count++;
-    });
-    kvStore.startTransaction(async function (err,data) {
-        console.log('startTransaction success');
-        let entries = putBatchString(10, 'batch_test_string_key');
-        console.log('entries: ' + JSON.stringify(entries));
-        kvStore.putBatch(entries, async function (err,data) {
-            console.log('putBatch success');
-        });
-    });
-}catch(e) {
-    console.log('startTransaction e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    var count = 0;
-    kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_ALL, function (data) {
-        console.log('startTransaction ' + JSON.stringify(data));
-        count++;
-    });
-    kvStore.startTransaction().then(async (err) => {
-        console.log('startTransaction success');
-    }).catch((err) => {
-        console.log('startTransaction fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('startTransaction e ' + e);
-}
-```
-
 ## startTransaction
 
 ```TypeScript
@@ -1055,8 +537,6 @@ startTransaction(): Promise<void>
 Starts the transaction in this KV store. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1069,7 +549,3 @@ Starts the transaction in this KV store. This API uses a promise to return the r
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [startTransaction](#starttransaction)

@@ -7,14 +7,12 @@ This module provides common features related to user key management, including u
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Encryption
 
 ## Modules to Import
 
 ```TypeScript
-import { keyManager } from '@kit.CoreFileKit';
+import { keyManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ DIALOG_BOX = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ FULLSCREEN = 2
 全屏类型。身份认证界面以全屏形式显示，适用于需要沉浸式认证体验或认证信息较多需要更大展示空间的场景。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

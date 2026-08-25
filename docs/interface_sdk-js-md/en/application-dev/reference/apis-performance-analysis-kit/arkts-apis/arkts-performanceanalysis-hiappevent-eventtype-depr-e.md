@@ -4,8 +4,6 @@ Enumerates the event types.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)
@@ -21,8 +19,6 @@ FAULT = 1
 Fault event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Statistic event.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [STATISTIC](arkts-performanceanalysis-hiappevent-eventtype-e.md#statistic)
@@ -58,8 +52,6 @@ Security event.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SECURITY](arkts-performanceanalysis-hiappevent-eventtype-e.md#security)
@@ -75,8 +67,6 @@ BEHAVIOR = 4
 User behavior event.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

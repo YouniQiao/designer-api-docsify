@@ -7,8 +7,6 @@ formHost模块提供了卡片使用方相关接口的能力，包括对使用方
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.Form
 
 **系统接口：** 此接口为系统接口。
@@ -16,7 +14,7 @@ formHost模块提供了卡片使用方相关接口的能力，包括对使用方
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## 汇总
@@ -64,31 +62,21 @@ import { formHost } from '@kit.FormKit';
 | [notifyInvisibleForms(formHost)](arkts-form-formhost-notifyinvisibleforms-f-sys.md) |
 | [notifyVisibleForms(formHost)](arkts-form-formhost-notifyvisibleforms-f-sys.md) |
 | [notifyVisibleForms(formHost)](arkts-form-formhost-notifyvisibleforms-f-sys.md) |
-| [off(formHost)](arkts-form-formhost-off-f-sys.md#offformuninstall) |
-| [off(formHost)](arkts-form-formhost-off-f-sys.md#offformoverflow) |
-| [off(formHost)](arkts-form-formhost-off-f-sys.md#offchangesceneanimationstate) |
-| [off(formHost)](arkts-form-formhost-off-f-sys.md#offgetformrect) |
-| [off(formHost)](arkts-form-formhost-off-f-sys.md#offgetliveformstatus) |
-| [offChangeSceneAnimationState(formHost)](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) |
+| off(formHost) |
+| off(formHost) |
+| off(formHost) |
+| [off(formHost)](arkts-form-formprovider-getformrect-f.md) |
+| off(formHost) |
 | [offDeleteFormsCallback(formHost)](arkts-form-formhost-offdeleteformscallback-f-sys.md) |
-| [offFormOverflow(formHost)](arkts-form-formhost-offformoverflow-f-sys.md) |
-| [offFormUninstall(formHost)](arkts-form-formhost-offformuninstall-f-sys.md) |
-| [offGetFormRect(formHost)](arkts-form-formhost-offgetformrect-f-sys.md) |
-| [offGetLiveFormStatus(formHost)](arkts-form-formhost-offgetliveformstatus-f-sys.md) |
 | [offGetWantParamsCallback(formHost)](arkts-form-formhost-offgetwantparamscallback-f-sys.md) |
 | [offTemplateFormDetailInfoChange(formHost)](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md) |
 | [offUpdateFormsConfigCallback(formHost)](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md) |
-| [on(formHost)](arkts-form-formhost-on-f-sys.md#onformuninstall) |
-| [on(formHost)](arkts-form-formhost-on-f-sys.md#onformoverflow) |
-| [on(formHost)](arkts-form-formhost-on-f-sys.md#onchangesceneanimationstate) |
-| [on(formHost)](arkts-form-formhost-on-f-sys.md#ongetformrect) |
-| [on(formHost)](arkts-form-formhost-on-f-sys.md#ongetliveformstatus) |
-| [onChangeSceneAnimationState(formHost)](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) |
+| on(formHost) |
+| on(formHost) |
+| on(formHost) |
+| [on(formHost)](arkts-form-formprovider-getformrect-f.md) |
+| on(formHost) |
 | [onDeleteFormsCallback(formHost)](arkts-form-formhost-ondeleteformscallback-f-sys.md) |
-| [onFormOverflow(formHost)](arkts-form-formhost-onformoverflow-f-sys.md) |
-| [onFormUninstall(formHost)](arkts-form-formhost-onformuninstall-f-sys.md) |
-| [onGetFormRect(formHost)](arkts-form-formhost-ongetformrect-f-sys.md) |
-| [onGetLiveFormStatus(formHost)](arkts-form-formhost-ongetliveformstatus-f-sys.md) |
 | [onGetWantParamsCallback(formHost)](arkts-form-formhost-ongetwantparamscallback-f-sys.md) |
 | [onTemplateFormDetailInfoChange(formHost)](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md) |
 | [onUpdateFormsConfigCallback(formHost)](arkts-form-formhost-onupdateformsconfigcallback-f-sys.md) |

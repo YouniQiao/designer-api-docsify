@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_CLASS_DEFAULT
@@ -18,8 +16,6 @@ HUKS_KEY_CLASS_DEFAULT = 0
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_CLASS_EXTENSION
@@ -31,7 +27,5 @@ HUKS_KEY_CLASS_EXTENSION = 1
 表示外部密钥管理扩展管理的密钥。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **系统能力：** SystemCapability.Security.Huks.Extension

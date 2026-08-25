@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## turnOnRadio
 
 ```TypeScript
-function turnOnRadio(slotId: int, callback: AsyncCallback<void>): void
+function turnOnRadio(slotId: number, callback: AsyncCallback<void>): void
 ```
 
 Turn on the radio service.
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ Turn on the radio service.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -43,56 +41,16 @@ Turn on the radio service.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.turnOnRadio((err: BusinessError) => {
-    if (err) {
-        console.error(`turnOnRadio failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`turnOnRadio success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.turnOnRadio(slotId, (err: BusinessError) => {
-    if (err) {
-        console.error(`turnOnRadio failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`turnOnRadio success.`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.turnOnRadio(slotId).then(() => {
-    console.info(`turnOnRadio success.`);
-}).catch((err: BusinessError) => {
-    console.error(`turnOnRadio failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## turnOnRadio
 
 ```TypeScript
-function turnOnRadio(slotId?: int): Promise<void>
+function turnOnRadio(slotId?: number): Promise<void>
 ```
 
 Turn on the radio service.
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -104,7 +62,7 @@ Turn on the radio service.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| slotId | number | 否 |
 
 **返回值：**
 
@@ -124,10 +82,6 @@ Turn on the radio service.
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-参见 [turnOnRadio](#turnonradio)
-
 
 ## turnOnRadio
 
@@ -138,8 +92,6 @@ function turnOnRadio(callback: AsyncCallback<void>): void
 Turn on the radio service.
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -164,7 +116,3 @@ Turn on the radio service.
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [turnOnRadio](#turnonradio)

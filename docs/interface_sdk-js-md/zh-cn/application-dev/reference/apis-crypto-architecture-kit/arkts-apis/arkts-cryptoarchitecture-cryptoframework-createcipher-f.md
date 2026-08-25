@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## createCipher
@@ -12,7 +12,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createCipher(transformation: string): Cipher
 ```
 
-创建加解密实例。<br>支持的规格详见[加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
+创建加解密实例。
+
+支持的规格详见[加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
 
 > **说明：**&gt;
 > 1. 在对称加解密中，PKCS #5和PKCS #7的实现方式相同，即补位长度和块大小保持一致。3DES补位为8字节，AES补位为16字节。**NoPadding**
@@ -23,8 +25,6 @@ function createCipher(transformation: string): Cipher
 > 一个**Cipher**对象进行加解密。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,7 +42,7 @@ function createCipher(transformation: string): Cipher
 
 | 类型 |
 | --- |
-| [Cipher](arkts-cryptoarchitecture-system-cipher-cipher-c.md) |
+| [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) |
 
 **错误码：**
 
@@ -51,19 +51,3 @@ function createCipher(transformation: string): Cipher
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
-
-**示例**
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cipherAlgName = '3DES192|ECB|PKCS7';
-try {
-  let cipher = cryptoFramework.createCipher(cipherAlgName);
-  console.info('cipher algName: ' + cipher.algName);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);
-}
-```

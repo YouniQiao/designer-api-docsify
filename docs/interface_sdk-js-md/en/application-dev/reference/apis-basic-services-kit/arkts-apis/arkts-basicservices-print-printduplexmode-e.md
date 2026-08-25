@@ -4,8 +4,6 @@ Enumerates the duplex modes.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## DUPLEX_MODE_NONE
@@ -18,8 +16,6 @@ Simplex (single-sided).
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## DUPLEX_MODE_LONG_EDGE
@@ -28,11 +24,9 @@ Simplex (single-sided).
 DUPLEX_MODE_LONG_EDGE = 1
 ```
 
-Duplex (double-sided) with flipping on long edge.
+Duplex (number-sided) with flipping on number edge.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -42,10 +36,8 @@ Duplex (double-sided) with flipping on long edge.
 DUPLEX_MODE_SHORT_EDGE = 2
 ```
 
-Duplex (double-sided) with flipping on short edge.
+Duplex (number-sided) with flipping on short edge.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

@@ -4,14 +4,12 @@ Defines the dynamic configuration of certificate pinning.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## hashAlgorithm
@@ -26,8 +24,6 @@ Encryption algorithm. Currently, only SHA-256 is supported.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## publicKeyHash
@@ -41,7 +37,5 @@ Certificate PIN of the string type.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetStack

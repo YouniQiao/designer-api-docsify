@@ -4,14 +4,12 @@ Defines the return value of the listener callback.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## sharedAlbumAssets
@@ -25,8 +23,6 @@ sharedAlbumAssets of the same type
 **Type:** Array&lt;[SharedAlbumAsset](arkts-medialibrary-photoaccesshelper-sharedalbumasset-i-sys.md)&gt;
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,8 +40,6 @@ sharedExtraPhotoAssets of the same type
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -61,8 +55,6 @@ sharedPhotoAssets of the same type
 **Type:** Array&lt;SharedPhotoAsset&gt;
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

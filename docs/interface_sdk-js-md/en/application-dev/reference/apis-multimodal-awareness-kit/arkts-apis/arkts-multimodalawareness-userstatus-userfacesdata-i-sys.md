@@ -6,8 +6,6 @@ Defines user face data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
 **System API:** This is a system API.
@@ -15,22 +13,20 @@ Defines user face data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## angularVelocity
 
 ```TypeScript
-angularVelocity?: double[]
+angularVelocity?: number[]
 ```
 
 Angular velocity of user motion status, in rad/s.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,16 +37,14 @@ Angular velocity of user motion status, in rad/s.
 ## azimuth
 
 ```TypeScript
-azimuth?: double[]
+azimuth?: number[]
 ```
 
 Azimuth of user motion status. The value ranges from 0 to 360, in degrees.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,16 +55,14 @@ Azimuth of user motion status. The value ranges from 0 to 360, in degrees.
 ## faceNum
 
 ```TypeScript
-faceNum?: int
+faceNum?: number
 ```
 
 Number of faces detected. The value must be an integer within [0,3].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,16 +73,14 @@ Number of faces detected. The value must be an integer within [0,3].
 ## gravityAcceleration
 
 ```TypeScript
-gravityAcceleration?: double[]
+gravityAcceleration?: number[]
 ```
 
 Gravity acceleration of user motion status, in m/s².
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,16 +91,14 @@ Gravity acceleration of user motion status, in m/s².
 ## linearAcceleration
 
 ```TypeScript
-linearAcceleration?: double[][]
+linearAcceleration?: number[][]
 ```
 
 Linear acceleration of user motion status, in m/s².
 
-**Type:** ArkTS-Dyn: number[][]  <br>ArkTS-Sta：double[][]
+**Type:** number[][]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,16 +109,14 @@ Linear acceleration of user motion status, in m/s².
 ## visualAngle
 
 ```TypeScript
-visualAngle?: double[]
+visualAngle?: number[]
 ```
 
 User visual angle. The value ranges from 0 to 90, in degrees.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** number[]
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

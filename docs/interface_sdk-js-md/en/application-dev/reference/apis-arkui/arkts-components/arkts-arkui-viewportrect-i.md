@@ -8,8 +8,6 @@ Describes the options of the viewport.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,11 +23,9 @@ height?: Length
 
 Height of the viewport. The value must be greater than or equal to 0.Default value: **0**Default unit: vp Invalid values are treated as the default value.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,11 +41,9 @@ width?: Length
 
 Width of the viewport. The value must be greater than or equal to 0.Default value: **0**Default unit: vp Invalid values are treated as the default value.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -65,11 +59,9 @@ x?: Length
 
 Horizontal coordinate of the start point of the viewport.Default value: **0**Default unit: vp Invalid values are treated as the default value.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -85,11 +77,9 @@ y?: Length
 
 Vertical coordinate of the start point of the viewport.Default value: **0**Default unit: vp Invalid values are treated as the default value.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

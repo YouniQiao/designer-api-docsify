@@ -1,7 +1,5 @@
 # lib.es2015.reflect
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript

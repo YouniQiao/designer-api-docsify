@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## downloadableProfile
@@ -27,8 +25,6 @@ downloadableProfile: DownloadableProfile
 **类型：** [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -46,8 +42,6 @@ iccid: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -64,8 +58,6 @@ pprFlag: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -73,16 +65,14 @@ pprFlag: boolean
 ## pprType
 
 ```TypeScript
-pprType: int
+pprType: number
 ```
 
 配置文件策略规则类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -100,8 +90,6 @@ profileClass: ProfileClass
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -117,8 +105,6 @@ profileName: string
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -136,8 +122,6 @@ responseResult: ResultCode
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -154,8 +138,6 @@ serviceProviderName: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -171,8 +153,6 @@ solvableErrors: SolvableErrors
 **类型：** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

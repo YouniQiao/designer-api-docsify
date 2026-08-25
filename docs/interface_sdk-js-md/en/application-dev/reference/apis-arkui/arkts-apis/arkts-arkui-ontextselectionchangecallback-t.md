@@ -1,16 +1,14 @@
 # OnTextSelectionChangeCallback
 
 ```TypeScript
-export type OnTextSelectionChangeCallback = (selectionStart: int, selectionEnd: int) => void
+declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionEnd: number) => void
 ```
 
-Defines a TextInput callback when onTextSelectionChange. Anonymous Object Rectification.
+Called when the position of the text selection changes or when the cursor position changes during the editing state.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,5 +16,5 @@ Defines a TextInput callback when onTextSelectionChange. Anonymous Object Rectif
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| selectionStart | int | Yes |
-| selectionEnd | int | Yes |
+| selectionStart | number | Yes |
+| selectionEnd | number | Yes |

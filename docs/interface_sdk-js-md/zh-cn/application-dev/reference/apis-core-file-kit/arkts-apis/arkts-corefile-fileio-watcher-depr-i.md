@@ -4,8 +4,6 @@ Watcher是文件变化监听的实例，调用Watcher.stop()方法（同步或�
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [Watcher](arkts-corefile-file-fs-watcher-i.md)
@@ -27,8 +25,6 @@ stop(): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [stop](arkts-corefile-file-fs-watcher-i.md#stop)
@@ -41,28 +37,6 @@ stop(): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
-  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
-});
-watcher.stop().then(() => {
-  console.info("close watcher succeed");
-});
-```
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
-  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
-});
-watcher.stop(() => {
-  console.info("close watcher succeed");
-})
-```
-
 ## stop
 
 ```TypeScript
@@ -72,8 +46,6 @@ stop(callback: AsyncCallback<void>): void
 关闭watcher监听，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -86,7 +58,3 @@ stop(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [stop](#stop)

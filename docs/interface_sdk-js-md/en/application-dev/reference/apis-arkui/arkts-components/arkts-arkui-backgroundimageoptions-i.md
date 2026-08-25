@@ -4,8 +4,6 @@ Define the options for background image.@interface BackgroundImageOptions
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ repeat?: ImageRepeat
 
 Set the repeat style of the background image.
 
-**Type:** ImageRepeat
+**Type:** [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Sets the synchronous or asynchronous mode for background image loading. The defa
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

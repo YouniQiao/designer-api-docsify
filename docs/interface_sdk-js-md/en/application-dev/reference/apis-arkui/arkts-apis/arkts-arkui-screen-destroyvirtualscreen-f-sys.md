@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## destroyVirtualScreen
 
 ```TypeScript
-function destroyVirtualScreen(screenId:long, callback: AsyncCallback<void>): void
+function destroyVirtualScreen(screenId:number, callback: AsyncCallback<void>): void
 ```
 
 Destroys a virtual screen. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,7 +24,7 @@ Destroys a virtual screen. This API uses an asynchronous callback to return the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| screenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| screenId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -38,45 +36,16 @@ Destroys a virtual screen. This API uses an asynchronous callback to return the 
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 | [1400002](../errorcode-display.md#1400002-unauthorized-operation) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenId: number = 1;
-screen.destroyVirtualScreen(screenId, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to destroy the virtual screen. Code:${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in destroying the virtual screen.');
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenId: number = 1;
-screen.destroyVirtualScreen(screenId).then(() => {
-  console.info('Succeeded in destroying the virtual screen.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to destroy the virtual screen.Code:${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## destroyVirtualScreen
 
 ```TypeScript
-function destroyVirtualScreen(screenId:long): Promise<void>
+function destroyVirtualScreen(screenId:number): Promise<void>
 ```
 
 Destroys a virtual screen. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -86,7 +55,7 @@ Destroys a virtual screen. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| screenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| screenId | number | Yes |
 
 **Return value:**
 
@@ -102,7 +71,3 @@ Destroys a virtual screen. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 | [1400002](../errorcode-display.md#1400002-unauthorized-operation) |
-
-**Examples**
-
-See [destroyVirtualScreen](#destroyvirtualscreen)

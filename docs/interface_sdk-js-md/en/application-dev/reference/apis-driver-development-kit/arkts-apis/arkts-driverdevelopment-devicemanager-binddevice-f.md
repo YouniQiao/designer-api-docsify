@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 ```
 
 ## bindDevice
@@ -16,8 +16,6 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
 Binds a peripheral device based on the device information returned by **queryDevices()**. You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md) to obtain the peripheral device information and device.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 19
 
@@ -43,53 +41,6 @@ Binds a peripheral device based on the device information returned by **queryDev
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [22900001](../errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) |
 
-**Examples**
-
-```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit';
-
-interface DataType {
-  deviceId : number;
-  remote : rpc.IRemoteObject;
-}
-
-try {
-  // For example, deviceId is 12345678. You can use queryDevices() to obtain the deviceId.
-  deviceManager.bindDevice(12345678, (error : BusinessError, data : number) => {
-    console.error(`Device is disconnected`);
-  }, (error : BusinessError, data : DataType) => {
-    if (error) {
-      console.error(`bindDevice async fail. Code is ${error.code}, message is ${error.message}`);
-      return;
-    }
-    console.info(`bindDevice success`);
-  });
-} catch (error) {
-  console.error(`bindDevice fail. Code is ${error.code}, message is ${error.message}`);
-}
-```
-
-```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // For example, deviceId is 12345678. You can use queryDevices() to obtain the deviceId.
-  deviceManager.bindDevice(12345678, (error : BusinessError, data : number) => {
-    console.error(`Device is disconnected`);
-  }).then(data => {
-    console.info(`bindDevice success, Device_Id is ${data.deviceId}.
-    remote is ${data.remote != null ? data.remote.getDescriptor() : "null"}`);
-  }, (error: BusinessError) => {
-    console.error(`bindDevice async fail. Code is ${error.code}, message is ${error.message}`);
-  });
-} catch (error) {
-  console.error(`bindDevice fail. Code is ${error.code}, message is ${error.message}`);
-}
-```
-
 
 ## bindDevice
 
@@ -101,8 +52,6 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Prom
 Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result. You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md) to obtain the peripheral device information and device.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 19
 
@@ -132,7 +81,3 @@ Binds a peripheral device based on the device information returned by **queryDev
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [22900001](../errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) |
-
-**Examples**
-
-See [bindDevice](#binddevice)

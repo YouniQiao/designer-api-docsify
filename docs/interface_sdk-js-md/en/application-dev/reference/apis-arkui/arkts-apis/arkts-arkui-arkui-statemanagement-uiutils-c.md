@@ -4,14 +4,12 @@ Provides APIs for handling data transformations related to state management.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
 ```
 
 ## addMonitor
@@ -23,8 +21,6 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 Dynamically adds a listener to the state variable of state management V2. For details, see [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,8 +55,6 @@ Synchronously updates a specified state variable. This API receives a closure fu
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -85,52 +79,6 @@ Synchronously updates a specified state variable. This API receives a closure fu
 | --- |
 | [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) |
 
-**Examples**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Index {
-  @Local w: number = 50; // Width.
-  @Local h: number = 50; // Height.
-  @Local message: string = 'Hello';
-
-  build() {
-    Column() {
-      Button('change size')
-        .margin(20)
-        .onClick(() => {
-          // Values are changed additionally before the animation is executed.
-          UIUtils.applySync(() => {
-            this.w = 100;
-            this.h = 100;
-            this.message = 'Hello World';
-          });
-          // The size of the column box gradually changes from (100 × 100) to (200 × 200) within 1s, and the text in the box changes to "Hello ArkUI".
-          this.getUIContext().animateTo({
-            duration: 1000
-          }, () => {
-            console.info(`animateTo-in, w=${this.w}, h=${this.h}`);
-            this.w = 200;
-            this.h = 200;
-            this.message = 'Hello ArkUI';
-            console.info(`animateTo-out, w=${this.w}, h=${this.h}`);
-          });
-        })
-      // Column box.
-      Column() {
-        Text(`${this.message}`)
-      }
-      .backgroundColor('#ff17a98d')
-      .width(this.w)
-      .height(this.h)
-    }
-  }
-}
-```
-
 ## canBeObserved
 
 ```TypeScript
@@ -140,8 +88,6 @@ static canBeObserved<T extends object>(source: T): ObservedResult
 Determines whether a data object can be observed and returns the observation result. For details, see [canBeObserved API: Determining Whether an Object Can Be Observed](../../../ui/state-management/arkts-new-canBeObserved.md).
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,117 +107,6 @@ Determines whether a data object can be observed and returns the observation res
 | --- |
 | [ObservedResult](arkts-arkui-arkui-statemanagement-observedresult-i.md) |
 
-**Examples**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-import { DecoratorInfo, ElementInfo } from '@ohos.arkui.StateManagement';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = 'CanBeObserved';
-
-class Student {
-  public name?: string;
-
-  constructor(name?: string) {
-    this.name = name ?? '';
-  }
-
-  // Provide a method in the object to determine whether the object can be observed.
-  test(): void {
-    const result = UIUtils.canBeObserved(this);
-    // Whether the object can be observed.
-    const isObserved = result.isObserved;
-    hilog.info(0x00, TAG, `isObserved: ${JSON.stringify(isObserved)}`);
-    // Reason for the object's observability.
-    const reason = result.reason;
-    hilog.info(0x00, TAG, `reason: ${reason}`);
-    // Decorator information associated with the observable object.
-    const decoratorInfoArr = result.decoratorInfo;
-    decoratorInfoArr.forEach((decorator: DecoratorInfo) => {
-      // Decorator name.
-      const decoratorName = decorator.decoratorName;
-      hilog.info(0x00, TAG, `decoratorName: ${decoratorName}`);
-      // Name of the attribute decorated by the decorator.
-      const stateVariableName = decorator.stateVariableName;
-      hilog.info(0x00, TAG, `stateVariableName: ${stateVariableName}`);
-      // Name of the component where the decorator is located.
-      const owningName = decorator.owningComponentOrClassName;
-      hilog.info(0x00, TAG, `owningComponentOrClassName: ${owningName}`);
-      // ID of the component where the decorator is located.
-      const owningId = decorator.owningComponentId;
-      hilog.info(0x00, TAG, `owningComponentId: ${owningId}`);
-      // Information about the component associated with the decorator.
-      const dependentInfo = decorator.dependentInfo;
-      dependentInfo.forEach((elementInfo: ElementInfo) => {
-        // Name of the component associated with the decorator.
-        const eleName = elementInfo.elementName;
-        hilog.info(0x00, TAG, `elementName: ${eleName}`);
-        // ID of the component associated with the decorator.
-        const eleId = elementInfo.elementId;
-        hilog.info(0x00, TAG, `elementId: ${eleId}`);
-      })
-    })
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  @State student: Student = new Student('LiMei');
-
-  build() {
-    Column({ space: 20 }) {
-      Classroom({ student: this.student })
-      Home({ student: this.student })
-      Button('test')
-        .onClick(() => {
-          // You can use this API on any page to determine whether the current object can be observed.
-          this.student.test();
-        })
-    }
-    .height('100%')
-    .width('100%')
-    .justifyContent(FlexAlign.Center)
-    .alignItems(HorizontalAlign.Center)
-  }
-}
-
-@Component
-export struct Classroom {
-  @State student: Student = new Student();
-
-  build() {
-    Column() {
-      Text('Classroom ' + this.student.name)
-      School({ student: this.student })
-    }
-  }
-}
-
-@Component
-export struct Home {
-  @State student: Student = new Student();
-
-  build() {
-    Column() {
-      Text('Home ' + this.student.name)
-    }
-  }
-}
-
-@Component
-export struct School {
-  @State student: Student = new Student();
-
-  build() {
-    Column() {
-      Text('School ' + this.student.name)
-    }
-  }
-}
-```
-
 ## clearMonitor
 
 ```TypeScript
@@ -281,8 +116,6 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 Deletes the listener added to the state variable of the state management V2 by calling the [addMonitor](#addmonitor) API. For details, see [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -316,8 +149,6 @@ Enables V1 state variables to be observable in @ComponentV2. This API is primari
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -336,47 +167,6 @@ Enables V1 state variables to be observable in @ComponentV2. This API is primari
 | --- |
 | T |
 
-**Examples**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@Observed
-class ObservedClass {
-  name: string = 'Tom';
-}
-
-@Entry
-@Component
-struct CompV1 {
-  @State observedClass: ObservedClass = new ObservedClass();
-
-  build() {
-    Column() {
-      Text(`@State observedClass: ${this.observedClass.name}`)
-        .onClick(() => {
-          this.observedClass.name = 'State'; // This will trigger a UI update.
-        })
-      // Enable the V2 observation capability for the V1 state variable.
-      CompV2({ observedClass: UIUtils.enableV2Compatibility(this.observedClass) })
-    }
-  }
-}
-
-@ComponentV2
-struct CompV2 {
-  @Param observedClass: ObservedClass = new ObservedClass();
-
-  build() {
-    // After the V2 observation capability is enabled for the V1 state variable, the first-level changes can be observed in V2.
-    Text(`@Param observedClass: ${this.observedClass.name}`)
-      .onClick(() => {
-        this.observedClass.name = 'Param'; // This will trigger a UI update.
-      })
-  }
-}
-```
-
 ## flushUIUpdates
 
 ```TypeScript
@@ -386,8 +176,6 @@ static flushUIUpdates(): void
 Processes all state variable modifications before this API call and synchronizes the [dirty](../../../ui/state-management/arkts-state-management-introduce.md#triggering-updates) UI nodes. However, it does not synchronize the execution of @Computed and @Monitor decorators. For details, see [applySync/flushUpdates/flushUIUpdates APIs: Synchronous Update](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md).
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -401,51 +189,6 @@ Processes all state variable modifications before this API call and synchronizes
 | --- |
 | [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) |
 | [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) |
-
-**Examples**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Index {
-  @Local w: number = 50; // Width.
-  @Local h: number = 50; // Height.
-  @Local message: string = 'Hello';
-
-  build() {
-    Column() {
-      Button('change size')
-        .margin(20)
-        .onClick(() => {
-          // Values are changed additionally before the animation is executed.
-          this.w = 100;
-          this.h = 100;
-          this.message = 'Hello World';
-          UIUtils.flushUIUpdates();
-          // The size of the column box gradually changes from (100 × 100) to (200 × 200) within 1s, and the text in the box changes to "Hello ArkUI".
-          this.getUIContext().animateTo({
-            duration: 1000
-          }, () => {
-            console.info(`animateTo-in, w=${this.w}, h=${this.h}`);
-            this.w = 200;
-            this.h = 200;
-            this.message = 'Hello ArkUI';
-            console.info(`animateTo-out, w=${this.w}, h=${this.h}`);
-          });
-        })
-      // Column box.
-      Column() {
-        Text(`${this.message}`)
-      }
-      .backgroundColor('#ff17a98d')
-      .width(this.w)
-      .height(this.h)
-    }
-  }
-}
-```
 
 ## flushUpdates
 
@@ -457,8 +200,6 @@ Synchronously updates all state variable modifications before this API call, inc
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -472,51 +213,6 @@ Synchronously updates all state variable modifications before this API call, inc
 | [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) |
 | [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) |
 
-**Examples**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Index {
-  @Local w: number = 50; // Width.
-  @Local h: number = 50; // Height.
-  @Local message: string = 'Hello';
-
-  build() {
-    Column() {
-      Button('change size')
-        .margin(20)
-        .onClick(() => {
-          // Values are changed additionally before the animation is executed.
-          this.w = 100;
-          this.h = 100;
-          this.message = 'Hello World';
-          UIUtils.flushUpdates();
-          // The size of the column box gradually changes from (100 × 100) to (200 × 200) within 1s, and the text in the box changes to "Hello ArkUI".
-          this.getUIContext().animateTo({
-            duration: 1000
-          }, () => {
-            console.info(`animateTo-in, w=${this.w}, h=${this.h}`);
-            this.w = 200;
-            this.h = 200;
-            this.message = 'Hello ArkUI';
-            console.info(`animateTo-out, w=${this.w}, h=${this.h}`);
-          });
-        })
-      // Column box.
-      Column() {
-        Text(`${this.message}`)
-      }
-      .backgroundColor('#ff17a98d')
-      .width(this.w)
-      .height(this.h)
-    }
-  }
-}
-```
-
 ## getCustomComponentContext
 
 ```TypeScript
@@ -526,8 +222,6 @@ static getCustomComponentContext<T extends BaseCustomComponent>(customComponent:
 Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md) of the given @Component(V1) or @ComponentV2. **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -553,11 +247,9 @@ Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcompone
 static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle
 ```
 
-Obtains the [lifecycle of a custom component](arkts-arkui-decorator-componentinit-i.md).
+Obtains the lifecycle of a custom component.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -577,29 +269,6 @@ Obtains the [lifecycle of a custom component](arkts-arkui-decorator-componentini
 | --- |
 | [CustomComponentLifecycle](arkts-arkui-arkui-statemanagement-customcomponentlifecycle-i.md) |
 
-**Examples**
-
-```TypeScript
-import { UIUtils, ComponentAppear } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State lifecycleState: number = -1;
-
-  @ComponentAppear
-  myAppear() {
-    // Obtain the lifecycle instance of a custom component through UIUtils.getLifecycle, and query the current lifecycle of the custom component through getCurrentState.
-    // The expected lifecycle is CustomComponentLifecycleState.APPEARED = 1.
-    this.lifecycleState = UIUtils.getLifecycle(this).getCurrentState();
-  }
-
-  build() {
-    Text(`${this.lifecycleState}`)
-  }
-}
-```
-
 ## getTarget
 
 ```TypeScript
@@ -609,8 +278,6 @@ static getTarget<T extends object>(source: T): T
 Obtains the original object from a proxy object wrapped by the state management framework. For details, see [getTarget API: Obtaining Original Objects](../../../ui/state-management/arkts-new-getTarget.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -630,32 +297,6 @@ Obtains the original object from a proxy object wrapped by the state management 
 | --- |
 | T |
 
-**Examples**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-class NonObservedClass {
-  name: string = 'Tom';
-}
-
-let nonObservedClass: NonObservedClass = new NonObservedClass();
-
-@Entry
-@Component
-struct Index {
-  @State someClass: NonObservedClass = nonObservedClass;
-
-  build() {
-    Column() {
-      Text(`this.someClass === nonObservedClass: ${this.someClass === nonObservedClass}`) // false
-      Text(`UIUtils.getTarget(this.someClass) === nonObservedClass: ${UIUtils.getTarget(this.someClass) ===
-        nonObservedClass}`) // true
-    }
-  }
-}
-```
-
 ## makeBinding
 
 ```TypeScript
@@ -665,8 +306,6 @@ static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 Creates a read-only one-way data binding instance, which is used to construct the arguments of the **Binding** type in the [\@Builder](../../../ui/state-management/arkts-builder.md) function.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -686,96 +325,6 @@ Creates a read-only one-way data binding instance, which is used to construct th
 | --- |
 | [Binding](arkts-arkui-arkui-statemanagement-binding-c.md)&lt;T&gt; |
 
-**Examples**
-
-```TypeScript
-import { Binding, MutableBinding, UIUtils } from '@kit.ArkUI';
-
-@Builder
-function CustomButton(num1: Binding<number>) {
-  Row() {
-    Button(`Custom Button: ${num1.value}`)
-      .onClick(() => {
-        // num1.value += 1; will throw an error because the Binding element does not support modification.
-      })
-  }
-}
-
-@Entry
-@ComponentV2
-struct CompV2 {
-  @Local number1: number = 5;
-  @Local number2: number = 10;
-
-  build() {
-    Column() {
-      Text('parent component')
-
-      CustomButton(
-        /**
-         * Creates a read-only binding instance.
-         * @param getter - Function for returning this.number1.
-         * @returns Read-only Binding<number> object.
-         *
-         * Features:
-         * 1. The value is recalculated each time .value is accessed.
-         * 2. The value cannot be directly modified.
-         */
-        UIUtils.makeBinding<number>(
-          () => this.number1 // GetterCallback
-        )
-      )
-    }
-  }
-}
-```
-
-```TypeScript
-import { Binding, MutableBinding, UIUtils } from '@kit.ArkUI';
-
-@Builder
-function CustomButton(num2: MutableBinding<number>) {
-  Row() {
-    Button(`Custom Button: ${num2.value}`)
-      .onClick(() => {
-        // MutableBinding type, which can be modified.
-        num2.value += 1;
-      })
-  }
-}
-
-@Entry
-@ComponentV2
-struct CompV2 {
-  @Local number1: number = 5;
-  @Local number2: number = 10;
-
-  build() {
-    Column() {
-      Text('parent component')
-
-      CustomButton(
-        /**
-         * Creates a mutable binding.
-         * @param getter - Function that returns this.number2.
-         * @param setter - Callback called when the binding value is modified.
-         * @returns A mutable MutableBinding<number> object.
-         *
-         * Features:
-         * 1. Read and write operations are supported.
-         * 2. The setter callback is automatically called when .value is modified.
-         */
-        UIUtils.makeBinding<number>(
-          () => this.number2, // GetterCallback
-          (val: number) => {
-            this.number2 = val;
-          }) // SetterCallback
-      )
-    }
-  }
-}
-```
-
 ## makeBinding
 
 ```TypeScript
@@ -785,8 +334,6 @@ static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): Mut
 Creates a mutable two-way data binding instance, which is used to construct the argument of the **MutableBinding** type in the \@Builder function.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -807,10 +354,6 @@ Creates a mutable two-way data binding instance, which is used to construct the 
 | --- |
 | [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md)&lt;T&gt; |
 
-**Examples**
-
-See [makeBinding](#makebinding)
-
 ## makeObserved
 
 ```TypeScript
@@ -820,8 +363,6 @@ static makeObserved<T extends object>(source: T): T
 Converts ordinary unobservable data into observable data. For details, see [makeObserved API: Changing Unobservable Data to Observable Data](../../../ui/state-management/arkts-new-makeObserved.md).
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -841,36 +382,6 @@ Converts ordinary unobservable data into observable data. For details, see [make
 | --- |
 | T |
 
-**Examples**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-class NonObservedClass {
-  name: string = 'Tom';
-}
-
-@Entry
-@ComponentV2
-struct Index {
-  observedClass: NonObservedClass = UIUtils.makeObserved(new NonObservedClass());
-  nonObservedClass: NonObservedClass = new NonObservedClass();
-
-  build() {
-    Column() {
-      Text(`observedClass: ${this.observedClass.name}`)
-        .onClick(() => {
-          this.observedClass.name = 'Jane'; // This will trigger a UI update.
-        })
-      Text(`observedClass: ${this.nonObservedClass.name}`)
-        .onClick(() => {
-          this.nonObservedClass.name = 'Jane'; // This will not trigger a UI update.
-        })
-    }
-  }
-}
-```
-
 ## makeV1Observed
 
 ```TypeScript
@@ -880,8 +391,6 @@ static makeV1Observed<T extends object>(source: T): T
 Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @ Observed and can be used to initialize @ObjectLink.This API can be used together with [enableV2Compatibility](#enablev2compatibility) in scenarios where state management V1 and V2 are used together. For details, see [Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -900,49 +409,3 @@ Wraps an unobservable object into an object that is observable by V1 state manag
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | T |
-
-**Examples**
-
-```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-
-class Outer {
-  outerValue: string = 'outer';
-  inner: Inner;
-
-  constructor(inner: Inner) {
-    this.inner = inner;
-  }
-}
-
-class Inner {
-  interValue: string = 'inner';
-}
-
-@Entry
-@Component
-struct Index {
-  @State outer: Outer = new Outer(UIUtils.makeV1Observed(new Inner()));
-
-  build() {
-    Column() {
-      // The return value of makeV1Observed can be used to initialize @ObjectLink.
-      Child({ inner: this.outer.inner })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-
-@Component
-struct Child {
-  @ObjectLink inner: Inner;
-
-  build() {
-    Text(`${this.inner.interValue}`)
-      .onClick(() => {
-        this.inner.interValue += '!';
-      })
-  }
-}
-```

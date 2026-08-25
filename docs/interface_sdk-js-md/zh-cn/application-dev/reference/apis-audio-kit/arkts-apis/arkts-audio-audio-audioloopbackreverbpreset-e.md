@@ -1,10 +1,8 @@
 # AudioLoopbackReverbPreset
 
-表示返听混响模式的枚举。@enum { int }
+表示返听混响模式的枚举。@enum { number }
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -18,8 +16,6 @@ ORIGINAL = 1
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## KTV
@@ -31,8 +27,6 @@ KTV = 2
 提供类似KTV的混响效果。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -46,8 +40,6 @@ THEATER = 3
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 ## CONCERT
@@ -59,7 +51,5 @@ CONCERT = 4
 提供类似演唱会的混响效果。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer

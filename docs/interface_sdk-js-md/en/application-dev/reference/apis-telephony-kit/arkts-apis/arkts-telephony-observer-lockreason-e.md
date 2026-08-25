@@ -4,8 +4,6 @@ Enumerates SIM card lock types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_NONE
@@ -17,8 +15,6 @@ SIM_NONE = 0
 No lock.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -32,8 +28,6 @@ PIN lock.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PUK
@@ -45,8 +39,6 @@ SIM_PUK = 2
 PUK lock.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -60,8 +52,6 @@ Network PIN lock.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PN_PUK
@@ -73,8 +63,6 @@ SIM_PN_PUK = 4
 Network PUK lock.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -88,8 +76,6 @@ Subnet PIN lock.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PU_PUK
@@ -101,8 +87,6 @@ SIM_PU_PUK = 6
 Subnet PUK lock.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -116,8 +100,6 @@ Service provider PIN lock.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PP_PUK
@@ -129,8 +111,6 @@ SIM_PP_PUK = 8
 Service provider PUK lock.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -144,8 +124,6 @@ Organization PIN lock.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_PC_PUK
@@ -157,8 +135,6 @@ SIM_PC_PUK = 10
 Organization PUK lock.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -172,8 +148,6 @@ SIM PIN lock.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.StateRegistry
 
 ## SIM_SIM_PUK
@@ -185,7 +159,5 @@ SIM_SIM_PUK = 12
 SIM PUK lock.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.StateRegistry

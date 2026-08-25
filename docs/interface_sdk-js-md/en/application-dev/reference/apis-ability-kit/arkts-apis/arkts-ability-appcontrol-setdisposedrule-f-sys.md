@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## setDisposedRule
 
 ```TypeScript
-function setDisposedRule(appId: string, rule: DisposedRule, appIndex?: int): void
+function setDisposedRule(appId: string, rule: DisposedRule, appIndex?: number): void
 ```
 
 Sets the disposed rule for an application or an application clone.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -30,7 +28,7 @@ Sets the disposed rule for an application or an application clone.
 | --- | --- | --- |
 | appId | string | Yes |
 | rule | [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md) | Yes |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| appIndex | number | No |
 
 **Error codes:**
 
@@ -42,41 +40,3 @@ Sets the disposed rule for an application or an application clone.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-
-**Examples**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
-
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  abilityName: "EntryAbility"
-};
-let elementName: bundleManager.ElementName = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  abilityName: "EntryAbility"
-};
-let rule: appControl.DisposedRule = {
-  want: want,
-  componentType: appControl.ComponentType.UI_ABILITY,
-  disposedType: appControl.DisposedType.BLOCK_APPLICATION,
-  controlType: appControl.ControlType.ALLOWED_LIST,
-  elementList: [
-    elementName
-  ],
-  priority: 100
-};
-
-try {
-  appControl.setDisposedRule(appId, rule, 1);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedRule failed ' + message);
-}
-```

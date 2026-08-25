@@ -7,14 +7,12 @@ Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## getBufferData
@@ -30,8 +28,6 @@ getBufferData(): ImageBufferData | null
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -41,38 +37,6 @@ getBufferData(): ImageBufferData | null
 | 类型 |
 | --- |
 | [ImageBufferData](arkts-image-image-imagebufferdata-i.md) \| null |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-function GetBufferData(img : image.Image) {
-  const bufferData = img.getBufferData();
-  if (bufferData == null) {
-    console.error('Failed to get the bufferData: bufferData is null.');
-    return;
-  }
-  console.info('Succeeded in getting bufferData.');
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetBufferData(img : image.Image) {
-  try {
-    let bufferData = img.getBufferData()
-    if (bufferData) {
-      console.info('Succeeded in getting bufferData.');
-    }
-  } catch (err) {
-    console.info('Get bufferData failed.');
-  }
-}
-```
 
 ## getComponent
 
@@ -84,8 +48,6 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -94,71 +56,6 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 | --- | --- | --- |
 | componentType | [ComponentType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetComponent(img : image.Image) {
-  img.getComponent(image.ComponentType.JPEG, (err: BusinessError, component: image.Component) => {
-    if (err) {
-      console.error(`Failed to get the component.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in getting component.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function GetComponentFunc(img: image.Image): void {
-  try {
-    img.getComponent(image.ComponentType.JPEG, (err: BusinessError | null, component: image.Component | undefined) =>{
-      if (err) {
-        console.error(0x00000, 'GetComponentFunc', 'getComponent failed: ' + err);
-      } else {
-        console.info(0x00000, 'GetComponentFunc', 'getComponent success!');
-      }
-    })
-  } catch (err) {
-    console.error(0x00000, 'GetComponentFunc', 'GetComponentFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetComponent(img : image.Image) {
-  img.getComponent(image.ComponentType.JPEG).then((component: image.Component) => {
-    console.info('Succeeded in getting component.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get the component.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function GetComponentFunc(img: image.Image): void {
-  try {
-    let component: image.Component = await img.getComponent(image.ComponentType.JPEG);
-    console.info(0x00000, 'GetComponentFunc', 'GetComponentFunc success!');
-  } catch (err) {
-    console.error(0x00000, 'GetComponentFunc', 'GetComponentFunc failed: ' + err);
-  }
-}
-```
 
 ## getComponent
 
@@ -169,8 +66,6 @@ getComponent(componentType: ComponentType): Promise<Component>
 根据图像的组件类型从图像中获取组件缓存。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -186,10 +81,6 @@ getComponent(componentType: ComponentType): Promise<Component>
 | --- |
 | Promise & lt;Component & gt; |
 
-**示例**
-
-参见 [getComponent](#getcomponent)
-
 ## getMetadata
 
 ```TypeScript
@@ -199,8 +90,6 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 根据HDR元数据的类型从图像中获取HDR元数据。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -225,157 +114,6 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 | [7600206](../errorcode-image.md#7600206-无效参数) |
 | [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function GetAuxPictureObjMetadata(auxPictureObj: image.AuxiliaryPicture) {
-  if (auxPictureObj != null) {
-    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-    let auxPictureObjMetaData: image.Metadata | null = await auxPictureObj.getMetadata(metadataType);
-    if (auxPictureObjMetaData != null) {
-      console.info('Succeeded in getting AuxPictureObj Metadata.' );
-    } else {
-      console.error('Failed to get AuxPictureObj Metadata.');
-    }
-  } else {
-    console.error('Get AuxPictureObj is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function GetMetadataFunc(auxPicture: image.AuxiliaryPicture): void {
-  try {
-    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-    let metadata = auxPicture.getMetadata(metadataType);
-    if (metadata != null) {
-      console.info(0x00000, 'GetMetadataFunc', 'getMetadata success!');
-    }
-  } catch (err) {
-    console.error(0x00000, 'GetMetadataFunc', 'GetMetadataFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function GetMetadata(img : image.Image) {
-  try {
-    let staticMetadata = img.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
-    console.info(`getMetadata:${staticMetadata}`);
-  } catch (err) {
-    console.error('Failed to getMetadata.' + err);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function GetMetadata(img : image.Image) {
-  try {
-    let staticMetadata = img.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
-    if (staticMetadata) {
-      console.info(`GetMetadata:${staticMetadata}`);
-    }
-  } catch (err) {
-    console.error('GetMetadata failed' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function GetPictureObjMetadataProperties(pictureObj : image.Picture) {
-  if (pictureObj != null) {
-    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-    let pictureObjMetaData: image.Metadata = await pictureObj.getMetadata(metadataType);
-    if (pictureObjMetaData != null) {
-      console.info('Succeeded in getting picture metadata.');
-    } else {
-      console.error('Failed to get picture metadata.');
-    }
-  } else {
-    console.error(" pictureObj is null");
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function GetMetadataFunc(picture: image.Picture): void {
-  try {
-    let metadataType: image.MetadataType = image.MetadataType.EXIF_METADATA;
-    let metaData = await picture.getMetadata(metadataType);
-    console.info(0x00000, 'SetMetadataFunc', 'getMetadata success!');
-  } catch (err) {
-    console.error(0x00000, 'SetMetadataFunc', 'SetMetadataFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getMetadata(context: Context) {
-  // 此处'app.media.startIcon'需要替换为本地HDR图片。
-  let img = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id);
-  let imageSource = image.createImageSource(img.buffer.slice(0));
-  let decodingOptions: image.DecodingOptions = {
-    desiredDynamicRange: image.DecodingDynamicRange.AUTO
-  };
-  let pixelMap = imageSource.createPixelMapSync(decodingOptions);
-  if (pixelMap != undefined) {
-    console.info('Succeeded in creating the PixelMap object.');
-    try {
-      let staticMetadata = pixelMap.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
-      console.info('Succeeded in getting the metadata.');
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`Failed to get the metadata. Code: ${err.code}, message: ${err.message}`);
-    }
-  } else {
-    console.error('Failed to create the PixelMap.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function getMetadata(context: Context) {
-  // 此处'app.media.startIcon'需要替换为本地HDR图片。
-  let img = context.resourceManager.getMediaContentSync($r('app.media.startIcon').id);
-  let imageSource = image.createImageSource(img.buffer.slice(0));
-  let decodingOptions: image.DecodingOptions = {
-    desiredDynamicRange: image.DecodingDynamicRange.AUTO
-  };
-  let pixelMap = imageSource.createPixelMapSync(decodingOptions);
-  if (pixelMap != undefined) {
-    console.info('Succeeded in creating the PixelMap object.');
-    try {
-      let staticMetadata = pixelMap.getMetadata(image.HdrMetadataKey.HDR_STATIC_METADATA);
-      console.info('Succeeded in getting the metadata.');
-    } catch (err) {
-      console.error(`Failed to get the metadata. Code: ${err.code}, message: ${err.message}`);
-    }
-  } else {
-    console.error('Failed to create the PixelMap.');
-  }
-}
-```
-
 ## release
 
 ```TypeScript
@@ -386,8 +124,6 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **参数：**
@@ -395,433 +131,6 @@ release(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function Release(auxPictureObj: image.AuxiliaryPicture) {
-  let funcName = "Release";
-  if (auxPictureObj != null) {
-    auxPictureObj.release();
-    if (auxPictureObj.getType() == null) {
-      console.info(funcName, 'Success !');
-    } else {
-      console.error(funcName, 'Failed !');
-    }
-  } else {
-    console.error('PictureObj is null');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-if (context != undefined) {
-  let auxPicture: image.AuxiliaryPicture | null = GetAuxiliaryPicture(context)
-  if (auxPicture != null) {
-    auxPicture.release();
-  } else {
-    console.error(0x00000, 'GetAuxiliaryPicture', 'auxPicture is null!');
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image instance.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-function ReleaseFunc(img: image.Image): void {
-  try {
-    img.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'release success!');
-      }
-    })
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(img : image.Image) {
-  img.release().then(() => {
-    console.info('Succeeded in releasing the image instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function ReleaseFunc(img: image.Image): void {
-  try {
-    await img.release()
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the creator.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing creator.');
-    }
-  });
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function ReleaseFunc(creator: image.ImageCreator): void {
-  try {
-    creator.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'release success!');
-      }
-    })
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(creator : image.ImageCreator) {
-  creator.release().then(() => {
-    console.info('Succeeded in releasing creator.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the creator.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function ReleaseFunc(creator: image.ImageCreator): void {
-  try {
-    await creator.release();
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release((err: BusinessError)=>{
-    if (err) {
-      console.error(`Failed to release image packaging.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing image packaging.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function ReleaseFunc(): void {
-  try {
-    let imagePacker: image.ImagePacker = image.createImagePacker();
-    imagePacker.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'release success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release() {
-  const imagePackerObj: image.ImagePacker = image.createImagePacker();
-  imagePackerObj.release().then(() => {
-    console.info('Succeeded in releasing image packaging.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release image packaging.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function ReleaseFunc(): Promise<void> {
-  try {
-    let imagePacker: image.ImagePacker = image.createImagePacker();
-    await imagePacker.release();
-    console.info(0x00000, 'ReleaseFunc', 'release success!');
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the receiver.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the receiver.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function ReleaseFunc(): void {
-  let size: image.Size = { height: 8192, width: 8 };
-  try {
-    let receiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-    receiver.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'ReleaseFunc success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(receiver : image.ImageReceiver) {
-  receiver.release().then(() => {
-    console.info('Succeeded in releasing the receiver.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the receiver.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function ReleaseFunc(): void {
-  let size: image.Size = { height: 8192, width: 8 };
-  try {
-    let receiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-    await receiver.release();
-    console.info(0x00000, 'ReleaseFunc', 'release success!');
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the image source instance.code ${err.code},message is ${err.message}`);
-    } else {
-      console.info('Succeeded in releasing the image source instance.');
-    }
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function ReleaseFunc(imageSource: image.ImageSource): void {
-  try {
-    imageSource.release((err: BusinessError | null) => {
-      if (err) {
-        console.error(0x00000, 'ReleaseFunc', 'release failed: ' + err);
-      } else {
-        console.info(0x00000, 'ReleaseFunc', 'release success!');
-      }
-    });
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function Release(imageSourceObj : image.ImageSource) {
-  imageSourceObj.release().then(() => {
-    console.info('Succeeded in releasing the image source instance.');
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to release the image source instance.code ${error.code},message is ${error.message}`);
-  })
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-async function ReleaseFunc(imageSource: image.ImageSource): Promise<void> {
-  try {
-    await imageSource.release();
-    console.info(0x00000, 'ReleaseFunc', 'release success!');
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-async function Release(pictureObj : image.Picture) {
-  let funcName = "Release";
-  if (pictureObj != null) {
-    pictureObj.release();
-    if (pictureObj.getMainPixelmap() == null) {
-      console.info(funcName, 'Succeeded in releasing a picture.');
-    } else {
-      console.error(funcName, 'Failed to release a picture.');
-    }
-  } else {
-    console.error('Picture object is null.');
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function ReleaseFunc(picture: image.Picture): void {
-  try {
-    picture.release();
-    console.info(0x00000, 'ReleaseFunc', 'release success!');
-  } catch (err) {
-    console.error(0x00000, 'ReleaseFunc', 'ReleaseFunc failed: ' + err);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release().then(() => {
-    console.info('Succeeded in releasing the PixelMap object.');
-  }).catch((err: Error) => {
-    console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function release(pixelMap: image.PixelMap) {
-  pixelMap.release((err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to release the PixelMap object. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in releasing the PixelMap object.');
-  });
-}
-```
 
 ## release
 
@@ -833,8 +142,6 @@ release(): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **返回值：**
@@ -842,10 +149,6 @@ release(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [release](#release)
 
 ## clipRect
 
@@ -858,8 +161,6 @@ clipRect: Region
 **类型：** Region
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -875,8 +176,6 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -884,16 +183,14 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 ## format
 
 ```TypeScript
-readonly format: int
+readonly format: number
 ```
 
 图像格式，参考 [OH_NativeBuffer_Format](../../../reference/apis-arkgraphics2d/capi-buffer-common-h.md#oh_nativebuffer_format)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -909,22 +206,18 @@ readonly size: Size
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## timestamp
 
 ```TypeScript
-readonly timestamp: long
+readonly timestamp: number
 ```
 
 图像时间戳。时间戳以纳秒为单位，通常是单调递增的。时间戳的具体含义和基准取决于图像的生产者，在相机预览/拍照场景，生产者就是相机。来自不同生产者的图像的时间戳可能有不同的含义和基准，因此可能无法进行比较。如果要获取某张照片的生 成时间，可以通过 [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)接口读 取EXIF时间戳信息。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

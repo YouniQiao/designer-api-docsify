@@ -4,8 +4,6 @@ Describes the file info for transfer
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the file info for transfer
 ## Modules to Import
 
 ```TypeScript
-import { opp } from '@kit.ConnectivityKit';
+import { opp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## fileFd
@@ -27,8 +25,6 @@ The file fd
 **Type:** number
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ The file path
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -67,8 +61,6 @@ The file size
 **Type:** number
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Model restriction:** This API can be used only in the stage model.
 

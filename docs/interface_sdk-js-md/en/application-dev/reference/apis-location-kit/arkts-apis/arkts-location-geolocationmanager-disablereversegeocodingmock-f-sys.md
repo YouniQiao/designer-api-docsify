@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## disableReverseGeocodingMock
@@ -15,8 +15,6 @@ function disableReverseGeocodingMock(): void
 Disable the reverse geocoding simulation function.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MOCK_LOCATION
@@ -33,15 +31,3 @@ Disable the reverse geocoding simulation function.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  geoLocationManager.disableReverseGeocodingMock();
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

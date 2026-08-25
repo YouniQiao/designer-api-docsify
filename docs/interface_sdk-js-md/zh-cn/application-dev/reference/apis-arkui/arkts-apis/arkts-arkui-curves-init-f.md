@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## init
@@ -18,8 +18,6 @@ function init(curve?: Curve): string
 > 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves.initCurve](arkts-arkui-curves-initcurve-f.md)替代。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

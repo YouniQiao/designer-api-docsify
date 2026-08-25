@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## install
@@ -19,8 +19,6 @@ Installs specified applications. This API uses a promise to return the result.Th
 > for the asynchronous return of this API.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -51,101 +49,3 @@ Installs specified applications. This API uses a promise to return the result.Th
 | [9201002](../errorcode-enterpriseDeviceManager.md#9201002-failed-to-install-the-enterprise-application) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Install the application for the current user.
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-
-bundleManager.install(wantTemp, hapFilePaths).then(() => {
-  console.info('Succeeded in installing bundles.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Install the application for all users.
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-const params: Record<string, string> = {
-  'ohos.bms.param.enterpriseForAllUser': 'true'
-};
-let installParam: bundleManager.InstallParam = {
-  // Replace with actual values.
-  userId: 100,
-  installFlag: 0,
-  parameters: params
-};
-bundleManager.install(wantTemp, hapFilePaths, installParam).then(() => {
-  console.info('Succeeded in installing bundles.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-
-bundleManager.install(wantTemp, hapFilePaths, (err) => {
-  if (err) {
-    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in installing bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-let installParam: bundleManager.InstallParam = {
-  userId: 100,
-  installFlag: 1,
-};
-
-bundleManager.install(wantTemp, hapFilePaths, installParam, (err) => {
-  if (err) {
-    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in installing bundles');
-});
-```

@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_ENTER
@@ -17,8 +15,6 @@ GEOFENCE_TRANSITION_EVENT_ENTER = 1
 该事件表示设备从地理围栏外进入地理围栏内。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence
 
@@ -32,8 +28,6 @@ GEOFENCE_TRANSITION_EVENT_EXIT = 2
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Geofence
 
 ## GEOFENCE_TRANSITION_EVENT_DWELL
@@ -45,7 +39,5 @@ GEOFENCE_TRANSITION_EVENT_DWELL = 4
 该事件表示设备在地理围栏范围内，且持续徘徊超过10秒。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Geofence

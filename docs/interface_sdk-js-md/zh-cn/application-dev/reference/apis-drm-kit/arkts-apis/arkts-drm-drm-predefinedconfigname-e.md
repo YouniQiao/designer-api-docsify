@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
 ## CONFIG_DEVICE_VENDOR
@@ -17,8 +15,6 @@ CONFIG_DEVICE_VENDOR = 'vendor'
 插件厂商名，通过[getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getconfigurationstring)接口获取vendor对 应配置值。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -34,8 +30,6 @@ CONFIG_DEVICE_VERSION = 'version'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
@@ -49,8 +43,6 @@ CONFIG_DEVICE_DESCRIPTION = 'description'
 设备描述符，通过[getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getconfigurationstring)接口获取 description对应配置值。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -66,8 +58,6 @@ CONFIG_DEVICE_ALGORITHMS = 'algorithms'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
@@ -81,8 +71,6 @@ CONFIG_DEVICE_UNIQUE_ID = 'deviceUniqueId'
 设备唯一标识，通过[getConfigurationByteArray](arkts-drm-drm-mediakeysystem-i.md#getconfigurationbytearray)接口获取 deviceUniqueId对应配置值。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -98,8 +86,6 @@ CONFIG_SESSION_MAX = 'maxSessionNum'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
@@ -113,8 +99,6 @@ CONFIG_SESSION_CURRENT = 'currentSessionNum'
 当前会话数量，通过[getConfigurationString](arkts-drm-drm-mediakeysystem-i.md#getconfigurationstring)接口获取 currentSessionNum对应配置值。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

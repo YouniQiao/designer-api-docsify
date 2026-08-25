@@ -4,14 +4,12 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## capability
@@ -25,8 +23,6 @@ capability?: PrinterCapability
 **类型：** [PrinterCapability](arkts-basicservices-print-printercapability-i.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -42,8 +38,6 @@ description?: string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## options
@@ -58,23 +52,19 @@ options?: Object
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## printerIcon
 
 ```TypeScript
-printerIcon?: int
+printerIcon?: number
 ```
 
 表示打印机图标的资源ID。默认值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
@@ -90,8 +80,6 @@ printerId: string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## printerName
@@ -106,8 +94,6 @@ printerName: string
 
 **起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## printerState
@@ -121,7 +107,5 @@ printerState: PrinterState
 **类型：** [PrinterState](arkts-basicservices-print-printerstate-e.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Print.PrintFramework

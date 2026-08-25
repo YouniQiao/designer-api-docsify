@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## getParams
@@ -26,8 +26,6 @@ function getParams(): Object
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 18
 
 **替代接口：** [getParams](arkts-arkui-arkui-uicontext-router-c.md#getparams)
@@ -41,9 +39,3 @@ function getParams(): Object
 | 类型 |
 | --- |
 | Object |
-
-**示例**
-
-```TypeScript
-this.getUIContext().getRouter().getParams();
-```

@@ -4,14 +4,12 @@ Provides the media query result.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from '@kit.ArkUI';
+import { mediaquery } from 'kits/@kit.ArkUI';
 ```
 
 ## matches
@@ -25,8 +23,6 @@ Whether the media query condition is met. The value **true** means that the quer
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,8 +41,6 @@ Matching condition of a media event. This parameter is read-only.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

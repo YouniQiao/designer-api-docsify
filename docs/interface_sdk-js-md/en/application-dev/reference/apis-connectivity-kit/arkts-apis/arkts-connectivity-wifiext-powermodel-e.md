@@ -4,8 +4,6 @@ The power model enumeration.@enum { number } PowerModel
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
@@ -21,8 +19,6 @@ SLEEPING = 0
 Sleeping model.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ General model.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
@@ -57,8 +51,6 @@ THROUGH_WALL = 2
 Through wall model.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

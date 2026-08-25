@@ -4,8 +4,6 @@ Wi-Fi Capability
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.WiFi.STA
 
 ## WIFI_AUTO_ENABLE
@@ -17,8 +15,6 @@ WIFI_AUTO_ENABLE = 0
 Wi-Fi auto enable capability
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

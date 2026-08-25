@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemCapability } from '@kit.BasicServicesKit';
+import { systemCapability } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## querySystemCapabilities
@@ -16,8 +16,6 @@ Get System Capability.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Developtools.Syscap
 
 **System API:** This is a system API.
@@ -27,33 +25,6 @@ Get System Capability.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-try {
-    systemCapability.querySystemCapabilities((err:Error, data:string) => {
-    if (err == undefined) {
-        console.info("get system capabilities:" + data);
-    } else {
-        console.error(" get system capabilities err:" + err);
-    }});
-}catch(e){
-    console.error("get unexpected error: " + e);
-}
-```
-
-```TypeScript
-try {
-    systemCapability.querySystemCapabilities().then((value:string) => {
-        console.info("get system capabilities: " + value);
-    }).catch((err:Error) => {
-        console.error("get system capabilities error: " + err);
-    });
-}catch(e){
-    console.error("get unexpected error: " + e);
-}
-```
 
 
 ## querySystemCapabilities
@@ -66,8 +37,6 @@ Get System Capability.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Developtools.Syscap
 
 **System API:** This is a system API.
@@ -77,7 +46,3 @@ Get System Capability.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;string & gt; |
-
-**Examples**
-
-See [querySystemCapabilities](#querysystemcapabilities)

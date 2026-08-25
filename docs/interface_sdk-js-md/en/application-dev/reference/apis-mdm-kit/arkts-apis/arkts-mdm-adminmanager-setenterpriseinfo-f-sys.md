@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setEnterpriseInfo
@@ -15,8 +15,6 @@ function setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo, callback
 Sets the enterprise information of the device administrator application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.SET_ENTERPRISE_INFO
 
@@ -43,53 +41,6 @@ Sets the enterprise information of the device administrator application. This AP
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let enterpriseInfo: adminManager.EnterpriseInfo = {
-  // Replace with actual values.
-  name: 'enterprise name',
-  description: 'enterprise description'
-};
-
-adminManager.setEnterpriseInfo(wantTemp, enterpriseInfo, (err) => {
-  if (err) {
-    console.error(`Failed to set enterprise info. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting enterprise info');
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let enterpriseInfo: adminManager.EnterpriseInfo = {
-  // Replace with actual values.
-  name: 'enterprise name',
-  description: 'enterprise description'
-};
-
-adminManager.setEnterpriseInfo(wantTemp, enterpriseInfo).catch((err: BusinessError) => {
-  console.error(`Failed to set enterprise info. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## setEnterpriseInfo
 
@@ -100,8 +51,6 @@ function setEnterpriseInfo(admin: Want, enterpriseInfo: EnterpriseInfo): Promise
 Sets the enterprise information of the device administrator application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.SET_ENTERPRISE_INFO
 
@@ -132,7 +81,3 @@ Sets the enterprise information of the device administrator application. This AP
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [setEnterpriseInfo](#setenterpriseinfo)

@@ -18,8 +18,8 @@ HashSet is implemented based on [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)
 ## Modules to Import
 
 ```TypeScript
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
+import { HashSet } from 'kits/@kit.ArkTS';
+import { HashSetCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -29,9 +29,3 @@ import { HashSetCbFn } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [HashSet](arkts-arkts-util-hashset-hashset-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [HashSetCbFn](arkts-arkts-hashsetcbfn-t.md) |

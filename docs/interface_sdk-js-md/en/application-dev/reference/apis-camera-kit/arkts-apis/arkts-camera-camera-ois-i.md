@@ -6,14 +6,12 @@ OIS (Optical Image Stabilization) interface.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## setOISMode
@@ -25,8 +23,6 @@ setOISMode(mode: OISMode): void
 Sets the OIS mode.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,21 +45,13 @@ Sets the OIS mode.
 
 ## setOISModeCustom
 
-ArkTS-Dyn:
 ```TypeScript
 setOISModeCustom(pitch: number, yaw: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setOISModeCustom(pitch: double, yaw: double): void
 ```
 
 Sets custom OIS bias values for each axis.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,8 +63,8 @@ Sets custom OIS bias values for each axis.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pitch | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
-| yaw | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| pitch | number | Yes |
+| yaw | number | Yes |
 
 **Error codes:**
 

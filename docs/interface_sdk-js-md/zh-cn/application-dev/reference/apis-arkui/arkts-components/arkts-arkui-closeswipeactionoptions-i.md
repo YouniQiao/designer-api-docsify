@@ -1,10 +1,8 @@
 # CloseSwipeActionOptions
 
-收起EXPANDED状态ListItem回调事件集合，用于设置收起动画完成后回调事件。
+收起[EXPANDED](arkts-arkui-swipeactionstate-e.md)状态ListItem回调事件集合，用于设置收起动画完成后回调事件。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,8 +20,6 @@ onFinish?: ()=>void
 在收起动画完成后触发。未设置此属性时不触发回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## minimizeAll
 
 ```TypeScript
-function minimizeAll(id: long, callback: AsyncCallback<void>): void
+function minimizeAll(id: number, callback: AsyncCallback<void>): void
 ```
 
 最小化指定ID的屏幕中的所有主窗口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,7 +24,7 @@ function minimizeAll(id: long, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| id | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -37,116 +35,16 @@ function minimizeAll(id: long, callback: AsyncCallback<void>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-
-try {
-  if (!displayClass) {
-    console.error('displayClass is null');
-  } else {
-    window.minimizeAll(displayClass.id, (err: BusinessError) => {
-      const errCode: number = err?.code;
-      if (errCode) {
-        console.error(`Failed to minimize all windows. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      console.info('Succeeded in minimizing all windows.');
-    });
-  }
-} catch (exception) {
-  console.error(`Failed to minimize all windows. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-
-try {
-  if (!displayClass) {
-    console.error('displayClass is null');
-  } else {
-    window.minimizeAll(displayClass.id, (err: Error) => {
-      const errCode: number = err?.code;
-      if (errCode) {
-        console.error(`Failed to minimize all windows. Cause code: ${err?.code}, message: ${err?.message}`);
-        return;
-      }
-      console.info('Succeeded in minimizing all windows.');
-    });
-  }
-} catch (err: Error) {
-  console.error(`Failed to minimize all windows. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-
-try {
-  let promise = window.minimizeAll(displayClass.id);
-  promise.then(() => {
-    console.info('Succeeded in minimizing all windows.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to minimize all windows. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to minimize all windows. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { display } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-
-try {
-  let promise = window.minimizeAll(displayClass.id);
-  promise.then(() => {
-    console.info('Succeeded in minimizing all windows.');
-  }).catch((err: Error) => {
-    console.error(`Failed to minimize all windows. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err: Error) {
-  console.error(`Failed to minimize all windows. Cause code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## minimizeAll
 
 ```TypeScript
-function minimizeAll(id: long): Promise<void>
+function minimizeAll(id: number): Promise<void>
 ```
 
 最小化指定ID的屏幕中的所有主窗口，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -156,7 +54,7 @@ function minimizeAll(id: long): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| id | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| id | number | 是 |
 
 **返回值：**
 
@@ -171,7 +69,3 @@ function minimizeAll(id: long): Promise<void>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-
-**示例**
-
-参见 [minimizeAll](#minimizeall)

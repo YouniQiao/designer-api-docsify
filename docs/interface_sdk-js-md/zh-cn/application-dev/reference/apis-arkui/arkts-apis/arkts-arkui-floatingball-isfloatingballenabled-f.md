@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
+import { floatingBall } from 'kits/@kit.ArkUI';
 ```
 
 ## isFloatingBallEnabled
@@ -16,8 +16,6 @@ function isFloatingBallEnabled(): boolean
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Window.SessionManager
 
 **返回值：**
@@ -25,12 +23,3 @@ function isFloatingBallEnabled(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-
-let enable: boolean = floatingBall.isFloatingBallEnabled();
-console.info('Floating ball enabled is: ' + enable);
-```

@@ -4,29 +4,25 @@ Represents data of the file URI type.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'kits/@kit.ArkData';
 ```
 
 ## details
 
 ```TypeScript
-details?: Record<string, int | long | double | string | Uint8Array>
+details?: Record<string, number | number | number | string | Uint8Array>
 ```
 
 Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
-**Type:** ArkTS-Dyn: Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**Type:** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ File type, which must be UTD. For details, see [Prebuilt UTDs]. The maximum leng
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -61,8 +55,6 @@ File path.
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +72,6 @@ Uniform data type, which has a fixed value of **general.file-uri**. For details,
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -89,38 +79,15 @@ Uniform data type, which has a fixed value of **general.file-uri**. For details,
 ## uriAuthorizationPolicies
 
 ```TypeScript
-uriAuthorizationPolicies?: Array<int>
+uriAuthorizationPolicies?: Array<number>
 ```
 
 Defines URI authorization policies for drag intention.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-import { unifiedDataChannel, uniformTypeDescriptor } from '@kit.ArkData';
-let u8Array = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-let fileUriDetails : Record<string, number | string | Uint8Array> = {
-  'fileUriKey1': 123,
-  'fileUriKey2': 'fileUriValue',
-  'fileUriKey3': u8Array
-}
-let fileUri : uniformDataStruct.FileUri = {
-  uniformDataType : 'general.file-uri',
-  oriUri : 'www.xx.com',
-  fileType : 'general.image',
-  details : fileUriDetails
-}
-console.info('fileUri.uniformDataType: ' + fileUri.uniformDataType);
-// You are advised to set type to uniformTypeDescriptor.UniformDataType.FILE_URI to use the uniform data struct of FileUri type to construct records.
-let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.FILE_URI, fileUri);
-```

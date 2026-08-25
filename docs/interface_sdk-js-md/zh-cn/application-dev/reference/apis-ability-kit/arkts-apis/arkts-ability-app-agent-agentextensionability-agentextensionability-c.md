@@ -10,14 +10,12 @@ AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-exten
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { AgentExtensionAbility } from '@kit.AbilityKit';
+import { AgentExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## onAuth
@@ -29,8 +27,6 @@ onAuth(proxy: AgentHostProxy, handshakeData: string): void
 当AgentExtensionAbility接收到客户端发送的安全认证请求时，系统会触发该回调。服务端可以在此回调中处理接收到的安全认证请求，并通过 [AgentHostProxy.authorize](arkts-ability-agenthostproxy-i.md#authorize)向客户端发送安全认证请求。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,8 +51,6 @@ onConnect(want: Want, proxy: AgentHostProxy): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -80,8 +74,6 @@ onCreate(want: Want): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -103,8 +95,6 @@ onData(proxy: AgentHostProxy, data: string): void
 当AgentExtensionAbility接收到客户端发送的数据时，系统会触发该回调。服务端可以在此回调中通过 [AgentHostProxy.sendData](arkts-ability-agenthostproxy-i.md#senddata)向客户端发送数据。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,8 +119,6 @@ onDestroy(): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -146,8 +134,6 @@ onDisconnect(want: Want, proxy: AgentHostProxy): void
 当客户端与AgentExtensionAbility断开连接时，系统会触发该回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -173,8 +159,6 @@ AgentExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-abil
 **类型：** [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

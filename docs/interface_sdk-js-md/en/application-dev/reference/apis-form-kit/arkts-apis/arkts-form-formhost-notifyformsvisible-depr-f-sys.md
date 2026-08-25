@@ -15,8 +15,6 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md)
@@ -35,30 +33,6 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 | isVisible | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formIds: string[]= new Array('12400633174999288', '12400633174999289');
-formHost.notifyFormsVisible(formIds, true, (error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost notifyFormsVisible, error: ${JSON.stringify(error)}`);
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-formHost.notifyFormsVisible(formIds, true).then(() => {
-  console.info('formHost notifyFormsVisible success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost notifyFormsVisible, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## notifyFormsVisible
 
@@ -69,8 +43,6 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise
 Instructs the widgets to make themselves visible. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -94,7 +66,3 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [notifyFormsVisible](#notifyformsvisible)

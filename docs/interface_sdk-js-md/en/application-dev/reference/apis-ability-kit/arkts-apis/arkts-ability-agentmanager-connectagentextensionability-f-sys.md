@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## connectAgentExtensionAbility
@@ -16,8 +16,6 @@ function connectAgentExtensionAbility(want: Want, agentId: string,
 Connects to an AgentExtensionAbility.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONNECT_AGENT
 

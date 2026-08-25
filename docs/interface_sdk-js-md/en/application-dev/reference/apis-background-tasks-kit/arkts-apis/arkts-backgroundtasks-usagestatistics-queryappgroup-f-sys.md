@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## queryAppGroup
 
 ```TypeScript
-function queryAppGroup(callback: AsyncCallback<int>): void
+function queryAppGroup(callback: AsyncCallback<number>): void
 ```
 
 Queries the app group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -28,7 +26,7 @@ Queries the app group of the calling application.The priority defined in a prior
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
@@ -46,67 +44,16 @@ Queries the app group of the calling application.The priority defined in a prior
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-failed-to-obtain-application-group-information) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryAppGroup().then((res: number) => {
-  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-usageStatistics.queryAppGroup((err: BusinessError, res: number) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE queryAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryAppGroup callback succeeded. result: ' + JSON.stringify(res));
-  }
-});
-```
-
-```TypeScript
-// Promise mode when bundleName is specified
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName: string = "com.ohos.camera";
-usageStatistics.queryAppGroup(bundleName).then((res: number) => {
-  console.info('BUNDLE_ACTIVE queryAppGroup promise succeeded. result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName: string = "com.ohos.camera";
-usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
-  if(err) {
-    console.error('BUNDLE_ACTIVE queryAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
-  } else {
-    console.info('BUNDLE_ACTIVE queryAppGroup callback succeeded. result: ' + JSON.stringify(res));
-  }
-});
-```
-
 
 ## queryAppGroup
 
 ```TypeScript
-function queryAppGroup(): Promise<int>
+function queryAppGroup(): Promise<number>
 ```
 
 Queries the app group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -118,7 +65,7 @@ Queries the app group of the calling application.The priority defined in a prior
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -135,22 +82,16 @@ Queries the app group of the calling application.The priority defined in a prior
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-failed-to-obtain-application-group-information) |
 
-**Examples**
-
-See [queryAppGroup](#queryappgroup)
-
 
 ## queryAppGroup
 
 ```TypeScript
-function queryAppGroup(bundleName: string, callback: AsyncCallback<int>): void
+function queryAppGroup(bundleName: string, callback: AsyncCallback<number>): void
 ```
 
 Queries the usage priority group by bundleName.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -163,7 +104,7 @@ Queries the usage priority group by bundleName.The priority defined in a priorit
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
@@ -181,22 +122,16 @@ Queries the usage priority group by bundleName.The priority defined in a priorit
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-failed-to-obtain-application-group-information) |
 
-**Examples**
-
-See [queryAppGroup](#queryappgroup)
-
 
 ## queryAppGroup
 
 ```TypeScript
-function queryAppGroup(bundleName: string): Promise<int>
+function queryAppGroup(bundleName: string): Promise<number>
 ```
 
 Queries the usage priority group by bundleName.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
@@ -214,7 +149,7 @@ Queries the usage priority group by bundleName.The priority defined in a priorit
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -231,7 +166,3 @@ Queries the usage priority group by bundleName.The priority defined in a priorit
 | [10000005](../errorcode-DeviceUsageStatistics.md#10000005-application-not-installed) |
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-failed-to-obtain-application-group-information) |
-
-**Examples**
-
-See [queryAppGroup](#queryappgroup)

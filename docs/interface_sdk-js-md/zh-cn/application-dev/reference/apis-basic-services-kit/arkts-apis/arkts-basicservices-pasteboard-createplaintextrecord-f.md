@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createPlainTextRecord
@@ -15,8 +15,6 @@ function createPlainTextRecord(text: string): PasteDataRecord
 创建一条纯文本内容条目。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -35,9 +33,3 @@ function createPlainTextRecord(text: string): PasteDataRecord
 | 类型 |
 | --- |
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
-
-**示例**
-
-```TypeScript
-let record: pasteboard.PasteDataRecord = pasteboard.createPlainTextRecord('hello');
-```

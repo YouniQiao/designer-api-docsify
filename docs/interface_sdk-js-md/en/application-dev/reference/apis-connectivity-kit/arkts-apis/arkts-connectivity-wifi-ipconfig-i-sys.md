@@ -4,8 +4,6 @@ Wi-Fi IP configuration information.@interface IpConfig
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md)
@@ -17,7 +15,7 @@ Wi-Fi IP configuration information.@interface IpConfig
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## dnsServers
@@ -31,8 +29,6 @@ DNS servers.
 **Type:** number[]
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -54,8 +50,6 @@ Domains.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [domains](arkts-connectivity-wifimanager-ipconfig-i-sys.md#domains)
@@ -76,8 +70,6 @@ Gate way.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [gateway](arkts-connectivity-wifimanager-ipconfig-i-sys.md#gateway)
@@ -97,8 +89,6 @@ IP address.
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## enableWifi
@@ -15,8 +15,6 @@ function enableWifi(): void
 Enable Wi-Fi.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and (ohos.permission.MANAGE_WIFI_CONNECTION or ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION)
 
@@ -30,15 +28,3 @@ Enable Wi-Fi.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 | [2501003](../errorcode-wifi.md#2501003-failed-to-open-the-service) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-  
-  try {
-    wifiManager.enableWifi();
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

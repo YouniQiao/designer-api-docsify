@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getDsdsMode
@@ -13,8 +13,6 @@ function getDsdsMode(callback: AsyncCallback<DsdsMode>): void
 ```
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -39,33 +37,6 @@ function getDsdsMode(callback: AsyncCallback<DsdsMode>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getDsdsMode((err: BusinessError, data: sim.DsdsMode) => {
-    if (err) {
-        console.error(`getDsdsMode failed, callback: err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`getDsdsMode success, callback: data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let promise = sim.getDsdsMode();
-promise.then((data: sim.DsdsMode) => {
-    console.info(`getDsdsMode success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDsdsMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getDsdsMode
 
@@ -74,8 +45,6 @@ function getDsdsMode(): Promise<DsdsMode>
 ```
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -99,7 +68,3 @@ function getDsdsMode(): Promise<DsdsMode>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getDsdsMode](#getdsdsmode)

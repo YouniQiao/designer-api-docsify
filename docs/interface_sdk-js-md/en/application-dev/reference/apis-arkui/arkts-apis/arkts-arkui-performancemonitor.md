@@ -9,8 +9,6 @@ The **performanceMonitor** module provides APIs for monitoring performance metri
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,7 +18,7 @@ The **performanceMonitor** module provides APIs for monitoring performance metri
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from '@kit.ArkUI';
+import { performanceMonitor } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

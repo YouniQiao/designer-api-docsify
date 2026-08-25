@@ -6,14 +6,12 @@ ReminderRequestCalendar extends ReminderRequest日历实例对象，用于设置
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## 导入模块
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## dateTime
@@ -28,23 +26,19 @@ dateTime: LocalDateTime
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## daysOfWeek
 
 ```TypeScript
-daysOfWeek?: Array<int>
+daysOfWeek?: Array<number>
 ```
 
 指明每周哪几天需要重复提醒。范围为周一到周日，对应数字为1到7，默认为空。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -60,38 +54,32 @@ endDateTime?: LocalDateTime
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## repeatDays
 
 ```TypeScript
-repeatDays?: Array<int>
+repeatDays?: Array<number>
 ```
 
 指明重复提醒的日期，范围：[1, 31]，默认为空。需和repeatMonths一起使用。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
 ## repeatMonths
 
 ```TypeScript
-repeatMonths?: Array<int>
+repeatMonths?: Array<number>
 ```
 
 指明重复提醒的月份，范围：[1, 12]，默认为空。需和repeatDays一起使用。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.ReminderAgent

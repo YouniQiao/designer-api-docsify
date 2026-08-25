@@ -1,12 +1,10 @@
 # WaterFlow属性/事件
 
-除支持通用属性和滚动组件通用属性外，还 支持以下属性：除支持通用事件和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还 支持以下事件：
+除支持[通用属性](arkts-arkui-commonmethod-c.md)和[滚动组件通用属性](arkts-arkui-scrollablecommonmethod-c.md)外，还 支持以下属性：除支持[通用事件](arkts-arkui-commonmethod-c.md)和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还 支持以下事件：
 
 **继承/实现关系：** WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribute>
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,11 +19,9 @@
 cachedCount(value: number)
 ```
 
-设置预加载的FlowItem数量。只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效，超出显示及缓存范围的FlowItem会被释放。
+设置预加载的FlowItem数量。只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了 [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll)开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效，超出显示及缓存范围的FlowItem会被释放。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,11 +41,9 @@ cachedCount(value: number)
 cachedCount(count: number, show: boolean)
 ```
 
-设置预加载的FlowItem数量，并配置是否显示预加载节点。配合[clip或 clipContent属性可以显示出预加载节点。只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效，超出显示及缓存范围的FlowItem会被释放。
+设置预加载的FlowItem数量，并配置是否显示预加载节点。配合[clip或 [clipContent](arkts-arkui-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了virtualScroll开关的 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效，超出显示及缓存范围的FlowItem会被释放。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,8 +68,6 @@ columnsGap(value: Length)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -96,8 +88,6 @@ columnsTemplate(value: string)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -117,8 +107,6 @@ columnsTemplate(value: string | ItemFillPolicy)
 设置当前瀑布流组件布局列的数量，不设置时默认1列。当[layoutDirection](#layoutdirection)设置为横向布局（FlexDirection.Row或 FlexDirection.RowReverse）时，columnsTemplate不生效，由[rowsTemplate](#rowstemplate)控制布局。使用 [sections](arkts-arkui-waterflowoptions-i.md)分组混合布局时，此属性会被忽略。当value设置为string类型时，使用方法参考[columnsTemplate(value: string)](#columnstemplate)。当value设置为ItemFillPolicy类型时，将根据WaterFlow组件宽度对应[断点类型](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)确定列 数。例如，将ItemFillPolicy的fillType属性设置为PresetFillType.BREAKPOINT_DEFAULT时，在组件宽度属于sm及更小的断点区间时显示2列，属于md断点区间时显示3列，属于lg及更大的断点区 间时显示5列，且每列均为1fr。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -142,8 +130,6 @@ enableScrollInteraction(value: boolean)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -165,8 +151,6 @@ friction(value: number | Resource)
 设置摩擦系数，手动滑动滚动区域时生效，仅影响惯性滚动过程，对嵌套滚动时惯性向父组件传递的联动效果有间接影响。适用于需要调整瀑布流滑动惯性效果的场景。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -190,8 +174,6 @@ itemConstraintSize(value: ConstraintSizeOptions)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -211,8 +193,6 @@ layoutDirection(value: FlexDirection)
 设置布局的主轴方向。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -234,8 +214,6 @@ nestedScroll(value: NestedScrollOptions)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -246,7 +224,7 @@ nestedScroll(value: NestedScrollOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [NestedScrollOptions](../arkts-apis/arkts-arkui-common-nestedscrolloptions-i.md) | 是 |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 |
 
 ## onReachEnd
 
@@ -257,8 +235,6 @@ onReachEnd(event: () => void)
 瀑布流内容到达末尾位置时触发。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -279,8 +255,6 @@ onReachStart(event: () => void)
 瀑布流内容到达起始位置时触发。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -309,8 +283,6 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -336,8 +308,6 @@ onScrollIndex(event: (first: number, last: number) => void)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -360,8 +330,6 @@ rowsGap(value: Length)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -381,8 +349,6 @@ rowsTemplate(value: string)
 设置当前瀑布流组件布局行的数量，不设置时默认1行。当[layoutDirection](#layoutdirection)设置为纵向布局（FlexDirection.Column或 FlexDirection.ColumnReverse）或不设置时，rowsTemplate不生效，由 [columnsTemplate](#columnstemplate)控制布局。使用[sections](arkts-arkui-waterflowoptions-i.md) 分组混合布局时，此属性会被忽略。例如，'1fr 1fr 2fr'是将父组件分3行，将父组件允许的高分为4等份，第1行占1份，第2行占1份，第3行占2份。可使用rowsTemplate('repeat(auto-fill,track-size)')根据给定的行高track-size自动计算行数，其中repeat、auto-fill为关键字，track-size为可设置的高度，支持的 单位包括px、vp、%或有效数字，默认单位为vp。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -409,8 +375,6 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -432,8 +396,6 @@ syncLoad(enable: boolean)
 设置是否同步加载WaterFlow区域内所有子组件。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

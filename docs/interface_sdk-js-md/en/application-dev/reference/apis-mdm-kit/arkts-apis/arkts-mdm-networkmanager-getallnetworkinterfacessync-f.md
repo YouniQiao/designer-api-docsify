@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllNetworkInterfacesSync
@@ -15,8 +15,6 @@ function getAllNetworkInterfacesSync(admin: Want): Array<string>
 Obtains all activated wired network interfaces. This API is suitable for enterprise network management scenarios, such as viewing available network connections on the current device, auditing network interface status, and preparing for subsequent network configuration operations. It helps enterprises understand device network connection status, facilitating centralized management of network resources and troubleshooting of network issues.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -44,23 +42,3 @@ Obtains all activated wired network interfaces. This API is suitable for enterpr
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: Array<string> = networkManager.getAllNetworkInterfacesSync(wantTemp);
-  console.info(`Succeeded in getting all network interfaces, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get all network interfaces. Code: ${err.code}, message: ${err.message}`);
-}
-```

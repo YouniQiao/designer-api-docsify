@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getVibratorInfoSync
@@ -15,8 +15,6 @@ function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>
 Queries the vibrator list of one or all devices.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
@@ -31,18 +29,3 @@ Queries the vibrator list of one or all devices.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Array&lt;[VibratorInfo](arkts-sensorservice-vibrator-vibratorinfo-i.md)&gt; |
-
-**Examples**
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const vibratorInfoList: vibrator.VibratorInfo[] = vibrator.getVibratorInfoSync({ deviceId: 1, vibratorId: 3 });
-  console.info(`vibratorInfoList: ${JSON.stringify(vibratorInfoList)}`);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```

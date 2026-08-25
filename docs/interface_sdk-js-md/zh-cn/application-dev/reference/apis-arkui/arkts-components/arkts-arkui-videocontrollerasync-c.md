@@ -15,8 +15,6 @@ let controllerAsync: VideoControllerAsync = new VideoControllerAsync();
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -34,8 +32,6 @@ VideoControllerAsync的构造函数。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -52,8 +48,6 @@ exitFullscreen()
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -69,8 +63,6 @@ pause(): Promise<void>
 暂停播放视频，显示当前帧，再次播放时从当前位置继续播放。使用Promise异步回调。只能在正在播放的状态下调用，其他情况下调用pause()方法会失败。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,8 +89,6 @@ requestFullscreen(value: boolean)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -121,8 +111,6 @@ reset(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -138,7 +126,7 @@ reset(): Promise<void>
 ## setCurrentTime
 
 ```TypeScript
-setCurrentTime(value: double, seekMode?: SeekMode)
+setCurrentTime(value: number, seekMode?: SeekMode)
 ```
 
 指定视频播放的进度位置，可以指定跳转模式。
@@ -147,8 +135,6 @@ setCurrentTime(value: double, seekMode?: SeekMode)
 > 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -173,8 +159,6 @@ start(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -196,8 +180,6 @@ stop(): Promise<void>
 停止播放视频，显示当前帧，再次播放时从头开始播放。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

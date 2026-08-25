@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ DELETE_OPERATIONAL_PROFILES = 1
 删除所有操作配置文件。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -36,8 +32,6 @@ DELETE_FIELD_LOADED_TEST_PROFILES = 1 << 1
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ RESET_DEFAULT_SMDP_ADDRESS = 1 << 2
 重置默认SM-DP+地址。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

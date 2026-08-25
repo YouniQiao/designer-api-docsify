@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isWifiDisabled
@@ -15,8 +15,6 @@ function isWifiDisabled(admin: Want): boolean
 Queries whether Wi-Fi is disabled on the current device.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -51,22 +49,3 @@ Queries whether Wi-Fi is disabled on the current device.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let result: boolean = wifiManager.isWifiDisabled(wantTemp);
-  console.info(`Succeeded in querying whether the wifi is disabled or not, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to query the wifi is disabled or not. Code: ${err.code}, message: ${err.message}`);
-};
-```

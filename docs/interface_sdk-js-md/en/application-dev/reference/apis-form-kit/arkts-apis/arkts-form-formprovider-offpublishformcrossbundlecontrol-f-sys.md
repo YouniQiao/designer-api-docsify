@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## offPublishFormCrossBundleControl
@@ -15,8 +15,6 @@ function offPublishFormCrossBundleControl(callback?: formInfo.PublishFormCrossBu
 Unsubscribes from controls on cross-bundle widget addition to the home screen. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE_CONTROL
 
@@ -39,17 +37,3 @@ Unsubscribes from controls on cross-bundle widget addition to the home screen. T
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
-
-**Examples**
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.offPublishFormCrossBundleControl();
-  console.info(`offPublishFormCrossBundleControl success`);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```

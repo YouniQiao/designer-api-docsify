@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setAutoUnlockAfterReboot
@@ -15,8 +15,6 @@ function setAutoUnlockAfterReboot(admin: Want, isAllowed: boolean): void
 设置设备重启自动解锁，仅针对无锁屏密码设备生效。适用于企业无人值守设备或需要快速重启恢复服务的场景，避免因手动解锁导致的设备停机时间，提升设备运维效率和业务连续性。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -39,23 +37,3 @@ function setAutoUnlockAfterReboot(admin: Want, isAllowed: boolean): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let isAllowed: boolean = true;
-try {
-  systemManager.setAutoUnlockAfterReboot(wantTemp, isAllowed);
-  console.info('Succeeded in setting setAutoUnlockAfterReboot.');
-} catch (err) {
-  console.error(`Failed to set auto unlock after reboot. Code is ${err.code}, message is ${err.message}`);
-}
-```

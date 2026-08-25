@@ -4,8 +4,6 @@ The quickFixManager module provides APIs for quick fix. With quick fix, you can 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ The quickFixManager module provides APIs for quick fix. With quick fix, you can 
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

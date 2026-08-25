@@ -6,14 +6,12 @@ SecureSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkt
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## addSecureOutput
@@ -25,8 +23,6 @@ addSecureOutput(previewOutput: PreviewOutput): void
 将其中一条[PreviewOutput](arkts-camera-camera-previewoutput-i.md)标记成安全输出。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -46,22 +42,6 @@ addSecureOutput(previewOutput: PreviewOutput): void
 | [7400102](../errorcode-camera.md#7400102-非法操作) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function addSecureOutput(session: camera.SecureSession, previewOutput: camera.PreviewOutput): void {
-  try {
-    session.addSecureOutput(previewOutput);
-  } catch (error) {
-    // 失败返回错误码error.code并处理。
-    let err = error as BusinessError;
-    console.error(`The addOutput call failed. error code: ${err.code}`);
-  }
-}
-```
-
 ## off('error')
 
 ```TypeScript
@@ -71,8 +51,6 @@ off(type: 'error', callback?: ErrorCallback): void
 注销监听安全相机会话的错误事件，通过注册回调函数获取结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -95,8 +73,6 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -106,60 +82,6 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'focusStateChange' | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 |
-
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes from error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-function unregisterCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
-   cameraInput.offError(camera);
-}
-```
-
-```TypeScript
-function unregisterMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
-  metadataOutput.offError();
-}
-```
-
-## offFocusStateChange
-
-```TypeScript
-offFocusStateChange(callback?: AsyncCallback<FocusState>): void
-```
-
-Unsubscribes from focus state change event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 |
 
 ## on('error')
@@ -174,8 +96,6 @@ on(type: 'error', callback: ErrorCallback): void
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -201,8 +121,6 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -212,70 +130,4 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'focusStateChange' | 是 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 |
-
-## onError
-
-```TypeScript
-onError(callback: ErrorCallback): void
-```
-
-Subscribes to error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError): void {
-  console.error(`Camera input error code: ${err.code}`);
-}
-
-function registerCameraInputError(cameraInput: camera.CameraInput, camera: camera.CameraDevice): void {
-   cameraInput.onError(camera, callback);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(metadataOutputError: BusinessError): void {
-  console.error(`Metadata output error code: ${metadataOutputError.code}`);
-}
-
-function registerMetadataOutputError(metadataOutput: camera.MetadataOutput): void {
-   metadataOutput.onError(callback);
-}
-```
-
-## onFocusStateChange
-
-```TypeScript
-onFocusStateChange(callback: AsyncCallback<FocusState>): void
-```
-
-Subscribes focus state change event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setKioskFeatures
@@ -15,8 +15,6 @@ function setKioskFeatures(admin: Want, features: Array<KioskFeature>): void
 设置Kiosk模式的特征。通过本接口可以控制在Kiosk模式下能否进入通知中心、控制中心。从API version 24开始，新增支持设置是否允许底部上滑进入最近任务栏，左滑或右滑悬停展示侧边DOCK栏。在非Kiosk模式下，本接口可以正常调用，但是不会生效，进入Kiosk模式后才会生效。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_KIOSK
 
@@ -39,27 +37,3 @@ function setKioskFeatures(admin: Want, features: Array<KioskFeature>): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { applicationManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let kioskFeatures: Array<applicationManager.KioskFeature> = [];
-kioskFeatures.push(applicationManager.KioskFeature.ALLOW_NOTIFICATION_CENTER);
-kioskFeatures.push(applicationManager.KioskFeature.ALLOW_CONTROL_CENTER);
-kioskFeatures.push(applicationManager.KioskFeature.ALLOW_GESTURE_CONTROL);
-kioskFeatures.push(applicationManager.KioskFeature.ALLOW_SIDE_DOCK);
-try {
-  applicationManager.setKioskFeatures(wantTemp, kioskFeatures);
-  console.info('Succeeded in setting kiosk feature.');
-} catch (err) {
-  console.error(`Failed to set kiosk feature. Code is ${err.code}, message is ${err.message}`);
-}
-```

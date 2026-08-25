@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('abilityForegroundState')
@@ -16,8 +16,6 @@ function on(type: 'abilityForegroundState', observer: AbilityForegroundStateObse
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -29,7 +27,7 @@ function on(type: 'abilityForegroundState', observer: AbilityForegroundStateObse
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'abilityForegroundState' | 是 |
-| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [AbilityForegroundStateObserver](arkts-ability-abilityforegroundstateobserver-i.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | 是 |
 
 **错误码：**
 
@@ -39,23 +37,3 @@ function on(type: 'abilityForegroundState', observer: AbilityForegroundStateObse
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer: abilityManager.AbilityForegroundStateObserver = {
-  onAbilityStateChanged(abilityStateData) {
-    console.info(`onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
-  },
-};
-try {
-  abilityManager.on('abilityForegroundState', observer);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```

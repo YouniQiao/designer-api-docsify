@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## subscribeReminderState
@@ -15,8 +15,6 @@ function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promi
 Subscribes to agent-powered reminder state changes. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -42,20 +40,3 @@ Subscribes to agent-powered reminder state changes. This API uses a promise to r
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [1700007](../errorcode-reminderAgentManager.md#1700007-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function reminderStateCallback(states: Array<reminderAgentManager.ReminderState>) {
-  console.info('length is : ' + states.length);
-}
-
-reminderAgentManager.subscribeReminderState(reminderStateCallback).then(() => {
-  console.info('subscribe succeed');
-}).catch((err: BusinessError) => {
-  console.error('promise err code:' + err.code + ' message:' + err.message);
-});
-```

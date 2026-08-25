@@ -5,24 +5,6 @@
   <!--Del-->
   - [DataShareExtensionAbility(system api)](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [BatchInsertFn(system api)](arkts-arkdata-batchinsertfn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [BatchUpdateFn(system api)](arkts-arkdata-batchupdatefn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DeleteFn(system api)](arkts-arkdata-deletefn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DenormalizeUriFn(system api)](arkts-arkdata-denormalizeurifn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [InsertFn(system api)](arkts-arkdata-insertfn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [NormalizeUriFn(system api)](arkts-arkdata-normalizeurifn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [OnCreateFn(system api)](arkts-arkdata-oncreatefn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [QueryFn(system api)](arkts-arkdata-queryfn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [UpdateFn(system api)](arkts-arkdata-updatefn-t-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [UpdateOperation(system api)](arkts-arkdata-updateoperation-t-sys.md)<!--DelEnd-->
 - [@ohos.data.cloudData](arkts-data-clouddata.md)
   - [cloudData](arkts-arkdata-clouddata-n.md)
@@ -260,7 +242,6 @@
   <!--Del-->
   - [SingleKVStore(system api)](arkts-arkdata-distributedkvstore-singlekvstore-i-sys.md)<!--DelEnd-->
   - [Value](arkts-arkdata-distributedkvstore-value-i.md)
-  - [Constants](arkts-arkdata-distributedkvstore-constants-e.md)
   - [KVStoreType](arkts-arkdata-distributedkvstore-kvstoretype-e.md)
   - [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
   - [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md)
@@ -288,7 +269,6 @@
   - [removePreferencesFromCacheSync](arkts-arkdata-preferences-removepreferencesfromcachesync-f.md)
   - [Options](arkts-arkdata-preferences-options-i.md)
   - [Preferences](arkts-arkdata-preferences-preferences-i.md)
-  - [RecordData](arkts-arkdata-preferences-recorddata-t.md)
   - [ValueType](arkts-arkdata-preferences-valuetype-t.md)
   - [StorageType](arkts-arkdata-preferences-storagetype-e.md)
   - [Constants](arkts-arkdata-preferences-con.md)

@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.Emitter
 
 ## 导入模块
 
 ```TypeScript
-import { emitter } from '@kit.BasicServicesKit';
+import { emitter } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## data
@@ -25,8 +23,6 @@ data?: { [key: string]: any }
 **类型：** { [key: string]: any }
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

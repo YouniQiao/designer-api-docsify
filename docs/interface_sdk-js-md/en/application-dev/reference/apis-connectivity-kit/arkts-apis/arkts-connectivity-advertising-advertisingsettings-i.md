@@ -4,14 +4,12 @@ Represents the advertising settings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## interval
@@ -25,8 +23,6 @@ Advertising interval, in slots. The value ranges from 160 to 16777215, and the d
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Whether advertising is connectable. **true**: Advertising is connectable. **fals
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -61,8 +55,6 @@ Advertising transmission power. If this parameter is not specified, the default 
 **Type:** [TxPowerMode](arkts-connectivity-advertising-txpowermode-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

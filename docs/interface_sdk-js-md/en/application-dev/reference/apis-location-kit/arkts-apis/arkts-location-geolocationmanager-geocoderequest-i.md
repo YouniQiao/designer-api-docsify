@@ -4,14 +4,12 @@ Configuring parameters in geocode requests.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## country
@@ -25,8 +23,6 @@ Indicates the country information.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
@@ -42,8 +38,6 @@ Address information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## locale
@@ -58,86 +52,74 @@ Indicates the language area information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## maxItems
 
 ```TypeScript
-maxItems?: int
+maxItems?: number
 ```
 
 Indicates the maximum number of geocode query results.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## maxLatitude
 
 ```TypeScript
-maxLatitude?: double
+maxLatitude?: number
 ```
 
 Indicates the maximum latitude for geocoding query results.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## maxLongitude
 
 ```TypeScript
-maxLongitude?: double
+maxLongitude?: number
 ```
 
 Indicates the maximum longitude for geocoding query results.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## minLatitude
 
 ```TypeScript
-minLatitude?: double
+minLatitude?: number
 ```
 
 Indicates the minimum latitude for geocoding query results.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder
 
 ## minLongitude
 
 ```TypeScript
-minLongitude?: double
+minLongitude?: number
 ```
 
 Indicates the minimum longitude for geocoding query results.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Geocoder

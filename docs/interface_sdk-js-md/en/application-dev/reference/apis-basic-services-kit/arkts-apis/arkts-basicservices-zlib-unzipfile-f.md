@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## unzipFile
@@ -19,8 +19,6 @@ Unzips a file. The execution result is returned after the decompression is compl
 > the error code -1 is returned.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -41,24 +39,3 @@ Unzips a file. The execution result is returned after the decompression is compl
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-```TypeScript
-// The path used in the code must be an application sandbox path, for example, /data/storage/el2/base/temp. You can obtain the path through the context.
-import { zlib, BusinessError } from '@kit.BasicServicesKit';
-
-let inFile = '/data/storage/el2/base/temp/xxx.zip';
-let outFile = '/data/storage/el2/base/temp/xxx';
-let options: zlib.Options = {
-  level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,
-  memLevel: zlib.MemLevel.MEM_LEVEL_DEFAULT,
-  strategy: zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY
-};
-
-zlib.unzipFile(inFile, outFile, options).then((data: void) => {
-  console.info('unzipFile result is ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error('error is ' + JSON.stringify(err));
-})
-```

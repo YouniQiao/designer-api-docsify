@@ -4,8 +4,6 @@ Represents the holding hand status. The holding hand status is returned if liste
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 ## NOT_HELD
@@ -17,8 +15,6 @@ NOT_HELD = 0
 No holding.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -32,8 +28,6 @@ Holding with the left hand.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 ## RIGHT_HAND_HELD
@@ -45,8 +39,6 @@ RIGHT_HAND_HELD = 2
 Holding with the right hand.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
@@ -60,8 +52,6 @@ Holding with both hands.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.Motion
 
 ## UNKNOWN_STATUS
@@ -73,7 +63,5 @@ UNKNOWN_STATUS = 16
 Unknown status.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion

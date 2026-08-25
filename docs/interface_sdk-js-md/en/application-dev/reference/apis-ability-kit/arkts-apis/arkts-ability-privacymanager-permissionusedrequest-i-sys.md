@@ -4,8 +4,6 @@ Represents the request for querying permission usage records.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -13,24 +11,22 @@ Represents the request for querying permission usage records.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## beginTime
 
 ```TypeScript
-beginTime?: long
+beginTime?: number
 ```
 
 Start time of the query. Unit: milliseconds. Default value: **0**, indicating no limit on the start time.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Default:** 0
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -48,8 +44,6 @@ Bundle name of the target application.Default value: queries all applications.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -66,8 +60,6 @@ ID of the device where the target application is located.Default value: local de
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -75,18 +67,16 @@ ID of the device where the target application is located.Default value: local de
 ## endTime
 
 ```TypeScript
-endTime?: long
+endTime?: number
 ```
 
 End time of the query. It must not be earlier than beginTime; otherwise, error code 12100001 is returned. Unit: milliseconds. Default value: **0**, indicating no limit on the end time.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Default:** 0
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -103,8 +93,6 @@ Used to specify the query mode. When set to **FLAG_PERMISSION_USAGE_SUMMARY**, s
 **Type:** [PermissionUsageFlag](arkts-ability-privacymanager-permissionusageflag-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -124,8 +112,6 @@ Used to specify whether to query remote devices. The value **false** means to qu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -142,8 +128,6 @@ Set of permissions to query. Default value: Empty string. Means querying usage r
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -151,16 +135,14 @@ Set of permissions to query. Default value: Empty string. Means querying usage r
 ## tokenId
 
 ```TypeScript
-tokenId?: int
+tokenId?: number
 ```
 
 Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field of ApplicationInfo.Default value: **0**, queries all applications.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 

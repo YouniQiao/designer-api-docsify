@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -19,14 +17,12 @@
 group?: string
 ```
 
-群组名称。默认值：undefined，默认状态下管理CheckboxOptions属性group信息为undefined的节点。  
+群组名称。默认值：undefined，默认状态下管理[CheckboxOptions](arkts-arkui-checkboxoptions-i.md)属性group信息为undefined的节点。  
 **说明：**具有相同群组名称的多个CheckboxGroup，仅第一个CheckboxGroup生效。
 
 **类型：** string
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

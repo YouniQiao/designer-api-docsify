@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## createAVSession
@@ -18,8 +18,6 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 > - 在业务执行阶段需要保持avsession对象存活，避免后台管控静音、设备选择异常、通知/锁屏/胶囊播控卡片显示异常等情况。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -39,73 +37,6 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            let currentAVSession: avSession.AVSession;
-            let tag = "createNewSession";
-            let context: Context = this.getUIContext().getHostContext() as Context;
-            let sessionId: string;  // 供后续函数入参使用。
-
-            avSession.createAVSession(context, tag, "audio").then(async (data: avSession.AVSession) => {
-            currentAVSession = data;
-            sessionId = currentAVSession.sessionId;
-            console.info(`CreateAVSession : SUCCESS : sessionId = ${sessionId}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-      Text(this.message)
-        .onClick(()=>{
-          let currentAVSession: avSession.AVSession;
-          let tag = "createNewSession";
-          let context: Context = this.getUIContext().getHostContext() as Context;
-          let sessionId: string;  // 供后续函数入参使用。
-
-          avSession.createAVSession(context, tag, "audio", async (err: BusinessError, data: avSession.AVSession) => {
-              if (err) {
-                console.error(`Failed to create AV session, error code: ${err.code}, error message: ${err.message}`);
-                return;
-              }
-              currentAVSession = data;
-              sessionId = currentAVSession.sessionId;
-              console.info(`Succeeded in creating AV session, sessionId: ${sessionId}`);
-            });
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 
 ## createAVSession
 
@@ -119,8 +50,6 @@ function createAVSession(context: Context, tag: string, type: AVSessionType): Pr
 > - 在业务执行阶段需要保持avsession对象存活，避免后台管控静音、设备选择异常、通知/锁屏/胶囊播控卡片显示异常等情况。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -146,7 +75,3 @@ function createAVSession(context: Context, tag: string, type: AVSessionType): Pr
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-参见 [createAVSession](#createavsession)

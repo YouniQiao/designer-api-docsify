@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## setValue
@@ -15,8 +15,6 @@ function setValue(admin: Want, item: string, value: string): void
 设置设备策略。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 
@@ -40,24 +38,3 @@ function setValue(admin: Want, item: string, value: string): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 需根据实际情况进行替换
-  deviceSettings.setValue(wantTemp, 'screenOff', '3000');
-  console.info(`Succeeded in setting screen off time.`);
-} catch (err) {
-  console.error(`Failed to set screen off time. Code: ${err.code}, message: ${err.message}`);
-}
-```

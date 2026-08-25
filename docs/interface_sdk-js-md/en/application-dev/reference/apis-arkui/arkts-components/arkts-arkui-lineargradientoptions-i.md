@@ -9,8 +9,6 @@ Defines the linear gradient parameters.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,8 +30,6 @@ Start angle of the linear gradient. When the angle is 0 degrees, the gradient di
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -52,8 +48,6 @@ Array of color stops, each of which consists of a color and its stop position. I
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -68,13 +62,11 @@ direction?: GradientDirection
 
 Direction of the linear gradient. It does not take effect when **angle** is set to a non-undefined value. **GradientDirection.None** uses the default direction.Default value: **GradientDirection.Bottom**.
 
-**Type:** GradientDirection
+**Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
 **Default:** GradientDirection.Bottom [since 18]
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -97,8 +89,6 @@ Whether the colors are repeated.Default value: **false**.
 **Default:** false [since 18]
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

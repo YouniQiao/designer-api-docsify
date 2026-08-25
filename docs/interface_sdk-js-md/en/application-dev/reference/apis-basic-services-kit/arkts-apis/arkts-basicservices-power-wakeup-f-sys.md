@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## wakeup
@@ -15,8 +15,6 @@ function wakeup(detail: string): void
 Wakes up a device.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 19+: ohos.permission.POWER_MANAGER
@@ -39,13 +37,3 @@ Wakes up a device.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [4900101](../errorcode-power.md#4900101-service-connection-failure) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-try {
-    power.wakeup('wakeup_test');
-} catch(err) {
-    console.error('wakeup failed, err: ' + err);
-}
-```

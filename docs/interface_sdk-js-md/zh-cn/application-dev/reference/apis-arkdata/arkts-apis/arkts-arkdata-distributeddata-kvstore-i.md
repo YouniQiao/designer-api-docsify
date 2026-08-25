@@ -4,8 +4,6 @@ KVStore数据库实例，提供增加数据、删除数据和订阅数据变更�
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** SingleKVStore
@@ -27,8 +25,6 @@ commit(callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** commit
@@ -40,36 +36,6 @@ commit(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.commit(function (err,data) {
-        if (err == undefined) {
-            console.log('commit success');
-        } else {
-            console.log('commit fail');
-        }
-    });
-}catch(e) {
-    console.log('Commit e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.commit().then(async (err) => {
-        console.log('commit success');
-    }).catch((err) => {
-        console.log('commit fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('Commit e ' + e);
-}
-```
 
 ## commit
 
@@ -81,8 +47,6 @@ commit(): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** commit
@@ -95,10 +59,6 @@ commit(): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [commit](#commit)
-
 ## delete
 
 ```TypeScript
@@ -108,8 +68,6 @@ delete(key: string, callback: AsyncCallback<void>): void
 从数据库中删除指定键值的数据，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -123,52 +81,6 @@ delete(key: string, callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | key | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, function (err,data) {
-        if (err != undefined) {
-            console.log("put err: " + JSON.stringify(err));
-            return;
-        }
-        console.log("put success");
-        kvStore.delete(KEY_TEST_STRING_ELEMENT, function (err,data) {
-            if (err != undefined) {
-                console.log("delete err: " + JSON.stringify(err));
-                return;
-            }
-            console.log("delete success");
-        });
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.log("put success: " + JSON.stringify(data));
-        kvStore.delete(KEY_TEST_STRING_ELEMENT).then((data) => {
-            console.log("delete success");
-        }).catch((err) => {
-            console.log("delete err: " + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
 
 ## delete
 
@@ -180,8 +92,6 @@ delete(key: string): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** delete
@@ -200,10 +110,6 @@ delete(key: string): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [delete](#delete)
-
 ## deleteBatch
 
 ```TypeScript
@@ -213,8 +119,6 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 批量删除KVStore数据库中的键值对，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -228,70 +132,6 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | keys | string[] | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    let keys = [];
-    for (var i = 0; i < 5; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-        keys.push(key + i);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
-        kvStore.deleteBatch(keys, async function (err,data) {
-            console.log('deleteBatch success');
-        });
-    });
-}catch(e) {
-    console.log('DeleteBatch e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    let keys = [];
-    for (var i = 0; i < 5; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-        keys.push(key + i);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-        kvStore.deleteBatch(keys).then((err) => {
-            console.log('deleteBatch success');
-        }).catch((err) => {
-            console.log('deleteBatch fail ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('DeleteBatch e ' + e);
-}
-```
 
 ## deleteBatch
 
@@ -303,8 +143,6 @@ deleteBatch(keys: string[]): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** deleteBatch
@@ -323,10 +161,6 @@ deleteBatch(keys: string[]): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [deleteBatch](#deletebatch)
-
 ## enableSync
 
 ```TypeScript
@@ -336,8 +170,6 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 设定是否开启同步，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -352,36 +184,6 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 | enabled | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.enableSync(true, function (err,data) {
-        if (err == undefined) {
-            console.log('enableSync success');
-        } else {
-            console.log('enableSync fail');
-        }
-    });
-}catch(e) {
-    console.log('EnableSync e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.enableSync(true).then((err) => {
-        console.log('enableSync success');
-    }).catch((err) => {
-        console.log('enableSync fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('EnableSync e ' + e);
-}
-```
-
 ## enableSync
 
 ```TypeScript
@@ -391,8 +193,6 @@ enableSync(enabled: boolean): Promise<void>
 设定是否开启同步，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -412,10 +212,6 @@ enableSync(enabled: boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [enableSync](#enablesync)
-
 ## off
 
 ```TypeScript
@@ -425,8 +221,6 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 取消订阅数据变更通知。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -441,27 +235,6 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | event | 'dataChange' | 是 |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 否 |
 
-**示例**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.log("dataChange: " + data);
-    }
-    subscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_REMOTE, this.call);
-        }
-    }
-    unsubscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.off('dataChange', this.call);
-        }
-    }
-}
-```
-
 ## off
 
 ```TypeScript
@@ -471,8 +244,6 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 取消订阅同步完成事件回调通知。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -487,27 +258,6 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 | event | 'syncComplete' | 是 |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 否 |
 
-**示例**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.log("syncComplete: " + data);
-    }
-    subscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.on('syncComplete', this.call);
-        }
-    }
-    unsubscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.off('syncComplete', this.call);
-        }
-    }
-}
-```
-
 ## on
 
 ```TypeScript
@@ -517,8 +267,6 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 订阅指定类型的数据变更通知。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -531,17 +279,8 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'dataChange' | 是 |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | 是 |
+| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, function (data) {
-    console.log("dataChange callback call data: " + JSON.stringify(data));
-});
-```
 
 ## on
 
@@ -552,8 +291,6 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 订阅同步完成事件回调通知。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -568,15 +305,6 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 | event | 'syncComplete' | 是 |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-let kvStore;
-kvStore.on('syncComplete', function (data) {
-    console.log("callback call data: " + data);
-});
-```
-
 ## put
 
 ```TypeScript
@@ -586,8 +314,6 @@ put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncC
 添加指定类型键值对到数据库，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -602,40 +328,6 @@ put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncC
 | key | string | 是 |
 | value | Uint8Array \| string \| number \| boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, function (err,data) {
-        if (err != undefined) {
-            console.log("put err: " + JSON.stringify(err));
-            return;
-        }
-        console.log("put success");
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.log("put success: " + JSON.stringify(data));
-    }).catch((err) => {
-        console.log("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
 
 ## put
 
@@ -647,8 +339,6 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** put
@@ -668,10 +358,6 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [put](#put)
-
 ## putBatch
 
 ```TypeScript
@@ -681,8 +367,6 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 批量插入键值对到KVStore数据库中，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -694,71 +378,8 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| entries | [Entry[]](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | 是 |
+| entries | [Entry[]](arkts-arkdata-distributeddata-entry-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
-        kvStore.getEntries('batch_test_string_key', function (err,entries) {
-            console.log('getEntries success');
-            console.log('entries.length: ' + entries.length);
-            console.log('entries[0]: ' + JSON.stringify(entries[0]));
-        });
-    });
-}catch(e) {
-    console.log('PutBatch e ' + JSON.stringify(e));
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-        kvStore.getEntries('batch_test_string_key').then((entries) => {
-            console.log('getEntries success');
-            console.log('PutBatch ' + JSON.stringify(entries));
-        }).catch((err) => {
-            console.log('getEntries fail ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('PutBatch e ' + JSON.stringify(e));
-}
-```
 
 ## putBatch
 
@@ -770,8 +391,6 @@ putBatch(entries: Entry[]): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** putBatch
@@ -782,17 +401,13 @@ putBatch(entries: Entry[]): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| entries | [Entry[]](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | 是 |
+| entries | [Entry[]](arkts-arkdata-distributeddata-entry-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [putBatch](#putbatch)
 
 ## rollback
 
@@ -804,8 +419,6 @@ rollback(callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** rollback
@@ -817,36 +430,6 @@ rollback(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.rollback(function (err,data) {
-        if (err == undefined) {
-            console.log('commit success');
-        } else {
-            console.log('commit fail');
-        }
-    });
-}catch(e) {
-    console.log('Rollback e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    kvStore.rollback().then(async (err) => {
-        console.log('rollback success');
-    }).catch((err) => {
-        console.log('rollback fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('Rollback e ' + e);
-}
-```
 
 ## rollback
 
@@ -858,8 +441,6 @@ rollback(): Promise<void>
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** rollback
@@ -872,10 +453,6 @@ rollback(): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [rollback](#rollback)
-
 ## setSyncRange
 
 ```TypeScript
@@ -885,8 +462,6 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 设置同步范围标签，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -901,36 +476,6 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 | localLabels | string[] | 是 |
 | remoteSupportLabels | string[] | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-try {
-    const localLabels = ['A', 'B'];
-    const remoteSupportLabels = ['C', 'D'];
-    kvStore.setSyncRange(localLabels, remoteSupportLabels, function (err,data) {
-        console.log('SetSyncRange put success');
-    });
-}catch(e) {
-    console.log('SetSyncRange e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    const localLabels = ['A', 'B'];
-    const remoteSupportLabels = ['C', 'D'];
-    kvStore.setSyncRange(localLabels, remoteSupportLabels).then((err) => {
-        console.log('setSyncRange success');
-    }).catch((err) => {
-        console.log('delete fail ' + err);
-    });
-}catch(e) {
-    console.log('SetSyncRange e ' + e);
-}
-```
 
 ## setSyncRange
 
@@ -942,8 +487,6 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** setSyncRange
@@ -963,10 +506,6 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [setSyncRange](#setsyncrange)
-
 ## startTransaction
 
 ```TypeScript
@@ -976,8 +515,6 @@ startTransaction(callback: AsyncCallback<void>): void
 启动KVStore数据库中的事务，使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -991,61 +528,6 @@ startTransaction(callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-let kvStore;
-function putBatchString(len, prefix) {
-    let entries = [];
-    for (var i = 0; i < len; i++) {
-        var entry = {
-            key : prefix + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    return entries;
-}
-try {
-    var count = 0;
-    kvStore.on('dataChange', 0, function (data) {
-        console.log('startTransaction 0' + data)
-        count++;
-    });
-    kvStore.startTransaction(async function (err,data) {
-        console.log('startTransaction success');
-        let entries = putBatchString(10, 'batch_test_string_key');
-        console.log('entries: ' + JSON.stringify(entries));
-        kvStore.putBatch(entries, async function (err,data) {
-            console.log('putBatch success');
-        });
-    });
-}catch(e) {
-    console.log('startTransaction e ' + e);
-}
-```
-
-```TypeScript
-let kvStore;
-try {
-    var count = 0;
-    kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_ALL, function (data) {
-        console.log('startTransaction ' + JSON.stringify(data));
-        count++;
-    });
-    kvStore.startTransaction().then(async (err) => {
-        console.log('startTransaction success');
-    }).catch((err) => {
-        console.log('startTransaction fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('startTransaction e ' + e);
-}
-```
-
 ## startTransaction
 
 ```TypeScript
@@ -1055,8 +537,6 @@ startTransaction(): Promise<void>
 启动KVStore数据库中的事务，使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -1069,7 +549,3 @@ startTransaction(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [startTransaction](#starttransaction)

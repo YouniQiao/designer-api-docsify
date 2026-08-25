@@ -9,17 +9,15 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from 'kits/@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from 'kits/@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from 'kits/@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from 'kits/@kit.ArkUI';
 ```
 
 ## closeCustomDialog
@@ -31,8 +29,6 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 关闭已弹出的dialogContent对应的自定义弹窗，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,127 +56,6 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
-**示例**
-
-该示例通过调用closeCustomDialog接口，关闭已弹出的dialogContent对应的自定义弹窗。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ComponentContent } from '@kit.ArkUI';
-
-class Params {
-  text: string = "";
-
-  constructor(text: string) {
-    this.text = text;
-  }
-}
-
-@Builder
-function buildText(params: Params) {
-  Column() {
-    Text(params.text)
-      .fontSize(50)
-      .fontWeight(FontWeight.Bold)
-      .margin({ bottom: 36 })
-  }.backgroundColor('#FFF0F0F0')
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = "hello";
-
-  build() {
-    Row() {
-      Column() {
-        Button("click me")
-          .onClick(() => {
-            let uiContext = this.getUIContext();
-            let promptAction = uiContext.getPromptAction();
-            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText), new Params(this.message));
-            promptAction.openCustomDialog(contentNode)
-              .then(() => {
-                console.info('succeeded');
-              })
-              .catch((error: BusinessError) => {
-                console.error(`OpenCustomDialog args error code is ${error.code}, message is ${error.message}`);
-              })
-            setTimeout(() => {
-              promptAction.closeCustomDialog(contentNode)
-                .then(() => {
-                  console.info('succeeded');
-                })
-                .catch((error: BusinessError) => {
-                  console.error(`CloseCustomDialog args error code is ${error.code}, message is ${error.message}`);
-                })
-            }, 2000); // 2秒后自动关闭
-          })
-      }
-      .width('100%')
-      .height('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { PromptAction } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  promptAction: PromptAction = this.getUIContext().getPromptAction();
-  private customDialogComponentId: number = 0;
-
-  @Builder
-  customDialogComponent() {
-    Column() {
-      Text('弹窗').fontSize(30)
-      Row({ space: 50 }) {
-        Button("确认").onClick(() => {
-          this.promptAction.closeCustomDialog(this.customDialogComponentId);
-        })
-        Button("取消").onClick(() => {
-          this.promptAction.closeCustomDialog(this.customDialogComponentId);
-        })
-      }
-    }.height(200).padding(5).justifyContent(FlexAlign.SpaceBetween)
-  }
-
-  build() {
-    Row() {
-      Column() {
-        Button("click me")
-          .onClick(() => {
-            this.promptAction.openCustomDialog({
-              builder: () => {
-                this.customDialogComponent()
-              },
-              onWillDismiss: (dismissDialogAction: DismissDialogAction) => {
-                console.info(`reason ${dismissDialogAction.reason}`);
-                console.info('dialog onWillDismiss');
-                if (dismissDialogAction.reason == DismissReason.PRESS_BACK) {
-                  dismissDialogAction.dismiss();
-                }
-                if (dismissDialogAction.reason == DismissReason.TOUCH_OUTSIDE) {
-                  dismissDialogAction.dismiss();
-                }
-              }
-            }).then((dialogId: number) => {
-              this.customDialogComponentId = dialogId;
-            })
-          })
-      }
-      .width('100%')
-      .height('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## closeCustomDialog
 
 ```TypeScript
@@ -190,8 +65,6 @@ closeCustomDialog(dialogId: number): void
 关闭自定义弹窗。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -212,10 +85,6 @@ closeCustomDialog(dialogId: number): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-参见 [closeCustomDialog](#closecustomdialog)
-
 ## closeMenu
 
 ```TypeScript
@@ -225,8 +94,6 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 关闭content对应的Menu弹窗。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -253,62 +120,6 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
-
-**示例**
-
-该示例通过调用closeMenu接口，展示了关闭Menu的功能。
-
-```TypeScript
-import { ComponentContent, FrameNode } from '@kit.ArkUI';
-
-export function doSomething(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
-  showMenu(context, uniqueId, contentNode);
-}
-
-@Builder
-function MyMenu() {
-  Column() {
-    Menu() {
-      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项1" })
-      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项2" })
-    }
-  }
-  .width('80%')
-  .padding('20lpx')
-}
-
-export function showMenu(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
-  const promptAction = context.getPromptAction();
-  let frameNode: FrameNode | null = context.getFrameNodeByUniqueId(uniqueId);
-  let frameNodeTarget = frameNode?.getFirstChild();
-  frameNodeTarget = frameNodeTarget?.getChild(0);
-  let targetId = frameNodeTarget?.getUniqueId();
-  promptAction.openMenu(contentNode, { id: targetId }, {
-    enableArrow: true,
-  });
-  setTimeout(() => {
-    promptAction.closeMenu(contentNode);
-  }, 2000);
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('OpenMenu', { type: ButtonType.Normal, stateEffect: true })
-        .borderRadius('16lpx')
-        .width('80%')
-        .margin(10)
-        .onClick(() => {
-          let context = this.getUIContext();
-          const contentNode = new ComponentContent(context, wrapBuilder(MyMenu));
-          doSomething(context, this.getUniqueId(), contentNode);
-        })
-    }
-  }
-}
-```
 
 ## closePopup
 
@@ -320,8 +131,6 @@ closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -348,10 +157,6 @@ closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
-**示例**
-
-请参考[openPopup](#openpopup)示例。
-
 ## closeToast
 
 ```TypeScript
@@ -361,8 +166,6 @@ closeToast(toastId: number): void
 关闭即时反馈。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -384,10 +187,6 @@ closeToast(toastId: number): void
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 | [103401](../errorcode-promptAction.md#103401-无法找到对应的文本提示框) |
 
-**示例**
-
-请参考[openToast18](#opentoast)的示例。
-
 ## getBottomOrder
 
 ```TypeScript
@@ -397,8 +196,6 @@ getBottomOrder(): LevelOrder
 获取最底层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -411,68 +208,6 @@ getBottomOrder(): LevelOrder
 | 类型 |
 | --- |
 | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) |
-
-**示例**
-
-该示例通过调用getBottomOrder接口，展示了获取最底层显示弹窗顺序的功能。
-
-```TypeScript
-import { ComponentContent, PromptAction, LevelOrder, promptAction, UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Params {
-  text: string = "";
-  constructor(text: string) {
-    this.text = text;
-  }
-}
-
-@Builder
-function buildText(params: Params) {
-  Column({ space: 20 }) {
-    Text(params.text)
-      .fontSize(50)
-      .fontWeight(FontWeight.Bold)
-      .margin({ bottom: 36 })
-  }.backgroundColor('#FFF0F0F0')
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = '弹窗';
-  private ctx: UIContext = this.getUIContext();
-  private promptAction: PromptAction = this.ctx.getPromptAction();
-  private contentNode: ComponentContent<Object> =
-    new ComponentContent(this.ctx, wrapBuilder(buildText), new Params(this.message));
-
-  private baseDialogOptions: promptAction.BaseDialogOptions = {
-    showInSubWindow: false,
-    levelOrder: LevelOrder.clamp(30.1),
-  };
-
-  build() {
-    Row() {
-      Column({ space: 10 }) {
-        Button('openCustomDialog弹窗')
-          .fontSize(20)
-          .onClick(() => {
-            this.promptAction.openCustomDialog(this.contentNode, this.baseDialogOptions)
-              .catch((err: BusinessError) => {
-                console.error("openCustomDialog error: " + err.code + " " + err.message);
-              })
-              .then(() => {
-                let bottomOrder: LevelOrder = this.promptAction.getBottomOrder();
-                if (bottomOrder !== undefined) {
-                  console.info('bottomOrder: ' + bottomOrder.getOrder());
-                }
-              })
-          })
-      }.width('100%')
-    }.height('100%')
-  }
-}
-```
 
 ## getTopOrder
 
@@ -484,8 +219,6 @@ getTopOrder(): LevelOrder
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -498,68 +231,6 @@ getTopOrder(): LevelOrder
 | --- |
 | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) |
 
-**示例**
-
-该示例通过调用getTopOrder接口，展示了获取最顶层显示弹窗顺序的功能。
-
-```TypeScript
-import { ComponentContent, PromptAction, LevelOrder, promptAction, UIContext } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Params {
-  text: string = "";
-  constructor(text: string) {
-    this.text = text;
-  }
-}
-
-@Builder
-function buildText(params: Params) {
-  Column({ space: 20 }) {
-    Text(params.text)
-      .fontSize(50)
-      .fontWeight(FontWeight.Bold)
-      .margin({ bottom: 36 })
-  }.backgroundColor('#FFF0F0F0')
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = '弹窗';
-  private ctx: UIContext = this.getUIContext();
-  private promptAction: PromptAction = this.ctx.getPromptAction();
-  private contentNode: ComponentContent<Object> =
-    new ComponentContent(this.ctx, wrapBuilder(buildText), new Params(this.message));
-
-  private baseDialogOptions: promptAction.BaseDialogOptions = {
-    showInSubWindow: false,
-    levelOrder: LevelOrder.clamp(30.1),
-  };
-
-  build() {
-    Row() {
-      Column({ space: 10 }) {
-        Button('openCustomDialog弹窗')
-          .fontSize(20)
-          .onClick(() => {
-            this.promptAction.openCustomDialog(this.contentNode, this.baseDialogOptions)
-              .catch((err: BusinessError) => {
-                console.error("openCustomDialog error: " + err.code + " " + err.message);
-              })
-              .then(() => {
-                let topOrder: LevelOrder = this.promptAction.getTopOrder();
-                if (topOrder !== undefined) {
-                  console.info('topOrder: ' + topOrder.getOrder());
-                }
-              })
-          })
-      }.width('100%')
-    }.height('100%')
-  }
-}
-```
-
 ## openCustomDialog
 
 ```TypeScript
@@ -569,8 +240,6 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示， 即相当于customDialog设置customStyle为true时的显示效果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -599,177 +268,6 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
 
-**示例**
-
-该示例通过监听[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)（系统语言、深浅色等）的变化，调用ComponentContent<T> 的[update](arkts-arkui-arkui-uicontext-dialogpresenter-c.md#update)和updateConfiguration实现自定义弹窗的数据更新及节点的全量刷新。
-
-```TypeScript
-import { ComponentContent } from '@kit.ArkUI';
-import { AbilityConstant, Configuration, EnvironmentCallback, ConfigurationConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { resourceManager } from '@kit.LocalizationKit';
-
-class Params {
-  text: string = "";
-  colorMode: resourceManager.ColorMode = resourceManager.ColorMode.LIGHT
-
-  constructor(text: string, colorMode: resourceManager.ColorMode) {
-    this.text = text
-    this.colorMode = colorMode
-  }
-}
-
-@Builder
-function BuilderDialog(params: Params) {
-  Column() {
-    Text(params.text)
-      .fontSize(50)
-      .fontWeight(FontWeight.Bold)
-      .margin({ bottom: 36 })
-  }.backgroundColor(params.colorMode == resourceManager.ColorMode.LIGHT ? "#D5D5D5" : "#004AAF")
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = "hello";
-  contentNode: ComponentContent<Params> | null = null;
-  callbackId: number | undefined = 0;
-
-  aboutToAppear(): void {
-    let environmentCallback: EnvironmentCallback = {
-      onMemoryLevel: (level: AbilityConstant.MemoryLevel): void => {
-      },
-      onConfigurationUpdated: (config: Configuration): void => {
-        console.info(`onConfigurationUpdated ${config}`);
-        this.getUIContext().getHostContext()?.getApplicationContext().resourceManager.getConfiguration((err,
-          config) => {
-          // 调用ComponentContent的update更新colorMode信息
-          this.contentNode?.update(new Params(this.message, config.colorMode))
-          setTimeout(() => {
-            // 调用ComponentContent的updateConfiguration，触发节点的全量更新
-            this.contentNode?.updateConfiguration()
-          })
-        })
-      }
-    }
-    // 注册监听系统环境变化监听器
-    this.callbackId =
-      this.getUIContext().getHostContext()?.getApplicationContext().on('environment', environmentCallback)
-    // 设置应用深浅色跟随系统
-    this.getUIContext()
-      .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET)
-  }
-
-  aboutToDisappear() {
-    // 解注册监听系统环境变化的回调
-    this.getUIContext().getHostContext()?.getApplicationContext().off('environment', this.callbackId)
-    this.contentNode?.dispose()
-  }
-
-  build() {
-    Row() {
-      Column() {
-        Button("click me")
-          .onClick(() => {
-            let uiContext = this.getUIContext();
-            let promptAction = uiContext.getPromptAction();
-            if (this.contentNode == null && uiContext.getHostContext() != undefined) {
-              this.contentNode = new ComponentContent(uiContext, wrapBuilder(BuilderDialog), new Params(this.message,
-                uiContext.getHostContext()!!.getApplicationContext().resourceManager.getConfigurationSync().colorMode))
-            }
-            if (this.contentNode == null) {
-              return
-            }
-            promptAction.closeCustomDialog(this.contentNode)
-            promptAction.openCustomDialog(this.contentNode).then(() => {
-              console.info("succeeded")
-            }).catch((error: BusinessError) => {
-              console.error(`OpenCustomDialog args error code is ${error.code}, message is ${error.message}`);
-            })
-          })
-      }
-      .width('100%')
-      .height('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  private customDialogComponentId: number = 0;
-
-  @Builder
-  customDialogComponent() {
-    Column() {
-      Text('打开了一个弹窗').fontSize(20)
-      Row({ space: 10 }) {
-        Button('取消').onClick(() => {
-          try {
-            this.getUIContext().getPromptAction().closeCustomDialog(this.customDialogComponentId)
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`closeCustomDialog error code is ${code}, message is ${message}`);
-          }
-        }).width(100).backgroundColor('#d5d5d5').fontColor('#707070')
-        Button('确定').onClick(() => {
-          try {
-            this.getUIContext().getPromptAction().closeCustomDialog(this.customDialogComponentId)
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`closeCustomDialog error code is ${code}, message is ${message}`);
-          }
-        }).width(100)
-      }
-    }.height(150).padding(20).justifyContent(FlexAlign.SpaceBetween)
-  }
-
-  build() {
-    Row() {
-      Column({ space: 20 }) {
-        Button('Click Me')
-          .fontSize(30)
-          .onClick(() => {
-            this.getUIContext()
-              .getPromptAction()
-              .openCustomDialog({
-                builder: () => {
-                  this.customDialogComponent()
-                },
-                onWillDismiss: (dismissDialogAction: DismissDialogAction) => {
-                  console.info('reason' + JSON.stringify(dismissDialogAction.reason));
-                  console.info('dialog onWillDismiss');
-                  if (dismissDialogAction.reason == DismissReason.PRESS_BACK) {
-                    dismissDialogAction.dismiss();
-                  }
-                  if (dismissDialogAction.reason == DismissReason.TOUCH_OUTSIDE) {
-                    dismissDialogAction.dismiss();
-                  }
-                }
-              })
-              .then((dialogId: number) => {
-                this.customDialogComponentId = dialogId;
-              })
-              .catch((error: BusinessError) => {
-                console.error(`openCustomDialog error code is ${error.code}, message is ${error.message}`);
-              })
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## openCustomDialog
 
 ```TypeScript
@@ -779,8 +277,6 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 创建并弹出自定义弹窗。使用Promise异步回调返回对话框的id，可供closeCustomDialog使用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -807,10 +303,6 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-参见 [openCustomDialog](#opencustomdialog)
-
 ## openCustomDialogWithController
 
 ```TypeScript
@@ -821,8 +313,6 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -852,72 +342,6 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
 
-**示例**
-
-该示例通过调用openCustomDialog接口，展示了支持传入弹窗控制器与自定义弹窗绑定的功能。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ComponentContent, promptAction } from '@kit.ArkUI';
-
-class Params {
-  text: string = "";
-  dialogController: promptAction.DialogController = new promptAction.DialogController();
-
-  constructor(text: string, dialogController: promptAction.DialogController) {
-    this.text = text;
-    this.dialogController = dialogController;
-  }
-}
-
-@Builder
-function buildText(params: Params) {
-  Column() {
-    Text(params.text)
-      .fontSize(50)
-      .fontWeight(FontWeight.Bold)
-      .margin({ bottom: 36 })
-    Button('点我关闭弹窗：通过外部传递的DialogController')
-      .onClick(() => {
-        if (params.dialogController != undefined) {
-          params.dialogController.close();
-        }
-      })
-  }.backgroundColor('#FFF0F0F0')
-}
-
-@Entry
-@ComponentV2
-struct Index {
-  @Local message: string = "hello";
-  private dialogController: promptAction.DialogController = new promptAction.DialogController();
-
-  build() {
-    Row() {
-      Column() {
-        Button("click me")
-          .onClick(() => {
-            let uiContext = this.getUIContext();
-            let promptAction = uiContext.getPromptAction();
-            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText),
-              new Params(this.message, this.dialogController));
-            promptAction.openCustomDialogWithController(contentNode, this.dialogController)
-              .then(() => {
-                console.info('succeeded');
-              })
-              .catch((error: BusinessError) => {
-                console.error(`OpenCustomDialogWithController args error code is ${error.code}, message is ${error.message}`);
-              })
-          })
-      }
-      .width('100%')
-      .height('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## openMenu
 
 ```TypeScript
@@ -934,8 +358,6 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -948,7 +370,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | --- | --- | --- |
 | content | ComponentContent & lt;T & gt; | 是 |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 |
-| options | [MenuOptions](arkts-arkui-common-menuoptions-i.md) | 否 |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 否 |
 
 **返回值：**
 
@@ -965,59 +387,6 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) |
 | [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) |
-
-**示例**
-
-该示例通过调用openMenu接口，展示了弹出Menu的功能。
-
-```TypeScript
-import { ComponentContent, FrameNode } from '@kit.ArkUI';
-
-export function doSomething(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
-  showMenu(context, uniqueId, contentNode);
-}
-
-@Builder
-function MyMenu() {
-  Column() {
-    Menu() {
-      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项1" })
-      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项2" })
-    }
-  }
-  .width('80%')
-  .padding('20lpx')
-}
-
-export function showMenu(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
-  const promptAction = context.getPromptAction();
-  let frameNode: FrameNode | null = context.getFrameNodeByUniqueId(uniqueId);
-  let frameNodeTarget = frameNode?.getFirstChild();
-  frameNodeTarget = frameNodeTarget?.getChild(0);
-  let targetId = frameNodeTarget?.getUniqueId();
-  promptAction.openMenu(contentNode, { id: targetId }, {
-    enableArrow: true,
-  });
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('OpenMenu', { type: ButtonType.Normal, stateEffect: true })
-        .borderRadius('16lpx')
-        .width('80%')
-        .margin(10)
-        .onClick(() => {
-          let context = this.getUIContext();
-          const contentNode = new ComponentContent(context, wrapBuilder(MyMenu));
-          doSomething(context, this.getUniqueId(), contentNode);
-        })
-    }
-  }
-}
-```
 
 ## openPopup
 
@@ -1034,8 +403,6 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1048,7 +415,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 | --- | --- | --- |
 | content | ComponentContent & lt;T & gt; | 是 |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 |
-| options | [PopupCommonOptions](arkts-arkui-common-popupcommonoptions-i.md) | 否 |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | 否 |
 
 **返回值：**
 
@@ -1066,92 +433,6 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 | [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) |
 | [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) |
 
-**示例**
-
-该示例通过调用openPopup、updatePopup和closePopup接口，展示了弹出、更新以及关闭Popup的功能。
-
-```TypeScript
-import { ComponentContent, FrameNode } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface PopupParam {
-  updateFunc?: () => void;
-  closeFunc?: () => void;
-}
-
-export function showPopup(context: UIContext, uniqueId: number, contentNode: ComponentContent<PopupParam>,
-  popupParam: PopupParam) {
-  const promptAction = context.getPromptAction();
-  let frameNode: FrameNode | null = context.getFrameNodeByUniqueId(uniqueId);
-  let targetId = frameNode?.getFirstChild()?.getUniqueId();
-  promptAction.openPopup(contentNode, { id: targetId }, {
-    radius: 16,
-    mask: { color: Color.Pink },
-    enableArrow: true,
-  })
-    .then(() => {
-      console.info('openPopup success');
-    })
-    .catch((err: BusinessError) => {
-      console.error('openPopup error: ' + err.code + ' ' + err.message);
-    })
-  popupParam.updateFunc = () => {
-    promptAction.updatePopup(contentNode, {
-      enableArrow: false
-    }, true)
-      .then(() => {
-        console.info('updatePopup success');
-      })
-      .catch((err: BusinessError) => {
-        console.error('updatePopup error: ' + err.code + ' ' + err.message);
-      })
-  }
-  popupParam.closeFunc = () => {
-    promptAction.closePopup(contentNode)
-      .then(() => {
-        console.info('closePopup success');
-      })
-      .catch((err: BusinessError) => {
-        console.error('closePopup error: ' + err.code + ' ' + err.message);
-      })
-  }
-}
-
-@Builder
-function buildText(param?: PopupParam) {
-  Column() {
-    Text('popup')
-    Button('Update Popup')
-      .fontSize(20)
-      .onClick(() => {
-        param?.updateFunc?.();
-      })
-    Button('Close Popup')
-      .fontSize(20)
-      .onClick(() => {
-        param?.closeFunc?.();
-      })
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('Open Popup')
-        .fontSize(20)
-        .onClick(() => {
-          let context = this.getUIContext();
-          const popupParam: PopupParam = {};
-          const contentNode = new ComponentContent(context, wrapBuilder(buildText), popupParam);
-          showPopup(context, this.getUniqueId(), contentNode, popupParam);
-        })
-    }
-  }
-}
-```
-
 ## openToast
 
 ```TypeScript
@@ -1161,8 +442,6 @@ openToast(options: promptAction.ShowToastOptions): Promise<number>
 显示即时反馈。使用Promise异步回调返回即时反馈的id，可供closeToast使用。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1189,52 +468,6 @@ openToast(options: promptAction.ShowToastOptions): Promise<number>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-该示例通过调用openToast和closeToast接口，展示了弹出以及关闭Toast的功能。
-
-```TypeScript
-import { PromptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  @State toastId: number = 0;
-  promptAction: PromptAction = this.getUIContext().getPromptAction();
-
-  build() {
-    Column() {
-      Button('OpenToast')
-        .height(100)
-        .onClick(() => {
-          this.promptAction.openToast({
-            message: 'Toast Message',
-            duration: 10000,
-          }).then((toastId: number) => {
-            this.toastId = toastId;
-          })
-            .catch((error: BusinessError) => {
-              console.error(`openToast error code is ${error.code}, message is ${error.message}`);
-            })
-        })
-      Blank().height(50)
-      Button('Close Toast')
-        .height(100)
-        .onClick(() => {
-          try {
-            this.promptAction.closeToast(this.toastId);
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`CloseToast error code is ${code}, message is ${message}`);
-          };
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
-
 ## presentCustomDialog
 
 ```TypeScript
@@ -1246,8 +479,6 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1258,7 +489,7 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | 是 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | 是 |
 | controller | promptAction.DialogController | 否 |
 | options | promptAction.DialogOptions | 否 |
 
@@ -1275,84 +506,6 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { PromptAction, promptAction } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Index {
-  @Local message: string = "hello";
-  private ctx: UIContext = this.getUIContext();
-  private promptAction: PromptAction = this.ctx.getPromptAction();
-  private dialogController: promptAction.DialogController = new promptAction.DialogController();
-
-  private customDialogComponentId: number = 0;
-  @Builder customDialogComponent() {
-    Column() {
-      Text(this.message).fontSize(30)
-      Row({ space: 10 }) {
-        Button("通过DialogId关闭").onClick(() => {
-          this.promptAction.closeCustomDialog(this.customDialogComponentId);
-        })
-        Button("通过DialogController关闭").onClick(() => {
-          this.dialogController.close();
-        })
-      }
-    }.height(200).padding(5).justifyContent(FlexAlign.SpaceBetween)
-  }
-
-  @Builder customDialogComponentWithId(dialogId: number) {
-    Column() {
-      Text(this.message).fontSize(30)
-      Row({ space: 10 }) {
-        Button("通过DialogId关闭").onClick(() => {
-          this.promptAction.closeCustomDialog(dialogId);
-        })
-        Button("通过DialogController关闭").onClick(() => {
-          this.dialogController.close();
-        })
-      }
-    }.height(200).padding(5).justifyContent(FlexAlign.SpaceBetween)
-  }
-
-  build() {
-    Row() {
-      Column({ space: 10 }) {
-        Button('presentCustomDialog')
-          .fontSize(20)
-          .onClick(() => {
-            this.promptAction.presentCustomDialog(() => {
-              this.customDialogComponent()
-            }, this.dialogController)
-              .then((dialogId: number) => {
-                this.customDialogComponentId = dialogId;
-              })
-              .catch((err: BusinessError) => {
-                console.error("presentCustomDialog error: " + err.code + " " + err.message);
-              })
-          })
-        Button('presentCustomDialog with id')
-          .fontSize(20)
-          .onClick(() => {
-            this.promptAction.presentCustomDialog((dialogId: number) => {
-              this.customDialogComponentWithId(dialogId)
-            }, this.dialogController)
-              .catch((err: BusinessError) => {
-                console.error("presentCustomDialog with id error: " + err.code + " " + err.message);
-              })
-          })
-      }
-      .width('100%')
-      .height('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## showActionMenu
 
 ```TypeScript
@@ -1362,8 +515,6 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 创建并显示操作菜单，菜单响应结果使用callback异步回调返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **废弃版本：** 11
 
@@ -1385,131 +536,6 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-```TypeScript
-import { PromptAction, promptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  promptAction: PromptAction = this.getUIContext().getPromptAction();
-
-  build() {
-    Column() {
-      Button('showActionMenu')
-        .onClick(() => {
-          try {
-            this.promptAction.showActionMenu({
-              title: 'Title Info',
-              buttons: [
-                {
-                  text: 'item1',
-                  color: '#666666'
-                },
-                {
-                  text: 'item2',
-                  color: '#000000'
-                }
-              ]
-            }, (err: BusinessError, data: promptAction.ActionMenuSuccessResponse) => {
-              if (err) {
-                console.error('showActionMenu err: ' + err);
-                return;
-              }
-              console.info('showActionMenu success callback, click button: ' + data.index);
-            });
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`showActionMenu args error code is ${code}, message is ${message}`);
-          };
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-该示例通过调用showActionMenu接口，展示了弹出操作菜单以及通过Promise获取操作菜单响应结果的功能。
-
-```TypeScript
-import { PromptAction } from '@kit.ArkUI';
-@Entry
-@Component
-struct Index {
-  promptAction: PromptAction = this.getUIContext().getPromptAction();
-
-  build() {
-    Column() {
-      Button('showActionMenu')
-        .onClick(() => {
-          this.promptAction.showActionMenu({
-            title: 'showActionMenu Title Info',
-            buttons: [
-              {
-                text: 'item1',
-                color: '#666666'
-              },
-              {
-                text: 'item2',
-                color: '#000000'
-              },
-            ]
-          })
-            .then(data => {
-              console.info('showActionMenu success, click button: ' + data.index);
-            })
-            .catch((err: Error) => {
-              console.error('showActionMenu error: ' + err);
-            })
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-该示例通过调用showActionMenu接口，展示了弹出操作菜单以及返回菜单响应结果的功能。
-
-```TypeScript
-import { PromptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  promptAction: PromptAction = this.getUIContext().getPromptAction();
-
-  build() {
-    Column() {
-      Button('showActionMenu')
-        .onClick(() => {
-          try {
-            this.promptAction.showActionMenu({
-              title: 'Title Info',
-              buttons: [
-                {
-                  text: 'item1',
-                  color: '#666666'
-                },
-                {
-                  text: 'item2',
-                  color: '#000000'
-                }
-              ]
-            }, { index: 0 });
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`showActionMenu args error code is ${code}, message is ${message}`);
-          }
-          ;
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
-
 ## showActionMenu
 
 ```TypeScript
@@ -1519,8 +545,6 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 创建并显示操作菜单，菜单响应结果使用callback异步回调返回。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1542,10 +566,6 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-参见 [showActionMenu](#showactionmenu)
-
 ## showActionMenu
 
 ```TypeScript
@@ -1555,8 +575,6 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 创建并显示操作菜单，通过Promise异步回调获取菜单的响应结果。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1583,10 +601,6 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-参见 [showActionMenu](#showactionmenu)
-
 ## showDialog
 
 ```TypeScript
@@ -1596,8 +610,6 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 创建并显示对话框，对话框响应结果使用callback异步回调返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1619,95 +631,6 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-该示例通过调用showDialog接口，展示了弹出对话框以及返回对话框响应结果的功能。
-
-```TypeScript
-import { PromptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  promptAction: PromptAction = this.getUIContext().getPromptAction();
-
-  build() {
-    Column() {
-      Button('showDialog')
-        .onClick(() => {
-          try {
-            this.promptAction.showDialog({
-              title: 'showDialog Title Info',
-              message: 'Message Info',
-              buttons: [
-                {
-                  text: 'button1',
-                  color: '#000000'
-                },
-                {
-                  text: 'button2',
-                  color: '#000000'
-                }
-              ]
-            }, (err, data) => {
-              if (err) {
-                console.error('showDialog err: ' + err);
-                return;
-              }
-              console.info('showDialog success callback, click button: ' + data.index);
-            });
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`showDialog args error code is ${code}, message is ${message}`);
-          };
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-该示例通过调用showDialog接口，展示了弹出对话框以及通过Promise获取对话框响应结果的功能。
-
-```TypeScript
-import { PromptAction } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  promptAction: PromptAction = this.getUIContext().getPromptAction();
-
-  build() {
-    Column() {
-      Button('showDialog')
-        .onClick(() => {
-          this.promptAction.showDialog({
-            title: 'Title Info',
-            message: 'Message Info',
-            buttons: [
-              {
-                text: 'button1',
-                color: '#000000'
-              },
-              {
-                text: 'button2',
-                color: '#000000'
-              }
-            ],
-          })
-            .then(data => {
-              console.info('showDialog success, click button: ' + data.index);
-            })
-            .catch((err: Error) => {
-              console.error('showDialog error: ' + err);
-            })
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
-
 ## showDialog
 
 ```TypeScript
@@ -1717,8 +640,6 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 创建并显示对话框，使用Promise异步回调获取对话框的响应结果。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1745,10 +666,6 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-参见 [showDialog](#showdialog)
-
 ## showToast
 
 ```TypeScript
@@ -1758,8 +675,6 @@ showToast(options: promptAction.ShowToastOptions): void
 创建并显示即时反馈。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1780,39 +695,6 @@ showToast(options: promptAction.ShowToastOptions): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
 
-**示例**
-
-该示例通过调用showToast接口，创建并显示即时反馈。
-
-```TypeScript
-import { PromptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  promptAction: PromptAction = this.getUIContext().getPromptAction();
-
-  build() {
-    Column() {
-      Button('showToast')
-        .onClick(() => {
-          try {
-            this.promptAction.showToast({
-              message: 'Message Info',
-              duration: 2000
-            });
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`showToast args error code is ${code}, message is ${message}`);
-          };
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
-
 ## updateCustomDialog
 
 ```TypeScript
@@ -1822,8 +704,6 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 更新已弹出的dialogContent对应的自定义弹窗的样式，使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1852,72 +732,6 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
-**示例**
-
-该示例通过调用updateCustomDialog接口，动态调整已弹出自定义弹窗的位置。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ComponentContent } from '@kit.ArkUI';
-
-class Params {
-  text: string = "";
-
-  constructor(text: string) {
-    this.text = text;
-  }
-}
-
-@Builder
-function buildText(params: Params) {
-  Column() {
-    Text(params.text)
-      .fontSize(50)
-      .fontWeight(FontWeight.Bold)
-      .margin({ bottom: 36 })
-  }.backgroundColor('#FFF0F0F0')
-}
-
-@Entry
-@Component
-struct Index {
-  @State message: string = "hello";
-
-  build() {
-    Row() {
-      Column() {
-        Button("click me")
-          .onClick(() => {
-            let uiContext = this.getUIContext();
-            let promptAction = uiContext.getPromptAction();
-            let contentNode = new ComponentContent(uiContext, wrapBuilder(buildText), new Params(this.message));
-            promptAction.openCustomDialog(contentNode)
-              .then(() => {
-                console.info('succeeded');
-              })
-              .catch((error: BusinessError) => {
-                console.error(`updateCustomDialog args error code is ${error.code}, message is ${error.message}`);
-              })
-
-            setTimeout(() => {
-              promptAction.updateCustomDialog(contentNode, { alignment: DialogAlignment.CenterEnd })
-                .then(() => {
-                  console.info('succeeded');
-                })
-                .catch((error: BusinessError) => {
-                  console.error(`updateCustomDialog args error code is ${error.code}, message is ${error.message}`);
-                })
-            }, 2000); // 2秒后自动更新弹窗位置
-          })
-      }
-      .width('100%')
-      .height('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## updateMenu
 
 ```TypeScript
@@ -1929,11 +743,9 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 > **说明：**&gt;
 > - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、
 > aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。&gt;
-> - 支持mask通过设置MenuMaskType实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
+> - 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md)实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1946,7 +758,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | content | ComponentContent & lt;T & gt; | 是 |
-| options | [MenuOptions](arkts-arkui-common-menuoptions-i.md) | 是 |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | 是 |
 | partialUpdate | boolean | 否 |
 
 **返回值：**
@@ -1962,64 +774,6 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
-
-**示例**
-
-该示例通过调用updateMenu接口，展示了更新Menu箭头样式的功能。
-
-```TypeScript
-import { ComponentContent, FrameNode } from '@kit.ArkUI';
-
-export function doSomething(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
-  showMenu(context, uniqueId, contentNode);
-}
-
-@Builder
-function MyMenu() {
-  Column() {
-    Menu() {
-      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项1" })
-      MenuItem({ startIcon: $r("app.media.startIcon"), content: "菜单选项2" })
-    }
-  }
-  .width('80%')
-  .padding('20lpx')
-}
-
-export function showMenu(context: UIContext, uniqueId: number, contentNode: ComponentContent<Object>) {
-  const promptAction = context.getPromptAction();
-  let frameNode: FrameNode | null = context.getFrameNodeByUniqueId(uniqueId);
-  let frameNodeTarget = frameNode?.getFirstChild();
-  frameNodeTarget = frameNodeTarget?.getChild(0);
-  let targetId = frameNodeTarget?.getUniqueId();
-  promptAction.openMenu(contentNode, { id: targetId }, {
-    enableArrow: true,
-  });
-  setTimeout(() => {
-    promptAction.updateMenu(contentNode, {
-      enableArrow: false,
-    });
-  }, 2000);
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button('OpenMenu', { type: ButtonType.Normal, stateEffect: true })
-        .borderRadius('16lpx')
-        .width('80%')
-        .margin(10)
-        .onClick(() => {
-          let context = this.getUIContext();
-          const contentNode = new ComponentContent(context, wrapBuilder(MyMenu));
-          doSomething(context, this.getUniqueId(), contentNode);
-        })
-    }
-  }
-}
-```
 
 ## updatePopup
 
@@ -2034,8 +788,6 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -2047,7 +799,7 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | content | ComponentContent & lt;T & gt; | 是 |
-| options | [PopupCommonOptions](arkts-arkui-common-popupcommonoptions-i.md) | 是 |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | 是 |
 | partialUpdate | boolean | 否 |
 
 **返回值：**
@@ -2063,7 +815,3 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
 | [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
-
-**示例**
-
-请参考[openPopup](#openpopup)示例。

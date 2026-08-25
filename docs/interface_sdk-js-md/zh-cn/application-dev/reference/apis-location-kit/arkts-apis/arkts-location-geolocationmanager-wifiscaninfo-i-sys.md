@@ -4,8 +4,6 @@ WiFi扫描信息，包含扫描到的WiFi热点的ssid、bssid和rssi等信息�
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ WiFi扫描信息，包含扫描到的WiFi热点的ssid、bssid和rssi等信息�
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## bssid
@@ -28,8 +26,6 @@ WiFi热点的BSSID。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -37,16 +33,14 @@ WiFi热点的BSSID。
 ## frequency
 
 ```TypeScript
-frequency: int
+frequency: number
 ```
 
 WiFi热点的频率。单位是赫兹。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -55,16 +49,14 @@ WiFi热点的频率。单位是赫兹。
 ## rssi
 
 ```TypeScript
-rssi: int
+rssi: number
 ```
 
 WiFi热点的信号强度(dBm)。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -82,8 +74,6 @@ WiFi热点的SSID，编码格式为UTF-8。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,16 +81,14 @@ WiFi热点的SSID，编码格式为UTF-8。
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 时间戳，单位微秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Core
 

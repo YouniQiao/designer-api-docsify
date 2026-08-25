@@ -4,8 +4,6 @@ The continueManager module provides capabilities for managing cross-device appli
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
@@ -13,7 +11,7 @@ The continueManager module provides capabilities for managing cross-device appli
 ## Modules to Import
 
 ```TypeScript
-import { continueManager } from '@kit.AbilityKit';
+import { continueManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -23,9 +21,7 @@ import { continueManager } from '@kit.AbilityKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [off](arkts-ability-continuemanager-off-f.md#offpreparecontinue) |
-| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) |
 | [on](arkts-ability-continuemanager-on-f.md#onpreparecontinue) |
-| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) |
 
 ### Interfaces
 

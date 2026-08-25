@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ FAULT = 1
 错误事件类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -36,8 +32,6 @@ STATISTIC = 2
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ SECURITY = 3
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ BEHAVIOR = 4
 用户行为事件类型。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 

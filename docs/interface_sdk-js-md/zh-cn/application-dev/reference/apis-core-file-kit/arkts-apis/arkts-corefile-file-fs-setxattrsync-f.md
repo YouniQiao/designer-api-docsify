@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## setxattrSync
@@ -17,8 +17,6 @@ declare function setxattrSync(path: string, key: string, value: string): void
 设置文件或目录的扩展属性。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -44,40 +42,3 @@ declare function setxattrSync(path: string, key: string, value: string): void
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let attrKey = "user.comment";
-let attrValue = "Test file.";
-
-try {
-  fileIo.setxattrSync(filePath, attrKey, attrValue);
-  console.info(`Succeeded in setting extended attribute.`);
-} catch (err) {
-  console.error(`Failed to set extended attribute. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let attrKey = "user.comment";
-let attrValue = "Test file.";
-
-try {
-  fileIo.setxattrSync(filePath, attrKey, attrValue);
-  console.info(`Succeeded in setting extended attribute.`);
-} catch (error: Error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to set extended attribute. Code: ${err.code}, message: ${err.message}`);
-}
-```

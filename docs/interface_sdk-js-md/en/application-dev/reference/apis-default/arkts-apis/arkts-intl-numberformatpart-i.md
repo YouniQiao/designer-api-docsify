@@ -1,7 +1,5 @@
 # NumberFormatPart
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -13,9 +11,7 @@
 type: NumberFormatPartTypes
 ```
 
-**Type:** NumberFormatPartTypes
-
-**ArkTS mode:** 
+**Type:** [NumberFormatPartTypes](arkts-intl-numberformatparttypes-t.md)
 
 ## value
 
@@ -24,5 +20,3 @@ value: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 

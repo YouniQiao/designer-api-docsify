@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SplitLayout } from '@kit.ArkUI';
+import { SplitLayout } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

@@ -4,14 +4,12 @@ Provides methods to accessing bluetooth MAP(Message Access Profile)-related capa
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { map } from '@kit.ConnectivityKit';
+import { map } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

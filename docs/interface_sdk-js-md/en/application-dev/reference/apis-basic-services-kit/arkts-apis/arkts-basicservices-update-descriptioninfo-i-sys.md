@@ -4,8 +4,6 @@ Represents information about the version description file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents information about the version description file.
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## content
@@ -28,8 +26,6 @@ Content of the description file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -40,13 +36,11 @@ Content of the description file.
 descriptionType: DescriptionType
 ```
 
-Description type. The value **CONTENT** indicates that the description is content, which is applicable to scenarios where the description content is short or needs to be displayed immediately. **URI** indicates that the description is a link, which is applicable to scenarios where the description content is long or needs to be obtained from external resources. Select a value based on the description length and display mode.
+Description type. The value **CONTENT** indicates that the description is content, which is applicable to scenarios where the description content is short or needs to be displayed immediately. **URI** indicates that the description is a link, which is applicable to scenarios where the description content is number or needs to be obtained from external resources. Select a value based on the description length and display mode.
 
 **Type:** [DescriptionType](arkts-basicservices-update-descriptiontype-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 

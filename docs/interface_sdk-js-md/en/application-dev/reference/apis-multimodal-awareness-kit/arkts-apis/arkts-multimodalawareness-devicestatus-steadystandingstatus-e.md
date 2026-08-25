@@ -4,8 +4,6 @@ Defines the steady standing state (that is, stand mode).A device enters stand mo
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
 ## STATUS_EXIT
@@ -18,8 +16,6 @@ Exit of the stand mode.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
 
 ## STATUS_ENTER
@@ -31,7 +27,5 @@ STATUS_ENTER = 1
 Entry to the stand mode.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus

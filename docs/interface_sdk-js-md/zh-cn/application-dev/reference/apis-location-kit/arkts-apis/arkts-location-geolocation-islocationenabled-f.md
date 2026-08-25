@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## isLocationEnabled
@@ -15,8 +15,6 @@ function isLocationEnabled(callback: AsyncCallback<boolean>): void
 判断位置服务是否已经打开，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -32,27 +30,6 @@ function isLocationEnabled(callback: AsyncCallback<boolean>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.isLocationEnabled((err, data) => {
-    if (err) {
-        console.info('isLocationEnabled: err=' + JSON.stringify(err));
-    }
-    if (data) {
-        console.info('isLocationEnabled: data=' + JSON.stringify(data));
-    }
-});
-```
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.isLocationEnabled().then((result) => {
-    console.info('promise, isLocationEnabled: ' + JSON.stringify(result));
-});
-```
-
 
 ## isLocationEnabled
 
@@ -63,8 +40,6 @@ function isLocationEnabled(): Promise<boolean>
 判断位置服务是否已经开启，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -79,7 +54,3 @@ function isLocationEnabled(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isLocationEnabled](#islocationenabled)

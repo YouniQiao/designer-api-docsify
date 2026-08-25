@@ -9,14 +9,12 @@ This module provides APIs for querying terminal device information, including th
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.Startup.SystemInfo
 
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from '@kit.BasicServicesKit';
+import { deviceInfo } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

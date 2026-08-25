@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility } from 'kits/@kit.MDMKit';
 ```
 
 ## 汇总

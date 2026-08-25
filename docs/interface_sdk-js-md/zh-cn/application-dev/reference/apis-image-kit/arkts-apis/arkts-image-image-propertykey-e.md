@@ -1,11 +1,11 @@
 # PropertyKey
 
 表示Exif（Exchangeable image file format）图像信息的枚举。  
-- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。 - 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考： [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)（修改单个Exif字段）、 [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)（修 改多个Exif字段）、 [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)（读取单个 Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)（读取多个Exif字段）。
+- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。  
+- 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：  
+[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)（修改单个Exif字段）、 [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)（修 改多个Exif字段）、 [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)（读取单个 Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)（读取多个Exif字段）。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -20,8 +20,6 @@ BITS_PER_SAMPLE = 'BitsPerSample'
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ORIENTATION
@@ -34,8 +32,6 @@ ORIENTATION = 'Orientation'
 **读写能力：** 可读写。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -50,8 +46,6 @@ IMAGE_LENGTH = 'ImageLength'
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## IMAGE_WIDTH
@@ -64,8 +58,6 @@ IMAGE_WIDTH = 'ImageWidth'
 **读写能力：** 可读写。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -80,8 +72,6 @@ GPS_LATITUDE = 'GPSLatitude'
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_LONGITUDE
@@ -94,8 +84,6 @@ GPS_LONGITUDE = 'GPSLongitude'
 **读写能力：** 可读写。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -110,8 +98,6 @@ GPS_LATITUDE_REF = 'GPSLatitudeRef'
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_LONGITUDE_REF
@@ -124,8 +110,6 @@ GPS_LONGITUDE_REF = 'GPSLongitudeRef'
 **读写能力：** 可读写。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -140,8 +124,6 @@ DATE_TIME_ORIGINAL = 'DateTimeOriginal'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_TIME
@@ -154,8 +136,6 @@ EXPOSURE_TIME = 'ExposureTime'
 **读写能力：** 可读写。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -170,8 +150,6 @@ SCENE_TYPE = 'SceneType'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ISO_SPEED_RATINGS
@@ -184,8 +162,6 @@ ISO感光度，例如400。
 **读写能力：** 可读写。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -200,8 +176,6 @@ F_NUMBER = 'FNumber'
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DATE_TIME
@@ -214,8 +188,6 @@ DATE_TIME = 'DateTime'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -230,8 +202,6 @@ GPS时间戳。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DATE_STAMP
@@ -244,8 +214,6 @@ GPS日期戳。
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -260,8 +228,6 @@ IMAGE_DESCRIPTION = 'ImageDescription'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## MAKE
@@ -274,8 +240,6 @@ MAKE = 'Make'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -290,8 +254,6 @@ MODEL = 'Model'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PHOTO_MODE
@@ -304,8 +266,6 @@ PHOTO_MODE = 'PhotoMode'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -320,8 +280,6 @@ SENSITIVITY_TYPE = 'SensitivityType'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## STANDARD_OUTPUT_SENSITIVITY
@@ -334,8 +292,6 @@ STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -350,8 +306,6 @@ RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ISO_SPEED
@@ -364,8 +318,6 @@ ISO速度等级。
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -380,8 +332,6 @@ APERTURE_VALUE = 'ApertureValue'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_BIAS_VALUE
@@ -394,8 +344,6 @@ EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -410,8 +358,6 @@ METERING_MODE = 'MeteringMode'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LIGHT_SOURCE
@@ -424,8 +370,6 @@ LIGHT_SOURCE = 'LightSource'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -440,8 +384,6 @@ FLASH = 'Flash'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FOCAL_LENGTH
@@ -454,8 +396,6 @@ FOCAL_LENGTH = 'FocalLength'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -470,8 +410,6 @@ USER_COMMENT = 'UserComment'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PIXEL_X_DIMENSION
@@ -484,8 +422,6 @@ PIXEL_X_DIMENSION = 'PixelXDimension'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -500,8 +436,6 @@ PIXEL_Y_DIMENSION = 'PixelYDimension'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## WHITE_BALANCE
@@ -514,8 +448,6 @@ WHITE_BALANCE = 'WhiteBalance'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -530,8 +462,6 @@ FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE
@@ -544,8 +474,6 @@ CAPTURE_MODE = 'HwMnoteCaptureMode'
 **读写能力：** 可读写。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -560,8 +488,6 @@ PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ROLL_ANGLE
@@ -574,8 +500,6 @@ ROLL_ANGLE = 'HwMnoteRollAngle'
 **读写能力：** 只读。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -590,8 +514,6 @@ PITCH_ANGLE = 'HwMnotePitchAngle'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_FOOD_CONF
@@ -604,8 +526,6 @@ SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -620,8 +540,6 @@ SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_BLUE_SKY_CONF
@@ -634,8 +552,6 @@ SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -650,8 +566,6 @@ SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_BEACH_CONF
@@ -664,8 +578,6 @@ SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -680,8 +592,6 @@ SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_SUNSET_CONF
@@ -694,8 +604,6 @@ SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -710,8 +618,6 @@ SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_NIGHT_CONF
@@ -724,8 +630,6 @@ SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'
 **读写能力：** 只读。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -740,8 +644,6 @@ SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FACE_COUNT
@@ -754,8 +656,6 @@ FACE_COUNT = 'HwMnoteFaceCount'
 **读写能力：** 只读。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -770,8 +670,6 @@ FOCUS_MODE = 'HwMnoteFocusMode'
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## COMPRESSION
@@ -784,8 +682,6 @@ COMPRESSION = 'Compression'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -800,8 +696,6 @@ PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## STRIP_OFFSETS
@@ -814,8 +708,6 @@ STRIP_OFFSETS = 'StripOffsets'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -830,8 +722,6 @@ SAMPLES_PER_PIXEL = 'SamplesPerPixel'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ROWS_PER_STRIP
@@ -844,8 +734,6 @@ ROWS_PER_STRIP = 'RowsPerStrip'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -860,8 +748,6 @@ STRIP_BYTE_COUNTS = 'StripByteCounts'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## X_RESOLUTION
@@ -874,8 +760,6 @@ X_RESOLUTION = 'XResolution'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -890,8 +774,6 @@ Y_RESOLUTION = 'YResolution'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PLANAR_CONFIGURATION
@@ -904,8 +786,6 @@ PLANAR_CONFIGURATION = 'PlanarConfiguration'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -920,8 +800,6 @@ RESOLUTION_UNIT = 'ResolutionUnit'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## TRANSFER_FUNCTION
@@ -934,8 +812,6 @@ TRANSFER_FUNCTION = 'TransferFunction'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -950,8 +826,6 @@ SOFTWARE = 'Software'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ARTIST
@@ -964,8 +838,6 @@ ARTIST = 'Artist'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -980,8 +852,6 @@ WHITE_POINT = 'WhitePoint'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## PRIMARY_CHROMATICITIES
@@ -994,8 +864,6 @@ PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1010,8 +878,6 @@ YCBCR_COEFFICIENTS = 'YCbCrCoefficients'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## YCBCR_SUB_SAMPLING
@@ -1024,8 +890,6 @@ YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1040,8 +904,6 @@ YCBCR_POSITIONING = 'YCbCrPositioning'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## REFERENCE_BLACK_WHITE
@@ -1054,8 +916,6 @@ REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1070,8 +930,6 @@ COPYRIGHT = 'Copyright'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## JPEG_INTERCHANGE_FORMAT
@@ -1084,8 +942,6 @@ JPEG压缩缩略图数据开始字节（SOI）的偏移。
 **读写能力：** 只读。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1100,8 +956,6 @@ JPEG压缩缩略图数据的字节数。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_PROGRAM
@@ -1114,8 +968,6 @@ EXPOSURE_PROGRAM = 'ExposureProgram'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1130,8 +982,6 @@ SPECTRAL_SENSITIVITY = 'SpectralSensitivity'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## OECF
@@ -1144,8 +994,6 @@ OECF = 'OECF'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1160,8 +1008,6 @@ EXIF_VERSION = 'ExifVersion'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DATE_TIME_DIGITIZED
@@ -1174,8 +1020,6 @@ DATE_TIME_DIGITIZED = 'DateTimeDigitized'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1190,8 +1034,6 @@ COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SHUTTER_SPEED
@@ -1204,8 +1046,6 @@ SHUTTER_SPEED = 'ShutterSpeedValue'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1220,8 +1060,6 @@ BRIGHTNESS_VALUE = 'BrightnessValue'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## MAX_APERTURE_VALUE
@@ -1234,8 +1072,6 @@ MAX_APERTURE_VALUE = 'MaxApertureValue'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1250,8 +1086,6 @@ SUBJECT_DISTANCE = 'SubjectDistance'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SUBJECT_AREA
@@ -1264,8 +1098,6 @@ SUBJECT_AREA = 'SubjectArea'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1280,8 +1112,6 @@ Exif/DCF制造商使用的标签，用于记录任何所需信息。在API versi
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SUBSEC_TIME
@@ -1294,8 +1124,6 @@ SUBSEC_TIME = 'SubsecTime'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1310,8 +1138,6 @@ SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SUBSEC_TIME_DIGITIZED
@@ -1324,8 +1150,6 @@ SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1340,8 +1164,6 @@ FLASHPIX_VERSION = 'FlashpixVersion'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## COLOR_SPACE
@@ -1354,8 +1176,6 @@ COLOR_SPACE = 'ColorSpace'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1370,8 +1190,6 @@ RELATED_SOUND_FILE = 'RelatedSoundFile'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FLASH_ENERGY
@@ -1384,8 +1202,6 @@ FLASH_ENERGY = 'FlashEnergy'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1400,8 +1216,6 @@ SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FOCAL_PLANE_X_RESOLUTION
@@ -1414,8 +1228,6 @@ FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1430,8 +1242,6 @@ FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FOCAL_PLANE_RESOLUTION_UNIT
@@ -1444,8 +1254,6 @@ FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1460,8 +1268,6 @@ SUBJECT_LOCATION = 'SubjectLocation'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## EXPOSURE_INDEX
@@ -1474,8 +1280,6 @@ EXPOSURE_INDEX = 'ExposureIndex'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1490,8 +1294,6 @@ SENSING_METHOD = 'SensingMethod'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FILE_SOURCE
@@ -1504,8 +1306,6 @@ FILE_SOURCE = 'FileSource'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1520,8 +1320,6 @@ CFA_PATTERN = 'CFAPattern'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CUSTOM_RENDERED
@@ -1534,8 +1332,6 @@ CUSTOM_RENDERED = 'CustomRendered'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1550,8 +1346,6 @@ EXPOSURE_MODE = 'ExposureMode'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DIGITAL_ZOOM_RATIO
@@ -1564,8 +1358,6 @@ DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1580,8 +1372,6 @@ SCENE_CAPTURE_TYPE = 'SceneCaptureType'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GAIN_CONTROL
@@ -1594,8 +1384,6 @@ GAIN_CONTROL = 'GainControl'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1610,8 +1398,6 @@ CONTRAST = 'Contrast'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SATURATION
@@ -1624,8 +1410,6 @@ SATURATION = 'Saturation'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1640,8 +1424,6 @@ SHARPNESS = 'Sharpness'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DEVICE_SETTING_DESCRIPTION
@@ -1654,8 +1436,6 @@ DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1670,8 +1450,6 @@ SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## IMAGE_UNIQUE_ID
@@ -1684,8 +1462,6 @@ IMAGE_UNIQUE_ID = 'ImageUniqueID'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1700,8 +1476,6 @@ GPS信息版本号。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_ALTITUDE_REF
@@ -1714,8 +1488,6 @@ GPS_ALTITUDE_REF = 'GPSAltitudeRef'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1730,8 +1502,6 @@ GPS_ALTITUDE = 'GPSAltitude'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_SATELLITES
@@ -1744,8 +1514,6 @@ GPS_SATELLITES = 'GPSSatellites'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1760,8 +1528,6 @@ GPS_STATUS = 'GPSStatus'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_MEASURE_MODE
@@ -1774,8 +1540,6 @@ GPS测量模式。用于表示图像拍摄时GPS定位使用的测量模式，�
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1790,8 +1554,6 @@ GPS DOP（数据精度等级），用于表示拍摄时GPS测量结果的定位�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_SPEED_REF
@@ -1804,8 +1566,6 @@ GPS_SPEED_REF = 'GPSSpeedRef'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1820,8 +1580,6 @@ GPS接收器的移动速度。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_TRACK_REF
@@ -1834,8 +1592,6 @@ GPS接收机移动方向的参照，用于说明这个角度是以哪个“北�
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1850,8 +1606,6 @@ GPS接收机的移动方向。用于记录拍摄设备在拍照时的移动方�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_IMG_DIRECTION_REF
@@ -1864,8 +1618,6 @@ GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1880,8 +1632,6 @@ GPS_IMG_DIRECTION = 'GPSImgDirection'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_MAP_DATUM
@@ -1894,8 +1644,6 @@ GPS接收器使用的大地测量数据。
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1910,8 +1658,6 @@ GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_LATITUDE
@@ -1924,8 +1670,6 @@ GPS_DEST_LATITUDE = 'GPSDestLatitude'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1940,8 +1684,6 @@ GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_LONGITUDE
@@ -1954,8 +1696,6 @@ GPS_DEST_LONGITUDE = 'GPSDestLongitude'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -1970,8 +1710,6 @@ GPS_DEST_BEARING_REF = 'GPSDestBearingRef'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_BEARING
@@ -1984,8 +1722,6 @@ GPS_DEST_BEARING = 'GPSDestBearing'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2000,8 +1736,6 @@ GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_DEST_DISTANCE
@@ -2014,8 +1748,6 @@ GPS_DEST_DISTANCE = 'GPSDestDistance'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2030,8 +1762,6 @@ GPS_PROCESSING_METHOD = 'GPSProcessingMethod'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_AREA_INFORMATION
@@ -2044,8 +1774,6 @@ GPS_AREA_INFORMATION = 'GPSAreaInformation'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2060,8 +1788,6 @@ GPS_DIFFERENTIAL = 'GPSDifferential'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BODY_SERIAL_NUMBER
@@ -2074,8 +1800,6 @@ BODY_SERIAL_NUMBER = 'BodySerialNumber'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2090,8 +1814,6 @@ CAMERA_OWNER_NAME = 'CameraOwnerName'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## COMPOSITE_IMAGE
@@ -2104,8 +1826,6 @@ COMPOSITE_IMAGE = 'CompositeImage'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2120,8 +1840,6 @@ COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## DNG_VERSION
@@ -2134,8 +1852,6 @@ DNG版本标签编码了符合DNG规范的四级版本号。
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2150,8 +1866,6 @@ DefaultCropSize指定了原始坐标中的最终图像大小，考虑了额外�
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GAMMA
@@ -2164,8 +1878,6 @@ GAMMA = 'Gamma'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2180,8 +1892,6 @@ ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## ISO_SPEED_LATITUDE_ZZZ
@@ -2194,8 +1904,6 @@ ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2210,8 +1918,6 @@ LENS_MAKE = 'LensMake'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LENS_MODEL
@@ -2224,8 +1930,6 @@ LENS_MODEL = 'LensModel'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2240,8 +1944,6 @@ LENS_SERIAL_NUMBER = 'LensSerialNumber'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## LENS_SPECIFICATION
@@ -2254,8 +1956,6 @@ LENS_SPECIFICATION = 'LensSpecification'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2270,8 +1970,6 @@ NEW_SUBFILE_TYPE = 'NewSubfileType'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## OFFSET_TIME
@@ -2284,8 +1982,6 @@ OFFSET_TIME = 'OffsetTime'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2300,8 +1996,6 @@ OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## OFFSET_TIME_ORIGINAL
@@ -2314,8 +2008,6 @@ OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2330,8 +2022,6 @@ SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE
@@ -2344,8 +2034,6 @@ SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2360,8 +2048,6 @@ SUBFILE_TYPE = 'SubfileType'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GPS_H_POSITIONING_ERROR
@@ -2374,8 +2060,6 @@ GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2390,8 +2074,6 @@ PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## BURST_NUMBER
@@ -2404,8 +2086,6 @@ BURST_NUMBER = 'HwMnoteBurstNumber'
 **读写能力：** 只读。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2420,8 +2100,6 @@ FACE_CONF = 'HwMnoteFaceConf'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FACE_LEYE_CENTER
@@ -2434,8 +2112,6 @@ FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'
 **读写能力：** 只读。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2450,8 +2126,6 @@ FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FACE_POINTER
@@ -2464,8 +2138,6 @@ FACE_POINTER = 'HwMnoteFacePointer'
 **读写能力：** 只读。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2480,8 +2152,6 @@ FACE_RECT = 'HwMnoteFaceRect'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FACE_REYE_CENTER
@@ -2494,8 +2164,6 @@ FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'
 **读写能力：** 只读。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2510,8 +2178,6 @@ FaceCount张人脸的笑脸分数。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## FACE_VERSION
@@ -2524,8 +2190,6 @@ FACE_VERSION = 'HwMnoteFaceVersion'
 **读写能力：** 只读。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2540,8 +2204,6 @@ FRONT_CAMERA = 'HwMnoteFrontCamera'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## SCENE_POINTER
@@ -2554,8 +2216,6 @@ SCENE_POINTER = 'HwMnoteScenePointer'
 **读写能力：** 只读。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2570,8 +2230,6 @@ SCENE_VERSION = 'HwMnoteSceneVersion'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## IS_XMAGE_SUPPORTED
@@ -2584,8 +2242,6 @@ IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2600,8 +2256,6 @@ XMAGE水印模式。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## XMAGE_LEFT
@@ -2614,8 +2268,6 @@ XMAGE_LEFT = 'HwMnoteXmageLeft'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2630,8 +2282,6 @@ XMAGE_TOP = 'HwMnoteXmageTop'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## XMAGE_RIGHT
@@ -2644,8 +2294,6 @@ XMAGE_RIGHT = 'HwMnoteXmageRight'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2660,8 +2308,6 @@ XMAGE_BOTTOM = 'HwMnoteXmageBottom'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## CLOUD_ENHANCEMENT_MODE
@@ -2674,8 +2320,6 @@ CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'
 **读写能力：** 可读写。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -2690,8 +2334,6 @@ WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## GIF_LOOP_COUNT
@@ -2704,7 +2346,5 @@ GIF图片循环次数。0表示无限循环，其他值表示循环次数。
 **读写能力：** 只读。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

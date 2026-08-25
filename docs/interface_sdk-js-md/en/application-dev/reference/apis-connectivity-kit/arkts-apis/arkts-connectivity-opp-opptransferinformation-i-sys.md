@@ -4,8 +4,6 @@ Describes the transferred file information.
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the transferred file information.
 ## Modules to Import
 
 ```TypeScript
-import { opp } from '@kit.ConnectivityKit';
+import { opp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## currentBytes
@@ -27,8 +25,6 @@ Number of bytes of the file that have been transferred currently
 **Type:** number
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Number of files currently transferred
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -67,8 +61,6 @@ File Transfer Direction
 **Type:** [DirectionType](arkts-connectivity-opp-directiontype-e-sys.md)
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Path of the file to be transferred.
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -107,8 +97,6 @@ Device Address of the peer transmission object
 **Type:** string
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,8 +116,6 @@ Device name of the peer transmission object
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -147,8 +133,6 @@ File transfer result
 **Type:** [TransferResult](arkts-connectivity-opp-transferresult-e-sys.md)
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,8 +152,6 @@ File transfer status
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -188,8 +170,6 @@ Total number of file bytes to transfer
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -207,8 +187,6 @@ Total number of transferred files
 **Type:** number
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Model restriction:** This API can be used only in the stage model.
 

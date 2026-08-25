@@ -4,14 +4,12 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** ArkTS-Dyn起始版本为3；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
+import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from 'kits/@kit.ArkUI';
 ```
 
 ## addListener
@@ -24,8 +22,6 @@ addListener(callback: (event: MediaQueryEvent) => void): void
 
 **起始版本：** 3
 
-**ArkTS模式：** ArkTS-Dyn起始版本为3；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -36,20 +32,6 @@ addListener(callback: (event: MediaQueryEvent) => void): void
 | --- | --- | --- |
 | callback | (event: MediaQueryEvent) = & gt; void | 是 |
 
-**示例**
-
-```TypeScript
-import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
-let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
-
-function maxWidthMatch(e: MediaQueryEvent): void {
-  if(e.matches){
-    // do something
-  }
-}
-mMediaQueryList.addListener(maxWidthMatch);
-```
-
 ## onchange
 
 ```TypeScript
@@ -59,8 +41,6 @@ onchange?: (matches: boolean) => void
 匹配结果发生变化时的执行函数。matches表示是否匹配媒体查询条件，true满足查询条件，false不满足查询条件。 该参数为只读。
 
 **起始版本：** 3
-
-**ArkTS模式：** ArkTS-Dyn起始版本为3；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -82,8 +62,6 @@ removeListener(callback: (event: MediaQueryEvent) => void): void
 
 **起始版本：** 3
 
-**ArkTS模式：** ArkTS-Dyn起始版本为3；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -93,20 +71,6 @@ removeListener(callback: (event: MediaQueryEvent) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | (event: MediaQueryEvent) = & gt; void | 是 |
-
-**示例**
-
-```TypeScript
-import mediaquery, { MediaQueryEvent } from '@system.mediaquery';
-let mMediaQueryList = mediaquery.matchMedia('(max-width: 466)');
-
-function maxWidthMatch(e: MediaQueryEvent): void {
-  if(e.matches){
-    // do something
-  }
-}
-mMediaQueryList.removeListener(maxWidthMatch);
-```
 
 ## matches
 
@@ -119,8 +83,6 @@ matches?: boolean
 **类型：** boolean
 
 **起始版本：** 3
-
-**ArkTS模式：** ArkTS-Dyn起始版本为3；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -137,8 +99,6 @@ media?: string
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** ArkTS-Dyn起始版本为3；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

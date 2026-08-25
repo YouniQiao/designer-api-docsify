@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { matrix4 } from '@kit.ArkUI';
+import { matrix4 } from 'kits/@kit.ArkUI';
 ```
 
 ## copy
@@ -18,8 +18,6 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [copy](arkts-arkui-matrix4-matrix4transit-i.md#copy)
@@ -30,69 +28,4 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 | 类型 |
 | --- |
-| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) |
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity().scale({ x: 1.5 });
-  private matrix2 = this.matrix1.copy().translate({ x: 200 });
-  imageSize: Length = '300px';
-
-  build() {
-    Column({ space: "50px" }) {
-      // $r("app.media.testImage")需要替换为开发者所需的图像资源文件。
-      Image($r("app.media.testImage"))
-        .width(this.imageSize)
-        .height(this.imageSize)
-      // $r("app.media.testImage")需要替换为开发者所需的图像资源文件。
-      Image($r("app.media.testImage"))
-        .width(this.imageSize)
-        .height(this.imageSize)
-        .transform(this.matrix1)
-      // $r("app.media.testImage")需要替换为开发者所需的图像资源文件。
-      Image($r("app.media.testImage"))
-        .width(this.imageSize)
-        .height(this.imageSize)
-        .transform(this.matrix2)
-    }.alignItems(HorizontalAlign.Center)
-    .height('100%').width("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-import { matrix4 } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Test {
-  private matrix1 = matrix4.identity().translate({ x: 100 });
-  // 对matrix1的拷贝矩阵做scale操作，不影响到matrix1
-  private matrix2 = this.matrix1.copy().scale({ x: 2 });
-
-  build() {
-    Column() {
-      // $r("app.media.bg1")需要替换为开发者所需的图像资源文件。
-      Image($r("app.media.bg1"))
-        .width("40%")
-        .height(100)
-        .transform(this.matrix1)
-      // $r("app.media.bg2")需要替换为开发者所需的图像资源文件。
-      Image($r("app.media.bg2"))
-        .width("40%")
-        .height(100)
-        .margin({ top: 50 })
-        .transform(this.matrix2)
-    }
-  }
-}
-```
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |

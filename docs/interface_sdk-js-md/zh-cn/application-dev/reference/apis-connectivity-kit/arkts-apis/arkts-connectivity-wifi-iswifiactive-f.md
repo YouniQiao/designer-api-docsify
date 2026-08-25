@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isWifiActive
@@ -15,8 +15,6 @@ function isWifiActive(): boolean
 查询WLAN是否已使能。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -31,16 +29,3 @@ function isWifiActive(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-  let isWifiActive = wifi.isWifiActive();
-  console.info("isWifiActive:" + isWifiActive);
-}catch(error){
-  console.error("failed:" + JSON.stringify(error));
-}
-```

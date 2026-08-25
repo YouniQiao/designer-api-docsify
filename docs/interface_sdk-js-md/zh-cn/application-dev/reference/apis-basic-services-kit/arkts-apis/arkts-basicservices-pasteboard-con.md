@@ -10,8 +10,6 @@ API version 10之前，此常量值为512，表示单个PasteData中所能包含
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -25,8 +23,6 @@ const MIMETYPE_PIXELMAP = 'pixelMap'
 PixelMap内容的MIME类型定义。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,8 +38,6 @@ HTML内容的MIME类型定义。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -57,8 +51,6 @@ const MIMETYPE_TEXT_PLAIN = 'text/plain'
 纯文本内容的MIME类型定义。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,8 +66,6 @@ URI内容的MIME类型定义。
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
@@ -89,8 +79,6 @@ const MIMETYPE_TEXT_WANT = 'text/want'
 Want内容的MIME类型定义。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

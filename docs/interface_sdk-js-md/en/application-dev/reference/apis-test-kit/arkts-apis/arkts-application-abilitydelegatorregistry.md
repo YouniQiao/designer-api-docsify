@@ -4,8 +4,6 @@ The **AbilityDelegatorRegistry** module provides APIs for storing global registe
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [abilityDelegatorRegistry](arkts-app-ability-abilitydelegatorregistry.md)

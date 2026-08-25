@@ -4,8 +4,6 @@ Cell information.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Cell information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## additionsMap
@@ -28,8 +26,6 @@ Indicates additional information map.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -39,16 +35,14 @@ Indicates additional information map.
 ## arfcn
 
 ```TypeScript
-arfcn: int
+arfcn: number
 ```
 
 Indicates absolute radio frequency channel number (ARFCN). The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,16 +53,14 @@ Indicates absolute radio frequency channel number (ARFCN). The value should be a
 ## cellId
 
 ```TypeScript
-cellId: long
+cellId: number
 ```
 
 Indicates ID of cell.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,16 +71,14 @@ Indicates ID of cell.
 ## lac
 
 ```TypeScript
-lac: int
+lac: number
 ```
 
 Indicates location area code(LAC). The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,16 +89,14 @@ Indicates location area code(LAC). The value should be an integer.
 ## mcc
 
 ```TypeScript
-mcc: int
+mcc: number
 ```
 
 Indicates mobile country code (MCC). The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,16 +107,14 @@ Indicates mobile country code (MCC). The value should be an integer.
 ## mnc
 
 ```TypeScript
-mnc: int
+mnc: number
 ```
 
 Indicates mobile network code (MNC). The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,16 +125,14 @@ Indicates mobile network code (MNC). The value should be an integer.
 ## pci
 
 ```TypeScript
-pci: int
+pci: number
 ```
 
 Indicates physical cell identifier (PCI). The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,16 +143,14 @@ Indicates physical cell identifier (PCI). The value should be an integer.
 ## rat
 
 ```TypeScript
-rat: int
+rat: number
 ```
 
 Indicates radio access technology (RAT). The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -179,16 +161,14 @@ Indicates radio access technology (RAT). The value should be an integer.
 ## signalIntensity
 
 ```TypeScript
-signalIntensity: int
+signalIntensity: number
 ```
 
 Indicates signal intensity. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -199,16 +179,14 @@ Indicates signal intensity. The value should be an integer.
 ## tac
 
 ```TypeScript
-tac?: int
+tac?: number
 ```
 
 Indicates tracking area code (TAC). The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,16 +197,14 @@ Indicates tracking area code (TAC). The value range is all integers.
 ## timeSinceBoot
 
 ```TypeScript
-timeSinceBoot: long
+timeSinceBoot: number
 ```
 
 Indicates timestamp since boot.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

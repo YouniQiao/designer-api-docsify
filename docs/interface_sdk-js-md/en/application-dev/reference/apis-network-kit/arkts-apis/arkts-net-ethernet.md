@@ -4,14 +4,12 @@ The **ethernet** module provides Ethernet management functions such as configuri
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
 
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary
@@ -37,8 +35,8 @@ import { ethernet } from '@kit.NetworkKit';
 | [isEthernetEnabled(Ethernet Connection Management)](arkts-network-ethernet-isethernetenabled-f-sys.md) |
 | [isIfaceActive(Ethernet Connection Management)](arkts-network-ethernet-isifaceactive-f-sys.md) |
 | [isIfaceActive(Ethernet Connection Management)](arkts-network-ethernet-isifaceactive-f-sys.md) |
-| [off(Ethernet Connection Management)](arkts-network-ethernet-off-f-sys.md#offinterfacestatechange) |
-| [on(Ethernet Connection Management)](arkts-network-ethernet-on-f-sys.md#oninterfacestatechange) |
+| off(Ethernet Connection Management) |
+| on(Ethernet Connection Management) |
 | [setIfaceConfig(Ethernet Connection Management)](arkts-network-ethernet-setifaceconfig-f-sys.md) |
 | [setIfaceConfig(Ethernet Connection Management)](arkts-network-ethernet-setifaceconfig-f-sys.md) |
 <!--DelEnd-->

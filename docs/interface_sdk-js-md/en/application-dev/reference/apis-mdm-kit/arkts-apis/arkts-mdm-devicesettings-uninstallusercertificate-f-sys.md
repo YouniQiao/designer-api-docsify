@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## uninstallUserCertificate
@@ -15,8 +15,6 @@ function uninstallUserCertificate(admin: Want, certUri: string, callback: AsyncC
 Uninstalls a user certificate. This API uses a callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -49,47 +47,6 @@ Uninstalls a user certificate. This API uses a callback to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let aliasStr = "certName";
-deviceSettings.uninstallUserCertificate(wantTemp, aliasStr, (err) => {
-  if (err) {
-    console.error(`Failed to uninstall user certificate. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in uninstalling user certificate`);
-});
-```
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let aliasStr = "certName"
-deviceSettings.uninstallUserCertificate(wantTemp, aliasStr).then(() => {
-  console.info(`Succeeded in uninstalling user certificate`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to uninstall user certificate. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## uninstallUserCertificate
 
@@ -100,8 +57,6 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 Uninstalls a user certificate. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -138,7 +93,3 @@ Uninstalls a user certificate. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [uninstallUserCertificate](#uninstallusercertificate)

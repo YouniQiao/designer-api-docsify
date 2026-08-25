@@ -4,70 +4,60 @@ Defines a rectangle.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## height
 
 ```TypeScript
-height: int
+height: number
 ```
 
 Height of the rectangle, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## left
 
 ```TypeScript
-left: int
+left: number
 ```
 
 Left boundary of the rectangle, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## top
 
 ```TypeScript
-top: int
+top: number
 ```
 
 Top boundary of the rectangle, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## width
 
 ```TypeScript
-width: int
+width: number
 ```
 
 Width of the rectangle, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

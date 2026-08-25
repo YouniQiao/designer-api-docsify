@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setKioskFeatures
@@ -15,8 +15,6 @@ function setKioskFeatures(admin: Want, features: Array<KioskFeature>): void
 Sets the features of the kiosk mode. You can use this API to control whether the notification center and control panel can be accessed in kiosk mode.Since API version 24, you can set whether to allow users to swipe up from the bottom to access the recent taskbar and swipe left or right to display the side dock.In non-kiosk mode, this API can be called normally but does not take effect. The settings will take effect after kiosk mode is enabled.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_KIOSK
 
@@ -39,27 +37,3 @@ Sets the features of the kiosk mode. You can use this API to control whether the
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { applicationManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let kioskFeatures: Array<applicationManager.KioskFeature> = [];
-kioskFeatures.push(applicationManager.KioskFeature.ALLOW_NOTIFICATION_CENTER);
-kioskFeatures.push(applicationManager.KioskFeature.ALLOW_CONTROL_CENTER);
-kioskFeatures.push(applicationManager.KioskFeature.ALLOW_GESTURE_CONTROL);
-kioskFeatures.push(applicationManager.KioskFeature.ALLOW_SIDE_DOCK);
-try {
-  applicationManager.setKioskFeatures(wantTemp, kioskFeatures);
-  console.info('Succeeded in setting kiosk feature.');
-} catch (err) {
-  console.error(`Failed to set kiosk feature. Code is ${err.code}, message is ${err.message}`);
-}
-```

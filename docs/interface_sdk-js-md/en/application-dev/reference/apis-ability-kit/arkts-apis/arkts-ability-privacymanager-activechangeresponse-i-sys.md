@@ -4,8 +4,6 @@ Defines the detailed permission usage information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the detailed permission usage information.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## activeStatus
@@ -28,8 +26,6 @@ Permission usage status.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Permission usage status.
 ## callingTokenId
 
 ```TypeScript
-callingTokenId?: int
+callingTokenId?: number
 ```
 
 Identity of the caller application. This field is invalid when **activeStatus** is **INACTIVE**.Default value: **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -64,8 +58,6 @@ ID of the device where the permission usage status change occurred.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ Extension identity, used to identify additional identity information of the call
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,8 +92,6 @@ Name of the permission whose usage status has changed.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -111,16 +99,14 @@ Name of the permission whose usage status has changed.
 ## tokenId
 
 ```TypeScript
-tokenId: int
+tokenId: number
 ```
 
 Token ID of the application whose permission usage changes are subscribed to.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -137,8 +123,6 @@ Sensitive permission usage type. This value is invalid when activeStatus is INAC
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.AccessToken
 

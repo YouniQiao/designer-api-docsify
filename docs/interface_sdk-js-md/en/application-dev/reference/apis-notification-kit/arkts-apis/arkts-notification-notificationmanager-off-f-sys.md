@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## off('checkNotification')
@@ -18,8 +18,6 @@ function off(
 Unsubscribes from notification events.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -41,15 +39,3 @@ Unsubscribes from notification events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-    notificationManager.off("checkNotification");
-} catch (err){
-    console.error(`notificationManager.off failed, code is ${err.code}, message is ${err.message}`);
-}
-```

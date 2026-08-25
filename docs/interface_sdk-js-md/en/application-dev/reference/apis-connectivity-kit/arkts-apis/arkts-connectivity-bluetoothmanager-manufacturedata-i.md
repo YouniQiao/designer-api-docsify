@@ -4,8 +4,6 @@ Describes the manufacturer data.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [ManufactureData](arkts-connectivity-ble-manufacturedata-i.md)
@@ -15,7 +13,7 @@ Describes the manufacturer data.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## manufactureId
@@ -29,8 +27,6 @@ Indicates the manufacturer ID assigned by Bluetooth SIG
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -49,8 +45,6 @@ Indicates the manufacturer data to add
 **Type:** ArrayBuffer
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

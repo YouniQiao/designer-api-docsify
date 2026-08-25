@@ -6,11 +6,9 @@ Defines StepperItem Component instance.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
-**Substitutes:** SwiperAttribute
+**Substitutes:** [SwiperAttribute](arkts-arkui-swiper-attribute.md#swiperattribute)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,8 +28,6 @@ Sets the text label of the button on the right. The default value is **Start** f
 > **NOTE：**
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 22
 
@@ -59,8 +55,6 @@ Sets the text label of the button on the left, which is not displayed on the fir
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** showPrevious
@@ -87,11 +81,9 @@ Sets the display status of **nextLabel** in the stepper.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
-**Substitutes:** indicatorInteractive
+**Substitutes:** [indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

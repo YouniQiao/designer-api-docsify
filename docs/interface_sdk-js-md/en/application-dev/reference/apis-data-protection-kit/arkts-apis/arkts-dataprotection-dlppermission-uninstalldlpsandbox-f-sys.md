@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## uninstallDLPSandbox
@@ -15,8 +15,6 @@ function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: numbe
 Uninstalls a DLP sandbox application for an application. This API uses a promise to return the result. After this API is called, the system destroys the specified DLP sandbox environment and releases related resources.Use this API to clear the corresponding sandbox environment.This API can be called only after a DLP sandbox is installed by calling [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -49,47 +47,6 @@ Uninstalls a DLP sandbox application for an application. This API uses a promise
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  try {
-    let res = await dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri);
-    console.info('res', JSON.stringify(res));
-    await dlpPermission.uninstallDLPSandbox('com.ohos.note', 100, res.appIndex); // Uninstall a DLP sandbox application.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  try {
-    let res = await dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100,
-      uri) // Install a DLP sandbox application.
-    console.info('res', JSON.stringify(res));
-    dlpPermission.uninstallDLPSandbox('com.ohos.note', 100, res.appIndex, (err, res) => {
-      if (err !== undefined) {
-        console.error('uninstallDLPSandbox error,', err.code, err.message);
-      } else {
-        console.info('res', JSON.stringify(res));
-      }
-    });
-  } catch (err) {
-    console.error('uninstallDLPSandbox error,', (err as BusinessError).code, (err as BusinessError).message);
-  }
-}
-```
-
 
 ## uninstallDLPSandbox
 
@@ -100,8 +57,6 @@ function uninstallDLPSandbox(bundleName: string, userId: number, appIndex: numbe
 Uninstalls a DLP sandbox application for an application. This API uses an asynchronous callback to return the result. After this API is called, the system destroys the specified DLP sandbox environment and releases related resources.Use this API to clear the sandbox environment.This API can be called only after a DLP sandbox is installed by calling [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md).
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -128,7 +83,3 @@ Uninstalls a DLP sandbox application for an application. This API uses an asynch
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [uninstallDLPSandbox](#uninstalldlpsandbox)

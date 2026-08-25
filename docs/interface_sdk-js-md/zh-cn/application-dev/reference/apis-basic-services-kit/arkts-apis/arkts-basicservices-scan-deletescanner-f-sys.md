@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## deleteScanner
@@ -15,8 +15,6 @@ function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): P
 删除扫描仪（系统API）。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -43,18 +41,3 @@ function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): P
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uniqueId: string = 'unique_scanner_001';
-let discoveryMode: scan.ScannerDiscoveryMode = scan.ScannerDiscoveryMode.TCP_STR;
-scan.deleteScanner(uniqueId, discoveryMode).then(() => {
-    console.info('delete scanner success');
-}).catch((error: BusinessError) => {
-    console.error('delete scanner failed: ' + JSON.stringify(error));
-})
-```

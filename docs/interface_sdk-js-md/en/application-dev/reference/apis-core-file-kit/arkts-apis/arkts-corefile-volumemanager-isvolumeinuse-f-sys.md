@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## isVolumeInUse
@@ -15,8 +15,6 @@ function isVolumeInUse(volumePath: string): Promise<boolean>
 Query whether the specified volume is currently in use. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 

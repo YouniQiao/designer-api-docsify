@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## getDeviceRotationRadian
@@ -12,11 +12,9 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 function getDeviceRotationRadian(): Promise<DeviceRotationRadian>
 ```
 
-获取设备的姿态数据。姿态数据包含x、y、z三轴的姿态旋转角，即三轴的欧拉角，三轴定义与设备sensor定义相同，为右手系。姿态旋转角在ZXY旋转顺序、内旋下计算， <br>通过传感器融合获取的四元数计算得到结果。
+获取设备的姿态数据。姿态数据包含x、y、z三轴的姿态旋转角，即三轴的欧拉角，三轴定义与设备sensor定义相同，为右手系。姿态旋转角在ZXY旋转顺序、内旋下计算， 通过传感器融合获取的四元数计算得到结果。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
 
@@ -35,39 +33,3 @@ function getDeviceRotationRadian(): Promise<DeviceRotationRadian>
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [32500001](../errorcode-deviceStatus.md#32500001-服务异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-   deviceStatus.getDeviceRotationRadian().then((radian: deviceStatus.DeviceRotationRadian) => {
-      console.info('x:' + radian.x + ' y:' + radian.y + ' z:' + radian.z);
-   }).catch((err: BusinessError) => {
-      console.error('get device rotation radian failed, errmsg:' + err);
-   })
-} catch (err) {
-   console.error('invoke failed, errmsg:' + err)
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-   deviceStatus.getDeviceRotationRadian().then((radian: deviceStatus.DeviceRotationRadian) => {
-      console.info('x:' + radian.x + ' y:' + radian.y + ' z:' + radian.z);
-   }).catch((err: BusinessError): void => {
-      console.error('get device rotation radian failed, errmsg:' + err);
-   })
-} catch (err) {
-   console.error('invoke failed, errmsg:' + err)
-}
-```

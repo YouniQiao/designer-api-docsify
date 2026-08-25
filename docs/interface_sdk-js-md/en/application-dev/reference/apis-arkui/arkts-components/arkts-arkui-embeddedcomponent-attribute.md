@@ -6,8 +6,6 @@ The universal attributes are supported.Event information related to screen coord
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ onDrawReady(callback: Callback<void>)
 Callback called when the EmbeddedUIExtensionAbility draw the first frame.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +48,6 @@ Called when an error occurs during the running of the started EmbeddedUIExtensio
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -78,8 +72,6 @@ Triggered when the the launched EmbeddedUIExtensionAbility exits normally by cal
 > This API cannot be called within attributeModifier.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

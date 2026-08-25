@@ -4,8 +4,6 @@ Defines the MMS message information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the MMS message information.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## attachment
@@ -27,8 +25,6 @@ Attachment.
 **Type:** Array&lt;[MmsAttachment](arkts-telephony-sms-mmsattachment-i-sys.md)&gt;
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -46,8 +42,6 @@ Message type.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ PDU header type.
 **Type:** [MmsSendReq](arkts-telephony-sms-mmssendreq-i-sys.md) \| [MmsSendConf](arkts-telephony-sms-mmssendconf-i-sys.md) \| [MmsNotificationInd](arkts-telephony-sms-mmsnotificationind-i-sys.md) \| [MmsRespInd](arkts-telephony-sms-mmsrespind-i-sys.md) \| [MmsRetrieveConf](arkts-telephony-sms-mmsretrieveconf-i-sys.md) \| [MmsAcknowledgeInd](arkts-telephony-sms-mmsacknowledgeind-i-sys.md) \| [MmsDeliveryInd](arkts-telephony-sms-mmsdeliveryind-i-sys.md) \| [MmsReadOrigInd](arkts-telephony-sms-mmsreadorigind-i-sys.md) \| [MmsReadRecInd](arkts-telephony-sms-mmsreadrecind-i-sys.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 

@@ -4,8 +4,6 @@ Enumerates the types of the floating ball template.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## STATIC
@@ -17,8 +15,6 @@ STATIC = 1
 Static layout, which provides a title and an icon. When this template is used, the **title** and **icon** parameters in **FloatingBallParams** must be passed.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -32,8 +28,6 @@ Standard text layout, which provides a title and content. When this template is 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## EMPHATIC
@@ -46,8 +40,6 @@ Emphasized text layout, which provides an icon, a title, and content. When this 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## SIMPLE
@@ -59,7 +51,5 @@ SIMPLE = 4
 Plain text layout, which provides only a title. When this template is used, the **title** parameter in **FloatingBallParams** must be passed.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

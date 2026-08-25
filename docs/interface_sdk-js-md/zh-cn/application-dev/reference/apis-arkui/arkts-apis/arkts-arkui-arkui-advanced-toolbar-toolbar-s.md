@@ -9,31 +9,13 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
+import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## activateIndex
 
@@ -46,8 +28,6 @@ activateIndex?: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,11 +44,9 @@ controller: TabsController
 工具栏控制器，用于关联Tabs组件页面切换，不支持控制工具栏子项。  
 **说明：**根据自定义组件成员属性访问限定符[使用限制](../../../ui/state-management/arkts-custom-components-access-restrictions.md#使用限制)，该接口属于常规成员 变量，可以传参进行初始化；也可以不传。不传时，使用组件内预设值进行初始化，组件内预设值为：new TabsController()。
 
-**类型：** [TabsController](arkts-arkui-tabs-tabscontroller-c.md)
+**类型：** [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,8 +66,6 @@ dividerModifier?: DividerModifier
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -108,8 +84,6 @@ toolBarList: ToolBarOptions
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -127,8 +101,6 @@ toolBarModifier?: ToolBarModifier
 **类型：** [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md)
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

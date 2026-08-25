@@ -4,8 +4,6 @@ Defines the options of geometry transition.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,8 +24,6 @@ Strategy for the hierarchical position movement of **in** / **out** components i
 **Default:** TransitionHierarchyStrategy.ADAPTIVE
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

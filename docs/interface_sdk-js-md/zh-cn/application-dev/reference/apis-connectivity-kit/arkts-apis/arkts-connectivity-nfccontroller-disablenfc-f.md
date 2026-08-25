@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disableNfc
@@ -15,8 +15,6 @@ function disableNfc(): void
 关闭NFC开关，该接口只能被系统应用调用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_SECURE_SETTINGS
 

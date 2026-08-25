@@ -4,8 +4,6 @@ Defines the PanGesture options.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Creates a pan gesture configuration object. The **PanGestureOptions** API enable
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -33,7 +29,7 @@ Creates a pan gesture configuration object. The **PanGestureOptions** API enable
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration.<br>**fingers**: minimum number of fingers required. The value ranges from 1 to 10.<br>Default value: **1** <br>**direction**: pan direction. The value supports the AND ( & ) and OR (\ |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration.    **fingers**: minimum number of fingers required. The value ranges from 1 to 10.Default value: **1**    **direction**: pan direction. The value supports the AND ( & ) and OR (\ |
 
 ## getDirection
 
@@ -44,8 +40,6 @@ getDirection(): PanDirection
 Obtains the pan direction.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ Obtains the minimum pan distance to trigger the gesture. The unit is vp.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -93,8 +85,6 @@ Sets the pan direction.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -115,8 +105,6 @@ Sets the minimum pan distance to trigger the gesture, in vp. To avoid performanc
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -136,8 +124,6 @@ setFingers(value: number)
 Sets the minimum number of fingers to trigger the gesture.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

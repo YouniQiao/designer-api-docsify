@@ -4,8 +4,6 @@ Provides detailed information about the same-layer tag when the **param** elemen
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Unique ID of the same-layer tag.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## objectAttributeId
@@ -41,8 +37,6 @@ ID of the same-layer tag.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## paramItems
@@ -56,7 +50,5 @@ Detailed information about the changed param elements, including the status chan
 **Type:** Array&lt;[NativeEmbedParamItem](arkts-arkweb-nativeembedparamitem-i.md)&gt;
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Web.Webview.Core

@@ -4,8 +4,6 @@ Defines a VPN connection object. Before calling **VpnConnection** APIs, you need
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines a VPN connection object. Before calling **VpnConnection** APIs, you need
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## destroy
@@ -26,8 +24,6 @@ Destroys a VPN. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -49,52 +45,6 @@ Destroys a VPN. This API uses an asynchronous callback to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
-
-**Examples**
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { vpn } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
-  Destroy(): void {
-    this.VpnConnection.destroy((error: BusinessError) => {
-      console.error(JSON.stringify(error));
-    });
-  }
-  build() { }
-}
-```
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { vpn } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
-  Destroy(): void {
-    this.VpnConnection.destroy().then(() => {
-      console.info("destroy success.");
-    }).catch((err: BusinessError) => {
-      console.error("destroy fail" + JSON.stringify(err));
-    });
-  }
-  build() { }
-}
-```
 
 ## destroy
 
@@ -106,8 +56,6 @@ Destroys a VPN. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.MANAGE_VPN
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -130,21 +78,15 @@ Destroys a VPN. This API uses a promise to return the result.
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 
-**Examples**
-
-See [destroy](#destroy)
-
 ## protect
 
 ```TypeScript
-protect(socketFd: int, callback: AsyncCallback<void>): void
+protect(socketFd: number, callback: AsyncCallback<void>): void
 ```
 
 Protects sockets against a VPN connection. The data sent through sockets is directly transmitted over the physical network and therefore the traffic does not traverse through the VPN. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
@@ -171,99 +113,15 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 | [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) |
 
-**Examples**
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { socket, vpn } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
-
-  Protect(): void {
-    let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-    let ipAddress: socket.NetAddress = {
-      address: "0.0.0.0"
-    }
-    tcp.bind(ipAddress);
-    let netAddress: socket.NetAddress = {
-      address: "192.168.1.11",
-      port: 8888
-    }
-    let addressConnect: socket.TCPConnectOptions = {
-      address: netAddress,
-      timeout: 6000
-    }
-    tcp.connect(addressConnect);
-    tcp.getSocketFd().then((tunnelFd: number) => {
-      console.info("tunenlfd: " + tunnelFd);
-      this.VpnConnection.protect(tunnelFd, (error: BusinessError) => {
-        console.error(JSON.stringify(error));
-      });
-    });
-  }
-  build() { }
-}
-```
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { socket, vpn } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
-
-  Protect(): void {
-    let tcp: socket.TCPSocket = socket.constructTCPSocketInstance();
-    let ipAddress: socket.NetAddress = {
-      address: "0.0.0.0"
-    }
-    tcp.bind(ipAddress);
-    let netAddress: socket.NetAddress = {
-      address: "192.168.1.11",
-      port: 8888
-    }
-    let addressConnect: socket.TCPConnectOptions = {
-      address: netAddress,
-      timeout: 6000
-    }
-    tcp.connect(addressConnect);
-    tcp.getSocketFd().then((tunnelFd: number) => {
-      console.info("tunenlfd: " + tunnelFd);
-      this.VpnConnection.protect(tunnelFd).then(() => {
-        console.info("protect success.");
-      }).catch((err: BusinessError) => {
-        console.error("protect fail" + JSON.stringify(err));
-      });
-    });
-  }
-  build() { }
-}
-```
-
 ## protect
 
 ```TypeScript
-protect(socketFd: int): Promise<void>
+protect(socketFd: number): Promise<void>
 ```
 
 Protects sockets against a VPN connection. The data sent through sockets is directly transmitted over the physical network and therefore the traffic does not traverse through the VPN. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
@@ -295,21 +153,15 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 | [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) |
 
-**Examples**
-
-See [protect](#protect)
-
 ## setUp
 
 ```TypeScript
-setUp(config: VpnConfig, callback: AsyncCallback<int>): void
+setUp(config: VpnConfig, callback: AsyncCallback<number>): void
 ```
 
 Creates a VPN based on the specified configuration. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
@@ -337,86 +189,15 @@ Creates a VPN based on the specified configuration. This API uses an asynchronou
 | [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) |
 
-**Examples**
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { vpn } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
-  SetUp(): void {
-    let config: vpn.VpnConfig = {
-      addresses: [{
-        address: {
-          address: "10.0.0.5",
-          family: 1
-        },
-        prefixLength: 24
-      }],
-      mtu: 1400,
-      dnsAddresses: ["114.114.114.114"]
-    }
-    this.VpnConnection.setUp(config, (error: BusinessError, data: number) => {
-      console.error(JSON.stringify(error));
-      console.info("tunfd: " + JSON.stringify(data));
-    });
-  }
-  build() { }
-}
-```
-
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { vpn } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  private context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  private VpnConnection: vpn.VpnConnection = vpn.createVpnConnection(this.context);
-  SetUp(): void {
-    let config: vpn.VpnConfig = {
-      addresses: [{
-        address: {
-          address: "10.0.0.5",
-          family: 1
-        },
-        prefixLength: 24
-      }],
-      mtu: 1400,
-      dnsAddresses: ["114.114.114.114"]
-    }
-    this.VpnConnection.setUp(config).then((data: number) => {
-      console.info("setUp success, tunfd: " + JSON.stringify(data));
-    }).catch((err: BusinessError) => {
-      console.error("setUp fail" + JSON.stringify(err));
-    });
-  }
-  build() { }
-}
-```
-
 ## setUp
 
 ```TypeScript
-setUp(config: VpnConfig): Promise<int>
+setUp(config: VpnConfig): Promise<number>
 ```
 
 Creates a VPN based on the specified configuration. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.MANAGE_VPN
 
@@ -448,7 +229,3 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) |
 | [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) |
-
-**Examples**
-
-See [setUp](#setup)

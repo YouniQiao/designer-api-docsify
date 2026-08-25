@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'kits/@kit.AdsKit';
 ```
 
 ## showAd
@@ -19,8 +19,6 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 > 2. 该接口仅支持展示激励广告和插屏广告。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -41,19 +39,3 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [21800001](../errorcode-ads.md#21800001-系统内部错误) |
 | [21800004](../errorcode-ads.md#21800004-广告展示失败) |
-
-**示例**
-
-其中context的获取方式参见[各类Context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-
-function showAd(ad: advertising.Advertisement, context?: common.UIAbilityContext): void {
-  // 广告展示参数，开发者可根据项目实际情况设置
-  const adDisplayOptions: advertising.AdDisplayOptions = {};
-  // 调用全屏广告展示接口
-  advertising.showAd(ad, adDisplayOptions, context);
-}
-```

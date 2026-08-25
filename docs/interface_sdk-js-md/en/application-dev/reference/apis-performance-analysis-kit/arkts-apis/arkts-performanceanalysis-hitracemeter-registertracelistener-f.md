@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## registerTraceListener
 
 ```TypeScript
-function registerTraceListener(callback: TraceEventListener): int
+function registerTraceListener(callback: TraceEventListener): number
 ```
 
 Registers a callback to notify whether the application trace capture is enabled. This API uses a synchronous callback to return the result.After the registration is successful, the callback is executed immediately. Subsequent callbacks are executed when the application trace capture status changes.Callbacks are stored in the application process. A maximum of 10 callbacks can be registered in a process.
@@ -21,8 +21,6 @@ Registers a callback to notify whether the application trace capture is enabled.
 > main thread of the application to avoid application freeze.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -38,23 +36,4 @@ Registers a callback to notify whether the application trace capture is enabled.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-// Define the registered callback.
-let callback: hiTraceMeter.TraceEventListener = (traceStatus: boolean) => {
-    if (traceStatus) {
-        // Trace capture is enabled for the current application. The service process is as follows:
-    } else {
-        // Trace capture is disabled for the current application. The service process is as follows:
-    }
-};
-
-// Register a callback to notify whether the application trace capture is enabled.
-let index = hiTraceMeter.registerTraceListener(callback);
-if (index < 0) {
-    // Handle exceptions.
-}
-```
+| number |

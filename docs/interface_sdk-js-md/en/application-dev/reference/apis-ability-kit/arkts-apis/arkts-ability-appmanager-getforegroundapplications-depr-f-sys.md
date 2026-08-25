@@ -15,8 +15,6 @@ getForegroundApplications.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md)
@@ -33,33 +31,6 @@ getForegroundApplications.
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-
-appManager.getForegroundApplications((err, data) => {
-  if (err) {
-    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
-  } else {
-    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
-  }
-});
-```
-
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-appManager.getForegroundApplications()
-  .then((data) => {
-    console.info(`GetForegroundApplications success, data: ${JSON.stringify(data)}.`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
-  });
-```
-
 
 ## getForegroundApplications
 
@@ -70,8 +41,6 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 getForegroundApplications.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -88,7 +57,3 @@ getForegroundApplications.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; |
-
-**Examples**
-
-See [getForegroundApplications](#getforegroundapplications)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## hasAccessoryRight
@@ -15,8 +15,6 @@ function hasAccessoryRight(accessory: USBAccessory): boolean
 Checks whether the application has the permission to access the USB accessory. You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -41,16 +39,3 @@ Checks whether the application has the permission to access the USB accessory. Y
 | [14401001](../errorcode-usb.md#14401001-target-usb-accessory-unmatched) |
 | [14400004](../errorcode-usb.md#14400004-service-exception) |
 | [14400005](../errorcode-usb.md#14400005-database-operation-exception) |
-
-**Examples**
-
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-try {
-  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-  let flag = usbManager.hasAccessoryRight(accList[0])
-  hilog.info(0, 'testTag ui', `hasAccessoryRight success, ret:${flag}`)
-} catch (error) {
-  hilog.info(0, 'testTag ui', `hasAccessoryRight error ${error.code}, message is ${error.message}`)
-}
-```

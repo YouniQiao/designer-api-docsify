@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAdmins
@@ -15,8 +15,6 @@ function getAdmins(): Promise<Array<Want>>
 查询当前用户下的所有设备管理应用。使用Promise异步回调。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,17 +33,3 @@ function getAdmins(): Promise<Array<Want>>
 | 错误码ID |
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-adminManager.getAdmins().then((result) => {
-  console.info(`Succeeded in getting admins :${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get admins. Code: ${err.code}, message: ${err.message}`);
-})
-```

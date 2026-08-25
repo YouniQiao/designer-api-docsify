@@ -1,14 +1,12 @@
 # PhotoBrowserZoomCallback
 
 ```TypeScript
-export type PhotoBrowserZoomCallback = (scale: double) => void
+export type PhotoBrowserZoomCallback = (scale: number) => void
 ```
 
 Callback to be invoked when the large image is zoomed in or out after the large image is entered through the **PhotoPickerComponent**.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

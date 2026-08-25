@@ -1,7 +1,5 @@
 # AsyncGeneratorFunctionConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@
 ```
 
 Creates a new AsyncGenerator function.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,8 +30,6 @@ new (...args: string[]): AsyncGeneratorFunction
 ```
 
 Creates a new AsyncGenerator function.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -57,8 +51,6 @@ The length of the arguments.
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## name
 
 ```TypeScript
@@ -69,8 +61,6 @@ Returns the name of the function.
 
 **Type:** string
 
-**ArkTS mode:** 
-
 ## prototype
 
 ```TypeScript
@@ -80,5 +70,3 @@ readonly prototype: AsyncGeneratorFunction
 A reference to the prototype.
 
 **Type:** [AsyncGeneratorFunction](arkts-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md)
-
-**ArkTS mode:** 

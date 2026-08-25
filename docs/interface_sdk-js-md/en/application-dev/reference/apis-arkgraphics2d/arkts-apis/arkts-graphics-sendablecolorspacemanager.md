@@ -4,14 +4,12 @@ This module provides APIs for creating and managing sendable color space objects
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## Summary

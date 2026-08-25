@@ -1,7 +1,5 @@
 # lib.es2018.intl
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -33,4 +31,4 @@
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [PluralRules](../../apis-localization-kit/arkts-apis/arkts-localization-intl-pluralrules-c.md) |
+| PluralRules |

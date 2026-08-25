@@ -1,17 +1,17 @@
 # Context
 
 ```TypeScript
-export type Context = OriginalContext
+export type Context = common.Context
 ```
 
-Export Context.
+The base context of an ability or an application. It allows access to application-specific resources.
 
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Property type:** OriginalContext
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Property type:** common.Context

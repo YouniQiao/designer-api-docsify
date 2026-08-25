@@ -4,8 +4,6 @@ Enumerates the KV store types.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** KVStoreType
@@ -21,8 +19,6 @@ DEVICE_COLLABORATION = 0
 Device KV store.The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Single KV store.The single KV store does not differentiate data by device. If th
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** SINGLE_VERSION
@@ -57,8 +51,6 @@ MULTI_VERSION = 2
 Multi-version KV store. This type is not supported currently.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

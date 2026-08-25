@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
+import { AbilityStage } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

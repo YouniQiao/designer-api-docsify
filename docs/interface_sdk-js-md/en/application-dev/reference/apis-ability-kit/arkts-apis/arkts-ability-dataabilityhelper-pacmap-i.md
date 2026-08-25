@@ -4,8 +4,6 @@ Defines the PacMap type used for data storage.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## [key: string]
@@ -19,8 +17,6 @@ Indicates the parameter of the PacMap type. If a custom Sequenceable object is p
 **Type:** number \| string \| boolean \| Array&lt;string \| number \| boolean&gt; \| null
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** 
 - API version 11 and later: This API can be used in both the stage model and FA model.

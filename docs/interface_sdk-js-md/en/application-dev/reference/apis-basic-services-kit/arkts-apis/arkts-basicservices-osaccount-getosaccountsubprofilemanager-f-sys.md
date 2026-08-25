@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getOsAccountSubProfileManager
@@ -12,11 +12,9 @@ import { osAccount } from '@kit.BasicServicesKit';
 function getOsAccountSubProfileManager(): OsAccountSubProfileManager
 ```
 
-Obtains an OS account sub-profile manager instance.
+Obtains the OS account sub-profile manager.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

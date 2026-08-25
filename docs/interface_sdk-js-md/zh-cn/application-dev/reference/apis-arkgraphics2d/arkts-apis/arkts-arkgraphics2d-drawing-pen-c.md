@@ -8,14 +8,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -28,293 +26,7 @@ constructor()
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-```
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-const brushColor: common2D.Color = { alpha: 255, red: 0, green: 255, blue: 0 };
-brush.setColor(brushColor);
-const newBrush = new drawing.Brush(brush);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-import { image } from '@kit.ImageKit';
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: image.PixelMapFormat.RGBA_8888,
-  size: {
-    height: 4,
-    width: 6
-  }
-};
-image.createPixelMap(color, opts).then((pixelMap) => {
-  const canvas = new drawing.Canvas(pixelMap);
-});
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let matrix = new drawing.Matrix();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let matrix = new drawing.Matrix();
-let matrix2 = new drawing.Matrix(matrix);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-path.moveTo(0.0, 0.0);
-path.lineTo(0.0, 700.0);
-path.lineTo(700.0, 0.0);
-path.close();
-let path1: drawing.Path = new drawing.Path(path);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path: drawing.Path = new drawing.Path();
-let iter: drawing.PathIterator = new drawing.PathIterator(path);
-console.info('PathIterator created successfully');
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-```
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-const penColor: common2D.Color = { alpha: 255, red: 0, green: 255, blue: 0 };
-pen.setColor(penColor);
-pen.setStrokeWidth(10.0);
-const newPen = new drawing.Pen(pen);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(200, 200, 400, 400);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
-    pen.setStrokeWidth(10.0);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(200, 200, 400, 400);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(200, 200, 400, 400);
-    let region2 = new drawing.Region(region);
-    canvas.drawRegion(region2);
-    canvas.detachPen();
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(200, 200, 400, 400);
-    let region2 = new drawing.Region(region);
-    canvas.drawRegion(region2);
-    canvas.detachPen();
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
-    pen.setStrokeWidth(10);
-    canvas.attachPen(pen);
-    let region = new drawing.Region(100, 100, 200, 200);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
-    pen.setStrokeWidth(10.0);
-    canvas.attachPen(pen);
-    let region = new drawing.Region(100, 100, 200, 200);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let rect: common2D.Rect = {left: 100.0, top: 100.0, right: 500.0, bottom: 300.0};
-let roundRect = new drawing.RoundRect(rect, 50.0, 50.0);
-let roundRect2 = new drawing.RoundRect(roundRect);
-```
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let rect: common2D.Rect = { left: 100.0, top: 100.0, right: 500.0, bottom: 300.0 };
-let roundRect = new drawing.RoundRect(rect, 50.0, 50.0);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    let samplingOptions = new drawing.SamplingOptions();
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    let samplingOptions = new drawing.SamplingOptions();
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    let samplingOptions = new drawing.SamplingOptions(drawing.FilterMode.FILTER_MODE_NEAREST);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let samplingOptions = new drawing.SamplingOptions(drawing.FilterMode.FILTER_MODE_NEAREST);
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-let typefaceArgument = new drawing.TypefaceArguments();
-```
 
 ## constructor
 
@@ -325,8 +37,6 @@ constructor(pen: Pen)
 复制构造一个新的画笔对象。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -342,27 +52,15 @@ constructor(pen: Pen)
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [constructor](#constructor)
-
 ## getAlpha
 
-ArkTS-Dyn:
 ```TypeScript
 getAlpha(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getAlpha(): int
 ```
 
 获取画笔的透明度。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -370,23 +68,7 @@ getAlpha(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-let alpha = brush.getAlpha();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let alpha = pen.getAlpha();
-```
+| number |
 
 ## getCapStyle
 
@@ -398,8 +80,6 @@ getCapStyle(): CapStyle
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -407,44 +87,6 @@ getCapStyle(): CapStyle
 | 类型 |
 | --- |
 | [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    pen.setCapStyle(drawing.CapStyle.SQUARE_CAP);
-    pen.getCapStyle();
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5.0);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    pen.setCapStyle(drawing.CapStyle.SQUARE_CAP);
-    let capStyle = pen.getCapStyle();
-  }
-}
-```
 
 ## getColor
 
@@ -456,8 +98,6 @@ getColor(): common2D.Color
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -465,50 +105,6 @@ getColor(): common2D.Color
 | 类型 |
 | --- |
 | common2D.Color |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
-const brush = new drawing.Brush();
-brush.setColor(color);
-let currentColor = brush.getColor();
-```
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
-const pen = new drawing.Pen();
-pen.setColor(color);
-let colorGet = pen.getColor();
-```
-
-## getColor
-
-```TypeScript
-getColor(): common2D.Color | undefined
-```
-
-获取画笔的颜色。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**返回值：**
-
-| 类型 |
-| --- |
-| common2D.Color \| undefined |
-
-**示例**
-
-参见 [getColor](#getcolor)
 
 ## getColor4f
 
@@ -520,8 +116,6 @@ getColor4f(): common2D.Color4f
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -529,52 +123,6 @@ getColor4f(): common2D.Color4f
 | 类型 |
 | --- |
 | common2D.Color4f |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing, colorSpaceManager } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
-let color4f: common2D.Color4f = { alpha: 1, red: 0.5, green: 0.4, blue: 0.7 };
-brush.setColor4f(color4f, colorSpace);
-let color = brush.getColor4f();
-```
-
-```TypeScript
-import { common2D, drawing, colorSpaceManager } from "@kit.ArkGraphics2D";
-
-const pen = new drawing.Pen();
-let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
-let color4f: common2D.Color4f = {alpha: 1, red: 0.5, green: 0.4, blue: 0.7};
-pen.setColor4f(color4f, colorSpace);
-let color = pen.getColor4f();
-```
-
-## getColor4f
-
-```TypeScript
-getColor4f(): common2D.Color4f | undefined
-```
-
-获取画笔的颜色，与[getColor](#getcolor)的区别在于返回值类型为 [common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
-
-**起始版本：** 24
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为24。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**返回值：**
-
-| 类型 |
-| --- |
-| common2D.Color4f \| undefined |
-
-**示例**
-
-参见 [getColor4f](#getcolor4f)
 
 ## getColorFilter
 
@@ -586,8 +134,6 @@ getColorFilter(): ColorFilter
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -595,80 +141,6 @@ getColorFilter(): ColorFilter
 | 类型 |
 | --- |
 | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let brush = new drawing.Brush();
-let colorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
-brush.setColorFilter(colorFilter);
-let currentFilter = brush.getColorFilter();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let brush = new drawing.Brush();
-let setColorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
-if (setColorFilter != undefined) {
-  brush.setColorFilter(setColorFilter!);
-}
-let filter = brush.getColorFilter();
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let pen = new drawing.Pen();
-let colorFilter = drawing.ColorFilter.createLumaColorFilter();
-pen.setColorFilter(colorFilter);
-let filter = pen.getColorFilter();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let pen = new drawing.Pen();
-let setColorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
-if (setColorFilter != undefined) {
-  pen.setColorFilter(setColorFilter!);
-}
-let filter = pen.getColorFilter();
-```
-
-## getColorFilter
-
-```TypeScript
-getColorFilter(): ColorFilter | undefined
-```
-
-获取画笔的颜色滤波器。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-**返回值：**
-
-| 类型 |
-| --- |
-| ColorFilter \| undefined |
-
-**示例**
-
-参见 [getColorFilter](#getcolorfilter)
 
 ## getFillPath
 
@@ -679,8 +151,6 @@ getFillPath(src: Path, dst: Path): boolean
 获取使用画笔绘制的源路径轮廓，并用目标路径表示。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -703,51 +173,15 @@ getFillPath(src: Path, dst: Path): boolean
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let pen = new drawing.Pen();
-let pathSrc: drawing.Path = new drawing.Path();
-let pathDst: drawing.Path = new drawing.Path();
-pathSrc.moveTo(0, 0);
-pathSrc.lineTo(700, 700);
-let value = pen.getFillPath(pathSrc, pathDst);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let pen = new drawing.Pen();
-let pathSrc: drawing.Path = new drawing.Path();
-let pathDst: drawing.Path = new drawing.Path();
-pathSrc.moveTo(0.0, 0.0);
-pathSrc.lineTo(700.0, 700.0);
-let value = pen.getFillPath(pathSrc, pathDst);
-```
-
 ## getHexColor
 
-ArkTS-Dyn:
 ```TypeScript
 getHexColor(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getHexColor(): int
 ```
 
 获取画笔的颜色。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -755,29 +189,7 @@ getHexColor(): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
-let brush = new drawing.Brush();
-brush.setColor(color);
-let hexColor = brush.getHexColor();
-console.info('getHexColor: ', hexColor.toString(16));
-```
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-let color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
-let pen = new drawing.Pen();
-pen.setColor(color);
-let hexColor = pen.getHexColor();
-console.info('getHexColor: ', hexColor.toString(16));
-```
+| number |
 
 ## getJoinStyle
 
@@ -789,8 +201,6 @@ getJoinStyle(): JoinStyle
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -799,164 +209,41 @@ getJoinStyle(): JoinStyle
 | --- |
 | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    pen.setJoinStyle(drawing.JoinStyle.ROUND_JOIN);
-    pen.getJoinStyle();
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5.0);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    pen.setJoinStyle(drawing.JoinStyle.ROUND_JOIN);
-    let joinStyle = pen.getJoinStyle();
-  }
-}
-```
-
 ## getMiterLimit
 
-ArkTS-Dyn:
 ```TypeScript
 getMiterLimit(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getMiterLimit(): double
 ```
 
 获取折线尖角长度与线宽的最大比值。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let miter = pen.getMiterLimit();
-```
+| number |
 
 ## getWidth
 
-ArkTS-Dyn:
 ```TypeScript
 getWidth(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getWidth(): double
 ```
 
 获取画笔的线宽属性，线宽描述了画笔绘制图形轮廓的宽度。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let width = canvas.getWidth();
-    console.info('get canvas width:' + width);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let width = canvas.getWidth();
-    console.info('get canvas width:' + width);
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let width = pen.getWidth();
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing, common2D } from '@kit.ArkGraphics2D';
-let rect = drawing.RectUtils.makeLtrb(10, 10, 20, 20);
-let width = drawing.RectUtils.getWidth(rect);
-console.info('width:', width);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing, common2D } from '@kit.ArkGraphics2D';
-let rect = drawing.RectUtils.makeLtrb(10.0, 10.0, 20.0, 20.0);
-if (rect == undefined) {
-    return;
-}
-let width = drawing.RectUtils.getWidth(rect);
-console.info('width:', width);
-```
+| number |
 
 ## isAntiAlias
 
@@ -968,8 +255,6 @@ isAntiAlias(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **返回值：**
@@ -977,22 +262,6 @@ isAntiAlias(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-let isAntiAlias = brush.isAntiAlias();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let isAntiAlias = pen.isAntiAlias();
-```
 
 ## reset
 
@@ -1004,76 +273,17 @@ reset(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-brush.reset();
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import {drawing} from "@kit.ArkGraphics2D";
-
-let matrix = new drawing.Matrix();
-matrix.postScale(2, 3, 4, 5);
-matrix.reset();
-console.info("matrix= "+matrix.getAll().toString());
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import {drawing} from "@kit.ArkGraphics2D";
-
-let matrix = new drawing.Matrix();
-matrix.postScale(2.0, 3.0, 4.0, 5.0);
-matrix.reset();
-if (matrix.getAll() != undefined) {
-  console.info("matrix= "+matrix.getAll()!.toString());
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let path = new drawing.Path();
-path.moveTo(10.0, 10.0);
-path.cubicTo(10.0, 10.0, 10.0, 10.0, 15.0, 15.0);
-path.reset();
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.reset();
-```
 
 ## setAlpha
 
-ArkTS-Dyn:
 ```TypeScript
 setAlpha(alpha: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setAlpha(alpha: int): void
 ```
 
 设置画笔的透明度。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1081,29 +291,13 @@ setAlpha(alpha: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| alpha | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| alpha | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-brush.setAlpha(128);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.setAlpha(128);
-```
 
 ## setAntiAlias
 
@@ -1114,8 +308,6 @@ setAntiAlias(aa: boolean): void
 设置画笔是否开启抗锯齿。开启后，使图形边缘在显示时更平滑。未调用此接口设置时，系统默认关闭抗锯齿。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1131,22 +323,6 @@ setAntiAlias(aa: boolean): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-brush.setAntiAlias(true);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.setAntiAlias(true);
-```
-
 ## setBlendMode
 
 ```TypeScript
@@ -1157,37 +333,19 @@ setBlendMode(mode: BlendMode): void
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 |
+| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-brush.setBlendMode(drawing.BlendMode.SRC);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.setBlendMode(drawing.BlendMode.SRC);
-```
 
 ## setCapStyle
 
@@ -1198,8 +356,6 @@ setCapStyle(style: CapStyle): void
 设置画笔的线帽样式。未调用此接口设置时，系统默认的线帽样式为FLAT_CAP。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1215,42 +371,6 @@ setCapStyle(style: CapStyle): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    pen.setCapStyle(drawing.CapStyle.SQUARE_CAP);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    pen.setCapStyle(drawing.CapStyle.SQUARE_CAP);
-  }
-}
-```
-
 ## setColor
 
 ```TypeScript
@@ -1260,8 +380,6 @@ setColor(color: common2D.Color): void
 设置画笔的颜色。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1277,91 +395,15 @@ setColor(color: common2D.Color): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
-const brush = new drawing.Brush();
-brush.setColor(color);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-brush.setColor(255, 255, 0, 0);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-brush.setColor(0xffff0000);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-brush.setColor((0xffff0000).toInt());
-```
-
-```TypeScript
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
-const pen = new drawing.Pen();
-pen.setColor(color);
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.setColor(255, 255, 0, 0);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.setColor(0xffff0000);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.setColor((0xffff0000).toInt());
-```
-
 ## setColor
 
-ArkTS-Dyn:
 ```TypeScript
 setColor(alpha: number, red: number, green: number, blue: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setColor(alpha: int, red: int, green: int, blue: int): void
 ```
 
 设置画笔的颜色。性能优于[setColor](#setcolor)接口，推荐使用本接口。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1369,10 +411,10 @@ setColor(alpha: int, red: int, green: int, blue: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| alpha | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| red | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| green | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| blue | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| alpha | number | 是 |
+| red | number | 是 |
+| green | number | 是 |
+| blue | number | 是 |
 
 **错误码：**
 
@@ -1380,27 +422,15 @@ setColor(alpha: int, red: int, green: int, blue: int): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [setColor](#setcolor)
-
 ## setColor
 
-ArkTS-Dyn:
 ```TypeScript
 setColor(color: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setColor(color: int): void
 ```
 
 设置画笔的颜色。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1408,11 +438,7 @@ setColor(color: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-参见 [setColor](#setcolor)
+| color | number | 是 |
 
 ## setColor4f
 
@@ -1424,8 +450,6 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为24。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 **参数：**
@@ -1434,26 +458,6 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 | --- | --- | --- |
 | color4f | common2D.Color4f | 是 |
 | colorSpace | colorSpaceManager.ColorSpaceManager \| null | 是 |
-
-**示例**
-
-```TypeScript
-import { common2D, drawing, colorSpaceManager } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
-let color4f: common2D.Color4f = { alpha: 1, red: 0.5, green: 0.4, blue: 0.7 };
-brush.setColor4f(color4f, colorSpace);
-```
-
-```TypeScript
-import { common2D, drawing, colorSpaceManager } from "@kit.ArkGraphics2D";
-
-const pen = new drawing.Pen();
-let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
-let color4f: common2D.Color4f = {alpha: 1, red: 0.5, green: 0.4, blue: 0.7};
-pen.setColor4f(color4f, colorSpace);
-```
 
 ## setColorFilter
 
@@ -1464,8 +468,6 @@ setColorFilter(filter: ColorFilter | null): void
 给画笔添加额外的颜色滤波器。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1481,54 +483,6 @@ setColorFilter(filter: ColorFilter | null): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
-brush.setColorFilter(colorFilter);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
-if (colorFilter != undefined) {
-  brush.setColorFilter(colorFilter!);
-}
-brush.setColorFilter(null);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
-pen.setColorFilter(colorFilter);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let colorFilter = drawing.ColorFilter.createLinearToSRGBGamma();
-if (colorFilter != undefined) {
-  pen.setColorFilter(colorFilter!);
-}
-pen.setColorFilter(null);
-```
-
 ## setDither
 
 ```TypeScript
@@ -1538,8 +492,6 @@ setDither(dither: boolean): void
 设置画笔是否开启抖动绘制效果。抖动绘制使颜色更真实。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1555,15 +507,6 @@ setDither(dither: boolean): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.setDither(true);
-```
-
 ## setImageFilter
 
 ```TypeScript
@@ -1573,8 +516,6 @@ setImageFilter(filter: ImageFilter | null): void
 设置画笔的图像滤波器。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1590,58 +531,6 @@ setImageFilter(filter: ImageFilter | null): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let brush = new drawing.Brush();
-let imageFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.DECAL);
-brush.setImageFilter(imageFilter);
-brush.setImageFilter(null);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing }  from '@kit.ArkGraphics2D';
-
-let brush = new drawing.Brush();
-let imgFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.DECAL);
-if (imgFilter != undefined) {
-  brush.setImageFilter(imgFilter!);
-}
-brush.setImageFilter(null);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let colorfilter = drawing.ColorFilter.createSRGBGammaToLinear();
-let imgFilter = drawing.ImageFilter.createFromColorFilter(colorfilter);
-let pen = new drawing.Pen();
-pen.setImageFilter(imgFilter);
-pen.setImageFilter(null);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let colorfilter = drawing.ColorFilter.createSRGBGammaToLinear();
-let imgFilter = colorfilter == undefined ? undefined : drawing.ImageFilter.createFromColorFilter(colorfilter!);
-let pen = new drawing.Pen();
-if (imgFilter != undefined) {
-  pen.setImageFilter(imgFilter!);
-}
-pen.setImageFilter(null);
-```
-
 ## setJoinStyle
 
 ```TypeScript
@@ -1651,8 +540,6 @@ setJoinStyle(style: JoinStyle): void
 设置画笔绘制转角的样式。未调用此接口设置时，系统默认的转角样式为MITER_JOIN。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1668,42 +555,6 @@ setJoinStyle(style: JoinStyle): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    pen.setJoinStyle(drawing.JoinStyle.ROUND_JOIN);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5.0);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    pen.setJoinStyle(drawing.JoinStyle.ROUND_JOIN);
-  }
-}
-```
-
 ## setMaskFilter
 
 ```TypeScript
@@ -1713,8 +564,6 @@ setMaskFilter(filter: MaskFilter | null): void
 给画笔添加额外的蒙版滤镜。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1730,98 +579,15 @@ setMaskFilter(filter: MaskFilter | null): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const brush = new drawing.Brush();
-    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
-    brush.setMaskFilter(maskFilter);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const brush = new drawing.Brush();
-    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
-    if (maskFilter == undefined) {
-      return;
-    }
-    brush.setMaskFilter(maskFilter);
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
-    pen.setMaskFilter(maskFilter);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5.0);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10.0);
-    if (maskFilter == undefined) {
-      return;
-    }
-    pen.setMaskFilter(maskFilter);
-    pen.setMaskFilter(null);
-  }
-}
-```
-
 ## setMiterLimit
 
-ArkTS-Dyn:
 ```TypeScript
 setMiterLimit(miter: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setMiterLimit(miter: double): void
 ```
 
 设置折线尖角长度与线宽的最大比值。当画笔绘制一条折线，并且[JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md)为MITER_JOIN时，若尖角长度与线宽的比值大于该最大比值，则该转角使用BEVEL_JOIN 绘制。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1829,22 +595,13 @@ setMiterLimit(miter: double): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| miter | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| miter | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.setMiterLimit(5.0);
-```
 
 ## setPathEffect
 
@@ -1855,8 +612,6 @@ setPathEffect(effect: PathEffect | null): void
 设置画笔路径效果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1872,48 +627,6 @@ setPathEffect(effect: PathEffect | null): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    let pathEffect = drawing.PathEffect.createDashPathEffect([30, 10], 0);
-    pen.setPathEffect(pathEffect);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setStrokeWidth(5);
-    pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
-    let pathEffect = drawing.PathEffect.createDashPathEffect([30.0, 1.0], 0.0);
-    if (pathEffect == undefined) {
-      return;
-    }
-    pen.setPathEffect(pathEffect);
-    pen.setPathEffect(null);
-  }
-}
-```
-
 ## setShaderEffect
 
 ```TypeScript
@@ -1923,8 +636,6 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 设置画笔着色器效果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -1940,53 +651,6 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100, y: 100}, {x: 300, y: 300}, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
-brush.setShaderEffect(shaderEffect);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const brush = new drawing.Brush();
-let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100, y: 100}, {x: 300, y: 300}, [(0xFF00FF00).toInt(), (0xFFFF0000).toInt()], drawing.TileMode.REPEAT);
-if (shaderEffect != undefined) {
-  brush.setShaderEffect(shaderEffect!);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100, y: 100}, {x: 300, y: 300}, [0xFF00FF00, 0xFFFF0000], drawing.TileMode.REPEAT);
-pen.setShaderEffect(shaderEffect);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-let shaderEffect = drawing.ShaderEffect.createLinearGradient({x: 100.0, y: 100.0}, {x: 300.0, y: 300.0}, [(0xFF00FF00).toInt(), (0xFFFF0000).toInt()], drawing.TileMode.REPEAT);
-if (shaderEffect != undefined) {
-  pen.setShaderEffect(shaderEffect!);
-}
-pen.setShaderEffect(null);
-```
-
 ## setShadowLayer
 
 ```TypeScript
@@ -1996,8 +660,6 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 设置画笔阴影层效果。当前仅在绘制文字时生效。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2013,187 +675,15 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(60);
-
-    let textBlob = drawing.TextBlob.makeFromString('hello', font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
-    let pen = new drawing.Pen();
-    pen.setStrokeWidth(2.0);
-
-    let penColor : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
-    pen.setColor(penColor);
-    canvas.attachPen(pen);
-    canvas.drawTextBlob(textBlob, 100, 100);
-    canvas.detachPen();
-
-    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
-    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
-    pen.setShadowLayer(shadowLayer);
-    canvas.attachPen(pen);
-    canvas.drawTextBlob(textBlob, 100, 200);
-    canvas.detachPen();
-
-    let brush = new drawing.Brush();
-    let brushColor : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
-    brush.setColor(brushColor);
-    canvas.attachBrush(brush);
-    canvas.drawTextBlob(textBlob, 300, 100);
-    canvas.detachBrush();
-
-    brush.setShadowLayer(shadowLayer);
-    canvas.attachBrush(brush);
-    canvas.drawTextBlob(textBlob, 300, 200);
-    canvas.detachBrush();
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context: DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(60);
-
-    let textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
-    if (textBlob == undefined) {
-      return;
-    }
-    let pen = new drawing.Pen();
-    pen.setStrokeWidth(2.0);
-
-    let pen_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
-    pen.setColor(pen_color);
-    canvas.attachPen(pen);
-    canvas.drawTextBlob(textBlob, 100, 100);
-    canvas.detachPen();
-
-    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
-    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
-    if (shadowLayer == undefined) {
-      return;
-    }
-    pen.setShadowLayer(shadowLayer);
-    canvas.attachPen(pen);
-    canvas.drawTextBlob(textBlob, 100, 200);
-    canvas.detachPen();
-
-    let brush = new drawing.Brush();
-    let brush_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
-    brush.setColor(brush_color);
-    canvas.attachBrush(brush);
-    canvas.drawTextBlob(textBlob, 300, 100);
-    canvas.detachBrush();
-
-    brush.setShadowLayer(shadowLayer);
-    canvas.attachBrush(brush);
-    canvas.drawTextBlob(textBlob, 300, 200);
-    canvas.detachBrush();
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(60);
-    let textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
-    let pen = new drawing.Pen();
-    pen.setStrokeWidth(2.0);
-    let pen_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
-    pen.setColor(pen_color);
-    canvas.attachPen(pen);
-    canvas.drawTextBlob(textBlob, 100, 100);
-    canvas.detachPen();
-    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
-    let shadowLayer = drawing.ShadowLayer.create(3, -3, 3, color);
-    pen.setShadowLayer(shadowLayer);
-    canvas.attachPen(pen);
-    canvas.drawTextBlob(textBlob, 100, 200);
-    canvas.detachPen();
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
-
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    let font = new drawing.Font();
-    font.setSize(60.0);
-    let textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
-    if (textBlob == undefined) {
-      return;
-    }
-    let pen = new drawing.Pen();
-    pen.setStrokeWidth(2.0);
-    let pen_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
-    pen.setColor(pen_color);
-    canvas.attachPen(pen);
-    canvas.drawTextBlob(textBlob, 100.0, 100.0);
-    canvas.detachPen();
-    let color : common2D.Color = {alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00};
-    let shadowLayer = drawing.ShadowLayer.create(3.0, -3.0, 3.0, color);
-    if (shadowLayer == undefined) {
-      return;
-    }
-    pen.setShadowLayer(shadowLayer);
-    canvas.attachPen(pen);
-    canvas.drawTextBlob(textBlob, 100.0, 200.0);
-    canvas.detachPen();
-    pen.setShadowLayer(null);
-    canvas.attachPen(pen);
-    canvas.drawTextBlob(textBlob, 100, 200);
-    canvas.detachPen();
-  }
-}
-```
-
 ## setStrokeWidth
 
-ArkTS-Dyn:
 ```TypeScript
 setStrokeWidth(width: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setStrokeWidth(width: double): void
 ```
 
 设置画笔的线宽。0线宽被视作特殊的极细线宽，在绘制时始终会被绘制为1像素，不随画布的缩放而改变；负数线宽在实际绘制时会被视作0线宽。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -2201,19 +691,10 @@ setStrokeWidth(width: double): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| width | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
+| width | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const pen = new drawing.Pen();
-pen.setStrokeWidth(5.0);
-```

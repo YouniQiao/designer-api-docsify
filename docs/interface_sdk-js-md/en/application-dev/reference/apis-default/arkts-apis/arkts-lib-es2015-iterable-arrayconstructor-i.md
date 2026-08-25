@@ -1,7 +1,5 @@
 # ArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ from<T>(iterable: Iterable<T> | ArrayLike<T>): T[]
 ```
 
 Creates an array from an iterable object.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,8 +30,6 @@ from<T, U>(iterable: Iterable<T> | ArrayLike<T>, mapfn: (v: T, k: number) => U, 
 ```
 
 Creates an array from an iterable object.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

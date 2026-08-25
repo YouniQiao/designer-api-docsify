@@ -4,8 +4,6 @@ Border image option@interface BorderImageOption
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -27,8 +25,6 @@ fill?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -42,12 +38,12 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 ```
 
 设置边框图片向外延伸距离。默认值：0  
-**说明：**设置负数时取默认值。参数类型为Length时，统一设置四条边框的向外延伸距离。参数类型为[EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)时：
+**说明：**设置负数时取默认值。参数类型为[Length](../arkts-apis/arkts-arkui-length-t.md)时，统一设置四条边框的向外延伸距离。参数类型为EdgeWidths时：
 - Top：设置边框图片上边框向外延伸的距离。
 - Bottom：设置边框图片下边框向外延伸的距离。
 - Left：设置边框图片左边框向外延伸的距离。
 - Right：设置边框图片右边框向外延伸的距离。
-参数类型为LocalizedEdgeWidths&lt;sup&gt;12+&lt;/sup&gt;时：  
+参数类型为[LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)&lt;sup&gt;12+&lt;/sup&gt;时：  
 - Top：设置边框图片上边框向外延伸的距离。  
 - Bottom：设置边框图片下边框向外延伸的距离。  
 - Start：设置边框图片左边框向外延伸的距离。  
@@ -55,13 +51,11 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 - End：设置边框图片右边框向外延伸的距离。  
 从右至左显示语言模式下为设置边框图片左边框向外延伸的距离。
 
-**类型：** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -83,8 +77,6 @@ repeat?: RepeatMode
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -98,12 +90,12 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 ```
 
 设置边框图片左上角、右上角、左下角以及右下角的切割宽高。默认值：0  
-**说明：**设置负数时取默认值。参数类型为Length时，统一设置四个角的宽高。参数类型为[EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)时：
+**说明：**设置负数时取默认值。参数类型为[Length](../arkts-apis/arkts-arkui-length-t.md)时，统一设置四个角的宽高。参数类型为EdgeWidths时：
 - Top：设置图片上侧被切割的高。
 - Bottom：设置图片下侧被切割的高。
 - Left：设置图片左侧被切割的宽。
 - Right：设置图片右侧被切割的宽。
-参数类型为LocalizedEdgeWidths&lt;sup&gt;12+&lt;/sup&gt;时：  
+参数类型为[LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)&lt;sup&gt;12+&lt;/sup&gt;时：  
 - Top：设置图片上侧被切割的高。  
 - Bottom：设置图片下侧被切割的高。  
 - Start：设置图片左侧被切割的宽。  
@@ -111,13 +103,11 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 - End：设置图片右侧被切割的宽。  
 从右至左显示语言模式下为设置图片左侧被切割的宽。
 
-**类型：** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -138,8 +128,6 @@ source?: string | Resource | LinearGradient
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -153,12 +141,12 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 ```
 
 设置图片边框宽度。默认值：0  
-**说明：**设置负数时取默认值。参数类型为Length时，统一设置四条边框的宽度。参数类型为[EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)时：
+**说明：**设置负数时取默认值。参数类型为[Length](../arkts-apis/arkts-arkui-length-t.md)时，统一设置四条边框的宽度。参数类型为EdgeWidths时：
 - Top：设置图片边框上边框的宽。
 - Bottom：设置图片边框下边框的宽。
 - Left：设置图片边框左边框的宽。
 - Right：设置图片边框右边框的宽。
-参数类型为LocalizedEdgeWidths&lt;sup&gt;12+&lt;/sup&gt;时：  
+参数类型为[LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)&lt;sup&gt;12+&lt;/sup&gt;时：  
 - Top：设置图片边框上边框的宽。  
 - Bottom：设置图片边框下边框的宽。  
 - Start：设置图片边框左边框的宽。  
@@ -166,13 +154,11 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 - End：设置图片边框右边框宽。  
 从右至左显示语言模式下为设置图片边框左边框的宽。
 
-**类型：** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

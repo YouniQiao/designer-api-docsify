@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## removeNetFirewallRule
@@ -16,8 +16,6 @@ Deletes a specified firewall rule of a system user ID. This API uses a promise t
 **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
@@ -47,16 +45,3 @@ Deletes a specified firewall rule of a system user ID. This API uses a promise t
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) |
 | [29400006](../errorcode-net-netfirewall.md#29400006-specified-rule-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-netFirewall.removeNetFirewallRule(100, 1).then(() => {
-  console.info("delete firewall rule success.");
-}).catch((error : BusinessError) => {
-  console.error("delete firewall rule failed: " + JSON.stringify(error));
-});
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedBluetoothProtocols
@@ -15,8 +15,6 @@ function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<
 Obtains the disallowed Bluetooth protocols of a specified user.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -45,27 +43,6 @@ Obtains the disallowed Bluetooth protocols of a specified user.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace it as required.
-let accountId: number = 100;
-try{
-    let result: Array<bluetoothManager.Protocol> = bluetoothManager.getDisallowedBluetoothProtocols(wantTemp, accountId);
-    console.info(`Succeeded in getting disallowed bluetooth protocols. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-    console.error(`Failed to get disallowed bluetooth protocols. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getDisallowedBluetoothProtocols
 
@@ -82,8 +59,6 @@ Obtains the list of disallowed Bluetooth protocols for a specified user under a 
 > transfer policy.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -113,7 +88,3 @@ Obtains the list of disallowed Bluetooth protocols for a specified user under a 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-See [getDisallowedBluetoothProtocols](#getdisallowedbluetoothprotocols)

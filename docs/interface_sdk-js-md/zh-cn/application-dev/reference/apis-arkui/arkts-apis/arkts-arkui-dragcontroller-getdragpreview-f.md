@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'kits/@kit.ArkUI';
 ```
 
 ## getDragPreview
@@ -20,8 +20,6 @@ function getDragPreview(): DragPreview
 > 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **废弃版本：** 18
 

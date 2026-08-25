@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'kits/@kit.ArkUI';
 ```
 
 ## createDragAction
@@ -22,8 +22,6 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **废弃版本：** 18
 
 **替代接口：** createDragAction
@@ -38,7 +36,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| customArray | Array & lt;CustomBuilder \ | DragItemInfo & gt; | 是 |
+| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | 是 |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 |
 
 **返回值：**
@@ -53,111 +51,3 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-
-**示例**
-
-推荐通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI上下文关联的DragController对象。
-
-```TypeScript
-import { dragController } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-import { unifiedDataChannel } from '@kit.ArkData';
-
-@Entry
-@Component
-struct DragControllerPage {
-  @State pixmap: image.PixelMap | null = null
-  @State text: string = ''
-  private dragAction: dragController.DragAction | null = null;
-  customBuilders: Array<CustomBuilder | DragItemInfo> = new Array<CustomBuilder | DragItemInfo>();
-
-  @Builder
-  DraggingBuilder() {
-    Column() {
-      Text("DraggingBuilder")
-        .fontColor(Color.White)
-        .fontSize(12)
-    }
-    .width(100)
-    .height(100)
-    .backgroundColor(Color.Blue)
-  }
-
-  build() {
-    Column() {
-
-      Column() {
-        Text(this.text)
-          .width('100%')
-          .height('100%')
-          .fontColor(Color.White)
-          .fontSize(18)
-          .onDrop((dragEvent?: DragEvent) => {
-            if (dragEvent) {
-              let records: Array<unifiedDataChannel.UnifiedRecord> = dragEvent.getData().getRecords();
-              let plainText: unifiedDataChannel.PlainText = records[0] as unifiedDataChannel.PlainText;
-              this.text = plainText.textContent;
-            }
-          })
-      }
-      .width(100)
-      .height(100)
-      .backgroundColor(Color.Red)
-      .margin(10)
-
-      Button('多对象dragAction customBuilder拖拽').onTouch((event?: TouchEvent) => {
-        if (event) {
-          if (event.type == TouchType.Down) {
-            console.info("multi drag Down by listener");
-            this.customBuilders.splice(0, this.customBuilders.length);
-            this.customBuilders.push(() => {
-              this.DraggingBuilder()
-            });
-            this.customBuilders.push(() => {
-              this.DraggingBuilder()
-            });
-            this.customBuilders.push(() => {
-              this.DraggingBuilder()
-            });
-            let text = new unifiedDataChannel.PlainText()
-            text.textContent = 'drag text'
-            let unifiedData = new unifiedDataChannel.UnifiedData(text)
-            let dragInfo: dragController.DragInfo = {
-              pointerId: 0,
-              data: unifiedData,
-              extraParams: ''
-            }
-            try {
-              this.dragAction = this.getUIContext()
-                .getDragController()
-                .createDragAction(this.customBuilders,
-                  dragInfo) // 建议使用 this.getUIContext().getDragController().createDragAction()接口
-              if (!this.dragAction) {
-                console.info("listener dragAction is null");
-                return
-              }
-              this.dragAction.on('statusChange', (dragAndDropInfo: dragController.DragAndDropInfo) => {
-                if (dragAndDropInfo.status == dragController.DragStatus.STARTED) {
-                  console.info("drag has start");
-                } else if (dragAndDropInfo.status == dragController.DragStatus.ENDED) {
-                  console.info("drag has end");
-                  if (!this.dragAction) {
-                    return
-                  }
-                  this.dragAction.off('statusChange')
-                }
-              })
-              this.dragAction.startDrag().then(() => {
-              }).catch((err: Error) => {
-                console.error(`start drag Error:${err.message}`);
-              })
-            } catch (err) {
-              console.error(`create dragAction Error:${err.message}`);
-            }
-          }
-        }
-      }).margin({ top: 20 })
-    }
-  }
-}
-```

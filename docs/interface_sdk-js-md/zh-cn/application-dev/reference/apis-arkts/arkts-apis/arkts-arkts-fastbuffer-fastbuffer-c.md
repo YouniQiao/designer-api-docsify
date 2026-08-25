@@ -4,14 +4,12 @@ FastBuffer对象是比Buffer性能更优的Buffer容器，用于表示固定长�
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## compare
@@ -23,8 +21,6 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 比较当前对象this与目标对象target，并返回比较结果。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -53,36 +49,6 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 | [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.from('1234');
-let buf2 = fastbuffer.from('0123');
-let compareResult = fastbuffer.compare(buf1, buf2);
-
-console.info(Number(compareResult).toString());
-// 输出结果：1
-```
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-let buf2 = fastbuffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
-
-// 比较buf1[0,4)与buf2[5,9)，结果为0表示相同
-console.info(buf1.compare(buf2, 5, 9, 0, 4).toString());
-// 输出结果：0
-// 比较buf1[4,end)与buf2[0,6)，结果为-1表示buf1排在前面
-console.info(buf1.compare(buf2, 0, 6, 4).toString());
-// 输出结果：-1
-// 比较buf1[5,end)与buf2[5,6)，结果为1表示buf1排在后面
-console.info(buf1.compare(buf2, 5, 6, 5).toString());
-// 输出结果：1
-```
-
 ## copy
 
 ```TypeScript
@@ -92,8 +58,6 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。如果sourceEnd大于target的长度，则以target的长度为准，超出部分不会被覆盖。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -121,25 +85,6 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 | [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-// 创建未初始化的FastBuffer对象作为复制源
-let buf1 = fastbuffer.allocUninitializedFromPool(26);
-// 创建填充'!'的FastBuffer对象作为复制目标
-let buf2 = fastbuffer.allocUninitializedFromPool(26).fill('!');
-// 向buf1写入a-z的ASCII字符
-for (let i = 0; i < 26; i++) {
-  buf1.writeInt8(i + 97, i);
-}
-// 将buf1的第16到20字节复制到buf2的第8字节起的位置
-buf1.copy(buf2, 8, 16, 20);
-console.info(buf2.toString('ascii', 0, 25));
-// 输出结果：!!!!!!!!qrst!!!!!!!!!!!!!
-```
-
 ## entries
 
 ```TypeScript
@@ -153,8 +98,6 @@ entries(): IterableIterator<[
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -163,33 +106,7 @@ entries(): IterableIterator<[
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-// 创建FastBuffer对象
-let buf = fastbuffer.from('buffer');
-// 获取entries迭代器
-let entryIterator = buf.entries();
-// 获取迭代器的第一个元素
-let nextEntry: IteratorResult<[number, number]> = entryIterator.next();
-// 遍历迭代器输出每个[key, value]对
-while (!nextEntry.done) {
-  console.info('fastbuffer: ' + nextEntry.value);
-  /*
-  输出结果：fastbuffer: 0,98
-           fastbuffer: 1,117
-           fastbuffer: 2,102
-           fastbuffer: 3,102
-           fastbuffer: 4,101
-           fastbuffer: 5,114
-   */
-  nextEntry = entryIterator.next();
-}
-```
+| IterableIterator & lt;[number, number] & gt; |
 
 ## equals
 
@@ -200,8 +117,6 @@ equals(otherBuffer: Uint8Array | FastBuffer): boolean
 逐字节比较`this`和otherBuffer是否相等。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -225,21 +140,6 @@ equals(otherBuffer: Uint8Array | FastBuffer): boolean
 | --- |
 | [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.from('ABC');
-let buf2 = fastbuffer.from('414243', 'hex');
-let buf3 = fastbuffer.from('ABCD');
-
-console.info(buf1.equals(buf2).toString());
-// 输出结果：true
-console.info(buf1.equals(buf3).toString());
-// 输出结果：false
-```
-
 ## fill
 
 ```TypeScript
@@ -249,8 +149,6 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 使用`value`填充当前对象指定位置的数据，当`value`长度小于待填充范围时将循环重复`value`进行填充，并返回填充后的FastBuffer对象。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -278,16 +176,6 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 | [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let filledBuffer = fastbuffer.allocUninitializedFromPool(50).fill('h');
-console.info(filledBuffer.toString());
-// 输出结果：hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-```
-
 ## includes
 
 ```TypeScript
@@ -297,8 +185,6 @@ includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, 
 检查FastBuffer对象是否包含`value`值。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。当byteOffset大于等于this.length时，返回false。当byteOffset小于等于-this.length，查找整个FastBuffer中是否存在`value`。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -318,18 +204,6 @@ includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, 
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from('this is a buffer');
-console.info(buf.includes('this').toString());
-// 输出结果：true
-console.info(buf.includes('be').toString());
-// 输出结果：false
-```
-
 ## indexOf
 
 ```TypeScript
@@ -339,8 +213,6 @@ indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, e
 返回当前对象中首次出现`value`的索引，如果不包含`value`，则返回-1。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。当byteOffset大于等于this.length时，返回-1。当byteOffset小于等于-this.length，返回整个FastBuffer中首次出现`value`的索引。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -359,18 +231,6 @@ indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, e
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from('this is a buffer');
-console.info(buf.indexOf('this').toString());
-// 输出结果：0
-console.info(buf.indexOf('is').toString());
-// 输出结果：2
-```
 
 ## keys
 
@@ -382,8 +242,6 @@ keys(): IterableIterator<number>
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -392,27 +250,7 @@ keys(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from('buffer');
-let keys = buf.keys();
-for (const key of keys) {
-  console.info(key.toString());
-}
-/*
-输出结果：0
-        1
-        2
-        3
-        4
-        5
- */
-```
+| IterableIterator & lt;number & gt; |
 
 ## lastIndexOf
 
@@ -423,8 +261,6 @@ lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: numbe
 返回当前对象中最后一次出现`value`的索引，如果对象不包含`value`，则返回-1。若byteOffset为正数，则从0开始计算偏移量；如果为负数，则从末尾开始计算偏移量。当byteOffset大于等于this.length时，返回整个FastBuffer中最后一次出现`value`的索引。当byteOffset小于等于-this.length时，返回-1。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -444,18 +280,6 @@ lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: numbe
 | --- |
 | number |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from('this buffer is a buffer');
-console.info(buf.lastIndexOf('this').toString());
-// 输出结果：0
-console.info(buf.lastIndexOf('buffer').toString());
-// 输出结果：17
-```
-
 ## readBigInt64BE
 
 ```TypeScript
@@ -465,8 +289,6 @@ readBigInt64BE(offset?: number): bigint
 从指定的`offset`处读取有符号的大端序64位整数。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -489,17 +311,6 @@ readBigInt64BE(offset?: number): bigint
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x70,
-  0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78]);
-console.info(buf.readBigInt64BE(0).toString());
-// 输出结果：7161960797921896816
-```
 
 ## readBigInt64LE
 
@@ -511,8 +322,6 @@ readBigInt64LE(offset?: number): bigint
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -534,17 +343,6 @@ readBigInt64LE(offset?: number): bigint
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x70,
-  0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78]);
-console.info(buf.readBigInt64LE(0).toString());
-// 输出结果：8100120198111388771
-```
 
 ## readBigUInt64BE
 
@@ -556,8 +354,6 @@ readBigUInt64BE(offset?: number): bigint
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -579,17 +375,6 @@ readBigUInt64BE(offset?: number): bigint
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x70,
-  0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78]);
-console.info(buf.readBigUInt64BE(0).toString());
-// 输出结果：7161960797921896816
-```
 
 ## readBigUInt64LE
 
@@ -601,8 +386,6 @@ readBigUInt64LE(offset?: number): bigint
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -625,17 +408,6 @@ readBigUInt64LE(offset?: number): bigint
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x70,
-  0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78]);
-console.info(buf.readBigUInt64LE(0).toString());
-// 输出结果：8100120198111388771
-```
-
 ## readDoubleBE
 
 ```TypeScript
@@ -645,8 +417,6 @@ readDoubleBE(offset?: number): number
 从指定的`offset`处读取64位大端序双精度值。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -669,16 +439,6 @@ readDoubleBE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([1, 2, 3, 4, 5, 6, 7, 8]);
-console.info(buf.readDoubleBE(0).toString());
-// 输出结果：8.20788039913184e-304
-```
 
 ## readDoubleLE
 
@@ -690,8 +450,6 @@ readDoubleLE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -713,16 +471,6 @@ readDoubleLE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([1, 2, 3, 4, 5, 6, 7, 8]);
-console.info(buf.readDoubleLE(0).toString());
-// 输出结果：5.447603722011605e-270
-```
 
 ## readFloatBE
 
@@ -734,8 +482,6 @@ readFloatBE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -757,16 +503,6 @@ readFloatBE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([1, 2, 3, 4, 5, 6, 7, 8]);
-console.info(buf.readFloatBE(0).toString());
-// 输出结果：2.387939260590663e-38
-```
 
 ## readFloatLE
 
@@ -778,8 +514,6 @@ readFloatLE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -801,16 +535,6 @@ readFloatLE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([1, 2, 3, 4, 5, 6, 7, 8]);
-console.info(buf.readFloatLE(0).toString());
-// 输出结果：1.539989614439558e-36
-```
 
 ## readInt16BE
 
@@ -822,8 +546,6 @@ readInt16BE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -845,16 +567,6 @@ readInt16BE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0, 5]);
-console.info(buf.readInt16BE(0).toString());
-// 输出结果：5
-```
 
 ## readInt16LE
 
@@ -866,8 +578,6 @@ readInt16LE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -889,16 +599,6 @@ readInt16LE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0, 5]);
-console.info(buf.readInt16LE(0).toString());
-// 输出结果：1280
-```
 
 ## readInt32BE
 
@@ -910,8 +610,6 @@ readInt32BE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -933,16 +631,6 @@ readInt32BE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0, 0, 0, 5]);
-console.info(buf.readInt32BE(0).toString());
-// 输出结果：5
-```
 
 ## readInt32LE
 
@@ -954,8 +642,6 @@ readInt32LE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -977,16 +663,6 @@ readInt32LE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0, 0, 0, 5]);
-console.info(buf.readInt32LE(0).toString());
-// 输出结果：83886080
-```
 
 ## readInt8
 
@@ -998,8 +674,6 @@ readInt8(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1021,18 +695,6 @@ readInt8(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([-1, 5]);
-console.info(buf.readInt8(0).toString());
-// 输出结果：-1
-console.info(buf.readInt8(1).toString());
-// 输出结果：5
-```
 
 ## readIntBE
 
@@ -1044,8 +706,6 @@ readIntBE(offset: number, byteLength: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1068,17 +728,6 @@ readIntBE(offset: number, byteLength: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from('ab');
-let num = buf.readIntBE(0, 1);
-console.info(num.toString());
-// 输出结果：97
-```
 
 ## readIntLE
 
@@ -1090,8 +739,6 @@ readIntLE(offset: number, byteLength: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1114,16 +761,6 @@ readIntLE(offset: number, byteLength: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x12, 0x34, 0x56, 0x78, 0x90, 0xab]);
-console.info(buf.readIntLE(0, 6).toString(16));
-// 输出结果：-546f87a9cbee
-```
 
 ## readUInt16BE
 
@@ -1135,8 +772,6 @@ readUInt16BE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1158,18 +793,6 @@ readUInt16BE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x12, 0x34, 0x56]);
-console.info(buf.readUInt16BE(0).toString(16));
-// 输出结果：1234
-console.info(buf.readUInt16BE(1).toString(16));
-// 输出结果：3456
-```
 
 ## readUInt16LE
 
@@ -1181,8 +804,6 @@ readUInt16LE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1204,18 +825,6 @@ readUInt16LE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x12, 0x34, 0x56]);
-console.info(buf.readUInt16LE(0).toString(16));
-// 输出结果：3412
-console.info(buf.readUInt16LE(1).toString(16));
-// 输出结果：5634
-```
 
 ## readUInt32BE
 
@@ -1227,8 +836,6 @@ readUInt32BE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1250,16 +857,6 @@ readUInt32BE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x12, 0x34, 0x56, 0x78]);
-console.info(buf.readUInt32BE(0).toString(16));
-// 输出结果：12345678
-```
 
 ## readUInt32LE
 
@@ -1271,8 +868,6 @@ readUInt32LE(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1294,16 +889,6 @@ readUInt32LE(offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x12, 0x34, 0x56, 0x78]);
-console.info(buf.readUInt32LE(0).toString(16));
-// 输出结果：78563412
-```
 
 ## readUInt8
 
@@ -1315,8 +900,6 @@ readUInt8(offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1339,18 +922,6 @@ readUInt8(offset?: number): number
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([1, -2]);
-console.info(buf.readUInt8(0).toString());
-// 输出结果：1
-console.info(buf.readUInt8(1).toString());
-// 输出结果：254
-```
-
 ## readUIntBE
 
 ```TypeScript
@@ -1360,8 +931,6 @@ readUIntBE(offset: number, byteLength: number): number
 从指定的`offset`处读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号大端序整数。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1385,16 +954,6 @@ readUIntBE(offset: number, byteLength: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x12, 0x34, 0x56, 0x78, 0x90, 0xab]);
-console.info(buf.readUIntBE(0, 6).toString(16));
-// 输出结果：1234567890ab
-```
 
 ## readUIntLE
 
@@ -1406,8 +965,6 @@ readUIntLE(offset: number, byteLength: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1431,16 +988,6 @@ readUIntLE(offset: number, byteLength: number): number
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x12, 0x34, 0x56, 0x78, 0x90, 0xab]);
-console.info(buf.readUIntLE(0, 6).toString(16));
-// 输出结果：ab9078563412
-```
-
 ## subarray
 
 ```TypeScript
@@ -1450,8 +997,6 @@ subarray(start?: number, end?: number): FastBuffer
 截取当前对象指定位置的数据并返回。返回的FastBuffer对象与原对象共享同一内存区域，修改任一对象的数据都会影响另一个。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1470,21 +1015,6 @@ subarray(start?: number, end?: number): FastBuffer
 | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.allocUninitializedFromPool(26);
-
-for (let i = 0; i < 26; i++) {
-  buf1.writeInt8(i + 97, i);
-}
-const buf2 = buf1.subarray(0, 3);
-console.info(buf2.toString('ascii', 0, buf2.length));
-// 输出结果: abc
-```
-
 ## swap16
 
 ```TypeScript
@@ -1494,8 +1024,6 @@ swap16(): FastBuffer
 以16位无符号整数为单位交换当前对象的字节顺序。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1512,19 +1040,6 @@ swap16(): FastBuffer
 | 错误码ID |
 | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer的长度错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.from([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8]);
-console.info(buf1.toString('hex'));
-// 输出结果：0102030405060708
-buf1.swap16();
-console.info(buf1.toString('hex'));
-// 输出结果：0201040306050807
-```
 
 ## swap32
 
@@ -1536,8 +1051,6 @@ swap32(): FastBuffer
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1553,19 +1066,6 @@ swap32(): FastBuffer
 | 错误码ID |
 | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer的长度错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.from([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8]);
-console.info(buf1.toString('hex'));
-// 输出结果：0102030405060708
-buf1.swap32();
-console.info(buf1.toString('hex'));
-// 输出结果：0403020108070605
-```
 
 ## swap64
 
@@ -1577,8 +1077,6 @@ swap64(): FastBuffer
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1595,19 +1093,6 @@ swap64(): FastBuffer
 | --- |
 | [10200009](../errorcode-utils.md#10200009-buffer的长度错误) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.from([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8]);
-console.info(buf1.toString('hex'));
-// 输出结果：0102030405060708
-buf1.swap64();
-console.info(buf1.toString('hex'));
-// 输出结果：0807060504030201
-```
-
 ## toJSON
 
 ```TypeScript
@@ -1617,8 +1102,6 @@ toJSON(): Object
 将FastBuffer转为JSON并返回。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1630,17 +1113,6 @@ toJSON(): Object
 | --- |
 | Object |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.from([0x1, 0x2, 0x3, 0x4, 0x5]);
-let jsonResult = buf1.toJSON();
-console.info(JSON.stringify(jsonResult));
-// 输出结果: {"type":"FastBuffer","data":[1,2,3,4,5]}
-```
-
 ## toString
 
 ```TypeScript
@@ -1650,8 +1122,6 @@ toString(encoding?: string, start?: number, end?: number): string
 将当前对象中指定位置的数据转成指定编码格式的字符串并返回。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1677,19 +1147,6 @@ toString(encoding?: string, start?: number, end?: number): string
 | --- |
 | [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.allocUninitializedFromPool(26);
-for (let i = 0; i < 26; i++) {
-  buf1.writeInt8(i + 97, i);
-}
-console.info(buf1.toString('utf-8'));
-// 输出结果: abcdefghijklmnopqrstuvwxyz
-```
-
 ## values
 
 ```TypeScript
@@ -1700,8 +1157,6 @@ values(): IterableIterator<number>
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1710,29 +1165,7 @@ values(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.from('buffer');
-let valueIterator = buf1.values();
-let nextValue:IteratorResult<number> = valueIterator.next();
-while (!nextValue.done) {
-  console.info(nextValue.value.toString());
-  /*
-  输出结果：98
-           117
-           102
-           102
-           101
-           114
-   */
-  nextValue = valueIterator.next();
-}
-```
+| IterableIterator & lt;number & gt; |
 
 ## write
 
@@ -1743,8 +1176,6 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 在FastBuffer对象的offset偏移处写入指定编码的字符串，最大写入字节长度为length，实际写入字节数取决于字符串编码后的字节数。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1772,22 +1203,6 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 | [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.alloc(256);
-let bytesWritten = buf.write('\u00bd + \u00bc = \u00be', 0);
-console.info(`${bytesWritten} bytes: ${buf.toString('utf-8', 0, bytesWritten)}`);
-// 输出结果: 12 bytes: ½ + ¼ = ¾
-
-let buf1 = fastbuffer.alloc(10);
-let length = buf1.write('abcd', 8);
-console.info('length = ' + length);
-// 输出结果：length = 2
-```
-
 ## writeBigInt64BE
 
 ```TypeScript
@@ -1797,8 +1212,6 @@ writeBigInt64BE(value: bigint, offset?: number): number
 在FastBuffer对象的offset偏移处写入有符号的大端序64位BigInt型数据。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1822,17 +1235,6 @@ writeBigInt64BE(value: bigint, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(8);
-let result = buf.writeBigInt64BE(BigInt(0x0102030405060708), 0);
-console.info('result = ' + result);
-// 输出结果：result = 8
-```
 
 ## writeBigInt64LE
 
@@ -1844,8 +1246,6 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1868,17 +1268,6 @@ writeBigInt64LE(value: bigint, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(8);
-let result = buf.writeBigInt64LE(BigInt(0x0102030405060708), 0);
-console.info('result = ' + result);
-// 输出结果：result = 8
-```
 
 ## writeBigUInt64BE
 
@@ -1890,8 +1279,6 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1914,17 +1301,6 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(8);
-let result = buf.writeBigUInt64BE(BigInt(0xdecafafecacefade), 0);
-console.info('result = ' + result);
-// 输出结果：result = 8
-```
 
 ## writeBigUInt64LE
 
@@ -1936,8 +1312,6 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1961,17 +1335,6 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(8);
-let result = buf.writeBigUInt64LE(BigInt(0xdecafafecacefade), 0);
-console.info('result = ' + result);
-// 输出结果：result = 8
-```
-
 ## writeDoubleBE
 
 ```TypeScript
@@ -1981,8 +1344,6 @@ writeDoubleBE(value: number, offset?: number): number
 在FastBuffer对象的offset偏移处写入大端序的64位双浮点型数据。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -2006,17 +1367,6 @@ writeDoubleBE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(8);
-let result = buf.writeDoubleBE(123.456, 0);
-console.info('result = ' + result);
-// 输出结果：result = 8
-```
 
 ## writeDoubleLE
 
@@ -2028,8 +1378,6 @@ writeDoubleLE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2052,17 +1400,6 @@ writeDoubleLE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(8);
-let result = buf.writeDoubleLE(123.456, 0);
-console.info('result = ' + result);
-// 输出结果：result = 8
-```
 
 ## writeFloatBE
 
@@ -2074,8 +1411,6 @@ writeFloatBE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2098,17 +1433,6 @@ writeFloatBE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(8);
-let result = buf.writeFloatBE(3.1415, 0);
-console.info('result = ' + result);
-// 输出结果：result = 4
-```
 
 ## writeFloatLE
 
@@ -2120,8 +1444,6 @@ writeFloatLE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2144,17 +1466,6 @@ writeFloatLE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(8);
-let result = buf.writeFloatLE(3.1415, 0);
-console.info('result = ' + result);
-// 输出结果：result = 4
-```
 
 ## writeInt16BE
 
@@ -2166,8 +1477,6 @@ writeInt16BE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2190,17 +1499,6 @@ writeInt16BE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(2);
-let result = buf.writeInt16BE(0x0102, 0);
-console.info('result = ' + result);
-// 输出结果：result = 2
-```
 
 ## writeInt16LE
 
@@ -2212,8 +1510,6 @@ writeInt16LE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2236,17 +1532,6 @@ writeInt16LE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(2);
-let result = buf.writeInt16LE(0x0304, 0);
-console.info('result = ' + result);
-// 输出结果：result = 2
-```
 
 ## writeInt32BE
 
@@ -2258,8 +1543,6 @@ writeInt32BE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2282,17 +1565,6 @@ writeInt32BE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(4);
-let result = buf.writeInt32BE(0x01020304, 0);
-console.info('result = ' + result);
-// 输出结果：result = 4
-```
 
 ## writeInt32LE
 
@@ -2304,8 +1576,6 @@ writeInt32LE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2328,17 +1598,6 @@ writeInt32LE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(4);
-let result = buf.writeInt32LE(0x05060708, 0);
-console.info('result = ' + result);
-// 输出结果：result = 4
-```
 
 ## writeInt8
 
@@ -2350,8 +1609,6 @@ writeInt8(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2374,20 +1631,6 @@ writeInt8(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(2);
-let result = buf.writeInt8(2, 0);
-console.info('result = ' + result);
-// 输出结果：result = 1
-let result1 = buf.writeInt8(-2, 1);
-console.info('result1 = ' + result1);
-// 输出结果：result1 = 2
-```
 
 ## writeIntBE
 
@@ -2399,8 +1642,6 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2424,17 +1665,6 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(6);
-let result = buf.writeIntBE(0x1234567890ab, 0, 6);
-console.info('result = ' + result);
-// 输出结果：result = 6
-```
 
 ## writeIntLE
 
@@ -2446,8 +1676,6 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2471,17 +1699,6 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(6);
-let result = buf.writeIntLE(0x1234567890ab, 0, 6);
-console.info('result = ' + result);
-// 输出结果：result = 6
-```
 
 ## writeUInt16BE
 
@@ -2493,8 +1710,6 @@ writeUInt16BE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2517,20 +1732,6 @@ writeUInt16BE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(4);
-let result = buf.writeUInt16BE(0xdead, 0);
-console.info('result = ' + result);
-// 输出结果：result = 2
-let result1 = buf.writeUInt16BE(0xbeef, 2);
-console.info('result1 = ' + result1);
-// 输出结果：result1 = 4
-```
 
 ## writeUInt16LE
 
@@ -2542,8 +1743,6 @@ writeUInt16LE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2566,20 +1765,6 @@ writeUInt16LE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(4);
-let result = buf.writeUInt16LE(0xdead, 0);
-console.info('result = ' + result);
-// 输出结果：result = 2
-let result1 = buf.writeUInt16LE(0xbeef, 2);
-console.info('result1 = ' + result1);
-// 输出结果：result1 = 4
-```
 
 ## writeUInt32BE
 
@@ -2591,8 +1776,6 @@ writeUInt32BE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2615,17 +1798,6 @@ writeUInt32BE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(4);
-let result = buf.writeUInt32BE(0xfeedface, 0);
-console.info('result = ' + result);
-// 输出结果：result = 4
-```
 
 ## writeUInt32LE
 
@@ -2637,8 +1809,6 @@ writeUInt32LE(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2661,17 +1831,6 @@ writeUInt32LE(value: number, offset?: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(4);
-let result = buf.writeUInt32LE(0xfeedface, 0);
-console.info('result = ' + result);
-// 输出结果：result = 4
-```
 
 ## writeUInt8
 
@@ -2683,8 +1842,6 @@ writeUInt8(value: number, offset?: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2708,26 +1865,6 @@ writeUInt8(value: number, offset?: number): number
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(4);
-let result = buf.writeUInt8(0x3, 0);
-console.info('result = ' + result);
-// 输出结果：result = 1
-let result1 = buf.writeUInt8(0x4, 1);
-console.info('result1 = ' + result1);
-// 输出结果：result1 = 2
-let result2 = buf.writeUInt8(0x23, 2);
-console.info('result2 = ' + result2);
-// 输出结果：result2 = 3
-let result3 = buf.writeUInt8(0x42, 3);
-console.info('result3 = ' + result3);
-// 输出结果：result3 = 4
-```
-
 ## writeUIntBE
 
 ```TypeScript
@@ -2737,8 +1874,6 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 在FastBuffer对象的offset偏移处写入大端序的无符号数据，字节长度为byteLength。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -2763,17 +1898,6 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(6);
-let result = buf.writeUIntBE(0x1234567890ab, 0, 6);
-console.info('result = ' + result);
-// 输出结果：result = 6
-```
 
 ## writeUIntLE
 
@@ -2785,8 +1909,6 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2810,17 +1932,6 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 | 错误码ID |
 | --- |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.allocUninitializedFromPool(6);
-let result = buf.writeUIntLE(0x1234567890ab, 0, 6);
-console.info('result = ' + result);
-// 输出结果：result = 6
-```
 
 ## buffer
 
@@ -2833,8 +1944,6 @@ FastBuffer底层对应的ArrayBuffer对象。
 **类型：** ArrayBuffer
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -2852,8 +1961,6 @@ byteOffset: number
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -2869,8 +1976,6 @@ FastBuffer对象的字节长度。
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

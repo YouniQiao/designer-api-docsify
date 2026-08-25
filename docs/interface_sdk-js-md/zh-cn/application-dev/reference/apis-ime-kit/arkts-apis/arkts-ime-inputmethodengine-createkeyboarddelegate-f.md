@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## createKeyboardDelegate
@@ -12,16 +12,14 @@ import { inputMethodEngine } from '@kit.IMEKit';
 function createKeyboardDelegate(): KeyboardDelegate
 ```
 
-获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)。输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
+获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)。输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。   
+> **说明：**
+   
+> 
+   
 > 从 API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -34,9 +32,3 @@ function createKeyboardDelegate(): KeyboardDelegate
 | 类型 |
 | --- |
 | [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) |
-
-**示例**
-
-```TypeScript
-let keyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.createKeyboardDelegate();
-```

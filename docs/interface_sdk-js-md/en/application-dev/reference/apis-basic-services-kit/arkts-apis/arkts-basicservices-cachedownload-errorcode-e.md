@@ -4,8 +4,6 @@ Enumerates the specific types of returned error code.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## OTHERS
@@ -17,8 +15,6 @@ OTHERS = 0xFF
 Other types of errors that are not classified.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -32,8 +28,6 @@ DNS-related errors.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## TCP
@@ -45,8 +39,6 @@ TCP = 0x10
 TCP-related errors.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -60,8 +52,6 @@ SSL-related errors.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## HTTP
@@ -73,7 +63,5 @@ HTTP = 0x30
 HTTP-related errors.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent

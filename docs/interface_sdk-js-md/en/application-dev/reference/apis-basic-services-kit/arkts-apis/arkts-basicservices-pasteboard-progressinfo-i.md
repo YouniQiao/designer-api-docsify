@@ -4,29 +4,25 @@ Defines the progress information. This information is reported only when [Progre
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## progress
 
 ```TypeScript
-progress: int
+progress: number
 ```
 
 If the progress indicator provided by the system is not used, the system reports the progress percentage of the paste task.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

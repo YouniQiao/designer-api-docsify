@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllowedInstallBundlesSync
@@ -15,8 +15,6 @@ function getAllowedInstallBundlesSync(admin: Want, accountId?: number): Array<st
 Obtains the applications that can be installed by the current or specified user.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -46,26 +44,6 @@ Obtains the applications that can be installed by the current or specified user.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: Array<string> = bundleManager.getAllowedInstallBundlesSync(wantTemp, 100);
-  console.info(`Succeeded in getting allowed install bundles, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get allowed install bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## getAllowedInstallBundlesSync
 
@@ -76,8 +54,6 @@ function getAllowedInstallBundlesSync(admin: Want | null, accountId?: number): A
 Obtains the applications that can be installed by the current or specified user.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -106,7 +82,3 @@ Obtains the applications that can be installed by the current or specified user.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getAllowedInstallBundlesSync](#getallowedinstallbundlessync)

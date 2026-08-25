@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## off('deviceSelected')
@@ -15,8 +15,6 @@ function off(type: 'deviceSelected', token: number): void
 Unsubscribes from device connection events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 22
 
@@ -47,19 +45,6 @@ Unsubscribes from device connection events.
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
 | [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) |
 
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-try {
-  continuationManager.off("deviceSelected", token);
-} catch (err) {
-  console.error('off failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## off('deviceUnselected')
 
@@ -70,8 +55,6 @@ function off(type: 'deviceUnselected', token: number): void
 Unsubscribes from device disconnection events.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 22
 
@@ -102,19 +85,6 @@ Unsubscribes from device disconnection events.
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
 | [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) |
 
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-try {
-  continuationManager.off("deviceUnselected", token);
-} catch (err) {
-  console.error('off failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## off('deviceConnect')
 
@@ -125,8 +95,6 @@ function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): vo
 Unsubscribes from device connection events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -143,18 +111,6 @@ Unsubscribes from device connection events. This API uses an asynchronous callba
 | type | 'deviceConnect' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | No |
 
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-continuationManager.off("deviceConnect", (data) => {
-  console.info('onDeviceConnect deviceId: ' + JSON.stringify(data.id));
-  console.info('onDeviceConnect deviceType: ' + JSON.stringify(data.type));
-  console.info('onDeviceConnect deviceName: ' + JSON.stringify(data.name));
-});
-```
-
 
 ## off('deviceDisconnect')
 
@@ -165,8 +121,6 @@ function off(type: 'deviceDisconnect', callback?: Callback<string>): void
 Unsubscribes from device disconnection events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -182,13 +136,3 @@ Unsubscribes from device disconnection events. This API uses an asynchronous cal
 | --- | --- | --- |
 | type | 'deviceDisconnect' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-continuationManager.off("deviceDisconnect", (data) => {
-  console.info('onDeviceDisconnect deviceId: ' + JSON.stringify(data));
-});
-```

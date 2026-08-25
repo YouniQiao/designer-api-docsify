@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## NONE
@@ -14,11 +12,9 @@
 NONE = 0
 ```
 
-NONE。 <br> <br>使用场景：表示键盘状态尚未确定或无法判断时使用。
+NONE。 使用场景：表示键盘状态尚未确定或无法判断时使用。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -28,11 +24,9 @@ NONE。 <br> <br>使用场景：表示键盘状态尚未确定或无法判断时
 HIDE = 1
 ```
 
-隐藏状态。 <br> <br>使用场景：表示当前软键盘处于隐藏状态。
+隐藏状态。 使用场景：表示当前软键盘处于隐藏状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -42,10 +36,8 @@ HIDE = 1
 SHOW = 2
 ```
 
-显示状态。 <br> <br>使用场景：表示当前软键盘处于显示状态。
+显示状态。 使用场景：表示当前软键盘处于显示状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getEsimFreeStorage
 
 ```TypeScript
-function getEsimFreeStorage(): Promise<int>
+function getEsimFreeStorage(): Promise<number>
 ```
 
 This API is used to obtain the remaining storage space of the eUICC hardware. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
@@ -28,7 +26,7 @@ This API is used to obtain the remaining storage space of the eUICC hardware. Th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 

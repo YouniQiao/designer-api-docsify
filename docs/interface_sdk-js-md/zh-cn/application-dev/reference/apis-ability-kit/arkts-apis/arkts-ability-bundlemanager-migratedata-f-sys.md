@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## migrateData
@@ -15,8 +15,6 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 拷贝文件，将文件从源路径拷贝到目标路径。使用Promise异步回调。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MIGRATE_DATA
 
@@ -50,59 +48,3 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 | [17700084](../errorcode-bundle.md#17700084-源路径中存在未开启权限路径) |
 | [17700085](../errorcode-bundle.md#17700085-目标路径未开启写权限) |
 | [17700086](../errorcode-bundle.md#17700086-发生系统错误) |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  // 开发者需将source1、source2、dest内容更新为实际文件路径或目录路径。
-  let source1: string = "/data/app/el2/100/base/com.example.myapplication/";
-  let source2: string = "/data/app/el2/101/base/com.example.myapplication/log.txt";
-  let dest: string = "/data/local/tmp";
-  let sourcePaths: Array<string> = [source1, source2];
-
-  bundleManager.migrateData(sourcePaths, dest)
-    .then(() => {
-      hilog.info(0x0000, 'testTag', 'migrateData succeed');
-    })
-    .catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', 'migrateData err: %{public}s', JSON.stringify(err));
-    })
-} catch (err) {
-  hilog.error(0x0000, 'testTag', 'migrateData call err: %{public}s', JSON.stringify(err));
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  // 开发者需将source1、source2、dest内容更新为实际文件路径或目录路径。
-  let source1: string = "/data/app/el2/100/base/com.example.myapplication/";
-  let source2: string = "/data/app/el2/101/base/com.example.myapplication/log.txt";
-  let dest: string = "/data/local/tmp";
-  let sourcePaths: Array<string> = [source1, source2];
-
-  bundleManager.migrateData(sourcePaths, dest)
-    .then(() => {
-      hilog.info(0x0000, 'testTag', 'migrateData succeed');
-    })
-    .catch((err: Error) => {
-      hilog.error(0x0000, 'testTag', 'migrateData err: %{public}s', JSON.stringify(err as BusinessError));
-    })
-} catch(err) {
-  hilog.error(0x0000, 'testTag', 'migrateData call err: %{public}s', JSON.stringify(err));
-}
-```

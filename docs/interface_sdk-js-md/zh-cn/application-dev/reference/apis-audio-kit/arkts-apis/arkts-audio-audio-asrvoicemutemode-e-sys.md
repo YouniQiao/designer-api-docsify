@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ OUTPUT_MUTE = 0
 本地输出静音。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -36,8 +32,6 @@ INPUT_MUTE = 1
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ TTS_MUTE  = 2
 应用下发的媒体音频本地静音。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -68,8 +60,6 @@ CALL_MUTE = 3
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ OUTPUT_MUTE_EX = 4
 本地输出静音，媒体音频流送给通话录音。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 

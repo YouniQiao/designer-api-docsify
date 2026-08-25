@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
+import { CounterComponent, CounterOptions, CounterType, DateData } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
@@ -30,11 +30,3 @@ import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.Ar
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnCounterHoverCallback](arkts-arkui-oncounterhovercallback-t.md) |
-| [OnDateCounterChangeCallback](arkts-arkui-ondatecounterchangecallback-t.md) |
-| [OnInlineCounterChange](arkts-arkui-oninlinecounterchange-t.md) |

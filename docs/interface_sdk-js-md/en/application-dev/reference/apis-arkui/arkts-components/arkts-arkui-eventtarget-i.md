@@ -4,8 +4,6 @@ Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-baseeven
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ area: Area
 
 Area information of the target element.
 
-**Type:** Area
+**Type:** [Area](../arkts-apis/arkts-arkui-area-i.md)
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +40,6 @@ Custom node [ID](arkts-arkui-commonmethod-c.md#id). Default value: **undefined**
 **Type:** string
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getNativeHeapFreeSize
@@ -16,8 +16,6 @@ Obtains the total number of bytes occupied by the total free space (**fordblks**
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
@@ -25,11 +23,3 @@ Obtains the total number of bytes occupied by the total free space (**fordblks**
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | bigint |
-
-**Examples**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-
-let nativeHeapFreeSize: bigint = hidebug.getNativeHeapFreeSize();
-```

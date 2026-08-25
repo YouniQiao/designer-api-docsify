@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## FAMILY_TYPE_ALL
@@ -17,8 +15,6 @@ FAMILY_TYPE_ALL = 0
 查询所有IPv4和IPv6地址。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -32,8 +28,6 @@ FAMILY_TYPE_IPV4 = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## FAMILY_TYPE_IPV6
@@ -45,7 +39,5 @@ FAMILY_TYPE_IPV6 = 2
 仅查询IPv6地址。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core

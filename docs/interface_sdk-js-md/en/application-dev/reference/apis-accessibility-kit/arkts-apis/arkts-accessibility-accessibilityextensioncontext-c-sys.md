@@ -18,27 +18,17 @@ class EntryAbility extends AccessibilityExtensionAbility {
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## addAccessibilityVirtualNodes
 
-ArkTS-Dyn:
 ```TypeScript
 addAccessibilityVirtualNodes(elementId: number, windowId: number, nodes: Array<AccessibilityVirtualNode>): Promise<OperateVirtualNodeResult>
-```
-
-ArkTS-Sta:
-```TypeScript
-addAccessibilityVirtualNodes(elementId: long, windowId: int, nodes: Array<AccessibilityVirtualNode>): Promise<OperateVirtualNodeResult>
 ```
 
 Adds a virtual accessibility node tree. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -52,8 +42,8 @@ Adds a virtual accessibility node tree. This API uses a promise to return the re
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| elementId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| elementId | number | Yes |
+| windowId | number | Yes |
 | nodes | Array&lt;[AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md)&gt; | Yes |
 
 **Return value:**
@@ -80,8 +70,6 @@ Obtains the element that currently has the accessibility focus. This API uses a 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -103,67 +91,15 @@ Obtains the element that currently has the accessibility focus. This API uses a 
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityElement,
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    this.context.getAccessibilityFocusedElement().then((element: AccessibilityElement) => {
-      console.info(`Succeeded in get accessibility focused element, ${element.bundleName}`);
-    }).catch((err: BusinessError) => {
-      console.error(`failed to get accessibility focused element, Code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
 ## getAccessibilityWindowsSync
 
-ArkTS-Dyn:
 ```TypeScript
 getAccessibilityWindowsSync(displayId?: number): Array<AccessibilityElement>
-```
-
-ArkTS-Sta:
-```TypeScript
-getAccessibilityWindowsSync(displayId?: long): Array<AccessibilityElement>
 ```
 
 Obtains the list of all accessibility-accessible windows on the current display device.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -175,7 +111,7 @@ Obtains the list of all accessibility-accessible windows on the current display 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：long | No |
+| displayId | number | No |
 
 **Return value:**
 
@@ -191,71 +127,15 @@ Obtains the list of all accessibility-accessible windows on the current display 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    try {
-      let displayId: number = 0;
-      let windowList = this.context.getAccessibilityWindowsSync(displayId);
-      if (windowList) {
-        for (let window of windowList) {
-          console.info(`getAccessibilityWindowsSync: windowId: ${window.windowId}`);
-        }
-      }
-    } catch (err) {
-      console.error(`[FAILED] getAccessibilityWindowsSync: ${err.code} ${err.message}`)
-    }
-  }
-}
-```
-
 ## getDefaultFocusedElementIds
 
-ArkTS-Dyn:
 ```TypeScript
 getDefaultFocusedElementIds(windowId: number): Promise<Array<number>>
-```
-
-ArkTS-Sta:
-```TypeScript
-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>
 ```
 
 Queries the list of default focus element IDs customized by the app. This API uses a promise to return the result.Default focus refers to the element that the accessibility service prioritizes for focusing when a window is opened.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -265,13 +145,13 @@ Queries the list of default focus element IDs customized by the app. This API us
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| windowId | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;long & gt; & gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
@@ -281,68 +161,15 @@ Queries the list of default focus element IDs customized by the app. This API us
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    let windowId: number = 10;
-
-    this.context.getDefaultFocusedElementIds(windowId).then((data: number[]) => {
-      console.info(`Succeeded in get default focus, ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`failed to get default focus, Code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
 ## getElements
 
-ArkTS-Dyn:
 ```TypeScript
 getElements(windowId: number, elementId?: number): Promise<Array<AccessibilityElement>>
-```
-
-ArkTS-Sta:
-```TypeScript
-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>
 ```
 
 Queries all descendant accessibility nodes in a specified window or under a specified node in batches. This API uses a promise to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -352,8 +179,8 @@ Queries all descendant accessibility nodes in a specified window or under a spec
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| elementId | ArkTS-Dyn: number<br>ArkTS-Sta：long | No |
+| windowId | number | Yes |
+| elementId | number | No |
 
 **Return value:**
 
@@ -369,70 +196,15 @@ Queries all descendant accessibility nodes in a specified window or under a spec
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityElement,
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    let windowId: number = 10;
-    let elementId: number = 10;
-
-    this.context.getElements(windowId, elementId).then((data:AccessibilityElement[]) => {
-      console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
 ## getRootInActiveWindow
 
-ArkTS-Dyn:
 ```TypeScript
 getRootInActiveWindow(windowId?: number): Promise<AccessibilityElement>
-```
-
-ArkTS-Sta:
-```TypeScript
-getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>
 ```
 
 Obtains the root element of the accessibility node tree of the active window. This API uses a promise to return the result.The active window refers to the foreground app window that currently gains focus.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -444,7 +216,7 @@ Obtains the root element of the accessibility node tree of the active window. Th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| windowId | number | No |
 
 **Return value:**
 
@@ -461,52 +233,6 @@ Obtains the root element of the accessibility node tree of the active window. Th
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityElement,
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    let windowId: number = 0;
-
-    this.context.getRootInActiveWindow(windowId).then((element: AccessibilityElement) => {
-      console.info(`Succeeded in get root inactive window element, ${element.bundleName}`);
-    }).catch((err: BusinessError) => {
-      console.error(`failed to get root inactive window element, Code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
 ## holdRunningLockSync
 
 ```TypeScript
@@ -516,8 +242,6 @@ holdRunningLockSync(): void
 Holds the RunningLock. After the lock is held, the screen will not automatically turn off. After this method is called, call [unholdRunningLockSync](#unholdrunninglocksync) to release the lock and restore the automatic screen-off mechanism when the screen no longer needs to stay on.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -531,48 +255,6 @@ Holds the RunningLock. After the lock is held, the screen will not automatically
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    try {
-      this.context.holdRunningLockSync();
-    } catch (err) {
-      console.error(`Failed to hold RunningLock, Code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
 
 ## notifyDisconnect
 
@@ -584,8 +266,6 @@ Notifies the accessibility service that the accessibility extension service can 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -599,48 +279,6 @@ Notifies the accessibility service that the accessibility extension service can 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    try {
-      this.context.notifyDisconnect();
-    } catch (err) {
-      console.error(`Failed to notify accessibility, code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
-
 ## off('preDisconnect')
 
 ```TypeScript
@@ -650,8 +288,6 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 Unregisters the pre-disconnect callback registered with the accessibility service. This callback must be registered via on('preDisconnect') before it can be unregistered. After unregistration, the callback will no longer be executed before the accessibility service closes this extension service.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -664,81 +300,6 @@ Unregisters the pre-disconnect callback registered with the accessibility servic
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'preDisconnect' | Yes |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    try {
-      this.context.off('preDisconnect', () => {
-        console.info(`To do something before accessibilityExtension disconnect.`);
-      });
-    } catch (err) {
-      console.error(`Failed to unRegister, code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
-
-## offPreDisconnect
-
-```TypeScript
-offPreDisconnect(callback?: Callback<void>): void
-```
-
-Unregister accessibilityExtensionAbility disconnect callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
 
 **Error codes:**
@@ -758,8 +319,6 @@ Registers a callback with the accessibility service, which is invoked before the
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -780,98 +339,15 @@ Registers a callback with the accessibility service, which is invoked before the
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    try {
-      this.context.on('preDisconnect', () => {
-        console.info(`To do something before accessibilityExtension disconnect.`);
-      });
-    } catch (err) {
-      console.error(`Failed to register, code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
-
-## onPreDisconnect
-
-```TypeScript
-onPreDisconnect(callback: Callback<void>): void
-```
-
-Register accessibilityExtensionAbility disconnect callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## removeAccessibilityVirtualNodes
 
-ArkTS-Dyn:
 ```TypeScript
 removeAccessibilityVirtualNodes(elementId: number, windowId: number): Promise<OperateVirtualNodeResult>
-```
-
-ArkTS-Sta:
-```TypeScript
-removeAccessibilityVirtualNodes(elementId: long, windowId: int): Promise<OperateVirtualNodeResult>
 ```
 
 Deletes the added accessibility virtual node tree. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -885,8 +361,8 @@ Deletes the added accessibility virtual node tree. This API uses a promise to re
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| elementId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| elementId | number | Yes |
+| windowId | number | Yes |
 
 **Return value:**
 
@@ -912,8 +388,6 @@ Starts a foreground page. This API uses a promise to return the result.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -937,55 +411,6 @@ Starts a foreground page. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    let want: Want = {
-      bundleName: 'com.huawei.hmos.photos',
-      abilityName: 'com.huawei.hmos.photos.MainAbility'
-    }
-
-    this.context.startAbility(want).then(() => {
-      console.info(`startAbility Succeeded enable ability`);
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility failed to enable ability, Code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
-
 ## unholdRunningLockSync
 
 ```TypeScript
@@ -995,8 +420,6 @@ unholdRunningLockSync(): void
 Releases the RunningLock and restores automatic screen-off. Used in pair with [holdRunningLockSync](#holdrunninglocksync).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -1011,65 +434,15 @@ Releases the RunningLock and restores automatic screen-off. Used in pair with [h
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    try {
-      this.context.unholdRunningLockSync();
-    } catch (err) {
-      console.error(`Failed to hold RunningLock, Code is ${err.code}, message is ${err.message}`);
-    }
-  }
-}
-```
-
 ## updateAccessibilityElementProperty
 
-ArkTS-Dyn:
 ```TypeScript
 updateAccessibilityElementProperty(elementId: number, windowId: number, node: AccessibilityVirtualNode): Promise<OperateVirtualNodeResult>
-```
-
-ArkTS-Sta:
-```TypeScript
-updateAccessibilityElementProperty(elementId: long, windowId: int, node: AccessibilityVirtualNode): Promise<OperateVirtualNodeResult>
 ```
 
 Modifies the accessibility node property. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -1083,8 +456,8 @@ Modifies the accessibility node property. This API uses a promise to return the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| elementId | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| windowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| elementId | number | Yes |
+| windowId | number | Yes |
 | node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Yes |
 
 **Return value:**

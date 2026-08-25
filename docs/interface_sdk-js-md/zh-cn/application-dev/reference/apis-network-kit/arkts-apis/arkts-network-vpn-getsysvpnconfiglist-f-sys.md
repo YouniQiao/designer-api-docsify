@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## getSysVpnConfigList
@@ -15,8 +15,6 @@ function getSysVpnConfigList(): Promise<Array<SysVpnConfig>>
 获取所有系统VPN网络配置。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.MANAGE_VPN
 

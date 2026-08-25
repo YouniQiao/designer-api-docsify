@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## destroy
@@ -18,33 +16,7 @@ destroy(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
-
-**示例**
-
-```TypeScript
-import { Shader, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
-
-function destroy(): void {
-  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result) {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      // 创建shader资源，路径和文件名可根据项目实际资源自定义
-      let sceneResourceParameter: SceneResourceParameters = { name: "shaderResource",
-        uri: $rawfile("shaders/custom_shader/custom_material_sample.shader") };
-      let shader: Promise<Shader> = sceneFactory.createShader(sceneResourceParameter);
-      shader.then(async (shaderResult:Shader) => {
-         // 释放资源
-         shaderResult.destroy();
-      });
-    }
-  });
-}
-```
 
 ## name
 
@@ -57,8 +29,6 @@ name: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -74,8 +44,6 @@ readonly resourceType: SceneResourceType
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## uri
@@ -86,10 +54,8 @@ readonly uri?: ResourceStr
 
 需要加载的资源，默认值为undefined。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

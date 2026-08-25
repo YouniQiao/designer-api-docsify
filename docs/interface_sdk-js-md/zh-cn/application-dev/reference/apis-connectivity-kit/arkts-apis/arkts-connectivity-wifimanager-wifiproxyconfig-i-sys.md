@@ -4,8 +4,6 @@ WLAN代理配置。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ WLAN代理配置。
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## exclusionObjects
@@ -27,8 +25,6 @@ exclusionObjects?: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -46,8 +42,6 @@ pacWebAddress?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ WLAN代理方式
 **类型：** [ProxyMethod](arkts-connectivity-wifimanager-proxymethod-e-sys.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -82,8 +74,6 @@ serverHostName?: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 **系统接口：** 此接口为系统接口。
@@ -91,16 +81,14 @@ serverHostName?: string
 ## serverPort
 
 ```TypeScript
-serverPort?: int
+serverPort?: number
 ```
 
 手动配置代理的服务器端口。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

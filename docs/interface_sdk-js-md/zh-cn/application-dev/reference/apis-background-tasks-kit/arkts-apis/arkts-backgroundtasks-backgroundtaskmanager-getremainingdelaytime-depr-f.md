@@ -15,8 +15,6 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md)(requestId: int, callback: AsyncCallback&lt;int&gt;)
@@ -30,34 +28,6 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 | requestId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import backgroundTaskManager from '@ohos.backgroundTaskManager';
-import { BusinessError } from '@ohos.base';
-
-let delayInfo = backgroundTaskManager.requestSuspendDelay('test', () => {});
-backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId, (err: BusinessError, res: number) => {
-  if (err) {
-    console.error(`callback => Operation getRemainingDelayTime failed. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('callback => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
-  }
-});
-```
-
-```TypeScript
-import backgroundTaskManager from '@ohos.backgroundTaskManager';
-import { BusinessError } from '@ohos.base';
-
-let delayInfo = backgroundTaskManager.requestSuspendDelay('test', () => {});
-backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId).then((res:number) => {
-  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
-}).catch((err : BusinessError) => {
-  console.info(`promise => Operation getRemainingDelayTime failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getRemainingDelayTime
 
@@ -68,8 +38,6 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 获取本次短时任务的剩余时间，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -88,7 +56,3 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 | 类型 |
 | --- |
 | Promise & lt;number & gt; |
-
-**示例**
-
-参见 [getRemainingDelayTime](#getremainingdelaytime)

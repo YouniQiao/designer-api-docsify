@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setUsbPolicy
@@ -15,8 +15,6 @@ function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy, callback: AsyncCallback
 Sets the USB read/write policy. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -48,47 +46,6 @@ Sets the USB read/write policy. This API uses an asynchronous callback to return
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let policy: usbManager.UsbPolicy = usbManager.UsbPolicy.READ_WRITE;
-
-usbManager.setUsbPolicy(wantTemp, policy, (err) => {
-  if (err) {
-    console.error(`Failed to set usb policy. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting usb policy');
-})
-```
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let policy: usbManager.UsbPolicy = usbManager.UsbPolicy.READ_WRITE;
-
-usbManager.setUsbPolicy(wantTemp, policy).then(() => {
-  console.info('Succeeded in setting usb policy');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set usb policy. Code is ${err.code}, message is ${err.message}`);
-})
-```
-
 
 ## setUsbPolicy
 
@@ -99,8 +56,6 @@ function setUsbPolicy(admin: Want, usbPolicy: UsbPolicy): Promise<void>
 Sets the USB read/write policy. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -136,7 +91,3 @@ Sets the USB read/write policy. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [setUsbPolicy](#setusbpolicy)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setLocalName
@@ -15,8 +15,6 @@ function setLocalName(name: string): boolean
 Sets the Bluetooth friendly name of a device.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -37,9 +35,3 @@ Sets the Bluetooth friendly name of a device.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-let ret : boolean = bluetooth.setLocalName('device_name');
-```

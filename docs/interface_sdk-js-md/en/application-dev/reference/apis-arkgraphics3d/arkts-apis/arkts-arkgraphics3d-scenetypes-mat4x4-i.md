@@ -4,8 +4,6 @@ A camera matrix, which is a mathematical tool for transforming 3D world coordina
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## w
@@ -19,8 +17,6 @@ The fourth column of the matrix, represented as a four-dimensional vector.
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -36,8 +32,6 @@ The first column of the matrix, represented as a four-dimensional vector.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -52,8 +46,6 @@ The second column of the matrix, represented as a four-dimensional vector.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## z
@@ -67,7 +59,5 @@ The third column of the matrix, represented as a four-dimensional vector.
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

@@ -4,8 +4,6 @@ Provides the scene detection and query capabilities.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides the scene detection and query capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isSceneFeatureSupported
@@ -25,8 +23,6 @@ isSceneFeatureSupported(type: SceneFeatureType): boolean
 Checks whether a scene feature is supported.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -50,12 +46,3 @@ Checks whether a scene feature is supported.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-
-**Examples**
-
-```TypeScript
-function isSceneFeatureSupported(photoSessionForSys: camera.PhotoSessionForSys, featureType: camera.SceneFeatureType): boolean {
-  let isSupported: boolean = photoSessionForSys.isSceneFeatureSupported(featureType);
-  return isSupported;
-}
-```

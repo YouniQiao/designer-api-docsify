@@ -4,14 +4,12 @@ Defines the segmented button with capsule style.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUI';
+import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from 'kits/@kit.ArkUI';
 ```
 
 ## $selectedIndex
@@ -23,8 +21,6 @@ $selectedIndex?: OnSelectedIndexChange
 Callback invoked when the selected item changes.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,8 +37,6 @@ build(): void
 Sets the build function of the segmented button.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,8 +56,6 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -82,8 +74,6 @@ Background blur style of the segmented button.Default value: **undefined**This p
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -98,11 +88,9 @@ readonly buttonBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Background blur style options of the segmented button.Default value: **undefined**This property is read-only.
 
-**Type:** BackgroundBlurStyleOptions
+**Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,8 +110,6 @@ Background color of the segmented button.Default value: **\$r('sys.color.segment
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -138,11 +124,9 @@ readonly buttonBackgroundEffect?: BackgroundEffectOptions
 
 Background blur effect options of the segmented button.Default value: **undefined**This property is read-only.
 
-**Type:** BackgroundEffectOptions
+**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,8 +146,6 @@ Background border radius of the segmented button.Value range: [0, +∞)Default v
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -181,8 +163,6 @@ Minimum height of the segmented button.Value range: [0, +∞)Default value: **\$
 **Type:** LengthMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,8 +182,6 @@ Padding of the segmented button.Value range: [0, +∞)Default value: **\$r('sys.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -222,8 +200,6 @@ Enable animation when selectedIndexes change.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -241,8 +217,6 @@ Border radius of segmented button items.Value range: [0, +∞)Default value: **\
 **Type:** LengthMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -263,8 +237,6 @@ Font color of the selected segmented button item.Default value: **\$r('sys.color
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -283,8 +255,6 @@ Font size of unselected segmented button items.Value range: [0, +∞)Default val
 **Type:** LengthMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -305,8 +275,6 @@ Font weight of unselected segmented button items.Default value: **FontWeight.Med
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -325,8 +293,6 @@ Icon color of unselected segmented button items.Default value: **\$r('sys.color.
 **Type:** ColorMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -347,8 +313,6 @@ Image-type icon size of segmented button items.Value range: [0, +∞)Default val
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -367,8 +331,6 @@ Maximum font scale factor of the segmented button item text.Value range: [1, 2]D
 **Type:** number \| Resource
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -389,8 +351,6 @@ Minimum font scale factor of the segmented button item text.Value range: [0, 1]D
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -410,8 +370,6 @@ Minimum height of the segmented button item.Value range: [0, +∞)Default value:
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -426,11 +384,9 @@ readonly itemPadding?: LocalizedPadding
 
 Padding of the segmented button item.Default value: **{top: LengthMetrics.resource (\$r('sys.float.padding_level2')), bottom: LengthMetrics. resource (\$r('sys.float.padding_level2')), start: LengthMetrics.resource(\$r('sys.float.padding_level4')), end: LengthMetrics.resource(\$r('sys.float.padding_level4'))}**If the value is **undefined**, the default value is used.This property is read-only.
 
-**Type:** LocalizedPadding
+**Type:** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -450,8 +406,6 @@ Items of the segmented button.If the value is **undefined**, the option informat
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -469,8 +423,6 @@ Background color of the selected segmented button item.Default value: **\$r('sys
 **Type:** ColorMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -491,8 +443,6 @@ Font color of the selected segmented button item.Default value: **\$r('sys.color
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -511,8 +461,6 @@ Font size of the selected segmented button item.Value range: [0, +∞)Default va
 **Type:** LengthMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -533,8 +481,6 @@ Font weight of the selected segmented button item.Default value: **FontWeight.Me
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -553,8 +499,6 @@ Icon color of the selected segmented button item.Default value: **\$r('sys.color
 **Type:** ColorMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -575,8 +519,6 @@ HM Symbol icon color of the selected segmented button item.Default value: **\$r(
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -591,11 +533,9 @@ readonly itemShadow?: ShadowOptions | ShadowStyle
 
 Shadow of the segmented button item.Default value: **ShadowStyle.OUTER_DEFAULT_XS**If the value is out of the range, the default value is used.This property is read-only.
 
-**Type:** ShadowOptions \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -616,8 +556,6 @@ Space between segmented button items.Value range: [0, +∞)Default value: **Leng
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -636,8 +574,6 @@ HM Symbol icon color of unselected segmented button items.Default value: **\$r('
 **Type:** ColorMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -658,8 +594,6 @@ HM Symbol icon size of segmented button items.Value range: [0, +∞)Default valu
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -677,8 +611,6 @@ Language direction of the segmented button.Default value: **Direction.Auto**If t
 **Type:** Direction
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -698,8 +630,6 @@ Callback invoked when a segmented button item is clicked.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -717,8 +647,6 @@ Index of the selected segmented button item. The index is zero-based and increme
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

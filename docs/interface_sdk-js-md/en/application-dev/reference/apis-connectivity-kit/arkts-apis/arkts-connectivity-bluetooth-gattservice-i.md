@@ -4,8 +4,6 @@ Describes the Gatt service.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md)
@@ -15,7 +13,7 @@ Describes the Gatt service.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## characteristics
@@ -29,8 +27,6 @@ The [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) lis
 **Type:** Array&lt;BLECharacteristic&gt;
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ The list of GATT services contained in the service
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [includeServices](arkts-connectivity-bluetoothmanager-gattservice-i.md#includeservices)
@@ -70,8 +64,6 @@ Indicates whether the GattService instance is primary or secondary.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isPrimary](arkts-connectivity-bluetoothmanager-gattservice-i.md#isprimary)
@@ -89,8 +81,6 @@ The UUID of a GattService instance
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

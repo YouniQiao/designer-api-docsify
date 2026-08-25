@@ -4,14 +4,12 @@ Represents a SSAP client class. It provides APIs for connecting to and transmitt
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## close
@@ -23,8 +21,6 @@ close(): void
 Closes the client and disconnects from the remote server. To terminate the current connection while retaining the instance, use the [disconnect](#disconnect) method.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -49,8 +45,6 @@ connect(): Promise<void>
 Initiates a connection to the server. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -82,8 +76,6 @@ Initiates a disconnection to the server, disconnecting an existing connection or
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -113,8 +105,6 @@ getServices(): Promise<Service[]>
 Obtains the list of services supported by the server. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -146,8 +136,6 @@ Unsubscribes from the connection status change event. This API uses an asynchron
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -161,14 +149,12 @@ Unsubscribes from the connection status change event. This API uses an asynchron
 ## offMtuChange
 
 ```TypeScript
-offMtuChange(callback?: Callback<int>): void
+offMtuChange(callback?: Callback<number>): void
 ```
 
 Unsubscribes from the MTU change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,8 +176,6 @@ Unsubscribes from the property change event. This API uses an asynchronous callb
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -212,8 +196,6 @@ Subscribes to the connection status change event. This API uses an asynchronous 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -227,14 +209,12 @@ Subscribes to the connection status change event. This API uses an asynchronous 
 ## onMtuChange
 
 ```TypeScript
-onMtuChange(callback: Callback<int>): void
+onMtuChange(callback: Callback<number>): void
 ```
 
 Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -256,8 +236,6 @@ Subscribes to the property change event. This API uses an asynchronous callback 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -277,8 +255,6 @@ readProperty(property: Property): Promise<Property>
 Reads a server attribute. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -311,14 +287,12 @@ Reads a server attribute. This API uses a promise to return the result.
 ## requestMtuSize
 
 ```TypeScript
-requestMtuSize(mtu: int): Promise<void>
+requestMtuSize(mtu: number): Promise<void>
 ```
 
 Initiates an MTU negotiation request. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -355,8 +329,6 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 Sets a [Property](arkts-connectivity-ssap-property-i.md) change notification. This method can only be used after a connection is successfully established by calling [connect](#connect).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -396,8 +368,6 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 Writes a property to the server. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 

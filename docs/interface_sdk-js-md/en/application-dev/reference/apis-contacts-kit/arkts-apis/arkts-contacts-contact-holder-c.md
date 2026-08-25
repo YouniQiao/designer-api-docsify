@@ -4,14 +4,12 @@ Defines an application that creates the contact.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## bundleName
@@ -25,8 +23,6 @@ Bundle name. The default value is **com.ohos.contacts**.
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Applications.ContactsData
 
@@ -42,8 +38,6 @@ Application name.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## holderId
@@ -58,18 +52,4 @@ Application ID.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Applications.ContactsData
-
-**Examples**
-
-Create contact data in JSON format:
-
-```TypeScript
-let holder: contact.Holder = {
-  bundleName: "com.ohos.contacts",
-  displayName: "displayName",
-  holderId: 1
-};
-```

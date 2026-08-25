@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## off('activeStateChange')
@@ -21,8 +21,6 @@ Unsubscribes from permission usage status change events for a specified permissi
 > This API is typically used in conjunction with [on](arkts-ability-privacymanager-on-f-sys.md) to cancel the listening relationship created by on.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -49,16 +47,3 @@ Unsubscribes from permission usage status change events for a specified permissi
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 | [12100008](../errorcode-access-token.md#12100008-out-of-memory) |
-
-**Examples**
-
-```TypeScript
-import { privacyManager, Permissions } from '@kit.AbilityKit';
-
-let permissionList: Array<Permissions> = [];
-try {
-    privacyManager.off('activeStateChange', permissionList);
-} catch(err) {
-    console.error(`Catch errcode: ${err.code}, message: ${err.message}`);
-}
-```

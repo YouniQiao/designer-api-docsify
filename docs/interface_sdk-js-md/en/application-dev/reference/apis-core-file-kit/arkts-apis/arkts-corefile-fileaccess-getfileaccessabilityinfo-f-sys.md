@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getFileAccessAbilityInfo
@@ -15,8 +15,6 @@ function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void
 Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -69,42 +67,6 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 | 14300003 |
 | 14300004 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-async function getFileAccessAbilityInfo() {
-  let wantInfos: Array<Want> = [];
-  try {
-    wantInfos = await fileAccess.getFileAccessAbilityInfo();
-    console.info("getFileAccessAbilityInfo data " + JSON.stringify(wantInfos));
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("getFileAccessAbilityInfo failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-async function getFileAccessAbilityInfo() {
-  try {
-    fileAccess.getFileAccessAbilityInfo((err: BusinessError, wantInfos: Array<Want>) => {
-      if (err) {
-        console.error("Failed to getFileAccessAbilityInfo in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      console.info("getFileAccessAbilityInfo data " + JSON.stringify(wantInfos));
-    });
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("getFileAccessAbilityInfo failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
-
 
 ## getFileAccessAbilityInfo
 
@@ -115,8 +77,6 @@ function getFileAccessAbilityInfo(): Promise<Array<Want>>
 Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -168,7 +128,3 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 | 14300002 |
 | 14300003 |
 | 14300004 |
-
-**Examples**
-
-See [getFileAccessAbilityInfo](#getfileaccessabilityinfo)

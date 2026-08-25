@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setCBConfig
@@ -15,8 +15,6 @@ function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): v
 Sets the cell broadcast configuration. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 
@@ -43,43 +41,6 @@ Sets the cell broadcast configuration. This API uses an asynchronous callback to
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cbConfigOptions: sms.CBConfigOptions = {
-    slotId: 0,
-    enable: true,
-    startMessageId: 100,
-    endMessageId: 200,
-    ranType: sms.RanType.TYPE_GSM
-};
-sms.setCBConfig(cbConfigOptions, (err: BusinessError) => {
-      console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cbConfigOptions: sms.CBConfigOptions = {
-    slotId: 0,
-    enable: true,
-    startMessageId: 100,
-    endMessageId: 200,
-    ranType: sms.RanType.TYPE_GSM
-};
-let promise = sms.setCBConfig(cbConfigOptions);
-promise.then(() => {
-    console.info(`setCBConfig success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCBConfig failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setCBConfig
 
@@ -90,8 +51,6 @@ function setCBConfig(options: CBConfigOptions): Promise<void>
 Sets the cell broadcast configuration. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RECEIVE_SMS
 
@@ -122,7 +81,3 @@ Sets the cell broadcast configuration. This API uses a promise to return the res
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [setCBConfig](#setcbconfig)

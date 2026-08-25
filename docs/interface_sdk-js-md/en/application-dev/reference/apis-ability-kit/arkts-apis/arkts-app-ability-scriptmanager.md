@@ -4,8 +4,6 @@ Namespace for managing and organizing script information.@namespace scriptManage
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -13,7 +11,7 @@ Namespace for managing and organizing script information.@namespace scriptManage
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from '@kit.AbilityKit';
+import { scriptManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

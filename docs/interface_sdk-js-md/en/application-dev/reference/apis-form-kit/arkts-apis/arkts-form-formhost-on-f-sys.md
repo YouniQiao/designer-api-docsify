@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## on("formUninstall")
@@ -19,8 +19,6 @@ Subscribes to widget uninstall events. This API uses an asynchronous callback to
 > is automatically uninstalled.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -51,8 +49,6 @@ Subscribes to the interactive widget animation request event. This API uses an a
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -70,21 +66,6 @@ Subscribes to the interactive widget animation request event. This API uses an a
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.on('formOverflow', (request: formInfo.OverflowRequest) => {
-    console.info(`formHost on formOverflow, formId is ${request.formId}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## on('changeSceneAnimationState')
 
@@ -96,8 +77,6 @@ function on(type: 'changeSceneAnimationState',
 Subscribes to the event of switching the interactive widget state. An interactive widget can be in the active or inactive state. In the inactive state, the interactive widget is the same as a common widget. In the active state, the interactive widget can start the **LiveFormExtensionAbility** process developed by the widget host to implement interactive widget animations. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -116,21 +95,6 @@ Subscribes to the event of switching the interactive widget state. An interactiv
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.on('changeSceneAnimationState', (request: formInfo.ChangeSceneAnimationStateRequest): void => {
-    console.info(`formHost on changeSceneAnimationState, formId is ${request.formId}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## on('getFormRect')
 
@@ -141,8 +105,6 @@ function on(type: 'getFormRect', callback: formInfo.GetFormRectInfoCallback): vo
 Subscribes to the event of requesting widget position and dimension. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -161,31 +123,6 @@ Subscribes to the event of requesting widget position and dimension. This API us
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.on('getFormRect', (formId: string): Promise<formInfo.Rect> => {
-    // The widget host needs to process the request, and calculate and return the widget dimension and position information.
-    return new Promise<formInfo.Rect>((resolve: Function) => {
-      console.info(`formHost on getFormRect, formId is ${formId}`);
-      let formRect: formInfo.Rect = {
-        left: 0,
-        top: 0,
-        width: 0,
-        height: 0
-      };
-      resolve(formRect);
-    })
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
 
 ## on('getLiveFormStatus')
 
@@ -196,8 +133,6 @@ function on(type: 'getLiveFormStatus',  callback: formInfo.GetLiveFormStatusCall
 Listens to the event of get live form status.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Ability.Form
 

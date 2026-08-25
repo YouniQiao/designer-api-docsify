@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getVoNRState
 
 ```TypeScript
-function getVoNRState(slotId: int, callback: AsyncCallback<VoNRState>): void
+function getVoNRState(slotId: number, callback: AsyncCallback<VoNRState>): void
 ```
 
 查询NR语音的开关状态。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function getVoNRState(slotId: int, callback: AsyncCallback<VoNRState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VoNRState](arkts-telephony-call-vonrstate-e-sys.md)&gt; | 是 |
 
 **错误码：**
@@ -43,44 +41,16 @@ function getVoNRState(slotId: int, callback: AsyncCallback<VoNRState>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.getVoNRState(slotId, (err: BusinessError, data: call.VoNRState) => {
-    if (err) {
-        console.error(`getVoNRState fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`getVoNRState success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.getVoNRState(slotId).then((data: call.VoNRState) => {
-    console.info(`getVoNRState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getVoNRState fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getVoNRState
 
 ```TypeScript
-function getVoNRState(slotId: int): Promise<VoNRState>
+function getVoNRState(slotId: number): Promise<VoNRState>
 ```
 
 查询NR语音的开关状态。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
@@ -92,7 +62,7 @@ function getVoNRState(slotId: int): Promise<VoNRState>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| slotId | number | 是 |
 
 **返回值：**
 
@@ -111,7 +81,3 @@ function getVoNRState(slotId: int): Promise<VoNRState>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [getVoNRState](#getvonrstate)

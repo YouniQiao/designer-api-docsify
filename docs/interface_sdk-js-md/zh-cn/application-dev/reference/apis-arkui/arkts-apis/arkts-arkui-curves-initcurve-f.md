@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## initCurve
@@ -15,8 +15,6 @@ function initCurve(curve?: Curve): ICurve
 插值曲线的初始化函数，可以根据入参创建一个插值曲线对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -32,4 +30,4 @@ function initCurve(curve?: Curve): ICurve
 
 | 类型 |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

@@ -134,7 +134,7 @@ ImageEffect_ErrorCode OH_ImageEffect_AddFilterByFilter(OH_ImageEffect *imageEffe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_InsertFilter()
 
@@ -190,7 +190,7 @@ ImageEffect_ErrorCode OH_ImageEffect_InsertFilterByFilter(OH_ImageEffect *imageE
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_RemoveFilter()
 
@@ -244,7 +244,7 @@ ImageEffect_ErrorCode OH_ImageEffect_RemoveFilterByIndex(OH_ImageEffect *imageEf
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_ReplaceFilter()
 
@@ -300,7 +300,7 @@ ImageEffect_ErrorCode OH_ImageEffect_ReplaceFilterByFilter(OH_ImageEffect *image
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_GetFilterCount()
 
@@ -381,7 +381,7 @@ ImageEffect_ErrorCode OH_ImageEffect_Configure(OH_ImageEffect *imageEffect, cons
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_KEY_ERROR：参数无效。          EFFECT_PARAM_ERROR：参数值无效。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_KEY_ERROR：参数无效。          EFFECT_PARAM_ERROR：参数值无效。 |
 
 ### OH_ImageEffect_SetOutputSurface()
 
@@ -408,7 +408,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputSurface(OH_ImageEffect *imageEffec
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_GetInputSurface()
 
@@ -435,7 +435,7 @@ ImageEffect_ErrorCode OH_ImageEffect_GetInputSurface(OH_ImageEffect *imageEffect
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_SetInputPixelmap()
 
@@ -462,7 +462,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputPixelmap(OH_ImageEffect *imageEffec
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_SetOutputPixelmap()
 
@@ -489,7 +489,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputPixelmap(OH_ImageEffect *imageEffe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_PARAM_ERROR：如果参数异常导致方法调用失败。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_PARAM_ERROR：如果参数异常导致方法调用失败。 |
 
 ### OH_ImageEffect_SetInputNativeBuffer()
 
@@ -516,7 +516,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputNativeBuffer(OH_ImageEffect *imageE
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_SetOutputNativeBuffer()
 
@@ -543,7 +543,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputNativeBuffer(OH_ImageEffect *image
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_PARAM_ERROR：如果参数异常导致方法调用失败。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_PARAM_ERROR：如果参数异常导致方法调用失败。 |
 
 ### OH_ImageEffect_SetInputUri()
 
@@ -570,7 +570,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputUri(OH_ImageEffect *imageEffect, co
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_SetOutputUri()
 
@@ -597,7 +597,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputUri(OH_ImageEffect *imageEffect, c
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_SetInputPicture()
 
@@ -624,7 +624,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputPicture(OH_ImageEffect *imageEffect
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_SetOutputPicture()
 
@@ -651,7 +651,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputPicture(OH_ImageEffect *imageEffec
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_PARAM_ERROR：如果参数异常导致方法调用失败。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_PARAM_ERROR：如果参数异常导致方法调用失败。 |
 
 ### OH_ImageEffect_SetInputTextureId()
 
@@ -679,7 +679,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputTextureId(OH_ImageEffect *imageEffe
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针或参数超出有效范围。          EFFECT_PARAM_ERROR：参数缺失或参数错误。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针或参数超出有效范围。          EFFECT_PARAM_ERROR：参数缺失或参数错误。 |
 
 ### OH_ImageEffect_SetOutputTextureId()
 
@@ -706,7 +706,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputTextureId(OH_ImageEffect *imageEff
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针或参数超出有效范围。          EFFECT_PARAM_ERROR：参数缺失或参数错误。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针或参数超出有效范围。          EFFECT_PARAM_ERROR：参数缺失或参数错误。 |
 
 ### OH_ImageEffect_Start()
 
@@ -732,7 +732,7 @@ ImageEffect_ErrorCode OH_ImageEffect_Start(OH_ImageEffect *imageEffect)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_INPUT_OUTPUT_NOT_SUPPORTED：待处理输入、输出图像数据类型不一致。          EFFECT_COLOR_SPACE_NOT_MATCH：输入、输出图像色彩空间不配置。          EFFECT_ALLOCATE_MEMORY_FAILED：内存申请失败。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。          EFFECT_INPUT_OUTPUT_NOT_SUPPORTED：待处理输入、输出图像数据类型不一致。          EFFECT_COLOR_SPACE_NOT_MATCH：输入、输出图像色彩空间不配置。          EFFECT_ALLOCATE_MEMORY_FAILED：内存申请失败。 |
 
 ### OH_ImageEffect_Stop()
 
@@ -758,7 +758,7 @@ ImageEffect_ErrorCode OH_ImageEffect_Stop(OH_ImageEffect *imageEffect)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_Release()
 
@@ -784,7 +784,7 @@ ImageEffect_ErrorCode OH_ImageEffect_Release(OH_ImageEffect *imageEffect)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_Save()
 
@@ -811,7 +811,7 @@ ImageEffect_ErrorCode OH_ImageEffect_Save(OH_ImageEffect *imageEffect, char **in
 
 | 类型 | 说明 |
 | -- | -- |
-| [ImageEffect_ErrorCode](capi-image-effect-errors-h.md#imageeffect_errorcode) | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
+| ImageEffect_ErrorCode | EFFECT_SUCCESS：方法调用成功。          EFFECT_ERROR_PARAM_INVALID：入参为空指针。 |
 
 ### OH_ImageEffect_Restore()
 

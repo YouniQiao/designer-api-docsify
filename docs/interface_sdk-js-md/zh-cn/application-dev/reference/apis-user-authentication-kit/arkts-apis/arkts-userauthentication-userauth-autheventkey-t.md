@@ -8,8 +8,6 @@ type AuthEventKey = 'result' | 'tip'
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 11
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

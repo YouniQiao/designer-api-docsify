@@ -4,29 +4,25 @@ Provides the options (including callbacks) for sending SMS messages. For example
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## content
 
 ```TypeScript
-content: string | Array<int>
+content: string | Array<number>
 ```
 
 SMS message type. If the content is composed of character strings, the SMS message is a text message. If the content is composed of byte arrays, the SMS message is a data message.
 
-**Type:** ArkTS-Dyn: string \| Array&lt;number&gt;  <br>ArkTS-Sta：string \| Array&lt;int&gt;
+**Type:** string \| Array&lt;number&gt;
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -42,8 +38,6 @@ Callback used to return the SMS message delivery report. For details, see [IDeli
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## destinationHost
@@ -58,23 +52,19 @@ Destination address of the SMS message.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## destinationPort
 
 ```TypeScript
-destinationPort?: int
+destinationPort?: number
 ```
 
 Destination port of the SMS message. This field is mandatory only for a data message. Otherwise, it is optional.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms
 
@@ -90,8 +80,6 @@ Callback used to return the SMS message sending result. For details, see [ISendS
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## serviceCenter
@@ -106,23 +94,20 @@ SMSC address. By default, the SMSC address in the SIM card is used.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.SmsMms
 
 ## slotId
 
 ```TypeScript
-slotId: int
+slotId: number
 ```
 
 Slot ID of the SIM card used for sending SMS messages.  
-- **0**: card slot 1. - **1**: card slot 2
+- **0**: card slot 1.  
+- **1**: card slot 2
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.SmsMms

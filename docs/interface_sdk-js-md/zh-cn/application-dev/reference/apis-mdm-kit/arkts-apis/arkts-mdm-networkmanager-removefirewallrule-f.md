@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeFirewallRule
@@ -15,8 +15,6 @@ function removeFirewallRule(admin: Want, firewallRule?: FirewallRule): void
 移除设备防火墙过滤规则。适用于企业网络安全策略调整场景，例如取消某些网络访问限制、调整防火墙策略、清理过时或无效的规则，帮助企业灵活调整网络安全策略，确保网络访问控制策略与实际需求保持一致。API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。移除规则后如果不存在[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后，会将[addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md)添 加的默认DENY规则清空。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -39,46 +37,3 @@ function removeFirewallRule(admin: Want, firewallRule?: FirewallRule): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let firewallRule: networkManager.FirewallRule = {
-  // 需根据实际情况进行替换
-  "srcAddr": "192.168.1.1-192.168.22.66",
-  "destAddr": "10.1.1.1",
-  "srcPort": "8080",
-  "destPort": "8080",
-  "appUid": "9696",
-  "direction": networkManager.Direction.OUTPUT,
-  "action": networkManager.Action.DENY,
-  "protocol": networkManager.Protocol.UDP,
-  "family": 1,
-  "logType": networkManager.LogType.NFLOG
-};
-
-// 移除指定的规则
-try {
-  networkManager.removeFirewallRule(wantTemp, firewallRule);
-  console.info('Succeeded in removing firewall rule.');
-} catch (err) {
-  console.error(`Failed to remove firewall rule. Code: ${err.code}, message: ${err.message}`);
-}
-
-// 清空IP协议版本为IPv4的所有规则
-try {
-  networkManager.removeFirewallRule(wantTemp);
-  console.info('Succeeded in removing all firewall rule.');
-} catch (err) {
-  console.error(`Failed to remove all firewall rule. Code: ${err.code}, message: ${err.message}`);
-}
-```

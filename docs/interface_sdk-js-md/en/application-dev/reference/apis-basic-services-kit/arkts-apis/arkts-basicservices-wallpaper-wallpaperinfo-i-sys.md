@@ -4,8 +4,6 @@ WallpaperInfo definition including folding status, rotation status, and resource
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ WallpaperInfo definition including folding status, rotation status, and resource
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## foldState
@@ -27,8 +25,6 @@ Indicates the folding status for wallpaper.
 **Type:** [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -46,8 +42,6 @@ Indicates the rotation status for wallpaper.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Indicates the resource path for wallpaper.
 **Type:** string
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 

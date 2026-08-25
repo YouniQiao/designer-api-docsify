@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'kits/@kit.ArkUI';
 ```
 
 ## getLength
@@ -22,8 +22,6 @@ Obtains the number of pages in the current stack.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 18
 
 **Substitutes:** [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)
@@ -37,10 +35,3 @@ Obtains the number of pages in the current stack.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let size = this.getUIContext().getRouter().getLength();
-console.info('pages stack size = ' + size);
-```

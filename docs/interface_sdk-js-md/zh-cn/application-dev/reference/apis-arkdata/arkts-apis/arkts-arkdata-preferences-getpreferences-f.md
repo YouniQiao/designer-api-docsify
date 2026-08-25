@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { preferences } from '@kit.ArkData';
+import { preferences } from 'kits/@kit.ArkData';
 ```
 
 ## getPreferences
@@ -16,8 +16,6 @@ function getPreferences(context: Context, name: string, callback: AsyncCallback<
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -36,270 +34,6 @@ function getPreferences(context: Context, name: string, callback: AsyncCallback<
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-FA模型示例：
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-let dataPreferences: preferences.Preferences | null = null;
-
-preferences.getPreferences(context, 'myStore', (err: BusinessError, val: preferences.Preferences) => {
-  if (err) {
-    console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  dataPreferences = val;
-  console.info("Succeeded in getting preferences.");
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | null = null;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    preferences.getPreferences(this.context, 'myStore', (err: BusinessError, val: preferences.Preferences) => {
-      if (err) {
-        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      dataPreferences = val;
-      console.info("Succeeded in getting preferences.");
-    })
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    preferences.getPreferences(this.context, 'myStore', (err: BusinessError | null, val: preferences.Preferences | undefined) => {
-      if (err) {
-        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      dataPreferences = val;
-      console.info("Succeeded in getting preferences.");
-    })
-  }
-}
-```
-
-FA模型示例：
-
-```TypeScript
-// 获取context
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let dataPreferences: preferences.Preferences | null = null;
-let sp = preferences.getPreferences(context, 'myStore');
-sp.then((object: preferences.Preferences) => {
-  dataPreferences = object;
-  console.info("Succeeded in getting preferences.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | null = null;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let sp = preferences.getPreferences(this.context, 'myStore');
-    sp.then((object: preferences.Preferences) => {
-      dataPreferences = object;
-      console.info("Succeeded in getting preferences.");
-    }).catch((err: BusinessError) => {
-      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let sp = preferences.getPreferences(this.context, 'myStore');
-    sp.then((object: preferences.Preferences | undefined) => {
-      dataPreferences = object;
-      console.info("Succeeded in getting preferences.");
-    }).catch((err) => {
-      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
-
-FA模型示例：
-
-```TypeScript
-// 获取context
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-let dataPreferences: preferences.Preferences | null = null;
-
-let options: preferences.Options = { name: 'myStore' };
-preferences.getPreferences(context, options, (err: BusinessError, val: preferences.Preferences) => {
-  if (err) {
-    console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  dataPreferences = val;
-  console.info("Succeeded in getting preferences.");
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | null = null;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    preferences.getPreferences(this.context, options, (err: BusinessError, val: preferences.Preferences) => {
-      if (err) {
-        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      dataPreferences = val;
-      console.info("Succeeded in getting preferences.");
-    })
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    preferences.getPreferences(this.context, options, (err: BusinessError | null, val: preferences.Preferences | undefined) => {
-      if (err) {
-        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      dataPreferences = val;
-      console.info("Succeeded in getting preferences.");
-    })
-  }
-}
-```
-
-FA模型示例：
-
-```TypeScript
-// 获取context
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let dataPreferences: preferences.Preferences | null = null;
-let options: preferences.Options = { name: 'myStore' };
-let sp = preferences.getPreferences(context, options);
-sp.then((object: preferences.Preferences) => {
-  dataPreferences = object;
-  console.info("Succeeded in getting preferences.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-})
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | null = null;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    let sp = preferences.getPreferences(this.context, options);
-    sp.then((object: preferences.Preferences) => {
-      dataPreferences = object;
-      console.info("Succeeded in getting preferences.");
-    }).catch((err: BusinessError) => {
-      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    let sp = preferences.getPreferences(this.context, 'myStore');
-    sp = preferences.getPreferences(this.context, options);
-    sp.then((object: preferences.Preferences | undefined) => {
-      dataPreferences = object;
-      console.info("Succeeded in getting preferences.");
-    }).catch((err) => {
-      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
 
 
 ## getPreferences
@@ -312,8 +46,6 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
@@ -336,10 +68,6 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 | [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-参见 [getPreferences](#getpreferences)
-
 
 ## getPreferences
 
@@ -350,8 +78,6 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 获取Preferences实例，通过name进行参数设置，使用Promise异步回调。应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -377,10 +103,6 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
-**示例**
-
-参见 [getPreferences](#getpreferences)
-
 
 ## getPreferences
 
@@ -391,8 +113,6 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 获取Preferences实例，通过Options进行参数设置，使用Promise异步回调。应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -420,7 +140,3 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 | [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) |
 | [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) |
-
-**示例**
-
-参见 [getPreferences](#getpreferences)

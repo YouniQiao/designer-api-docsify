@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## formatPhoneNumberToE164
@@ -15,8 +15,6 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callb
 将电话号码格式化为E.164表示形式，使用callback异步回调。待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -38,30 +36,6 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callb
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumberToE164("138xxxxxxxx", "CN", (err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`formatPhoneNumberToE164 fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`formatPhoneNumberToE164 success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumberToE164("138xxxxxxxx", "CN").then((data: string) => {
-    console.info(`formatPhoneNumberToE164 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`formatPhoneNumberToE164 fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-});
-```
-
 
 ## formatPhoneNumberToE164
 
@@ -72,8 +46,6 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Prom
 将电话号码格式化为E.164表示形式，使用Promise异步回调。待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。支持所有国家码。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CallManager
 
@@ -99,7 +71,3 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Prom
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [formatPhoneNumberToE164](#formatphonenumbertoe164)

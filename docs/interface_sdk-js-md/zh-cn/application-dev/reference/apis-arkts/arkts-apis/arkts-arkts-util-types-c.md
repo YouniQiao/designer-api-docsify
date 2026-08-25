@@ -4,14 +4,12 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -24,154 +22,9 @@ constructor()
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-```TypeScript
-let textDecoder = new util.TextDecoder();
-let retStr = textDecoder.encoding;
-console.info('retStr = ' + retStr);
-// 输出结果：retStr = utf-8
-```
-
-```TypeScript
-let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder();
-```
-
-```TypeScript
-let textEncoder = new util.TextEncoder("utf-8");
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber();
-```
-
-```TypeScript
-let rationalNumber = new util.RationalNumber(1,2);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lruCache = new util.LRUCache<number, number>();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lruCache = new util.LRUCache<int, int>();
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper(tempLower, tempUpper);
-console.info("range = " + range);
-// 输出结果：range = [30, 40]
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable<Temperature> {
-  private readonly _temp: int;
-
-  constructor(value: int) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp(): int {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.ScopeHelper<Temperature>(tempLower, tempUpper);
-console.info("range = " + range);
-// 输出结果：range = [30, 40]
-```
-
-```TypeScript
-let base64 = new util.Base64Helper();
-```
-
-```TypeScript
-let decoder = new util.StringDecoder();
-```
-
-```TypeScript
-let type = new util.types();
-```
-
-```TypeScript
-let pro : util.LruBuffer<number,number> = new util.LruBuffer();
-```
-
-```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
-
-let tempLower = new Temperature(30);
-let tempUpper = new Temperature(40);
-let range = new util.Scope(tempLower, tempUpper);
-console.info("range = " + range);
-// 输出结果：range = [30, 40]
-```
-
-```TypeScript
-let base64 = new  util.Base64();
-```
 
 ## isAnyArrayBuffer
 
@@ -183,8 +36,6 @@ isAnyArrayBuffer(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -200,15 +51,6 @@ isAnyArrayBuffer(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isAnyArrayBuffer(new ArrayBuffer(0));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isArgumentsObject
 
@@ -220,8 +62,6 @@ isArgumentsObject(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -237,18 +77,6 @@ isArgumentsObject(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-function foo() {
-    let result = type.isArgumentsObject(arguments);
-    console.info("result = " + result);
-}
-let f = foo();
-// 输出结果：result = true
-```
 
 ## isArrayBuffer
 
@@ -260,8 +88,6 @@ isArrayBuffer(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -277,15 +103,6 @@ isArrayBuffer(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isArrayBuffer(new ArrayBuffer(0));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isArrayBufferView
 
@@ -297,8 +114,6 @@ isArrayBufferView(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -314,15 +129,6 @@ isArrayBufferView(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isArrayBufferView(new Int8Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isAsyncFunction
 
@@ -338,8 +144,6 @@ isAsyncFunction(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -355,45 +159,6 @@ isAsyncFunction(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isAsyncFunction(async () => {});
-console.info("result = " + result);
-// 输出结果：result = true
-```
-
-该接口无法对Sendable class中的async成员函数进行有效判断，无替代方案。
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export async function* asyncGeneratorFunc() {}
-```
-
-```TypeScript
-import { asyncGeneratorFunc } from './test'
-
-@Sendable
-class SendableClass {
-  async asyncFunction() {}
-}
-
-let type = new util.types();
-let result1 = type.isAsyncFunction(asyncGeneratorFunc);
-console.info("result = " + result1);
-// 输出结果：result = false
-
-console.info("asyncGeneratorFunc.constructor.name === AsyncGeneratorFunction : " +
-  (asyncGeneratorFunc.constructor.name === 'AsyncGeneratorFunction'));
-// 输出结果：asyncGeneratorFunc.constructor.name === AsyncGeneratorFunction : true
-
-const instance = new SendableClass();
-let result2 = type.isAsyncFunction(instance.asyncFunction);
-console.info("result = " + result2);
-// 输出结果：result = false
-```
 
 ## isBigInt64Array
 
@@ -405,8 +170,6 @@ isBigInt64Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -422,15 +185,6 @@ isBigInt64Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBigInt64Array(new BigInt64Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isBigUint64Array
 
@@ -442,8 +196,6 @@ isBigUint64Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -459,15 +211,6 @@ isBigUint64Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBigUint64Array(new BigUint64Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isBooleanObject
 
@@ -482,8 +225,6 @@ isBooleanObject(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 14
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -501,15 +242,6 @@ isBooleanObject(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBooleanObject(new Boolean(true));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isBoxedPrimitive
 
@@ -524,8 +256,6 @@ isBoxedPrimitive(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 14
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -544,15 +274,6 @@ isBoxedPrimitive(value: Object): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isBoxedPrimitive(new Boolean(false));
-console.info("result = " + result);
-// 输出结果：result = true
-```
-
 ## isDataView
 
 ```TypeScript
@@ -562,8 +283,6 @@ isDataView(value: Object): boolean
 判断入参是否为 DataView 类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -580,16 +299,6 @@ isDataView(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-const ab = new ArrayBuffer(20);
-let result = type.isDataView(new DataView(ab));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isDate
 
@@ -601,8 +310,6 @@ isDate(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -618,15 +325,6 @@ isDate(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isDate(new Date());
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isExternal
 
@@ -638,8 +336,6 @@ isExternal(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -655,53 +351,6 @@ isExternal(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-// /entry/src/main/cpp/napi_init.cpp
-#include "napi/native_api.h"
-#include <js_native_api.h>
-#include <stdlib.h>
-
-napi_value result;
-static napi_value Testexternal(napi_env env, napi_callback_info info) {
-    int* raw = (int*) malloc(1024);
-    napi_status status = napi_create_external(env, (void*) raw, NULL, NULL, &result);
-    if (status != napi_ok) {
-        napi_throw_error(env, NULL, "create external failed");
-        return NULL;
-    }
-    return result;
-}
-
-EXTERN_C_START
-static napi_value Init(napi_env env, napi_value exports)
-{
-    napi_property_descriptor desc[] = {
-        {"testexternal", nullptr, Testexternal, nullptr, nullptr, nullptr, napi_default, nullptr},
-    };
-    napi_define_properties(env, exports, sizeof(desc) / sizeof(desc[0]), desc);
-    return exports;
-}
-EXTERN_C_END
-// 此处已省略模块注册的代码, 你可能需要自行注册Testexternal方法
-// ...
-```
-
-```TypeScript
-import testNapi from 'libentry.so';
-
-let type = new util.types();
-const data = testNapi.testexternal();
-let result = type.isExternal(data);
-
-let result01 = type.isExternal(true);
-console.info("result = " + result);
-console.info("result01 = " + result01);
-// 输出结果：result = true
-// 输出结果：result01 = false
-```
 
 ## isFloat32Array
 
@@ -713,8 +362,6 @@ isFloat32Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -730,15 +377,6 @@ isFloat32Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isFloat32Array(new Float32Array());
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isFloat64Array
 
@@ -750,8 +388,6 @@ isFloat64Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -767,15 +403,6 @@ isFloat64Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isFloat64Array(new Float64Array());
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isGeneratorFunction
 
@@ -790,8 +417,6 @@ isGeneratorFunction(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -807,42 +432,6 @@ isGeneratorFunction(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export function* foo() {}
-```
-
-```TypeScript
-import { foo } from './test'
-
-let type = new util.types();
-let result = type.isGeneratorFunction(foo);
-console.info("result = " + result);
-// 输出结果：result = true
-```
-
-该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的属性与做判等的方式替代。
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export async function* asyncGeneratorFunc() {}
-```
-
-```TypeScript
-import { asyncGeneratorFunc } from './test'
-
-let type = new util.types();
-let result = type.isGeneratorFunction(asyncGeneratorFunc);
-console.info("result = " + result);
-// 输出结果：result = false
-
-console.info("asyncGeneratorFunc.constructor.name === AsyncGeneratorFunction : " +
-  (asyncGeneratorFunc.constructor.name === 'AsyncGeneratorFunction'));
-// 输出结果：asyncGeneratorFunc.constructor.name === AsyncGeneratorFunction : true
-```
 
 ## isGeneratorObject
 
@@ -854,8 +443,6 @@ isGeneratorObject(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -871,23 +458,6 @@ isGeneratorObject(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-function* foo() {}
-export const generator = foo();
-```
-
-```TypeScript
-import { generator } from './test'
-
-let type = new util.types();
-let result = type.isGeneratorObject(generator);
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isInt16Array
 
@@ -899,8 +469,6 @@ isInt16Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -916,15 +484,6 @@ isInt16Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isInt16Array(new Int16Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isInt32Array
 
@@ -936,8 +495,6 @@ isInt32Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -953,15 +510,6 @@ isInt32Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isInt32Array(new Int32Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isInt8Array
 
@@ -973,8 +521,6 @@ isInt8Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -990,15 +536,6 @@ isInt8Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isInt8Array(new Int8Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isMap
 
@@ -1010,8 +547,6 @@ isMap(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1027,15 +562,6 @@ isMap(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isMap(new Map());
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isMapIterator
 
@@ -1047,8 +573,6 @@ isMapIterator(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1064,28 +588,6 @@ isMapIterator(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let type = new util.types();
-const map : Map<number, number> = new Map();
-let result = type.isMapIterator(map.keys());
-console.info("result = " + result);
-// 输出结果：result = true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let type = new util.types();
-const map : Map<int, int> = new Map<int, int>();
-let result = type.isMapIterator(map.keys());
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isModuleNamespaceObject
 
@@ -1097,8 +599,6 @@ isModuleNamespaceObject(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1114,24 +614,6 @@ isModuleNamespaceObject(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export function func() {
-  console.info("hello world");
-}
-```
-
-```TypeScript
-import * as nameSpace from './test';
-
-let type = new util.types();
-let result = type.isModuleNamespaceObject(nameSpace);
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isNativeError
 
@@ -1143,8 +625,6 @@ isNativeError(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1160,15 +640,6 @@ isNativeError(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isNativeError(new TypeError());
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isNumberObject
 
@@ -1183,8 +654,6 @@ isNumberObject(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 14
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1203,15 +672,6 @@ isNumberObject(value: Object): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isNumberObject(new Number(0));
-console.info("result = " + result);
-// 输出结果：result = true
-```
-
 ## isPromise
 
 ```TypeScript
@@ -1221,8 +681,6 @@ isPromise(value: Object): boolean
 判断入参是否为 promise。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1239,15 +697,6 @@ isPromise(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isPromise(Promise.resolve(1));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isProxy
 
@@ -1259,8 +708,6 @@ isProxy(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1276,19 +723,6 @@ isProxy(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-class Target{
-}
-let type = new util.types();
-const target : Target = {};
-const proxy = new Proxy(target, target);
-let result = type.isProxy(proxy);
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isRegExp
 
@@ -1300,8 +734,6 @@ isRegExp(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1317,15 +749,6 @@ isRegExp(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isRegExp(new RegExp('abc'));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isSet
 
@@ -1337,8 +760,6 @@ isSet(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1354,28 +775,6 @@ isSet(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let type = new util.types();
-let set : Set<number> = new Set();
-let result = type.isSet(set);
-console.info("result = " + result);
-// 输出结果：result = true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let type = new util.types();
-let set : Set<int> = new Set<int>();
-let result = type.isSet(set);
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isSetIterator
 
@@ -1387,8 +786,6 @@ isSetIterator(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1404,28 +801,6 @@ isSetIterator(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let type = new util.types();
-const set : Set<number> = new Set();
-let result = type.isSetIterator(set.keys());
-console.info("result = " + result);
-// 输出结果：result = true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let type = new util.types();
-const set : Set<int> = new Set<int>();
-let result = type.isSetIterator(set.keys());
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isSharedArrayBuffer
 
@@ -1437,8 +812,6 @@ isSharedArrayBuffer(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1454,15 +827,6 @@ isSharedArrayBuffer(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isSharedArrayBuffer(new SharedArrayBuffer(0));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isStringObject
 
@@ -1477,8 +841,6 @@ isStringObject(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 14
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1496,15 +858,6 @@ isStringObject(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isStringObject(new String('foo'));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isSymbolObject
 
@@ -1519,8 +872,6 @@ isSymbolObject(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 14
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1539,22 +890,6 @@ isSymbolObject(value: Object): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export const symbols = Symbol('foo');
-```
-
-```TypeScript
-import { symbols } from './test'
-
-let type = new util.types();
-let result = type.isSymbolObject(Object(symbols));
-console.info("result = " + result);
-// 输出结果：result = true
-```
-
 ## isTypedArray
 
 ```TypeScript
@@ -1564,8 +899,6 @@ isTypedArray(value: Object): boolean
 判断入参是否为 TypedArray 类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1582,15 +915,6 @@ isTypedArray(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isTypedArray(new Float64Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isUint16Array
 
@@ -1602,8 +926,6 @@ isUint16Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1619,15 +941,6 @@ isUint16Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isUint16Array(new Uint16Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isUint32Array
 
@@ -1639,8 +952,6 @@ isUint32Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1656,15 +967,6 @@ isUint32Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isUint32Array(new Uint32Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isUint8Array
 
@@ -1676,8 +978,6 @@ isUint8Array(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1693,15 +993,6 @@ isUint8Array(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isUint8Array(new Uint8Array([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isUint8ClampedArray
 
@@ -1713,8 +1004,6 @@ isUint8ClampedArray(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1730,15 +1019,6 @@ isUint8ClampedArray(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isUint8ClampedArray(new Uint8ClampedArray([]));
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isWeakMap
 
@@ -1750,8 +1030,6 @@ isWeakMap(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1767,28 +1045,6 @@ isWeakMap(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let type = new util.types();
-let value : WeakMap<object, number> = new WeakMap();
-let result = type.isWeakMap(value);
-console.info("result = " + result);
-// 输出结果：result = true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let type = new util.types();
-let value : WeakMap<object, int> = new WeakMap();
-let result = type.isWeakMap(value);
-console.info("result = " + result);
-// 输出结果：result = true
-```
 
 ## isWeakSet
 
@@ -1800,8 +1056,6 @@ isWeakSet(value: Object): boolean
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1817,12 +1071,3 @@ isWeakSet(value: Object): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-let type = new util.types();
-let result = type.isWeakSet(new WeakSet());
-console.info("result = " + result);
-// 输出结果：result = true
-```

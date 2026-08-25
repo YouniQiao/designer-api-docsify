@@ -4,8 +4,6 @@ P2P group information. @interface WifiP2pGroupInfo
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md)
@@ -15,7 +13,7 @@ P2P group information. @interface WifiP2pGroupInfo
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## clientDevices
@@ -29,8 +27,6 @@ Client list
 **Type:** WifiP2pDevice[]
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Frequency
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [frequency](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#frequency)
@@ -69,8 +63,6 @@ Group owner IP address
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Group name
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [groupName](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#groupname)
@@ -109,8 +99,6 @@ Interface name
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ Indicates whether it is group owner
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isP2pGo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#isp2pgo)
@@ -149,8 +135,6 @@ Network ID
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -170,8 +154,6 @@ Group owner information
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ownerInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md#ownerinfo)
@@ -189,8 +171,6 @@ The group passphrase
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoRefresh
@@ -17,8 +15,6 @@ autoRefresh?(value: boolean): LengthMetrics
 设置LengthMetrics对象是否跟随系统配置变化自动更新。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ LengthMetrics的构造函数。若参数unit不传入值或传入undefined，返
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -72,8 +66,6 @@ static fp(value: number): LengthMetrics
 用于生成单位为FP的长度属性。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -103,8 +95,6 @@ static lpx(value: number): LengthMetrics
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -132,8 +122,6 @@ static percent(value: number): LengthMetrics
 用于生成单位为PERCENT的长度属性，值为1表示100%。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -163,8 +151,6 @@ static px(value: number): LengthMetrics
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -193,8 +179,6 @@ static resource(value: Resource): LengthMetrics
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -213,52 +197,6 @@ static resource(value: Resource): LengthMetrics
 | --- |
 | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
-**示例**
-
-使用LengthMetrics设置Row的padding和margin属性。
-
-```TypeScript
-import { LengthMetrics, LengthUnit } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct SizeExample {
-  build() {
-    Column({ space: 10 }) {
-      Text('margin and padding:')
-        .fontSize(12)
-        .fontColor(0xCCCCCC)
-        .width('90%')
-      Row() {
-        Row() {
-          Row()
-            .size({ width: '100%', height: '100%' })
-            .backgroundColor('#ffd5d5d5')
-        }
-        .width(80)
-        .height(80)
-        .padding({
-          top: new LengthMetrics(20, LengthUnit.VP),
-          bottom: LengthMetrics.px(15),
-          start: LengthMetrics.vp(10),
-          end: LengthMetrics.fp(20)
-        })
-        .margin({
-          top: LengthMetrics.percent(0.1),
-          bottom: LengthMetrics.lpx(20),
-          start: LengthMetrics.resource($r('app.float.row_margin_start')),
-          end: LengthMetrics.vp(10)
-        })
-        .backgroundColor(Color.White)
-      }
-      .backgroundColor('#ff2787d9')
-    }
-    .width('100%')
-    .margin({ top: 5 })
-  }
-}
-```
-
 ## vp
 
 ```TypeScript
@@ -268,8 +206,6 @@ static vp(value: number): LengthMetrics
 用于生成单位为VP的长度属性。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -303,8 +239,6 @@ public unit: LengthUnit
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -322,8 +256,6 @@ public value: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

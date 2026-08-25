@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## createDeviceManager
@@ -15,8 +15,6 @@ function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceM
 创建一个设备管理器实例。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 11
 
@@ -39,25 +37,3 @@ function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceM
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-
-**示例**
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-let dmInstance: deviceManager.DeviceManager | null = null;
-try {
-  deviceManager.createDeviceManager("ohos.samples.jshelloworld", (err: BusinessError, data: deviceManager.DeviceManager) => {
-    if (err) { 
-      console.error("createDeviceManager errCode:" + err.code + ",errMessage:" + err.message);
-      return;
-    }
-    console.info("createDeviceManager success");
-    dmInstance = data;
-  });
-} catch(err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("createDeviceManager errCode:" + e.code + ",errMessage:" + e.message);
-}
-```

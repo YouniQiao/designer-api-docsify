@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -23,8 +21,6 @@ constructor(locale?: string)
 创建实体识别对象。该对象根据区域规则识别文本中的实体。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -43,187 +39,6 @@ constructor(locale?: string)
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [890001](../errorcode-i18n.md#890001-参数校验错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let entityRecognizer: i18n.EntityRecognizer = new i18n.EntityRecognizer('zh-CN');
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call new i18n.EntityRecognizer failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let option: i18n.PhoneNumberFormatOptions = { type: 'E164' };
-let phoneNumberFormat: i18n.PhoneNumberFormat = new i18n.PhoneNumberFormat('CN', option);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  // 需要将'/system/lib/US.ics'替换为实际ics文件路径
-  let holidayManager = new i18n.HolidayManager('/system/lib/US.ics');
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call i18n.HolidayManager failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let locale = new Intl.Locale('zh-Hans-CN');
-let formatter = new i18n.SymbolDateTimeFormat(locale, {
-  timeStyle: 'short',
-  amPMSymbol: ['早', '晚']
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let yearTextStyle: TextStyle = new TextStyle({ fontColor: Color.Red });
-  let monthTextStyle: TextStyle = new TextStyle({ fontColor: Color.Green });
-  let dayTextStyle: TextStyle = new TextStyle({ fontColor: Color.Blue });
-
-  // 通过Intl.DateTimeFormat创建StyledDateTimeFormat对象
-  let dateFormat: Intl.DateTimeFormat = new Intl.DateTimeFormat('zh-Hans-CN', { dateStyle: 'full' });
-  let styledDateFormat: i18n.StyledDateTimeFormat = new i18n.StyledDateTimeFormat(dateFormat, {
-    year: yearTextStyle,
-    month: monthTextStyle,
-    day: dayTextStyle
-  });
-
-  let hourTextStyle: TextStyle = new TextStyle({ fontColor: Color.Yellow });
-  let minuteTextStyle: TextStyle = new TextStyle({ fontColor: Color.Orange });
-  let secondTextStyle: TextStyle = new TextStyle({ fontColor: Color.Pink });
-
-  // 通过SimpleDateTimeFormat创建StyledDateTimeFormat对象
-  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
-  let simpleTimeFormat: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatBySkeleton('hhmmss', locale);
-  let styledTimeFormat: i18n.StyledDateTimeFormat = new i18n.StyledDateTimeFormat(simpleTimeFormat, {
-    hour: hourTextStyle,
-    minute: minuteTextStyle,
-    second: secondTextStyle
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call i18n.StyledDateTimeFormat failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-let formatter = new i18n.ISO8601DateTimeFormat({
-  dateFormat: 'calendar',
-  timePrecision: 'minutes',
-  separatorStyle: 'extended'
-});
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let locale = new Intl.Locale('zh-Hans-CN');
-let formatter = new i18n.SymbolNumberFormat(locale, {
-  style: 'unit',
-  unit: 'day',
-  zero: '(0)'
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n, intl } from '@kit.LocalizationKit';
-
-try {
-  let integerTextStyle: TextStyle = new TextStyle({ fontColor: Color.Red });
-  let decimalTextStyle: TextStyle = new TextStyle({ fontColor: Color.Brown });
-  let fractionTextStyle: TextStyle = new TextStyle({ fontColor: Color.Blue });
-  let unitTextStyle: TextStyle = new TextStyle({ fontColor: Color.Green });
-
-  // 通过intl.NumberFormat创建StyledNumberFormat对象
-  let numFmt: intl.NumberFormat = new intl.NumberFormat('zh', { style: 'unit', unit: 'percent' });
-  let styledNumFmt: i18n.StyledNumberFormat = new i18n.StyledNumberFormat(numFmt, {
-    integer: integerTextStyle,
-    decimal: decimalTextStyle,
-    fraction: fractionTextStyle,
-    unit: unitTextStyle
-  });
-
-  // 通过SimpleNumberFormat创建StyledNumberFormat对象
-  let locale: intl.Locale = new intl.Locale('zh');
-  let simpleNumFmt: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('percent', locale);
-  let styledSimpleNumFmt: i18n.StyledNumberFormat = new i18n.StyledNumberFormat(simpleNumFmt, {
-    integer: integerTextStyle,
-    decimal: decimalTextStyle,
-    fraction: fractionTextStyle,
-    unit: unitTextStyle
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call i18n.StyledNumberFormat failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let integerTextStyle: TextStyle = new TextStyle({ fontColor: Color.Red });
-  let decimalTextStyle: TextStyle = new TextStyle({ fontColor: Color.Brown });
-  let fractionTextStyle: TextStyle = new TextStyle({ fontColor: Color.Blue });
-  let unitTextStyle: TextStyle = new TextStyle({ fontColor: Color.Green });
-
-  // 通过Intl.NumberFormat创建StyledNumberFormat对象
-  let numFmt: Intl.NumberFormat = new Intl.NumberFormat('zh', { style: 'unit', unit: 'percent' });
-  let styledNumFmt: i18n.StyledNumberFormat = new i18n.StyledNumberFormat(numFmt, {
-    integer: integerTextStyle,
-    decimal: decimalTextStyle,
-    fraction: fractionTextStyle,
-    unit: unitTextStyle
-  });
-
-  // 通过SimpleNumberFormat创建StyledNumberFormat对象
-  let locale: Intl.Locale = new Intl.Locale('zh');
-  let simpleNumFmt: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('percent', locale);
-  let styledSimpleNumFmt: i18n.StyledNumberFormat = new i18n.StyledNumberFormat(simpleNumFmt, {
-    integer: integerTextStyle,
-    decimal: decimalTextStyle,
-    fraction: fractionTextStyle,
-    unit: unitTextStyle
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call i18n.StyledNumberFormat failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let numFmt: Intl.NumberFormat = new Intl.NumberFormat('zh-Hans-CN', { style: 'unit', unit: 'fahrenheit' });
-let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasureFormat(numFmt, {
-  unitUsage: i18n.UnitUsage.TEMPERATURE_PERSON
-});
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let systemLocaleManager: i18n.SystemLocaleManager = new i18n.SystemLocaleManager();
-```
-
 ## findEntityInfo
 
 ```TypeScript
@@ -233,8 +48,6 @@ findEntityInfo(text: string): Array<EntityInfoItem>
 获取文本中的实体信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -257,23 +70,3 @@ findEntityInfo(text: string): Array<EntityInfoItem>
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let entityRecognizer: i18n.EntityRecognizer = new i18n.EntityRecognizer('zh-CN');
-  let phoneNumberText: string = '如有疑问，请联系158****2312';
-  // phoneNumberEntity[0].type = 'phone_number', phoneNumberEntity[0].begin = 8, phoneNumberEntity[0].end = 19
-  let phoneNumberEntity: Array<i18n.EntityInfoItem> = entityRecognizer.findEntityInfo(phoneNumberText);
-  let dateText: string = '我们2023年12月1日一起吃饭吧。';
-  // dateEntity[0].type = 'date', dateEntity[0].begin = 2, dateEntity[0].end = 12
-  let dateEntity: Array<i18n.EntityInfoItem> = entityRecognizer.findEntityInfo(dateText);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call EntityRecognizer.findEntityInfo failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```

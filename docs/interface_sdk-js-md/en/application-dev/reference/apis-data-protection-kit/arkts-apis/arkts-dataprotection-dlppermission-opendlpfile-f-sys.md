@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## openDLPFile
@@ -15,8 +15,6 @@ function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>
 Opens a DLP file. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. This API uses a promise to return the result.After calling **openDLPFile()** to return a **DLPFile** object, the system must call [closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile) to release resources after using the object.When a DLP management application or an authorized application needs to access a DLP file, it must first open the file to obtain the managed object.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -57,84 +55,6 @@ Opens a DLP file. After the API is successfully called, the **DLPFile** object i
 | [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) |
 | [19100020](../errorcode-dlp.md#19100020-network-disconnected) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let file: number | undefined = undefined;
-  let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-  let appId = '';
-  let bundleName = 'com.ohos.note';
-  let userId = 100;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-    appId = data.signatureInfo.appId;
-  } catch (err) {
-    console.error('error', err.code, err.message);
-  }
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-    dlpFile?.closeDLPFile(); // Close the DLP object.
-  } finally {
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-let file: number | undefined = undefined;
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_SIGNATURE_INFO;
-let appId = '';
-let bundleName = 'com.ohos.note';
-let userId = 100;
-
-try{
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-} catch (err) {
-  console.error('error', err.code, err.message);
-}
-
-try {
-  file = fileIo.openSync(uri).fd;
-  dlpPermission.openDLPFile(file, appId, (err, res) => { // Open a DLP file.
-    if (err !== undefined) {
-      console.error('openDLPFile error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    if (file) {
-      fileIo.closeSync(file);
-    }
-  });
-} catch (err) {
-  console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
-  if (file) {
-    fileIo.closeSync(file);
-  }
-}
-```
-
 
 ## openDLPFile
 
@@ -145,8 +65,6 @@ function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallbac
 Opens a DLP file. This API uses an asynchronous callback to return the result. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. After using the **DLPFile** object, call **closeDLPFile** to close the object to prevent resource leakage.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -181,7 +99,3 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 | [19100018](../errorcode-dlp.md#19100018-application-unauthorized) |
 | [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) |
 | [19100020](../errorcode-dlp.md#19100020-network-disconnected) |
-
-**Examples**
-
-See [openDLPFile](#opendlpfile)

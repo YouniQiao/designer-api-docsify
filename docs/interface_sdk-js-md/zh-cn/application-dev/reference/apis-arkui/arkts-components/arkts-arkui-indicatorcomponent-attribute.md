@@ -6,8 +6,6 @@
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ count(totalCount: number)
 设置导航点总数量。单独导航点组件和Swiper绑定的时候，以Swiper的页面数量为准。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,8 +47,6 @@ initialIndex(index: number)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -76,8 +70,6 @@ loop(isLoop: boolean)
 设置是否开启循环。单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -103,8 +95,6 @@ Called when the index value changes.
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -129,8 +119,6 @@ style(indicatorStyle: DotIndicator | DigitIndicator)
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -143,7 +131,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| indicatorStyle | DotIndicator \| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 是 |
+| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) | 是 |
 
 ## vertical
 
@@ -154,8 +142,6 @@ vertical(isVertical: boolean)
 设置是否为纵向滑动。单独导航点组件和Swiper绑定的时候，该属性不生效。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

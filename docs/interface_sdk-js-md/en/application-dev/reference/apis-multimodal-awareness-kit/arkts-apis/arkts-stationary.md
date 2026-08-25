@@ -7,14 +7,12 @@ The **stationary** module provides APIs to report the device status, including a
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Msdp.DeviceStatus.Stationary
 
 ## Modules to Import
 
 ```TypeScript
-import { stationary } from '@kit.MultimodalAwarenessKit';
+import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

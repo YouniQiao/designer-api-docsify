@@ -4,8 +4,6 @@ Obtains CDMA cell information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Obtains CDMA cell information.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## baseId
 
 ```TypeScript
-baseId: int
+baseId: number
 ```
 
 Indicates the base station Id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -37,16 +33,14 @@ Indicates the base station Id.
 ## latitude
 
 ```TypeScript
-latitude: int
+latitude: number
 ```
 
 Indicates the latitude.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -55,16 +49,14 @@ Indicates the latitude.
 ## longitude
 
 ```TypeScript
-longitude: int
+longitude: number
 ```
 
 Indicates the longitude.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -73,16 +65,14 @@ Indicates the longitude.
 ## nid
 
 ```TypeScript
-nid: int
+nid: number
 ```
 
 Indicates the network identification code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -91,16 +81,14 @@ Indicates the network identification code.
 ## sid
 
 ```TypeScript
-sid: int
+sid: number
 ```
 
 Indicates the system identification code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 

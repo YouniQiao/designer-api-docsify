@@ -8,8 +8,6 @@ Defines the type of input event to be dispatched. For details, see [postInputEve
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -20,4 +18,4 @@ Defines the type of input event to be dispatched. For details, see [postInputEve
 | --- |
 | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) |
 | [MouseEvent](../arkts-components/arkts-arkui-mouseevent-i.md) |
-| [AxisEvent](arkts-arkui-common-axisevent-i.md) |
+| [AxisEvent](../arkts-components/arkts-arkui-axisevent-i.md) |

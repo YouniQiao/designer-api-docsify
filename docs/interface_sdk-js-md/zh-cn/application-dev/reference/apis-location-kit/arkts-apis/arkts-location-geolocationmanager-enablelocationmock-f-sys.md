@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## enableLocationMock
@@ -15,8 +15,6 @@ function enableLocationMock(): void
 使能位置模拟功能。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本20+：ohos.permission.MOCK_LOCATION
@@ -34,15 +32,3 @@ function enableLocationMock(): void
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  geoLocationManager.enableLocationMock();
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

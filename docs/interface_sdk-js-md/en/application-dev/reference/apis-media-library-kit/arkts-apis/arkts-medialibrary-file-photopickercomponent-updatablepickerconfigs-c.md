@@ -4,14 +4,12 @@ Describes the updatable attributes of the **PhotoPickerComponent**. These attrib
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseItemInfo, ItemInfo, PhotoBrowserInfo, AnimatorParams, MaxSelected, ItemType, ClickType, PickerOrientation, SelectMode, PickerColorMode, ReminderMode, MaxCountType, PhotoBrowserRange, PhotoBrowserUIElement, ItemsDeletedCallback, ExceedMaxSelectedCallback, CurrentAlbumDeletedCallback, videoPlayStateChangedCallback, MovingPhotoBadgeStateChangedCallback, UpdatablePickerConfigs, SingleLineConfig, BadgeConfig, PreselectedInfo, SaveMode, BadgeType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ItemClickedNotifyCallback, ScrollStopAtEndCallback, PhotoBrowserChangeStartCallback, PinchGridSwitchedCallback, ErrorCallback, ClickResult, PickerError } from '@kit.MediaLibraryKit';
+import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseItemInfo, ItemInfo, PhotoBrowserInfo, AnimatorParams, MaxSelected, ItemType, ClickType, PickerOrientation, SelectMode, PickerColorMode, ReminderMode, MaxCountType, PhotoBrowserRange, PhotoBrowserUIElement, ItemsDeletedCallback, ExceedMaxSelectedCallback, CurrentAlbumDeletedCallback, videoPlayStateChangedCallback, MovingPhotoBadgeStateChangedCallback, UpdatablePickerConfigs, SingleLineConfig, BadgeConfig, PreselectedInfo, SaveMode, BadgeType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ItemClickedNotifyCallback, ScrollStopAtEndCallback, PhotoBrowserChangeStartCallback, PinchGridSwitchedCallback, ErrorCallback, ClickResult, PickerError } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## appAlbumFilters
@@ -25,8 +23,6 @@ Used to display only the album content corresponding to the specified bundle nam
 **Type:** Array&lt;string&gt;
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Playback mode of the moving photo. The maximum array length is 2. If this limit 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -66,8 +60,6 @@ Background color of the Picker grid page.The value is an 8-digit hexadecimal col
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -83,8 +75,6 @@ Background opacity of the picker. The value range is [0, 1]. **0** indicates com
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +94,6 @@ Background color of the check box.The value is an 8-digit hexadecimal color code
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -122,8 +110,6 @@ Text color in the check box.The value is an 8-digit hexadecimal color code.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -134,13 +120,11 @@ Text color in the check box.The value is an 8-digit hexadecimal color code.
 edgeEffect?: EdgeEffect
 ```
 
-Scrolling effect when the Picker grid page reaches the edge.The default value is EdgeEffect.Spring.
+Scrolling effect when the Picker grid page reaches the edge.The default value is [EdgeEffect.Spring](../../apis-arkui/arkts-apis/arkts-arkui-edgeeffect-e.md).
 
-**Type:** EdgeEffect
+**Type:** [EdgeEffect](../../apis-arkui/arkts-apis/arkts-arkui-edgeeffect-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,11 +140,9 @@ gridMargin?: Margin
 
 Margin of the component grid.
 
-**Type:** Margin
+**Type:** [Margin](../../apis-arkui/arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -181,8 +163,6 @@ Whether a single image can be repeatedly selected.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -198,8 +178,6 @@ Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true**
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,8 +197,6 @@ Maximum number of images that can be selected (unit: number).The maximum value i
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -236,8 +212,6 @@ Maximum number of media files that can be selected.The maximum value is 500, and
 **Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -255,8 +229,6 @@ Maximum number of videos that can be selected (unit: number).The maximum value i
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -273,8 +245,6 @@ MIME types.If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by d
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -286,13 +256,13 @@ mimeTypeFilter?: photoAccessHelper.MimeTypeFilter
 ```
 
 Configuration for file type filtering. Multiple types can be specified.  
-- When this parameter is set, the **mimeType** configuration automatically becomes invalid. - When this parameter is set, only media files of the configured filter type are displayed. You are advised to notify users that only images or videos of the specified type can be selected.
+- When this parameter is set, the **mimeType** configuration automatically becomes invalid.  
+- When this parameter is set, only media files of the configured filter type are displayed. You are advised to  
+notify users that only images or videos of the specified type can be selected.
 
 **Type:** photoAccessHelper.MimeTypeFilter
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -310,8 +280,6 @@ Background color of the photo browser page.The options are **AUTO**, **LIGHT**, 
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -324,11 +292,9 @@ photoBrowserMargin?: Margin
 
 Margin of the component large image.
 
-**Type:** Margin
+**Type:** [Margin](../../apis-arkui/arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -348,8 +314,6 @@ URIs of the selected images.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -367,8 +331,6 @@ Picker selection mode.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -385,8 +347,6 @@ Single selection mode. The default value is **SingleSelectionMode.BROWSER_MODE**
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -402,8 +362,6 @@ Color mode of the Picker UI component.Dark/Light color mode (excluding the backg
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

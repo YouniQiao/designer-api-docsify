@@ -2,99 +2,18 @@
 
 错误参数，继承自Error类，用于在接口调用失败时传递标准化的错误信息，包含错误码和可选的附加信息。
 
-**继承/实现关系：** BusinessError extends Error
+**继承/实现关系：** BusinessError extends [Error](../../apis-arkweb/arkts-components/arkts-arkweb-messagelevel-e.md#error)
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **系统能力：** SystemCapability.Base
 
 ## 导入模块
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from 'kits/@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from 'kits/@kit.BasicServicesKit';
 ```
-
-## constructor
-
-```TypeScript
-constructor()
-```
-
-BusinessError的构造函数。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Base
-
-## constructor
-
-```TypeScript
-constructor(code: int, error: Error)
-```
-
-BusinessError的构造函数。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Base
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [code](#code) | int | 是 |
-| error | Error | 是 |
-
-## constructor
-
-```TypeScript
-constructor(code: int, data: T, error: Error)
-```
-
-BusinessError的构造函数。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Base
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [code](#code) | int | 是 |
-| [data](#data) | T | 是 |
-| error | Error | 是 |
-
-## constructor
-
-```TypeScript
-constructor(code: int, message: string, data?: T)
-```
-
-BusinessError的构造函数。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Base
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [code](#code) | int | 是 |
-| message | string | 是 |
-| [data](#data) | T | 否 |
 
 ## code
 
@@ -107,8 +26,6 @@ code: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -127,8 +44,6 @@ data?: T
 **类型：** T
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

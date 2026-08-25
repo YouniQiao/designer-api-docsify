@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
+import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 ```
 
 ## on('cooperation')
@@ -15,8 +15,6 @@ function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: str
 Registers a listener for screen hopping state changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 23
 
@@ -39,30 +37,3 @@ Registers a listener for screen hopping state changes. This API uses an asynchro
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let callback = (msg: object) => {
-            console.info(`Keyboard mouse crossing event: ${JSON.stringify(msg)}`);
-            return false;
-          }
-          try {
-            inputDeviceCooperate.on('cooperation', callback);
-          } catch (error) {
-            console.error(`Register failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```

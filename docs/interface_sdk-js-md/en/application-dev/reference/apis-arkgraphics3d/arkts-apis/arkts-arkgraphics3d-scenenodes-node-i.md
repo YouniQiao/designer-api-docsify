@@ -6,8 +6,6 @@ The 3D scene consists of nodes in a tree hierarchy, where each node implements a
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## getNodeByPath
@@ -19,8 +17,6 @@ getNodeByPath(path: string): Node | null
 Obtains a node by path. If no node is obtained, null is returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -36,23 +32,6 @@ Obtains a node by path. If no node is obtained, null is returned.
 | --- |
 | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null |
 
-**Examples**
-
-```TypeScript
-import { Scene, Node } from '@kit.ArkGraphics3D';
-
-function getNode(): void {
-  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
-  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  scene.then(async (result: Scene) => {
-    if (result && result.root) {
-      // Search for a node.
-      let geo : Node | null = result.root.getNodeByPath("scene/node");
-    }
-  });
-}
-```
-
 ## children
 
 ```TypeScript
@@ -64,8 +43,6 @@ Child node of the node and null if it does not exist. This is a read-only proper
 **Type:** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -81,8 +58,6 @@ Layer mask of a node.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## nodeType
@@ -96,8 +71,6 @@ Node type.
 **Type:** [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -113,8 +86,6 @@ Parent node of the node and null if it does not exist.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## path
@@ -128,8 +99,6 @@ Node path.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -145,8 +114,6 @@ Node position, in scene units of the world coordinate system (for example, cm, m
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## rotation
@@ -160,8 +127,6 @@ Rotation angle of a node.
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -177,8 +142,6 @@ Node scale.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## visible
@@ -192,7 +155,5 @@ Whether a node is visible. true if visible, false otherwise.
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

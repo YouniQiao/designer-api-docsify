@@ -1,6 +1,8 @@
 # AeadParamsSpec
 
-用于AEAD（带附加数据的认证加密）对称加解密的 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法参数，继承自 [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)。<br>适用于[AES算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#aes)的CCM和GCM分组模式。 <br>适用于[SM4算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#sm4)的GCM分组模式。 <br>适用于 [ChaCha20-Poly1305算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20) 分组模式。
+用于AEAD（带附加数据的认证加密）对称加解密的 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法参数，继承自 [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)。
+
+适用于[AES算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#aes)的CCM和GCM分组模式。 适用于[SM4算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#sm4)的GCM分组模式。 适用于 [ChaCha20-Poly1305算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20) 分组模式。
 
 > **说明：**&gt;
 > 在AES-CCM模式下使用AeadParamsSpec加密时：
@@ -12,14 +14,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## authenticatedData
@@ -33,8 +33,6 @@ authenticatedData?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,8 +58,6 @@ nonce: Uint8Array
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -71,10 +67,12 @@ nonce: Uint8Array
 ## tagLen
 
 ```TypeScript
-tagLen?: int
+tagLen?: number
 ```
 
-认证标签长度，单位为字节。<br>加密时，标签将被添加到密文末尾。 <br>解密时，标签应位于密文末尾。 <br>取值应为整数。
+认证标签长度，单位为字节。
+
+加密时，标签将被添加到密文末尾。 解密时，标签应位于密文末尾。 取值应为整数。
 
 > **说明：**
 > - 对于AES-CCM，默认值为12。支持的取值为4、6、8、10、12、14和16。
@@ -82,11 +80,9 @@ tagLen?: int
 > - 对于SM4-GCM，默认值为16。支持的取值为4、8、12、13、14、15和16。
 > - 对于ChaCha20-Poly1305，默认值为16。支持的取值为16。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

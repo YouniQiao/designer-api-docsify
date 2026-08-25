@@ -4,8 +4,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** RouterOptions
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
 ```
 
 ## params
@@ -29,8 +27,6 @@ params?: Object
 **类型：** Object
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 
@@ -46,14 +42,13 @@ uri: string
 
 目标页面的uri，可以是以下的两种格式：
 1. 页面的绝对路径，由config.json文件中的页面列表提供。例如：  
-- pages/index/index - pages/detail/detail  
+- pages/index/index  
+- pages/detail/detail  
 2. 特定路径。如果URI为斜杠（/），则显示主页。
 
 **类型：** string
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 

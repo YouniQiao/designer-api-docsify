@@ -4,8 +4,6 @@ Enumerates the interpolation curves. For details about the animation, see <!--RP
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Linear
@@ -17,8 +15,6 @@ Linear
 The animation maintains a constant speed throughout the process.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,8 +32,6 @@ The animation starts slowly, accelerates, and then decelerates before ending. Th
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -53,8 +47,6 @@ EaseIn
 The animation starts at a low speed and then picks up speed until the end. The cubic-bezier(0.42, 0.0, 1.0, 1.0) is used.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,8 +64,6 @@ The animation ends at a low speed. The cubic-bezier(0.0, 0.0, 0.58, 1.0) is used
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -89,8 +79,6 @@ EaseInOut
 The animation starts and ends at a low speed. The cubic-bezier curve(0.42, 0.0, 0.58, 1.0) is used.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,8 +96,6 @@ The animation uses the standard cubic-bezier curve(0.4, 0.0, 0.2, 1.0).
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -125,8 +111,6 @@ LinearOutSlowIn
 The animation uses the deceleration cubic-bezier curve(0.0, 0.0, 0.2, 1.0).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -144,8 +128,6 @@ The animation uses the acceleration cubic-bezier curve(0.4, 0.0, 1.0, 1.0).
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -161,8 +143,6 @@ ExtremeDeceleration
 The animation uses the extreme deceleration cubic-bezier curve(0.0, 0.0, 0.0, 1.0).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -180,8 +160,6 @@ The animation uses the sharp cubic-bezier curve(0.33, 0.0, 0.67, 1.0).
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -197,8 +175,6 @@ Rhythm
 The animation uses the rhythm cubic-bezier curve(0.7, 0.0, 0.2, 1.0).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -216,8 +192,6 @@ The animation uses the smooth cubic-bezier curve(0.4, 0.0, 0.4, 1.0).
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -233,8 +207,6 @@ Friction
 The animation uses the friction cubic-bezier curve(0.2, 0.0, 0.2, 1.0).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

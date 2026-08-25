@@ -4,8 +4,6 @@ Enumerates the exposure states.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## EXPOSURE_STATE_SCAN
@@ -17,8 +15,6 @@ EXPOSURE_STATE_SCAN = 0
 Focusing.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ EXPOSURE_STATE_CONVERGED = 1
 Exposure converged.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

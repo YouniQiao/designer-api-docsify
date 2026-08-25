@@ -8,8 +8,6 @@ Defines the callback triggered for receiving notifications of template status ch
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth

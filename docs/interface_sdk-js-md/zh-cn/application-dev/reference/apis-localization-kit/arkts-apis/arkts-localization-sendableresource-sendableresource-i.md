@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Global.ResourceManager
 
 ## bundleName
@@ -22,8 +20,6 @@ bundleName: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -34,13 +30,13 @@ bundleName: string
 id: number
 ```
 
-资源ID，取值如下： - 应用资源区间：[0x01000000, 0x06FFFFFF] 和 [0x08000000, 0xFFFFFFFF]，表示应用自身的资源ID。 - 系统资源区间：[0x07000000, 0x07FFFFFF]，表示系统预置的资源ID。
+资源ID，取值如下：  
+- 应用资源区间：[0x01000000, 0x06FFFFFF] 和 [0x08000000, 0xFFFFFFFF]，表示应用自身的资源ID。  
+- 系统资源区间：[0x07000000, 0x07FFFFFF]，表示系统预置的资源ID。
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -58,8 +54,6 @@ moduleName: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -76,8 +70,6 @@ params?: collections.Array <string | number>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
@@ -88,13 +80,23 @@ params?: collections.Array <string | number>
 type?: number
 ```
 
-资源类型，取值如下： - 10001：color - 10002：float - 10003：string - 10004：plural - 10005：boolean - 10006：intarray - 10007：integer - 10008：pattern - 10009：strarray - 20000：media - 30000：rawfile - 40000：symbol
+资源类型，取值如下：  
+- 10001：color  
+- 10002：float  
+- 10003：string  
+- 10004：plural  
+- 10005：boolean  
+- 10006：intarray  
+- 10007：integer  
+- 10008：pattern  
+- 10009：strarray  
+- 20000：media  
+- 30000：rawfile  
+- 40000：symbol
 
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

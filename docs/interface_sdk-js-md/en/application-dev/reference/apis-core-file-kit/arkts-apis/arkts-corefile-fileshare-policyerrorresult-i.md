@@ -4,14 +4,12 @@ Failed policy result on URI.@interface { object }
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
+import { fileShare } from 'kits/@kit.CoreFileKit';
 ```
 
 ## code
@@ -25,8 +23,6 @@ Indicates the error code of the failure in the policy information.
 **Type:** [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -42,8 +38,6 @@ Indicates the reason of the failure in the policy information.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## uri
@@ -57,7 +51,5 @@ Indicates the failed uri of the policy information.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization

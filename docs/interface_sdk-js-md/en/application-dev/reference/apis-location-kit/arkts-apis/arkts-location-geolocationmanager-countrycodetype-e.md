@@ -4,8 +4,6 @@ Enum for country code type.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## COUNTRY_CODE_FROM_LOCALE
@@ -17,8 +15,6 @@ COUNTRY_CODE_FROM_LOCALE = 1
 Country code obtained from the locale setting.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -32,8 +28,6 @@ Country code obtained from the SIM information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## COUNTRY_CODE_FROM_LOCATION
@@ -46,8 +40,6 @@ Query the country code information from the reverse geocoding result.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 ## COUNTRY_CODE_FROM_NETWORK
@@ -59,7 +51,5 @@ COUNTRY_CODE_FROM_NETWORK = 4
 Obtain the country code from the cell registration information.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core

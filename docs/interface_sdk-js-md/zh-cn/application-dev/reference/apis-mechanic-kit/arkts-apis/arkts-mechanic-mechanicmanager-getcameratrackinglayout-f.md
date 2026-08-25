@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## getCameraTrackingLayout
@@ -15,8 +15,6 @@ function getCameraTrackingLayout(): CameraTrackingLayout
 获取当前摄像头跟踪布局
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -32,12 +30,3 @@ function getCameraTrackingLayout(): CameraTrackingLayout
 | --- |
 | [33300001](../errorcode-mechanic.md#33300001-系统错误) |
 | [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
-
-**示例**
-
-```TypeScript
-console.info('Query layout');
-// 调用getCameraTrackingLayout方法获取当前摄像头跟踪布局
-let layout = mechanicManager.getCameraTrackingLayout();
-console.info(`'Succeeded in querying layout, current layout:' ${layout}`);
-```

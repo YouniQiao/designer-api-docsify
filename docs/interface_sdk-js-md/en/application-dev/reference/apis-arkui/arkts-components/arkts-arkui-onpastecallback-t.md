@@ -8,8 +8,6 @@ Defines the callback used to return the pasted text content.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -21,4 +19,4 @@ Defines the callback used to return the pasted text content.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | content | string | Yes |
-| event | [PasteEvent](../arkts-apis/arkts-arkui-richeditor-pasteevent-i.md) | Yes |
+| event | [PasteEvent](arkts-arkui-pasteevent-i.md) | Yes |

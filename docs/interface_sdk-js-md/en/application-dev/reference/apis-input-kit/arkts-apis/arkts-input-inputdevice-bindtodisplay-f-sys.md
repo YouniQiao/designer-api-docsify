@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## bindToDisplay
 
 ```TypeScript
-function bindToDisplay(inputDeviceId: int, displayId: int): Promise<void>
+function bindToDisplay(inputDeviceId: number, displayId: number): Promise<void>
 ```
 
 Bind input devices to a display. Only external USB and Bluetooth mice, touchpads, keyboards, and game controllers are supported. After binding, the device will be fixed to operate on the display group where the specified display is located. This API uses a promise to return the result.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.INPUT_DEVICE_CONTROLLER
 
@@ -30,8 +28,8 @@ Bind input devices to a display. Only external USB and Bluetooth mice, touchpads
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| inputDeviceId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| inputDeviceId | number | Yes |
+| displayId | number | Yes |
 
 **Return value:**
 

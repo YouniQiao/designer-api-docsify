@@ -20,11 +20,9 @@ UIExtensionComponent(
   )
 ```
 
-Construct the UIExtensionComponent.<br/> Called when the UIExtensionComponent is used.
+Construct the UIExtensionComponent.Called when the UIExtensionComponent is used.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,7 +49,6 @@ Construct the UIExtensionComponent.<br/> Called when the UIExtensionComponent is
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ReceiveCallback](arkts-arkui-receivecallback-t-sys.md) |
 
 ### Enums
 

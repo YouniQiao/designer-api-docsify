@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## startVibration
@@ -15,8 +15,6 @@ function startVibration(effect: VibrateEffect, attribute: VibrateAttribute, call
 Starts vibration based on a specified effect and attribute. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -41,248 +39,6 @@ Starts vibration based on a specified effect and attribute. This API uses an asy
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
 
-**Examples**
-
-Trigger vibration based on a preset effect.
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  // Check whether 'haptic.notice.success' is supported.
-  vibrator.isSupportEffect('haptic.notice.success', (err: BusinessError, state: boolean) => {
-    if (err) {
-      console.error(`Failed to query effect. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeed in querying effect');
-    if (state) {
-      try {
-        vibrator.startVibration({
-          type: 'preset',
-          effectId: 'haptic.notice.success',
-          count: 1,
-        }, {
-          usage: 'notification' // The switch control is subject to the selected type.
-        }, (error: BusinessError) => {
-          if (error) {
-            console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-      return;
-          }
-          console.info('Succeed in starting vibration');
-
-        });
-      } catch (err) {
-        let e: BusinessError = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-      }
-    }
-  })
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-Trigger vibration based on a custom vibration configuration file.
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const fileName: string = 'xxx.json';
-
-@Entry
-@Component
-struct Index {
-  uiContext = this.getUIContext();
-
-  build() {
-    Row() {
-      Column() {
-        Button('alarm-file')
-          .onClick(() => {
-            let rawFd: resourceManager.RawFileDescriptor | undefined = this.uiContext.getHostContext()?.resourceManager.getRawFdSync(fileName);
-            if (rawFd != undefined) {
-              try {
-                vibrator.startVibration({
-                  type: "file",
-                  hapticFd: { fd: rawFd.fd, offset: rawFd.offset, length: rawFd.length }
-                }, {
-                  id: 0,
-                  usage: 'alarm' // The switch control is subject to the selected type.
-                }, (error: BusinessError) => {
-                  if (error) {
-                    console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-                    return;
-                  }
-                  console.info('Succeed in starting vibration');
-                });
-              } catch (err) {
-                let e: BusinessError = err as BusinessError;
-                console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-              } finally {
-                vibrator.stopVibration();
-                this.uiContext.getHostContext()?.resourceManager.closeRawFdSync(fileName);
-              }
-            }
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-Trigger vibration based on a specified duration.
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  vibrator.startVibration({
-    type: 'time',
-    duration: 1000,
-  }, {
-    id: 0,
-    usage: 'alarm' // The switch control is subject to the selected type.
-  }, (error: BusinessError) => {
-    if (error) {
-      console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info('Succeed in starting vibration');
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-Trigger vibration based on a preset effect.
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  // Check whether 'haptic.notice.success' is supported.
-  vibrator.isSupportEffect('haptic.notice.success', (err: BusinessError, state: boolean) => {
-    if (err) {
-      console.error(`Failed to query effect. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeed in querying effect');
-    if (state) {
-      try {
-        vibrator.startVibration({
-          type: 'preset',
-          effectId: 'haptic.notice.success',
-          count: 1,
-        }, {
-          usage: 'notification' // The switch control is subject to the selected type.
-        }, (error: BusinessError) => {
-          if (error) {
-            console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-            return;
-          }
-          console.info('Succeed in starting vibration');
-
-        });
-      } catch (err) {
-        let e: BusinessError = err as BusinessError;
-        console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-      }
-    }
-  })
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-Trigger vibration based on a custom vibration configuration file.
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const fileName: string = 'xxx.json';
-
-@Entry
-@Component
-struct Index {
-  uiContext = this.getUIContext();
-
-  build() {
-    Row() {
-      Column() {
-        Button('alarm-file')
-          .onClick(() => {
-            let rawFd: resourceManager.RawFileDescriptor | undefined = this.uiContext.getHostContext()?.resourceManager.getRawFdSync(fileName);
-            if (rawFd != undefined) {
-              try {
-                vibrator.startVibration({
-                  type: "file",
-                  hapticFd: { fd: rawFd.fd, offset: rawFd.offset, length: rawFd.length }
-                }, {
-                  id: 0,
-                  usage: 'alarm' // The switch control is subject to the selected type.
-                }, (error: BusinessError) => {
-                  if (error) {
-                    console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-                    return;
-                  }
-                  console.info('Succeed in starting vibration');
-                });
-              } catch (err) {
-                let e: BusinessError = err as BusinessError;
-                console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-              } finally {
-                vibrator.stopVibration();
-                this.uiContext.getHostContext()?.resourceManager.closeRawFdSync(fileName);
-              }
-            }
-          })
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-Trigger vibration based on a specified duration.
-
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  vibrator.startVibration({
-    type: 'time',
-    duration: 1000
-  }, {
-    id: 0,
-    usage: 'alarm' // The switch control is subject to the selected type.
-  }).then(() => {
-    console.info('Succeed in starting vibration');
-  }, (error: BusinessError) => {
-    console.error(`Failed to start vibration. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## startVibration
 
@@ -293,8 +49,6 @@ function startVibration(effect: VibrateEffect, attribute: VibrateAttribute): Pro
 Starts vibration based on a specified effect and attribute. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -323,7 +77,3 @@ Starts vibration based on a specified effect and attribute. This API uses a prom
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
-
-**Examples**
-
-See [startVibration](#startvibration)

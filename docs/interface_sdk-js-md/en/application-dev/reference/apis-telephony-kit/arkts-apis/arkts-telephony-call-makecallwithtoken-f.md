@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## makeCallWithToken
@@ -15,8 +15,6 @@ function makeCallWithToken(phoneNumber: string, options?: MakeCallOptions): Prom
 Go to the dial screen and the called number is displayed.The authentication challenge value is returned.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

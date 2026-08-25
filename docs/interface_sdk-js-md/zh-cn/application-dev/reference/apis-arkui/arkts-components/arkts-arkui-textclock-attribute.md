@@ -1,12 +1,10 @@
 # TextClock属性/事件
 
-除支持通用属性外，还支持以下属性。除支持通用事件外，还支持以下事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** TextClockAttribute extends CommonMethod<TextClockAttribute>
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +23,6 @@ contentModifier(modifier: ContentModifier<TextClockConfiguration>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ contentModifier(modifier: ContentModifier<TextClockConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[TextClockConfiguration](arkts-arkui-textclockconfiguration-i.md)&gt; | 是 |
 
 ## dateTimeOptions
 
@@ -48,8 +44,6 @@ dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>)
 设置小时是否显示前导0。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,7 +57,7 @@ dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [dateTimeOptions](#datetimeoptions) | Optional & lt;DateTimeOptions & gt; | 是 |
+| [dateTimeOptions](#datetimeoptions) | [Optional](arkts-arkui-optional-t.md)&lt;DateTimeOptions&gt; | 是 |
 
 ## fontColor
 
@@ -74,8 +68,6 @@ fontColor(value: ResourceColor)
 设置字体颜色。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -99,8 +91,6 @@ fontFamily(value: ResourceStr)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -122,8 +112,6 @@ fontFeature(value: string)
 设置文字特性效果，比如数字等宽的特性。格式为：normal \| \&lt;feature-tag-value\&gt;\&lt;feature-tag-value\&gt;的格式为：\&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]\&lt;feature-tag-value\&gt;的个数可以有多个，中间用','隔开。例如，使用等宽时钟数字的输入格式为："ss01" on。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -149,8 +137,6 @@ fontSize(value: Length)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -173,8 +159,6 @@ fontStyle(value: FontStyle)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -196,8 +180,6 @@ fontWeight(value: number | FontWeight | string)
 设置文本的字体粗细，设置过大可能会导致不同字体下的文字出现截断。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -222,8 +204,6 @@ format(value: ResourceStr)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -245,8 +225,6 @@ onDateChange(event: (value: number) => void)
 提供时间变化回调，该事件回调间隔为秒。组件不可见时不回调。非卡片中使用时，该事件回调间隔为秒。卡片中使用时，该事件回调间隔为分钟。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -270,8 +248,6 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -284,4 +260,4 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | ShadowOptions \| Array & lt;ShadowOptions & gt; | 是 |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | 是 |

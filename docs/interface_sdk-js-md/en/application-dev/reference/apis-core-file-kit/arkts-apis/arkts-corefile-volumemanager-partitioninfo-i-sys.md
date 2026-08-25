@@ -4,8 +4,6 @@ Partition information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Partition information.
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## diskId
@@ -28,8 +26,6 @@ Disk ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -39,16 +35,14 @@ Disk ID.
 ## endSector
 
 ```TypeScript
-endSector: long
+endSector: number
 ```
 
 End sector of the partition.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +62,6 @@ File system type. Common file systems are **ext4**, **vfat**, **exfat**, **NTFS*
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -79,16 +71,14 @@ File system type. Common file systems are **ext4**, **vfat**, **exfat**, **NTFS*
 ## partitionNum
 
 ```TypeScript
-partitionNum: int
+partitionNum: number
 ```
 
 Partition number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,16 +89,14 @@ Partition number.
 ## sizeBytes
 
 ```TypeScript
-sizeBytes: long
+sizeBytes: number
 ```
 
-Partition total size. <br>Unit: Byte.
+Partition total size. Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,16 +107,14 @@ Partition total size. <br>Unit: Byte.
 ## startSector
 
 ```TypeScript
-startSector: long
+startSector: number
 ```
 
 Start sector of the partition.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

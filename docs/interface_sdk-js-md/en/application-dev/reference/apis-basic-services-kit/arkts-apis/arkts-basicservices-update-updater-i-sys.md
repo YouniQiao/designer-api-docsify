@@ -4,11 +4,15 @@ Defines a utility class that provides online system update functions, such as ch
 **Benefits**Users can obtain system updates in a timely manner, improving upgrade efficiency and user experience and reducing operation costs. Functions such as automatic version check, background download, and resumable transfer are supported.  
 **Online upgrade**  
 **Implementation mechanism**  
-- Version check: Query requests about the new version information can be sent to the upgrade package management server. - Download management: Network type selection, pause/resume download, and resumable transfer are supported. - Installation mechanism: After the upgrade package is downloaded, it is unzipped and written to the system partition to prepare for restarting the app. - Status management: Maintain the upgrade task status, including querying task information, clearing abnormal status, and terminating the upgrade.
+- Version check: Query requests about the new version information can be sent to the upgrade package management  
+server.  
+- Download management: Network type selection, pause/resume download, and resumable transfer are supported.  
+- Installation mechanism: After the upgrade package is downloaded, it is unzipped and written to the system  
+partition to prepare for restarting the app.  
+- Status management: Maintain the upgrade task status, including querying task information, clearing abnormal  
+status, and terminating the upgrade.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -17,7 +21,7 @@ Defines a utility class that provides online system update functions, such as ch
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## checkNewVersion
@@ -30,11 +34,10 @@ Checks whether a new version is available. The result includes whether a new ver
 **versionDigestInfo** returned by this API are mandatory for the subsequent APIs. These APIs can be called only when **isExistNewVersion** is **true**.If the value of **isExistNewVersion** is **false**, the current version is the latest version. In this case, you do not need to perform the subsequent upgrade operations.Use scenarios: Quickly check whether a new version is available and obtain the version digest information. Users can learn about the system update status in a timely manner, providing a basis for upgrade decisions.  
 **Overview**This API sends a version check request to the upgrade package management server deployed by the vendor. The request carries parameters such as the current version information and device model. The server checks whether a new version is available based on the request parameters and returns the version check result (**CheckResult**), including the **isExistNewVersion** flag and **newVersionInfo** structure (version digest and version number).The check process is as follows: The developer constructs request parameters. The system initiates an HTTP request. The server queries the version information. The system parses the response. The system returns the result.  
 **Constraints**  
-- This method depends on the upgrade package management server deployed by the vendor. Ensure that the server is properly deployed and accessible.
+- This method depends on the upgrade package management server deployed by the vendor. Ensure that the server is  
+properly deployed and accessible.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -56,30 +59,6 @@ Checks whether a new version is available. The result includes whether a new ver
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.checkNewVersion((err: BusinessError, result: update.CheckResult) => {
-      console.info(`checkNewVersion isExistNewVersion  ${result?.isExistNewVersion}`);
-    });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.checkNewVersion()
-      .then((result: update.CheckResult) => {
-        console.info(`checkNewVersion isExistNewVersion: ${result.isExistNewVersion}`);
-        // Version digest information
-        console.info(`checkNewVersion versionDigestInfo: ${result.newVersionInfo.versionDigestInfo.versionDigest}`);
-      })
-      .catch((err: BusinessError)=>{
-        console.error(`checkNewVersion promise error ${JSON.stringify(err)}`);
-      });
-```
-
 ## checkNewVersion
 
 ```TypeScript
@@ -90,11 +69,10 @@ Checks whether a new version is available. The result includes whether a new ver
 **versionDigestInfo** returned by this API are mandatory for the subsequent APIs. These APIs can be called only when **isExistNewVersion** is **true**.If the value of **isExistNewVersion** is **false**, the current version is the latest version. In this case, you do not need to perform the subsequent upgrade operations.Use scenarios: Quickly check whether a new version is available and obtain the version digest information. Users can learn about the system update status in a timely manner, providing a basis for upgrade decisions.  
 **Overview**This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. This API sends a version check request to the upgrade package management server deployed by the vendor. The request carries parameters such as the current version information and device model. The server checks whether a new version is available based on the request parameters and returns the version check result (**CheckResult**), including the **isExistNewVersion** flag and **newVersionInfo** structure (version digest and version number).The check process is as follows: The developer constructs request parameters. The system initiates an HTTP request. The server queries the version information. The system parses the response. The system returns the result.  
 **Constraints**  
-- This method depends on the upgrade package management server deployed by the vendor. Ensure that the server is properly deployed and accessible.
+- This method depends on the upgrade package management server deployed by the vendor. Ensure that the server is  
+properly deployed and accessible.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -116,10 +94,6 @@ Checks whether a new version is available. The result includes whether a new ver
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [checkNewVersion](#checknewversion)
-
 ## clearError
 
 ```TypeScript
@@ -129,13 +103,15 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 Clears errors. When the upgrade package fails to be downloaded or installed, delete the downloaded files and clear errors. After the API is successfully called, errors are cleared and the upgrade is restored to the initial state. You can start the complete upgrade process from the step of **checkNewVersion**. This API uses an asynchronous callback to return the result.Use scenarios: Clear errors and restart the upgrade after the upgrade fails.  
 **Overview**The process is as follows: Verify the **clearOptions** parameter, and ensure that the value of **status** is **UPGRADE_FAIL**. Delete the local upgrade package file to release storage space. Clear errors in the system service. Reset the task status to the initial state. Clear the error information cache. After errors are cleared, the upgrade service is restored to the available state. You can call **checkNewVersion** to restart upgrade. Errors can be cleared only in the **UPGRADE_FAIL** state. If this API is called in other states, an error is returned.  
 **Constraints**  
-- If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the abnormal status. - If **clearError** is not called to clear errors, the upgrade process cannot be restarted. - After errors are cleared, you can restart the upgrade process from the step of **checkNewVersion**.  
+- If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the  
+abnormal status.  
+- If **clearError** is not called to clear errors, the upgrade process cannot be restarted.  
+- After errors are cleared, you can restart the upgrade process from the step of **checkNewVersion**.  
 **Related methods**  
-- **upgrade()**: installs the upgrade package. If the operation fails, call **clearError**. - **checkNewVersion()**: checks for a new version again. This API should be called after errors are cleared.
+- **upgrade()**: installs the upgrade package. If the operation fails, call **clearError**.  
+- **checkNewVersion()**: checks for a new version again. This API should be called after errors are cleared.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -160,44 +136,6 @@ Clears errors. When the upgrade package fails to be downloaded or installed, del
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options for clearing errors
-const clearOptions: update.ClearOptions = {
-  status: update.UpgradeStatus.UPGRADE_FAIL,
-};
-updater.clearError(versionDigestInfo, clearOptions, (err: BusinessError) => {
-  console.info(`clearError error ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options for clearing errors
-const clearOptions: update.ClearOptions = {
-  status: update.UpgradeStatus.UPGRADE_FAIL,
-};
-updater.clearError(versionDigestInfo, clearOptions).then(() => {
-  console.info(`clearError success`);
-}).catch((err: BusinessError) => {
-  console.error(`clearError error ${JSON.stringify(err)}`);
-});
-```
-
 ## clearError
 
 ```TypeScript
@@ -207,13 +145,15 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 Clears errors. When the upgrade package fails to be downloaded or installed, delete the downloaded files and clear errors. After the API is successfully called, errors are cleared and the upgrade is restored to the initial state. You can start the complete upgrade process from the step of **checkNewVersion**. This API uses a promise to return the result.Use scenarios: Clear errors and restart the upgrade after the upgrade fails.  
 **Overview**The process is as follows: Verify the **clearOptions** parameter, and ensure that the value of **status** is **UPGRADE_FAIL**. Delete the local upgrade package file to release storage space. Clear errors in the system service. Reset the task status to the initial state. Clear the error information cache. After errors are cleared, the upgrade service is restored to the available state. You can call **checkNewVersion** to restart upgrade. Errors can be cleared only in the **UPGRADE_FAIL** state. If this API is called in other states, an error is returned.  
 **Constraints**  
-- If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the abnormal status. - If **clearError** is not called to clear errors, the upgrade process cannot be restarted. - After errors are cleared, you can restart the upgrade process from the step of **checkNewVersion**.  
+- If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the  
+abnormal status.  
+- If **clearError** is not called to clear errors, the upgrade process cannot be restarted.  
+- After errors are cleared, you can restart the upgrade process from the step of **checkNewVersion**.  
 **Related methods**  
-- **upgrade()**: installs the upgrade package. If the operation fails, call **clearError**. - **checkNewVersion()**: checks for a new version again. This API should be called after errors are cleared.
+- **upgrade()**: installs the upgrade package. If the operation fails, call **clearError**.  
+- **checkNewVersion()**: checks for a new version again. This API should be called after errors are cleared.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -242,10 +182,6 @@ Clears errors. When the upgrade package fails to be downloaded or installed, del
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
-
-**Examples**
-
-See [clearError](#clearerror)
 
 ## download
 
@@ -260,13 +196,19 @@ download(
 Downloads the upgrade package to the device. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. Progress monitoring, pause, and resumption of download are supported, helping users efficiently obtain the upgrade package, saving bandwidth and time, and improving the upgrade success rate. This API uses an asynchronous callback to return the result.Use scenarios: online update of the OTA client, automatic download of the upgrade package in the background, and resumable transfer after network interruption.  
 **Overview**This method downloads the upgrade package from the upgrade package management server to the device. The download process is as follows:Resumable transfer is supported. The number of bytes that have been downloaded and the network connection status are recorded. If the download is interrupted, it can resume from the breakpoint. When the download is paused, the progress status (such as the size of the data that has been downloaded and file path) is saved. When the download is resumed, the progress status is read to continue receiving data.  
 **Calling sequence**  
-- You must call **checkNewVersion** to check whether a new version is available and obtain the version digest information. - You must first call **checkNewVersion** to check whether a new version is available. This API can be called to download the upgrade package only when **isExistNewVersion** is **true**. - If the value of **isExistNewVersion** is **false**, no new version is available. If this method is called, a message will be returned, indicating that the current version is the latest version.  
+- You must call **checkNewVersion** to check whether a new version is available and obtain the version digest  
+information.  
+- You must first call **checkNewVersion** to check whether a new version is available. This API can be called to  
+download the upgrade package only when **isExistNewVersion** is **true**.  
+- If the value of **isExistNewVersion** is **false**, no new version is available. If this method is called, a  
+message will be returned, indicating that the current version is the latest version.  
 **Related methods**  
-- **checkNewVersion()**: checks whether a new version is available (prerequisite method). - **resumeDownload()**: resumes download (called after the download is paused). - **pauseDownload()**: pauses download (called during download). - **upgrade()**: installs the upgrade package (called after the download is complete).
+- **checkNewVersion()**: checks whether a new version is available (prerequisite method).  
+- **resumeDownload()**: resumes download (called after the download is paused).  
+- **pauseDownload()**: pauses download (called during download).  
+- **upgrade()**: installs the upgrade package (called after the download is complete).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -291,46 +233,6 @@ Downloads the upgrade package to the device. This method provides the online upg
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Download options
-const downloadOptions: update.DownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // Whether to allow download over data network
-  order: update.Order.DOWNLOAD // Download
-};
-updater.download(versionDigestInfo, downloadOptions, (err: BusinessError) => {
-  console.info(`download error ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Download options
-const downloadOptions: update.DownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // Whether to allow download over data network
-   order: update.Order.DOWNLOAD // Download
-};
-updater.download(versionDigestInfo, downloadOptions).then(() => {
-  console.info(`download start`);
-}).catch((err: BusinessError) => {
-  console.error(`download error ${JSON.stringify(err)}`);
-});
-```
-
 ## download
 
 ```TypeScript
@@ -340,13 +242,19 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 Downloads the upgrade package to the device. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. Progress monitoring, pause, and resumption of download are supported,helping users efficiently obtain the upgrade package, saving bandwidth and time, and improving the upgrade success rate. This API uses a promise to return the result.Use scenarios: online update of the OTA client, automatic download of the upgrade package in the background, and resumable transfer after network interruption.  
 **Overview**This method downloads the upgrade package from the upgrade package management server to the device. The download process is as follows:Resumable transfer is supported. The number of bytes that have been downloaded and the network connection status are recorded. If the download is interrupted, it can resume from the breakpoint. When the download is paused, the progress status (such as the size of the data that has been downloaded and file path) is saved. When the download is resumed, the progress status is read to continue receiving data.  
 **Calling sequence**  
-- You must call **checkNewVersion** to check whether a new version is available and obtain the version digest information. - This method can be called to download the upgrade package only when the value of **isExistNewVersion** is **true** by calling **checkNewVersion**. - If the value of **isExistNewVersion** is **false**, no new version is available. If this method is called, a message will be returned, indicating that the current version is the latest version.  
+- You must call **checkNewVersion** to check whether a new version is available and obtain the version digest  
+information.  
+- This method can be called to download the upgrade package only when the value of **isExistNewVersion** is  
+**true** by calling **checkNewVersion**.  
+- If the value of **isExistNewVersion** is **false**, no new version is available. If this method is called, a  
+message will be returned, indicating that the current version is the latest version.  
 **Related methods**  
-- **checkNewVersion()**: checks whether a new version is available (prerequisite method). - **resumeDownload()**: resumes download (called after the download is paused). - **pauseDownload()**: pauses download (called during download). - **upgrade()**: installs the upgrade package (called after the download is complete).
+- **checkNewVersion()**: checks whether a new version is available (prerequisite method).  
+- **resumeDownload()**: resumes download (called after the download is paused).  
+- **pauseDownload()**: pauses download (called during download).  
+- **upgrade()**: installs the upgrade package (called after the download is complete).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -376,10 +284,6 @@ Downloads the upgrade package to the device. This method provides the online upg
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [download](#download)
-
 ## getCurrentVersionDescription
 
 ```TypeScript
@@ -392,11 +296,14 @@ getCurrentVersionDescription(
 Obtains the description of the current version. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. After this API is called successfully, the current version description array is returned, which can be used for version information display, version status confirmation, and version comparison and analysis. This API uses an asynchronous callback to return the result.Use scenarios: Display the current version details to users, confirm the current system version status, and compare the differences between the old and new versions. For example, display the update description on the device information page, and display changes on the version history page. Use **getCurrentVersionInfo** to obtain the technical version information such as the version number and device name.  
 **Overview**This API obtains the description of each component of the current version from the upgrade package management server. The process is as follows:The description includes the function description and version features of each component. The information can be returned in **CONTENT** (text) or **URI** (link) format.  
 **Related methods**  
-- **getCurrentVersionInfo()**: obtains the current version information such as the version number and device name. This method can be called independently. - **getCurrentVersionDescription()**: obtains the description of the current version, which can be displayed to users. - The two methods can be used together. You can call **getCurrentVersionInfo** to obtain basic information and then call this method to obtain the detailed description for display.
+- **getCurrentVersionInfo()**: obtains the current version information such as the version number and device  
+name. This method can be called independently.  
+- **getCurrentVersionDescription()**: obtains the description of the current version, which can be displayed to  
+users.  
+- The two methods can be used together. You can call **getCurrentVersionInfo** to obtain basic information and  
+then call this method to obtain the detailed description for display.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -420,35 +327,6 @@ Obtains the description of the current version. This method provides the online 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-// Options of the description file
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // Standard format
-  language: "zh-cn" // Chinese
-};
-
-updater.getCurrentVersionDescription(descriptionOptions, (err, info) => {
-  console.info(`getCurrentVersionDescription info ${JSON.stringify(info)}`);
-  console.info(`getCurrentVersionDescription err ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// Options of the description file
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // Standard format
-  language: "zh-cn" // Chinese
-};
-updater.getCurrentVersionDescription(descriptionOptions).then((info: Array<update.ComponentDescription>) => {
-  console.info(`getCurrentVersionDescription promise info ${JSON.stringify(info)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getCurrentVersionDescription promise error ${JSON.stringify(err)}`);
-});
-```
-
 ## getCurrentVersionDescription
 
 ```TypeScript
@@ -458,11 +336,14 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 Obtains the description of the current version. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. After this API is called successfully, the current version description array is returned, which can be used for version information display, version status confirmation, and version comparison and analysis. This API uses a promise to return the result.Use scenarios: Display the current version details to users, confirm the current system version status, and compare the differences between the old and new versions. For example, display the update description on the device information page, and display changes on the version history page. Use **getCurrentVersionInfo** to obtain the technical version information such as the version number and device name.  
 **Overview**This API obtains the description of each component of the current version from the upgrade package management server. The process is as follows: Read the current version ID. Send a request to the server to obtain the description. (Specify the format and language by descriptionOptions.) The server queries the description based on the version ID. Parse the description data and convert it to the target format and language. Return the description array. The description includes the function description and version features of each component. The information can be returned in **CONTENT** (text) or **URI** (link) format.  
 **Related methods**  
-- **getCurrentVersionInfo()**: obtains the current version information such as the version number and device name. This method can be called independently. - **getCurrentVersionDescription()**: obtains the description of the current version, which can be displayed to users. - The two methods can be used together. You can call **getCurrentVersionInfo** to obtain basic information and then call this method to obtain the detailed description for display.
+- **getCurrentVersionInfo()**: obtains the current version information such as the version number and device  
+name. This method can be called independently.  
+- **getCurrentVersionDescription()**: obtains the description of the current version, which can be displayed to  
+users.  
+- The two methods can be used together. You can call **getCurrentVersionInfo** to obtain basic information and  
+then call this method to obtain the detailed description for display.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -491,10 +372,6 @@ Obtains the description of the current version. This method provides the online 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [getCurrentVersionDescription](#getcurrentversiondescription)
-
 ## getCurrentVersionInfo
 
 ```TypeScript
@@ -505,8 +382,6 @@ Obtains information about the current version. After the API is successfully cal
 **Overview**This method reads the current version information from the local system files and configurations of the device, including **osVersion** (system version number read from the system version configuration file), **deviceName** (device name read from the device attribute configuration), and **versionComponents** (array of component version information read from the system partition metadata). The information comes from the local device and does not depend on the network connection. After this method is called, the locally cached version data is directly returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -528,30 +403,6 @@ Obtains information about the current version. After the API is successfully cal
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getCurrentVersionInfo((err: BusinessError, info: update.CurrentVersionInfo) => {
-  console.info(`info osVersion = ${info?.osVersion}`);
-  console.info(`info deviceName = ${info?.deviceName}`);
-  console.info(`info displayVersion = ${info?.versionComponents[0].displayVersion}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getCurrentVersionInfo().then((info: update.CurrentVersionInfo) => {
-  console.info(`info osVersion = ${info.osVersion}`);
-  console.info(`info deviceName = ${info.deviceName}`);
-  console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
-}).catch((err: BusinessError) => {
-  console.error(`getCurrentVersionInfo promise error ${JSON.stringify(err)}`);
-});
-```
-
 ## getCurrentVersionInfo
 
 ```TypeScript
@@ -562,8 +413,6 @@ Obtains information about the current version. After the API is successfully cal
 **Overview**This method reads the current version information from the local system files and configurations of the device, including **osVersion** (system version number read from the system version configuration file), **deviceName** (device name read from the device attribute configuration), and **versionComponents** (array of component version information read from the system partition metadata). The information comes from the local device and does not depend on the network connection. After this method is called, the locally cached version data is directly returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -585,10 +434,6 @@ Obtains information about the current version. After the API is successfully cal
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [getCurrentVersionInfo](#getcurrentversioninfo)
-
 ## getNewVersionDescription
 
 ```TypeScript
@@ -602,11 +447,12 @@ getNewVersionDescription(
 Obtains the description of the new version. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. After the API is successfully called, the new version description array is returned, including the version description of each component. This API uses an asynchronous callback to return the result.Use scenarios: Display version updates to users and confirm whether to perform the upgrade. Help users understand the function improvements and fixes of the new version and make upgrade decisions.  
 **Overview**This API sends requests to the upgrade package management server to query the version description of each component based on the version digest information returned by **checkNewVersion**. The description includes the function improvements, fixes, and version features of each component. The server returns a description array. Each element corresponds to the description of a component (**ComponentDescription**). The server returns the description text in the format (**STANDARD** or **SIMPLIFIED**) and language (for example, **zh-cn**) specified by **descriptionOptions**. The description can be in text format (**DescriptionType.CONTENT**) or link format (**DescriptionType.URI**) and is used to display the version updates to users.  
 **Calling sequence**  
-- You need to call **checkNewVersion** to check whether a new version is available and obtain the version digest information. - The value of **versionDigestInfo** is obtained from the result returned by calling **checkNewVersion**. **checkNewVersion** must be called first.
+- You need to call **checkNewVersion** to check whether a new version is available and obtain the version digest  
+information.  
+- The value of **versionDigestInfo** is obtained from the result returned by calling **checkNewVersion**.  
+**checkNewVersion** must be called first.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -631,50 +477,6 @@ Obtains the description of the new version. This method provides the online upgr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options of the description file
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // Standard format
-  language: "zh-cn" // Chinese
-};
-
-updater.getNewVersionDescription(versionDigestInfo, descriptionOptions).then((info: Array<update.ComponentDescription>)=> {
-  console.info(`getNewVersionDescription promise info ${JSON.stringify(info)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getNewVersionDescription promise error ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options of the description file
-const descriptionOptions: update.DescriptionOptions = {
-  format: update.DescriptionFormat.STANDARD, // Standard format
-  language: "zh-cn" // Chinese
-};
-
-updater.getNewVersionDescription(versionDigestInfo, descriptionOptions).then((info: Array<update.ComponentDescription>)=> {
-  console.info(`getNewVersionDescription promise info ${JSON.stringify(info)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getNewVersionDescription promise error ${JSON.stringify(err)}`);
-});
-```
-
 ## getNewVersionDescription
 
 ```TypeScript
@@ -687,11 +489,11 @@ getNewVersionDescription(
 Obtains the description of the new version (**ComponentDescription**). This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. After the API is successfully called, the new version description array is returned, including the version description of each component. This API uses a promise to return the result.Use scenarios: Display version updates to users and confirm whether to perform the upgrade. Help users understand the function improvements and fixes of the new version and make upgrade decisions.  
 **Overview**This API sends requests to the upgrade package management server to query the version description of each component based on the version digest information returned by **checkNewVersion**. The description includes the function improvements, fixes, and version features of each component. The server returns a description array. Each element corresponds to the description of a component (**ComponentDescription**). The server returns the description text in the format (**STANDARD** or **SIMPLIFIED**) and language (for example, **zh-cn**) specified by **descriptionOptions**. The description can be in text format (**DescriptionType.CONTENT**) or link format (**DescriptionType.URI**) and is used to display the version updates to users.  
 **Calling sequence**  
-- You need to call **checkNewVersion** to check whether a new version is available and obtain the version digest information. - The value of **versionDigestInfo** is obtained from the result returned by calling **checkNewVersion**.
+- You need to call **checkNewVersion** to check whether a new version is available and obtain the version digest  
+information.  
+- The value of **versionDigestInfo** is obtained from the result returned by calling **checkNewVersion**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -721,10 +523,6 @@ Obtains the description of the new version (**ComponentDescription**). This meth
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [getNewVersionDescription](#getnewversiondescription)
-
 ## getNewVersionInfo
 
 ```TypeScript
@@ -734,15 +532,22 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 Obtains the new version information and sends requests to the upgrade package management server to query the detailed information about the new version, including the version number, version digest information, and version components. After the API is successfully called, a **NewVersionInfo** object is returned, containing complete version information, including the version digest information and version components. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. This API uses an asynchronous callback to return the result.Use scenarios: The technical information (such as the version number, upgrade package size, and component details) of the new version is required for version management, diagnosis, or technical analysis. This API helps developers fully understand the technical details of the new version.To display readable version description to users, you are advised to use the **getNewVersionDescription** method.  
 **Overview**This API sends requests to the upgrade package management server to query the complete details of the new version based on the version digest information returned by **checkNewVersion**. The server returns a **NewVersionInfo** object, including **versionDigestInfo** (version digest information used as the version ID for subsequent download and upgrade operations) and a **versionComponents** array (version number, size, and type of each component). This API can be called only when the value of **isExistNewVersion** is **true** by calling **checkNewVersion**. Otherwise, empty data is returned.  
 **Calling sequence**  
-- You must first call **checkNewVersion** to check whether a new version is available. - This API can be called only when the value of **isExistNewVersion** is **true**.  
+- You must first call **checkNewVersion** to check whether a new version is available.  
+- This API can be called only when the value of **isExistNewVersion** is **true**.  
 **Related methods**  
-- **checkNewVersion()**: checks whether a new version is available (prerequisite method). - **getNewVersionInfo()**: obtains the technical information (version number and component details) of the new version, which is applicable to version management and diagnosis scenarios. - **getNewVersionDescription()**: obtains the description of the new version, which is used to display the updated content to users. - **download()**: downloads the upgrade package (subsequent method).  
+- **checkNewVersion()**: checks whether a new version is available (prerequisite method).  
+- **getNewVersionInfo()**: obtains the technical information (version number and component details) of the new  
+version, which is applicable to version management and diagnosis scenarios.  
+- **getNewVersionDescription()**: obtains the description of the new version, which is used to display the  
+updated content to users.  
+- **download()**: downloads the upgrade package (subsequent method).  
 **Constraints**  
-- This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. - You must first call **checkNewVersion** to check whether a new version is available. This API can be called only when **isExistNewVersion** is **true**.
+- This method provides the online upgrade function, which depends on the upgrade package management server  
+deployed by the vendor.  
+- You must first call **checkNewVersion** to check whether a new version is available. This API can be called  
+only when **isExistNewVersion** is **true**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -764,28 +569,6 @@ Obtains the new version information and sends requests to the upgrade package ma
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getNewVersionInfo((err: BusinessError, info: update.NewVersionInfo) => {
-      console.info(`info displayVersion = ${info?.versionComponents[0].displayVersion}`);
-      console.info(`info innerVersion = ${info?.versionComponents[0].innerVersion}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getNewVersionInfo().then((info: update.NewVersionInfo) => {
-    console.info(`info displayVersion = ${info.versionComponents[0].displayVersion}`);
-    console.info(`info innerVersion = ${info.versionComponents[0].innerVersion}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNewVersionInfo promise error ${JSON.stringify(err)}`);
-});
-```
-
 ## getNewVersionInfo
 
 ```TypeScript
@@ -795,15 +578,23 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 Obtains the new version information and sends requests to the upgrade package management server to query the detailed information about the new version, including the version number, version digest information, and version components. After the API is successfully called, a **NewVersionInfo** object is returned, containing complete version information, including the version digest information and version components. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. This API uses a promise to return the result.Use scenarios: The technical information (such as the version number, upgrade package size, and component details) of the new version is required for version management, diagnosis, or technical analysis. This API helps developers fully understand the technical details of the new version.To display readable version description to users, you are advised to use the **getNewVersionDescription** method.  
 **Overview**This API sends requests to the upgrade package management server to query the complete details of the new version based on the version digest information returned by **checkNewVersion**. The server returns a **NewVersionInfo** object, including **versionDigestInfo** (version digest information used as the version ID for subsequent download and upgrade operations) and a **versionComponents** array (version number, size, and type of each component). This API can be called only when the value of **isExistNewVersion** is **true** by calling **checkNewVersion**. Otherwise, empty data is returned.  
 **Calling sequence**  
-- You must first call **checkNewVersion** to check whether a new version is available. - This API can be called to obtain details about the new version only when the value of **isExistNewVersion** is **true** by calling **checkNewVersion**.  
+- You must first call **checkNewVersion** to check whether a new version is available.  
+- This API can be called to obtain details about the new version only when the value of **isExistNewVersion** is  
+**true** by calling **checkNewVersion**.  
 **Related methods**  
-- **checkNewVersion()**: checks whether a new version is available (prerequisite method). - **getNewVersionInfo()**: obtains the technical information (version number and component details) of the new version, which is applicable to version management and diagnosis scenarios. - **getNewVersionDescription()**: obtains the description of the new version, which is used to display the updated content to users. - **download()**: downloads the upgrade package (subsequent method).  
+- **checkNewVersion()**: checks whether a new version is available (prerequisite method).  
+- **getNewVersionInfo()**: obtains the technical information (version number and component details) of the new  
+version, which is applicable to version management and diagnosis scenarios.  
+- **getNewVersionDescription()**: obtains the description of the new version, which is used to display the  
+updated content to users.  
+- **download()**: downloads the upgrade package (subsequent method).  
 **Constraints**  
-- This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. - You must first call **checkNewVersion** to check whether a new version is available. This API can be called only when **isExistNewVersion** is **true**.
+- This method provides the online upgrade function, which depends on the upgrade package management server  
+deployed by the vendor.  
+- You must first call **checkNewVersion** to check whether a new version is available. This API can be called  
+only when **isExistNewVersion** is **true**.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -825,10 +616,6 @@ Obtains the new version information and sends requests to the upgrade package ma
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [getNewVersionInfo](#getnewversioninfo)
-
 ## getTaskInfo
 
 ```TypeScript
@@ -838,13 +625,23 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 Obtains information about the update task. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. After the information is obtained, a **TaskInfo** object is returned, including whether the task exists, task status, and progress. This helps you monitor the upgrade progress in real time, detect exceptions promptly, and optimize the upgrade policy, improving the controllability and success rate of the upgrade process. This API uses an asynchronous callback to return the result.Use scenarios: Track the upgrade progress in real time, monitor the task status, and detect exceptions promptly.  
 **Overview**This method queries the status of the current upgrade task from the system upgrade service. The system maintains an upgrade task status record, including **existTask** (whether a task exists) and **taskBody** (task details, including the version digest, current status, progress percentage, and installation mode). The task status is updated in real time during the download and installation processes. This method can be used to query the latest status. The status information is stored in the memory of the system service process. Each time this method is called, the status information is queried from the service process and returned in real time.  
 **Related methods**  
-- **download()**: downloads the upgrade package. (You can call **getTaskInfo** to query the download progress and status during download.) - **upgrade()**: installs the upgrade package. (You can call **getTaskInfo** to query the installation progress and status during installation.) - **pauseDownload()**: pauses download. (You can call **getTaskInfo** to query the pause status after download is paused.) - **terminateUpgrade()**: terminates upgrade. (You can call **getTaskInfo** to query the task cancellation status after upgrade is terminated.)  
+- **download()**: downloads the upgrade package. (You can call **getTaskInfo** to query the download progress and  
+status during download.)  
+- **upgrade()**: installs the upgrade package. (You can call **getTaskInfo** to query the installation progress  
+and status during installation.)  
+- **pauseDownload()**: pauses download. (You can call **getTaskInfo** to query the pause status after download is  
+paused.)  
+- **terminateUpgrade()**: terminates upgrade. (You can call **getTaskInfo** to query the task cancellation status  
+after upgrade is terminated.)  
 **When to Call:**  
-- You are advised to call **getTaskInfo** to query the task progress as required after calling **download** or **upgrade** to start the upgrade task. - During upgrade, you can obtain the progress in real time using an event listener registered by **on** or use **getTaskInfo** to query the current status. - In the case of an exception or interruption, you can call **getTaskInfo** to confirm the task status and determine the follow-up procedure.
+- You are advised to call **getTaskInfo** to query the task progress as required after calling **download** or  
+**upgrade** to start the upgrade task.  
+- During upgrade, you can obtain the progress in real time using an event listener registered by **on** or use  
+**getTaskInfo** to query the current status.  
+- In the case of an exception or interruption, you can call **getTaskInfo** to confirm the task status and  
+determine the follow-up procedure.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -866,26 +663,6 @@ Obtains information about the update task. This method provides the online upgra
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getTaskInfo((err: BusinessError, info: update.TaskInfo) => {
-  console.info(`getTaskInfo isexistTask= ${info?.existTask}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getTaskInfo().then((info: update.TaskInfo) => {
-  console.info(`getTaskInfo isexistTask= ${info.existTask}`);
-}).catch((err: BusinessError) => {
-  console.error(`getTaskInfo promise error ${JSON.stringify(err)}`);
-});
-```
-
 ## getTaskInfo
 
 ```TypeScript
@@ -895,13 +672,23 @@ getTaskInfo(): Promise<TaskInfo>
 Obtains information about the update task. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. After the information is obtained, a **TaskInfo** object is returned, including whether the task exists, task status, and progress. This helps you monitor the upgrade progress in real time, detect exceptions promptly, and optimize the upgrade policy, improving the controllability and success rate of the upgrade process. This API uses a promise to return the result.Use scenarios: Track the upgrade progress in real time, monitor the task status, and detect exceptions promptly.  
 **Overview**This method queries the status of the current upgrade task from the system upgrade service. The system maintains an upgrade task status record, including **existTask** (whether a task exists) and **taskBody** (task details, including the version digest, current status, progress percentage, and installation mode). The task status is updated in real time during the download and installation processes. This method can be used to query the latest status. The status information is stored in the memory of the system service process. Each time this method is called, the status information is queried from the service process and returned in real time.  
 **Related methods**  
-- **download()**: downloads the upgrade package. (You can call **getTaskInfo** to query the download progress and status during download.) - **upgrade()**: installs the upgrade package. (You can call **getTaskInfo** to query the installation progress and status during installation.) - **pauseDownload()**: pauses download. (You can call **getTaskInfo** to query the pause status after download is paused.) - **terminateUpgrade()**: terminates upgrade. (You can call **getTaskInfo** to query the task cancellation status after upgrade is terminated.)  
+- **download()**: downloads the upgrade package. (You can call **getTaskInfo** to query the download progress and  
+status during download.)  
+- **upgrade()**: installs the upgrade package. (You can call **getTaskInfo** to query the installation progress  
+and status during installation.)  
+- **pauseDownload()**: pauses download. (You can call **getTaskInfo** to query the pause status after download is  
+paused.)  
+- **terminateUpgrade()**: terminates upgrade. (You can call **getTaskInfo** to query the task cancellation status  
+after upgrade is terminated.)  
 **When to Call:**  
-- You are advised to call **getTaskInfo** to query the task progress periodically after calling **download** or **upgrade** to start the upgrade task. - During upgrade, you can obtain the progress in real time using an event listener registered by **on** or use **getTaskInfo** to query the current status. - In the case of an exception or interruption, you can call **getTaskInfo** to confirm the task status and determine the follow-up procedure.
+- You are advised to call **getTaskInfo** to query the task progress periodically after calling **download** or  
+**upgrade** to start the upgrade task.  
+- During upgrade, you can obtain the progress in real time using an event listener registered by **on** or use  
+**getTaskInfo** to query the current status.  
+- In the case of an exception or interruption, you can call **getTaskInfo** to confirm the task status and  
+determine the follow-up procedure.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -923,10 +710,6 @@ Obtains information about the update task. This method provides the online upgra
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [getTaskInfo](#gettaskinfo)
-
 ## getUpgradePolicy
 
 ```TypeScript
@@ -937,8 +720,6 @@ Obtains the upgrade policy. If this API is called successfully, an **UpgradePoli
 **Overview**This method queries the upgrade policy configuration from the system upgrade service. The policy configuration is stored in the system configuration file, including **downloadStrategy** (automatic download switch), **autoUpgradeStrategy** (automatic upgrade switch), and **autoUpgradePeriods** (upgrade period). When this method is called, the system service reads the configuration file, parses the policy parameters, encapsulates them into an **UpgradePolicy** object, and returns the object. The upgrade policy is set using **setUpgradePolicy**. The policy is persistently stored in the system, which remains valid after the device is restarted.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -960,28 +741,6 @@ Obtains the upgrade policy. If this API is called successfully, an **UpgradePoli
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getUpgradePolicy((err: BusinessError, policy: update.UpgradePolicy) => {
-  console.info(`policy downloadStrategy = ${policy?.downloadStrategy}`);
-  console.info(`policy autoUpgradeStrategy = ${policy?.autoUpgradeStrategy}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.getUpgradePolicy().then((policy: update.UpgradePolicy) => {
-  console.info(`policy downloadStrategy = ${policy.downloadStrategy}`);
-  console.info(`policy autoUpgradeStrategy = ${policy.autoUpgradeStrategy}`);
-}).catch((err: BusinessError)  => {
-  console.error(`getUpgradePolicy promise error ${JSON.stringify(err)}`);
-});
-```
-
 ## getUpgradePolicy
 
 ```TypeScript
@@ -992,8 +751,6 @@ Obtains the upgrade policy. If this API is called successfully, an **UpgradePoli
 **Overview**This method queries the upgrade policy configuration from the system upgrade service. The policy configuration is stored in the system configuration file, including **downloadStrategy** (automatic download switch), **autoUpgradeStrategy** (automatic upgrade switch), and **autoUpgradePeriods** (upgrade period). When this method is called, the system service reads the configuration file, parses the policy parameters, encapsulates them into an **UpgradePolicy** object, and returns the object. The upgrade policy is set using **setUpgradePolicy**. The policy is persistently stored in the system, which remains valid after the device is restarted.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -1015,10 +772,6 @@ Obtains the upgrade policy. If this API is called successfully, an **UpgradePoli
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [getUpgradePolicy](#getupgradepolicy)
-
 ## off
 
 ```TypeScript
@@ -1028,11 +781,12 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 Disables listening for update events. After the API is successfully called, the listener for the upgrade events of the corresponding type is unregistered. No more notifications for this event type will be received, preventing memory leak.Use scenarios: The upgrade process is complete and the upgrade event does not need to be monitored. You must use **on()** to register a listener before using this method to unregister the listener.  
 **Overview**The process is as follows: Confirm the event type based on **eventClassifyInfo**. Remove the corresponding callback from the event listening list of the upgrade service. (If **taskCallback** is passed, remove the specific callback; otherwise, remove all listeners for the event type.) Release the system resources occupied by the listener. Disconnect the event transfer channel. After the listener is unregistered, the update service no longer sends event notifications of this type to the app, and the app process no longer receives related event callbacks. The memory and IPC channel occupied by the listener are released.  
 **API called in pairs**  
-- This API must be used in pairs with **on()** to unregister a registered event listener. - This API can be called only after a listener is registered using **on()**. - You are advised to call this method after the upgrade process is complete or when the page is destroyed to release resources in a timely manner.
+- This API must be used in pairs with **on()** to unregister a registered event listener.  
+- This API can be called only after a listener is registered using **on()**.  
+- You are advised to call this method after the upgrade process is complete or when the page is destroyed to  
+release resources in a timely manner.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -1051,32 +805,6 @@ Disables listening for update events. After the API is successfully called, the 
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Listening for update events
-  extraInfo: ""
-};
-
-updater.off(eventClassifyInfo, (eventInfo: update.EventInfo) => {
-  console.info(`updater off ${JSON.stringify(eventInfo)}`);
-});
-```
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Listening for update events
-  extraInfo: ""
-};
-
-let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
-  console.info(`on eventInfo id `, eventInfo.eventId);
-};
-
-localUpdater.off(eventClassifyInfo, onTaskUpdate);
-```
-
 ## on
 
 ```TypeScript
@@ -1086,15 +814,18 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 Registers an event listener to monitor the upgrade status in real time. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. After the API is successfully called, the upgrade event of the corresponding type is listened for. When an event occurs, the event information is transferred using a callback, including the event ID, task status, and progress.Use scenarios: Display the upgrade progress bar and percentage on the OTA upgrade client, monitor the batch device upgrade status in the device management system, and track the progress of automatic upgrade in the background.  
 **Overview**This method registers an upgrade event listener. The process is as follows: Construct **eventClassifyInfo** to specify the event type, for example, **TASK**. Register the callback function with the event listening list of the upgrade service. The upgrade service triggers an event upon status changes, for example, when the download starts, the download progress is updated, or the upgrade succeeds. The event is transferred to the app process through the IPC channel. Call the registered callback to transfer the **EventInfo** object. This API uses an asynchronous callback to return the result, which does not affect the upgrade process. You are advised to call **off** to unregister the listener after the upgrade process is complete to prevent memory leak.  
 **API called in pairs**  
-- After a listener is registered by calling **on()**, you are advised to call **off()** to unregister the listener when it is no longer needed. - If **off()** is not called to unregister the listener, memory leak occurs, affecting system performance. - You are advised to call **off()** after the upgrade process is complete or when the page is destroyed.  
+- After a listener is registered by calling **on()**, you are advised to call **off()** to unregister the  
+listener when it is no longer needed.  
+- If **off()** is not called to unregister the listener, memory leak occurs, affecting system performance.  
+- You are advised to call **off()** after the upgrade process is complete or when the page is destroyed.  
 **Suggestions**  
-- Register a listener before performing long-time operations such as calling **download** or **upgrade**. - Unregister the listener after the operation is complete or the final event (such as **EVENT_DOWNLOAD_SUCCESS** or **EVENT_UPGRADE_SUCCESS**) is received.  
+- Register a listener before performing number-time operations such as calling **download** or **upgrade**.  
+- Unregister the listener after the operation is complete or the final event (such as **EVENT_DOWNLOAD_SUCCESS**  
+or **EVENT_UPGRADE_SUCCESS**) is received.  
 **Related methods**  
 - **off()**: unregisters the event listener. This API is used with **on()** in pairs.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -1113,32 +844,6 @@ Registers an event listener to monitor the upgrade status in real time. This met
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Listening for update events
-  extraInfo: ""
-};
-
-updater.on(eventClassifyInfo, (eventInfo: update.EventInfo) => {
-  console.info(`updater on ${JSON.stringify(eventInfo)}`);
-});
-```
-
-```TypeScript
-const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Listening for update events
-  extraInfo: ""
-};
-
-let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
-  console.info(`on eventInfo id `, eventInfo.eventId);
-};
-
-localUpdater.on(eventClassifyInfo, onTaskUpdate);
-```
-
 ## pauseDownload
 
 ```TypeScript
@@ -1152,13 +857,15 @@ pauseDownload(
 Pauses download of the new version. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. This method can be called to pause the download only when there is an ongoing download task. After the download is paused, call **resumeDownload()** to resume the download. After the download is resumed, call **upgrade()** to install the upgrade package. This API uses an asynchronous callback to return the result.Use scenarios: The user proactively pauses the download, the network connection is poor, or the download needs to be paused during a specific period (for example, 22:00-06:00 at night or 08:00-18:00 on workdays).  
 **Overview**The process is as follows: Disconnect from the network. Save the progress status, including the number of downloaded bytes, file path, network type, and version digest information. Mark the task status as **DOWNLOAD_PAUSED**. Release some network resources. When the download is paused, the system writes the progress status for persistent storage so that the download can be resumed after the device is rebooted or the app is exited. Based on the **isAllowAutoResume** parameter, the system may automatically resume the download or wait for the download to be resumed manually by calling **resumeDownload**.  
 **API called in pairs**  
-- This API must be used in pairs with **resumeDownload()** to pause and resume the download process. After the download is paused, call **resumeDownload()** to resume the download.  
+- This API must be used in pairs with **resumeDownload()** to pause and resume the download process. After the  
+download is paused, call **resumeDownload()** to resume the download.  
 **State transition description**  
-- After the download is paused, you can call **resumeDownload()** to resume the download. - After the download is paused, you can call **getTaskInfo()** to query the current task status. - After the download is paused, you cannot directly call **upgrade()** to install the upgrade package. You must resume the download and complete the installation first.
+- After the download is paused, you can call **resumeDownload()** to resume the download.  
+- After the download is paused, you can call **getTaskInfo()** to query the current task status.  
+- After the download is paused, you cannot directly call **upgrade()** to install the upgrade package. You must  
+resume the download and complete the installation first.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -1183,44 +890,6 @@ Pauses download of the new version. This method provides the online upgrade func
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options for pausing download
-const pauseDownloadOptions: update.PauseDownloadOptions = {
-  isAllowAutoResume: true // Whether to allow automatic resuming of download
-};
-updater.pauseDownload(versionDigestInfo, pauseDownloadOptions, (err: BusinessError) => {
-  console.info(`pauseDownload error ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options for pausing download
-const pauseDownloadOptions: update.PauseDownloadOptions = {
-  isAllowAutoResume: true // Whether to allow automatic resuming of download
-};
-updater.pauseDownload(versionDigestInfo, pauseDownloadOptions).then(() => {
-  console.info(`pauseDownload`);
-}).catch((err: BusinessError)  => {
-  console.error(`pauseDownload error ${JSON.stringify(err)}`);
-});
-```
-
 ## pauseDownload
 
 ```TypeScript
@@ -1230,13 +899,15 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 Pauses download of the new version. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. This method can be called to pause the download only when there is an ongoing download task. After the download is paused, call **resumeDownload()** to resume the download. After the download is resumed, call **upgrade()** to install the upgrade package. This API uses a promise to return the result.Use scenarios: The user proactively pauses the download, the network connection is poor, or the download needs to be performed during a specific period.  
 **Overview**The process is as follows: Disconnect from the network. Save the progress status, including the number of downloaded bytes, file path, network type, and version digest information. Mark the task status as **DOWNLOAD_PAUSED**. Release some network resources. When the download is paused, the system writes the progress status for persistent storage so that the download can be resumed after the device is rebooted or the app is exited. Based on the **isAllowAutoResume** parameter, the system may automatically resume the download or wait for the download to be resumed manually by calling **resumeDownload**.  
 **API called in pairs**  
-- This API must be used in pairs with **resumeDownload()** to pause and resume the download process. After the download is paused, call **resumeDownload()** to resume the download.  
+- This API must be used in pairs with **resumeDownload()** to pause and resume the download process. After the  
+download is paused, call **resumeDownload()** to resume the download.  
 **State transition description**  
-- After the download is paused, you can call **resumeDownload()** to resume the download. - After the download is paused, you can call **getTaskInfo()** to query the current task status. - After the download is paused, you cannot directly call **upgrade()** to install the upgrade package. You must resume the download and complete the installation first.
+- After the download is paused, you can call **resumeDownload()** to resume the download.  
+- After the download is paused, you can call **getTaskInfo()** to query the current task status.  
+- After the download is paused, you cannot directly call **upgrade()** to install the upgrade package. You must  
+resume the download and complete the installation first.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -1265,10 +936,6 @@ Pauses download of the new version. This method provides the online upgrade func
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
-
-**Examples**
-
-See [pauseDownload](#pausedownload)
 
 ## resumeDownload
 
@@ -1283,11 +950,10 @@ resumeDownload(
 Resumes a paused download task for the upgrade package, which can prevent repeatedly downloading the completed part. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. This API uses an asynchronous callback to return the result.Use scenarios: Resume download after network interruption, resume download after the user pauses it, and resume a download task in the background.  
 **Overview**The process is as follows: Read the progress status saved when the download is paused (including the number of downloaded bytes, file path, and network connection). Select the network type based on **resumeDownloadOptions**. Send a request to the server to resume download (carrying the number of downloaded bytes). The server returns the remaining data. Continue writing data to the local file from the breakpoint. Update the progress in real time. When resuming the download, the system verifies the integrity of the downloaded part to ensure data consistency before continuing to receive new data.  
 **API called in pairs**  
-- This API must be used in pairs with **pauseDownload()** to pause and resume the download process. - This API can be called to resume download only after **pauseDownload()** is called to pause download.
+- This API must be used in pairs with **pauseDownload()** to pause and resume the download process.  
+- This API can be called to resume download only after **pauseDownload()** is called to pause download.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -1312,44 +978,6 @@ Resumes a paused download task for the upgrade package, which can prevent repeat
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo : update.VersionDigestInfo= {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options for resuming download
-const resumeDownloadOptions : update.ResumeDownloadOptions= {
-  allowNetwork: update.NetType.CELLULAR, // Whether to allow download over data network
-};
-updater.resumeDownload(versionDigestInfo, resumeDownloadOptions, (err: BusinessError) => {
-  console.info(`resumeDownload error ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Options for resuming download
-const resumeDownloadOptions: update.ResumeDownloadOptions = {
-  allowNetwork: update.NetType.CELLULAR, // Whether to allow download over data network
-};
-updater.resumeDownload(versionDigestInfo, resumeDownloadOptions).then(() => {
-  console.info(`resumeDownload start`);
-}).catch((err: BusinessError) => {
-  console.error(`resumeDownload error ${JSON.stringify(err)}`);
-});
-```
-
 ## resumeDownload
 
 ```TypeScript
@@ -1359,11 +987,10 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 Resumes a paused download task for the upgrade package, which can prevent repeatedly downloading the completed part. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. This API uses a promise to return the result.Use scenarios: Resume download after network interruption, resume download after the user pauses it, and resume a download task in the background.  
 **Overview**The process is as follows: Read the progress status saved when the download is paused (including the number of downloaded bytes, file path, and network connection). Select the network type based on **resumeDownloadOptions**. Send a request to the server to resume download (carrying the number of downloaded bytes). The server returns the remaining data. Continue writing data to the local file from the breakpoint. Update the progress in real time. When resuming the download, the system verifies the integrity of the downloaded part to ensure data consistency before continuing to receive new data.  
 **API called in pairs**  
-- This API must be used in pairs with **pauseDownload()** to pause and resume the download process. - This API can be called to resume download only after **pauseDownload()** is called to pause download.
+- This API must be used in pairs with **pauseDownload()** to pause and resume the download process.  
+- This API can be called to resume download only after **pauseDownload()** is called to pause download.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -1392,10 +1019,6 @@ Resumes a paused download task for the upgrade package, which can prevent repeat
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
-
-**Examples**
-
-See [resumeDownload](#resumedownload)
 
 ## setUpgradePolicy
 
@@ -1408,8 +1031,6 @@ Sets the upgrade policy to control the upgrade behavior. After the API is called
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -1430,36 +1051,6 @@ Sets the upgrade policy to control the upgrade behavior. After the API is called
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const policy: update.UpgradePolicy = {
-  downloadStrategy: false,
-  autoUpgradeStrategy: false,
-  autoUpgradePeriods: [ { start: 120, end: 240 }] // Automatic update period, in minutes
-};
-updater.setUpgradePolicy(policy, (err: BusinessError) => {
-  console.info(`setUpgradePolicy result: ${err}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const policy: update.UpgradePolicy = {
-  downloadStrategy: false,
-  autoUpgradeStrategy: false,
-  autoUpgradePeriods: [ { start: 120, end: 240 }] // Automatic update period, in minutes
-};
-updater.setUpgradePolicy(policy).then(() => {
-  console.info(`setUpgradePolicy success`);
-}).catch((err: BusinessError) => {
-  console.error(`setUpgradePolicy promise error ${JSON.stringify(err)}`);
-});
-```
 
 ## setUpgradePolicy
 
@@ -1472,8 +1063,6 @@ Sets the upgrade policy to control the upgrade behavior. After the API is called
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -1500,10 +1089,6 @@ Sets the upgrade policy to control the upgrade behavior. After the API is called
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [setUpgradePolicy](#setupgradepolicy)
-
 ## terminateUpgrade
 
 ```TypeScript
@@ -1513,13 +1098,17 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 Terminates the current upgrade task and cancels the ongoing installation. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. If the API is called successfully, the task status changes to canceled. This API uses an asynchronous callback to return the result.Use scenarios: The user cancels the upgrade or stops the upgrade urgently. This method helps users flexibly control the upgrade process, which can prevent unnecessary upgrade or stop the upgrade in emergencies.  
 **Overview**The process is as follows: Check the current task status, and only download or installation can be terminated. Send a termination command to the upgrade service. Interrupt the current operation, stop download, or stop installation. Change the task status to canceled. Clear temporary resources, disconnect from the network, and clear temporary files. Notify the upgrade service to update the status. After the upgrade is terminated, the system retains some downloaded data. You are advised to call **clearError** to clear errors and then restart the upgrade process.  
 **State transition description**  
-- This method can be called to terminate the upgrade only during the download or installation process. - After the task is terminated, the task status changes to canceled. - After the task is terminated, you can call **getTaskInfo** to query the current task status. - If you need to perform the upgrade again after the upgrade is terminated, you are advised to call **clearError** to clear errors and restart the upgrade.  
+- This method can be called to terminate the upgrade only during the download or installation process.  
+- After the task is terminated, the task status changes to canceled.  
+- After the task is terminated, you can call **getTaskInfo** to query the current task status.  
+- If you need to perform the upgrade again after the upgrade is terminated, you are advised to call  
+**clearError** to clear errors and restart the upgrade.  
 **Related methods**  
-- **download()**\/**upgrade()**: method that can be terminated. - **getTaskInfo()**: queries the task status. - **clearError()**: clears errors. Call this API if the upgrade needs to be restarted.
+- **download()**\/**upgrade()**: method that can be terminated.  
+- **getTaskInfo()**: queries the task status.  
+- **clearError()**: clears errors. Call this API if the upgrade needs to be restarted.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -1541,26 +1130,6 @@ Terminates the current upgrade task and cancels the ongoing installation. This m
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.terminateUpgrade((err: BusinessError) => {
-  console.info(`terminateUpgrade error ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-updater.terminateUpgrade().then(() => {
-  console.info(`terminateUpgrade success`);
-}).catch((err: BusinessError) => {
-  console.error(`terminateUpgrade error ${JSON.stringify(err)}`);
-});
-```
-
 ## terminateUpgrade
 
 ```TypeScript
@@ -1570,13 +1139,17 @@ terminateUpgrade(): Promise<void>
 Terminates the current upgrade task and cancels the ongoing installation. This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor. If the API is called successfully, the task status changes to canceled. This API uses a promise to return the result.Use scenarios: The user cancels the upgrade or stops the upgrade urgently. This method helps users flexibly control the upgrade process, which can prevent unnecessary upgrade or stop the upgrade in emergencies.  
 **Overview**The process is as follows: Check the current task status, and only download or installation can be terminated. Send a termination command to the upgrade service. Interrupt the current operation, stop download, or stop installation. Change the task status to canceled. Clear temporary resources, disconnect from the network, and clear temporary files. Notify the upgrade service to update the status. After the upgrade is terminated, the system retains some downloaded data. You are advised to call **clearError** to clear errors and then restart the upgrade process.  
 **State transition description**  
-- This method can be called to terminate the upgrade only during the download or installation process. - After the task is terminated, the task status changes to canceled. - After the task is terminated, you can call **getTaskInfo** to query the current task status. - If you need to perform the upgrade again after the upgrade is terminated, you are advised to call **clearError** to clear errors and restart the upgrade.  
+- This method can be called to terminate the upgrade only during the download or installation process.  
+- After the task is terminated, the task status changes to canceled.  
+- After the task is terminated, you can call **getTaskInfo** to query the current task status.  
+- If you need to perform the upgrade again after the upgrade is terminated, you are advised to call  
+**clearError** to clear errors and restart the upgrade.  
 **Related methods**  
-- **download()**\/**upgrade()**: method that can be terminated. - **getTaskInfo()**: queries the task status. - **clearError()**: clears errors. Call this API if the upgrade needs to be restarted.
+- **download()**\/**upgrade()**: method that can be terminated.  
+- **getTaskInfo()**: queries the task status.  
+- **clearError()**: clears errors. Call this API if the upgrade needs to be restarted.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -1598,10 +1171,6 @@ Terminates the current upgrade task and cancels the ongoing installation. This m
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
 
-**Examples**
-
-See [terminateUpgrade](#terminateupgrade)
-
 ## upgrade
 
 ```TypeScript
@@ -1612,14 +1181,15 @@ Upgrades the version by installing the upgrade package. After the API is success
 **Overview**This method installs the downloaded upgrade package and applies it to the system. The installation process is as follows: Verify the integrity of the upgrade package. Decompress the upgrade package. Write the package to the system partition (overwriting or updating system files). Update the version ID. Prepare for the restart. Select the upgrade type based on the **upgradeOptions.order** parameter. The options are as follows: **DOWNLOAD** (download the upgrade package without installing it), **INSTALL** (install the downloaded upgrade package without automatically restarting the system), **DOWNLOAD_AND_INSTALL** (download and install the upgrade package, which is the complete process), **APPLY** (apply the installed upgrade package, and the new version needs to be applied by restarting the system), and **INSTALL_AND_APPLY** (install the upgrade package and immediately restart the system).  
 **Dependency description**This method is called in the installation phase of the online upgrade process. The actual installation operation is a local operation (installing the downloaded upgrade package) and does not require network connection. However, this method is usually called after **download** is called. The entire online upgrade process depends on the upgrade package management server deployed by the device vendor.  
 **Calling sequence**  
-- Before calling this method to perform upgrade, you must call **checkNewVersion** to check whether a new version is available first and then call **download** to download the upgrade package.  
+- Before calling this method to perform upgrade, you must call **checkNewVersion** to check whether a new version  
+is available first and then call **download** to download the upgrade package.  
 **State transition description**  
-- Call this method to install the upgrade package only after the download is complete. - During the installation process, you can call **terminateUpgrade()** to terminate the upgrade. - After the installation is complete, the device will restart to apply the new version.  
+- Call this method to install the upgrade package only after the download is complete.  
+- During the installation process, you can call **terminateUpgrade()** to terminate the upgrade.  
+- After the installation is complete, the device will restart to apply the new version.  
 **Failure handling**If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the abnormal status before restarting the upgrade process.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -1643,44 +1213,6 @@ Upgrades the version by installing the upgrade package. After the API is success
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Installation options
-const upgradeOptions: update.UpgradeOptions = {
-  order: update.Order.INSTALL // Installation command
-};
-updater.upgrade(versionDigestInfo, upgradeOptions, (err: BusinessError) => {
-  console.info(`upgrade error ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Version digest information
-const versionDigestInfo: update.VersionDigestInfo = {
-  versionDigest: "versionDigest" // Version digest information in the check result
-};
-
-// Installation options
-const upgradeOptions: update.UpgradeOptions = {
-  order: update.Order.INSTALL // Installation command
-};
-updater.upgrade(versionDigestInfo, upgradeOptions).then(() => {
-  console.info(`upgrade start`);
-}).catch((err: BusinessError) => {
-  console.error(`upgrade error ${JSON.stringify(err)}`);
-});
-```
 
 ## upgrade
 
@@ -1693,12 +1225,12 @@ Upgrades the version by installing the upgrade package. After the API is success
 **Dependency description**This method is called in the installation phase of the online upgrade process. The actual installation operation is a local operation (installing the downloaded upgrade package) and does not require network connection. However, this method is usually called after **download** is called. The entire online upgrade process depends on the upgrade package management server deployed by the device vendor.  
 **Calling sequence**Before calling this method to perform upgrade, you must call **checkNewVersion** to check whether a new version is available first and then call **download** to download the upgrade package.  
 **State transition description**  
-- Call this method to install the upgrade package only after the download is complete. - During the installation process, you can call **terminateUpgrade()** to terminate the upgrade. - After the installation is complete, the device will restart to apply the new version.  
+- Call this method to install the upgrade package only after the download is complete.  
+- During the installation process, you can call **terminateUpgrade()** to terminate the upgrade.  
+- After the installation is complete, the device will restart to apply the new version.  
 **Failure handling**If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the abnormal status before restarting the upgrade process.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
@@ -1727,7 +1259,3 @@ Upgrades the version by installing the upgrade package. After the API is success
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [11500104](../errorcode-update.md#11500104-ipc-error) |
-
-**Examples**
-
-See [upgrade](#upgrade)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## abort
@@ -15,8 +15,6 @@ function abort(handle: Uint8Array, callback: AsyncCallback<void>): void
 Aborts the signing or signature verification operation. This method is mutually exclusive with the finish method. Only one method can be invoked in a signature verification process. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -37,47 +35,6 @@ Aborts the signing or signature verification operation. This method is mutually 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-
-/* cmHandle is the value returned by init(). The value here is only an example. */
-let cmHandle: Uint8Array = new Uint8Array([
-  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-]);
-try {
-  certificateManager.abort(cmHandle, (err, cmResult) => {
-    if (err != null) {
-      console.error(`Failed to abort. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('Succeeded in aborting.');
-    }
-  });
-} catch(error) {
-  console.error(`Failed to abort. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* cmHandle is the value returned by init(). The value here is only an example. */
-let cmHandle: Uint8Array = new Uint8Array([
-  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-]);
-try {
-  certificateManager.abort(cmHandle).then((result) => {
-    console.info('Succeeded in aborting.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to abort. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to abort. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## abort
 
@@ -88,8 +45,6 @@ function abort(handle: Uint8Array): Promise<void>
 Aborts the signing or signature verification operation. This method is mutually exclusive with the finish method. Only one method can be invoked in a signature verification process. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -114,7 +69,3 @@ Aborts the signing or signature verification operation. This method is mutually 
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
-
-**Examples**
-
-See [abort](#abort)

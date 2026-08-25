@@ -13,8 +13,6 @@ A constructor used to create a **DigitIndicator** object. It inherits from [Indi
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,8 +38,6 @@ A constructor used to create a **DotIndicator** object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -59,8 +55,6 @@ digitFont(value: Font): DigitIndicator
 Sets the font style of the digit-style navigation indicator.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,8 +86,6 @@ Sets the font color of the digit-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -124,8 +116,6 @@ Sets the font style of the selected digit-style navigation indicator.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -155,8 +145,6 @@ selectedFontColor(value: ResourceColor): DigitIndicator
 Sets the font color of the selected digit-style navigation indicator.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

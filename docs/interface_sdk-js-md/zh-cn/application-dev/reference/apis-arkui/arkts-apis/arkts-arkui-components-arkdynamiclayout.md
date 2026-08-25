@@ -3,16 +3,10 @@
 ## 导入模块
 
 ```TypeScript
-import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
+import { DynamicLayout, DynamicLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
-
-### 函数
-
-| 名称 |
-| --- |
-| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayout-f.md) |
 
 ### 类
 
@@ -24,7 +18,6 @@ import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 
 | 名称 |
 | --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-i.md) |
 | [DynamicLayoutInterface](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutinterface-i.md) |
 
 ### 常量

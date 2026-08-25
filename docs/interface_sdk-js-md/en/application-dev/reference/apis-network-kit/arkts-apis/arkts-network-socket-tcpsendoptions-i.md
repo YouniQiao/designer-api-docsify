@@ -4,14 +4,12 @@ Defines the parameters for sending data over a TCP socket connection.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## data
@@ -26,8 +24,6 @@ Data to send.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## encoding
@@ -41,7 +37,5 @@ Character encoding format. The options are as follows: **UTF-8**, **UTF-16BE**, 
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.Communication.NetStack

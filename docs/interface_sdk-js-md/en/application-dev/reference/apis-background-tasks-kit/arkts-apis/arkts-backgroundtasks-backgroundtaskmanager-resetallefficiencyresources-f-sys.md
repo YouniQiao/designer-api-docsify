@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## resetAllEfficiencyResources
@@ -15,8 +15,6 @@ function resetAllEfficiencyResources(): void
 Releases all efficiency resources.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply
 
@@ -34,15 +32,3 @@ Releases all efficiency resources.
 | [9800003](../errorcode-backgroundTaskMgr.md#9800003-ipc-failure) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    backgroundTaskManager.resetAllEfficiencyResources();
-} catch (error) {
-    console.error(`resetAllEfficiencyResources failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-}
-```

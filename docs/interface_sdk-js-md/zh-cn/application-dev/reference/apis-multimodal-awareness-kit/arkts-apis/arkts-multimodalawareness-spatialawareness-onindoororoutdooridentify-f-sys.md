@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onIndoorOrOutdoorIdentify
@@ -16,8 +16,6 @@ function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams
 订阅门内外识别接口。触发门内外识别算法执行，并返回设备在门内还是门外的信息。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_SENSING_WITH_ULTRASOUND
 
@@ -44,24 +42,3 @@ function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams
 | [35100001](../errorcode-spatialAwareness.md#35100001-服务异常) |
 | [35100002](../errorcode-spatialAwareness.md#35100002-订阅失败) |
 | [35100004](../errorcode-spatialAwareness.md#35100004-无效参数) |
-
-**示例**
-
-```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
-   console.info('call onIndoorOrOutdoorIdentify before');
-   let configParams: spatialAwareness.DistanceMeasurementConfigParams = {
-      deviceList: ["123456"],
-      techType: 2,
-      reportMode: 0,
-      reportFrequency: 340
-   };
-   console.info('call onIndoorOrOutdoorIdentify start');
-   try {
-      spatialAwareness.onIndoorOrOutdoorIdentify(configParams, (data:spatialAwareness.DoorPositionResponse) => {
-         console.info(`result = ${data.position}`);
-      });
-   } catch (err) {
-      console.error(`call onIndoorOrOutdoorIdentify failed, Code: ${err.code}, message: ${err.message}`);
-   }
-```

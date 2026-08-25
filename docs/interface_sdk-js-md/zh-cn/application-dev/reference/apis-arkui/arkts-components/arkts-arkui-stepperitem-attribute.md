@@ -4,11 +4,9 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
-**替代接口：** SwiperAttribute
+**替代接口：** [SwiperAttribute](arkts-arkui-swiper-attribute.md#swiperattribute)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,8 +28,6 @@ nextLabel(value: string)
 > 从API version 8开始支持，从API version 22开始废弃，建议使用showNext替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 22
 
@@ -61,8 +57,6 @@ prevLabel(value: string)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
 **替代接口：** showPrevious
@@ -87,15 +81,13 @@ status(value?: ItemState)
 
 > **说明：**
 
-> 从API version 8开始支持，从API version 22开始废弃，建议使用indicatorInteractive替代。
+> 从API version 8开始支持，从API version 22开始废弃，建议使用[indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive)替代。
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 22
 
-**替代接口：** indicatorInteractive
+**替代接口：** [indicatorInteractive](arkts-arkui-swiper-attribute.md#indicatorinteractive)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

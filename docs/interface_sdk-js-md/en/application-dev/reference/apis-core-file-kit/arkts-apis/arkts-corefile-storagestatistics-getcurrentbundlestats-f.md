@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getCurrentBundleStats
@@ -15,8 +15,6 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 Obtains the storage space (in bytes) of this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -34,29 +32,6 @@ Obtains the storage space (in bytes) of this application. This API uses an async
 | 13600001 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getCurrentBundleStats().then((BundleStats: storageStatistics.BundleStats) => {
-  console.info("getCurrentBundleStats successfully:" + JSON.stringify(BundleStats));
-}).catch((err: BusinessError) => {
-  console.error("getCurrentBundleStats failed with error:"+ JSON.stringify(err));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getCurrentBundleStats((error: BusinessError, bundleStats: storageStatistics.BundleStats) => {
-  if (error) {
-    console.error("getCurrentBundleStats failed with error:" + JSON.stringify(error));
-  } else {
-    // Do something.
-    console.info("getCurrentBundleStats successfully:" + JSON.stringify(bundleStats));
-  }
-});
-```
-
 
 ## getCurrentBundleStats
 
@@ -67,8 +42,6 @@ function getCurrentBundleStats(): Promise<BundleStats>
 Obtains the storage space (in bytes) of this application. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -85,7 +58,3 @@ Obtains the storage space (in bytes) of this application. This API uses a promis
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 | 13900042 |
-
-**Examples**
-
-See [getCurrentBundleStats](#getcurrentbundlestats)

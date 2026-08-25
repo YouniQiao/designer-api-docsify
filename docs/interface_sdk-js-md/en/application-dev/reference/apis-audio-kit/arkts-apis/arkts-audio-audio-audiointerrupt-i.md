@@ -4,8 +4,6 @@ Describes input parameters of audio interruption events.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md)
@@ -15,7 +13,7 @@ Describes input parameters of audio interruption events.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## contentType
@@ -29,8 +27,6 @@ Audio content type.
 **Type:** ContentType
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Whether audio playback can be paused during an audio interruption. **true** if a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hinttype)
@@ -69,8 +63,6 @@ Audio stream usage.
 **Type:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

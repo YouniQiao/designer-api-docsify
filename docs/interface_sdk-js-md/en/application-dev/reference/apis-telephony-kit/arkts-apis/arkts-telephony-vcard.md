@@ -4,14 +4,12 @@ VCard is a file format standard for electronic business cards. It contains infor
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CoreService
 
 ## Modules to Import
 
 ```TypeScript
-import { vcard } from '@kit.TelephonyKit';
+import { vcard } from 'kits/@kit.TelephonyKit';
 ```
 
 ## Summary

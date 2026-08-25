@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setAdditionalConfig
 
 ```TypeScript
-function setAdditionalConfig(key: string, value: string): Promise<int>
+function setAdditionalConfig(key: string, value: string): Promise<number>
 ```
 
 设置通知的系统附加配置信息。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -35,7 +33,7 @@ function setAdditionalConfig(key: string, value: string): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -48,30 +46,3 @@ function setAdditionalConfig(key: string, value: string): Promise<int>
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.setAdditionalConfig('RING_TRUSTLIST_PKG','[bundleName1,bundleName2]').then((data: number) => {
-  console.info(`setAdditionalConfig success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`setAdditionalConfig failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.setAdditionalConfig('RING_TRUSTLIST_PKG','[bundleName1,bundleName2]').then((data: int) => {
-  console.info(`setAdditionalConfig success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`setAdditionalConfig failed, code is ${error.code}, message is ${error.message}`);
-});
-```

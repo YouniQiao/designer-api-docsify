@@ -4,20 +4,18 @@ Defines the detect encoding result information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## confidence
 
 ```TypeScript
-confidence: int
+confidence: number
 ```
 
 An integer between 0 to 100, determine the accuracy of the result. Higher value indicates a more reliable detection result.
@@ -25,8 +23,6 @@ An integer between 0 to 100, determine the accuracy of the result. Higher value 
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Name of the detect encoding result, the value can be "UTF-8", "UTF-16BE", "UTF-1
 **Type:** string
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## registerChange
@@ -15,8 +15,6 @@ function registerChange(uri: string, recursion: boolean, callback: Callback<Chan
 订阅监听指定文件的变化通知。callback返回更改的数据。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -37,43 +35,3 @@ function registerChange(uri: string, recursion: boolean, callback: Callback<Chan
 | 13900002 |
 | 13900012 |
 | 14000002 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
-
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-let onCallback1 = (changeData: cloudSync.ChangeData) => {
-  if (changeData.type == cloudSync.NotifyType.NOTIFY_ADDED) {
-    // file has been added, do something
-  } else if (changeData.type== cloudSync.NotifyType.NOTIFY_DELETED) {
-    // file has been removed, do something
-  }
-}
-cloudSync.registerChange(uri, false, onCallback1);
-// 取消注册监听
-cloudSync.unregisterChange(uri);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
-
-let path: string = "/data/storage/el2/cloud/1.txt";
-let uri: string = fileUri.getUriFromPath(path);
-let onCallback1 = (changeData: cloudSync.ChangeData): void => {
-  if (changeData.type == cloudSync.NotifyType.NOTIFY_ADDED) {
-    // file has been added, do something
-  } else if (changeData.type== cloudSync.NotifyType.NOTIFY_DELETED) {
-    // file has been removed, do something
-  }
-}
-cloudSync.registerChange(uri, false, onCallback1);
-// 取消注册监听
-cloudSync.unregisterChange(uri);
-```

@@ -4,14 +4,12 @@ Auto fill callback.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from '@kit.AbilityKit';
+import { autoFillManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## onFailure
@@ -23,8 +21,6 @@ onFailure: OnFillFailureFn
 Called when auto fill request is failed to be handled.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,8 +37,6 @@ onSuccess: OnFillSuccessFn
 Called when auto fill request is successfully handled.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

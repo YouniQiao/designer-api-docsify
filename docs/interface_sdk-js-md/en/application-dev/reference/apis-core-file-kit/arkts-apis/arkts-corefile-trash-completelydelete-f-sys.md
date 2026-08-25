@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { trash } from '@kit.CoreFileKit';
+import { trash } from 'kits/@kit.CoreFileKit';
 ```
 
 ## completelyDelete
@@ -15,8 +15,6 @@ function completelyDelete(uri: string): void
 Permanently deletes a file or directory from the **Recently deleted** list.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 23
 
@@ -41,11 +39,3 @@ Permanently deletes a file or directory from the **Recently deleted** list.
 | 13900002 |
 | 13900020 |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-let fileinfos = trash.listFile();
-let uri = fileinfos[0].uri;
-trash.completelyDelete(uri);
-```

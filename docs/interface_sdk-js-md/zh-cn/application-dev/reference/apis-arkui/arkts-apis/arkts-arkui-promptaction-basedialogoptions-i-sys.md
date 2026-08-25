@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 ```
 
 ## distortionMode
@@ -22,13 +20,11 @@ distortionMode?: DistortionMode
 
 Sets the distortion animation Mode of the dialog.
 
-**类型：** DistortionMode
+**类型：** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
 **默认值：** DistortionMode.DISTORTION_AUTO
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,13 +40,11 @@ edgeLightMode?: EdgeLightMode
 
 Sets the edgeLight animation Mode of the dialog.
 
-**类型：** EdgeLightMode
+**类型：** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 
 **默认值：** EdgeLightMode.EDGELIGHT_AUTO
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

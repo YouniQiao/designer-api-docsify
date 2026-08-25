@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## addSlot
@@ -15,8 +15,6 @@ function addSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void
 Adds a notification slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,64 +41,6 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// addSlot callback
-let addSlotCallBack = (err: BusinessError): void => {
-  if (err) {
-    console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in adding slot.`);
-  }
-}
-notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, addSlotCallBack);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION).then(() => {
-  console.info(`Succeeded in adding slot.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// addSlot callback
-let addSlotCallBack = (err: BusinessError): void => {
-    if (err) {
-        console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("addSlot success");
-    }
-}
-// NotificationSlot object
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-notificationManager.addSlot(notificationSlot, addSlotCallBack);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// NotificationSlot object
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-notificationManager.addSlot(notificationSlot).then(() => {
-    console.info("addSlot success");
-}).catch((err: BusinessError) => {
-    console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## addSlot
 
@@ -111,8 +51,6 @@ function addSlot(slot: NotificationSlot): Promise<void>
 Adds a notification slot. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -143,7 +81,3 @@ Adds a notification slot. This API uses a promise to return the result.
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-
-**Examples**
-
-See [addSlot](#addslot)

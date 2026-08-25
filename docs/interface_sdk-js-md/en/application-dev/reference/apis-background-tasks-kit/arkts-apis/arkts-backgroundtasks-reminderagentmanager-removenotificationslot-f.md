@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## removeNotificationSlot
@@ -15,8 +15,6 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 Removes a specified notification slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -33,35 +31,6 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION,
-  (err: BusinessError) => {
-  if (err.code) {
-    console.error("callback err code:" + err.code + " message:" + err.message);
-  } else {
-    console.info("removeNotificationSlot callback");
-  }
-});
-```
-
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION).then(() => {
-  console.info("removeNotificationSlot promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
-
 
 ## removeNotificationSlot
 
@@ -72,8 +41,6 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 Removes a specified notification slot. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -94,7 +61,3 @@ Removes a specified notification slot. This API uses a promise to return the res
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [removeNotificationSlot](#removenotificationslot)

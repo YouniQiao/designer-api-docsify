@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## executeDelayed
@@ -20,8 +20,6 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 > - 如果是长时任务，则仅支持执行一次。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -51,45 +49,6 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
 
-**示例**
-
-```TypeScript
-// import BusinessError
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Concurrent
-function printArgs(args: number): void {
-    console.info("printArgs: " + args);
-}
-
-let t: number = Date.now();
-console.info("taskpool start time is: " + t);
-let task: taskpool.Task = new taskpool.Task(printArgs, 100); // 100: test number
-taskpool.executeDelayed(1000, task).then(() => { // 1000: delayTime is 1000ms
-  console.info('Succeeded in executing task');
-}).catch((e: BusinessError) => {
-  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-})
-```
-
-```TypeScript
-// import BusinessError
-import { BusinessError } from '@kit.BasicServicesKit'
-
-@Concurrent
-function printArgs(args: number): string {
-    console.info("printArgs: " + args);
-    return "success";
-}
-
-let task: taskpool.Task = new taskpool.GenericsTask<[number], string>(printArgs, 100); // 100: test number
-taskpool.executeDelayed<[number], string>(1000, task).then((res: string) => { // 1000: delayTime is 1000ms
-  console.info('Succeeded in executing task');
-}).catch((e: BusinessError) => {
-  console.error(`Failed to execute task. Code: ${e.code}, message: ${e.message}`);
-})
-```
-
 
 ## executeDelayed
 
@@ -100,8 +59,6 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 延时执行泛型任务，使用Promise异步回调。 executeDelayed任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -128,7 +85,3 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 | [10200028](../errorcode-utils.md#10200028-延时时间小于零) |
 | [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
 | [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-
-**示例**
-
-参见 [executeDelayed](#executedelayed)

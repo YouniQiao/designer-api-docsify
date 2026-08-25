@@ -4,8 +4,6 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## createScene
@@ -17,8 +15,6 @@ createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 根据指定的资源路径和场景加载参数创建场景，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,41 +34,3 @@ createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 | 类型 |
 | --- |
 | Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; |
-
-**示例**
-
-```TypeScript
-import { Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
-
-// fromFile=true：从指定glb文件加载场景，fromFile=false：创建一个空场景，此参数是为了示例展示两种常见场景创建方式
-function createScenePromise(fromFile: boolean = false): Promise<Scene> {
-  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
-  if (!renderContext) {
-    return Promise.reject(new Error("RenderContext is null"));
-  }
-
-  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
-  if (fromFile) {
-    // 创建场景并加载.gltf或.glb文件作为初始内容，路径和名称可根据项目实际资源自定义
-    return renderResourceFactory.createScene($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-  } else {
-    // 创建空场景
-    return renderResourceFactory.createScene();
-  }
-}
-```
-
-```TypeScript
-import { Scene, SceneLoadParams, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
-
-function createSceneWithParams(): Promise<Scene> {
-  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
-  if (!renderContext) {
-    return Promise.reject(new Error("RenderContext is null"));
-  }
-  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
-  // 创建场景并传入场景加载参数，路径和文件名可根据项目实际资源自定义
-  let loadParams: SceneLoadParams = { offset: 0 };
-  return renderResourceFactory.createScene($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"), loadParams);
-}
-```

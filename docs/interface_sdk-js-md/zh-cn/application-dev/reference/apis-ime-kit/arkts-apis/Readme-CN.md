@@ -45,12 +45,8 @@
   - [Movement](arkts-ime-inputmethod-movement-i.md)
   - [Range](arkts-ime-inputmethod-range-i.md)
   - [TextConfig](arkts-ime-inputmethod-textconfig-i.md)
-  - [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md)
-  - [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md)
-  - [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md)
   <!--Del-->
   - [ImeChangeWithUserIdCallback(系统接口)](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md)<!--DelEnd-->
-  - [OnMessageCallback](arkts-ime-inputmethod-onmessagecallback-t.md)
   - [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md)
   - [AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md)
   - [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
@@ -101,12 +97,6 @@
   - [TextInputClient](arkts-ime-inputmethodengine-textinputclient-i.md)
   - [WindowInfo](arkts-ime-inputmethodengine-windowinfo-i.md)
   - [CommandDataType](arkts-ime-inputmethodengine-commanddatatype-t.md)
-  - [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md)
-  - [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md)
-  - [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md)
-  - [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md)
-  - [OnMessageCallback](arkts-ime-inputmethodengine-onmessagecallback-t.md)
-  - [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md)
   - [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md)
   <!--Del-->
   - [SizeUpdateCallback(系统接口)](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md)<!--DelEnd-->

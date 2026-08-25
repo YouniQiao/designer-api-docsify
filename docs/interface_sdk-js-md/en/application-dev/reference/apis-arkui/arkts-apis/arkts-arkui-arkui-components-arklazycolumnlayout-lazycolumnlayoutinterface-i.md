@@ -4,14 +4,12 @@ Defines the lazy column layout component.@interface LazyColumnLayoutInterface
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
+import { LazyColumnLayout, LazyColumnLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -23,8 +21,6 @@ import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
 Construct the lazy column layout attribute.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

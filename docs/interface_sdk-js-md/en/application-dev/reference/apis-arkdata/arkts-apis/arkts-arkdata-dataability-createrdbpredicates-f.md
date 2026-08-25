@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from '@kit.ArkData';
+import { dataAbility } from 'kits/@kit.ArkData';
 ```
 
 ## createRdbPredicates
@@ -15,8 +15,6 @@ function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPre
 Creates an **RdbPredicates** object with a table name and **DataAbilityPredicates** object.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -32,12 +30,3 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | rdb.RdbPredicates |
-
-**Examples**
-
-```TypeScript
-let dataAbilityPredicates = new dataAbility.DataAbilityPredicates()
-dataAbilityPredicates.equalTo("NAME", "Rose")
-// EMPLOYEE is a table created in an RDB store.
-let predicates = dataAbility.createRdbPredicates("EMPLOYEE", dataAbilityPredicates)
-```

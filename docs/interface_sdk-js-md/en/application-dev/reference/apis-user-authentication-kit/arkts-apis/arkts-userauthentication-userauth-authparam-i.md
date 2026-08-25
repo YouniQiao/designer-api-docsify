@@ -4,14 +4,12 @@ Defines the user authentication parameters. This API is used to configure user a
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## authTrustLevel
@@ -21,14 +19,16 @@ authTrustLevel: AuthTrustLevel
 ```
 
 Authentication trust level. The authentication trust level determines the security strength of authentication. Select a proper level based on the security requirements of the service scenario:  
-- **ATL1**: Applies to low-security scenarios such as service risk control and common personal data query. - **ATL2**: Applies to medium-security scenarios such as application login and maintaining the screen-unlocked state of a device. - **ATL3**: Applies to high-security scenarios such as device unlocking. - **ATL4**: Applies to high-security scenarios such as small-amount payment.  
+- **ATL1**: Applies to low-security scenarios such as service risk control and common personal data query.  
+- **ATL2**: Applies to medium-security scenarios such as application login and maintaining the screen-unlocked  
+state of a device.  
+- **ATL3**: Applies to high-security scenarios such as device unlocking.  
+- **ATL4**: Applies to high-security scenarios such as small-amount payment.  
 For details, see [Principles for Classifying Biometric Authentication Trust Levels](../../../security/UserAuthenticationKit/user-authentication-overview.md#principles-for-classifying-biometric-authentication-trust-levels).
 
 **Type:** AuthTrustLevel
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,8 +46,6 @@ Authentication type list, which specifies the types of authentication provided o
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -63,8 +61,6 @@ Random challenge value, which can be used to prevent replay attacks. It cannot e
 **Type:** Uint8Array
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,8 +78,6 @@ Information about the authentication result reuse. After this parameter is set, 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -95,13 +89,14 @@ skipLockedBiometricAuth?: boolean
 ```
 
 Whether to skip the frozen authentication mode and automatically switch to another mode. If no alternative authentication mode is available, the widget is closed and an authentication freeze error code is returned.  
-- **true**: When biometric authentication is locked, the countdown UI is skipped and the system directly switches to another authentication mode (for example, switching from a locked fingerprint to PIN). This is suitable for scenarios where quick authentication is desired. - **false** (default): The countdown is not skipped. The user must wait for the lock countdown to end before retrying the authentication mode or manually switching.
+- **true**: When biometric authentication is locked, the countdown UI is skipped and the system directly switches  
+to another authentication mode (for example, switching from a locked fingerprint to PIN). This is suitable for scenarios where quick authentication is desired.  
+- **false** (default): The countdown is not skipped. The user must wait for the lock countdown to end before  
+retrying the authentication mode or manually switching.
 
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -6,8 +6,6 @@ Inherits from [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md). R
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -26,8 +24,6 @@ hasChanged(newValue: T): void
 Notifies subscribers that the property value has changed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

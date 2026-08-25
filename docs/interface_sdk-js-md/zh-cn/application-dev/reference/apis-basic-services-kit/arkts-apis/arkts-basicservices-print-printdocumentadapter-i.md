@@ -4,14 +4,12 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Print.PrintFramework
 
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onJobStateChanged
@@ -23,8 +21,6 @@ onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 实现这个接口来监听打印任务状态的改变。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRINT
 
@@ -44,52 +40,16 @@ onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
-    onStartLayoutWrite(jobId: string, oldAttrs: print.PrintAttributes, newAttrs: print.PrintAttributes, fd: number,
-        writeResultCallback: (jobId: string, writeResult: print.PrintFileCreationState) => void) {
-        writeResultCallback(jobId, print.PrintFileCreationState.PRINT_FILE_CREATED);
-    };
-    onJobStateChanged(jobId: string, state: print.PrintDocumentAdapterState) {
-        if (state == print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
-            console.info('PREVIEW_DESTROY');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
-            console.info('PRINT_TASK_SUCCEED');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
-            console.info('PRINT_TASK_FAIL');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
-            console.info('PRINT_TASK_CANCEL');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
-            console.info('PRINT_TASK_BLOCK');
-        }
-    }
-}
-```
-
 ## onStartLayoutWrite
 
-ArkTS-Dyn:
 ```TypeScript
 onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: number,
-      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,
       writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
 ```
 
 打印服务会通过本接口将一个空的pdf文件的文件描述符传给三方应用，由三方应用使用新的打印参数更新待打印文件，更新文件完成后通过本接口的回调方法writeResultCallback通知打印服务。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PRINT
 
@@ -102,7 +62,7 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
 | jobId | string | 是 |
 | oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | 是 |
 | newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | 是 |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| fd | number | 是 |
 | writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) = & gt; void | 是 |
 
 **错误码：**
@@ -111,59 +71,3 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
-    onStartLayoutWrite(jobId: string, oldAttrs: print.PrintAttributes, newAttrs: print.PrintAttributes, fd: number,
-        writeResultCallback: (jobId: string, writeResult: print.PrintFileCreationState) => void) {
-        writeResultCallback(jobId, print.PrintFileCreationState.PRINT_FILE_CREATED);
-    };
-    onJobStateChanged(jobId: string, state: print.PrintDocumentAdapterState) {
-        if (state == print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
-            console.info('PREVIEW_DESTROY');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
-            console.info('PRINT_TASK_SUCCEED');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
-            console.info('PRINT_TASK_FAIL');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
-            console.info('PRINT_TASK_CANCEL');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
-            console.info('PRINT_TASK_BLOCK');
-        }
-    }
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
-    onStartLayoutWrite(jobId: string, oldAttrs: print.PrintAttributes, newAttrs: print.PrintAttributes, fd: int,
-        writeResultCallback: (jobId: string, writeResult: print.PrintFileCreationState) => void) {
-        writeResultCallback(jobId, print.PrintFileCreationState.PRINT_FILE_CREATED);
-    };
-    onJobStateChanged(jobId: string, state: print.PrintDocumentAdapterState) {
-        if (state == print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
-            console.info('PREVIEW_DESTROY');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
-            console.info('PRINT_TASK_SUCCEED');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
-            console.info('PRINT_TASK_FAIL');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
-            console.info('PRINT_TASK_CANCEL');
-        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
-            console.info('PRINT_TASK_BLOCK');
-        }
-    }
-}
-```

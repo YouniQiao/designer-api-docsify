@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getUnlockPolicy
 
 ```TypeScript
-function getUnlockPolicy(userId: int): UnlockPolicy
+function getUnlockPolicy(userId: number): UnlockPolicy
 ```
 
 Obtains the authentication policy used to unlock the screen.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK
 
@@ -30,7 +28,7 @@ Obtains the authentication policy used to unlock the screen.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 

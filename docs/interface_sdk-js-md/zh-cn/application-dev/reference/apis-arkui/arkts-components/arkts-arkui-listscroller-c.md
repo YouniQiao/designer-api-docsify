@@ -3,7 +3,7 @@
 List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。
 
 > **说明：**&gt;
-> ListScroller继承自Scroller，具有Scroller的全部方法。
+> ListScroller继承自[Scroller](arkts-arkui-scroller-c.md)，具有[Scroller](arkts-arkui-scroller-c.md)的全部方法。
 
 ## 导入对象
 
@@ -11,11 +11,9 @@ List组件的滚动控制器，通过它控制List组件的滚动，仅支持一
 listScroller: ListScroller = new ListScroller();
 ```
 
-**继承/实现关系：** ListScroller extends Scroller
+**继承/实现关系：** ListScroller extends [Scroller](arkts-arkui-scroller-c.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,11 +28,9 @@ listScroller: ListScroller = new ListScroller();
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-将EXPANDED状态的ListItem收起，并设置回调事件。
+将[EXPANDED](arkts-arkui-swipeactionstate-e.md)状态的ListItem收起，并设置回调事件。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +61,6 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -84,7 +78,7 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 
 | 类型 |
 | --- |
-| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) |
+| [RectResult](arkts-arkui-rectresult-i.md) |
 
 **错误码：**
 
@@ -102,8 +96,6 @@ getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 根据坐标获取子组件的索引信息。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,8 +132,6 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 滑动到指定的ListItemGroup中指定的ListItem。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

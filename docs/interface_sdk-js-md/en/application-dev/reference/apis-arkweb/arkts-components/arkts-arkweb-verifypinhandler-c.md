@@ -4,8 +4,6 @@ VerifyPinHandler is a class in the Web component that handles PIN code verificat
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -22,8 +20,6 @@ confirm(result: PinVerifyResult): void
 Notifies the Web component of the PIN authentication result. The app calls this method to return the PIN verification result to the Web component, which then continues the subsequent authentication process based on the result. If the verification is successful, the Web component allows access to protected content; if the verification fails, the Web component denies access and may prompt the user to retry.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -42,7 +38,5 @@ constructor()
 A constructor used to create a **VerifyPinHandler** instance.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core

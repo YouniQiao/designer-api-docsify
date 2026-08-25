@@ -4,14 +4,12 @@ Represents the information presented on the user authentication page. This API i
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## appWindow
@@ -25,8 +23,6 @@ Application window object. This API is used to display the authentication dialog
 **Type:** window.Window
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Window type of the authentication widget. **DIALOG_BOX** is applicable to most a
 **Default:** WindowModeType.DIALOG_BOX
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

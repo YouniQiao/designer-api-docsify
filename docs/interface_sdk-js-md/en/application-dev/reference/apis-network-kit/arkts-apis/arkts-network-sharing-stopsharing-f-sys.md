@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## stopSharing
@@ -15,8 +15,6 @@ function stopSharing(type: SharingIfaceType, callback: AsyncCallback<void>): voi
 Disables sharing of a specified type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -46,33 +44,6 @@ Disables sharing of a specified type. This API uses an asynchronous callback to 
 | [2202006](../errorcode-net-sharing.md#2202006-bluetooth-sharing-failure) |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) |
 
-**Examples**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing.stopSharing(SHARING_WIFI, (error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .stopSharing(SHARING_WIFI)
-  .then(() => {
-    console.info('stop wifi sharing successful');
-  })
-  .catch((error: BusinessError) => {
-    console.error('stop wifi sharing failed');
-  });
-```
-
 
 ## stopSharing
 
@@ -83,8 +54,6 @@ function stopSharing(type: SharingIfaceType): Promise<void>
 Disables sharing of a specified type. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -118,7 +87,3 @@ Disables sharing of a specified type. This API uses a promise to return the resu
 | [2202005](../errorcode-net-sharing.md#2202005-wi-fi-sharing-failure) |
 | [2202006](../errorcode-net-sharing.md#2202006-bluetooth-sharing-failure) |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) |
-
-**Examples**
-
-See [stopSharing](#stopsharing)

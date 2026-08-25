@@ -4,8 +4,6 @@ ParagraphStyleInterface
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 
 Indent of the text paragraph. The value cannot be in percentage.Default value: **0**.
 
-**Type:** LengthMetrics \| LeadingMarginPlaceholder
+**Type:** LengthMetrics \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Custom indentation information for text paragraphs. The value cannot be in perce
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -65,8 +59,6 @@ Maximum number of lines in the text paragraph. By default, the number of lines i
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -79,13 +71,11 @@ Maximum number of lines in the text paragraph. By default, the number of lines i
 overflow?: TextOverflow
 ```
 
-Display mode when the text is too long in the text paragraph.Default value: **TextOverflow.None**.This parameter must be used with **maxLines** for the settings to take effect. **TextOverflow.MARQUEE** is not supported.
+Display mode when the text is too number in the text paragraph.Default value: **TextOverflow.None**.This parameter must be used with **maxLines** for the settings to take effect. **TextOverflow.MARQUEE** is not supported.
 
-**Type:** TextOverflow
+**Type:** [TextOverflow](arkts-arkui-textoverflow-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,8 +95,6 @@ Paragraph spacing of the styled string text.Default value: **0**. The value cann
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -122,11 +110,9 @@ shaderStyle?: ShaderStyle
 Text shader effect.This API does not take effect when used together with [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) **strokeWidth**. **shaderStyle** has a higher priority than [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) **fontColor**.  
 **Since**: 26.0.0.
 
-**Type:** ShaderStyle
+**Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,13 +126,11 @@ Text shader effect.This API does not take effect when used together with [TextSt
 tailIndents?: LengthMetrics | Array<LengthMetrics>
 ```
 
-Specify the tail indentation for each line in a paragraph.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When a single LengthMetrics value is provided, all lines share the same tail indent. <br>When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. <br>Negative values are treated as 0. </p>
+Specify the tail indentation for each line in a paragraph.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: When a single LengthMetrics value is provided, all lines share the same tail indent. When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. Negative values are treated as 0. </p>
 
 **Type:** LengthMetrics \| Array&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,8 +150,6 @@ Horizontal alignment of the text paragraph.Default value: **TextAlign.Start**.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -185,8 +167,6 @@ Text direction.Default value: **TextDirection.DEFAULT**
 **Type:** TextDirection
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,8 +186,6 @@ First line indent of the text paragraph. The value cannot be in percentage.Defau
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -226,8 +204,6 @@ Vertical alignment mode of text paragraphs.Default value: **TextVerticalAlign.BA
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -245,8 +221,6 @@ Word break rule of the text paragraph.Default value: **WordBreak.NORMAL**.
 **Type:** WordBreak
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

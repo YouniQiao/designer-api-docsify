@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## assetConflictPolicy
@@ -25,8 +23,6 @@ assetConflictPolicy?: AssetConflictPolicy
 **类型：** [AssetConflictPolicy](arkts-arkdata-relationalstore-assetconflictpolicy-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ assetDownloadOnDemand?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -56,13 +50,11 @@ assetDownloadOnDemand?: boolean
 assetTempPath?: string
 ```
 
-资产临时路径。仅当assetConflictPolicy值为CONFLICT_POLICY_TEMP_PATH时生效，需指定为 [distributedfiles](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)下的临时路径，格式示例：tmp/，若未填写或路径不合规，将 抛出 401 错误码。默认值为空。
+资产临时路径。仅当assetConflictPolicy值为CONFLICT_POLICY_TEMP_PATH时生效，需指定为 [应用文件目录与应用文件路径](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)下的临时路径，格式示例：tmp/，若未填写或路径不合规，将 抛出 401 错误码。默认值为空。
 
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,8 +72,6 @@ asyncDownloadAsset?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## autoSync
@@ -96,8 +86,6 @@ autoSync: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## autoSyncSwitch
@@ -111,8 +99,6 @@ autoSyncSwitch?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,8 +116,6 @@ enableCloud?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## tableType
@@ -145,7 +129,5 @@ tableType?: DistributedTableType
 **类型：** [DistributedTableType](arkts-arkdata-relationalstore-distributedtabletype-e.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

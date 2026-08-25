@@ -4,8 +4,6 @@ Defines the TransferProgress data structure.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the TransferProgress data structure.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## failedCount
 
 ```TypeScript
-failedCount: int
+failedCount: number
 ```
 
-failed count in TransferProgress. The value should be an integer. <br>Unit:Pcs.
+failed count in TransferProgress. The value should be an integer. Unit:Pcs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Describes the state type of transfer task.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -68,8 +62,6 @@ Describes the state type of transfer stop reason.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -79,16 +71,14 @@ Describes the state type of transfer stop reason.
 ## successfulCount
 
 ```TypeScript
-successfulCount: int
+successfulCount: number
 ```
 
-successful count in TransferProgress. The value should be an integer. <br>Unit:Pcs.
+successful count in TransferProgress. The value should be an integer. Unit:Pcs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,16 +89,14 @@ successful count in TransferProgress. The value should be an integer. <br>Unit:P
 ## totalCount
 
 ```TypeScript
-totalCount: int
+totalCount: number
 ```
 
-total count in TransferProgress. The value should be an integer. <br>Unit:Pcs.
+total count in TransferProgress. The value should be an integer. Unit:Pcs.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,16 +107,14 @@ total count in TransferProgress. The value should be an integer. <br>Unit:Pcs.
 ## totalSize
 
 ```TypeScript
-totalSize: long
+totalSize: number
 ```
 
-Total size in TransferProgress. <br>Unit:Byte.
+Total size in TransferProgress. Unit:Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,16 +125,14 @@ Total size in TransferProgress. <br>Unit:Byte.
 ## transferredSize
 
 ```TypeScript
-transferredSize: long
+transferredSize: number
 ```
 
-transferred size in TransferProgress. <br>Unit:Byte.
+transferred size in TransferProgress. Unit:Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

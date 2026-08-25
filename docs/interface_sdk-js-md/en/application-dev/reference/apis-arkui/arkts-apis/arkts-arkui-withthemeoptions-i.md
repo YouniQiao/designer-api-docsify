@@ -4,8 +4,6 @@ Defines the default theme and color mode for components within the **WithTheme**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ colorMode?: ThemeColorMode
 
 Color mode for components in the **WithTheme** scope.Default value: **ThemeColorMode.SYSTEM**
 
-**Type:** ThemeColorMode
+**Type:** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Default theme for components in the **WithTheme** scope.Default value: **undefin
 **Type:** [CustomTheme](arkts-arkui-customtheme-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

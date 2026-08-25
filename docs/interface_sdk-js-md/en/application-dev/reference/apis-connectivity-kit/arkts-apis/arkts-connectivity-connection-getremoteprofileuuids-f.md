@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getRemoteProfileUuids
@@ -15,8 +15,6 @@ function getRemoteProfileUuids(deviceId: string, callback: AsyncCallback<Array<P
 Obtains the profile UUIDs supported by the remote device.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -43,32 +41,6 @@ Obtains the profile UUIDs supported by the remote device.
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.getRemoteProfileUuids('XX:XX:XX:XX:XX:XX', (err: BusinessError, data: Array<connection.ProfileUuids>) => {
-        console.info('getRemoteProfileUuids, err: ' + JSON.stringify(err) + ', data: ' + JSON.stringify(data));
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.getRemoteProfileUuids('XX:XX:XX:XX:XX:XX').then(() => {
-        console.info('getRemoteProfileUuids');
-    }, (err: BusinessError) => {
-        console.error('getRemoteProfileUuids: errCode' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## getRemoteProfileUuids
 
@@ -79,8 +51,6 @@ function getRemoteProfileUuids(deviceId: string): Promise<Array<ProfileUuids>>
 Obtains the profile UUIDs supported by the remote device.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -111,7 +81,3 @@ Obtains the profile UUIDs supported by the remote device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-See [getRemoteProfileUuids](#getremoteprofileuuids)

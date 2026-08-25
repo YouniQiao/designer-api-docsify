@@ -10,14 +10,12 @@ Defines the common attributes shared by all chips.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
+import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -28,11 +26,9 @@ backgroundColor?: ResourceColor
 
 Chip background color.Default value: **\$r('sys.color.ohos_id_color_button_normal')**If this parameter is set to **undefined**, the default value is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,11 +44,9 @@ fontColor?: ResourceColor
 
 Chip text color.Default value: **\$r('sys.color.ohos_id_color_text_primary')**If this parameter is set to **undefined**, the default value is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,11 +62,9 @@ selectedBackgroundColor?: ResourceColor
 
 Background color of the chip when it is activated.Default value: **\$r('sys.color.ohos_id_color_emphasize')**If this parameter is set to **undefined**, the default value is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,11 +80,9 @@ selectedFontColor?: ResourceColor
 
 Text color of the chip when it is activated.Default value: **\$r('sys.color.ohos_id_color_text_primary_contrary')**If this parameter is set to **undefined**, the default value is used.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,11 +98,9 @@ size?: ChipSize | SizeOptions
 
 Chip size. The ChipSize type needs to be imported from the Chip component.Default value: **ChipSize.NORMAL** or **{ height: 0, width: 0 }**If the value is **undefined**, the default value is used.
 
-**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
+**Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

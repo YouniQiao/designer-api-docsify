@@ -4,8 +4,6 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## challenge
@@ -30,8 +28,6 @@ challenge?: Uint8Array
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -45,7 +41,10 @@ interactionContext?: Context
 ```
 
 用户交互上下文配置，默认为undefined。  
-- 未指定上下文时，授权对话框以模态系统模式显示。 - 指定[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)或 [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)时，以模态应用模式显示。 - 未提供有效上下文时，授权对话框无法显示。  
+- 未指定上下文时，授权对话框以模态系统模式显示。  
+- 指定[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)或  
+[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)时，以模态应用模式显示。  
+- 未提供有效上下文时，授权对话框无法显示。  
 **注意**：仅当isInteractionAllowed为true时生效。
 
 **类型：** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)
@@ -53,8 +52,6 @@ interactionContext?: Context
 **默认值：** undefined, which means the authorization dialog will be displayed in modal system mode.
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,8 +74,6 @@ isInteractionAllowed?: boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -98,8 +93,6 @@ isReuseNeeded?: boolean
 **默认值：** true
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

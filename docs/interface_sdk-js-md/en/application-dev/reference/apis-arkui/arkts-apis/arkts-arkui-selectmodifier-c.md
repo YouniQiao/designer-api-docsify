@@ -2,11 +2,9 @@
 
 Defines Select Modifier@extends SelectAttribute @implements AttributeModifier&lt;SelectAttribute&gt;
 
-**Inheritance/Implementation:** SelectModifier extends SelectAttribute and implements AttributeModifier<SelectAttribute>
+**Inheritance/Implementation:** SelectModifier extends [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md#selectattribute) and implements AttributeModifier<SelectAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: SelectAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## setScreenOffTime
@@ -15,8 +15,6 @@ function setScreenOffTime(admin: Want, time: number): void
 Sets the device screen-off time.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Deprecated since:** 26.0.0
 
@@ -46,23 +44,3 @@ Sets the device screen-off time.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // Replace parameters with actual values.
-  deviceSettings.setScreenOffTime(wantTemp, 30000);
-  console.info(`Succeeded in setting screen off time`);
-} catch(err) {
-  console.error(`Failed to set screen off time. Code: ${err.code}, message: ${err.message}`);
-}
-```

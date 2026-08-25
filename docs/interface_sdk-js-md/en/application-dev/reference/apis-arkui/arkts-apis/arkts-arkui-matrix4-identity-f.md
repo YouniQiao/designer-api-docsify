@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from '@kit.ArkUI';
+import { matrix4 } from 'kits/@kit.ArkUI';
 ```
 
 ## identity
@@ -16,8 +16,6 @@ Constructs an identity matrix.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,38 +24,4 @@ Constructs an identity matrix.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) |
-
-**Examples**
-
-```TypeScript
-// The effect of matrix 1 is the same as that of matrix 2.
-import { matrix4 } from '@kit.ArkUI';
-
-let matrix1 = matrix4.init(
-  [1.0, 0.0, 0.0, 0.0,
-    0.0, 1.0, 0.0, 0.0,
-    0.0, 0.0, 1.0, 0.0,
-    0.0, 0.0, 0.0, 1.0]);
-let matrix2 = matrix4.identity();
-
-@Entry
-@Component
-struct Tests {
-  build() {
-    Column() {
-      // Replace $r("app.media.zh") with the image resource file you use.
-      Image($r("app.media.zh"))
-        .width("40%")
-        .height(100)
-        .transform(matrix1)
-      // Replace $r("app.media.zh") with the image resource file you use.
-      Image($r("app.media.zh"))
-        .width("40%")
-        .height(100)
-        .margin({ top: 150 })
-        .transform(matrix2)
-    }
-  }
-}
-```
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |

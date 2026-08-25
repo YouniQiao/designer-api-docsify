@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 ## 导入模块
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## onRemoteDied
@@ -24,37 +22,4 @@ onRemoteDied(): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.Communication.IPC.Core
-
-**示例**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyDeathRecipient implements rpc.DeathRecipient {
-  onRemoteDied() {
-    hilog.info(0x0000, 'testTag', 'server died');
-  }
-}
-```
-
-## onRemoteDied
-
-```TypeScript
-onRemoteDied: OnRemoteDiedFunc
-```
-
-接收到远程对象的死亡通知时执行后续操作。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**示例**
-
-参见 [onRemoteDied](#onremotedied)

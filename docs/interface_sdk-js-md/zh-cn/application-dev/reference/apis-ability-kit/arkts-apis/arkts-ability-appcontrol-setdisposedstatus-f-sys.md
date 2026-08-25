@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## setDisposedStatus
@@ -15,8 +15,6 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 设置应用的处置状态。使用callback异步回调。成功返回null，失败返回对应错误信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -42,110 +40,6 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
-
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = { bundleName: 'com.example.myapplication' };
-
-try {
-  appControl.setDisposedStatus(appId, want)
-    .then(() => {
-      console.info('setDisposedStatus success');
-    }).catch((error: BusinessError) => {
-      let message = (error as BusinessError).message;
-      console.error('setDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedStatus failed ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
-// 开发者需根据实际工程更新appId和want。
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = {bundleName: 'com.example.myapplication'};
-
-try {
-  appControl.setDisposedStatus(appId, want)
-    .then(() => {
-      console.info('setDisposedStatus success');
-    }).catch((error: Error) => {
-      let message = (error as BusinessError).message;
-      console.error('setDisposedStatus failed ' + message);
-    });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedStatus failed ' + message);
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = { bundleName: 'com.example.myapplication' };
-
-try {
-  appControl.setDisposedStatus(appId, want, (error: BusinessError, data) => {
-    if (error) {
-      let message = (error as BusinessError).message;
-      console.error('setDisposedStatus failed ' + message);
-      return;
-    }
-    console.info('setDisposedStatus success');
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedStatus failed ' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-// 开发者需根据实际工程更新appId和want。
-let appId = "com.example.myapplication_xxxxx";
-let want: Want = { bundleName: 'com.example.myapplication' };
-
-try {
-  appControl.setDisposedStatus(appId, want, (error: BusinessError | null, data) => {
-    if (error) {
-      let message = (error as BusinessError).message;
-      console.error('setDisposedStatus failed ' + message);
-      return;
-    }
-    console.info('setDisposedStatus success');
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setDisposedStatus failed ' + message);
-}
-```
-
 
 ## setDisposedStatus
 
@@ -156,8 +50,6 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 设置应用的处置状态。使用Promise异步回调。成功返回null，失败返回对应错误信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -187,7 +79,3 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) |
-
-**示例**
-
-参见 [setDisposedStatus](#setdisposedstatus)

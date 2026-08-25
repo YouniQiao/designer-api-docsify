@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## on('colorChange')
@@ -16,8 +16,6 @@ function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperT
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
@@ -28,19 +26,3 @@ function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperT
 | --- | --- | --- |
 | type | 'colorChange' | 是 |
 | callback | (colors: Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;, wallpaperType: WallpaperType) =&gt; void | 是 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let listener = (colors: Array<wallpaper.RgbaColor>, wallpaperType: wallpaper.WallpaperType): void => {
-        console.info(`wallpaper color changed.`);
-    };
-    wallpaper.on('colorChange', listener);
-} catch (error) {
-    let err = error as BusinessError;
-    console.error(`Failed to on. Code: ${err.code}, message: ${err.message}`);
-}
-```

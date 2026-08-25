@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## createSpan
@@ -16,8 +16,6 @@ Creates a trace span. This API works in synchronous manner.Specifically, create 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Return value:**
@@ -25,18 +23,3 @@ Creates a trace span. This API works in synchronous manner.Specifically, create 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) |
-
-**Examples**
-
-```TypeScript
-// Start tracing. The tracing flag is DEFAULT.
-let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.DEFAULT);
-// Create a trace span after the service logic is executed for several times.
-let spanTraceId = hiTraceChain.createSpan();
-// The call chain IDs in the trace IDs obtained from the same call chain trace must be the same.
-if (spanTraceId.chainId != traceId.chainId) {
-// Processing logic for exceptions.
-}
-// Stop tracing after the service is complete.
-hiTraceChain.end(traceId);
-```

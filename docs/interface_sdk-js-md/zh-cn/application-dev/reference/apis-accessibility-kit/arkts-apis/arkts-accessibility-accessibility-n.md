@@ -4,15 +4,13 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## 导入模块
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## 汇总
@@ -37,23 +35,15 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 | [sendAccessibilityEvent(辅助功能)](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) |
 | [sendAccessibilityEvent(辅助功能)](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) |
 | [on(辅助功能)](arkts-accessibility-accessibility-on-f.md#onaccessibilitystatechange) |
-| [onAccessibilityStateChange(辅助功能)](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md) |
 | [on(辅助功能)](arkts-accessibility-accessibility-on-f.md#ontouchguidestatechange) |
-| [onTouchGuideStateChange(辅助功能)](arkts-accessibility-accessibility-ontouchguidestatechange-f.md) |
 | [off(辅助功能)](arkts-accessibility-accessibility-off-f.md#offaccessibilitystatechange) |
-| [offAccessibilityStateChange(辅助功能)](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md) |
 | [off(辅助功能)](arkts-accessibility-accessibility-off-f.md#offtouchguidestatechange) |
-| [offTouchGuideStateChange(辅助功能)](arkts-accessibility-accessibility-offtouchguidestatechange-f.md) |
 | [getCaptionsManager(辅助功能)](arkts-accessibility-accessibility-getcaptionsmanager-f.md) |
 | [isScreenReaderOpenSync(辅助功能)](arkts-accessibility-accessibility-isscreenreaderopensync-f.md) |
 | [on(辅助功能)](arkts-accessibility-accessibility-on-f.md#onscreenreaderstatechange) |
-| [onScreenReaderStateChange(辅助功能)](arkts-accessibility-accessibility-onscreenreaderstatechange-f.md) |
 | [off(辅助功能)](arkts-accessibility-accessibility-off-f.md#offscreenreaderstatechange) |
-| [offScreenReaderStateChange(辅助功能)](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md) |
 | [on(辅助功能)](arkts-accessibility-accessibility-on-f.md#ontouchmodechange) |
-| [onTouchModeChange(辅助功能)](arkts-accessibility-accessibility-ontouchmodechange-f.md) |
 | [off(辅助功能)](arkts-accessibility-accessibility-off-f.md#offtouchmodechange) |
-| [offTouchModeChange(辅助功能)](arkts-accessibility-accessibility-offtouchmodechange-f.md) |
 | [getTouchModeSync(辅助功能)](arkts-accessibility-accessibility-gettouchmodesync-f.md) |
 | [onAnimationReduceStateChange(辅助功能)](arkts-accessibility-accessibility-onanimationreducestatechange-f.md) |
 | [offAnimationReduceStateChange(辅助功能)](arkts-accessibility-accessibility-offanimationreducestatechange-f.md) |

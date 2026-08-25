@@ -4,14 +4,12 @@ NotificationSubscriberExtensionAbility is the base class for notification subscr
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## Modules to Import
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from '@kit.NotificationKit';
+import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
 ```
 
 ## onCancelMessages
@@ -24,8 +22,6 @@ Called when notifications are canceled.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
@@ -35,18 +31,6 @@ Called when notifications are canceled.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | hashCodes | Array & lt;string & gt; | Yes |
-
-**Examples**
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-    onCancelMessages(hashCodes: Array<string>): void {
-        console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
-    }
-}
-```
 
 ## onDestroy
 
@@ -58,23 +42,9 @@ Called when the notification subscription extension is destroyed.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
-
-**Examples**
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onDestroy(): void {
-    console.info(`${TAG} onDestroy`);
-  }
-}
-```
 
 ## onReceiveMessage
 
@@ -86,8 +56,6 @@ Called when a notification is received.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.Notification
@@ -97,18 +65,6 @@ Called when a notification is received.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-const TAG = 'NotificationSubscriberExtAbility';
-
-export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onReceiveMessage(notificationInfo: notificationExtensionSubscription.NotificationInfo): void {
-    console.info(`${TAG} onReceiveMessage. notificationInfo: ${JSON.stringify(notificationInfo)}`);
-  }
-}
-```
 
 ## context
 
@@ -121,8 +77,6 @@ Context for the NotificationSubscriberExtensionAbility.
 **Type:** [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

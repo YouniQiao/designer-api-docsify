@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## getTouchpadRightClickType
@@ -15,8 +15,6 @@ function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): voi
 Obtains the touchpad right-click menu type. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -35,58 +33,6 @@ Obtains the touchpad right-click menu type. This API uses an asynchronous callba
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadRightClickType((error: BusinessError, type: pointer.RightClickType) => {
-              console.info(`getTouchpadRightClickType success, type: ${JSON.stringify(type)}`);
-            });
-          } catch (error) {
-            console.error(`getTouchpadRightClickType failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.getTouchpadRightClickType().then((type: pointer.RightClickType) => {
-              console.info(`getTouchpadRightClickType success, type: ${JSON.stringify(type)}`);
-            }).catch((error: BusinessError) => {
-              console.error(`Get touchpad right click type failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`getTouchpadRightClickType failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## getTouchpadRightClickType
 
@@ -97,8 +43,6 @@ function getTouchpadRightClickType(): Promise<RightClickType>
 Obtains the touchpad right-click menu type. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -116,7 +60,3 @@ Obtains the touchpad right-click menu type. This API uses a promise to return th
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getTouchpadRightClickType](#gettouchpadrightclicktype)

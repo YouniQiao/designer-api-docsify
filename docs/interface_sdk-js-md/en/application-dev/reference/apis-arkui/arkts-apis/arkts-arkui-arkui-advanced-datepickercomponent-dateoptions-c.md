@@ -6,14 +6,12 @@ DateOptions defines options for the date picker.Inherits from [CommonOptions](ar
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from 'kits/@kit.ArkUI';
 ```
 
 ## lunar
@@ -23,7 +21,8 @@ lunar?: boolean
 ```
 
 Specifies whether to display as lunar calendar.  
-- true: Display as lunar calendar. - false: Do not display as lunar calendar.  
+- true: Display as lunar calendar.  
+- false: Do not display as lunar calendar.  
 Default value: false  
 **Description**:This only takes effect in Simplified Chinese and Traditional Chinese language environments. In other language environments, setting this property has no effect.
 
@@ -32,8 +31,6 @@ Default value: false
 **Default:** false
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +51,6 @@ Defines the mode of the date picker.Default value: DateMode.DATE
 **Default:** DateMode.DATE
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

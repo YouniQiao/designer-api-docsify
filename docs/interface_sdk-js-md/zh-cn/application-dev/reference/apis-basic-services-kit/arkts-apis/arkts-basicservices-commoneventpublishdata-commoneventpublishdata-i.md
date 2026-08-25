@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Notification.CommonEvent
 
 ## bundleName
@@ -23,8 +21,6 @@ bundleName?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -32,18 +28,16 @@ bundleName?: string
 ## code
 
 ```TypeScript
-code?: int
+code?: number
 ```
 
 表示发布方传递的公共事件数据。默认值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **默认值：** 0
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -61,8 +55,6 @@ data?: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -74,15 +66,14 @@ isOrdered?: boolean
 ```
 
 表示是否是有序公共事件。默认为false。  
-- true：有序公共事件，根据订阅者设置的优先级等级，优先将公共事件发送给优先级较高的订阅者，等待其成功接收该公共事件之后再将事件发送给优先级较低的订阅者。如果有多个订阅者具有相同的优先级，则他们将随机接收到公共事件。 - false：无序公共事件，不考虑订阅者是否接收到该事件，也不保证订阅者接收到该事件的顺序与其订阅顺序一致。
+- true：有序公共事件，根据订阅者设置的优先级等级，优先将公共事件发送给优先级较高的订阅者，等待其成功接收该公共事件之后再将事件发送给优先级较低的订阅者。如果有多个订阅者具有相同的优先级，则他们将随机接收到公共事件。  
+- false：无序公共事件，不考虑订阅者是否接收到该事件，也不保证订阅者接收到该事件的顺序与其订阅顺序一致。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
@@ -93,7 +84,8 @@ isSticky?: boolean
 ```
 
 表示是否是粘性公共事件。默认为false。  
-- true：粘性公共事件，能够让订阅者收到在订阅前已经发送的公共事件。 - false：普通公共事件，只能让订阅者收到在订阅后才发送的公共事件。  
+- true：粘性公共事件，能够让订阅者收到在订阅前已经发送的公共事件。  
+- false：普通公共事件，只能让订阅者收到在订阅后才发送的公共事件。  
 仅系统应用或系统服务允许发送粘性事件。  
 [ohos.permission.COMMONEVENT_STICKY](../../../security/AccessToken/permissions-for-all.md#ohospermissioncommonevent_sticky)
 
@@ -102,8 +94,6 @@ isSticky?: boolean
 **默认值：** false
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.COMMONEVENT_STICKY
 
@@ -121,8 +111,6 @@ parameters?: { [key: string]: any }
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Notification.CommonEvent
@@ -138,8 +126,6 @@ subscriberPermissions?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -4,8 +4,6 @@ Enumerates the priorities available for Worker threads. For details about the ma
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## HIGH
@@ -17,8 +15,6 @@ HIGH = 0
 High priority, corresponding to QOS_USER_INITIATED.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -34,8 +30,6 @@ Medium priority, corresponding to QOS_DEFAULT.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -49,8 +43,6 @@ LOW = 2
 Low priority, corresponding to QOS_UTILITY.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -66,8 +58,6 @@ Background priority, corresponding to QOS_BACKGROUND.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -82,8 +72,6 @@ Deadline priority, corresponding to QOS_DEADLINE_REQUEST.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -97,8 +85,6 @@ VIP = 5
 Vip priority, corresponding to QOS_USER_INTERACTIVE.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

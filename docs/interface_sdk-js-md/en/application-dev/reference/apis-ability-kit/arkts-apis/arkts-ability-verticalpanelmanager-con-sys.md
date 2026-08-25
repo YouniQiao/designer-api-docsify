@@ -10,8 +10,6 @@ export the const string of abilityName and provide it for sourceAppInfo.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
@@ -27,8 +25,6 @@ export const SOURCE_APP_BUNDLE_NAME = 'bundleName'
 export the const string of bundleName and provide it for sourceAppInfo.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ export the const string of moduleName and provide it for sourceAppInfo.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
@@ -64,8 +58,6 @@ export the const string of screenMode and provide it for sourceAppInfo.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
@@ -81,8 +73,6 @@ export const SOURCE_APP_WINDOW_ID = 'windowId'
 export the const string of windowId and provide it for sourceAppInfo.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

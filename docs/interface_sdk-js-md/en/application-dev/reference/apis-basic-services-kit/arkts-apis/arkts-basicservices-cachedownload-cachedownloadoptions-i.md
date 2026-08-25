@@ -4,14 +4,12 @@ Provides configuration options for download and cache, including HTTP options, t
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## cacheStrategy
@@ -25,8 +23,6 @@ Cache update strategies, including **FORCE** or **LAZY**. The **FORCE** policy i
 **Type:** [CacheStrategy](arkts-basicservices-cachedownload-cachestrategy-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -42,8 +38,6 @@ CA certificate path. Currently, only the .pem certificate is supported. The CA c
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## headers
@@ -58,8 +52,6 @@ Request header used by a download task during HTTP transfer. The default value i
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## retry
@@ -73,8 +65,6 @@ Task retry configuration.
 **Type:** [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,8 +82,6 @@ Secure communication protocol, such as TSL or TLCP. TLS is used by default. Curr
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 ## timeout
@@ -107,8 +95,6 @@ Task timeout configuration.
 **Type:** [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

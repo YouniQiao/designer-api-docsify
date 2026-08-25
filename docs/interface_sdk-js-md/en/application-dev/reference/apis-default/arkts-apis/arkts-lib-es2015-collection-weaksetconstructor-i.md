@@ -1,7 +1,5 @@
 # WeakSetConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new <T extends object = object>(values?: readonly T[] | null): WeakSet<T>
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -32,5 +28,3 @@ readonly prototype: WeakSet<object>
 ```
 
 **Type:** WeakSet&lt;object&gt;
-
-**ArkTS mode:** 

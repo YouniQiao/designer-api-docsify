@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## cancel
@@ -12,11 +12,13 @@ import { taskpool } from '@kit.ArkTS';
 function cancel(task: Task): void
 ```
 
-取消任务池中的任务。 - 当任务在taskpool等待队列中，取消该任务后该任务将不再执行，并返回任务被取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
+取消任务池中的任务。  
+- 当任务在taskpool等待队列中，取消该任务后该任务将不再执行，并返回任务被取消的异常。  
+- 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。  
+- taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。  
+从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,86 +38,6 @@ function cancel(task: Task): void
 | [10200016](../errorcode-utils.md#10200016-取消正在执行的任务错误) |
 | [10200055](../errorcode-utils.md#10200055-异步任务被取消) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Concurrent
-function printArgs(args: number): number {
-  let t: number = Date.now();
-  while (Date.now() - t < 2000) {
-    continue;
-  }
-  console.info("printArgs: " + args);
-  return args;
-}
-
-function concurrentFunc() {
-  let taskGroup1: taskpool.TaskGroup = new taskpool.TaskGroup();
-  taskGroup1.addTask(printArgs, 10); // 10: test number
-  let taskGroup2: taskpool.TaskGroup = new taskpool.TaskGroup();
-  taskGroup2.addTask(printArgs, 100); // 100: test number
-  taskpool.execute(taskGroup1).then((res: Array<Object>) => {
-    console.info(`Succeeded in executing task. res is: ` + res);
-  });
-  taskpool.execute(taskGroup2).then((res: Array<Object>) => {
-    console.info(`Succeeded in executing task. res is: ` + res);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to execute task. Code: ${err.code}, message: ${err.message}`);
-  });
-  setTimeout(() => {
-    try {
-      taskpool.cancel(taskGroup2);
-    } catch (e) {
-      console.error(`Failed to cancel task. Code: ${e.code}, message: ${e.message}`);
-    }
-  }, 1000);
-}
-
-concurrentFunc();
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Concurrent
-function printArgs(args: number): number {
-  let t: number = Date.now();
-  while (Date.now() - t < 2000) {
-    continue;
-  }
-  if (taskpool.Task.isCanceled()) {
-    console.info("task has been canceled after 2s sleep.");
-    return args + 1;
-  }
-  console.info("printArgs: " + args);
-  return args;
-}
-
-@Concurrent
-function cancelFunction(taskId: number) {
-  try {
-    taskpool.cancel(taskId);
-  } catch (e) {
-    console.error(`Failed to cancel task. Code: ${e.code}, message: ${e.message}`);
-  }
-}
-
-function concurrentFunc() {
-  let task = new taskpool.Task(printArgs, 100); // 100: test number
-  taskpool.execute(task).catch((err: BusinessError) => {
-    console.error(`Failed to execute task. Code: ${err.code}, message: ${err.message}`);
-  });
-  setTimeout(() => {
-    let cancelTask = new taskpool.Task(cancelFunction, task.taskId);
-    taskpool.execute(cancelTask);
-  }, 1000);
-}
-
-concurrentFunc();
-```
-
 
 ## cancel
 
@@ -126,8 +48,6 @@ function cancel(group: TaskGroup): void
 取消任务池中的任务组。如果任务组中的任务未全部执行结束，则整个任务组的执行结果返回undefined。 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -145,10 +65,6 @@ function cancel(group: TaskGroup): void
 | --- |
 | [10200018](../errorcode-utils.md#10200018-取消不存在的任务组错误) |
 
-**示例**
-
-参见 [cancel](#cancel)
-
 
 ## cancel
 
@@ -156,11 +72,14 @@ function cancel(group: TaskGroup): void
 function cancel(taskId: number): void
 ```
 
-通过任务ID取消任务池中的任务。 - 如果任务在taskpool等待队列中，取消后任务将不再执行，并返回任务取消的异常。 - 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。 - 在其他线程调用taskpool.cancel时，需注意其行为是异步的，可能导致在cancel调用之后的taskpool.execute或taskpool.executeDelayed的任务被取消。从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记。这可以用来获取任务中抛出的异常信息或最终的执行结果。
+通过任务ID取消任务池中的任务。  
+- 如果任务在taskpool等待队列中，取消后任务将不再执行，并返回任务取消的异常。  
+- 当任务已经在taskpool工作线程执行，取消该任务并不影响任务继续执行。执行结果在catch分支返回，开发者可搭配isCanceled方法对任务取消行为作出响应。  
+- taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。  
+- 在其他线程调用taskpool.cancel时，需注意其行为是异步的，可能导致在cancel调用之后的taskpool.execute或taskpool.executeDelayed的任务被取消。  
+从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记。这可以用来获取任务中抛出的异常信息或最终的执行结果。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -178,7 +97,3 @@ function cancel(taskId: number): void
 | --- |
 | [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) |
 | [10200055](../errorcode-utils.md#10200055-异步任务被取消) |
-
-**示例**
-
-参见 [cancel](#cancel)

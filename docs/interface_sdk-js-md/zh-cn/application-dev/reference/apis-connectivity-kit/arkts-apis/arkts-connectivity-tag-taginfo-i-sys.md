@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## extrasData
@@ -26,8 +24,6 @@ extrasData: PacMap[]
 **类型：** [PacMap](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-pacmap-i.md)[]
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -48,8 +44,6 @@ NFC服务进程的远端对象，用于客户端和服务之间的接口通信�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
@@ -59,17 +53,15 @@ NFC服务进程的远端对象，用于客户端和服务之间的接口通信�
 ## tagRfDiscId
 
 ```TypeScript
-tagRfDiscId: int
+tagRfDiscId: number
 ```
 
 标签发现时分配的ID值。  
 **系统接口：** 此接口为系统接口。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 

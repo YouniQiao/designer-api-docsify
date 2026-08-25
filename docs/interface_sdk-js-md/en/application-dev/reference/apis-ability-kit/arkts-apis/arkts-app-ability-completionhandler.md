@@ -8,7 +8,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandler } from '@kit.AbilityKit';
+import { CompletionHandler } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary
@@ -18,10 +18,3 @@ import { CompletionHandler } from '@kit.AbilityKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [OnRequestFailureFn](arkts-ability-onrequestfailurefn-t.md) |
-| [OnRequestSuccessFn](arkts-ability-onrequestsuccessfn-t.md) |

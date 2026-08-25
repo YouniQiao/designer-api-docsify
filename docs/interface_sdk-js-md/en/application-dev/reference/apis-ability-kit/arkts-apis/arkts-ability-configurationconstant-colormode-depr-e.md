@@ -4,8 +4,6 @@ Enumerates the color modes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ColorMode](arkts-ability-configurationconstant-colormode-e.md)
@@ -21,8 +19,6 @@ COLOR_MODE_NOT_SET = -1
 Unspecified color mode.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Dark mode.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#color_mode_dark)
@@ -57,8 +51,6 @@ COLOR_MODE_LIGHT = 1
 Light mode.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -16,8 +16,6 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -35,8 +33,6 @@ constructor(settings?: RenderingContextSettings)
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -49,47 +45,6 @@ constructor(settings?: RenderingContextSettings)
 | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
 
-**示例**
-
-以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
-
-```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct LengthMetricsUnitDemo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
-  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.contextPX)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextPX.fillRect(10, 10, 100, 100)
-          this.contextPX.clearRect(10, 10, 50, 50)
-        })
-
-      Canvas(this.contextVP)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextVP.fillRect(10, 10, 100, 100)
-          this.contextVP.clearRect(10, 10, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -99,8 +54,6 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 构造Canvas画布对象，支持配置CanvasRenderingContext2D对象的参数和单位模式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,11 +68,7 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
-
-**示例**
-
-参见 [constructor](#constructor)
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 |
 
 ## getContext2DFromDrawingContext
 
@@ -134,8 +83,6 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 > - 当入参的DrawingRenderingContext对象未绑定Canvas组件时，将返回错误码。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -162,34 +109,6 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 | --- |
 | [103702](../errorcode-canvas.md#103702-绘制上下文未绑定canvas组件) |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct CanvasExample {
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas({ unit: LengthMetricsUnit.DEFAULT })
-        .onReady((drawingContext?: DrawingRenderingContext) => {
-          if (!drawingContext) {
-            return
-          }
-          let context2D: CanvasRenderingContext2D =
-            CanvasRenderingContext2D.getContext2DFromDrawingContext(drawingContext, { antialias: true })
-          context2D.fillStyle = 'rgb(39,135,217)'
-          context2D.fillRect(10, 30, 100, 100)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 ## off('onAttach')
 
 ```TypeScript
@@ -199,8 +118,6 @@ off(type: 'onAttach', callback?: Callback<void>): void
 取消订阅CanvasRenderingContext2D与Canvas组件发生绑定的场景。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -230,8 +147,6 @@ off(type: 'onDetach', callback?: Callback<void>): void
 取消订阅CanvasRenderingContext2D与Canvas组件解除绑定的场景。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -273,8 +188,6 @@ on(type: 'onAttach', callback: Callback<void>): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -311,8 +224,6 @@ on(type: 'onDetach', callback: Callback<void>): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -347,8 +258,6 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -359,7 +268,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | 是 |
+| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) | 是 |
 
 **返回值：**
 
@@ -389,79 +298,11 @@ stopImageAnalyzer(): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-// xxx.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct ImageAnalyzerExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true)
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
-  private config: ImageAnalyzerConfig = {
-    types: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT]
-  }
-  // 'common/images/example.png'需要替换为开发者所需的图像资源文件
-  private img = new ImageBitmap('common/images/example.png')
-  private aiController: ImageAnalyzerController = new ImageAnalyzerController()
-  private options: ImageAIOptions = {
-    types: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT],
-    aiController: this.aiController
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button('start')
-        .width(100)
-        .height(50)
-        .margin(5)
-        .onClick(() => {
-          this.context.startImageAnalyzer(this.config)
-            .then(() => {
-              console.info("analysis complete")
-            })
-            .catch((error: BusinessError) => {
-              let e: BusinessError = error as BusinessError
-              console.error(`Error code: ${e.code}, message: ${e.message}`)
-            })
-        })
-      Button('stop')
-        .width(100)
-        .height(50)
-        .margin(5)
-        .onClick(() => {
-          this.context.stopImageAnalyzer()
-        })
-      Button('getTypes')
-        .width(100)
-        .height(50)
-        .margin(5)
-        .onClick(() => {
-          this.aiController.getImageAnalyzerSupportTypes()
-        })
-      Canvas(this.context, this.options)
-        .width(200)
-        .height(200)
-        .enableAnalyzer(true)
-        .onReady(() => {
-          this.context.drawImage(this.img, 0, 0, 200, 200)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## toDataURL
 
@@ -472,8 +313,6 @@ toDataURL(type?: string, quality?: any): string
 生成一个包含图片展示的URL，该接口存在内存拷贝行为，高耗时，应避免频繁使用。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -494,78 +333,17 @@ toDataURL(type?: string, quality?: any): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct CanvasExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true)
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
-  @State toDataURL: string = ""
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width(100)
-        .height(100)
-        .onReady(() =>{
-          this.context.fillStyle = "#00ff00"
-          this.context.fillRect(0,0,100,100)
-          this.toDataURL = this.context.toDataURL("image/png", 0.92)
-        })
-      Text(this.toDataURL)
-    }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffff00')
-  }
-}
-```
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ToDataURL {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-  private offCanvas: OffscreenCanvas = new OffscreenCanvas(100, 100);
-  @State dataURL: string = "";
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.context)
-        .width(100)
-        .height(100)
-        .onReady(() => {
-          let offContext = this.offCanvas.getContext("2d", this.settings)
-          offContext.fillRect(0, 0, 100, 100)
-          this.dataURL = offContext.toDataURL()
-        })
-      Text(this.dataURL)
-    }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffff00')
-  }
-}
-```
-
 ## canvas
 
 ```TypeScript
 readonly canvas: FrameNode
 ```
 
-获取和CanvasRenderingContext2D关联的Canvas组件的FrameNode实例。可用于监听关联Canvas组件的可见状态。 <br>默认值：null。
+获取和CanvasRenderingContext2D关联的Canvas组件的FrameNode实例。可用于监听关联Canvas组件的可见状态。 默认值：null。
 
 **类型：** [FrameNode](arkts-arkui-framenode-t.md)
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -585,8 +363,6 @@ readonly height: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -604,8 +380,6 @@ readonly width: number
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

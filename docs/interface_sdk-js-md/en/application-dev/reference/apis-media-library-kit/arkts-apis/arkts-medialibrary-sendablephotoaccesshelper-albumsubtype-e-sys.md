@@ -4,8 +4,6 @@ Enumerate the album subtypes.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## HIDDEN
@@ -17,8 +15,6 @@ HIDDEN
 Hidden album.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,8 +30,6 @@ Trash.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -49,8 +43,6 @@ SCREENSHOT
 Album for screenshots and screen recording files.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -66,8 +58,6 @@ Album for photos and videos taken by the camera.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -81,8 +71,6 @@ SOURCE_GENERIC = 2049
 Source album.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -98,8 +86,6 @@ Classified album.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -113,8 +99,6 @@ GEOGRAPHY_LOCATION = 4099
 Geographic location album.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -130,8 +114,6 @@ City album.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -145,8 +127,6 @@ SHOOTING_MODE
 Shooting mode album.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -162,8 +142,6 @@ Portrait album.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -177,8 +155,6 @@ GROUP_PHOTO
 Group photo album.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -194,8 +170,6 @@ Highlights album.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -209,8 +183,6 @@ HIGHLIGHT_SUGGESTIONS
 Highlights suggestion album.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

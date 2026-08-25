@@ -4,8 +4,6 @@ Set the indicator item's icon for a specified index.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ icon: ResourceStr | SymbolGlyphModifier
 
 Icon that needs to be set.
 
-**Type:** ResourceStr \| SymbolGlyphModifier
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| SymbolGlyphModifier
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ The specified index. The value should be an integer.
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

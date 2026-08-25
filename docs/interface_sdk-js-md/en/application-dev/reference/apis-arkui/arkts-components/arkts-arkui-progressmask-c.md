@@ -4,8 +4,6 @@ Sets the progress, maximum value, and color for a mask.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Constructs a **ProgressMask** object.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -39,17 +35,6 @@ Constructs a **ProgressMask** object.
 | total | number | Yes |
 | color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
-**Examples**
-
-```TypeScript
-@Builder
-function MyBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
-```
-
 ## enableBreathingAnimation
 
 ```TypeScript
@@ -59,8 +44,6 @@ enableBreathingAnimation(value: boolean): void
 Sets whether to enable the breathing animation when the progress indicator is full. If this API is not set, the breathing animation is disabled by default.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,8 +67,6 @@ Updates the color of the progress mask.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -107,8 +88,6 @@ updateProgress(value: number): void
 Updates the progress value of the progress mask.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

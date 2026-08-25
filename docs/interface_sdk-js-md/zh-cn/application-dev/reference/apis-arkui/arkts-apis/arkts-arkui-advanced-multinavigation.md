@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { SplitPolicy, MultiNavigation, MultiNavPathStack } from '@kit.ArkUI';
+import { SplitPolicy, MultiNavigation, MultiNavPathStack } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

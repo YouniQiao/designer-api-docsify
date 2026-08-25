@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Account.OsAccount
 
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -131,20 +129,4 @@ import { osAccount } from '@kit.BasicServicesKit';
 | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) |
 | [ResultCode](arkts-basicservices-osaccount-resultcode-e-sys.md) |
 | [SetPropertyType](arkts-basicservices-osaccount-setpropertytype-e-sys.md) |
-<!--DelEnd-->
-
-<!--Del-->
-### 类型（系统接口）
-
-| 名称 |
-| --- |
-| [DomainPluginAuthFunc](arkts-basicservices-osaccount-domainpluginauthfunc-t-sys.md) |
-| [DomainPluginAuthWithPopupFunc](arkts-basicservices-osaccount-domainpluginauthwithpopupfunc-t-sys.md) |
-| [DomainPluginAuthWithTokenFunc](arkts-basicservices-osaccount-domainpluginauthwithtokenfunc-t-sys.md) |
-| [DomainPluginBindAccountFunc](arkts-basicservices-osaccount-domainpluginbindaccountfunc-t-sys.md) |
-| [DomainPluginGetAccessTokenFunc](arkts-basicservices-osaccount-domainplugingetaccesstokenfunc-t-sys.md) |
-| [DomainPluginGetAccountInfoFunc](arkts-basicservices-osaccount-domainplugingetaccountinfofunc-t-sys.md) |
-| [DomainPluginGetAuthStatusInfoFunc](arkts-basicservices-osaccount-domainplugingetauthstatusinfofunc-t-sys.md) |
-| [DomainPluginIsAccountTokenValidFunc](arkts-basicservices-osaccount-domainpluginisaccounttokenvalidfunc-t-sys.md) |
-| [DomainPluginUnbindAccountFunc](arkts-basicservices-osaccount-domainpluginunbindaccountfunc-t-sys.md) |
 <!--DelEnd-->

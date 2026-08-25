@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getProfileConnectionState
@@ -16,8 +16,6 @@ Get the profile connection state of the current device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -28,13 +26,13 @@ Get the profile connection state of the current device.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| profileId | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | No |
+| profileId | [ProfileId](arkts-connectivity-constant-profileid-e.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) |
+| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) |
 
 **Error codes:**
 
@@ -47,15 +45,3 @@ Get the profile connection state of the current device.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { constant } from '@kit.ConnectivityKit';
-try {
-    let result: connection.ProfileConnectionState = connection.getProfileConnectionState(constant.ProfileId.PROFILE_A2DP_SOURCE);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

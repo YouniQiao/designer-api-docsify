@@ -4,8 +4,6 @@ Defines the playback capture start state, which is returned asynchronously after
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## STATE_SUCCESS
@@ -17,8 +15,6 @@ STATE_SUCCESS = 0
 Start playback capture success state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Start playback capture failed state, because the request for interrupt is denied
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
@@ -49,8 +43,6 @@ STATE_NOT_AUTHORIZED = 2
 Start playback capture but user not authorized state.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

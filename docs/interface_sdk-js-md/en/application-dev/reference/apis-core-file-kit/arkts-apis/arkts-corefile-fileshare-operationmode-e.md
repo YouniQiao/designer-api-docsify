@@ -1,10 +1,8 @@
 # OperationMode
 
-Enumerates the uri operate mode types.@enum { int } OperationMode
+Enumerates the uri operate mode types.@enum { number } OperationMode
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -18,8 +16,6 @@ Indicates read permissions.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## WRITE_MODE
@@ -31,8 +27,6 @@ WRITE_MODE = 0b10
 Indicates write permissions.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
@@ -46,8 +40,6 @@ Indicates creating permissions.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## DELETE_MODE
@@ -60,8 +52,6 @@ Indicates deleting permissions.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
 ## RENAME_MODE
@@ -73,7 +63,5 @@ RENAME_MODE = 0b10000
 Indicates renaming permissions.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.AppFileService.FolderAuthorization

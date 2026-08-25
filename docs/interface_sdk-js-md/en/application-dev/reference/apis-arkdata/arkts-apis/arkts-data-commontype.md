@@ -4,14 +4,12 @@ The commonType module defines common data types in data management.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CommonType
 
 ## Modules to Import
 
 ```TypeScript
-import { commonType } from '@kit.ArkData';
+import { commonType } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

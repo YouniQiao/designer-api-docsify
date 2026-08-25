@@ -8,14 +8,12 @@ has not been released.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'kits/@kit.InputKit';
 ```
 
 ## pressKey
@@ -27,8 +25,6 @@ pressKey(keyCode: KeyCode): Promise<void>
 Presses a key. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -65,8 +61,6 @@ releaseKey(keyCode: KeyCode): Promise<void>
 Releases a key. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 

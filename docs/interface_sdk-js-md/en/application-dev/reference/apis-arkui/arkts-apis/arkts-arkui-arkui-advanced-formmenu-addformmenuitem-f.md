@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from '@kit.ArkUI';
+import { AddFormMenuItem, FormMenuItemStyle, AddFormOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## AddFormMenuItem
@@ -19,8 +19,6 @@ export declare function AddFormMenuItem(
 Build function of AddFormMenuItem.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

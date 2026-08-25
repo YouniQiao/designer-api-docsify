@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isNotificationSlotEnabled
@@ -16,8 +16,6 @@ Checks whether a notification slot type is enabled for the specified application
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ Checks whether a notification slot type is enabled for the specified application
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
@@ -45,38 +43,6 @@ Checks whether a notification slot type is enabled for the specified application
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// isNotificationSlotEnabledCallback
-let isNotificationSlotEnabledCallback = (err: BusinessError, data: boolean): void => {
-    if (err) {
-        console.error(`isNotificationSlotEnabled failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`isNotificationSlotEnabled success, data is ${JSON.stringify(data)}`);
-    }
-};
-
-notificationManager.isNotificationSlotEnabled(
-    { bundle: "ohos.samples.notification", },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION,
-    isNotificationSlotEnabledCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// isNotificationSlotEnabled
-notificationManager.isNotificationSlotEnabled({ bundle: "ohos.samples.notification", },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
-    console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNotificationSlotEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## isNotificationSlotEnabled
 
@@ -88,8 +54,6 @@ Checks whether a notification slot type is enabled for the specified application
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -100,7 +64,7 @@ Checks whether a notification slot type is enabled for the specified application
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes |
 
 **Return value:**
@@ -121,7 +85,3 @@ Checks whether a notification slot type is enabled for the specified application
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-See [isNotificationSlotEnabled](#isnotificationslotenabled)

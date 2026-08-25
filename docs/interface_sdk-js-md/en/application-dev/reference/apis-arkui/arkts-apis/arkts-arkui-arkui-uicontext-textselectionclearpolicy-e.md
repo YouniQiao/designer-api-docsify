@@ -4,8 +4,6 @@ Enum of TextSelectionClearPolicy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH
@@ -17,8 +15,6 @@ KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH = 0
 Keep the selected text when touch outside of text component.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ CLEAR_SELECTED_TEXT_ON_EXTERNAL_TOUCH = 1
 Clear the selected text when touch outside of text component.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

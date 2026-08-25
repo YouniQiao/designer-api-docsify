@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getBarcodeTag
@@ -15,8 +15,6 @@ function getBarcodeTag(tagInfo: TagInfo): BarcodeTag
 Obtains a **BarcodeTag** object, which allows access to the tags in the BarcodeTag format.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -32,7 +30,7 @@ Obtains a **BarcodeTag** object, which allows access to the tags in the BarcodeT
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [BarcodeTag](arkts-connectivity-nfctech-barcodetag-i.md) |
+| [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## addSimMessage
@@ -15,8 +15,6 @@ function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>
 添加SIM卡消息，sim卡消息满，添加报错。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -43,40 +41,6 @@ function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let simMessageOptions: sms.SimMessageOptions = {
-    slotId: 0,
-    smsc: "test",
-    pdu: "xxxxxx",
-    status: sms.SimMessageStatus.SIM_MESSAGE_STATUS_READ
-};
-sms.addSimMessage(simMessageOptions, (err: BusinessError) => {
-      console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let simMessageOptions: sms.SimMessageOptions = {
-    slotId: 0,
-    smsc: "test",
-    pdu: "xxxxxx",
-    status: sms.SimMessageStatus.SIM_MESSAGE_STATUS_READ
-};
-sms.addSimMessage(simMessageOptions).then(() => {
-    console.info(`addSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`addSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## addSimMessage
 
@@ -87,8 +51,6 @@ function addSimMessage(options: SimMessageOptions): Promise<void>
 添加SIM卡消息，sim卡消息满，添加报错。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RECEIVE_SMS and ohos.permission.SEND_MESSAGES
 
@@ -119,7 +81,3 @@ function addSimMessage(options: SimMessageOptions): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [addSimMessage](#addsimmessage)

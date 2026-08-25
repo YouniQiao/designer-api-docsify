@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## updateNetwork
@@ -15,8 +15,6 @@ function updateNetwork(config: WifiDeviceConfig): number
 Updates the specified Wi-Fi configuration.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -39,35 +37,3 @@ Updates the specified Wi-Fi configuration.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let config:wifi.WifiDeviceConfig = {
-        ssid : "****",
-        bssid:  "****",
-        preSharedKey: "****",
-        isHiddenSsid: false,
-        securityType: 3,
-        creatorUid: 0,
-        disableReason: 0,
-        netId: 0,
-        randomMacType: 0,
-        randomMacAddr:  "****",
-        ipType: 0,
-        staticIp: {
-            ipAddress: "",
-            gateway: "",
-            dnsServers: [],
-            domains: []
-        }
-    }
-    let ret = wifi.updateNetwork(config);
-    console.error("ret:" + ret);        
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

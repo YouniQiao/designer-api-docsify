@@ -1,7 +1,5 @@
 # PromiseLike
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | Pro
 ```
 
 Attaches callbacks for the resolution and/or rejection of the Promise.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

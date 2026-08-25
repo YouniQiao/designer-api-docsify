@@ -4,8 +4,6 @@ Represents a time zone and city combination item.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents a time zone and city combination item.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## cityDisplayName
@@ -27,8 +25,6 @@ City display name in the system locale.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -46,8 +42,6 @@ City ID, for example, "Shanghai".
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -55,7 +49,7 @@ City ID, for example, "Shanghai".
 ## latitude
 
 ```TypeScript
-latitude: double
+latitude: number
 ```
 
 Latitude info of time zone city in decimal degrees (°).
@@ -63,8 +57,6 @@ Latitude info of time zone city in decimal degrees (°).
 **Type:** number
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +67,7 @@ Latitude info of time zone city in decimal degrees (°).
 ## longitude
 
 ```TypeScript
-longitude: double
+longitude: number
 ```
 
 Longitude info of time zone city in decimal degrees (°).
@@ -83,8 +75,6 @@ Longitude info of time zone city in decimal degrees (°).
 **Type:** number
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,16 +85,14 @@ Longitude info of time zone city in decimal degrees (°).
 ## offset
 
 ```TypeScript
-offset: int
+offset: number
 ```
 
 Offset of the time zone ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -113,16 +101,14 @@ Offset of the time zone ID.
 ## rawOffset
 
 ```TypeScript
-rawOffset?: int
+rawOffset?: number
 ```
 
 Fixed offset of the time zone ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -140,8 +126,6 @@ Time zone display name in the system locale.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -157,8 +141,6 @@ Time zone ID, for example, "Asia/Shanghai".
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Global.I18n
 

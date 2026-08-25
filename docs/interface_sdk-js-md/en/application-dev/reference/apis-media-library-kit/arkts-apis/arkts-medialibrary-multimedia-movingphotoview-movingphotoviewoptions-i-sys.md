@@ -4,14 +4,12 @@ Defines the moving photo view options.@interface MovingPhotoViewOptions
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from '@kit.MediaLibraryKit';
+import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## dynamicRangeMode
@@ -25,8 +23,6 @@ range mode of MovingPhotoView.
 **Type:** [DynamicRangeMode](arkts-medialibrary-multimedia-movingphotoview-dynamicrangemode-e-sys.md)
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -44,8 +40,6 @@ format of MovingPhotoView.
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -61,8 +55,6 @@ the watermask of the cover photo whether to contain during movingphoto playback
 **Type:** boolean
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

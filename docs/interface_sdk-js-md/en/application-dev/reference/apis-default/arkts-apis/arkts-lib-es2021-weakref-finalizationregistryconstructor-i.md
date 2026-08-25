@@ -1,7 +1,5 @@
 # FinalizationRegistryConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ new<T>(cleanupCallback: (heldValue: T) => void): FinalizationRegistry<T>
 ```
 
 Creates a finalization registry with an associated cleanup callback
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,5 +30,3 @@ readonly prototype: FinalizationRegistry<any>
 ```
 
 **Type:** [FinalizationRegistry](arkts-lib-es2021-weakref-finalizationregistry-i.md)&lt;any&gt;
-
-**ArkTS mode:** 

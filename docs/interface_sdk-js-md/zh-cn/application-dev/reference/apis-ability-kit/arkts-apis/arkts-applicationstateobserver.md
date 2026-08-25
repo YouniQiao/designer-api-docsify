@@ -8,12 +8,6 @@
 | --- |
 | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) |
 
-### 接口
-
-| 名称 |
-| --- |
-| [ApplicationStateObserver](arkts-ability-applicationstateobserver-i.md) |
-
 ### 类型
 
 | 名称 |

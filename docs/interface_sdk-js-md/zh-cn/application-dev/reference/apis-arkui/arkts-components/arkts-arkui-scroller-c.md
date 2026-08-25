@@ -22,8 +22,6 @@ scroller: Scroller = new Scroller();
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -40,8 +38,6 @@ constructor()
 Scroller的构造函数。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -67,8 +63,6 @@ contentSize(): SizeResult
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -79,7 +73,7 @@ contentSize(): SizeResult
 
 | 类型 |
 | --- |
-| [SizeResult](../arkts-apis/arkts-arkui-common-sizeresult-i.md) |
+| [SizeResult](arkts-arkui-sizeresult-i.md) |
 
 **错误码：**
 
@@ -102,8 +96,6 @@ currentOffset() : OffsetResult
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -123,8 +115,6 @@ fling(velocity: number): void
 滚动类组件根据传入的初始速度进行惯性滚动，可用于模拟抛滑效果。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -155,8 +145,6 @@ getFrameNode(): FrameNode | undefined
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -181,8 +169,6 @@ getItemIndex(x: number, y: number): number
 > 支持List、Grid、WaterFlow组件。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -223,8 +209,6 @@ getItemRect(index: number): RectResult
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -241,7 +225,7 @@ getItemRect(index: number): RectResult
 
 | 类型 |
 | --- |
-| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) |
+| [RectResult](arkts-arkui-rectresult-i.md) |
 
 **错误码：**
 
@@ -262,8 +246,6 @@ isAtEnd(): boolean
 > 支持ArcList、Scroll、List、Grid、WaterFlow组件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -286,8 +268,6 @@ offset() : OffsetResult | undefined
 获取当前的滚动总偏移量。除接口声明有undefined以外，其他与[currentOffset](#currentoffset)接口保持一致。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -313,13 +293,11 @@ scrollBy(dx: Length, dy: Length)
 > - 支持ArcList、Scroll、List、Grid、WaterFlow组件。&gt;
 > - 各组件行为存在差异：&gt;
 > - ArcList和List组件会对所有经过的item进行加载和布局。&gt;
-> - Grid组件和SLIDING_WINDOW模式的WaterFlow组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估算出要显示的item。跳转指一帧滑动。&gt;
-> - ALWAYS_TOP_DOWN模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
+> - Grid组件和[SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md)模式的WaterFlow组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估算出要显示的item。跳转指一帧滑动。&gt;
+> - [ALWAYS_TOP_DOWN](arkts-arkui-waterflowlayoutmode-e.md)模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
 > 到对应位置。跳转指一帧滑动。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -329,8 +307,8 @@ scrollBy(dx: Length, dy: Length)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dx | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
-| dy | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| [dx](../arkts-apis/arkts-arkui-actionsheetoffset-i.md) | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| [dy](../arkts-apis/arkts-arkui-actionsheetoffset-i.md) | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
 
 ## scrollEdge
 
@@ -341,8 +319,6 @@ scrollEdge(value: Edge, options?: ScrollEdgeOptions)
 滚动到容器边缘，不区分滚动轴方向，Edge.Top和Edge.Start表现相同，Edge.Bottom和Edge.End表现相同。可用于返回顶部、跳转到内容末尾等场景。Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -365,8 +341,6 @@ scrollPage(value: ScrollPageOptions)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -386,8 +360,6 @@ scrollPage(value: { next: boolean; direction?: Axis })
 滚动到下一页或者上一页。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -413,14 +385,12 @@ scrollTo(options: ScrollOptions)
 > - scrollTo动画速度大于200vp/s时，滚动组件区域内的组件不响应点击事件。&gt;
 > - 各组件行为存在差异：&gt;
 > - ArcList和List组件会对所有经过的item进行加载和布局。&gt;
-> - Grid组件和SLIDING_WINDOW模式的WaterFlow组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估
+> - Grid组件和[SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md)模式的WaterFlow组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估
 > 算出要显示的item。跳转指一帧滑动。&gt;
-> - ALWAYS_TOP_DOWN模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
+> - [ALWAYS_TOP_DOWN](arkts-arkui-waterflowlayoutmode-e.md)模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
 > 到对应位置。跳转指一帧滑动。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -455,8 +425,6 @@ scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: Sc
 > 与滚动组件contentStartOffset处对齐，或指定item尾部与滚动组件contentEndOffset处对齐，使指定item完全显示。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

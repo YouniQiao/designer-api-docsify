@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMonitor } from '@kit.InputKit';
+import { inputMonitor } from 'kits/@kit.InputKit';
 ```
 
 ## on('touch')
@@ -15,8 +15,6 @@ function on(type: 'touch', receiver: TouchEventReceiver): void
 Listens for global touchscreen input events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -39,33 +37,6 @@ Listens for global touchscreen input events. This API uses an asynchronous callb
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { inputMonitor } from '@kit.InputKit';
-import { TouchEvent } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputMonitor.on('touch', (touchEvent: TouchEvent) => {
-              console.info(`Monitor on success ${JSON.stringify(touchEvent)}`);
-              return false;
-            });
-          } catch (error) {
-            console.error(`Monitor on failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('mouse')
 
@@ -76,8 +47,6 @@ function on(type: 'mouse', receiver: Callback<MouseEvent>): void
 Enables listening for global mouse events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -100,33 +69,6 @@ Enables listening for global mouse events. This API uses an asynchronous callbac
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { inputMonitor } from '@kit.InputKit';
-import { MouseEvent } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputMonitor.on('mouse', (mouseEvent: MouseEvent) => {
-              console.info(`Monitor on success ${JSON.stringify(mouseEvent)}`);
-              return false;
-            });
-          } catch (error) {
-            console.error(`Monitor on failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('mouse')
 
@@ -137,8 +79,6 @@ function on(type: 'mouse', rect: display.Rect[], receiver: Callback<MouseEvent>)
 Enables listening for mouse events. When the mouse pointer moves to the specified rectangular area, a callback is triggered. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -162,57 +102,6 @@ Enables listening for mouse events. When the mouse pointer moves to the specifie
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { inputMonitor } from '@kit.InputKit';
-import { MouseEvent } from '@kit.InputKit';
-import { display } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          /**
-           * Callback triggered when the mouse pointer moves to the specified rectangular area.
-           */
-          let callback = (mouseEvent : MouseEvent) => {
-            this.getUIContext().getPromptAction().showToast({
-              message: `Monitor on success: ${JSON.stringify(mouseEvent)}`
-            })
-            console.info(`Monitor on success ${JSON.stringify(mouseEvent)}`);
-            return false;
-          };
-
-          /**
-           * Rectangular area where a callback is triggered.
-           */
-          let rect: display.Rect[] = [{
-            left: 100,
-            top: 100,
-            width: 100,
-            height: 100
-          }, {
-            left: 600,
-            top: 100,
-            width: 100,
-            height: 100
-          }];
-
-          try {
-            inputMonitor.on('mouse', rect, callback);
-          } catch (error) {
-            console.error(`Monitor on failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('pinch')
 
@@ -223,8 +112,6 @@ function on(type: 'pinch', receiver: Callback<Pinch>): void
 Enables listening for global touchpad pinch events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -258,8 +145,6 @@ Enables listening for global touchpad pinch events. This API uses an asynchronou
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
@@ -282,33 +167,6 @@ Enables listening for global touchpad pinch events. This API uses an asynchronou
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { inputMonitor } from '@kit.InputKit';
-import { Pinch } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputMonitor.on('pinch', 2, (pinchEvent: Pinch) => {
-              console.info(`Monitor on success ${JSON.stringify(pinchEvent)}`);
-              return false;
-            });
-          } catch (error) {
-            console.error(`Monitor on failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('rotate')
 
@@ -319,8 +177,6 @@ function on(type: 'rotate', fingers: number, receiver: Callback<Rotate>): void
 Enables listening for rotation events of the touchpad. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -344,33 +200,6 @@ Enables listening for rotation events of the touchpad. This API uses an asynchro
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { inputMonitor } from '@kit.InputKit';
-import { Rotate } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputMonitor.on('rotate', 2, (rotateEvent: Rotate) => {
-              console.info(`Monitor on success ${JSON.stringify(rotateEvent)}`);
-              return false;
-            });
-          } catch (error) {
-            console.error(`Monitor on failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('threeFingersSwipe')
 
@@ -381,8 +210,6 @@ function on(type: 'threeFingersSwipe', receiver: Callback<ThreeFingersSwipe>): v
 Enables listening for three-finger swipe events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -416,8 +243,6 @@ Enables listening for four-finger swipe events. This API uses an asynchronous ca
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
@@ -449,8 +274,6 @@ function on(type: 'threeFingersTap', receiver: Callback<ThreeFingersTap>): void
 Enables listening for three-finger tap events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -484,8 +307,6 @@ Enables listening for fingerprint gesture input events. This API uses an asynchr
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
@@ -507,32 +328,6 @@ Enables listening for fingerprint gesture input events. This API uses an asynchr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { inputMonitor } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputMonitor.on('fingerprint', (FingerprintEvent) => {
-              console.info(`Monitor on success ${JSON.stringify(FingerprintEvent)}`);
-              return false;
-            });
-          } catch (error) {
-            console.error(`Monitor on failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('swipeInward')
 
@@ -543,8 +338,6 @@ function on(type: 'swipeInward', receiver: Callback<SwipeInward>): void
 Listens for inward swipe events. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -567,32 +360,6 @@ Listens for inward swipe events. This API uses an asynchronous callback to retur
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { inputMonitor } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            inputMonitor.on('swipelnward', (SwipeInward) => {
-              console.info(`Monitor on success ${JSON.stringify(SwipeInward)}`);
-              return false;
-            });
-          } catch (error) {
-            console.error(`Monitor on failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('touchscreenSwipe')
 
@@ -603,8 +370,6 @@ function on(type: 'touchscreenSwipe', fingers: number, receiver: Callback<TouchG
 Enables listening for touchscreen swipe events. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -628,33 +393,6 @@ Enables listening for touchscreen swipe events. This API uses an asynchronous ca
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { inputMonitor } from '@kit.InputKit';
-import { TouchGestureEvent } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let fingers: number = 4;
-          try {
-            inputMonitor.on('touchscreenSwipe', fingers, (event: TouchGestureEvent) => {
-              console.info(`Monitor on success ${JSON.stringify(event)}`);
-            });
-          } catch (error) {
-            console.error(`Monitor execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('touchscreenPinch')
 
@@ -665,8 +403,6 @@ function on(type: 'touchscreenPinch', fingers: number, receiver: Callback<TouchG
 Enables listening for touchscreen pinch events. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -690,33 +426,6 @@ Enables listening for touchscreen pinch events. This API uses an asynchronous ca
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { inputMonitor } from '@kit.InputKit';
-import { TouchGestureEvent } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let fingers: number = 4;
-          try {
-            inputMonitor.on('touchscreenPinch', fingers, (event: TouchGestureEvent) => {
-              console.info(`Monitor on success ${JSON.stringify(event)}`);
-            });
-          } catch (error) {
-            console.error(`Monitor execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('keyPressed')
 
@@ -727,8 +436,6 @@ function on(type: 'keyPressed', keys: Array<KeyCode>, receiver: Callback<KeyEven
 Listens for the press and release events of the specified key, which can be the **META_LEFT**, **META_RIGHT**, power, or volume key. This API uses an asynchronous callback to return the result.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.INPUT_MONITORING
 
@@ -752,29 +459,3 @@ Listens for the press and release events of the specified key, which can be the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [4100001](../errorcode-inputmonitor.md#4100001-event-listening-not-supported-for-the-key) |
-
-**Examples**
-
-```TypeScript
-import { inputMonitor, KeyEvent, KeyCode } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            let keys: Array<KeyCode> = [KeyCode.KEYCODE_VOLUME_UP];
-            inputMonitor.on('keyPressed', keys, (event: KeyEvent ) => {
-              console.info(`Monitor on success ${JSON.stringify(event)}`);
-            });
-          } catch (error) {
-            console.error(`Monitor execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```

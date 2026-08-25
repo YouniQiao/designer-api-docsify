@@ -4,14 +4,12 @@ The **osAccount** module provides basic capabilities for managing system (OS) ac
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -131,20 +129,4 @@ import { osAccount } from '@kit.BasicServicesKit';
 | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) |
 | [ResultCode](arkts-basicservices-osaccount-resultcode-e-sys.md) |
 | [SetPropertyType](arkts-basicservices-osaccount-setpropertytype-e-sys.md) |
-<!--DelEnd-->
-
-<!--Del-->
-### Types(System API)
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DomainPluginAuthFunc](arkts-basicservices-osaccount-domainpluginauthfunc-t-sys.md) |
-| [DomainPluginAuthWithPopupFunc](arkts-basicservices-osaccount-domainpluginauthwithpopupfunc-t-sys.md) |
-| [DomainPluginAuthWithTokenFunc](arkts-basicservices-osaccount-domainpluginauthwithtokenfunc-t-sys.md) |
-| [DomainPluginBindAccountFunc](arkts-basicservices-osaccount-domainpluginbindaccountfunc-t-sys.md) |
-| [DomainPluginGetAccessTokenFunc](arkts-basicservices-osaccount-domainplugingetaccesstokenfunc-t-sys.md) |
-| [DomainPluginGetAccountInfoFunc](arkts-basicservices-osaccount-domainplugingetaccountinfofunc-t-sys.md) |
-| [DomainPluginGetAuthStatusInfoFunc](arkts-basicservices-osaccount-domainplugingetauthstatusinfofunc-t-sys.md) |
-| [DomainPluginIsAccountTokenValidFunc](arkts-basicservices-osaccount-domainpluginisaccounttokenvalidfunc-t-sys.md) |
-| [DomainPluginUnbindAccountFunc](arkts-basicservices-osaccount-domainpluginunbindaccountfunc-t-sys.md) |
 <!--DelEnd-->

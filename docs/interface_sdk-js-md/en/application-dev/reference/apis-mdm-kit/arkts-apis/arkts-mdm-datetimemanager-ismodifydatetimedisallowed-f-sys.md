@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
+import { dateTimeManager } from 'kits/@kit.MDMKit';
 ```
 
 ## isModifyDateTimeDisallowed
@@ -15,8 +15,6 @@ function isModifyDateTimeDisallowed(admin: Want, callback: AsyncCallback<boolean
 Queries whether the system time of a device can be modified. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -47,45 +45,6 @@ Queries whether the system time of a device can be modified. This API uses an as
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-dateTimeManager.isModifyDateTimeDisallowed(wantTemp, (err, result) => {
-  if (err) {
-    console.error(`Failed to query modify date time is disallowed or not. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying modify date time is disallowed : ${result}`);
-})
-```
-
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-dateTimeManager.isModifyDateTimeDisallowed(wantTemp).then((result) => {
-  console.info(`Succeeded in querying modify date time is disallowed : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query modify date time is disallowed or not. Code is ${err.code}, message is ${err.message}`);
-})
-```
-
 
 ## isModifyDateTimeDisallowed
 
@@ -96,8 +55,6 @@ function isModifyDateTimeDisallowed(admin: Want): Promise<boolean>
 Queries whether the system time of a device can be modified. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 26.0.0
 
@@ -132,7 +89,3 @@ Queries whether the system time of a device can be modified. This API uses a pro
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [isModifyDateTimeDisallowed](#ismodifydatetimedisallowed)

@@ -4,8 +4,6 @@ Enumerates the states of the sync root.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ The sync root is inactive.
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
 **System API:** This is a system API.
@@ -35,8 +31,6 @@ ACTIVE = 1
 The sync root is active.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 

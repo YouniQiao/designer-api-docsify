@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'kits/@kit.InputKit';
 ```
 
 ## off('change')
@@ -15,8 +15,6 @@ function off(type: 'change', listener?: Callback<DeviceListener>): void
 Disables listening for device hot swap events. This API is called before the application exits. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputDevice
 

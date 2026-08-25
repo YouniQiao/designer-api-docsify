@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## getWant
@@ -16,8 +16,6 @@ Obtains the Want corresponding to the ability to start. This API uses an asynchr
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -27,28 +25,6 @@ Obtains the Want corresponding to the ability to start. This API uses an asynchr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-featureAbility.getWant((error, data) => {
-  if (error && error.code !== 0) {
-    console.error(`getWant fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`getWant success, data: ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-featureAbility.getWant().then((data) => {
-  console.info(`getWant data: ${JSON.stringify(data)}`);
-});
-```
 
 
 ## getWant
@@ -61,8 +37,6 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -72,7 +46,3 @@ Obtains the Want corresponding to the ability to start. This API uses a promise 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; |
-
-**Examples**
-
-See [getWant](#getwant)

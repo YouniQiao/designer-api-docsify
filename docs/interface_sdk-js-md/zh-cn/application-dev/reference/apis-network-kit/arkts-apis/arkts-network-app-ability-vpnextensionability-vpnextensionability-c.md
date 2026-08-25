@@ -4,14 +4,12 @@ VpnExtensionContext是VpnExtensionAbility的上下文环境，继承自 [Extensi
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
+import { VpnExtensionAbility, VpnExtensionContext } from 'kits/@kit.NetworkKit';
 ```
 
 ## onCreate
@@ -27,8 +25,6 @@ onCreate(want: Want): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -38,19 +34,6 @@ onCreate(want: Want): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { VpnExtensionAbility } from '@kit.NetworkKit';
-import { Want } from '@kit.AbilityKit';
-
-class MyVpnExtAbility extends VpnExtensionAbility {
-    onCreate(want: Want) {
-       console.info('MyVpnExtAbility onCreate');
-    }
-}
-```
 
 ## onDestroy
 
@@ -62,23 +45,9 @@ onDestroy(): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**示例**
-
-```TypeScript
-import { VpnExtensionAbility } from '@kit.NetworkKit';
-
-class MyVpnExtAbility extends VpnExtensionAbility {
-    onDestroy() {
-       console.info('MyVpnExtAbility onDestroy');
-    }
-}
-```
 
 ## context
 
@@ -91,8 +60,6 @@ context: VpnExtensionContext
 **类型：** [VpnExtensionContext](arkts-network-vpnextensioncontext-c.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

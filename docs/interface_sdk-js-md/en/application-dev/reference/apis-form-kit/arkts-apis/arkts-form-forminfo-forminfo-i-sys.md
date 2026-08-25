@@ -4,14 +4,12 @@ Provides information about a form.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'kits/@kit.FormKit';
 ```
 
 ## enableBlurBackground
@@ -25,8 +23,6 @@ Indicates whether the form uses a blur background provided by the form host.
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -44,8 +40,6 @@ Indicates the fun interaction form params
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -62,8 +56,6 @@ Obtains the group id of the form.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -74,13 +66,11 @@ Obtains the group id of the form.
 isFontScaleFollowSystem?: boolean
 ```
 
-Obtains whether the font scaling factor follows system settings. <br>Default value:The default value is true.
+Obtains whether the font scaling factor follows system settings. Default value:The default value is true.
 
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,8 +90,6 @@ Obtains whether the form is privacy sensitive.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
@@ -119,8 +107,6 @@ Obtains whether the form is adapted for standby.
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,8 +126,6 @@ Obtains whether the form supports standby.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.Form
@@ -160,8 +144,6 @@ Obtains whether the form is template form.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -169,16 +151,14 @@ Obtains whether the form is template form.
 ## previewImages
 
 ```TypeScript
-readonly previewImages?: Array<int>
+readonly previewImages?: Array<number>
 ```
 
 Indicates the form previewImage IDs map corresponds to the \"supportDimensions\". The maximum length is +∞, positive integer.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -198,8 +178,6 @@ Obtains the rendering mode of the form.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -216,8 +194,6 @@ Obtains the resizable of the form.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -233,8 +209,6 @@ Indicates the scene animation form params
 **Type:** [SceneAnimationParams](arkts-form-forminfo-sceneanimationparams-i-sys.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 

@@ -2,8 +2,6 @@
 
 **起始版本：** 3
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
-
 **废弃版本：** 8
 
 **替代接口：** [vibrator/vibrator](arkts-vibrator.md)
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
+import { Vibrator, VibrateOptions } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## vibrate
@@ -32,8 +30,6 @@ static vibrate(options?: VibrateOptions): void
 > 替代。
 
 **起始版本：** 3
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为3。
 
 **废弃版本：** 8
 

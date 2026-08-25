@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## addDeviceConfig
@@ -15,8 +15,6 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 添加网络配置，使用Promise异步回调。<p>添加配置后，配置将被更新。</p>
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -40,70 +38,6 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 | --- |
 | Promise & lt;number & gt; |
 
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let config:wifi.WifiDeviceConfig = {
-        ssid : "****",
-        bssid:  "****",
-        preSharedKey: "****",
-        isHiddenSsid: false,
-        securityType: 0,
-        creatorUid: 0,
-        disableReason: 0,
-        netId: 0,
-        randomMacType: 0,
-        randomMacAddr:  "****",
-        ipType: 0,
-        staticIp: {
-            ipAddress: "",
-            gateway: "",
-            dnsServers: [],
-            domains: []
-        }
-    }
-    wifi.addDeviceConfig(config).then(result => {
-        console.info("result:" + JSON.stringify(result));
-    });    
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let config:wifi.WifiDeviceConfig = {
-        ssid : "****",
-        bssid:  "****",
-        preSharedKey: "****",
-        isHiddenSsid: false,
-        securityType: 0,
-        creatorUid: 0,
-        disableReason: 0,
-        netId: 0,
-        randomMacType: 0,
-        randomMacAddr:  "****",
-        ipType: 0,
-        staticIp: {
-            ipAddress: "",
-            gateway: "",
-            dnsServers: [],
-            domains: []
-        }
-    }
-    wifi.addDeviceConfig(config,(error,result) => {
-        console.info("result:" + JSON.stringify(result));
-    });    
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```
-
 
 ## addDeviceConfig
 
@@ -114,8 +48,6 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 添加网络配置，使用callback异步回调。<p>添加配置后，配置将被更新。</p>
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -133,7 +65,3 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 | --- | --- | --- |
 | config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**示例**
-
-参见 [addDeviceConfig](#adddeviceconfig)

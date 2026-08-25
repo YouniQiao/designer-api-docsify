@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from '@kit.BasicServicesKit';
+import { settingsLite } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## openDoubleClickSettingsPage
@@ -12,11 +12,9 @@ import { settingsLite } from '@kit.BasicServicesKit';
 function openDoubleClickSettingsPage(): void
 ```
 
-Opens the settings page for double-pressing the function key.
+Opens the settings page for number-pressing the function key.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -6,8 +6,6 @@ NdefFormatableTag为NDEF Formattable的标签提供格式化操作，继承自Ta
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.NFC.Tag
 
 ## format
@@ -20,8 +18,6 @@ format(message: NdefMessage): Promise<void>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -48,73 +44,6 @@ format(message: NdefMessage): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
-
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 ndefFormatable
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!ndefFormatable.isTagConnected()) {
-        if (!ndefFormatable.connectTag()) {
-            console.error("ndefFormatable connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        // 从原始数据创建的ndefMessage，例如：
-        let ndefMessage = tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]);  
-        // 必须是可以被解析的NDEF记录
-        // 或从 tag.ndef.createNdefMessage(ndefRecords:NdefRecord[]) 创建 ndefMessage
-
-        ndefFormatable.format(ndefMessage).then(() => {
-            console.info("ndefFormatable format Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error(`ndefFormatable format Promise err Code: ${err.code}, message: ${err.message}`);
-        });
-    } catch (businessError) {
-        console.error(`ndefFormatable format Promise catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 ndefFormatable
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!ndefFormatable.isTagConnected()) {
-        if (!ndefFormatable.connectTag()) {
-            console.error("ndefFormatable connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        // 从原始数据创建的ndefMessage，例如：
-        let ndefMessage = tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]);  // 必须是可以被解析的NDEF记录
-        // 或从 tag.ndef.createNdefMessage(ndefRecords:NdefRecord[]) 创建 ndefMessage
-
-        ndefFormatable.format(ndefMessage, (err : BusinessError)=> {
-            if (err) {
-                console.error(`ndefFormatable format AsyncCallback Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("ndefFormatable format AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`ndefFormatable format AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
 
 ## format
 
@@ -126,8 +55,6 @@ format(message: NdefMessage, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NFC_TAG
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -150,10 +77,6 @@ format(message: NdefMessage, callback: AsyncCallback<void>): void
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-参见 [format](#format)
-
 ## formatReadOnly
 
 ```TypeScript
@@ -163,8 +86,6 @@ formatReadOnly(message: NdefMessage): Promise<void>
 将标签格式化为NDEF标签，将NDEF消息写入NDEF标签，之后将标签设置为只读。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -193,74 +114,6 @@ formatReadOnly(message: NdefMessage): Promise<void>
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
 
-**示例**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 ndefFormatable
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!ndefFormatable.isTagConnected()) {
-        if (!ndefFormatable.connectTag()) {
-            console.error("ndefFormatable connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        // 从原始数据创建的ndefMessage，例如：
-        let ndefMessage = tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]);
-        // 必须是可以被解析的NDEF记录
-        // 或从 tag.ndef.createNdefMessage(ndefRecords:NdefRecord[]) 创建 ndefMessage
-
-        ndefFormatable.formatReadOnly(ndefMessage).then(() => {
-            console.info("ndefFormatable formatReadOnly Promise success.");
-        }).catch((err : BusinessError)=> {
-            console.error(`ndefFormatable formatReadOnly Promise Code: ${err.code}, message: ${err.message}`);
-        });
-    } catch (businessError) {
-        console.error(`ndefFormatable formatReadOnly Promise catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 ndefFormatable
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!ndefFormatable.isTagConnected()) {
-        if (!ndefFormatable.connectTag()) {
-            console.error("ndefFormatable connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        // 从原始数据创建的ndefMessage，例如：
-        let ndefMessage = tag.ndef.createNdefMessage([0xD1, 0x01, 0x03, 0x54, 0x4E, 0x46, 0x43]);
-        // 必须是可以被解析的NDEF记录
-        // 或从 tag.ndef.createNdefMessage(ndefRecords:NdefRecord[]) 创建 ndefMessage
-
-        ndefFormatable.formatReadOnly(ndefMessage, (err : BusinessError)=> {
-            if (err) {
-                console.error(`ndefFormatable formatReadOnly AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("ndefFormatable formatReadOnly AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`ndefFormatable formatReadOnly AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
-
 ## formatReadOnly
 
 ```TypeScript
@@ -270,8 +123,6 @@ formatReadOnly(message: NdefMessage, callback: AsyncCallback<void>): void
 将标签格式化为NDEF标签，然后将NDEF消息写入NDEF标签，之后将标签设置为只读。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -294,7 +145,3 @@ formatReadOnly(message: NdefMessage, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [3100201](../errorcode-nfc.md#3100201-nfc服务读写tag错误) |
 | [3100204](../errorcode-nfc.md#3100204-nfc芯片io异常) |
-
-**示例**
-
-参见 [formatReadOnly](#formatreadonly)

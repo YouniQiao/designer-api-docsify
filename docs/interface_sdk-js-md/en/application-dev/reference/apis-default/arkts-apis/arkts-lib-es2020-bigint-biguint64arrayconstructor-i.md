@@ -1,7 +1,5 @@
 # BigUint64ArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new(length?: number): BigUint64Array
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -31,8 +27,6 @@ new(length?: number): BigUint64Array
 new(array: Iterable<bigint>): BigUint64Array
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -49,13 +43,11 @@ new(array: Iterable<bigint>): BigUint64Array
 new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigUint64Array
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| buffer | [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md) | Yes |
+| buffer | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |
 | byteOffset | number | No |
 | length | number | No |
 
@@ -70,8 +62,6 @@ from(arrayLike: ArrayLike<bigint>): BigUint64Array
 ```
 
 Creates an array from an array-like or iterable object.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -88,8 +78,6 @@ Creates an array from an array-like or iterable object.
 ```TypeScript
 from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigUint64Array
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -111,8 +99,6 @@ of(...items: bigint[]): BigUint64Array
 
 Returns a new array from a set of elements.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -133,8 +119,6 @@ The size in bytes of each element in the array.
 
 **Type:** number
 
-**ArkTS mode:** 
-
 ## prototype
 
 ```TypeScript
@@ -142,5 +126,3 @@ readonly prototype: BigUint64Array
 ```
 
 **Type:** [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md)
-
-**ArkTS mode:** 

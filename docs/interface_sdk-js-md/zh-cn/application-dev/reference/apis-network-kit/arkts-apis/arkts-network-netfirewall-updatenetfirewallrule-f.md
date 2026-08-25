@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'kits/@kit.NetworkKit';
 ```
 
 ## updateNetFirewallRule
@@ -15,8 +15,6 @@ function updateNetFirewallRule(rule: NetFirewallRule): Promise<void>
 更新防火墙规则。使用Promise异步回调。
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **需要权限：** ohos.permission.MANAGE_NET_FIREWALL
 
@@ -50,40 +48,3 @@ function updateNetFirewallRule(rule: NetFirewallRule): Promise<void>
 | [29400005](../errorcode-net-netfirewall.md#29400005-模糊域名规则数量超过最大值) |
 | [29400006](../errorcode-net-netfirewall.md#29400006-指定的规则不存在) |
 | [29400007](../errorcode-net-netfirewall.md#29400007-dns规则重复) |
-
-**示例**
-
-```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ipRuleUpd: netFirewall.NetFirewallRule = {
-  id: 1,
-  name: "rule1",
-  description: "rule1 description update",
-  direction: netFirewall.NetFirewallRuleDirection.RULE_IN,
-  action:netFirewall.FirewallRuleAction.RULE_DENY,
-  type: netFirewall.NetFirewallRuleType.RULE_IP,
-  isEnabled: false,
-  appUid: 20001,
-  localIps: [
-    {
-      family: 1,
-      type: 1,
-      address: "10.10.1.1",
-      mask: 32
-    },{
-      family: 1,
-      type: 2,
-      startIp: "10.20.1.1",
-      endIp: "10.20.1.10"
-    }],
-  userId: 100,
-  interface:"wlan0" // 从API版本26.0.0开始支持
-};
-netFirewall.updateNetFirewallRule(ipRuleUpd).then(() => {
-  console.info('update firewall rule success.');
-}, (reason: BusinessError) => {
-  console.error('update firewall rule failed: ', JSON.stringify(reason));
-});
-```

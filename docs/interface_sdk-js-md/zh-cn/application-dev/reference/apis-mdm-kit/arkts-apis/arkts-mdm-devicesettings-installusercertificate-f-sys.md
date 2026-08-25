@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'kits/@kit.MDMKit';
 ```
 
 ## installUserCertificate
@@ -15,8 +15,6 @@ function installUserCertificate(admin: Want, certificate: CertBlob, callback: As
 安装用户证书，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -49,67 +47,6 @@ function installUserCertificate(admin: Want, certificate: CertBlob, callback: As
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let certFileArray: Uint8Array = new Uint8Array();
-// 变量context需要在MainAbility的onCreate回调函数中进行初始化
-// test.cer需要放置在rawfile目录下
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-context.resourceManager.getRawFileContent("test.cer").then((value) => {
-  certFileArray = value;
-  deviceSettings.installUserCertificate(wantTemp, { inData: certFileArray, alias: "cert_alias_xts" }, (err, result) => {
-    if (err) {
-      console.error(`Failed to install user certificate. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`Succeeded in installing user certificate, result : ${JSON.stringify(result)}`);
-    }
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get raw file content. message: ${error.message}`);
-  return;
-});
-```
-
-```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let certFileArray: Uint8Array = new Uint8Array();
-// 变量context需要在MainAbility的onCreate回调函数中进行初始化
-// test.cer需要放置在rawfile目录下
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-context.resourceManager.getRawFileContent("test.cer").then((value) => {
-  certFileArray = value
-  deviceSettings.installUserCertificate(wantTemp, { inData: certFileArray, alias: "cert_alias_xts" })
-    .then((result) => {
-      console.info(`Succeeded in installing user certificate, result : ${JSON.stringify(result)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to install user certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get raw file content. message: ${error.message}`);
-  return;
-});
-```
-
 
 ## installUserCertificate
 
@@ -120,8 +57,6 @@ function installUserCertificate(admin: Want, certificate: CertBlob): Promise<str
 安装用户证书，使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -158,7 +93,3 @@ function installUserCertificate(admin: Want, certificate: CertBlob): Promise<str
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [installUserCertificate](#installusercertificate)

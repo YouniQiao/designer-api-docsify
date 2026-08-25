@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getAuthInstance
@@ -18,8 +18,6 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 > 每个AuthInstance只能进行一次认证，若需要再次进行认证则需重新获取AuthInstance。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -49,20 +47,3 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 | [12500005](../errorcode-useriam.md#12500005-认证类型不支持) |
 | [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) |
-
-**示例**
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  console.info('get auth instance successfully.');
-} catch (error) {
-  console.error(`Failed to get auth instance. Code: ${error.code}, message: ${error.message}`);
-}
-```

@@ -4,8 +4,6 @@ Interface for indoor or outdoor identify result @interface DoorPositionResponse
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Interface for indoor or outdoor identify result @interface DoorPositionResponse
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceId
@@ -28,8 +26,6 @@ indicates the ID of the remote ranging device
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -39,16 +35,14 @@ indicates the ID of the remote ranging device
 ## doorLockCode
 
 ```TypeScript
-doorLockCode: int
+doorLockCode: number
 ```
 
 indicates random code for unlocking the door
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +61,6 @@ indicates result inside and outside the door
 **Type:** [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md)
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

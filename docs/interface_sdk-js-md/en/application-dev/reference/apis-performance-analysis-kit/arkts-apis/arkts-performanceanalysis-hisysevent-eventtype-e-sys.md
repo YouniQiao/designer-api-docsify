@@ -4,8 +4,6 @@ Enumerate system event types.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ FAULT = 1
 Error event.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -36,8 +32,6 @@ Statistic event.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -52,8 +46,6 @@ Security event.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
 **System API:** This is a system API.
@@ -67,8 +59,6 @@ BEHAVIOR = 4
 User behavior event.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 

@@ -4,8 +4,6 @@ VPN 配置参数。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ VPN 配置参数。
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## addresses
@@ -27,8 +25,6 @@ VPN虚拟网卡的 IP 地址。
 **类型：** Array&lt;LinkAddress&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -46,8 +42,6 @@ string类型表示的包名不能接入VPN网络。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ DNS服务器地址信息。
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -82,8 +74,6 @@ isBlocking?: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -99,8 +89,6 @@ isIPv4Accepted?: boolean
 **类型：** boolean
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -118,8 +106,6 @@ isIPv6Accepted?: boolean
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -135,8 +121,6 @@ isLegacy?: boolean
 **类型：** boolean
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -154,8 +138,6 @@ mtu?: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -171,8 +153,6 @@ VPN虚拟网卡的路由信息。
 **类型：** Array&lt;RouteInfo&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -190,8 +170,6 @@ DNS 的搜索域列表。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -208,8 +186,6 @@ string类型表示的包名可以接入VPN网络。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -225,8 +201,6 @@ VPN唯一标识。
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

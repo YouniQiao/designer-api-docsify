@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## downloadFile
@@ -20,8 +20,6 @@ Downloads a file. This API uses an asynchronous callback to return the result. H
 > .
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -45,48 +43,6 @@ Downloads a file. This API uses an asynchronous callback to return the result. H
 | [13400002](../errorcode-request.md#13400002-file-path-error) |
 | [13400003](../errorcode-request.md#13400003-service-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-     let downloadTask: request.DownloadTask = data;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, {
-    url: 'https://xxxx/xxxxx.hap',
-    filePath: 'xxx/xxxxx.hap'
-  }, (err: BusinessError, data: request.DownloadTask) => {
-    if (err) {
-      console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-  });
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## downloadFile
 
@@ -102,8 +58,6 @@ Downloads a file. This API uses a promise to return the result. HTTP is supporte
 > .
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -131,7 +85,3 @@ Downloads a file. This API uses a promise to return the result. HTTP is supporte
 | [13400001](../errorcode-request.md#13400001-file-operation-error) |
 | [13400002](../errorcode-request.md#13400002-file-path-error) |
 | [13400003](../errorcode-request.md#13400003-service-error) |
-
-**Examples**
-
-See [downloadFile](#downloadfile)

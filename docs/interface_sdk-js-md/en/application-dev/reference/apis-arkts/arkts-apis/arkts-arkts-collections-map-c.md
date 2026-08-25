@@ -5,18 +5,18 @@ A non-linear data structure.
 > **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
-- K: key. - V: value. The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
+- K: key.
+- V: value.
+The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -29,8 +29,6 @@ Returns an iterator, each item of which is a JavaScript object. NOTE: This API c
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -39,7 +37,7 @@ Returns an iterator, each item of which is a JavaScript object. NOTE: This API c
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[K, V] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
@@ -56,8 +54,6 @@ clear(): void
 Removes all elements from this ArkTS map.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -79,8 +75,6 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 A constructor used to create an ArkTS map.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,8 +102,6 @@ A constructor used to create an ArkTS map.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -135,8 +127,6 @@ containsValue(value: V): boolean
 Checks whether this ArkTS map maps one or more keys to the specified value.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,8 +163,6 @@ Deletes a specified key from this ArkTS map.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -208,8 +196,6 @@ Returns a map iterator object that contains the key-value pair of each element i
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -218,7 +204,7 @@ Returns a map iterator object that contains the key-value pair of each element i
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[K, V] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
@@ -236,8 +222,6 @@ forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 Calls a callback function for each key-value pair in this ArkTS map.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -265,8 +249,6 @@ get(key: K): V | undefined
 Obtains the value of the specified key in this ArkTS map.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -301,8 +283,6 @@ Checks whether a key exists in this ArkTS map.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -336,8 +316,6 @@ Returns a map iterator object that contains the key of each element in this ArkT
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -346,7 +324,7 @@ Returns a map iterator object that contains the key of each element in this ArkT
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;K & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
 
 **Error codes:**
 
@@ -369,8 +347,6 @@ Adds or updates a key-value pair to this ArkTS map and returns the previous valu
 > the key exists, so that you can distinguish the case of the returned **undefined**.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -408,8 +384,6 @@ Updates this ArkTS map with key-value pairs from the specified ArkTS Map.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -438,8 +412,6 @@ putAll(from: BuiltinMap<K, V>): void
 Updates this ArkTS map with key-value pairs from the specified built-in Map.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -474,8 +446,6 @@ Removes the specified key and its corresponding value from this ArkTS map.
 > the key exists, so that you can distinguish the case of the returned **undefined**.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -512,8 +482,6 @@ Adds or updates a key-value pair to this ArkTS map.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -548,8 +516,6 @@ Returns a map iterator object that contains the value of each element in this Ar
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -558,7 +524,7 @@ Returns a map iterator object that contains the value of each element in this Ar
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;V & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
 
 **Error codes:**
 
@@ -578,8 +544,6 @@ Number of elements in a map.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

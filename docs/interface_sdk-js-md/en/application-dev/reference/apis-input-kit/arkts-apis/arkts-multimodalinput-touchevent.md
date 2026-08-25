@@ -7,7 +7,7 @@ The **touchEvent** module provides touch events reported by a device. It is inhe
 ## Modules to Import
 
 ```TypeScript
-import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from 'kits/@kit.InputKit';
 ```
 
 ## Summary

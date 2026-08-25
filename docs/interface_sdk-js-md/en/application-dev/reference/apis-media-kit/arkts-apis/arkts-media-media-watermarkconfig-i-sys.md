@@ -4,8 +4,6 @@ Set configures of a watermark to AVRecorder. The position starts at top left cor
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Set configures of a watermark to AVRecorder. The position starts at top left cor
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## left
 
 ```TypeScript
-left: int
+left: number
 ```
 
 Offset of the watermark to the left line of pixel.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -37,16 +33,14 @@ Offset of the watermark to the left line of pixel.
 ## top
 
 ```TypeScript
-top: int
+top: number
 ```
 
 Offset of the watermark to the top line of pixel.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

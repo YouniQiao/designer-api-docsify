@@ -4,8 +4,6 @@ Defines the page routing parameters.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 8
 
 **Substitutes:** RouterOptions
@@ -15,7 +13,7 @@ Defines the page routing parameters.
 ## Modules to Import
 
 ```TypeScript
-import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from 'kits/@kit.ArkUI';
 ```
 
 ## params
@@ -29,8 +27,6 @@ Data that needs to be passed to the target page during redirection. The target p
 **Type:** Object
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 
@@ -46,14 +42,13 @@ uri: string
 
 URI of the target page, in either of the following formats:
 1. Absolute path, which is provided by the page list in the **config.json** file. Examples:  
-- pages/index/index - pages/detail/detail  
+- pages/index/index  
+- pages/detail/detail  
 2. Specific path. If the URI is a slash (/), the home page is displayed.
 
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 8
 

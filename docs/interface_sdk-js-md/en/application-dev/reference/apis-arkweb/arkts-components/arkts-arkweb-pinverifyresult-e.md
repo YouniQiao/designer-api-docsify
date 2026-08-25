@@ -4,8 +4,6 @@ Defines the PIN verification results, which identify the execution status of PIN
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## PIN_VERIFICATION_SUCCESS
@@ -18,8 +16,6 @@ Verification successful.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## PIN_VERIFICATION_FAILED
@@ -31,7 +27,5 @@ PIN_VERIFICATION_FAILED = 1
 Verification failed.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core

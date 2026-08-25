@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## unregisterProvider
@@ -15,8 +15,6 @@ function unregisterProvider(providerName: string, params?: Array<HuksExternalCry
 注销指定的外部provider。使用Promise异步回调。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **需要权限：** ohos.permission.CRYPTO_EXTENSION_REGISTER
 
@@ -46,29 +44,3 @@ function unregisterProvider(providerName: string, params?: Array<HuksExternalCry
 | [12000012](../errorcode-huks.md#12000012-外部错误) |
 | [12000014](../errorcode-huks.md#12000014-内存不足) |
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
-
-**示例**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-function stringToUint8Array(str: string) {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-const providerName = "testProviderName";
-const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [
-  {
-    tag: huksExternalCrypto.HuksExternalCryptoTag.HUKS_EXT_CRYPTO_TAG_ABILITY_NAME,
-    value: stringToUint8Array("CryptoExtension")
-  }
-];
-huksExternalCrypto.unregisterProvider(providerName, extProperties)
-    .then(() => {
-        console.info('promise: unregisterProvider success.');
-    });
-```

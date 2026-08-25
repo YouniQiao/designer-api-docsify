@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## setScreenLockDisabled
 
 ```TypeScript
-function setScreenLockDisabled(disable: boolean, userId: int): Promise<boolean>
+function setScreenLockDisabled(disable: boolean, userId: number): Promise<boolean>
 ```
 
 Disable screen lock showing for os account local userId. This only becomes effective when there is no password.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK
 
@@ -29,7 +27,7 @@ Disable screen lock showing for os account local userId. This only becomes effec
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | disable | boolean | Yes |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 

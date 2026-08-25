@@ -4,39 +4,15 @@ TreeMap stores key-value (KV) pairs. Each key must be unique and have only one v
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { TreeMap } from '@kit.ArkTS';
-import { TreeMapForEachCb } from '@kit.ArkTS';
-import { TreeMapComparator } from '@kit.ArkTS';
+import { TreeMap } from 'kits/@kit.ArkTS';
+import { TreeMapForEachCb } from 'kits/@kit.ArkTS';
+import { TreeMapComparator } from 'kits/@kit.ArkTS';
 ```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<[K, V]>
-```
-
-returns an ES6 iterator.Each item of the iterator is a Javascript Object
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| IterableIterator & lt;[K, V] & gt; |
 
 ## [Symbol.iterator]
 
@@ -48,8 +24,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -58,54 +32,13 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[K, V] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-
-// Method 1:
-for (let item of treeMap) {
-  console.info("TreeMap:", item[0], item[1]);
-}
-// Output:
-// TreeMap: sparrow,356
-// TreeMap: squirrel,123
-
-// Method 2:
-let iter = treeMap[Symbol.iterator]();
-let temp: IteratorResult<Object[]> = iter.next();
-while(!temp.done) {
-  console.info("key:", temp.value[0]);
-  console.info("value:", temp.value[1]);
-  temp = iter.next();
-}
-// Output:
-// key: sparrow
-// value: 356
-// key: squirrel
-// value: 123
-```
-
-```TypeScript
-// You are not advised to use the set or remove APIs in Symbol.iterator because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
- let treeMap = new TreeMap<string, number>();
- for(let i = 0; i < 10; i++) {
-   treeMap.set("sparrow" + i, 123);
- }
- for(let i = 0;i < 10; i++) {
-   treeMap.remove("sparrow" + i);
- }
-```
 
 ## clear
 
@@ -117,8 +50,6 @@ Clear all element groups in the map
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -129,17 +60,6 @@ Clear all element groups in the map
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-treeMap.clear();
-let result = treeMap.isEmpty();
-console.info("result:", result); // result: true
-```
-
 ## constructor
 
 ```TypeScript
@@ -149,8 +69,6 @@ constructor(comparator?: (firstValue: K, secondValue: K) => boolean)
 A constructor used to create a TreeMap object.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -168,78 +86,6 @@ A constructor used to create a TreeMap object.
 | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
-**Examples**
-
-```TypeScript
-// Default constructor.
-let treeMap = new TreeMap<number, number>();
-```
-
-```TypeScript
-// Use the comparator firstValue < secondValue if the elements are expected to be sorted in ascending order. Use firstValue > secondValue if the elements are expected to be sorted in descending order.
-let treeMap: TreeMap<string,string> = new TreeMap<string,string>((firstValue: string, secondValue: string): boolean => {
-  return firstValue > secondValue;
-});
-treeMap.set("aa","3");
-treeMap.set("dd","1");
-treeMap.set("cc","2");
-treeMap.set("bb","4");
-for (let item of treeMap) {
-  console.info("key: " + item[0], "value: " + item[1]);
-}
-// Output:
-// key: dd value: 1
-// key: cc value: 2
-// key: bb value: 4
-// key: aa value: 3
-```
-
-```TypeScript
-// When a custom type is inserted, a comparator must be provided.
-class TestEntry{
-  public id: number = 0;
-}
-
-let ts1: TreeMap<TestEntry, string> = new TreeMap<TestEntry, string>((t1: TestEntry, t2: TestEntry): boolean => {
-  return t1.id < t2.id;
-});
-let entry1: TestEntry = {
-  id: 0
-};
-let entry2: TestEntry = {
-  id: 1
-}
-ts1.set(entry1, "0");
-ts1.set(entry2, "1");
-console.info("length:", ts1.length); // length: 2
-```
-
-## constructor
-
-```TypeScript
-constructor(comparator?: TreeMapComparator<K>)
-```
-
-A constructor used to create a TreeMap object.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| comparator | [TreeMapComparator](arkts-arkts-treemapcomparator-t.md)&lt;K&gt; | No |
-
-**Examples**
-
-See [constructor](#constructor)
-
 ## entries
 
 ```TypeScript
@@ -250,8 +96,6 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -260,41 +104,13 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[K, V] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let it = treeMap.entries();
-let t: IteratorResult<Object[]> = it.next();
-while(!t.done) {
-  console.info("TreeMap:", t.value);
-  t = it.next()
-}
-// Output:
-// TreeMap: sparrow,356
-// TreeMap: squirrel,123
-```
-
-```TypeScript
-// You are not advised to use the set or remove APIs in entries because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
- let treeMap = new TreeMap<string, number>();
- for(let i = 0; i < 10; i++) {
-   treeMap.set("sparrow" + i, 123);
- }
- for(let i = 0;i < 10; i++) {
-   treeMap.remove("sparrow" + i);
- }
-```
 
 ## forEach
 
@@ -305,8 +121,6 @@ forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?:
 Executes the given callback function once for each real key in the map. It does not perform functions on deleted keys
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -325,57 +139,6 @@ Executes the given callback function once for each real key in the map. It does 
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("sparrow", 123);
-treeMap.set("gull", 357);
-treeMap.forEach((value: number, key: string): void => {
-  console.info("value: " + value, "key: " + key);
-});
-// Output:
-// value: 357 key: gull
-// value: 123 key: sparrow
-```
-
-```TypeScript
-// You are not advised to use the set or remove APIs in forEach because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
- let treeMap = new TreeMap<string, number>();
- for(let i = 0; i < 10; i++) {
-   treeMap.set("sparrow" + i, 123);
- }
- for(let i = 0;i < 10; i++) {
-   treeMap.remove("sparrow" + i);
- }
-```
-
-## forEach
-
-```TypeScript
-forEach(callbackFn: TreeMapForEachCb<K, V>): void
-```
-
-Executes the given callback function once for each real key in the map. It does not perform functions on deleted keys
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackFn | [TreeMapForEachCb](arkts-arkts-treemapforeachcb-t.md)&lt;K, V&gt; | Yes |
-
-**Examples**
-
-See [forEach](#foreach)
-
 ## get
 
 ```TypeScript
@@ -385,8 +148,6 @@ get(key: K): V
 Returns a specified element in a Map object, or undefined if there is no corresponding element
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -410,48 +171,6 @@ Returns a specified element in a Map object, or undefined if there is no corresp
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let result = treeMap.get("sparrow");
-console.info("result:", result); // result: 356
-```
-
-## get
-
-```TypeScript
-get(key: K): V | undefined
-```
-
-Returns a specified element in a Map object, or undefined if there is no corresponding element
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V \| undefined |
-
-**Examples**
-
-See [get](#get)
-
 ## getFirstKey
 
 ```TypeScript
@@ -461,8 +180,6 @@ getFirstKey(): K
 Obtains the first sorted key in the treemap. Or returns undefined if tree map is empty
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -480,16 +197,6 @@ Obtains the first sorted key in the treemap. Or returns undefined if tree map is
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 | [10200010](../errorcode-utils.md#10200010-empty-container) |
-
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let result = treeMap.getFirstKey();
-console.info("result:", result); // result: sparrow
-```
 
 ## getHigherKey
 
@@ -501,8 +208,6 @@ Returns the least element greater than or equal to the specified key if the key 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -524,57 +229,6 @@ Returns the least element greater than or equal to the specified key if the key 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<number, string>();
-treeMap.set(1, 'one');
-treeMap.set(2, 'two');
-treeMap.set(3, 'three');
-treeMap.set(4, 'four');
-let result = treeMap.getHigherKey(3);
-console.info("result:", result); // result: 4
-```
-
-## getHigherKey
-
-```TypeScript
-getHigherKey(key: K): K | undefined
-```
-
-Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| K \| undefined |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-See [getHigherKey](#gethigherkey)
 
 ## getLastKey
 
@@ -586,8 +240,6 @@ Obtains the last sorted key in the treemap. Or returns undefined if tree map is 
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -604,16 +256,6 @@ Obtains the last sorted key in the treemap. Or returns undefined if tree map is 
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 | [10200010](../errorcode-utils.md#10200010-empty-container) |
-
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let result = treeMap.getLastKey();
-console.info("result:", result); // result: squirrel
-```
 
 ## getLowerKey
 
@@ -625,8 +267,6 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -649,57 +289,6 @@ Returns the greatest element smaller than or equal to the specified key if the k
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<number, string>();
-treeMap.set(1, 'one');
-treeMap.set(2, 'two');
-treeMap.set(3, 'three');
-treeMap.set(4, 'four');
-let result = treeMap.getLowerKey(3);
-console.info("result:", result); // result: 2
-```
-
-## getLowerKey
-
-```TypeScript
-getLowerKey(key: K): K | undefined
-```
-
-Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| K \| undefined |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [10200010](../errorcode-utils.md#10200010-empty-container) |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-See [getLowerKey](#getlowerkey)
-
 ## hasKey
 
 ```TypeScript
@@ -709,8 +298,6 @@ hasKey(key: K): boolean
 Returns whether a key is contained in this map
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -734,15 +321,6 @@ Returns whether a key is contained in this map
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-let result = treeMap.hasKey("squirrel");
-console.info("result:", result);  // result: true
-```
-
 ## hasValue
 
 ```TypeScript
@@ -752,8 +330,6 @@ hasValue(value: V): boolean
 Returns whether a value is contained in this map
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -777,15 +353,6 @@ Returns whether a value is contained in this map
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-let result = treeMap.hasValue(123);
-console.info("result:", result);  // result: true
-```
-
 ## isEmpty
 
 ```TypeScript
@@ -795,8 +362,6 @@ isEmpty(): boolean
 Returns whether the Map object contains elements
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -814,14 +379,6 @@ Returns whether the Map object contains elements
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<number, number>();
-let result = treeMap.isEmpty();
-console.info("result:", result);  // result: true
-```
-
 ## keys
 
 ```TypeScript
@@ -832,8 +389,6 @@ Returns a new Iterator object that contains the keys contained in this map
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -842,28 +397,13 @@ Returns a new Iterator object that contains the keys contained in this map
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;K & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let keys = treeMap.keys();
-for (let key of keys) {
-  console.info("key:", key);
-}
-// Output:
-// key: sparrow
-// key: squirrel
-```
 
 ## remove
 
@@ -874,8 +414,6 @@ remove(key: K): V
 Remove a specified element from a Map object
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -899,48 +437,6 @@ Remove a specified element from a Map object
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let result = treeMap.remove("sparrow"); // Delete data.
-console.info("result = " + result); // result = 356
-```
-
-## remove
-
-```TypeScript
-remove(key: K): V | undefined
-```
-
-Remove a specified element from a Map object
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| key | K | Yes |
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| V \| undefined |
-
-**Examples**
-
-See [remove](#remove)
-
 ## replace
 
 ```TypeScript
@@ -950,8 +446,6 @@ replace(key: K, newValue: V): boolean
 Replace the old value by new value corresponding to the specified key
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -976,15 +470,6 @@ Replace the old value by new value corresponding to the specified key
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("sparrow", 123);
-let result = treeMap.replace("sparrow", 357);
-console.info("sparrow:", treeMap.get("sparrow")); // sparrow: 357
-```
-
 ## set
 
 ```TypeScript
@@ -994,8 +479,6 @@ set(key: K, value: V): Object
 Adds or updates a(new) key-value pair with a key and value specified for the Map object
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1020,14 +503,6 @@ Adds or updates a(new) key-value pair with a key and value specified for the Map
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-console.info("squirrel:", treeMap.get("squirrel")); // squirrel: 123
-```
-
 ## setAll
 
 ```TypeScript
@@ -1037,8 +512,6 @@ setAll(map: TreeMap<K, V>): void
 Adds all element groups in one map to another map
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1056,24 +529,6 @@ Adds all element groups in one map to another map
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let map : TreeMap<string, number> = new TreeMap();
-map.set("demo", 12);
-map.setAll(treeMap); // Add all elements in the treeMap to the map.
-map.forEach((value ?: number, key ?: string) : void => {
-  console.info("value: " + value, "key: " + key); 
-})
-// Output:
-// value: 12 key: demo
-// value: 356 key: sparrow
-// value: 123 key: squirrel
-```
-
 ## values
 
 ```TypeScript
@@ -1084,8 +539,6 @@ Returns a new Iterator object that contains the values contained in this map
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -1094,27 +547,13 @@ Returns a new Iterator object that contains the values contained in this map
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;V & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let treeMap = new TreeMap<string, number>();
-treeMap.set("squirrel", 123);
-treeMap.set("sparrow", 356);
-let values = treeMap.values();
-for (let value of values) {
-  console.info("value:", value);
-}
-// value: 356
-// value: 123
-```
 
 ## length
 
@@ -1127,8 +566,6 @@ Gets the element number of the TreeMap.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

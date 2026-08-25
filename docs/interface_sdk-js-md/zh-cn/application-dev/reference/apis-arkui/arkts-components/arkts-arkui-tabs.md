@@ -2,7 +2,7 @@
 
 通过页签进行内容视图切换的容器组件，每个页签对应一个内容视图。适用于应用底部导航栏、顶部页签切换、侧边栏导航等需要在不同内容视图间快速切换的场景。使用Tabs组件可以简化多视图导航的实现，提升用户切换效率。
 > **说明：**
-> - 该组件从API version 11开始，支持安全区域避让特性，其expandSafeArea属性的默认值为expandSafeArea(> [SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])。开发者可通过重写该属性覆盖默认行为。对于API version 11之前的版本，则需配合expandSafeArea属性手动实现安全区域避> 让。
+> - 该组件从API version 11开始，支持安全区域避让特性，其[expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea)属性的默认值为expandSafeArea(> [SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])。开发者可通过重写该属性覆盖默认行为。对于API version 11之前的版本，则需配合expandSafeArea属性手动实现安全区域避> 让。
 
 ## 子组件
 
@@ -24,8 +24,6 @@ Tabs(options?: TabsOptions)
 创建Tabs容器。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,12 +47,6 @@ Tabs(options?: TabsOptions)
 
 | 名称 |
 | --- |
-| [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) |
-| [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) |
-| [OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md) |
-| [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) |
-| [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) |
-| [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) |
 
 ### 枚举
 

@@ -15,8 +15,6 @@ Creates a symbolic link based on the file path. This API uses a promise to retur
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [symlink](arkts-corefile-file-fs-symlink-f.md)
@@ -36,28 +34,6 @@ Creates a symbolic link based on the file path. This API uses a promise to retur
 | --- |
 | Promise & lt;void & gt; |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + '/test';
-fileio.symlink(srcFile, dstFile).then(() => {
-  console.info("symlink succeed");
-}).catch((err: BusinessError) => {
-  console.error("symlink failed with error:" + err);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let srcFile = pathDir + "/test.txt";
-let dstFile = pathDir + '/test';
-fileio.symlink(srcFile, dstFile, (err: BusinessError) => {
-  // Do something.
-});
-```
-
 
 ## symlink
 
@@ -68,8 +44,6 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -84,7 +58,3 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 | target | string | Yes |
 | srcPath | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-See [symlink](#symlink)

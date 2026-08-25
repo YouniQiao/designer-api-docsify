@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setNotificationEnable
@@ -16,8 +16,6 @@ function setNotificationEnable(bundle: BundleOption, enable: boolean, callback: 
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ function setNotificationEnable(bundle: BundleOption, enable: boolean, callback: 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -44,77 +42,6 @@ function setNotificationEnable(bundle: BundleOption, enable: boolean, callback: 
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setNotificationEnableCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setNotificationEnable success');
-    }
-}
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-notificationManager.setNotificationEnable(bundle, false, setNotificationEnableCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let setNotificationEnableCallback = (err: BusinessError | null): void => {
-    if (err) {
-        console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('setNotificationEnable success');
-    }
-}
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-notificationManager.setNotificationEnable(bundle, false, setNotificationEnableCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-notificationManager.setNotificationEnable(bundle, false).then(() => {
-    console.info('setNotificationEnable success');
-}).catch((err: BusinessError) => {
-    console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-notificationManager.setNotificationEnable(bundle, false).then(() => {
-  console.info('setNotificationEnable success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setNotificationEnable failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## setNotificationEnable
 
@@ -126,8 +53,6 @@ function setNotificationEnable(bundle: BundleOption, enable: boolean): Promise<v
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -138,7 +63,7 @@ function setNotificationEnable(bundle: BundleOption, enable: boolean): Promise<v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 
 **返回值：**
@@ -158,7 +83,3 @@ function setNotificationEnable(bundle: BundleOption, enable: boolean): Promise<v
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-参见 [setNotificationEnable](#setnotificationenable)

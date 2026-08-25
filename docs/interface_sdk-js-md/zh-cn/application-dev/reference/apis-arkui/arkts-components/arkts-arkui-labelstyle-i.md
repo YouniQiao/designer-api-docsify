@@ -4,8 +4,6 @@ label文本和字体的样式对象。
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ font?: Font
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -41,11 +37,9 @@ heightAdaptivePolicy?: TextHeightAdaptivePolicy
 
 设置Label文本自适应高度的方式。默认值是最大行数优先。
 
-**类型：** TextHeightAdaptivePolicy
+**类型：** [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,13 +55,11 @@ maxFontSize?: number | ResourceStr
 
 设置label文本最大显示字号（不支持百分比设置）。需配合minFontSize以及maxLines或布局大小限制使用。自适应文本大小生效后，font.size不生效。默认值是0.0fp，即默认自适应文本大小不生效。取值范围：[minFontSize, +∞)。异常值时取默认值。
 
-**类型：** number \| ResourceStr
+**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 0.0fp [since 11]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,8 +79,6 @@ maxLines?: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -103,13 +93,11 @@ minFontSize?: number | ResourceStr
 
 设置label文本最小显示字号（不支持百分比设置）。需配合maxFontSize以及maxLines或布局大小限制使用。自适应文本大小生效后，font.size不生效。默认值是0.0fp，即默认自适应文本大小不生效。取值范围：(0, +∞)。异常值时取默认值。
 
-**类型：** number \| ResourceStr
+**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 0.0fp [since 11]
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -125,11 +113,9 @@ overflow?: TextOverflow
 
 设置label文本超长时的显示方式。默认值是省略号截断。
 
-**类型：** TextOverflow
+**类型：** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -145,13 +131,11 @@ selectedColor?: ResourceColor
 
 设置label文本字体选中时的颜色。默认值：#FF007DFF
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** #FF007DFF
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -167,13 +151,11 @@ unselectedColor?: ResourceColor
 
 设置label文本字体未选中时的颜色。默认值：#99182431
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** #99182431
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

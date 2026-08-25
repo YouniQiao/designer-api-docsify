@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
+import { freeInstall } from 'kits/@kit.AbilityKit';
 ```
 
 ## setHapModuleUpgradeFlag
@@ -16,8 +16,6 @@ function setHapModuleUpgradeFlag(bundleName: string,
 设置指定模块是否升级。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -45,69 +43,6 @@ function setHapModuleUpgradeFlag(bundleName: string,
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
 
-**示例**
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let upgradeFlag = freeInstall.UpgradeFlag.SINGLE_UPGRADE;
-try {
-  freeInstall.setHapModuleUpgradeFlag(bundleName, moduleName, upgradeFlag, err => {
-    if (err) {
-      console.error('Operation failed:' + JSON.stringify(err));
-    } else {
-      console.info('Operation succeed');
-    }
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let upgradeFlag = freeInstall.UpgradeFlag.SINGLE_UPGRADE;
-try {
-  freeInstall.setHapModuleUpgradeFlag(bundleName, moduleName, upgradeFlag).then(() => {
-    console.info('Operation succeed')
-  }).catch((err: BusinessError) => {
-    console.error('Operation failed:' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { freeInstall } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和moduleName。
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let upgradeFlag = freeInstall.UpgradeFlag.SINGLE_UPGRADE;
-try {
-  freeInstall.setHapModuleUpgradeFlag(bundleName, moduleName, upgradeFlag).then(() => {
-    console.info('Operation succeed')
-  }).catch((err: Error) => {
-    console.error('Operation failed:' + JSON.stringify(err as BusinessError));
-  });
-} catch (err) {
-  console.error('Operation failed:' + JSON.stringify(err));
-}
-```
-
 
 ## setHapModuleUpgradeFlag
 
@@ -118,8 +53,6 @@ function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgrade
 设置指定模块是否升级。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -151,7 +84,3 @@ function setHapModuleUpgradeFlag(bundleName: string, moduleName: string, upgrade
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
-
-**示例**
-
-参见 [setHapModuleUpgradeFlag](#sethapmoduleupgradeflag)

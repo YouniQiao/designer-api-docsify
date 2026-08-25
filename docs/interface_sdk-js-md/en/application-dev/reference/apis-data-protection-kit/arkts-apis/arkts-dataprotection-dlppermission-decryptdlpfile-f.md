@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## decryptDlpFile
@@ -19,8 +19,6 @@ Decrypts a DLP file to generate a plaintext file. This API can be called only by
 > servers. The enterprise server determines whether an account is authorized to decrypt DLP files.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
@@ -55,31 +53,3 @@ Decrypts a DLP file to generate a plaintext file. This API can be called only by
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 | [19100013](../errorcode-dlp.md#19100013-user-access-denied) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction(plainFilePath: string, dlpFilePath: string) {
-  let plaintextFd: number | undefined = undefined;
-  let dlpFd: number | undefined = undefined;
-  try {
-    plaintextFd = fileIo.openSync(plainFilePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE).fd;
-    dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_ONLY).fd;
-    await dlpPermission.decryptDlpFile(dlpFd, plaintextFd);
-    console.info('Successfully decrypt DLP file.');
-  } catch(err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message);
-  } finally {
-    if (dlpFd) {
-      fileIo.closeSync(dlpFd);
-    }
-    if (plaintextFd) {
-      fileIo.closeSync(plaintextFd);
-    }
-  }
-}
-```

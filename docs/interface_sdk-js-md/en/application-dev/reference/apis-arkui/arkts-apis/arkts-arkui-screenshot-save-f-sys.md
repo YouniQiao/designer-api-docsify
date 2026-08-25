@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'kits/@kit.ArkUI';
 ```
 
 ## save
@@ -15,8 +15,6 @@ function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap
 Obtains a screenshot. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
@@ -42,82 +40,6 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import  { image } from '@kit.ImageKit';
-
-let screenshotOptions: screenshot.ScreenshotOptions = {
-  "screenRect": {
-    "left": 200,
-    "top": 100,
-    "width": 200,
-    "height": 200 },
-  "imageSize": {
-    "width": 300,
-    "height": 300 },
-  "rotation": 0,
-  "displayId": 0,
-  "isNotificationNeeded": true,
-  "isCaptureFullOfScreen": true
-};
-screenshot.save(screenshotOptions, (err: BusinessError, pixelMap: image.PixelMap) => {
-  if (err) {
-    console.error(`Failed to save screenshot. Code: ${err.code} , message : ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in saving screenshot. Pixel bytes number: ' + pixelMap.getPixelBytesNumber());
-  pixelMap.release(); // Release the memory in time after the PixelMap is used.
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-screenshot.save((err: BusinessError, pixelMap: image.PixelMap) => {
-  if (err) {
-    console.error(`Failed to save screenshot. Code: ${err.code} , message : ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in saving screenshot. Pixel bytes number: ' + pixelMap.getPixelBytesNumber());
-  pixelMap.release(); // Release the memory in time after the PixelMap is used.
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let screenshotOptions: screenshot.ScreenshotOptions = {
-  "screenRect": {
-    "left": 200,
-    "top": 100,
-    "width": 200,
-    "height": 200 },
-  "imageSize": {
-    "width": 300,
-    "height": 300 },
-  "rotation": 0,
-  "displayId": 0,
-  "isNotificationNeeded": true,
-  "isCaptureFullOfScreen": true
-};
-try {
-  let promise = screenshot.save(screenshotOptions);
-  promise.then((pixelMap: image.PixelMap) => {
-    let pixelNumber = pixelMap.getPixelBytesNumber();
-    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelNumber}`);
-    pixelMap.release(); // Release the memory in time after the PixelMap is used.
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to save screenshot. Code: ${err.code} , message : ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to save screenshot. Code: ${exception.code} , message : ${exception.message}`);
-};
-```
-
 
 ## save
 
@@ -128,8 +50,6 @@ function save(callback: AsyncCallback<image.PixelMap>): void
 Obtains a screenshot. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
@@ -153,10 +73,6 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-See [save](#save)
-
 
 ## save
 
@@ -167,8 +83,6 @@ function save(options?: ScreenshotOptions): Promise<image.PixelMap>
 Obtains a screenshot. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
@@ -198,7 +112,3 @@ Obtains a screenshot. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
-
-**Examples**
-
-See [save](#save)

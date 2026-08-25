@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getSensorList
@@ -15,8 +15,6 @@ function getSensorList(callback: AsyncCallback<Array<Sensor>>): void
 Obtains information about all sensors on the device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -33,48 +31,6 @@ Obtains information about all sensors on the device. This API uses an asynchrono
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.getSensorList((err: BusinessError, data: Array<sensor.Sensor>) => {
-    if (err) {
-      console.error(`Failed to get sensorList. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    for (let i = 0; i < data.length; i++) {
-      console.info('Succeeded in getting data[' + i + ']: ' + JSON.stringify(data[i]));
-    }
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get sensorList. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.getSensorList().then((data: Array<sensor.Sensor>) => {
-    for (let i = 0; i < data.length; i++) {
-      console.info('Succeeded in getting data[' + i + ']: ' + JSON.stringify(data[i]));
-    }
-  }, (err: BusinessError) => {
-    console.error(`Failed to get sensorList. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get sensorList. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## getSensorList
 
@@ -85,8 +41,6 @@ function getSensorList(): Promise<Array<Sensor>>
 Obtains information about all sensors on the device. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -102,7 +56,3 @@ Obtains information about all sensors on the device. This API uses a promise to 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) |
-
-**Examples**
-
-See [getSensorList](#getsensorlist)

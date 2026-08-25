@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## unregisterContinuation
@@ -15,8 +15,6 @@ function unregisterContinuation(token: number, callback: AsyncCallback<void>): v
 Unregisters the continuation management service. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 22
 
@@ -44,41 +42,6 @@ Unregisters the continuation management service. This API uses an asynchronous c
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
 
-**Examples**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-try {
-  continuationManager.unregisterContinuation(token, (err) => {
-    if (err.code != 0) {
-      console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('unregisterContinuation finished. ');
-  });
-} catch (err) {
-  console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-try {
-  continuationManager.unregisterContinuation(token).then(() => {
-      console.info('unregisterContinuation finished. ');
-    }).catch((err: BusinessError) => {
-      console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
-
 
 ## unregisterContinuation
 
@@ -89,8 +52,6 @@ function unregisterContinuation(token: number): Promise<void>
 Unregisters the continuation management service. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 22
 
@@ -122,7 +83,3 @@ Unregisters the continuation management service. This API uses a promise to retu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
 | [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) |
-
-**Examples**
-
-See [unregisterContinuation](#unregistercontinuation)

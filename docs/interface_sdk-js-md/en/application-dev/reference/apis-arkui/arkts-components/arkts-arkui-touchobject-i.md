@@ -4,8 +4,6 @@ Type of the touch event.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -35,7 +31,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-units-coordinate2d-i.md) |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
 
 ## displayX
 
@@ -48,8 +44,6 @@ X coordinate of the touch point in the coordinate system of the current applicat
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,8 +63,6 @@ Y coordinate of the touch point in the coordinate system of the current applicat
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -88,8 +80,6 @@ X coordinate of the touch point in the [global coordinate system](../../../windo
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,8 +99,6 @@ Y coordinate of the touch point in the [global coordinate system](../../../windo
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -125,11 +113,9 @@ hand?: InteractionHand
 
 Whether the event was triggered by a left-hand or right-hand tap.
 
-**Type:** InteractionHand
+**Type:** [InteractionHand](../arkts-apis/arkts-arkui-interactionhand-e.md)
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,8 +135,6 @@ Height of the finger contact area.Unit: vp.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -169,8 +153,6 @@ Unique identifier of a finger.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -186,8 +168,6 @@ Time when the finger is pressed.Unit: ns
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -207,8 +187,6 @@ Pressure value of finger contact.Value range: [0, 65535), where higher values in
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -226,8 +204,6 @@ X coordinate of the touch point in the coordinate system of the current applicat
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -247,8 +223,6 @@ Y coordinate of the touch point in the coordinate system of the current applicat
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 10
 
 **Substitutes:** [windowY](#windowy)
@@ -263,11 +237,9 @@ type: TouchType
 
 Type of the touch event.
 
-**Type:** TouchType
+**Type:** [TouchType](../arkts-apis/arkts-arkui-touchtype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -284,8 +256,6 @@ Width of the finger contact area.Unit: vp.
 **Type:** number
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -305,8 +275,6 @@ X coordinate of the touch point in the coordinate system of the current applicat
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -324,8 +292,6 @@ Y coordinate of the touch point in the coordinate system of the current applicat
 **Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -345,8 +311,6 @@ X coordinate of the touch point in the [component coordinate system](../../../ui
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -362,8 +326,6 @@ Y coordinate of the touch point in the [component coordinate system](../../../ui
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

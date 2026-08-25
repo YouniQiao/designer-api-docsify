@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { carAwareness } from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## offRealTimeWeather
@@ -15,8 +15,6 @@ function offRealTimeWeather(callback?: Callback<RealTimeWeatherInfo>): void
 Disables the real-time weather awareness function.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Required permissions:** ohos.permission.vehicle.MMA_WEATHER
 

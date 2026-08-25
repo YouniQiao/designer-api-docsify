@@ -4,8 +4,6 @@ Enumerates the key parameter types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -19,8 +17,6 @@ COMMON_PARAMS_SPEC = 0
 Common parameters of the public and private keys. You can use [generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair) to randomly generate a key pair based on the parameters of this type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,8 +34,6 @@ Parameter of the private key. You can use [generatePriKey](arkts-cryptoarchitect
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -56,8 +50,6 @@ Parameter of the public key. You can use [generatePubKey](arkts-cryptoarchitectu
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -73,8 +65,6 @@ KEY_PAIR_SPEC = 3
 Full parameters of the public and private keys. You can use [generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair) to generate a key pair based on the parameters of this type.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

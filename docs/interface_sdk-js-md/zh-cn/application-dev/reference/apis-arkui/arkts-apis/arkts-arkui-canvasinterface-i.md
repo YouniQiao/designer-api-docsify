@@ -7,8 +7,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@
 创建Canvas组件时，最大面积不超过10000px*10000px，超过最大面积则无法正常创建。使用本接口创建的Canvas组件在组件不可见时将不响应绘制指令。不可见场景主要包括组件所在的页面进入后台、组件滑到窗口外、设置visibility属性为隐藏等，不包 括组件被其他组件或是其他窗口遮挡导致不可见的场景。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,8 +52,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -69,7 +63,7 @@
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 是 |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 是 |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 是 |
 
 **返回值：**
 
@@ -93,8 +87,6 @@
 > - 不可见场景主要包括组件所在的页面进入后台、组件滑到窗口外、设置visibility属性为隐藏等，不包括组件被其他组件或是其他窗口遮挡导致不可见的场景。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

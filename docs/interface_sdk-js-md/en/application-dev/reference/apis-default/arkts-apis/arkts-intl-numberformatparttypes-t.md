@@ -4,9 +4,7 @@
 type NumberFormatPartTypes = ES2018NumberFormatPartType | ES2020NumberFormatPartType
 ```
 
-**ArkTS mode:** 
-
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ES2018NumberFormatPartType](../../apis-arkts/arkts-apis/arkts-arkts-intl-es2018numberformatparttype-t.md) |
-| [ES2020NumberFormatPartType](../../apis-arkts/arkts-apis/arkts-arkts-intl-es2020numberformatparttype-t.md) |
+| [ES2018NumberFormatPartType](arkts-intl-es2018numberformatparttype-t.md) |
+| [ES2020NumberFormatPartType](arkts-intl-es2020numberformatparttype-t.md) |

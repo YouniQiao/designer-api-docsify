@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## offAcbStateChange
@@ -15,8 +15,6 @@ function offAcbStateChange(callback?: Callback<AcbStateParam>): void
 Unsubscribes from the logical link connection status change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

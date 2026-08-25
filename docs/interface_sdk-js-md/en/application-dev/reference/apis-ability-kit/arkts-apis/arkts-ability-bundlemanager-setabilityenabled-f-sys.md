@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setAbilityEnabled
 
 ```TypeScript
-function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean): Promise<void>
+function setAbilityEnabled(info: AbilityInfo, appIndex: number, isEnabled: boolean): Promise<void>
 ```
 
 Enables or disables an ability of an application or an application clone. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -29,7 +27,7 @@ Enables or disables an ability of an application or an application clone. This A
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| appIndex | number | Yes |
 | isEnabled | boolean | Yes |
 
 **Return value:**
@@ -49,106 +47,6 @@ Enables or disables an ability of an application or an application clone. This A
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false, err => {
-      if (err) {
-        hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-      } else {
-        hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-      }
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, false).then(() => {
-      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_DEFAULT;
-let userId = 100;
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  abilityName: "EntryAbility"
-};
-
-try {
-  bundleManager.queryAbilityInfo(want, abilityFlags, userId).then((abilitiesInfo) => {
-    hilog.info(0x0000, 'testTag', 'queryAbilityInfo successfully. Data: %{public}s', JSON.stringify(abilitiesInfo));
-    let info = abilitiesInfo[0];
-
-    bundleManager.setAbilityEnabled(info, 1, false).then(() => {
-      hilog.info(0x0000, "testTag", "setAbilityEnabled successfully.");
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', 'setAbilityEnabled failed: %{public}s', err.message);
-    });
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
-}
-```
-
 
 ## setAbilityEnabled
 
@@ -159,8 +57,6 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: Asyn
 Enables or disables an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -186,10 +82,6 @@ Enables or disables an ability. This API uses an asynchronous callback to return
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 
-**Examples**
-
-See [setAbilityEnabled](#setabilityenabled)
-
 
 ## setAbilityEnabled
 
@@ -200,8 +92,6 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>
 Enables or disables an ability. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -231,7 +121,3 @@ Enables or disables an ability. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
-
-**Examples**
-
-See [setAbilityEnabled](#setabilityenabled)

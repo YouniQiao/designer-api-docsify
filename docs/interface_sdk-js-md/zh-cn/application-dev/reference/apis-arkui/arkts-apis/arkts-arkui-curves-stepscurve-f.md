@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## stepsCurve
@@ -15,8 +15,6 @@ function stepsCurve(count: number, end: boolean): ICurve
 构造阶梯曲线对象。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,11 +31,4 @@ function stepsCurve(count: number, end: boolean): ICurve
 
 | 类型 |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
-
-**示例**
-
-```TypeScript
-import { curves } from '@kit.ArkUI';
-curves.stepsCurve(9, true)  // 创建一个阶梯曲线
-```
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

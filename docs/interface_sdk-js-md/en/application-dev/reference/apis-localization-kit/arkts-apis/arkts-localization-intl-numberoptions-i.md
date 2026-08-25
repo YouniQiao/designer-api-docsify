@@ -4,14 +4,12 @@ Options for creating the **NumberFormat** object. Since API version 9, the **Num
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## compactDisplay
@@ -20,13 +18,11 @@ import { intl } from '@kit.LocalizationKit';
 compactDisplay?: string
 ```
 
-Compact display format. The value can be **long** or **short**.The default value is **short**.This API can be used in atomic services since API version 12.For details about their display effects, see [Table 18](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Compact display format. The value can be **number** or **short**.The default value is **short**.This API can be used in atomic services since API version 12.For details about their display effects, see [Table 18](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ Currency unit. The value must comply with the [ISO-4217 standard](https://www.is
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -61,8 +55,6 @@ Currency display mode. The value can be **symbol**, **narrowSymbol**, **code**, 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,8 +72,6 @@ Currency unit symbol. The value can be **standard** or **accounting**.The defaul
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -97,8 +87,6 @@ Valid locale ID, for example, **zh-Hans-CN**.The default value is the current sy
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,8 +104,6 @@ Locale matching algorithm. The value can be **lookup** or **best fit**.The defau
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -125,7 +111,7 @@ Locale matching algorithm. The value can be **lookup** or **best fit**.The defau
 ## maximumFractionDigits
 
 ```TypeScript
-maximumFractionDigits?: int
+maximumFractionDigits?: number
 ```
 
 Maximum number of digits in the fraction part of a number. The value ranges from **1** to **21**.The default value is **3**.This API can be used in atomic services since API version 12.For details about their display effects, see [Table 13](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
@@ -134,8 +120,6 @@ Maximum number of digits in the fraction part of a number. The value ranges from
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -143,7 +127,7 @@ Maximum number of digits in the fraction part of a number. The value ranges from
 ## maximumSignificantDigits
 
 ```TypeScript
-maximumSignificantDigits?: int
+maximumSignificantDigits?: number
 ```
 
 Maximum number of the least significant digits. The value ranges from **1** to **21**.The default value is **21**.This API can be used in atomic services since API version 12.For details about their display effects, see [Table 15](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
@@ -152,8 +136,6 @@ Maximum number of the least significant digits. The value ranges from **1** to *
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -161,7 +143,7 @@ Maximum number of the least significant digits. The value ranges from **1** to *
 ## minimumFractionDigits
 
 ```TypeScript
-minimumFractionDigits?: int
+minimumFractionDigits?: number
 ```
 
 Minimum number of digits in the fraction part of a number. The value ranges from **0** to **20**.The default value is **0**.This API can be used in atomic services since API version 12.For details about their display effects, see [Table 12](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
@@ -170,8 +152,6 @@ Minimum number of digits in the fraction part of a number. The value ranges from
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -179,7 +159,7 @@ Minimum number of digits in the fraction part of a number. The value ranges from
 ## minimumIntegerDigits
 
 ```TypeScript
-minimumIntegerDigits?: int
+minimumIntegerDigits?: number
 ```
 
 Minimum number of digits allowed in the integer part of a number. The value ranges from **1** to **21**.The default value is **1**.This API can be used in atomic services since API version 12.For details about their display effects, see [Table 11](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
@@ -188,8 +168,6 @@ Minimum number of digits allowed in the integer part of a number. The value rang
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -197,7 +175,7 @@ Minimum number of digits allowed in the integer part of a number. The value rang
 ## minimumSignificantDigits
 
 ```TypeScript
-minimumSignificantDigits?: int
+minimumSignificantDigits?: number
 ```
 
 Minimum number of the least significant digits. The value ranges from **1** to **21**.The default value is **1**.This API can be used in atomic services since API version 12.For details about their display effects, see [Table 14](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
@@ -205,8 +183,6 @@ Minimum number of the least significant digits. The value ranges from **1** to *
 **Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -223,8 +199,6 @@ Number notation. The value can be **standard**, **scientific**, **engineering**,
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -243,8 +217,6 @@ Numbering system. The value can be:
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -252,7 +224,7 @@ Numbering system. The value can be:
 ## roundingIncrement
 
 ```TypeScript
-roundingIncrement?: int
+roundingIncrement?: number
 ```
 
 Rounding increment. The value can be **1**, **2**, **5**, **10**, **20**, **25**, **50**, **100**, **200**, **250**, **500**, **1000**, **2000**, **2500**, or **5000**.The default value is **1**.This API can be used in atomic services since API version 18.
@@ -260,8 +232,6 @@ Rounding increment. The value can be **1**, **2**, **5**, **10**, **20**, **25**
 **Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -274,14 +244,24 @@ roundingMode?: string
 ```
 
 Rounding mode. The value can be:  
-- **ceil**: rounding up. - **floor**: rounding down. - **expand**: rounding away from 0. - **trunc**: rounding toward 0. - **halfCeil**: half-rounding up; that is, rounding up when the decimal number is greater than or equal to half of the increment, and rounding down otherwise. - **halfFloor**: half-rounding down; that is, rounding up when the decimal number is greater than half of the increment, and rounding down otherwise. - **halfExpand**: half-rounding away from 0; that is, rounding away from 0 when the decimal number is greater than or equal to half of the increment, and rounding toward 0 otherwise. - **halfTrunc**: half-rounding toward 0; that is, rounding away from 0 when the decimal number is greater than half of the increment, and rounding toward 0 otherwise. - "halfEven": half-rounding to the nearest even number; that is, rounding away from 0 when the decimal number is greater than half of the increment, rounding toward 0 when the decimal number is less than half of the increment, and rounding to the nearest even number when the decimal number is exactly half of the increment.  
-The default value is **halfExpand**.This API can be used in atomic services since API version 18.
+- **ceil**: rounding up.  
+- **floor**: rounding down.  
+- **expand**: rounding away from 0.  
+- **trunc**: rounding toward 0.  
+- **halfCeil**: half-rounding up; that is, rounding up when the decimal number is greater than or equal to half  
+of the increment, and rounding down otherwise.  
+- **halfFloor**: half-rounding down; that is, rounding up when the decimal number is greater than half of the  
+increment, and rounding down otherwise.  
+- **halfExpand**: half-rounding away from 0; that is, rounding away from 0 when the decimal number is greater  
+than or equal to half of the increment, and rounding toward 0 otherwise.  
+- **halfTrunc**: half-rounding toward 0; that is, rounding away from 0 when the decimal number is greater than  
+half of the increment, and rounding toward 0 otherwise.  
+- "halfEven": half-rounding to the nearest even number; that is, rounding away from 0 when the decimal number is  
+greater than half of the increment, rounding toward 0 when the decimal number is less than half of the increment, and rounding to the nearest even number when the decimal number is exactly half of the increment.The default value is **halfExpand**.This API can be used in atomic services since API version 18.
 
 **Type:** string
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -299,8 +279,6 @@ Rounding priority used when both the maximum number of fraction digits and the m
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Global.I18n
@@ -312,14 +290,15 @@ signDisplay?: string
 ```
 
 Number sign display format. The value can be:  
-- "auto": automatically determines whether to display the plus or minus sign. - "never": do not display the plus or minus sign. - "always": always displays the plus or minus sign. - "exceptZero": displays the plus or minus sign for all values except 0.  
+- "auto": automatically determines whether to display the plus or minus sign.  
+- "never": do not display the plus or minus sign.  
+- "always": always displays the plus or minus sign.  
+- "exceptZero": displays the plus or minus sign for all values except 0.  
 Default value: **"auto"**This API can be used in atomic services since API version 12.
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -337,8 +316,6 @@ Number display format. The value can be **decimal**, **currency**, **percent**, 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -355,8 +332,6 @@ Unit name, for example, **meter**, **inch**, or **hectare**.The combination unit
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -367,13 +342,11 @@ Unit name, for example, **meter**, **inch**, or **hectare**.The combination unit
 unitDisplay?: string
 ```
 
-Display format of units. The value can be **long**, **short**, or **narrow**.The default value is **short**.This API can be used in atomic services since API version 12.For details about their display effects, see [Table 21](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Display format of units. The value can be **number**, **short**, or **narrow**.The default value is **short**.This API can be used in atomic services since API version 12.For details about their display effects, see [Table 21](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -391,8 +364,6 @@ Application scenario of units. The value can be any of the following: **default*
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.I18n
@@ -408,8 +379,6 @@ Whether to enable grouping for display. The value **true** means to enable group
 **Type:** boolean
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

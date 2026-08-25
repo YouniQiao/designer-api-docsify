@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from 'kits/@kit.ArkUI';
 ```
 
 ## getReusableInfo
@@ -24,8 +22,6 @@ getReusableInfo(constructor: ReusableComponentConstructor,
 检索此复用池中给定可复用组件类型的回收实例信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,73 +42,6 @@ getReusableInfo(constructor: ReusableComponentConstructor,
 | --- |
 | [IReusableInfo](arkts-arkui-arkui-statemanagement-ireusableinfo-i.md)[] \| [IReusableInfo](arkts-arkui-arkui-statemanagement-ireusableinfo-i.md) \| undefined |
 
-**示例**
-
-```TypeScript
-import { UIUtils, IReusableInfo } from '@kit.ArkUI';
-
-@ReusableV2
-@ComponentV2
-struct ReusableChild {
-  aboutToRecycle() {
-    console.info('ReusableChild aboutToRecycle');
-  }
-  aboutToReuse() {
-    console.info('ReusableChild aboutToReuse');
-  }
-
-  build() {
-    Text('ReusableChild')
-  }
-}
-
-@Entry
-@ComponentV2({ reusePool: 'perInstance', poolAccepts: [ReusableChild], freezeWhenInactive: false })
-struct PoolOwner {
-  @Local showChild: boolean = true;
-
-  inspectPool() {
-    const pool = UIUtils.getCustomComponentContext(this).getReusePool();
-    if (!pool) {
-      return;
-    }
-
-    // 查询池接受的组件类型。
-    const info = pool.getReusableInfo(ReusableChild);
-    if (info === undefined) {
-      console.info('No reuse pool that accepts ReusableChild');
-    } else if (Array.isArray(info)) {
-      // 使用了多个 reuseId 桶。
-      info.forEach((item: IReusableInfo, i: number) => {
-        console.info(`[${i}] reuseId=${item.reuseId}, count=${item.count}, maxCount=${item.maxCount}`);
-      });
-    } else {
-      // 单个条目（未使用 reuseId，或查询了特定的 reuseId）。
-      console.info(`count=${info.count}, maxCount=${info.maxCount}`);
-    }
-
-    // 查询特定的 reuseId — 始终返回单个 IReusableInfo。
-    const bucketInfo = pool.getReusableInfo(ReusableChild, 'A') as IReusableInfo;
-    console.info(`reuseId 'A': count=${bucketInfo.count}, maxCount=${bucketInfo.maxCount}`);
-  }
-
-  build() {
-    Column() {
-      Button('切换子组件')
-        .onClick(() => {
-          this.showChild = !this.showChild;
-        })
-      Button('检查池')
-        .onClick(() => this.inspectPool())
-      if (this.showChild) {
-        ReusableChild()
-          .reuse({ reuseId: () => 'A' })
-      }
-    }
-  }
-}
-```
-
 ## preRender
 
 ```TypeScript
@@ -128,8 +57,6 @@ preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -140,7 +67,7 @@ preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| builder | WrappedBuilder & lt;[] & gt; | 是 |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[]&gt; | 是 |
 | times | number | 是 |
 
 **返回值：**
@@ -148,84 +75,3 @@ preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-```TypeScript
-import { UIUtils, IReusableInfo } from '@kit.ArkUI';
-
-@ReusableV2
-@ComponentV2
-struct ReusableComponent {
-  @Param param: number = 8;
-
-  aboutToAppear() {
-    console.info('ReusableComponent aboutToAppear');
-  }
-  aboutToReuse() {
-    console.info('ReusableComponent aboutToReuse');
-  }
-
-  build() {
-    Column() {
-      Text(`ReusableComponent ${this.param}`)
-    }
-  }
-}
-
-@Builder 
-function preRenderBuilder() {
-  ReusableComponent()
-}
-
-@Entry
-@ComponentV2({ reusePool: 'shared', poolAccepts: [ReusableComponent], freezeWhenInactive: false })
-struct Index {
-  @Local onUIFullyLoaded: boolean = false;
-
-  aboutToAppear() {
-    // 获取池并调度预渲染。
-    const pool = UIUtils.getCustomComponentContext(this).getReusePool();
-    pool!.preRender(new WrappedBuilder<[]>(preRenderBuilder), 1)
-      .then(() => {
-        console.info('ReusableComponent preRender completes');
-      });
-  }
-
-  checkPool() {
-    // 获取全局复用池内组件数量
-    const reusePool = UIUtils.getCustomComponentContext(this).getReusePool();
-    const reusableInfo: IReusableInfo = reusePool!.getReusableInfo(ReusableComponent) as IReusableInfo;
-    console.info(`ReusableComponent reuse pool count=${reusableInfo.count}`);
-  }
-
-  build() {
-    Column({ space: 5 }) {
-      Button('Switch')
-        .onClick(() => {
-          this.onUIFullyLoaded = !this.onUIFullyLoaded;
-        })
-        .width(100)
-      Button('Check pool')
-        .onClick(() => {
-          this.checkPool();
-        })
-        .width(100)
-      CompA({ showFullUI: this.onUIFullyLoaded })
-    }
-    .width('100%')
-  }
-}
-
-@ComponentV2
-struct CompA {
-  @Require @Param showFullUI: boolean;
-
-  build() {
-    if (this.showFullUI) {
-      // 这将从池中复用预渲染的实例
-      ReusableComponent()
-    }
-  }
-}
-```

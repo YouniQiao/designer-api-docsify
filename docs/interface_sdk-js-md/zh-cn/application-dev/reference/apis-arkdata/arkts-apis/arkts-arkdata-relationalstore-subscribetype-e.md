@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SUBSCRIBE_TYPE_REMOTE
@@ -18,8 +16,6 @@ SUBSCRIBE_TYPE_REMOTE = 0
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SUBSCRIBE_TYPE_CLOUD
@@ -31,8 +27,6 @@ SUBSCRIBE_TYPE_CLOUD = 1
 订阅云端数据更改。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本10 - 11：ohos.permission.DISTRIBUTED_DATASYNC
@@ -49,8 +43,6 @@ SUBSCRIBE_TYPE_CLOUD_DETAILS = 2
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **需要权限：** 
 - API版本10 - 11：ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -65,7 +57,5 @@ SUBSCRIBE_TYPE_LOCAL_DETAILS
 订阅本地数据更改详情。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

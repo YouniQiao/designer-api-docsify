@@ -4,8 +4,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -19,13 +17,11 @@
 baseline: number
 ```
 
-当前行的基线与组件上边缘的距离。单位：px取值范围：大于等于0。
+当前行的基线与组件上边缘的距离。单位：[px](arkts-arkui-length-t.md)取值范围：大于等于0。
 
 **类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,13 +35,11 @@ baseline: number
 bottom: number
 ```
 
-行底与组件上边缘的距离。单位：px取值范围：大于等于0。
+行底与组件上边缘的距离。单位：[px](arkts-arkui-length-t.md)取值范围：大于等于0。
 
 **类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -65,8 +59,6 @@ direction: TextDirection
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -84,8 +76,6 @@ end: number
 **类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -105,8 +95,6 @@ first: boolean
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -125,8 +113,6 @@ start: number
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -139,13 +125,11 @@ start: number
 top: number
 ```
 
-行顶与组件上边缘的距离。单位：px取值范围：大于等于0。
+行顶与组件上边缘的距离。单位：[px](arkts-arkui-length-t.md)取值范围：大于等于0。
 
 **类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -159,13 +143,11 @@ top: number
 x: number
 ```
 
-当前行相对于组件的水平偏移。direction为RTL时，返回当前行右侧与组件右边缘的距离。单位：px取值范围：大于等于0。
+当前行相对于组件的水平偏移。direction为RTL时，返回当前行右侧与组件右边缘的距离。单位：[px](arkts-arkui-length-t.md)取值范围：大于等于0。
 
 **类型：** number
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

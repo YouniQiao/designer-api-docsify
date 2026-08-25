@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## getStatusMonitor
 
 ```TypeScript
-function getStatusMonitor(localUserId: int): StatusMonitor
+function getStatusMonitor(localUserId: number): StatusMonitor
 ```
 
 Obtains the status monitor. This API is used to obtain the status monitor object of a specified user. The object can be used to query and subscribe to the template status, continuous authentication status, and available device status of the companion device.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -30,7 +28,7 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [localUserId](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [localUserId](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | number | Yes |
 
 **Return value:**
 
@@ -46,30 +44,3 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
 | [32600002](../errorcode-useriam.md#32600002-template-not-found) |
-
-**Examples**
-
-```TypeScript
-import { osAccount, BusinessError } from '@kit.BasicServicesKit';
-
-const localUserId = 100;
-try {
-  const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
-  const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
-    templateId: new Uint8Array([])
-  };
-  const handler = (isAuthPassed: boolean, authTrustLevel?: osAccount.AuthTrustLevel): void => {
-    console.info('continuous auth changed');
-    console.info(`isAuthPassed: ${isAuthPassed}`);
-    if (authTrustLevel !== undefined) {
-      console.info(`authTrustLevel: ${authTrustLevel}`);
-    }
-  };
-
-  statusMonitor.onContinuousAuthChange(continuousAuthParam, handler);
-  statusMonitor.offContinuousAuthChange(handler);
-} catch (error) {
-  const message = (error as BusinessError).message;
-  console.error(`error has been captured: message:${message}`);
-}
-```

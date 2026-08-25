@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## isIdleState
@@ -16,8 +16,6 @@ Checks whether the application specified by **bundleName** is in the idle state.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
@@ -29,30 +27,6 @@ Checks whether the application specified by **bundleName** is in the idle state.
 | bundleName | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// When a third-party application uses the sample code, change bundleName to its own bundle name.
-bundleState.isIdleState("com.ohos.camera", (err: BusinessError, res: boolean) => {
-  if (err) {
-    console.error('BUNDLE_ACTIVE isIdleState callback failed, because: ' + err.code);
-  } else {
-    console.info('BUNDLE_ACTIVE isIdleState callback succeeded, result: ' + JSON.stringify(res));
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// When a third-party application uses the sample code, change bundleName to its own bundle name.
-bundleState.isIdleState("com.ohos.camera").then((res: boolean) => {
-  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE isIdleState promise failed, because: ' + err.code);
-});
-```
-
 
 ## isIdleState
 
@@ -63,8 +37,6 @@ function isIdleState(bundleName: string): Promise<boolean>
 Checks whether the application specified by **bundleName** is in the idle state. A third-party application can only check the idle state of itself. A system application can check the idle state of other applications only when it is granted with the ohos.permission.BUNDLE_ACTIVE_INFO permission. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -81,7 +53,3 @@ Checks whether the application specified by **bundleName** is in the idle state.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [isIdleState](#isidlestate)

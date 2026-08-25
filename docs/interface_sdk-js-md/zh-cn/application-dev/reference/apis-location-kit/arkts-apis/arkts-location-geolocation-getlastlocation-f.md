@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## getLastLocation
@@ -15,8 +15,6 @@ function getLastLocation(callback: AsyncCallback<Location>): void
 获取上一次位置，使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -32,27 +30,6 @@ function getLastLocation(callback: AsyncCallback<Location>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.getLastLocation((err, data) => {
-    if (err) {
-        console.info('getLastLocation: err=' + JSON.stringify(err));
-    }
-    if (data) {
-        console.info('getLastLocation: data=' + JSON.stringify(data));
-    }
-});
-```
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.getLastLocation().then((result) => {
-    console.info('getLastLocation: result: ' + JSON.stringify(result));
-});
-```
-
 
 ## getLastLocation
 
@@ -63,8 +40,6 @@ function getLastLocation(): Promise<Location>
 获取上一次位置，使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -79,7 +54,3 @@ function getLastLocation(): Promise<Location>
 | 类型 |
 | --- |
 | Promise & lt;Location & gt; |
-
-**示例**
-
-参见 [getLastLocation](#getlastlocation)

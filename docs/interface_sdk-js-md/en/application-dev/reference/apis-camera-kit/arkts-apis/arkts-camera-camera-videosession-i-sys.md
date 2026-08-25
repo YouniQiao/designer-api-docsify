@@ -7,14 +7,12 @@ VideoSession inherits from [Session](arkts-camera-camera-session-i.md), [Flash](
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## getSessionConflictFunctions
@@ -26,8 +24,6 @@ getSessionConflictFunctions(): Array<VideoConflictFunctions>
 Gets session conflict functions.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -54,8 +50,6 @@ getSessionFunctions(outputCapability: CameraOutputCapability): Array<VideoFuncti
 Gets session functions.
 
 **Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -90,8 +84,6 @@ Unsubscribes from LCD flash status change events.
 
 **Since:** 13
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -109,14 +101,6 @@ Unsubscribes from LCD flash status change events.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-function unregisterLcdFlashStatus(videoSession: camera.VideoSession): void {
-  videoSession.off('lcdFlashStatus');
-}
-```
-
 ## off('focusTrackingInfoAvailable')
 
 ```TypeScript
@@ -126,8 +110,6 @@ off(type: 'focusTrackingInfoAvailable', callback?: Callback<FocusTrackingInfo>):
 Unsubscribes from focus tracking information events.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -146,14 +128,6 @@ Unsubscribes from focus tracking information events.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-function unregisterFocusTrackingInfoChanged(session: camera.VideoSessionForSys): void {
-  session.off('focusTrackingInfoAvailable');
-}
-```
-
 ## off('effectSuggestionChange')
 
 ```TypeScript
@@ -163,8 +137,6 @@ off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionTyp
 Unsubscribes from effect suggestion change events.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -193,8 +165,6 @@ Unsubscribes from camera light status changes.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -212,30 +182,6 @@ Unsubscribes from camera light status changes.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function LightStatusCallback(err: BusinessError, lightStatus: camera.LightStatus) : void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`lightStatus: ${lightStatus}`);
-}
-
-function handleLightStatusOff(mSession: camera.VideoSessionForSys): void {
-  console.info('handleLightStatusOff');
-  try {
-    mSession.on('lightStatusChange', LightStatusCallback);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`handleLightStatusOff err:${err}`);
-  }
-}
-```
-
 ## offApertureInfoChange
 
 ```TypeScript
@@ -245,8 +191,6 @@ offApertureInfoChange(callback?: Callback<ApertureInfo>): void
 Unsubscribes from aperture info event callback.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,118 +210,6 @@ Unsubscribes from aperture info event callback.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-## offEffectSuggestionChange
-
-```TypeScript
-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void
-```
-
-Unsubscribes from effect suggestion change events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## offFocusTrackingInfoAvailable
-
-```TypeScript
-offFocusTrackingInfoAvailable(callback?: Callback<FocusTrackingInfo>): void
-```
-
-Unsubscribes from focus tracking info event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## offLcdFlashStatus
-
-```TypeScript
-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
-```
-
-Unsubscribes from lcd flash status.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## offLightStatusChange
-
-```TypeScript
-offLightStatusChange(callback?: AsyncCallback<LightStatus>): void
-```
-
-Unsubscribes camera light status event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## on('lcdFlashStatus')
 
 ```TypeScript
@@ -387,8 +219,6 @@ on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
 Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -407,25 +237,6 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, lcdFlashStatus: camera.LcdFlashStatus): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`isLcdFlashNeeded: ${lcdFlashStatus.isLcdFlashNeeded}`);
-  console.info(`lcdCompensation: ${lcdFlashStatus.lcdCompensation}`);
-}
-
-function registerLcdFlashStatus(videoSession: camera.VideoSession): void {
-  videoSession.on('lcdFlashStatus', callback);
-}
-```
-
 ## on('focusTrackingInfoAvailable')
 
 ```TypeScript
@@ -435,8 +246,6 @@ on(type: 'focusTrackingInfoAvailable', callback: Callback<FocusTrackingInfo>): v
 Subscribes to focus tracking information events. This API uses an asynchronous callback to return the result.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -455,22 +264,6 @@ Subscribes to focus tracking information events. This API uses an asynchronous c
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-function callback(focusTrackingInfo: camera.FocusTrackingInfo): void {
-  console.info(`Focus tracking mode: ${focusTrackingInfo.trackingMode}`);
-  console.info(`Focus tracking Region: topLeftX ${focusTrackingInfo.trackingRegion.topLeftX}
-                                       topLeftY ${focusTrackingInfo.trackingRegion.topLeftY}
-                                       width ${focusTrackingInfo.trackingRegion.width}
-                                       height ${focusTrackingInfo.trackingRegion.height}`);
-}
-
-function registerFocusTrackingInfoChanged(session: camera.VideoSessionForSys): void {
-  session.on('focusTrackingInfoAvailable', callback);
-}
-```
-
 ## on('effectSuggestionChange')
 
 ```TypeScript
@@ -480,8 +273,6 @@ on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>
 Subscribes to effect suggestion change events.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -510,8 +301,6 @@ Subscribes to camera light status changes. This API uses an asynchronous callbac
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **System API:** This is a system API.
@@ -529,30 +318,6 @@ Subscribes to camera light status changes. This API uses an asynchronous callbac
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function handleLightStatusCallback(err: BusinessError, lightStatus: camera.LightStatus) : void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`lightStatus: ${lightStatus}`);
-}
-
-function handleLightStatusOn(mSession: camera.VideoSessionForSys): void {
-  console.info('handleLightStatusOn');
-  try {
-    mSession.on('lightStatusChange', handleLightStatusCallback);
-  } catch (error) {
-    let err = error as BusinessError;
-    console.error(`handleLightStatusOn err:${err}`);
-  }
-}
-```
-
 ## onApertureInfoChange
 
 ```TypeScript
@@ -562,8 +327,6 @@ onApertureInfoChange(callback: Callback<ApertureInfo>): void
 Subscribes aperture info event callback.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -576,118 +339,6 @@ Subscribes aperture info event callback.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## onEffectSuggestionChange
-
-```TypeScript
-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void
-```
-
-Subscribes to effect suggestion change events.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## onFocusTrackingInfoAvailable
-
-```TypeScript
-onFocusTrackingInfoAvailable(callback: Callback<FocusTrackingInfo>): void
-```
-
-Subscribes to focus tracking info event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## onLcdFlashStatus
-
-```TypeScript
-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
-```
-
-Subscribes to lcd flash status.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## onLightStatusChange
-
-```TypeScript
-onLightStatusChange(callback: AsyncCallback<LightStatus>): void
-```
-
-Subscribes camera light status event callback.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | Yes |
 
 **Error codes:**
 

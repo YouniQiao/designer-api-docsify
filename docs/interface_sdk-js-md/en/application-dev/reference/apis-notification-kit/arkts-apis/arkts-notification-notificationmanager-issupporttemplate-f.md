@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isSupportTemplate
@@ -15,8 +15,6 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,33 +34,6 @@ Checks whether a specified template is supported before using [NotificationTempl
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-let isSupportTemplateCallback = (err: BusinessError, data: boolean): void => {
-  if (err) {
-    console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-  }
-}
-notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
-  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## isSupportTemplate
 
@@ -73,8 +44,6 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -98,7 +67,3 @@ Checks whether a specified template is supported before using [NotificationTempl
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-See [isSupportTemplate](#issupporttemplate)

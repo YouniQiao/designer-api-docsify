@@ -4,8 +4,6 @@ Defines the options of GridContainer.@interface GridContainerOptions
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
@@ -29,8 +27,6 @@ Sets the total number of columns in the current layout.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
@@ -48,8 +44,6 @@ Grid layout column spacing.
 **Type:** number \| string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -69,8 +63,6 @@ Spacing on both sides of the grid layout.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [grid_col/GridColOptions](arkts-arkui-gridcoloptions-i.md)
@@ -88,8 +80,6 @@ Select the device width type.
 **Type:** [SizeType](arkts-arkui-sizetype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

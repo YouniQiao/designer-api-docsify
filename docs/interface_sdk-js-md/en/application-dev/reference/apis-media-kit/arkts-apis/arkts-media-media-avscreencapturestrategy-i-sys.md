@@ -4,14 +4,12 @@ Provides the media AVScreenCaptureStrategy definition.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## enableDeviceLevelCapture
@@ -27,8 +25,6 @@ Defines whether to enable device-level content recording
 **Default:** false
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 

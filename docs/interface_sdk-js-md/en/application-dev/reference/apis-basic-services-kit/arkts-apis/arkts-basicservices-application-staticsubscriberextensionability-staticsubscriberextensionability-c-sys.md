@@ -6,8 +6,6 @@ This module provides extension abilities of Basic Services Kit for static subscr
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -15,7 +13,7 @@ This module provides extension abilities of Basic Services Kit for static subscr
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionAbility } from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionAbility } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onReceiveEvent
@@ -27,8 +25,6 @@ onReceiveEvent(event: CommonEventData): void
 Defines a callback to be invoked when a common event is triggered in static mode.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,18 +38,6 @@ Defines a callback to be invoked when a common event is triggered in static mode
 | --- | --- | --- |
 | event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | Yes |
 
-**Examples**
-
-```TypeScript
-import { commonEventManager } from '@kit.BasicServicesKit';
-
-  class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
-      onReceiveEvent(event: commonEventManager.CommonEventData) {
-          console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-      }
-  }
-```
-
 ## context
 
 ```TypeScript
@@ -65,8 +49,6 @@ Context of the extension ability subscribed to in static mode.
 **Type:** [StaticSubscriberExtensionContext](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

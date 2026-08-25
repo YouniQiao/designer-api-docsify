@@ -4,8 +4,6 @@ Enumerates the digest algorithms that can be used for signing and signature veri
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_DIGEST_NONE
@@ -17,8 +15,6 @@ CM_DIGEST_NONE = 0
 When this option is selected, it indicates that the application performs a digest calculation on the data to be signed or verified.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -32,8 +28,6 @@ MD5.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_DIGEST_SHA1
@@ -45,8 +39,6 @@ CM_DIGEST_SHA1 = 2
 SHA-1.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -60,8 +52,6 @@ SHA-224.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_DIGEST_SHA256
@@ -73,8 +63,6 @@ CM_DIGEST_SHA256 = 4
 SHA-256.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -88,8 +76,6 @@ SHA-384.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_DIGEST_SHA512
@@ -102,8 +88,6 @@ SHA-512.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_DIGEST_SM3
@@ -115,7 +99,5 @@ CM_DIGEST_SM3 = 7
 SM3.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

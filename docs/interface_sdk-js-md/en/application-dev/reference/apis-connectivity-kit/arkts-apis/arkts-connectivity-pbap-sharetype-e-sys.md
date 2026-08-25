@@ -4,8 +4,6 @@ Enum for the share type.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ SHARE_NAME_AND_PHONE_NUMBER = 0
 Share the names and numbers in contacts.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -36,8 +32,6 @@ Share all the information.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ SHARE_NOTHING = 2
 Share nothing.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

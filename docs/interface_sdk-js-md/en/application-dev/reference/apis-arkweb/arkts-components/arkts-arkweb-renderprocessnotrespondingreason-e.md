@@ -4,8 +4,6 @@ Enumerates the reasons why the rendering process does not respond.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## INPUT_TIMEOUT
@@ -18,8 +16,6 @@ The input event response sent to the rendering process times out.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NAVIGATION_COMMIT_TIMEOUT
@@ -31,7 +27,5 @@ NAVIGATION_COMMIT_TIMEOUT = 1
 The navigation for loading a new web page times out.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core

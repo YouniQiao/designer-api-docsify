@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appRecovery } from '@kit.AbilityKit';
+import { appRecovery } from 'kits/@kit.AbilityKit';
 ```
 
 ## restartApp
@@ -16,30 +16,8 @@ Restarts the current process and starts the first ability that is displayed when
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { appRecovery, errorManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer: errorManager.ErrorObserver = {
-  onUnhandledException(errorMsg) {
-    console.error('onUnhandledException, errorMsg: ', errorMsg);
-    appRecovery.restartApp();
-  }
-};
-
-try {
-  errorManager.on('error', observer);
-} catch (paramError) {
-  console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { carAwareness } from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## onSpatialMotion
@@ -15,8 +15,6 @@ function onSpatialMotion(callback: Callback<SpatialMotionInfo>): void
 开启空间动作感知，订阅空间动作感知结果。如果能力不支持，则不会回调。支持的能力可以通过getAllCapacityList方法获取。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **需要权限：** ohos.permission.vehicle.MMA_SPATIALACTION
 

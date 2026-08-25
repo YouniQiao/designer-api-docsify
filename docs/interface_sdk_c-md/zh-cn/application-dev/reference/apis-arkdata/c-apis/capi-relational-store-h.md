@@ -653,7 +653,7 @@ int OH_Rdb_SetCryptoParam(OH_Rdb_ConfigV2 *config, const OH_Rdb_CryptoParam *cry
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | 表示此关系型数据库相关的数据库配置[OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md)的指针。 |
-| const OH_Rdb_CryptoParam *cryptoParam | 表示自定义加密参数。 |
+| [const OH_Rdb_CryptoParam](capi-rdb-oh-rdb-cryptoparam.md) *cryptoParam | 表示自定义加密参数。 |
 
 **返回：**
 
@@ -801,7 +801,7 @@ OH_VObject *OH_Rdb_CreateValueObject()
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_VObject *](capi-rdb-oh-vobject.md) | 创建成功则返回一个指向[OH_VObject](capi-rdb-oh-vobject.md)结构体实例的指针，否则返回NULL。 |
+| OH_VObject * | 创建成功则返回一个指向[OH_VObject](capi-rdb-oh-vobject.md)结构体实例的指针，否则返回NULL。 |
 
 **参考：**
 
@@ -1782,7 +1782,7 @@ OH_Cursor *OH_Rdb_FindModifyTime(OH_Rdb_Store *store, const char *tableName, con
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | 指向[OH_Rdb_Store](capi-rdb-oh-rdb-store.md)实例的指针。 |
 | const char *tableName | 要查找的分布式数据库表表名。 |
 | const char *columnName | 指定要查询的数据库表的列名。 |
-| [OH_VObject](capi-rdb-oh-vobject.md) *values | 指定要查询的行的主键。如果数据库表无主键，参数columnName需传入"rowid"，此时values为要查询的数据库表的行号。 |
+| OH_VObject *values | 指定要查询的行的主键。如果数据库表无主键，参数columnName需传入"rowid"，此时values为要查询的数据库表的行号。 |
 
 **返回：**
 
@@ -2392,7 +2392,7 @@ int OH_Rdb_RekeyEx(OH_Rdb_Store *store, OH_Rdb_CryptoParam *param)
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | 指向[OH_Rdb_Store](capi-rdb-oh-rdb-store.md)实例的指针。 |
-| OH_Rdb_CryptoParam *param | 指向[OH_Rdb_CryptoParam](capi-rdb-oh-rdb-cryptoparam.md)实例的指针。 |
+| [OH_Rdb_CryptoParam](capi-rdb-oh-rdb-cryptoparam.md) *param | 指向[OH_Rdb_CryptoParam](capi-rdb-oh-rdb-cryptoparam.md)实例的指针。 |
 
 **返回：**
 

@@ -5,15 +5,13 @@ The **request** module provides applications with basic upload, download, and ba
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 10 and later: SystemCapability.Request.FileTransferAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -49,18 +47,6 @@ import { request } from '@kit.BasicServicesKit';
 | [UploadConfig(Upload and Download)](arkts-basicservices-request-uploadconfig-i.md) |
 | [TaskState(Upload and Download)](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the on('complete' \| 'fail') and off('complete' \|
 | [UploadTask(Upload and Download)](arkts-basicservices-request-uploadtask-i.md) |
-
-### Types
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [DownloadProgressCallback(Upload and Download)](arkts-basicservices-request-downloadprogresscallback-t.md) |
-| [DownloadCompleteCallback(Upload and Download)](arkts-basicservices-request-downloadcompletecallback-t.md) |
-| [DownloadPauseCallback(Upload and Download)](arkts-basicservices-request-downloadpausecallback-t.md) |
-| [DownloadRemoveCallback(Upload and Download)](arkts-basicservices-request-downloadremovecallback-t.md) |
-| [DownloadFailCallback(Upload and Download)](arkts-basicservices-request-downloadfailcallback-t.md) |
-| [UploadProgressCallback(Upload and Download)](arkts-basicservices-request-uploadprogresscallback-t.md) |
-| [UploadHeaderReceiveCallback(Upload and Download)](arkts-basicservices-request-uploadheaderreceivecallback-t.md) |
 
 ### Constants
 

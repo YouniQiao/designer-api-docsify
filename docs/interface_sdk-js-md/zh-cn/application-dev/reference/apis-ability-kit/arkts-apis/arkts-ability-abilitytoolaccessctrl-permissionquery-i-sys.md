@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -27,8 +25,6 @@ callerTokenId?: number
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -44,8 +40,6 @@ domainId?: string
 **类型：** string
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -63,8 +57,6 @@ needTicket?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -80,8 +72,6 @@ operationInfo: OperationInfo[]
 **类型：** OperationInfo[]
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -99,8 +89,6 @@ remoteInfo?: RemoteInfo
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
-
 **系统能力：** SystemCapability.Security.Asset
 
 **系统接口：** 此接口为系统接口。
@@ -116,8 +104,6 @@ ticketExpireTimeMs?: number
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Security.Asset
 

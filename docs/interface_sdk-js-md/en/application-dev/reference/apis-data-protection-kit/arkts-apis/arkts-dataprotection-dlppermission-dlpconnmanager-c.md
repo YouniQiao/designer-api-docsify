@@ -8,14 +8,12 @@ Calls **registerPlugin** and **unregisterPlugin** to register or unregister call
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## constructor
@@ -27,8 +25,6 @@ constructor()
 Represents a constructor for instantiating [DlpConnManager](#dlpconnmanager).
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -55,8 +51,6 @@ Registers a callback with the SA.
 > **registerPlugin** registers the callback with the SA.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -99,8 +93,6 @@ Unregisters a callback from the SA.This API unregisters a callback and releases 
 > **unregisterPlugin** unregisters a plug-in from the SA.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE

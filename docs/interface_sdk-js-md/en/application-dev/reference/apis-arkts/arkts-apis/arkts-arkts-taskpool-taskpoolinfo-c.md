@@ -4,14 +4,12 @@ Describes the internal information about a task pool.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## taskInfos
@@ -25,8 +23,6 @@ Internal information about the tasks. You are advised not to change the value.
 **Type:** TaskInfo[]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,8 +39,6 @@ Internal information about the worker threads. You are advised not to change the
 **Type:** [ThreadInfo](arkts-arkts-taskpool-threadinfo-c.md)[]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getNetExtAttributeSync
@@ -16,8 +16,6 @@ Obtains the extended attributes of the network specified by **netHandle** to det
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -43,16 +41,3 @@ Obtains the extended attributes of the network specified by **netHandle** to det
 | [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netHandle = connection.getDefaultNetSync();
-if (netHandle.netId != 0) {
-  let netExtAttribute: string = connection.getNetExtAttributeSync(netHandle);
-  console.info("getNetExtAttribute: " + netExtAttribute);
-}
-```

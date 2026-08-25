@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
+import { uiAppearance } from 'kits/@kit.ArkUI';
 ```
 
 ## getFontWeightScale
@@ -23,8 +23,6 @@ function getFontWeightScale(): number
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **需要权限：** 
 - API版本12 - 19：ohos.permission.UPDATE_CONFIGURATION
 
@@ -43,18 +41,3 @@ function getFontWeightScale(): number
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [500001](../errorcode-uiappearance.md#500001-内部错误) |
-
-**示例**
-
-```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let fontWeightScale = uiAppearance.getFontWeightScale();
-  console.info('Get fontWeightScale ' + fontWeightScale);
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`Get fontWeightScale failed. Code: ${err.code}, message: ${err.message}`);
-}
-```

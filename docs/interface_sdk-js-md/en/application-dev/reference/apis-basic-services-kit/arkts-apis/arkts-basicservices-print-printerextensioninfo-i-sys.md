@@ -4,8 +4,6 @@ Provides the printer extension information.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides the printer extension information.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## extensionId
@@ -28,8 +26,6 @@ ID of the printer extension.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ ID of the printer extension.
 ## vendorIcon
 
 ```TypeScript
-vendorIcon: int
+vendorIcon: number
 ```
 
 Vendor icon of the printer extension.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -64,8 +58,6 @@ Vendor ID of the printer extension.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -82,8 +74,6 @@ Vendor name of the printer extension.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Version of the printer extension.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 

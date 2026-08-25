@@ -4,14 +4,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Security.Cert
 
 ## 导入模块
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadCrl
@@ -31,8 +29,6 @@ allowDownloadCrl?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -45,7 +41,9 @@ allowDownloadCrl?: boolean
 allowOcspCheckOnline?: boolean
 ```
 
-是否允许在线OCSP检查，默认值为false。 - true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应； - false：不执行在线OCSP检查。
+是否允许在线OCSP检查，默认值为false。  
+- true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应；  
+- false：不执行在线OCSP检查。
 
 > **说明：**&gt;
 > 如果在ocspResponses中找到匹配的OCSP响应，则跳过在线OCSP检查。
@@ -55,8 +53,6 @@ allowOcspCheckOnline?: boolean
 **默认值：** false
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,8 +71,6 @@ CRL列表。最大个数：100。
 **类型：** Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,8 +92,6 @@ OCSP请求使用的摘要算法，默认值为SHA256。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -118,8 +110,6 @@ OCSP响应数据。预置的OCSP响应数据。最大个数：100。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -137,8 +127,6 @@ revocationFlags: Array<CertRevocationFlag>
 **类型：** Array&lt;[CertRevocationFlag](arkts-devicecertificate-cert-certrevocationflag-e.md)&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

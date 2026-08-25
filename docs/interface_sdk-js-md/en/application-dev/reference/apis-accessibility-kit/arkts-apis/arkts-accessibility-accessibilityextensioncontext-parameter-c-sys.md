@@ -4,8 +4,6 @@ Provides parameter values for specific settings when an accessibility node eleme
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -21,8 +19,6 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 **Type:** [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,8 +38,6 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -61,8 +55,6 @@ Sets the injected action type. Configured when executing [AccessibilityAction](a
 **Type:** [InjectActionType](arkts-accessibility-accessibility-injectactiontype-e-sys.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,8 +74,6 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -99,8 +89,6 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -118,8 +106,6 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -135,8 +121,6 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -154,8 +138,6 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -172,8 +154,6 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **System API:** This is a system API.
@@ -189,8 +169,6 @@ Configured when executing [AccessibilityAction](arkts-accessibility-accessibilit
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

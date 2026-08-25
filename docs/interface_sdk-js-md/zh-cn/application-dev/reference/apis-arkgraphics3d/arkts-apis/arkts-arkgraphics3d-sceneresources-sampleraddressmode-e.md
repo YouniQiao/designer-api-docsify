@@ -1,10 +1,8 @@
 # SamplerAddressMode
 
-采样器寻址模式枚举，用于控制纹理坐标超出[0, 1]范围时的处理方式。@enum { int }
+采样器寻址模式枚举，用于控制纹理坐标超出[0, 1]范围时的处理方式。@enum { number }
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ REPEAT = 0
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## MIRRORED_REPEAT
@@ -32,8 +28,6 @@ MIRRORED_REPEAT = 1
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## CLAMP_TO_EDGE
@@ -45,7 +39,5 @@ CLAMP_TO_EDGE = 2
 纹理坐标超出范围时，贴图边缘像素会被拉伸延伸。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

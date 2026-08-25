@@ -1,17 +1,15 @@
 # RssInfo
 
-Describes the physical memory information of the application process.@interface RssInfo
+Describes the physical memory information about an application process.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## rss
@@ -20,13 +18,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 rss: bigint
 ```
 
-Size of the occupied physical memory (including the memory occupied by the shared library), in KB. The value of this parameter is obtained by reading the value of VmRSS in the /proc/{pid}/status node.
+Resident set size (RSS), in KB. It includes anonymous pages, file mapping pages, and shared memory pages. The calculation formula is **\/proc/{pid}/status: VmRss**.
 
 **Type:** bigint
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -38,13 +34,11 @@ Size of the occupied physical memory (including the memory occupied by the share
 swapRss: bigint
 ```
 
-Size of the memory occupied by the process in swap space, in KB. The value of this parameter is obtained by reading the value of VmSwap in the /proc/{pid}/status node.
+Total size of anonymous private pages swapped out to the swap partition, in KB. The calculation formula is **\/proc/{pid}/status: VmSwap**.
 
 **Type:** bigint
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

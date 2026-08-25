@@ -4,8 +4,6 @@ Configuration for Web same-layer rendering. Configures Web same-layer rendering 
 
 **Since:** 16
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Whether the same-layer rendering visibility API supports the display attribute.B
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## supportDefaultIntrinsicSize
@@ -44,7 +40,5 @@ Whether a same-layer rendering element supports the fixed size of 300 × 150.Whe
 **Default:** false
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **System capability:** SystemCapability.Web.Webview.Core

@@ -32,9 +32,7 @@
   <!--Del-->
   - [getDeviceRotationRadian(系统接口)](arkts-multimodalawareness-devicestatus-getdevicerotationradian-f-sys.md)<!--DelEnd-->
   - [off](arkts-multimodalawareness-devicestatus-off-f.md)
-  - [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md)
   - [on](arkts-multimodalawareness-devicestatus-on-f.md)
-  - [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md)
   <!--Del-->
   - [DeviceRotationRadian(系统接口)](arkts-multimodalawareness-devicestatus-devicerotationradian-i-sys.md)<!--DelEnd-->
   - [SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md)
@@ -46,17 +44,13 @@
   <!--Del-->
   - [notifyMetadataBindingEvent(系统接口)](arkts-multimodalawareness-metadatabinding-notifymetadatabindingevent-f-sys.md)<!--DelEnd-->
   - [off](arkts-multimodalawareness-metadatabinding-off-f.md)
-  - [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md)
   - [on](arkts-multimodalawareness-metadatabinding-on-f.md)
-  - [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md)
   - [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md)
 - [@ohos.multimodalAwareness.motion](arkts-multimodalawareness-motion.md)
   - [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md)
   - [off](arkts-multimodalawareness-motion-off-f.md)
-  - [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md)
   <!--Del-->
   - [offHoverHandChange(系统接口)](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md)<!--DelEnd-->
-  - [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md)
   <!--Del-->
   - [offPickupChange(系统接口)](arkts-multimodalawareness-motion-offpickupchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -64,10 +58,8 @@
   <!--Del-->
   - [offSmartRotateChange(系统接口)](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md)<!--DelEnd-->
   - [on](arkts-multimodalawareness-motion-on-f.md)
-  - [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md)
   <!--Del-->
   - [onHoverHandChange(系统接口)](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md)<!--DelEnd-->
-  - [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md)
   <!--Del-->
   - [onPickupChange(系统接口)](arkts-multimodalawareness-motion-onpickupchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -165,9 +157,7 @@
   <!--Del-->
   - [configure(系统接口)](arkts-multimodalawareness-userstatus-configure-f-sys.md)<!--DelEnd-->
   - [off](arkts-multimodalawareness-userstatus-off-f.md)
-  - [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md)
   - [on](arkts-multimodalawareness-userstatus-on-f.md)
-  - [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md)
   <!--Del-->
   - [queryCapabilities(系统接口)](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md)<!--DelEnd-->
   <!--Del-->

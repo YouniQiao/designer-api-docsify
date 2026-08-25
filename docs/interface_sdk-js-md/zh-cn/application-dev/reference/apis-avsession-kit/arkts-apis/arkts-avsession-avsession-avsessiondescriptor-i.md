@@ -4,14 +4,12 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## elementName
@@ -25,8 +23,6 @@ elementName: ElementName
 **类型：** [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -42,8 +38,6 @@ isActive: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 ## isTopSession
@@ -57,8 +51,6 @@ isTopSession: boolean
 **类型：** boolean
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
@@ -74,8 +66,6 @@ sessionId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 ## sessionTag
@@ -90,8 +80,6 @@ sessionTag: string
 
 **起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager
 
 ## type
@@ -105,7 +93,5 @@ type: AVSessionType
 **类型：** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Manager

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getActiveGeoFences
 
 ```TypeScript
-function getActiveGeoFences(): Promise<Map<int, Geofence>>
+function getActiveGeoFences(): Promise<Map<number, Geofence>>
 ```
 
 查询当前有效的围栏信息。使用Promise异步回调。调用该接口前建议先通过 [geoLocationManager.isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md)接口判断对应能力是否支持。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -26,7 +24,7 @@ function getActiveGeoFences(): Promise<Map<int, Geofence>>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;Map & lt;number, Geofence & gt; & gt;<br>ArkTS-Sta：Promise & lt;Map & lt;int, Geofence & gt; & gt; |
+| Promise & lt;Map & lt;number, Geofence & gt; & gt; |
 
 **错误码：**
 
@@ -34,27 +32,3 @@ function getActiveGeoFences(): Promise<Map<int, Geofence>>
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  if (geoLocationManager.isGnssFenceServiceSupported()) {
-    geoLocationManager.getActiveGeoFences().then((res) => {
-      if (res) {
-        console.info("fence num:" + res.size);
-        for (const item of res) {
-          console.info("data=" + JSON.stringify(item));
-        }
-      }
-    })
-      .catch((error: BusinessError) => {
-        console.error('promise, getActiveGeoFences: error=' + JSON.stringify(error));
-      });
-  }
-} catch (error) {
-  console.error("getActiveGeoFences: errCode" + error.code + ", errMessage" + error.message);
-}
-```

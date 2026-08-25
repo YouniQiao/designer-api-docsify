@@ -7,14 +7,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## isLcdFlashSupported
@@ -26,8 +24,6 @@ isLcdFlashSupported(): boolean
 Checks whether the LCD flash is supported.
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -45,11 +41,3 @@ Checks whether the LCD flash is supported.
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) |
-
-**示例**
-
-```TypeScript
-function isLcdFlashSupported(nightPhotoSession: camera.NightPhotoSession): boolean {
-  return nightPhotoSession.isLcdFlashSupported();
-}
-```

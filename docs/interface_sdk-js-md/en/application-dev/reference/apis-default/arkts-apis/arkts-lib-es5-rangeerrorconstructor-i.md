@@ -1,7 +1,5 @@
 # RangeErrorConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (message?: string): RangeError
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@
 ```TypeScript
 new(message?: string): RangeError
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -50,5 +44,3 @@ readonly prototype: RangeError
 ```
 
 **Type:** RangeError
-
-**ArkTS mode:** 

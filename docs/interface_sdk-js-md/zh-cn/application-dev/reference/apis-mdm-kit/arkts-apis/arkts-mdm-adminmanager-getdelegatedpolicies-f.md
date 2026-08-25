@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDelegatedPolicies
@@ -15,8 +15,6 @@ function getDelegatedPolicies(admin: Want, bundleName: string): Array<string>
 查询被委托应用可访问的策略列表。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_DELEGATED_POLICY
 
@@ -45,24 +43,3 @@ function getDelegatedPolicies(admin: Want, bundleName: string): Array<string>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let admin: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  let policies: Array<string> = adminManager.getDelegatedPolicies(admin, "com.example.enterprise.xxx");
-  console.info(`Succeeded in getting delegated policies.${JSON.stringify(policies)}`);
-} catch (err) {
-  console.error(`Failed to get delegated policies. Code: ${err.code}, message: ${err.message}`);
-}
-```

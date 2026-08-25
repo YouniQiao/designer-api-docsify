@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## isExternalLogManagerRegistered
@@ -15,8 +15,6 @@ function isExternalLogManagerRegistered(): boolean
 Query if external log manager is already registered
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 

@@ -4,8 +4,6 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## onContinuousTaskStart
@@ -26,8 +24,6 @@ onContinuousTaskStart(info: ContinuousTaskInfo): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -39,24 +35,6 @@ onContinuousTaskStart(info: ContinuousTaskInfo): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-let backgroundTaskSubscriber: backgroundTaskManager.BackgroundTaskSubscriber = {
-  onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-  },
-  onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-  },
-  onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-  }
-}
-```
 
 ## onContinuousTaskStop
 
@@ -68,8 +46,6 @@ onContinuousTaskStop(info: ContinuousTaskInfo): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -81,24 +57,6 @@ onContinuousTaskStop(info: ContinuousTaskInfo): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-let backgroundTaskSubscriber: backgroundTaskManager.BackgroundTaskSubscriber = {
-  onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-  },
-  onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-  },
-  onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-  }
-}
-```
 
 ## onContinuousTaskUpdate
 
@@ -110,8 +68,6 @@ onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -123,21 +79,3 @@ onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | info | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-let backgroundTaskSubscriber: backgroundTaskManager.BackgroundTaskSubscriber = {
-  onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-  },
-  onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-  },
-  onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-    console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-  }
-}
-```

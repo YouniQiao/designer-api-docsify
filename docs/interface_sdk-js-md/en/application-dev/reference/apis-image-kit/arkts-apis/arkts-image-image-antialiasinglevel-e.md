@@ -4,8 +4,6 @@ Enumerates the anti-aliasing levels.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## NONE
@@ -17,8 +15,6 @@ NONE = 0
 Nearest neighbor interpolation.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -34,8 +30,6 @@ Bilinear interpolation.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -50,8 +44,6 @@ Bilinear interpolation with mipmap enabled. You are advised to use this value wh
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -65,8 +57,6 @@ HIGH = 3
 Cubic interpolation.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ComposeTitleBar, ComposeTitleBarMenuItem } from '@kit.ArkUI';
+import { ComposeTitleBar, ComposeTitleBarMenuItem } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

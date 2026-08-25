@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## getCurrentDistrict
@@ -15,8 +15,6 @@ function getCurrentDistrict(params?: DistrictRequestParams): Promise<DistrictInf
 获取当前设备所在区域的信息。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** ArkTS-Dyn起始版本为26.0.0；ArkTS-Sta起始版本为26.1.0。
 
 **需要权限：** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -47,40 +45,3 @@ function getCurrentDistrict(params?: DistrictRequestParams): Promise<DistrictInf
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-位置功能的开关未开启导致功能失败) |
 | [3301500](../errorcode-geoLocationManager.md#3301500-区域信息包含国家码查询失败) |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 参数配置一：指定语言/国家/超时时间
-try {
-  let params: geoLocationManager.DistrictRequestParams = {
-    locale: "en",
-    timeoutMs: 5000
-  }
-  geoLocationManager.getCurrentDistrict(params).then((res) => {
-    if (res) {
-      console.info("getCurrentDistrict result:" + res);
-    }
-  })
-  .catch((error: BusinessError) => {
-    console.error('promise, getCurrentDistrict: error=' + JSON.stringify(error));
-  });
-} catch (error) {
-  console.error("getCurrentDistrict: errCode" + error.code + ", errMessage" + error.message);
-}
-// 参数配置二：使用默认值
-try {
-  geoLocationManager.getCurrentDistrict().then((res) => {
-    if (res) {
-      console.info("getCurrentDistrict result:" + res);
-    }
-  })
-  .catch((error: BusinessError) => {
-    console.error('promise, getCurrentDistrict: error=' + JSON.stringify(error));
-  });
-} catch (error) {
-  console.error("getCurrentDistrict: errCode" + error.code + ", errMessage" + error.message);
-}
-```

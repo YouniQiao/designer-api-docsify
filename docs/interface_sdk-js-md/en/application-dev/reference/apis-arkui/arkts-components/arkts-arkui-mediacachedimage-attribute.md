@@ -2,11 +2,9 @@
 
 Attributes of MediaCachedImage inherited from ImageAttribute.@extends ImageAttribute
 
-**Inheritance/Implementation:** MediaCachedImageAttribute extends ImageAttribute
+**Inheritance/Implementation:** MediaCachedImageAttribute extends [ImageAttribute](arkts-arkui-image-attribute.md#imageattribute)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

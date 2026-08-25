@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## sppListen
@@ -15,8 +15,6 @@ function sppListen(name: string, option: SppOption, callback: AsyncCallback<numb
 Creates a Bluetooth server listening socket. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -47,24 +45,3 @@ Creates a Bluetooth server listening socket. On API 10 and above, the permission
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let serverNumber = -1;
-function serverSocket(code: BusinessError, number: number) {
-  console.info(`bluetooth error code: ${code.code}`);
-  if (code.code == 0) {
-    console.info(`bluetooth serverSocket Number: ${number}`);
-    serverNumber = number;
-  }
-}
-
-let sppOption: bluetoothManager.SppOption = {uuid: '00001810-0000-1000-8000-00805F9B34FB', secure: false, type: 0};
-try {
-    bluetoothManager.sppListen('server1', sppOption, serverSocket);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```

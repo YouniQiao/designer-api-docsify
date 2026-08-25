@@ -4,8 +4,6 @@ Information about an exempted application.@interface ExemptedAppInfo
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Information about an exempted application.@interface ExemptedAppInfo
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from '@kit.BackgroundTasksKit';
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## duration
 
 ```TypeScript
-duration: int
+duration: number
 ```
 
-The exemption duration. <br>Unit:s
+The exemption duration. Unit:s
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
@@ -46,8 +42,6 @@ The application name.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 
 **System API:** This is a system API.
@@ -55,16 +49,14 @@ The application name.
 ## resourceTypes
 
 ```TypeScript
-resourceTypes: int
+resourceTypes: number
 ```
 
 The set of resource types that an application requests.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.DeviceStandby
 

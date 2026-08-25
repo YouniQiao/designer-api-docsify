@@ -4,8 +4,6 @@ ServiceExtensionAbility模块提供后台服务相关扩展能力，提供后台
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ ServiceExtensionAbility模块提供后台服务相关扩展能力，提供后台
 ## 导入模块
 
 ```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
+import { ServiceExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate
@@ -25,8 +23,6 @@ onConfigurationUpdate(newConfig: Configuration): void
 当Extension更新配置信息时调用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,18 +36,6 @@ onConfigurationUpdate(newConfig: Configuration): void
 | --- | --- | --- |
 | newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 |
 
-**示例**
-
-```TypeScript
-import { ServiceExtensionAbility, Configuration } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  onConfigurationUpdate(newConfig: Configuration) {
-    console.info(`onConfigurationUpdate, config: ${JSON.stringify(newConfig)}`);
-  }
-}
-```
-
 ## onConnect
 
 ```TypeScript
@@ -61,8 +45,6 @@ onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 Extension生命周期回调，如果是connectAbility拉起的服务，会在onCreate之后回调。返回一个RemoteObject对象，用于客户端和服务端进行通信。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,103 +64,6 @@ Extension生命周期回调，如果是connectAbility拉起的服务，会在onC
 | --- |
 | rpc.RemoteObject \| Promise & lt;rpc.RemoteObject & gt; |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-
-class StubTest extends rpc.RemoteObject{
-  constructor(des: string) {
-    super(des);
-  }
-  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
-  }
-}
-class ServiceExt extends ServiceExtensionAbility {
-  onConnect(want: Want) {
-    console.info(`onConnect, want: ${want.abilityName}`);
-    return new StubTest('test');
-  }
-}
-```
-
-如果生成返回值RemoteObject依赖一个异步接口，可以使用异步生命周期：
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-
-class StubTest extends rpc.RemoteObject{
-  constructor(des: string) {
-    super(des);
-  }
-  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
-  }
-}
-async function getDescriptor() {
-  // 调用异步函数...
-  return "asyncTest"
-}
-class ServiceExt extends ServiceExtensionAbility {
-  async onConnect(want: Want) {
-    console.info(`onConnect, want: ${want.abilityName}`);
-    let descriptor = await getDescriptor();
-    return new StubTest(descriptor);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import rpc from '@ohos.rpc';
-
-class StubTest extends rpc.RemoteObject{
-  constructor(des: string) {
-    super(des);
-  }
-  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
-  }
-}
-class ServiceExt extends ServiceExtensionAbility {
-  onConnect(want: Want) {
-    console.info(`onConnect, want: ${want.abilityName}`);
-    return new StubTest('test');
-  }
-}
-```
-
-如果生成返回值RemoteObject依赖一个异步接口，可以使用异步生命周期：
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import rpc from '@ohos.rpc';
-
-class StubTest extends rpc.RemoteObject{
-  constructor(des: string) {
-    super(des);
-  }
-  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
-  }
-}
-async function getDescriptor() {
-  // 调用异步函数...
-  return "asyncTest"
-}
-class ServiceExt extends ServiceExtensionAbility {
-  async onConnect(want: Want) {
-    console.info(`onConnect, want: ${want.abilityName}`);
-    let descriptor = await getDescriptor();
-    return new StubTest(descriptor);
-  }
-}
-```
-
 ## onCreate
 
 ```TypeScript
@@ -188,8 +73,6 @@ onCreate(want: Want): void
 Extension生命周期回调，在创建时回调，执行初始化业务逻辑操作。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -202,18 +85,6 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-
-**示例**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    console.info(`onCreate, want: ${want.abilityName}`);
-  }
-}
-```
 
 ## onDestroy
 
@@ -225,25 +96,11 @@ Extension生命周期回调，在销毁时回调，执行资源清理等操作�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  onDestroy() {
-    console.info('onDestroy');
-  }
-}
-```
 
 ## onDisconnect
 
@@ -255,8 +112,6 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -268,94 +123,6 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-
-**示例**
-
-同步回调示例如下：
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  onDisconnect(want: Want) {
-    console.info(`onDisconnect, want: ${want.abilityName}`);
-  }
-}
-```
-
-Promise异步回调示例如下：
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  async onDisconnect(want: Want) {
-    console.info(`onDisconnect, want: ${want.abilityName}`);
-    // 调用异步函数...
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  onDisconnect(want: Want): Promise<void> {
-    console.info(`onDisconnect, want: ${want.abilityName}`);
-  }
-}
-```
-
-在执行完onDisconnect生命周期回调后，应用可能会退出，从而可能导致onDisconnect中的异步函数未能正确执行，比如异步写入数据库。可以使用异步生命周期，以确保异步onDisconnect完成后再继续后续的生命周期。
-
-```TypeScript
-'use static'
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  async onDisconnect(want: Want) {
-    console.info(`onDisconnect, want: ${want.abilityName}`);
-    // 调用异步函数...
-  }
-}
-```
-
-## onDisconnect
-
-```TypeScript
-onDisconnect(want: Want): Promise<void> | undefined
-```
-
-Extension的生命周期回调，客户端执行断开连接服务时回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| Promise & lt;void & gt; \ | undefined |
-
-**示例**
-
-参见 [onDisconnect](#ondisconnect)
 
 ## onDump
 
@@ -366,8 +133,6 @@ onDump(params: Array<string>): Array<string>
 转储客户端信息时调用。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -387,19 +152,6 @@ onDump(params: Array<string>): Array<string>
 | --- |
 | Array & lt;string & gt; |
 
-**示例**
-
-```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  onDump(params: Array<string>) {
-    console.info(`dump, params: ${JSON.stringify(params)}`);
-    return ['params'];
-  }
-}
-```
-
 ## onReconnect
 
 ```TypeScript
@@ -410,8 +162,6 @@ Extension的生命周期回调，当所有以前的客户端都断开连接之�
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -424,36 +174,16 @@ Extension的生命周期回调，当所有以前的客户端都断开连接之�
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
 
-**示例**
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  onReconnect(want: Want) {
-    console.info(`onReconnect, want: ${want.abilityName}`);
-  }
-}
-```
-
 ## onRequest
 
-ArkTS-Dyn:
 ```TypeScript
 onRequest(want: Want, startId: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onRequest(want: Want, startId: int): void
 ```
 
 Extension生命周期回调，如果是startAbility或者startServiceExtensionAbility拉起的服务，会在onCreate之后回调。每次拉起服务都会回调，startId会递增。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -465,34 +195,7 @@ Extension生命周期回调，如果是startAbility或者startServiceExtensionAb
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| startId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  onRequest(want: Want, startId: number) {
-    console.info(`onRequest, want: ${want.abilityName}`);
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-
-class ServiceExt extends ServiceExtensionAbility {
-  onRequest(want: Want, startId: int) {
-    console.info(`onRequest, want: ${want.abilityName}`);
-  }
-}
-```
+| startId | number | 是 |
 
 ## context
 
@@ -505,8 +208,6 @@ ServiceExtension的上下文环境，继承自ExtensionContext。
 **类型：** [ServiceExtensionContext](../../apis-default/arkts-apis/arkts-serviceextensioncontext-c-sys.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

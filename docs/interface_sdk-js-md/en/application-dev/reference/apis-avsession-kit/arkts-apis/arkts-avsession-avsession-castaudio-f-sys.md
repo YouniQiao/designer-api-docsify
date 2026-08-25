@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## castAudio
@@ -15,8 +15,6 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 Cast Audio to the remote devices or cast back local device
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -43,55 +41,6 @@ Cast Audio to the remote devices or cast back local device
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
 | [6600104](../errorcode-avsession.md#6600104-remote-session-connection-failure) |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioManager = audio.getAudioManager();
-let audioRoutingManager = audioManager.getRoutingManager();
-let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
-audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
-  audioDevices = data;
-  console.info('Promise returned to indicate that the device list is obtained.');
-}).catch((err: BusinessError) => {
-  console.error(`GetDevices BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-
-if (audioDevices !== undefined) {
-  avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors).then(() => {
-    console.info('CreateController : SUCCESS');
-  }).catch((err: BusinessError) => {
-    console.error(`CreateController BusinessError: code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let audioManager = audio.getAudioManager();
-let audioRoutingManager = audioManager.getRoutingManager();
-let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
-audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
-  audioDevices = data;
-  console.info('Promise returned to indicate that the device list is obtained.');
-  if (audioDevices !== undefined) {
-    avSession.castAudio('all', audioDevices as audio.AudioDeviceDescriptors, (err: BusinessError) => {
-      if (err) {
-        console.error(`CastAudio BusinessError: code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info('CastAudio : SUCCESS ');
-      }
-    });
-  }
-}).catch((err: BusinessError) => {
-  console.error(`GetDevices BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## castAudio
 
@@ -102,8 +51,6 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 Cast Audio to the remote devices or cast back local device
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -134,7 +81,3 @@ Cast Audio to the remote devices or cast back local device
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
 | [6600104](../errorcode-avsession.md#6600104-remote-session-connection-failure) |
-
-**Examples**
-
-See [castAudio](#castaudio)

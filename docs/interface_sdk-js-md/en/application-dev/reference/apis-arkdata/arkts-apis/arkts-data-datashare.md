@@ -4,8 +4,6 @@ The **DataShare** module allows an application to manage its own data and share 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -13,7 +11,7 @@ The **DataShare** module allows an application to manage its own data and share 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

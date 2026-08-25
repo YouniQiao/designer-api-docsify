@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'kits/@kit.NetworkKit';
 ```
 
 ## replyCustomEapData
@@ -19,8 +19,6 @@ function replyCustomEapData(result: CustomResult, data: EapData): void
 > - 若用于处理发EAP数据包(tx)时的callback，传给系统的EAP数据为经过添加定制部分后的EAP数据。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 

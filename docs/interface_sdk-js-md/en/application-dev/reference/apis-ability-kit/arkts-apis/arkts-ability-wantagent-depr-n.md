@@ -4,8 +4,6 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [wantAgent/wantAgent](arkts-ability-wantagent-n.md)

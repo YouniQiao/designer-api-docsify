@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpJsRawHeapData
@@ -17,11 +17,10 @@ Dumps the original heap snapshot of the VM for the current thread and generates 
 > **NOTE：**&gt;
 > This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to
 > delete the files immediately after processing them.&gt;
-> This API is valid only when the **Developer options** is enabled.
+> You are advised to enable **Developer options** before calling this API, so that the calling quota is not
+> limited. The setting takes effect after the device is restarted.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.1.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -52,18 +51,6 @@ Dumps the original heap snapshot of the VM for the current thread and generates 
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) |
 | [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) |
 
-**Examples**
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-hidebug.dumpJsRawHeapData().then((filePath: string) => {
-  console.info(`dumpJsRawHeapData success and generated file path is ${filePath}`)
-}).catch((error: BusinessError) => {
-  console.error(`error code: ${error.code}, error msg: ${error.message}`);
-})
-```
-
 
 ## dumpJsRawHeapData
 
@@ -71,11 +58,15 @@ hidebug.dumpJsRawHeapData().then((filePath: string) => {
 function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 ```
 
-Dumps the original heap snapshot of the VM for the current thread. The API uses a promise to return the path of the.rawheap file. You can use rawheap-translator to convert the generated file into a .heapsnapshot file for parsing. The generated file will be stored in a folder within the application directory. However, since this file is usually large, the system imposes restrictions on the frequency and number of calls to this function. Consequently, you might fail to obtain the dump file due to quota limitations. These failures will persist until the quota is regularly refreshed by the system. Therefore, it is advisable to delete the file immediately after you have finished processing it. Moreover, it is recommended that you use this function in the gray - release version.
+Dumps the original heap snapshot of the VM for the current thread and clears the **nodeId** cache. The generated file is in the rawheap format. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing.
+
+> **NOTE：**&gt;
+> This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to
+> delete the files immediately after processing them.&gt;
+> You are advised to enable **Developer options** before calling this API, so that the calling quota is not
+> limited. The setting takes effect after the device is restarted.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,10 +100,6 @@ Dumps the original heap snapshot of the VM for the current thread. The API uses 
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) |
 | [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) |
 
-**Examples**
-
-See [dumpJsRawHeapData](#dumpjsrawheapdata)
-
 
 ## dumpJsRawHeapData
 
@@ -120,11 +107,15 @@ See [dumpJsRawHeapData](#dumpjsrawheapdata)
 function dumpJsRawHeapData(needGC: boolean, needClean: boolean, processDump: boolean): Promise<Array<string>>
 ```
 
-Dump the raw heap snapshot of the JavaScript Virtual Machine for the current thread.The generated file will be stored in a folder within the application directory. However, since this file is usually large, the system imposes restrictions on the frequency and number of calls to this function. Consequently, you might fail to obtain the dump file due to quota limitations. These failures will persist until the quota is regularly refreshed by the system. Therefore, it is advisable to delete the file immediately after you have finished processing it. Moreover, it is recommended that you use this function in the gray - release version.
+Dumps the original heap snapshot of the VM for the current thread or the process to which the current thread belongs, clears the nodeId cache, and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing.
+
+> **NOTE：**&gt;
+> This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to
+> delete the files immediately after processing them.&gt;
+> You are advised to enable **Developer options** before calling this API, so that the calling quota is not
+> limited. The setting takes effect after the device is restarted.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,7 +149,3 @@ Dump the raw heap snapshot of the JavaScript Virtual Machine for the current thr
 | [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-node-api) |
 | [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) |
 | [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) |
-
-**Examples**
-
-See [dumpJsRawHeapData](#dumpjsrawheapdata)

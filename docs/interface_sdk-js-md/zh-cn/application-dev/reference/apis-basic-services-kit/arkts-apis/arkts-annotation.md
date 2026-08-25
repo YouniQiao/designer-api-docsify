@@ -10,18 +10,18 @@
 ## 导入模块
 
 ```TypeScript
-import { Available, SuppressWarnings, SuppressWarningsType } from '@kit.BasicServicesKit';
-import { Available } from '@kit.BasicServicesKit';
+import { Available, SuppressWarnings, SuppressWarningsType } from 'kits/@kit.BasicServicesKit';
+import { Available } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## 汇总
 
-### 接口
+### 注解
 
 | 名称 |
 | --- |
-| [Available(Annotation)](arkts-basicservices-annotation-available-i.md) |
-| [SuppressWarnings(Annotation)](arkts-basicservices-annotation-suppresswarnings-i.md) |
+| [Available(Annotation)](arkts-basicservices-annotation-available-a.md) |
+| [SuppressWarnings(Annotation)](arkts-basicservices-annotation-suppresswarnings-a.md) |
 
 ### 枚举
 

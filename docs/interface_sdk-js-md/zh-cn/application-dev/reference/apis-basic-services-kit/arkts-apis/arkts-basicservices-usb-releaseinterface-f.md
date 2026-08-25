@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## releaseInterface
@@ -15,8 +15,6 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 释放注册过的通信接口。需要调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md)先获取接口，才能使用此方法释放接口。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -36,10 +34,3 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 | 类型 |
 | --- |
 | number |
-
-**示例**
-
-```TypeScript
-let ret = usb.releaseInterface(devicepipe, interfaces);
-console.info(`releaseInterface = ${ret}`);
-```

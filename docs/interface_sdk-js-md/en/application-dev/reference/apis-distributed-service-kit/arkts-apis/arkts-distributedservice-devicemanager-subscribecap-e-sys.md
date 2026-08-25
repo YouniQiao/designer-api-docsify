@@ -4,8 +4,6 @@ Enumerates the discovery capabilities.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -22,8 +20,6 @@ DDMP capability. This will be deprecated later.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -39,8 +35,6 @@ SUBSCRIBE_CAPABILITY_OSD = 1
 OSD capability.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 

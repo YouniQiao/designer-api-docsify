@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## install
@@ -18,8 +18,6 @@ function install(admin: Want, hapFilePaths: Array<string>, installParam?: Instal
 > 该接口比较耗时，当调用此接口后，后续如果在应用主线程调用其他同步接口时需要等待该接口异步返回。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -50,101 +48,3 @@ function install(admin: Want, hapFilePaths: Array<string>, installParam?: Instal
 | [9201002](../errorcode-enterpriseDeviceManager.md#9201002-企业应用安装失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 为当前用户安装应用
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-
-bundleManager.install(wantTemp, hapFilePaths).then(() => {
-  console.info('Succeeded in installing bundles.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 为所有用户安装应用
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-const params: Record<string, string> = {
-  'ohos.bms.param.enterpriseForAllUser': 'true'
-};
-let installParam: bundleManager.InstallParam = {
-  // 需根据实际情况进行替换
-  userId: 100,
-  installFlag: 0,
-  parameters: params
-};
-bundleManager.install(wantTemp, hapFilePaths, installParam).then(() => {
-  console.info('Succeeded in installing bundles.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-
-bundleManager.install(wantTemp, hapFilePaths, (err) => {
-  if (err) {
-    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in installing bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
-let installParam: bundleManager.InstallParam = {
-  userId: 100,
-  installFlag: 1,
-};
-
-bundleManager.install(wantTemp, hapFilePaths, installParam, (err) => {
-  if (err) {
-    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in installing bundles');
-});
-```

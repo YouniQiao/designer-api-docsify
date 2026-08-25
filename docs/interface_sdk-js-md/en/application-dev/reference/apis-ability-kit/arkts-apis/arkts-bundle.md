@@ -8,8 +8,6 @@ The module provides APIs for obtaining information about an application, includi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [bundleManager](arkts-bundle-bundlemanager.md)
@@ -19,7 +17,7 @@ The module provides APIs for obtaining information about an application, includi
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

@@ -1,20 +1,26 @@
 # @ohos.data.relationalStore(关系型数据库)
 
-关系型数据库（Relational Database，RDB）是一种基于关系模型来管理数据的数据库。关系型数据库基于SQLite组件提供了一套完整的对本地数据库进行管理的机制，对外提供了一系列的增、删、改、查等接口，也可以直接运行用户 输入的SQL语句来满足复杂的场景需要。支持通过[ResultSet.getSendableRow](arkts-arkdata-relationalstore-resultset-i.md#getsendablerow)方法获取Sendable数据，进行跨线程 传递。为保证插入并读取数据成功，建议一条数据不超过2MB。如果数据超过2MB，插入操作将成功，读取操作将失败。大数据量场景下查询数据可能会导致耗时长甚至应用卡死，如有相关操作可参考文档[批量数据写数据库场景](../../../arkts-utils/batch-database-operations-guide.md)，且有建议如下：  
-- 单次查询数据量不超过5000条。 - 在[TaskPool](../../apis-arkts/arkts-apis/arkts-taskpool.md)中查询。 - 拼接SQL语句尽量简洁。 - 合理地分批次查询。  
+关系型数据库（Relational Database，RDB）是一种基于关系模型来管理数据的数据库。关系型数据库基于SQLite组件提供了一套完整的对本地数据库进行管理的机制，对外提供了一系列的增、删、改、查等接口，也可以直接运行用户 输入的SQL语句来满足复杂的场景需要。支持通过[ResultSet.getSendableRow](arkts-arkdata-relationalstore-resultset-i.md#getsendablerow)方法获取Sendable数据，进行跨线程 传递。为保证插入并读取数据成功，建议一条数据不超过2MB。如果数据超过2MB，插入操作将成功，读取操作将失败。大数据量场景下查询数据可能会导致耗时长甚至应用卡死，如有相关操作可参考文档[批量数据写数据库场景](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/arkts-utils/batch-database-operations-guide.md)，且有建议如下：  
+- 单次查询数据量不超过5000条。  
+- 在[TaskPool](../../apis-arkts/arkts-apis/arkts-taskpool.md)中查询。  
+- 拼接SQL语句尽量简洁。  
+- 合理地分批次查询。  
 该模块提供以下关系型数据库相关的常用功能：  
-- [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)：数据库中用来代表数据实体的性质、特征或者数据实体之间关系的谓词，主要用来定义数据库的操作条件。 - [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)：提供管理关系数据库（RDB）方法的接口。 - [ResultSet](arkts-arkdata-relationalstore-resultset-i.md)：提供用户调用关系型数据库查询接口之后返回的结果集合。 - [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)：提供用户调用关系型数据库 [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount)、 [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount)等查询接口之后返回的结果集合。与 [ResultSet](arkts-arkdata-relationalstore-resultset-i.md)相比，LiteResultSet不包含查询结果的总行数信息。 - [Transaction](arkts-arkdata-relationalstore-transaction-i.md)：提供管理事务对象的接口。
+- [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)：数据库中用来代表数据实体的性质、特征或者数据实体之间关系的谓词，主要用来定义数据库的操作条件。  
+- [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)：提供管理关系数据库（RDB）方法的接口。  
+- [ResultSet](arkts-arkdata-relationalstore-resultset-i.md)：提供用户调用关系型数据库查询接口之后返回的结果集合。  
+- [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)：提供用户调用关系型数据库  
+[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount)、 [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount)等查询接口之后返回的结果集合。与 [ResultSet](arkts-arkdata-relationalstore-resultset-i.md)相比，LiteResultSet不包含查询结果的总行数信息。  
+- [Transaction](arkts-arkdata-relationalstore-transaction-i.md)：提供管理事务对象的接口。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## 汇总

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from '@kit.DistributedServiceKit';
+import { conversation } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## registerConversationListener
@@ -20,8 +20,6 @@ Registers a listener to receive data from trusted devices under the same account
 **API called in pairs:** This API must be used in pairs with [unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md), which is called to unregister the listener to release resources.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.sec.ACCESS_UDID
 

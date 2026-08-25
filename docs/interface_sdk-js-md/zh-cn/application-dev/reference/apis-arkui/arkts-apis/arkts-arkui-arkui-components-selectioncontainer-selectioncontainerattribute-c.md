@@ -1,6 +1,6 @@
 # SelectionContainerAttribute
 
-支持通用属性。支持通用事件。
+支持[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)。支持[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)。
 
 > **说明：**&gt;
 > - 不支持隐私遮罩。&gt;
@@ -11,44 +11,13 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from '@kit.ArkUI';
+import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from 'kits/@kit.ArkUI';
 ```
-
-## attributeModifier
-
-```TypeScript
-default attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | AttributeModifier<CommonMethod>
-    | undefined): this
-```
-
-设置组件的动态属性。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | AttributeModifier&lt;[SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; \| AttributeModifier & lt;CommonMethod & gt; \ | undefined | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
 
 ## bindSelectionMenu
 
@@ -57,11 +26,9 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
     responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute
 ```
 
-绑定到选择菜单。<p>&lt;strong&gt;注意&lt;/strong&gt;： <br>长按手势需要的时间，bindSelectionMenu为600ms,bindContextMenu为800 ms。 <br>当bindSelectionMenu和bindContextMenu都设置了，并且都设置为长按触发 手势， bindSelectionMenu首先被触发。 <br>如果自定义菜单过长，可以嵌入一个Scroll组件，防止键盘被遮挡。 </p>
+绑定到选择菜单。<p>&lt;strong&gt;注意&lt;/strong&gt;： 长按手势需要的时间，bindSelectionMenu为600ms,bindContextMenu为800 ms。 当bindSelectionMenu和bindContextMenu都设置了，并且都设置为长按触发 手势， bindSelectionMenu首先被触发。 如果自定义菜单过长，可以嵌入一个Scroll组件，防止键盘被遮挡。 </p>
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,10 +40,10 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| spanType | Optional & lt;TextSpanType & gt; | 是 |
-| content | Optional & lt;CustomBuilder & gt; | 是 |
-| responseType | Optional & lt;TextResponseType & gt; | 是 |
-| options | Optional&lt;[SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | 否 |
+| spanType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextSpanType](../arkts-components/arkts-arkui-textspantype-e.md)&gt; | 是 |
+| content | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)&gt; | 是 |
+| responseType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextResponseType](../arkts-components/arkts-arkui-textresponsetype-e.md)&gt; | 是 |
+| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | 否 |
 
 **返回值：**
 
@@ -98,8 +65,6 @@ caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -110,7 +75,7 @@ caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | Optional & lt;ResourceColor & gt; | 是 |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -131,8 +96,6 @@ copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -143,7 +106,7 @@ copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Optional & lt;CopyOptions & gt; | 是 |
+| value | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;CopyOptions&gt; | 是 |
 
 **返回值：**
 
@@ -166,8 +129,6 @@ editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): Selectio
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -178,7 +139,7 @@ editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): Selectio
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| editMenu | Optional&lt;[SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md)&gt; | 是 |
+| editMenu | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md)&gt; | 是 |
 
 **返回值：**
 
@@ -196,8 +157,6 @@ enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -208,7 +167,7 @@ enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isEnabled | Optional & lt;boolean & gt; | 是 |
+| isEnabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 **返回值：**
 
@@ -230,8 +189,6 @@ onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -242,7 +199,7 @@ onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional & lt;Callback & lt;string & gt; & gt; | 是 |
+| callback | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;Callback&lt;string&gt;&gt; | 是 |
 
 **返回值：**
 
@@ -265,8 +222,6 @@ SelectionContainer中选中文本发生变化时触发该回调。使用callback
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -277,7 +232,7 @@ SelectionContainer中选中文本发生变化时触发该回调。使用callback
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional & lt;Callback & lt;Array & lt;string & gt; & gt; & gt; | 是 |
+| callback | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;Callback&lt;Array&lt;string&gt;&gt;&gt; | 是 |
 
 **返回值：**
 
@@ -299,8 +254,6 @@ onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAtt
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -311,7 +264,7 @@ onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAtt
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional & lt;Callback & lt;string, boolean & gt; & gt; | 是 |
+| callback | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;Callback&lt;string, boolean&gt;&gt; | 是 |
 
 **返回值：**
 
@@ -334,8 +287,6 @@ selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttri
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -346,29 +297,7 @@ selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttri
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | Optional & lt;ResourceColor & gt; | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |
-
-## setSelectionContainerOptions
-
-```TypeScript
-default setSelectionContainerOptions(): this
-```
-
-设置SelectionContainer选项。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -393,8 +322,6 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -405,7 +332,7 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional&lt;[SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md)&gt; | 是 |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md)&gt; | 是 |
 
 **返回值：**
 

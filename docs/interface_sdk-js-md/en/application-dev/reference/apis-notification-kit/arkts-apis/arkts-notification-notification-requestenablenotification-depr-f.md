@@ -15,8 +15,6 @@ Requests notification to be enabled for this application. This API uses an async
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md)
@@ -29,32 +27,6 @@ Requests notification to be enabled for this application. This API uses an async
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let requestEnableNotificationCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.info("requestEnableNotification failed " + JSON.stringify(err));
-  } else {
-    console.info("requestEnableNotification success");
-  }
-};
-
-Notification.requestEnableNotification(requestEnableNotificationCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-Notification.requestEnableNotification().then(() => {
-  console.info("requestEnableNotification success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`requestEnableNotification failed, code is ${err}`);
-});
-```
-
 
 ## requestEnableNotification
 
@@ -65,8 +37,6 @@ function requestEnableNotification(): Promise<void>
 Requests notification to be enabled for this application. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -79,7 +49,3 @@ Requests notification to be enabled for this application. This API uses a promis
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [requestEnableNotification](#requestenablenotification)

@@ -4,8 +4,6 @@ CurrentOffsetResultValue@interface CurrentOffsetResultValue
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -19,8 +17,6 @@ Scrolling offset in the x-axis, in px.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -37,8 +33,6 @@ Scrolling offset in the y-axis, in px.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

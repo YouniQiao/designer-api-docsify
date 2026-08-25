@@ -3,14 +3,12 @@
 ## MAX_KEY_LENGTH
 
 ```TypeScript
-const MAX_KEY_LENGTH: int
+const MAX_KEY_LENGTH: number
 ```
 
 Key的最大长度限制为1024个字节。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -19,14 +17,12 @@ Key的最大长度限制为1024个字节。
 ## MAX_VALUE_LENGTH
 
 ```TypeScript
-const MAX_VALUE_LENGTH: int
+const MAX_VALUE_LENGTH: number
 ```
 
 Value的最大长度限制为16MB。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

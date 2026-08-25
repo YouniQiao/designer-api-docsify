@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** Measurable/Layoutable
@@ -26,8 +24,6 @@ layout(childLayoutInfo: LayoutInfo)
 在 onLayout 回调中调用此布局方法，将布局信息分配给子组件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -52,8 +48,6 @@ measure(childConstraint: ConstraintSizeOptions)
 在 onMeasure 回调中调用此 measure 方法以提供子组件的尺寸。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -81,8 +75,6 @@ borderInfo: LayoutBorderInfo
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** Measurable/Layoutable
@@ -99,11 +91,9 @@ constraint: ConstraintSizeOptions
 
 子组件约束
 
-**类型：** ConstraintSizeOptions
+**类型：** [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 
@@ -125,8 +115,6 @@ id: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** Measurable/Layoutable
@@ -147,8 +135,6 @@ name: string
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** Measurable/Layoutable
@@ -168,8 +154,6 @@ position: Position
 **类型：** Position
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 10
 

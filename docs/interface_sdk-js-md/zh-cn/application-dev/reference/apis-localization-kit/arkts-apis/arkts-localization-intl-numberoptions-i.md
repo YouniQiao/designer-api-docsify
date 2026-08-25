@@ -4,14 +4,12 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## compactDisplay
@@ -20,13 +18,11 @@ import { intl } from '@kit.LocalizationKit';
 compactDisplay?: string
 ```
 
-紧凑显示格式，取值包括："long", "short"。默认值：short。不同取值的显示效果请参考[附录表18](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+紧凑显示格式，取值包括："number", "short"。默认值：short。不同取值的显示效果请参考[附录表18](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,8 +40,6 @@ currency?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -61,8 +55,6 @@ currencyDisplay?: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -80,8 +72,6 @@ currencySign?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -97,8 +87,6 @@ locale?: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -116,8 +104,6 @@ localeMatcher?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -125,7 +111,7 @@ localeMatcher?: string
 ## maximumFractionDigits
 
 ```TypeScript
-maximumFractionDigits?: int
+maximumFractionDigits?: number
 ```
 
 表示要使用的最大分数位数，取值范围：[1, 21]。默认值：3。不同取值的显示效果请参考[附录表13](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
@@ -134,8 +120,6 @@ maximumFractionDigits?: int
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -143,7 +127,7 @@ maximumFractionDigits?: int
 ## maximumSignificantDigits
 
 ```TypeScript
-maximumSignificantDigits?: int
+maximumSignificantDigits?: number
 ```
 
 表示要使用的最大有效位数，取值范围：[1, 21]。默认值：21。不同取值的显示效果请参考[附录表15](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
@@ -152,8 +136,6 @@ maximumSignificantDigits?: int
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -161,7 +143,7 @@ maximumSignificantDigits?: int
 ## minimumFractionDigits
 
 ```TypeScript
-minimumFractionDigits?: int
+minimumFractionDigits?: number
 ```
 
 表示要使用的最小分数位数，取值范围：[0, 20]。默认值：0。不同取值的显示效果请参考[附录表12](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
@@ -170,8 +152,6 @@ minimumFractionDigits?: int
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -179,7 +159,7 @@ minimumFractionDigits?: int
 ## minimumIntegerDigits
 
 ```TypeScript
-minimumIntegerDigits?: int
+minimumIntegerDigits?: number
 ```
 
 表示要使用的最小整数位数，取值范围：[1, 21]。默认值：1。不同取值的显示效果请参考[附录表11](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
@@ -188,8 +168,6 @@ minimumIntegerDigits?: int
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -197,7 +175,7 @@ minimumIntegerDigits?: int
 ## minimumSignificantDigits
 
 ```TypeScript
-minimumSignificantDigits?: int
+minimumSignificantDigits?: number
 ```
 
 表示要使用的最小有效位数，取值范围：[1, 21]。默认值：1。不同取值的显示效果请参考[附录表14](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
@@ -205,8 +183,6 @@ minimumSignificantDigits?: int
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -224,8 +200,6 @@ notation?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -242,8 +216,6 @@ numberingSystem?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -251,7 +223,7 @@ numberingSystem?: string
 ## roundingIncrement
 
 ```TypeScript
-roundingIncrement?: int
+roundingIncrement?: number
 ```
 
 表示舍入增量，取值范围：1，2，5，10，20，25，50，100，200，250，500，1000，2000，2500，5000。默认值：1。
@@ -259,8 +231,6 @@ roundingIncrement?: int
 **类型：** number
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -278,8 +248,6 @@ roundingMode?: string
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -295,8 +263,6 @@ roundingPriority?: string
 **类型：** string
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -314,8 +280,6 @@ signDisplay?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -331,8 +295,6 @@ style?: string
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -350,8 +312,6 @@ unit?: string
 
 **起始版本：** 6
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -362,13 +322,11 @@ unit?: string
 unitDisplay?: string
 ```
 
-单位的显示格式（需设置style为unit），取值包括："long", "short", "narrow"。默认值：short。不同取值的显示效果请参考[附录表21](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+单位的显示格式（需设置style为unit），取值包括："number", "short", "narrow"。默认值：short。不同取值的显示效果请参考[附录表21](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -386,8 +344,6 @@ unitUsage?: string
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -403,8 +359,6 @@ true表示分组显示，false表示不分组显示。默认值：true。不同�
 **类型：** boolean
 
 **起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -9,8 +9,6 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)
@@ -20,7 +18,7 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 ## Modules to Import
 
 ```TypeScript
-import { Vector } from '@kit.ArkTS';
+import { Vector } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -33,8 +31,6 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -43,30 +39,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;T & gt; |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-// Method 1:
-let nums: Array<number> =  vector.convertToArray()
-for (let item of nums) {
-  console.info("value:" + item);
-}
-
-// Method 2:
-let iter = vector[Symbol.iterator]();
-let temp: IteratorResult<number> = iter.next().value;
-while(temp != undefined) {
-  console.info("value:" + temp);
-  temp = iter.next().value;
-}
-```
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 ## add
 
@@ -77,8 +50,6 @@ add(element: T): boolean
 Adds an element at the end of this Vector.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -96,22 +67,6 @@ Adds an element at the end of this Vector.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-class C1 {
-  name: string = ""
-  age: string = ""
-}
-let vector : Vector<string | number | C1 | Array<number>> = new Vector();
-let result = vector.add("a");
-let result1 = vector.add(1);
-let b = [1, 2, 3];
-let result2 = vector.add(b);
-let c: C1 = {name : "Jack", age : "13"};
-let result3 = vector.add(c);
-```
-
 ## clear
 
 ```TypeScript
@@ -122,22 +77,9 @@ Clears all elements in this Vector and sets its length to **0**.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-vector.clear();
-```
 
 ## clone
 
@@ -149,8 +91,6 @@ Clones this Vector and returns a copy. The modification to the copy does not aff
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -160,17 +100,6 @@ Clones this Vector and returns a copy. The modification to the copy does not aff
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.clone();
-```
 
 ## constructor
 
@@ -182,17 +111,9 @@ A constructor used to create a **Vector** instance.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
-
-**Examples**
-
-```TypeScript
-let vector : Vector<string | number | Array<number>> = new Vector();
-```
 
 ## convertToArray
 
@@ -204,8 +125,6 @@ Converts this Vector into an array.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -216,17 +135,6 @@ Converts this Vector into an array.
 | --- |
 | Array & lt;T & gt; |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.convertToArray();
-```
-
 ## copyToArray
 
 ```TypeScript
@@ -236,8 +144,6 @@ copyToArray(array: Array<T>): void
 Copies elements in this Vector into an array to overwrite elements of the same position indexes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -259,8 +165,6 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -272,19 +176,6 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 | callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | Yes |
 | thisArg | Object | No |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-vector.forEach((value : number, index ?: number) : void => {
-  console.info("value:" + value, "index:" + index);
-});
-```
-
 ## get
 
 ```TypeScript
@@ -294,8 +185,6 @@ get(index: number): T
 Obtains an element at the specified position in this Vector.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -312,17 +201,6 @@ Obtains an element at the specified position in this Vector.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | T |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.get(2);
-```
 
 ## getCapacity
 
@@ -334,8 +212,6 @@ Obtains the capacity of this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -345,17 +221,6 @@ Obtains the capacity of this Vector.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.getCapacity();
-```
 
 ## getFirstElement
 
@@ -367,8 +232,6 @@ Obtains the first element in this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -378,17 +241,6 @@ Obtains the first element in this Vector.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | T |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.getFirstElement();
-```
 
 ## getIndexFrom
 
@@ -400,8 +252,6 @@ Searches for an element forward from the specified position index and returns th
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -418,17 +268,6 @@ Searches for an element forward from the specified position index and returns th
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.getIndexFrom(4, 3);
-```
 
 ## getIndexOf
 
@@ -440,8 +279,6 @@ Obtains the index of the first occurrence of the specified element in this Vecto
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -457,20 +294,6 @@ Obtains the index of the first occurrence of the specified element in this Vecto
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(2);
-vector.add(1);
-vector.add(2);
-vector.add(4);
-let result = vector.getIndexOf(2);
-```
 
 ## getLastElement
 
@@ -482,8 +305,6 @@ Obtains the last element in this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -493,17 +314,6 @@ Obtains the last element in this Vector.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | T |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.getLastElement();
-```
 
 ## getLastIndexFrom
 
@@ -515,8 +325,6 @@ Searches for an element backward from the specified position index and returns t
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -533,17 +341,6 @@ Searches for an element backward from the specified position index and returns t
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.getLastIndexFrom(4,3);
-```
 
 ## getLastIndexOf
 
@@ -555,8 +352,6 @@ Obtains the index of the last occurrence of the specified element in this Vector
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -573,20 +368,6 @@ Obtains the index of the last occurrence of the specified element in this Vector
 | --- |
 | number |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(2);
-vector.add(1);
-vector.add(2);
-vector.add(4);
-let result = vector.getLastIndexOf(2);
-```
-
 ## has
 
 ```TypeScript
@@ -596,8 +377,6 @@ has(element: T): boolean
 Checks whether this Vector has the specified element.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -615,15 +394,6 @@ Checks whether this Vector has the specified element.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<string> = new Vector();
-let result = vector.has("squirrel");
-vector.add("squirrel");
-let result1 = vector.has("squirrel");
-```
-
 ## increaseCapacityTo
 
 ```TypeScript
@@ -633,8 +403,6 @@ increaseCapacityTo(newCapacity: number): void
 Increases the capacity of this Vector.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -646,18 +414,6 @@ Increases the capacity of this Vector.
 | --- | --- | --- |
 | newCapacity | number | Yes |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-vector.increaseCapacityTo(2);
-vector.increaseCapacityTo(12);
-```
-
 ## insert
 
 ```TypeScript
@@ -667,8 +423,6 @@ insert(element: T, index: number): void
 Inserts an element within the length range and moves its subsequent elements rightwards.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -681,15 +435,6 @@ Inserts an element within the length range and moves its subsequent elements rig
 | element | T | Yes |
 | index | number | Yes |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<string | number | Object | Array<number>> = new Vector();
-vector.insert("A", 0);
-vector.insert(0, 1);
-vector.insert(true, 2);
-```
-
 ## isEmpty
 
 ```TypeScript
@@ -699,8 +444,6 @@ isEmpty(): boolean
 Checks whether this Vector is empty (contains no elements).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -712,17 +455,6 @@ Checks whether this Vector is empty (contains no elements).
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.isEmpty();
-```
-
 ## remove
 
 ```TypeScript
@@ -732,8 +464,6 @@ remove(element: T): boolean
 Removes the first occurrence of the specified element from this Vector.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -751,17 +481,6 @@ Removes the first occurrence of the specified element from this Vector.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.remove(2);
-```
-
 ## removeByIndex
 
 ```TypeScript
@@ -771,8 +490,6 @@ removeByIndex(index: number): T
 Searches for an element based on its index, removes the element after returning it, and moves its subsequent elements leftwards.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -790,18 +507,6 @@ Searches for an element based on its index, removes the element after returning 
 | --- |
 | T |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(2);
-vector.add(4);
-let result = vector.removeByIndex(2);
-```
-
 ## removeByRange
 
 ```TypeScript
@@ -811,8 +516,6 @@ removeByRange(fromIndex: number, toIndex: number): void
 Removes from this Vector all of the elements within a range, including the element at the start position but not that at the end position.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -825,17 +528,6 @@ Removes from this Vector all of the elements within a range, including the eleme
 | fromIndex | number | Yes |
 | toIndex | number | Yes |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-vector.removeByRange(2,4);
-```
-
 ## replaceAllElements
 
 ```TypeScript
@@ -845,8 +537,6 @@ replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) =>
 Replaces all elements in this Vector with new elements, and returns the new ones.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -859,20 +549,6 @@ Replaces all elements in this Vector with new elements, and returns the new ones
 | callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | Yes |
 | thisArg | Object | No |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-vector.replaceAllElements((value : number) : number => {
-  // Add the user operation logic based on the actual scenario.
-  return value;
-});
-```
-
 ## set
 
 ```TypeScript
@@ -882,8 +558,6 @@ set(index: number, element: T): T
 Replaces an element at the specified position in this Vector with a given element.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -912,8 +586,6 @@ Sets a new length for this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -923,18 +595,6 @@ Sets a new length for this Vector.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | newSize | number | Yes |
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-vector.setLength(8);
-vector.setLength(2);
-```
 
 ## sort
 
@@ -946,8 +606,6 @@ Sorts elements in this Vector.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
@@ -958,19 +616,6 @@ Sorts elements in this Vector.
 | --- | --- | --- |
 | comparator | (firstValue: T, secondValue: T) = & gt; number | No |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-vector.sort((a: number, b: number) => a - b);
-vector.sort((a: number, b: number) => b - a);
-vector.sort();
-```
-
 ## subVector
 
 ```TypeScript
@@ -980,8 +625,6 @@ subVector(fromIndex: number, toIndex: number): Vector<T>
 Obtains elements within a range in this Vector, including the element at the start position but not that at the end position, and returns these elements as a new **Vector** instance.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1000,20 +643,6 @@ Obtains elements within a range in this Vector, including the element at the sta
 | --- |
 | [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-vector.add(6);
-vector.add(8);
-let result = vector.subVector(0,4);
-let result1 = vector.subVector(2,4);
-```
-
 ## toString
 
 ```TypeScript
@@ -1023,8 +652,6 @@ toString(): string
 Uses commas (,) to concatenate elements in this Vector into a string.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -1036,17 +663,6 @@ Uses commas (,) to concatenate elements in this Vector into a string.
 | --- |
 | string |
 
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-let result = vector.toString();
-```
-
 ## trimToCurrentLength
 
 ```TypeScript
@@ -1057,22 +673,9 @@ Trims the capacity of this Vector into its current length.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.Utils.Lang
-
-**Examples**
-
-```TypeScript
-let vector : Vector<number> = new Vector();
-vector.add(2);
-vector.add(4);
-vector.add(5);
-vector.add(4);
-vector.trimToCurrentLength();
-```
 
 ## length
 
@@ -1085,8 +688,6 @@ Number of elements in a Vector.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

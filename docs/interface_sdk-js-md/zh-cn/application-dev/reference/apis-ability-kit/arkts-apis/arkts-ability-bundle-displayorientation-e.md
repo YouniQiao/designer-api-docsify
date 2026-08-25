@@ -8,8 +8,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
@@ -26,8 +24,6 @@ UNSPECIFIED = 0
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [UNSPECIFIED](arkts-ability-bundlemanager-displayorientation-e.md#unspecified)
@@ -41,8 +37,6 @@ LANDSCAPE = 1
 ```
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -58,8 +52,6 @@ PORTRAIT = 2
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [PORTRAIT](arkts-ability-bundlemanager-displayorientation-e.md#portrait)
@@ -73,8 +65,6 @@ FOLLOW_RECENT = 3
 ```
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

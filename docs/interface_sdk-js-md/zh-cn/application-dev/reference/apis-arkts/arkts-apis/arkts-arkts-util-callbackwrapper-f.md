@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## callbackWrapper
@@ -27,8 +27,6 @@ function callbackWrapper(original: Function): (err: Object, value: Object) => vo
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -44,33 +42,3 @@ function callbackWrapper(original: Function): (err: Object, value: Object) => vo
 | 类型 |
 | --- |
 | [function](arkts-arkts-taskpool-task-c.md) |
-
-**示例**
-
-```TypeScript
-// original为一个入参示例
-async function fn(input: string) {
-  return input;
-}
-let cb = util.callbackWrapper(fn);
-cb('hello world', (err : Object, ret : string) => {
-  if (err) throw new Error();
-  console.info(ret);
-});
-// 输出结果：hello world
-```
-
-```TypeScript
-// original需要传入多个入参场景示例
-async function fn(args: Array<string | number | Function>) {
-  console.info('args[0]: ' + args[0]); // args[0]: hello world
-  console.info('args[1]: ' + args[1]); // args[1]: 8
-  return args[0];
-}
-let cb = util.callbackWrapper(fn);
-let args: Array<string | number | Function> = ['hello world', 8]
-cb(args, (err : Object, ret : string) => {
-  if (err) throw new Error;
-  console.info(ret); // 输出结果：hello world
-});
-```

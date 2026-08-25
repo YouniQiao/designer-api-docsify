@@ -10,8 +10,6 @@ Open the file in append mode. New data will be written to the end of the file.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -25,8 +23,6 @@ const CREATE = 0o100
 Create a file if the specified file does not exist.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,8 +38,6 @@ If **path** does not point to a directory, throw an exception.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## NOFOLLOW
@@ -55,8 +49,6 @@ const NOFOLLOW = 0o400000
 If **path** points to a symbolic link, throw an exception.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -70,8 +62,6 @@ If **path** points to a named pipe (FIFO), block special file, or character spec
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## READ_ONLY
@@ -83,8 +73,6 @@ const READ_ONLY = 0o0
 Open the file in read-only mode.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,8 +88,6 @@ Open the file in read/write mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -116,8 +102,6 @@ Open the file in synchronous I/O mode.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## TRUNC
@@ -129,8 +113,6 @@ const TRUNC = 0o1000
 If the file exists and is opened in write-only or read/write mode, truncate the file length to 0.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -145,8 +127,6 @@ const UNCACHE = 0o10000000000
 UNCACHE IO.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -163,8 +143,6 @@ const WRITE_ONLY = 0o1
 Open the file in write-only mode.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -6,8 +6,6 @@ Defines Panel Modifier@extends PanelAttribute @implements AttributeModifier&lt;P
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Deprecated since:** 20
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,8 +19,6 @@ applyNormalAttribute?(instance: PanelAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Deprecated since:** 20
 

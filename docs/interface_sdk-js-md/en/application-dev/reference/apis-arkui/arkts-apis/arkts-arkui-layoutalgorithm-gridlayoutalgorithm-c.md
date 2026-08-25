@@ -12,8 +12,6 @@ Grid layout algorithm class.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor
@@ -25,8 +23,6 @@ constructor(option?: GridLayoutAlgorithmOptions)
 Constructs the grid layout algorithm class.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +50,6 @@ Spacing between columns.Default value: **LengthMetrics.vp(0)**Invalid values are
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -70,13 +64,11 @@ public columnsTemplate?: string | ItemFillPolicy
 
 Number of columns in the grid layout.Default value: **'1fr'**Invalid values are treated as the default value.
 
-**Type:** string \| [ItemFillPolicy](arkts-arkui-units-itemfillpolicy-i.md)
+**Type:** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
 **Default:** '1fr'
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +89,6 @@ Spacing between rows.Default value: **LengthMetrics.vp(0)**Invalid values are tr
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

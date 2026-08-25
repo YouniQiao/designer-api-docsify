@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'kits/@kit.InputKit';
 ```
 
 ## setPointerVisible
@@ -15,8 +15,6 @@ function setPointerVisible(visible: boolean, callback: AsyncCallback<void>): voi
 Sets whether the mouse pointer is visible in the current window. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -34,62 +32,6 @@ Sets whether the mouse pointer is visible in the current window. This API uses a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 
-**Examples**
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setPointerVisible(true, (error: BusinessError) => {
-              if (error) {
-                console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-                return;
-              }
-              console.info(`Set pointer visible success`);
-            });
-          } catch (error) {
-            console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            pointer.setPointerVisible(false).then(() => {
-              console.info(`Set pointer visible success`);
-            }).catch((error: BusinessError) => {
-              console.error(`Set pointer failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-            })
-          } catch (error) {
-            console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## setPointerVisible
 
@@ -100,8 +42,6 @@ function setPointerVisible(visible: boolean): Promise<void>
 Sets whether the mouse pointer is visible in the current window. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -123,7 +63,3 @@ Sets whether the mouse pointer is visible in the current window. This API uses a
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-See [setPointerVisible](#setpointervisible)

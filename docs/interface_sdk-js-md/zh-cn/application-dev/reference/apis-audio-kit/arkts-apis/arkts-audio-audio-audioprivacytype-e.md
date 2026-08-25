@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## PRIVACY_TYPE_PUBLIC
@@ -17,8 +15,6 @@ PRIVACY_TYPE_PUBLIC = 0
 表示音频流可以被其他应用录制或屏幕投射，不包含隐私类型的流。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
@@ -32,8 +28,6 @@ PRIVACY_TYPE_PRIVATE = 1
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## PRIVACY_TYPE_SHARED
@@ -45,7 +39,5 @@ PRIVACY_TYPE_SHARED = 2
 表示音频流可以被其他应用录制或屏幕投射，包含隐私类型的流。例如，在PRIVACY_TYPE_PUBLIC策略下，STREAM_USAGE_VOICE_COMMUNICATION类型音频流不会被其他应用录制或屏幕投射。然而，在PRIVACY_TYPE_SHARED策略下，这些音频流将会允许被其他应用录制或屏幕投射。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture

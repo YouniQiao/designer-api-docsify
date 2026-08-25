@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
+import { continuationManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## startDeviceManager
@@ -16,8 +16,6 @@ function startDeviceManager(token: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
@@ -32,55 +30,6 @@ function startDeviceManager(token: number, callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | token | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-continuationManager.startDeviceManager(token, (err) => {
-  if (err.code != 0) {
-    console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('startDeviceManager finished. ');
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-
-let token: number = 1;
-continuationManager.startDeviceManager(
-  token,
-  {
-    deviceType: ["00E"]
-  },
-  (err) => {
-    if (err.code != 0) {
-      console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
-      return;
-    }
-    console.info('startDeviceManager finished. ');
-});
-```
-
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-continuationManager.startDeviceManager(
-  token,
-  {
-    deviceType: ["00E"]
-  }).then(() => {
-    console.info('startDeviceManager finished. ');
-  }).catch((err: BusinessError) => {
-    console.error('startDeviceManager failed, cause: ' + JSON.stringify(err));
-});
-```
 
 
 ## startDeviceManager
@@ -93,8 +42,6 @@ function startDeviceManager(token: number, options: ContinuationExtraParams, cal
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
@@ -108,12 +55,8 @@ function startDeviceManager(token: number, options: ContinuationExtraParams, cal
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | token | number | 是 |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 是 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [startDeviceManager](#startdevicemanager)
 
 
 ## startDeviceManager
@@ -126,8 +69,6 @@ function startDeviceManager(token: number, options?: ContinuationExtraParams): P
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
@@ -141,14 +82,10 @@ function startDeviceManager(token: number, options?: ContinuationExtraParams): P
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | token | number | 是 |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 否 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [startDeviceManager](#startdevicemanager)

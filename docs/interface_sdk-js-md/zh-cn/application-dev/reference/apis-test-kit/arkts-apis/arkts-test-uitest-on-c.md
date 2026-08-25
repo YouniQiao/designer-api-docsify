@@ -4,15 +4,13 @@ UiTest框架从API version 9开始，通过On类提供了丰富的控件特征�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Test.UiTest
 
 ## 导入模块
 
 ```TypeScript
-import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
-import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from 'kits/@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from 'kits/@kit.TestKit';
 ```
 
 ## afterComponent
@@ -25,8 +23,6 @@ afterComponent(com: Component): On
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -48,19 +44,6 @@ afterComponent(com: Component): On
 | 错误码ID |
 | --- |
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, On, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let component: Component = await driver.findComponent(ON.type('Text'));
-  let on: On = ON.text('123').afterComponent(component); // 查找第一个Text组件之后的text为123的组件。
-}
-```
 
 ## beforeComponent
 
@@ -72,8 +55,6 @@ beforeComponent(com: Component): On
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -96,36 +77,15 @@ beforeComponent(com: Component): On
 | --- |
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, On, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let component: Component = await driver.findComponent(ON.type('Text'));
-  let on: On = ON.text('123').beforeComponent(component); // 查找第一个Text组件之前的text为123的组件。
-}
-```
-
 ## belongingDisplay
 
-ArkTS-Dyn:
 ```TypeScript
 belongingDisplay(displayId: number): On
-```
-
-ArkTS-Sta:
-```TypeScript
-belongingDisplay(displayId: int): On
 ```
 
 指定目标控件所属的屏幕，返回On对象自身。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -135,7 +95,7 @@ belongingDisplay(displayId: int): On
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| displayId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| displayId | number | 是 |
 
 **返回值：**
 
@@ -149,15 +109,6 @@ belongingDisplay(displayId: int): On
 | --- |
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.belongingDisplay(0); // 使用静态构造器ON创建On对象，指定目标控件所属屏幕ID。
-```
-
 ## checkable
 
 ```TypeScript
@@ -167,8 +118,6 @@ checkable(b?: boolean): On
 指定目标控件能否被勾选状态属性，返回On对象自身。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -191,15 +140,6 @@ checkable(b?: boolean): On
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.checkable(true); // 使用静态构造器ON创建On对象，指定目标控件的能否被勾选状态属性。
-```
 
 ## checked
 
@@ -211,8 +151,6 @@ checked(b?: boolean): On
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -234,15 +172,6 @@ checked(b?: boolean): On
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.checked(true); // 使用静态构造器ON创建On对象，指定目标控件的被勾选状态属性。
-```
 
 ## clickable
 
@@ -254,8 +183,6 @@ clickable(b?: boolean): On
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -278,22 +205,6 @@ clickable(b?: boolean): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.clickable(true); // 使用静态构造器ON创建On对象，指定目标控件的可点击状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.clickable(true); // 使用静态构造器BY创建by对象，指定目标控件的可点击状态属性。
-```
-
 ## description
 
 ```TypeScript
@@ -303,8 +214,6 @@ description(val: string, pattern?: MatchPattern): On
 指定目标控件的描述属性，支持多种匹配模式，返回On对象自身。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -329,15 +238,6 @@ description(val: string, pattern?: MatchPattern): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.description('123'); // 使用静态构造器ON创建On对象，指定目标控件的description属性。
-```
-
 ## enabled
 
 ```TypeScript
@@ -347,8 +247,6 @@ enabled(b?: boolean): On
 指定目标控件的使能状态属性，返回On对象自身。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -371,22 +269,6 @@ enabled(b?: boolean): On
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.enabled(true); // 使用静态构造器ON创建On对象，指定目标控件的使能状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.enabled(true); // 使用静态构造器BY创建by对象，指定目标控件的使能状态属性。
-```
 
 ## focused
 
@@ -398,8 +280,6 @@ focused(b?: boolean): On
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -422,22 +302,6 @@ focused(b?: boolean): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.focused(true); // 使用静态构造器ON创建On对象，指定目标控件的获焦状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.focused(true); // 使用静态构造器BY创建by对象，指定目标控件的获焦状态属性。
-```
-
 ## hint
 
 ```TypeScript
@@ -447,8 +311,6 @@ hint(val: string, pattern?: MatchPattern): On
 指定目标控件的提示文本属性，返回On对象自身。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -473,15 +335,6 @@ hint(val: string, pattern?: MatchPattern): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { MatchPattern, On, ON } from '@kit.TestKit';
-
-let on: On = ON.hint('welcome', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的提示文本属性。
-```
-
 ## id
 
 ```TypeScript
@@ -491,8 +344,6 @@ id(id: string): On
 指定目标控件id属性，返回On对象自身。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -516,29 +367,6 @@ id(id: string): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.id('123'); // 使用静态构造器ON创建On对象，指定目标控件的id属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { MatchPattern, On, ON } from '@kit.TestKit';
-
-let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.id(123); // 使用静态构造器BY创建by对象，指定目标控件的id属性。
-```
-
 ## id
 
 ```TypeScript
@@ -548,8 +376,6 @@ id(id: string, pattern: MatchPattern): On
 指定目标控件id属性和匹配模式，返回On对象自身。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -574,10 +400,6 @@ id(id: string, pattern: MatchPattern): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [id](#id)
-
 ## inWindow
 
 ```TypeScript
@@ -587,8 +409,6 @@ inWindow(bundleName: string): On
 指定目标控件位于给出的应用窗口内，返回On对象自身。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -612,15 +432,6 @@ inWindow(bundleName: string): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.inWindow('com.uitestScene.acts'); // 使用静态构造器ON创建On对象，指定目标控件位于给出的应用窗口内。
-```
-
 ## isAfter
 
 ```TypeScript
@@ -630,8 +441,6 @@ isAfter(on: On): On
 指定目标控件位于给出的特征属性控件之后，返回On对象自身。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -654,24 +463,6 @@ isAfter(on: On): On
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之后。
-let on: On = ON.type('Text').isAfter(ON.text('123')); // 查找text为123之后的第一个Text组件
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之后。
-let by: By = BY.type('Text').isAfter(BY.text('123')); // 查找text为123之后的第一个Text组件。
-```
 
 ## isBefore
 
@@ -683,8 +474,6 @@ isBefore(on: On): On
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -707,24 +496,6 @@ isBefore(on: On): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之前。
-let on: On = ON.type('Button').isBefore(ON.text('123')); // 查找text为123之前的第一个Button组件。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之前。
-let by: By = BY.type('Button').isBefore(BY.text('123')); // 查找text为123之前的第一个Button组件。
-```
-
 ## longClickable
 
 ```TypeScript
@@ -734,8 +505,6 @@ longClickable(b?: boolean): On
 指定目标控件的可长按点击状态属性，返回On对象自身。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -759,15 +528,6 @@ longClickable(b?: boolean): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.longClickable(true); // 使用静态构造器ON创建On对象，指定目标控件的可长按点击状态属性。
-```
-
 ## originalText
 
 ```TypeScript
@@ -782,8 +542,6 @@ originalText(text: string, pattern?: MatchPattern): On
 > 设置为'no'或'no-hide-descendants'，可以使用本接口指定目标控件的文本属性用于查找控件，使用[On.text()](#text)接口不生效。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -808,15 +566,6 @@ originalText(text: string, pattern?: MatchPattern): On
 | --- |
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.originalText('123'); // 使用静态构造器ON创建On对象，指定目标控件的originalText属性。
-```
-
 ## scrollable
 
 ```TypeScript
@@ -826,8 +575,6 @@ scrollable(b?: boolean): On
 指定目标控件的可滑动状态属性，返回On对象自身。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -850,22 +597,6 @@ scrollable(b?: boolean): On
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.scrollable(true); // 使用静态构造器ON创建On对象，指定目标控件的可滑动状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.scrollable(true); // 使用静态构造器BY创建by对象，指定目标控件的可滑动状态属性。
-```
 
 ## selected
 
@@ -877,8 +608,6 @@ selected(b?: boolean): On
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
@@ -900,22 +629,6 @@ selected(b?: boolean): On
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.selected(true); // 使用静态构造器ON创建On对象，指定目标控件的被选中状态属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.selected(true); // 使用静态构造器BY创建by对象，指定目标控件的被选中状态属性。
-```
 
 ## text
 
@@ -931,8 +644,6 @@ text(txt: string, pattern?: MatchPattern): On
 > 设置为'no'或'no-hide-descendants'，无法使用本接口指定目标控件的文本属性用于查找控件，可以使用[On.originalText()](#originaltext)接口实现。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -957,22 +668,6 @@ text(txt: string, pattern?: MatchPattern): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.text('123'); // 使用静态构造器ON创建On对象，指定目标控件的text属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { BY, By } from '@kit.TestKit';
-
-let by: By = BY.text('123'); // 使用静态构造器BY创建by对象，指定目标控件的text属性。
-```
-
 ## type
 
 ```TypeScript
@@ -982,8 +677,6 @@ type(tp: string): On
 指定目标控件的控件类型属性，返回On对象自身。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1007,29 +700,6 @@ type(tp: string): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-let on: On = ON.type('Button'); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { On, ON, MatchPattern } from '@kit.TestKit';
-
-let on: On = ON.type('Button', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
-```
-
-```TypeScript
-// xxx.test.ets
-import { By, BY } from '@kit.TestKit';
-
-let by: By = BY.type('Button'); // 使用静态构造器BY创建by对象，指定目标控件的控件类型属性。
-```
-
 ## type
 
 ```TypeScript
@@ -1039,8 +709,6 @@ type(tp: string, pattern: MatchPattern): On
 指定目标控件的控件类型属性和匹配模式，返回On对象自身。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1065,10 +733,6 @@ type(tp: string, pattern: MatchPattern): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [type](#type)
-
 ## within
 
 ```TypeScript
@@ -1078,8 +742,6 @@ within(on: On): On
 指定目标控件位于给出的特征属性控件之内，返回On对象自身。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1103,16 +765,6 @@ within(on: On): On
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { On, ON } from '@kit.TestKit';
-
-// 使用静态构造器ON创建On对象，指定目标控件位于给出的特征属性控件之内。
-let on: On = ON.text('java').within(ON.type('Scroll')); // 查找Scroll里面的text为java的子组件。
-```
-
 ## withinComponent
 
 ```TypeScript
@@ -1122,8 +774,6 @@ withinComponent(com: Component): On
 指定目标控件位于给出的特征控件（参数 [Component](arkts-test-uitest-component-c.md)）之内，返回 On 对象自身。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -1146,16 +796,3 @@ withinComponent(com: Component): On
 | 错误码ID |
 | --- |
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) |
-
-**示例**
-
-```TypeScript
-// xxx.test.ets
-import { Component, Driver, On, ON } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let component: Component = await driver.findComponent(ON.type('Text'));
-  let on: On = ON.text('123').withinComponent(component); // 查找第一个Text组件内部的text为123的组件。
-}
-```

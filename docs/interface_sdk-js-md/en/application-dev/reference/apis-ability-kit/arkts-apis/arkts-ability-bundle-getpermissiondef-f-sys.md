@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getPermissionDef
@@ -15,8 +15,6 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 Obtains the permission details by permission name. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -35,33 +33,6 @@ Obtains the permission details by permission name. This API uses an asynchronous
 | permissionName | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let permission: string = "ohos.permission.GET_BUNDLE_INFO";
-bundle.getPermissionDef(permission, (err, data) => {
-  if (err) {
-    console.error('getPermissionDef failed:' + err.message);
-  } else {
-    console.info('getPermissionDef successfully:' + JSON.stringify(data));
-  }
-});
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let permissionName: string = "ohos.permission.GET_BUNDLE_INFO";
-bundle.getPermissionDef(permissionName).then((data) => {
-  console.info('getPermissionDef successfully. Data: ' + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error('getPermissionDef failed. Cause: ' + error.message);
-});
-```
-
 
 ## getPermissionDef
 
@@ -72,8 +43,6 @@ function getPermissionDef(permissionName: string): Promise<PermissionDef>
 Obtains the permission details by permission name. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -96,7 +65,3 @@ Obtains the permission details by permission name. This API uses a promise to re
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; |
-
-**Examples**
-
-See [getPermissionDef](#getpermissiondef)

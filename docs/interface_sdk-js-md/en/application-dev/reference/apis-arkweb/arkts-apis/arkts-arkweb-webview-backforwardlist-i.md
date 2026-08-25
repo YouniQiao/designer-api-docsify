@@ -4,14 +4,12 @@ BackForwardList is an interface in the ArkWeb framework for accessing the browsi
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## getItemAtIndex
@@ -23,8 +21,6 @@ getItemAtIndex(index: number): HistoryItem
 Obtains the information of the history item at the specified index in the history list. A BackForwardList instance must be obtained first through the [getBackForwardEntries](arkts-arkweb-webview-webviewcontroller-c.md#getbackforwardentries) method.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,39 +44,6 @@ Obtains the information of the history item at the specified index in the histor
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-// xxx.ets
-import { webview } from '@kit.ArkWeb';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct WebComponent {
-  controller: webview.WebviewController = new webview.WebviewController();
-  @State icon: image.PixelMap | undefined = undefined;
-
-  build() {
-    Column() {
-      Button('getBackForwardEntries')
-        .onClick(() => {
-          try {
-            let list = this.controller.getBackForwardEntries();
-            let historyItem = list.getItemAtIndex(list.currentIndex);
-            console.info("HistoryItem: " + JSON.stringify(historyItem));
-            this.icon = historyItem.icon;
-          } catch (error) {
-            console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
-          }
-        })
-      Web({ src: 'www.example.com', controller: this.controller })
-    }
-  }
-}
-```
-
 ## currentIndex
 
 ```TypeScript
@@ -92,8 +55,6 @@ Index of the current page in the backforward list.
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,8 +71,6 @@ Number of history records in the history list. A maximum of 50 records are saved
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

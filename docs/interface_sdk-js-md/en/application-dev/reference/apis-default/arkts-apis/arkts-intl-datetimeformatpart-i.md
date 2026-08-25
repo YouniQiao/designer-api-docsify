@@ -1,7 +1,5 @@
 # DateTimeFormatPart
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -13,9 +11,7 @@
 type: DateTimeFormatPartTypes
 ```
 
-**Type:** DateTimeFormatPartTypes
-
-**ArkTS mode:** 
+**Type:** [DateTimeFormatPartTypes](arkts-intl-datetimeformatparttypes-t.md)
 
 ## value
 
@@ -24,5 +20,3 @@ value: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 

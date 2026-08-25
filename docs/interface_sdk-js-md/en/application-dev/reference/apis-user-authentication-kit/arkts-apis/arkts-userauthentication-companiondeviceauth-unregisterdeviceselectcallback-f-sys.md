@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## unregisterDeviceSelectCallback
@@ -15,8 +15,6 @@ function unregisterDeviceSelectCallback(): void
 Unregisters a callback for companion device selection. After the callback is unregistered, the system will no longer invoke the device selection callback registered by the application, and the device selection will fall back to the default system behavior.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -33,16 +31,3 @@ Unregisters a callback for companion device selection. After the callback is unr
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  companionDeviceAuth.unregisterDeviceSelectCallback();
-} catch (error) {
-  const err = error as BusinessError;
-  console.error(`error has been captured: ${err.code} ${err.message}`);
-}
-```

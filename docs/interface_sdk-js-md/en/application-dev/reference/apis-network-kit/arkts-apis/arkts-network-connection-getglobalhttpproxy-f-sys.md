@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getGlobalHttpProxy
@@ -15,8 +15,6 @@ function getGlobalHttpProxy(callback: AsyncCallback<HttpProxy>): void
 Obtains the global network proxy configuration information. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -37,29 +35,6 @@ Obtains the global network proxy configuration information. This API uses an asy
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getGlobalHttpProxy((error: BusinessError, data: connection.HttpProxy) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getGlobalHttpProxy().then((data: connection.HttpProxy) => {
-  console.info(JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
 
 ## getGlobalHttpProxy
 
@@ -70,8 +45,6 @@ function getGlobalHttpProxy(): Promise<HttpProxy>
 Obtains the global network proxy configuration information. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -90,7 +63,3 @@ Obtains the global network proxy configuration information. This API uses a prom
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-
-**Examples**
-
-See [getGlobalHttpProxy](#getglobalhttpproxy)

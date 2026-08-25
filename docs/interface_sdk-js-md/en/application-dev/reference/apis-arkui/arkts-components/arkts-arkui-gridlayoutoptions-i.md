@@ -4,8 +4,6 @@ Defines the grid layout options. In this API, **irregularIndexes** and **onGetIr
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ onGetIrregularSizeByIndex?: (index: number) => [number, number]
 Called to return the size of the irregular grid items with the specified index in [rows, columns].
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ onGetRectByIndex?: (index: number) => [number, number, number, number]
 Called to return the size of the grid items with the specified index in [rowStart, columnStart, rowSpan, columnSpan].
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,8 +69,6 @@ The indexes of grid items with irregular size. When **onGetIrregularSizeByIndex*
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -94,8 +86,6 @@ The size of most grid items, in [rows, columns], generally [1, 1]. The only supp
 **Type:** [number, number]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

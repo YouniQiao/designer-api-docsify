@@ -4,29 +4,25 @@ Task timeout configuration.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## httpTotalTimeout
 
 ```TypeScript
-httpTotalTimeout?: int
+httpTotalTimeout?: number
 ```
 
 Complete HTTP request-response cycle timeout, in seconds. The default value is 60. The minimum value is 1. The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,16 +31,14 @@ Complete HTTP request-response cycle timeout, in seconds. The default value is 6
 ## networkCheckTimeout
 
 ```TypeScript
-networkCheckTimeout?: int
+networkCheckTimeout?: number
 ```
 
 Network availability check timeout, in seconds. The default value is 20. The minimum value is 0. The maximum value is 20. When set to 0, no check will be performed. The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ P2P config. @interface WifiP2PConfig
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md)
@@ -15,7 +13,7 @@ P2P config. @interface WifiP2PConfig
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deviceAddress
@@ -29,8 +27,6 @@ Device mac address s
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Group owner band
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [goBand](arkts-connectivity-wifimanager-wifip2pconfig-i.md#goband)
@@ -69,8 +63,6 @@ Group name
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Group network ID. When creating a group, -1 indicates creates a temporary group,
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [netId](arkts-connectivity-wifimanager-wifip2pconfig-i.md#netid)
@@ -109,8 +99,6 @@ The passphrase of this {@code WifiP2pConfig} instance
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

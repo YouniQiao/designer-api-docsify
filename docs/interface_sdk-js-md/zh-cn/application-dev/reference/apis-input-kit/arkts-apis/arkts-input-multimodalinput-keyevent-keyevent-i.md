@@ -6,14 +6,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 ## 导入模块
 
 ```TypeScript
-import { Action, Key, KeyEvent } from '@kit.InputKit';
+import { Action, Key, KeyEvent } from 'kits/@kit.InputKit';
 ```
 
 ## action
@@ -28,8 +26,6 @@ action: Action
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
@@ -40,13 +36,11 @@ action: Action
 altKey: boolean
 ```
 
-当前altKey是否处于按下状态。 <br/>true表示处于按下状态，false表示处于抬起状态。
+当前altKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -58,13 +52,11 @@ altKey: boolean
 capsLock: boolean
 ```
 
-当前capsLock是否处于使能状态。 <br/>true表示处于使能状态，false表示处于未使能状态。
+当前capsLock是否处于使能状态。 true表示处于使能状态，false表示处于未使能状态。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -76,13 +68,11 @@ capsLock: boolean
 ctrlKey: boolean
 ```
 
-当前ctrlKey是否处于按下状态。 <br/>true表示处于按下状态，false表示处于抬起状态。
+当前ctrlKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -94,13 +84,11 @@ ctrlKey: boolean
 fnKey: boolean
 ```
 
-当前fnKey是否处于按下状态。 <br/>true表示处于按下状态，false表示处于抬起状态。
+当前fnKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -118,8 +106,6 @@ key: Key
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
@@ -136,8 +122,6 @@ keys: Key[]
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
@@ -148,13 +132,11 @@ keys: Key[]
 logoKey: boolean
 ```
 
-当前logoKey是否处于按下状态。 <br/>true表示处于按下状态，false表示处于抬起状态。
+当前logoKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -166,13 +148,11 @@ logoKey: boolean
 numLock: boolean
 ```
 
-当前numLock是否处于使能状态。 <br/>true表示处于使能状态，false表示处于未使能状态。
+当前numLock是否处于使能状态。 true表示处于使能状态，false表示处于未使能状态。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -184,13 +164,11 @@ numLock: boolean
 scrollLock: boolean
 ```
 
-当前scrollLock是否处于使能状态。 <br/>true表示处于使能状态，false表示处于未使能状态。
+当前scrollLock是否处于使能状态。 true表示处于使能状态，false表示处于未使能状态。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -202,13 +180,11 @@ scrollLock: boolean
 shiftKey: boolean
 ```
 
-当前shiftKey是否处于按下状态。 <br/>true表示处于按下状态，false表示处于抬起状态。
+当前shiftKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -217,16 +193,14 @@ shiftKey: boolean
 ## unicodeChar
 
 ```TypeScript
-unicodeChar: int
+unicodeChar: number
 ```
 
 按键对应的unicode字符。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

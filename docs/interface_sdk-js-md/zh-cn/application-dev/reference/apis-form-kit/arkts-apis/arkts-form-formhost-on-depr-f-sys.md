@@ -18,8 +18,6 @@ function on(type: 'formUninstall', callback: Callback<string>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [on](arkts-form-formhost-on-f-sys.md)

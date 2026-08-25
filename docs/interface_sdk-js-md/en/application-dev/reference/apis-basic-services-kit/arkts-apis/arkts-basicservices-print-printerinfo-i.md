@@ -4,14 +4,12 @@ Provides the printer information.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## capability
@@ -25,8 +23,6 @@ Printer capability.
 **Type:** [PrinterCapability](arkts-basicservices-print-printercapability-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -42,8 +38,6 @@ Printer description.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## options
@@ -58,23 +52,19 @@ Printer options. The value is a JSON object string.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## printerIcon
 
 ```TypeScript
-printerIcon?: int
+printerIcon?: number
 ```
 
 Resource ID of the printer icon. The default value is **-1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -90,8 +80,6 @@ Printer ID.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## printerName
@@ -106,8 +94,6 @@ Printer name.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## printerState
@@ -121,7 +107,5 @@ Printer state.
 **Type:** [PrinterState](arkts-basicservices-print-printerstate-e.md)
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

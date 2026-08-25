@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDisallowedUsbDevices
@@ -15,8 +15,6 @@ function getDisallowedUsbDevices(admin: Want): Array<UsbDeviceType>
 Obtains the disallowed USB device types.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -45,25 +43,6 @@ Obtains the disallowed USB device types.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let result: Array<usbManager.UsbDeviceType> = usbManager.getDisallowedUsbDevices(wantTemp);
-  console.info(`Succeeded in getting disallowed USB devices. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getDisallowedUsbDevices
 
@@ -72,11 +51,11 @@ function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>
 ```
 
 Obtains the disallowed USB device types.Use cases:  
-- Retrieve the current list of disallowed USB device types for review by the device administrator. - Obtain the existing blocklist for comparison before making any modifications. - Display the current USB device type restriction policy configuration on the management page.
+- Retrieve the current list of disallowed USB device types for review by the device administrator.  
+- Obtain the existing blocklist for comparison before making any modifications.  
+- Display the current USB device type restriction policy configuration on the management page.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -104,7 +83,3 @@ Obtains the disallowed USB device types.Use cases:
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getDisallowedUsbDevices](#getdisallowedusbdevices)

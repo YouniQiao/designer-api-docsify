@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## finishTrace
 
 ```TypeScript
-function finishTrace(name: string, taskId: int): void
+function finishTrace(name: string, taskId: number): void
 ```
 
 标记一个异步跟踪耗时任务的结束。调用成功后，完成该任务的跟踪。finishTrace的name和taskId必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md)对应参数值一致。从API version 19开始，建议使用[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md)接口（需与 [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md)接口配套使用）。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -27,28 +25,4 @@ function finishTrace(name: string, taskId: int): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| taskId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-```TypeScript
-// 跟踪并行执行的同名任务
-hiTraceMeter.startTrace("myTestFunc", 1);
-// 业务流程...... 
-hiTraceMeter.startTrace("myTestFunc", 2);  // 第二个跟踪的任务开始，同时第一个跟踪的同名任务还没结束，出现了并行执行，需要不同的taskId来区分不同的任务。
-// 业务流程...... 
-hiTraceMeter.finishTrace("myTestFunc", 1);
-// 业务流程...... 
-hiTraceMeter.finishTrace("myTestFunc", 2);
-```
-
-```TypeScript
-// 跟踪串行执行的同名任务
-hiTraceMeter.startTrace("myTestFunc", 1);
-// 业务流程...... 
-hiTraceMeter.finishTrace("myTestFunc", 1);  // 第一个跟踪的任务结束
-// 业务流程...... 
-hiTraceMeter.startTrace("myTestFunc", 1);   // 第二个跟踪的同名任务开始，同名的待跟踪任务串行执行。
-// 业务流程...... 
-hiTraceMeter.finishTrace("myTestFunc", 1);
-```
+| taskId | number | 是 |

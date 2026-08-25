@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'kits/@kit.ArkTS';
 ```
 
 ## isConcurrent
@@ -15,8 +15,6 @@ function isConcurrent(func: Function): boolean
 Checks whether a function is a concurrent function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,13 +31,3 @@ Checks whether a function is a concurrent function.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-@Concurrent
-function test() {}
-
-let result: Boolean = taskpool.isConcurrent(test);
-console.info("result is: " + result);
-```

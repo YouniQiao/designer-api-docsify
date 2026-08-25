@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getDefaultData
@@ -15,8 +15,6 @@ function getDefaultData(admin: Want): number
 Obtains the slot ID of the SIM card currently used as the default data SIM card on the device. For example, an enterprise device administrator can query the current default data SIM during device management for data usage control or data card configuration switching. If no SIM card is inserted or the device is in airplane mode, the API returns the slot ID of the last used data SIM card. If the device has never had a default data SIM set, the API returns **0**, indicating slot 1.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 

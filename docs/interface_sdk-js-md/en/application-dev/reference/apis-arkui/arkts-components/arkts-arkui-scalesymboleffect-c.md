@@ -6,8 +6,6 @@ Defines ScaleSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ constructor(scope?: EffectScope, direction?: EffectDirection)
 A constructor used to create a **ScaleSymbolEffect** instance, which comes with a scaling animation effect.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +50,6 @@ Effect direction.Default value: **EffectDirection.DOWN**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -75,8 +69,6 @@ Effect scope.Default value: **EffectScope.LAYER**
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

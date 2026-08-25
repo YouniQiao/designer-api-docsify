@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## onSystemCommonEvent
@@ -16,8 +16,6 @@ function onSystemCommonEvent(callback: EventProcess): void
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -28,7 +26,7 @@ function onSystemCommonEvent(callback: EventProcess): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 是 |
+| callback | EventProcess | 是 |
 
 **错误码：**
 

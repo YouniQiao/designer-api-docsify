@@ -4,14 +4,12 @@ Defines the options used to construct the **MessageOption** object.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.IPC.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'kits/@kit.IPCKit';
 ```
 
 ## constructor
@@ -24,8 +22,6 @@ A constructor used to create a **MessageOption** object.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -37,38 +33,6 @@ A constructor used to create a **MessageOption** object.
 | syncFlags | number | No |
 | waitTime | number | No |
 
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-
-class TestRemoteObject extends rpc.MessageOption {
-  constructor(async: boolean) {
-    super(async);
-  }
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-
-class TestRemoteObject extends rpc.MessageOption {
-  constructor(syncFlags?: number,waitTime?: number) {
-    super(syncFlags,waitTime);
-  }
-}
-```
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-}
-```
-
 ## constructor
 
 ```TypeScript
@@ -78,8 +42,6 @@ constructor(async?: boolean)
 A constructor used to create a **MessageOption** object.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -91,119 +53,16 @@ A constructor used to create a **MessageOption** object.
 | --- | --- | --- |
 | async | boolean | No |
 
-**Examples**
-
-See [constructor](#constructor)
-
-## constructor
-
-```TypeScript
-constructor(isAsync: boolean)
-```
-
-A constructor used to create a MessageOption instance.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| [isAsync](#isasync) | boolean | Yes |
-
-**Examples**
-
-See [constructor](#constructor)
-
-## constructor
-
-```TypeScript
-constructor()
-```
-
-A constructor used to create a MessageOption instance.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Examples**
-
-See [constructor](#constructor)
-
-## constructor
-
-```TypeScript
-constructor(syncFlags: int)
-```
-
-A constructor used to create a MessageOption instance.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| syncFlags | int | Yes |
-
-**Examples**
-
-See [constructor](#constructor)
-
-## constructor
-
-```TypeScript
-constructor(syncFlags: int, waitTime: int)
-```
-
-A constructor used to create a MessageOption instance.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Communication.IPC.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| syncFlags | int | Yes |
-| waitTime | int | Yes |
-
-**Examples**
-
-See [constructor](#constructor)
-
 ## getFlags
 
-ArkTS-Dyn:
 ```TypeScript
 getFlags(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getFlags(): int
 ```
 
 Obtains the call flag, which can be synchronous or asynchronous.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -212,46 +71,18 @@ Obtains the call flag, which can be synchronous or asynchronous.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let option = new rpc.MessageOption();
-  hilog.info(0x0000, 'testTag', 'create object successfully');
-  let flag = option.getFlags();
-  hilog.info(0x0000, 'testTag', 'run getFlags success, flag is ' + flag);
-  option.setFlags(rpc.MessageOption.TF_ASYNC);
-  hilog.info(0x0000, 'testTag', 'run setFlags success');
-  let flag2 = option.getFlags();
-  hilog.info(0x0000, 'testTag', 'run getFlags success, flag2 is ' + flag2);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
+| number |
 
 ## getWaitTime
 
-ArkTS-Dyn:
 ```TypeScript
 getWaitTime(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getWaitTime(): int
 ```
 
 Obtains the maximum wait time for this RPC call.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -260,25 +91,7 @@ Obtains the maximum wait time for this RPC call.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let option = new rpc.MessageOption();
-  let time = option.getWaitTime();
-  hilog.info(0x0000, 'testTag', 'run getWaitTime success, time is ' + time);
-  option.setWaitTime(16);
-  let time2 = option.getWaitTime();
-  hilog.info(0x0000, 'testTag', 'run getWaitTime success, time is ' + time2);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
+| number |
 
 ## isAsync
 
@@ -290,8 +103,6 @@ Checks whether **SendMessageRequest** is called synchronously or asynchronously.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -301,20 +112,6 @@ Checks whether **SendMessageRequest** is called synchronously or asynchronously.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let option = new rpc.MessageOption();
-  let result = option.isAsync();
-} catch (error) {
-  hilog.info(0x0000, 'testTag', 'error ' + error);
-}
-```
 
 ## setAsync
 
@@ -326,8 +123,6 @@ Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -336,40 +131,18 @@ Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [isAsync](#isasync) | boolean | Yes |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let option = new rpc.MessageOption();
-  option.setAsync(true);
-} catch (error) {
-  hilog.info(0x0000, 'testTag', 'error ' + error);
-}
-```
+| [isAsync](arkts-ipc-rpc-messageoption-c.md) | boolean | Yes |
 
 ## setFlags
 
-ArkTS-Dyn:
 ```TypeScript
 setFlags(flags: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setFlags(flags: int): void
 ```
 
 Sets the call flag, which can be synchronous or asynchronous.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -378,43 +151,18 @@ Sets the call flag, which can be synchronous or asynchronous.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| flags | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let option = new rpc.MessageOption();
-  option.setFlags(rpc.MessageOption.TF_ASYNC);
-  hilog.info(0x0000, 'testTag', 'run setFlags success');
-  let flag = option.getFlags();
-  hilog.info(0x0000, 'testTag', 'run getFlags success, flag is ' + flag);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
+| flags | number | Yes |
 
 ## setWaitTime
 
-ArkTS-Dyn:
 ```TypeScript
 setWaitTime(waitTime: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setWaitTime(waitTime: int): void
 ```
 
 Sets the maximum wait time for this RPC call.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -423,23 +171,7 @@ Sets the maximum wait time for this RPC call.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| waitTime | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let option = new rpc.MessageOption();
-  option.setWaitTime(16);
-  let time = option.getWaitTime();
-  hilog.info(0x0000, 'testTag', 'run getWaitTime success, time is ' + time);
-} catch (error) {
-  hilog.error(0x0000, 'testTag', 'error ' + error);
-}
-```
+| waitTime | number | Yes |
 
 ## TF_ACCEPT_FDS
 
@@ -454,8 +186,6 @@ Indication to **sendMessageRequest** for passing the file descriptor.
 **Default:** 16
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -475,8 +205,6 @@ Asynchronous call.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -495,8 +223,6 @@ Synchronous call.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Communication.IPC.Core
@@ -514,8 +240,6 @@ RPC wait time, in seconds. This parameter cannot be used in IPC. The default wai
 **Default:** 4 [since 7 - 10] @default 8 [since 11]
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

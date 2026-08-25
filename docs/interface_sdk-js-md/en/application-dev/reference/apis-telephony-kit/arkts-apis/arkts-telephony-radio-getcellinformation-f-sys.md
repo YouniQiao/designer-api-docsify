@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCellInformation
 
 ```TypeScript
-function getCellInformation(slotId: int, callback: AsyncCallback<Array<CellInformation>>): void
+function getCellInformation(slotId: number, callback: AsyncCallback<Array<CellInformation>>): void
 ```
 
 Get the current cell information.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -28,7 +26,7 @@ Get the current cell information.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CellInformation&gt;&gt; | Yes |
 
 **Error codes:**
@@ -43,56 +41,16 @@ Get the current cell information.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getCellInformation((err: BusinessError, data: Array<radio.CellInformation>) => {
-    if (err) {
-        console.error(`getCellInformation failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getCellInformation success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getCellInformation(slotId, (err: BusinessError, data: Array<radio.CellInformation>) => {
-    if (err) {
-        console.error(`getCellInformation failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getCellInformation success, callback: data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getCellInformation(slotId).then((data: Array<radio.CellInformation>) => {
-    console.info(`getCellInformation success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCellInformation failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getCellInformation
 
 ```TypeScript
-function getCellInformation(slotId?: int): Promise<Array<CellInformation>>
+function getCellInformation(slotId?: number): Promise<Array<CellInformation>>
 ```
 
 Get the current cell information.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -104,7 +62,7 @@ Get the current cell information.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| slotId | number | No |
 
 **Return value:**
 
@@ -124,10 +82,6 @@ Get the current cell information.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-See [getCellInformation](#getcellinformation)
-
 
 ## getCellInformation
 
@@ -138,8 +92,6 @@ function getCellInformation(callback: AsyncCallback<Array<CellInformation>>): vo
 Get the current cell information.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -164,7 +116,3 @@ Get the current cell information.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getCellInformation](#getcellinformation)

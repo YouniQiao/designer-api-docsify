@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'kits/@kit.SensorServiceKit';
 ```
 
 ## getGeomagneticField
@@ -22,8 +22,6 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md)(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback&lt;GeomagneticResponse&gt;)
@@ -37,38 +35,6 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | 是 |
 | timeMillis | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sensor.getGeomagneticField({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000, 
-                           (err: BusinessError, data: sensor.GeomagneticResponse) => {
-  if (err) {
-    console.error(`Failed to operate. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting sensor_getGeomagneticField_callback x: ' + data.x + ',y: ' + data.y + ',z: ' +
-  data.z + ',geomagneticDip: ' + data.geomagneticDip + ',deflectionAngle: ' + data.deflectionAngle +
-  ',levelIntensity: ' + data.levelIntensity + ',totalIntensity: ' + data.totalIntensity);
-});
-```
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getGeomagneticField({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000);
-promise.then((data: sensor.GeomagneticResponse) => {
-  console.info('Succeeded in getting sensor_getGeomagneticField_promise x: ' + data.x + ',y: ' + data.y + ',z: ' +
-  data.z + ',geomagneticDip: ' + data.geomagneticDip + ',deflectionAngle: ' + data.deflectionAngle +
-  ',levelIntensity: ' + data.levelIntensity + ',totalIntensity: ' + data.totalIntensity);
-}).catch((reason: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
 
 
 ## getGeomagneticField
@@ -85,8 +51,6 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 > 代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -106,7 +70,3 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 | 类型 |
 | --- |
 | Promise&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; |
-
-**示例**
-
-参见 [getGeomagneticField](#getgeomagneticfield)

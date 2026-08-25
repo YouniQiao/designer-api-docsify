@@ -4,8 +4,6 @@ This configuration is only available for the Text and RichEditor components.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ color?: ResourceColor
 
 Color of the entity after successful text detection.Default value: **'#ff0a59f7'**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +37,9 @@ decoration?: DecorationStyleInterface
 
 Decoration style of the entity after successful text detection.Default value:{ type: TextDecorationType.Underline, color: same as the entity style: TextDecorationStyle.SOLID}
 
-**Type:** DecorationStyleInterface
+**Type:** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,13 +53,11 @@ Decoration style of the entity after successful text detection.Default value:{ 
 enablePreviewMenu?: boolean
 ```
 
-Whether to enable the preview menu displayed when long-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite.Default value: **false**When copyOptions is set to **None**, even if **enablePreviewMenu** is set to **true**, long-pressing AI entities will not display the preview menu.This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1 devices, TVs, and wearables.
+Whether to enable the preview menu displayed when number-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite.Default value: **false**When copyOptions is set to **None**, even if **enablePreviewMenu** is set to **true**, number-pressing AI entities will not display the preview menu.This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1 devices, TVs, and wearables.
 
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,8 +77,6 @@ Callback invoked when text recognition succeeds.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -104,8 +94,6 @@ Entity types for text recognition. Values **null** and **[]** indicate that all 
 **Type:** [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md)[]
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

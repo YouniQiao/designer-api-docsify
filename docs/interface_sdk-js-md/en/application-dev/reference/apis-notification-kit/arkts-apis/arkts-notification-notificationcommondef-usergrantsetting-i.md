@@ -4,8 +4,6 @@ Describes the user authorization settings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## grantedBundleInfos
@@ -19,8 +17,6 @@ List of apps for which the **Allow access to notifications on this device** swit
 **Type:** Array&lt;[GrantedBundleInfo](arkts-notification-notificationcommondef-grantedbundleinfo-i.md)&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +33,6 @@ Whether the **Allow access to notifications on this device** switch is toggled o
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

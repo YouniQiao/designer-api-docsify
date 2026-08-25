@@ -2,8 +2,6 @@
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
@@ -11,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+import { Device, DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## apiVersion
@@ -25,8 +23,6 @@ API version.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Deprecated since:** 6
 
@@ -44,8 +40,6 @@ Brand.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
@@ -61,8 +55,6 @@ Device type. The options are as follows: phone: smartphone tablet: tablet tv: sm
 **Type:** string
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Deprecated since:** 6
 
@@ -80,8 +72,6 @@ System language.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
@@ -97,8 +87,6 @@ Manufacturer.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
@@ -116,8 +104,6 @@ Model.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
@@ -133,8 +119,6 @@ Product number.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 
@@ -152,8 +136,6 @@ System region.
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
@@ -169,8 +151,6 @@ Screen density, unit dpi.
 **Type:** number
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Deprecated since:** 6
 
@@ -188,8 +168,6 @@ Screen shape. The options are as follows: rect: Rectangle screen. circle: Circle
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
@@ -205,8 +183,6 @@ Minor API version of the system software. From API 26 and later versions, the sy
 **Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Deprecated since:** 26.0.0
 
@@ -226,8 +202,6 @@ Minor API version of the system software. From API 26 and later versions, the sy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Deprecated since:** 26.0.0
 
 **Model restriction:** This API can be used only in the FA model.
@@ -246,8 +220,6 @@ Window Height, unit px.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
@@ -264,33 +236,6 @@ Window width, unit px.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
-
-**Examples**
-
-```TypeScript
-export default class Page {
-  getInfo() {
-    interface DeviceData {
-      brand: string;
-    }
-
-    try {
-      device.getInfo({
-        success: (data: DeviceData) => {
-          console.info('Device information obtained successfully. Device brand:' + data.brand);
-        },
-        fail: (data: string, code: number) => {
-          console.info('Failed to obtain device information. Error code:' + code + '; Error information: ' + data);
-        },
-      });
-    } catch (error) {
-      console.error('Device information API is not supported');
-    }
-  }
-}
-```

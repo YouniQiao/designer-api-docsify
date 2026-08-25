@@ -4,8 +4,6 @@ Describes the parameters for creating a window for a UI ServiceExtensionAbility.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describes the parameters for creating a window for a UI ServiceExtensionAbility.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## subWindowOptions
@@ -27,8 +25,6 @@ Parameters used for creating a child window. There is no default value. This par
 **Type:** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Parameters for creating a system window. There is no default value. This paramet
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -67,8 +61,6 @@ Window attribute. It specifies whether the created window is a child window or a
 **Type:** [ExtensionWindowAttribute](arkts-arkui-window-extensionwindowattribute-e-sys.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Window name.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -107,8 +97,6 @@ Rectangular area of the window.
 **Type:** Rect
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

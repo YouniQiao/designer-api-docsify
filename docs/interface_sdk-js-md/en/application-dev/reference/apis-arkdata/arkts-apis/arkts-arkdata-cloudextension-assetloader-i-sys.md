@@ -4,8 +4,6 @@ Provides APIs for uploading and downloading assets.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides APIs for uploading and downloading assets.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'kits/@kit.ArkData';
 ```
 
 ## download
@@ -25,8 +23,6 @@ download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>):
 Downloads assets. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -47,19 +43,6 @@ Downloads assets. This API uses a promise to return the result.
 | --- |
 | Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; |
 
-**Examples**
-
-```TypeScript
-class MyAssetLoader implements cloudExtension.AssetLoader {
-  async download(table: string, gid: string, prefix: string, assets: Array<cloudExtension.CloudAsset>): Promise<Array<cloudExtension.Result<cloudExtension.CloudAsset>>> {
-    console.info(`download asset loader, table: ${table}, gid: ${gid}, prefix: ${prefix}`);
-    let downloadRes = Array<cloudExtension.Result<cloudExtension.CloudAsset>>();
-    // ...
-    return downloadRes;
-  }
-}
-```
-
 ## upload
 
 ```TypeScript
@@ -69,8 +52,6 @@ upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Res
 Uploads assets. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -89,17 +70,3 @@ Uploads assets. This API uses a promise to return the result.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; |
-
-**Examples**
-
-```TypeScript
-class MyAssetLoader implements cloudExtension.AssetLoader {
-  async upload(table: string, gid: string, assets: Array<cloudExtension.CloudAsset>): Promise<Array<cloudExtension.Result<cloudExtension.CloudAsset>>> {
-    console.info(`upload asset loader, table: ${table}, gid: ${gid}`);
-    let uploadRes = Array<cloudExtension.Result<cloudExtension.CloudAsset>>();
-    // ...
-    return uploadRes;
-  }
-    // ...
-}
-```

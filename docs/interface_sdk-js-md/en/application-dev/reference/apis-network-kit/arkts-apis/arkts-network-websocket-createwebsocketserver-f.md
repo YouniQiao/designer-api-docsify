@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'kits/@kit.NetworkKit';
 ```
 
 ## createWebSocketServer
@@ -19,8 +19,6 @@ Creates a **WebSocketServer** object, which provides methods to start or stop th
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 **Return value:**
@@ -28,9 +26,3 @@ Creates a **WebSocketServer** object, which provides methods to start or stop th
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [WebSocketServer](arkts-network-websocket-websocketserver-i.md) |
-
-**Examples**
-
-```TypeScript
-let ws: webSocket.WebSocketServer = webSocket.createWebSocketServer();
-```

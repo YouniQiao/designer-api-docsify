@@ -6,7 +6,7 @@
 ## 导入模块
 
 ```TypeScript
-import { DataShareResultSet, DataType } from '@kit.ArkData';
+import { DataShareResultSet, DataType } from 'kits/@kit.ArkData';
 ```
 
 ## 汇总

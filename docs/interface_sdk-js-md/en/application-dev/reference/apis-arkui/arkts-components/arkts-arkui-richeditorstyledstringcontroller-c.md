@@ -2,11 +2,9 @@
 
 Represents the controller of the **RichEditor** component constructed using the styled string. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
 
-**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) and implements StyledStringController
+**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) and implements [StyledStringController](../arkts-apis/arkts-arkui-styledstringcontroller-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ getSelection(): RichEditorRange
 Obtains the current selection range of the **RichEditor** component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +45,6 @@ Obtains the styled string displayed in the **RichEditor** component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -73,8 +67,6 @@ Registers the callback for the text content change. This callback is triggered o
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,7 +77,7 @@ Registers the callback for the text content change. This callback is triggered o
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-textcommon-styledstringchangedlistener-i.md) | Yes |
+| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md) | Yes |
 
 ## setStyledString
 
@@ -102,8 +94,6 @@ Sets the styled string displayed in the **RichEditor** component.
 > visible at the end.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

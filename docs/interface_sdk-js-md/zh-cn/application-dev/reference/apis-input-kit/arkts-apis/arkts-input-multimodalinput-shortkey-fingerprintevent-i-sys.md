@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,8 +11,8 @@
 ## 导入模块
 
 ```TypeScript
-import { shortKey } from '@kit.InputKit';
-import { FingerprintEvent } from '@kit.InputKit';
+import { shortKey } from 'kits/@kit.InputKit';
+import { FingerprintEvent } from 'kits/@kit.InputKit';
 ```
 
 ## action
@@ -29,8 +27,6 @@ action: FingerprintAction
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **系统接口：** 此接口为系统接口。
@@ -38,16 +34,14 @@ action: FingerprintAction
 ## distanceX
 
 ```TypeScript
-distanceX: double
+distanceX: number
 ```
 
 相对于侧边指纹器件短轴偏移量（正数表示向右移动，负数表示向左移动）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -56,16 +50,14 @@ distanceX: double
 ## distanceY
 
 ```TypeScript
-distanceY: double
+distanceY: number
 ```
 
 相对于侧边指纹器件长轴偏移量（正数表示向上移动，负数表示向下移动）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 

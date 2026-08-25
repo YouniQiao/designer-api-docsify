@@ -4,8 +4,6 @@ Provides DialogAbility information, including the bundle name, module name, and 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Provides DialogAbility information, including the bundle name, module name, and 
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
+import { dialogSession } from 'kits/@kit.AbilityKit';
 ```
 
 ## abilityIconId
 
 ```TypeScript
-abilityIconId: int
+abilityIconId: number
 ```
 
 ID of the ability icon.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,16 +35,14 @@ ID of the ability icon.
 ## abilityLabelId
 
 ```TypeScript
-abilityLabelId: int
+abilityLabelId: number
 ```
 
 ID of the ability label.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +62,6 @@ Ability name.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -79,16 +71,14 @@ Ability name.
 ## appIndex
 
 ```TypeScript
-appIndex: int
+appIndex: number
 ```
 
 Index of the application clone.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,16 +89,14 @@ Index of the application clone.
 ## bundleIconId
 
 ```TypeScript
-bundleIconId: int
+bundleIconId: number
 ```
 
 ID of the bundle icon.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,16 +107,14 @@ ID of the bundle icon.
 ## bundleLabelId
 
 ```TypeScript
-bundleLabelId: int
+bundleLabelId: number
 ```
 
 ID of the bundle label.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,8 +134,6 @@ Bundle name.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -168,8 +152,6 @@ Installation directory of the application.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -183,13 +165,16 @@ installSource?: string
 ```
 
 Installation source of the application. The options are as follows:  
-- **pre-installed**: pre-installed application installed during the first boot. - **ota**: pre-installed application added during system upgrade. - **recovery**: pre-installed application manually restored by the user after uninstallation. - **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a variable, subject to the actual value. - **unknown**: unknown application installation source.
+- **pre-installed**: pre-installed application installed during the first boot.  
+- **ota**: pre-installed application added during system upgrade.  
+- **recovery**: pre-installed application manually restored by the user after uninstallation.  
+- **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a  
+variable, subject to the actual value.  
+- **unknown**: unknown application installation source.
 
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -209,8 +194,6 @@ Module name.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -229,8 +212,6 @@ Multi-app mode.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -248,8 +229,6 @@ Whether the ability is visible. **true** if visible, **false** otherwise.
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

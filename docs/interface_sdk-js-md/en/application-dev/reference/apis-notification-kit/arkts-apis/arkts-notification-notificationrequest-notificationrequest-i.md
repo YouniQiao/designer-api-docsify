@@ -4,8 +4,6 @@ Defines the data structure of a notification request, which is used to describe 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## actionButtons
@@ -19,8 +17,6 @@ Notification button. This parameter is left empty by default. A notification can
 **Type:** Array&lt;[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,71 +32,61 @@ Unique identifier field carried when an application sends a notification, used f
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## autoDeletedTime
 
 ```TypeScript
-autoDeletedTime?: long
+autoDeletedTime?: number
 ```
 
 Scheduled auto-delete time for the notification. You can set this parameter to automatically delete the notification after the specified time. Default value: **0**. This parameter does not take effect if a value less than 0 or a past time is passed in. Data format: timestamp. Unit: millisecond. For example, to delete a notification after it has been retained for 3 seconds (3000 ms), the corresponding deletion time is: **new Date().getTime()** + 3000.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## badgeIconStyle
 
 ```TypeScript
-badgeIconStyle?: int
+badgeIconStyle?: number
 ```
 
 Notification badge type. Not supported currently.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## badgeNumber
 
 ```TypeScript
-badgeNumber?: long
+badgeNumber?: number
 ```
 
 Number of notifications displayed on the application icon. The value is accumulated. The default value is **0**.If the value of **badgeNumber** is less than or equal to 0, the badge number is not displayed;if the value is greater than 99, **99+** is displayed on the badge.For example, if an application publishes three notifications, and `badgeNumber` is set to **2**, **0**, and **3** in sequence, the application displays **2**, **2**, and **5** accordingly.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## color
 
 ```TypeScript
-color?: long
+color?: number
 ```
 
 Background color of the notification. Not supported currently.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -116,8 +102,6 @@ Whether the notification background color can be enabled. Not supported currentl
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## content
@@ -131,8 +115,6 @@ Notification display content, including the notification title and body.
 **Type:** [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -148,71 +130,61 @@ Name of the application that creates the notification.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## creatorPid
 
 ```TypeScript
-readonly creatorPid?: int
+readonly creatorPid?: number
 ```
 
 PID used for creating the notification.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## creatorUid
 
 ```TypeScript
-readonly creatorUid?: int
+readonly creatorUid?: number
 ```
 
 UID of the application that creates the notification.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## creatorUserId
 
 ```TypeScript
-readonly creatorUserId?: int
+readonly creatorUserId?: number
 ```
 
 ID of the user who creates the notification.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
 ## deliveryTime
 
 ```TypeScript
-deliveryTime?: long
+deliveryTime?: number
 ```
 
 Notification delivery time. This parameter is automatically generated by the system and does not require configuration. Data format: timestamp. Unit: millisecond.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -228,8 +200,6 @@ Distributed notification options. Not supported currently.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## extraInfo
@@ -239,13 +209,12 @@ extraInfo?: { [key: string]: any }
 ```
 
 Extended parameters, used to provide custom services for applications. This parameter is left blank by default.The key value is assigned by the system. Manual modification does not take effect. The system automatically changes the value to the actual value during data transmission.  
-- **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) object, which is passed to the application when the user taps a notification. This field can be obtained via the [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) API call.
+- **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) object,  
+which is passed to the application when the user taps a notification. This field can be obtained via the [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) API call.
 
 **Type:** { [key: string]: any }
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -261,8 +230,6 @@ Group to which the notification belongs. When different notifications have the s
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## hashCode
@@ -277,23 +244,19 @@ Unique ID of the notification.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## id
 
 ```TypeScript
-id?: int
+id?: number
 ```
 
 Notification ID. The default value is **0**. If a notification with the same ID exists, the notification is updated. If no notification with the same ID exists, a new notification is created.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -304,13 +267,13 @@ isAlertOnce?: boolean
 ```
 
 Whether to send a notification only once when the notification is published or updated. The default value is **false**.  
-- **true**: A notification is sent only when the notification is published for the first time. For subsequent update, the notification mode is changed to [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md). - **false**: A notification is sent based on the configured notification mode.
+- **true**: A notification is sent only when the notification is published for the first time. For subsequent  
+update, the notification mode is changed to [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md).  
+- **false**: A notification is sent based on the configured notification mode.
 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -326,8 +289,6 @@ Whether to display the countdown time. Not supported currently.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## isFloatingIcon
@@ -341,8 +302,6 @@ Whether the notification is displayed as a floating icon in the status bar. Not 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -358,8 +317,6 @@ Not supported currently.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## isStopwatch
@@ -373,8 +330,6 @@ Whether to display the stopwatch. Not supported currently.
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -390,8 +345,6 @@ Not supported currently.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## label
@@ -405,8 +358,6 @@ Notification label. The **label** field functions similarly to an ID and can be 
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -422,8 +373,6 @@ Large notification icon. This parameter is left empty by default. The total numb
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## notificationFlags
@@ -437,8 +386,6 @@ Notification flags. The default value is empty. This parameter is writable since
 **Type:** [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 23 and later: This API can be used in both the stage model and FA model.
@@ -457,8 +404,6 @@ Notification slot type. The default value is **OTHER_TYPES**. The notification r
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## overlayIcon
@@ -473,8 +418,6 @@ Notification overlay icon. This parameter is left empty by default. The total by
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## priorityNotificationType
@@ -488,8 +431,6 @@ Notification priority type. The default value is **OTHER**. If this parameter is
 **Type:** notificationManager.PriorityNotificationType
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -507,8 +448,6 @@ Behavior intent of an application, which is triggered when a notification is rem
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## showDeliveryTime
@@ -523,8 +462,6 @@ Whether to display the time when the notification is delivered. Not supported cu
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## slotType
@@ -538,8 +475,6 @@ Notification slot type. The default value is **OTHER_TYPES**.
 **Type:** notification.SlotType
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -559,8 +494,6 @@ Small notification icon. This parameter is left empty by default. The total numb
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## sound
@@ -570,14 +503,14 @@ sound?: string
 ```
 
 Path of the custom application notification ringtone resource. By default, this parameter is left empty. The following two types of audio resources are supported:  
-- Resource file: Audio file preconfigured in the application. It must be stored in the **resources/rawfile** directory. To use the resource file, directly pass the file name. - Sandbox file: Audio file downloaded from the network or generated by the user. It must be stored in the **files** directory or its subdirectory in the EL1 area of the [sandbox file directory](../../../file-management/app-sandbox-directory.md#application-sandbox-directory-and-application-sandbox-path). The input format is **uri::{fileUri}**, where **fileUri** is the path obtained through [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md). For example, if an application transfers the downloaded audio resource demo.mp3 to the sandbox file directory /data/storage/el1/base/files/, the path obtained through **getUriFromPath** is **file://{bundleName}/data/storage/el1/base/files/demo.mp3**. You can use this path to release a notification to play the audio resource downloaded by the application.  
-Supported formats: M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
+- Resource file: Audio file preconfigured in the application. It must be stored in the **resources/rawfile**  
+directory. To use the resource file, directly pass the file name.  
+- Sandbox file: Audio file downloaded from the network or generated by the user. It must be stored in the **files**  
+directory or its subdirectory in the EL1 area of the [sandbox file directory](../../../file-management/app-sandbox-directory.md#application-sandbox-directory-and-application-sandbox-path). The input format is **uri::{fileUri}**, where **fileUri** is the path obtained through [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md). For example, if an application transfers the downloaded audio resource demo.mp3 to the sandbox file directory /data/storage/el1/base/files/, the path obtained through **getUriFromPath** is **file://{bundleName}/data/storage/el1/base/files/demo.mp3**. You can use this path to release a notification to play the audio resource downloaded by the application.Supported formats: M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
 
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -588,13 +521,12 @@ tapDismissed?: boolean
 ```
 
 Whether the notification is automatically cleared when the notification carries **wantAgent** or **actionButtons**. This parameter is valid only when the notification carries **wantAgent** or **actionButtons**. The default value is **true**.  
-- **true**: The current notification is automatically cleared after the notification or button is tapped. - **false**: The current notification is retained after the notification or button is tapped.
+- **true**: The current notification is automatically cleared after the notification or button is tapped.  
+- **false**: The current notification is retained after the notification or button is tapped.
 
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -610,8 +542,6 @@ Notification template. This parameter is left empty by default.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## updateOnly
@@ -621,13 +551,14 @@ updateOnly?: boolean
 ```
 
 Whether to update notifications only. The default value is **false**.  
-- **true**: If a notification with the same ID exists, the notification is updated. If no notification with the same ID exists, the update fails and no new notification is created. - **false**: If a notification with the same ID exists, the notification is updated. If no notification with the same ID exists, a new notification is created.
+- **true**: If a notification with the same ID exists, the notification is updated. If no notification with the  
+same ID exists, the update fails and no new notification is created.  
+- **false**: If a notification with the same ID exists, the notification is updated. If no notification with the  
+same ID exists, a new notification is created.
 
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -642,7 +573,5 @@ Behavior intent of an application, which is triggered when a notification is cli
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## fdopenStream
@@ -17,8 +17,6 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 Opens a stream based on an FD. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -69,38 +67,6 @@ Opens a stream based on an FD. This API uses a promise to return the result. To 
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath);
-fs.fdopenStream(file.fd, "r+").then((stream: fs.Stream) => {
-  console.info("openStream succeed");
-  stream.closeSync();
-}).catch((err: BusinessError) => {
-  console.error("openStream failed with error message: " + err.message + ", error code: " + err.code);
-  // If the file stream fails to be opened, the FD must be manually closed.
-  fs.closeSync(file);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-let file = fs.openSync(filePath, fs.OpenMode.READ_ONLY);
-fs.fdopenStream(file.fd, "r+", (err: BusinessError, stream: fs.Stream) => {
-  if (err) {
-    console.error("fdopen stream failed with error message: " + err.message + ", error code: " + err.code);
-    // If the file stream fails to be opened, the FD must be manually closed.
-    fs.closeSync(file);
-  } else {
-    console.info("fdopen stream succeed");
-    stream.closeSync();
-  }
-});
-```
-
 
 ## fdopenStream
 
@@ -111,8 +77,6 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 Opens a stream based on an FD. This API uses an asynchronous callback to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -157,7 +121,3 @@ Opens a stream based on an FD. This API uses an asynchronous callback to return 
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [fdopenStream](#fdopenstream)

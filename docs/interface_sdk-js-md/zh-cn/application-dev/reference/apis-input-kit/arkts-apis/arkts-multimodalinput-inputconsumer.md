@@ -4,14 +4,12 @@
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
 ## 导入模块
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总
@@ -23,12 +21,8 @@ import { inputConsumer } from '@kit.InputKit';
 | [getAllSystemHotkeys(全局快捷键)](arkts-input-inputconsumer-getallsystemhotkeys-f.md) |
 | [off(全局快捷键)](arkts-input-inputconsumer-off-f.md#offhotkeychange) |
 | [off(全局快捷键)](arkts-input-inputconsumer-off-f.md#offkeypressed) |
-| [offHotkeyChange(全局快捷键)](arkts-input-inputconsumer-offhotkeychange-f.md) |
-| [offKeyPressed(全局快捷键)](arkts-input-inputconsumer-offkeypressed-f.md) |
 | [on(全局快捷键)](arkts-input-inputconsumer-on-f.md#onhotkeychange) |
 | [on(全局快捷键)](arkts-input-inputconsumer-on-f.md#onkeypressed) |
-| [onHotkeyChange(全局快捷键)](arkts-input-inputconsumer-onhotkeychange-f.md) |
-| [onKeyPressed(全局快捷键)](arkts-input-inputconsumer-onkeypressed-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -36,11 +30,9 @@ import { inputConsumer } from '@kit.InputKit';
 | 名称 |
 | --- |
 | [getShieldStatus(全局快捷键)](arkts-input-inputconsumer-getshieldstatus-f-sys.md) |
-| [off(全局快捷键)](arkts-input-inputconsumer-off-f-sys.md#offkey) |
+| off(全局快捷键) |
 | [offKey(全局快捷键)](arkts-input-inputconsumer-offkey-f-sys.md) |
-| [offKey(全局快捷键)](arkts-input-inputconsumer-offkey-f-sys.md) |
-| [on(全局快捷键)](arkts-input-inputconsumer-on-f-sys.md#onkey) |
-| [onKey(全局快捷键)](arkts-input-inputconsumer-onkey-f-sys.md) |
+| on(全局快捷键) |
 | [onKey(全局快捷键)](arkts-input-inputconsumer-onkey-f-sys.md) |
 | [setShieldStatus(全局快捷键)](arkts-input-inputconsumer-setshieldstatus-f-sys.md) |
 <!--DelEnd-->

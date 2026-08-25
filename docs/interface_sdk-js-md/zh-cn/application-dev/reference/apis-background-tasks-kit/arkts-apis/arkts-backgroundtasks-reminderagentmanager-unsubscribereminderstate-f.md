@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## unsubscribeReminderState
@@ -15,8 +15,6 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 取消订阅代理提醒状态。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,38 +37,3 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 | 错误码ID |
 | --- |
 | [1700007](../errorcode-reminderAgentManager.md#1700007-参数错误) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function reminderStateCallback(states: Array<reminderAgentManager.ReminderState>) {
-  console.info('length is : ' + states.length);
-}
-
-reminderAgentManager.unsubscribeReminderState(reminderStateCallback).then(() => {
-  console.info('unsubscribe succeeded');
-}).catch((err: BusinessError) => {
-  console.error('promise err code:' + err.code + ' message:' + err.message);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-function reminderStateCallback(states: Array<reminderAgentManager.ReminderState>) {
-  console.info('length is : ' + states.length);
-}
-
-reminderAgentManager.unsubscribeReminderState(reminderStateCallback).then(() => {
-  console.info('unsubscribe succeeded');
-}).catch((err): void => {
-  console.error('promise err code:' + err.code + ' message:' + err.message);
-});
-```

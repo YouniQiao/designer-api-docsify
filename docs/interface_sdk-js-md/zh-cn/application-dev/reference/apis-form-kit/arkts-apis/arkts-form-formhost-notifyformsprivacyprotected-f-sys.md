@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## notifyFormsPrivacyProtected
@@ -19,8 +19,6 @@ function notifyFormsPrivacyProtected(
 通知指定卡片隐私保护状态改变。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -47,82 +45,6 @@ function notifyFormsPrivacyProtected(
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-try {
-  formHost.notifyFormsPrivacyProtected(formIds, true, (error: BusinessError) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formIds: Array<string> = new Array<string>('12400633174999288', '12400633174999289');
-try {
-  formHost.notifyFormsPrivacyProtected(formIds, true, (error) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    }
-  });
-} catch(error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-try {
-  formHost.notifyFormsPrivacyProtected(formIds, true).then(() => {
-    console.info('formHost notifyFormsPrivacyProtected success');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formIds: Array<string> = new Array<string>('12400633174999288', '12400633174999289');
-try {
-  formHost.notifyFormsPrivacyProtected(formIds, true).then(() => {
-    console.info('formHost notifyFormsPrivacyProtected success');
-  }).catch((error) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch(error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## notifyFormsPrivacyProtected
 
@@ -133,8 +55,6 @@ function notifyFormsPrivacyProtected(formIds: Array<string>, isProtected: boolea
 通知指定卡片隐私保护状态改变。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -165,7 +85,3 @@ function notifyFormsPrivacyProtected(formIds: Array<string>, isProtected: boolea
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
 | [16500060](../errorcode-form.md#16500060-连接服务失败) |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
-
-**示例**
-
-参见 [notifyFormsPrivacyProtected](#notifyformsprivacyprotected)

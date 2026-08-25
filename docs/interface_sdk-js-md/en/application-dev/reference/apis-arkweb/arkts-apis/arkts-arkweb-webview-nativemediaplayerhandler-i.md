@@ -4,14 +4,12 @@ NativeMediaPlayerHandler is the parameter of the [CreateNativeMediaPlayerCallbac
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## handleBufferedEndTimeChanged
@@ -24,8 +22,6 @@ Called to notify the ArkWeb engine of the buffer time when the buffer time chang
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -35,10 +31,6 @@ Called to notify the ArkWeb engine of the buffer time when the buffer time chang
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bufferedEndTime | number | Yes |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handleDurationChanged
 
@@ -50,8 +42,6 @@ Called to notify the ArkWeb engine of the total duration of the media.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -61,10 +51,6 @@ Called to notify the ArkWeb engine of the total duration of the media.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | duration | number | Yes |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handleEnded
 
@@ -76,15 +62,9 @@ When media playback ends, this method is called to notify the ArkWeb kernel of t
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handleError
 
@@ -95,8 +75,6 @@ handleError(error: MediaError, errorMessage: string): void
 When an error occurs in the player, this method is called to notify the ArkWeb kernel of the error.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -109,10 +87,6 @@ When an error occurs in the player, this method is called to notify the ArkWeb k
 | error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | Yes |
 | [errorMessage](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-errormessage-i-sys.md) | string | Yes |
 
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-
 ## handleFullscreenChanged
 
 ```TypeScript
@@ -123,8 +97,6 @@ Called to notify the ArkWeb engine of the full screen status of the player when 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -133,11 +105,7 @@ Called to notify the ArkWeb engine of the full screen status of the player when 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fullscreen | boolean | Yes |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
+| [fullscreen](../../apis-arkui/arkts-components/arkts-arkui-fullscreeninfo-i.md) | boolean | Yes |
 
 ## handleMutedChanged
 
@@ -149,8 +117,6 @@ Called to notify the ArkWeb engine of the muted status of the player when the mu
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -160,10 +126,6 @@ Called to notify the ArkWeb engine of the muted status of the player when the mu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | muted | boolean | Yes |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handleNetworkStateChanged
 
@@ -175,8 +137,6 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -186,10 +146,6 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | state | [NetworkState](../../apis-telephony-kit/arkts-apis/arkts-telephony-radio-networkstate-i.md) | Yes |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handlePlaybackRateChanged
 
@@ -201,8 +157,6 @@ When the playback rate of the player changes, this method is called to notify th
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -212,10 +166,6 @@ When the playback rate of the player changes, this method is called to notify th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | playbackRate | number | Yes |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handleReadyStateChanged
 
@@ -227,8 +177,6 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -238,10 +186,6 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | state | [ReadyState](arkts-arkweb-webview-readystate-e.md) | Yes |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handleSeekFinished
 
@@ -253,15 +197,9 @@ When the player completes seeking, this method is called to notify the ArkWeb ke
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handleSeeking
 
@@ -273,15 +211,9 @@ When the player enters the seek state, this method is called to notify the ArkWe
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handleStatusChanged
 
@@ -293,8 +225,6 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -304,10 +234,6 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | status | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | Yes |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
 
 ## handleTimeUpdate
 
@@ -319,8 +245,6 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -331,10 +255,6 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 | --- | --- | --- |
 | currentPlayTime | number | Yes |
 
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-
 ## handleVideoSizeChanged
 
 ```TypeScript
@@ -344,8 +264,6 @@ handleVideoSizeChanged(width: number, height: number): void
 When the player parses the video dimensions, this method is called to notify the ArkWeb kernel of the video size.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -358,10 +276,6 @@ When the player parses the video dimensions, this method is called to notify the
 | width | number | Yes |
 | height | number | Yes |
 
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).
-
 ## handleVolumeChanged
 
 ```TypeScript
@@ -372,8 +286,6 @@ Called to notify the ArkWeb engine of the volume of the player when the volume c
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -383,7 +295,3 @@ Called to notify the ArkWeb engine of the volume of the player when the volume c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | volume | number | Yes |
-
-**Examples**
-
-For details about the sample code, see [onCreateNativeMediaPlayer](./arkts-apis-webview-WebviewController.md#oncreatenativemediaplayer).

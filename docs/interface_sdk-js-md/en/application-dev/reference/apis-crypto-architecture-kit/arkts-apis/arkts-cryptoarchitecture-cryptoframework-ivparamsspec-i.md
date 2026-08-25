@@ -1,6 +1,8 @@
 # IvParamsSpec
 
-Encapsulates the parameters for encryption or decryption using a block cipher mode that requires an IV. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.<br>This is applicable to block cipher modes that require an IV, such as CBC, CTR, OFB, and CFB.
+Encapsulates the parameters for encryption or decryption using a block cipher mode that requires an IV. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.
+
+This is applicable to block cipher modes that require an IV, such as CBC, CTR, OFB, and CFB.
 
 > **NOTE：**&gt;
 > Before passing a value to
@@ -11,8 +13,6 @@ Encapsulates the parameters for encryption or decryption using a block cipher mo
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -20,7 +20,7 @@ Encapsulates the parameters for encryption or decryption using a block cipher mo
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## iv
@@ -30,13 +30,13 @@ iv: DataBlob
 ```
 
 IV parameter for encryption/decryption. Common lengths are listed below:  
-- In the CBC, CTR, OFB, or CFB mode of AES: The IV length is 16 bytes. - In the CBC, OFB, or CFB mode of 3DES: The IV length is 8 bytes. - In the CBC, CTR, OFB, or CFB mode of SM4&lt;sup&gt;10+&lt;/sup&gt;: The IV length is 16 bytes.
+- In the CBC, CTR, OFB, or CFB mode of AES: The IV length is 16 bytes.  
+- In the CBC, OFB, or CFB mode of 3DES: The IV length is 8 bytes.  
+- In the CBC, CTR, OFB, or CFB mode of SM4&lt;sup&gt;10+&lt;/sup&gt;: The IV length is 16 bytes.
 
 **Type:** DataBlob
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

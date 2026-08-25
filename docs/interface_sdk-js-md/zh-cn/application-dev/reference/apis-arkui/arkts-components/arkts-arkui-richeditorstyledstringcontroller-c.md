@@ -8,11 +8,9 @@
 controller: RichEditorStyledStringController = new RichEditorStyledStringController();
 ```
 
-**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) implements StyledStringController
+**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) implements [StyledStringController](../arkts-apis/arkts-arkui-styledstringcontroller-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,8 +28,6 @@ getSelection(): RichEditorRange
 获取富文本当前的选中区域范围。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,8 +51,6 @@ getStyledString(): MutableStyledString
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -79,8 +73,6 @@ onContentChanged(listener: StyledStringChangedListener): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -91,7 +83,7 @@ onContentChanged(listener: StyledStringChangedListener): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-textcommon-styledstringchangedlistener-i.md) | 是 |
+| listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md) | 是 |
 
 ## setStyledString
 
@@ -106,8 +98,6 @@ setStyledString(styledString: StyledString): void
 > - 当内容超过组件本身区域时，组件会自动向上滚动内容直到末尾处可见。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

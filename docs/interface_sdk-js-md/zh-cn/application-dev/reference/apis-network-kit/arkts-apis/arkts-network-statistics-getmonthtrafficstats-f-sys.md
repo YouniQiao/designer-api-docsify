@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getMonthTrafficStats
@@ -15,8 +15,6 @@ function getMonthTrafficStats(simId: number): Promise<number>
 获取蜂窝实时下行流量，使用 callback 异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 

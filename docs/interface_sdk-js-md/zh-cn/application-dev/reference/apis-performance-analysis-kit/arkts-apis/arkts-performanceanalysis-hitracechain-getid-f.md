@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getId
@@ -16,8 +16,6 @@ function getId(): HiTraceId
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **返回值：**
@@ -25,18 +23,3 @@ function getId(): HiTraceId
 | 类型 |
 | --- |
 | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) |
-
-**示例**
-
-```TypeScript
-// 开始跟踪，跟踪标志是DEFAULT。
-let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.DEFAULT);
-// 若干业务逻辑完成后，获取当前跟踪标识。
-let curTraceId = hiTraceChain.getId();
-// 同一跟踪链获取的跟踪标识的chainId一定相同。
-if (curTraceId.chainId != traceId.chainId) {
-// 基于异常场景的处理逻辑。
-}
-// 若干业务逻辑完成后，结束跟踪。
-hiTraceChain.end(traceId);
-```

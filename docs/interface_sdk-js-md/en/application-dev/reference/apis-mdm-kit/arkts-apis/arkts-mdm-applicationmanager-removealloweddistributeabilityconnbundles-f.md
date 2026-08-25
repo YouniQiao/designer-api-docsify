@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeAllowedDistributeAbilityConnBundles
@@ -15,8 +15,6 @@ function removeAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: 
 Removes the cross-device application trustlist for a specific distributed service for a specified user. After the trustlist is removed, if there are still remaining applications in the list, only those applications can use the specific distributed service to transmit data across devices without being subject to the restrictions imposed by [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md). If the list has been removed and there are no remaining applications, no applications under the specified user are allowed to use the specific distributed service for cross-device data transmission.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -30,7 +28,7 @@ Removes the cross-device application trustlist for a specific distributed servic
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 | appIdentifiers | Array & lt;string & gt; | Yes |
-| serviceType | [ServiceType](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-servicetype-e.md) | Yes |
+| serviceType | [ServiceType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-servicetype-e.md) | Yes |
 | accountId | number | Yes |
 
 **Error codes:**

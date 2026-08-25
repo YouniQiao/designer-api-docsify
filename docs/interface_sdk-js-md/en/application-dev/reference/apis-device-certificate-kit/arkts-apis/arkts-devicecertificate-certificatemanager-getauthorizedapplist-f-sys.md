@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## getAuthorizedAppList
@@ -15,8 +15,6 @@ function getAuthorizedAppList(keyUri: string) : Promise<CMResult>
 Obtains the list of authorized applications of a user's public credential. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
@@ -47,26 +45,3 @@ Obtains the list of authorized applications of a user's public credential. This 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let keyUri: string = 'test'; /* Unique identifier of the user public credential. */
-try {
-     certificateManager.getAuthorizedAppList(keyUri).then((cmResult: certificateManager.CMResult) => {
-        if (cmResult?.appUidList == undefined) {
-            console.info('The result of getting authorized app list is undefined.');
-        } else {
-            let appUidList: Array<string> = cmResult.appUidList;
-            console.info('Succeeded in getting authorized app list.');
-        }
-    }).catch((err: BusinessError) => {
-        console.error(`Failed to get authorized app list. Code: ${err.code}, message: ${err.message}`);
-    })
-} catch (error: BusinessError) {
-    console.error(`Failed to get authorized app list. Code: ${error.code}, message: ${error.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
+import { buffer } from 'kits/@kit.ArkTS';
 ```
 
 ## transcode
@@ -15,8 +15,6 @@ function transcode(source: Buffer | Uint8Array, fromEnc: string, toEnc: string):
 Transcodes a **Buffer** or **Uint8Array** object from one encoding format to another.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -35,13 +33,3 @@ Transcodes a **Buffer** or **Uint8Array** object from one encoding format to ano
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | Buffer |
-
-**Examples**
-
-```TypeScript
-import { buffer } from '@kit.ArkTS';
-
-let newBuf = buffer.transcode(buffer.from('€'), 'utf-8', 'ascii');
-console.info("newBuf = " + newBuf.toString('ascii'));
-// Output: newBuf = ,
-```

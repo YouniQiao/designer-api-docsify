@@ -10,8 +10,6 @@ This module encapsulates the data and attributes carried when a common event is 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 ## bundleName
@@ -26,8 +24,6 @@ Bundle name of the subscriber, which is used to specify the subscriber to whom t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -35,18 +31,16 @@ Bundle name of the subscriber, which is used to specify the subscriber to whom t
 ## code
 
 ```TypeScript
-code?: int
+code?: number
 ```
 
 Common event data transferred by the publisher. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** 0
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,8 +58,6 @@ Common event data transferred by the publisher. The value is a string and cannot
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -77,15 +69,16 @@ isOrdered?: boolean
 ```
 
 Whether the common event is an ordered one. The default value is **false**.  
-- **true**: This event is an ordered common event. Based on the priority set by the subscriber, the common event is preferentially sent to the subscriber with a higher priority. After the subscriber successfully receives the event, the public event is sent to the subscriber with a lower priority. Subscribers with the same priority receive common events in a random order. - **false**: This event is an unordered common event. Whether subscribers receive the event is not considered, and the common event which subscribers receive may not comply with the subscription sequence.
+- **true**: This event is an ordered common event. Based on the priority set by the subscriber, the common event is  
+preferentially sent to the subscriber with a higher priority. After the subscriber successfully receives the event, the public event is sent to the subscriber with a lower priority. Subscribers with the same priority receive common events in a random order.  
+- **false**: This event is an unordered common event. Whether subscribers receive the event is not considered, and  
+the common event which subscribers receive may not comply with the subscription sequence.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -96,8 +89,10 @@ isSticky?: boolean
 ```
 
 Whether the common event is a sticky one. The default value is **false**.  
-- **true**: This event is a sticky common event, which allows subscribers to receive common events that have been sent before subscription. - **false**: This event is not a sticky common event, which allows subscribers to receive common events sent after subscription.  
-Only system applications and system services are allowed to send sticky events.  
+- **true**: This event is a sticky common event, which allows subscribers to receive common events that have been  
+sent before subscription.  
+- **false**: This event is not a sticky common event, which allows subscribers to receive common events sent after  
+subscription.Only system applications and system services are allowed to send sticky events.  
 **Required Permissions**: [ohos.permission.COMMONEVENT_STICKY](../../../security/AccessToken/permissions-for-all.md#ohospermissioncommonevent_sticky)
 
 **Type:** boolean
@@ -105,8 +100,6 @@ Only system applications and system services are allowed to send sticky events.
 **Default:** false
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.COMMONEVENT_STICKY
 
@@ -124,8 +117,6 @@ Additional information about the common event transferred by the publisher. Cust
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -141,8 +132,6 @@ Subscriber permissions. Only subscribers with the specified permissions can rece
 **Type:** Array&lt;string&gt;
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

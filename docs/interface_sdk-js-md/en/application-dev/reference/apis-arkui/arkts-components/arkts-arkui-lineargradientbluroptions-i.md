@@ -4,8 +4,6 @@ Linear Gradient Blur Interface
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ direction: GradientDirection
 
 Gradient blur direction.Default value:GradientDirection.Bottom
 
-**Type:** GradientDirection
+**Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Gradient blur stops. The value is a set of binary arrays, each of which indicate
 **Type:** [FractionStop](arkts-arkui-fractionstop-t.md)[]
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

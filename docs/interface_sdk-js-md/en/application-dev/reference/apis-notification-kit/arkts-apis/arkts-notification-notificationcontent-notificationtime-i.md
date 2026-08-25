@@ -7,23 +7,19 @@ Describes the notification timing information.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## initialTime
 
 ```TypeScript
-initialTime?: int
+initialTime?: number
 ```
 
 Initial time for the timer, which is used to set the starting point of the timer in the live view. The default value is **0**. Unit: ms.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -34,13 +30,12 @@ isCountDown?: boolean
 ```
 
 Whether it is countdown mode. The default value is **false**.  
-- **true**: The time is displayed decreasing from initialTime. - **false**: The time is displayed increasing from initialTime.
+- **true**: The time is displayed decreasing from initialTime.  
+- **false**: The time is displayed increasing from initialTime.
 
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -51,13 +46,12 @@ isInTitle?: boolean
 ```
 
 Whether the time information is displayed in the notification title. The default value is **false**.  
-- **true**: The timer information will be embedded in the title area. - **false**: The timer information is displayed in a separate area.
+- **true**: The timer information will be embedded in the title area.  
+- **false**: The timer information is displayed in a separate area.
 
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -68,24 +62,11 @@ isPaused?: boolean
 ```
 
 Whether the timer is paused. The default value is **false**.  
-- **true**: The timer is paused at the current value. - **false**: The timer runs normally.
+- **true**: The timer is paused at the current value.  
+- **false**: The timer runs normally.
 
 **Type:** boolean
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
-
-**Examples**
-
-```TypeScript
-// The notification counts down from three seconds and the time is displayed in the title.
-time: {
-    initialTime: 3000,
-    isCountDown: true,
-    isPaused: false,
-    isInTitle: true,
-}
-```

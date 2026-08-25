@@ -9,8 +9,6 @@ The **formInfo** module provides types and enums related to the widget informati
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [formInfo/formInfo](arkts-app-form-forminfo.md)

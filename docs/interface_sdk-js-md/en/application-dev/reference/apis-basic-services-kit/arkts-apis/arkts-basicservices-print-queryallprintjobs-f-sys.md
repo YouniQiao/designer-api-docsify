@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## queryAllPrintJobs
@@ -15,8 +15,6 @@ function queryAllPrintJobs(callback: AsyncCallback<void>): void
 Queries all print jobs. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Deprecated since:** 11
 
@@ -41,32 +39,6 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryAllPrintJobs((err: BusinessError) => {
-    if (err) {
-        console.error('queryAllPrintJobs failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('queryAllPrintJobs success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryAllPrintJobs().then(() => {
-    console.info('queryAllPrintJobs success');
-}).catch((error: BusinessError) => {
-    console.error('queryAllPrintJobs failed, error : ' + JSON.stringify(error));
-})
-```
-
 
 ## queryAllPrintJobs
 
@@ -77,8 +49,6 @@ function queryAllPrintJobs(): Promise<void>
 Queries all print jobs. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Deprecated since:** 11
 
@@ -102,7 +72,3 @@ Queries all print jobs. This API uses a promise to return the result.
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-See [queryAllPrintJobs](#queryallprintjobs)

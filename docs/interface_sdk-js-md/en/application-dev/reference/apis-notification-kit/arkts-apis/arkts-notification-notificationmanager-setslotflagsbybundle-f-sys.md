@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setSlotFlagsByBundle
 
 ```TypeScript
-function setSlotFlagsByBundle(bundle: BundleOption, slotFlags: long): Promise<void>
+function setSlotFlagsByBundle(bundle: BundleOption, slotFlags: number): Promise<void>
 ```
 
 Sets the slot flags for a specified application. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,8 +26,8 @@ Sets the slot flags for a specified application. This API uses a promise to retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
-| slotFlags | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| slotFlags | number | Yes |
 
 **Return value:**
 
@@ -49,21 +47,3 @@ Sets the slot flags for a specified application. This API uses a promise to retu
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-
-let slotFlags: number = 1;
-
-notificationManager.setSlotFlagsByBundle(bundle, slotFlags).then(() => {
-    console.info("setSlotFlagsByBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`setSlotFlagsByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```

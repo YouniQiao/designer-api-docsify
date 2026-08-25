@@ -9,14 +9,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Graphics.Drawing
 
 ## 导入模块
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## negate
@@ -28,8 +26,6 @@ static negate(point: common2D.Point): void
 对点的坐标取反。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,21 +39,13 @@ static negate(point: common2D.Point): void
 
 ## offset
 
-ArkTS-Dyn:
 ```TypeScript
 static offset(point: common2D.Point, dx: number, dy: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-static offset(point: common2D.Point, dx: double, dy: double): void
 ```
 
 将指定坐标点沿着x轴和y轴方向偏移一定距离。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,70 +56,5 @@ static offset(point: common2D.Point, dx: double, dy: double): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | point | common2D.Point | 是 |
-| dx | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-| dy | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-
-**示例**
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-const path = new drawing.Path();
-path.moveTo(200, 200);
-path.lineTo(300, 300);
-const dstPath = path.offset(200, 200);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { drawing, common2D } from '@kit.ArkGraphics2D';
-let rect = drawing.RectUtils.makeLtrb(0, 0, 20, 20);
-drawing.RectUtils.offset(rect, 10, 20);
-console.info('rect.left: ', rect.left);
-console.info('rect.top: ', rect.top);
-console.info('rect.right: ', rect.right);
-console.info('rect.bottom: ', rect.bottom);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { drawing, common2D } from '@kit.ArkGraphics2D';
-let rect = drawing.RectUtils.makeLtrb(0.0, 0.0, 20.0, 20.0);
-if (rect == undefined) {
-    return;
-}
-drawing.RectUtils.offset(rect, 10, 20);
-console.info('rect.left:', rect.left);
-console.info('rect.top: ', rect.top);
-console.info('rect.right: ', rect.right);
-console.info('rect.bottom: ', rect.bottom);
-```
-
-```TypeScript
-import { RenderNode, DrawContext } from '@kit.ArkUI';
-import { drawing } from '@kit.ArkGraphics2D';
-class DrawingRenderNode extends RenderNode {
-  draw(context : DrawContext) {
-    const canvas = context.canvas;
-    const pen = new drawing.Pen();
-    pen.setColor({ alpha: 255, red: 255, green: 0, blue: 0 });
-    pen.setStrokeWidth(10.0);
-    canvas.attachPen(pen);
-    let region = new drawing.Region();
-    region.setRect(100, 100, 400, 400);
-    region.offset(10, 20);
-    canvas.drawPoint(200.0, 200.0);
-    canvas.drawRegion(region);
-    canvas.detachPen();
-  }
-}
-```
-
-```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
-
-let roundRect : drawing.RoundRect = new drawing.RoundRect({ left: 0, top: 0, right: 300, bottom: 300 }, 50, 50);
-roundRect.offset(100, 100);
-```
+| [dx](../../apis-arkui/arkts-apis/arkts-arkui-actionsheetoffset-i.md) | number | 是 |
+| [dy](../../apis-arkui/arkts-apis/arkts-arkui-actionsheetoffset-i.md) | number | 是 |

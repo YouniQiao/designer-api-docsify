@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## readLines
@@ -17,8 +17,6 @@ declare function readLines(filePath: string, options?: Options): Promise<ReaderI
 逐行读取文件文本内容，只支持读取utf-8格式文件。使用promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -53,123 +51,6 @@ declare function readLines(filePath: string, options?: Options): Promise<ReaderI
 | 13900042 |
 | 13900044 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Options } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-fileIo.readLines(filePath, options).then((readerIterator: fileIo.ReaderIterator) => {
-  for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-    console.info(`Succeeded in reading lines, content: ${it.value}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Options } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-fileIo.readLines(filePath, options).then((readerIterator:fileIo.ReaderIterator) => {
-  for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-    console.info(`Succeeded in reading lines, content: ${it.value}`);
-  }
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.readLines(filePath, (err: BusinessError, readerIterator: fileIo.ReaderIterator) => {
-  if (err) {
-    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-      console.info(`Succeeded in reading lines, content: ${it.value}`);
-    }
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.readLines(filePath, (err: BusinessError<void> | null, readerIterator:fileIo.ReaderIterator | undefined) => {
-  if (err) {
-    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-  } else if (readerIterator) {
-    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-      console.info(`Succeeded in reading lines, content: ${it.value}`);
-    }
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Options } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-fileIo.readLines(filePath, options, (err: BusinessError, readerIterator: fileIo.ReaderIterator) => {
-  if (err) {
-    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-      console.info(`Succeeded in reading lines, content: ${it.value}`);
-    }
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Options } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let options: Options = {
-  encoding: 'utf-8'
-};
-fileIo.readLines(filePath, options, (err: BusinessError<void> | null, readerIterator:fileIo.ReaderIterator | undefined) => {
-  if (err) {
-    console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
-  } else if (readerIterator) {
-    for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-      console.info(`Succeeded in reading lines, content: ${it.value}`);
-    }
-  }
-});
-```
-
 
 ## readLines
 
@@ -180,8 +61,6 @@ declare function readLines(filePath: string, callback: AsyncCallback<ReaderItera
 逐行读取文件文本内容，只支持读取utf-8格式文件。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -209,10 +88,6 @@ declare function readLines(filePath: string, callback: AsyncCallback<ReaderItera
 | 13900041 |
 | 13900042 |
 
-**示例**
-
-参见 [readLines](#readlines)
-
 
 ## readLines
 
@@ -223,8 +98,6 @@ declare function readLines(filePath: string, options: Options, callback: AsyncCa
 逐行读取文件文本内容，可配置读取选项，只支持读取utf-8格式文件。使用callback异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -252,7 +125,3 @@ declare function readLines(filePath: string, options: Options, callback: AsyncCa
 | 13900033 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-参见 [readLines](#readlines)

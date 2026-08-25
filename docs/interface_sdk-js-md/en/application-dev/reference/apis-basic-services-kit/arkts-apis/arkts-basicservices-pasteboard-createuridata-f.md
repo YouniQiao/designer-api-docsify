@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createUriData
@@ -15,8 +15,6 @@ function createUriData(uri: string): PasteData
 Creates a **PasteData** object of the URI type.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -35,9 +33,3 @@ Creates a **PasteData** object of the URI type.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) |
-
-**Examples**
-
-```TypeScript
-let pasteData: pasteboard.PasteData = pasteboard.createUriData('dataability:///com.example.myapplication1/user.txt');
-```

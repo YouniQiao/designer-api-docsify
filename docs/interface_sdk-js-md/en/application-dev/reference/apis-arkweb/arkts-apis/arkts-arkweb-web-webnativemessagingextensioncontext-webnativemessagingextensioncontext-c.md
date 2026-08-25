@@ -6,14 +6,12 @@ WebNativeMessagingExtensionContext is the runtime context of the native web mess
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from 'kits/@kit.ArkWeb';
 ```
 
 ## startAbility
@@ -25,8 +23,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 Starts an ability. This API uses a promise to return the result. To obtain the return result when the started UIAbility exits, use [startAbilityForResult](#startabilityforresult).
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,29 +68,6 @@ Starts an ability. This API uses a promise to return the result. To obtain the r
 | [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-app_instance_key-cannot-be-specified) |
 | [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
 
-**Examples**
-
-```TypeScript
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-import { Want } from '@kit.AbilityKit';
-
-export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAbility {
-  onConnectNative(info: ConnectionInfo): void {
-    const abilityWant: Want = {
-    bundleName: 'com.example.mybundle',
-    abilityName: 'MainAbility'
-    };
-    try {
-        const context = this.context; // Obtain the WebNativeMessagingExtensionContext instance.
-        context.startAbility(abilityWant);
-        console.info('Ability started successfully');
-    } catch (err) {
-        console.error(`Failed to start ability. Code: ${err.code}, Message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## startAbilityForResult
 
 ```TypeScript
@@ -102,11 +75,13 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 ```
 
 Starts a UIAbility. This API uses a promise to return the result when the started UIAbility exits.After the UIAbility is started, the following situations may occur:  
-- Under normal circumstances, [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) can be called to terminate the UIAbility and return the result to the caller. - In abnormal cases, such as when the UIAbility is destroyed, exception information is returned to the caller, with resultCode set to -1. - Only UIAbilities of the current app can be started.
+- Under normal circumstances,  
+[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) can be called to terminate the UIAbility and return the result to the caller.  
+- In abnormal cases, such as when the UIAbility is destroyed, exception information is returned to the caller, with  
+resultCode set to -1.  
+- Only UIAbilities of the current app can be started.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,8 +137,6 @@ Stops the specified native connection. This API uses a promise to return the res
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -188,25 +161,6 @@ Stops the specified native connection. This API uses a promise to return the res
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-
-export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAbility {
-  onConnectNative(info: ConnectionInfo): void {
-    const CONNECTION_ID = 12345; // Actual connection ID.
-    try {
-        const context = this.context;// Obtain the WebNativeMessagingExtensionContext instance.
-        context.stopNativeConnection(CONNECTION_ID);
-        console.info('Native connection stopped successfully');
-    } catch (err) {
-        console.error(`Failed to stop native connection. Code: ${err.code}, Message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## terminateSelf
 
 ```TypeScript
@@ -216,8 +170,6 @@ terminateSelf(): Promise<void>
 Destroys the current native web message extension. This method returns a promise for asynchronous processing. Calling this method automatically stops all native web message connections, so there is no need to call stopNativeConnection.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -236,21 +188,3 @@ Destroys the current native web message extension. This method returns a promise
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
-
-export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAbility {
-  onConnectNative(info: ConnectionInfo): void {
-    try {
-        const context = this.context; // Obtain the WebNativeMessagingExtensionContext instance.
-        context.terminateSelf();
-        console.info('Extension terminated successfully');
-    } catch (err) {
-        console.error(`Failed to terminate extension. Code: ${err.code}, Message: ${err.message}`);
-    }
-  }
-}
-```

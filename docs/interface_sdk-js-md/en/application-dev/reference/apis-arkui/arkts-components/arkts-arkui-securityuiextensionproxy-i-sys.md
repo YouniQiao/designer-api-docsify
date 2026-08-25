@@ -4,8 +4,6 @@ Implements a **SecurityUIExtensionProxy** instance for the component host to sen
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,8 +23,6 @@ Unsubscribes from the callback triggered for the asynchronous registration of th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -38,7 +34,7 @@ Unsubscribes from the callback triggered for the asynchronous registration of th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes |
-| callback | Callback & lt;UIExtensionProxy & gt; | No |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No |
 
 ## off('syncReceiverRegister')
 
@@ -50,8 +46,6 @@ Unsubscribes from the callback triggered for the synchronous registration of the
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -63,7 +57,7 @@ Unsubscribes from the callback triggered for the synchronous registration of the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes |
-| callback | Callback & lt;UIExtensionProxy & gt; | No |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No |
 
 ## on('asyncReceiverRegister')
 
@@ -74,8 +68,6 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 Subscribes to the callback triggered for asynchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,7 +80,7 @@ Subscribes to the callback triggered for asynchronous registration of the starte
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes |
-| callback | Callback & lt;UIExtensionProxy & gt; | Yes |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes |
 
 ## on('syncReceiverRegister')
 
@@ -99,8 +91,6 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 Subscribes to the callback triggered for synchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,7 +103,7 @@ Subscribes to the callback triggered for synchronous registration of the started
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes |
-| callback | Callback & lt;UIExtensionProxy & gt; | Yes |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes |
 
 ## send
 
@@ -124,8 +114,6 @@ send(data: Record<string, Object>): void
 Asynchronously sends data to the ability started by the component host through the connection established between the two parties.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,8 +136,6 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 Synchronously sends data to the ability started by the component host through the connection established between the two parties.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

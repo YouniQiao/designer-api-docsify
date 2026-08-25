@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getForegroundApplications
@@ -15,8 +15,6 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -39,41 +37,6 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getForegroundApplicationsCallback(err: BusinessError | null,
-  data: Array<appManager.AppStateData> | undefined) {
-  if (err) {
-    console.error(`getForegroundApplicationsCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`getForegroundApplicationsCallback success, data: ${JSON.stringify(data)}`);
-  }
-}
-
-try {
-  appManager.getForegroundApplications(getForegroundApplicationsCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.getForegroundApplications().then((data) => {
-  console.info(`getForegroundApplications success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getForegroundApplications fail, err: ${JSON.stringify(err)}`);
-});
-```
-
 
 ## getForegroundApplications
 
@@ -84,8 +47,6 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -106,7 +67,3 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [getForegroundApplications](#getforegroundapplications)

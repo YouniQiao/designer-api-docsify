@@ -4,27 +4,23 @@ CounterV2DateData定义了日期通用属性和方法，包括年、月、日。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from 'kits/@kit.ArkUI';
 ```
 
 ## constructor
 
 ```TypeScript
-constructor(year: int, month: int, day: int)
+constructor(year: number, month: number, day: number)
 ```
 
 CounterV2DateData的构造函数用于初始化日期对象。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,8 +46,6 @@ toString(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -67,7 +61,7 @@ toString(): string
 ## day
 
 ```TypeScript
-day: int
+day: number
 ```
 
 表示日期内联型的日。
@@ -75,8 +69,6 @@ day: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,7 +79,7 @@ day: int
 ## month
 
 ```TypeScript
-month: int
+month: number
 ```
 
 表示日期内联型的月份。
@@ -95,8 +87,6 @@ month: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -107,7 +97,7 @@ month: int
 ## year
 
 ```TypeScript
-year: int
+year: number
 ```
 
 表示日期内联型的年份。
@@ -115,8 +105,6 @@ year: int
 **类型：** number
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

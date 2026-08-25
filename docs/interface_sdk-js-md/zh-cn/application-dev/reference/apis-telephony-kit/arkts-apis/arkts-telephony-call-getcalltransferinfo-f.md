@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCallTransferInfo
@@ -15,8 +15,6 @@ function getCallTransferInfo(type: CallTransferType, number: string): Promise<Ca
 获取电话号码的呼叫转移状态。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.GET_CALL_TRANSFER_INFO
 
@@ -46,43 +44,3 @@ function getCallTransferInfo(type: CallTransferType, number: string): Promise<Ca
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8401002](../errorcode-telephony.md#8401002-输入号码错误) |
 | [8401003](../errorcode-telephony.md#8401003-操作频繁) |
-
-**示例**
-
-```TypeScript
-import { call } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let type: call.CallTransferType = call.CallTransferType.TRANSFER_TYPE_UNCONDITIONAL;
-let number: string = "138xxxxxxxx";
-
-call.getCallTransferInfo(type, number)
-    .then((data: call.CallTransferResult) => {
-        console.info(`getCallTransferInfo success, data->${JSON.stringify(data)}`);
-    })
-    .catch((err:BusinessError) => {
-        console.error(`getCallTransferInfo fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    });
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY, (err: BusinessError, data: call.CallTransferResult) => {
-    if (err) {
-        console.error(`getCallTransferInfo fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`getCallTransferInfo success, data->${JSON.stringify(data)}`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY).then((data: call.CallTransferResult) => {
-    console.info(`getCallTransferInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCallTransferInfo fail, promise: err->${JSON.stringify(err)}`);
-});
-```

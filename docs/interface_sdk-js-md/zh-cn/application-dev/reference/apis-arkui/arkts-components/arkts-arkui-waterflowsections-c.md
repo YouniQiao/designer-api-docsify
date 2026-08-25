@@ -7,8 +7,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -26,8 +24,6 @@ constructor()
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -43,8 +39,6 @@ length(): number
 获取瀑布流中分组数量。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,8 +61,6 @@ push(section: SectionOptions): boolean
 将指定分组添加到瀑布流末尾。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,8 +90,6 @@ splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): b
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -112,7 +102,7 @@ splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): b
 | --- | --- | --- |
 | start | number | 是 |
 | deleteCount | number | 否 |
-| sections | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | 否 |
+| [sections](arkts-arkui-waterflowoptions-i.md) | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | 否 |
 
 **返回值：**
 
@@ -129,8 +119,6 @@ update(sectionIndex:number, section: SectionOptions): boolean
 修改指定索引分组的配置信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,8 +148,6 @@ values(): Array<SectionOptions>
 获取瀑布流中所有分组配置信息。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

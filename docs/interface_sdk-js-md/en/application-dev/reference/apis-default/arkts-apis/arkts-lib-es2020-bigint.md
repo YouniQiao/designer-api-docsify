@@ -25,3 +25,11 @@
 | [BigUint64Array](arkts-lib-es2020-bigint-biguint64array-i.md) |
 | [BigUint64ArrayConstructor](arkts-lib-es2020-bigint-biguint64arrayconstructor-i.md) |
 | [DataView](arkts-lib-es2020-bigint-dataview-i.md) |
+
+### Properties
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [BigInt](arkts-libes2020bigint-p.md) |
+| [BigInt64Array](arkts-libes2020bigint-p.md) |
+| [BigUint64Array](arkts-libes2020bigint-p.md) |

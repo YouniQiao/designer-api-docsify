@@ -15,8 +15,6 @@ Creates a stream based on the file path. This API returns the result synchronous
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md)
@@ -35,10 +33,3 @@ Creates a stream based on the file path. This API returns the result synchronous
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Stream](arkts-corefile-fileio-stream-depr-i.md) |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let ss = fileio.createStreamSync(filePath, "r+");
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## setPolicyByUid
@@ -15,8 +15,6 @@ function setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallba
 设置对应 uid 应用是否能够访问计量网络的策略，使用 callback 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -43,29 +41,6 @@ function setPolicyByUid(uid: number, policy: NetUidPolicy, callback: AsyncCallba
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE, (error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE)
-  .then(() => {
-    console.info('setPolicyByUid success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## setPolicyByUid
 
@@ -76,8 +51,6 @@ function setPolicyByUid(uid: number, policy: NetUidPolicy): Promise<void>
 设置对应 uid 应用是否能够访问计量网络的策略，使用 Promise 异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_NET_STRATEGY
 
@@ -108,7 +81,3 @@ function setPolicyByUid(uid: number, policy: NetUidPolicy): Promise<void>
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-参见 [setPolicyByUid](#setpolicybyuid)

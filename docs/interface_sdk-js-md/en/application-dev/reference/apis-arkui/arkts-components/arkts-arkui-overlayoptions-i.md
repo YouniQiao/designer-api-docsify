@@ -8,8 +8,6 @@
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,11 +23,9 @@ align?: Alignment
 
 Alignment of the overlay relative to the component.Default value: **TopStart**
 
-**Type:** Alignment
+**Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,8 +44,6 @@ Offset of the overlay from the upper left corner. By default, the overlay is in 
 **Type:** [OverlayOffset](arkts-arkui-overlayoffset-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

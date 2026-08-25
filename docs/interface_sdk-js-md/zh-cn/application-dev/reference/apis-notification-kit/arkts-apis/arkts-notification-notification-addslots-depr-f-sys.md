@@ -15,8 +15,6 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [addSlots](arkts-notification-notificationmanager-addslots-f-sys.md)
@@ -34,50 +32,6 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 | slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import NotificationManager from '@ohos.notificationManager';
-import Base from '@ohos.base';
-
-// addSlots回调
-let addSlotsCallBack = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("addSlots failed " + JSON.stringify(err));
-  } else {
-    console.info("addSlots success");
-  }
-}
-// 通知slot对象
-let notificationSlot: NotificationManager.NotificationSlot = {
-  type: Notification.SlotType.SOCIAL_COMMUNICATION
-};
-// 通知slot array 对象
-let notificationSlotArray: NotificationManager.NotificationSlot[] = new Array();
-notificationSlotArray[0] = notificationSlot;
-
-Notification.addSlots(notificationSlotArray, addSlotsCallBack);
-```
-
-```TypeScript
-import NotificationManager from '@ohos.notificationManager';
-import Base from '@ohos.base';
-
-// 通知slot对象
-let notificationSlot: NotificationManager.NotificationSlot = {
-  type: Notification.SlotType.SOCIAL_COMMUNICATION
-};
-// 通知slot array 对象
-let notificationSlotArray: NotificationManager.NotificationSlot[] = new Array();
-notificationSlotArray[0] = notificationSlot;
-
-Notification.addSlots(notificationSlotArray).then(() => {
-  console.info("addSlots success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`addSlot failed, code is ${err}`);
-});
-```
-
 
 ## addSlots
 
@@ -88,8 +42,6 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 创建多个通知通道（Promise形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -112,7 +64,3 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [addSlots](#addslots)

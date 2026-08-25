@@ -6,7 +6,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ValueType, ValuesBucket } from '@kit.ArkData';
+import { ValueType, ValuesBucket } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

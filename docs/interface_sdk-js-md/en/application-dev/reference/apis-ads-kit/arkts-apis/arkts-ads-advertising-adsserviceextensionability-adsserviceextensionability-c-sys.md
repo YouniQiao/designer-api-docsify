@@ -4,8 +4,6 @@ Provides the capability of integrating advertising services with vendors.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Advertising.Ads
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides the capability of integrating advertising services with vendors.
 ## Modules to Import
 
 ```TypeScript
-import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
+import { AdsServiceExtensionAbility, RespCallback } from 'kits/@kit.AdsKit';
 ```
 
 ## onLoadAd
@@ -25,8 +23,6 @@ onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions,
 Called when the media application starts to load an ad. The device vendor needs to implement the ad request service logic in this API and send the result to the media application through a call back.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -40,21 +36,6 @@ Called when the media application starts to load an ad. The device vendor needs 
 | [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | Yes |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes |
 
-**Examples**
-
-```TypeScript
-import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';
-
-export default class AdsExtensionAbility extends AdsServiceExtensionAbility {
-  onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions, respCallback: RespCallback) {
-    const respData: Map<string, Array<advertising.Advertisement>> = new Map();
-    // Set the returned ad data.
-    // ...
-    respCallback(respData);
-  }
-}
-```
-
 ## onLoadAdWithMultiSlots
 
 ```TypeScript
@@ -65,8 +46,6 @@ onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: adver
 Called when the media application starts to load multiple ads. The device vendor needs to implement the ad request service logic in this API and send the result to the media application through a call back.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Advertising.Ads
 
@@ -79,19 +58,3 @@ Called when the media application starts to load multiple ads. The device vendor
 | adParams | advertising.AdRequestParams[] | Yes |
 | [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | Yes |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes |
-
-**Examples**
-
-```TypeScript
-import { AdsServiceExtensionAbility, advertising, RespCallback } from '@kit.AdsKit';
-
-export default class AdsExtensionAbility extends AdsServiceExtensionAbility {
-  onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions,
-    respCallback: RespCallback) {
-    const respData: Map<string, Array<advertising.Advertisement>> = new Map();
-    // Set the returned ad data.
-    // ...
-    respCallback(respData);
-  }
-}
-```

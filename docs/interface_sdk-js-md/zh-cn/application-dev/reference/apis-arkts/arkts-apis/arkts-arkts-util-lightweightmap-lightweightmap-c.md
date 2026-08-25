@@ -4,60 +4,13 @@ LightWeightMap可用于存储具有关联关系的key-value键值对，其中key
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
-```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<[K, V]>
-```
-
-返回一个迭代器，迭代器的每一项都是一个包含键和值的[K, V]数组。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |
-
-**示例**
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-
-// 使用方法一：
-for (let item of lightWeightMap) {
-  console.info("key:" + item[0]);
-  console.info("value:" + item[1]);
-}
-
-// 使用方法二：
-let iter = lightWeightMap.$_iterator();
-let temp: IteratorResult<[string, int]> = iter.next();
-while(!temp.done) {
-  console.info("key:" + temp.value![0]);
-  console.info("value:" + temp.value![1]);
-  temp = iter.next();
-}
+import { LightWeightMap } from 'kits/@kit.ArkTS';
+import { LightWeightMapCbFn } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -70,8 +23,6 @@ while(!temp.done) {
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -80,55 +31,13 @@ while(!temp.done) {
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |
+| IterableIterator & lt;[K, V] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-
-// 使用方法一：
-for (let item of lightWeightMap) {
-  console.info("key:", item[0]);
-  console.info("value:", item[1]);
-}
-// key: sparrow
-// value: 356
-// key: squirrel
-// value: 123
-
-// 使用方法二：
-let iter = lightWeightMap[Symbol.iterator]();
-let temp: IteratorResult<Object[]> = iter.next();
-while(!temp.done) {
-  console.info("key:", temp.value[0]);
-  console.info("value:", temp.value[1]);
-  temp = iter.next();
-}
-// key: sparrow
-// value: 356
-// key: squirrel
-// value: 123
-```
-
-```TypeScript
-// 不建议在Symbol.iterator中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
-let lightWeightMap = new LightWeightMap<string, number>();
-for(let i = 0; i < 10; i++) {
-  lightWeightMap.set("sparrow" + i, 123);
-}
-for(let i = 0; i < 10; i++) {
-  lightWeightMap.remove("sparrow" + i);
-}
-```
 
 ## clear
 
@@ -140,8 +49,6 @@ clear(): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -151,30 +58,6 @@ clear(): void
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-lightWeightMap.clear();
-let result = lightWeightMap.isEmpty();
-console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-lightWeightMap.clear();
-let result = lightWeightMap.isEmpty();
-console.info("result:", result);  // result: true
-```
 
 ## constructor
 
@@ -186,8 +69,6 @@ LightWeightMap的构造函数，创建一个空的LightWeightMap实例。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -197,20 +78,6 @@ LightWeightMap的构造函数，创建一个空的LightWeightMap实例。
 | 错误码ID |
 | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-```
 
 ## entries
 
@@ -222,8 +89,6 @@ entries(): IterableIterator<[K, V]>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -232,65 +97,13 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |
+| IterableIterator & lt;[K, V] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let iteratorResult = lightWeightMap.entries();
-let temp: IteratorResult<Object[]> = iteratorResult.next();
-while (!temp.done) {
-  console.info("key:" + temp.value[0]);
-  console.info("value:" + temp.value[1]);
-  temp = iteratorResult.next();
-}
-```
-
-```TypeScript
-// 不建议在entries中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
-let lightWeightMap = new LightWeightMap<string, number>();
-for(let i = 0; i < 10; i++) {
-  lightWeightMap.set("sparrow" + i, 123);
-}
-for(let i = 0; i < 10; i++) {
-  lightWeightMap.remove("sparrow" + i);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let iter = lightWeightMap.entries();
-let temp: IteratorResult<[string, int]> = iter.next();
-while(!temp.done) {
-  console.info("key:" + temp.value![0]);
-  console.info("value:" + temp.value![1]);
-  temp = iter.next();
-}
-```
-
-```TypeScript
-// 不建议在entries中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-for(let i = 0; i < 10; i++) {
-  lightWeightMap.set("sparrow" + i, 123);
-}
-for(let i = 0; i < 10; i++) {
-  lightWeightMap.remove("sparrow" + i);
-}
-```
 
 ## forEach
 
@@ -301,8 +114,6 @@ forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, th
 通过回调函数来遍历实例对象上的元素及其键值对信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -321,71 +132,6 @@ forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, th
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("sparrow", 123);
-lightWeightMap.set("gull", 357);
-lightWeightMap.forEach((value: number, key: string) => {
-  console.info("value:" + value, "key:" + key);
-});
-// value:123 key:sparrow
-// value:357 key:gull
-```
-
-```TypeScript
-// 不建议在forEach中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
-let lightWeightMap = new LightWeightMap<string, number>();
-for (let i = 0; i < 10; i++) {
-  lightWeightMap.set("sparrow" + i, 123);
-}
-for (let i = 0; i < 10; i++) {
-  lightWeightMap.remove("sparrow" + i);
-}
-```
-
-```TypeScript
-import { LightWeightMapCbFn } from '@kit.ArkTS';
-
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("sparrow", 123);
-lightWeightMap.set("test", 987);
-lightWeightMap.set("gull", 357);
-let lightWeightMapCb: LightWeightMapCbFn<string, int> = (value: int, key: string, map: LightWeightMap<string, int>) => {
-  console.info("value: " + value, " key: " + key);
-};
-lightWeightMap.forEach(lightWeightMapCb);
-// value:123 key:sparrow
-// value:357 key:gull
-```
-
-## forEach
-
-```TypeScript
-forEach(callbackFn: LightWeightMapCbFn<K, V>): void
-```
-
-通过回调函数来遍历实例对象上的元素及其键值对信息。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackFn | [LightWeightMapCbFn](arkts-arkts-lightweightmapcbfn-t.md)&lt;K, V&gt; | 是 |
-
-**示例**
-
-参见 [forEach](#foreach)
-
 ## get
 
 ```TypeScript
@@ -395,8 +141,6 @@ get(key: K): V
 获取指定key所对应的value。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -420,73 +164,15 @@ get(key: K): V
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.get("sparrow");
-console.info("result:", result);  // result: 356
-```
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.get("sparrow");
-console.info("result:", result);  // result: 356
-```
-
-## get
-
-```TypeScript
-get(key: K): V | undefined
-```
-
-获取指定key所对应的value。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| V \| undefined |
-
-**示例**
-
-参见 [get](#get)
-
 ## getIndexOfKey
 
-ArkTS-Dyn:
 ```TypeScript
 getIndexOfKey(key: K): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getIndexOfKey(key: K): int
 ```
 
 查找key元素首次出现的下标值，如果未找到返回-1。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -502,7 +188,7 @@ getIndexOfKey(key: K): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -510,45 +196,15 @@ getIndexOfKey(key: K): int
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.getIndexOfKey("sparrow");
-console.info("result:", result);  // result: 0
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.getIndexOfKey("sparrow");
-console.info("result:", result);  // result: 0
-```
-
 ## getIndexOfValue
 
-ArkTS-Dyn:
 ```TypeScript
 getIndexOfValue(value: V): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getIndexOfValue(value: V): int
 ```
 
 查找指定value元素首次出现的下标值，如果未找到则返回-1。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -564,35 +220,13 @@ getIndexOfValue(value: V): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.getIndexOfValue(123);
-console.info("result:", result);  // result: 1
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.getIndexOfValue(123);
-console.info("result:", result);  // result: 1
-```
 
 ## getKeyAt
 
@@ -603,8 +237,6 @@ getKeyAt(index: number): K
 查找指定下标的元素键值对中key值，如果未找到则返回undefined。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -629,63 +261,6 @@ getKeyAt(index: number): K
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
-**示例**
-
-```TypeScript
-// 不建议在keys中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.getKeyAt(1);
-console.info("result:", result);  // result: squirrel
-```
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.getKeyAt(1);
-console.info("result:", result);  // result: squirrel
-```
-
-## getKeyAt
-
-```TypeScript
-getKeyAt(index: int): K | undefined
-```
-
-查找指定下标的元素键值对中key值，如果未找到则返回undefined。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | int | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| K \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-参见 [getKeyAt](#getkeyat)
-
 ## getValueAt
 
 ```TypeScript
@@ -695,8 +270,6 @@ getValueAt(index: number): V
 获取指定下标对应键值对中的值。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -721,63 +294,6 @@ getValueAt(index: number): V
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
-**示例**
-
-```TypeScript
-// 不建议在values中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.getValueAt(1);
-console.info("result:", result);  // result: 123
-```
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.getValueAt(1);
-console.info("result:", result);  // result: 123
-```
-
-## getValueAt
-
-```TypeScript
-getValueAt(index: int): V | undefined
-```
-
-获取指定下标对应键值对中的值。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| index | int | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| V \| undefined |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-
-**示例**
-
-参见 [getValueAt](#getvalueat)
-
 ## hasAll
 
 ```TypeScript
@@ -787,8 +303,6 @@ hasAll(map: LightWeightMap<K, V>): boolean
 判断LightWeightMap中是否包含指定map中的所有元素。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -812,32 +326,6 @@ hasAll(map: LightWeightMap<K, V>): boolean
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let targetMap = new LightWeightMap<string, number>();
-targetMap.set("sparrow", 356);
-let result = lightWeightMap.hasAll(targetMap); 
-console.info("result = ", result); // result = true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let map = new LightWeightMap<string, int>();
-map.set("sparrow", 356);
-let result = lightWeightMap.hasAll(map);
-console.info("result = ", result); // result = true
-```
-
 ## hasKey
 
 ```TypeScript
@@ -847,8 +335,6 @@ hasKey(key: K): boolean
 判断LightWeightMap中是否包含指定key。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致，详见规格限制。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -872,25 +358,6 @@ hasKey(key: K): boolean
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-let result = lightWeightMap.hasKey("squirrel");
-console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-let result = lightWeightMap.hasKey("squirrel");
-```
-
 ## hasValue
 
 ```TypeScript
@@ -900,8 +367,6 @@ hasValue(value: V): boolean
 判断LightWeightMap中是否包含指定value。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -925,43 +390,15 @@ hasValue(value: V): boolean
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-let result = lightWeightMap.hasValue(123);
-console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-let result = lightWeightMap.hasValue(123);
-console.info("result:", result);  // result: true
-```
-
 ## increaseCapacityTo
 
-ArkTS-Dyn:
 ```TypeScript
 increaseCapacityTo(minimumCapacity: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-increaseCapacityTo(minimumCapacity: int): void
 ```
 
 将当前LightWeightMap扩容至指定容量。如果传入的容量值大于或等于当前LightWeightMap中的元素个数，将容量扩容至新容量，小于则不会变更。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -971,29 +408,13 @@ increaseCapacityTo(minimumCapacity: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| minimumCapacity | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| minimumCapacity | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.increaseCapacityTo(10);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.increaseCapacityTo(10);
-```
 
 ## isEmpty
 
@@ -1004,8 +425,6 @@ isEmpty(): boolean
 判断LightWeightMap是否为空。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1023,24 +442,6 @@ isEmpty(): boolean
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-const lightWeightMap = new LightWeightMap<string, number>();
-let result = lightWeightMap.isEmpty();
-console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-const lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-let result = lightWeightMap.isEmpty();
-console.info("result:", result);  // result: true
-```
-
 ## keys
 
 ```TypeScript
@@ -1051,8 +452,6 @@ keys(): IterableIterator<K>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1061,45 +460,13 @@ keys(): IterableIterator<K>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; |
+| IterableIterator & lt;K & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let keys = lightWeightMap.keys();
-for (let key of keys) {
-  console.info("key:", key);
-}
-// key: sparrow
-// key: squirrel
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let iter = lightWeightMap.keys();
-let temp: IteratorResult<string> = iter.next();
-while(!temp.done) {
-  console.info("value:" + temp.value);
-  temp = iter.next();
-}
-// key: sparrow
-// key: squirrel
-```
 
 ## remove
 
@@ -1110,8 +477,6 @@ remove(key: K): V
 删除指定key映射的元素。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1135,72 +500,15 @@ remove(key: K): V
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.remove("sparrow");
-console.info("result:", result);  // result: 356
-```
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, number> = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-lightWeightMap.remove("sparrow");
-console.info("result:", result);  // result: 356
-```
-
-## remove
-
-```TypeScript
-remove(key: K): V | undefined
-```
-
-删除指定key映射的元素。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| key | K | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| V \| undefined |
-
-**示例**
-
-参见 [remove](#remove)
-
 ## removeAt
 
-ArkTS-Dyn:
 ```TypeScript
 removeAt(index: number): boolean
-```
-
-ArkTS-Sta:
-```TypeScript
-removeAt(index: int): boolean
 ```
 
 删除指定下标对应的元素。调用成功后，若下标有效则该位置的键值对从LightWeightMap中移除且length减少。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1210,7 +518,7 @@ removeAt(index: int): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| index | number | 是 |
 
 **返回值：**
 
@@ -1224,28 +532,6 @@ removeAt(index: int): boolean
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.removeAt(1);
-console.info("result:", result);  // result: true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.removeAt(1);
-console.info("result:", result);  // result: true
-```
-
 ## set
 
 ```TypeScript
@@ -1255,8 +541,6 @@ set(key: K, value: V): Object
 向LightWeightMap中添加或更新一组数据。调用成功后，若key不存在则新增键值对且length增加，若key已存在则更新对应value值。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1281,24 +565,6 @@ set(key: K, value: V): Object
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-let result = lightWeightMap.set("squirrel", 123);
-console.info("result:", result);  // result: squirrel:123
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-let result = lightWeightMap.set("squirrel", 123);
-console.info("result:", result);  // result: squirrel:123
-```
-
 ## setAll
 
 ```TypeScript
@@ -1308,8 +574,6 @@ setAll(map: LightWeightMap<K, V>): void
 将一个LightWeightMap中的所有元素添加到另一个LightWeightMap中，如果目标LightWeightMap中已存在相同的key，则会更新其对应的value。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1327,49 +591,15 @@ setAll(map: LightWeightMap<K, V>): void
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let map = new LightWeightMap<string, number>();
-map.setAll(lightWeightMap);   // 将lightWeightMap中所有的元素添加到map中
-let result = map.get("sparrow");
-console.info("result:", result);  // result: 356
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let map: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-map.setAll(lightWeightMap); // 将lightWeightMap中所有的元素添加到map中
-let result = map.get("sparrow");
-console.info("result:", result);  // result: 356
-```
-
 ## setValueAt
 
-ArkTS-Dyn:
 ```TypeScript
 setValueAt(index: number, newValue: V): boolean
-```
-
-ArkTS-Sta:
-```TypeScript
-setValueAt(index: int, newValue: V): boolean
 ```
 
 替换指定下标对应键值对中的值。调用成功后，指定下标处键值对的值将被替换为newValue。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1379,7 +609,7 @@ setValueAt(index: int, newValue: V): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| index | number | 是 |
 | newValue | V | 是 |
 
 **返回值：**
@@ -1395,28 +625,6 @@ setValueAt(index: int, newValue: V): boolean
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-lightWeightMap.setValueAt(1, 3546);
-console.info("result:", lightWeightMap.get("squirrel"));  // result: 3546
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-lightWeightMap.setValueAt(1, 3546);
-console.info("result:", lightWeightMap.get("squirrel"));  // result: 3546
-```
-
 ## toString
 
 ```TypeScript
@@ -1426,8 +634,6 @@ toString(): String
 将此映射中包含的键值对拼接成字符串并返回。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1445,28 +651,6 @@ toString(): String
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.toString();
-console.info("result:", result);  // result: sparrow:356,squirrel:123
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let result = lightWeightMap.toString();
-console.info("result:", result);  // result: sparrow:356,squirrel:123
-```
-
 ## values
 
 ```TypeScript
@@ -1477,8 +661,6 @@ values(): IterableIterator<V>
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1487,45 +669,13 @@ values(): IterableIterator<V>
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; |
+| IterableIterator & lt;V & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let values = lightWeightMap.values();
-for (let value of values) {
-  console.info("value:", value);
-}
-// value: 356
-// value: 123
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
-lightWeightMap.set("squirrel", 123);
-lightWeightMap.set("sparrow", 356);
-let iter = lightWeightMap.values();
-let temp: IteratorResult<int> = iter.next();
-while(!temp.done) {
-  console.info("value:" + temp.value);
-  temp = iter.next();
-}
-// value: 356
-// value: 123
-```
 
 ## length
 
@@ -1538,8 +688,6 @@ LightWeightMap的元素个数。
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

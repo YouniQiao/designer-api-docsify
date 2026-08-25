@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## getStartRealtime
@@ -16,8 +16,6 @@ Obtains the duration (excluding the system sleep time), in milliseconds, from th
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -27,9 +25,3 @@ Obtains the duration (excluding the system sleep time), in milliseconds, from th
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let realtime = process.getStartRealtime();
-```

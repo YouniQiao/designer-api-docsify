@@ -4,8 +4,6 @@ Enumerates the status types of an attendee.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN = 0
 The attendee status is unknown.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -34,8 +30,6 @@ The attendee status is tentative.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -49,8 +43,6 @@ ACCEPTED = 2
 The attendee has accepted the conference invitation.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -66,8 +58,6 @@ The attendee has rejected the conference invitation.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -81,8 +71,6 @@ UNRESPONSIVE = 4
 The attendee does not respond.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

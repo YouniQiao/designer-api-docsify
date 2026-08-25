@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## clean
@@ -15,8 +15,6 @@ function clean(accountId: string, appActions: Record<string, Action>): Promise<v
 Callback used to clear the cloud data locally. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -45,40 +43,6 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let appActions: Record<string, cloudSyncManager.Action> = {
-  'com.example.bundleName1': cloudSyncManager.Action.RETAIN_DATA,
-  'com.example.bundleName2': cloudSyncManager.Action.CLEAR_DATA
-};
-cloudSyncManager.clean(accountId, appActions).then(() => {
-  console.info("clean successfully");
-}).catch((err: BusinessError) => {
-  console.error("clean failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-  let appActions: Record<string, cloudSyncManager.Action> = {
-  'com.example.bundleName1': cloudSyncManager.Action.RETAIN_DATA,
-  'com.example.bundleName2': cloudSyncManager.Action.CLEAR_DATA
-};
-cloudSyncManager.clean(accountId, appActions, (err: BusinessError) => {
-  if (err) {
-    console.error("clean failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("clean successfully");
-  }
-});
-```
-
 
 ## clean
 
@@ -89,8 +53,6 @@ function clean(accountId: string, appActions: Record<string, Action>, callback: 
 Callback used to clear the cloud data locally. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -113,7 +75,3 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [clean](#clean)

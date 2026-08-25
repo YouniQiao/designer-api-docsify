@@ -4,8 +4,6 @@ Enumerates the print file creation status.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINT_FILE_CREATED
@@ -17,8 +15,6 @@ PRINT_FILE_CREATED = 0
 The print file is created successfully.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ The print file fails to be created.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## PRINT_FILE_CREATED_UNRENDERED
@@ -45,7 +39,5 @@ PRINT_FILE_CREATED_UNRENDERED = 2
 The print file is successfully created but not rendered.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

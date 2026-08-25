@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## setTextHighContrast
@@ -16,8 +16,6 @@ function setTextHighContrast(action : TextHighContrast): void
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -27,9 +25,3 @@ function setTextHighContrast(action : TextHighContrast): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | action | [TextHighContrast](arkts-arkgraphics2d-text-texthighcontrast-e.md) | 是 |
-
-**示例**
-
-```TypeScript
-text.setTextHighContrast(text.TextHighContrast.TEXT_APP_DISABLE_HIGH_CONTRAST)
-```

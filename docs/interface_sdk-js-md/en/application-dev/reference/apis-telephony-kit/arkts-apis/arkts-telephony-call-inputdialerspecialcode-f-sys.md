@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## inputDialerSpecialCode
@@ -15,8 +15,6 @@ function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>
 Performs a secret code broadcast. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -42,31 +40,6 @@ Performs a secret code broadcast. This API uses an asynchronous callback to retu
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.inputDialerSpecialCode('*#*#2846579#*#*', (err: BusinessError) => {
-    if (err) {
-        console.error(`inputDialerSpecialCode fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`inputDialerSpecialCode success`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    call.inputDialerSpecialCode('*#*#2846579#*#*');
-    console.info(`inputDialerSpecialCode success`);
-} catch (error) {
-    console.error(`inputDialerSpecialCode fail, promise: err->${JSON.stringify(error)}`);
-}
-```
-
 
 ## inputDialerSpecialCode
 
@@ -77,8 +50,6 @@ function inputDialerSpecialCode(inputCode: string): Promise<void>
 Performs a secret code broadcast. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -108,7 +79,3 @@ Performs a secret code broadcast. This API uses a promise to return the result.
 | [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
-
-**Examples**
-
-See [inputDialerSpecialCode](#inputdialerspecialcode)

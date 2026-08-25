@@ -4,8 +4,6 @@
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Creates a content modifier.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -35,7 +31,7 @@ Creates a content modifier.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt; | Yes |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt; | Yes |
 
 ## contentModifier
 
@@ -47,8 +43,6 @@ Creates a content modifier. Compared with [contentModifier](#contentmodifier), t
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -59,7 +53,7 @@ Creates a content modifier. Compared with [contentModifier](#contentmodifier), t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt;&gt; | Yes |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)&gt;&gt; | Yes |
 
 ## onChange
 
@@ -70,8 +64,6 @@ onChange(callback: (value: number) => void)
 Triggered when the rating value changes.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -95,8 +87,6 @@ Triggered when the rating value changes. Compared with onChange, this API suppor
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -109,7 +99,7 @@ Triggered when the rating value changes. Compared with onChange, this API suppor
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md)&gt; | Yes |
 
 ## stars
 
@@ -120,8 +110,6 @@ stars(value: number)
 Sets the total number of stars. Values less than 0 are treated as the default value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -145,8 +133,6 @@ Sets the total number of stars. Values less than 0 are treated as the default va
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -159,7 +145,7 @@ Sets the total number of stars. Values less than 0 are treated as the default va
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| starCount | Optional & lt;number & gt; | Yes |
+| starCount | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 
 ## starStyle
 
@@ -170,8 +156,6 @@ starStyle(options: StarStyleOptions)
 Sets the star style. For details about the supported image types, see Image.Local and network images are supported. The PixelMap type is not supported.By default, the image is loaded in asynchronous mode. Synchronous loading is not supported.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -195,8 +179,6 @@ Sets the star style. For details about the supported image types, see Image.Loca
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -209,7 +191,7 @@ Sets the star style. For details about the supported image types, see Image.Loca
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | Optional&lt;[StarStyleOptions](arkts-arkui-starstyleoptions-i.md)&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[StarStyleOptions](arkts-arkui-starstyleoptions-i.md)&gt; | Yes |
 
 ## stepSize
 
@@ -220,8 +202,6 @@ stepSize(value: number)
 Sets the step for rating. Values less than 0.1 are treated as the default value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -245,8 +225,6 @@ Sets the step for rating. Values less than 0.1 are treated as the default value.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -259,4 +237,4 @@ Sets the step for rating. Values less than 0.1 are treated as the default value.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| size | Optional & lt;number & gt; | Yes |
+| size | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |

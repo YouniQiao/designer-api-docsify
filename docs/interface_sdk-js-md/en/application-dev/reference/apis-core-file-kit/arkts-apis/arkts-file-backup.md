@@ -4,8 +4,6 @@ Module providing backup and restore capabilities.@namespace backup
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Module providing backup and restore capabilities.@namespace backup
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -71,9 +69,6 @@ import { backup } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md) |
 | [OnBackupSizeReport](arkts-corefile-backup-onbackupsizereport-t-sys.md) |
 | [OnFileReadyBatch](arkts-corefile-backup-onfilereadybatch-t-sys.md) |
-| [OnProcess](arkts-corefile-backup-onprocess-t-sys.md) |
-| [OnResultReport](arkts-corefile-backup-onresultreport-t-sys.md) |
 <!--DelEnd-->

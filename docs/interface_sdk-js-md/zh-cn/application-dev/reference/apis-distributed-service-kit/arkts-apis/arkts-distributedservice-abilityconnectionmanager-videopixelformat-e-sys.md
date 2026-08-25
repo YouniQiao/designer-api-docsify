@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ UNKNOWN = -1
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -34,11 +30,9 @@ UNKNOWN = -1
 NV12 = 0
 ```
 
-NV12。yuv 420 semiplanar。
+表示NV12，YUV420半平面格式。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,11 +46,9 @@ NV12。yuv 420 semiplanar。
 NV21 = 1
 ```
 
-NV21。yvu 420 semiplanar。
+表示NV21，YUV420半平面格式。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

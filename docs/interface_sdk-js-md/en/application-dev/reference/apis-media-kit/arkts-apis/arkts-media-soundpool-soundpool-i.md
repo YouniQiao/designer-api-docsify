@@ -29,20 +29,12 @@ Implements a sound pool that provides APIs for loading, unloading, playing, and 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## load
 
-ArkTS-Dyn:
 ```TypeScript
 load(uri: string, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-load(uri: string, callback: AsyncCallback<int>): void
 ```
 
 Loads a sound. This API uses an asynchronous callback to return the result.This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
@@ -56,8 +48,6 @@ Loads a sound. This API uses an asynchronous callback to return the result.This 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -65,7 +55,7 @@ Loads a sound. This API uses an asynchronous callback to return the result.This 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | uri | string | Yes |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
@@ -77,14 +67,8 @@ Loads a sound. This API uses an asynchronous callback to return the result.This 
 
 ## load
 
-ArkTS-Dyn:
 ```TypeScript
 load(uri: string): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-load(uri: string): Promise<int>
 ```
 
 Loads a sound. This API uses a promise to return the result.This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
@@ -98,8 +82,6 @@ Loads a sound. This API uses a promise to return the result.This API uses a prom
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -112,7 +94,7 @@ Loads a sound. This API uses a promise to return the result.This API uses a prom
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -124,14 +106,8 @@ Loads a sound. This API uses a promise to return the result.This API uses a prom
 
 ## load
 
-ArkTS-Dyn:
 ```TypeScript
 load(fd: number, offset: number, length: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 ```
 
 Loads a sound. This API uses an asynchronous callback to return the result.This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
@@ -145,18 +121,16 @@ Loads a sound. This API uses an asynchronous callback to return the result.This 
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| length | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
+| fd | number | Yes |
+| offset | number | Yes |
+| length | number | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
@@ -168,14 +142,8 @@ Loads a sound. This API uses an asynchronous callback to return the result.This 
 
 ## load
 
-ArkTS-Dyn:
 ```TypeScript
 load(fd: number, offset: number, length: number): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-load(fd: int, offset: long, length: long): Promise<int>
 ```
 
 Loads a sound. This API uses a promise to return the result.This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
@@ -189,23 +157,21 @@ Loads a sound. This API uses a promise to return the result.This API uses a prom
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fd | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
-| length | ArkTS-Dyn: number<br>ArkTS-Sta：long | Yes |
+| fd | number | Yes |
+| offset | number | Yes |
+| length | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -225,8 +191,6 @@ Unsubscribes from events indicating that a sound finishes loading.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -244,8 +208,6 @@ off(type: 'playFinishedWithStreamId'): void
 Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -265,8 +227,6 @@ Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -284,8 +244,6 @@ off(type: 'error'): void
 Unsubscribes from error events of a SoundPool instance.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -305,8 +263,6 @@ Unsubscribes from error events of a SoundPool instance.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -316,93 +272,15 @@ Unsubscribes from error events of a SoundPool instance.
 | type | 'errorOccurred' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No |
 
-## offError
-
-```TypeScript
-offError(): void
-```
-
-Unsubscribes from error events of this **SoundPool** instance.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-## offErrorOccurred
-
-```TypeScript
-offErrorOccurred(callback?: Callback<ErrorInfo>): void
-```
-
-Unsubscribes from errorOccurred events of this **SoundPool** instance.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No |
-
-## offLoadComplete
-
-```TypeScript
-offLoadComplete(): void
-```
-
-Unsubscribes from events indicating that a sound finishes loading.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-## offPlayFinished
-
-```TypeScript
-offPlayFinished(): void
-```
-
-Unsubscribes from events indicating that a sound finishes playing.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-## offPlayFinishedWithStreamId
-
-```TypeScript
-offPlayFinishedWithStreamId(): void
-```
-
-Unsubscribes from events indicating that a sound finishes playing.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
 ## on('loadComplete')
 
 ```TypeScript
-on(type: 'loadComplete', callback: Callback<int>): void
+on(type: 'loadComplete', callback: Callback<number>): void
 ```
 
 Subscribes to events indicating that a sound finishes loading. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -416,14 +294,12 @@ Subscribes to events indicating that a sound finishes loading. This API uses an 
 ## on('playFinishedWithStreamId')
 
 ```TypeScript
-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
+on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 ```
 
 Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result.When only on('playFinished') or on('playFinishedWithStreamId') is subscribed to, the registered callback is triggered when the audio playback is complete.When both on('playFinished') and on('playFinishedWithStreamId') are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -444,8 +320,6 @@ Subscribes to events indicating that a sound finishes playing. This API uses an 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -464,8 +338,6 @@ on(type: 'error', callback: ErrorCallback): void
 Subscribes to error events of a [SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance. This event is used only for error prompt. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -486,8 +358,6 @@ Subscribes to error events of a [SoundPool](../../../reference/apis-media-kit/js
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -497,133 +367,25 @@ Subscribes to error events of a [SoundPool](../../../reference/apis-media-kit/js
 | type | 'errorOccurred' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes |
 
-## onError
-
-```TypeScript
-onError(callback: ErrorCallback): void
-```
-
-Subscribes to error events of this **SoundPool** instance. This event is used only for error prompt. This event can be triggered by both user operations and the system.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-## onErrorOccurred
-
-```TypeScript
-onErrorOccurred(callback: Callback<ErrorInfo>): void
-```
-
-Subscribes to errorOccurred events of this **SoundPool** instance.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes |
-
-## onLoadComplete
-
-```TypeScript
-onLoadComplete(callback: Callback<int>): void
-```
-
-Subscribes to events indicating that a sound finishes loading. This event is triggered when a sound is loaded.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes |
-
-## onPlayFinished
-
-```TypeScript
-onPlayFinished(callback: Callback<void>): void
-```
-
-Subscribes to events indicating that a sound finishes playing. This event is triggered when a sound finishes playing.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-## onPlayFinishedWithStreamId
-
-```TypeScript
-onPlayFinishedWithStreamId(callback: Callback<int>): void
-```
-
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing.When only on('playFinished') or on('playFinishedWithStreamId') is subscribed to, the registered callback is triggered when the audio playback is complete.When both on('playFinished') and on('playFinishedWithStreamId') are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes |
-
 ## play
 
-ArkTS-Dyn:
 ```TypeScript
 play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void
 ```
 
 Plays a sound and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| soundID | number | Yes |
 | params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | Yes |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
@@ -635,30 +397,22 @@ Plays a sound and obtains the stream ID. This API uses an asynchronous callback 
 
 ## play
 
-ArkTS-Dyn:
 ```TypeScript
 play(soundID: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-play(soundID: int, callback: AsyncCallback<int>): void
 ```
 
 Plays a sound using default parameters and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes |
+| soundID | number | Yes |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
@@ -670,21 +424,13 @@ Plays a sound using default parameters and obtains the stream ID. This API uses 
 
 ## play
 
-ArkTS-Dyn:
 ```TypeScript
 play(soundID: number, params?: PlayParameters): Promise<number>
-```
-
-ArkTS-Sta:
-```TypeScript
-play(soundID: int, params?: PlayParameters): Promise<int>
 ```
 
 Plays a sound and obtains the stream ID. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -692,14 +438,14 @@ Plays a sound and obtains the stream ID. This API uses a promise to return the r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| soundID | number | Yes |
 | params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -718,8 +464,6 @@ release(callback: AsyncCallback<void>): void
 Releases a **SoundPool** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -745,8 +489,6 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Return value:**
@@ -771,8 +513,6 @@ Sets the interruption mode of the audio files with the same ID during playback. 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
@@ -785,21 +525,13 @@ Sets the interruption mode of the audio files with the same ID during playback. 
 
 ## setLoop
 
-ArkTS-Dyn:
 ```TypeScript
 setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void
 ```
 
 Sets the loop mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -807,8 +539,8 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| loop | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| streamID | number | Yes |
+| loop | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -821,30 +553,22 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 
 ## setLoop
 
-ArkTS-Dyn:
 ```TypeScript
 setLoop(streamID: number, loop: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setLoop(streamID: int, loop: int): Promise<void>
 ```
 
 Sets the loop mode. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| loop | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| streamID | number | Yes |
+| loop | number | Yes |
 
 **Return value:**
 
@@ -862,30 +586,22 @@ Sets the loop mode. This API uses a promise to return the result.
 
 ## setPriority
 
-ArkTS-Dyn:
 ```TypeScript
 setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void
 ```
 
 Sets the priority for an audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| priority | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| streamID | number | Yes |
+| priority | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -898,30 +614,22 @@ Sets the priority for an audio stream. This API uses an asynchronous callback to
 
 ## setPriority
 
-ArkTS-Dyn:
 ```TypeScript
 setPriority(streamID: number, priority: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setPriority(streamID: int, priority: int): Promise<void>
 ```
 
 Sets the priority for an audio stream. This API uses a promise to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| priority | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| streamID | number | Yes |
+| priority | number | Yes |
 
 **Return value:**
 
@@ -939,29 +647,21 @@ Sets the priority for an audio stream. This API uses a promise to return the res
 
 ## setRate
 
-ArkTS-Dyn:
 ```TypeScript
 setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void
 ```
 
 Sets the playback rate for an audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| streamID | number | Yes |
 | rate | audio.AudioRendererRate | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -975,21 +675,13 @@ Sets the playback rate for an audio stream. This API uses an asynchronous callba
 
 ## setRate
 
-ArkTS-Dyn:
 ```TypeScript
 setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>
 ```
 
 Sets the playback rate for an audio stream. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -997,7 +689,7 @@ Sets the playback rate for an audio stream. This API uses a promise to return th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| streamID | number | Yes |
 | rate | audio.AudioRendererRate | Yes |
 
 **Return value:**
@@ -1016,21 +708,13 @@ Sets the playback rate for an audio stream. This API uses a promise to return th
 
 ## setVolume
 
-ArkTS-Dyn:
 ```TypeScript
 setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void
 ```
 
 Sets the volume for an audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1038,9 +722,9 @@ Sets the volume for an audio stream. This API uses an asynchronous callback to r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| [leftVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
-| [rightVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| streamID | number | Yes |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | number | Yes |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -1053,21 +737,13 @@ Sets the volume for an audio stream. This API uses an asynchronous callback to r
 
 ## setVolume
 
-ArkTS-Dyn:
 ```TypeScript
 setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>
 ```
 
 Sets the volume for an audio stream. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1075,9 +751,9 @@ Sets the volume for an audio stream. This API uses a promise to return the resul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| [leftVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
-| [rightVolume](arkts-media-soundpool-playparameters-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| streamID | number | Yes |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | number | Yes |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | number | Yes |
 
 **Return value:**
 
@@ -1095,21 +771,13 @@ Sets the volume for an audio stream. This API uses a promise to return the resul
 
 ## stop
 
-ArkTS-Dyn:
 ```TypeScript
 stop(streamID: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-stop(streamID: int, callback: AsyncCallback<void>): void
 ```
 
 Stops audio playback. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1117,7 +785,7 @@ Stops audio playback. This API uses an asynchronous callback to return the resul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| streamID | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -1130,21 +798,13 @@ Stops audio playback. This API uses an asynchronous callback to return the resul
 
 ## stop
 
-ArkTS-Dyn:
 ```TypeScript
 stop(streamID: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-stop(streamID: int): Promise<void>
 ```
 
 Stops audio playback. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1152,7 +812,7 @@ Stops audio playback. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streamID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| streamID | number | Yes |
 
 **Return value:**
 
@@ -1170,21 +830,13 @@ Stops audio playback. This API uses a promise to return the result.
 
 ## unload
 
-ArkTS-Dyn:
 ```TypeScript
 unload(soundID: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-unload(soundID: int, callback: AsyncCallback<void>): void
 ```
 
 Unloads a sound. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1192,7 +844,7 @@ Unloads a sound. This API uses an asynchronous callback to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| soundID | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -1205,21 +857,13 @@ Unloads a sound. This API uses an asynchronous callback to return the result.
 
 ## unload
 
-ArkTS-Dyn:
 ```TypeScript
 unload(soundID: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-unload(soundID: int): Promise<void>
 ```
 
 Unloads a sound. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -1227,7 +871,7 @@ Unloads a sound. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| soundID | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| soundID | number | Yes |
 
 **Return value:**
 

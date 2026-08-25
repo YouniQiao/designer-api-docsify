@@ -4,8 +4,6 @@ You can use this module to reference the ability public module class.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** 
 - API version 11 and later: This API can be used in both the stage model and FA model.
 
@@ -14,7 +12,7 @@ You can use this module to reference the ability public module class.
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@kit.AbilityKit';
+import { common } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## unHoldCall
 
 ```TypeScript
-function unHoldCall(callId: int, callback: AsyncCallback<void>): void
+function unHoldCall(callId: number, callback: AsyncCallback<void>): void
 ```
 
 取消保持通话。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ANSWER_CALL
 
@@ -28,7 +26,7 @@ function unHoldCall(callId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -43,42 +41,16 @@ function unHoldCall(callId: int, callback: AsyncCallback<void>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.unHoldCall(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`unHoldCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`unHoldCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.unHoldCall(1).then(() => {
-    console.info(`unHoldCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`unHoldCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## unHoldCall
 
 ```TypeScript
-function unHoldCall(callId: int): Promise<void>
+function unHoldCall(callId: number): Promise<void>
 ```
 
 取消保持通话。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ANSWER_CALL
 
@@ -90,7 +62,7 @@ function unHoldCall(callId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 
 **返回值：**
 
@@ -109,7 +81,3 @@ function unHoldCall(callId: int): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [unHoldCall](#unholdcall)

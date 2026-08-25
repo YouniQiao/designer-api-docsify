@@ -6,8 +6,6 @@ Image style options.Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditor
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,8 +24,6 @@ Image style.
 **Type:** [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

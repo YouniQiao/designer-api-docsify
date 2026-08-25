@@ -4,14 +4,12 @@ Describes audio stream information.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## channelLayout
@@ -25,8 +23,6 @@ Audio channel layout. The default value is **0x0**.
 **Type:** [AudioChannelLayout](arkts-audio-audio-audiochannellayout-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -42,8 +38,6 @@ Number of audio channels.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## encodingType
@@ -57,8 +51,6 @@ Audio encoding type.
 **Type:** [AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -74,23 +66,19 @@ Audio sample format.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## samplingRate
 
 ```TypeScript
-samplingRate: AudioSamplingRate | int
+samplingRate: AudioSamplingRate | number
 ```
 
 Audio sampling rate.
 
-**Type:** ArkTS-Dyn: [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| number  <br>ArkTS-Sta：[AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| int
+**Type:** [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Model restriction:** 
 - API version 26.0.0 and later: This API can be used in both the stage model and FA model.

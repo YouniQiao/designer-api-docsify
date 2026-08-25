@@ -13,14 +13,12 @@ Data loss prevention (DLP) is a system solution provided to prevent data disclos
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## Summary
@@ -76,8 +74,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [getDLPGatheringPolicy(DLP)](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md) |
 | [installDLPSandbox(DLP)](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md) |
 | [installDLPSandbox(DLP)](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md) |
-| [off(DLP)](arkts-dataprotection-dlppermission-off-f-sys.md#offuninstalldlpsandbox) |
-| [on(DLP)](arkts-dataprotection-dlppermission-on-f-sys.md#onuninstalldlpsandbox) |
+| [off(DLP)](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) |
+| [on(DLP)](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) |
 | [openDLPFile(DLP)](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) |
 | [openDLPFile(DLP)](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) |
 | [uninstallDLPSandbox(DLP)](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) |

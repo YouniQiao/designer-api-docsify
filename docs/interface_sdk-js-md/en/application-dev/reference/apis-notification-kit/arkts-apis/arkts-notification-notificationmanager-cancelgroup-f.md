@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## cancelGroup
@@ -15,8 +15,6 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 Cancels notifications under a notification group of this application. This API uses an asynchronous callback to return the result.The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -36,33 +34,6 @@ Cancels notifications under a notification group of this application. This API u
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cancelGroupCallback = (err: BusinessError): void => {
-  if (err) {
-    console.error(`Failed to cancel group. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in canceling group.`);
-  }
-}
-let groupName: string = "GroupName";
-notificationManager.cancelGroup(groupName, cancelGroupCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let groupName: string = "GroupName";
-notificationManager.cancelGroup(groupName).then(() => {
-  console.info(`Succeeded in canceling group.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to cancel group. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## cancelGroup
 
@@ -73,8 +44,6 @@ function cancelGroup(groupName: string): Promise<void>
 Cancels notifications under a notification group of this application. This API uses a promise to return the result.The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -98,7 +67,3 @@ Cancels notifications under a notification group of this application. This API u
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-See [cancelGroup](#cancelgroup)

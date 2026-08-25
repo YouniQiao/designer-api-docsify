@@ -7,14 +7,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'kits/@kit.NetworkKit';
 ```
 
 ## 汇总
@@ -51,16 +49,16 @@ import { policy } from '@kit.NetworkKit';
 | [isUidNetAllowed(网络策略管理)](arkts-network-policy-isuidnetallowed-f-sys.md) |
 | [isUidNetAllowed(网络策略管理)](arkts-network-policy-isuidnetallowed-f-sys.md) |
 | [isUidNetAllowed(网络策略管理)](arkts-network-policy-isuidnetallowed-f-sys.md) |
-| [off(网络策略管理)](arkts-network-policy-off-f-sys.md#offnetuidpolicychange) |
-| [off(网络策略管理)](arkts-network-policy-off-f-sys.md#offnetuidrulechange) |
-| [off(网络策略管理)](arkts-network-policy-off-f-sys.md#offnetmeteredifaceschange) |
-| [off(网络策略管理)](arkts-network-policy-off-f-sys.md#offnetquotapolicychange) |
-| [off(网络策略管理)](arkts-network-policy-off-f-sys.md#offnetbackgroundpolicychange) |
-| [on(网络策略管理)](arkts-network-policy-on-f-sys.md#onnetuidpolicychange) |
-| [on(网络策略管理)](arkts-network-policy-on-f-sys.md#onnetuidrulechange) |
-| [on(网络策略管理)](arkts-network-policy-on-f-sys.md#onnetmeteredifaceschange) |
-| [on(网络策略管理)](arkts-network-policy-on-f-sys.md#onnetquotapolicychange) |
-| [on(网络策略管理)](arkts-network-policy-on-f-sys.md#onnetbackgroundpolicychange) |
+| off(网络策略管理) |
+| off(网络策略管理) |
+| off(网络策略管理) |
+| off(网络策略管理) |
+| off(网络策略管理) |
+| on(网络策略管理) |
+| on(网络策略管理) |
+| on(网络策略管理) |
+| on(网络策略管理) |
+| on(网络策略管理) |
 | [resetPolicies(网络策略管理)](arkts-network-policy-resetpolicies-f-sys.md) |
 | [resetPolicies(网络策略管理)](arkts-network-policy-resetpolicies-f-sys.md) |
 | [restoreAllPolicies(网络策略管理)](arkts-network-policy-restoreallpolicies-f-sys.md) |

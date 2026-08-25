@@ -6,8 +6,6 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ allowScale(value: boolean)
 Sets whether to allow text to scale.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,8 +45,6 @@ Sets the font color.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -72,8 +66,6 @@ fontFamily(value: string | Resource)
 Sets the font family.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -97,8 +89,6 @@ Sets the text size.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -120,8 +110,6 @@ fontWeight(value: number | FontWeight | string)
 Sets the font weight. If the value is too large, the text may be clipped depending on the font.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -145,8 +133,6 @@ Sets the scrolling strategy for the marquee after its attributes are updated. (T
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -157,7 +143,7 @@ Sets the scrolling strategy for the marquee after its attributes are updated. (T
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [MarqueeUpdateStrategy](#marqueeupdatestrategy) | Yes |
+| value | [MarqueeUpdateStrategy](../arkts-apis/arkts-arkui-marqueeupdatestrategy-e.md) | Yes |
 
 ## onBounce
 
@@ -168,8 +154,6 @@ onBounce(event: () => void)
 Triggered when the marquee has reached the end. This event will be triggered for multiple times if the **loop** attribute is not set to **1**.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -193,8 +177,6 @@ Triggered when the marquee has finished the number of scrolling times set by the
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -217,8 +199,6 @@ Triggered when the marquee text changes or starts scrolling.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -237,11 +217,9 @@ Triggered when the marquee text changes or starts scrolling.
 onStop(event: Callback<void> | undefined)
 ```
 
-Called when scrolling is stopped.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If event is set to undefined, the current event will be unbound. </p>
+Called when scrolling is stopped.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If event is set to undefined, the current event will be unbound. </p>
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

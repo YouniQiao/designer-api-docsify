@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
@@ -21,8 +19,6 @@ NO_SUPPORT = -1
 设备不支持当前的认证方式。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -40,8 +36,6 @@ SUCCESS = 0
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** [SUCCESS](arkts-userauthentication-userauth-resultcode-e.md#success)
@@ -57,8 +51,6 @@ COMPARE_FAILURE = 1
 比对失败。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -76,8 +68,6 @@ CANCELED = 2
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** [CANCELED](arkts-userauthentication-userauth-resultcode-e.md#canceled)
@@ -93,8 +83,6 @@ TIMEOUT = 3
 认证超时。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -112,8 +100,6 @@ CAMERA_FAIL = 4
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 8
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
@@ -127,8 +113,6 @@ BUSY = 5
 认证服务忙，请稍后重试。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -146,8 +130,6 @@ INVALID_PARAMETERS = 6
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** [INVALID_PARAMETERS](arkts-userauthentication-userauth-resultcode-e.md#invalid_parameters)
@@ -163,8 +145,6 @@ LOCKED = 7
 认证失败次数过多，已锁定。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 
@@ -182,8 +162,6 @@ NOT_ENROLLED = 8
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 8
 
 **替代接口：** [NOT_ENROLLED](arkts-userauthentication-userauth-resultcode-e.md#not_enrolled)
@@ -199,8 +177,6 @@ GENERAL_ERROR = 100
 其他错误。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 8
 

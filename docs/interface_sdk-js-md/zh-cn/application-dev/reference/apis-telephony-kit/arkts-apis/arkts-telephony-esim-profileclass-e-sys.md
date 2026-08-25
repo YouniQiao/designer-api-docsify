@@ -4,8 +4,6 @@
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ PROFILE_CLASS_UNSPECIFIED = -1
 未设置配置文件类。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
@@ -36,8 +32,6 @@ PROFILE_CLASS_TEST = 0
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -52,8 +46,6 @@ PROFILE_CLASS_PROVISIONING = 1
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +59,6 @@ PROFILE_CLASS_OPERATIONAL = 2
 可预加载或下载的操作配置文件。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 

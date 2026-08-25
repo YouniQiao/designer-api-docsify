@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## NOT_OPEN
@@ -18,8 +16,6 @@ NOT_OPEN = 0
 
 **起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## OPEN
@@ -31,7 +27,5 @@ OPEN = 1
 表示超过权限管控时间后，登录账号仍可打开DLP文件，且拥有编辑权限。
 
 **起始版本：** 21
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention

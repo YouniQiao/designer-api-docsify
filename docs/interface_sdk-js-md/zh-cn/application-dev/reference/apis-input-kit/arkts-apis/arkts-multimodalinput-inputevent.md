@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { InputEvent } from '@kit.InputKit';
+import { InputEvent } from 'kits/@kit.InputKit';
 ```
 
 ## 汇总

@@ -4,14 +4,12 @@ The **nfcController** module provides APIs for opening and closing Near-Field Co
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NFC.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -28,9 +26,7 @@ import { nfcController } from '@kit.ConnectivityKit';
 | [isNfcOpen(Standard NFC)](arkts-connectivity-nfccontroller-isnfcopen-f.md) |
 | [isNfcSupported(Standard NFC)](arkts-connectivity-nfccontroller-isnfcsupported-f.md) |
 | [off(Standard NFC)](arkts-connectivity-nfccontroller-off-f.md#offnfcstatechange) |
-| [offNfcStateChange(Standard NFC)](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) |
 | [on(Standard NFC)](arkts-connectivity-nfccontroller-on-f.md#onnfcstatechange) |
-| [onNfcStateChange(Standard NFC)](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) |
 | [openNfc(Standard NFC)](arkts-connectivity-nfccontroller-opennfc-f.md) |
 
 ### Enums

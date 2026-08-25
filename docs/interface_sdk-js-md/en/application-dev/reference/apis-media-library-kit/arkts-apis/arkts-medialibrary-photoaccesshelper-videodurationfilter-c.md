@@ -4,29 +4,25 @@ Describes the configuration for video duration filtering.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## extraVideoDuration
 
 ```TypeScript
-extraVideoDuration?: int
+extraVideoDuration?: number
 ```
 
 Maximum video duration in **FilterOperator.BETWEEN** mode. The default value is **-1**.The unit is milliseconds (ms).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -44,8 +40,6 @@ Filter operator.For example, files can be filtered based on being greater than o
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
-
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -53,16 +47,14 @@ Filter operator.For example, files can be filtered based on being greater than o
 ## videoDuration
 
 ```TypeScript
-videoDuration: int
+videoDuration: number
 ```
 
 Video duration used for filtering.The unit is milliseconds (ms).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

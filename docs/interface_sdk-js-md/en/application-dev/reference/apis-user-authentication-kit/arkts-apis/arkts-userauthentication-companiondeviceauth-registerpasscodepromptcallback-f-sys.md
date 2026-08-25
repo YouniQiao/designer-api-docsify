@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 ```
 
 ## registerPasscodePromptCallback
@@ -15,8 +15,6 @@ function registerPasscodePromptCallback(callback: PasscodePromptCallback): void
 Registers the callback invoked when the framework needs a companion device passcode. If a callback has already been registered, the new one replaces it.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 

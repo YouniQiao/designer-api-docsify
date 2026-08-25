@@ -15,8 +15,6 @@ function clearAllMissions(callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md)
@@ -33,44 +31,6 @@ function clearAllMissions(callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  // 清理所有未锁定的任务
-  missionManager.clearAllMissions(err => {
-    if (err) {
-      console.error(`clearAllMissions failed: ${err.message}`);
-    } else {
-      console.info('clearAllMissions successfully.');
-    }
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`clearAllMissions sync failed. Code: ${error.code}, message: ${error.message}.`);
-}
-```
-
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  // 清理所有未锁定的任务
-  missionManager.clearAllMissions().then((data) => {
-    console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`clearAllMissions sync failed. Code: ${error.code}, message: ${error.message}.`);
-}
-```
-
 
 ## clearAllMissions
 
@@ -81,8 +41,6 @@ function clearAllMissions(): Promise<void>
 清理所有未锁定的任务。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -99,7 +57,3 @@ function clearAllMissions(): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [clearAllMissions](#clearallmissions)

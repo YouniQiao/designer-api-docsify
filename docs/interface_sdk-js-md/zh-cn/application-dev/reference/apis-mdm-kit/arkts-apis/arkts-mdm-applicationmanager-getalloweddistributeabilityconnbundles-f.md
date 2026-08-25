@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllowedDistributeAbilityConnBundles
@@ -15,8 +15,6 @@ function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType:
 获取指定用户下特定分布式业务的允许跨设备应用名单。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -46,26 +44,3 @@ function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType:
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 需根据实际情况进行替换
-  let accountId: number = 100;
-  let result: Array<string> = applicationManager.getAllowedDistributeAbilityConnBundles(wantTemp,
-    applicationManager.ServiceType.COLLABORATION_SERVICE, accountId);
-  console.info(`Succeeded in getting allowed distribute ability conn bundles: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get allowed distribute ability conn bundles. Code: ${err.code}, message: ${err.message}`);
-}
-```

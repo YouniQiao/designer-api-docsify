@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getDisplayCountry
@@ -15,8 +15,6 @@ export function getDisplayCountry(country: string, locale: string, sentenceCase?
 获取指定国家的本地化名称。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -37,24 +35,3 @@ export function getDisplayCountry(country: string, locale: string, sentenceCase?
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n } from '@kit.LocalizationKit';
-
-try {
-  let displayCountry: string = i18n.System.getDisplayCountry('CN', 'en-GB'); // displayCountry = 'China'
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call System.getDisplayCountry failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let countryName: string = i18n.getDisplayCountry('zh-CN', 'en-GB', true); // countryName = 'China'
-countryName = i18n.getDisplayCountry('zh-CN', 'en-GB'); // countryName = 'China'
-```

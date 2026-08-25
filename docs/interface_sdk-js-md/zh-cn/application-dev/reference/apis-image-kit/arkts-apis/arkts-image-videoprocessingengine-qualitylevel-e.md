@@ -1,10 +1,8 @@
 # QualityLevel
 
-细节增强的处理质量等级。 @enum {int}
+细节增强的处理质量等级。 @enum {number}
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -17,8 +15,6 @@ NONE = 0
 不进行细节增强。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
@@ -34,8 +30,6 @@ LOW = 1
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
@@ -50,8 +44,6 @@ MEDIUM = 2
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
@@ -65,8 +57,6 @@ HIGH = 3
 高质量等级的细节增强，处理速度相对较慢。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 

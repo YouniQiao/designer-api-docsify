@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { carAwareness } from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## offRefueling
@@ -15,8 +15,6 @@ function offRefueling(callback?: Callback<RefuelingInfo>): void
 禁用加油感知。
 
 **起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.1.0。
 
 **需要权限：** ohos.permission.vehicle.MMA_ENERGYREFILL
 

@@ -7,33 +7,23 @@ Provides APIs for obtaining the distributed KV store result sets. A maximum of e
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## getCount
 
-ArkTS-Dyn:
 ```TypeScript
 getCount(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getCount(): int
 ```
 
 Obtains the total number of rows in the result set.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,28 +33,7 @@ Obtains the total number of rows in the result set.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let count: number;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    count = resultSet.getCount();
-    console.info("getCount succeed:" + count);
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("getCount failed: " + e);
-}
-```
+| number |
 
 ## getEntry
 
@@ -76,8 +45,6 @@ Obtains the KV pair from the current position.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -86,46 +53,18 @@ Obtains the KV pair from the current position.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    let entry = resultSet.getEntry();
-    console.info("getEntry succeed:" + JSON.stringify(entry));
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("getEntry failed: " + e);
-}
-```
+| [Entry](arkts-arkdata-distributeddata-entry-i.md) |
 
 ## getPosition
 
-ArkTS-Dyn:
 ```TypeScript
 getPosition(): number
-```
-
-ArkTS-Sta:
-```TypeScript
-getPosition(): int
 ```
 
 Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](#movetofirst) and [moveToLast](#movetolast).
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -134,28 +73,7 @@ Obtains the current data read position (position from which data is read) in the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let position: number;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeeded.');
-    resultSet = result;
-    position = resultSet.getPosition();
-    console.info("getPosition succeed:" + position);
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("getPosition failed: " + e);
-}
-```
+| number |
 
 ## isAfterLast
 
@@ -167,8 +85,6 @@ Checks whether the data read position is after the last row.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -178,26 +94,6 @@ Checks whether the data read position is after the last row.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    let isAfterLast = resultSet.isAfterLast();
-    console.info("Check isAfterLast succeed:" + isAfterLast);
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("Check isAfterLast failed: " + e);
-}
-```
 
 ## isBeforeFirst
 
@@ -209,8 +105,6 @@ Checks whether the data read position is before the first row.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -220,26 +114,6 @@ Checks whether the data read position is before the first row.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    let isBeforeFirst = resultSet.isBeforeFirst();
-    console.info("Check isBeforeFirst succeed: " + isBeforeFirst);
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("Check isBeforeFirst failed: " + e);
-}
-```
 
 ## isFirst
 
@@ -251,8 +125,6 @@ Checks whether the data read position is the first row.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -262,27 +134,6 @@ Checks whether the data read position is the first row.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let isFirst: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    isFirst = resultSet.isFirst();
-    console.info("Check isFirst succeed:" + isFirst);
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("Check isFirst failed: " + e);
-}
-```
 
 ## isLast
 
@@ -294,8 +145,6 @@ Checks whether the data read position is the last row.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -306,44 +155,15 @@ Checks whether the data read position is the last row.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let isLast: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    isLast = resultSet.isLast();
-    console.info("Check isLast succeed: " + isLast);
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("Check isLast failed: " + e);
-}
-```
-
 ## move
 
-ArkTS-Dyn:
 ```TypeScript
 move(offset: number): boolean
-```
-
-ArkTS-Sta:
-```TypeScript
-move(offset: int): boolean
 ```
 
 Moves the data read position with the specified offset from the current position. That is, moves the number of rows specified by **offset** from the current position.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -353,7 +173,7 @@ Moves the data read position with the specified offset from the current position
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| offset | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| offset | number | Yes |
 
 **Return value:**
 
@@ -366,28 +186,6 @@ Moves the data read position with the specified offset from the current position
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting resultSet');
-    resultSet = result;
-    moved = resultSet.move(2); // If the current position is 0, move the read position forward by two rows, that is, move to row 3.
-    console.info(`Succeeded in moving.moved = ${moved}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to move.code is ${error.code},message is ${error.message}`);
-}
-```
 
 ## moveToFirst
 
@@ -399,8 +197,6 @@ Moves the data read position to the first row. If the result set is empty, **fal
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -410,27 +206,6 @@ Moves the data read position to the first row. If the result set is empty, **fal
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    moved = resultSet.moveToFirst();
-    console.info("moveToFirst succeed: " + moved);
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("moveToFirst failed " + e);
-}
-```
 
 ## moveToLast
 
@@ -442,8 +217,6 @@ Moves the data read position to the last row. If the result set is empty, **fals
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -453,27 +226,6 @@ Moves the data read position to the last row. If the result set is empty, **fals
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    moved = resultSet.moveToLast();
-    console.info("moveToLast succeed:" + moved);
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("moveToLast failed: " + e);
-}
-```
 
 ## moveToNext
 
@@ -485,8 +237,6 @@ Moves the data read position to the next row. If the result set is empty, **fals
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -497,46 +247,15 @@ Moves the data read position to the next row. If the result set is empty, **fals
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    do {
-      moved = resultSet.moveToNext();
-      console.info("moveToNext succeed: " + moved);
-    } while (moved)
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("moveToNext failed: " + e);
-}
-```
-
 ## moveToPosition
 
-ArkTS-Dyn:
 ```TypeScript
 moveToPosition(position: number): boolean
-```
-
-ArkTS-Sta:
-```TypeScript
-moveToPosition(position: int): boolean
 ```
 
 Moves the data read position from 0 to an absolute position.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -546,7 +265,7 @@ Moves the data read position from 0 to an absolute position.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| position | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| position | number | Yes |
 
 **Return value:**
 
@@ -560,28 +279,6 @@ Moves the data read position from 0 to an absolute position.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting resultSet');
-    resultSet = result;
-    moved = resultSet.moveToPosition(1);
-    console.info(`Succeeded in moving to position.moved=${moved}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to move to position.code is ${error.code},message is ${error.message}`);
-}
-```
-
 ## moveToPrevious
 
 ```TypeScript
@@ -592,8 +289,6 @@ Moves the data read position to the previous row. If the result set is empty, **
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -603,25 +298,3 @@ Moves the data read position to the previous row. If the result set is empty, **
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
-  let moved: boolean;
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('getResultSet succeed.');
-    resultSet = result;
-    moved = resultSet.moveToLast();
-    moved = resultSet.moveToPrevious();
-    console.info("moveToPrevious succeed:" + moved);
-  }).catch((err: BusinessError) => {
-    console.error('getResultSet failed: ' + err);
-  });
-} catch (e) {
-  console.error("moveToPrevious failed: " + e);
-}
-```

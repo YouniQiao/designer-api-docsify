@@ -1,14 +1,12 @@
 # OnFontWeightScaleUpdatedFn
 
 ```TypeScript
-type OnFontWeightScaleUpdatedFn = (fontWeightScale: double) => void
+type OnFontWeightScaleUpdatedFn = (fontWeightScale: number) => void
 ```
 
 Defines an OnFontWeightScaleUpdatedFn function.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,4 +18,4 @@ Defines an OnFontWeightScaleUpdatedFn function.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [fontWeightScale](arkts-ability-app-ability-configuration-configuration-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：double | Yes |
+| [fontWeightScale](arkts-ability-app-ability-configuration-configuration-i.md) | number | Yes |

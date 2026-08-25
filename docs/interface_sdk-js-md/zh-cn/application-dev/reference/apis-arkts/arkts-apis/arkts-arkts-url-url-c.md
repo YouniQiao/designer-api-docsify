@@ -4,14 +4,12 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { url } from '@kit.ArkTS';
+import { url } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -23,8 +21,6 @@ constructor(url: string, base?: string | URL)
 URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂方法，推荐使用parseURL来创建URL对象。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -39,70 +35,6 @@ URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂�
 | [url](arkts-url.md) | string | 是 |
 | base | string \| URL | 否 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 通过string[][]方式构造URLParams对象：
-let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
-// 通过Record<string, string>方式构造URLParams对象：
-let objectParams1 = new url.URLParams({'fod' : '1' , 'bard' : '2'});
-// 通过string方式构造URLParams对象：
-let objectParams2 = new url.URLParams('?fod=1&bard=2');
-// 通过url对象的search属性构造URLParams对象：
-let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams3 = new url.URLParams(urlObject.search);
-// 通过url对象的params属性获取URLParams对象：
-let secondUrlObj = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams4 = secondUrlObj.params;
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// 通过string[][]方式构造URLParams对象：
-let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
-// 通过Record<string, string>方式构造URLParams对象：
-let record: Record<string, string> = { "fod": '1', "bard": '2' }
-let objectParams1 = new url.URLParams(record);
-// 通过string方式构造URLParams对象：
-let objectParams2 = new url.URLParams('?fod=1&bard=2');
-// 通过url对象的search属性构造URLParams对象：
-let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams3 = new url.URLParams(urlObject.search);
-// 通过url对象的params属性获取URLParams对象：
-let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
-let objectParams4 = urlObject1.params;
-```
-
-```TypeScript
-let baseUrl = 'https://username:password@host:8080';
-let rootPathUrl = new url.URL("/", baseUrl); // Output 'https://username:password@host:8080/';
-let absoluteUrl = new url.URL(baseUrl); // Output 'https://username:password@host:8080/';
-new url.URL('path/path1', absoluteUrl); // Output 'https://username:password@host:8080/path/path1';
-let relativePathUrl = new url.URL('/path/path1', absoluteUrl);  // Output 'https://username:password@host:8080/path/path1'; 
-new url.URL('/path/path1', relativePathUrl); // Output 'https://username:password@host:8080/path/path1';
-new url.URL('/path/path1', rootPathUrl); // Output 'https://username:password@host:8080/path/path1';
-new url.URL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output https://www.exampleUrl/path/path1
-new url.URL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
-new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
-new url.URL('https://www.example.com', ); // Output https://www.example.com/
-new url.URL('https://www.example.com', absoluteUrl); // Output https://www.example.com/
-```
-
-```TypeScript
-let a = new url.URL();
-```
-
-```TypeScript
-let objectParams = new url.URLSearchParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
-let objectParams1 = new url.URLSearchParams({"fod" : '1' , "bard" : '2'});
-let objectParams2 = new url.URLSearchParams('?fod=1&bard=2');
-let urlObject = new url.URL('https://developer.mozilla.org/?fod=1&bard=2');
-let params = new url.URLSearchParams(urlObject.search);
-```
-
 ## constructor
 
 ```TypeScript
@@ -113,15 +45,9 @@ URL的无参构造函数，不建议直接调用。请使用parseURL方法创建
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-参见 [constructor](#constructor)
 
 ## parseURL
 
@@ -137,8 +63,6 @@ static parseURL(url: string, base?: string | URL): URL
 > 但不包括其后的部分（参照示例中url1）。url内容为指向根目录的格式时，会相对于base的原始地址（origin）进行解析（参照示例中url2）。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -163,23 +87,6 @@ static parseURL(url: string, base?: string | URL): URL
 | --- |
 | [10200002](../errorcode-utils.md#10200002-参数解析错误) |
 
-**示例**
-
-```TypeScript
-let baseUrl = 'https://username:password@host:8080/test/test1/test3';
-let urlObject = url.URL.parseURL(baseUrl);
-let result = urlObject.toString(); // Output 'https://username:password@host:8080/test/test1/test3'
-// url内容为相对路径格式时，此时base参数的path为test/test1,解析后的URL的path为/test/path2/path3
-let relativePathUrl = url.URL.parseURL('path2/path3', 'https://www.example.com/test/test1'); // Output 'https://www.example.com/test/path2/path3'
-// url内容为指向根目录的格式时，此时base参数的path为/test/test1/test3，解析后的URL的path为/path1/path2
-let rootPathUrl = url.URL.parseURL('/path1/path2', urlObject); // Output 'https://username:password@host:8080/path1/path2'
-url.URL.parseURL('/path/path1', "https://www.exampleUrl/fr-FR/toot"); // Output 'https://www.exampleUrl/path/path1'
-url.URL.parseURL('/path/path1', ''); // Raises a TypeError exception as '' is not a valid URL
-url.URL.parseURL('/path/path1'); // Raises a TypeError exception as '/path/path1' is not a valid URL
-url.URL.parseURL('https://www.example.com', ); // Output 'https://www.example.com/'
-url.URL.parseURL('https://www.example.com', urlObject); // Output 'https://www.example.com/'
-```
-
 ## toJSON
 
 ```TypeScript
@@ -190,8 +97,6 @@ toJSON(): string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -201,15 +106,6 @@ toJSON(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-// 解析URL字符串
-const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-// 将URL转化为字符串
-let result = urlObject.toJSON();
-```
 
 ## toString
 
@@ -221,8 +117,6 @@ toString(): string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -232,31 +126,6 @@ toString(): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-// 解析URL字符串
-let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
-// 构造URLParams对象
-let params = new url.URLParams(urlObject.search.slice(1));
-// 追加参数
-params.append('fod', '3');
-// 将参数序列化为字符串
-console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
-```
-
-```TypeScript
-const urlObject = url.URL.parseURL('https://username:password@host:8080/directory/file?query=pppppp#qwer=da');
-let result = urlObject.toString(); // Output 'https://username:password@host:8080/directory/file?query=pppppp#qwer=da'
-```
-
-```TypeScript
-let urlObject = new url.URL('https://developer.exampleUrl/?fod=1&bard=2');
-let params = new url.URLSearchParams(urlObject.search.slice(1));
-params.append('fod', '3');
-console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
-```
 
 ## hash
 
@@ -269,8 +138,6 @@ hash: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -288,8 +155,6 @@ host: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -305,8 +170,6 @@ hostname: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -324,8 +187,6 @@ href: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -341,8 +202,6 @@ readonly origin: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -360,8 +219,6 @@ readonly params: URLParams
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -378,8 +235,6 @@ password: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -395,8 +250,6 @@ pathname: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -418,8 +271,6 @@ port: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -435,8 +286,6 @@ protocol: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -454,8 +303,6 @@ search: string
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -471,8 +318,6 @@ readonly searchParams: URLSearchParams
 **类型：** URLSearchParams
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -491,8 +336,6 @@ username: string
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

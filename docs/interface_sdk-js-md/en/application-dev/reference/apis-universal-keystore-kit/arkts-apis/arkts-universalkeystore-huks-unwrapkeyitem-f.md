@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## unwrapKeyItem
@@ -20,8 +20,6 @@ Unwraps a key. This API uses a promise to return the result.
 <!--Del-->This feature is not supported currently.<!--DelEnd-->
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

@@ -15,8 +15,6 @@ function enableNotification(bundle: BundleOption, enable: boolean, callback: Asy
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md)
@@ -31,40 +29,9 @@ function enableNotification(bundle: BundleOption, enable: boolean, callback: Asy
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let enableNotificationCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("enableNotification failed " + JSON.stringify(err));
-  } else {
-    console.info("enableNotification success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.enableNotification(bundle, false, enableNotificationCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.enableNotification(bundle, false).then(() => {
-  console.info("enableNotification success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`enableNotification failed, code is ${err}`);
-});
-```
 
 
 ## enableNotification
@@ -77,8 +44,6 @@ function enableNotification(bundle: BundleOption, enable: boolean): Promise<void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md)
@@ -93,7 +58,7 @@ function enableNotification(bundle: BundleOption, enable: boolean): Promise<void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | enable | boolean | 是 |
 
 **返回值：**
@@ -101,7 +66,3 @@ function enableNotification(bundle: BundleOption, enable: boolean): Promise<void
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [enableNotification](#enablenotification)

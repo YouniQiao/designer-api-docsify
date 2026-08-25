@@ -4,8 +4,6 @@ The class of a system configuration.@namespace systemConfiguration
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,7 +11,7 @@ The class of a system configuration.@namespace systemConfiguration
 ## Modules to Import
 
 ```TypeScript
-import { systemConfiguration } from '@kit.AbilityKit';
+import { systemConfiguration } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

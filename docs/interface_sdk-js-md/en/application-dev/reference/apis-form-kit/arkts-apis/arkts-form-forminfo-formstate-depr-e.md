@@ -4,8 +4,6 @@ Enumerates the widget states.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [FormState](arkts-form-forminfo-formstate-e.md)
@@ -21,8 +19,6 @@ UNKNOWN = -1
 Unknown state.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Default state.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [DEFAULT](arkts-form-forminfo-formstate-e.md#default)
@@ -57,8 +51,6 @@ READY = 1
 Ready state.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

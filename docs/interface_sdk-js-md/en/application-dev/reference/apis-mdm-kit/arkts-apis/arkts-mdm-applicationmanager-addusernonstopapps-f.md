@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addUserNonStopApps
@@ -19,8 +19,6 @@ On PCs/2-in-1 devices, after a user taps the application name in **Settings**
 Since API version 26.0.0, if you call [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) to disable [SUPER_HUB](arkts-mdm-restrictions-featureforaccount-e.md) and then call this API to add SuperHub to the non-stoppable application list, a policy conflict occurs and error code 9200010 is reported.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -44,32 +42,3 @@ Since API version 26.0.0, if you call [setDisallowedPolicyForAccount](arkts-mdm-
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let applicationInstances: Array<common.ApplicationInstance> = [
-  // Replace it as required.
-  {
-    appIdentifier: '0123456789123456789',
-    accountId: 100,
-    appIndex: 0
-  }
-];
-
-try {
-  applicationManager.addUserNonStopApps(wantTemp, applicationInstances);
-  console.info('Succeeded in adding UserNonStop applications.');
-} catch(err) {
-  console.error(`Failed to add UserNonStop applications. Code: ${err.code}, message: ${err.message}`);
-}
-```

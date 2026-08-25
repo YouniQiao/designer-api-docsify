@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## deleteForm
@@ -15,8 +15,6 @@ function deleteForm(formId: string, callback: AsyncCallback<void>): void
 删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务不再保留有关该卡片的信息。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -44,85 +42,6 @@ function deleteForm(formId: string, callback: AsyncCallback<void>): void
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.deleteForm(formId, (error: BusinessError) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info('formHost deleteForm success');
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.deleteForm(formId, (error,data) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info('formHost deleteForm success');
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.deleteForm(formId).then(() => {
-    console.info('formHost deleteForm success');
-  }).catch((error: BusinessError) => {
-    console.error(`formHost deleteForm, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.deleteForm(formId).then(() => {
-    console.info('formHost deleteForm success');
-  }).catch((error) => {
-    console.error(`formHost deleteForm, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## deleteForm
 
@@ -133,8 +52,6 @@ function deleteForm(formId: string): Promise<void>
 删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务不再保留有关该卡片的信息。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -166,7 +83,3 @@ function deleteForm(formId: string): Promise<void>
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
-
-**示例**
-
-参见 [deleteForm](#deleteform)

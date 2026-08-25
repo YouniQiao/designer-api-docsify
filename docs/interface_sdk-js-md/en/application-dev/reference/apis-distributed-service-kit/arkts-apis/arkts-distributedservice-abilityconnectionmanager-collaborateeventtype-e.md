@@ -4,8 +4,6 @@ Enumerates collaboration event types.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## SEND_FAILURE
@@ -17,8 +15,6 @@ SEND_FAILURE = 0
 Task sending failure.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,8 +29,6 @@ COLOR_SPACE_CONVERSION_FAILURE = 1
 Color space conversion failure.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

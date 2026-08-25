@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getMinWidth
@@ -16,8 +16,6 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
@@ -27,30 +25,6 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getMinWidth((error: BusinessError, data: Number) => {
-    if (error) {
-        console.error(`failed to getMinWidth because: ${JSON.stringify(error)}`);
-        return;
-    }
-    console.info(`success to getMinWidth: ${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.getMinWidth().then((data: Number) => {
-    console.info(`success to getMinWidth: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to getMinWidth because: ${JSON.stringify(error)}`);
-});
-```
 
 
 ## getMinWidth
@@ -63,8 +37,6 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
@@ -74,7 +46,3 @@ Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;number & gt; |
-
-**Examples**
-
-See [getMinWidth](#getminwidth)

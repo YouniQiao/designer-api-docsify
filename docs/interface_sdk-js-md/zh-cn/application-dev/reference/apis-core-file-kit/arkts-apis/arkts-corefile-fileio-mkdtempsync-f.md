@@ -15,8 +15,6 @@ declare function mkdtempSync(prefix: string): string
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [mkdtempSync](arkts-corefile-file-fs-mkdtempsync-f.md)
@@ -34,9 +32,3 @@ declare function mkdtempSync(prefix: string): string
 | 类型 |
 | --- |
 | string |
-
-**示例**
-
-```TypeScript
-let res = fileio.mkdtempSync(pathDir + "/XXXXXX");
-```

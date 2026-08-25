@@ -4,27 +4,23 @@ Represents a gesture touch point, which is the basic unit that constitutes a Ges
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { GesturePoint } from '@kit.AccessibilityKit';
+import { GesturePoint } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## constructor
 
 ```TypeScript
-constructor(positionX: double, positionY: double)
+constructor(positionX: number, positionY: number)
 ```
 
 Creates a **GesturePoint** instance based on the given X and Y coordinates.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -37,14 +33,6 @@ Creates a **GesturePoint** instance based on the given X and Y coordinates.
 | [positionX](#positionx) | number | Yes |
 | [positionY](#positiony) | number | Yes |
 
-**Examples**
-
-```TypeScript
-import { GesturePoint } from '@kit.AccessibilityKit';
-
-let gesturePoint = new GesturePoint(1, 2);
-```
-
 ## positionX
 
 ```TypeScript
@@ -56,8 +44,6 @@ X coordinate of the touch point, in pixels (px).
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -72,7 +58,5 @@ Y coordinate of the touch point, in pixels (px).
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core

@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ colorMode?: ThemeColorMode
 
 用于指定WithTheme作用域内组件配色的深浅色模式。默认值：ThemeColorMode.SYSTEM
 
-**类型：** ThemeColorMode
+**类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ theme?: CustomTheme
 **类型：** [CustomTheme](arkts-arkui-customtheme-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

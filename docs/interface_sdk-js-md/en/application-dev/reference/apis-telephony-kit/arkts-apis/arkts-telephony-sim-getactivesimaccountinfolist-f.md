@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getActiveSimAccountInfoList
@@ -21,8 +21,6 @@ Obtains the list of activated SIM card accounts. This API uses an asynchronous c
 > are empty.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -45,28 +43,6 @@ Obtains the list of activated SIM card accounts. This API uses an asynchronous c
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getActiveSimAccountInfoList((err: BusinessError, data: Array<sim.IccAccountInfo>) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getActiveSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
-    console.info(`getActiveSimAccountInfoList success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getActiveSimAccountInfoList failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## getActiveSimAccountInfoList
 
@@ -83,8 +59,6 @@ Obtains the list of activated SIM card accounts. This API uses a promise to retu
 > are empty.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -104,7 +78,3 @@ Obtains the list of activated SIM card accounts. This API uses a promise to retu
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-See [getActiveSimAccountInfoList](#getactivesimaccountinfolist)

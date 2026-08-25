@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { windowAnimationManager } from '@kit.ArkUI';
+import { windowAnimationManager } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总
@@ -37,17 +35,4 @@ import { windowAnimationManager } from '@kit.ArkUI';
 | [WindowAnimationController(窗口动画管理)](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) |
 | [WindowAnimationFinishedCallback(窗口动画管理)](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) |
 | [WindowAnimationTarget(窗口动画管理)](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) |
-<!--DelEnd-->
-
-<!--Del-->
-### 类型（系统接口）
-
-| 名称 |
-| --- |
-| [AppStartCallback(窗口动画管理)](arkts-arkui-windowanimationmanager-appstartcallback-t-sys.md) |
-| [AppTransitionCallback(窗口动画管理)](arkts-arkui-windowanimationmanager-apptransitioncallback-t-sys.md) |
-| [ScreenUnlockCallback(窗口动画管理)](arkts-arkui-windowanimationmanager-screenunlockcallback-t-sys.md) |
-| [WindowAnimationTargetsUpdationCallback(窗口动画管理)](arkts-arkui-windowanimationmanager-windowanimationtargetsupdationcallback-t-sys.md) |
-| [WindowCloseCallback(窗口动画管理)](arkts-arkui-windowanimationmanager-windowclosecallback-t-sys.md) |
-| [WindowMinimizationCallback(窗口动画管理)](arkts-arkui-windowanimationmanager-windowminimizationcallback-t-sys.md) |
 <!--DelEnd-->

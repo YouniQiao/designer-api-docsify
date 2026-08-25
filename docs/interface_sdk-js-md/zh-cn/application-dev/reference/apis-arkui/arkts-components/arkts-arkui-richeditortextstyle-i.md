@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ decoration?: DecorationStyleInterface
 
 设置文本装饰线的样式、颜色和粗细。type默认值：TextDecorationType.None color默认值：跟随字体颜色。style默认值：TextDecorationStyle.SOLID thicknessScale默认值：1.0
 
-**类型：** DecorationStyleInterface
+**类型：** [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,11 +37,9 @@ fontColor?: ResourceColor
 
 文本颜色。默认值：\$r('sys.color.font_primary')。当[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle优先级高于fontColor。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,11 +55,9 @@ fontFamily?: ResourceStr
 
 设置字体列表，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md)。默认字体:'HarmonyOS Sans'。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,8 +77,6 @@ fontFeature?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -101,11 +91,9 @@ fontSize?: Length | number
 
 设置字体大小，Length为number类型时，使用fp单位。number类型取值范围：(0, +∞)。设置为0或负值时，按默认值处理。字体默认大小为16fp。不支持设置百分比字符串。
 
-**类型：** Length \| number
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -125,8 +113,6 @@ fontStyle?: FontStyle
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -144,8 +130,6 @@ fontWeight?: number | FontWeight | string
 **类型：** number \| FontWeight \| string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -165,8 +149,6 @@ halfLeading?: boolean
 
 **起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -184,8 +166,6 @@ letterSpacing?: number | string
 **类型：** number \| string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -205,8 +185,6 @@ lineHeight?: number | string | Resource
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -221,11 +199,9 @@ strokeColor?: ResourceColor
 
 文本描边颜色。默认值：跟随字体颜色。设置异常值时跟随字体颜色。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -241,11 +217,9 @@ strokeJoinStyle?: StrokeJoinStyle
 
 文本描边拐角样式。默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** StrokeJoinStyle
+**类型：** [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -265,8 +239,6 @@ strokeWidth?: LengthMetrics | number
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -281,11 +253,9 @@ textBackgroundStyle?: TextBackgroundStyle
 
 文本背景样式。默认值：{color: Color.Transparent, radius: 0}
 
-**类型：** TextBackgroundStyle
+**类型：** [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md)
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -302,11 +272,9 @@ textShadow?: ShadowOptions | Array<ShadowOptions>
 设置文字阴影效果。默认值：undefined，不设置文字阴影效果。该接口支持以数组形式入参，实现多重文字阴影。  
 **说明：**仅支持设置阴影模糊半径、颜色和偏移量，不支持智能取色。
 
-**类型：** ShadowOptions \| Array&lt;ShadowOptions&gt;
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

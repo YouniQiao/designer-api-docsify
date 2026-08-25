@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedWifiList
@@ -15,8 +15,6 @@ function removeDisallowedWifiList(admin: Want, list: Array<WifiAccessInfo>): voi
 Removes disallowed Wi-Fi networks. If some Wi-Fi networks are removed from the disallowed list, the current device cannot connect to the remaining ones; if all Wi-Fi networks are removed from the disallowed list, the current device can connect to any Wi-Fi network. This API is applicable to enterprise Wi-Fi policy adjustment scenarios, such as lifting restrictions on a specific Wi-Fi network, allowing employees to connect to newly approved office networks, or completely removing the disabling policy.
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -38,27 +36,3 @@ Removes disallowed Wi-Fi networks. If some Wi-Fi networks are removed from the d
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.edmtest',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let wifiIds: Array<wifiManager.WifiAccessInfo> = [{
-    // Replace with actual values.
-    ssid: "wifi_name",
-    bssid: "68:77:24:77:A6:D8"
-  }];
-  wifiManager.removeDisallowedWifiList(wantTemp, wifiIds);
-  console.info(`Succeeded in removing disallowed Wi-Fi list.`);
-} catch (err) {
-  console.error(`Failed to remove disallowed Wi-Fi list. Code: ${err.code}, message: ${err.message}`);
-}
-```

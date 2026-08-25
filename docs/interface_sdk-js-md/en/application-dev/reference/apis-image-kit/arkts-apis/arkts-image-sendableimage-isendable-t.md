@@ -8,8 +8,6 @@ ISendable is the parent type of all sendable types except null and undefined. It
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Property type:** lang.ISendable

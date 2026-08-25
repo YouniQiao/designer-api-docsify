@@ -15,11 +15,9 @@ Get inspector node infos.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
-**Substitutes:** getInspectorTree
+**Substitutes:** [getInspectorTree](arkts-arkui-global-getinspectortree-f.md)
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

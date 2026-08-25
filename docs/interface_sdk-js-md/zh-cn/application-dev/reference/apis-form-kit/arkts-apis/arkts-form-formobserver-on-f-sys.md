@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
+import { formObserver } from 'kits/@kit.FormKit';
 ```
 
 ## on('formAdd')
@@ -15,8 +15,6 @@ function on(type: 'formAdd', observerCallback: Callback<formInfo.RunningFormInfo
 订阅卡片新增事件。使用callback异步回调，返回当前新增卡片的信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -48,8 +46,6 @@ function on(type: 'formAdd', hostBundleName: string, observerCallback: Callback<
 订阅卡片新增事件。使用callback异步回调，返回指定卡片使用方应用新增卡片的信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -83,8 +79,6 @@ function on(type: 'formRemove', observerCallback: Callback<formInfo.RunningFormI
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -115,8 +109,6 @@ function on(type: 'formRemove', hostBundleName: string, observerCallback: Callba
 订阅卡片删除事件。使用callback异步回调，返回指定卡片使用方应用被删除卡片的信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -149,8 +141,6 @@ function on(type: 'notifyVisible', observerCallback: Callback<Array<formInfo.Run
 订阅通知卡片可见的事件。使用callback异步回调。​触发通知卡片可见场景为：调用[notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md)接口通知对应卡片可见性变更为可见状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -187,8 +177,6 @@ function on(
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -220,8 +208,6 @@ function on(type: 'notifyInvisible', observerCallback: Callback<Array<formInfo.R
 订阅通知卡片不可见的事件。使用callback异步回调。​触发通知卡片不可见场景为：调用[notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md)接口通知对应卡片可见性变更为不可 见状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -258,8 +244,6 @@ function on(
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -292,8 +276,6 @@ function on(type: 'router', observerCallback: Callback<formInfo.RunningFormInfo>
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -324,8 +306,6 @@ function on(type: 'router', hostBundleName: string, observerCallback: Callback<f
 订阅指定卡片使用方的卡片router事件。使用callback异步回调，返回触发router事件的卡片信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -359,8 +339,6 @@ function on(type: 'message', observerCallback: Callback<formInfo.RunningFormInfo
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -391,8 +369,6 @@ function on(type: 'message', hostBundleName: string, observerCallback: Callback<
 订阅指定卡片使用方的卡片message事件。使用callback异步回调，返回触发message事件的卡片信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -426,8 +402,6 @@ function on(type: 'call', observerCallback: Callback<formInfo.RunningFormInfo>):
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 
 **系统能力：** SystemCapability.Ability.Form
@@ -458,8 +432,6 @@ function on(type: 'call', hostBundleName: string, observerCallback: Callback<for
 订阅指定卡片使用方的卡片call事件。使用callback异步回调，返回触发call事件的卡片信息。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.OBSERVE_FORM_RUNNING
 

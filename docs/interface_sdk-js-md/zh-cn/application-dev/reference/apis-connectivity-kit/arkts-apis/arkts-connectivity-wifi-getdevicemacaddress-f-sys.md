@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getDeviceMacAddress
@@ -15,8 +15,6 @@ function getDeviceMacAddress(): string[]
 获取设备的MAC地址。WLAN必须已使能。<p>MAC地址是唯一的，无法更改。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -33,16 +31,3 @@ function getDeviceMacAddress(): string[]
 | 类型 |
 | --- |
 | string[] |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let ret = wifi.getDeviceMacAddress();
-    console.info("deviceMacAddress:" + JSON.stringify(ret));
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

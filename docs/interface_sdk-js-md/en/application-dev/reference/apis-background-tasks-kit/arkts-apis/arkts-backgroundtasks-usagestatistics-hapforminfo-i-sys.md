@@ -2,8 +2,6 @@
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -11,22 +9,20 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## count
 
 ```TypeScript
-count: int
+count: number
 ```
 
 The click count of module.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -35,16 +31,14 @@ The click count of module.
 ## formDimension
 
 ```TypeScript
-formDimension: int
+formDimension: number
 ```
 
 The form dimension.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -53,16 +47,14 @@ The form dimension.
 ## formId
 
 ```TypeScript
-formId: long
+formId: number
 ```
 
 The form id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -71,16 +63,14 @@ The form id.
 ## formLastUsedTime
 
 ```TypeScript
-formLastUsedTime: long
+formLastUsedTime: number
 ```
 
-The last time when the form was accessed, in milliseconds. <br> Unit:ms
+The last time when the form was accessed, in milliseconds. Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -97,8 +87,6 @@ The form name.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 

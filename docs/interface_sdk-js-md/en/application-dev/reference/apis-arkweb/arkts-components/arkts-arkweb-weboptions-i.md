@@ -4,8 +4,6 @@ Defines Web options through the [API](../../../reference/apis-arkweb/arkts-basic
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Controller used to control various behaviors of the Web component, including pag
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -43,8 +39,6 @@ Whether to convert mouse events to touch events. The value **true** indicates th
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## incognitoMode
@@ -58,8 +52,6 @@ Whether the current Webview is created in incognito mode. The value **true** ind
 **Type:** boolean
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -77,8 +69,6 @@ Rendering mode of the current Web component. `RenderMode.ASYNC_RENDER` indicates
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -95,8 +85,6 @@ Token that specifies the shared render process for the current Web component. In
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## src
@@ -110,8 +98,6 @@ Web page resource address. If a local resource file is accessed, use the resourc
 **Type:** string \| Resource
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

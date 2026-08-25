@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## deleteAbc
@@ -15,8 +15,6 @@ function deleteAbc(abcPath: string): Promise<void>
 Deletes an .abc file based on the specified file path. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.RUN_DYN_CODE
 
@@ -44,24 +42,3 @@ Deletes an .abc file based on the specified file path. This API uses a promise t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700202](../errorcode-bundle.md#17700202-abc-file-deletion-failure) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let abcPath: string = '/data/storage/el2/base/a.abc';
-
-try {
-  bundleManager.deleteAbc(abcPath).then((data) => {
-    hilog.info(0x0000, 'testTag', 'deleteAbc successfully');
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'deleteAbc failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'deleteAbc failed. Cause: %{public}s', message);
-}
-```

@@ -4,15 +4,13 @@ Manages captions configuration. Before calling any method of **CaptionsManager**
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## off('enableChange')
@@ -24,8 +22,6 @@ off(type: 'enableChange', callback?: Callback<boolean>): void
 Unsubscribes from the state changes of captions configuration. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 12
 
@@ -44,36 +40,6 @@ Unsubscribes from the state changes of captions configuration. This API uses an 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe caption manager enable state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.on('enableChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.off('enableChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
 ## off('styleChange')
 
 ```TypeScript
@@ -83,8 +49,6 @@ off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 Unsubscribes from the captions style changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 12
 
@@ -102,76 +66,6 @@ Unsubscribes from the captions style changes. This API uses an asynchronous call
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: accessibility.CaptionsStyle) => void = this.eventCallback;
-  eventCallback(data: accessibility.CaptionsStyle): void {
-    console.info(`subscribe caption manager style state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.on('styleChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.off('styleChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
-## offEnableChange
-
-```TypeScript
-offEnableChange(callback?: Callback<boolean>): void
-```
-
-Unregister the observe of the enable state.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
-
-## offStyleChange
-
-```TypeScript
-offStyleChange(callback?: Callback<CaptionsStyle>): void
-```
-
-Unregister the observer of the style.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |
 
 ## on('enableChange')
 
@@ -191,8 +85,6 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
@@ -209,31 +101,6 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe caption manager enable state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.on('enableChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
 
 ## on('styleChange')
 
@@ -253,8 +120,6 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 12
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
@@ -272,71 +137,6 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: accessibility.CaptionsStyle) => void = this.eventCallback;
-  eventCallback(data: accessibility.CaptionsStyle): void {
-    console.info(`subscribe caption manager style state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.on('styleChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
-## onEnableChange
-
-```TypeScript
-onEnableChange(callback: Callback<boolean>): void
-```
-
-Register the observe of the enable state.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
-
-## onStyleChange
-
-```TypeScript
-onStyleChange(callback: Callback<CaptionsStyle>): void
-```
-
-Register the observer of the style.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |
-
 ## enabled
 
 ```TypeScript
@@ -348,8 +148,6 @@ Whether to enable captions configuration. The value **true** indicates that the 
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -368,8 +166,6 @@ Style of captions.
 **Type:** [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

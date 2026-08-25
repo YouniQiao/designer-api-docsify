@@ -4,14 +4,12 @@ Represents a set of parameters used for signing or signature verification, inclu
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## digest
@@ -25,8 +23,6 @@ Digest algorithm. Default value: CM_DIGEST_SHA256: indicates that the SHA256 dig
 **Type:** [CmKeyDigest](arkts-devicecertificate-certificatemanager-cmkeydigest-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -42,8 +38,6 @@ Enumeration representing the padding mode. Default value: CM_PADDING_PSS: indica
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## purpose
@@ -57,7 +51,5 @@ Purpose of using the key.
 **Type:** [CmKeyPurpose](arkts-devicecertificate-certificatemanager-cmkeypurpose-e.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

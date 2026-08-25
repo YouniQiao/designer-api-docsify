@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 ```
 
 ## unsubscribe
@@ -15,8 +15,6 @@ function unsubscribe(): Promise<void>
 Unsubscribes from the notification extension. This API uses a promise to return the result.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -39,13 +37,3 @@ subscribe subscribes to the
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-```TypeScript
-notificationExtensionSubscription.unsubscribe().then(() => {
-  console.info("unsubscribe success");
-}).catch((err: BusinessError) => {
-  console.error(`unsubscribe fail: ${JSON.stringify(err)}`);
-});
-```

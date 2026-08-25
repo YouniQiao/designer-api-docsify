@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from '@kit.ConnectivityKit';
+import { cardEmulation } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isDefaultService
@@ -15,8 +15,6 @@ function isDefaultService(elementName: ElementName, type: CardType): boolean
 Checks whether an application is the default application of the specified service type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -44,28 +42,3 @@ Checks whether an application is the default application of the specified servic
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-// Applicable to devices other than lite wearables
-import { cardEmulation } from '@kit.ConnectivityKit';
-import { bundleManager, Want } from '@kit.AbilityKit';
-
-// Initialize elementName, bundleName, and abilityName and set their values correctly based on the actual application information.
-let elementName: bundleManager.ElementName = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  abilityName: "EntryAbility"
-};
-
-let isDefaultService: boolean = cardEmulation.isDefaultService(elementName, cardEmulation.CardType.PAYMENT);
-```
-
-```TypeScript
-// Applicable to lite wearables
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-let appName = "com.example.testquestionlite";
-let isDefaultService = cardEmulation.isDefaultService(appName, cardEmulation.CardType.PAYMENT);
-```

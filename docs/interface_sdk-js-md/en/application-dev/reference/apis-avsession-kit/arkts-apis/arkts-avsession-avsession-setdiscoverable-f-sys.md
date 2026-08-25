@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## setDiscoverable
@@ -15,8 +15,6 @@ function setDiscoverable(enable: boolean, callback: AsyncCallback<void>): void
 Enable or disable device to be discoverable, used at sink side.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -36,30 +34,6 @@ Enable or disable device to be discoverable, used at sink side.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.setDiscoverable(true, (err: BusinessError) => {
-  if (err) {
-    console.error(`setDiscoverable BusinessError: code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('setDiscoverable successfully');
-  }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avSession.setDiscoverable(true).then(() => {
-  console.info('setDiscoverable successfully');
-}).catch((err: BusinessError) => {
-  console.error(`setDiscoverable BusinessError: code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## setDiscoverable
 
@@ -70,8 +44,6 @@ function setDiscoverable(enable: boolean): Promise<void>
 Enable or disable device to be discoverable, used at sink side.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -95,7 +67,3 @@ Enable or disable device to be discoverable, used at sink side.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [setDiscoverable](#setdiscoverable)

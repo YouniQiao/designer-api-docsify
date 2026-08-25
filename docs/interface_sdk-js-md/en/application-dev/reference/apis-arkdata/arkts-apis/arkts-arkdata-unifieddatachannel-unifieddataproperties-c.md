@@ -4,14 +4,12 @@ Defines the properties of the data records in the unified data object, including
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## getDelayData
@@ -23,8 +21,6 @@ getDelayData?: GetDelayData
 Callback for obtaining the deferred data. Currently, it can be used only in the pasteboard application of the same device. The default value is **undefined**.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,8 +40,6 @@ Object of the dictionary type used to set other properties. The default value is
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -63,8 +57,6 @@ Range, in which [UnifiedData](#unifieddataproperties) can be used. The default v
 **Type:** [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,8 +76,6 @@ Customized tag. The default value is an empty string.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -103,8 +93,6 @@ Timestamp when [UnifiedData](#unifieddataproperties) is generated. The default v
 **Type:** Date
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,44 +112,8 @@ Defines URI authorization policies for drag intention.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-**Examples**
-
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-
-let properties = new unifiedDataChannel.UnifiedDataProperties();
-properties.extras = {
-  key: {
-    title: 'MyTitle',
-    content: 'MyContent'
-  }
-};
-properties.tag = "This is a tag of properties";
-properties.shareOptions = unifiedDataChannel.ShareOptions.CROSS_APP;
-properties.getDelayData = ((type: string) => {
-  if (type == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
-    let plainTextDetails : Record<string, string> = {
-      'attr1': 'value1',
-      'attr2': 'value2'
-    }
-    let plainText : uniformDataStruct.PlainText = {
-      uniformDataType: 'general.plain-text',
-      textContent : 'This is a plain text example',
-      abstract : 'This is abstract',
-      details : plainTextDetails
-    }
-    let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-    let textData = new unifiedDataChannel.UnifiedData(text);
-    return textData;
-  }
-  return new unifiedDataChannel.UnifiedData();
-});
-```

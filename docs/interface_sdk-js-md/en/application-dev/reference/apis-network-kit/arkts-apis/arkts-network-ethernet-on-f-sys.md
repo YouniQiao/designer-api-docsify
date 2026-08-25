@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'kits/@kit.NetworkKit';
 ```
 
 ## on('interfaceStateChange')
@@ -15,8 +15,6 @@ function on(type: 'interfaceStateChange', callback: Callback<InterfaceStateInfo>
 Registers the observer for NIC hot swap events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -38,13 +36,3 @@ Registers the observer for NIC hot swap events. This API uses an asynchronous ca
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-
-ethernet.on('interfaceStateChange', (data: object) => {
-  console.info('on interfaceSharingStateChange: ' + JSON.stringify(data));
-});
-```

@@ -1,7 +1,5 @@
 # BigInt
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ toLocaleString(locales?: Intl.LocalesArgument, options?: BigIntToLocaleStringOpt
 ```
 
 Returns a string representation appropriate to the host environment's current locale.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -36,8 +32,6 @@ toString(radix?: number): string
 
 Returns a string representation of an object.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -56,8 +50,6 @@ valueOf(): bigint
 
 Returns the primitive value of the specified object.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -69,5 +61,3 @@ readonly [Symbol.toStringTag]: "BigInt"
 ```
 
 **Type:** "BigInt"
-
-**ArkTS mode:** 

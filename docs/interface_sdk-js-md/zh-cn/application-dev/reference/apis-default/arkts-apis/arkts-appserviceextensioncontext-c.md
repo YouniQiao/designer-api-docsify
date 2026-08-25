@@ -9,27 +9,17 @@ AppServiceExtensionContext模块是 [AppServiceExtensionAbility](../../../refere
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## connectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 connectServiceExtensionAbility(want: Want, callback: ConnectOptions): number
-```
-
-ArkTS-Sta:
-```TypeScript
-connectServiceExtensionAbility(want: Want, callback: ConnectOptions): long
 ```
 
 将当前AppServiceExtensionAbility连接到一个ServiceExtensionAbility，通过返回的proxy与ServiceExtensionAbility进行通信，以使用 ServiceExtensionAbility对外提供的能力。仅支持在主线程调用。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,7 +36,7 @@ connectServiceExtensionAbility(want: Want, callback: ConnectOptions): long
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **错误码：**
 
@@ -61,124 +51,15 @@ connectServiceExtensionAbility(want: Want, callback: ConnectOptions): long
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { AppServiceExtensionAbility, Want, common } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let commRemote: rpc.IRemoteObject | null = null; // 断开连接时需要释放
-const TAG: string = '[AppServiceExtensionAbility]';
-
-export default class AppServiceExtension extends AppServiceExtensionAbility {
-  connection: number = 0;
-
-  onCreate(want: Want) {
-    let wantInfo: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MyAbility'
-    };
-    let callback: common.ConnectOptions = {
-      onConnect(elementName, remote) {
-        commRemote = remote;
-        hilog.info(0x0000, TAG, '----------- onConnect -----------');
-      },
-      onDisconnect(elementName) {
-        hilog.info(0x0000, TAG, '----------- onDisconnect -----------');
-      },
-      onFailed(code) {
-        hilog.error(0x0000, TAG, '----------- onFailed -----------');
-      }
-    };
-
-
-    try {
-      this.connection = this.context.connectServiceExtensionAbility(wantInfo, callback);
-    } catch (paramError) {
-      commRemote = null;
-      // 处理入参错误异常
-      hilog.error(0x0000, TAG, `error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-
-  onDestroy(): void {
-    this.context.disconnectServiceExtensionAbility(this.connection).then(() => {
-      commRemote = null;
-      // 执行正常业务
-      hilog.info(0x0000, TAG, '----------- disconnectServiceExtensionAbility success -----------');
-    })
-      .catch((error: BusinessError) => {
-        commRemote = null;
-        // 处理业务逻辑错误
-        hilog.error(0x0000, TAG, `disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-      });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { AppServiceExtensionAbility, Want, common, bundleManager } from '@kit.AbilityKit';
-import rpc from '@ohos.rpc';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let commRemote: rpc.IRemoteObject; // 断开连接时需要释放
-const TAG: string = '[AppServiceExtensionAbility]';
-
-class AppServiceExtension extends AppServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MyAbility'
-    };
-    let callback: common.ConnectOptions = {
-      onConnect: (elementName: bundleManager.ElementName, remote: rpc.IRemoteObject): void => {
-        console.info(`onConnect elementName: ${JSON.stringify(elementName)}`);
-      },
-      onDisconnect: (elementName: bundleManager.ElementName): void => {
-        console.info(`onDisconnect elementName: ${JSON.stringify(elementName)}`);
-      },
-      onFailed: (code: int): void => {
-        console.error(`onFailed code: ${code}`);
-      }
-    };
-    let connection: long;
-
-    try {
-      connection = this.context.connectServiceExtensionAbility(want, callback);
-    } catch (paramError) {
-      // 处理入参错误异常
-      hilog.error(0x0000, TAG,
-        `error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## disconnectServiceExtensionAbility
 
-ArkTS-Dyn:
 ```TypeScript
 disconnectServiceExtensionAbility(connection: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-disconnectServiceExtensionAbility(connection: long): Promise<void>
 ```
 
 将AppServiceExtensionAbility与已连接的ServiceExtensionAbility断开连接。仅支持在主线程调用。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -188,7 +69,7 @@ disconnectServiceExtensionAbility(connection: long): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [connection](../../apis-network-kit/arkts-apis/arkts-net-connection.md) | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| [connection](../../apis-network-kit/arkts-apis/arkts-net-connection.md) | number | 是 |
 
 **返回值：**
 
@@ -203,48 +84,6 @@ disconnectServiceExtensionAbility(connection: long): Promise<void>
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { AppServiceExtensionAbility } from '@kit.AbilityKit';
-import rpc from '@ohos.rpc';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let commRemote: rpc.IRemoteObject | null; // 断开连接时需要释放
-const TAG: string = '[AppServiceExtensionAbility]';
-
-class AppServiceExtension extends AppServiceExtensionAbility {
-  onCreate() {
-    // connection为connectServiceExtensionAbility中的返回值
-    let connection = 1;
-    try {
-      this.context.disconnectServiceExtensionAbility(connection)
-        .then(() => {
-          commRemote = null;
-          // 执行正常业务
-          hilog.info(0x0000, TAG, '----------- disconnectServiceExtensionAbility success -----------');
-        })
-        .catch((err: Error) => {
-          commRemote = null;
-          // 处理业务逻辑错误
-          let error = err as BusinessError;
-          hilog.error(0x0000, TAG,
-            `disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      commRemote = null;
-      // 处理入参错误异常
-      hilog.error(0x0000, TAG,
-        `error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -254,8 +93,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 启动UIAbility。仅支持在主线程调用。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -301,43 +138,6 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 | [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-不支持指定app_instance_key) |
 | [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-不支持创建新实例) |
 
-**示例**
-
-```TypeScript
-import { AppServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MyAppServiceExtensionAbility extends AppServiceExtensionAbility {
-  onCreate(want: Want) {
-    let wantInfo: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startAbility(wantInfo, options)
-        .then(() => {
-          // 执行正常业务
-          console.info('startAbility succeed');
-        })
-        .catch((error: Error) => {
-          // 处理业务逻辑错误
-          let err = error as BusinessError;
-          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
 ## terminateSelf
 
 ```TypeScript
@@ -347,8 +147,6 @@ terminateSelf(): Promise<void>
 销毁AppServiceExtensionAbility自身。仅支持在主线程调用。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -367,26 +165,3 @@ terminateSelf(): Promise<void>
 | [16000009](../../apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-```TypeScript
-import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG: string = '[AppServiceExtensionAbility]';
-
-export default class AppServiceExtension extends AppServiceExtensionAbility {
-  onCreate(want: Want) {
-    this.context.terminateSelf().then(() => {
-      // 执行正常业务
-      hilog.info(0x0000, TAG, '----------- terminateSelf succeed -----------');
-    }).catch((err: Error) => {
-      // 处理业务逻辑错误
-      let error = err as BusinessError;
-      hilog.error(0x0000, TAG, `terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
-    });
-  }
-}
-```

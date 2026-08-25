@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## setHotspotConfig
@@ -15,8 +15,6 @@ function setHotspotConfig(config: HotspotConfig): void
 设置设备的热点配置。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
@@ -39,24 +37,3 @@ function setHotspotConfig(config: HotspotConfig): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2601000](../errorcode-wifi.md#2601000-hotspot模块异常) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let config:wifiManager.HotspotConfig = {
-    ssid: "****",
-    securityType: 3,
-    band: 0,
-    channel: 0,
-    preSharedKey: "****",
-    maxConn: 0
-  }
-  let ret = wifiManager.setHotspotConfig(config);
-  console.info("result:" + ret);    
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

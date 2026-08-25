@@ -4,8 +4,6 @@ How menu display is triggered.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RightClick
@@ -18,8 +16,6 @@ Shows the shortcut menu by right-clicking the text.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,11 +26,9 @@ Shows the shortcut menu by right-clicking the text.
 LongPress
 ```
 
-The menu is displayed when the component is long-pressed.
+The menu is displayed when the component is number-pressed.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

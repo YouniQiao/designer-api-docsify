@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from 'kits/@kit.NotificationKit';
 ```
 
 ## removeAll
@@ -16,8 +16,6 @@ Removes all notifications for a specified application. This API uses an asynchro
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -28,7 +26,7 @@ Removes all notifications for a specified application. This API uses an asynchro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -42,74 +40,6 @@ Removes all notifications for a specified application. This API uses an asynchro
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("removeAll success");
-  }
-}
-let bundle: notificationSubscribe.BundleOption = {
-  bundle: "bundleName1",
-};
-notificationSubscribe.removeAll(bundle, removeAllCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-    if (err) {
-        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("removeAll success");
-    }
-}
-notificationSubscribe.removeAll(removeAllCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// If no application is specified, notifications of all applications are deleted.
-notificationSubscribe.removeAll().then(() => {
-  console.info("removeAll success");
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail: ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("removeAll success");
-  }
-}
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-notificationSubscribe.removeAll(userId, removeAllCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 1;
-notificationSubscribe.removeAll(userId).then(() => {
-  console.info("removeAll success");
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail: ${JSON.stringify(err)}`);
-});
-```
 
 
 ## removeAll
@@ -122,8 +52,6 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -147,22 +75,16 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
-**Examples**
-
-See [removeAll](#removeall)
-
 
 ## removeAll
 
 ```TypeScript
-function removeAll(userId: int, callback: AsyncCallback<void>): void
+function removeAll(userId: number, callback: AsyncCallback<void>): void
 ```
 
 Removes all notifications for a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -174,7 +96,7 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
@@ -189,22 +111,16 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
 
-**Examples**
-
-See [removeAll](#removeall)
-
 
 ## removeAll
 
 ```TypeScript
-function removeAll(userId: int): Promise<void>
+function removeAll(userId: number): Promise<void>
 ```
 
 Removes all notifications for a specified user. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -216,7 +132,7 @@ Removes all notifications for a specified user. This API uses a promise to retur
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 
@@ -236,10 +152,6 @@ Removes all notifications for a specified user. This API uses a promise to retur
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600008](../errorcode-notification.md#1600008-user-not-found) |
 
-**Examples**
-
-See [removeAll](#removeall)
-
 
 ## removeAll
 
@@ -251,8 +163,6 @@ Removes all notifications for a specified application. This API uses a promise t
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
@@ -263,7 +173,7 @@ Removes all notifications for a specified application. This API uses a promise t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | No |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | No |
 
 **Return value:**
 
@@ -282,7 +192,3 @@ Removes all notifications for a specified application. This API uses a promise t
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-See [removeAll](#removeall)

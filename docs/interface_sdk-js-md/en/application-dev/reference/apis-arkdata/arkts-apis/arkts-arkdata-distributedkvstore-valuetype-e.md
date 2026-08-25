@@ -4,8 +4,6 @@ Indicates the {@code ValueType}.<p>{@code ValueType} is obtained based on the va
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## STRING
@@ -18,8 +16,6 @@ Indicates that the value type is string.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -30,11 +26,9 @@ Indicates that the value type is string.
 INTEGER = 1
 ```
 
-Indicates that the value type is int.
+Indicates that the value type is number.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -48,8 +42,6 @@ Indicates that the value type is float.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
 ## BYTE_ARRAY
@@ -61,8 +53,6 @@ BYTE_ARRAY = 3
 Indicates that the value type is byte array.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,8 +68,6 @@ Indicates that the value type is boolean.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -90,27 +78,9 @@ Indicates that the value type is boolean.
 DOUBLE = 5
 ```
 
-Indicates that the value type is double.
+Indicates that the value type is number.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-
-## LONG
-
-```TypeScript
-LONG = 6
-```
-
-Indicates that the value type is long.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对�
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -19,12 +17,10 @@ Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对�
 onGetStartIndexByIndex?: OnGetStartIndexByIndexCallback
 ```
 
-根据指定的目标索引，计算Grid滚动到该位置时页面内的起始行，用于支持scrollToIndex等操作。不设置时不启用该回调，需与 onGetStartIndexByOffset同时设置才能生效。  
+根据指定的目标索引，计算Grid滚动到该位置时页面内的起始行，用于支持[scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex)等操作。不设置时不启用该回调，需与 onGetStartIndexByOffset同时设置才能生效。  
 **系统接口：** 此接口为系统接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,8 +38,6 @@ onGetStartIndexByOffset?: OnGetStartIndexByOffsetCallback
 **系统接口：** 此接口为系统接口。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

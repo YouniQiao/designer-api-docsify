@@ -112,13 +112,7 @@
   <!--Del-->
   - [obtainAllContinuousTasks(system api)](arkts-backgroundtasks-backgroundtaskmanager-obtainallcontinuoustasks-f-sys.md)<!--DelEnd-->
   - [off](arkts-backgroundtasks-backgroundtaskmanager-off-f.md)
-  - [offContinuousTaskActive](arkts-backgroundtasks-backgroundtaskmanager-offcontinuoustaskactive-f.md)
-  - [offContinuousTaskCancel](arkts-backgroundtasks-backgroundtaskmanager-offcontinuoustaskcancel-f.md)
-  - [offContinuousTaskSuspend](arkts-backgroundtasks-backgroundtaskmanager-offcontinuoustasksuspend-f.md)
   - [on](arkts-backgroundtasks-backgroundtaskmanager-on-f.md)
-  - [onContinuousTaskActive](arkts-backgroundtasks-backgroundtaskmanager-oncontinuoustaskactive-f.md)
-  - [onContinuousTaskCancel](arkts-backgroundtasks-backgroundtaskmanager-oncontinuoustaskcancel-f.md)
-  - [onContinuousTaskSuspend](arkts-backgroundtasks-backgroundtaskmanager-oncontinuoustasksuspend-f.md)
   - [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md)
   <!--Del-->
   - [resetAllEfficiencyResources(system api)](arkts-backgroundtasks-backgroundtaskmanager-resetallefficiencyresources-f-sys.md)<!--DelEnd-->

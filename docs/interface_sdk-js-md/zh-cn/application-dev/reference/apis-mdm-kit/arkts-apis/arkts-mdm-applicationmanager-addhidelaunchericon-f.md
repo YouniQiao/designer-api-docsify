@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addHideLauncherIcon
@@ -20,8 +20,6 @@ function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 > 3、不能把桌面所有应用都添加到隐藏名单中，否则所有应用都会显示到桌面上。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -45,24 +43,3 @@ function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleNames: Array<string> = ['com.example.test'];
-try {
-  applicationManager.addHideLauncherIcon(wantTemp, bundleNames);
-  console.info('Succeeded in adding hide launcher icon.');
-} catch (err) {
-  console.error(`Failed to add hide launcher icon. Code is ${err.code}, message is ${err.message}`);
-}
-```

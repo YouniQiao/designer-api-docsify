@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## releaseInterface
@@ -15,8 +15,6 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 Releases a USB interface.Before you do this, ensure that you have claimed the interface by calling [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -36,10 +34,3 @@ Releases a USB interface.Before you do this, ensure that you have claimed the in
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let ret = usb.releaseInterface(devicepipe, interfaces);
-console.info(`releaseInterface = ${ret}`);
-```

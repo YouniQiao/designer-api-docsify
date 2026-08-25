@@ -4,8 +4,6 @@ FA模型的使用信息属性集合。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@ FA模型的使用信息属性集合。
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## abilityInFgTotalTime
 
 ```TypeScript
-abilityInFgTotalTime?: long
+abilityInFgTotalTime?: number
 ```
 
 应用在前台可见的总时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -37,16 +33,14 @@ abilityInFgTotalTime?: long
 ## abilityPrevAccessTime
 
 ```TypeScript
-abilityPrevAccessTime?: long
+abilityPrevAccessTime?: number
 ```
 
 应用最后一次使用的时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -55,16 +49,14 @@ abilityPrevAccessTime?: long
 ## abilityPrevSeenTime
 
 ```TypeScript
-abilityPrevSeenTime?: long
+abilityPrevSeenTime?: number
 ```
 
 应用最后一次在前台可见的时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -73,16 +65,14 @@ abilityPrevSeenTime?: long
 ## abilitySeenTotalTime
 
 ```TypeScript
-abilitySeenTotalTime?: long
+abilitySeenTotalTime?: number
 ```
 
 应用在前台可见的总时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -91,16 +81,14 @@ abilitySeenTotalTime?: long
 ## appIndex
 
 ```TypeScript
-appIndex?: int
+appIndex?: number
 ```
 
 应用程序的索引。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -118,8 +106,6 @@ bundleName?: string
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **系统接口：** 此接口为系统接口。
@@ -127,16 +113,14 @@ bundleName?: string
 ## fgAbilityAccessTotalTime
 
 ```TypeScript
-fgAbilityAccessTotalTime?: long
+fgAbilityAccessTotalTime?: number
 ```
 
 应用在前台可见的总时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -145,16 +129,14 @@ fgAbilityAccessTotalTime?: long
 ## fgAbilityPrevAccessTime
 
 ```TypeScript
-fgAbilityPrevAccessTime?: long
+fgAbilityPrevAccessTime?: number
 ```
 
 应用最后一次访问前台的时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -163,16 +145,14 @@ fgAbilityPrevAccessTime?: long
 ## id
 
 ```TypeScript
-id: int
+id: number
 ```
 
 用户id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -181,16 +161,14 @@ id: int
 ## infosBeginTime
 
 ```TypeScript
-infosBeginTime?: long
+infosBeginTime?: number
 ```
 
 BundleActiveInfo对象中第一条应用使用统计的记录时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -199,16 +177,14 @@ BundleActiveInfo对象中第一条应用使用统计的记录时间，单位：m
 ## infosEndTime
 
 ```TypeScript
-infosEndTime?: long
+infosEndTime?: number
 ```
 
 BundleActiveInfo对象中最后一条应用使用统计的记录时间，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 

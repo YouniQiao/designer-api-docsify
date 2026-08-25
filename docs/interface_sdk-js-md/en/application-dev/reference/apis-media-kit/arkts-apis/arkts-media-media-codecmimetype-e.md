@@ -4,8 +4,6 @@ Enumerates the codec MIME types.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## VIDEO_H263
@@ -18,8 +16,6 @@ Video in H.263 format.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## VIDEO_AVC
@@ -31,8 +27,6 @@ VIDEO_AVC = 'video/avc'
 Video in AVC format.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -48,8 +42,6 @@ Video in MPEG-2 format.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## VIDEO_MPEG4
@@ -61,8 +53,6 @@ VIDEO_MPEG4 = 'video/mp4v-es'
 Video in MPEG-4 format.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -76,8 +66,6 @@ Video in VP8 format.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## AUDIO_AAC
@@ -89,8 +77,6 @@ AUDIO_AAC = 'audio/mp4a-latm'
 Audio in MP4A-LATM format.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,8 +92,6 @@ Audio in Vorbis format.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## AUDIO_FLAC
@@ -120,8 +104,6 @@ Audio in FLAC format.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## VIDEO_HEVC
@@ -133,8 +115,6 @@ VIDEO_HEVC = 'video/hevc'
 Video in H.265 format.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -150,8 +130,6 @@ Audio in MPEG format.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## AUDIO_G711MU
@@ -163,8 +141,6 @@ AUDIO_G711MU = 'audio/g711mu'
 Audio in G.711 μ-law format.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -178,8 +154,6 @@ Audio in AMR-NB format.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## AUDIO_AMR_WB
@@ -192,8 +166,6 @@ Audio in AMR-WB format.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.Core
 
 ## AUDIO_RAW
@@ -205,8 +177,6 @@ AUDIO_RAW = 'audio/raw'
 Audio in raw streams format.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## publish
 
 ```TypeScript
-function publish(request: NotificationRequest, userId: int, callback: AsyncCallback<void>): void
+function publish(request: NotificationRequest, userId: number, callback: AsyncCallback<void>): void
 ```
 
 发布通知给指定的用户。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本18+：ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
@@ -31,7 +29,7 @@ function publish(request: NotificationRequest, userId: int, callback: AsyncCallb
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -61,240 +59,16 @@ function publish(request: NotificationRequest, userId: int, callback: AsyncCallb
 | [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publish回调
-let publishCallback = (err: BusinessError): void => {
-  if (err) {
-    console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in publishing notification.`);
-  }
-}
-// 通知Request对象
-let notificationRequest: notificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: 'test_title',
-      text: 'test_text',
-      additionalText: 'test_additionalText'
-    }
-  }
-};
-notificationManager.publish(notificationRequest, publishCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publish回调
-let publishCallback = (err: BusinessError | null): void => {
-  if (err) {
-    console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`Succeeded in publishing notification.`);
-  }
-}
-// 通知Request对象
-let notificationRequest: notificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: 'test_title',
-      text: 'test_text',
-      additionalText: 'test_additionalText'
-    }
-  }
-};
-notificationManager.publish(notificationRequest, publishCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 通知Request对象
-let notificationRequest: notificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: 'test_title',
-      text: 'test_text',
-      additionalText: 'test_additionalText'
-    }
-  }
-};
-notificationManager.publish(notificationRequest).then(() => {
-  console.info(`Succeeded in publishing notification.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to publish notification. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 通知Request对象
-let notificationRequest: notificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: 'test_title',
-      text: 'test_text',
-      additionalText: 'test_additionalText'
-    }
-  }
-};
-notificationManager.publish(notificationRequest).then(() => {
-  console.info(`Succeeded in publishing notification.`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to publish notification. Code is ${error.code}, message is ${error.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publish回调
-let publishCallback = (err: BusinessError): void => {
-    if (err) {
-        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('publish success');
-    }
-}
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 1;
-// 通知Request对象
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-notificationManager.publish(notificationRequest, userId, publishCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// publish回调
-let publishCallback = (err: BusinessError | null) => {
-    if (err) {
-        console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info('publish success');
-    }
-}
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-// 通知Request对象
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-notificationManager.publish(notificationRequest, userId, publishCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 1;
-
-notificationManager.publish(notificationRequest, userId).then(() => {
-    console.info('publish success');
-}).catch((err: BusinessError) => {
-    console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let notificationRequest: notificationManager.NotificationRequest = {
-    id: 1,
-    content: {
-        notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: {
-            title: 'test_title',
-            text: 'test_text',
-            additionalText: 'test_additionalText'
-        }
-    }
-};
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: int = 1;
-
-notificationManager.publish(notificationRequest, userId).then(() => {
-    console.info('publish success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`publish failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## publish
 
 ```TypeScript
-function publish(request: NotificationRequest, userId: int): Promise<void>
+function publish(request: NotificationRequest, userId: number): Promise<void>
 ```
 
 发布通知给指定的用户。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本18+：ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
@@ -309,7 +83,7 @@ function publish(request: NotificationRequest, userId: int): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -343,7 +117,3 @@ function publish(request: NotificationRequest, userId: int): Promise<void>
 | [1600027](../errorcode-notification.md#1600027-位置系统服务的感知与提醒开关关闭) |
 | [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) |
-
-**示例**
-
-参见 [publish](#publish)

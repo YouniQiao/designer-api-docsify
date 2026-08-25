@@ -15,8 +15,6 @@ Removes a file. This API returns the result synchronously.
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [unlinkSync](arkts-corefile-file-fs-unlinksync-f.md)
@@ -28,10 +26,3 @@ Removes a file. This API returns the result synchronously.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-
-**Examples**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-fileio.unlinkSync(filePath);
-```

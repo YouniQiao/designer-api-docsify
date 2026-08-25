@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
+import { nfcController } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getNfcState
@@ -16,8 +16,6 @@ function getNfcState(): NfcState
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NFC.Core
@@ -27,13 +25,3 @@ function getNfcState(): NfcState
 | 类型 |
 | --- |
 | [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md) |
-
-**示例**
-
-```TypeScript
-import { nfcController } from '@kit.ConnectivityKit';
-
-// 查询nfc状态
-let nfcState: nfcController.NfcState = nfcController.getNfcState();
-console.info("nfcController on callback nfcstate: " + nfcState);
-```

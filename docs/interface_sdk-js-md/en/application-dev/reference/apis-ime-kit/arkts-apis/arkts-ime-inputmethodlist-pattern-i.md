@@ -2,14 +2,12 @@
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from 'kits/@kit.IMEKit';
 ```
 
 ## icon
@@ -24,8 +22,6 @@ Mandatory. Default icon.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## selectedIcon
@@ -39,7 +35,5 @@ Mandatory. Icon for the selected option.
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

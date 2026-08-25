@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## setLocationPrivacyConfirmStatus
@@ -15,8 +15,6 @@ function setLocationPrivacyConfirmStatus(type: LocationPrivacyType, isConfirmed:
 Set location privacy protocol confirmation status.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS
 
@@ -40,15 +38,3 @@ Set location privacy protocol confirmation status.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-try {
-  geoLocationManager.setLocationPrivacyConfirmStatus(1, true);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

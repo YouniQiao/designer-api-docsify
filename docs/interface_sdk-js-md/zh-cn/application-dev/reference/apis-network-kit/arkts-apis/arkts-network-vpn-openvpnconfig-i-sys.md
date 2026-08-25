@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## askpass
@@ -27,8 +25,6 @@ askpass?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -46,8 +42,6 @@ The auth type for the openvpn VPN network.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -61,8 +55,6 @@ ovpnCaCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -78,8 +70,6 @@ ovpnConfig?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -93,8 +83,6 @@ ovpnConfigFilePath?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -110,8 +98,6 @@ ovpnPort?: string
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -125,8 +111,6 @@ ovpnPrivateKeyFilePath?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
@@ -144,8 +128,6 @@ The protocol for the openvpn VPN network.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 
 **系统接口：** 此接口为系统接口。
@@ -159,8 +141,6 @@ ovpnUserCertFilePath?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
 

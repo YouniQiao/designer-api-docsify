@@ -4,14 +4,12 @@ Information about contact synchronization for the calling application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.Applications.ContactsData
 
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'kits/@kit.ContactsKit';
 ```
 
 ## completedBatches
@@ -22,11 +20,9 @@ completedBatches: Array<number>
 
 Indicates the array of batch identifiers for contacts that have been synchronized successfully.The range of values is from 1 to totalBatches.
 
-**Type:** Array&lt;int&gt;
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +38,9 @@ lastSyncTime: number
 
 Indicates the latest timestamp the contacts were synchronized in milliseconds.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,8 +60,6 @@ The contact synchronization mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -82,11 +74,9 @@ syncId: number
 
 Indicates the sync identifier used for synchronizing all contacts.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,11 +92,9 @@ totalBatches: number
 
 Indicates the total number of batches of contacts to be synchronized.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

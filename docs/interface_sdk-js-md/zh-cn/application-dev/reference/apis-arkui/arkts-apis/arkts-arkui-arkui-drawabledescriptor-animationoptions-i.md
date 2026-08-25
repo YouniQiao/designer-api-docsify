@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
 ```
 
 ## autoPlay
@@ -27,8 +25,6 @@ autoPlay?: boolean
 **默认值：** true
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ duration?: number
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -68,8 +62,6 @@ frameDurations?: Array<number>
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -87,8 +79,6 @@ iterations?: number
 **类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,63 +100,8 @@ stopMode?: AnimationStopMode
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**示例**
-
-```TypeScript
-import { AnimationOptions, AnimatedDrawableDescriptor, DrawableDescriptor } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-
-@Entry
-@Component
-struct Example {
-  pixelMaps: Array<image.PixelMap> = [];
-  // 设置了4张图，同时设置4张图的duration。
-  options: AnimationOptions = {
-    duration: 2000,
-    iterations: 1,
-    frameDurations: [20, 30, 40, 50],
-    autoPlay: true
-  };
-  @State animated?: DrawableDescriptor = undefined;
-
-  aboutToAppear() {
-    // $r('app.media.png1')需要替换为开发者所需的图像资源文件。
-    this.pixelMaps.push(this.getPixmapFromMedia($r('app.media.png1')));
-     // $r('app.media.png2')需要替换为开发者所需的图像资源文件。
-    this.pixelMaps.push(this.getPixmapFromMedia($r('app.media.png2')));
-     // $r('app.media.png3')需要替换为开发者所需的图像资源文件。
-    this.pixelMaps.push(this.getPixmapFromMedia($r('app.media.png3')));
-     // $r('app.media.png4')需要替换为开发者所需的图像资源文件。
-    this.pixelMaps.push(this.getPixmapFromMedia($r('app.media.png4')));
-    this.animated = new AnimatedDrawableDescriptor(this.pixelMaps, this.options);
-  }
-
-  build() {
-    Column() {
-      Row() {
-        Image(this.animated)
-          .width(100)
-          .height(100)
-      }
-    }
-  }
-
-  private getPixmapFromMedia(resource: Resource) {
-    let unit8Array = this.getUIContext().getHostContext()?.resourceManager?.getMediaContentSync(resource.id);
-    let imageSource = image.createImageSource(unit8Array?.buffer.slice(0, unit8Array.buffer.byteLength));
-    let pixelMap: image.PixelMap = imageSource.createPixelMapSync({
-      desiredPixelFormat: image.PixelMapFormat.RGBA_8888
-    });
-    imageSource.release();
-    return pixelMap;
-  }
-}
-```

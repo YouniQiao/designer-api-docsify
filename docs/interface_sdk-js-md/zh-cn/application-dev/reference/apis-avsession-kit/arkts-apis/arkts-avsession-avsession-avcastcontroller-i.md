@@ -1,20 +1,18 @@
 # AVCastController
 
-在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。
+在投播建立后，调用[avSession.AVSession.getAVCastController](arkts-avsession-avsession-avsession-i.md#getavcastcontroller)后， 返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。
 
 > **说明：**&gt;
 > - 本Interface首批接口从API version 10开始支持。
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## getAVPlaybackState
@@ -26,8 +24,6 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 获取当前的远端播放状态。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -43,42 +39,6 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avCastController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
-```TypeScript
-avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlaybackState) => {
-  if (err) {
-    console.error(`Failed to get AV playback state, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
-```TypeScript
-avcontroller.getAVPlaybackState().then((state: avSession.AVPlaybackState) => {
-  console.info('Succeeded in getting AV playback state.');
-});
-```
-
 ## getAVPlaybackState
 
 ```TypeScript
@@ -88,8 +48,6 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 获取当前的远端播放状态。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -107,10 +65,6 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-参见 [getAVPlaybackState](#getavplaybackstate)
-
 ## getCurrentItem
 
 ```TypeScript
@@ -120,8 +74,6 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 获取当前投播的资源信息。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -137,26 +89,6 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avCastController.getCurrentItem((err: BusinessError, value: avSession.AVQueueItem) => {
-  if (err) {
-    console.error(`Failed to get current item, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting current item.');
-});
-```
-
-```TypeScript
-avCastController.getCurrentItem().then((value: avSession.AVQueueItem) => {
-  console.info('Succeeded in getting current item.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get current item, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getCurrentItem
 
 ```TypeScript
@@ -166,8 +98,6 @@ getCurrentItem(): Promise<AVQueueItem>
 获取当前投播的资源信息。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -185,10 +115,6 @@ getCurrentItem(): Promise<AVQueueItem>
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-参见 [getCurrentItem](#getcurrentitem)
-
 ## getRecommendedResolutionLevel
 
 ```TypeScript
@@ -198,8 +124,6 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 通过传递解码方式，获取推荐的分辨率。使用Promise异步回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -223,17 +147,6 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-let decoderType = avSession.DecoderType.OH_AVCODEC_MIMETYPE_VIDEO_AVC;
-avCastController.getRecommendedResolutionLevel(decoderType).then((resolutionLevel: avSession.ResolutionLevel) => {
-  console.info('Succeeded in getting recommended resolution level.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get recommended resolution level, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getSupportedDecoders
 
 ```TypeScript
@@ -243,8 +156,6 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 获取当前远端设备的解码方式。使用Promise异步回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -262,19 +173,6 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avCastController.getSupportedDecoders().then((decoderTypes: avSession.DecoderType[]) => {
-  console.info(`Succeeded in getting supported decoders, length: ${decoderTypes.length}`);
-  if (decoderTypes.length > 0 ) {
-    console.info(`Succeeded in getting supported decoder: ${decoderTypes[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get supported decoders, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getSupportedHdrCapabilities
 
 ```TypeScript
@@ -284,8 +182,6 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 获取当前的远端设备所支持的HDR能力。使用Promise异步回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -303,38 +199,15 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-import { type hdrCapability } from '@kit.ArkGraphics2D';
-
-avCastController.getSupportedHdrCapabilities().then((hdrFormats: hdrCapability.HDRFormat[]) => {
-  console.info(`Succeeded in getting supported HDR capabilities, length: ${hdrFormats.length}`);
-  if (hdrFormats.length > 0 ) {
-    console.info(`Succeeded in getting supported HDR capability: ${hdrFormats[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get supported HDR capabilities, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## getSupportedPlaySpeeds
 
-ArkTS-Dyn:
 ```TypeScript
 getSupportedPlaySpeeds(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
-```TypeScript
-getSupportedPlaySpeeds(): Promise<Array<double>>
 ```
 
 获取当前的远端设备所支持倍速播放列表，仅支持使用cast+协议连接的设备。使用Promise异步回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -344,32 +217,13 @@ getSupportedPlaySpeeds(): Promise<Array<double>>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;Array & lt;number & gt; & gt;<br>ArkTS-Sta：Promise & lt;Array & lt;double & gt; & gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
-  console.info(`Succeeded in getting supported play speeds, length: ${nums.length}`);
-  if (nums.length > 0 ) {
-    console.info(`Succeeded in getting supported play speed: ${nums[0]}`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get supported play speeds, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-avcontroller.getSupportedPlaySpeeds().then((speeds: double[]) => {
-  console.info(`Succeeded in getting supported play speeds, size: ${speeds.length}`);
-});
-```
 
 ## getValidCommands
 
@@ -380,8 +234,6 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 获取当前支持的命令。结果通过callback异步回调方式返回。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -397,42 +249,6 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avCastController.getValidCommands((err: BusinessError, state: avSession.AVCastControlCommandType[]) => {
-  if (err) {
-    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in getting valid commands.');
-});
-```
-
-```TypeScript
-avCastController.getValidCommands().then((state: avSession.AVCastControlCommandType[]) => {
-  console.info('Succeeded in getting valid commands.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-avcontroller.getValidCommands().then((validCommands: avSession.AVControlCommandType[]) => {
-  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
-});
-```
-
-```TypeScript
-avcontroller.getValidCommands((err: BusinessError, validCommands: avSession.AVControlCommandType[]) => {
-  if (err) {
-    console.error(`Failed to get valid commands, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting valid commands, size: ${validCommands.length}`);
-});
-```
-
 ## getValidCommands
 
 ```TypeScript
@@ -442,8 +258,6 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 获取当前支持的命令。结果通过Promise异步回调方式返回。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -459,10 +273,6 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-参见 [getValidCommands](#getvalidcommands)
-
 ## off('playbackStateChange')
 
 ```TypeScript
@@ -472,8 +282,6 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 取消播放状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -503,8 +311,6 @@ off(type: 'mediaItemChange'): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -531,8 +337,6 @@ off(type: 'playNext'): void
 取消设置播放下一首资源事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -561,8 +365,6 @@ off(type: 'playPrevious'): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -590,8 +392,6 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -618,8 +418,6 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -645,8 +443,6 @@ off(type: 'seekDone'): void
 取消设置seek结束事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -675,8 +471,6 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -704,8 +498,6 @@ off(type: 'videoSizeChange'): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -721,12 +513,6 @@ off(type: 'videoSizeChange'): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-aVCastController.off('videoSizeChange');
-```
-
 ## off('error')
 
 ```TypeScript
@@ -736,8 +522,6 @@ off(type: 'error'): void
 取消播放的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -772,8 +556,6 @@ off(type: 'castControlGenericError', callback?: ErrorCallback): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -800,8 +582,6 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 取消投播输入/输出的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -830,8 +610,6 @@ off(type: 'castControlParsingError', callback?: ErrorCallback): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -858,8 +636,6 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 取消投播解码的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -888,8 +664,6 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -917,8 +691,6 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -945,8 +717,6 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 取消许可证请求事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -976,8 +746,6 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -995,541 +763,6 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## offCastControlAudioRendererError
-
-```TypeScript
-offCastControlAudioRendererError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control audio renderer error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-avCastController.offCastControlAudioRendererError();
-```
-
-## offCastControlDecodingError
-
-```TypeScript
-offCastControlDecodingError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control decoding error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-avCastController.offCastControlDecodingError();
-```
-
-## offCastControlDrmError
-
-```TypeScript
-offCastControlDrmError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control drm error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-avCastController.offCastControlDrmError();
-```
-
-## offCastControlGenericError
-
-```TypeScript
-offCastControlGenericError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control generic error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-avCastController.offCastControlGenericError();
-```
-
-## offCastControlIoError
-
-```TypeScript
-offCastControlIoError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control input/output error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-avCastController.offCastControlIoError();
-```
-
-## offCastControlParsingError
-
-```TypeScript
-offCastControlParsingError(callback?: ErrorCallback): void
-```
-
-Unregister listeners for cast control parsing error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**示例**
-
-```TypeScript
-avCastController.offCastControlParsingError();
-```
-
-## offCustomDataChange
-
-```TypeScript
-offCustomDataChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unregister listener for custom data sent from remote device.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offCustomDataChange(callback);
-```
-
-```TypeScript
-currentAVSession.offCustomDataChange();
-```
-
-```TypeScript
-avcontroller.offCustomDataChange();
-```
-
-## offEndOfStream
-
-```TypeScript
-offEndOfStream(callback?: NoParamCallback): void
-```
-
-Unregister endOfStream state callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offEndOfStream();
-```
-
-## offError
-
-```TypeScript
-offError(): void
-```
-
-Unregister listens for playback error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offError()
-```
-
-## offKeyRequest
-
-```TypeScript
-offKeyRequest(callback?: KeyRequestCallback): void
-```
-
-Unregister listener for drm key request.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offKeyRequest();
-```
-
-## offMediaItemChange
-
-```TypeScript
-offMediaItemChange(): void
-```
-
-Unregister listener for current media item playback events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offMediaItemChange();
-```
-
-## offPlaybackStateChange
-
-```TypeScript
-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
-```
-
-Unregister playback state changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offPlaybackStateChange();
-```
-
-```TypeScript
-avcontroller.offPlaybackStateChange();
-```
-
-## offPlayNext
-
-```TypeScript
-offPlayNext(): void
-```
-
-Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offPlayNext();
-```
-
-```TypeScript
-currentAVSession.offPlayNext();
-```
-
-## offPlayPrevious
-
-```TypeScript
-offPlayPrevious(): void
-```
-
-Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offPlayPrevious();
-```
-
-```TypeScript
-currentAVSession.offPlayPrevious();
-```
-
-## offRequestPlay
-
-```TypeScript
-offRequestPlay(callback?: Callback<AVQueueItem>): void
-```
-
-Unregister requested playback command callback sent by remote side or media center.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offRequestPlay();
-```
-
-## offSeekDone
-
-```TypeScript
-offSeekDone(): void
-```
-
-Unregister listens for playback events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offSeekDone();
-```
-
-## offValidCommandChange
-
-```TypeScript
-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void
-```
-
-Unregister the valid commands of the casted session changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-
-**示例**
-
-```TypeScript
-avCastController.offValidCommandChange();
-```
-
-```TypeScript
-avcontroller.offValidCommandChange();
-```
-
-## offVideoSizeChange
-
-```TypeScript
-offVideoSizeChange(): void
-```
-
-Unregister listener for video size change event, used at remote side.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.offVideoSizeChange();
-```
-
 ## on('playbackStateChange')
 
 ```TypeScript
@@ -1539,8 +772,6 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 设置播放状态变化的监听事件。使用callback异步回调。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1571,8 +802,6 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -1600,8 +829,6 @@ on(type: 'playNext', callback: Callback<void>): void
 设置播放下一首资源的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1631,8 +858,6 @@ on(type: 'playPrevious', callback: Callback<void>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -1661,8 +886,6 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1689,8 +912,6 @@ on(type: 'endOfStream', callback: Callback<void>): void
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1710,14 +931,12 @@ on(type: 'endOfStream', callback: Callback<void>): void
 ## on('seekDone')
 
 ```TypeScript
-on(type: 'seekDone', callback: Callback<int>): void
+on(type: 'seekDone', callback: Callback<number>): void
 ```
 
 设置seek结束的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1747,8 +966,6 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
@@ -1769,14 +986,12 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 ## on('videoSizeChange')
 
 ```TypeScript
-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void
+on(type: 'videoSizeChange', callback: (width: number, height: number) => void): void
 ```
 
 媒体控制器监听视频尺寸变化变化的事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1794,16 +1009,6 @@ on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-// 需先通过avSession.getAVCastController获取avCastController实例。
-aVCastController.on('videoSizeChange', (width: number, height: number) => {
-  console.info(`width ：${width} `);
-  console.info(`height：${height} `);
-});
-```
-
 ## on('error')
 
 ```TypeScript
@@ -1813,8 +1018,6 @@ on(type: 'error', callback: ErrorCallback): void
 监听远端播放器的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1849,8 +1052,6 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 监听投播通用错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -1892,8 +1093,6 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 监听投播输入/输出的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -1939,8 +1138,6 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -1972,8 +1169,6 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 监听投播解码的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -2008,8 +1203,6 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 
 **起始版本：** 13
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
-
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -2039,8 +1232,6 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 监听投播drm的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为13。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -2079,8 +1270,6 @@ on(type: 'keyRequest', callback: KeyRequestCallback): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -2109,8 +1298,6 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -2128,763 +1315,6 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## onCastControlAudioRendererError
-
-```TypeScript
-onCastControlAudioRendererError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control audio renderer error error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6615000](../errorcode-avsession.md#6615000-音频渲染器相关的未知错误) |
-| [6615001](../errorcode-avsession.md#6615001-音频渲染器初始化异常) |
-| [6615002](../errorcode-avsession.md#6615002-音频渲染器写数据异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onCastControlAudioRendererError((error: BusinessError) => {
-  console.info(`castControlAudioRendererError happened, error code: ${error.code}, error message : ${error.message}.`);
-});
-```
-
-## onCastControlDecodingError
-
-```TypeScript
-onCastControlDecodingError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control decoding error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6614000](../errorcode-avsession.md#6614000-未知的解码错误) |
-| [6614001](../errorcode-avsession.md#6614001-解码器初始化失败) |
-| [6614002](../errorcode-avsession.md#6614002-解码器查询失败) |
-| [6614003](../errorcode-avsession.md#6614003-解码媒体样本时失败) |
-| [6614004](../errorcode-avsession.md#6614004-所需解码的内容格式超出设备能力) |
-| [6614005](../errorcode-avsession.md#6614005-解码不支持的内容格式) |
-
-**示例**
-
-```TypeScript
-avCastController.onCastControlDecodingError((error: BusinessError) => {
-  console.info(`castControlDecodingError happened, error code: ${error.code}, error message : ${error.message}.`)
-})
-```
-
-## onCastControlDrmError
-
-```TypeScript
-onCastControlDrmError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control drm error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6616000](../errorcode-avsession.md#6616000-drm相关的未知错误) |
-| [6616001](../errorcode-avsession.md#6616001-设备不支持所选的drm保护方案) |
-| [6616002](../errorcode-avsession.md#6616002-调配设备时出现故障) |
-| [6616003](../errorcode-avsession.md#6616003-尝试播放不兼容的drm保护内容) |
-| [6616004](../errorcode-avsession.md#6616004-许可证获取失败) |
-| [6616005](../errorcode-avsession.md#6616005-许可证策略不允许的操作) |
-| [6616006](../errorcode-avsession.md#6616006-drm系统错误) |
-| [6616007](../errorcode-avsession.md#6616007-设备已吊销drm权限) |
-| [6616008](../errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) |
-| [6616100](../errorcode-avsession.md#6616100-drm进程密钥响应错误) |
-
-**示例**
-
-```TypeScript
-avCastController.onCastControlDrmError((error: BusinessError) => {
-  console.info(`castControlDrmError happened, error code: ${error.code}, error message : ${error.message}.`);
-});
-```
-
-## onCastControlGenericError
-
-```TypeScript
-onCastControlGenericError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control generic error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6611000](../errorcode-avsession.md#6611000-投播控制器出现未知错误) |
-| [6611001](../errorcode-avsession.md#6611001-远端设备出现未知错误) |
-| [6611002](../errorcode-avsession.md#6611002-加载位置超过投播视频的总进度) |
-| [6611003](../errorcode-avsession.md#6611003-投播控制器加载超时) |
-| [6611004](../errorcode-avsession.md#6611004-运行时检查失败) |
-| [6611100](../errorcode-avsession.md#6611100-跨设备数据传输被锁定) |
-| [6611101](../errorcode-avsession.md#6611101-不支持当前进度条模式) |
-| [6611102](../errorcode-avsession.md#6611102-非法seek目标) |
-| [6611103](../errorcode-avsession.md#6611103-不支持当前播放模式) |
-| [6611104](../errorcode-avsession.md#6611104-不支持当前播放速度) |
-| [6611105](../errorcode-avsession.md#6611105-设备吊销) |
-| [6611106](../errorcode-avsession.md#6611106-传入非法参数) |
-| [6611107](../errorcode-avsession.md#6611107-内存分配失败) |
-| [6611108](../errorcode-avsession.md#6611108-不允许进行当前操作) |
-
-**示例**
-
-```TypeScript
-avCastController.onCastControlGenericError((error: BusinessError) => {
-  console.info(`castControlGenericError happened, error code: ${error.code}, error message : ${error.message}.`);
-});
-```
-
-## onCastControlIoError
-
-```TypeScript
-onCastControlIoError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control input/output error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6612000](../errorcode-avsession.md#6612000-未知的输入输出错误) |
-| [6612001](../errorcode-avsession.md#6612001-网络连接失败) |
-| [6612002](../errorcode-avsession.md#6612002-网络超时) |
-| [6612003](../errorcode-avsession.md#6612003-无效content-typehttp头) |
-| [6612004](../errorcode-avsession.md#6612004-http服务器返回异常的http响应状态码) |
-| [6612005](../errorcode-avsession.md#6612005-文件不存在) |
-| [6612006](../errorcode-avsession.md#6612006-缺少执行io操作的权限) |
-| [6612007](../errorcode-avsession.md#6612007-网络安全配置不允许此操作) |
-| [6612008](../errorcode-avsession.md#6612008-读取数据超出数据范围) |
-| [6612100](../errorcode-avsession.md#6612100-缺少可播放的媒体资源) |
-| [6612101](../errorcode-avsession.md#6612101-媒体资源无法被读取) |
-| [6612102](../errorcode-avsession.md#6612102-资源正在使用) |
-| [6612103](../errorcode-avsession.md#6612103-内容使用有效期已过) |
-| [6612104](../errorcode-avsession.md#6612104-不允许使用请求的内容) |
-| [6612105](../errorcode-avsession.md#6612105-无法验证允许使用的内容) |
-| [6612106](../errorcode-avsession.md#6612106-资源使用频繁) |
-| [6612107](../errorcode-avsession.md#6612107-本端向远端发送资源包失败) |
-
-**示例**
-
-```TypeScript
-avCastController.onCastControlIoError((error: BusinessError) => {
-  console.info(`castControlIoError happened, error code: ${error.code}, error message : ${error.message}.`)
-})
-```
-
-## onCastControlParsingError
-
-```TypeScript
-onCastControlParsingError(callback: ErrorCallback): void
-```
-
-Register listeners for cast control parsing error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6613000](../errorcode-avsession.md#6613000-未知解析错误) |
-| [6613001](../errorcode-avsession.md#6613001-非法类型) |
-| [6613002](../errorcode-avsession.md#6613002-相关媒体清单的解析错误) |
-| [6613003](../errorcode-avsession.md#6613003-不支持该媒体格式) |
-| [6613004](../errorcode-avsession.md#6613004-媒体清单中不支持此功能) |
-
-**示例**
-
-```TypeScript
-avCastController.onCastControlParsingError((error: BusinessError) => {
-  console.error(`castControlParsingError happened, error code: ${error.code}, error message : ${error.message}.`)
-})
-```
-
-## onCustomDataChange
-
-```TypeScript
-onCustomDataChange(callback: Callback<Record<string, Object>>): void
-```
-
-Register listener for custom data sent from remote device.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onCustomDataChange((data: Record<string, Object>) => {
-  console.info(`onCustomDataChange, data, code: ${err.code}, message, code: ${err.code}, message: ${JSON.stringify(data)}`);
-});
-```
-
-```TypeScript
-currentAVSession.onCustomDataChange((callback) =>
-{
-  console.info(`Caught customDataChange event,the new callback is: ${JSON.stringify(callback)}`);
-});
-```
-
-```TypeScript
-avcontroller.onCustomDataChange((data: Record<string, Object>) => {
-  console.info(`on_customDataChange Successfully ${data}`);
-});
-```
-
-## onEndOfStream
-
-```TypeScript
-onEndOfStream(callback: NoParamCallback): void
-```
-
-Register endOfStream state callback. Application needs update the new media resource when receive these commands by using playItem.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onEndOfStream(() => {
-  console.info('onEndOfStream');
-});
-```
-
-## onError
-
-```TypeScript
-onError(callback: ErrorCallback): void
-```
-
-Register listeners for playback error events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onError((error: BusinessError) => {
-  console.info(`error happened, error code: ${error.code}, error message : ${error.message}.`)
-})
-```
-
-## onKeyRequest
-
-```TypeScript
-onKeyRequest(callback: KeyRequestCallback): void
-```
-
-Register listener for drm key request.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-let keyRequestCallback: avSession.KeyRequestCallback = (assetId: string, requestData: Uint8Array) => {
-  console.info(`Succeeded in keyRequestCallback. assetId: ${assetId}, requestData: ${requestData}`);
-}
-avCastController.onKeyRequest(keyRequestCallback);
-```
-
-## onMediaItemChange
-
-```TypeScript
-onMediaItemChange(callback: Callback<AVQueueItem>): void
-```
-
-Register listener for current media item playback events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onMediaItemChange((item: avSession.AVQueueItem) => {
-  console.info(`onMediaItemChange state : ${item.itemId}`);
-});
-```
-
-## onPlaybackStateChange
-
-```TypeScript
-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
-```
-
-Register playback state changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| filter | Array & lt;string & gt; | 是 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-let playbackFilter: Array<string> = ['state', 'speed', 'loopMode'];
-avCastController.onPlaybackStateChange(playbackFilter, (playbackState: avSession.AVPlaybackState) => {
-  console.info(`onPlaybackStateChange state : ${playbackState.state}`);
-});
-```
-
-```TypeScript
-avsessionController.onPlaybackStateChange(['state', 'speed', 'loopMode'], (playbackState: avSession.AVPlaybackState) => {
-  console.info(`onPlaybackStateChange state : ${playbackState.state}`);
-});
-```
-
-## onPlaybackStateChangeAll
-
-```TypeScript
-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
-```
-
-Register playback state changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onPlaybackStateChangeAll((playbackState: avSession.AVPlaybackState) => {
-  console.info(`onPlaybackStateChangeAll state : ${playbackState.state}`);
-});
-```
-
-```TypeScript
-avsessionController.onPlaybackStateChangeAll((playbackState: avSession.AVPlaybackState) => {
-  console.info(`onPlaybackStateChangeAll state : ${playbackState.state}`);
-});
-```
-
-## onPlayNext
-
-```TypeScript
-onPlayNext(callback: NoParamCallback): void
-```
-
-Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onPlayNext(() => {
-  console.info('onPlayNext');
-});
-```
-
-```TypeScript
-currentAVSession.onPlayNext((info: avSession.CommandInfo) => {
-  console.info('on playNext entry');
-});
-```
-
-## onPlayPrevious
-
-```TypeScript
-onPlayPrevious(callback: NoParamCallback): void
-```
-
-Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onPlayPrevious(() => {
-  console.info('onPlayPrevious');
-});
-```
-
-```TypeScript
-currentAVSession.onPlayPrevious((info: avSession.CommandInfo) => {
-  console.info('on playPrevious entry');
-});
-```
-
-## onRequestPlay
-
-```TypeScript
-onRequestPlay(callback: Callback<AVQueueItem>): void
-```
-
-Register requested playback command callback sent by remote side or media center. The AVQueueItem may include the requested assetId, starting position and other configurations.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onRequestPlay((item: avSession.AVQueueItem) => {
-  console.info(`onRequestPlay state : ${item.itemId}`);
-});
-```
-
-## onSeekDone
-
-```TypeScript
-onSeekDone(callback: Callback<int>): void
-```
-
-Register listens for playback events.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onSeekDone((pos: int) => {
-  console.info(`onSeekDone pos：${pos} `);
-});
-```
-
-## onValidCommandChange
-
-```TypeScript
-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void
-```
-
-Register the valid commands of the casted session changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-
-**示例**
-
-```TypeScript
-avCastController.onValidCommandChange((validCommands: avSession.AVCastControlCommandType[]) => {
-  console.info(`Succeeded in valid command change, size: ${validCommands.length}`);
-  console.info(`Succeeded in valid command change, validCommands: ${validCommands.values()}`);
-});
-```
-
-```TypeScript
-avcontroller.onValidCommandChange((validCommands: avSession.AVControlCommandType[]) => {
-  console.info(`validCommandChange : SUCCESS : size : ${validCommands.length}`);
-  console.info(`validCommandChange : SUCCESS : validCommands : ${validCommands.values()}`);
-});
-```
-
-## onVideoSizeChange
-
-```TypeScript
-onVideoSizeChange(callback: VideoSizeEvent): void
-```
-
-Register listener for video size change event, used at remote side.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [VideoSizeEvent](arkts-avsession-avsession-videosizeevent-t.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.onVideoSizeChange((width: int, height: int) => {
-  console.info(`videoSizeChange : SUCCESS : size : ${width}, ${height}`);
-});
-```
-
-```TypeScript
-aVCastController.onVideoSizeChange((width: int, height: int) => {
-  console.info(`width ：${width} `);
-  console.info(`height：${height} `);
-});
-```
-
 ## prepare
 
 ```TypeScript
@@ -2894,8 +1324,6 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 准备播放媒体资源，即进行播放资源的加载和缓冲。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2914,62 +1342,6 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
-**示例**
-
-```TypeScript
-// 设置播放参数，开始播放。
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: 'http://resource1_album_address',
-    lyricUri: 'http://resource1_lyric_address',
-    appName: 'MyMusic'
-  }
-};
-// 准备播放，这个不会触发真正的播放，会进行加载和缓冲。
-avCastController.prepare(playItem, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to prepare, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in preparing.');
-});
-```
-
-```TypeScript
-// 设置播放参数，开始播放。
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: 'http://resource1_album_address',
-    lyricUri: 'http://resource1_lyric_address',
-    appName: 'MyMusic'
-  }
-};
-// 准备播放，这个不会触发真正的播放，会进行加载和缓冲。
-avCastController.prepare(playItem).then(() => {
-  console.info('Succeeded in preparing.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to prepare, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## prepare
 
 ```TypeScript
@@ -2979,8 +1351,6 @@ prepare(item: AVQueueItem): Promise<void>
 准备播放媒体资源，即进行播放资源的加载和缓冲。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3006,10 +1376,6 @@ prepare(item: AVQueueItem): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
-**示例**
-
-参见 [prepare](#prepare)
-
 ## processMediaKeyResponse
 
 ```TypeScript
@@ -3019,8 +1385,6 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 在线DRM资源投播时，处理许可证响应。结果通过Promise异步回调方式返回。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3046,23 +1410,6 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, requestData: Uint8Array) => {
-  // 根据assetId获取对应的DRM url。
-  let drmUrl = 'http://license.xxx.xxx.com:8080/drmproxy/getLicense';
-  // 从服务器获取许可证，需要开发者根据实际情况进行赋值。
-  let licenseResponseData: Uint8Array = new Uint8Array();
-  console.info(`Succeeded in get license by ${drmUrl}.`);
-  avCastController.processMediaKeyResponse(assetId, licenseResponseData).then(() => {
-    console.info('Succeeded in processing media key response.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to process media key response, code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
-
 ## release
 
 ```TypeScript
@@ -3072,8 +1419,6 @@ release(callback: AsyncCallback<void>): void
 销毁当前controller，结果通过callback异步回调方式返回。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -3088,26 +1433,6 @@ release(callback: AsyncCallback<void>): void
 | 错误码ID |
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-
-**示例**
-
-```TypeScript
-avCastController.release((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to release, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in releasing.');
-});
-```
-
-```TypeScript
-avCastController.release().then(() => {
-  console.info('Succeeded in releasing.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to release, code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## release
 
@@ -3119,8 +1444,6 @@ release(): Promise<void>
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -3137,10 +1460,6 @@ release(): Promise<void>
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-参见 [release](#release)
-
 ## sendControlCommand
 
 ```TypeScript
@@ -3150,8 +1469,6 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -3171,46 +1488,6 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
-**示例**
-
-```TypeScript
-let avCommand: avSession.AVCastControlCommand = {command: 'play'};
-avCastController.sendControlCommand(avCommand).then(() => {
-  console.info('Succeeded in sending control command.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-let avCommand: avSession.AVCastControlCommand = {command: 'play'};
-avCastController.sendControlCommand(avCommand, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in sending control command.');
-});
-```
-
-```TypeScript
-let avCommand: avSession.AVControlCommand = {command:'play'};
-avcontroller.sendControlCommand(avCommand).then(() => {
-  console.info('Succeeded in sending control command.');
-});
-```
-
-```TypeScript
-let avCommand: avSession.AVControlCommand = {command:'play'};
-avcontroller.sendControlCommand(avCommand, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to send control command, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in sending control command.');
-});
-```
-
 ## sendControlCommand
 
 ```TypeScript
@@ -3220,8 +1497,6 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3248,10 +1523,6 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
-**示例**
-
-参见 [sendControlCommand](#sendcontrolcommand)
-
 ## sendCustomData
 
 ```TypeScript
@@ -3261,8 +1532,6 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 发送私有数据到远端设备。使用Promise异步回调。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -3286,58 +1555,6 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 | --- |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-**示例**
-
-```TypeScript
-avCastController.sendCustomData({customData: 'This is custom data'}).then(() => {
-  console.info('Succeeded in sending custom data.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to send custom data, code: ${err.code}, message: ${err.message}`);
-});
-```
-
-```TypeScript
-await currentAVSession.sendCustomData({customData : "This is custom data"}).then(() => {
-  console.info('Succeeded in sending custom data.');
-});
-```
-
-```TypeScript
-// Index.ets
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  private tag: string = "createNewSession";
-  private sessionId: string = "";
-  private controller: avSession.AVSessionController | undefined = undefined;
-  private currentAVSession?: avSession.AVSession;
-
-  aboutToAppear(): void {
-    avSession.createAVSession(this.getUIContext().getHostContext(), this.tag, "audio")
-      .then(async (data: avSession.AVSession) => {
-        this.currentAVSession = data;
-        this.sessionId = this.currentAVSession.sessionId;
-        this.controller = await this.currentAVSession.getController();
-        console.info(`Succeeded in creating AV session, sessionId: ${this.sessionId}`);
-        (this.controller as avSession.AVSessionController).sendCustomData({ customData: "This is my data" });
-      });
-  }
-
-  build() {
-    Column() {
-      Text('AVSession Demo')
-        .fontSize(20)
-        .margin(10)
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
 ## start
 
 ```TypeScript
@@ -3352,8 +1569,6 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 > assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -3372,62 +1587,6 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
-**示例**
-
-```TypeScript
-// 设置播放参数，开始播放。
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: 'http://resource1_album_address',
-    lyricUri: 'http://resource1_lyric_address',
-    appName: 'MyMusic'
-  }
-};
-// 启动播放。
-avCastController.start(playItem, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to start, code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in starting.');
-});
-```
-
-```TypeScript
-// 设置播放参数，开始播放。
-let playItem: avSession.AVQueueItem = {
-  itemId: 0,
-  description: {
-    assetId: '12345',
-    mediaType: 'AUDIO',
-    mediaUri: 'http://resource1_address',
-    mediaSize: 12345,
-    startPosition: 0,
-    duration: 0,
-    artist: 'mysong',
-    albumTitle: 'song1_title',
-    albumCoverUri: 'http://resource1_album_address',
-    lyricUri: 'http://resource1_lyric_address',
-    appName: 'MyMusic'
-  }
-};
-// 启动播放。
-avCastController.start(playItem).then(() => {
-  console.info('Succeeded in starting.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to start, code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## start
 
 ```TypeScript
@@ -3442,8 +1601,6 @@ start(item: AVQueueItem): Promise<void>
 > assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3469,10 +1626,6 @@ start(item: AVQueueItem): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 | [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
-**示例**
-
-参见 [start](#start)
-
 ## update
 
 ```TypeScript
@@ -3482,8 +1635,6 @@ update(item: AVQueueItem): Promise<void>
 更新投播媒体信息
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

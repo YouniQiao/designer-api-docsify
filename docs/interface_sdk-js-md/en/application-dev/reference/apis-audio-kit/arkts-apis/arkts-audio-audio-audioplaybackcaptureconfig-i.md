@@ -4,8 +4,6 @@ Defines configuration for capturing played audio.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 12
 
 **Substitutes:** OH_AVScreenCapture
@@ -15,7 +13,7 @@ Defines configuration for capturing played audio.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## filterOptions
@@ -29,8 +27,6 @@ Options for filtering the played audio streams to be recorded.
 **Type:** [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 12
 

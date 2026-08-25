@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setSimEnabled
@@ -15,8 +15,6 @@ function setSimEnabled(admin: Want, slotId: number): void
 解除指定卡槽的SIM卡禁用。使用setSimDisabled禁用SIM卡后，再用setSimEnabled启用SIM卡，需要到设置-移动网络-SIM卡管理界面手动打开SIM卡开关。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
 
@@ -39,25 +37,3 @@ function setSimEnabled(admin: Want, slotId: number): void
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  // 设置要启用的卡槽ID
-  let slotId: number = 0;
-  // 启用指定卡槽的SIM卡
-  telephonyManager.setSimEnabled(wantTemp, slotId);
-  console.info(`Succeeded in setting slotId: ${slotId} enabled.`);
-} catch (err) {
-  console.error(`Failed to set slotId enabled. Code: ${err.code}, message: ${err.message}`);
-}
-```

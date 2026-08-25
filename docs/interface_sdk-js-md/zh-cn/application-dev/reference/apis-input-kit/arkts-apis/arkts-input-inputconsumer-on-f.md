@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## on('hotkeyChange')
@@ -15,8 +15,6 @@ function on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callba
 订阅应用快捷键。获取满足条件的组合按键输入事件，使用callback异步回调。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -37,41 +35,6 @@ function on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callba
 | [4200002](../errorcode-inputconsumer.md#4200002-快捷键被系统注册) |
 | [4200003](../errorcode-inputconsumer.md#4200003-快捷键已经被其他应用注册) |
 
-**示例**
-
-```TypeScript
-import { inputConsumer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let leftCtrlKey = 2072;
-          let zKey = 2042;
-          let hotkeyOptions: inputConsumer.HotkeyOptions = {
-            preKeys: [leftCtrlKey],
-            finalKey: zKey,
-            isRepeat: true
-          };
-          let hotkeyCallback = (hotkeyOptions: inputConsumer.HotkeyOptions) => {
-            console.info(`Succeeded in consuming hotkey, hotkeyOptions: ${JSON.stringify(hotkeyOptions)}.`);
-          };
-          try {
-            // 订阅热键变更事件
-            inputConsumer.on('hotkeyChange', hotkeyOptions, hotkeyCallback);
-          } catch (error) {
-            console.error(`Failed to Subscribe hot key, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
-
 
 ## on('keyPressed')
 
@@ -82,8 +45,6 @@ function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<Ke
 订阅按键按下事件。若当前应用窗口为前台焦点窗口，用户按下指定按键，会触发回调。使用callback异步回调。订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用 off方法取消订阅。
 
 **起始版本：** 16
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为16。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -101,35 +62,3 @@ function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<Ke
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-import { inputConsumer, KeyEvent } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            let options: inputConsumer.KeyPressedConfig = {
-              key: 16,
-              action: 1,
-              isRepeat: false,
-            }
-            // 订阅按键按下事件
-            inputConsumer.on('keyPressed', options, (event: KeyEvent) => {
-              console.info(`Succeeded in subscribing ${JSON.stringify(event)}.`);
-            });
-          } catch (error) {
-            console.error(`Failed to subscribe , Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```

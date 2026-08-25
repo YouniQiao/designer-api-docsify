@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## offAVMusicTemplateCreate
@@ -15,8 +15,6 @@ function offAVMusicTemplateCreate(callback?: Callback<AVMusicTemplateDescriptor>
 UnRegister session create event
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 

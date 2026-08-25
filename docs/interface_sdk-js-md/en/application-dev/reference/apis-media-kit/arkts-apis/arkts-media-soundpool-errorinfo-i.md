@@ -4,8 +4,6 @@ Describes the error information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## errorCode
@@ -19,8 +17,6 @@ Error code. The type of **errorCode** is [BusinessError](../../../reference/apis
 **Type:** T
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -36,38 +32,32 @@ Stage at which the error occurred.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## soundId
 
 ```TypeScript
-soundId?: int
+soundId?: number
 ```
 
 ID of the resource where the error occurred. It can be obtained by calling **load**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## streamId
 
 ```TypeScript
-streamId?: int
+streamId?: number
 ```
 
 ID of the audio stream where the error occurred. It can be obtained by calling **play**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool

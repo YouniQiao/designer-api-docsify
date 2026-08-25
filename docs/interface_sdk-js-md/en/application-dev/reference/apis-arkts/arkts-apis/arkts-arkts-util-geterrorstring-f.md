@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## getErrorString
@@ -15,8 +15,6 @@ function getErrorString(errno: number): string
 Obtains detailed information about a system error code.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -35,12 +33,3 @@ Obtains detailed information about a system error code.
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let errnum = -1; // -1 is a system error code.
-let result = util.getErrorString(errnum);
-console.info("result = " + result);
-// Output: result = operation not permitted
-```

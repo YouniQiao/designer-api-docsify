@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## DEFAULT
@@ -17,8 +15,6 @@ DEFAULT = 0
 默认标志。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -32,8 +28,6 @@ INCLUDE_ASYNC = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## DONOT_CREATE_SPAN
@@ -45,8 +39,6 @@ DONOT_CREATE_SPAN = 1 << 1
 无分支标志。设置该标志，不创建分支信息；默认创建分支信息。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -60,8 +52,6 @@ TP_INFO = 1 << 2
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## NO_BE_INFO
@@ -73,8 +63,6 @@ NO_BE_INFO = 1 << 3
 无开始结束信息标志。调试场景下设置该标志，调用开始跟踪接口[begin()](arkts-performanceanalysis-hitracechain-begin-f.md)和结束跟踪接口[end()](arkts-performanceanalysis-hitracechain-end-f.md)时， 分别会打印开始、结束跟踪信息hilo日志；默认不打印开始、结束跟踪信息hilog日志。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
@@ -88,8 +76,6 @@ DISABLE_LOG = 1 << 4
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## FAILURE_TRIGGER
@@ -102,8 +88,6 @@ FAILURE_TRIGGER = 1 << 5
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 ## D2D_TP_INFO
@@ -115,7 +99,5 @@ D2D_TP_INFO = 1 << 6
 设备间埋点标志，为TP_INFO的子集，用于调试场景。已设置TP_INFO时，D2D_TP_INFO不生效；未设置TP_INFO时，D2D_TP_INFO生效，调用信息埋点接口 [tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md)仅在mode参数为DEVICE时打印埋点信息hilog日志。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace

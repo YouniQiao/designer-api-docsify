@@ -4,8 +4,6 @@ Wi-Fi hotspot configuration information.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Wi-Fi hotspot configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## band
 
 ```TypeScript
-band: int
+band: number
 ```
 
 The frequency band of the Wi-Fi hotspot
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -37,16 +33,14 @@ The frequency band of the Wi-Fi hotspot
 ## channel
 
 ```TypeScript
-channel?: int
+channel?: number
 ```
 
 The channel of the Wi-Fi hotspot.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -64,8 +58,6 @@ IP address of the dhcp server, it's a string, For example 192.168.43.1
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -73,16 +65,14 @@ IP address of the dhcp server, it's a string, For example 192.168.43.1
 ## maxConn
 
 ```TypeScript
-maxConn: int
+maxConn: number
 ```
 
 The maximum number of connections allowed by the Wi-Fi hotspot
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -100,8 +90,6 @@ The password of the Wi-Fi hotspot
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -118,8 +106,6 @@ The encryption mode of the Wi-Fi hotspot
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -135,8 +121,6 @@ The SSID of the Wi-Fi hotspot
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRunningMultiAppInfo
@@ -15,8 +15,6 @@ function getRunningMultiAppInfo(bundleName: string): Promise<RunningMultiAppInfo
 Obtains the information about running applications in multi-app mode. The multi-app mode means that an application can be simultaneously logged in with different accounts on the same device. This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -47,22 +45,3 @@ Obtains the information about running applications in multi-app mode. The multi-
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000072](../errorcode-ability.md#16000072-multi-app-mode-is-not-supported) |
 | [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) |
-
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = "ohos.samples.etsclock";
-  appManager.getRunningMultiAppInfo(bundleName).then((info: appManager.RunningMultiAppInfo) => {
-      hilog.info(0x0000, 'testTag', `getRunningMultiAppInfo success`);
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
-    })
-} catch (err) {
-  hilog.error(0x0000, 'testTag', `getRunningMultiAppInfo error, code: ${err.code}, msg:${err.message}`);
-}
-```

@@ -4,8 +4,6 @@ Represents a style object for the label text and font.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Font of the label text.When the tab is a subtab, the default font is in 16.0 fp 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -41,11 +37,9 @@ heightAdaptivePolicy?: TextHeightAdaptivePolicy
 
 How the adaptive height is determined for the label text. By default, the **maxLines** settings are prioritized.
 
-**Type:** TextHeightAdaptivePolicy
+**Type:** [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,13 +55,11 @@ maxFontSize?: number | ResourceStr
 
 Maximum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **minFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.Value range: [minFontSize, +∞)
 
-**Type:** number \| ResourceStr
+**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Default:** 0.0fp [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,8 +79,6 @@ Maximum number of lines in the label text. If this attribute is specified, the t
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -103,13 +93,11 @@ minFontSize?: number | ResourceStr
 
 Minimum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **maxFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.Value range: (0, +∞)
 
-**Type:** number \| ResourceStr
+**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Default:** 0.0fp [since 11]
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -123,13 +111,11 @@ Minimum font size of the label text. It cannot be set in percentage. For the set
 overflow?: TextOverflow
 ```
 
-Display mode when the label text is too long. By default, an ellipsis (...) is used to represent text overflow.
+Display mode when the label text is too number. By default, an ellipsis (...) is used to represent text overflow.
 
-**Type:** TextOverflow
+**Type:** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,13 +131,11 @@ selectedColor?: ResourceColor
 
 Font color of the label text when it is selected.Default value: **#FF007DFF**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** #FF007DFF
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,13 +151,11 @@ unselectedColor?: ResourceColor
 
 Font color of the label text when it is not selected.Default value: **#99182431**
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** #99182431
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

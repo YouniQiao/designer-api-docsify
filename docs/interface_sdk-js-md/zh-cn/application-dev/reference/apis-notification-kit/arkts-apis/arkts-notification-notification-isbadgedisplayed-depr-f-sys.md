@@ -15,8 +15,6 @@ function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md)
@@ -31,39 +29,8 @@ function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let isBadgeDisplayedCallback = (err: Base.BusinessError, data: boolean) => {
-  if (err) {
-    console.error("isBadgeDisplayed failed " + JSON.stringify(err));
-  } else {
-    console.info("isBadgeDisplayed success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.isBadgeDisplayed(bundle).then((data) => {
-  console.info("isBadgeDisplayed success, data: " + JSON.stringify(data));
-}).catch((err: Base.BusinessError) => {
-  console.error(`isBadgeDisplayed failed, code is ${err}`);
-});
-```
 
 
 ## isBadgeDisplayed
@@ -76,8 +43,6 @@ function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md)
@@ -92,14 +57,10 @@ function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [isBadgeDisplayed](#isbadgedisplayed)

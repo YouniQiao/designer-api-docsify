@@ -4,8 +4,6 @@ Enumerates the types of requested resources.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MAIN_FRAME
@@ -17,8 +15,6 @@ MAIN_FRAME = 0
 Top-level page.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,8 +28,6 @@ Frame or Iframe.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## STYLE_SHEET
@@ -45,8 +39,6 @@ STYLE_SHEET = 2
 CSS stylesheet.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -60,8 +52,6 @@ External script.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## IMAGE
@@ -73,8 +63,6 @@ IMAGE = 4
 Image (JPG, GIF, PNG, or other format).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -88,8 +76,6 @@ Font.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## SUB_RESOURCE
@@ -101,8 +87,6 @@ SUB_RESOURCE = 6
 Other sub-resource. If the type is unknown, it is used as the default type.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -116,8 +100,6 @@ Object (or embed) tag of the plug-in, or the resource requested by the plug-in.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## MEDIA
@@ -129,8 +111,6 @@ MEDIA = 8
 Media resource.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -144,8 +124,6 @@ Main resource of a dedicated worker thread.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## SHARED_WORKER
@@ -157,8 +135,6 @@ SHARED_WORKER = 10
 Main resource of a shared worker thread.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -172,8 +148,6 @@ Explicit prefetch request.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## FAVICON
@@ -185,8 +159,6 @@ FAVICON = 12
 Website icon.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -200,8 +172,6 @@ XMLHttpRequest.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## PING
@@ -213,8 +183,6 @@ PING = 14
 &lt;a ping&gt;/sendBeacon ping request.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -228,8 +196,6 @@ Main resource of a service worker.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## CSP_REPORT
@@ -241,8 +207,6 @@ CSP_REPORT = 16
 Report of Content Security Policy violation.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -256,8 +220,6 @@ Resource requested by the plug-in.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NAVIGATION_PRELOAD_MAIN_FRAME
@@ -270,8 +232,6 @@ Main frame redirection request that triggers service worker preloading.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NAVIGATION_PRELOAD_SUB_FRAME
@@ -283,7 +243,5 @@ NAVIGATION_PRELOAD_SUB_FRAME = 20
 Subframe redirection request that triggers service worker preloading.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

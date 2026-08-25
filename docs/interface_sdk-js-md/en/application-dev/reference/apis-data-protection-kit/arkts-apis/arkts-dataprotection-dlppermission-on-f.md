@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## on('openDLPFile')
@@ -15,8 +15,6 @@ function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void
 Subscribes to a DLP file open event. After this API is successfully called, a callback notification is sent to the current application when the DLP file is opened. This API can be called only in non-DLP sandbox applications.You can subscribe to this event when your application needs to perform specific operations (such as logging and updating the UI) after a DLP file is opened.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -36,18 +34,3 @@ Subscribes to a DLP file open event. After this API is successfully called, a ca
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.on('openDLPFile', (info: dlpPermission.AccessedDLPFileInfo) => {
-    console.info('openDlpFile event', info.uri, info.lastOpenTime)
-  }); // Subscribe to a DLP file open event.
-} catch (err) {
-  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-}
-```

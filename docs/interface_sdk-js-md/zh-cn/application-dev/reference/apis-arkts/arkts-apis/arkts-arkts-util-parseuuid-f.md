@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'kits/@kit.ArkTS';
 ```
 
 ## parseUUID
@@ -15,8 +15,6 @@ function parseUUID(uuid: string): Uint8Array
 将generateRandomUUID生成的string类型UUID转换为[generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md)生成的UUID， 符合RFC 4122版本规范。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -39,11 +37,3 @@ function parseUUID(uuid: string): Uint8Array
 | 错误码ID |
 | --- |
 | [10200002](../errorcode-utils.md#10200002-参数解析错误) |
-
-**示例**
-
-```TypeScript
-let uuid = util.parseUUID("84bdf796-66cc-4655-9b89-d6218d100f9c");
-console.info("uuid = " + uuid);
-// 输出结果：uuid = 132,189,247,150,102,204,70,85,155,137,214,33,141,16,15,156
-```

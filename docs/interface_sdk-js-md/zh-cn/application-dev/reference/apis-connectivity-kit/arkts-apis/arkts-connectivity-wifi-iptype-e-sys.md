@@ -4,8 +4,6 @@ WLAN IP类型枚举。@enum { number } IpType
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md)
@@ -23,8 +21,6 @@ STATIC
 使用静态配置的IP设置
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ DHCP
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [DHCP](arkts-connectivity-wifimanager-iptype-e-sys.md#dhcp)
@@ -63,8 +57,6 @@ UNKNOWN
 未分配IP详情
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

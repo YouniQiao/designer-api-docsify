@@ -4,8 +4,6 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md)
@@ -15,7 +13,7 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -29,8 +27,6 @@ The UUID of a CharacteristicWriteReq instance
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -50,8 +46,6 @@ Indicates the address of the client that initiates the write request
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#deviceid)
@@ -69,8 +63,6 @@ Whether this request should be pending for later operation
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -90,8 +82,6 @@ Whether the remote client need a response
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [needRsp](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#needrsp)
@@ -109,8 +99,6 @@ Indicates the byte offset of the start position for writing characteristic value
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -130,8 +118,6 @@ The UUID of the service to which the characteristic belongs
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#serviceuuid)
@@ -150,8 +136,6 @@ The Id of the write request
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [transId](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#transid)
@@ -169,8 +153,6 @@ Indicates the value to be written
 **Type:** ArrayBuffer
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

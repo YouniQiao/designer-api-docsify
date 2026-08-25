@@ -4,8 +4,6 @@ Enumerates USB transfer flags.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_TRANSFER_SHORT_NOT_OK
@@ -17,8 +15,6 @@ USB_TRANSFER_SHORT_NOT_OK = 0
 Reports short frames as errors.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -32,8 +28,6 @@ Automatically releases the transfer buffer.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_TRANSFER_FREE_TRANSFER
@@ -46,8 +40,6 @@ Automatically transfers after the callback is complete.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager
 
 ## USB_TRANSFER_ADD_ZERO_PACKET
@@ -59,7 +51,5 @@ USB_TRANSFER_ADD_ZERO_PACKET = 3
 Adds an additional data packet to the transfer.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager

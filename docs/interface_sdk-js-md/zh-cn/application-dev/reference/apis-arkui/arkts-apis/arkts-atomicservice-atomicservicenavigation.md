@@ -2,13 +2,13 @@
 
 ###### 子组件
  可以包含子组件。
- 从API version 10开始，推荐使用NavPathStack进行页面路由。
+ 从API version 10开始，推荐使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)进行页面路由。
 
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha, BackgroundTheme, TitleBarType, SideBarOptions, TitleOptions, GradientBackground } from '@kit.ArkUI';
+import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha, BackgroundTheme, TitleBarType, SideBarOptions, TitleOptions, GradientBackground } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

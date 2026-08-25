@@ -1,12 +1,10 @@
 # TextPickerTextStyle
 
-文本样式选项，继承自PickerTextStyle。
+文本样式选项，继承自[PickerTextStyle](arkts-arkui-pickertextstyle-i.md)。
 
-**继承/实现关系：** TextPickerTextStyle extends PickerTextStyle
+**继承/实现关系：** TextPickerTextStyle extends [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,8 +28,6 @@ maxFontSize?: number | string | Resource
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -53,8 +49,6 @@ minFontSize?: number | string | Resource
 
 **起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -69,11 +63,9 @@ overflow?: TextOverflow
 
 文本截断方式。当设置为MARQUEE时，该属性不生效。详细规则请参考Text组件的textOverflow属性。
 
-**类型：** TextOverflow
+**类型：** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
 
 **起始版本：** 15
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为15。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

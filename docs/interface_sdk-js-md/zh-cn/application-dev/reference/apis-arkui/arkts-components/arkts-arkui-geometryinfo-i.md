@@ -6,8 +6,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -23,11 +21,9 @@ borderWidth: EdgeWidth
 
 父组件（自定义组件）边框宽度。 单位为： vp。
 
-**类型：** EdgeWidth
+**类型：** [EdgeWidth](../arkts-apis/arkts-arkui-edgewidth-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,11 +39,9 @@ margin: Margin
 
 父组件（自定义组件）margin信息。 单位为： vp。
 
-**类型：** Margin
+**类型：** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,11 +57,9 @@ padding: Padding
 
 父组件（自定义组件）padding信息。 单位为： vp。
 
-**类型：** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
+**类型：** Padding
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

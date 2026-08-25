@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## getDisposedRulesByBundle
@@ -15,8 +15,6 @@ function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfigu
 Query all disposed rules under the current user for the specified bundle name.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 24.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS or ohos.permission.GET_DISPOSED_APP_STATUS
 

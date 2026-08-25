@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## offDistanceMeasure
@@ -16,8 +16,6 @@ function offDistanceMeasure(configParams: DistanceMeasurementConfigParams,
 取消订阅测距接口。停止运行已订阅的测距算法。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.ACCESS_SENSING_WITH_ULTRASOUND
 
@@ -44,24 +42,3 @@ function offDistanceMeasure(configParams: DistanceMeasurementConfigParams,
 | [35100001](../errorcode-spatialAwareness.md#35100001-服务异常) |
 | [35100003](../errorcode-spatialAwareness.md#35100003-取消订阅失败) |
 | [35100004](../errorcode-spatialAwareness.md#35100004-无效参数) |
-
-**示例**
-
-```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
-   console.info('call offDistanceMeasure before');
-   let configParams: spatialAwareness.DistanceMeasurementConfigParams = {
-      deviceList: ["123456"],
-      techType: 2,
-      reportMode: 0,
-      reportFrequency: 340
-   };
-   console.info('call offDistanceMeasure start');
-   try {
-      spatialAwareness.offDistanceMeasure(configParams, (data:spatialAwareness.DistanceMeasurementResponse) => {
-         console.info(`result = ${data.distance}`);
-      });
-   } catch (err) {
-      console.error(`call offDistanceMeasure failed, Code: ${err.code}, message: ${err.message}`);
-   }
-```

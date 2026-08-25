@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## isEncoding
@@ -15,8 +15,6 @@ function isEncoding(encoding: string): boolean
 Returns true if encoding is the name of a supported character encoding, or false otherwise.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -33,18 +31,3 @@ Returns true if encoding is the name of a supported character encoding, or false
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-console.info(fastbuffer.isEncoding('utf-8').toString());
-// Output: true
-console.info(fastbuffer.isEncoding('hex').toString());
-// Output: true
-console.info(fastbuffer.isEncoding('utf/8').toString());
-// Output: false
-console.info(fastbuffer.isEncoding('').toString());
-// Output: false
-```

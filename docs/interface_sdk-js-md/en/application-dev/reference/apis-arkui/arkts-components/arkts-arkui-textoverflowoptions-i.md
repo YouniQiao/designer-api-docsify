@@ -9,8 +9,6 @@ Defines the configuration object for text overflow behavior.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +24,11 @@ overflow: TextOverflow
 
 Display mode of overflowing text.Default value: **TextOverflow.Clip**
 
-**Type:** TextOverflow
+**Type:** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
 
 **Default:** TextOverflow.Clip [since 18]
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

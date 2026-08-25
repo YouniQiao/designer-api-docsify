@@ -11,14 +11,12 @@
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 ## Modules to Import
 
 ```TypeScript
-import { SelectionExtensionContext } from '@kit.BasicServicesKit';
+import { SelectionExtensionContext } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## startAbility
@@ -30,8 +28,6 @@ startAbility(want: Want): Promise<void>
 Starts the target ability in the same app. This method is applicable when you need to redirect to another ability in the app in word selection extension. The system matches and starts the target ability based on the values of **bundleName** and **abilityName** specified in the **Want** object. This API uses a promise to return the result. For details about the ability startup mechanism, see [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,45 +69,3 @@ Starts the target ability in the same app. This method is applicable when you ne
 | [16000070](../../apis-ability-kit/errorcode-ability.md#16000070-extensionability-fails-to-start-a-serviceextensionability-in-strict-mode) |
 | [16000083](../../apis-ability-kit/errorcode-ability.md#16000083-specified-ability-cannot-be-started-by-this-type-of-extensionability) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-
-**Examples**
-
-```TypeScript
-import { SelectionExtensionAbility, BusinessError } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit';
-import { Want } from '@kit.AbilityKit';
-
-class SelectionAbilityStub extends rpc.RemoteObject {
-  constructor(des: string) {
-    super(des);
-  }
-  onRemoteMessageRequest(
-    code: number,
-    data: rpc.MessageSequence,
-    reply: rpc.MessageSequence,
-    options: rpc.MessageOption
-  ): boolean | Promise<boolean> {
-    console.info(`onRemoteMessageRequest code: ${code}`);
-    return true;
-  }
-}
-
-class SelectionExtAbility extends SelectionExtensionAbility {
-  onConnect(want: Want): rpc.RemoteObject {
-    try {
-      let wantAbility: Want = {
-        bundleName: "com.selection.selectionapplication",
-        abilityName: "EntryAbility",
-      };
-      this.context.startAbility(wantAbility).then(() => {
-        console.info(`startAbility success`);
-      }).catch((err: BusinessError) => {
-        console.error(`startAbility error: ${err.code}, errormessage: ${err.message}`);
-      })
-    } catch (err) {
-      console.error(`startAbility error: ${err.code}, errormessage: ${err.message}`);
-    }
-    return new SelectionAbilityStub('remote');
-  }
-}
-```

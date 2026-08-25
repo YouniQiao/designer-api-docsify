@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllowedBluetoothDevices
@@ -15,8 +15,6 @@ function getAllowedBluetoothDevices(admin: Want): Array<string>
 Obtains allowed Bluetooth devices.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -45,25 +43,6 @@ Obtains allowed Bluetooth devices.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-    let result: Array<string> = bluetoothManager.getAllowedBluetoothDevices(wantTemp);
-    console.info(`Succeeded in getting allowed bluetooth devices. Result: ${JSON.stringify(result)}`);
-} catch(err) {
-    console.error(`Failed to get allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getAllowedBluetoothDevices
 
@@ -74,8 +53,6 @@ function getAllowedBluetoothDevices(admin: Want | null): Array<string>
 Obtains allowed Bluetooth devices.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -103,7 +80,3 @@ Obtains allowed Bluetooth devices.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getAllowedBluetoothDevices](#getallowedbluetoothdevices)

@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 23
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
@@ -15,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { recent } from '@kit.CoreFileKit';
+import { recent } from 'kits/@kit.CoreFileKit';
 ```
 
 ## ctime
@@ -29,8 +27,6 @@ readonly ctime: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 23
 
@@ -52,8 +48,6 @@ readonly fileName: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -73,8 +67,6 @@ readonly mode: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 23
 
@@ -96,8 +88,6 @@ readonly mtime: number
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -117,8 +107,6 @@ readonly size: number
 **类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 23
 
@@ -140,8 +128,6 @@ readonly srcPath: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **废弃版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -161,8 +147,6 @@ readonly uri: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 23
 

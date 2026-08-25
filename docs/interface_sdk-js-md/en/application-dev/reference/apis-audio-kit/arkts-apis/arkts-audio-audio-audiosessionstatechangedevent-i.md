@@ -4,14 +4,12 @@ Describes the event indicating that the audio session state changes.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## stateChangeHint
@@ -25,7 +23,5 @@ Hint for the audio session state change.
 **Type:** [AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core

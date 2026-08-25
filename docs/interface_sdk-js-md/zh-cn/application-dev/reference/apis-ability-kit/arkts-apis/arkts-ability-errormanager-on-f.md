@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { errorManager } from '@kit.AbilityKit';
+import { errorManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('error')
@@ -15,8 +15,6 @@ function on(type: 'error', observer: ErrorObserver): number
 注册错误观测器。注册后可以捕获到应用产生的js crash，属于应用崩溃的一种。观测器捕获到该异常时应用不退出，建议在回调函数执行完后，增加同步退出操作。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,35 +40,6 @@ function on(type: 'error', observer: ErrorObserver): number
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000003](../errorcode-ability.md#16000003-指定的id不存在) |
 
-**示例**
-
-```TypeScript
-import { errorManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer: errorManager.ErrorObserver = {
-  onUnhandledException(errorMsg) {
-    console.info('onUnhandledException, errorMsg: ', errorMsg);
-  },
-  onException(errorObj) {
-    console.info('onException, name: ', errorObj.name);
-    console.info('onException, message: ', errorObj.message);
-    if (typeof(errorObj.stack) === 'string') {
-      console.info('onException, stack: ', errorObj.stack);
-    }
-  }
-};
-let observerId = -1;
-
-try {
-  observerId = errorManager.on('error', observer);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message}`);
-}
-```
-
 
 ## on('loopObserver')
 
@@ -82,8 +51,6 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -94,34 +61,13 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 | --- | --- | --- |
 | type | 'loopObserver' | 是 |
 | timeout | number | 是 |
-| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [LoopObserver](arkts-ability-loopobserver-i.md) | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { errorManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer: errorManager.LoopObserver = {
-  onLoopTimeOut(timeout: number) {
-    console.info('Duration timeout: ' + timeout);
-  }
-};
-
-try {
-  errorManager.on("loopObserver", 1, observer);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message}`);
-}
-```
 
 
 ## on('unhandledRejection')
@@ -133,8 +79,6 @@ function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): v
 注册被拒绝promise监听器。注册后可以捕获到当前线程中未被捕获到的promise rejection。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -154,29 +98,6 @@ function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): v
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-```TypeScript
-import { errorManager } from '@kit.AbilityKit';
-
-let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise: Promise<void>) => {
-  if (promise === promise1) {
-    console.info('promise1 is rejected');
-  }
-  console.info('reason.name: ', reason.name);
-  console.info('reason.message: ', reason.message);
-  if (reason.stack) {
-    console.info('reason.stack: ', reason.stack);
-  }
-};
-
-errorManager.on("unhandledRejection", observer);
-
-let promise1 = new Promise<void>(() => {}).then(() => {
-  throw new Error('uncaught error');
-});
-```
-
 
 ## on('globalUnhandledRejectionDetected')
 
@@ -187,8 +108,6 @@ function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver):
 在进程中任意线程注册被拒绝promise监听器，注册后可以捕获到当前进程中未被捕获到的promise rejection。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -208,30 +127,6 @@ function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver):
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
-**示例**
-
-```TypeScript
-import { errorManager } from '@kit.AbilityKit';
-
-const promiseFunc = (observer: errorManager.GlobalError) => {
-  console.info('result name :' + observer.name);
-  console.info('result message :' + observer.message);
-  console.info('result stack :' + observer.stack);
-  console.info('result instanceName :' + observer.instanceName);
-  console.info('result instanceType :' + observer.instanceType);
-};
-
-errorManager.on('globalUnhandledRejectionDetected', promiseFunc);
-// 建议在抛出Promise异常时，使用async抛出异常。
-const throwError = async () => {
-  throw new Error('uncaught error');
-};
-
-let promise1 = new Promise<void>(() => {}).then(() => {
-  throwError();
-});
-```
-
 
 ## on('freeze')
 
@@ -247,8 +142,6 @@ function on(type: 'freeze', observer: FreezeObserver): void
 > 该接口请勿与[errorManager.setDefaultFreezeObserver](arkts-ability-errormanager-setdefaultfreezeobserver-f.md)接口混用，混用可能会导致注册的回调函数执行失败。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -267,24 +160,6 @@ function on(type: 'freeze', observer: FreezeObserver): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { errorManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const freezeCallback = () => {
-  console.info('freezecallback');
-};
-try {
-  errorManager.on("freeze", freezeCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message}`);
-}
-```
-
 
 ## on('globalErrorOccurred')
 
@@ -295,8 +170,6 @@ function on(type: 'globalErrorOccurred', observer: GlobalObserver): void
 在进程中的任意线程中注册 `errormanager.on` 接口，监听整个进程中任意线程的异常。观测器捕获到该异常时应用不退出，建议在回调函数执行完后，增加同步退出操作。
 
 **起始版本：** 18
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为18。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -315,26 +188,3 @@ function on(type: 'globalErrorOccurred', observer: GlobalObserver): void
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-
-**示例**
-
-```TypeScript
-import { errorManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const errorFunc = (observer: errorManager.GlobalError) => {
-    console.info('result name :' + observer.name);
-    console.info('result message :' + observer.message);
-    console.info('result stack :' + observer.stack);
-    console.info('result instanceName :' + observer.instanceName);
-    console.info('result instanceType :' + observer.instanceType);
-};
-
-try {
-  errorManager.on('globalErrorOccurred', errorFunc);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message}`);
-}
-```

@@ -8,8 +8,6 @@ Defines the observer used to listen for application state changes.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Property type:** _ApplicationStateObserver.default

@@ -4,44 +4,38 @@ Defines the information about the transient task.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## actualDelayTime
 
 ```TypeScript
-actualDelayTime: int
+actualDelayTime: number
 ```
 
-Actual duration of the transient task requested by the application, in milliseconds. <br>Unit:ms Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery ([BatteryCapacityLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) set to **LEVEL_LOW**), the maximum duration is decreased to 1 minute.
+Actual duration of the transient task requested by the application, in milliseconds. Unit:ms Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery ([BatteryCapacityLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) set to **LEVEL_LOW**), the maximum duration is decreased to 1 minute.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 ## requestId
 
 ```TypeScript
-requestId: int
+requestId: number
 ```
 
 Request ID of the transient task.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask

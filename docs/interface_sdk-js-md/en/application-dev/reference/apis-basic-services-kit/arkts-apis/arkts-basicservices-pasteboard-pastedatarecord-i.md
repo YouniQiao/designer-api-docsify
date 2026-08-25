@@ -4,14 +4,12 @@ Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definiti
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## addEntry
@@ -23,8 +21,6 @@ addEntry(type: string, value: ValueType): void
 Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the [getData](#getdata) API to read the corresponding data.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -41,15 +37,6 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
-```
-
 ## convertToText
 
 ```TypeScript
@@ -59,8 +46,6 @@ convertToText(callback: AsyncCallback<string>): void
 Forcibly converts the content in a **PasteData** object to text. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -80,32 +65,6 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
-record.convertToText((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`Failed to convert to text. Cause: ${err.message}`);
-        return;
-    }
-    console.info(`Succeeded in converting to text. Data: ${data}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
-record.convertToText().then((data: string) => {
-    console.info(`Succeeded in converting to text. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to convert to text. Cause: ${err.message}`);
-});
-```
-
 ## convertToText
 
 ```TypeScript
@@ -115,8 +74,6 @@ convertToText(): Promise<string>
 Forcibly converts the content in a **PasteData** object to text. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -130,10 +87,6 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 | --- |
 | Promise & lt;string & gt; |
 
-**Examples**
-
-See [convertToText](#converttotext)
-
 ## getData
 
 ```TypeScript
@@ -143,8 +96,6 @@ getData(type: string): Promise<ValueType>
 Obtains data of the specified type from **PasteDataRecord**.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -166,53 +117,6 @@ Obtains data of the specified type from **PasteDataRecord**.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
-record.getData(pasteboard.MIMETYPE_TEXT_PLAIN).then((value: pasteboard.ValueType) => {
-    let textPlainContent = value as string;
-    console.info('Success to get text/plain value. value is: ' + textPlainContent);
-}).catch((err: BusinessError) => {
-    console.error('Failed to get text/plain value. Cause: ' + err.message);
-});
-record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) => {
-    let uri = value as string;
-    console.info('Success to get text/uri value. value is: ' + uri);
-}).catch((err: BusinessError) => {
-    console.error('Failed to get text/uri value. Cause: ' + err.message);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
-    if (err) {
-        console.error('Failed to get PasteData. Cause: ' + err.message);
-        return;
-    }
-    let text: string = pasteData.getPrimaryText();
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
-    let text: string = pasteData.getPrimaryText();
-}).catch((err: BusinessError) => {
-    console.error('Failed to get PasteData. Cause: ' + err.message);
-});
-```
-
 ## getValidTypes
 
 ```TypeScript
@@ -222,8 +126,6 @@ getValidTypes(types: Array<string>): Array<string>
 Obtains the intersection of the input types and the types of the PasteData.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -245,22 +147,6 @@ Obtains the intersection of the input types and the types of the PasteData.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
-let types: string[] = record.getValidTypes([
-    pasteboard.MIMETYPE_TEXT_PLAIN,
-    pasteboard.MIMETYPE_TEXT_HTML,
-    pasteboard.MIMETYPE_TEXT_URI,
-    pasteboard.MIMETYPE_TEXT_WANT,
-    pasteboard.MIMETYPE_PIXELMAP
-]);
-```
-
 ## toPlainText
 
 ```TypeScript
@@ -271,8 +157,6 @@ Forcibly converts HTML, plain, and URI content in a **PasteDataRecord** to the p
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -282,14 +166,6 @@ Forcibly converts HTML, plain, and URI content in a **PasteDataRecord** to the p
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
-
-**Examples**
-
-```TypeScript
-let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_HTML, '<html>hello</html>');
-let text: string = record.toPlainText();
-console.info(`Succeeded in converting to text. Text: ${text}`);
-```
 
 ## data
 
@@ -302,8 +178,6 @@ Content of custom data. Modifications to this attribute are ineffective.
 **Type:** Record&lt;string, ArrayBuffer&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -321,8 +195,6 @@ HTML content, must conform to standard HTML format. Modifications to this attrib
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -338,8 +210,6 @@ Default type of PasteDataRecord. Modifications to this attribute are ineffective
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -357,8 +227,6 @@ PixelMap content. Modifications to this attribute are ineffective. To refresh th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -374,8 +242,6 @@ Plain text. Modifications to this attribute are ineffective. To refresh the attr
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -393,8 +259,6 @@ URI content, must conform to standard URI format. Modifications to this attribut
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
@@ -410,8 +274,6 @@ Want content. Modifications to this attribute are ineffective. To refresh the at
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

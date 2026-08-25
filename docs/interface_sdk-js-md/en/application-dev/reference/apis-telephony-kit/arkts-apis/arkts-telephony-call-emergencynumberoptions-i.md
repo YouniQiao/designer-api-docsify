@@ -4,29 +4,26 @@ Provides an option for determining whether a number is an emergency number for t
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## slotId
 
 ```TypeScript
-slotId?: int
+slotId?: number
 ```
 
 Card slot ID.  
-- **0**: card slot 1 - **1**: card slot 2
+- **0**: card slot 1  
+- **1**: card slot 2
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CallManager

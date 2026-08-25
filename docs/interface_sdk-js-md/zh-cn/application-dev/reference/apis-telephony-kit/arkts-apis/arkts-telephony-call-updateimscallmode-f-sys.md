@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## updateImsCallMode
 
 ```TypeScript
-function updateImsCallMode(callId: int, mode: ImsCallMode, callback: AsyncCallback<void>): void
+function updateImsCallMode(callId: number, mode: ImsCallMode, callback: AsyncCallback<void>): void
 ```
 
 更新Ims呼叫模式。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -28,7 +26,7 @@ function updateImsCallMode(callId: int, mode: ImsCallMode, callback: AsyncCallba
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | mode | [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -44,42 +42,16 @@ function updateImsCallMode(callId: int, mode: ImsCallMode, callback: AsyncCallba
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.updateImsCallMode(1, 1, (err: BusinessError) => {
-    if (err) {
-        console.error(`updateImsCallMode fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`updateImsCallMode success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.updateImsCallMode(1, 1).then(() => {
-    console.info(`updateImsCallMode success.`);
-}).catch((err: BusinessError) => {
-    console.error(`updateImsCallMode fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## updateImsCallMode
 
 ```TypeScript
-function updateImsCallMode(callId: int, mode: ImsCallMode): Promise<void>
+function updateImsCallMode(callId: number, mode: ImsCallMode): Promise<void>
 ```
 
 更新Ims呼叫模式。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_TELEPHONY_STATE
 
@@ -91,7 +63,7 @@ function updateImsCallMode(callId: int, mode: ImsCallMode): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | mode | [ImsCallMode](arkts-telephony-call-imscallmode-e-sys.md) | 是 |
 
 **返回值：**
@@ -111,7 +83,3 @@ function updateImsCallMode(callId: int, mode: ImsCallMode): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [updateImsCallMode](#updateimscallmode)

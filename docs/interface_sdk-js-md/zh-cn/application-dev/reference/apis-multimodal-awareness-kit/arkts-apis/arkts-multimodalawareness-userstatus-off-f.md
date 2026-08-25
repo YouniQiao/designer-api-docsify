@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## off('userAgeGroupDetected')
@@ -18,8 +18,6 @@ function off(type: 'userAgeGroupDetected', callback?: Callback<UserClassificatio
 > 该接口仅在部分Phone中支持使用，当Phone设备不支持时返回33900003错误码。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **废弃版本：** 24
 
@@ -39,17 +37,3 @@ function off(type: 'userAgeGroupDetected', callback?: Callback<UserClassificatio
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [33900001](../errorcode-userStatus.md#33900001-服务异常) |
 | [33900003](../errorcode-userStatus.md#33900003-取消订阅失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    userStatus.off('userAgeGroupDetected');
-    console.info("off succeeded");
-} catch (err) {
-    let error = err as BusinessError;
-    console.error("Failed off and err code is " + error.code);
-}
-```

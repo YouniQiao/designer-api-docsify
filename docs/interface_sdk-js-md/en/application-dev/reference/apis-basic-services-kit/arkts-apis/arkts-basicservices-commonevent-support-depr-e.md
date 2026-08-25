@@ -4,8 +4,6 @@ A system common event is an event that is published by a system service or syste
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Support](arkts-basicservices-commoneventmanager-support-e.md)
@@ -21,8 +19,6 @@ COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'
 Indicates that the boot is complete and the system is loaded.To subscribe to this common event, your application must have the ohos.permission.RECEIVER_STARTUP_COMPLETED permission. (This permission is available only for system applications.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_LOCKED_BOOT_COMPLETED](arkts-basicservices-commoneventmanager-support-e.md#common_event_locked_boot_completed)
@@ -57,8 +51,6 @@ COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'
 Indicates that the device is being shut down and will continue until it is finally shut down.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ Indicates that the battery charging status, battery level, and other information
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BATTERY_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_battery_changed)
@@ -93,8 +83,6 @@ COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 Indicates that the battery level is low.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -112,8 +100,6 @@ Indicates that the battery level is normal.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BATTERY_OKAY](arkts-basicservices-commoneventmanager-support-e.md#common_event_battery_okay)
@@ -129,8 +115,6 @@ COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 Indicates that the device is connected to an external power supply.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -148,8 +132,6 @@ Indicates that the device is disconnected from the external power supply.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_POWER_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_power_disconnected)
@@ -165,8 +147,6 @@ COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'
 Indicates that the device screen is off and the device is in sleep mode.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -184,8 +164,6 @@ Indicates that the device screen is on and the device is in interactive state.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_SCREEN_ON](arkts-basicservices-commoneventmanager-support-e.md#common_event_screen_on)
@@ -201,8 +179,6 @@ COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'
 Indicates that the device thermal level has changed.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -220,8 +196,6 @@ COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_USER_PRESENT](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_present)
@@ -237,8 +211,6 @@ COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'
 Indicates that the system time has changed as time ticks by.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -256,8 +228,6 @@ Indicates that the system time is set.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_TIME_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_time_changed)
@@ -273,8 +243,6 @@ COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'
 (reserved, not supported yet) Indicates that the system date has been changed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -292,8 +260,6 @@ Indicates that the system time zone is changed.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_TIMEZONE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_timezone_changed)
@@ -309,8 +275,6 @@ COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 (reserved, not supported yet) Indicates that the user closes a temporary system dialog box.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -328,8 +292,6 @@ Indicates that a new application package has been installed on the device.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_PACKAGE_ADDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_added)
@@ -345,8 +307,6 @@ COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'
 (reserved, not supported yet) Indicates that a later version of an installed application package has replaced the previous one on the device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -364,8 +324,6 @@ COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_MY_PACKAGE_REPLACED](arkts-basicservices-commoneventmanager-support-e.md#common_event_my_package_replaced)
@@ -381,8 +339,6 @@ COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'
 Indicates that an installed application has been uninstalled from the device with the application data retained.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -400,8 +356,6 @@ COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BUNDLE_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_bundle_removed)
@@ -417,8 +371,6 @@ COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'
 (reserved, not supported yet) Indicates that an installed application, including both the application data and code, has been completely uninstalled from the device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -436,8 +388,6 @@ Indicates that an application package has been changed (for example, an ability 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_PACKAGE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_changed)
@@ -453,8 +403,6 @@ COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 Indicates that the user closed all processes of the application and restarted the application.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -472,8 +420,6 @@ Indicates that the user cleared the application package data.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_PACKAGE_DATA_CLEARED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_data_cleared)
@@ -489,8 +435,6 @@ COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 (reserved, not supported yet) Indicates that application packages have been suspended.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -508,8 +452,6 @@ COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_PACKAGES_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_packages_unsuspended)
@@ -525,8 +467,6 @@ COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 Indicates that the application HAP package is suspended.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -544,8 +484,6 @@ Indicates that the application package is not suspended.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_MY_PACKAGE_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_my_package_unsuspended)
@@ -561,8 +499,6 @@ COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'
 (reserved, not supported yet) Indicates that a user ID has been removed from the system.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -580,8 +516,6 @@ COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_PACKAGE_FIRST_LAUNCH](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_first_launch)
@@ -597,8 +531,6 @@ COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATIO
 (reserved, not supported yet) Indicates that an application requires system verification.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -616,8 +548,6 @@ COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_PACKAGE_VERIFIED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_verified)
@@ -633,8 +563,6 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATION
 (reserved, not supported yet) Indicates that applications installed on the external storage are available for the system.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -652,8 +580,6 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATI
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_external_applications_unavailable)
@@ -669,8 +595,6 @@ COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'
 (reserved, not supported yet) Indicates that the device state (for example, orientation and locale) has changed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -688,8 +612,6 @@ COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_LOCALE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed)
@@ -705,8 +627,6 @@ COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'
 (reserved, not supported yet) Indicates that the device storage is insufficient.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -724,8 +644,6 @@ COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_DRIVE_MODE](arkts-basicservices-commoneventmanager-support-e.md#common_event_drive_mode)
@@ -741,8 +659,6 @@ COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'
 (reserved, not supported yet) Indicates that the system is in home mode.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -760,8 +676,6 @@ COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_OFFICE_MODE](arkts-basicservices-commoneventmanager-support-e.md#common_event_office_mode)
@@ -777,8 +691,6 @@ COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'
 (reserved, not supported yet) Indicates that the user has been started.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -796,8 +708,6 @@ COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_USER_BACKGROUND](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_background)
@@ -813,8 +723,6 @@ COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 (reserved, not supported yet) Indicates that the user has been brought to the foreground.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -832,8 +740,6 @@ Indicates that user switching is in progress.To subscribe to this common event, 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_USER_SWITCHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_switched)
@@ -849,8 +755,6 @@ COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 (reserved, not supported yet) Indicates that user starting is in progress. To subscribe to this common event, your application must have the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -868,8 +772,6 @@ COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_USER_UNLOCKED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_unlocked)
@@ -885,8 +787,6 @@ COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 (reserved, not supported yet) Indicates the user to be stopped.To subscribe to this common event, your application must have the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -904,8 +804,6 @@ COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_USER_STOPPED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_stopped)
@@ -921,8 +819,6 @@ COMMON_EVENT_HWID_LOGIN = 'common.event.HWID_LOGIN'
 HW id login successfully.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -940,8 +836,6 @@ HW id logout successfully.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT](arkts-basicservices-commoneventmanager-support-e.md#common_event_distributed_account_logout)
@@ -957,8 +851,6 @@ COMMON_EVENT_HWID_TOKEN_INVALID = 'common.event.HWID_TOKEN_INVALID'
 HW id is invalid.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -976,8 +868,6 @@ HW id logs off.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF](arkts-basicservices-commoneventmanager-support-e.md#common_event_distributed_account_logoff)
@@ -993,8 +883,6 @@ COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'
 Indicates a change in the Wi-Fi state (enabled or disabled).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1012,8 +900,6 @@ Indicates that the Wi-Fi access point has been scanned and proved available.To s
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_WIFI_SCAN_FINISHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_scan_finished)
@@ -1029,8 +915,6 @@ COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'
 Indicates that the Wi-Fi signal strength (RSSI) has changed.To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1048,8 +932,6 @@ Indicates that the Wi-Fi connection state has changed.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_WIFI_CONN_STATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_conn_state)
@@ -1065,8 +947,6 @@ COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'
 Indicates a change in the Wi-Fi hotspot state (enabled or disabled).
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1084,8 +964,6 @@ Indicates that a client has joined the Wi-Fi hotspot of the current device.To su
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_WIFI_AP_STA_JOIN](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_ap_sta_join)
@@ -1101,8 +979,6 @@ COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'
 Indicates that the client is disconnected from the Wi-Fi hotspot of the current device.To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1120,8 +996,6 @@ COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_mplink_state_change)
@@ -1137,8 +1011,6 @@ COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'
 Indicates that the Wi-Fi P2P connection state has changed.To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION permissions.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1156,8 +1028,6 @@ Indicates a change in the Wi-Fi P2P state (enabled or disabled).To subscribe to 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_WIFI_P2P_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_p2p_state_changed)
@@ -1173,8 +1043,6 @@ COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE
 Indicates that the state of the Wi-Fi P2P peer device has changed.To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1192,8 +1060,6 @@ Indicates that the Wi-Fi P2P discovery state has changed.To subscribe to this co
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_p2p_peers_discovery_state_changed)
@@ -1209,8 +1075,6 @@ COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRE
 Indicates that the state of the Wi-Fi P2P local device has changed.To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1228,8 +1092,6 @@ Indicates that the Wi-Fi P2P group information has changed.To subscribe to this 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_p2p_group_state_changed)
@@ -1245,8 +1107,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetoot
 (reserved, not supported yet) Indicates the connection state of Bluetooth handsfree communication.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1264,8 +1124,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetoo
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfree_ag_current_device_update)
@@ -1281,8 +1139,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.
 (reserved, not supported yet) Indicates that the connection state of Bluetooth A2DP has changed.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1300,8 +1156,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_connect_state_update)
@@ -1317,8 +1171,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth
 (reserved, not supported yet) Indicates that the device connected using Bluetooth A2DP is active.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1336,8 +1188,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_playing_state_update)
@@ -1353,8 +1203,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.blue
 (reserved, not supported yet) Indicates that the AVRCP connection state of Bluetooth A2DP has changed.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1372,8 +1220,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_codec_value_update)
@@ -1389,8 +1235,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotede
 (reserved, not supported yet) Indicates that a remote Bluetooth device is discovered.To subscribe to this common event, your application must have the ohos.permission.LOCATION and ohos.permission.USE_BLUETOOTH permissions.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1408,8 +1252,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_class_value_update)
@@ -1425,8 +1267,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remot
 (reserved, not supported yet) Indicates that a low-level (ACL) connection has been established with the remote Bluetooth device.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1444,8 +1284,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.re
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_acl_disconnected)
@@ -1461,8 +1299,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remoted
 (reserved, not supported yet) Indicates that the friendly name of a remote Bluetooth device is retrieved for the first time or has changed since the last retrieval.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1480,8 +1316,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotede
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_pair_state)
@@ -1497,8 +1331,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetoot
 (reserved, not supported yet) Indicates that the battery level of a remote Bluetooth device is retrieved for the first time or has changed since the last retrieval.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1516,8 +1348,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotede
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_sdp_result)
@@ -1533,8 +1363,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotede
 (reserved, not supported yet) Indicates the UUID connection state with a remote Bluetooth device.To subscribe to this common event, your application must have the ohos.permission.DISCOVER_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1552,8 +1380,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remoted
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_pairing_req)
@@ -1569,8 +1395,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL = 'usual.event.bluetooth.remo
 (reserved, not supported yet) Indicates that Bluetooth pairing has been canceled.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1588,8 +1412,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ = 'usual.event.bluetooth.remoted
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_connect_req)
@@ -1605,8 +1427,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY = 'usual.event.bluetooth.remot
 (reserved, not supported yet) Indicates the response to the connection request from a remote Bluetooth device.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1624,8 +1444,6 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL = 'usual.event.bluetooth.remo
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_connect_cancel)
@@ -1641,8 +1459,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE = 'usual.event.bluetoo
 (reserved, not supported yet) Indicates that the connection state with a Bluetooth handsfree has changed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1660,8 +1476,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE = 'usual.event.bluetooth
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfreeunit_audio_state_update)
@@ -1677,8 +1491,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT = 'usual.event.bluetooth.ha
 (reserved, not supported yet) Indicates that the audio gateway state of a Bluetooth handsfree has changed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1696,8 +1508,6 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetoo
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfreeunit_ag_call_state_update)
@@ -1713,8 +1523,6 @@ COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPD
 (reserved, not supported yet) Indicates a change in the Bluetooth adapter state (enabled or disabled).To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1732,8 +1540,6 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_D
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_req_discoverable)
@@ -1749,8 +1555,6 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 (reserved, not supported yet) Indicates that Bluetooth is enabled.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1768,8 +1572,6 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABL
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_req_disable)
@@ -1785,8 +1587,6 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_
 (reserved, not supported yet) Indicates that the Bluetooth scan mode of the device is changed.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1804,8 +1604,6 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISC
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_discovery_started)
@@ -1821,8 +1619,6 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DIS
 (reserved, not supported yet) Indicates that Bluetooth discovery is finished on the device.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1840,8 +1636,6 @@ COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDAT
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_name_update)
@@ -1857,8 +1651,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2
 (reserved, not supported yet) Indicates that the connection state of Bluetooth A2DP Sink has changed.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1876,8 +1668,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsink_playing_state_update)
@@ -1893,8 +1683,6 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dp
 (reserved, not supported yet) Indicates that the audio state of Bluetooth A2DP Sink has changed.To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1912,8 +1700,6 @@ COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_nfc_action_adapter_state_changed)
@@ -1929,8 +1715,6 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_
 (reserved, not supported yet) Indicates that the NFC RF field is detected to be in the enabled state.To subscribe to this common event, your application must have the ohos.permission.MANAGE_SECURE_SETTINGS permission. (This permission is available only for system applications.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1948,8 +1732,6 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_nfc_action_rf_field_off_detected)
@@ -1965,8 +1747,6 @@ COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'
 Indicates that the system stops charging the battery.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -1984,8 +1764,6 @@ Indicates that the system starts charging the battery.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_CHARGING](arkts-basicservices-commoneventmanager-support-e.md#common_event_charging)
@@ -2001,8 +1779,6 @@ COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'
 (reserved, not supported yet) Indicates that the system idle mode has changed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2020,8 +1796,6 @@ Indicates that the system power-saving mode has changed.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_POWER_SAVE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_power_save_mode_changed)
@@ -2037,8 +1811,6 @@ COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 Indicates that a user has been added to the system.To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2056,8 +1828,6 @@ Indicates that a user has been removed from the system.To subscribe to this comm
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_USER_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_removed)
@@ -2073,8 +1843,6 @@ COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 (reserved, not supported yet) Indicates that an ability has been added.To subscribe to this common event, your application must have the ohos.permission.LISTEN_BUNDLE_CHANGE permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2092,8 +1860,6 @@ COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_ABILITY_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_ability_removed)
@@ -2109,8 +1875,6 @@ COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 (reserved, not supported yet) Indicates that an ability has been updated.To subscribe to this common event, your application must have the ohos.permission.LISTEN_BUNDLE_CHANGE permission.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2128,8 +1892,6 @@ COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHAN
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_LOCATION_MODE_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_location_mode_state_changed)
@@ -2145,8 +1907,6 @@ COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 (reserved, not supported yet) Indicates that the in-vehicle infotainment (IVI) system of the vehicle is sleeping.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2164,8 +1924,6 @@ COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_IVI_PAUSE](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_pause)
@@ -2181,8 +1939,6 @@ COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'
 (reserved, not supported yet) Indicates that a third-party application in the IVI system of a vehicle is suspended.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2200,8 +1956,6 @@ COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_IVI_LASTMODE_SAVE](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_lastmode_save)
@@ -2217,8 +1971,6 @@ COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'
 (reserved, not supported yet) Indicates that the voltage of the vehicle's power system is abnormal.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2236,8 +1988,6 @@ COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_IVI_HIGH_TEMPERATURE](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_high_temperature)
@@ -2253,8 +2003,6 @@ COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 (reserved, not supported yet) Indicates that the temperature of the IVI system of the vehicle is extremely high.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2272,8 +2020,6 @@ COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_temperature_abnormal)
@@ -2289,8 +2035,6 @@ COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'
 (reserved, not supported yet) Indicates that the voltage of the vehicle's power system is restored to normal.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2308,8 +2052,6 @@ COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_IVI_TEMPERATURE_RECOVERY](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_temperature_recovery)
@@ -2325,8 +2067,6 @@ COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'
 (reserved, not supported yet) Indicates that the battery service of the vehicle-mounted system is active.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2344,8 +2084,6 @@ Indicates that a USB device has been attached to the device functioning as a USB
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_USB_DEVICE_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_usb_device_attached)
@@ -2361,8 +2099,6 @@ COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_D
 Indicates that a USB device has been detached from the device functioning as a USB host.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2380,8 +2116,6 @@ COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCES
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_USB_ACCESSORY_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_usb_accessory_attached)
@@ -2397,8 +2131,6 @@ COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCES
 (reserved, not supported yet) Indicates that the USB attachment is uninstalled.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2416,8 +2148,6 @@ COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_DISK_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_disk_removed)
@@ -2433,8 +2163,6 @@ COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 (reserved, not supported yet) Indicates that an external storage device was unmounted.To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission. (This permission is available only for system applications.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2452,8 +2180,6 @@ COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_DISK_MOUNTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_disk_mounted)
@@ -2469,8 +2195,6 @@ COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 (reserved, not supported yet) Indicates that an external storage device was removed without being unmounted.To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission. (This permission is available only for system applications.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2488,8 +2212,6 @@ COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_DISK_UNMOUNTABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_disk_unmountable)
@@ -2505,8 +2227,6 @@ COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 (reserved, not supported yet) Indicates that the external storage medium has been ejected (interactive operation at the system software layer, not directly ejected physically).To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission. (This permission is available only for system applications.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2524,8 +2244,6 @@ COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDAT
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED](arkts-basicservices-commoneventmanager-support-e.md#common_event_visible_accounts_updated)
@@ -2541,8 +2259,6 @@ COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 (reserved, not supported yet) Indicates that an account was deleted.To subscribe to this common event, your application must have the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -2560,8 +2276,6 @@ COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_FOUNDATION_READY](arkts-basicservices-commoneventmanager-support-e.md#common_event_foundation_ready)
@@ -2578,8 +2292,6 @@ Indicates that the airplane mode of the device has changed.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [COMMON_EVENT_AIRPLANE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_airplane_mode_changed)
@@ -2595,8 +2307,6 @@ COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'
 Indicates that the screen has been split.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -4,8 +4,6 @@ getInfo interface
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 6
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
@@ -13,7 +11,7 @@ getInfo interface
 ## Modules to Import
 
 ```TypeScript
-import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+import { Device, DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getInfo
@@ -25,8 +23,6 @@ static getInfo(options?: GetDeviceOptions): void
 Obtains the device information.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 6
 

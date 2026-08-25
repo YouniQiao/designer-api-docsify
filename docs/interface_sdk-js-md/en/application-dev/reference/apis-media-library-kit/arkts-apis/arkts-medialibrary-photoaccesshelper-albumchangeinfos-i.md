@@ -4,14 +4,12 @@ Describes the notification information about the change of an album.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## albumChangeDatas
@@ -25,8 +23,6 @@ Array of changed albums. If all albums need to be queried again, **albumChangeDa
 **Type:** [AlbumChangeData](arkts-medialibrary-photoaccesshelper-albumchangedata-i.md)[] \| null
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -43,8 +39,6 @@ Whether the application should query all media assets again. **true** if the app
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## type
@@ -58,7 +52,5 @@ Type of the album change.
 **Type:** [NotifyChangeType](arkts-medialibrary-photoaccesshelper-notifychangetype-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

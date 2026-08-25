@@ -4,8 +4,6 @@ The module defines an observer to listen for application state changes. It can b
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## onAbilityStateChanged
@@ -17,8 +15,6 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 Called when the ability state changes.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -38,8 +34,6 @@ Called when the first process of the application is created.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
@@ -57,8 +51,6 @@ onAppStopped(appStateData: AppStateData): void
 Called when the last process of the application is destroyed.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -78,8 +70,6 @@ Called when the foreground or background state of an application changes.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
@@ -97,8 +87,6 @@ onProcessCreated(processData: ProcessData): void
 Called when a process is created.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -118,8 +106,6 @@ Called when a process is destroyed.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
@@ -137,8 +123,6 @@ onProcessStateChanged(processData: ProcessData): void
 Called when the process state is changed.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

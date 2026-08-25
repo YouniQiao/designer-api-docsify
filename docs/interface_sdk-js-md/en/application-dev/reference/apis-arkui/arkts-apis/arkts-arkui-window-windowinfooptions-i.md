@@ -4,14 +4,12 @@ Filter criteria for window information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## excludeSystemWindows
@@ -28,8 +26,6 @@ Whether the result excludes system windows. If true, the result list does not in
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -39,18 +35,16 @@ Whether the result excludes system windows. If true, the result list does not in
 ## foregroundAboveWindow
 
 ```TypeScript
-foregroundAboveWindow?: int
+foregroundAboveWindow?: number
 ```
 
 Only include windows with a higher z-order than the specified window ID. When this field is set to the default value 0, this field is not used as a filter criterion.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** 0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,18 +55,16 @@ Only include windows with a higher z-order than the specified window ID. When th
 ## foregroundBelowWindow
 
 ```TypeScript
-foregroundBelowWindow?: int
+foregroundBelowWindow?: number
 ```
 
 Only include windows with a lower z-order than the specified window ID. When this field is set to the default value 0, this field is not used as a filter criterion.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Default:** 0
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

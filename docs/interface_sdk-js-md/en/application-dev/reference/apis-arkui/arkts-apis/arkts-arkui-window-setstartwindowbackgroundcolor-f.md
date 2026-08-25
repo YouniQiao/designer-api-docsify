@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## setStartWindowBackgroundColor
@@ -16,8 +16,6 @@ Sets the background color of the splash screen of the UIAbility based on the spe
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -28,7 +26,7 @@ Sets the background color of the splash screen of the UIAbility based on the spe
 | --- | --- | --- |
 | moduleName | string | Yes |
 | abilityName | string | Yes |
-| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Yes |
+| color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes |
 
 **Return value:**
 
@@ -43,21 +41,3 @@ Sets the background color of the splash screen of the UIAbility based on the spe
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ColorMetrics, window } from '@kit.ArkUI';
-
-try {
-  let promise = window.setStartWindowBackgroundColor("entry", "EntryAbility", ColorMetrics.numeric(0xff000000));
-  promise.then(() => {
-    console.info('Succeeded in setting the starting window color.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the starting window color. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set the starting window color. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```

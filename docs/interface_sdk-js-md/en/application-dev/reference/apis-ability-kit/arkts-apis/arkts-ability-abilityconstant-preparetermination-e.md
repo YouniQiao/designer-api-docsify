@@ -4,8 +4,6 @@ Enumerates the actions triggered when an application is closed by the user. You 
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## TERMINATE_IMMEDIATELY
@@ -17,8 +15,6 @@ TERMINATE_IMMEDIATELY = 0
 Executes the termination action immediately. This is the default behavior.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,23 +32,8 @@ Cancels the termination action.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, AbilityStage } from '@kit.AbilityKit';
-
-export default class MyAbilityStage extends AbilityStage {
-  onPrepareTermination(): AbilityConstant.PrepareTermination {
-    console.info('MyAbilityStage.onPrepareTermination is called');
-    return AbilityConstant.PrepareTermination.CANCEL;
-  }
-}
-```

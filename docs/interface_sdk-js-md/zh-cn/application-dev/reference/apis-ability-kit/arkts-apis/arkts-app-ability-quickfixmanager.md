@@ -4,8 +4,6 @@ quickFixManager模块提供快速修复的能力，快速修复是系统提供�
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.QuickFix
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ quickFixManager模块提供快速修复的能力，快速修复是系统提供�
 ## 导入模块
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

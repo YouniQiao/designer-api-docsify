@@ -4,14 +4,12 @@ Defines the RDB store configuration.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## allowRebuild
@@ -28,8 +26,6 @@ Whether to automatically delete the RDB store and create an empty table in the c
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## autoCleanDirtyData
@@ -44,8 +40,6 @@ Whether to automatically clear the dirty data (data that has been deleted from t
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## cryptoParam
@@ -59,8 +53,6 @@ Custom encryption parameters.If this parameter is left empty, the default encryp
 **Type:** [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -77,8 +69,6 @@ Custom database path.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## dataGroupId
@@ -93,8 +83,6 @@ Application group ID. <!--RP1-->Currently, this parameter is not supported.<!--R
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,8 +100,6 @@ Whether to enable the semantic index processing feature for the database. The va
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## encrypt
@@ -129,8 +115,6 @@ Whether to encrypt the RDB store. After the database is created, this parameter 
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -148,8 +132,6 @@ Whether the RDB store is read-only.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## name
@@ -163,8 +145,6 @@ Database file name, which is the unique identifier of the RDB store. Creating tw
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -180,8 +160,6 @@ Whether to persist an RDB store. The value **true** means to persist the RDB sto
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## pluginLibs
@@ -195,8 +173,6 @@ Loads custom dynamic libraries. Multiple dynamic library names can be passed in 
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -212,8 +188,6 @@ Root path of the database.This parameter is supported since API version 18. The 
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## securityLevel
@@ -227,8 +201,6 @@ Security level of the RDB store.SystemCapability.DistributedDataManager.Relation
 **Type:** SecurityLevel
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -244,8 +216,6 @@ Type of the tokenizer to be used for FTS.If this parameter is left blank, Englis
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## vector
@@ -259,7 +229,5 @@ Whether the RDB store is a vector store. The value **true** means the RDB store 
 **Type:** boolean
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

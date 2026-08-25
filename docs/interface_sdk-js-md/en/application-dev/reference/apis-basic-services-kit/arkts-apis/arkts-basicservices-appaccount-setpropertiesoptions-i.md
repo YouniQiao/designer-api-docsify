@@ -4,14 +4,12 @@ Represents the options for setting authenticator properties.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## parameters
@@ -26,8 +24,6 @@ Custom parameter object. By default, no value is passed in.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## properties
@@ -41,7 +37,5 @@ Property object. By default, no value is passed in.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## decapsulate
@@ -16,8 +16,6 @@ function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Arra
 Decapsulates a post-quantum cryptography key. This operation can be managed by HUKS or the app itself. If the app chooses to manage the key, the symmetric key is contained in the outData field of HuksReturnResult.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **System capability:** SystemCapability.Security.Huks.Core
 

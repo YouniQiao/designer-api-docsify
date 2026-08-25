@@ -4,8 +4,6 @@ Enumerates the padding modes that can be used for signing and signature verifica
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_PADDING_NONE
@@ -17,8 +15,6 @@ CM_PADDING_NONE = 0
 No padding.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager
 
@@ -32,8 +28,6 @@ PSS.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_PADDING_PKCS1_V1_5
@@ -45,7 +39,5 @@ CM_PADDING_PKCS1_V1_5 = 2
 PKCS1-V1_5.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

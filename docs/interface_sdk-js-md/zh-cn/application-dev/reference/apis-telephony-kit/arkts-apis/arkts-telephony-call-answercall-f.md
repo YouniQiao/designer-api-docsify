@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## answerCall
@@ -15,8 +15,6 @@ function answerCall(callback: AsyncCallback<void>): void
 接听来电。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ANSWER_CALL or ohos.permission.MANAGE_CALL_FOR_DEVICES
 
@@ -39,49 +37,3 @@ function answerCall(callback: AsyncCallback<void>): void
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall((err: BusinessError) => {
-    if (err) {
-        console.error(`answerCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
-    } else {
-        console.info(`answerCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`answerCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`answerCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(1).then(() => {
-    console.info(`answerCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.answerCall(0, 1).then(() => {
-    console.info(`answerCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`answerCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```

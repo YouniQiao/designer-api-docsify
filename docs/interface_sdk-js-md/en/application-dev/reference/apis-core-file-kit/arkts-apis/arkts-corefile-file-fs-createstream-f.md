@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## createStream
@@ -17,8 +17,6 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 Creates a stream based on a file path. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -69,32 +67,6 @@ Creates a stream based on a file path. This API uses a promise to return the res
 | 13900042 |
 | 13900044 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-fs.createStream(filePath, "a+").then((stream: fs.Stream) => {
-  stream.closeSync();
-  console.info("createStream succeed");
-}).catch((err: BusinessError) => {
-  console.error("createStream failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + "/test.txt";
-fs.createStream(filePath, "r+", (err: BusinessError, stream: fs.Stream) => {
-  if (err) {
-    console.error("create stream failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    stream.closeSync();
-    console.info("createStream succeed");
-  }
-})
-```
-
 
 ## createStream
 
@@ -105,8 +77,6 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 Creates a stream based on a file path. This API uses an asynchronous callback to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -150,7 +120,3 @@ Creates a stream based on a file path. This API uses an asynchronous callback to
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [createStream](#createstream)

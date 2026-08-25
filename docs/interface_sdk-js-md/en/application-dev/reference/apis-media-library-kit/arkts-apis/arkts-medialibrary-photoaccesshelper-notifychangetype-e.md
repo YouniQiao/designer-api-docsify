@@ -4,8 +4,6 @@ Enumerates the types of changes that trigger the media asset or album change eve
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## NOTIFY_CHANGE_ADD
@@ -17,8 +15,6 @@ NOTIFY_CHANGE_ADD = 0
 A media asset or an album is created.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -32,8 +28,6 @@ A media asset or an album is modified.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## NOTIFY_CHANGE_REMOVE
@@ -45,7 +39,5 @@ NOTIFY_CHANGE_REMOVE = 2
 A media asset or an album is deleted.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

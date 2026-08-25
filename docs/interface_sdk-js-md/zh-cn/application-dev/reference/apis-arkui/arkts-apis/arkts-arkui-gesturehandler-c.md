@@ -6,8 +6,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ allowedTypes(types: Array<SourceTool>): T
 
 **起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -37,7 +33,7 @@ allowedTypes(types: Array<SourceTool>): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array & lt;SourceTool & gt; | 是 |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | 是 |
 
 **返回值：**
 
@@ -54,8 +50,6 @@ tag(tag: string): T
 设置手势处理器的标志。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

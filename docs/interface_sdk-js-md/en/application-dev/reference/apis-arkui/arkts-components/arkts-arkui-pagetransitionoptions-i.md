@@ -4,8 +4,6 @@ Parameters of the exit or entrance animation.@interface PageTransitionOptions
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,15 +17,13 @@ Parameters of the exit or entrance animation.@interface PageTransitionOptions
 curve?: Curve | string | ICurve
 ```
 
-Animation curve.You are advised to specify the curve using the **Curve** or **ICurve** type.For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in AnimateParam.Default value: **Curve.Linear**
+Animation curve.You are advised to specify the curve using the **Curve** or **ICurve** type.For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md).Default value: **Curve.Linear**
 
 **Type:** Curve \| string \| ICurve
 
 **Default:** Curve.Linear
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,8 +44,6 @@ Animation delay.Unit: ms Default value: **0**
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -66,8 +60,6 @@ Animation duration.Unit: ms Default value: **1000**Value range: [0, +∞)
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -83,8 +75,6 @@ Route type for the page transition effect to take effect.Default value: **RouteT
 **Type:** [RouteType](arkts-arkui-routetype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

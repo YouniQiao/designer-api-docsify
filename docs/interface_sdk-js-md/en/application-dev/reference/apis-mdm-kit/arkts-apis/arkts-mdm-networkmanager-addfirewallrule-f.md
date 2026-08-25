@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addFirewallRule
@@ -27,8 +27,6 @@ Adds firewall rules for the device. This API is suitable for enterprise network 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -50,36 +48,3 @@ Adds firewall rules for the device. This API is suitable for enterprise network 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let firewallRule: networkManager.FirewallRule = {
-  // Replace with actual values.
-  "srcAddr": "192.168.1.1-192.168.22.66",
-  "destAddr": "10.1.1.1",
-  "srcPort": "8080",
-  "destPort": "8080",
-  "appUid": "9696",
-  "direction": networkManager.Direction.OUTPUT,
-  "action": networkManager.Action.DENY,
-  "protocol": networkManager.Protocol.UDP,
-  "family": 1,
-  "logType": networkManager.LogType.NFLOG
-};
-
-try {
-  networkManager.addFirewallRule(wantTemp, firewallRule);
-  console.info('Succeeded in adding firewall rule.');
-} catch (err) {
-  console.error(`Failed to add firewall rule. Code: ${err.code}, message: ${err.message}`);
-}
-```

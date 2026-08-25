@@ -15,8 +15,6 @@ Queries tool permissions based on the specified operations. This function checks
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 **System capability:** SystemCapability.Security.Asset

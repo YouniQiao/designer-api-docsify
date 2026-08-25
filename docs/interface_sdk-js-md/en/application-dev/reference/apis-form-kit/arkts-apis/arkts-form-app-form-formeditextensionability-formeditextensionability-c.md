@@ -6,14 +6,12 @@ The **FormEditExtensionAbility** module, inherited from [UIExtensionAbility](../
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## Modules to Import
 
 ```TypeScript
-import { FormEditExtensionAbility } from '@kit.FormKit';
+import { FormEditExtensionAbility } from 'kits/@kit.FormKit';
 ```
 
 ## context
@@ -27,26 +25,6 @@ Indicates configuration information about a form edit extension ability context.
 **Type:** [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.Form
-
-## formEditContext
-
-```TypeScript
-formEditContext: FormEditExtensionContext
-```
-
-Indicates configuration information about a form edit extension ability context.
-
-**Type:** [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

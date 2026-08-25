@@ -6,8 +6,6 @@ StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上�
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -15,7 +13,7 @@ StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上�
 ## 导入模块
 
 ```TypeScript
-import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionContext } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## startAbility
@@ -27,8 +25,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 拉起与静态订阅同属一个应用的Ability。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
@@ -66,109 +62,6 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 | [16300003](../../apis-ability-kit/errorcode-ability.md#16300003-目标应用程序不是自身应用程序) |
 
-**示例**
-
-```TypeScript
-import { commonEventManager, BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let want: Want = {
-  bundleName: "com.example.myapp",
-  abilityName: "MyAbility"
-};
-
-class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
-  onReceiveEvent(event: commonEventManager.CommonEventData) {
-    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-
-    try {
-      this.context.startAbility(want, (error: BusinessError) => {
-        if (error) {
-          // 处理业务逻辑错误
-          console.error(`startAbility failed, error.code: ${JSON.stringify(error.code)}, error.message: ${JSON.stringify(error.message)}.`);
-          return;
-        }
-        // 执行正常业务
-        console.info('startAbility succeed');
-      });
-    } catch (paramError) {
-      // 处理入参错误异常
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`startAbility failed, error.code: ${JSON.stringify(code)}, error.message: ${JSON.stringify(message)}.`);
-    }
-  }
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { commonEventManager, BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let want: Want = {
-  bundleName: "com.example.myapp",
-  abilityName: "MyAbility"
-};
-
-class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
-  onReceiveEvent(event: commonEventManager.CommonEventData) {
-    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-    try {
-      this.context.startAbility(want)
-        .then(() => {
-          // 执行正常业务
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`startAbility failed, error.code: ${JSON.stringify(error.code)}, error.message: ${JSON.stringify(error.message)}.`);
-        });
-    } catch (paramError) {
-      // 处理入参错误异常
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`startAbility failed, error.code: ${JSON.stringify(code)}, error.message: ${JSON.stringify(message)}.`);
-    }
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { commonEventManager, BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let want: Want = {
-  bundleName: "com.example.myapp",
-  abilityName: "MyAbility"
-};
-
-class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
-  onReceiveEvent(event: commonEventManager.CommonEventData) {
-    console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-    try {
-      this.context.startAbility(want)
-        .then(() => {
-          // 执行正常业务
-          console.info('startAbility succeed');
-        })
-        .catch((error) => {
-          // 处理业务逻辑错误
-          console.error(`startAbility failed, error.code: ${(error.code)}, error.message: ${(error.message)}.`);
-        });
-    } catch (paramError) {
-      // 处理入参错误异常
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`startAbility failed, error.code: ${JSON.stringify(code)}, error.message: ${JSON.stringify(message)}.`);
-    }
-  }
-}
-```
-
 ## startAbility
 
 ```TypeScript
@@ -178,8 +71,6 @@ startAbility(want: Want): Promise<void>
 拉起与静态订阅同属一个应用的Ability。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
@@ -221,7 +112,3 @@ startAbility(want: Want): Promise<void>
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 | [16300003](../../apis-ability-kit/errorcode-ability.md#16300003-目标应用程序不是自身应用程序) |
-
-**示例**
-
-参见 [startAbility](#startability)

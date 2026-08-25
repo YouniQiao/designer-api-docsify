@@ -4,8 +4,6 @@ Describes the request parameters for obtaining the data required for locating.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Describes the request parameters for obtaining the data required for locating.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## arfcn
 
 ```TypeScript
-arfcn?: int[]
+arfcn?: number[]
 ```
 
 Indicates absolute radio frequency channel number (ARFCN). Querying Cell Information by Specified ARFCN.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Indicates whether to start scanning.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Location.Location.Core
 
 **System API:** This is a system API.
@@ -57,16 +51,14 @@ Indicates whether to start scanning.
 ## plmnId
 
 ```TypeScript
-plmnId?: int[]
+plmnId?: number[]
 ```
 
 Indicates PLMN number of the SIM card.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** number[]
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,16 +69,14 @@ Indicates PLMN number of the SIM card.
 ## scanInterval
 
 ```TypeScript
-scanInterval?: int
+scanInterval?: number
 ```
 
 Indicates the interval between scans. The unit is millisecond. This parameter needs to be set only when scanning information is continuously monitored.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -95,16 +85,14 @@ Indicates the interval between scans. The unit is millisecond. This parameter ne
 ## scanTimeout
 
 ```TypeScript
-scanTimeout?: int
+scanTimeout?: number
 ```
 
 Indicates the timeout period of a single scan. The unit is millisecond. The default value is 10000. This parameter needs to be set only when getLocatingRequiredData is used.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -113,16 +101,14 @@ Indicates the timeout period of a single scan. The unit is millisecond. The defa
 ## slotId
 
 ```TypeScript
-slotId?: int
+slotId?: number
 ```
 
 Indicates SIM card slot number. The value should be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,8 +127,6 @@ Indicates the type of locating required data.
 **Type:** [LocatingRequiredDataType](arkts-location-geolocationmanager-locatingrequireddatatype-e-sys.md)
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Location.Location.Core
 

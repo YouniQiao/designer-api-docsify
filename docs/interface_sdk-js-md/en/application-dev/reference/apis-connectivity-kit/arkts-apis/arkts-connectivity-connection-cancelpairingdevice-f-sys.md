@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## cancelPairingDevice
@@ -15,8 +15,6 @@ function cancelPairingDevice(deviceId: string, callback: AsyncCallback<void>): v
 Remove a pairing remote device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -45,26 +43,6 @@ Remove a pairing remote device.
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.cancelPairingDevice('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.cancelPairingDevice('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## cancelPairingDevice
 
@@ -75,8 +53,6 @@ function cancelPairingDevice(deviceId: string): Promise<void>
 Remove a pairing remote device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -109,7 +85,3 @@ Remove a pairing remote device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-See [cancelPairingDevice](#cancelpairingdevice)

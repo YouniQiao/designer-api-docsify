@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'kits/@kit.NetworkKit';
 ```
 
 ## constructLocalSocketServerInstance
@@ -16,8 +16,6 @@ function constructLocalSocketServerInstance(): LocalSocketServer
 
 **起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 **返回值：**
@@ -25,10 +23,3 @@ function constructLocalSocketServerInstance(): LocalSocketServer
 | 类型 |
 | --- |
 | [LocalSocketServer](arkts-network-socket-localsocketserver-i.md) |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-```

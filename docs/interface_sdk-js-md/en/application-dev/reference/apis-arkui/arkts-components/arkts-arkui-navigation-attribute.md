@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ Sets the icon of the back button in the title bar.
 > the type of animation effects through the **symbolEffect** attribute.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,8 +54,6 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -82,8 +76,6 @@ configuration(config: NavigationConfiguration)
 Sets Navigation configuration.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,8 +103,6 @@ Defines the callback of the custom transition animation.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -134,8 +124,6 @@ divider(style: NavigationDividerStyle | null)
 Sets the divider style in the split-column mode of the **Navigation** component.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,8 +147,6 @@ Sets whether to display a drag bar in split-column scenarios. This attribute has
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -171,7 +157,7 @@ Sets whether to display a drag bar in split-column scenarios. This attribute has
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isEnabled | Optional & lt;boolean & gt; | Yes |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## enableModeChangeAnimation
 
@@ -183,8 +169,6 @@ Sets whether to enable the animation for switching between single- and split-col
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -195,7 +179,7 @@ Sets whether to enable the animation for switching between single- and split-col
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isEnabled | Optional & lt;boolean & gt; | Yes |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## enableToolBarAdaptation
 
@@ -207,8 +191,6 @@ Sets whether to enable toolbar adaptation ([toolbarConfiguration](#toolbarconfig
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -219,7 +201,7 @@ Sets whether to enable toolbar adaptation ([toolbarConfiguration](#toolbarconfig
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | Yes |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## enableVisibilityLifecycleWithContentCover
 
@@ -227,11 +209,9 @@ Sets whether to enable toolbar adaptation ([toolbarConfiguration](#toolbarconfig
 enableVisibilityLifecycleWithContentCover(isEnabled: Optional<boolean>)
 ```
 
-Sets whether to enable the linkage between the onShown and onHidden lifecycle callbacks of the NavDestination page and the full-modal triggering.
+Sets whether to enable the linkage between the [onShown](arkts-arkui-navdestination-attribute.md#onshown) and onHidden lifecycle callbacks of the NavDestination page and the full-modal triggering.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -243,7 +223,7 @@ Sets whether to enable the linkage between the onShown and onHidden lifecycle ca
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isEnabled | Optional & lt;boolean & gt; | Yes |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## hideBackButton
 
@@ -254,8 +234,6 @@ hideBackButton(value: boolean)
 Sets whether to hide the back button in the title bar. The back button takes effect only when [titleMode](#titlemode) is set to **NavigationTitleMode.Mini**.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -277,8 +255,6 @@ Sets whether to hide the navigation page. If the value is set to **true**, the n
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -299,8 +275,6 @@ Specifies whether to hide the title bar.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -320,8 +294,6 @@ hideTitleBar(hide: boolean, animated: boolean)
 Specifies whether to hide the title bar. Compared with [hideTitleBar](#hidetitlebar), this API adds the capability to control whether to animate the visibility change of the title bar.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -346,8 +318,6 @@ Specifies whether to hide the toolbar.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -367,8 +337,6 @@ hideToolBar(hide: boolean, animated: boolean)
 Specifies whether to hide the toolbar. Compared with [hideToolBar](#hidetoolbar), this API adds the capability to control whether to animate the visibility change of the toolbar.
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -404,8 +372,6 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -416,8 +382,8 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array & lt;LayoutSafeAreaType & gt; | No |
-| edges | Array & lt;LayoutSafeAreaEdge & gt; | No |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md)&gt; | No |
+| edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt; | No |
 
 ## menus
 
@@ -433,8 +399,6 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 > the type of animation effects through the **symbolEffect** attribute.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -462,8 +426,6 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 **Since:** 19
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -487,8 +449,6 @@ Minimum width of the navigation bar content area (effective in split-column mode
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -511,8 +471,6 @@ Sets the display mode of the navigation page.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -532,8 +490,6 @@ navBarPosition(value: NavBarPosition)
 Sets the position of the navigation page. It takes effect only when [mode](#mode) is set to **NavigationMode.Auto** or **NavigationMode.Split**.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -555,8 +511,6 @@ Set the width of the navigation page. It takes effect only when [mode](#mode) is
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -577,8 +531,6 @@ Sets the minimum and maximum widths of the navigation page (effective in split-c
 | Condition| Dragging Range | | ----| ----------- | |Both **navBarWidthRange** and **minContentWidth** are set.| Range set by **navBarWidthRange** if the value set by **minContentWidth** is satisfied| |Neither **navBarWidthRange** nor **minContentWidth** is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidthRange** attribute is set.| Range set by **navBarWidthRange**, where the maximum dragging range cannot exceed the default value of **minContentWidth**| |Only the **minContentWidth** attribute is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidth** attribute is set.|
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -602,8 +554,6 @@ Creates a **NavDestination** component. The builder receives the **name** and **
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -626,8 +576,6 @@ Callback invoked when the navigation page visibility status changes.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -647,8 +595,6 @@ onNavigationModeChange(callback: (mode: NavigationMode) => void)
 Triggered when the **Navigation** component is displayed for the first time or its display mode switches between single-column and split-column.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -671,8 +617,6 @@ onTitleModeChange(callback: (titleMode: NavigationTitleMode) => void)
 Triggered when [titleMode](#titlemode) is set to **NavigationTitleMode.Free** and the title bar mode changes as content scrolls.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -708,8 +652,6 @@ Sets whether the **Navigation** component is recoverable. If set to recoverable,
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -718,7 +660,7 @@ Sets whether the **Navigation** component is recoverable. If set to recoverable,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [recoverable](#recoverable) | Optional & lt;boolean & gt; | Yes |
+| [recoverable](#recoverable) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## splitPlaceholder
 
@@ -729,8 +671,6 @@ splitPlaceholder(placeholder: ComponentContent)
 Sets a default placeholder page for the right column in the **Navigation** component's split-column mode. The placeholder page is for UI display only and cannot receive focus or respond to events.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -755,8 +695,6 @@ Sets the page subtitle.
 > **NOTE：**
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -801,8 +739,6 @@ Sets the style of the system status bar when the home page of the **Navigation**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -813,7 +749,7 @@ Sets the style of the system status bar when the home page of the **Navigation**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | Optional&lt;[SystemBarStyle](arkts-arkui-systembarstyle-t.md)&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[SystemBarStyle](arkts-arkui-systembarstyle-t.md)&gt; | Yes |
 
 ## title
 
@@ -828,8 +764,6 @@ Sets the page title.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -838,7 +772,7 @@ Sets the page title.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | ResourceStr \| CustomBuilder \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | Yes |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | Yes |
 | options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | No |
 
 ## titleMode
@@ -850,8 +784,6 @@ titleMode(value: NavigationTitleMode)
 Sets the display mode of the page title bar.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -873,8 +805,6 @@ Sets the content of the toolbar. If this attribute is not set, no toolbar is dis
 **object**
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 10
 
@@ -903,8 +833,6 @@ Sets the content of the toolbar. If this attribute is not set, no toolbar is dis
 > the type of animation effects through the **symbolEffect** attribute.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

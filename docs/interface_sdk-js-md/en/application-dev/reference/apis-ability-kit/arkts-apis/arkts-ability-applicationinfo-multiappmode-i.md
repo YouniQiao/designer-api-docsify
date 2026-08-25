@@ -4,23 +4,19 @@ Defines the [multi-app mode](../../../quick-start/multiInstance.md).
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## maxCount
 
 ```TypeScript
-readonly maxCount: int
+readonly maxCount: number
 ```
 
 Indicates the max count of the bundle,the unit is quantity.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -35,7 +31,5 @@ Indicates the multiAppModeType of the bundle
 **Type:** bundleManager.MultiAppModeType
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

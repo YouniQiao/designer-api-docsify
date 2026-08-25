@@ -4,8 +4,6 @@ Provides session information, including the requester information, target abilit
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Provides session information, including the requester information, target abilit
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
+import { dialogSession } from 'kits/@kit.AbilityKit';
 ```
 
 ## callerAbilityInfo
@@ -27,8 +25,6 @@ Ability information of the requester.
 **Type:** [DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Other parameters.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -67,8 +61,6 @@ List of target ability information.
 **Type:** Array&lt;[DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)&gt;
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

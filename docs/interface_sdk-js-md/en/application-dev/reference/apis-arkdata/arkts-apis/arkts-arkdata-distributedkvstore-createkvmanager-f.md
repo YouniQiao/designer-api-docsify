@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## createKVManager
@@ -15,8 +15,6 @@ function createKVManager(config: KVManagerConfig): KVManager
 Creates a **KVManager** instance for KV store management.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,64 +37,3 @@ Creates a **KVManager** instance for KV store management.
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let kvManager: distributedKVStore.KVManager;
-let appId: string = 'com.example.datamanagertest';
-
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    console.info("MyAbilityStage onCreate");
-    let context = this.context;
-    const kvManagerConfig: distributedKVStore.KVManagerConfig = {
-      context: context,
-      bundleName: appId
-    }
-    try {
-      kvManager = distributedKVStore.createKVManager(kvManagerConfig);
-      console.info("Succeeded in creating KVManager");
-    } catch (e) {
-      let error = e as BusinessError;
-      console.error(`Failed to create KVManager.code is ${error.code},message is ${error.message}`);
-    }
-    if (kvManager !== undefined) {
-      // Perform subsequent operations such as creating a KV store.
-      // ...
-    }
-  }
-}
-```
-
-FA model:
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let kvManager: distributedKVStore.KVManager;
-let appId: string = 'com.example.datamanagertest';
-let context = featureAbility.getContext();
-const kvManagerConfig: distributedKVStore.KVManagerConfig = {
-  context: context,
-  bundleName: appId
-}
-try {
-  kvManager = distributedKVStore.createKVManager(kvManagerConfig);
-  console.info("Succeeded in creating KVManager");
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`Failed to create KVManager.code is ${error.code},message is ${error.message}`);
-}
-if (kvManager !== undefined) {
-  kvManager = kvManager as distributedKVStore.KVManager;
-  // Perform subsequent operations such as creating a KV store.
-  // ...
-}
-```

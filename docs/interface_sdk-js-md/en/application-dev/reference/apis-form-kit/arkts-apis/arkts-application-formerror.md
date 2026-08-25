@@ -4,14 +4,12 @@ interface of formError.@namespace formError
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## Modules to Import
 
 ```TypeScript
-import { formError } from '@kit.FormKit';
+import { formError } from 'kits/@kit.FormKit';
 ```
 
 ## Summary

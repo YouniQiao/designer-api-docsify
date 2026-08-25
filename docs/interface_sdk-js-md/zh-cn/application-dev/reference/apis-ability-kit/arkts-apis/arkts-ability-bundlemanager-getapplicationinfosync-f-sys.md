@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getApplicationInfoSync
 
 ```TypeScript
-function getApplicationInfoSync(bundleName: string, applicationFlags: int, userId: int) : ApplicationInfo
+function getApplicationInfoSync(bundleName: string, applicationFlags: number, userId: number) : ApplicationInfo
 ```
 
 以同步方法根据给定的bundleName、applicationFlags和userId获取ApplicationInfo。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -29,8 +27,8 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: int, userI
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| applicationFlags | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| applicationFlags | number | 是 |
+| userId | number | 是 |
 
 **返回值：**
 
@@ -49,55 +47,16 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: int, userI
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
 
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let applicationFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
-let userId = 100;
-
-try {
-  let data = bundleManager.getApplicationInfoSync(bundleName, applicationFlags, userId);
-  hilog.info(0x0000, 'testTag', 'getApplicationInfoSync successfully: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getApplicationInfoSync failed: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let applicationFlags = bundleManager.ApplicationFlag.GET_APPLICATION_INFO_DEFAULT;
-
-try {
-  let data = bundleManager.getApplicationInfoSync(bundleName, applicationFlags);
-  hilog.info(0x0000, 'testTag', 'getApplicationInfoSync successfully: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getApplicationInfoSync failed: %{public}s', message);
-}
-```
-
 
 ## getApplicationInfoSync
 
 ```TypeScript
-function getApplicationInfoSync(bundleName: string, applicationFlags: int) : ApplicationInfo
+function getApplicationInfoSync(bundleName: string, applicationFlags: number) : ApplicationInfo
 ```
 
 以同步方法根据给定的bundleName、applicationFlags获取ApplicationInfo。获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -110,7 +69,7 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: int) : App
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| applicationFlags | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| applicationFlags | number | 是 |
 
 **返回值：**
 
@@ -127,7 +86,3 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: int) : App
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
-
-**示例**
-
-参见 [getApplicationInfoSync](#getapplicationinfosync)

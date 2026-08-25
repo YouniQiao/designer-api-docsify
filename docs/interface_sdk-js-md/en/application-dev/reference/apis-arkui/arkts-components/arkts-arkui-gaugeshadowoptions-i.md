@@ -1,12 +1,10 @@
 # GaugeShadowOptions
 
-Inherits from MultiShadowOptions and has all attributes of **MultiShadowOptions**.
+Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has all attributes of **MultiShadowOptions**.
 
-**Inheritance/Implementation:** GaugeShadowOptions extends MultiShadowOptions
+**Inheritance/Implementation:** GaugeShadowOptions extends [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

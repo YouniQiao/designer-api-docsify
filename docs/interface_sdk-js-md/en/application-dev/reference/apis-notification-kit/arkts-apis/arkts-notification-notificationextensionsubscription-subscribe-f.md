@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 ```
 
 ## subscribe
@@ -15,8 +15,6 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 Subscribes to the notification extension. You can subscribe to the notification extension only after obtaining the unique address of the Bluetooth device by calling the APIs related to the [Bluetooth modules](../../../connectivity/connectivity-kit-intro.md#bluetooth). This API uses a promise to return the result.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -48,19 +46,3 @@ getSubscribeInfo obtains all
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600023](../errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) |
-
-**Examples**
-
-```TypeScript
-let infos: notificationExtensionSubscription.NotificationExtensionSubscriptionInfo[] = [
-  {
-    addr: '01:23:45:67:89:AB', // Use the dynamically obtained Bluetooth address.
-    type: notificationExtensionSubscription.SubscribeType.BLUETOOTH
-  }
-];
-notificationExtensionSubscription.subscribe(infos).then(() => {
-  console.info("subscribe success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribe fail: ${JSON.stringify(err)}`);
-});
-```

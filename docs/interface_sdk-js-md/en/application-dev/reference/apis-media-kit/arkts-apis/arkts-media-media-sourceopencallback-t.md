@@ -1,7 +1,7 @@
 # SourceOpenCallback
 
 ```TypeScript
-type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long
+type SourceOpenCallback = (request: MediaSourceLoadingRequest) => number
 ```
 
 This callback function is implemented by applications to handle resource open requests and return a unique handle for the opened resource.
@@ -10,8 +10,6 @@ This callback function is implemented by applications to handle resource open re
 > The client must return the handle immediately after processing the request.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -27,22 +25,4 @@ This callback function is implemented by applications to handle resource open re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
-
-**Examples**
-
-```TypeScript
-import { HashMap } from '@kit.ArkTS';
-import { media } from '@kit.MediaKit';
-
-let uuid: number = 1;
-let requests: HashMap<number, media.MediaSourceLoadingRequest> = new HashMap();
-
-let sourceOpenCallback: media.SourceOpenCallback = (request: media.MediaSourceLoadingRequest) => {
-  console.info(`Opening resource: ${request.url}`);
-  // Open the resource and return a unique handle, ensuring the mapping between the UUID and request.
-  uuid += 1;
-  requests.set(uuid, request);
-  return uuid;
-};
-```
+| number |

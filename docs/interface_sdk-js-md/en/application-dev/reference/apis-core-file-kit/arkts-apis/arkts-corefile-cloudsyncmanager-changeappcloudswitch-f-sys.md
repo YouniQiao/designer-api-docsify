@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## changeAppCloudSwitch
@@ -15,8 +15,6 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 Changes the device-cloud file sync switch for an application. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -44,34 +42,6 @@ Changes the device-cloud file sync switch for an application. This API uses a pr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true).then(() => {
-  console.info("changeAppCloudSwitch successfully");
-}).catch((err: BusinessError) => {
-  console.error("changeAppCloudSwitch failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: BusinessError) => {
-  if (err) {
-    console.error("changeAppCloudSwitch failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("changeAppCloudSwitch successfully");
-  }
-});
-```
-
 
 ## changeAppCloudSwitch
 
@@ -82,8 +52,6 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 Changes the device-cloud file sync switch for an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
@@ -105,7 +73,3 @@ Changes the device-cloud file sync switch for an application. This API uses an a
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [changeAppCloudSwitch](#changeappcloudswitch)

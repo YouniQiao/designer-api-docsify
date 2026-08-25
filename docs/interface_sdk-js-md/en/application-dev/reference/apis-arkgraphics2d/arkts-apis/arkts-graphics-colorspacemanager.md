@@ -4,14 +4,12 @@ This module provides basic capabilities for managing abstract color space object
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
+import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## Summary

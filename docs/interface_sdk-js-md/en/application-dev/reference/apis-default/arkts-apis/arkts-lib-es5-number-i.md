@@ -1,7 +1,5 @@
 # Number
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ toExponential(fractionDigits?: number): string
 ```
 
 Returns a string containing a number represented in exponential notation.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ toFixed(fractionDigits?: number): string
 
 Returns a string representing a number in fixed-point notation.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -54,8 +48,6 @@ toLocaleString(locales?: string | string[], options?: Intl.NumberFormatOptions):
 ```
 
 Converts a number to a string by using the current or specified locale.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -76,8 +68,6 @@ toPrecision(precision?: number): string
 
 Returns a string containing a number represented either in exponential or fixed-point notation with a specified number of digits.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -96,8 +86,6 @@ toString(radix?: number): string
 
 Returns a string representation of an object.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -115,8 +103,6 @@ valueOf(): number
 ```
 
 Returns the primitive value of the specified object.
-
-**ArkTS mode:** 
 
 **Return value:**
 

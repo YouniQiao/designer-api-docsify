@@ -4,8 +4,6 @@ Defines published device information.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -15,7 +13,7 @@ Defines published device information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## freq
@@ -29,8 +27,6 @@ Frequency of device discovery.
 **Type:** [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 
@@ -50,8 +46,6 @@ Device discovery mode.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -70,8 +64,6 @@ ID used to identify a publication period.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -89,8 +81,6 @@ Whether the device supports ranging. The value **true** indicates that the devic
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 11
 

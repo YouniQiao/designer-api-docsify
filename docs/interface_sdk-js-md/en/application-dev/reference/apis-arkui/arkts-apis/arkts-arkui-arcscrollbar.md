@@ -3,17 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
+import { ArcScrollBar, ArcScrollBarAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary
-
-### Functions
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-arcscrollbar-f.md) |
-| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-arcscrollbar-f.md) |
 
 ### Classes
 
@@ -25,7 +18,6 @@ import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-i.md) |
 | [ArcScrollBarInterface](arkts-arkui-arkui-arcscrollbar-arcscrollbarinterface-i.md) |
 | [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) |
 
@@ -33,5 +25,5 @@ import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-con.md#arcscrollbar) |
+| [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-con.md) |
 | [ArcScrollBarInstance](arkts-arkui-arkui-arcscrollbar-con.md#arcscrollbarinstance) |

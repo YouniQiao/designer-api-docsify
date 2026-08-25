@@ -4,8 +4,6 @@ Agent卡片的类型。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
 ## LOW_CODE
@@ -17,8 +15,6 @@ LOW_CODE = 2
 低代码型Agent卡片，仅系统应用可使用，适用于系统应用提供的快速构建和部署的智能体能力，支持通过可视化配置或简单脚本快速创建Agent，无需编写完整代码，降低Agent开发门槛。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

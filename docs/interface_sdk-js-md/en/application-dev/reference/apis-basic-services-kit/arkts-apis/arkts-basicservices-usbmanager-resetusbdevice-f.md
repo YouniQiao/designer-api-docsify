@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## resetUsbDevice
@@ -19,8 +19,6 @@ Resets a USB peripheral.
 > calling this API.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -46,24 +44,3 @@ Resets a USB peripheral.
 | [14400010](../errorcode-usb.md#14400010-unrecognized-error) |
 | [14400013](../errorcode-usb.md#14400013-parameter-validity-check-failed) |
 | [14400004](../errorcode-usb.md#14400004-service-exception) |
-
-**Examples**
-
-```TypeScript
-function resetUsbDevice() {
-  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-  if (!devicesList || devicesList.length == 0) {
-    console.error(`device list is empty`);
-    return;
-  }
-
-  usbManager.requestRight(devicesList[0].name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
-  try {
-    let ret: boolean = usbManager.resetUsbDevice(devicepipe);
-    console.info(`resetUsbDevice  = ${ret}`);
-  } catch (err) {
-    console.error(`resetUsbDevice failed: ` + err);
-  }
-}
-```

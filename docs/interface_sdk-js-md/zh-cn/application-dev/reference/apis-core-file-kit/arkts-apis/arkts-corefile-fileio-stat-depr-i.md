@@ -4,8 +4,6 @@
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [Stat](arkts-corefile-file-fs-stat-i.md)
@@ -27,8 +25,6 @@ isBlockDevice(): boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isblockdevice)
@@ -41,18 +37,6 @@ isBlockDevice(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isBLockDevice = fileio.statSync(filePath).isBlockDevice();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isBLockDevice = dir.readSync().isBlockDevice();
-```
-
 ## isCharacterDevice
 
 ```TypeScript
@@ -62,8 +46,6 @@ isCharacterDevice(): boolean
 用于判断文件是否是字符特殊文件。一个字符特殊设备可进行随机访问，且访问的时候不带缓存。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -77,18 +59,6 @@ isCharacterDevice(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isCharacterDevice = fileio.statSync(filePath).isCharacterDevice();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isCharacterDevice = dir.readSync().isCharacterDevice();
-```
-
 ## isDirectory
 
 ```TypeScript
@@ -98,8 +68,6 @@ isDirectory(): boolean
 用于判断文件是否是目录。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -113,18 +81,6 @@ isDirectory(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let dirPath = pathDir + "/test";
-let isDirectory = fileio.statSync(dirPath).isDirectory();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isDirectory = dir.readSync().isDirectory();
-```
-
 ## isFIFO
 
 ```TypeScript
@@ -134,8 +90,6 @@ isFIFO(): boolean
 用于判断文件是否是命名管道（有时也称为FIFO）。命名管道通常用于进程间通信。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -149,18 +103,6 @@ isFIFO(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFIFO = fileio.statSync(filePath).isFIFO();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isFIFO = dir.readSync().isFIFO();
-```
-
 ## isFile
 
 ```TypeScript
@@ -170,8 +112,6 @@ isFile(): boolean
 用于判断文件是否是普通文件。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -185,18 +125,6 @@ isFile(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isFile = fileio.statSync(filePath).isFile();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isFile = dir.readSync().isFile();
-```
-
 ## isSocket
 
 ```TypeScript
@@ -206,8 +134,6 @@ isSocket(): boolean
 用于判断文件是否是套接字。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -221,18 +147,6 @@ isSocket(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let isSocket = fileio.statSync(filePath).isSocket();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isSocket = dir.readSync().isSocket();
-```
-
 ## isSymbolicLink
 
 ```TypeScript
@@ -242,8 +156,6 @@ isSymbolicLink(): boolean
 用于判断文件是否是符号链接。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -257,18 +169,6 @@ isSymbolicLink(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test";
-let isSymbolicLink = fileio.statSync(filePath).isSymbolicLink();
-```
-
-```TypeScript
-let dir = fileio.opendirSync(pathDir);
-let isSymbolicLink = dir.readSync().isSymbolicLink();
-```
-
 ## atime
 
 ```TypeScript
@@ -280,8 +180,6 @@ readonly atime: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -301,8 +199,6 @@ readonly blocks: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -318,8 +214,6 @@ readonly ctime: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -339,8 +233,6 @@ readonly dev: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -356,8 +248,6 @@ readonly gid: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -377,8 +267,6 @@ readonly ino: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** ino
@@ -391,13 +279,31 @@ readonly ino: number
 readonly mode: number
 ```
 
-表示文件类型及权限，其首4位表示文件类型，后12位表示权限。各特征位的含义如下： - 0o170000：可用于获取文件类型的掩码。 - 0o140000：文件是套接字。 - 0o120000：文件是符号链接。 - 0o100000：文件是一般文件。 - 0o060000：文件属于块设备。 - 0o040000：文件是目录。 - 0o020000：文件是字符设备。 - 0o010000：文件是命名管道，即FIFO。 - 0o0700：可用于获取用户权限的掩码。 - 0o0400：用户读，对于普通文件，所有者可读取文件；对于目录，所有者可读取目录项。 - 0o0200：用户写，对于普通文件，所有者可写入文件；对于目录，所有者可创建/删除目录项。 - 0o0100：用户执行，对于普通文件，所有者可执行文件；对于目录，所有者可在目录中搜索给定路径名。 - 0o0070：可用于获取用户组权限的掩码。 - 0o0040：用户组读，对于普通文件，所有用户组可读取文件；对于目录，所有用户组可读取目录项。 - 0o0020：用户组写，对于普通文件，所有用户组可写入文件；对于目录，所有用户组可创建/删除目录项。 - 0o0010：用户组执行，对于普通文件，所有用户组可执行文件；对于目录，所有用户组是否可在目录中搜索给定路径名。 - 0o0007：可用于获取其他用户权限的掩码。 - 0o0004：其他读，对于普通文件，其余用户可读取文件；对于目录，其他用户组可读取目录项。 - 0o0002：其他写，对于普通文件，其余用户可写入文件；对于目录，其他用户组可创建/删除目录项。 - 0o0001：其他执行，对于普通文件，其余用户可执行文件；对于目录，其他用户组可在目录中搜索给定路径名。
+表示文件类型及权限，其首4位表示文件类型，后12位表示权限。各特征位的含义如下：  
+- 0o170000：可用于获取文件类型的掩码。  
+- 0o140000：文件是套接字。  
+- 0o120000：文件是符号链接。  
+- 0o100000：文件是一般文件。  
+- 0o060000：文件属于块设备。  
+- 0o040000：文件是目录。  
+- 0o020000：文件是字符设备。  
+- 0o010000：文件是命名管道，即FIFO。  
+- 0o0700：可用于获取用户权限的掩码。  
+- 0o0400：用户读，对于普通文件，所有者可读取文件；对于目录，所有者可读取目录项。  
+- 0o0200：用户写，对于普通文件，所有者可写入文件；对于目录，所有者可创建/删除目录项。  
+- 0o0100：用户执行，对于普通文件，所有者可执行文件；对于目录，所有者可在目录中搜索给定路径名。  
+- 0o0070：可用于获取用户组权限的掩码。  
+- 0o0040：用户组读，对于普通文件，所有用户组可读取文件；对于目录，所有用户组可读取目录项。  
+- 0o0020：用户组写，对于普通文件，所有用户组可写入文件；对于目录，所有用户组可创建/删除目录项。  
+- 0o0010：用户组执行，对于普通文件，所有用户组可执行文件；对于目录，所有用户组是否可在目录中搜索给定路径名。  
+- 0o0007：可用于获取其他用户权限的掩码。  
+- 0o0004：其他读，对于普通文件，其余用户可读取文件；对于目录，其他用户组可读取目录项。  
+- 0o0002：其他写，对于普通文件，其余用户可写入文件；对于目录，其他用户组可创建/删除目录项。  
+- 0o0001：其他执行，对于普通文件，其余用户可执行文件；对于目录，其他用户组可在目录中搜索给定路径名。
 
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -417,8 +323,6 @@ readonly mtime: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [mtime](arkts-corefile-file-fs-stat-i.md#mtime)
@@ -437,8 +341,6 @@ readonly nlink: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -455,8 +357,6 @@ readonly rdev: number
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -472,8 +372,6 @@ readonly size: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -492,8 +390,6 @@ readonly uid: number
 **类型：** number
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

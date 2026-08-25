@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## cancelAllReminders
@@ -15,8 +15,6 @@ function cancelAllReminders(callback: AsyncCallback<void>): void
 Cancels all reminders set by the current application. This API uses an asynchronous callback to return the cancellation result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -30,22 +28,6 @@ Cancels all reminders set by the current application. This API uses an asynchron
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-reminderAgent.cancelAllReminders((err: BusinessError, data: void) =>{
-  console.info("cancelAllReminders callback")
-})
-```
-
-```TypeScript
-reminderAgent.cancelAllReminders().then(() => {
-    console.info("cancelAllReminders promise")
-})
-```
-
 
 ## cancelAllReminders
 
@@ -56,8 +38,6 @@ function cancelAllReminders(): Promise<void>
 Cancels all reminders set by the current application. This API uses a promise to return the cancellation result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -70,7 +50,3 @@ Cancels all reminders set by the current application. This API uses a promise to
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [cancelAllReminders](#cancelallreminders)

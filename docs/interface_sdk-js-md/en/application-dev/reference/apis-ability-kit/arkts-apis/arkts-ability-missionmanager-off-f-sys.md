@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { missionManager } from '@kit.AbilityKit';
+import { missionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## off('mission')
@@ -15,8 +15,6 @@ function off(type: 'mission', listenerId: number, callback: AsyncCallback<void>)
 Deregisters a mission status listener. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -41,90 +39,6 @@ Deregisters a mission status listener. This API uses an asynchronous callback to
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) |
 
-**Examples**
-
-```TypeScript
-import { missionManager, UIAbility, AbilityConstant, common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-
-let listener: missionManager.MissionListener = {
-  onMissionCreated: (mission: number) => {
-    console.info('--------onMissionCreated-------');
-  },
-  onMissionDestroyed: (mission: number) => {
-    console.info('--------onMissionDestroyed-------');
-  },
-  onMissionSnapshotChanged: (mission: number) => {
-    console.info('--------onMissionSnapshotChanged-------');
-  },
-  onMissionMovedToFront: (mission: number) => {
-    console.info('--------onMissionMovedToFront-------');
-  },
-  onMissionIconUpdated: (mission: number, icon: image.PixelMap) => {
-    console.info('--------onMissionIconUpdated-------');
-  },
-  onMissionClosed: (mission: number) => {
-    console.info('--------onMissionClosed-------');
-  },
-  onMissionLabelUpdated: (mission: number) => {
-    console.info('--------onMissionLabelUpdated-------');
-  }
-};
-
-let listenerId = -1;
-let abilityWant: Want;
-let context: common.UIAbilityContext;
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info('[Demo] EntryAbility onCreate');
-    abilityWant = want;
-    context = this.context;
-  }
-
-  onDestroy() {
-    try {
-      if (listenerId !== -1) {
-        missionManager.off('mission', listenerId, (error: BusinessError) => {
-          if (error) {
-            console.error(`MissionManager.off failed, error code: ${error.code}, error msg: ${error.message}`);
-            return;
-          }
-          console.info(`MissionManager.off success.`);
-        });
-      }
-    } catch (paramError) {
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`error: ${code}, ${message} `);
-    }
-    console.info('[Demo] EntryAbility onDestroy');
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // The main window is created. Set a main page for this ability.
-    console.info('[Demo] EntryAbility onWindowStageCreate');
-    try {
-      listenerId = missionManager.on('mission', listener);
-    } catch (paramError) {
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`error: ${code}, ${message} `);
-    }
-
-    windowStage.loadContent('pages/index', (err: BusinessError, data) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause: ${JSON.stringify(err)}`);
-        return;
-      }
-      console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
-    });
-  }
-}
-```
-
 
 ## off('mission')
 
@@ -135,8 +49,6 @@ function off(type: 'mission', listenerId: number): Promise<void>
 Unregisters a mission status listener. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -166,86 +78,6 @@ Unregisters a mission status listener. This API uses a promise to return the res
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) |
 
-**Examples**
-
-```TypeScript
-import { missionManager, UIAbility, AbilityConstant, common, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-
-let listener: missionManager.MissionListener = {
-  onMissionCreated: (mission: number) => {
-    console.info('--------onMissionCreated-------');
-  },
-  onMissionDestroyed: (mission: number) => {
-    console.info('--------onMissionDestroyed-------');
-  },
-  onMissionSnapshotChanged: (mission: number) => {
-    console.info('--------onMissionSnapshotChanged-------');
-  },
-  onMissionMovedToFront: (mission: number) => {
-    console.info('--------onMissionMovedToFront-------');
-  },
-  onMissionIconUpdated: (mission: number, icon: image.PixelMap) => {
-    console.info('--------onMissionIconUpdated-------');
-  },
-  onMissionClosed: (mission: number) => {
-    console.info('--------onMissionClosed-------');
-  },
-  onMissionLabelUpdated: (mission: number) => {
-    console.info('--------onMissionLabelUpdated-------');
-  }
-};
-
-let listenerId = -1;
-let abilityWant: Want;
-let context: common.UIAbilityContext;
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    console.info('[Demo] EntryAbility onCreate');
-    abilityWant = want;
-    context = this.context;
-  }
-
-  onDestroy() {
-    try {
-      if (listenerId !== -1) {
-        missionManager.off('mission', listenerId).catch((error: BusinessError) => {
-          console.error(`MissionManager.off failed, error code: ${error.code}, error msg: ${error.message}.`);
-        });
-      }
-    } catch (paramError) {
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`error: ${code}, ${message} `);
-    }
-    console.info('[Demo] EntryAbility onDestroy');
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    // The main window is created. Set a main page for this ability.
-    console.info('[Demo] EntryAbility onWindowStageCreate');
-    try {
-      listenerId = missionManager.on('mission', listener);
-    } catch (paramError) {
-      let code = (paramError as BusinessError).code;
-      let message = (paramError as BusinessError).message;
-      console.error(`error: ${code}, ${message} `);
-    }
-
-    windowStage.loadContent('pages/index', (err: BusinessError, data) => {
-      if (err.code) {
-        console.error(`Failed to load the content. Cause: ${JSON.stringify(err)}`);
-        return;
-      }
-      console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
-    });
-  }
-}
-```
-
 
 ## off('missionEvent')
 
@@ -256,8 +88,6 @@ function off(type: 'missionEvent', listenerId: number, callback: AsyncCallback<v
 Deregisters a mission status listener. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -296,8 +126,6 @@ function off(type: 'missionEvent', listenerId: number): Promise<void>
 Unregisters a mission status listener. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

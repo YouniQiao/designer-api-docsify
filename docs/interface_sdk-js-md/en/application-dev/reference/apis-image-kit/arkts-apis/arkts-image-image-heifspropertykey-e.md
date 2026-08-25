@@ -4,8 +4,6 @@ Enumerates the properties available for the metadata of a HEIFS image.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## HEIFS_DELAY_TIME
@@ -17,8 +15,6 @@ HEIFS_DELAY_TIME = 'HeifsDelayTime'
 Playback duration of each frame in an HEIF image sequence, in milliseconds.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Unclamped delay of each frame in milliseconds.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -50,8 +44,6 @@ Canvas height.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -65,8 +57,6 @@ HEIFS_CANVAS_WIDTH = 'HeifsCanvasWidth'
 Canvas width.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

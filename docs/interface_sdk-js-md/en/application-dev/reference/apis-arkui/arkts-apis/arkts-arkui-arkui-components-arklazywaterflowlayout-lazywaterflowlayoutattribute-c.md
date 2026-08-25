@@ -6,14 +6,12 @@ Defines the lazy waterflow layout attribute.@extends CommonMethod&lt;T&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
+import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## columnsGap
@@ -26,8 +24,6 @@ The spacing between columns.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -38,7 +34,7 @@ The spacing between columns.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |
+| value | LengthMetrics \| undefined | Yes |
 
 **Return value:**
 
@@ -56,8 +52,6 @@ Sets the footer of the lazy waterflow layout.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -68,7 +62,7 @@ Sets the footer of the lazy waterflow layout.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -86,8 +80,6 @@ Sets the header of the lazy waterflow layout.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -98,7 +90,7 @@ Sets the header of the lazy waterflow layout.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -116,8 +108,6 @@ Called when the first or last item displayed in the component changes. It is tri
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -128,7 +118,7 @@ Called when the first or last item displayed in the component changes. It is tri
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | OnVisibleIndexesChangeCallback \| undefined | Yes |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -146,8 +136,6 @@ The spacing between rows.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -158,7 +146,7 @@ The spacing between rows.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |
+| value | LengthMetrics \| undefined | Yes |
 
 **Return value:**
 
@@ -176,8 +164,6 @@ Sets the sticky style for header and footer.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -188,7 +174,7 @@ Sets the sticky style for header and footer.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [sticky](#sticky) | StickyStyle \| undefined | Yes |
+| [sticky](#sticky) | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes |
 
 **Return value:**
 

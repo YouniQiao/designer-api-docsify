@@ -7,33 +7,23 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'kits/@kit.MediaKit';
 ```
 
 ## getFrameIndexByTime
 
-ArkTS-Dyn:
 ```TypeScript
 getFrameIndexByTime(timeUs: number): Promise<number>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getFrameIndexByTime(timeUs: long): Promise<int>
-```
-
-Obtains the video frame number corresponding to a video timestamp. Only MP4 video files are supported.
+获取目标视频时间戳对应的视频帧号（仅支持MP4视频文件）。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -43,13 +33,13 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| timeUs | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| timeUs | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -59,36 +49,15 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) |
 
-**示例**
-
-```TypeScript
-import { media } from '@kit.MediaKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avMetadataExtractor.getFrameIndexByTime(0).then((index: number) => {
-  console.info(`Succeeded getFrameIndexByTime index: ${index}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getFrameIndexByTime ${err.message}`);
-})
-```
-
 ## getTimeByFrameIndex
 
-ArkTS-Dyn:
 ```TypeScript
 getTimeByFrameIndex(index: number): Promise<number>
 ```
 
-ArkTS-Sta:
-```TypeScript
-getTimeByFrameIndex(index: int): Promise<long>
-```
-
-Obtains the video timestamp corresponding to a video frame number. Only MP4 video files are supported.
+获取目标视频帧号对应的视频时间戳（仅支持MP4视频文件）。使用Promise异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -98,13 +67,13 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| index | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -113,16 +82,3 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 | [5400106](../errorcode-media.md#5400106-不支持的规格) |
-
-**示例**
-
-```TypeScript
-import { media } from '@kit.MediaKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-avMetadataExtractor.getTimeByFrameIndex(0).then((timeUs: number) => {
-  console.info(`Succeeded getTimeByFrameIndex timeUs: ${timeUs}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getTimeByFrameIndex ${err.message}`);
-})
-```

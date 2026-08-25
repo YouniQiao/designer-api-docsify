@@ -6,14 +6,12 @@ Key event.@interface KeyEvent [since 9 - 11]
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { Action, Key, KeyEvent } from '@kit.InputKit';
+import { Action, Key, KeyEvent } from 'kits/@kit.InputKit';
 ```
 
 ## action
@@ -27,8 +25,6 @@ Key event type.
 **Type:** [Action](arkts-input-multimodalinput-keyevent-action-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,8 +42,6 @@ Whether altKey is being pressed.The value **true** indicates that the key is pre
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -63,8 +57,6 @@ Whether capsLock is enabled.The value **true** indicates that capsLock is enable
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,8 +74,6 @@ Whether ctrlKey is being pressed.The value **true** indicates that the key is pr
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -99,8 +89,6 @@ Whether fnKey is being pressed.The value **true** indicates that the key is pres
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,8 +106,6 @@ Defines a key.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -135,8 +121,6 @@ List of pressed keys.
 **Type:** [Key](arkts-input-multimodalinput-keyevent-key-i.md)[]
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -154,8 +138,6 @@ Whether logoKey is being pressed.The value **true** indicates that the key is pr
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -171,8 +153,6 @@ Whether numLock is enabled.The value **true** indicates that numLock is enabled,
 **Type:** boolean
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -190,8 +170,6 @@ Whether scrollLock is enabled.The value **true** indicates that scrollLock is en
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -208,8 +186,6 @@ Whether shiftKey is being pressed.The value **true** indicates that the key is p
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
@@ -217,16 +193,14 @@ Whether shiftKey is being pressed.The value **true** indicates that the key is p
 ## unicodeChar
 
 ```TypeScript
-unicodeChar: int
+unicodeChar: number
 ```
 
 Unicode character corresponding to the key.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

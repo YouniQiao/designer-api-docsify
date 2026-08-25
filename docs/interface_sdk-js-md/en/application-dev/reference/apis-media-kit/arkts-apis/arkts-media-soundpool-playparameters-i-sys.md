@@ -4,8 +4,6 @@ Describes the playback parameters of the sound pool.These parameters are used to
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## parallelPlayFlag
@@ -19,8 +17,6 @@ Whether the sound can be played in parallel with other active audio streams, wit
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 

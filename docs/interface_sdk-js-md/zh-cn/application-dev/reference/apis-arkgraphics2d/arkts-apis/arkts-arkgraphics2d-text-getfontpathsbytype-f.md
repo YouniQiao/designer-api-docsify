@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## getFontPathsByType
@@ -15,8 +15,6 @@ function getFontPathsByType(fontType: SystemFontType): Array<string>
 获取指定字体类型的所有字体文件路径。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -33,56 +31,3 @@ function getFontPathsByType(fontType: SystemFontType): Array<string>
 | 类型 |
 | --- |
 | Array & lt;string & gt; |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { text } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct GetFontPathsByTypeTest {
-  build() {
-    Column({ space: 10 }) {
-      Button("get font path")
-        .onClick(() => {
-          let fontList = text.getFontPathsByType(text.SystemFontType.ALL)
-          console.info("file count: " + fontList.length)
-          for (let index = 0; index < fontList.length; index++) {
-            console.info("file path: " + fontList[index])
-          }
-        })
-    }.width("100%")
-    .height("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import {Entry, Component, Column, Button, FlexAlign} from '@ohos.arkui.component'
-import { text } from '@kit.ArkGraphics2D'
-
-@Entry
-@Component
-struct GetFontPathsByTypeTest {
-  build() {
-    Column() {
-      Button("get font path")
-        .onClick(() => {
-          let fontList = text.getFontPathsByType(text.SystemFontType.ALL)
-          console.info("file count: " + fontList.length)
-          for (let index = 0; index < fontList.length; index++) {
-            console.info("file path: " + fontList[index])
-          }
-        })
-    }.width("100%")
-    .height("100%")
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```

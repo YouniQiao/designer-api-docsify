@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getIsoDep
@@ -15,8 +15,6 @@ function getIsoDep(tagInfo: TagInfo): IsoDepTag
 Obtains an **IsoDepTag** object, which allows access to the tags that use the IsoDep technology.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +30,7 @@ Obtains an **IsoDepTag** object, which allows access to the tags that use the Is
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IsoDepTag](arkts-connectivity-nfctech-isodeptag-i.md) |
+| [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) |
 
 **Error codes:**
 

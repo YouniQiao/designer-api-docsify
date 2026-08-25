@@ -11,8 +11,6 @@ The **SystemParameter** module provides system services with easy access to key-
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [systemParameterEnhance](arkts-systemparameterenhance.md)
@@ -24,7 +22,7 @@ The **SystemParameter** module provides system services with easy access to key-
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from '@kit.BasicServicesKit';
+import { systemParameter } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## getId
@@ -16,8 +16,6 @@ Obtains the trace ID. This API returns the result synchronously.Obtains the HiTr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
 **Return value:**
@@ -25,18 +23,3 @@ Obtains the trace ID. This API returns the result synchronously.Obtains the HiTr
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) |
-
-**Examples**
-
-```TypeScript
-// Start tracing. The tracing flag is DEFAULT.
-let traceId = hiTraceChain.begin("business", hiTraceChain.HiTraceFlag.DEFAULT);
-// After the service logic is executed for several times, obtain the current trace ID.
-let curTraceId = hiTraceChain.getId();
-// The call chain IDs in the trace IDs obtained from the same call chain trace must be the same.
-if (curTraceId.chainId != traceId.chainId) {
-// Processing logic for exceptions.
-}
-// End the call chain trace after the service logic is executed for several times.
-hiTraceChain.end(traceId);
-```

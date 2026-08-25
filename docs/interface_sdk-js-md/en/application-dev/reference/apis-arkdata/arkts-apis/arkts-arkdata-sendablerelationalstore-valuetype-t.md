@@ -9,8 +9,6 @@ Defines the types of the value in a KV pair. The type varies with the parameter 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -20,7 +18,7 @@ Defines the types of the value in a KV pair. The type varies with the parameter 
 | string |
 | boolean |
 | collections.Uint8Array |
-| [Asset](arkts-arkdata-commontype-asset-i.md) |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) |
 | [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) |
 | collections.Float32Array |
 | bigint |

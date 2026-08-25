@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { mediaquery } from '@kit.ArkUI';
+import { mediaquery } from 'kits/@kit.ArkUI';
 ```
 
 ## matchMediaSync
@@ -23,8 +23,6 @@ function matchMediaSync(condition: string): MediaQueryListener
 > [MediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 18
 
@@ -47,21 +45,3 @@ function matchMediaSync(condition: string): MediaQueryListener
 | 类型 |
 | --- |
 | [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { mediaquery } from '@kit.ArkUI';
-
-let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // 监听横屏事件
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import mediaquery from '@ohos.mediaquery';
-
-let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // 监听横屏事件
-```

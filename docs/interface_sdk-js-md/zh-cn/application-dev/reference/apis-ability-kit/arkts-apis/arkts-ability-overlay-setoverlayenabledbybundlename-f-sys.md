@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { overlay } from '@kit.AbilityKit';
+import { overlay } from 'kits/@kit.AbilityKit';
 ```
 
 ## setOverlayEnabledByBundleName
@@ -15,8 +15,6 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 设置指定应用的overlay module的禁用使能状态。使用callback异步回调。指定应用是调用方自身时不需要权限。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CHANGE_OVERLAY_ENABLED_STATE
 
@@ -45,82 +43,6 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 | [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
 | [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
 
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "com.example.myapplication_xxxxx";
-let moduleName = "feature";
-let isEnabled = false;
-
-try {
-  overlay.setOverlayEnabledByBundleName(bundleName, moduleName, isEnabled)
-    .then((data) => {
-      console.info('setOverlayEnabledByBundleName successfully');
-    }).catch((err: BusinessError) => {
-      console.error('setOverlayEnabledByBundleName failed due to err code: ' + err.code + ' ' + 'message:' + err.message);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('setOverlayEnabledByBundleName failed due to err code: ' + code + ' ' + 'message:' + message);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-'use static'
-
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-// 开发者需根据实际工程更新bundleName和moduleName。
-let bundleName = "com.example.myapplication_xxxxx";
-let moduleName = "feature";
-let isEnabled = false;
-
-try {
-  overlay.setOverlayEnabledByBundleName(bundleName, moduleName, isEnabled)
-    .then(() => {
-      console.info('setOverlayEnabledByBundleName successfully');
-    }).catch((err: Error) => {
-      console.error('setOverlayEnabledByBundleName failed due to err code: ' + (err as BusinessError).code + ' ' + 'message:' + (err as BusinessError).message);
-    });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('setOverlayEnabledByBundleName failed due to err code: ' + code + ' ' + 'message:' + message);
-}
-```
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "com.example.myapplication_xxxxx";
-let moduleName = "feature";
-let isEnabled = false;
-
-try {
-  overlay.setOverlayEnabledByBundleName(bundleName, moduleName, isEnabled, (err, data) => {
-    if (err) {
-      console.error('setOverlayEnabledByBundleName failed due to err code: ' + err.code + ' ' + 'message:' +
-      err.message);
-      return;
-    }
-    console.info('setOverlayEnabledByBundleName successfully');
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('setOverlayEnabledByBundleName failed due to err code: ' + code + ' ' + 'message:' + message);
-}
-```
-
 
 ## setOverlayEnabledByBundleName
 
@@ -131,8 +53,6 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 设置指定应用的overlay module的禁用使能状态。使用Promise异步回调。指定应用是调用方自身时不需要权限。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CHANGE_OVERLAY_ENABLED_STATE
 
@@ -165,7 +85,3 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
 | [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
 | [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
-
-**示例**
-
-参见 [setOverlayEnabledByBundleName](#setoverlayenabledbybundlename)

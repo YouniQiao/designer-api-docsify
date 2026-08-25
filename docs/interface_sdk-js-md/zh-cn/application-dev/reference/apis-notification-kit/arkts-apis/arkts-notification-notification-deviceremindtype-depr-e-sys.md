@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md)
@@ -23,8 +21,6 @@ IDLE_DONOT_REMIND = 0
 设备未被使用，无需提醒。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ IDLE_REMIND = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [IDLE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#idle_remind)
@@ -64,8 +58,6 @@ ACTIVE_DONOT_REMIND = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [ACTIVE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#active_donot_remind)
@@ -83,8 +75,6 @@ ACTIVE_REMIND = 3
 提醒设备正在使用。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

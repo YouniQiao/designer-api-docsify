@@ -4,8 +4,6 @@ Enumerates default printer types.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## DEFAULT_PRINTER_TYPE_SET_BY_USER
@@ -18,8 +16,6 @@ The printer set by the user serves as the default printer.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## DEFAULT_PRINTER_TYPE_LAST_USED_PRINTER
@@ -31,7 +27,5 @@ DEFAULT_PRINTER_TYPE_LAST_USED_PRINTER = 1
 The printer used last time serves as the default printer.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

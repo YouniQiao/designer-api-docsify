@@ -4,14 +4,12 @@ The **call** module provides call management functions, including making calls, 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Telephony.CallManager
 
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## Summary
@@ -109,49 +107,29 @@ import { call } from '@kit.TelephonyKit';
 | [kickOutFromConference(Call)](arkts-telephony-call-kickoutfromconference-f-sys.md) |
 | [muteRinger(Call)](arkts-telephony-call-muteringer-f-sys.md) |
 | [muteRinger(Call)](arkts-telephony-call-muteringer-f-sys.md) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offcalldetailschange) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offcalleventchange) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offcalldisconnectedcause) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offmmicoderesult) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offaudiodevicechange) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offpostdialdelay) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offimscallmodechange) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offcallsessionevent) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offpeerdimensionschange) |
-| [off(Call)](arkts-telephony-call-off-f-sys.md#offcameracapabilitieschange) |
-| [offAudioDeviceChange(Call)](arkts-telephony-call-offaudiodevicechange-f-sys.md) |
-| [offCallDetailsChange(Call)](arkts-telephony-call-offcalldetailschange-f-sys.md) |
-| [offCallDisconnectedCause(Call)](arkts-telephony-call-offcalldisconnectedcause-f-sys.md) |
-| [offCallEventChange(Call)](arkts-telephony-call-offcalleventchange-f-sys.md) |
-| [offCallSessionEvent(Call)](arkts-telephony-call-offcallsessionevent-f-sys.md) |
-| [offCameraCapabilitiesChange(Call)](arkts-telephony-call-offcameracapabilitieschange-f-sys.md) |
-| [offImsCallModeChange(Call)](arkts-telephony-call-offimscallmodechange-f-sys.md) |
-| [offMmiCodeResult(Call)](arkts-telephony-call-offmmicoderesult-f-sys.md) |
-| [offPeerDimensionsChange(Call)](arkts-telephony-call-offpeerdimensionschange-f-sys.md) |
-| [offPostDialDelay(Call)](arkts-telephony-call-offpostdialdelay-f-sys.md) |
+| off(Call) |
+| off(Call) |
+| off(Call) |
+| [off(Call)](arkts-telephony-call-mmicoderesult-e-sys.md) |
+| off(Call) |
+| off(Call) |
+| off(Call) |
+| [off(Call)](arkts-telephony-call-callsessionevent-i-sys.md) |
+| off(Call) |
+| off(Call) |
 | [offReceiveRttMessage(Call)](arkts-telephony-call-offreceiverttmessage-f-sys.md) |
 | [offRttErrCause(Call)](arkts-telephony-call-offrtterrcause-f-sys.md) |
 | [offRttModifyInd(Call)](arkts-telephony-call-offrttmodifyind-f-sys.md) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#oncalldetailschange) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#oncalleventchange) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#oncalldisconnectedcause) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#onmmicoderesult) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#onaudiodevicechange) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#onpostdialdelay) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#onimscallmodechange) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#oncallsessionevent) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#onpeerdimensionschange) |
-| [on(Call)](arkts-telephony-call-on-f-sys.md#oncameracapabilitieschange) |
-| [onAudioDeviceChange(Call)](arkts-telephony-call-onaudiodevicechange-f-sys.md) |
-| [onCallDetailsChange(Call)](arkts-telephony-call-oncalldetailschange-f-sys.md) |
-| [onCallDisconnectedCause(Call)](arkts-telephony-call-oncalldisconnectedcause-f-sys.md) |
-| [onCallEventChange(Call)](arkts-telephony-call-oncalleventchange-f-sys.md) |
-| [onCallSessionEvent(Call)](arkts-telephony-call-oncallsessionevent-f-sys.md) |
-| [onCameraCapabilitiesChange(Call)](arkts-telephony-call-oncameracapabilitieschange-f-sys.md) |
-| [onImsCallModeChange(Call)](arkts-telephony-call-onimscallmodechange-f-sys.md) |
-| [onMmiCodeResult(Call)](arkts-telephony-call-onmmicoderesult-f-sys.md) |
-| [onPeerDimensionsChange(Call)](arkts-telephony-call-onpeerdimensionschange-f-sys.md) |
-| [onPostDialDelay(Call)](arkts-telephony-call-onpostdialdelay-f-sys.md) |
+| on(Call) |
+| on(Call) |
+| on(Call) |
+| [on(Call)](arkts-telephony-call-mmicoderesult-e-sys.md) |
+| on(Call) |
+| on(Call) |
+| on(Call) |
+| [on(Call)](arkts-telephony-call-callsessionevent-i-sys.md) |
+| on(Call) |
+| on(Call) |
 | [onReceiveRttMessage(Call)](arkts-telephony-call-onreceiverttmessage-f-sys.md) |
 | [onRttErrCause(Call)](arkts-telephony-call-onrtterrcause-f-sys.md) |
 | [onRttModifyInd(Call)](arkts-telephony-call-onrttmodifyind-f-sys.md) |

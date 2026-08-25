@@ -1,10 +1,8 @@
 # WallpaperType
 
-定义壁纸的枚举类型。@enum { int } WallpaperType
+定义壁纸的枚举类型。@enum { number } WallpaperType
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
@@ -18,8 +16,6 @@ WALLPAPER_SYSTEM
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
 ## WALLPAPER_LOCKSCREEN
@@ -31,7 +27,5 @@ WALLPAPER_LOCKSCREEN
 锁屏壁纸标识。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper

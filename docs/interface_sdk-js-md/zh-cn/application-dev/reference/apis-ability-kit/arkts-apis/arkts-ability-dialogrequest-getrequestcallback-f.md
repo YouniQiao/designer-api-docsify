@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from 'kits/@kit.AbilityKit';
 ```
 
 ## getRequestCallback
@@ -19,8 +19,6 @@ function getRequestCallback(want: Want): RequestCallback
 > 值。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -41,20 +39,3 @@ function getRequestCallback(want: Want): RequestCallback
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      // 获取请求方的RequestCallback
-      let requestCallback = dialogRequest.getRequestCallback(want);
-    } catch (err) {
-      console.error(`Failed to getRequestCallback. Code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```

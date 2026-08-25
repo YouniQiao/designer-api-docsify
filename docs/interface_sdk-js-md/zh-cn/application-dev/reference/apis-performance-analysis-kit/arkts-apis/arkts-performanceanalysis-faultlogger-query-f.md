@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## query
@@ -15,8 +15,6 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -39,66 +37,6 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) |
 
-**示例**
-
-```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function queryFaultLogCallback(error: BusinessError, value: Array<FaultLogger.FaultLogInfo>) {
-    if (error) {
-        console.error(`error code:${error.code}, error msg:${error.message}`);
-    } else {
-        console.info("value length is " + value.length);
-        let len: number = value.length;
-        for (let i = 0; i < len; i++) {
-            console.info(`log: ${i}`);
-            console.info(`Log pid: ${value[i].pid}`);
-            console.info(`Log uid: ${value[i].uid}`);
-            console.info(`Log type: ${value[i].type}`);
-            console.info(`Log timestamp: ${value[i].timestamp}`);
-            console.info(`Log reason: ${value[i].reason}`);
-            console.info(`Log module: ${value[i].module}`);
-            console.info(`Log summary: ${value[i].summary}`);
-            console.info(`Log text: ${value[i].fullLog}`);
-        }
-    }
-}
-try {
-    FaultLogger.query(FaultLogger.FaultType.JS_CRASH, queryFaultLogCallback);
-} catch (err) {
-    console.error(`code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
-}
-```
-
-```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function getLog() {
-  try {
-    let value: Array<FaultLogger.FaultLogInfo> = await FaultLogger.query(FaultLogger.FaultType.JS_CRASH);
-    if (value) {
-      console.info(`value length: ${value.length}`);
-      let len: number = value.length;
-      for (let i = 0; i < len; i++) {
-        console.info(`log: ${i}`);
-        console.info(`Log pid: ${value[i].pid}`);
-        console.info(`Log uid: ${value[i].uid}`);
-        console.info(`Log type: ${value[i].type}`);
-        console.info(`Log timestamp: ${value[i].timestamp}`);
-        console.info(`Log reason: ${value[i].reason}`);
-        console.info(`Log module: ${value[i].module}`);
-        console.info(`Log summary: ${value[i].summary}`);
-        console.info(`Log text: ${value[i].fullLog}`);
-      }
-    }
-  } catch (err) {
-    console.error(`code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
-  }
-}
-```
-
 
 ## query
 
@@ -109,8 +47,6 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **废弃版本：** 18
 
@@ -137,7 +73,3 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) |
-
-**示例**
-
-参见 [query](#query)

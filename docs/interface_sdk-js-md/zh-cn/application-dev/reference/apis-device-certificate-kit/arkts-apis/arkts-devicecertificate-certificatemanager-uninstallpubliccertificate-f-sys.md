@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## uninstallPublicCertificate
@@ -15,8 +15,6 @@ function uninstallPublicCertificate(keyUri: string) : Promise<void>
 卸载用的户公共凭据，仅证书管理应用调用。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER and ohos.permission.ACCESS_CERT_MANAGER_INTERNAL
 
@@ -47,22 +45,3 @@ function uninstallPublicCertificate(keyUri: string) : Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) |
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) |
-
-**示例**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let keyUri: string = 'test'; /* 用户公共凭据的唯一标识符 */
-try {
-  certificateManager.uninstallPublicCertificate(keyUri).then(() => {
-    console.info('Succeeded in uninstalling public certificate.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to uninstall public certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to uninstall public certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```

@@ -4,31 +4,13 @@ Declare Component ProgressButtonV2
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
+import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from 'kits/@kit.ArkUI';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onClicked
 
@@ -39,8 +21,6 @@ readonly onClicked: ClickCallback
 Sets the ProgressButtonV2 onClicked.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,8 +40,6 @@ Set Color options of the ProgressButtonV2.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -76,11 +54,9 @@ readonly content: ResourceStr
 
 Sets the ProgressButtonV2 content.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,8 +76,6 @@ Sets the ProgressButtonV2 isEnabled state.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -120,8 +94,6 @@ Sets the ProgressButtonV2 progress.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -136,11 +108,9 @@ progressButtonRadius?: LengthMetrics
 
 Set border rounded corner radius of progress.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,11 +126,9 @@ progressButtonWidth?: LengthMetrics
 
 Sets the ProgressButtonV2 progressButtonWidth.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## enableHiLinkHandshake
@@ -15,8 +15,6 @@ function enableHiLinkHandshake(isHiLinkEnable: boolean, bssid: string, config: W
 启动hiLink握手。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -42,23 +40,3 @@ function enableHiLinkHandshake(isHiLinkEnable: boolean, bssid: string, config: W
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2501000](../errorcode-wifi.md#2501000-sta内部异常) |
 | [2501001](../errorcode-wifi.md#2501001-sta功能未打开) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-// config数据可以通过getScanInfoList接口获取，只有WifiScanInfo.isHiLinkNetwork为true的热点，才能正常使用该接口
-let config:wifiManager.WifiDeviceConfig = {
-  ssid : "****",
-  preSharedKey : "****",
-  securityType : 0,
-  bssid : "38:37:8b:80:bf:cc",
-  bssidType : 1,
-  isHiddenSsid : false
-}  
-try {
-  wifiManager.enableHiLinkHandshake(true, config.bssid, config);
-} catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

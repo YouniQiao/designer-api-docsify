@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## requestPublishForm
@@ -19,8 +19,6 @@ function requestPublishForm(
 Requests to publish a widget to the widget host (usually the home screen). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -48,89 +46,6 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | 16501017 |
 | 16501018 |
 
-**Examples**
-
-```TypeScript
-import { formBindingData, formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  }
-};
-try {
-  let param: Record<string, string> = {
-    'temperature': '22c',
-    'time': '22:00'
-  }
-  let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
-  formProvider.requestPublishForm(want, obj, (error: BusinessError, data: string) => {
-    if (error) {
-      console.error(`callback error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-      return;
-    }
-    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  }
-};
-try {
-  formProvider.requestPublishForm(want, (error: BusinessError, data: string) => {
-    if (error) {
-      console.error(`callback error, code: ${error.code}, message: ${error.message})`);
-      return;
-    }
-    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  }
-};
-try {
-  formProvider.requestPublishForm(want).then((data: string) => {
-    console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message})`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
-}
-```
-
 
 ## requestPublishForm
 
@@ -141,8 +56,6 @@ function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 Requests to publish a widget to the widget host (usually the home screen). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -169,10 +82,6 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | 16501017 |
 | 16501018 |
 
-**Examples**
-
-See [requestPublishForm](#requestpublishform)
-
 
 ## requestPublishForm
 
@@ -183,8 +92,6 @@ function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBi
 Requests to publish a widget to the widget host (usually the home screen). This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -216,7 +123,3 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) |
 | 16501017 |
 | 16501018 |
-
-**Examples**
-
-See [requestPublishForm](#requestpublishform)

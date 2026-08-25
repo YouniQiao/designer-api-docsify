@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
+import { businessAbilityRouter } from 'kits/@kit.AbilityKit';
 ```
 
 ## queryBusinessAbilityInfo
@@ -18,8 +18,6 @@ function queryBusinessAbilityInfo(
 通过给定的过滤条件查询Ability信息。使用callback异步回调，成功时返回查询到的路由Ability信息，失败时返回错误信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -42,47 +40,6 @@ function queryBusinessAbilityInfo(
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
-
-try {
-  businessAbilityRouter.queryBusinessAbilityInfo(filter, (error, data) => {
-    if (error) {
-      console.error('queryBusinessAbilityInfo failed ' + error.message);
-      return;
-    }
-    console.info('queryBusinessAbilityInfo success');
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('queryBusinessAbilityInfo failed ' + message);
-}
-```
-
-```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
-
-try {
-  businessAbilityRouter.queryBusinessAbilityInfo(filter)
-    .then(() => {
-      console.info('queryBusinessAbilityInfo success');
-    }).catch((error: BusinessError) => {
-    console.error('queryBusinessAbilityInfo failed ' + error.message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('queryBusinessAbilityInfo failed ' + message);
-}
-```
-
 
 ## queryBusinessAbilityInfo
 
@@ -93,8 +50,6 @@ function queryBusinessAbilityInfo(filter: BusinessAbilityFilter): Promise<Array<
 通过给定的过滤条件查询Ability信息。使用Promise异步回调，成功时返回查询到的路由Ability信息，失败时返回错误信息。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -121,7 +76,3 @@ function queryBusinessAbilityInfo(filter: BusinessAbilityFilter): Promise<Array<
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [queryBusinessAbilityInfo](#querybusinessabilityinfo)

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## on('continueStateChange')
@@ -12,11 +12,9 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo>): void
 ```
 
-注册当前任务流转状态的监听。
+注册当前任务流转状态的监听。此接口需与off('continueStateChange')成对使用，不再监听时应及时取消；调用顺序为先通过on注册监听，不需要时再调用off取消监听。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -39,35 +37,3 @@ function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-
-try {
-  // 注册任务流转状态变化事件监听
-  distributedMissionManager.on('continueStateChange', (data) => {
-    console.info("continueStateChange on:" + JSON.stringify(data));
-  });
-} catch (error) {
-  console.error(`continueStateChange failed. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import distributedMissionManager from '@ohos.distributedMissionManager';
-
-try {
-    // 注册任务流转状态变化事件监听
-    distributedMissionManager.onContinueStateChange((data) => {
-        console.info("continueStateChange on:" + JSON.stringify(data));
-    });
-} catch (error) {
-    console.error(`continueStateChange failed. Code: ${error.code}, message: ${error.message}`);
-}
-```

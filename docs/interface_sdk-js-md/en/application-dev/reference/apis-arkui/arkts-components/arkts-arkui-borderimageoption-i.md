@@ -4,8 +4,6 @@ Border image option@interface BorderImageOption
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Whether to fill the center of the border image. true: Fill the center of the bor
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -43,13 +39,11 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Amount by which the border image is extended beyond the border box.
 
-**Type:** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -71,8 +65,6 @@ Repeat mode of the source image's slices on the border.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -87,13 +79,11 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Slice width of the upper left corner, upper right corner, lower left corner, and lower right corner of the border image.
 
-**Type:** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -107,13 +97,11 @@ Slice width of the upper left corner, upper right corner, lower left corner, and
 source?: string | Resource | LinearGradient
 ```
 
-Source or gradient color of the border image. When the type is string, this parameter sets the border image source. For details about how to reference image resources, see Loading Image Resources.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The border image source applies only to container components, such as Row, Column, and Flex. </p>
+Source or gradient color of the border image. When the type is string, this parameter sets the border image source. For details about how to reference image resources, see Loading Image Resources.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The border image source applies only to container components, such as Row, Column, and Flex. </p>
 
 **Type:** string \| Resource \| [LinearGradient](arkts-arkui-lineargradient-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -129,13 +117,11 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Width of the border image.
 
-**Type:** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

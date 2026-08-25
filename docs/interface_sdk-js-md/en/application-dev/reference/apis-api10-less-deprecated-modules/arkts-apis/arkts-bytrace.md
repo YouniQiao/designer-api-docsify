@@ -8,8 +8,6 @@ The **bytrace** module implements performance tracing for processes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** [hiTraceMeter](../../apis-performance-analysis-kit/arkts-apis/arkts-hitracemeter.md)

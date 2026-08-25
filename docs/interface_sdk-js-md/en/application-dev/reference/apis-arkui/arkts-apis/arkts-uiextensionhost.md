@@ -9,8 +9,6 @@ Intended only for the **UIExtensionComponent** that has process isolation requir
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,7 +18,7 @@ Intended only for the **UIExtensionComponent** that has process isolation requir
 ## Modules to Import
 
 ```TypeScript
-import { uiExtensionHost } from '@kit.ArkUI';
+import { uiExtensionHost } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

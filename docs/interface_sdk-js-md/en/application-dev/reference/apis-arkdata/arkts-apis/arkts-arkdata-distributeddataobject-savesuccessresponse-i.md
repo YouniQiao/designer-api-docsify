@@ -4,14 +4,12 @@ Represents the information returned by the callback of save..
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'kits/@kit.ArkData';
 ```
 
 ## deviceId
@@ -25,8 +23,6 @@ ID of the device where the distributed data object is stored. The value local in
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -42,22 +38,18 @@ Unique ID for multi-device collaboration.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## version
 
 ```TypeScript
-version: int
+version: number
 ```
 
 Version of the saved object, which is a non-negative integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject

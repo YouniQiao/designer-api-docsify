@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { commonEventManager } from '@kit.BasicServicesKit';
+import { commonEventManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## createSubscriberSync
@@ -15,8 +15,6 @@ function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEv
 同步创建订阅者的接口。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -39,23 +37,3 @@ function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEv
 | 错误码ID |
 | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 定义订阅者，用于保存创建成功的订阅者对象，后续使用其完成订阅及取消订阅的动作
-let subscriber: commonEventManager.CommonEventSubscriber | null = null;
-// 订阅者信息
-let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
-  events: ['event']
-};
-// 创建订阅者
-try {
-  subscriber = commonEventManager.createSubscriberSync(subscribeInfo);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
-}
-```

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getBundleNameByUidSync
 
 ```TypeScript
-function getBundleNameByUidSync(uid: int): string
+function getBundleNameByUidSync(uid: number): string
 ```
 
 以同步方法根据给定的uid获取对应应用的bundleName。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -26,7 +24,7 @@ function getBundleNameByUidSync(uid: int): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| uid | number | 是 |
 
 **返回值：**
 
@@ -41,20 +39,3 @@ function getBundleNameByUidSync(uid: int): string
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [17700021](../errorcode-bundle.md#17700021-指定的uid无效) |
-
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let uid = 20010005;
-try {
-  let data = bundleManager.getBundleNameByUidSync(uid);
-  hilog.info(0x0000, 'testTag', 'getBundleNameByUidSync successfully. Data: %{public}s', JSON.stringify(data));
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleNameByUidSync failed. Cause: %{public}s', message);
-}
-```

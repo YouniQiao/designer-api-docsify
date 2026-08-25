@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getDLPGatheringPolicy
@@ -15,8 +15,6 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 Obtains the DLP sandbox gathering policy. This API uses a promise to return the result.This API is used to obtain the DLP sandbox gathering policy of the current system.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -40,39 +38,6 @@ Obtains the DLP sandbox gathering policy. This API uses a promise to return the 
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  try {
-    let res: dlpPermission.GatheringPolicyType = await dlpPermission.getDLPGatheringPolicy(); // Obtain the sandbox gathering policy.
-    console.info('res', JSON.stringify(res));
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  dlpPermission.getDLPGatheringPolicy((err, res) => {
-    if (err !== undefined) {
-      console.error('getDLPGatheringPolicy error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-  }); // Obtain the sandbox gathering policy.
-} catch (err) {
-  console.error('getDLPGatheringPolicy error,', (err as BusinessError).code, (err as BusinessError).message);
-}
-```
-
 
 ## getDLPGatheringPolicy
 
@@ -83,8 +48,6 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 Obtains the DLP sandbox gathering policy. This API uses an asynchronous callback to return the result.This API is used to obtain the DLP sandbox gathering policy of the current system.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -108,7 +71,3 @@ Obtains the DLP sandbox gathering policy. This API uses an asynchronous callback
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [getDLPGatheringPolicy](#getdlpgatheringpolicy)

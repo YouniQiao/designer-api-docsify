@@ -4,14 +4,12 @@ Defines the request for publishing a reminder.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## actionButton
@@ -26,23 +24,19 @@ Buttons displayed for the reminder notification.For third-party applications, a 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## autoDeletedTime
 
 ```TypeScript
-autoDeletedTime?: long
+autoDeletedTime?: number
 ```
 
 Time when the notification is automatically cleared.The data format is timestamp, in milliseconds. For details, please refer to [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -58,23 +52,19 @@ Reminder content.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## contentResourceId
 
 ```TypeScript
-contentResourceId?: int
+contentResourceId?: number
 ```
 
 Resource ID of the reminder content, which can be obtained through \$r(*resource-name*).id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -90,8 +80,6 @@ URI of the custom prompt tone. The prompt tone file must be stored in the **reso
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## expiredContent
@@ -106,23 +94,19 @@ Content to be displayed after the reminder expires.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## expiredContentResourceId
 
 ```TypeScript
-expiredContentResourceId?: int
+expiredContentResourceId?: number
 ```
 
 Resource ID of the content to be displayed after the reminder expires, which can be obtained through \$r(*resource -name*).id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -137,8 +121,6 @@ Time zone type. The default value is **TimeZoneType.DEFAULT**.
 **Type:** [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,8 +138,6 @@ Group ID used for the reminder. If "Don't ask again" or similar information is s
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## maxScreenWantAgent
@@ -172,23 +152,19 @@ Information about the ability that is started automatically and displayed in ful
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## notificationId
 
 ```TypeScript
-notificationId?: int
+notificationId?: number
 ```
 
 Notification ID used by the reminder. You must pass in a notification ID. If there are reminders with the same notification ID, the later one will overwrite the earlier one. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -203,8 +179,6 @@ Notification request message. This parameter is left empty by default.
 **Type:** [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,8 +196,6 @@ Type of the reminder.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## ringChannel
@@ -238,23 +210,19 @@ Audio channel of the custom prompt tone. The default channel is the alarm channe
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## ringDuration
 
 ```TypeScript
-ringDuration?: long
+ringDuration?: number
 ```
 
-Ringing duration.The value ranges from 0 to1800, in seconds. The default value is **1**.If the value is **0**, the system notification tone is used.If the value is greater than 0 and [ReminderRequest.customRingUri](#reminderrequest) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](#reminderrequest). Otherwise, the custom notification tone of the agent-powered reminder is used.The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
+Ringing duration.The value ranges from 0 to1800, in seconds. The default value is **1**.If the value is **0**, the system notification tone is used.If the value is greater than 0 and [ReminderRequest.customRingUri](#reminderrequest) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](#reminderrequest). Otherwise, the custom notification tone of the agent-powered reminder is used.The device vibrates when the reminder rings. Since API version 26.0.0, number vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -270,8 +238,6 @@ Type of the slot used by the reminder.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## snoozeContent
@@ -286,23 +252,19 @@ Content to be displayed when the reminder is snoozing. (It is not applicable to 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## snoozeContentResourceId
 
 ```TypeScript
-snoozeContentResourceId?: int
+snoozeContentResourceId?: number
 ```
 
 Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through \$r(*resource-name*).id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -318,23 +280,19 @@ Type of the slot used by the snoozed reminder. (It is not applicable to countdow
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## snoozeTimes
 
 ```TypeScript
-snoozeTimes?: int
+snoozeTimes?: number
 ```
 
 Number of reminder snooze times. The default value is **0**. (It is not applicable to countdown reminders.)
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -345,29 +303,26 @@ tapDismissed?: boolean
 ```
 
 Whether the reminder is automatically cleared. The default value is **true**. For details, see [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed)  
-- **true** (default): The reminder is automatically cleared after the notification or button is tapped. - **false**: The reminder is retained after the notification or button is tapped.
+- **true** (default): The reminder is automatically cleared after the notification or button is tapped.  
+- **false**: The reminder is retained after the notification or button is tapped.
 
 **Type:** boolean
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## timeInterval
 
 ```TypeScript
-timeInterval?: long
+timeInterval?: number
 ```
 
 Reminder snooze interval,in seconds. The minimum value is 30s. (It is not applicable to countdown reminders.)
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -383,23 +338,19 @@ Reminder title.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## titleResourceId
 
 ```TypeScript
-titleResourceId?: int
+titleResourceId?: number
 ```
 
 Resource ID of the reminder title, which can be obtained through \$r(*resource-name*).id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -414,7 +365,5 @@ Information about the ability that is redirected to when the reminder is clicked
 **Type:** WantAgent
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.ReminderAgent

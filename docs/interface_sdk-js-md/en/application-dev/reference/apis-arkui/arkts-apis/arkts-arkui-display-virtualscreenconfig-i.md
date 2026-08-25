@@ -4,45 +4,39 @@ Describes the virtual screen parameters.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## density
 
 ```TypeScript
-density: double
+density: number
 ```
 
 Density of the virtual screen, in px. The value is a floating-point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
 ## height
 
 ```TypeScript
-height: long
+height: number
 ```
 
 Height of the virtual screen, in px. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -58,8 +52,6 @@ Name of the virtual screen, which can be customized.
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## supportsFocus
@@ -73,8 +65,6 @@ Whether the virtual screen is focusable. **true** if focusable, **false** otherw
 **Type:** boolean
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -90,22 +80,18 @@ Surface ID of the virtual screen, which can be customized. The maximum length fo
 
 **Since:** 16
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## width
 
 ```TypeScript
-width: long
+width: number
 ```
 
 Width of the virtual screen, in px. The value must be a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

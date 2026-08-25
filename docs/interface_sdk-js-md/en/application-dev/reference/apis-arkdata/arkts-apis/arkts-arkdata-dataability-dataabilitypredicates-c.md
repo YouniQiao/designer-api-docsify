@@ -4,14 +4,12 @@ Provides APIs for creating diverse query conditions.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from '@kit.ArkData';
+import { dataAbility } from 'kits/@kit.ArkData';
 ```
 
 ## and
@@ -24,8 +22,6 @@ Creates a **DataAbilityPredicates** object to add the AND condition.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Return value:**
@@ -33,14 +29,6 @@ Creates a **DataAbilityPredicates** object to add the AND condition.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Lisa")
-    .and()
-    .equalTo("SALARY", 200.5)
-```
 
 ## beginsWith
 
@@ -52,8 +40,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -68,12 +54,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.beginsWith("NAME", "os")
-```
 
 ## beginWrap
 
@@ -85,8 +65,6 @@ Creates a **DataAbilityPredicates** object to add a left parenthesis. This API i
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Return value:**
@@ -94,17 +72,6 @@ Creates a **DataAbilityPredicates** object to add a left parenthesis. This API i
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
 
 ## between
 
@@ -116,8 +83,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -125,20 +90,14 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.between("AGE", 10, 50)
-```
 
 ## contains
 
@@ -150,8 +109,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -166,12 +123,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.contains("NAME", "os")
-```
 
 ## distinct
 
@@ -183,8 +134,6 @@ Creates a **DataAbilityPredicates** object to filter out duplicate records.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Return value:**
@@ -192,12 +141,6 @@ Creates a **DataAbilityPredicates** object to filter out duplicate records.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
-```
 
 ## endsWith
 
@@ -209,8 +152,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -225,12 +166,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.endsWith("NAME", "se")
-```
 
 ## endWrap
 
@@ -242,8 +177,6 @@ Creates a **DataAbilityPredicates** object to add a right parenthesis. This API 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Return value:**
@@ -251,17 +184,6 @@ Creates a **DataAbilityPredicates** object to add a right parenthesis. This API 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
-    .beginWrap()
-    .equalTo("AGE", 18)
-    .or()
-    .equalTo("SALARY", 200.5)
-    .endWrap()
-```
 
 ## equalTo
 
@@ -272,8 +194,6 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value.This API is similar to the SQL equal to (=) operator.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -290,12 +210,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
-```
-
 ## glob
 
 ```TypeScript
@@ -305,8 +219,6 @@ glob(field: string, value: string): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that match the given string. Different from **like**, the input parameters of this API are case-sensitive.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -323,18 +235,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.glob("NAME", "?h*g")
-
-// Only the records whose value is "Lisa" in the "name" column are matched.
-dataAbilityPredicates.glob("NAME", "Lisa")
-
-// Only the records whose value is "lisa" in the "name" column are matched.
-dataAbilityPredicates.glob("NAME", "lisa")
-```
-
 ## greaterThan
 
 ```TypeScript
@@ -344,8 +244,6 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater than the given value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -361,12 +259,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.greaterThan("AGE", 18)
-```
 
 ## greaterThanOrEqualTo
 
@@ -378,8 +270,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -395,12 +285,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.greaterThanOrEqualTo("AGE", 18)
-```
-
 ## groupBy
 
 ```TypeScript
@@ -410,8 +294,6 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to group the query results based on the specified columns.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -427,12 +309,6 @@ Creates a **DataAbilityPredicates** object to group the query results based on t
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.groupBy(["AGE", "NAME"])
-```
-
 ## in
 
 ```TypeScript
@@ -442,8 +318,6 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are in the given range.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -460,12 +334,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.in("AGE", [18, 20])
-```
-
 ## indexedBy
 
 ```TypeScript
@@ -475,8 +343,6 @@ indexedBy(field: string): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to specify the index column. Before calling this API, you need to create an index column.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -491,51 +357,6 @@ Creates a **DataAbilityPredicates** object to specify the index column. Before c
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { dataAbility, relationalStore } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  async onCreate(): Promise<void> {
-    let store: relationalStore.RdbStore | undefined = undefined;
-    let context = this.context;
-
-    try {
-      const STORE_CONFIG: relationalStore.StoreConfig = {
-        name: 'RdbTest.db', // Database file name.
-        securityLevel: relationalStore.SecurityLevel.S3,
-      };
-      // Table structure: EMPLOYEE (NAME, AGE, SALARY, CODES)
-      const SQL_CREATE_TABLE =
-        'CREATE TABLE IF NOT EXISTS EMPLOYEE (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT NOT NULL, AGE INTEGER, SALARY REAL, CODES BLOB)'; // SQL statement for creating a data table.
-      store = await relationalStore.getRdbStore(context, STORE_CONFIG);
-      console.info('Succeeded in getting RdbStore.');
-      await store.executeSql(SQL_CREATE_TABLE); // Create a data table.
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`Failed to get RdbStore. Code:${err.code}, message:${err.message}`);
-    }
-
-    if (!store) {
-      return;
-    }
-
-    // Create an index.
-    const SQL_CREATE_INDEX = 'CREATE INDEX SALARY_INDEX ON EMPLOYEE(SALARY)'
-    await store.executeSql(SQL_CREATE_INDEX);
-    // ...
-
-    let dataAbilityPredicates = new dataAbility.DataAbilityPredicates()
-    dataAbilityPredicates.indexedBy("SALARY_INDEX")
-
-    //  ...
-  }
-}
-```
 
 ## isNotNull
 
@@ -547,8 +368,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -562,12 +381,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.isNotNull("NAME")
-```
 
 ## isNull
 
@@ -579,8 +392,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -594,12 +405,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.isNull("NAME")
-```
 
 ## lessThan
 
@@ -611,8 +416,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -627,12 +430,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.lessThan("AGE", 20)
-```
 
 ## lessThanOrEqualTo
 
@@ -644,8 +441,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -661,12 +456,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
-```
-
 ## like
 
 ```TypeScript
@@ -676,8 +465,6 @@ like(field: string, value: string): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value.This API is similar to the SQL **like** statement.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -694,12 +481,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.like("NAME", "%os%")
-```
-
 ## limitAs
 
 ```TypeScript
@@ -709,8 +490,6 @@ limitAs(value: number): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to limit the number of records.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -726,12 +505,6 @@ Creates a **DataAbilityPredicates** object to limit the number of records.
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3)
-```
-
 ## notBetween
 
 ```TypeScript
@@ -742,8 +515,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -751,20 +522,14 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [low](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| [high](../../apis-arkui/arkts-components/arkts-arkui-invertoptions-i.md) | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.notBetween("AGE", 10, 50)
-```
 
 ## notEqualTo
 
@@ -775,8 +540,6 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value.This API is similar to the SQL not equal (!=) operator.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -793,12 +556,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.notEqualTo("NAME", "lisi")
-```
-
 ## notIn
 
 ```TypeScript
@@ -808,8 +565,6 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are out of the given range.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -826,12 +581,6 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
-```
-
 ## offsetAs
 
 ```TypeScript
@@ -841,8 +590,6 @@ offsetAs(rowOffset: number): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset, pass in **-1** in **limitAs**.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
@@ -858,13 +605,6 @@ Creates a **DataAbilityPredicates** object to set the start position of the quer
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
 
-**Examples**
-
-```TypeScript
-// Display the three data records following the first three records.
-dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3)
-```
-
 ## or
 
 ```TypeScript
@@ -875,8 +615,6 @@ Creates a **DataAbilityPredicates** object to add the OR condition.This API is s
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Return value:**
@@ -884,14 +622,6 @@ Creates a **DataAbilityPredicates** object to add the OR condition.This API is s
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Lisa")
-    .or()
-    .equalTo("NAME", "Rose")
-```
 
 ## orderByAsc
 
@@ -903,8 +633,6 @@ Creates a **DataAbilityPredicates** object to sort the records in the specified 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -918,13 +646,6 @@ Creates a **DataAbilityPredicates** object to sort the records in the specified 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-// Sort data by name first; for the records with the same name, sort them by age; for the records with the same name and age, sort them by salary in ascending order.
-dataAbilityPredicates.orderByAsc("NAME").orderByAsc("AGE").orderByAsc("SALARY")
-```
 
 ## orderByDesc
 
@@ -936,8 +657,6 @@ Creates a **DataAbilityPredicates** object to sort the records in the specified 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 **Parameters:**
@@ -951,10 +670,3 @@ Creates a **DataAbilityPredicates** object to sort the records in the specified 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
-
-**Examples**
-
-```TypeScript
-// Sort the data by age first. For the data records with the same age, sort them by salary.
-dataAbilityPredicates.orderByDesc("AGE").orderByDesc("SALARY")
-```

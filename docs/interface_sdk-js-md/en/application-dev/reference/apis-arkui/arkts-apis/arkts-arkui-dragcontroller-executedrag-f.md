@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'kits/@kit.ArkUI';
 ```
 
 ## executeDrag
@@ -22,8 +22,6 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 18
 
 **Substitutes:** executeDrag
@@ -38,7 +36,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| custom | CustomBuilder \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md) | Yes |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Yes |
 
@@ -48,196 +46,6 @@ Initiates a drag action, with the object to be dragged and the drag information 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
-
-**Examples**
-
-You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
-
-```TypeScript
-import { dragController } from '@kit.ArkUI';
-import { unifiedDataChannel } from '@kit.ArkData';
-
-class DragInfo {
-  event: DragEvent | undefined = undefined;
-  extraParams: string = '';
-}
-
-@Entry
-@Component
-struct DragControllerPage {
-  @State text: string = ''
-
-  @Builder
-  DraggingBuilder() {
-    Column() {
-      Text("DraggingBuilder")
-        .fontColor(Color.White)
-        .fontSize(12)
-    }
-    .width(100)
-    .height(100)
-    .backgroundColor(Color.Blue)
-  }
-
-  build() {
-    Column() {
-      Button('touch to execute drag')
-        .margin(10)
-        .onTouch((event?: TouchEvent) => {
-          if (event) {
-            if (event.type == TouchType.Down) {
-              let text = new unifiedDataChannel.PlainText()
-              text.textContent = 'drag text'
-              text.abstract = 'abstract'
-              let unifiedData = new unifiedDataChannel.UnifiedData(text)
-
-              let dragInfo: dragController.DragInfo = {
-                pointerId: 0,
-                data: unifiedData,
-                extraParams: ''
-              }
-              let eve: DragInfo = new DragInfo();
-              this.getUIContext().getDragController().executeDrag(() => {
-                this.DraggingBuilder()
-              }, dragInfo, (err, eve) => { // You are advised to use this.getUIContext().getDragController().executeDrag().
-                if (eve.event) {
-                  if (eve.event.getResult() == DragResult.DRAG_SUCCESSFUL) {
-                    // ...
-                  } else if (eve.event.getResult() == DragResult.DRAG_FAILED) {
-                    // ...
-                  }
-                }
-              })
-            }
-          }
-        })
-      Text(this.text)
-        .height(100)
-        .width(150)
-        .margin({ top: 20 })
-        .border({ color: Color.Black, width: 1 })
-        .onDrop((dragEvent?: DragEvent) => {
-          if (dragEvent) {
-            let records: Array<unifiedDataChannel.UnifiedRecord> = dragEvent.getData().getRecords();
-            let plainText: unifiedDataChannel.PlainText = records[0] as unifiedDataChannel.PlainText;
-            this.text = plainText.textContent;
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
-You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
-
-```TypeScript
-import { dragController } from '@kit.ArkUI';
-import { image } from '@kit.ImageKit';
-import { unifiedDataChannel } from '@kit.ArkData';
-
-class DragInfo {
-  event: DragEvent | undefined = undefined;
-  extraParams: string = '';
-}
-
-@Entry
-@Component
-struct DragControllerPage {
-  @State pixmap: image.PixelMap | undefined = undefined
-  @State text: string = ''
-
-  @Builder
-  DraggingBuilder() {
-    Column() {
-      Text("DraggingBuilder")
-        .fontColor(Color.White)
-    }
-    .width(100)
-    .height(100)
-    .backgroundColor(Color.Blue)
-  }
-
-  @Builder
-  PixmapBuilder() {
-    Column() {
-      Text("PixmapBuilder")
-        .fontColor(Color.White)
-        .fontSize(15)
-    }
-    .width(100)
-    .height(100)
-    .backgroundColor(Color.Blue)
-  }
-
-  aboutToAppear() {
-    let pb: CustomBuilder = (): void => {
-      this.PixmapBuilder()
-    }
-    this.getUIContext().getComponentSnapshot().createFromBuilder(pb).then((pix: image.PixelMap) => {
-      this.pixmap = pix;
-    })
-  }
-
-  build() {
-    Column() {
-      Button('touch to execute drag')
-        .margin(10)
-        .onTouch((event?: TouchEvent) => {
-          if (event) {
-            if (event.type == TouchType.Down) {
-              let text = new unifiedDataChannel.PlainText()
-              text.textContent = 'drag text'
-              text.abstract = 'abstract'
-              let unifiedData = new unifiedDataChannel.UnifiedData(text)
-
-              let dragInfo: dragController.DragInfo = {
-                pointerId: 0,
-                data: unifiedData,
-                extraParams: ''
-              }
-              let dragItemInfo: DragItemInfo = {
-                pixelMap: this.pixmap,
-                builder: () => {
-                  this.DraggingBuilder()
-                },
-                extraInfo: "DragItemInfoTest"
-              }
-              let eve: DragInfo = new DragInfo();
-              this.getUIContext()
-                .getDragController()
-                .executeDrag(dragItemInfo, dragInfo) // You are advised to use this.getUIContext().getDragController().executeDrag().
-                .then((eve) => {
-                  if (eve.event.getResult() == DragResult.DRAG_SUCCESSFUL) {
-                    // ...
-                  } else if (eve.event.getResult() == DragResult.DRAG_FAILED) {
-                    // ...
-                  }
-                })
-                .catch((err: Error) => {
-                })
-            }
-          }
-        })
-      Text(this.text)
-        .height(100)
-        .width(150)
-        .margin({ top: 20 })
-        .border({ color: Color.Black, width: 1 })
-        .onDrop((dragEvent?: DragEvent) => {
-          if (dragEvent) {
-            let records: Array<unifiedDataChannel.UnifiedRecord> = dragEvent.getData().getRecords();
-            let plainText: unifiedDataChannel.PlainText = records[0] as unifiedDataChannel.PlainText;
-            this.text = plainText.textContent;
-          }
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 
 ## executeDrag
@@ -255,8 +63,6 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 18
 
 **Substitutes:** executeDrag
@@ -271,7 +77,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| custom | CustomBuilder \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md) | Yes |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes |
 
 **Return value:**
@@ -287,7 +93,3 @@ Initiates a drag action, with the object to be dragged and the drag information 
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [100001](../errorcode-internal.md#100001-internal-error) |
-
-**Examples**
-
-See [executeDrag](#executedrag)

@@ -17,9 +17,9 @@ TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md)实现，在TreeSet
 ## 导入模块
 
 ```TypeScript
-import { TreeSet } from '@kit.ArkTS';
-import { TreeSetForEachCb } from '@kit.ArkTS';
-import { TreeSetComparator } from '@kit.ArkTS';
+import { TreeSet } from 'kits/@kit.ArkTS';
+import { TreeSetForEachCb } from 'kits/@kit.ArkTS';
+import { TreeSetComparator } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -29,10 +29,3 @@ import { TreeSetComparator } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [TreeSet](arkts-arkts-util-treeset-treeset-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [TreeSetComparator](arkts-arkts-treesetcomparator-t.md) |
-| [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md) |

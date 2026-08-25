@@ -4,8 +4,6 @@ Describes the notification contents.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## contentType
@@ -20,8 +18,6 @@ Notification content type.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **Substitutes:** [notificationContentType](#notificationcontenttype)
@@ -34,13 +30,11 @@ Notification content type.
 longText?: NotificationLongTextContent
 ```
 
-Long text notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_LONG_TEXT**. The complete long text content can be displayed after the notification is expanded.
+Long text notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_LONG_TEXT**. The complete number text content can be displayed after the notification is expanded.
 
 **Type:** [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -56,8 +50,6 @@ Multi-line notification content. This parameter is used when **notificationConte
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## normal
@@ -71,8 +63,6 @@ Basic notification content. This parameter is used when **notificationContentTyp
 **Type:** [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -88,8 +78,6 @@ Notification content type, used to specify the content layout type of the notifi
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## picture
@@ -104,8 +92,6 @@ Picture notification content. This parameter is used when **notificationContentT
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## systemLiveView
@@ -119,7 +105,5 @@ System live view notification content. Third-party applications are not supporte
 **Type:** [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md)
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

@@ -4,8 +4,6 @@ Describes the parameters required for bundle installation, recovery, or uninstal
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [InstallParam](arkts-ability-installer-installparam-i-sys.md)
@@ -30,8 +28,6 @@ Installation flag.The value can be:
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [installFlag](arkts-ability-installer-installparam-i-sys.md#installflag)
@@ -54,8 +50,6 @@ Whether to retain the bundle data when the application is uninstalled. The defau
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [isKeepData](arkts-ability-installer-installparam-i-sys.md#iskeepdata)
@@ -77,8 +71,6 @@ User ID. The default value is the user ID of the caller.
 **Default:** Indicates the user id
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

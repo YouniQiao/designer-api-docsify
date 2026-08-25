@@ -4,14 +4,12 @@ Represents a configuration object for precompiling JavaScript in the **Web** com
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'kits/@kit.ArkWeb';
 ```
 
 ## responseHeaders
@@ -25,7 +23,5 @@ Response headers returned by the server when requesting this JavaScript file. ET
 **Type:** Array&lt;WebHeader&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Web.Webview.Core

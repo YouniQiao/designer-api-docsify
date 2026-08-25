@@ -1,7 +1,5 @@
 # Symbol
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@
 ```
 
 Converts a Symbol object to a symbol.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -34,5 +30,3 @@ readonly [Symbol.toStringTag]: string
 ```
 
 **Type:** string
-
-**ArkTS mode:** 

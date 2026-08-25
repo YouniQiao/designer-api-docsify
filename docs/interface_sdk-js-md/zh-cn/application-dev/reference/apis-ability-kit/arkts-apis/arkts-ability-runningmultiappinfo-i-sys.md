@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -21,8 +19,6 @@ bundleName: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -40,8 +36,6 @@ mode: MultiAppMode
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
@@ -57,8 +51,6 @@ runningAppClones?: Array<RunningAppClone>
 **类型：** Array&lt;[RunningAppClone](arkts-ability-runningappclone-i-sys.md)&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -76,32 +68,6 @@ runningMultiInstances?: Array<RunningMultiInstanceInfo>
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = 'ohos.samples.etsclock';
-  // 获取应用多开运行态信息
-  appManager.getRunningMultiAppInfo(bundleName)
-    .then((info: appManager.RunningMultiAppInfo) => {
-      console.info(`getRunningMultiAppInfo success, data: ${JSON.stringify(info)}`);
-    }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`getRunningMultiAppInfo failed, code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  // 处理入参错误异常
-  let code = (err as BusinessError).code;
-  let msg = (err as BusinessError).message;
-  console.error(`getRunningMultiAppInfo error, code: ${code}, message: ${msg}`);
-}
-```

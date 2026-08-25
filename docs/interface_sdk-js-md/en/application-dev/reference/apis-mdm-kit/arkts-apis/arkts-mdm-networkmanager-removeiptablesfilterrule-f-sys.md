@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
+import { networkManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeIptablesFilterRule
@@ -15,8 +15,6 @@ function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule, cal
 Removes the network packet filtering rule. Only IPv4 is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -44,67 +42,6 @@ Removes the network packet filtering rule. Only IPv4 is supported. This API uses
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let filterRule: networkManager.RemoveFilterRule = {
-  // Replace with actual values.
-  "srcAddr": "192.168.1.1-192.168.255.255",
-  "destAddr": "10.1.1.1",
-  "srcPort": "8080",
-  "destPort": "8080",
-  "uid": "9696",
-  "direction": networkManager.Direction.OUTPUT,
-  "action": networkManager.Action.DENY,
-  "protocol": networkManager.Protocol.UDP
-};
-
-networkManager.removeIptablesFilterRule(wantTemp, filterRule, (err) => {
-  if (err) {
-    console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in removing iptables filter rule`);
-});
-```
-
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let filterRule: networkManager.RemoveFilterRule = {
-  // Replace with actual values.
-  "srcAddr": "192.168.1.1-192.168.255.255",
-  "destAddr": "10.1.1.1",
-  "srcPort": "8080",
-  "destPort": "8080",
-  "uid": "9696",
-  "direction": networkManager.Direction.OUTPUT,
-  "action": networkManager.Action.DENY,
-  "protocol": networkManager.Protocol.UDP
-};
-
-networkManager.removeIptablesFilterRule(wantTemp, filterRule).then(() => {
-  console.info(`Succeeded in removing iptables filter rule`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## removeIptablesFilterRule
 
@@ -115,8 +52,6 @@ function removeIptablesFilterRule(admin: Want, filterRule: RemoveFilterRule): Pr
 Removes the network packet filtering rule. Only IPv4 is supported. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -148,7 +83,3 @@ Removes the network packet filtering rule. Only IPv4 is supported. This API uses
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [removeIptablesFilterRule](#removeiptablesfilterrule)

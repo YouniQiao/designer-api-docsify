@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from '@kit.BackgroundTasksKit';
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## releaseExemptionResource
@@ -15,8 +15,6 @@ function releaseExemptionResource(request: ResourceRequest): void
 Releases exemption resources.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DEVICE_STANDBY_EXEMPTION
 
@@ -42,18 +40,3 @@ Releases exemption resources.
 | [9800003](../errorcode-backgroundTaskMgr.md#9800003-ipc-failure) |
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) |
-
-**Examples**
-
-```TypeScript
-import { deviceStandby } from '@kit.BackgroundTasksKit';
-
-let resRequest: deviceStandby.ResourceRequest = {
-  resourceTypes: deviceStandby.ResourceType.TIMER,
-  uid:10003,
-  name:"com.demo.app",
-  duration:10,
-  reason:"unapply",
-};
-deviceStandby.releaseExemptionResource(resRequest);
-```

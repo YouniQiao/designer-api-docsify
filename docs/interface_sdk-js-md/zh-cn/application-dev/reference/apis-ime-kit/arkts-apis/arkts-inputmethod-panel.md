@@ -33,7 +33,7 @@
 ## 导入模块
 
 ```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+import { PanelInfo, PanelType, PanelFlag } from 'kits/@kit.IMEKit';
 ```
 
 ## 汇总

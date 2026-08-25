@@ -4,14 +4,12 @@ Represents the pinch mode of the grid in the picker.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## defaultGridLevel
@@ -25,8 +23,6 @@ Grid level after the picker is started. The default value is **STANDARD**.
 **Type:** [GridLevel](arkts-medialibrary-photoaccesshelper-gridlevel-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Grid pinch mode. If this parameter is set, the pinch function is supported. Othe
 **Type:** [GridPinchModeType](arkts-medialibrary-photoaccesshelper-gridpinchmodetype-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

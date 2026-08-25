@@ -4,8 +4,6 @@ Defines the information required for triggering a local WantAgent object. The in
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ Type of the operation to execute.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -33,16 +29,14 @@ Type of the operation to execute.
 ## requestCode
 
 ```TypeScript
-requestCode: int
+requestCode: number
 ```
 
 Custom request code, which is used to identify the operation to execute.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,8 +55,6 @@ Array of all Want objects. Currently, only one Want object is supported. If mult
 **Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

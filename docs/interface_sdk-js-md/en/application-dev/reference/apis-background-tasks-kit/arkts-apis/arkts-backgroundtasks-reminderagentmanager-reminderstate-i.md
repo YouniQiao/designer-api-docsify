@@ -8,14 +8,12 @@ all callbacks associated with user-tapped button types under the application are
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Notification.ReminderAgent
 
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## buttonType
@@ -30,8 +28,6 @@ Button type.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Notification.ReminderAgent
@@ -43,13 +39,14 @@ isMessageResent: boolean
 ```
 
 Whether a message is sent repeatedly.  
-- **false**: The message is sent for the first time. Applicable scenarios: The application is running when the user taps a button on the agent-powered reminder notification; the application is not running when the user taps the button, and the application registers a new callback function afterward. - **true**: The message is sent repeatedly. Applicable scenario: The application is running and registers a new callback function after the user taps a button on the agent-powered reminder notification.
+- **false**: The message is sent for the first time. Applicable scenarios: The application is running when the  
+user taps a button on the agent-powered reminder notification; the application is not running when the user taps the button, and the application registers a new callback function afterward.  
+- **true**: The message is sent repeatedly. Applicable scenario: The application is running and registers a new  
+callback function after the user taps a button on the agent-powered reminder notification.
 
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,16 +55,14 @@ Whether a message is sent repeatedly.
 ## reminderId
 
 ```TypeScript
-reminderId: int
+reminderId: number
 ```
 
 Reminder ID. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

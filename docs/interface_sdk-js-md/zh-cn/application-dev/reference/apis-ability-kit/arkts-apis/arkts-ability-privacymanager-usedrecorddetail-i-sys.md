@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Security.AccessToken
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## accessDuration
 
 ```TypeScript
-accessDuration: long
+accessDuration: number
 ```
 
 访问时长。 单位为：毫秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -37,16 +33,14 @@ accessDuration: long
 ## count
 
 ```TypeScript
-count?: int
+count?: number
 ```
 
 访问次数。在accessRecords中表示成功访问次数，在rejectRecords中表示失败或拒绝次数。默认值：0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -55,18 +49,17 @@ count?: int
 ## lockScreenStatus
 
 ```TypeScript
-lockScreenStatus?: int
+lockScreenStatus?: number
 ```
 
 访问时的锁屏状态。  
-- 1，表示非锁屏场景使用权限。 - 2，表示锁屏场景使用权限。  
+- 1，表示非锁屏场景使用权限。  
+- 2，表示锁屏场景使用权限。  
 默认值：1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -75,16 +68,14 @@ lockScreenStatus?: int
 ## status
 
 ```TypeScript
-status: int
+status: number
 ```
 
 访问状态。0表示停止使用，1表示前台使用，2表示后台使用。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -93,16 +84,14 @@ status: int
 ## timestamp
 
 ```TypeScript
-timestamp: long
+timestamp: number
 ```
 
 访问时的时间戳。 单位为：毫秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 
@@ -119,8 +108,6 @@ usedType?: PermissionUsedType
 **类型：** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Security.AccessToken
 

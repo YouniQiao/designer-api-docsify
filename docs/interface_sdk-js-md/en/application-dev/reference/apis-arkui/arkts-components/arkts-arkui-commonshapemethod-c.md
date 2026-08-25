@@ -6,8 +6,6 @@ CommonShapeMethod@extends CommonMethod&lt;T&gt;
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ antiAlias(value: boolean): T
 Specifies whether anti-aliasing is enabled.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,8 +51,6 @@ Sets the color of the fill area. An invalid value is handled as the default valu
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -84,8 +78,6 @@ fillOpacity(value: number | string | Resource): T
 Sets the opacity of the fill area. The value range is [0.0, 1.0]. A value less than 0.0 evaluates to the value 0.0. A value greater than 1.0 evaluates to the value 1.0. Any other value evaluates to the value 1.0.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -115,8 +107,6 @@ Sets the stroke color. If this attribute is not set, the component does not have
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -144,8 +134,6 @@ strokeDashArray(value: Array<any>): T
 Sets stroke dashes. The value must be greater than or equal to 0. Invalid values are treated as the default value.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -175,8 +163,6 @@ Sets the offset of the start point for drawing the stroke. An invalid value is h
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -205,8 +191,6 @@ Sets the cap style of the stroke.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -217,7 +201,7 @@ Sets the cap style of the stroke.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LineCapStyle](../arkts-apis/arkts-arkui-enums-linecapstyle-e.md) | Yes |
+| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | Yes |
 
 **Return value:**
 
@@ -234,8 +218,6 @@ strokeLineJoin(value: LineJoinStyle): T
 Sets the join style of the stroke. This attribute does not work for the Circle component, which does not have corners.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -265,8 +247,6 @@ Limits for drawing acute angles as bevels
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -295,8 +275,6 @@ Sets the stroke opacity. The value range is [0.0, 1.0]. A value less than 0.0 ev
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
@@ -324,8 +302,6 @@ strokeWidth(value: Length): T
 Sets the stroke width. If this attribute is of the string type, percentage values are not supported and will be treated as 1 px.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAgentCardByAgentId
@@ -15,8 +15,6 @@ function getAgentCardByAgentId(bundleName: string, agentId: string): Promise<Age
 Gets the AgentCard within specified agent id.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Required permissions:** ohos.permission.GET_AGENT_CARD
 

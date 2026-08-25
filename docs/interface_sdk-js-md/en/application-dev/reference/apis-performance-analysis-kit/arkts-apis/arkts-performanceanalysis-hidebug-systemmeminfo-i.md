@@ -1,17 +1,15 @@
 # SystemMemInfo
 
-Describes the system memory information, including the total memory, free memory, and available memory.@interface SystemMemInfo
+Describes the system memory information, including the total memory, free memory, and available memory.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## availableMem
@@ -25,8 +23,6 @@ Available memory of the system, in KB. The value of this parameter is obtained b
 **Type:** bigint
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -42,8 +38,6 @@ Free memory of the system, in KB. The value of this parameter is obtained by rea
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## totalMem
@@ -57,7 +51,5 @@ Total memory of the system, in KB. The value of this parameter is obtained by re
 **Type:** bigint
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug

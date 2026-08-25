@@ -1,7 +1,5 @@
 # BooleanConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 <T>(value?: T): boolean
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -30,8 +26,6 @@
 ```TypeScript
 new(value?: any): Boolean
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -50,5 +44,3 @@ readonly prototype: Boolean
 ```
 
 **Type:** Boolean
-
-**ArkTS mode:** 

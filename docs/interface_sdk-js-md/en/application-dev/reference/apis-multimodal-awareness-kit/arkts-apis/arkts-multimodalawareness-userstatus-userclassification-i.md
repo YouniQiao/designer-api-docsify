@@ -4,8 +4,6 @@ Defines the user age group detection result.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Deprecated since:** 24
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
@@ -13,7 +11,7 @@ Defines the user age group detection result.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## ageGroup
@@ -27,8 +25,6 @@ User age group, for example, child or adult.
 **Type:** [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Deprecated since:** 24
 
@@ -45,8 +41,6 @@ Confidence of the detection result. The value is a floating point number ranging
 **Type:** float
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Deprecated since:** 24
 

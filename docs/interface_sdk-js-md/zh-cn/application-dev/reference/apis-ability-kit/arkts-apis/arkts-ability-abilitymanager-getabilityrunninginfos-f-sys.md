@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAbilityRunningInfos
@@ -15,8 +15,6 @@ function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo
 获取UIAbility运行相关信息。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -37,46 +35,3 @@ function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // 获取UIAbility运行时相关信息
-  abilityManager.getAbilityRunningInfos()
-    .then((data: abilityManager.AbilityRunningInfo[]) => {
-      console.info(`getAbilityRunningInfos success, data: ${JSON.stringify(data)}`);
-    })
-    .catch((err: Error) => {
-      let error = err as BusinessError;
-      console.error(`getAbilityRunningInfos fail, error ${error.code}, ${error.message}`);
-    })
-} catch (e) {
-  let code = (e as BusinessError).code;
-  let msg = (e as BusinessError).message;
-  console.error(`getAbilityRunningInfos fail, error code: ${code}, error msg: ${msg}`);
-}
-```
-
-```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  abilityManager.getAbilityRunningInfos((err: BusinessError<void> | null,
-    data: Array<abilityManager.AbilityRunningInfo> | undefined) => {
-    if (err) {
-      console.error(`getAbilityRunningInfos fail, error: ${JSON.stringify(err)}`);
-    } else {
-      console.info(`getAbilityRunningInfos success, data: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (paramError) {
-  let code: number = (paramError as BusinessError).code;
-  let message: string = (paramError as BusinessError).message;
-  console.error(`error.code: ${code}, error.message: ${message}`);
-}
-```

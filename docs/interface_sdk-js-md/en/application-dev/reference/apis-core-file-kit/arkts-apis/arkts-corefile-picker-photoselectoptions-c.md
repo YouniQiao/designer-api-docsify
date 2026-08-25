@@ -4,8 +4,6 @@ Defines the options for selecting images or videos.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 12
 
 **Substitutes:** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
@@ -15,7 +13,7 @@ Defines the options for selecting images or videos.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## maxSelectNumber
@@ -29,8 +27,6 @@ Maximum number of media files that can be selected. The default value is **50**,
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 
@@ -52,8 +48,6 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 **Type:** PhotoViewMIMETypes
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 18
 

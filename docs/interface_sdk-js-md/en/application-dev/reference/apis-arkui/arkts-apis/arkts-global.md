@@ -15,3 +15,10 @@
 | [setInterval](arkts-arkui-global-setinterval-f.md) |
 | [setMonitorForCrownEvents](arkts-arkui-global-setmonitorforcrownevents-f.md) |
 | [setTimeout](arkts-arkui-global-settimeout-f.md) |
+
+### Properties
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [LITE](arkts-arkui-global-p.md) |
+| [STANDARD](arkts-arkui-global-p.md) |

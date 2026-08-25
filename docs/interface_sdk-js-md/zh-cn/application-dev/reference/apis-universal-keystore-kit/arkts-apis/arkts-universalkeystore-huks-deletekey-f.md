@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## deleteKey
@@ -21,8 +21,6 @@ function deleteKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [deleteKeyItem](arkts-universalkeystore-huks-deletekeyitem-f.md)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;void&gt;)
@@ -36,36 +34,6 @@ function deleteKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 | keyAlias | string | 是 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-huks.deleteKey(keyAlias, emptyOptions, (err, data) => {
-});
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* 此处options选择emptyOptions传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.deleteKey(keyAlias, emptyOptions).then((data) => {
-  console.info('delete key success');
-}).catch((err: BusinessError) => {
-  console.error("密钥删除失败，错误码是： " + err.code + " 错误码信息： " + err.message);
-});
-```
 
 
 ## deleteKey
@@ -81,8 +49,6 @@ function deleteKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 > [huks.deleteKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-deletekeyitem-f.md)替代。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -102,7 +68,3 @@ function deleteKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 | 类型 |
 | --- |
 | Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; |
-
-**示例**
-
-参见 [deleteKey](#deletekey)

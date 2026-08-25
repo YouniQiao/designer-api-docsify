@@ -4,8 +4,6 @@ Enumerates the error types (used to distinguish error stages).
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## LOAD_ERROR
@@ -18,8 +16,6 @@ An error occurred during resource loading.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 ## PLAY_ERROR
@@ -31,7 +27,5 @@ PLAY_ERROR = 2
 An error occurred during resource playback.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool

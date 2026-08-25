@@ -8,7 +8,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AgentUIExtensionAbility } from '@kit.AbilityKit';
+import { AgentUIExtensionAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

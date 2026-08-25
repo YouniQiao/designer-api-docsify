@@ -16,8 +16,6 @@ PermissionRequest is an object used by the **Web** component to grant or deny pe
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -35,8 +33,6 @@ Constructs a **PermissionRequest** object.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -51,8 +47,6 @@ Denies the permission requested by the web page.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -66,8 +60,6 @@ getAccessibleResource(): Array<string>
 Obtains the list of permission resources requested by the web page. For details about the type, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md).
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -89,8 +81,6 @@ Obtains the origin of this web page.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -110,8 +100,6 @@ grant(resources: Array<string>): void
 Grants the permission requested by the web page.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

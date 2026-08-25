@@ -4,8 +4,6 @@ Input event interception result interface, used by the listener callback [InputE
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,11 +21,9 @@ Input event interception action.
 **CONTINUE**: The event is allowed to continue being passed to the UI framework.  
 **BLOCK**: The event is blocked from being passed to the UI framework.
 
-**Type:** InputEventInterceptAction
+**Type:** [InputEventInterceptAction](../arkts-apis/arkts-arkui-inputeventinterceptaction-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

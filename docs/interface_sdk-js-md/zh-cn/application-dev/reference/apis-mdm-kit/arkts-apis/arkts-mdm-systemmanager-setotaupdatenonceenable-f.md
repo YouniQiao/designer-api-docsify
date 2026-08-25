@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setOtaUpdateNonceEnable
@@ -18,8 +18,6 @@ function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void
 > 为保障系统安全，若非内网升级等特殊业务需求，不建议禁用Nonce校验。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -43,24 +41,3 @@ function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) |
-
-**示例**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let isEnable: boolean = true;
-try {
-  systemManager.setOtaUpdateNonceEnable(wantTemp, isEnable);
-  console.info('Succeeded in setting OTA update Nonce enable.');
-} catch (err) {
-  console.error(`Failed to set OTA update Nonce enable. Code is ${err.code}, message is ${err.message}`);
-}
-```

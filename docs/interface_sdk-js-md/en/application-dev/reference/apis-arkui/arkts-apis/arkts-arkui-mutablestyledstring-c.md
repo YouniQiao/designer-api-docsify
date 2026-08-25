@@ -11,8 +11,6 @@ Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -29,8 +27,6 @@ appendStyledString(other: StyledString): void
 Appends a styled string.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,8 +50,6 @@ Removes all styles of this styled string.After a style is removed, the value set
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,8 +65,6 @@ insertString(start: number, other: string): void
 Inserts a string.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -103,8 +95,6 @@ Inserts a new styled string at the specified position.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -134,8 +124,6 @@ Removes the string in the specified range of this styled string.This API equally
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -164,8 +152,6 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 Removes the style for the specified range of this styled string.After a style is removed, the value set for the corresponding style attribute in the Text component is used. If the value is not set, the default value is used.This API equally works when the styled string contains an image.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,8 +183,6 @@ Removes all styles for the specified range of this styled string.After a style i
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -227,8 +211,6 @@ replaceString(start: number, length: number, other: string): void
 Replaces the string in the specified range of this styled string.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,8 +242,6 @@ Replaces the style in the specified range of this styled string.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -289,8 +269,6 @@ replaceStyledString(start: number, length: number, other: StyledString): void
 Replaces the styled string in the specified range.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -321,8 +299,6 @@ setStyle(spanStyle: SpanStyle): void
 Sets a new style for the specified range of this styled string.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

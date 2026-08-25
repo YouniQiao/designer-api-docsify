@@ -4,14 +4,12 @@ Defines the download task configuration.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## background
@@ -26,8 +24,6 @@ Whether to enable the background task notification. When this parameter is enabl
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## description
@@ -41,8 +37,6 @@ Description of the download session. The default value is an empty string.
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -61,8 +55,6 @@ Whether download is allowed on a metered connection. The value **true** means th
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## enableRoaming
@@ -77,8 +69,6 @@ Whether download is allowed on a roaming network. The value **true** means the d
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## filePath
@@ -88,13 +78,14 @@ filePath?: string
 ```
 
 Path where the downloaded file is stored. The default value is the cache directory of the caller (that is, the input **context**). The default file name is the part truncated from the last slash (/) in the URL.  
-- In the FA model, use the [Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir) method to obtain the application storage path. - In the Stage model, use the **AbilityContext** class in [Context (Context Base Class of the Stage Model)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) to obtain the file path.
+- In the FA model, use the  
+[Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir) method to obtain the application storage path.  
+- In the Stage model, use the **AbilityContext** class in  
+[Context (Context Base Class of the Stage Model)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) to obtain the file path.
 
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -110,24 +101,23 @@ HTTPS flag header to be included in the download request. The default value is e
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## networkType
 
 ```TypeScript
-networkType?: int
+networkType?: number
 ```
 
 Network type that can be used for download. The allowed network type is determined by bitwise operation of [network type constants](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). The following settings are supported:  
-- Only the cellular network is supported. The parameter is **NETWORK_MOBILE** or **0x00000001**. - Only WLAN is supported. The parameter is **NETWORK_WIFI** or **0x00010000**. - Both cellular network and WLAN are supported, which is the default settings. The parameter is **NETWORK_MOBILE **
+- Only the cellular network is supported. The parameter is **NETWORK_MOBILE** or **0x00000001**.  
+- Only WLAN is supported. The parameter is **NETWORK_WIFI** or **0x00010000**.  
+- Both cellular network and WLAN are supported, which is the default settings. The parameter is  
+**NETWORK_MOBILE **
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -143,8 +133,6 @@ Download task name. The default value is **download**.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.Download
 
 ## url
@@ -158,7 +146,5 @@ Resource URL. From API version 6 to 14, the value contains a maximum of 2048 cha
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.Download

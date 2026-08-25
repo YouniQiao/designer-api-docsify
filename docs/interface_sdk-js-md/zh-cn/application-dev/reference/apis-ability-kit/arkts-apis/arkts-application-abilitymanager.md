@@ -4,8 +4,6 @@ AbilityManager模块提供对Ability相关信息和状态信息进行获取、�
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [abilityManager/abilityManager](arkts-app-ability-abilitymanager.md)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## alloc
@@ -15,8 +15,6 @@ function alloc(size: number, fill?: string | FastBuffer | number, encoding?: Buf
 Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the FastBuffer will be zero-filled.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -35,17 +33,3 @@ Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the Fas
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
-
-**Examples**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.alloc(5);
-let buf2 = fastbuffer.alloc(5, 'a');
-let buf3 = fastbuffer.alloc(11, 'aGVsbG8gd29ybGQ=', 'base64');
-console.info(buf2.toString());
-// Output: aaaaa
-console.info(buf3.toString());
-// Output: hello world
-```

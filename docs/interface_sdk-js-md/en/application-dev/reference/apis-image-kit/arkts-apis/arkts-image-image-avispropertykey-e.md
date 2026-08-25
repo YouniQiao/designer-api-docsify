@@ -2,9 +2,10 @@
 
 Enumerates the properties available for the metadata of a Avis image.
 
-**Since:** 26.0.0
+> **NOTE：**&gt;
+> For detail about the return value type, see [AvisMetadata](arkts-image-image-avismetadata-c.md).
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**Since:** 26.0.0
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -17,8 +18,6 @@ DELAY_TIME = 'AvisDelayTime'
 Delay of each frame in milliseconds.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

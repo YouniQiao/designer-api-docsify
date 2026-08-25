@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getApplicationInfos
@@ -15,8 +15,6 @@ function getApplicationInfos(bundleFlags: number, userId: number, callback: Asyn
 Obtains information about all installed apps for a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 8
 
@@ -47,8 +45,6 @@ Obtains information about installed apps for the user to which the caller belong
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** getAllApplicationInfo
@@ -76,8 +72,6 @@ function getApplicationInfos(bundleFlags: number, userId?: number): Promise<Arra
 Obtains information about all installed apps for a specified user. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 8
 

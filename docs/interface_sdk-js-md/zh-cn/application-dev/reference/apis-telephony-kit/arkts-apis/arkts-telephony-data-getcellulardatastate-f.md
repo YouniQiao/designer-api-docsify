@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
+import { data } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getCellularDataState
@@ -15,8 +15,6 @@ function getCellularDataState(callback: AsyncCallback<DataConnectState>): void
 获取蜂窝数据业务的连接状态，使用callback方式作为异步方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本22+：ohos.permission.GET_NETWORK_INFO
@@ -35,32 +33,6 @@ function getCellularDataState(callback: AsyncCallback<DataConnectState>): void
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getCellularDataState((err: BusinessError, contextData: data.DataConnectState) => {
-    if(err) {
-        console.error(`getCellularDataState fail. code: ${err.code}, message: ${err.message}, contextData: ${contextData}`);
-    } else {
-        console.info(`getCellularDataState success`);
-    }
-});
-```
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getCellularDataState().then((contextData: data.DataConnectState) => {
-    console.info(`getCellularDataState success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCellularDataState fail. code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## getCellularDataState
 
@@ -71,8 +43,6 @@ function getCellularDataState(): Promise<DataConnectState>
 获取蜂窝数据业务的连接状态，使用Promise方式作为异步方法。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本22+：ohos.permission.GET_NETWORK_INFO
@@ -90,7 +60,3 @@ function getCellularDataState(): Promise<DataConnectState>
 | 错误码ID |
 | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [getCellularDataState](#getcellulardatastate)

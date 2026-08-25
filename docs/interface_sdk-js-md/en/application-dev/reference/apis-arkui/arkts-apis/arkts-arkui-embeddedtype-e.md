@@ -4,8 +4,6 @@ Enum of EmbeddedType@enum { number }
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## EMBEDDED_UI_EXTENSION
@@ -17,8 +15,6 @@ EMBEDDED_UI_EXTENSION = 0
 The EmbeddedComponent show the UI in EmbeddedUIExtensionAbility.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

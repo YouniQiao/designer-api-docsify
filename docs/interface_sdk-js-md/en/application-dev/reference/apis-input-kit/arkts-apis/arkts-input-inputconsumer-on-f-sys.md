@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'kits/@kit.InputKit';
 ```
 
 ## on('key')
@@ -20,8 +20,6 @@ Enables listening for system hotkey change events. This API uses an asynchronous
 > event may not be closed. In this case, check whether the design and implementation are proper.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 
@@ -41,37 +39,3 @@ Enables listening for system hotkey change events. This API uses an asynchronous
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { inputConsumer } from '@kit.InputKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          let leftAltKey = 2045;
-          let tabKey = 2049;
-          let keyOptions: inputConsumer.KeyOptions = {
-            preKeys: [ leftAltKey ],
-            finalKey: tabKey,
-            isFinalKeyDown: true,
-            finalKeyDownDuration: 0
-          };
-          let callback = (keyOptions: inputConsumer.KeyOptions) => {
-            console.info(`keyOptions: ${JSON.stringify(keyOptions)}`);
-          }
-          try {
-            inputConsumer.on("key", keyOptions, callback);
-          } catch (error) {
-            console.error(`Subscribe failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-          }
-        })
-    }
-  }
-}
-```

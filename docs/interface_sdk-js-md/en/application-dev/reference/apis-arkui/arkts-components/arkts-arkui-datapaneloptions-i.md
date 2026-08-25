@@ -4,8 +4,6 @@ Defines data panel configuration options.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -19,14 +17,13 @@ Defines data panel configuration options.
 max?: number
 ```
 
-- When set to a value greater than 0, this parameter indicates the maximum value in the **values** list. - When set to a value equal to or smaller than 0, this parameter indicates the sum of values in the **values** list, and the values are displayed proportionally based on their relative sizes.  
-Default value: **100**
+- When set to a value greater than 0, this parameter indicates the maximum value in the **values** list.  
+- When set to a value equal to or smaller than 0, this parameter indicates the sum of values in the **values**  
+list, and the values are displayed proportionally based on their relative sizes.Default value: **100**
 
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,8 +43,6 @@ Type of the data panel (dynamic modification is not supported).Default value: **
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -65,8 +60,6 @@ Data value list. A maximum of nine values are supported. If more than nine value
 **Type:** number[]
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

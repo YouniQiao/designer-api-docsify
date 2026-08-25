@@ -4,8 +4,6 @@ Defines the configuration options for a **RelativeTimeFormat** object. Since API
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#options)
@@ -15,7 +13,7 @@ Defines the configuration options for a **RelativeTimeFormat** object. Since API
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## localeMatcher
@@ -29,8 +27,6 @@ Locale matching algorithm. The value can be **lookup** or **best fit**.The defau
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 20
 
@@ -52,8 +48,6 @@ Format of the output result. It determines whether numeric values are used to re
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.RelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#numeric)
@@ -68,13 +62,11 @@ Format of the output result. It determines whether numeric values are used to re
 style?: string
 ```
 
-Length of an internationalized message. The value can be **long**, **short**, or **narrow**.The default value is **long**.
+Length of an internationalized message. The value can be **number**, **short**, or **narrow**.The default value is **number**.
 
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 20
 

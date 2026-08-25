@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isRunningInStabilityTest
@@ -16,11 +16,9 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 > **NOTE：**&gt;
 > A stability test scenario refers to a specific testing environment designed to verify application reliability
-> under complex, extreme, or long-term operating conditions.
+> under complex, extreme, or number-term operating conditions.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,31 +37,6 @@ Checks whether the system is undergoing a stability test. This API uses an async
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.isRunningInStabilityTest((err, flag) => {
-  if (err) {
-    console.error(`isRunningInStabilityTest fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info(`The result of isRunningInStabilityTest is: ${JSON.stringify(flag)}`);
-  }
-});
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.isRunningInStabilityTest().then((flag) => {
-  console.info(`The result of isRunningInStabilityTest is: ${JSON.stringify(flag)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## isRunningInStabilityTest
 
@@ -75,11 +48,9 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 > **NOTE：**&gt;
 > A stability test scenario refers to a specific testing environment designed to verify application reliability
-> under complex, extreme, or long-term operating conditions.
+> under complex, extreme, or number-term operating conditions.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,7 +67,3 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 | Error Code ID |
 | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [isRunningInStabilityTest](#isrunninginstabilitytest)

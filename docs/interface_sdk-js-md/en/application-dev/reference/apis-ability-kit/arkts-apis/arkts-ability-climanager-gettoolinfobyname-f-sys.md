@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
+import { cliManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getToolInfoByName
@@ -15,8 +15,6 @@ function getToolInfoByName(toolName: string): Promise<ToolInfo>
 Get detailed information of a single tool by its name
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.QUERY_CLI_TOOL
 

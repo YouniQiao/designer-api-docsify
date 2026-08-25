@@ -3,21 +3,19 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## findMatchingWlan
 
 ```TypeScript
 function findMatchingWlan(
-      wlanBssidArray: Array<string>, rssiThreshold: int, needStartScan: boolean): Promise<Array<MatchingWlanInfo>>
+      wlanBssidArray: Array<string>, rssiThreshold: number, needStartScan: boolean): Promise<Array<MatchingWlanInfo>>
 ```
 
 Check whether the WLAN scan results match the WLAN BSSID list, return information about the WLAN device that is successfully matched.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -32,7 +30,7 @@ Check whether the WLAN scan results match the WLAN BSSID list, return informatio
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | wlanBssidArray | Array & lt;string & gt; | Yes |
-| rssiThreshold | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| rssiThreshold | number | Yes |
 | [needStartScan](arkts-location-geolocationmanager-locatingrequireddataconfig-i-sys.md) | boolean | Yes |
 
 **Return value:**

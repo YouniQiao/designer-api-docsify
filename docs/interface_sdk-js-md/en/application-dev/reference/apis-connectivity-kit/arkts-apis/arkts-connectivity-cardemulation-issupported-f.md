@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from '@kit.ConnectivityKit';
+import { cardEmulation } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isSupported
@@ -19,8 +19,6 @@ Checks whether a certain type of card emulation is supported.
 > [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md) instead.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -41,25 +39,3 @@ Checks whether a certain type of card emulation is supported.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-// Applicable to devices other than lite wearables
-import { cardEmulation } from '@kit.ConnectivityKit';
-
-let isHceSupported: boolean = cardEmulation.isSupported(cardEmulation.FeatureType.HCE);
-if (!isHceSupported) {
-    console.info('this device is not supported for HCE, ignore it.');
-}
-```
-
-```TypeScript
-// Applicable to lite wearables
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-let isHceSupported = cardEmulation.isSupported(cardEmulation.FeatureType.HCE);
-if (!isHceSupported) {
-    console.error('this device is not supported for HCE, ignore it.');
-}
-```

@@ -1,10 +1,8 @@
 # PixelMapFormat (System API)
 
-Enumerates pixel map formats.@enum { int }
+Enumerates pixel map formats.@enum { number }
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,8 +18,6 @@ Indicates that the storage order is to store Y first and then V U alternately ea
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -36,8 +32,6 @@ Indicates that each pixel is stored on 32 bits. Each pixel contains 4 components
 
 **Since:** 14
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
-
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ UNKNOWN = 0
 Indicates an unknown format.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

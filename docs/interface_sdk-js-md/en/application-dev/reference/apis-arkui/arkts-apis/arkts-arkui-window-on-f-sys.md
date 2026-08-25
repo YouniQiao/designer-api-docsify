@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'kits/@kit.ArkUI';
 ```
 
 ## on('systemBarTintChange')
@@ -15,8 +15,6 @@ function on(type: 'systemBarTintChange', callback: Callback<SystemBarTintState>)
 Subscribes to the property change event of the status bar and navigation bar.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,18 +34,6 @@ Subscribes to the property change event of the status bar and navigation bar.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-try {
-  window.on('systemBarTintChange', (data) => {
-    console.info('Succeeded in enabling the listener for systemBarTint changes. Data: ' + JSON.stringify(data));
-  });
-} catch (exception) {
-  console.error(`Failed to enable the listener for systemBarTint changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 
 ## on('gestureNavigationEnabledChange')
 
@@ -58,8 +44,6 @@ function on(type: 'gestureNavigationEnabledChange', callback: Callback<boolean>)
 Subscribes to the gesture navigation status change event.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -81,18 +65,6 @@ Subscribes to the gesture navigation status change event.
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
 
-**Examples**
-
-```TypeScript
-try {
-  window.on('gestureNavigationEnabledChange', (data) => {
-    console.info(`Succeeded in enabling the listener for gesture navigation status changes. Data: ${data}`);
-  });
-} catch (exception) {
-  console.error(`Failed to enable the listener for gesture navigation status changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
-
 
 ## on('waterMarkFlagChange')
 
@@ -103,8 +75,6 @@ function on(type: 'waterMarkFlagChange', callback: Callback<boolean>): void
 Subscribes to the watermark status change event.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -125,15 +95,3 @@ Subscribes to the watermark status change event.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-
-**Examples**
-
-```TypeScript
-try {
-  window.on('waterMarkFlagChange', (data) => {
-    console.info(`Succeeded in enabling the listener for watermark flag changes. Data: ${data}`);
-  });
-} catch (exception) {
-  console.error(`Failed to enable the listener for watermark flag changes. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```

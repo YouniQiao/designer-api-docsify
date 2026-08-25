@@ -4,8 +4,6 @@ Enumerates the purposes for which the key in the certificate is used.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.Cert
 
 ## KEYUSAGE_DIGITAL_SIGNATURE
@@ -17,8 +15,6 @@ KEYUSAGE_DIGITAL_SIGNATURE = 0
 The certificate holder can use the private key contained in the certificate to generate a digital signature.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ The certificate holder can use the key to create a digital signature as part of 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -49,8 +43,6 @@ KEYUSAGE_KEY_ENCIPHERMENT = 2
 The certificate holder can use the public key contained in the certificate for key encryption.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ The certificate holder can use the public key contained in the certificate for d
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -81,8 +71,6 @@ KEYUSAGE_KEY_AGREEMENT = 4
 The certificate holder can use the private key contained in the certificate to perform key agreement operations.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +86,6 @@ The certificate holder can use the private key contained in the certificate to s
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -113,8 +99,6 @@ KEYUSAGE_CRL_SIGN = 6
 The certificate holder can use the private key contained in the certificate to sign CRLs.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,8 +114,6 @@ The certificate holder can use the key to perform encryption operations only.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Security.Cert
@@ -145,8 +127,6 @@ KEYUSAGE_DECIPHER_ONLY = 8
 The certificate holder can use the key to perform decryption operations only.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

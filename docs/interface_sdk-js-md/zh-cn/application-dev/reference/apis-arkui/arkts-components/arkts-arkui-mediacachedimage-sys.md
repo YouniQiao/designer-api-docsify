@@ -12,8 +12,6 @@ MediaCachedImage(src: PixelMap | ResourceStr | DrawableDescriptor | ASTCResource
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,7 +22,7 @@ MediaCachedImage(src: PixelMap | ResourceStr | DrawableDescriptor | ASTCResource
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| DrawableDescriptor \| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| DrawableDescriptor \| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | 是 |
 
 ## 汇总
 

@@ -1,7 +1,5 @@
 # Array
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ concat(...items: ConcatArray<T>[]): T[]
 ```
 
 Combines two or more arrays. This method returns a new array without modifying any existing arrays.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ concat(...items: (T | ConcatArray<T>)[]): T[]
 
 Combines two or more arrays. This method returns a new array without modifying any existing arrays.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -54,8 +48,6 @@ every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is 
 ```
 
 Determines whether all the members of an array satisfy the specified test.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -76,8 +68,6 @@ every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any
 
 Determines whether all the members of an array satisfy the specified test.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -96,8 +86,6 @@ filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is
 ```
 
 Returns the elements of an array that meet the condition specified in a callback function.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -118,8 +106,6 @@ filter(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: an
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -139,8 +125,6 @@ forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any
 
 Performs the specified action for each element in an array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -155,8 +139,6 @@ indexOf(searchElement: T, fromIndex?: number): number
 ```
 
 Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -177,8 +159,6 @@ join(separator?: string): string
 
 Adds all the elements of an array into a string, separated by the specified separator string.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -196,8 +176,6 @@ lastIndexOf(searchElement: T, fromIndex?: number): number
 ```
 
 Returns the index of the last occurrence of a specified value in an array, or -1 if it is not present.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -218,8 +196,6 @@ map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U
 
 Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -239,8 +215,6 @@ pop(): T | undefined
 
 Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -252,8 +226,6 @@ push(...items: T[]): number
 ```
 
 Appends new elements to the end of an array, and returns the new length of the array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -273,8 +245,6 @@ reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -290,8 +260,6 @@ Calls the specified callback function for all the elements in an array. The retu
 ```TypeScript
 reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -312,8 +280,6 @@ reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, 
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -333,8 +299,6 @@ reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -350,8 +314,6 @@ Calls the specified callback function for all the elements in an array, in desce
 ```TypeScript
 reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -372,8 +334,6 @@ reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: num
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -393,8 +353,6 @@ reverse(): T[]
 
 Reverses the elements in an array in place. This method mutates the array and returns a reference to the same array.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -407,8 +365,6 @@ shift(): T | undefined
 
 Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -420,8 +376,6 @@ slice(start?: number, end?: number): T[]
 ```
 
 Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -442,8 +396,6 @@ some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any)
 
 Determines whether the specified callback function returns true for any element of an array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -463,8 +415,6 @@ sort(compareFn?: (a: T, b: T) => number): this
 
 Sorts an array in place. This method mutates the array and returns a reference to the same array.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -482,8 +432,6 @@ splice(start: number, deleteCount?: number): T[]
 ```
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -503,8 +451,6 @@ splice(start: number, deleteCount: number, ...items: T[]): T[]
 ```
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -526,8 +472,6 @@ toLocaleString(): string
 
 Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -540,8 +484,6 @@ toString(): string
 
 Returns a string representation of an array.
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -553,8 +495,6 @@ unshift(...items: T[]): number
 ```
 
 Inserts new elements at the start of an array, and returns the new length of the array.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -574,8 +514,6 @@ Inserts new elements at the start of an array, and returns the new length of the
 
 **Type:** T
 
-**ArkTS mode:** 
-
 ## length
 
 ```TypeScript
@@ -585,5 +523,3 @@ length: number
 Gets or sets the length of the array. This is a number one higher than the highest index in the array.
 
 **Type:** number
-
-**ArkTS mode:** 

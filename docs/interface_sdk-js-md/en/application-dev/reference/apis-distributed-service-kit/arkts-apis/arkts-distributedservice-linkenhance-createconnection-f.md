@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## createConnection
@@ -15,8 +15,6 @@ function createConnection(deviceId: string, name: string): Connection
 Creates a **Connection** object on the device that functions as the client. After the **Connection** object is created, subscribe to **on('connectResult')** and call **connect()** to initiate a connection request to the server. After the connection is successful, call **sendData()** to send data. If the connection is not required, call **close()** to destroy the **Connection** object to release resources.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -44,24 +42,3 @@ Creates a **Connection** object on the device that functions as the client. Afte
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) |
-
-**Examples**
-
-On the device that functions as the client, call the createConnection() to create a Connection object.
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```

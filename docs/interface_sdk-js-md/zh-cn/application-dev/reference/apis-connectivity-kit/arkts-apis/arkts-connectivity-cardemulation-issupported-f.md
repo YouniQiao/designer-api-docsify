@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cardEmulation } from '@kit.ConnectivityKit';
+import { cardEmulation } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isSupported
@@ -15,8 +15,6 @@ function isSupported(feature: number): boolean
 是否支持某种类型的卡模拟。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -37,25 +35,3 @@ function isSupported(feature: number): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-// 适用于除轻量级智能穿戴产品之外其他设备
-import { cardEmulation } from '@kit.ConnectivityKit';
-
-let isHceSupported: boolean = cardEmulation.isSupported(cardEmulation.FeatureType.HCE);
-if (!isHceSupported) {
-    console.info('this device is not supported for HCE, ignore it.');
-}
-```
-
-```TypeScript
-// 适用于轻量级智能穿戴设备
-import cardEmulation from '@ohos.nfc.cardEmulation';
-
-let isHceSupported = cardEmulation.isSupported(cardEmulation.FeatureType.HCE);
-if (!isHceSupported) {
-    console.error('this device is not supported for HCE, ignore it.');
-}
-```

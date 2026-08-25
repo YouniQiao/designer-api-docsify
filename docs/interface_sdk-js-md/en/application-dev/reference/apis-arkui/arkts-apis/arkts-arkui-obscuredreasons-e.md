@@ -4,8 +4,6 @@ Sets how the component content is obscured.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## PLACEHOLDER
@@ -17,8 +15,6 @@ PLACEHOLDER = 0
 The content is replaced by a placeholder.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,35 +1,19 @@
 # UserAuthIcon
 
 The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM) system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face or fingerprint authentication icon in the application UI. It supports custom icon colors and sizes, and tapping the icon launches the system authentication dialog box component.This module applies to the following scenarios:  
-- Quickly integrating the face or fingerprint authentication entry into the application UI. - Displaying biometric authentication icons in a unified style. - Tapping the icon to trigger the system-level authentication process.
+- Quickly integrating the face or fingerprint authentication entry into the application UI.  
+- Displaying biometric authentication icons in a unified style.  
+- Tapping the icon to trigger the system-level authentication process.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthIcon } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from 'kits/@kit.UserAuthenticationKit';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build the component.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## onAuthResult
 
@@ -40,8 +24,6 @@ onAuthResult: (result: userAuth.UserAuthResult) => void
 Result callback. This callback is triggered after a user completes authentication. The callback parameters include the authentication result code (**result**), authentication token (**token**), and authentication type (**authType**). Your application needs to process the authentication result in this callback. For example, if the authentication is successful, your application can obtain the token for subsequent security operations. If the authentication fails, your application can prompt the user to try again.Note:The application must request the **ohos.permission.ACCESS_BIOMETRIC** permission. Otherwise, it will only display the icon and cannot start the authentication component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -63,8 +45,6 @@ Icon click callback. This callback is triggered when a user taps the authenticat
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -81,8 +61,6 @@ User authentication parameters. The parameters include the **challenge** value, 
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -95,13 +73,11 @@ iconColor?: ResourceColor
 
 Icon color. Multiple formats are supported, such as color values and resource references. By default, the system accent color is used. You can customize the color based on the application theme, for example, using **Color.Blue** or **\$r('app.color.primary')**.
 
-**Type:** ResourceColor
+**Type:** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** $r('sys.color.ohos_id_color_activated')
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -115,33 +91,13 @@ iconHeight?: Dimension
 
 Icon height, with an aspect ratio of 1:1. Percentage strings are not supported. You are advised to select an appropriate size based on the UI layout.
 
-**Type:** Dimension
+**Type:** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 64fp
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-## onAuthResult
-
-```TypeScript
-onAuthResult: userAuth.AuthCallbackOnResultFunc
-```
-
-Callback used to return the user authentication result.<br>The application must request the `ohos.permission.ACCESS_BIOMETRIC` permission. Otherwise, it will only display the icon and cannot start the identity authentication components.
-
-**Type:** userAuth.AuthCallbackOnResultFunc
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -156,8 +112,6 @@ Parameters on the user authentication page. The parameters include the authentic
 **Type:** userAuth.WidgetParam
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setBadgeNumberByBundle
 
 ```TypeScript
-function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: int): Promise<void>
+function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: number): Promise<void>
 ```
 
 Sets the badge count for other applications. This API uses a promise to return the result.The current application must have a proxy relationship with another application, or the **ohos.permission.NOTIFICATION_AGENT_CONTROLLER** permission is granted to the current application.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -26,8 +24,8 @@ Sets the badge count for other applications. This API uses a promise to return t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
-| badgeNumber | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| badgeNumber | number | Yes |
 
 **Return value:**
 
@@ -48,20 +46,3 @@ Sets the badge count for other applications. This API uses a promise to return t
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
 | [1600017](../errorcode-notification.md#1600017-no-configured-proxy-relationship) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'com.example.bundleName',
-};
-let badgeNumber: number = 10;
-
-notificationManager.setBadgeNumberByBundle(bundle, badgeNumber).then(() => {
-    console.info('setBadgeNumberByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`setBadgeNumberByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```

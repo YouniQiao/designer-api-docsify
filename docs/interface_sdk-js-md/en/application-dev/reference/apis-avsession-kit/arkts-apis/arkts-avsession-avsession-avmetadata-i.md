@@ -4,14 +4,12 @@ The metadata of the current media.Used to set the properties of the current medi
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## album
@@ -25,8 +23,6 @@ The album of this media
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,8 +40,6 @@ The artist of this media
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -61,8 +55,6 @@ Unique ID used to represent this media.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,8 +72,6 @@ The author of this media
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -98,8 +88,6 @@ The id of play list which current media belongs to, it should be an unique ident
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## avQueueImage
@@ -113,8 +101,6 @@ The artwork of play list as a PixelMap or an uri formatted String,
 **Type:** image.PixelMap \| string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -130,8 +116,6 @@ The name of play list which current media belongs to
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## bundleIcon
@@ -145,8 +129,6 @@ The image of the bundle icon as a PixelMap, no need to be set by application.
 **Type:** image.PixelMap
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -162,8 +144,6 @@ The composer of this media
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## description
@@ -178,8 +158,6 @@ The description of the media, used for display
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -187,16 +165,14 @@ The description of the media, used for display
 ## displayTags
 
 ```TypeScript
-displayTags?: int
+displayTags?: number
 ```
 
 The display tags supported by application to be displayed on media center
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -212,23 +188,19 @@ The drm schemes supported by this session which are represented by uuid.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## duration
 
 ```TypeScript
-duration?: long
+duration?: number
 ```
 
 The duration of this media, used to automatically calculate playback position, described by milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -246,8 +218,6 @@ The supported skipIntervals when doing fast forward operation, the default is [S
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -255,16 +225,14 @@ The supported skipIntervals when doing fast forward operation, the default is [S
 ## filter
 
 ```TypeScript
-filter?: int
+filter?: number
 ```
 
 The protocols supported by this session, if not set, the default is [TYPE_CAST_PLUS_STREAM](arkts-avsession-avsession-protocoltype-e.md#type_cast_plus_stream). See [ProtocolType](arkts-avsession-avsession-protocoltype-e.md)
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -282,8 +250,6 @@ The lyric of the media, it should be in standard lyric format
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## mediaImage
@@ -297,8 +263,6 @@ The image of the media as a PixelMap or an uri formatted String, used to display
 **Type:** image.PixelMap \| string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -316,8 +280,6 @@ The next playable media id. Used to tell the controller if there is a next playa
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -333,8 +295,6 @@ The previous playable media id. Used to tell the controller if there is a previo
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -352,8 +312,6 @@ The publishDate of the media
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## rewindSkipIntervals
@@ -367,8 +325,6 @@ The supported skipIntervals when doing rewind operation, the default is [SECONDS
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -386,8 +342,6 @@ The single lyric text of the media, not including time prefix
 
 **Since:** 17
 
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 17.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -404,8 +358,6 @@ The supported skipIntervals when doing fast forward and rewind operation, the de
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## subtitle
@@ -419,8 +371,6 @@ The subtitle of the media, used for display
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -438,8 +388,6 @@ The title of this media, for display in media center.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
@@ -455,8 +403,6 @@ The writer of this media
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

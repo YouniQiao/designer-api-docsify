@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from '@kit.CoreFileKit';
+import { Environment } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getUserDownloadDir
@@ -15,8 +15,6 @@ function getUserDownloadDir(): string
 Obtains the sandbox path of the pre-authorized **Download** directory.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 11: ohos.permission.READ_WRITE_DOWNLOAD_DIRECTORY
@@ -36,17 +34,3 @@ Obtains the sandbox path of the pre-authorized **Download** directory.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | 13900042 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function getUserDownloadDirExample() {
-  try {
-    let path = Environment.getUserDownloadDir();
-    console.info(`Succeeded in getUserDownloadDir, path is ${path}`);
-  } catch (err) {
-    console.error(`Failed to getUserDownloadDir. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```

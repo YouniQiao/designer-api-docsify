@@ -4,8 +4,6 @@ Describes the parameters of the Gatt client's descriptor read request.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)
@@ -15,7 +13,7 @@ Describes the parameters of the Gatt client's descriptor read request.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -29,8 +27,6 @@ The UUID of the characteristic to which the descriptor belongs
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,8 +46,6 @@ The UUID of a DescriptorReadRequest instance
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [descriptorUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#descriptoruuid)
@@ -69,8 +63,6 @@ Indicates the address of the client that initiates the read request
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -90,8 +82,6 @@ Indicates the byte offset of the start position for reading characteristic value
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [offset](arkts-connectivity-ble-descriptorreadrequest-i.md#offset)
@@ -110,8 +100,6 @@ The UUID of the service to which the descriptor belongs
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [serviceUuid](arkts-connectivity-ble-descriptorreadrequest-i.md#serviceuuid)
@@ -129,8 +117,6 @@ The Id of the read request
 **Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

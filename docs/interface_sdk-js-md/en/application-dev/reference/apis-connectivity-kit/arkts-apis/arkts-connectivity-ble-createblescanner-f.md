@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createBleScanner
@@ -16,8 +16,6 @@ Create a ble scanner instance. Each ble scanner instance can be independently st
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -29,12 +27,3 @@ Create a ble scanner instance. Each ble scanner instance can be independently st
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [BleScanner](arkts-connectivity-ble-blescanner-i.md) |
-
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { ble } from '@kit.ConnectivityKit';
-let bleScanner: ble.BleScanner = ble.createBleScanner();
-console.info('create bleScanner success');
-```

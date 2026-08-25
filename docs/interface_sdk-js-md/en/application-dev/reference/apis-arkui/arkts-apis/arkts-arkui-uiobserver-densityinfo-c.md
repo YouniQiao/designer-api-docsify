@@ -4,14 +4,12 @@ Provides the information contained in the callback when the screen pixel density
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## context
@@ -22,11 +20,9 @@ context: UIContext
 
 Context corresponding to the page when the screen pixel density changes.
 
-**Type:** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**Type:** UIContext
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,8 +41,6 @@ Screen pixel density after the change.Value range: [0, +∞)
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

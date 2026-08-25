@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 ## 导入模块
 
 ```TypeScript
-import { AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { AbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## onAbilityBackground
@@ -24,8 +22,6 @@ onAbilityBackground(ability: UIAbility): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -37,10 +33,6 @@ onAbilityBackground(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityContinue
 
@@ -52,8 +44,6 @@ onAbilityContinue(ability: UIAbility): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -65,10 +55,6 @@ onAbilityContinue(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityCreate
 
@@ -80,8 +66,6 @@ onAbilityCreate(ability: UIAbility): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -93,10 +77,6 @@ onAbilityCreate(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityDestroy
 
@@ -108,8 +88,6 @@ onAbilityDestroy(ability: UIAbility): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -121,10 +99,6 @@ onAbilityDestroy(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
 
 ## onAbilityForeground
 
@@ -136,8 +110,6 @@ onAbilityForeground(ability: UIAbility): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -149,10 +121,6 @@ onAbilityForeground(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
 
 ## onAbilitySaveState
 
@@ -164,8 +132,6 @@ onAbilitySaveState?(ability: UIAbility): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -177,30 +143,6 @@ onAbilitySaveState?(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onAbilitySaveState
-
-```TypeScript
-onAbilitySaveState?: OnAbilitySaveStateFn
-```
-
-在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发后回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onAbilitySaveState](#onabilitysavestate)
 
 ## onAbilityWillBackground
 
@@ -212,8 +154,6 @@ onAbilityWillBackground?(ability: UIAbility): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -225,30 +165,6 @@ onAbilityWillBackground?(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onAbilityWillBackground
-
-```TypeScript
-onAbilityWillBackground?: OnAbilityWillBackgroundFn
-```
-
-在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onAbilityWillBackground](#onabilitywillbackground)
 
 ## onAbilityWillContinue
 
@@ -260,8 +176,6 @@ onAbilityWillContinue?(ability: UIAbility): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -273,30 +187,6 @@ onAbilityWillContinue?(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onAbilityWillContinue
-
-```TypeScript
-onAbilityWillContinue?: OnAbilityWillContinueFn
-```
-
-在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onAbilityWillContinue](#onabilitywillcontinue)
 
 ## onAbilityWillCreate
 
@@ -308,8 +198,6 @@ onAbilityWillCreate?(ability: UIAbility): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -321,30 +209,6 @@ onAbilityWillCreate?(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onAbilityWillCreate
-
-```TypeScript
-onAbilityWillCreate?: OnAbilityWillCreateFn
-```
-
-在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onAbilityWillCreate](#onabilitywillcreate)
 
 ## onAbilityWillDestroy
 
@@ -356,8 +220,6 @@ onAbilityWillDestroy?(ability: UIAbility): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -369,30 +231,6 @@ onAbilityWillDestroy?(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onAbilityWillDestroy
-
-```TypeScript
-onAbilityWillDestroy?: OnAbilityWillDestroyFn
-```
-
-在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onAbilityWillDestroy](#onabilitywilldestroy)
 
 ## onAbilityWillForeground
 
@@ -404,8 +242,6 @@ onAbilityWillForeground?(ability: UIAbility): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -417,30 +253,6 @@ onAbilityWillForeground?(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onAbilityWillForeground
-
-```TypeScript
-onAbilityWillForeground?: OnAbilityWillForegroundFn
-```
-
-在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onAbilityWillForeground](#onabilitywillforeground)
 
 ## onAbilityWillSaveState
 
@@ -452,8 +264,6 @@ onAbilityWillSaveState?(ability: UIAbility): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -465,30 +275,6 @@ onAbilityWillSaveState?(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onAbilityWillSaveState
-
-```TypeScript
-onAbilityWillSaveState?: OnAbilityWillSaveStateFn
-```
-
-在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onAbilityWillSaveState](#onabilitywillsavestate)
 
 ## onNewWant
 
@@ -500,8 +286,6 @@ onNewWant?(ability: UIAbility): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -513,30 +297,6 @@ onNewWant?(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onNewWant
-
-```TypeScript
-onNewWant?: OnNewWantFn
-```
-
-在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发后回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onNewWant](#onnewwant)
 
 ## onWillNewWant
 
@@ -548,8 +308,6 @@ onWillNewWant?(ability: UIAbility): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -561,30 +319,6 @@ onWillNewWant?(ability: UIAbility): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onWillNewWant
-
-```TypeScript
-onWillNewWant?: OnWillNewWantFn
-```
-
-在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onWillNewWant](#onwillnewwant)
 
 ## onWindowStageActive
 
@@ -596,8 +330,6 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -610,10 +342,6 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageCreate
 
@@ -625,8 +353,6 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -639,10 +365,6 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageDestroy
 
@@ -654,8 +376,6 @@ onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -668,10 +388,6 @@ onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
 
 ## onWindowStageInactive
 
@@ -683,8 +399,6 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -698,10 +412,6 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
 
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
 ## onWindowStageRestore
 
 ```TypeScript
@@ -711,8 +421,6 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发后回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -726,30 +434,6 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onWindowStageRestore
-
-```TypeScript
-onWindowStageRestore?: OnWindowStageRestoreFn
-```
-
-在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发后回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onWindowStageRestore](#onwindowstagerestore)
 
 ## onWindowStageWillCreate
 
@@ -761,8 +445,6 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -775,30 +457,6 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onWindowStageWillCreate
-
-```TypeScript
-onWindowStageWillCreate?: OnWindowStageWillCreateFn
-```
-
-在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onWindowStageWillCreate](#onwindowstagewillcreate)
 
 ## onWindowStageWillDestroy
 
@@ -810,8 +468,6 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -824,30 +480,6 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onWindowStageWillDestroy
-
-```TypeScript
-onWindowStageWillDestroy?: OnWindowStageWillDestroyFn
-```
-
-在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onWindowStageWillDestroy](#onwindowstagewilldestroy)
 
 ## onWindowStageWillRestore
 
@@ -859,8 +491,6 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -873,27 +503,3 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |
 | [windowStage](arkts-ability-uiabilitycontext-c.md) | window.WindowStage | 是 |
-
-**示例**
-
-参见AbilityLifecycleCallback使用示例。
-
-## onWindowStageWillRestore
-
-```TypeScript
-onWindowStageWillRestore?: OnWindowStageWillRestoreFn
-```
-
-在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发前回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**示例**
-
-参见 [onWindowStageWillRestore](#onwindowstagewillrestore)

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedNearLinkProtocols
@@ -15,8 +15,6 @@ function addDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLinkPr
 Adds a list of NearLink protocols that are not allowed to be used for a specified user. NearLink Kit provides a low -power, high-speed short-range communication service that supports connection and data interaction between NearLink devices. This API does not take effect for system services and system applications such as the keyboard and stylus.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -41,30 +39,3 @@ Adds a list of NearLink protocols that are not allowed to be used for a specifie
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace with actual values.
-let protocols: systemManager.NearLinkProtocol[] = [systemManager.NearLinkProtocol.SSAP,
-  systemManager.NearLinkProtocol.DATA_TRANSFER];
-
-// Replace with actual values.
-let accountId: number = 100;
-
-try {
-  systemManager.addDisallowedNearLinkProtocols(wantTemp, protocols, accountId);
-  console.info('Succeeded in adding the disabled Starlink protocol list for the specified user.');
-} catch (err) {
-  console.error(`Failed to add the disabled Starlink protocol list for the specified user. Code is ${err.code}, message is ${err.message}`);
-}
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedPermissionBundle
@@ -24,8 +24,6 @@ function addAllowedPermissionBundle(admin: Want, permission: string, application
 > 5.系统应用和普通应用都可以添加。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -51,35 +49,3 @@ function addAllowedPermissionBundle(admin: Want, permission: string, application
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [9201015](../errorcode-enterpriseDeviceManager.md#9201015-指定应用未安装) |
 | [9201044](../errorcode-enterpriseDeviceManager.md#9201044-指定权限未被禁用) |
-
-**示例**
-
-```TypeScript
-import { securityManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let permission: string = 'ohos.permission.CAMERA';
-let disallow: boolean = true;
-let accountId: number = 100;
-// 该应用已经申请了ohos.permission.CAMERA权限
-let appInstance: common.ApplicationInstance = {
-  appIdentifier: '123456789',
-  appIndex: 0,
-  accountId: 100
-};
-try {
-  // 禁用ohos.permission.CAMERA权限
-  securityManager.setDisallowedPermission(wantTemp, permission, disallow, accountId);
-  // 设置指定应用可以继续使用ohos.permission.CAMERA权限
-  securityManager.addAllowedPermissionBundle(wantTemp, permission, appInstance);
-  console.info(`Succeeded in adding allowed permission bundle.`);
-} catch (err) {
-  console.error(`Failed to add allowed permission bundle. Code: ${err.code}, message: ${err.message}`);
-}
-```

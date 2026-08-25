@@ -4,8 +4,6 @@ Used to mix colors.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoRefresh
@@ -17,8 +15,6 @@ autoRefresh?(value: boolean): ColorMetrics
 Sets whether the **ColorMetrics** object automatically updates with system configuration changes.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,8 +43,6 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 Blends a specified color (**overlayColor**) with the current color and returns the resulting color.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,8 +78,6 @@ Creates a **ColorMetrics** instance using specified ColorSpace and RGBA values. 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -118,8 +110,6 @@ Instantiates the **ColorMetrics** class using a color in HEX format.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -148,8 +138,6 @@ Instantiates the **ColorMetrics** class using a color in resource reference form
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -160,7 +148,7 @@ Instantiates the **ColorMetrics** class using a color in resource reference form
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [color](#color) | [ResourceColor](#resourcecolor) | Yes |
+| [color](#color) | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes |
 
 **Return value:**
 
@@ -184,8 +172,6 @@ static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetr
 Instantiates the **ColorMetrics** class using colors in RGB or RGBA format.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,29 +206,9 @@ Obtains the alpha component of the ColorMetrics color.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## BLACK
-
-```TypeScript
-public static readonly BLACK: int
-```
-
-Black. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -258,47 +224,9 @@ Obtains the blue component of the ColorMetrics color.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## BLUE
-
-```TypeScript
-public static readonly BLUE: int
-```
-
-Blue. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## BROWN
-
-```TypeScript
-public static readonly BROWN: int
-```
-
-Brown. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -314,29 +242,9 @@ Obtains the color of **ColorMetrics**. The return value is a string indicating a
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## GRAY
-
-```TypeScript
-public static readonly GRAY: int
-```
-
-Gray. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -352,83 +260,9 @@ Obtains the green component of the ColorMetrics color.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## GREEN
-
-```TypeScript
-public static readonly GREEN: int
-```
-
-Green. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## GREY
-
-```TypeScript
-public static readonly GREY: int
-```
-
-Grey. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## ORANGE
-
-```TypeScript
-public static readonly ORANGE: int
-```
-
-Orange. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## PINK
-
-```TypeScript
-public static readonly PINK: int
-```
-
-Pink. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -444,82 +278,8 @@ Obtains the red component of the ColorMetrics color.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## RED
-
-```TypeScript
-public static readonly RED: int
-```
-
-Red. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## TRANSPARENT
-
-```TypeScript
-public static readonly TRANSPARENT: string
-```
-
-Transparent.
-
-**Type:** string
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## WHITE
-
-```TypeScript
-public static readonly WHITE: int
-```
-
-White. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## YELLOW
-
-```TypeScript
-public static readonly YELLOW: int
-```
-
-Yellow. The value should be an integer.
-
-**Type:** int
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

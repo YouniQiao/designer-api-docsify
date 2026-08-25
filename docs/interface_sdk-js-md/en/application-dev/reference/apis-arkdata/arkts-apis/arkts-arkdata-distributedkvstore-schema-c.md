@@ -4,14 +4,12 @@ Defines the schema of a KV store. You can create a **Schema** object and pass it
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'kits/@kit.ArkData';
 ```
 
 ## constructor
@@ -24,31 +22,9 @@ Defines a constructor used to create a **Schema** instance.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-**Examples**
-
-```TypeScript
-let child1 = new distributedKVStore.FieldNode('id');
-child1.type = distributedKVStore.ValueType.INTEGER;
-child1.nullable = false;
-child1.default = '1';
-let child2 = new distributedKVStore.FieldNode('name');
-child2.type = distributedKVStore.ValueType.STRING;
-child2.nullable = false;
-child2.default = 'zhangsan';
-
-let schema = new distributedKVStore.Schema();
-schema.root.appendChild(child1);
-schema.root.appendChild(child2);
-schema.indexes = ['$.id', '$.name'];
-schema.mode = 1;
-schema.skip = 0;
-```
 
 ## indexes
 
@@ -62,8 +38,6 @@ Set the string array of json.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
@@ -71,16 +45,14 @@ Set the string array of json.
 ## mode
 
 ```TypeScript
-set mode(mode: int)
+set mode(mode: number)
 ```
 
 Set the mode of schema.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +70,6 @@ Set the root json object.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
@@ -107,16 +77,14 @@ Set the root json object.
 ## skip
 
 ```TypeScript
-set skip(skip: int)
+set skip(skip: number)
 ```
 
 Set the skip size of schema.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
+import { connectedTag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## readNdefTag
@@ -20,8 +20,6 @@ Reads the content of this active tag. This API uses a promise to return the resu
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md)
@@ -35,31 +33,6 @@ Reads the content of this active tag. This API uses a promise to return the resu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;string & gt; |
-
-**Examples**
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connectedTag.readNdefTag().then((data) => {
-    console.info("connectedTag readNdefTag Promise data = " + data);
-}).catch((err: BusinessError)=> {
-    console.error("connectedTag readNdefTag Promise err: " + err);
-});
-```
-
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-connectedTag.readNdefTag((err, data)=> {
-    if (err) {
-        console.error("connectedTag readNdefTag AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag readNdefTag AsyncCallback data: " + data);
-    }
-});
-```
 
 
 ## readNdefTag
@@ -76,8 +49,6 @@ Reads the content of this active tag. This API uses an asynchronous callback to 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [read](arkts-connectivity-connectedtag-read-f.md)
@@ -91,7 +62,3 @@ Reads the content of this active tag. This API uses an asynchronous callback to 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
-
-**Examples**
-
-See [readNdefTag](#readndeftag)

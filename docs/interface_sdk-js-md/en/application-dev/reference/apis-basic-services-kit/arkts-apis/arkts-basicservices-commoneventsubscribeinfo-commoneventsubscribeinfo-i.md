@@ -10,8 +10,6 @@ This module provides APIs for providing subscriber information. It allows you to
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.CommonEvent
 
 ## events
@@ -26,8 +24,6 @@ Common events to subscribe to.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -35,16 +31,14 @@ Common events to subscribe to.
 ## priority
 
 ```TypeScript
-priority?: int
+priority?: number
 ```
 
 Subscriber priority. A larger value indicates a higher priority, and the subscriber with a higher priority receives ordered public events first. The value ranges from –100 to 1000. If the value exceeds the upper or lower limit, the upper or lower limit is used. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,8 +56,6 @@ Bundle name of the publisher to be subscribed to. This parameter is used to rest
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -79,8 +71,6 @@ Device ID, which is used to restrict the subscriber to receive only public event
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,8 +88,6 @@ Permission of the publisher. The value is an array of permission names defined b
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Notification.CommonEvent
@@ -107,16 +95,14 @@ Permission of the publisher. The value is an array of permission names defined b
 ## userId
 
 ```TypeScript
-userId?: int
+userId?: number
 ```
 
 User ID, which is used to restrict the subscriber to receive only public events related to the specified user ID. If this parameter is not specified, the default value, which is the ID of the current user, will be used. The value must be an existing user ID in the system. Use [getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) to obtain the system user ID and use it as the user ID of the publisher.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

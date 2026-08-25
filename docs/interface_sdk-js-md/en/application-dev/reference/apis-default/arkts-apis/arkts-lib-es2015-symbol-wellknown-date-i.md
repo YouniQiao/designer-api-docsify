@@ -1,7 +1,5 @@
 # Date
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@
 ```
 
 Converts a Date object to a string.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ Converts a Date object to a string.
 
 Converts a Date object to a string.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -55,8 +49,6 @@ Converts a Date object to a string.
 
 Converts a Date object to a number.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -74,8 +66,6 @@ Converts a Date object to a number.
 ```
 
 Converts a Date object to a string or number.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

@@ -11,8 +11,6 @@ TransitionOptions通过指定结构体内的参数来指定转场效果。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
@@ -37,8 +35,6 @@ opacity?: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [opacity](arkts-arkui-transitioneffect-c.md#opacity)
@@ -61,8 +57,6 @@ rotate?: RotateOptions
 **类型：** [RotateOptions](arkts-arkui-rotateoptions-i.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 
@@ -88,8 +82,6 @@ scale?: ScaleOptions
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [scale](arkts-arkui-transitioneffect-c.md#scale)
@@ -111,8 +103,6 @@ translate?: TranslateOptions
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [translate](arkts-arkui-transitioneffect-c.md#translate)
@@ -128,11 +118,9 @@ type?: TransitionType
 指定该转场样式生效的场景。默认值：TransitionType.All  
 **说明：**不指定type时默认为TransitionType.All，即插入删除都生效。
 
-**类型：** TransitionType
+**类型：** [TransitionType](../arkts-apis/arkts-arkui-transitiontype-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 10
 

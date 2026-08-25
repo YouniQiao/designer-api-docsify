@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## getPageContent
@@ -15,8 +15,6 @@ function getPageContent(options?: ContentOptions): Promise<PageContent>
 在需要抓取内容的窗口在桌面上时，调用该接口以获取屏上内容。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_SCREEN_CONTENT
 
@@ -48,47 +46,3 @@ function getPageContent(options?: ContentOptions): Promise<PageContent>
 | [34000003](../errorcode-onScreen.md#34000003-窗口id无效) |
 | [34000004](../errorcode-onScreen.md#34000004-页面未准备就绪) |
 | [34000006](../errorcode-onScreen.md#34000006-请求超时) |
-
-**示例**
-
-ArkTS-Dyn示例:
-
-```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: onScreen.ContentOptions = {
-   contentUnderstand: true,
-   pageLink: true
-};
-try {
-   onScreen.getPageContent(options).then((pageContent: onScreen.PageContent) => {
-      console.info("get page content succeed, bundleName = " + pageContent.bundleName);
-   }).catch((err: BusinessError) => {
-      console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
-   });
-} catch (err) {
-   console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-ArkTS-Sta示例:
-
-```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: onScreen.ContentOptions = {
-   contentUnderstand: true,
-   pageLink: true
-};
-try {
-   onScreen.getPageContent(options).then((pageContent: onScreen.PageContent) => {
-      console.info("get page content succeed, bundleName = " + pageContent.bundleName);
-   }).catch((err: BusinessError): void => {
-      console.error("get page content failed, errCode = " + err.code);
-   });
-} catch (err: BusinessError) {
-   console.error('get page content failed, errCode = ' + err.code);
-}
-```

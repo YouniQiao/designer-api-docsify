@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllowedWifiList
@@ -15,8 +15,6 @@ function getAllowedWifiList(admin: Want): Array<WifiAccessInfo>
 获取Wi-Fi允许名单。
 
 **起始版本：** 19
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -44,37 +42,6 @@ function getAllowedWifiList(admin: Want): Array<WifiAccessInfo>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.edmtest',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let result: Array<wifiManager.WifiAccessInfo> = wifiManager.getAllowedWifiList(wantTemp);
-  console.info(`Succeeded in getting allowed Wi-Fi list. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get allowed Wi-Fi list. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: Array<wifiManager.WifiAccessInfo> = wifiManager.getAllowedWifiList(null);
-  console.info(`Succeeded in getting allowed Wi-Fi list. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get allowed Wi-Fi list. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getAllowedWifiList
 
@@ -85,8 +52,6 @@ function getAllowedWifiList(admin: Want | null): Array<WifiAccessInfo>
 获取Wi-Fi允许名单。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -113,7 +78,3 @@ function getAllowedWifiList(admin: Want | null): Array<WifiAccessInfo>
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [getAllowedWifiList](#getallowedwifilist)

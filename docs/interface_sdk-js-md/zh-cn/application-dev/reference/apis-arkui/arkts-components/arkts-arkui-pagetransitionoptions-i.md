@@ -4,8 +4,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -19,15 +17,13 @@
 curve?: Curve | string | ICurve
 ```
 
-动画曲线。推荐以Curve或ICurve形式指定。当类型为string时，为动画插值曲线，取值参考 AnimateParam的curve参数。默认值：Curve.Linear
+动画曲线。推荐以Curve或ICurve形式指定。当类型为string时，为动画插值曲线，取值参考 [AnimateParam](arkts-arkui-animateparam-i.md)的curve参数。默认值：Curve.Linear
 
 **类型：** Curve \| string \| ICurve
 
 **默认值：** Curve.Linear
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -48,8 +44,6 @@ delay?: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -66,8 +60,6 @@ duration?: number
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -83,8 +75,6 @@ type?: RouteType
 **类型：** [RouteType](arkts-arkui-routetype-e.md)
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -6,8 +6,6 @@ The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-g
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Sets the effect strategy of the **SymbolGlyph** component.
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,8 +53,6 @@ Sets the color of the **SymbolGlyph** component.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,7 +65,7 @@ Sets the color of the **SymbolGlyph** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Array & lt;ResourceColor & gt; | Yes |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## fontColor
 
@@ -82,8 +76,6 @@ fontColor(value: Array<ResourceColor | ColorMetrics> | undefined)
 Called when the SymbolGlyph color is set.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,7 +89,7 @@ Called when the SymbolGlyph color is set.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Array & lt;ResourceColor \ | ColorMetrics & gt; \ | undefined | Yes |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics & gt; \ | undefined | Yes |
 
 ## fontSize
 
@@ -111,8 +103,6 @@ Sets the size of the **SymbolGlyph** component. When using the string type, nume
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,8 +131,6 @@ Sets the font weight of the **SymbolGlyph** component. For the number type, the 
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -167,8 +155,6 @@ Used to set the font weight of symbolGlyph.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -182,7 +168,7 @@ Used to set the font weight of symbolGlyph.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
-| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No |
+| [fontWeightConfigs](../arkts-apis/arkts-arkui-fontconfigs-i.md) | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No |
 
 ## maxFontScale
 
@@ -194,8 +180,6 @@ Sets the maximum font scale factor for the **SymbolGlyph** component.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -206,7 +190,7 @@ Sets the maximum font scale factor for the **SymbolGlyph** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| scale | Optional & lt;number \ | Resource & gt; | Yes |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes |
 
 ## minFontScale
 
@@ -218,8 +202,6 @@ Sets the minimum font scale factor for the **SymbolGlyph** component.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -230,7 +212,7 @@ Sets the minimum font scale factor for the **SymbolGlyph** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| scale | Optional & lt;number \ | Resource & gt; | Yes |
+| scale | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes |
 
 ## renderingStrategy
 
@@ -244,8 +226,6 @@ Sets the rendering strategy of the **SymbolGlyph** component.
 > This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -267,11 +247,9 @@ Sets the rendering strategy of the **SymbolGlyph** component.
 shaderStyle(shader: Array<ShaderStyle | undefined> | ShaderStyle)
 ```
 
-Applies a gradient or solid color shader effect to the **SymbolGlyph** component.This API supports RadialGradientStyle, LinearGradientStyle, and ColorShaderStyle. When set, **shaderStyle** takes precedence over fontColor and any AI-based styling. To apply a simple solid color, using fontColor is recommended.
+Applies a gradient or solid color shader effect to the **SymbolGlyph** component.This API supports [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md), [LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md), and [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md). When set, **shaderStyle** takes precedence over fontColor and any AI-based styling. To apply a simple solid color, using fontColor is recommended.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -283,7 +261,7 @@ Applies a gradient or solid color shader effect to the **SymbolGlyph** component
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| shader | Array & lt;ShaderStyle \ | undefined & gt; \ | [ShaderStyle](#shaderstyle) | Yes |
+| shader | Array&lt;[ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) \| undefined & gt; \ | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | Yes |
 
 ## symbolEffect
 
@@ -294,8 +272,6 @@ symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean)
 Sets the symbol effect and effect state for the **SymbolGlyph** component.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,8 +298,6 @@ Sets the symbol effect and effect trigger for the **SymbolGlyph** component.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -349,8 +323,6 @@ Sets the shadow effect of the **SymbolGlyph** component.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -363,4 +335,4 @@ Sets the shadow effect of the **SymbolGlyph** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| shadow | Optional & lt;ShadowOptions & gt; | Yes |
+| shadow | [Optional](arkts-arkui-optional-t.md)&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes |

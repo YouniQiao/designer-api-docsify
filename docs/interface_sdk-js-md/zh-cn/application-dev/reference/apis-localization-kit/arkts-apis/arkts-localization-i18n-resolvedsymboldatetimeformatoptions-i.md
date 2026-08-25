@@ -2,18 +2,16 @@
 
 自定义符号时间日期格式化对象配置项的解析结果。继承自Intl.ResolvedDateTimeFormatOptions， 支持Intl.ResolvedDateTimeFormatOptions的所有配置项，并且功能与其一致。
 
-**继承/实现关系：** ResolvedSymbolDateTimeFormatOptions extends [Intl.ResolvedDateTimeFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolveddatetimeformatoptions-i.md)
+**继承/实现关系：** ResolvedSymbolDateTimeFormatOptions extends Intl.ResolvedDateTimeFormatOptions
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## amPMSymbol
@@ -27,8 +25,6 @@ amPMSymbol?: string[]
 **类型：** string[]
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

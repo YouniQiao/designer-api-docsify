@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from '@kit.BasicServicesKit';
+import { serialManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## writeSync
 
 ```TypeScript
-function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int
+function writeSync(portId: number, buffer: Uint8Array, timeout?: number): number
 ```
 
-Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets.
+Writes data to the serial port device synchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write number data in multiple packets.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -24,15 +22,15 @@ Writes data to the serial port device synchronously. The length of data written 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [portId](arkts-basicservices-serialmanager-serialport-i.md) | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | Yes |
 | buffer | Uint8Array | Yes |
-| timeout | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| timeout | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **Error codes:**
 
@@ -44,54 +42,3 @@ Writes data to the serial port device synchronously. The length of data written 
 | [31400005](../errorcode-usb.md#31400005-device-not-opened) |
 | [31400006](../errorcode-usb.md#31400006-data-transfer-timeout) |
 | [31400007](../errorcode-usb.md#31400007-io-exception) |
-
-**Examples**
-
-The following sample code shows the basic process for calling the writeSync API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
-
-```TypeScript
-import { JSON } from '@kit.ArkTS';
-import { buffer } from '@kit.ArkTS';
-import { serialManager } from '@kit.BasicServicesKit';
-
-// Obtain the serial port list.
-function writeSync() {
-  let portList: serialManager.SerialPort[] = serialManager.getPortList();
-  console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (portList === undefined || portList.length === 0) {
-    console.info('usbSerial portList is empty');
-    return;
-  }
-  let portId: number = portList[0].portId;
-
-  // Check whether the device can be accessed by the application.
-  if (!serialManager.hasSerialRight(portId)) {
-    serialManager.requestSerialRight(portId).then(result => {
-      if (!result) {
-        // If the application does not have the access permission and is not granted by the user, the application exits.
-        console.info('user is not granted the operation  permission');
-        return;
-      } else {
-        console.info('grant permission successfully');
-      }
-    });
-  }
-
-  // Open a serial port device.
-  try {
-    serialManager.open(portId)
-    console.info('open usbSerial success, portId: ' + portId);
-  } catch (error) {
-    console.error('open usbSerial error, ' + JSON.stringify(error));
-  }
-
-  // Write data synchronously.
-  let writeSyncBuffer: Uint8Array = new Uint8Array(buffer.from('Hello World', 'utf-8').buffer)
-  try {
-    serialManager.writeSync(portId, writeSyncBuffer, 2000);
-    console.info('writeSync usbSerial success, writeSyncBuffer: ' + writeSyncBuffer.toString());
-  } catch (error) {
-    console.error('writeSync usbSerial error, ' + JSON.stringify(error));
-  }
-}
-```

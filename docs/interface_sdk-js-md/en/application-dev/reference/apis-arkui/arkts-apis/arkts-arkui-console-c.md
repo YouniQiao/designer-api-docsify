@@ -4,8 +4,6 @@ Provide console
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 ## debug
@@ -17,8 +15,6 @@ static debug(message: string): void
 Prints "debug" logs.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -40,8 +36,6 @@ Prints "error" logs.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -61,8 +55,6 @@ static info(message: string): void
 Prints "info" logs.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -84,8 +76,6 @@ Prints "log" logs.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -105,8 +95,6 @@ static warn(message: string): void
 Prints "warn" logs.
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Model restriction:** This API can be used only in the FA model.
 

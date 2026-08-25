@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## dialCall
@@ -15,8 +15,6 @@ function dialCall(phoneNumber: string, options: DialCallOptions, callback: Async
 拨打电话，可设置通话参数。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -46,54 +44,6 @@ function dialCall(phoneNumber: string, options: DialCallOptions, callback: Async
 | 8300006 |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.dialCall("138xxxxxxxx", (err: BusinessError) => {
-    if (err) {
-        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`dialCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialCallOptions: call.DialCallOptions = {
-    accountId: 0,
-    videoState: 0,
-    dialScene: 0,
-    dialType: 0
-}
-call.dialCall("138xxxxxxxx", dialCallOptions, (err: BusinessError) => {
-    if (err) {
-        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`dialCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialCallOptions: call.DialCallOptions = {
-    accountId: 0,
-    videoState: 0,
-    dialScene: 0,
-    dialType: 0
-}
-call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
-    console.info(`dialCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`dialCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## dialCall
 
@@ -104,8 +54,6 @@ function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
 拨打电话，可设置通话参数。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -140,10 +88,6 @@ function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
 | 8300006 |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-参见 [dialCall](#dialcall)
-
 
 ## dialCall
 
@@ -154,8 +98,6 @@ function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
 拨打电话。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -183,7 +125,3 @@ function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
 | 8300005 |
 | 8300006 |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [dialCall](#dialcall)

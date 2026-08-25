@@ -7,14 +7,12 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## 导入模块
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## clearSearchHistory
@@ -26,8 +24,6 @@ clearSearchHistory(): Promise<OperResult>
 清除搜索历史。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,8 +54,6 @@ destroy(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -85,8 +79,6 @@ downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity):
 下载媒体实体。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,8 +116,6 @@ executeAction(actionType: string, params: string): Promise<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -161,8 +151,6 @@ favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Pr
 收藏媒体。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,8 +188,6 @@ handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -236,8 +222,6 @@ login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>
 登录。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -275,8 +259,6 @@ offCurrentSingleChange(callback?: Callback<Single>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -304,8 +286,6 @@ offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void
 注销上报自定义元素改变的回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -335,8 +315,6 @@ offDialogCommandChange(callback?: ReportDialogCommandEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -364,8 +342,6 @@ offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void
 注销上报下载媒体状态改变的回调。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -395,8 +371,6 @@ offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -424,8 +398,6 @@ offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void
 注销媒体实体改变的回调。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -455,8 +427,6 @@ offPlaylistChange(callback?: Callback<PageMediaEntity>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -484,8 +454,6 @@ offReportExecuteAction(callback?: ReportExecuteActionEvent): void
 注销上报执行动作的回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -515,8 +483,6 @@ offSettingsChange(callback?: Callback<SettingItem[]>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -544,8 +510,6 @@ offTabContentChange(callback?: ReportTabContentEvent): void
 注销标签页内容改变的回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -575,8 +539,6 @@ offUserInfoChange(callback?: Callback<UserInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -604,8 +566,6 @@ onCurrentSingleChange(callback: Callback<Single>): void
 注册当前单曲改变的回调。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -635,8 +595,6 @@ onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -664,8 +622,6 @@ onDialogCommandChange(callback: ReportDialogCommandEvent): void
 注册对话框命令改变的回调。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -695,8 +651,6 @@ onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -724,8 +678,6 @@ onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void
 注册回调，当需要拉起指定媒体应用界面时触发。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -755,8 +707,6 @@ onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -784,8 +734,6 @@ onPlaylistChange(callback: Callback<PageMediaEntity>): void
 注册上报播放列表改变的回调。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -815,8 +763,6 @@ onReportExecuteAction(callback: ReportExecuteActionEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -844,8 +790,6 @@ onSettingsChange(callback: Callback<SettingItem[]>): void
 注册上报设置改变的回调。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -875,8 +819,6 @@ onTabContentChange(callback: ReportTabContentEvent): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -905,8 +847,6 @@ onUserInfoChange(callback: Callback<UserInfo>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -934,8 +874,6 @@ playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperRe
 搜播，支持音视频，示例仅以音频为例。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -973,8 +911,6 @@ playMediaEntity(mediaEntity: MediaEntity): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1002,21 +938,13 @@ playMediaEntity(mediaEntity: MediaEntity): Promise<void>
 
 ## queryCompilation
 
-ArkTS-Dyn:
 ```TypeScript
 queryCompilation(compilationId: string, pageIndex: number): Promise<PageMediaEntity>
-```
-
-ArkTS-Sta:
-```TypeScript
-queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity>
 ```
 
 查询合集。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1027,7 +955,7 @@ queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | compilationId | string | 是 |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| pageIndex | number | 是 |
 
 **返回值：**
 
@@ -1053,8 +981,6 @@ queryCompilationByKeyword(keyword: string): Promise<Compilation[]>
 按关键字查询合集。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1091,8 +1017,6 @@ queryCurrentSingle(): Promise<Single>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1121,8 +1045,6 @@ queryCustomContent(queryType: CustomType[]): Promise<CustomElement>
 查询自定义内容。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1159,8 +1081,6 @@ queryHotWords(): Promise<string[]>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1189,8 +1109,6 @@ queryMainTabs(): Promise<MediaTab[]>
 查询主标签。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1221,8 +1139,6 @@ queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1250,21 +1166,13 @@ queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>
 
 ## queryMediaEntityByKeyword
 
-ArkTS-Dyn:
 ```TypeScript
 queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: number): Promise<PageMediaEntity>
-```
-
-ArkTS-Sta:
-```TypeScript
-queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: int): Promise<PageMediaEntity>
 ```
 
 按关键字查询媒体实体。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1276,7 +1184,7 @@ queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: in
 | --- | --- | --- |
 | keyword | string | 是 |
 | searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | 是 |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| pageIndex | number | 是 |
 
 **返回值：**
 
@@ -1302,8 +1210,6 @@ queryMediaTabContent(tabId: string): Promise<MediaTabContent>
 查询媒体标签内容。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1340,8 +1246,6 @@ queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurch
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1369,21 +1273,13 @@ queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurch
 
 ## queryPlaylist
 
-ArkTS-Dyn:
 ```TypeScript
 queryPlaylist(pageIndex: number, sort: Sort): Promise<PageMediaEntity>
-```
-
-ArkTS-Sta:
-```TypeScript
-queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>
 ```
 
 查询播放列表。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1393,7 +1289,7 @@ queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| pageIndex | number | 是 |
 | sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | 是 |
 
 **返回值：**
@@ -1420,8 +1316,6 @@ queryRecommendMediaEntityList(): Promise<MediaEntity[]>
 查询推荐的媒体实体列表。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1452,8 +1346,6 @@ querySearchHistory(): Promise<string[]>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1482,8 +1374,6 @@ reportProblemAndAdvice(advice: string): Promise<OperResult>
 报告问题和建议。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1520,8 +1410,6 @@ requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): 
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1557,8 +1445,6 @@ updateSettings(settingItem: SettingItem): Promise<SettingItem>
 更新设置信息。使用Promise异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1597,8 +1483,6 @@ isDestroy: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -1614,8 +1498,6 @@ sessionId: string
 **类型：** string
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

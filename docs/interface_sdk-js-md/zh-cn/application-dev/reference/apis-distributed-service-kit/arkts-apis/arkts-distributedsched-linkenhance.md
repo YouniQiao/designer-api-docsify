@@ -4,8 +4,6 @@ linkEnhance模块提供高效的蓝牙连接和数据传输功能，增强设备
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -13,7 +11,7 @@ linkEnhance模块提供高效的蓝牙连接和数据传输功能，增强设备
 ## 导入模块
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## 汇总

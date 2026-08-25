@@ -4,8 +4,6 @@ Enumerates the reasons for attachment failure.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## CALLER_NOT_FOCUSED
@@ -17,8 +15,6 @@ CALLER_NOT_FOCUSED = 0
 The caller does not belong to the application of the focused window.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -32,8 +28,6 @@ The input method application is abnormal.
 
 **Since:** 22
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## SERVICE_ABNORMAL
@@ -45,7 +39,5 @@ SERVICE_ABNORMAL
 The input method framework service is abnormal.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

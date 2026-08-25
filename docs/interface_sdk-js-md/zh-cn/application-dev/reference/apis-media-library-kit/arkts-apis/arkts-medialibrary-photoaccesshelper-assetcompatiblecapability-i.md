@@ -4,14 +4,12 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
 ```
 
 ## supportedHighResolution
@@ -27,8 +25,6 @@ supportedHighResolution: boolean
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -42,13 +38,12 @@ supportedMimeType?: Array<string>
 ```
 
 支持MIME types的类型。  
-- 配置image/heic表示应用支持heif格式。 - 配置image/jpeg表示应用仅支持jpeg格式不支持heif格式。
+- 配置image/heic表示应用支持heif格式。  
+- 配置image/jpeg表示应用仅支持jpeg格式不支持heif格式。
 
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

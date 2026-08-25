@@ -4,11 +4,9 @@ Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大
 
 > **说明：**&gt;
 > 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边线。如
-> 需实现相关场景，建议使用Text组件设置outline代替Badge组件。
+> 需实现相关场景，建议使用Text组件设置[outline](arkts-arkui-commonmethod-c.md#outline)代替Badge组件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,13 +23,11 @@ badgeColor?: ResourceColor
 
 Badge的颜色。默认值：Color.Red
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Red
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -51,13 +47,11 @@ Badge的大小。string类型支持number类型取值的字符串形式，可以
 2. 从API version 20开始，支持ResourceStr类型。
 3. 当设置了fontSize且badgeSize小于fontSize时，badgeSize将按照fontSize生效。
 
-**类型：** number \| ResourceStr
+**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 16vp
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -73,13 +67,11 @@ borderColor?: ResourceColor
 
 底板描边颜色。默认值：Color.Red
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.Red
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,13 +88,11 @@ borderWidth?: Length
 底板描边粗细。默认值：1单位：vp  
 **说明：**不支持设置百分比，当设置为百分比时，按照默认值处理。
 
-**类型：** Length
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 1vp
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -118,13 +108,11 @@ color?: ResourceColor
 
 文本颜色。默认值：Color.White
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.White
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -150,8 +138,6 @@ enableAutoAvoidance?: boolean
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -169,13 +155,11 @@ fontSize?: number | ResourceStr
 1. 不支持设置百分比，当设置为百分比时，按照默认值处理。
 2. 从API version 20开始，支持ResourceStr类型。
 
-**类型：** number \| ResourceStr
+**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 10vp
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -192,11 +176,9 @@ fontWeight?: number | FontWeight | ResourceStr
 设置文本的字体粗细。number类型取值范围：[100, 900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal  
 **说明：**不支持设置百分比，当设置为百分比时，按照默认值处理。从API version 20开始，支持ResourceStr类型。
 
-**类型：** number \| FontWeight \| ResourceStr
+**类型：** number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -212,13 +194,11 @@ outerBorderColor?: ResourceColor
 
 底板外描边颜色。默认值：Color.White
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.White
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -239,8 +219,6 @@ outerBorderWidth?: LengthMetrics
 **默认值：** 0vp
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

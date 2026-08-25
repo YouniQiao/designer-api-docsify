@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from '@kit.ConnectivityKit';
+import { wifiext } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disableHotspot
@@ -15,8 +15,6 @@ function disableHotspot(): boolean
 Disables a Wi-Fi hotspot.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -1,10 +1,11 @@
 # @ohos.fontManager(字体管理)
 
-本模块为系统应用提供第三方字体的安装、卸载以及字体数据迁移能力。具体为： - 安装指定路径的字体文件（支持.ttf、.ttc格式）。 - 根据字体名称卸载已安装的字体。 - 在设备升级期间启动字体数据迁移任务，并提供迁移进度和结果回调。
+本模块为系统应用提供第三方字体的安装、卸载以及字体数据迁移能力。具体为：  
+- 安装指定路径的字体文件（支持.ttf、.ttc格式）。  
+- 根据字体名称卸载已安装的字体。  
+- 在设备升级期间启动字体数据迁移任务，并提供迁移进度和结果回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -13,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## 汇总

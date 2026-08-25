@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
 ## stopOptimizeSpace
@@ -15,8 +15,6 @@ function stopOptimizeSpace(): void
 同步方法停止图库云图资源空间优化，和startOptimizeSpace配对使用。
 
 **起始版本：** 17
-
-**ArkTS模式：** ArkTS-Dyn起始版本为17；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -32,39 +30,3 @@ function stopOptimizeSpace(): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 22400005 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let para:cloudSync.OptimizeSpaceParam = {totalSize: 1073741824, agingDays: 30};
-let callback = (data:cloudSync.OptimizeSpaceProgress) => {
-  if (data.state == cloudSync.OptimizeState.FAILED) {
-    console.info("optimize space failed");
-  } else if (data.state == cloudSync.OptimizeState.RUNNING) {
-    console.info("optimize space progress: " + data.progress);
-  }
-}
-cloudSync.startOptimizeSpace(para, callback);
-cloudSync.stopOptimizeSpace();   // 停止空间优化
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let para:cloudSync.OptimizeSpaceParam = {totalSize: 1073741824, agingDays: 30};
-let callback = (data:cloudSync.OptimizeSpaceProgress): void => {
-  if (data.state == cloudSync.OptimizeState.FAILED) {
-    console.info("optimize space failed");
-  } else if (data.state == cloudSync.OptimizeState.RUNNING) {
-    console.info("optimize space progress: " + data.progress);
-  }
-}
-cloudSync.startOptimizeSpace(para, callback);
-cloudSync.stopOptimizeSpace();   // 停止空间优化
-```

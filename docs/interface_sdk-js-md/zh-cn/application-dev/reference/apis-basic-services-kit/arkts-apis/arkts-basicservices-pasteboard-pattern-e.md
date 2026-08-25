@@ -4,8 +4,6 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## URL
@@ -17,8 +15,6 @@ URL = 0
 URL类型。
 
 **起始版本：** 13
-
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
@@ -32,8 +28,6 @@ NUMBER = 1
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## EMAIL_ADDRESS
@@ -46,8 +40,6 @@ EMAIL_ADDRESS = 2
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
 ## HTTP_URL
@@ -59,8 +51,6 @@ HTTP_URL = 3
 HTTP web链接类型。 模型约束：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,8 +65,6 @@ FLIGHT_NUMBER = 4
 航班号类型。 模型约束：此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

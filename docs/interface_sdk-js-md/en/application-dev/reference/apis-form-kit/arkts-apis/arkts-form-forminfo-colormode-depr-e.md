@@ -4,8 +4,6 @@ Enumerates the color modes supported by the widget.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ColorMode](arkts-form-forminfo-colormode-e.md)
@@ -21,8 +19,6 @@ MODE_AUTO = -1
 Auto mode.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Dark mode.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [MODE_DARK](arkts-form-forminfo-colormode-e.md#mode_dark)
@@ -57,8 +51,6 @@ MODE_LIGHT = 1
 Light mode.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

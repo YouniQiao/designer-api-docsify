@@ -4,14 +4,12 @@ This module provides the serial port management functions, including enabling an
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from '@kit.BasicServicesKit';
+import { serialManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary

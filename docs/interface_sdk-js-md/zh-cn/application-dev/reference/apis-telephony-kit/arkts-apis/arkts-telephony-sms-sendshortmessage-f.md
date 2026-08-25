@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## sendShortMessage
@@ -15,8 +15,6 @@ function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<v
 发送短信。使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
@@ -40,75 +38,6 @@ function sendShortMessage(options: SendMessageOptions, callback: AsyncCallback<v
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-
-let sendCallback: AsyncCallback<sms.ISendShortMessageCallback> = (err: BusinessError, data: sms.ISendShortMessageCallback) => {
-    if (err) {
-        console.error('sendCallback: err->${JSON.stringify(err)}');
-        return;
-    }
-    console.info('sendCallback: data->${JSON.stringify(data)}');
-};
-let deliveryCallback: AsyncCallback<sms.IDeliveryShortMessageCallback> = (err: BusinessError, data: sms.IDeliveryShortMessageCallback) => {
-    if (err) {
-        console.error('deliveryCallback: err->${JSON.stringify(err)}');
-        return;
-    }
-    console.info('deliveryCallback: data->${JSON.stringify(data)}'); 
-};
-let options: sms.SendMessageOptions = {
-    slotId: 0,
-    content: '短信内容',
-    destinationHost: '+861xxxxxxxxxx',
-    serviceCenter: '+861xxxxxxxxxx',
-    destinationPort: 1000,
-    sendCallback: sendCallback,
-    deliveryCallback: deliveryCallback
-};
-sms.sendShortMessage(options, (err: BusinessError) => {
-    console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-
-let sendCallback: AsyncCallback<sms.ISendShortMessageCallback> = (err: BusinessError, data: sms.ISendShortMessageCallback) => {
-    if (err) {
-        console.error('sendCallback: err->${JSON.stringify(err)}');
-        return;
-    }
-    console.info('sendCallback: data->${JSON.stringify(data)}');
-};
-let deliveryCallback: AsyncCallback<sms.IDeliveryShortMessageCallback> = (err: BusinessError, data: sms.IDeliveryShortMessageCallback) => {
-    if (err) {
-        console.error('deliveryCallback: err->${JSON.stringify(err)}');
-        return;
-    }
-    console.info('deliveryCallback: data->${JSON.stringify(data)}'); 
-};
-let options: sms.SendMessageOptions = {
-    slotId: 0,
-    content: '短信内容',
-    destinationHost: '+861xxxxxxxxxx',
-    serviceCenter: '+861xxxxxxxxxx',
-    destinationPort: 1000,
-    sendCallback: sendCallback,
-    deliveryCallback: deliveryCallback
-};
-let promise = sms.sendShortMessage(options);
-promise.then(() => {
-    console.info(`sendShortMessage success`);
-}).catch((err: BusinessError) => {
-    console.error(`sendShortMessage failed, promise: errCode:${err.code},errMsg:${err.message}`);
-});
-```
-
 
 ## sendShortMessage
 
@@ -119,8 +48,6 @@ function sendShortMessage(options: SendMessageOptions): Promise<void>
 发送短信。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SEND_MESSAGES
 
@@ -148,7 +75,3 @@ function sendShortMessage(options: SendMessageOptions): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [sendShortMessage](#sendshortmessage)

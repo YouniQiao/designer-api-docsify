@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## requestPublishForm
@@ -19,8 +19,6 @@ function requestPublishForm(
 请求发布一张卡片到使用方。使用方通常为桌面，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -48,192 +46,6 @@ function requestPublishForm(
 | [16501017](../errorcode-form.md#16501017-无空间发布卡片) |
 | [16501018](../errorcode-form.md#16501018-卡片不支持发布) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formBindingData, formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  }
-};
-try {
-  let param: Record<string, string> = {
-    'temperature': '22c',
-    'time': '22:00'
-  }
-  let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
-  formProvider.requestPublishForm(want, obj, (error: BusinessError, data: string) => {
-    if (error) {
-      console.error(`callback error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-      return;
-    }
-    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { AsyncCallback } from '@ohos.base';
-import { formBindingData, formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  } as Record<string, RecordData>
-};
-try {
-  let param: Record<string, string> = {
-    'temperature': '22c',
-    'time': '22:00'
-  }
-  let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
-  let callback: AsyncCallback<string> = (error: BusinessError | null, data: string | undefined) => {
-    if (error?.code != 0) {
-      console.error(`callback error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-      return;
-    }
-    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
-  };
-  formProvider.requestPublishForm(want, obj, callback);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  }
-};
-try {
-  formProvider.requestPublishForm(want, (error: BusinessError, data: string) => {
-    if (error) {
-      console.error(`callback error, code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { AsyncCallback } from '@ohos.base';
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  } as Record<string, RecordData>
-};
-try {
-  let callback: AsyncCallback<string> = (error: BusinessError | null, data: string | undefined) => {
-    if (error?.code != 0) {
-      console.error(`callback error, code: ${error?.code}, message: ${error?.message}`);
-      return;
-    }
-    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
-  };
-  formProvider.requestPublishForm(want, callback);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  }
-};
-try {
-  formProvider.requestPublishForm(want).then((data: string) => {
-    console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError, RecordData } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  } as Record<string, RecordData>
-};
-try {
-  formProvider.requestPublishForm(want).then((data: string) => {
-    console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
-  }).catch((error) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## requestPublishForm
 
@@ -244,8 +56,6 @@ function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 请求发布一张卡片到使用方。使用方通常为桌面，使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -272,10 +82,6 @@ function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 | [16501017](../errorcode-form.md#16501017-无空间发布卡片) |
 | [16501018](../errorcode-form.md#16501018-卡片不支持发布) |
 
-**示例**
-
-参见 [requestPublishForm](#requestpublishform)
-
 
 ## requestPublishForm
 
@@ -286,8 +92,6 @@ function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBi
 请求发布一张卡片到使用方。使用方通常为桌面，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.Form
 
@@ -319,7 +123,3 @@ function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBi
 | [16501008](../errorcode-form.md#16501008-等待卡片加桌超时) |
 | [16501017](../errorcode-form.md#16501017-无空间发布卡片) |
 | [16501018](../errorcode-form.md#16501018-卡片不支持发布) |
-
-**示例**
-
-参见 [requestPublishForm](#requestpublishform)

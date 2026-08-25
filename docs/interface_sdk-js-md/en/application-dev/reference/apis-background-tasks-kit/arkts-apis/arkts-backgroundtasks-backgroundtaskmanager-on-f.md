@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## on('continuousTaskCancel')
@@ -15,8 +15,6 @@ function on(type: 'continuousTaskCancel', callback: Callback<ContinuousTaskCance
 Subscribes to continuous task cancellation events. This API uses an asynchronous callback to return the result.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -36,29 +34,6 @@ Subscribes to continuous task cancellation events. This API uses an asynchronous
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-function callback(info: backgroundTaskManager.ContinuousTaskCancelInfo) {
-  console.info('continuousTaskCancel callback id ' + info.id);
-  console.info('continuousTaskCancel callback reason ' + info.reason);
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      backgroundTaskManager.on("continuousTaskCancel", callback);
-    } catch (error) {
-      console.error(`Operation onContinuousTaskCancel failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 
 ## on('continuousTaskSuspend')
 
@@ -69,8 +44,6 @@ function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSusp
 Registers a listener for continuous task suspension. This API uses an asynchronous callback to return the result. After the callback is registered, if the system detects for the first time that the application does not execute the corresponding service, the system does not directly cancel the continuous task. Instead, it will mark the task as suspended. If the detection failures persist, the system will cancel the continuous task.When a continuous task is suspended, the application will be suspended when switched to the background and automatically activated when brought back to the foreground.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -90,30 +63,6 @@ Registers a listener for continuous task suspension. This API uses an asynchrono
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
 
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-function callback(info: backgroundTaskManager.ContinuousTaskSuspendInfo) {
-  console.info('continuousTaskSuspend callback continuousTaskId: ' + info.continuousTaskId);
-  console.info('continuousTaskSuspend callback suspendState: ' + info.suspendState);
-  console.info('continuousTaskSuspend callback suspendReason: ' + info.suspendReason);
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      backgroundTaskManager.on("continuousTaskSuspend", callback);
-    } catch (error) {
-      console.error(`Operation onContinuousTaskSuspend failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```
-
 
 ## on('continuousTaskActive')
 
@@ -124,8 +73,6 @@ function on(type: 'continuousTaskActive', callback: Callback<ContinuousTaskActiv
 Registers a listener for continuous task activation. This API uses an asynchronous callback to return the result. The application returns to the foreground to activate the suspended continuous task.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -144,25 +91,3 @@ Registers a listener for continuous task activation. This API uses an asynchrono
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [9800005](../errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-
-**Examples**
-
-```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-
-function callback(info: backgroundTaskManager.ContinuousTaskActiveInfo) {
-  console.info('continuousTaskActive callback id: ' + info.id);
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    try {
-      backgroundTaskManager.on("continuousTaskActive", callback);
-    } catch (error) {
-      console.error(`Operation onContinuousTaskActive failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
-    }
-  }
-};
-```

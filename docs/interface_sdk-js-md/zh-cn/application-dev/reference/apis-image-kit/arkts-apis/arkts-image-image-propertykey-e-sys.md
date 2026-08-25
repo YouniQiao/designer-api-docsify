@@ -1,11 +1,11 @@
 # PropertyKey
 
 表示Exif（Exchangeable image file format）图像信息的枚举。  
-- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。 - 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考： [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)（修改单个Exif字段）、 [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)（修 改多个Exif字段）、 [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)（读取单个 Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)（读取多个Exif字段）。
+- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。  
+- 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：  
+[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)（修改单个Exif字段）、 [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)（修 改多个Exif字段）、 [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)（读取单个 Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)（读取多个Exif字段）。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -18,8 +18,6 @@ XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
 个性色卡模板名称。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +35,6 @@ XTSTYLE_CUSTOM_LIGHT_AND_SHADOW = 'HwMnoteXtStyleCustomLightAndShadow'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -54,8 +50,6 @@ XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'
 个性色卡自定义饱和度。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,8 +67,6 @@ XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -90,8 +82,6 @@ XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'
 个性色卡曝光参数。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

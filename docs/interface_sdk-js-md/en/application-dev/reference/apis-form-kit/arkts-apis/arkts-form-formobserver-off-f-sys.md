@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
+import { formObserver } from 'kits/@kit.FormKit';
 ```
 
 ## off('formAdd')
@@ -15,8 +15,6 @@ function off(type: 'formAdd', hostBundleName?: string, observerCallback?: Callba
 Cancels listening to the event of add form. <p>You can use this method to cancel listening to the event of add form.</p>
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -49,8 +47,6 @@ function off(type: 'formRemove', hostBundleName?: string, observerCallback?: Cal
 Cancels listening to the event of remove form. <p>You can use this method to cancel listening to the event of remove form.</p>
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -88,8 +84,6 @@ Cancels listening to the event of notifyVisible type change. <p>You can use this
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -126,8 +120,6 @@ Cancels listening to the event of notifyInvisible type change. <p>You can use th
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -159,8 +151,6 @@ function off(type: 'router', hostBundleName?: string, observerCallback?: Callbac
 Unregister form router event Listening.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -194,8 +184,6 @@ Unregister form message event Listening.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
 **System capability:** SystemCapability.Ability.Form
@@ -227,8 +215,6 @@ function off(type: 'call', hostBundleName?: string, observerCallback?: Callback<
 Unregister form call event Listening.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 

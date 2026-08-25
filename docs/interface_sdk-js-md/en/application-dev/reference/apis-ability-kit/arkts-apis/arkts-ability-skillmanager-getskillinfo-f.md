@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from '@kit.AbilityKit';
+import { skillManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getSkillInfo
@@ -16,8 +16,6 @@ function getSkillInfo(bundleName: string, moduleName: string, skillName: string,
 Obtains SkillInfo of a specified application based on bundleName, moduleName and skillName. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MANAGE_SKILL_PRIVILEGE or ohos.permission.MANAGE_SKILL
 

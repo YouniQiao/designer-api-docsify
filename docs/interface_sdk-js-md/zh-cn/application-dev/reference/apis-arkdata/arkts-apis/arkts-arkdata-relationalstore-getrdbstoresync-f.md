@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'kits/@kit.ArkData';
 ```
 
 ## getRdbStoreSync
@@ -16,8 +16,6 @@ function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore
 | 当前打开数据库时配置的加密类型 | 本设备上创建该数据库时的加密类型 | 结果 | | ------- | -------------------------------- | ---- | | 非加密 | 加密 | 使用加密配置（encrypt=true）打开数据库。 | | 加密 | 非加密 | 使用非加密配置（encrypt=false）打开数据库。 |getRdbStoreSync支持多线程并发操作。
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,53 +50,3 @@ function getRdbStoreSync(context: Context, config: StoreConfig): RdbStore
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
 | [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
-
-**示例**
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S1
-    };
-
-    try {
-      store = relationalStore.getRdbStoreSync(this.context, STORE_CONFIG);
-      console.info('Get RdbStore successfully.');
-    } catch (err) {
-      console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-    };
-  }
-}
-```
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S1
-    };
-
-    try {
-      store = relationalStore.getRdbStoreSync(this.context, STORE_CONFIG);
-      console.info('Get RdbStore successfully.');
-    } catch (err) {
-      console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-    };
-  }
-}
-```

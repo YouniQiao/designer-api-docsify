@@ -4,8 +4,6 @@ Defines the prompt info of button.@interface Button
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Button](arkts-arkui-promptaction-button-i.md)
@@ -15,7 +13,7 @@ Defines the prompt info of button.@interface Button
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'kits/@kit.ArkUI';
 ```
 
 ## color
@@ -29,8 +27,6 @@ Defines the color of button.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -49,8 +45,6 @@ Defines the button info.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -10,8 +10,6 @@ This module provides device Bluetooth management capabilities, including setting
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -19,7 +17,7 @@ This module provides device Bluetooth management capabilities, including setting
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
+import { bluetoothManager } from 'kits/@kit.MDMKit';
 ```
 
 ## Summary

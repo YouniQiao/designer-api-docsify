@@ -4,54 +4,13 @@ Stack基于数组的数据结构实现，特点是先进后出，只能在一端
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
-```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<T>
-```
-
-返回一个迭代器，每一项都是一个ArkTS对象。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
-
-**示例**
-
-```TypeScript
-let stack : Stack<int> = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(4);
-
-let iter = stack.$_iterator();
-let temp = iter.next().value;
-while(temp != undefined) {
-  console.info("value:" + temp);
-  temp = iter.next().value;
-}
+import { Stack } from 'kits/@kit.ArkTS';
+import { StackForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -64,8 +23,6 @@ while(temp != undefined) {
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -74,47 +31,13 @@ while(temp != undefined) {
 
 | 类型 |
 | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-```TypeScript
-let stack = new Stack<number>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(4);
-
-// 使用方法一：
-for (let value of stack) {
-  console.info("value:", value);
-}
-// value: 2
-// value: 4
-// value: 5
-// value: 4
-
-// 使用方法二：
-// 创建迭代器
-let iter = stack[Symbol.iterator]();
-// 获取第一个迭代结果
-let currentValue: IteratorResult<number> = iter.next().value;
-// 循环遍历迭代器中的元素
-while (currentValue != undefined) {
-  console.info("value: " + currentValue);
-  currentValue = iter.next().value;
-}
-// value: 2
-// value: 4
-// value: 5
-// value: 4
-```
 
 ## constructor
 
@@ -126,8 +49,6 @@ Stack的构造函数。调用后创建一个空的Stack实例对象，初始leng
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -138,22 +59,6 @@ Stack的构造函数。调用后创建一个空的Stack实例对象，初始leng
 | --- |
 | [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// 创建Stack实例
-let stack = new Stack<number | string | Object>();
-console.info("length:", stack.length);  // length: 0
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack : Stack<int | string | Object> = new Stack<int | string | Object>();
-```
-
 ## forEach
 
 ```TypeScript
@@ -163,8 +68,6 @@ forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisAr
 按照从栈底到栈顶的顺序遍历Stack实例对象中每一个元素，对每个元素执行回调函数。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -183,69 +86,6 @@ forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisAr
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-```TypeScript
-let stack = new Stack<number>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(4);
-// 遍历stack中每个元素并执行回调函数
-stack.forEach((value: number, index: number): void => {
-  console.info("value:" + value, "index:" + index);
-});
-// value:2 index:0
-// value:4 index:1
-// value:5 index:2
-// value:4 index:3
-```
-
-```TypeScript
-import { StackForEachCb } from '@kit.ArkTS';
-
-let stack : Stack<int> = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(4);
-let stackCb: StackForEachCb<int> = (value: int, index: int, stack: Stack<int>) :void => {
-  console.info("value:" + value, "index:" + index);
-};
-
-stack.forEach(stackCb);
-// value:2 index:0
-// value:4 index:1
-// value:5 index:2
-// value:4 index:3
-```
-
-## forEach
-
-```TypeScript
-forEach(callbackfn: StackForEachCb<T>): void
-```
-
-按照从栈底到栈顶的顺序遍历Stack实例对象中每一个元素，对每个元素执行回调函数。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callbackfn | [StackForEachCb](arkts-arkts-stackforeachcb-t.md)&lt;T&gt; | 是 |
-
-**示例**
-
-参见 [forEach](#foreach)
-
 ## isEmpty
 
 ```TypeScript
@@ -255,8 +95,6 @@ isEmpty(): boolean
 判断栈是否为空。为空返回true，不为空返回false。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -274,50 +112,15 @@ isEmpty(): boolean
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let stack = new Stack<number>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(4);
-// 判断栈是否为空
-let result = stack.isEmpty();
-console.info("result:", result);  // result: false
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(4);
-let result = stack.isEmpty();
-console.info("result:", result);  // result: false
-```
-
 ## locate
 
-ArkTS-Dyn:
 ```TypeScript
 locate(element: T): number
-```
-
-ArkTS-Sta:
-```TypeScript
-locate(element: T): int
 ```
 
 查找指定元素首次出现的下标值，查找失败则返回-1。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -333,40 +136,13 @@ locate(element: T): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let stack = new Stack<number>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(2);
-// 查找元素5首次出现的下标
-let result = stack.locate(5);
-console.info("result:", result);  // result: 2
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(2);
-let result = stack.locate(5);
-console.info("result:", result);  // result: 2
-```
 
 ## peek
 
@@ -378,8 +154,6 @@ peek(): T
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -396,33 +170,6 @@ peek(): T
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 | [10200010](../errorcode-utils.md#10200010-容器为空) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let stack = new Stack<number>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(2);
-// 查看栈顶元素，但不删除
-let result = stack.peek();
-console.info("result:", result);  // result: 2
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(2);
-let result = stack.peek();
-console.info("result:", result);  // result: 2
-```
 
 ## pop
 
@@ -434,8 +181,6 @@ pop(): T
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -453,35 +198,6 @@ pop(): T
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 | [10200010](../errorcode-utils.md#10200010-容器为空) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let stack = new Stack<number>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(2);
-stack.push(4);
-// 删除栈顶元素并返回该元素
-let result = stack.pop();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let stack = new Stack<int>();
-stack.push(2);
-stack.push(4);
-stack.push(5);
-stack.push(2);
-stack.push(4);
-// 删除栈顶元素并返回该元素
-let result = stack.pop(); 
-console.info("result = " + result); // result = 4
-```
-
 ## push
 
 ```TypeScript
@@ -491,8 +207,6 @@ push(item: T): T
 在栈顶插入元素，并返回该元素。
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -516,47 +230,6 @@ push(item: T): T
 | --- |
 | [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class PersonInfo {
-  name: string = "";
-  age: string = "";
-  constructor(name: string, age: string) {
-    this.name = name;
-    this.age = age;
-  }
-}
-// 创建支持多种类型的Stack实例
-let stack = new Stack<number | string | PersonInfo>();
-// 向栈中push字符串元素
-console.info("push:", stack.push("a"));  // push: a
-// 向栈中push数字元素
-console.info("push:", stack.push(1));  //  push: 1
-// 创建类实例并push到栈中
-let person1: PersonInfo = new PersonInfo("Dylan", "13");
-let result = stack.push(person1);
-console.info("result instanceof PersonInfo:", result instanceof PersonInfo);  // result instanceof PersonInfo: true
-console.info("length:", stack.length);  // length: 3
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class C1 {
-  name: string = ""
-  age: string = ""
-}
-let stack = new Stack<int | string | C1>();
-let result = stack.push("a");
-let result1 = stack.push(1);
-let c : C1  = {name : "Dylan", age : "13"};
-let result2 = stack.push(c);
-console.info("length:", stack.length);  // length: 3
-```
-
 ## length
 
 ```TypeScript
@@ -568,8 +241,6 @@ Stack的元素个数。
 **类型：** number
 
 **起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

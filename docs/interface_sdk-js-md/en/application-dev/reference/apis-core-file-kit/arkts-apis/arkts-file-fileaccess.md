@@ -7,8 +7,6 @@ The **fileAccess** module provides a framework for accessing and operating user 
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 23
 
 **Substitutes:** [fileIo](arkts-corefile-fileio-n.md)
@@ -18,7 +16,7 @@ The **fileAccess** module provides a framework for accessing and operating user 
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary

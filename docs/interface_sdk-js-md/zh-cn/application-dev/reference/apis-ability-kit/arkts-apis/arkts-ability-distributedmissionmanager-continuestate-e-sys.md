@@ -1,10 +1,8 @@
 # ContinueState（系统接口）
 
-当前任务流转状态的枚举。
+当前任务流转状态的枚举。模型约束：此接口仅可在Stage模型下使用。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -19,8 +17,6 @@ ACTIVE = 0
 表示当前任务流转处于激活状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +33,6 @@ INACTIVE = 1
 表示当前任务流转处于未激活状态。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

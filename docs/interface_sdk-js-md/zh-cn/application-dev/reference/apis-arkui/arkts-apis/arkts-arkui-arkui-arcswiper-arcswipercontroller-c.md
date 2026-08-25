@@ -4,14 +4,12 @@ ArcSwiper容器组件的控制器，可以将此对象绑定至ArcSwiper组件�
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## 导入模块
 
 ```TypeScript
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
+import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from 'kits/@kit.ArkUI';
 ```
 
 ## constructor
@@ -23,8 +21,6 @@ constructor()
 ArcSwiperController的构造函数。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -39,8 +35,6 @@ finishAnimation(handler?: FinishAnimationHandler)
 停止播放动画。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -62,8 +56,6 @@ showNext()
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
-
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -77,8 +69,6 @@ showPrevious()
 翻至上一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为26.0.0。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

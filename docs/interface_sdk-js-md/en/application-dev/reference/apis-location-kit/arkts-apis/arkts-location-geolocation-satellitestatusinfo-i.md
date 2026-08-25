@@ -4,8 +4,6 @@ Satellite status information@interface SatelliteStatusInfo
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [SatelliteStatusInfo](arkts-location-geolocationmanager-satellitestatusinfo-i.md)
@@ -17,7 +15,7 @@ Satellite status information@interface SatelliteStatusInfo
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## altitudes
@@ -29,8 +27,6 @@ altitudes: Array<number>
 **Type:** Array&lt;number&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -48,8 +44,6 @@ azimuths: Array<number>
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [azimuths](arkts-location-geolocationmanager-satellitestatusinfo-i.md#azimuths)
@@ -65,8 +59,6 @@ carrierFrequencies: Array<number>
 **Type:** Array&lt;number&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -84,8 +76,6 @@ carrierToNoiseDensitys: Array<number>
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [carrierToNoiseDensitys](arkts-location-geolocationmanager-satellitestatusinfo-i.md#carriertonoisedensitys)
@@ -102,8 +92,6 @@ satelliteIds: Array<number>
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [satelliteIds](arkts-location-geolocationmanager-satellitestatusinfo-i.md#satelliteids)
@@ -119,8 +107,6 @@ satellitesNumber: number
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

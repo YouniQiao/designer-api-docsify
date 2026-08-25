@@ -8,8 +8,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)
@@ -19,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## certChains
@@ -34,8 +32,6 @@ certChains?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -54,8 +50,6 @@ errorCode: number
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -73,8 +67,6 @@ outData?: Uint8Array
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -91,8 +83,6 @@ properties?: Array<HuksParam>
 **类型：** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

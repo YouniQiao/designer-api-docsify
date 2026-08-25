@@ -15,8 +15,6 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
@@ -31,77 +29,8 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let removeAllCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("removeAll failed " + JSON.stringify(err));
-  } else {
-    console.info("removeAll success");
-  }
-}
-let bundle: Notification.BundleOption = {
-  bundle: "bundleName1",
-};
-Notification.removeAll(bundle, removeAllCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let removeAllCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error("removeAll failed " + JSON.stringify(err));
-  } else {
-    console.info("removeAll success");
-  }
-}
-
-Notification.removeAll(removeAllCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-// 不指定应用时，删除所有通知
-Notification.removeAll().then(() => {
-  console.info("removeAll success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`removeAll failed, code is ${err}`);
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-function removeAllCallback(err: Base.BusinessError) {
-  if (err) {
-    console.error("removeAll failed " + JSON.stringify(err));
-  } else {
-    console.info("removeAll success");
-  }
-}
-
-let userId: number = 1;
-Notification.removeAll(userId, removeAllCallback);
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let userId: number = 1;
-Notification.removeAll(userId).then(() => {
-  console.info("removeAll success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`removeAll failed, code is ${err}`);
-});
-```
 
 
 ## removeAll
@@ -114,8 +43,6 @@ function removeAll(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
@@ -131,10 +58,6 @@ function removeAll(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-参见 [removeAll](#removeall)
 
 
 ## removeAll
@@ -147,8 +70,6 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md)
@@ -166,10 +87,6 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 | userId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-参见 [removeAll](#removeall)
-
 
 ## removeAll
 
@@ -180,8 +97,6 @@ function removeAll(userId: number): Promise<void>
 删除指定用户下的所有通知（Promise形式）。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -205,10 +120,6 @@ function removeAll(userId: number): Promise<void>
 | --- |
 | Promise & lt;void & gt; |
 
-**示例**
-
-参见 [removeAll](#removeall)
-
 
 ## removeAll
 
@@ -219,8 +130,6 @@ function removeAll(bundle?: BundleOption): Promise<void>
 删除指定应用的所有通知（Promise形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -236,14 +145,10 @@ function removeAll(bundle?: BundleOption): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 否 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [removeAll](#removeall)

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getBundleStats
 
 ```TypeScript
-function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats>, index?: int): void
+function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats>, index?: number): void
 ```
 
 异步获取应用存储数据的空间大小（单位为Byte），以callback方式返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -30,7 +28,7 @@ function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats
 | --- | --- | --- |
 | packageName | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | 是 |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| index | number | 否 |
 
 **错误码：**
 
@@ -43,129 +41,16 @@ function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats
 | 13600008 |
 | 13900042 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let bundleFlags = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, bundleFlags);
-  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s', JSON.stringify(resourceInfo.label));
-
-  let packageName:string = bundleName;
-  let index:number = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, index).then((BundleStats: storageStatistics.BundleStats) => {
-    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
-  });
-
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let bundleFlags = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, bundleFlags);
-  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s', JSON.stringify(resourceInfo.label));
-
-  let packageName:string = bundleName;
-  let index:int = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, index).then((BundleStats: storageStatistics.BundleStats): void => {
-    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
-  }).catch((err: BusinessError): void => {
-    hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
-  });
-
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
-}
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let bundleFlags = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, bundleFlags);
-  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s', JSON.stringify(resourceInfo.label));
-
-  let packageName:string = bundleName;
-  let index:number = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, (err: BusinessError, BundleStats: storageStatistics.BundleStats) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
-    } else {
-      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
-    }
-  }, index);
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = "com.example.myapplication";
-let bundleFlags = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
-try {
-  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, bundleFlags);
-  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s', JSON.stringify(resourceInfo.label));
-  let packageName:string = bundleName;
-  let index:int = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, (err: BusinessError, BundleStats: storageStatistics.BundleStats): void => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
-    } else {
-      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
-    }
-  }, index);
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
-}
-```
-
 
 ## getBundleStats
 
 ```TypeScript
-function getBundleStats(packageName: string, index?: int): Promise<BundleStats>
+function getBundleStats(packageName: string, index?: number): Promise<BundleStats>
 ```
 
 异步获取应用存储数据的空间大小（单位为Byte），以Promise方式返回。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -178,7 +63,7 @@ function getBundleStats(packageName: string, index?: int): Promise<BundleStats>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | packageName | string | 是 |
-| index | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| index | number | 否 |
 
 **返回值：**
 
@@ -196,7 +81,3 @@ function getBundleStats(packageName: string, index?: int): Promise<BundleStats>
 | 13600001 |
 | 13600008 |
 | 13900042 |
-
-**示例**
-
-参见 [getBundleStats](#getbundlestats)

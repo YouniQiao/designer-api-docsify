@@ -6,14 +6,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceOptions } from '@kit.AbilityKit';
+import { AtomicServiceOptions } from 'kits/@kit.AbilityKit';
 ```
 
 ## completionHandlerForAtomicService
@@ -28,8 +26,6 @@ completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -39,16 +35,14 @@ completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 ## flags
 
 ```TypeScript
-flags?: int
+flags?: number
 ```
 
 系统处理该次启动的方式。例如通过wantConstant.Flags.FLAG_INSTALL_ON_DEMAND表示使用免安装能力。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,8 +61,6 @@ parameters?: Record<string, Object>
 **类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

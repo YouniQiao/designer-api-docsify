@@ -4,8 +4,6 @@ Enumerates the notification flag states.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## TYPE_NONE
@@ -17,8 +15,6 @@ TYPE_NONE = 0
 Default flag when no flag is set. It has the same effect as **TYPE_OPEN**.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,8 +28,6 @@ The notification flag is opened.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## TYPE_CLOSE
@@ -45,7 +39,5 @@ TYPE_CLOSE = 2
 The notification flag is closed.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

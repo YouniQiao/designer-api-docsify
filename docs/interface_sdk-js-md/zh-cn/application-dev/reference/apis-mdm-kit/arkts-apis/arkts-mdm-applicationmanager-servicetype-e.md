@@ -4,8 +4,6 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## COLLABORATION_SERVICE
@@ -17,8 +15,6 @@ COLLABORATION_SERVICE  = 0
 协同业务。允许使用协同业务的应用，可以通过使用[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)、 [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)中的API或 [跨设备连接UIAbility开发指南](../../../distributedservice/abilityconnectmanager-guidelines.md)中的方式，跨设备拉起其他应用的页面并向其传输数据。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

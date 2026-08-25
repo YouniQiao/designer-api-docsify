@@ -4,8 +4,6 @@ WLAN设备配置信息。@interface WifiDeviceConfig
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)
@@ -15,7 +13,7 @@ WLAN设备配置信息。@interface WifiDeviceConfig
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## bssid
@@ -29,8 +27,6 @@ WLAN BSSID(MAC)：长度为6
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -50,8 +46,6 @@ isHiddenSsid: boolean
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [isHiddenSsid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#ishiddenssid)
@@ -69,8 +63,6 @@ WLAN密钥：最大长度为64
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -90,8 +82,6 @@ securityType: WifiSecurityType
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [securityType](arkts-connectivity-wifimanager-wifideviceconfig-i.md#securitytype)
@@ -109,8 +99,6 @@ WLAN SSID：最大长度为32
 **类型：** string
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

@@ -4,14 +4,12 @@ The hdrCapability module provides enums related to the High Dynamic Range (HDR) 
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { hdrCapability } from '@kit.ArkGraphics2D';
+import { hdrCapability } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## Summary

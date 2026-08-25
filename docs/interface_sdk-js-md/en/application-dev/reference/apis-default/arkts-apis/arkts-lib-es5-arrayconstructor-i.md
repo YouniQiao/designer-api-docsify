@@ -1,7 +1,5 @@
 # ArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 (arrayLength?: number): any[]
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -31,8 +27,6 @@
 <T>(arrayLength: number): T[]
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -48,8 +42,6 @@
 ```TypeScript
 <T>(...items: T[]): T[]
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -67,8 +59,6 @@
 new(arrayLength?: number): any[]
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -84,8 +74,6 @@ new(arrayLength?: number): any[]
 ```TypeScript
 new <T>(arrayLength: number): T[]
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -103,8 +91,6 @@ new <T>(arrayLength: number): T[]
 new <T>(...items: T[]): T[]
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -120,8 +106,6 @@ new <T>(...items: T[]): T[]
 ```TypeScript
 isArray(arg: any): arg is any[]
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -140,5 +124,3 @@ readonly prototype: any[]
 ```
 
 **Type:** any[]
-
-**ArkTS mode:** 

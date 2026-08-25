@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## removeNotificationSlot
@@ -15,8 +15,6 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 删除目标NotificationSlot，使用callback方式实现异步调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -31,27 +29,6 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 | slotType | notification.SlotType | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-import notification from '@ohos.notification';
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.removeNotificationSlot(notification.SlotType.CONTENT_INFORMATION, (err: BusinessError, data: void) => {
-  console.info("removeNotificationSlot callback");
-});
-```
-
-```TypeScript
-import notification from '@ohos.notification';
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.removeNotificationSlot(notification.SlotType.CONTENT_INFORMATION).then(() => {
-  console.info("removeNotificationSlot promise");
-});
-```
-
 
 ## removeNotificationSlot
 
@@ -62,8 +39,6 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 删除目标NotificationSlot，使用Promise方式实现异步调用。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -82,7 +57,3 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [removeNotificationSlot](#removenotificationslot)

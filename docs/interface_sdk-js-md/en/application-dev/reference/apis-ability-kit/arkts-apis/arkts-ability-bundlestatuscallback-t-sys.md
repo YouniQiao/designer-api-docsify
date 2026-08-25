@@ -8,8 +8,6 @@ Contains basic Ability information, which uniquely identifies a launcher StatusC
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)

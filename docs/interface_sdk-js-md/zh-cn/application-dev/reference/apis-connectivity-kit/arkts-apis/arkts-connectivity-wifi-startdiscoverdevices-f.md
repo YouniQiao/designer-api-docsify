@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## startDiscoverDevices
@@ -15,8 +15,6 @@ function startDiscoverDevices(): boolean
 发现WLAN P2P设备。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -31,15 +29,3 @@ function startDiscoverDevices(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-  wifi.startDiscoverDevices();  
-}catch(error){
-  console.error("failed:" + JSON.stringify(error));
-}
-```

@@ -13,8 +13,6 @@ function setPrototypeOf(target: object, proto: object | null): boolean
 
 Sets the prototype of a specified object o to object proto or null.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |

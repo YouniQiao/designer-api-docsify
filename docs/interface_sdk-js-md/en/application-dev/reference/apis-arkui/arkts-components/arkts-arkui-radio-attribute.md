@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ checked(value: boolean)
 Sets whether the radio button is selected.Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,8 +45,6 @@ Sets whether the radio button is selected. Compared with [checked](#checked), th
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -63,7 +57,7 @@ Sets whether the radio button is selected. Compared with [checked](#checked), th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isChecked | Optional & lt;boolean & gt; | Yes |
+| isChecked | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
 
 ## contentModifier
 
@@ -75,8 +69,6 @@ Creates a content modifier.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -87,7 +79,7 @@ Creates a content modifier.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | Yes |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt; | Yes |
 
 ## contentModifier
 
@@ -99,8 +91,6 @@ Creates a content modifier. Compared with [contentModifier](#contentmodifier)&lt
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -111,7 +101,7 @@ Creates a content modifier. Compared with [contentModifier](#contentmodifier)&lt
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | Optional&lt;ContentModifier&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | Yes |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;[ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radioconfiguration-i.md)&gt;&gt; | Yes |
 
 ## onChange
 
@@ -122,8 +112,6 @@ onChange(callback: (isChecked: boolean) => void)
 Triggered when the selected state of the radio button changes.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -147,8 +135,6 @@ Triggered when the selected state of the radio button changes. Compared with onC
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -161,7 +147,7 @@ Triggered when the selected state of the radio button changes. Compared with onC
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | Optional&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md)&gt; | Yes |
 
 ## radioStyle
 
@@ -172,8 +158,6 @@ radioStyle(value?: RadioStyle)
 Sets the style of the radio button in selected or deselected state.Since API version 10, this API is supported in ArkTS widgets.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

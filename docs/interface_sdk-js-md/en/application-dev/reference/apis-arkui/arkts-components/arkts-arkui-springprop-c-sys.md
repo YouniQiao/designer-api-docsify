@@ -4,8 +4,6 @@ Customize spring properties.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,8 +25,6 @@ Constructor parameters
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 22
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -40,5 +36,5 @@ Constructor parameters
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mass | number | Yes |
-| stiffness | number | Yes |
-| damping | number | Yes |
+| [stiffness](arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |
+| [damping](arkts-arkui-chainanimationoptions-i-sys.md) | number | Yes |

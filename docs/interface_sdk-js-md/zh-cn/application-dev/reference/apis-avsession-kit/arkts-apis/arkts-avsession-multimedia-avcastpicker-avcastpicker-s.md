@@ -8,29 +8,13 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
 
 ```TypeScript
-import { AVCastPicker } from '@kit.AVSessionKit';
+import { AVCastPicker } from 'kits/@kit.AVSessionKit';
 ```
-
-## build
-
-```TypeScript
-build(): void
-```
-
-构造组件。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## onStateChange
 
@@ -41,8 +25,6 @@ onStateChange?: (state: AVCastPickerState) => void
 投播状态更改回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -62,11 +44,9 @@ activeColor?: Color | number | string
 
 设备连接成功状态下投播组件的颜色。未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
 
-**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) \| number \| string
+**类型：** Color \| number \| string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -79,13 +59,12 @@ colorMode?: AVCastPickerColorMode
 ```
 
 显示模式。默认值为AUTO。  
-- 当colorMode设置为AUTO时，跟随系统的深浅色模式的默认色值。 - 当colorMode设置为DARK、LIGHT时，使用对应模式的系统预设色值。
+- 当colorMode设置为AUTO时，跟随系统的深浅色模式的默认色值。  
+- 当colorMode设置为DARK、LIGHT时，使用对应模式的系统预设色值。
 
 **类型：** [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -99,11 +78,9 @@ customPicker?: CustomBuilder
 
 自定义样式。建议使用自定义组件样式，可有效提升组件显示速度。
 
-**类型：** [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -117,11 +94,9 @@ normalColor?: Color | number | string
 
 正常状态下投播组件的颜色。未设置时，将采用colorMode下的颜色设置。
 
-**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) \| number \| string
+**类型：** Color \| number \| string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -134,13 +109,12 @@ pickerStyle?: AVCastPickerStyle
 ```
 
 投播样式。  
-- 当sessionType是audio或者video时，默认值为STYLE_PANEL。 - 当sessionType是voice_call或者video_call时，默认值为STYLE_MENU，且不可修改为STYLE_PANEL。
+- 当sessionType是audio或者video时，默认值为STYLE_PANEL。  
+- 当sessionType是voice_call或者video_call时，默认值为STYLE_MENU，且不可修改为STYLE_PANEL。
 
 **类型：** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -157,8 +131,6 @@ sessionType?: string
 **类型：** string
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

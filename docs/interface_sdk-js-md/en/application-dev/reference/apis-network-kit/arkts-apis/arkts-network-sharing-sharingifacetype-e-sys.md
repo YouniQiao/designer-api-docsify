@@ -4,8 +4,6 @@ Enumerates the network sharing types of an NIC.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -19,8 +17,6 @@ SHARING_WIFI = 0
 Wi-Fi hotspot sharing.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
@@ -36,8 +32,6 @@ USB sharing.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -51,8 +45,6 @@ SHARING_BLUETOOTH = 2
 Bluetooth sharing.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 

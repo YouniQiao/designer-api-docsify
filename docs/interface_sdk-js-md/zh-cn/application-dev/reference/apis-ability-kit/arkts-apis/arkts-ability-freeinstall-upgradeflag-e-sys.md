@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -19,8 +17,6 @@ NOT_UPGRADE = 0
 模块无需升级。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -36,8 +32,6 @@ SINGLE_UPGRADE = 1
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -51,8 +45,6 @@ RELATION_UPGRADE = 2
 关系模块需要升级。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

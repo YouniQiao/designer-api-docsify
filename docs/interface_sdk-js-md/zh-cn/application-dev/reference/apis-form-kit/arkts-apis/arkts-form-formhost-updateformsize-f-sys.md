@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## updateFormSize
@@ -15,8 +15,6 @@ function updateFormSize(formId: string, newDimension: formInfo.FormDimension, ne
 调整卡片尺寸。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -41,43 +39,3 @@ function updateFormSize(formId: string, newDimension: formInfo.FormDimension, ne
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) |
 | [16501012](../errorcode-form.md#16501012-卡片尺寸错误) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  let newDimension = formInfo.FormDimension.Dimension_1_2;
-  let newRect: formInfo.Rect = {
-    left: 1,
-    top: 2,
-    width: 100,
-    height: 100
-  };
-  formHost.updateFormSize(formId, newDimension, newRect);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  let newDimension = formInfo.FormDimension.Dimension_1_2;
-  let newRect: formInfo.Rect = {left: 1, top: 2, width: 100, height: 100};
-  formHost.updateFormSize(formId, newDimension, newRect);
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```

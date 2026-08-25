@@ -1,11 +1,9 @@
 # SliderInteraction
 
 用户与滑动条组件交互方式。  
-| 名称 | 值 |说明 | | ------ | -- | ----------------------------- | | [SLIDE_AND_CLICK](#slide_and_click) | 0 | 用户可拖拽滑块或者点击滑轨使滑块移动，鼠标或手指按下即发生移动。| | [SLIDE_ONLY](#slide_only) | 1 | 禁止用户通过点击滑轨使滑块移动。| | [SLIDE_AND_CLICK_UP](#slide_and_click_up) | 2 |
+| 名称 | 值 |说明 | | ------ | -- | ----------------------------- | | [SLIDE_AND_CLICK](arkts-arkui-sliderinteraction-e.md) | 0 | 用户可拖拽滑块或者点击滑轨使滑块移动，鼠标或手指按下即发生移动。| | [SLIDE_ONLY](arkts-arkui-sliderinteraction-e.md) | 1 | 禁止用户通过点击滑轨使滑块移动。| | [SLIDE_AND_CLICK_UP](arkts-arkui-sliderinteraction-e.md) | 2 |
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,8 +16,6 @@ SLIDE_AND_CLICK = 0
 Users can drag the slider or touch the track to move the slider. The slider moves as soon as the mouse or finger is pressed.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,8 +33,6 @@ Users are not allowed to move the slider by touching the slider.
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -54,8 +48,6 @@ SLIDE_AND_CLICK_UP = 2
 Users can drag the slider or touch the track to move the slider. The slider moves when the mouse is released or finger is lifted, if the release/lift position coincides with the screen press position.
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,8 +4,6 @@ Enumerates the tags used to invoke parameters.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_UKEY_PIN
@@ -17,8 +15,6 @@ HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYP
 Tag of the PIN.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -32,8 +28,6 @@ Name of [CryptoExtensionAbility](arkts-universalkeystore-security-cryptoextensio
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_EXTRA_DATA
@@ -45,8 +39,6 @@ HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_T
 External data, which indicates the return data in the common query scenario.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -60,8 +52,6 @@ UID of the caller.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_PURPOSE
@@ -74,8 +64,6 @@ Usage type of the key corresponding to the certificate chain. For details, see [
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
 ## HUKS_EXT_CRYPTO_TAG_RESOURCE_INFO
@@ -87,8 +75,6 @@ HUKS_EXT_CRYPTO_TAG_RESOURCE_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TA
 Specify the information required to obtain the resource ID. The format and content are defined by the provider.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,8 +90,6 @@ Specifies the ability configuration for the custom PIN dialog.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -119,8 +103,6 @@ HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_
 Specifies the hap bundle name of the crypto extension ability.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

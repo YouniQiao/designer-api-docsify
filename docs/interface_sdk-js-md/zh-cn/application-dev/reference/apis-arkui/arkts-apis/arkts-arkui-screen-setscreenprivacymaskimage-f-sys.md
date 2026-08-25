@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## setScreenPrivacyMaskImage
 
 ```TypeScript
-function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Promise<void>
+function setScreenPrivacyMaskImage(screenId: number, image?: image.PixelMap): Promise<void>
 ```
 
 设置屏幕的隐私蒙版图片，使用Promise异步回调。
 
 **起始版本：** 19
-
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -26,7 +24,7 @@ function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Prom
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| screenId | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| screenId | number | 是 |
 | [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) | image.PixelMap | 否 |
 
 **返回值：**
@@ -44,49 +42,3 @@ function setScreenPrivacyMaskImage(screenId: long, image?: image.PixelMap): Prom
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素buffer大小，取值为：height * width *4
-let options: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 4, width: 6 } }
-image.createPixelMap(color, options).then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in creating pixelmap.');
-  // 屏幕ID需通过getAllScreens()获取
-  let screenId: number = 1; // 屏幕ID
-  // 设置屏幕的隐私蒙版图片
-  screen.setScreenPrivacyMaskImage(screenId, pixelMap).then(() => {
-    console.info('Succeeded in setting the privacy mask image for the screen.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set the privacy mask image for the screen. Code: ${err.code}, message: ${err.message}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create pixelmap. Code: ${error.code}, message: ${error.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-const color: ArrayBuffer = new ArrayBuffer(96); // 96为需要创建的像素buffer大小，取值为：height * width *4
-let opts: image.InitializationOptions = { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 4, width: 6 } }
-image.createPixelMap(color, opts).then((pixelMap: image.PixelMap) => {
-  console.info('Succeeded in creating pixelmap.');
-  let screenId: long = 1;
-  screen.setScreenPrivacyMaskImage(screenId, pixelMap).then(() => {
-    console.info('Succeeded in setting the privacy mask image for the screen.');
-  }).catch((err: Error) => {
-    console.error(`Failed to set the privacy mask image for the screen. Code: ${err?.code}, message: ${err?.message}`);
-  });
-}).catch((error: Error) => {
-  console.error(`Failed to create pixelmap. Code: ${error?.code}, message: ${error?.message}`);
-})
-```

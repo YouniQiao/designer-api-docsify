@@ -4,8 +4,6 @@ Enumerates the routing modes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Standard
@@ -18,8 +16,6 @@ Multi-instance mode. It is the default routing mode.The target page is added to 
 **NOTE：**If no routing mode is used, the navigation will be carried out according to the default multi-instance mode.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +30,6 @@ Single
 Singleton mode.If the URL of the target page already exists in the page stack, the page is moved to the top of the stack.If the URL of the target page does not exist in the page stack, the page is redirected to in multi-instance mode.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

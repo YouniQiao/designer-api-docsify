@@ -20,14 +20,12 @@ ChipOptions定义Chip的样式及具体样式参数。
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
+import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## onClose
@@ -40,8 +38,6 @@ onClose?: () => void
 **说明：**仅当关闭图标显示时生效，即suffixSymbol和suffixIcon都未传入参数且allowClose为true时。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,11 +53,9 @@ accessibilityDescription?: ResourceStr
 
 Chip组件的无障碍描述。用于向用户详细解释当前组件，开发人员应提供详尽的文本说明，协助用户理解即将执行的操作及其结果。特别是当这些结果无法仅从组件属性和无障碍文本中直接获知时。如果组件同时具备文本属性和无障碍说明属性，当组件被选 中时，系统将首先播报组件的文本属性，随后播报无障碍说明属性的内容。默认值：空字符串。值为undefined时，按默认值处理。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,8 +77,6 @@ Chip组件无障碍重要性。用于控制Chip组件是否可被无障碍辅助
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -102,8 +94,6 @@ Chip组件选中态类型。默认值：当设置了activated属性但未指定a
 **类型：** [AccessibilitySelectedType](arkts-arkui-arkui-advanced-chip-accessibilityselectedtype-e.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,8 +114,6 @@ Chip是否为激活态。默认值：false。true：Chip为激活态；false：C
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -140,11 +128,9 @@ activatedBackgroundColor?: ResourceColor
 
 Chip激活态的背景颜色。默认值：\$r('sys.color.ohos_id_color_emphasize')。值为undefined时，按默认值处理。赋值为非法值时，背景颜色透明。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,14 +144,12 @@ Chip激活态的背景颜色。默认值：\$r('sys.color.ohos_id_color_emphasiz
 activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件激活状态下的系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、 border、shadow等视觉属性。默认值：undefined值为undefined时，不应用材质样式。  
+设置组件激活状态下的系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、 [border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow等视觉属性。默认值：undefined值为undefined时，不应用材质样式。  
 **说明：**当设置activatedBackgroundSystemMaterial时，应将activatedBackgroundColor设为Color.Transparent，否则会与系统材质冲突；当 activatedBackgroundSystemMaterial为undefined时，activatedBackgroundColor属性生效。
 
 **类型：** uiMaterial.Material
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,8 +170,6 @@ allowClose?: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -202,11 +184,9 @@ backgroundColor?: ResourceColor
 
 Chip背景颜色。默认值：\$r('sys.color.ohos_id_color_button_normal')。值为undefined时，按默认值处理。赋值为非法值时，背景颜色透明。
 
-**类型：** ResourceColor
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -220,14 +200,12 @@ Chip背景颜色。默认值：\$r('sys.color.ohos_id_color_button_normal')。�
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、 border、shadow等视觉属性。默认值：undefined值为undefined时，不应用材质样式。  
+设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、 [border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow等视觉属性。默认值：undefined值为undefined时，不应用材质样式。  
 **说明：**当设置backgroundSystemMaterial时，应将backgroundColor设为Color.Transparent，否则会与系统材质冲突；当backgroundSystemMaterial为 undefined时，backgroundColor属性生效。
 
 **类型：** uiMaterial.Material
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -243,11 +221,9 @@ borderRadius?: Dimension
 
 Chip背景圆角半径大小，不支持百分比，传入百分比时按默认值处理。取值范围：[0, +∞)默认值：\$r('sys.float.ohos_id_corner_radius_button')。单位：vp值为undefined时，按默认值处理。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,8 +242,6 @@ closeOptions?: CloseOptions
 **类型：** [CloseOptions](arkts-arkui-arkui-advanced-chip-closeoptions-i.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -288,8 +262,6 @@ direction?: Direction
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -309,8 +281,6 @@ Chip是否可用。默认值：true。true：Chip可用；false：Chip不可用�
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -324,14 +294,13 @@ fontSize?: Dimension
 ```
 
 统一设置Chip组件的文本与图标的字体大小，不支持百分比，传入百分比时按默认值处理。该fontSize的优先级低于prefixSymbol、label、suffixSymbol和closeOptions中的fontSize属性。默认值：  
-- size为ChipSize.SMALL时，文本：`\$r('sys.float.chip_small_font_size')`；图标：`\$r('sys.float.chip_small_icon_size')` - 其他情况下，文本：`\$r('sys.float.chip_normal_font_size')`；图标：`\$r('sys.float.chip_normal_icon_size')`  
+- size为ChipSize.SMALL时，文本：`\$r('sys.float.chip_small_font_size')`；图标：`\$r('sys.float.chip_small_icon_size')`  
+- 其他情况下，文本：`\$r('sys.float.chip_normal_font_size')`；图标：`\$r('sys.float.chip_normal_icon_size')`  
 单位：fp值为undefined时，按默认值处理。
 
-**类型：** Dimension
+**类型：** [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -350,8 +319,6 @@ label: LabelOptions
 **类型：** [LabelOptions](arkts-arkui-arkui-advanced-chip-labeloptions-i.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -372,8 +339,6 @@ Chip组件文本与图标的最大的字体缩放倍数。取值范围：[1, +�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -393,8 +358,6 @@ Chip组件文本与图标的最小的字体缩放倍数。取值范围：[0, 1]�
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -413,29 +376,9 @@ Chip组件点击事件。值为undefined时，Chip不能被点击。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onClose
-
-```TypeScript
-onClose?: VoidCallback
-```
-
-默认关闭图标点击事件。值为undefined时，关闭图标点击事件。
-
-**类型：** VoidCallback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -446,17 +389,18 @@ padding?: LocalizedPadding
 ```
 
 Chip组件的内边距。默认值：  
-- size为ChipSize.SMALL并且activated为true时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
-- size为ChipSize.SMALL并且activated为false时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
-- size不为ChipSize.SMALL并且activated为true时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
-- size不为ChipSize.SMALL并且activated为false时，默认值： `{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
-值为undefined时，按默认值处理。
+- size为ChipSize.SMALL并且activated为true时，默认值：  
+`{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
+- size为ChipSize.SMALL并且activated为false时，默认值：  
+`{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
+- size不为ChipSize.SMALL并且activated为true时，默认值：  
+`{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`  
+- size不为ChipSize.SMALL并且activated为false时，默认值：  
+`{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`值为undefined时，按默认值处理。
 
-**类型：** LocalizedPadding
+**类型：** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -476,8 +420,6 @@ prefixIcon?: PrefixIconOptions
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -496,8 +438,6 @@ prefixSymbol?: ChipSymbolGlyphOptions
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -514,11 +454,9 @@ Chip尺寸。默认值：ChipSize.NORMAL
 **使用场景**：ChipSize.NORMAL适用于常规场景；ChipSize.SMALL适用于紧凑布局场景，如标签列表、筛选栏等；自定义SizeOptions适用于需要特定尺寸的场景。SizeOptions类型参数不支持百分比设置，异常值按默认值处理。  
 **说明：**[适老化](../../../ui/arkui-support-for-aging-adaptation.md)在size指定具体宽高时不生效，size设置为{ height: 0, width: 0 }除外。
 
-**类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| SizeOptions
+**类型：** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) \| [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -538,8 +476,6 @@ suffixIcon?: SuffixIconOptions
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -558,8 +494,6 @@ suffixSymbol?: ChipSymbolGlyphOptions
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -577,8 +511,6 @@ symbol类型后缀图标的无障碍朗读功能属性及点击事件回调等�
 **类型：** [ChipSuffixSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md)
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

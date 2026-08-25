@@ -4,8 +4,6 @@ Enumerates the purposes of using the key.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_KEY_PURPOSE_SIGN
@@ -18,8 +16,6 @@ Signs data.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Security.CertificateManager
 
 ## CM_KEY_PURPOSE_VERIFY
@@ -31,7 +27,5 @@ CM_KEY_PURPOSE_VERIFY = 8
 Verifies a signature.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Security.CertificateManager

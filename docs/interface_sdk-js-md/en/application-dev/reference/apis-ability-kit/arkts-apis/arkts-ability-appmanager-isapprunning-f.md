@@ -3,13 +3,13 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isAppRunning
 
 ```TypeScript
-function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
+function isAppRunning(bundleName: string, appCloneIndex?: number): Promise<boolean>
 ```
 
 Checks whether the application with the specified bundle name and application clone index is running across all users. This API uses a promise to return the result.
@@ -20,8 +20,6 @@ Checks whether the application with the specified bundle name and application cl
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -31,7 +29,7 @@ Checks whether the application with the specified bundle name and application cl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| appCloneIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| appCloneIndex | number | No |
 
 **Return value:**
 
@@ -47,22 +45,3 @@ Checks whether the application with the specified bundle name and application cl
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 | [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let bundleName = "ohos.samples.etsclock";
-  appManager.isAppRunning(bundleName).then((data: boolean) => {
-      hilog.info(0x0000, 'testTag', `data: ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', `isAppRunning error, code: ${err.code}, msg:${err.message}`);
-    })
-} catch (err) {
-  hilog.error(0x0000, 'testTag', `isAppRunning error, code: ${err.code}, msg:${err.message}`);
-}
-```

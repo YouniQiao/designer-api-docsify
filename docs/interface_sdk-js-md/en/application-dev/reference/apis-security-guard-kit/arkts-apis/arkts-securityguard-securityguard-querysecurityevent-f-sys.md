@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## querySecurityEvent
@@ -15,8 +15,6 @@ function querySecurityEvent(rules: Array<SecurityEventRule>, querier: Querier): 
 Query security event information from security guard.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.QUERY_SECURITY_EVENT
 

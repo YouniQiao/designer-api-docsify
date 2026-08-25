@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setShortcutsEnabled
@@ -15,8 +15,6 @@ function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: bool
 Enables or disables the specified static shortcuts. This API uses a promise to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_SHORTCUTS
 
@@ -46,38 +44,3 @@ Enables or disables the specified static shortcuts. This API uses a promise to r
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 | [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) |
-
-**Examples**
-
-```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use the actual shortcut ID and bundle name.
-const bundleName = "com.example.myapplication";
-const arrShortcutInfo: Array<shortcutManager.ShortcutInfo> = [
-  {
-    id: "1",
-    bundleName: bundleName,
-    appIndex: 0,
-    sourceType: 1
-  },
-  {
-    id: "2",
-    bundleName: bundleName,
-    appIndex: 0,
-    sourceType: 1
-  }
-]
-
-try {
-  shortcutManager.setShortcutsEnabled(arrShortcutInfo, false)
-    .then(() => {
-      console.info('setShortcutsEnabled success');
-    }).catch((err: Error) => {
-    console.error(`setShortcutsEnabled errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-  });
-} catch (err) {
-  console.error(`setShortcutsEnabled errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
-}
-```

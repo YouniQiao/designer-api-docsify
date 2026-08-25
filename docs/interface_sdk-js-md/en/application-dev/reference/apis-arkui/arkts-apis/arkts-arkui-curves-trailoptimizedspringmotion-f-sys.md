@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'kits/@kit.ArkUI';
 ```
 
 ## trailOptimizedSpringMotion
@@ -15,8 +15,6 @@ function trailOptimizedSpringMotion(response?: number, dampingFraction?: number,
 Creates a spring animation curve. If multiple spring animations are applied to the same attribute of an object, each animation replaces their predecessor and inherits the velocity.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,4 +35,4 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |

@@ -7,8 +7,6 @@ The Boids simulation world object, used to manage the lifecycle and components o
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
@@ -22,8 +20,6 @@ addBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 Adds a flock behavior component at the specified node.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Adds an attraction field component at the specified node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -73,8 +67,6 @@ Adds a repulsion field component at the specified node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -97,8 +89,6 @@ getBoidsSimComponent(node: Node): BoidsSimParameters | null
 Gets the flock behavior parameters on the specified node.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,8 +118,6 @@ Gets the attraction field parameters on the specified node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -157,8 +145,6 @@ getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null
 Gets the repulsion field parameters on the specified node.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +174,6 @@ Pauses the Boids simulation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -206,8 +190,6 @@ Starts or resumes the Boids simulation.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -223,8 +205,6 @@ removeBoidsSimComponent(node: Node): void
 Removes the flock behavior component from the specified node.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,8 +228,6 @@ Removes the attraction field component on the specified node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -272,8 +250,6 @@ Removes the repulsion field component from the specified node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -295,8 +271,6 @@ setBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 Updates the flock behavior component on the specified node.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -321,8 +295,6 @@ Updates the attraction field component on the specified node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -345,8 +317,6 @@ setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 Updates the repulsion field component on the specified node.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -371,8 +341,6 @@ Stops the Boids simulation and resets the state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -390,8 +358,6 @@ Whether the current simulation is playing. true indicates it is playing, false i
 **Type:** boolean
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

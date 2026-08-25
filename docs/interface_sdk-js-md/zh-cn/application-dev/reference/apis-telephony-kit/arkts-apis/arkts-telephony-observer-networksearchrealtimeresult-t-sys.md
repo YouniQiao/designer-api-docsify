@@ -8,8 +8,6 @@ Callback when the network state corresponding to the default sim card is updated
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
 **系统接口：** 此接口为系统接口。

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { statfs } from '@kit.CoreFileKit';
+import { statfs } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getTotalSizeSync
 
 ```TypeScript
-function getTotalSizeSync(path: string): long
+function getTotalSizeSync(path: string): number
 ```
 
 以同步方法获取指定文件或目录所在文件系统的总字节数。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -30,7 +28,7 @@ function getTotalSizeSync(path: string): long
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **错误码：**
 
@@ -49,15 +47,3 @@ function getTotalSizeSync(path: string): long
 | 13900033 |
 | 13900038 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let path = context.filesDir;
-let totalSize = statfs.getTotalSizeSync(path);
-console.info("Succeeded in getting total size: " + totalSize);
-```

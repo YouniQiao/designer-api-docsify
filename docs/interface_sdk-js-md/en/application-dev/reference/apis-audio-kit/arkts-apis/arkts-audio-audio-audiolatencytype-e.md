@@ -4,8 +4,6 @@ Enumerates the audio latency types.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## LATENCY_TYPE_ALL
@@ -17,8 +15,6 @@ LATENCY_TYPE_ALL = 0
 Type to get latency of all audio processing units, including software and hardware.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,8 +30,6 @@ Type to get latency of software part, including audio effects in software.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -49,8 +43,6 @@ LATENCY_TYPE_HARDWARE = 2
 Type to get latency of hardware part, including audio effects in hal, driver and hardware.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

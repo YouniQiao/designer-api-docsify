@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## disconnectAllowedProfiles
@@ -15,8 +15,6 @@ function disconnectAllowedProfiles(deviceId: string, callback: AsyncCallback<voi
 Disconnects all allowed bluetooth profiles between the local and remote device.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -44,33 +42,3 @@ Disconnects all allowed bluetooth profiles between the local and remote device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.disconnectAllowedProfiles('68:13:24:79:4C:8C', (err: BusinessError) => {
-        if (err) {
-            console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-            return;
-        }
-        console.info('disconnectAllowedProfiles, err: ' + JSON.stringify(err));
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.disconnectAllowedProfiles('68:13:24:79:4C:8C').then(() => {
-        console.info('disconnectAllowedProfiles');
-    }, (err: BusinessError) => {
-        console.error('disconnectAllowedProfiles:errCode' + err.code + ', errMessage: ' + err.message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

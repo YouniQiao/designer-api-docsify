@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## setUninstallDisposedRule
 
 ```TypeScript
-function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposedRule, appIndex?: int): void
+function setUninstallDisposedRule(appIdentifier: string, rule: UninstallDisposedRule, appIndex?: number): void
 ```
 
 Sets an uninstallation disposed rule for an application or an application clone.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -30,7 +28,7 @@ Sets an uninstallation disposed rule for an application or an application clone.
 | --- | --- | --- |
 | appIdentifier | string | Yes |
 | rule | [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) | Yes |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| appIndex | number | No |
 
 **Error codes:**
 
@@ -43,30 +41,3 @@ Sets an uninstallation disposed rule for an application or an application clone.
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
 | [17700074](../errorcode-bundle.md#17700074-invalid-appidentifier) |
 | [17700075](../errorcode-bundle.md#17700075-bundle-name-specified-in-want-is-inconsistent-with-that-of-the-caller) |
-
-**Examples**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-
-let appIdentifier = "com.example.myapplication_xxxxx";
-let want: Want = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  abilityName: "EntryAbility"
-};
-let rule: appControl.UninstallDisposedRule = {
-  want: want,
-  uninstallComponentType: appControl.UninstallComponentType.EXTENSION,
-  priority: 100
-};
-
-try {
-  appControl.setUninstallDisposedRule(appIdentifier, rule, 1);
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('setUninstallDisposedRule failed ' + message);
-}
-```

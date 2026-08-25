@@ -4,8 +4,6 @@ Defines the response to the cipher interface called.
 
 **Since:** 3
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
-
 **Deprecated since:** 11
 
 **Substitutes:** Cipher
@@ -15,7 +13,7 @@ Defines the response to the cipher interface called.
 ## Modules to Import
 
 ```TypeScript
-import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## text
@@ -29,8 +27,6 @@ Response content.
 **Type:** string
 
 **Since:** 3
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 3.
 
 **Deprecated since:** 11
 

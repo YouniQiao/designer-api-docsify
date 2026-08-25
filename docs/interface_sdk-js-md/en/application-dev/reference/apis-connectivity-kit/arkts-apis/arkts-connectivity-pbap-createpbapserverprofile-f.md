@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pbap } from '@kit.ConnectivityKit';
+import { pbap } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createPbapServerProfile
@@ -15,8 +15,6 @@ function createPbapServerProfile(): PbapServerProfile
 create the instance of PBAP server profile.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -32,16 +30,3 @@ create the instance of PBAP server profile.
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    console.info('pbapServer success');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setReminderInfoByBundles
@@ -15,8 +15,6 @@ function setReminderInfoByBundles(reminderInfos: Array<NotificationReminderInfo>
 Batch sets reminders for specified applications. This API uses a promise to return the result.
 
 **Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,25 +44,3 @@ Batch sets reminders for specified applications. This API uses a promise to retu
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName",
-};
-let reminderInfos: Array<notificationManager.NotificationReminderInfo> = [
-    {
-        bundle: bundle,
-        reminderFlags: 59,
-        silentReminderEnabled: false
-    }
-];
-notificationManager.setReminderInfoByBundles(reminderInfos).then(() => {
-    console.info('SetReminderInfoByBundles success.');
-}).catch((err: BusinessError) => {
-    console.error(`SetReminderInfoByBundles failed, code is ${err.code}, message is ${err.message}`);
-});
-```

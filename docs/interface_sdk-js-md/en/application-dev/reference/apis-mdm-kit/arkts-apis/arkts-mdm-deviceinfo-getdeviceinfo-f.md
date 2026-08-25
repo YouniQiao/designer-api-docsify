@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
+import { deviceInfo } from 'kits/@kit.MDMKit';
 ```
 
 ## getDeviceInfo
@@ -15,8 +15,6 @@ function getDeviceInfo(admin: Want, label: string): string
 Obtains device information.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_DEVICE_INFO
 
@@ -46,24 +44,3 @@ Obtains device information.
 | [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace with actual values.
-  let result: string = deviceInfo.getDeviceInfo(wantTemp, 'deviceName');
-  console.info(`Succeeded in getting device name, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get device name. Code: ${err.code}, message: ${err.message}`);
-}
-```

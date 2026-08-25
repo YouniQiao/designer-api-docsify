@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { DataShareExtensionAbility } from '@kit.ArkData';
+import { DataShareExtensionAbility } from 'kits/@kit.ArkData';
 ```
 
 ## batchInsert
@@ -25,8 +23,6 @@ batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCall
 在数据库批量插入时服务端回调此接口，该方法可以选择性重写。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,51 +38,6 @@ batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCall
 | valueBuckets | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { DataShareExtensionAbility, relationalStore, ValuesBucket } from '@kit.ArkData';
-
-let TBL_NAME = 'TBL00';
-let rdbStore: relationalStore.RdbStore;
-
-export default class DataShareExtAbility extends DataShareExtensionAbility {
-  batchInsert(uri: string, valueBuckets: Array<ValuesBucket>, callback: Function) {
-    if (valueBuckets === null || valueBuckets.length <= 0) {
-      console.info('invalid valueBuckets');
-      return;
-    }
-    rdbStore.batchInsert(TBL_NAME, valueBuckets, (err, ret) => {
-      if (callback !== undefined) {
-        callback(err, ret);
-      }
-    });
-  };
-};
-```
-
-## batchInsert
-
-```TypeScript
-batchInsert?: BatchInsertFn
-```
-
-插入多个数据到数据库中。该方法可被datashare数据提供方重写
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [batchInsert](#batchinsert)
-
 ## batchUpdate
 
 ```TypeScript
@@ -99,8 +50,6 @@ batchUpdate?(
 在数据库批量更新时服务端回调此接口，该方法可以选择性重写。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,62 +64,6 @@ batchUpdate?(
 | operations | Record&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-updateoperation-t-sys.md)&gt;&gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { DataShareExtensionAbility, relationalStore, dataShare } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit'
-
-let TBL_NAME = 'TBL00';
-let rdbStore: relationalStore.RdbStore;
-
-export default class DataShareExtAbility extends DataShareExtensionAbility {
-  batchUpdate(operations: Record<string, Array<dataShare.UpdateOperation>>, callback: Function) {
-    let recordOps : Record<string, Array<dataShare.UpdateOperation>> = operations;
-    let results : Record<string, Array<number>> = {};
-    let entries = Object.entries(recordOps);
-    for (let i = 0; i < entries.length; i++) {
-      let key = entries[i][0];
-      let values = entries[i][1];
-      let result : number[] = [];
-      for (const value of values) {
-        rdbStore.update(TBL_NAME, value.values, value.predicates).then(async (rows) => {
-          console.info('Update row count is ' + rows);
-          result.push(rows);
-        }).catch((err:BusinessError) => {
-          console.error(`Failed to Update. Code: ${err.code}, message: ${err.message}`);
-          result.push(-1)
-        });
-      }
-      results[key] = result;
-    }
-    callback(null, results);
-  }
-};
-```
-
-## batchUpdate
-
-```TypeScript
-batchUpdate?: BatchUpdateFn
-```
-
-更新数据库中多个数据。该方法可被datashare数据提供方重写。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [batchUpdate](#batchupdate)
-
 ## delete
 
 ```TypeScript
@@ -180,8 +73,6 @@ delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callba
 在删除数据库记录时服务端回调此接口，该方法可以选择性重写。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -197,50 +88,6 @@ delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callba
 | predicates | dataSharePredicates.DataSharePredicates | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { DataShareExtensionAbility, relationalStore, dataSharePredicates } from '@kit.ArkData';
-
-let TBL_NAME = 'TBL00';
-let rdbStore: relationalStore.RdbStore;
-
-export default class DataShareExtAbility extends DataShareExtensionAbility {
-  delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: Function) {
-    if (predicates === null || predicates === undefined) {
-      return;
-    }
-    rdbStore.delete(TBL_NAME, predicates, (err, ret) => {
-      if (callback !== undefined) {
-        callback(err, ret);
-      }
-    });
-  }
-};
-```
-
-## delete
-
-```TypeScript
-delete?: DeleteFn
-```
-
-删除数据库中一个或多个数据，该方法可被datashare数据提供方重写
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [delete](#delete)
-
 ## denormalizeUri
 
 ```TypeScript
@@ -250,8 +97,6 @@ denormalizeUri?(uri: string, callback: AsyncCallback<string>): void
 服务端使用的URI转换为用户传入的初始URI时服务端回调此接口，该方法可以选择性重写。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,49 +111,6 @@ denormalizeUri?(uri: string, callback: AsyncCallback<string>): void
 | uri | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { DataShareExtensionAbility } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit'
-
-export default class DataShareExtAbility extends DataShareExtensionAbility {
-  denormalizeUri(uri: string, callback: Function) {
-    let key = 'code';
-    let value = 0;
-    let err: BusinessError = {
-      code: value,
-      name: key,
-      message: key
-    };
-    let ret = `denormalize ${uri}`;
-    callback(err, ret);
-  }
-};
-```
-
-## denormalizeUri
-
-```TypeScript
-denormalizeUri?: DenormalizeUriFn
-```
-
-将通过 normalizeUri(uri) 生成的给定标准化uri转换为非标准化uri。此方法的默认实现返回传递给它的原始 uri。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [denormalizeUri](#denormalizeuri)
-
 ## insert
 
 ```TypeScript
@@ -318,8 +120,6 @@ insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>)
 在数据库插入时回调此接口，该方法可以选择性重写。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -335,52 +135,6 @@ insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>)
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { DataShareExtensionAbility, relationalStore, ValuesBucket } from '@kit.ArkData';
-
-let TBL_NAME = 'TBL00';
-let rdbStore: relationalStore.RdbStore;
-
-export default class DataShareExtAbility extends DataShareExtensionAbility {
-  insert(uri: string, valueBucket: ValuesBucket, callback: Function) {
-    if (valueBucket === null) {
-      console.info('invalid valueBuckets');
-      return;
-    }
-    rdbStore.insert(TBL_NAME, valueBucket, (err, ret) => {
-      console.info(`callback ret: ${ret}`);
-      if (callback !== undefined) {
-        callback(err, ret);
-      }
-    });
-  }
-};
-```
-
-## insert
-
-```TypeScript
-insert?: InsertFn
-```
-
-插入数据到数据库中，该方法可被datashare数据提供方重写
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [insert](#insert)
-
 ## normalizeUri
 
 ```TypeScript
@@ -390,8 +144,6 @@ normalizeUri?(uri: string, callback: AsyncCallback<string>): void
 用户给定的URI转换为服务端使用的URI时回调此接口，该方法可以选择性重写。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -406,49 +158,6 @@ normalizeUri?(uri: string, callback: AsyncCallback<string>): void
 | uri | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { DataShareExtensionAbility } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit'
-
-export default class DataShareExtAbility extends DataShareExtensionAbility {
-  normalizeUri(uri: string, callback: Function) {
-    let key = 'code';
-    let value = 0;
-    let err: BusinessError = {
-      code: value,
-      name: key,
-      message: key
-    };
-    let ret: string = `normalize: ${uri}`;
-    callback(err, ret);
-  }
-};
-```
-
-## normalizeUri
-
-```TypeScript
-normalizeUri?: NormalizeUriFn
-```
-
-将给定的引用数据共享的 URI 转换为标准 URI。标准 URI 可以在设备之间使用，可以持久化、备份和恢复。即使上下文发生变化，它也可以引用数据共享中的同一项。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [normalizeUri](#normalizeuri)
-
 ## onCreate
 
 ```TypeScript
@@ -458,8 +167,6 @@ onCreate?(want: Want, callback: AsyncCallback<void>): void
 DataShare客户端连接DataShareExtensionAbility服务端时，服务端回调此接口，执行初始化业务逻辑操作。该方法可以选择性重写。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -473,60 +180,6 @@ DataShare客户端连接DataShareExtensionAbility服务端时，服务端回调�
 | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { DataShareExtensionAbility, relationalStore } from '@kit.ArkData';
-import { Want } from '@kit.AbilityKit';
-
-let DB_NAME = 'DB00.db';
-let TBL_NAME = 'TBL00';
-let DDL_TBL_CREATE = 'CREATE TABLE IF NOT EXISTS '
-  + TBL_NAME
-  + ' (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER, phoneNumber DOUBLE, isStudent BOOLEAN, Binary BINARY)';
-let rdbStore: relationalStore.RdbStore;
-
-export default class DataShareExtAbility extends DataShareExtensionAbility {
-  onCreate(want: Want, callback: Function) {
-    relationalStore.getRdbStore(this.context, {
-      name: DB_NAME,
-      securityLevel: relationalStore.SecurityLevel.S3
-    }, (err, data) => {
-      console.info(`getRdbStore done, data : ${data}`);
-      rdbStore = data;
-      rdbStore.executeSql(DDL_TBL_CREATE, [], (err) => {
-        console.error(`Failed to executeSql. Code: ${err.code}, message: ${err.message}`);
-      });
-      if (callback) {
-        callback();
-      }
-    });
-  }
-};
-```
-
-## onCreate
-
-```TypeScript
-onCreate?: OnCreateFn
-```
-
-当datashare extension ability启动初始化时会被调用
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [onCreate](#oncreate)
 
 ## query
 
@@ -543,8 +196,6 @@ query?(
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
@@ -559,53 +210,6 @@ query?(
 | predicates | dataSharePredicates.DataSharePredicates | 是 |
 | columns | Array & lt;string & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 |
-
-**示例**
-
-```TypeScript
-import { DataShareExtensionAbility, relationalStore, dataSharePredicates } from '@kit.ArkData';
-
-let TBL_NAME = 'TBL00';
-let rdbStore: relationalStore.RdbStore;
-
-export default class DataShareExtAbility extends DataShareExtensionAbility {
-  query(uri: string, predicates: dataSharePredicates.DataSharePredicates, columns: Array<string>, callback: Function) {
-    if (predicates === null || predicates === undefined) {
-      return;
-    }
-    rdbStore.query(TBL_NAME, predicates, columns, (err, resultSet) => {
-      if (resultSet !== undefined) {
-        console.info(`resultSet.rowCount: ${resultSet.rowCount}`);
-      }
-      if (callback !== undefined) {
-        callback(err, resultSet);
-      }
-    });
-  }
-};
-```
-
-## query
-
-```TypeScript
-query?: QueryFn
-```
-
-查询数据库中一个或多个数据记录。该方法可被datashare数据提供方重写。只支持RDB和分布式KVDB的结果集。当前版本不支持自定义结果集。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [query](#query)
 
 ## update
 
@@ -622,8 +226,6 @@ update?(
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
@@ -639,50 +241,6 @@ update?(
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import { DataShareExtensionAbility, relationalStore, dataSharePredicates, ValuesBucket } from '@kit.ArkData';
-
-let TBL_NAME = 'TBL00';
-let rdbStore: relationalStore.RdbStore;
-
-export default class DataShareExtAbility extends DataShareExtensionAbility {
-  update(uri: string, predicates: dataSharePredicates.DataSharePredicates, valueBucket: ValuesBucket, callback: Function) {
-    if (predicates === null || predicates === undefined) {
-      return;
-    }
-    rdbStore.update(TBL_NAME, valueBucket, predicates, (err, ret) => {
-      if (callback !== undefined) {
-        callback(err, ret);
-      }
-    });
-  }
-};
-```
-
-## update
-
-```TypeScript
-update?: UpdateFn
-```
-
-更新数据库中一个或多个数据，该方法可被datashare数据提供方重写
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
-
-**系统接口：** 此接口为系统接口。
-
-**示例**
-
-参见 [update](#update)
-
 ## context
 
 ```TypeScript
@@ -694,8 +252,6 @@ context: ExtensionContext
 **类型：** [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

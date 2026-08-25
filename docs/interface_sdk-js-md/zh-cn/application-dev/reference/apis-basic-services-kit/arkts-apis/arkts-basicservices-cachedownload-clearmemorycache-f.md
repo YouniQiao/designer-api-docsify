@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## clearMemoryCache
@@ -16,20 +16,4 @@ function clearMemoryCache(): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
 **系统能力：** SystemCapability.Request.FileTransferAgent
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-cacheDownload.clearMemoryCache();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-cacheDownload.clearMemoryCache();
-```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getSystemResourceManager
@@ -19,8 +19,6 @@ export function getSystemResourceManager(): ResourceManager
 > screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 20
 
@@ -41,23 +39,3 @@ export function getSystemResourceManager(): ResourceManager
 | 错误码ID |
 | --- |
 | [9001009](../errorcode-resource-manager.md#9001009-获取系统资源管理对象失败) |
-
-**示例**
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let systemResourceManager = resourceManager.getSystemResourceManager();
-  systemResourceManager.getStringValue($r('sys.string.ohos_lab_vibrate').id).then((value: string) => {
-    let str = value;
-  }).catch((error: BusinessError) => {
-    console.error("systemResourceManager getStringValue promise error is " + error);
-  });
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getSystemResourceManager failed, error code: ${code}, message: ${message}.`);
-}
-```

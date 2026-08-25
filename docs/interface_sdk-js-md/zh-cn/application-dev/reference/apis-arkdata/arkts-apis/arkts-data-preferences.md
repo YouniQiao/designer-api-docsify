@@ -7,14 +7,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 ## 导入模块
 
 ```TypeScript
-import { preferences } from '@kit.ArkData';
+import { preferences } from 'kits/@kit.ArkData';
 ```
 
 ## 汇总
@@ -57,7 +55,6 @@ import { preferences } from '@kit.ArkData';
 
 | 名称 |
 | --- |
-| [RecordData(用户首选项)](arkts-arkdata-preferences-recorddata-t.md) |
 | [ValueType(用户首选项)](arkts-arkdata-preferences-valuetype-t.md) |
 
 ### 常量

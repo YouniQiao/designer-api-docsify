@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## setAbilityFileTypesForSelf
@@ -15,8 +15,6 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 Sets the file types that can be opened by the current application.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_SELF_SKILLS
 
@@ -41,23 +39,3 @@ Sets the file types that can be opened by the current application.
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 | [17700351](../errorcode-bundle.md#17700351-invalid-file-type) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName: string = "entry";
-let abilityName: string = "EntryAbility";
-let fileTypes: Array<string> = ["general.png", "general.jpeg"];
-
-try {
-  bundleManager.setAbilityFileTypesForSelf(moduleName, abilityName, fileTypes);
-  hilog.info(0x0000, 'testTag', 'setAbilityFileTypesForSelf successfully');
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setAbilityFileTypesForSelf failed. Cause: %{public}s', message);
-}
-```

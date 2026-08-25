@@ -3,13 +3,13 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## killProcessWithAccount
 
 ```TypeScript
-function killProcessWithAccount(bundleName: string, accountId: int): Promise<void>
+function killProcessWithAccount(bundleName: string, accountId: number): Promise<void>
 ```
 
 终止account进程。使用Promise异步回调。
@@ -18,8 +18,6 @@ function killProcessWithAccount(bundleName: string, accountId: int): Promise<voi
 > 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本14+：ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.KILL_APP_PROCESSES or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
@@ -34,7 +32,7 @@ function killProcessWithAccount(bundleName: string, accountId: int): Promise<voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| accountId | number | 是 |
 
 **返回值：**
 
@@ -51,75 +49,11 @@ function killProcessWithAccount(bundleName: string, accountId: int): Promise<voi
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-let accountId = 0;
-
-try {
-  appManager.killProcessWithAccount(bundleName, accountId).then(() => {
-    console.info('killProcessWithAccount success');
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    console.error(`killProcessWithAccount fail, err: ${err.code}, ${err.message}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-let accountId = 0;
-let isClearPageStack = false;
-let appIndex = 1;
-
-try {
-  appManager.killProcessWithAccount(bundleName, accountId, isClearPageStack, appIndex).then(() => {
-    console.info('killProcessWithAccount success');
-  }).catch((e: Error) => {
-    let err = e as BusinessError;
-    console.error(`killProcessWithAccount fail, err: ${err.code}, ${err.message}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-let accountId = 0;
-
-function killProcessWithAccountCallback(err: BusinessError | null) {
-  if (err) {
-    console.error(`killProcessWithAccountCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('killProcessWithAccountCallback success.');
-  }
-}
-
-appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountCallback);
-```
-
 
 ## killProcessWithAccount
 
 ```TypeScript
-function killProcessWithAccount(bundleName: string, accountId: int, clearPageStack: boolean, appIndex?: int):
+function killProcessWithAccount(bundleName: string, accountId: number, clearPageStack: boolean, appIndex?: number):
     Promise<void>
 ```
 
@@ -129,8 +63,6 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
 > 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.KILL_APP_PROCESSES or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -143,9 +75,9 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| accountId | number | 是 |
 | clearPageStack | boolean | 是 |
-| appIndex | ArkTS-Dyn: number<br>ArkTS-Sta：int | 否 |
+| appIndex | number | 否 |
 
 **返回值：**
 
@@ -162,15 +94,11 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
 
-**示例**
-
-参见 [killProcessWithAccount](#killprocesswithaccount)
-
 
 ## killProcessWithAccount
 
 ```TypeScript
-function killProcessWithAccount(bundleName: string, accountId: int, callback: AsyncCallback<void>): void
+function killProcessWithAccount(bundleName: string, accountId: number, callback: AsyncCallback<void>): void
 ```
 
 终止account进程。使用callback异步回调。
@@ -179,8 +107,6 @@ function killProcessWithAccount(bundleName: string, accountId: int, callback: As
 > 当accountId为当前用户时，不需要校验ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本14+：ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.KILL_APP_PROCESSES or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
@@ -195,7 +121,7 @@ function killProcessWithAccount(bundleName: string, accountId: int, callback: As
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| accountId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -206,7 +132,3 @@ function killProcessWithAccount(bundleName: string, accountId: int, callback: As
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [16000050](../errorcode-ability.md#16000050-内部错误) |
-
-**示例**
-
-参见 [killProcessWithAccount](#killprocesswithaccount)

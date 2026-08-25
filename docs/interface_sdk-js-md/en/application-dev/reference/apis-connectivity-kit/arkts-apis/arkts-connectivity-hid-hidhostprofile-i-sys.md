@@ -6,14 +6,12 @@ Manager hid host profile.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@kit.ConnectivityKit';
+import { hid } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -26,8 +24,6 @@ Initiate an HID connection to a remote device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -52,33 +48,6 @@ Initiate an HID connection to a remote device.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-import { common } from '@kit.ConnectivityKit';
-
-let device: common.BluetoothAddress = {
-    "address": "11:22:33:44:55:66",
-    "addressType": common.BluetoothAddressType.REAL,
-}
-try {
-    let hidDevice: hid.HidDeviceProfile = hid.createHidDeviceProfile();
-    hidDevice.connect(device);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hidHostProfile = hid.createHidHostProfile();
-    hidHostProfile.connect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## disconnect
 
@@ -90,8 +59,6 @@ Disconnect the HID connection with the remote device.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -116,24 +83,3 @@ Disconnect the HID connection with the remote device.
 | 2900003 |
 | 2900004 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-try {
-    let hidDevice: hid.HidDeviceProfile = hid.createHidDeviceProfile();
-    hidDevice.disconnect();
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let hidHostProfile = hid.createHidHostProfile();
-    hidHostProfile.disconnect('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

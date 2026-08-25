@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { stream } from '@kit.ArkTS';
+import { stream } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -24,36 +22,9 @@ constructor()
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-```TypeScript
-let writableStream = new stream.Writable();
-```
-
-```TypeScript
-let readableStream = new stream.Readable();
-```
-
-```TypeScript
-let option : stream.ReadableOptions = {
-  encoding : "utf-8"
-};
-let readableStream = new stream.Readable(option);
-```
-
-```TypeScript
-let duplex = new stream.Duplex();
-```
-
-```TypeScript
-let transformStream = new stream.Transform();
-```
 
 ## constructor
 
@@ -65,8 +36,6 @@ constructor(options: ReadableOptions)
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -76,10 +45,6 @@ constructor(options: ReadableOptions)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | 是 |
-
-**示例**
-
-参见 [constructor](#constructor)
 
 ## doInitialize
 
@@ -91,8 +56,6 @@ doInitialize(callback: Function): void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -103,76 +66,15 @@ doInitialize(callback: Function): void
 | --- | --- | --- |
 | callback | Function | 是 |
 
-**示例**
-
-```TypeScript
-class MyWritable extends stream.Writable {
-  doInitialize(callback: Function) {
-    super.doInitialize(callback);
-    console.info("Writable doInitialize"); // Writable doInitialize
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    super.doWrite(chunk, encoding, callback);
-  }
-}
-
-new MyWritable();
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class MyReadable extends stream.Readable {
-  doInitialize(callback: Function) {
-    super.doInitialize(callback);
-    console.info("Readable doInitialize"); // Readable doInitialize
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let myReadable = new MyReadable();
-myReadable.on("data", () => {
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class MyReadable extends stream.Readable {
-  doInitialize(callback: Function) {
-    super.doInitialize(callback);
-    console.info("Readable doInitialize"); // 期望结果: Readable doInitialize
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let myReadable = new MyReadable();
-myReadable.on("data", () => {
-});
-```
-
 ## doRead
 
-ArkTS-Dyn:
 ```TypeScript
 doRead(size: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-doRead(size: int): void
 ```
 
 数据读取API，需在子类中实现。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -182,45 +84,7 @@ doRead(size: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| size | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-    console.info("doRead called"); // doRead called
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.on("data", () => {
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-    console.info("doRead called"); // 期望结果: doRead called
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.on("data", () => {
-});
-```
+| size | number | 是 |
 
 ## isPaused
 
@@ -232,8 +96,6 @@ isPaused(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -244,44 +106,6 @@ isPaused(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused false
-readableStream.pause();
-console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-console.info("Readable isPaused", readableStream.isPaused()); // 期望结果: Readable isPaused false
-readableStream.pause();
-console.info("Readable isPaused", readableStream.isPaused()); // 期望结果: Readable isPaused true
-```
-
 ## off
 
 ```TypeScript
@@ -291,8 +115,6 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 移除通过on注册的事件处理函数。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -305,139 +127,6 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \|
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-let testListenerCalled = false;
-let testListener = () => {
-  testListenerCalled = true;
-};
-writableStream.on("finish", testListener);
-writableStream.off("finish");
-writableStream.write("test");
-writableStream.end();
-setTimeout(() => {
-  console.info("Writable off test", testListenerCalled.toString()); // Writable off test false
-}, 0);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-let testListenerCalled = false;
-let testListener = () => {
-  testListenerCalled = true;
-};
-writableStream.on("finish", testListener);
-writableStream.off("finish");
-writableStream.write("test");
-writableStream.end();
-setTimeout(() => {
-  console.info("Writable off test", testListenerCalled.toString()); // 期望结果: Writable off test false
-}, 0);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-
-function read() {
-  console.info("read() called");
-}
-
-readableStream.setEncoding("utf8");
-readableStream.on("readable", read);
-readableStream.off("readable");
-readableStream.push("test");
-// off注销对readable事件的监听后，read函数不会被调用，"read() called"也不会被打印
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-
-function read() {
-  console.info("read() called");
-}
-
-readableStream.setEncoding("utf8");
-readableStream.on("readable", read);
-readableStream.off("readable");
-readableStream.push("test");
-// off注销对readable事件的监听后，read函数不会被调用，"read() called"也不会被打印
-```
-
-## off
-
-```TypeScript
-off(event: string, callback?: Function): void
-```
-
-取消事件消息。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | string | 是 |
-| callback | Function | 否 |
-
-**示例**
-
-参见 [off](#off)
-
 ## on
 
 ```TypeScript
@@ -447,8 +136,6 @@ on(event: string, callback: Callback<emitter.EventData>): void
 注册事件处理函数来监听可读流上的不同事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -461,119 +148,6 @@ on(event: string, callback: Callback<emitter.EventData>): void
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \|
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback(new Error());
-  }
-}
-
-let callbackCalled = false;
-let writableStream = new TestWritable();
-writableStream.on('error', () => {
-  console.info("Writable event test", callbackCalled.toString()); // Writable event test false
-});
-writableStream.write("hello", "utf8", () => {
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall(new Error());
-  }
-}
-
-let callbackCalled = false;
-let writableStream = new TestWritable();
-writableStream.on('error', (): void => {
-  console.info("Writable event test", callbackCalled.toString()); // 期望结果: Writable event test false
-});
-writableStream.write("hello", "utf8", () => {
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-    throw new Error("Simulated error");
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.push("test");
-readableStream.on("error", () => {
-  console.error("error event called"); // error event called
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-    throw new Error("Simulated error");
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.push("test");
-readableStream.on("error", (): void => {
-  console.error("error event called"); // 期望结果: error event called
-});
-```
-
-## on
-
-```TypeScript
-on(event: string, callback: Function): void
-```
-
-注册事件消息。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| event | string | 是 |
-| callback | Function | 是 |
-
-**示例**
-
-参见 [on](#on)
-
 ## pause
 
 ```TypeScript
@@ -583,8 +157,6 @@ pause(): Readable
 暂停流动模式下的可读流。可以使用**isPaused**检查流是否已暂停。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -596,42 +168,6 @@ pause(): Readable
 | --- |
 | [Readable](arkts-arkts-stream-readable-c.md) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.pause();
-console.info("Readable test pause", readableStream.isPaused()); // Readable test pause true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.pause();
-console.info("Readable test pause", readableStream.isPaused()); // 期望结果: Readable test pause true
-```
-
 ## pipe
 
 ```TypeScript
@@ -641,8 +177,6 @@ pipe(destination: Writable, options?: Object): Writable
 将一个可写流附加到可读流上，以实现数据的自动传输。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -661,68 +195,6 @@ pipe(destination: Writable, options?: Object): Writable
 | --- |
 | [Writable](arkts-arkts-stream-writable-c.md) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-    this.push("test");
-    this.push(null);
-  }
-}
-
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Readable test pipe", chunk); // Readable test pipe test
-    callback();
-  }
-}
-
-let readableStream = new TestReadable();
-let writableStream = new TestWritable();
-readableStream.pipe(writableStream);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-    this.push("test");
-    this.push(null);
-  }
-}
-
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Readable test pipe", chunk); // 期望结果: Readable test pipe test
-    callback.unsafeCall();
-  }
-}
-
-let readableStream = new TestReadable();
-let writableStream = new TestWritable();
-readableStream.pipe(writableStream);
-```
-
 ## push
 
 ```TypeScript
@@ -733,8 +205,6 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -743,7 +213,7 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | 是 | 读取的数据。 <br> API version22开始发生兼容性变更，在API version21及之前的版本其类型为：`Uint8Array \| string \|
+| chunk | Uint8Array \| string \| undefined \| null | 是 | 读取的数据。 API version22开始发生兼容性变更，在API version21及之前的版本其类型为：`Uint8Array \| string \|
 | encoding | string | 否 |
 
 **返回值：**
@@ -751,44 +221,6 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-let testData = "Hello world";
-readableStream.push(testData);
-console.info("Readable push test", readableStream.readableLength); // Readable push test 11
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-let testData = "Hello world";
-readableStream.push(testData);
-console.info("Readable push test", readableStream.readableLength); // 期望结果: Readable push test 11
-```
 
 ## read
 
@@ -799,8 +231,6 @@ read(size?: number): string | null
 从可读流的缓冲区中读取数据，并返回读取的数据。如果没有读取到数据，则返回**null**。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -824,84 +254,6 @@ read(size?: number): string | null
 | --- |
 | [10200038](../errorcode-utils.md#10200038-doread接口未实现) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.push("test");
-readableStream.pause();
-let dataChunk = readableStream.read();
-console.info("Readable data is", dataChunk); // Readable data is test
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.push("test");
-readableStream.pause();
-let dataChunk = readableStream.read();
-console.info("Readable data is", dataChunk); // 期望结果: Readable data is test
-```
-
-## read
-
-```TypeScript
-read(size?: int): buffer.Buffer | string | null
-```
-
-从缓冲区中读取指定大小的数据。如果可用缓冲区足够，则返回指定大小的结果；否则，如果Readable已结束，则返回所有剩余的缓冲区。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| size | int | 否 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| buffer.Buffer \| string \| null |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [10200038](../errorcode-utils.md#10200038-doread接口未实现) |
-
-**示例**
-
-参见 [read](#read)
-
 ## resume
 
 ```TypeScript
@@ -911,8 +263,6 @@ resume(): Readable
 恢复已显式暂停的可读流。可以使用**isPaused**检查流是否已暂停。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -924,42 +274,6 @@ resume(): Readable
 | --- |
 | [Readable](arkts-arkts-stream-readable-c.md) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.resume();
-console.info("Readable test resume", !readableStream.isPaused()); // 切换流动模式成功时，此处日志将打印"Readable test resume true"
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-readableStream.resume();
-console.info("Readable test resume", !readableStream.isPaused()); // 切换流动模式成功时，此处日志将打印"Readable test resume true"
-```
-
 ## setEncoding
 
 ```TypeScript
@@ -969,8 +283,6 @@ setEncoding(encoding?: string): boolean
 设置可读流的字符编码类型。 当缓冲区有数据时，不允许设置字符编码类型，返回值为**false**。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -988,42 +300,6 @@ setEncoding(encoding?: string): boolean
 | --- |
 | boolean |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-}
-
-let readableStream = new TestReadable();
-let result = readableStream.setEncoding("utf8");
-console.info("Readable result", result); // Readable result true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-}
-
-let readableStream = new TestReadable();
-let result = readableStream.setEncoding("utf8");
-console.info("Readable result", result); // 期望结果: Readable result true
-```
-
 ## unpipe
 
 ```TypeScript
@@ -1033,8 +309,6 @@ unpipe(destination?: Writable): Readable
 将之前附加到可读流的可写流分离。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1052,76 +326,6 @@ unpipe(destination?: Writable): Readable
 | --- |
 | [Readable](arkts-arkts-stream-readable-c.md) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-    this.push("test");
-    this.push(null);
-  }
-}
-
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let readableStream = new TestReadable();
-let writableStream = new TestWritable();
-readableStream.pipe(writableStream);
-readableStream.unpipe(writableStream);
-readableStream.on("data", () => {
-  console.info("Readable test unpipe data event triggered");
-});
-// unpipe成功断开连接之后，data事件将不会触发，不会打印"Readable test unpipe data event triggered"
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestReadable extends stream.Readable {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-    this.push("test");
-    this.push(null);
-  }
-}
-
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let readableStream = new TestReadable();
-let writableStream = new TestWritable();
-readableStream.pipe(writableStream);
-readableStream.unpipe(writableStream);
-readableStream.on("data", () => {
-  console.info("Readable test unpipe data event called");
-});
-// unpipe成功断开连接之后，data事件将不会触发，不会打印"Readable test unpipe data event called"
-```
-
 ## readable
 
 ```TypeScript
@@ -1133,8 +337,6 @@ get readable(): boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1152,8 +354,6 @@ get readableEncoding(): string | null
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1169,8 +369,6 @@ get readableEnded(): boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1188,8 +386,6 @@ get readableFlowing(): boolean | null
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -1197,16 +393,14 @@ get readableFlowing(): boolean | null
 ## readableHighWatermark
 
 ```TypeScript
-get readableHighWatermark(): int
+get readableHighWatermark(): number
 ```
 
 定义缓冲区的最大数据量，单位：字节。默认值为16 * 1024字节。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1215,16 +409,14 @@ get readableHighWatermark(): int
 ## readableLength
 
 ```TypeScript
-get readableLength(): int
+get readableLength(): number
 ```
 
 表示缓冲区的当前字节数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1241,8 +433,6 @@ get readableObjectMode(): boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

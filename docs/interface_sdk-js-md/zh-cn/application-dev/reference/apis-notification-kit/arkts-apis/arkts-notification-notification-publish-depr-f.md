@@ -15,8 +15,6 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [publish](arkts-notification-notificationmanager-publish-f.md)
@@ -30,112 +28,6 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 | request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import NotificationManager from '@ohos.notificationManager';
-import Base from '@ohos.base';
-
-// publish回调
-let publishCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error(`publish failed, code is ${err}`);
-  } else {
-    console.info("publish success");
-  }
-}
-// 通知Request对象
-let notificationRequest: NotificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
-    }
-  }
-};
-Notification.publish(notificationRequest, publishCallback);
-```
-
-```TypeScript
-import NotificationManager from '@ohos.notificationManager';
-import Base from '@ohos.base';
-
-// 通知Request对象
-let notificationRequest: NotificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
-    }
-  }
-};
-Notification.publish(notificationRequest).then(() => {
-  console.info("publish success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`publish failed, code is ${err}`);
-});
-```
-
-```TypeScript
-import NotificationManager from '@ohos.notificationManager';
-import Base from '@ohos.base';
-
-// publish回调
-let publishCallback = (err: Base.BusinessError) => {
-  if (err) {
-    console.error(`publish failed, code is ${err.code}`);
-  } else {
-    console.info("publish success");
-  }
-}
-// 用户ID
-let userId: number = 1;
-// 通知Request对象
-let notificationRequest: NotificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
-    }
-  }
-};
-Notification.publish(notificationRequest, userId, publishCallback);
-```
-
-```TypeScript
-import NotificationManager from '@ohos.notificationManager';
-import Base from '@ohos.base';
-
-let notificationRequest: NotificationManager.NotificationRequest = {
-  id: 1,
-  content: {
-    contentType: Notification.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-    normal: {
-      title: "test_title",
-      text: "test_text",
-      additionalText: "test_additionalText"
-    }
-  }
-};
-
-let userId: number = 1;
-
-Notification.publish(notificationRequest, userId).then(() => {
-  console.info("publish success");
-}).catch((err: Base.BusinessError) => {
-  console.error(`publish failed, code is ${err}`);
-});
-```
-
 
 ## publish
 
@@ -146,8 +38,6 @@ function publish(request: NotificationRequest): Promise<void>
 发布通知（Promise形式）。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -166,7 +56,3 @@ function publish(request: NotificationRequest): Promise<void>
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [publish](#publish)

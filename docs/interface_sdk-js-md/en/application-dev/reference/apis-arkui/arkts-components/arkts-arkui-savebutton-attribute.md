@@ -6,8 +6,6 @@ Universal attributes are not supported. This component supports the attributes l
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Sets the corner radius of the **SaveButton** component.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -39,7 +35,7 @@ Sets the corner radius of the **SaveButton** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| radius | Dimension \| [BorderRadiuses](../arkts-apis/arkts-arkui-units-borderradiuses-i.md) | Yes |
+| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Yes |
 
 ## iconSize
 
@@ -51,8 +47,6 @@ Sets the icon size of the **SaveButton** component.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -63,7 +57,7 @@ Sets the icon size of the **SaveButton** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| size | Dimension \| [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md) | Yes |
+| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes |
 
 ## onClick
 
@@ -74,8 +68,6 @@ onClick(event: SaveButtonCallback)
 Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the SaveButton constructor. Authorization fails if the user declines authorization or closes the dialog box.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +90,6 @@ setIcon(icon: Resource)
 Sets the icon of the **SaveButton** component.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -125,8 +115,6 @@ Sets the text of the **SaveButton** component.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -151,8 +139,6 @@ Sets the press effect of the **SaveButton** component.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -174,11 +160,11 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
 Sets the font weight of the symbol icon for the save button.  
-- Before calling this method, you need to call [setIcon](#seticon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.*xxx*')**). - If no symbol icon is configured, the font weight setting will not apply.
+- Before calling this method, you need to call [setIcon](#seticon) to configure a symbol-  
+style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
+- If no symbol icon is configured, the font weight setting will not apply.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -201,11 +187,13 @@ symbolIconColor(color: Array<ResourceColor>)
 ```
 
 Sets the color of the symbol icon for the save button.  
-- Before calling this method, you need to call [setIcon](#seticon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.xxx')**). - If no symbol icon is set, the color set via this method does not take effect. - It is recommended that you use this API together with [symbolRenderingStrategy](#symbolrenderingstrategy) to achieve different rendering effects.
+- Before calling this method, you need to call [setIcon](#seticon) to configure a symbol-  
+style icon resource (i.e., **\$r('sys.symbol.xxx')**).  
+- If no symbol icon is set, the color set via this method does not take effect.  
+- It is recommended that you use this API together with  
+[symbolRenderingStrategy](#symbolrenderingstrategy) to achieve different rendering effects.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -219,7 +207,7 @@ Sets the color of the symbol icon for the save button.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Array & lt;ResourceColor & gt; | Yes |
+| color | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## symbolRenderingStrategy
 
@@ -228,11 +216,13 @@ symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
 Sets the rendering strategy for the symbol icon of the save button.  
-- Before calling this method, you need to call [setIcon](#seticon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.*xxx*')**). - The configured rendering strategy will not apply if no symbol icon is set. - When this parameter is used together with [symbolIconColor](#symboliconcolor), the rendering strategy determines how the color array is applied.
+- Before calling this method, you need to call [setIcon](#seticon) to configure a symbol-  
+style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
+- The configured rendering strategy will not apply if no symbol icon is set.  
+- When this parameter is used together with [symbolIconColor](#symboliconcolor), the  
+rendering strategy determines how the color array is applied.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -246,7 +236,7 @@ Sets the rendering strategy for the symbol icon of the save button.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| strategy | [SymbolRenderingStrategy](#symbolrenderingstrategy) | Yes |
+| strategy | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes |
 
 ## userCancelEvent
 
@@ -257,8 +247,6 @@ userCancelEvent(enabled: boolean)
 Sets the user authorization cancellation event for the **SaveButton** component. This API can be used to distinguish between user cancellation and authorization failures for differentiated service logic, such as logging user behaviors or prompting users to retry.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **Model restriction:** This API can be used only in the stage model.
 

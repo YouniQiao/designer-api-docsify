@@ -9,7 +9,7 @@ UIExtensionContentSession是[UIExtensionAbility](arkts-ability-app-ability-uiext
 ## 导入模块
 
 ```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -26,13 +26,4 @@ import { UIExtensionContentSession } from '@kit.AbilityKit';
 | 名称 |
 | --- |
 | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) |
-<!--DelEnd-->
-
-<!--Del-->
-### 类型（系统接口）
-
-| 名称 |
-| --- |
-| [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) |
-| [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) |
 <!--DelEnd-->

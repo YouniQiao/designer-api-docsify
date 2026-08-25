@@ -1,12 +1,10 @@
 # Shape properties/events
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
 
 **Inheritance/Implementation:** ShapeAttribute extends CommonMethod<ShapeAttribute>
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ antiAlias(value: boolean)
 Sets whether to enable anti-aliasing. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,8 +45,6 @@ Sets the color of the fill area. This attribute can be dynamically set using att
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -72,8 +66,6 @@ fillOpacity(value: number | string | Resource)
 Sets the opacity of the fill area. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -104,8 +96,6 @@ Sets the mesh effect. An image is divided into (row + 1) × (column + 1) meshes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -117,7 +107,7 @@ Sets the mesh effect. An image is divided into (row + 1) × (column + 1) meshes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | Array & lt;any & gt; | Yes |
-| column | number | Yes |
+| [column](arkts-arkui-astcresource-i-sys.md) | number | Yes |
 | row | number | Yes |
 
 ## stroke
@@ -129,8 +119,6 @@ stroke(value: ResourceColor)
 Sets the stroke color. This attribute can be dynamically set using attributeModifier. If this attribute is not set, the default stroke opacity is **0**, meaning no stroke is displayed.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -154,8 +142,6 @@ Sets the stroke dashes. This attribute can be dynamically set using attributeMod
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -177,8 +163,6 @@ strokeDashOffset(value: Length)
 Sets the offset of the start point for drawing the stroke. This attribute can be dynamically set using attributeModifier. Invalid values are treated as the default value.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,8 +186,6 @@ Sets the cap style of the stroke. This attribute can be dynamically set using at
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -214,7 +196,7 @@ Sets the cap style of the stroke. This attribute can be dynamically set using at
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LineCapStyle](../arkts-apis/arkts-arkui-enums-linecapstyle-e.md) | Yes |
+| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | Yes |
 
 ## strokeLineJoin
 
@@ -225,8 +207,6 @@ strokeLineJoin(value: LineJoinStyle)
 Sets the join style of the stroke. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -246,11 +226,9 @@ Sets the join style of the stroke. This attribute can be dynamically set using a
 strokeMiterLimit(value: Length)
 ```
 
-Sets the limit on the ratio of the miter length to the value of stroke width used to draw a miter join. This attribute can be dynamically set using attributeModifier. The miter length indicates the distance from the outer tip to the inner corner of the miter. The border width is the value of **strokeWidth**. This attribute works only when **strokeLineJoin** is set to **LineJoinStyle.Miter**.The value must be greater than or equal to 1.0. If the value is in the 0, 1) range, the value **1.0** will be used. In other cases, the default value will be used.
+Sets the limit on the ratio of the miter length to the value of stroke width used to draw a miter join. This attribute can be dynamically set using attributeModifier. The miter length indicates the distance from the outer tip to the inner corner of the miter. The border width is the value of **strokeWidth**. This attribute works only when **strokeLineJoin** is set to **LineJoinStyle.Miter**.The value must be greater than or equal to 1.0. If the value is in the [0, 1) range, the value **1.0** will be used. In other cases, the default value will be used.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -270,11 +248,9 @@ Sets the limit on the ratio of the miter length to the value of stroke width use
 strokeOpacity(value: number | string | Resource)
 ```
 
-Sets the stroke opacity. This attribute can be dynamically set using [attributeModifier. The value range is [0.0, 1.0]. If the set value is less than 0.0, **0.0** will be used. If the set value is greater than 1.0, **1.0** will be used.
+Sets the stroke opacity. This attribute can be dynamically set using attributeModifier. The value range is [0.0, 1.0]. If the set value is less than 0.0, **0.0** will be used. If the set value is greater than 1.0, **1.0** will be used.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -298,8 +274,6 @@ Sets the stroke width. This attribute can be dynamically set using attributeModi
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -321,8 +295,6 @@ viewPort(value: ViewportRect)
 Sets the viewport of the shape.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

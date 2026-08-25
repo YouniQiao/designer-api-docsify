@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getSignalLevel
@@ -15,8 +15,6 @@ function getSignalLevel(rssi: number, band: number): number
 Calculates the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -38,18 +36,3 @@ Calculates the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-	let rssi = 0;
-	let band = 0;
-	let level = wifi.getSignalLevel(rssi,band);
-	console.info("level:" + JSON.stringify(level));
-}catch(error){
-	console.error("failed:" + JSON.stringify(error));
-}
-```

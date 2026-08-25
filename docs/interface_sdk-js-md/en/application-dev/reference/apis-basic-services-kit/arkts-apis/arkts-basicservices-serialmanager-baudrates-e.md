@@ -4,8 +4,6 @@ Enumerates the baud rates.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_50
@@ -17,8 +15,6 @@ BAUDRATE_50 = 50
 The baud rate is 50 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -32,8 +28,6 @@ The baud rate is 75 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_110
@@ -45,8 +39,6 @@ BAUDRATE_110 = 110
 The baud rate is 110 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -60,8 +52,6 @@ The baud rate is 134 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_150
@@ -73,8 +63,6 @@ BAUDRATE_150 = 150
 The baud rate is 150 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -88,8 +76,6 @@ The baud rate is 200 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_300
@@ -101,8 +87,6 @@ BAUDRATE_300 = 300
 The baud rate is 300 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -116,8 +100,6 @@ The baud rate is 600 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_1200
@@ -129,8 +111,6 @@ BAUDRATE_1200 = 1200
 The baud rate is 1200 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -144,8 +124,6 @@ The baud rate is 1800 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_2400
@@ -157,8 +135,6 @@ BAUDRATE_2400 = 2400
 The baud rate is 2400 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -172,8 +148,6 @@ The baud rate is 4800 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_9600
@@ -185,8 +159,6 @@ BAUDRATE_9600 = 9600
 The baud rate is 9600 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -200,8 +172,6 @@ The baud rate is 19200 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_38400
@@ -213,8 +183,6 @@ BAUDRATE_38400 = 38400
 The baud rate is 38400 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -228,8 +196,6 @@ The baud rate is 57600 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_115200
@@ -241,8 +207,6 @@ BAUDRATE_115200 = 115200
 The baud rate is 115200 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -256,8 +220,6 @@ The baud rate is 230400 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_460800
@@ -269,8 +231,6 @@ BAUDRATE_460800 = 460800
 The baud rate is 460800 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -284,8 +244,6 @@ The baud rate is 500000 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_576000
@@ -297,8 +255,6 @@ BAUDRATE_576000 = 576000
 The baud rate is 576000 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -312,8 +268,6 @@ The baud rate is 921600 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_1000000
@@ -325,8 +279,6 @@ BAUDRATE_1000000 = 1000000
 The baud rate is 1000000 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -340,8 +292,6 @@ The baud rate is 1152000 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_1500000
@@ -353,8 +303,6 @@ BAUDRATE_1500000 = 1500000
 The baud rate is 1500000 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -368,8 +316,6 @@ The baud rate is 2000000 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_2500000
@@ -381,8 +327,6 @@ BAUDRATE_2500000 = 2500000
 The baud rate is 2500000 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial
 
@@ -396,8 +340,6 @@ The baud rate is 3000000 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_3500000
@@ -410,8 +352,6 @@ The baud rate is 3500000 bit/s.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.USB.USBManager.Serial
 
 ## BAUDRATE_4000000
@@ -423,7 +363,5 @@ BAUDRATE_4000000 = 4000000
 The baud rate is 4000000 bit/s.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.USB.USBManager.Serial

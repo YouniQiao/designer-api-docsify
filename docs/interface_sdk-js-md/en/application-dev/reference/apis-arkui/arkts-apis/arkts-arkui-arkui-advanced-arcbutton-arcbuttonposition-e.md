@@ -4,8 +4,6 @@ Enumerates the types of arc buttons that can be set for **ArcButton**.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## TOP_EDGE
@@ -17,8 +15,6 @@ TOP_EDGE = 0
 Upper arc button located at the top of the circular screen.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -33,8 +29,6 @@ BOTTOM_EDGE = 1
 Lower arc button located at the bottom of the circular screen.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

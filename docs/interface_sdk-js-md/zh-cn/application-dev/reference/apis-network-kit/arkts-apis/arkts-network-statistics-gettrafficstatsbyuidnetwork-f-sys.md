@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'kits/@kit.NetworkKit';
 ```
 
 ## getTrafficStatsByUidNetwork
 
 ```TypeScript
-function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promise<NetStatsInfoSequence>
+function getTrafficStatsByUidNetwork(uid: number, networkInfo: NetworkInfo): Promise<NetStatsInfoSequence>
 ```
 
 获取指定时间段内，应用在指定网络中的流量使用详情，使用 Promise 异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_NETWORK_STATS
 
@@ -28,14 +26,14 @@ function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promis
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| uid | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| uid | number | 是 |
 | networkInfo | [NetworkInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-cachedownload-networkinfo-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;[NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md)&gt; |
+| Promise & lt;NetStatsInfoSequence & gt; |
 
 **错误码：**
 
@@ -48,23 +46,3 @@ function getTrafficStatsByUidNetwork(uid: int, networkInfo: NetworkInfo): Promis
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
 | [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) |
-
-**示例**
-
-```TypeScript
-import { connection, statistics } from '@kit.NetworkKit';
-
-let uid: number = 20020147;
-let networkInfo: statistics.NetworkInfo = {
-  type: connection.NetBearType.BEARER_CELLULAR,
-  startTime: Math.floor(Date.now() / 1000) - 86400 * 7, 
-  endTime: Math.floor(Date.now() / 1000) + 5,
-  simId: 1,
-}
-
-statistics.getTrafficStatsByUidNetwork(uid, networkInfo).then((statsInfoSequence: statistics.NetStatsInfoSequence) => {
-  for (let i = 0; i < statsInfoSequence.length; i--) {
-    console.info("getTrafficStatsByUidNetwork item:" + JSON.stringify(statsInfoSequence[i]));
-  }
-})
-```

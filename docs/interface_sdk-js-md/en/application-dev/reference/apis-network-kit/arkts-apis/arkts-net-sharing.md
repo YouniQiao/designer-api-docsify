@@ -4,14 +4,12 @@ This module allows you to share your device's network connectivity with other co
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## Summary
@@ -37,12 +35,12 @@ import { sharing } from '@kit.NetworkKit';
 | [isSharing(Network Sharing)](arkts-network-sharing-issharing-f-sys.md) |
 | [isSharingSupported(Network Sharing)](arkts-network-sharing-issharingsupported-f-sys.md) |
 | [isSharingSupported(Network Sharing)](arkts-network-sharing-issharingsupported-f-sys.md) |
-| [off(Network Sharing)](arkts-network-sharing-off-f-sys.md#offsharingstatechange) |
-| [off(Network Sharing)](arkts-network-sharing-off-f-sys.md#offinterfacesharingstatechange) |
-| [off(Network Sharing)](arkts-network-sharing-off-f-sys.md#offsharingupstreamchange) |
-| [on(Network Sharing)](arkts-network-sharing-on-f-sys.md#onsharingstatechange) |
-| [on(Network Sharing)](arkts-network-sharing-on-f-sys.md#oninterfacesharingstatechange) |
-| [on(Network Sharing)](arkts-network-sharing-on-f-sys.md#onsharingupstreamchange) |
+| off(Network Sharing) |
+| off(Network Sharing) |
+| off(Network Sharing) |
+| on(Network Sharing) |
+| on(Network Sharing) |
+| on(Network Sharing) |
 | [startSharing(Network Sharing)](arkts-network-sharing-startsharing-f-sys.md) |
 | [startSharing(Network Sharing)](arkts-network-sharing-startsharing-f-sys.md) |
 | [stopSharing(Network Sharing)](arkts-network-sharing-stopsharing-f-sys.md) |

@@ -4,8 +4,6 @@ The **cryptoFramework** module provides APIs for cryptographic operations, shiel
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API version 9 to 11: This API can be used only in the stage model.
@@ -15,7 +13,7 @@ The **cryptoFramework** module provides APIs for cryptographic operations, shiel
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## Summary

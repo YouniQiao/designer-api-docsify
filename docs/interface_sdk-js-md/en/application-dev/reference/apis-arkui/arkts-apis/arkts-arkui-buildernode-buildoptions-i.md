@@ -4,8 +4,6 @@ Defines the optional build options.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enableProvideConsumeCrossing
@@ -19,8 +17,6 @@ Defines whether two-way synchronization is supported between the [@Consume](../.
 **Type:** boolean
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +32,9 @@ localStorage?: LocalStorage
 
 LocalStorage for the current BuilderNode. Custom components mounted under this BuilderNode will share the specified LocalStorage. **NOTE：**If LocalStorage is also passed through a custom component's constructor, the constructor parameter takes precedence.Default value: **null**.
 
-**Type:** LocalStorage
+**Type:** [LocalStorage](arkts-arkui-localstorage-c.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,30 +56,8 @@ Whether to support nested **@Builder** within **@Builder**. **true** if supporte
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## useParallel
-
-```TypeScript
-useParallel?: boolean
-```
-
-Whether support the BuilderNode parallel creation.
-
-**Type:** boolean
-
-**Default:** false
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

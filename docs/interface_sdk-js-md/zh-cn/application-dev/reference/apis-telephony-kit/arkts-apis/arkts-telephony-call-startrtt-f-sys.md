@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## startRtt
 
 ```TypeScript
-function startRtt(callId: int, type: ImsRttMode): Promise<void>
+function startRtt(callId: number, type: ImsRttMode): Promise<void>
 ```
 
 启动rtt
 
 **起始版本：** 22
-
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -28,7 +26,7 @@ function startRtt(callId: int, type: ImsRttMode): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| callId | number | 是 |
 | type | [ImsRttMode](arkts-telephony-call-imsrttmode-e-sys.md) | 是 |
 
 **返回值：**

@@ -4,8 +4,6 @@ The **uniformTypeDescriptor** module abstracts and defines uniform data types.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -13,7 +11,7 @@ The **uniformTypeDescriptor** module abstracts and defines uniform data types.
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 ```
 
 ## Summary
@@ -22,7 +20,6 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md) |
 | [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md) |
 | [getUniformDataTypeByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md) |
 | [getUniformDataTypeByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md) |

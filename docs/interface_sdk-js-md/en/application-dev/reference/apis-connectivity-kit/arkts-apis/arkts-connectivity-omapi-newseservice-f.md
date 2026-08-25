@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
+import { omapi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## newSEService('serviceState')
@@ -19,8 +19,6 @@ Creates an **SEService** instance for connecting to all available SEs in the sys
 > [createService](arkts-connectivity-omapi-createservice-f.md) instead.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 12
 
@@ -47,27 +45,3 @@ Creates an **SEService** instance for connecting to all available SEs in the sys
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { omapi } from '@kit.ConnectivityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let seService : omapi.SEService;
-
-function secureElementDemo() {
-    // Obtain the service.
-    try {
-        seService = omapi.newSEService("serviceState", (state) => {
-        hilog.info(0x0000, 'testTag', 'se service state = %{public}s', JSON.stringify(state));
-        });
-    } catch (error) {
-        hilog.error(0x0000, 'testTag', 'newSEService error %{public}s', JSON.stringify(error));
-    }
-    if (seService == undefined || !seService.isConnected()) {
-        hilog.error(0x0000, 'testTag', 'secure element service disconnected.');
-        return;
-    }
-}
-```

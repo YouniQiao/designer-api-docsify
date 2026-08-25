@@ -4,8 +4,6 @@ This module provides definitions of common constants for NearLink communication,
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -13,7 +11,7 @@ This module provides definitions of common constants for NearLink communication,
 ## Modules to Import
 
 ```TypeScript
-import { nearlinkConstant } from '@kit.ConnectivityKit';
+import { nearlinkConstant } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## Summary

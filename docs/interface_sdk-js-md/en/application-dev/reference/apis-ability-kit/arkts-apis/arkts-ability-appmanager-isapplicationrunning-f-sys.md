@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
+import { appManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isApplicationRunning
@@ -15,8 +15,6 @@ function isApplicationRunning(bundleName: string): Promise<boolean>
 Checks whether the application with the specified bundle name is running across all users. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -45,42 +43,6 @@ Checks whether the application with the specified bundle name is running across 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "com.example.myapplication";
-
-appManager.isApplicationRunning(bundleName).then((data) => {
-  console.info(`The application running is: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
-});
-```
-
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = "com.example.myapplication";
-
-try {
-  appManager.isApplicationRunning(bundleName, (err, data) => {
-    if (err) {
-      console.error(`err: ${JSON.stringify(err)}`);
-    } else {
-      console.info(`The application running is: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
-
 
 ## isApplicationRunning
 
@@ -91,8 +53,6 @@ function isApplicationRunning(bundleName: string, callback: AsyncCallback<boolea
 Checks whether the application with the specified bundle name is running across all users. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -115,7 +75,3 @@ Checks whether the application with the specified bundle name is running across 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [16000050](../errorcode-ability.md#16000050-internal-error) |
-
-**Examples**
-
-See [isApplicationRunning](#isapplicationrunning)

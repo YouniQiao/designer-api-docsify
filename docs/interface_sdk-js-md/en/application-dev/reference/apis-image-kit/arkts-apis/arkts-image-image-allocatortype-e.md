@@ -4,8 +4,6 @@ Enumerates the types of the memory used for image decoding.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## AUTO
@@ -17,8 +15,6 @@ AUTO = 0
 The system determines whether DMA memory or shared memory is used.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -32,8 +28,6 @@ DMA memory is used.
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## SHARE_MEMORY
@@ -45,7 +39,5 @@ SHARE_MEMORY = 2
 Shared memory is used.
 
 **Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Image.Core

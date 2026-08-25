@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getFunctionsFromString
 
 ```TypeScript
-function getFunctionsFromString(funcs: string): int
+function getFunctionsFromString(funcs: string): number
 ```
 
 在设备模式下，将字符串形式的USB功能列表转换为数字掩码。适用于需要将配置文件或用户输入的字符串形式USB功能列表转换为系统内部使用的数字掩码的场景，以便后续调用setDeviceFunctions等接口设置USB功能。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
@@ -34,7 +32,7 @@ function getFunctionsFromString(funcs: string): int
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：int |
+| number |
 
 **错误码：**
 
@@ -44,12 +42,3 @@ function getFunctionsFromString(funcs: string): int
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
-
-**示例**
-
-```TypeScript
-// 定义USB功能字符串
-let funcs: string ='acm';
-// 将字符串转化为数字掩码
-let ret: int = usbManager.getFunctionsFromString(funcs);
-```

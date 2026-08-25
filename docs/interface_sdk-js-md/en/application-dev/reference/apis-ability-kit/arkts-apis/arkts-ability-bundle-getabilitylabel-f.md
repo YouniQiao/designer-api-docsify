@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAbilityLabel
@@ -15,8 +15,6 @@ function getAbilityLabel(bundleName: string, abilityName: string, callback: Asyn
 Obtains the application name based on a given bundle name and ability name. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -32,38 +30,6 @@ Obtains the application name based on a given bundle name and ability name. This
 | abilityName | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = "com.example.myapplication";
-let abilityName: string = "EntryAbility";
-
-bundle.getAbilityLabel(bundleName, abilityName)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
-
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleName: string = "com.example.myapplication";
-let abilityName: string = "EntryAbility";
-
-bundle.getAbilityLabel(bundleName, abilityName, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
-
 
 ## getAbilityLabel
 
@@ -74,8 +40,6 @@ function getAbilityLabel(bundleName: string, abilityName: string): Promise<strin
 Obtains the application name based on a given bundle name and ability name. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -95,7 +59,3 @@ Obtains the application name based on a given bundle name and ability name. This
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;string & gt; |
-
-**Examples**
-
-See [getAbilityLabel](#getabilitylabel)

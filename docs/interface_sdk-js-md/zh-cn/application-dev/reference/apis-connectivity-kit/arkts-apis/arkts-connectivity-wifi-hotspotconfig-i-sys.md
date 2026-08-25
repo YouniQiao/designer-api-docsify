@@ -4,8 +4,6 @@ WLAN热点配置信息。@interface HotspotConfig
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md)
@@ -17,7 +15,7 @@ WLAN热点配置信息。@interface HotspotConfig
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## band
@@ -31,8 +29,6 @@ WLAN热点的频段
 **类型：** number
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -54,8 +50,6 @@ WLAN热点允许的最大连接数
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [maxConn](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#maxconn)
@@ -75,8 +69,6 @@ WLAN热点的密码
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 
@@ -98,8 +90,6 @@ WLAN热点的加密类型
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [securityType](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#securitytype)
@@ -119,8 +109,6 @@ WLAN热点的SSID
 **类型：** string
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## getAllActiveNotifications
@@ -15,8 +15,6 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 Obtains all active notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,32 +39,6 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let getAllActiveNotificationsCallback = (err: BusinessError, data: Array<notificationManager.NotificationRequest>): void => {
-    if (err) {
-        console.error(`getAllActiveNotifications failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info(`getAllActiveNotifications success, data is ${JSON.stringify(data)}`);
-    }
-}
-
-notificationManager.getAllActiveNotifications(getAllActiveNotificationsCallback);
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getAllActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-    console.info(`getAllActiveNotifications success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getAllActiveNotifications failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## getAllActiveNotifications
 
@@ -77,8 +49,6 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 Obtains all active notifications. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -101,7 +71,3 @@ Obtains all active notifications. This API uses a promise to return the result.
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-See [getAllActiveNotifications](#getallactivenotifications)

@@ -4,8 +4,6 @@ Defines the schema of a KV store. You can create a **Schema** object and place i
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** Schema
@@ -27,8 +25,6 @@ A constructor used to create a **Schema** instance.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** constructor
@@ -46,8 +42,6 @@ String array in JSON format.
 **Type:** Array&lt;string&gt;
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -67,8 +61,6 @@ Schema mode.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** mode
@@ -87,8 +79,6 @@ JSON root object.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** root
@@ -106,8 +96,6 @@ Size of a skip of the schema.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

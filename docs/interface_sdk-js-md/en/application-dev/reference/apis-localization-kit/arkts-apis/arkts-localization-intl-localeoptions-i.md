@@ -8,8 +8,6 @@ Options for initializing the **Locale** object. Since API version 9, the **Local
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#options)
@@ -19,7 +17,7 @@ Options for initializing the **Locale** object. Since API version 9, the **Local
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'kits/@kit.LocalizationKit';
 ```
 
 ## calendar
@@ -33,8 +31,6 @@ Calendar parameter. The value can be:"buddhist", "chinese", "coptic", "dangi", "
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -60,8 +56,6 @@ Whether case is taken into account for the locale's collation rules. The value c
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -101,8 +95,6 @@ Collation rules for the locale. The value can be:
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#collation)
@@ -124,8 +116,6 @@ Hour cycle. The value can be:"h11", "h12", "h23", or  "h24".
 **Type:** string
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 
@@ -150,8 +140,6 @@ Numbering system. The value can be:
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 20
 
 **Substitutes:** [Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numberingsystem)
@@ -173,8 +161,6 @@ Whether to treat numeric characters as numbers for sorting. The value true means
 **Type:** boolean
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 20
 

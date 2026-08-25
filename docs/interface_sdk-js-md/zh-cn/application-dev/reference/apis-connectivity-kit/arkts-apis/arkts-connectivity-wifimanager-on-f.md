@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('wifiStateChange')
@@ -15,8 +15,6 @@ function on(type: 'wifiStateChange', callback: Callback<number>): void
 注册WLAN状态改变事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -51,8 +49,6 @@ function on(type: 'wifiConnectionChange', callback: Callback<number>): void
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -85,8 +81,6 @@ function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 注册扫描状态改变事件。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -121,8 +115,6 @@ function on(type: 'wifiRssiChange', callback: Callback<number>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
@@ -153,8 +145,6 @@ function on(type: 'hotspotStateChange', callback: Callback<number>): void
 注册热点状态改变事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -187,8 +177,6 @@ function on(type: 'p2pStateChange', callback: Callback<number>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
@@ -219,8 +207,6 @@ function on(type: 'p2pConnectionChange', callback: Callback<WifiP2pLinkedInfo>):
 注册P2P连接状态改变事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -253,8 +239,6 @@ function on(type: 'p2pDeviceChange', callback: Callback<WifiP2pDevice>): void
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
@@ -285,8 +269,6 @@ function on(type: 'p2pPeerDeviceChange', callback: Callback<WifiP2pDevice[]>): v
 注册P2P对端设备状态改变事件。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -319,8 +301,6 @@ function on(type: 'p2pPersistentGroupChange', callback: Callback<void>): void
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
@@ -351,8 +331,6 @@ function on(type: 'p2pDiscoveryChange', callback: Callback<number>): void
 注册发现设备状态改变事件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 

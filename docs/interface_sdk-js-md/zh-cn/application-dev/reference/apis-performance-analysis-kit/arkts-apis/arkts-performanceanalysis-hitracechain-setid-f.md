@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## setId
@@ -16,8 +16,6 @@ function setId(id: HiTraceId): void
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
 **参数：**
@@ -25,12 +23,3 @@ function setId(id: HiTraceId): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | 是 |
-
-**示例**
-
-```TypeScript
-// 获取当前跟踪链中的跟踪标识。
-let traceId = hiTraceChain.getId();
-// 将获取的跟踪标识设置为当前traceId。
-hiTraceChain.setId(traceId);
-```

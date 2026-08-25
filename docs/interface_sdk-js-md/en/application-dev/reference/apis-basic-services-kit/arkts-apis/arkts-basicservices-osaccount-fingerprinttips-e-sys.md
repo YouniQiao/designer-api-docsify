@@ -4,8 +4,6 @@ Enumerates the tip codes for fingerprint authentication.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -20,8 +18,6 @@ The captured image is clear.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -32,11 +28,9 @@ The captured image is clear.
 FINGERPRINT_TIP_IMAGER_DIRTY = 1
 ```
 
-The fingerprint image has big noise due to dirt on the sensor.
+The fingerprint image has excessive noise due to dirt on the sensor.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -48,11 +42,9 @@ The fingerprint image has big noise due to dirt on the sensor.
 FINGERPRINT_TIP_INSUFFICIENT = 2
 ```
 
-Failed to process the fingerprint image due to big noise.
+Failed to process the fingerprint image due to excessive noise.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -68,8 +60,6 @@ Only part of the fingerprint image is detected.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -83,8 +73,6 @@ FINGERPRINT_TIP_TOO_FAST = 4
 The fingerprint image is incomplete due to quick motion.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -100,8 +88,6 @@ Failed to read the fingerprint image due to lack of motion.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -112,11 +98,9 @@ Failed to read the fingerprint image due to lack of motion.
 FINGERPRINT_TIP_FINGER_DOWN = 6
 ```
 
-Press your finger.
+The finger is down.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -128,11 +112,9 @@ Press your finger.
 FINGERPRINT_TIP_FINGER_UP = 7
 ```
 
-Lift your finger.
+The finger is up.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

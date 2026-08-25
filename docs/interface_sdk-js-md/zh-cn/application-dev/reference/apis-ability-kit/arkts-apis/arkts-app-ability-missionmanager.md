@@ -4,8 +4,6 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 ## 导入模块
 
 ```TypeScript
-import { missionManager } from '@kit.AbilityKit';
+import { missionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -45,12 +43,9 @@ import { missionManager } from '@kit.AbilityKit';
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) |
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) |
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#offmission) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#offmission) |
-| [offMission](arkts-ability-missionmanager-offmission-f-sys.md) |
-| [offMission](arkts-ability-missionmanager-offmission-f-sys.md) |
-| [on](arkts-ability-missionmanager-on-f-sys.md#onmission) |
-| [onMission](arkts-ability-missionmanager-onmission-f-sys.md) |
+| off |
+| off |
+| on |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) |
 <!--DelEnd-->

@@ -6,8 +6,6 @@ Define configuration of the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -15,7 +13,7 @@ Define configuration of the l2tp VPN network.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'kits/@kit.NetworkKit';
 ```
 
 ## ipsecCaCertConfig
@@ -29,8 +27,6 @@ The ca cert config for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -48,8 +44,6 @@ The ca cert file path for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -65,8 +59,6 @@ The config for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -84,8 +76,6 @@ The identifier for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -101,8 +91,6 @@ The pre share key for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -120,8 +108,6 @@ The private server cert config for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -137,8 +123,6 @@ The private server cert file path for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -156,8 +140,6 @@ The private user cert config for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -173,8 +155,6 @@ The private user cert file path for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -192,8 +172,6 @@ The public server cert config for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -209,8 +187,6 @@ The public server cert file path for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -228,8 +204,6 @@ The public user cert config for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -245,8 +219,6 @@ The public user cert file path for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -264,8 +236,6 @@ The secrets for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -281,8 +251,6 @@ The shared key for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -300,8 +268,6 @@ The client options for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -318,8 +284,6 @@ The strongSwan config for the l2tp VPN network.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
 **System API:** This is a system API.
@@ -335,8 +299,6 @@ The xl2tpd config for the l2tp VPN network.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 

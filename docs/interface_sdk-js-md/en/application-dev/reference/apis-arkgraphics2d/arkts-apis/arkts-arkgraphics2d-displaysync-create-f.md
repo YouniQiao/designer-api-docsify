@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { displaySync } from '@kit.ArkGraphics2D';
+import { displaySync } from 'kits/@kit.ArkGraphics2D';
 ```
 
 ## create
@@ -16,8 +16,6 @@ Creates a **DisplaySync** object, through which you can set the frame rate of th
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -25,9 +23,3 @@ Creates a **DisplaySync** object, through which you can set the frame rate of th
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) |
-
-**Examples**
-
-```TypeScript
-let backDisplaySync: displaySync.DisplaySync = displaySync.create();
-```

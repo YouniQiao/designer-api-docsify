@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from '@kit.BasicServicesKit';
+import { screenLock } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## isDeviceLocked
 
 ```TypeScript
-function isDeviceLocked(userId: int): boolean
+function isDeviceLocked(userId: number): boolean
 ```
 
 Check whether the device is currently locked and the screenlock requires an identity to authenticate and unlock.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -26,7 +24,7 @@ Check whether the device is currently locked and the screenlock requires an iden
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| userId | number | Yes |
 
 **Return value:**
 

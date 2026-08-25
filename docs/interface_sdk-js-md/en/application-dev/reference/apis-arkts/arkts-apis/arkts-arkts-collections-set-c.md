@@ -5,18 +5,17 @@ A non-linear data structure.
 > **NOTE：**&gt;
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
-- T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
+- T: type, which can be any of the
+[sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'kits/@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -29,8 +28,6 @@ Returns an iterator, each item of which is a JavaScript object. NOTE: This API c
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -39,7 +36,7 @@ Returns an iterator, each item of which is a JavaScript object. NOTE: This API c
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;T & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
@@ -56,8 +53,6 @@ add(value: T): Set<T>
 Checks whether a value exists in this ArkTS set, and if not, adds the value to the set.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -92,8 +87,6 @@ Removes all elements from this ArkTS set.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -114,8 +107,6 @@ constructor(values?: readonly T[] | null)
 A constructor used to create an ArkTS set.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -143,8 +134,6 @@ A constructor used to create an ArkTS set.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -170,8 +159,6 @@ delete(value: T): boolean
 Deletes an element from this ArkTS set.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -206,8 +193,6 @@ Returns a set iterator object that contains the key-value pair of each element i
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -216,7 +201,7 @@ Returns a set iterator object that contains the key-value pair of each element i
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[T, T] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[T, T]&gt; |
 
 **Error codes:**
 
@@ -234,8 +219,6 @@ forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 Calls a callback function for each key-value pair in this ArkTS set.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -263,8 +246,6 @@ has(value: T): boolean
 Checks whether a value exists in this ArkTS set.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -299,8 +280,6 @@ Returns a set iterator object that contains the key of each element in this ArkT
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -309,7 +288,7 @@ Returns a set iterator object that contains the key of each element in this ArkT
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;T & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
@@ -328,8 +307,6 @@ Returns a set iterator object that contains the value of each element in this Ar
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -338,7 +315,7 @@ Returns a set iterator object that contains the value of each element in this Ar
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;T & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
@@ -358,8 +335,6 @@ Number of elements in a set.
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

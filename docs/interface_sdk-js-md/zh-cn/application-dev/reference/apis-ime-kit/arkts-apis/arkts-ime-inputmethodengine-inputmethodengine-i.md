@@ -1,17 +1,15 @@
 # InputMethodEngine
 
 
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
-> 从 API version 8开始支持，从API version 23开始废弃。 &lt;br
-&gt; 
+> **说明：**
+   
+> 
+   
+> 从 API version 8开始支持，从API version 23开始废弃。
+   
 > 下列API均需使用[getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md)获取到InputMethodEngine实例后，通过实例调用。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 23
 
@@ -22,7 +20,7 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'kits/@kit.IMEKit';
 ```
 
 ## off('inputStart')
@@ -34,16 +32,14 @@ off(
     ): void
 ```
 
-取消订阅输入法绑定成功事件。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
+取消订阅输入法绑定成功事件。   
+> **说明：**
+   
+> 
+   
 > 从API version 8开始支持，API version 23开始废弃。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 23
 
@@ -58,32 +54,20 @@ off(
 | type | 'inputStart' | 是 |
 | callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | 否 |
 
-**示例**
-
-```TypeScript
-inputMethodEngine.getInputMethodEngine()
-  .off('inputStart',
-    (kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.TextInputClient) => {
-      console.info('delete inputStart notification.');
-    });
-```
-
 ## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。   
+> **说明：**
+   
+> 
+   
 > 从API version 8开始支持，API version 23开始废弃。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 23
 
@@ -98,29 +82,20 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
 | callback | () = & gt; void | 否 |
 
-**示例**
-
-```TypeScript
-inputMethodEngine.getInputMethodEngine().off('keyboardShow');
-inputMethodEngine.getInputMethodEngine().off('keyboardHide');
-```
-
 ## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。   
+> **说明：**
+   
+> 
+   
 > 从API version 8开始支持，API version 23开始废弃。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 23
 
@@ -134,10 +109,6 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
 | callback | () = & gt; void | 否 |
-
-**示例**
-
-参见 off
 
 ## on('inputStart')
 
@@ -148,16 +119,14 @@ on(
     ): void
 ```
 
-订阅输入法绑定成功事件。使用callback异步回调。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
+订阅输入法绑定成功事件。使用callback异步回调。   
+> **说明：**
+   
+> 
+   
 > 从API version 8开始支持，API version 23开始废弃。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 23
 
@@ -172,32 +141,20 @@ on(
 | type | 'inputStart' | 是 |
 | callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | 是 |
 
-**示例**
-
-```TypeScript
-inputMethodEngine.getInputMethodEngine()
-  .on('inputStart',
-    (keyboardController: inputMethodEngine.KeyboardController, textInputClient: inputMethodEngine.TextInputClient) => {
-      // 使用kbController和textClient进行相关操作
-    });
-```
-
 ## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-订阅输入法软键盘显示或隐藏事件。使用callback异步回调。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。   
+> **说明：**
+   
+> 
+   
 > 从API version 8开始支持，API version 23开始废弃。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 23
 
@@ -212,33 +169,20 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
 | callback | () = & gt; void | 是 |
 
-**示例**
-
-```TypeScript
-inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
-  console.info('inputMethodEngine keyboardShow.');
-});
-inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
-  console.info('inputMethodEngine keyboardHide.');
-});
-```
-
 ## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-订阅输入法软键盘显示或隐藏事件。使用callback异步回调。 <br> <br>   
-> **说明：** &lt;br
-&gt; 
-> &lt;br
-&gt; 
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。   
+> **说明：**
+   
+> 
+   
 > 从API version 8开始支持，API version 23开始废弃。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 23
 
@@ -252,7 +196,3 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
 | callback | () = & gt; void | 是 |
-
-**示例**
-
-参见 on

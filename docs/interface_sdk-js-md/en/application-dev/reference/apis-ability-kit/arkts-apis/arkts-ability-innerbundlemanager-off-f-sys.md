@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from 'kits/@kit.AbilityKit';
 ```
 
 ## off('BundleStatusChange')
@@ -20,8 +20,6 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 > instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -55,8 +53,6 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 > instead.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

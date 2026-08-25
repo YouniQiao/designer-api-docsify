@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'kits/@kit.ArkTS';
 ```
 
 ## from
@@ -15,8 +15,6 @@ function from(array: number[]): FastBuffer
 Allocates a new FastBuffer using an array of bytes in the range 0 – 255. Array entries outside that range will be truncated to fit into it.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -34,54 +32,6 @@ Allocates a new FastBuffer using an array of bytes in the range 0 – 255. Array
 | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
 
-**Examples**
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf = fastbuffer.from([0x62, 0x75, 0x66, 0x66, 0x65, 0x72]);
-console.info(buf.toString('hex'));
-// Output: 627566666572
-```
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let ab = new ArrayBuffer(10);
-let buf = fastbuffer.from(ab, 0, 2);
-console.info(buf.length.toString());
-// Output: 2
-```
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-// Create a FastBuffer object of the FastBuffer type.
-let buf1 = fastbuffer.from('buffer');
-let buf2 = fastbuffer.from(buf1);
-console.info(buf2.toString());
-// Output: buffer
-
-// Create a FastBuffer object of the Uint8Array type to ensure memory sharing between objects.
-let uint8Array = new Uint8Array(10);
-let buf3 = fastbuffer.from(uint8Array);
-buf3.fill(1)
-console.info("uint8Array:", uint8Array)
-// Output: 1,1,1,1,1,1,1,1,1,1
-```
-
-```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
-
-let buf1 = fastbuffer.from('this is a test');
-let buf2 = fastbuffer.from('7468697320697320612074c3a97374', 'hex');
-
-console.info(buf1.toString());
-// Output: this is a test
-console.info(buf2.toString());
-// Output: this is a tést
-```
-
 
 ## from
 
@@ -92,8 +42,6 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 This creates a view of the ArrayBuffer without copying the underlying memory.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -120,10 +68,6 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
-**Examples**
-
-See [from](#from)
-
 
 ## from
 
@@ -134,8 +78,6 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 Copies the passed buffer data onto a new FastBuffer instance.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -159,10 +101,6 @@ Copies the passed buffer data onto a new FastBuffer instance.
 | --- |
 | [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
-**Examples**
-
-See [from](#from)
-
 
 ## from
 
@@ -173,8 +111,6 @@ function from(value: string, encoding?: BufferEncoding): FastBuffer
 Creates a new FastBuffer containing string. The encoding parameter identifies the character encoding to be used when converting string into bytes.
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -192,7 +128,3 @@ Creates a new FastBuffer containing string. The encoding parameter identifies th
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) |
-
-**Examples**
-
-See [from](#from)

@@ -2,11 +2,9 @@
 
 Defines Blank Modifier@extends BlankAttribute @implements AttributeModifier&lt;BlankAttribute&gt;
 
-**Inheritance/Implementation:** BlankModifier extends BlankAttribute and implements AttributeModifier<BlankAttribute>
+**Inheritance/Implementation:** BlankModifier extends [BlankAttribute](../arkts-components/arkts-arkui-blank-attribute.md#blankattribute) and implements AttributeModifier<BlankAttribute>
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,8 +17,6 @@ applyNormalAttribute?(instance: BlankAttribute): void
 Defines the normal update attribute function.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

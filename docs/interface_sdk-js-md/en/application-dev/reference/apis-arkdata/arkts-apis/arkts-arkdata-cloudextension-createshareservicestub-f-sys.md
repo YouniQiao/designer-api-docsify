@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'kits/@kit.ArkData';
 ```
 
 ## createShareServiceStub
@@ -15,8 +15,6 @@ function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject
 Creates a RemoteObject instance based on a ShareCenter instance. The system uses this object to call the APIs of the ShareCenter instance. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -33,22 +31,3 @@ Creates a RemoteObject instance based on a ShareCenter instance. The system uses
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;rpc.RemoteObject & gt; |
-
-**Examples**
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-
-class MyShareCenter implements cloudExtension.ShareCenter {
-  constructor() {}
-  // ...
-}
-
-class MyCloudService implements cloudExtension.CloudService {
-  constructor() {}
-  async connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject> {
-    console.info(`connect share center, bundle: ${bundleName}`);
-    return cloudExtension.createShareServiceStub(new MyShareCenter());
-  }
-}
-```

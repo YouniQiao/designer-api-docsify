@@ -4,8 +4,6 @@ As a part of the Unified Data Management Framework (UDMF), the **unifiedDataChan
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -13,7 +11,7 @@ As a part of the Unified Data Management Framework (UDMF), the **unifiedDataChan
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
 ```
 
 ## Summary

@@ -4,8 +4,6 @@ Enumerates battery health states.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## UNKNOWN
@@ -17,8 +15,6 @@ UNKNOWN
 Unknown state.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -32,8 +28,6 @@ The battery is in the healthy state.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## OVERHEAT
@@ -45,8 +39,6 @@ OVERHEAT
 The battery is overheated.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
@@ -60,8 +52,6 @@ The battery voltage is over high.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## COLD
@@ -74,8 +64,6 @@ The battery temperature is low.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## DEAD
@@ -87,7 +75,5 @@ DEAD
 The battery is dead.
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

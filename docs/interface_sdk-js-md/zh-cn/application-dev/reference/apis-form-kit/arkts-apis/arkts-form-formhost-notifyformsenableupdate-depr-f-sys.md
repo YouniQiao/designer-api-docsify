@@ -19,8 +19,6 @@ function notifyFormsEnableUpdate(
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md)
@@ -39,30 +37,6 @@ function notifyFormsEnableUpdate(
 | isEnableUpdate | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-formHost.notifyFormsEnableUpdate(formIds, true, (error: Base.BusinessError) => {
-  if (error.code) {
-    console.error(`formHost notifyFormsEnableUpdate, error: ${JSON.stringify(error)}`);
-  }
-});
-```
-
-```TypeScript
-import Base from '@ohos.base';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
-  console.info('formHost notifyFormsEnableUpdate success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost notifyFormsEnableUpdate, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## notifyFormsEnableUpdate
 
@@ -73,8 +47,6 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 通知卡片是否启用更新状态。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -98,7 +70,3 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 | 类型 |
 | --- |
 | Promise & lt;void & gt; |
-
-**示例**
-
-参见 [notifyFormsEnableUpdate](#notifyformsenableupdate)

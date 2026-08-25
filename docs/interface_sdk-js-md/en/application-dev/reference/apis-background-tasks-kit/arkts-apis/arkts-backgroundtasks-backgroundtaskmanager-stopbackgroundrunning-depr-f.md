@@ -15,8 +15,6 @@ Requests to cancel a continuous task. This API uses an asynchronous callback to 
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md)(context: Context, callback: AsyncCallback&lt;void&gt;)
@@ -30,86 +28,6 @@ Requests to cancel a continuous task. This API uses an asynchronous callback to 
 | context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-**Examples**
-
-FA model (JS code is required for development):
-
-```TypeScript
-import backgroundTaskManager from '@ohos.backgroundTaskManager';
-import featureAbility from '@ohos.ability.featureAbility';
-import { BusinessError } from '@ohos.base';
-
-function callback(err: BusinessError, data: void) {
-  if (err) {
-    console.error("Operation stopBackgroundRunning failed Cause: " + err);
-  } else {
-    console.info("Operation stopBackgroundRunning succeeded");
-  }
-}
-
-backgroundTaskManager.stopBackgroundRunning(featureAbility.getContext(), callback);
-```
-
-Stage model:
-
-```TypeScript
-import UIAbility from '@ohos.app.ability.UIAbility';
-import backgroundTaskManager from '@ohos.backgroundTaskManager';
-import Want from '@ohos.app.ability.Want';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import { BusinessError } from '@ohos.base';
-
-function callback(err: BusinessError, data: void) {
-  if (err) {
-    console.error("Operation stopBackgroundRunning failed Cause: " + err);
-  } else {
-    console.info("Operation stopBackgroundRunning succeeded");
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    backgroundTaskManager.stopBackgroundRunning(this.context, callback);
-  }
-};
-```
-
-FA model:
-
-```TypeScript
-import backgroundTaskManager from '@ohos.backgroundTaskManager';
-import featureAbility from '@ohos.ability.featureAbility';
-import { BusinessError } from '@ohos.base';
-
-// Cancel a continuous task.
-backgroundTaskManager.stopBackgroundRunning(featureAbility.getContext()).then(() => {
-  console.info("Operation stopBackgroundRunning succeeded");
-}).catch((err: BusinessError) => {
-  console.error("Operation stopBackgroundRunning failed Cause: " + err);
-});
-```
-
-Stage model:
-
-```TypeScript
-import UIAbility from '@ohos.app.ability.UIAbility';
-import backgroundTaskManager from '@ohos.backgroundTaskManager';
-import Want from '@ohos.app.ability.Want';
-import AbilityConstant from '@ohos.app.ability.AbilityConstant';
-import { BusinessError } from '@ohos.base';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    // Cancel a continuous task.
-    backgroundTaskManager.stopBackgroundRunning(this.context).then(() => {
-      console.info("Operation stopBackgroundRunning succeeded");
-    }).catch((err: BusinessError) => {
-      console.error("Operation stopBackgroundRunning failed Cause: " + err);
-    });
-  }
-};
-```
-
 
 ## stopBackgroundRunning
 
@@ -120,8 +38,6 @@ function stopBackgroundRunning(context: Context): Promise<void>
 Requests to cancel a continuous task. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -140,7 +56,3 @@ Requests to cancel a continuous task. This API uses a promise to return the resu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;void & gt; |
-
-**Examples**
-
-See [stopBackgroundRunning](#stopbackgroundrunning)

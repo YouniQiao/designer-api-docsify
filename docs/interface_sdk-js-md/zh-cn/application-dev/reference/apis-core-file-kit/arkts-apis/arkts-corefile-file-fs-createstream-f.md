@@ -3,9 +3,9 @@
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## createStream
@@ -17,8 +17,6 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 基于文件路径创建文件流。使用Promise异步回调。需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -69,69 +67,6 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 | 13900042 |
 | 13900044 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.createStream(filePath, "a+").then((stream: fileIo.Stream) => {
-  stream.closeSync();
-  console.info(`Succeeded in creating stream.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create stream. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.createStream(filePath, "a+").then((stream:fileIo.Stream) => {
-  stream.closeSync();
-  console.info(`Succeeded in creating stream.`);
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to create stream. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.createStream(filePath, "r+", (err: BusinessError, stream: fileIo.Stream) => {
-  if (err) {
-    console.error(`Failed to create stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    stream.closeSync();
-    console.info(`Succeeded in creating stream.`);
-  }
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-fileIo.createStream(filePath, "r+", (err: BusinessError<void> | null, stream:fileIo.Stream | undefined) => {
-  if (err) {
-    console.error(`Failed to create stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in creating stream.`);
-  }
-  stream?.closeSync();
-})
-```
-
 
 ## createStream
 
@@ -142,8 +77,6 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 基于文件路径创建文件流，需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -187,7 +120,3 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 | 13900038 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-参见 [createStream](#createstream)

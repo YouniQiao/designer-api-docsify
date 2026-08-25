@@ -19,8 +19,6 @@ Creates a **Stepper** component.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 22
 
 **Substitutes:** index

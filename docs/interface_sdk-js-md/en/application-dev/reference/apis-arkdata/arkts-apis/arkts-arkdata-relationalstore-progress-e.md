@@ -4,8 +4,6 @@ Enumerates the stages in the device-cloud sync progress. Use the enum name rathe
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SYNC_BEGIN
@@ -17,8 +15,6 @@ SYNC_BEGIN = 0
 SYNC_BEGIN: means the sync process begin.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -32,8 +28,6 @@ SYNC_BEGIN: means the sync process is in progress
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 ## SYNC_FINISH
@@ -45,7 +39,5 @@ SYNC_FINISH = 2
 SYNC_BEGIN: means the sync process is finished
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

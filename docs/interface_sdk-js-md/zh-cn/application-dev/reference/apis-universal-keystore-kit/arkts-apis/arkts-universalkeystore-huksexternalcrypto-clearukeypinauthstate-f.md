@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## clearUkeyPinAuthState
@@ -15,8 +15,6 @@ function clearUkeyPinAuthState(resourceId: string): Promise<void>
 清除指定资源ID的PIN码认证状态。使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,23 +45,3 @@ function clearUkeyPinAuthState(resourceId: string): Promise<void>
 | [12000018](../errorcode-huks.md#12000018-输入参数非法) |
 | [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
-
-**示例**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-const testResourceId = JSON.stringify({
-  providerName: "testProviderName",
-  bundleName: "com.example.cryptoapplication",
-  abilityName: "CryptoExtension",
-  index: {
-    key: "testKey"
-  } as ESObject
-});
-
-huksExternalCrypto.clearUkeyPinAuthState(testResourceId)
-    .then(() => {
-      console.info('promise: clearUkeyPinAuthState success.');
-    });
-```

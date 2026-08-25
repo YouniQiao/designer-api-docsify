@@ -15,3 +15,10 @@
 | [FinalizationRegistryConstructor](arkts-lib-es2021-weakref-finalizationregistryconstructor-i.md) |
 | [WeakRef](arkts-lib-es2021-weakref-weakref-i.md) |
 | [WeakRefConstructor](arkts-lib-es2021-weakref-weakrefconstructor-i.md) |
+
+### Properties
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [FinalizationRegistry](arkts-libes2021weakref-p.md) |
+| [WeakRef](arkts-libes2021weakref-p.md) |

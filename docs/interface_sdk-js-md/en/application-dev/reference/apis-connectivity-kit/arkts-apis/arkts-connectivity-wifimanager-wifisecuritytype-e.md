@@ -1,10 +1,8 @@
 # WifiSecurityType
 
-Describes the wifi security type. @enum { int }
+Describes the wifi security type. @enum { number }
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
@@ -18,8 +16,6 @@ Invalid security type
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_OPEN
@@ -31,8 +27,6 @@ WIFI_SEC_TYPE_OPEN = 1
 Open
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,8 +42,6 @@ Wired Equivalent Privacy (WEP)
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_PSK
@@ -61,8 +53,6 @@ WIFI_SEC_TYPE_PSK = 3
 Pre-shared key (PSK)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
@@ -76,8 +66,6 @@ Simultaneous Authentication of Equals (SAE)
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_EAP
@@ -89,8 +77,6 @@ WIFI_SEC_TYPE_EAP = 5
 EAP authentication.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
@@ -104,8 +90,6 @@ SUITE_B_192 192 bit level.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_OWE
@@ -117,8 +101,6 @@ WIFI_SEC_TYPE_OWE = 7
 Opportunistic Wireless Encryption.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
@@ -132,8 +114,6 @@ WAPI certificate to be specified.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.WiFi.Core
 
 ## WIFI_SEC_TYPE_WAPI_PSK
@@ -145,7 +125,5 @@ WIFI_SEC_TYPE_WAPI_PSK = 9
 WAPI pre-shared key to be specified.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Communication.WiFi.Core

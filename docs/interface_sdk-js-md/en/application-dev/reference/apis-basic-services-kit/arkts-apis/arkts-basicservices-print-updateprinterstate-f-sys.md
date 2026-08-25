@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## updatePrinterState
@@ -15,8 +15,6 @@ function updatePrinterState(printerId: string, state: PrinterState, callback: As
 Updates the printer state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -40,36 +38,6 @@ Updates the printer state. This API uses an asynchronous callback to return the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId : string = '1212';
-let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
-print.updatePrinterState(printerId, state, (err: BusinessError) => {
-    if (err) {
-        console.error('updatePrinterState failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('updatePrinterState success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId : string = '1212';
-let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
-print.updatePrinterState(printerId, state).then(() => {
-    console.info('update printer state success');
-}).catch((error: BusinessError) => {
-    console.error('update printer state error : ' + JSON.stringify(error));
-})
-```
-
 
 ## updatePrinterState
 
@@ -80,8 +48,6 @@ function updatePrinterState(printerId: string, state: PrinterState): Promise<voi
 Updates the printer state. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -109,7 +75,3 @@ Updates the printer state. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [updatePrinterState](#updateprinterstate)

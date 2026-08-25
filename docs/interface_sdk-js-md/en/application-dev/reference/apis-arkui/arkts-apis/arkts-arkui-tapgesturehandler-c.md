@@ -6,8 +6,6 @@ Defines a type of gesture handler object for tap gestures.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ constructor(options?: TapGestureHandlerOptions)
 Constructor used to create a tap gesture handler instance.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ onAction(event: Callback<GestureEvent>): TapGestureHandler
 Sets the callback for successful tap gesture recognition.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,14 +1,12 @@
 # ListComparatorFn
 
 ```TypeScript
-export type ListComparatorFn<T> = (firstValue: T, secondValue: T) => double
+export type ListComparatorFn<T> = (firstValue: T, secondValue: T) => number
 ```
 
 List中sort方法的回调函数。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -25,4 +23,4 @@ List中sort方法的回调函数。
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：double |
+| number |

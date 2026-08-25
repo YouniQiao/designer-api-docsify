@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## updateFormLocation
@@ -15,8 +15,6 @@ function updateFormLocation(formId: string, location: formInfo.FormLocation): vo
 更新卡片位置。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.REQUIRE_FORM
 
@@ -45,34 +43,3 @@ function updateFormLocation(formId: string, location: formInfo.FormLocation): vo
 | [16501000](../errorcode-form.md#16501000-内部功能错误) |
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.updateFormLocation(formId, formInfo.FormLocation.SCREEN_LOCK);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.updateFormLocation(formId, formInfo.FormLocation.SCREEN_LOCK);
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```

@@ -6,8 +6,6 @@ The &lt;marquee&gt; component inserts scrolling text, which is displayed in a si
 
 **Since:** 4
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## start
@@ -19,8 +17,6 @@ start(): void
 Starts scrolling.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -35,8 +31,6 @@ stop(): void
 Stops scrolling.
 
 **Since:** 4
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 4.
 
 **Model restriction:** This API can be used only in the FA model.
 

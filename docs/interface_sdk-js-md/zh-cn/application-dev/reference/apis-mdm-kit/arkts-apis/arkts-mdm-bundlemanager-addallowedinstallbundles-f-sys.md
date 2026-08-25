@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addAllowedInstallBundles
@@ -15,8 +15,6 @@ function addAllowedInstallBundles(admin: Want, appIds: Array<string>, callback: 
 添加应用至当前用户的应用程序包安装允许名单，添加至允许名单的应用允许在当前用户下安装，否则不允许安装，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -48,70 +46,6 @@ function addAllowedInstallBundles(admin: Want, appIds: Array<string>, callback: 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.addAllowedInstallBundles(wantTemp, appIds, (err) => {
-  if (err) {
-    console.error(`Failed to add allowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in adding allowed install bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.addAllowedInstallBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to add allowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in adding allowed install bundles');
-});
-```
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.addAllowedInstallBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in adding allowed install bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add allowed install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
-
 
 ## addAllowedInstallBundles
 
@@ -122,8 +56,6 @@ function addAllowedInstallBundles(admin: Want, appIds: Array<string>, userId: nu
 添加应用至应用程序包安装允许名单，添加至允许名单的应用允许在指定用户（通过userId指定）下安装，否则不允许安装，使用callback异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -156,10 +88,6 @@ function addAllowedInstallBundles(admin: Want, appIds: Array<string>, userId: nu
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [addAllowedInstallBundles](#addallowedinstallbundles)
-
 
 ## addAllowedInstallBundles
 
@@ -170,8 +98,6 @@ function addAllowedInstallBundles(admin: Want, appIds: Array<string>, userId?: n
 添加应用至应用程序包安装允许名单，添加至允许名单的应用允许在当前/指定用户下安装，否则不允许安装。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **废弃版本：** 26.0.0
 
@@ -208,7 +134,3 @@ function addAllowedInstallBundles(admin: Want, appIds: Array<string>, userId?: n
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [addAllowedInstallBundles](#addallowedinstallbundles)

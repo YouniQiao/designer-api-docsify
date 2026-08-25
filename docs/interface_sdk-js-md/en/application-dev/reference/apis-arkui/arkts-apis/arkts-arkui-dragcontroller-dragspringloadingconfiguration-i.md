@@ -1,17 +1,15 @@
 # DragSpringLoadingConfiguration
 
-Defines the configuration parameters for drag hover detection. The default settings typically suffice. These settings can be customized through onDragSpringLoading binding or dynamically updated during BEGIN state using [updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateconfiguration).
+Defines the configuration parameters for drag hover detection. The default settings typically suffice. These settings can be customized through [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#ondragspringloading) binding or dynamically updated during BEGIN state using [updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateconfiguration).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'kits/@kit.ArkUI';
 ```
 
 ## stillTimeLimit
@@ -25,8 +23,6 @@ Time (in ms) required to remain stationary to enter the BEGIN state of hover det
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,8 +42,6 @@ Time interval (in ms) at which update notifications are sent after hover detecti
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -66,8 +60,6 @@ Maximum number of update notifications after hover detection enters the UPDATE s
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -85,8 +77,6 @@ Maximum waiting time (in ms) from the UPDATE state to the END state. Value range
 **Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

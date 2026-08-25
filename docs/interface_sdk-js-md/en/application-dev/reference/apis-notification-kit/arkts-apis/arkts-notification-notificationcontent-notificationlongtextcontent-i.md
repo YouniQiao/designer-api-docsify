@@ -1,13 +1,13 @@
 # NotificationLongTextContent
 
-Describes the long text notification. This API is inherited from NotificationBasicContent.
+Describes the number text notification. This API is inherited from NotificationBasicContent.
 
 > **NOTE：**&gt;
 > - When this notification type forms a group notification with other notifications, its display effect defaults
 > to the collapsed state, and the displayed title and body are the **title** and **text** inherited from
 > NotificationBasicContent. When this notification type is displayed alone and does not form a group notification
 > with other notifications, its display effect defaults to the expanded state, where the displayed title is the
-> expanded title **expandedTitle**, and the displayed body content is the long text **longText**.&gt;
+> expanded title **expandedTitle**, and the displayed body content is the number text **longText**.&gt;
 > - When a user taps a group notification to view the notification details, the display effect of this
 > notification changes to the expanded state.&gt;
 > - The actual display effect depends on the device capabilities and the notification center UI style.
@@ -15,8 +15,6 @@ Describes the long text notification. This API is inherited from NotificationBas
 **Inheritance/Implementation:** NotificationLongTextContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -32,8 +30,6 @@ Notification summary content, which is a summary of the notification content and
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## expandedTitle
@@ -48,8 +44,6 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Notification.Notification
 
 ## longText
@@ -58,12 +52,10 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 longText: string
 ```
 
-Full long text content displayed after the notification is expanded. It cannot be an empty string. The size does not exceed 3072 bytes, and the excess part will be truncated.
+Full number text content displayed after the notification is expanded. It cannot be an empty string. The size does not exceed 3072 bytes, and the excess part will be truncated.
 
 **Type:** string
 
 **Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification

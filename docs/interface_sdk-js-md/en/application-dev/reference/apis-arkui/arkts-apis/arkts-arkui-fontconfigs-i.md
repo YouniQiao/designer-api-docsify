@@ -4,8 +4,6 @@ Defines font configurations.
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ Font weight configuration. The default value is inherited from [FontWeightConfig
 **Type:** [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,7 +1,5 @@
 # ProxyHandler
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ apply?(target: T, thisArg: any, argArray: any[]): any
 ```
 
 A trap method for a function call.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -37,8 +33,6 @@ construct?(target: T, argArray: any[], newTarget: Function): object
 
 A trap for the `new` operator.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -58,8 +52,6 @@ defineProperty?(target: T, property: string | symbol, attributes: PropertyDescri
 ```
 
 A trap for `Object.defineProperty()`.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -81,8 +73,6 @@ deleteProperty?(target: T, p: string | symbol): boolean
 
 A trap for the `delete` operator.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -101,8 +91,6 @@ get?(target: T, p: string | symbol, receiver: any): any
 ```
 
 A trap for getting a property value.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -124,8 +112,6 @@ getOwnPropertyDescriptor?(target: T, p: string | symbol): PropertyDescriptor | u
 
 A trap for `Object.getOwnPropertyDescriptor()`.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -145,8 +131,6 @@ getPrototypeOf?(target: T): object | null
 
 A trap for the `[[GetPrototypeOf]]` internal method.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -164,8 +148,6 @@ has?(target: T, p: string | symbol): boolean
 ```
 
 A trap for the `in` operator.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -186,8 +168,6 @@ isExtensible?(target: T): boolean
 
 A trap for `Object.isExtensible()`.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -205,8 +185,6 @@ ownKeys?(target: T): ArrayLike<string | symbol>
 ```
 
 A trap for `Reflect.ownKeys()`.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -226,8 +204,6 @@ preventExtensions?(target: T): boolean
 
 A trap for `Object.preventExtensions()`.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -245,8 +221,6 @@ set?(target: T, p: string | symbol, newValue: any, receiver: any): boolean
 ```
 
 A trap for setting a property value.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -268,8 +242,6 @@ setPrototypeOf?(target: T, v: object | null): boolean
 ```
 
 A trap for `Object.setPrototypeOf()`.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

@@ -4,14 +4,12 @@ Describes the input method application attributes.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'kits/@kit.IMEKit';
 ```
 
 ## enabledState
@@ -20,13 +18,13 @@ import { inputMethod } from '@kit.IMEKit';
 readonly enabledState?: EnabledState
 ```
 
-Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates whether the input method is enabled.
+Optional.   
+- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
+- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates whether the input method is enabled.
 
 **Type:** [EnabledState](arkts-ime-inputmethod-enabledstate-e.md)
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -36,13 +34,13 @@ Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter
 extra?: object
 ```
 
-Extra information about the input method. This parameter is reserved and currently has no specific meaning. <br> <br>- API version 10 and later: optional <br>- API version 9: mandatory
+Extra information about the input method. This parameter is reserved and currently has no specific meaning.   
+- API version 10 and later: optional   
+- API version 9: mandatory
 
 **Type:** object
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -52,29 +50,29 @@ Extra information about the input method. This parameter is reserved and current
 readonly icon?: string
 ```
 
-Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the input method icon data, which can be obtained through icon ID.
+Optional.   
+- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
+- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the input method icon data, which can be obtained through icon ID.
 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## iconId
 
 ```TypeScript
-readonly iconId?: long
+readonly iconId?: number
 ```
 
-Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **icon** field.
+Optional.   
+- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
+- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **icon** field.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -90,8 +88,6 @@ Mandatory. Unique identifier of an input method extension in an app. **id** and 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## label
@@ -100,29 +96,29 @@ Mandatory. Unique identifier of an input method extension in an app. **id** and 
 readonly label?: string
 ```
 
-Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the name of the input method extension displayed externally. Use the label configured for the InputMethodExtensionAbility. If no label is configured, the label of the application entry ability is automatically used. If no label is configured for the application entry ability, the label configured in **AppScope** is automatically used.
+Optional.   
+- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
+- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the name of the input method extension displayed externally. Use the label configured for the InputMethodExtensionAbility. If no label is configured, the label of the application entry ability is automatically used. If no label is configured for the application entry ability, the label configured in **AppScope** is automatically used.
 
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## labelId
 
 ```TypeScript
-readonly labelId?: long
+readonly labelId?: number
 ```
 
-Optional. <br> <br>- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension. <br>- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **label** field.
+Optional.   
+- When **InputMethodProperty** is used as the input parameter of an API for switching or querying, you do not need to set this field. You can use name and ID to uniquely specify an input method extension.   
+- When **InputMethodProperty** is used as the return value of an API for querying (for example, [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)), this field indicates the resource ID of the **label** field.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -137,8 +133,6 @@ Unique ID of the input method. Mandatory.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -158,8 +152,6 @@ Mandatory. Name of the input method package.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## packageName
@@ -173,8 +165,6 @@ Name of the input method package. Mandatory.
 **Type:** string
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

@@ -1,7 +1,5 @@
 # WeakSet
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ add(value: T): this
 ```
 
 Appends a new object to the end of the WeakSet.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -35,8 +31,6 @@ delete(value: T): boolean
 
 Removes the specified element from the WeakSet.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -52,8 +46,6 @@ Removes the specified element from the WeakSet.
 ```TypeScript
 has(value: T): boolean
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

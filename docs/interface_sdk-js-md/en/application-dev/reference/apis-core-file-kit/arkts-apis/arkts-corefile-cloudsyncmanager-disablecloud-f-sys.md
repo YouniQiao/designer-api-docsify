@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## disableCloud
@@ -15,8 +15,6 @@ function disableCloud(accountId: string): Promise<void>
 Disables device-cloud sync. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -44,32 +42,6 @@ Disables device-cloud sync. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId).then(() => {
-  console.info("disableCloud successfully");
-}).catch((err: BusinessError) => {
-  console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId, (err: BusinessError) => {
-  if (err) {
-    console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("disableCloud successfully");
-  }
-});
-```
-
 
 ## disableCloud
 
@@ -80,8 +52,6 @@ function disableCloud(accountId: string, callback: AsyncCallback<void>): void
 Disables device-cloud sync. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -103,7 +73,3 @@ Disables device-cloud sync. This API uses an asynchronous callback to return the
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [disableCloud](#disablecloud)

@@ -4,8 +4,6 @@ Enumerates the types of audio streams played.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## STREAM_USAGE_SYSTEM
@@ -17,8 +15,6 @@ STREAM_USAGE_SYSTEM = 9
 System usage, such as screen lock or key click.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -34,8 +30,6 @@ DTMF dial tone usage.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -49,8 +43,6 @@ STREAM_USAGE_ENFORCED_TONE = 15
 Enforced tone usage, such as camera shutter.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
@@ -66,8 +58,6 @@ Ultrasonic playing usage. This type is only used for msdp condition.
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -82,8 +72,6 @@ Voice call assistant type. This type is only used for call assistant functionali
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -97,8 +85,6 @@ STREAM_USAGE_ANNOUNCEMENT = 22
 Announcement usage.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +102,6 @@ Emergency usage.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
@@ -133,8 +117,6 @@ STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27
 Voice assistant broadcast usage for system app.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

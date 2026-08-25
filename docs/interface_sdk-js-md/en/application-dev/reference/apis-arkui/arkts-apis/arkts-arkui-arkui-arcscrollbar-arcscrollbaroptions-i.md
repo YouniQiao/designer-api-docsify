@@ -8,14 +8,12 @@ Represents the parameters used to construct an **ArcScrollBar** component.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
+import { ArcScrollBar, ArcScrollBarAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## scroller
@@ -26,11 +24,9 @@ scroller: Scroller
 
 Scroller, which can be bound to scrollable components for scrolling control.
 
-**Type:** Scroller
+**Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -42,13 +38,11 @@ Scroller, which can be bound to scrollable components for scrolling control.
 state?: BarState
 ```
 
-State of the scrollbar.<br/>Default value: **BarState.Auto**
+State of the scrollbar.Default value: **BarState.Auto**
 
-**Type:** BarState
+**Type:** [BarState](arkts-arkui-barstate-e.md)
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

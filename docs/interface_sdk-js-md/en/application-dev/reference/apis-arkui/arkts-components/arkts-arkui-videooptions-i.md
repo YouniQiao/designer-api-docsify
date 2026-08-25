@@ -4,8 +4,6 @@ Defines the options of the **Video** component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -25,8 +23,6 @@ Video controller to control the video playback status.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,8 +38,6 @@ controllerAsync of video.
 **Type:** [VideoControllerAsync](arkts-arkui-videocontrollerasync-c.md)
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,8 +62,6 @@ For the string type, numeric string values, for example, **0.75**, **1.0**, **1.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -82,11 +74,9 @@ imageAIOptions?: ImageAIOptions
 
 AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
 
-**Type:** ImageAIOptions
+**Type:** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +96,6 @@ Display options for the first frame of the video.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -121,16 +109,19 @@ previewUri?: string | PixelMap | Resource
 ```
 
 Path of the preview image displayed before the video playback starts. By default, no preview image is displayed.The string type can be used to load network images and local images.  
-- URLs are supported for loading online images. - Relative paths are supported for loading local images, for example, **previewUri: "common/test.jpg"**. When using an image referenced using a relative path, the component cannot be called across bundles or modules. - Strings with the **file://** prefix, that is, [application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.  
-The Resource type allows cross-package and cross-module access to resource files.  
-- Resources in the **rawfile** folder are supported, which means that you can reference image files with **\$rawfile**. - \$r can be used to reference images in system resources or application resources.  
+- URLs are supported for loading online images.  
+- Relative paths are supported for loading local images, for example, **previewUri: "common/test.jpg"**. When using  
+an image referenced using a relative path, the component cannot be called across bundles or modules.  
+- Strings with the **file://** prefix, that is,  
+[application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.The Resource type allows cross-package and cross-module access to resource files.  
+- Resources in the **rawfile** folder are supported, which means that you can reference image files with  
+**\$rawfile**.  
+- \$r can be used to reference images in system resources or application resources.  
 The default value is an empty string.If an invalid value is passed, the default value will be used.
 
 **Type:** string \| PixelMap \| Resource
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -143,10 +134,11 @@ src?: string | Resource
 ```
 
 Video source, which can be either a local or a network video.The Resource type allows cross-package and cross-module access to resource files and is commonly used for accessing local videos.  
-- Only resources in the rawfile folder are supported, which means that you can reference video files only with **\$rawfile**.  
-The string type is used for loading local videos and, more frequently, network videos.  
-- Network video URLs are supported. - Strings with the **file://** prefix, that is, [application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.  
-The default value is an empty string.If an invalid value is passed, the default value will be used.
+- Only resources in the rawfile folder are supported, which means that you can reference video files only with  
+**\$rawfile**.The string type is used for loading local videos and, more frequently, network videos.  
+- Network video URLs are supported.  
+- Strings with the **file://** prefix, that is,  
+[application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.The default value is an empty string.If an invalid value is passed, the default value will be used.
 
 > **NOTE：**&gt;
 > The supported video formats are MP4, MKV, and TS.
@@ -154,8 +146,6 @@ The default value is an empty string.If an invalid value is passed, the default 
 **Type:** string \| Resource
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

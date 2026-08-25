@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 ```
 
 ## onAVMusicTemplateCreate
@@ -15,8 +15,6 @@ function onAVMusicTemplateCreate(callback: Callback<AVMusicTemplateDescriptor>):
 注册音频模板创建的监听。使用callback异步回调。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 

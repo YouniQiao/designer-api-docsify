@@ -4,8 +4,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -22,8 +20,6 @@ pack.info的包信息。
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
@@ -39,8 +35,6 @@ pack.info中的包摘要信息。
 **类型：** [PackageSummary](arkts-ability-bundlepackinfo-packagesummary-i-sys.md)
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 

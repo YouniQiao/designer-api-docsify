@@ -6,14 +6,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块
 
 ```TypeScript
-import { stream } from '@kit.ArkTS';
+import { stream } from 'kits/@kit.ArkTS';
 ```
 
 ## constructor
@@ -26,36 +24,9 @@ constructor()
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
-
-**示例**
-
-```TypeScript
-let writableStream = new stream.Writable();
-```
-
-```TypeScript
-let readableStream = new stream.Readable();
-```
-
-```TypeScript
-let option : stream.ReadableOptions = {
-  encoding : "utf-8"
-};
-let readableStream = new stream.Readable(option);
-```
-
-```TypeScript
-let duplex = new stream.Duplex();
-```
-
-```TypeScript
-let transformStream = new stream.Transform();
-```
 
 ## cork
 
@@ -67,8 +38,6 @@ cork(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -79,50 +48,6 @@ cork(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.cork();
-console.info("Writable cork result", result); // Writable cork result true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.cork();
-console.info("Writable cork result", result); // 期望结果: Writable cork result true
-```
-
-```TypeScript
-let duplexStream = new stream.Duplex();
-let result = duplexStream.cork();
-console.info("duplexStream cork result", result); // duplexStream cork result true
-```
-
 ## doWrite
 
 ```TypeScript
@@ -132,8 +57,6 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 数据写出接口是一个由开发者实现的函数，在数据被写出时自动调用，而不需要开发者手动调用。使用callback异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -147,86 +70,6 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 | encoding | string | 是 |
 | callback | Function | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // Writable chunk is data
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write("data", "utf8");
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // 期望结果: Writable chunk is data
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write("data", "utf8");
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // duplexStream chunk is data
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.write("data", "utf8");
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // 期望结果: duplexStream chunk is data
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.write("data", "utf8");
-```
-
 ## doWritev
 
 ```TypeScript
@@ -236,8 +79,6 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 数据分批写出接口是一个由开发者实现的函数，在数据被写出时自动调用，而不需要开发者手动调用。使用callback异步回调。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -250,112 +91,6 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 | chunks | string[] \| Uint8Array[] | 是 |
 | callback | Function | 是 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("Writable chunk", chunks);
-    callback();
-  }
-  // Writable chunk data1
-  // Writable chunk data2
-}
-
-let writableStream = new TestWritable();
-writableStream.write("data1", "utf8");
-writableStream.write("data2", "utf8");
-writableStream.uncork();
-writableStream.end();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("Writable chunk", chunks);
-    callback.unsafeCall();
-  }
-  // Writable chunk data1
-  // Writable chunk data2
-}
-
-let writableStream = new TestWritable();
-writableStream.write("data1", "utf8");
-writableStream.write("data2", "utf8");
-writableStream.uncork();
-writableStream.end();
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("duplexStream chunk", chunks[0]); // duplexStream chunk data1
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write("data1", "utf8");
-duplexStream.write("data2", "utf8");
-duplexStream.uncork();
-duplexStream.end();
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-
-  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
-    console.info("duplexStream chunk", (chunks as string[])[0]); // 期望结果: duplexStream chunk data1
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write("data1", "utf8");
-duplexStream.write("data2", "utf8");
-duplexStream.uncork();
-duplexStream.end();
-```
-
 ## end
 
 ```TypeScript
@@ -365,8 +100,6 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 结束双工流的写入过程。如果**writableCorked**的值大于0，则将其置为**0**，并输出缓冲区中的剩余数据。如果传入**chunk**参数，则将其视为最后一个数据块，根据当前执行上下文使用**write**或**doWrite** API写入。如果使用**doWrite**写入，**encoding**参数的有效性检查由**doWrite**决定。如果单独使用**end**（不使用**write**）且传入**chunk**参数，则数据通过**doWrite**写入。使用异步回调返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -392,100 +125,6 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 | --- |
 | [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk);
-    callback();
-  }
-  // Writable chunk is test
-  // Writable chunk is finish
-}
-
-let writableStream = new TestWritable();
-writableStream.write("test", "utf8");
-writableStream.end("finish", "utf8", () => {
-  console.info("Writable is end"); // Writable is end
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk);
-    callback.unsafeCall();
-  }
-  // Writable chunk is test
-  // Writable chunk is finish
-}
-
-let writableStream = new TestWritable();
-writableStream.write("test", "utf8");
-writableStream.end("finish", "utf8", () => {
-  console.info("Writable is end"); // 期望结果: Writable is end
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Duplex chunk is", chunk); // Duplex chunk is test
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.end("test", "utf8", () => {
-  console.info("Duplex is end"); // Duplex is end
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Duplex chunk is", chunk); // 期望结果: Duplex chunk is test
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.end("test", "utf8", () => {
-  console.info("Duplex is end"); // 期望结果: Duplex is end
-});
-```
-
 ## setDefaultEncoding
 
 ```TypeScript
@@ -495,8 +134,6 @@ setDefaultEncoding(encoding?: string): boolean
 设置双工流的默认字符编码类型，确保在读取数据时正确解析字符。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -514,86 +151,6 @@ setDefaultEncoding(encoding?: string): boolean
 | --- |
 | boolean |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.setDefaultEncoding("utf8");
-console.info("Writable is result", result); // Writable is result true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-let result = writableStream.setDefaultEncoding("utf8");
-console.info("Writable is result", result); // 期望结果: Writable is result true
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.setDefaultEncoding("utf8");
-console.info("duplexStream is result", result); // duplexStream is result true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.setDefaultEncoding("utf8");
-console.info("duplexStream is result", result); // 期望结果: duplexStream is result true
-```
-
 ## uncork
 
 ```TypeScript
@@ -603,8 +160,6 @@ uncork(): boolean
 释放cork状态，刷新缓冲区中的数据并写入目标位置。调用此API后，**writableCorked**的值减1。如果值变为**0**，则流不再处于cork状态；否则，流仍处于cork状态。建议与[cork()](arkts-arkts-stream-writable-c.md#cork)配合使用。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -616,108 +171,6 @@ uncork(): boolean
 | --- |
 | boolean |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.cork();
-writableStream.write("data1", "utf8");
-writableStream.write("data2", "utf8");
-writableStream.uncork();
-writableStream.end();
-writableStream.on("finish", () => {
-  console.info("all Data is End"); // all Data is End
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.cork();
-writableStream.write("data1", "utf8");
-writableStream.write("data2", "utf8");
-writableStream.uncork();
-writableStream.on("finish", () => {
-  console.info("all Data is End"); // 期望结果: all Data is End
-});
-writableStream.end();
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-let dataWritten = "";
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    dataWritten += chunk;
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write("a");
-duplexStream.write("b");
-duplexStream.uncork();
-console.info("Duplex test uncork", dataWritten); // Duplex test uncork ab
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-let dataWritten = "";
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    dataWritten += chunk;
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-duplexStream.cork();
-duplexStream.write("a");
-duplexStream.write("b");
-duplexStream.uncork();
-console.info("Duplex test uncork", dataWritten); // 期望结果: Duplex test uncork
-```
-
 ## write
 
 ```TypeScript
@@ -727,8 +180,6 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 向流的缓冲区写入数据。使用异步回调返回结果。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -756,88 +207,6 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 | [10200037](../errorcode-utils.md#10200037-多次调用callback) |
 | [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // Writable chunk is test
-    callback();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write("test", "utf8");
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestWritable extends stream.Writable {
-  constructor() {
-    super();
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("Writable chunk is", chunk); // 期望结果: Writable chunk is test
-    callback.unsafeCall();
-  }
-}
-
-let writableStream = new TestWritable();
-writableStream.write("test", "utf8");
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: number) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // duplexStream chunk is test
-    callback();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.write("test", "utf8");
-console.info("duplexStream result", result); // duplexStream result true
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-class TestDuplex extends stream.Duplex {
-  constructor() {
-    super();
-  }
-
-  doRead(size: int) {
-  }
-
-  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-    console.info("duplexStream chunk is", chunk); // 期望结果: duplexStream chunk is test
-    callback.unsafeCall();
-  }
-}
-
-let duplexStream = new TestDuplex();
-let result = duplexStream.write("test", "utf8");
-console.info("duplexStream result", result); // 期望结果: duplexStream result true
-```
-
 ## writable
 
 ```TypeScript
@@ -850,8 +219,6 @@ get writable(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -859,16 +226,14 @@ get writable(): boolean
 ## writableCorked
 
 ```TypeScript
-get writableCorked(): int
+get writableCorked(): number
 ```
 
 表示双工流cork状态计数。值大于0时，双工流处于强制写入缓冲区状态，值为0时，该状态解除。使用cork()方法时计数加一，使用uncork()方法时计数减一，使用end()方法时计数清零。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -886,8 +251,6 @@ get writableEnded(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -904,8 +267,6 @@ get writableFinished(): boolean
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -913,16 +274,14 @@ get writableFinished(): boolean
 ## writableHighWatermark
 
 ```TypeScript
-get writableHighWatermark(): int
+get writableHighWatermark(): number
 ```
 
 定义双工流的写模式下缓冲区数据量的水位线大小。当前版本不支持开发者自定义修改设置水位线大小。调用write()写入后，若缓冲区数据量达到该值，write()会返回false。默认值为16 * 1024字节。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -931,16 +290,14 @@ get writableHighWatermark(): int
 ## writableLength
 
 ```TypeScript
-get writableLength(): int
+get writableLength(): number
 ```
 
 表示双工流缓冲区中待写入的字节数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -957,8 +314,6 @@ get writableObjectMode(): boolean
 **类型：** boolean
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

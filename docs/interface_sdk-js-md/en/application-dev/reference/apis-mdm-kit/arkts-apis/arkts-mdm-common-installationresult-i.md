@@ -4,14 +4,12 @@ An object that holds the application installation result.This object is used as 
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@kit.MDMKit';
+import { common } from 'kits/@kit.MDMKit';
 ```
 
 ## message
@@ -25,8 +23,6 @@ Application installation result message.
 **Type:** string
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,8 +39,6 @@ Application installation result. **SUCCESS** indicates that the application is s
 **Type:** Result
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 

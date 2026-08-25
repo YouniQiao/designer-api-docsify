@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { cdsm } from '@kit.ConnectivityKit';
+import { cdsm } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createCdsmClient
@@ -15,8 +15,6 @@ function createCdsmClient(address: string): CdsmClient
 创建CDSM客户端实例。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 

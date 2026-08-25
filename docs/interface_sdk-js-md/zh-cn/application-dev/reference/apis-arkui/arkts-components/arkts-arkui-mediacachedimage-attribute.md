@@ -2,11 +2,9 @@
 
 从 ImageAttribute 继承的 MediaCachedImage 属性。@extends ImageAttribute
 
-**继承/实现关系：** MediaCachedImageAttribute extends ImageAttribute
+**继承/实现关系：** MediaCachedImageAttribute extends [ImageAttribute](arkts-arkui-image-attribute.md#imageattribute)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

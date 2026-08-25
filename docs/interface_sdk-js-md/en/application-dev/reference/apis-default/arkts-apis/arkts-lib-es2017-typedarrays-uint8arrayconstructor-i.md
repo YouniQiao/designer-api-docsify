@@ -1,7 +1,5 @@
 # Uint8ArrayConstructor
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -12,8 +10,6 @@
 ```TypeScript
 new (): Uint8Array
 ```
-
-**ArkTS mode:** 
 
 **Return value:**
 

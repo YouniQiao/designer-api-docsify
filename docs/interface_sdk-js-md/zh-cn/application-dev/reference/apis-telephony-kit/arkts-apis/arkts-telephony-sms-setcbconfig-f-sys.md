@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'kits/@kit.TelephonyKit';
 ```
 
 ## setCBConfig
@@ -15,8 +15,6 @@ function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): v
 设置小区广播配置。使用callback异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RECEIVE_SMS
 
@@ -43,43 +41,6 @@ function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): v
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
 
-**示例**
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cbConfigOptions: sms.CBConfigOptions = {
-    slotId: 0,
-    enable: true,
-    startMessageId: 100,
-    endMessageId: 200,
-    ranType: sms.RanType.TYPE_GSM
-};
-sms.setCBConfig(cbConfigOptions, (err: BusinessError) => {
-      console.info(`callback: err->${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cbConfigOptions: sms.CBConfigOptions = {
-    slotId: 0,
-    enable: true,
-    startMessageId: 100,
-    endMessageId: 200,
-    ranType: sms.RanType.TYPE_GSM
-};
-let promise = sms.setCBConfig(cbConfigOptions);
-promise.then(() => {
-    console.info(`setCBConfig success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setCBConfig failed, promise: err->${JSON.stringify(err)}`);
-});
-```
-
 
 ## setCBConfig
 
@@ -90,8 +51,6 @@ function setCBConfig(options: CBConfigOptions): Promise<void>
 设置小区广播配置。使用Promise异步回调。
 
 **起始版本：** 7
-
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.RECEIVE_SMS
 
@@ -122,7 +81,3 @@ function setCBConfig(options: CBConfigOptions): Promise<void>
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) |
-
-**示例**
-
-参见 [setCBConfig](#setcbconfig)

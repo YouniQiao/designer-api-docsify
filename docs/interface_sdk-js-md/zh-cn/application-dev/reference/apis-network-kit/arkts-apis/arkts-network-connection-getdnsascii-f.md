@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## getDnsAscii
@@ -24,8 +24,6 @@ function getDnsAscii(host: string, flag?: ConversionProcess): string
 > 传入参数中的数字和英文不做转码。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **系统能力：** SystemCapability.Communication.NetManager.Core
 
@@ -49,14 +47,3 @@ function getDnsAscii(host: string, flag?: ConversionProcess): string
 | [2100001](../errorcode-net-connection.md#2100001-非法参数值) |
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) |
-
-**示例**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let result = connection.getDnsAscii("www.示例.com", connection.ConversionProcess.NO_CONFIGURATION);
-console.info("Succeeded to getDnsAscii: " + result);  // 预期结果：www.xn--fsq092h.com
-let result = connection.getDnsAscii("www.example.com", connection.ConversionProcess.NO_CONFIGURATION);
-console.info("Succeeded to getDnsAscii: " + result);  // 预期结果：www.example.com
-```

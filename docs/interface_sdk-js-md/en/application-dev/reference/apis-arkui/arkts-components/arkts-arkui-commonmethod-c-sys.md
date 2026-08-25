@@ -4,8 +4,6 @@ CommonMethod.
 
 **Since:** 11
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,8 +20,6 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. This API cannot be used with [blendMode](arkts-arkui-commonmethod-c.md#blendmode).
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,24 +52,11 @@ constructor.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-@Builder
-function MyBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(MyBuilder);
-```
 
 ## edgeLight
 
@@ -81,11 +64,9 @@ let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, n
 edgeLight(params: EdgeLightParams | undefined): T
 ```
 
-Sets the edge light effect for the component.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. <br>This effect can enhance the visual appeal and highlight important components. </p>
+Sets the edge light effect for the component.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. This effect can enhance the visual appeal and highlight important components. </p>
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,8 +107,6 @@ Sets whether the current component and its child components are removed from the
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -155,8 +134,6 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 Applies a spatial effect to component.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,8 +165,6 @@ Specify whether the current component participates in the fusion effect of the a
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -208,10 +183,6 @@ Specify whether the current component participates in the fusion effect of the a
 | --- |
 | T |
 
-**Examples**
-
-For details, see [UnionEffectContainer Example](ts-container-unioneffectcomponent-sys.md#example).
-
 ## useUnionEffect
 
 ```TypeScript
@@ -221,8 +192,6 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T
 Specify whether the current component participates in the fusion effect of the ancestor component UnionEffectContainer
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,7 +211,3 @@ Specify whether the current component participates in the fusion effect of the a
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | T |
-
-**Examples**
-
-See [useUnionEffect](#useunioneffect)

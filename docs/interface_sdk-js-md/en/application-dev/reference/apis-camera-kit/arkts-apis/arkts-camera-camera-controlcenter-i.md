@@ -6,14 +6,12 @@
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'kits/@kit.CameraKit';
 ```
 
 ## enableControlCenter
@@ -25,8 +23,6 @@ enableControlCenter(enabled: boolean): void
 Enables the camera controller.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -43,14 +39,3 @@ Enables the camera controller.
 | Error Code ID |
 | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-
-**Examples**
-
-```TypeScript
-function enableControlCenter(videoSession: camera.VideoSession, enable: boolean): void {
-    let isSupported: boolean = videoSession.isControlCenterSupported();
-    if (isSupported) {
-        videoSession.enableControlCenter(enable);
-    }
-}
-```

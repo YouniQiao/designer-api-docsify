@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formAgent } from '@kit.FormKit';
+import { formAgent } from 'kits/@kit.FormKit';
 ```
 
 ## updateFormCrossBundle
@@ -15,8 +15,6 @@ function updateFormCrossBundle(formId: string, formBindingData: formBindingData.
 跨应用更新卡片，使用Promise异步回调。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **需要权限：** ohos.permission.UPDATE_FORM_CROSS_BUNDLE
 
@@ -51,52 +49,3 @@ function updateFormCrossBundle(formId: string, formBindingData: formBindingData.
 | [16501001](../errorcode-form.md#16501001-卡片id不存在) |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) |
 | [16501007](../errorcode-form.md#16501007-卡片不可信) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formBindingData, formAgent } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '123456789'; // 卡片的formId，请替换为实际的formId。
-try {
-  let param: Record<string, string> = {
-    'temperature': '22c',
-    'time': '22:00'
-  };
-  let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
-  formAgent.updateFormCrossBundle(formId, obj).then(() => {
-    console.info('formAgent updateFormCrossBundle success');
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error?.code}, message: ${error?.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error?.code}, message: ${error?.message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-
-import { formBindingData, formAgent } from '@kit.FormKit';
-
-let formId: string = '123456789'; // 卡片的formId，请替换为实际的formId。
-try {
-  let param: Record<string, string> = {
-    'temperature': '22c',
-    'time': '22:00'
-  };
-  let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
-  formAgent.updateFormCrossBundle(formId, obj).then(() => {
-    console.info('formAgent updateFormCrossBundle success');
-  }).catch((error) => {
-    console.error(`testTag promise error, code: ${error?.code}, message: ${error?.message}`);
-  });
-} catch (error) {
-  console.error(`testTag catch error, code: ${error?.code}, message: ${error?.message}`);
-}
-```

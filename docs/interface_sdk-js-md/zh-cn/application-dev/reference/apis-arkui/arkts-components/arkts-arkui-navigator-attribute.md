@@ -6,8 +6,6 @@ Navigator的属性。
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 13
 
 **替代接口：** Navigation
@@ -28,8 +26,6 @@ active(value: boolean)
 设置当前路由组件是否处于激活状态，处于激活状态时，会生效相应的路由操作。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 13
 
@@ -57,8 +53,6 @@ params(value: object)
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 13
 
 **替代接口：** param
@@ -82,8 +76,6 @@ target(value: string)
 设置跳转目标页面的路径。目标页面需加入main_pages.json文件中。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 13
 
@@ -110,8 +102,6 @@ type(value: NavigationType)
 > **说明：**
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 13
 

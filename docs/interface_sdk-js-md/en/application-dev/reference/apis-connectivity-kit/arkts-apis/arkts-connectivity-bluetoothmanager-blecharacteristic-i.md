@@ -4,8 +4,6 @@ Describes the Gatt characteristic.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)
@@ -15,7 +13,7 @@ Describes the Gatt characteristic.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -29,8 +27,6 @@ The UUID of a BLECharacteristic instance
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 
@@ -50,8 +46,6 @@ The value of a BLECharacteristic instance
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [characteristicValue](arkts-connectivity-ble-blecharacteristic-i.md#characteristicvalue)
@@ -70,8 +64,6 @@ The list of [BLEDescriptor](arkts-connectivity-bluetoothmanager-bledescriptor-i.
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Deprecated since:** 10
 
 **Substitutes:** [descriptors](arkts-connectivity-ble-blecharacteristic-i.md#descriptors)
@@ -89,8 +81,6 @@ The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 10
 

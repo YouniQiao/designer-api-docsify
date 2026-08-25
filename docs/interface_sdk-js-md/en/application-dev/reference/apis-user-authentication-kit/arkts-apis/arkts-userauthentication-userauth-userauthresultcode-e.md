@@ -4,8 +4,6 @@ Enumerates the authentication result codes. They include all success codes and e
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## SUCCESS
@@ -17,8 +15,6 @@ SUCCESS = 12500000
 The operation is successful. It indicates that the user authentication is successful and the authentication token is valid. The application can use the returned token to perform subsequent security operations.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ The authentication fails. It indicates that the user characteristics do not matc
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -49,8 +43,6 @@ GENERAL_ERROR = 12500002
 A general operation error occurred. It indicates that an unknown error occurs during authentication. It is recommended that the user be prompted to try again later or contact the system administrator.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,8 +58,6 @@ The authentication is canceled. It indicates that the user or the system cancels
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -81,8 +71,6 @@ TIMEOUT = 12500004
 The authentication has timed out. It indicates that the user does not complete the authentication interaction within the specified time (for example, the user does not enter the password in time or does not look at the camera). You are advised to prompt the user to try again and pay attention to the operation time limit.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -98,8 +86,6 @@ The authentication type is not supported. It indicates that the current device d
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -113,8 +99,6 @@ TRUST_LEVEL_NOT_SUPPORT = 12500006
 The authentication trust level is not supported. It indicates that the specified authentication trust level is higher than the highest level supported by the current authentication type. You are advised to lower the authentication trust level or use a more secure authentication type.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -130,8 +114,6 @@ The system is busy. It indicates that the authentication service is busy process
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -145,8 +127,6 @@ INVALID_PARAMETERS = 12500008
 Parameter verification failed. It indicates that the input parameter does not meet the requirements, for example, the parameter type is incorrect or the parameter value is out of range. You are advised to check the parameter and call the API again.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -162,8 +142,6 @@ The authentication executor is locked. It indicates that the authenticator is lo
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -177,8 +155,6 @@ NOT_ENROLLED = 12500010
 The user has not enrolled the specified system identity authentication credential. It indicates that the user has not enrolled the requested authentication type. For example, the fingerprint authentication is requested but the user has not enrolled the fingerprint. You are advised to guide the user to register the corresponding credential first.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -194,8 +170,6 @@ The user cancels the system authentication and selects a custom authentication o
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
@@ -209,8 +183,6 @@ PIN_EXPIRED = 12500013
 The PIN has expired. It indicates that the system PIN has expired. For example, the enterprise policy requires that the PIN be changed periodically. In this case, the user needs to change the PIN before using the authentication function.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

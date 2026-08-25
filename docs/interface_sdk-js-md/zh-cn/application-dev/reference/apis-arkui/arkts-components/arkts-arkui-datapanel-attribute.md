@@ -1,12 +1,10 @@
 # DataPanel属性/事件
 
-除支持通用属性外，还支持以下属性：支持通用事件。@extends CommonMethod [since 7 - 10] @extends CommonMethod&lt;DataPanelAttribute&gt; [since 11]
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性：支持[通用事件](arkts-arkui-commonmethod-c.md)。@extends CommonMethod [since 7 - 10] @extends CommonMethod&lt;DataPanelAttribute&gt; [since 11]
 
 **继承/实现关系：** DataPanelAttribute extends CommonMethod<DataPanelAttribute>
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,8 +22,6 @@ closeEffect(value: boolean)
 设置是否关闭数据占比图表旋转动效和投影效果。若未设置[trackShadow](#trackshadow)属性，则由该属性控制投影效果，当closeEffect为false（投影开启 ）时，投影为默认效果。若已设置trackShadow属性，则由trackShadow属性值控制投影效果。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,8 +45,6 @@ contentModifier(modifier: ContentModifier<DataPanelConfiguration>)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -61,7 +55,7 @@ contentModifier(modifier: ContentModifier<DataPanelConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | ContentModifier&lt;[DataPanelConfiguration](arkts-arkui-datapanelconfiguration-i.md)&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[DataPanelConfiguration](arkts-arkui-datapanelconfiguration-i.md)&gt; | 是 |
 
 ## strokeWidth
 
@@ -72,8 +66,6 @@ strokeWidth(value: Length)
 设置圆环粗细。数据面板的类型为DataPanelType.Line时该属性不生效。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,8 +89,6 @@ trackBackgroundColor(value: ResourceColor)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -120,8 +110,6 @@ trackShadow(value: DataPanelShadowOptions)
 设置投影样式。若设置了本属性，则投影效果由本属性控制，closeEffect对投影效果的控制不再生效（closeEffect对旋转动效的控制不受影响）。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -145,8 +133,6 @@ valueColors(value: Array<ResourceColor | LinearGradient>)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -157,4 +143,4 @@ valueColors(value: Array<ResourceColor | LinearGradient>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Array & lt;ResourceColor \ | [LinearGradient](arkts-arkui-lineargradient-c.md)&gt; | 是 |
+| value | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt; | 是 |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getPartitionTable
@@ -15,8 +15,6 @@ function getPartitionTable(diskId: string): Promise<PartitionTableInfo>
 Obtains partition table information based on the disk ID. This API uses a promise to return the result.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 

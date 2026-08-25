@@ -2,11 +2,9 @@
 
 Defines the grid container attribute from inheritance Column@extends ColumnAttribute
 
-**Inheritance/Implementation:** GridContainerAttribute extends ColumnAttribute
+**Inheritance/Implementation:** GridContainerAttribute extends [ColumnAttribute](arkts-arkui-column-attribute.md#columnattribute)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

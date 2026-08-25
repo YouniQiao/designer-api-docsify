@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('wifiStateChange')
@@ -15,8 +15,6 @@ function on(type: 'wifiStateChange', callback: Callback<number>): void
 Subscribe Wi-Fi status change events.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -44,8 +42,6 @@ Subscribe Wi-Fi connection change events.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** wifiConnectionChange
@@ -71,8 +67,6 @@ function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 Subscribe Wi-Fi scan status change events.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -100,8 +94,6 @@ Subscribe Wi-Fi rssi change events.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** wifiRssiChange
@@ -128,8 +120,6 @@ Subscribe Wi-Fi hotspot state change events.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** hotspotStateChange
@@ -145,22 +135,6 @@ Subscribe Wi-Fi hotspot state change events.
 | type | 'hotspotStateChange' | Yes |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-let recvHotspotStateChangeFunc = (result:number) => {
-    console.info("Receive hotspot state change event: " + result);
-}
-
-// Register an event.
-wifi.on("hotspotStateChange", recvHotspotStateChangeFunc);
-
-// Unregister an event.
-wifi.off("hotspotStateChange", recvHotspotStateChangeFunc);
-```
-
 
 ## on('p2pStateChange')
 
@@ -171,8 +145,6 @@ function on(type: 'p2pStateChange', callback: Callback<number>): void
 Subscribe P2P status change events.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -200,8 +172,6 @@ Subscribe P2P connection change events.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** p2pConnectionChange
@@ -227,8 +197,6 @@ function on(type: 'p2pDeviceChange', callback: Callback<WifiP2pDevice>): void
 Subscribe P2P local device change events.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -256,8 +224,6 @@ Subscribe P2P peer device change events.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** p2pPeerDeviceChange
@@ -284,8 +250,6 @@ Subscribe P2P persistent group change events.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** p2pPersistentGroupChange
@@ -311,8 +275,6 @@ function on(type: 'p2pDiscoveryChange', callback: Callback<number>): void
 Subscribe P2P discovery events.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 

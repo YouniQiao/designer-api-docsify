@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isNotificationEnabledSync
@@ -15,8 +15,6 @@ function isNotificationEnabledSync(): boolean
 Synchronously queries the notification authorization status of the current application.This API is used to quickly check whether the current application is allowed to send notifications before publishing. It is synchronous and returns the result immediately after being called, suitable for scenarios where the enabled status needs to be obtained in a synchronous code flow.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -37,10 +35,3 @@ requestEnableNotification requests notification
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-```TypeScript
-let enabled: boolean = notificationManager.isNotificationEnabledSync();
-console.info(`isNotificationEnabledSync success, data is : ${JSON.stringify(enabled)}`);
-```

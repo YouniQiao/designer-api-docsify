@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'kits/@kit.ArkTS';
 ```
 
 ## getUidForName
@@ -15,8 +15,6 @@ function getUidForName(v: string): number
 Obtains the UID of a user from the user database of the system based on the specified user name.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -35,14 +33,3 @@ Obtains the UID of a user from the user database of the system based on the spec
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | number |
-
-**Examples**
-
-```TypeScript
-let pres = process.getUidForName("tool");
-```
-
-```TypeScript
-let pro = new process.ProcessManager();
-let pres = pro.getUidForName("tool");
-```

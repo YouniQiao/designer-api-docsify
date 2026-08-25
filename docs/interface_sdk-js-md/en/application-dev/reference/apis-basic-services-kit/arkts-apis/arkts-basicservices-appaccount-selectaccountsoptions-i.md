@@ -4,14 +4,12 @@ Defines the options for selecting accounts.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## allowedAccounts
@@ -25,8 +23,6 @@ Array of allowed accounts. By default, no value is passed in.
 **Type:** Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -42,8 +38,6 @@ Array of the owners of the allowed accounts. By default, no value is passed in.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.AppAccount
 
 ## requiredLabels
@@ -57,7 +51,5 @@ Labels of the authenticator. By default, no value is passed in.
 **Type:** Array&lt;string&gt;
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.AppAccount

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'kits/@kit.LocationKit';
 ```
 
 ## flushCachedGnssLocations
@@ -15,8 +15,6 @@ function flushCachedGnssLocations(callback: AsyncCallback<boolean>): void
 读取并清空GNSS芯片所有缓存位置。使用callback异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -32,27 +30,6 @@ function flushCachedGnssLocations(callback: AsyncCallback<boolean>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**示例**
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.flushCachedGnssLocations((err, result) => {
-    if (err) {
-        console.info('flushCachedGnssLocations: err=' + JSON.stringify(err));
-    }
-    if (result) {
-        console.info('flushCachedGnssLocations: result=' + JSON.stringify(result));
-    }
-});
-```
-
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.flushCachedGnssLocations().then((result) => {
-    console.info('promise, flushCachedGnssLocations: ' + JSON.stringify(result));
-});
-```
-
 
 ## flushCachedGnssLocations
 
@@ -63,8 +40,6 @@ function flushCachedGnssLocations(): Promise<boolean>
 读取并清空GNSS芯片所有缓存位置。使用Promise异步回调。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -79,7 +54,3 @@ function flushCachedGnssLocations(): Promise<boolean>
 | 类型 |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**示例**
-
-参见 [flushCachedGnssLocations](#flushcachedgnsslocations)

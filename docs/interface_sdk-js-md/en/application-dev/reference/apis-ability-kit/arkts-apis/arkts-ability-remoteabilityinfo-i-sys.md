@@ -7,8 +7,6 @@ The module provides information about a remote ability, which can be obtained th
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
@@ -24,8 +22,6 @@ Element name information of the remote ability.
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -43,8 +39,6 @@ Icon of the remote ability.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
 **System API:** This is a system API.
@@ -60,8 +54,6 @@ Label of the remote ability.
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 

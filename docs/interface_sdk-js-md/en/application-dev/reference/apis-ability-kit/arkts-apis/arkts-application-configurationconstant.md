@@ -4,8 +4,6 @@ The ConfigurationConstant module provides the enumerated values of the environme
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [ConfigurationConstant/ConfigurationConstant](arkts-app-ability-configurationconstant.md)

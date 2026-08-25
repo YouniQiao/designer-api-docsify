@@ -4,8 +4,6 @@ Flags说明。用于表示处理Want的方式。
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [Flags](arkts-ability-wantconstant-flags-e.md)
@@ -21,8 +19,6 @@ FLAG_AUTH_READ_URI_PERMISSION = 0x00000001
 指示对URI执行读取操作的授权。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -40,8 +36,6 @@ FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **替代接口：** [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#flag_auth_write_uri_permission)
@@ -58,8 +52,6 @@ FLAG_ABILITY_FORWARD_RESULT = 0x00000004
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -73,8 +65,6 @@ FLAG_ABILITY_CONTINUATION = 0x00000008
 确定是否可以将本地设备上的功能迁移到远程设备。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -90,8 +80,6 @@ FLAG_NOT_OHOS_COMPONENT = 0x00000010
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -105,8 +93,6 @@ FLAG_ABILITY_FORM_ENABLED = 0x00000020
 指定是否启动某个能力。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -122,8 +108,6 @@ FLAG_ABILITYSLICE_MULTI_DEVICE = 0x00000100
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -138,8 +122,6 @@ FLAG_START_FOREGROUND_ABILITY = 0x00000200
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -153,8 +135,6 @@ FLAG_INSTALL_ON_DEMAND = 0x00000800
 如果未安装指定的功能，请安装该功能。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -172,8 +152,6 @@ FLAG_INSTALL_WITH_BACKGROUND_MODE = 0x80000000
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -187,8 +165,6 @@ FLAG_ABILITY_CLEAR_MISSION = 0x00008000
 指示清除其他任务的操作。可以为传递给 **FeatureAbility** 中 [startAbility](arkts-ability-featureability-startability-f.md) 方法的**Want**设置此标志，并且必须与**FLAG_ABILITY_NEW_MISSION**一起使用。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 
@@ -204,8 +180,6 @@ FLAG_ABILITY_NEW_MISSION = 0x10000000
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **废弃版本：** 9
 
 **系统能力：** SystemCapability.Ability.AbilityBase
@@ -219,8 +193,6 @@ FLAG_ABILITY_MISSION_TOP = 0x20000000
 指示如果启动能力的现有实例已位于任务堆栈的顶部，则将重用该实例。否则，将创建一个新的能力实例。
 
 **起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
 
 **废弃版本：** 9
 

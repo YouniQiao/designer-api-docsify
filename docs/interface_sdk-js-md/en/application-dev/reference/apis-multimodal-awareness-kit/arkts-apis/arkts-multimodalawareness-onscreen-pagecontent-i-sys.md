@@ -4,8 +4,6 @@ Defines the onscreen content.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the onscreen content.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## bundleName
@@ -27,8 +25,6 @@ Bundle name of the onscreen content.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -46,8 +42,6 @@ Body of the onscreen content. This parameter is available only when **options.co
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -63,8 +57,6 @@ Page link of the onscreen content. This parameter is available only when **optio
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -82,8 +74,6 @@ Paragraph information of the onscreen content. This parameter is available only 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -100,8 +90,6 @@ Scenario of the onscreen content. This parameter is available only when **option
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -109,16 +97,14 @@ Scenario of the onscreen content. This parameter is available only when **option
 ## sessionId
 
 ```TypeScript
-sessionId: long
+sessionId: number
 ```
 
 Session ID, which identifies the call action.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -136,8 +122,6 @@ Title of the onscreen content. This parameter is available only when **options.c
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -145,16 +129,14 @@ Title of the onscreen content. This parameter is available only when **options.c
 ## windowId
 
 ```TypeScript
-windowId: int
+windowId: number
 ```
 
 Window ID of the onscreen content.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

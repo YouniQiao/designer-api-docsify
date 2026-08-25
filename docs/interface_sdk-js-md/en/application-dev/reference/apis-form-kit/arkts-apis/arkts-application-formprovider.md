@@ -4,8 +4,6 @@ The **FormProvider** module provides APIs related to the widget provider. You ca
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [formProvider](arkts-app-form-formprovider.md)

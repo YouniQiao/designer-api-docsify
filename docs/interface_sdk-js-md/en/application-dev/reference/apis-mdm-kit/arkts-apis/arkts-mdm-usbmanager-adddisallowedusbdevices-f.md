@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedUsbDevices
@@ -13,7 +13,11 @@ function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>):
 ```
 
 Adds disallowed USB device types.Use cases:  
-- Disable specific types of USB devices in enterprise security management scenarios. - Prevent data leaks by disabling USB storage device types. - Enable device administrators to prohibit the use of certain USB device types based on security policies. - Work with the [removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md) API to implement dynamic management of USB device types.
+- Disable specific types of USB devices in enterprise security management scenarios.  
+- Prevent data leaks by disabling USB storage device types.  
+- Enable device administrators to prohibit the use of certain USB device types based on security policies.  
+- Work with the [removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md) API to implement dynamic  
+management of USB device types.
 
 > **NOTE：**&gt;
 > The [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md) API is recommended.
@@ -24,8 +28,6 @@ Adds disallowed USB device types.Use cases:
 4. Disallowed USB device types have been added via [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md).
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -49,28 +51,3 @@ Adds disallowed USB device types.Use cases:
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let usbDevices: Array<usbManager.UsbDeviceType> = [{
-      baseClass: 8,
-      subClass: 0,
-      protocol: 0,
-      descriptor: usbManager.Descriptor.INTERFACE
-  }];
-  usbManager.addDisallowedUsbDevices(wantTemp, usbDevices);
-  console.info(`Succeeded in adding disallowed USB devices.`);
-} catch (err) {
-  console.error(`Failed to add disallowed USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```

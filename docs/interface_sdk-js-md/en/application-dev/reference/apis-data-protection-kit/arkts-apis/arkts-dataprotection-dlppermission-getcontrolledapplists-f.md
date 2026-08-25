@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getControlledAppLists
@@ -19,8 +19,6 @@ Obtains the list of applications controlled by enterprise DLP for the current us
 > [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Required permissions:** ohos.permission.DLP_POLICY_MANAGER
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## disableSuperAdmin
@@ -15,8 +15,6 @@ function disableSuperAdmin(bundleName: String, callback: AsyncCallback<void>): v
 根据bundleName将超级设备管理应用解除激活。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -42,37 +40,6 @@ function disableSuperAdmin(bundleName: String, callback: AsyncCallback<void>): v
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-
-adminManager.disableSuperAdmin(bundleName, (err) => {
-  if (err) {
-    console.error(`Failed to disable super admin. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in disabling super admin');
-});
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-
-adminManager.disableSuperAdmin(bundleName).catch((err: BusinessError) => {
-  console.error(`Failed to disable super admin. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 
 ## disableSuperAdmin
 
@@ -83,8 +50,6 @@ function disableSuperAdmin(bundleName: String): Promise<void>
 根据bundleName将超级设备管理应用解除激活。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
@@ -114,7 +79,3 @@ function disableSuperAdmin(bundleName: String): Promise<void>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [disableSuperAdmin](#disablesuperadmin)

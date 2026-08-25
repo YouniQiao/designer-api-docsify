@@ -4,14 +4,12 @@ The **Picker** module encapsulates APIs such as **DocumentViewPicker**, **AudioV
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'kits/@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -39,15 +37,6 @@ import { picker } from '@kit.CoreFileKit';
 | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c-sys.md) |
 | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c-sys.md) |
 <!--DelEnd-->
-
-### Interfaces
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-i.md) |
-| [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-i.md) |
-| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-i.md) |
-| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-i.md) |
 
 ### Enums
 

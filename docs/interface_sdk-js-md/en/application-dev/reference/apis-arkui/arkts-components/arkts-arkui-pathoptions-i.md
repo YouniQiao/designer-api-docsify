@@ -9,8 +9,6 @@ Describes the options of the path.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,11 +24,9 @@ commands?: ResourceStr
 
 Command string for drawing the path. If the value is invalid or the default value is used, the width and height required for the content are used. The default value is an empty string. An invalid value is handled as the default value.
 
-**Type:** ResourceStr
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,11 +42,9 @@ height?: Length
 
 Height of the rectangle where the path is located. If the value is invalid or the default value is used, the height required for the content is used. Default Unit: vp.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,11 +60,9 @@ width?: Length
 
 Width of the rectangle where the path is located. If the value is invalid or the default value is used, the width required for the content is used. Default Unit: vp.
 
-**Type:** Length
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

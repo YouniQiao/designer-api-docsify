@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityLabel } from '@kit.CoreFileKit';
+import { securityLabel } from 'kits/@kit.CoreFileKit';
 ```
 
 ## setSecurityLabelSync
@@ -15,8 +15,6 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 以同步方法设置文件或目录的数据安全等级，用于实现文件的分级管理和访问控制。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -39,10 +37,3 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 | 13900037 |
 | 13900041 |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + '/test.txt';
-securityLabel.setSecurityLabelSync(filePath, "s0");
-```

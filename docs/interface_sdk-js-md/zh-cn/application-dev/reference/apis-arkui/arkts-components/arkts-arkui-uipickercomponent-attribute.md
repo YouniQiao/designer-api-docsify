@@ -6,8 +6,6 @@
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -25,8 +23,6 @@ canLoop(isLoop: Optional<boolean>)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -37,19 +33,17 @@ canLoop(isLoop: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isLoop | Optional & lt;boolean & gt; | 是 |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## displayedItemCount
 
 ```TypeScript
-displayedItemCount(count: Optional<int>)
+displayedItemCount(count: Optional<number>)
 ```
 
 设置UIPickerComponent容器可见选项的数量。未通过该接口设置时，可见选项的数量为7行。需要节省空间时减少可见项数量，需要提供更多预览信息时 增加可见项数量。此属性与[itemHeight](#itemheight)共同影响组件的显示效果，建议结合组件 height属性进行调整以保证完整显示。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,7 +55,7 @@ displayedItemCount(count: Optional<int>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| count | Optional & lt;number & gt; | 是 |
+| count | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 |
 
 ## enableHapticFeedback
 
@@ -74,8 +68,6 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -86,7 +78,7 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| enable | Optional & lt;boolean & gt; | 是 |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 |
 
 ## itemHeight
 
@@ -98,8 +90,6 @@ itemHeight(height: Optional<LengthMetrics>)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -110,7 +100,7 @@ itemHeight(height: Optional<LengthMetrics>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| height | Optional & lt;LengthMetrics & gt; | 是 |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 |
 
 ## onChange
 
@@ -127,8 +117,6 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -139,7 +127,7 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 |
 
 ## onScrollStop
 
@@ -159,8 +147,6 @@ onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -171,7 +157,7 @@ onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 |
 
 ## selectionIndicator
 
@@ -183,8 +169,6 @@ selectionIndicator(style: Optional<PickerIndicatorStyle>)
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -195,4 +179,4 @@ selectionIndicator(style: Optional<PickerIndicatorStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | Optional&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | 是 |

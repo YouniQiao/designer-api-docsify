@@ -4,8 +4,6 @@ ContextConstant提供Context相关的枚举，包含文件加密分区等级、U
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,7 +11,7 @@ ContextConstant提供Context相关的枚举，包含文件加密分区等级、U
 ## 导入模块
 
 ```TypeScript
-import { contextConstant } from '@kit.AbilityKit';
+import { contextConstant } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

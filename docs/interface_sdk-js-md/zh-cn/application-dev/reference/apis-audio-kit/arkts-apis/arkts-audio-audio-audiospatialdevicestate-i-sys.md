@@ -4,8 +4,6 @@
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -13,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## address
@@ -27,8 +25,6 @@ address: string
 **类型：** string
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -46,8 +42,6 @@ isHeadTrackingSupported: boolean
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
@@ -63,8 +57,6 @@ isSpatializationSupported: boolean
 **类型：** boolean
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -82,21 +74,6 @@ spatialDeviceType: AudioSpatialDeviceType
 
 **起始版本：** 11
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
 **系统接口：** 此接口为系统接口。
-
-**示例**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let spatialDeviceState: audio.AudioSpatialDeviceState = {
-  address: "123",
-  isSpatializationSupported: true,
-  isHeadTrackingSupported: true,
-  spatialDeviceType: audio.AudioSpatialDeviceType.SPATIAL_DEVICE_TYPE_IN_EAR_HEADPHONE
-};
-```

@@ -15,8 +15,6 @@ Obtains the **AbilityDelegatorArgs** object of the application.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md)
@@ -28,14 +26,3 @@ Obtains the **AbilityDelegatorArgs** object of the application.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) |
-
-**Examples**
-
-```TypeScript
-import AbilityDelegatorRegistry from '@ohos.application.abilityDelegatorRegistry';
-
-let args = AbilityDelegatorRegistry.getArguments();
-console.info(`getArguments bundleName: ${args.bundleName}`);
-console.info(`getArguments testCaseNames: ${args.testCaseNames}`);
-console.info(`getArguments testRunnerClassName: ${args.testRunnerClassName}`);
-```

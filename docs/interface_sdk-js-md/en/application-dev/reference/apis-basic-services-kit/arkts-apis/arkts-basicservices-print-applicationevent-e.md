@@ -4,8 +4,6 @@ Enumerates print application events.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## APPLICATION_CREATED
@@ -17,8 +15,6 @@ APPLICATION_CREATED = 0
 Starts the print application.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -32,8 +28,6 @@ Closes the print application by clicking **Start**.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Print.PrintFramework
 
 ## APPLICATION_CLOSED_FOR_CANCELED
@@ -45,7 +39,5 @@ APPLICATION_CLOSED_FOR_CANCELED = 2
 Closes the print application by clicking **Cancel**.
 
 **Since:** 14
-
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Print.PrintFramework

@@ -4,8 +4,6 @@ Enumerates the types of window rotation events.
 
 **Since:** 19
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## WINDOW_WILL_ROTATE
@@ -17,8 +15,6 @@ WINDOW_WILL_ROTATE = 0
 The window is about to rotate.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -33,8 +29,6 @@ WINDOW_DID_ROTATE = 1
 The window has finished rotating.
 
 **Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

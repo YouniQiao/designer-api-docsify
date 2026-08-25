@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'kits/@kit.NetworkKit';
 ```
 
 ## getStatsTxBytes
 
 ```TypeScript
-function getStatsTxBytes(callback: AsyncCallback<int>): void
+function getStatsTxBytes(callback: AsyncCallback<number>): void
 ```
 
 获取共享网络发送数据量，使用 callback 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -28,7 +26,7 @@ function getStatsTxBytes(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
@@ -40,44 +38,16 @@ function getStatsTxBytes(callback: AsyncCallback<int>): void
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
 
-**示例**
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing.getStatsTxBytes((error: BusinessError, data: number) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
-
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing
-  .getStatsTxBytes()
-  .then((data: number) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
-
 
 ## getStatsTxBytes
 
 ```TypeScript
-function getStatsTxBytes(): Promise<int>
+function getStatsTxBytes(): Promise<number>
 ```
 
 获取共享网络发送数据量，使用 Promise 异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -89,7 +59,7 @@ function getStatsTxBytes(): Promise<int>
 
 | 类型 |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;int & gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -100,7 +70,3 @@ function getStatsTxBytes(): Promise<int>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) |
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) |
-
-**示例**
-
-参见 [getStatsTxBytes](#getstatstxbytes)

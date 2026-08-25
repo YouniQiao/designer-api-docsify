@@ -4,8 +4,6 @@ Defines the information about the code signature file.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -15,7 +13,7 @@ Defines the information about the code signature file.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## moduleName
@@ -29,8 +27,6 @@ Module name of the bundle.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 
@@ -49,8 +45,6 @@ Path of the code signature file.
 **Type:** string
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Deprecated since:** 11
 

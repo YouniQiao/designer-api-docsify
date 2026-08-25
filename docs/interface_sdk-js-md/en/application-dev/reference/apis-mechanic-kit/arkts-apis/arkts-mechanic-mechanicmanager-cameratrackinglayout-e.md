@@ -1,10 +1,8 @@
 # CameraTrackingLayout
 
-Enumerates the camera tracking layouts. @enum { int }
+Enumerates the camera tracking layouts. @enum { number }
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -18,8 +16,6 @@ Default layout.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 ## LEFT
@@ -31,8 +27,6 @@ LEFT = 1
 Left-side layout.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -46,8 +40,6 @@ Middle layout.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Mechanic.Core
 
 ## RIGHT
@@ -59,7 +51,5 @@ RIGHT = 3
 Right-side layout.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Mechanic.Core

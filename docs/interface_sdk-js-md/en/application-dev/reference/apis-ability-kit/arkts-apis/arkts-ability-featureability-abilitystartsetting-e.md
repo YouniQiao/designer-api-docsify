@@ -4,8 +4,6 @@ Defines the window property corresponding to this ability. The **abilityStartSet
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
 ## BOUNDS_KEY
@@ -17,8 +15,6 @@ BOUNDS_KEY = 'abilityBounds'
 Ability window size.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -34,8 +30,6 @@ Ability window display mode.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -50,16 +44,6 @@ Display device ID.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
-
-**Examples**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-featureAbility.AbilityStartSetting.BOUNDS_KEY
-```

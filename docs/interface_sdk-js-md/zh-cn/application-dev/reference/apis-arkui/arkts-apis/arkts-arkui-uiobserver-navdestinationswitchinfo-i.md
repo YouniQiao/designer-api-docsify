@@ -4,14 +4,12 @@ Navigation组件页面切换的信息。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'kits/@kit.ArkUI';
 ```
 
 ## context
@@ -22,11 +20,9 @@ context: UIAbilityContext | UIContext
 
 The context of the navigation operation.
 
-**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +38,9 @@ from: NavDestinationInfo | NavBar
 
 From navigation content info.
 
-**类型：** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
+**类型：** NavDestinationInfo \| [NavBar](../arkts-components/arkts-arkui-navbar-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,11 +56,9 @@ operation: NavigationOperation
 
 The operation type.
 
-**类型：** [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md)
+**类型：** [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,11 +74,9 @@ to: NavDestinationInfo | NavBar
 
 To navigation content info.
 
-**类型：** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
+**类型：** NavDestinationInfo \| [NavBar](../arkts-components/arkts-arkui-navbar-t.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

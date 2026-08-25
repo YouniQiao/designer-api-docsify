@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## on('checkNotification')
@@ -15,8 +15,6 @@ function on(type: 'checkNotification', callback: (checkInfo: NotificationCheckIn
 Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications.Each [SlotType](arkts-notification-notificationmanager-slottype-e.md) in the system can have only one registrant.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -39,45 +37,6 @@ Subscribes to notification events. The notification service sends the notificati
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onCheckNotification = (info : notificationManager.NotificationCheckInfo): notificationManager.NotificationCheckResult => {
-    console.info(`====>OnCheckNotification info: ${JSON.stringify(info)}`);
-    if(info.notificationId == 1){
-        let result: notificationManager.NotificationCheckResult =  { code: 1, message: "testMsg1"};
-        return result;
-    } else {
-        let result: notificationManager.NotificationCheckResult =   { code: 0, message: "testMsg0"};
-        return result;
-    }
-}
-try{
-    notificationManager.on("checkNotification", onCheckNotification);
-} catch (err){
-    console.error(`notificationManager.on failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-  notificationManager.on('checkNotification',{
-    contentType: notificationManager.ContentType.NOTIFICATION_CONTENT_LIVE_VIEW,
-    slotType: notificationManager.SlotType.LIVE_VIEW ,
-    extraInfoKeys: ["event"],
-  },
-    async (checkInfo)=>{
-      return { code: 1, message: "INVALID_PARAMETERS"};
-  },);
-} catch (err) {
-  console.error(`notificationManager.on failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
 
 ## on('checkNotification')
 
@@ -89,8 +48,6 @@ function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
 Subscribes to notification events. The notification service sends the notification information in the callback to the verification program. The verification program returns the verification result to determine whether to publish the notification, for example, controlling the publication frequency of marketing notifications. This API uses a promise to return the result.Each [SlotType](arkts-notification-notificationmanager-slottype-e.md) in the system can have only one registrant.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 11
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
@@ -116,7 +73,3 @@ Subscribes to notification events. The notification service sends the notificati
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-See on

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getRemoteProductId
@@ -15,8 +15,6 @@ function getRemoteProductId(deviceId: string): string
 Obtains the product ID of a remote device.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** 
 - API version 11 - 15: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
@@ -50,13 +48,3 @@ Obtains the product ID of a remote device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-```TypeScript
-try {
-  let remoteDeviceProductId = connection.getRemoteProductId('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-  console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```

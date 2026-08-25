@@ -17,10 +17,10 @@ ArrayList is a linear data structure that is implemented based on arrays. ArrayL
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
-import { ArrayListComparatorFn } from '@kit.ArkTS';
-import { ArrayListForEachCb } from '@kit.ArkTS';
-import { ArrayListReplaceCb } from '@kit.ArkTS';
+import { ArrayList } from 'kits/@kit.ArkTS';
+import { ArrayListComparatorFn } from 'kits/@kit.ArkTS';
+import { ArrayListForEachCb } from 'kits/@kit.ArkTS';
+import { ArrayListReplaceCb } from 'kits/@kit.ArkTS';
 ```
 
 ## Summary
@@ -36,5 +36,3 @@ import { ArrayListReplaceCb } from '@kit.ArkTS';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md) |
-| [ArrayListForEachCb](arkts-arkts-arraylistforeachcb-t.md) |
-| [ArrayListReplaceCb](arkts-arkts-arraylistreplacecb-t.md) |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## on
@@ -15,8 +15,6 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 开启屏幕状态变化的监听。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,16 +34,6 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-let callback: Callback<number> = (data: number) => {
-  console.info(`Succeeded in registering the callback for screen changes. Data: ${data}`);
-};
-// 开启屏幕连接事件的监听
-screen.on('connect', callback);
-```
-
 
 ## on
 
@@ -56,8 +44,6 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 开启屏幕状态变化的监听。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -77,10 +63,6 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-参见 [on](#on)
-
 
 ## on
 
@@ -91,8 +73,6 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 开启屏幕状态变化的监听。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -111,7 +91,3 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [on](#on)

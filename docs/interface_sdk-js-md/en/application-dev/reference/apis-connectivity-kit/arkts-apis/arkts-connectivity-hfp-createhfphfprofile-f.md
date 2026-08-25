@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from '@kit.ConnectivityKit';
+import { hfp } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## createHfpHfProfile
@@ -15,8 +15,6 @@ function createHfpHfProfile(): HandsFreeHfProfile
 create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile).
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

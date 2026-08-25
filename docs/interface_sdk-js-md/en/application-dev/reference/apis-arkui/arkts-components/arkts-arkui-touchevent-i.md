@@ -6,8 +6,6 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). In non-event injection sc
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -24,8 +22,6 @@ getHistoricalPoints(): Array<HistoricalPoint>
 Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device. This API can be called only in [TouchEvent](#touchevent). This API is only available within [TouchEvent](#touchevent) during [onTouch](arkts-arkui-commonmethod-c.md#ontouch) invocations. Typically, [onTouch](arkts-arkui-commonmethod-c.md#ontouch) is invoked once per frame. If multiple [TouchEvent](#touchevent) instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may occur.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +46,6 @@ Blocks the default event.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -74,8 +68,6 @@ Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#even
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -91,8 +83,6 @@ Information about touch points that changed and triggered the event. When using 
 **Type:** [TouchObject](arkts-arkui-touchobject-i.md)[]
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,8 +100,6 @@ Unique identifier for event processing.Value range: [0, +∞)
 **Type:** number
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,8 +119,6 @@ Information about all touch points (for multi-touch). Each element represents on
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -145,11 +131,9 @@ type: TouchType
 
 Type of the touch event.
 
-**Type:** TouchType
+**Type:** [TouchType](../arkts-apis/arkts-arkui-touchtype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

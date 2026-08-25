@@ -4,38 +4,14 @@ HashSet is implemented based on HashMap. In HashSet, only the value object is pr
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
+import { HashSet } from 'kits/@kit.ArkTS';
+import { HashSetCbFn } from 'kits/@kit.ArkTS';
 ```
-
-## $_iterator
-
-```TypeScript
-$_iterator(): IterableIterator<T>
-```
-
-returns an iterator.Each item of the iterator is a Javascript Object
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Return value:**
-
-| [Type](arkts-arkts-util-type-e.md) |
-| --- |
-| IterableIterator & lt;T & gt; |
 
 ## [Symbol.iterator]
 
@@ -47,8 +23,6 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -57,49 +31,13 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;T & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-
-// Method 1:
-for (let item of hashSet) {
-  console.info("value: " + item);
-}
-// value: squirrel
-// value: sparrow
-
-// Method 2:
-let iter = hashSet[Symbol.iterator]();
-let temp: IteratorResult<string> = iter.next();
-while(!temp.done) {
-  console.info("value: " + temp.value);
-  temp = iter.next();
-}
-// value: squirrel
-// value: sparrow
-```
-
-```TypeScript
-// You are not advised to use the set or remove APIs in Symbol.iterator because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
-let hashSet = new HashSet<string>();
-for(let i = 0;i < 10;i++) {
-  hashSet.add("sparrow" + i);
-}
-for(let i = 0;i < 10;i++) {
-  hashSet.remove("sparrow" + i);
-}
-```
 
 ## add
 
@@ -110,8 +48,6 @@ add(value: T): boolean
 Adds elements to this HashSet.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -135,14 +71,6 @@ Adds elements to this HashSet.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let hashSet = new HashSet<string>();
-let result = hashSet.add("squirrel");
-console.info("result:", result);  // result: true
-```
-
 ## clear
 
 ```TypeScript
@@ -153,8 +81,6 @@ Clears this HashSet and sets its length to **0**.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -164,17 +90,6 @@ Clears this HashSet and sets its length to **0**.
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-hashSet.clear();
-let result = hashSet.isEmpty();
-console.info("result:", result);  // result: true
-```
 
 ## constructor
 
@@ -186,8 +101,6 @@ A constructor used to create a **HashSet** instance.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -197,12 +110,6 @@ A constructor used to create a **HashSet** instance.
 | Error Code ID |
 | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
-
-**Examples**
-
-```TypeScript
-let hashSet = new HashSet<number>();
-```
 
 ## entries
 
@@ -214,8 +121,6 @@ Returns an iterator that contains all the elements in this HashSet.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -224,43 +129,13 @@ Returns an iterator that contains all the elements in this HashSet.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;[T, T] & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[T, T]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-let iter = hashSet.entries();
-let temp: IteratorResult<[string, string]> = iter.next();
-while(!temp.done) {
-  console.info("key:" + temp.value[0]);
-  console.info("value:" + temp.value[1]);
-  temp = iter.next();
-}
-// key:squirrel
-// value:squirrel
-// key:sparrow
-// value:sparrow
-```
-
-```TypeScript
-// You are not advised to use the set or remove APIs in entries because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
-let hashSet = new HashSet<string>();
-for(let i = 0; i < 10; i++) {
-  hashSet.add("sparrow" + i);
-}
-for(let i = 0; i < 10; i++) {
-  hashSet.remove("sparrow" + i);
-}
-```
 
 ## forEach
 
@@ -271,8 +146,6 @@ forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Ob
 Uses a callback to traverse each element.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -291,56 +164,6 @@ Uses a callback to traverse each element.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let hashSet = new HashSet<string>();
-hashSet.add("sparrow");
-hashSet.add("squirrel");
-hashSet.forEach((value: string, key: string): void => {
-  console.info("value:" + value, "key:" + key);
-});
-// value:squirrel key:squirrel
-// value:sparrow key:sparrow
-```
-
-```TypeScript
-// You are not advised to use the add and remove APIs in forEach because they may cause unpredictable risks such as infinite loops. You can use the for loop when inserting or deleting data.
-let hashSet = new HashSet<string>();
-for(let i = 0; i < 10; i++) {
-  hashSet.add("sparrow" + i);
-}
-for(let i = 0; i < 10; i++) {
-  hashSet.remove("sparrow" + i);
-}
-```
-
-## forEach
-
-```TypeScript
-forEach(callbackFn: HashSetCbFn<T>): void
-```
-
-Iterates over all elements in the HashSet and executes a callback function for each element.
-
-**Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callbackFn | [HashSetCbFn](arkts-arkts-hashsetcbfn-t.md)&lt;T&gt; | Yes |
-
-**Examples**
-
-See [forEach](#foreach)
-
 ## has
 
 ```TypeScript
@@ -350,8 +173,6 @@ has(value: T): boolean
 Checks whether this HashSet has the specified element.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -374,15 +195,6 @@ Checks whether this HashSet has the specified element.
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-let result = hashSet.has("squirrel");
-console.info("result:", result);  // result: true
-```
 
 ## isEmpty
 
@@ -394,8 +206,6 @@ Checks whether this HashSet is empty (contains no element).
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -412,14 +222,6 @@ Checks whether this HashSet is empty (contains no element).
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-const hashSet = new HashSet<number>();
-let result = hashSet.isEmpty();
-console.info("result:", result);  // result: true
-```
-
 ## remove
 
 ```TypeScript
@@ -429,8 +231,6 @@ remove(value: T): boolean
 Removes an element from this HashSet.
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -454,16 +254,6 @@ Removes an element from this HashSet.
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
-**Examples**
-
-```TypeScript
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-let result = hashSet.remove("sparrow");
-console.info("result:", result);  // result: true
-```
-
 ## values
 
 ```TypeScript
@@ -474,8 +264,6 @@ Returns an iterator that contains all the values in this HashSet.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
@@ -484,27 +272,13 @@ Returns an iterator that contains all the values in this HashSet.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| IterableIterator & lt;T & gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-
-**Examples**
-
-```TypeScript
-let hashSet = new HashSet<string>();
-hashSet.add("squirrel");
-hashSet.add("sparrow");
-let values = hashSet.values();
-for (let value of values) {
-  console.info("value:", value);
-}
-// value: squirrel
-// value: sparrow
-```
 
 ## length
 
@@ -517,8 +291,6 @@ Number of elements in a HashSet.
 **Type:** number
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

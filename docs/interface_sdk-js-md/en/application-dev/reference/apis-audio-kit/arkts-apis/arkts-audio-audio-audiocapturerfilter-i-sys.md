@@ -4,8 +4,6 @@ Describe audio capturer filter.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Describe audio capturer filter.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'kits/@kit.AudioKit';
 ```
 
 ## capturerInfo
@@ -28,8 +26,6 @@ Capturer information.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 
 **System API:** This is a system API.
@@ -37,31 +33,15 @@ Capturer information.
 ## uid
 
 ```TypeScript
-uid?: int
+uid?: number
 ```
 
 Application uid.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
 **System API:** This is a system API.
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let inputAudioCapturerFilter: audio.AudioCapturerFilter = {
-    uid : 20010041,
-    capturerInfo : {
-        source: audio.SourceType.SOURCE_TYPE_MIC,
-        capturerFlags: 0
-    }
-};
-```

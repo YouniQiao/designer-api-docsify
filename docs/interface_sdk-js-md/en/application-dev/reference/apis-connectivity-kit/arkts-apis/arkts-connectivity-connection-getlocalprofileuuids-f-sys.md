@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getLocalProfileUuids
@@ -15,8 +15,6 @@ function getLocalProfileUuids(callback: AsyncCallback<Array<ProfileUuids>>): voi
 Obtains the profile UUIDs supported by the local device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -44,32 +42,6 @@ Obtains the profile UUIDs supported by the local device.
 | 2900003 |
 | 2900099 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.getLocalProfileUuids((err: BusinessError, data: Array<connection.ProfileUuids>) => {
-        console.info('getLocalProfileUuids, err: ' + JSON.stringify(err) + ', data: ' + JSON.stringify(data));
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.getLocalProfileUuids().then(() => {
-        console.info('getLocalProfileUuids');
-    }, (err: BusinessError) => {
-        console.error('getLocalProfileUuids: errCode' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 
 ## getLocalProfileUuids
 
@@ -80,8 +52,6 @@ function getLocalProfileUuids(): Promise<Array<ProfileUuids>>
 Obtains the profile UUIDs supported by the local device.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -108,7 +78,3 @@ Obtains the profile UUIDs supported by the local device.
 | 2900001 |
 | 2900003 |
 | 2900099 |
-
-**Examples**
-
-See [getLocalProfileUuids](#getlocalprofileuuids)

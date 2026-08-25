@@ -4,8 +4,6 @@ Defines the paragraph information.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -13,22 +11,20 @@ Defines the paragraph information.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
 ```
 
 ## chapterId
 
 ```TypeScript
-chapterId?: int
+chapterId?: number
 ```
 
 Chapter ID of the paragraph, which is the identifier of each subchapter.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -37,16 +33,14 @@ Chapter ID of the paragraph, which is the identifier of each subchapter.
 ## hookId
 
 ```TypeScript
-hookId?: long
+hookId?: number
 ```
 
 Hook ID of the paragraph, which is the identifier of each main paragraph.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
@@ -64,8 +58,6 @@ Content of the paragraph.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 
 **System API:** This is a system API.
@@ -81,8 +73,6 @@ Title of the paragraph.
 **Type:** string
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
 

@@ -15,8 +15,6 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md)
@@ -34,45 +32,6 @@ Obtains the widget information provided by a given application on the device. Th
 | bundleName | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', (error: Base.BusinessError, data: formInfo.FormInfo[]) => {
-  if (error.code) {
-    console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: Base.BusinessError, data: formInfo.FormInfo[]) => {
-  if (error.code) {
-    console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-  }
-});
-```
-
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
-  console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-});
-```
-
 
 ## getFormsInfo
 
@@ -87,8 +46,6 @@ function getFormsInfo(
 Obtains the widget information provided by a given application on the device. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -108,10 +65,6 @@ Obtains the widget information provided by a given application on the device. Th
 | moduleName | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes |
 
-**Examples**
-
-See [getFormsInfo](#getformsinfo)
-
 
 ## getFormsInfo
 
@@ -122,8 +75,6 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 Obtains the widget information provided by a given application on the device. This API uses a promise to return the result.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -147,7 +98,3 @@ Obtains the widget information provided by a given application on the device. Th
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |
-
-**Examples**
-
-See [getFormsInfo](#getformsinfo)

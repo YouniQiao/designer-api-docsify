@@ -42,8 +42,6 @@ Creates a **Grid** component.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -52,7 +50,7 @@ Creates a **Grid** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| scroller | [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md) | No |
+| scroller | [Scroller](arkts-arkui-scroller-c.md) | No |
 | layoutOptions | [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) | No |
 
 ## Summary
@@ -66,9 +64,6 @@ Creates a **Grid** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [OnGetStartIndexByIndexCallback](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md) |
-| [OnGetStartIndexByOffsetCallback](arkts-arkui-ongetstartindexbyoffsetcallback-t-sys.md) |
-| [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md) |
 
 ### Enums
 

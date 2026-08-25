@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## registerMissionListener
@@ -15,8 +15,6 @@ function registerMissionListener(parameter: MissionDeviceInfo, options: MissionC
 Registers a mission status listener. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -41,79 +39,6 @@ Registers a mission status listener. This API uses an asynchronous callback to r
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Implement a callback function.
-function NotifyMissionsChanged(deviceId: string): void {
-  console.info('NotifyMissionsChanged deviceId ' + JSON.stringify(deviceId));
-}
-function NotifySnapshot(deviceId: string, missionId: number): void {
-  console.info('NotifySnapshot deviceId ' + JSON.stringify(deviceId));
-  console.info('NotifySnapshot missionId ' + JSON.stringify(missionId));
-}
-function NotifyNetDisconnect(deviceId: string, state: number): void {
-  console.info('NotifyNetDisconnect deviceId ' + JSON.stringify(deviceId));
-  console.info('NotifyNetDisconnect state ' + JSON.stringify(state));
-}
-try {
-  // Call registerMissionListener.
-  distributedMissionManager.registerMissionListener(
-    { deviceId: "" },
-    {
-      notifyMissionsChanged: NotifyMissionsChanged,
-      notifySnapshot: NotifySnapshot,
-      notifyNetDisconnect: NotifyNetDisconnect
-    },
-    (error: BusinessError) => {
-      if (error) {
-        console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
-        return;
-      }
-      console.info('registerMissionListener finished');
-    });
-} catch (error) {
-  console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
-}
-```
-
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Implement a callback function.
-function NotifyMissionsChanged(deviceId: string): void {
-  console.info('NotifyMissionsChanged deviceId ' + JSON.stringify(deviceId));
-}
-function NotifySnapshot(deviceId: string, missionId: number): void {
-  console.info('NotifySnapshot deviceId ' + JSON.stringify(deviceId));
-  console.info('NotifySnapshot missionId ' + JSON.stringify(missionId));
-}
-function NotifyNetDisconnect(deviceId: string, state: number): void {
-  console.info('NotifyNetDisconnect deviceId ' + JSON.stringify(deviceId));
-  console.info('NotifyNetDisconnect state ' + JSON.stringify(state));
-}
-try {
-    // Call registerMissionListener.
-    distributedMissionManager.registerMissionListener(
-      { deviceId: "" },
-      {
-        notifyMissionsChanged: NotifyMissionsChanged,
-        notifySnapshot: NotifySnapshot,
-        notifyNetDisconnect: NotifyNetDisconnect
-      }).then(() => {
-        console.info('registerMissionListener finished. ');
-    }).catch((error: BusinessError) => {
-        console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
-    })
-} catch (error) {
-    console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
-}
-```
-
 
 ## registerMissionListener
 
@@ -124,8 +49,6 @@ function registerMissionListener(parameter: MissionDeviceInfo, options: MissionC
 Registers a mission status listener. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -154,7 +77,3 @@ Registers a mission status listener. This API uses a promise to return the resul
 | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [registerMissionListener](#registermissionlistener)

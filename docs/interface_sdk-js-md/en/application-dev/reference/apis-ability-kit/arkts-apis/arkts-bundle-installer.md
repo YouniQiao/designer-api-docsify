@@ -7,8 +7,6 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -16,7 +14,7 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

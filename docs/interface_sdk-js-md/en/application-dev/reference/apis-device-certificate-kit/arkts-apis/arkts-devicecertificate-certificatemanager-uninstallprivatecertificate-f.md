@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 ```
 
 ## uninstallPrivateCertificate
@@ -15,8 +15,6 @@ function uninstallPrivateCertificate(keyUri: string, callback: AsyncCallback<voi
 Uninstalls a private credential. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -38,41 +36,6 @@ Uninstalls a private credential. This API uses an asynchronous callback to retur
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
 
-**Examples**
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-
-let uri: string = 'test'; /* The service needs to use the unique identifier of the credential to delete the private credential, which is not elaborated here. */
-try {
-  certificateManager.uninstallPrivateCertificate(uri, (err, result) => {
-    if (err != null) {
-      console.error(`Failed to uninstall private certificate. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info('Succeeded in uninstalling private certificate.');
-    }
-  });
-} catch (error) {
-  console.error(`Failed to uninstall private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri: string = 'test'; /* The service needs to use the unique identifier of the credential to delete the private credential, which is not elaborated here. */
-try {
-  certificateManager.uninstallPrivateCertificate(uri).then((cmResult) => {
-    console.info('Succeeded in uninstalling private certificate.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to uninstall private certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to uninstall private certificate. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 
 ## uninstallPrivateCertificate
 
@@ -83,8 +46,6 @@ function uninstallPrivateCertificate(keyUri: string): Promise<void>
 Uninstalls a private credential. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -110,7 +71,3 @@ Uninstalls a private credential. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) |
-
-**Examples**
-
-See [uninstallPrivateCertificate](#uninstallprivatecertificate)

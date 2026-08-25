@@ -9,8 +9,6 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [dataUriUtils](arkts-app-ability-datauriutils.md)

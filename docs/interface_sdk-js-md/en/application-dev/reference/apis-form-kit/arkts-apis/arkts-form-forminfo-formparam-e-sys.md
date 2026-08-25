@@ -4,8 +4,6 @@ Enumerates widget parameters.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 ## THEME_KEY
@@ -17,8 +15,6 @@ THEME_KEY = 'ohos.extra.param.key.form_is_theme'
 Theme ID.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -34,8 +30,6 @@ Device ID.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -47,11 +41,10 @@ FORM_MANAGER_SHOW_SINGLE_FORM = 'ohos.extra.param.key.form_manager_show_single_f
 ```
 
 Whether to display only a specified widget on the widget management page.  
-- **true**: Only one specified widget is displayed. - **false**: All widgets are displayed.
+- **true**: Only one specified widget is displayed.  
+- **false**: All widgets are displayed.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -67,8 +60,6 @@ Template widget ID.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -82,8 +73,6 @@ TEMPLATE_FORM_DATA = 'ohos.extra.param.key.template_form_data'
 Template widget data.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -99,8 +88,6 @@ Display name of a template widget.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -115,8 +102,6 @@ Template widget description.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -130,8 +115,6 @@ FORM_FONT_SIZE_SCALE_KEY = 'ohos.extra.param.key.form_font_size_scale'
 Indicates the key specifying font size scale of the form. which is represented as want: {"parameters": {FORM_FONT_SIZE_SCALE_KEY: 1.0}}.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,8 +131,6 @@ FORM_FONT_WEIGHT_SCALE_KEY = 'ohos.extra.param.key.form_font_weight_scale'
 Indicates the key specifying font weight scale of the form. which is represented as want: {"parameters": {FORM_FONT_WEIGHT_SCALE_KEY: 1.0}}
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

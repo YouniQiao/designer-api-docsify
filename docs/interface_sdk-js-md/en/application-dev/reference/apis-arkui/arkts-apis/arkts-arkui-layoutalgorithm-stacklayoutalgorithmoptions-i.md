@@ -4,8 +4,6 @@ Sets the alignment method of the stack layout algorithm.@interface StackLayoutAl
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## alignContent
@@ -16,13 +14,11 @@ alignContent?: LocalizedAlignment
 
 Alignment mode of child components in the stack layout algorithm.Default value: **LocalizedAlignment.CENTER**Invalid values are treated as the default value.
 
-**Type:** [LocalizedAlignment](arkts-arkui-enums-localizedalignment-e.md)
+**Type:** [LocalizedAlignment](arkts-arkui-localizedalignment-e.md)
 
 **Default:** LocalizedAlignment.Center
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

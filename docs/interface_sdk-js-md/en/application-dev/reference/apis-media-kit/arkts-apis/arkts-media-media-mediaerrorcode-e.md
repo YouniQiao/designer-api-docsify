@@ -4,8 +4,6 @@ Enumerates the media error codes.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **Substitutes:** [AVErrorCode](arkts-media-media-averrorcode-e.md)
@@ -21,8 +19,6 @@ MSERR_OK = 0
 The operation is successful.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -40,8 +36,6 @@ Failed to allocate memory. The system may have no available memory.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **Substitutes:** [AVERR_NO_MEMORY](arkts-media-media-averrorcode-e.md#averr_no_memory)
@@ -57,8 +51,6 @@ MSERR_OPERATION_NOT_PERMIT = 2
 No permission to perform the operation.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -76,8 +68,6 @@ Invalid input parameter.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averr_invalid_parameter)
@@ -93,8 +83,6 @@ MSERR_IO = 4
 An I/O error occurs.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -112,8 +100,6 @@ The operation times out.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **Substitutes:** [AVERR_TIMEOUT](arkts-media-media-averrorcode-e.md#averr_timeout)
@@ -129,8 +115,6 @@ MSERR_UNKNOWN = 6
 An unknown error occurs.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 
@@ -148,8 +132,6 @@ Invalid server.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **Substitutes:** [AVERR_SERVICE_DIED](arkts-media-media-averrorcode-e.md#averr_service_died)
@@ -166,8 +148,6 @@ The operation is not allowed in the current state.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 11
 
 **Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#averr_invalid_parameter)
@@ -183,8 +163,6 @@ MSERR_UNSUPPORTED = 9
 The operation is not supported in the current version.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 11
 

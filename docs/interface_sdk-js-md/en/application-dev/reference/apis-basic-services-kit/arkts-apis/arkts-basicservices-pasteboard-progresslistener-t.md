@@ -8,8 +8,6 @@ Defines a listener for progress data changes. If the default progress indicator 
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 **System capability:** SystemCapability.MiscServices.Pasteboard

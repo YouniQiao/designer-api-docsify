@@ -4,93 +4,81 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## 导入模块
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## altitudes
 
 ```TypeScript
-altitudes: Array<double>
+altitudes: Array<number>
 ```
 
 表示卫星高度角信息。单位是“度”，取值范围为-90到90。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## azimuths
 
 ```TypeScript
-azimuths: Array<double>
+azimuths: Array<number>
 ```
 
 表示方位角。单位是“度”，取值范围为0到360。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## carrierFrequencies
 
 ```TypeScript
-carrierFrequencies: Array<double>
+carrierFrequencies: Array<number>
 ```
 
 表示载波频率。单位是Hz，取值范围为大于等于0。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## carrierToNoiseDensitys
 
 ```TypeScript
-carrierToNoiseDensitys: Array<double>
+carrierToNoiseDensitys: Array<number>
 ```
 
 表示载波噪声功率谱密度比，即cn0。取值范围为大于0。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## satelliteAdditionalInfo
 
 ```TypeScript
-satelliteAdditionalInfo?: Array<int>
+satelliteAdditionalInfo?: Array<number>
 ```
 
 表示卫星的附加信息。每个比特位代表不同含义，具体定义参见[SatelliteAdditionalInfo](arkts-location-geolocationmanager-satelliteadditionalinfo-e.md)。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
@@ -106,38 +94,32 @@ satelliteConstellation?: Array<SatelliteConstellationCategory>
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## satelliteIds
 
 ```TypeScript
-satelliteIds: Array<int>
+satelliteIds: Array<number>
 ```
 
 表示每个卫星的ID，数组类型。取值范围为大于等于0。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;number&gt;
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss
 
 ## satellitesNumber
 
 ```TypeScript
-satellitesNumber: int
+satellitesNumber: number
 ```
 
 表示卫星个数。取值范围为大于等于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Location.Location.Gnss

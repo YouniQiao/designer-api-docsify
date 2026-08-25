@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 ```
 
 ## getUserGrantedEnabledBundles
@@ -15,8 +15,6 @@ function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>
 Obtains the applications that are allowed to access device notifications for the current application. This API uses a promise to return the result.
 
 **Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -35,26 +33,3 @@ Obtains the applications that are allowed to access device notifications for the
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [1600001](../errorcode-notification.md#1600001-internal-error) |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-
-**Examples**
-
-```TypeScript
-notificationExtensionSubscription.getUserGrantedEnabledBundles().then((data: notificationExtensionSubscription.GrantedBundleInfo[]) => {
-  console.info(`getUserGrantedEnabledBundles successfully. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getUserGrantedEnabledBundles fail: ${JSON.stringify(err)}`);
-});
-```
-
-```TypeScript
-let targetBundle: notificationExtensionSubscription.BundleOption =
-{
-  // Use the actual target application information.
-  bundle: 'com.example.testnotification',
-};
-notificationExtensionSubscription.getUserGrantedEnabledBundles(targetBundle).then((data: notificationExtensionSubscription.BundleOption[]) => {
-  console.info(`getUserGrantedEnabledBundles successfully. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getUserGrantedEnabledBundles fail: ${JSON.stringify(err)}`);
-});
-```

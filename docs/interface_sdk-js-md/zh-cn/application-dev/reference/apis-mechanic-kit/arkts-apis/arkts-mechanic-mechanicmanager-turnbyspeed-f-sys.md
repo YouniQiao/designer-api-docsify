@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## turnBySpeed
 
 ```TypeScript
-function turnBySpeed(mechId: int, angleSpeed: double, duration: int): Promise<Result>
+function turnBySpeed(mechId: number, angleSpeed: number, duration: number): Promise<Result>
 ```
 
 以固定速度原地旋转
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **系统能力：** SystemCapability.Mechanic.Core
 
@@ -26,9 +24,9 @@ function turnBySpeed(mechId: int, angleSpeed: double, duration: int): Promise<Re
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-| angleSpeed | ArkTS-Dyn: number<br>ArkTS-Sta：double | 是 |
-| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| mechId | number | 是 |
+| angleSpeed | number | 是 |
+| duration | number | 是 |
 
 **返回值：**
 

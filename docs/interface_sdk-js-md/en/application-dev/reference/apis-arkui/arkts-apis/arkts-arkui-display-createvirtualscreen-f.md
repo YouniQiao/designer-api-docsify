@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## createVirtualScreen
 
 ```TypeScript
-function createVirtualScreen(config: VirtualScreenConfig): Promise<long>
+function createVirtualScreen(config: VirtualScreenConfig): Promise<number>
 ```
 
 Creates a virtual screen. This API uses a promise to return the result.
 
 **Since:** 16
-
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ACCESS_VIRTUAL_SCREEN
 
@@ -32,7 +30,7 @@ Creates a virtual screen. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: Promise & lt;number & gt;<br>ArkTS-Sta：Promise & lt;long & gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -42,33 +40,3 @@ Creates a virtual screen. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class VirtualScreenConfig {
-  name : string = '';
-  width : number = 0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let config : VirtualScreenConfig = {
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-};
-
-display.createVirtualScreen(config).then((screenId: number) => {
-  console.info(`Succeeded in creating the virtual screen.ScreenId : ${screenId}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code:${err.code},message is ${err.message}`);
-});
-```

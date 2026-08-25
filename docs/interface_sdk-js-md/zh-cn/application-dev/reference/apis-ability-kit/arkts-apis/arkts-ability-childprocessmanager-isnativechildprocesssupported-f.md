@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { childProcessManager } from '@kit.AbilityKit';
+import { childProcessManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## isNativeChildProcessSupported
@@ -16,8 +16,6 @@ function isNativeChildProcessSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -27,68 +25,3 @@ function isNativeChildProcessSupported(): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { childProcessManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Text('Click')
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .onClick(() => {
-            try {
-              let isSupport: boolean = childProcessManager.isNativeChildProcessSupported();
-              console.info(`isNativeChildProcessSupported: ${isSupport}`);
-            } catch (err: BusinessError) {
-              console.error(`isNativeChildProcessSupported error, errorCode: ${err.code}, errorMsg: ${err.message}`);
-            }
-          });
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { childProcessManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build(): void {
-    Row() {
-      Column() {
-        Text('Click')
-          .fontSize(30)
-          .fontWeight(FontWeight.Bold)
-          .onClick((): void => {
-            try {
-              const isSupport: boolean = childProcessManager.isNativeChildProcessSupported();
-              console.info(`isNativeChildProcessSupported: ${isSupport}`);
-            } catch (err: BusinessError) {
-              console.error(`isNativeChildProcessSupported error, errorCode: ${err.code}, errorMsg: ${err.message}`);
-            }
-          });
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```

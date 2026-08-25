@@ -6,27 +6,17 @@ UIExtensionContext provides the context environment for [UIExtensionAbility](ark
 
 **Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## connectServiceExtensionAbilityWithRootHostToken
 
-ArkTS-Dyn:
 ```TypeScript
 connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOptions): number
-```
-
-ArkTS-Sta:
-```TypeScript
-connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOptions): long
 ```
 
 Connects the current UI extension to an service extension ability with a root host token. If the target service extension ability is visible, you can connect the target service extension ability; If the target service extension ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to connect target invisible service extension ability. If the target service extension ability is in cross-device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,7 +35,7 @@ Connects the current UI extension to an service extension ability with a root ho
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| ArkTS-Dyn: number<br>ArkTS-Sta：long |
+| number |
 
 **Error codes:**
 
@@ -82,8 +72,6 @@ Sets whether the page started by the [UIExtensionAbility](arkts-ability-app-abil
 
 **Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -110,15 +98,18 @@ startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<Abili
 ```
 
 Starts an ability with the caller information specified. The caller information is carried in **want** and identified at the system service layer. The ability can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start an ability, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses a promise to return the result.  
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller. - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**, is returned to the caller. - If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller.  
+- If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,  
+is returned to the caller.  
+- If different applications call this API to start an ability that uses the singleton mode and then call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**&gt;
 > For details about the startup rules for the components in the stage model, see
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,8 +161,6 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result.
 
 **Since:** 18
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -212,14 +201,8 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result.
 
 ## startServiceExtensionAbilityWithAccount
 
-ArkTS-Dyn:
 ```TypeScript
 startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
 ```
 
 Starts a ServiceExtensionAbility under a specified system account. This API uses a promise to return the result.
@@ -230,8 +213,6 @@ Starts a ServiceExtensionAbility under a specified system account. This API uses
 > Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -246,7 +227,7 @@ Starts a ServiceExtensionAbility under a specified system account. This API uses
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
-| accountId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| accountId | number | Yes |
 
 **Return value:**
 
@@ -287,8 +268,6 @@ Starts multiple UIAbility components simultaneously. This API uses a promise to 
 > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -337,14 +316,8 @@ Starts multiple UIAbility components simultaneously. This API uses a promise to 
 
 ## startUIAbilitiesInSplitWindowMode
 
-ArkTS-Dyn:
 ```TypeScript
 startUIAbilitiesInSplitWindowMode(primaryWindowId: number, secondaryWant: Want): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-startUIAbilitiesInSplitWindowMode(primaryWindowId: int, secondaryWant: Want): Promise<void>
 ```
 
 Starts a second UIAbility after the first UIAbility instance is created, and displays them in split-screen mode. This API uses a promise to return the result. This API can be properly called only on phones. If it is called on other device types, error code 801 is returned.
@@ -361,8 +334,6 @@ Starts a second UIAbility after the first UIAbility instance is created, and dis
 
 **Since:** 21
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
-
 **Required permissions:** ohos.permission.START_ABILITIES_FROM_BACKGROUND
 
 **Model restriction:** This API can be used only in the stage model.
@@ -375,7 +346,7 @@ Starts a second UIAbility after the first UIAbility instance is created, and dis
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| primaryWindowId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| primaryWindowId | number | Yes |
 | secondaryWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
 
 **Return value:**

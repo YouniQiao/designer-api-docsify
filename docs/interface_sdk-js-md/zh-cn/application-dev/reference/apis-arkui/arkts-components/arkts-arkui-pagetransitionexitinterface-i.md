@@ -6,8 +6,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@
 设置当前页面的自定义退场动效。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -53,8 +49,6 @@ onExit(event: PageTransitionCallback): PageTransitionExitInterface
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -70,15 +64,3 @@ onExit(event: PageTransitionCallback): PageTransitionExitInterface
 | 类型 |
 | --- |
 | [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) |
-
-**示例**
-
-```TypeScript
-pageTransition() {
-    PageTransitionExit({ duration: 1200, curve: Curve.Linear })
-      // 转场动画时出场动画 type 为路由类型 ，progress为从0到1逐渐变大
-      .onExit((type: RouteType, progress: number) => {
-        // 业务逻辑代码
-      })
-  }
-```

@@ -4,14 +4,12 @@ ChipV2ImageIconConfig定义图标的通用属性配置。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUI';
+import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from 'kits/@kit.ArkUI';
 ```
 
 ## activatedFillColor
@@ -25,8 +23,6 @@ ChipV2激活时图标填充颜色。默认值：\$r('sys.color.chip_active_icon_
 **类型：** ColorMetrics
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ fillColor?: ColorMetrics
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -66,8 +60,6 @@ modifier?: ImageModifier
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -81,14 +73,14 @@ size?: SizeT<LengthMetrics>
 ```
 
 图标大小，不支持百分比。传入百分比时按默认值处理。默认值：  
-- 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('sys.float.chip_small_icon_size')}。 - 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}。  
-单位：vp值为undefined时，按默认值处理。
+- 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('  
+sys.float.chip_small_icon_size')}。  
+- 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('  
+sys.float.chip_normal_icon_size')}。单位：vp值为undefined时，按默认值处理。
 
 **类型：** SizeT&lt;LengthMetrics&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,11 +96,9 @@ src: ResourceStr
 
 图标图片或图片地址引用。
 
-**类型：** ResourceStr
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

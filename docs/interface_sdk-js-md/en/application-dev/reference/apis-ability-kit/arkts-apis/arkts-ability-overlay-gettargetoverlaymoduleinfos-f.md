@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from '@kit.AbilityKit';
+import { overlay } from 'kits/@kit.AbilityKit';
 ```
 
 ## getTargetOverlayModuleInfos
@@ -15,8 +15,6 @@ function getTargetOverlayModuleInfos(targetModuleName: string, callback: AsyncCa
 Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -35,48 +33,6 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
 | [17700034](../errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
 
-**Examples**
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetModuleName = "feature";
-
-(async () => {
-  try {
-    let overlayModuleInfos = await overlay.getTargetOverlayModuleInfos(targetModuleName);
-    console.info('overlayModuleInfos are ' + JSON.stringify(overlayModuleInfos));
-  } catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error('getTargetOverlayModuleInfos failed due to err code : ' + code + ' ' + 'message :' + message);
-  }
-})();
-```
-
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetModuleName = "feature";
-
-try {
-  overlay.getTargetOverlayModuleInfos(targetModuleName, (err, data) => {
-    if (err) {
-      console.error('getTargetOverlayModuleInfos failed due to err code : ' + err.code + ' ' + 'message :' +
-      err.message);
-      return;
-    }
-    console.info('overlayModuleInfo is ' + JSON.stringify(data));
-  });
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error('getTargetOverlayModuleInfos failed due to err code : ' + code + ' ' + 'message :' + message);
-}
-```
-
 
 ## getTargetOverlayModuleInfos
 
@@ -87,8 +43,6 @@ function getTargetOverlayModuleInfos(targetModuleName: string): Promise<Array<Ov
 Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses a promise to return the result.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -111,7 +65,3 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
 | [17700034](../errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
-
-**Examples**
-
-See [getTargetOverlayModuleInfos](#gettargetoverlaymoduleinfos)

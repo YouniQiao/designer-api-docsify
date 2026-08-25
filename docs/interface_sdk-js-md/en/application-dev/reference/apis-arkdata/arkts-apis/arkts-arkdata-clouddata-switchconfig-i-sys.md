@@ -4,8 +4,6 @@ Defines the switch configuration of a device-cloud synergy database.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Defines the switch configuration of a device-cloud synergy database.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'kits/@kit.ArkData';
 ```
 
 ## dbInfo
@@ -27,8 +25,6 @@ Switch configuration information of a database. The key is the database name, an
 **Type:** Record&lt;string, [DBSwitchInfo](arkts-arkdata-clouddata-dbswitchinfo-i-sys.md)&gt;
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 

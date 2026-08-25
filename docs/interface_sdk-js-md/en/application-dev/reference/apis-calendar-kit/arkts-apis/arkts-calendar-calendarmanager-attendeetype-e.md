@@ -4,8 +4,6 @@ Enumerates the types of attendees invited to a conference event.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **System capability:** SystemCapability.Applications.CalendarData
 
 ## REQUIRED
@@ -17,8 +15,6 @@ REQUIRED = 1
 Required attendee.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -34,8 +30,6 @@ Optional attendee.
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -49,8 +43,6 @@ RESOURCE = 3
 Resources (such as TVs or projectors) used in a conference.
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

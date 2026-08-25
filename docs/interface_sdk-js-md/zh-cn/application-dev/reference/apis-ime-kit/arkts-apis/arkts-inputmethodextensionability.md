@@ -54,7 +54,7 @@
 ## 导入模块
 
 ```TypeScript
-import { InputMethodExtensionAbility } from '@kit.IMEKit';
+import { InputMethodExtensionAbility } from 'kits/@kit.IMEKit';
 ```
 
 ## 汇总

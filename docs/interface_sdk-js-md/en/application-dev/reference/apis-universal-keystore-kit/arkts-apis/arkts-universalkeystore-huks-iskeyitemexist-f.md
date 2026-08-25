@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## isKeyItemExist
@@ -15,8 +15,6 @@ function isKeyItemExist(keyAlias: string, options: HuksOptions, callback: AsyncC
 Checks whether a key exists. This API uses an asynchronous callback to return the result.If the key does not exist, the error code 12000011 is returned.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
@@ -42,123 +40,6 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
 
-**Examples**
-
-ArkTS sample code:
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.isKeyItemExist(keyAlias, emptyOptions, (error, data) => {
-  if (error) {
-    console.error(`callback: isKeyItemExist failed`);
-  } else {
-    if (data) {
-      console.info(`keyAlias:${keyAlias} is existed!`);
-    } else {
-      console.error(`find key failed`);
-    }
-  }
-});
-```
-
-The JS sample code is used only for the lightweight devices.
-
-```TypeScript
-<stack class="container">
-    <input type="button" class="existBtn" @click="existKey">Query Key</input>
-    <text class="result">{{result}}</text>
-</stack>
-```
-
-```TypeScript
-.container {
-  width: 454px;
-  height: 800px;
-  background-color: #ffffffff;
-}
-
-.existBtn {
-  left: 77px;
-  top: 100px;
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  color: white;
-  background-color: orange;
-  font-size: 25px;
-}
-
-.result {
-  left: 30px;
-  top: 190px;
-  width: 390px;
-  height: 80px;
-  text-align: center;
-  color: #ff000000;
-  background-color: #ffffffff;
-  font-size: 25px;
-}
-```
-
-```TypeScript
-import huks from '@ohos.security.huks';
-
-function testKeyExist() {
-    let huksInfo;
-    let keyAlias = 'keyAlias';
-    let emptyOptions = {
-        properties: []
-    };
-
-    huks.isKeyItemExist(keyAlias, emptyOptions, (err, data) => {
-        if (err) {
-            huksInfo = 'isKeyItemExist failed, code: ' + err.code + ', message: ' + err.message;
-            console.error(huksInfo);
-        } else {
-            if (data) {
-                huksInfo = `key: ${keyAlias} exists`;
-                console.info(huksInfo);
-            } else {
-                huksInfo = 'key does not exist';
-                console.error(huksInfo);
-            }
-        }
-    });
-    return huksInfo;
-}
-
-export default {
-    data: {
-        result: ''
-    },
-
-    existKey() {
-        this.result = testKeyExist();
-    },
-};
-```
-
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.isKeyItemExist(keyAlias, emptyOptions).then((data) => {
-  console.info(`keyAlias:${keyAlias} is existed!`);
-});
-```
-
 
 ## isKeyItemExist
 
@@ -169,8 +50,6 @@ function isKeyItemExist(keyAlias: string, options: HuksOptions): Promise<boolean
 Checks whether a key exists. This API uses a promise to return the result.If the key does not exist, the error code 12000011 is returned.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -200,7 +79,3 @@ Checks whether a key exists. This API uses a promise to return the result.If the
 | [12000012](../errorcode-huks.md#12000012-external-error) |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
-
-**Examples**
-
-See [isKeyItemExist](#iskeyitemexist)

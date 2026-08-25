@@ -4,8 +4,6 @@ Represents a set of optional parameters for remote authentication.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -13,7 +11,7 @@ Represents a set of optional parameters for remote authentication.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## collectorNetworkId
@@ -28,8 +26,6 @@ Network ID of the credential collector, which is left blank by default.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Account.OsAccount
 
 **System API:** This is a system API.
@@ -37,16 +33,14 @@ Network ID of the credential collector, which is left blank by default.
 ## collectorTokenId
 
 ```TypeScript
-collectorTokenId?: int
+collectorTokenId?: number
 ```
 
 Token ID of the credential collector, which is **undefined** by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -63,8 +57,6 @@ Network ID of the credential verifier, which is left blank by default.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Account.OsAccount
 

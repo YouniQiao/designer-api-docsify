@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'kits/@kit.AssetStoreKit';
 ```
 
 ## preQueryAsUser
@@ -15,8 +15,6 @@ function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>
 Performs preprocessing for the asset query in the specified user space. This API is used when user authentication is required for the access to an asset. After the user authentication is successful, call [asset.queryAsUser](arkts-assetstore-asset-queryasuser-f-sys.md) and [asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md). This API uses a promise to return the result.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -57,22 +55,3 @@ Performs preprocessing for the asset query in the specified user space. This API
 | [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) |
 | [24000016](../errorcode-asset.md#24000016-cached-assets-reaches-the-limit) |
 | [24000017](../errorcode-asset.md#24000017-function-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { asset } from '@kit.AssetStoreKit';
-import { util } from '@kit.ArkTS';
-
-function stringToArray(str: string): Uint8Array {
-  let textEncoder = new util.TextEncoder();
-  return textEncoder.encodeInto(str);
-}
-
-let userId: number = 100;
-let query: asset.AssetMap = new Map();
-query.set(asset.Tag.ALIAS, stringToArray('demo_alias'));
-asset.preQueryAsUser(userId, query).then((challenge: Uint8Array) => {
-  console.info(`Succeeded in pre-querying Asset from user space.`);
-});
-```

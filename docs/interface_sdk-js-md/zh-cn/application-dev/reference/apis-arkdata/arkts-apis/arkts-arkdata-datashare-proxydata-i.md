@@ -4,14 +4,12 @@
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 ## 导入模块
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'kits/@kit.ArkData';
 ```
 
 ## allowList
@@ -25,8 +23,6 @@ allowList?: string[]
 **类型：** string[]
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ isMultiValues?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -62,8 +56,6 @@ trustProviders?: string[]
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -79,8 +71,6 @@ uri: string
 **类型：** string
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,8 +91,6 @@ value?: ValueType
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -110,16 +98,14 @@ value?: ValueType
 ## values
 
 ```TypeScript
-values?: Record<int, ValueType>
+values?: Record<number, ValueType>
 ```
 
 多值类型取值。**Record**中的第一个参数为key，key由用户指定，必须唯一。第二个参数为key对应的value。单个应用在单个URI下最多支持添加10个value，每个value最大长度为4096字节。同时，所有va lue的总长度受参数值[maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxvaluelength)]限制。该参数仅在[isMultiValues](#ismultivalues)}设置为true时生效。
 
-**类型：** ArkTS-Dyn: Record&lt;number, [ValueType](arkts-arkdata-valuetype-t.md)&gt;  <br>ArkTS-Sta：Record&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
+**类型：** Record&lt;number, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## getRetentionSandboxList
@@ -15,8 +15,6 @@ function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSa
 查询指定应用的保留沙箱信息列表。仅支持在非DLP沙箱应用中调用。使用Promise异步回调。该接口用于查询指定应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -41,42 +39,6 @@ function getRetentionSandboxList(bundleName?: string): Promise<Array<RetentionSa
 | [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getRetentionSandboxList().then((sandboxList) => { // 获取沙箱保留列表。
-  console.info('sandboxList', JSON.stringify(sandboxList));
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-});
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getRetentionSandboxList('bundleName', (err, sandboxList) => {
-  if (err) {
-    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('sandboxList', JSON.stringify(sandboxList));
-  }
-}); // 获取沙箱保留列表。
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
-  if (err) {
-    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
-  }
-}); // 获取沙箱保留列表。
-```
-
 
 ## getRetentionSandboxList
 
@@ -87,8 +49,6 @@ function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Arr
 查询指定应用的保留沙箱信息列表。仅支持在非DLP沙箱应用中调用。使用callback异步回调。该接口用于查询指定应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -108,10 +68,6 @@ function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Arr
 | [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
-**示例**
-
-参见 [getRetentionSandboxList](#getretentionsandboxlist)
-
 
 ## getRetentionSandboxList
 
@@ -122,8 +78,6 @@ function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxI
 查询当前应用的保留沙箱信息列表。使用callback异步回调。该接口用于查询指定应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。仅支持在非DLP沙箱应用中调用。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -141,7 +95,3 @@ function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxI
 | [19100001](../errorcode-dlp.md#19100001-入参错误) |
 | [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-
-**示例**
-
-参见 [getRetentionSandboxList](#getretentionsandboxlist)

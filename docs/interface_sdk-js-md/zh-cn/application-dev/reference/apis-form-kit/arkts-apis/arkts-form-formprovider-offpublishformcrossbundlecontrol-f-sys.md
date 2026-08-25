@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'kits/@kit.FormKit';
 ```
 
 ## offPublishFormCrossBundleControl
@@ -15,8 +15,6 @@ function offPublishFormCrossBundleControl(callback?: formInfo.PublishFormCrossBu
 取消订阅跨应用加桌管控。
 
 **起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
 
 **需要权限：** ohos.permission.PUBLISH_FORM_CROSS_BUNDLE_CONTROL
 
@@ -39,34 +37,3 @@ function offPublishFormCrossBundleControl(callback?: formInfo.PublishFormCrossBu
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.offPublishFormCrossBundleControl();
-  console.info(`offPublishFormCrossBundleControl success`);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-'use static'
-import { formProvider } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formProvider.offPublishFormCrossBundleControl();
-  console.info(`offPublishFormCrossBundleControl success`);
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```

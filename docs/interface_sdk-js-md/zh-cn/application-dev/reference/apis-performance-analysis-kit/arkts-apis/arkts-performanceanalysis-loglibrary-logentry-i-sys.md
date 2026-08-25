@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **系统接口：** 此接口为系统接口。
@@ -13,22 +11,20 @@
 ## 导入模块
 
 ```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## mtime
 
 ```TypeScript
-mtime: long
+mtime: number
 ```
 
 上次修改该文件的时间，表示距1970年1月1日0时0分0秒的秒数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
@@ -46,8 +42,6 @@ name: string
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 
 **系统接口：** 此接口为系统接口。
@@ -55,16 +49,14 @@ name: string
 ## size
 
 ```TypeScript
-size: long
+size: number
 ```
 
 文件大小，以字节为单位。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** number
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 

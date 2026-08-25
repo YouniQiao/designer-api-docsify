@@ -8,16 +8,6 @@ export type ElementAttributeValues = _ElementAttributeValues
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **属性类型：** _ElementAttributeValues
-
-**示例**
-
-```TypeScript
-import { ElementAttributeValues } from '@kit.AccessibilityKit';
-
-let elementAttributeValues: ElementAttributeValues;
-```

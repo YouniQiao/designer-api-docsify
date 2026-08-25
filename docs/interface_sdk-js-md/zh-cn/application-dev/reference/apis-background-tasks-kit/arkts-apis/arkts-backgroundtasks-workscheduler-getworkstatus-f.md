@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
 ```
 
 ## getWorkStatus
 
 ```TypeScript
-function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void
+function getWorkStatus(workId: number, callback: AsyncCallback<WorkInfo>): void
 ```
 
 通过workId获取延迟任务，使用Callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -26,7 +24,7 @@ function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| workId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| workId | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md)&gt; | 是 |
 
 **错误码：**
@@ -39,75 +37,16 @@ function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void
 | [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) |
 | [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.getWorkStatus(50, (error: BusinessError, res: workScheduler.WorkInfo) => {
-  if (error) {
-    console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
-  } else {
-    console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
-  }
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.getWorkStatus(50, (error: BusinessError<void> | null, res: workScheduler.WorkInfo | undefined) => {
-  if (error) {
-    console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
-  } else {
-    console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
-  }
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
-  console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
-}).catch((error: BusinessError) => {
-  console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
-})
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
-  console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
-}).catch((error) => {
-  console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
-})
-```
-
 
 ## getWorkStatus
 
 ```TypeScript
-function getWorkStatus(workId: int): Promise<WorkInfo>
+function getWorkStatus(workId: number): Promise<WorkInfo>
 ```
 
 通过workId获取延迟任务，使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,7 +56,7 @@ function getWorkStatus(workId: int): Promise<WorkInfo>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| workId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| workId | number | 是 |
 
 **返回值：**
 
@@ -134,7 +73,3 @@ function getWorkStatus(workId: int): Promise<WorkInfo>
 | [9700002](../errorcode-workScheduler.md#9700002-parcel读写操作失败) |
 | [9700003](../errorcode-workScheduler.md#9700003-系统服务失败) |
 | [9700004](../errorcode-workScheduler.md#9700004-参数校验失败) |
-
-**示例**
-
-参见 [getWorkStatus](#getworkstatus)

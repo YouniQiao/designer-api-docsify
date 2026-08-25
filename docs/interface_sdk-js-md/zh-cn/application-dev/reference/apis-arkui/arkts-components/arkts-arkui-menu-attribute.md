@@ -6,8 +6,6 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -24,8 +22,6 @@ font(value: Font)
 统一设置Menu中所有文本的字体样式。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,8 +44,6 @@ fontColor(value: ResourceColor)
 统一设置Menu中所有文本的颜色。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,8 +70,6 @@ fontSize(value: Length)
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **废弃版本：** 10
 
 **替代接口：** [font](#font)
@@ -100,8 +92,6 @@ menuItemDivider(options: DividerStyleOptions | undefined)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -112,7 +102,7 @@ menuItemDivider(options: DividerStyleOptions | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | DividerStyleOptions \| undefined | 是 |
+| options | [DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md) \| undefined | 是 |
 
 ## menuItemGroupDivider
 
@@ -124,8 +114,6 @@ menuItemGroupDivider(options: DividerStyleOptions | undefined)
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -136,7 +124,7 @@ menuItemGroupDivider(options: DividerStyleOptions | undefined)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | DividerStyleOptions \| undefined | 是 |
+| options | [DividerStyleOptions](../arkts-apis/arkts-arkui-dividerstyleoptions-i.md) \| undefined | 是 |
 
 ## radius
 
@@ -148,8 +136,6 @@ radius(value: Dimension | BorderRadiuses)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -160,7 +146,7 @@ radius(value: Dimension | BorderRadiuses)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Dimension \| [BorderRadiuses](../arkts-apis/arkts-arkui-units-borderradiuses-i.md) | 是 |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | 是 |
 
 ## subMenuExpandingMode
 
@@ -171,8 +157,6 @@ subMenuExpandingMode(mode: SubMenuExpandingMode)
 设置Menu子菜单展开样式。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -195,8 +179,6 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier)
 设置Menu子菜单展开符号。仅在SubMenuExpandingMode.EMBEDDED_EXPAND或SubMenuExpandingMode.STACK_EXPAND模式下显示，SubMenuExpandingMode.SIDE_EXPAND模式下不显示。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'kits/@kit.SecurityGuardKit';
 ```
 
 ## reportSecurityEvent
@@ -15,8 +15,6 @@ function reportSecurityEvent(securityEvent: SecurityEvent): void
 Report security information to the security guard.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.REPORT_SECURITY_EVENT
 

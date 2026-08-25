@@ -4,8 +4,6 @@ Rotation parameter option of the rotation angle on each axis.
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,8 +24,6 @@ Rotation angle along the x-axis. A positive value indicates clockwise rotation r
 **Default:** 0
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,8 +47,6 @@ Rotation angle along the y-axis. A positive value indicates clockwise rotation r
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -74,8 +68,6 @@ Rotation angle along the z-axis. A positive value indicates clockwise rotation r
 **Default:** 0
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,8 +91,6 @@ X coordinate of the transformation center point (anchor).Unit: vp Default value:
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -122,8 +112,6 @@ Y coordinate of the transformation center point (anchor).Unit: vp Default value:
 **Default:** '50%'
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,8 +135,6 @@ Z-axis anchor, that is, the z-component of the 3D rotation center point.Default 
 
 **Since:** 20
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -170,8 +156,6 @@ Z-axis coordinate of the camera. The value indicates the viewing distance, that 
 **Default:** 0
 
 **Since:** 20
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## off
@@ -15,8 +15,6 @@ function off(eventType: 'connect' | 'disconnect' | 'change', callback?: Callback
 Unsubscribes from events related to the screen state.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,16 +34,6 @@ Unsubscribes from events related to the screen state.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-let callback: Callback<number> = (data: number) => {
-  console.info(`Succeeded in unregistering the callback for screen changes. Data: ${data}`)
-};
-screen.off('connect', callback);
-screen.off('connect');
-```
-
 
 ## off
 
@@ -56,8 +44,6 @@ function off(eventType: 'connect' | 'disconnect' | 'change', callback?: Callback
 Unsubscribes from events related to the screen state.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -77,10 +63,6 @@ Unsubscribes from events related to the screen state.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [off](#off)
-
 
 ## off
 
@@ -91,8 +73,6 @@ function off(eventType: 'connect' | 'disconnect' | 'change', callback?: Callback
 Unsubscribes from events related to the screen state.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -111,7 +91,3 @@ Unsubscribes from events related to the screen state.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [off](#off)

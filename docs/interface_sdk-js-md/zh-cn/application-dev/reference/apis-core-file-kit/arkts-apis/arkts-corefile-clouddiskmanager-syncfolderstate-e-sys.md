@@ -4,8 +4,6 @@
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -20,8 +18,6 @@ INACTIVE = 0
 
 **起始版本：** 21
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ ACTIVE = 1
 表示同步根处于激活状态。
 
 **起始版本：** 21
-
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.FileManagement.CloudDiskManager
 

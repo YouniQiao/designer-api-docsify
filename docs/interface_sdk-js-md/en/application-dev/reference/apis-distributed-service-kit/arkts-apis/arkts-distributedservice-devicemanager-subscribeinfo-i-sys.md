@@ -4,8 +4,6 @@ Defines subscription information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -15,7 +13,7 @@ Defines subscription information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## capability
@@ -29,8 +27,6 @@ Discovery capability.
 **Type:** [SubscribeCap](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -50,8 +46,6 @@ Frequency of device discovery.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -69,8 +63,6 @@ Whether the account is the same as the current account. The value **true** indic
 **Type:** boolean
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -90,8 +82,6 @@ Whether to wake up the device. The value **true** means to wake up the device an
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -109,8 +99,6 @@ Medium used for device discovery.
 **Type:** [ExchangeMedium](arkts-distributedservice-devicemanager-exchangemedium-e-sys.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 
@@ -130,8 +118,6 @@ Device discovery mode.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 11
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
@@ -149,8 +135,6 @@ Subscription ID, used to identify a device discovery period. The value ranges fr
 **Type:** number
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 11
 

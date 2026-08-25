@@ -4,14 +4,12 @@ Represents the information about the joint asset in the RDB store to bind. Curre
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'kits/@kit.ArkData';
 ```
 
 ## assetName
@@ -25,8 +23,6 @@ Name of the target asset in the RDB store.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -42,8 +38,6 @@ Column in which the target asset is located in the RDB store.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## primaryKey
@@ -57,8 +51,6 @@ Primary key of the target asset in the RDB store.
 **Type:** commonType.ValuesBucket
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -74,8 +66,6 @@ RDB store to which the target asset (asset to bind) belongs.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
 ## tableName
@@ -89,7 +79,5 @@ Table to which the target asset is located in the RDB store.
 **Type:** string
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject

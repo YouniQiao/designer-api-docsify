@@ -8,16 +8,6 @@ Provides attribute names and value types of a node element. For details, see [El
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Property type:** _ElementAttributeValues
-
-**Examples**
-
-```TypeScript
-import { ElementAttributeValues } from '@kit.AccessibilityKit';
-
-let elementAttributeValues: ElementAttributeValues;
-```

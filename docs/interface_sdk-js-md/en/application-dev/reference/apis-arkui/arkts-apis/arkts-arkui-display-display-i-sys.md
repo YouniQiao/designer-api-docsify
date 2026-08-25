@@ -4,14 +4,12 @@ Implements a Display instance, with attributes and APIs defined.Before calling a
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'kits/@kit.ArkUI';
 ```
 
 ## hasImmersiveWindow
@@ -23,8 +21,6 @@ hasImmersiveWindow(callback: AsyncCallback<boolean>): void
 Checks whether this display contains an immersive window. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -45,38 +41,6 @@ Checks whether this display contains an immersive window. This API uses an async
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-displayClass.hasImmersiveWindow((err: BusinessError, data) => {
-    const errCode: number = err.code;
-    if (errCode) {
-      console.error(`Failed to check whether there is immersive window. Code: ${err.code} , message : ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let displayClass: display.Display | null = null;
-displayClass = display.getDefaultDisplaySync();
-let promise = displayClass.hasImmersiveWindow();
-promise.then((data) => {
-  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether there is immersive window. Code: ${err.code} , message: ${err.message}`);
-})
-```
-
 ## hasImmersiveWindow
 
 ```TypeScript
@@ -86,8 +50,6 @@ hasImmersiveWindow(): Promise<boolean>
 Checks whether this display contains an immersive window. This API uses a promise to return the result.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -107,7 +69,3 @@ Checks whether this display contains an immersive window. This API uses a promis
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
-
-**Examples**
-
-See [hasImmersiveWindow](#hasimmersivewindow)

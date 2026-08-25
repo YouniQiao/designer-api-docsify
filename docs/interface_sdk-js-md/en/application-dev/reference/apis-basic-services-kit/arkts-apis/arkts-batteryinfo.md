@@ -4,44 +4,24 @@ The **batteryInfo** module provides APIs for querying the charger type, battery 
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { batteryInfo } from '@kit.BasicServicesKit';
+import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
-
-### Functions
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
-| --- |
-| [batteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-f.md) |
-| [batterySOC](arkts-basicservices-batteryinfo-batterysoc-f.md) |
-| [batteryTemperature](arkts-basicservices-batteryinfo-batterytemperature-f.md) |
-| [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md) |
-| [healthStatus](arkts-basicservices-batteryinfo-healthstatus-f.md) |
-| [isBatteryPresent](arkts-basicservices-batteryinfo-isbatterypresent-f.md) |
-| [nowCurrent](arkts-basicservices-batteryinfo-nowcurrent-f.md) |
-| [pluggedType](arkts-basicservices-batteryinfo-pluggedtype-f.md) |
-| [technology](arkts-basicservices-batteryinfo-technology-f.md) |
-| [voltage](arkts-basicservices-batteryinfo-voltage-f.md) |
 
 <!--Del-->
 ### Functions(System API)
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [estimatedRemainingChargeTime](arkts-basicservices-batteryinfo-estimatedremainingchargetime-f-sys.md) |
 | [getBatteryConfig](arkts-basicservices-batteryinfo-getbatteryconfig-f-sys.md) |
 | [isBatteryConfigSupported](arkts-basicservices-batteryinfo-isbatteryconfigsupported-f-sys.md) |
-| [remainingEnergy](arkts-basicservices-batteryinfo-remainingenergy-f-sys.md) |
 | [setBatteryConfig](arkts-basicservices-batteryinfo-setbatteryconfig-f-sys.md) |
-| [totalEnergy](arkts-basicservices-batteryinfo-totalenergy-f-sys.md) |
 <!--DelEnd-->
 
 ### Enums

@@ -4,8 +4,6 @@ Sets menu options.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,8 +21,6 @@ Callback invoked when the custom context menu on selection appears.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -40,8 +36,6 @@ onMenuHide?: MenuCallback
 Callback invoked when the custom context menu on selection is hidden.
 
 **Since:** 15
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,8 +53,6 @@ Callback invoked when the custom context menu on selection is shown.
 
 **Since:** 15
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 15.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -75,11 +67,9 @@ menuType?: MenuType
 
 Type of the custom context menu on selection.Default value: **MenuType.SELECTION_MENU**
 
-**Type:** MenuType
+**Type:** [MenuType](../arkts-apis/arkts-arkui-menutype-e.md)
 
 **Since:** 13
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,8 +89,6 @@ Callback invoked when the custom context menu on selection disappears.
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -118,8 +106,6 @@ Options of the preview menu. This parameter is valid only in **RichEditor**.
 **Type:** [PreviewMenuOptions](arkts-arkui-previewmenuoptions-i.md)
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **Model restriction:** This API can be used only in the stage model.
 

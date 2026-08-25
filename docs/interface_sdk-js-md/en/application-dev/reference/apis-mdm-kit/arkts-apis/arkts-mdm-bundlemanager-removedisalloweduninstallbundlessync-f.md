@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'kits/@kit.MDMKit';
 ```
 
 ## removeDisallowedUninstallBundlesSync
@@ -15,8 +15,6 @@ function removeDisallowedUninstallBundlesSync(admin: Want, appIds: Array<string>
 Removes the applications that cannot be uninstalled by the current or specified user through the specified device administrator application.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -40,26 +38,3 @@ Removes the applications that cannot be uninstalled by the current or specified 
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-try {
-  // Replace parameters with actual values.
-  bundleManager.removeDisallowedUninstallBundlesSync(wantTemp, appIds, 100);
-  console.info('Succeeded in removing disallowed uninstall bundles.');
-} catch (err) {
-  console.error(`Failed to remove disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```

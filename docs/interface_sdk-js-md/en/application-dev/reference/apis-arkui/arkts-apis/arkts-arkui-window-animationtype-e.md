@@ -4,8 +4,6 @@ Enumerates the types of window animations.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## FADE_IN_OUT
@@ -17,7 +15,5 @@ FADE_IN_OUT = 0
 Fade-in/fade-out animation. The fade-in animation takes effect during window display, and the fade-out animation takes effect during window hiding.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Window.SessionManager

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from 'kits/@kit.AbilityKit';
 ```
 
 ## createLocalWantAgent
@@ -16,8 +16,6 @@ Create a local WantAgent object. The WantAgent created by this interface stores 
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -28,7 +26,7 @@ Create a local WantAgent object. The WantAgent created by this interface stores 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| info | [LocalWantAgentInfo](arkts-ability-wantagentinfo-localwantagentinfo-i-sys.md) | Yes |
+| info | [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) | Yes |
 
 **Return value:**
 
@@ -41,45 +39,3 @@ Create a local WantAgent object. The WantAgent created by this interface stores 
 | Error Code ID |
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-**Examples**
-
-```TypeScript
-import { wantAgent, Want } from '@kit.AbilityKit';
-import type { WantAgent } from '@kit.AbilityKit';
-
-// Declare a wantAgent object.
-let wantAgentData: WantAgent;
-// Create a LocalWantAgentInfo object.
-let localWantAgentInfo: wantAgent.LocalWantAgentInfo = {
-  wants: [
-    {
-      deviceId: 'deviceId',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      action: 'action1',
-      entities: ['entity1'],
-      type: 'MIMETYPE',
-      uri: 'key={true,true,false}',
-      parameters:
-      {
-        mykey0: 2222,
-        mykey1: [1, 2, 3],
-        mykey2: '[1, 2, 3]',
-        mykey3: 'ssssssssssssssssssssssssss',
-        mykey4: [false, true, false],
-        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
-        mykey6: true,
-      }
-    } as Want
-  ],
-  operationType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0
-};
-// Create a local WantAgent object.
-try {
-  wantAgentData = wantAgent.createLocalWantAgent(localWantAgentInfo);
-} catch (err) {
-  console.error('createLocalWantAgent failed');
-}
-```

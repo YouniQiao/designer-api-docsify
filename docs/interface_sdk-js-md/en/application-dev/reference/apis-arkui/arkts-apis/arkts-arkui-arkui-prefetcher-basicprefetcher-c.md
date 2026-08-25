@@ -7,14 +7,12 @@
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI';
+import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from 'kits/@kit.ArkUI';
 ```
 
 ## constructor
@@ -26,8 +24,6 @@ constructor(dataSource?: IDataSourcePrefetching)
 Passes the data source that supports prefetching and binds it to **Prefetcher** when an object is created. If no data source is passed during the creation, you can use **setDataSource** to set a data source after the creation.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,8 +47,6 @@ Sets the prefetching-capable data source to bind to the **Prefetcher**.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -74,8 +68,6 @@ visibleAreaChanged(minVisible: number, maxVisible: number): void
 Called when the boundary of the visible area changes. It notifies **Prefetcher** of the current visible area range so that **Prefetcher** can determine whether to prefetch or cancel the prefetching of data items. Before calling this API, ensure that the data source has been set using the constructor or the **setDataSource** API. This API works with the **List**, **Grid**, **WaterFlow**, and **Swiper** components.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

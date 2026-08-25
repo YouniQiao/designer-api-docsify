@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## startSyncTrace
@@ -16,8 +16,6 @@ function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: st
 
 **起始版本：** 19
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
@@ -29,15 +27,3 @@ function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: st
 | level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | 是 |
 | name | string | 是 |
 | customArgs | string | 否 |
-
-**示例**
-
-```TypeScript
-const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-// 不需要customArgs参数时，可不传入该参数或传入空字符串
-hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc");
-hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc", "");
-// 多个键值对用逗号分隔
-hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc", "key=value");
-hiTraceMeter.startSyncTrace(COMMERCIAL, "myTestFunc", "key1=value1,key2=value2");
-```

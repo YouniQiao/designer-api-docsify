@@ -6,14 +6,12 @@
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceOptions } from '@kit.AbilityKit';
+import { AtomicServiceOptions } from 'kits/@kit.AbilityKit';
 ```
 
 ## completionHandlerForAtomicService
@@ -28,8 +26,6 @@ Operation class for receiving the result of opening an atomic service.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -39,16 +35,14 @@ Operation class for receiving the result of opening an atomic service.
 ## flags
 
 ```TypeScript
-flags?: int
+flags?: number
 ```
 
 Mode in which the system processes the startup. For example, **wantConstant.Flags.FLAG_INSTALL_ON_DEMAND** indicates that the installation-free capability is used.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,8 +61,6 @@ Additional parameters. For details, see the **parameters** field in [Want](arkts
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

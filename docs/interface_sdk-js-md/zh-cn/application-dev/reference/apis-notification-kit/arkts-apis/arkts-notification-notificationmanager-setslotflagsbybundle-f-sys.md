@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## setSlotFlagsByBundle
 
 ```TypeScript
-function setSlotFlagsByBundle(bundle: BundleOption, slotFlags: long): Promise<void>
+function setSlotFlagsByBundle(bundle: BundleOption, slotFlags: number): Promise<void>
 ```
 
 设定指定应用的通知提醒方式开关。使用Promise异步回调。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,8 +26,8 @@ function setSlotFlagsByBundle(bundle: BundleOption, slotFlags: long): Promise<vo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 |
-| slotFlags | ArkTS-Dyn: number<br>ArkTS-Sta：long | 是 |
+| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
+| slotFlags | number | 是 |
 
 **返回值：**
 
@@ -49,43 +47,3 @@ function setSlotFlagsByBundle(bundle: BundleOption, slotFlags: long): Promise<vo
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-
-let slotFlags: number = 1;
-
-notificationManager.setSlotFlagsByBundle(bundle, slotFlags).then(() => {
-    console.info('setSlotFlagsByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`setSlotFlagsByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    // 需根据实际情况进行替换
-    bundle: 'bundleName1',
-};
-
-let slotFlags: long = 1;
-
-notificationManager.setSlotFlagsByBundle(bundle, slotFlags).then(() => {
-    console.info('setSlotFlagsByBundle success');
-}).catch((err: Error): void => {
-    let error: BusinessError = err as BusinessError;
-    console.error(`setSlotFlagsByBundle failed, code is ${error.code}, message is ${error.message}`);
-});
-```

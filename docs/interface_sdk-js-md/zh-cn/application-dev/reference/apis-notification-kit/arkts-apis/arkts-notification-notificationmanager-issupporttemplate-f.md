@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'kits/@kit.NotificationKit';
 ```
 
 ## isSupportTemplate
@@ -15,8 +15,6 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -36,67 +34,6 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-let isSupportTemplateCallback = (err: BusinessError, data: boolean): void => {
-  if (err) {
-    console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-  }
-}
-notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-let isSupportTemplateCallback = (err: BusinessError | null , data: boolean | undefined | null): void => {
-  if (err) {
-    console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-  }
-}
-notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
-  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
-  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-}).catch((err: Error): void => {
-  let error: BusinessError = err as BusinessError;
-  console.error(`isSupportTemplate failed, code is ${error.code}, message is ${error.message}`);
-});
-```
-
 
 ## isSupportTemplate
 
@@ -107,8 +44,6 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -132,7 +67,3 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 | [1600001](../errorcode-notification.md#1600001-内部错误) |
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-
-**示例**
-
-参见 [isSupportTemplate](#issupporttemplate)

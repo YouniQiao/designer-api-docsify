@@ -4,8 +4,6 @@ Enumerates cipher operation modes for encryption and decryption.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -19,8 +17,6 @@ ENCRYPT_MODE = 0
 Encryption.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -37,8 +33,6 @@ DECRYPT_MODE = 1
 Decryption.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

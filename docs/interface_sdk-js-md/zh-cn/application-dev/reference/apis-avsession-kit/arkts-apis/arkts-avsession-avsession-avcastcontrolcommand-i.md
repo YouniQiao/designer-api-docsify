@@ -4,14 +4,12 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'kits/@kit.AVSessionKit';
 ```
 
 ## command
@@ -26,8 +24,6 @@ command: AVCastControlCommandType
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -35,16 +31,14 @@ command: AVCastControlCommandType
 ## parameter
 
 ```TypeScript
-parameter?: media.PlaybackSpeed | double | string | LoopMode
+parameter?: media.PlaybackSpeed | number | string | LoopMode
 ```
 
 命令对应的参数。
 
-**类型：** ArkTS-Dyn: media.PlaybackSpeed \| number \| string \| [LoopMode](arkts-avsession-avsession-loopmode-e.md)  <br>ArkTS-Sta：media.PlaybackSpeed \| double \| string \| [LoopMode](arkts-avsession-avsession-loopmode-e.md)
+**类型：** media.PlaybackSpeed \| number \| string \| [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## deletePersistentGroup
 
 ```TypeScript
-function deletePersistentGroup(netId: int): void
+function deletePersistentGroup(netId: number): void
 ```
 
 删除指定网络ID的持久P2P群组。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -28,7 +26,7 @@ function deletePersistentGroup(netId: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| netId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
+| netId | number | 是 |
 
 **错误码：**
 
@@ -40,16 +38,3 @@ function deletePersistentGroup(netId: int): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) |
 | [2801001](../errorcode-wifi.md#2801001-p2p功能未打开) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-try {
-  let netId = 0;
-  wifiManager.deletePersistentGroup(netId);  
-}catch (error) {
-  console.error("failed:" + JSON.stringify(error));
-}
-```

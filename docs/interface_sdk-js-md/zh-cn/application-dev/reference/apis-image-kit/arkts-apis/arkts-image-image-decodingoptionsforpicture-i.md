@@ -4,14 +4,12 @@
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## desiredAuxiliaryPictures
@@ -26,8 +24,6 @@ desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 
 **起始版本：** 13
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
 ## desiredPixelFormat
@@ -41,8 +37,6 @@ desiredPixelFormat?: PixelMapFormat
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,8 +53,6 @@ desiredSizeForMainPixelMap?: Size
 **类型：** Size
 
 **起始版本：** 24
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

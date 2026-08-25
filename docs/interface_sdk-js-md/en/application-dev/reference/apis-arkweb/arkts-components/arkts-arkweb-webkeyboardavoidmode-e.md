@@ -4,8 +4,6 @@ Enumerates the soft keyboard avoidance modes.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## RESIZE_VISUAL
@@ -17,8 +15,6 @@ RESIZE_VISUAL = 0
 For soft keyboard avoidance, the visual viewport is resized, but not the layout viewport.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,8 +30,6 @@ For soft keyboard avoidance, both the visual viewport and layout viewport are re
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -50,8 +44,6 @@ No viewport is resized, and soft keyboard avoidance is not triggered.
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -65,7 +57,5 @@ RETURN_TO_UICONTEXT = 3
 The soft keyboard avoidance behavior of the **Web** component follows the [KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) set by UIcontext. The **Web** component does not process the avoidance behavior of the component.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Web.Webview.Core

@@ -4,14 +4,12 @@ Describes a **Panel** object, which is created using [createPanel](arkts-basicse
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## hide
@@ -24,8 +22,6 @@ Hides the word selection panel. This API is used together with [show](#show). Th
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **Return value:**
@@ -41,50 +37,15 @@ Hides the word selection panel. This API is used together with [show](#show). Th
 | [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
 
-**Examples**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-selectionPanel.hide().then(() => {
-  console.info('Succeeded in hiding the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide panel: ${err.code}, error message: ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-selectionPanel?.hide().then(() => {
-  console.info('Succeeded in hiding the panel.');
-}).catch((err) => {
-  console.error(`Failed to hide panel: ${err.code}, error message: ${err.message}`);
-});
-```
-
 ## moveToGlobalDisplay
 
-ArkTS-Dyn:
 ```TypeScript
 moveToGlobalDisplay(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
-```TypeScript
-moveToGlobalDisplay(x: int, y: int): Promise<void>
 ```
 
 Moves the word selection panel to the specified coordinates in the global coordinates system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md). This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,8 +55,8 @@ Moves the word selection panel to the specified coordinates in the global coordi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
-| y | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| x | number | Yes |
+| y | number | Yes |
 
 **Return value:**
 
@@ -109,41 +70,6 @@ Moves the word selection panel to the specified coordinates in the global coordi
 | --- |
 | [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
-
-**Examples**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  selectionPanel.moveToGlobalDisplay(200, 200).then(() => {
-    console.info('Succeeded in moving the panel.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
-}
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.moveToGlobalDisplay(200, 200).then(() => {
-    console.info('Succeeded in moving the panel.');
-  }).catch((err) => {
-    console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to move panel: ${err.code}, error message: ${err.message}`);
-}
-```
 
 ## off('destroyed')
 
@@ -155,8 +81,6 @@ Unsubscribes from the word selection panel destruction event. This API is used t
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **Parameters:**
@@ -165,18 +89,6 @@ Unsubscribes from the word selection panel destruction event. This API is used t
 | --- | --- | --- |
 | type | 'destroyed' | Yes |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  selectionPanel.off('destroyed');
-} catch (err) {
-  console.error(`Failed to unregister destroyed: ${err.code}, error message: ${err.message}`);
-}
-```
 
 ## off('hidden')
 
@@ -188,8 +100,6 @@ Unsubscribes from the word selection panel hiding event. This API is used togeth
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **Parameters:**
@@ -198,90 +108,6 @@ Unsubscribes from the word selection panel hiding event. This API is used togeth
 | --- | --- | --- |
 | type | 'hidden' | Yes |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  selectionPanel.off('hidden');
-} catch (err) {
-  console.error(`Failed to unregister hidden: ${err.code}, error message: ${err.message}`);
-}
-```
-
-## offDestroy
-
-```TypeScript
-offDestroy(callback?: Callback<void>): void
-```
-
-Unregisters the callback used to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result.  
-**ArkTS mode:** This API applies only to ArkTS-Sta.
-
-**Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.SelectionInput.Selection
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.offDestroy();
-} catch (err) {
-  console.error(`Failed to unregister destroyed: ${err.code}, error message: ${err.message}`);
-}
-```
-
-## offHide
-
-```TypeScript
-offHide(callback?: Callback<void>): void
-```
-
-Unregisters the callback used to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result.  
-**ArkTS mode:** This API applies only to ArkTS-Sta.
-
-**Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.SelectionInput.Selection
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.offHide();
-} catch (err) {
-  console.error(`Failed to unregister hide: ${err.code}, error message: ${err.message}`);
-}
-```
 
 ## on('destroyed')
 
@@ -293,8 +119,6 @@ Subscribes to the word selection panel destruction event. This API is used toget
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **Parameters:**
@@ -303,20 +127,6 @@ Subscribes to the word selection panel destruction event. This API is used toget
 | --- | --- | --- |
 | type | 'destroyed' | Yes |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  selectionPanel.on('destroyed', () => {
-    console.info('Panel has been destroyed.');
-  });
-} catch (err) {
-  console.error(`Failed to register destroyed callback: ${err.code}, error message: ${err.message}`);
-}
-```
 
 ## on('hidden')
 
@@ -328,8 +138,6 @@ Subscribes to the word selection panel hiding event. This API is used together w
 
 **Since:** 24
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
-
 **System capability:** SystemCapability.SelectionInput.Selection
 
 **Parameters:**
@@ -338,96 +146,6 @@ Subscribes to the word selection panel hiding event. This API is used together w
 | --- | --- | --- |
 | type | 'hidden' | Yes |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  selectionPanel.on('hidden', () => {
-    console.info('Panel has been hidden.');
-  });
-} catch (err) {
-  console.error(`Failed to register hidden callback: ${err.code}, error message: ${err.message}`);
-}
-```
-
-## onDestroy
-
-```TypeScript
-onDestroy(callback: Callback<void>): void
-```
-
-Registers a callback to listen for the destroy event of the word selection panel. This API uses an asynchronous callback to return the result.  
-**ArkTS mode:** This API applies only to ArkTS-Sta.
-
-**Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.SelectionInput.Selection
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.onDestroy(() => {
-    console.info('Panel has been destroyed.');
-  });
-} catch (err) {
-  console.error(`Failed to register destroy callback: ${err.code}, error message: ${err.message}`);
-}
-```
-
-## onHide
-
-```TypeScript
-onHide(callback: Callback<void>): void
-```
-
-Registers a callback to listen for the hide event of the word selection panel. This API uses an asynchronous callback to return the result.  
-**ArkTS mode:** This API applies only to ArkTS-Sta.
-
-**Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Sta, since version 24.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.SelectionInput.Selection
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.onHide(() => {
-    console.info('Panel has been hidden.');
-  });
-} catch (err) {
-  console.error(`Failed to register hide callback: ${err.code}, error message: ${err.message}`);
-}
-```
 
 ## setUiContent
 
@@ -438,8 +156,6 @@ setUiContent(path: string): Promise<void>
 Sets the UI content for the current word selection panel, for example, to display translation results, search suggestions, or custom action buttons. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md). This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -464,41 +180,6 @@ Sets the UI content for the current word selection panel, for example, to displa
 | [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
 
-**Examples**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  selectionPanel.setUiContent('pages/Index').then(() => {
-    console.info('Succeeded in setting the content.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to setUiContent: ${err.code}, error message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to setUiContent: ${err.code}, error message: ${err.message}`);
-}
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-try {
-  selectionPanel?.setUiContent('pages/Index').then(() => {
-    console.info('Succeeded in setting the content.');
-  }).catch((err) => {
-    console.error(`Failed to setUiContent: ${err.code}, error message: ${err.message}}`);
-  });
-} catch (err) {
-  console.error(`Failed to setUiContent: ${err.code}, error message: ${err.message}}`);
-}
-```
-
 ## show
 
 ```TypeScript
@@ -508,8 +189,6 @@ show(): Promise<void>
 Shows the word selection panel. This API is used together with [hide](#hide). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md). This API uses a promise to return the result.
 
 **Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -527,33 +206,6 @@ Shows the word selection panel. This API is used together with [hide](#hide). Th
 | --- |
 | [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
-
-**Examples**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-selectionPanel.show().then(() => {
-  console.info('Succeeded in showing the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show panel: ${err.code}, error message: ${err.message}`);
-});
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-selectionPanel?.show().then(() => {
-  console.info('Succeeded in showing the panel.');
-}).catch((err) => {
-  console.error(`Failed to show panel: ${err.code}, error message: ${err.message}`);
-});
-```
 
 ## startMoving
 
@@ -565,8 +217,6 @@ Sets whether the word selection panel can be dragged along with the mouse, touch
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.SelectionInput.Selection
@@ -583,52 +233,3 @@ Sets whether the word selection panel can be dragged along with the mouse, touch
 | --- |
 | [33600001](../errorcode-selection.md#33600001-word-selection-service-invocation-error) |
 | [33600002](../errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
-
-**Examples**
-
-ArkTS-Dyn example:
-
-```TypeScript
-import { selectionManager, BusinessError } from '@kit.BasicServicesKit';
-
-RelativeContainer() {
-  /* 
-   * Page layout content, which should be defined based on your actual needs.
-   */
-}
-.onTouch((event: TouchEvent) => {
-  if (event.type === TouchType.Down) {
-    if (selectionPanel !== undefined) {
-      selectionPanel.startMoving().then(() => {   // selectionPanel is the panel instance created by createPanel.
-        console.info('Succeeded in startMoving the panel.');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to startMoving panel: ${err.code}, error message: ${err.message}`);
-      });
-    }
-  }
-})
-```
-
-ArkTS-Sta example:
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import selectionManager from '@ohos.selectionInput.selectionManager';
-
-RelativeContainer() {
-  /* 
-   * Page layout content, which should be defined based on your actual needs.
-   */
-}
-.onTouch((event: TouchEvent) => {
-  if (event.type === TouchType.Down) {
-    if (selectionPanel !== undefined) {
-      selectionPanel?.startMoving().then(() => {   // selectionPanel is the panel instance created by createPanel.
-        console.info('Succeeded in startMoving the panel.');
-      }).catch((err) => {
-        console.error(`Failed to startMoving panel: ${err.code}, error message: ${err.message}`);
-      });
-    }
-  }
-})
-```

@@ -3,20 +3,18 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 ```
 
 ## destroyAbilityConnectionSession
 
 ```TypeScript
-function destroyAbilityConnectionSession(sessionId: int): void
+function destroyAbilityConnectionSession(sessionId: number): void
 ```
 
-销毁应用间的协同会话。
+销毁应用间的协同会话，与createAbilityConnectionSession配对使用用于释放会话资源。 此接口需在成功创建协同会话后调用。销毁会话会释放相关资源，建议先调用disconnect断开连接后再销毁会话。 不调用此方法会导致资源泄漏。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -26,28 +24,4 @@ function destroyAbilityConnectionSession(sessionId: int): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number<br>ArkTS-Sta：int | 是 |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-hilog.info(0x0000, 'testTag', 'destroyAbilityConnectionSession called');
-let sessionId = 100;
-abilityConnectionManager.destroyAbilityConnectionSession(sessionId);
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
-import hilog from '@ohos.hilog';
-
-hilog.info(0x0000, 'testTag', 'destroyAbilityConnectionSession called');
-let sessionId = 100;
-abilityConnectionManager.destroyAbilityConnectionSession(sessionId);
-```
+| sessionId | number | 是 |

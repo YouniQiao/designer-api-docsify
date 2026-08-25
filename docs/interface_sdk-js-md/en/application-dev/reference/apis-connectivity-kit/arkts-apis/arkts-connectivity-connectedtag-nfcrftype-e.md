@@ -4,8 +4,6 @@ Enumerates the NFC field strength states.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 ## NFC_RF_LEAVE
@@ -18,8 +16,6 @@ NFC exit.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **System capability:** SystemCapability.Communication.ConnectedTag
 
 ## NFC_RF_ENTER
@@ -31,7 +27,5 @@ NFC_RF_ENTER = 1
 NFC entry.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **System capability:** SystemCapability.Communication.ConnectedTag

@@ -8,8 +8,6 @@ type KeyRequestCallback = (assetId: string, requestData: Uint8Array) => void
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -20,11 +18,3 @@ type KeyRequestCallback = (assetId: string, requestData: Uint8Array) => void
 | --- | --- | --- |
 | assetId | string | 是 |
 | requestData | Uint8Array | 是 |
-
-**示例**
-
-```TypeScript
-let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, requestData: Uint8Array) => {
-  console.info(`Succeeded in keyRequestCallback. assetId: ${assetId}, requestData: ${requestData}`);
-};
-```

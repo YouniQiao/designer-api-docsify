@@ -5,8 +5,6 @@ HTTP拦截器的类型枚举。
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **系统能力：** SystemCapability.Communication.NetStack
 
 ## INITIAL_REQUEST
@@ -18,8 +16,6 @@ INITIAL_REQUEST = 'INITIAL_REQUEST'
 在初始HTTP请求组装完成后进行拦截。
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -35,8 +31,6 @@ REDIRECTION = 'REDIRECTION'
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -50,8 +44,6 @@ CACHE_CHECKED = 'READ_CACHE'
 Intercept after we checked the HTTP cache.
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -67,8 +59,6 @@ Intercept when we perform network connection, such as TLS and TCP.
 
 **起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
-
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Communication.NetStack
@@ -82,8 +72,6 @@ FINAL_RESPONSE = 'FINAL_RESPONSE'
 Intercept when we get the final HTTP response.
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

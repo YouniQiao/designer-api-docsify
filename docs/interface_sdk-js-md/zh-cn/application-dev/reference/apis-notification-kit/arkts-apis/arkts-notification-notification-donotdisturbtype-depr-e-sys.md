@@ -4,8 +4,6 @@
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
@@ -23,8 +21,6 @@ TYPE_NONE = 0
 非通知勿扰类型。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 
@@ -44,8 +40,6 @@ TYPE_ONCE = 1
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [TYPE_ONCE](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_once)
@@ -64,8 +58,6 @@ TYPE_DAILY = 2
 
 **起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
-
 **废弃版本：** 9
 
 **替代接口：** [TYPE_DAILY](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md#type_daily)
@@ -83,8 +75,6 @@ TYPE_CLEARLY = 3
 以设置时间段(明确年月日时分)执行勿扰。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

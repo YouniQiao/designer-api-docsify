@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedWifiList
@@ -19,8 +19,6 @@ You can resolve the conflict by enabling Wi-Fi via [setDisallowedPolicy](arkts-m
 You can resolve the conflict by removing the allowed Wi-Fi networks through [removeAllowedWifiList](arkts-mdm-wifimanager-removeallowedwifilist-f.md).
 
 **Since:** 19
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 19.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_WIFI
 
@@ -43,27 +41,3 @@ You can resolve the conflict by removing the allowed Wi-Fi networks through [rem
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
-
-**Examples**
-
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.edmtest',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let wifiIds: Array<wifiManager.WifiAccessInfo> = [{
-    // Replace with actual values.
-    ssid: "wifi_name",
-    bssid: "68:77:24:77:A6:D8"
-  }];
-  wifiManager.addDisallowedWifiList(wantTemp, wifiIds);
-  console.info(`Succeeded in adding disallowed Wi-Fi list.`);
-} catch (err) {
-  console.error(`Failed to add disallowed Wi-Fi list. Code: ${err.code}, message: ${err.message}`);
-}
-```

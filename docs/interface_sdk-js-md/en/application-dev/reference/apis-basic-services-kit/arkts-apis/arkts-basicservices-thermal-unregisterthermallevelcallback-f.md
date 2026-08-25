@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from '@kit.BasicServicesKit';
+import { thermal } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## unregisterThermalLevelCallback
@@ -15,8 +15,6 @@ function unregisterThermalLevelCallback(callback?: Callback<void>): void
 Unregisters from the thermal level changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.PowerManager.ThermalManager
 
@@ -31,16 +29,3 @@ Unregisters from the thermal level changes. This API uses an asynchronous callba
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-try {
-    thermal.unregisterThermalLevelCallback(() => {
-        console.info('unsubscribe thermal level success.');
-    });
-    console.info('unregister thermal level callback success.');
-} catch(err) {
-    console.error('unregister thermal level callback failed, err: ' + err);
-}
-```

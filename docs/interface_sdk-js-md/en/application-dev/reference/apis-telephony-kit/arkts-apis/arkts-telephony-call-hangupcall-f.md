@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'kits/@kit.TelephonyKit';
 ```
 
 ## hangUpCall
@@ -15,8 +15,6 @@ function hangUpCall(callback: AsyncCallback<void>): void
 Ends a call. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.ANSWER_CALL or ohos.permission.SET_TELEPHONY_STATE or ohos.permission.MANAGE_CALL_FOR_DEVICES
 
@@ -39,39 +37,3 @@ Ends a call. This API uses an asynchronous callback to return the result.
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hangUpCall((err: BusinessError) => {
-    if (err) {
-        console.error(`hangUpCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`hangUpCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hangUpCall(1, (err: BusinessError) => {
-    if (err) {
-        console.error(`hangUpCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`hangUpCall success.`);
-    }
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hangUpCall(1).then(() => {
-    console.info(`hangUpCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`hangUpCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```

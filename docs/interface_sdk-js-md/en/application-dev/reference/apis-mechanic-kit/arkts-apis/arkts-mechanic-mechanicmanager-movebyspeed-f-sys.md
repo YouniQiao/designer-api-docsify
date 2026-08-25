@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'kits/@kit.MechanicKit';
 ```
 
 ## moveBySpeed
 
 ```TypeScript
-function moveBySpeed(mechId: int, params: SpeedParams, duration: int): Promise<Result>
+function moveBySpeed(mechId: number, params: SpeedParams, duration: number): Promise<Result>
 ```
 
 Move a mechanical device at the specified speed.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **System capability:** SystemCapability.Mechanic.Core
 
@@ -26,9 +24,9 @@ Move a mechanical device at the specified speed.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mechId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| mechId | number | Yes |
 | params | [SpeedParams](arkts-mechanic-mechanicmanager-speedparams-i-sys.md) | Yes |
-| duration | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| duration | number | Yes |
 
 **Return value:**
 

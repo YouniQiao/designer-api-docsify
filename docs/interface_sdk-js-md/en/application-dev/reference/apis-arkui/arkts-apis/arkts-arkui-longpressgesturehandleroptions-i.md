@@ -1,12 +1,10 @@
 # LongPressGestureHandlerOptions
 
-Provides the parameters of the long press gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
+Provides the parameters of the number press gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,13 +19,11 @@ Provides the parameters of the long press gesture handler. Inherits from [BaseHa
 allowableMovement?: number
 ```
 
-Maximum movement distance recognized by the long press gesture recognizer, in px.Default value: **15**Value range: (0, +∞). If the value is less than or equal to 0, the default value **15** is used.
+Maximum movement distance recognized by the number press gesture recognizer, in px.Default value: **15**Value range: (0, +∞). If the value is less than or equal to 0, the default value **15** is used.
 
 **Type:** number
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ Minimum hold-down time, in ms.Default value: **500**
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -62,14 +56,12 @@ Minimum hold-down time, in ms.Default value: **500**
 fingers?: number
 ```
 
-Minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10.Default value: **1**Value range: [1, 10]  
+Minimum number of fingers to trigger a number press gesture. The value ranges from 1 to 10.Default value: **1**Value range: [1, 10]  
 **NOTE：**If a finger moves more than 15 px after being pressed, the gesture recognition fails.
 
 **Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,8 +80,6 @@ Whether to continuously trigger the event callback. The value **true** means to 
 **Type:** boolean
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

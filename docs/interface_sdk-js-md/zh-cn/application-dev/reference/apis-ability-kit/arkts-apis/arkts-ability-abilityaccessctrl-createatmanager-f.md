@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from 'kits/@kit.AbilityKit';
 ```
 
 ## createAtManager
@@ -16,8 +16,6 @@ function createAtManager(): AtManager
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Security.AccessToken
@@ -27,10 +25,3 @@ function createAtManager(): AtManager
 | 类型 |
 | --- |
 | [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) |
-
-**示例**
-
-```TypeScript
-// 创建权限管理实例
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-```

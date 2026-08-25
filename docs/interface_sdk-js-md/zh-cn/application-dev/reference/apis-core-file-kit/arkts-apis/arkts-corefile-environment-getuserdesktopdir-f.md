@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { Environment } from '@kit.CoreFileKit';
+import { Environment } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getUserDesktopDir
@@ -15,8 +15,6 @@ function getUserDesktopDir(): string
 获取当前用户预授权桌面目录的沙箱路径。
 
 **起始版本：** 11
-
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本11：ohos.permission.READ_WRITE_DESKTOP_DIRECTORY
@@ -36,18 +34,3 @@ function getUserDesktopDir(): string
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 13900042 |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getUserDesktopDirExample() {
-  try {
-    let path = Environment.getUserDesktopDir();
-    console.info(`Succeeded in getUserDesktopDir, path is ${path}`);
-  } catch (err) {
-    console.error(`Failed to getUserDesktopDir. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```

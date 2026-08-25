@@ -1,6 +1,8 @@
 # GcmParamsSpec
 
-Encapsulates the parameters for encryption or decryption using the GCM AEAD mode, which requires an IV, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.<br>Applies to the GCM mode.
+Encapsulates the parameters for encryption or decryption using the GCM AEAD mode, which requires an IV, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.
+
+Applies to the GCM mode.
 
 > **NOTE：**&gt;
 > 1. Before passing a value to
@@ -13,8 +15,6 @@ Encapsulates the parameters for encryption or decryption using the GCM AEAD mode
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 9 to 11: SystemCapability.Security.CryptoFramework
@@ -22,7 +22,7 @@ Encapsulates the parameters for encryption or decryption using the GCM AEAD mode
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 ```
 
 ## aad
@@ -37,8 +37,6 @@ Additional authentication data (AAD), which is of 0 to INT_MAX bytes.
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
@@ -51,13 +49,13 @@ Additional authentication data (AAD), which is of 0 to INT_MAX bytes.
 authTag: DataBlob
 ```
 
-Authentication tag, which is of 16 bytes.<br>When GCM mode is used for encryption, you need to extract the last 16 bytes from the [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in **GcmParamsSpec** for [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync).
+Authentication tag, which is of 16 bytes.
+
+When GCM mode is used for encryption, you need to extract the last 16 bytes from the [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in **GcmParamsSpec** for [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync).
 
 **Type:** DataBlob
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -76,8 +74,6 @@ IV, which is of 1 to 128 bytes. A 12-byte IV is commonly used.
 **Type:** DataBlob
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

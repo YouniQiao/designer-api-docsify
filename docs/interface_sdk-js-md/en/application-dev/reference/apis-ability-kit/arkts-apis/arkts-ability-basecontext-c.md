@@ -4,8 +4,6 @@ BaseContext is an abstract class that specifies whether a child class Context is
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## stageMode
@@ -19,8 +17,6 @@ Indicates the context is FA Mode or Stage Mode.
 **Type:** boolean
 
 **Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

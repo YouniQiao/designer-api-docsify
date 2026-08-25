@@ -4,14 +4,12 @@ A simple API for XML handling
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
+import { xml } from 'kits/@kit.ArkTS';
 ```
 
 ## characters
@@ -23,8 +21,6 @@ characters(content: string): void
 CallBack function triggered by the text content
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +44,6 @@ CallBack function triggered at the end of the document
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -66,8 +60,6 @@ CallBack function triggered at the end of the element
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -82,35 +74,6 @@ CallBack function triggered at the end of the element
 | namespaceURI | string \| undefined | Yes |
 | qName | string \| undefined | Yes |
 
-**Examples**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setText("Happy");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <note>Happy</note>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setText("Happy");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note>Happy</note>
-```
-
 ## startDocument
 
 ```TypeScript
@@ -120,8 +83,6 @@ startDocument(): void
 CallBack function triggered at the beginning of the document
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,8 +100,6 @@ CallBack function triggered at the beginning of the element
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -155,32 +114,3 @@ CallBack function triggered at the beginning of the element
 | namespaceURI | string \| undefined | Yes |
 | qName | string \| undefined | Yes |
 | attributes | Map & lt;string, string & gt; | Yes |
-
-**Examples**
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let arrayBuffer = new ArrayBuffer(2048);
-let thatSer = new xml.XmlSerializer(arrayBuffer);
-thatSer.startElement("note");
-thatSer.setText("Happy");
-thatSer.endElement();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result);
-// <note>Happy</note>
-```
-
-```TypeScript
-import { util } from '@kit.ArkTS';
-
-let serializer = new xml.XmlDynamicSerializer('utf-8');
-serializer.startElement("note");
-serializer.setText("Happy");
-serializer.endElement();
-let arrayBuffer = serializer.getOutput();
-let uint8 = new Uint8Array(arrayBuffer);
-let result = util.TextDecoder.create().decodeToString(uint8);
-console.info(result); // <note>Happy</note>
-```

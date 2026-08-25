@@ -17,8 +17,8 @@ LinkedList底层通过双向链表实现，每个节点都包含对前一个元�
 ## 导入模块
 
 ```TypeScript
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
+import { LinkedList } from 'kits/@kit.ArkTS';
+import { LinkedListForEachCb } from 'kits/@kit.ArkTS';
 ```
 
 ## 汇总
@@ -28,9 +28,3 @@ import { LinkedListForEachCb } from '@kit.ArkTS';
 | 名称 |
 | --- |
 | [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md) |
-
-### 类型
-
-| 名称 |
-| --- |
-| [LinkedListForEachCb](arkts-arkts-linkedlistforeachcb-t.md) |

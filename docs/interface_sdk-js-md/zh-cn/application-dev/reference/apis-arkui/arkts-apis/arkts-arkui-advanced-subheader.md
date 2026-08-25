@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
+import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from 'kits/@kit.ArkUI';
 ```
 
 ## 汇总

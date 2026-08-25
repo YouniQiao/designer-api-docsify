@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## setDisposedRules
@@ -15,8 +15,6 @@ function setDisposedRules(disposedRuleConfigurations: Array<DisposedRuleConfigur
 Sets disposed rules in batches for an application or an application clone.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -39,61 +37,3 @@ Sets disposed rules in batches for an application or an application clone.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { appControl, Want, bundleManager } from '@kit.AbilityKit';
-
-let want: Want = {
-  bundleName: 'com.example.myapplication',
-  moduleName: 'entry',
-  abilityName: 'EntryAbility'
-};
-let elementName: bundleManager.ElementName = {
-  bundleName: 'com.example.myapplication',
-  moduleName: 'entry',
-  abilityName: 'EntryAbility'
-};
-let rule: appControl.DisposedRule = {
-  want: want,
-  componentType: appControl.ComponentType.UI_ABILITY,
-  disposedType: appControl.DisposedType.BLOCK_APPLICATION,
-  controlType: appControl.ControlType.ALLOWED_LIST,
-  elementList: [
-    elementName
-  ],
-  priority: 100
-};
-
-let disposedRuleConfiguration: appControl.DisposedRuleConfiguration = {
-  appId: 'com.example.myapplication_BInGTMPMdc6v55s/UFIJHL5NLREXjOuxm/DsyMhlFmLAZC9/Gk+ruqS9OZr/dvFuaIaQQL1pKolvzK/zYNHvJ/I=',
-  appIndex: 0,
-  disposedRule: rule,
-};
-
-let disposedRuleConfigurations: Array<appControl.DisposedRuleConfiguration> = [];
-disposedRuleConfigurations.push(disposedRuleConfiguration);
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Row() {
-      Column() {
-        Button('setDisposedRules', { type: ButtonType.Normal })
-          .onClick(() => {
-            try {
-              appControl.setDisposedRules(disposedRuleConfigurations);
-              console.info('setDisposedRules success');
-            } catch (error) {
-              let err: BusinessError = error as BusinessError;
-              console.error(`setDisposedRules failed, errCode:${err.code}, message:${err.message}`);
-            }
-          });
-      }
-    }
-  }
-}
-```

@@ -15,8 +15,6 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md)
@@ -35,11 +33,3 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 | 类型 |
 | --- |
 | [Stream](arkts-corefile-fileio-stream-depr-i.md) |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let fd = fileio.openSync(filePath);
-let ss = fileio.fdopenStreamSync(fd, "r+");
-```

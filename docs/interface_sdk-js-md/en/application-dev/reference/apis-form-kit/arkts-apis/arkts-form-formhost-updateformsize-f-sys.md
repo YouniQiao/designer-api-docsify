@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## updateFormSize
@@ -15,8 +15,6 @@ function updateFormSize(formId: string, newDimension: formInfo.FormDimension, ne
 Updates the size of the widget.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -41,24 +39,3 @@ Updates the size of the widget.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) |
 | [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
 | [16501012](../errorcode-form.md#16501012-incorrect-widget-dimension) |
-
-**Examples**
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  let newDimension = formInfo.FormDimension.Dimension_1_2;
-  let newRect: formInfo.Rect = {
-    left: 1,
-    top: 2,
-    width: 100,
-    height: 100
-  };
-  formHost.updateFormSize(formId, newDimension, newRect);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```

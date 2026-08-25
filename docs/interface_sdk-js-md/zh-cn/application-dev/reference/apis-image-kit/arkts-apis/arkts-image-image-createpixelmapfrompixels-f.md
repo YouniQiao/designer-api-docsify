@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'kits/@kit.ImageKit';
 ```
 
 ## createPixelMapFromPixels
@@ -15,8 +15,6 @@ function createPixelMapFromPixels(pixels: ArrayBuffer, param: InitializationOpti
 Creates a PixelMap from existing pixel data. The pixel data will be copied and converted to the specified pixel format to initialize the PixelMap.The following pixel formats are not supported for PixelMap creation: RGBA_1010102, YCBCR_P010, YCRCB_P010, ASTC_4x4.
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,73 +45,3 @@ Creates a PixelMap from existing pixel data. The pixel data will be copied and c
 | [7600207](../errorcode-image.md#7600207-不支持的数据格式) |
 | [7600301](../errorcode-image.md#7600301-申请内存失败) |
 | [7600305](../errorcode-image.md#7600305-创建pixelmap失败) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapFromPixels() {
-  const size: image.Size = {
-    width: 6,
-    height: 4
-  };
-  const pixels = new ArrayBuffer(size.width * size.height * 4); // 4为RGBA类型像素格式的每像素字节数。
-  const pixelsArr = new Uint8Array(pixels);
-  for (let i = 0; i < pixelsArr.length; i += 4) {
-    // RGBA_8888格式下，下列数组索引依次为：R通道、G通道、B通道、A通道。
-    pixelsArr[i] = 0xFF;
-    pixelsArr[i + 1] = 0x00;
-    pixelsArr[i + 2] = 0x00;
-    pixelsArr[i + 3] = 0xFF;
-  }
-  const config: image.InitializationOptions = {
-    size,
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区内的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-
-  image.createPixelMapFromPixels(pixels, config)
-    .then((pixelMap: image.PixelMap) => {
-      console.info('Succeeded in creating the PixelMap.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-    });
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-function createPixelMapFromPixels() {
-  const size: image.Size = {
-    width: 6,
-    height: 4
-  };
-  const pixels = new ArrayBuffer(size.width * size.height * 4); // 4为RGBA类型像素格式的每像素字节数。
-  const pixelsArr = new Uint8Array(pixels);
-  for (let i = 0; i < pixelsArr.length; i += 4) {
-    // RGBA_8888格式下，下列数组索引依次为：R通道、G通道、B通道、A通道。
-    pixelsArr[i] = 0xFF;
-    pixelsArr[i + 1] = 0x00;
-    pixelsArr[i + 2] = 0x00;
-    pixelsArr[i + 3] = 0xFF;
-  }
-  const config: image.InitializationOptions = {
-    size,
-    srcPixelFormat: image.PixelMapFormat.RGBA_8888, // 缓冲区内的源像素数据的像素格式。
-    pixelFormat: image.PixelMapFormat.BGRA_8888, // 新创建的PixelMap的像素格式。
-    editable: true
-  };
-
-  image.createPixelMapFromPixels(pixels, config)
-    .then((pixelMap: image.PixelMap) => {
-      console.info('Succeeded in creating the PixelMap.');
-    }).catch((err: Error) => {
-      console.error(`Failed to create the PixelMap. Code: ${err.code}, message: ${err.message}`);
-    });
-}
-```

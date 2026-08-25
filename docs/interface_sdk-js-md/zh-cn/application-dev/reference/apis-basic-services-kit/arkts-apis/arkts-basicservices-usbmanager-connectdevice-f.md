@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## connectDevice
@@ -18,15 +18,13 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.USB.USBManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | 是 |
+| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | 是 |
 
 **返回值：**
 
@@ -43,29 +41,3 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 | [14400001](../errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
 | [14400004](../errorcode-usb.md#14400004-服务异常) |
 | [14400012](../errorcode-usb.md#14400012-io错误) |
-
-**示例**
-
-```TypeScript
-async function connectDevice() {
-  let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-  if (!devicesList || devicesList.length == 0) {
-    console.info(`device list is empty`);
-    return;
-  }
-
-  let device: usbManager.USBDevice = devicesList?.[0];
-  let rightResult = await usbManager.requestRight(device.name);
-  if (!rightResult) {
-    console.error(`request right failed`);
-    return;
-  }
-  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  if (devicePipe == undefined) {
-    console.error(`connect device failed`);
-    return;
-  }
-  console.info(`devicePipe = ${devicePipe}`);
-  usbManager.closePipe(devicePipe);
-}
-```

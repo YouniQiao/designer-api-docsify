@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'kits/@kit.MDMKit';
 ```
 
 ## clearUpApplicationData
@@ -15,8 +15,6 @@ function clearUpApplicationData(admin: Want, bundleName: string, appIndex: numbe
 清除应用产生的所有数据。
 
 **起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -40,26 +38,3 @@ function clearUpApplicationData(admin: Want, bundleName: string, appIndex: numbe
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { applicationManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.exampleapplication';
-
-try {
-  // 需根据实际情况进行替换
-  applicationManager.clearUpApplicationData(wantTemp, bundleName, 0, 100);
-  console.info('Succeeded in clearing up application data.');
-} catch (err) {
-  console.error(`Failed to clear up application data. Code is ${err.code}, message is ${err.message}`);
-}
-```

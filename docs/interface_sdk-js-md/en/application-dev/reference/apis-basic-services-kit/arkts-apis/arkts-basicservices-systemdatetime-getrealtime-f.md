@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from '@kit.BasicServicesKit';
+import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## getRealTime
@@ -15,8 +15,6 @@ function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void
 Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -37,57 +35,6 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getRealTime(true, (error: BusinessError, time: number) => {
-    if (error) {
-      console.error(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting real time : ${time}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getRealTime((error: BusinessError, time: number) => {
-    if (error) {
-      console.error(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting real time : ${time}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getRealTime().then((time: number) => {
-    console.info(`Succeeded in getting real time : ${time}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-}
-```
-
 
 ## getRealTime
 
@@ -98,8 +45,6 @@ function getRealTime(callback: AsyncCallback<number>): void
 Obtains the time elapsed since system startup, including the deep sleep time. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -119,10 +64,6 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-See [getRealTime](#getrealtime)
-
 
 ## getRealTime
 
@@ -133,8 +74,6 @@ function getRealTime(isNano?: boolean): Promise<number>
 Obtains the time elapsed since system startup, including the deep sleep time. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Deprecated since:** 12
 
@@ -159,7 +98,3 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [getRealTime](#getrealtime)

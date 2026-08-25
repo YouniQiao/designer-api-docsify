@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setWatermarkImage
@@ -19,8 +19,6 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 > 2.水印图片会以平铺方式重复覆盖整个应用界面。
 
 **起始版本：** 14
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为14。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -46,107 +44,6 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-let source: string = '/data/storage/el1/base/test.png';
-let accountId: number = 100;
-try {
-  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId);
-  console.info(`Succeeded in setting watermarkImage policy.`);
-} catch (err) {
-  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-let source: string = '/data/storage/el1/base/test.png';
-let accountId: number = 100;
-// 需根据实际情况进行替换。示例代码水印属性行数和列数都设为1，会居中显示单个水印图片
-let properties: securityManager.WatermarkProperties = {
-  intervalsRow: 1,
-  intervalsCol: 1
-};
-try {
-  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
-  console.info(`Succeeded in setting watermarkImage policy.`);
-} catch (err) {
-  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-let source: string = '/data/storage/el1/base/test.png';
-let accountId: number = 100;
-// 需根据实际情况进行替换。设备屏幕宽高是1260*2720，水印图片宽高是100*100，示例代码水印属性行数为27，列数为12，按27行12列的网格布局排列显示27*12个水印图片
-let properties: securityManager.WatermarkProperties = {
-  intervalsRow: 27,
-  intervalsCol: 12
-};
-try {
-  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
-  console.info(`Succeeded in setting watermarkImage policy.`);
-} catch (err) {
-  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-let source: string = '/data/storage/el1/base/test.png';
-let accountId: number = 100;
-// 需根据实际情况进行替换。设备屏幕宽高是1260*2720，水印图片宽高是100*100，示例代码水印属性行数为28，列数为12，28 * 100 > 2720，网格布局无法适应窗口大小，水印会以窗口左上角为原点，以平铺方式重复覆盖整个应用窗口界面，超出界面右侧、下侧的水印图片会被裁剪
-let properties: securityManager.WatermarkProperties = {
-  intervalsRow: 28,
-  intervalsCol: 12
-};
-try {
-  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
-  console.info(`Succeeded in setting watermarkImage policy.`);
-} catch (err) {
-  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## setWatermarkImage
 
@@ -164,8 +61,6 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 > 复覆盖整个应用窗口界面，水印图片超出界面右侧、下侧的部分会被裁剪（例如屏幕宽高是1260\*2720，水印图片宽高是100\*100，若设置的行数超过27，或设置的列数超过12，水印会以平铺方式重复覆盖整个应用窗口界面）。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -191,7 +86,3 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
-
-**示例**
-
-参见 [setWatermarkImage](#setwatermarkimage)

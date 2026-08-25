@@ -1,7 +1,5 @@
 # JSON
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -14,8 +12,6 @@ parse(text: string, reviver?: (this: any, key: string, value: any) => any): any
 ```
 
 Converts a JavaScript Object Notation (JSON) string into an object.
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -36,8 +32,6 @@ stringify(value: any, replacer?: (this: any, key: string, value: any) => any, sp
 
 Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -57,8 +51,6 @@ stringify(value: any, replacer?: (number | string)[] | null, space?: string | nu
 ```
 
 Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
-
-**ArkTS mode:** 
 
 **Parameters:**
 

@@ -4,14 +4,12 @@ The module defines the environment variables for the application runtime, includ
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Ability.AbilityBase
 
 ## Modules to Import
 
 ```TypeScript
-import { Configuration } from '@kit.AbilityKit';
+import { Configuration } from 'kits/@kit.AbilityKit';
 ```
 
 ## colorMode
@@ -21,13 +19,13 @@ colorMode?: ConfigurationConstant.ColorMode
 ```
 
 Dark/Light color mode of the application. The light color mode is used by default.You can [set the dark/light color mode for an application or a component](../../../application-models/subscribe-system-environment-variable-changes.md#setting-darklight-color-mode).The options are as follows:  
-- **COLOR_MODE_NOT_SET**: The color mode is not set. - **COLOR_MODE_LIGHT**: light mode. - **COLOR_MODE_DARK**: dark mode.
+- **COLOR_MODE_NOT_SET**: The color mode is not set.  
+- **COLOR_MODE_LIGHT**: light mode.  
+- **COLOR_MODE_DARK**: dark mode.
 
 **Type:** ConfigurationConstant.ColorMode
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,14 +38,14 @@ direction?: ConfigurationConstant.Direction
 ```
 
 Screen orientation of the application.The options are as follows:  
-- **DIRECTION_NOT_SET**: The screen orientation is not set. - **DIRECTION_HORIZONTAL**: horizontal direction. - **DIRECTION_VERTICAL**: vertical direction.  
+- **DIRECTION_NOT_SET**: The screen orientation is not set.  
+- **DIRECTION_HORIZONTAL**: horizontal direction.  
+- **DIRECTION_VERTICAL**: vertical direction.  
 You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
 **Type:** ConfigurationConstant.Direction
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,16 +54,14 @@ You can subscribe to changes to this environment variable in the [UIAbility](ark
 ## displayId
 
 ```TypeScript
-displayId?: long
+displayId?: number
 ```
 
 ID of the display where the application is located.You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** number
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -83,8 +79,6 @@ Unique ID of the font.
 
 **Since:** 14
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -92,16 +86,14 @@ Unique ID of the font.
 ## fontSizeScale
 
 ```TypeScript
-fontSizeScale?: double
+fontSizeScale?: number
 ```
 
 Font size scale ratio. The value is a non-negative number. The default value is **1**.You can [set the font size for an application](../../../application-models/subscribe-system-environment-variable-changes.md#setting-font-size).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -110,16 +102,14 @@ Font size scale ratio. The value is a non-negative number. The default value is 
 ## fontWeightScale
 
 ```TypeScript
-fontWeightScale?: double
+fontWeightScale?: number
 ```
 
 Font weight scale ratio. The value is a non-negative number. The default value is **1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** number
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -137,8 +127,6 @@ Whether a pointer device, such as a keyboard, mouse, or touchpad, is connected. 
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -154,8 +142,6 @@ Current language of the application, for example, **zh** (Chinese) or **en** (En
 **Type:** string
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -173,8 +159,6 @@ Locale.The application automatically adjusts its behavior based on the current l
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -190,8 +174,6 @@ Mobile country code.
 **Type:** string
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -209,8 +191,6 @@ Mobile network code.
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Ability.AbilityBase
@@ -222,54 +202,19 @@ screenDensity?: ConfigurationConstant.ScreenDensity
 ```
 
 Screen density.The options are as follows:  
-- **SCREEN_DENSITY_NOT_SET**: The pixel density is not set. - **SCREEN_DENSITY_SDPI**: 120. - **SCREEN_DENSITY_MDPI**: 160. - **SCREEN_DENSITY_LDPI**: 240. - **SCREEN_DENSITY_XLDPI**: 320. - **SCREEN_DENSITY_XXLDPI**: 480. - **SCREEN_DENSITY_XXXLDPI**: 640.  
+- **SCREEN_DENSITY_NOT_SET**: The pixel density is not set.  
+- **SCREEN_DENSITY_SDPI**: 120.  
+- **SCREEN_DENSITY_MDPI**: 160.  
+- **SCREEN_DENSITY_LDPI**: 240.  
+- **SCREEN_DENSITY_XLDPI**: 320.  
+- **SCREEN_DENSITY_XXLDPI**: 480.  
+- **SCREEN_DENSITY_XXXLDPI**: 640.  
 The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen pixel density, the larger the font display effect.You can subscribe to changes to this environment variable in the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) and [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), but not in the [ApplicationContext](arkts-ability-applicationcontext-c.md) or [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
 **Type:** ConfigurationConstant.ScreenDensity
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityBase
-
-**Examples**
-
-```TypeScript
-import { UIAbility, AbilityConstant, EnvironmentCallback, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    let envCallback: EnvironmentCallback = {
-      onConfigurationUpdated(config) {
-        console.info(`envCallback onConfigurationUpdated success: ${JSON.stringify(config)}`);
-        let language = config.language;
-        let colorMode = config.colorMode;
-        let direction = config.direction;
-        let screenDensity = config.screenDensity;
-        let displayId = config.displayId;
-        let hasPointerDevice = config.hasPointerDevice;
-        let fontId = config.fontId;
-        let fontSizeScale = config.fontSizeScale;
-        let fontWeightScale = config.fontWeightScale;
-        let mcc = config.mcc;
-        let mnc = config.mnc;
-        let locale = config.locale;
-      },
-      onMemoryLevel(level) {
-        console.info(`onMemoryLevel level: ${level}`);
-      }
-    };
-    try {
-      let applicationContext = this.context.getApplicationContext();
-      let callbackId = applicationContext.on('environment', envCallback);
-      console.info(`callbackId: ${callbackId}`);
-    } catch (paramError) {
-      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```

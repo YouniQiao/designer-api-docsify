@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getDeviceConfigs
@@ -15,8 +15,6 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 Obtains the list of all existing Wi-Fi configurations.<p>You can obtain only the Wi-Fi configurations you created on your own application.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 
@@ -33,16 +31,3 @@ Obtains the list of all existing Wi-Fi configurations.<p>You can obtain only the
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Array & lt;WifiDeviceConfig & gt; |
-
-**Examples**
-
-```TypeScript
-import wifi from '@ohos.wifi';
-
-try {
-    let configs = wifi.getDeviceConfigs();
-    console.info("configs:" + JSON.stringify(configs));
-}catch(error){
-    console.error("failed:" + JSON.stringify(error));
-}
-```

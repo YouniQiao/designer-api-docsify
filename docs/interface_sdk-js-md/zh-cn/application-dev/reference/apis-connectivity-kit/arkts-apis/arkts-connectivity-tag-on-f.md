@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## on('readerMode')
@@ -15,8 +15,6 @@ function on(type: 'readerMode', elementName: ElementName, discTech: number[], ca
 订阅NFC Tag读卡事件，实现前台应用优先分发。设备会进入读卡器模式，同时关闭卡模拟。通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信 息。需要与取消读卡器模式的 tag.off成对使用，如果已通过 on进行设置，需要在页面退出前台或页面销毁时调用 tag.off。使用 callback异步回调。与注册读卡器模式的 tag.on 互斥使用。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **需要权限：** ohos.permission.NFC_TAG
 
@@ -57,11 +55,14 @@ function on(
 ```
 
 订阅NFC Tag读卡事件，实现前台应用优先分发，并支持卡在位检测间隔设置。使用callback异步回调。  
-- 设备会进入读卡器模式，同时关闭卡模拟。 - 通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息，通过interval设置卡在位检测间隔。 - 需要与取消读卡器模式的 tag.off成对使 用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用 tag.off。 - 与注册读卡器模式的 tag.on 互斥使用。
+- 设备会进入读卡器模式，同时关闭卡模拟。  
+- 通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息，通过interval设置卡在位检测间隔。  
+- 需要与取消读卡器模式的  
+tag.off成对使 用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用 tag.off。  
+- 与注册读卡器模式的  
+tag.on 互斥使用。
 
 **起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
 
 **需要权限：** ohos.permission.NFC_TAG
 

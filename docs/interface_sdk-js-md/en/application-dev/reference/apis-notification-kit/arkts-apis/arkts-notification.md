@@ -4,8 +4,6 @@ The **Notification** module provides notification management capabilities, cover
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **Substitutes:** [notificationManager](arkts-notificationmanager.md)

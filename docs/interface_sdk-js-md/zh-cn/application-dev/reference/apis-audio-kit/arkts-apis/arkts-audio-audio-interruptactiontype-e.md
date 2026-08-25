@@ -7,8 +7,6 @@
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [InterruptType](arkts-audio-audio-interrupttype-e.md)
@@ -25,8 +23,6 @@ TYPE_ACTIVATED = 0
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 9
 
 **替代接口：** [INTERRUPT_TYPE_BEGIN](arkts-audio-audio-interrupttype-e.md#interrupt_type_begin)
@@ -42,8 +38,6 @@ TYPE_INTERRUPT = 1
 表示音频打断事件。
 
 **起始版本：** 7
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
 
 **废弃版本：** 9
 

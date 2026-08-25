@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'kits/@kit.MDMKit';
 ```
 
 ## getAllowedUsbDevices
@@ -15,8 +15,6 @@ function getAllowedUsbDevices(admin: Want): Array<UsbDeviceId>
 获取USB设备可用名单。一般使用场景：在修改策略前，需要先获取现有策略进行评估；管理界面需要展示当前的USB存储设备访问控制状态。
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -45,37 +43,6 @@ function getAllowedUsbDevices(admin: Want): Array<UsbDeviceId>
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let result: Array<usbManager.UsbDeviceId> = usbManager.getAllowedUsbDevices(wantTemp);
-  console.info(`Succeeded in getting allowed USB devices. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get allowed USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: Array<usbManager.UsbDeviceId> = usbManager.getAllowedUsbDevices(null);
-  console.info(`Succeeded in getting allowed USB devices. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get allowed USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
 
 ## getAllowedUsbDevices
 
@@ -86,8 +53,6 @@ function getAllowedUsbDevices(admin: Want | null): Array<UsbDeviceId>
 获取USB设备可用名单。一般使用场景：在修改策略前，需要先获取现有策略进行评估；管理界面需要展示当前的USB存储设备访问控制状态。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -115,7 +80,3 @@ function getAllowedUsbDevices(admin: Want | null): Array<UsbDeviceId>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [getAllowedUsbDevices](#getallowedusbdevices)

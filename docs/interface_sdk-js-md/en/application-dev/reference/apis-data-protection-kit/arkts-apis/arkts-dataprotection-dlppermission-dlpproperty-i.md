@@ -4,14 +4,12 @@ Represents the authorization information.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## actionUponExpiry
@@ -25,8 +23,6 @@ Whether the file can be opened after the permission expires (with the editing pe
 **Type:** ActionType
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 20.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -42,8 +38,6 @@ Number of allowed opening times. The default value is **0**. No value range rest
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## authUserList
@@ -57,8 +51,6 @@ List of users who are authorized to access the DLP file. By default, this parame
 **Type:** Array&lt;[AuthUser](arkts-dataprotection-dlppermission-authuser-i.md)&gt;
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -74,8 +66,6 @@ Account of the contact. The value contains 1 to 255 bytes. If the value is out o
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## countdown
@@ -89,8 +79,6 @@ Validity period for file viewing, in seconds. The default value is 0. After the 
 **Type:** number
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,8 +96,6 @@ Permission granted to everyone. This parameter is left blank by default.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## expireTime
@@ -124,8 +110,6 @@ Timestamp when the file permission has expired. This parameter is left blank by 
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 11.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## extensionFields
@@ -139,8 +123,6 @@ Extended attribute of a DLP file. This parameter is left empty by default.
 **Type:** Record&lt;string, Object&gt;
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,8 +140,6 @@ System account ID. This parameter is left empty by default. The value contains a
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## offlineAccess
@@ -173,8 +153,6 @@ Whether the file can be accessed offline. **true**: yes; **false**: no.
 **Type:** boolean
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -190,8 +168,6 @@ Account of the owner who can set the permission. The value contains 1 to 255 byt
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## ownerAccountID
@@ -205,8 +181,6 @@ Account ID of the owner. The value contains a maximum of 255 bytes. If the value
 **Type:** string
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -222,8 +196,6 @@ Account type of the owner.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## waterMarkConfig
@@ -237,7 +209,5 @@ Whether watermarks are required. **true**: yes; **false**: no. This parameter is
 **Type:** boolean
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **System capability:** SystemCapability.Security.DataLossPrevention

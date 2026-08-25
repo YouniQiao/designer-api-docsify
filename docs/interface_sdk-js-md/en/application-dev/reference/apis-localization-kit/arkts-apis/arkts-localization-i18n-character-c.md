@@ -4,8 +4,6 @@ Provides the API for accessing unicode character properties. For example, determ
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [Unicode](arkts-localization-i18n-unicode-c.md)
@@ -15,7 +13,7 @@ Provides the API for accessing unicode character properties. For example, determ
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## getType
@@ -27,8 +25,6 @@ getType(ch: string): string
 Obtains the type of the input character.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -48,14 +44,6 @@ Obtains the type of the input character.
 | --- |
 | string |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let unicodeType: string = i18n.Unicode.getType('a'); // unicodeType = 'U_LOWERCASE_LETTER'
-```
-
 ## isDigit
 
 ```TypeScript
@@ -65,8 +53,6 @@ isDigit(ch: string): boolean
 Checks whether the input character is a digit.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -86,14 +72,6 @@ Checks whether the input character is a digit.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isDigit: boolean = i18n.Unicode.isDigit('1'); // isDigit = true
-```
-
 ## isIdeograph
 
 ```TypeScript
@@ -103,8 +81,6 @@ isIdeograph(ch: string): boolean
 Checks whether the input character is an ideographic character.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -124,14 +100,6 @@ Checks whether the input character is an ideographic character.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isIdeograph: boolean = i18n.Unicode.isIdeograph('a'); // isIdeograph = false
-```
-
 ## isLetter
 
 ```TypeScript
@@ -141,8 +109,6 @@ isLetter(ch: string): boolean
 Checks whether the input character is a letter.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -162,14 +128,6 @@ Checks whether the input character is a letter.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isLetter: boolean = i18n.Unicode.isLetter('a'); // isLetter = true
-```
-
 ## isLowerCase
 
 ```TypeScript
@@ -179,8 +137,6 @@ isLowerCase(ch: string): boolean
 Checks whether the input character is a lowercase letter.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -200,14 +156,6 @@ Checks whether the input character is a lowercase letter.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isLowercase: boolean = i18n.Unicode.isLowerCase('a'); // isLowercase = true
-```
-
 ## isRTL
 
 ```TypeScript
@@ -217,8 +165,6 @@ isRTL(ch: string): boolean
 Checks whether the input character is of the right to left (RTL) language.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -238,21 +184,6 @@ Checks whether the input character is of the right to left (RTL) language.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isZhRTL: boolean = i18n.isRTL('zh-CN'); // Since Chinese is not written from right to left, false is returned.
-let isArRTL: boolean = i18n.isRTL('ar-EG'); // Since Arabic is written from right to left, true is returned.
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
-```
-
 ## isSpaceChar
 
 ```TypeScript
@@ -262,8 +193,6 @@ isSpaceChar(ch: string): boolean
 Checks whether the input character is a space.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -283,14 +212,6 @@ Checks whether the input character is a space.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isSpacechar: boolean = i18n.Unicode.isSpaceChar('a'); // isSpacechar = false
-```
-
 ## isUpperCase
 
 ```TypeScript
@@ -300,8 +221,6 @@ isUpperCase(ch: string): boolean
 Checks whether the input character is an uppercase letter.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -321,14 +240,6 @@ Checks whether the input character is an uppercase letter.
 | --- |
 | boolean |
 
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isUppercase: boolean = i18n.Unicode.isUpperCase('a'); // isUppercase = false
-```
-
 ## isWhitespace
 
 ```TypeScript
@@ -338,8 +249,6 @@ isWhitespace(ch: string): boolean
 Checks whether the input character is a whitespace.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Deprecated since:** 9
 
@@ -358,11 +267,3 @@ Checks whether the input character is a whitespace.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
-
-**Examples**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isWhitespace: boolean = i18n.Unicode.isWhitespace('a'); // isWhitespace = false
-```

@@ -19,7 +19,7 @@
 > opacity属性不生效。
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。  
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full  
-| 名称 | 类型 | 只读 | 可选 | 说明 | | -------- | -------- | -------- | -- | -------- | | scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 | 否 | 可滚动组件的控制器。用于与可滚动组件进行绑定。 | | direction | [ScrollBarDirection](../../../reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md#scrollbardirection枚举说明) | 否 | 是 | 滚动条的方向，控制可滚动组件对应方向的滚动。 & lt;br/ & gt;默认值：ScrollBarDirection.Vertical | | state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 否 | 是 |
+| 名称 | 类型 | 只读 | 可选 | 说明 | | -------- | -------- | -------- | -- | -------- | | scroller | [Scroller](arkts-arkui-scroller-c.md) | 否 | 否 | 可滚动组件的控制器。用于与可滚动组件进行绑定。 | | direction | [ScrollBarDirection](../../../reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md#scrollbardirection枚举说明) | 否 | 是 | 滚动条的方向，控制可滚动组件对应方向的滚动。默认值：ScrollBarDirection.Vertical | | state | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 否 | 是 |
 
 ## ScrollBarDirection枚举说明
 
@@ -187,8 +187,6 @@ ScrollBar(value: ScrollBarOptions)
 创建滚动条组件。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

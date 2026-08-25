@@ -4,8 +4,6 @@ Defines user information.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -27,8 +25,6 @@ User ID. The default value is **0**.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 9
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -44,8 +40,6 @@ User type. The default value is **0**.
 **Type:** [UserType](arkts-arkdata-distributeddata-usertype-e.md)
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 9
 

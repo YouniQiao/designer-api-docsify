@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## openBiometricsSettingsPage
@@ -15,8 +15,6 @@ function openBiometricsSettingsPage(context: Context): void
 Open the biometrics and password settings page.
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,18 +32,3 @@ Open the biometrics and password settings page.
 | --- |
 | [16900010](../errorcode-settings.md#16900010-parameter-check-failed) |
 | [16900020](../errorcode-settings.md#16900020-failed-to-open-the-settings-page) |
-
-**Examples**
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  settings.openBiometricsSettingsPage(context);
-} catch (err) {
-  console.error(`Failed to open the biometrics and password settings page. code: ${err?.code}, message: ${err?.message}`);
-}
-```

@@ -1,19 +1,17 @@
 # IDataSourcePrefetching
 
-Extends the IDataSource API to provide a data source that can be prefetched.
+Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md) API to provide a data source that can be prefetched.
 
-**Inheritance/Implementation:** IDataSourcePrefetching extends IDataSource
+**Inheritance/Implementation:** IDataSourcePrefetching extends [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md)
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI';
+import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from 'kits/@kit.ArkUI';
 ```
 
 ## cancel
@@ -25,8 +23,6 @@ cancel?(index: number): Promise<void> | void
 Cancels the prefetching of a specified data item from the dataset. This API can be either synchronous or asynchronous. This API is optional. If the data source does not implement this API, the prefetching cancellation operation will not be performed.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,8 +51,6 @@ prefetch(index: number): Promise<void> | void
 Prefetches a specified data item from the dataset. This API can be either synchronous or asynchronous. When the visible area changes, the prefetching algorithm calls this API if it determines that the data item about to enter the visible area needs to be prefetched.
 
 **Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 

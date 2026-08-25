@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getProfileByAbility
@@ -20,8 +20,6 @@ Obtains the JSON string array of the current application's configuration file ba
 > [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,74 +44,6 @@ Obtains the JSON string array of the current application's configuration file ba
 | [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) |
 | [17700029](../errorcode-bundle.md#17700029-disabled-ability) |
 
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-let metadataName = 'ability_metadata';
-
-try {
-  bundleManager.getProfileByAbility(moduleName, abilityName, metadataName, (err, data) => {
-    if (err) {
-      hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', err.message);
-    } else {
-      hilog.info(0x0000, 'testTag', 'getProfileByAbility successfully: %{public}s', JSON.stringify(data));
-    }
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-
-try {
-  // Obtain the JSON string array of the configuration file based on the module name and ability name.
-  bundleManager.getProfileByAbility(moduleName, abilityName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getProfileByAbility successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', message);
-}
-```
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-let metadataName = 'ability_metadata';
-
-try {
-  // Obtain the JSON string array of the current application's configuration file based on the module name, ability name, and metadata name.
-  bundleManager.getProfileByAbility(moduleName, abilityName, metadataName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getProfileByAbility successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getProfileByAbility failed. Cause: %{public}s', message);
-}
-```
-
 
 ## getProfileByAbility
 
@@ -129,8 +59,6 @@ Obtains the JSON string array of the current application's configuration file ba
 > [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md).
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -159,7 +87,3 @@ Obtains the JSON string array of the current application's configuration file ba
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 | [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) |
 | [17700029](../errorcode-bundle.md#17700029-disabled-ability) |
-
-**Examples**
-
-See [getProfileByAbility](#getprofilebyability)

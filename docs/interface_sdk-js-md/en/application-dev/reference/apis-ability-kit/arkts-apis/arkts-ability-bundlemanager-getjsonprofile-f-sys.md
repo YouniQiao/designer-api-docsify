@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getJsonProfile
 
 ```TypeScript
-function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: int): string
+function getJsonProfile(profileType: ProfileType, bundleName: string, moduleName?: string, userId?: number): string
 ```
 
 Obtains the JSON strings of the profile based on the given profile type, bundle name, and module name. This API returns the result synchronously.No permission is required for obtaining the caller's own profile.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -31,7 +29,7 @@ Obtains the JSON strings of the profile based on the given profile type, bundle 
 | profileType | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | Yes |
 | bundleName | string | Yes |
 | moduleName | string | No |
-| userId | ArkTS-Dyn: number<br>ArkTS-Sta：int | No |
+| userId | number | No |
 
 **Return value:**
 
@@ -51,23 +49,3 @@ Obtains the JSON strings of the profile based on the given profile type, bundle 
 | [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let profileType = bundleManager.ProfileType.INTENT_PROFILE;
-
-try {
-  let data = bundleManager.getJsonProfile(profileType, bundleName, moduleName)
-  hilog.info(0x0000, 'testTag', 'getJsonProfile successfully. Data: %{public}s', data);
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getJsonProfile failed: %{public}s', message);
-}
-```

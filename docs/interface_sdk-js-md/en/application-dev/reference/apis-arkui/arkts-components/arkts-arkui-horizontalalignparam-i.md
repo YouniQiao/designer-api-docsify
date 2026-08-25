@@ -4,8 +4,6 @@ Defines the horizontal align rule of relative container.@interface HorizontalAli
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,11 +19,9 @@ align: HorizontalAlign
 
 Sets the horizontal alignment relative to the anchor component.Anonymous Object Rectification
 
-**Type:** HorizontalAlign
+**Type:** [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md)
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -44,8 +40,6 @@ Specifies the anchor component Anonymous Object Rectification
 **Type:** string
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -4,8 +4,6 @@ Enumerates the types of authorized accounts.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## CLOUD_ACCOUNT
@@ -17,8 +15,6 @@ CLOUD_ACCOUNT = 1
 Cloud account.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -32,8 +28,6 @@ Domain account.
 
 **Since:** 21
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **System capability:** SystemCapability.Security.DataLossPrevention
 
 ## ENTERPRISE_ACCOUNT
@@ -45,7 +39,5 @@ ENTERPRISE_ACCOUNT = 4
 Enterprise account.
 
 **Since:** 21
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 21.
 
 **System capability:** SystemCapability.Security.DataLossPrevention

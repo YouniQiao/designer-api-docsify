@@ -6,8 +6,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,8 +25,6 @@ Called when the tab content is about to be hidden. The scenarios include the tab
 > This API can be called in attributeModifier since API version 20.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,8 +51,6 @@ Called when the tab content is about to be displayed. The scenarios include the 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -79,8 +73,6 @@ Sets the content displayed on the tab bar.If the icon uses an SVG image source, 
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -89,7 +81,7 @@ Sets the content displayed on the tab bar.If the icon uses an SVG image source, 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | string \| Resource \| CustomBuilder \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes |
+| options | string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes |
 
 ## tabBar
 
@@ -112,8 +104,6 @@ Sets the content displayed on the tab bar. The bottom tab style does not include
 
 **Since:** 9
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -135,8 +125,6 @@ Sets the content displayed on the tab bar.If **BottomTabBarStyle** or **TabBarOp
 
 **Since:** 18
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -147,4 +135,4 @@ Sets the content displayed on the tab bar.If **BottomTabBarStyle** or **TabBarOp
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | ComponentContent \| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) \| string \| Resource \| CustomBuilder \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes |
+| content | ComponentContent \| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) \| string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Yes |

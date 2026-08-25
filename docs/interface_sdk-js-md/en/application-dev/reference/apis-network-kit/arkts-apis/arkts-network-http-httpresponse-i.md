@@ -4,14 +4,12 @@ Defines the response to an HTTP request.
 
 **Since:** 6
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'kits/@kit.NetworkKit';
 ```
 
 ## connectionExtraInfo
@@ -25,8 +23,6 @@ Detailed information about the HTTP request interaction.
 **Type:** [ConnectionExtraInfo](arkts-network-http-connectionextrainfo-i.md)
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -42,8 +38,6 @@ Original cookies returned by the server. How to process the cookies is up to you
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -55,13 +49,14 @@ header: Object
 ```
 
 Response header. The return value is a string in JSON format. If you want to use specific content in the response, you need to implement parsing of that content. Common fields and parsing methods are as follows:  
-- content-type: header['content-type'] - status-line: header['status-line'] - date: header.date/header['date'] - server: header.server/header['server']
+- content-type: header['content-type']  
+- status-line: header['status-line']  
+- date: header.date/header['date']  
+- server: header.server/header['server']
 
 **Type:** Object
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -79,23 +74,19 @@ Time consumed in each phase of an HTTP request.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.Communication.NetStack
 
 ## responseCode
 
 ```TypeScript
-responseCode: ResponseCode | int
+responseCode: ResponseCode | number
 ```
 
 Result code for an HTTP request. If the callback function is successfully executed, a result code defined in [ResponseCode](arkts-network-http-responsecode-e.md) will be returned. Otherwise, an error code will be returned in the **err** field in **AsyncCallback**.
 
-**Type:** ArkTS-Dyn: [ResponseCode](arkts-network-http-responsecode-e.md) \| number  <br>ArkTS-Sta：[ResponseCode](arkts-network-http-responsecode-e.md) \| int
+**Type:** [ResponseCode](arkts-network-http-responsecode-e.md) \| number
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,14 +99,15 @@ result: string | Object | ArrayBuffer
 ```
 
 Response content returned based on **Content-type** in the response header. If **HttpRequestOptions** does not contain the **expectDataType** field, the response content is returned according to the following rules:  
-- application/json: string in JSON format - application/octet-stream: ArrayBuffer - image: ArrayBuffer - Others: string  
+- application/json: string in JSON format  
+- application/octet-stream: ArrayBuffer  
+- image: ArrayBuffer  
+- Others: string  
 If **HttpRequestOptions** contains the **expectDataType** field, the response content must be of the same type as the data returned by the server.
 
 **Type:** string \| Object \| ArrayBuffer
 
 **Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -132,8 +124,6 @@ Type of the return value.
 **Type:** [HttpDataType](arkts-network-http-httpdatatype-e.md)
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

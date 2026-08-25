@@ -4,8 +4,6 @@ Provides the template type of the float view.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
 **System capability:** SystemCapability.Window.SessionManager
 
 ## ROUNDED_RECTANGLE
@@ -17,8 +15,6 @@ ROUNDED_RECTANGLE = 0
 Rectangle with rounded corners.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,8 +29,6 @@ HORIZONTAL_BAR = 1
 Horizontal bar rectangle.
 
 **Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

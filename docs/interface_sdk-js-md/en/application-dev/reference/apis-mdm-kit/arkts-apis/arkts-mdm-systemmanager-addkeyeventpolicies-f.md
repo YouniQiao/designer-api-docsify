@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'kits/@kit.MDMKit';
 ```
 
 ## addKeyEventPolicies
@@ -15,8 +15,6 @@ function addKeyEventPolicies(admin: Want, keyPolicies: Array<KeyEventPolicy>): v
 Adds a key event handling policy. When the system triggers a key event, if the event matches the delivered key event policy, the MDM app will be notified via the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent) callback, with the key event information of the matched policy carried in the callback.
 
 **Since:** 23
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
@@ -41,34 +39,3 @@ Adds a key event handling policy. When the system triggers a key event, if the e
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
-
-**Examples**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let keypolicy: Array<systemManager.KeyEventPolicy> = [
-  {
-    "keyCode": systemManager.KeyCode.POWER,
-    "keyPolicy": systemManager.KeyPolicy.CUSTOM
-  },
-  {
-    "keyCode": systemManager.KeyCode.VOLUME_UP,
-    "keyPolicy": systemManager.KeyPolicy.CUSTOM
-  }
-];
-
-try {
-  systemManager.addKeyEventPolicies(wantTemp, keypolicy);
-  console.info('Succeeded in adding key event policies.');
-} catch (err) {
-  console.error(`Failed to add key event policies. Code is ${err.code}, message is ${err.message}`);
-}
-```

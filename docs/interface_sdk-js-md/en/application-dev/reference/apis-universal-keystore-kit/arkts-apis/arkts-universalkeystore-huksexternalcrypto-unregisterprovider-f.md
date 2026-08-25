@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 ```
 
 ## unregisterProvider
@@ -15,8 +15,6 @@ function unregisterProvider(providerName: string, params?: Array<HuksExternalCry
 Unregisters a specified external Provider. This API uses a promise to return the result.
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **Required permissions:** ohos.permission.CRYPTO_EXTENSION_REGISTER
 
@@ -46,29 +44,3 @@ Unregisters a specified external Provider. This API uses a promise to return the
 | [12000012](../errorcode-huks.md#12000012-external-error) |
 | [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
 | [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
-
-**Examples**
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-function StringToUint8Array(str: string) {
-  let arr: number[] = [];
-  for (let i = 0, j = str.length; i < j; ++i) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-const providerName = "testProviderName";
-const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [
-  {
-    tag: huksExternalCrypto.HuksExternalCryptoTag.HUKS_EXT_CRYPTO_TAG_ABILITY_NAME,
-    value: StringToUint8Array("CryptoExtension")
-  }
-];
-huksExternalCrypto.unregisterProvider(providerName, extProperties)
-    .then((data) => {
-        console.info(`promise: unregisterProvider success`);
-    });
-```

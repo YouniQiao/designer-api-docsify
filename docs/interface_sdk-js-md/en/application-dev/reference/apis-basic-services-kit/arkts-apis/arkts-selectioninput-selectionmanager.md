@@ -20,8 +20,6 @@ This module provides word selection management capabilities, including creating,
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.SelectionInput.Selection
@@ -29,7 +27,7 @@ This module provides word selection management capabilities, including creating,
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -42,9 +40,7 @@ import { selectionManager } from '@kit.BasicServicesKit';
 | [destroyPanel(Word Selection Management)](arkts-basicservices-selectionmanager-destroypanel-f.md) |
 | [getSelectionContent(Word Selection Management)](arkts-basicservices-selectionmanager-getselectioncontent-f.md) |
 | [off(Word Selection Management)](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) |
-| [offSelectionComplete(Word Selection Management)](arkts-basicservices-selectionmanager-offselectioncomplete-f.md) |
 | [on(Word Selection Management)](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) |
-| [onSelectionComplete(Word Selection Management)](arkts-basicservices-selectionmanager-onselectioncomplete-f.md) |
 
 ### Interfaces
 
@@ -65,4 +61,4 @@ import { selectionManager } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [SelectionType(Word Selection Management)](arkts-basicservices-selectionmanager-selectiontype-e.md) | Enumerates the word selection types.  \| Name \| Value\| Description \| \| ------------ \| -- \| ------------------ \| \| MOUSE_MOVE \| 1 \| Word selection by sliding the mouse or touchpad. \| \| DOUBLE_CLICK \| 2 \| Word selection by double-clicking the mouse or touchpad. \| \| TRIPLE_CLICK \| 3 \| Word selection by triple-clicking the mouse or touchpad. \|
+| [SelectionType(Word Selection Management)](arkts-basicservices-selectionmanager-selectiontype-e.md) | Enumerates the word selection types.  \| Name \| Value\| Description \| \| ------------ \| -- \| ------------------ \| \| MOUSE_MOVE \| 1 \| Word selection by sliding the mouse or touchpad. \| \| DOUBLE_CLICK \| 2 \| Word selection by number-clicking the mouse or touchpad. \| \| TRIPLE_CLICK \| 3 \| Word selection by triple-clicking the mouse or touchpad. \|

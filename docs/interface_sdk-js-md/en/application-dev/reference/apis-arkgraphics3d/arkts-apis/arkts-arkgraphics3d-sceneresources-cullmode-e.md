@@ -1,10 +1,8 @@
 # CullMode
 
-Enumerates the culling modes of PBR materials. You can improve rendering performance and visual quality by determining whether the front or back faces of objects are culled.@enum { int }
+Enumerates the culling modes of PBR materials. You can improve rendering performance and visual quality by determining whether the front or back faces of objects are culled.@enum { number }
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -18,8 +16,6 @@ Culling is disabled.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## FRONT
@@ -32,8 +28,6 @@ Culls the front faces of geometric objects.
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## BACK
@@ -45,7 +39,5 @@ BACK = 2
 Culls the back faces of geometric objects.
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

@@ -4,14 +4,12 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Global.I18n
 
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'kits/@kit.LocalizationKit';
 ```
 
 ## detectEncoding
@@ -23,8 +21,6 @@ static detectEncoding(bytes: Uint8Array): EncodingInfo
 识别输入字节流的编码信息。
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,15 +40,6 @@ static detectEncoding(bytes: Uint8Array): EncodingInfo
 | --- |
 | [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) |
 
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let uint8Array = new Uint8Array([0xEF, 0xBB, 0xBF, 0xE4, 0xB8, 0xAD]);
-let info = i18n.Unicode.detectEncoding(uint8Array); // info.encodingName = 'UTF-8', info.confidence = 100
-```
-
 ## getType
 
 ```TypeScript
@@ -62,8 +49,6 @@ static getType(ch: string): string
 获取输入的字符的一般类别值。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -81,14 +66,6 @@ static getType(ch: string): string
 | --- |
 | string |
 
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let unicodeType: string = i18n.Unicode.getType('a'); // unicodeType = 'U_LOWERCASE_LETTER'
-```
-
 ## isDigit
 
 ```TypeScript
@@ -98,8 +75,6 @@ static isDigit(ch: string): boolean
 判断输入的字符是否是数字。
 
 **起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -116,14 +91,6 @@ static isDigit(ch: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isDigit: boolean = i18n.Unicode.isDigit('1'); // isDigit = true
-```
 
 ## isIdeograph
 
@@ -135,8 +102,6 @@ static isIdeograph(ch: string): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -152,14 +117,6 @@ static isIdeograph(ch: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isIdeograph: boolean = i18n.Unicode.isIdeograph('a'); // isIdeograph = false
-```
 
 ## isLetter
 
@@ -171,8 +128,6 @@ static isLetter(ch: string): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -188,14 +143,6 @@ static isLetter(ch: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isLetter: boolean = i18n.Unicode.isLetter('a'); // isLetter = true
-```
 
 ## isLowerCase
 
@@ -207,8 +154,6 @@ static isLowerCase(ch: string): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -224,14 +169,6 @@ static isLowerCase(ch: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isLowercase: boolean = i18n.Unicode.isLowerCase('a'); // isLowercase = true
-```
 
 ## isRTL
 
@@ -243,8 +180,6 @@ static isRTL(ch: string): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -260,21 +195,6 @@ static isRTL(ch: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isZhRTL: boolean = i18n.isRTL('zh-CN'); // 中文不是镜像语言，返回false
-let isArRTL: boolean = i18n.isRTL('ar-EG'); // 阿语是镜像语言，返回true
-```
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isRtl: boolean = i18n.Unicode.isRTL('a'); // isRtl = false
-```
 
 ## isSpaceChar
 
@@ -286,8 +206,6 @@ static isSpaceChar(ch: string): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -303,14 +221,6 @@ static isSpaceChar(ch: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isSpacechar: boolean = i18n.Unicode.isSpaceChar('a'); // isSpacechar = false
-```
 
 ## isUpperCase
 
@@ -322,8 +232,6 @@ static isUpperCase(ch: string): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -339,14 +247,6 @@ static isUpperCase(ch: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isUppercase: boolean = i18n.Unicode.isUpperCase('a'); // isUppercase = false
-```
 
 ## isWhitespace
 
@@ -358,8 +258,6 @@ static isWhitespace(ch: string): boolean
 
 **起始版本：** 9
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
-
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.I18n
@@ -375,11 +273,3 @@ static isWhitespace(ch: string): boolean
 | 类型 |
 | --- |
 | boolean |
-
-**示例**
-
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let isWhitespace: boolean = i18n.Unicode.isWhitespace('a'); // isWhitespace = false
-```

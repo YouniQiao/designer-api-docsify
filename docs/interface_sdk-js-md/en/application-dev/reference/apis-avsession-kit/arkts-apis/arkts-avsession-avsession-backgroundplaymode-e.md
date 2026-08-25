@@ -4,8 +4,6 @@ Supported background play mode definitions.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
-
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
 ## ENABLE_BACKGROUND_PLAY
@@ -17,8 +15,6 @@ ENABLE_BACKGROUND_PLAY = 0
 Enable background playback
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,8 +29,6 @@ DISABLE_BACKGROUND_PLAY = 1
 Disable background playback
 
 **Since:** 24
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,20 +3,18 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'kits/@kit.TelephonyKit';
 ```
 
 ## getSignalInformationSync
 
 ```TypeScript
-function getSignalInformationSync(slotId: int): Array<SignalInformation>
+function getSignalInformationSync(slotId: number): Array<SignalInformation>
 ```
 
 Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -24,18 +22,10 @@ Obtains a list of signal strengths of the network with which the SIM card in the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| slotId | ArkTS-Dyn: number<br>ArkTS-Sta：int | Yes |
+| slotId | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Array & lt;SignalInformation & gt; |
-
-**Examples**
-
-```TypeScript
-let slotId: number = 0;
-let signalInfo: Array<radio.SignalInformation> = radio.getSignalInformationSync(slotId);
-console.info(`signal information size is:` + signalInfo.length);
-```

@@ -9,8 +9,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -30,8 +28,6 @@ buttonType?: ButtonType
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -44,13 +40,11 @@ buttonType?: ButtonType
 icon?: PasteIconStyle
 ```
 
-设置粘贴控件的图标风格。 默认值：不显示图标。 <br>若同时也不传text，控件将显示为默认样式。
+设置粘贴控件的图标风格。 默认值：不显示图标。 若同时也不传text，控件将显示为默认样式。
 
 **类型：** [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,13 +58,11 @@ icon?: PasteIconStyle
 text?: PasteDescription
 ```
 
-设置粘贴控件的文本描述。 默认值：不显示文本描述。 <br>若同时也不传icon，控件将显示为默认样式。
+设置粘贴控件的文本描述。 默认值：不显示文本描述。 若同时也不传icon，控件将显示为默认样式。
 
 **类型：** [PasteDescription](arkts-arkui-pastedescription-e.md)
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

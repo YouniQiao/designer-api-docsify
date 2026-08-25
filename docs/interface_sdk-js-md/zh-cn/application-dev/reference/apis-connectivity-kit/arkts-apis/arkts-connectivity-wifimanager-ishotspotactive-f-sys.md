@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## isHotspotActive
@@ -15,8 +15,6 @@ function isHotspotActive(): boolean
 检查设备上的WLAN热点是否已激活。
 
 **起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -37,16 +35,3 @@ function isHotspotActive(): boolean
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | [2601000](../errorcode-wifi.md#2601000-hotspot模块异常) |
-
-**示例**
-
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let ret = wifiManager.isHotspotActive();
-    console.info("result:" + ret);    
-  } catch(error) {
-    console.error("failed:" + JSON.stringify(error));
-  }
-```

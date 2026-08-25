@@ -6,14 +6,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
 ```
 
 ## height
@@ -25,8 +23,6 @@ height(height: Length): T
 设置形状的高度。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,8 +54,6 @@ size(size: SizeOptions): T
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -72,7 +66,7 @@ size(size: SizeOptions): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [size](#size) | [SizeOptions](arkts-arkui-units-sizeoptions-i.md) | 是 |
+| [size](#size) | [SizeOptions](arkts-arkui-sizeoptions-i.md) | 是 |
 
 **返回值：**
 
@@ -89,8 +83,6 @@ width(width: Length): T
 设置形状的宽度。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

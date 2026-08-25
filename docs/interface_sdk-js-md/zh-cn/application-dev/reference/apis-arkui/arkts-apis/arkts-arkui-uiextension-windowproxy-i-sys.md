@@ -4,14 +4,12 @@ UIExtension窗口代理。
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { uiExtension } from '@kit.ArkUI';
+import { uiExtension } from 'kits/@kit.ArkUI';
 ```
 
 ## hideNonSecureWindows
@@ -31,8 +29,6 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 > - 针对PC/2in1设备，当调用hideNonSecureWindows(true)时，不安全窗口中的全局悬浮窗不会被隐藏。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
 
@@ -63,67 +59,6 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// ExtensionProvider.ets
-
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 隐藏不安全窗口
-    extensionHostWindow.hideNonSecureWindows(true).then(() => {
-      console.info(`Succeeded in hiding the non-secure windows.`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to hide the non-secure windows. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-  
-  onSessionDestroy(session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 取消隐藏不安全窗口
-    extensionHostWindow.hideNonSecureWindows(false).then(() => {
-      console.info(`Succeeded in showing the non-secure windows.`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to show the non-secure windows. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// ExtensionProvider.ets
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 隐藏非安全窗口
-    extensionHostWindow.hideNonSecureWindows(true).then(()=> {
-      console.info(`Succeeded in hiding the non-secure windows.`);
-    }).catch((err)=> {
-      console.error(`Failed to hide the non-secure windows. Cause:${JSON.stringify(err)}`);
-    });
-  }
-  onSessionDestroy(session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 取消隐藏非安全窗口
-    extensionHostWindow.hideNonSecureWindows(false).then(()=> {
-      console.info(`Succeeded in showing the non-secure windows.`);
-    }).catch((err)=> {
-      console.error(`Failed to show the non-secure windows. Cause:${JSON.stringify(err)}`);
-    });
-  }
-}
-```
-
 ## setWaterMarkFlag
 
 ```TypeScript
@@ -136,8 +71,6 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 > 添加安全水印标志后，窗口在前台时会将当前全屏幕覆盖水印。全屏、悬浮窗、分屏等场景下只要有添加了安全水印标志的窗口在前台，就会显示全屏水印。
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,62 +97,3 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
 | [1300008](../errorcode-window.md#1300008-显示设备异常) |
-
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-// ExtensionProvider.ets
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 添加安全水印标志
-    extensionHostWindow.setWaterMarkFlag(true).then(() => {
-      console.info(`Succeeded in setting water mark flag of window.`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to set water mark flag of window. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-  onSessionDestroy(session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 删除安全水印标志
-    extensionHostWindow.setWaterMarkFlag(false).then(() => {
-      console.info(`Succeeded in deleting water mark flag of window.`);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to delete water mark flag of window. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-}
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-// ExtensionProvider.ets
-import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 添加安全水印标志
-    extensionHostWindow.setWaterMarkFlag(true).then(() => {
-      console.info(`Succeeded in setting water mark flag of window.`);
-    }).catch((err) => {
-      console.error(`Failed to set water mark flag of window. Cause:${JSON.stringify(err)}`);
-    });
-  }
-  onSessionDestroy(session: UIExtensionContentSession) {
-    const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 删除安全水印标志
-    extensionHostWindow.setWaterMarkFlag(false).then(() => {
-      console.info(`Succeeded in deleting water mark flag of window.`);
-    }).catch((err) => {
-      console.error(`Failed to delete water mark flag of window. Cause:${JSON.stringify(err)}`);
-    });
-  }
-}
-```

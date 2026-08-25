@@ -4,14 +4,12 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 ```
 
 ## availableMem
@@ -20,13 +18,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 availableMem: bigint
 ```
 
-系统可用的内存，以KB为单位，计算方式：/proc/meminfo: MemAvailable。
+系统可用的内存，以KB为单位，计算方式：/proc/meminfo: MemAvailable
 
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -36,13 +32,11 @@ availableMem: bigint
 freeMem: bigint
 ```
 
-系统空闲的内存，以KB为单位，计算方式：/proc/meminfo: MemFree。
+系统空闲的内存，以KB为单位，计算方式：/proc/meminfo: MemFree
 
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
@@ -52,12 +46,10 @@ freeMem: bigint
 totalMem: bigint
 ```
 
-系统总的内存，以KB为单位，计算方式：/proc/meminfo: MemTotal。
+系统总的内存，以KB为单位，计算方式：/proc/meminfo: MemTotal
 
 **类型：** bigint
 
 **起始版本：** 12
-
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug

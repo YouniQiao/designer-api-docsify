@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
+import { application } from 'kits/@kit.AbilityKit';
 ```
 
 ## promoteCurrentToCandidateMasterProcess
@@ -13,7 +13,12 @@ export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): P
 ```
 
 Adds the current process into the [candidate master process](../../../application-models/ability-terminology.md#candidate-master-process) list. This API uses a promise to return the result. When the [master process](../../../application-models/ability-terminology.md#master-process) is destroyed and a UIAbility or UIExtensionAbility with **isolationProcess** set to **true** is restarted, the system takes corresponding actions based on whether there is a candidate master process.  
-- If a candidate master process exists, the system sets the process at the head of the candidate master process list as the new master process and triggers the [onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequest) callback. - If no candidate master process exists, the system performs the following operations based on the component type: - For a UIAbility, the system creates an empty process as the master process. - For a UIExtensionAbility, the system first tries to reuse an existing UIExtensionAbility process as the new master process. If no available process exists, it creates an empty process as the master process. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned.
+- If a candidate master process exists, the system sets the process at the head of the candidate master process  
+list as the new master process and triggers the [onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequest) callback.  
+- If no candidate master process exists, the system performs the following operations based on the component type:  
+- For a UIAbility, the system creates an empty process as the master process.  
+- For a UIExtensionAbility, the system first tries to reuse an existing UIExtensionAbility process as the new  
+master process. If no available process exists, it creates an empty process as the master process. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned.
 
 > **NOTE：**&gt;
 > If the current process is already the
@@ -27,8 +32,6 @@ Adds the current process into the [candidate master process](../../../applicatio
 <!--DelEnd-->
 
 **Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,28 +55,3 @@ Adds the current process into the [candidate master process](../../../applicatio
 | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [16000115](../errorcode-ability.md#16000115-current-process-cannot-be-set-as-candidate-master-process) |
-
-**Examples**
-
-```TypeScript
-import { AbilityConstant, UIAbility, application, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      application.promoteCurrentToCandidateMasterProcess(true)
-        .then(() => {
-          console.info('promote succeed');
-        })
-        .catch((err: BusinessError) => {
-          console.error(`promote failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (error) {
-      let code: number = (error as BusinessError).code;
-      let message: string = (error as BusinessError).message;
-      console.error(`promoteCurrentToCandidateMasterProcess failed, error.code: ${code}, error.message: ${message}`);
-    }
-  }
-}
-```

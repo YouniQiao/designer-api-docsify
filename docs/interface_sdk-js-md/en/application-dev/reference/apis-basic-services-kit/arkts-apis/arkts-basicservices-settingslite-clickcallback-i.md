@@ -1,17 +1,15 @@
 # ClickCallback
 
-Defines a callback used to return whether the application started by double-pressing the function key is the application itself.
+Defines a callback used to return whether the application started by number-pressing the function key is the application itself.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **System capability:** SystemCapability.Applications.Settings.Core.Lite
 
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from '@kit.BasicServicesKit';
+import { settingsLite } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## onResult
@@ -20,11 +18,9 @@ import { settingsLite } from '@kit.BasicServicesKit';
 onResult(result: boolean): void
 ```
 
-Called to determine whether the application can be started by double-pressing the function key.
+Called to determine whether the application can be started by number-pressing the function key.
 
 **Since:** 24
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 24.
 
 **Model restriction:** This API can be used only in the FA model.
 

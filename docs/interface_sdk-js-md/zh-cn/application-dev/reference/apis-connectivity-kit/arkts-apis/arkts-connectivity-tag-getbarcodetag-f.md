@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## getBarcodeTag
@@ -15,8 +15,6 @@ function getBarcodeTag(tagInfo: TagInfo): BarcodeTag
 获取BarcodeTag类型Tag对象，通过该对象可访问BarcodeTag技术类型的Tag。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +30,7 @@ function getBarcodeTag(tagInfo: TagInfo): BarcodeTag
 
 | 类型 |
 | --- |
-| [BarcodeTag](arkts-connectivity-nfctech-barcodetag-i.md) |
+| [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) |
 
 **错误码：**
 

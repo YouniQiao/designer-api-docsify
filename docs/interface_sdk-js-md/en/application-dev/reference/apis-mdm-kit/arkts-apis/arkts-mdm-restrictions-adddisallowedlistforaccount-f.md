@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from '@kit.MDMKit';
+import { restrictions } from 'kits/@kit.MDMKit';
 ```
 
 ## addDisallowedListForAccount
@@ -15,8 +15,6 @@ function addDisallowedListForAccount(admin: Want, feature: string, list: Array<s
 Adds a list of applications that are not allowed to use a feature for a specified user.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -41,25 +39,3 @@ Adds a list of applications that are not allowed to use a feature for a specifie
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let valueList:Array<string> = ["com.xx.aa.", "com.xx.bb"];
-try {
-  // Replace parameters with actual values.
-  restrictions.addDisallowedListForAccount(wantTemp, 'snapshotSkip', valueList, 100);
-  console.info('Succeeded in adding disallowed snapshotSkip feature');
-} catch (err) {
-  console.error(`Failed to add disallowed snapshotSkip feature. Code is ${err.code}, message is ${err.message}`);
-}
-```

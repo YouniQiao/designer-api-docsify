@@ -6,14 +6,12 @@ This module provides basic capabilities for obtaining system appearance configur
 
 **Since:** 20
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.ArkUI.UiAppearance
 
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
+import { uiAppearance } from 'kits/@kit.ArkUI';
 ```
 
 ## Summary

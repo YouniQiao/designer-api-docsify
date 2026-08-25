@@ -1,17 +1,15 @@
 # DragSpringLoadingConfiguration
 
-定义拖拽的悬停检测配置参数的接口。默认的配置参数通常已能满足需求。可以通过在绑定onDragSpringLoading时指定配置，或者通过在 BEGIN状态期间使用[updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateconfiguration)方法动态修改的方式以自定义该配置参数。
+定义拖拽的悬停检测配置参数的接口。默认的配置参数通常已能满足需求。可以通过在绑定[onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#ondragspringloading)时指定配置，或者通过在 BEGIN状态期间使用[updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateconfiguration)方法动态修改的方式以自定义该配置参数。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'kits/@kit.ArkUI';
 ```
 
 ## stillTimeLimit
@@ -25,8 +23,6 @@ stillTimeLimit?: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,8 +42,6 @@ updateInterval?: number
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -66,8 +60,6 @@ updateNotifyCount?: number
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -85,8 +77,6 @@ updateToFinishInterval?: number
 **类型：** number
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

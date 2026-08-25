@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## revokeQuickFix
@@ -15,8 +15,6 @@ function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void
 撤销快速修复的接口，使用callback方式返回结果。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
@@ -41,33 +39,6 @@ function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void
 | [18500001](../errorcode-ability.md#18500001-指定的包名无效) |
 | [18500009](../errorcode-ability.md#18500009-该应用当前有正在处理的快速修复任务) |
 
-**示例**
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-
-let bundleName = 'com.example.myapplication';
-
-quickFixManager.revokeQuickFix(bundleName, (err) => {
-  if (err.code) {
-    console.error(`revokeQuickFix ${bundleName} failed, err code: ${err.code}, err msg: ${err.message}.`);
-  }
-});
-```
-
-```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.example.myapplication';
-
-quickFixManager.revokeQuickFix(bundleName).then(() => {
-  console.info(`revokeQuickFix ${bundleName} success.`);
-}).catch((err: BusinessError) => {
-  console.error(`revokeQuickFix ${bundleName} failed, err code: ${err.code}, err msg: ${err.message}.`);
-});
-```
-
 
 ## revokeQuickFix
 
@@ -78,8 +49,6 @@ function revokeQuickFix(bundleName: string): Promise<void>
 撤销快速修复的接口。使用Promise异步回调。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INSTALL_BUNDLE
 
@@ -108,7 +77,3 @@ function revokeQuickFix(bundleName: string): Promise<void>
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 | [18500001](../errorcode-ability.md#18500001-指定的包名无效) |
 | [18500009](../errorcode-ability.md#18500009-该应用当前有正在处理的快速修复任务) |
-
-**示例**
-
-参见 [revokeQuickFix](#revokequickfix)

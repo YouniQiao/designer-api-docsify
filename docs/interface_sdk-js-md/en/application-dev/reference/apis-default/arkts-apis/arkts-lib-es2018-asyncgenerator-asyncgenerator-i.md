@@ -1,7 +1,5 @@
 # AsyncGenerator
 
-**ArkTS mode:** 
-
 ## Modules to Import
 
 ```TypeScript
@@ -13,8 +11,6 @@
 [Symbol.asyncIterator](): AsyncGenerator<T, TReturn, TNext>
 ```
 
-**ArkTS mode:** 
-
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -24,8 +20,6 @@
 ```TypeScript
 next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 
@@ -43,8 +37,6 @@ next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>
 return(value: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn>>
 ```
 
-**ArkTS mode:** 
-
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -60,8 +52,6 @@ return(value: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn
 ```TypeScript
 throw(e: any): Promise<IteratorResult<T, TReturn>>
 ```
-
-**ArkTS mode:** 
 
 **Parameters:**
 

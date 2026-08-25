@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiext } from '@kit.ConnectivityKit';
+import { wifiext } from 'kits/@kit.ConnectivityKit';
 ```
 
 ## enableHotspot
@@ -15,8 +15,6 @@ function enableHotspot(): boolean
 使能WLAN热点。
 
 **起始版本：** 8
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为8。
 
 **废弃版本：** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'kits/@kit.LocationKit';
 ```
 
 ## off('locationChange')
@@ -15,8 +15,6 @@ function off(type: 'locationChange', callback?: Callback<Location>): void
 Unsubscribe location changed. You are advised to use the [offLocationChange](#offlocationchange) instead.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** 
 - API version 9 - 24: ohos.permission.APPROXIMATELY_LOCATION
@@ -42,29 +40,6 @@ Unsubscribe location changed. You are advised to use the [offLocationChange](#of
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let requestInfo: geoLocationManager.LocationRequest = {
-  'priority': geoLocationManager.LocationRequestPriority.FIRST_FIX,
-  'scenario': geoLocationManager.LocationRequestScenario.UNSET,
-  'timeInterval': 1,
-  'distanceInterval': 0,
-  'maxAccuracy': 0
-};
-let locationChange = (location: geoLocationManager.Location): void => {
-  console.info('locationChange: data: ' + JSON.stringify(location));
-};
-try {
-  geoLocationManager.on('locationChange', requestInfo, locationChange);
-  geoLocationManager.off('locationChange', locationChange);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## off('locationError')
 
@@ -75,8 +50,6 @@ function off(type: 'locationError', callback?: Callback<LocationError>): void
 Unsubscribe continuous location error changed.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -100,22 +73,6 @@ Unsubscribe continuous location error changed.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let locationErrorChange = (errcode: geoLocationManager.LocationError): void => {
-  console.info('locationErrorChange: data: ' + JSON.stringify(errcode));
-};
-try {
-  geoLocationManager.on('locationError', locationErrorChange);
-  geoLocationManager.off('locationError', locationErrorChange);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## off('locationEnabledChange')
 
@@ -126,8 +83,6 @@ function off(type: 'locationEnabledChange', callback?: Callback<boolean>): void
 Unsubscribe location switch changed.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -146,22 +101,6 @@ Unsubscribe location switch changed.
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let locationEnabledChange = (state: boolean): void => {
-    console.info('locationEnabledChange: state: ' + JSON.stringify(state));
-}
-try {
-    geoLocationManager.on('locationEnabledChange', locationEnabledChange);
-    geoLocationManager.off('locationEnabledChange', locationEnabledChange);
-} catch (err) {
-    console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## off('cachedGnssLocationsChange')
 
@@ -172,8 +111,6 @@ function off(type: 'cachedGnssLocationsChange', callback?: Callback<Array<Locati
 Unsubscribe to cache GNSS locations update messages.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -197,26 +134,6 @@ Unsubscribe to cache GNSS locations update messages.
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 | [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let cachedLocationsCb = (locations: Array<geoLocationManager.Location>): void => {
-  console.info('cachedGnssLocationsChange: locations: ' + JSON.stringify(locations));
-}
-let requestInfo: geoLocationManager.CachedGnssLocationsRequest = {
-  'reportingPeriodSec': 10,
-  'wakeUpCacheQueueFull': true
-};
-try {
-  geoLocationManager.on('cachedGnssLocationsChange', requestInfo, cachedLocationsCb);
-  geoLocationManager.off('cachedGnssLocationsChange');
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## off('satelliteStatusChange')
 
@@ -227,8 +144,6 @@ function off(type: 'satelliteStatusChange', callback?: Callback<SatelliteStatusI
 Unsubscribe satellite status changed.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
@@ -251,22 +166,6 @@ Unsubscribe satellite status changed.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let gnssStatusCb = (satelliteStatusInfo: geoLocationManager.SatelliteStatusInfo): void => {
-  console.info('satelliteStatusChange: ' + JSON.stringify(satelliteStatusInfo));
-}
-try {
-  geoLocationManager.on('satelliteStatusChange', gnssStatusCb);
-  geoLocationManager.off('satelliteStatusChange', gnssStatusCb);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## off('nmeaMessage')
 
@@ -277,8 +176,6 @@ function off(type: 'nmeaMessage', callback?: Callback<string>): void
 Unsubscribe nmea message changed.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -301,23 +198,6 @@ Unsubscribe nmea message changed.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let nmeaCb = (str: string): void => {
-  console.info('nmeaMessage: ' + JSON.stringify(str));
-}
-
-try {
-  geoLocationManager.on('nmeaMessage', nmeaCb);
-  geoLocationManager.off('nmeaMessage', nmeaCb);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## off('gnssFenceStatusChange')
 
@@ -328,8 +208,6 @@ function off(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: Want
 Remove a geofence and unsubscribe geofence status changed.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **Required permissions:** 
 - API version 9 - 24: ohos.permission.APPROXIMATELY_LOCATION
@@ -355,40 +233,6 @@ Remove a geofence and unsubscribe geofence status changed.
 | [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) |
 | [3301600](../errorcode-geoLocationManager.md#3301600-geofence-operation-failed) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { wantAgent } from '@kit.AbilityKit';
-
-
-let wantAgentInfo: wantAgent.WantAgentInfo = {
-  wants: [
-    {
-      bundleName: "com.example.myapplication",
-      abilityName: "EntryAbility",
-      action: "action1",
-    }
-  ],
-  actionType: wantAgent.OperationType.START_ABILITY,
-  requestCode: 0,
-  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
-};
-
-wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
-  let requestInfo: geoLocationManager.GeofenceRequest = {
-    'scenario': 0x301,
-    "geofence": { "latitude": 31.12, "longitude": 121.11, "radius": 100, "expiration": 10000 }
-  };
-  try {
-    geoLocationManager.on('gnssFenceStatusChange', requestInfo, wantAgentObj);
-    geoLocationManager.off('gnssFenceStatusChange', requestInfo, wantAgentObj);
-  } catch (err) {
-    console.error("errCode:" + err.code + ", message:" + err.message);
-  }
-});
-```
-
 
 ## off('countryCodeChange')
 
@@ -399,8 +243,6 @@ function off(type: 'countryCodeChange', callback?: Callback<CountryCode>): void
 Unregistering the callback function for listening to country code changes.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -420,23 +262,6 @@ Unregistering the callback function for listening to country code changes.
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 | [3301500](../errorcode-geoLocationManager.md#3301500-area-information-query-failed) |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let callback = (code: geoLocationManager.CountryCode): void => {
-  console.info('countryCodeChange: ' + JSON.stringify(code));
-}
-
-try {
-  geoLocationManager.on('countryCodeChange', callback);
-  geoLocationManager.off('countryCodeChange', callback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## off('bluetoothScanResultChange')
 
@@ -447,8 +272,6 @@ function off(type: 'bluetoothScanResultChange', callback?: Callback<BluetoothSca
 Stop bluetooth scanning and unregister to listen to bluetooth scanning result changes.
 
 **Since:** 16
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 16.
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
@@ -469,19 +292,3 @@ Stop bluetooth scanning and unregister to listen to bluetooth scanning result ch
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let callback = (result: geoLocationManager.BluetoothScanResult): void => {
-  console.info('bluetoothScanResultChange: ' + JSON.stringify(result));
-};
-try {
-  geoLocationManager.on('bluetoothScanResultChange', callback);
-  geoLocationManager.off('bluetoothScanResultChange', callback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

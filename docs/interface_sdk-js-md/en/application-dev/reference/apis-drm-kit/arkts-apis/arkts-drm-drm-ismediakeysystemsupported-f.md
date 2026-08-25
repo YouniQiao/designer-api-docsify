@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'kits/@kit.DrmKit';
 ```
 
 ## isMediaKeySystemSupported
@@ -15,8 +15,6 @@ function isMediaKeySystemSupported(name: string, mimeType: string, level: Conten
 Checks whether the device supports the combination of the DRM solution, MIME type, and content protection level.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -44,47 +42,6 @@ Checks whether the device supports the combination of the DRM solution, MIME typ
 | [24700101](../errorcode-drm.md#24700101-unknown-error) |
 | [24700201](../errorcode-drm.md#24700201-service-exception) |
 
-**Examples**
-
-```TypeScript
-import { drm } from '@kit.DrmKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let supported: boolean = drm.isMediaKeySystemSupported("com.clearplay.drm");
-  console.info("isMediaKeySystemSupported: ", supported);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`isMediaKeySystemSupported ERROR: ${error}`);
-}
-```
-
-```TypeScript
-import { drm } from '@kit.DrmKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let supported: boolean = drm.isMediaKeySystemSupported("com.clearplay.drm", "video/avc");
-  console.info("isMediaKeySystemSupported: ", supported);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`isMediaKeySystemSupported ERROR: ${error}`);
-}
-```
-
-```TypeScript
-import { drm } from '@kit.DrmKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let supported: boolean = drm.isMediaKeySystemSupported("com.clearplay.drm", "video/avc", drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
-  console.info("isMediaKeySystemSupported: ", supported);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`isMediaKeySystemSupported ERROR: ${error}`);
-}
-```
-
 
 ## isMediaKeySystemSupported
 
@@ -95,8 +52,6 @@ function isMediaKeySystemSupported(name: string, mimeType: string): boolean
 Checks whether the device supports the combination of the DRM solution and MIME type.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -123,10 +78,6 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 | [24700101](../errorcode-drm.md#24700101-unknown-error) |
 | [24700201](../errorcode-drm.md#24700201-service-exception) |
 
-**Examples**
-
-See [isMediaKeySystemSupported](#ismediakeysystemsupported)
-
 
 ## isMediaKeySystemSupported
 
@@ -137,8 +88,6 @@ function isMediaKeySystemSupported(name: string): boolean
 Checks whether the device supports the specified DRM solution.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -163,7 +112,3 @@ Checks whether the device supports the specified DRM solution.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) |
 | [24700201](../errorcode-drm.md#24700201-service-exception) |
-
-**Examples**
-
-See [isMediaKeySystemSupported](#ismediakeysystemsupported)

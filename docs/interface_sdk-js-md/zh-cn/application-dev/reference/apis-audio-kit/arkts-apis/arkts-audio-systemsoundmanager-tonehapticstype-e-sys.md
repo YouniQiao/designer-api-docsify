@@ -1,10 +1,8 @@
 # ToneHapticsType（系统接口）
 
-枚举，系统铃音的振动类型。@enum { int }
+枚举，系统铃音的振动类型。@enum { number }
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -20,8 +18,6 @@ sim卡2的短信提示音的振动。
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +31,6 @@ CALL_SIM_CARD_0 = 0
 sim卡1的来电铃声的振动。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
@@ -52,8 +46,6 @@ NOTIFICATION = 40
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -68,8 +60,6 @@ sim卡2的来电铃声的振动。
 
 **起始版本：** 14
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
 **系统接口：** 此接口为系统接口。
@@ -83,8 +73,6 @@ TEXT_MESSAGE_SIM_CARD_0 = 20
 sim卡1的短信提示音的振动。
 
 **起始版本：** 14
-
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 

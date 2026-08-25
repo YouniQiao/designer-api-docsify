@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'kits/@kit.FormKit';
 ```
 
 ## offTemplateFormDetailInfoChange
@@ -15,8 +15,6 @@ function offTemplateFormDetailInfoChange(callback?: formInfo.TemplateFormDetailI
 Unsubscribes from changes in the static configuration information of template widgets. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -39,17 +37,3 @@ Unsubscribes from changes in the static configuration information of template wi
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) |
-
-**Examples**
-
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  formHost.offTemplateFormDetailInfoChange();
-  console.info(`offTemplateFormDetailInfoChange success`);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```

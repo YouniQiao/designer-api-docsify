@@ -3,8 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from 'kits/@kit.AccessibilityKit';
 ```
 
 ## isOpenTouchGuide
@@ -16,8 +16,6 @@ function isOpenTouchGuide(callback: AsyncCallback<boolean>): void
 Checks whether touch guide mode is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -31,32 +29,6 @@ Checks whether touch guide mode is enabled. This API uses an asynchronous callba
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-accessibility.isOpenTouchGuide().then((data: boolean) => {
-  console.info(`success data:isOpenTouchGuide : ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`failed to  isOpenTouchGuide, Code is ${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-accessibility.isOpenTouchGuide((err: BusinessError, data: boolean) => {
-  if (err) {
-    console.error(`failed to isOpenTouchGuide, Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`success data:isOpenTouchGuide : ${JSON.stringify(data)}`);
-});
-```
-
 
 ## isOpenTouchGuide
 
@@ -67,8 +39,6 @@ function isOpenTouchGuide(): Promise<boolean>
 Checks whether touch guide mode is enabled. This API uses a promise to return the result.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 10
 
@@ -81,7 +51,3 @@ Checks whether touch guide mode is enabled. This API uses a promise to return th
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise & lt;boolean & gt; |
-
-**Examples**
-
-See [isOpenTouchGuide](#isopentouchguide)

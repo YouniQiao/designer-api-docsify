@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'kits/@kit.ArkUI';
 ```
 
 ## setScreenRotationLocked
@@ -15,8 +15,6 @@ function setScreenRotationLocked(isLocked:boolean, callback: AsyncCallback<void>
 Sets whether to lock auto rotate. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -36,33 +34,6 @@ Sets whether to lock auto rotate. This API uses an asynchronous callback to retu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isLocked: boolean = false;
-screen.setScreenRotationLocked(isLocked).then(() => {
-  console.info('Succeeded in unlocking auto rotate');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unlock auto rotate. Code:${err.code}, message is ${err.message}`);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isLocked: boolean = false;
-screen.setScreenRotationLocked(isLocked, (err: BusinessError) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to unlock auto rotate. Code:${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in unlocking auto rotate.');
-});
-```
-
 
 ## setScreenRotationLocked
 
@@ -73,8 +44,6 @@ function setScreenRotationLocked(isLocked:boolean): Promise<void>
 Sets whether to lock auto rotate. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -98,7 +67,3 @@ Sets whether to lock auto rotate. This API uses a promise to return the result.
 | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-See [setScreenRotationLocked](#setscreenrotationlocked)

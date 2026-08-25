@@ -1,10 +1,8 @@
 # WifiLinkType
 
-WLAN连接类型。 @enum { int }
+WLAN连接类型。 @enum { number }
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -18,8 +16,6 @@ DEFAULT_LINK = 0
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI7_SINGLE_LINK
@@ -31,8 +27,6 @@ WIFI7_SINGLE_LINK = 1
 WLAN7单链连接。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -46,8 +40,6 @@ WLAN7 MLSR连接。
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI7_EMLSR
@@ -60,8 +52,6 @@ WLAN7 EMLSR连接。
 
 **起始版本：** 18
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
 ## WIFI7_STR
@@ -73,7 +63,5 @@ WIFI7_STR = 4
 WLAN7 STR连接。
 
 **起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA

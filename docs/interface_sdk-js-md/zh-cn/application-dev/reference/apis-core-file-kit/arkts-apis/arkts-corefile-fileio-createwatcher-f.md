@@ -15,8 +15,6 @@ declare function createWatcher(filename: string, events: number, callback: Async
 
 **起始版本：** 7
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为7。
-
 **废弃版本：** 10
 
 **替代接口：** [createWatcher](arkts-corefile-file-fs-createwatcher-f.md)
@@ -36,12 +34,3 @@ declare function createWatcher(filename: string, events: number, callback: Async
 | 类型 |
 | --- |
 | [Watcher](arkts-corefile-fileio-watcher-depr-i.md) |
-
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
-  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
-});
-```

@@ -4,8 +4,6 @@ Enumerates predicates used as query conditions. Use the enum name rather than th
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## CURSOR_FIELD
@@ -17,8 +15,6 @@ CURSOR_FIELD = '#_cursor'
 Field name used for cursor-based search.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -32,8 +28,6 @@ Field name used to specify the data source in cursor-based search.
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## DELETED_FLAG_FIELD
@@ -45,8 +39,6 @@ DELETED_FLAG_FIELD = '#_deleted_flag'
 Whether the dirty data (data deleted from the cloud) is cleared from the local device. It fills in the result set returned upon the cursor-based search.The value **true** means the dirty data is cleared; the value **false** means the opposite.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -60,8 +52,6 @@ Data status in the cursor-based search result set. The value **0** indicates nor
 
 **Since:** 12
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## OWNER_FIELD
@@ -73,8 +63,6 @@ OWNER_FIELD = '#_cloud_owner'
 Party who shares the data. It fills in the result set returned when the owner of the shared data is searched.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -88,8 +76,6 @@ Operation permission on the shared data. It fills in the result set returned whe
 
 **Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
 ## SHARING_RESOURCE_FIELD
@@ -101,7 +87,5 @@ SHARING_RESOURCE_FIELD = '#_sharing_resource_field'
 Resource shared. It fills in the result set returned when the shared resource is searched.
 
 **Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client

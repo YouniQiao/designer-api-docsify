@@ -10,8 +10,6 @@ Listener for data changes.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,8 +26,6 @@ onDataAdd(index: number): void
 Invoked when data is added to the position indicated by the specified index.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,8 +51,6 @@ Invoked when data is added to the position indicated by the specified index.
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** [onDataAdd](#ondataadd)
@@ -78,8 +72,6 @@ onDataChange(index: number): void
 Invoked when data in the position indicated by the specified index is changed.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -104,8 +96,6 @@ Invoked when data in the position indicated by the specified index is changed.
 > [onDataChange](#ondatachange) instead.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 8
 
@@ -133,8 +123,6 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -158,8 +146,6 @@ Invoked when data is deleted from the position indicated by the specified index.
 > [onDataDelete](#ondatadelete) instead.
 
 **Since:** 7
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
 
 **Deprecated since:** 8
 
@@ -186,8 +172,6 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 > must be called.
 
 **Since:** 8
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -216,8 +200,6 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Deprecated since:** 8
 
 **Substitutes:** [onDataMove](#ondatamove)
@@ -241,8 +223,6 @@ Invoked when all data is reloaded. For data items whose key remains unchanged, t
 
 **Since:** 7
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 7.
-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -256,8 +236,6 @@ onDataReloaded(reuseImmediately: boolean): void
 Invoked when all data is reloaded. When \@Reuseable or \@ReuseableV2 is used and recycle pool is empty, old child components will be recycled and then be reused as new child components. If no old child component can be reused, new child components will be created.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -288,8 +266,6 @@ Invoked when data is processed in batches to notify the component of refreshing.
 > take effect.
 
 **Since:** 12
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -3,9 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## mkdtemp
@@ -17,8 +17,6 @@ declare function mkdtemp(prefix: string): Promise<string>
 Creates a temporary directory. This API uses a promise to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -54,28 +52,6 @@ Creates a temporary directory. This API uses a promise to return the result.
 | 13900041 |
 | 13900042 |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-fs.mkdtemp(pathDir + "/XXXXXX").then((dir: string) => {
-  console.info("mkdtemp succeed:" + dir);
-}).catch((err: BusinessError) => {
-  console.error("mkdtemp failed with error message: " + err.message + ", error code: " + err.code);
-});
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-fs.mkdtemp(pathDir + "/XXXXXX", (err: BusinessError, res: string) => {
-  if (err) {
-    console.error("mkdtemp failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("mkdtemp succeed");
-  }
-});
-```
-
 
 ## mkdtemp
 
@@ -86,8 +62,6 @@ declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 Creates a temporary directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 9.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -117,7 +91,3 @@ Creates a temporary directory. This API uses an asynchronous callback to return 
 | 13900033 |
 | 13900041 |
 | 13900042 |
-
-**Examples**
-
-See [mkdtemp](#mkdtemp)

@@ -4,8 +4,6 @@ Describes the wifi security type.@enum { number } WifiSecurityType
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md)
@@ -21,8 +19,6 @@ WIFI_SEC_TYPE_INVALID = 0
 Invalid security type
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -40,8 +36,6 @@ Open
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WIFI_SEC_TYPE_OPEN](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_open)
@@ -57,8 +51,6 @@ WIFI_SEC_TYPE_WEP = 2
 Wired Equivalent Privacy (WEP)
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 
@@ -76,8 +68,6 @@ Pre-shared key (PSK)
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **Deprecated since:** 9
 
 **Substitutes:** [WIFI_SEC_TYPE_PSK](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_psk)
@@ -93,8 +83,6 @@ WIFI_SEC_TYPE_SAE = 4
 Simultaneous Authentication of Equals (SAE)
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Deprecated since:** 9
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'kits/@kit.BasicServicesKit';
 ```
 
 ## updatePrintJobState
@@ -16,8 +16,6 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 更新打印任务状态，使用callback异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
@@ -42,38 +40,6 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
 
-**示例**
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let jobId : string = 'jobId';
-let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
-let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
-print.updatePrintJobState(jobId, state, subState, (err: BusinessError) => {
-    if (err) {
-        console.error('updataPrintJobState failed, because : ' + JSON.stringify(err));
-    } else {
-        console.info('updatePrintJobState success');
-    }
-})
-```
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@ohos.base';
-
-let jobId : string = 'jobId';
-let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
-let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
-print.updatePrintJobState(jobId, state, subState).then(() => {
-    console.info('update print job state success');
-}).catch((error: BusinessError) => {
-    console.error('update print job state error : ' + JSON.stringify(error));
-})
-```
-
 
 ## updatePrintJobState
 
@@ -84,8 +50,6 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 更新打印任务状态，使用Promise异步回调。
 
 **起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **需要权限：** 
 - API版本24+：ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
@@ -114,7 +78,3 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 | [201](../../errorcode-universal.md#201-权限校验失败) |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | [401](../../errorcode-universal.md#401-参数检查失败) |
-
-**示例**
-
-参见 [updatePrintJobState](#updateprintjobstate)

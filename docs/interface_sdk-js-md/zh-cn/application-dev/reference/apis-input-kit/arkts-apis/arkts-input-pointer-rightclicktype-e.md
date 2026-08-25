@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TOUCHPAD_RIGHT_BUTTON
@@ -17,8 +15,6 @@ TOUCHPAD_RIGHT_BUTTON = 1
 按压触控板右键区域。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -32,8 +28,6 @@ TOUCHPAD_LEFT_BUTTON = 2
 
 **起始版本：** 10
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TOUCHPAD_TWO_FINGER_TAP
@@ -45,8 +39,6 @@ TOUCHPAD_TWO_FINGER_TAP = 3
 双指轻击或双指按压触控板。
 
 **起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -60,8 +52,6 @@ TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON = 4
 
 **起始版本：** 20
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
-
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
 
 ## TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON
@@ -73,7 +63,5 @@ TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON = 5
 双指轻击或双指按压触控板、或按压触控板左键区域。
 
 **起始版本：** 20
-
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer

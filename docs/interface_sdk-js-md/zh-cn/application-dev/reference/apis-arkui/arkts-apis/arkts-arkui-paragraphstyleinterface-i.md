@@ -4,8 +4,6 @@
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,11 +19,9 @@ leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 
 设置文本段落的缩进。不支持百分比。默认值：0
 
-**类型：** LengthMetrics \| LeadingMarginPlaceholder
+**类型：** LengthMetrics \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +40,6 @@ leadingMarginSpan?: LeadingMarginSpan
 **类型：** [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md)
 
 **起始版本：** 22
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为22。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,8 +60,6 @@ maxLines?: number
 
 **起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -83,11 +75,9 @@ overflow?: TextOverflow
 设置文本段落超长时的显示方式。  
 **说明：** 仅在Text中生效，建议在组件侧设置。默认值：TextOverflow.None需配合maxLines使用，单独设置不生效。不支持TextOverflow.MARQUEE。
 
-**类型：** TextOverflow
+**类型：** [TextOverflow](arkts-arkui-textoverflow-e.md)
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -107,8 +97,6 @@ paragraphSpacing?: LengthMetrics
 
 **起始版本：** 19
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为19。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -124,11 +112,9 @@ shaderStyle?: ShaderStyle
 设置文本着色器效果。  
 **默认效果：** 不传入时不应用着色器效果，使用fontColor设置的颜色。该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [TextStyleInterface](arkts-arkui-textstyleinterface-i.md)中的fontColor。
 
-**类型：** ShaderStyle
+**类型：** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
 **起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,8 +134,6 @@ tailIndents?: LengthMetrics | Array<LengthMetrics>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -167,8 +151,6 @@ textAlign?: TextAlign
 **类型：** TextAlign
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -188,8 +170,6 @@ textDirection?: TextDirection
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为23。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -207,8 +187,6 @@ textIndent?: LengthMetrics
 **类型：** LengthMetrics
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -228,8 +206,6 @@ textVerticalAlign?: TextVerticalAlign
 
 **起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为20。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -247,8 +223,6 @@ wordBreak?: WordBreak
 **类型：** WordBreak
 
 **起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为12。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

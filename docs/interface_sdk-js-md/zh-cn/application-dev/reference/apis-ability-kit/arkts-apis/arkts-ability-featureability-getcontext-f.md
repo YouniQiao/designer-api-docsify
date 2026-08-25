@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'kits/@kit.AbilityKit';
 ```
 
 ## getContext
@@ -16,8 +16,6 @@ function getContext(): Context
 
 **起始版本：** 6
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为6。
-
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -27,19 +25,3 @@ function getContext(): Context
 | 类型 |
 | --- |
 | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) |
-
-**示例**
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-
-// 获取应用上下文
-let context = featureAbility.getContext();
-context.getBundleName((error, data) => {
-  if (error && error.code !== 0) {
-    console.error(`getBundleName fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`getBundleName success, data: ${JSON.stringify(data)}`);
-  }
-});
-```

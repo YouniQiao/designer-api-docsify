@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## deleteVlanIp
@@ -20,8 +20,6 @@ Deletes the configured IP address and subnet mask from the VLAN specified by **v
 
 **Since:** 23
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 23.
-
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 **Model restriction:** This API can be used only in the stage model.
@@ -36,7 +34,7 @@ Deletes the configured IP address and subnet mask from the VLAN specified by **v
 | --- | --- | --- |
 | ifName | string | Yes |
 | vlanId | number | Yes |
-| address | [LinkAddress](arkts-network-vpn-linkaddress-t.md) | Yes |
+| address | [LinkAddress](arkts-network-vpnextension-linkaddress-t.md) | Yes |
 
 **Return value:**
 
@@ -54,26 +52,3 @@ Deletes the configured IP address and subnet mask from the VLAN specified by **v
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 | [2100400](../errorcode-net-connection.md#2100400-incorrect-nic-name-non-ethernet) |
 | [2100401](../errorcode-net-connection.md#2100401-no-ip-address-configured-on-the-vlan-is-found) |
-
-**Examples**
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-let ifName = "eth0";
-let vlanId = 1;
-let netAddress: connection.NetAddress = {
-  address: '192.168.1.1',
-  family: 1,
-  port: 8080
-}
-let address: connection.LinkAddress = {
-  address: netAddress,
-  prefixLength: 24
-}
-connection.deleteVlanIp(ifName, vlanId, address).then(() => {
-  console.info(`Delete vlan ip success`);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to delete vlan ip. Code:${error.code}, message:${error.message}`);
-});
-```

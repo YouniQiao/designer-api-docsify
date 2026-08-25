@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 ```
 
 ## generateDLPFile
@@ -15,8 +15,6 @@ function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DL
 Generates a **DLPFile** object, which is an encrypted file that can be accessed only by authorized users. The users can have the full control permission or read-only permission on the DLP file. This API uses a promise to return the result.After calling **generateDLPFile** to return a **DLPFile** object, the system must call **closeDLPFile** to release resources after using the object.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -54,89 +52,6 @@ Generates a **DLPFile** object, which is an encrypted file that can be accessed 
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function ExampleFunction() {
-  let dlpUri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-  let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt';
-  let file: number | undefined = undefined;
-  let dlp: number | undefined = undefined;
-  let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-
-  try {
-    file = fileIo.openSync(uri).fd;
-    dlp = fileIo.openSync(dlpUri).fd;
-    let dlpProperty: dlpPermission.DLPProperty = {
-      ownerAccount: 'zhangsan',
-      ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
-      authUserList: [],
-      contactAccount: 'zhangsan',
-      offlineAccess: true,
-      ownerAccountID: 'xxxxxxx',
-      everyoneAccessList: []
-    };
-    dlpFile = await dlpPermission.generateDLPFile(file, dlp, dlpProperty); // Generate a DLP file.
-  } catch (err) {
-    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
-  } finally {
-    dlpFile?.closeDLPFile(); // Close the DLP object.
-    if (file) {
-      fileIo.closeSync(file);
-    }
-    if (dlp) {
-      fileIo.closeSync(dlp);
-    }
-  }
-}
-```
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dlpUri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt';
-let file: number | undefined = undefined;
-let dlp: number | undefined = undefined;
-
-try {
-  file = fileIo.openSync(uri).fd;
-  dlp = fileIo.openSync(dlpUri).fd;
-  let dlpProperty: dlpPermission.DLPProperty = {
-    ownerAccount: 'zhangsan',
-    ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
-    authUserList: [],
-    contactAccount: 'zhangsan',
-    offlineAccess: true,
-    ownerAccountID: 'xxxxxxx',
-    everyoneAccessList: []
-  };
-  dlpPermission.generateDLPFile(file, dlp, dlpProperty, (err, res) => { // Generate a DLP file.
-    if (err !== undefined) {
-      console.error('generateDLPFile error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
-    fileIo.closeSync(file);
-    fileIo.closeSync(dlp);
-  });
-} catch (err) {
-  console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
-  if (file) {
-    fileIo.closeSync(file);
-  }
-  if (dlp) {
-    fileIo.closeSync(dlp);
-  }
-}
-```
-
 
 ## generateDLPFile
 
@@ -147,8 +62,6 @@ function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DL
 Generates a DLP file, which is an encrypted file that can be accessed only by authorized users. The users can have the full control permission or read-only permission on the DLP file. Obtains a **DLPFile** object. This API uses an asynchronous callback to return the result. After using the **DLPFile** object, call **closeDLPFile** to close the object to prevent resource leakage.After calling **generateDLPFile()** to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -180,7 +93,3 @@ Generates a DLP file, which is an encrypted file that can be accessed only by au
 | [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) |
 | [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-
-**Examples**
-
-See [generateDLPFile](#generatedlpfile)

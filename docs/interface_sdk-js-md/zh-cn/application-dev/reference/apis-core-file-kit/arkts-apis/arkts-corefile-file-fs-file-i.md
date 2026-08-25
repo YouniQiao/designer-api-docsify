@@ -4,16 +4,14 @@
 
 **起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## 导入模块
 
 ```TypeScript
-import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
-import { fileIo } from '@kit.CoreFileKit'
-import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from 'kits/@kit.CoreFileKit';
+import { fileIo } from 'kits/@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from 'kits/@kit.CoreFileKit';
 ```
 
 ## getParent
@@ -25,8 +23,6 @@ getParent(): string
 获取File对象对应文件的父目录路径。
 
 **起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为11。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -44,15 +40,6 @@ getParent(): string
 | 13900042 |
 | 14300002 |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-console.info(`Succeeded in getting parent path, the parent path is: ${file.getParent()}`);
-fileIo.closeSync(file);
-```
-
 ## lock
 
 ```TypeScript
@@ -62,8 +49,6 @@ lock(exclusive?: boolean): Promise<void>
 对文件阻塞式施加共享锁或独占锁。使用Promise异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -90,109 +75,6 @@ lock(exclusive?: boolean): Promise<void>
 | 13900042 |
 | 13900043 |
 
-**示例**
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-file.lock(true).then(() => {
-  console.info(`Succeeded in locking file.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE);
-file.lock(true).then(() => {
-  console.info('Succeeded in locking file');
-}).catch((error: Error) => {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
-}).finally(() => {
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-file.lock((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in locking file.`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE);
-file.lock((err: BusinessError | null) => {
-  if (err) {
-    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in locking file');
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Dyn示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-file.lock(true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in locking file.`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
-ArkTS-Sta示例：
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE);
-file.lock(true, (err: BusinessError | null) => {
-  if (err) {
-    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('Succeeded in locking file');
-  }
-  fileIo.closeSync(file);
-});
-```
-
 ## lock
 
 ```TypeScript
@@ -202,8 +84,6 @@ lock(callback: AsyncCallback<void>): void
 对文件阻塞式施加共享锁。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -224,10 +104,6 @@ lock(callback: AsyncCallback<void>): void
 | 13900042 |
 | 13900043 |
 
-**示例**
-
-参见 [lock](#lock)
-
 ## lock
 
 ```TypeScript
@@ -237,8 +113,6 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 对文件阻塞式施加共享锁或独占锁。使用callback异步回调。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -260,10 +134,6 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 | 13900042 |
 | 13900043 |
 
-**示例**
-
-参见 [lock](#lock)
-
 ## tryLock
 
 ```TypeScript
@@ -273,8 +143,6 @@ tryLock(exclusive?: boolean): void
 文件非阻塞式施加共享锁或独占锁。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -295,16 +163,6 @@ tryLock(exclusive?: boolean): void
 | 13900042 |
 | 13900043 |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-file.tryLock(true);
-console.info(`Succeeded in locking file.`);
-fileIo.closeSync(file);
-```
-
 ## unlock
 
 ```TypeScript
@@ -314,8 +172,6 @@ unlock(): void
 以同步方式解锁文件。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -330,17 +186,6 @@ unlock(): void
 | 13900042 |
 | 13900043 |
 
-**示例**
-
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-file.tryLock(true);
-file.unlock();
-console.info(`Succeeded in unlocking file.`);
-fileIo.closeSync(file);
-```
-
 ## fd
 
 ```TypeScript
@@ -352,8 +197,6 @@ readonly fd: number
 **类型：** number
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -371,8 +214,6 @@ readonly name: string
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## path
@@ -386,7 +227,5 @@ readonly path: string
 **类型：** string
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

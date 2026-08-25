@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'kits/@kit.MDMKit';
 ```
 
 ## setDelegatedPolicies
@@ -15,8 +15,6 @@ function setDelegatedPolicies(admin: Want, bundleName: string, policies: Array<s
 Delegates other applications to set device management policies. The applications must request the permissions required.
 
 **Since:** 14
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 14.
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_DELEGATED_POLICY
 
@@ -41,43 +39,3 @@ Delegates other applications to set device management policies. The applications
 | [9200009](../errorcode-enterpriseDeviceManager.md#9200009-failed-to-grant-permissions-to-an-application) |
 | [201](../../errorcode-universal.md#201-permission-denied) |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let admin: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let policies: Array<string> = ["disabled_hdc"];
-
-try {
-  // Replace parameters with actual values.
-  adminManager.setDelegatedPolicies(admin, "com.example.enterprise.xxx", policies);
-  console.info('Succeeded in setting delegated policies.');
-} catch (err) {
-  console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-
-// Replace with actual values.
-let bundleName = 'com.example.myapplication';
-let userId = 100;
-let policies: Array<string> = ["disabled_hdc"];
-
-try {
-  adminManager.setDelegatedPolicies(bundleName, userId, policies);
-  console.info(`Succeeded in setting delegated policies.`);
-} catch (err) {
-  console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
-}
-```

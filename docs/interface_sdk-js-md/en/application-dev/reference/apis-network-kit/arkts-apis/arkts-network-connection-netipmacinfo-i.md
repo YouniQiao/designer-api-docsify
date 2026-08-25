@@ -4,14 +4,12 @@ Defines information about entries in the IP neighbor table.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'kits/@kit.NetworkKit';
 ```
 
 ## iface
@@ -25,8 +23,6 @@ NIC name.
 **Type:** string
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -42,8 +38,6 @@ IP address information.
 
 **Since:** 22
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
-
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 ## macAddress
@@ -57,7 +51,5 @@ MAC address.
 **Type:** string
 
 **Since:** 22
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 22.
 
 **System capability:** SystemCapability.Communication.NetManager.Core

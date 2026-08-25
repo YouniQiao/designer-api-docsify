@@ -7,8 +7,6 @@ The module provides APIs for setting, obtaining, and deleting the disposed statu
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
 **System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
 
 **System API:** This is a system API.
@@ -16,7 +14,7 @@ The module provides APIs for setting, obtaining, and deleting the disposed statu
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## Summary

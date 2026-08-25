@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## getAbilityLabelSync
@@ -15,8 +15,6 @@ function getAbilityLabelSync(bundleName: string, moduleName: string, abilityName
 Obtains the ability label based on the given bundle name, module name, and ability name. This API returns the result synchronously.No permission is required for obtaining the caller's own information.
 
 **Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -51,23 +49,3 @@ Obtains the ability label based on the given bundle name, module name, and abili
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) |
 | [17700029](../errorcode-bundle.md#17700029-disabled-ability) |
-
-**Examples**
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleName = 'com.example.myapplication';
-let moduleName = 'entry';
-let abilityName = 'EntryAbility';
-
-try {
-  let abilityLabel = bundleManager.getAbilityLabelSync(bundleName, moduleName, abilityName);
-  hilog.info(0x0000, 'testTag', 'getAbilityLabelSync successfully. Data: %{public}s', abilityLabel);
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAbilityLabelSync failed. Cause: %{public}s', message);
-}
-```

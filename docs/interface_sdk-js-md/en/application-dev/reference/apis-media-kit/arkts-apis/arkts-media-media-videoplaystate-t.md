@@ -8,8 +8,6 @@ Describes the video playback state. You can obtain the state through the **state
 
 **Since:** 8
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 8.
-
 **Deprecated since:** 9
 
 **Substitutes:** [AVPlayerState](arkts-media-media-avplayerstate-t.md)

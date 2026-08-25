@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'kits/@kit.AbilityKit';
 ```
 
 ## off('activeStateChange')
@@ -21,8 +21,6 @@ function off(
 > 该接口通常与[on](arkts-ability-privacymanager-on-f-sys.md)配套使用，用于取消通过on创建的监听关系。
 
 **起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为9。
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -49,19 +47,3 @@ function off(
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 | [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
-
-**示例**
-
-```TypeScript
-import { privacyManager, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let permissionList: Array<Permissions> = [];
-try {
-    // 取消订阅权限使用状态变更事件
-    privacyManager.off('activeStateChange', permissionList);
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
-}
-```

@@ -6,14 +6,12 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为26.0.0。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
 
 ```TypeScript
-import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
+import { LazyColumnLayout, LazyColumnLayoutAttribute } from 'kits/@kit.ArkUI';
 ```
 
 ## alignItems
@@ -26,8 +24,6 @@ alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -38,41 +34,13 @@ alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [HorizontalAlign](arkts-arkui-enums-horizontalalign-e.md) \| undefined | 是 |
+| value | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) \| undefined | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |
-
-## attributeModifier
-
-```TypeScript
-default attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this
-```
-
-设置属性修饰符。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| modifier | [AttributeModifier](arkts-arkui-common-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md)&gt; \| [AttributeModifier](arkts-arkui-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-arkui-common-commonmethod-i.md)&gt; \| undefined | 是 |
-
-**返回值：**
-
-| 类型 |
-| --- |
-| this |
 
 ## footer
 
@@ -84,8 +52,6 @@ footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -96,7 +62,7 @@ footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 |
 
 **返回值：**
 
@@ -114,8 +80,6 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -126,7 +90,7 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 |
 
 **返回值：**
 
@@ -144,8 +108,6 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): La
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -156,35 +118,13 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): La
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |
-
-## setLazyColumnLayoutOptions
-
-```TypeScript
-default setLazyColumnLayoutOptions(): this
-```
-
-设置LazyColumnLayout选项。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 仅支持ArkTS-Sta，ArkTS-Sta起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**返回值：**
-
-| 类型 |
-| --- |
-| this |
 
 ## space
 
@@ -196,8 +136,6 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -208,7 +146,7 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [space](#space) | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |
+| [space](#space) | LengthMetrics \| undefined | 是 |
 
 **返回值：**
 
@@ -226,8 +164,6 @@ sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -238,7 +174,7 @@ sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [sticky](#sticky) | [StickyStyle](arkts-arkui-list-stickystyle-e.md) \| undefined | 是 |
+| [sticky](#sticky) | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | 是 |
 
 **返回值：**
 

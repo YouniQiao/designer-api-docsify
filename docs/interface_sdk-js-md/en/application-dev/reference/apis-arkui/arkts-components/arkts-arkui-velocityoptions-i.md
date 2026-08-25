@@ -2,14 +2,13 @@
 
 Defines velocity options.  
 *   
-> **NOTE：**&gt;
+> **NOTE：**
+> 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
 > While historical version information is preserved for anonymous objects, there may be cases where the outer
 > element's
 
 **Since:** 18
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,8 +29,6 @@ Direction (in angles) in which the particle moves, with the geometric center of 
 
 **Since:** 10
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -49,8 +46,6 @@ Time rate at which the particle moves.
 **Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

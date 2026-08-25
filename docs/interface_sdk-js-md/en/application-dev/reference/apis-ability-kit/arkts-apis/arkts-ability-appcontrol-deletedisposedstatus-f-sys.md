@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'kits/@kit.AbilityKit';
 ```
 
 ## deleteDisposedStatus
@@ -15,8 +15,6 @@ function deleteDisposedStatus(appId: string, callback: AsyncCallback<void>): voi
 Deletes the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -41,47 +39,6 @@ Deletes the disposed status for an application. This API uses an asynchronous ca
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
 
-**Examples**
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.deleteDisposedStatus(appId)
-    .then(() => {
-      console.info('deleteDisposedStatus success');
-    }).catch((error: BusinessError) => {
-    let message = (error as BusinessError).message;
-    console.error('deleteDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatus failed ' + message);
-}
-```
-
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-try {
-  appControl.deleteDisposedStatus(appId, (error: BusinessError, data) => {
-    if (error) {
-      console.error('deleteDisposedStatus failed ' + error.message);
-      return;
-    }
-    console.info('deleteDisposedStatus success');
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatus failed ' + message);
-}
-```
-
 
 ## deleteDisposedStatus
 
@@ -92,8 +49,6 @@ function deleteDisposedStatus(appId: string): Promise<void>
 Deletes the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned.
 
 **Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
 **Required permissions:** ohos.permission.MANAGE_DISPOSED_APP_STATUS
 
@@ -122,7 +77,3 @@ Deletes the disposed status for an application. This API uses a promise to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | [801](../../errorcode-universal.md#801-api-not-supported) |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) |
-
-**Examples**
-
-See [deleteDisposedStatus](#deletedisposedstatus)

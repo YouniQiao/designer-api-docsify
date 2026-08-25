@@ -6,8 +6,6 @@ The &lt;div&gt; component provides a div container.@extends Element @interface D
 
 **Since:** 6
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## getScrollOffset
@@ -19,8 +17,6 @@ getScrollOffset(): ScrollOffset
 Returns the offset of the current scrolling. The return value type is Object.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -41,8 +37,6 @@ scrollBy(data: ScrollParam): void
 Scrolls the div for a certain distance.
 
 **Since:** 6
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 6.
 
 **Model restriction:** This API can be used only in the FA model.
 

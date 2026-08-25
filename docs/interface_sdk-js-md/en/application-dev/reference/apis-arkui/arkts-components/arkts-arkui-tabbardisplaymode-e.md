@@ -4,8 +4,6 @@ Enumerates the actual display modes of the tab bar under different Tabs containe
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM_TABBAR
@@ -17,8 +15,6 @@ BOTTOM_TABBAR = 0
 The tab bar is displayed at the bottom.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +31,6 @@ SIDEBAR = 1
 The tab bar is displayed as a sidebar.
 
 **Since:** 26.1.0
-
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,8 +4,6 @@ agentConstant模块提供Agent相关的常量，包括Agent卡片类型[AgentCar
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
@@ -13,7 +11,7 @@ agentConstant模块提供Agent相关的常量，包括Agent卡片类型[AgentCar
 ## 导入模块
 
 ```TypeScript
-import { agentConstant } from '@kit.AbilityKit';
+import { agentConstant } from 'kits/@kit.AbilityKit';
 ```
 
 ## 汇总

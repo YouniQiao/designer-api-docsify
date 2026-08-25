@@ -4,8 +4,6 @@
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -22,8 +20,6 @@ animation(value: AnimateParam): TransitionEffect
 指定该TransitionEffect的动画参数。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,8 +54,6 @@ static asymmetric(
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -72,8 +66,8 @@ static asymmetric(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [appear](../arkts-apis/arkts-arkui-common-asymmetrictransitionoption-i.md) | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | 是 |
-| [disappear](../arkts-apis/arkts-arkui-common-asymmetrictransitionoption-i.md) | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | 是 |
+| appear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | 是 |
+| disappear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | 是 |
 
 **返回值：**
 
@@ -90,8 +84,6 @@ combine(transitionEffect: TransitionEffect): TransitionEffect
 对TransitionEffect进行链式组合，以形成包含多种转场效果的TransitionEffect。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -123,8 +115,6 @@ constructor(type: Type, effect: Effect)
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -140,19 +130,6 @@ constructor(type: Type, effect: Effect)
 | type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 是 |
 | effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | 是 |
 
-**示例**
-
-```TypeScript
-@Builder
-function myBuilder(value: string, size: number) {
-  Text(value)
-    .fontSize(size)
-}
-
-// 使用WrappedBuilder封装myBuilder
-let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
-```
-
 ## move
 
 ```TypeScript
@@ -162,8 +139,6 @@ static move(edge: TransitionEdge): TransitionEffect<"move">
 设置组件转场时从屏幕边缘滑入和滑出的效果。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -195,8 +170,6 @@ static opacity(alpha: number): TransitionEffect<"opacity">
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -226,8 +199,6 @@ static rotate(options: RotateOptions): TransitionEffect<"rotate">
 设置组件转场时的旋转效果。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -259,8 +230,6 @@ static scale(options: ScaleOptions): TransitionEffect<"scale">
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -290,8 +259,6 @@ static translate(options: TranslateOptions): TransitionEffect<"translate">
 设置组件转场时的平移效果。
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -325,8 +292,6 @@ static readonly IDENTITY: TransitionEffect<"identity">
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -346,8 +311,6 @@ static readonly OPACITY: TransitionEffect<"opacity">
 **类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"opacity"&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -375,8 +338,6 @@ static readonly SLIDE: TransitionEffect<
 
 **起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -396,8 +357,6 @@ static readonly SLIDE_SWITCH: TransitionEffect<"slideSwitch">
 **类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"slideSwitch"&gt;
 
 **起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，ArkTS-Dyn起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

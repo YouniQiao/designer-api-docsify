@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableResourceManager } from '@kit.LocalizationKit';
+import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
 ```
 
 ## sendableResourceToResource
@@ -16,8 +16,6 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 
 **Since:** 12
 
-**ArkTS mode:** Supports only ArkTS-Dyn, since version 12.
-
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.ResourceManager
@@ -26,7 +24,7 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resource | [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) | Yes |
+| resource | [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | Yes |
 
 **Return value:**
 
@@ -39,30 +37,3 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 | Error Code ID |
 | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) |
-
-**Examples**
-
-```TypeScript
-// Resource file path: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { sendableResourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-    let resource: sendableResourceManager.Resource = sendableResourceManager.sendableResourceToResource(sendableResourceManager.resourceToSendableResource($r('app.string.test')));
-} catch (error) {
-    let code = (error as BusinessError).code;
-    let message = (error as BusinessError).message;
-    console.error(`sendableResourceToResource failed, error code: ${code}, message: ${message}.`);
-}
-```
